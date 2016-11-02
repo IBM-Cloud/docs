@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2015，2016
 
  
 
@@ -17,13 +17,14 @@ copyright:
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-*最終更新日: 2016 年 2 月 25 日*
+最終更新日: 2016 年 2 月 25 日
 {: .last-updated}
+
 
 {{site.data.keyword.autoscaling}} サービスは、{{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} を使用して構成することができます。{{site.data.keyword.autoscaling}} CLI は Linux64、Win64、および OSX をサポートしており、Auto-Scaling RESTful API が提供する機能と同様の機能を提供します。
 {: shortdesc}
 
-始めに、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。手順については、「[{{site.data.keyword.Bluemix_notm}} CLI のダウンロード](http://plugins.{DomainName}/ui/home.html){: new_window}」を参照してください。
+始めに、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。手順については、「[{{site.data.keyword.Bluemix_notm}} CLI のダウンロード](http://plugins.ng.bluemix.net/ui/home.html){: new_window}」を参照してください。
 
 ## {{site.data.keyword.Bluemix_notm}} CLI プラグインの追加
 
@@ -43,7 +44,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 Auto-Scaling ポリシーを特定のアプリに添付することができます。次のコマンドを実行します。
 
-```bx as policy-attach <APP_NAME> -p <policy_file>```
+```
+bx as policy-attach <APP_NAME> -p <policy_file>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -58,7 +61,9 @@ Auto-Scaling ポリシーを特定のアプリに添付することができま�
 
 Auto-Scaling ポリシーは、コマンド・ライン・インターフェースで質問に答えていけば生成できます。入力内容によっては、Auto-Scaling ポリシーの定義が含まれた JSON ファイルは、ユーザーが入力する名前を付けて保存されます。ファイル名を入力しなければ、ポリシーのコンテンツは直接コマンド・ラインに表示され、ファイルには保存されません。次のコマンドを実行します。
 
-```bx as policy-create```
+```
+bx as policy-create
+```
 {: codeblock}
 
 
@@ -66,7 +71,9 @@ Auto-Scaling ポリシーは、コマンド・ライン・インターフェー�
 
 アプリの Auto-Scaling ポリシーを表示することができます。ポリシーのコンテンツは直接コマンド・ラインに表示されます。次のコマンドを実行します。
 
-```bx as policy-show <APP_NAME> [--json]```
+```
+bx as policy-show <APP_NAME> [--json]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -81,7 +88,9 @@ Auto-Scaling ポリシーは、コマンド・ライン・インターフェー�
 
 Auto-Scaling ポリシーをアプリから削除することができます。次のコマンドを実行します。
 
-```bx as policy-detach <APP_NAME>```
+```
+bx as policy-detach <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -94,7 +103,9 @@ Auto-Scaling ポリシーをアプリから削除することができます。�
 
 特定のアプリの Auto-Scaling ポリシーを有効にしたり無効にしたりできます。次のコマンドを実行します。
 
-```bx as policy-enable|policy-disable <APP_NAME>```
+```
+bx as policy-enable|policy-disable <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -107,7 +118,9 @@ Auto-Scaling ポリシーをアプリから削除することができます。�
 
 特定のアプリの Auto-Scaling アクティビティー履歴を表示することができます。Auto-Scaling 履歴レコードの表がコマンド・ライン・インターフェースに表示されます。
 
-```bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]```
+```
+bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -119,14 +132,16 @@ Auto-Scaling ポリシーをアプリから削除することができます。�
 <dd class="pd">履歴範囲の終了のタイム・スタンプ。サポートされているフォーマットは `yyyy-MM-ddTHH:mm:ss+/-hhmm, または yyyy-MM-ddTHH:mm:ssZ` です。デフォルトでは、このタイム・スタンプは現在時刻に設定されます。タイム・スタンプのフォーマットについて詳しくは、「<a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a>」を参照してください。
 </dl>
 
+
+
 **ヒント:** 元の JSON 応答を人間が読めるように整形して表示するには、**--json** オプションを使用することもできます。
 
 # 関連リンク
-{: #rellinks}
+{: rellinks}
 ## 一般
-{: #general}
+{: general}
 * [{{site.data.keyword.autoscaling}} サービス](../../../services/Auto-Scaling/index.html)
-* [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}
 
 

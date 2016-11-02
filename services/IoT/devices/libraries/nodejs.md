@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Node.js for device developers
 {: #nodejs}
-Last updated: 14 September 2016
-{: .last-updated}
 
 You can adapt the client libraries and samples in Node.js to build and develop device code that interacts with your organization on {{site.data.keyword.iot_full}}.
 {:shortdesc}

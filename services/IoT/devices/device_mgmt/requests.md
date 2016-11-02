@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Device management requests
 {: #requests}
-Last updated: 08 September 2016
-{: .last-updated}
 
 
 The {{site.data.keyword.iot_full}} provides actions that can be initiated for one or more devices. These actions can be initiated by using the dashboard or the REST API. The types of available actions are **device actions** and **firmware actions**.

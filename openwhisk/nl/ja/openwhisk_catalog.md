@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 対応の {{site.data.keyword.Bluemix_notm}} サービスの使用
 {: #openwhisk_ecosystem}
-最終更新日: 2016 年 8 月 4 日
+最終更新日: 2016 年 9 月 9 日
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} で、パッケージ・カタログは、便利な機能でアプリを強化して、エコシステム内の外部サービスにアクセスするための簡単な方法を提供します。{{site.data.keyword.openwhisk_short}} 対応の外部サービスの例として、Cloudant、The Weather Company、Slack、GitHub などがあります。
@@ -217,11 +217,11 @@ wsk activation poll
 `/myNamespace/myCloudant` を、ご使用のパッケージ名に置き換えてください。
 
   ```
-wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
   ```
   {: pre}
   ```
-  ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
+  ok: invoked /myNamespace/myCloudant/write with id 62bf696b38464fd1bcaff216a68b8287
   {
     "id": "heisenberg",
     "ok": true,
@@ -245,7 +245,7 @@ wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbnam
 `/myNamespace/myCloudant` を、ご使用のパッケージ名に置き換えてください。
 
   ```
-wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
+  wsk action invoke /myNamespace/myCloudant/read --blocking --result --param dbname testdb --param id heisenberg
   ```
   {: pre}
   ```
@@ -326,10 +326,7 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 - `password`: 予測 API を起動する権限を与えられた Weather Company Data for IBM Bluemix のパスワード。
 - `latitude`: 場所の経度の座標。
 - `longitude`: 場所の緯度の座標。
-- `timeperiod`: 予測の時間枠。有効なオプションは
-、デフォルトの「10 日間」(毎日の予測を 10 日間返す)、「24 時間」(毎時
-の予測を 2 日間返す)、「現在」(現在の天気状況を返す)、「時系列」
-(現在の日時から、現在の観測と過去 24 時間までの観測の両方を返す) です。 
+- `timeperiod`: 予測の時間枠。有効なオプションは、デフォルトの「10 日間」(毎日の予測を 10 日間返す)、「48 時間」(毎時の予測を 2 日間返す)、「現在」(現在の天気状況を返す)、「時系列」(現在の日時から、現在の観測と過去 24 時間までの観測の両方を返す) です。
 
 
 以下は、パッケージ・バインディングを作成してから 10 日間の予測を取得する例です。
@@ -337,7 +334,7 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 1. API キーを使用してパッケージ・バインディングを作成します。
 
   ```
-wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
+  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
   ```
   {: pre}
 
@@ -578,6 +575,7 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 - `channel`: メッセージのポスト先の Slack チャネル。
 - `username`: メッセージをポストするユーザーの名前。
 - `text`: ポストするメッセージ。
+- `token`: (オプション) Slack [アクセス・トークン](https://api.slack.com/tokens)。Slack アクセス・トークンの使用について詳しくは、[以下](./openwhisk_catalog.html#openwhisk_catalog_slack_token)を参照してください。
 
 以下は、Slack を構成し、パッケージ・バインディングを作成して、
 メッセージをチャネルにポストする例です。
@@ -600,6 +598,10 @@ wsk action invoke mySlack/post --blocking --result --param text 'Hello from Open
   ```
   {: pre}
 
+### Slack トークン・ベースの API の使用
+{: #openwhisk_catalog_slack_token}
+
+オプションで、webhook API ではなく、Slack のトークン・ベース API を使用することを選択できます。そうするよう選択した場合、Slack [アクセス・トークン](https://api.slack.com/tokens)を含んでいる `token` パラメーターを渡します。次に、任意の [Slack API メソッド](https://api.slack.com/methods)を `url` パラメーターとして使用します。例えば、メッセージをポストするために、`url` パラメーター値 [slack.postMessage](https://api.slack.com/methods/chat.postMessage) を使用します。
 
 ## GitHub パッケージの使用
 {: #openwhisk_catalog_github}
@@ -664,7 +666,9 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 | `/whisk.system/pushnotifications` | パッケージ | appId、appSecret  | プッシュ・サービスの処理 |
 | `/whisk.system/pushnotifications/sendMessage` | アクション | text、url、deviceIds、platforms、tagNames、apnsBadge、apnsCategory、apnsActionKeyTitle、apnsSound、apnsPayload、apnsType、gcmCollapseKey、gcmDelayWhileIdle、gcmPayload、gcmPriority、gcmSound、gcmTimeToLive | 1 つ以上の指定されたデバイスにプッシュ通知を送信 |
 | `/whisk.system/pushnotifications/webhook` | フィード | events | プッシュ・サービスでデバイスのアクティビティー (デバイスの登録、登録解除、サブスクリプション、アンサブスクリプション) に基づきトリガー・イベントを発生させる |
-`appId` と `appSecret` の値を使用して、パッケージ・バインディングを作成することをお勧めします。この方法を使用すると、パッケージ内のアクションを起動するたびにこれらの資格情報を指定する必要はありません。### Push パッケージ・バインディングの作成
+`appId` と `appSecret` の値を使用して、パッケージ・バインディングを作成することをお勧めします。この方法を使用すると、パッケージ内のアクションを起動するたびにこれらの資格情報を指定する必要はありません。
+
+### Push パッケージ・バインディングの作成
 {: #openwhisk_catalog_pushnotifications_create}
 
 Push Notifications パッケージ・バインディングを作成する際に、以下のパラメーターを指定してください。

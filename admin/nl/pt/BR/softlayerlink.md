@@ -83,7 +83,6 @@ Para convidar membros da equipe por meio do {{site.data.keyword.Bluemix_notm}}:
  1. Acesse o ícone **{{site.data.keyword.avatar}}**
 ![ícone Avatar](../icons/i-avatar-icon.svg) >
 **Contas** > **Convidar membros da equipe**.
-
  2. Clique em **Incluir** para autenticar em sua conta do SoftLayer e visualizar uma lista de membros da equipe a partir de sua conta do SoftLayer.
  3. Selecione os membros da equipe para convidar e clique em **Enviar**.
 

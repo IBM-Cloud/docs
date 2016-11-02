@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+
 
 ---
 
@@ -18,8 +18,9 @@ copyright:
 # CLI de admin de {{site.data.keyword.Bluemix_notm}}
 {: #bluemixadmincli}
 
-*Última actualización: 2 de juno de 2016*
+Última actualización: 1 de septiembre de 2016
 {: .last-updated}
+
 
 Puede gestionar usuarios del entorno Local o Dedicado de
 {{site.data.keyword.Bluemix_notm}} o {{site.data.keyword.Bluemix_notm}} mediante
@@ -49,18 +50,26 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdominio&gt;.bluemix.net/c
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdominio&gt;</dt>
-<dd class="pd">Subdominio del URL correspondiente a la instancia de {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd class="pd">Subdominio del URL correspondiente a la instancia de {{site.data.keyword.Bluemix_notm}}. Por ejemplo, <code>https://console.mycompany.bluemix.net/cli</code></dd>
 </dl>
 </li>
-<li>Para instalar el plug-in de CLI de administración de {{site.data.keyword.Bluemix_notm}}, ejecute el siguiente mandato:<br/><br/> <code>
-cf install-plugin bluemix-admin-cli -r BluemixAdmin
+<li>Para instalar el plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}, ejecute el siguiente mandato:<br/><br/> <code>
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
 </ol>
 
+Si necesita desinstalar el plug-in, puede utilizar los mandatos siguientes y, a continuación, puede añadir el repositorio actualizado e instalar el plug-in más reciente:
+
+* Desinstale el plug-in: `cf uninstall-plugin-repo BluemixAdminCLI`
+* Elimine el repositorio de plug-ins: `cf remove-plugin-repo BluemixAdmin`
+
+
 ## Utilización del plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}
 
-Puede utilizar el plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} para añadir o eliminar usuarios, asignar o desasignar usuarios de organizaciones y para realizar otras tareas de gestión. Para ver una lista de mandatos, ejecute el mandato siguiente:
+Puede utilizar el plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} para añadir o eliminar usuarios, asignar o desasignar usuarios de organizaciones y para realizar otras tareas de gestión. Los caracteres especiales, como espacios, signos de más (+) y ampersands (&) no se admiten al crear nombres de organización, nombres de espacio y grupos de seguridad de aplicación. Utilice mayúsculas y minúsculas combinadas o caracteres de subrayado para crear nombres exclusivos.
+
+Para ver una lista de mandatos, ejecute el mandato siguiente:
 
 ```
 cf plugins
@@ -95,13 +104,16 @@ cf login
 ### Adición de un usuario
 
 Puede añadir un usuario al entorno de
-{{site.data.keyword.Bluemix_notm}} desde un registro
-de LDAP. Escriba este mandato:
+{{site.data.keyword.Bluemix_notm}} desde el registro de usuarios para su entorno. Escriba este mandato:
 
 ```
 cf ba add-user <nombre_usuario> <organización>
 ```
 {: codeblock}
+
+**Nota**: para añadir un usuario a una organización específica, debe ser el director de la organización o tener permisos de
+**Administrador** (una alternativa disponible es **Superusuario**) o **Usuario** con acceso de
+**Escritura**.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
@@ -117,17 +129,23 @@ de **ba add-user** más largo.
 
 ### Buscar un usuario
 
-Puede buscar un usuario. Escriba este mandato:
+Puede buscar un usuario. Indique el siguiente mandato junto con los parámetros de filtro de búsqueda opcionales según convenga (nombre, permiso, organización y rol):
 
 ```
-cf ba search-users <nombre_usuario>
+cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
-<dd class="pd">El nombre del usuario en {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
+<dd class="pd">El nombre del usuario en {{site.data.keyword.Bluemix_notm}}. </dd>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">El permiso asignado al usuario. Por ejemplo, superusuario, básico, catálogo, usuario e informes. Para obtener más información sobre los permisos de usuario asignados, consulte [Permisos](../../../admin/index.html#permissions). No se puede utilizar este parámetro con el parámetro de organización en la misma consulta.</dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
+<dd class="pd">El nombre de la organización a la que pertenece el usuario. No se puede utilizar este parámetro con el parámetro de organización en la misma consulta.</dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">El rol de organización asignado al usuario. Por ejemplo, gestor, gestor de facturación o auditor de la organización.Especifique la organización con este parámetro. Para obtener más información acerca de los roles, consulte [Roles de usuario](../../../admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 
@@ -149,7 +167,7 @@ cf ba set-permissions <nombre_usuario> <permisos> <acceso>
 <dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
 <dd class="pd">El nombre del usuario en {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt class="pt dlterm">&lt;permiso&gt;</dt>
-<dd class="pd">Establecer los permisos para el usuario: Admin, Iniciar sesión, Catálogo (acceso de lectura o escritura),
+<dd class="pd">Establecer los permisos para el usuario: Admin (una alternativa válida es Superusuario), Iniciar sesión (una alternativa válida es Básico), Catálogo (acceso de lectura o escritura),
 Informes (acceso de lectura o escritura) o Usuarios (acceso de lectura o escritura).</dd>
 <dt class="pt dlterm">&lt;acceso&gt;</dt>
 <dd class="pd">Para permisos del Catálogo, Informes o Usuarios, también debe tener el nivel de acceso <code>read</code> o <code>write</code> (lectura o escritura).</dd>
@@ -234,7 +252,7 @@ cf ba set-org <nombre_usuario> <organización> [<rol>]
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o GUID de la organización {{site.data.keyword.Bluemix_notm}} a la que se va a asignar el usuario.</dd>
 <dt class="pt dlterm">&lt;rol&gt;</dt>
-<dd class="pd">Consulte [Roles](../../../admin/users_roles.html#userrolesinfo) para ver los roles de usuario de {{site.data.keyword.Bluemix_notm}} y sus descripciones.</dd>
+<dd class="pd">Consulte [Roles](../../../admin/users_roles.html) para ver los roles de usuario de {{site.data.keyword.Bluemix_notm}} y sus descripciones.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba so** como alias para el nombre de mandato
@@ -257,7 +275,7 @@ cf ba unset-org <nombre_usuario> <organización> [<rol>]
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o GUID de la organización {{site.data.keyword.Bluemix_notm}} a la que se va a asignar el usuario.</dd>
 <dt class="pt dlterm">&lt;rol&gt;</dt>
-<dd class="pd">Consulte [Roles](../../../admin/users_roles.html#userrolesinfo) para ver los roles de usuario de {{site.data.keyword.Bluemix_notm}} y sus descripciones.</dd>
+<dd class="pd">Consulte [Roles](../../../admin/users_roles.html) para ver los roles de usuario de {{site.data.keyword.Bluemix_notm}} y sus descripciones.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba uo** como alias para un nombre de mandato
@@ -282,7 +300,7 @@ de **ba unset-org** más largo.
 
 ### Configuración de una cuota para una organización
 
-Puede establecer la cuota de uso de una determinada organización con el siguiente mandato:
+Puede establecer la cuota de uso de una determinada organización.
 
 ```
 cf ba set-quota <organización> <plan>
@@ -309,7 +327,7 @@ cf ba add-report <categoría> <fecha> <PDF|TXT|LOG> <RTF>
 ```
 {: codeblock}
 
-**Nota**: Si tiene acceso de escritura para el permiso de informes, puede crear una nueva categoría y añadir un informe en cualquiera de los formatos aceptados para sus usuarios. Especifique el nombre de la nueva categoría para el parámetro `category` o añada su informe en una categoría existente. 
+**Nota**: Si tiene acceso de escritura para el permiso de informes, puede crear una nueva categoría y añadir un informe en cualquiera de los formatos aceptados para sus usuarios. Especifique el nombre de la nueva categoría para el parámetro `category` o añada su informe en una categoría existente.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;categoría&gt;</dt>
@@ -377,8 +395,7 @@ cf ba enable-service-plan <identificador_plan>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de servicio que no es exclusivo,
-se le solicitará que elija un plan de servicio. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre del servicio para abrir la vista de detalles, para luego ver qué planes de precios hay disponibles para el dicho servicio. </dd>
+<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que elegir. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio. </dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba esp** como alias para el nombre de mandato
@@ -394,8 +411,7 @@ cf ba disable-service-plan <identificador_plan>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de servicio que no es exclusivo,
-se le solicitará que elija un plan de servicio. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre del servicio para abrir la vista de detalles, para luego ver qué planes de precios hay disponibles para el dicho servicio. </dd>
+<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que elegir. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba dsp** como alias para un nombre de mandato
@@ -414,8 +430,7 @@ cf ba add-service-plan-visibility <identificador_plan> <organización>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de servicio que no es exclusivo,
-se le solicitará que elija un plan de servicio. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre del servicio para abrir la vista de detalles, para luego ver qué planes de precios hay disponibles para el dicho servicio. </dd>
+<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que elegir. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio.</dd>
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} que va a agregar a la lista de visibilidad del servicio.</dd>
 </dl>
@@ -432,8 +447,7 @@ cf ba remove-service-plan-visibility <identificador_plan> <organización>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de servicio que no es exclusivo,
-se le solicitará que elija un plan de servicio. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre del servicio para abrir la vista de detalles, para luego ver qué planes de precios hay disponibles para el dicho servicio. </dd>
+<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que elegir. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio.</dd>
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} que va a eliminar de la lista de visibilidad del servicio.</dd>
 </dl>
@@ -452,8 +466,7 @@ cf ba edit-service-plan-visibilities <identificador_plan> <organización_1> <org
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;identificador_plan&gt;</dt>
-<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de servicio que no es exclusivo,
-se le solicitará que elija un plan de servicio. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre del servicio para abrir la vista de detalles, para luego ver qué planes de precios hay disponibles para el dicho servicio. </dd>
+<dd class="pd">Nombre o GUID del plan de servicio que desea habilitar. Si especifica un nombre de plan de servicio no exclusivo, por ejemplo "Estándar" o "Básico", se le ofrecerán planes de servicio entre los que elegir. Para identificar el nombre de un plan de servicio, seleccione la categoría de servicio en la página de inicio y, a continuación, seleccione **Añadir** para ver los servicios para dicha categoría. Pulse el nombre de servicio para abrir la vista de detalles y luego podrá ver los nombres de los planes de servicio disponibles para dicho servicio.</dd>
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o GUID de la organización de {{site.data.keyword.Bluemix_notm}} a la que va a agregar visibilidad. Puede habilitar la visibilidad del servicio a más de una organización especificando nombres de organización o GUID adicionales en el mandato.</dd>
 </dl>
@@ -541,3 +554,203 @@ de **ba delete-service-broker** más largo.
 
 **Sugerencia:** También puede usar **ba usb** como alias para el nombre de mandato
 **ba update-service-broker** más largo.
+
+
+### Trabajar con grupos de seguridad de aplicaciones
+
+Para trabajar con grupos de seguridad de aplicaciones (ASG), debe ser un administrador con acceso completo al entorno local o dedicado. Todos los usuarios del entorno pueden mostrar una lista de los ASG disponibles para la organización que el mandato tiene como objetivo. No obstante, para crear, actualizar o enlazar ASG, debe ser administrador del entorno de {{site.data.keyword.Bluemix_notm}}.
+
+Los ASG funcionan como cortafuegos virtuales que controlan el tráfico de salida de las aplicaciones del entorno de
+{{site.data.keyword.Bluemix_notm}}. Cada ASG está compuesto por una lista de reglas que permiten comunicaciones y tráfico específicos hacia y desde el exterior de la red. Puede enlazar uno o más ASG con un conjunto de grupos de seguridad específico, por ejemplo, un conjunto de grupos que se utiliza para aplicar el acceso global, o puede enlazar con espacios dentro de la organización en el entorno de
+{{site.data.keyword.Bluemix_notm}}.
+
+{{site.data.keyword.Bluemix_notm}} se configura inicialmente con todo el acceso a la red externa restringido. Dos grupos de seguridad creados por IBM, `public_networks` y `dns`, permiten el acceso global a la red externa al enlazar dichos grupos con los conjuntos de grupos de seguridad de Cloud Foundry predeterminados. Los dos conjuntos de grupos de seguridad de Cloud Foundry que se utilizan para aplicar el acceso global son los conjuntos de grupos **Default Staging** y **Default Running**. Estos conjuntos de grupos aplican las reglas para permitir tráfico hacia todas las apps en ejecución o todas las apps en transferencia. Si no desea enlazar estos dos conjuntos de grupos de seguridad, puede desenlazarlos de los conjuntos de grupos de Cloud Foundry y, a continuación, enlazar el grupo de seguridad con un espacio específico. Para obtener más información, consulte [Enlace de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+
+**Nota**: los mandatos siguientes que le permiten trabajar con grupos de seguridad se basan en la versión 1.6 de Cloud Foundry.
+
+#### Listado, creación, actualización y supresión de grupos de seguridad
+
+Para obtener más información sobre la creación de grupos de seguridad y las reglas que definen el tráfico de salida, consulte
+[Creación de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+
+* Puede obtener una lista de todos los grupos de seguridad especificando el mandato siguiente:
+
+```
+cf ba security-groups
+```
+{: codeblock}
+
+**Sugerencia:** también puede usar **ba sgs** como alias para el nombre de mandato
+**ba security-groups** más largo.
+
+* Puede mostrar los detalles de un grupo de seguridad concreto especificando el mandato siguiente:
+
+```
+cf ba security-groups <grupo-seguridad>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
+<dd class="pd">Nombre del grupo de seguridad</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba sg** como alias para el nombre de mandato
+**ba security-groups** más largo con el parámetro `security-group`.
+
+
+* Puede crear un grupo de seguridad especificando el mandato siguiente. Cada grupo de seguridad que cree tiene el prefijo
+`adminconsole_` añadido al nombre para distinguirlo de los grupos de seguridad creados por IBM.
+
+```
+cf ba create-security-group <grupo-seguridad> <vía-acceso-archivo-reglas>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
+<dd class="pd">Nombre del grupo de seguridad</dd>
+<dt class="pt dlterm">&lt;vía-acceso-archivo-reglas&gt;</dt>
+<dd class="pd">Vía de acceso absoluta o relativa al archivo de reglas</dd>
+</dl>
+
+**Sugerencia:** También puede usar **ba csg** como alias para un nombre de mandato
+de **ba create-security-group** más largo.
+
+* Puede actualizar un grupo de seguridad especificando el mandato siguiente:
+
+```
+cf ba update-security-group <grupo-seguridad> <vía-acceso-archivo-reglas>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
+<dd class="pd">Nombre del grupo de seguridad</dd>
+<dt class="pt dlterm">&lt;vía-acceso-archivo-reglas&gt;</dt>
+<dd class="pd">Vía de acceso absoluta o relativa al archivo de reglas</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba usg** como alias para el nombre de mandato
+**ba update-security-group** más largo.
+
+* Puede suprimir un grupo de seguridad especificando el mandato siguiente:
+
+```
+cf ba delete-security-group <grupo-seguridad>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
+<dd class="pd">Nombre del grupo de seguridad</dd>
+</dl>
+
+**Sugerencia:** También puede usar **ba dsg** como alias para un nombre de mandato
+de **ba delete-security-group** más largo.
+
+
+#### Enlace, anulación del enlace y listado de grupos de seguridad enlazados
+
+Para obtener más información sobre el enlace y la anulación del enlace de grupos de seguridad, consulte
+[Enlace de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} y
+[Anulación del enlace de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
+
+* Puede enlazar con el conjunto de grupos de seguridad Default Staging especificando el mandato siguiente:
+
+```
+cf ba bind-staging-security-group <grupo-seguridad>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
+<dd class="pd">Nombre del grupo de seguridad</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba bssg** como alias para el nombre de mandato
+**ba bind-staging-security-group** más largo.
+
+* Puede enlazar con el conjunto de grupos de seguridad Default Running especificando el mandato siguiente:
+
+```
+cf ba bind-running-security-group <grupo-seguridad>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
+<dd class="pd">Nombre del grupo de seguridad</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba brsg** como alias para un nombre de mandato
+de **ba bind-running-security-group** más largo.
+
+* Puede desenlazar un conjunto de grupos de seguridad Default Staging especificando el mandato siguiente:
+
+```
+cf ba cf ba unbind-staging-security-group <grupo-seguridad>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
+<dd class="pd">Nombre del grupo de seguridad</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba ussg** como alias para el nombre de mandato
+**ba unbind-staging-security-group** más largo.
+
+* Puede desenlazar un conjunto de grupos de seguridad Default Running especificando el mandato siguiente:
+
+```
+cf ba unbind-running-security-group <grupo-seguridad>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
+<dd class="pd">Nombre del grupo de seguridad</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba brsg** como alias para un nombre de mandato
+de **ba bind-running-security-group** más largo.
+
+* Puede enlazar un grupo de seguridad con un espacio especificando el mandato siguiente:
+
+```
+cf ba bind-security-group <grupo-seguridad> <org> <espacio>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
+<dd class="pd">Nombre del grupo de seguridad</dd>
+<dt class="pt dlterm">&lt;org&gt;</dt>
+<dd class="pd">Nombre de la organización con la que enlazar el grupo de seguridad</dd>
+<dt class="pt dlterm">&lt;espacio&gt;</dt>
+<dd class="pd">Nombre del espacio dentro de la organización con el que enlazar el grupo de seguridad</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba bsg** como alias para un nombre de mandato
+de **ba bind-security-group** más largo.
+
+* Puede desenlazar un grupo de seguridad de un espacio especificando el mandato siguiente:
+
+```
+cf ba unbind-security-group <grupo-seguridad> <org> <espacio>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;grupo-seguridad&gt;</dt>
+<dd class="pd">Nombre del grupo de seguridad</dd>
+<dt class="pt dlterm">&lt;org&gt;</dt>
+<dd class="pd">Nombre de la organización con la que enlazar el grupo de seguridad</dd>
+<dt class="pt dlterm">&lt;espacio&gt;</dt>
+<dd class="pd">Nombre del espacio dentro de la organización con el que enlazar el grupo de seguridad</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba usg** como alias para el nombre de mandato
+**ba unbind-staging-security-group** más largo.
+

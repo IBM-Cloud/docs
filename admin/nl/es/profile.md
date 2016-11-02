@@ -17,37 +17,32 @@ copyright:
 
 # Configuración del perfil
 {: #usersettings}
-*Última actualización: 16 de mayo de 2016*
+Última actualización: 16 de agosto de 2016
 {: .last-updated}
 
-Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; **Cuenta** &gt; **Perfil** para actualizar los valores del perfil.
+Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; **Perfil** para actualizar su configuración de perfil.
 {:shortdesc}
 
  En la página **Perfil**, puede establecer o actualizar la siguiente información:
 
-<!--  * A profile photo that is visible to other {{site.data.keyword.Bluemix_notm}} users -->
-
+ * Una foto de perfil que sea visible para otros usuarios de {{site.data.keyword.Bluemix_notm}}
  * Información de ID de IBM que incluye el nombre, el correo electrónico, el número de teléfono, la contraseña, la empresa y el rol.
  * Valor de seguimiento de herramientas de análisis
 
-<!-- pulled back, so removing content for now
-
-## Changing your profile photo
+## Cambio de la foto de perfil
 {: #photo}
 
-1. Go to the **Account and Support** icon ![Account and Support icon](../admin/images/account_support.svg) &gt; **Account** &gt; **Profile**.
+1. Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; **Perfil**.
 
-* Click **Change Photo** to upload a new photo.
-* Click **Remove Photo** to remove your photo.
-
--->
+* Pulse **Cambiar foto** para cargar una nueva foto.
+* Pulse **Eliminar foto** para eliminar la foto.
 
 ## Editar información de ID de IBM
 {: #ibmid}
 
 Si necesita cambiar la información de cuenta de ID de IBM, como por ejemplo el nombre, el correo electrónico, el número de teléfono, la contraseña o el nombre de empresa, realice los siguientes pasos:
 
-1. Vaya al icono **Cuenta y soporte** ![Cuenta y soporte](../admin/images/account_support.svg) &gt; **Cuenta** &gt; **Perfil**.
+1. Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; **Perfil**.
 2. Pulse **Editar el ID de IBM**.
 3. Edite la información de usuario.
 4. Pulse **Enviar**.
@@ -61,5 +56,5 @@ Si elige inhabilitar el seguimiento, es posible que no pueda utilizar algunas ca
 
 Para inhabilitar el seguimiento de las herramientas de análisis, realice los siguientes pasos:
 
-1. Vaya al icono **Cuenta y soporte** ![Cuenta y soporte](../admin/images/account_support.svg) &gt; **Cuenta** &gt; **Perfil**.
+1. Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; **Perfil**.
 2. Establezca el seguimiento de las herramientas de análisis en **Desactivado**.

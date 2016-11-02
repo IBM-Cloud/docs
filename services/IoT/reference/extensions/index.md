@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,8 +14,6 @@ copyright:
 
 # External service integrations
 {: #ref-index}
-Last updated: 26 September 2016
-{: .last-updated}
 
 External service integration allows you to access data and operations from third-party or external services within your {{site.data.keyword.iot_full}} organization.
 
@@ -124,7 +123,6 @@ To configure your AT&T-connected devices, complete the following steps:
 ```
 
 When the organization is successfully configured, the *Extensions* section displays under the *Extensions Configuration* section in the *Device Drilldown* view.
-
 
 ## ARM mbed connector
 {: #arm}
@@ -287,7 +285,7 @@ The Weather Company extension combines weather data with your existing {{site.da
 
 ### Weather Data
 
-To view the weather data retrieved for a device location, find the device in the **Devices** pane and click on it. In the detailed device view scroll down to the **Extensions** section. The following weather data is listed:
+To view the weather data retrieved for a device location, find the device in the **Devices** pane and click it. In the detailed device view scroll down to the **Extensions** section. The following weather data is listed:
 
 - Current weather.
 - Current temperature.

@@ -4,6 +4,8 @@ copyright:
 
   years: 2015, 2016
 
+lastupdated: "2016-10-26"
+
 ---
 
 {:new_window: target="_blank"}
@@ -13,15 +15,13 @@ copyright:
 
 # On-premises configuration examples
 {:#onpremises}
-*Last updated: 14 June 2016*
-{: .last-updated}
 
 Your on-premises VPN gateway connects with the {{site.data.keyword.vpn_short}} gateway. You might need to modify the configuration of the on-premises gateway that you are using. 
 {:shortdesc}
 
 * [Configuring IBM VPN with strongSwan](vpn_onpremises.html#strongswan)
 * [Configuring IBM VPN with Vyatta](vpn_onpremises.html#vyatta)
-* [Configuring IBM VPN with SoftLayer Gateway Appliance Service (GaaS)](vpn_onpremises.html#gaas)
+* [Configuring IBM VPN with IBM Bluemix Gateway Appliance Service](vpn_onpremises.html#gaas)
 * [Configuring IBM VPN with Cisco ASA](vpn_onpremises.html#cisco)
 
 ##Configuring the IBM VPN service with strongSwan
@@ -435,7 +435,7 @@ Your on-premises Vyatta setup uses the following example configuration:
 		```
 		{: screen}  
 
-##Configuring the IBM VPN service with SoftLayer Gateway Appliance Service (GaaS)
+##Configuring the IBM VPN service with the IBM Bluemix Gateway Appliance Service 
 {: #gaas} 
 
 The IBM VPN setup uses the following example configuration:
@@ -443,18 +443,18 @@ The IBM VPN setup uses the following example configuration:
 * Container subnet: 172.31.0.0/16
 * IBM VPN gateway IP address: 134.168.0.244
 
-Your on-premises SoftLayer GaaS setup uses the following example configuration:
+Your on-premises IBM Bluemix Gateway Appliance Service setup uses the following example configuration:
 
 * VPN gateway IP address (Customer Gateway IP): 75.126.122.46
 * Subnet address to which endpoints are connected (Customer Subnet): 10.86.88.128/26
 * Preshared key string: 567890 
 
-###To use the IBM VPN service with SoftLayer GaaS, configure as follows:
+###To use the IBM VPN service with the IBM Bluemix Gateway Appliance Service, configure as follows:
 
-1. Configure SoftLayer GaaS:
+1. Configure IBM Bluemix Gateway Appliance Service:
 
 	1. Open [https://gateway-as-a-service.com/gaas/ui/](https://gateway-as-a-service.com/gaas/ui/).  
-	2. Log in by using your SoftLayer account credentials. The **Manage Gateways** page is displayed. 
+	2. Log in by using your account credentials. The **Manage Gateways** page is displayed. 
 	3. Select the action **Manage Tunnels** for the gateway that you want configure. The **Manage gateway Tunnel Configuration** page is displayed. 
 	4. Select **Add Tunnel**. The subsequent page requires gateway and network details. 
 	5. Do not change the default gateway and network configuration. Select **Next**.

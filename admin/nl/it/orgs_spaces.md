@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  anni: 2015, 2016
 
 
 
@@ -17,10 +17,10 @@ copyright:
 
 # Gestione di organizzazioni e spazi
 {: #orgsspacesusers}
-Ultimo aggiornamento: 16 maggio 2016
+Ultimo aggiornamento: 16 agosto 2016
 {: .last-updated}
 
-In qualità di proprietario dell'account, puoi gestire le tue organizzazioni andando all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; pagina **Gestisci organizzazioni**. I gestori dell'organizzazione possono anche utilizzare la pagina Gestisci organizzazioni per gestire le organizzazioni dove sono impostati come gestore.
+In qualità di proprietario dell'account, puoi gestire le tue organizzazioni facendo clic sull'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Gestisci organizzazioni**. I gestori dell'organizzazione possono anche utilizzare la pagina Gestisci organizzazioni per gestire le organizzazioni dove sono impostati come gestore.
 {:shortdesc}
 
 Le attività di gestione includono quanto segue:
@@ -99,7 +99,7 @@ Dopo che hai aggiunto dei membri del team a un'organizzazione, puoi concedere lo
 
 Solo i proprietari di account con degli account Pagamento a consumo possono creare un'organizzazione. Puoi creare un'organizzazione completando la seguente procedura:
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; pagina **Gestisci organizzazioni**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Gestisci organizzazioni**.
 2. Fai clic su **Aggiungi una nuova organizzazione**.
 3. Immetti il nome dell'organizzazione.
 4. Fai clic su **Aggiungi**.
@@ -109,7 +109,7 @@ uno spazio *dev* come un ambiente di sviluppo,
 uno spazio *test* come un ambiente di test e uno
 spazio *production* come un ambiente di produzione. Puoi quindi associare le tue applicazioni agli spazi. Per creare uno spazio, completa la seguente procedura:
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; pagina **Gestisci organizzazioni**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Gestisci organizzazioni**.
 2. Identifica l'organizzazione a cui vuoi aggiungere uno spazio e seleziona **Visualizza dettagli**.
 3. Fai clic su **Modifica**.
 4. Fai clic su **Aggiungi uno spazio**.
@@ -122,7 +122,7 @@ spazio *production* come un ambiente di produzione. Puoi quindi associare le tue
 
 Per rinominare la tua organizzazione, attieniti alla seguente procedura:
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; pagina **Gestisci organizzazioni**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Gestisci organizzazioni**.
 2. Identifica l'organizzazione che vuoi modificare e seleziona **Visualizza dettagli**.
 3. Seleziona **Modifica**.
 4. Seleziona **Modifica** per il titolo dell'organizzazione.
@@ -138,7 +138,7 @@ In qualità di proprietario dell'account, puoi rivolgerti al [supporto di {{site
 
 Puoi eliminare uno spazio dalla pagina **Gestisci organizzazioni**:
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; pagina **Gestisci organizzazioni**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Gestisci organizzazioni**.
 2. Identifica l'organizzazione che vuoi modificare e seleziona **Visualizza dettagli**.
 3. Identifica lo spazio che vuoi eliminare e seleziona **Modifica**.
 4. Fai clic su **Elimina il tuo spazio**.
@@ -148,14 +148,14 @@ Puoi eliminare uno spazio dalla pagina **Gestisci organizzazioni**:
 
 Per elencare i membri per una specifica organizzazione, completa la seguente procedura:
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; **Gestisci organizzazioni**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Gestisci organizzazioni**.
 2. Identifica l'organizzazione per cui vuoi visualizzare i membri e fai clic su **Visualizza dettagli**.
 3. Fai clic su **Modifica**.
 4. Puoi visualizzare i membri della tua organizzazione e i loro ruoli nella scheda **Utenti**.
 
 Per elencare i membri per uno specifico spazio, completa la seguente procedura:
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; pagina **Gestisci organizzazioni**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Gestisci organizzazioni**.
 2. Identifica l'organizzazione per cui vuoi visualizzare i membri e fai clic su **Visualizza dettagli**.
 3. Identifica lo spazio per cui vuoi visualizzare i membri e fai clic su **Modifica**.
 4. Puoi visualizzare i membri del tuo spazio e i loro ruoli nella scheda **Utenti**.
@@ -168,21 +168,21 @@ all'utilizzo della quota.
 
 Per visualizzare la quota per la tua organizzazione, completa la seguente procedura:
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; pagina **Gestisci organizzazioni**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Gestisci organizzazioni**.
 2. Identifica l'organizzazione per cui vuoi visualizzare la quota e fai clic su **Visualizza dettagli**.
 3. Fai clic su **Modifica**.
 4. Seleziona la scheda **Quota**.
 
 Per aggiornare la quota per la tua organizzazione, devi aprire un ticket di supporto. Per ulteriori informazioni sull'apertura di
 un ticket di supporto, vedi [Richiesta di assistenza clienti](../support/index.html#contacting-support). Per ulteriori informazioni
-sulla quota per i contenitori, vedi [Quota](../containers/container_creating_ov.html#container_quota) nella documentazione dei contenitori.
+sulla quota per i contenitori, vedi [Quota](../containers/container_planning_org_ov.html##container_planning_quota) nella documentazione dei contenitori.
 
 ## Gestione dei domini
 {: #managedomains}
 
 In qualità di proprietario dell'account o di gestore dell'organizzazione, puoi visualizzare il dominio di sistema e aggiungere domini personalizzati per le applicazioni create all'interno di un'organizzazione e dei relativi spazi. In qualità di gestore spazio, la scheda **Domini** per uno spazio è un elenco di sola lettura dei domini assegnati allo spazio. 
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; pagina **Gestisci organizzazioni**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Gestisci organizzazioni**.
 2. Identifica l'organizzazione per cui vuoi visualizzare o modificare i domini.
 3. Seleziona **Visualizza dettagli** per tale organizzazione.
 4. Fai clic su **Modifica**.

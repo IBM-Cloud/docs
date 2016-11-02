@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  anni: 2015，2016
 
  
 
@@ -17,13 +17,14 @@ copyright:
 # CLI Auto-Scaling
 {: #autoscalingcli}
 
-*Ultimo aggiornamento: 25 febbraio 2016*
+Ultimo aggiornamento: 25 febbraio 2016
 {: .last-updated}
+
 
 Puoi configurare il servizio {{site.data.keyword.autoscaling}} utilizzando la CLI {{site.data.keyword.autoscaling}} per {{site.data.keyword.Bluemix_notm}}. La CLI {{site.data.keyword.autoscaling}} supporta Linux64, Win64 e OSX e fornisce delle funzionalità simili a quelle fornite dall'API RESTful di ridimensionamento automatico.
 {: shortdesc}
 
-Prima di iniziare, installa la CLI {{site.data.keyword.Bluemix_notm}}. Consulta [Download {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window} per istruzioni.
+Prima di iniziare, installa la CLI {{site.data.keyword.Bluemix_notm}}. Consulta [Download {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window} per istruzioni.
 
 ## Aggiunta del plug-in CLI {{site.data.keyword.Bluemix_notm}}
 
@@ -43,7 +44,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 Puoi collegare una politica di ridimensionamento automatico a una specifica applicazione. Immetti il seguente comando:
 
-```bx as policy-attach <APP_NAME> -p <policy_file>```
+```
+bx as policy-attach <APP_NAME> -p <policy_file>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -58,7 +61,9 @@ Puoi collegare una politica di ridimensionamento automatico a una specifica appl
 
 Puoi generare una politica di ridimensionamento automatico rispondendo alle domande visualizzate nell'interfaccia riga di comando. A seconda del tuo input, un file JSON contenente la definizione della politica di ridimensionamento automatico viene salvato con il nome immesso. Se non immetti il nome del file, il contenuto della politica viene stampato direttamente nella riga di comando senza essere salvato in un file. Immetti il seguente comando:
 
-```bx as policy-create```
+```
+bx as policy-create
+```
 {: codeblock}
 
 
@@ -66,7 +71,9 @@ Puoi generare una politica di ridimensionamento automatico rispondendo alle doma
 
 Puoi visualizzare la politica di ridimensionamento automatico di un'applicazione. Il contenuto della politica viene stampato direttamente nella riga di comando. Immetti il seguente comando:
 
-```bx as policy-show <APP_NAME> [--json]```
+```
+bx as policy-show <APP_NAME> [--json]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -81,7 +88,9 @@ Puoi visualizzare la politica di ridimensionamento automatico di un'applicazione
 
 Puoi rimuovere una politica di ridimensionamento automatico da un'applicazione. Immetti il seguente comando:
 
-```bx as policy-detach <APP_NAME>```
+```
+bx as policy-detach <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -94,7 +103,9 @@ Puoi rimuovere una politica di ridimensionamento automatico da un'applicazione. 
 
 Puoi abilitare o disabilitare la politica di ridimensionamento automatico di una specifica applicazione. Immetti il seguente comando:
 
-```bx as policy-enable|policy-disable <APP_NAME>```
+```
+bx as policy-enable|policy-disable <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -107,7 +118,9 @@ Puoi abilitare o disabilitare la politica di ridimensionamento automatico di una
 
 Puoi visualizzare la cronologia dell'attività di ridimensionamento automatico di una specifica applicazione. Una tabella di record della cronologia del ridimensionamento automatico viene visualizzata nell'interfaccia riga di comando.
 
-```bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]```
+```
+bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -119,14 +132,16 @@ Puoi visualizzare la cronologia dell'attività di ridimensionamento automatico d
 <dd class="pd">La data e ora di fine dell'intervallo della cronologia. I formati supportati sono `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Per impostazione predefinita, la data e ora viene impostata sull'ora corrente. Consultare la <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date e Time Formats standard</a> per i dettagli relativi al formato data e ora. 
 </dl>
 
+
+
 **Suggerimento:** puoi anche utilizzare l'opzione **--json** per stampare invece la riposta JSON originale.
 
 # rellinks
-{: #rellinks}
+{: rellinks}
 ## generale
-{: #general}
+{: general}
 * [{{site.data.keyword.autoscaling}}servizio](../../../services/Auto-Scaling/index.html)
-* [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}
 
 

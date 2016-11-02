@@ -67,8 +67,7 @@ copyright:
 若要建立「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕，請執行下列動作： 
 
 <ol>
-<li> 複製並修改下列其中一個 Snippet 範本，並包括公用 Git 儲存庫。
-
+<li> 複製並修改下列其中一個 Snippet 範本，並包含公用 Git 儲存庫。
 <p></p>
 <p>
 <strong>提示</strong>：如果想要為 DevOps Services 專案指定建置輸入，請將分支參數新增至 Git URL。當您新增分支參數時，原始公用 Git 儲存庫（包括其所有分支）會複製到新的專用 DevOps Services 專案（含新的 Git 儲存庫）。指定的 Git 分支會設為建置工作的輸入。如果未指定分支，則依預設，建置工作的輸入會設為主分支。</p>
@@ -91,12 +90,12 @@ copyright:
 預設主要分支：
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&#41;
+[![部署至 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required])
 </pre>
 <p>指定的 Git 分支：
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&#41;
+[![部署至 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required])
 </pre>
 </li>
 </ul>
@@ -167,7 +166,7 @@ copyright:
 	
 支援的建置器：<ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant：</a>/<code>build.xml</code>，會將輸出建置到 <code>./output/</code> 資料夾</li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle：</a><code>/build.gradle</code>，會將輸出建置到 <code>. </code> 資料夾 </i>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle：</a><code>/build.gradle</code>，會將輸出建置到 <code>. </code> 資料夾</li>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt：</a><code>/Gruntfile.js</code>，會將輸出建置到 <code>.</code> 資料夾</li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven：</a><code>/pom.xml</code>，會將輸出建置到 <code>./target/</code> 資料夾</li>
 	   </ul>
@@ -182,7 +181,7 @@ copyright:
 <li>在專案的根目錄中，建立 <code>.bluemix</code> 目錄。</li>
 <li>將 <code>pipeline.yml</code> 檔案上傳至 <code>.bluemix</code> 儲存庫。</li>
 </ol> </li>
-	<li>如果您利用 <stong>IBM Containers</strong> 在容器中部署應用程式，則必須在儲存庫的根目錄中包含 Dockerfile，以及在 <code>.bluemix</code> 目錄中包含 <code>pipeline.yml</code> 檔案。
+	<li>如果您使用 <strong>IBM Containers</strong> 在容器中部署應用程式，則必須在儲存庫的根目錄中包含 Dockerfile，以及在 <code>.bluemix</code> 目錄中包含 <code>pipeline.yml</code> 檔案。
 	<ul>
 	    <li> 若要進一步瞭解如何建立 Dockerfile，<a href="https://docs.docker.com/reference/builder/" target="_blank">請參閱 Docker 文件</a>。</li>
 	    <li>您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要手動建立專用於容器的 <code>pipeline.yml</code>，<a href="https://github.com/Puquios/" target="_blank">請參閱 GitHub 中的範例</a>。</li>

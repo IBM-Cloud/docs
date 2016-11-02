@@ -351,24 +351,17 @@ a entrada a seguir no manifest de implementação:
 <!-- begin STAGING ONLY --> 
 
 	
-## Os objetos do criador de logs Log4js não são exibidos na janela pop-up Rastreio
-do Node.js
+## Os objetos do criador de logs Log4js não são exibidos na janela pop-up Rastreio do Node.js
 {: #ts_logger}
 
-Os objetos do criador de logs log4js não são exibidos na janela pop-up Rastreio do
-Node.js quando os módulos log4js e ibmbluemix são usados em seu app. 	
+Os objetos do criador de logs log4js não são exibidos na janela pop-up Rastreio do Node.js quando os módulos log4js e ibmbluemix são usados em seu app. 	
 
  
-Os objetos do criador de logs log4js não são exibidos na janela pop-up Rastreio do
-Node.js quando os módulos log4js, winston e ibmbluemix são usados em seu app.
+Os objetos do criador de logs log4js não são exibidos na janela pop-up Rastreio do Node.js quando os módulos log4js, winston e ibmbluemix são usados em seu app.
 {: tsSymptoms}
 
 
-Como o módulo ibmbluemix fornece uma API unificada para operações de log que usam
-os módulos log4js e winston, apenas os objetos do criador de logs ibmbluemix são exibidos
-na janela pop-up Rastreio do Node.js. Isso tem o objetivo de fazer com que as
-configurações de nível de log para os objetos do criador de logs ibmbluemix, log4js e
-winston parem de sobrescrever umas às outras.
+Como o módulo ibmbluemix fornece uma API unificada para operações de log que usam os módulos log4js e winston, apenas os objetos do criador de logs ibmbluemix são exibidos na janela pop-up Rastreio do Node.js. Isso tem o objetivo de fazer com que as configurações de nível de log para os objetos do criador de logs ibmbluemix, log4js e winston parem de sobrescrever umas às outras.
 {: tsCauses}
 
 
@@ -383,31 +376,21 @@ Este comportamento é esperado.
 <!-- begin STAGING ONLY -->
 
 
-## A caixa de seleção Aplicar configuração de rastreio a todas as instâncias do
-aplicativo está desativada
+## A caixa de seleção Aplicar configuração de rastreio a todas as instâncias do aplicativo está desativada
 {: #ts_bunyan}
 
 A caixa de seleção **Aplicar configuração de rastreio a todas as
-instâncias do aplicativo** é desmarcada e desativada na janela pop-up Rastreio
-do Node.js quando os níveis do criador de logs Bunyan são modificados.
+instâncias do aplicativo** é desmarcada e desativada na janela pop-up
+Rastreio do Node.js quando os níveis do criador de logs Bunyan são modificados.
 
 
 
-Quando você muda os níveis dos objetos do criador de logs Bunyan, a caixa de
-seleção **Aplicar configuração de rastreio a todas as instâncias do
-aplicativo** é desmarcada e desativada na janela pop-up Rastreio do Node.js.
+Quando você muda os níveis dos objetos do criador de logs Bunyan, a caixa de seleção **Aplicar configuração de rastreio a todas as instâncias do aplicativo** é desmarcada e desativada na janela pop-up Rastreio do Node.js.
 {: tsSymptoms} 
 
  
 
-Quando os níveis de log do Bunyam são modificados, a configuração de rastreio não
-pode ser aplicada a todas as instâncias de um aplicativo. Isso ocorre porque a biblioteca
-Bunyam não requer que os nomes ou identificadores dos objetos do criador de logs Bunyam
-sejam exclusivos. Mais de um dos objetos do criador de logs Bunyam que são usados para
-especificar níveis nas mensagens de log do seu aplicativo podem ter o mesmo nome ou
-identificador. Portanto, se a configuração de rastreio estiver ativada para um
-aplicativo, os níveis de log especificados nas mensagens de log do aplicativo poderão ser
-imprecisos.
+Quando os níveis de log do Bunyam são modificados, a configuração de rastreio não pode ser aplicada a todas as instâncias de um aplicativo. Isso ocorre porque a biblioteca Bunyam não requer que os nomes ou identificadores dos objetos do criador de logs Bunyam sejam exclusivos. Mais de um dos objetos do criador de logs Bunyam que são usados para especificar níveis nas mensagens de log do seu aplicativo podem ter o mesmo nome ou identificador. Portanto, se a configuração de rastreio estiver ativada para um aplicativo, os níveis de log especificados nas mensagens de log do aplicativo poderão ser imprecisos.
 {: tsCauses}
 
 

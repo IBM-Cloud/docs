@@ -5,7 +5,6 @@ copyright:
 
 ---
 
-
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -14,7 +13,7 @@ copyright:
 #Liberty 및 Node.js 앱 관리
 {: #app_management}
 
-*마지막 업데이트 날짜: 2016년 3월 17일*
+마지막 업데이트 날짜: 2016년 9월 15일
 {: .last-updated}
 
 App Management는 {{site.data.keyword.Bluemix}}에서
@@ -75,42 +74,8 @@ http://<yourappname>.mybluemix.net/bluemix-debug/shell
   검사기 프로세스는 애플리케이션 컨테이너에서 실행됩니다. 사용자 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에서 실행되는 동안 CPU 사용량 프로파일을 작성하고 중단점을 추가하며 코드를 디버그하려면 이 유틸리티를 사용하십시오. 노드 검사기 모듈에 대한 자세한 정보는 odule, see [GitHub의 노드 검사기](https://github.com/node-inspector/node-inspector){:new_window}를 참조하십시오. 
   
   또한 *inspector* 유틸리티는 *프록시*를 시작하지 않습니다.
-  
-  2. *strongpm*: [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window}에서 [StrongLoop 메트릭, 프로파일링 및 추적](https://strongloop.com/node-js/devops-tools/){:new_window} 등의 유틸리티를 사용하여 Node.js 애플리케이션을 분석할 수 있도록 합니다. 
-    
-  또한 *strongpm* 유틸리티는 *프록시*를 시작하지 않습니다.
-  
-  [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window}에서 Node.js 애플리케이션을 구성하려면 다음 단계를 수행하십시오. 
-
-    1. *strongpm* BlUEMIX_APP_MGMT_ENABLE 환경 변수를 구성하고 애플리케이션을 다시 스테이징하십시오.
-    
-	```
-cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
-    cf restage <appname>
-    ```
 	
-    2. Cloud Foundry 명령행에서, "-pm"이 애플리케이션 이름에 첨부되어 있는 라우트(예: <appname>-pm.mybluemix.net)를 애플리케이션에 추가하십시오. 
-    
-	```
-cf map-route <appname> ng.bluemix.net -n <appname>-pm
-    ```
-	
-    3. [StrongLoop npm 모듈](https://www.npmjs.com/package/strongloop){:new_window}을 로컬 워크스테이션에 설치하십시오. 
-    
-	```
-npm install -g strongloop
-    ```
-	
-    4. [StrongLoop의 웹 사이트](https://strongloop.com/register/){:new_window}에서 계정을 작성하십시오. 
-    5. 로컬 워크스테이션에서 Arc를 시작하고 작성한 계정을 사용하여 로그인하십시오. 
-    
-	```
-slc arc
-    ```
-	
-    6. Arc 내의 프로세스 관리자로 이동하십시오. 포트를 80으로 하여 새로 작성한 라우트를 프로세스 관리자에 입력하십시오. 활성화 단추를 누르십시오. 자세한 정보는 [Arc 사용에 관한 상세 문서](https://docs.strongloop.com/display){:new_window}를 참조하십시오. 
-	
-  3. *trace*: 사용자 애플리케이션이 *log4js*, *ibmbluemix* 또는 *bunyan* 로깅 모듈을 사용하는 경우 동적으로 추적 레벨을 설정합니다. 
+  2. *trace*: 사용자 애플리케이션이 *log4js*, *ibmbluemix* 또는 *bunyan* 로깅 모듈을 사용하는 경우 동적으로 추적 레벨을 설정합니다. 
   
   **참고:** 지원되는 종속 버전은 다음과 같습니다.
 
@@ -119,6 +84,8 @@ slc arc
     * ibmbluemix: (1.0.0-20140707-1250)-(1.0.0-20150409-1328)
   
   {{site.data.keyword.Bluemix_notm}} 웹 콘솔의 인스턴스 세부사항 페이지로 이동하고 **조치**를 선택하여 UI를 확인하십시오.
+
+  "-b buildpack" 옵션을 사용하여 애플리케이션을 시작한 경우에는 *추적* 유틸리티를 사용할 수 없습니다.
 
   *trace* 유틸리티는 *프록시*를 시작하지 않습니다.
 

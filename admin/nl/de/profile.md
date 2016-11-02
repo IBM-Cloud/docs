@@ -34,8 +34,8 @@ Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../i
 
 1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; **Profil**.
 
-* Klicken Sie auf **Foto ändern**, um ein neues Foto hochzuladen. 
-* Klicken Sie auf **Foto entfernen**, um das Foto zu entfernen. 
+* Klicken Sie auf **Foto ändern**, um ein neues Foto hochzuladen.
+* Klicken Sie auf **Foto entfernen**, um das Foto zu entfernen.
 
 ## Informationen zu Ihrer IBMid bearbeiten
 {: #ibmid}

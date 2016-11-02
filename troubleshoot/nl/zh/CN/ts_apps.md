@@ -300,41 +300,6 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-	
-	
-## 无法添加 Git 存储库
-{: #ts_cannot_addgit}
-
-在“仪表板”上创建应用程序后，单击“添加 GIT”来创建 Git 存储库，但无法继续。
-
-
-
-单击**添加 GIT** 后，有一个窗口打开，但发生以下某个问题：
-{: tsSymptoms} 
-
-  * 窗口挂起且屏幕空白。
-  * 显示一条消息，指示第三方 cookie 存在问题。
-
-
-
-您的浏览器可能配置为阻止设置 cookie。必须在 {{site.data.keyword.Bluemix_notm}} 控制台的上下文内从 hub.jazz.net 因特网域中的 IBM® Bluemix DevOps Services 站点设置该 cookie。
-{: tsCauses}  
-
- 
-
-您可以使用以下其中一种方法来解决此问题：
-{: tsResolve}
-
-  * 按照从 {{site.data.keyword.Bluemix_notm}} 控制台打开的窗口中的指示信息执行操作。单击按钮。另一个浏览器窗口会暂时打开。在该窗口中，DevOps Services 会设置认证 cookie。
-  * 在另一个浏览器选项卡中，转至 https://hub.jazz.net，然后登录。返回到 {{site.data.keyword.Bluemix_notm}} 控制台，然后刷新页面。再次单击**添加 GIT**。
-  * 更改浏览器设置以启用第三方 cookie，然后再次单击“添加 GIT”。有关配置设置的详细信息，请参阅适用于您的浏览器的文档：
-    * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-如果这些变通方法无法解决该问题，请向 idslogin@jazz.net 发送电子邮件。
-
-
 
 ## Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
@@ -1037,18 +1002,18 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 如果您已配置 GitHub 项目在您推送落实时创建工作项链接，而这些链接未如预期运作，请遵循以下步骤来查找问题：
 
 1. 在 GitHub 存储库中，单击**设置**。
-![GitHub 设置链接](images/githubSettings1_small.png)
+![GitHub 设置链接](images/github_settings.png)
 
 2. 单击 **Webhook 和服务**。
-![GitHub Webhook 和服务链接](images/githubHooks1_small.png)
+![GitHub Webhook 和服务链接](images/github_webhook.png)
 
 3. 要查看消息，请将鼠标悬停在 {{site.data.keyword.jazzhub}} 状态图标上。
-![服务 Hook 上的错误消息](images/troubleshoothook1_small.png)
+![服务 Hook 上的错误消息](images/github_error.png)
 
 4. 根据 GitHub 消息解决错误。
 
 5. 要验证修订是否可行，请落实并推送其他更改，或者转至 {{site.data.keyword.jazzhub_short}} 的服务页面，并单击**测试服务**。
-![GitHub 测试服务按钮](images/githubTestService_small.png)
+![GitHub 测试服务按钮](images/github_test.png)
 
 6. 通过再次检查状态图标，验证没有错误。
 ![没有错误的状态图标](images/githubResolved_small.png)
@@ -1113,7 +1078,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 {: tsResolve}
  
   * 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，选择要在其中创建空间的组织，然后单击**创建空间**。
-  * 在 cf 命令行界面中，键入 ```cf create-space <space_name> -o <organization_name>```。
+  * 在 cf 命令行界面中，键入 `cf create-space <space_name> -o <organization_name>`。
   
   
   

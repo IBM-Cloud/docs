@@ -51,7 +51,7 @@ copyright:
 # Venda
 {: #pricing}
 
-*Última atualização: 16 de agosto de 2016*
+*Última atualização: 13 de setembro de 2016*
 {: .last-updated}
 
 É possível executar aplicativos no {{site.data.keyword.Bluemix}} e
@@ -424,7 +424,6 @@ e memória
 * 2 GB por mês de {{site.data.keyword.datacshort}}
 * 150 GB por mês de banco de dados NoSQL, 100.000 chamadas API pesadas e 500.000
 chamadas API leves
-* 8 GB por mês de banco de dados {{site.data.keyword.sqldb}}
 * 20 GB de tráfego de rede de entrada e saída
 
 ###Preços para recursos do {{site.data.keyword.Bluemix_notm}}
@@ -442,7 +441,6 @@ neste exemplo é em moeda dos EUA.
 |Data Cache - Padrão |	5 GB de espaço em cache e uma réplica |	$155,00 USD/instância |
 |Data Cache - Premium |	25 GB de espaço em cache e uma réplica |	$505,00 USD/instância|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB de armazenamento de dados grátis<br/>50.000 chamadas API leves grátis por mês<br/>10.000 chamadas API pesadas grátis por mês | $1,00 USD/GB<br/>$0,03 USD/1000 chamadas API leves<br/>$0,15 USD/1000 chamadas API pesadas |
-|SQL Database 	| 2 GB grátis por instância<br/>10 GB no máximo por instância |	$30,00 USD/instância |
 *Tabela 7. Folha de precificação*
 
 ###Calculando o preço do aplicativo
@@ -483,18 +481,37 @@ pesadas. O preço total do armazenamento inclui as partes a seguir:</p>
 <p>
 O preço total é 148 + 13,5 + 13,5 = $175.</p></dd>
 
-<dt>8 GB por mês do SQL Database</dt>
-<dd>O preço total é de $30 por
-instância.</dd>
-
 <dt>20 GB de tráfego de rede de entrada e saída</dt>
 <dd>O tráfego de rede de entrada
 e saída é livre de encargo.</dd>
 
 </dl>
 
-Quando todos os itens são
-incluídos, o preço total do aplicativo é de $384,15.
+Quando todos os itens são incluídos, o preço total do aplicativo é de US$ 354,15.
+
+###Moedas suportadas
+
+Embora o dólar dos Estados Unidos (USD) seja usado nos exemplos de precificação, outras moedas também são suportadas no {{site.data.keyword.Bluemix_notm}}. A tabela a seguir lista as diferentes
+moedas que são suportadas.
+
+|Código ISO 4217| Código ISO de Moedas (ex.: BRL = Real , USD = Dólar, EUR = Euro)|
+|-------------|---------|
+|AUD |	  Dólar australiano|
+|BRL |	  Real brasileiro|
+|CAD |	  Dólar canadense|
+|CHF |	  Franco suíço|
+|DKK |	  Coroas dinamarquesas|
+|EUR |	  Euro|
+|GBP |	  Libra Esterlina|
+|INR |	  Rúpia Indiana|
+|JPY |	  Iene japonês|
+|KRW |	  Uon sul-coreano|
+|NOK |	  Coroa Norueguesa|
+|NZD |	  Dólar da Nova Zelândia|
+|SEK |	  Coroa sueca|
+|vermelho cereja |    Dólar americano|
+|ZAR |	  Rand sul-africano|
+*Tabela 8. Moedas suportadas*
 
 ##Painel de uso
 {: #usage}
@@ -558,7 +575,7 @@ tabela a seguir.
 |Serviço |	Informações|
 |--------|-------------|
 |Presence Insights 	|Se você tiver um plano Lite e exceder os abonos grátis, uma mensagem 403 é exibida ou registrada para indicar que você não está mais autorizado e que a sua instância de serviço está desativada. Além disso, as chamadas API REST do POST são rejeitadas com uma resposta 403.<br/><br/>Se o seu serviço estiver desativado porque o abono grátis foi excedido, é possível fazer upgrade de um plano Lite para um plano Pago. Seu serviço é ativado novamente dentro de 2 horas.<br/><br/>Se você tiver um plano Pago, é possível reduzir seu plano para o plano Lite, desde que seu uso permaneça dentro do respectivo abono do plano Lite para eventos e armazenamento total.<br/><br/>Ao fazer upgrade ou reduzir seu plano, não é necessário remontar ou reiniciar seus apps.|
-*Tabela 8. Próximas etapas para mudar seu plano*
+*Tabela 9. Próximas etapas para mudar o seu plano*
 
 ###Como mudar seu plano por meio da interface de linha de comandos
 

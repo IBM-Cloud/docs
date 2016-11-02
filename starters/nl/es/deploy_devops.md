@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015 2016
 
  
 
@@ -15,7 +15,7 @@ copyright:
 {:download: .download}
 
 # Empezar a escribir código con Git
-*Última actualización: 2 de marzo de 2016*
+Última actualización: 2 de marzo de 2016
 {: .last-updated}  
 
 Puede crear un repositorio
@@ -46,26 +46,27 @@ Si va a crear una app Node.js, puede utilizar {{site.data.keyword.Bluemix_notm}}
 
 Para obtener más información sobre {{site.data.keyword.Bluemix_notm}} Live Sync, consulte [{{site.data.keyword.Bluemix_notm}} Live Sync](../develop/bluemixlive.html). Para obtener más detalles sobre los mandatos, consulte la documentación de la CLI de [{{site.data.keyword.Bluemix_notm}} Live Sync](../cli/reference/bl/index.html). Para utilizar {{site.data.keyword.Bluemix_notm}} Live Sync con Web IDE, consulte [Edición en directo](../develop/bluemixlive.html).  
 
-1. Descargue e instale la línea de mandatos bl de {{site.data.keyword.Bluemix_notm}} Live Sync. 
+Antes de empezar, descargue e instale la línea de mandatos bl de {{site.data.keyword.Bluemix_notm}} Live Sync. 
+
+**Importante:** La herramienta de línea de mandatos bl solo está disponible para Windows 7 y 8 y Mac OS X versión 10.9 o posterior.
 
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(se abre en un separador o ventana nueva)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Botón Descargar la línea de mandatos bl de Windows" /> </a> <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(se abre en un separador o ventana nueva)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Botón Descargar la línea de mandatos bl de Mac" /> </a>
 </p>
 
-**Importante:** La herramienta de línea de mandatos bl solo está disponible para Windows 7 y 8 y Mac OS X versión 10.9 o posterior. 
-
-2. En una línea de mandatos, inicie sesión con el mandato siguiente. Se le solicitará su ID y contraseña de IBM®. 
+1. En una línea de mandatos, inicie sesión especificando el mandato siguiente:
 ```
 bl login
 ```
+Cuando se le solicite, especifique su {{site.data.keyword.ibmid}} y contraseña.
 
-3. Consulte la lista de proyectos disponibles para sincronizar {{site.data.keyword.Bluemix_notm}} Live Sync introduciendo el siguiente mandato: 
+2. Consulte la lista de proyectos disponibles para sincronizar {{site.data.keyword.Bluemix_notm}} Live Sync introduciendo el siguiente mandato: 
 ```
 bl projects
 ```
 Busque el nombre de proyecto en la lista que coincida con la app. El nombre del proyecto tiene el formato de su *alias* | *nombre app*. 
 
-4. Sincronice el entorno local con el proyecto en {{site.data.keyword.Bluemix_notm}} especificando
+3. Sincronice el entorno local con el proyecto en {{site.data.keyword.Bluemix_notm}} especificando
 el siguiente mandato. Si es el propietario del proyecto, solo debe especificar nombre-app para nombreProyecto. 
 <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
 ```
@@ -74,7 +75,7 @@ bl sync nombre_proyecto -d directorio_local --verbose
 Este mandato seguirá ejecutándose (y la sincronización continuará) hasta que se especifique una "q". La opción --verbose muestra la información de estado e inicio de sesión. Si alguno de los argumentos contiene un espacio,
 deberá escribir el nombre entre comillas. 
 
-5. En otra ventana de la línea de mandatos del directorio local,
+4. En otra ventana de la línea de mandatos del directorio local,
 despliegue la app en {{site.data.keyword.Bluemix_notm}} en la
 modalidad de edición en directo especificando el siguiente mandato:
 ```

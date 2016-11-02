@@ -55,11 +55,12 @@ Antes de iniciar, faça download e instale a linha de comandos bl do
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Fazer download do botão da linha de comandos bl do Mac" /> </a>
 </p>
 
-1. Em uma linha de comandos, efetue login inserindo o comando a seguir: 
+1. Em uma linha de comandos, efetue login inserindo o comando a seguir:
 ```
 bl login
 ```
 Quando solicitado, insira o {{site.data.keyword.ibmid}} e a senha.
+
 2. Consulte a lista de projetos que estão disponíveis para sincronização do {{site.data.keyword.Bluemix_notm}} Live Sync, inserindo o comando a seguir: 
 ```
 bl projects

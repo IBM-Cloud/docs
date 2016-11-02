@@ -6,13 +6,13 @@ copyright:
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 
 
 # {{site.data.keyword.iotinsurance_short}} 정보
 {: #about_servicename}
-마지막 업데이트 날짜: 2016년 9월 12일
+마지막 업데이트 날짜: 2016년 9월 15일
 {: .last-updated}
 
 {{site.data.keyword.iotinsurance_full}}는 보험 계약자의 전체 컨텍스트 데이터를 수집하고 분석하여 개인별 맞춤 위험성 평가, 실시간 보호, 정책 비용 감소를 제공하는 통합 IoT 프로덕션 인스턴스입니다.
@@ -37,7 +37,7 @@ copyright:
 {: #mobileapp}
 모바일 스타터 앱에서는 보험 계약자(예: 주택 소유자)가 {{site.data.keyword.iotinsurance_short}}가 센서에서 계약자의 집으로 보내는 정보를 보고 응답할 수 있습니다. 
 
-주택 소유자는 모바일 디바이스를 사용하여 센서 제공업체의 클라우드에 연결해 데이터를 주고받을 수 있도록 서비스에 권한을 부여합니다. 예를 들어, 센서가 누수를 발견하면 주택 소유자가 모바일 스타터 앱에서 알림을 수신합니다. 자세한 정보는 [모바일 스타터 앱 설치 및 연결](index.html#iot4i_mobile})을 참조하십시오. 
+주택 소유자는 모바일 디바이스를 사용하여 센서 제공업체의 클라우드에 연결해 데이터를 주고받을 수 있도록 서비스에 권한을 부여합니다. 예를 들어, 센서가 누수를 발견하면 주택 소유자가 모바일 스타터 앱에서 알림을 수신합니다. 자세한 정보는 [모바일 스타터 앱 설치 및 연결](iotinsurance_mobile_app.html})을 참조하십시오. 
 
 ### REST API
 {: #rest_api}
@@ -49,7 +49,7 @@ API 페이지에서 다음을 수행할 수 있습니다.
   - 사용 가능한 모든 API 호출과 연관 문서를 볼 수 있습니다. 
   - 개별 API를 호출할 수 있습니다. 모든 정보를 표시할 API 호출을 선택한 후 **사용해보기**를 클릭하십시오. 
 
-공통 시나리오를 시작하는 데 유용한 API 예제가 제공됩니다. 자세한 정보는 [{{site.data.keyword.iotinsurance_short}} API 예제](https://github.ibm.com/Iot4i/iot4i-api-examples)를 참조하십시오. 
+공통 시나리오를 시작하는 데 유용한 API 예제가 제공됩니다. 자세한 정보는 [{{site.data.keyword.iotinsurance_short}} API 예제](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)를 참조하십시오. 
 
 ### 클라우드 제공업체
 {: #cloudprovider}

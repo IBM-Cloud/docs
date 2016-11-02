@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  anni: 2016
 
  
 
@@ -19,7 +19,7 @@ copyright:
 
 #Collegamento degli account di fatturazione SoftLayer e {{site.data.keyword.Bluemix_notm}}
 {: #softlayerlink}
-*Ultimo aggiornamento: 7 luglio 2016*
+*Ultimo aggiornamento: 15 agosto 2016*
 {: .last-updated}
 
 È ora possibile collegare gli account di fatturazione SoftLayer e {{site.data.keyword.Bluemix_notm}}. Quando colleghi i tuoi account, ricevi la fatturato attraverso SoftLayer sia per le risorse SoftLayer che per le risorse {{site.data.keyword.Bluemix_notm}}. Se hai già un account, la fatturazione per {{site.data.keyword.Bluemix_notm}} tramite SoftLayer parte dal nuovo ciclo di fatturazione avviato dopo il collegamento degli account.
@@ -31,7 +31,7 @@ Una volta collegati gli account, puoi passare tra gli account facilmente. Puoi a
 
 Sebbene la tua fatturazione account sia stata collegata, il tuo ID di accesso varierà in base a come il tuo account SoftLayer viene autenticato:
 * Per gli utenti negli account SoftLayer che non utilizzano un ID IBM per l'autenticazione, continua a utilizzare il tuo ID SoftLayer per i prodotti e i servizi SoftLayer e il tuo ID IBM per i prodotti e i servizi {{site.data.keyword.Bluemix_notm}}.
-* Per gli utenti negli account SoftLayer che utilizzano un ID IBM per l'autenticazione, utilizza il tuo ID IBM per accedere al tuo SoftLayer e ai tuoi account {{site.data.keyword.Bluemix_notm}}.
+* Per gli utenti negli account SoftLayer che utilizzano un ID IBM per l'autenticazione, utilizza il tuo ID IBM per accedere ai tuoi account SoftLayer e {{site.data.keyword.Bluemix_notm}}.
 
 **Attenzione:** una volta collegati, gli account non possono più essere scollegati.  
 
@@ -63,13 +63,13 @@ Dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} puoi scegliere di inv
 Per invitare membri del team a unirsi all'account {{site.data.keyword.Bluemix_notm}}, devi essere un utente master dell'account SoftLayer.
 
 Per invitare membri del team tramite {{site.data.keyword.Bluemix_notm}}:
- 1. Passa all'icona **Account e supporto** ![Account e supporto](images/account_support.svg) **Account** **Invita membri del team**.
+ 1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) > **Account** > **Invita membri del team**.
  2. Fai clic su **Aggiungi** per eseguire l'autenticazione nel tuo account SoftLayer e visualizzare un elenco di membri del team dal tuo account SoftLayer.
  3. Seleziona i membri del team da invitare e fai clic su **Invia**.
 
 Puoi effettuare questa operazione più volte fino ad aggiungere più membri del team al tuo account SoftLayer.
  
-Il membro del team riceve un'e-mail che include un link **Unisciti all'organizzazione**. Se il membro non ha un ID IBM, viene reindirizzato a una pagina di registrazione. Successivamente, il membro del team può immettere alcune informazioni di base e creare il proprio account {{site.data.keyword.Bluemix_notm}}.
+Il membro del team riceve un'e-mail che include un link **Unisciti all'organizzazione**. Se il membro non dispone di un ID IBM, viene reindirizzato a una pagina di registrazione. Successivamente, il membro del team può immettere alcune informazioni di base e creare il proprio account {{site.data.keyword.Bluemix_notm}}.
 
 Per ulteriori informazioni su come invitare i membri del team attraverso l'interfaccia utente {{site.data.keyword.Bluemix_notm}}, vedi [Come invitare membri del team](https://console.ng.bluemix.net/docs/admin/users_roles.html#inviteteammembers).
 

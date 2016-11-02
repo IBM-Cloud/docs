@@ -21,7 +21,7 @@ Letzte Aktualisierung: 2. März 2016
 Sie können ein gehostetes Git-Repository erstellen, das für {{site.data.keyword.Bluemix}} automatisch bereitgestellt wird. Sie können dann den in Ihrer App ausgeführten Code ändern, indem Sie für Änderungen eine Push-Operation an das Git-Repository durchführen. 
 {:shortdesc}
 
-1. Klicken Sie zu Beginn auf der Übersichtsseite der App auf **Pipeline und Git-Repository hinzufügen** oder klicken Sie in {{site.data.keyword.Bluemix_notm}} Classic Experience auf **Git hinzufügen**. 
+1. Klicken Sie zu Beginn auf der Übersichtsseite der App auf **Pipeline und Git-Repository hinzufügen** oder klicken Sie in der klassischen {{site.data.keyword.Bluemix_notm}}-Ansicht auf **Git hinzufügen**. 
 2. Stellen Sie in dem Fenster, das geöffnet wird, sicher, dass das Kontrollkästchen zum Auffüllen der Repository mit dem Starteranwendungspaket und zum Aktivieren der Build- und Bereitstellungspipeline (Build & Deploy) ausgewählt ist. Das Git-Repository wird erstellt. Wenn Starter-Code verfügbar ist, wird er in das Repository geladen. Die Anwendung wird zudem durch den in {{site.data.keyword.jazzhub}} ausgeführten Service Delivery Pipeline bereitgestellt.  
 3. Zum Aktualisieren Ihrer App können Sie die Befehlszeile oder die Web-IDE verwenden.  
    **Bei Verwendung der Befehlszeile:**
@@ -52,7 +52,7 @@ Laden Sie zunächst die Befehlszeile 'bl' für {{site.data.keyword.Bluemix_notm}
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="Schaltfläche zum Herunterladen der Mac-Befehlszeile 'bl'" /> </a>
 </p>
 
-1. Melden Sie sich in einer Befehlszeile durch Eingabe des folgenden Befehls an: 
+1. Melden Sie sich in einer Befehlszeile durch Eingabe des folgenden Befehls an:
 ```
 bl login
 ```
@@ -62,7 +62,9 @@ Wenn Sie dazu aufgefordert werden, geben Sie Ihre {{site.data.keyword.ibmid}} un
 ```
 bl projects
 ```
-Suchen Sie in der Liste nach dem Projektnamen, der Ihrer Anwendung entspricht. Der Projektname hat das Format *Alias* | *Anwendungsname*.3. Synchronisieren Sie die lokale Umgebung mit dem Projekt in {{site.data.keyword.Bluemix_notm}}, indem Sie den folgenden Befehl eingeben. Wenn Sie der Eigner des Projekts sind, müssen Sie für 'projectName' nur den Namen Ihrer eigenen Anwendung angeben. 
+Suchen Sie in der Liste nach dem Projektnamen, der Ihrer Anwendung entspricht. Der Projektname hat das Format *Alias* | *Anwendungsname*. 
+
+3. Synchronisieren Sie die lokale Umgebung mit dem Projekt in {{site.data.keyword.Bluemix_notm}}, indem Sie den folgenden Befehl eingeben. Wenn Sie der Eigner des Projekts sind, müssen Sie für 'projectName' nur den Namen Ihrer eigenen Anwendung angeben. 
 <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
 ```
 bl sync projectName -d localDirectory --verbose

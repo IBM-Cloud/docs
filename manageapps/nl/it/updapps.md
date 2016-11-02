@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  anni: 2015, 2016
 
 ---
 
@@ -14,7 +14,7 @@ copyright:
 #Aggiornamento di applicazioni
 {: #updatingapps}
 
-*Ultimo aggiornamento: 9 maggio 2016*
+Ultimo aggiornamento: 25 agosto 2016
 {: .last-updated}
 
 
@@ -24,7 +24,7 @@ Per aggiornare le applicazioni in {{site.data.keyword.Bluemix_notm}}, puoi utili
 ##Creazione e utilizzo di un dominio personalizzato
 {: #domain}
 
-Puoi utilizzare un dominio personalizzato nell'URL della tua applicazione anziché il dominio di sistema {{site.data.keyword.Bluemix_notm}} predefinito che è mybluemix.net.
+Per le applicazioni CF e i gruppi di contenitori, puoi utilizzare un dominio personalizzato nell'URL della tua applicazione anziché il dominio di sistema {{site.data.keyword.Bluemix_notm}} predefinito che è mybluemix.net.
 
 I domini forniscono la rotta dell'URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}. Per utilizzare un dominio personalizzato, devi registrare il dominio personalizzato su un server DNS pubblico, configurare tale dominio in {{site.data.keyword.Bluemix_notm}} e quindi associarlo al dominio di sistema {{site.data.keyword.Bluemix_notm}} sul server DNS pubblico. Dopo aver
 associato il tuo dominio personalizzato al dominio di sistema {{site.data.keyword.Bluemix_notm}},
@@ -38,66 +38,75 @@ oppure l'interfaccia riga di comando cf.
 {{site.data.keyword.Bluemix_notm}}:
 
   1. Crea un dominio personalizzato per la tua organizzazione.
-    
-	1. Nella barra dei menu del **DASHBOARD** {{site.data.keyword.Bluemix_notm}}, fai clic su **GESTISCI ORGANIZZAZIONI**.
-	
+
+	1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Gestisci organizzazioni** &gt; **Visualizza dettagli** per la tua organizzazione &gt; **Modifica organizzazione** &gt; **Domini**.
+
 	2. Nella scheda **DOMINI**, fai clic su **AGGIUNGI DOMINIO**, immetti il nome
 del tuo dominio personalizzato e fai clic su **SALVA**.
-    	
+	
+	**Nota**: puoi utilizzare, ad esempio, `mycompany.com` per associare la rotta `www.mycompany.com` alla tua applicazione. Puoi anche utilizzare `example.mycompany.com` per associare la rotta `www.example.mycompany.com` all'applicazione.
+
   2. Aggiungi la rotta con il dominio personalizzato a un'applicazione.
-  
-    1. Nella barra dei menu del **DASHBOARD** {{site.data.keyword.Bluemix_notm}}, fai clic sul tile dell'applicazione a cui desideri aggiungere la rotta. Viene visualizzata la pagina **Panoramica**.
-	
-	2. Dal menu dell'applicazione nella pagina **Panoramica**, fai clic su **Modifica rotte e accesso all'applicazione**.
-	
-	3. Fai clic su **Aggiungi rotta** e specifica la rotta
-che desideri utilizzare per l'applicazione.
-	
+
+    1. Nella barra dei menu, seleziona **Console** dal menu a discesa, quindi fai clic sulla riga dell'applicazione a cui desideri aggiungere la rotta. Viene visualizzata la pagina **Panoramica**.
+
+	2. Dal menu **Visualizza applicazione**, seleziona **Modifica rotte e accesso**.
+
+	3. Fai clic su **Aggiungi rotta** e specifica la rotta che vuoi utilizzare per l'applicazione.
+	4. Fai clic su **Salva**. 
+
 * Utilizza l'interfaccia riga di comando cf:
-  
+
   1. Crea un dominio personalizzato per la tua organizzazione digitando il
 seguente comando:
-    
+
     ```
     cf create-domain <your org name> mydomain
     ```
-    
+
     *organization_name*
-  
+
         Il nome della tua organizzazione.
-	  
+
     *ilmiodominio*
-    
+
         Il nome del dominio personalizzato che desideri utilizzare.
-	  
-  2. Aggiungi la rotta con il dominio personalizzato a un'applicazione digitando il
-seguente comando:
-    
+
+  2. Aggiungi la rotta con il dominio personalizzato a un'applicazione. Per le applicazioni CF, immetti il seguente comando:
+
     ```
     cf map-route myapp mydomain -n host_name
     ```
-    
+    Per i gruppi di contenitori, immetti il seguente comando:	
+     ```
+     cf ic route map -n host_name -d mydomain mycontainergroup
+     ```
     *myapp*
-      
-    	Il nome della tua applicazione.
-  	
+
+    	Per le applicazioni CF, il nome della tua applicazione.
+
     *ilmiodominio*
-      
+
     	Il nome del tuo dominio personalizzato.
-	
+
     *home_host*
-    
+
         Il nome host nella rotta che desideri utilizzare per la tua applicazione.
-	
+        
+    *mycontainergroup*
+    
+        Per i gruppi di contenitori, il nome del gruppo di contenitori.  
+
+
 Una volta configurato il dominio personalizzato in {{site.data.keyword.Bluemix_notm}}, devi associarlo al dominio personalizzato del dominio di sistema {{site.data.keyword.Bluemix_notm}} sul tuo server DNS registrato:
 
-  1. Imposta un record 'CNAME' per il nome dominio personalizzato sul tuo server DNS.
+  1. Imposta un record 'CNAME' per il nome dominio personalizzato sul tuo server DNS. La procedura per l'impostazione del record CNAME varia a seconda del tuo provider DNS. Ad esempio, se utilizzi GoDaddy, devi seguire le linee guida di [Domains Help](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} fornite da GoDaddy.
   2. Associare il nome dominio personalizzato all'endpoint sicuro della regione {{site.data.keyword.Bluemix_notm}} in cui viene eseguita la tua applicazione. Utilizza i seguenti endpoint della regione per fornire la rotta dell'URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}:
-  
+
     * STATI UNITI SUD: `secure.us-south.bluemix.net`
     * EUROPA REGNO UNITO: `secure.eu-gb.bluemix.net`
     * AU-SYD: `secure.au-syd.bluemix.net`
-  
+
 In un browser o nell'interfaccia riga di comando, immetti il seguente URL per accedere all'applicazione myapp:
 
 ```
@@ -147,39 +156,39 @@ verso l'applicazione. In via facoltativa, la versione precedente di *Blue* può
 essere eliminata quando è in funzione la nuova.
 
 1. Esegui il push dell'applicazione *Blue* a {{site.data.keyword.Bluemix_notm}}.
-  
+
   ```
   cf push Blue
   ```
-  
+
   **Risultato:** l'applicazione *Blue* è in esecuzione e sta rispondendo all'URL `Blue.mybluemix.net`.
-  
+
 2. Utilizza il comando **cf rename** per ridenominare l'applicazione *Blue* in *Green*:
-  
+
   ```
   cf rename Blue Green
   ```
-  
+
   Elenca le applicazioni nello spazio corrente utilizzando il comando **cf apps**:
-  
+
   ```
   ...
   name             requested state   instances   memory   disk   urls
   Green            started           1/1         1G       1G	 Blue.mybluemix.net
   ...
   ```
-  
+
   **Risultato:** l'applicazione *Green* è in esecuzione e sta rispondendo all'URL `Blue.mybluemix.net`.
 
 3. Apporta le modifiche necessarie e prepara la versione
 *Blue*. Esegui il push dell'applicazione *Blue* aggiornata a {{site.data.keyword.Bluemix_notm}}:
-  
+
   ```
   cf push Blue
   ```
-  
+
   Elenca le applicazioni nello spazio corrente utilizzando il comando **cf apps**:
-  
+
   ```
   ...
   name             requested state   instances   memory   disk   urls
@@ -187,28 +196,28 @@ essere eliminata quando è in funzione la nuova.
   Blue             started           1/1         1G       1G	 Blue.mybluemix.net
   ...
   ```
-  
+
   **Risultati:**
     * Vengono distribuite due istanze dell'applicazione, *Blue* e *Green*.
 	* L'applicazione *Green* è in esecuzione e sta rispondendo all'URL `Blue.mybluemix.net`.
-	
+
 4. Facoltativo: se vuoi eliminare la versione precedente (*Green*) dell'applicazione, utilizza il comando **cf delete**.
-  
+
   ```
   cf delete Green -f
   ```
-  
+
   Elenca le rotte nel tuo spazio utilizzando il comando **cf route**:
-  
+
   ```
   ...
   host             domain           apps
   Blue             mybluemix.net    Blue
   ...
   ```
-  
+
   **Risultato:** l'applicazione *Blue* sta rispondendo all'URL `Blue.mybluemix.net`.
-  
+
 ###Esempio: Utilizzo del comando cf map-route
 
 In questo esempio, *Blue* è l'applicazione
@@ -218,22 +227,22 @@ verso l'applicazione. In via facoltativa, la versione precedente di *Blue* può
 essere eliminata quando è in funzione la nuova.
 
 1. Esegui il push dell'applicazione *Blue* a {{site.data.keyword.Bluemix_notm}}.
-  
+
   ```
   cf push Blue
   ```
-  
+
   **Risultato:** l'applicazione *Blue* è in esecuzione e sta rispondendo all'URL `Blue.mybluemix.net`.
-  
+
 2. Apportare le modifiche necessarie e preparare la versione
 *Green*. Esegui il push dell'applicazione *Green* a {{site.data.keyword.Bluemix_notm}}:
-  
+
   ```
   cf push Green
   ```
-  
+
   Elenca le applicazioni nello spazio corrente utilizzando il comando **cf route**:
-  
+
   ```
   ...
   host             domain           apps
@@ -241,20 +250,20 @@ essere eliminata quando è in funzione la nuova.
   Green            mybluemix.net    Green
   ...
   ```
-  
+
   **Risultati:**
-  
+
     * Vengono distribuite due istanze dell'applicazione, *Blue* e *Green*.
 	* L'applicazione *Blue* sta rispondendo all'URL `Blue.mybluemix.net` e l'applicazione *Green* sta rispondendo all'URL `Green.mybluemix.net`.
-	
+
 3. Associa l'applicazione *Blue* all'applicazione *Green* in modo che tutto il traffico a `Blue.mybluemix.net` venga instradato sia all'applicazione *Blue* che all'applicazione *Green*.
-  
+
   ```
   cf map-route Green mybluemix.net -n Blue
   ```
-  
+
   Elenca le rotte nel tuo spazio utilizzando il comando cf routes:
-  
+
   ```
   ...
   host             domain           apps
@@ -262,20 +271,20 @@ essere eliminata quando è in funzione la nuova.
   Green            mybluemix.net    Green
   ...
   ```
-  
+
   **Risultato:**
 
     * Il router CF ora invia il traffico per Blue.mybluemix.net sia all'applicazione Blue che all'applicazione Green.
 	* Il router CF continua a inviare il traffico per Green.mybluemix.net all'applicazione Green.
-	
+
 4. Quando verifichi che *Green* sia in esecuzione nel modo previsto, rimuovi la rotta `Blue.mybluemix.net` dall'applicazione *Blue*:
-  
+
   ```
   cf unmap-route Blue mybluemix.net -n Blue
   ```
-  
+
   Elenca le rotte nel tuo spazio utilizzando il comando cf routes:
-  
+
   ```
   ...
   host             domain           apps
@@ -283,32 +292,32 @@ essere eliminata quando è in funzione la nuova.
   Green            mybluemix.net    Green
   ...
   ```
-  
+
   **Risultato:** il router CF smette di inviare traffico all'applicazione *Blue*. L'applicazione *Green* risponde a entrambi gli URL: `Green.mybluemix.net` e `Blue.mybluemix.net`.
-  
+
 5. Rimuovi la rotta `Green.mybluemix.net` all'applicazione *Green*.
-  
+
   ```
   cf unmap-route Green mybluemix.net -n Green
   ```
-  
+
   **Risultato:** il router CF smette di inviare traffico all'applicazione *Blue*. L'applicazione *Green* sta rispondendo all'URL `Blue.mybluemix.net`.
-  
+
 6. Facoltativo: se vuoi eliminare la versione precedente (*Blue*) dell'applicazione, utilizza il comando `cf delete`.
-  
+
   ```
   cf delete Blue -f
   ```
-  
+
   Elenca le rotte nel tuo spazio utilizzando il comando cf route:
-  
+
   ```
   ...
   host             domain           apps
   Blue             mybluemix.net    Green
   ...
   ```
-  
+
   **Risultato:** l'applicazione *Green* sta rispondendo all'URL `Blue.mybluemix.net`.
 
 

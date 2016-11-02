@@ -1,12 +1,10 @@
 ---
 
- 
+
 
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-09"
 
 ---
 
@@ -18,8 +16,7 @@ copyright:
 
 # Implementing feeds
 {: #openwhisk_feeds}
-Last updated: 9 September 2016
-{: .last-updated}
+
 
 OpenWhisk supports an open API, where any user can expose an event producer service as a **feed** in a **package**.   This section describes architectural and implementation options for providing your own feed.
 
@@ -121,5 +118,5 @@ The Cloudant *changes* feed is the canonical example -- it stands up a `cloudant
 
 The *alarm* feed is implemented with a similar pattern.
 
-The connection-based architecture is the highest performance option -- 
+The connection-based architecture is the highest performance option --
 but imposes more overhead on operations compared to the polling and hook architectures.   

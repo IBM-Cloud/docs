@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-01"
 
 ---
 
@@ -13,13 +14,13 @@ copyright:
 
 # Visualizing real-time data by using boards and cards
 {: #boards_and_cards}
-Last updated: 21 June 2016
-{: .last-updated}
 
 Create boards and cards to create and share your own dashboards that visualize your device data in real time.
 {:shortdesc}
 
 By using boards and cards, you can graphically visualize data set values from one or more devices to provide a quick overview and enhance understanding of the data. Create boards and add cards that display the data as raw numbers, real-time graphs, gauges, and more. Add members to your boards to share them with other users in your organization. Arrange the cards and add explanatory text dividers to fine-tune your presentation.  
+
+You can also expand on the default set of IBM provided cards by [creating your own custom cards](custom_cards/custom-cards.html).
 
 ![Showing real-time data with cards.](images/boards_and_cards.svg "Showing real-time data with cards.")
 

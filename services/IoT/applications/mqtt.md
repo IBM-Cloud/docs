@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # MQTT connectivity for applications
 {: #mqtt}
-Last updated: 31 August 2016
-{: .last-updated}
 
 MQTT is the primary protocol that devices and applications use to communicate with the {{site.data.keyword.iot_full}}. Client libraries, information, and samples are provided to help you to connect and integrate your {{site.data.keyword.iot_short_notm}} applications.
 {:shortdesc}
@@ -141,7 +140,7 @@ To enable load balancing, ensure that the application subscription is non-durabl
 
 Where:
 -  The character **A** indicates that the client is a scalable application.
--  *orgId* is the unique six character organization ID that was generated when you registered the service alphanumeric string that was assigned when you first registered the service.
+-  *orgId* is the unique six-character organization ID that was generated when you registered the service.
 -  *appId* is a user-defined unique string identifier for the client. The string can contain only alphanumeric characters (a-z, A-Z, 0-9) and the dash (-), underscore (_), and dot (.) special characters.
 
 **Important:**

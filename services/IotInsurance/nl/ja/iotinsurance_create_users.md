@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2016
@@ -18,7 +18,7 @@ copyright:
 
 # ユーザーとシールド関連付けの作成
 {: #gettingstartedtemplate}
-最終更新日: 2016 年 9 月 12 日
+最終更新日: 2016 年 9 月 15 日
 {: .last-updated}
 
 {{site.data.keyword.iotinsurance_short}} サービスを作成して必要なサポート・サービスとアプリをデプロイした後、許可ユーザーとシールドの関連付けを作成してサービスをテストすることができます。
@@ -28,10 +28,10 @@ copyright:
 
 - [Node.js](https://nodejs.org/en/) がコンピューターにインストールされている。  
 - Node.js に対応するランタイム環境 (Eclipse など)。
-- Git ソフトウェアおよび [API サンプルの GitHub ソース・コード・リポジトリー](https://github.com/ibm-watson-iot/ioti-samples)へのアクセス。あるいは、[ソース・コード・ファイルを含むアーカイブ](https://github.com/ibm-watson-iot/ioti-samples/archive/master.zip)をダウンロードすることもできます。
+- Git ソフトウェアおよび [API サンプルの GitHub ソース・コード・リポジトリー](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)へのアクセス。あるいは、[ソース・コード・ファイルを含むアーカイブ](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/archive/master.zip)をダウンロードすることもできます。
 - 準備しておいたソース・コード。
 ソース・コードを準備するには、以下のステップを実行します。
-  1. [GitHub ソース・コードのリポジトリー](https://github.com/ibm-watson-iot/ioti-samples)をコンピューターに複製またはダウンロードします。
+  1. [GitHub ソース・コードのリポジトリー](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)をコンピューターに複製またはダウンロードします。
   2. コマンド・プロンプトを使用して、複製されたソース・コード・ファイルが含まれるフォルダーに移動し、`npm install` コマンドを実行して、プロジェクトのオープン・ソース前提条件をインストールします。
 
 ダッシュボードとサンプル・モバイル・アプリの機能をテストするために使用できるユーザーを作成します。

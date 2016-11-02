@@ -61,7 +61,7 @@ Bei derselben Laufzeit bzw. demselben Framework haben die von IBM erstellten Bui
 
 ## Externe Buildpacks
 
-In {{site.data.keyword.Bluemix_notm}} können Sie mit externen oder mit angepassten Buildpacks arbeiten. Sie müssen die URL des Buildpacks mit der Option '-b' sowie den Stack mit der Option ```-s``` im Befehl **cf push** angeben. Wenn Sie zum Beispiel ein externes Community-Buildpack für statische Dateien verwenden möchten, führen Sie den folgenden Befehl aus:
+In {{site.data.keyword.Bluemix_notm}} können Sie mit externen oder mit angepassten Buildpacks arbeiten. Sie müssen die URL des Buildpacks mit der Option '-b' sowie den Stack mit der Option `-s` im Befehl **cf push** angeben. Wenn Sie zum Beispiel ein externes Community-Buildpack für statische Dateien verwenden möchten, führen Sie den folgenden Befehl aus:
 
 ```
 cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
@@ -87,7 +87,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 Verwenden Sie den Befehl <strong>cf set-env</strong>. Geben Sie beispielsweise den folgenden Befehl ein, um die Java-Version auf 1.7.0 festzulegen:
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
 <p>Anschließend können Sie für Ihre App ein erneutes Staging durchführen, damit die Änderung wirksam wird:</p>
 <pre class="pre"><code>cf restage App-Name</code></pre>
 </li>

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,7 +15,6 @@ copyright:
 
 # Connecting gateways
 {: #IoT_connectGateway}
-Last updated: 28 July 2016
 
 Before you can begin receiving data from devices that are connected to your gateways, you must connect the gateway to  {{site.data.keyword.iot_full}}. Connecting a gateway to {{site.data.keyword.iot_short_notm}} involves creating a gateway device type and registering the gateway with {{site.data.keyword.iot_short_notm}}. You can then use the registration information to connect the gateway to {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
@@ -26,7 +26,7 @@ Gateways are a specialized class of devices in {{site.data.keyword.iot_short_not
 {: #Prerequisites}
 
 Gateway devices have additional permissions when compared to regular devices and can perform the following  functions:
-- Register new devices to Watson IoT Platform
+- Register new devices to {{site.data.keyword.iot_short_notm}}
 - Send and receive its own sensor data like a directly connected device,
 - Send and receive data on behalf of the devices connected to it
 - Run a device management agent, so that it can be managed, also manage the devices connected to it.  
@@ -48,13 +48,27 @@ To add a gateway from the {{site.data.keyword.iot_short_notm}} dashboard:
 3. Select or create a device type for the device that you are adding.  
 Each device that is connected to the {{site.data.keyword.iot_short_notm}} must be associated with a device type. Device types are groups of devices that share common characteristics.  
  1. Click **Create device type** then **Create gateway type**.
- 2. Enter a name such as `my_gateway_type` and a description for the gateway type.
- 3. Optional: Enter gateway type attributes and metadata.    
+ 2. Enter a device type name such as `my_gateway_type` and a description for the gateway type.   
+ **Important:** The device type name must be no more than 36 characters and can contain only:
+ <ul>
+  <li>Alpha-numeric characters (a-z, A-Z, 0-9)</li>
+  <li>Hypens (-)</li>
+  <li>Underscores (&lowbar;)</li>
+  <li>Periods (.)</li>
+  </ul>3. Optional: Enter gateway type attributes and metadata.    
  **Tip:** You can add and edit attributes and metadata later.
  4. Click **Create** to add the new gateway type.
 10. Click **Next** to begin the process of adding your gateway device with the selected gateway type.
-11. Enter a device ID, such as `my_gateway_device`.  
-The device ID is used to identify the gateway device in the {{site.data.keyword.iot_short_notm}} dashboard and is also a required parameter for connecting your gateway device to {{site.data.keyword.iot_short_notm}}.
+11. Enter a device ID such as `my_gateway_device`.  
+The device ID is used to identify the gateway device in the {{site.data.keyword.iot_short_notm}} dashboard and is also a required parameter for connecting your gateway device to {{site.data.keyword.iot_short_notm}}.  
+**Important:** The device ID must be no more than 36 characters and can contain only:
+ <ul>
+ <li>Alpha-numeric characters (a-z, A-Z, 0-9)</li>
+ <li>Hyphens (-)</li>
+ <li>Underscores (&lowbar;)</li>
+ <li>Periods (.)</li>  
+ </ul>
+ **Tip:** For network connected devices, the device ID could for example be the device MAC address without any separating colons.  
 12. Optional: Click **Additional fields** to add gateway device information, such as serial number, manufacturer, model, and so on.  
  **Tip:** You can add and edit this information later.
 12. Optional: Enter device JSON metadata.  
@@ -117,7 +131,9 @@ To install EAA on your gateway:
 You can use the EAA config.properties file to set basic software configuration parameters.
 
 To update EAA configuration:
-1. On the gateway system where the EAA is running, locate the EAA config.properties file.
+1. On the gateway system where the EAA is running, locate the EAA config.properties file.  
+For example:
+`../dglux-server/dslinks/ibm-watson-iot-edge-analytics-dslink-java-0.0.1/config.properties`
 2. Before you begin editing the settings, make a backup copy of the file.
 3. Open the config.properties file for editing.
 4. Edit the configuration parameters for your environment:

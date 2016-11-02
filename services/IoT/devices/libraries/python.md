@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Python for device developers
 {: #python}
-Last updated: 29 July 2016
-{: .last-updated}
 
 You can use Python to build and develop device code to interact with your organization on {{site.data.keyword.iot_full}}. The Python client for {{site.data.keyword.iot_short_notm}} provides an API to facilitate simple interaction with {{site.data.keyword.iot_short_notm}} features by abstracting away the underlying protocols such as MQTT and HTTP.
 {:shortdesc}
@@ -35,12 +34,13 @@ The options dictionary creates definitions that are used to interact with the {{
 |Definition|Description |
 |:---|:---|
 |`orgId`|Your organization ID.|
-|`type`|The type of your device. Typically, the deviceType is a grouping for devices that perform a specific task, for example "weatherballoon".|
-|`id`|The  ID of your device. Typically, for a given device type, the deviceId is a unique identifier of that device, for example a serial number or MAC address.|
-|`auth-method`|The method of authentication to be used. The only value that is currently supported is `token`.|
-|`auth-token`|An authentication token to securely connect your device to Watson IoT Platform.|
+|`type`|The type of the device. The device type is a grouping for devices that perform a specific task, for example, "weatherballoon".|
+|`id`|A unique ID to identify a device. Typically, for a given device type, the device ID is a unique identifier of that device, for example, a serial number or MAC address.|
+|`auth-method`|The method of authentication. The only method that is supported is `apikey`.|
+|`auth-token`|An API key token, which is also required when you set the value of auth-method to `apikey`.|
+|`clean-session`|A true or false value that is required only if you want to connect the application in durable subscription mode. By default, `clean-session` is set to true.|
 
-If no options dictionary is provided, the client connects to the Watson IoT Platform Quickstart service as an unregistered device.
+If no options dictionary is provided, the client connects to the {{site.data.keyword.iot_short_notm}} Quickstart service as an unregistered device.
 
 ```python
 
@@ -51,7 +51,8 @@ try:
     "type": deviceType,
     "id": deviceId,
     "auth-method": authMethod,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.device.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -82,7 +83,7 @@ type=deviceType
 id=deviceId
 auth-method=token
 auth-token=token
-
+clean-session=true/false
 ```
 
 ## Publishing events

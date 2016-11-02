@@ -29,7 +29,7 @@ Von der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) werd
 <dt>Endpunkt</dt>
 <dd>Vor dem Verwenden des Befehls muss ein API-Endpunkt durch Absetzen des Befehls <code>bluemix api</code> definiert werden.</dd>
 <dt>Anmeldung</dt>
-<dd>Vor der Verwendung des Befehls ist die Anmeldung über den Befehl <code>bluemix login</code> erforderlich. Verwenden Sie beim Anmelden mit einer eingebundenen ID die Option '--sso' für die Anmeldung mit einmaligem Kenncode. </dd>
+<dd>Vor der Verwendung des Befehls ist die Anmeldung über den Befehl <code>bluemix login</code> erforderlich. Verwenden Sie beim Anmelden mit einer eingebundenen ID die Option '--sso' für die Anmeldung mit einmaligem Kenncode.</dd>
 <dt>Ziel</dt>
 <dd>Vor dem Verwenden des Befehls muss der Befehl <code>bluemix target</code> zum Definieren einer Organisation und eines Bereichs ausgeführt werden.</dd>
 <dt>Docker</dt>
@@ -43,7 +43,7 @@ Von der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) werd
 Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufig verwendeten Bluemix-Befehle.
 
 
-<table summary="Allgemeine Bluemix-Befehle">
+<table summary="Allgemeine Bluemix-Befehle"> 
  <thead>
  <th colspan="5">Allgemeine Bluemix-Befehle</th>
  </thead>
@@ -68,7 +68,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
 
 
 
-<table summary="Bluemix-Befehle zur Verwaltung von Organisationen, Bereichen und Benutzern">
+<table summary="Bluemix-Befehle zur Verwaltung von Organisationen, Bereichen und Benutzern"> 
  <thead>
  <th colspan="5">Befehle zur Verwaltung von Organisationen, Bereichen und Benutzern</th>
  </thead>
@@ -107,7 +107,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
 
 
 
-<table summary="Bluemix-Befehle zur Verwaltung von Cloud Foundry-Apps">
+<table summary="Bluemix-Befehle zur Verwaltung von Cloud Foundry-Apps"> 
  <thead>
  <th colspan="5">Befehle zur Verwaltung von CF-Apps</th>
  </thead>
@@ -145,7 +145,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
 *Tabelle 3. Befehle zur Verwaltung von CF-Apps*
 
 
-<table summary="Bluemix-Befehle zur Verwaltung von Bluemix-Services">
+<table summary="Bluemix-Befehle zur Verwaltung von Bluemix-Services"> 
  <thead>
  <th colspan="5">Befehle zur Verwaltung von Bluemix-Services</th>
  </thead>
@@ -176,8 +176,8 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
 *Tabelle 4. Befehle zur Verwaltung von Bluemix-Services*
 
 
-<table summary="Bluemix-Befehle zur Verwaltung der Bluemix-Einstellungen für Kataloge, Plug-ins, Abrechnungen und Sicherheit.">
-<thead>
+<table summary="Bluemix-Befehle zur Verwaltung der Bluemix-Einstellungen für Kataloge, Plug-ins, Abrechnungen und Sicherheit."> 
+ <thead>
  <th colspan="5">Befehle zur Verwaltung der Bluemix-Einstellungen für Kataloge, Plug-ins, Abrechnungen und Sicherheit</th>
  </thead>
  <tbody> 
@@ -211,7 +211,9 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  </table> 
 *Tabelle 5. Befehle zur Verwaltung von Bluemix-Katalogen, Plug-ins, Abrechnungen und Sicherheitseinstellungen*
 
-<table summary="Bluemix-Befehle zur Verwaltung von Netzeinstellungen">
+
+
+<table summary="Bluemix-Befehle zur Verwaltung von Netzeinstellungen"> 
  <thead>
  <th colspan="5">Befehle zur Verwaltung von Netzeinstellungen</th>
  </thead>
@@ -243,7 +245,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
 
 
 
-<table summary="Bluemix-Befehle zur Verwaltung von Containern in Bluemix">
+<table summary="Bluemix-Befehle zur Verwaltung von Containern in Bluemix"> 
  <thead>
  <th colspan="5">Befehle zur Verwaltung von Containern in Bluemix</th>
  </thead>
@@ -307,8 +309,8 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  <tr> 
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic top](index.html#bluemix_ic_top)</td>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic volumes](index.html#bluemix_ic_volumes)</td>
  </tr>
  <tr>
@@ -443,7 +445,7 @@ bluemix login [OPTIONS...]
 
 <strong>Befehlsoptionen</strong>: Informationen zu den Optionen, die vom Befehl `login` unterstützt werden, finden Sie in den Informationen zur Verwendung des Befehls `cf login` für cf-Befehle zur Verwaltung von Anwendungen.
 
-<strong>Hinweis</Strong>: Verwenden Sie beim Anmelden mit einer eingebundenen ID die Option '--sso' für die Anmeldung mit einmaligem Kenncode. 
+<strong>Hinweis</Strong>: Verwenden Sie beim Anmelden mit einer eingebundenen ID die Option '--sso' für die Anmeldung mit einmaligem Kenncode.
 
 ## bluemix logout
 {: #bluemix_logout}
@@ -904,7 +906,7 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
    <ul>
   <li>OrgManager: Diese Rolle kann Benutzer einladen und verwalten, Pläne auswählen und ändern sowie Ausgabenlimits festlegen.</li>
   <li>BillingManager: Diese Rolle kann die Abrechnungskonto- und Zahlungsinformationen erstellen und verwalten.</li>
-  <li>OrgAuditor: Diese Rolle verfügt über Lesezugriff auf die Organisationsinformationen und -berichte. </li>
+  <li>OrgAuditor: Diese Rolle verfügt über Lesezugriff auf die Organisationsinformationen und -berichte.</li>
   </ul> </dd>
    <dt>SPACE_NAME (erforderlich)</dt>
    <dd>Der Name des Bereichs, zu dem dieser Benutzer eingeladen wird.</dd>
@@ -970,7 +972,7 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
    <ul>
    <li>OrgManager: Diese Rolle kann Benutzer einladen und verwalten, Pläne auswählen und ändern sowie Ausgabenlimits festlegen.</li>
    <li>BillingManager: Diese Rolle kann die Abrechnungskonto- und Zahlungsinformationen erstellen und verwalten.</li>
-   <li>OrgAuditor: Diese Rolle verfügt über Lesezugriff auf die Organisationsinformationen und -berichte. </li>
+   <li>OrgAuditor: Diese Rolle verfügt über Lesezugriff auf die Organisationsinformationen und -berichte.</li>
    </ul>
    </dd>
     </dl>
@@ -1006,7 +1008,7 @@ bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <ul>
    <li>OrgManager: Diese Rolle kann Benutzer einladen und verwalten, Pläne auswählen und ändern sowie Ausgabenlimits festlegen.</li>
    <li>BillingManager: Diese Rolle kann die Abrechnungskonto- und Zahlungsinformationen erstellen und verwalten.</li>
-   <li>OrgAuditor: Diese Rolle verfügt über Lesezugriff auf die Organisationsinformationen und -berichte. </li>
+   <li>OrgAuditor: Diese Rolle verfügt über Lesezugriff auf die Organisationsinformationen und -berichte.</li>
    </ul>
    </dd>
     </dl>
@@ -1395,7 +1397,7 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTIO
    <dt>-u <i>URL</i> (optional)</dt>
    <dd>Die Route der Anwendung. Wenn sie nicht angegeben ist, wird die Route von Bluemix automatisch auf der Grundlage des Anwendungsnamens und der Standarddomäne festgelegt.</dd>
    <dt>-d <i>DESCRIPTION</i> (optional)</dt>
-   <dd>Die Beschreibung für die Anwendung. </dd>
+   <dd>Die Beschreibung für die Anwendung.</dd>
    <dt>--no-start (optional)</dt>
    <dd>Startet die Anwendung nach ihrer Erstellung nicht automatisch. Wenn diese Option nicht angegeben wird, wird die Anwendung nach ihrer Erstellung automatisch gestartet.</dd>
    </dl>
@@ -1599,7 +1601,7 @@ Dieser Befehl besitzt dieselbe Funktion und dieselben Optionen wie der Befehl `c
 ## bluemix bss account-usage
 {: #bluemix_bss_account_usage}
 
-Monatliche Nutzung und Kosten des Kontos anzeigen. 
+Monatliche Nutzung und Kosten des Kontos anzeigen.
 
 ```
 bluemix bss account-usage [-d YYYY-MM] [--json]
@@ -1611,14 +1613,14 @@ bluemix bss account-usage [-d YYYY-MM] [--json]
 
 <dl>
   <dt>-d MONTH_DATE (optional)</dt>
-  <dd>Daten für Monat und Datum durch Angeben des Formats JJJJ-MM anzeigen. Bei keiner Angabe wird die Nutzung des aktuellen Monats angezeigt. </dd>
+  <dd>Daten für Monat und Datum durch Angeben des Formats JJJJ-MM anzeigen. Bei keiner Angabe wird die Nutzung des aktuellen Monats angezeigt.</dd>
   <dt>--json (optional)</dt>
-  <dd>Nutzungsergebnis im JSON-Format anzeigen. </dd>
+  <dd>Nutzungsergebnis im JSON-Format anzeigen.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
-Nutzungs- und Kostenbericht des Kontos für 06/2016 anzeigen: 
+Nutzungs- und Kostenbericht des Kontos für 06/2016 anzeigen:
 
 ```
 bluemix bss account-usage -d 2016-06
@@ -1627,7 +1629,7 @@ bluemix bss account-usage -d 2016-06
 ## bluemix bss org-usage
 {: #bluemix_bss_org_usage}
 
-Monatliche Nutzungsdetails einer Organisation anzeigen. Diese Operation kann nur von einem Abrechnungsmanager der Organisation ausgeführt werden. 
+Monatliche Nutzungsdetails einer Organisation anzeigen. Diese Operation kann nur von einem Abrechnungsmanager der Organisation ausgeführt werden.
 
 ```
 bluemix bss org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
@@ -1639,13 +1641,13 @@ bluemix bss org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
 
 <dl>
   <dt>ORG_NAME (erforderlich)</dt>
-  <dd>Name der Organisation. </dd>
+  <dd>Name der Organisation.</dd>
   <dt>-d MONTH_DATE (optional)</dt>
-  <dd>Daten für Monat und Datum durch Angeben des Formats JJJJ-MM anzeigen. Bei keiner Angabe wird die Nutzung des aktuellen Monats angezeigt. </dd>
+  <dd>Daten für Monat und Datum durch Angeben des Formats JJJJ-MM anzeigen. Bei keiner Angabe wird die Nutzung des aktuellen Monats angezeigt.</dd>
   <dt>-r REGION_NAME</dt>
-  <dd>Name der Region, in der die Organisation gehostet wird. Wenn 'Alle' eingestellt ist, wird die Organisationsnutzung in allen Regionen angezeigt. </dd>
+  <dd>Name der Region, in der die Organisation gehostet wird. Wenn 'Alle' eingestellt ist, wird die Organisationsnutzung in allen Regionen angezeigt.</dd>
   <dt>--json (optional)</dt>
-  <dd>Nutzungsergebnis im JSON-Format anzeigen. </dd>
+  <dd>Nutzungsergebnis im JSON-Format anzeigen.</dd>
 </dl>
 
 
@@ -1653,7 +1655,7 @@ bluemix bss org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
 ## bluemix bss orgs-usage-summary
 {: #bluemix_bss_orgs_usage_summary}
 
-Zusammenfassung der monatlichen Nutzung für die Organisationen im eigenen Konto anzeigen. 
+Zusammenfassung der monatlichen Nutzung für die Organisationen im eigenen Konto anzeigen.
 
 ```
 bluemix bss orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
@@ -1665,11 +1667,11 @@ bluemix bss orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
 
 <dl>
   <dt>-d MONTH_DATE (optional)</dt>
-  <dd>Daten für Monat und Datum durch Angeben des Formats JJJJ-MM anzeigen. Bei keiner Angabe wird die Nutzung des aktuellen Monats angezeigt. </dd>
+  <dd>Daten für Monat und Datum durch Angeben des Formats JJJJ-MM anzeigen. Bei keiner Angabe wird die Nutzung des aktuellen Monats angezeigt.</dd>
   <dt>-r REGION_NAME</dt>
-  <dd>Name der Region, in der die Organisationen gehostet werden. Wenn 'Alle' eingestellt ist, wird eine Nutzungszusammenfassung der Organisationen in allen Regionen angezeigt. </dd>
+  <dd>Name der Region, in der die Organisationen gehostet werden. Wenn 'Alle' eingestellt ist, wird eine Nutzungszusammenfassung der Organisationen in allen Regionen angezeigt.</dd>
   <dt>--json (optional)</dt>
-  <dd>Nutzungsergebnis im JSON-Format anzeigen. </dd>
+  <dd>Nutzungsergebnis im JSON-Format anzeigen.</dd>
 </dl>
 
 
@@ -1818,7 +1820,7 @@ bluemix plugin repo-remove REPO_NAME
 <strong>Befehlsoptionen</strong>:
    <dl>
    <dt>REPO_NAME (erforderlich)</dt>
-   <dd>Der Name des Repositorys, das entfernt werden soll. </dd>
+   <dd>Der Name des Repositorys, das entfernt werden soll.</dd>
    </dl>
 
 <strong>Beispiele</strong>:
@@ -1892,7 +1894,7 @@ bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
    <dt>PLUGIN_PATH|PLUGIN_NAME (erforderlich)</dt>
    <dd>Wenn -r <i>REPO_NAME</i> nicht angegeben wird, wird das Plug-in vom angegebenen lokalen Pfad oder der Remote URL installiert.</dd>
    <dt>-r <i>REPO_NAME</i> (optional)</dt>
-   <dd>Der Name des Repositorys, in dem sich die Binärdatei des Plug-ins befindet. </dd>
+   <dd>Der Name des Repositorys, in dem sich die Binärdatei des Plug-ins befindet.</dd>
    <dt>-v <i>VERSION</i> (optional)</dt>
    <dd>Die Version des Plug-ins, die installiert werden soll. Bei keiner Angabe wird die letzte Version des Plug-ins installiert. Diese Option ist nur gültig, wenn Sie das Plug-in aus dem Repository installieren.</dd>
     </dl>
@@ -2221,7 +2223,7 @@ bluemix ic group-create --name GROUP_NAME [--memory,-m MEMORY_SIZE] [-n,--hostna
    <dd>Die Domäne lautet in der Regel <i>.mybluemix.net</i>. Der Hostname und der Domänenname werden zum vollständigen Wert der öffentlichen Routen-URL kombiniert. Beispiel: <i>http://mycontainerhost.mybluemix.net</i>. Wenn Sie die Details einer Containergruppe mit dem Befehl <i>bluemix ic group-inspect</i> untersuchen, werden der Host und die Domäne zusammen als Route aufgeführt.</dd>
    
    <dt>-e <i>ENV_KEY=ENV_VAL</i>|--env <i>ENV_KEY=ENV_VAL</i> (optional)</dt>
-   <dd>Legen Sie die Umgebungsvariable fest.Geben Sie mehrere Schlüssel separat an. Wenn Anführungszeichen angegeben werden, geben Sie sie so an, dass der Name und der Wert der Umgebungsvariablen eingeschlossen werden. Beispiel: `-e "schlüssel1=wert1" -e "schlüssel2=wert2" -e "schlüssel3=wert3"`.  In der folgenden Tabelle sind einige häufig verwendete Umgebungsvariablen aufgeführt, die Sie angeben können:</dd>
+   <dd>Legen Sie die Umgebungsvariable fest. Geben Sie mehrere Schlüssel separat an. Wenn Anführungszeichen angegeben werden, geben Sie sie so an, dass der Name und der Wert der Umgebungsvariablen eingeschlossen werden. Beispiel: `-e "schlüssel1=wert1" -e "schlüssel2=wert2" -e "schlüssel3=wert3"`.  In der folgenden Tabelle sind einige häufig verwendete Umgebungsvariablen aufgeführt, die Sie angeben können:</dd>
     </dl>
  
 
@@ -2231,9 +2233,9 @@ bluemix ic group-create --name GROUP_NAME [--memory,-m MEMORY_SIZE] [-n,--hostna
 | CCS_SSH_KEY=*&lt;öffentlicher_ssh-schlüssel&gt;* | Fügt einem Container einen SSH-Schlüssel hinzu, wenn Sie den Container erstellen. Sie können den SSH-Schlüssel mithilfe der Umgebungsvariablen hinzufügen, wenn Sie den Container über das {{site.data.keyword.Bluemix_notm}}-Dashboard oder über die CLI erstellen. Weitere Informationen zu SSH-Schlüsseln finden Sie unter [Bei einem Container anmelden](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}. |
 | LOG_LOCATIONS=*&lt;dateipfad&gt;* | Fügt eine Protokolldatei für die Überwachung im Container hinzu. Fügen Sie die Umgebungsvariable `LOG_LOCATIONS` mit einem Pfad zu der Protokolldatei ein. |
 *Tabelle 8. Häufig verwendete Umgebungsvariablen*
-
+	
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (optional)</dt>
-   <dd> Importiert Umgebungsvariablen aus einer Datei. Dabei ist ENVFILE der Pfad zu der Datei im lokalen Verzeichnis. Jede Zeile in der Datei stellt ein Schlüssel=Wert-Paar dar.</dd>
+   <dd> Importiert Umgebungsvariablen aus einer Datei. Dabei ist ENVFILE der Pfad zu der Datei im lokalen Verzeichnis. Jede Zeile in der Datei stellt ein Schlüssel=Wert-Paar dar. </dd>
     </dl>
    <dl>
    <dt>-v VOLUME:CONTAINER_PATH[:ro]|--volume VOLUME:CONTAINER_PATH[:ro] (optional)</dt>
@@ -2264,15 +2266,15 @@ bluemix ic group-create --name GROUP_NAME [--memory,-m MEMORY_SIZE] [-n,--hostna
    
    <dt>--auto (optional)</dt>
    <dd>Wenn die Containergruppe erstellt wurde und die automatische Wiederherstellung aktiviert ist, überprüft IBM Containers den Status jeder Instanz mit einer HTTP-Anforderung an den Port, der zugewiesen wurde.<br>
-   Wenn in zwei aufeinander folgenden Intervallen von 90 Sekunden keine Antwort von einer Containerinstanz empfangen wird, wird die Instanz entfernt und durch eine neue Instanz ersetzt. Wenn der Container antwortet, wird keine Aktion ausgeführt. Dieser Prozess wird kontinuierlich wiederholt. Wenn die Gesamtzahl verschiedener Container, die Mitglieder der Gruppe sind, während eines 30-Minuten-Fensters drei oder mehrmal die maximale Größe der Gruppe überschreitet, wird die automatische Wiederherstellung für die Containergruppe permanent inaktiviert. Zur erneuten Aktivierung der automatischen Wiederherstellung müssen Sie die Containergruppe neu erstellen.</dd>
+   Wenn in zwei aufeinander folgenden Intervallen von 90 Sekunden keine Antwort von einer Containerinstanz empfangen wird, wird die Instanz entfernt und durch eine neue Instanz ersetzt. Wenn der Container antwortet, wird keine Aktion ausgeführt. Dieser Prozess wird kontinuierlich wiederholt. Wenn die Gesamtzahl verschiedener Container, die Mitglieder der Gruppe sind, während eines 30-Minuten-Fensters drei Mal oder mehrmals die maximale Größe der Gruppe überschreitet, wird die automatische Wiederherstellung für die Containergruppe permanent inaktiviert. Zur erneuten Aktivierung der automatischen Wiederherstellung müssen Sie die Containergruppe neu erstellen.</dd>
   <dt>--anti (optional)</dt>
   <dd> Mit anti-affinity kann die Hochverfügbarkeit der Containergruppe optimiert werden. Bei Verwendung der Option --anti werden die einzelnen Containerinstanzen in einer Gruppe auf separate physische Rechenknoten gestellt, was die Wahrscheinlichkeit minimiert, dass alle Container in der Gruppe aufgrund eines Hardwarefehlers ausfallen. Diese Option kann bei größeren Gruppen möglicherweise nicht verwendet werden, da für jede Bluemix-Region und -Organisation nur eine begrenzte Anzahl von Rechenknoten bereitgestellt werden kann. Wenn die Bereitstellung nicht erfolgreich ist, müssen Sie die Anzahl der Containerinstanzen in der Gruppe entweder reduzieren oder die Option --anti entfernen. </dd>
     
    <dt>--bind SERVICE_INSTANCE_NAME (optional)</dt>
-   <dd> Fügt einen Service zu einer aktiven Containergruppe hinzu.</dd>
+   <dd> Fügt einen Service zu einer aktiven Containergruppe hinzu. </dd>
    
    <dt>CMD (optional)</dt>
-   <dd>Der Befehl und die Argumente, die an die Containergruppe zur Ausführung übergeben werden. Dieser Befehl muss ein Befehl mit langer Laufzeit sein. Verwenden Sie keinen Befehl mit kurzer Laufzeit, beispielsweise <i>/bin/date</i>, da ein Befehl mit kurzer Laufzeit dazu führen kann, dass der Container abstürzt.  <br> <strong>Hinweise:</strong><ul>
+   <dd>Der Befehl und die Argumente, die an die Containergruppe zur Ausführung übergeben werden. Dieser Befehl muss ein Befehl mit langer Laufzeit sein. Verwenden Sie keinen Befehl mit kurzer Laufzeit, beispielsweise <i>/bin/date</i>, da ein Befehl mit kurzer Laufzeit dazu führen kann, dass der Container abstürzt.  <br> <strong>Hinweise:</strong> <ul>
    <li>Der Befehl und seine Argumente müssen am Ende der Befehlszeile von <i>bluemix ic run</i> kommen.</li>
    <li>Wenn die Befehlsargumente einen Bindestrich (-) enthalten, wie in <i>-c</i> im vorherigen Beispielbefehl, müssen dem Befehl zwei Bindestriche (--) vorangestellt werden.</li>
    </ul></dd>
@@ -2327,7 +2329,7 @@ bluemix ic group-update [--min MIN_INSTANCE_COUNT] [--max MAX_INSTANCE_COUNT] [-
 
    <dl>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>(optional)</dt>
-   <dd>Legen Sie die Umgebungsvariable fest.Geben Sie mehrere Schlüssel separat an. Wenn Anführungszeichen angegeben werden, geben Sie sie so an, dass der Name und der Wert der Umgebungsvariablen eingeschlossen werden. Beispiel: `-e "schlüssel1=wert1" -e "schlüssel2=wert2" -e "schlüssel3=wert3"`.  </dd>
+   <dd>Legen Sie die Umgebungsvariable fest. Geben Sie mehrere Schlüssel separat an. Wenn Anführungszeichen angegeben werden, geben Sie sie so an, dass der Name und der Wert der Umgebungsvariablen eingeschlossen werden. Beispiel: `-e "schlüssel1=wert1" -e "schlüssel2=wert2" -e "schlüssel3=wert3"`.</dd>
     </dl>
    <dl>
    <dt>GROUP_NAME (erforderlich)</dt>
@@ -2544,7 +2546,7 @@ bluemix ic ip-bind 192.123.12.12 proxy
 
 Hebt die Bindung einer variabel verknüpften IP-Adresse an ihren Container auf.
 
-Öffentliche IP-Adressen sind eine begrenzte Ressource in IBM Containers. Daher werden öffentliche IP-Adressen, die einem Bereich zugeorndet und nicht an einen Container gebunden sind, in regelmäßigen, d. h. ungefähr wöchentlichen, Intervallen von freien Testbenutzern zurückgefordert. Nicht gebundene öffentliche IP-Adressen werden nie von Kunden mit nutzungsabhängiger Zahlung oder von Abonnementbenutzern zurückgefordert.
+Öffentliche IP-Adressen sind eine begrenzte Ressource in IBM Containers. Daher werden öffentliche IP-Adressen, die einem Bereich zugeordnet und nicht an einen Container gebunden sind, in regelmäßigen, d. h. ungefähr wöchentlichen, Intervallen von freien Testbenutzern zurückgefordert. Nicht gebundene öffentliche IP-Adressen werden nie von Kunden mit nutzungsabhängiger Zahlung oder von Abonnementbenutzern zurückgefordert.
 
 ```
 bluemix ic ip-unbind IP_ADDRESS CONTAINER
@@ -2739,7 +2741,7 @@ bluemix ic ps [-a|--all] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
    <dt>-s|--size (optional)</dt>
    <dd>Die Größen der Container auflisten.</dd>
    <dt>-l <i>NUM</i>|--limit <i>NUM</i> (optional)</dt>
-   <dd>Die kürzlich erstellten Container auflisten, wobei <i>NUM</i> die Anzahl der kürzlich erstellten Container ist, die zurückgegeben werden sollen.<br><br> Beispiel: Wenn Sie nacheinander die Container <i>node1</i> bis <i>node5</i>erstellt haben, gibt der Befehl <i>bluemix ic ps --limit 2</i> die Container 'node4' und 'node5' zurück, da diese die beiden zuletzt erstellten Container sind.</dd>
+   <dd>Die kürzlich erstellten Container auflisten, wobei <i>NUM</i> die Anzahl der kürzlich erstellten Container ist, die zurückgegeben werden sollen. <br><br> Beispiel: Wenn Sie nacheinander die Container <i>node1</i> bis <i>node5</i>erstellt haben, gibt der Befehl <i>bluemix ic ps --limit 2</i> die Container 'node4' und 'node5' zurück, da diese die beiden zuletzt erstellten Container sind. </dd>
    <dt>-q|--quiet (optional)</dt>
    <dd>Nur Container-IDs anzeigen.</dd>
    </dl>
@@ -2760,7 +2762,9 @@ Ordnet einem Container einen neuen Namen zu. Weitere Informationen finden Sie un
 ```
 bluemix ic rename OLD_NAME NEW_NAME
 ```
-<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel, Docker<strong>Befehlsoptionen</strong>:
+<strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel, Docker
+
+<strong>Befehlsoptionen</strong>:
 
 <dl>
    <dt>OLD_NAME (erforderlich)</dt>
@@ -2781,7 +2785,7 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
 <strong>Befehlsoptionen</strong>:
 
-   <dl>
+<dl>
    <dt>--force|-f (optional)</dt>
    <dd>Erzwingt die erneute Erstellung des IBM Containers-Service im Bluemix-Bereich.</dd>
    <dt>ENVIRONMENT_NAME (optional)</dt>
@@ -2791,7 +2795,7 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ## bluemix ic unprovision
 {: #bluemix_ic_unprovision}
 
-Löscht den IBM Containers-Service aus dem Bluemix-Bereich, an dem Sie angemeldet sind. 
+Löscht den IBM Containers-Service aus dem Bluemix-Bereich, an dem Sie angemeldet sind.
 
 <strong>Achtung</strong>: Bei Ausführung dieses Befehls gehen alle einzelnen Container und Containergruppen verloren. Ihr Bereich steht in Bluemix weiterhin zur Verfügung. Zur erneuten Verwendung von IBM Containers müssen Sie 'bluemix ic provision' ausführen, um den IBM Containers-Service erneut bereitzustellen.
 
@@ -2800,7 +2804,7 @@ bluemix ic reprovision [--force|-f]
 ```
 <strong>Befehlsoptionen</strong>:
 
-   <dl>
+<dl>
    <dt>--force|-f (optional)</dt>
    <dd>Erzwingt die Löschung von Bluemix aus dem Bluemix-Bereich.</dd>
  </dl>
@@ -2940,7 +2944,7 @@ Startet einen neuen Container im Container-Cloud-Service über einen Imagenamen.
 ```
 bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV|--env ENV] [-v VOLUME:CONTAINER_PATH] -n NAME|--name NAME [--link NAME:ALIAS] [-it] IMAGE [CMD [CMD ...]]
 ```
-**Hinweis:** Stellen Sie sicher, dass das Cloud Foundry-Befehlstool installiert ist und dass Sie über ein Cloud Foundry-Token verfügen. Durch eine erfolgreiche Anmeldung mit den Befehle `bluemix login` und `bluemix ic init` werden das erforderliche Token und die erforderlichen Zertifikate generiert.
+**Hinweis:** Stellen Sie sicher, dass das Cloud Foundry-Befehlstool installiert ist und dass Sie über ein Cloud Foundry-Token verfügen. Durch eine erfolgreiche Anmeldung mit den Befehle `bluemix login` und `bluemix ic init` werden das erforderliche Token und die erforderlichen Zertifikate generiert. 
 
 
 <strong>Voraussetzungen</strong>: Endpunkt, Anmeldung, Ziel, Docker
@@ -2949,11 +2953,11 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 
    <dl>
    <dt>-p <i>PORT</i>|--publish <i>PORT</i>  (optional)</dt>
-   <dd>Macht den Port für den HTTP-Datenverkehr verfügbar. Schließen Sie die Ports ein, die in der Dockerfile für das Image, das Sie verwenden, angegeben sind. Sie können mehrere Ports mit mehreren Optionen <i>-p</i> einschließen. Durch das Verfügbarmachen eines Ports wird automatisch eine öffentliche IP-Adresse an den Container gebunden, wenn eine öffentliche IP-Adresse verfügbar ist. <br><br>Wenn Sie eine bestehende IP-Adresse im Bereich haben, die Sie an den Container binden wollen, können Sie die IP-Adresse angeben, anstatt Sie später zu binden. Die IP-Adresse muss im folgenden Format angegeben werden: &lt;ip-adresse&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br><br>Weitere Informationen zum Anfordern von IP-Adressen für einen Bereich finden Sie unter dem Befehl <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a>. <br><br>Wenn Sie einen Port angeben, machen Sie die App für {{site.data.keyword.Bluemix_notm}} Load Balancer oder Container in demselben {{site.data.keyword.Bluemix_notm}}-Bereich verfügbar. Anschließend können Bluemix Load Balancer oder die Container den Port verwenden, um den Host zu erreichen. Wenn ein Port in der Dockerfile für das Image, das Sie verwenden, angegeben ist, schließen Sie diesen Port ein. <br><br><strong>Tipps</strong>: <ul><li>Für das von IBM zertifizierte Liberty Server-Image oder für eine modifizierte Version dieses Image geben Sie Port 9080 ein.</li><li>Für das von IBM zertifizierte Node.js-Image oder für eine modifizierte Version dieses Image geben Sie Port 8000 ein.</li></ul></dd>
+   <dd>Macht den Port für den HTTP-Datenverkehr verfügbar. Schließen Sie die Ports ein, die in der Dockerfile für das Image, das Sie verwenden, angegeben sind. Sie können mehrere Ports mit mehreren Optionen <i>-p</i> einschließen. Durch das Verfügbarmachen eines Ports wird automatisch eine öffentliche IP-Adresse an den Container gebunden, wenn eine öffentliche IP-Adresse verfügbar ist. <br><br>Wenn Sie eine bestehende IP-Adresse im Bereich haben, die Sie an den Container binden wollen, können Sie die IP-Adresse angeben, anstatt Sie später zu binden. Die IP-Adresse muss im folgenden Format angegeben werden: &lt;ip-adresse&gt;:&lt;container-port&gt;:&lt;container-port&gt; <br><br>Weitere Informationen zum Anfordern von IP-Adressen für einen Bereich finden Sie unter dem Befehl <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a>. <br><br>Wenn Sie einen Port angeben, machen Sie die App für {{site.data.keyword.Bluemix_notm}} Load Balancer oder Container in demselben {{site.data.keyword.Bluemix_notm}}-Bereich verfügbar. Anschließend können Bluemix Load Balancer oder die Container den Port verwenden, um den Host zu erreichen. Wenn ein Port in der Dockerfile für das Image, das Sie verwenden, angegeben ist, schließen Sie diesen Port ein. <br><br><strong>Tipps</strong>:<ul><li>Für das von IBM zertifizierte Liberty Server-Image oder für eine modifizierte Version dieses Image geben Sie Port 9080 ein.</li><li>Für das von IBM zertifizierte Node.js-Image oder für eine modifizierte Version dieses Image geben Sie Port 8000 ein.</li></ul></dd>
    <dt>-P (optional)</dt>
    <dd>Die in der Dockerfile für das Image angegebenen Ports automatisch für den HTTP-Datenverkehr verfügbar machen.</dd>
    <dt>-m <i>MEMORY</i>|--memory <i>MEMORY</i> (optional)</dt>
-   <dd>Der Gruppe eine Speicherbegrenzung in MB zuweisen. Wenn Sie eine Containergruppe über die CLI erstellen, ist der Standardwert für jede Containerinstanz 64 MB. Wenn Sie eine Containergruppe über das {{site.data.keyword.Bluemix_notm}}-Dashboard erstellen, ist der Standardwert für jede Instanz 256 MB. Gültige Werte: 64, 256, 512, 1024 und 2048. Nach der Zuweisung einer Speicherbegrenzung kann der Wert nicht mehr geändert werden.</dd>
+   <dd>Der Gruppe eine Speicherbegrenzung in MB zuweisen. Wenn Sie eine Containergruppe über die CLI erstellen, ist der Standardwert für jede Containerinstanz 64 MB.  Wenn Sie eine Containergruppe über das {{site.data.keyword.Bluemix_notm}}-Dashboard erstellen, ist der Standardwert für jede Instanz 256 MB. Gültige Werte: 64, 256, 512, 1024 und 2048. Nach der Zuweisung einer Speicherbegrenzung kann der Wert nicht mehr geändert werden.</dd>
    <dt>-e <i>ENV</i>|--env <i>ENV</i> (optional)</dt>
    <dd>Die Umgebungsvariable festlegen, wobei <i>ENV</i> ein Schlüssel=Wert-Paar ist. Geben Sie mehrere Schlüssel separat an. Wenn Sie Anführungszeichen angeben, geben Sie sie so an, dass der Name und der Wert der Umgebungsvariablen eingeschlossen werden. Beispiel: -e "schlüssel1=wert1" -e "schlüssel2=wert2" -e "schlüssel3=wert3". In der folgenden Tabelle sind einige häufig verwendete Umgebungsvariablen aufgeführt, die Sie angeben können:</dd>
    </dl>
@@ -2982,7 +2986,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
    <dt>-it (optional)</dt>
    <dd>Container im interaktiven Modus ausführen. Nach dem Erstellen des Containers die Anzeige der Standardeingabe beibehalten. Geben Sie <i>exit</i> zum Beenden ein.</dd>
    <dt>IMAGE (erforderlich)</dt>
-   <dd>Das Image, das in den Container eingeschlossen werden soll. Sie können Befehle nach dem Image auflisten, fügen Sie jedoch keine Optionen nach dem Image ein. Fügen Sie alle Optionen vor der Angabe eines Image ein. Fügen Sie alle Optionen ein, bevor Sie ein Image angeben. <br><br>Wenn Sie ein Image im privaten {{site.data.keyword.Bluemix_notm}}-Repository Ihrer Organisation verwenden, geben Sie das Image im folgenden Format an: <i>registry.ng.bluemix.net/NAMENSBEREICH/IMAGE</i>. <br><br>Wenn Sie ein Image verwenden, das durch IBM Containers bereitgestellt wird, geben Sie das Image im folgenden Format an: <i>registry.ng.bluemix.net/IMAGE</i>.</dd>
+   <dd>Das Image, das in den Container eingeschlossen werden soll. Sie können Befehle nach dem Image auflisten, fügen Sie jedoch keine Optionen nach dem Image ein. Fügen Sie alle Optionen vor der Angabe eines Image ein. Fügen Sie alle Optionen ein, bevor Sie ein Image angeben. <br><br>Wenn Sie ein Image im privaten {{site.data.keyword.Bluemix_notm}}-Repository Ihrer Organisation verwenden, geben Sie das Image im folgenden Format an: <i>registry.ng.bluemix.net/NAMENSBEREICH/IMAGE</i>. <br><br>Wenn Sie ein Image verwenden, das durch IBM Containers bereitgestellt wird, geben Sie das Image im folgenden Format an: <i>registry.ng.bluemix.net/IMAGE</i>. </dd>
    <dt>CMD (optional)</dt>
    <dd>Der Befehl und die Argumente, die an die Containergruppe zur Ausführung übergeben werden. Dieser Befehl muss ein Befehl mit langer Laufzeit sein. Verwenden Sie keinen Befehl mit kurzer Laufzeit, beispielsweise <i>/bin/date</i>, da ein Befehl mit kurzer Laufzeit dazu führen kann, dass der Container abstürzt.</dd>
    </dl>
@@ -3057,9 +3061,9 @@ bluemix ic route-unmap [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CON
 
    <dl>
    <dt>-n <i>HOST</i>|--hostname <i>HOST</i> (optional)</dt>
-   <dd>Der Hostname für die Route. </dd>
+   <dd>Der Hostname für die Route.</dd>
    <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i> (optional)</dt>
-   <dd>Der Domänenname für die Route. </dd>
+   <dd>Der Domänenname für die Route.</dd>
    <dt>CONTAINER_GROUP (erforderlich)</dt>
    <dd>Die ID oder der Name der Containergruppe.</dd>
    </dl>
@@ -3423,7 +3427,7 @@ bluemix ic volume-fs-remove FILE_SYSTEM_NAME
 
    <dl>
    <dt>FILE_SYSTEM_NAME (erforderlich)</dt>
-   <dd>Der Name des Dateisystems. </dd>
+   <dd>Der Name des Dateisystems.</dd>
    </dl>
 
 <strong>Beispiele</strong>:
@@ -3448,7 +3452,7 @@ bluemix ic volume-fs-inspect FILE_SYSTEM_NAME
 
   <dl>
    <dt>FILE_SYSTEM_NAME (erforderlich)</dt>
-   <dd>Der Name des Dateisystems. </dd>
+   <dd>Der Name des Dateisystems.</dd>
    </dl>
 
 <strong>Beispiele</strong>:

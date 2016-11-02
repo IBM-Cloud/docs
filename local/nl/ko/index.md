@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} 로컬
 {: #local}
-*마지막 업데이트 날짜: 2016년 8월 16일*
+*마지막 업데이트 날짜: 2016년 9월 15일*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} 로컬은 {{site.data.keyword.Bluemix_notm}} 클라우드 기반 플랫폼의 강력함 및 민첩성을 데이터 센터로 가져옵니다. {{site.data.keyword.Bluemix_notm}} 로컬을 사용하여 안전하게 연결되고 {{site.data.keyword.Bluemix_notm}} 퍼블릭 동기화를 유지하는 동안 회사 방화벽 뒤에 가장 민감한 워크로드를 보호할 수 있습니다.
@@ -36,10 +36,10 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |포함 | [{{site.data.keyword.Bluemix_notm}} 런타임](../cfapps/runtimes.html) | 시스템 및 운영 체제를 설정하고 관리할 필요 없이 신속하게 앱을 시작하고 실행하려면 런타임을 사용하십시오. 모든 {{site.data.keyword.Bluemix_notm}} 런타임은 {{site.data.keyword.Bluemix_notm}} 로컬 인스턴스에서 사용자에게 사용 가능합니다.|
 |포함 | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | 정책에 따라 애플리케이션의 컴퓨팅 리소스 용량을 동적으로 늘리거나 줄입니다. 이 서비스를 사용하면 {{site.data.keyword.Bluemix}} 로컬 환경에서 무제한 사용이 가능합니다.|
 |선택사항 | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}}는 {{site.data.keyword.APIM}}와 IBM StrongLoop를 API 및 마이크로서비스를 작성, 실행, 관리 및 적용하기 위한 포괄적 솔루션을 제공하는 단일 오퍼링으로 통합합니다. |
-|선택사항 | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | {{site.data.keyword.APIMfull}} 서비스는 API를 구성, 관리하고 소셜화하는 데 사용합니다. 프록시 URL을 사용하거나 HTTP 데이터 소스의 데이터를 어셈블하여 리소스들로 API를 가져올 수 있습니다. {{site.data.keyword.APIM}} 서비스를 사용하면 API가 어떻게 이용되는지를 관리할 수 있게 된다는 이점이 있습니다. |
 |선택사항 | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}}에서는 항상 작동 상태인 완전히 관리되는 NoSQL JSON 데이터 계층에 대한 액세스를 제공합니다. 이 서비스는 CouchDB와 호환 가능하며, 모바일 및 웹 애플리케이션 모델을 위한 사용이 간편한 HTTP 인터페이스를 통해 액세스할 수 있습니다. 자세한 정보는 로컬 환경에 대한 전체 [문서](http://docs.cloudant.com/BluemixLocal.html){: new_window}와 [하드웨어 요구사항](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window}을 참조하십시오.  |
-|선택사항(베타) | {{site.data.keyword.containershort}} | {{site.data.keyword.Bluemix_notm}} 로컬에서 Docker 컨테이너를 실행합니다. 컨테이너는 앱에서 실행해야 하는 모든 요소를 포함하는 가상 소프트웨어 오브젝트입니다. 컨테이너는 리소스 격리와 할당의 이점이 있으며 가상 머신 등보다 휴대가 간편하고 효율적입니다. |
+|선택사항 | [{{site.data.keyword.containershort}}](../containers/container_index.html)  | {{site.data.keyword.Bluemix_notm}} 로컬에서 Docker 컨테이너를 실행합니다. 컨테이너는 앱에서 실행해야 하는 모든 요소를 포함하는 가상 소프트웨어 오브젝트입니다. 컨테이너는 리소스 격리와 할당의 이점이 있으며 가상 머신 등보다 휴대가 간편하고 효율적입니다.하드웨어 요구사항에 대한 정보는 [{{site.data.keyword.Bluemix_notm}} 데디케이티드 및 Bluemix 로컬의 IBM {{site.data.keyword.containershort}}](../containers/container_dl.html)를 참조하십시오. |
 |선택사항 | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
+|선택사항 | [{{site.data.keyword.mobilepush}}](../services/mobilepush/index.html) | {{site.data.keyword.mobilepush}}는 iOS 및 Android 디바이스에 알림을 보내는 데 사용할 수 있는 서비스입니다. 알림은 모든 애플리케이션 사용자와 태그를 사용하는 특정 디바이스 및 사용자 세트를 대상으로 할 수 있습니다. 디바이스, 태그 및 구독을 관리할 수 있습니다. SDK(software development kit) 및 REST(Representational State Transfer) API(application program interface)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다. |
 |선택사항 | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | 증가된 중복성을 위해 {{site.data.keyword.sescashort}}에서는 캐시에 저장된 세션의 복제본을 제공합니다. 따라서 등화 관제 또는 가동 중단의 상황에서도 클라이언트 애플리케이션은 캐시의 세션에 계속 액세스할 수 있습니다. 이 서비스는 웹 및 모바일 애플리케이션에 대한 세션 캐싱 시나리오를 지원합니다. |
 |선택사항 | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | 이 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. 로컬 기본 오퍼링에는 1.6TB의 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 전용 환경 내에서 IBM {{site.data.keyword.iot_full}}의 개인용 버전 실행을 허용하는 초기 환경이 포함됩니다. |
 
@@ -57,9 +57,10 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |{{site.data.keyword.Bluemix_notm}} 로컬 {{site.data.keyword.apiconnect_short}} Professional 10만 API 호출 증가| 매월 10만 API 호출의 추가 용량을 제공하는 {{site.data.keyword.apiconnect_short}} Professional 환경의 확장입니다.  |
 |{{site.data.keyword.Bluemix_notm}} 로컬 {{site.data.keyword.apiconnect_short}} Enterprise 2,500만 API 호출 | 엔터프라이즈 전체 API 프로젝트 방향으로 대상 지정된 월간 2,500만 API 호출의 용량을 지닌 {{site.data.keyword.apiconnect_short}}의 개인용 버전 실행을 허용하는 환경입니다.  |
 |{{site.data.keyword.Bluemix_notm}} 로컬 {{site.data.keyword.apiconnect_short}} Enterprise 10만 API 호출 증가 | 매월 10만 API 호출의 추가 용량을 제공하는 {{site.data.keyword.apiconnect_short}} Enterprise 환경의 확장입니다.  |
-|{{site.data.keyword.Bluemix_notm}} 로컬 {{site.data.keyword.APIM}} 500 API 호출 용량 증가 | 초당 500개 API 호출의 용량을 지닌 {{site.data.keyword.Bluemix_notm}}용 {{site.data.keyword.APIM}}의 개인용 버전 실행을 허용하는 환경입니다. |
 |{{site.data.keyword.Bluemix_notm}} 로컬 {{site.data.keyword.cloudant}} 클러스터 | {{site.data.keyword.cloudant}} 서비스의 3노드 클러스터 배치를 허용하는 환경입니다. 노드의 데이터 용량은 로컬 환경에 대해 사용자가 제공한 인프라스트럭처로 판별됩니다. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} 로컬 증분 증가 | 0.5TB 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 로컬 환경 내에서 {{site.data.keyword.iot_full}}의 개인용 버전 실행을 허용하는 {{site.data.keyword.iot_full}} 로컬 기본 서비스 오퍼링에 대한 추가 환경입니다. |
+|IBM {{site.data.keyword.mobilepush}} 로컬 | 초당 300개의 요청을 승인할 수 있는 능력이 있는 {{site.data.keyword.mobilepush}} 인스턴스를 배치하고 실행할 수 있는 환경입니다.  |
+|IBM {{site.data.keyword.mobilepush}} 로컬 추가 기능 인스턴스 | 초당 300개의 추가 요청을 승인할 수 있는 능력이 있는 {{site.data.keyword.mobilepush}} 인스턴스를 배치하고 실행할 수 있는 환경입니다.  |
 
 
 **참고**: {{site.data.keyword.Bluemix_notm}} 로컬 컴포넌트는 특정 구성 용량(예: 기가바이트 또는 초당 트랜잭션)을 표시할 수 있습니다. 클라우드 서비스의 구성에 대한 사실상의 실제 용량이 수많은 요인에 따라 다양하므로, 사실상의 실제 용량은 구성된 용량보다 크거나 작을 수 있습니다.
@@ -78,7 +79,6 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |{{site.data.keyword.alertnotificationshort}}		|예		|예			|예		|
 |{{site.data.keyword.appseccloudshort}}		|예		|예		|예 |
 |{{site.data.keyword.hadoopst}}			|예		|아니오		|아니오 |
-|{{site.data.keyword.APIM}}			|예		|예		|예 |
 |{{site.data.keyword.rules_short}}		|예		|예		|예 |
 |{{site.data.keyword.cloudant}}			|예		|예		|예 |
 |{{site.data.keyword.conceptexpansionshort}}	|예		|예		|예|
@@ -511,7 +511,7 @@ IBM은 각 유지보수 기간에 대해 계획된 변경사항을 자세히 설
 
 {{site.data.keyword.Bluemix_notm}}에서는 로컬 환경이 최신 ESXi 및 vCenter 버전과 호환성을 유지하도록 모든 노력을 기울이고 있습니다. 그러나 대부분의 최신 ESXi 및 vCenter 버전이 지원되지 않는 순간이 있을 수 있습니다. 업데이트를 적용하기 전에 최신 호환 가능 버전에 대해 [로컬 인프라 요구사항](../local/index.html#localinfra) 문서를 참조하십시오. 
 
-## 인시던트 대응 및 지원
+## {{site.data.keyword.Bluemix_notm}} 로컬에 대한 인시던트 대응 및 지원
 {: #incidentresponse}
 
 ### 고객이 발견한 문제
@@ -532,7 +532,7 @@ IBM 지원 센터 및 운영 센터의 주의가 필요한 문제를 식별하�
 
 **참고**: 심각도 1 지원 티켓은 일주일에 7일 하루 24시간 동안 모니터링됩니다. 기타 티켓은 일요일 GMT 오후 10:00부터 토요일 GMT 오전 12:00까지 처리됩니다. 지원 티켓의 심각도와 지원 관련 작업에 대한 자세한 정보는 <a href="../support/index.html#contacting-bluemix-support-local">지원 센터에 문의</a>를 참조하십시오.
 
-## 재해 복구
+## {{site.data.keyword.Bluemix_notm}} 로컬의 재해 복구
 {: #dr}
 
 {{site.data.keyword.Bluemix_short}} 로컬의 재해 복구는 {{site.data.keyword.Bluemix_short}} 퍼블릭을 사용할 때 작동하는 방식과 유사하게 설정할 수 있습니다. {{site.data.keyword.Bluemix_short}} 퍼블릭은 다중 고장 안전 조치로 지속적으로 혁신 가능한 플랫폼을 제공하여 사용자 조직, 영역 및 앱이 항상 사용 가능하도록 합니다. 지리적으로 여러 위치에 앱을 배치하면 불시의 동시 다발성 하드웨어 또는 소프트웨어 컴포넌트 유실, 전체 데이터 센터의 유실로부터 보호되어 지속적으로 가용성이 보장되므로, 지리적으로 한 위치에서 자연 재해가 발생하여도 대체 위치의 Distributed {{site.data.keyword.Bluemix_notm}} 퍼블릭 앱 인스턴스는 사용 가능합니다.

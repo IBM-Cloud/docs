@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Managing user roles
-Last updated: 16 September 2016
-{: .last-updated}
 
 User roles dictate which operations that user is permitted to perform. You can change the assigned role of a user by using the {{site.data.keyword.iot_full}} dashboard or by using the {{site.data.keyword.iot_short_notm}} API.
 
@@ -23,7 +22,7 @@ User roles dictate which operations that user is permitted to perform. You can c
 2. Click the **Edit** icon next to the user that you would like to update.
 3. Select a role and then click **Done**.
 
-<!-- 
+<!--
 ## Changing a user role by using the API
 
 For information on using the API to change a user role, see the [{{site.data.keyword.iot_short_notm}} API documentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).

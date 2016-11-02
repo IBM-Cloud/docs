@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2015，2016
 
  
 
@@ -17,13 +17,14 @@ copyright:
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-*上次更新时间：2016 年 2 月 25 日*
+上次更新时间：2016 年 2 月 25 日
 {: .last-updated}
+
 
 您可以使用 {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} 来配置 {{site.data.keyword.autoscaling}} 服务。{{site.data.keyword.autoscaling}} CLI 支持 Linux64、Win64 和 OSX，提供的功能类似于 Auto-Scaling RESTful API。
 {: shortdesc}
 
-开始之前，请先安装 {{site.data.keyword.Bluemix_notm}} CLI。有关指示信息，请参阅[下载 {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}。
+开始之前，请先安装 {{site.data.keyword.Bluemix_notm}} CLI。有关指示信息，请参阅[下载 {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}。
 
 ## 添加 {{site.data.keyword.Bluemix_notm}} CLI 插件
 
@@ -45,7 +46,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 可以将 Auto-Scaling 策略附加到特定应用程序。运行以下命令：
 
-```bx as policy-attach <APP_NAME> -p <policy_file>```
+```
+bx as policy-attach <APP_NAME> -p <policy_file>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -60,7 +63,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 可以通过回答命令行界面上的问题来生成 Auto-Scaling 策略。根据您的输入，将以您输入的名称保存包含 Auto-Scaling 策略定义的 JSON 文件。如果未输入文件名，那么策略内容将直接显示在命令行上，而不保存到文件。运行以下命令：
 
-```bx as policy-create```
+```
+bx as policy-create
+```
 {: codeblock}
 
 
@@ -68,7 +73,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 可以显示应用程序的 Auto-Scaling 策略。该策略的内容会直接显示到命令行。运行以下命令：
 
-```bx as policy-show <APP_NAME> [--json]```
+```
+bx as policy-show <APP_NAME> [--json]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -83,7 +90,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 可以从应用程序中除去 Auto-Scaling 策略。运行以下命令：
 
-```bx as policy-detach <APP_NAME>```
+```
+bx as policy-detach <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -96,7 +105,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 可以启用或禁用特定应用程序的 Auto-Scaling 策略。运行以下命令：
 
-```bx as policy-enable|policy-disable <APP_NAME>```
+```
+bx as policy-enable|policy-disable <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -109,7 +120,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 可以显示特定应用程序的自动扩展活动历史记录。自动扩展历史记录表将显示在命令行界面中。
 
-```bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]```
+```
+bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -121,14 +134,16 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 <dd class="pd">历史记录范围的结束时间戳记。支持的格式为 `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`。缺省情况下，此时间戳记设置为当前时间。有关时间戳记格式的详细信息，请参阅 <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date and Time Formats standard</a>。
 </dl>
 
+
+
 **提示：**您还可以使用 **--json** 选项更好地显示原始 JSON 响应。
 
 # 相关链接
-{: #rellinks}
+{: rellinks}
 ## 常规
-{: #general}
+{: general}
 * [{{site.data.keyword.autoscaling}} 服务](../../../services/Auto-Scaling/index.html)
-* [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}
 
 

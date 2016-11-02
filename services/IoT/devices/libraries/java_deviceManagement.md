@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Java client library - managed devices
 {: #java_deviceManagement}
-Last updated: 02 Aug 2016
-{: .last-updated}
 
 ##Introduction
 {: #introduction}

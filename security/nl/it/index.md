@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2014, 2016
+  anni: 2014, 2016
 
  
 
@@ -15,7 +15,7 @@ copyright:
 
 # Sicurezza {{site.data.keyword.Bluemix_notm}}
 {: #security}
-*Ultimo aggiornamento: 22 giugno 2016*
+Ultimo aggiornamento: 22 luglio 2016
 {: .last-updated}
 
 Sviluppata con procedure di progettazione sicura, la piattaforma {{site.data.keyword.Bluemix}} offre diversi livelli di controlli di sicurezza tra
@@ -27,8 +27,7 @@ per lo sviluppo di applicazioni sicure.
 procedure quali, ad esempio, scansione del codice sorgente, scansione dinamica, modellazione dei rischi e test di penetrazione. {{site.data.keyword.Bluemix_notm}} segue il processo IBM PSIRT (Product Security Incident Response Team) per la gestione degli
 incidenti di sicurezza. Per i dettagli, consulta il sito [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window}.
 
-{{site.data.keyword.Bluemix_notm}} pubblico e privato utilizzano i servizi cloud IBM SoftLayer IaaS (Infrastructure-as-a-Service) e sfruttano appieno la sua architettura di sicurezza. Per le tue applicazioni e i tuoi dati, SoftLayer IaaS fornisce molteplici livelli di
-protezione che si sovrappongono tra di loro. Per {{site.data.keyword.Bluemix_notm}} locale, la sicurezza fisica è di tua competenza e fornisci l'infrastruttura
+{{site.data.keyword.Bluemix_notm}} pubblico e dedicato utilizzano i servizi cloud IBM SoftLayer IaaS (Infrastructure-as-a-Service) e si avvalgono appieno della sua architettura di sicurezza. Per le tue applicazioni e i tuoi dati, SoftLayer IaaS fornisce molteplici livelli di protezione che si sovrappongono tra di loro. Per {{site.data.keyword.Bluemix_notm}} locale, la sicurezza fisica è di tua competenza e fornisci l'infrastruttura
 ospitando {{site.data.keyword.Bluemix_notm}} locale nel tuo data center dietro un firewall aziendale. Inoltre, {{site.data.keyword.Bluemix_notm}} aggiunge funzionalità di sicurezza a livello
 PaaS (Platform as a Service) in diverse categorie: piattaforma, dati e applicazione.
 
@@ -83,16 +82,17 @@ Per {{site.data.keyword.Bluemix_notm}} dedicato e locale, l'autenticazione trami
 bilanciamento del carico
 Sono consentiti i seguenti
   metodi HTTP:
- * DELETE
- * GET
- * HEAD
- * OPTIONS
- * POST
- * PUT
- * TRACE
-
-Il timeout per inattività HTTP è fissato a 2 minuti.
-
+<ul>
+<li>DELETE</li>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+<li>POST</li>
+<li>PUT</li>
+<li>TRACE</li>
+</ul>
+Il timeout per inattività HTTP è fissato a 2 minuti.</dd>
+<dd>
 Le seguenti intestazioni sono compilate da DataPower:
 <dl>
 <dt>$wsis</dt>
@@ -121,11 +121,11 @@ e ripristino per garantire l'integrità e la disponibilità.
 
 <dl>
 <dt>Separazione degli ambienti</dt>
-<dd> Per {{site.data.keyword.Bluemix_notm}} pubblico, gli ambienti di sviluppo e di produzione vengono separati tra loro per migliorare la stabilità e la sicurezza
+<dd>Per {{site.data.keyword.Bluemix_notm}} pubblico, gli ambienti di sviluppo e di produzione vengono separati tra loro per migliorare la stabilità e la sicurezza
 dell'applicazione.</dd>
 
 <dt>Firewall</dt>
-<dd> I firewall vengono implementati per limitare l'accesso alla rete {{site.data.keyword.Bluemix_notm}}. Per {{site.data.keyword.Bluemix_notm}} locale, il tuo firewall aziendale separa il resto della tua rete dalla tua istanza {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd>I firewall vengono implementati per limitare l'accesso alla rete {{site.data.keyword.Bluemix_notm}}. Per {{site.data.keyword.Bluemix_notm}} locale, il tuo firewall aziendale separa il resto della tua rete dalla tua istanza {{site.data.keyword.Bluemix_notm}}.</dd>
 
 <dt>Protezione intrusioni</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} pubblico e dedicato abilitano la protezione dalle intrusioni per il rilevamento di minacce in modo che sia possibile risolverle. Le politiche di protezione intrusioni sono
@@ -160,7 +160,7 @@ monitorare i tentativi di accesso riusciti e non riusciti degli sviluppatori di 
 <dd>All'interno di {{site.data.keyword.Bluemix_notm}}, vengono seguite le linee guida di Separazione dei compiti per assegnare agli utenti dei privilegi di accesso granulari e per garantire che gli utenti dispongano soltanto dell'accesso richiesto per eseguire i propri lavori in base al principio del
 minimo privilegio.
 
-In ambienti {{site.data.keyword.Bluemix_notm}} dedicato e locale, gli amministratori assegnati possono gestire i ruoli e le autorizzazioni per l'utente {{site.data.keyword.Bluemix_notm}} nella propria organizzazione utilizzando la Console di gestione. Per i dettagli, vedi [Gestione di {{site.data.keyword.Bluemix_notm}} locale e dedicato](../admin/index.html#mng).
+Negli ambienti {{site.data.keyword.Bluemix_notm}} dedicato e locale, gli amministratori assegnati possono gestire i ruoli e le autorizzazioni per gli utenti {{site.data.keyword.Bluemix_notm}} nella propria organizzazione utilizzando la Console di gestione. Per i dettagli, vedi [Gestione di {{site.data.keyword.Bluemix_notm}} locale e dedicato](../admin/index.html#mng).
 </dd>
 </dl>
 
@@ -198,9 +198,8 @@ data-in-transit, data-at-rest e data-in-use.
 
 Quando pianifichi la sicurezza dei dati, è necessario considerare ciascun tipo di dati.
 
-La piattaforma {{site.data.keyword.Bluemix_notm}} protegge i data-in-transit proteggendo l'accesso dell'utente finale all'applicazione utilizzando SSL, per tutta la rete,
-finché i dati non raggiungono l'IBM DataPower Gateway al limite della rete interna {{site.data.keyword.Bluemix_notm}}. IBM
-DataPower Gateway funge da proxy inverso e fornisce la terminazione SSL.
+La piattaforma {{site.data.keyword.Bluemix_notm}} protegge i data-in-transit proteggendo l'accesso dell'utente finale all'applicazione utilizzando SSL, per tutta la rete finché i dati non raggiungono l'IBM DataPower Gateway al limite della rete interna {{site.data.keyword.Bluemix_notm}}. IBM
+DataPower Gateway funge da proxy inverso e fornisce la terminazione SSL. Da lì all'applicazione, IPSEC viene utilizzato per proteggere i dati mentre vengono trasmessi dall'IBM DataPower Gateway all'applicazione.
 
 Come sviluppatore della tua applicazione, sei responsabile della sicurezza sia dei data-in-use
 che dei data-at-rest. Puoi usufruire dei diversi servizi correlati ai dati disponibili nel catalogo {{site.data.keyword.Bluemix_notm}} per informazioni a tale riguardo.
@@ -214,7 +213,7 @@ protezione dei dati applicativi, per le tue applicazioni che vengono eseguite su
 
 Per proteggere le tue applicazioni puoi servirti delle funzionalità di sicurezza fornite da diversi servizi {{site.data.keyword.Bluemix_notm}}. Tutti i servizi {{site.data.keyword.Bluemix_notm}} prodotti da IBM seguono le procedure di sviluppo di IBM Secure Engineering.
 
-**Nota:** alcuni dei servizi qui descritti potrebbero non essere validi per le istanze Bluemix dedicato o locale.
+**Nota:** alcuni dei servizi qui descritti potrebbero non essere validi per le istanze {{site.data.keyword.Bluemix_notm}} dedicato o locale.
 
 ### Servizio SSO
 
@@ -289,7 +288,7 @@ Per gli *utenti dell'applicazione* {{site.data.keyword.Bluemix_notm}}, il **flus
  3. Tramite il router di rete.
  4. Raggiunge il runtime dell'applicazione nel DEA (Droplet Execution Agent).
 
-Lo {{site.data.keyword.Bluemix_notm}} *sviluppatore* segue due flussi principali, per l'accesso e per lo sviluppo e la distribuzione.
+Lo *sviluppatore* {{site.data.keyword.Bluemix_notm}} segue due flussi principali: per l'accesso e per lo sviluppo e la distribuzione.
  * Il **flusso di accesso degli sviluppatori** include quanto segue:
     * Per gli sviluppatori che accedono a {{site.data.keyword.Bluemix_notm}} pubblico, il flusso avviene come segue:
       1. Tramite il servizio IBM Single Sign On.

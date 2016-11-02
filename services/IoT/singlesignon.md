@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-05"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Configuring and Using {{site.data.keyword.ssoshort}}
-Last updated: 05 October 2016
-{: .last-updated}
 
 The {{site.data.keyword.ssofull}} service can be configured to support alternative user authentication providers for your {{site.data.keyword.iot_full}}. {{site.data.keyword.ssoshort}} supports SAML 2.0, IBM Cloud Directory, social providers (Facebook, LinkedIn, Google+), and Github.
 {: .shortdesc}
@@ -33,7 +32,7 @@ The {{site.data.keyword.ssoshort}} service cannot be bound directly to other ser
 2. Click the {{site.data.keyword.sdk4nodefull}} application from the {{site.data.keyword.Bluemix_notm}} dashboard and click **Bind a service or API**.
 3. Select the {{site.data.keyword.ssoshort}} service and click **Add**.
 4. The {{site.data.keyword.sdk4nodefull}} application must now be restaged.
-5. Click on the {{site.data.keyword.sdk4nodefull}} application from the {{site.data.keyword.Bluemix_notm}} dashboard.
+5. Click the {{site.data.keyword.sdk4nodefull}} application from the {{site.data.keyword.Bluemix_notm}} dashboard.
 6. Select the {{site.data.keyword.ssoshort}} service and click **Integrate**.
 7. Enter the Return-to-URL:
 `https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token` where `<orgid>` is your {{site.data.keyword.iot_short_notm}} organization ID.
@@ -42,7 +41,7 @@ The {{site.data.keyword.ssoshort}} service cannot be bound directly to other ser
 
 After binding and configuring the {{site.data.keyword.sdk4nodefull}} application and {{site.data.keyword.ssoshort}} service, the {{site.data.keyword.iot_short_notm}} must be configured. The {{site.data.keyword.iot_short_notm}} can be configured by using the {{site.data.keyword.iot_short_notm}} UI or by using the {{site.data.keyword.iot_short_notm}} API. The following steps must be taken before configuring using either the UI or the API:
 
-1. Click on the {{site.data.keyword.sdk4nodefull}} application from the {{site.data.keyword.Bluemix_notm}} dashboard.
+1. Click the {{site.data.keyword.sdk4nodefull}} application from the {{site.data.keyword.Bluemix_notm}} dashboard.
 2. Click **Environment Variables** from the navigation bar.
 3. Copy the displayed JSON to a temporary text file. The JSON should take the following format:
 ```

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  2016
 
 ---
 
@@ -11,13 +11,13 @@ copyright:
 # Utilisation de chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} public
 {: #toolchains-using}
 
-Dernière mise à jour : 13 septembre 2016
+*Dernière mise à jour : 12 août 2016*
 {: .last-updated}
 
 Vous pouvez utiliser une chaîne d'outils pour améliorer la productivité de votre travail quotidien de développement, de déploiement et de vos opérations. Après avoir configuré une chaîne d'outils, vous pouvez ajouter, supprimer ou configurer des intégrations d'outils et gérer l'accès à la chaîne d'outils.
 {: shortdesc}
 
-**Important** : Les chaînes d'outils sont disponibles uniquement dans la région sud des Etats-Unis. 
+**Important **: Cette fonction est expérimentale. Les chaînes d'outils peuvent être instables et faire l'objet de modifications entraînant leur incompatibilité avec des versions antérieures. Elles ne sont pas recommandées pour une utilisation dans des environnements de production. Les chaînes d'outils sont disponibles uniquement dans la région sud des Etats-Unis.
 
 ## Configuration d'une intégration d'outil
 {: #configuring_a_tool_integration}
@@ -61,7 +61,7 @@ Si vous supprimez une intégration d'outil de votre chaîne d'outils, la suppres
 ## Gestion des accès
 {: #managing_access}
 
-Vous pouvez accorder l'accès à une chaîne d'outils à des utilisateurs en les ajoutant à l'organisation (org) à laquelle la chaîne d'outils est associée. Chaque chaîne d'outils est associée à une organisation spécifique, et tout membre de cette organisation peut accéder aux chaînes d'outils associées. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) dans la barre de menus pour ouvrir le widget Compte et support et afficher l'organisation dans laquelle vous travaillez actuellement. Changez d'organisation pour accéder à un ensemble différent de chaînes d'outils.
+Vous pouvez accorder l'accès à une chaîne d'outils à des utilisateurs en les ajoutant à l'organisation (org) à laquelle la chaîne d'outils est associée. Chaque chaîne d'outils est associée à une organisation spécifique, et tout membre de cette organisation peut accéder aux chaînes d'outils associées. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) dans la barre de menu pour ouvrir le widget Compte et support et afficher l'organisation dans laquelle vous travaillez actuellement. Changez d'organisation pour accéder à un ensemble différent de chaînes d'outils.
 
 <!--CA: Commenting out the content on authentication for Interconnect since it applies to GitHub Enterprise. This content can be exposed again when GHE is supported for the Dedicated Beta 2.-->
 
@@ -88,7 +88,7 @@ To add a user: -->
 Vous pouvez supprimer une chaîne d'outils et spécifier les intégrations d'outils associées à supprimer. Lorsque vous supprimez une chaîne d'outils, la suppression est irréversible.
 
 1. Dans l'onglet DevOps, onglet **Chaînes d'outils**, cliquez sur la chaîne d'outils à supprimer puis cliquez sur **Gérer**. Vous pouvez également, depuis la page de présentation de l'application, vignette de distribution continue, cliquer sur **Afficher la chaîne d'outils** puis sur **Gérer**.
-1. Cliquez sur **Supprimer la chaîne d'outils**, examinez et modifiez éventuellement la liste des intégrations d'outils à supprimer. 
+1. Cliquez sur **Supprimer la chaîne d'outils**, examinez et modifiez éventuellement la liste des intégrations d'outils à supprimer.
 1. Confirmez la suppression en entrant le nom de la chaîne d'outils et en cliquant sur **Supprimer**.  
 
  **Conseil **: Lorsque vous supprimer une intégration d'outil GitHub, le référentiel GitHub associé n'est pas supprimé de GitHub. Vous devez supprimer manuellement le référentiel depuis GitHub.

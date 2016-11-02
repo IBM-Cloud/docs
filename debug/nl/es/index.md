@@ -139,13 +139,13 @@ SystemErr respectivamente.
 ### Depuración de cambios de código
 {: #debug_code_changes}
 
-Si realiza cambios de código en una app que ya está desplegada y en funcionamiento, los cambios no se reflejarán todavía en {{site.data.keyword.Bluemix_notm}} y puede depurar mediante los registros. Independientemente de que su app se esté ejecutando, puede comprobar los registros que se generan durante el despliegue o la ejecución de la app para determinar porqué no se ejecuta el código nuevo. 
+Si realiza cambios de código en una app que ya está desplegada y en funcionamiento, los cambios no se reflejarán todavía en {{site.data.keyword.Bluemix_notm}} y puede depurar mediante los registros. Independientemente de que su app se esté ejecutando, puede comprobar los registros que se generan durante el despliegue o la ejecución de la app para determinar porqué no se ejecuta el código nuevo.
 
-En función de la forma de desplegar el nuevo código, elija uno de los métodos siguientes para depurar los cambios de código:  
+En función de la forma de desplegar el nuevo código, elija uno de los métodos siguientes para depurar los cambios de código: 
 
   * Para el nuevo código desplegado desde la línea de mandatos, compruebe la salida del mandato *cf push*. Además, puede utilizar el mandato *cf logs* para encontrar más pistas para resolver el problema. Para obtener más información sobre cómo utilizar el mandato *cf logs*, consulte [Visualización de registros desde la interfaz de línea de mandatos](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}. 
 
-  * Para el nuevo código que se despliega desde una interfaz de usuario, como la de {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline o Travis-CI, puede comprobar los registros de la interfaz. Por ejemplo, si despliega el nuevo código desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, puede ir a Panel de control, localizar la app y ver los registros para buscar claves sobre el problema. Para obtener más información sobre cómo visualizar registros desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización de registros desde el panel de control de Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
+  * Para el nuevo código que se despliega desde una interfaz de usuario, como la de {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline o Travis-CI, puede comprobar los registros de la interfaz. Por ejemplo, si despliega el nuevo código desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, puede ir a Panel de control, localizar la app y ver los registros para buscar claves sobre el problema.   Para obtener más información sobre cómo visualizar registros desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización de registros desde el panel de control de Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
  
 
 # rellinks

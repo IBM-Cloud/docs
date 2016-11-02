@@ -17,7 +17,7 @@ copyright:
 # (En desuso) CLI en modalidad de desarrollo
 {: #devmodecli}
 
-*Última actualización: 12 de mayo de 2016*
+*Última actualización: 23 de junio de 2016*
 {: .last-updated}
 
 **Esta CLI ha quedado en desuso:** En lugar de utilizar la CLI del modo de desarrollo (dev_mode), utilice IBM Eclipse Tools for Bluemix o DevOps Web IDE. Puede seguir utilizando la CLI dev_mode hasta el 30 de junio 2016.
@@ -35,9 +35,9 @@ Puede llevar a cabo las siguientes tareas con la CLI de dev_mode:
 **Requisito previo:** Antes de empezar, instale la CLI de Cloud Foundry. Consulte [Empiece a escribir código con la interfaz de línea de mandatos de Cloud Foundry](https://github.com/cloudfoundry/cli) para obtener detalles. 
 
 
-Utilice uno de los siguientes métodos para instalar la herramienta de línea de mandatos dev_mode.
+Utilice uno de los siguientes métodos para instalar la herramienta de línea de mandatos dev_mode:
 - Instale localmente.
-  1. Descargue el plug-in de dev_mode para su plataforma desde el [Repositorio de plug-ins de CLI de IBM Bluemix](http://plugins.{DomainName}).
+  1. Descargue el plug-in de dev_mode para su plataforma desde el [Repositorio de plug-ins de CLI de IBM Bluemix](http://plugins.ng.bluemix.net).
   2. Vaya a la carpeta en la que se ha guardado el complemento dev_mode e instale dicho complemento utilizando el mandato cf install-plugin. Por ejemplo: 
   
         ```
@@ -64,7 +64,8 @@ Utilice uno de los siguientes métodos para instalar la herramienta de línea de
         ```
 
 ## Visualización de mandatos dev_mode
-**Para visualizar todos los mandatos de CLI dev_mode, utilice el siguiente mandato:**
+
+Para visualizar todos los mandatos de CLI dev_mode, utilice el siguiente mandato:
 
 ```
 cf plugins

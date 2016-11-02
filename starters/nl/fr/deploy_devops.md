@@ -43,7 +43,7 @@ Si vous construisez une application Node.js, vous pouvez utiliser {{site.data.ke
 
 Pour en savoir plus sur {{site.data.keyword.Bluemix_notm}} Live Sync, voir [{{site.data.keyword.Bluemix_notm}} Live Sync](../develop/bluemixlive.html). Pour plus de détails sur les commandes, voir la [documentation sur l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} Live Sync](../cli/reference/bl/index.html). Pour utiliser {{site.data.keyword.Bluemix_notm}} Live Sync avec l'environnement de développement intégré Web, voir [Live Edit](../develop/bluemixlive.html).  
 
-Avant de commencer, téléchargez et installez la ligne de commande bl de {{site.data.keyword.Bluemix_notm}} Live Sync.  
+Avant de commencer, téléchargez et installez la ligne de commande bl de {{site.data.keyword.Bluemix_notm}} Live Sync. 
 
 **Important :** l'outil de ligne de commande bl est disponible uniquement pour Windows 7 et 8 et Mac OS X version 10.9 ou ultérieure.
 

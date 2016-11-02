@@ -50,14 +50,17 @@ dans un espace de nom, répertorier les entités qui se trouvent dans un package
   {: pre}
   ```
   packages
-  /whisk.system/alarms                                              shared
-  /whisk.system/cloudant                                            shared
-  /whisk.system/github                                              shared
-  /whisk.system/samples                                             shared
-  /whisk.system/slack                                               shared
-  /whisk.system/util                                                shared
-  /whisk.system/watson                                              shared
-  /whisk.system/weather                                             shared
+  /whisk.system/cloudant                                                 shared
+  /whisk.system/alarms                                                   shared
+  /whisk.system/watson                                                   shared
+  /whisk.system/websocket                                                shared
+  /whisk.system/weather                                                  shared
+  /whisk.system/system                                                   shared
+  /whisk.system/utils                                                    shared
+  /whisk.system/slack                                                    shared
+  /whisk.system/samples                                                  shared
+  /whisk.system/github                                                   shared
+  /whisk.system/pushnotifications                                        shared
   ```
   {: screen}
 
@@ -181,11 +184,11 @@ défaut.
   ```
   {: pre}
   ```
-  package /monEspaceNom/valhallaSamples
-   action /monEspaceNom/valhallaSamples/greeting: Print a friendly greeting
-   action /monEspaceNom/valhallaSamples/wordCount: Count words in a string
-   action /monEspaceNom/valhallaSamples/helloWorld: Print to the console
-   action /monEspaceNom/valhallaSamples/echo: Returns the input arguments, unchanged
+  package /myNamespace/valhallaSamples
+   action /myNamespace/valhallaSamples/greeting: Returns a friendly greeting
+   action /myNamespace/valhallaSamples/wordCount: Count words in a string
+   action /myNamespace/valhallaSamples/helloWorld: Demonstrates logging facilities
+   action /myNamespace/valhallaSamples/curl: Curl a host url
   ```
   {: screen}
 

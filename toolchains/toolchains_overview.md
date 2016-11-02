@@ -11,7 +11,7 @@ copyright:
 # Getting started with toolchains (Beta)
 {: #toolchains_getting_started}
 
-Last updated: 7 October 2016
+Last updated: 27 October 2016
 {: .last-updated}  
 
 Toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
@@ -30,7 +30,7 @@ Each toolchain is associated with a specific organization (org) and any user tha
 ###Creating a toolchain from a template   
 {: #creating_a_toolchain_from_a_template}
 
-You can use a template as a starting point to create a toolchain that includes a specific set of tool integrations.
+You can use a template as a starting point to [create a toolchain (Link opens in a new window)](https://console.ng.bluemix.net/devops/create){: new_window} that includes a specific set of tool integrations. Learn more about how to use the templates from the [IBM Bluemix Garage Method (Link opens in a new window)](https://www.ibm.com/devops/method/category/tools){:new_window}.
 
 1. If you are creating your first toolchain, make sure that toolchains are enabled in your org:
    1. Open the DevOps dashboard and click the **Toolchains** page.
@@ -127,9 +127,9 @@ You can create a toolchain from your app. The toolchain can support continuous d
 ##Viewing a toolchain
 {: #viewing_a_toolchain}
 
-After you configure the toolchain and its tool integrations, you can view a visual representation of the toolchain on the Tool Integrations page.
+After you configure the toolchain and its tool integrations, you can view a visual representation of the toolchain.
 
-* If you use {{site.data.keyword.Bluemix_notm}} Public, on the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Tool Integrations page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Tool Integrations**. 
+* If you use {{site.data.keyword.Bluemix_notm}} Public, on the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. 
    
 * If you use {{site.data.keyword.Bluemix_notm}} Dedicated, on the Dashboard, on the **DEVOPS** tab, click the toolchain to open its Tool Integrations page. Alternatively, in the upper-right corner of the app's Overview page, click **View Toolchain**.
 

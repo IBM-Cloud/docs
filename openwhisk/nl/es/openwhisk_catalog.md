@@ -16,9 +16,9 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Uso de servicios habilitados para {{site.data.keyword.openwhisk_short}} 
+# Utilización de servicios de {{site.data.keyword.Bluemix_notm}} habilitados para {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_ecosystem}
-*Última actualización: 28 de marzo de 2016*
+Última actualización: 9 de septiembre de 2016
 {: .last-updated}
 
 En {{site.data.keyword.openwhisk}}, un catálogo de paquetes le ofrece una forma rápida de mejorar sus apps con prestaciones útiles, y para acceder a servicios externos en el ecosistema. Algunos de los servicios externos que están habilitados para {{site.data.keyword.openwhisk_short}} son Cloudant, The Weather Company, Slack y GitHub.
@@ -38,11 +38,12 @@ El paquete `/whisk.system/cloudant` le permite trabajar con una base de datos Cl
 | `/whisk.system/cloudant` | paquete | {{site.data.keyword.Bluemix_notm}}ServiceName, host, username, password, dbname, includeDoc, overwrite | Trabajar con una base de datos Cloudant |
 | `/whisk.system/cloudant/read` | acción | dbname, includeDoc, id | Leer un documento de la base de datos |
 | `/whisk.system/cloudant/write` | acción | dbname, overwrite, doc | Escribir un documento en la base de datos |
-| `/whisk.system/cloudant/changes` | feed | dbname, includeDoc | Activar sucesos desencadenantes para cambios en la BD |
+| `/whisk.system/cloudant/changes` | feed | dbname, includeDoc, maxTriggers | Activar sucesos desencadenantes para cambios en la BD |
 
 En los temas siguientes se muestra la configuración de una base de datos Cloudant, la configuración de un paquete asociado y el uso de acciones e información de entrada (feeds) en el paquete `/whisk.system/cloudant`.
 
 ### Configuración de una base de datos Cloudant en {{site.data.keyword.Bluemix_notm}}
+{: #openwhisk_catalog_cloudant_in}
 
 Si utiliza {{site.data.keyword.openwhisk_short}} desde {{site.data.keyword.Bluemix}}, {{site.data.keyword.openwhisk_short}} crea automáticamente enlaces de paquete para sus instancias de servicio
 Cloudant de {{site.data.keyword.Bluemix_notm}}. Si no utiliza {{site.data.keyword.openwhisk_short}} y Cloudant desde
@@ -72,7 +73,7 @@ la instancia de servicio de Cloudant que ha creado.
   ```
   {: pre}
   ```
-  enlaces creados:
+  created bindings:
   {{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1
   ```
   {: screen}
@@ -82,12 +83,12 @@ la instancia de servicio de Cloudant que ha creado.
   ```
   {: pre}
   ```
-  paquetes
+  packages
   /my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1 private binding
   ```
   {: screen}
 
-  Debe ver el nombre completo del enlace de paquete que corresponde a su instancia de servicio Cloudant de
+  Verá el nombre completo del enlace de paquete que corresponde a su instancia de servicio Cloudant de
 {{site.data.keyword.Bluemix_notm}}.
 
 4. Compruebe si el enlace de paquete creado anteriormente está configurado con su host de instancia de servicio de
@@ -119,6 +120,7 @@ la instancia de servicio de Cloudant que ha creado.
   {: screen}
 
 ### Configuración de una base de datos Cloudant fuera de {{site.data.keyword.Bluemix_notm}}
+{: #openwhisk_catalog_cloudant_outside}
 
 Si no utiliza {{site.data.keyword.openwhisk_short}} en {{site.data.keyword.Bluemix_notm}} o si quiere configurar
 su base de datos Cloudant fuera de {{site.data.keyword.Bluemix_notm}}, debe crear manualmente un enlace de paquete
@@ -145,9 +147,15 @@ para su cuenta Cloudant. Necesita el nombre de host, nombre de usuario y contras
 
 
 ### Atender a cambios en una base de datos Cloudant
+{: #openwhisk_catalog_cloudant_listen}
 
 Puede utilizar la información de entrada `changes` para configurar un servicio para que active un desencadenante
-para cada cambio de su base de datos Cloudant.
+para cada cambio de su base de datos Cloudant. Los parámetros son según se indica a continuación:
+
+- `dbname`: nombre de la base de datos Cloudant.
+- `includeDoc`: si se
+establece en true, cada suceso desencadenante que se activa incluye el documento Cloudant modificado. 
+- `maxTriggers`: dejar de activar desencadenantes cuando se alcanza este límite. El valor predeterminado es 1000. Puede establecerlo en un máximo de 10.000. Si intenta establecerlo en más de 10.000, se rechazará la solicitud.
 
 1. Crear un desencadenante con la información de entrada `changes` en el enlace de paquete que ha
 creado anteriormente. Asegúrese de sustituir
@@ -178,7 +186,7 @@ en una base de datos Cloudant. Probar los siguientes pasos de lectura y escritur
 
 Ahora puede crear reglas y asociarlas a acciones para reaccionar a actualizaciones de documento.
 
-El contenido de los eventos generados depende del valor del parámetro `includeDoc` al crear el activador. Si se
+El contenido de los eventos generados depende del valor del parámetro `includeDoc` al crear el desencadenante. Si el parámetro se
 establece en true, cada suceso desencadenante que se activa incluye el documento Cloudant modificado. Por ejemplo, pensemos en el
 documento modificado siguiente:
 
@@ -216,6 +224,7 @@ La representación JSON del suceso desencadenante es según se indica a continua
 
 
 ### Escritura en una base de datos Cloudant
+{: #openwhisk_catalog_cloudant_write}
 
 Puede utilizar una acción para almacenar un documento en una base de datos Cloudant llamada `testdb`. Asegúrese de que
 esta base de datos exista en su cuenta Cloudant.
@@ -224,11 +233,11 @@ esta base de datos exista en su cuenta Cloudant.
 `/myNamespace/myCloudant` por el nombre de paquete.
 
   ```
-  wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
   ```
   {: pre}
   ```
-  ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
+  ok: invoked /myNamespace/myCloudant/write with id 62bf696b38464fd1bcaff216a68b8287
   {
     "id": "heisenberg",
     "ok": true,
@@ -243,6 +252,7 @@ esta base de datos exista en su cuenta Cloudant.
 
 
 ### Leer de una base de datos Cloudant
+{: #openwhisk_catalog_cloudant_read}
 
 Puede utilizar una acción para obtener un documento de una base de datos Cloudant llamada `testdb`. Asegúrese de que
 esta base de datos exista en su cuenta Cloudant.
@@ -251,7 +261,7 @@ esta base de datos exista en su cuenta Cloudant.
 `/myNamespace/myCloudant` por el nombre de paquete.
 
   ```
-  wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
+  wsk action invoke /myNamespace/myCloudant/read --blocking --result --param dbname testdb --param id heisenberg
   ```
   {: pre}
   ```
@@ -279,6 +289,7 @@ El paquete incluye la información de entrada siguiente.
 
 
 ### Activación periódica de un suceso desencadenante
+{: #openwhisk_catalog_alarm_fire}
 
 La información de entrada `/whisk.system/alarms/alarm` configura un servicio de alarma para activar un suceso desencadenante
 con una frecuencia especificada. Los parámetros son según se indica a continuación:
@@ -294,7 +305,7 @@ secuencia de seis campos separados por espacios: `X X X X X X `. Para obtener m�
 - `trigger_payload`: el valor de este parámetro pasa a ser el contenido del desencadenante cada vez que se activa
 el desencadenante.
 
-- `maxTriggers`: dejar de activar desencadenantes cuando se alcanza este límite. El valor predeterminado es 1000.
+- `maxTriggers`: dejar de activar desencadenantes cuando se alcanza este límite. El valor predeterminado es 1000. Puede establecerlo en un máximo de 10.000. Si intenta establecerlo en más de 10.000, se rechazará la solicitud.
 
 A continuación se muestra un ejemplo de la creación de un desencadenante que se activará una vez cada 20 segundos con
 los valores `name` y `place` en el suceso desencadenante.
@@ -311,27 +322,28 @@ cada suceso desencadenante tendrá los parámetros `name=Odin` y `place=Asgard`.
 ## Uso del paquete Weather
 {: #openwhisk_catalog_weather}
 
-El paquete `/whisk.system/weather` ofrece un método muy práctico para invocar la API de IBM Weather Insights. 
+El paquete `/whisk.system/weather` ofrece una forma cómoda de invocar la API de Weather Company Data para IBM Bluemix.
 
 El paquete incluye la acción siguiente.
 
 | Entidad | Tipo | Parámetros | Descripción |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | paquete | apiKey | Servicios de la API de IBM Weather Insights  |
-| `/whisk.system/weather/forecast` | acción | apiKey, latitude, longitude, timePeriod | Previsión para el periodo de tiempo indicado|
+| `/whisk.system/weather` | paquete | usuario, contraseña | Servicios de la API de Weather Company Data para IBM Bluemix  |
+| `/whisk.system/weather/forecast` | acción | latitude, longitude, timePeriod | Previsión para el periodo de tiempo indicado|
 
-Aunque no es obligatorio, se recomienda crear un enlace de paquete con el valor `apiKey`. Así, no necesita especificar
-la clave cada vez que invoque las acciones del paquete.
+Se recomienda la creación de un enlace de paquete con los valores de `username` and `password`. Así, no necesita especificar las credenciales cada vez que invoque las acciones del paquete.
 
 ### Obtención de la previsión meteorológica para una ubicación
+{: #openwhisk_catalog_weather_forecast}
 
 La acción `/whisk.system/weather/forecast` devuelve una previsión meteorológica para un lugar,
 invocando la API de The Weather Company. Los parámetros son según se indica a continuación:
 
-- `apiKey`: una clave de API para The Weather Company que tiene autorización para invocar la API de previsión meteorológica 
-- `latitude`: la coordenada de latitud de la ubicación
-- `longitude`: la coordenada de longitud de la ubicación
-- `timeperiod`: periodo de tiempo de la previsión. Las opciones válidas son '10day'(valor predeterminado)devuelve una previsión por días para 10 días; '24hour' devuelve una previsión por horas para dos días; 'current' devuelve las condiciones meteorológicas actuales; 'timeseries' devuelve las observaciones actuales y hasta 24 horas de desviaciones de las últimas observaciones, desde la fecha y hora actuales.  
+- `username`: nombre de usuario de The Weather Company Data para IBM Bluemix que tiene autorización para invocar la API de previsión meteorológica.
+- `password`: contraseña de The Weather Company Data para IBM Bluemix que tiene autorización para invocar la API de previsión meteorológica. 
+- `latitude`: la coordenada de latitud de la ubicación.
+- `longitude`: la coordenada de longitud de la ubicación.
+- `timeperiod`: periodo de tiempo de la previsión. Las opciones válidas son '10day' - (predeterminada) Devuelve una previsión diaria para 10 días, '48hour' - Devuelve una previsión cada hora para 2 días, 'current' - Devuelve las condiciones meteorológicas actuales, 'timeseries' - Devuelve ambas observaciones actuales y observaciones pasadas para un máximo de 24 horas a partir de la fecha y hora actuales.
 
 
 A continuación se muestra un ejemplo de la creación de un enlace de paquete y luego la obtención de una previsión a 10 días.
@@ -339,7 +351,7 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete y 
 1. Crear un enlace de paquete con su clave de API.
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
+  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
   ```
   {: pre}
 
@@ -390,17 +402,17 @@ El paquete incluye las acciones siguientes.
 | `/whisk.system/watson/speechToText` | acción | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertir audi en texto |
 | `/whisk.system/watson/textToSpeech` | acción | payload, voice, accept, encoding, username, password | Convertir texto en audio |
 
-Aunque no es obligatorio, se recomienda crear un enlace de paquete con los valores `username` and `password`. Así, no necesita especificar
-estas credenciales cada vez que invoque las acciones del paquete.
+Se recomienda la creación de un enlace de paquete con los valores de `username` and `password`. Así, no necesita especificar estas credenciales cada vez que invoque las acciones del paquete.
 
 ### Traducción de texto
+{: #openwhisk_catalog_watson_translate}
 
 La acción `/whisk.system/watson/translate` traduce texto de un idioma a otro. Los parámetros son según se indica a continuación:
 
-- `username`: nombre de usuario de la API de Watson
-- `password`: contraseña de la API de Watson
-- `translateParam`: el parámetro de entrada a traducir. Por ejemplo, si es `translateParam=payload`, el valor del parámetro `payload` que se pasa a la acción, se traduce
-- `translateFrom`: un código de dos dígitos del lenguaje origen
+- `username`: el nombre de usuario de la API de Watson.
+- `password`: contraseña de la API de Watson.
+- `translateParam`: el parámetro de entrada que indica el texto a traducir. Por ejemplo, si es `translateParam=payload`, el valor del parámetro `payload` que se pasa a la acción, se traduce.
+- ` translateFrom`: un código de dos dígitos del lenguaje origen.
 - `translateTo`: un código de dos dígitos del idioma de destino.
 
 A continuación se muestra un ejemplo de la creación de un enlace de paquete y la traducción de algún texto.
@@ -428,11 +440,12 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete y 
 
 
 ### Identificación del idioma de un texto
+{: #openwhisk_catalog_watson_identifylang}
 
 La acción `/whisk.system/watson/languageId` identifica el idioma de un texto. Los parámetros son según se indica a continuación:
 
-- `username`: nombre de usuario de la API de Watson
-- `password`: contraseña de la API de Watson
+- `username`: el nombre de usuario de la API de Watson.
+- `password`: contraseña de la API de Watson.
 - `payload`: el texto a identificar.
 
 A continuación se muestra un ejemplo de la creación de un enlace de paquete y la identificación del idioma de un texto.
@@ -461,17 +474,18 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete y 
 
 
 ### Conversión de texto a habla
+{: #openwhisk_catalog_watson_texttospeech}
 
 La acción `/whisk.system/watson/textToSpeech` convierte texto en un texto hablado. Los parámetros son según se indica a continuación:
 
-- `username`: nombre de usuario de la API de Watson
-- `password`: contraseña de la API de Watson
-- `payload`: texto que se debe convertir en habla. 
-- `voice`: voz de la persona que habla. 
-- `accept`: formato del archivo de audio. 
-- `encoding`: codificación de los datos binarios del habla. 
+- `username`: el nombre de usuario de la API de Watson.
+- `password`: contraseña de la API de Watson.
+- `payload`: texto que se debe convertir en habla.
+- `voice`: voz de la persona que habla.
+- `accept`: formato del archivo de audio.
+- `encoding`: codificación de los datos binarios del habla.
 
-A continuación se muestra un ejemplo de cómo crear un enlace de paquete y convertir texto en habla. 
+A continuación se muestra un ejemplo de cómo crear un enlace de paquete y convertir texto en habla.
 
 1. Crear un enlace de paquete con sus credenciales de Watson.
 
@@ -480,7 +494,7 @@ A continuación se muestra un ejemplo de cómo crear un enlace de paquete y conv
   ```
   {: pre}
 
-2. Invoque la acción `textToSpeech` en el enlace del paquete para convertir el texto. 
+2. Invoque la acción `textToSpeech` en el enlace del paquete para convertir el texto.
 
   ```
   wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
@@ -495,45 +509,49 @@ A continuación se muestra un ejemplo de cómo crear un enlace de paquete y conv
 
 
 ### Conversión de habla a texto
+{: #openwhisk_catalog_watson_speechtotext}
 
-La acción `/whisk.system/watson/speechToText` conivierte el audio en texto. Los parámetros son según se indica a continuación:
+La acción `/whisk.system/watson/speechToText` convierte el audio en texto. Los parámetros son según se indica a continuación:
 
-- `username`: nombre de usuario de la API de Watson
-- `password`: contraseña de la API de Watson
-- `payload`: datos binarios codificados del habla para convertir en texto. 
-- `content_type`: tipo MIME del audio. 
-- `encoding`: codificación de los datos binarios del habla. 
-- `continuous`: indica si se devuelven varios resultados finales que representan frases consecutivas separadas por pausas prolongadas. 
-- `inactivity_timeout`: tiempo, en segundos, después del cual, si solo se detecta silencio en el audio enviado, la conexión se cierra. 
-- `interim_results`: indica si el servicio debe devolver resultados temporales. 
-- `keywords`: lista de palabras clave para detectar en el audio. 
-- `keywords_threshold`: valor de confianza que se encuentra en el límite inferior para detectar una palabra clave. 
-- `max_alternatives`: número máximo de transcripciones alternativas que deben devolverse. 
-- `model`: identificador del modelo que debe utilizarse para la solicitud de reconocimiento. 
-- `timestamps`: indica si se devuelve la alineación de tiempo para cada palabra. 
-- `watson-token`: proporciona un elemento de autenticación para el servicio como alternativa para proporcionar credenciales del servicio. 
-- `word_alternatives_threshold`: valor de confianza que se encuentra en el límite inferior para identificar una hipótesis cmo posible alternativa de palabra. 
+- `username`: el nombre de usuario de la API de Watson.
+- `password`: contraseña de la API de Watson.
+- `payload`: datos binarios codificados del habla para convertir en texto.
+- `content_type`: tipo MIME del audio.
+- `encoding`: codificación de los datos binarios del habla.
+- `continuous`: indica si se devuelven varios resultados finales que representan frases consecutivas separadas por pausas prolongadas.
+- `inactivity_timeout`: tiempo, en segundos, después del cual, si solo se detecta silencio en el audio enviado, la conexión se cierra.
+- `interim_results`: indica si el servicio debe devolver resultados temporales.
+- `keywords`: lista de palabras clave para detectar en el audio.
+- `keywords_threshold`: valor de confianza que se encuentra en el límite inferior para detectar una palabra clave.
+- `max_alternatives`: número máximo de transcripciones alternativas que deben devolverse.
+- `model`: identificador del modelo que debe utilizarse para la solicitud de reconocimiento.
+- `timestamps`: indica si se devuelve la alineación de tiempo para cada palabra.
+- `watson-token`: proporciona un elemento de autenticación para el servicio como alternativa para proporcionar credenciales del servicio.
+- `word_alternatives_threshold`: valor de confianza que se encuentra en el límite inferior para identificar una hipótesis cmo posible alternativa de palabra.
 - `word_confidence`: indica si se devuelve para cada palabra una medida de confianza entre 0 y 1.
-- `X-Watson-Learning-Opt-Out`: indica si se debe renunciar a la recopilación de datos para la llamada. 
+- `X-Watson-Learning-Opt-Out`: indica si se debe renunciar a la recopilación de datos para la llamada.
  
-A continuación se muestra un ejemplo de cómo crear un enlace de paquete y convertir habla en texto. 
+A continuación se muestra un ejemplo de cómo crear un enlace de paquete y convertir habla en texto.
 
 1. Crear un enlace de paquete con sus credenciales de Watson.
 
   ```
-  $ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
   ```
+  {: pre}
 
-2. Invoque la acción `speechToText` en el enlace de paquete para convertir el audio codificado. 
+2. Invoque la acción `speechToText` en el enlace de paquete para convertir el audio codificado.
 
   ```
-  $ wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
   ```
+  {: pre}
   ```
   {
     "data": "Hello Watson"
   }
   ```
+  {: screen}
   
  
 ## Uso del paquete Slack
@@ -548,9 +566,10 @@ El paquete incluye las acciones siguientes:
 | `/whisk.system/slack` | paquete | url, channel, username | Interactuar con la API de Slack. |
 | `/whisk.system/slack/post` | acción | text, url, channel, username | Publicar un mensaje en un canal de Slack |
 
-Aunque no es obligatorio, se recomienda crear un enlace de paquete con los valores `username`, `url` y 'channel'. Con enlace, no necesita especificar los valores cada vez que invoca la acción en el paquete.
+Se recomienda la creación de un enlace de paquete con los valores de `username`, `url` y `channel`. Con enlace, no necesita especificar los valores cada vez que invoca la acción en el paquete.
 
 ### Publicación de un mensaje en un canal de Slack
+{: #openwhisk_catalog_slack_post}
 
 La acción `/whisk.system/slack/post` publica un mensaje en un canal de Slack especificado. Los parámetros son según se indica a continuación:
 
@@ -558,12 +577,13 @@ La acción `/whisk.system/slack/post` publica un mensaje en un canal de Slack es
 - `channel`: el canal de Slack en el que publicar el mensaje.
 - `username`: el nombre con el que publicar el mensaje.
 - `text`: un mensaje a publicar.
+- `token`: (opcional) una [señal de acceso](https://api.slack.com/tokens) de Slack. Consulte [a continuación](./openwhisk_catalog.html#openwhisk_catalog_slack_token) para obtener más información sobre el uso de señales de acceso de Slack.
 
 A continuación se muestra un ejemplo sobre la configuración de Slack, creación de un enlace de paquete y publicación de un mensaje en un canal.
 
 1. Configurar un [webhook de entrada](https://api.slack.com/incoming-webhooks) de Slack para su equipo.
 
-  Tras configurar Slack, debe obtener un URL de Webhook parecido a
+  Tras configurar Slack, obtendrá un URL de webhook parecido a
 `https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`. Lo necesitará en el paso siguiente.
 
 2. Crear un enlace de paquete con sus credenciales de Slack, el canal en el que quiera publicar y el nombre de usuario con el que publicar.
@@ -580,6 +600,10 @@ A continuación se muestra un ejemplo sobre la configuración de Slack, creació
   ```
   {: pre}
 
+### Uso de la API basada en señales de Slack
+{: #openwhisk_catalog_slack_token}
+
+Si lo prefiere, puede optar por utilizar la API basada en señales de Slack, en lugar de la API de webhook. Si elige esta opción, pase un parámetro de `señal` con la [señal de acceso](https://api.slack.com/tokens) de Slack correspondiente. A continuación, puede utilizar cualquiera de los [métodos de API de Slack](https://api.slack.com/methods) como parámetro `url`. Por ejemplo, para publicar un mensaje, utilizaría un valor de parámetro `url` de [slack.postMessage](https://api.slack.com/methods/chat.postMessage).
 
 ## Uso del paquete GitHub
 {: #openwhisk_catalog_github}
@@ -593,9 +617,10 @@ El paquete incluye la información de entrada siguiente:
 | `/whisk.system/github` | paquete | username, repository, accessToken | Interactuar con la API de GitHub |
 | `/whisk.system/github/webhook` | feed | events, username, repository, accessToken | Activar sucesos desencadenantes en caso de actividad de GitHub |
 
-Aunque no es obligatorio, se recomienda crear un enlace de paquete con los valores `username`, `repository` y `accessToken`.  Con enlace, no necesita especificar los valores cada vez que use la información de entrada en el paquete.
+Se recomienda la creación de un enlace de paquete con los valores de `username`, `repository` y `accessToken`.  Con enlace, no necesita especificar los valores cada vez que use la información de entrada en el paquete.
 
 ### Activación de un suceso desencadenante con actividad GitHub
+{: #openwhisk_catalog_github_fire}
 
 La información de entrada `/whisk.system/github/webhook` configura un servicio para activar un desencadenante
 cuando haya actividad en el repositorio de GitHub especificado. Los parámetros son según se indica a continuación:
@@ -604,7 +629,7 @@ cuando haya actividad en el repositorio de GitHub especificado. Los parámetros 
 - `repository`: el repositorio GitHub.
 - `accessToken`: su señal de acceso personal de GitHub. Cuando [cree su
 señal](https://github.com/settings/tokens), asegúrese de seleccionar los ámbitos repo:status y public_repo. Además, asegúrese de que no tiene webhooks ya definidos en su repositorio.
-- `events`: el [tipo de actividad GitHub](https://developer.github.com/v3/activity/events/types/) de interés.
+- `events`: el [tipo de suceso GitHub](https://developer.github.com/v3/activity/events/types/) de interés.
 
 A continuación se muestra un ejemplo de creación de un desencadenante que se activará cada vez que haya una nueva confirmación con un
 repositorio GitHub.
@@ -612,7 +637,6 @@ repositorio GitHub.
 1. Generar una [señal de acceso personal](https://github.com/settings/tokens) de GitHub.
 
   La señal de acceso se usará en el paso siguiente.
-
 
 2. Crear un enlace de paquete configurado para su repositorio de GitHub y con su señal de acceso.
 
@@ -628,3 +652,127 @@ repositorio GitHub.
   ```
   {: pre}
 
+Una confirmación en el repositorio GitHub utilizando `git push` provoca que el webhook active el desencadenante. Si existe una regla que coincide con el desencadenante, se invocará la acción asociada.
+La acción recibe la carga útil de webhook de GitHub como parámetro de entrada. Cada suceso de webhook de GitHub tiene un esquema JSON similar, pero es un objeto de carga útil exclusivo determinado por su tipo de suceso.
+Para obtener más información sobre el contenido de la carga útil, consulte la documentación de la API de
+[Carga útil y sucesos GitHub](https://developer.github.com/v3/activity/events/types/).
+
+
+## Uso del paquete Push
+{: #openwhisk_catalog_pushnotifications}
+
+El paquete `/whisk.system/pushnotifications` le permite trabajar con un servicio de envío por push. 
+
+El paquete incluye la información de entrada y acción siguiente:
+
+| Entidad | Tipo | Parámetros | Descripción |
+| --- | --- | --- | --- |
+| `/whisk.system/pushnotifications` | paquete | appId, appSecret  | Trabaje con el servicio Push |
+| `/whisk.system/pushnotifications/sendMessage` | acción | text, url, deviceIds, platforms, tagNames, apnsBadge, apnsCategory, apnsActionKeyTitle, apnsSound, apnsPayload, apnsType, gcmCollapseKey, gcmDelayWhileIdle, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive | Envíe notificaciones push a uno o más dispositivos especificados |
+| `/whisk.system/pushnotifications/webhook` | feed | events | Active sucesos desencadenantes en actividades de dispositivo (registro, anulación del registro, suscripción o anulación de suscripción de dispositivos) en el servicio Push |
+Se recomienda la creación de un enlace de paquete con los valores de `appId` and `appSecret`. Así, no necesita especificar estas credenciales cada vez que invoque las acciones del paquete.
+
+### Creación de un enlace de paquete Push
+{: #openwhisk_catalog_pushnotifications_create}
+
+Al crear un enlace de paquete de notificaciones push, debe especificar los parámetros siguientes:
+
+-  `appId`: GUID de app de Bluemix.
+-  `appSecret`: appSecret del servicio de notificaciones push de Bluemix.
+
+A continuación se muestra un ejemplo de la creación de un enlace de paquete.
+
+1. Cree una aplicación de Bluemix en el [Panel de control de Bluemix](http://console.ng.bluemix.net).
+
+2. Inicialice el servicio de notificación push y enlace el servicio con la aplicación de Bluemix
+
+3. Configure la [aplicación de notificación push](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
+
+  Asegúrese de recordar el `GUID de App` y el `Secreto de App` de la app de Bluemix que ha creado.
+
+
+4. Crear un enlace de paquete con `/whisk.system/pushnotifications`.
+
+  ```
+  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  ```
+  {: pre}
+
+5. Comprobar que el enlace de paquete existe.
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+
+  ```
+  packages
+  /myNamespace/myPush private binding
+  ```
+  {: screen}
+
+### Envío de notificaciones push
+{: #openwhisk_catalog_pushnotifications_send}
+
+La acción `/whisk.system/pushnotifications/sendMessage` envía notificaciones push a los dispositivos registrados. Los parámetros son según se indica a continuación:
+- `text`: el mensaje de notificación a mostrar al usuario. Por ejemplo: `-p text "Hi ,OpenWhisk send a notification"`.
+- `url`: un URL opcional que se puede enviar junto con la alerta. Por ejemplo: `-p url "https:\\www.w3.ibm.com"`.
+- `gcmPayload`: carga útil JSON personalizada que se enviará como parte del mensaje de notificación. Por ejemplo: `-p gcmPayload "{"hi":"hello"}"`
+- `gcmSound`: archivo de sonido (en el dispositivo) que se intentará reproducir cuando la notificación llegue al dispositivo.
+- `gcmCollapseKey`: este parámetro identifica un grupo de mensajes
+- `gcmDelayWhileIdle`: cuando este parámetro se establece en true, indica que el mensaje no se enviará hasta que el dispositivo esté activo.
+- `gcmPriority`: establece la prioridad del mensaje.
+- `gcmTimeToLive`: este parámetro especifica cuánto tiempo (en segundos) se conservará el mensaje en el almacenamiento GCM si el dispositivo está fuera de línea.
+- `apnsBadge`: número a mostrar como identificador del icono de aplicación.
+- `apnsCategory`: identificador de categoría a utilizar para las notificaciones push interactivas.
+- `apnsIosActionKey`: título de la clave de Acción.
+- `apnsPayload`: carga útil JSON personalizada que se enviará como parte del mensaje de notificación.
+- `apnsType`: ['DEFAULT', 'MIXED', 'SILENT'].
+- `apnsSound`: nombre del archivo de sonido del paquete de aplicación. El sonido de este archivo se reproduce como una alerta.
+
+A continuación se muestra un ejemplo de envío de una notificación push desde el paquete pushnotification.
+
+1. Enviar una notificación push utilizando la acción `sendMessage` del enlace de paquete que ha creado anteriormente. Asegúrese de sustituir `/myNamespace/myPush` por su nombre de paquete.
+
+  ```
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  ```
+  {: pre}
+
+  ```
+  {
+  "result": {
+  "pushResponse": "{"messageId":"11111H","message":{"message":{"alert":"this is my message","url":"http.google.com"},"settings":{"apns":{"sound":"default"},"gcm":{"sound":"default"},"target":{"deviceIds":["T1","T2"]}}}"
+  },
+      "status": "success",
+      "success": true
+  }
+  ```
+  {: screen}
+
+### Activación de un suceso desencadenante en la actividad Push
+{: #openwhisk_catalog_pushnotifications_fire}
+
+`/whisk.system/pushnotifications/webhook` configura el servicio Push para activar un desencadenante cuando hay una actividad de dispositivo tal como un registro / anulación de registro o una suscripción / anulación de suscripción de dispositivo en una aplicación especificada
+
+Los parámetros son según se indica a continuación:
+
+- `appId:` GUID de app de Bluemix.
+- `appSecret:` appSecret del servicio de notificaciones push de Bluemix.
+- `events:` los sucesos con soporte son `onDeviceRegister`, `onDeviceUnregister`, `onDeviceUpdate`, `onSubscribe`, `onUnsubscribe`. Para obtener notificaciones de todos los sucesos, utilice el carácter comodín `*`.
+
+A continuación se muestra un ejemplo de creación de un desencadenante que se activará cada vez que se registre un nuevo dispositivo con la aplicación del servicio de notificaciones push.
+
+1. Crear un enlace de paquete configurado para su servicio de notificaciones push con su appId y appSecret.
+
+  ```
+  wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
+  ```
+  {: pre}
+
+2. Crear un desencadenante para el tipo de suceso `onDeviceRegister` del servicio de notificaciones push utilizando su información de entrada de `myPush/webhook`.
+
+  ```
+  wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister
+  ```
+  {: pre}

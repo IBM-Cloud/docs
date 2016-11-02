@@ -18,7 +18,7 @@ copyright:
 # Interface de ligne de commande pour l'administration de {{site.data.keyword.Bluemix_notm}}
 {: #bluemixadmincli}
 
-Dernière mise à jour 17 août 2016
+Dernière mise à jour : 1 septembre 2016
 {: .last-updated}
 
 
@@ -47,12 +47,10 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;sous-domaine&gt;.bluemix.net
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;sous-domaine&gt;</dt>
-<dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.Bluemix_notm}}. Par exemple, <code>https://console.mycompany.bluemix.net/cli</code>.</dd>
+<dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.Bluemix_notm}}. Exemple : <code>https://console.masociété.bluemix.net/cli</code></dd>
 </dl>
 </li>
-<li>Pour installer le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :<br/><br/> <code>
-cf install-plugin bluemix-admin-cli -r BluemixAdmin
-</code>
+<li>Pour installer le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante : <br/><br/> <code> cf install-plugin BluemixAdminCLI -r BluemixAdmin</code>
 </li>
 </ol>
 
@@ -67,7 +65,11 @@ d'administration {{site.data.keyword.Bluemix_notm}}
 
 Vous pouvez utiliser le plug-in d'interface de ligne de commande d'administration
 {{site.data.keyword.Bluemix_notm}} pour ajouter ou retirer des utilisateurs, affecter des
-utilisateurs à des organisations ou annuler leur affectation, et effectuer d'autres tâches de gestion. Pour afficher la liste des commandes, exécutez la
+utilisateurs à des organisations ou annuler leur affectation, et effectuer d'autres tâches de gestion. Les caractères spéciaux tels que l'espace, le signe
+plus (+) et la perluète (&) ne sont pas admis lorsque vous créez des noms d'organisation, des noms d'espace et des groupes de sécurité
+d'application. Mélangez majuscules et minuscules ou utilisez des traits de soulignement pour créer des noms uniques. 
+
+Pour afficher la liste des commandes, exécutez la
 commande suivante :
 
 ```
@@ -91,7 +93,7 @@ cf ba api https://console.&lt;sous-domaine&gt;.bluemix.net
 <dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.Bluemix_notm}}.<br />
 </dd>
 </dl>
-<p>Vous trouverez l'adresse URL correcte dans la page Resources Information de la console d'administration. L'adresse URL est affichée dans la section API Information, dans la zone **API
+<p>Vous trouverez l'adresse URL correcte dans la page des informations sur les ressources de la console d'administration. L'adresse URL est affichée dans la section API Information, dans la zone **API
 URL**.</p>
 </li>
 <li>Connectez-vous à {{site.data.keyword.Bluemix_notm}} avec la commande suivante :<br/><br/>
@@ -103,15 +105,14 @@ cf login
 
 ### Ajout d'un utilisateur
 
-Vous pouvez ajouter un utilisateur à votre environnement {{site.data.keyword.Bluemix_notm}} depuis le registre d'utilisateurs pour votre environnement.
-Entrez la commande suivante :
+Vous pouvez ajouter un utilisateur à votre environnement {{site.data.keyword.Bluemix_notm}} depuis le registre d'utilisateurs pour votre environnement. Entrez la commande suivante :
 
 ```
 cf ba add-user <nom_utilisateur> <organisation>
 ```
 {: codeblock}
 
-**Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être le responsable de l'organisation ou vous devez disposez des droits**Admin** (l'alternative disponible est **Superutilisateur**) ou **Utilisateur** avec un accès **Ecriture**. 
+**Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être le responsable de l'organisation ou vous devez disposez des droits**Admin** (l'alternative disponible est **Superutilisateur**) ou **Utilisateur** avec un accès **Ecriture**.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
@@ -128,17 +129,33 @@ cf ba add-user <nom_utilisateur> <organisation>
 
 ### Recherche d'un utilisateur
 
-Vous pouvez rechercher un utilisateur. Entrez la commande suivante :
+Vous pouvez rechercher un utilisateur. Entrez la commande suivante en conjonction avec les paramètres de filtre de recherche facultatifs en fonction
+de vos besoins (name,
+permission, organization et role) :
 
 ```
-cf ba search-users <nom_utilisateur>
+cf ba search-users -name=<valeur_nom_utilisateur> -permission=<valeur_droit> -organization=<valeur_organisation>
+-role=<valeur_rôle>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
-<dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt class="pt dlterm">&lt;valeur_nom_utilisateur&gt;</dt>
+<dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}. </dd>
+<dt class="pt dlterm">&lt;valeur_droit&gt;</dt>
+<dd class="pd">Droit accordé à l'utilisateur. Exemple : Superutilisateur, Accès de base, Catalogue, Utilisateur et Rapports. Pour plus d'informations sur les droits pouvant être
+affectés aux utilisateurs, voir [Droits](../../../admin/index.html#permissions). Vous ne pouvez pas utiliser ce paramètre avec le
+paramètre organization dans une même requête.
+</dd>
+<dt class="pt dlterm">&lt;valeur_organisation&gt;</dt>
+<dd class="pd">Nom de l'organisation à laquelle appartient l'utilisateur. Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans une
+même requête.
+</dd>
+<dt class="pt dlterm">&lt;valeur_rôle&gt;</dt>
+<dd class="pd">Rôle de l'organisation affecté à l'utilisateur. Exemple : responsable, responsable de la facturation ou auditeur de l'organisation. Vous
+devez spécifier l'organisation avec ce paramètre. Pour plus d'informations sur les rôles, voir
+[Rôles utilisateur](../../../admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 
@@ -581,13 +598,13 @@ update-service-broker**.
 
 ### Utilisation de groupes de sécurité d'application
 
-Pour utiliser des groupes de sécurité d'application, vous devez être un administrateur avec accès complet pour l'environnement local ou dédié. Tous les utilisateurs de l'environnement peuvent répertorier les groupes de sécurité d'application disponibles pour l'organisation ciblée par la commande. En revanche, pour créer, mettre à jour ou lier des groupes de sécurité d'application, vous devez être un administrateur de l'environnement {{site.data.keyword.Bluemix_notm}}. 
+Pour utiliser des groupes de sécurité d'application, vous devez être un administrateur avec accès complet pour l'environnement local ou dédié. Tous les utilisateurs de l'environnement peuvent répertorier les groupes de sécurité d'application disponibles pour l'organisation ciblée par la commande. En revanche, pour créer, mettre à jour ou lier des groupes de sécurité d'application, vous devez être un administrateur de l'environnement {{site.data.keyword.Bluemix_notm}}.
 
-Les groupes de sécurité d'application fonctionnent comme des pare-feu virtuels qui contrôlent le trafic sortant des applications de votre environnement {{site.data.keyword.Bluemix_notm}}. Chaque groupe de sécurité d'application comprend une liste de règles autorisant un trafic et des communications spécifiques vers et depuis le réseau externe. Vous pouvez lier un ou plusieurs groupes de sécurité d'application à un ensemble de groupes donné, par exemple, un ensemble de groupes utilisé pour l'application d'un accès global, ou vous pouvez effectuer une liaison à des espaces d'une organisation dans votre environnement {{site.data.keyword.Bluemix_notm}}. 
+Les groupes de sécurité d'application fonctionnent comme des pare-feu virtuels qui contrôlent le trafic sortant des applications de votre environnement {{site.data.keyword.Bluemix_notm}}. Chaque groupe de sécurité d'application comprend une liste de règles autorisant un trafic et des communications spécifiques vers et depuis le réseau externe. Vous pouvez lier un ou plusieurs groupes de sécurité d'application à un ensemble de groupes donné, par exemple, un ensemble de groupes utilisé pour l'application d'un accès global, ou vous pouvez effectuer une liaison à des espaces d'une organisation dans votre environnement {{site.data.keyword.Bluemix_notm}}.
 
 A l'origine, {{site.data.keyword.Bluemix_notm}} est configuré avec un accès global restreint au réseau externe. Deux groupes de sécurité créés par IBM, `public_networks` et `dns`, permettent un accès global au réseau externe lorsque vous liez ces deux groupes aux ensembles de groupes de sécurité Cloud Foundry. Les deux ensembles de groupes de sécurité Cloud Foundry qui sont utilisés pour appliquer un accès global sont **Default Staging** et **Default Running**. Ces ensembles de groupes appliquent les règles autorisant le trafic vers toutes les applications en cours d'exécution ou toutes les applications en cours de constitution. Si vous ne souhaitez pas établir de liaison à ces deux ensembles de groupes de sécurité, vous pouvez annuler la liaison à ces ensembles de groupes Cloud Foundry, puis lier le groupe de sécurité à un espace donné. Pour plus d'informations, voir [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**Remarque** : les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry. 
+**Remarque** : les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry.
 
 #### Recensement, création, mise à jour et suppression des groupes de sécurité
 
@@ -604,7 +621,6 @@ cf ba security-groups
 
 * Vous pouvez afficher les détails d'un groupe de sécurité donné en entrant la commande suivante :
 
-
 ```
 cf ba security-groups <groupe-sécurité>
 ```
@@ -616,11 +632,10 @@ cf ba security-groups <groupe-sécurité>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba sg** comme alias pour le nom de commande plus long
-**ba security-groups** avec le paramètre `security-group`. 
+**ba security-groups** avec le paramètre `security-group`.
 
 
-* Vous pouvez créer un groupe de sécurité en entrant la commande ci-après.
-Le préfixe `adminconsole_` est ajouté au nom de chaque groupe de sécurité que vous créez afin de le distinguer des groupes de sécurité créés par IBM. 
+* Vous pouvez créer un groupe de sécurité en entrant la commande ci-après. Le préfixe `adminconsole_` est ajouté au nom de chaque groupe de sécurité que vous créez afin de le distinguer des groupes de sécurité créés par IBM.
 
 ```
 cf ba create-security-group <groupe-sécurité> <chemin-vers-fichier-règles>
@@ -673,7 +688,6 @@ Pour plus d'informations sur la liaison et l'annulation de liaison des groupes d
 
 * Vous pouvez établir une liaison à l'ensemble de groupes de sécurité Default Staging en entrant la commande suivante :
 
-
 ```
 cf ba bind-staging-security-group <groupe-sécurité>
 ```
@@ -687,7 +701,6 @@ cf ba bind-staging-security-group <groupe-sécurité>
 **Astuce :** vous pouvez aussi utiliser **ba bssg** comme alias pour le nom de commande plus long **ba bind-staging-security-group**.
 
 * Vous pouvez établir une liaison à l'ensemble de groupes de sécurité Default Running en entrant la commande suivante :
-
 
 ```
 cf ba bind-running-security-group <groupe-sécurité>
@@ -703,7 +716,6 @@ cf ba bind-running-security-group <groupe-sécurité>
 
 * Vous pouvez annuler la liaison à un ensemble de groupes de sécurité Default Staging en entrant la commande suivante :
 
-
 ```
 cf ba cf ba unbind-staging-security-group <groupe-sécurité>
 ```
@@ -717,7 +729,6 @@ cf ba cf ba unbind-staging-security-group <groupe-sécurité>
 **Astuce :** vous pouvez aussi utiliser **ba ussg** comme alias pour le nom de commande plus long **ba unbind-staging-security-group**.
 
 * Vous pouvez annuler la liaison à un ensemble de groupes de sécurité Default Running en entrant la commande suivante :
-
 
 ```
 cf ba unbind-running-security-group <groupe-sécurité>

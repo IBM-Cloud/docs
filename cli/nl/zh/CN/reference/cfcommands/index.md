@@ -230,7 +230,8 @@ cf push appname
 <dd>buildpack 的名称。buildpack_name 可以是定制 buildpack 的名称，也可以是 Git URL，例如，`my-buildpack` 或 `https://github.com/heroku/heroku-buildpack-play.git`。</dd>
 <dt>*-c* start_command</dt>
 <dd>应用程序的启动命令。要使用缺省启动命令，请为此选项指定 null 值。例如：</dd>
-<dd>```
+<dd>
+```
 cf push appname -c null
 ```</dd>
 <dd>您也可以使用此选项来运行脚本文件。例如：
@@ -242,17 +243,17 @@ cf push appname -c “bash ./<run.sh>"
 <dt>*-i* instance_number</dt>
 <dd>实例数。</dd>
 <dt>*-k* disk_limit</dt>
-<dd>应用程序的磁盘限制，例如 *256M*、*1024M* 或 *1G*。</dd>
+<dd>应用程序的磁盘限制，例如，*256M*、*1024M* 或 *1G*。</dd>
 <dt>*-m* memory_limit</dt>
-<dd>应用程序的内存限制，例如 *256M*、*1024M* 或 *1G*。</dd>
+<dd>应用程序的内存限制，例如，*256M*、*1024M* 或 *1G*。</dd>
 <dt>*-n* host_name</dt>
-<dd>应用程序的主机名，例如 *my-subdomain*。</dd>
+<dd>应用程序的主机名，例如，*my-subdomain*。</dd>
 <dt>*-p* app_path</dt>
 <dd>应用程序目录或应用程序归档文件的路径。</dd>
 <dt>*-t* timeout</dt>
 <dd>应用程序启动的最长时间（以秒为单位）。其他服务器端超时可能会覆盖此值。</dd>
 <dt>*-s* stackname</dt>
-<dd>要运行应用程序的堆栈。堆栈是预构建的文件系统，包括操作系统。使用“cf stacks”可查看 {{site.data.keyword.Bluemix_notm}} 中的可用堆栈。</dd>
+<dd>要运行应用程序的堆栈。堆栈是预构建的文件系统，包括操作系统。使用 `cf stacks` 可查看 {{site.data.keyword.Bluemix_notm}} 中的可用堆栈。</dd>
 <dt>*--no-hostname*</dt>
 <dd>将 Bluemix 系统域映射到此应用程序。</dd>
 <dt>*--no-manifest*</dt>
@@ -268,6 +269,7 @@ cf push appname -c “bash ./<run.sh>"
 ## cf scale
 
 显示或更改应用程序的实例编号、磁盘空间限制和内存限制。
+
 ```
 cf scale appname -i instance_number -k disk_limit -m memory_limit
 ```
@@ -277,16 +279,18 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 <dt>*-i* instance_number</dt>
 <dd>实例数</dd>
 <dt>*-k* disk_limit</dt>
-<dd>应用程序的磁盘限制，例如 *256M*、*1024M* 或 *1G*。</dd>
+<dd>应用程序的磁盘限制，例如，*256M*、*1024M* 或 *1G*。</dd>
 <dt>*-m* memory_limit</dt>
-<dd>应用程序的内存限制，例如 *256M*、*1024M* 或 *1G*。</dd>
+<dd>应用程序的内存限制，例如，*256M*、*1024M* 或 *1G*。</dd>
 <dt>*-f*</dt>
 <dd>在不提示的情况下，强制重新启动应用程序。</dd>
 </dl>
 
 ## cf services
 
+
 列出当前空间中可用的所有服务。
+
 ```
 cf services
 ```
@@ -294,6 +298,7 @@ cf services
 ## cf set-env
 
 设置应用程序的环境变量。
+
 ```
 cf set-env appname var_name var_value
 ```
@@ -308,7 +313,9 @@ cf set-env appname var_name var_value
 
 ## cf stacks
 
+
 列出所有堆栈。堆栈是预构建的文件系统，包括可运行应用程序的操作系统。
+
 ```
 cf stacks
 ```
@@ -316,6 +323,7 @@ cf stacks
 ## cf stop
 
 停止应用程序。
+
 ```
 cf stop appname
 ```
@@ -327,12 +335,13 @@ cf stop appname
 ## cf -v
 
 显示 cf 命令行界面的版本。
+
 ```
 cf -v
 ```
 
-# rellinks
+# 相关链接
 {: #rellinks}
-## general 
+## 常规 
 {: #general}
-* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+* [快速参考卡 - cf 命令](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)

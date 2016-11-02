@@ -6,15 +6,12 @@ copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-01-12" 
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-
-*Last Updated: 12 January 2016*
-{: .last-updated}
 
 # Using the starter applications
 {: #using_starter_applications}

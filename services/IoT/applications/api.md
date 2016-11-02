@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-07"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # HTTP REST API for applications
 {: #api}
-
-Last updated: 07 September 2016
-{: .last-updated}
 
 Use the {{site.data.keyword.iot_full}} HTTP REST API to build and customize applications that interact with your organization on {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}

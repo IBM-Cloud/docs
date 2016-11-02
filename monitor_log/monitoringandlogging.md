@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-28"
 
 ---
 
@@ -14,8 +16,6 @@ copyright:
 #Monitoring and logging with Cloud Foundry
 {: #monitoringandlogging}
 
-Last updated: 13 October 2016
-{: .last-updated}
 
 By monitoring your apps and reviewing logs, you can follow application execution and data flow to get a better understanding of your deployment. In addition, you can reduce the time and effort that is required to locate any issues and repair them.
 {:shortdesc}
@@ -53,7 +53,7 @@ Log files are automatically created when you are using the Cloud Foundry infrast
 ###Log Retention
 {: #log_retention}
 
-In Bluemix Cloud Foundry apps, log data is stored for 30 days by default.
+In {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry apps, log data is stored for 7 days by default.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 

@@ -16,8 +16,7 @@ copyright:
 {:codeblock: .codeblock}
 
 
-#「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンの作成
-{: #deploy-button} 
+#「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンの作成 {: #deploy-button} 
 
 *最終更新日: 2016 年 3 月 2 日*
 {: .last-updated} 
@@ -43,8 +42,7 @@ copyright:
 
 7. アプリがユーザーの {{site.data.keyword.Bluemix_notm}} 組織にデプロイされます。 
 
-##このボタンの例
-{: #button-examples} 
+##このボタンの例 {: #button-examples} 
 
 パブリック {{site.data.keyword.jazzhub_short}} リポジトリーのアプリ・ボタンの例を以下に示します。
 
@@ -94,12 +92,12 @@ copyright:
 デフォルト・マスター・ブランチ:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&#41;
+[![Bluemix にデプロイ](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
 </pre>
 <p>指定された Git ブランチ:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&#41;
+[![Bluemix にデプロイ](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
 </pre>
 </li>
 </ul>
@@ -108,8 +106,7 @@ copyright:
 </li>
 </ol>
 
-##このボタンのスニペットの考慮事項
-{: #button-snippet}
+##このボタンのスニペットの考慮事項 {: #button-snippet}
 
 「Bluemix にデプロイ」ボタンのスニペットをカスタマイズする際は、以下の考慮事項を検討してください。 
 
@@ -123,8 +120,7 @@ copyright:
 	
 	* 翻訳版のボタンを使用したい場合は、そのボタンをリモートで参照するか、[ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button) からダウンロードすることができます。 
 	
-##このボタンのリポジトリーの考慮事項
-{: #button-repo} 
+##このボタンのリポジトリーの考慮事項 {: #button-repo} 
 
 「Bluemix にデプロイ」ボタンで使用するプロジェクト・リポジトリーについての以下の考慮事項を検討してください。 
 
@@ -161,10 +157,11 @@ copyright:
     #Example manifest.yml
 
   declared-services: 
-sample-java-cloudant-cloudantNoSQLDB: 
-        label: cloudantNoSQLDB 
-        plan: Shared 
-  applications:  - services
+      sample-java-cloudant-cloudantNoSQLDB:
+        label: cloudantNoSQLDB
+        plan: Shared
+  applications:
+  - services
     - sample-java-cloudant-cloudantNoSQLDB
     name: My app
     host: myapp
@@ -175,7 +172,7 @@ sample-java-cloudant-cloudantNoSQLDB:
 	
 サポートされるビルダー:<ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code> (<code>./output/</code> フォルダーへの出力をビルドする)</li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code> (<code>. </code> フォルダーへの出力をビルドする)</li>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code> (<code>. </code> フォルダーへの出力をビルドする) </li>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code> (<code>. </code> フォルダーへの出力をビルドする)</li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code> (<code>./target/</code> フォルダーへの出力をビルドする)</li>
 	   </ul>
@@ -190,7 +187,7 @@ sample-java-cloudant-cloudantNoSQLDB:
 <li>プロジェクトのルート・ディレクトリー内に <code>.bluemix</code> ディレクトリーを作成します。</li>
 <li>この <code>pipeline.yml</code> ファイルを <code>.bluemix</code> リポジトリーにアップロードします。</li>
 </ol> </li>
-	<li><stong>IBM Containers</strong> を使用してアプリをコンテナーにデプロイする場合、リポジトリーのルート・ディレクトリーに Dockerfile を、<code>.bluemix</code> ディレクトリーに <code>pipeline.yml</code> ファイルを含める必要があります。
+	<li><strong>IBM Containers</strong> を使用してアプリをコンテナーにデプロイする場合、リポジトリーのルート・ディレクトリーに Dockerfile を、<code>.bluemix</code> ディレクトリーに <code>pipeline.yml</code> ファイルを含める必要があります。
 	<ul>
 	    <li> Dockerfile の作成について詳しくは、<a href="https://docs.docker.com/reference/builder/" target="_blank">Docker 資料</a>を参照してください。</li>
 	    <li><code>pipeline.yml</code> ファイルは手動で作成するか、既存の DevOps Services プロジェクトから生成することができます。コンテナーに固有の <code>pipeline.yml</code> を手動で作成するには、<a href="https://github.com/Puquios/" target="_blank">GitHub にある例</a>を参照してください。</li>

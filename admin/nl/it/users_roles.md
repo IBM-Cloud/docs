@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  anni: 2015, 2016
 
 
 
@@ -17,10 +17,10 @@ copyright:
 
 # Gestione dei membri dei team e dei ruoli
 {: #userroles}
-Ultimo aggiornamento: 12 luglio 2016
+Ultimo aggiornamento: 16 agosto 2016
 {: .last-updated}
 
-Dalla pagina **Directory team** per il tuo account, puoi gestire i membri dei team esistenti e i loro ruoli nella tua organizzazione e nei tuoi spazi, oltre che invitare nuovi membri del team. Per accedere alla directory team per il tuo account, vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; **Account** &gt; *il_nome_del_tuo_account* &gt; **Directory team**. 
+Dalla pagina **Directory team** per il tuo account, puoi gestire i membri dei team esistenti e i loro ruoli nella tua organizzazione e nei tuoi spazi, oltre che invitare nuovi membri del team. Per accedere alla directory team per il tuo account, vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Directory team**. 
 {:shortdesc}
 
 I proprietari degli account eseguono tutte le operazioni sulle organizzazioni e sugli spazi, compresa la gestione dei membri dei team e dei loro ruoli assegnati. I gestori dell'organizzazione dispongono di un accesso che consente loro di invitare membri del team e gestire i ruoli. I gestori dello spazio possono utilizzare la pagina
@@ -64,14 +64,14 @@ I seguenti ruoli possono essere assegnati a livello dello spazio:
 
 **Nota**: ai membri del team a cui nello spazio è assegnato il ruolo di gestore o sviluppatore possono accedere alla variabile di ambiente VCAP_SERVICES. Tuttavia, un membro del team a cui è assegnato il ruolo di revisore non può accedere a VCAP_SERVICES.
 
-## Regolazione della visibilità della directory del team 
+## Regolazione della visibilità della directory del team
 {: #teamdirectoryvisibility}
 
 A seconda di come hai configurato le tue organizzazioni e account {{site.data.keyword.Bluemix_notm}}, potresti voler modificare la visibilità della pagina della directory del team. Per impostazione predefinita, tutti i membri del team nel tuo account possono visualizzare l'elenco completo dei membri del team dell'account, inclusi tutti i membri di tutte le organizzazioni nell'account. È possibile che ti venga richiesto di modificare la visibilità della pagina della directory del team per motivi di sicurezza e privacy. Hai due opzioni per configurare la visibilità della pagina della directory del team: tutti i membri o solo tu come proprietario dell'account.
 
 Per modificare la visibilità della pagina della directory del team, completare la seguente procedura:
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; **Account** &gt; *il_nome_del_tuo_account* &gt; **Directory team**. 
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Directory team**. 
 2. Per l'opzione **Visibile a**, fai clic sulla seleziona corrente per visualizzare le opzioni.
 3. Quindi, seleziona **Tutti** o **Solo io** in base ai bisogni del tuo account.
 
@@ -81,8 +81,7 @@ Per modificare la visibilità della pagina della directory del team, completare 
 I proprietari dell'account e i gestori dell'organizzazione possono invitare i membri del team alle organizzazioni dalla pagina Invita membri del team. Quando aggiungi dei nuovi membri del team, a essi viene automaticamente assegnato i ruoli di revisore. Puoi modificare i ruoli successivamente nella pagina Directory team. Per invitare un membro del team, completa questa procedura:
 
 <ol>
-<li>Vai all'icona **Account e supporto** ![icona Account e
-supporto](../admin/images/account_support.svg) &gt; Account &gt; il_nome_del_tuo_account &gt; Invita membro del team.</li>
+<li>Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Invita membro del team**.</li>
 <li>Seleziona l'organizzazione a cui vuoi invitare i membri del team.</li>
 <li>Fai clic su **Avanti**.</li>
 <li>Seleziona gli spazi a cui vuoi consentire l'accesso per i tuoi membri del team.</li>
@@ -98,14 +97,14 @@ supporto](../admin/images/account_support.svg) &gt; Account &gt; il_nome_del_tuo
 
 Fai clic su **Visualizza in sospeso** per controllare se gli inviti sono in sospeso o sono stati accettati. Puoi scegliere di inviare nuovamente l'email di invito o di annullare l'invito per un invito in sospeso in qualsiasi momento.
 
-Se hai un account SoftLayer collegato al tuo account {{site.data.keyword.Bluemix_notm}}, puoi aggiungere i membri del tuo team SoftLayer. Passa all'icona **Account e supporto** ![Icona Account e supporto](../admin/images/account_support.svg) &gt; **Account** &gt; *nome_tuo_account* &gt; pagina **Invita membri del team**. Quindi, fai clic su **Aggiungi** nella sezione **Aggiungi membri del team SoftLayer** per effettuare l'autenticazione nel tuo account SoftLayer e visualizzare un elenco di membri del team dal tuo account SoftLayer. Per ulteriori informazioni sull'aggiunta di membri del team dal tuo account SoftLayer, vedi [Come invitare membri del team SoftLayer in {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users).
+Se hai un account SoftLayer collegato al tuo account {{site.data.keyword.Bluemix_notm}}, puoi aggiungere i membri del tuo team SoftLayer. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Invita membri del team**. Quindi, fai clic su **Aggiungi** nella sezione **Aggiungi membri del team SoftLayer** per effettuare l'autenticazione nel tuo account SoftLayer e visualizzare un elenco di membri del team dal tuo account SoftLayer. Per ulteriori informazioni sull'aggiunta di membri del team dal tuo account SoftLayer, vedi [Come invitare membri del team SoftLayer in {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users).
 
 ## Modifica di ruoli
 {: #editinguserroles}
 
 I proprietari dell'account e i gestori dell'organizzazione possono modificare i ruoli di organizzazione e spazio per i membri del team esistenti nella pagina **Directory team**. 
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; **Account** &gt; *il_nome_del_tuo_account* &gt; **Directory team**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Directory team**.
 2. Individua il membro del team di cui vuoi modificare i ruoli.
 3. Fai clic su **Visualizza ruoli**.
 4. Seleziona o deseleziona le selezioni di ruolo dell'organizzazione per modificare l'accesso all'organizzazione per il membro del team.
@@ -116,7 +115,7 @@ I proprietari dell'account e i gestori dell'organizzazione possono modificare i 
 
 I gestori spazio possono modificare i ruoli per i membri del team nel loro spazio nella pagina **Gestisci organizzazioni**.
 
-1. Vai all'icona **Account e supporto** ![icona Account e supporto](../admin/images/account_support.svg) &gt; **Account** &gt; *il_nome_del_tuo_account* &gt; **Gestisci organizzazioni**.
+1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Gestisci organizzazioni**.
 2. Individua l'organizzazione in cui si trova il tuo spazio.
 3. Fai clic su **Visualizza dettagli**.
 4. Individua il tuo spazio e fai clic su **Modifica spazio**.

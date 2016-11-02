@@ -67,7 +67,8 @@ Dieses Problem tritt auf, wenn Sie sich bei {{site.data.keyword.Bluemix_notm}} m
 {: tsCauses}
 
 
-Als IBM Mitarbeiter müssen Sie Ihre IBM Intranet-ID mit Ihrer externen IBMid verknüpfen, bevor Sie sich mit der Intranet-ID an {{site.data.keyword.Bluemix_notm}} anmelden können. Führen Sie die folgenden Schritte aus, um die beiden IDs zu verknüpfen:{: tsResolve} 
+Als IBM Mitarbeiter müssen Sie Ihre IBM Intranet-ID mit Ihrer externen IBMid verknüpfen, bevor Sie sich mit der Intranet-ID an {{site.data.keyword.Bluemix_notm}} anmelden können. Führen Sie die folgenden Schritte aus, um die beiden IDs zu verknüpfen:
+{: tsResolve} 
 
   1. Klicken Sie auf der [zentralen Anmeldeseite](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window} auf die Option für Anmeldungen****.
   2. Klicken Sie auf der daraufhin angezeigten Seite auf die Option zum Verknüpfen der IDs**** und geben Sie die IBMid und das zugehörige Kennwort auf der {{site.data.keyword.Bluemix_notm}}-Anmeldeseite ein. Daraufhin werden Intranet-ID und IBM ID automatisch verknüpft.
@@ -190,7 +191,7 @@ Sie können nicht Benutzer zu Ihrer Organisation einladen, wenn Sie ein Collabor
 Wenn Sie nicht Benutzer zu Ihrer Organisation einladen können und zum Einladen eine andere Rolle benötigen, kontaktieren Sie Ihren Organisationsmanager, damit er Ihre Rolle ändert. Führen Sie die folgenden Schritte aus, um festzustellen, wer Ihr Organisationsmanager ist:
 {: tsResolve}
 
-  1. Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg) in der Menüleiste und wählen Sie **Organisationen verwalten** aus. 
+  1. Rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf, klicken Sie auf das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg) in der Menüleiste und wählen Sie **Organisationen verwalten** aus.
   2. Wechseln Sie zu Ihrer Organisation und zeigen Sie die Informationen zum Organisationsmanager in der Registerkarte **Benutzer** an.  
   
 Wenn Sie nicht die Möglichkeit haben, Benutzer einzuladen, weil Sie ein Mitarbeiter und kein Mitglied sind, müssen Sie Ihr vorheriges {{site.data.keyword.Bluemix_notm}}-Konto löschen und anschließend eingeladen werden, als Mitglied der Organisation am Konto teilzunehmen. Um Ihr vorheriges Konto zu löschen und dem Konto als Mitglied beizutreten, führen Sie die folgenden Schritte durch: 

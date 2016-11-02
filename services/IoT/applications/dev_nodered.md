@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-01"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,9 +14,6 @@ copyright:
 
 # Developing {{site.data.keyword.iot_short_notm}} by using Node-RED
 {: #dev_nodered}
-
-Last updated: 1 September 2016
-{: .last-updated}
 
 Node-RED is a visual tool that you can use to develop your applications, devices, and gateways on {{site.data.keyword.iot_full}}. Node-RED provides capabilities for connecting hardware devices, APIs, and online services in new and interesting ways. Node-RED is built on top of Node.js and takes advantage of the huge node module ecosystem to provide a tool that can integrate many different systems.
 {:shortdesc}

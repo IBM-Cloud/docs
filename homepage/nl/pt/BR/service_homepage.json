@@ -43,6 +43,11 @@
     "category_id": "devops"
   }, {
     "type": "extra",
+    "title": "Tente o Dedicated GitHub Enterprise",
+    "href": "services/ghededicated/index.html",
+    "category_id": "devops"
+  }, {
+    "type": "extra",
     "title": "Tente o painel Móvel do Bluemix",
     "href": "mobile/index.html",
     "category_id": "móvel"

@@ -80,15 +80,17 @@ copyright:
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [必需]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署到 Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
-<li>Markdown：<p>
-缺省主分支：</p>
+<li>Markdown：
+<p>
+缺省主分支：
+</p>
 <pre class="codeblock">
-[&#33;[部署到 Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [必需]&#41;
+[![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required])
 </pre>
 <p>指定的 Git 分支：
 </p>
 <pre class="codeblock">
-[&#33;[部署到 Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [必需]&#41;
+[![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required])
 </pre>
 </li>
 </ul>
@@ -161,7 +163,7 @@ applications:
 受支持的构建器：
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>，它会将输出构建到 <code>./output/</code> 文件夹中</li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>，它会将输出构建到 <code>.</code> 文件夹中</i>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>，它会将输出构建到 <code>.</code> 文件夹中</li>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code>，它会将输出构建到 <code>.</code> 文件夹中</li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>，它会将输出构建到 <code>./target/</code> 文件夹中</li>
 	   </ul>
@@ -175,7 +177,7 @@ applications:
 <li>在项目的根目录中，创建 <code>.bluemix</code> 目录。</li>
 <li>将 <code>pipeline.yml</code> 文件上传到 <code>.bluemix</code> 存储库。</li>
 </ol> </li>
-	<li>如果您要使用 <stong>IBM Containers</strong> 在容器中部署应用程序，那么必须将 Dockerfile 放入存储库的根目录中，并将 <code>pipeline.yml</code> 文件放入 <code>.bluemix</code> 目录中。
+	<li>如果您要使用 <strong>IBM Containers</strong> 在容器中部署应用程序，那么必须将 Dockerfile 放入存储库的根目录中，并将 <code>pipeline.yml</code> 文件放入 <code>.bluemix</code> 目录中。
 <ul>
 	    <li> 要了解有关创建 Dockerfile 的更多信息，请参阅 <a href="https://docs.docker.com/reference/builder/" target="_blank">Docker 文档</a>。</li>
 	    <li>您可以手动创建 <code>pipeline.yml</code> 文件，也可以根据现有 DevOps Services 项目来生成 pipeline.yml 文件。要手动创建专用于容器的 <code>pipeline.yml</code>，请参阅 <a href="https://github.com/Puquios/" target="_blank">GitHub</a> 中的示例。</li>

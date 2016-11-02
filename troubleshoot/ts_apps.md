@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-11"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Troubleshooting for managing apps
 {: #managingapps}
 
-Last updated: 11 October 2016
-{: .last-updated} 
 
 General problems with managing applications might include applications can't be updated, double-byte characters aren't displayed. However, in many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}

@@ -27,20 +27,20 @@ de ambiente a seguir:
   * [no_proxy](http://www.gnu.org/software/wget/manual/html_node/Proxies.html)
   
 É possível configurar essas variáveis de ambiente usando *cf si* ou
-por meio do arquivo *manifest.yml*. Se seu aplicativo requerer que os
+por meio do arquivo *manifest.yml*.  Se seu aplicativo requerer que os
 recursos sejam transferidos por download pela Internet durante a preparação e uma variável
 de ambiente de proxy estiver configurada, dependendo de como as variáveis de ambiente de
 proxy estiverem configuradas, seus recursos serão transferidos por download por meio do proxy
 configurado.  
 
 Por exemplo, suponha que você tenha um aplicativo nodejs e ele esteja em execução em
-um ambiente com *http_proxy* configurado como *yourProxyURL*. Além
+um ambiente com *http_proxy* configurado como *yourProxyURL*.  Além
 disso, suponha que você deseja permitir que o npm faça download de módulos de
 nó pela Internet. Para fazer isso, você poderia configurar *no_proxy* como
 *npmjs.org*. 
 
 **Nota**: Pode ser o caso de seu aplicativo aproveitar a
-vantagem do proxy durante o tempo de execução. Isso dependente inteiramente do
+vantagem do proxy durante o tempo de execução.  Isso dependente inteiramente do
 aplicativo e não é afetado pelo buildpack e qualquer uma dessas três variáveis de
 ambiente.
 
@@ -50,13 +50,13 @@ ambiente.
 Para [Liberty for Java](../runtimes/liberty/index.html) e os
 aplicativos [java_buildpack](../runtimes/tomcat/index.html), as
 configurações de proxy podem ser passadas ao tempo de execução por meio da variável de
-ambiente **JAVA_OPTS**. Por exemplo, é possível emitir o comando: 
+ambiente **JAVA_OPTS**.  Por exemplo, é possível emitir o comando: 
 ```
    $ cf se myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
 {: codeblock}
 
-e remontar seu aplicativo. Seu aplicativo então usará as configurações de proxy
+e remontar seu aplicativo.  Seu aplicativo então usará as configurações de proxy
 especificadas no tempo de execução. Consulte
 [Redes
 e proxies Java](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html) para obter mais informações sobre as opções de proxy Java. 

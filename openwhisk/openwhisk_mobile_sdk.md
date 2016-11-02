@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Using the {{site.data.keyword.openwhisk_short}} mobile SDK
 {: #openwhisk_mobile_sdk}
-Last updated: 26 August 2016
-{: .last-updated}
 
 {{site.data.keyword.openwhisk}} provides a mobile SDK for iOS and watchOS devices that enables mobile apps to easily fire remote triggers and invoke remote actions. A version for Android is currently not available; Android developers can use the {{site.data.keyword.openwhisk}} REST API directly.
 
@@ -25,10 +24,10 @@ The mobile SDK is written in Swift 3.0 and supports iOS 10 and later releases. Y
 
 You can install the mobile SDK by using CocoaPods, Carthage, or from the source directory.
 
-### Installing by using CocoaPods 
+### Installing by using CocoaPods
 {: #openwhisk_add_sdk_cocoapods}
 
-The {{site.data.keyword.openwhisk_short}} SDK for mobile is available for public distribution through CocoaPods. Assuming CocoaPods is installed, put the following lines into a file called 'Podfile' inside the starter app project directory. 
+The {{site.data.keyword.openwhisk_short}} SDK for mobile is available for public distribution through CocoaPods. Assuming CocoaPods is installed, put the following lines into a file called 'Podfile' inside the starter app project directory.
 
 ```
 install! 'cocoapods', :deterministic_uuids => false
@@ -38,13 +37,13 @@ target 'MyApp' do
      pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 
-target 'MyApp WatchKit Extension' do 
+target 'MyApp WatchKit Extension' do
      pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 ```
 {: codeblock}
 
-From the command line, type `pod install`. This command installs the SDK for an iOS app with a watchOS extension.  Use the workspace file CocoaPods creates for your app to open the project in Xcode. 
+From the command line, type `pod install`. This command installs the SDK for an iOS app with a watchOS extension.  Use the workspace file CocoaPods creates for your app to open the project in Xcode.
 
 After installation, open your project workspace.  You may get the following warning when building:
 `Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
@@ -93,13 +92,13 @@ wsk sdk install iOS
 ```
 {: pre}
 
-This command downloads a compressed file that contains the starter app. Inside the project directory is a podfile. 
+This command downloads a compressed file that contains the starter app. Inside the project directory is a podfile.
 
 To install the SDK, enter the following command:
 ```
 pod install
 ```
-{: pre} 
+{: pre}
 
 ## Getting started with the SDK
 {: #openwhisk_sdk_getstart}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-09"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # MQTT messaging
 {: #ref-mqtt}
-Last updated: 13 September 2016
-{: .last-updated}
 
 MQTT is the primary protocol that devices and applications use to communicate with the {{site.data.keyword.iot_full}}. MQTT is a publish and subscribe messaging transport protocol that is designed for the efficient exchange of real-time data between sensor and mobile devices.
 {:shortdesc}
@@ -28,25 +27,16 @@ MQTT runs over TCP/IP, and while it is possible to code directly to TCP/IP, you 
 ## Version support
 {: #version-support}
 
-{{site.data.keyword.iot_short_notm}} supports the following versions of the MQTT messaging protocol:
-
-MQTT version | Deviations | Notes
---- | --- | ---
-[3.1.1](https://www.oasis-open.org/standards#mqttv3.1.1) (recommended) | Retained messages are not supported, for example, shared subscriptions. | <ul><li>OASIS Standard.<li>ISO standard (ISO/IEC PRF 20922) <li>Improved interoperability between various clients and severs due to a more precise definition of the protocol compared to V3.1.   <li>The maximum length of the MQTT client identifier (ClientId) is increased to 256 from the 23 character limit that is imposed by V3.1. </br>The {{site.data.keyword.iot_short_notm}} service often requires longer client IDs (ClientId). </br>Long client IDs are supported regardless of the MQTT protocol version, however some V3.1 client libraries check the length of the ClientId value and enforce the 23 character limit.</ul>
-3.1 | - | MQTT V3.1 is the version of the protocol that is in widest use today.
-
-{{site.data.keyword.iot_short_notm}} supports any content that is permitted by the MQTT standard. MQTT is data-agnostic so it's possible to send images, texts in any encoding, encrypted data, and virtually every type of data in binary format. For more information about the MQTT standard, see the following resources:
-- [MQTT.org](http://mqtt.org/)
-- [HiveMQ: Introducing MQTT](http://www.hivemq.com/blog/mqtt-essentials-part-1-introducing-mqtt)
+For information about the versions of MQTT that are supported by  {{site.data.keyword.iot_short_notm}}, see [Standards and requirements](../standards_and_requirements.html#mqtt).
 
 ## Application, device, and gateway clients
 {: #device-app-clients}
 
 In {{site.data.keyword.iot_short_notm}}, the primary classes of thing are devices and applications. A gateway is a subclass of device.
 
-The class of thing that your MQTT client identifies itself to the service as determines the capabilities of your client when connected. The class of thing also determines the mechanism for the client authentication.
+Your MQTT client identifies itself to the {{site.data.keyword.iot_short_notm}} service as a class of thing. The class of thing determines the capabilities of the client when it is connected. The class of thing also determines the mechanism for the client authentication.
 
-Applications and devices also work with different MQTT topic spaces.  Devices work within a device-scoped topic space, whereas applications have full access to the topic space for an entire organization. For more information, see the following topics:
+Applications and devices work with different MQTT topic spaces.  Devices work within a device-scoped topic space, whereas applications have full access to the topic space for an entire organization. For more information, see the following topics:
 
 - [Devices](../../devices/mqtt.html)
 - [Applications](../../applications/mqtt.html)
@@ -56,13 +46,13 @@ Applications and devices also work with different MQTT topic spaces.  Devices wo
 {: #qos-levels}
 
 The MQTT protocol provides three qualities of service for delivering messages between clients and servers: "at most once", "at least once", and "exactly once".
-While you can send events and commands by using any quality of service level, you must carefully consider whether what the right service level is for your needs. Quality of service level 2 is not always a better option than level zero.
+While you can send events and commands by using any quality of service level, you must carefully consider whether what the right service level is for your needs. Quality of service level '2' is not always a better option than level '0'.
 
 ### At most once (QoS0)
 
 The "at most once" quality of service level (QoS0) is the fastest mode of transfer and  is sometimes called "fire and forget". The message is delivered at most once, or it might not be delivered at all. Delivery across the network is not acknowledged, and the message is not stored. The message might be lost if the client is disconnected, or if the server fails.
 
-The MQTT protocol does not require servers to forward publications at quality of service level zero to a client. If the client is disconnected at the time the server receives the publication, the publication might be discarded, depending on the server implementation.
+The MQTT protocol does not require servers to forward publications at quality of service level '0' to a client. If the client is disconnected at the time the server receives the publication, the publication might be discarded, depending on the server implementation.
 
 **Tip:** When sending real-time data on an interval, use quality of service level 0. If a single message goes missing, it does not really matter because another message that contains newer data will be sent shortly afterward. In this scenario, the extra cost of using a higher quality of service does not result in any tangible benefit.
 
@@ -72,7 +62,7 @@ With quality of service level 1 (QoS1), the message is always delivered at least
 
 ### Exactly once (QoS2)
 
-The "exactly once" quality of service level (QoS2) is the safest, but slowest mode of transfer. The message is always delivered exactly once and must also be stored locally at the sender, until the sender receives confirmation that the message was published by the receiver. The message is stored in case the message must be sent again. With quality of service level 2, a more sophisticated handshaking and acknowledgment sequence is used than for level 1 to ensure that messages are not duplicated.
+The "exactly once" quality of service level  2 (QoS2) is the safest, but slowest mode of transfer. The message is always delivered exactly once and must also be stored locally at the sender, until the sender receives confirmation that the message was published by the receiver. The message is stored in case the message must be sent again. With quality of service level 2, a more sophisticated handshaking and acknowledgment sequence is used than for level 1 to ensure that messages are not duplicated.
 
 **Tip:** When sending commands, if you want confirmation that only the specified command will be actioned, and that it will be actioned once only, use the quality of service level 2. This is an example of when the additional overheads of level 2 can be advantageous over other levels.
 

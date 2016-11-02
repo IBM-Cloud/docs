@@ -188,7 +188,7 @@ principe du moindre privilège.
 Dans les environnements {{site.data.keyword.Bluemix_notm}} dédié et local, les administrateurs désignés
 peuvent
 gérer les rôles et les droits pour les utilisateurs {{site.data.keyword.Bluemix_notm}} dans leur organisation dans la console d'administration. Pour plus d'informations, voir
-[Gestion des environnements {{site.data.keyword.Bluemix_notm}} local et dédié](../admin/index.html#mng). 
+[Gestion des environnements {{site.data.keyword.Bluemix_notm}} local et dédié](../admin/index.html#mng).
 </dd>
 </dl>
 
@@ -231,7 +231,7 @@ Vous devez prendre en compte chaque type de données lorsque vous planifiez la s
 
 La plateforme {{site.data.keyword.Bluemix_notm}} sécurise les données transférées en sécurisant l'accès de l'utilisateur final à l'application via SSL sur le réseau, jusqu'à ce que
 les données atteignent IBM DataPower Gateway à la frontière du réseau interne de {{site.data.keyword.Bluemix_notm}}. IBM DataPower Gateway sert de
-proxy inverse et fournit la terminaison SSL. IPSEC est utilisé pour sécuriser les données qui transitent entre IBM DataPower Gateway et l'application. 
+proxy inverse et fournit la terminaison SSL. IPSEC est utilisé pour sécuriser les données qui transitent entre IBM DataPower Gateway et l'application.
 
 La sécurité des données utilisées et des données au repos vous incombe lorsque vous développez votre application. Vous pouvez tirer profit de
 plusieurs services liés aux données qui sont disponibles dans le catalogue {{site.data.keyword.Bluemix_notm}} pour traiter ces questions.

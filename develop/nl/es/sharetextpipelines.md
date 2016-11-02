@@ -98,13 +98,13 @@ Stage:
 ```
 ---
 name: <name>
-[inputs: 
-	<sequence of inputs>] 
-[triggers:   
-	<sequence of triggers>] 
-[properties:   
-	<sequence of properties>] 
-[jobs:   
+[inputs:
+	<sequence of inputs>]
+[triggers:
+	<sequence of triggers>]
+[properties:
+	<sequence of properties>]
+[jobs:
 	<sequence of jobs>]
 ```
 {: codeblock} 

@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-上次更新时间：2016 年 8 月 17 日
+上次更新时间：2016 年 9 月 1 日
 {: .last-updated}
 
 
@@ -43,12 +43,12 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 实例的 URL 的子域。例如，<code>https://console.mycompany.bluemix.net/cli</code>。</dd>
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} 实例的 URL 的子域。例如，<code>https://console.mycompany.bluemix.net/cli</code></dd>
 </dl>
 </li>
 <li>要安装 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件，请运行以下命令：<br/><br/>
 <code>
-cf install-plugin bluemix-admin-cli -r BluemixAdmin
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
 </ol>
@@ -61,7 +61,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件
 
-您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件来添加或除去用户、向组织分配或取消分配用户，以及执行其他管理任务。要查看命令的列表，请运行以下命令：
+您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件来添加或除去用户、向组织分配或取消分配用户，以及执行其他管理任务。创建组织名称、空间名称和应用程序安全组时，不支持使用特殊字符，例如空格、加号 (+) 和 & 符号。请尝试使用混合大小写或下划线来创建唯一名称。
+
+要查看命令的列表，请运行以下命令：
 
 ```
 cf plugins
@@ -117,17 +119,23 @@ cf ba add-user <user_name> <organization>
 
 ### 搜索用户
 
-可以搜索用户。输入以下命令：
+可以搜索用户。输入以下命令，并根据需要使用可选的搜索过滤参数（name、permission、organization 和 role）：
 
 ```
-cf ba search-users <user_name>
+cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中用户的名称。</dd>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">分配给用户的许可权。例如，superuser、basic、catalog、user 和 reports。有关分配的用户许可权的更多信息，请参阅[许可权](../../../admin/index.html#permissions)。不能将此参数与 organization 参数用于同一查询中。</dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
+<dd class="pd">用户所属的组织名称。不能将此参数与 organization 参数用于同一查询中。</dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">分配给用户的组织角色。例如，组织的管理员、记帐管理员或审计员。使用此参数时必须指定组织。有关角色的更多信息，请参阅[用户角色](../../../admin/users_roles.html#userrolesinfo)。</dd>
 
 </dl>
 

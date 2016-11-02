@@ -54,7 +54,7 @@ You can use Sauce Labs with {{site.data.keyword.DRA_short}} by adding the Sauce 
 You can see the full titles of all the tests in the logs after a run.  
 
 **Notes:**  
-1. Deployment Risk Analytics currently does not support **critical tests** that contain a hyphen in the full title.    
+1. {{site.data.keyword.DRA_short}} does not support critical tests that contain a hyphen in the full title.    
 2. If you change your organization name, you must recreate policies and you will not have access to previous decision reports.
 
 ## Creating functional verification test rules

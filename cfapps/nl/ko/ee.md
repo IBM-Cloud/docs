@@ -114,8 +114,8 @@ copyright:
 {{site.data.keyword.Bluemix_notm}}에 연결하십시오.
   
   ```
-cf api https://api.ng.bluemix.net
-	 ```
+  cf api https://api.ng.bluemix.net
+  ```
   
   기타 {{site.data.keyword.Bluemix_notm}} 지역에 연결하는 방법에 대한 자세한 정보는
 {{site.data.keyword.Bluemix_notm}} 지역을 참조하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 지정한 후에
@@ -124,13 +124,14 @@ cf api https://api.ng.bluemix.net
   4. 그런 다음, cf login 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 있습니다.
   
   ```
-cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
+  cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
   ```
   
   5. {{site.data.keyword.Bluemix_notm}}에 로그인한 후에는 {{site.data.keyword.Bluemix_notm}}로 다시 앱을 배치할 준비가 됩니다. 앱 디렉토리 `C:\test`에서 다음 명령을 입력하십시오. 
   
   ```
-cf push TestNode```
+  cf push TestNode
+  ```
   
   **cf push** 명령에 대한 자세한 정보는 앱 업로드를 참조하십시오.
   
@@ -153,12 +154,14 @@ cf push TestNode```
   cf create-service 명령을 사용하여 서비스의 새 인스턴스를 작성하십시오. 예:
   
   ```
-cf create-service cloudantNoSQLDB Shared cloudant100```
+  cf create-service cloudantNoSQLDB Shared cloudant100
+  ```
   
   cf services 명령을 사용하여 작성한 서비스 인스턴스의 목록을 볼 수도 있습니다.
   
   ```
-cf services```
+  cf services
+  ```
   
   서비스 인스턴스를 작성한 후에는 임의의 애플리케이션을 바인딩하고 사용하는 데 사용할 수 있습니다.
   
@@ -167,7 +170,8 @@ cf services```
   서비스 인스턴스를 사용하려면 애플리케이션을 바인딩해야 합니다. 사용자가 작성한 애플리케이션 이름 및 서비스 인스턴스를 지정하고 cf bind-service 명령을 사용하여 서비스 인스턴스를 애플리케이션에 바인딩하십시오.
   
   ```
-cf bind-service TestNode cloudant100```
+  cf bind-service TestNode cloudant100
+  ```
   
   서비스 인스턴스를 애플리케이션에 바인딩하면 {{site.data.keyword.Bluemix_notm}}가 서비스와 통신할 수 있으며 새 애플리케이션이 해당 서비스 인스턴스와 통신하도록 지정할 수 있습니다. 다른 서비스의 경우, {{site.data.keyword.Bluemix_notm}}가 바인딩 동안 애플리케이션 및 서비스 인스턴스를 다르게 처리할 수 있습니다. 예를 들어, 일부 서비스는 서비스 인스턴스와 통신하는 각 애플리케이션에 대해 새 테넌트를 작성할 수 있습니다. 서비스는 애플리케이션과 서비스 사이의 통신을 위해 반드시 애플리케이션에 전달되어야 하는
 신임 정보 등의 정보를 사용하여 {{site.data.keyword.Bluemix_notm}}에 다시 응답합니다. 
@@ -188,8 +192,8 @@ cf bind-service TestNode cloudant100```
   예를 들어, Node.js 앱이 다음과 같이 이 정보에 액세스할 수 있습니다.
 
   ```
-if (process.env.VCAP_SERVICES) {
-var env = JSON.parse(process.env.VCAP_SERVICES);
+  if (process.env.VCAP_SERVICES) {
+        var env = JSON.parse(process.env.VCAP_SERVICES);
         var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
@@ -207,7 +211,7 @@ var env = JSON.parse(process.env.VCAP_SERVICES);
   신임 정보를 사용하여 서비스 인스턴스와 상호작용할 수 있습니다. 취할 수 있는 조치에는 읽기, 쓰기 및 업데이트가 포함됩니다. 다음 예는 JSON 오브젝트를 {{site.data.keyword.cloudant}} 서비스 인스턴스에 삽입하는 방법을 예시합니다.
 
   ```
-// create a new message
+  // create a new message
 var create_message = function(req, res) {
   require('cloudantdb').connect(cloudant.url, function(err, conn) {
     var collection = conn.collection('messages');

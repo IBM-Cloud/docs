@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} システムの詳細
 {: #openwhisk_reference}
-最終更新日: 2016 年 8 月 4 日
+最終更新日: 2016 年 9 月 9 日
 {: .last-updated}
 
 以下のセクションでは、{{site.data.keyword.openwhisk}} システムについて詳しく説明します。
@@ -100,14 +100,12 @@ Bluemix では、組織とスペースのペアが {{site.data.keyword.openwhisk
 OpenWhisk は、副次作用として特定の並行一貫性モデルを保証しません。
 並行性の副次作用は実装に依存します。
 
-### 最大 1 回のセマンティクス
+### アクション実行の保証
 {: #openwhisk_atmostonce}
-
-システムでは、アクションの最高 1 回の呼び出しをサポートします。
 
 呼び出し要求が受信されると、システムは要求を記録し、アクティベーションをディスパッチします。
 
-システムは (非ブロッキング呼び出しの場合) アクティベーション ID を返し、呼び出しが受信されたことを確認します。(おそらくネットワーク接続の障害により) この応答がなくても、呼び出しは受信されている可能性があります。
+システムは (非ブロッキング呼び出しの場合) アクティベーション ID を返し、呼び出しが受信されたことを確認します。HTTP 応答を受け取る前にネットワーク障害またはその他の障害が介在する場合に {{site.data.keyword.openwhisk_short}} が要求を受け取って処理した可能性があることに注意してください。
 
 システムはアクションの呼び出しを 1 回試行します。これにより、以下の 4 つのいずれかの結果になります。
 - *success (成功)* : アクションの呼び出しが正常に完了しました。
@@ -118,6 +116,7 @@ OpenWhisk は、副次作用として特定の並行一貫性モデルを保証�
 
 正常に受信され、ユーザーに課金されるすべての呼び出しには、最終的にアクティベーション・レコードがあります。
 
+*action developer error* (アクション開発者エラー) の場合、アクションが部分的に実行されて外部で可視の副作用を生成した可能性があることに注意してください。そういった副作用が実際に起こったかどうかをチェックし、必要であれば再試行ロジックを実行するのは、ユーザーの責任です。また、ある種の *whisk internal errors* (whisk 内部エラー) は、アクションが実行を開始したが、アクションが完了を登録する前にシステムで障害が起こったことを示すことに注意してください。
 
 ## アクティベーション・レコード
 {: #openwhisk_ref_activation}
@@ -129,7 +128,7 @@ OpenWhisk は、副次作用として特定の並行一貫性モデルを保証�
 - *activationId* : アクティベーション ID。
 - *start* および *end* : アクティベーションの開始と終了を記録するタイム・スタンプ。値は、[UNIX の時刻形式](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_15)です。
 - *namespace* および `name`: エンティティーの名前空間および名前。
-- *logs* : アクティベーション中にアクションによって生成されたログを含むストリング配列。各配列エレメントは、アクションによって ``stdout`` または ``stderr` に出力された行に対応し、ログ出力の時刻とストリームを含みます。構造体は、次のとおりです。```TIMESTAMP STREAM: LOG_OUTPUT```。
+- *logs* : アクティベーション中にアクションによって生成されたログを含むストリング配列。各配列エレメントは、アクションによって `stdout` または `stderr` に出力された行に対応し、ログ出力の時刻とストリームを含みます。構造は `TIMESTAMP STREAM: LOG_OUTPUT` です。
 - *response* : `success`、`status`、および `result` のキーを定義したディクショナリー。
   - *status* : アクティベーションの結果。「success (成功)」、「application error (アプリケーション・エラー)」、「action developer error (アクション開発者エラー)」、「whisk internal error (whisk 内部エラー)」のいずれかの値が可能です。
   - *success* : 状況が`「success」`の場合に限り、`true` になります。
@@ -166,8 +165,8 @@ JavaScript 関数が、戻った後でもコールバック関数で実行を続
 
 JavaScript アクションのアクティベーションは、main 関数が以下のいずれかの条件で終了する場合に**同期**となります。
 
-- main 関数が ```return``` ステートメントを実行せずに終了する。
-- main 関数が ```return``` ステートメントを実行して終了し、Promise *以外* の値を返す。
+- main 関数が `return` ステートメントを実行せずに終了する。
+- main 関数が `return` ステートメントを実行して終了し、Promise *以外* の値を返す。
 
 以下は、同期アクションの例です。
 
@@ -194,7 +193,7 @@ JavaScript アクションのアクティベーションは、main 関数が Pro
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
-        resolve({ done: true });
+            resolve({ done: true });
        }, 100);
     })
  }
@@ -207,7 +206,7 @@ function main(args) {
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
-            reject({ done: true });
+        reject({ done: true });
        }, 100);
     })
  }
@@ -230,47 +229,65 @@ function main(params) {
          return {done: true};
       }
   }
-````
+```
 {: codeblock}
 
 アクティベーションが同期か非同期かに関係なく、アクションの呼び出しにはブロッキングまたは非ブロッキングが可能です。
 
 ### 追加の SDK メソッド
-{: #openwhisk_ref_javascript_additsdk}
 
-`whisk.invoke()` 関数は、別のアクションを呼び出します。引数として、以下のパラメーターを定義したディクショナリーを使用します。
+`whisk.invoke()` 関数は、別のアクションを呼び出し、結果のアクティベーション用に Promise を返します。引数として、以下のパラメーターを定義したディクショナリーを使用します。
 
 - *name* : 呼び出すアクションの完全修飾名。
 - *parameters* : 呼び出されたアクションへの入力を表す JSON オブジェクト。省略された場合、デフォルトは空のオブジェクトです。
 - *apiKey* : アクションの呼び出しに使用する許可キー。
-デフォルトは `whisk.getAuthKey()` です。 
-- *blocking* : アクションをブロッキング・モードと非ブロッキング・モードのどちらで呼び出すか。デフォルトは `false` で、非ブロッキングの呼び出しを指示します。
-- *next* : 呼び出しの完了時に実行するオプションのコールバック関数。
+デフォルトは `whisk.getAuthKey()` です。
+- *blocking* : アクションをブロッキング・モードと非ブロッキング・モードのどちらで呼び出すか。`blocking` が true の場合、呼び出しは、呼び出されたアクションの結果を待った後で、返された Promise を解決 (resolve) します。デフォルトは `false` で、非ブロッキングの呼び出しを指示します。
 
-`next` のシグニチャーは `function(error, activation)` です。ここで、以下が適用されます。
+`whisk.invoke()` は Promise を返します。OpenWhisk システムが呼び出しの完了を待つようにするためには、この Promise をアクションの `main` 関数から返す必要があります。
+- 呼び出しが失敗した場合、Promise は、失敗した呼び出しを説明するオブジェクトを使用して拒否 (reject) します。それには以下の 2 つのフィールドがある可能性があります。
+  - *error*: エラーを説明するオブジェクト。通常はストリングです。
+  - *activation*: オプションのディクショナリー。存在するかどうかは、呼び出しの失敗の性質によります。存在する場合、以下のフィールドが含まれます。
+    - *activationId* : アクティベーション ID。
+    - *result* : アクションがブロッキング・モードで呼び出された場合: アクション結果の JSON オブジェクト、あるいは `undefined`。
+- 呼び出しが成功した場合、Promise は、上で説明されたフィールド *activationId* および *result* でアクティベーションを記述するディクショナリーを使用して解決 (resolve) します。
 
-- 呼び出しが成功した場合、`error` は `false` です。失敗した場合は、*true を表す* 値 (ブール値のコンテキストで評価された場合に true に変換される値) で、通常、エラーを記述するストリングになります。
-- エラーの場合、`activation` は、失敗のモードによっては未定義であることがあります。
-- `activation` は、定義されている場合には、以下のフィールドがあるディクショナリーです。
-  - *activationId* : アクティベーション ID。
-  - *result* : アクションがブロッキング・モードで呼び出された場合: アクション結果の JSON オブジェクト、あるいは `undefined`。
+以下に、返された Promise を利用するブロッキング呼び出しの例を示します。
+```javascript
+return whisk.invoke({
+  name: 'myAction',
+  blocking: true
+})
+.then(function (activation) {
+    // activation completed successfully, activation contains the result
+    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
+})
+.catch(function (reason) {
+    console.log('An error has occured ' + reason.error);
 
-`whisk.trigger()` 関数は、トリガーを起動します。引数として、以下のパラメーターを含む JSON オブジェクトを使用します。
+    if(reason.activation) {
+      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
+    } else {
+      console.log('Failed to create activation.');
+    }
+});
+```
+{: codeblock}
+
+`whisk.trigger()` 関数は、トリガーを発生させ、結果のアクティベーションの Promise を返します。引数として、以下のパラメーターを含む JSON オブジェクトを使用します。
 
 - *name* : 呼び出すトリガーの完全修飾名。
 - *parameters* : トリガーへの入力を表す JSON オブジェクト。省略された場合、デフォルトは空のオブジェクトです。
 - *apiKey* : トリガーの起動に使用する許可キー。デフォルトは `whisk.getAuthKey()` です。
-- *next* : 起動完了時に実行されるオプションのコールバック。
 
-`next` のシグニチャーは `function(error, activation)` です。ここで、以下が適用されます。
-
-- 起動が成功した場合、`error` は `false` です。失敗した場合は、*true を表す* 値で、通常、エラーを記述するストリングになります。
-- エラーの場合、`activation` は、失敗のモードによっては未定義であることがあります。
-- `activation` は、定義されている場合には、アクティベーション ID が入った `activationId` フィールドを含むディクショナリーです。
+`whisk.trigger()` は Promise を返します。トリガーの完了を OpenWhisk システムが待つことが必要な場合、この Promise をアクションの `main` 関数から返す必要があります。
+- トリガーが失敗した場合、Promise は、そのエラーを説明するオブジェクトを使用して拒否 (reject) します。
+- トリガーが成功した場合、Promise は、アクティベーション ID を含んでいる `activationId` フィールドのあるディクショナリーを使用して解決 (resolve) します。
 
 `whisk.getAuthKey()` 関数は、アクションの実行に使用されている許可キーを返します。通常、`whisk.invoke()` 関数と `whisk.trigger()` 関数で暗黙的に使用されるため、この関数を直接呼び出す必要はありません。
 
-### Node.js ランタイム環境
+### JavaScript ランタイム環境
+{: #openwhisk_ref_javascript_environments}
 
 JavaScript アクションは、デフォルトで Node.js バージョン 6.2.0 環境で実行されます。アクションの作成/更新時に `--kind` フラグが値「nodejs:6」で明示的に指定された場合にも、6.2.0 環境がアクションに使用されます。
 Node.js 6.2.0 環境では、以下のパッケージを使用できます。
@@ -361,20 +378,56 @@ Node.js 0.12.14 環境では、以下のパッケージを使用できます。
 - xmlhttprequest v1.7.0
 - yauzl v2.3.1
 
+## Python アクション
+
+Python アクションは、デフォルトで Python 2.7.12 を使用して実行されます。
+標準 Python ライブラリーに加えて、以下のパッケージも Python アクションによって使用可能です。
+
+- attrs v16.1.0
+- beautifulsoup4 v4.5.1
+- cffi v1.7.0
+- click v6.6
+- cryptography v1.5
+- cssselect v0.9.2
+- enum34 v1.1.6
+- flask v0.11.1
+- gevent v1.1.2
+- greenlet v0.4.10
+- httplib2 v0.9.2
+- idna v2.1
+- ipaddress v1.0.16
+- itsdangerous v0.24
+- jinja2 v2.8
+- lxml v3.6.4
+- markupsafe v0.23
+- parsel v1.0.3
+- pyasn1 v0.1.9
+- pyasn1-modules v0.0.8
+- pycparser v2.14
+- pydispatcher v2.0.5
+- pyopenssl v16.1.0
+- python-dateutil v2.5.3
+- queuelib v1.4.2
+- requests v2.11.1
+- scrapy v1.1.2
+- service-identity v16.0.0
+- simplejson v3.8.2
+- six v1.10.0
+- twisted v16.4.0
+- w3lib v1.15.0
+- werkzeug v0.11.10
+- zope.interface v4.3.1
 
 ## Docker アクション
 {: #openwhisk_ref_docker}
 
-Docker アクションは、Docker コンテナーでユーザー提供バイナリーを実行します。このバイナリーは Ubuntu 14.04 LTD に基づく Docker イメージで実行されるため、バイナリーはこのディストリビューションと互換でなければなりません。
+Docker アクションは、Docker コンテナーでユーザー提供バイナリーを実行します。バイナリーは、[python:2.7.12-alpine](https://hub.docker.com/r/library/python) に基づく Docker イメージで実行されるため、バイナリーはこのディストリビューションと互換でなければなりません。
 
-アクション入力の「payload」パラメーターがバイナリー・プログラムへの定位置引数として渡され、プログラムの実行からの標準出力は「result」パラメーターで返されます。
+Docker スケルトンは、OpenWhisk 互換の Docker イメージをビルドするための便利な方法です。`wsk sdk install docker` CLI コマンドでスケルトンをインストールできます。
 
-Docker スケルトンは、{{site.data.keyword.openwhisk_short}} 互換の Docker イメージをビルドするための便利な方法です。`wsk sdk install docker` CLI コマンドでスケルトンをインストールできます。
+メイン・バイナリー・プログラムはコンテナー内部の `/action/exec` に置かれる必要があります。実行可能バイナリーは入力引数を `stdin` を介して受け取り、結果を `stdout` を介して返さなければなりません。
 
-メインのバイナリー・プログラムは、`dockerSkeleton/client/action` ファイルにコピーされます。比較ファイルまたはライブラリーは、`dockerSkeleton/client` ディレクトリーに存在することができます。
-
-また、`dockerSkeleton/Dockerfile` を変更して、コンパイル・ステップや依存関係を組み込むこともできます。例えば、アクションが Python スクリプトであれば、Python をインストールします。
-
+`dockerSkeleton` 内に含まれている `Dockerfile` を変更して、コンパイル・ステップや依存関係を組み込むこともできます。
 
 ## REST API
 {: #openwhisk_ref_restapi}
@@ -385,14 +438,14 @@ Docker スケルトンは、{{site.data.keyword.openwhisk_short}} 互換の Dock
 
 以下のコレクション・エンドポイントがあります。
 
-- `https://{BASE URL}/api/v1/namespaces`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations`
+- `https://openwhisk.{DomainName}/api/v1/namespaces`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
 
-`{BASE URL}` は、OpenWhisk API ホスト名 (例えば、openwhisk.ng.bluemix.net、172.17.0.1 など) です。
+`openwhisk.{DomainName}` は、OpenWhisk API ホスト名 (例えば、openwhisk.ng.bluemix.net、172.17.0.1 など) です。
 
 `{namespace}` には、文字 `_` を使用して、ユーザーの *default namespace* (すなわち、E メール・アドレス) を指定できます。
 
@@ -401,12 +454,12 @@ Docker スケルトンは、{{site.data.keyword.openwhisk_short}} 互換の Dock
 エンティティーのタイプごとに以下のエンティティー・エンドポイン
 トがあります。
 
-- `https://{BASE URL}/api/v1/namespaces/{namespace}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
 
 名前空間とアクティベーション・エンドポイントのみが GET 要求をサポートします。アクション、トリガー、ルール、およびパッケージのエンドポイントは、GET、PUT、および DELETE 要求をサポートします。アクション、トリガー、およびルールのエンドポイントも POST 要求をサポートします。これは、アクションとトリガーを起動し、ルールを使用可能または使用不可にするために使用されます。詳しくは、
 [
@@ -449,7 +502,8 @@ OpenWhisk API は、Web クライアントからの要求/応答呼び出しを�
 ## システムしきい値
 {: #openwhisk_syslimits}
 
-{{site.data.keyword.openwhisk_short}} には、アクションで使用するメモリーの量、1 時間当たりのアクション呼び出しの許容数など、システムしきい値がいくつかあります。以下の表に、デフォルトの限度を示します。
+### アクション
+{{site.data.keyword.openwhisk_short}} には、アクションで使用するメモリーの量、1 時間当たりのアクション呼び出しの許容数など、システムしきい値がいくつかあります。以下の表に、アクションのデフォルトの限度を示します。
 
 | 限度 | 説明 | 構成対象 | 単位 | デフォルト |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -485,6 +539,10 @@ OpenWhisk API は、Web クライアントからの要求/応答呼び出しを�
 * アクションの最大コード・サイズは 48MB です。
 * JavaScript アクションの場合は、ツールを使用して、依存関係を含むすべてのソース・コードを単一のバンドル・ファイルに連結することをお勧めします。
 
+### アクティベーション当たりのペイロード・サイズ (MB) (固定: 1 MB)
+{: #openwhisk_syslimits_activationsize}
+* 最大 POST コンテンツ・サイズに、アクション呼び出しまたはトリガー発生用の付随するパラメーターを加えたものが 1 MB です。
+
 ### 名前空間当たりの同時呼び出し (デフォルト: 100)
 {: #openwhisk_syslimits_concur}
 * 名前空間で同時に処理されるアクティベーションの数が 100 を超えることはできません。
@@ -495,7 +553,7 @@ OpenWhisk API は、Web クライアントからの要求/応答呼び出しを�
 {: #openwhisk_syslimits_invocations}
 * レート限度の N は 120/3600 に設定され、1 分/1 時間の枠内のアクション呼び出し数を制限します。
 * ユーザーがアクションの作成時にこの限度を変更することはできません。
-* この限度を超える CLI 呼び出しは、TOO_MANY_REQUESTS に対応するエラー・コードを受け取ります。
+* この限度を超える CLI または API 呼び出しは、HTTP 状況コード `429: TOO MANY REQUESTS` に対応するエラー・コードを受け取ります。
 
 ### パラメーターのサイズ (固定: 1 MB)
 {: #openwhisk_syslimits_parameters}
@@ -514,3 +572,18 @@ OpenWhisk API は、Web クライアントからの要求/応答呼び出しを�
 * ユーザーが使用可能なプロセスの最大数は 512 です (ハード制限とソフト制限の両方)。
 * docker run コマンドは、引数 `--ulimit nproc=512:512` を使用します。
 * プロセスの最大数の制限について詳しくは、[docker run](https://docs.docker.com/engine/reference/commandline/run) の資料を参照してください。
+
+### トリガー
+
+次の表に示すように、トリガーには分当たりと時間当たりの発生頻度の制限が課されます。
+
+| 限度 | 説明 | 構成対象 | 単位 | デフォルト |
+| ----- | ----------- | ------------ | -----| ------- |
+| minuteRate | 1 分当たりにこの数を超えるトリガーをユーザーが発生させることはできません。 | ユーザー当たり | 数 | 60 |
+| hourRate | 1 時間当たりにこの数を超えるトリガーをユーザーが発生させることはできません。 | ユーザー当たり | 数 | 720 |
+
+### 分/時間当たりのトリガー数 (固定: 60/720)
+{: #openwhisk_syslimits_triggerratelimit}
+* 発生頻度の限度 N は 60/720 に設定され、1 分/1 時間の枠内のトリガー発生数を制限します。
+* ユーザーがトリガーの作成時にこの限度を変更することはできません。
+* この限度を超える CLI または API 呼び出しは、HTTP 状況コード `429: TOO MANY REQUESTS` に対応するエラー・コードを受け取ります。

@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  anni: 2015, 2016
 
  
 
@@ -188,7 +188,7 @@ Puoi utilizzare uno o più dei seguenti parametri quando immetti il comando cf l
 <dd>*Importante:* se fornisci la tua password utilizzando il parametro *-p* sull'interfaccia riga di comando, la password potrebbe essere registrata nella cronologia della riga di comando. Per motivi di sicurezza, evita di fornire la password utilizzando il parametro
 -p. Immetti invece la password quando te lo chiede l'interfaccia riga di comando.</dd>
 <dt>*-sso*</dt>
-<dd>Devi utilizzare l'opzione SSO (single sign-on option) quando accedi con un ID federato. Questo parametro non è necessario quando accedi con un ID IBM. Se tenti di collegarti con un ID federato e non specifichi il parametro SSO, ti verrà rischiesto di includerlo. Utilizza la richiesta del parametro SSO per immettere la passcode monouso all'accesso.</dd>
+<dd>Devi utilizzare l'opzione SSO (single sign-on ) quando accedi con un ID federato. Non è necessario quando accedi con un ID IBM. Se tenti di collegarti con un ID federato e non specifichi il parametro SSO, ti verrà richiesto di includerlo. Utilizza la richiesta del parametro SSO per immettere la passcode monouso all'accesso.</dd>
 <dt>*-o*nome_organizzazione</dt>
 <dd>Il nome dell'organizzazione alla quale desideri effettuare l'accesso.</dd>
 <dt>*-s*nome_spazio</dt>
@@ -210,7 +210,7 @@ STDOUT e STDERR di un'applicazione.
 cf logs nomeapplicazione
 ```
 <dl>
-<dt>nome_applicazione</dt>
+<dt>nomeapplicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 <dt>*--recent*</dt>
 <dd>Richiama i log recenti.</dd>
@@ -231,14 +231,15 @@ Distribuisce una nuova applicazione a Bluemix oppure aggiorna un'applicazione es
 cf push nome_applicazione 
 ```
 <dl>
-<dt>nome_applicazione</dt>
+<dt>nomeapplicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 <dt>*-b*nome_pacchettodibuild</dt>
 <dd>Il nome del pacchetto di build. Il nome_pacchettodibuild può essere un pacchetto di build personalizzato in base al nome oppure un URL GIT, ad esempio `my-buildpack` o `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
 <dt>*-c*comando_di_avvio</dt>
 <dd>Il comando di avvio della tua applicazione. Per utilizzare il comando di avvio predefinito, specifica un valore null per questa opzione. Ad
 esempio:</dd>
-<dd>```
+<dd>
+```
 cf push nomeapplicazione -c null
 ```</dd>
 <dd>Puoi anche utilizzare questa
@@ -246,22 +247,24 @@ opzione per eseguire i file script. Per esempio:
 ```
 cf push nomeapplicazione -c “bash ./<run.sh>"
 ```</dd>
-<dt>*-f* manifest_path</dt>
+<dt>*-f*percorso_manifest</dt>
 <dd>Il percorso al file manifest. Il file manifest predefinito è manifest.yml sotto la directory root della tua applicazione.</dd>
-<dt>*-i* instance_number</dt>
+<dt>*-i*numero_istanze</dt>
 <dd>Il numero di istanze.</dd>
-<dt>*-k* disk_limit</dt>
-<dd>Il limite di disco per l'applicazione, ad esempio *256M*, *1024M* o *1G*.</dd>
-<dt>*-m* memory_limit</dt>
-<dd>Il limite di memoria per l'applicazione, ad esempio *256M*, *1024M* o *1G*.</dd>
-<dt>*-n* host_name</dt>
+<dt>*-k*limite_disco</dt>
+<dd>Il limite di disco per l'applicazione, ad esempio *256M*, *1024M*
+o *1G*.</dd>
+<dt>*-m*limite_memoria</dt>
+<dd>Il limite di memoria per l'applicazione, ad esempio *256M*, *1024M*
+o *1G*.</dd>
+<dt>*-n*nome_host</dt>
 <dd>Il nome host per l'applicazione, ad esempio *my-subdomain*.</dd>
-<dt>*-p* app_path</dt>
+<dt>*-p*percorso_applicazione</dt>
 <dd>Il percorso alla directory dell'applicazione o al file di archivio dell'applicazione.</dd>
-<dt>*-t* timeout</dt>
+<dt>*-t*timeout</dt>
 <dd>Il tempo massimo in secondi per l'avvio dell'applicazione. Altri timeout lato server potrebbero
 sovrascrivere questo valore.</dd>
-<dt>*-s* stackname</dt>
+<dt>*-s* nomestack</dt>
 <dd>Lo stack per l'esecuzione delle applicazioni. Uno stack è un file system precostruito che include il sistema operativo. Utilizza `cf stacks` per visualizzare gli stack disponibili in {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*--no-hostname*</dt>
 <dd>Associa il dominio di sistema Bluemix a questa applicazione.</dd>
@@ -283,14 +286,16 @@ il limite di spazio su disco e il limite di memoria per un'applicazione.
 cf scale nome_applicazione -i numero_istanze -k limite_disco -m limite_memoria
 ```
 <dl>
-<dt>nome_applicazione</dt>
+<dt>nomeapplicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
-<dt>*-i* instance_number</dt>
+<dt>*-i*numero_istanze</dt>
 <dd>Il numero di istanze</dd>
-<dt>*-k* disk_limit</dt>
-<dd>Il limite di disco per l'applicazione, ad esempio *256M*, *1024M* o *1G*.</dd>
-<dt>*-m* memory_limit</dt>
-<dd>Il limite di memoria per l'applicazione, ad esempio *256M*, *1024M* o *1G*.</dd>
+<dt>*-k*limite_disco</dt>
+<dd>Il limite di disco per l'applicazione, ad esempio *256M*, *1024M*
+o *1G*.</dd>
+<dt>*-m*limite_memoria</dt>
+<dd>Il limite di memoria per l'applicazione, ad esempio *256M*, *1024M*
+o *1G*.</dd>
 <dt>*-f*</dt>
 <dd>Forza il riavvio dell'applicazione senza che venga presentata alcuna richiesta.</dd>
 </dl>
@@ -335,7 +340,7 @@ Arresta un'applicazione.
 cf stop nome_applicazione
 ```
 <dl>
-<dt>nome_applicazione</dt>
+<dt>nomeapplicazione</dt>
 <dd>Il nome dell'applicazione.</dd>
 </dl>
 

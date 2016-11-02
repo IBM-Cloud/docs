@@ -82,7 +82,7 @@ copyright:
 |{{site.data.keyword.weather_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.IntegrationTestingshort}}	|はい		|はい		|いいえ|
 |{{site.data.keyword.iot_short}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.keymanagementserviceshort}}	|いいえ		|はい		|いいえ|
+|{{site.data.keyword.keymanagementserviceshort}}	|はい		|はい		|いいえ|
 |{{site.data.keyword.languagetranslationshort}}	|はい		|はい		|はい|
 |{{site.data.keyword.messagehub}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.messageresonanceshort}}	|はい		|はい		|いいえ|

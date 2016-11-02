@@ -83,7 +83,8 @@ Folgende HTTP-Methoden sind zulässig:
 </ul>
 Bei HTTP-Inaktivität wird das Zeitlimit nach zwei Minuten überschritten.</dd>
 <dd>
-Folgende Header werden von DataPower belegt:<dl>
+Folgende Header werden von DataPower belegt:
+<dl>
 <dt>$wsis</dt>
 <dd>Auf 'true' gesetzt, wenn die clientseitige Verbindung sicher ist (HTTPS), andernfalls auf 'false' gesetzt.</dd>
 <dt>$wssc</dt>

@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Troubleshooting for runtimes
 {: #runtimes}
 
-Last updated: 18 August 2016
-{: .last-updated}
 
 
 You might experience problems when you use IBM® Bluemix™ runtimes. However, in many cases, you can recover from these problems by following a few easy steps.

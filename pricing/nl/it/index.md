@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  anni: 2015, 2016
 
  
 
@@ -51,7 +51,7 @@ copyright:
 # Prezzi
 {: #pricing}
 
-*Ultimo aggiornamento: 1 giugno 2016*
+*Ultimo aggiornamento: 13 settembre 2016*
 {: .last-updated}
 
 Puoi eseguire le applicazioni in {{site.data.keyword.Bluemix}}
@@ -131,9 +131,7 @@ un account Sottoscrizione, puoi ottenere uno sconto mensile basato su un impegno
 
 Puoi convertire il tuo account di prova gratuito in un account fatturabile in qualsiasi momento. Tutte le soluzioni {{site.data.keyword.Bluemix_notm}} e le informazioni sul tuo account di prova gratuito non fatturabile saranno inglobate senza soluzione di continuità nel nuovo account fatturabile.
 
-Dopo che hai creato un account fatturabile, puoi modificare le informazioni da te fornite. Fai clic sull'**icona Impostazioni profilo**
-nell'angolo superiore destro dell'interfaccia utente {{site.data.keyword.Bluemix_notm}} e fai quindi clic su **Account &gt; Tipo di account** per
-modificare le tue informazioni.
+Dopo che hai creato un account fatturabile, puoi modificare le informazioni da te fornite. Fai clic sull'**icona Impostazioni profilo**, quindi fai clic su **Account &gt; Tipo di account ** per modificare le tue informazioni.
 
 Se riscontri qualche problema con {{site.data.keyword.Bluemix_notm}} quando utilizzi un account Pagamento a consumo o Sottoscrizione, vedi [Come ottenere aiuto online](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) per ulteriori informazioni.
 
@@ -407,7 +405,6 @@ tua applicazione nel seguente esempio. L'applicazione web utilizza i servizi e g
 * Due politiche di {{site.data.keyword.autoscaling}}, processore e memoria
 * 2 GB al mese di {{site.data.keyword.datacshort}}
 * 150 GB al mese di database NoSQL, 100.000 chiamate API heavy e 500.000 chiamate API light.
-* 8 GB al mese di database {{site.data.keyword.sqldb}}
 * 20 GB di traffico di rete in entrata o in uscita
 
 ###Prezzi per le risorse {{site.data.keyword.Bluemix_notm}}
@@ -428,7 +425,6 @@ sono in dollari statunitensi.
 |Data Cache - Premium |	25 GB di spazio di cache e una
                                 replica |	$505,00 USD/istanza|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB di archiviazione dati gratuita<br/>50.000 chiamate API light API gratuite al mese<br/>10.000 chiamate API heavy gratuite al mese | $1,00 USD/GB<br/>$0,03 USD/1000 chiamate API light<br/>$0,15 USD/1000 chiamate API heavy |
-|SQL Database 	| 2 GB gratuiti per istanza<br/>Massimo di 10 GB per istanza |	$30,00 USD/istanza |
 *Tabella 7. Listino prezzi*
 
 ###Calcolo del prezzo
@@ -471,17 +467,36 @@ include le seguenti parti:</p>
 <p>
 Il prezzo totale è 148 + 13,5 + 13,5 = $175.</p></dd>
 
-<dt>8 GB al mese di SQL Database</dt>
-<dd>Il prezzo totale è di $30 per istanza.</dd>
-
 <dt>20 GB di traffico di rete in entrata o in uscita</dt>
 <dd>Il traffico di rete in entrata
 e in uscita è gratuito.</dd>
 
 </dl>
 
-Una volta aggiunti tutti gli elementi, il prezzo totale dell'applicazione è di
-           $384,15.
+Una volta aggiunti tutti gli elementi, il prezzo totale dell'applicazione è di $354,15.
+
+###Valute supportate
+
+Sebbene negli esempi dei prezzi vanga utilizzato il dollaro americano (USD), in {{site.data.keyword.Bluemix_notm}} sono supportate anche altre valute. La seguente tabella elenca le diverse valute supportate.
+
+|Codice ISO 4217| Valuta|
+|-------------|---------|
+|AUD |	  Dollaro australiano|
+|BRL |	  Real brasiliano|
+|CAD |	  Dollaro canadese|
+|CHF |	  Franco svizzero|
+|DKK |	  Corona danese|
+|EUR |	  Euro|
+|GBP |	  Sterlina britannica|
+|INR |	  Rupia indiana|
+|JPY |	  Yen giapponese|
+|KRW |	  Won sudcoreano|
+|NOK |	  Corona norvegese|
+|NZD |	  Dollaro neozelandese|
+|SEK |	  Corona svedese|
+|USD |    Dollaro americano|
+|ZAR |	  Rand sudafricano|
+*Tabella 8. Valute supportate*
 
 ##Dashboard di utilizzo
 {: #usage}
@@ -492,7 +507,7 @@ vedere i GB-ora di runtime e il consumo dei servizi in tutte le regioni oppure p
 selezionare la visualizzazione di una regione e di uno spazio specifici per gli ultimi
 12 mesi.
 
-Per aprire la vista Dashboard di utilizzo, fai clic sull'icona **Account e supporto** &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Dashboard di utilizzo**. Nella vista, puoi vedere un riepilogo dell'utilizzo di runtime e servizi per l'account. I gestori della fatturazione possono visualizzare i dettagli solo per le organizzazioni in cui ricoprono tale ruolo.
+Per aprire la vista Dashboard di utilizzo, fai clic sull'icona **{{site.data.keyword.avatar}}** ![icona Avatar ](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Dashboard di utilizzo**. Nella vista, puoi vedere un riepilogo dell'utilizzo di runtime e servizi per l'account. I gestori della fatturazione possono visualizzare i dettagli solo per le organizzazioni in cui ricoprono tale ruolo.
 
 Al proprietario dell'account viene addebitato l'utilizzo totale sostenuto su tutte le organizzazioni alla fine di ciascun ciclo di fatturazione. Ogni ciclo di fatturazione dura un mese.
 
@@ -505,7 +520,7 @@ Se selezioni una specifica organizzazione per l'**Organizzazione**, puoi vedere 
 
 In qualità di proprietario dell'account o gestore della fatturazione, puoi utilizzare la vista Dashboard di utilizzo per visualizzare tutti i crediti del tuo account. Potresti avere crediti se, ad esempio, hai associato un account SoftLayer a un account {{site.data.keyword.Bluemix_notm}}.
 
-Per aprire la vista Dashboard di utilizzo, fai clic sull'icona **Account e supporto** ![Icona Account e supporto](../admin/images/account_support.svg), quindi seleziona **Account**. Nella pagina così visualizzata, fai clic su **Dashboard di utilizzo**. Nella vista vengono mostrati gli eventuali crediti e la rispettiva data di scadenza.
+Per aprire la vista Dashboard di utilizzo, fai clic sull'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) e seleziona **Account**. Nella pagina così visualizzata, fai clic su **Dashboard di utilizzo**. Nella vista vengono mostrati gli eventuali crediti e la rispettiva data di scadenza.
 
 ##Notifiche
 {: #notifications}
@@ -513,15 +528,14 @@ Per aprire la vista Dashboard di utilizzo, fai clic sull'icona **Account e suppo
 In quanto gestore dell'account di un account Pagamento a consumo, puoi impostare le notifiche di spesa rispetto al costo totale del tuo account per il tuo
 runtime, i tuoi servizi e per i singoli servizi, esclusi quelli di terze parti. Ricevi le notifiche quando raggiungi l'80%, il 90% e il 100% delle soglie di spesa da te specificate.
 
-Per aprire la vista **Notifiche**, fai clic sull'icona **Account e supporto** &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Notifiche di spesa**. Immetti un valore numerico per impostare la soglia di spesa per l'attivazione di una notifica per ciascun tipo di notifica di spesa, come necessario. Puoi anche aggiungere ed eliminare notifiche per singoli servizi.
+Per aprire la vista **Notifiche**, fai clic sull'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Notifiche di spesa**. Immetti un valore numerico per impostare la soglia di spesa per l'attivazione di una notifica per ciascun tipo di notifica di spesa, come necessario. Puoi anche aggiungere ed eliminare notifiche per singoli servizi.
 
 ##Come modificare il tuo piano
 {: #changing}
 
 Puoi modificare il tuo piano di servizio in {{site.data.keyword.Bluemix_notm}} nel Dashboard del servizio, se le modifiche del piano sono abilitate per tale servizio.
 
-Solo degli specifici servizi ti consentono di modificare il piano di servizio. Se le modifiche del piano sono abilitate per il servizio, il Dashboard del servizio
-visualizza un'opzione **Piano** nel riquadro di navigazione di sinistra. Se modifichi
+Solo degli specifici servizi ti consentono di modificare il piano di servizio. Se le modifiche del piano sono abilitate per il servizio, il Dashboard del servizio visualizza un'opzione **Piano** nel riquadro di navigazione. Se modifichi
 il tuo piano, ogni servizio prevede una procedura diversa a cui devi attenerti.
 
 1. Per modificare il tuo piano, nel Dashboard del servizio, fai clic su **Piano**. Di norma, puoi eseguire un upgrade del tuo piano oppure ridurlo.
@@ -534,7 +548,7 @@ che tu debba preparare nuovamente la tua applicazione. Nel caso invece in cui tu
 |Presence Insights 	|Se hai un piano Lite e superi le franchigie, viene visualizzato oppure registrato nei log un messaggio 403 che indica che non sei più autorizzato e la tua
 istanza del servizio viene disabilitata. Inoltre, le chiamate API POST REST vengono rifiutate con una risposta 403.<br/><br/>Se il tuo servizio è
 disabilitato perché hai superato la franchigia, puoi eseguire l'upgrade da un piano Lite a un piano a pagamento. Il tuo servizio viene riabilitato entro 2 ore.<br/><br/>Se hai un piano a pagamento, puoi ridurlo a un piano Lite a condizione che il tuo utilizzo rimanga entro la franchigia prevista dal piano Lite per gli eventi e l'archiviazione totale.<br/><br/>Quando esegui l'upgrade o la riduzione del tuo piano, non hai bisogno di preparare nuovamente o riavviare le tue applicazioni.|
-*Tabella 8. Passi successivi per modificare il tuo piano*
+*Tabella 9. Passi successivi per modificare il tuo piano*
 
 ###Come modificare il tuo piano tramite l'interfaccia riga di comando
 

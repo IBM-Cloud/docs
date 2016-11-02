@@ -1290,7 +1290,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 {: tsResolve}
  
   * 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，选择要在其中创建空间的组织，然后单击**创建空间**。
-  * 在 cf 命令行界面中，键入 ```cf create-space <space_name> -o <organization_name>```。
+  * 在 cf 命令行界面中，键入 `cf create-space <space_name> -o <organization_name>`。
   
   
   

@@ -27,8 +27,8 @@ As seções a seguir fornecem detalhes sobre o {{site.data.keyword.openwhisk}}.
 ## Como o {{site.data.keyword.openwhisk_short}} funciona
 {: #openwhisk_how}
 
-{{site.data.keyword.openwhisk_short}} é uma plataforma de computação
-orientada a eventos que executa código em resposta a eventos ou chamadas diretas.
+{{site.data.keyword.openwhisk_short}} é uma plataforma de cálculo orientada para eventos também referida como Cálculo sem servidor ou como Função como um serviço (FaaS)
+que executa código em resposta a eventos ou chamadas diretas.
 
 A figura a seguir mostra a arquitetura de alto nível do {{site.data.keyword.openwhisk_short}}.
 
@@ -41,13 +41,11 @@ customizado integrado em um contêiner do Docker. Ações no {{site.data.keyword
 
 Além de associar ações a acionadores, é possível chamar uma ação diretamente usando a API do {{site.data.keyword.openwhisk_short}}, a CLI ou o SDK do iOS. Um conjunto de ações também pode ser encadeado sem precisar escrever qualquer código. Cada ação da cadeia é chamada em sequência com a saída de uma ação passada como entrada para a próxima na sequência.
 
-Com máquinas virtuais ou contêineres de longa execução tradicionais, é uma prática comum implementar vários contêineres ou VMs para ser resiliente contra indisponibilidades de uma única instância. No entanto, o {{site.data.keyword.openwhisk_short}} oferece um modelo alternativo sem gasto adicional de custo relacionado à resiliência. A execução de ações on demand fornece escalabilidade inerente e utilização ideal, já que o número de ações em execução sempre corresponde à taxa de acionador. 
-Além disso, o desenvolvedor agora se concentra apenas em seu código e não se preocupa com
+Com máquinas virtuais ou contêineres de longa execução tradicionais, é uma prática comum implementar vários contêineres ou VMs para ser resiliente contra indisponibilidades de uma única instância. No entanto, o {{site.data.keyword.openwhisk_short}} oferece um modelo alternativo sem gasto adicional de custo relacionado à resiliência. A execução de ações on demand fornece escalabilidade inerente e utilização ideal, já que o número de ações em execução sempre corresponde à taxa de acionador. Além disso, o desenvolvedor agora se concentra apenas em seu código e não se preocupa com
 monitoramento, correção e proteção da infraestrutura subjacente de servidor,
 armazenamento, rede e sistema operacional.
 
-Integrações a serviços adicionais e provedores de eventos podem ser incluídas com pacotes. Um pacote é um pacote configurável de feeds e ações. Um feed é uma parte do código que configura uma origem de eventos externos para disparar eventos acionadores. 
-Por exemplo, um acionador criado com um feed de mudança do Cloudant irá configurar um
+Integrações a serviços adicionais e provedores de eventos podem ser incluídas com pacotes. Um pacote é um pacote configurável de feeds e ações. Um feed é uma parte do código que configura uma origem de eventos externos para disparar eventos acionadores. Por exemplo, um acionador criado com um feed de mudança do Cloudant irá configurar um
 serviço para disparar o acionador sempre que um documento for modificado ou incluído em
 um banco de dados do Cloudant. Ações em pacotes representam lógica reutilizável que um
 provedor de serviços pode disponibilizar para que os desenvolvedores não apenas possam

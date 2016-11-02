@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # User, application, and gateway roles
-Last updated: 16 September 2016
-{: .last-updated}
 
 Roles are sets of permissions that you can use to grant or restrict access to specific operations. You can use roles to manage permissions for groups of users, applications, and gateways.
 {:shortdesc}
@@ -27,7 +26,7 @@ The following standard user roles are available:
 
 User role | Description
 ------------- | -------------
-Administrator | A 'super-user' role that grants access to all user-related APIs. Administrators cannot access operations that are restricted to devices and applications. 
+Administrator | A 'super-user' role that grants access to all user-related APIs. Administrators cannot access operations that are restricted to devices and applications.
 Operator | Intended for front-end organization users. Grants access to most organization operations, access control operations, analytics operations, third-party operations, and risk management operations.
 Developer | Grants unrestricted access to device operations, log operations, cache operations, historian operations, analytics operations, and third-party service operations. The role provides limited access to organization, access control, and risk management operations.
 Analyst | Grants access to analytics operations, including creating, updating, and deleting rules, actions, and schemas.

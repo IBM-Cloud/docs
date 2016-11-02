@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Connecting devices
 {: #iotplatform_task}
-Last updated: 08 September 2016
-{: .last-updated}
 
 Before you can begin receiving data from your your IoT devices, you must connect them to  {{site.data.keyword.iot_full}}. Connecting a device to {{site.data.keyword.iot_short_notm}} involves registering the device with {{site.data.keyword.iot_short_notm}} and then using the registration information to configure the device to connect to {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
@@ -51,20 +50,48 @@ To add a device from the {{site.data.keyword.iot_short_notm}} dashboard:
 Each device that is connected to the {{site.data.keyword.iot_short_notm}} must be associated with a device type. Device types are groups of devices that share common characteristics.  
 When you add your first device to your {{site.data.keyword.iot_short_notm}} organization, no device types are available in the **Device type** menu. You must first create a device type:
  1. Click **Create device type**.
- 2. Enter a name such as `my_device_type` and a description for the device type.
+ 2. Enter a device type name such as `my_device_type` and a description for the device type.   
+ **Important:** The device type name must be no more than 36 characters and can contain only:
+ <ul>
+  <li>Alpha-numeric characters (a-z, A-Z, 0-9)</li>
+  <li>Hypens (-)</li>
+  <li>Underscores (&lowbar;)</li>
+  <li>Periods (.)</li>
+  </ul>
  3. Optional: Enter device type attributes and metadata.    
  **Tip:** You can add and edit attributes and metadata later.
  4. Click **Create** to add the new device type.
 10. Click **Next** to begin the process of adding your device with the selected device type.
-11. Enter a device ID. **Tip:** For network connected devices, this could for example be the device MAC address without any separating colons.  
-The device ID is used to identify the device in the {{site.data.keyword.iot_short_notm}} dashboard and is also a required parameter for connecting your device to {{site.data.keyword.iot_short_notm}}.
+11. Enter a device ID such as `my_first_device`.  
+The device ID is used to identify the device in the {{site.data.keyword.iot_short_notm}} dashboard and is also a required parameter for connecting your device to {{site.data.keyword.iot_short_notm}}.  
+**Important:** The device ID must be no more than 36 characters and can contain only:
+ <ul>
+ <li>Alpha-numeric characters (a-z, A-Z, 0-9)</li>
+ <li>Hyphens (-)</li>
+ <li>Underscores (&lowbar;)</li>
+ <li>Periods (.)</li>  
+ </ul>
+ **Tip:** For network connected devices, the device ID could for example be the device MAC address without any separating colons.  
 12. Optional: Click **Additional fields** to add device information, such as serial number, manufacturer, model, and so on.  
  **Tip:** You can add and edit this information later.
 12. Optional: Enter device JSON metadata.  
  **Tip:** You can add and edit device metadata later.
 13. Click **Next** to complete the addition of your device.
 14. Verify that the summary information is correct and then click **Add** to add the connection.  
-**Tip:** You have the option to accept an automatically generated authentication token or to provide an authentication token yourself. If you choose to create your own token, make sure that it consists only of alpha-numerical characters and the following special characters: hyphen (-), underscore (_), exclamation-point (!), ampersand (&), at sign (@), question mark (?), asterisk (*), plus sign (+), period ( . ), or right and left parentheses. The token must not contain repeated character sequences, dictionary words, user names, or other predefined sequences.
+**Tip:** You have the option to accept an automatically generated authentication token or to provide an authentication token yourself.  
+If you choose to create your own token, make sure that it is between 8 and 36 characters long and consists only of alpha-numerical characters and the following special characters:
+ - Hyphen (-)
+ - Underscore (&lowbar;)
+ - Exclamation-point (!)
+ - Ampersand (&)
+ - At sign (@)
+ - Question mark (?)
+ - Asterisk (&#42;)
+ - Plus sign (+)
+ - Period (.)
+ - Right and left parentheses.  
+
+ **Important:** The token must not contain repeated character sequences, dictionary words, user names, or other predefined sequences.
 15. In the device information page, copy and save the following device information:  
  - Organization ID, such as `tubo8x`
  - Device Type, such as `my_device_type`

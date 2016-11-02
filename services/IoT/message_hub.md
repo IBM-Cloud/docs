@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-29"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Connecting and configuring a historian service by using {{site.data.keyword.messagehub}}  
 {: #messagehub_main}
-Last updated: 29 September 2016
-{: .last-updated}
 
 Connecting {{site.data.keyword.messagehub_full}} to {{site.data.keyword.iot_short}} provides a scalable, high-throughput message bus for historical data storage. {{site.data.keyword.messagehub}} is built on Apache Kafka, which is an open-source, high-throughput messaging system that provides a low-latency platform for handling real-time data feeds.
 

@@ -13,7 +13,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}}-Mobil-SDK verwenden
 {: #openwhisk_mobile_sdk}
-Letzte Aktualisierung: 4. August 2016
+Letzte Aktualisierung: 26. August 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} stellt ein Mobil-SDK für iOS- und watchOS 2-Geräte bereit, mit dem mobile Apps dazu eingerichtet werden können, ohne großen Aufwand ferne Auslöser zu aktivieren und ferne Aktionen aufzurufen. Gegenwärtig ist keine Version für Android verfügbar. Android-Entwickler können die {{site.data.keyword.openwhisk}}-REST-API direkt verwenden.
@@ -32,30 +32,27 @@ Sie können das Mobil-SDK mithilfe von CocoaPods, Carthage oder aus dem Quellenv
 Das {{site.data.keyword.openwhisk_short}}-SDK für den mobilen Einsatz ist nur über CocoaPods für die öffentliche Verteilung verfügbar. Wenn CocoaPods installiert ist, fügen Sie die folgenden Zeilen in eine Datei mit dem Namen 'Podfile' im Projektverzeichnis der Starter-App ein. 
 
 ```
-source 'https://github.com/openwhisk/openwhisk-podspecs.git'
-
+install! 'cocoapods', :deterministic_uuids => false
 use_frameworks!
 
 target 'MyApp' do
-     platform :ios, '9.0'
-     pod 'OpenWhisk'
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 
-target 'MyApp WatchKit Extension' do
-     platform :watchos, '2.0'
-     pod 'OpenWhisk-Watch'
+target 'MyApp WatchKit Extension' do 
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 ```
 {: codeblock}
 
-Geben Sie über die Befehlszeile den Befehl `pod install` ein. Dieser Befehl installiert das SDK für eine iOS-App mit einer watchOS 2-Erweiterung. Verwenden Sie die Arbeitsbereichsdatei, die CocoaPods für Ihre App erstellt, um das Projekt in Xcode zu öffnen.
+Geben Sie über die Befehlszeile den Befehl `pod install` ein. Dieser Befehl installiert das SDK für eine iOS-App mit einer watchOS 2-Erweiterung.  Verwenden Sie die Arbeitsbereichsdatei, die CocoaPods für Ihre App erstellt, um das Projekt in Xcode zu öffnen.
 
 ### Mithilfe von Carthage installieren
 {: #openwhisk_add_sdk_carthage}
 
 Erstellen Sie eine Datei im Projektverzeichnis Ihrer App mit dem Namen 'Cartfile'. Fügen Sie die folgende Zeile in die Datei ein:
 ```
-github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.7 # Or latest version
 ```
 {: codeblock}
 
@@ -66,7 +63,8 @@ Dann müssen Sie OpenWhisk.framework den eingebetteten Frameworks in Ihrem Xcode
 ### Aus Quellcode installieren
 {: #openwhisk_add_sdk_source}
 
-Der Quellcode wird unter https://github.com/openwhisk/openwhisk-client-swift.git zur Verfügung gestellt. Öffnen Sie mit Xcode ein Projekt unter Verwendung von `OpenWhisk.xcodeproj`.
+Der Quellcode wird unter https://github.com/openwhisk/openwhisk-client-swift.git zur Verfügung gestellt.
+Öffnen Sie mit Xcode ein Projekt unter Verwendung von `OpenWhisk.xcodeproj`.
 Das Projekt enthält die beiden Schemas 'OpenWhisk' (für iOS) und 'OpenWhiskWatch' (für watchOS 2).
 Erstellen Sie das Projekt (Build) für die Ziele, die Sie benötigen, und fügen Sie die resultierenden Frameworks Ihrer App (in der Regel in ~/Library/Developer/Xcode/DerivedData/Ihr App-Name) hinzu.
 
@@ -83,7 +81,7 @@ wsk sdk install iOS
 
 Mit diesem Befehl wird eine komprimierte Datei mit der Starter-App heruntergeladen. Im Projektverzeichnis befindet sich eine Podfile. 
 
-Geben Sie den folgenden Befehl ein, um das SDK zu installieren: 
+Geben Sie den folgenden Befehl ein, um das SDK zu installieren:
 ```
 pod install
 ```

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-21"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # MQTT connectivity for devices
 {: #mqtt}
-Last updated: 21 September 2016
-{: .last-updated}
 
 MQTT is the primary protocol that devices and applications use to communicate with the {{site.data.keyword.iot_full}}. Client libraries, information, and samples are provided to help you to connect and integrate your devices with {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}

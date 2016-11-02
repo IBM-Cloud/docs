@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Application, device, and gateway connections to {{site.data.keyword.iot_short_notm}}
 {: #connect_devices_apps_gw}
-Last updated: 08 September 2016
-{: .last-updated}
 
 Applications, devices, and gateways can connect to {{site.data.keyword.iot_full}} through the MQTT protocol. Devices can also connect and publish events to {{site.data.keyword.iot_short_notm}} through the HTTP API.
 {: shortdesc}

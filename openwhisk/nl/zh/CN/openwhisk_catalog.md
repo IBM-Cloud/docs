@@ -18,7 +18,7 @@ copyright:
 
 # 使用针对 {{site.data.keyword.openwhisk_short}} 启用的 {{site.data.keyword.Bluemix_notm}} 服务
 {: #openwhisk_ecosystem}
-上次更新时间：2016 年 8 月 4 日
+上次更新时间：2016 年 9 月 9 日
 {: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，通过包的目录，您能够轻松地借助多个有用的功能增强应用程序，以及访问生态系统中的外部服务。启用了 {{site.data.keyword.openwhisk_short}} 的外部服务的示例包括 Cloudant、The Weather Company、Slack 和 GitHub。
@@ -212,11 +212,11 @@ wsk activation poll
 1. 使用先前创建的包绑定中的 `write` 操作来存储文档。确保将 `/myNamespace/myCloudant` 替换为您的包名。
 
   ```
-wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
   ```
   {: pre}
   ```
-  ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
+  ok: invoked /myNamespace/myCloudant/write with id 62bf696b38464fd1bcaff216a68b8287
   {
     "id": "heisenberg",
     "ok": true,
@@ -238,7 +238,7 @@ wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbnam
 1. 使用先前创建的包绑定中的 `read` 操作来访存文档。确保将 `/myNamespace/myCloudant` 替换为您的包名。
 
   ```
-wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
+  wsk action invoke /myNamespace/myCloudant/read --blocking --result --param dbname testdb --param id heisenberg
   ```
   {: pre}
   ```
@@ -309,11 +309,11 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 
 `/whisk.system/weather/forecast` 操作通过从 The Weather Company 调用 API，返回某个位置的天气预报。参数如下所示：
 
-- `username`：Weather Company Data for IBM Bluemix 的用户名，此用户名有权调用预测 API。
-- `password`：Weather Company Data for IBM Bluemix 的密码，此密码有权调用预测 API。
+- `username`：The Weather Company Data for IBM Bluemix 的用户名，此用户名有权调用预测 API。
+- `password`：The Weather Company Data for IBM Bluemix 的密码，此密码有权调用预测 API。
 - `latitude`：位置的纬度坐标。
 - `longitude`：位置的经度坐标。
-- `timeperiod`：预报的时间段。有效选项为 '10day' -（缺省值）返回每日 10 天预报，'24hour' - 返回每小时 2 天预报，'current' - 返回当前天气条件，'timeseries' - 返回当前观察和长达过去 24 小时（从当前日期和时间）的观察。 
+- `timeperiod`：预报的时间段。有效选项为：'10day' -（缺省值）返回 10 天的每日预报，'48hour' - 返回 2 天的每小时预报，'current' - 返回当前天气状况，'timeseries' - 返回当前观察数据和过去长达 24 小时（从当前日期和时间开始）的观察数据。
 
 
 以下是创建包绑定并获取 10 天天气预报的示例。
@@ -321,7 +321,7 @@ wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname
 1. 使用 API 密钥创建包绑定。
 
   ```
-wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
+  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
   ```
   {: pre}
 
@@ -549,6 +549,7 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 - `channel`：要将消息发布到的 Slack 通道。
 - `username`：发布消息的用户的名称。
 - `text`：要发布的消息。
+- `token`：（可选）Slack [访问令牌](https://api.slack.com/tokens)。请参阅[下文](./openwhisk_catalog.html#openwhisk_catalog_slack_token)，以获取有关使用 Slack 访问令牌的更多详细信息。
 
 下面是配置 Slack、创建包绑定并将消息发布到通道的示例。
 
@@ -570,6 +571,10 @@ wsk action invoke mySlack/post --blocking --result --param text 'Hello from Open
   ```
   {: pre}
 
+### 使用基于 Slack 令牌的 API
+{: #openwhisk_catalog_slack_token}
+
+如果您愿意，可选择性使用基于 Slack 令牌的 API，而不使用 Webhook API。如果选择这样做，请传递包含 Slack [访问令牌](https://api.slack.com/tokens)的 `token` 参数。然后，您可使用任一 [Slack API 方法](https://api.slack.com/methods)作为 `url` 参数。例如，要发布消息，使用的 `url` 参数值将为 [slack.postMessage](https://api.slack.com/methods/chat.postMessage)。
 
 ## 使用 GitHub 包
 {: #openwhisk_catalog_github}

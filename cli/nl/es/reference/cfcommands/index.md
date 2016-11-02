@@ -16,7 +16,7 @@ copyright:
 
 # Mandatos de Cloud Foundry (cf)
 
-*Última actualización: 29 de enero de 2016*
+*Última actualización: 8 de julio de 2016*
 {: .last-updated}
 
 Puede utilizar mandatos de Cloud Foundry (cf) para gestionar apps.
@@ -116,7 +116,7 @@ cf delete nombre_app
 <dd>Fuerza la supresión de la app sin ninguna confirmación. Este
 parámetro es opcional.</dd>
 <dt>*-r*</dt>
-<dd>Suprime todos los nombres de dominio asociados a la app . Este
+<dd>Suprime todos los nombres de dominio asociados a la app. Este
 parámetro es opcional.</dd>
 </dl>
 
@@ -166,6 +166,11 @@ de un mandato.</dd>
 
 Se inicia la sesión
 en {{site.data.keyword.Bluemix_notm}}.
+
+<!-- staging only for atlas 45 -->
+
+**Nota**: si va a iniciar sesión con un ID federado, debe utilizar el parámetro de inicio de sesión único (SSO) para iniciar la sesión. 
+
 ```
 cf login
 ```
@@ -181,6 +186,8 @@ parámetro es opcional.</dd>
 <dt>*-p* contraseña</dt>
 <dd>Su contraseña.</dd>
 <dd>*Importante:* Si especifica la contraseña con el parámetro *-p* en la interfaz de línea de mandatos, es posible que la contraseña quede registrada en el historial de línea de mandatos. Por motivos de seguridad, evite especificar la contraseña con el parámetro -p. Escriba en su lugar la contraseña cuando se lo solicite la interfaz de línea de mandatos.</dd>
+<dt>*-sso*</dt>
+<dd>Debe utilizar la opción de inicio de sesión único (SSO) al iniciar sesión con un ID federado. Esto no es necesario al iniciar sesión con un ID de IBM. Si intenta iniciar sesión con un ID federado y no especifica el parámetro SSO, se le solicitará que lo incluya. Al utilizar el parámetro SSO se le solicitará que especifique el código de acceso de una sola vez tras iniciar la sesión.</dd>
 <dt>*-o*nombre_organización</dt>
 <dd>El nombre de la organización en la que desea iniciar sesión.</dd>
 <dt>*-s*nombre_espacios</dt>
@@ -188,6 +195,8 @@ parámetro es opcional.</dd>
 <dt>*--skip-ssl-validation*</dt>
 <dd>Inhabilita el proceso de validación de SSL. El uso de este parámetro puede ocasionar problemas de seguridad.</dd>
 </dl>
+
+<!-- staging only content for the sso parameter and note for federated ID atlas 45 work -->
 
 *Nota:* Si proporciona la contraseña en el parámetro *-p* de este mandato, es posible que quede registrada en el archivo histórico del mandato de shell
 y lo vean otros usuarios del sistema operativo local.
@@ -230,7 +239,8 @@ ser un paquete de compilación personalizado por nombre o URL Git, por ejemplo, 
 <dt>*-c*mandato_inicio</dt>
 <dd>El mandato de inicio de la app. Para utilizar el mandato de inicio predeterminado
 debe especificar un valor null para esta opción. Por ejemplo:</dd>
-<dd>```
+<dd>
+```
 cf push nombre_app -c null
 ```</dd>
 <dd>También puede utilizar esta opción para ejecutar archivos script. Por ejemplo:
@@ -299,7 +309,7 @@ cf services
 
 ## cf set-env
 
-Establece una variable de entorno para una app.
+Establece una variable de entorno para una aplicación.
 ```
 cf set-env nombre_app nombre_variable valor_variable
 ```

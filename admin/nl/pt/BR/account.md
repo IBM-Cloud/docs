@@ -30,7 +30,7 @@ Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../icons/i-ava
 
 Um ID federado poderá ser usado para se inscrever para o
 {{site.data.keyword.Bluemix_notm}} somente se sua empresa já tiver trabalhado
-com a IBM para se registrar. O registro do domínio de uma empresa na IBM permite que
+com a IBM para se registrar.  O registro do domínio de uma empresa na IBM permite que
 os usuários efetuem log-in nos produtos e serviços IBM usando suas credenciais de usuário
 da empresa existentes. A autenticação então é manipulada pelo provedor de identidade da
 sua empresa. Quando você efetuar log-in no {{site.data.keyword.Bluemix_notm}} com
@@ -112,8 +112,8 @@ específica.
 Para abrir a visualização Painel de uso, clique no ícone
 **{{site.data.keyword.avatar}}**
 ![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
-**Conta** &gt; *your_account_name* &gt;
-**Painel de uso**. Os gerentes de faturamento podem ver os detalhes somente das organizações nas quais eles são gerentes de faturamento.
+**Conta** &gt; *your_account_name* &gt; **Painel
+de uso**. Os gerentes de faturamento podem ver os detalhes somente das organizações nas quais eles são gerentes de faturamento.
 
 O proprietário da conta é cobrado pelo uso total que é incorrido entre todas as organizações no término de cada ciclo de faturamento. Como um proprietário da conta, é possível filtrar o resumo de uso
 por região e organização. Também é possível clicar em um determinado mês, para ver o uso para aquele mês. Selecione

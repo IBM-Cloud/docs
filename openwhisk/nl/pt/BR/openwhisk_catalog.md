@@ -19,7 +19,7 @@ copyright:
 # Usando serviços do {{site.data.keyword.Bluemix_notm}} que estão ativados
 para {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_ecosystem}
-Última atualização: 4 de agosto de 2016
+Última atualização: 9 de setembro de 2016
 {: .last-updated}
 
 No {{site.data.keyword.openwhisk}}, um catálogo de pacotes fornece uma maneira fácil de aprimorar seu app com recursos úteis e de acessar serviços externos no ecossistema. Exemplos de serviços externos que são ativados pelo {{site.data.keyword.openwhisk_short}} incluem Cloudant, The Weather Company, Slack e GitHub.
@@ -222,11 +222,11 @@ A representação JSON do evento acionador é a seguinte:
 1. Armazene um documento usando a ação `write` na ligação do pacote anteriormente criada. Certifique-se de substituir `/myNamespace/myCloudant` pelo nome de seu pacote.
 
   ```
-  wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
   ```
   {: pre}
   ```
-  ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
+  ok: invoked /myNamespace/myCloudant/write with id 62bf696b38464fd1bcaff216a68b8287
   {
     "id": "heisenberg",
     "ok": true,
@@ -248,7 +248,7 @@ A representação JSON do evento acionador é a seguinte:
 1. Busque um documento usando a ação `read` na ligação do pacote anteriormente criada. Certifique-se de substituir `/myNamespace/myCloudant` pelo nome de seu pacote.
 
   ```
-  wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
+  wsk action invoke /myNamespace/myCloudant/read --blocking --result --param dbname testdb --param id heisenberg
   ```
   {: pre}
   ```
@@ -327,17 +327,17 @@ O pacote inclui a ação a seguir.
 e `password`. Dessa forma, não será necessário especificar as
 credenciais toda vez que chamar as ações no pacote.
 
-
 ### Obtendo uma previsão de tempo para um local
 {: #openwhisk_catalog_weather_forecast}
 
 A ação `/whisk.system/weather/forecast` retorna uma previsão do tempo para um local, chamando uma API a partir da The Weather Company. Os parâmetros são como segue:
 
 - `username`: nome do usuário do The Weather Company Data for IBM Bluemix que está autorizado a chamar a API de previsão.
-- `password`: senha do The Weather Company Data for IBM Bluemix que está autorizado a chamar a API de previsão.
+- `password`: senha para o The Weather Company Data for IBM Bluemix que está autorizado a chamar a API de previsão.
 - `latitude`: a coordenada de latitude do local.
 - `longitude`: a coordenadas de longitude do local.
-- `timeperiod`: período para a previsão. As opções válidas são '10day' - (padrão) Retorna uma previsão diária de 10 dias, '24hour' - Retorna uma previsão de 2 dias a cada hora, 'atual' - Retorna as condições meteorológicas atuais, 'timeseries' - Retorna as observações atuais e até 24 horas de observações passadas, a partir da data e hora atuais. 
+- `timeperiod`: período para a previsão. As opções válidas são '10day' - (padrão) Retorna uma previsão diária de 10 dias, '48hour' - Retorna uma previsão de 2 dias de hora em hora,
+'current' - Retorna as condições meteorológicas atuais, 'timeseries' - Retorna as observações atuais e até 24 horas de observações passadas, a partir da data e hora atuais.
 
 
 Segue um exemplo de criação de uma ligação de pacote e, em seguida, a obtenção de uma previsão de 10 dias.
@@ -345,7 +345,7 @@ Segue um exemplo de criação de uma ligação de pacote e, em seguida, a obten�
 1. Crie uma ligação de pacote com sua chave da API.
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
+  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
   ```
   {: pre}
 
@@ -397,10 +397,9 @@ O pacote inclui as ações a seguir.
 áudio em texto |
 | `/whisk.system/watson/textToSpeech` | ação | payload, voice, accept, encoding, username, password | Converter texto em áudio |
 
-É sugerido criar uma ligação de pacote com os valores `username` e
-`password`. Dessa forma, não será necessário especificar essas
+É sugerido criar uma ligação de pacote com os valores `username`
+e `password`. Dessa forma, não será necessário especificar essas
 credenciais toda vez que chamar as ações no pacote.
-
 
 ### Traduzindo texto
 {: #openwhisk_catalog_watson_translate}
@@ -579,6 +578,9 @@ A ação `/whisk.system/slack/post` posta uma mensagem para um canal do Slack es
 - `channel`: o canal do Slack no qual postar a mensagem.
 - `username`: o nome com o qual postar a mensagem.
 - `text`: uma mensagem para postar.
+- `token`: (opcional) um [token de acesso](https://api.slack.com/tokens) de Slack. Consulte
+[abaixo](./openwhisk_catalog.html#openwhisk_catalog_slack_token)
+para obter mais detalhes sobre o uso dos tokens de acesso de Folga.
 
 A seguir há um exemplo de configuração do Slack, criação de uma ligação de pacote e postagem de uma mensagem para um canal.
 
@@ -601,6 +603,13 @@ A seguir há um exemplo de configuração do Slack, criação de uma ligação d
   ```
   {: pre}
 
+### Usando a API baseada no token de Slack
+{: #openwhisk_catalog_slack_token}
+
+Se você preferir, será possível escolher, opcionalmente, usar uma API baseada no token de Slack, em vez de a API do webhook. Se você assim escolher, então, passe em um parâmetro `token`
+que contém o seu [token de acesso](https://api.slack.com/tokens) do Slack. É possível, então, usar qualquer dos [métodos de API Slack](https://api.slack.com/methods) como
+o seu parâmetro `url`. Por exemplo, para postar uma mensagem, você utilizaria um valor de parâmetro `url`
+[slack.postMessage](https://api.slack.com/methods/chat.postMessage).
 
 ## Usando o pacote GitHub
 {: #openwhisk_catalog_github}
@@ -615,7 +624,7 @@ O pacote inclui o feed a seguir:
 | `/whisk.system/github/webhook` | alimentação | events, username, repository, accessToken | Disparar eventos acionadores na atividade do GitHub |
 
 É sugerido criar uma ligação de pacote com os valores `username`,
-`repository` e `accessToken`. Com a ligação, não será necessário especificar os valores toda vez que usar o feed no pacote.
+`repository` e `accessToken`.  Com a ligação, não será necessário especificar os valores toda vez que usar o feed no pacote.
 
 ### Disparando um evento acionador com atividade do GitHub
 {: #openwhisk_catalog_github_fire}
@@ -653,7 +662,8 @@ com que o acionador seja disparado pelo webhook. Se houver uma regra que corresp
 ação associada será chamada.
 A ação recebe a carga útil de webhook do GitHub como um parâmetro de entrada. Cada evento
 de webhook do GitHub tem um esquema JSON semelhante, mas é um objeto de carga útil
-exclusivo que é determinado por seu tipo de evento. Para obter mais informações sobre o
+exclusivo que é determinado por seu tipo de evento.
+Para obter mais informações sobre o
 conteúdo da carga útil, consulte a documentação da API de
 [Eventos e carga útil
 do GitHub](https://developer.github.com/v3/activity/events/types/).
@@ -674,6 +684,7 @@ O pacote inclui a ação e o feed a seguir:
 É sugerido criar uma ligação de pacote com os valores `appId` e
 `appSecret`. Dessa forma, não será necessário especificar essas
 credenciais toda vez que chamar as ações no pacote.
+
 ### Criando uma ligação de pacote de Push
 {: #openwhisk_catalog_pushnotifications_create}
 
@@ -729,7 +740,7 @@ A ação `/whisk.system/pushnotifications/sendMessage` envia notificações push
 - `apnsBadge`: o número a ser exibido como o badge do ícone do aplicativo.
 - `apnsCategory`: o identificador de categoria a ser usado para as notificações push interativas.
 - `apnsIosActionKey`: o título da chave Ação.
-- `apnsPayload`: carga útil de JSON customizada que será enviada como parte da mensagem de notificação. 
+- `apnsPayload`: carga útil de JSON customizada que será enviada como parte da mensagem de notificação.
 - `apnsType`: ['DEFAULT', 'MIXED', 'SILENT'].
 - `apnsSound`: o nome do arquivo de som no pacote configurável do aplicativo. O som desse arquivo é reproduzido como um alerta.
 

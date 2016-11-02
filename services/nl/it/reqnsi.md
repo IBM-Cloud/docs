@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  anni: 2015, 2016
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 #Servizi
 {: #services}
-*Ultimo aggiornamento: 20 gennaio 2016*
+*Ultimo aggiornamento: 10 agosto 2016*
 
 I servizi disponibili sono elencati nel **catalogo** sotto **Servizi**
 nell'interfaccia utente
@@ -67,7 +67,7 @@ laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4
 
 
 
-{{site.data.keyword.Bluemix_notm}} offre anche dei servizi sperimentali che puoi provare. Per visualizzare tutti i servizi sperimentali, i contenitori tipo e i runtime disponibili, accedi a {{site.data.keyword.Bluemix_notm}}, scorri fino alla parte inferiore del Catalogo e fai quindi clic su **Catalogo Lab {{site.data.keyword.Bluemix_notm}}**.
+{{site.data.keyword.Bluemix_notm}} offre anche dei servizi sperimentali che puoi provare. Per visualizzare tutti i servizi sperimentali, i contenitori tipo e i runtime disponibili, accedi a {{site.data.keyword.Bluemix_notm}}, scorri fino alla fine del Catalogo e fai clic su **Catalogo Lab {{site.data.keyword.Bluemix_notm}}**.
 
 I servizi sperimentali potrebbero non essere stabili e possono cambiare secondo modalità non compatibili con le versioni precedenti. L'uso di questi servizi negli ambienti di produzione è sconsigliato. Il supporto per i servizi sperimentali viene fornito tramite la Community di sviluppatori {{site.data.keyword.Bluemix_notm}}. Se un problema viene analizzato da IBM
 e tale problema viene considerato come un difetto in un servizio sperimentale,
@@ -104,6 +104,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.APIM}}			|Sì		|Sì		|No|
 |{{site.data.keyword.autoscaling}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.bigicloudst}}		|Sì		|No		|No|
+|{{site.data.keyword.blockstorageshort}}        |No             |Sì            |No |
 |{{site.data.keyword.rules_short}}		|Sì		|Sì		|No|
 |{{site.data.keyword.cloudint}}			|Sì		|Sì		|No|
 |{{site.data.keyword.cloudant}}			|Sì		|Sì		|No|
@@ -283,7 +284,7 @@ completa la seguente procedura:
     3. Nella finestra Aggiungi servizio, mantieni la selezione dell'elenco **Applicazione**: come **Lascia senza binding**. Questa selezione significa che
 il servizio non sarà connesso a un'applicazione {{site.data.keyword.Bluemix_notm}}.
     4. Opera le altre selezioni come necessario. Fai quindi clic su **CREA**. Viene creata un'istanza del servizio e viene visualizzato il dashboard del servizio.
-2. Nel riquadro di navigazione di sinistra del dashboard del servizio, puoi selezionare **Credenziali del servizio** per visualizzare o aggiungere credenziali nel formato JSON. Utilizza la chiave API visualizzata come credenziali per stabilire una
+2. Nel riquadro di navigazione del dashboard del servizio, puoi selezionare **Credenziali del servizio** per visualizzare o aggiungere credenziali in formato JSON. Utilizza la chiave API visualizzata come credenziali per stabilire una
 connessione all'istanza del servizio.
 
 La tua applicazione che viene eseguita esternamente a {{site.data.keyword.Bluemix_notm}} può
@@ -369,22 +370,18 @@ Se disponi di un'istanza di servizio creata e associata mediante bind ad applica
 desideri utilizzare l'istanza del servizio. Per utilizzare un'istanza del servizio che si trova
 in un'altra regione, completa la seguente procedura:
 
-      1. Passa alla regione in cui si trova l'istanza del servizio. Nella barra dei menu principale di {{site.data.keyword.Bluemix_notm}},
-espandi **Regione** o fai clic sull'icona **Regione**,
-quindi seleziona la regione in cui si trova l'istanza del servizio.
+      1. Passa alla regione in cui si trova l'istanza del servizio. Nella barra dei menu di {{site.data.keyword.Bluemix_notm}}, espandi **Regione** o fai clic sull'icona **Regione**, quindi seleziona la regione in cui si trova l'istanza del servizio.
 
       2. Recupera le credenziali e i parametri di connessione dalla variabile di ambiente VCAP_SERVICES dell'istanza del servizio nella regione in cui si trova il servizio. Completa la seguente
 procedura:
 
 	       1. Nel Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul tile dell'applicazione. Viene visualizzata la pagina Panoramica.
-	       2. Nel riquadro di navigazione a sinistra,  fai clic su **Variabili di ambiente**. I dettagli della variabile di ambiente *VCAP_SERVICES*
+	       2. Nel riquadro di navigazione, fai clic su **Variabili di ambiente**. I dettagli della variabile di ambiente *VCAP_SERVICES*
 vengono visualizzati nel riquadro a destra. Registra il contenuto JSON per l'istanza
 del servizio.
 
       3. Passa alla regione in cui desideri utilizzare l'istanza del
-servizio. Nella barra dei menu principale di {{site.data.keyword.Bluemix_notm}},
-espandi **Regione** o fai clic sull'icona **Regione**,
-quindi seleziona la regione in cui desideri utilizzare l'istanza del servizio.
+servizio. Nella barra dei menu di {{site.data.keyword.Bluemix_notm}}, espandi **Regione** o fai clic sull'icona **Regione**, quindi seleziona la regione in cui desideri utilizzare l'istanza del servizio.
 
       4. Crea un'istanza del servizio fornito dall'utente utilizzando le credenziali
 e i parametri di connessione che hai registrato dalla variabile di ambiente
@@ -413,8 +410,8 @@ Per utilizzare un'istanza del servizio da un altro servizio, completa la seguent
 
 1. Nel Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul tile per il servizio a
 cui vuoi accedere. Viene visualizzato il dashboard per il servizio.
-2. Nel riquadro di navigazione a sinistra,  fai clic su *Gestisci* per autorizzare il binding da altre istanze del servizio utilizzando la console dell'istanza del servizio.
-3. Se vuoi negare ad altri servizi l'accesso all'istanza del servizio, fai clic su *Autorizzazione accesso al servizio* nel riquadro di navigazione a sinistra e utilizza quindi *Revoca* per rimuovere il bind di servizio. 
+2. Nel riquadro di navigazione, fai clic su **Gestisci** per autorizzare il bind da altre istanze del servizio utilizzando la console dell'istanza del servizio.
+3. Se vuoi negare ad altri servizi l'accesso all'istanza, fai clic su **Autorizzazione accesso al servizio** nel riquadro di navigazione e utilizza quindi **Revoca** per rimuovere il bind del servizio. 
 
 # rellinks
 {: #rellinks}

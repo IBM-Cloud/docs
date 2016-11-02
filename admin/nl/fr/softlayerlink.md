@@ -35,8 +35,10 @@ Une fois vos comptes liés, vous pouvez facilement passer de l'un à l'autre. Vo
 ressources apparaîtra dorénavant sur la facture SoftLayer.
 
 Même si la facturation de votre compte est liée, votre ID de connexion varie selon la manière dont votre compte SoftLayer est authentifié :
-* Pour les utilisateurs des comptes SoftLayer qui n'utilisent pas IBMid pour l'authentification, continuez à utiliser votre ID SoftLayer pour les produits et services SoftLayer et utilisez votre IBMid pour les produits et services {{site.data.keyword.Bluemix_notm}}. 
-* Pour les utilisateurs des comptes SoftLayer qui utilisent IBMid pour l'authentification, utilisez votre IBMid pour accéder à vos comptes SoftLayer et {{site.data.keyword.Bluemix_notm}}. 
+* Pour les utilisateurs des comptes SoftLayer qui n'utilisent pas d'IBMid pour l'authentification, continuez à utiliser votre ID SoftLayer pour les
+produits et services SoftLayer et utilisez votre IBMid pour les produits et services {{site.data.keyword.Bluemix_notm}}.
+* Pour les utilisateurs des comptes SoftLayer qui utilisent un IBMid pour l'authentification, utilisez votre IBMid pour accéder à vos comptes
+SoftLayer et {{site.data.keyword.Bluemix_notm}}.
 
 **Attention :** la liaison des comptes est irréversible.  
 

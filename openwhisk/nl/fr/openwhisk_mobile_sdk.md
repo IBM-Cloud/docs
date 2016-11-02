@@ -13,7 +13,7 @@ copyright:
 
 # Utilisation du logiciel SDK pour applications mobiles {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_mobile_sdk}
-Dernière mise à jour : 4 août 2016
+Dernière mise à jour : 26 août 2016
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} met à disposition un logiciel SDK pour périphériques iOS et watchOS 2 qui permet aux applications mobiles
@@ -32,36 +32,32 @@ Vous pouvez installer le logiciel SDK pour applications mobiles à l'aide de Coc
 {: #openwhisk_add_sdk_cocoapods}
 
 Le logiciel SDK {{site.data.keyword.openwhisk_short}} pour les applications mobiles est disponible pour sa distribution publique via
-CocoaPods. En supposant qu'CocoaPods est installé, placez les lignes suivantes dans un fichier nommé 'Podfile'
-sous le répertoire de projets d'applications de démarrage. 
+CocoaPods. En supposant que CocoaPods est installé, insérez les lignes suivantes dans un fichier nommé 'Podfile'
+sous le répertoire des projets d'applications de démarrage. 
 
 ```
-source 'https://github.com/openwhisk/openwhisk-podspecs.git'
-
+install! 'cocoapods', :deterministic_uuids => false
 use_frameworks!
 
-target 'MyApp' do
-     platform :ios, '9.0'
-     pod 'OpenWhisk'
+target 'MonApp' do
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 
-target 'MyApp WatchKit Extension' do
-     platform :watchos, '2.0'
-     pod 'OpenWhisk-Watch'
+target 'MonApp WatchKit Extension' do
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 ```
 {: codeblock}
 
-Depuis la ligne de commande, entrez `pod install`. Cette commande installe le logiciel SDK pour une application iOS avec une extension watchOS 2. Utilisez
+Depuis la ligne de commande, entrez `pod install`. Cette commande installe le logiciel SDK pour une application iOS avec une extension watchOS 2.  Utilisez
 le fichier d'espace de travail que CocoaPods a créé pour votre application afin d'ouvrir le projet dans Xcode.
 
 ### Installation à l'aide de Carthage
 {: #openwhisk_add_sdk_carthage}
 
 Créez un fichier dans le répertoire de projet de votre application et appelez-le 'Cartfile'. Insérez la ligne suivante dans le fichier :
-
 ```
-github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # (Ou version ultérieure)
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.7 # Ou version ultérieure
 ```
 {: codeblock}
 
@@ -92,7 +88,7 @@ wsk sdk install iOS
 ```
 {: pre}
 
-Cette commande télécharge un fichier compressé contenant l'application de démarrage. Le répertoire de projet contient un fichier Pod.  
+Cette commande télécharge un fichier compressé contenant l'application de démarrage. Le répertoire de projet contient un fichier Pod. 
 
 Pour installer le logiciel SDK, entrez la commande suivante :
 ```
@@ -134,7 +130,7 @@ Les chaînes qui précèdent le signe deux-points correspondent à votre clé et
 
 
 Pour appeler une action distante, vous pouvez appeler `invokeAction` avec le nom d'action. Vous pouvez spécifier l'espace de noms
-auquel l'action appartient ou ne rien indiquer pour accepter l'espace de noms par défaut.  Utilisez un dictionnaire pour transmettre des paramètres à
+auquel l'action appartient ou ne rien indiquer pour accepter l'espace de noms par défaut. Utilisez un dictionnaire pour transmettre des paramètres à
 l'action, en fonction des besoins.
 
 Par exemple :
@@ -180,7 +176,7 @@ do {
         if let error = error {
             print("Error firing trigger \(error.localizedDescription)")
         } else {
-            print("Trigger fired!")
+            print("Déclencheur exécuté !")
         }
     })
 } catch {
@@ -295,7 +291,7 @@ let myParams = ["name":"value"]
 // Appelez cette action lorsque vous détectez un événement d'appui, par ex. une IBAction, pour appeler l'action
 whiskButton.invokeAction(parameters: myParams, callback: { reply, error in
     if let error = error {
-        print("Oh no, error: \(error)")
+        print("Oh non, erreur: \(error)")
     } else {
         print("Success: \(reply)")
     }
@@ -312,7 +308,7 @@ do {
    whiskButtonSelfContained.actionButtonCallback = { reply, error in
 
        if let error = error {
-           print("Oh no, error: \(error)")
+           print("Oh non, erreur: \(error)")
        } else {
            print("Success: \(reply)")
        }

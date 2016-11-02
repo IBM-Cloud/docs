@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  2016
 
 ---
 
@@ -11,11 +11,13 @@ copyright:
 # Utilisation de chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} dédié
 {: #toolchains-using_dedicated}
 
-Dernière mise à jour : 13 septembre 2016
+Dernière mise à jour : 26 août 2016
 {: .last-updated}
 
 Vous pouvez utiliser une chaîne d'outils pour améliorer la productivité de votre travail quotidien de développement, de déploiement et de vos opérations. Après avoir configuré une chaîne d'outils, vous pouvez ajouter, supprimer ou configurer des intégrations d'outils et gérer l'accès à la chaîne d'outils.
 {: shortdesc}
+
+**Important **: Cette fonction est expérimentale. Les chaînes d'outils peuvent être instables et faire l'objet de modifications entraînant leur incompatibilité avec des versions antérieures. Elles ne sont pas recommandées pour une utilisation dans des environnements de production.  
 
 ## Configuration d'une intégration d'outil
 {: #configuring_a_tool_integration_dedicated}
@@ -42,7 +44,7 @@ Vous pouvez ajouter et configurer des intégrations d'outils pour votre chaîne 
 
 1. Dans le tableau de bord, onglet **DEVOPS**, cliquez sur la chaîne d'outils pour ouvrir la page d'intégration d'outil correspondante. Vous pouvez également, dans le coin supérieur droit de la page de présentation de l'application, cliquer sur **Afficher la chaîne d'outils**. Cliquez ensuite sur **Intégrations d'outils**.
 1. Pour afficher la liste des intégrations d'outils à ajouter, cliquez sur le bouton d'ajout (+).
-1. Cliquez sur l'intégration d'outil à ajouter. 
+1. Cliquez sur l'intégration d'outil à ajouter.
 1. Entrez les informations requises pour configurer l'intégration d'outil. 
 1. Cliquez sur **Créer une intégration** pour ajouter l'intégration d'outil à votre chaîne d'outils.
 
@@ -52,21 +54,22 @@ Vous pouvez ajouter et configurer des intégrations d'outils pour votre chaîne 
 Si vous supprimez une intégration d'outil de votre chaîne d'outils, la suppression est irréversible. 
 
 1. Dans le tableau de bord, onglet **DEVOPS**, cliquez sur la chaîne d'outils pour ouvrir la page d'intégration d'outil correspondante. Vous pouvez également, dans le coin supérieur droit de la page de présentation de l'application, cliquer sur **Afficher la chaîne d'outils**. Cliquez ensuite sur **Intégrations d'outils**.
-1. Sur la vignette de l'intégration d'outil à supprimer, cliquez sur le menu pour accéder aux options de configuration. 
+1. Sur la vignette de l'intégration d'outil à supprimer, cliquez sur le menu pour accéder aux options de configuration.
 1. Pour supprimer l'intégration d'outil de votre chaîne d'outils, cliquez sur **Supprimer**.
 1. Confirmez en cliquant sur **Supprimer**. 
 
 ## Gestion des accès
 {: #managing_access_dedicated}
 
-Vous pouvez accorder l'accès à une chaîne d'outils à des utilisateurs en les ajoutant à l'organisation (org) à laquelle la chaîne d'outils est associée. Chaque chaîne d'outils est associée à une organisation spécifique, et tout membre de cette organisation peut accéder aux chaînes d'outils associées. Pour afficher l'organisation que vous utilisez actuellement, cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Icône Avatar](../icons/i-avatar-icon.svg) dans la barre de menus. Pour accéder à un ensemble différent de chaînes d'outils, changez d'organisation.
+Vous pouvez accorder l'accès à une chaîne d'outils à des utilisateurs en les ajoutant à l'organisation (org) à laquelle la chaîne d'outils est associée. Chaque chaîne d'outils est associée à une organisation spécifique, et tout membre de cette organisation peut accéder aux chaînes d'outils associées. Pour afficher l'organisation que vous utilisez actuellement, cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Icône Avatar](../icons/i-avatar-icon.svg) dans la barre de menu. Pour accéder à un ensemble différent de chaînes d'outils, changez d'organisation.
 
-Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix}}, ces utilisateurs peuvent se connecter à GitHub Enterprise à l'aide de leurs ID et mot de passe {{site.data.keyword.Bluemix_notm}}. Lorsque les utilisateurs se connectent, les comptes correspondants sont créés. Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix_notm}}, ils ne sont pas automatiquement ajoutés au référentiel GitHub Enterprise. Une personne dotée de privilèges d'administrateur pour le référentiel doit les ajouter. Pour plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise (Lien s'ouvrant dans une nouvelle fenêtre)](../services/ghededicated/index.html){: new_window}.
+Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix}}, ces utilisateurs peuvent se connecter à GitHub Enterprise à l'aide de leurs ID et mot de passe {{site.data.keyword.Bluemix_notm}}. Lorsque les utilisateurs se connectent, les comptes correspondants sont créés. Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix_notm}}, ils ne sont pas automatiquement ajoutés au référentiel GitHub Enterprise. Une personne dotée de privilèges d'administrateur pour le référentiel doit les ajouter. Pour
+plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise](../services/ghededicated/index.html){: new_window}.
 
 Pour ajouter un utilisateur, procédez comme suit : 
 
-1. Dans le tableau de bord, onglet **DEVOPS**, cliquez sur la chaîne d'outils pour ouvrir la page d'intégration d'outil correspondante. Cliquez ensuite sur **Gérer**. Vous pouvez également, dans le coin supérieur droit de la page de présentation de l'application, cliquer sur **Afficher la chaîne d'outils**. Cliquez ensuite sur **Gérer**.   
-1. Cliquez sur le lien de votre organisation.  
+1. Dans le tableau de bord, onglet **DEVOPS**, cliquez sur la chaîne d'outils pour ouvrir la page d'intégration d'outil correspondante. Cliquez ensuite sur **Gérer**. Vous pouvez également, dans le coin supérieur droit de la page de présentation de l'application, cliquer sur **Afficher la chaîne d'outils**. Cliquez ensuite sur **Gérer**.  
+1. Cliquez sur le lien de votre organisation. 
 1. Dans la page de gestion des organisations, cliquez sur **Inviter un utilisateur** et entrez l'adresse électronique de l'utilisateur.
 1. Si vous souhaitez donner des droits avancés à des responsables {{site.data.keyword.Bluemix_notm}} d'organisations, sélectionnez une ou plusieurs des cases à cocher **Responsable**, **Responsable de la facturation** et **Auditeur**.
 1. Cliquez sur **INVITER**.
@@ -77,8 +80,8 @@ Pour ajouter un utilisateur, procédez comme suit :
 
 Vous pouvez supprimer une chaîne d'outils et spécifier les intégrations d'outils associées à supprimer. Lorsque vous supprimez une chaîne d'outils, la suppression est irréversible.
 
-1. Dans le tableau de bord, onglet **DEVOPS**, cliquez sur la chaîne d'outils pour ouvrir la page d'intégration d'outil correspondante. Cliquez ensuite sur **Gérer**. Vous pouvez également, dans le coin supérieur droit de la page de présentation de l'application, cliquer sur **Afficher la chaîne d'outils**. Cliquez ensuite sur **Gérer**. 
-1. Cliquez sur **Supprimer la chaîne d'outils**, examinez et modifiez éventuellement la liste des intégrations d'outils à supprimer. 
+1. Dans le tableau de bord, onglet **DEVOPS**, cliquez sur la chaîne d'outils pour ouvrir la page d'intégration d'outil correspondante. Cliquez ensuite sur **Gérer**. Vous pouvez également, dans le coin supérieur droit de la page de présentation de l'application, cliquer sur **Afficher la chaîne d'outils**. Cliquez ensuite sur **Gérer**.
+1. Cliquez sur **Supprimer la chaîne d'outils**, examinez et modifiez éventuellement la liste des intégrations d'outils à supprimer.
 1. Confirmez la suppression en entrant le nom de la chaîne d'outils et en cliquant sur **Supprimer**.
 
  **Conseil** : Lorsque vous supprimez une intégration d'outil GitHub Enterprise, le référentiel GitHub Enterprise associé n'est pas supprimé de GitHub Enterprise. Vous devez supprimer manuellement le référentiel depuis GitHub Enterprise.

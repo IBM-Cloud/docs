@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-27"
  
 
 ---
@@ -19,8 +19,6 @@ copyright:
 # Creating and invoking {{site.data.keyword.openwhisk_short}} actions
 {: #openwhisk_actions}
 
-Last updated: 27 September 2016
-{: .last-updated}
 
 Actions are stateless code snippets that run on the {{site.data.keyword.openwhisk}} platform. An action can be a JavaScript function, a Swift function, or a custom executable program packaged in a Docker container. For example, an action can be used to detect the faces in an image, aggregate a set of API calls, or post a Tweet.
 {:shortdesc}
@@ -342,7 +340,84 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   }
   ```
   {: screen}
-  
+
+### Packaging an action as a Node.js module
+
+As an alternative to writing all your action code in a single JavaScript source file, you can write an action as a `npm` package. Consider as an example a directory with the following files:
+
+First, `package.json`:
+
+```
+{
+  "name": "my-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies" : {
+    "left-pad" : "1.1.3"
+  }
+}
+```
+{: codeblock}
+
+Then, `index.js`:
+
+```
+function myAction(args) {
+    const leftPad = require("left-pad")
+    const lines = args.lines || [];
+    return { padded: lines.map(l => leftPad(l, 30, ".")) }
+}
+
+exports.main = myAction;
+```
+{: codeblock}
+
+Note that the action is exposed through `exports.main`; the action handler itself can have any name, as long as it conforms to the usual signature of accepting an object and returning an object (or a `Promise` of an object).
+
+To create an OpenWhisk action from this package:
+
+1. Install first all dependencies locally
+
+  ```
+  npm install
+  ```
+  {: pre}
+
+2. Create a `.zip` archive containing all files (including all dependencies):
+
+  ```
+  zip -r action.zip *
+  ```
+  {: pre}
+
+3. Create the action:
+
+  ```
+  wsk action create packageAction --kind nodejs:6 action.zip
+  ```
+  {: pre}
+
+  Note that when creating an action from a `.zip` archive using the CLI tool, you must explicitly provide a value for the `--kind` flag.
+
+4. You can invoke the action like any other:
+
+  ```
+  wsk action invoke --blocking --result packageAction --param lines "[\"and now\", \"for something completely\", \"different\" ]"
+  ```
+  {: pre}
+  ```
+  {
+      "padded": [
+          ".......................and now",
+          "......for something completely",
+          ".....................different"
+      ]
+  }
+  ```
+  {: screen}
+
+Finally, note that while most `npm` packages install JavaScript sources on `npm install`, some also install and compile binary artifacts. The archive file upload currently does not support binary dependencies but rather only JavaScript dependencies. Action invocations may fail if the archive includes binary dependencies.
+    
 ### Creating action sequences
 {: #openwhisk_create_action_sequence}
 
@@ -615,10 +690,10 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   ```
   {: screen}
   
-  To update the Docker action, run buildAndPush.sh to refresh the image on Docker Hub, this will allow the next time the system pulls your Docker image to run the new code for your action. 
-  If there are no warm containers any new invocations will use the new Docker image. 
-  **Note:** If there is a warm container using a previous version of your Docker image, any new invocations will continue to use this image until you run `wsk action update` on the action. The action update forces the system to pull the Docker image again.
-  
+  To update the Docker action, run buildAndPush.sh to upload the latest image to Docker Hub. This will allow the system to pull your new Docker image the next time it runs the code for your action.
+  If there are no warm containers any new invocations will use the new Docker image.
+  However, if there is a warm container using a previous version of your Docker image, any new invocations will continue to use that image unless you run wsk action update. This will indicate to the system that for new invocations it should execute a docker pull to get your new Docker image.
+ 
   ```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```

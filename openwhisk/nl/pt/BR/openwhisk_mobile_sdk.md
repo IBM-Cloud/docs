@@ -13,7 +13,7 @@ copyright:
 
 # Usando o SDK móvel do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_mobile_sdk}
-Última atualização: 4 de agosto de 2016
+Última atualização: 26 de agosto de 2016
 {: .last-updated}
 
 O {{site.data.keyword.openwhisk}} fornece um SDK móvel para dispositivos com iOS e watchOS 2 que permite que apps móveis disparem acionadores remotos e chamem ações remotas facilmente. Uma versão para Android não está atualmente disponível; os desenvolvedores para Android podem usar a API REST do {{site.data.keyword.openwhisk}} diretamente.
@@ -33,24 +33,21 @@ O SDK do {{site.data.keyword.openwhisk_short}} para dispositivo móvel está dis
 a seguir em um arquivo chamado 'Podfile' dentro do diretório de projeto do aplicativo iniciador. 
 
 ```
-source 'https://github.com/openwhisk/openwhisk-podspecs.git'
-
+install! 'cocoapods', :deterministic_uuids => false
 use_frameworks!
 
 target 'MyApp' do
-     platform :ios, '9.0'
-     pod 'OpenWhisk'
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 
-target 'MyApp WatchKit Extension' do
-     platform :watchos, '2.0'
-     pod 'OpenWhisk-Watch'
+target 'MyApp WatchKit Extension' do 
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 ```
 {: codeblock}
 
 A partir da linha de comandos, digite `pod install`. Esse comando
-instala o SDK para um app iOS com uma extensão watchOS 2. Use o arquivo de área de trabalho que o CocoaPods cria para o seu
+instala o SDK para um app iOS com uma extensão watchOS 2.  Use o arquivo de área de trabalho que o CocoaPods cria para o seu
 aplicativo para abrir o projeto no Xcode.
 
 ### Instalando usando o Carthage
@@ -59,7 +56,7 @@ aplicativo para abrir o projeto no Xcode.
 Crie um arquivo no diretório de projeto do app e chame-o de 'Cartfile'. Coloque a
 linha a seguir no arquivo:
 ```
-github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.7 # Or latest version
 ```
 {: codeblock}
 
@@ -88,7 +85,7 @@ wsk sdk install iOS
 {: pre}
 
 Esse comando faz download de um arquivo compactado que contém o app iniciador. Dentro
-do diretório de projeto está um podfile.   
+do diretório de projeto está um podfile. 
 
 Para instalar o SDK, insira o comando a seguir:
 ```

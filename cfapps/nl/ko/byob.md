@@ -61,7 +61,7 @@ nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zi
 
 ## 외부 빌드팩
 
-{{site.data.keyword.Bluemix_notm}}에서는 외부 빌드팩 또는 사용자 정의 빌드팩을 사용할 수 있습니다. -b 옵션으로 빌드팩의 URL을 지정하고 ```-s``` 옵션으로 **cf push** 명령에서 스택을 지정해야 합니다. 예를 들어, 정적 파일에 대한 외부 커뮤니티 빌드팩을 사용하려면 다음 명령을 실행하십시오.
+{{site.data.keyword.Bluemix_notm}}에서는 외부 빌드팩 또는 사용자 정의 빌드팩을 사용할 수 있습니다. **cf push** 명령에서 -b 옵션을 사용하여 빌드팩의 URL을 지정하고 `-s` 옵션을 사용하여 스택을 지정해야 합니다. 예를 들어, 정적 파일에 대한 외부 커뮤니티 빌드팩을 사용하려면 다음 명령을 실행하십시오.
 
 ```
 cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
@@ -87,11 +87,15 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 <strong>cf set-env</strong> 명령을 사용하십시오. 예를 들어 다음 명령을 입력하여 Java 버전을 1.7.0으로 설정하십시오.
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
-<p>그런 다음 앱을 다시 스테이징하여 변경사항을 적용하십시오.</p>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
+<p>그런 다음
+앱을 다시 스테이징하여 변경사항을 적용하십시오.</p>
 <pre class="pre"><code>cf restage app_name</code></pre>
 </li>
 <li>
-<code>manifest.yml</code> 파일을 사용하십시오. 파일에 직접 지정할 환경 변수와 값을 추가할 수 있습니다. 자세한 정보는 <a href="https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block">환경 변수</a>를 참조하십시오.</li></ul>
+<code>manifest.yml</code> 파일을 사용하십시오. 파일에 직접 지정할
+환경 변수와 값을 추가할 수 있습니다. 자세한 정보는
+<a href="https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block">환경 변수</a>를
+참조하십시오.</li></ul>
   
 

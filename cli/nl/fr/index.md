@@ -18,7 +18,7 @@ copyright:
 # Interface de ligne de commande et outils de développement
 {: #cli}
 
-*Dernière mise à jour : 28 juin 2016*
+*Dernière mise à jour : 31 août 2016*
 {: .last-updated}
 
 Avec {{site.data.keyword.Bluemix_short}}, vous avez accès à des outils puissants, tels qu'une interface de ligne de commande (CLI) unifiée et des plug-in CLI. Chacun de ces téléchargements d'interface de ligne de commande est accessible afin d'optimiser votre expérience avec {{site.data.keyword.Bluemix_notm}}.
@@ -47,7 +47,7 @@ Server](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} pour 
 | [Télécharger l'interface de ligne de commande](http://clis.ng.bluemix.net/) <br> [Afficher la documentation](./reference/bluemix_cli/index.html)|  [Télécharger l'interface de ligne de commande](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [Afficher la documentation](./reference/cfcommands/index.html) |
 
 
-## ![](./images/CLI_Plugin.svg) Plug-ins d'interface de ligne de commande
+## ![](./images/CLI_Plugin.svg) Plug-in d'interface de ligne de commande
 
 Etendez facilement votre interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des commandes supplémentaires. Pour accéder
 aux plug-in de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, voir le

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-23"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Cloud Analytics
 {: #cloud_analytics}
-Last updated: 23 August 2016
-{: .last-updated}
 
 By using {{site.data.keyword.iot_short}} cloud analytics, you specify rule conditions that are based on real-time device data and that trigger alerts and optional actions when met.    
 {: shortdesc}

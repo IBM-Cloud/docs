@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-
+lastupdated: "2016-10-26"
 
 ---
 
@@ -17,9 +17,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
-
-Last updated: 1 September 2016
-{: .last-updated}
 
 
 You can manage users for your
@@ -67,7 +64,7 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 
 If you need to uninstall the plug-in, you can use the following commands, then you can add the updated repository and install the latest plug-in:
 
-* Uninstall the plug-in: `cf uninstall-plugin-repo BluemixAdminCLI`
+* Uninstall the plug-in: `cf uninstall-plugin BluemixAdminCLI`
 * Remove the plugin repository: `cf remove-plugin-repo BluemixAdmin`
 
 
@@ -357,6 +354,89 @@ cf ba set-quota <organization> <plan>
 **Tip:** You can also use **ba sq** as an alias for the longer
 **ba set-quota** command name.
 
+
+### Finding and setting container quotas for an organization
+{: #containquotas}
+
+You can find and set quotas for containers in an organization.
+
+To find the quota for containers for an organization, enter the following command:
+
+```
+cf bluemix-admin containers-quota <organization>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">The name or ID of the organization in Bluemix. This parameter is required.</dd>
+</dl>
+
+**Tip:** You can also use **ba cq** as an alias for the longer
+**bluemix-admin containers-quota** command name.
+
+To set the quota for containers in an organization, enter the following command with at least one of the options included:
+
+```
+cf bluemix-admin set-containers-quota <organization> <options>
+```
+{: codeblock}
+
+**Note**: You can include multiple options, but you must include at least one.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">The name or ID of the organization in Bluemix. This parameter is required.</dd>
+<dt class="pt dlterm">&lt;options&gt;</dt>
+<dd class="pd">Include one or more of the following options in which the value must be an integer:
+<ul>
+<li>floating-ips-max &lt;value&gt;</li>
+<li>floating-ips-space-default &lt;value&gt;</li>
+<li>memory-max &lt;value&gt;</li>
+<li>memory-space-default &lt;value&gt;</li>
+<li>image-limit &lt;value&gt;</li>
+</ul>
+</dd>
+</dl>
+
+**Tip:** You can also use the following short names as an alias for the longer
+options names:
+<dl class="parml">
+<dt class="pt dlterm">floating-ips-max &lt;value&gt;</dt>
+<dd class="pd"><strong>fim</strong></dd>
+<dt class="pt dlterm">floating-ips-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>fisd</strong></dd>
+<dt class="pt dlterm">memory-max &lt;value&gt;</dt>
+<dd class="pd"><strong>mm</strong></dd>
+<dt class="pt dlterm">memory-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>msd</strong></dd>
+<dt class="pt dlterm">image-limit &lt;value&gt;</dt>
+<dd class="pd"><strong>il</strong></dd>
+</dl>
+
+Optionally, you can provide a file containing specific configuration parameters in a valid JSON object. If you use the **-file** option, it takes precedence and the other options are ignored. To provide a file instead of setting the options, enter the following command:
+
+```
+cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+```
+{: codeblock}
+
+The JSON file should have the format shown in the following example:
+
+```
+{
+  "floating_ips_max": 10,
+  "floating_ips_space_default": 0,
+  "ram_max": 4096,
+  "ram_space_default": 0,
+  "image_limit": 10
+}  
+```
+{: codeblock}
+
+**Tip:** You can also use **ba scq** as an alias for the longer
+**bluemix-admin set-containers-quota** command name.
+
 ### Adding, deleting, and retrieving reports
 
 You can add, delete, and retrieve security reports.
@@ -515,9 +595,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 ```
 {: codeblock}
 
-**Note:** This
-command replaces existing visible services for the specified organizations with the service that you
-specify in the command.
+**Note:** This command replaces existing visible services for the specified organizations with the service that you specify in the command.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>

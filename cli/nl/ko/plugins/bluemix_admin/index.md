@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 관리 CLI
 {: #bluemixadmincli}
 
-마지막 업데이트 날짜: 2016년 8월 17일
+마지막 업데이트 날짜: 2016년 9월 1일
 {: .last-updated}
 
 
@@ -53,13 +53,13 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 인스턴스 URL의 하위 도메인입니다. 예를 들면, <code>https://console.mycompany.bluemix.net/cli</code>입니다. </dd>
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} 인스턴스 URL의 하위 도메인입니다.예를 들어, <code>https://console.mycompany.bluemix.net/cli</code>입니다.</dd>
 </dl>
 </li>
-<li>{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 설치하려면 다음 명령을 실행하십시오. <br/><br/>
+<li>{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 설치하려면 <br/><br/>
 <code>
-cf install-plugin bluemix-admin-cli -r BluemixAdmin
-</code>
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
+</code> 명령을 실행하십시오.
 </li>
 </ol>
 
@@ -72,7 +72,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 ## {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 사용
 
 {{site.data.keyword.Bluemix_notm}} 관리 CLI
-플러그인을 사용하여 사용자 추가 및 제거, 조직에서 사용자 지정 및 지정 취소, 기타 관리 태스크를 수행할 수 있습니다. 명령 목록을 보려면 다음 명령을 실행하십시오.
+플러그인을 사용하여 사용자 추가 및 제거, 조직에서 사용자 지정 및 지정 취소, 기타 관리 태스크를 수행할 수 있습니다. 조직 이름, 영역 이름 및 애플리케이션 보안 그룹을 작성할 때 공백, 더하기 부호(+) 및 앰퍼샌드(&)와 같은 특수 문자는 지원되지 않습니다. 대소문자를 혼합하거나 밑줄을 사용하여 고유한 이름을 작성하십시오.
+
+명령 목록을 보려면 다음 명령을 실행하십시오.
 
 ```
 cf plugins
@@ -134,17 +136,23 @@ cf ba add-user <user_name> <organization>
 
 ### 사용자 검색
 
-사용자를 검색할 수 있습니다. 다음 명령을 입력하십시오. 
+사용자를 검색할 수 있습니다. 필요한 선택적 검색 필터 매개변수(이름, 권한, 조직 및 역할)와 함께 다음 명령을 입력하십시오.
 
 ```
-cf ba search-users <user_name>
+cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 내의 사용자 이름입니다.</dd>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">사용자에게 지정된 권한입니다. 예를 들어, 수퍼유저, 카탈로그, 사용자 및 보고서입니다. 지정되는 사용자 권한에 대한 자세한 정보는 [권한](../../../admin/index.html#permissions)을 참조하십시오. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
+<dd class="pd">사용자가 속한 조직 이름입니다. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">사용자에게 지정된 조직 역할입니다. 예를 들어, 조직의 관리자, 청구 관리자 또는 감사자입니다. 이 매개변수와 함께 조직을 지정해야 합니다. 역할에 대한 자세한 정보는 [사용자 역할](../../../admin/users_roles.html#userrolesinfo)을 참조하십시오. </dd>
 
 </dl>
 

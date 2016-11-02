@@ -61,7 +61,6 @@ copyright:
 これで、アプリが {{site.data.keyword.cloudant}} サービスにバインドされました。アプリケーションがサービス・インスタンスと通信するためのすべての必要なデータは VCAP_SERVICES 環境変数に入っています。例えば、{{site.data.keyword.Bluemix_notm}} はいくつかのアプリケーションを同じ仮想マシン上でホストしているため、複数のアプリケーションが同じ HTTP ポート番号を使用して着信要求を受け取ることはできません。競合を避けるため、各アプリケーションに固有のポート番号が与えられます。このポート番号は VCAP_APP_PORT 変数の下にあります。
 
 詳細については、アプリの「概要」ページで**「環境変数」**をクリックして、VCAP_SERVICES の完全なリストを表示してください。
-
 ```
 {
    "cloudantNoSQLDB": [
@@ -104,7 +103,8 @@ copyright:
 	cf -v
 	```
 	
-    **要件:** 常に最新バージョンの cf コマンド・ライン・ツールを使用するようにしてください。  3. **cf** コマンド・ライン・インターフェースをインストールした後、**cf api** コマンドを使用して、作業する {{site.data.keyword.Bluemix_notm}} 地域を指定する必要があります。**cf** コマンド・ライン・インターフェースは *https://api.Bluemix_URL* を使用します (*Bluemix_URL* は地域の URL です)。米国南部地域の URL は {{Domain}} です。次のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
+    **要件:** 常に最新バージョンの cf コマンド・ライン・ツールを使用するようにしてください。
+  3. **cf** コマンド・ライン・インターフェースをインストールした後、**cf api** コマンドを使用して、作業する {{site.data.keyword.Bluemix_notm}} 地域を指定する必要があります。**cf** コマンド・ライン・インターフェースは *https://api.Bluemix_URL* を使用します (*Bluemix_URL* は地域の URL です)。米国南部地域の URL は {{Domain}} です。次のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
   
   ```
 cf api https://api.ng.bluemix.net
@@ -151,7 +151,8 @@ cf create-service cloudantNoSQLDB Shared cloudant100
   cf services コマンドを使用して、作成したサービス・インスタンスのリストを表示することもできます。
   
   ```
-cf services```
+  cf services
+  ```
   
   サービス・インスタンスが作成されると、そのサービス・インスタンスは任意のアプリケーションでバインドおよび使用することができます。
   

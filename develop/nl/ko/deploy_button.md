@@ -92,12 +92,12 @@ copyright:
 기본 마스터 분기:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&#41;
+[![Bluemix에 배치](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required])
 </pre>
 <p>지정된 Git 분기:
 </p>
 <pre class="codeblock">
-[&#33;[Deploy to Bluemix]&#40;https://bluemix.net/deploy/button.png&#41;]&#40;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&#41;
+[![Bluemix에 배치](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required])
 </pre>
 </li>
 </ul>
@@ -171,8 +171,8 @@ Manifest 파일을 사용하여 다음을 지정할 수 있습니다.
 지원되는 빌더는 다음과 같습니다.
 <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code> - 출력을 <code>./output/</code> 폴더에 빌드합니다. </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code> - 출력을 <code>.</code> 폴더에 빌드합니다. </i>
-		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code> - 출력을 <code>.</code> 폴더에 빌드합니다. </li>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code> - 출력을 <code>.</code> 폴더에 빌드합니다. </li>
+				<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code> - 출력을 <code>.</code> 폴더에 빌드합니다. </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code> - 출력을 <code>./target/</code> 폴더에 빌드합니다.</li>
 	   </ul>
 	</li>	
@@ -186,7 +186,7 @@ Manifest 파일을 사용하여 다음을 지정할 수 있습니다.
 <li>프로젝트의 루트 디렉토리에서 <code>.bluemix</code> 디렉토리를 작성하십시오.</li>
 <li><code>pipeline.yml</code> 파일을 <code>.bluemix</code> 저장소에 업로드하십시오.</li>
 </ol> </li>
-	<li><stong>IBM Containers</strong>를 사용하여 컨테이너에 앱을 배치하는 경우, 저장소의 루트 디렉토리에 Dockerfile을 포함시키고 <code>.bluemix</code> 디렉토리에 <code>pipeline.yml</code> 파일을 포함시켜야 합니다.
+	<li><strong>IBM Containers</strong>를 사용하여 앱을 배치하는 경우, 저장소의 루트 디렉토리에 Dockerfile을 포함시키고 <code>.bluemix</code> 디렉토리에 <code>pipeline.yml</code> 파일을 포함시켜야 합니다.
 	<ul>
 	    <li> Dockerfile 작성에 대해 자세히 알아보려면 <a href="https://docs.docker.com/reference/builder/" target="_blank">Docker 문서를 참조</a>하십시오.</li>
 	    <li><code>pipeline.yml</code> 파일을 수동으로 작성하거나 기존 DevOps Services 프로젝트에서 하나를 생성할 수 있습니다. 특히 컨테이너에 대한 <code>pipeline.yml</code>을 수동으로 작성하려면 <a href="https://github.com/Puquios/" target="_blank">GitHub의 예를 참조</a>하십시오.</li>
@@ -196,6 +196,4 @@ Manifest 파일을 사용하여 다음을 지정할 수 있습니다.
  </ul>
 </ul>
 
-문제점 해결 도움말은
-[Bluemix에
-배치 단추로 앱이 배치되지 않는 경우](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}를 참조하십시오.	
+문제점 해결 도움말은 [Bluemix에 배치 단추로 앱이 배치되지 않는 경우](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}를 참조하십시오.	

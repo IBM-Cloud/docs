@@ -315,8 +315,8 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  <tr> 
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic top](index.html#bluemix_ic_top)</td>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic volumes](index.html#bluemix_ic_volumes)</td>
  </tr>
  <tr>
@@ -450,7 +450,8 @@ bluemix login [OPTIONS...]
 
 <!-- staging comment for Atlas 45: might need prereq for federated ID/SSO option unless we expect them to just view the details from the cf login command -->
 
-<strong>コマンド・オプション</strong>: `login` コマンドでサポートされるオプションについては、アプリケーション管理用 cf コマンドの `cf login` コマンド使用法の説明を参照してください。
+<strong>コマンド・オプション</strong>:
+`login` コマンドでサポートされるオプションについては、アプリケーション管理用 cf コマンドの `cf login` コマンド使用法の説明を参照してください。
 
 <strong>注</Strong>:
 フェデレーテッド ID でログインする場合は、「--sso」オプションを使用し、ワンタイム・パスコードを使って認証します。
@@ -486,7 +487,8 @@ bluemix target [-o ORG_NAME] [-s SPACE_NAME]
    <dt>-s <i>SPACE_NAME</i> (オプション)</dt>
    <dd>ターゲットとなるスペースの名前。</dd>
    </dl>
--o *ORG_NAME* と -s *SPACE_NAME* のどちらも指定されない場合、現行の組織およびスペースが表示されます。<strong>例</strong>:
+-o *ORG_NAME* と -s *SPACE_NAME* のどちらも指定されない場合、現行の組織およびスペースが表示されます。
+<strong>例</strong>:
 
 現行の組織を `MyOrg` に、スペースを `MySpace` に設定します。
 
@@ -2441,7 +2443,8 @@ bluemix ic images [-a|--all] [--no-trunc] [-q|--quiet]
 次の例は、組織の使用可能なイメージのリストを受け取る要求です。
 
 ```
-bluemix ic images```
+bluemix ic images
+```
 
 
 ## bluemix ic inspect

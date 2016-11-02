@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  anni: 2015, 2016
 
 ---
 
@@ -14,7 +14,7 @@ copyright:
 #Distribuzione delle applicazioni
 {: #deployingapps}
 
-*Ultimo aggiornamento: 9 maggio 2016*
+*Ultimo aggiornamento: 28 luglio 2016*
 {: .last-updated}
 
 Puoi distribuire applicazioni in {{site.data.keyword.Bluemix}}
@@ -498,7 +498,7 @@ Le variabili di ambiente definite dall'utente sono specifiche per un'applicazion
   * Utilizza l'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Completa la seguente
 procedura:
     1. Sul Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul tile della tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
-	2. Nel riquadro di navigazione a sinistra,  fai clic su **Variabili di ambiente**.
+	2. Fai clic su **Variabili di ambiente**.
 	3. Fai clic su **DEFINITO DALL'UTENTE** e quindi su **AGGIUNGI**.
 	4. Compila i campi richiesti, quindi fai clic su **SALVA**.
   * Utilizza l'interfaccia riga di comando cf. Aggiungi una variabile definita dall'utente utilizzando il comando `cf set-env`. Ad

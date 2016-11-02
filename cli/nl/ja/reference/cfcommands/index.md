@@ -165,10 +165,10 @@ cf help command_name
 **注**: フェデレーテッド ID でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。 
 
 ```
-cf login```
+cf login
+```
 cf login コマンドを実行するときには、以下のパラメーターの 1 つ以上を使用できます。<dl>
-<dt>*-a* https://api.{DomainName}
-	 </dt>
+<dt>*-a* https://api.{DomainName}</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} の API エンドポイントの URL。このパラメーターはオプションです。</dd>
 <dt>*-u*user_name</dt>
 <dd>自分のユーザー名。このパラメーターはオプションです。</dd>
@@ -209,7 +209,8 @@ cf logs appname
 マーケットプレイスで提供されているすべてのサービスをリストします。このコマンドによってリストされるサービスは、{{site.data.keyword.Bluemix_notm}} カタログにも表示されます。
 
 ```
-cf marketplace```
+cf marketplace
+```
 
 ## cf push
 
@@ -227,38 +228,30 @@ cf push appname
 `https://github.com/heroku/heroku-buildpack-play.git`
 とします。</dd>
 <dt>*-c*start_command</dt> <dd>アプリケーションの開始コマンド。デフォルトの開始コマンドを使用するには、このオプションに値 null を指定します。例えば次のようにします。</dd>
-<dd>```
+<dd>
+```
 cf push appname -c null
 ```</dd>
-<dd>このオプションを使用してスクリプト・ファイルを実行することもできます。以下に例を示します。```
+<dd>このオプションを使用してスクリプト・ファイルを実行することもできます。以下に例を示します。
+```
 cf push appname -c “bash ./<run.sh>"
 ```</dd>
-<dt>*-f* manifest_path</dt>
-<dd>マニフェスト・ファイルへのパス。デフォルトのマニフェスト・ファイルは、アプリケーションのルート・ディレクトリーの下にある manifest.yml です。</dd>
-<dt>*-i* instance_number</dt>
-<dd>インスタンスの番号。</dd>
-<dt>*-k* disk_limit</dt>
-<dd>アプリケーションのディスクの制限。例えば、*256M*、*1024M*、または *1G* とします。</dd>
-<dt>*-m* memory_limit</dt>
+<dt>*-f*manifest_path</dt> <dd>マニフェスト・ファイルへのパス。デフォルトのマニフェスト・ファイルは、アプリケーションのルート・ディレクトリーの下にある manifest.yml です。</dd>
+<dt>*-i*instance_number</dt> <dd>インスタンスの番号。</dd>
+<dt>*-k*disk_limit</dt> <dd>アプリケーションのディスクの制限。例えば、*256M*、*1024M*、または *1G* とします。</dd>
+<dt>*-m*memory_limit</dt>
 <dd>アプリケーションのメモリーの制限。例えば、*256M*、*1024M*、または *1G* とします。</dd>
-<dt>*-n* host_name</dt>
+<dt>*-n*host_name</dt>
 <dd>アプリケーションのホスト名。例えば、*my-subdomain* とします。</dd>
-<dt>*-p* app_path</dt>
-<dd>アプリケーション・ディレクトリーまたはアプリケーション・アーカイブ・ファイルへのパス。</dd>
-<dt>*-t* timeout</dt>
-<dd>アプリケーションが開始するための最大時間 (秒単位)。他のサーバー・サイドのタイムアウトがこの値をオーバーライドする場合があります。</dd>
+<dt>*-p*app_path</dt> <dd>アプリケーション・ディレクトリーまたはアプリケーション・アーカイブ・ファイルへのパス。</dd>
+<dt>*-t*timeout</dt> <dd>アプリケーションが開始するための最大時間 (秒単位)。他のサーバー・サイドのタイムアウトがこの値をオーバーライドする場合があります。</dd>
 <dt>*-s* stackname</dt>
-<dd>アプリケーションを実行するためのスタック。スタックは、オペレーション・システムを含む、事前ビルド済みのファイル・システムです。{{site.data.keyword.Bluemix_notm}} 内の使用可能なスタックを表示するには、「cf stacks」を使用します。</dd>
-<dt>*--no-hostname*</dt>
-<dd>Bluemix システム・ドメインをこのアプリケーションにマップします。</dd>
-<dt>*--no-manifest*</dt>
-<dd>デフォルトのマニフェスト・ファイルを無視します。</dd>
-<dt>*--no-route*</dt>
-<dd>経路をこのアプリケーションにマップしません。</dd>
-<dt>*--no-start*</dt>
-<dd>アプリケーションがデプロイされた後にアプリケーションを開始しません。</dd>
-<dt>*--random-route*</dt>
-<dd>アプリケーションのランダムな経路を作成します。</dd>
+<dd>アプリケーションを実行するためのスタック。スタックは、オペレーション・システムを含む、事前ビルド済みのファイル・システムです。{{site.data.keyword.Bluemix_notm}} 内の使用可能なスタックを表示するには、`cf stacks` を使用します。</dd>
+<dt>*--no-hostname*</dt> <dd>Bluemix システム・ドメインをこのアプリケーションにマップします。</dd>
+<dt>*--no-manifest*</dt> <dd>デフォルトのマニフェスト・ファイルを無視します。</dd>
+<dt>*--no-route*</dt> <dd>経路をこのアプリケーションにマップしません。</dd>
+<dt>*--no-start*</dt> <dd>アプリケーションがデプロイされた後にアプリケーションを開始しません。</dd>
+<dt>*--random-route*</dt> <dd>アプリケーションのランダムな経路を作成します。</dd>
 </dl>
 
 ## cf scale
@@ -270,11 +263,9 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 <dl>
 <dt>appname</dt>
 <dd>アプリケーションの名前。</dd>
-<dt>*-i* instance_number</dt>
-<dd>インスタンスの番号。</dd>
-<dt>*-k* disk_limit</dt>
-<dd>アプリケーションのディスクの制限。例えば、*256M*、*1024M*、または *1G* とします。</dd>
-<dt>*-m* memory_limit</dt>
+<dt>*-i*instance_number</dt> <dd>インスタンスの番号。</dd>
+<dt>*-k*disk_limit</dt> <dd>アプリケーションのディスクの制限。例えば、*256M*、*1024M*、または *1G* とします。</dd>
+<dt>*-m*memory_limit</dt>
 <dd>アプリケーションのメモリーの制限。例えば、*256M*、*1024M*、または *1G* とします。</dd>
 <dt>*-f*</dt>
 <dd>プロンプトを出さずに、アプリケーションを強制的に再始動します。</dd>
@@ -284,7 +275,8 @@ cf scale appname -i instance_number -k disk_limit -m memory_limit
 
 現在のスペースで使用可能なすべてのサービスをリストします。
 ```
-cf services```
+cf services
+```
 
 ## cf set-env
 
@@ -303,9 +295,10 @@ cf set-env appname var_name var_value
 
 ## cf stacks
 
-すべてのスタックがリストされます。スタックは、アプリを実行可能なオペレーティング・システムを含むビルド前のファイル・システムです。
+すべてのスタックがリストされます。スタックは、アプリを実行できるオペレーティング・システムを含む、ビルド前のファイル・システムです。
 ```
-cf stacks```
+cf stacks
+```
 
 ## cf stop
 
@@ -327,6 +320,6 @@ cf -v
 
 # 関連リンク
 {: #rellinks}
-## 一般
+## 一般 
 {: #general}
-* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
+* [クイック・リファレンス・カード - cf コマンド](ftp://public.dhe.ibm.com/cloud/bluemix/cli_reference_card.pdf)
