@@ -42,7 +42,7 @@ To start using Google as an identity provider, create a project in the [Google D
 After you have a Google Application ID and Secret, you can enable Google authentication in the {{site.data.keyword.amashort}}  dashboard.
 
 1. Open the {{site.data.keyword.amashort}} service dashboard.
-1. From the **Manage** tab, pull the **Authorization** lever to the **On** position.
+1. From the **Manage** tab, toggle **Authorization** on.
 1. Open the **Google** section.
 1. Check the **Add Google to a Web App**
 4. In the **Configure for Web** section:   

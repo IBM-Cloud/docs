@@ -48,7 +48,7 @@ On the Facebook for Developers site:
 After you  configure the Facebook App ID and your Facebook Application to serve iOS clients, you can enable Facebook authentication in your {{site.data.keyword.amashort}} service.
 
 1. Open your service in the  {{site.data.keyword.amashort}} dashboard.
-1. From the **Manage** tab, pull the **Authorization** lever to the **On** position.
+1. From the **Manage** tab, toggle **Authorization** on.
 1. Expand the **Facebook** section.
 1. Add the **Facebook Application ID** and click **Save**.
 

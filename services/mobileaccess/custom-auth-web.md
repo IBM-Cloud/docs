@@ -108,7 +108,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 After you have your custom identity provider configured, you can enable custom authentication in the {{site.data.keyword.amashort}}  dashboard. 
 
 1. Open your service in the {{site.data.keyword.amafull}} dashboard.
-1. From the **Manage** tab, pull the **Authorization** lever to the **On** position.
+1. From the **Manage** tab, toggle **Authorization** on.
 1. Expand the **Custom** section.
 1. Enter the **Realm name**, **Custom Identity Provider URL**. 
 1. Enter the **Your Web Application Redirect URIs** value. This is the URI of the final redirect after successful authorization.

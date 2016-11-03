@@ -72,7 +72,7 @@ The following steps give you a brief outline of the tasks necessary for preparin
 Now that you have an iOS client ID, you can enable Google authentication in the {{site.data.keyword.amashort}} service.
 
 1. Open your service in the {{site.data.keyword.amashort}} dashboard.
-1. From the **Manage** tab, pull the **Authorization** lever to the **On** position.
+1. From the **Manage** tab, toggle **Authorization** on.
 1. Expand the **Google** section.
 1. In **Application ID for iOS**, specify the `CLIENT_ID` value you obtained from the `GoogleService-Info.plist` file.
 1. Click **Save**.
