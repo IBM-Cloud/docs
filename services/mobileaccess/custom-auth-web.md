@@ -2,27 +2,31 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-11-03"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 
-#Configuring custom authentication for {{site.data.keyword.amashort}} web applications
+#Configuring custom authentication for {{site.data.keyword.amashort}} Web applications
 {: #custom-web}
 
 
-Add custom authentication and {{site.data.keyword.amafull}} security functionality to your  web app.
+Add custom authentication and {{site.data.keyword.amafull}} security functionality to your Web app.
 
 ## Before you begin
 {: #before-you-begin}
 
 Before you begin,  you must have:
 
-* A web app. 
-* An instance of a {{site.data.keyword.Bluemix_notm}}  application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}}  back-end application, see [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html).
-* The URI for the final redirect (after the authorization process completes).
+* A Web app.
+* A resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
+* Your **Realm** name. This is the value you you specificed in the **Realm Name** field of the **Custom** section in the **Management** tab of the {{site.data.keyword.amashort}} dashboard.
+* The URL of your back-end application (**App Route**). You will need this values for sending requests to the protected endpoints of your back-end application.
+* Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`, `United Kingdom`, or `Sydney`, and correspond to the SDK values required in Javascript code: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`. You will need this value for initializing the {{site.data.keyword.amashort}} client.
+* The URI for the final redirect (after the authorization process completes). This is the **Your Web Application Redirect URIs** value you entered in the **Custom** section of the **Management** tab.
 
 For more information:
 
@@ -103,23 +107,27 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 
 After you have your custom identity provider configured, you can enable custom authentication in the {{site.data.keyword.amashort}}  dashboard. 
 
-1. Open the {{site.data.keyword.Bluemix_notm}} dashboard. 
-2. Click the relevant {{site.data.keyword.amashort}} application tile. The app dashboard loads. 
-3. Click the **Configure** button on the Custom tile. 
-4. In the **Realm Name** text box, enter the realm name configured in your custom identity provider handler endpoint.
-5. Enter the custom identity provider URL. 
-6. Enter the Web application redirect URI to be used by {{site.data.keyword.amashort}} dashboard after successful authentication. 
-7. Save. 
+1. Open your service in the {{site.data.keyword.amafull}} dashboard.
+1. From the **Manage** tab, pull the **Authorization** lever to the **On** position.
+1. Expand the **Custom** section.
+1. Enter the **Realm name**, **Custom Identity Provider URL**. 
+1. Enter the **Your Web Application Redirect URIs** value. This is the URI of the final redirect after successful authorization.
+1. Click **Save**.
 
 
 ##Implementing the {{site.data.keyword.amashort}} authorization flow using a custom identity provider
 {: #custom-auth-flow}
 
-The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties that are necessary for the authorization process. It consists of a JSON object and you can view it by clicking  **Enviroment Variables**  from the navigation bar on the left of your application.
+The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties that are necessary for the authorization process. It consists of a JSON object and you can view it in the  **Service Credentials** tab in the {{site.data.keyword.amashort}} dashboard.
 
 To request user authorization, redirect the browser to the authorization server endpoint. In order to do so: 
 
 1. Retrieve the authorization endpoint (`authorizationEndpoint`) and clientId (`clientId`) from the service credentials stored in `VCAP_SERVICES` environment variable. 
+
+	`var cfEnv = require("cfenv");` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+
 
 	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
   
@@ -137,7 +145,7 @@ To request user authorization, redirect the browser to the authorization server 
 	
 2. Build the authorization server URI using `response_type("code")`, `client_id`, and `redirect_uri` as query parameters.  
 
-3. Redirect from your web app to the generated URI. 
+3. Redirect from your Web app to the generated URI. 
 
 	The following example retrieves the parameters from the `VCAP_SERVICES` variable, builds the URL, and sends the redirect request.
 
@@ -167,13 +175,13 @@ To request user authorization, redirect the browser to the authorization server 
 	```
 	{: codeblock}
  
-	Note that the `redirect_uri` parameter represents your web application redirect URI and must be equal to the one defined in the {{site.data.keyword.amashort}} dashboard.  
+	Note that the `redirect_uri` parameter represents your Web application redirect URI and must be equal to the one defined in the {{site.data.keyword.amashort}} dashboard.  
 
 	A `state` parameter can be passed along with the request. This parameter will be propogated to the custom identity provider POST method, and can be accessed from the request body (`req.body.stateId`).  
 
-	After redirecting to the authorization end-point the user will get a login form. After user's credentials are authenticated with the custom identity provider, the {{site.data.keyword.amashort}} service will call your web application redirect URI supplying the grant code as a query parameter.  
+	After redirecting to the authorization end-point the user will get a login form. After user's credentials are authenticated with the custom identity provider, the {{site.data.keyword.amashort}} service will call your Web application redirect URI supplying the grant code as a query parameter.  
 
-	After redirecting, the user gets a login form. After the user's credentials are authenticated by the custom identity provider, the {{site.data.keyword.amashort}} service will calls the web application redirect URI, supplying the grant code as a query parameter. 
+	After redirecting, the user gets a login form. After the user's credentials are authenticated by the custom identity provider, the {{site.data.keyword.amashort}} service will calls the Web application redirect URI, supplying the grant code as a query parameter. 
 
 ##Obtaining the tokens
 {: custom-auth-tokens}
@@ -182,7 +190,7 @@ The next step is to obtain the access token and identity token using the previou
 
 1. Retrieve `authorizationEndpoint`, `clientId`, and `secret` from service credentials stored in `VCAP_SERVICES` environment variable. 
 
-	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
+	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding Web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
 
 	US South: 
   
@@ -210,7 +218,7 @@ The next step is to obtain the access token and identity token using the previou
 		var formData = { 
 			grant_type: "authorization_code", 
 			client_id: mcaCredentials.clientId, 
-			redirect_uri: "http://some-server/oauth/callback",   // Your web application redirect uri 
+			redirect_uri: "http://some-server/oauth/callback",   // Your Web application redirect uri 
 			code: req.query.code 
 		} 
 
@@ -237,7 +245,7 @@ The next step is to obtain the access token and identity token using the previou
 
 	The response body will contain `access_token` and `id_token` in JWT format (https://jwt.io/).
 
-	Once you have received access, and identity the tokens, you can flag web session as authenticated and optionally persist these tokens
+	Once you have received access, and identity the tokens, you can flag Web session as authenticated and optionally persist these tokens
 
 
 ##Using obtained access and identity token

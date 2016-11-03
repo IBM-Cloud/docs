@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-02"
 
 ---
 {:screen: .screen}
@@ -12,14 +12,14 @@ lastupdated: "2016-10-27"
 {: #google-auth-cordova}
 
 
-To integrate your {{site.data.keyword.amafull}} Cordova applications for Google authentication,  make changes in the Cordova application native platform code (Java or Objective-C), as well as in the Cordova WebView (Javascript). Each platform must be configured separately. Use the native development environment to make changes in the native code, for example, in Android Studio or Xcode.
+To integrate your {{site.data.keyword.amafull}} Cordova applications for Google authentication,  you must make changes in the Cordova application native platform code (Java or Objective-C), as well as in the Cordova WebView (Javascript). Each platform must be configured separately. Use the native development environment to make changes in the native code, for example, in Android Studio or Xcode.
 
 ## Before you begin
 {: #before-you-begin}
 You must have:
 * A Cordova project that is instrumented with {{site.data.keyword.amashort}} client SDK.  For more information, see  [Setting up the Cordova plug-in](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end service, see [Getting started](index.html).
-* Your application route.
+* Your application route. This is the URL of your back-end application.
 * Your **TenantID**. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `tenantId`   (also known as `appGUID`) value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
 *  Find the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. You can find your current Bluemix region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value should be one of the following: **US South**, **Sydney**, or **UK**. The exact SDK constant values that correspond to these names are indicated in the code examples. 
 * (optional) Get familiar with the following sections:
@@ -87,8 +87,9 @@ The steps required to configure iOS Platform of Cordova application for Google a
 
 
 ### Enable Keychain Sharing for iOS
+{: #enable_keychain}
 
-Enable `Keychain Sharing` by going to `Capabilities` tab and switch the `Keychain Sharing` to `On` in your Xcode project. 
+Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain Sharing` to `On` in your Xcode project.
 
  
 ### Initializing the Authorization Manager in your iOS code
@@ -103,25 +104,13 @@ Initialize the {{site.data.keyword.amashort}} Authorization Manager in Objective
 
 {
 
-	// Xcode 7 and Xcode 8 with Swift 2.3
-
-    [CDVBMSClient initMCAAuthorizationManagerManager:@"<tenantId>"];
-
-    //Xcode 8 with Swift 3
-
-    //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
+    [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
 
     [[GoogleAuthenticationManager sharedInstance] register];
 
     self.viewController = [[MainViewController alloc] init];
 
- 
-    //Xcode 7 and Xcode 8 with 2.3
-
-    [[GoogleAuthenticationManager sharedInstance] onFinishLaunching:application withOptions:launchOptions];
-
-    //Xcode 8 with Swift 3
-    
+     
     [[GoogleAuthenticationManager sharedInstance] onFinishLaunchingWithApplication:application withOptions:launchOptions];
 
 
@@ -132,13 +121,8 @@ Initialize the {{site.data.keyword.amashort}} Authorization Manager in Objective
 
 {
 
-    //Xcode 7 and Xcode 8 with Swift 2.3
-
-    return [[GoogleAuthenticationManager sharedInstance] onOpenURL:application url:url sourceApplication:sourceApplication annotation:annotation];
-
-    //Xcode 8 with Swift 3
-
-   return [[GoogleAuthenticationManager sharedInstance] onOpenURLWithApplication:application url:url sourceApplication:sourceApplication annotation:annotation];
+   return [[GoogleAuthenticationManager sharedInstance] onOpenURLWithApplication:application url:url 
+   	sourceApplication:sourceApplication annotation:annotation];
 
 }
 ```

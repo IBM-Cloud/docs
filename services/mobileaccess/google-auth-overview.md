@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-03"
+
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -11,8 +12,7 @@ lastupdated: "2016-10-02"
 # Authenticating users with Google credentials
 {: #google-auth}
 
-
-You can configure the {{site.data.keyword.amafull}} service to protect resources, using Google as an identity provider. Your mobile or web application users can then use their Google credentials for authentication.
+You can configure the {{site.data.keyword.amafull}} service to protect resources, using Google as an identity provider. Your mobile or Web application users can then use their Google credentials for authentication.
 {:shortdesc}
 
 **Important:** You do not need to separately install the client SDK provided by Google. The Google SDK installs automatically by dependency managers when you configure the {{site.data.keyword.amashort}} client SDK.
@@ -45,7 +45,7 @@ See the following diagram to understand how {{site.data.keyword.amashort}} integ
 The {{site.data.keyword.amashort}} web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
 
   * The initial request is sent by the web application (from a log-in form, for example).
-  * The final redirect is to the protected area of the web application itself, rather than back-end protected resource. 
+  * The final redirect is to the protected area of the web application itself, rather than back-end protected resource.
 
 
 
@@ -56,4 +56,3 @@ The {{site.data.keyword.amashort}} web application request flow is similar to th
 * [Enabling Google authentication for iOS apps (Swift SDK)](google-auth-ios-swift-sdk.html)
 * [Enabling Google authentication for iOS apps (Objective-C SDK)](google-auth-ios.html)
 * [Enabling Google authentication for Cordova apps](google-auth-cordova.html)
-

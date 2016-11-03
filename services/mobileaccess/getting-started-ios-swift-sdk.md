@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-02"
+
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-
 
 # Setting up the iOS Swift SDK
 {: #getting-started-ios}
@@ -15,15 +15,17 @@ lastupdated: "2016-10-10"
 
 {:shortdesc}
 
-**Note:** The Objective-C SDK reports monitoring data to the Monitoring Console of {{site.data.keyword.amashort}} service. In case you’re relying on the monitoring functionality of {{site.data.keyword.amashort}} service you need to continue using the Objective-C SDK.
-
-While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK. 
+While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK.
 
 
 ## Before you begin
 {: #before-you-begin}
 You must have:
-* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* An instance of a {{site.data.keyword.Bluemix_notm}} application.
+* An instance of a {{site.data.keyword.amafull}} service.
+* Your **TenantID**. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `tenantId` (also known as `appGUID`)  values are displayed in the  **App GUID / TenantId** field. You will need this value for intializing the {{site.data.keyword.amashort}} Authorization Manager.
+* Your **Application Route**. This is the URL of your back-end application. You need this value for for sending requests to its protected endpoints.
+* Your {{site.data.keyword.Bluemix_notm}} **Region**.  You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`,  `Sydney`, or  `United Kingdom`, and correspond to the SDK values required in the code: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.  You will need this value for intializing the {{site.data.keyword.amashort}}  SDK.
 * An Xcode project. For more information about how to set up your iOS development environment, see the [Apple Developer website](https://developer.apple.com/support/xcode/).
 
 
@@ -70,13 +72,15 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 
 	`open {your-project-name}.xcworkspace`
 
+### Enable Keychain Sharing for iOS
+{: #enable_keychain}
+
+Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain Sharing` to `On` in your Xcode project.
+
 ## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #init-mca-sdk-ios}
 
  Initialize the SDK by passing the `applicationGUID` parameter. A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate.
- 
-
-1. Get your service parameter values. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile options**. The `applicationRoute` and `tenantId` (also known as `appGUID`)  values are displayed in the **Route** and **App GUID / TenantId** fields. You will need these values for intializing the SDK, and for sending requests to the back-end application.
 
 1. Import the required frameworks in the class where you want to use {{site.data.keyword.amashort}} client SDK.
 
@@ -91,31 +95,33 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 	let tenantId = "<serviceTenantID>"
 	let regionName = <applicationBluemixRegion>
 
-	func application(_ application: UIApplication, 
+	func application(_ application: UIApplication,
 	    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
 	let mcaAuthManager = MCAAuthorizationManager.sharedInstance
     mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
       // possible values for regionName: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, BMSClient.Region.sydney
-	BMSClient.sharedInstance.authorizationManager = mcaAuthManager	
+	BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 	return true
 	}
  ```
 
-* Replace the `tenantId` with value  you obtained from **Mobile options**. See **step 1**.
-* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon") in the menu bar to open the **Account and Support** widget. The region value that appears should be one of the following: **US South**, **United Kingdom**, or **Sydney**, and correspond to the constant values required in the code:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
+* Replace the `tenantId` with value you obtained from **Mobile options**. 
+* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. 
 
-   
+For information about these values, see [Before you begin](#before-you-begin). 
+
+
 ## Making a request to your mobile back-end application
 {: #request}
 
 After the {{site.data.keyword.amashort}} client SDK is initialized, you can start making requests to your mobile back-end application.
 
-1. Try to send a request to a protected endpoint on your mobile back-end application in your browser. Open the following URL: `{applicationRoute}/protected` replacing the `{applicationRoute}` with the **applicationRoute** value you retrieved from the **Mobile options** (see [Initializing the Mobile Client Access client SDK](#init-mca-sdk-ios)). For example: 
+1. Try to send a request to a protected endpoint on your mobile back-end application in your browser. Open the following URL: `{applicationRoute}/protected` replacing the `{applicationRoute}` with the **applicationRoute** value you retrieved from the **Mobile options** (see [Initializing the Mobile Client Access client SDK](#init-mca-sdk-ios)). For example:
 
 	`http://my-mobile-backend.mybluemix.net/protected`
 
-	The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser because this endpoint can be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK only.
+	An `Unauthorized` message is returned in your browser because this endpoint can be accessed by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK only.
 
 1. Use your iOS application to make a request to the same endpoint. Add the following code after you initialize `BMSClient`:
 
@@ -140,7 +146,7 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
  response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
  ```
 {: screen}
- 
+
 ## Next steps
 {: #next-steps}
 When you connected to the protected endpoint, no credentials were required. To require your users to log in to your application, you must configure Facebook, Google, or custom authentication.

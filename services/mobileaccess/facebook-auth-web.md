@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-11-01"
 
 ---
 {:screen: .screen}
@@ -10,45 +10,45 @@ lastupdated: "2016-10-03"
 {:codeblock: .codeblock}
 
 
-# Enabling Facebook authentication for web applications
+# Enabling Facebook authentication for Web applications
 {: #facebook-auth-web}
 
-Use Facebook to authenticate users on your {{site.data.keyword.amafull}}  web application. Add {{site.data.keyword.amashort}} security functionality. 
+Use Facebook to authenticate users on your {{site.data.keyword.amafull}}  Web application. Add {{site.data.keyword.amashort}} security functionality. 
 
 ## Before you begin
 {: #facebook-auth-android-before}
 You must have:
 
-* A web app. 
-* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by the {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* A Web app. 
+* An {{site.data.keyword.amashort}} service. For more information, see [Getting started](index.html).
 * The URI for the final redirect (after the authorization process completes).
 
 
-## Configuring a Facebook application for your website
+## Configuring an application on the  Facebook for Developers site
 {: #facebook-auth-config}
 
 To use Facebook as an identity provider on your website, you must add and configure the website platform on your Facebook application.
 
-1. Log in to the [Facebook for Developers](https://developers.facebook.com) website.
-2. Open or create your app.
-3. Note the **App ID**  and **App Secret**. You need these values when you configure your web project for Facebook authentication in the {{site.data.keyword.amashort}} dashboard.
-4. Add the **Website** platform, if it does not exist.
-5. Add or open the **Facebook Login** from the **Products** list.
-6. Enter the authorization server callback endpoint URI in the **Valid OAuth redirect URIs** box. Find this authorization redirect URI in the {{site.data.keyword.amashort}} dashboard configuration steps that follow.
+1. Log in to your account on the [Facebook for Developers](https://developers.facebook.com) site. 
+	For information on creating a new app, see [Creating an application on the Facebook for Developers website](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Note the **App ID** and **App Secret**. You need these values when you configure your Web project for Facebook authentication in the Mobile Client Access dashboard.
+1. From the **Products List**, choose **Facebook Login**.
+4. Add the **Web** platform, if it does not exist.
+6. Enter the authorization server callback endpoint URI in the **Valid OAuth redirect URIs** box. You can add this value after you have configured your {{site.data.keyword.amashort}} service in the steps that follow.
 7. Save changes.
 
 
 ## Configuring {{site.data.keyword.amashort}} for Facebook authentication
 {: #facebook-auth-config-ama}
 
-After you have your Facebook App ID and App Secret, and your Facebook Application has been configured to serve web clients, you can enable Facebook authentication in the {{site.data.keyword.Bluemix_notm}}  dashboard.
+After you have your Facebook App ID and App Secret, and your Facebook for Developers application has been configured to serve Web clients, you can enable Facebook authentication in the {{site.data.keyword.Bluemix_notm}}  dashboard.
 
-1. Open the {{site.data.keyword.Bluemix_notm}} dashboard.
-2. Click the relevant app tile to load the app.
-3. Click the tile for the  {{site.data.keyword.amashort}} service.
-4. Click the **Configure** button in the **Facebook** panel.
-5. Note the value in the **Mobile Client Access Redirect URI for Facebook Developer Console** text box. You need this value to add to the **Valid OAuth redirect URIs** box in the **Facebook Login** of the Facebook Developers Portal in step six of Configuring a Facebook application for your website.
-6. Enter the Facebook **Application ID** and **App Secret**.
+1. Open the {{site.data.keyword.amashort}} service dashboard.
+1. From the **Manage** tab, pull the **Authorization** lever to the **On** position.
+1. Expand the **Facebook** section.
+1. Select **Add Facebook to a Web App**.
+5. Note the value in the **Mobile Client Access Redirect URI for Facebook for Developers** text box. You need this value to add to the **Valid OAuth redirect URIs** box in the **Facebook Login** of the Facebook Developers Portal.
+6. Enter the Facebook **App ID** and **App Secret** obtained from the Facebook for Developers website.
 7. Enter the redirect URI in the **Your Web Application Redirect URIs**. This value is for the redirect URI to be accessed after the authorization process is completed, and is determined by the developer.
 8. Click **Save**.
 
@@ -56,13 +56,15 @@ After you have your Facebook App ID and App Secret, and your Facebook Applicatio
 ## Implementing the {{site.data.keyword.amashort}} authorization flow using Facebook as identity provider
 {: #facebook-auth-flow}
 
-The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties necessary for the authorization process. It consists of a JSON object and can be viewed by clicking  **Environment Variables**  in your application.
+The `VCAP_SERVICES` environment variable is created automatically for each {{site.data.keyword.amashort}} service instance and contains properties necessary for the authorization process. It consists of a JSON object and can be viewed in the  **Service Credentials** tab on the {{site.data.keyword.amashort}} service dashboard.
 
 To start the process of authorization:
 
 1. Retrieve the authorization endpoint (`authorizationEndpoint`) and client id (`clientId`) from the service credentials stored in the `VCAP_SERVICES` environment variable. 
 
-	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
+	`var cfEnv = require("cfenv");` 
+
+	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding Web support, you might not have token endpoint in the **Service Credentials**. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
  
 	US South: 
 
@@ -78,7 +80,7 @@ To start the process of authorization:
 
 2. Build the authorization server URI using `response_type("code")`, `client_id`, and `redirect_uri` as query parameters. 
 
-3. Redirect from your web app to the generated URI.
+3. Redirect from your Web app to the generated URI.
 
 	The following example retrieves the parameters from the `VCAP_SERVICES` variable, building the URL, and sending the redirect request.
 
@@ -101,7 +103,7 @@ To start the process of authorization:
 			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
 			var clientId = mcaCredentials.clientId;   
 			var redirectUri = "http://some-server/oauth/callback"; 
-			// Your web application redirect URI   
+			// Your Web application redirect URI   
 
 			var redirectUrl = authorizationEndpoint + "?response_type=code";
 			redirectUrl += "&client_id=" + clientId;   
@@ -116,8 +118,7 @@ To start the process of authorization:
 
 	The `redirect_uri` parameter is the URI for redirecting, after the successful or unsuccessful authentication with Facebook.   
 
-	After redirecting to the authorization endpoint, the user will get a login form from 
-Facebook. After Facebook authorizes the user's identity the {{site.data.keyword.amashort}} service will call your web application redirect URI, supplying the grant code as a query parameter.  
+	After redirecting to the authorization endpoint, the user will get a login form from Facebook. After Facebook authorizes the user's identity the {{site.data.keyword.amashort}} service will call your web application redirect URI, supplying the grant code as a query parameter.  
 
 
 ## Obtaining the tokens

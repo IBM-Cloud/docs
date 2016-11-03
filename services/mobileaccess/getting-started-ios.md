@@ -3,13 +3,12 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:shortdesc: .shortdesc}
 
 # Setting up the iOS Objective-C SDK
 {: #getting-started-ios}
-
-
 
 Instrument your iOS application with the {{site.data.keyword.amafull}} SDK, initialize the SDK, and make requests to protected and unprotected resources.
 
@@ -21,6 +20,8 @@ Instrument your iOS application with the {{site.data.keyword.amafull}} SDK, init
 {: #before-you-begin}
 You must have:
 * An instance of a {{site.data.keyword.Bluemix_notm}} application that is protected by the {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* Your **TenantID**. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `tenantId` (also known as `appGUID`)  values are displayed in the  **App GUID / TenantId** field. You will need this value for intializing the {{site.data.keyword.amashort}} Authorization Manager.
+* Your **Application Route**. This is the URL of your back-end application. You need this value for for sending requests to its protected endpoints.
 * An Xcode project.  
 
 
@@ -52,9 +53,8 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 
 1. Edit the `Podfile` file, and add the following line to the required targets:
 
-	```
-	pod 'IMFCore'
-	```
+
+	`pod 'IMFCore'`
 
 1. Save the `Podfile` file, and run `pod install` from the command line. <br/>Cocoapods installs added dependencies and displays the added components.<br/>
 
@@ -65,33 +65,29 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 ## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #init-mca-sdk-ios}
 
-To use the {{site.data.keyword.amashort}} client SDK, you must initialize the SDK by passing the **Route** (`applicationRoute`), and **App GUID** (`applicationGUID`) parameters.
-
-1. From the main page of the {{site.data.keyword.Bluemix_notm}} dashboard, click your app. Click **Mobile Options**. You need the **Route** and **App GUID** values to initialize the SDK.
-
 1. Import the `IMFCore` framework in the class that you want to use the {{site.data.keyword.amashort}} client SDK by adding the following header:
 
 	####Objective-C
 	{: #imfcore-objc}
-	
+
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
 	```
 
 	####Swift
 	{: #sdk-swift}
-	
+
 	The {{site.data.keyword.amashort}} client SDK is implemented with Objective-C. You might need to add a bridging header to your Swift project:
-	1. Right-click your project in Xcode, and select **New File..**.
+	1. Right-click your project in Xcode, and select **New File**.
 	1. In the **iOS Source** category, click **Header file**. Name the file `BridgingHeader.h`.
-	1. Add the following line to your bridging header: `#import <IMFCore/IMFCore.h>`
+	1. Add the following line to your bridging header: `#import <IMFCore/IMFCore.h>`.
 	1. Click your project in Xcode, and select **Build Settings** tab.
 	1. Search for `Objective-C Bridging Header`.
 	1. Set the value to the location of your `BridgingHeader.h` file, for example `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Make sure your bridging header is being picked up by Xcode by building your project. You should see not see any failure messages.
-	
+
 1. Use the following code to initialize the {{site.data.keyword.amashort}} client SDK.  A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate. <br/>
-Replace the `applicationRoute` and vapplicationGUID` with the values from **Mobile Options** in the {{site.data.keyword.Bluemix_notm}} dashboard.
+For information on obtaining thee `applicationRoute` and `applicationGUID`  see [Before you begin](#before-you-begin). 
 
 	####Objective-C
 	{: #sharedinstance-objc}
@@ -109,20 +105,21 @@ Replace the `applicationRoute` and vapplicationGUID` with the values from **Mobi
 	```
 
 ## Initializing the AuthorizationManager
-Initialize the `AuthorizationManager` by passing the {{site.data.keyword.amashort}} service `tenantId` parameter. Find this value by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
+Initialize the `AuthorizationManager` by passing the {{site.data.keyword.amashort}} service `tenantId` parameter. For information on obtaining these values, see [Before you begin](#before-you-begin). 
 
 ####Objective-C
-	
+
 ```Objective-C
-  	   [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+[[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"<tenantId>"];
 ```
 
 ####Swift
 
 ```Swift
-	   IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+IMFAuthorizationManager.sharedInstance().initializeWithTenantId("<tenantId>")
 ```
 
+	
 ## Making a request to your mobile back-end application
 {: #request}
 
