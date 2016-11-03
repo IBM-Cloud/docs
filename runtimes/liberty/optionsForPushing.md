@@ -241,9 +241,9 @@ When you want to bind a service to your application, information about the servi
 
 The typical set of information is as follows:
 * name: The name of the service. For example, mysql-e3abd.
-label: The type of the created service. For example, mysql-5.5.
+* label: The type of the created service. For example, mysql-5.5.
 * plan: The service plan, as indicated by the unique identifier for that plan. For example, 100.
-connection.name: A unique identifier for the connection, which takes the form of a UUID. For example, d01af3a5fabeb4d45bb321fe114d652ee.
+* connection.name: A unique identifier for the connection, which takes the form of a UUID. For example, d01af3a5fabeb4d45bb321fe114d652ee.
 * connection.hostname: The host name of the server that is running the service. For example, mysql-server.mydomain.com.
 * connection.host: The IP address of the server that is running the service. For example, 9.37.193.2.
 * connection.port: The port on which the service is listening for incoming connections. For example, 3306,3307.
