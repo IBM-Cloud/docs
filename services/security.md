@@ -1,20 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 
 # Security
 {: #security}
 
-*Last updated: 9 December 2015*
-
-With these security services, you can protect access to applications and workloads, and scan applications for vulnerabilities. You can also embed security controls into data management and big data services. 
+With these security services, you can protect access to applications and workloads, and scan applications for vulnerabilities. You can also embed security controls into data management and big data services.
 {:shortdesc}
 
 

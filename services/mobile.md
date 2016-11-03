@@ -1,19 +1,18 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Mobile
 {: #mobile}
 
-*Last updated: 9 December 2015*
-
-Use mobile services to build multiplatform, native or hybrid, Android and iOS applications. 
+Use mobile services to build multiplatform, native or hybrid, Android and iOS applications.
 {:shortdesc}
 
 

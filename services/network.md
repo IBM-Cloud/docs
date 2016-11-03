@@ -1,17 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Network
 {: #network}
 
-*Last updated: 29 April 2016*
-
 With network services, you can create networks in the cloud, and connect between your networks within {{site.data.keyword.Bluemix}} and on-premises IT infrastructure.
 {: shortdesc}
-

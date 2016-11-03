@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 #Services
 {: #services}
-
-*Last updated: 21 October 2016*
-{: .last-updated} 
 
 You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} user interface.
 {:shortdesc}
@@ -199,7 +197,7 @@ If you use the cf command line interface to request a service instance, complete
 You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.Bluemix_notm}} services, see [Enabling external apps to use {{site.data.keyword.Bluemix_notm}} services](#accser_external){: new_window}.
 
 
-## Configuring your application to interact with a service 
+## Configuring your application to interact with a service
 {: #config}
 
 After you bind a service instance to your application, you must configure your application to interact with the service.
@@ -293,7 +291,7 @@ If you have a service instance that is created and bound to apps in one region, 
 
   * Use the service credentials to configure your app instance directly. See [Enabling external apps to use {{site.data.keyword.Bluemix_notm}} service](#accser_external){: new_window} for details.
   * Create a user-provided service as a bridge.
-    
+
 	Assume that you are starting in the region where you want to use the service instance. To use a service instance that exists in another region, complete the following steps:
 
       1. Switch to the region where the service instance exists. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand **Region** or click the **Region** icon, and then select the region where the service instance exists.
@@ -330,7 +328,7 @@ To use a service instance from another service, complete the following steps:
 1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click
 the tile for the service that you want to access. The dashboard for the service is displayed.
 2. In the navigation pane, click **Manage** to authorize the binding from other service instances by using the console of the service instance.
-3. If you want to deny other services access to the service instance, click **Service Access Authorization** in the navigation pane and then use **Revoke** to remove the service binding. 
+3. If you want to deny other services access to the service instance, click **Service Access Authorization** in the navigation pane and then use **Revoke** to remove the service binding.
 
 # rellinks
 {: #rellinks}
@@ -340,5 +338,3 @@ the tile for the service that you want to access. The dashboard for the service 
 
 * [Binding a service by using {{site.data.keyword.Bluemix_notm}} user interface](../cfapps/ee.html#ee_bindui)
 * [Retrieving VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
-
-
