@@ -219,7 +219,7 @@ If your team uses a tool that isn't included on the toolchains integrations list
 Configure a custom tool so that it works with other tools in your toolchain and is available to your team:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Other Tool**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**.
+1. If you have a toolchain on {{site.data.keyword.Bluemix_notm}} Public and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Dedicated, on the Dashboard, on the **DEVOPS** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the upper-right corner of the app's Overview page, click **View Toolchain**. Then, click **Tool Integrations**.
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Other Tool**.
 1. Type the tool name.
@@ -240,8 +240,8 @@ PagerDuty integrates data from multiple monitoring systems into a single view. W
 Configure PagerDuty to send notifications when pipeline stage failures occur so that you can fix problems faster and reduce downtime:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **PagerDuty**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. 
-1. Click the add button (+).
+1. If you have a toolchain on {{site.data.keyword.Bluemix_notm}} Public and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Dedicated, on the Dashboard, on the **DEVOPS** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the upper-right corner of the app's Overview page, click **View Toolchain**. Then, click **Tool Integrations**. 
+1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **PagerDuty**
 1. Type the PagerDuty site name that is associated with your PagerDuty account. If you don't have a PagerDuty account, [register for one (Link opens in a new window)](https://signup.pagerduty.com/accounts/new){: new_window}.
 1. Type the API access key for your PagerDuty account. For instructions to find the key, see [API Authentication (Link opens in a new window)](https://signup.pagerduty.com/accounts/new){: new_window}.
@@ -263,7 +263,7 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Sauce Labs**.
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. 
-1. Click the add button (+).
+1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Sauce Labs**.
 1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message at the top of your Sauce Labs account page (Link opens in a new window)](https://saucelabs.com/account){: new_window}.
 1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page (Link opens in a new window)](https://saucelabs.com/account){: new_window}.
@@ -285,8 +285,8 @@ Slack is a cloud-based, real-time messaging and notification system. Slack provi
 Configure Slack to receive notifications about your toolchain from the tool integrations, such as test and deployment activities:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Slack**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**.
-1. Click the add button (+).
+1. If you have a toolchain on {{site.data.keyword.Bluemix_notm}} Public and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Dedicated, on the Dashboard, on the **DEVOPS** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the upper-right corner of the app's Overview page, click **View Toolchain**. Then, click **Tool Integrations**.
+1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Slack**.
 1. Type the API authentication token for your Slack account. You must use a generated full-access token to authenticate with Slack. For instructions to find the token, see [Slack authentication (Link opens in a new window)](https://api.slack.com/web#authentication){: new_window}.
 1. Type the name of the Slack channel that you want notifications to be sent to. If the channel that you specify doesn't exist, it is created. If the channel was archived, it is reactivated.
