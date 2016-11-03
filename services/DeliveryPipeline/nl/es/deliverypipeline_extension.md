@@ -7,7 +7,7 @@ copyright:
 
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
+    It must be surrounded by 3 dashes.
     The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
     Indentation as per the previous template must be preserved.
 -->
@@ -196,7 +196,7 @@ Para crear notificaciones de Slack:
 1. En el conducto, abra la configuración correspondiente a una etapa.
 2. En el separador **PROPIEDADES DE ENTORNO**, pulse **AÑADIR PROPIEDAD**.
 3. Seleccione **Propiedades de texto**.
-4. Especifique el nombre y un valor para la propiedad de entorno. Repita este paso para crear varias propiedades de entorno. 
+4. Especifique el nombre y un valor para la propiedad de entorno. Repita este paso para crear varias propiedades de entorno.
 
   *Tabla 1. Propiedades de entorno para configurar notificaciones de Slack*
 
@@ -222,10 +222,11 @@ Para crear notificaciones de Slack:
   </tr>
   <tr>
     <td><code>NOTIFY_FILTER</code></td>
-    <td>Para recibir sólo un subconjunto de los tipos de mensajes, especifique uno de los valores siguientes: <ul>
+    <td>Para recibir sólo un subconjunto de los tipos de mensajes, especifique uno de los valores siguientes:
+      <ul>
       <li><code>good</code>: recibir sólo mensajes desconocidos, correctos e informativos. Los mensajes incorrectos no se envían.</li>
       <li><code>bad</code>: recibir todos los mensajes.</li>
-      <li><code>info</code>: recibir solo los mensajes informativos. Los mensajes correctos, incorrectos y desconocidos no se envían. </li>
+      <li><code>info</code>: recibir solo los mensajes informativos. Los mensajes correctos, incorrectos y desconocidos no se envían.</li>
       <li><code>unknown</code>: recibir todos los mensajes.</li></ul>
       Ejemplo: Si establece <code>NOTIFY_FILTER = bad</code>, las notificaciones de error sólo se visualizan en el Canal de Slack.</td>
     <td>Opcional. Decida el tipo de mensajes para los que se enviarán notificaciones. De forma predeterminada, se envían los mensajes correctos e incorrectos, pero no los mensajes informativos.
@@ -256,7 +257,7 @@ Para crear notificaciones de HipChat:
 1. En el conducto, abra la configuración correspondiente a una etapa.
 2. En el separador **PROPIEDADES DE ENTORNO**, pulse **AÑADIR PROPIEDAD**.
 3. Seleccione **Propiedades de texto**.
-4. Especifique el nombre y un valor para la propiedad de entorno. Repita este paso para crear varias propiedades de entorno. 
+4. Especifique el nombre y un valor para la propiedad de entorno. Repita este paso para crear varias propiedades de entorno.
 
   *Tabla 2. Propiedades de entorno para configurar notificaciones de HipChat*
 
@@ -274,7 +275,7 @@ Para crear notificaciones de HipChat:
   <tr>
     <td><code>HIP_CHAT_ROOM_NAME</code></td>
     <td>Nombre de sala</td>
-    <td>Obligatorio. </td>
+    <td>Obligatorio.</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_COLOR</code></td>

@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.deliverypipeline}} の概要 {: #delivery-pipeline}  
 
-最終更新日: 2016 年 9 月 9 日
+最終更新日: 2016 年 9 月 15 日
 {: .last-updated}
 
 ビルドおよび {{site.data.keyword.Bluemix}} へのデプロイメントを自動化する
@@ -26,12 +26,8 @@ copyright:
 {{site.data.keyword.Bluemix_notm}} を使用します。
 {: shortdesc}
 
-この情報は、{{site.data.keyword.deliverypipeline}} Classic および
+この情報は、{{site.data.keyword.deliverypipeline}} および
 {{site.data.keyword.deliverypipeline}} Next の両方に適用されます。
-{{site.data.keyword.deliverypipeline}} Classic
-のすべてのインスタンスは非推奨です。同じ機能性を実現するためには、
-{{site.data.keyword.deliverypipeline}} Next に移行することが
-できます。
 
 {{site.data.keyword.deliverypipeline}} サ
 ービスでは、複数のビルド・タイプから選択することができます。ビルド・スクリプトを指定すると、{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} がそれを実行するため、ビルド・システムをセットアップする必要はありません。その後、1 回のクリックで、1 つ以上の {{site.data.keyword.Bluemix_notm}} スペース、パブリックの Cloud Foundry サーバー、または IBM Containers for {{site.data.keyword.Bluemix_notm}} 上の Docker コンテナーに、アプリを自動的にデプロイできます。  
@@ -42,7 +38,13 @@ copyright:
 
 1 つ以上の地域およびサービスにデプロイできます。例えば、開発成果物が IBM Containers を使用し、1 つの地域でテストされ、複数の地域の実働環境にデプロイされるように {{site.data.keyword.deliverypipeline}} サービスをセットアップすることができます。詳細については、『[Regions](../../overview/index.html#ov_intro__reg)』を参照してください。
 
-次の手順を完了して、アプリケーションに
+パイプラインの作成には、パイプラインを既存のアプリケーションに追
+加する、既存のアプリケーションなしでパイプラインを作成する、など複数の方法があります。
+組織に {{site.data.keyword.deliverypipeline}} サービスがない
+場合は、カタログに移動し、{{site.data.keyword.deliverypipeline}} または
+{{site.data.keyword.deliverypipeline}} Next をクリックして、「作成 (Create)」をクリックします。
+
+次の手順を完了して、既存のアプリケーションに
 {{site.data.keyword.deliverypipeline}} をセットアップします。    
 
 1. {{site.data.keyword.Bluemix_notm}} アプリ・ダッシュ

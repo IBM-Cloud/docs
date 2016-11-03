@@ -6,7 +6,7 @@ copyright:
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
+    It must be surrounded by 3 dashes.
     The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
     Indentation as per the previous template must be preserved.
 -->
@@ -24,12 +24,12 @@ Letzte Aktualisierung: 30. August 2016
 Sie können Integrationen von IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} verwalten, konfigurieren und erweitern.
 {:shortdesc}
 
-Führen Sie die folgenden Aufgaben aus, um eine Pipeline zu verwalten, zu konfigurieren und zu erweitern. 
+Führen Sie die folgenden Aufgaben aus, um eine Pipeline zu verwalten, zu konfigurieren und zu erweitern.
 
 ## Zugriff steuern
 {: #deliverypipeline_access}
 
-Sie können beschränken, wer die Phase ausführen oder eine Pipeline ändern darf. Wechseln Sie dazu auf die Seite mit den Einstellungen für die Pipeline, indem Sie auf das Symbol **Phasenkonfiguration** auf der Seite 'Pipeline: Alle Phasen' klicken. 
+Sie können beschränken, wer die Phase ausführen oder eine Pipeline ändern darf. Wechseln Sie dazu auf die Seite mit den Einstellungen für die Pipeline, indem Sie auf das Symbol **Phasenkonfiguration** auf der Seite 'Pipeline: Alle Phasen' klicken.
 
 ![Das Zahnradsymbol für die Einstellungen der Pipeline](./images/pipeline_settings.png)
 
@@ -38,12 +38,12 @@ Sie können beschränken, wer die Phase ausführen oder eine Pipeline ändern da
 
 Sie können Umgebungseigenschaften und vorinstallierte Ressourcen verwenden, um mit den {{site.data.keyword.deliverypipeline}}-Services zu interagieren. Möglicherweise integrieren Sie diese in ein Job-Script oder einen Testbefehl. Weitere Informationen finden Sie unter [Umgebungseigenschaften und Ressourcen für den {{site.data.keyword.deliverypipeline}}-Service](./deploy_var.html).
 
-Sie können auf der Registerkarte **Umgebungseigenschaften** Ihre eigenen Umgebungseigenschaften zu einer Phase hinzufügen. Umgebungseigenschaften stehen für jeden Job in einer Phase zur Verfügung. 
+Sie können auf der Registerkarte **Umgebungseigenschaften** Ihre eigenen Umgebungseigenschaften zu einer Phase hinzufügen. Umgebungseigenschaften stehen für jeden Job in einer Phase zur Verfügung.
 
 Sie können vier Typen von Eigenschaften von der Registerkarte 'Umgebungseigenschaften' hinzufügen:
-* **Text** (Text): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert. 
-* **Text Area** (Textbereich): Ein Eigenschaftsschlüssel mit einem mehrzeiligen Wert. 
-* **Secure** (Sicher): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert. Der Wert wird in Form von Sternen angezeigt. 
+* **Text** (Text): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert.
+* **Text Area** (Textbereich): Ein Eigenschaftsschlüssel mit einem mehrzeiligen Wert.
+* **Secure** (Sicher): Ein Eigenschaftsschlüssel mit einem einzeiligen Wert. Der Wert wird in Form von Sternen angezeigt.
 * **Properties** (Eigenschaften): Eine Datei im Projektrepository. Diese Datei kann mehrere Eigenschaften enthalten. Jede Eigenschaft muss in einer eigenen Zeile stehen. Verwenden Sie Gleichheitszeichen (=), um Schlüssel und Werte der Paare zu trennen.
 
 ## Die Funktionalität Ihrer Pipeline erweitern

@@ -6,7 +6,7 @@ copyright:
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
+    It must be surrounded by 3 dashes.
     The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
     Indentation as per the previous template must be preserved.
 -->
@@ -49,7 +49,7 @@ Puoi aggiungere quattro tipi di proprietà dalla scheda Proprietà ambiente:
 ## Estensione delle funzionalità della tua pipeline
 {: #deliverypipeline_extend}
 
-Puoi estendere le funzionalità della pipeline Distribuisci & build configurando i tuoi lavori in modo che utilizzino i servizi supportati. Ad esempio, i lavori di verifica possono eseguire delle scansioni di codice statico e i lavori di creazione possono globalizzare le stringhe. 
+Puoi estendere le funzionalità della pipeline Distribuisci & build configurando i tuoi lavori in modo che utilizzino i servizi supportati. Ad esempio, i lavori di verifica possono eseguire delle scansioni di codice statico e i lavori di creazione possono globalizzare le stringhe.
 
 Per ulteriori informazioni sull'estensione delle funzionalità della pipeline, consulta [Estensione delle funzionalità del servizio {{site.data.keyword.deliverypipeline}}](./deliverypipeline_extension.html).
 

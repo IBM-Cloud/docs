@@ -6,7 +6,7 @@ copyright:
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
+    It must be surrounded by 3 dashes.
     The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
     Indentation as per the previous template must be preserved.
 -->
@@ -86,7 +86,7 @@ estágio segue este processo:
 1. Se uma revisão específica for selecionada, use-a.
 2. Se uma revisão específica não for especificada, procure estágios anteriores até que seja encontrado um estágio que use a mesma entrada. Localize e use a última revisão executada com sucesso dessa entrada.
 3. Se uma revisão específica não for especificada e nenhum outro estágio usar a
-origem especificada como entrada, use a revisão mais recente da entrada. 
+origem especificada como entrada, use a revisão mais recente da entrada.
 
 **Dica:** é possível implementar uma construção anterior. No
 estágio que contém a construção, clique em **Visualizar logs e histórico**. Na
@@ -151,7 +151,7 @@ depois clicando em CANCELAR.
 [22]: ./images/pipeline_settings_icon.png
 [23]: https://www.ng.bluemix.net/docs/services/reqnsi.html#add_service
 [24]: ../deploy_var
-[25]: ./images/click_stage_run_number.pn>
+[25]: ./images/click_stage_run_number.png
 [26]: ./images/diagram.jpg
 
 -->

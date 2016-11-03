@@ -18,13 +18,13 @@ copyright:
 
 # Einführung in {{site.data.keyword.deliverypipeline}} {: #delivery-pipeline}  
 
-Letzte Aktualisierung: 9 September 2016
+Letzte Aktualisierung: 15. September 2016
 {: .last-updated}
 
 Um Ihre Builds und Bereitstellungen für {{site.data.keyword.Bluemix}} zu automatisieren, verwenden Sie IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-Diese Informationen gelten sowohl für {{site.data.keyword.deliverypipeline}} Classic als auch für {{site.data.keyword.deliverypipeline}} Next. Alle Instanzen von {{site.data.keyword.deliverypipeline}} Classic werden nicht weiter unterstützt werden. Sie können zu {{site.data.keyword.deliverypipeline}} Next wechseln, um die Funktionalität beizubehalten. 
+Diese Informationen gelten sowohl für {{site.data.keyword.deliverypipeline}} als auch für {{site.data.keyword.deliverypipeline}} Next.
 
 Beim {{site.data.keyword.deliverypipeline}}-Service können Sie unter verschiedenen Buildtypen auswählen. Sie stellen das Build-Script bereit und {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} führt es aus. Es müssen keine Buildsysteme eingerichtet werden. Anschließend können Sie mit einem einzigen Mausklick Ihre App automatisch in einem oder mehreren {{site.data.keyword.Bluemix_notm}}-Bereichen, auf öffentlichen Cloud Foundry-Servern oder Docker-Containern in IBM Containers for {{site.data.keyword.Bluemix_notm}} bereitstellen.  
 
@@ -34,12 +34,14 @@ Ein Bereitstellungsjob erhält Output von einem Build-Job und stellt ihn entwede
 
 Es ist eine Bereitstellung für eine oder mehrere Regionen bzw. einen oder mehrere Services möglich. Sie können beispielsweise Ihren {{site.data.keyword.deliverypipeline}}-Service so einrichten, dass Entwicklungsartefakte IBM Containers nutzen, in einer einzigen Region getestet werden und in mehreren Regionen für die Produktion bereitgestellt werden. Weitere Informationen hierzu finden Sie unter [Regionen](../../overview/index.html#ov_intro__reg).
 
-Führen Sie diese Schritte aus, um eine {{site.data.keyword.deliverypipeline}} für Ihre Anwendung einzurichten:     
+Es gibt mehrere Möglichkeiten für die Erstellung einer Pipeline; dazu gehören das Hinzufügen einer Pipeline zu einer vorhandenen Anwendung sowie die Erstellung einer Pipeline ohne vorhandene Anwendung. Wenn Sie in Ihrer Organisation noch keinen {{site.data.keyword.deliverypipeline}}-Service haben, können Sie den Katalog aufrufen und auf {{site.data.keyword.deliverypipeline}} oder {{site.data.keyword.deliverypipeline}} Next sowie auf 'Erstellen' klicken.
+
+Führen Sie diese Schritte aus, um eine {{site.data.keyword.deliverypipeline}} für eine vorhandene Anwendung einzurichten:    
 
 1. Erstellen Sie im {{site.data.keyword.Bluemix_notm}}-App-Dashboard auf der Registerkarte 'Übersicht' unter **Continuous Delivery** ein Git-gehostetes Projekt für die App, indem Sie je nach Kontext auf **Pipeline und Git-Repository hinzufügen** oder auf **Git hinzufügen** klicken.
 1. Stellen Sie sicher, dass das Kontrollkästchen **Füllen Sie das Repository mit dem Paket mit der Lösung für den komfortablen Schnelleinstieg und aktivieren Sie die Pipeline von Build & Deploy** ausgewählt ist und klicken Sie dann auf **Weiter**. Möglicherweise müssen Sie Ihre E-Mail-Adresse bestätigen, um fortzufahren.  
-1. Klicken Sie nach der Erstellung des Git-Repositorys auf **Schließen**. Die Schaltfläche 'Git hinzufügen' wird durch die Schaltfläche 'Code bearbeiten' und Ihre Git-URL ersetzt.   
-1. Klicken Sie auf **Code bearbeiten**, um die Pipeline zu öffnen, und klicken Sie anschließend auf **Build & Deploy**. Um die Pipeline das erste Mal auszuführen, führen Sie am Git-Repository eine Änderung mit der Push-Operation durch. 
+1. Klicken Sie nach der Erstellung des Git-Repositorys auf **Schließen**. Die Schaltfläche 'Git hinzufügen' wird durch die Schaltfläche 'Code bearbeiten' und Ihre Git-URL ersetzt.  
+1. Klicken Sie auf **Code bearbeiten**, um die Pipeline zu öffnen, und klicken Sie anschließend auf **Build & Deploy**. Um die Pipeline das erste Mal auszuführen, führen Sie am Git-Repository eine Änderung mit der Push-Operation durch.
 
 Nach dem Hinzufügen dieses Service können Sie eine mehrphasige Bereitstellungspipeline in Ihren {{site.data.keyword.Bluemix_notm}}-Bereichen erstellen, indem Sie Phasen mit Build-, Test- und Bereitstellungsjobs konfigurieren und ausführen. Im {{site.data.keyword.deliverypipeline}}-Dashboard sehen Sie Ihre {{site.data.keyword.jazzhub_short}}-Projekte
 sowie die Status, in denen sie sich befinden. Sie können den Status von Builds, der bereitgestellten App und kürzlich erfolgten Bereitstellungen überprüfen oder auch die aktuellen Protokolle und Bereitstellungsdetails anzeigen.  

@@ -18,13 +18,13 @@ copyright:
 
 # 開始使用 {{site.data.keyword.deliverypipeline}} {: #delivery-pipeline}  
 
-前次更新：2016 年 9 月 9 日
+前次更新：2016 年 9 月 15 日
 {: .last-updated}
 
 若要自動建置並部署至 {{site.data.keyword.Bluemix}}，請使用 IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}。
 {: shortdesc}
 
-此資訊同時適用於 {{site.data.keyword.deliverypipeline}} Classic 及 {{site.data.keyword.deliverypipeline}} Next。將會淘汰所有 {{site.data.keyword.deliverypipeline}} Classic 實例。您可以移至 {{site.data.keyword.deliverypipeline}} Next 以取得相同的功能。
+此資訊同時適用於 {{site.data.keyword.deliverypipeline}} 及 {{site.data.keyword.deliverypipeline}} Next。
 
 運用 {{site.data.keyword.deliverypipeline}} 服務，有數種建置類型可供您選擇。您提供建置 Script，{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} 便會執行它，不需要設定建置系統。接著只要按一下，您便可將應用程式自動部署至一個或許多個 {{site.data.keyword.Bluemix_notm}} 空間、公用 Cloud Foundry 伺服器，或 IBM Containers for {{site.data.keyword.Bluemix_notm}} 上的 Docker 容器。  
 
@@ -34,7 +34,9 @@ copyright:
 
 您可以部署至一或多個地區及服務。例如，您可以設定 {{site.data.keyword.deliverypipeline}} 服務，讓開發構件使用 IBM Containers、在一個地區中測試，並部署至多個地區進行正式作業。如需相關資訊，請參閱[地區](../../overview/index.html#ov_intro__reg)。
 
-請完成下列步驟，以設定您應用程式的 {{site.data.keyword.deliverypipeline}}：    
+有數種方式可建立管線，包括將管線新增至現有應用程式，以及在沒有現有應用程式的情況下建立管線。如果您的組織中尚無 {{site.data.keyword.deliverypipeline}} 服務，可以前往型錄、按一下 {{site.data.keyword.deliverypipeline}} 或 {{site.data.keyword.deliverypipeline}} Next，然後按一下「建立」。
+
+請完成下列步驟，以設定現有應用程式的 {{site.data.keyword.deliverypipeline}}：    
 
 1. 在 {{site.data.keyword.Bluemix_notm}} 應用程式「儀表板」的「概觀」標籤上，於**持續交付**下，按一下**新增 Git 儲存庫及管線**或**新增 Git**（視環境定義而定）來建立應用程式的 Git 受管理專案。
 1. 確定已選取**將入門範本應用程式套件移入儲存庫，並啟用「建置並部署」管線**勾選框，然後按一下**繼續**。您可能需要驗證電子郵件位址才能繼續。  

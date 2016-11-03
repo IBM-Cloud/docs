@@ -18,13 +18,13 @@ copyright:
 
 # Introduzione a {{site.data.keyword.deliverypipeline}} {: #delivery-pipeline}  
 
-Ultimo aggiornamento: 9 settembre 2016
+Ultimo aggiornamento: 15 settembre 2016
 {: .last-updated}
 
 Per automatizzare le tue build e le tue distribuzioni a {{site.data.keyword.Bluemix}}, utilizza IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-Queste informazioni si applicano a {{site.data.keyword.deliverypipeline}} Classic e a {{site.data.keyword.deliverypipeline}} Next. Tutte le istanze di {{site.data.keyword.deliverypipeline}} Classic sono obsolete. Puoi passare a {{site.data.keyword.deliverypipeline}} Next per la stessa funzionalità.
+Queste informazioni si applicano a {{site.data.keyword.deliverypipeline}} e {{site.data.keyword.deliverypipeline}} Next.
 
 Con il servizio {{site.data.keyword.deliverypipeline}}, puoi scegliere tra diversi tipi di build. Fornisci lo script
     di build e {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} lo esegue; non ha bisogno di impostare dei
@@ -38,7 +38,9 @@ Un lavoro di distribuzione prende l'output da un lavoro di build e lo distribuis
 
 Puoi eseguire la distribuzione a uno o più regioni e servizi. Ad esempio, puoi configurare il tuo servizio {{site.data.keyword.deliverypipeline}} in modo che le risorse utente di sviluppo utilizzino IBM Containers, siano testate in un'unica regione e siano distribuite alla produzione in più regioni. Per ulteriori informazioni, consulta [Regioni](../../overview/index.html#ov_intro__reg).
 
-Completa la seguente procedura per configurare una {{site.data.keyword.deliverypipeline}} per la tua applicazione:    
+Esistono molti modi per creare una pipeline, incluso l'aggiunta di una pipeline a un'applicazione esistente e la creazione di una pipeline senza un'applicazione esistente. Se ancora non disponi di un servizio {{site.data.keyword.deliverypipeline}} nella tua organizzazione, puoi andare nel catalogo, fare clic su {{site.data.keyword.deliverypipeline}} o {{site.data.keyword.deliverypipeline}} Next e su Create.
+
+Completa la seguente procedura per configurare una {{site.data.keyword.deliverypipeline}} per un'applicazione esistente:     
 
 1. Nel Dashboard dell'applicazione {{site.data.keyword.Bluemix_notm}}, nella scheda Panoramica, in **Fornitura continua**, crea un progetto ospitato su Git facendo clic su **Aggiungi pipeline e repository Git** o su **Aggiungi Git**, a seconda del contesto.
 1. Assicurati che la casella di spunta **Popola il repo con il package applicazione starter e abilita crea & e distribuisci la pipeline** sia selezionata e fai clic su **CONTINUA**. Potresti dover verificare il tuo indirizzo e-mail per procedere.  

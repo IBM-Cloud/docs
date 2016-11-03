@@ -7,7 +7,7 @@ copyright:
 
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
+    It must be surrounded by 3 dashes.
     The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
     Indentation as per the previous template must be preserved.
 -->
@@ -33,9 +33,9 @@ Les tâches suivantes expliquent comment intégrer des outils sélectionnés à 
 
 {: #deliverypipeline_scan}
 
-Vous souhaitez rechercher des problèmes de sécurité dans votre code avant de le déployer ? Lorsque vous utilisez IBM® Static Analyzer for Bluemix™ dans le cadre de votre pipeline, vous pouvez exécuter des vérifications automatisées par rapport aux fichiers binaires de génération `.war`, `.ear`, `.jar` ou `.class` statique d'application Java. 
+Vous souhaitez rechercher des problèmes de sécurité dans votre code avant de le déployer ? Lorsque vous utilisez IBM® Static Analyzer for Bluemix™ dans le cadre de votre pipeline, vous pouvez exécuter des vérifications automatisées par rapport aux fichiers binaires de génération `.war`, `.ear`, `.jar` ou `.class` statique d'application Java.
 
-Un pipeline qui utilise le service Static Analyzer inclut généralement les étapes suivantes : 
+Un pipeline qui utilise le service Static Analyzer inclut généralement les étapes suivantes :
 
 + Une étape de génération permettant de créer les fichiers source
 + Une étape de traitement incluant les travaux suivants :
@@ -59,7 +59,7 @@ conditions d'utilisation du service](http://www-03.ibm.com/software/sla/sladb.ns
 
   c. Pour le type d'entrée, sélectionnez **Artefacts de construction**.
 
-  d. Pour l'étape et pour le travail, vérifiez les valeurs et mettez-les à jour si besoin. 
+  d. Pour l'étape et pour le travail, vérifiez les valeurs et mettez-les à jour si besoin.
 
 2. Dans l'étape de traitement, ajoutez un travail de génération pour exécuter l'examen du code.
 
@@ -69,21 +69,21 @@ conditions d'utilisation du service](http://www-03.ibm.com/software/sla/sladb.ns
 
   c. Pour le type de testeur, sélectionnez **IBM Security Static Analyzer**.
 
-  d. Pour l'organisation et l'espace, vérifiez les valeurs et mettez-les à jour si besoin. 
+  d. Pour l'organisation et l'espace, vérifiez les valeurs et mettez-les à jour si besoin.
 
-  e. Sélectionnez ou désélectionnez la case à cocher **Configurer un service et un espace pour moi** selon les besoins. 
+  e. Sélectionnez ou désélectionnez la case à cocher **Configurer un service et un espace pour moi** selon les besoins.
 
-    * Si vous souhaitez que le pipeline vérifie dans votre espace Bluemix l'existence du service et d'une application qui établit une liaison entre le service et le conteneur, sélectionnez la case à cocher. Si le service ou l'application liée n'existe pas, il est créé par le pipeline pour ajouter le forfait gratuit du service à votre espace. L'application liée est créée avec le nom `pipeline_bridge_app`. Ensuite, le pipeline utilise les données d'identification de pipeline_bridge_app pour accéder aux services liés. 
+    * Si vous souhaitez que le pipeline vérifie dans votre espace Bluemix l'existence du service et d'une application qui établit une liaison entre le service et le conteneur, sélectionnez la case à cocher. Si le service ou l'application liée n'existe pas, il est créé par le pipeline pour ajouter le forfait gratuit du service à votre espace. L'application liée est créée avec le nom `pipeline_bridge_app`. Ensuite, le pipeline utilise les données d'identification de pipeline_bridge_app pour accéder aux services liés.
 
-    * Si vous avez déjà configuré le service et l'application liée dans votre espace Bluemix ou si vous souhaitez [configurer manuellement ces exigences](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), laissez la case à cocher désélectionnée. 
+    * Si vous avez déjà configuré le service et l'application liée dans votre espace Bluemix ou si vous souhaitez [configurer manuellement ces exigences](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), laissez la case à cocher désélectionnée.
 
-  f. Dans la zone **Minutes to wait for analysis to complete**, tapez une valeur comprise entre 0 et 59 minutes. La valeur par défaut est 5 minutes. Une URL vers le tableau de bord Static Analyzer figure dans les journaux de console à la fin du travail. 
+  f. Dans la zone **Minutes to wait for analysis to complete**, tapez une valeur comprise entre 0 et 59 minutes. La valeur par défaut est 5 minutes. Une URL vers le tableau de bord Static Analyzer figure dans les journaux de console à la fin du travail.
 
      Si l'analyse Static Analyzer n'est pas terminée avant l'heure que vous avez spécifiée, le travail échoue. Toutefois, l'analyse de l'examen continue de s'exécuter et vous pouvez l'afficher sur le tableau de bord Static Analyzer. Une fois l'examen Static Analyzer terminé, si vous relancez l'exécution du travail, la demande d'examen n'est pas soumise et le travail de pipeline peut être effectué. Sinon, vous pouvez configurer le pipeline pour qu'il ne soit pas bloqué si l'analyse aboutit. Pour obtenir des instructions, voir l'étape suivante.
 
-  g. Sélectionnez ou désélectionnez la case à cocher **Arrêter d'exécuter cette étape si ce travail échoue** selon ce qui doit se produire si ce travail échoue ou dépasse le délai d'attente prévu. Les travaux peuvent échouer lorsque les vulnérabilités sont élevées. 
+  g. Sélectionnez ou désélectionnez la case à cocher **Arrêter d'exécuter cette étape si ce travail échoue** selon ce qui doit se produire si ce travail échoue ou dépasse le délai d'attente prévu. Les travaux peuvent échouer lorsque les vulnérabilités sont élevées.
 
-    * Si vous sélectionnez la case à cocher et que le travail échoue, les travaux ultérieurs dans l'étape et les étapes ultérieures ne s'exécutent pas. 
+    * Si vous sélectionnez la case à cocher et que le travail échoue, les travaux ultérieurs dans l'étape et les étapes ultérieures ne s'exécutent pas.
 
     * Si vous désélectionnez la case à cocher et que le travail échoue, l'étape se poursuit sans bloquer les travaux et les étapes ultérieurs. Par exemple, si vous savez que le rapport inclut de nombreux problèmes à traiter, vous souhaiterez peut-être configurer la poursuite de l'étape car l'examen peut durer un certain temps. Dans ce cas, il n'est pas souhaitable que le reste de vos travaux et de vos étapes s'arrêtent uniquement parce que l'examen
 dure trop longtemps.
@@ -91,18 +91,18 @@ dure trop longtemps.
   h. Cliquez sur **Sauvegarder**.
 
 3. Lorsque le travail est terminé, affichez les résultats en cliquant sur **Afficher les journaux et l'historique
-**. En cas de réussite ou de dépassement de délai de l'analyse, une URL apparaît dans les résultats de l'examen. Si l'examen est en attente, attendez qu'il se termine pour afficher tous les résultats. 
+**. En cas de réussite ou de dépassement de délai de l'analyse, une URL apparaît dans les résultats de l'examen. Si l'examen est en attente, attendez qu'il se termine pour afficher tous les résultats.
 
-4. Vous pouvez, si nécessaire, exécuter à nouveau l'étape de traitement avant la fin de l'analyse. Toutefois, dans les situations suivantes, une nouvelle analyse n'est pas soumise à nouveau et les résultats précédents sont utilisés : 
+4. Vous pouvez, si nécessaire, exécuter à nouveau l'étape de traitement avant la fin de l'analyse. Toutefois, dans les situations suivantes, une nouvelle analyse n'est pas soumise à nouveau et les résultats précédents sont utilisés :
   * L'étape de traitement était toujours en cours d'exécution lorsque vous avez démarré une nouvelle analyse.
   * Un examen était déjà soumis pour la génération.
   * Une nouvelle génération de source n'a pas encore été exécutée.
 
 5. Pour démarrer une nouvelle analyse, exécutez l'une des étapes suivantes :
-  * Exécutez l'étape de génération qui entre dans l'étape de traitement, puis relancez l'exécution de l'étape de traitement. 
-  * Ouvrez l'URL des résultats de l'examen, puis cliquez sur l'icône **Corbeille**. Ensuite, relancez l'étape de traitement. 
+  * Exécutez l'étape de génération qui entre dans l'étape de traitement, puis relancez l'exécution de l'étape de traitement.
+  * Ouvrez l'URL des résultats de l'examen, puis cliquez sur l'icône **Corbeille**. Ensuite, relancez l'étape de traitement.
 
-Exemples de sortie dans la console : 
+Exemples de sortie dans la console :
 
 **Examen réussi**
 ![Exemple d'examen réussi](images/analyzer_success.png)
@@ -181,20 +181,20 @@ For more information about using the Globalization Pipeline service from the Blu
 ## Création de notifications Slack pour les générations dans le pipeline
 {: #deliverypipeline_slack}
 
-Vous pouvez envoyer des notifications sur les résultats de génération d'IBM Container Service, d'IBM Security Static Analyzer et d'IBM Globalization depuis votre service Delivery Pipeline vers vos canaux Slack. 
+Vous pouvez envoyer des notifications sur les résultats de génération d'IBM Container Service, d'IBM Security Static Analyzer et d'IBM Globalization depuis votre service Delivery Pipeline vers vos canaux Slack.
 
 Avant de commencer, créez une URL webhook Slack ou copiez-en une qui existe :
 
 1. Ouvrez la page Slack Integration pour votre équipe : `https://_project_name_.slack.com/services`
 2. Dans la liste des intégrations, localisez **Incoming WebHooks** et cliquez sur **Add**.
 3. Sélectionnez un canal et cliquez sur **Add Incoming WebHooks Integration**.
-4. Ajoutez une **URL webhook** ou copiez-en une qui existe. 
+4. Ajoutez une **URL webhook** ou copiez-en une qui existe.
 
 Pour plus d'informations, [voir la rubrique Incoming WebHooks dans la documentation Slack](https://api.slack.com/incoming-webhooks).
 
 Pour créer des notifications Slack :
 
-1. Dans le pipeline, ouvrez la configuration pour une étape. 
+1. Dans le pipeline, ouvrez la configuration pour une étape.
 2. Dans l'onglet **Propriétés d'environnement**, cliquez sur **Ajouter une propriété**.
 3. Sélectionnez **Propriété de texte**.
 4. Entrez le nom et une valeur pour la propriété d'environnement. Répétez l'opération afin de créer plusieurs propriétés d'environnement.
@@ -209,8 +209,8 @@ Pour créer des notifications Slack :
   <tr/>
   <tr>
     <td><code>SLACK_WEBHOOK_PATH</code></td>
-    <td>Adresse URL </td>
-    <td>Requis. URL webhook qui est sauvegardée dans les paramètres de votre projet Slack. </td>
+    <td>Adresse URL</td>
+    <td>Requis. URL webhook qui est sauvegardée dans les paramètres de votre projet Slack.</td>
   </tr>
   <tr>
     <td><code>SLACK_COLOR</code></td>
@@ -219,8 +219,7 @@ Pour créer des notifications Slack :
       <li><code>warning</code></li>
       <li><code>danger</code></li>
       <li>N'importe quel code hexadécimal, par exemple, #439FEO</li></ul></td>
-    <td>Facultatif. Couleur de la bordure qui s'affiche le long du message dans Slack. Les couleurs par défaut sont vert pour les messages de succès, rouge pour les messages d'erreur et gris pour les messages d'information.
-</td>
+    <td>Facultatif. Couleur de la bordure qui s'affiche le long du message dans Slack. Les couleurs par défaut sont vert pour les messages de succès, rouge pour les messages d'erreur et gris pour les messages d'information.</td>
   </tr>
   <tr>
     <td><code>NOTIFY_FILTER</code></td>
@@ -229,34 +228,35 @@ Pour créer des notifications Slack :
       <li><code>good</code> : Pour afficher uniquement les messages d'information, de succès et inconnus. Les messages d'erreur ne sont pas envoyés.</li>
       <li><code>bad</code> : Pour afficher tous les messages.</li>
       <li><code>info</code> : Pour afficher uniquement les messages d'information. Les messages de succès, d'erreur et inconnus ne sont pas envoyés.</li>
-      <li><code>unknown</code> : Pour afficher tous les messages. </li></ul>
-      Exemple : Si vous définissez <code>NOTIFY_FILTER = bad</code>, des notifications d'erreur s'affichent uniquement dans le canal Slack. </td>
+      <li><code>unknown</code> : Pour afficher tous les messages.</li></ul>
+      Exemple : Si vous définissez <code>NOTIFY_FILTER = bad</code>, des notifications d'erreur s'affichent uniquement dans le canal Slack.</td>
     <td>Facultatif. Décidez quel type de message pour lequel envoyer des notifications. Par défaut, les messages de succès et d'erreur
-sont envoyés, mais pas les messages d'information.<ul><li><code>good</code> : résultats de génération positifs.</li>
+sont envoyés, mais pas les messages d'information.
+      <ul><li><code>good</code> : résultats de génération positifs.</li>
       <li><code>bad</code> : résultats de génération négatifs.</li>
       <li><code>info</code> : messages d'information sur le processus de génération.</li>
-      <li><code>unknown</code> : aucun type n'est associé aux messages inconnus. </li></ul></td>
+      <li><code>unknown</code> : aucun type n'est associé aux messages inconnus.</li></ul></td>
    </table>
 
 5. Cliquez sur **Sauvegarder**.
 
-6. Répétez ces étapes afin d'envoyer des notifications Slack pour d'autres étapes incluant des travaux IBM Container Service, IBM Security Analyzer et IBM Globalization. 
+6. Répétez ces étapes afin d'envoyer des notifications Slack pour d'autres étapes incluant des travaux IBM Container Service, IBM Security Analyzer et IBM Globalization.
 
-La notification de génération affichée dans Slack inclut un lien vers le projet des services DevOps et parfois vers le tableau de bord du projet. Pour qu'un utilisateur Slack puisse ouvrir ces liens, il doit être enregistré auprès des services DevOps et être membre du projet dans lequel le pipeline est configuré. 
+La notification de génération affichée dans Slack inclut un lien vers le projet des services DevOps et parfois vers le tableau de bord du projet. Pour qu'un utilisateur Slack puisse ouvrir ces liens, il doit être enregistré auprès des services DevOps et être membre du projet dans lequel le pipeline est configuré.
 
 ## Création de notifications HipChat pour les générations dans le pipeline
 {: #deliverypipeline_hipchat}
 
-Vous pouvez envoyer des notifications sur les résultats de génération d'IBM Container Service, d'IBM Security Static Analyzer et d'IBM Globalization depuis votre service Delivery Pipeline vers vos salles HipChat. 
+Vous pouvez envoyer des notifications sur les résultats de génération d'IBM Container Service, d'IBM Security Static Analyzer et d'IBM Globalization depuis votre service Delivery Pipeline vers vos salles HipChat.
 
 Avant de commencer, créez un jeton HipChat ou copiez-en un qui existe :
 
 1. Accédez à la page HipChat Account pour votre compte : `https://_project_name_.hipchat.com/account/api`
-2. Créez un jeton ou utilisez-en un qui existe. 
+2. Créez un jeton ou utilisez-en un qui existe.
 
 Pour créer des notifications HipChat, procédez comme suit :
 
-1. Dans le pipeline, ouvrez la configuration pour une étape. 
+1. Dans le pipeline, ouvrez la configuration pour une étape.
 2. Dans l'onglet **Propriétés d'environnement**, cliquez sur **Ajouter une propriété**.
 3. Sélectionnez **Propriété de texte**.
 4. Entrez le nom et une valeur pour la propriété d'environnement. Répétez l'opération afin de créer plusieurs propriétés d'environnement.
@@ -272,7 +272,7 @@ Pour créer des notifications HipChat, procédez comme suit :
   <tr>
     <td><code>HIP_CHAT_TOKEN</code></td>
     <td>Chaîne alphanumérique</td>
-    <td>Requis. Voir la rubrique "Avant de commencer" pour savoir comment créer un jeton HipChat en en copier un qui existe. </td>
+    <td>Requis. Voir la rubrique "Avant de commencer" pour savoir comment créer un jeton HipChat en en copier un qui existe.</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_ROOM_NAME</code></td>
@@ -329,7 +329,7 @@ les paramètres suivants sont remplis :
 
 5. Cliquez sur **Sauvegarder**.
 
-6. Répétez ces étapes afin d'envoyer des notifications HipChat pour d'autres étapes incluant des travaux IBM Container Service, IBM Security Static Analyzer et IBM Globalization. 
+6. Répétez ces étapes afin d'envoyer des notifications HipChat pour d'autres étapes incluant des travaux IBM Container Service, IBM Security Static Analyzer et IBM Globalization.
 
 ## Utilisation d'Active Deploy pour un déploiement sans durée d'immobilisation dans le pipeline
 {: #deliverypipeline_activedeploy}

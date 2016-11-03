@@ -18,13 +18,13 @@ copyright:
 
 # Iniciación a {{site.data.keyword.deliverypipeline}} {: #delivery-pipeline}  
 
-Última actualización: 9 de septiembre de 2016
+Última actualización: 15 de septiembre de 2016
 {: .last-updated}
 
 Para automatizar las compilaciones y los despliegues en {{site.data.keyword.Bluemix}}, utilice el IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-Esta información se aplica tanto a {{site.data.keyword.deliverypipeline}} Classic como a {{site.data.keyword.deliverypipeline}} Next. Todas las instancias de {{site.data.keyword.deliverypipeline}} Classic están en desuso. Puede mover a {{site.data.keyword.deliverypipeline}} Next para la misma funcionalidad.
+Esta información se aplica tanto a {{site.data.keyword.deliverypipeline}} como a {{site.data.keyword.deliverypipeline}} Next.
 
 Con el servicio de {{site.data.keyword.deliverypipeline}}, puede elegir entre varios tipos de compilación. Proporcione el script de compilación y {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} lo ejecutará; no es necesario configurar sistemas de compilación. A continuación, con un solo clic puede desplegar automáticamente su app en uno o más espacios de {{site.data.keyword.Bluemix_notm}}, servidores de Cloud Foundry públicos o contenedores Docker en IBM Containers for {{site.data.keyword.Bluemix_notm}}.  
 
@@ -34,7 +34,9 @@ Un trabajo de despliegue toma la salida de un trabajo de compilación y lo despl
 
 Puede desplegar en una o más regiones y servicios. Por ejemplo, puede configurar el servicio de {{site.data.keyword.deliverypipeline}} de forma que los artefactos de desarrollo utilicen IBM Containers, que se prueben en una región y que se desplieguen en producción en varias regiones. Para obtener más información, consulte [Regiones](../../overview/index.html#ov_intro__reg).
 
-Complete estos pasos para configurar un {{site.data.keyword.deliverypipeline}} para la aplicación:    
+Hay varias formas para crear un conducto, incluida la adición de un conducto a una aplicación existente y la creación de un conducto sin una aplicación existente. Si aún no tiene un servicio de {{site.data.keyword.deliverypipeline}} en la organización, puede ir al catálogo, pulsar {{site.data.keyword.deliverypipeline}} o {{site.data.keyword.deliverypipeline}} Next y pulsar Crear.
+
+Complete estos pasos para configurar un {{site.data.keyword.deliverypipeline}} para una aplicación existente:    
 
 1. En el Panel de control de la app de {{site.data.keyword.Bluemix_notm}}, en el separador Visión general, en **Continuous Delivery**, cree un proyecto alojado por Git para la app pulsando **Añadir un repositorio Git y un conducto** o **Añadir Git**, en función del contexto.
 1. Asegúrese de que el recuadro de selección **Rellenar el repositorio con el paquete de apps del iniciador y habilitar el conducto (Build & Deploy)** esté seleccionado y, a continuación, pulse **CONTINUAR**. Es posible que tenga que verificar su dirección de correo electrónico para continuar.  

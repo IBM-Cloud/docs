@@ -6,7 +6,7 @@ copyright:
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
+    It must be surrounded by 3 dashes.
     The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
     Indentation as per the previous template must be preserved.
 -->
@@ -60,7 +60,7 @@ Puoi anche richiedere distribuzioni e creazioni on-demand dalla pagina della cro
 
 Per annullare una fase in esecuzione, nella fase, fai clic su **Visualizza log e cronologia**. Nell'elenco dei lavori, fai clic sul numero di lavori in esecuzione e quindi fai clic su **ANNULLA**. Puoi anche annullare i lavori individualmente facendo clic su un lavoro e quindi su **ANNULLA** o facendo clic sull'icona **Arresta** accanto a un lavoro nella relativa fase.
 
-## Distribuzione di un'applicazione 
+## Distribuzione di un'applicazione
 {: #deliverypipeline_deploy}
 
 Un lavoro di distribuzione configurato correttamente distribuisce la tua applicazione alla tua destinazione quando il lavoro è in esecuzione. Per eseguire manualmente un lavoro di distribuzione, fai clic sull'icona **Esegui fase** della fase in cui si trova il lavoro.

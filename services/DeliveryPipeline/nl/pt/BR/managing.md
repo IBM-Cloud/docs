@@ -6,7 +6,7 @@ copyright:
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
+    It must be surrounded by 3 dashes.
     The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
     Indentation as per the previous template must be preserved.
 -->
@@ -61,7 +61,6 @@ configurando as tarefas para usar serviços suportados. Por exemplo, as tarefas 
 executam varreduras de código estático e as tarefas de construção podem globalizar as
 sequências.
 
-
 Para obter mais informações sobre como estender os recursos do pipeline, consulte [Estendendo os recursos do serviço {{site.data.keyword.deliverypipeline}}](./deliverypipeline_extension.html).
 
 <!-- [1]: https://www.ng.bluemix.net/docs/manageapps/deployingapps.html#appmanifest
@@ -88,6 +87,6 @@ Para obter mais informações sobre como estender os recursos do pipeline, consu
 [22]: ./images/pipeline_settings_icon.png
 [23]: ./images/pipeline_settings.png
 [24]: https://www.ng.bluemix.net/docs/services/reqnsi.html#add_service
-[25]: ../deploy_va>
+[25]: ../deploy_var
 [26]: ./images/click_stage_run_number.png
 [27]: ./images/diagram.jpg -->

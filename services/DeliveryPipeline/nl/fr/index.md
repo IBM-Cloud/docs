@@ -18,13 +18,15 @@ copyright :
 
 # Initiation à {{site.data.keyword.deliverypipeline}} {: #delivery-pipeline}  
 
-Dernière mise à jour : 9 septembre 2016
+Dernière mise à jour : 15 septembre 2016
 {: .last-updated}
 
 Pour automatiser vos générations et vos déploiements dans {{site.data.keyword.Bluemix}}, utilisez IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-Ces informations s'appliquent à {{site.data.keyword.deliverypipeline}} Classic et à {{site.data.keyword.deliverypipeline}} Next. Touets les instances de {{site.data.keyword.deliverypipeline}} Classic deviennent obsolètes. Vous pouvez passer à {{site.data.keyword.deliverypipeline}} Next pour obtenir les mêmes fonctionnalités.
+Ces informations s'appliquent à
+{{site.data.keyword.deliverypipeline}} et à
+{{site.data.keyword.deliverypipeline}} Next.
 
 Avec le service {{site.data.keyword.deliverypipeline}}, vous pouvez choisir entre plusieurs types de génération. Vous fournissez le script de génération et {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} l'exécute ; il n'est pas nécessaire de configurer des systèmes de génération. Ensuite, en un clic, vous pouvez déployer automatiquement votre application dans un ou plusieurs espaces {{site.data.keyword.Bluemix_notm}}, sur un ou plusieurs serveurs Cloud Foundry publics, ou dans un ou plusieurs
 conteneurs Docker dans IBM Containers for {{site.data.keyword.Bluemix_notm}}.  
@@ -41,13 +43,24 @@ service {{site.data.keyword.deliverypipeline}} de sorte que les artefacts de dé
 dans plusieurs régions. Pour plus d'informations, voir
 [Régions](../../overview/index.html#ov_intro__reg).
 
-Pour configurer un service {{site.data.keyword.deliverypipeline}} pour votre application, procédez comme suit :    
+Il existe plusieurs manières de créer un pipeline,
+comme l'ajout d'un pipeline à une application existante et la
+création d'un pipeline sans aucune application existante. Si votre
+organisation n'a pas déjà un service
+{{site.data.keyword.deliverypipeline}}, vous pouvez accéder
+au catalogue, cliquer sur
+{{site.data.keyword.deliverypipeline}} ou
+{{site.data.keyword.deliverypipeline}} Next, puis sur Créer.
 
-1. Dans le tableau de bord des applications {{site.data.keyword.Bluemix_notm}}, sur l'onglet Présentation et sous **Distribution continue**, créez un projet hébergé par Git pour l'application en cliquant sur **Ajouter le référentiel et le pipeline Git** ou **Ajouter un référentiel Git**, selon le contexte. 
+Procédez comme suit pour configurer un
+{{site.data.keyword.deliverypipeline}} pour une
+application existante :    
+
+1. Dans le tableau de bord des applications {{site.data.keyword.Bluemix_notm}}, sur l'onglet Présentation et sous **Distribution continue**, créez un projet hébergé par Git pour l'application en cliquant sur **Ajouter le référentiel et le pipeline Git** ou **Ajouter un référentiel Git**, selon le contexte.
 1. Assurez-vous que la case à cocher **Remplir le référentiel avec le package d'applications du module de démarrage et activer le pipeline Build & Deploy** est sélectionnée, puis cliquez sur **Continuer**. Vous devrez peut-être vérifier votre adresse électronique avant de poursuivre.  
 1. Une
-fois votre référentiel Git créé, cliquez sur **Fermer**. Le bouton Ajouter un référentiel Git est remplacé par un bouton Editer le code et votre URL Git.   
-1. Pour ouvrir le pipeline, cliquez sur **Editer le code**, puis sur **Build & Deploy**. Pour exécuter le pipeline pour la première fois, insérez une modification dans le référentiel Git via une commande push. 
+fois votre référentiel Git créé, cliquez sur **Fermer**. Le bouton Ajouter un référentiel Git est remplacé par un bouton Editer le code et votre URL Git.  
+1. Pour ouvrir le pipeline, cliquez sur **Editer le code**, puis sur **Build & Deploy**. Pour exécuter le pipeline pour la première fois, insérez une modification dans le référentiel Git via une commande push.
 
 Après avoir
 ajouté ce service, vous pouvez créer un pipeline de déploiement en plusieurs étapes dans vos espaces

@@ -18,7 +18,7 @@ copyright:
 
 # Introdução ao {{site.data.keyword.deliverypipeline}} {: #delivery-pipeline}  
 
-Última atualização: 9 de setembro de 2016
+Última atualização: 15 de setembro de 2016
 {: .last-updated}
 
 Para automatizar suas construções e implementações no
@@ -26,12 +26,7 @@ Para automatizar suas construções e implementações no
 {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-Estas informações se aplicam ao
-{{site.data.keyword.deliverypipeline}} Classic e ao
-{{site.data.keyword.deliverypipeline}} Next. Todas as instâncias do
-{{site.data.keyword.deliverypipeline}} Classic estão sendo descontinuadas. É
-possível mover para o {{site.data.keyword.deliverypipeline}} Next para obter a
-mesma funcionalidade.
+Estas informações se aplicam ao {{site.data.keyword.deliverypipeline}} e ao {{site.data.keyword.deliverypipeline}} Next.
 
 Com o serviço {{site.data.keyword.deliverypipeline}}, é possível escolher
 entre diversos tipos de construção. Forneça o script de construção
@@ -49,7 +44,10 @@ Uma tarefa de implementação toma a saída de uma tarefa de construção e a im
 os artefatos de desenvolvimento usem IBM Containers, sejam testados em uma região e sejam implementados para produção em múltiplas regiões. Para obter informações adicionais, consulte
 [Regiões](../../overview/index.html#ov_intro__reg).
 
-Conclua estas etapas para configurar um {{site.data.keyword.deliverypipeline}} para seu aplicativo:    
+Há várias maneiras de criar um pipeline, incluindo adicionar um pipeline para um aplicativo existente e criar um pipeline sem um aplicativo existente. Se você ainda não tem um serviço de {{site.data.keyword.deliverypipeline}} em sua organização, é possível acessar o catálogo. Clique em {{site.data.keyword.deliverypipeline}} ou
+{{site.data.keyword.deliverypipeline}} Next e clique em Criar.
+
+Conclua estas etapas para configurar um {{site.data.keyword.deliverypipeline}} para um aplicativo existente.    
 
 1. No Painel do app {{site.data.keyword.Bluemix_notm}}, na guia Visão
 geral, em **Entrega contínua**, crie um projeto hospedado pelo Git

@@ -72,7 +72,7 @@ I lavori di distribuzione possono distribuire nuove applicazioni o aggiornare ap
 
 Puoi eseguire la distribuzione a uno o più regioni e servizi. Ad esempio, puoi configurare il tuo servizio {{site.data.keyword.deliverypipeline}} in modo che le risorse utente di sviluppo utilizzino IBM Containers, siano testate in un'unica regione e siano distribuite alla produzione in più regioni. Per ulteriori informazioni, consulta [Regioni](../../overview/index.html#ov_intro__reg).
 
-#### Proprietà dell'ambiente per gli script di distribuzione 
+#### Proprietà dell'ambiente per gli script di distribuzione
 
 Puoi includere le proprietà dell'ambiente in uno script di distribuzione del lavoro di distribuzione. Queste proprietà forniscono l'accesso alle informazioni sull'ambiente di esecuzione del lavoro. Per ulteriori informazioni, [consulta Risorse e proprietà dell'ambiente per il servizio {{site.data.keyword.deliverypipeline}}](./deploy_var.html).
 
@@ -81,7 +81,7 @@ Se desideri richiedere che vengano rispettate le condizioni, includi i lavori di
 
 Se le tue verifiche producono dei file dei risultati nel formato XML JUnit, viene visualizzato un report che si basa sui file dei risultati nella scheda **Tests** per ogni pagina del risultato della verifica. Se una verifica ha esito negativo, anche il lavoro ha esito negativo.
 
-#### Proprietà dell'ambiente per gli script di verifica 
+#### Proprietà dell'ambiente per gli script di verifica
 
 Puoi includere le proprietà dell'ambiente nello script del lavoro di verifica. Le proprietà forniscono l'accesso alle informazioni sull'ambiente di esecuzione del lavoro. Per ulteriori informazioni, [consulta Risorse e proprietà dell'ambiente per il servizio {{site.data.keyword.deliverypipeline}}](./deploy_var.html).
 

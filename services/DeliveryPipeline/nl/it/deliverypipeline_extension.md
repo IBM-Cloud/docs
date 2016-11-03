@@ -7,7 +7,7 @@ copyright:
 
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
+    It must be surrounded by 3 dashes.
     The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
     Indentation as per the previous template must be preserved.
 -->
@@ -72,7 +72,7 @@ Prima di iniziare, [riesamina i Termini di utilizzo per il servizio](http://www-
 
   e. Seleziona o deseleziona la casella di spunta **Configura il servizio e lo spazio per me** se necessario.
 
-    * Se desideri che la pipeline verifichi il tuo spazio Bluemix per il servizio e che un'applicazione associ il servizio al contenitore, seleziona la casella di spunta. Se il servizio o l'applicazione associata non esistono, la pipeline aggiunge il piano gratuito del servizio al tuo spazio. L'applicazione associata che viene creata è denominata `pipeline_bridge_app`. Quindi, la pipeline utilizza le credenziali da pipeline_bridge_app per accedere ai servizi associati. 
+    * Se desideri che la pipeline verifichi il tuo spazio Bluemix per il servizio e che un'applicazione associ il servizio al contenitore, seleziona la casella di spunta. Se il servizio o l'applicazione associata non esistono, la pipeline aggiunge il piano gratuito del servizio al tuo spazio. L'applicazione associata che viene creata è denominata `pipeline_bridge_app`. Quindi, la pipeline utilizza le credenziali da pipeline_bridge_app per accedere ai servizi associati.
 
     * Se hai già configurato il servizio e l'applicazione è già associata nel tuo spazio Bluemix o se desideri [configurare questi requisiti manualmente](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), lascia la casella di spunta non selezionata.
 
@@ -194,7 +194,7 @@ Per creare le notifiche Slack:
 1. Nella pipeline, apri la configurazione per una fase.
 2. Nella scheda **PROPRIETÀ AMBIENTE**, fai clic su **AGGIUNGI PROPRIETÀ**.
 3. Seleziona **Proprietà testo**.
-4. Immetti un nome e un valore per la proprietà di ambiente. Ripeti i passi per creare più proprietà di ambiente. 
+4. Immetti un nome e un valore per la proprietà di ambiente. Ripeti i passi per creare più proprietà di ambiente.
 
   *Tabella 1. Proprietà dell'ambiente per la configurazione delle notifiche Slack*
 
@@ -220,10 +220,11 @@ Per creare le notifiche Slack:
   </tr>
   <tr>
     <td><code>NOTIFY_FILTER</code></td>
-    <td>Per ricevere solo un sottoinsieme di tipi di messaggi, immetti uno dei seguenti valori: <ul>
+    <td>Per ricevere solo un sottoinsieme di tipi di messaggi, immetti uno dei seguenti valori:
+      <ul>
       <li><code>good</code>: ottieni solo i messaggi informativi, positivi e sconosciuti. I messaggi negativi non vengono inviati.</li>
       <li><code>bad</code>: ricevi tutti i messaggi.</li>
-      <li><code>info</code>: ricevi solo i messaggi informativi. I messaggi positivi, negativi e sconosciuti non vengono inviati. </li>
+      <li><code>info</code>: ricevi solo i messaggi informativi. I messaggi positivi, negativi e sconosciuti non vengono inviati.</li>
       <li><code>unknown</code>: ricevi tutti i messaggi.</li></ul>
       Esempio: se imposti <code>NOTIFY_FILTER = bad</code>, vengono visualizzate solo le notifiche di errore nel canale Slack.</td>
     <td>Facoltativo. Decidi quale tipo di messaggi per cui inviare le notifiche. Per impostazione predefinita, vengono inviati i messaggi positivi e negativi, ma non in messaggi informativi.
@@ -233,7 +234,7 @@ Per creare le notifiche Slack:
       <li><code>unknown</code>: ai messaggi sconosciuti non viene assegnato un tipo.</li></ul></td>
    </table>
 
-5. Fai clic su **Salva**. 
+5. Fai clic su **Salva**.
 
 6. Ripeti questi passi per inviare le notifiche Slack per altre fasi che includono i lavori di IBM Container Service, IBM Security Analyzer e IBM Globalization.
 
@@ -254,7 +255,7 @@ Per creare le notifiche HipChat:
 1. Nella pipeline, apri la configurazione per una fase.
 2. Nella scheda **PROPRIETÀ AMBIENTE**, fai clic su **AGGIUNGI PROPRIETÀ**.
 3. Seleziona **Proprietà testo**.
-4. Immetti un nome e un valore per la proprietà di ambiente. Ripeti i passi per creare più proprietà di ambiente. 
+4. Immetti un nome e un valore per la proprietà di ambiente. Ripeti i passi per creare più proprietà di ambiente.
 
   *Tabella 2. Proprietà dell'ambiente per la configurazione delle notifiche HipChat*
 
@@ -272,7 +273,7 @@ Per creare le notifiche HipChat:
   <tr>
     <td><code>HIP_CHAT_ROOM_NAME</code></td>
     <td>Nome sala</td>
-    <td>Obbligatorio. </td>
+    <td>Obbligatorio.</td>
   </tr>
   <tr>
     <td><code>HIP_CHAT_COLOR</code></td>
@@ -319,7 +320,7 @@ Per creare le notifiche HipChat:
     </tr>
   </table>
 
-5. Fai clic su **Salva**. 
+5. Fai clic su **Salva**.
 
 6. Ripeti questi passi per inviare le notifiche HipChat per altre fasi che includono i lavori di IBM Container Service, IBM Security Static Analyzer e IBM Globalization.
 

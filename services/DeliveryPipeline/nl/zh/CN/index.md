@@ -18,13 +18,13 @@ copyright:
 
 # {{site.data.keyword.deliverypipeline}} 入门 {: #delivery-pipeline}  
 
-上次更新时间：2016 年 9 月 9 日
+上次更新时间：2016 年 9 月 15 日
 {: .last-updated}
 
 要自动执行构建并部署到 {{site.data.keyword.Bluemix}}，请使用 IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}。
 {: shortdesc}
 
-此信息适用于 {{site.data.keyword.deliverypipeline}} Classic 和 {{site.data.keyword.deliverypipeline}} Next。不推荐使用 {{site.data.keyword.deliverypipeline}} Classic 的所有实例。您可以移至 {{site.data.keyword.deliverypipeline}} Next 以获取相同的功能。
+此信息适用于 {{site.data.keyword.deliverypipeline}} 和 {{site.data.keyword.deliverypipeline}} Next。
 
 使用 {{site.data.keyword.deliverypipeline}} 服务，可以从多个构建类型中进行选择。您提供构建脚本，{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} 运行该脚本；无需设置构建系统。然后，只需单击一下，即可将应用程序自动部署到一个或多个 {{site.data.keyword.Bluemix_notm}} 空间、公共 Cloud Foundry 服务器或 IBM Containers for {{site.data.keyword.Bluemix_notm}} 上的 Docker 容器。  
 
@@ -34,7 +34,9 @@ copyright:
 
 可以部署到一个或多个区域和服务。例如，您可以设置 {{site.data.keyword.deliverypipeline}} 服务，以便在一个区域中测试使用了 IBM Containers 的开发工件，并将其部署到多个区域中的生产环境。有关更多信息，请参阅[区域](../../overview/index.html#ov_intro__reg)。
 
-完成以下步骤，为应用程序设置 {{site.data.keyword.deliverypipeline}}：    
+创建管道的方法有几种，包括将管道添加到现有应用程序以及在没有现有应用程序的情况下创建管道。如果组织中还没有 {{site.data.keyword.deliverypipeline}} 服务，那么您可以转至该目录，单击 {{site.data.keyword.deliverypipeline}} 或 {{site.data.keyword.deliverypipeline}} Next，然后单击“创建”。
+
+完成以下步骤，为现有应用程序设置 {{site.data.keyword.deliverypipeline}}：    
 
 1. 在 {{site.data.keyword.Bluemix_notm}} 应用程序“仪表板”上“概述”选项卡的**持续交付**下，通过单击**添加 Git 存储库和管道**或**添加 Git**（取决于上下文），为应用程序创建 Git 托管的项目。
 1. 确保已选中**使用入门模板应用程序包填充存储库并启用构建和部署管道**复选框，然后单击**继续**。您可能需要验证电子邮件地址才能继续。  
