@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 #Services
 {: #services}
-*Last updated: 23 October 2016*
 
 {{site.data.keyword.Bluemix_notm}} makes it easy for you to implement, host, and scale services and apps. You can focus on your application logic and application design.
 {:shortdesc}
@@ -137,7 +137,7 @@ Not all services are available for purchase in every {{site.data.keyword.Bluemix
 
 ## Continued availability for services
 {: #services_availability}
-{{site.data.keyword.Bluemix_notm}} has identified a set of services as Tier 1. IBM will not withdraw any Tier 1 service without either making a functional equivalent available or providing at least five year's notice of the withdrawal. 
+{{site.data.keyword.Bluemix_notm}} has identified a set of services as Tier 1. IBM will not withdraw any Tier 1 service without either making a functional equivalent available or providing at least five year's notice of the withdrawal.
 
 The following services are classified as Tier 1:
   * {{site.data.keyword.apiconnect_short}}
@@ -156,4 +156,4 @@ To read more about terms of use for services, see: [{{site.data.keyword.Bluemix_
 ## Service deprecation
 {: #service_deprecation}
 
-IBM will provide at least 30 days notice of its intention to discontinue or replace a generally available service. If an equivalent replacement is not provided, for at least 12 months from the date of that announcement, IBM will use commercially reasonable means to continue the operation and support of previously deployed instances of the service. 
+IBM will provide at least 30 days notice of its intention to discontinue or replace a generally available service. If an equivalent replacement is not provided, for at least 12 months from the date of that announcement, IBM will use commercially reasonable means to continue the operation and support of previously deployed instances of the service.
