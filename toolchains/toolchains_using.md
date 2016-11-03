@@ -11,7 +11,7 @@ copyright:
 # Using toolchains on {{site.data.keyword.Bluemix_notm}} Public
 {: #toolchains-using}
 
-Last updated: 27 October 2016
+Last updated: 2 November 2016
 {: .last-updated}
 
 You can use a toolchain to be productive in your daily development, deployment, and operations work. After you set up a toolchain, you can add, delete, or configure tool integrations and manage access to the toolchain. Toolchains are available in the US South region only.
@@ -46,7 +46,7 @@ If you deferred the configuration of a tool integration when you created a toolc
 You can add and configure tool integrations for your toolchain.
 
 1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**, and then click **Overview**.
-1. To see a list of tool integrations to add, click the add button (+).
+1. To see a list of tool integrations to add, click **Add a Tool**.
 1. Click a tool integration that you want to add.
 1. Enter any required information to configure the tool integration. 
 1. Click **Create Integration** to add the tool integration to your toolchain.
