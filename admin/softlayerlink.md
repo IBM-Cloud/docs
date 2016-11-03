@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-03"
  
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2016-10-27"
 # Upgrading and unifying {{site.data.keyword.Bluemix_notm}} and SoftLayer billing accounts
 {: #softlayerlink}
 
-If you have a {{site.data.keyword.Bluemix_notm}} trial account and you want to access the Infrastructure dashboard, you must upgrade to a {{site.data.keyword.Bluemix_notm}} Pay-As-You-Go account.
+If you have a {{site.data.keyword.Bluemix_notm}} trial account and you want to access the Infrastructure dashboard, you must upgrade to a {{site.data.keyword.Bluemix_notm}} Pay-As-You-Go account. You also must upgrade if you want to use other chargeable resources that are not available within a trial account, or your trial account finishes. 
 
 You can unify your existing {{site.data.keyword.Bluemix_notm}} and SoftLayer billing accounts by linking the accounts. When you link your accounts, you are billed through {{site.data.keyword.Bluemix_notm}} for both {{site.data.keyword.Bluemix_notm}} and SoftLayer resources.
 {:shortdesc}
