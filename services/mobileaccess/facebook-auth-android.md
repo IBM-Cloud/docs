@@ -75,7 +75,7 @@ From the Facebook for Developers website:
 After you have the Facebook Application ID and you have configured your Facebook Application to serve Android clients, you can enable Facebook authentication with the {{site.data.keyword.amashort}} dashboard.
 
 1. Open your  {{site.data.keyword.amashort}} service in the dashboard.
-1. From the **Manage** tab, pull the **Authorization** lever to the **On** position.
+1. From the **Manage** tab, toggle **Authorization** on.
 1. Expand the **Facebook** section.
 1. Add the **Facebook Application ID**.
 1. Click **Save**.

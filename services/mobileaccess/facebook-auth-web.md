@@ -44,7 +44,7 @@ To use Facebook as an identity provider on your website, you must add and config
 After you have your Facebook App ID and App Secret, and your Facebook for Developers application has been configured to serve Web clients, you can enable Facebook authentication in the {{site.data.keyword.Bluemix_notm}}  dashboard.
 
 1. Open the {{site.data.keyword.amashort}} service dashboard.
-1. From the **Manage** tab, pull the **Authorization** lever to the **On** position.
+1. From the **Manage** tab, toggle **Authorization** on.
 1. Expand the **Facebook** section.
 1. Select **Add Facebook to a Web App**.
 5. Note the value in the **Mobile Client Access Redirect URI for Facebook for Developers** text box. You need this value to add to the **Valid OAuth redirect URIs** box in the **Facebook Login** of the Facebook Developers Portal.

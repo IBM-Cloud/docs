@@ -50,7 +50,7 @@ To start using Google as identity provider, create a project in the Google Devel
 Now that you have a Google iOS client ID, you can enable Google authentication in the {{site.data.keyword.Bluemix_notm}} dashboard.
 
 1. Open your service in the {{site.data.keyword.amashort}} dashboard.
-1. From the **Manage** tab, pull the **Authorization** lever to the **On** position.
+1. From the **Manage** tab, toggle **Authorization** on.
 1. Expand the **Google** section.
 1. In **Application ID for iOS**, specify your Google client ID for iOS.
 1. Click **Save**.

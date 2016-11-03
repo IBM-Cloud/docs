@@ -25,7 +25,7 @@ To use custom authentication with your mobile app, you must register a custom au
 Use the {{site.data.keyword.Bluemix}} dashboard to configure custom authentication.
 
 1. Open your service in the {{site.data.keyword.amafull}} dashboard.
-1. From the **Manage** tab, pull the **Authorization** lever to the **On** position.
+1. From the **Manage** tab, toggle **Authorization** on.
 1. Expand the **Custom** section.
 1. Enter the **Realm name**, **Custom Identity Provider URL**. The **Your Web Application Redirect URIs** value is required only for Web applications.
 
