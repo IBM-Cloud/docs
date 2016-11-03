@@ -88,53 +88,53 @@ The {{site.data.keyword.amashort}} client SDK is distributed with CocoaPods, a d
 
 You can also update the `info.plist` file by right-clicking the file, selecting **Open as > Source Code** and adding the following XML:
 
-	```XML
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb{your-facebook-application-id}</string>
-			</array>
-		</dict>
-	</array>
-	<key>FacebookAppID</key>
-	<string>{your-facebook-application-id}</string>
-	<key>FacebookDisplayName</key>
-	<string>MyApp</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fbauth</string>
-		<string>fbauth2</string>
-	</array>
-	<key>NSAppTransportSecurity</key>
+```XML
+<key>CFBundleURLTypes</key>
+<array>
 	<dict>
-	    <key>NSExceptionDomains</key>
-	    <dict>
-	        <key>facebook.com</key>
-	        <dict>
-	            <key>NSIncludesSubdomains</key>
-	            <true/>                
-	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	            <false/>
-	        </dict>
-	        <key>fbcdn.net</key>
-	        <dict>
-	            <key>NSIncludesSubdomains</key>
-	            <true/>
-	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	            <false/>
-	        </dict>
-	        <key>akamaihd.net</key>
-	        <dict>
-	            <key>NSIncludesSubdomains</key>
-	            <true/>
-	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	            <false/>
-	        </dict>
-	    </dict>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<string>fb{your-facebook-application-id}</string>
+		</array>
 	</dict>
-	```
+</array>
+<key>FacebookAppID</key>
+<string>{your-facebook-application-id}</string>
+<key>FacebookDisplayName</key>
+<string>MyApp</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+	<string>fbauth</string>
+	<string>fbauth2</string>
+</array>
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSExceptionDomains</key>
+    <dict>
+        <key>facebook.com</key>
+        <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+            <false/>
+        </dict>
+        <key>fbcdn.net</key>
+        <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+            <false/>
+        </dict>
+        <key>akamaihd.net</key>
+        <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+            <false/>
+        </dict>
+    </dict>
+</dict>
+```
 {: codeblock}
 
 Update the URL scheme and `FacebookappID` properties with your **Facebook Application ID**.
@@ -184,23 +184,22 @@ A common, though not mandatory, place to put the initialization code is in the `
 
 2. Initialize the client SDK.	For information on obtaining `applicationRoute` and `applicationGUID`  see [Before you begin](#before-you-begin)).
 
+	####Objective-C
+	{: #approute-objc}
 
-####Objective-C
-{: #approute-objc}
-
-```Objective-C
-[[IMFClient sharedInstance]
-			initializeWithBackendRoute:@"applicationRoute"
+	```Objective-C
+	[[IMFClient sharedInstance]
+				initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
-```
+	```
 
-####Swift
-{: #approute-swift}
+	####Swift
+	{: #approute-swift}
 
-```Swift
-IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
-                           backendGUID: "applicationGUID")
-```
+	```Swift
+	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
+                               backendGUID: "applicationGUID")
+	```
 
 1. Initialize the `AuthorizationManager` by passing the {{site.data.keyword.amashort}} service `tenantId` parameter. See [Before you begin].
 (#before-you-begin)).
