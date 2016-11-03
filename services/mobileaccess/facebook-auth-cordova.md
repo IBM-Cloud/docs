@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-03"
 
 ---
 {:shortdesc: .shortdesc}
@@ -140,7 +140,7 @@ The steps required to configure iOS Platform of Cordova application for Facebook
 ### Enable Keychain Sharing for iOS
 {: #enable_keychain}
 
-Enable `Keychain Sharing` by going to `Capabilities` tab and switch the `Keychain Sharing` to `On` in your Xcode project.
+Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain Sharing` to `On` in your Xcode project.
 
 
 
@@ -156,30 +156,27 @@ The Authorization Manager must be initialized in the native Objective-C code in 
 
 	{
 
-		// Xcode 7 and Xcode 8 with Swift 2.3
-
-	    [CDVBMSClient initMCAAuthorizationManagerManager:@"<tenantId>"];
-
-	    //Xcode 8 with Swift 3
-
-	    //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
+	    [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
 
 	    [[FacebookAuthenticationManager sharedInstance] register];
 
 	    self.viewController = [[MainViewController alloc] init];
-
-
-	    //Xcode 7 and Xcode 8 with 2.3
-
-	    [[FacebookAuthenticationManager sharedInstance] onFinishLaunching:application withOptions:launchOptions];
-
-	    //Xcode 8 with Swift 3
 
 	    [[FacebookAuthenticationManager sharedInstance] onFinishLaunchingWithApplication:application withOptions:launchOptions];
 
 
 	    return [super application:application didFinishLaunchingWithOptions:launchOptions];
 	}
+	
+
+	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication 
+			annotation:(id)annotation
+	{
+	  
+	   return [[FacebookAuthenticationManager sharedInstance] onOpenURLWithApplication:application 
+	   		url:url sourceApplication:sourceApplication annotation:annotation];
+	}
+
 ```
 
 **Note:** The imported header file name is composed of your module name concatenated to the string `-Swift.h`, for example, if your module name is `Cordova` then the import line would be `#import "Cordova-Swift.h"` To find the module name go to

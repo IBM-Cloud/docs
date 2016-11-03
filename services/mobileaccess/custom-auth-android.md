@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-09"
+lastupdated: "2016-11-02"
+
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -17,17 +18,26 @@ Configure your Android application with custom authentication to use the {{site.
 
 ## Before you begin
 {: #before-you-begin}
-You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} client SDK.  For more information, see the following information:
+Before you begin you must have:
+
+* A resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
+* Your **Realm** name. This is the value you you specificed in the **Realm Name** field of the **Custom** section in the **Management** tab of the {{site.data.keyword.amashort}} dashboard.
+* The URL of your back-end application (**App Route**). You will need this values for sending requests to the protected endpoints of your back-end application.
+* Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`, `United Kingdom`, or `Sydney`, and correspond to the SDK values required in the WebView Javascript code: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`. You will need this value for initializing the {{site.data.keyword.amashort}} client.
+
+For more information, see the following information:
  * [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Setting up Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
  * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
-Take note of your service parameter values. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile options**. The `applicationRoute` and `tenantId` (also known as `appGUID`)  values are displayed in the **Route** and **App GUID / TenantId** fields. You will need these values for intializing the SDK and for sending requests to the back-end application.
+
 
 ## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #custom-android-initialize}
+If you have an Android app instrumented with the {{site.data.keyword.amashort}} Android SDK you can skip this section.
 1. In your Android project in Android Studio, open the `build.gradle` file of your app module (not the project `build.gradle`).
 
 1. In the `build.gradle`  file, find the `dependencies` section and check for that the following dependency exists:
@@ -59,7 +69,7 @@ Add the internet access permission under the `<manifest>` element:
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 ```
 
-Replace the `BMSClient.REGION_UK` with the appropriate region.	 To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value should be one of the following: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.				
+Replace the `BMSClient.REGION_UK` with the {{site.data.keyword.amashort}} region. For more information on obtaining these values see  [Before you begin](#before-you-begin)).
 	
 
 ## AuthenticationListener interface
@@ -186,8 +196,8 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 
 In the code:
-* Replace `MCAServiceTenantId` with the `tenantId` value (see [Before you begin](##before-you-begin)). 
-* Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard.
+* Replace `MCAServiceTenantId` with the **TenantId** value (see [Before you begin](##before-you-begin)). 
+* Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
 
 
 ## Testing the authentication
@@ -196,7 +206,7 @@ After the client SDK is initialized and a custom AuthenticationListener is regis
 
 ### Before you test
 {: #custom-android-testing-before}
-You must have an application that was created with the {{site.data.keyword.mobilefirstbp}} boilerplate and have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
+You must have an application that has a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
 
 
 1. Send a request to the protected endpoint (`{applicationRoute}/protected`) of your mobile back-end application from your browser, for example `http://my-mobile-backend.mybluemix.net/protected`. For information on obtaining the `{applicationRoute}` value, see   [Before you begin](#before-you-begin). 
@@ -225,7 +235,6 @@ You must have an application that was created with the {{site.data.keyword.mobil
 		}
 	});
 ```
-
 	
 1. 	When your request succeeds, the following output is in the LogCat tool:
 

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-09"
+lastupdated: "2016-11-01"
+
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -17,32 +18,36 @@ Use Google Sign-In to authenticate users on your {{site.data.keyword.amafull}} i
 
 
 ## Before you begin
-{: #google-auth-ios-before}
+{: #before-you-begin}
 You must have:
 
+* An instance of an {{site.data.keyword.amafull}} service and {{site.data.keyword.Bluemix_notm}} application. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* The URL of your back-end application (**App Route**). You will need this values for sending requests to the protected endpoints of your back-end application.
+* Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
+* Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: **US South**, **United Kingdom**, or **Sydney**, and correspond to the values required in the code:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
 * An iOS project in Xcode. It does not need to be instrumented with the {{site.data.keyword.amashort}} client SDK.  
-* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+
 
 
 ## Preparing your app for Google Sign-In
 {: #google-sign-in-ios}
 
-Prepare your app for Google sign-in by following the instructions provided by Google at [Google Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start-integrating). 
+Prepare your app for Google sign-in by following the instructions provided by Google at [Google Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start-integrating).
 
 This process:
-* prepares a new project on the Google Developers site, 
+* prepares a new project on the Google Developers site,
 * creates the `GoogleService-Info.plist` file and the `REVERSE_CLIENT_ID` value to add to your Xcode project, and
 * creates the **Google Client ID** to add to your {{site.data.keyword.Bluemix_notm}} back-end application.
 
-The following steps give you a brief outline of the tasks necessary for preparing your app. 
+The following steps give you a brief outline of the tasks necessary for preparing your app.
 
 **Note:** It is not necessary to add the Google Sign-In CocoaPod. The necessary SDK is added by the `BMSGoogleAuthentication` CocoaPod.
 
 1. Note the **Bundle Identifier** in your Xcode project from the **Identity** section of the **General** tab of the main target. You need it to create your  Google Sign-In project.
 
-1. Create a project on Google Developer for Google Sign-In for iOS at https://developers.google.com/mobile/add?platform=ios. 
+1. Create a project on Google Developer for Google Sign-In for iOS at https://developers.google.com/mobile/add?platform=ios.
 
-2. Add the Google Sign-In service to your project.
+2. Add the Google Sign-In API to your project.
 
 3. Retrieve the `GoogleService-Info.plist`.
 
@@ -52,27 +57,25 @@ The following steps give you a brief outline of the tasks necessary for preparin
 
 1. Update the URL Schemes in your Xcode project with your `REVERSE_CLIENT_ID` and bundle identifier. For more information, see [Add URL schemes to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project).
 
-1. Update your app's project-Bridging-Header.h file with the following code:
+1. Update your app's `project-Bridging-Header.h` file with the following code:
 
  ```
  #import <Google/SignIn.h>
  ```
  {: codeblock}
 
- For more information about updating the bridging header file, see step 1. in [Enable sign-in](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in).
+ For more information about updating the bridging header file,  [Enable sign-in](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in).
 
 ## Configuring {{site.data.keyword.amashort}} for Google authentication
 {: #google-auth-ios-config}
 
-Now that you have an iOS client ID, you can enable Google authentication in the {{site.data.keyword.Bluemix}} dashboard.
+Now that you have an iOS client ID, you can enable Google authentication in the {{site.data.keyword.amashort}} service.
 
 1. Open your service in the {{site.data.keyword.amashort}} dashboard.
-
-1. Click **Mobile options** and take note of **Route** (*applicationRoute*) and **App GUID / TenantId** (*tenantId*). You need these values when you initialize the SDK and send requests to the back-end application.
-
-1. Click the **Configure** button on the  **Google** panel.
-
-1. In **Application ID for iOS**, specify the `CLIENT_ID` value from the `GoogleService-Info.plist` file that you obtained earlier and click **Save**.
+1. From the **Manage** tab, pull the **Authorization** lever to the **On** position.
+1. Expand the **Google** section.
+1. In **Application ID for iOS**, specify the `CLIENT_ID` value you obtained from the `GoogleService-Info.plist` file.
+1. Click **Save**.
 
 ## Configuring the {{site.data.keyword.amashort}} client SDK for iOS
 {: #google-auth-ios-sdk}
@@ -102,9 +105,9 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
  pod 'BMSGoogleAuthentication'
  ```
  {: codeblock}
- 
+
  **Note:** If you have already installed the {{site.data.keyword.amashort}} core SDK, you can remove this line: `pod 'BMSSecurity'`. The `BMSGoogleAuthentication` pod installs all necessary frameworks.
-	
+
  **Tip:** You can add `use_frameworks!` to your Xcode target instead of having it in the Podfile.
 
 1. Save the `Podfile` and run `pod install` from the command line. CocoaPods  installs the dependencies. You will see the progress and which components were added.
@@ -115,10 +118,16 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
 
 1. Copy the `GoogleAuthenticationManager.swift` file from the `BMSGoogleAuthentication` pod source files to your project directory.
 
+### Enable Keychain Sharing for iOS
+{: #enable_keychain}
+
+Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain Sharing` to `On` in your Xcode project.
+
+
 ## Initializing the {{site.data.keyword.amashort}} client Swift SDK
 {: #google-auth-ios-initialize}
 
-To use the {{site.data.keyword.amashort}} client SDK,  initialize it by passing the `applicationGUID` (`tenantID`) parameter.
+To use the {{site.data.keyword.amashort}} client SDK,  initialize it by passing the `tenantID` parameter.
 
 A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate.
 
@@ -141,7 +150,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 	// [START openurl]
 	    func application(_ application: UIApplication,
 			     open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, 
+		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url,
 			sourceApplication: sourceApplication, annotation: annotation)
 	    }
 
@@ -153,9 +162,10 @@ A common, though not mandatory, place to put the initialization code is in the `
 	 ```
 
  In the code:
- 	* Replace  `<serviceTenantID>` with the value you retrieved from the **Mobile options** (see [Configuring Mobile Client Access for Google authentication](#google-auth-ios-config)). 
-	* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value that appears should be one of the following: **US South**, **United Kingdom**, or **Sydney**, and correspond to the values required in the code:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
+ 	* Replace  `<serviceTenantID>` with the value you retrieved from the **Mobile options**.
+	* Replace `<applicationBluemixRegion>` with your {{site.data.keyword.Bluemix_notm}} **Region**. 
 	
+	For more information on obtaining these values see  [Before you begin](#before-you-begin).
 
 
 ## Testing the authentication
@@ -169,7 +179,7 @@ After the client SDK is initialized and Google Authentication Manager is registe
 You must be using the {{site.data.keyword.mobilefirstbp}}  boilerplate and already have a resource protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Try to send a request to protected endpoint of your mobile back-end application in your desktop browser by opening `{applicationRoute}/protected`. Replace `{applicationRoute}` with the value you retrieved from the **Mobile options** (see [Configuring Mobile Client Access for Google authentication](#google-auth-ios-config)). For example `http://my-mobile-backend.mybluemix.net/protected`.
+1. Try to send a request to protected endpoint of your mobile back-end application in your desktop browser by opening `{applicationRoute}/protected`.  For example `http://my-mobile-backend.mybluemix.net/protected`.
 
 1. The `/protected` endpoint of a mobile back-end application created with MobileFirst Services Boilerplate is protected with {{site.data.keyword.amashort}}, therefore it can only be accessed by mobile applications instrumented with {{site.data.keyword.amashort}} client SDK. As a result you will see `Unauthorized` in your desktop browser.
 

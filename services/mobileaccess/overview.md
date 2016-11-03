@@ -2,31 +2,32 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-03"
+
 ---
 
 # About {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 
-The {{site.data.keyword.amafull}} service provides authentication and monitoring services for mobile and web applications that access cloud resources hosted on {{site.data.keyword.Bluemix_notm}}.
+The {{site.data.keyword.amafull}} service provides authentication for mobile and Web applications that access cloud resources hosted on {{site.data.keyword.Bluemix_notm}}.
 
-You can use the {{site.data.keyword.amashort}} service to protect Node.js and Liberty for Java&trade; applications that are hosted on {{site.data.keyword.Bluemix_notm}} with various authentication types. By instrumenting your mobile applications with {{site.data.keyword.amashort}} SDK, you can use the authentication capabilities that are provided by {{site.data.keyword.amashort}} service. Client-side logs are gathered automatically, and sent to the {{site.data.keyword.amashort}} service on demand. Use the {{site.data.keyword.amashort}} dashboard to configure the various authentication types, and see data that is gathered and sent by the client-side SDK.
+You can use the {{site.data.keyword.amashort}} service to protect Node.js and Liberty for Java&trade; applications that are hosted on {{site.data.keyword.Bluemix_notm}} with various authentication types. By instrumenting your mobile applications with {{site.data.keyword.amashort}} SDK, you can use the authentication capabilities that are provided by {{site.data.keyword.amashort}} service. Use the {{site.data.keyword.amashort}} dashboard to configure the various authentication types, and see data that is gathered and sent by the client-side SDK.
 
 **Note**: The {{site.data.keyword.amashort}}  service was previously known as Advanced Mobile Access.
 
 ## Components
 {: #components}
 
-* **{{site.data.keyword.amashort}} dashboard**: Configure various authentication types and monitor mobile application performance, analytics, usage statistics, and device logs.
+* **{{site.data.keyword.amashort}} dashboard**: Configure various authentication types
 * **{{site.data.keyword.amashort}} client SDK**: Instrument mobile applications to use {{site.data.keyword.amashort}}  functionality. Supported platforms are: iOS 8+, Android 4+, and Cordova.
 * **{{site.data.keyword.amashort}} server SDK**: Protect resources that are hosted on {{site.data.keyword.Bluemix_notm}}. Currently, supported runtimes are Node.js and Liberty for Java&trade;.
 
 ## Authentication types
 {: #authtypes}
 You can use the following types of authentication in your mobile app:
-* **Facebook**: Use Facebook as an identity provider. Your users log in to the mobile app with their Facebook credentials.
-* **Google**: Use Google as an identity provider. Your users log in to the mobile app with their Google+ credentials.
+* **Facebook**: Use Facebook as an identity provider. Your users log in to the mobile or Web app with their Facebook credentials.
+* **Google**: Use Google as an identity provider. Your users log in to the mobile or Web app with their Google+ credentials.
 * **Custom**: Create your own identity provider. You fully control what kind of information is gathered and validated.
 
 ## Architecture overview

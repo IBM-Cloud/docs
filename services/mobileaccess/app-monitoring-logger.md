@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-05-06"
+
 ---
 
 # Enabling, configuring, and using Logger
 {: #enable-logger}
-Last updated: 6 May 2016
-{: .last-updated}
 
 The {{site.data.keyword.amashort}} client SDK provides a logging framework that is similar to other log frameworks that you might be familiar with, such as `java.util.logging` or `log4j`. The logging framework supports multiple per-package logger instances, different log levels, capturing of stack traces for an application crash and more.
 

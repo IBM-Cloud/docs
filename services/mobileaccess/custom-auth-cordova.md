@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-03"
 
 ---
 
@@ -13,21 +13,16 @@ Instrument your Cordova application to use custom authentication and {{site.data
 
 ## Before you begin
 {: #before-you-begin}
-You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} client SDK.  For more information, see the following information:
+* A resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
+* Your **Realm** name. This is the value you you specificed in the **Realm Name** field of the **Custom** section in the **Management** tab of the {{site.data.keyword.amashort}} dashboard.
+* Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`, `United Kingdom`, or `Sydney`. Exact syntax of the corresponding SDK constants are given in the code examples.
+
+For more information, see the following information:
  * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html). This shows you how to set up the {{site.data.keyword.amashort}} service for custom authentication. Here you define the **Realm** value.
  * [Setting up Cordova SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html). Information on setting  up the Cordova client app.
  * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html). How to authenticate users with a custom identity provider.
- * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html). Some examples of how a custom identity provider works.
-
-
- 
- 
- 
-You need these values:
-* Your application **Route**.
-* Your **TenantID**. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `tenantId`   (also known as `appGUID`) value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
-* Your application **Realm**.
-*  Find the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. You can find your current Bluemix region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value should be one of the following: **US South**, **Sydney**, or **UK**. The exact SDK constant values that correspond to these names are indicated in the code examples. 
+ * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html). Some examples of how a custom identity provider works. 
 
 ## Configure your Cordova WebView code
 ### Initializing the {{site.data.keyword.amashort}} client SDK in the Cordova WebView
@@ -163,12 +158,7 @@ Register your Authorization Manager according to your version of Xcode.
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 
 {  
-	// Xcode 7 and Xcode 8 with Swift 2.3
-
-    [CDVBMSClient initMCAAuthorizationManagerManager:@"<tenantId>"];
-
-    //Xcode 8 with Swift 3
-
+	
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02" 
+lastupdated: "2016-11-03"
+
 ---
 
 # Configuring {{site.data.keyword.amashort}} for custom authentication
@@ -13,7 +14,9 @@ To use custom authentication with your mobile app, you must register a custom au
 
 ## Before you begin
 {: #custom-dash-begin}
-* Read [Getting Started](index.html).
+* An instance of an {{site.data.keyword.amafull}} service and {{site.data.keyword.Bluemix_notm}} application. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* The URL of your back-end application (**App Route**). You will need this values for sending requests to the protected endpoints of your back-end application.
+* Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
 * Protect your back-end application with the {{site.data.keyword.amashort}} server SDK.  For more information see [Protecting resources](protecting-resources.html).
 * Have a custom identity provider application running.
 
@@ -21,15 +24,10 @@ To use custom authentication with your mobile app, you must register a custom au
 {: #custom-dash-config}
 Use the {{site.data.keyword.Bluemix}} dashboard to configure custom authentication.
 
-1. Open your app in the {{site.data.keyword.Bluemix}} dashboard.
-
-1. Click **Mobile Options** and take note of your **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`). You need these values to initialize the SDK.
-
-1. Click the {{site.data.keyword.amashort}} tile. The {{site.data.keyword.amashort}} dashboard loads.
-
-1. Click the **Custom** tile.
-
-1. Enter the **Realm name** and **Base URL** of your custom identity provider and save your changes.
+1. Open your service in the {{site.data.keyword.amafull}} dashboard.
+1. From the **Manage** tab, pull the **Authorization** lever to the **On** position.
+1. Expand the **Custom** section.
+1. Enter the **Realm name**, **Custom Identity Provider URL**. The **Your Web Application Redirect URIs** value is required only for Web applications.
 
 ## Next steps
 {: #next-steps}
