@@ -179,7 +179,7 @@ Swift 클라이언트를 사용하는 경우 다음과 같이 설정할 수 있�
 ```
 	swift post container_one -H "X-Versions-Location:container_two"
 ```
-Curl을 사용하는 경우 다음과 같이 설정할 수 있습니다.
+Curl을 사용 중인 경우에는 다음과 같이 설정할 수 있습니다.
 ```
 	curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:container_two" https://<object-storage_url>/container_one
 ```
@@ -434,7 +434,7 @@ Cloud Foundry CLI에서 서비스 신임 정보를 검색하려면 다음 명령
 ### OpenStack Identity(Keystone) v3 {: #keystone-authentication}
 신임 정보 구조는 사용자 애플리케이션에 최적으로 맞는 OpenStack 토큰 요청 메소드 또는 OpenStack SDK를 선택할 수 있는 전체 속성 세트를 포함합니다.
 
-권장되는 v3 토큰 요청은 다음 curl 명령에 표시된 것처럼 https://identity.open.softlayer.com/v3/auth/tokens에 대한 POST 요청입니다.
+권장되는 v3 토큰 요청은 아래 curl 명령에 표시된 것처럼 다음 사이트에 대한 POST 요청입니다. https://identity.open.softlayer.com/v3/auth/tokens 
 ```
 	curl -i \
 	  -H "Content-Type: application/json" \
@@ -560,7 +560,7 @@ Cloud Foundry CLI에서 서비스 신임 정보를 검색하려면 다음 명령
 	}
 ```
 
-{{site.data.keyword.objectstorageshort}} URL은 서비스 카탈로그에 있습니다. 서비스 카탈로그는 토큰 요청의 응답 본문에 포함되어 있습니다. 응답은 사용 가능한 OpenStack 서비스의 전체 카탈로그입니다. `object-store` 유형의 서비스 카탈로그에서 엔드포인트를 선택하고, 신임 정보의 지역 필드와 일치하는 지역을 선택하십시오. 
+{{site.data.keyword.objectstorageshort}} URL은 서비스 카탈로그에 있습니다. 서비스 카탈로그는 토큰 요청의 응답 본문에 포함되어 있습니다. 응답은 사용 가능한 OpenStack 서비스의 전체 카탈로그입니다. `object-store` 유형의 서비스 카탈로그에서 엔드포인트를 선택하고 신임 정보의 지역 필드와 일치하는 지역을 선택하십시오. 
 
 **참고:** 공용 인터페이스(`publicURL`)를 사용하십시오. 내부 인터페이스(`internalURL`)는 {{site.data.keyword.Bluemix_notm}}에서 액세스할 수 없습니다. 
 

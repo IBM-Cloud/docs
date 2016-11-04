@@ -184,6 +184,7 @@ curl を使用する場合は、次のようにセットアップします。
 	curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:container_two" https://<object-storage_url>/container_one
 ```
 この例では、`container_two` は、`container_one` に保管されたオブジェクトの古いバージョンを含めるようにセットアップされています。したがって、`container_one` には最新バージョンのオブジェクトが入り、`container_two` には古いバージョンのオブジェクトが入ります。バージョン管理が機能するためには、必ず `container_two` が存在するようにしてください。
+
 バージョン管理がセットアップされた状態で、`container_one` にオブジェクトをアップロードしたときに、そのオブジェクトの既存のバージョンが存在する場合、新しいバージョンが `container_one` に作成される時点で、既存のバージョンは `container_two` に移動されます。`container_one` からオブジェクトを削除した場合は、前のバージョンのオブジェクトが `container_two` から `container_one` に戻されます。
 
 `container_two` 内のオブジェクトには、
@@ -232,7 +233,7 @@ curl を使用する場合は、次のようにセットアップします。
 		$ swift list container_two
 		$
 ```
-7. container_one への新しいバージョンのオブジェクトのアップロード:
+7. オブジェクトの新しいバージョンを container_one にアップロード:
 ```
 		$ swift upload container_one object
 		object
@@ -301,6 +302,12 @@ cURL を使用する場合、コマンドは以下のようになります。
 		cURL -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Delete-At:" https://<object-storage_url>/container/object
 ```
 **注:** オブジェクトの実際の削除は、指示された正確な時刻に行われるとは限りません。ただし、オブジェクトは実際に指定の時刻に期限切れになり、それ以降は到達不能になります。実際の削除は、swift クラスターに構成されている swift-object-expirer デーモンの次回の実行時に行われます。
+
+
+
+
+
+
 ### 一時 URL の作成 {: #create-temporary-url}
 
 一時 URL は、指定された期間、追加の認証を必要とせずにオブジェクトをダウンロードするために使用できる、推測が困難な長い URL です。一時 URL の生成は、以下の手順で行います。

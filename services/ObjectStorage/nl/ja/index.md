@@ -2,26 +2,36 @@
 
 copyright:
   years: 2014, 2016
-
 ---
-
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
 
-# {{site.data.keyword.objectstorageshort}} 入門 {: #getting-started-with-object-storage}
 
-最終更新日: 2016 年 8 月 25 日
+# {{site.data.keyword.objectstorageshort}} 概説 {: #getting-started-with-object-storage}
+
+*最終更新日: 2016 年 10 月 19 日*
 {: .last-updated}
 
-{{site.data.keyword.objectstoragefull}} を利用すると、完全にプロビジョンされた Swift {{site.data.keyword.objectstorageshort}} アカウントにアクセスしてデータを管理することができます。Swift は、完全分散型の、API によるアクセスが可能なストレージ・プラットフォームを提供します。
-アプリケーションで直接使用することも、バックアップに使用することも可能で、コスト効率の高いスケールアウト・ストレージに理想的です。
+{{site.data.keyword.objectstoragefull}} では、構造化されていないクラウド・データ・ストレージを提供します。コンテンツを保管してアクセスするほかに、アプリおよびサービスを対話的に構成して接続することが可能です。
+{: shortdesc}
 
-**注:** プロバイダー・サイドの暗号化は提供されていません。アップロードの前にデータを暗号化するのは、クライアント・アプリケーションの責任です。
+{{site.data.keyword.objectstorageshort}} サービスの一般的なユース・ケースとして、以下があります。
+
+* インスタンスからのボリューム・データのバックアップ
+* 大量のデータを転送する場合の中継場所として使用
+* 直接接続されていない環境間でのデータの転送
+* 中央リポジトリーとして機能
 
 
-{{site.data.keyword.objectstorageshort}} の使用を開始するには、以下のようにします。
 
-1.	{{site.data.keyword.Bluemix_notm}} カタログから {{site.data.keyword.objectstorageshort}} インスタンスをプロビジョンします。
-2.	{{site.data.keyword.objectstorageshort}} インスタンスを構成し、**「作成」**をクリックします。最初に**「アプリ」**フィールドで**「アンバインドのまま」**オプションを選択した場合、構成完了後もサービス・インスタンスを {{site.data.keyword.Bluemix_notm}} アプリケーションにバインドすることができます。手順については、[アプリのバインド](../ObjectStorage/objectstorge_usingobjectstorage.html#using-object-storage-from-bluemix-app)に関する資料を参照してください。
+{{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} を利用すると、完全にプロビジョンされた Swift {{site.data.keyword.objectstorageshort}} アカウントにアクセスしてデータを管理することができます。プロバイダー・サイドの暗号化は提供されません。
+
+
+1.	{{site.data.keyword.Bluemix_notm}} カタログからサービス・インスタンスをプロビジョンします。インスタンスを構成し、**「作成」**をクリックします。最初に**「アプリ」**フィールドで**「アンバインドのまま」**オプションを選択した場合でも、後でサービス・インスタンスを {{site.data.keyword.Bluemix_notm}} アプリにバインドすることができます。
+2. サービス・インスタンス・ダッシュボードで、オブジェクトの保管を開始するためのコンテナーを作成します。
+3. **「アクション」**ドロップダウン・メニューからコンテナーまたはバケットにファイルを追加します。
+4. オブジェクトへのアクセスをテストするには、**「ダウンロード」**をクリックしてファイルを確認します。
+5. インスタンスをアプリケーションに接続する準備ができたら、サービス資格情報をセットアップして[サービスをバインドします](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service)。
 
 
 
@@ -39,10 +49,9 @@ copyright:
 
 ## チュートリアルおよびサンプル 
 {: #samples}
-* [Java による {{site.data.keyword.objectstoragefull}} への接続](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
+* [Java で IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} に接続する](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}} へのアクセスに Python を使用する](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
 * [{{site.data.keyword.objectstorageshort}} を活用するために PHP を使用する](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window}
-* [Node.js による {{site.data.keyword.objectstoragefull}} へのアクセスに pkgcloud を使用する](https://developer.ibm.com/recipes/tutorials/use-pkgcloud-to-access-ibm-object-storage-for-bluemix-with-node-js/){: new_window}
 
 ## 互換性のあるランタイム
 {: #buildpacks}

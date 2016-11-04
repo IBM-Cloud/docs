@@ -181,7 +181,7 @@ Swift 没有真正的目录结构，而是使用命名来表示目录布局。�
 ```
 	swift post container_one -H "X-Versions-Location:container_two"
 ```
-如果您使用 curl，那么您可以如下对其进行设置：
+如果您使用 curl，那么您可以对其进行如下设置：
 ```
 	curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:container_two" https://<object-storage_url>/container_one
 ```

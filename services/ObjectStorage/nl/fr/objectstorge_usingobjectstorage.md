@@ -177,7 +177,7 @@ Pour télécharger une structure de répertoire, utilisez le paramètre `-prefix
 ```
 	swift delete <nom_conteneur> <nom_fichier>
 ```
-### Utilisation de la gestion des versions d'objet {: #work-with-object-versioning}
+### Utilisation de la gestion des versions d'objets {: #work-with-object-versioning}
 
 Vous pouvez configurer des versions de chaque objet dans votre conteneur avec l'indicateur `X-Versions-Location`. Pour ce
 faire, créez un conteneur supplémentaire dans lequel placer les anciennes versions de vos objets comme suit.

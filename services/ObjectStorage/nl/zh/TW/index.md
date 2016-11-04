@@ -2,25 +2,36 @@
 
 copyright:
   years: 2014, 2016
-
 ---
-
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+
 
 # 開始使用 {{site.data.keyword.objectstorageshort}}  {: #getting-started-with-object-storage}
 
-前次更新：2016 年 8 月 25 日
+*前次更新：2016 年 10 月 19 日*
 {: .last-updated}
 
-{{site.data.keyword.objectstoragefull}} 可讓您存取完全佈建的 Swift {{site.data.keyword.objectstorageshort}} 帳戶，以管理您的資料。Swift 提供完全分散式、API 可存取的儲存空間平台。您可以直接在應用程式使用它或將它用於備份，讓它成為符合成本效益的橫向擴充儲存空間。
+{{site.data.keyword.objectstoragefull}} 提供非結構化雲端資料儲存空間。您可以儲存及存取內容，以及透過互動方式組合及連接至應用程式和服務。
+{: shortdesc}
 
-**附註：**並不提供「提供者端加密」。用戶端應用程式需負責上傳之前的資料加密。
+{{site.data.keyword.objectstorageshort}} 服務的一些常見使用案例如下：
+
+* 從您的實例備份磁區資料
+* 用來作為傳送大量資料時的媒介位置
+* 在未直接連接的環境之間傳送資料
+* 充當中央儲存庫
 
 
-若要開始使用 {{site.data.keyword.objectstorageshort}}，請執行下列動作：
 
-1.	從 {{site.data.keyword.Bluemix_notm}} 型錄佈建 {{site.data.keyword.objectstorageshort}} 實例。
-2.	配置 {{site.data.keyword.objectstorageshort}} 實例，然後按一下**建立**。如果您一開始在**應用程式**欄位中選擇**維持不連結**選項，在完成配置之後仍然可將服務實例連結至 {{site.data.keyword.Bluemix_notm}} 應用程式。如需相關指示，請參閱[連結應用程式](../ObjectStorage/objectstorge_usingobjectstorage.html#using-object-storage-from-bluemix-app)。
+「{{site.data.keyword.Bluemix_notm}} 公用 {{site.data.keyword.objectstorageshort}}」可讓您存取完整佈建的 Swift {{site.data.keyword.objectstorageshort}} 帳戶，以管理您的資料。並不提供提供者端加密。
+
+
+1.	從 {{site.data.keyword.Bluemix_notm}} 型錄中佈建服務實例。請配置實例，然後按一下**建立**。如果您一開始在**應用程式**欄位中選擇**維持不連結**選項，稍後仍然可以將服務實例連結至 {{site.data.keyword.Bluemix_notm}} 應用程式。
+2. 在服務實例儀表板中，建立容器，以開始儲存物件。
+3. 從**動作**下拉功能表中，將檔案新增至容器或儲存區。
+4. 若要測試對您物件的存取，請按一下**下載**，並檢閱檔案。
+5. 當您準備好將實例連接至應用程式時，請設定服務認證，並[連結服務](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service)。
 
 
 
@@ -30,7 +41,7 @@ copyright:
 ## API 參考資料 
 {: #api}
 * [OpenStack {{site.data.keyword.objectstorageshort}} (Swift) API v1](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window}
-* [OpenStack Identity (Keystone) API v3.0](http://developer.openstack.org/api-ref-identity-v3.html){: new_window}
+* [OpenStack Identity (Keystone) API 3.0 版](http://developer.openstack.org/api-ref-identity-v3.html){: new_window}
 
 ## SDK 
 {: #sdk}
@@ -38,10 +49,9 @@ copyright:
 
 ## 指導教學及範例 
 {: #samples}
-* [Connecting to {{site.data.keyword.objectstoragefull}} with Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
+* [Connecting to IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} with Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
 * [Use Python to access your {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}}](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
 * [Use PHP to leverage {{site.data.keyword.objectstorageshort}}](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window}
-* [Use pkgcloud to access {{site.data.keyword.objectstoragefull}} with Node.js](https://developer.ibm.com/recipes/tutorials/use-pkgcloud-to-access-ibm-object-storage-for-bluemix-with-node-js/){: new_window}
 
 ## 相容的運行環境
 {: #buildpacks}
