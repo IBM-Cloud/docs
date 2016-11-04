@@ -26,7 +26,5 @@ copyright:
   ![Drag and drop into a running Eclipse Luna workspace to install IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](images/installbutton.png)
 
   3. {: download} Download your starter code and import it into Eclipse by going to **File > Import Existing Projects into Workspace > Archive File**.
-  
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_starter-code.svg" alt="Download Starter Code" /> </a> 
-
+ 
 For step-by-step directions in deploying apps, see [Deploying apps with IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}.
