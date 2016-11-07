@@ -2,140 +2,162 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-27"
 
 ---
 # Surveillance d'applications à l'aide de {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
-*Dernière mise à jour : 25 avril 2016*
+
+Dernière mise à jour : 27 septembre 2016
 {: .last-updated}
 
-{{site.data.keyword.mobileanalytics_full}} fournit des fonctions de surveillance et d'analyse pour vos applications mobiles. Le logiciel SDK du client {{site.data.keyword.mobileanalytics_short}} vous permet d'enregistrer les journaux client et de surveiller les données. Les développeurs peuvent contrôler le moment auquel ces données doivent être envoyées au service {{site.data.keyword.mobileanalytics_short}}. Lorsque les données sont fournies à {{site.data.keyword.mobileanalytics_short}}, vous pouvez utiliser le tableau de bord {{site.data.keyword.mobileanalytics_short}} pour obtenir des perspectives d'analyse relatives à vos applications et périphériques mobiles, ainsi que les journaux client.
+{{site.data.keyword.mobileanalytics_full}} fournit des fonctions de surveillance et d'analyse pour vos applications mobiles. Le logiciel SDK
+du client {{site.data.keyword.mobileanalytics_short}} vous permet d'enregistrer des journaux d'application et de surveiller les données. Les développeurs peuvent contrôler le moment auquel ces données doivent être envoyées au service {{site.data.keyword.mobileanalytics_short}}. Lorsque les données sont envoyées dans {{site.data.keyword.mobileanalytics_short}}, vous pouvez utiliser le tableau de bord
+{{site.data.keyword.mobileanalytics_short}} pour obtenir des perspectives d'analyse relatives à vos applications et périphériques mobiles, ainsi
+que les journaux d'application.
 {: shortdesc}
 
-## Visualisation de données à l'aide de graphiques personnalisés
+<!--
+
+## Visualizing data with custom charts
 {: #custom-charts}
 
-Vous pouvez visualiser les données d'analyse collectées dans votre référentiel d'analyse. Cette visualisation est un moyen très efficace d'examiner les données relatives à des scénarios d'utilisation spécifiques. Vous pouvez créer des graphiques avec des données déjà collectées par une analyse opérationnelle, en plus des données personnalisées que vous communiquez.
-{: #shortdesc}
+You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
-Découvrez comment surveiller et identifier et résoudre les problèmes liés à vos applications.
 
-### Création de graphiques personnalisés pour les journaux client
+### Creating custom charts for app logs
 {: #custom-charts-client-logs}
 
-Vous pouvez créer un diagramme personnalisé pour les journaux client contenant des informations de journal qui sont envoyées à l'API de journal d'événements pour la plateforme. Les informations de journal contiennent également des informations contextuelles sur le périphérique, à savoir l'environnement, ainsi que le nom et la version de l'application.
+You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
-Dans cet exemple, vous utilisez des données de journal client pour créer un graphique de flux. Le graphique final affiche la distribution des niveaux de journalisation dans une application spécifique. Les données suivantes peuvent également être représentées dans un graphique :
+In this example, you use app log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
 
-* Données spécifiques
-  * Niveau de journalisation
-* Données de message
-  * Horodatage
-* Données contextuelles relatives au système d'exploitation du périphérique
-  * Nom de l'application
-  * Version de l'application
-  * Système d'exploitation du périphérique
-* Données contextuelles relatives au périphérique
-  * ID du périphérique
-  * Modèle de périphérique
-  * Version du système d'exploitation du périphérique
+* Specific data
+  * Log level
+* Message data
+  * Timestamp
+* Device OS contextual data
+  * Application name
+  * Application version
+  * Device OS
+* Device contextual data
+  * Device ID
+  * Device model
+  * Device OS version
 
 
-1. Assurez-vous que vous disposez d'une application qui collecte des journaux de périphérique ou regroupe des données d'analyse.
-2. Dans la console {{site.data.keyword.mobileanalytics_short}}, cliquez sur l'onglet **Graphiques personnalisés** sur la page du **tableau de bord**. Vous pouvez créer un graphique à partir des messages d'analyse qui ont été envoyés au serveur.
-3. Cliquez sur **Créer un graphique** pour créer un nouveau graphique personnalisé.
-4. Indiquez les valeurs suivantes :
-  * Titre de graphique : Application et niveaux de journalisation
-  * Type d'événement : Journaux client
-  * Type de graphique : Graphique de flux
-5. Cliquez sur l'onglet **Définition de graphique**.
-6. Indiquez les valeurs suivantes :
-  * Source : Nom d'application
-  * Destination : Niveau de journalisation
-  * Propriété : nom de votre application
-7. Cliquez sur **Sauvegarder**
+1. Make sure that you have an application that is collecting device logs or gathering analytics.
+2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
+3. Click **Create Chart** to create a new custom chart and provide the following values:
+  * Chart Title: Application and Log Levels
+  * Event Type: App Logs
+  * Chart Type: Flow Chart
+5. Click the **Chart Definition** tab and provide the following values:
+  * Source: Application Name
+  * Destination: Log Level
+  * Property: your application name
+7. Click **Save**
 
-### Exportation de données personnalisées
+### Exporting custom data
 {: #export-custom-data}
 
-Les données de chaque graphique personnalisé peuvent être exportées au format JSON, XML ou CSV.
+You can export the data from each custom chart into JSON, XML, or CSV format.
 
-La structure des données exportées du graphique exporté. Pour exporter des données, cliquez sur l'icône Exporter située dans l'angle supérieur droit du graphique personnalisé.
+The structure of the exported data depends on the chart that is being exported. To export data, click the export icon at the upper right of the custom chart.
 
 
 
-### Exportation et importation de définitions de graphique personnalisé
+### Exporting and importing custom chart definitions
 {: #export-import-custom}
 
-Vous pouvez importer et exporter des définitions de graphique personnalisé à l'aide d'un programme ou manuellement dans le tableau de bord {{site.data.keyword.mobileanalytics_short}}.
+You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
-Assurez-vous que vous disposez d'au moins un graphique personnalisé dans le tableau de bord {{site.data.keyword.mobileanalytics_short}}.
-Dans cet exemple, vous exportez et importez manuellement des définitions de graphique personnalisé.
+Ensure that you have at least one custom chart in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
+In this example, you manually export and import custom chart definitions.
 
-1. Dans la console {{site.data.keyword.mobileanalytics_short}}, cliquez sur l'onglet **Graphiques personnalisés** sur la page du **tableau de bord** .
-2. Pour exporter les définitions de graphique personnalisé, cliquez sur **Exporter les graphiques**. Cette action affiche une boîte de dialogue permettant de sauvegarder un fichier `customChartsDefinition.json`.
-3. Choisissez l'emplacement de sauvegarde du fichier.
-4. Cliquez sur l'icône **Supprimer un graphique** située en regard de chaque graphique personnalisé pour supprimer tous les graphiques personnalisés.
-5. Pour importer une définition de graphique personnalisé, cliquez sur **Importer des graphiques**. Cette action affiche une boîte de dialogue permettant de sélectionner un fichier.
-6. Choisissez le fichier `customChartsDefinition.json` que vous avez précédemment exporté afin de l'ouvrir.
+1. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab in the **Dashboard** page.
+2. To export the custom chart definitions, click **Export Charts**. This action displays a dialog to save a `customChartsDefinition.json` file.
+3. Choose a location to save the file.
+4. Click the **Delete Chart** icon next to each custom chart to delete all custom charts.
+5. To import a custom chart definition, click **Import Charts**. This action displays a dialog to choose a file.
+6. Choose the `customChartsDefinition.json` file that you previously exported to open.
 
-Vous pouvez également exporter et importer les définitions de graphique personnalisé à l'aide d'un programme en utilisant le client HTTP de votre choix (par exemple, CURL ou postman) :
-* Le noeud final GET pour l'exportation est `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
-* Le noeud final POST pour l'importation est `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import/`.
+You can also export and import custom chart definitions programmatically by using your HTTP client of choice (for example, CURL or postman):
+* The GET endpoint for export is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
+* The POST endpoint for import is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
 
-**Remarque** : Si vous importez une définition de graphique personnalisé qui existe déjà, une définition en double est créée, et, par conséquent, le tableau de bord {{site.data.keyword.mobileanalytics_short}} affiche des graphiques personnalisés dupliqués.
+**Note**: If you import a custom chart definition that exists, you end up with duplicate definitions, which also means that the {{site.data.keyword.mobileanalytics_short}} Dashboard shows duplicate custom charts.
+
+-->
 
 ## Définition d'alertes
 {: #alerts}
 
-Vous pouvez définir des seuils dans les définitions d'alerte dans la console MobileFirst Analytics pour un meilleur contrôle de vos activités.
-{: #shortdesc}
+Vous pouvez définir des seuils dans les définitions d'alerte dans la console {{site.data.keyword.mobileanalytics_short}} pour un meilleur contrôle de vos activités.
 
-Vous pouvez configurer des seuils, qui, s'ils sont dépassés, déclenchent des alertes et entraînent l'envoi de notifications à la console MobileFirst Analytics. Les alertes déclenchées peuvent être visualisées sur la console ou gérées par un webhook personnalisé. Cette fonction offre un moyen proactif de détecter des erreurs de journal client, des erreurs de journal serveur, des périodes prolongées de temps d'attente du réseau et des échecs d'authentification. La mise en place d'alertes et de seuils réactifs vous évite d'avoir à parcourir vos données et à définir des seuils avec un niveau de granularité élevé.
+Vous pouvez configurer des seuils, qui, s'ils sont dépassés, déclenchent des alertes et entraînent l'envoi de notifications à la console
+{{site.data.keyword.mobileanalytics_short}}. Les alertes déclenchées peuvent être visualisées dans la console ou gérées par un webhook
+personnalisé. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> 
+Cette fonction permet de détecter de façon proactive les erreurs dans les journaux d'application, ainsi que les erreurs dans les journaux serveur signalant
+des pannes d'application.
+La mise en place d'alertes et de seuils réactifs vous évite d'avoir à parcourir vos données et à définir des seuils avec un niveau de granularité élevé.
 
-### Création d'une définition d'alerte pour les journaux client
+### Création d'une définition d'alerte pour les journaux d'application
 {: #alert-def-client-logs}
 
-Vous pouvez créer une définition d'alerte basée sur les journaux client.
+Vous pouvez créer une définition d'alerte qui repose sur des journaux d'application. 
 
-Dans cet exemple, vous utilisez des données de journal client pour créer une définition d'alerte. L'alerte surveille tous les journaux client qui ont été reçus au cours des 5 dernières minutes, et continue la vérification toutes les 5 minutes, jusqu'à ce que la définition d'alerte soit désactivée ou supprimée. Une alerte est déclenchée pour chaque périphérique qui a envoyé au moins 3 journaux d'erreurs client avec le même nom et la même version d'application.
+Dans cet exemple, vous utilisez des données de journal d'application pour créer une définition d'alerte. L'alerte surveille tous les journaux
+d'application qui
+ont été reçus au cours des 5 dernières minutes, et procède à une vérification toutes les 5 minutes, jusqu'à ce que la définition d'alerte soit
+désactivée ou supprimée. Une alerte est déclenchée pour chaque périphérique qui a envoyé au moins 3 journaux d'erreurs d'application avec le même nom et la même version
+d'application.
 
-1. Dans la console MobileFirst Analytics, cliquez sur l'icône qui représente une sonnette pour accéder à la page **Journal des alertes**.
-2. Accédez à la page **Gestion des alertes** et cliquez sur Créer une **alerte**.
+1. Dans la console {{site.data.keyword.mobileanalytics_short}}, cliquez sur **Définitions** pour accéder à la page
+Définitions d'alerte.
+2. Cliquez sur **Créer une alerte** pour créer une alerte.
 3. Indiquez les valeurs suivantes :
-	* Nom d'alerte : Alerte pour les journaux client
+	* Nom de l'alerte : Alerte pour les journaux d'application
 	* Message : Alerte de message d'erreur
 	* Fréquence des requêtes : 5 minutes
-	* Type d'événement : Journaux client
+	* Type d'événement : Journaux d'application
 		* Propriété : Niveau de journalisation
 			* Valeur : Erreur
 			* Seuil
 				* Type de seuil : Total pour instance d'application
 
-					Remarque : Si vous choisissez l'option Moyenne pour application, la moyenne de journaux client est calculée en fonction du nombre de périphériques. Par exemple, si vous possédez deux périphériques et l'un d'eux envoie six journaux client tandis que l'autre en envoie trois, la moyenne est de 4,5 journaux client.
+					**Remarque** : si vous choisissez l'option Moyenne pour application, la moyenne de journaux d'application est calculée en
+fonction du nombre de
+périphériques. Par exemple, si vous possédez deux périphériques et que l'un d'eux envoie six journaux d'application tandis que l'autre en envoie trois, la
+moyenne est de
+4,5 journaux d'application.
 				* Opérateur : Est supérieur ou égal à 3
 	<!-- insert alert definition tab image? -->
 
-4. Cliquez sur **Suivant** ou sur l'onglet **Méthode de distribution** et indiquez la valeur suivante :
+4. Cliquez sur **Suivant** et indiquez la valeur suivante :
 	* Méthode : Console Analytics uniquement
 
-		Remarque : Choisissez l'option Console Analytics et publication sur le réseau si vous souhaitez envoyer également un message POST avec un contenu JSON à votre URL personnalisée. Les zones suivantes sont disponibles lorsque vous choisissez cette option :
+		**Remarque** : Choisissez l'option Console Analytics et publication sur le réseau si vous souhaitez envoyer
+également un message POST avec un contenu JSON à votre URL personnalisée. Les zones suivantes sont disponibles lorsque vous choisissez cette option :
 		* Adresse URL de publication sur le réseau
         * En-têtes
         * Type d'authentification
 5. Cliquez sur **Sauvegarder**.
 
-Vous avez créé une définition d'alerte qui déclenche une alerte toutes les 5 minutes si le nombre de journaux d'erreurs client est supérieur ou égal à 3.
+Vous avez créé une définition d'alerte qui déclenche une alerte toutes les 5 minutes si le nombre de journaux d'erreurs d'application est supérieur ou
+égal
+à 3.
 
 ### Création d'une définition d'alerte pour les pannes d'application
 {: #alert-def-app-crash}
 
 Vous pouvez créer une définition d'alerte basée sur les pannes d'application.
 
-Dans cet exemple, vous utilisez des données de panne d'application pour créer une définition d'alerte. L'alerte surveille toutes les pannes d'application qui se sont produites au cours des 2 dernières minutes, et continue la vérification toutes les 2 minutes, jusqu'à ce que la définition d'alerte soit désactivée ou supprimée. Une alerte est déclenchée pour chaque application qui est tombée en panne au moins 5 fois. Pour plus d'informations sur les pannes d'application, voir [Pannes d'application](app_crash/c_op_analytics_crashes.html).
+Dans cet exemple, vous utilisez des données de panne d'application pour créer une définition d'alerte. L'alerte surveille toutes les pannes d'application qui se sont produites au cours des 2 dernières minutes, et continue la vérification toutes les 2 minutes, jusqu'à ce que la définition d'alerte soit désactivée ou supprimée. Une alerte est déclenchée pour chaque application qui est tombée en panne au moins 5 fois. Pour plus d'informations sur les pannes d'application, voir [Pannes d'application](#app_crash).
 
-1. Dans la console MobileFirst Analytics, cliquez sur l'icône **Alertes**. Cette action permet d'afficher la page Journal des alertes.
-2. Cliquez sur l'onglet **Gestion des alertes**, puis sur **Créer une alerte**.
+1. Dans la console {{site.data.keyword.mobileanalytics_short}}, cliquez sur **Définitions** pour afficher la page
+Définitions d'alerte.
+2. Cliquez sur **Créer une alerte**.
 3. Indiquez les valeurs suivantes :
 	* Nom d'alerte : Alerte pour les pannes d'application
 	* Message : Alerte de panne d'application
@@ -157,21 +179,21 @@ Dans cet exemple, vous utilisez des données de panne d'application pour créer 
 ### Gestion des définitions d'alerte
 {: #managing-alert-definitions}
 
-Dans cet exemple, vous gérez vos définitions d'alerte à partir de la page Gestion des alerte.
+Dans cet exemple, vous gérez vos définitions d'alerte à partir de la page Gestion des alertes.
 
-1. Dans la console MobileFirst Analytics, cliquez sur l'icône **Alertes**. Cette action permet d'afficher la page Journal des alertes.
-2. Cliquez sur l'onglet **Gestion des alertes**.
-3. Facultatif : Sélectionnez ou désélectionnez la case à cocher située sous la colonne **Activé** pour activer ou désactiver une définition d'alerte donnée.
-4. Facultatif : Cliquez sur l'icône **Dupliquer** si vous souhaitez créer une copie d'une définition d'alerte et modifier certaines valeurs.
-5. Facultatif : Cliquez sur l'icône **Crayon** si vous souhaitez éditer une définition d'alerte.
-6. Facultatif : Cliquez sur l'icône **Corbeille** si vous souhaitez supprimer une définition d'alerte.
+1. Dans la console {{site.data.keyword.mobileanalytics_short}}, cliquez sur **Journaux**. Cette action ouvre la page
+Journaux des alertes.
+2. Facultatif : Sélectionnez ou désélectionnez la case à cocher située sous la colonne **Activé** pour activer ou désactiver une définition d'alerte donnée.
+3. Facultatif : Cliquez sur l'icône **Dupliquer** si vous souhaitez créer une copie d'une définition d'alerte et modifier certaines valeurs.
+4. Facultatif : Cliquez sur l'icône **Crayon** si vous souhaitez éditer une définition d'alerte.
+5. Facultatif : Cliquez sur l'icône **Corbeille** si vous souhaitez supprimer une définition d'alerte.
 
 ### Affichage des détails d'alerte
 {: #viewing-alert-details}
 
 Dans cet exemple, vous affichez les détails de vos alertes déclenchées à partir de la page Journal des alertes.
 
-1. Dans la console MobileFirst Analytics, cliquez sur l'icône **Alertes**. Cette action permet d'afficher la page Journal des alertes.
+1. Dans la console {{site.data.keyword.mobileanalytics_short}}, cliquez sur **Journaux**. Cette action permet d'afficher la page Journal des alertes.
 2. Cliquez sur l'icône **+** pour n'importe laquelle des alertes. Cette action permet d'afficher les sections **Définition d'alerte** et **Instances d'alerte**.
 
     **Remarque** : Si la définition d'alerte correspondante n'a pas été supprimée ou modifiée, vous pouvez l'éditer en cliquant sur **Editer une alerte**. Sinon, le bouton **Editer une alerte** n'est pas disponible et le message suivant s'affiche :
@@ -180,31 +202,15 @@ Dans cet exemple, vous affichez les détails de vos alertes déclenchées à par
 
 3. Facultatif : Sélectionnez une alerte et cliquez sur l'icône **Corbeille** pour la supprimer.
 
-## Pannes d'application
+## Surveillance de pannes d'application
 {: #monitor-app-crash}
 
-Vous pouvez afficher les informations relatives à vos pannes d'application dans la console MobileFirst Analytics afin d'améliorer la surveillance et l'identification et la résolution des problèmes liés à vos applications.
-{: #shortdesc}
+Vous pouvez afficher les informations relatives à vos pannes d'application dans la console {{site.data.keyword.mobileanalytics_short}} afin
+d'améliorer la surveillance de vos applications et le traitement des incidents.
 
-Découvrez comment surveiller et identifier et résoudre les problèmes liés à vos applications.
 
-### Surveillance de pannes d'application
+### Surveillance des pannes d'application
 {: #app-crash}
-
-Vous pouvez afficher rapidement les informations relatives à vos pannes d'application dans la section **Tableau de bord** de la console IBM MobileFirst Analytics.
-
-Sur la page **Présentation** de la section **Tableau de bord**, le diagramme à barres **Pannes** illustre un histogramme des pannes au fil du temps.
-
-Vous pouvez afficher les données de deux façons :
-
-1. Afficher le taux de pannes : taux de pannes au fil du temps
-2. Afficher le nombre total de pannes : nombre total de pannes au fil du temps
-
-
-### Traitement des incidents liés aux pannes d'application
-{: #app-crash-troubleshooting}
-
-Vous pouvez afficher la page **Pannes** qui se trouve dans la section **Applications** de la console IBM MobileFirst Analytics pour mieux administrer vos applications.
 
 Le tableau **Présentation des pannes** affiche les colonnes de données suivantes :
 
@@ -212,6 +218,20 @@ Le tableau **Présentation des pannes** affiche les colonnes de données suivant
 * Pannes : Nombre total de pannes pour cette application
 * Nombre total d'utilisations : Nombre total de fois qu'un utilisateur ouvre et ferme cette application
 * Taux de pannes : Pourcentage de pannes par utilisation
+
+Vous pouvez afficher rapidement des informations sur les pannes d'application dans le tableau **Crashes**. <!--In the **Overview** page of the **Dashboard** section,--> Le diagramme à barres
+**Crashes** affiche un histogramme des pannes au fil du temps.
+
+Vous pouvez afficher les données de deux façons :
+
+1. Afficher le taux de pannes : taux de pannes au fil du temps
+2. Afficher le nombre total de pannes : nombre total de pannes au fil du temps
+
+### Traitement des incidents liés aux pannes d'application
+{: #app-crash-troubleshooting}
+
+Vous pouvez afficher la page **Traitement des incidents** dans la console <!-- **Applications** section of the -->
+{{site.data.keyword.mobileanalytics_short}} afin de mieux administrer vos applications. 
 
 Le tableau **Récapitulatif des pannes** inclut les colonnes de données suivantes et peut être trié :
 
@@ -222,17 +242,18 @@ Le tableau **Récapitulatif des pannes** inclut les colonnes de données suivant
 * Système d'exploitation
 * Message
 
-Vous pouvez cliquer sur l'icône + située en regard de n'importe quelle entrée pour afficher le tableau **Détails des pannes**, qui inclut les colonnes suivantes :
+Cliquez sur l'icône + située en regard de n'importe quelle entrée pour afficher le tableau **Détails des pannes**, qui inclut les colonnes suivantes :
 
 * Heure de la panne
-* Version de l'application
+* Version de l'application 
 * Version du système d'exploitation
 * Modèle de périphérique
 * ID du périphérique
 * Télécharger : lien permettant de télécharger les journaux qui ont conduit à la panne
 
-Vous pouvez développer n'importe quelle entrée du tableau **Détails des pannes** pour obtenir plus de détails, y compris une trace de pile.
+Développez n'importe quelle entrée du tableau **Détails des pannes** pour obtenir plus de détails, y compris une trace de pile.
 
-**Remarque** : Le tableau **Récapitulatif des pannes** est renseigné en exécutant une requête sur les journaux client de niveau Fatal. Si votre application ne collecte pas de journaux client de niveau Fatal, aucune donnée n'est disponible.
+**Remarque** : vous remplissez le tableau **Récapitulatif des pannes** en exécutant une requête
+sur les journaux d'application de niveau Fatal. Si votre application ne collecte pas de journaux d'application de niveau Fatal, aucune donnée n'est disponible.
 
 
