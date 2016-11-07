@@ -4,6 +4,8 @@ copyright:
 
   years: 2015, 2016
 
+lastupdated: "2016-06-23"
+
 ---
 
 {:new_window: target="_blank"}
@@ -11,8 +13,6 @@ copyright:
 
 
 # {{site.data.keyword.vpn_short}} CLI plug-in for cf CLI
-*Last updated: 23 June 2016*
-{: .last-updated}
 
 
 You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The {{site.data.keyword.vpn_short}} CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.Bluemix}} CLI plug-in. Both versions of the plug-in provide the same functionality.  
@@ -23,10 +23,10 @@ The {{site.data.keyword.vpn_short}} plug-in is available for Windows, MAC, and L
 The instructions that follow are for working with the Cloud Foundry (cf) CLI plug-in. To use the plug-in with the  {{site.data.keyword.Bluemix_notm}} CLI plug-in, see [{{site.data.keyword.vpn_short}} plug-in for {{site.data.keyword.Bluemix_notm}} CLI](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html).
 
 ## Install the cf CLI plug-in  
-Before you begin, install the cf CLI. See [Cloud Foundry command line interface](https://console.{DomainName}/docs/cli/downloads.html) for details. 
+Before you begin, install the cf CLI. See [Cloud Foundry command line interface](https://console.{DomainName}/docs/cli/downloads.html) for details.
 
 ##Install the {{site.data.keyword.vpn_short}} CLI plug-in
-**Note:** If you have a previous version of the {{site.data.keyword.vpn_short}} CLI plug-in that is installed, you must first uninstall it. Use the command: 
+**Note:** If you have a previous version of the {{site.data.keyword.vpn_short}} CLI plug-in that is installed, you must first uninstall it. Use the command:
 
 ```
 cf uninstall-plugin vpn
@@ -81,20 +81,20 @@ cf vpn-create connection <connection name> -g <gateway name> -k <preshared key> 
 #### Parameters
 {: #p1}
 
-**connection name:** 
+**connection name:**
 Name of the connection.
 
-**gateway name:** 
+**gateway name:**
 Name of the gateway.
 
-**-k:** 
+**-k:**
 Preshared key.
 
-**subnet/mask:** 
-Remote subnet address in CIDR format. 
+**subnet/mask:**
+Remote subnet address in CIDR format.
 
-**customer gateway IP address:** 
-Remote endpoint IP address of the VPN tunnel. 
+**customer gateway IP address:**
+Remote endpoint IP address of the VPN tunnel.
 
 ##### Optional Parameters:
 {: #op1}
@@ -107,7 +107,7 @@ Remote endpoint IP address of the VPN tunnel.
 
 **-dpd-action:** Action to be taken when the peer is detected as dead. Values: hold; clear; disabled; restart; restart-by-peer. Default value: hold
 
-**-gateway_ip:** IP address of the local VPN tunnel endpoint. 
+**-gateway_ip:** IP address of the local VPN tunnel endpoint.
 
 **-i:** State of the initiator. Default value: bi-directional.
 
@@ -130,18 +130,18 @@ cf vpn-create ike <policy name> -g <gateway name> -d <description> -pfs <group> 
 #### Parameters
 {: #p2}
 
-**policy name:** 
+**policy name:**
 Name of the IKE policy.
 
-**gateway name:** 
-Name of the gateway. 
+**gateway name:**
+Name of the gateway.
 
 ##### Optional Parameters:
 {: #op2}
 
 **-d:** Description of the parameters specified.
 
-**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2 
+**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2
 
 **-e:** Encryption algorithm. Values: aes-128; aes-192; aes-256; 3des. Default value: aes-128
 
@@ -160,11 +160,11 @@ cf vpn-create ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 #### Parameters
 {: #p3}
 
-**policy name:** 
-Name of the IPsec policy. 
+**policy name:**
+Name of the IPsec policy.
 
-**gateway name:** 
-Name of the gateway. 
+**gateway name:**
+Name of the gateway.
 
 ##### Optional Parameters:
 {: #op3}
@@ -189,19 +189,19 @@ cf vpn-create gateway <gateway name> -t <type> -gateway_ip <IP address> -subnets
 #### Parameters
 {: #p4}
 
-**gateway name:** 
+**gateway name:**
 Name of the gateway.
 
-**-t:** Containers for which you want to enable the service. Values: allSingleContainers; allContainerGroups; allContainers. Default value: No default value; you must specify a type. 
+**-t:** Containers for which you want to enable the service. Values: allSingleContainers; allContainerGroups; allContainers. Default value: No default value; you must specify a type.
 
 #####Optional Parameters:
 {: #op4}
 
-**-gateway_ip:** 
-IP address of the gateway. 
+**-gateway_ip:**
+IP address of the gateway.
 
-**-subnets:** 
-Subnet address in CIDR format. 
+**-subnets:**
+Subnet address in CIDR format.
 
 ### cf vpn-show gateways
 
@@ -290,23 +290,23 @@ cf vpn-update connection <connection name> -g <gateway name> -cip <customer gate
 #### Parameters
 {: #p5}
 
-**connection name:** 
+**connection name:**
 Name of the connection.
 
 
 ##### Optional Parameters:
 {: #op5}
 
-**gateway name:** 
+**gateway name:**
 Name of the gateway.
 
-**customer gateway IP address:** 
-Remote endpoint IP address of the VPN tunnel. 
+**customer gateway IP address:**
+Remote endpoint IP address of the VPN tunnel.
 
-**subnet/mask:** 
-Subnet address in CIDR format. 
+**subnet/mask:**
+Subnet address in CIDR format.
 
-**-k:** 
+**-k:**
 Preshared key.
 
 **-d:** Description of the parameters specified.
@@ -317,7 +317,7 @@ Preshared key.
 
 **-dpd-action:** Action to be taken when the peer is detected as dead. Values: hold; clear; disabled; restart; restart-by-peer. Default value: hold
 
-**-gateway_ip:** IP address of the local VPN tunnel endpoint. 
+**-gateway_ip:** IP address of the local VPN tunnel endpoint.
 
 **-i:** State of the initiator. Default value: bi-directional.
 
@@ -340,17 +340,17 @@ cf vpn-update ike <policy name> -g <gateway name> -d <description> -pfs <group> 
 #### Parameters
 {: #p6}
 
-**policy name:** 
-Name of the IKE policy. 
+**policy name:**
+Name of the IKE policy.
 
 ##### Optional Parameters:
 {: #op6}
 
-**gateway name:** Name of the gateway. 
+**gateway name:** Name of the gateway.
 
 **-d:** Description of the parameters specified.
 
-**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2 
+**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2
 
 **-e:** Encryption algorithm. Values: aes-128; aes-192; aes-256; 3des. Default value: aes-128
 
@@ -369,19 +369,19 @@ cf vpn-update ipsec <policy name> -g <gateway name> -d <description> -pfs <group
 #### Parameters
 {: #p7}
 
-**policy name:** 
+**policy name:**
 Name of the IPsec policy.
 
 
 ##### Optional Parameters:
 {: #op7}
 
-**gateway name:** 
+**gateway name:**
 Name of the gateway.
 
 **-d:** Description of the parameters specified.
 
-**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2 
+**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2
 
 **-e:** Encryption algorithm. Values: aes-128; aes-192; aes-256; 3des. Default value: aes-128
 
@@ -399,7 +399,7 @@ cf vpn-update gateway <gateway name> -t <type> -gateway_ip <IP address> -subnets
 #### Parameters
 {: #p8}
 
-**gateway name:** 
+**gateway name:**
 Name of the gateway.
 
 #####Optional Parameters:
@@ -407,14 +407,14 @@ Name of the gateway.
 
 **-t:** Containers for which you want to enable the service. Values: allSingleContainers; allContainerGroups; allContainers. Default value: No default value; you must specify a type.
 
-**-gateway_ip:** 
-IP address of the gateway. 
+**-gateway_ip:**
+IP address of the gateway.
 
-**-subnets:** 
-Subnet address in CIDR format. 
+**-subnets:**
+Subnet address in CIDR format.
 
 # rellinks
 ## general  
 {: #general}  
-* [IBM VPN service](../../../services/vpn/index.html)
+* [IBM VPN service](/docs/services/vpn/index.html)
 * [Cloud Foundry CLI](https://console.{DomainName}/docs/cli/downloads.html){: new_window}
