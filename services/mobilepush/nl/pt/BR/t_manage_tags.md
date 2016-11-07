@@ -7,30 +7,27 @@ copyright:
 
 # Gerenciando Identificações
 {: #manage_tags}
-Última atualização: 16 de agosto de 2016
+Última atualização: 17 de outubro de 2016
 {: .last-updated}
 
-Use o painel Push para criar e excluir tags para
-seu aplicativo e depois inicializar notificações baseadas em
-tag. A notificação baseada em tag é recebida nos dispositivos inscritos na tag.
+Use o painel {{site.data.keyword.mobilepushshort}} para criar e excluir
+tags de seu aplicativo e depois inicializar notificações baseadas em tag. A notificação
+baseada em tag é recebida nos dispositivos inscritos nas tags.
 
 
 ## Criando marcações
 {: #create_tags}
 
 Notificações baseadas em tag são mensagens que se destinam a todos os dispositivos inscritos em uma tag específica. Cada dispositivo pode se inscrever em
-qualquer número de tags. Quando uma tag é excluída, informações associadas a essa tag, incluindo seus assinantes e dispositivos, são excluídos. Nenhum cancelamento de
-assinatura automático é necessário para essa tag, uma vez que ela não existe mais e
-nenhuma ação adicional é necessária no lado do cliente.
+qualquer número de tags. Quando uma tag é excluída, informações associadas a essa tag, incluindo seus assinantes e dispositivos, são excluídos. O
+cancelamento de assinatura automático não é necessário, uma vez que a tag não
+existe mais. Nenhuma ação posterior é necessária no lado do cliente.
 
-1. No painel Push, selecione a guia **Tags**.
+1. No painel {{site.data.keyword.mobilepushshort}}, selecione a tag **Tags**.
 1. Clique no botão + **Criar tag**.   
-
-   a. No campo **Nome**, insira o nome da tag. Por exemplo, "coupons".
-
-   b. No campo **Descrição**, insira uma descrição da tag.
-
-   c. Clique em  **Salvar**.
+   1. No campo **Nome**, insira o nome da tag. Por exemplo, "coupons".
+   1. No campo **Descrição**, insira uma descrição de tag.
+   1. Clique em **Salvar**.
 
 1. Na área **Fragmentos de códigos**,
 selecione a plataforma para seu aplicativo móvel.
@@ -41,8 +38,8 @@ aplicativo móvel.
 ## Excluindo marcações
 {: #delete_tags}
 
-1. Na guia **Tag**, selecione a tag que deseja
-excluir e clique no ícone de exclusão.
+1. Na guia **Tag**, selecione a tag que você deseja excluir e
+clique no ícone **Excluir**.
 1. Clique em **OK**.
 
 ## Editando uma descrição de tag
@@ -50,19 +47,20 @@ excluir e clique no ícone de exclusão.
 
 1. Na guia **Tag**, selecione a tag que deseja
 editar.
-1. Clique no ícone de edição.
+1. Clique no ícone **Editar**.
 1. Edite a descrição d tag e clique no botão
 **Salvar**.
 
 # Obtendo tags
 {: #get_tags}
 
-As identificações fornecem uma maneira de enviar notificações desejadas aos usuários com base em seus interesses,
-ao contrário de transmissões gerais que são enviadas a todos os aplicativos. É possível
-criar e gerenciar tags usando a guia Tag no painel Push ou usar APIs REST. É possível usar fragmentos de código para gerenciar e consultar as assinaturas de identificação de seu aplicativo
-móvel. É possível usar esses fragmentos de código para obter
-assinaturas, inscrever-se em uma tag, cancelar a assinatura de
-uma tag, obter uma lista de tags disponíveis. Copie esses fragmentos de código no aplicativo móvel.
+As tags fornecem uma maneira de enviar notificações destinadas a usuários com base
+em seus interesses, ao contrário das transmissões em geral que são enviadas a todos os
+aplicativos. É possível criar e gerenciar tags usando a guia Tag no painel
+{{site.data.keyword.mobilepushshort}} ou use APIs REST. É possível usar fragmentos de código para gerenciar e consultar as assinaturas de identificação de seu aplicativo
+móvel. É possível usar esses fragmentos de código para obter assinaturas, assinar uma
+tag, cancelar a assinatura de uma tag ou obter uma lista de tags disponíveis. Copie esses
+fragmentos de código para seu aplicativo móvel.
 
 ## Android
 {: android-get-tags}
@@ -70,9 +68,9 @@ uma tag, obter uma lista de tags disponíveis. Copie esses fragmentos de código
 A API **getTags**
 retorna a lista de identificações disponíveis as quais o dispositivo pode assinar. Depois que o dispositivo é inscrito em uma tag específica, ele pode receber {{site.data.keyword.mobilepushshort}} enviada para essa tag.
 
-Copie os seguintes fragmentos de códigos em seu aplicativo
-móvel Android para obter uma lista de tags nas quais o dispositivo
-está inscrito e obter uma lista de tags disponíveis.
+Copie os fragmentos de código a seguir para seu aplicativo móvel Android para obter
+uma lista de tags nas quais o dispositivo está inscrito e obter uma lista de tags
+disponíveis.
 
 Use a API **getTags** a seguir para obter uma lista de tags
 disponíveis as quais o dispositivo podem assinar.
@@ -90,9 +88,10 @@ push.getTags(new MFPPushResponseListener<List<String>>(){
   @Override
   public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
-  }
-})  
+    }
+   })  
 ```
+	{: codeblock}
 
 Use a API **getSubscriptions** para obter uma lista
 de tags nas quais o dispositivo está inscrito.
@@ -100,50 +99,51 @@ de tags nas quais o dispositivo está inscrito.
 ```
 // Get a list of tags that to which the device is subscribed.
 push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
-    @Override
+  @Override
     public void onSuccess(List<String> tags) {
-    updateTextView("Retrieved subscriptions : " + tags);
+  updateTextView("Retrieved subscriptions : " + tags);
     System.out.println("Subscribed tags are: "+tags);
     subscribedTags = tags;
     subscribeToTag();
     }
-    @Override
+  @Override
     public void onFailure(MFPPushException ex) {
-         updateTextView("Error getting subscriptions.. " + ex.getMessage());
-    }
+       updateTextView("Error getting subscriptions.. " + ex.getMessage());
+  }
 })
-```
+	```
+	{: codeblock}
 
 ## Cordova
 {: cordova-get-tags}
 
-Copie os fragmentos de códigos a seguir em seu aplicativo móvel para obter uma
-lista de tags nas quais o dispositivo está inscrito e para obter uma lista de tags
-disponíveis as quais o dispositivo pode assinar.
+Copie os fragmentos de código a seguir para seu aplicativo móvel para obter uma
+lista de tags nas quais o dispositivo está inscrito e uma lista de tags disponíveis.
 
 Recupere uma matriz de tags que estão disponíveis para assinatura.
 
 ```
 //Get a list of available tags to which the device can subscribe
 MFPPush.retrieveAvailableTags(function(tags) {
-    alert(tags);
+  alert(tags);
 }, null);
-
 ```
+	{: codeblock}
 
 ```
 //Get a list of available tags to which the device is subscribed.
 MFPPush.getSubscriptionStatus(function(tags) {
-    alert(tags);
+  alert(tags);
 }, null);
 ```
+	{: codeblock}
 
 ## Objective-C
 {: objc-get-tags}
 
-Copie os fragmentos de códigos a seguir em seu aplicativo iOS desenvolvido usando
-Objective-C para obter uma lista de tags nas quais o dispositivo está inscrito e para
-obter uma lista de tags disponíveis as quais o dispositivo pode assinar.
+Copie os fragmentos de código a seguir para seu aplicativo iOS, desenvolvido
+usando Objective-C para obter uma lista de tags nas quais o dispositivo está inscrito e
+obter uma lista de tags disponíveis que o dispositivo pode assinar.
 
 Use a API **retrieveAvailableTags** a seguir para obter uma
 lista de tags disponíveis as quais o dispositivo pode assinar.
@@ -160,8 +160,9 @@ lista de tags disponíveis as quais o dispositivo pode assinar.
  availableTags = [response tags];
 [self.appDelegateVC updateMessage:availableTags.description];
 }
-}];
-```
+   }];
+ ```
+	{: codeblock}
 
 Use a API **retrieveSubscriptions** para obter uma
 lista de tags nas quais o dispositivo está inscrito.
@@ -174,13 +175,14 @@ lista de tags nas quais o dispositivo está inscrito.
   if(error){
      [self updateMessage:error.description];
    } else {
-     [self updateMessage:@"Successfully retrieved subscriptions."];
+   [self updateMessage:@"Successfully retrieved subscriptions."];
  NSDictionary *subscribedTags = [[NSDictionary alloc]init];
 subscribedTags = [response subscriptions];
 [self.appDelegateVC updateMessage:subscribedTags.description];
 }
-}];
-```
+  }];
+  ```
+	{: codeblock}
 
 ## Swift
 {: swift-get-tags}
@@ -193,38 +195,103 @@ Chame o {{site.data.keyword.mobilepushshort}} para obter assinaturas para uma ta
 Copie os fragmentos de códigos a seguir em seu aplicativo móvel Swift para obter uma
 lista de tags disponíveis nas quais o dispositivo está inscrito e para obter uma lista de
 tags disponíveis as quais o dispositivo pode assinar.
-
-
 ```
 //Get a list of available tags to which the device can subscribe
-push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) -> Void in
-
-    if error.isEmpty {
-
-        print( "Response during retrieve tags : \(response)")
+	push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) -> Void in
+    if error.isEmpty 
+		{
+     print( "Response during retrieve tags : \(response)")
         print( "status code during retrieve tags : \(statusCode)")
     }
-    else{
-        print( "Error during retrieve tags \(error) ")
-        Print( "Error during retrieve tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-    }
-}
+    else {
+    print( "Error during retrieve tags \(error) ")
+    Print( "Error during retrieve tags \n  - status code: \(statusCode) \n Error :\(error) \n")
+    	}
+	}
 ```
+		{: codeblock}
 
 ```
 //Get a list of available tags to which the device is subscribed
 push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
     if error.isEmpty {
-
-        print( "Response during retrieving subscribed tags : \(response?.description)")
+    print( "Response during retrieving subscribed tags : \(response?.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
     }
     else {
-        print( "Error during retrieving subscribed tags \(error) ")
-        Print( "Error during retrieving subscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-    }
-}
+    print( "Error during retrieving subscribed tags \(error) ")
+    Print( "Error during retrieving subscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
+        }
+	}
 ```
+	{: codeblock}
+
+## Google Chrome e Mozilla Firefox
+{: web-get-tags}
+
+Para obter a lista de identificações disponíveis, a qual os clientes podem assinar, use o código a seguir.
+
+```
+var bmsPush = new BMSPush();
+  bmsPush.retrieveAvailableTags(function(response) 
+	{
+  alert(response.response)
+    var json = JSON.parse(response.response);
+    var tagsA = []
+  for (i in json.tags)
+	{
+    tagsA.push(json.tags[i].name)
+    }
+   alert(tagsA)
+ })
+```
+	{: codeblock}
+
+Copie os fragmentos de código a seguir em seus Apps Google Chrome e Extensões para
+obter uma lista de identificações nas quais os clientes se inscreveram.
+
+```
+var bmsPush = new BMSPush();
+  bmsPush.retrieveSubscriptions(function(response) 
+	{
+   alert(response.response)
+ })
+```
+	{: codeblock}
+
+## Apps Google Chrome e Extensões
+{: web-get-tags}
+
+Para obter a lista de identificações disponíveis, a qual os clientes podem assinar, use o código a seguir.
+
+```
+var bmsPush = new BMSPush();
+  bmsPush.retrieveAvailableTags(function(response) 
+	{
+  alert(response.response)
+    var json = JSON.parse(response.response);
+    var tagsA = []
+  for (i in json.tags)
+	{
+    tagsA.push(json.tags[i].name)
+    }
+   alert(tagsA)
+ })
+```
+	{: codeblock}
+
+Copie os fragmentos de código a seguir em seus Apps Google Chrome e Extensões para
+obter uma lista de identificações nas quais os clientes se inscreveram.
+
+```
+var bmsPush = new BMSPush();
+  bmsPush.retrieveSubscriptions(function(response) 
+	{
+   alert(response.response)
+ })
+```
+	{: codeblock}
+
 
 # Assinando e removendo assinatura de tags
 {: #Subscribe_tags}
@@ -235,56 +302,56 @@ assinaturas, bem como assinem e cancelem a assinatura de uma tag.
 ## Android
 {: android-subscribe-tags}
 
-Copie e cole este fragmento de código em seu
-aplicativo móvel Android.
+Copie e cole este fragmento de código em seu aplicativo móvel Android.
 
 ```
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
     public void onFailure(MFPPushException ex) {
-    updateTextView("Error subscribing to Tag1.."
+  updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
   }
   @Override
   public void onSuccess(String arg0) {
-   updateTextView("Succesfully Subscribed to: "+ arg0);
+  updateTextView("Succesfully Subscribed to: "+ arg0);
    unsubscribeFromTags(arg0);
    }
-});
+  });
 ```
+	{: codeblock}
 
 ```
 push.unsubscribe(tag, new MFPPushResponseListener<String>() {
  @Override
  public void onSuccess(String s) {
-   updateTextView("Unsubscribing from tag");
+ updateTextView("Unsubscribing from tag");
    updateTextView("Successfully unsubscribed from tag . "+ tag);
  }
  @Override
  public void onFailure(MFPPushException e) {
  updateTextView("Error while unsubscribing from tags. "+ e.getMessage());
  }
-});
+ });
 ```
+	{: codeblock}
 
 ## Cordova
 {: cordova-subscribe-tags}
 
-Copie e cole este fragmento de código em seu aplicativo móvel
-Cordova.
+Copie e cole este fragmento de código em seu aplicativo móvel Cordova.
 
 ```
 var tag = "YourTag";
 MFPPush.subscribe(tag, success, failure);
 MFPPush.unsubscribe(tag, success, failure);
 ```
+	{: codeblock}
 
 ## Objective-C
 {: objc-subscribe-tags}
 
-Copie e cole este fragmento de código em seu aplicativo móvel
-Objective-C.
+Copie e cole este fragmento de código em seu aplicativo móvel Objective-C.
 
 Use a API **subscribeToTags** para assinar uma
 identificação.
@@ -300,8 +367,9 @@ identificação.
       [self updateMessage:@"Parsed subscribe status is:"];
       [self updateMessage:subStatus.description];
   }
-}];
+  }];
 ```
+	{: codeblock}
 
 Use a API **unsubscribeFromTags** para cancelar a assinatura de uma
 identificação.
@@ -309,21 +377,21 @@ identificação.
 ```
 [push unsubscribeFromTags:tags completionHandler:
 ^(IMFResponse *response, NSError *error) {
-   if (error){
+  if (error){
        [self updateMessage:error.description];
  } else {
-       NSDictionary* subStatus = [[NSDictionary alloc]init];
+     NSDictionary* subStatus = [[NSDictionary alloc]init];
        subStatus = [response unsubscribeStatus];
        [self updateMessage:subStatus.description];
   }
-}];
+  }];
 ```
+	{: codeblock}
 
 ## Swift
 {: swift-subscribe-tags}
 
-Copie e cole este fragmento de código em seu aplicativo móvel
-Swift.
+Copie e cole este fragmento de código em seu aplicativo móvel Swift.
 
 **Assinar tags disponíveis**
 
@@ -333,12 +401,13 @@ identificação.
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
 	if (error != nil) {
-		//error while subscribing to tags
+	//error while subscribing to tags
 	} else {
-		//successfully subscribed to tags var subStatus = response.subscribeStatus();
+//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
 }
 ```
+	{: codeblock}
 
 **Cancelar assinatura de tags**
 
@@ -347,25 +416,46 @@ identificação.
 
 ```
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
-
     if error.isEmpty {
-        print( "Response during unsubscribed tags : \(response?.description)")
+     print( "Response during unsubscribed tags : \(response?.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
-    else {
-        print( "Error during  unsubscribed tags \(error) ")
-        print( "Error during unsubscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-    }
+  else {
+    print( "Error during  unsubscribed tags \(error) ")
+    print( "Error during unsubscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
+  }
 }
 ```
+	{: codeblock}
 
+## Google Chrome e Mozilla Firefox
+{: web-subscribe-tags}
+
+Para assinar tags de aplicativos da web, use o fragmento de código a seguir:
+
+```
+var tagsArray = ["tag1", "Tag2"]
+bmsPush.subscribe(tagsArray,function(response) {
+  alert(response.response)
+})
+```
+	{: codeblock}
+
+Cancele a assinatura das tags usando o método `unSubscribe`.
+
+```
+var tagsArray = ["tag1", "Tag2"]
+ bmsPush.unSubscribe(tagsArray,function(response) {
+ alert(response.response)
+})
+```
+	{: codeblock}
 
 # Usando notificações baseada em tag
 {: #using_tags}
 
-
-Notificações baseadas em tag são mensagens que se destinam a todos os dispositivos inscritos em uma tag específica. Cada dispositivo pode ser inscrito em qualquer número de tags. Esta seção
-descreve como enviar notificações baseadas em tag. As assinaturas são mantidas pela instância do Bluemix do serviço {{site.data.keyword.mobilepushshort}}. Quando uma tag é excluída, todas as informações associadas a essa tag, incluindo seus assinantes e dispositivos, são excluídas. Nenhum cancelamento de
+Notificações baseadas em tag são mensagens que se destinam a todos os dispositivos inscritos em uma tag específica. Cada dispositivo pode ser inscrito em qualquer número de tags. Este
+tópico descreve como enviar notificações baseadas em tag. As assinaturas são mantidas pela instância do Bluemix do serviço {{site.data.keyword.mobilepushshort}}. Quando uma tag é excluída, todas as informações associadas a essa tag, incluindo seus assinantes e dispositivos, são excluídas. Nenhum cancelamento de
 assinatura automático é necessário para essa tag, uma vez que ela não existe mais e
 nenhuma ação adicional é necessária no lado do cliente.
 
@@ -376,12 +466,9 @@ Crie tags na tela **Tag**. Para obter informações sobre como
 criar tags, consulte
 [Criando tags](t_manage_tags.html).
 
-1. A partir do painel **Notificação push**,
-clique na guia **Notificações**.
-1. Selecione a opção **Tags** para enviar notificações baseadas
-em tag.
-1. No campo **Procurar** tags, procure pelas tags que deseja
-usar e clique no botão
-**+Incluir**.![Tela de notificações](images/tag_notification.jpg)
+1. A partir do painel **Notificação push**, clique em **Enviar notificações**.
+1. Selecione a opção **Dispositivo por identificação** na lista suspensa **Enviar para**.
+1. Procure as identificações que deseja usar e selecione-as.
+![Tela Notificações](images/tag_notification.jpg)
 1. No campo **Texto da mensagem**, insira o texto que seria enviado como uma notificação ao público inscrito.
-1. Clique no botão **Enviar**.
+1. Clique em **Enviar**.

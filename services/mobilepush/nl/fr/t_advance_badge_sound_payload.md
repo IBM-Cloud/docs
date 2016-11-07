@@ -9,7 +9,7 @@ copyright:
 
 
 #Activation des notifications push avancées
-Dernière mise à jour : 16 août 2016
+Dernière mise à jour : 17 octobre 2016
 {: .last-updated}
 
 Configurez un badge iOS, un son, un contenu JSON supplémentaire, des notifications interactives et la conservation des notifications.
@@ -23,11 +23,8 @@ Configurez un badge, un son et un contenu JSON supplémentaire iOS.
 2. Accédez à la section des zones facultatives pour configurer les fonctions {{site.data.keyword.mobilepushshort}}. 
 	- **Fichier son** - Entrez une chaîne pour pointer vers le fichier son dans votre application mobile. Dans le contenu, spécifiez le nom de
 chaîne du fichier son à utiliser.
-	- **Badge iOS** - Pour les périphériques iOS, numéro à afficher comme badge de l'icône d'application. Si cette propriété manque, le badge n'est pas changé. Pour supprimer le badge, associez cette propriété à la valeur 0.
+	- **Badge iOS** - Pour les appareils iOS, numéro à afficher comme badge de l'icône d'application. Si cette propriété manque, le badge n'est pas changé. Pour supprimer le badge, associez cette propriété à la valeur 0.
 	
-	
-
-
 ###Android
 
 Ajoutez votre fichier son dans le répertoire `res/raw` de votre application Android. Lors de l'envoi de la notification, ajoutez le nom du fichier son dans la zone son de {{site.data.keyword.mobilepushshort}}.
@@ -39,7 +36,7 @@ Ajoutez votre fichier son dans le répertoire `res/raw` de votre application And
 	  }
  }  
 ```
-	
+    {: codeblock}	
 	
 ###iOS
 
@@ -50,12 +47,15 @@ Ajoutez votre fichier son dans le répertoire `res/raw` de votre application And
 	      "sound": "tt.wav",
 	  }
 }
-``` 		
+``` 
+	{: codeblock}
+		
 **Contenu supplémentaire** - Ce contenu peut être représenté par toute paire clé-valeur et doit être un objet JSON que vous voulez envoyer avec la notification de type {{site.data.keyword.mobilepushshort}}.
+
 ```
 {"clé":"valeur", "clé2":"valeur2"}
 ```
-
+	{: codeblock}
 
 ## Conservation des notifications Android 
 {: #hold-notifications-android}
@@ -67,17 +67,16 @@ notifications de type {{site.data.keyword.mobilepushshort}}.
 @Override
 protected void onPause() {
     super.onPause();
-
     if (push != null) {
         push.hold();
     }
 } 
 ```
-
+	{: codeblock}
 ## Activations des notifications iOS interactives  
 {: #enable-actionable-notifications-ios}
 
-A la différence des notifications de type {{site.data.keyword.mobilepushshort}} traditionnelles, les notifications interactives invitent les utilisateurs à effectuer une sélection quand ils reçoivent l'alerte de notification sans ouvrir l'application.  
+A la différence des notifications de type {{site.data.keyword.mobilepushshort}} traditionnelles, les notifications interactives invitent les utilisateurs à effectuer une sélection quand ils reçoivent l'alerte de notification sans ouvrir l'application. 
 
 Procédez comme suit pour activer les notifications de type {{site.data.keyword.mobilepushshort}} dans votre application.
 
@@ -85,7 +84,7 @@ Procédez comme suit pour activer les notifications de type {{site.data.keyword.
 
    Objective-C
 
-	```
+```
 	// For Objective-C
 	UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
 	    acceptAction.identifier = @"ACCEPT_ACTION";
@@ -93,11 +92,12 @@ Procédez comme suit pour activer les notifications de type {{site.data.keyword.
 	     /* Optional properties
 	     acceptAction.destructive = NO;
 	  acceptAction.authenticationRequired = NO; */
-	  
-	 ```
+```
+	{: codeblock}
+
    Swift
 
-	```
+```
 	//For Swift
 	let acceptAction = UIMutableUserNotificationAction()
 	acceptAction.identifier = "ACCEPT_ACTION"
@@ -105,9 +105,10 @@ Procédez comme suit pour activer les notifications de type {{site.data.keyword.
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
 	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
-	```
+```
+	{: codeblock}
 	
-	```
+```
 	//For Swift
 	let declineAction = UIMutableUserNotificationAction()
 	declineAction.identifier = "DECLINE_ACTION"
@@ -115,7 +116,8 @@ Procédez comme suit pour activer les notifications de type {{site.data.keyword.
 	declineAction.destructive = true
 	declineAction.authenticationRequired = false
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
-	```
+```
+	{: codeblock}
 
 2. Créez une catégorie de notification et définissez une action. **UIUserNotificationActionContextDefault** ou
 **UIUserNotificationActionContextMinimal** sont des contextes
@@ -123,59 +125,63 @@ valides.
 
 Objective-C
 
-	```
+```
 	// For Objective-C
 	UIMutableUserNotificationCategory *callCat = [[UIMutableUserNotificationCategory alloc] init];
 	    callCat.identifier = @"POLL_CATEGORY";
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
-	```    
+```    
+	{: codeblock}
 
 Swift
 
-	```
+```
 	// For Swift
 	let pushCategory = UIMutableUserNotificationCategory()
 	pushCategory.identifier = "TODO_CATEGORY"
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
-	```
+```
+	{: codeblock}
 
 1. Créez le paramètre de notification et affectez les catégories de l'étape antérieure.
 
 Objective-C
 
-	```
+```
 	// For Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
-	```
+```
+	{: codeblock}
 
 Swift
 
-	```
+```
 	// For Swift
 	let categories = NSSet(array:[pushCategory]);
-	```
+```
+	{: codeblock}
 
 1. Créez la notification locale ou éloignée et affectez-lui l'identité de la
 catégorie.
 
 Objective-C
 
-	```
+```
 	//For Objective-C
-
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
-	```
+```
+	{: codeblock}
 
 Swift
 
-	```
+```
 	//For Swift
 	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
     UIApplication.sharedApplication().registerUserNotificationSettings(settings)
     UIApplication.sharedApplication().registerForRemoteNotifications() 
-	```
+```
+	{: codeblock}
 	
 ## Traitement des notifications iOS interactives  
 {: #actionable-notifications}
@@ -194,6 +200,7 @@ transmis à la méthode suivante en fonction de l'identificateur choisi.
   completionHandler();
 }
 ```
+	{: codeblock}
 
 ###Swift
  
@@ -203,4 +210,5 @@ func application(application: UIApplication, handleActionWithIdentifier identifi
       completionHandler()
   }
 ```    
+	{: codeblock}
     

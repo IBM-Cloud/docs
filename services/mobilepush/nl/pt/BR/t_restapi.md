@@ -7,10 +7,10 @@ copyright:
 
 # Usando APIs REST
 {: #push-api-rest}
-Última atualização: 16 de agosto de 2016
+Última atualização: 17 de outubro de 2016
 {: .last-updated}
 
-É possível usar uma API (interface de programação de aplicativos) REST (Representational State Transfer) para {{site.data.keyword.mobilepushshort}}. É possível também usar o SDK e a [API Push](https://mobile.{DomainName}/imfpushrestapidocs/) para desenvolver melhor seus aplicativos cliente.
+É possível usar uma API (interface de programação de aplicativos) REST (Representational State Transfer) para {{site.data.keyword.mobilepushshort}}. É possível também usar o SDK e a [API Push](https://mobile.{DomainName}/imfpush/) para desenvolver melhor seus aplicativos cliente.
 
 Com a API REST de Push, aplicativos do servidor de backend e clientes podem acessar funções {{site.data.keyword.mobilepushshort}}.
 
@@ -29,22 +29,24 @@ Para obter a URL base para a API REST, conclua as etapas:
 Também é possível usar a linha de comandos para obter as credenciais de serviço:
 
 ```
- cf create-service-key {push_instance_name} {key_name}
+    cf create-service-key {push_instance_name} {key_name}
 
  cf service-key {push_instance_name} {key_name}
 ```
-
+	{: codeblock}
 
 ## Aceitar cabeçalho do idioma
 {: #push-api-rest-accept}
 
 O cabeçalho "Accept-Language" especifica qual idioma a ser usado para mensagens de erro geradas pela [API
-REST de Push](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}. Os idiomas a seguir são suportados para as mensagens de erro: chinês (simplificado), chinês (tradicional), inglês (EUA), alemão, francês, italiano, japonês, coreano, português e espanhol.
+REST de Push](https://mobile.{DomainName}/imfpush/){: new_window}. Os idiomas a seguir são suportados para as mensagens de erro: chinês (simplificado), chinês (tradicional), inglês (EUA), alemão, francês, italiano, japonês, coreano, português e espanhol.
 
-## appSecret
+## appSecret 
 {: #push-api-rest-secret}
 
-Quando um aplicativo é ligado ao {{site.data.keyword.mobilepushshort}}, o serviço gera um appSecret (uma chave exclusiva) e passa-o no cabeçalho de resposta. Se você estiver usando a API Rest do IBM® {{site.data.keyword.mobilepushshort}} for Bluemix, use a referência da API REST para obter informações sobre quais APIs você precisa assegurar. Para obter informações sobre a API REST, consulte a Referência de API REST.
+Quando um aplicativo é ligado ao {{site.data.keyword.mobilepushshort}}, o serviço gera um appSecret (uma chave exclusiva) e passa-o no cabeçalho de resposta. Se
+você estiver usando a API de REST do IBM {{site.data.keyword.mobilepushshort}} for Bluemix, use a referência da API de REST para obter informações sobre quais
+APIs você precisa assegurar. Para obter informações sobre a API REST, consulte a Referência de API REST.
 
 O cabeçalho da solicitação deve conter o appSecret. Caso contrário, o servidor retornará um código de erro 401 Desautorizado. Quando o {{site.data.keyword.mobilepushshort}} é incluído em um aplicativo, um AppID específico é criado. Como parte da resposta, você obtém um cabeçalho chamado appSecret que é usado para criar tags ou enviar mensagens. A operação acontece por meio de serviços no catálogo ou do modelo.
 
@@ -54,10 +56,9 @@ Para obter o valor appSecret:
 2. Clique no link **Mostrar credenciais** para exibir o appSecret (AppID).
 
 A tela **Mostrar credenciais** mostra informações sobre o AppSecret:
-
 ```
-{
- "imfpush_Dev": [
+	{
+    "imfpush_Dev": [
    {
      "name": "testapp1",
      "label": "imfpush_Dev",
@@ -65,12 +66,14 @@ A tela **Mostrar credenciais** mostra informações sobre o AppSecret:
      "credentials": {
        "url": "http://imfpush.ng.bluemix.net/imfpush/v1/apps/b615b280-b37e-4042-8815-38a758f234e2",
        "admin_url": "//mobile.ng.bluemix.net/imfpushdashboard/?appGuid=b615b280-b37e-4042-8815-38a758f234e2",
-       "appSecret": "8dac71a5-2219-42b3-a9f3-dbb828ba1f04"  
+       "appSecret": "8dac71a5-2219-42b3-a9f3-dbb828ba1f04",
        }
-   }
- ]
-}
-``` 
+     }
+    ]
+    }
+```
+	{: codeblock} 
+
 
 ##Filtros de API REST de Push
 {: #push-api-rest-filters}
@@ -79,11 +82,12 @@ Filtros definem um critério de procura que restringe os dados retornados de uma
 
 É possível gerar filtros usando a sintaxe a seguir:
 
-**nome** O nome do campo ao qual o filtro está sendo aplicado.
+**nome**: o nome do campo no qual o filtro está sendo aplicado.
 
-**operador** == (correspondência exata) ou =@ (contém subsequência) que descreve a correspondência de filtro a ser usada.
+**operador**: == (correspondência exata) ou =@ (contém
+subsequência) que descreve a correspondência de filtro a ser usada.
 
-**expressão** Os valores a serem incluídos no resultado.
+**expressão**: os valores a serem incluídos no resultado.
 
 Quando uma vírgula e uma barra invertida são exibidas em uma expressão, elas devem ser escapadas com barra invertida.
 

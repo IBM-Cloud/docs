@@ -43,8 +43,7 @@ A diferencia de las notificaciones push tradicionales, estas solicitan a los usu
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
 	```
 
-2. Cree la categoría de notificaciones y configure una acción. **UIUserNotificationActionContextDefault** o
-                **UIUserNotificationActionContextMinimal** son contextos válidos.
+2. Cree la categoría de notificaciones y configure una acción. **UIUserNotificationActionContextDefault** o **UIUserNotificationActionContextMinimal** son contextos válidos.
 
 	Objective-C
 
