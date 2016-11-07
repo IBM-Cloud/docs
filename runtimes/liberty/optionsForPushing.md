@@ -12,7 +12,7 @@ copyright:
 # Options for pushing Liberty apps
 {: #options_for_pushing}
 
-Last Updated: 10 June 2016
+Last Updated: 11 November 2016
 {: .last-updated}
 
 The behavior of the Liberty server in Bluemix is controlled by the Liberty buildpack. Buildpacks can provide a complete runtime environment for a specific class of applications. They are key to providing portability across clouds and contributing to an open cloud architecture. The Liberty buildpack provides WebSphere Liberty container capable of running Java EE 7 and OSGi applications. It supports popular frameworks such as Spring and includes the IBM JRE. WebSphere Liberty enables rapid application development that is suited to the cloud. The Liberty buildpack supports multiple applications that are deployed into a single Liberty server. As part of the Liberty buildpack integration into Bluemix, the buildpack ensures that environment variables for binding services are shown as configuration variables in the Liberty server.
@@ -241,9 +241,9 @@ When you want to bind a service to your application, information about the servi
 
 The typical set of information is as follows:
 * name: The name of the service. For example, mysql-e3abd.
-label: The type of the created service. For example, mysql-5.5.
+* label: The type of the created service. For example, mysql-5.5.
 * plan: The service plan, as indicated by the unique identifier for that plan. For example, 100.
-connection.name: A unique identifier for the connection, which takes the form of a UUID. For example, d01af3a5fabeb4d45bb321fe114d652ee.
+* connection.name: A unique identifier for the connection, which takes the form of a UUID. For example, d01af3a5fabeb4d45bb321fe114d652ee.
 * connection.hostname: The host name of the server that is running the service. For example, mysql-server.mydomain.com.
 * connection.host: The IP address of the server that is running the service. For example, 9.37.193.2.
 * connection.port: The port on which the service is listening for incoming connections. For example, 3306,3307.
