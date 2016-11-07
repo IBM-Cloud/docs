@@ -2,21 +2,16 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Creación de un proveedor de identidad personalizado
 {: #custom-create}
 
-Última actualización: 16 de junio de 2016
-{: .last-updated}
-
 
 Para crear un proveedor de identidad personalizado, desarrolle una aplicación web que exponga una API RESTful:
 
-```
-POST <url_base>/apps/<id_arrendatario>/<nombre_reino>/<tipo_solicitud>
-```
+`POST <url_base>/apps/<id_arrendatario>/<nombre_reino>/<tipo_solicitud>`
 
 * `url_base`: especifica el URL base de la aplicación web del proveedor de identidad personalizado. El URL base es el URL que se va a registrar en el panel de control de {{site.data.keyword.amashort}}.
 * `id_arrendatario`: indica el identificador exclusivo del arrendatario. Cuando {{site.data.keyword.amashort}} invoca esta API, siempre proporciona el GUID de la app de {{site.data.keyword.Bluemix}} (`applicationGUID`).
@@ -116,7 +111,7 @@ El objeto de identidad de usuario se utiliza en el servicio de {{site.data.keywo
 ## Consideraciones sobre seguridad
 {: #custom-security}
 
-Cada solicitud del servicio de {{site.data.keyword.amashort}} a un proveedor de identidad personalizado contiene una cabecera de autorización, de forma que el proveedor pueda verificar que la solicitud proviene de un origen autorizado. Aunque no es estrictamente obligatorio, piense en la posibilidad de validar la cabecera de autorización instrumentando el proveedor de identidad personalizado con un SDK del servidor de {{site.data.keyword.amashort}}. Para utilizar este SDK, la aplicación del proveedor de identidad personalizado debe implementarse en con Node.js o Liberty for Java&trade;&trade; y ejecutarse en {{site.data.keyword.Bluemix_notm}}.
+Cada solicitud del servicio de {{site.data.keyword.amashort}} a un proveedor de identidad personalizado contiene una cabecera de autorización, de forma que el proveedor pueda verificar que la solicitud proviene de un origen autorizado. Aunque no es estrictamente obligatorio, piense en la posibilidad de validar la cabecera de autorización instrumentando el proveedor de identidad personalizado con un SDK del servidor de {{site.data.keyword.amashort}}. Para utilizar este SDK, la aplicación del proveedor de identidad personalizado debe implementarse en con Node.js o Liberty for Java&trade; y ejecutarse en {{site.data.keyword.Bluemix_notm}}.
 
 La cabecera de autorización contiene información sobre el cliente móvil y la app móvil que han activado el proceso de autenticación. Puede utilizar el contexto de seguridad para recuperar estos datos. Para obtener más información, consulte [Protección de recursos](protecting-resources.html).
 
@@ -220,7 +215,7 @@ var server = app.listen(cfenv.getAppEnv().port, function () {
 ```
 --->
 
-## Próximos pasos
+## Pasos siguientes
 {: #next-steps}
 * [Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada](custom-auth-config-mca.html)
 * [Configuración de la autenticación personalizada para Android](custom-auth-android.html)

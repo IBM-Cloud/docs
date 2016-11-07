@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,12 +11,8 @@ copyright:
 # iOS 앱에서 Facebook 인증 사용(Objective-C SDK)
 {: #facebook-auth-ios}
 
+{{site.data.keyword.amafull}} iOS 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Facebook 애플리케이션용으로 iOS 플랫폼을 추가하고 구성하십시오. 
 
-마지막 업데이트 날짜: 2016년 7월 17일
-{: .last-updated}
-
-
-iOS 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Facebook 애플리케이션에 대한 iOS 플랫폼을 추가하고 구성하십시오.
 {:shortdesc}
 
 **참고:** Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix}} 모바일 서비스의 기본 SDK로 간주되지만, 새로운 Swift SDK를 위해 올해 말에 중단될 계획입니다([iOS Swift SDK 설정](facebook-auth-ios-swift-sdk.html) 참조).
@@ -75,6 +71,7 @@ iOS 클라이언트를 제공하도록 Facebook 애플리케이션 ID 및 Facebo
 	```
 	pod 'IMFFacebookAuthentication'
 	```
+{: codeblock}
 
 1. `Podfile`을 저장하고 명령행에서 `pod install` 명령을 실행하십시오. CocoaPods가 종속 항목을 설치합니다. 진행상태 및 추가된 컴포넌트가 표시됩니다.
 **중요**: 이제 CocoaPods에서 생성한 `xcworkspace` 파일을 사용하여 프로젝트를 열어야 합니다. 일반적으로 이름은 `{your-project-name}.xcworkspace`입니다.   
@@ -141,9 +138,11 @@ iOS 클라이언트를 제공하도록 Facebook 애플리케이션 ID 및 Facebo
 	    </dict>
 	</dict>
 ```
-Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특성을 업데이트하십시오.
+{: codeblock}
 
-  **중요**: `info.plist` 파일의 기존 특성을 대체하고 있지 않는지 확인하십시오. 중첩된 특성이 있는 경우 수동으로 병합해야 합니다. 자세한 정보는 [Xcode 프로젝트 구성](https://developers.facebook.com/docs/ios/getting-started/) 및 [iOS9를 위한 앱 준비](https://developers.facebook.com/docs/ios/ios9)를 참조하십시오.
+Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특성을 업데이트하십시오. 
+
+ **중요**: `info.plist` 파일의 기존 특성을 대체하고 있지 않는지 확인하십시오. 중첩된 특성이 있는 경우 수동으로 병합해야 합니다. 자세한 정보는 [Xcode 프로젝트 구성](https://developers.facebook.com/docs/ios/getting-started/) 및 [iOS9를 위한 앱 준비](https://developers.facebook.com/docs/ios/ios9)를 참조하십시오.
 
 
 
@@ -168,6 +167,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
+{: codeblock}
 
 	####Swift
 	{: #bridgingheader-swift}
@@ -184,6 +184,8 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
+{: codeblock}
+
 	* Xcode에서 프로젝트를 클릭하고 **빌드 설정** 탭을 선택하십시오. 
 	* **Objective-C Bridging Header**를 검색하십시오. 
 	* 해당 값을 `BridgingHeader.h` 파일의 위치로 설정하십시오(예: `$(SRCROOT)/MyApp/BridgingHeader.h`). 
@@ -191,7 +193,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 
 
 
-3. 클라이언트 SDK를 초기화하십시오.*applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
+3. 클라이언트 SDK를 초기화하십시오.`applicationRoute` 및 `applicationGUID`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
 
  
 
@@ -203,6 +205,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+{: codeblock}
 
 	####Swift
 	{: #approute-swift}
@@ -211,6 +214,24 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+{: codeblock}
+
+1. {{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 전달하여 `AuthorizationManager`를 초기화하십시오. {{site.data.keyword.amashort}} 서비스 타일의 **신임 정보 표시** 단추를 클릭하여 이 값을 찾을 수 있습니다. 
+	####Objective-C
+	{: #authman-objc}
+
+	```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+  ```
+{: codeblock}
+
+	####Swift
+	{: #authman-swift}
+
+	```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+ ```
+{: codeblock}
 
 1. 앱 활성화에 대한 알림을 Facebook SDK에 전송하고, 앱 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 다음 코드를 추가하여 Facebook 인증 핸들러를 등록하십시오. IMFClient 인스턴스를 초기화한 후 이 코드를 추가하십시오.
 
@@ -221,6 +242,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 ```
+{: codeblock}
 
 	####Swift
 	{: #activate-swift}
@@ -229,6 +251,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 		FBAppEvents.activateApp()
 		IMFFacebookAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
 ```
+{: codeblock}
 
 1. 다음 코드를 앱 위임자에 추가하십시오. 
 
@@ -243,6 +266,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 
 	}
 ```
+{: codeblock}
 
 	####Swift
 	{: #appdelegate-swift}
@@ -289,6 +313,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 		}
 	}];
 	```
+{: codeblock}
 
 	####Swift
 	{: #requestpath-swift}
@@ -306,6 +331,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 		}
 	};
  ```
+ {: codeblock}
 
 1. 애플리케이션을 실행하십시오. Facebook 로그인 화면이 팝업으로 표시됩니다.
 
@@ -328,6 +354,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 	```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
 	```
+{: codeblock}
 
 	####Swift
 	{: #logout-swift}
@@ -335,6 +362,7 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 	```Swift
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
 	```
+{: codeblock}
 
 	Facebook에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우, 사용자에게는 인증 용도로 Facebook을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 
 

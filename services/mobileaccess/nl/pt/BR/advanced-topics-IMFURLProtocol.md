@@ -2,15 +2,15 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 # Enviando solicitações com IMFURLProtocol
 {: #imfurl}
 
-Última atualização: 22 de junho de 2016
-{: .last-updated}
-
-Em alguns casos, talvez não seja possível usar a classe `IMFResourceRequest` para enviar solicitações para recursos protegidos; por exemplo, quando uma solicitação para um recurso protegido é enviada por algum código de terceiro. Uma solução possível é usar a API `IMFURLProtocol`, junto com a chamada `NSURLRequest (NSMutableURLRequest)` padrão.
+Em alguns casos, talvez você não consiga usar a classe
+`IMFResourceRequest` para enviar solicitações a recursos protegidos pelo
+{{site.data.keyword.amafull}}, como quando uma solicitação para um recurso
+protegido é enviada por algum código de terceiros. Uma solução possível é usar a API `IMFURLProtocol`, junto com a chamada `NSURLRequest (NSMutableURLRequest)` padrão.
 
 **Nota:** a API `IMFURLProtocol` está disponível somente a partir do {{site.data.keyword.amashort}} Objective-C SDK.
 

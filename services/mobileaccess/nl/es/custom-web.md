@@ -33,8 +33,8 @@ Debe tener lo siguiente:
 
 
 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
-1. Pulse el mosaico de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
-1. Pulse el mosaico de Personalizado.
+1. Pulse el icono de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
+1. Pulse el icono de Personalizado.
 1. Especifique **custom realm**, **custom identity provider url** y **redirect_uri**. Pulse Guardar.
 
 ## Utilización de {{site.data.keyword.amashort}} para la autenticación web personalizada

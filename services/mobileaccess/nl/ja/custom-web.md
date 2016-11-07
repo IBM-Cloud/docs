@@ -23,8 +23,9 @@ Web アプリにカスタム認証を追加します。
   userIdentity: {
   userName: <username>,
   displayName: <displayName>;
- };```
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+ };
+```
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[概説](index.html)を参照してください。
 
 
 

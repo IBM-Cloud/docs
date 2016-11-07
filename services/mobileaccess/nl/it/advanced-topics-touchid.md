@@ -2,16 +2,13 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 
-# Autorizzazione dell'accesso con Touch ID 
+# Autorizzazione dell'accesso con Touch ID
 {: #before-you-begin}
 
-Ultimo aggiornamento: 20 luglio 2016
-{: .last-updated}
-
-Touch ID è una funzione di riconoscimento delle impronte digitali per i dispositivi iOS. Puoi utilizzare Touch ID per proteggere automaticamente le informazioni di autorizzazione per un uso futuro. 
+Touch ID è una funzione di riconoscimento delle impronte digitali per i dispositivi iOS. Puoi utilizzare Touch ID con il servizio {{site.data.keyword.amafull}} per proteggere automaticamente le informazioni di autorizzazione per un uso futuro. 
 
 **Nota:** Touch ID è disponibile solo dall'SDK Objective-C  {{site.data.keyword.amashort}}.
 

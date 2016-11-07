@@ -2,14 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-09-07"
 
 ---
 
 # Activation de l'authentification Google pour les applications Web
 {: #google-auth-web}
-
-Dernière mise à jour : 1er juin 2016
-{: .last-updated}
 
 Utilisez Google Sign-In pour authentifier les utilisateurs sur votre application Web.
 

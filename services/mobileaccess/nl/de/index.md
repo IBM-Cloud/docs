@@ -2,16 +2,15 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 
 # Einführung in {{site.data.keyword.amashort}}
 {: #gettingstarted}
-Letzte Aktualisierung: 21. Juli 2016
-{: .last-updated}
 
-Fügen Sie mit dem {{site.data.keyword.amafull}}-Service Sicherheit zu Ihrer mobilen App hinzu. Sie können die Clientauthentifizierung und Identitätsprovider konfigurieren, damit sich Benutzer mit ihren vorhandenen Google- oder Facebook-Konten bei der App anmelden können.
+
+Fügen Sie mit dem {{site.data.keyword.amafull}}-Service Sicherheit zu Ihrer mobilen App hinzu. Sie können die Clientberechtigung für den Zugriff auf geschützte Back-End-Ressourcen konfigurieren, die auf {{site.data.keyword.Bluemix_notm}} ausgeführt werden. Verwenden Sie Identitätsprovider (Google und Facebook) oder angepasste Identitäten, um Benutzer zu authentifizieren und Zugriff auf geschützte Back-End-Ressourcen und Web-Apps zu gewähren.
 {:shortdesc}
 
 **Anmerkung:** Der {{site.data.keyword.amashort}}-Service wurde früher als Advanced Mobile Access bezeichnet.
@@ -28,14 +27,14 @@ Führen Sie die folgenden Schritte aus, um den {{site.data.keyword.amashort}}-Se
 2. Schützen Sie serverseitige Ressourcen.
 
    Schützen Sie Ihre mobilen Back-End-Ressourcen, die in Node.js- oder Liberty for Java&trade;-Laufzeiten aktiv sind, mit für Mobilgeräte konfigurierter OAuth-Sicherheit. Weitere Informationen finden Sie in [Ressourcen schützen](protecting-resources.html).
-   Weitere Informationen zur mobilen Standard-Back-End-Anwendung finden Sie in der Beispielanwendung [bms-hellotodo-strongloop](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop). 
+   Weitere Informationen zur mobilen Standard-Back-End-Anwendung finden Sie in der Beispielanwendung [bms-hellotodo-strongloop](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop).
 
 3. Richten Sie Ihre {{site.data.keyword.amashort}}-Kernentwicklungsumgebung ein.
    
 	####Cliententwicklung
    {: #client-development}
    
-	Sie können das {{site.data.keyword.amashort}}-SDK folgendermaßen zu Ihrer vorhandenen Android-, iOS- oder Cordova-App hinzufügen:
+	Sie können das {{site.data.keyword.amashort}}-SDK folgendermaßen zu Ihrer vorhandenen Android-, iOS- oder Cordova-App hinzufügen: 
    * Android: ([Android-SDK einrichten](getting-started-android.html)) ([Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
   
    * iOS (Swift-SDK): ([iOS-Swift-SDK einrichten](getting-started-ios-swift-sdk.html))
@@ -50,7 +49,7 @@ Führen Sie die folgenden Schritte aus, um den {{site.data.keyword.amashort}}-Se
 	####Webentwicklung
    {: #web-development}
 
-   Der {{site.data.keyword.amashort}}-Service kann Ihre Webanwendung ohne spezielles SDK schützen. Zusätzlich zu dem durch den {{site.data.keyword.amashort}}-Service zur Verfügung gestellten Schutz können Sie unterschiedliche Identitätsprovider nutzen. Durch die {{site.data.keyword.amashort}}-Integration können alle Webanwendungen unabhängig von der implementierten Technologie die Vorteile des OAuth2-Protokolls nutzen. Die folgenden Abschnitte enthalten Informationen darüber, wie Sie Ihre Web-App für den Zugriff auf den {{site.data.keyword.amashort}}-Service über unterschiedliche Identitätsprovider einrichten: 
+   Der {{site.data.keyword.amashort}}-Service kann Ihre Webanwendung ohne spezielles SDK schützen. Zusätzlich zu dem durch den {{site.data.keyword.amashort}}-Service zur Verfügung gestellten Schutz können Sie unterschiedliche Identitätsprovider nutzen. Durch die {{site.data.keyword.amashort}}-Integration können alle Webanwendungen unabhängig von der implementierten Technologie die Vorteile des OAuth2-Protokolls nutzen. Die folgenden Abschnitte enthalten Informationen darüber, wie Sie Ihre Web-App für den Zugriff auf den {{site.data.keyword.amashort}}-Service über unterschiedliche Identitätsprovider einrichten:
 
     * [Facebook-Authentifizierung für Webanwendungen aktivieren](facebook-auth-web.html)
               
@@ -63,7 +62,7 @@ Führen Sie die folgenden Schritte aus, um den {{site.data.keyword.amashort}}-Se
    * [Benutzer mit Google-Berechtigungsnachweisen authentifizieren](google-auth-overview.html)
    * [Benutzer mit einem angepassten Identitätsprovider authentifizieren](custom-auth.html)
 
-5. Konfigurieren Sie die Überwachung und Protokollierung der App. 
+5. Konfigurieren Sie die Überwachung und Protokollierung der App.
 
     Weitere Informationen finden Sie im Abschnitt [Apps überwachen](app-monitoring.html).
 

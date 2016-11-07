@@ -2,15 +2,12 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 # IMFURLProtocol로 요청 보내기
 {: #imfurl}
 
-마지막 업데이트 날짜: 2016년 6월 22일
-{: .last-updated}
-
-일부 경우에 요청을 보호된 리소스로 전송하는 데 `IMFResourceRequest` 클래스를 사용하지 못할 수 있습니다(예: 보호된 리소스에 대한 요청을 일부 써드파티 코드가 전송하는 경우). 가능한 솔루션은 `IMFURLProtocol` API를 표준 `NSURLRequest (NSMutableURLRequest)` 호출과 함께 사용하는 것입니다. 
+일부 경우에 {{site.data.keyword.amafull}}에 의해 보호되는 리소스에 요청을 전송하는 데 `IMFResourceRequest` 클래스를 사용하지 못할 수도 있습니다(예: 보호되는 리소스에 대한 요청이 특정 써드파티 코드에 의해 전송되는 경우). 가능한 솔루션은 `IMFURLProtocol` API를 표준 `NSURLRequest (NSMutableURLRequest)` 호출과 함께 사용하는 것입니다. 
 
 **참고:** `IMFURLProtocol` API는 {{site.data.keyword.amashort}} Objective-C SDK에서만 사용할 수 있습니다. 
 

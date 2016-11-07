@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Acerca de {{site.data.keyword.amashort}}
 {: #mca-overview}
-Última actualización: 22 de julio de 2016
-{: .last-updated}
+
 
 El servicio de {{site.data.keyword.amafull}} proporciona servicios de autenticación y supervisión para aplicaciones móviles y web que acceden a recursos alojados en {{site.data.keyword.Bluemix_notm}}.
 
@@ -47,7 +46,7 @@ Puede utilizar los siguientes tipos de autenticación en la app móvil:
 
 ## Flujo de solicitudes
 {: #flow}
-n el diagrama siguiente se describe el flujo de una solicitud, desde el SDK del cliente a los proveedores de identidad y programa de fondo móvil.
+En el diagrama siguiente se describe el flujo de una solicitud, desde el SDK del cliente a los proveedores de identidad y programa de fondo móvil.
 
 ![Diagrama del flujo de solicitudes](images/mca-sequence-overview.jpg)
 
@@ -58,7 +57,7 @@ n el diagrama siguiente se describe el flujo de una solicitud, desde el SDK del 
 * El servicio de {{site.data.keyword.amashort}} solicita a la app del cliente que realice la autenticación primero proporcionando el cambio de autenticación según el tipo de autenticación configurado actualmente.
 * Según el tipo de autenticación, el SDK del cliente de {{site.data.keyword.amashort}}:
    * Autenticación de Facebook o Google: procesa automáticamente el cambio de autenticación
-   * Autenticación personalizada: obtiene las credenciales basadas en la lógica que proporcione el desarrollador. 
+   * Autenticación personalizada: obtiene las credenciales basadas en la lógica que proporcione el desarrollador.
 * Si se configura la autenticación de Facebook o Google, el SDK del cliente de {{site.data.keyword.amashort}} utiliza el SDK asociado para obtener las señales de acceso de Facebook o Google. Estas señales sirven de respuesta al cambio de autenticación.
 * Si se configura la autenticación Personalizada, el desarrollador debe obtener la respuesta al cambio de autenticación y suministrarla al SDK del cliente de {{site.data.keyword.amashort}}.
 * Después de obtenerse la respuesta al cambio de autenticación, se envía al servicio de {{site.data.keyword.amashort}}.
@@ -74,12 +73,12 @@ n el diagrama siguiente se describe el flujo de una solicitud, desde el SDK del 
 
 Si tiene problemas o preguntas a la hora de utilizar {{site.data.keyword.amashort}}, obtendrá ayuda en la información que encuentre o planteando preguntas en el foro. También puede abrir una incidencia de soporte. 
 
-Si utiliza el foro para hacer preguntas, etiquete su pregunta para que los equipos de desarrolladores de {{site.data.keyword.Bluemix_notm}} la puedan ver. 
+Si utiliza el foro para hacer preguntas, etiquete su pregunta para que los equipos de desarrolladores de {{site.data.keyword.Bluemix_notm}} la puedan ver.
 
 * Si tiene preguntas técnicas sobre el desarrollo o despliegue de una app con {{site.data.keyword.amashort}}, publique la pregunta en [Stack Overflow](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){:new_window} y etiquete la pregunta con "ibm-bluemix" y "{{site.data.keyword.amashort}}".
 * Para preguntas referidas al servicio e instrucciones de cómo empezar, utilice el foro [IBM developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window}. 
 
-Consulte [Obtención de ayuda](https://www.{DomainName}/docs/support/index.html#getting-help) para obtener más detalles sobre el uso de los foros. 
+Consulte [Obtención de ayuda](https://www.{DomainName}/docs/support/index.html#getting-help) para obtener más detalles sobre el uso de los foros.
 
 Para obtener información sobre cómo abrir una incidencia de soporte de IBM o sobre los niveles de soporte y la gravedad de las incidencias, consulte [Cómo obtener soporte](https://www.{DomainName}/docs/support/index.html#contacting-support).
 

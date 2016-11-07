@@ -2,27 +2,26 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+
 
 # Android SDK のセットアップ
 {: #getting-started-android}
 
-最終更新日: 2016 年 8 月 2 日
-{: .last-updated}
+Android アプリケーションに {{site.data.keyword.amafull}} Client SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
 
-Android アプリケーションに {{site.data.keyword.amashort}} Client SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
+
 {:shortdesc}
 
 ## 開始する前に
 {: #before-you-begin}
 以下が必要です。
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
+* サービス・パラメーター値。{{site.data.keyword.Bluemix_notm}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**をクリックします。`applicationRoute` および `tenantId` (`appGUID` とも呼ばれる) の値が、**「経路」**および**「アプリ GUID」/「TenantId」**フィールドに表示されます。これらの値は、SDK を初期化するため、および要求をバックエンド・アプリケーションに送信するために必要になります。
 * Gradle と連動して機能するようにセットアップされた Android Studio プロジェクト。Android 開発環境のセットアップ方法について詳しくは、[Google Developer Tools](http://developer.android.com/sdk/index.html) を参照してください。
-
 
 ## {{site.data.keyword.amashort}} Client SDK のインストール
 {: #install-mca-sdk}
@@ -57,32 +56,32 @@ Android アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #initalize-mca-sdk}
 
-`context` パラメーター、`applicationGUID` パラメーター、`applicationRoute` パラメーター、および `BMSClient.REGION_UK` パラメーターを `initialize` メソッドに渡すことによって、SDK を初期化します。
-
-
-1. {{site.data.keyword.Bluemix_notm}} ダッシュボードのメインページからアプリをクリックします。「**Mobile オプション**」をクリックします。SDK を初期化するには、**「アプリケーション経路 (Application route)」**と**アプリケーション GUID (Application GUID)」**の値が必要です。
-
-2. Android アプリケーションで {{site.data.keyword.amashort}} Client SDK を初期化します。初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。
-<br/>*applicationRoute* および *applicationGUID* は、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**の値に置換します。
+**context** パラメーターおよび **region** パラメーターを `initialize` メソッドに渡して、Client SDK を初期化します。初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。
 
 ```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+					
+  BMSClient.getInstance().setAuthorizationManager(
+                 MCAAuthorizationManager.createInstance(this, "MCAServiceTenantId"));
+
 ```
-`
+
+   * `
 BMSClient.REGION_UK` は適切な地域に置き換えてください。 	
 
 {{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
+
+地域値は、`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、または `BMSClient.REGION_UK` のうちいずれかのはずです。
+   * 「MCAServiceTenantId」を **tenantId** 値 (『[開始する前に](#before-you-begin)』を参照) に置き換えます。 
 
 ## モバイル・バックエンド・アプリケーションへの要求の実行
 {: #request}
 
 {{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
-1. 新しいモバイル・バックエンド・アプリケーションの、保護されたエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
+1. 新しいモバイル・バックエンド・アプリケーションの、保護されたエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` (例えば、`http://my-mobile-backend.mybluemix.net/protected`)`{applicationRoute}` 値の取得については、『[開始する前に](#before-you-begin)』を参照してください。 
+	
+	MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
 
 1. Android アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後に、以下のコードを追加してください。
 

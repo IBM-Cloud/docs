@@ -2,15 +2,15 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-10"
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
 
 # Android 앱에서 Google 인증 사용
 {: #google-auth-android}
 
-
-마지막 업데이트 날짜: 2016년 8월 4일
-{: .last-updated}
+Google을 사용하여 {{site.data.keyword.amafull}} Android 애플리케이션에서 사용자를 인증하십시오.{{site.data.keyword.amashort}} 보안 기능을 추가하십시오. 
 
 ## 시작하기 전에
 {: #before-you-begin}
@@ -18,6 +18,7 @@ copyright:
 
 * Gradle과 작동하도록 구성된 Android Studio의 Android 프로젝트. {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되지 않아도 됩니다.  
 * {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오. 
+* 서비스 매개변수 값. {{site.data.keyword.Bluemix_notm}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 값과 `tenantId`(`appGUID`라고도 함) 값이 **라우트** 필드와 **앱 GUID/TenantId** 필드에 표시됩니다. 이들 값은 SDK를 초기화하고 백엔드 애플리케이션에 요청을 보내는 데 필요합니다. 
 
 {{site.data.keyword.amashort}} Android 앱에 맞게 Google 인증을 설정하려면 추가로 다음을 구성해야 합니다.
 * {{site.data.keyword.Bluemix_notm}} 애플리케이션
@@ -52,7 +53,8 @@ Android OS에서는 Android 디바이스에 설치된 모든 애플리케이션�
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 	```
-	릴리스 모드 인증서의 키 해시를 검색하는 데에도 동일한 구문을 사용할 수 있습니다. 명령에서 별명 및 키 저장소 경로를 대체하십시오.
+
+	릴리스 모드 인증서의 키 해시를 검색하는 데에도 동일한 구문을 사용할 수 있습니다. 명령에서 별명 및 키 저장소 경로를 대체하십시오. 
 
 1. Google 콘솔 신임 정보 대화 상자에서 **인증 지문** 아래 `SHA1`로 시작하는 행을 찾으십시오. **keytool** 명령을 실행하여 확보한 지문 값을 텍스트 상자에 복사하십시오.
 
@@ -60,7 +62,9 @@ Android OS에서는 Android 디바이스에 설치된 모든 애플리케이션�
 
 1. 신임 정보 대화 상자에서 Android 애플리케이션의 패키지 이름을 입력하십시오. 
 
-  Android 애플리케이션의 패키지 이름을 찾으려면 Android Studio에서 `AndroidManifest.xml` 파일을 열고 `<manifest package="{your-package-name}">`을 검색하십시오.  
+  Android 애플리케이션의 패키지 이름을 찾으려면 Android Studio에서 `AndroidManifest.xml` 파일을 열고 다음을 찾으십시오.  
+  	
+  	`<manifest package="{your-package-name}">`
 
 1. 완료되면 **작성**을 클릭하십시오. 신임 정보 작성이 완료됩니다. 
 
@@ -75,8 +79,6 @@ Android OS에서는 Android 디바이스에 설치된 모든 애플리케이션�
 Android용 Google 클라이언트 ID가 있으므로 {{site.data.keyword.amashort}} 대시보드에서 Google 인증을 사용하도록 설정할 수 있습니다.
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. 
-
-1. **모바일 옵션**을 클릭하고 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)를 기록해 두십시오. SDK를 초기화하는 경우 해당 값이 필요합니다. 
 
 1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드가 로드됩니다. 
 
@@ -105,7 +107,6 @@ Android용 Google 클라이언트 ID가 있으므로 {{site.data.keyword.amashor
     	// other dependencies  
 	}
 	```
-
 	**참고:** `com.ibm.mobilefirstplatform.clientsdk.android` 그룹의 `core` 모듈이 있는 경우 해당 모듈의 종속 항목을 제거할 수 있습니다. `googleauthentication` 모듈이 자동으로 다운로드합니다. `googleauthentication` 모듈이 Android 프로젝트에서 Google+ SDK를 다운로드하고 설치합니다.
 
 1. **도구 > Android > Gradle 파일로 프로젝트 동기화**를 클릭하여 프로젝트를 Gradle과 동기화하십시오. 
@@ -117,28 +118,26 @@ Android용 Google 클라이언트 ID가 있으므로 {{site.data.keyword.amashor
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
-<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+ <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 	```
 
-1. {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려면 context, applicationGUID 및 applicationRoute 매개변수를 전달하여 해당 클라이언트 SDK를 초기화해야 합니다.
+1. {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려면 **context** 매개변수와 **region** 매개변수를 전달하여 해당 클라이언트 SDK를 초기화해야 합니다. 
 
-	필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 Android 애플리케이션에서 기본 활동의 onCreate 메소드입니다.
+	필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 Android 애플리케이션 기본 활동의 `onCreate` 메소드입니다. 
 
-1. 클라이언트 SDK를 초기화하고 Google 인증 관리자를 등록하십시오. *applicationRoute* 및 *applicationGUID*를 대시보드의 **모바일 옵션** 섹션에 있는 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
+1. 클라이언트 SDK를 초기화하고 Google 인증 관리자를 등록하십시오. 
 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
-						
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+
 	BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this));
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 						
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
 
-  `BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
+  * `BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오. 지역 값은 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` 또는 `BMSClient.REGION_UK`이어야 합니다. 
+  * `<MCAServiceTenantId>`를 `tenantId` 값으로 바꾸십시오([시작하기 전에](##before-you-begin) 참조).  
 
    **참고:** Android 애플리케이션이 Android 버전 6.0(API 레벨 23) 이상을 대상으로 하는 경우, `register`를 호출하기 전에 애플리케이션에 `android.permission.GET_ACCOUNTS` 호출이 있는지 확인해야 합니다. 자세한 정보는 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}을 참조하십시오.
 
@@ -161,17 +160,19 @@ Android용 Google 클라이언트 ID가 있으므로 {{site.data.keyword.amashor
 테스트를 시작하기 전에, **MobileFirst Services Starter** 표준 유형으로 작성된 모바일 백엔드 애플리케이션이 있어야 하며 {{site.data.keyword.amashort}} `/protected` 엔드포인트에서 보호되는 리소스가 이미 있어야 합니다. 자세한 정보는 [리소스 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
 1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 데스크탑 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송하십시오.
- MobileFirst 서비스 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 따라서 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 해당 엔드포인트에 액세스할 수 있습니다. 결과적으로 데스크탑 브라우저에 `권한 없음`이 표시됩니다. 
+ `{applicationRoute}` 값을 얻는 방법에 대한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.  
 
-1. Android 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient` 인스턴스를 초기화하고 `GoogleAuthenticationManager`를 등록한 후에 다음 코드를 추가하십시오. 
+	MobileFirst 서비스 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 따라서 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 해당 엔드포인트에 액세스할 수 있습니다. 결과적으로 데스크탑 브라우저에 `권한 없음`이 표시됩니다. 
+
+1. Android 애플리케이션을 사용하여 동일한 보호 엔드포인트에 요청하십시오. `BMSClient` 인스턴스를 초기화하고 `GoogleAuthenticationManager`를 등록한 후에 다음 코드를 추가하십시오. 
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp", MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -184,7 +185,7 @@ Android용 Google 클라이언트 ID가 있으므로 {{site.data.keyword.amashor
 			}
 		}
 	});
-```
+	```
 
 1. 애플리케이션을 실행하십시오. Google 로그인 화면이 팝업됩니다. 로그인 후에는 앱에서 리소스에 액세스하려고 권한을 요청합니다.
 

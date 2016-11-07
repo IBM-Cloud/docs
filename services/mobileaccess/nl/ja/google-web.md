@@ -2,14 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-09-07"
 
 ---
 
 # Web アプリ用の Google 認証の使用可能化
 {: #google-auth-web}
-
-最終更新日: 2016 年 6 月 1 日
-{: .last-updated}
 
 Google Sign-In を使用して、Web アプリのユーザーを認証します。
 
@@ -19,7 +17,7 @@ Google Sign-In を使用して、Web アプリのユーザーを認証します�
 
 以下が必要です。
 * Web アプリ。
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[概説](index.html)を参照してください。
 
 ## Web サイト用の Google アプリケーションの構成
 Google を ID プロバイダーとして使用し始めるには、[Google Developer Console](https://console.developers.google.com) にプロジェクトを作成します。プロジェクト作成の一環として、Google Client ID および Secret を取得します。Google Client ID および Secret は、Google 認証によって使用される、アプリケーションの固有の識別子であり、{{site.data.keyword.Bluemix_notm}} アプリケーションのセットアップに必要です。
@@ -50,7 +48,7 @@ Google Application ID および Secret を作成した後、{{site.data.keyword.
 
   以下の照会パラメーターを使用します。
 	```
-response_type='authorization_code'
+   response_type='authorization_code'
    client_id= <bluemix_app_guid>
    redirect_uri= <uri which you want to return to after getting a grant code>
    scope= ‘openid’

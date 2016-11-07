@@ -16,7 +16,7 @@ Facebook を使用して、Web アプリのユーザーを認証します。
 {: #facebook-auth-android-before}
 以下が必要です。
 * Web アプリ。  
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[概説](index.html)を参照してください。
 * Facebook Application ID および App Secret。詳しくは、[Facebook Developer Portal から Facebook アプリケーション ID を取得する](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。
 
 
@@ -61,8 +61,7 @@ response_type='authorization_code'
     ```
 
 
-  `state` パラメーターは、現在は使用されていないため、空のままにしておくことができます。
-  `redirect_uri` パラメーターは、Facebook での認証が成功または失敗した後のリダイレクト用の URI です。
+  `state` パラメーターは、現在は使用されていないため、空のままにしておくことができます。`redirect_uri` パラメーターは、Facebook での認証が成功または失敗した後のリダイレクト用の URI です。
 
 1. 許可エンドポイントへのリダイレクトの後、Facebook からログイン・フォームが示されます。`redirect_uri` にリダイレクトするためのユーザー名とパスワードを入力します。
    リダイレクトの後に得られる応答には、要求照会パラメーター中の許可コードが含まれます。

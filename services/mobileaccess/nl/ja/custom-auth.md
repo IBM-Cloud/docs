@@ -2,17 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # カスタム ID プロバイダーを使用したユーザーの認証
 {: #custom-id}
 
-最終更新日: 2016 年 7 月 22 日
-{: .last-updated}
 
-
-カスタム ID プロバイダーを作成し、資格情報の収集と検証のためのユーザー独自のロジックを実装します。カスタム ID プロバイダーは、RESTful インターフェースを公開する Web アプリケーションです。オンプレミスまたは {{site.data.keyword.Bluemix}} 上でカスタム ID プロバイダーをホストできます。唯一の要件は、カスタム ID プロバイダーは {{site.data.keyword.amashort}} サービスと対話できるように公開インターネットからアクセス可能でなければならないということです。
+{{site.data.keyword.amafull}} サービスを使用して、資格情報の収集と検証のためのユーザー独自のロジックを実装する、カスタム ID プロバイダーを作成します。カスタム ID プロバイダーは、RESTful インターフェースを公開する Web アプリケーションです。オンプレミスまたは {{site.data.keyword.Bluemix}} 上でカスタム ID プロバイダーをホストできます。唯一の要件は、カスタム ID プロバイダーは {{site.data.keyword.amashort}} サービスと対話できるように公開インターネットからアクセス可能でなければならないということです。
 
 ## {{site.data.keyword.amashort}} カスタム ID 要求フロー
 {: #custom-id-ovr}

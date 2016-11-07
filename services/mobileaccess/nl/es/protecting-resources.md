@@ -2,19 +2,19 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
-{:shortdesc: .shortdesc}
+{:shortdesc: .shortdesc} {:codeblock:.codeblock}
 
 # Protección de recursos de fondo con el servicio {{site.data.keyword.amashort}}
 {: #protecting-resources}
 
-Última actualización: 17 de julio de 2016
+Última actualización: 22 de agosto de 2016
 {: .last-updated}
 
 
-Con el servicio de {{site.data.keyword.amashort}}, puede proteger las aplicaciones de fondo basadas en Java y Node.js que se estén ejecutando en {{site.data.keyword.Bluemix_notm}} con la supervisión y la seguridad OAuth habilitada para móviles. 
+Con el servicio de {{site.data.keyword.amafull}}, puede proteger las aplicaciones de fondo basadas en Java y Node.js que se estén ejecutando en {{site.data.keyword.Bluemix_notm}} con la supervisión y la seguridad OAuth habilitada para móviles. 
 {:shortdesc}
 
 ## Antes de empezar
@@ -52,12 +52,14 @@ El contexto de seguridad almacena el sujeto, el usuario, el dispositivo y la inf
     }
 }
 ```
+{: codeblock}
+
 * `imf.sub`: especifica el sujeto de la señal de ID o el ID exclusivo del cliente si no hay ninguna señal de ID.
 * `imf.user`: especifica la identidad del usuario que se ha extraído de la señal de ID. Si no hay ninguna señal de ID, este campo tendrá un objeto vacío.
 * `imf.device`: especifica la identidad del dispositivo que se ha extraído de la señal de ID. Si no hay ninguna señal de ID, este campo tendrá un objeto vacío.
 * `imf.application`: especifica la identidad de la aplicación que se ha extraído de la señal de ID. Si no hay ninguna señal de ID, este campo tendrá un objeto en blanco.
 
-## Próximos pasos
+## Pasos siguientes
 {: #next-steps}
 * [Protección de recursos Node.js](protecting-resources-nodejs.html)
 * [Protección de los recursos de Liberty for Java&trade;](protecting-resources-java.html)

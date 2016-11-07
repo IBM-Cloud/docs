@@ -1,22 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2016
-  
+  years: 2015, 2016 lastupdated: "2016-10-02"  
 ---
 
 # Protegendo recursos do Liberty for Java com o {{site.data.keyword.amashort}}
 {: #protecting-liberty}
 
-Última atualização: 30 de junho de 2016
-{: .last-updated}
 
 
 O SDK do servidor {{site.data.keyword.amashort}} fornece um módulo `OAuthTAI` para aplicativos Liberty for Java&trade; que são implementados no {{site.data.keyword.Bluemix}}. Deve-se instrumentar seu servidor Liberty com o módulo `OAuthTAI` para protegê-lo contra acesso não autorizado e reunir as informações de monitoramento.
 
 ## Antes de iniciar
 {: #before-you-begin}
-Deve-se estar familiarizado com o desenvolvimento dos aplicativos Liberty for Java no {{site.data.keyword.Bluemix}}. Para obter mais informações, consulte [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html).
+Deve-se estar familiarizado com o desenvolvimento dos aplicativos Liberty for Java no {{site.data.keyword.Bluemix}}. Para obter mais informações, veja [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html).
 
 ## Instalando o {{site.data.keyword.amashort}} server SDK
 {: #installing-server-sdk}
@@ -121,7 +118,7 @@ Subject callerSubject = WSSubject.getCallerSubject();
 WSCredential callerCredential =
     callerSubject.getPublicCredentials(WSCredential.class).iterator().next();
 ```
-Para obter mais informações, consulte [WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html).
+Para obter mais informações, veja [WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html).
 
 #### Propriedade com.worklight.oauth.tai.WLCredential
 {: #WLCredential}

@@ -2,14 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-09-07"
 
 ---
 
 # Abilitazione dell'autenticazione Google per le applicazioni web
 {: #google-auth-web}
-
-Ultimo aggiornamento: 1 giugno 2016
-{: .last-updated}
 
 Utilizza Google Sign-In per autenticare gli utenti alla tua applicazione web.
 
@@ -57,7 +55,7 @@ Per avviare il processo di autorizzazione:
    state= <state>
 	```
 
-  Il parametro `state` non è utilizzato per ora e può essere lasciato vuoto.
+  Il parametro `state` non è utilizzato per ora e può essere rimanere vuoto.
 
   L'uri del parametro `redirect_uri` è il reindirizzamento dopo un'autenticazione positiva o negativa con Google.
   La risposta restituita dopo il reindirizzamento contiene il codice di autorizzazione nei parametri di query della richiesta.

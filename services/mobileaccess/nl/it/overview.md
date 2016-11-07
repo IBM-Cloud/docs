@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Informazioni su {{site.data.keyword.amashort}}
 {: #mca-overview}
-Ultimo aggiornamento: 22 luglio 2016
-{: .last-updated}
+
 
 Il servizio {{site.data.keyword.amafull}} fornisce servizi di autenticazione e monitoraggio per le applicazioni web e mobili che accedono a risorse cloud ospitate su {{site.data.keyword.Bluemix_notm}}.
 

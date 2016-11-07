@@ -2,19 +2,16 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-10"
 ---
 {:screen: .screen}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 
 # iOS 앱에서 Facebook 인증 사용(Swift SDK)
 {: #facebook-auth-ios}
 
-마지막 업데이트 날짜: 2016년 8월 1일
-{: .last-updated}
 
-iOS 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Facebook 애플리케이션에 대한 iOS 플랫폼을 추가하고 구성하십시오.
+{{site.data.keyword.amafull}} iOS 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Facebook 애플리케이션용으로 iOS 플랫폼을 추가하고 구성하십시오.
 {:shortdesc}
 
 ## 시작하기 전에
@@ -27,7 +24,7 @@ iOS 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Faceboo
 
 
 
-* 개발자용 Facebook 사이트의 Facebook 애플리케이션.  
+* [Facebook for Developers](https://developers.facebook.com) 사이트의 Facebook 애플리케이션.  
 
 
 **중요:** Facebook SDK(`com.facebook.FacebookSdk`)를 별도로 설치하지 않아도 됩니다. Facebook SDK는 {{site.data.keyword.amashort}} `BMSFacebookAuthentication` Pod와 함께 자동으로 설치합니다. 개발자용 Facebook 웹 사이트에서 앱을 추가하거나 구성하는 경우 **Xcode 프로젝트에 Facebook SDK 추가** 설정을 건너뛸 수 있습니다.
@@ -37,7 +34,8 @@ iOS 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Faceboo
 {: #facebook-auth-ios-config}
 개발자용 Facebook 사이트에서: 
 
-1. 사용자 계정에 로그인하십시오. 
+1. [Facebook for Developers](https://developers.facebook.com)에서 계정에 로그인하십시오. 
+
 1. iOS 플랫폼이 앱에 추가되었는지 확인하십시오. iOS 플랫폼을 추가하거나 구성하는 경우 다음 단계에 대한 세부사항이 제공됩니다. 
 
 1. iOS 애플리케이션의 *번들 ID*를 지정하십시오. iOS 애플리케이션의 *번들 ID*를 찾으려면, `info.plist` 파일 또는 Xcode 프로젝트 **일반** 탭에서 **번들 ID**를 검색하십시오.
@@ -50,17 +48,17 @@ iOS 애플리케이션에서 Facebook을 ID 제공자로 사용하려면 Faceboo
 ## Facebook 인증용 {{site.data.keyword.amashort}} 구성
 {: #facebook-auth-ios-configmca}
 
-iOS 클라이언트를 제공하도록 Facebook 애플리케이션 ID 및 Facebook 애플리케이션을 구성하면, {{site.data.keyword.amashort}}에서 Facebook 인증을 사용으로 설정할 수 있습니다. 
+iOS 클라이언트에 서비스를 제공하도록 Facebook 앱 ID와 Facebook 애플리케이션을 구성하면 {{site.data.keyword.amashort}}에서 Facebook 인증을 사용할 수 있습니다. 
 
-1. {{site.data.keyword.Bluemix}} 대시보드에서 앱을 여십시오. 
+1. {{site.data.keyword.Bluemix}} 대시보드에서 서비스를 여십시오. 
 
-1. **모바일 옵션**을 클릭하고 **라우트**(*applicationRoute*) 및 **앱 GUID**(*applicationGUID*)를 기록해 두십시오. SDK를 초기화하는 경우 해당 값이 필요합니다. 
+1. **모바일 옵션**을 클릭하고 **라우트**(*applicationRoute*) 값과 **앱 GUID/TenantId**(*tenantId*) 값을 기록해 두십시오. SDK를 초기화하고 백엔드 애플리케이션에 요청을 보내는 경우 이들 값이 필요합니다. 
 
 1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드가 로드됩니다. 
 
 1. **Facebook** 패널의 **구성** 단추를 클릭하십시오. 
 
-1. Facebook 애플리케이션 ID를 지정하고 **저장**을 클릭하십시오. 
+1. Facebook 앱 ID를 지정하고 **저장**을 클릭하십시오. 
 
 ## iOS용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
 {: #facebook-auth-ios-sdk}
@@ -71,10 +69,14 @@ iOS 클라이언트를 제공하도록 Facebook 애플리케이션 ID 및 Facebo
 1. 터미널을 열고 **pod --version** 명령을 실행하십시오. CocoaPods가 설치되어 있는 경우 버전 번호가 표시됩니다. SDK를 설치하기 위해 다음 섹션으로 건너뛸 수 있습니다. 
 
 1. CocoaPods가 설치되어 있지 않은 경우에는 다음을 실행하십시오. 
+
 ```
 sudo gem install cocoapods
 ```
+
 자세한 정보는 [CocoaPods 웹 사이트](https://cocoapods.org/)를 참조하십시오.
+
+
 
 ### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 Swift SDK 설치
 {: #facebook-auth-install-swift-cocoapods}
@@ -88,10 +90,7 @@ use_frameworks!
 pod 'BMSFacebookAuthentication'
 
 	```
-
-   **참고:** Pod 파일에 `pod 'BMSSecurity'` 행이 있으면 제거해야 합니다. `BMSFacebookAuthentication` pod에서 필요한 모든 프레임워크를 설치합니다.
-
-   **팁:** `use_frameworks!`를 Podfile에 삽입하는 대신 Xcode 대상에 추가할 수 있습니다.
+   **참고:** Pod 파일에 `pod 'BMSSecurity'` 행이 있으면 제거해야 합니다. `BMSFacebookAuthentication` pod에서 필요한 모든 프레임워크를 설치합니다.   **팁:** `use_frameworks!`를 Podfile에 삽입하는 대신 Xcode 대상에 추가할 수 있습니다.
 
 1. `Podfile`을 저장하고 명령행에서 `pod install` 명령을 실행하십시오. CocoaPods가 종속 항목을 설치합니다. 진행상태 및 추가된 컴포넌트가 표시됩니다. 
 
@@ -109,7 +108,7 @@ pod 'BMSFacebookAuthentication'
    ![이미지](images/ios-facebook-infoplist-settings.png)
 
 
-   Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특성을 업데이트하십시오. 
+   Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookAppID 특성을 업데이트하십시오. 
 
    또는 `info.plist` 파일을 마우스 오른쪽 단추로 클릭하고 **다른 이름으로 열기 > 소스 코드**를 선택한 후 다음 XML을 추가하여 파일을 업데이트할 수도 있습니다. 
 
@@ -160,22 +159,20 @@ pod 'BMSFacebookAuthentication'
 	    </dict>
 	</dict>
 ```
-Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특성을 업데이트하십시오. Facebook 애플리케이션의 이름을 사용하여 FacebookDisplayName을 업데이트하십시오.
 
-    **중요**: `info.plist` 파일의 기존 특성을 대체하고 있지 않는지 확인하십시오. 중첩된 특성이 있는 경우 수동으로 병합해야 합니다. 자세한 정보는 [Xcode 프로젝트 구성](https://developers.facebook.com/docs/ios/getting-started/) 및 [iOS9를 위한 앱 준비](https://developers.facebook.com/docs/ios/ios9)를 참조하십시오.
+   `CFBundleURLSchemes` 및 `FacebookappID` 특성을 Facebook 애플리케이션 ID로 업데이트하십시오. `FacebookDisplayName`을 Facebook 애플리케이션의 이름으로 업데이트하십시오. 
+
+   **중요**: `info.plist` 파일의 기존 특성을 대체하고 있지 않는지 확인하십시오. 중첩된 특성이 있는 경우 수동으로 병합해야 합니다. 자세한 정보는 [Xcode 프로젝트 구성](https://developers.facebook.com/docs/ios/getting-started/) 및 [iOS9를 위한 앱 준비](https://developers.facebook.com/docs/ios/ios9)를 참조하십시오.
 
 
 
 ## {{site.data.keyword.amashort}} 클라이언트 Swift SDK 초기화
 {: #facebook-auth-ios-initalize-swift}
 
-`applicationGUID` 및 `applicationRoute` 매개변수를 전달하여 클라이언트 SDK를 초기화하십시오.
-
-
+`tenantId`를 전달하여 클라이언트 SDK를 초기화하십시오. 
 
 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드입니다. 
 
-1. 애플리케이션 매개변수 값을 가져오십시오. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 및 `applicationGUID` 값이 **라우트** 및 **앱 GUID** 필드에 표시됩니다.
 
 1. 다음 헤더를 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 필수 프레임워크를 가져오십시오. 
 
@@ -184,21 +181,29 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
  import BMSCore
  import BMSSecurity
  ```
-2. 클라이언트 SDK를 초기화하십시오.`<applicationRoute>` 및 `<applicationGUID>`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID**의 값으로 바꾸십시오.
- {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
+2. 클라이언트 SDK를 초기화하십시오.
 
  ```Swift
- let backendURL = "<applicationRoute>"
- let backendGUID = "<applicationGUID>"
+	let tenantId = "<serviceTenantID>"
+	let regionName = <applicationBluemixRegion>
 
- func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+	func application(_ application: UIApplication, 
+	    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
+ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+   			 mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+	//the regionName should be one of the following: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney
+		BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+	
+		FacebookAuthenticationManager.sharedInstance.register()
+	}
 
- BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
-
- FacebookAuthenticationManager.sharedInstance.register()
  ```
+ 
+ 코드에서: 
+ 
+ *  {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오. 표시되는 지역 값은 **미국 남부**, **영국** 또는 **시드니** 중 하나여야 하며 코드 `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`에 필요한 값에 해당해야 합니다. 
+ * `tenantId`를 **모바일 옵션**에서 저장한 **앱 GUID/TenantId** 값으로 바꾸십시오([Facebook 인증에 사용할 Mobile Client Access 구성](#facebook-auth-ios-configmca) 참조). 
 
 1. 앱 활성화에 대한 알림을 Facebook SDK에 전송하고, 앱 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 다음 코드를 추가하여 Facebook 인증 핸들러를 등록하십시오. BMSClient 인스턴스를 초기화한 후 이 코드를 추가하고 Facebook을 인증 관리자로 등록하십시오.
 
@@ -212,12 +217,14 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 1. 다음 코드를 앱 위임자에 추가하십시오. 
 
  ```Swift
-	func application(application: UIApplication, openURL url: NSURL,
-					sourceApplication: String?, annotation: AnyObject) -> Bool {
-
-		return FacebookAuthenticationManager.sharedInstance.onOpenURL(application, url: url, sourceApplication: sourceApplication, annotation: annotation)
-
-	}
+  
+	func application(_ application: UIApplication, open url: URL,
+                     sourceApplication: String?, annotation: Any) -> Bool {
+        
+        return FacebookAuthenticationManager.sharedInstance.onOpenURL(application: application, 
+		url: url, sourceApplication: sourceApplication, annotation: annotation)
+        
+    }
  ```
 
 ## 인증 테스트
@@ -230,25 +237,26 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
 
 {{site.data.keyword.mobilefirstbp}} 표준 유형을 사용 중 이어야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 리소스가 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우 [리소스 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
-1. 브라우저에서 새로 작성된 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송해 보십시오. URL `{applicationRoute}/protected`를 여십시오.
+1. 브라우저에서 새로 작성된 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송해 보십시오. `{applicationRoute}`를 **모바일 옵션**에서 검색한 값으로 바꿔 URL `{applicationRoute}/protected`를 여십시오([Facebook 인증에 사용할 Mobile Client Access 구성](#facebook-auth-ios-configmca) 참조).
 (예: `http://my-mobile-backend.mybluemix.net/protected`)
 <br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 브라우저에 `Unauthorized` 메시지가 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 이 메시지가 리턴됩니다.
 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. 
 
 	```Swift
-  let protectedResourceURL = "<Your protected resource URL>" // any protected resource
-  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
-  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+	let protectedResourceURL = "<your protected resource absolute path>"
+	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
 
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
   if error == nil {
-         print ("response:\(response?.responseText), no error")
+      print ("response:\(response?.responseText), no error")
   } else {
      print ("error: \(error)")
   }
   }
+            
+	request.send(completionHandler: callBack)
 
-  request.sendWithCompletionHandler(callBack)
  ```
 
 1. 애플리케이션을 실행하십시오. Facebook 로그인 화면이 팝업으로 표시됩니다.
@@ -268,23 +276,16 @@ Facebook 애플리케이션 ID를 사용하여 URL 스킴 및 FacebookappID 특�
  
 
  ```
-"onAuthenticationSuccess info = Optional({
-     attributes =     {
-     };
-     deviceId = 218227041863639;
-     displayName = "Don+Lon";
-     isUserAuthenticated = 1;
-     userId = 218227041863639;
- })
- response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
+response:Optional("Hello, this is a protected resouce of the mobile backend application!"), no error
  ```
-  {: screen}
+ {: screen}
 
 1. 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
 
  ```
 FacebookAuthenticationManager.sharedInstance.logout(callBack)
 ```
+
 
  사용자가 Facebook에 로그인한 후 이 코드를 호출하는 경우 인증하는 데 Facebook을 사용하도록 {{site.data.keyword.amashort}}에 권한을 부여하기 위한 프롬프트가 표시됩니다. 
 

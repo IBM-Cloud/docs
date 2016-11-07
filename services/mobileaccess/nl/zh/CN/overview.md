@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # 关于 {{site.data.keyword.amashort}}
 {: #mca-overview}
-上次更新时间：2016 年 7 月 22 日
-{: .last-updated}
+
 
 {{site.data.keyword.amafull}} 服务为访问 {{site.data.keyword.Bluemix_notm}} 上所托管云资源的移动和 Web 应用程序提供认证和监视服务。
 

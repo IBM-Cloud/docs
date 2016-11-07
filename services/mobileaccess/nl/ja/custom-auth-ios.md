@@ -2,17 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # iOS 用の {{site.data.keyword.amashort}} Client SDK の構成 (Objective-C)
 {: #custom-ios}
 
-最終更新日: 2016 年 7 月 21 日
-{: .last-updated}
 
-
-{{site.data.keyword.amashort}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する iOS アプリケーションを構成します。
+{{site.data.keyword.amafull}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する iOS アプリケーションを構成します。
 
 **注:** iOS アプリを Swift で作成している場合は、{{site.data.keyword.amashort}} Client Swift SDK を使用することを検討してください。このページの手順は、{{site.data.keyword.amashort}} Client Objective-C SDK に適用されます。新しい Swift SDK を使用する手順については、[iOS 用の {{site.data.keyword.amashort}} Client SDK の構成 (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html) を参照してください。
 
@@ -20,7 +17,7 @@ copyright:
 {: #before-you-begin}
 カスタム ID プロバイダーを使用するように構成済みの{{site.data.keyword.amashort}} サービスのインスタンスにより保護されているリソースを持っている必要があります。また、モバイル・アプリに {{site.data.keyword.amashort}} Client SDK が装備されている必要があります。詳しくは、以下の情報を参照してください。
 
- * [{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [{{site.data.keyword.amashort}} 概説](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [iOS Objective-C SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)
  * [カスタム ID プロバイダーの使用](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [カスタム ID プロバイダーの作成](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
@@ -49,7 +46,7 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 
 
 
-## Client SDK の初期化
+### Client SDK の初期化
 {: #custom-ios-sdk-initialize}
 
 アプリケーションの経路 (`applicationRoute`) および GUID (`applicationGUID`) のパラメーターを渡すことによって、SDK を初期化します。初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。
@@ -79,7 +76,7 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 
 1. Client SDK を初期化します。applicationRoute および applicationGUID を、**「モバイル・オプション」**で取得した**「経路」** (`applicationRoute`) と **「アプリ GUID」** (`applicationGUID`) の値に置き換えます。
 
-	###Objective-C:
+	Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -87,7 +84,7 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 			backendGUID:@"applicationGUID"];
 	```
 
-	###Swift:
+	Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
@@ -95,18 +92,20 @@ CocoaPods 依存関係マネージャーを使用して {{site.data.keyword.amas
 	```
 
 ## AuthorizationManager の初期化
-{{site.data.keyword.amashort}} サービス・タイルにある**「資格情報の表示」**ボタンをクリックすると表示される、{{site.data.keyword.amashort}} サービス `tenantId` パラメーターを渡すことで、AuthorizationManager を初期化します。
+{{site.data.keyword.amashort}} サービスの `tenantId` パラメーターを渡すことによって、AuthorizationManager を初期化します。この値は、{{site.data.keyword.amashort}} サービス・タイルの**「資格情報の表示」**ボタンをクリックすると、見つけることができます。
 
-### Objective-C
-  ```Objective-C
-     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
-  ```
+
+### Objective-C:
+
+```Objective-
+ [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+```
 
 ### Swift:
- ```Swift
+
+```Swift
   IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
  ```
-
 
 
 ## IMFAuthenticationHandler 代行

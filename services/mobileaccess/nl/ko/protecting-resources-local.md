@@ -2,16 +2,28 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-10"
 ---
+{:shortdesc: .shortdesc} 
 
 # 로컬 개발 환경에서 {{site.data.keyword.amashort}} 사용
 {: #protecting-local}
 
-마지막 업데이트 날짜: 2016년 8월 16일
-{: .last-updated}
-
 {{site.data.keyword.Bluemix}}에서 실행 중인 {{site.data.keyword.amafull}} 서비스를 사용하도록 로컬 개발을 구성할 수 있습니다. 특히, {{site.data.keyword.amashort}} 서버 SDK를 사용하여 로컬로 코드를 개발하고 {{site.data.keyword.amashort}} 요청을 개발 서버에 전송할 수 있습니다. 이러한 요청은 {{site.data.keyword.Bluemix}}에서 실행 중인 {{site.data.keyword.amashort}} 서비스에서 보호합니다. 
+
+## 시작하기 전에
+{: #before-you-begin}
+다음이 있어야 합니다.
+
+* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
+
+
+
+
+* 서비스 매개변수 값. {{site.data.keyword.Bluemix_notm}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 값과 `appGUID`(`tenantId`라고도 함) 값이 **라우트** 필드와 **앱 GUID/TenantId** 필드에 표시됩니다. 이들 값은 SDK를 초기화하고 백엔드 애플리케이션에 요청을 보내는 데 필요합니다. 
+*  {{site.data.keyword.Bluemix_notm}} 애플리케이션이 호스팅되는 지역을 찾으십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
+
+지역 값은 **미국 남부**, **시드니** 또는 **영국** 중 하나여야 합니다. 이들 이름에 해당하는 정확한 SDK 상수 값은 코드 예제에 표시되어 있습니다.  
 
 ## 서버 SDK 설정
 {: #serversetup}
@@ -25,15 +37,15 @@ copyright:
 
 1. {{site.data.keyword.amashort}} 서비스로 보호되는 모바일 백엔드 애플리케이션의 {{site.data.keyword.Bluemix_notm}} 대시보드를 여십시오. 
 
-1. **모바일 옵션**을 클릭하고 **AppGUID** 값을 복사하십시오. 
-
 1. 로컬 개발 환경에 *VCAP_APPLICATION* 환경 변수를 설정하십시오. 변수는 단일 특성이 설정되어 있으며 문자열로 변환된 JSON 오브젝트를 포함해야 합니다. 
 ```JavaScript
 {
     application_id: "appGUID"
 }
 ```
-*appGUID* 변수를 **모바일 옵션** **AppGUID** 필드의 값으로 대체하십시오.
+
+*appGUID* 값을 [시작하기 전에](#before-you-begin)에서 얻은 `appGUID` 값으로 바꾸십시오.  
+
 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 모바일 백엔드 애플리케이션의 {{site.data.keyword.amashort}} 서비스 타일에 있는 **신임 정보 표시**를 클릭하십시오. JSON 오브젝트는 {{site.data.keyword.amashort}}에서 모바일 백엔드 애플리케이션에 제공하는 액세스 신임 정보와 함께 표시됩니다. 
 
 1. 로컬 개발 환경에서 `VCAP_SERVICES` 환경 변수를 설정하십시오. 이 변수의 값은 {{site.data.keyword.amashort}} 신임 정보를 포함하는 문자열로 변환된 JSON 오브젝트여야 합니다. 자세한 정보는 다음 샘플을 참조하십시오. 
@@ -56,7 +68,7 @@ var vcapServices = {
 				"clientId": "appGUID",
 				"secret": "secret",
 				"serverUrl": "https://imf-authserver.ng.bluemix.net/imf-authserver",
-				"tenantId": "appGUID"
+				"tenantId": "tenantId"
 			}
 		}
 	]
@@ -71,7 +83,8 @@ var MCABackendStrategy =
 
 // 코드의 나머지 부분
 ```
-코드에서 *appGUID* 값을 모바일 백엔드 *appGUID* 값으로 모두 대체하십시오.
+
+*appGUID* 값을 [시작하기 전에](#before-you-begin)에서 얻은 `appGUID` 값으로 바꾸십시오.  
 
 
 ## 로컬 개발 서버에 대해 작업할 수 있도록 {{site.data.keyword.amashort}} 애플리케이션 구성
@@ -79,7 +92,9 @@ var MCABackendStrategy =
 
 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 실제 URL을 사용하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하고, localhost(또는 IP 주소)를 각 요청에 사용하십시오. 다음 샘플을 참조하십시오. 
 
-`BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오. 
+지역을 해당 지역으로 바꾸십시오. 
+
+*appGUID* 값과 *bluemixAppRoute* 값을 [시작하기 전에](#before-you-begin)에서 얻은 값으로 바꾸십시오.  
 
 다음 예제에서 `localhost`를 개발 서버의 실제 IP 주소로 변경해야 할 수 있습니다. 
 
@@ -89,8 +104,12 @@ var MCABackendStrategy =
 String baseRequestUrl = "http://localhost:3000";
 String bluemixAppRoute = "http://myapp.mybluemix.net";
 String bluemixAppGUID = "your-bluemix-app-guid";
+String tenantId = "your-MCA-service-tenantID";
 
-BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID, BMSClient.REGION_UK);
+BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID, BMSClient.REGION_UK); 
+//  set your MCA application region here. Currently possible values are BMSClient.REGION_US_SOUTH, BMSClient.REGION_SYDNEY, or BMSClient.REGION_UK
+BMSClient.getInstance().setAuthorizationManager(
+                 MCAAuthorizationManager.createInstance(this, tenantId));
 
 Request request =
 			new Request(baseRequestUrl + "/resource/path", Request.GET);
@@ -114,6 +133,7 @@ request.send(this, new ResponseListener() {
 ```
 
 
+
 ### iOS - Objective C
 {: #objc}
 
@@ -121,10 +141,14 @@ request.send(this, new ResponseListener() {
 NSString *baseRequestUrl = @"http://localhost:3000";
 NSString *bluemixAppRoute = @"http://myapp.mybluemix.net";
 NSString *bluemixAppGUID = @"your-bluemix-app-guid";
+NSString *tenantId = "your-MCA-service-tenantID";
 
 [[IMFClient sharedInstance]
 			initializeWithBackendRoute:bluemixAppRoute
 			backendGUID:bluemixAppGUID];
+
+[[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: tenantId];
+
 
 NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
 								baseRequestUrl];
@@ -142,30 +166,38 @@ IMFResourceRequest *request =  [IMFResourceRequest
 }];
 ```
 
+
 ### iOS - Swift
 {: #swift}
 
-```Swift
-let baseRequestUrl = "http://localhost:3000";
-let bluemixAppRoute = "http://myapp.mybluemix.net";
-let bluemixAppGUID = "your-bluemix-app-guid";
+```Swiftlet baseRequestUrl = "http://localhost:3000"
+let bluemixAppRoute = "http://myapp.mybluemix.net"
+let tenantId = "your-MCA-service-tenantID"
+let regionName = BMSClient.Region.usSouth
+// set your MCA application region here. Currently these can be BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, BMSClient.Region.sydney
 
-IMFClient.sharedInstance().initializeWithBackendRoute(bluemixAppRoute,
-	 							backendGUID: bluemixAppGuid)
+BMSClient.sharedInstance.initialize(bluemixAppRoute: bluemixAppRoute, bluemixAppGUID: tenantId, bluemixRegion: regionName)
 
-let requestPath = baseRequestUrl + "/resource/path"
+BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
+           
+let requestPath = baseRequestUrl + "/resource/path"               
+let request = Request(url: requestPath, method: HttpMethod.GET)
+            
+request.send { (response, error) in
+	if let error = error {
+    			print("Connection failure")
+     		print("Error :: \(error)");
+     		print("Status :: \(response?.statusCode)");
+    	} else {
+           print("Connection success")
+           print("Response :: \(response?.responseText)")
+    }                
+}
 
-let request = IMFResourceRequest(path: requestPath, method: "GET");
 
-request.sendWithCompletionHandler { (response, error) -> Void in
-	if (nil != error){
-		NSLog("Error :: %@", error.description)
-	} else {
-		NSLog("Response :: %@", response.responseText)
-	}
-};
 
 ```
+
 
 ### Cordova
 {: #cordova}
@@ -174,6 +206,7 @@ request.sendWithCompletionHandler { (response, error) -> Void in
 var baseRequestUrl = "http://localhost:3000";
 var bluemixAppRoute = "http://myapp.mybluemix.net";
 var bluemixAppGUID = "your-bluemix-app-guid";
+Var tenantId = "your-MCA-service-tenantID";
 
 BMSClient.initialize(bluemixAppRoute, bluemixAppGUID);
 
@@ -190,3 +223,4 @@ var request = new MFPRequest(baseRequestUrl +
 
 request.send(success, failure);
 ```
+

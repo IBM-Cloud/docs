@@ -1,18 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2016
-
+  years: 2015, 2016 lastupdated: "2016-10-02"
 ---
 
 # Autenticando usuários com um provedor de identidade customizado
 {: #custom-id}
 
-Última atualização: 22 de julho de 2016
-{: .last-updated}
 
-
-Crie um provedor de identidade customizado e implemente sua própria lógica para coletar e validar credenciais. Um provedor de identidade customizado é um aplicativo da web que expõe uma interface RESTful. É
+Crie um provedor de identidade customizado que use o serviço {{site.data.keyword.amafull}} e implemente sua própria lógica para coletar e validar credenciais. Um provedor de identidade customizado é um aplicativo da web que expõe uma interface RESTful. É
 possível hospedar o provedor de identidade customizado no local ou no {{site.data.keyword.Bluemix}}. O único requisito é que o provedor
 de identidade customizado deve ser acessível a partir da Internet pública para que seja possível se comunicar com o serviço {{site.data.keyword.amashort}}.
 

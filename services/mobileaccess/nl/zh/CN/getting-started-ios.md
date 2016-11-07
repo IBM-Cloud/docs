@@ -2,17 +2,18 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:shortdesc: .shortdesc}
 
 # 设置 iOS Objective-C SDK
 {: #getting-started-ios}
 
-上次更新时间：2016 年 7 月 17 日
-{: .last-updated}
 
-在 iOS 应用程序中安装 {{site.data.keyword.amashort}} SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
+
+在 iOS 应用程序中安装 {{site.data.keyword.amafull}} SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
+
+
 {:shortdesc}
 
 **重要信息：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK。有关我们强烈建议使用 Swift SDK 的新应用程序的信息，请参阅[设置 iOS Swift SDK](getting-started-ios-swift-sdk.html)。
@@ -32,14 +33,17 @@ copyright:
 ### 安装 CocoaPods
 {: #install-cocoapods}
 
-1. 打开终端并运行 **pod --version** 命令。如果已经安装了 CocoaPods，那么将显示版本号。可以跳至下一部分来安装 SDK。
+1. 打开终端并运行 **pod --version** 命令。如果已经安装了 CocoaPods，那么将显示版本号。跳至下一部分来安装 SDK。
 
 1. 如果未安装 CocoaPods，请运行：
 
 ```
 sudo gem install cocoapods
 ```
+
 有关更多信息，请参阅 [CocoaPods Web 站点](https://cocoapods.org/)。
+
+
 
 ### 使用 CocoaPods 安装 {{site.data.keyword.amashort}} 客户端 SDK
 {: #install-sdk-cocoapods}
@@ -55,8 +59,9 @@ sudo gem install cocoapods
 	pod 'IMFCore'
 	```
 
-1. 保存 `Podfile` 文件，然后在命令行中运行 `pod install`。<br/>Cocoapods 将安装添加的依赖关系。您可以看到进度和添加的组件。<br/>
-**重要信息**：CocoaPods 会生成 `xcworkspace` 文件。必须打开此文件才能继续处理项目。
+1. 保存 `Podfile` 文件，然后在命令行中运行 `pod install`。<br/>Cocoapods 将安装添加的依赖关系并显示添加的组件。<br/>
+
+	**重要信息**：CocoaPods 会生成 `xcworkspace` 文件。必须打开此文件才能继续处理项目。
 
 1. 打开 iOS 项目工作空间。打开 CocoaPods 生成的 `xcworkspace` 文件。例如：`{your-project-name}.xcworkspace`。运行 `open {your-project-name}.xcworkspace`。
 
@@ -64,7 +69,6 @@ sudo gem install cocoapods
 {: #init-mca-sdk-ios}
 
 要使用 {{site.data.keyword.amashort}} 客户端 SDK，您必须通过传递**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`) 参数来初始化 SDK。
-
 
 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”的主页中，单击您的应用程序。单击**移动选项**。您需要**路径**和**应用程序 GUID** 值来初始化 SDK。
 
@@ -77,7 +81,7 @@ sudo gem install cocoapods
 	  #import <IMFCore/IMFCore.h>
 	
 	```
-	
+
 	####Swift
 	{: #sdk-swift}
 	
@@ -91,7 +95,7 @@ sudo gem install cocoapods
 	1. 通过构建项目来确保 Xcode 选取了您的桥接头。您应该不会看到任何失败消息。
 	
 1. 使用以下代码来初始化 {{site.data.keyword.amashort}} 客户端 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。<br/>
-将 *applicationRoute* 和 *applicationGUID* 替换为 {{site.data.keyword.Bluemix_notm}}“仪表板”中**移动选项**中的值。
+将 `applicationRoute` 和“applicationGUID”替换为 {{site.data.keyword.Bluemix_notm}} 仪表板中**移动选项**的值。
 
 	####Objective-C
 	{: #sharedinstance-objc}
@@ -101,19 +105,35 @@ sudo gem install cocoapods
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+
 	####Swift
 	{: #sharedinstance-swift}
 	```Swift
  		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
 
-## 对移动后端发起请求
+## 初始化 AuthorizationManager
+通过传递 {{site.data.keyword.amashort}} 服务 `tenantId` 参数来初始化 `AuthorizationManager`。您可以通过单击 {{site.data.keyword.amashort}} 服务磁贴上的**显示凭证**按钮找到此值。
+
+####Objective-C
+	
+```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+  ```
+
+####Swift
+
+```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+ ```
+
+## 对移动后端应用程序发起请求
 {: #request}
 
-初始化 {{site.data.keyword.amashort}} 客户端 SDK 后，可以开始对移动后端发起请求。
+初始化 {{site.data.keyword.amashort}} 客户端 SDK 后，可以开始对移动后端应用程序发起请求。
 
-1. 尝试在浏览器中对移动后端上的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
-<br/>使用 MobileFirst Services Starter 样板创建的移动后端的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会在浏览器中返回 `Unauthorized` 消息。
+1. 尝试在浏览器中对移动后端应用程序上的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
+<br/>使用 MobileFirst Services Starter 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会在浏览器中返回 `Unauthorized` 消息。
 
 1. 使用 iOS 应用程序对同一端点发起请求。初始化 `IMFClient` 后，添加以下代码：
 

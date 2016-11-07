@@ -2,17 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Configuration du SDK client {{site.data.keyword.amashort}} pour iOS (Objective-C)
 {: #custom-ios}
 
-Dernière mise à jour : 21 juillet 2016
-{: .last-updated}
 
-
-Configurez votre application iOS qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amashort}} et connectez-la à {{site.data.keyword.Bluemix}}.
+Configurez votre application iOS qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amafull}} et connectez-la à {{site.data.keyword.Bluemix}}.
 
 **Remarque :** si vous développez votre application iOS dans Swift, vous pouvez envisager d'utiliser le SDK Swift client de {{site.data.keyword.amashort}}. Les instructions de cette page s'appliquent au SDK client Objective-C de {{site.data.keyword.amashort}}. Pour les instructions d'utilisation du nouveau SDK Swift, voir [Configuration du SDK client de {{site.data.keyword.amashort}} pour iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html).
 
@@ -48,7 +45,7 @@ CocoaPods installe les dépendances qui ont été ajoutées. La progression et l
 
 
 
-## Initialisation du logiciel SDK client
+### Initialisation du logiciel SDK client
 {: #custom-ios-sdk-initialize}
 
 Initialisez le SDK en transmettant les paramètres de route de l'application (`applicationRoute`) et l'identificateur global unique de
@@ -82,7 +79,7 @@ sur **Options pour application mobile** pour examiner les valeurs de **Route**
 (`applicationRoute`) et **Identificateur global unique de l'application** (`applicationGUID`) de la section
 **Options pour application mobile**.
 
-	###Objective-C :
+	Objective-C :
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -90,7 +87,7 @@ sur **Options pour application mobile** pour examiner les valeurs de **Route**
 			backendGUID:@"applicationGUID"];
 	```
 
-	###Swift :
+	Swift :
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
@@ -98,18 +95,20 @@ sur **Options pour application mobile** pour examiner les valeurs de **Route**
 	```
 
 ## Initialisation du gestionnaire AuthorizationManager
-Initialisez AuthorizationManager en passant le paramètre `tenantId` de service {{site.data.keyword.amashort}} que vous obtenez quand vous cliquez sur le bouton **Afficher les données d'identification** sur la vignette du service {{site.data.keyword.amashort}}.
+Initialisez le gestionnaire AuthorizationManager en passant le paramètre `tenantId` du service {{site.data.keyword.amashort}}. Vous pouvez trouver cette valeur en cliquant sur le bouton **Afficher les données d'identification** sur la vignette du service  {{site.data.keyword.amashort}}.
 
-### Objective-C
-  ```Objective-C
-     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
-  ```
+
+### Objective-C :
+
+```Objective-
+ [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+```
 
 ### Swift :
- ```Swift
-  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
- ```
 
+```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+```
 
 
 ## Délégué IMFAuthenticationHandler

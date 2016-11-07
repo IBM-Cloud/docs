@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # {{site.data.keyword.amashort}} 정보
 {: #mca-overview}
-마지막 업데이트 날짜: 2016년 7월 22일
-{: .last-updated}
+
 
 {{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 호스팅되는 클라우드 리소스를 액세스하는 모바일 및 웹 애플리케이션에 대한 인증 및 모니터링 서비스를 제공합니다. 
 

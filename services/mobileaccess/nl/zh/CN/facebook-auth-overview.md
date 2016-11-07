@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -12,10 +12,11 @@ copyright:
 # 使用 Facebook 凭证认证用户
 {: #facebook-auth-overview}
 
-上次更新时间：2016 年 7 月 22 日
-{: .last-updated}
 
-您可以将 {{site.data.keyword.amashort}} 服务配置为通过将 Facebook 用作身份提供者来保护资源。您的移动或 Web 应用程序用户可以使用自己的 Facebook 凭证进行认证。
+
+您可以将 {{site.data.keyword.amafull}} 服务配置为通过将 Facebook 用作身份提供者来保护资源。您的移动或 Web 应用程序用户可以使用自己的 Facebook 凭证进行认证。
+
+
 {:shortdesc}
 
 **重要信息**：您无需单独安装 Facebook 提供的客户端 SDK。配置
@@ -55,20 +56,24 @@ Facebook 集成进
   * 最终重定向会指向 Web 应用程序本身的受保护区域，而非后端受保护资源。 
 
 
-## 从 Facebook 开发者门户网站获取 Facebook 应用程序标识
+## 从 Facebook for Developers Web 站点获取 Facebook 应用程序标识
 {: #facebook-appID}
 
-要开始将 Facebook 用作身份提供者，必须在 Facebook 开发者门户网站中创建应用程序。在此过程中，您将获取 Facebook 应用程序标识，这是供 Facebook 用于确定哪个应用程序正在尝试进行连接的唯一标识。
+要开始将 Facebook 用作身份提供者，必须在 Facebook for Developers Web 站点上创建应用程序。在此过程中，将创建 Facebook 应用程序标识。这是供 Facebook 用于确定哪个应用程序正在尝试进行连接的唯一标识。 
 
-1. 打开 [Facebook 开发者门户网站](https://developers.facebook.com)。
+为移动应用程序或 Web 应用程序配置 Facebook 认证时需要此值。
 
-1. 单击菜单中的**我的应用程序**，然后选择**新建应用程
-序**。
-选取 iOS 或 Android 应用程序，然后在下一个屏幕上单击**跳过并创建应用程序标识**。
+1. 访问 [Facebook for Developers](https://developers.facebook.com) 站点。
 
-1. 设置所选的应用程序显示名称，并选取类别。单击**创建应用程序标识**以继续。
+1. 打开**我的应用程序**下拉列表，并选择**添加新应用程序**。
 
-1. 复制显示的**应用程序标识**。此值是您的 Facebook 应用程序标识。配置对移动或 Web 应用程序的 Facebook 认证时需要此值。
+1. 输入**显示名称**和**联系人电子邮件**值，然后从下拉列表中选择**类别**。
+
+1. 单击**新建应用程序标识**。
+
+1. 可能会显示安全性检查。执行请求的操作。
+
+1. 这将显示**产品设置**页面。复制显示的**应用程序标识**。 
 
 ## 后续步骤
 {: #next-steps}

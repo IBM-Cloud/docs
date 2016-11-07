@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -12,10 +12,11 @@ copyright:
 # 使用 Facebook 認證鑑別使用者
 {: #facebook-auth-overview}
 
-前次更新：2016 年 7 月 22 日
-{: .last-updated}
 
-您可以配置 {{site.data.keyword.amashort}} 服務，以使用 Facebook 作為身分提供者來保護資源。您的行動或 Web 應用程式使用者都可以使用其 Facebook 認證進行鑑別。
+
+您可以配置 {{site.data.keyword.amafull}} 服務，以使用 Facebook 作為身分提供者來保護資源。您的行動或 Web 應用程式使用者都可以使用其 Facebook 認證進行鑑別。
+
+
 {:shortdesc}
 
 **重要事項**：您不需要個別安裝 Facebook 所提供的 Client SDK。當您配置 {{site.data.keyword.amashort}} Facebook Client SDK 時，相依關係管理程式會自動安裝 Facebook SDK。
@@ -51,19 +52,24 @@ copyright:
   * 最終重新導向是重新導向至 Web 應用程式本身的受保護區域，而不是後端的受保護資源。 
 
 
-## 從 Facebook 開發人員入口網站取得 Facebook 應用程式 ID
+## 從 Facebook for Developers 網站取得 Facebook 應用程式 ID
 {: #facebook-appID}
 
-若要開始使用 Facebook 作為身分提供者，您必須在「Facebook 開發人員入口網站」中建立應用程式。在此處理程序期間，您會取得「Facebook 應用程式 ID」（這是唯一 ID，可讓 Facebook 知道哪一個應用程式正在嘗試連接）。
+若要開始使用 Facebook 作為身分提供者，請在 Facebook for Developer 網站上建立應用程式。在此處理程序期間，會建立「Facebook 應用程式 ID」。Facebook 使用這個唯一 ID 來知道哪一個應用程式正在嘗試連接。 
 
-1. 開啟 [Facebook 開發人員入口網站](https://developers.facebook.com)。
+您需要這個值來配置行動或 Web 應用程式的 Facebook 鑑別。
 
-1. 按一下功能表中的**我的應用程式**，然後選取**建立新的應用程式**。
-選取 iOS 或 Android 應用程式，然後在下一個畫面上按一下**跳過並建立應用程式 ID**。
+1. 存取 [Facebook for Developers](https://developers.facebook.com) 網站。
 
-1. 設定您選擇的應用程式顯示名稱，並挑選種類。按一下**建立應用程式 ID** 以繼續。
+1. 開啟**我的應用程式**下拉清單，然後選取**新增應用程式**。
 
-1. 複製顯示的**應用程式 ID**。此值是您的「Facebook 應用程式 ID」。您需要這個值來配置行動或 Web 應用程式的 Facebook 鑑別。
+1. 輸入**顯示名稱**及**聯絡電子郵件**值，然後從下拉清單中選擇**種類**。
+
+1. 按一下**建立新應用程式 ID**。
+
+1. 可能會出現安全檢查。請執行所要求的動作。
+
+1. 即會出現**產品設定**頁面。複製顯示的**應用程式 ID**。 
 
 ## 後續步驟
 {: #next-steps}

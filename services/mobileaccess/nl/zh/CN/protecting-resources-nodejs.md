@@ -2,14 +2,12 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # 通过 {{site.data.keyword.amashort}} 保护 Node.js 资源
 {: #protecting-resources-nodejs}
 
-上次更新时间：2016 年 4 月 15 日
-{: .last-updated}
 
 您可以使用 {{site.data.keyword.amashort}} 服务器 SDK 来保护 Node.js 应用程序中的资源。
 

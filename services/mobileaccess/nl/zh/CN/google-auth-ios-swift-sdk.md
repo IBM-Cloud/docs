@@ -2,19 +2,15 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-09"
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 
 # 启用 iOS 应用程序 (Swift SDK) 的 Google 认证
 {: #google-auth-ios}
 
-上次更新时间：2016 年 8 月 01 日
-{: .last-updated}
-
-使用 Google 登录，在 {{site.data.keyword.amashort}} iOS Swift 应用程序上认证用户。新发行的 {{site.data.keyword.amashort}} Swift SDK 为现有 Mobile Client Access Objective-C SDK 提供的功能增添了新功能，同时也改进了现有功能。
+使用 Google 登录，在 {{site.data.keyword.amafull}} iOS Swift 应用程序上认证用户。新发行的 {{site.data.keyword.amashort}} Swift SDK 为现有 Mobile Client Access Objective-C SDK 提供的功能增添了新功能，同时也改进了现有功能。
 
 **注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用 Objective-C SDK，以支持此新的 Swift SDK。
 
@@ -26,10 +22,6 @@ copyright:
 
 * Xcode 中的 iOS 项目。它不需要安装 {{site.data.keyword.amashort}} 客户端 SDK。  
 * 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
-
-
-
-
 
 
 ## 准备应用程序以进行 Google 登录
@@ -65,6 +57,7 @@ copyright:
  ```
  #import <Google/SignIn.h>
  ```
+ {: codeblock}
 
  有关更新桥接头文件的更多信息，请参阅[启用登录](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in)中的步骤 1。
 
@@ -73,13 +66,11 @@ copyright:
 
 现在，您已经有 iOS 客户端标识，可以在 {{site.data.keyword.Bluemix}}“仪表板”中启用 Google 认证。
 
-1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。
+1. 在 {{site.data.keyword.amashort}}“仪表板”中打开服务。
 
-1. 单击**移动选项**，然后记录**路径** (*applicationRoute*) 和**应用程序 GUID** (*applicationGUID*)。初始化 SDK 时需要这些值。
+1. 单击**移动选项**，然后记录**路径** (*applicationRoute*) 和**应用程序 GUID/TenantId** (*tenantId*)。初始化 SDK 并将请求发送到后端应用程序时需要这些值。
 
-1. 单击 {{site.data.keyword.amashort}} 磁贴。这将装入 {{site.data.keyword.amashort}}“仪表板”。
-
-1. 单击 **Google 面板上的**配置*** 按钮。
+1. 单击 **Google** 面板上的**配置**按钮。
 
 1. 在 **iOS 的应用程序标识**中，指定之前从 `GoogleService-Info.plist` 文件获取的 `CLIENT_ID` 值，然后单击**保存**。
 
@@ -95,7 +86,11 @@ copyright:
 ```
 sudo gem install cocoapods
 ```
+{: codeblock}
+
 有关更多信息，请参阅 [CocoaPods Web 站点](https://cocoapods.org/)。
+
+
 
 ### 使用 CocoaPods 安装 {{site.data.keyword.amashort}} 客户端 Swift SDK
 {: #facebook-auth-install-swift-cocoapods}
@@ -108,6 +103,7 @@ sudo gem install cocoapods
 use_frameworks!
  pod 'BMSGoogleAuthentication'
  ```
+ {: codeblock}
  
  **注：**如果已安装 {{site.data.keyword.amashort}} 核心 SDK，那么您可以除去此行：`pod 'BMSSecurity'`。`BMSGoogleAuthentication` Pod 会安装所有必要的框架。
 	
@@ -124,46 +120,42 @@ use_frameworks!
 ## 初始化 {{site.data.keyword.amashort}} 客户端 Swift SDK
 {: #google-auth-ios-initialize}
 
-要使用 {{site.data.keyword.amashort}} 客户端 SDK，请通过传递 `applicationGUID` 和 `applicationRoute` 参数来初始化该 SDK。
+要使用 {{site.data.keyword.amashort}} 客户端 SDK，请通过传递 `applicationGUID` (`tenantID`) 参数来初始化该 SDK。
 
 通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
 
-1. 获取应用程序参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。单击**移动选项**。**路径**和**应用程序 GUID** 字段中将显示 `applicationRoute` 和 `applicationGUID` 值。
-
 1. 将所需框架导入要使用 {{site.data.keyword.amashort}} 客户端 SDK 的类中。添加以下头：
 
- ```Swift
- import UIKit
- import BMSCore
- import BMSSecurity
- ```
+	 ```Swift
+	let tenantId = "<serviceTenantID>"
+	let regionName = <applicationBluemixRegion>
 
-1. 使用以下代码来初始化客户端 SDK。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。
-要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+	    		mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+	 ///the regionName should be one of the following: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney   
+	    BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+		GoogleAuthenticationManager.sharedInstance.register()
+		return true
+	}
 
-
- ```Swift
- let backendURL = "<applicationRoute>"
- let backendGUID = "<applicationGUID>"
-
- func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-// Initialize the client SDK.BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
-
- BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstanceGoogleAuthenticationManager.sharedInstance.register()
-      return true
-      }
-
- // [START openurl]
-      func application(application: UIApplication,
-          openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-             return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+	// [START openurl]
+	    func application(_ application: UIApplication,
+			     open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
       }
 
  @available(iOS 9.0, *)
- func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
- return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, options: options)
+ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, options: options)
   }
  ```
+
+ 在代码中：
+ 	* 将 `<serviceTenantID>` 替换为从**移动选项**中检索到的值（请参阅[配置 Mobile Client Access 进行 Google 认证](#google-auth-ios-config)）。 
+	* 将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。显示的区域值应为以下某个值：**美国南部**、**英国**或**悉尼**，并对应于代码中需要的值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
+	
+
 
 ## 测试认证
 {: #google-auth-ios-testing}
@@ -176,42 +168,37 @@ use_frameworks!
 您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 
-1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求
+1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`，向移动后端应用程序的受保护端点发送请求。将 `{applicationRoute}` 替换为从**移动选项**中检索到的值（请参阅[配置 Mobile Client Access 进行 Google 认证](#google-auth-ios-config)）。例如，`http://my-mobile-backend.mybluemix.net/protected`。
 
 1. 使用 MobileFirst Services 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护，所以它只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
 
 1. 使用 iOS 应用程序对同一端点发起请求。
 
  ```Swift
- let protectedResourceURL = "<Your protected resource URL>" // any protected resource
- let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
- let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+	let protectedResourceURL = "<your protected resource absolute path>"
+	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
+
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
   if error == nil {
       print ("response:\(response?.responseText), no error")
  } else {
     print ("error: \(error)")
- }
- }
+  }
+  }
 
- request.sendWithCompletionHandler(callBack)
- ```
+	request.send(completionHandler: callBack)
 
+	```
 1. 运行应用程序。您将看到 Google 登录屏幕弹出窗口
 
  ![图像](images/ios-google-login.png)
 
 1. 登录并单击**确定**后，您将授权 {{site.data.keyword.amashort}} 使用您的 Google 用户身份进行认证。
 
-1. 	您的请求应该会成功。日志中会显示以下输出。
+1. 您的请求应该会成功。日志中会显示以下输出。
 
  ```
- onAuthenticationSuccess info = Optional({attributes = {};
-     deviceId = 105747725068605084657;
-     displayName = "donlonqwerty@gmail.com";
-     isUserAuthenticated = 1;
-     userId = 105747725068605084657;
- })
- response:Optional("Hello, this is a protected resource!"), no error
+ response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
  ```
 {: screen}
 
@@ -221,7 +208,6 @@ use_frameworks!
 GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Google 进行认证。
-此时，用户可以单击<!--in the upper-right corner of the screen-->用户名，以选择其他用户并登录。
+  如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Google 进行认证。此时，用户可以单击<!--in the upper-right corner of the screen-->用户名，以选择其他用户并登录。
 
    您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。

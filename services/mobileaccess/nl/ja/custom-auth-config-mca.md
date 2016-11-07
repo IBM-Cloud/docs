@@ -2,21 +2,18 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02" 
 ---
 
 # カスタム認証用の {{site.data.keyword.amashort}} の構成
 {: #custom-dash}
-
-最終更新日: 2016 年 7 月 17 日
-{: .last-updated}
 
 
 モバイル・アプリケーションでカスタム認証を使用するには、{{site.data.keyword.amashort}} サービス・ダッシュボードで、カスタム ID プロバイダーのカスタム認証レルムとベース URL を登録する必要があります。
 
 ## 開始する前に
 {: #custom-dash-begin}
-* [入門](index.html)をお読みください。
+* [概説](index.html)をお読みください。
 * {{site.data.keyword.amashort}} Server SDK でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](protecting-resources.html)を参照してください。
 * カスタム ID プロバイダー・アプリケーションを実行します。
 

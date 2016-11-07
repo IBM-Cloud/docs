@@ -2,16 +2,13 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 
 # Touch ID によるアクセスの許可
 {: #before-you-begin}
 
-最終更新日: 2016 年 7 月 20 日
-{: .last-updated}
-
-Touch ID は、iOS デバイス向けの指紋認証機能です。Touch ID を使用することで、将来の使用のために許可情報を自動的に保護できます。 
+Touch ID は、iOS デバイス向けの指紋認証機能です。{{site.data.keyword.amafull}} で Touch ID を使用することで、将来の使用のために許可情報を自動的に保護できます。 
 
 **注:** Touch ID は、{{site.data.keyword.amashort}} Objective-C SDK からのみ使用可能です。
 

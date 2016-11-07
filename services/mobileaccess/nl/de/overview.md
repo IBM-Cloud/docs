@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Informationen zu {{site.data.keyword.amashort}}
 {: #mca-overview}
-Letzte Aktualisierung: 22. Juli 2016
-{: .last-updated}
+
 
 Der {{site.data.keyword.amafull}}-Service stellt Authentifizierungs- und Überwachungsservices für mobile Anwendungen und Webanwendungen bereit, die auf Cloudressourcen zugreifen, die per Hosting in {{site.data.keyword.Bluemix_notm}} zur Verfügung gestellt werden.
 
@@ -39,7 +38,7 @@ Sie können die folgenden Typen von Authentifizierung in Ihrer mobilen App verwe
 * Verwenden Sie die vom {{site.data.keyword.amashort}}-Client-SDK bereitgestellte Klasse `Request` für die Kommunikation mit Ihren geschützten Cloudressourcen.
 * Das {{site.data.keyword.amashort}}-Server-SDK erkennt eine nicht autorisierte Anforderung und gibt den Code HTTP 401 für die Berechtigungsanforderung (Challenge) zurück.
 * Das {{site.data.keyword.amashort}}-Client-SDK erkennt die Berechtigungsanforderung (Challenge) mit dem Code HTTP 401 und startet automatisch den Authentifizierungsprozess mit dem {{site.data.keyword.amashort}}-Service.
-* Facebook-, Google- oder angepasste Authentifizierung wird versucht. 
+* Facebook-, Google- oder angepasste Authentifizierung wird versucht.
 * Nach einer erfolgreichen Authentifizierung gibt {{site.data.keyword.amashort}} ein Berechtigungstoken zurück.
 * Das {{site.data.keyword.amashort}}-Client-SDK fügt das Berechtigungstoken automatisch der ursprünglichen Anforderung hinzu und sendet die Anforderung erneut an die Cloudressource.
 * Das {{site.data.keyword.amashort}}-Server-SDK extrahiert das Zugriffstoken aus der Anforderung und validiert es mit dem {{site.data.keyword.amashort}}-Service.
@@ -57,7 +56,7 @@ Das folgende Diagramm zeigt, wie eine Anforderung aus dem Client-SDK an Ihre mob
 * Das {{site.data.keyword.amashort}}-Client-SDK kontaktiert den {{site.data.keyword.amashort}}-Service und fordert die Ausgabe eines Berechtigungsheaders an.
 * Der {{site.data.keyword.amashort}}-Service fordert die Client-App auf, sich zuerst durch die Bereitstellung einer Authentifizierungsanforderung (Challenge) entsprechend dem zurzeit konfigurierten Authentifizierungstyp zu authentifizieren.
 * Das {{site.data.keyword.amashort}}-Client-SDK führt abhängig vom Authentifizierungstyp folgenden Schritt aus:
-   * Facebook- oder Google-Authentifizierung: Es verarbeitet die Authentifizierungsanforderung automatisch. 
+   * Facebook- oder Google-Authentifizierung: Es verarbeitet die Authentifizierungsanforderung automatisch.
    * Angepasste Authentifizierung: Es ruft Berechtigungsnachweise nach der vom Entwickler bereitgestellten Logik ab.
 * Wenn eine Facebook- oder Google-Authentifizierung konfiguriert ist, verwendet das {{site.data.keyword.amashort}}-Client-SDK das zugeordnete SDK, um Facebook- bzw. Google-Zugriffstokens abzurufen. Diese Tokens dienen als Antwort auf die Authentifizierungsanforderung (Challenge).
 * Wenn eine angepasste Authentifizierung konfiguriert ist, muss der Entwickler die Antwort auf die Authentifizierungsanforderung (Challenge) abrufen und an das {{site.data.keyword.amashort}}-Client-SDK übergeben.
@@ -72,14 +71,14 @@ Das folgende Diagramm zeigt, wie eine Anforderung aus dem Client-SDK an Ihre mob
 ## Hilfe und Unterstützung für {{site.data.keyword.amashort}} anfordern
 {: #gettinghelp}
 
-Wenn bei der Verwendung von {{site.data.keyword.amashort}} Probleme oder Fragen auftreten, finden Sie Hilfe, indem Sie in einem Forum nach Informationen suchen oder Fragen stellen. Sie können auch ein Support-Ticket öffnen.  
+Wenn bei der Verwendung von {{site.data.keyword.amashort}} Probleme oder Fragen auftreten, finden Sie Hilfe, indem Sie in einem Forum nach Informationen suchen oder Fragen stellen. Sie können auch ein Support-Ticket öffnen. 
 
-Wenn Sie eine Frage über die Foren stellen, kennzeichnen Sie Ihre Frage, so dass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklerteams gesehen wird. 
+Wenn Sie eine Frage über die Foren stellen, kennzeichnen Sie Ihre Frage, so dass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklerteams gesehen wird.
 
 * Bei technischen Fragen zur Entwicklung und Bereitstellung einer App mit {{site.data.keyword.amashort}} posten Sie Ihre Frage unter [Stack Overflow](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){:new_window} und kennzeichnen Sie Ihre Frage mit "ibm-bluemix" und "{{site.data.keyword.amashort}}".
 * Bei Fragen zum Service und Anweisungen zu ersten Schritten verwenden Sie das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window}. 
 
-Detailliertere Informationen zur Nutzung der Foren finden Sie unter [Hilfe anfordern](https://www.{DomainName}/docs/support/index.html#getting-help). 
+Detailliertere Informationen zur Nutzung der Foren finden Sie unter [Hilfe anfordern](https://www.{DomainName}/docs/support/index.html#getting-help).
 
 Weitere Informationen zum Öffnen eines IBM Support-Tickets, zu Supportebenen oder der Dringlichkeit von Tickets finden Sie unter [Support kontaktieren](https://www.{DomainName}/docs/support/index.html#contacting-support).
 

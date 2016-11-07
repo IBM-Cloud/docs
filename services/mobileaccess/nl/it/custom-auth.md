@@ -2,19 +2,16 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Autenticazione utenti con un provider di identità personalizzato
 {: #custom-id}
 
-Ultimo aggiornamento: 22 luglio 2016
-{: .last-updated}
 
+Crea un provider di identità personalizzato che utilizza il servizio  {{site.data.keyword.amafull}} e che implementa la tua logica per la raccolta e la convalida di credenziali. Un provider di identità personalizzato è un'applicazione web che espone un'interfaccia RESTful. Puoi ospitare il provider di identità personalizzato in loco oppure su {{site.data.keyword.Bluemix}}. Il solo requisito è che il provider di identità personalizzato deve essere accessibile da internet pubblica in modo che possa comunicare con il servizio {{site.data.keyword.amashort}}.
 
-Crea un provider di identità personalizzato e implementare la tua logica per la raccolta e la convalida di credenziali. Un provider di identità personalizzato è un'applicazione web che espone un'interfaccia RESTful. Puoi ospitare il provider di identità personalizzato in loco oppure su {{site.data.keyword.Bluemix}}. Il solo requisito è che il provider di identità personalizzato deve essere accessibile da internet pubblica in modo che possa comunicare con il servizio {{site.data.keyword.amashort}}.
-
-## Flusso della richiesta di identità personalizzato {{site.data.keyword.amashort}} 
+## Flusso della richiesta di identità personalizzato {{site.data.keyword.amashort}}
 {: #custom-id-ovr}
 
 
@@ -43,8 +40,8 @@ Crea un provider di identità personalizzato e implementare la tua logica per la
 
 Il flusso della richiesta dell'applicazione web {{site.data.keyword.amashort}} è simile al flusso del client mobile. Tuttavia, {{site.data.keyword.amashort}} protegge l'applicazione web, invece della risorsa di back-end {{site.data.keyword.Bluemix_notm}}.
 
-  * La richiesta iniziale viene inviata dall'applicazione web (da un modulo di accesso, ad esempio). 
-  * Il reindirizzamento finale è all'area protetta dell'applicazione stessa, invece che alla risorsa protetta di backend.  
+  * La richiesta iniziale viene inviata dall'applicazione web (da un modulo di accesso, ad esempio).
+  * Il reindirizzamento finale è all'area protetta dell'applicazione stessa, invece che alla risorsa protetta di backend. 
 
 
 

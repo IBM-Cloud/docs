@@ -13,7 +13,7 @@ copyright:
 
 Inclua a autenticação customizada em seu app da web
 
-## Antes de começar
+## Antes de iniciar
 {: #before-you-begin}
 
 Você deve ter:

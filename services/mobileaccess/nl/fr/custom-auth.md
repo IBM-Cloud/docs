@@ -2,17 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Authentification d'utilisateurs à l'aide d'un fournisseur d'identité personnalisé
 {: #custom-id}
 
-Dernière mise à jour : 22 juillet 2016
-{: .last-updated}
 
-
-Vous pouvez créer un fournisseur d'identité personnalisé et implémenter votre propre logique pour la collecte et la validation des données d'identification. Un fournisseur d'identité est une application Web qui expose une interface RESTful. Vous
+Vous pouvez créer un fournisseur d'identité personnalisé qui utilise le service {{site.data.keyword.amafull}} et implémente votre propre logique pour la collecte et la validation des données d'identification. Un fournisseur d'identité est une application Web qui expose une interface RESTful. Vous
 pouvez héberger le fournisseur d'identité personnalisé sur site ou dans {{site.data.keyword.Bluemix}}. La seule exigence est qu'il soit
 accessible depuis l'Internet public afin de pouvoir communiquer avec le service {{site.data.keyword.amashort}}.
 

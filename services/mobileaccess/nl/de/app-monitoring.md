@@ -7,12 +7,12 @@ copyright:
 
 # Anwendungen überwachen
 {: #app-monitoring}
-Letzte Aktualisierung: 28. Juni 2016
+Letzte Aktualisierung: 22. September 2016
 {: .last-updated}
 
 Neben Sicherheitseinrichtungen stellt {{site.data.keyword.amafull}} auch Überwachungs- und Analysefunktionen für Ihre mobilen Anwendungen bereit. Mit dem {{site.data.keyword.amashort}}-Client-SDK können Sie Clientprotokolle und Überwachungsdaten aufzeichnen. Entwickler können steuern, wann diese Daten an den {{site.data.keyword.amashort}}-Service gesendet werden sollen. Alle Sicherheitsereignisse, wie zum Beispiel erfolgreiche oder fehlgeschlagene Authentifizierungen, die im {{site.data.keyword.amashort}}-Service auftreten, werden automatisch protokolliert.
-
-**Anmerkung**: Die Überwachungsfunktionen des Service {{site.data.keyword.amashort}} sollen auf den neuen Service [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics) migriert werden. Das neue Swift-SDK nutzt den neuen Service {{site.data.keyword.mobileanalytics_short}}, der eine deutlich umfangreichere Analyseerfahrung bereitstellt. Der Service {{site.data.keyword.mobileanalytics_short}} befindet sich aktuell in der Versuchsphase und soll planmäßig noch dieses Jahr allgemein verfügbar gemacht werden. Es empfiehlt sich, die Migration Ihrer Anwendungen zum Verwenden des neuen Service {{site.data.keyword.mobileanalytics_short}} und des Swift-SDK zu prüfen, da die Verwendung und Unterstützung der Überwachungsfunktionen des Service {{site.data.keyword.amashort}} eingestellt werden sollen, wenn {{site.data.keyword.mobileanalytics_short}} allgemein verfügbar ist.
+<!--
+**Note**: The monitoring functions of the {{site.data.keyword.amashort}} service are planned to be migrated to the new [{{site.data.keyword.mobileanalytics_short}} service](https://console.ng.bluemix.net/catalog/services/mobile-analytics). The new Swift SDK leverages the new {{site.data.keyword.mobileanalytics_short}} service, which provides a much richer analytics experience. The {{site.data.keyword.mobileanalytics_short}} service is currently in experimental phase with plans to be made generally available later this year. We recommend investigating migrating your applications to use the new {{site.data.keyword.mobileanalytics_short}} service and Swift SDK since the monitoring functions of {{site.data.keyword.amashort}} service are planned to be discontinued when {{site.data.keyword.mobileanalytics_short}} is generally available. -->
 
 Wenn Daten an {{site.data.keyword.amashort}} übergeben werden, können Sie das {{site.data.keyword.amashort}}-Überwachungsdashboard verwenden, um Analyseerkenntnisse zu Ihren mobilen Anwendungen, Geräten und Clientprotokollen zu erhalten. Informationen zu Anforderungen, die Ihre Anwendung an Ressourcen sendet, die von {{site.data.keyword.amashort}} geschützt werden, werden standardmäßig aufgezeichnet.
 
@@ -26,7 +26,7 @@ Sie können Ihre mobilen Anwendungen so konfigurieren, dass sie mit einigen einf
 ### Clientseitige Protokollerfassung
 {: #client-side-logcapture}
 
-Bei Anwendungen in diesem Bereich kommt es ab und zu zu Problemen, die von einem Entwickler behoben werden müssen. Es ist häufig schwer, diese Probleme zu reproduzieren. <!--in R&D.--> Entwickler, die an dem Code gearbeitet haben, verfügen möglicherweise nicht über die Umgebung oder das richtige Gerät, um die entsprechenden Tests durchzuführen. In diesen Situationen ist es hilfreich, die Debugprotokolle von den Clientgeräten abrufen zu können, da die Probleme in der Umgebung auftreten, in der die Ereignisse stattfinden.
+Bei Anwendungen in diesem Bereich kommt es ab und zu zu Problemen, die von einem Entwickler behoben werden müssen. Oft ist es schwierig, diese Probleme zu reproduzieren. Entwickler, die an dem Code gearbeitet haben, verfügen möglicherweise nicht über die Umgebung oder das richtige Gerät, um die entsprechenden Tests durchzuführen. In diesen Situationen ist es hilfreich, die Debugprotokolle von den Clientgeräten abrufen zu können, da die Probleme in der Umgebung auftreten, in der die Ereignisse stattfinden.
 
 ### Erfasste Daten beibehalten
 {: #preserve-captureddata}
@@ -40,7 +40,7 @@ Es gibt keine Möglichkeit sicherzustellen, dass alle erfassten Daten auf der Cl
 
 2. Wenn Ihr {{site.data.keyword.Bluemix_notm}}-Anwendungsdashboard geöffnet ist, klicken Sie auf eine {{site.data.keyword.amashort}}-Kachel.
 
-3. Klicken Sie in der Navigationsleiste auf der linken Seite des {{site.data.keyword.amashort}}-Dashboards auf den Link **Überwachung**. 
+3. Klicken Sie in der {{site.data.keyword.amashort}}-Dashboard-Navigation auf die Schaltfläche **Überwachung**.
 
 
 ## Protokollfunktion aktivieren, konfigurieren und verwenden
@@ -58,17 +58,22 @@ Das Protokollierungsframework des {{site.data.keyword.amashort}}-Client-SDK unte
 * `INFO` - Wird zur Meldung von Initialisierungsereignissen und anderen Daten verwendet, die von Nutzen sein können.
 * `DEBUG` - Wird zur Meldung von Debuganweisungen verwendet, die Entwicklern bei der Behebung von Anwendungsmängeln helfen.
 
+#### Szenario für Protokollebene
+{: #log-level-scenario}
+
+Wenn die Protokollierungsstufe mit `FATAL` konfiguriert ist, erfasst die Protokollfunktion nicht abgefangene Ausnahmebedingungen. Es werden jedoch keine Protokolle erfasst, die den Weg zum Absturzereignis aufzeigen. Sie können ausführlichere Protokollierungsstufe festlegen, um sicherzustellen, dass Protokolle, die zu einem Protokolleintrag der Stufe `FATAL` führen könnten, z. B. `WARN` oder `ERROR`, ebenfalls erfasst werden.
+
 Stellen Sie sicher, dass Sie das {{site.data.keyword.amashort}}-Client-SDK initialisieren, bevor Sie das Protokollierungsframework verwenden. Die folgenden Beispiel veranschaulichen die grundlegende Verwendung des Protokollierungsframeworks aus dem {{site.data.keyword.amashort}}-Client-SDK.
 
-**Wichtig**: Die Überwachungsfunktionen des Service {{site.data.keyword.amashort}} sollen auf den neuen Service [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics) migriert werden. Das neue Swift-SDK nutzt den neuen Service {{site.data.keyword.mobileanalytics_short}}, der eine deutlich umfangreichere Analyseerfahrung bereitstellt. Der Service {{site.data.keyword.mobileanalytics_short}} befindet sich aktuell in der Versuchsphase und soll planmäßig noch dieses Jahr allgemein verfügbar gemacht werden. Es empfiehlt sich, die Migration Ihrer Anwendungen zum Verwenden des neuen Service {{site.data.keyword.mobileanalytics_short}} und des Swift-SDK zu prüfen, da die Verwendung und Unterstützung der Überwachungsfunktionen des Service {{site.data.keyword.amashort}} eingestellt werden sollen, wenn {{site.data.keyword.mobileanalytics_short}} allgemein verfügbar ist.
+<!-- **Important**: The monitoring functions of the {{site.data.keyword.amashort}} service are planned to be migrated to the new [{{site.data.keyword.mobileanalytics_short}} service](https://console.ng.bluemix.net/catalog/services/mobile-analytics). The new Swift SDK leverages the new {{site.data.keyword.mobileanalytics_short}} service, which provides a much richer analytics experience. The {{site.data.keyword.mobileanalytics_short}} service is currently in experimental phase with plans to be made generally available later this year. We recommend investigating migrating your applications to use the new {{site.data.keyword.mobileanalytics_short}} service and Swift SDK since the monitoring functions of {{site.data.keyword.amashort}} service are planned to be discontinued when {{site.data.keyword.mobileanalytics_short}} is generally available.-->
 
 #### Android
 {: #enable-logger-android}
 
 ```Java
-BMSClient.getInstance().initialize(context, appRoute, appGUID);
+BMSClient.getInstance().initialize(this.getApplicationContext(), BMSClient.REGION_US_SOUTH); // Sicherstellen, dass auf eigene Region verwiesen wird
 
-Logger logger = Logger.getInstance("myLogger");
+Logger logger = Logger.getLogger("myLogger");
 
 logger.debug("debug info");
 logger.info("info message");
@@ -76,60 +81,45 @@ logger.warn("warning message");
 logger.error("error message");
 logger.fatal("fatal message");
 ```
+{: codeblock}
 
-#### iOS - Objective-C
-{: #enable-logger-objectc}
-
-**Wichtig**: Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden.
-
-Das Objective-C-SDK meldet Überwachungsdaten an die Überwachungskonsole des Service {{site.data.keyword.amashort}}. Falls Sie auf die Überwachungsfunktionen des Service {{site.data.keyword.amashort}} angewiesen sind, verwenden Sie weiterhin das Objective-C-SDK.
-
-```Objective-C
-[[IMFClient sharedInstance] initializeWithBackendRoute:appRoute backendGUID:appGUID];
-
-IMFLogger *logger = [IMFLogger loggerForName:@"myLogger"];
-
-[logger logDebugWithMessages:@"debug"];
-[logger logInfoWithMessages:@"info"];
-[logger logWarnWithMessages:@"warn"];
-[logger logErrorWithMessages:@"error"];
-[logger logFatalWithMessages:@"fatal"];
-
-```
+Der Parameter **bluemixRegion** gibt an, welche Bluemix-Bereitstellung Sie verwenden, z. B. `BMSClient.REGION_US_SOUTH` und `BMSClient.REGION_UK`. 
 
 #### iOS - Swift
 {: #enable-logger-swift}
 
 ```Swift
-IMFClient.sharedInstance().initializeWithBackendRoute(appRoute, backendGUID: appGuid)
+BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.REGION_US_SOUTH) // Sie können die Region ändern
+Analytics.initializeWithAppName(your_app_name_here, apiKey: your_api_key_here, hasUserContext: false, deviceEvents: DeviceEvent.LIFECYCLE)
 
-let logger = IMFLogger(forName: "myLogger");
+let logger = Logger.logger(forName: "myLogger")
 
-logger.logDebugWithMessages("debug");
-logger.logInfoWithMessages("info");
-logger.logWarnWithMessages("warn");
-logger.logErrorWithMessages("error");
-logger.logFatalWithMessages("fatal");
+logger.debug(“debug info")
+logger.info(“info message")
+logger.warn(“warning message")
+logger.error(“error message")
+logger.fatal(“fatal message")
 ```
-
-**Anmerkung:** Das {{site.data.keyword.amashort}}-Client-SDK ist mit Objective-C implementiert. Daher müssen Sie Ihrem Swift-Projekt möglicherweise die Datei `IMFLoggerExtension.swift` hinzufügen, um die vorherige Protokollierungs-API verwenden zu können. Sie finden diese Datei im [{{site.data.keyword.amashort}}-Client-SDK-Archiv](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
-
+{: codeblock}
+<!--
+**Note:** The {{site.data.keyword.amashort}} client SDK is implemented with Objective-C, therefore you might need to add the `IMFLoggerExtension.swift` file to your Swift project to use the previous logger API. You can find this file in the [{{site.data.keyword.amashort}} client SDK archive](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
+-->
 
 #### Cordova
 {: #enable-logger-android-cordova}
 
 ```JavaScript
-BMSClient.initialize(appRoute , appGUID);
+BMSClient.initialize(BMSClient.REGION_US_SOUTH); // Sie können die Region ändern
 
-var logger = MFPLogger.getInstance("myLogger");
+var logger = BMSLogger.getInstance("myLogger");
 
 logger.debug("debug info");
 logger.info("info message");
 logger.warn("warning message");
 logger.error("error message");
 logger.fatal("fatal message");
-
 ```
+{: codeblock}
 
 In den Logger-Klassen sind die folgenden zusätzlichen Methoden zu finden:
 
@@ -142,7 +132,7 @@ Wenn beispielsweise die Erfassung auf ON gesetzt und als Protokollierungsstufe F
 **Anmerkung:** Vollständige Referenzinformationen zur Logger-API für jede Plattform finden Sie unter [SDKs, Beispiele und API-Referenzen](sdks-samples-apis.html). Die Logger-API gehört zum Kern (Core) des {{site.data.keyword.amashort}}-Client-SDK.
 
 
-### Verwendungsbeispiel
+### Beispiel für die Verwendung der Protokollfunktion
 {: #sample-logger-usage}
 
 Die folgenden Code-Snippets zeigen ein Beispiel für die Verwendung der Protokollfunktion (Logger):
@@ -151,90 +141,81 @@ Die folgenden Code-Snippets zeigen ein Beispiel für die Verwendung der Protokol
 {: #enable-logger-sample-android}
 
 ```Java
-// Speicherung von Protokollen aktivieren
-Logger.setCapture(true);
+// Protokollfunktion zum Speichern der Protokolle auf dem Gerät konfigurieren, sodass sie später
+// an den {{site.data.keyword.amashort}}-Service gesendet werden können
+// Standardmäßig inaktiviert; zum Aktivieren auf true setzen
+Logger.storeLogs(true);
 
-// Auszugebende und zu speichernde Mindestprotokollstufe festlegen
-Logger.setLevel(Logger.LEVEL.INFO);
+// Mindestprotokollierungsebene ändern (optional)
+// Die Standardeinstellung ist Logger.LEVEL.DEBUG
+Logger.setLogLevel(Logger.LEVEL.INFO);
 
 // Zwei Logger-Instanzen erstellen
-Logger logger1 = Logger.getInstance("logger1");
-Logger logger2 = Logger.getInstance("logger2");
+// Sie können mehrere Protokollinstanzen zum Organisieren der Protokolle erstellen
+Logger logger1 = Logger.getLogger("logger1");
+Logger logger2 = Logger.getLogger("logger2");
 
 // Nachrichten mit unterschiedlichen Stufen protokollieren
+// Debugnachricht für Funktion 1
+// Informationsnachricht für Funktion 2
 logger1.debug("debug message");
-logger2.info("info message");// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
+// Die Nachricht logger1.debug wird nicht protokolliert, weil für logLevelFilter der Wert info eingestellt ist
+logger2.info("info message");
+
+// Protokolle an den {{site.data.keyword.amashort}}-Service senden
 Logger.send();
 ```
-
-#### iOS - Objective-C
-{: #enable-logger-sample-objectc}
-
-```Objective-C
-// Speicherung von Protokollen aktivieren
-[IMFLogger setCapture:YES];
-
-// Erfassung nicht abgefangener Ausnahmen starten
-[IMFLogger captureUncaughtExceptions];
-
-// Auszugebende und zu speichernde Mindestprotokollstufe festlegen
-[IMFLogger setLogLevel:IMFLogLevelInfo];
-
-// Zwei Logger-Instanzen erstellen
-IMFLogger *logger1 = [IMFLogger loggerForName:@"logger1"];
-IMFLogger *logger2 = [IMFLogger loggerForName:@"logger2"];
-
-// Nachrichten mit unterschiedlichen Stufen protokollieren
-[logger1 logDebugWithMessages:@"debug message"];
-[logger2 logInfoWithMessages:@"info message"];
-
-// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
-[IMFLogger send];
-```
+{: codeblock}
 
 #### iOS - Swift
 {: #enable-logger-sample-swift}
 
 ```Swift
-// Speicherung von Protokollen aktivieren
-IMFLogger.setCapture(true)
+// Protokollfunktion zum Speichern der Protokolle auf dem Gerät konfigurieren, sodass sie später an den {{site.data.keyword.amashort}}-Service gesendet werden können
+// Standardmäßig inaktiviert; zum Aktivieren auf true setzen
+Logger.logStoreEnabled = true
 
-// Erfassung nicht abgefangener Ausnahmen starten
-IMFLogger.captureUncaughtExceptions()
-
-// Auszugebende und zu speichernde Mindestprotokollstufe festlegen
-IMFLogger.setLogLevel(IMFLogLevel.Info)
+// Mindestprotokollierungsebene ändern (optional)
+// Die Standardeinstellung ist LogLevel.Debug
+Logger.logLevelFilter = LogLevel.Info
 
 // Zwei Logger-Instanzen erstellen
-let logger1 = IMFLogger(forName: "logger1");
-let logger2 = IMFLogger(forName: "logger2");
+// Sie können mehrere Protokollinstanzen zum Organisieren der Protokolle erstellen
+let logger1 = Logger.logger(forName: "feature1Logger")
+let logger2 = Logger.logger(forName: "feature2Logger")
 
 // Nachrichten mit unterschiedlichen Stufen protokollieren
-logger1.logDebugWithMessages("debug message")
-logger2.logInfoWithMessages("info message")
+logger1.debug("debug message for feature 1")
+//Die Nachricht logger1.debug wird nicht protokolliert, weil für logLevelFilter der Wert info eingestellt ist
+logger2.info("info message for feature 2")
 
-// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
-IMFLogger.send()
-
+// Protokolle an den {{site.data.keyword.amashort}}-Service senden
+Logger.send()
 ```
+{: codeblock}
 
 #### Cordova
 {: #enable-logger-sample-cordova}
 
 ```JavaScript
 // Speicherung von Protokollen aktivieren
-MFPLogger.setCapture(true);
+BMSLogger.setCapture(true);
 
 // Auszugebende und zu speichernde Mindestprotokollstufe festlegen
-MFPLogger.setLevel(MFPLogger.INFO);
+BMSLogger.setLevel(BMSLogger.INFO);
 
 // Zwei Logger-Instanzen erstellen
-var logger1 = MFPLogger.getInstance("logger1");
-var logger2 = MFPLogger.getInstance("logger2");// Nachrichten mit unterschiedlichen Stufen protokollieren
+var logger1 = BMSLogger.getInstance("logger1");
+var logger2 = BMSLogger.getInstance("logger2");
+
+// Nachrichten mit unterschiedlichen Stufen protokollieren
 logger1.debug("debug message");
-logger2.info("info message");// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
-MFPLogger.send(success, failure);
+logger2.info("info message");
+
+// Gespeicherte Protokolle an den {{site.data.keyword.amashort}}-Service senden
+BMSLogger.send(success, failure);
 ```
+{: codeblock}
 
 ### Interne Protokolle für das {{site.data.keyword.amashort}}-Client-SDK aktivieren
 {: #enable-logger-sdklogs}
@@ -246,13 +227,14 @@ Das {{site.data.keyword.amashort}}-Client-SDK ermöglicht eine bequemere Entwick
 ```
 Logger.setSDKInternalLoggingEnabled(true);
 ```
+{: codeblock}
 
 ## Nutzungsanalysedaten erfassen
 {: #usage-analytics}
 
 Sie können das {{site.data.keyword.amashort}}-Client-SDK so konfigurieren, dass Nutzungsanalysedaten aufgezeichnet und die aufgezeichneten Daten an den {{site.data.keyword.amashort}}-Service gesendet werden.
-
-**Wichtig**: Die Überwachungsfunktionen des Service {{site.data.keyword.amashort}} sollen auf den neuen Service [{{site.data.keyword.mobileanalytics_short}}](https://console.ng.bluemix.net/catalog/services/mobile-analytics) migriert werden. Das neue Swift-SDK nutzt den neuen Service {{site.data.keyword.mobileanalytics_short}}, der eine deutlich umfangreichere Analyseerfahrung bereitstellt. Der Service {{site.data.keyword.mobileanalytics_short}} befindet sich aktuell in der Versuchsphase und soll planmäßig noch dieses Jahr allgemein verfügbar gemacht werden. Es empfiehlt sich, die Migration Ihrer Anwendungen zum Verwenden des neuen Service {{site.data.keyword.mobileanalytics_short}} und des Swift-SDK zu prüfen, da die Verwendung und Unterstützung der Überwachungsfunktionen des Service {{site.data.keyword.amashort}} eingestellt werden sollen, wenn {{site.data.keyword.mobileanalytics_short}} allgemein verfügbar ist.
+<!--
+**Important**: The monitoring functions of the {{site.data.keyword.amashort}} service are planned to be migrated to the new [{{site.data.keyword.mobileanalytics_short}} service](https://console.ng.bluemix.net/catalog/services/mobile-analytics). The new Swift SDK leverages the new {{site.data.keyword.mobileanalytics_short}} service, which provides a much richer analytics experience. The {{site.data.keyword.mobileanalytics_short}} service is currently in experimental phase with plans to be made generally available later this year. We recommend investigating migrating your applications to use the new {{site.data.keyword.mobileanalytics_short}} service and Swift SDK since the monitoring functions of {{site.data.keyword.amashort}} service are planned to be discontinued when {{site.data.keyword.mobileanalytics_short}} is generally available. -->
 
 **Anmerkung:** Stellen Sie sicher, dass Sie die Protokollerfassung aktiviert haben, bevor Sie die Aufzeichnung von Nutzungsanalysedaten starten.
 
@@ -262,68 +244,46 @@ Verwenden Sie die folgenden APIs, um die Aufzeichnung und das Senden von Nutzung
 {: #usage-analytics-android}
 
 ```Java
+// Aufzeichnung der Nutzungsanalysedaten inaktivieren (z. B. zum Sparen von Speicherplatz)
+// Aufzeichnung ist standardmäßig aktiviert
+Analytics.disable();
+	
 // Aufzeichnung von Nutzungsanalysedaten aktivieren
-MFPAnalytics.enable();
-
-// Aufzeichnung der Anwendungsstartzeit starten.
-// Fügen Sie diesen Code in der Methode 'onCreate' Ihrer Hauptaktivität hinzu.
-MFPAnalytics.startLoggingApplicationStartup();
-
-// Dauer des Anwendungsstarts aufzeichnen.
-// Fügen Sie diesen Code in der Methode 'onStart' Ihrer Hauptaktivität hinzu.
-MFPAnalytics.logApplicationStartup();
-
-// Vorder- und Hintergrundereignisse der Anwendung aufzeichnen.
-// Fügen Sie diesen Code in den Methoden 'onPause' und 'onResume' Ihrer Hauptaktivität hinzu.
-MFPAnalytics.logSessionStart();
-MFPAnalytics.logSessionEnd();
-
-// Aufgezeichnete Nutzungsanalysedaten an den {{site.data.keyword.amashort}}-Service senden
-MFPAnalytics.send();
+Analytics.enable();
+	
+Analytics.log(eventJSONObject);
+	
+// Aufgezeichnete Nutzungsanalysedaten an den Mobile Analytics-Service senden
+Analytics.send();
 ```
-
-#### iOS - Objective-C
-{: #usage-analytics-objectc}
-
-**Wichtig**: Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden.
-
-Das Objective-C-SDK meldet Überwachungsdaten an die Überwachungskonsole des Service {{site.data.keyword.amashort}}. Falls Sie auf die Überwachungsfunktionen des Service {{site.data.keyword.amashort}} angewiesen sind, verwenden Sie weiterhin das Objective-C-SDK.
-
-```Objective-C
-// Aufzeichnung von Nutzungsanalysedaten aktivieren
-[[IMFAnalytics sharedInstance] setEnabled:YES];
-
-// Aufzeichnung von Anwendungslebenszyklusereignissen starten
-[[IMFAnalytics sharedInstance] startRecordingApplicationLifecycleEvents];
-
-
-// Aufgezeichnete Nutzungsanalysedaten an den {{site.data.keyword.amashort}}-Service senden
-[[IMFAnalytics sharedInstance] sendPersistedLogs];
-```
+{: codeblock}
 
 #### iOS - Swift
 {: #usage-analytics-swift}
 
 ```Swift
+// Aufzeichnung der Nutzungsanalysedaten inaktivieren (z. B. zum Sparen von Speicherplatz)
+// Aufzeichnung ist standardmäßig aktiviert
+Analytics.enabled = false
+
 // Aufzeichnung von Nutzungsanalysedaten aktivieren
-IMFAnalytics.sharedInstance().setEnabled(true)
+Analytics.enabled = true
 
-// Aufzeichnung von Anwendungslebenszyklusereignissen starten
-IMFAnalytics.sharedInstance().startRecordingApplicationLifecycleEvents()
-
-
-// Aufgezeichnete Nutzungsanalysedaten an den {{site.data.keyword.amashort}}-Service senden
-IMFAnalytics.sharedInstance().sendPersistedLogs()
+// Aufgezeichnete Nutzungsanalysedaten an den {{site.data.keyword.mobileanalytics_short}}-Service senden
+Analytics.send()
 ```
+{: codeblock}
 
 #### Cordova
 {: #usage-analytics-cordova}
 
 ```JavaScript
 // Aufzeichnung von Nutzungsanalysedaten aktivieren
-MFPAnalytics.enable();
+BMSAnalytics.enable();
 
 // Aufgezeichnete Nutzungsanalysedaten an den {{site.data.keyword.amashort}}-Service senden
-MFPAnalytics.send();
+BMSAnalytics.send();
 ```
+{: codeblock}
+
 **Anmerkung:** Wenn Sie Cordova-Anwendungen entwickeln, verwenden Sie die native API, um die Aufzeichnung von Anwendungslebenszyklusereignissen zu aktivieren.

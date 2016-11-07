@@ -2,16 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.amashort}} SDK, 샘플 및 API 참조
-마지막 업데이트 날짜: 2016년 7월 17일
-{: .last-updated}
 
-앱에 {{site.data.keyword.amashort}} SDK를 추가하려면, 사용하려는 SDK를 선택하십시오. 그런 다음 SDK를 앱으로 가져오도록 종속성 관리자를 구성하십시오.
+# {{site.data.keyword.amashort}} SDK, 샘플 및 API 참조
+앱에 {{site.data.keyword.amafull}} SDK를 추가하려면, 사용하려는 SDK를 선택하십시오. 그런 다음 SDK를 앱으로 가져오도록 종속성 관리자를 구성하십시오.
 {:shortdesc}
 
 **참고:** 후속 섹션에서는 SDK 설치에 대한 추가 정보를 제공합니다. 
@@ -39,6 +37,7 @@ copyright:
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS(Swift SDK)
 {: #coresdk-ios-swift}
@@ -53,6 +52,7 @@ Podfile을 편집하여 다음 행을 필요한 대상에 추가한 후 실행�
 use_frameworks!
 pod 'BMSSecurity'
 ```
+{: codeblock}
 
 ### iOS(Objective-C SDK)
 {: #coresdk-ios}
@@ -69,6 +69,7 @@ Podfile을 편집하여 다음 행을 필요한 대상에 추가한 후 실행�
 ```Bash
 pod 'IMFCore'
 ```
+{: codeblock}
 
 ### Cordova
 {: #coresdk-cordova}
@@ -83,6 +84,7 @@ Mobile Client Access Cordova 플러그인을 설치하십시오.
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## Facebook 인증용 클라이언트 SDK
 {: #facebooksdk}
@@ -104,6 +106,7 @@ cordova plugin add ibm-mfp-core
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS(Swift SDK)
 {: #facebooksdk-ios-swift}
@@ -118,6 +121,7 @@ Podfile을 편집하여 다음을 필요한 대상에 추가한 후 실행하십
 use_frameworks!
 pod 'BMSFacebookAuthentication'
  ```
+{: codeblock}
 
 ### iOS(Objective-C SDK)
 {: #facebooksdk-ios}
@@ -125,7 +129,7 @@ pod 'BMSFacebookAuthentication'
 [Git 저장소](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
 [API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
-*참고:* Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만, 새로운 Swift SDK를 위해 올해 말에 중단될 계획입니다. 새 애플리케이션의 경우 Swift SDK를 사용하는 것이 좋습니다(iOS Swift SDK 설정 참조). 
+**참고:** Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만, 새로운 Swift SDK를 위해 올해 말에 중단될 계획입니다. 새 애플리케이션의 경우 Swift SDK를 사용하는 것이 좋습니다(iOS Swift SDK 설정 참조). 
 #### CocoaPods로 Facebook SDK 설치
 {: #facebooksdk-ios-cocoapods}
 
@@ -134,6 +138,7 @@ Podfile을 편집하여 다음 행을 추가한 후 실행하십시오.
 ```Bash
 pod 'IMFFacebookAuthentication'
 ```
+{: codeblock}
 
 ### Cordova
 {: #facebooksdk-cordova}
@@ -148,6 +153,7 @@ Cordova 플러그인을 설치하십시오.
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## Google 인증용 클라이언트 SDK
 {: #googlesdk}
@@ -170,6 +176,7 @@ cordova plugin add ibm-mfp-core
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS(Swift SDK)
 {: #googlesdk-ios-swift}
@@ -185,6 +192,7 @@ Podfile을 편집하여 다음을 추가한 후 실행하십시오.
 use_frameworks!
 pod 'BMSGoogleAuthentication'
 ```
+{: codeblock}
 
 ### iOS(Objective-C SDK - 더 이상 사용되지 않음)
 {: #googlesdk-ios}
@@ -200,6 +208,7 @@ Podfile을 편집하여 다음 행을 추가한 후 실행하십시오.
 ```Bash
 pod 'IMFGoogleAuthentication'
 ```
+{: codeblock}
 
 ### Cordova
 {: #googlesdk-cordova}
@@ -214,6 +223,7 @@ pod 'IMFGoogleAuthentication'
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## Node.js 서버용 서버 SDK
 {: #serversdk}
@@ -228,6 +238,7 @@ SDK를 설치하기 위해 NPM을 실행하십시오.
 ```Bash
 npm install -save bms-mca-token-validation-strategy
 ```
+{: codeblock}
 
 ## Liberty for Java&trade; 서버용 서버 SDK
 {: #serverlibertysdk}
@@ -236,9 +247,10 @@ npm install -save bms-mca-token-validation-strategy
 
 #### Liberty SDK 설치
 {: #libertysdk}
+
 1. `com.ibm.worklight.oauth.tai_1.0.0.jar` 파일을 `${wlp.user.dir}/extensions/lib` 디렉토리로 복사하십시오. 
 
-**팁:** `$<wlp.user.dir>`은 Liberty for Java 런타임에 대한 사용자 디렉토리입니다. 기본 디렉토리 이름은 `usr`입니다. 
+  **팁:** `$<wlp.user.dir>`은 Liberty for Java 런타임에 대한 사용자 디렉토리입니다. 기본 디렉토리 이름은 `usr`입니다. 
 
 1. `OAuthTai-1.0.mf` 디렉토리를 `$<wlp.user.dir>/extension/lib/features` 디렉토리로 복사하십시오. 
 
@@ -255,6 +267,7 @@ SDK를 설치하기 위해 NPM을 실행하십시오.
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## 사용자 정의 ID 제공자 샘플
 {: #customidprovider}
@@ -276,3 +289,4 @@ Podfile을 편집하여 다음 행을 추가한 후 실행하십시오.
 ```Bash
 pod 'IMFURLProtocol'
 ```
+{: codeblock}

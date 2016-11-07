@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -11,9 +11,8 @@ copyright:
 # Benutzer mit Google-Berechtigungsnachweisen authentifizieren
 {: #google-auth}
 
-Letzte Aktualisierung: 22. Juli 2016
 
-Sie können den {{site.data.keyword.amashort}}-Service zum Schutz von Ressourcen konfigurieren und Google als Identitätsprovider verwenden. Die Benutzer Ihrer mobilen Anwendung oder Ihrer Webanwendung können dann ihre Google-Berechtigungsnachweise für die Authentifizierung nutzen.
+Sie können den {{site.data.keyword.amafull}}-Service zum Schutz von Ressourcen konfigurieren und Google als Identitätsprovider verwenden. Die Benutzer Ihrer mobilen Anwendung oder Ihrer Webanwendung können dann ihre Google-Berechtigungsnachweise für die Authentifizierung nutzen.
 {:shortdesc}
 
 **Wichtig:** Sie müssen das von Google bereitgestellte Client-SDK nicht separat installieren. Das Google-SDK wird automatisch durch Abhängigkeitenmanager installiert, wenn Sie das {{site.data.keyword.amashort}}-Client-SDK konfigurieren.
@@ -30,7 +29,7 @@ Im folgenden Diagramm wird die Integration von {{site.data.keyword.amashort}} in
 * Verwenden Sie das {{site.data.keyword.amashort}}-SDK zum Senden einer Anforderung an ihre Back-End-Ressourcen, die mit dem {{site.data.keyword.amashort}}-Server-SDK geschützt werden.
 * Das {{site.data.keyword.amashort}}-Server-SDK erkennt die nicht autorisierte Anforderung und gibt den Code HTTP 401 sowie den Berechtigungsbereich zurück.
 * Das {{site.data.keyword.amashort}}-Client-SDK erkennt den Code HTTP 401 automatisch und startet den Authentifizierungsprozess.
-* Das {{site.data.keyword.amashort}}-Client-SDK kontaktiert den {{site.data.keyword.amashort}}-Service und fordert einen Berechtigungsheader an. 
+* Das {{site.data.keyword.amashort}}-Client-SDK kontaktiert den {{site.data.keyword.amashort}}-Service und fordert einen Berechtigungsheader an.
 * Der {{site.data.keyword.amashort}}-Service fordert den Client auf, sich zuerst bei Google durch die Bereitstellung einer Authentifizierungsanforderung (Challenge) zu authentifizieren.
 * Das {{site.data.keyword.amashort}}-Client-SDK verwendet das Google-SDK, um den Authentifizierungsprozess zu starten. Nach einer erfolgreichen Authentifizierung gibt das Google-SDK ein Google-Zugriffstoken zurück.
 * Das Google-Zugriffstoken wird als Antwort auf die Authentifizierungsanforderung (Challenge) betrachtet. Das Token wird an den {{site.data.keyword.amashort}}-Service gesendet.
@@ -43,10 +42,10 @@ Im folgenden Diagramm wird die Integration von {{site.data.keyword.amashort}} in
 
 ### {{site.data.keyword.amashort}}-Anforderungsablauf für Webanwendung
 {: #mca-google-web-sequence}
-Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist vergleichbar mit dem Ablauf für einen mobilen Client. {{site.data.keyword.amashort}} schützt jedoch die Webanwendung anstatt einer {{site.data.keyword.Bluemix_notm}}-Back-End-Ressource. 
+Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist vergleichbar mit dem Ablauf für einen mobilen Client. {{site.data.keyword.amashort}} schützt jedoch die Webanwendung anstatt einer {{site.data.keyword.Bluemix_notm}}-Back-End-Ressource.
 
-  * Die ursprüngliche Anforderung wird von der Webanwendung (zum Beispiel von einem Anmeldeformular) gesendet. 
-  * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource.  
+  * Die ursprüngliche Anforderung wird von der Webanwendung (zum Beispiel von einem Anmeldeformular) gesendet.
+  * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource. 
 
 
 
