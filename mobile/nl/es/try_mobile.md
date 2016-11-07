@@ -1,9 +1,18 @@
+---
+
+copyright:
+  years: 2016
+lastupdated: "2016-10-19"
+
+---
+
 # Creación de apps móviles desde el contenedor modelo de {{site.data.keyword.mobilefirstbp}} Starter
 {: #try_mobile}
-Última actualización: 18 de julio de 2016
-{: .last-updated} 
 
-Puede utilizar cada uno de los servicios de {{site.data.keyword.Bluemix}} Mobile independientemente. También puede utilizarlos juntos, con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} Starter, para obtener el mayor beneficio. 
+Última actualización: 19 de octubre de 2016
+{: .last-updated}
+
+Puede utilizar cada uno de los servicios de {{site.data.keyword.Bluemix}} Mobile independientemente. También puede utilizarlos juntos, con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} Starter, para obtener el mayor beneficio.
 
 Para comenzar, utilice {{site.data.keyword.mobilefirstbp}} Starter para crear su app. El contenedor modelo le permite completar las siguientes acciones:
 
@@ -11,7 +20,7 @@ Para comenzar, utilice {{site.data.keyword.mobilefirstbp}} Starter para crear su
 * Proporcione una instancia de cada uno de los servicios de {{site.data.keyword.Bluemix_notm}} Mobile y enlace el servicio a la aplicación Node.js.
 
 <!--
-<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate 
+<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
 -->
 
 Después de utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} Starter para crear su app, puede obtener ejemplos de Hello Bluemix para cada uno de los servicios o iniciar la instrumentación de la app existente para utilizar los servicios de {{site.data.keyword.Bluemix_notm}}.
@@ -43,8 +52,8 @@ Arquitectura de ![{{site.data.keyword.Bluemix_notm}} Mobile Services](images/bms
 <td valign="top"><b>Proveedores de identidad de usuarios</b> <br/>Puede utilizar los siguientes proveedores de identidad: <ul><li>Facebook</li><li>Google</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="icono del servicio Push Notifications"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>El servicio {{site.data.keyword.mobilepushfull}} ofrece una plataforma unificada para enviar y gestionar notificaciones push móviles destinadas a plataformas iOS y Android. Este servicio gestiona la correlación de los usuarios de aplicaciones en sus dispositivos, plataforma de dispositivos, y maneja la asignación de notificaciones push en los dispositivos. Con este servicio, puede enviar difusiones, unicasts (en función del userID, deviceID), y etiquetas (o temas) basadas en notificaciones push a sus usuarios de aplicación móvil.</td>
-<td valign="top"><b>Proveedores de servicio Push</b><ul><li>Apple Push Notifications Service</li><li>Google Cloud Messaging</li></ul></td>
+<td><img src="images/catalog_icons-09.png" alt="Icono del servicio Push Notifications"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>El servicio {{site.data.keyword.mobilepushfull}} ofrece una plataforma unificada para enviar y gestionar notificaciones push destinadas a plataformas móviles (iOS y Android) y aplicaciones de navegador web. Este servicio gestiona la correlación de los usuarios de aplicaciones en sus dispositivos, plataforma de dispositivos y navegadores, y maneja la asignación de notificaciones push en los suscriptores. Con este servicio, puede enviar difusiones, unicasts (en función del userID, deviceID), y etiquetas (o temas) basadas en notificaciones push para sus clientes.</td>
+<td valign="top"><b>Proveedores de servicio Push</b><ul><li>Apple Push Notifications Service</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>
 <td><img src="images/cloudant64.png" alt="Icono de servicio de Cloudant"><b>Cloudant NoSQLDB</b><br/> Cloudant es una base de datos de NoSQL como servicio (DBaaS). Está creada desde la base para escalar globalmente, ejecutarse sin parar y manejar una gran variedad de tipos de datos como JSON, texto completo y geoespacial. </td>

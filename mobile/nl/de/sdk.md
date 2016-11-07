@@ -2,105 +2,71 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-14"
 
 ---
-# SDKs, Beispiele und API-Referenz
+# SDKs
 {: #sdk}
-Letzte Aktualisierung: 11. August 2016
+
+Letzte Aktualisierung: 14. Oktober 2016
 {: .last-updated}
 
 Um {{site.data.keyword.Bluemix}} Mobile Services-SDKs zu Ihrer App hinzuzufügen, wählen Sie die SDKs aus, die Sie verwenden möchten, und konfigurieren Sie Ihren Abhängigkeitsmanager so, dass die SDKs in Ihre App übertragen werden.
 
-<table id="sdk__sdk-table-mbaas"><tbody><th><img src="images/Droid_SDK_icon.png" alt="Android"></th><th><img src="images/iOS_SDK_icon.png" alt="iOS"></th><th><img src="images/cordova_logo_white.png" alt="Cordova"></th><tr><td><!--<img src="images/Droid_SDK_icon.png" alt="android">-->
-<!---
-<p class="cta"><a href="/docs/starters/mobilefirst/gettingstarted/android_existingproject.html#setup_sdk_gradle">Get SDK</a></p>
---->
-<!-- Android -->
-<p>Beispiele</p>
-	<ul>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld">HelloBluemix</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">HelloPush</a>
-</li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">HelloAuthentication</a>
-</li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellotodo" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">Hello ToDo</a></li>
-</ul>
 
-<p>SDKs in GitHub</p>
-	<ul><li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">bms-clientsdk-android-core</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">bms-clientsdk-android-security-facebookauthentication</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">bms-clientsdk-android-security-googleauthentication</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">bms-clientsdk android-push</a></li>
-</ul>
+## Client-SDKs
+{: #client_sdk}
 
-<p>API-Referenzen</p>
-	<ul>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">Push-REST-API</a></li>
-</ul>
-</td>
-
-<!-- iOS -->
-
-<td valign="top"><!--<img src="images/iOS_SDK_icon.png" alt="ios">-->
-
-<!---
-<p class="cta"><a href="/docs/starters/mobilefirst/gettingstarted/existingproject.html#setup_sdk_cocoapods">Get
-SDK</a></p> --->
-
-<p>Beispiele</p>
-<ul>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellobluemix">HelloBluemix</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">HelloPush</a>
-</li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">HelloAuthentication</a>
-</li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellotodo" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">Hello ToDo</a></li>
-</ul>
+Folgende SDKs können Sie in Ihrer mobilen Anwendung verwenden, um die jeweiligen Leistungsmerkmale zu nutzen. 
 
 
-<!--
-<p class="devops"><a href="https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master">SDK on IBM
-DevOps</a></p>
--->
-<p>SDK in {{site.data.keyword.IBM}} DevOps</p>
-<ul>
-<li><a href="https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master" rel="external" title="(Wird als Archivdatei heruntergeladen)" target="_blank">Bluemix MobileFirst Services SDK for iOS</a></li>
-</ul>
+### Android-SDKs
+{: #android_sdk}
+
+- [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core) 
+- [Analytics-API-SDK](https://github.com/ibm-bluemix-mobile-services/mfp-clientsdk-android-analyticsspec) 
+- [Analytics-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics) 
+- [Push-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push) 
+- [Facebook-Authentifizierungs-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication) 
+- [Google-Authentifizierungs-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication) 
 
 
-<p>API-Referenzen</p>
-<ul>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">IMFURLProtocol</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">Push-REST-API</a></li>
-</ul>
+### iOS-SDKs
+{: #ios_sdk}
 
- <!-- Cordova -->
-<td valign="top"><!--<img src="images/cordova_logo_white.png" alt="cordova">-->
-<!---
-<p class="cta"><a href="test">Get SDK</a></p>
---->
-<!---
-<ul><li><strong>Samples:</strong></li>
-<li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
--->
-</ul>
+- [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
+- [Analytics-API-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics-api) 
+- [Analytics-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics) 
+- [Push-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push) 
+- [Facebook-Authentifizierungs-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
+- [Google-Authentifizierungs-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication) 
+- [Security-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security) 
 
-<p>Beispiele</p> 
-<ul>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld">HelloBluemix</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">HelloPush</a>
-</li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">HelloAuthentication</a>
-</li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellotodo/" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">Hello ToDo</a></li>
-</ul>
 
-<p>SDKs in GitHub</p>
-	<ul>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">bms-clientsdk-cordova-plugin-core</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push" rel="external" title="(Wird in neuer Registerkarte oder neuem Fenster geöffnet.)" target="_blank">bms-clientsdk android-push</a></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+### Cordova-Plug-ins
+{: #cordova_plugin}
+
+- [Core-Plug-in](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+- [Push-Plug-in](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+
+
+## Server-SDKs
+{: #server_sdk}
+
+Wenn Sie über eine Java-, NodeJS- oder Swift-Serveranwendung verfügen, können Sie für die Kommunikation mit den entsprechenden Services folgende SDKs verwenden.
+
+
+### Push-Server-SDKs
+{: #push_sdk}
+
+- [Push-Java-Server-SDK](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java) 
+- [Push-Swift-Server-SDK](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift) 
+- [Push-NodeJS-Server-SDK](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
+
+
+### MCA-Server-SDK
+{: #mca_sdk}
+
+- [MCA-Swift-Server-SDK](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift)
+
+

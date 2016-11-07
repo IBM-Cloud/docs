@@ -68,7 +68,9 @@ copyright:
 
 	### iOS
 	{: #cordova-ios-configure}
-ビルド・エラーを回避するために Xcode プロジェクトを次のように構成します。	1. 最新バージョンの Xcode を使用して、*&lt;app_name&gt;*/platforms/ios ディレクトリー内の `xcode.proj` ファイルを開きます。
+  ビルド・エラーを回避するために Xcode プロジェクトを次のように構成します。
+
+	1. 最新バージョンの Xcode を使用して、*&lt;app_name&gt;*/platforms/ios ディレクトリー内の `xcode.proj` ファイルを開きます。
 
 		**重要:** 最新の Swift 構文に変換するよう指示するメッセージを受け取った場合は、**「キャンセル」**をクリックします。
 

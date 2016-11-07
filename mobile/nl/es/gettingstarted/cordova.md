@@ -51,7 +51,7 @@ Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utiliz
 5. Configure el ejemplo HelloWorld.
 
 	* Vaya al directorio donde ha clonado el proyecto.
-	* Abra el archivo *&lt;su_directorio_app&gt;*/www/js/index.js file y substituya LA *&lt;RUTA_APLICACIÓN&gt;* y EL *&lt;ID_APLICACIÓN&gt;* por sus valores de ruta y de ID de aplicación de Bluemix.
+	* Abra el archivo *&lt;su_directorio_app&gt;*/www/js/index.js file y substituya LA *&lt;RUTA_APLICACIÓN&gt;* y el *&lt;ID_APLICACIÓN&gt;* por sus valores de ruta y de ID de aplicación de Bluemix.
 
 		**Nota:** Compruebe que su ruta es segura utilizando el protocolo https.
 
@@ -119,12 +119,12 @@ Se mostrará una aplicación de vista única con un botón **PING BLUEMIX**. Cua
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
 Si la conexión falla, verá:
-  `Algo salió mal`
+  `Bummer. Something went wrong`
   {: screen}
    
 En el mensaje se incluye más información sobre el error. Puede comprobar los siguientes elementos para resolver el error:
 
-- Compruebe que ha pegado correctamente los valores de ruta y de GUID:
+- Compruebe que ha pegado correctamente los valores de ruta y de GUID.
 - Visualice el registro de depuración de Xcode o Android.
 - Compruebe el estado de su app en {{site.data.keyword.Bluemix_notm}}.
 
