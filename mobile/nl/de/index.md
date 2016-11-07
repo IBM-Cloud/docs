@@ -2,101 +2,46 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-13"
 
 ---
 {:new_window: target="_blank"}
 
-# Mobile Projekte mithilfe des Mobile-Dashboards erstellen
+# {{site.data.keyword.Bluemix}} Mobile-Dashboard
 {: #mobile}
-Letzte Aktualisierung: 21. July 2016
-{: .last-updated} 
+Letzte Aktualisierung: 13. Oktober 2016
+{: .last-updated}
 
-Mit {{site.data.keyword.Bluemix}} Mobile-Services können Sie vordefinierte, verwaltete und skalierbare Cloud-Services in Ihre mobilen Anwendungen integrieren, ohne dass die IT-Abteilung involviert werden muss. Sie können sich auf das Erstellen mobiler Apps statt auf die Komplexitäten beim Verwalten der Back-End-Infrastruktur konzentrieren.
+Das {{site.data.keyword.Bluemix}} Mobile-Dashboard bietet die Verwaltung der {{site.data.keyword.Bluemix_notm}}-Funktionen für die Erstellung und Verwaltung Ihrer {{site.data.keyword.Bluemix_notm}} Mobile-Anwendung von einem Punkt aus. Das Mobile-Dashboard vereint die für einen Mobile-Entwickler erforderlichen allgemeinen Services zu einer einzigen, übergreifenden Umgebung, die für den Mobile-Entwickler optimiert wurde.
 
-Über das Mobile-Dashboard steht ein integrierter Zugang zu {{site.data.keyword.Bluemix_notm}} bereit. Sie können neue mobile Projekte problemlos aus dem Dashboard erstellen. Über die Ansicht **Projekte** können Sie alle Projekte von einer Position aus verwalten. In der Ansicht **Services** werden Ihre vorhandenen Instanzen mobiler Services angezeigt.
+Das Mobile-Dashboard ermöglicht dem Mobile-Entwickler die Erstellung eines Projekts über eine Vielzahl von Startern, die Erstellung wichtiger {{site.data.keyword.Bluemix_notm}}-optimierter Services und deren Verbindung mit Ihrem Projekt sowie das schnelle Herunterladen von Code mithilfe von SDKs. Die SDKs sind vollständig mit Funktions-Berechtigungsnachweisen integriert, um Ihnen die Ausführung auf Ihrem Gerät innerhalb weniger Minuten zu ermöglichen. Wenn Ihre Anwendung aktiv ist und Sie die Push-, Analytics- und/oder Mobile Authentication-Funktionen eingerichtet und konfiguriert haben, können Sie zu Ihrem Projekt zurückkehren, um die Aktivitäten Ihrer Anwendungsbenutzer zu überwachen und zu verwalten.
 
-Um das Mobile-Dashboard anzuzeigen, klicken Sie an der {{site.data.keyword.Bluemix_notm}}-Ausgangsposition auf **Mobile**.
-<img src="images/mobile_dashboard.jpg" alt="{{site.data.keyword.Bluemix_notm}}-Ausgangsposition">
+Wenngleich das Mobile-Dashboard eine integrierte Entwicklungsumgebung bietet, wünscht sich mancher Entwickler möglicherweise eine differenziertere Steuerung und möchte die Services gerne manuell miteinander verbinden. Wenn Sie diesen Ansatz bevorzugen, kann die Verwendung der [{{site.data.keyword.mobilefirstbp}}-Starter-Boilerplate](try_mobile.html) sinnvoll sein.
 
-Klicken Sie für den Beginn Ihrer Arbeit in der Ansicht **Projects** des Mobile-Dashboards auf **Neues Projekt**.
 
-## {{site.data.keyword.Bluemix_notm}} Mobile-Services - Übersicht
-{: #mobile_services_overview}
+<!--With {{site.data.keyword.Bluemix}} Mobile services, you can incorporate pre-built, managed, and scalable cloud services into your mobile applications. You can focus on building your mobile apps, instead of the complexities of managing the back-end infrastructure.
 
-In der folgenden Tabelle werden die verfügbaren {{site.data.keyword.Bluemix_notm}} Mobile-Services dargestellt. Sie können einzelne Services aus dem {{site.data.keyword.Bluemix_notm}}-Katalog nutzen oder diese Services in Ihr mobiles Projekt integrieren.
+The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bluemix_notm}} where you can create mobile projects easily from within the dashboard.
+-->
 
-<table summary="In dieser Tabelle werden {{site.data.keyword.Bluemix_notm}} Mobile-Services beschrieben und Links zur Servicedokumentation angegeben">
-<caption>Tabelle 1. {{site.data.keyword.Bluemix_notm}} Mobile-Services</caption>
-<th>{{site.data.keyword.Bluemix_notm}} Mobile-Service</th>
-<th>Beschreibung</th>
-<tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}-Symbol"><br/>{{site.data.keyword.mobileanalytics_short}} (Experimentell)</td>
-<td valign="top">Mithilfe des Service {{site.data.keyword.mobileanalytics_full}} können Sie Status, Verhalten und Kontext mobiler Apps, mobiler Benutzer und mobiler Geräte messen.<br/><br/>
-Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="../services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} - Link zur Dokumentation">Dokumentation zu {{site.data.keyword.mobileanalytics_short}}</a>.
-</td>
-</tr>
-<tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}}-Servicesymbol"><br/>{{site.data.keyword.amashort}}</td>
-<td valign="top">Mithilfe des Service {{site.data.keyword.amafull}} können Sie Sicherheitsfunktionen zu Ihrer mobilen App hinzufügen. Sie können Clientauthentifizierung und Identitätsprovider konfigurieren, damit sich Benutzer bei der Apppp mit ihren bereits vorhandenen Google- oder Facebook-Konten anmelden können.<br/><br/>
-Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="../services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} - Link zur Dokumentation">Dokumentation zu {{site.data.keyword.amashort}}</a>.</td>
-</tr>
-<tr>
-<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}}-Servicesymbol"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
-<td valign="top">Mithilfe des Service {{site.data.keyword.mobilefoundation_long}} können Sie die Einrichtung einer {{site.data.keyword.mfp_full}}-Umgebung für Entwicklung, Test und Betrieb mobiler Unternehmens-Apps beschleunigen.<br/><br/>
-Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="../services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} - Link zur Dokumentation">Dokumentation zu {{site.data.keyword.mobilefoundation_short}}</a>.</td>
-</tr>
-<tr>
-<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}}-Servicesymbol"><br/>{{site.data.keyword.mqa}}</td>
-<td valign="top">Mithilfe des Service {{site.data.keyword.mqafull}} können Sie mobile Qualitätsservices für Ihre Apps erkunden und einrichten. Für einen raschen Einblick in die Problematik in Bezug auf die Apps, mit denen Sie arbeiten, können Sie die allgemeinen Qualitätsmetriken für Ihre mobilen Apps anzeigen. Diese Metriken umfassen Informationenen zu Abstürzen, Programmfehlern, Benutzerfeedback und Benutzerstimmung. Wenn Sie diese Informationen für Ihre Apps anzeigen, können Sie feststellen, ob bestimmte Themen einer weiteren Untersuchung bedürfen.<br/><br/>
-Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="../services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} - Link zur Dokumentation">Dokumentation zu {{site.data.keyword.mqa}}</a>.</td>
-</tr>
-<tr>
-<td><img src="images/catalog_icons-09.png" alt="Symbol für Push Notifications-Service"><br/>{{site.data.keyword.mobilepushshort}}</td>
-<td valign="top">Mithilfe des Service {{site.data.keyword.mobilepushfull}} können Sie mobile Push-Benachrichtigungen für iOS- und Android-Plattformen senden und verwalten. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten und zur Geräteplattform und führt das Senden von Push-Benachrichtigungen an die Geräte aus. Mit diesem Service können Sie Rundsendungen, Unicasts (auf der Basis von Benutzer-ID und Geräte-ID) sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an die Benutzer Ihrer mobilen Anwendungen senden.<br/><br/>
-Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="../services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} - Link zur Dokumentation">Dokumentation zu {{site.data.keyword.mobilepushshort}}</a>.</td>
-</table>
 
-## Mobile Services integrieren
-{: #services_integration}
-Sie können Ihre bereits vorhandenen {{site.data.keyword.Bluemix_notm}} Mobile-Services wie {{site.data.keyword.mobilepushshort}} und {{site.data.keyword.cloudant}} in Ihr Projekt integrieren.
+Um mit dem Mobile-Dashboard zu arbeiten, klicken Sie in Ihrer {{site.data.keyword.Bluemix_notm}}-Konsole auf die Kategorie **Mobile**.
 
-#### {{site.data.keyword.mobilepushshort}} integrieren
-{: #push_integration}
 
-Führen Sie die folgenden Schritte aus, um Ihren bereits vorhandenen {{site.data.keyword.mobilepushshort}}-Service zu integrieren:
+## Einführung
+{: getting-started-mobiledashboard}
 
-1. Klicken Sie auf Ihre Instanz des Service {{site.data.keyword.mobilepushshort}}.
-2. Klicken Sie auf **Mobile Optionen** und kopieren Sie die Werte für **Route** und **App-Guid**.
+Das Dashboard ermöglicht Ihnen die Verwaltung mobiler Apps über das Konzept eines Projekts. Erstellen Sie auf der Seite **Einführung** ein Projekt, indem Sie auf **Projekt erstellen** klicken. Daraufhin werden Ihnen [Starter](starters.html)-Optionen angezeigt, die Ihnen einen Schnelleinstieg in die Erstellung Ihrer App ermöglichen.
 
-   **Anmerkung**: Ihr {{site.data.keyword.mobilepushshort}}-Service muss an eine App gebunden sein, damit **Mobile Optionen** sichtbar werden.
+Über die Ansicht [Projekte](projects.html) können Sie alle Projekte von einer Position aus verwalten. Das Projekt beinhaltet alle Informationen zu Funktionen, die Sie für Ihre mobile App benötigen. Sie können die mobilen Push-, Analytics- und Authentifizierungsservices leicht in das Projekt integrieren und dort verwalten. In naher Zukunft werden noch weitere Leistungsmerkmale hinzukommen.
 
-3. Navigieren Sie wieder zur Ansicht **Projekte** des Mobile-Dashboards.
-4. Klicken Sie auf Ihre Projekt, um es zu bearbeiten.
-5. Klicken Sie auf **Push** und aktivieren Sie die Benachrichtigungen.
-6. Geben Sie den Wert für **App-Guid** an, den Sie zuvor in das Feld **App-ID** kopiert haben.
-7. Geben Sie den Wert für **Route** an, den Sie zuvor in das Feld **App-Route-URL** kopiert haben.
+In der Ansicht [Services](services.html) wird eine Betriebsansicht Ihrer vorhandenen Instanzen mobiler Services angezeigt. Das Mobile-Dashboard unterstützt einen Mobile-Entwickler und einen Verwaltungsbenutzer für die mobile App.
 
-#### {{site.data.keyword.cloudant}} integrieren
-{: #cloudant_integration}
 
-Führen Sie die folgenden Schritte aus, um Ihren bereits vorhandenen {{site.data.keyword.cloudant}}-Service zu integrieren:
+<!--You can also discover the {{site.data.keyword.Bluemix_notm}} Mobile offerings, link to the Mobile documentation and get answers from our {{site.data.keyword.Bluemix_notm}} Mobile services community on Stack Overflow.-->
 
-1. Klicken Sie auf Ihre Instanz des Service {{site.data.keyword.cloudant}}.
-2. Klicken Sie auf **STARTEN**.
-3. Klicken Sie in der Ansicht **Datenbanken** auf Ihren Datenbanknamen.
-4. Klicken Sie auf **API** und kopieren Sie den Wert für den **API-Schlüssel** bis hin zu Ihrem Datenbanknamen.
 
-   **Anmerkung**: Kopieren Sie keinen Inhalt, der hinter Ihrem Datenbanknamen steht.
-   
-5. Klicken Sie auf **Berechtigungen** > **API-Schlüssel generieren** und kopieren Sie die Werte für **Schlüssel** und **Kennwort**.
-6. Navigieren Sie wieder zur Ansicht **Projekte** des Mobile-Dashboards.
-7. Klicken Sie auf Ihre Projekt, um es zu bearbeiten.
-8. Klicken Sie auf **Daten** > **+ Datenquelle** > **Cloudant**, geben Sie Ihren Datenquellennamen an und klicken Sie auf **Hinzufügen**.
-9. Klicken Sie auf die Option für die Cloudant-Konfiguration.
-10. Geben Sie den Wert für den **API-Schlüssel** an, den Sie zuvor in die **API-URL** kopiert haben.
-11. Geben Sie den Wert für den **Schlüssel** an, den Sie zuvor in das Feld **Benutzer** kopiert haben.
-12. Geben Sie den Wert für das **Kennwort** an, den Sie zuvor in das Feld **Kennwort** kopiert haben.
-13. Klicken Sie auf **OK**.
+Prüfen Sie regelmäßig nach, ob neue Funktionen zur Verfügung stehen.
 
 
 # Zugehörige Links
@@ -105,20 +50,23 @@ Führen Sie die folgenden Schritte aus, um Ihren bereits vorhandenen {{site.data
 <!-- links to internal services don't work
 ## {{site.data.keyword.Bluemix_notm}} Mobile services
 {: #general}
-* [Mobile Analytics (Experimental)](../services/mobileanalytics/index.html){: new_window}
+* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
 * [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
 * [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
 * [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
 * [Push Notifications](../services/mobilepush/index.html){: new_window}
 -->
 
-## Blogbeiträge
+<!--## Blog Posts
 {: #general}
+-->
 * [Blogbeitrag: Einführung in das Bluemix Mobile-Dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
+* [Blogbeitrag: Einführung in die nächste Generation des Bluemix Mobile-Dashboards](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
+* [Blogbeitrag: Einführung in Code-Starter für Bluemix Mobile](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Blogbeitrag: Bluemix Mobile, Teil 1: App 'Store Catalog' erstellen](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blogbeitrag: Bluemix Mobile, Teil 2: Angepasstes Bluemix-Back-End in die App 'Store Catalog' integrieren](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
- 
-## Lernprogramme und Beispiele
-{: #samples}
-* [Mobiles Back-End für Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
 
+<!--## Tutorials and Samples
+{: #samples}
+-->
+* [Beispiel: Mobiles Back-End für Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}

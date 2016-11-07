@@ -1,9 +1,18 @@
+---
+
+copyright:
+  years: 2016
+lastupdated: "2016-10-19"
+
+---
+
 # Mobile Apps aus der {{site.data.keyword.mobilefirstbp}} Starter-Boilerplate erstellen
 {: #try_mobile}
-Letzte Aktualisierung: 18. Juli 2016
-{: .last-updated} 
 
-Jeder {{site.data.keyword.Bluemix}} Mobile-Service kann unabhängig verwendet werden. Durch die kombinierte Verwendung mit der {{site.data.keyword.mobilefirstbp}} Starter-Boilerplate können Sie den größten Nutzen erzielen. 
+Letzte Aktualisierung: 19. Oktober 2016
+{: .last-updated}
+
+Jeder {{site.data.keyword.Bluemix}} Mobile-Service kann unabhängig verwendet werden. Durch die kombinierte Verwendung mit der {{site.data.keyword.mobilefirstbp}} Starter-Boilerplate können Sie den größten Nutzen erzielen.
 
 Erstellen Sie zu Beginn mit dem {{site.data.keyword.mobilefirstbp}} Starter eine eigene App. Mit der Boilerplate können Sie die folgenden Aktionen durchführen:
 
@@ -11,7 +20,7 @@ Erstellen Sie zu Beginn mit dem {{site.data.keyword.mobilefirstbp}} Starter eine
 * Stellen Sie eine Instanz für jeden der {{site.data.keyword.Bluemix_notm}} Mobile-Services bereit und binden Sie den Service an die Node.js-Anwendung.
 
 <!--
-<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate 
+<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
 -->
 
 Nachdem Sie mit der {{site.data.keyword.mobilefirstbp}} Starter-Boilerplate eine eigene App erstellt haben, können Sie entweder Hello Bluemix-Beispiele für jeden der Services abrufen oder mit dem Instrumentieren Ihrer bestehenden App für die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services beginnen.
@@ -43,8 +52,8 @@ Sie können entweder mithilfe der {{site.data.keyword.Bluemix_notm}} {{site.data
 <td valign="top"><b>Benutzeridentitätsanbieter</b> <br/>Sie können die folgenden Identitätsanbieter verwenden: <ul><li>Facebook</li><li>Google</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Symbol für Service 'Push Notifications'"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>Der Service {{site.data.keyword.mobilepushfull}} stellt eine einheitliche Plattform zum Senden und Verwalten von mobilen Push-Benachrichtigungen für iOS- und Android-Plattformen bereit. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten und zur Geräteplattform und führt das Senden von Push-Benachrichtigungen an die Geräte aus. Mit diesem Service können Sie Rundsendungen, Unicasts (auf der Basis von Benutzer-ID und Geräte-ID) sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an die Benutzer Ihrer mobilen Anwendungen senden.</td>
-<td valign="top"><b>Push-Serviceanbieter</b><ul><li>Apple Push Notifications Service</li><li>Google Cloud Messaging</li></ul></td>
+<td><img src="images/catalog_icons-09.png" alt="Symbol für Service 'Push Notifications'"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>Der {{site.data.keyword.mobilepushfull}}-Service bietet eine einheitliche Plattform zum Senden und Verwalten von Push-Benachrichtigungen mit (iOS- & Android-) Plattformen und Web-Browser-Anwendungen als Ziel. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu ihren Geräten, zur Geräteplattform und zu den Browsern und führt das Senden von Push-Benachrichtigungen an Subskribenten aus. Mit diesem Service können Sie Rundsendungen, Unicasts (auf der Basis von Benutzer-ID und Geräte-ID) sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an Ihre Kunden senden.</td>
+<td valign="top"><b>Push-Serviceanbieter</b><ul><li>Apple Push Notifications Service</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>
 <td><img src="images/cloudant64.png" alt="Symbol für Cloudant-Service"><b>Cloudant NoSQLDB</b><br/> Cloudant ist eine NoSQL Database as a Service (DBaaS). Sie kann von lokal bis global beliebig skaliert werden, ist rund um die Uhr betriebsbereit und kann eine Vielzahl von Datentypen verarbeiten (z. B. JSON-, Volltext- und geografisch-räumliche Daten). </td>

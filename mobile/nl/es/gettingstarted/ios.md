@@ -52,7 +52,7 @@ Si desea empezar a trabajar con una aplicación para iOS nueva, puede utilizar l
   -->
 
 	Puede resolver los problemas de la conexión fallida de la forma siguiente:
-	* Compruebe que ha pegado correctamente los valores de ruta y de GUID:
+	* Compruebe que ha pegado correctamente los valores de ruta y de GUID.
 	* Revise el registro de depuración para obtener más información.
 
 

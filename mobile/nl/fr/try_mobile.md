@@ -1,19 +1,28 @@
+---
+
+copyright:
+  years: 2016
+lastupdated: "2016-10-19"
+
+---
+
 # Création d'applications mobiles depuis le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} Starter
 {: #try_mobile}
-Dernière mise à jour : 18 juillet 2016
-{: .last-updated} 
+
+Dernière mise à jour : 19 octobre 2016
+{: .last-updated}
 
 Vous pouvez utiliser chacun des services {{site.data.keyword.Bluemix}} Mobile indépendamment. Il vous est aussi possible de les utiliser ensemble, avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} Starter, pour en tirer le meilleur
-profit. 
+profit.
 
 Pour commencer, utilisez {{site.data.keyword.mobilefirstbp}} Starter afin de créer votre application. Le conteneur boilerplate vous permet d'effectuer les actions suivantes :
 
 * Création d'un contexte d'exécution Node.js avec un modèle d'application. Vous pouvez utiliser cette application pour fournir des fonctions côté serveur,
-comme des API RESTful et des fichiers statiques.<!-- You can read more about operating this application in the Developing Mobile Backend section.--> 
+comme des API RESTful et des fichiers statiques.<!-- You can read more about operating this application in the Developing Mobile Backend section.-->
 * Mise à disposition d'une instance de chaque service {{site.data.keyword.Bluemix_notm}} Mobile et liaison du service à l'application Node.js.
 
 <!--
-<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate 
+<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
 -->
 
 Après avoir utilisé le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} Starter pour créer votre application, vous pouvez vous
@@ -38,8 +47,7 @@ pour un traitement logique personnalisé ou pour la connexion à des API REST da
 créez dans {{site.data.keyword.Bluemix_notm}} possède un ID d'application unique. Votre application mobile utilise cet ID avec le logiciel SDK afin d'accéder aux services qui
 lui sont associés. L'ID d'application est utilisé par la plateforme comme contexte pour les fonctions communes, telles que la mesure et la
 journalisation.
-<!--You can read more about operating this application in the "Developing Mobile Backend" section.-->
-</td>
+<!--You can read more about operating this application in the "Developing Mobile Backend" section.--></td>
 <td valign="top"><b>Fournisseur d'informations</b> <br/>Vous pouvez utiliser un contexte d'exécution Node.js hébergé dans {{site.data.keyword.Bluemix_notm}} pour vous connecter
 à tout type de fournisseur d'informations :
 <ul>
@@ -55,13 +63,19 @@ pour que vous puissiez surveiller les performances de vos applications mobiles e
 <td valign="top"><b>Fournisseurs d'identité d'utilisateur</b> <br/>Vous pouvez utiliser les fournisseurs d'identité suivants : <ul><li>Facebook</li><li>Google</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Icône du service Push Notifications">
+<td><img src="images/catalog_icons-09.png" alt="cône du service Push Notifications">
 <b>{{site.data.keyword.mobilepushshort}}</b><br/>Le service
-{{site.data.keyword.mobilepushfull}} fournit une plateforme unifiée permettant d'envoyer et de gérer des notifications push ciblant les plateformes iOS et Android. Il gère le
-mappage des utilisateurs de votre application à leurs périphériques ainsi que la plateforme des périphériques, et traite la distribution des
-notifications
-push aux périphériques. Avec ce service, vous pouvez envoyer des diffusions, des monodiffusions (en fonction de l'ID utilisateur ou de l'ID de périphérique) et des étiquettes (ou rubriques) en fonction de notifications push aux utilisateurs de votre application mobile.</td>
-<td valign="top"><b>Fournisseurs de service Push</b><ul><li>Apple Push Notifications Service</li><li>Google Cloud Messaging</li></ul></td>
+{{site.data.keyword.mobilepushfull}} fournit une plateforme unifiée
+permettant d'envoyer et de gérer des notifications push ciblant les
+plateformes mobiles (iOS et Android), ainsi que les applications de navigateur Web. Ce
+service gère le mappage des utilisateurs de votre application à leurs
+périphériques, ainsi qu'à la plateforme des périphériques et aux navigateurs,
+et traite la distribution des notifications push aux abonnés. Avec ce service,
+vous pouvez envoyer des diffusions, des monodiffusions (en fonction de l'ID
+utilisateur ou de l'ID de périphérique) et des notifications en fonction
+d'étiquettes (ou de rubriques) à vos clients.
+</td>
+<td valign="top"><b>Fournisseurs de service Push</b><ul><li>Apple Push Notifications Service</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>
 <td><img src="images/cloudant64.png" alt="Icône du service Cloudant"><b>Cloudant NoSQLDB</b><br/> Cloudant est une base de données NoSQL sous forme
