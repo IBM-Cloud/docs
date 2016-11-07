@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
- 
+lastupdated: "2016-02-02"
+
 
 ---
 
@@ -16,9 +17,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.Bluemix_notm}} Command Line Interface (bx cli) plug-ins
-
-*Last updated: 24 February 2016*
-{: .last-updated}
 
 Extend your {{site.data.keyword.Bluemix_notm}} command line interface (bx cli) with plug-ins. You can install and use plug-ins that are available in the [CLI Plug-in Repository](http://plugins.ng.bluemix.net/){: new_window}. Each plug-in is identified by its binary file name, its developer-defined plug-in name, and the commands that the plug-in provides. You can use the binary file name only to install a plug-in, and use the plug-in name or a command for any other action.
 {:shortdesc}
