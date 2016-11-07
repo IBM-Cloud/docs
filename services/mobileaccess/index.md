@@ -18,8 +18,8 @@ Add security to your mobile app with the {{site.data.keyword.amafull}} service. 
 To get up and running with the {{site.data.keyword.amashort}} service:
 
 1. Use one of the following options to create a bound or unbound service:
- * Create a {{site.data.keyword.Bluemix_notm}} application using the **MobileFirst Services Starter** boilerplate from the catalog. The creates an {{site.data.keyword.amashort}} service bound to a {{site.data.keyword.Bluemix_notm}} back-end application.
- * Create an   {{site.data.keyword.amashort}} using the  {{site.data.keyword.amashort}} dashboard.  You can  bind the service to an existing application and configure it in the {{site.data.keyword.amashort}} dashboard.
+ * Create a {{site.data.keyword.Bluemix_notm}} application using the **MobileFirst Services Starter** boilerplate from the catalog. This creates a {{site.data.keyword.amashort}} service bound to a {{site.data.keyword.Bluemix_notm}} back-end application.
+ * Create a {{site.data.keyword.amashort}} service using the  {{site.data.keyword.amashort}} dashboard.  You can  bind the service to an existing back-end application and configure it in the {{site.data.keyword.amashort}} dashboard.
 
    When you use the MobileFirst Services Starter, you get an instance of a Node.js runtime that runs on IBM {{site.data.keyword.Bluemix_notm}} to implement your custom back-end logic. A set of core mobile services that provide security, data, push, and monitoring functions are bound to that Node.js app. After the {{site.data.keyword.Bluemix_notm}} Node.js app is created, you can set up your development environment and start to use the {{site.data.keyword.Bluemix_notm}} Mobile Services SDKs. You can use the SDKs to access the services that are bound to your cloud app with simple API calls.
 
