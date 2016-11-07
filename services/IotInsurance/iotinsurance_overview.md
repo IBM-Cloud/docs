@@ -37,7 +37,7 @@ The sample insurance dashboard is loaded with simulated data to show you an exam
 {: #mobileapp}
 The mobile starter app is where insurance policy holders such, as homeowners, view and respond to the information that {{site.data.keyword.iotinsurance_short}} sends from the sensors in their homes.
 
-Using a mobile device, homeowners authorize the service to connect to the sensor provider's cloud to send and receive data. For example, a homeowner might receive a notification in the mobile starter app when the sensor detects a water leak. For more information, see [Installing and connecting the mobile starter app](iotinsurance_mobile_app.html}).
+Using a mobile device, homeowners authorize the service to connect to the sensor provider's cloud to send and receive data. For example, a homeowner might receive a notification in the mobile starter app when the sensor detects a water leak. For more information, see [Installing and connecting the mobile starter app](iotinsurance_mobile_app.html).
 
 ### REST API
 {: #rest_api}
