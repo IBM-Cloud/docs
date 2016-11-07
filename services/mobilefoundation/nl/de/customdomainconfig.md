@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-08-08"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,8 @@ copyright:
 # Benutzerdefinierte Domäne für {{site.data.keyword.mobilefoundation_short}}-Server konfigurieren
 {: #configcustomdomain}
 
-Letzte Aktualisierung: 08. August 2016
-{: .last-updated}
+<!--Last updated: 08 August 2016
+{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} stellt einen {{site.data.keyword.mfserver_short_notm}} bereit, auf den über eine <!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to--> URL zugegriffen werden kann, bei der die Domänennamen auf der {{site.data.keyword.Bluemix_notm}}-**Region** basieren. Sie können auch eine eigene benutzerdefinierte Domäne erstellen.
 {:shortdesc}

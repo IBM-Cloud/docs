@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-08-03"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,8 @@ copyright:
 # Mantenimiento y actualizaciones
 {: #maintupdates_mf}
 
-Última actualización: 03 de agosto de 2016
-{: .last-updated}
+<!--Last updated: 03 August 2016
+{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} suministra un {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group-->. Las actualizaciones del servidor de {{site.data.keyword.mobilefoundation_short}} se notifican a los usuarios. Puede actualizar el servidor de {{site.data.keyword.mobilefoundation_short}} cuando le convenga.
 {:shortdesc}
@@ -40,4 +40,4 @@ Al aplicar la actualización, la versión del servidor, que se muestra en {{site
 
 **Nota:**
 * Los usuarios no pueden aplicar sus propios arreglos y actualizaciones a su instancia de servicio de {{site.data.keyword.mobilefoundation_short}}.
-* Consulte [Recreación del servidor en el Plan de desarrollador](c_using_mfs_p1.html#recreate_mobilefoundation_p1) y [Recreación del servidor en el Plan de aplicación Profesional 1](c_using_mfs_p2.html#recreate_mobilefoundation_p2) para conocer la diferencia de comportamiento en los planes cuando se pulsa **Recrear**.
+* Consulte [Recreación del servidor en el plan Developer](c_using_mfs_p1.html#recreate_mobilefoundation_p1) y [Recreación del servidor en el plan Professional 1 Application](c_using_mfs_p2.html#recreate_mobilefoundation_p2) para conocer la diferencia de comportamiento en los planes cuando se pulsa **Recrear**.

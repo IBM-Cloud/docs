@@ -2,14 +2,14 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-09-12"
 ---
 
 #	使用 Developer 套餐
 {: #using_mobilefoundation_p1}
 
-上次更新时间：2016 年 8 月 4 日
-{: .last-updated}
+<!--Last updated: 12 September 2016
+{: .last-updated}-->
 
 创建 {{site.data.keyword.mobilefoundation_short}}: Developer 服务实例的几秒钟后，您就可以访问 {{site.data.keyword.Bluemix_notm}} 上的“`概述`”页面，其中为您提供了教程和视频，可帮助您开始使用 {{site.data.keyword.mobilefoundation_short}} 服务。
 
@@ -33,6 +33,25 @@ copyright:
 
 
 <!--This console runs inside the container.--> 通过控制台，您可以管理移动应用程序和移动设备、使用服务器作为移动后端以及发送推送通知等。
+
+
+
+##  添加移动分析服务器
+{: #adding_analytics_server_dev}
+
+ 现在，您可以将移动分析服务器添加到 {{site.data.keyword.mobilefoundation_short}} 服务实例来监视 {{site.data.keyword.mobilefirst}} 服务器上的移动应用程序。Developer 套餐会在包含具有 1 GB 内存的单一节点的容器组中创建移动分析服务器。
+
+* 单击**添加分析**，将移动分析服务器添加到 {{site.data.keyword.mobilefoundation_short}} 服务实例。
+
+供应过程启动。此过程会花费大约 10 分钟，并且消息窗口会指示此操作的进度。  
+
+* 从 {{site.data.keyword.mfp_oc_short_notm}} 启动 MobileFirst Analytics Console。
+
+* 在 {{site.data.keyword.mfserver_short_notm}} 与移动分析服务器之间启用单点登录。为移动分析服务器配置与 {{site.data.keyword.mfserver_short_notm}} 相同的 LTPA 密钥和用户凭证。您可以像登录 {{site.data.keyword.mfp_oc_short_notm}} 一样，使用相同的 `username` 和 `password` 登录到“移动分析”控制台。
+
+有关 MobileFirst Analytics 的更多信息，请参阅 [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}。
+
+**注：**删除 {{site.data.keyword.mobilefoundation_short}} 服务实例或尝试重新创建 {{site.data.keyword.mfserver_short_notm}} 时，会除去移动分析服务器。
 
 ## 重新创建 {{site.data.keyword.mobilefirst}} 服务器
 {: #recreate_mobilefoundation_p1}

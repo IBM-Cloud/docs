@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-08-08"
 ---
 
 {:new_window: target="_blank"}
@@ -13,14 +13,14 @@ copyright:
 # Configuration d'un domaine personnalisé pour le serveur {{site.data.keyword.mobilefoundation_short}}
 {: #configcustomdomain}
 
-Dernière mise à jour : 8 août 2016
-{: .last-updated}
+<!--Last updated: 08 August 2016
+{: .last-updated}-->
 
-{{site.data.keyword.mobilefoundation_short}} fournit un serveur {{site.data.keyword.mfserver_short_notm}}, <!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to--> accessible à l'aide d'une URL dont les noms de domaine sur la **région** {{site.data.keyword.Bluemix_notm}}. Vous
+{{site.data.keyword.mobilefoundation_short}} met à disposition un serveur {{site.data.keyword.mfserver_short_notm}}, qui est<!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to--> accessible en utilisant une URL dont les noms de domaine reposent sur la **région** {{site.data.keyword.Bluemix_notm}} . Vous
 pouvez également configurer votre propre domaine personnalisé.
 {:shortdesc}
 
-L'<!--container group is created with a--> URL ou la route est créée avec les noms de domaine par défaut basés sur la `région` {{site.data.keyword.Bluemix_notm}}. 
+L'<!--container group is created with a-->URL ou la route est créée avec les noms de domaine par défaut basés sur la `région` {{site.data.keyword.Bluemix_notm}}.
 
 *Tableau 1. Noms de domaine de l'application basés sur la `Région`
 dans {{site.data.keyword.Bluemix_notm}}*
@@ -44,13 +44,9 @@ l'un des plans pris en charge.
 souhaitez utiliser. Accédez à **Gérer les organisations > Domaines >
 Ajouter un domaine** pour ajouter votre propre domaine.
 
-+ Configurez une route permettant au
-<!--container group--> serveur d'utiliser votre domaine personnalisé. 
++ Configurez une route permettant au serveur <!--container group--> d'utiliser votre domaine personnalisé.
 
-+ Accédez au fournisseur DNS de votre domaine et ajoutez une entrée
-CNAME, qui acheminera le trafic de votre domaine vers la route
-{{site.data.keyword.Bluemix_notm}} par défaut, dans laquelle le
-<!--container group--> serveur est en cours d'exécution. 
++ Accédez au fournisseur DNS de votre domaine et ajoutez une entrée CNAME, qui acheminera le trafic de votre domaine vers la route {{site.data.keyword.Bluemix_notm}} par défaut, dans laquelle le serveur <!--container group--> s'exécute.
 
 + Si vous voulez configurer `https` pour votre domaine
 personnalisé, transférez le certificat SSL de votre domaine dans {{site.data.keyword.Bluemix_notm}}. Pour

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-08-31"
 ---
 
 {:new_window: target="_blank"}
@@ -13,13 +13,14 @@ copyright:
 # {{site.data.keyword.mobilefoundation_short}} 入门
 {: #gettingstartedtemplate}
 
-上次更新时间：2016 年 8 月 3 日
-{: .last-updated}
+<!--Last updated: 31 August 2016
+{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_long}} 加快设置 {{site.data.keyword.mfp_full}} 环境，您可在此环境中开发、测试和操作企业移动应用程序。{{site.data.keyword.mobilefoundation_short}} 提供了两种不同服务套餐：Developer 和 Professional 1 Application。
 {:shortdesc}
 
-<!-- The Professional 1 Application plan allows the {{site.data.keyword.mobilefoundation_short}} server to be deployed on a scalable container group.--> 使用 Professional 1 Application 套餐，可管理任何或所有受支持操作系统（例如 Android、iOS、Windows 或移动 Web）上构建的单个应用程序。Developer 套餐<!-- does not support {{site.data.keyword.mobilefoundation_short}} deployment on a container group with more than 1 node. This plan --> 最适合进行开发和测试。
+<!-- The Professional 1 Application plan allows the {{site.data.keyword.mobilefoundation_short}} server to be deployed on a scalable container group.--> 使用 Professional 1 Application 套餐，可管理任何或所有受支持操作系统（例如 Android、iOS、Windows 或移动 Web）上构建的单个应用程序。
+Developer 套餐<!-- does not support {{site.data.keyword.mobilefoundation_short}} deployment on a container group with more than 1 node. This plan -->最适合进行开发和测试。
 
 ## {{site.data.keyword.mobilefoundation_short}}: Developer 套餐入门
 
@@ -57,7 +58,7 @@ copyright:
 
     * 要使用拓扑、安全性和其他服务器配置的高级配置来创建 {{site.data.keyword.mobilefirst_notm}} 服务器实例，请单击**使用高级配置启动服务器**。请参阅[设置高级配置](c_using_mfs_p2.html#using_mfs_advanced_p2)，以获取更多信息。
 
-转至 [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/ibm-containers/using-mobile-foundation/)，以了解有关如何开始使用 {{site.data.keyword.mobilefoundation_short}} 的更多信息。
+转至 [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/)，以了解有关如何开始使用 {{site.data.keyword.mobilefoundation_short}} 的更多信息。
 
 
 # 相关链接

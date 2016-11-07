@@ -2,23 +2,23 @@
 
 copyright:
   years: 2016
-lastupdated:  "2016-09-12"
+lastupdated:  "2016-10-14"
 ---
 
-#	Utilizzo del piano Professional 1 Application
-{: #using_mobilefoundation_p2}
+#	Utilizzo del piano Professional Per Capacity
+{: #using_mobilefoundation_p4}
 
 <!--Last updated: 12 September 2016
-{: .last-updated}-->
+{: .last-updated} -->
 
-Con il piano Professional 1 Application gli utenti possono creare 1 applicazione mobile con più sistemi operativi.
-Dopo che hai creato l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, leggi la seguente procedura introduttiva al servizio.
+Con il piano Professional Per Capacity gli utenti possono creare qualsiasi numero di applicazioni mobili con più sistemi operativi mobili.
+Dopo che hai creato l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity, leggi la seguente procedura introduttiva al servizio.
 
 ## Prerequisiti
-{: #prerequisites_p2}
+{: #prerequisites_p4}
 
-Tieni conto di quanto segue, prima di configurare l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application
-* {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application è supportato solo con i piani {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional (con supporto di OLTP).
+Tieni conto di quanto segue, prima di configurare l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity
+* {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity è supportato solo con i piani {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional (con supporto di OLTP).
 
 * Devi avere accesso alle credenziali dell'istanza del servizio {{site.data.keyword.dashdbshort_notm}} prima di poter configurare le impostazioni della tua istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
 
@@ -26,18 +26,17 @@ Tieni conto di quanto segue, prima di configurare l'istanza del servizio {{site.
 
 
 ## Aggiunta della connessione al database
-{: #configure_dashdb_p2}
+{: #configure_dashdb_p4}
 
 ###  Prime operazioni
-{: #firststeps_p2}
+{: #firststeps_p4}
 
-Dopo che hai creato l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, completa la seguente procedura per iniziare a utilizzarla.
+Dopo che hai creato l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity, completa la seguente procedura per iniziare a utilizzarla.
 
 ### Impostazione della connessione all'istanza del servizio {{site.data.keyword.dashdbshort_notm}}
-{: #connect_dashdb_p2}
+{: #connect_dashdb_p4}
 
-Dopo che l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application è stata creata, vedrai la pagina *Panoramica*,
-dove dovrai specificare le informazioni di connessione per l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional.
+Dopo che l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity è stata creata, vedrai la pagina *Panoramica*, dove dovrai specificare le informazioni di connessione per l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional.
 
 1. Seleziona l'`Organizzazione` {{site.data.keyword.Bluemix_notm}} dove è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}.
 
@@ -49,22 +48,21 @@ dove dovrai specificare le informazioni di connessione per l'istanza del servizi
 
 +  Verifica la connessione all'istanza del servizio {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional specificata.
 
-+  Fai clic su **Continua**. Questa azione crea le tabelle richieste nell'istanza del servizio database {{site.data.keyword.dashdbshort_notm}} configurato.
++  Fai clic su **Aggiungi**. Questa azione crea le tabelle richieste nell'istanza del servizio database {{site.data.keyword.dashdbshort_notm}} configurato.
 
 **Nota**: non puoi modificare l'istanza del servizio {{site.data.keyword.dashdbshort_notm}} configurata per essere utilizzata dalla tua istanza del servizio {{site.data.keyword.mobilefoundation_short}}. Tuttavia, puoi utilizzare la stessa istanza del servizio {{site.data.keyword.dashdbshort_notm}} tra più istanze del servizio {{site.data.keyword.mobilefoundation_short}}, poiché ogni istanza di {{site.data.keyword.mobilefoundation_short}} crea il proprio schema nell'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} selezionata.
 
 * Dopo pochi secondi, puoi accedere alla pagina `Panoramica` che ti fornisce le esercitazioni e i video per aiutarti a iniziare a lavorare con il servizio  {{site.data.keyword.mobilefoundation_short}}.
 
 ## Avvio del server {{site.data.keyword.mobilefirst}}
-{: #start_mobilefoundation_p2}
+{: #start_mobilefoundation_p4}
 
 * Per avviare {{site.data.keyword.mfserver_short_notm}}, con le impostazioni predefinite, fai clic su **Avvia server di base**.
 
 * Questa selezione fornisce un {{site.data.keyword.mfserver_long_notm}} con le seguenti impostazioni:
-    -  1 GB di memoria. Questa dimensione è sufficiente per lo sviluppo, per delle attività moderate di test e i carichi di lavoro di produzione su piccola scala.
+    -  2 nodi con 1 GB di memoria ognuno. Questa dimensione è buona per lo sviluppo, per delle attività moderate di test e i carichi di lavoro di produzione su piccola scala. 
 
-    -	Il `nome utente` e la `password` ti vengono generati
-automaticamente. Disporrai dell'accesso ad essi quando il server è avviato e in esecuzione.
+    -	Il `nome utente` e la `password` ti vengono generati automaticamente. Disporrai dell'accesso ad essi quando il server è avviato e in esecuzione.
 
 Viene avviato il processo di provisioning del tuo server. Questo processo impiega circa 10 minuti e una finestra di messaggio
 indica l'avanzamento di questa operazione. Al suo completamento, viene visualizzato un dashboard
@@ -79,20 +77,22 @@ dove puoi vedere:
 *	Fai clic su **Avvia console** per aprire {{site.data.keyword.mfp_oc_short_notm}}.
 
 
-<!--This console runs inside the container.--> Con la console, puoi gestire le tue applicazioni mobili, gli adattatori e i tuoi dispositivi mobili, utilizzare il tuo server come un backend mobile, inviare notifiche di push e altro ancora.
+<!--This console runs inside the container.--> Con la console, puoi gestire le tue applicazioni mobili, gli adattatori e i tuoi dispositivi mobili, utilizzare il tuo server come un backend mobile, inviare notifiche di push e altro ancora. 
 
 ##  Aggiunta del server Mobile Analytics
-{: #adding_analytics_server_prof}
+{: #adding_analytics_server_p4}
 
  Puoi ora monitorare la tua applicazione mobile nel server {{site.data.keyword.mobilefirst}} aggiungendo un server  Mobile Analytics all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
 
- Il piano Professional crea il server Mobile Analytics in un gruppo di contenitori, l'utente può personalizzare la configurazione selezionando il numero di nodi del contenitore nel gruppo di contenitori.
+ Il piano Professional crea il server Mobile Analytics in un gruppo di contenitori, l'utente può personalizzare la configurazione selezionando il numero di nodi del contenitore nel gruppo di contenitori. 
 
  Gli utenti possono anche allegare i volumi ai contenitore per conservare i dati. Il volume selezionato non può essere modificato. 20 GB è lo spazio di condivisione file predefinito disponibile all'utente. Se l'utente necessita di ulteriore spazio di archiviazione per conservare i dati di analisi, deve acquistare ulteriore condivisione file e creare un volume utilizzando questa condivisione file. Può quindi selezionare questo nuovo volume mentre distribuisce il server di analisi.
 
  Per ulteriori informazioni sull'aggiunta di volumi a {{site.data.keyword.containerlong}}, fai riferimento a [Memorizzazione dei dati persistenti in un volume utilizzando il dashboard {{site.data.keyword.Bluemix_notm}}  ](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Fai clic su **Aggiungi Analytics** per aggiungere il server Mobile Analytics all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
+
+* Puoi scegliere la configurazione server Mobile Analytics, la configurazione supportata minima per il server Analytics è 2 nodi con 1 GB di memoria ognuno, puoi scegliere di creare un server Analytics fino a un massimo di 32 nodi on 16 GB di memoria ognuno.
 
 Viene avviato il processo di provisioning. Questo processo impiega circa 10 minuti e una finestra di messaggio
 indica l'avanzamento di questa operazione.  
@@ -106,7 +106,7 @@ Per informazioni su MobileFirst Analytics puoi fare riferimento a [MobileFirst F
 **Nota:** il server Mobile Analytics viene rimosso quando elimini l'istanza del servizio {{site.data.keyword.mobilefoundation_short}} o quando tenti di ricreare {{site.data.keyword.mfserver_short_notm}}.
 
 ## Ricreazione del server {{site.data.keyword.mobilefirst}}
-{: #recreate_mobilefoundation_p2}
+{: #recreate_mobilefoundation_p4}
 
 *	Fai clic su **Ricrea** per ricreare il server.
 
@@ -116,7 +116,7 @@ alcuni minuti.
 **Nota**: tutti i dati dalla tua istanza del server precedente, comprese le informazioni sulle applicazioni e sugli adattatori, sono memorizzati in modo persistente nell'istanza del servizio {{site.data.keyword.dashdbshort_notm}} configurata; questi dati saranno utilizzati per ricreare il tuo server.
 
 ##	Impostazione della configurazione avanzata
-{: #using_mfs_advanced_p2}
+{: #using_mfs_advanced_p4}
 
 Utilizza **Avvia server con la configurazione avanzata** dalla pagina `Panoramica` per creare il server con le impostazioni avanzate o personalizzate. Puoi inoltre
 aggiornare le impostazioni del server per personalizzare la tua configurazione server facendo clic sulla scheda
@@ -127,6 +127,6 @@ aggiornare le impostazioni del server per personalizzare la tua configurazione s
 
   - **Nodi** visualizza il numero di nodi creati.
 
-      - La {{site.data.keyword.mobilefirst}} Server Farm può essere creata configurando il numero di nodi qui.
+      - La {{site.data.keyword.mobilefirst}} Server Farm può essere creata configurando il numero di nodi qui. La configurazione supportata minima è 2 nodi con 1 GB di memoria ognuno e la configurazione massima supportata è 32 nodi con 16 GB di memoria ognuno.
 
 Per ulteriori dettagli, consulta la [documentazione di {{site.data.keyword.mobilefoundation_long}} ](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}.

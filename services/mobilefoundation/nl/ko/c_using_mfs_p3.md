@@ -2,23 +2,24 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-09-12"
+lastupdated: "2016-10-14"
 ---
 
-#	Professional 1 Application 플랜 사용
-{: #using_mobilefoundation_p2}
+#	Developer Pro 플랜 사용
+{: #using_mobilefoundation_p3}
 
-<!--Last updated: 12 September 2016
+<!--Last updated: 14 October 2016
 {: .last-updated}-->
 
-Professional 1 Application 플랜을 사용하면 여러 모바일 운영 체제에서 1개의 모바일 애플리케이션을 작성할 수 있습니다.
-{{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 서비스 인스턴스를 작성한 후에 다음 프로시저를 읽고 서비스를 시작합니다.
+{{site.data.keyword.mobilefoundation_short}}: Developer Pro는 팀 기반 개발과 테스트에 적합하며 이 플랜은 프로덕션에는 적합하지 않습니다. 
+
+{{site.data.keyword.mobilefoundation_short}}: Developer Pro 서비스 인스턴스를 작성하고 잠시 후 {{site.data.keyword.Bluemix_notm}}의 `개요` 페이지에 액세스할 수 있습니다. 이 페이지에서는 {{site.data.keyword.mobilefoundation_short}} 서비스를 시작하는 데 유용한 튜토리얼과 동영상을 제공합니다. 
 
 ## 전제 조건
-{: #prerequisites_p2}
+{: #prerequisites_p3}
 
-{{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 서비스 인스턴스를 구성하기 전에 다음을 고려하십시오.
-* {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application은 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional(OLTP 지원) {{site.data.keyword.Bluemix_notm}} 플랜과 함께 사용하는 경우에만 지원됩니다.
+{{site.data.keyword.mobilefoundation_short}}: Developer Pro 서비스 인스턴스를 구성하기 전에 다음을 고려하십시오. 
+* {{site.data.keyword.mobilefoundation_short}}: Developer Pro는 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional(OLTP 지원) {{site.data.keyword.Bluemix_notm}} 플랜과 함께 사용하는 경우에만 지원됩니다. 
 
 * {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스의 설정을 구성하려면 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스 신임 정보에 액세스할 수 있어야 합니다. 
 
@@ -26,17 +27,17 @@ Professional 1 Application 플랜을 사용하면 여러 모바일 운영 체제
 
 
 ## 데이터베이스 연결 추가
-{: #configure_dashdb_p2}
+{: #configure_dashdb_p3}
 
 ###  첫 번째 단계
-{: #firststeps_p2}
+{: #firststeps_p3}
 
-{{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 서비스 인스턴스를 작성한 후 아래 프로시저에 따라 시작하십시오. 
+{{site.data.keyword.mobilefoundation_short}}: Developer Pro 서비스 인스턴스를 작성한 후 아래 프로시저에 따라 시작하십시오. 
 
 ### {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스에 대한 연결 설정
-{: #connect_dashdb_p2}
+{: #connect_dashdb_p3}
 
-{{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 서비스 인스턴스가 작성된 후에 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 서비스 인스턴스에 대한 연결 정보를 지정하는 데 필요한 *개요* 페이지가 표시됩니다.
+{{site.data.keyword.mobilefoundation_short}}: Developer Pro 서비스 인스턴스가 작성된 후 *개요* 페이지가 작성됩니다. 이 페이지에서 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 서비스 인스턴스의 연결 정보를 지정해야 합니다. 
 
 1. {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스가 있는 {{site.data.keyword.Bluemix_notm}} `Organization`을 선택하십시오. 
 
@@ -48,21 +49,21 @@ Professional 1 Application 플랜을 사용하면 여러 모바일 운영 체제
 
 +  지정된 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 서비스 인스턴스에 대한 연결을 테스트하십시오.
 
-+  **계속**을 클릭하십시오. 이 조치는 구성된 {{site.data.keyword.dashdbshort_notm}} 데이터베이스 서비스 인스턴스에 필수 테이블을 작성합니다.
++  **추가**를 클릭하십시오. 이 조치는 구성된 {{site.data.keyword.dashdbshort_notm}} 데이터베이스 서비스 인스턴스에 필수 테이블을 작성합니다.
 
 **참고**: 사용자의 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 의해 사용되도록 구성된 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스를 변경할 수 없습니다. 그러나 각 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스가 선택된 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스 내에 자체 스키마를 작성하므로, 다중 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 걸쳐 동일한 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스를 사용할 수 있습니다.
 
 * 잠시 후에는 {{site.data.keyword.mobilefoundation_short}} 서비스를 시작하는 데 도움이 되는 튜토리얼과 동영상을 제공하는 `Overview` 페이지에 액세스할 수 있습니다.
 
 ## {{site.data.keyword.mobilefirst}} 서버 시작
-{: #start_mobilefoundation_p2}
+{: #start_mobilefoundation_p3}
 
 * 기본 설정으로 {{site.data.keyword.mfserver_short_notm}}를 시작하려면 **기본 서버 시작**을 클릭하십시오.
 
 * 이 선택은 다음 설정으로 {{site.data.keyword.mfserver_long_notm}}를 프로비저닝합니다.
-    -  1GB의 메모리. 이 크기는 개발, 일반적인 테스트 활동, 소규모 프로덕션 워크로드에 충분합니다. 
+    - 1GB의 메모리가 있는 단일 노드. 이 크기는 개발, 일반적인 테스트 활동, 소규모 프로덕션 워크로드에 충분합니다. 
 
-    -	`username` 및 `password`가 사용자를 위해 자동으로 생성됩니다. 서버가 시작되고 실행되면 이에 액세스할 수 있습니다. 
+    -	`username`과 `password`가 자동으로 생성됩니다. 서버가 시작되고 실행되면 이에 액세스할 수 있습니다. 
 
 서버 프로비저닝 프로세스가 시작됩니다. 이 프로세스는 약 10분 정도 소요되며, 메시지 창은 이 조작의 진행상태를 표시합니다. 완료되면 대시보드가 표시되며, 여기서 다음을 볼 수 있습니다. 
 
@@ -75,16 +76,14 @@ Professional 1 Application 플랜을 사용하면 여러 모바일 운영 체제
 *	**콘솔 실행**을 클릭하여 {{site.data.keyword.mfp_oc_short_notm}}을 여십시오.
 
 
-<!--This console runs inside the container.--> 콘솔을 사용하여 모바일 앱, 어댑터, 모바일 디바이스를 관리하고 서버를 모바일 백엔드로 사용할 수 있으며 푸시 알림을 전송하는 등의 작업을 수행할 수 있습니다.
-
-
+<!--This console runs inside the container.--> 콘솔을 사용하여 모바일 앱, 어댑터, 모바일 디바이스를 관리하고 서버를 모바일 백엔드로 사용할 수 있으며 푸시 알림 전송 등의 작업을 수행할 수 있습니다. 
 
 ##  Mobile Analytics 서버 추가
-{: #adding_analytics_server_prof}
+{: #adding_analytics_server_p3}
 
  이제 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 Mobile Analytics 서버를 추가하여 {{site.data.keyword.mobilefirst}} 서버에서 모바일 애플리케이션을 모니터링할 수 있습니다. 
 
- 전문가 플랜을 통해 컨테이너 그룹에 Mobile Analytics 서버를 작성하고, 사용자가 컨테이너 그룹에서 컨테이너 노드 수를 선택하여 구성을 사용자 정의할 수 있습니다.
+ Developer Pro 플랜을 통해 컨테이너 그룹에 Mobile Analytics 서버를 작성하고 컨테이너 그룹에서 컨테이너 노드 수를 선택하여 구성을 사용자 정의할 수 있습니다. 
 
  데이터를 유지하기 위해 컨테이너에 볼륨도 연결할 수 있습니다. 볼륨을 한 번 선택하면 변경할 수 없습니다. 사용 가능한 기본 파일 공유 영역은 20GB입니다. 사용자가 분석 데이터를 유지할 추가 스토리지 영역이 필요하면 추가 파일 공유를 구매하고 이 파일 공유를 사용하여 볼륨을 작성해야 합니다. 그런 다음 분석 서버를 배치하는 동안 이 새 볼륨을 선택할 수 있습니다.
 
@@ -92,18 +91,20 @@ Professional 1 Application 플랜을 사용하면 여러 모바일 운영 체제
 
 * **분석 추가**를 클릭하여 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 Mobile Analytics 서버를 추가하십시오.
 
+* Mobile Analytics 서버 구성을 선택할 수 있습니다. 최소 1GB와 최대 2GB 메모리가 Analytics 서버 구성에 지원됩니다. Analytics 서버는 이 플랜의 단일 노드에서만 지원됩니다. 
+
 프로비저닝 프로세스가 시작됩니다. 이 프로세스는 약 10분 정도 소요되며, 메시지 창은 이 조작의 진행상태를 표시합니다.   
 
 * {{site.data.keyword.mfp_oc_short_notm}}에서 MobileFirst Analytics Console을 실행하십시오.
 
-* {{site.data.keyword.mfserver_short_notm}}와 Mobile Analytics 서버 간에 싱글 사인온이 사용됩니다. Mobile Analytics 서버는 {{site.data.keyword.mfserver_short_notm}} 서버와 동일한 LTPA 키 및 사용자 신임 정보를 사용하여 구성합니다. {{site.data.keyword.mfp_oc_short_notm}}에 로그인하는 데 사용한 `사용자 이름` 및 `비밀번호`를 사용하여 Mobile Analytics 콘솔에 로그인할 수 있습니다.
+* {{site.data.keyword.mfserver_short_notm}}와 Mobile Analytics 서버 간에 싱글 사인온이 사용됩니다. Mobile Analytics 서버는 {{site.data.keyword.mfserver_short_notm}}와 동일한 LTPA 키 및 사용자 신임 정보를 사용하여 구성합니다. {{site.data.keyword.mfp_oc_short_notm}}에 로그인하는 데 사용한 `username`과 `password`를 사용하여 Mobile Analytics 콘솔에 로그인할 수 있습니다. 
 
-MobileFirst Analytics에 대한 자세한 정보는 [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/)를 참조할 수 있습니다.
+MobileFirst Analytics에 대한 자세한 정보는 [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/)를 참조하십시오. 
 
 **참고:** {{site.data.keyword.mobilefoundation_short}} 서버 인스턴스를 삭제하거나 {{site.data.keyword.mfserver_short_notm}}를 다시 작성하려고 할 때 Mobile Analytics 서버가 제거됩니다.
 
 ## {{site.data.keyword.mobilefirst}} 서버 재작성
-{: #recreate_mobilefoundation_p2}
+{: #recreate_mobilefoundation_p3}
 
 *	**재작성**을 클릭하여 서버를 재작성하십시오.
 
@@ -112,15 +113,13 @@ MobileFirst Analytics에 대한 자세한 정보는 [MobileFirst Foundation Oper
 **참고**: 앱과 어댑터에 대한 정보를 포함하여 이전 서버 인스턴스의 모든 데이터가 구성된 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스에서 유지되며 이 데이터는 서버를 다시 작성하는 데 사용됩니다. 
 
 ##	고급 구성 설정
-{: #using_mfs_advanced_p2}
+{: #using_mfs_advanced_p3}
 
 `Overview` 페이지에서 **고급 구성으로 서버 시작**을 사용하면 고급 또는 사용자 정의 설정으로 서버를 작성할 수 있습니다. 또한 **구성** 탭을 클릭하여 서버 구성을 사용자 정의할 수 있도록 서버 설정을 업데이트할 수도 있습니다. {{site.data.keyword.mobilefoundation_short}}은 일부 고급 설정에 대한 액세스를 제공합니다.
 
-*	**토폴로지** 탭에서 필요한 서버 크기와 서버 인스턴스의 수를 선택할 수 있습니다. 기본값인 1GB 서버는 개발 및 간단한 테스트에 충분합니다. 
-  - 사용자 요구사항에 따라 적절한 서버 크기를 선택하십시오.
+*	**토폴로지** 탭에서 필요한 서버 크기와 메모리를 선택할 수 있습니다. 기본 서버는 1GB의 메모리로 작성됩니다. 
+  - 사용자 요구사항에 따라 서버의 메모리를 최대 2GB로 변경할 수 있습니다. 
 
-  - **노드**는 작성된 노드의 수를 표시합니다. 
-
-      - {{site.data.keyword.mobilefirst}} 서버 팜은 여기서 노드의 수를 구성하여 작성될 수 있습니다.
+  - **노드**는 작성된 노드의 수를 표시합니다. 이 필드를 {{site.data.keyword.mobilefoundation_short}}: Developer Pro에서 편집할 수 없습니다. Developer Pro 플랜에서 <!--in your {{site.data.keyword.IBM_notm}} container group--> 노드 수는 기본적으로 **1**입니다. 
 
 세부사항은 [{{site.data.keyword.mobilefoundation_long}} 문서](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}를 참조하십시오. 

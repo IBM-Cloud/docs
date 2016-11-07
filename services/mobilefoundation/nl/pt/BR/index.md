@@ -1,8 +1,7 @@
 ---
 
 copyright:
-  years: 2016
-
+  years: 2016 lastupdated:  "2016-08-31"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +12,8 @@ copyright:
 # Introdução ao {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
 
-Última atualização: 3 de agosto de 2016
-{: .last-updated}
+<!--Last updated: 31 August 2016
+{: .last-updated}-->
 
 O {{site.data.keyword.mobilefoundation_long}} expede a configuração de um ambiente do {{site.data.keyword.mfp_full}} a partir do qual é possível desenvolver, testar e operar aplicativos móveis corporativos. O {{site.data.keyword.mobilefoundation_short}} está disponível em dois planos de serviços diferentes: Developer e Professional 1 Application.
 {:shortdesc}
@@ -63,13 +62,13 @@ mudá-la.
 
     * Para criar uma instância de servidor do {{site.data.keyword.mobilefirst_notm}} com configuração avançada para topologia, segurança e outra configuração do servidor, clique em **Iniciar servidor com configuração avançada**. Consulte [Instalando a configuração avançada](c_using_mfs_p2.html#using_mfs_advanced_p2), para obter mais informações.
 
-Acesse [Usando o serviço Mobile Foundation para configurar o MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/ibm-containers/using-mobile-foundation/) para saber mais sobre como iniciar o {{site.data.keyword.mobilefoundation_short}}.
+Acesse [Usando o serviço Mobile Foundation para configurar o MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/) para saber mais sobre como iniciar o {{site.data.keyword.mobilefoundation_short}}.
 
 
-# Links Relacionados
+# Links relacionados
 {: #rellinks}
 
-## Links Relacionados
+## Links relacionados
 {: #general}
 
 *	[Documentação do produto IBM MobileFirst Platform Foundation V8.0.0](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}

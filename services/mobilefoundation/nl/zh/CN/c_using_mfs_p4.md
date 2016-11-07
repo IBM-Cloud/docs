@@ -2,22 +2,23 @@
 
 copyright:
   years: 2016
-lastupdated:  "2016-09-12"
+lastupdated:  "2016-10-14"
 ---
 
-#	使用 Professional 1 Application 套餐
-{: #using_mobilefoundation_p2}
+#	使用 Professional Per Capacity 套餐
+{: #using_mobilefoundation_p4}
 
 <!--Last updated: 12 September 2016
-{: .last-updated}-->
+{: .last-updated} -->
 
-使用 Professional 1 Application 套餐，用户可以创建 1 个支持多个移动操作系统的移动应用程序。创建 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 服务实例后，请阅读以下步骤以开始使用该服务。
+利用 Professional Per Capacity 套餐，用户可以创建使用多个移动操作系统的任意多个移动应用程序。
+创建 {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity 服务实例后，请阅读以下步骤以开始使用该服务。
 
 ## 先决条件
-{: #prerequisites_p2}
+{: #prerequisites_p4}
 
-配置 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 服务实例之前，请考虑以下内容。
-* 仅 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional（支持 OLTP）{{site.data.keyword.Bluemix_notm}} 套餐支持 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application。
+配置 {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity 服务实例之前，请考虑以下问题。
+* 仅 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional（支持 OLTP）{{site.data.keyword.Bluemix_notm}} 套餐支持 {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity。
 
 * 您应该拥有对 {{site.data.keyword.dashdbshort_notm}} 服务实例凭证的访问权，才能配置 {{site.data.keyword.mobilefoundation_short}} 服务实例的设置。
 
@@ -25,17 +26,17 @@ lastupdated:  "2016-09-12"
 
 
 ## 添加数据库连接
-{: #configure_dashdb_p2}
+{: #configure_dashdb_p4}
 
 ###  首要步骤
-{: #firststeps_p2}
+{: #firststeps_p4}
 
-创建 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 服务实例后，请按照下面的过程来开始使用该服务。
+创建 {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity 服务实例后，请按照下面的过程来开始使用该服务。
 
 ### 设置与 {{site.data.keyword.dashdbshort_notm}} 服务实例的连接
-{: #connect_dashdb_p2}
+{: #connect_dashdb_p4}
 
-创建 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 服务实例后，将看到“*概述*”页面，在其中需要指定 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 服务实例的连接信息。
+创建 {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity 服务实例后，您会看到*概述*页面，您需要在该页面中指定 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 服务实例的连接信息。
 
 1. 选择 {{site.data.keyword.dashdbshort_notm}} 服务实例所在的 {{site.data.keyword.Bluemix_notm}} `组织`。
 
@@ -47,19 +48,19 @@ lastupdated:  "2016-09-12"
 
 +  测试与指定 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 服务实例的连接。
 
-+  单击**继续**。此操作可在配置的 {{site.data.keyword.dashdbshort_notm}} 数据库服务实例中创建需要的表。
++  单击**添加**。此操作可在配置的 {{site.data.keyword.dashdbshort_notm}} 数据库服务实例中创建需要的表。
 
 **注**：您无法更改配置为由 {{site.data.keyword.mobilefoundation_short}} 服务实例使用的 {{site.data.keyword.dashdbshort_notm}} 服务实例。但是，您可以在多个 {{site.data.keyword.mobilefoundation_short}} 服务实例上使用同一 {{site.data.keyword.dashdbshort_notm}} 服务实例，因为每个 {{site.data.keyword.mobilefoundation_short}} 服务实例都将在所选 {{site.data.keyword.dashdbshort_notm}} 服务实例中创建自己的模式。
 
 * 几秒钟后，可以访问“`概述`”页面，其中为您提供教程和视频，可帮助您开始使用 {{site.data.keyword.mobilefoundation_short}} 服务。
 
 ## 启动 {{site.data.keyword.mobilefirst}} 服务器
-{: #start_mobilefoundation_p2}
+{: #start_mobilefoundation_p4}
 
 * 要使用缺省设置启动 {{site.data.keyword.mfserver_short_notm}}，请单击**启动基本服务器**。
 
 * 此选择将为 {{site.data.keyword.mfserver_long_notm}} 供应以下设置：
-    -  1 GB 内存。此大小足够用于开发、中等测试活动和小规模生产工作负载。
+    -  2 个节点，每个 1GB 内存。此大小适合用于开发、中等测试活动和小规模生产工作负载。
 
     -	自动为您生成 `username` 和 `password`。服务器启动并运行时，您可以对其进行访问。
 
@@ -79,7 +80,7 @@ lastupdated:  "2016-09-12"
 
 
 ##  添加移动分析服务器
-{: #adding_analytics_server_prof}
+{: #adding_analytics_server_p4}
 
  现在，您可以将移动分析服务器添加到 {{site.data.keyword.mobilefoundation_short}} 服务实例来监视 {{site.data.keyword.mobilefirst}} 服务器上的移动应用程序。
 
@@ -91,18 +92,20 @@ lastupdated:  "2016-09-12"
 
 * 单击**添加分析**，将移动分析服务器添加到 {{site.data.keyword.mobilefoundation_short}} 服务实例。
 
+* 您可以选择移动分析服务器配置，支持的分析服务器最低配置为 2 个节点，每个 1GB 内存。可以选择的分析服务器最高配置为 32 个节点，每个 16GB 内存。 
+
 供应过程启动。此过程会花费大约 10 分钟，并且消息窗口会指示此操作的进度。  
 
 * 从 {{site.data.keyword.mfp_oc_short_notm}} 启动 MobileFirst Analytics Console。
 
 * 在 {{site.data.keyword.mfserver_short_notm}} 与移动分析服务器之间启用单点登录。为移动分析服务器配置与 {{site.data.keyword.mfserver_short_notm}} 服务器相同的 LTPA 密钥和用户凭证。您可以像登录 {{site.data.keyword.mfp_oc_short_notm}} 一样，使用相同的 `username` 和 `password` 登录到“移动分析”控制台。
 
-有关 MobileFirst Analytics 的更多信息，请参阅 [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/)。
+有关 MobileFirst Analytics 的更多信息，可以参阅 [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/)。
 
 **注：**删除 {{site.data.keyword.mobilefoundation_short}} 服务实例或尝试重新创建 {{site.data.keyword.mfserver_short_notm}} 时，会除去移动分析服务器。
 
 ## 重新创建 {{site.data.keyword.mobilefirst}} 服务器
-{: #recreate_mobilefoundation_p2}
+{: #recreate_mobilefoundation_p4}
 
 *	单击**重新创建**以重新创建服务器。
 
@@ -111,7 +114,7 @@ lastupdated:  "2016-09-12"
 **注**：先前服务器实例中的所有数据（包括有关应用程序和适配器的信息）会持久存储在配置的 {{site.data.keyword.dashdbshort_notm}} 服务实例中，在重新创建服务器时会使用这些数据。
 
 ##	设置高级配置
-{: #using_mfs_advanced_p2}
+{: #using_mfs_advanced_p4}
 
 使用“`概述`”页面中的**使用高级配置启动服务器**，可使用高级或定制设置创建服务器。还可以通过单击**配置**选项卡更新服务器设置，以定制服务器配置。{{site.data.keyword.mobilefoundation_short}} 为您提供对某些高级设置的访问权。
 
@@ -120,6 +123,6 @@ lastupdated:  "2016-09-12"
 
   - **节点**显示已创建的节点数。
 
-      - 配置此处列出的节点数可创建 {{site.data.keyword.mobilefirst}} 服务器机群。
+      - 配置此处列出的节点数可创建 {{site.data.keyword.mobilefirst}} 服务器机群。支持的最低配置为 2 个节点，每个 1GB 内存；支持的最高配置为 32 个节点，每个 16GB 内存。 
 
 请参阅 [{{site.data.keyword.mobilefoundation_long}} 文档](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}，以获取更多详细信息。

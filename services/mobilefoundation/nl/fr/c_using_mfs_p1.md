@@ -2,17 +2,17 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-09-12"
 ---
 
 #	Utilisation du plan Developer
 {: #using_mobilefoundation_p1}
 
-Dernière mise à jour : 4 août 2016
-{: .last-updated}
+<!--Last updated: 12 September 2016
+{: .last-updated}-->
 
 Une fois l'instance de service {{site.data.keyword.mobilefoundation_short}}: Developer créée, au bout de quelques secondes, vous pouvez accéder à la `Présentation` du site {{site.data.keyword.Bluemix_notm}} qui fournit des tutoriels et des vidéos facilitant
-vos premiers pas avec le service {{site.data.keyword.mobilefoundation_short}}. 
+vos premiers pas avec le service {{site.data.keyword.mobilefoundation_short}}.
 
 ## Démarrage du serveur {{site.data.keyword.mobilefirst}}
 {: #start_mobilefoundation_p1}
@@ -22,7 +22,6 @@ défaut, cliquez sur **Start Basic Server**.
 
 Cette option affecte les paramètres suivants à un serveur {{site.data.keyword.mfserver_long_notm}} :
 *	1 Go de mémoire. Cette taille est suffisante pour des activités de développement et des activités de test sommaires et pour des charges de travail à faible échelle.
-
 
 *	Le `nom_d'utilisateur` et le `mot_de_passe` sont générés automatiquement pour vous. Vous pouvez y accéder une fois que le
 serveur est en opération.
@@ -35,7 +34,7 @@ message indique la progression de l'opération. A son terme, un tableau de bord 
 
 *	Votre `nom_d'utilisateur` personnel et votre `mot_de_passe`
 pour accéder à la console {{site.data.keyword.mfp_oc_short_notm}}. Le
-`mot_de_passe` est masqué. Cliquez sur l'icône **Show Password** pour le visualiser. 
+`mot_de_passe` est masqué. Cliquez sur l'icône **Show Password** pour le visualiser.
 
 *	Cliquez sur **Launch Console** pour lancer la
 console {{site.data.keyword.mfp_oc_short_notm}}.
@@ -44,6 +43,24 @@ console {{site.data.keyword.mfp_oc_short_notm}}.
 <!--This console runs inside the container.--> Elle vous permet de gérer vos
 applications et périphériques mobiles, l'utilisation de votre serveur en tant
 que serveur dorsal mobile, l'envoi de notifications push, etc.
+
+##  Ajout d'un serveur Mobile Analytics
+{: #adding_analytics_server_dev}
+
+ Vous pouvez maintenant surveiller votre application mobile sur un serveur {{site.data.keyword.mobilefirst}} en ajoutant un serveur Mobile Analytics à l'instance de service {{site.data.keyword.mobilefoundation_short}}. Le plan Developer crée le serveur Mobile Analytics dans un groupe de conteneurs avec un seul noeud d'1 Go de mémoire.
+
+* Cliquez sur commande d'ajout d'analyse pour ajouter le serveur Mobile Analytics à l'instance de service {{site.data.keyword.mobilefoundation_short}}.
+
+Le processus de mise à disposition commence. Ce processus prend environ 10 minutes et une fenêtre de
+message indique la progression de l'opération.  
+
+* Lancez MobileFirst Analytics depuis {{site.data.keyword.mfp_oc_short_notm}}.
+
+* La connexion unique est activée entre {{site.data.keyword.mfserver_short_notm}} et le serveur Mobile Analytics. Le serveur Mobile Analytics est configuré avec les mêmes clés LTPA et données d'identification de l'utilisateur que celles de {{site.data.keyword.mfserver_short_notm}}. Vous pouvez vous servir des mêmes `nom_d'utilisateur` et `mot_de_passe` pour vous connecter à la console Mobile Analytics que ceux utilisés pour la connexion à {{site.data.keyword.mfp_oc_short_notm}}.
+
+Pour plus d'informations sur MobileFirst Analytics, voir [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
+
+**Remarque :** le serveur Mobile Analytics est retiré quand vous supprimez l'instance de service {{site.data.keyword.mobilefoundation_short}} ou si vous tentez de recréer le serveur {{site.data.keyword.mfserver_short_notm}}.
 
 ## Re-création du serveur {{site.data.keyword.mobilefirst}}
 {: #recreate_mobilefoundation_p1}
@@ -70,7 +87,7 @@ est idoine pour le développement et des tests sommaires.
 vos besoins.
 
 * **Nodes** affiche le nombre de noeuds créés. Cette
-zone n'est pas modifiable dans {{site.data.keyword.mobilefoundation_short}}: Developer. Par défaut, le nombre de noeuds <!--in your {{site.data.keyword.IBM_notm}} container group--> s'élève à **1** dans le plan Developer. 
+zone n'est pas modifiable dans {{site.data.keyword.mobilefoundation_short}}: Developer. Le nombre de noeuds <!--in your {{site.data.keyword.IBM_notm}} container group--> est de **1** par défaut dans le plan Developer.
 
 Pour plus de détails, reportez-vous à la
 [documentation
