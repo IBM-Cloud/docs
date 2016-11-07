@@ -7,102 +7,46 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# GCM(Google cloud messaging)에 대한 신임 정보 구성
+# FCM의 신임 정보 구성
 {: #create-push-enable-gcm}
-마지막 업데이트 날짜: 2016년 8월 16일
+마지막 업데이트 날짜: 2016년 10월 17일
 {: .last-updated}
 
-GCM(Google Cloud Messaging) 신임 정보를 가져온 후 푸시 대시보드에서 {{site.data.keyword.mobilepushshort}} 서비스를 설정합니다. 
+FCM(Firebase Cloud Messaging)은 Android 디바이스, Google Chrome과 Mozilla 웹 브라우저에 푸시 알림을 전달하는 데 사용되는 게이트웨이입니다. FCM이 GCM(Google Cloud Messaging)을 대체했습니다. FCM 신임 정보를 가져온 후 대시보드에서 {{site.data.keyword.mobilepushshort}} 서비스를 설정해야 합니다. 새 앱에 FCM 구성을 사용하십시오. 기존 앱은 계속해서 GCM 구성으로 작동할 수 있습니다. 
 
 ##발신인 ID 및 API 키 가져오기
+{: #android-senderid-apikey}
 
-API 키는 안전하게 저장되어 {{site.data.keyword.mobilepushshort}} 서비스에서 GCM 서버에 연결할 때 사용되며 발신인 ID(프로젝트 번호)는 클라이언트 측 Android SDK에서 사용됩니다. 발신인 ID에 대한 자세한 정보는 [Google 클라우드 메시지](https://developers.google.com/cloud-messaging/gcm#arch)를 참조하십시오.
+API 키는 안전하게 저장되어 {{site.data.keyword.mobilepushshort}} 서비스에서 FCM 서버에 연결하는 데 사용되며 발신인 ID(프로젝트 번호)는 클라이언트 측의 Google Chrome 및 Mozilla Firefox용 Android SDK와 JS SDK에서 사용됩니다.  
 
-1. [Google 개발 콘솔](https://console.developers.google.com/start){: new_window}에서 Google 개발 계정을 가져오십시오. GCM(Google Cloud Messaging)에 대한 자세한 정보는 [Google API 프로젝트 작성](https://developers.google.com/console/help/new/){: new_window}을 참조하십시오.
+FCM을 설정하려면 API 키와 발신인 ID를 생성하고 다음 단계를 완료하십시오. 
 
-2. Google 개발자 콘솔에서 새 프로젝트를 작성하십시오. 예를 들어, "hello world"가 있습니다. 
+1. [Firebase 콘솔](https://console.firebase.google.com/?pli=1)을 방문하십시오. 
+2. **새 프로젝트 작성**을 선택하십시오.  
+3. 프로젝트 작성 창에서 프로젝트 이름을 입력하고 국가/지역을 선택한 후 **프로젝트 작성**을 클릭하십시오. 
+3. 탐색 분할창에서 설정 아이콘을 클릭한 후 **프로젝트 설정**을 선택하십시오. 
+4. 클라우드 메시징 탭을 선택하여 서버 API 키와 발신인 ID를 생성하십시오. 
 
-![프로젝트 작성](images/gcm_createproject.jpg)
+##Android와 Chrome 앱 및 확장 프로그램의 {{site.data.keyword.mobilepushshort}} 서비스 설정
+{: #setup-push-android}
 
-3. **프로젝트 이름**에 프로젝트의 이름을 입력한 다음 **작성** 단추를 클릭하십시오. 
-4. 프로젝트 번호를 보려면 **홈**을 클릭하십시오. 프로젝트 번호를 기록해두십시오. 
+**참고:** FCM/GCM API 키와 발신인 ID(프로젝트 번호)가 필요합니다. 
 
-![GCM 프로젝트 번호](images/gcm_projectnumber.jpg)
+1. Bluemix 대시보드를 연 후 작성한 {{site.data.keyword.mobilepushfull}} 서비스 인스턴스를 클릭하여 대시보드를 여십시오. 푸시 대시보드가 표시됩니다. 바인딩되지 않은 Android용 {{site.data.keyword.mobilepushshort}} 서비스를 설정하려면 바인딩되지 않은 {{site.data.keyword.mobilepushshort}} 서비스 아이콘을 선택하여 {{site.data.keyword.mobilepushshort}} 서비스 대시보드를 여십시오. 
 
-	**참고**: 프로젝트를 작성할 때 프로젝트 번호(발신인 ID)가 작성됩니다. 푸시 대시보드 화면에서 푸시 알림 서비스를 설정할 때 이 번호를 사용하십시오. 
+![푸시 대시보드](images/push_unbound.jpg)
 
-5. **API & 인증**을 클릭하고 **모바일 API** 섹션에서 **Android용 클라우드 메시징**을 클릭하십시오.
+2. **푸시 설정** 단추를 클릭하여 Android 애플리케이션과 Google Chrome 앱 및 확장 프로그램의 FCM/GCM 신임 정보를 구성하십시오. 
+3. **구성** 페이지에서, Android의 경우 **모바일** 탭으로 이동하여 발신인 ID(GCM 프로젝트 번호)와 API 키를 구성하십시오. Google Chrome 앱 및 확장 프로그램의 경우 **웹** 탭으로 이동하여 발신인 ID(FCM/GCM 프로젝트 번호)와 API 키를 적절히 구성하십시오. 
+4. **저장**을 클릭하십시오.
+5. 다음 단계. [Android의 알림 사용](c_enable_push.html) 또는 [Google Chrome 앱 및 확장 프로그램의 알림 사용](c_enable_push.html)을 설정하십시오. 
 
-![API](images/gcm_mobileapi.jpg)
+###Google Chrome 및 Mozilla Firefox 웹 푸시 구성(FCM/GCM 사용)
+{: #config-gcm-mozilla}
 
-6. **API**를 클릭한 다음 **API 사용** 단추를 클릭하여 사용자 프로젝트에 대한 API 키를 작성하십시오.
-
-![API 사용](images/gcm_enable_api.jpg)
-
-7. **API & Auths -> 신임 정보** 화면으로 이동하십시오. **신임 정보 추가**를 클릭한 다음 **API 키**를 클릭하십시오.
-
-![API 신임 정보](images/api_credentials.jpg)
-
-8. **서버 키** 옵션을 클릭하여 Bluemix 푸시 대시보드에서 사용할 GCM API 키를 생성하십시오. 
-9. **이름** 필드에 서버 API 키의 이름을 입력하십시오. 
-
-![GCM 서버 키](images/gcm_serverkey.jpg)
-
-10. **작성** 단추를 클릭하십시오.
-API 키가 표시됩니다. 
-
-![GCM API 키](images/gcm_apikey.jpg)
-
-11. GCM API 키를 복사한 다음 **확인** 단추를 클릭하십시오. Bluemix 푸시 알림 대시보드 구성 화면에서 신임 정보를 구성하려면 프로젝트 번호(발신인 ID)와 API 키가 필요합니다.  
-
-
-##Android용 {{site.data.keyword.mobilepushshort}} 서비스 설정
-
-###시작하기 전에
-{: before-you-begin}
-
-GCM API 키와 발신인 ID(프로젝트 번호)를 가져오십시오.  
-
-1. Bluemix 대시보드에서 백엔드 애플리케이션을 열고 IBM {{site.data.keyword.mobilepushshort}} 서비스를 클릭하여 대시보드를 여십시오. 
- 
-![푸시 대시보드](images/bluemixdashboard_push.jpg)
-
-푸시 대시보드가 표시됩니다. 
-	
-![푸시 설정](images/setup_push_main.jpg)
-바인딩되지 않은 Android용 {{site.data.keyword.mobilepushshort}} 서비스를 설정하려면 바인딩되지 않은 {{site.data.keyword.mobilepushshort}} 서비스 아이콘을 선택하여 {{site.data.keyword.mobilepushshort}} 서비스 대시보드를 여십시오. 
- 
-	![푸시 대시보드](images/push_unbound.jpg)
-
-2. **푸시 설정** 단추를 클릭하여 GCM 신임 정보를 구성하십시오. 
-1. **구성** 탭에서 **Google 클라우드 메시징** 섹션으로 이동하여 발신인 ID(GCM 프로젝트 번호)와 API 키를 구성하십시오. 
-
-4. **저장** 단추를 클릭하십시오.  
-5. 다음 단계. [Android용 알림 사용](c_enable_push.html).
-
-
-##바인딩하지 않은 Android용 {{site.data.keyword.mobilepushshort}} 서비스 작성
-
-###시작하기 전에
-{: before-you-begin}
-
-{{site.data.keyword.mobilepushshort}} 서비스 인스턴스를 작성하십시오. 백엔드 애플리케이션에 바인드하지 않아도 {{site.data.keyword.mobilepushshort}} 서비스 인스턴스를 사용할 수 있습니다. 
-
-1. {{site.data.keyword.mobilepushshort}} 서비스 인스턴스를 Bluemix 애플리케이션에 바인드하십시오. 바인딩 시 서비스와 관련된 모든 세부사항이 JSON 형식으로 VCAP_SERVICES 환경 변수에 저장됨을 확인할 수 있습니다.  
-
-![푸시 알림 서비스 바인딩](images/unbound_1.jpg)
- 
-2. **바인드**를 클릭하고 바인드할 {{site.data.keyword.mobilepushshort}} 서비스 인스턴스를 선택하십시오. 애플리케이션이 {{site.data.keyword.mobilepushshort}} 서비스에 바인드되면 서비스에 대한 정보가 JSON 형식으로 앱의 VCAP_SERVICES 환경 변수에 저장됩니다. 예를 들면, 다음과 같습니다.  
-
-```
-{
-   "imfpush_Dev": [
-   {
-     "name": "neekrish_20JulUnbound",
-         "label": "imfpush_Dev",
-         "plan": "Basic",
-         "credentials": null
-      }
-   ]
-}
-```
+1. 푸시 대시보드 탐색 분할창에서 **구성**을 선택하십시오. 
+2. 웹 탭을 선택하십시오.
+	![WebPush 구성](images/webpush_configure.jpg)
+3. 푸시 알림을 수신하도록 등록할 웹 사이트의 URL과 FCM/GCM API 키를 구성하십시오. 
+4. **저장**을 클릭하십시오.
+5. 다음 단계. [Google Chrome 및 Mozilla Firefox 브라우저에 알림 사용](c_enable_push.html).

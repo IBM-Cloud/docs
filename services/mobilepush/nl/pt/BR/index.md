@@ -1,4 +1,4 @@
-	---
+---
 
 copyright:
  years: 2015, 2016
@@ -12,14 +12,18 @@ copyright:
 
 # Introdução ao {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Última atualização: 16 de agosto de 2016
+Última atualização: 17 de outubro de 2016
 {: .last-updated}
 
 {:shortdesc}
 
-O serviço {{site.data.keyword.mobilepushshort}} fornece uma plataforma unificada para enviar e gerenciar {{site.data.keyword.mobilepushshort}} móveis destinados a plataformas iOS e Android. O serviço {{site.data.keyword.mobilepushshort}} gerencia o mapeamento dos usuários de seu aplicativo para seus dispositivos, plataforma do dispositivo e manipula o despacho de notificações push para eles. Com esse serviço, é possível enviar transmissões, unicasts (com base no deviceID) e também tags (ou tópicos) como notificações push para usuários de seu aplicativo móvel. É possível também usar um
-SDK e [APIs REST](https://mobile.{DomainName}/imfpushrestapidocs/) para
-desenvolver melhor seus aplicativos cliente.
+O serviço {{site.data.keyword.mobilepushshort}} fornece uma plataforma unificada para enviar e gerenciar notificações push móveis e da web que são
+destinadas para plataformas móveis iOS, Android, navegadores da web Google Chrome, Mozilla Firefox e Apps Google Chrome e Extensões. O serviço {{site.data.keyword.mobilepushshort}} gerencia o mapeamento de
+seus usuários de aplicativos para seus dispositivos, plataforma, navegadores da web e
+manipula o despacho de notificações push para eles. Com esse serviço, é possível enviar
+transmissões, unicasts, (com base em deviceID) e também tags (ou tópicos) como
+notificações push para seus usuários de aplicativos móveis e de navegador da web. Também é possível usar um SDK e
+[APIs de REST](https://mobile.{DomainName}/imfpush/) para desenvolver ainda mais os aplicativos clientes.
 
 Esta
 seção descreve como configurar notificações push básicas. Ao usar uma
@@ -57,4 +61,4 @@ notificações](c_enable_push.html)
 * [Referência de API IMFPush (iOS)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html){: new_window}
 * [Referência de API BMSPush iOS (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/blob/development/Apple Docs/index.html){: new_window}
 * [Referência da API REST
-](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}
+](https://mobile.{DomainName}/imfpush/){: new_window}

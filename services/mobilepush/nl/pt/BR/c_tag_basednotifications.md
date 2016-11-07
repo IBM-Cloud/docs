@@ -1,8 +1,5 @@
 ---
 
-Título: ativando Notificações push baseadas em tag
-
-Palavras-chave: Notificações push baseadas em tag, tags de definição, tagNames
 copyright:
  years: 2015, 2016
 
@@ -10,7 +7,7 @@ copyright:
 
 # Ativando notificações baseadas em tag
 {: #tag_based_notifications}
-Última atualização: 16 de agosto de 2016
+Última atualização: 18 de outubro de 2016
 {: .last-updated}
 
 Mensagens de notificação baseadas em tag se destinam a todos os dispositivos inscritos em uma tag específica. 
@@ -22,5 +19,5 @@ primeiramente criar as identificações para o aplicativo, configurar as assinat
 e, em seguida, iniciar as notificações baseadas em identificação. Para enviar uma
 notificação baseada em tag usando a
 [API
-REST](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}, assegure-se de que os "tagNames" sejam fornecidos ao
+REST](https://mobile.{DomainName}/imfpush/){: new_window}, assegure-se de que os "tagNames" sejam fornecidos ao
 postar no recurso de mensagem.

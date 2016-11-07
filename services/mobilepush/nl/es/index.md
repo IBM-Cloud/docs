@@ -1,4 +1,4 @@
-	---
+---
 
 copyright:
  years: 2015, 2016
@@ -12,20 +12,16 @@ copyright:
 
 # Iniciación a {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Última actualización: 16 de agosto de 2016
+Última actualización: 17 de octubre de 2016
 {: .last-updated}
 
 {:shortdesc}
 
-El servicio {{site.data.keyword.mobilepushshort}} proporciona una plataforma unificada para enviar y gestionar {{site.data.keyword.mobilepushshort}} móviles que están pensadas para plataformas iOS y Android.
-       El servicio {{site.data.keyword.mobilepushshort}} gestiona la correlación de los usuarios de la aplicación a sus dispositivos y a la plataforma de dispositivo y maneja el envío de notificaciones push a estos. Con este servicio puede enviar difusiones, unicasts (en función del ID de dispositivo) y también etiquetas (o temas) como notificaciones push a los usuarios de la aplicación móvil. También puede utilizar las [API REST](https://mobile.{DomainName}/imfpushrestapidocs/) y SDK para desarrollar más las aplicaciones de cliente.
+El servicio {{site.data.keyword.mobilepushshort}} proporciona una plataforma unificada para enviar y gestionar notificaciones push móviles y web destinadas a plataformas móviles iOS y Android, así como a navegadores web Google Chrome, Mozilla Firefox y a aplicaciones y extensiones de Google Chrome. El servicio {{site.data.keyword.mobilepushshort}} gestiona la correlación de los usuarios de la aplicación a sus dispositivos, a la plataforma de dispositivo y a los navegadores web y maneja el envío de notificaciones push a estos. Con este servicio puede enviar difusiones, difusiones únicas (en función del ID de dispositivo) y también etiquetas (o temas) como notificaciones push a los usuarios de la aplicación móvil y del navegador web. También puede utilizar las [API REST](https://mobile.{DomainName}/imfpush/) y SDK para desarrollar más las aplicaciones de cliente.
 
-En esta sección se describe cómo configurar notificaciones push básicas. Al utilizar
-      una notificación básica, las notificaciones se difunden en lugar de llegar a un conjunto específico
-      de usuarios utilizando etiquetas.
+En esta sección se describe cómo configurar notificaciones push básicas. Al utilizar una notificación básica, las notificaciones se difunden en lugar de llegar a un conjunto específico de usuarios utilizando etiquetas.
 
-1. [Configurar credenciales para un
-              proveedor de notificaciones](t__main_push_config_provider.html)
+1. [Configurar credenciales para un proveedor de notificaciones](t__main_push_config_provider.html)
 2. [Habilitar la app para móvil para recibir notificaciones](c_enable_push.html)
 3. [Enviar notificaciones básicas](t_send_push_notifications.html)
 
@@ -53,4 +49,4 @@ En esta sección se describe cómo configurar notificaciones push básicas. Al u
 * [Referencia de API push (Android)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html){: new_window}
 * [iOS de Referencia de la API IMFPush](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html){: new_window}
 * [iOS de Referencia de la API BMSPush (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/blob/development/Apple Docs/index.html){: new_window}
-* [Referencia API de REST](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}
+* [Referencia de API REST](https://mobile.{DomainName}/imfpush/){: new_window}

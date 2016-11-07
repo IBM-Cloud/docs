@@ -7,10 +7,10 @@ copyright:
 
 # 使用 REST API
 {: #push-api-rest}
-上次更新时间：2016 年 8 月 16 日
+上次更新时间：2016 年 10 月 17 日
 {: .last-updated}
 
-您可以将 REST（具象状态传输）API（应用程序编程接口）用于 {{site.data.keyword.mobilepushshort}}。还可以使用 SDK 和 [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) 来进一步开发您的客户机应用程序。
+您可以将 REST（具象状态传输）API（应用程序编程接口）用于 {{site.data.keyword.mobilepushshort}}。还可以使用 SDK 和 [Push API](https://mobile.{DomainName}/imfpush/) 来进一步开发您的客户机应用程序。
 
 通过 Push REST API，后端服务器应用程序和客户机可以访问 {{site.data.keyword.mobilepushshort}} 功能。
 
@@ -33,19 +33,19 @@ copyright:
 
  cf service-key {push_instance_name} {key_name}
 ```
-
+	{: codeblock}
 
 ## 接受语言头
 {: #push-api-rest-accept}
 
-“Accept-Language”头指定要将哪种语言用于 [Push REST API](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} 输出的错误消息。支持的错误消息语言如下：简体中文、繁体中文、英语（美国）、德语、法语、意大利语、日语、韩语、葡萄牙语和西班牙语。
+“Accept-Language”头指定要将哪种语言用于 [Push REST API](https://mobile.{DomainName}/imfpush/){: new_window} 输出的错误消息。支持的错误消息语言如下：简体中文、繁体中文、英语（美国）、德语、法语、意大利语、日语、韩语、葡萄牙语和西班牙语。
 
-## appSecret
+## appSecret 
 {: #push-api-rest-secret}
 
-应用程序绑定到 {{site.data.keyword.mobilepushshort}} 后，该服务会生成一个 appSecret（唯一键），并会在响应头中传递该键。如果是使用 IBM® {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，请使用 REST API 参考来获取有关需要保护哪些 API 的信息。有关 REST API 的信息，请参阅 REST API 参考。
+应用程序绑定到 {{site.data.keyword.mobilepushshort}} 后，该服务会生成一个 appSecret（唯一密钥），并会在响应头中传递该密钥。如果是使用 IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，请参阅 REST API 参考来获取有关需要保护哪些 API 的信息。有关 REST API 的信息，请参阅 REST API 参考。
 
-请求头必须包含 appSecret。如果不包含，服务器会返回“401 未授权”错误代码。将 {{site.data.keyword.mobilepushshort}} 添加到应用程序时，会创建特定的 AppID。在响应中，您会得到一个名为 appSecret 的头，该头用于创建标记或发送消息。该操作通过目录或样板中的服务来执行。
+请求头必须包含 appSecret。如果不包含，服务器会返回“401 未授权”错误代码。将 {{site.data.keyword.mobilepushshort}} 添加到应用程序时，会创建特定的 AppID。作为响应的一部分，您会获取名为 appSecret 的头，其用于创建标记或发送消息。通过目录或样板中的服务，可执行该操作。
 
 要获取 appSecret 值，请执行以下操作：
 
@@ -53,10 +53,9 @@ copyright:
 2. 单击**显示凭证**链接以显示 appSecret (AppID)。
 
 **显示凭证**屏幕将显示有关 appSecret 的信息：
-
 ```
-{
- "imfpush_Dev": [
+	{
+    "imfpush_Dev": [
    {
      "name": "testapp1",
      "label": "imfpush_Dev",
@@ -64,12 +63,14 @@ copyright:
      "credentials": {
        "url": "http://imfpush.ng.bluemix.net/imfpush/v1/apps/b615b280-b37e-4042-8815-38a758f234e2",
        "admin_url": "//mobile.ng.bluemix.net/imfpushdashboard/?appGuid=b615b280-b37e-4042-8815-38a758f234e2",
-       "appSecret": "8dac71a5-2219-42b3-a9f3-dbb828ba1f04"  
+       "appSecret": "8dac71a5-2219-42b3-a9f3-dbb828ba1f04",
        }
-   }
- ]
-}
-``` 
+     }
+    ]
+    }
+```
+	{: codeblock} 
+
 
 ##Push REST API 过滤器
 {: #push-api-rest-filters}
@@ -78,14 +79,11 @@ copyright:
 
 使用以下语法，可生成过滤器：
 
-**名称**
-要应用过滤器的字段名称。
+**名称**：应用过滤器的字段名称。
 
-**运算符**
-为 ==（完全匹配）或 =@（包含子字符串），用于描述要使用的过滤匹配。
+**运算符**：可以为 ==（完全匹配）或 =@（包含子字符串），用于描述要使用的过滤匹配。
 
-**表达式**
-要包含在结果中的值。
+**表达式**：要包含在结果中的值。
 
 如果表达式中出现逗号和反斜杠，必须用反斜杠将它们转义。
 

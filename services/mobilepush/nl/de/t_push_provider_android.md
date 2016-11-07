@@ -7,102 +7,46 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# Berechtigungsnachweise für Google Cloud Messaging (GCM) konfigurieren
+# Berechtigungsnachweise für FCM generieren
 {: #create-push-enable-gcm}
-Letzte Aktualisierung: 16. August 2016
+Letzte Aktualisierung: 17. Oktober 2016
 {: .last-updated}
 
-Rufen Sie Ihre Berechtigungsnachweise für Google Cloud Messaging (GCM) ab und richten Sie anschließend den {{site.data.keyword.mobilepushshort}}-Service im Push-Dashboard ein. 
+Firebase Cloud Messaging (FCM) ist das Gateway, das für die Übermittlung von Push-Benachrichtigungen an Android-Geräte sowie an Google Chrome- und Mozilla-Web-Browser verwendet wird. FCM hat Google Cloud Messaging (GCM) ersetzt. Sie müssen Ihre FCM-Berechtigungsnachweise abrufen und anschließend den {{site.data.keyword.mobilepushshort}}-Service im Dashboard einrichten. Achten Sie darauf, für neue Apps FCM-Konfigurationen zu verwenden. Vorhandene Apps können mit der GCM-Konfiguration weiterhin betrieben werden.
 
 ##Absender-ID und API-Schlüssel abrufen
+{: #android-senderid-apikey}
 
-Der API-Schlüssel wird geschützt gespeichert und vom {{site.data.keyword.mobilepushshort}}-Service für die Verbindungsherstellung zum GCM-Server verwendet. Die Absender-ID (Projektnummer) wird vom Android-SDK auf der Clientseite verwendet. Weitere Informationen zur Absender-ID finden Sie unter [Google Cloud Messaging](https://developers.google.com/cloud-messaging/gcm#arch).
+Der API-Schlüssel wird geschützt gespeichert und vom {{site.data.keyword.mobilepushshort}}-Service für die Verbindungsherstellung zum FCM-Server verwendet. Die Absender-ID (Projektnummer) wird vom Android-SDK und dem JS-SDK für Google Chrome und Mozilla Firefox auf der Clientseite verwendet. 
 
-1. Richten Sie ein Google Development-Konto unter [Google Dev Console](https://console.developers.google.com/start){: new_window} ein. Weitere Informationen zu Google Cloud Messaging (GCM) finden Sie in [Creating a Google API Project](https://developers.google.com/console/help/new/){: new_window}.
+Zum Einrichten von FCM generieren Sie den API-Schlüssel und die Absender-ID und führen Sie folgende Schritte aus:
 
-2. Erstellen Sie in Google Developers Console ein neues Projekt. Beispiel: "hello world".
+1. Besuchen Sie die [Firebase-Konsole](https://console.firebase.google.com/?pli=1).
+2. Wählen Sie **Neues Projekt erstellen** aus. 
+3. Geben Sie im Fenster 'Projekt erstellen' einen Projektnamen ein, wählen Sie ein Land/eine Region aus und klicken Sie auf **Projekt erstellen**.
+3. Klicken Sie im Navigationsfenster auf das Symbol 'Einstellungen' und wählen Sie **Projekteinstellungen** aus.
+4. Wählen Sie die Registerkarte 'Cloud Messaging' aus, um einen Server-API-Schlüssel und eine Absender-ID zu generieren.
 
-![Projekt erstellen](images/gcm_createproject.jpg)
+##{{site.data.keyword.mobilepushshort}}-Service für Android und Chrome Apps und Erweiterungen einrichten
+{: #setup-push-android}
 
-3. Geben Sie in das Feld **Project name** (Projektname) den Namen für Ihr Projekt ein und klicken Sie anschließend auf die Schaltfläche **Create** (Erstellen).
-4. Klicken Sie auf **Home** (Ausgangsposition), um die Projektnummer anzuzeigen. Notieren Sie Ihre Projektnummer.
+**Hinweis:** Sie benötigen Ihren FCM/GCM-API-Schlüssel und die Absender-ID (Projektnummer).
 
-![GCM-Projektnummer](images/gcm_projectnumber.jpg)
+1. Öffnen Sie Ihr Bluemix-Dashboard und klicken Sie anschließend auf die von Ihnen erstellte Serviceinstanz von {{site.data.keyword.mobilepushfull}}, um das Dashboard zu öffnen. Das Push-Dashboard wird angezeigt. Um einen nicht gebundenen {{site.data.keyword.mobilepushshort}}-Service für Android einzurichten, wählen Sie das Symbol für 'Nicht gebundenen {{site.data.keyword.mobilepushshort}}-Service' aus, um das {{site.data.keyword.mobilepushshort}}-Servicedashboard anzuzeigen. 
 
-	**Hinweis**: Wenn Sie ein eigenes Projekt erstellen, wird eine Projektnummer (Absender-ID) erstellt. Verwenden Sie diese Nummer zum Einrichten von Push Notifications Service in der Anzeige des Push-Dashboards.
+![Push-Dashboard](images/push_unbound.jpg)
 
-5. Klicken Sie auf **APIs & Auth** (APIs & Authentifizierung) und klicken Sie im Bereich **Mobile APIs** auf die Option **Cloud Messaging for Android**.
+2. Klicken Sie auf die Schaltfläche **Push einrichten**, um die FCM/GCM-Berechtigungsnachweise für Android-Anwendungen und Google Chrome-Apps und Erweiterungen zu konfigurieren.
+3. Für Android öffnen Sie auf der Seite **Konfiguration** die Registerkarte **Mobile** und konfigurieren Sie die Absender-ID (GCM-Projektnummer) und den API-Schlüssel. Für Google Chrome Apps und Erweiterungen öffnen Sie die Registerkarte **Web** und konfigurieren Sie die Absender-ID (FCM/GCM-Projektnummer) und den API-Schlüssel entsprechend.
+4. Klicken Sie auf **Speichern**.
+5. Nächste Schritte: [Benachrichtigungen für Android aktivieren](c_enable_push.html) oder [Benachrichtigungen für Google Chrome-Apps & Erweiterungen aktivieren](c_enable_push.html).
 
-![APIs](images/gcm_mobileapi.jpg)
+###Konfiguration für Google Chrome- und Mozilla Firefox-Web-Push-Operationen (mithilfe von FCM/GCM)
+{: #config-gcm-mozilla}
 
-6. Klicken Sie auf **APIs** und anschließend auf die Schaltfläche **Enable API** (API aktivieren), um den API-Schlüssel für Ihr Projekt zu erstellen. 
-
-![API aktivieren](images/gcm_enable_api.jpg)
-
-7. Rufen Sie die Anzeige **APIs & Auths -> Credentials** (APIs & Authentifizierung -> Berechtigungsnachweise) auf. Klicken Sie auf **Add Credentials** (Berechtigungsnachweise hinzufügen) und anschließend auf **API Key** (API-Schlüssel).
-
-![API-Berechtigungsnachweise](images/api_credentials.jpg)
-
-8. Klicken Sie auf die Option **Server Key** (Serverschlüssel), um einen GCM-API-Schlüssel zu generieren, den Sie im Bluemix-Push-Dashboard verwenden können.
-9. Geben Sie in das Feld **Name** den Namen für den Server-API-Schlüssel ein.
-
-![GCM-Serverschlüssel](images/gcm_serverkey.jpg)
-
-10. Klicken Sie auf die Schaltfläche **Create** (Erstellen). 
-Der API-Schlüssel wird angezeigt.
-
-![GCM-API-Schlüssel](images/gcm_apikey.jpg)
-
-11. Kopieren Sie Ihren GCM-API-Schlüssel und klicken Sie anschließend auf die Schaltfläche **OK**. Sie benötigen die Projektnummer (Absender-ID) und den API-Schlüssel, um Ihre Berechtigungsnachweise in der Konfigurationsanzeige im Dashboard für Bluemix-Push-Benachrichtigungen zu konfigurieren. 
-
-
-##{{site.data.keyword.mobilepushshort}}-Service für Android einrichten
-
-###Vorbemerkungen
-{: before-you-begin}
-
-Rufen Sie einen GCM-API-Schlüssel und eine Absender-ID (Projektnummer) ab. 
-
-1. Öffnen Sie Ihre Back-End-Anwendung im Bluemix-Dashboard und klicken Sie anschließend auf den Service 'IBM {{site.data.keyword.mobilepushshort}}', um das Dashboard zu öffnen. 
- 
-![Push-Dashboard](images/bluemixdashboard_push.jpg)
-
-Das Push-Dashboard wird angezeigt.
-	
-![Push-Einrichtung](images/setup_push_main.jpg)
-Um einen nicht gebundenen {{site.data.keyword.mobilepushshort}}-Service für Android einzurichten, wählen Sie das Symbol für 'Nicht gebundener Service' für Push-Benachrichtigungen aus, um das Dashboard für den {{site.data.keyword.mobilepushshort}}-Service zu öffnen. 
- 
-	![Push-Dashboard](images/push_unbound.jpg)
-
-2. Klicken Sie auf die Schaltfläche **Push einrichten**, um die GCM-Berechtigungsnachweise zu konfigurieren.
-1. Konfigurieren Sie auf der Registerkarte **Konfiguration** im Abschnitt **Google Cloud Messaging** die Absender-ID (GCM-Projektnummer) und den API-Schlüssel.
-
-4. Klicken Sie auf die Schaltfläche **Speichern**. 
-5. Nächste Schritte: [Benachrichtigungen für Android aktivieren](c_enable_push.html).
-
-
-##Nicht gebundenen {{site.data.keyword.mobilepushshort}}-Service für Android erstellen 
-
-###Vorbemerkungen
-{: before-you-begin}
-
-Erstellen Sie eine Instanz des {{site.data.keyword.mobilepushshort}}-Service. Sie können die Instanz des {{site.data.keyword.mobilepushshort}}-Service ohne Bindung an jegliche Back-End-Anwendung verwenden. 
-
-1. Binden Sie die Instanz des {{site.data.keyword.mobilepushshort}}-Service an eine Bluemix-Anwendung. Durch das Binden werden alle Details im Zusammenhang mit dem Service, die in JSON-Format in der Umgebungsvariablen 'VCAP_SERVICES' gespeichert sind, sichtbar.  
-
-![Binden eines Service für Push-Benachrichtigungen](images/unbound_1.jpg)
- 
-2. Klicken Sie auf **Binden** und wählen Sie die Instanz des {{site.data.keyword.mobilepushshort}}-Service aus, die gebunden werden soll. Nachdem Ihre Anwendung an den {{site.data.keyword.mobilepushshort}}-Service gebunden worden ist, werden die Informationen zum Service in JSON-Format in der Umgebungsvariablen 'VCAP_SERVICES' für Ihre App gespeichert. Beispiel: 
-
-```
-{
-   "imfpush_Dev": [
-   {
-         "name": "neekrish_20JulUnbound",
-         "label": "imfpush_Dev",
-         "plan": "Basic",
-         "credentials": null
-      }
-   ]
-}
-```
+1. Wählen Sie im Navigationsbereich des Push-Dashboards **Konfigurieren** aus.
+2. Wählen Sie die Webregisterkarte aus.
+	![WebPush-Konfigurationen](images/webpush_configure.jpg)
+3. Konfigurieren Sie den FCM/GCM-API-Schlüssel und die URL Ihrer Webseite, die für den Empfang von Push-Benachrichtigungen registriert wird.
+4. Klicken Sie auf **Speichern**.
+5. Nächste Schritte: [Benachrichtigungen für Google Chrome- und Mozilla Firefox-Browser aktivieren](c_enable_push.html).

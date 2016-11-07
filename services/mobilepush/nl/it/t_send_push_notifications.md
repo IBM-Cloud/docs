@@ -8,23 +8,21 @@ copyright:
 {:new_window: target="_blank"}
 # Invio di notifiche di push di base
 {: #push-send-notifications}
-Ultimo aggiornamento: 16 agosto 2016
+Ultimo aggiornamento: 17 ottobre 2016
 {: .last-updated}
 
 Dopo che hai sviluppato le tue applicazioni, puoi inviare delle notifiche di push di base (senza utilizzare tag, badge, payload aggiuntivi o file audio).
 
 Per inviare notifiche push di base, completa la seguente procedura:
 
-1. In **Choose the Audience**, seleziona uno dei seguenti destinatari:
-      **All Devices**, oppure in base alla piattaforma: **Only iOS devices** o
-      **Only Android devices**. 
+1. Seleziona **Send Notifications** e quindi scegli l'opzione **Send to** appropriata. 
 
 **Nota**: quando selezioni l'opzione **All Devices**, tutti i dispositivi sottoscritti a {{site.data.keyword.mobilepushshort}} riceveranno le notifiche.
 
 ![Schermata notifiche](images/tag_notification.jpg)
+2. Nel campo **Message**, immetti il tuo messaggio e fai quindi clic su **Send**.
 
-2. In **Create your Notification**, immetti il tuo messaggio e quindi fai clic su **Send**.
-3. Verifica che i tuoi dispositivi abbiano ricevuto la tua notifica. La seguente immagine mostra una casella di avviso che gestisce una {{site.data.keyword.mobilepushshort}} in primo piano su un dispositivo Android e iOS. 
+3. Verifica che i tuoi dispositivi abbiano ricevuto la tua notifica. La seguente immagine mostra una casella di avviso che gestisce una {{site.data.keyword.mobilepushshort}} in primo piano su un dispositivo Android e iOS.
 
 ![Notifica push in primo piano su Android](images/Android_Screenshot.jpg)
 

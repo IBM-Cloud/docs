@@ -7,7 +7,7 @@ copyright:
 
 # 문제점 해결
 {: #errors}
-마지막 업데이트 날짜: 2016년 8월 16일
+마지막 업데이트 날짜: 2016년 8월 29일
 {: .last-updated}
 
 이 섹션을 참조하여 공통 {{site.data.keyword.mobilepushshort}} 문제를 해결할 수 있습니다. 
