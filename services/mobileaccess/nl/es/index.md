@@ -2,26 +2,25 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 
 # Iniciación a {{site.data.keyword.amashort}}
 {: #gettingstarted}
-Última actualización: 21 de julio de 2016
-{: .last-updated}
 
-Añada seguridad a la app para móvil con el servicio {{site.data.keyword.amafull}}. Puede configurar la autenticación de cliente y los proveedores de identidad de modo que los usuarios puedan iniciar una sesión en la app con sus cuentas existentes de Google o Facebook.
+
+Añada seguridad a la app para móvil con el servicio {{site.data.keyword.amafull}}. Puede configurar la autorización del cliente para acceder a los recursos de fondo protegidos que se ejecutan en {{site.data.keyword.Bluemix_notm}}. Utilice proveedores de identidad (Google y Facebook), o identidades personalizadas para autenticar usuarios y otorgar acceso a las aplicaciones web y los recursos de fondo protegidos.
 {:shortdesc}
 
-**Note:**: el servicio {{site.data.keyword.amashort}} se conocía anteriormente como Advanced Mobile Access.
+**Nota:**: el servicio {{site.data.keyword.amashort}} se conocía anteriormente como Advanced Mobile Access.
 
 
 Para comenzar a utilizar el servicio {{site.data.keyword.amashort}}:
 
 1. Utilice el panel de control de {{site.data.keyword.Bluemix_notm}} para crear una aplicación de programa de fondo móvil, o configure una existente.
   - Puede seleccionar el contenedor modelo **MobileFirst Services Starter** en el catálogo {{site.data.keyword.Bluemix_notm}}.
-  - También puede enlazar el servicio a una aplicación existente y configurarlo. 
+  - También puede enlazar el servicio a una aplicación existente y configurarlo.
 
    Cuando utilice MobileFirst Services Starter, obtendrá una instancia de un tiempo de ejecución Node.js que se ejecuta en IBM {{site.data.keyword.Bluemix_notm}} para implementar la lógica del programa de fondo móvil. Un conjunto de servicios móviles principales que proporcionan seguridad, datos, envíos por push y funciones de supervisión están enlazados a esa app Node.js. Tras crear la app Node.js de {{site.data.keyword.Bluemix_notm}}, puede configurar el entorno de desarrollo y empezar a utilizar los SDK de {{site.data.keyword.Bluemix_notm}} Mobile Services. Puede utilizar los SDK para acceder a los servicios que están enlazados a la app de nube con sencillas llamadas API.
   
@@ -35,13 +34,13 @@ Para comenzar a utilizar el servicio {{site.data.keyword.amashort}}:
 	####Desarrollo de cliente
    {: #client-development}
    
-	Puede añadir el SDK de {{site.data.keyword.amashort}} a la app Android, iOS o Cordova existente:
+	Puede añadir el SDK de {{site.data.keyword.amashort}} a la app Android, iOS o Cordova existente: 
    * Android: ([Configuración del SDK de Android](getting-started-android.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
   
    * iOS (SDK de Swift): ([Configuración del SDK de Swift para iOS](getting-started-ios-swift-sdk.html))
       ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
   
-   * iOS (SDK de Objective-C) [Configuración del SDK de Object-C para iOS](getting-started-ios.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
+   * iOS (SDK de Objective-C): ([Configuración del SDK de Object-C para iOS](getting-started-ios.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
 
    * Cordova: ([Configuración del plugin de Cordova](getting-started-cordova.html)) ([Ejemplo](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
    

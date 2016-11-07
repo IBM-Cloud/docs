@@ -1,20 +1,16 @@
 ---
 
 copyright:
-  years: 2016
-
+  years: 2016 lastupdated: "2016-10-09"
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 
 # Ativando a autenticação do Google para apps iOS (Swift SDK)
 {: #google-auth-ios}
 
-Última atualização: 01 de agosto de 2016
-{: .last-updated}
-
-Use o Google Sign-In para autenticar usuários em seu app {{site.data.keyword.amashort}} iOS Swift. O {{site.data.keyword.amashort}} Swift SDK recém-liberado inclui e melhora a funcionalidade fornecida pelo Mobile Client Access Objective-C SDK existente.
+Use o Google Sign-In para autenticar usuários no app
+{{site.data.keyword.amafull}} iOS Swift. O {{site.data.keyword.amashort}} Swift SDK recém-liberado inclui e melhora a funcionalidade fornecida pelo Mobile Client Access Objective-C SDK existente.
 
 **Nota:** embora o Objective-C SDK permaneça totalmente suportado e ainda seja considerado o SDK primário para o {{site.data.keyword.Bluemix_notm}} Mobile Services, há planos para descontinuar o Objective-C SDK posteriormente este ano em favor deste novo Swift SDK.
 
@@ -54,10 +50,10 @@ As etapas a seguir fornecem um esboço resumido das tarefas necessárias para pr
 `GoogleService-Info.plist`, abra-o e anote o valor de
 `CLIENT_ID`. Esse valor será necessário mais tarde para configurar o aplicativo backend do {{site.data.keyword.amashort}}.
 
-1. Inclua o arquivo `GoogleService-Info.plist` em seu projeto do Xcode. Para obter mais informações, consulte [Incluir o arquivo de configuração em seu projeto](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config).
+1. Inclua o arquivo `GoogleService-Info.plist` em seu projeto do Xcode. Para obter mais informações, veja [Incluir o arquivo de configuração em seu projeto](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config).
 
 1. Atualize os Esquemas de URL em seu projeto do Xcode com o
-`REVERSE_CLIENT_ID` e o identificador de pacote configurável. Para obter mais informações, consulte [Incluir esquemas URL em seu projeto](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project).
+`REVERSE_CLIENT_ID` e o identificador de pacote configurável. Para obter mais informações, veja [Incluir esquemas URL em seu projeto](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project).
 
 1. Atualize o arquivo project-Bridging-Header.h do seu app com o código a
 seguir:
@@ -65,6 +61,7 @@ seguir:
  ```
  #import <Google/SignIn.h>
  ```
+ {: codeblock}
 
  Para obter mais informações sobre a atualização do arquivo de cabeçalho de
 ponte, consulte a etapa 1. em
@@ -76,15 +73,13 @@ conexão](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign
 
 Agora que você tem um identificador de cliente do iOS, é possível ativar a autenticação do Google no painel do {{site.data.keyword.Bluemix}}.
 
-1. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}.
+1. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. 
 
-1. Clique em **Opções móveis** e anote a
-**Rota** (*applicationRoute*) e o **GUID do
-app** (*applicationGUID*). Eles serão necessários ao inicializar o SDK.
+1. Clique em **Opções de dispositivo móvel** e tome nota da **Rota** (*applicationRoute*) e
+do **GUID / TenantId do aplicativo** (*tenantId*). Você precisará desses valores ao inicializar o SDK e enviar solicitações para o
+aplicativo backend.
 
-1. Clique no ladrilho {{site.data.keyword.amashort}}. O painel do {{site.data.keyword.amashort}} é carregado.
-
-1. Clique no botão **Configurar* no painel do **Google**.
+1. Clique no botão **Configurar** no painel **Google**.
 
 1. Em **ID do aplicativo para iOS**, especifique o valor
 `CLIENT_ID` do arquivo `GoogleService-Info.plist` que
@@ -102,8 +97,10 @@ você obteve anteriormente e clique em **Salvar**.
 ```
 sudo gem install cocoapods
 ```
-Para obter mais informações, consulte o [website do
-CocoaPods](https://cocoapods.org/).
+{: codeblock}
+
+Para obter mais informações, veja o
+[website CocoaPods](https://cocoapods.org/).
 
 ### Instalando o {{site.data.keyword.amashort}} client Swift SDK com o CocoaPods
 {: #facebook-auth-install-swift-cocoapods}
@@ -116,6 +113,7 @@ CocoaPods](https://cocoapods.org/).
  use_frameworks!
  pod 'BMSGoogleAuthentication'
  ```
+ {: codeblock}
  
  **Nota:** se você já tiver instalado o {{site.data.keyword.amashort}} core SDK, será possível remover esta linha: `pod 'BMSSecurity'`. O pod `BMSGoogleAuthentication` instala todas as estruturas necessárias.
 	
@@ -138,49 +136,45 @@ projeto.
 ## Inicializando o {{site.data.keyword.amashort}} client Swift SDK
 {: #google-auth-ios-initialize}
 
-Para usar o {{site.data.keyword.amashort}} client SDK, inicialize-o passando os parâmetros `applicationGUID` e `applicationRoute`.
+Para usar o SDK do cliente do {{site.data.keyword.amashort}}, inicialize-o passando o parâmetro `applicationGUID`
+(`tenantID`).
 
 Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo.
 
-1. Obter valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de dispositivo móvel**. Os valores `applicationRoute` e `applicationGUID` são
-exibidos nos campos **Rota** e **GUID do app**.
-
 1. Importe as estruturas necessárias na classe em que você deseja usar o {{site.data.keyword.amashort}} client SDK. Inclua os cabeçalhos a seguir:
 
- ```Swift
- import UIKit
- import BMSCore
- import BMSSecurity
- ```
+	 ```Swift 	let tenantId = "<serviceTenantID>" 	let regionName = <applicationBluemixRegion> 	func application(_ application: UIApplication,
+didFinishLaunchingWithOptions launchOptions: 		[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-1. Use o código a seguir para inicializar o client SDK. Substitua `<applicationRoute>` e `<applicationGUID>` por valores para **Rota** e **GUID do app** obtidos de **Opções móveis** no painel do {{site.data.keyword.Bluemix_notm}}. Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de **Avatar** ![Ícone de Avatar](images/face.jpg "Ícone de Avatar") na barra de menus para abrir o widget **Conta e suporte**.
+	    let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+	    		mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+	 ///the regionName should be one of the following: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney   
+	    BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+		GoogleAuthenticationManager.sharedInstance.register()
+		return true
+	}
 
- ```Swift
- let backendURL = "<applicationRoute>"
- let backendGUID = "<applicationGUID>"
-
- func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
- // Inicialize o client SDK.  
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
-
- BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
-
- GoogleAuthenticationManager.sharedInstance.register()
-      return true
+	// [START openurl]
+	    func application(_ application: UIApplication,
+			     open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
       }
 
- // [START openurl]
-      func application(application: UIApplication,
-          openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-             return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
-      }
-
- @available(iOS 9.0, *)
- func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
- return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, options: options)
+	    @available(iOS 9.0, *)
+	    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, options: options)
   }
- ```
+
+	 ```
+
+ No código:
+ 	* Substitua o `<serviceTenantID>` pelo valor que você recuperou a partir das **Opções de dispositivo móvel**
+(veja [Configurando o Mobile Client Access para autenticação do Google](#google-auth-ios-config)). 
+	* Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de **Avatar** ![Ícone de Avatar](images/face.jpg "Ícone de Avatar") na barra de menus para abrir o widget **Conta e suporte**. O valor da região que aparece deve ser um dos seguintes: **US
+South**, **United Kingdom** ou **Sydney** e corresponder aos valores requeridos no código: `BMSClient.Region.usSouth`,
+`BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.
+	
+
 
 ## Testando a Autenticação
 {: #google-auth-ios-testing}
@@ -193,8 +187,11 @@ Após o SDK do cliente ser inicializado e o Google Authentication Manager ser re
 Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido por {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
-1. Tente enviar uma solicitação para o terminal protegido do seu aplicativo backend móvel em seu navegador da área de trabalho, abrindo
-`{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`
+1. Tente enviar uma solicitação para um terminal protegido de seu aplicativo backend móvel em seu navegador da área de trabalho, abrindo `{applicationRoute}/protected`. Substitua
+o `{applicationRoute}` pelo valor que você recuperou a partir das **Opções
+de dispositivo móvel** (veja [Configurando o Mobile Client
+Access para autenticação do Google](#google-auth-ios-config)). Por exemplo,
+`http://my-mobile-backend.mybluemix.net/protected`.
 
 1. O terminal `/protected` de um aplicativo backend móvel criado com o MobileFirst Services Boilerplate é protegido com o
 {{site.data.keyword.amashort}}, portanto, só pode ser acessado pelos aplicativos móveis instrumentados com o SDK do cliente
@@ -202,20 +199,18 @@ Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurs
 
 1. Use seu aplicativo iOS para fazer solicitação para o mesmo terminal.
 
- ```Swift
- let protectedResourceURL = "<Your protected resource URL>" // any protected resource
- let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
- let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
- if error == nil {
-    print ("response:\(response?.responseText), no error")
- } else {
-    print ("error: \(error)")
- }
- }
+ ```Swift 	let protectedResourceURL = "<your protected resource absolute path>" 	let request = Request(url: protectedResourceURL, method:
+HttpMethod.GET) 	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
+	   if error == nil {
+	       print ("response:\(response?.responseText), no error")
+	    } else {
+	       print ("error: \(error)")
+	    }
+	}
 
- request.sendWithCompletionHandler(callBack)
+	request.send(completionHandler: callBack)
+
 	```
-
 1. Execute o aplicativo. Você verá um pop-up da tela de Login do Google
 
  ![image](images/ios-google-login.png)
@@ -224,16 +219,11 @@ Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurs
 {{site.data.keyword.amashort}} a usar sua identidade de usuário do Google para
 propósitos de autenticação.
 
-1. 	Sua solicitação deve ser bem-sucedida. A saída a seguir aparece no log.
+1. Sua solicitação deve ser bem-sucedida. A saída a seguir aparece no log.
 
  ```
- onAuthenticationSuccess info = Optional({attributes = {};
-     deviceId = 105747725068605084657;
-     displayName = "donlonqwerty@gmail.com";
-     isUserAuthenticated = 1;
-     userId = 105747725068605084657;
- })
- response:Optional("Hello, this is a protected resource!"), no error
+response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
+
  ```
 {: screen}
 
@@ -243,6 +233,6 @@ propósitos de autenticação.
  GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
 
-  Se você chamar esse código depois que um usuário estiver conectado ao Google e ele tentar efetuar login novamente, ele será solicitado a autorizar o {{site.data.keyword.amashort}} a usar o Google para propósitos de autenticação. Nesse ponto, o usuário pode clicar no nome do usuário <!--in the upper-right corner of the screen--> para selecionar e efetuar login com outro usuário.
+  Se você chamar esse código depois que um usuário estiver conectado ao Google e ele tentar efetuar login novamente, ele será solicitado a autorizar o {{site.data.keyword.amashort}} a usar o Google para propósitos de autenticação. Neste ponto, o usuário pode clicar no nome do usuário <!--in the upper-right corner of the screen--> para selecionar e efetuar login com outro usuário.
 
    Passar `callBack` para a função de logout é opcional. Também é possível passar `nil`.

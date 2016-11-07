@@ -1,22 +1,22 @@
 ---
 
 copyright:
-  years: 2015, 2016
-
+  years: 2015, 2016 lastupdated: "2016-10-02"
 ---
 {:shortdesc: .shortdesc}
 
 # Configurando o iOS Objective-C SDK
 {: #getting-started-ios}
 
-Última atualização: 17 de julho de 2016
-{: .last-updated}
 
-Instrumente seu aplicativo iOS com o SDK {{site.data.keyword.amashort}}, inicialize o SDK e faça solicitações aos recursos protegidos
+
+Instrumente seu aplicativo iOS com o SDK {{site.data.keyword.amafull}}, inicialize o SDK e faça solicitações aos recursos protegidos
 e não protegidos.
+
 {:shortdesc}
 
-**Importante:** embora o Objective-C SDK permaneça totalmente suportado e ainda seja considerado o SDK primário para o {{site.data.keyword.Bluemix_notm}} Mobile Services, há planos para descontinuar o Objective-C SDK posteriormente este ano em favor do novo Swift SDK. Para novos aplicativos, é altamente recomendável usar o Swift SDK (consulte [Configurando o iOS Swift SDK](getting-started-ios-swift-sdk.html)).
+**Importante:** embora o Objective-C SDK permaneça totalmente suportado e ainda seja considerado o SDK primário para o {{site.data.keyword.Bluemix_notm}} Mobile Services, há planos para descontinuar o Objective-C SDK posteriormente este ano em favor do novo Swift SDK. Para novos aplicativos, é altamente recomendável usar o SDK do Swift (veja
+[Configurando o SDK do Swift iOS](getting-started-ios-swift-sdk.html)).
 
 ## Antes de Começar
 {: #before-you-begin}
@@ -33,14 +33,17 @@ O {{site.data.keyword.amashort}} SDK é distribuído com CocoaPods, um gerenciad
 ### Instalar o CocoaPods
 {: #install-cocoapods}
 
-1. Abra o Terminal e execute o comando **pod --version**. Se você já tiver o CocoaPods instalado, o número da versão é exibido. É possível pular para a próxima seção para instalar o SDK.
+1. Abra o Terminal e execute o comando **pod --version**. Se você já tiver o CocoaPods instalado, o número da versão é exibido. Pule
+para a próxima seção para instalar o SDK.
 
 1. Se você não tiver o CocoaPods instalado, execute:
+
 ```
 sudo gem install cocoapods
 ```
-Para obter mais informações, consulte o [website do
-CocoaPods](https://cocoapods.org/).
+
+Para obter mais informações, veja o
+[website CocoaPods](https://cocoapods.org/).
 
 ### Instalar o {{site.data.keyword.amashort}} client SDK com o CocoaPods
 {: #install-sdk-cocoapods}
@@ -56,9 +59,10 @@ O CocoaPods cria um arquivo `Podfile` para você, que fica onde você define as 
 	pod 'IMFCore'
 	```
 
-1. Salve o arquivo `Podfile` e execute `pod install` a partir da linha de comandos. O <br/>Cocoapods
-instala dependências incluídas. É possível ver o progresso e quais componentes foram incluídos.<br/>
-**Importante**: o CocoaPods gera um arquivo `xcworkspace`.  Deve-se abrir esse arquivo para trabalhar em seu projeto futuro.
+1. Salve o arquivo `Podfile` e execute `pod install` a partir da linha de comandos. <br/>O
+Cocoapods instala dependências incluídas e exibe os componentes incluídos.<br/>
+
+	**Importante**: o CocoaPods gera um arquivo `xcworkspace`.  Deve-se abrir esse arquivo para trabalhar em seu projeto futuro.
 
 1. Abra sua área de trabalho do projeto do iOS. Abra o arquivo `xcworkspace` que foi gerado por CocoaPods. Por exemplo: `{your-project-name}.xcworkspace`. Execute `open {your-project-name}.xcworkspace`.
 
@@ -66,7 +70,6 @@ instala dependências incluídas. É possível ver o progresso e quais component
 {: #init-mca-sdk-ios}
 
 Para usar o {{site.data.keyword.amashort}} client SDK, deve-se inicializar o SDK passando os parâmetros de **Rota** (`applicationRoute`) e **GUID do app** (`applicationGUID`).
-
 
 1. Na página principal do painel do {{site.data.keyword.Bluemix_notm}}, clique em seu app. Clique em **Opções de dispositivo móvel**. Você
 precisa dos valores **Rota** e **GUID do app** para
@@ -79,9 +82,8 @@ inicializar o SDK.
 	
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
-	
 	```
-	
+
 	####Swift
 	{: #sdk-swift}
 	
@@ -94,7 +96,9 @@ inicializar o SDK.
 	1. Configure o valor para o local do seu arquivo `BridgingHeader.h`, por exemplo, `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Assegure-se de que seu cabeçalho de ponte esteja sendo selecionado pelo Xcode, compilando o seu projeto. Nenhuma mensagem de falha deve ser vista.
 	
-1. Use o código a seguir para inicializar o {{site.data.keyword.amashort}} client SDK.  Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo. <br/>Substitua os valores *applicationRoute* e *applicationGUID* pelos valores em **Opções de dispositivo móvel** no painel do {{site.data.keyword.Bluemix_notm}}.
+1. Use o código a seguir para inicializar o {{site.data.keyword.amashort}} client SDK.  Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo. <br/>
+Substitua ``applicationRoute`` e vapplicationGUID` pelos valores de
+**Opções móveis** no painel {{site.data.keyword.Bluemix_notm}}.
 
 	####Objective-C
 	{: #sharedinstance-objc}
@@ -104,19 +108,40 @@ inicializar o SDK.
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+
 	####Swift
 	{: #sharedinstance-swift}
 	```Swift
  		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
 
-## Fazendo uma solicitação em seu backend móvel
+## Inicializando o AuthorizationManager
+Inicialize o `AuthorizationManager` passando o parâmetro
+`tenantId` do serviço {{site.data.keyword.amashort}}. Localize
+esse valor clicando no botão **Mostrar credenciais** no quadro do
+serviço {{site.data.keyword.amashort}}.
+
+####Objective-C
+	
+```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+```
+
+####Swift
+
+```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+```
+
+## Fazendo uma solicitação para seu aplicativo backend móvel
 {: #request}
 
-Depois que o {{site.data.keyword.amashort}} client SDK for inicializado, será possível começar a fazer solicitações para o seu backend móvel.
+Após o SDK do cliente {{site.data.keyword.amashort}} ser inicializado, será possível começar a fazer solicitações ao seu aplicativo
+backend móvel.
 
-1. Tente enviar uma solicitação a um terminal protegido em seu backend móvel no navegador. Abra a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um backend móvel que foi criado com o modelo do MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada em seu navegador porque esse terminal pode ser acessado somente por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
+1. Tente enviar uma solicitação a um terminal protegido em seu aplicativo backend móvel em seu navegador. Abra a URL a seguir: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
+<br/>O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter é
+protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada em seu navegador porque esse terminal pode ser acessado somente por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
 
 1. Use seu aplicativo iOS para fazer uma solicitação para o mesmo terminal. Inclua o código a seguir depois de inicializar o `IMFClient`:
 
@@ -162,7 +187,7 @@ Depois que o {{site.data.keyword.amashort}} client SDK for inicializado, será p
 
 ## Próximas Etapas
 {: #next-steps}
-Quando você se conectou ao terminal protegido, nenhuma credencial foi necessária. Para requerer que os usuários efetuem login no aplicativo, deve-se configurar autenticação do Facebook, Google ou customizada.
+Quando você se conecta ao terminal protegido, nenhuma credencial é necessária. Para requerer que os usuários efetuem login no aplicativo, deve-se configurar autenticação do Facebook, Google ou customizada.
   * [Facebook
 ](facebook-auth-ios.html)
   * [Google](google-auth-ios.html)

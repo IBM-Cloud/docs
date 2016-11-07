@@ -1,17 +1,13 @@
 ---
 
 copyright:
-  years: 2015, 2016
-  
+  years: 2015, 2016 lastupdated: "2016-10-02"  
 ---
 
 # Comunicando-se entre aplicativos backend e serviços
 {: #backend-comm}
 
-Última atualização: 21 de julho de 2016
-{: .last-updated}
-
-Em alguns cenários, pode ser necessário enviar solicitações de seu aplicativo backend que está em execução no {{site.data.keyword.Bluemix}} para outro serviço de backend que está protegido pelo serviço {{site.data.keyword.amashort}} (por exemplo, o serviço {{site.data.keyword.cloudant}}). Nesses casos, deve-se incluir um token OAuth na solicitação.
+Em alguns cenários, pode ser necessário enviar solicitações de seu aplicativo backend que está em execução no {{site.data.keyword.Bluemix}} para outro serviço de backend que está protegido pelo serviço {{site.data.keyword.amafull}} (por exemplo, o serviço {{site.data.keyword.cloudant}}). Nesses casos, deve-se incluir um token OAuth na solicitação.
 
 Use o módulo `bms-mca-oauth-sdk npmjs` para obter e injetar tokens OAuth nas solicitações.
 

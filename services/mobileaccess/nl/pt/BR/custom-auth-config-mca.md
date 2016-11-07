@@ -1,15 +1,11 @@
 ---
 
 copyright:
-  years: 2015, 2016
-  
+  years: 2015, 2016 lastupdated: "2016-10-02" 
 ---
 
 # Configurando o {{site.data.keyword.amashort}} para autenticação customizada
 {: #custom-dash}
-
-Última atualização: 17 de julho de 2016
-{: .last-updated}
 
 
 Para usar autenticação customizada com seu app móvel, deve-se registrar uma região de autenticação customizada e a URL base de seu provedor de identidade customizado no painel do serviço {{site.data.keyword.amashort}}.
@@ -17,7 +13,7 @@ Para usar autenticação customizada com seu app móvel, deve-se registrar uma r
 ## Antes de Começar
 {: #custom-dash-begin}
 * Leia a [Introdução](index.html).
-* Proteja seu aplicativo backend com o {{site.data.keyword.amashort}} server SDK.  Para obter mais informações, consulte [Protegendo recursos](protecting-resources.html).
+* Proteja seu aplicativo backend com o {{site.data.keyword.amashort}} server SDK.  Para obter mais informações, veja [Protegendo recursos](protecting-resources.html).
 * Tenha um aplicativo de provedor de identidade customizado em execução.
 
 ## Configure a autenticação customizada no painel do {{site.data.keyword.Bluemix}}

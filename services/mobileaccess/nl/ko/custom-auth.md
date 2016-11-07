@@ -2,17 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # 사용자 정의 ID 제공자로 사용자 인증
 {: #custom-id}
 
-마지막 업데이트 날짜: 2016년 7월 22일
-{: .last-updated}
 
-
-사용자 정의 ID 제공자를 작성하고 신임 정보 수집 및 유효성 검증을 위한 자체 로직을 구현하십시오. 사용자 정의 ID 제공자는 RESTful 인터페이스를 표시하는 웹 애플리케이션입니다. 사내 구축형 또는 {{site.data.keyword.Bluemix}}에서 사용자 정의 ID 제공자를 호스팅할 수 있습니다. 유일한 요구사항은 {{site.data.keyword.amashort}} 서비스와 통신할 수 있도록 사용자 정의 ID 제공자를 공용 인터넷에서 액세스할 수 있어야 합니다. 
+{{site.data.keyword.amafull}} 서비스를 사용하고 신임 정보 수집 및 유효성 검증을 위한 자체 로직을 구현하는 사용자 정의 ID 제공자를 작성하십시오. 사용자 정의 ID 제공자는 RESTful 인터페이스를 표시하는 웹 애플리케이션입니다. 사내 구축형 또는 {{site.data.keyword.Bluemix}}에서 사용자 정의 ID 제공자를 호스팅할 수 있습니다. 유일한 요구사항은 {{site.data.keyword.amashort}} 서비스와 통신할 수 있도록 사용자 정의 ID 제공자를 공용 인터넷에서 액세스할 수 있어야 합니다. 
 
 ## {{site.data.keyword.amashort}} 사용자 정의 ID 요청 플로우
 {: #custom-id-ovr}

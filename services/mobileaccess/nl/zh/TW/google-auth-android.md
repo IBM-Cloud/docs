@@ -2,15 +2,15 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-10"
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
 
 # 啟用 Android 應用程式的 Google 鑑別
 {: #google-auth-android}
 
-
-前次更新：2016 年 8 月 4 日
-{: .last-updated}
+在 {{site.data.keyword.amafull}} Android 應用程式上使用 Google 來鑑別使用者。新增 {{site.data.keyword.amashort}} 安全功能。 
 
 ## 開始之前
 {: #before-you-begin}
@@ -18,6 +18,7 @@ copyright:
 
 * Android Studio 中配置成使用 Gradle 的 Android 專案。它不需要使用 {{site.data.keyword.amashort}} 用戶端 SDK 進行檢測。  
 * {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
+* 您的服務參數值。在 {{site.data.keyword.Bluemix_notm}} 儀表板中，開啟服務。按一下**行動選項**。`applicationRoute` 及 `tenantId`（也稱為 `appGUID`）值會顯示在**路徑**及**應用程式 GUID/TenantId** 欄位中。當您起始設定 SDK 以及將要求傳送給後端應用程式時，需要這些值。
 
 設定 {{site.data.keyword.amashort}} Android 應用程式的 Google 鑑別將需要進一步配置：
 * {{site.data.keyword.Bluemix_notm}} 應用程式
@@ -52,6 +53,7 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 	```
+
 	您也可以使用相同的語法來擷取發行模式憑證的金鑰雜湊。請取代指令中的別名及金鑰儲存庫路徑。
 
 1. 在「Google 主控台認證」對話框的**憑證指紋**下，找到開頭為 `SHA1` 的那一行。將透過執行 **keytool** 指令所取得的指紋值複製到此文字框。
@@ -60,7 +62,9 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 
 1. 在「認證」對話框上，輸入 Android 應用程式的套件名稱。 
 
-  若要尋找 Android 應用程式的套件名稱，請在 Android Studio 中開啟 `AndroidManifest.xml` 檔案，並尋找：`<manifest package="{your-package-name}">`。 
+  若要尋找 Android 應用程式的套件名稱，請在 Android Studio 中開啟 `AndroidManifest.xml` 檔案，並尋找： 
+  	
+  	`<manifest package="{your-package-name}">`
 
 1. 完成時，請按一下**建立**。這會完成認證建立作業。
 
@@ -76,8 +80,6 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 
 1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板中開啟應用程式。
 
-1. 按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及**應用程式 GUID** (`applicationGUID`)。起始設定 SDK 時，您需要這些值。
-
 1. 按一下 {{site.data.keyword.amashort}} 磚。即會載入 {{site.data.keyword.amashort}} 儀表板。
 
 1. 按一下 **Google** 畫面上的**配置**按鈕。
@@ -91,7 +93,7 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 
 1. 開啟應用程式模組的 `build.gradle` 檔案。
 
-	Android 專案可能會有兩個 `build.gradle` 檔案：一個用於專案，另一個用於應用程式模組。請使用應用程式模組的檔案。
+	Android 專案可能會有兩個 `build.gradle` 檔案：一個用於專案，另一個用於應用程式模組。請使用應用程式模組。
 
   尋找 dependencies 區段，並新增用戶端 SDK 的編譯相依關係：
 
@@ -105,7 +107,6 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
     	// other dependencies  
 	}
 	```
-
 	**附註：**您可以移除對 `com.ibm.mobilefirstplatform.clientsdk.android` 群組的 `core` 模組的相依關係（如果已有的話）。`googleauthentication` 模組會為您自動下載它。`googleauthentication` 模組會下載 Google+ SDK，並將它安裝在 Android 專案中。
 
 1. 按一下**工具 > Android > 將專案與 Gradle 檔案同步化**，以將專案與 Gradle 同步化。
@@ -120,25 +121,25 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
 ```
 
-1. 若要使用 {{site.data.keyword.amashort}} 用戶端 SDK，您必須傳遞 context、applicationGUID 及 applicationRoute 參數來進行起始設定。
+1. 若要使用 {{site.data.keyword.amashort}} 用戶端 SDK，您必須傳遞 **context** 及 **region** 參數來起始設定 SDK。
 
-	放置起始設定碼的一般（但非強制）位置是在 Android 應用程式中主要活動的 onCreate 方法。
+	放置起始設定碼的一般（但非強制）位置是在 Android 應用程式中主要活動的 `onCreate` 方法。
 
-1. 起始設定用戶端 SDK，並登錄 Google 鑑別管理程式。將 *applicationRoute* 及 *applicationGUID* 取代為來自儀表板中**行動選項**區段的**路徑**及**應用程式 GUID** 值。
+1. 起始設定用戶端 SDK，並登錄 Google 鑑別管理程式。
 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
 	BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this));
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 						
 	GoogleAuthenticationManager.getInstance().register(this);
 	```
 
-  將 `BMSClient.REGION_UK` 取代為適當的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
+  * 將 `BMSClient.REGION_UK` 取代為適當的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
+
+地區值應該是下列其中一個：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。
+  * 將 `<MCAServiceTenantId>` 取代為 `tenantId` 值（請參閱[開始之前](##before-you-begin)）。 
 
    **附註：**如果您的 Android 應用程式是以 Android 6.0 版（API 層次 23）或以上版本為目標，則必須確定應用程式先進行 `android.permission.GET_ACCOUNTS` 呼叫，再呼叫 `register`。如需相關資訊，請參閱 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}。
 
@@ -161,17 +162,19 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 開始測試之前，您必須具有使用 **MobileFirst Services Starter** 樣板所建立的行動後端應用程式，並且已具有 {{site.data.keyword.amashort}} `/protected` 端點所保護的資源。如需相關資訊，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 1. 開啟 `{applicationRoute}/protected`（例如：`http://my-mobile-backend.mybluemix.net/protected`），嘗試在桌面瀏覽器中將要求傳送給行動後端應用程式的受保護端點。
- 使用「MobileFirst Services 樣板」所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。因此，只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取它。因此，您會在桌面瀏覽器中看到 `Unauthorized`。
+ 如需取得 `{applicationRoute}` 值的相關資訊，請參閱[開始之前](#before-you-begin)。 
 
-1. 使用 Android 應用程式以對相同的端點提出要求。起始設定 `BMSClient` 實例並登錄 `GoogleAuthenticationManager` 之後，請新增下列程式碼。
+	使用「MobileFirst Services 樣板」所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。因此，只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取它。因此，您會在桌面瀏覽器中看到 `Unauthorized`。
+
+1. 使用 Android 應用程式以對相同的受保護端點提出要求。起始設定 `BMSClient` 實例並登錄 `GoogleAuthenticationManager` 之後，請新增下列程式碼。
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp", MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -184,7 +187,7 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 			}
 		}
 	});
-```
+	```
 
 1. 執行您的應用程式。即會蹦現「Google 登入」畫面。登入之後，應用程式會要求資源的存取權：
 

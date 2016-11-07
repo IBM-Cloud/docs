@@ -2,19 +2,17 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+
 
 # 設定 Android SDK
 {: #getting-started-android}
 
-前次更新：2016 年 8 月 2 日
-{: .last-updated}
+使用 {{site.data.keyword.amafull}} 用戶端 SDK 檢測 Android 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
 
-使用 {{site.data.keyword.amashort}} 用戶端 SDK 檢測 Android 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
 {:shortdesc}
 
 ## 開始之前
@@ -25,8 +23,8 @@ copyright:
 
 
 
+* 您的服務參數值。在 {{site.data.keyword.Bluemix_notm}} 儀表板中，開啟服務。按一下**行動選項**。`applicationRoute` 及 `tenantId`（也稱為 `appGUID`）值會顯示在**路徑**及**應用程式 GUID/TenantId** 欄位中。當您起始設定 SDK 以及將要求傳送給後端應用程式時，需要這些值。
 * 設定成使用 Gradle 的 Android Studio 專案。如需如何設定 Android 開發環境的相關資訊，請參閱 [Google 開發人員工具](http://developer.android.com/sdk/index.html)。
-
 
 ## 安裝 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #install-mca-sdk}
@@ -61,31 +59,33 @@ copyright:
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #initalize-mca-sdk}
 
-將 `context`、`applicationGUID`、`applicationRoute` 及 `BMSClient.REGION_UK` 參數傳遞給 `initialize` 方法，以起始設定 SDK。
-
-
-1. 從 {{site.data.keyword.Bluemix_notm}} 儀表板的主頁面，按一下應用程式。按一下**行動選項**。您需要有**應用程式路徑**及**應用程式 GUID** 值，才能起始設定 SDK。
-
-2. 在 Android 應用程式中，起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。放置起始設定碼的一般（但非強制）位置是在 Android 應用程式中主要活動的 `onCreate` 方法。
-<br/>請將 *applicationRoute* 及 *applicationGUID* 取代為 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的值。
+將 **context** 及 **region** 參數傳遞給 `initialize` 方法，以起始設定用戶端 SDK。放置起始設定碼的一般（但非強制）位置是在 Android 應用程式中主要活動的 `onCreate` 方法。
 
 ```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+					
+  BMSClient.getInstance().setAuthorizationManager(
+                 MCAAuthorizationManager.createInstance(this, "MCAServiceTenantId"));
+
 ```
-將 `BMSClient.REGION_UK` 取代為適當的地區。	
+
+   * 將 `BMSClient.REGION_UK` 取代為適當的地區。	
 
 若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
+
+地區值應該是下列其中一個：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。
+   * 將 "MCAServiceTenantId" 取代為 **tenantId** 值（請參閱[開始之前](#before-you-begin)）。 
 
 ## 對行動後端應用程式提出要求
 {: #request}
 
 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK 之後，即可開始對行動後端應用程式提出要求。
 
-1. 嘗試將要求傳送給新的行動後端應用程式的受保護端點。在瀏覽器中，開啟下列 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`。
-<br/>使用 MobileFirst Services Starter 樣板所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。在瀏覽器中會傳回 `Unauthorized` 訊息，因為只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。
+1. 嘗試將要求傳送給新的行動後端應用程式的受保護端點。在瀏覽器中，開啟下列 URL：`{applicationRoute}/protected`（例如 `http://my-mobile-backend.mybluemix.net/protected`）。如需取得 `{applicationRoute}` 值的相關資訊，請參閱[開始之前](#before-you-begin)。 
+	
+	使用 MobileFirst Services Starter 樣板所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。在瀏覽器中會傳回 `Unauthorized` 訊息，因為只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。
+
+
 
 1. 使用 Android 應用程式以對相同的端點提出要求。起始設定 `BMSClient` 之後，請新增下列程式碼：
 

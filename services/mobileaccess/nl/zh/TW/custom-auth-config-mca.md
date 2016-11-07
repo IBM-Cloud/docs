@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02" 
 ---
 
 # 配置 {{site.data.keyword.amashort}} 進行自訂鑑別
 {: #custom-dash}
-
-前次更新：2016 年 7 月 17 日
-{: .last-updated}
 
 
 若要搭配使用自訂鑑別與行動應用程式，您必須在 {{site.data.keyword.amashort}} 服務儀表板中登錄自訂身分提供者的自訂鑑別領域以及基本 URL。

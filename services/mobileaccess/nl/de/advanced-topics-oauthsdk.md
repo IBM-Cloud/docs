@@ -2,16 +2,13 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 
 # Kommunikation zwischen Back-End-Anwendungen und -Services
 {: #backend-comm}
 
-Letzte Aktualisierung: 21. Juli 2016
-{: .last-updated}
-
-In bestimmten Szenarios müssen Sie möglicherweise Anforderungen aus Ihrer Back-End-Anwendung, die in {{site.data.keyword.Bluemix}} ausgeführt wird, an einen anderen Back-End-Service senden, der durch den {{site.data.keyword.amashort}}-Service geschützt wird (z. B. an den {{site.data.keyword.cloudant}}-Service). In diesen Fällen müssen Sie der Anforderung das OAuth-Token hinzufügen.
+In bestimmten Szenarios müssen Sie möglicherweise Anforderungen aus Ihrer Back-End-Anwendung, die in {{site.data.keyword.Bluemix}} ausgeführt wird, an einen anderen Back-End-Service senden, der durch den {{site.data.keyword.amafull}}-Service geschützt wird (z. B. an den {{site.data.keyword.cloudant}}-Service). In diesen Fällen müssen Sie der Anforderung das OAuth-Token hinzufügen.
 
 Verwenden Sie das Modul `bms-mca-oauth-sdk npmjs`, um OAuth-Tokens abzurufen und in Anforderungen einzufügen.
 

@@ -2,27 +2,23 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
-{:shortdesc: .shortdesc}
+{:shortdesc: .shortdesc} 
 
 # 設定 Cordova 外掛程式
 {: #getting-started-cordova}
 
-前次更新：2016 年 7 月 17 日
-{: .last-updated}
 
-使用 {{site.data.keyword.amashort}} 用戶端 SDK 檢測 Cordova 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
+使用 {{site.data.keyword.amafull}} 用戶端 SDK 檢測 Cordova 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
+
+
 {:shortdesc}
 
 ## 開始之前
 {: #before-you-begin}
 您必須具有：
 * {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
-
-
-
-
 
 * Cordova 應用程式或現有專案。如需如何設定 Cordova 應用程式的相關資訊，請參閱 [Cordova 網站](https://cordova.apache.org/)。
 
@@ -32,10 +28,16 @@ copyright:
 適用於 Cordova 的 {{site.data.keyword.amashort}} 用戶端 SDK 是包裝原生 {{site.data.keyword.amashort}} 用戶端 SDK 的 Cordova 外掛程式。它是使用「Cordova 指令行介面 (CLI)」及 `npmjs`（Cordova 專案的外掛程式儲存庫）進行配送。Cordova CLI 會從儲存庫中自動下載外掛程式，並使它們可供 Cordova 應用程式使用。
 
 1. 將 Android 及 iOS 平台新增至 Cordova 應用程式。從指令行中，執行下列一個或兩個指令：
+   	
+	###Android
+	{: #install-cordova-android}
 
-	```Bash
+	```
 	cordova platform add android
 	```
+	
+	###iOS
+	{: #install-cordova-ios}
 
 	```Bash
 	cordova platform add ios
@@ -50,8 +52,8 @@ copyright:
   	<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
-
-	*minSdkVersion* 值必須高於 `15`。*targetSdkVersion* 值必須是可從 Google 取得的最新 Android SDK。
+	
+	*minSdkVersion* 值必須是 `15` 或更高。*targetSdkVersion* 值必須是可從 Google 取得的最新 Android SDK。
 
 
 
@@ -61,7 +63,7 @@ copyright:
 	<platform name="ios">
 		<preference name="deployment-target" value="8.0"/>
 		<!-- add deployment target declaration -->
-	</platform>
+	 </platform>
 	```
 
 4. 安裝 {{site.data.keyword.amashort}} Cordova 外掛程式：
@@ -76,11 +78,11 @@ copyright:
 	{: #cordova-android}
 
 	在 Android Studio 開啟您的專案之前，請透過指令行介面 (CLI) 建置您的 Cordova 應用程式，以避免發生建置錯誤。
-
-		```
-		cordova build android
-		```
-
+	
+	```Bash
+	cordova build android
+	```
+	
 	####iOS
 	{: #cordova-ios}
 
@@ -88,19 +90,16 @@ copyright:
 
 	1. 使用最新版的 Xcode，開啟 `<app_name>/platforms/ios` 目錄中的 `xcode.proj` 檔案。
 
-		**重要事項：**如果您收到一則訊息指出「轉換為最新 Swift 語法」，請按一下「取消」。
+		**重要事項：**如果您收到要轉換為最新 Swift 語法的訊息，請按一下**取消**。
 
 	2. 移至**建置設定 > Swift 編譯器 - 產生程式碼 > Objective-C 橋接標頭**，並新增下列路徑：
 
-			```
-			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
-			```
+		`<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h`
 
 	3. 移至**建置設定 > 鏈結 > Runpath 搜尋路徑**，並新增下列 Frameworks 參數：
 
-			```
-			@executable_path/Frameworks
-			```
+		`@executable_path/Frameworks
+			`
 
 	4. 使用 Xcode 建置並執行您的應用程式。
 
@@ -117,28 +116,37 @@ copyright:
 
 1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板的主頁面上，尋找路徑及應用程式 GUID 值。依序按一下應用程式名稱及**行動選項**，以顯示**應用程式路徑**及**應用程式 GUID** 值來起始設定 SDK。
 
-3. 新增下列呼叫到 `index.js` 檔案，以起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。將 *applicationRoute* 及 *applicationGUID* 取代為 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的值。
+3. 新增下列呼叫到 `index.js` 檔案，以起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。 
 
 	```JavaScript
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
+
+  * 將 `applicationRoute` 及 `applicationGUID` 取代為 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的值。
+
+##起始設定 {{site.data.keyword.amashort}} AuthorizationManager
+{: #initializing-auth-manager}
+
+在 Cordova 應用程式中使用下列 JavaScript 程式碼，以起始設定 {{site.data.keyword.amashort}} AuthorizationManager。
+
+```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+  ```
+
+將 `tenantId` 值取代為 {{site.data.keyword.amashort}} 服務 `tenantId`。按一下 {{site.data.keyword.amashort}} 服務磚上的**顯示認證**按鈕，即可找到此值。
 
 ## 對行動後端應用程式提出要求
 {: #getting-started-request}
 
 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK 之後，即可開始對行動後端應用程式提出要求。
 
-1. 嘗試將要求傳送給新的行動後端應用程式的受保護端點。在瀏覽器中，開啟下列 URL：`{applicationRoute}/protected`。例如：
-
-	```
-	http://my-mobile-backend.mybluemix.net/protected
-	```
+1. 嘗試將要求傳送給新的行動後端應用程式的受保護端點。在瀏覽器中，開啟下列 URL：`{applicationRoute}/protected`（例如：`http://my-mobile-backend.mybluemix.net/protected`）。
 
 	使用 MobileFirst Services Starter 樣板所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。瀏覽器中會傳回 `Unauthorized` 訊息。傳回此訊息的原因是只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才會存取這個端點。
 
 
 
-1. 使用 Cordova 應用程式以對相同的端點提出要求。起始設定 `BMSClient` 之後，請新增下列程式碼：
+2. 使用 Cordova 應用程式以對相同的端點提出要求。起始設定 `BMSClient` 之後，請新增下列程式碼：
 
 	```Javascript
 	var success = function(data){
@@ -154,7 +162,7 @@ copyright:
 	request.send(success, failure);
 	```
 
-1. 當要求成功時，您會在 LogCat 或 Xcode 主控台中看到下列輸出（視使用的平台而定）：
+3. 當要求成功時，您會在 LogCat 或 Xcode 主控台中看到下列輸出（視使用的平台而定）：
 
 	![影像](images/getting-started-android-success.png)
 

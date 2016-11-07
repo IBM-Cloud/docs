@@ -2,14 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-09-07"
 
 ---
 
 # 웹 앱에서 Google 인증 사용
 {: #google-auth-web}
-
-마지막 업데이트 날짜: 2016년 6월 1일
-{: .last-updated}
 
 웹 앱에서 사용자를 인증하려면 Google 로그인을 사용하십시오.
 
@@ -57,7 +55,7 @@ response_type='authorization_code'
    state= <state>
 	```
 
-  `state` 매개변수는 현재 사용 중이지 않으므로 빈 상태로 둘 수 있습니다. 
+  `state` 매개변수를 현재 사용 중이지 않으므로 빈 상태로 둘 수 있습니다. 
 
   `redirect_uri` 매개변수 uri는 Google로 인증하는 데 성공하거나 실패한 후 재지정되는 경로입니다.
   경로를 재지정한 후 리턴되는 응답에는 요청 조회 매개변수의 권한 코드가 포함되어 있습니다.

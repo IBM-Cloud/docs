@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -12,12 +12,12 @@ copyright:
 # Authentification des utilisateurs à l'aide des données d'identification Facebook
 {: #facebook-auth-overview}
 
-Dernière mise à jour : 22 juillet 2016
-{: .last-updated}
 
-Vous pouvez configurer le service {{site.data.keyword.amashort}} pour protéger des ressources en utilisant
+
+Vous pouvez configurer le service {{site.data.keyword.amafull}} pour protéger des ressources en utilisant
 Facebook comme fournisseur d'identité. Les utilisateurs de votre application mobile ou Web peuvent utiliser leurs données d'identification Facebook
 pour l'authentification.
+
 {:shortdesc}
 
 **Important** : il n'est pas nécessaire d'installer séparément le SDK client fourni par Facebook. Le SDK Facebook est installé automatiquement par les gestionnaires de dépendances lors de la configuration du SDK client de {{site.data.keyword.amashort}} Facebook.
@@ -56,21 +56,26 @@ Le flux de requête d'une application Web {{site.data.keyword.amashort}} est sim
   * La redirection finale vise la zone protégée de l'application Web elle-même et non pas une ressource de back end protégée. 
 
 
-## Obtenez un ID d'application Facebook dans le portail des développeurs Facebook.
+## Acquisition d'un ID d'application Facebook sur le site Web Facebook for Developers
 {: #facebook-appID}
 
-Pour commencer à utiliser Facebook en tant que fournisseur d'identité, vous devez créer une application dans le portail Facebook Developer. Au cours de ce processus, vous obtenez un ID d'application Facebook, qui est un identificateur unique qui permet à Facebook de savoir quelle application tente de se connecter.
+Pour commencer à utiliser Facebook en tant que fournisseur d'identité, créez une application sur le site Web Facebook for Developers. Durant ce processus, un ID d'application Facebook est créé. Il s'agit d'un identificateur unique utilisé par Facebook pour savoir quelle application tente de se connecter.  
 
-1. Ouvrez le [portail Facebook Developer](https://developers.facebook.com).
-
-1. Cliquez sur **My Apps** dans le menu et sélectionnez **Create a new app**.
-Sélectionnez une application iOS ou Android et cliquez sur **Skip and Create App ID** dans l'écran suivant.
-
-1. Définissez le nom d'affichage de votre application et sélectionnez une catégorie. Cliquez sur **Create App ID** pour continuer.
-
-1. Copiez l'**ID d'appli** qui s'affiche. Il s'agit de votre ID d'application Facebook.  Vous aurez besoin de cette valeur pour
+Vous aurez besoin de cette valeur pour
 configurer l'authentification Facebook
-avec votre application mobile ou Web.
+pour votre application mobile ou Web.
+
+1. Accédez au site [Facebook for Developers](https://developers.facebook.com).
+
+1. Ouvrez la liste déroulante **Mes applications** et sélectionnez **Ajouter une application**.
+
+1. Entrez des valeurs dans les zones relatives au nom d'affichage et aux valeurs e-mail de contact puis choisissez une catégorie dans la liste déroulante.
+
+1. Cliquez sur la commande de création d'un nouvel ID d'application.
+
+1. Un contrôle de sécurité peut apparaître. Effectuez l'action requise.
+
+1. La page relative à la configuration du produit s'affiche. Copiez l'**ID d'appli** qui s'affiche. 
 
 ## Etapes suivantes
 {: #next-steps}

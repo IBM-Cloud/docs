@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -11,10 +11,8 @@ copyright:
 # Autenticación de usuarios con las credenciales de Google
 {: #google-auth}
 
-Última actualización: 22 de julio de 2016
 
-
-Puede configurar el servicio de {{site.data.keyword.amashort}} para proteger los recursos utilizando Google como proveedor de identidad. Los usuarios de la aplicación móvil o de aplicación web podrán autenticarse con las credenciales de Google.
+Puede configurar el servicio de {{site.data.keyword.amafull}} para proteger los recursos utilizando Google como proveedor de identidad. Los usuarios de la aplicación móvil o de aplicación web podrán autenticarse con las credenciales de Google.
 {:shortdesc}
 
 **Importante:** no es necesario instalar por separado el SDK del cliente proporcionado por Google. El SDK de Google se instala automáticamente por los gestores de dependencias cuando configura el SDK del cliente {{site.data.keyword.amashort}}.
@@ -24,7 +22,7 @@ Puede configurar el servicio de {{site.data.keyword.amashort}} para proteger los
 
 ### Flujo de solicitudes de cliente
 
-En el siguiente diagrama se explica cómo {{site.data.keyword.amashort}} se integra con Google para la autenticación. 
+En el siguiente diagrama se explica cómo {{site.data.keyword.amashort}} se integra con Google para la autenticación.
 
 ![Diagrama del flujo de solicitudes de cliente](images/mca-sequence-google.jpg)
 
@@ -47,11 +45,11 @@ En el siguiente diagrama se explica cómo {{site.data.keyword.amashort}} se inte
 El flujo de solicitud de aplicación web de {{site.data.keyword.amashort}} es similar al flujo del cliente móvil. Sin embargo, {{site.data.keyword.amashort}} protege la aplicación web, en lugar de un recurso de fondo de {{site.data.keyword.Bluemix_notm}}.
 
   * La solicitud inicial la envía la aplicación web (desde un formulario de inicio de sesión, por ejemplo).
-  * El redireccionamiento final es en el área protegida de la propia aplicación web, en lugar de en el recurso protegido de fondo.  
+  * El redireccionamiento final es en el área protegida de la propia aplicación web, en lugar de en el recurso protegido de fondo. 
 
 
 
-## Próximos pasos
+## Pasos siguientes
 {: #google-auth-nextsteps}
 
 * [Habilitación de la autenticación de Google para apps de Android](google-auth-android.html)

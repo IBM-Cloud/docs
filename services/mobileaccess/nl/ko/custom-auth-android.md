@@ -2,14 +2,15 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-09"
 ---
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+
+
 
 # {{site.data.keyword.amashort}} Android 앱용 사용자 정의 인증 구성 
 {: #custom-android}
-
-마지막 업데이트 날짜: 2016년 8월 1일
-{: .last-updated}
 
 
 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하고, 애플리케이션을 {{site.data.keyword.Bluemix}}에 연결하도록 사용자 정의 인증을 사용하여 Android 애플리케이션을 구성하십시오.
@@ -23,6 +24,7 @@ copyright:
  * [사용자 정의 ID 제공자 작성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [사용자 정의 인증용 {{site.data.keyword.amashort}} 구성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
+서비스 매개변수 값을 기록해 두십시오. {{site.data.keyword.Bluemix_notm}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 값과 `tenantId`(`appGUID`라고도 함) 값이 **라우트** 필드와 **앱 GUID/TenantId** 필드에 표시됩니다. 이들 값은 SDK를 초기화하고 백엔드 애플리케이션에 요청을 보내는 데 필요합니다. 
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
 {: #custom-android-initialize}
@@ -51,19 +53,13 @@ copyright:
 	```
 
 1. SDK를 초기화하십시오.
-초기화 코드를 삽입하는 일반 위치(필수는 아님)는 Android 애플리케이션에서 기본 활동의 `onCreate` 메소드에 있습니다.
-*applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱의 **모바일 옵션**을 클릭하면 얻을 수 있는 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
+필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 Android 애플리케이션 기본 활동의 `onCreate` 메소드입니다. 
 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 ```
-`BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오.
 
-
-{{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.				
+`BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오. 지역 값은 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` 또는 `BMSClient.REGION_UK`이어야 합니다. 				
 	
 
 ## AuthenticationListener 인터페이스
@@ -78,6 +74,8 @@ copyright:
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+
+
 #### 인수
 {: #custom-android-onAuth-arg}
 
@@ -109,6 +107,7 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
@@ -122,8 +121,8 @@ void submitAuthenticationFailure (JSONObject info);
 package com.ibm.helloworld;
 import android.content.Context;
 import android.util.Log;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationContext;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationListener;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationContext;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -178,37 +177,41 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 사용자 정의 AuthenticationListener를 작성한 후 리스너를 사용하기 전에 `BMSClient`에 등록하십시오. 애플리케이션에 다음 코드를 추가하십시오. 이 코드는 보호된 리소스에 대한 요청을 전송하기 전에 호출해야 합니다. 
 
 ```Java
-MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+MCAAuthorizationManager mcaAuthorizationManager = 
+      MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<MCAServiceTenantId>");
 mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
 
-{{site.data.keyword.amashort}} 대시보드에서 지정한 *realmName*을 사용하십시오. 
+
+코드에서: 
+* `MCAServiceTenantId`를 `tenantId` 값으로 바꾸십시오([시작하기 전에](##before-you-begin) 참조).  
+* {{site.data.keyword.amashort}} 대시보드에서 지정한 `realmName`을 사용하십시오. 
 
 
 ## 인증 테스트
 {: #custom-android-testing}
 클라이언트 SDK가 초기화되고 사용자 정의 AuthenticationListener가 등록되면 모바일 백엔드 애플리케이션 요청을 시작할 수 있습니다.
 
-### 시작하기 전에
+### 테스트하기 전에
 {: #custom-android-testing-before}
 {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 애플리케이션과 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받는 리소스가 있어야 합니다. 
 
 
-1. 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트(`{applicationRoute}/protected`)에 요청을 전송하십시오(예: `http://my-mobile-backend.mybluemix.net/protected`). 
+1. 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트(`{applicationRoute}/protected`)에 요청을 전송하십시오(예: `http://my-mobile-backend.mybluemix.net/protected`). `{applicationRoute}` 값을 얻는 방법에 대한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.  
 
 1. {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 
 
-1. Android 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화하고 사용자 정의 AuthenticationListener를 등록한 후 다음 코드를 추가하십시오. 
+1. Android 애플리케이션을 사용하여 `{applicationRoute}`를 포함하는 동일한 보호 엔드포인트에 요청하십시오. `BMSClient`를 초기화하고 사용자 정의 AuthenticationListener를 등록한 후 다음 코드를 추가하십시오. 
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp",  MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -223,6 +226,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 	});
 ```
 
+	
 1. 	요청이 성공하면 LogCat 도구에 다음과 같은 출력이 표시됩니다. 
 
 	![이미지](images/android-custom-login-success.png)
@@ -232,6 +236,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+
 
  사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 사용자가 다시 로그인하려고 시도하는 경우 서버에서 수신된 확인에 다시 응답해야 합니다. 
 

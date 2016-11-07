@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -11,11 +11,8 @@ copyright:
 # Activation de l'authentification Facebook pour les applications Cordova
 {: #facebook-auth-cordova}
 
-Dernière mise à jour : 15 juin 2016
-{: .last-updated}
 
-
-Pour configurer l'intégration de l'authentification Facebook dans les applications Cordova, vous devez faire des modifications en Java, Objective-C ou Swift dans le code natif de l'application Cordova. Chaque plateforme doit être configurée séparément. Cette application Cordova doit déjà être instrumentée avec le SDK de {{site.data.keyword.amashort}}. 
+Pour configurer l'intégration de l'authentification Facebook dans les applications Cordova {{site.data.keyword.amafull}}, apportez des modifications en Java, Objective-C ou Swift dans le code natif de l'application Cordova. Chaque plateforme doit être configurée séparément. Cette application Cordova doit déjà être instrumentée avec le SDK de {{site.data.keyword.amashort}}. 
 
 
 Utilisez l'environnement de développement natif pour modifier le code natif, par exemple, dans Android Studio ou Xcode.
@@ -26,9 +23,7 @@ Utilisez l'environnement de développement natif pour modifier le code natif, pa
 Vous devez disposer des éléments suivants :
 * Un projet Cordova qui est instrumenté avec le SDK client de {{site.data.keyword.amashort}}, voir [Configuration du plug-in Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).
 * Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
-* Un ID d'application Facebook. Pour plus d'informations, voir
-[Acquisition d'un ID d'application Facebook sur le
-portail Facebook Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* Un ID d'application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le site Web Facebook for Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
 
@@ -39,9 +34,85 @@ Les étapes requises pour configurer l'intégration de l'authentification Facebo
 
 * Configuration d'une application Facebook pour la plateforme Android
 * Configuration de {{site.data.keyword.amashort}} pour l'authentification Facebook
-* Configuration du SDK client de {{site.data.keyword.amashort}} pour Android
 
-La seule différence quand vous configurez des applications Cordova est que vous devez initialiser le SDK client de {{site.data.keyword.amashort}} dans votre code JavaScript plutôt que dans le code Java (voir [Test de l'authentification](#facebook-auth-cordova-test)). L'API `FacebookAuthenticationManager` doit toujours être enregistrée dans le code natif.
+### Configuration du SDK client de {{site.data.keyword.amashort}} pour Android
+
+Configurez le SDK client {{site.data.keyword.amashort}} pour Android au sein de votre application Cordova.
+
+1. Dans votre dossier de projet Android, ouvrez le fichier `build.gradle` pour votre module d'application (et **non pas** le projet `build.gradle`). Localisez la section des dépendances et ajoutez une nouvelle dépendance de compilation pour le SDK client :
+
+	```Gradle
+	dependencies {
+     		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+     		name:'facebookauthentication',
+     		version: '1.+',
+     		ext: 'aar',
+     		transitive: true
+     		// other dependencies  
+		 }
+	```
+	
+2. Synchronisez votre projet avec Gradle en cliquant sur **Tools (Outils) > Android > Sync Project with Gradle Files (Synchroniser le projet avec les fichiers Gradle)**.
+
+3. Ouvrez le fichier `android/res/values/strings.xml` et ajoutez une chaîne `facebook_app_id` contenant l'ID de votre application Facebook.
+
+	```XML
+	<resources>
+		<string name="app_name">HelloCordova</string>
+		<string name="launcher_name">@string/app_name</string>
+		<string name="activity_name">@string/launcher_name</string>
+		<string name="facebook_app_id">522733366802111</string>
+	</resources>
+	```
+	
+4. Dans le fichier `AndroidManifest.xml` de votre projet Android (`android/manifests/AndroidManifest.xml`) :
+
+	* Ajoutez les métadonnées requises pour le SDK Facebook à l'élément <application> :
+
+	```XML
+	<application .......>
+	
+	  <meta-data
+			android:name="com.facebook.sdk.ApplicationId"
+			android:value="@string/facebook_app_id"/>
+	
+	  <activity ...../>
+		<activity ...../>
+	</application>
+	```
+
+	* Ajoutez un élément Facebook activity sous vos activités existantes :
+
+	```XML
+	<application .....>
+		<activity ...../>
+		<activity ...../>
+	
+		<activity   android:name="com.facebook.FacebookActivity"
+	              android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+	              android:theme="@android:style/Theme.Translucent.NoTitleBar"
+	              android:label="@string/app_name" 
+			    />
+	</application>
+	```
+
+2. Pour les applications Cordova, initialisez le SDK client {{site.data.keyword.amashort}} dans votre code JavaScript au lieu du code
+Java. L'API `FacebookAuthenticationManager` doit toujours être enregistrée dans le code natif. Ajoutez le code ci-dessous à la méthode `onCreate` de l'activité principale :  
+
+	```Java
+	FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListener(this);
+	```
+
+6. Ajoutez le code suivant à votre activité :
+
+	```Java
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	      super.onActivityResult(requestCode, resultCode, data);
+		FacebookAuthenticationManager.getInstance()
+	          .onActivityResultCalled(requestCode, resultCode, data);
+	}
+	```
 
 ## Configuration de la plateforme iOS
 {: #facebook-auth-cordova-ios}
@@ -56,11 +127,12 @@ Les étapes requises pour configurer l'intégration de l'authentification Facebo
 1. Téléchargez l'archive contenant le SDK [{{site.data.keyword.Bluemix_notm}} Mobile Services pour iOS](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
 
 1. Accédez au répertoire `Sources/Authenticators/IMFFacebookAuthentication` et copiez (faites glisser) tous les fichiers dans votre projet iOS dans Xcode. Copiez les fichiers suivants :
-  * IMFDefaultFacebookAuthenticationDelegate.h
-  * IMFDefaultFacebookAuthenticationDelegate.m
-  * IMFFacebookAuthenticationDelegate.h
-  * IMFFacebookAuthenticationHandler.h
-  * IMFFacebookAuthenticationHandler.m
+
+	* IMFDefaultFacebookAuthenticationDelegate.h
+	* IMFDefaultFacebookAuthenticationDelegate.m
+	* IMFFacebookAuthenticationDelegate.h
+	* IMFFacebookAuthenticationHandler.h
+	* IMFFacebookAuthenticationHandler.m
 
 	Lorsque vous y êtes invité par Xcode, sélectionnez **Copy files... (Copier les fichiers...)**.
 
@@ -69,7 +141,7 @@ Les étapes requises pour configurer l'intégration de l'authentification Facebo
 1. Le SDK Facebook sera installé dans le répertoire `~/Documents/FacebookSDK`. Accédez à ce répertoire et copiez (faites glisser) le fichier
 `FacebookSDK.framework` dans votre projet iOS dans Xcode.
 
-1. 	Cliquez sur la racine de votre projet dans Xcode et sélectionnez **Build Phases**.
+1. Cliquez sur la racine de votre projet dans Xcode et sélectionnez **Build Phases**.
 
 1. Ajoutez le fichier `FacebookSDK.framework` à la liste des bibliothèques liées dans **Link binary with libraries**.
 
@@ -83,6 +155,7 @@ tous les plug-ins Cordova soient avisés de leurs événements respectifs.
 ```
 [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
 ```
+{: codeblock}
 
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #facebook-auth-cordova-init}
@@ -92,9 +165,24 @@ Utilisez le code JavaScript suivant pour initialiser le SDK client de {{site.dat
 ```JavaScript
 BMSClient.initialize("applicationRoute", "applicationGUID");
 ```
+{: codeblock}
 
-Remplacez *applicationRoute* et *applicationGUID* par les valeurs de **Route** et
+Remplacez `applicationRoute` et `applicationGUID` par les valeurs de **Route** et
 **Identificateur global unique de l'application** dans la section **Options pour application mobile**.
+	
+
+
+
+##Initialisation du gestionnaire AuthorizationManager {{site.data.keyword.amashort}}
+Utilisez le code JavaScript suivant dans votre application Cordova pour initialiser le gestionnaire AuthorizationManager {{site.data.keyword.amashort}}.
+```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+```
+{: codeblock}
+
+Remplacez la valeur `tenantId` par la valeur `tenantId` du service {{site.data.keyword.amashort}}. Cette valeur peut être obtenue en cliquant sur le bouton **Afficher les données d'identification** sur la vignette du service {{site.data.keyword.amashort}}.
+
+
 
 ## Test de l'authentification
 {: #facebook-auth-cordova-test}
@@ -121,6 +209,7 @@ protégée par {{site.data.keyword.amashort}}. Un message signalant l'interdicti
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 	request.send(success, failure);
 	```
+{: codeblock}
 
 1. Lancez votre application. Un écran de connexion Facebook s'affiche :
 

@@ -2,16 +2,15 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 
 # {{site.data.keyword.amashort}} 시작하기
 {: #gettingstarted}
-마지막 업데이트 날짜: 2016년 7월 21일
-{: .last-updated}
 
-{{site.data.keyword.amafull}} 서비스를 사용하여 모바일 앱에 보안을 추가하십시오. 사용자가 기존 Google 또는 Facebook 계정으로 앱에 로그인할 수 있도록 클라이언트 인증 및 ID 제공자를 구성할 수 있습니다.
+
+{{site.data.keyword.amafull}} 서비스를 사용하여 모바일 앱에 보안을 추가하십시오. {{site.data.keyword.Bluemix_notm}}에서 실행되는 보호된 백엔드 자원에 액세스하는 데 필요한 클라이언트 권한을 구성할 수 있습니다. ID 제공자(Google, Facebook) 또는 사용자 정의 ID를 사용하여 사용자를 인증하고 보호된 백엔드 자원과 웹 앱에 대한 액세스를 부여하십시오.
 {:shortdesc}
 
 **참고:** {{site.data.keyword.amashort}} 서비스를 이전에는 Advanced Mobile Access라고 했습니다.

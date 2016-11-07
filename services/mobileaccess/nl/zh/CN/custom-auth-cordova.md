@@ -2,17 +2,13 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # 针对 {{site.data.keyword.amashort}} Cordova 应用程序配置定制认证
 {: #custom-cordova}
 
-上次更新时间：2016 年 7 月 17 日
-{: .last-updated}
-
-
-将要使用定制认证的 Cordova 应用程序配置为使用 {{site.data.keyword.amashort}} 客户端 SDK，并将该应用程序连接到 {{site.data.keyword.Bluemix}}。
+将要使用定制认证的 Cordova 应用程序配置为使用 {{site.data.keyword.amafull}} 客户端 SDK，并将该应用程序连接到 {{site.data.keyword.Bluemix}}。
 
 
 ## 开始之前
@@ -32,17 +28,18 @@ copyright:
 1. 初始化客户端 SDK。
 
 	```JavaScript
-	BMSClient.initialize(applicationRoute, applicationGUID);
-
+	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
-将 *applicationRoute* 和 *applicationGUID* 替换为 {{site.data.keyword.Bluemix_notm}} 仪表板上应用程序的**移动选项**面板中的**路径**和**应用程序 GUID** 值。
+ * 将 `applicationRoute` 和 `applicationGUID` 替换为**路径**和**应用程序 GUID** 值。
+通过在 {{site.data.keyword.Bluemix_notm}} 仪表板上单击 {{site.data.keyword.Bluemix_notm}} 应用程序的**移动选项**按钮可找到这些值。
+	
+ 
+ 
+## 初始化 {{site.data.keyword.amashort}} AuthorizationManager
+ {: #custom-cordova-MCAAM}
+通过传递 {{site.data.keyword.amashort}} 服务 `tenantId` 参数来初始化 `MCAAuthorizationManager`。您可以通过单击 {{site.data.keyword.amashort}} 服务磁贴上的**显示凭证**按钮找到此值。
 
-##初始化 {{site.data.keyword.amashort}} AuthorizationManager
-初始化 AuthorizationManager 的方法是将在单击 {{site.data.keyword.amashort}} 服
-务磁贴上的**显示凭证**按钮时获取的 `tenantId` 参数传递给
-{{site.data.keyword.amashort}} 服务。
-
-  ```JavaScript
+```JavaScript
   MFPAuthorizationManager.initialize("tenantId");
   ```
 
@@ -80,14 +77,14 @@ onAuthenticationChallengeReceived: function(authenticationContext, challenge) {.
 onAuthenticationSuccess: function(info){...}
 ```
 
-认证成功后会调用此方法。自变量包括可选的 JSONObject（用于包含有关认证成功的扩展信息）。
+认证成功后会调用此方法。自变量包括可选的 JSON 对象（用于包含有关认证成功的扩展信息）。
 
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
 
-认证失败后会调用此方法。自变量包括可选的 JSONObject（用于包含有关认证失败的扩展信息）。
+认证失败后会调用此方法。自变量包括可选的 JSON 对象（用于包含有关认证失败的扩展信息）。
 
 
 ## authenticationContext

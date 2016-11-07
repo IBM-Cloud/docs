@@ -1,17 +1,13 @@
 ---
 
 copyright:
-  years: 2015, 2016
-  
+  years: 2015, 2016 lastupdated: "2016-10-02"  
 ---
 
 # Autorizando acesso com o Touch ID
 {: #before-you-begin}
 
-Última atualização: 20 de julho de 2016
-{: .last-updated}
-
-Touch ID é um recurso de reconhecimento de impressão digital para dispositivos iOS. É possível usar o Touch ID para assegurar informações de autorização automaticamente para uso futuro. 
+Touch ID é um recurso de reconhecimento de impressão digital para dispositivos iOS. É possível usar o Touch ID com o serviço {{site.data.keyword.amafull}} para proteger automaticamente informações de autorização para uso futuro. 
 
 **Nota:** o ID de toque está disponível somente a partir do {{site.data.keyword.amashort}} Objective-C SDK.
 

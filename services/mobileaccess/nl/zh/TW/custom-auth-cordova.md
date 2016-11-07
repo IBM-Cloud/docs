@@ -2,17 +2,13 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # 配置適用於 {{site.data.keyword.amashort}} Cordova 應用程式的自訂鑑別
 {: #custom-cordova}
 
-前次更新：2016 年 7 月 17 日
-{: .last-updated}
-
-
-配置 Cordova 應用程式，這個應用程式利用自訂鑑別來使用 {{site.data.keyword.amashort}} 用戶端 SDK，並將您的應用程式連接至 {{site.data.keyword.Bluemix}}。
+配置 Cordova 應用程式，這個應用程式利用自訂鑑別來使用 {{site.data.keyword.amafull}} 用戶端 SDK，並將您的應用程式連接至 {{site.data.keyword.Bluemix}}。
 
 
 ## 開始之前
@@ -32,15 +28,17 @@ copyright:
 1. 起始設定用戶端 SDK。
 
 	```JavaScript
-	BMSClient.initialize(applicationRoute, applicationGUID);
-
+	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
-將 *applicationRoute* 及 *applicationGUID* 取代為來自 {{site.data.keyword.Bluemix_notm}} 儀表板上您的應用程式的**行動選項**畫面的**路徑**及**應用程式 GUID** 值。
+ * 將 `applicationRoute` 及 `applicationGUID` 取代為**路徑**及**應用程式 Guid** 值。您可以在 {{site.data.keyword.Bluemix_notm}} 儀表板上按一下 {{site.data.keyword.Bluemix_notm}} 應用程式內的**行動選項**按鈕，來尋找這些值。
+	
+ 
+ 
+## 起始設定 {{site.data.keyword.amashort}} AuthorizationManager
+ {: #custom-cordova-MCAAM}
+藉由傳遞 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，起始設定 `MCAAuthorizationManager`。您可以按一下 {{site.data.keyword.amashort}} 服務磚上的**顯示認證**按鈕，來尋找此值。
 
-##起始設定 {{site.data.keyword.amashort}} AuthorizationManager
-傳遞在按一下 {{site.data.keyword.amashort}} 服務磚上的**顯示認證**按鈕時所取得的 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，以起始設定 AuthorizationManager。
-
-  ```JavaScript
+```JavaScript
   MFPAuthorizationManager.initialize("tenantId");
   ```
 
@@ -77,15 +75,13 @@ onAuthenticationChallengeReceived: function(authenticationContext, challenge) {.
 onAuthenticationSuccess: function(info){...}
 ```
 
-在成功鑑別之後，會呼叫此方法。引數包括選用性的 JSONObject，其中包含鑑別成功的延伸資訊。
-
+在成功鑑別之後，會呼叫此方法。引數包括選用的 JSON 物件，其中包含有關鑑別成功的延伸資訊。
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
 
-在鑑別失敗之後，會呼叫此方法。引數包括選用性的 JSONObject，其中包含鑑別失敗的延伸資訊。
-
+在鑑別失敗之後，會呼叫此方法。引數包括選用的 JSON 物件，其中包含有關鑑別失敗的延伸資訊。
 
 ## authenticationContext
 {: #custom-cordova-authcontext}

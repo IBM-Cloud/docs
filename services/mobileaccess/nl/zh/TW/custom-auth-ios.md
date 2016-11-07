@@ -2,17 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # 配置適用於 iOS 的 {{site.data.keyword.amashort}} 用戶端 SDK (Objective-C)
 {: #custom-ios}
 
-前次更新：2016 年 7 月 21 日
-{: .last-updated}
 
-
-配置 iOS 應用程式，這個應用程式利用自訂鑑別來使用 {{site.data.keyword.amashort}} 用戶端 SDK，並將您的應用程式連接至 {{site.data.keyword.Bluemix}}。
+配置 iOS 應用程式，這個應用程式利用自訂鑑別來使用 {{site.data.keyword.amafull}} 用戶端 SDK，並將您的應用程式連接至 {{site.data.keyword.Bluemix}}。
 
 **附註：**如果您是以 Swift 開發 iOS 應用程式，請考量使用 {{site.data.keyword.amashort}} 用戶端 Swift SDK。此頁面上的指示適用於 {{site.data.keyword.amashort}} 用戶端 Objective-C SDK。如需使用新 Swift SDK 的相關指示，請參閱[配置適用於 iOS 的 {{site.data.keyword.amashort}} 用戶端 SDK (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html)。
 
@@ -48,7 +45,7 @@ CocoaPods 將安裝新增的相依關係。即會顯示進度及新增的元件�
 
 
 
-## 起始設定用戶端 SDK
+### 起始設定用戶端 SDK
 {: #custom-ios-sdk-initialize}
 
 透過傳遞應用程式路徑 (`applicationRoute`) 及 GUID (`applicationGUID`) 參數來起始設定 SDK。放置起始設定碼的一般（但非強制）位置是在應用程式委派的 `application:didFinishLaunchingWithOptions` 方法。
@@ -77,7 +74,7 @@ CocoaPods 將安裝新增的相依關係。即會顯示進度及新增的元件�
 
 1. 起始設定用戶端 SDK。將 applicationRoute 及 applicationGUID 取代為您取自**行動選項**的**路徑** (`applicationRoute`) 及**應用程式 GUID** (`applicationGUID`) 值。
 
-	###Objective-C：
+	Objective-C：
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -85,7 +82,7 @@ CocoaPods 將安裝新增的相依關係。即會顯示進度及新增的元件�
 			backendGUID:@"applicationGUID"];
 	```
 
-	###Swift：
+	Swift：
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
@@ -93,18 +90,20 @@ CocoaPods 將安裝新增的相依關係。即會顯示進度及新增的元件�
 	```
 
 ## 起始設定 AuthorizationManager
-傳遞在按一下 {{site.data.keyword.amashort}} 服務磚上的**顯示認證**按鈕時所取得的 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，以起始設定 AuthorizationManager。
+藉由傳遞 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，起始設定 AuthorizationManager。您可以按一下 {{site.data.keyword.amashort}} 服務磚上的**顯示認證**按鈕，來尋找此值。
 
-### Objective-C
-  ```Objective-C
-     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
-  ```
+
+### Objective-C：
+
+```Objective-
+ [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+```
 
 ### Swift：
- ```Swift
+
+```Swift
   IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
  ```
-
 
 
 ## IMFAuthenticationHandler 委派

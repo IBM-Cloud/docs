@@ -2,18 +2,13 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-09"
 ---
 
 # Configurazione dell'autenticazione personalizzata per la tua applicazione iOS (Swift SDK) {{site.data.keyword.amashort}}
-
 {: #custom-ios}
 
-Ultimo aggiornamento: 01 agosto 2016
-{: .last-updated}
-
-
-Configura la tua applicazione iOS che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connetti la tua applicazione a {{site.data.keyword.Bluemix}}.  La nuova SDK Swift rilasciata {{site.data.keyword.amashort}} aggiunge e migliora le funzionalità fornite dalla SDK Objective-C Mobile Client Access esistente.
+Configura la tua applicazione iOS che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amafull}} e connetti la tua applicazione a {{site.data.keyword.Bluemix}}.  La nuova SDK Swift rilasciata {{site.data.keyword.amashort}} aggiunge e migliora le funzionalità fornite dalla SDK Objective-C Mobile Client Access esistente.
 
 **Nota:** mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix_notm}}, è pianificato di abbandonarla più avanti questo anno in favore di questa nuova SDK Swift.
 
@@ -31,9 +26,9 @@ Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.
 ## Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata
  {: #custom-auth-ios-configmca}
 
- 1. Apri la tua applicazione nel dashboard {{site.data.keyword.Bluemix_notm}}.
-
- 1. Fai clic su **Opzioni mobili** e annota **Rotta** (*applicationRoute*) e **GUID applicazione** (*applicationGUID*). Questi valori ti servono quando inizializzi l'SDK.
+ 1. Apri il tuo dashboard del servizio. 
+ 
+ 1. Fai clic su **Opzioni mobili** e annota i valori per **Rotta** (*applicationRoute*) e **GUID applicazione / TenantId** (*serviceTenantID*). Questi valori ti servono quando inizializzi l'SDK e invii le richieste all'applicazione di backend. 
 
  1. Fai clic sul tile {{site.data.keyword.amashort}}. Il dashboard {{site.data.keyword.amashort}} viene caricato.
 
@@ -51,68 +46,70 @@ Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.
 ### Inizializzazione dell'SDK client
 {: #custom-ios-sdk-initialize}
 
-Inizializza l'SDK passando i parametri `applicationRoute` e `applicationGUID`. Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione
-
-1. Ottieni i valori di parametro della tua applicazione. Apri la tua applicazione nel dashboard {{site.data.keyword.Bluemix_notm}}. Fai clic su **Opzioni mobili**. I valori `applicationRoute` e `applicationGUID` sono visualizzati nei campi **Rotta** e **GUID applicazione**.
+Inizializza l'SDK passando il parametro `applicationGUID` (tenantId). Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione
 
 1. Importa i framework richiesti nella classe dove vuoi utilizzare l'SDK client {{site.data.keyword.amashort}}.
 
- ```Swift
- import UIKit
- import BMSCore
- import BMSSecurity
-```
+	```Swift
+	import UIKit
+	import BMSCore
+	import BMSSecurity
+	```
 
-1. Inizializza l'SDK client {{site.data.keyword.amashort}}, modifica il gestore autorizzazione in modo che sia MCAAuthorizationManager e definisci un delegato di autenticazione e registralo. Sostituisci `<applicationRoute>` e `<applicationGUID>` con
-i valori per **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}. 
+1. Inizializza l'SDK client {{site.data.keyword.amashort}}, modifica il gestore autorizzazione in modo che sia  `MCAAuthorizationManager` e definisci un delegato di autenticazione e registralo.
 
-  Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona Avatar ![icona Avatar](images/face.jpg "icona Avatar")  nella barra del menu per aprire il widget Account e supporto.
-  <!--upper-left corner of the -->
+```Swift
 
-  Per `<yourProtectedRealm>`, utilizza il **Realm name** che hai definito nel tile **Custom** del dashboard {{site.data.keyword.amashort}}.
+	let tenantId = "<serviceTenantID>"
+	let regionName = <applicationBluemixRegion>
+	let customRealm = "<yourProtectedRealm>"
 
- ```Swift
- let backendURL = "<applicationRoute>"
- let backendGUID = "<applicationGUID>"
- let customRealm = "<yourProtectedRealm>"
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: 
+		[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
- func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+		let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+	    		mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+	 //regionName deve essere una della seguenti costanti BMSClient.Region: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom o BMSClient.Region.sydney
+		BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
-
- BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
-
-  //Delegato di autenticazione per gestire la richiesta di verifica personalizzata
+	//Delegato di autenticazione per gestire la richiesta di verifica personalizzata
  class MyAuthDelegate : AuthenticationDelegate {
-      func onAuthenticationChallengeReceived(authContext: AuthenticationContext, challenge: AnyObject){
-          print("onAuthenticationChallengeReceived")
-              let answer = <An answer to the challenge sent by the backend (Should be of type [String:AnyObject])>
-              authContext.submitAuthenticationChallengeAnswer(answer)
-      }
+		func onAuthenticationChallengeReceived(_ authContext: AuthenticationContext, challenge: AnyObject){
+		    print("onAuthenticationChallengeReceived")
+		    let answer = try? Utils.parseJsonStringtoDictionary( "{\"userName\":\"" + "test" + "\",\"password\":\"" + "test" + "\"}")
+			authContext.submitAuthenticationChallengeAnswer(answer)
+		}
 
-      func onAuthenticationSuccess(info: AnyObject?) {
-           print("onAuthenticationSuccess info = \(info)")
+		func onAuthenticationSuccess(_ info: AnyObject?) {
+		    print("onAuthenticationSuccess info = \(info)")
            print("onAuthenticationSuccess")
       }
 
-      func onAuthenticationFailure(info: AnyObject?){
-        print("onAuthenticationFailure info = \(info)")
+		func onAuthenticationFailure(_ info: AnyObject?){
+		     print("onAuthenticationFailure info = \(info)")
         print("onAuthenticationFailure")
       }
-  }
+	     }
 
-  let delegate = MyAuthDelegate()
-  let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+	     let delegate = MyAuthDelegate()
+	     mcaAuthManager.registerAuthenticationDelegate(delegate, realm: customRealm)
 
- do {
-      try mcaAuthManager.registerAuthenticationDelegate(delegate, realm: customRealm)
-  } catch {
-      print("error with register: \(error)")
-  }
- return true
- }   
- ```
+	     return true
+ }
 
+
+```
+
+Nel codice:
+
+* Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona Avatar ![icona Avatar](images/face.jpg "icona Avatar")  nella barra del menu per aprire il widget **Account e supporto**.  Il valore della regione visualizzato deve essere uno dei seguenti: **Stati Uniti Sud**, **Regno Unito** o **Sydney**, e corrisponde alla costante richiesta nel codice:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`.
+* Sostituisci `"<yourProtectedRealm>"` con il valore **Realm name** definito nel tile **Custom** del dashboard {{site.data.keyword.amashort}}. 
+* Sostituisci `"<serviceTenantID>"` con il valore **tenantId** richiamato da **Opzioni mobili**. Consulta [Configurazione di Mobile Client Access per l'autenticazione personalizzata](#custom-auth-ios-configmca).
+
+### Inizializzazione dell'SDK client
+{: #custom-ios-sdk-initialize}
+   
+  
 ## Verifica dell'autenticazione
 {: #custom-ios-testing}
 
@@ -123,44 +120,47 @@ Dopo che hai inizializzato l'SDK client e registrato un delegato di autenticazio
 
  Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyword.mobilefirstbp}} e di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`.
 
-1. Invia una richiesta all'endpoint protetto della tua applicazione di back-end mobile nel tuo browser aprendo `{applicationRoute}/protected`, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
-  L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
+1. Invia una richiesta all'endpoint protetto della tua applicazione di back-end mobile nel tuo browser aprendo `{applicationRoute}/protected`. Sostituisci   `{applicationRoute}` con il valore richiamato dalle **Opzioni mobili** (consulta [Configurazione di Mobile Client Access per l'autenticazione personalizzata](#custom-auth-ios-configmca)). Ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
+
+ L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
 
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo che hai inizializzato `BMSClient` e registrato il tuo delegato di autenticazione personalizzato:
 
- ```Swift
- let customResourceURL = "<il percorso della tua risorsa protetta>"
- let request = Request(url: customResourceURL, method: HttpMethod.GET)
- let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+	```Swift
+
+	let protectedResourceURL = "<your protected resource absolute path>"
+	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
+
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
   if error == nil {
-      print ("response:\(response?.responseText), no error")
-  } else {
-      print ("error: \(error)")
+	       print ("response:\(response?.responseText), no error")
+ } else {
+	       print ("error: \(error)")
   }
- }
+	}
 
- request.sendWithCompletionHandler(callBack)
- ```
+	request.send(completionHandler: callBack)
+	 ```
 
-1. 	Quando la tua richiesta ha esito positivo, nella console Xcode vedi il seguente output:
+1. Quando la tua richiesta ha esito positivo, nella console Xcode vedi il seguente output:
 
- ```
- onAuthenticationSuccess info = Optional({
+	 ```
+	 onAuthenticationSuccess info = Optional({
      attributes =     {
-     };
+	     };
      deviceId = don;
      displayName = "Don+Lon";
      isUserAuthenticated = 1;
      userId = don;
  })
- response:Optional("Salve Don Lon"), no error
- ```
+	 response:Optional("Salve Don Lon"), no error
+	 ```
 
 1. Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
 
- ```
- MCAAuthorizationManager.sharedInstance.logout(callBack)
- ```  
+	 ```
+	 MCAAuthorizationManager.sharedInstance.logout(callBack)
+	 ```  
 
  Se richiami questo codice dopo che un utente ha eseguito l'accesso, l'utente viene disconnesso. Quando l'utente prova ad eseguire nuovamente l'accesso, deve rispondere nuovamente alla richiesta di verifica proveniente dal server.
 

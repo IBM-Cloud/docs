@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-
+  years: 2015, 2016 lastupdated: "2016-10-02"
 ---
 
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.amashort}} SDKs, amostras e referência de API
-Última atualização: 17 de julho de 2016
-{: .last-updated}
 
-Para incluir {{site.data.keyword.amashort}} SDKs em seu aplicativo, escolha os SDKs que desejar usar. Em seguida, configure seu
+# {{site.data.keyword.amashort}} SDKs, amostras e referência de API
+
+
+Para incluir {{site.data.keyword.amafull}} SDKs em seu aplicativo, escolha os SDKs que desejar usar. Em seguida, configure seu
 gerenciador de dependência para puxar os SDKs em seu aplicativo.
 {:shortdesc}
 
@@ -40,6 +39,7 @@ Inclua uma dependência de compilação no arquivo `build.gradle` do aplicativo:
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS (Swift SDK)
 {: #coresdk-ios-swift}
@@ -54,11 +54,14 @@ Edite o Podfile e inclua a linha a seguir nos destinos necessários e execute:
 use_frameworks!
 pod 'BMSSecurity'
 ```
+{: codeblock}
 
 ### iOS (Objective-C SDK)
 {: #coresdk-ios}
 
-Embora o Objective-C SDK permaneça totalmente suportado e ainda seja considerado o SDK primário para o {{site.data.keyword.Bluemix_notm}} Mobile Services, há planos para descontinuá-lo posteriormente este ano em favor do novo Swift SDK (consulte [Configurando o iOS Swift SDK](getting-started-ios-swift-sdk.html)).
+Embora o SDK do Objective-C permaneça totalmente suportado e ainda seja considerado o SDK primário para o
+{{site.data.keyword.Bluemix_notm}} Mobile Services, há planos para descontinuá-lo posteriormente este ano em favor do novo SDK do
+Swift (veja [Configurando o SDK do Swift iOS](getting-started-ios-swift-sdk.html)).
 
 [Repositório Git](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master),
 [Referência de API](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
@@ -70,6 +73,7 @@ Edite o Podfile e inclua a linha a seguir nos destinos necessários e execute:
 ```Bash
 pod 'IMFCore'
 ```
+{: codeblock}
 
 ### Cordova
 {: #coresdk-cordova}
@@ -83,6 +87,7 @@ Instale o plug-in do Mobile Client Access Cordova:
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## SDK do cliente para autenticação de Facebook
 {: #facebooksdk}
@@ -104,6 +109,7 @@ Inclua uma dependência de compilação no arquivo `build.gradle` do aplicativo:
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS (Swift SDK)
 {: #facebooksdk-ios-swift}
@@ -118,6 +124,7 @@ Edite o Perfil e inclua o seguinte nos destinos necessários e execute:
 use_frameworks!
 pod 'BMSFacebookAuthentication'
  ```
+{: codeblock}
 
 ### iOS (Objective-C SDK)
 {: #facebooksdk-ios}
@@ -125,9 +132,10 @@ pod 'BMSFacebookAuthentication'
 [Repositório Git](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
 [Referência de API](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
-*Nota:* embora o Objective-C SDK permaneça totalmente suportado e ainda considerado o SDK primário para
-{{site.data.keyword.Bluemix_notm}} Mobile Services, há planos de descontinuar esse SDK posteriormente neste ano em favor do novo Swift SDK. Para
-novos aplicativos, recomendamos altamente o Swift SDK (consulte Configurando o iOS Swift SDK).
+**Nota:** embora o Objective-C SDK permaneça totalmente
+suportado e ainda seja considerado o SDK principal para o
+{{site.data.keyword.Bluemix_notm}} Mobile Services, há planos para descontinuar
+esse SDK posteriormente este ano em favor do novo Swift SDK. Para novos aplicativos, recomendamos altamente o SDK do Swift (veja Configurando o SDK do Swift iOS).
 #### Instale o Facebook SDK com o CocoaPods
 {: #facebooksdk-ios-cocoapods}
 
@@ -136,6 +144,7 @@ Edite o Perfil e inclua a linha a seguir e execute:
 ```Bash
 pod 'IMFFacebookAuthentication'
 ```
+{: codeblock}
 
 ### Cordova
 {: #facebooksdk-cordova}
@@ -150,6 +159,7 @@ Instale o plug-in Cordova:
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## SDK do cliente para autenticação do Google
 {: #googlesdk}
@@ -172,6 +182,7 @@ Inclua uma dependência de compilação no arquivo `build.gradle` do aplicativo:
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS (Swift SDK)
 {: #googlesdk-ios-swift}
@@ -187,6 +198,7 @@ Edite o Perfil e inclua o seguinte e execute:
 use_frameworks!
 pod 'BMSGoogleAuthentication'
 ```
+{: codeblock}
 
 ### iOS (Objective-C SDK - descontinuado)
 {: #googlesdk-ios}
@@ -202,6 +214,7 @@ Edite o Perfil e inclua a linha a seguir e execute:
 ```Bash
 pod 'IMFGoogleAuthentication'
 ```
+{: codeblock}
 
 ### Cordova
 {: #googlesdk-cordova}
@@ -216,6 +229,7 @@ Instale o plug-in:
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## Server SDK para servidores Node.js
 {: #serversdk}
@@ -230,6 +244,7 @@ Execute NPM para instalar o SDK:
 ```Bash
 npm install -save bms-mca-token-validation-strategy
 ```
+{: codeblock}
 
 ## Server SDK para servidor Liberty for Java&trade;
 {: #serverlibertysdk}
@@ -238,10 +253,11 @@ npm install -save bms-mca-token-validation-strategy
 
 #### Instale o Liberty SDK
 {: #libertysdk}
+
 1. Copie o arquivo `com.ibm.worklight.oauth.tai_1.0.0.jar` no diretório
 `$<wlp.user.dir>/extensions/lib`.
 
-**Dica:** `$<wlp.user.dir>` é o diretório do usuário do tempo de execução do Liberty for Java. O nome do diretório padrão é `usr`.
+  **Dica:** `$<wlp.user.dir>` é o diretório do usuário do tempo de execução do Liberty for Java. O nome do diretório padrão é `usr`.
 
 1. Copie o diretório `OAuthTai-1.0.mf` para o diretório `$<wlp.user.dir>/extension/lib/features`.
 
@@ -258,6 +274,7 @@ Execute NPM para instalar o SDK:
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## Amostras do provedor de identidade customizado
 {: #customidprovider}
@@ -279,3 +296,4 @@ Edite o Perfil e inclua a linha a seguir e execute:
 ```Bash
 pod 'IMFURLProtocol'
 ```
+{: codeblock}

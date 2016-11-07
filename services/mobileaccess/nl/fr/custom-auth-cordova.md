@@ -2,17 +2,13 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}} Cordova
 {: #custom-cordova}
 
-Dernière mise à jour : 17 juillet 2016
-{: .last-updated}
-
-
-Configurez votre application Cordova qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amashort}} client SDK et connectez-la à {{site.data.keyword.Bluemix}}.
+Configurez votre application Cordova qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amafull}} client SDK et connectez-la à {{site.data.keyword.Bluemix}}.
 
 
 ## Avant de commencer
@@ -34,20 +30,21 @@ valeurs **Route** (`applicationRoute`) et **Identificateur global unique de l'ap
 1. Initialisez le logiciel SDK client.
 
 	```JavaScript
-	BMSClient.initialize(applicationRoute, applicationGUID);
+	BMSClient.initialize("applicationRoute", "applicationGUID");
 
 	```
- Remplacez *applicationRoute* et *applicationGUID* par les valeurs de **Route** et **Identificateur global
-unique de l'application** du panneau **Options pour application mobile** de votre application dans le tableau de bord
-{{site.data.keyword.Bluemix_notm}}.
+ * Remplacez `applicationRoute` et `applicationGUID` par les valeurs de **Route** et **AppGuid**, qui peuvent être trouvées en cliquant sur le bouton **Options pour application mobile** sur le tableau de bord {{site.data.keyword.Bluemix_notm}} de votre application {{site.data.keyword.Bluemix_notm}}.
+	
+ 
+ 
+## Initialisation du gestionnaire AuthorizationManager {{site.data.keyword.amashort}}
+ {: #custom-cordova-MCAAM}
+Initialisez le gestionnaire `MCAAuthorizationManager` en passant le paramètre `tenantId` du service {{site.data.keyword.amashort}}. Vous pouvez trouver cette valeur en cliquant sur le bouton **Afficher les données d'identification** sur la vignette du service  {{site.data.keyword.amashort}}.
 
-
-##Initialisation du gestionnaire AuthorizationManager {{site.data.keyword.amashort}} 
-Initialisez AuthorizationManager en passant le paramètre `tenantId` de service {{site.data.keyword.amashort}} que vous obtenez quand vous cliquez sur le bouton **Afficher les données d'identification** sur la vignette du service {{site.data.keyword.amashort}}.
-
-  ```JavaScript
+```JavaScript
   MFPAuthorizationManager.initialize("tenantId");
-  ```
+        
+```
 
 ## Interface du programme d'écoute d'authentification
 {: #custom-cordva-auth}

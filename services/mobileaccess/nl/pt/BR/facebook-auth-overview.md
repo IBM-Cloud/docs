@@ -1,8 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
-
+  years: 2015, 2016 lastupdated: "2016-10-02"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -12,11 +11,11 @@ copyright:
 # Autenticando usuários com as credenciais do Facebook
 {: #facebook-auth-overview}
 
-Última atualização: 22 de julho de 2016
-{: .last-updated}
 
-É possível configurar o serviço {{site.data.keyword.amashort}} para proteger recursos usando o Facebook como um provedor de
+
+É possível configurar o serviço {{site.data.keyword.amafull}} para proteger recursos usando o Facebook como um provedor de
 identidade. Seus usuários de aplicativo móvel ou da web podem usar suas credenciais do Facebook para autenticação.
+
 {:shortdesc}
 
 **Importante**: não é necessário instalar separadamente o client SDK fornecido pelo Facebook. O Facebook SDK é instalado automaticamente por gerenciadores de dependência quando você configura o {{site.data.keyword.amashort}} Facebook client SDK.
@@ -26,7 +25,7 @@ identidade. Seus usuários de aplicativo móvel ou da web podem usar suas creden
 
 ### Fluxo de solicitação do cliente móvel
 
-Consulte o diagrama a seguir para entender como o {{site.data.keyword.amashort}} integra-se ao Facebook para autenticação a partir de um app cliente móvel.
+Veja o diagrama a seguir para entender como o {{site.data.keyword.amashort}} integra-se ao Facebook para autenticação a partir de um app cliente móvel.
 
 ![Diagrama do fluxo de solicitação do cliente móvel](images/mca-sequence-facebook.jpg)
 
@@ -54,19 +53,26 @@ O fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}} é 
   * O redirecionamento final é para a área protegida do próprio aplicativo da web, em vez do recurso protegido de backend. 
 
 
-## Obtendo um ID de aplicativo do Facebook a partir do Portal do Desenvolvedor do Facebook
+## Obtendo um ID do app Facebook a partir do website Facebook for Developers
 {: #facebook-appID}
 
-Para começar a usar o Facebook como um provedor de identidade, deve-se criar um aplicativo no Portal do Desenvolvedor do Facebook. Durante esse processo, você recebe um ID do aplicativo Facebook, que é um identificador exclusivo para que o Facebook saiba qual aplicativo está tentando se conectar.
+Para começar a usar o Facebook como um provedor de identidade, crie um aplicativo no website Facebook for Developers. Durante esse processo, um ID do
+app Facebook é criado. Este é um identificador exclusivo usado pelo Facebook para saber qual aplicativo está tentando se conectar. 
 
-1. Abra o [Portal do Desenvolvedor do Facebook](https://developers.facebook.com).
+Você precisa desse valor para configurar a autenticação do Facebook para o seu aplicativo móvel ou da web.
 
-1. Clique em **Meus apps** no menu e selecione **Criar um novo app**.
-Selecione o aplicativo iOS ou Android e clique em **Ignorar e criar ID do aplicativo** na próxima tela.
+1. Acesse o site do [Facebook for Developers](https://developers.facebook.com).
 
-1. Configure o nome de exibição do aplicativo de sua escolha e selecione uma categoria. Clique em **Criar ID do app** para continuar.
+1. Abra a lista suspensa **Meus Aplicativos** e selecione **Incluir um novo aplicativo**.
 
-1. Copie o **ID do app** exibido. Esse valor é seu ID do aplicativo Facebook.  É necessário esse valor para configurar a autenticação do Facebook com seu aplicativo móvel ou da web.
+1. Insira os valores **Nome de exibição** e **Valores de e-mail de contato** e escolha uma
+**Categoria** a partir da lista suspensa.
+
+1. Clique em **Criar um novo ID do app**.
+
+1. Uma verificação de segurança pode aparecer. Execute a ação solicitada.
+
+1. A página **Configuração do produto** aparece. Copie o **ID do app** exibido. 
 
 ## Próximas Etapas
 {: #next-steps}

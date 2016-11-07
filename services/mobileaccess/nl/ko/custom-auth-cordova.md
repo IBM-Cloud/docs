@@ -2,17 +2,13 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # {{site.data.keyword.amashort}} Cordova 앱용 사용자 정의 인증 구성
 {: #custom-cordova}
 
-마지막 업데이트 날짜: 2016년 7월 17일
-{: .last-updated}
-
-
-사용자 정의 인증을 사용하는 Cordova 애플리케이션이 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하고 애플리케이션을 {{site.data.keyword.Bluemix}}에 연결하도록 구성하십시오.
+사용자 정의 인증을 사용하는 Cordova 애플리케이션이 {{site.data.keyword.amafull}} 클라이언트 SDK를 사용하고 애플리케이션을 {{site.data.keyword.Bluemix}}에 연결하도록 구성하십시오.
 
 
 ## 시작하기 전에
@@ -32,17 +28,21 @@ SDK를 초기화하려면 applicationGUID 및 applicationRoute 매개변수를 �
 1. 클라이언트 SDK를 초기화하십시오.
 
 	```JavaScript
-	BMSClient.initialize(applicationRoute, applicationGUID);
+	 BMSClient.initialize("applicationRoute", "applicationGUID");
 
 	```
-*applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션의 **모바일 옵션** 패널에 있는 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
+ * `applicationRoute` 및 `applicationGUID`를 **라우트** 및 **앱 GUID** 값으로 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.Bluemix_notm}} 애플리케이션 내의 **모바일 옵션** 단추를 클릭하면 이러한 값을 찾을 수 있습니다. 
+	
+ 
+ 
+## {{site.data.keyword.amashort}} AuthorizationManager 초기화
+ {: #custom-cordova-MCAAM}
+{{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 전달하여 `MCAAuthorizationManager`를 초기화하십시오. {{site.data.keyword.amashort}} 서비스 타일의 **신임 정보 표시** 단추를 클릭하여 이 값을 찾을 수 있습니다. 
 
-##{{site.data.keyword.amashort}} AuthorizationManager 초기화
-{{site.data.keyword.amashort}} 서비스 타일의 **신임 정보 표시** 단추를 클릭할 때 가져오는 {{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 눌러서 AuthorizationManager를 초기화하십시오.
-
-  ```JavaScript
+```JavaScript
   MFPAuthorizationManager.initialize("tenantId");
-  ```
+
+```
 
 ## 인증 리스너 인터페이스
 {: #custom-cordva-auth}
@@ -77,13 +77,13 @@ onAuthenticationChallengeReceived: function(authenticationContext, challenge) {.
 onAuthenticationSuccess: function(info){...}
 ```
 
-이 메소드는 인증 성공 후에 호출됩니다. 인수로는 인증 성공에 대한 확장 정보가 포함된 선택적 JSONObject가 있습니다. 
+이 메소드는 인증 성공 후에 호출됩니다. 인수로는 인증 성공에 대한 확장 정보가 포함된 선택적 JSON 오브젝트가 있습니다. 
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
 
-이 메소드는 인증 실패 후에 호출됩니다. 인수로는 인증 실패에 대한 확장 정보가 포함된 선택적 JSONObject가 있습니다. 
+이 메소드는 인증 실패 후에 호출됩니다. 인수로는 인증 실패에 대한 확장 정보가 포함된 선택적 JSON 오브젝트가 있습니다. 
 
 ## authenticationContext
 {: #custom-cordova-authcontext}

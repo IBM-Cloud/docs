@@ -2,19 +2,19 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
-{:shortdesc: .shortdesc}
+{:shortdesc: .shortdesc} {:codeblock:.codeblock}
 
 # {{site.data.keyword.amashort}} 서비스로 백엔드 리소스 보호
 {: #protecting-resources}
 
-마지막 업데이트 날짜: 2016년 7월 17일
+마지막 업데이트 날짜: 2016년 8월 22일
 {: .last-updated}
 
 
-{{site.data.keyword.amashort}} 서비스를 통해, 모바일 사용 OAuth 보안 및 모니터링으로 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 Java 기반 백엔드 애플리케이션 및 Node.js를 보호할 수 있습니다.
+{{site.data.keyword.amafull}} 서비스를 통해, 모바일 사용 OAuth 보안 및 모니터링으로 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 Java 기반 백엔드 애플리케이션 및 Node.js를 보호할 수 있습니다.
 {:shortdesc}
 
 ## 시작하기 전에
@@ -52,6 +52,8 @@ copyright:
     }
 }
 ```
+{: codeblock}
+
 * `imf.sub`: ID 토큰의 제목 또는 ID 토큰이 없는 경우 클라이언트의 고유 ID를 지정합니다. 
 * `imf.user`: ID 토큰에서 추출된 사용자 ID를 지정합니다. ID 토큰이 없는 경우 이 필드는 공백 오브젝트를 유지합니다. 
 * `imf.device`: ID 토큰에서 추출된 디바이스 ID를 지정합니다. ID 토큰이 없는 경우 이 필드는 공백 오브젝트를 유지합니다. 

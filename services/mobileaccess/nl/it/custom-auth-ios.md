@@ -2,17 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS (Objective-C)
 {: #custom-ios}
 
-Ultimo aggiornamento: 21 luglio 2016
-{: .last-updated}
 
-
-Configura la tua applicazione iOS che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connetti la tua applicazione a {{site.data.keyword.Bluemix}}.
+Configura la tua applicazione iOS che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amafull}} e connetti la tua applicazione a {{site.data.keyword.Bluemix}}.
 
 **Nota:** se stai sviluppando la tua applicazione iOS in Swift, valuta l'utilizzo dell'SDK Swift client {{site.data.keyword.amashort}}. Le istruzioni in questa pagina si applicano all'SDK Objective-C client {{site.data.keyword.amashort}}. Per istruzioni sull'utilizzo della nuova SDK Swift, vedi [Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html).
 
@@ -49,7 +46,7 @@ nome è `{il-tuo-nome-progetto}.xcworkspace`.
 
 
 
-## Inizializzazione dell'SDK client
+### Inizializzazione dell'SDK client
 {: #custom-ios-sdk-initialize}
 
 Inizializza l'SDK passando i parametri di rotta (`applicationRoute`) e GUID (`applicationGUID`) dell'applicazione. Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione
@@ -78,7 +75,7 @@ Inizializza l'SDK passando i parametri di rotta (`applicationRoute`) e GUID (`ap
 
 1. Inizializza l'SDK client. Sostituisci applicationRoute e applicationGUID con i valori per **Rotta** (`applicationRoute`) e **GUID applicazione** (`applicationGUID`) che hai ottenuto da **Opzioni mobili**.
 
-	###Objective-C:
+	Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -86,7 +83,7 @@ Inizializza l'SDK passando i parametri di rotta (`applicationRoute`) e GUID (`ap
 			backendGUID:@"applicationGUID"];
 	```
 
-	###Swift:
+	Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
@@ -94,18 +91,20 @@ Inizializza l'SDK passando i parametri di rotta (`applicationRoute`) e GUID (`ap
 	```
 
 ## Inizializzazione di AuthorizationManager
-Inizializza AuthorizationManager passando il parametro `tenantId` del servizio {{site.data.keyword.amashort}}  ottenuto dopo aver fatto clic sul pulsante  **Visualizza credenziali** nel tile del servizio {{site.data.keyword.amashort}}.
+Inizializza AuthorizationManager passando il parametro `tenantId` del servizio {{site.data.keyword.amashort}}. Puoi trovare questo valore facendo clic sul pulsante **Visualizza credenziali** nel tile del servizio {{site.data.keyword.amashort}}.
 
-### Objective-C
-  ```Objective-C
-     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
-  ```
+
+### Objective-C:
+
+```Objective-
+ [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+```
 
 ### Swift:
- ```Swift
-  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
- ```
 
+```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+```
 
 
 ## Delegato IMFAuthenticationHandler
@@ -139,13 +138,13 @@ Questo metodo viene richiamato dopo un'autenticazione con esito positivo. Gli ar
 						didReceiveAuthenticationFailure:(NSDictionary*)userInfo;
 ```
 
-Questo metodo viene richiamato dopo un errore di autenticazione. Gli argomenti includono `IMFAuthenticationContext` e un `NSDictionary` facoltativo che contiene informazioni estese sull'esito negativo dell'autenticazione. 
+Questo metodo viene richiamato dopo un errore di autenticazione. Gli argomenti includono `IMFAuthenticationContext` e un `NSDictionary` facoltativo che contiene informazioni estese sull'esito negativo dell'autenticazione.
 
 ## Protocollo IMFAuthenticationContext
 {: #custom-ios-sdk-authcontext}
 
 
-Il protocollo `IMFAuthenticationContext` viene fornito come un argomento al metodo `authenticationContext:didReceiveAuthenticationChallenge` di un `IMFAuthenticationHandler` personalizzato. È responsabilità dello sviluppatore raccogliere credenziali e utilizzare i metodi `IMFAuthenticationContext` per restituire credenziali all'SDK client {{site.data.keyword.amashort}} o notificare un errore.  
+Il protocollo `IMFAuthenticationContext` viene fornito come un argomento al metodo `authenticationContext:didReceiveAuthenticationChallenge` di un `IMFAuthenticationHandler` personalizzato. È responsabilità dello sviluppatore raccogliere credenziali e utilizzare i metodi `IMFAuthenticationContext` per restituire credenziali all'SDK client {{site.data.keyword.amashort}} o notificare un errore. 
 ```
 -(void) submitAuthenticationChallengeAnswer:(NSDictionary*) answer;
 
@@ -176,7 +175,8 @@ CustomAuthenticationDelegate.m
 
 @implementation CustomAuthenticationDelegate
 
-- (void) authenticationContext:(id<IMFAuthenticationContext>)context didReceiveAuthenticationChallenge:(NSDictionary *)challenge {
+-(void)authenticationContext:(id<IMFAuthenticationContext>)context
+					didReceiveAuthenticationChallenge:(NSDictionary *)challenge{
 
 	NSLog(@"didReceiveAuthenticationChallenge :: %@", challenge);
 
@@ -230,7 +230,7 @@ class CustomAuthenticationDelegate : NSObject, IMFAuthenticationDelegate{
 		// in cui lo sviluppatore mostra uno schermo di accesso, raccoglie le credenziali e richiama
 		// l'API context.submitAuthenticationChallengeAnswer()
 
-let challengeAnswer: [String:String] = [
+		let challengeAnswer: [String:String] = [
 			"username":"john.lennon",
 			"password":"12345"
 		]

@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02" 
 ---
 
 # Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada
 {: #custom-dash}
-
-Última actualización: 17 de julio de 2016
-{: .last-updated}
 
 
 Para utilizar la autenticación personalizada con su app móvil, debe registrar un reino de autenticación personalizado y el URL base del proveedor de identidad personalizado en el panel de control del servicio de {{site.data.keyword.amashort}}.
@@ -28,13 +25,13 @@ Utilice el panel de control de {{site.data.keyword.Bluemix}} para configurar la 
 
 1. Pulse **Opciones móviles** y anote los valores correspondientes a **Ruta** (`applicationRoute`) y a **Identificador exclusivo global de la app** (`applicationGUID`). Necesitará estos valores para inicializar el SDK.
 
-1. Pulse el mosaico de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
+1. Pulse el icono de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
 
-1. Pulse el mosaico **Personalizado**.
+1. Pulse el icono **Personalizado**.
 
 1. Introduzca el **Nombre de reino** y el **URL base** del proveedor de identidad personalizado y guarde los cambios.
 
-## Próximos pasos
+## Pasos siguientes
 {: #next-steps}
 * [Configuración de la autenticación personalizada para Android](custom-auth-android.html)
 * [Configuración de la autenticación personalizada para iOS](custom-auth-ios.html)

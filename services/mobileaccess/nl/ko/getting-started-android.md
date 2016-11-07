@@ -2,27 +2,26 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+
 
 # Android SDK 설정
 {: #getting-started-android}
 
-마지막 업데이트 날짜: 2016년 8월 2일
-{: .last-updated}
+{{site.data.keyword.amafull}} 클라이언트 SDK를 사용하여 Android 애플리케이션을 계측하고 SDK를 초기화하고 보호 및 비보호 리소스를 요청하십시오.
 
-{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 Android 애플리케이션을 계측하고 SDK를 초기화하고 보호 및 비보호 리소스를 요청하십시오.
+
 {:shortdesc}
 
 ## 시작하기 전에
 {: #before-you-begin}
 다음이 있어야 합니다.
 * {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오. 
+* 서비스 매개변수 값. {{site.data.keyword.Bluemix_notm}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 값과 `tenantId`(`appGUID`라고도 함) 값이 **라우트** 필드와 **앱 GUID/TenantId** 필드에 표시됩니다. 이들 값은 SDK를 초기화하고 백엔드 애플리케이션에 요청을 보내는 데 필요합니다. 
 * Gradle과 작동하도록 설정된 Android Studio 프로젝트. Android 개발 환경을 설정하는 방법에 대한 자세한 정보는 [Google 개발자 도구](http://developer.android.com/sdk/index.html)를 참조하십시오. 
-
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #install-mca-sdk}
@@ -57,31 +56,33 @@ copyright:
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
 {: #initalize-mca-sdk}
 
-`context`, `applicationGUID`, `applicationRoute` 및 `BMSClient.REGION_UK` 매개변수를 `initialize` 메소드에 전달하여 SDK를 초기화하십시오. 
+**context** 매개변수와 **region** 매개변수를 `initialize` 메소드에 전달하여 클라이언트 SDK를 초기화하십시오. 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 Android 애플리케이션 기본 활동의 `onCreate` 메소드입니다. 
 
+```Java
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+					
+  BMSClient.getInstance().setAuthorizationManager(
+                 MCAAuthorizationManager.createInstance(this, "MCAServiceTenantId"));
 
-1. {{site.data.keyword.Bluemix_notm}} 대시보드의 기본 페이지에서 사용자 앱을 클릭하십시오. **모바일 옵션**을 클릭하십시오. SDK를 초기화하려면 **애플리케이션 라우트** 및 **애플리케이션 GUID** 값이 필요합니다. 
-
-2. Android 애플리케이션에서 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 Android 애플리케이션 기본 활동의 `onCreate` 메소드입니다. 
-<br/>*applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션**의 값으로 대체하십시오.
-
- ```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
 ```
-`BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오.
+
+   * `BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오.
 
 {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
+
+지역 값은 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` 또는 `BMSClient.REGION_UK`이어야 합니다. 
+   * "MCAServiceTenantId"를 **tenantId** 값으로 바꾸십시오([시작하기 전에](#before-you-begin) 참조).  
 
 ## 모바일 백엔드 애플리케이션에 대한 요청 작성
 {: #request}
 
 {{site.data.keyword.amashort}} 클라이언트 SDK가 설치되고 나면 모바일 백엔드 애플리케이션에 대한 요청 작성을 시작할 수 있습니다. 
 
-1. 요청을 새 모바일 백엔드의 보호 엔드포인트로 전송하십시오. 브라우저에서 URL `{applicationRoute}/protected`를 여십시오. (예: `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 인스트루먼트되는 모바일 애플리케이션에서만 액세스할 수 있으므로 브라우저에 `Unauthorized` 메시지가 리턴됩니다.
+1. 요청을 새 모바일 백엔드의 보호 엔드포인트로 전송하십시오. 브라우저에서 URL `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 여십시오.`{applicationRoute}` 값을 얻는 방법에 대한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.  
+	
+	MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 인스트루먼트되는 모바일 애플리케이션에서만 액세스할 수 있으므로 브라우저에 `Unauthorized` 메시지가 리턴됩니다.
+
+
 
 1. Android 애플리케이션을 사용하여 동일한 엔드포인트에 대한 요청을 작성하십시오. `BMSClient`를 초기화한 후에 다음 코드를 추가하십시오. 
 

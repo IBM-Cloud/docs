@@ -2,21 +2,16 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # 建立自訂身分提供者
 {: #custom-create}
 
-前次更新：2016 年 6 月 16 日
-{: .last-updated}
-
 
 若要建立自訂身分提供者，請開發可公開 RESTful API 的 Web 應用程式：
 
-```
-POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
-```
+`POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>`
 
 * `base_url`：指定自訂身分提供者 Web 應用程式的基本 URL。基本 URL 是要在 {{site.data.keyword.amashort}} 儀表板中登錄的 URL。
 * `tenant_id`：指定承租戶的唯一 ID。{{site.data.keyword.amashort}} 呼叫此 API 時，一律會提供 {{site.data.keyword.Bluemix}} 應用程式 GUID (`applicationGUID`)。
@@ -32,7 +27,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 
 `startAuthorization` API 是用來作為鑑別處理程序的首要步驟。自訂身分提供者必須使用 "challenge"、"success" 或 "failure" 狀態進行回應。
 
-為了允許鑑別處理程序有最大的彈性，自訂身分提供者可以存取要求內文中行動用戶端所傳送的所有 HTTP 標頭。標頭是以下列格式所提供：
+為了容許鑑別處理程序的最大彈性，自訂身分提供者可以存取要求內文中行動用戶端所傳送的所有 HTTP 標頭。標頭是以下列格式所提供：
 
 ```JavaScript
 {

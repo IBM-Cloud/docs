@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02" 
 ---
 
 # Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée
 {: #custom-dash}
-
-Dernière mise à jour : 17 juillet 2016
-{: .last-updated}
 
 
 Pour utiliser l'authentification personnalisée avec votre appli mobile, vous devez enregistrer un domaine d'authentification personnalisé et l'adresse URL de base de votre fournisseur d'identité personnalisé dans le tableau de bord du service {{site.data.keyword.amashort}}.

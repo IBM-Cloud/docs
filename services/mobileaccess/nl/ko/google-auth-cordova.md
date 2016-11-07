@@ -2,17 +2,16 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
 
 # Cordova 앱에서 Google 인증 사용
 {: #google-auth-cordova}
 
 
-마지막 업데이트 날짜: 2016년 7월 21일
-{: .last-updated}
-
-Google 인증 통합에 대해 Cordova 애플리케이션을 구성하려면, Cordova 애플리케이션의 원시 코드를 변경해야 합니다(Java, Objective-C 또는 Swift). 각 플랫폼은 개별적으로 구성되어야 합니다. 원시 개발 환경을 사용하여 원시 코드(예: Android Studio 또는 Xcode)를 변경하십시오. 
+Google 인증 통합을 위해 {{site.data.keyword.amafull}} Cordova 애플리케이션을 구성하려면, Cordova 애플리케이션의 원시 코드를 변경해야 합니다(Java, Objective-C 또는 Swift). 각 플랫폼은 개별적으로 구성되어야 합니다. 원시 개발 환경을 사용하여 원시 코드(예: Android Studio 또는 Xcode)를 변경하십시오. 
 
 ## 시작하기 전에
 {: #before-you-begin}
@@ -27,13 +26,46 @@ Google 인증 통합에 대해 Cordova 애플리케이션을 구성하려면, Co
 ## Android 플랫폼 구성
 {: #google-auth-cordova-android}
 
-Google 인증 통합을 위해 Cordova 애플리케이션의 Android 플랫폼을 구성하는 데 필요한 단계는 원시 애플리케이션에 필요한 단계와 매우 유사합니다. 자세한 정보는 [Android 앱에서 Google 인증 사용](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)을 참조하십시오. 다음 항목을 설정하십시오. 
+Google 인증 통합을 위해 Cordova 애플리케이션의 Android 플랫폼을 구성하는 데 필요한 단계는 원시 애플리케이션에 필요한 단계와 매우 유사합니다. [Android 앱에서 Google 인증 사용](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)을 참조하여 다음을 설정하십시오.
 
 * Android 플랫폼용 Google 프로젝트 구성
 * Google 인증용 {{site.data.keyword.amashort}} 구성
-* Android용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
 
-Cordova 애플리케이션의 경우, Java 코드 대신 JavaScript 코드로 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. `GoogleAuthenticationManager` API는 계속 원시 코드에 등록되어 있어야 합니다. 
+### Android Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
+
+
+2. Android 프로젝트 폴더에서 앱 모듈의 `build.gradle` 파일(프로젝트 `build.gradle` 파일이 **아님**)을 여십시오.
+종속 항목 섹션을 찾은 다음 클라이언트 SDK에 대한 새 컴파일 종속 항목을 추가하십시오. 
+
+	```Gradle
+	dependencies {
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+        name:'googleauthentication',
+        version: '1.+',
+        ext: 'aar',
+        transitive: true
+    	// other dependencies  
+	}
+	```
+
+2. **도구 > Android > Gradle 파일로 프로젝트 동기화**를 클릭하여 프로젝트를 Gradle과 동기화하십시오. 
+
+3. Cordova 애플리케이션의 경우, Java 코드 대신 JavaScript 코드로 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. `GoogleAuthenticationManager` API는 계속 원시 코드에 등록되어 있어야 합니다. 다음 코드를 기본 활동 `onCreate` 메소드에 추가하십시오. 
+
+	```Java
+	GoogleAuthenticationManager.getInstance().registerDefaultAuthenticationListener(this);
+	```
+
+1. 다음 코드를 활동에 추가하십시오. 
+ 
+ 	```Java
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		GoogleAuthenticationManager.getInstance()
+			.onActivityResultCalled(requestCode, resultCode, data);
+	}
+```
 
 ## iOS 플랫폼 구성
 {: #google-auth-cordova-ios}
@@ -55,7 +87,7 @@ Google 인증을 통합하도록 Cordova 애플리케이션의 iOS 플랫폼을 
 	* IMFGoogleAuthenticationHandler.h
 	* IMFGoogleAuthenticationHandler.m
 
-**파일 복사....** 선택란을 선택하십시오. 
+	**파일 복사....** 선택란을 선택하십시오. 
 
 1. [Google+ iOS SDK](http://goo.gl/9cTqyZ)를 다운로드하여 설치하십시오. 
 
@@ -69,6 +101,7 @@ Google 인증을 통합하도록 Cordova 애플리케이션의 iOS 플랫폼을 
 [[ NSNotificationCenter defaultCenter] postNotification:
 		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
 ```
+{: codeblock}
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
 {: #google-auth-cordova-initialize}
@@ -78,8 +111,26 @@ Cordova 애플리케이션에서 다음 JavaScript 코드를 사용하여 {{site
 ```JavaScript
 BMSClient.initialize("applicationRoute", "applicationGUID");
 ```
+{: codeblock}
 
-*applicationRoute* 및 *applicationGUID* 값을 대시보드에 있는 애플리케이션의 **모바일 옵션** 섹션에서 얻은 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
+`applicationRoute` 및 `applicationGUID` 값을 애플리케이션 **라우트** 및 **앱 GUID** 값으로 바꾸십시오. 대시보드에서 애플리케이션 페이지 내의 **모바일 옵션** 단추를 클릭하여 이 값을 찾을 수 있습니다. 
+	
+
+
+
+##{{site.data.keyword.amashort}} AuthorizationManager 초기화
+Cordova 애플리케이션에서 다음 JavaScript 코드를 사용하여 {{site.data.keyword.amashort}} AuthorizationManager를 초기화하십시오.
+
+```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+  ```
+{: codeblock}
+
+`tenantId` 값을 {{site.data.keyword.amashort}} 서비스 `tenantId`로 바꾸십시오. {{site.data.keyword.amashort}} 서비스 타일의 **신임 정보 표시** 단추를 클릭하여 이 값을 찾을 수 있습니다. 
+
+
+
+
 
 ## 인증 테스트
 {: #google-auth-cordova-test}
@@ -106,15 +157,16 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 	request.send(success, failure);
 	```
-
+{: codeblock}
 
 1. 애플리케이션을 실행하십시오. Google 로그인 화면이 표시됩니다.
 
 	![Google 로그인 화면](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Google 로그인 화면](images/ios-google-login.png)
-	이 화면은 사용자 디바이스에 Facebook 앱이 설치되어 있지 않거나 현재 Facebook에 로그인되어 있지 않은 경우 약간 다르게 보일 수 있습니다.
+	
+	디바이스에 Facebook 앱이 설치되어 있지 않거나 현재 Facebook에 로그인하지 않은 경우 이 화면이 약간 다를 수 있습니다.
 1. **확인**을 클릭하여 인증하는 데 Google 사용자 ID를 사용할 수 있도록 {{site.data.keyword.amashort}}에 권한을 부여합니다. 
 
-1. 	요청이 성공적으로 처리되어야 합니다. 사용하는 플랫폼에 따라 다음 출력이 LogCat/Xcode 콘솔에 표시됩니다.
+1. 요청이 성공적으로 처리되어야 합니다. 사용하는 플랫폼에 따라 다음 출력이 LogCat/Xcode 콘솔에 표시됩니다.
 
 	![android의 코드 스니펫](images/android-google-login-success.png)
 

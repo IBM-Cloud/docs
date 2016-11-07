@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02" 
 ---
 
 # Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata
 {: #custom-dash}
-
-Ultimo aggiornamento: 17 luglio 2016
-{: .last-updated}
 
 
 Per utilizzare l'autenticazione personalizzata con la tua applicazione mobile, devi registrare un'area di autenticazione personalizzata e l'URL di base del tuo provider di identità personalizzato nel dashboard del servizio {{site.data.keyword.amashort}}.
