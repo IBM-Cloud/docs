@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-07"
 
 ---
 {:shortdesc: .shortdesc}
@@ -17,7 +17,7 @@ You can configure your local development  to use the {{site.data.keyword.amafull
 
 You must have:
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
-* Your service parameter values. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile options**. The `applicationRoute` and  `appGUID` (also known as `tenantId`) values are displayed in the **Route** and **App GUID / TenantId** fields. You will need these values for intializing the SDK and for sending requests to the back-end application.
+* Your service parameter values. Open your service in the{{site.data.keyword.amashort}} dashboard. Click **Mobile options**. The `applicationRoute` and  `appGUID` (also known as `tenantId`) values are displayed in the **Route** and **App GUID / TenantId** fields. You will need these values for intializing the SDK and for sending requests to the back-end application.
 *  Find the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget. The region value should be one of the following: **US South**, **Sydney**, or **UK**. The exact SDK constant values that correspond to these names are indicated in the code examples.
 
 ## Setting up the server SDK

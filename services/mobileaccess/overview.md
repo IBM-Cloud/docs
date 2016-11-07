@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-11-06"
 
 ---
 
@@ -20,7 +20,7 @@ You can use the {{site.data.keyword.amashort}} service to protect Node.js and Li
 {: #components}
 
 * **{{site.data.keyword.amashort}} dashboard**: Configure various authentication types
-* **{{site.data.keyword.amashort}} client SDK**: Instrument mobile applications to use {{site.data.keyword.amashort}}  functionality. Supported platforms are: iOS 8+, Android 4+, and Cordova.
+* **{{site.data.keyword.amashort}} client SDK**: Instrument mobile applications to use {{site.data.keyword.amashort}}  functionality. Supported platforms are: iOS 8+, Android 4+, Cordova and Web applications.
 * **{{site.data.keyword.amashort}} server SDK**: Protect resources that are hosted on {{site.data.keyword.Bluemix_notm}}. Currently, supported runtimes are Node.js and Liberty for Java&trade;.
 
 ## Authentication types

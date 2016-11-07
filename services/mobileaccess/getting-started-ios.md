@@ -20,7 +20,7 @@ Instrument your iOS application with the {{site.data.keyword.amafull}} SDK, init
 {: #before-you-begin}
 You must have:
 * An instance of a {{site.data.keyword.Bluemix_notm}} application that is protected by the {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
-* Your **TenantID**. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `tenantId` (also known as `appGUID`)  values are displayed in the  **App GUID / TenantId** field. You will need this value for intializing the {{site.data.keyword.amashort}} Authorization Manager.
+* Your **TenantID**. Open your service in the{{site.data.keyword.amashort}} dashboard. Click **Mobile Options**. The `tenantId` (also known as `appGUID`)  values are displayed in the  **App GUID / TenantId** field. You will need this value for intializing the {{site.data.keyword.amashort}} Authorization Manager.
 * Your **Application Route**. This is the URL of your back-end application. You need this value for for sending requests to its protected endpoints.
 * An Xcode project.  
 
