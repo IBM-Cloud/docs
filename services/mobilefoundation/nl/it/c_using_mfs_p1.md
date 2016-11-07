@@ -2,14 +2,14 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-09-12"
 ---
 
 #	Utilizzo del piano Developer
 {: #using_mobilefoundation_p1}
 
-Ultimo aggiornamento: 04 agosto 2016
-{: .last-updated}
+<!--Last updated: 12 September 2016
+{: .last-updated}-->
 
 Dopo aver creato {{site.data.keyword.mobilefoundation_short}}: istanza del servizio dello sviluppatore, in pochi secondi, puoi accedere alla pagina `Panoramica` in {{site.data.keyword.Bluemix_notm}}, la quale ti fornisce le esercitazioni e i video di aiuto per iniziare ad utilizzare il servizio  {{site.data.keyword.mobilefoundation_short}}.
 
@@ -18,7 +18,7 @@ Dopo aver creato {{site.data.keyword.mobilefoundation_short}}: istanza del servi
 * Per avviare {{site.data.keyword.mfserver_short_notm}} con le impostazioni predefinite, fai clic su **Avvia server di base**.
 
 Questa selezione fornisce un {{site.data.keyword.mfserver_long_notm}} con le seguenti impostazioni:
-*	1 GB di memoria. Questa dimensione è sufficiente per lo sviluppo, per delle attività leggere di test e i carichi di lavoro di produzione su piccola scala. 
+*	1 GB di memoria. Questa dimensione è sufficiente per lo sviluppo, per delle attività leggere di test e i carichi di lavoro di produzione su piccola scala.
 
 *	Il `nome utente` e la `password` ti vengono generati
 automaticamente. Disporrai dell'accesso ad essi quando il server è avviato e in esecuzione.
@@ -36,6 +36,24 @@ dove puoi vedere:
 
 
 <!--This console runs inside the container.--> Con la console, puoi gestire le tue applicazioni mobili e i tuoi dispositivi mobili, utilizzare il tuo server come un backend mobile, inviare notifiche di push e altro ancora.
+
+##  Aggiunta del server Mobile Analytics
+{: #adding_analytics_server_dev}
+
+ Puoi ora monitorare la tua applicazione mobile nel server {{site.data.keyword.mobilefirst}} aggiungendo un server  Mobile Analytics all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}. Il piano Developer crea il server Mobile Analytics in un gruppo di contenitori con un solo nodo con 1 GB di memoria.
+
+* Fai clic su **Aggiungi Analytics** per aggiungere il server Mobile Analytics all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
+
+Viene avviato il processo di provisioning. Questo processo impiega circa 10 minuti e una finestra di messaggio
+indica l'avanzamento di questa operazione.  
+
+* Avvia la console di MobileFirst Analytics da {{site.data.keyword.mfp_oc_short_notm}}.
+
+* SSO (single sign-on) è abilitato tra {{site.data.keyword.mfserver_short_notm}} e il server Mobile Analytics. Il server Mobile Analytics è configurato con le stesse credenziali utente e chiavi LTPA di {{site.data.keyword.mfserver_short_notm}}. Puoi utilizzare gli stessi `nomeutente` e `password` per accedere alla console di Mobile Analytics utilizzati per accedere a {{site.data.keyword.mfp_oc_short_notm}}.
+
+Per informazioni su MobileFirst Analytics puoi fare riferimento a [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
+
+**Nota:** il server Mobile Analytics viene rimosso quando elimini l'istanza del servizio {{site.data.keyword.mobilefoundation_short}} o quando tenti di ricreare {{site.data.keyword.mfserver_short_notm}}.
 
 ## Ricreazione del server {{site.data.keyword.mobilefirst}}
 {: #recreate_mobilefoundation_p1}
@@ -56,6 +74,6 @@ aggiornare le impostazioni del server per personalizzare la tua configurazione s
 
   - Seleziona la dimensione corretta per il tuo server sulla base delle tue necessità.
 
-* **Nodi** visualizza il numero di nodi creati. Questo campo non è modificabile in {{site.data.keyword.mobilefoundation_short}}: Developer. Il numero di nodi <!--in your {{site.data.keyword.IBM_notm}} container group--> è predefinito **1** nel piano Developer.
+* **Nodi** visualizza il numero di nodi creati. Questo campo non è modificabile in {{site.data.keyword.mobilefoundation_short}}: Developer. Il numero di nodi in <!--in your {{site.data.keyword.IBM_notm}} container group--> è predefinito su **1** nel piano Developer.
 
 Fai riferimento alla [documentazione di {{site.data.keyword.mobilefoundation_long}}](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window} per ulteriori dettagli.

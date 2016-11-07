@@ -2,23 +2,24 @@
 
 copyright:
   years: 2016
-lastupdated:  "2016-09-12"
+lastupdated:  "2016-10-14"
 ---
 
-#	Utilización del plan Professional 1 Application 
-{: #using_mobilefoundation_p2}
+#	Utilización del plan Developer Pro
+{: #using_mobilefoundation_p3}
 
-<!--Last updated: 12 September 2016
+<!--Last updated: 14 October 2016
 {: .last-updated}-->
 
-Con el plan Professional 1 Application los usuarios pueden crear 1 aplicación móvil con varios sistemas operativos móviles.
-Tras crear la instancia del servicio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, consulte el procedimiento siguiente para iniciarse en el uso del servicio.
+{{site.data.keyword.mobilefoundation_short}}: Developer Pro es adecuado para el desarrollo en equipo y pruebas; este plan no es adecuado para producción.
+
+Después de crear la instancia de servicio {{site.data.keyword.mobilefoundation_short}}: Developer Pro, en pocos segundos, puede acceder a la página `Visión general` en {{site.data.keyword.Bluemix_notm}}, que le ofrece guías de aprendizaje y vídeos para ayudarle a aprender a utilizar el servicio {{site.data.keyword.mobilefoundation_short}}.
 
 ## Requisitos previos
-{: #prerequisites_p2}
+{: #prerequisites_p3}
 
-Tenga en cuenta lo siguiente antes de configurar la instancia del servicio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application.
-* {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application solo se admite con planes de {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional (con soporte para OLTP).
+Tenga en cuenta lo siguiente antes de configurar la instancia del servicio {{site.data.keyword.mobilefoundation_short}}: Developer Pro.
+* {{site.data.keyword.mobilefoundation_short}}: Developer Pro solo se admite con planes de {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional (con soporte para OLTP).
 
 * Deberá tener acceso a las credenciales de la instancia de servicio {{site.data.keyword.dashdbshort_notm}} antes de poder configurar los valores de su instancia de servicio {{site.data.keyword.mobilefoundation_short}}.
 
@@ -26,17 +27,17 @@ Tenga en cuenta lo siguiente antes de configurar la instancia del servicio {{sit
 
 
 ## Adición de la conexión de base de datos
-{: #configure_dashdb_p2}
+{: #configure_dashdb_p3}
 
 ###  Primeros pasos
-{: #firststeps_p2}
+{: #firststeps_p3}
 
-Tras crear la instancia del servicio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, siga el procedimiento siguiente para iniciarse en el uso del servicio.
+Tras crear la instancia del servicio {{site.data.keyword.mobilefoundation_short}}: Developer Pro, siga el procedimiento siguiente para iniciarse en el uso del servicio.
 
 ### Configuración de la conexión con la instancia de servicio {{site.data.keyword.dashdbshort_notm}}
-{: #connect_dashdb_p2}
+{: #connect_dashdb_p3}
 
-Una vez que se haya creado la instancia de servicio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, podrá ver la página *Visión general*, donde deberá especificar la información de conexión de la instancia de servicio {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional.
+Una vez que se haya creado la instancia de servicio {{site.data.keyword.mobilefoundation_short}}: Developer Pro, podrá ver la página *Visión general*, donde deberá especificar la información de conexión de la instancia de servicio {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional.
 
 1. Seleccione la `Organización` de {{site.data.keyword.Bluemix_notm}} donde existe la instancia del servicio {{site.data.keyword.dashdbshort_notm}}.
 
@@ -48,19 +49,19 @@ Una vez que se haya creado la instancia de servicio {{site.data.keyword.mobilefo
 
 +  Pruebe la conexión con la instancia del servicio {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional especificada.
 
-+  Pulse **Continuar**. Esta acción crea las tablas necesarias en la instancia de servicio de base de datos de {{site.data.keyword.dashdbshort_notm}} configurada.
++  Pulse **Añadir**. Esta acción crea las tablas necesarias en la instancia de servicio de base de datos de {{site.data.keyword.dashdbshort_notm}} configurada.
 
 **Nota**: no puede cambiar la instancia de servicio {{site.data.keyword.dashdbshort_notm}} que está configurada para que la utilice la instancia del servicio {{site.data.keyword.mobilefoundation_short}}. No obstante, puede utilizar la misma instancia de servicio {{site.data.keyword.dashdbshort_notm}} en varias instancias de servicio {{site.data.keyword.mobilefoundation_short}}, ya que cada instancia de servicio {{site.data.keyword.mobilefoundation_short}} crea su propio esquema en la instancia de servicio {{site.data.keyword.dashdbshort_notm}} seleccionada.
 
 * En varios segundos, puede acceder a la página `Visión general`, que le ofrece guías de aprendizaje y vídeos para ayudarle a aprender a utilizar el servicio {{site.data.keyword.mobilefoundation_short}}.
 
 ## Inicio del servidor de {{site.data.keyword.mobilefirst}}
-{: #start_mobilefoundation_p2}
+{: #start_mobilefoundation_p3}
 
 * Para iniciar {{site.data.keyword.mfserver_short_notm}} con los valores predeterminados, pulse **Iniciar servidor básico**.
 
 * Esta selección suministra un {{site.data.keyword.mfserver_long_notm}} con la configuración siguiente:
-    -  1 GB de memoria. Este tamaño es suficiente para realizar actividades de desarrollo, de pruebas no muy exigentes y cargas de trabajo de producción a pequeña escala.
+    - Un nodo con 1 GB de memoria. Este tamaño es suficiente para realizar actividades de desarrollo, de pruebas no muy exigentes y cargas de trabajo de producción a pequeña escala.
 
     -	El `nombre de usuario` y la `contraseña` se generan de forma automática. Tiene acceso a ellos cuando el servidor está en ejecución.
 
@@ -78,11 +79,11 @@ Se inicia el proceso de suministro del servidor. Este proceso dura unos 10 minut
 <!--This console runs inside the container.--> Con la consola, puede gestionar sus aplicaciones móviles, adaptadores y dispositivos móviles, utilizar su servidor como programa de fondo móvil, enviar notificaciones push, etc.
 
 ##  Adición de servidor de Mobile Analytics
-{: #adding_analytics_server_prof}
+{: #adding_analytics_server_p3}
 
  Ahora puede supervisar su aplicación móvil en el servidor de {{site.data.keyword.mobilefirst}} añadiendo un servidor de Mobile Analytics a la instancia de servicio de {{site.data.keyword.mobilefoundation_short}}.
 
- El plan profesional crea el servidor de Mobile Analytics en un grupo de contenedores, el usuario puede personalizar la configuración seleccionando el número de nodos de contenedores en el grupo de contenedores.
+ El plan Developer Pro crea el servidor de Mobile Analytics en un grupo de contenedores, el usuario puede personalizar la configuración seleccionando el número de nodos de contenedores en el grupo de contenedores.
 
  Los usuarios también pueden adjuntar volúmenes a los contenedores para persistir datos. El volumen seleccionado no se puede cambiar. 20 GB es el espacio de compartición de archivos predeterminado disponible para el usuario. Si el usuario necesita espacio de almacenamiento adicional para persistir datos analíticos, necesitará adquirir compartición de archivos adicional y crear un volumen utilizando esta compartición de archivos. Puede seleccionar este nuevo volumen al desplegar el servidor de análisis.
 
@@ -90,18 +91,20 @@ Se inicia el proceso de suministro del servidor. Este proceso dura unos 10 minut
 
 * Pulse **Añadir analíticas** para añadir el servidor de Mobile Analytics a la instancia de servicio de {{site.data.keyword.mobilefoundation_short}}.
 
+* Puede elegir la configuración del servidor de Mobile Analytics, se admite un mínimo de 1 GB y un máximo de 2 GB de memoria para la configuración del servidor de Mobile Analytics. En este plan, el servidor de Mobile Analytics solo admite un único nodo.
+
 Se inicia el proceso de suministro. Este proceso dura unos 10 minutos y un mensaje indica el progreso de la operación.  
 
 * Inicie la consola de MobileFirst Analytics desde {{site.data.keyword.mfp_oc_short_notm}}.
 
-* El inicio de sesión único está habilitado entre {{site.data.keyword.mfserver_short_notm}} y el servidor de Mobile Analytics. El servidor de Mobile Analytics está configurado con las mismas claves de LTPA y credenciales de usuario que el servidor de {{site.data.keyword.mfserver_short_notm}}. Puede utilizar el mismo `nombre_usuario` y `contraseña` para iniciar sesión en la consola de Mobile Analytics como se solía iniciar sesión en {{site.data.keyword.mfp_oc_short_notm}}.
+* El inicio de sesión único está habilitado entre {{site.data.keyword.mfserver_short_notm}} y el servidor de Mobile Analytics. El servidor de Mobile Analytics está configurado con las mismas claves de LTPA y credenciales de usuario que {{site.data.keyword.mfserver_short_notm}}. Puede utilizar el mismo `nombre_usuario` y `contraseña` para iniciar sesión en la consola de Mobile Analytics como se solía iniciar sesión en {{site.data.keyword.mfp_oc_short_notm}}.
 
 Para obtener más información sobre MobileFirst Analytics, puede consultar [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/).
 
 **Nota:** El servidor de Mobile Analytics se elimina al suprimir la instancia de servicio de {{site.data.keyword.mobilefoundation_short}} o al intentar volver a crear {{site.data.keyword.mfserver_short_notm}}.
 
 ## Recreación del servidor de {{site.data.keyword.mobilefirst}}
-{: #recreate_mobilefoundation_p2}
+{: #recreate_mobilefoundation_p3}
 
 *	Pulse **Recrear** para volver a crear el servidor.
 
@@ -110,15 +113,13 @@ Para obtener más información sobre MobileFirst Analytics, puede consultar [Mob
 **Nota**: todos los datos de su instancia de servidor anterior, incluyendo la información sobre aplicaciones y adaptadores, se conserva en la instancia del servicio {{site.data.keyword.dashdbshort_notm}} configurada; estos datos se utilizan para volver a crear el servidor.
 
 ##	Ajuste de la configuración avanzada
-{: #using_mfs_advanced_p2}
+{: #using_mfs_advanced_p3}
 
 Utilice la opción **Iniciar servidor con configuración avanzada** en la página `Visión general` para crear el servidor con valores avanzados o personalizados. También puede actualizar los valores del servidor para personalizar su configuración desde el separador **Configuración**. {{site.data.keyword.mobilefoundation_short}} le ofrece acceso a algunos valores avanzados.
 
-*	Desde el separador **Topología**, puede seleccionar el tamaño del servidor y el número de instancias de servidor que necesita. El valor predeterminado del servidor es de 1 GB, que es suficiente para el desarrollo y la realización de pruebas no muy exigentes.
-  - Seleccione el tamaño correcto para su servidor en función de sus necesidades.
+*	Desde el separador **Topología**, puede seleccionar el tamaño del servidor y la memoria que necesita. El servidor predeterminado se crea con 1 GB de memoria.
+  - Puede cambiar la memoria de su servidor en función de sus necesidades a un máximo de 2 GB.
 
-  - **Nodos** muestra el número de nodos que se han creado.
-
-      - Se puede crear una granja de servidores de {{site.data.keyword.mobilefirst}} configurando el número de nodos aquí.
+  - **Nodos** muestra el número de nodos que se han creado. Este campo no se puede editar en {{site.data.keyword.mobilefoundation_short}}: Developer. De forma predeterminada, el número de nodos <!--in your {{site.data.keyword.IBM_notm}} container group--> es **1** en el plan Developer.
 
 Consulte la [Documentación de {{site.data.keyword.mobilefoundation_long}}](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}, para obtener más detalles.
