@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+  lastupdated: "2016-10-31"
 
 ---
 
@@ -14,32 +15,26 @@ copyright:
 
 # Using the mobile app
 {: #iot4e_using_mobile}
-*Last updated: 19 September 2016*
-{: .last-updated}
 
-Get started with the {{site.data.keyword.iotelectronics_full}} mobile app to see how you can receive alerts, send commands, and check the status of your connected appliances.
+Get started with the {{site.data.keyword.iotelectronics_full}} mobile app to see how you can receive alerts, send commands, and check the status of your connected appliances by using your mobile device, such as a smartphone or tablet.
 {:shortdesc}
-
-## Before you begin
 
 Before you can use the mobile app, you must complete the following tasks:
   - Deploy an instance of the {{site.data.keyword.iotelectronics}} starter in your {{site.data.keyword.Bluemix_notm}} organization. Deploying an instance of the starter automatically deploys the component applications and services of the starter.
   - [Enable mobile communications and security](iotelectronics_config_mca.html) by configuring {{site.data.keyword.amafull}}.
 
-## Getting started with the mobile app
 To get started with the mobile app, complete the following tasks:
 1. [Download the mobile app](#iot4e_downloadmobile) to your mobile device.
 2. [Connect the mobile app to the {{site.data.keyword.iotelectronics}} environment](#iot4e_connecting_mobile) and register your appliances.
 
 
- ### Downloading the mobile app
- {: #iot4e_downloadmobile}
- To get the mobile app, download and install it on your phone from the Apple App store.  On your phone, open the App store and search for "ibm iot". Choose **IBM IoT for Electronics** and install.
+## Downloading the mobile app
+{: #iot4e_downloadmobile}
+You can get the mobile app for iOS or Android mobile devices.
+- **iOS devices** - Download the app from the Apple App store.  On your mobile device, open the App store and search for "ibm iot". Choose **IBM IoT for Electronics** and install.  Alternatively, you can install it to your mobile device by using [iTunes](https://itunes.apple.com/us/app/ibm-iot-for-electronics/id1103404928?ls=1&mt=8).
+- **Android devices** - Download the app from the Google Play store. On your mobile device, open the App store and search for "ibm iot". Choose **IBM IoT for Electronics** and install.
 
- Alternatively, you can install it to your phone by using [iTunes](https://itunes.apple.com/us/app/ibm-iot-for-electronics/id1103404928?ls=1&mt=8).
-
-
-### Connecting the mobile app
+## Connecting the mobile app
 {: #iot4e_connecting_mobile}
 
 To connect the mobile app to your environment and register your appliances, perform the following tasks:
@@ -64,9 +59,9 @@ To connect the mobile app to your environment and register your appliances, perf
 
   ![Select a washer.](images/IoT4E_mobile_washer_QR.png "Select a washer.")
 
-7.	Use your mobile device to scan the QR code of the washer. The washer is now registered, and the washer status appears on your mobile phone.
+7.	Use your mobile device to scan the QR code of the washer. The washer is now registered, and the washer status appears on your mobile device.
 
-#### What's next
+**What's next**
 You can now view alerts and control the washer by using your mobile device. Try it by doing the following steps:
-  - On your computer, select a problem with the washer, such as Board Failure or Strong Vibration. The problem sends an alert to your mobile phone.
+  - On your computer, select a problem with the washer, such as Board Failure or Strong Vibration. The problem sends an alert to your mobile device.
   - On your mobile device, click **Start wash** to start the machine. You can see the washer status change on your computer as it goes through each wash cycle.

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+  lastupdated: "2016-10-29"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 
 # Creating apps with the {{site.data.keyword.iotelectronics}} starter
-*Last updated: 19 September 2016*
-{: .last-updated}
 
 {{site.data.keyword.iotelectronics_full}} is an integrated, end-to-end solution that enables your apps to communicate with, control, analyze, and update connected appliances. The starter includes a starter app that you can use to create simulated appliances and a sample mobile app that you can use to control those appliances from your mobile device.
 {:shortdesc}
@@ -41,20 +40,21 @@ See what you can do with {{site.data.keyword.iotelectronics}}.
 
 # Related Links
 {: #rellinks}
+<!-- Related Links last updated 23 October 2016 - new API source -->
 ## API documentation
 {: #api}
-* [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-* [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
+* [{{site.data.keyword.iotelectronics}} API](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
+* [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
 
 
 ## Components
 {: #general}
 
-* [{{site.data.keyword.iotelectronics}} documentation](iotelectronics_overview.html)
-* [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-*  [{{site.data.keyword.amashort}} documentation](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-* [{{site.data.keyword.sdk4nodefull}} documentation](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* [{{site.data.keyword.iotelectronics}} documentation](iotelectronics_overview.html){:new_window}
+* [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
+*  [{{site.data.keyword.amashort}} documentation](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html){:new_window}
+* [{{site.data.keyword.sdk4nodefull}} documentation](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime){:new_window}
 
 ## Samples
 {: #samples}
-* [Sample mobile app](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)
+* [Sample mobile app](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html){:new_window}
