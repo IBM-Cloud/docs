@@ -37,7 +37,7 @@ El panel de control de seguro de ejemplo se carga con datos simulados para mostr
 {: #mobileapp}
 La app de inicio para móvil es donde los asegurados como, por ejemplo, los propietarios de casas, ven y responden a la información que {{site.data.keyword.iotinsurance_short}} envía de los sensores de sus hogares.
 
-Al utilizar un dispositivo móvil, los propietarios de casas autorizan al servicio a conectarse a la nube del proveedor del sensor para enviar y recibir datos. Por ejemplo, un propietario de casa puede recibir una notificación en la app de inicio para móvil cuando el sensor detecta una fuga de agua. Para obtener más información, consulte [Instalación y conexión de la app de inicio para móvil](iotinsurance_mobile_app.html}).
+Al utilizar un dispositivo móvil, los propietarios de casas autorizan al servicio a conectarse a la nube del proveedor del sensor para enviar y recibir datos. Por ejemplo, un propietario de casa puede recibir una notificación en la app de inicio para móvil cuando el sensor detecta una fuga de agua. Para obtener más información, consulte [Instalación y conexión de la app de inicio para móvil](iotinsurance_mobile_app.html).
 
 ### API REST
 {: #rest_api}

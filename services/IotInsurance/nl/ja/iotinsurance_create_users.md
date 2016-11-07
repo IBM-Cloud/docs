@@ -44,7 +44,7 @@ copyright:
 2. ユーザーのシールド関連付けを作成します。
   1. createUserShieldAssociation.js ファイルを編集して、前のステップのユーザー名を **username** 変数に追加します。
   2. ファイルを保存します。
-  3. `node createUserShieldAssociation.js` を実行します。シールドについて詳しくは、[コンポーネント](iotinsurance_overview.html#components})を参照してください。
+  3. `node createUserShieldAssociation.js` を実行します。シールドについて詳しくは、[コンポーネント](iotinsurance_overview.html#components)を参照してください。
 3. (オプション) 分析エンジンは自動的に更新されますが、正しいデータが表示されない場合は、`node updateAnalyticsEngine.js` を実行して分析エンジンを更新してください。
 4. (オプション) ユーザーに対するハザード・イベントをシミュレートします。
   1. simulateHazard.js ファイルを編集して、前のステップのユーザー名を **usr** 変数に追加します。

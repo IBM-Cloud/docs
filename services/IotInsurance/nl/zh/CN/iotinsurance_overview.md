@@ -10,7 +10,7 @@ copyright:
 {:shortdesc: .shortdesc}
 
 
-# 关于 {{site.data.keyword.iotinsurance_short}} 
+# 关于 {{site.data.keyword.iotinsurance_short}}
 {: #about_servicename}
 上次更新时间：2016 年 9 月 15 日
 {: .last-updated}
@@ -34,11 +34,11 @@ copyright:
 
 样本保险仪表板装入了模拟数据，以显示您可以收集和分析的信息类型的示例。
 
-### 移动 Starter 应用程序 
+### 移动 Starter 应用程序
 {: #mobileapp}
 保单持有者（例如，房主）使用移动 Starter 应用程序查看和响应 {{site.data.keyword.iotinsurance_short}} 从其家中的传感器发送的信息。
 
-使用移动设备，房主授权服务连接到传感器提供者的云中，以发送和接收数据。例如，当传感器检测到漏水时，房主可在移动 Starter 应用程序中接收到通知。有关更多信息，请参阅[安装和连接移动 Starter 应用程序](iotinsurance_mobile_app.html})。
+使用移动设备，房主授权服务连接到传感器提供者的云中，以发送和接收数据。例如，当传感器检测到漏水时，房主可在移动 Starter 应用程序中接收到通知。有关更多信息，请参阅[安装和连接移动 Starter 应用程序](iotinsurance_mobile_app.html)。
 
 ### REST API
 {: #rest_api}

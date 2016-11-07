@@ -56,7 +56,7 @@ qu'{{site.data.keyword.iotinsurance_short}} envoie depuis les capteurs situés c
 A l'aide d'un périphérique mobile, les propriétaires autorisent le service à se connecter au cloud du fournisseur de capteurs pour l'envoi et la
 réception de données. Par exemple, un propriétaire peut recevoir une notification dans l'application de démarrage mobile si le capteur détecte une
 fuite d'eau. Pour plus d'informations, voir la rubrique relative à l'[installation et à la connexion de l'application
-de démarrage mobile](iotinsurance_mobile_app.html}).
+de démarrage mobile](iotinsurance_mobile_app.html).
 
 ### API REST
 {: #rest_api}

@@ -37,7 +37,7 @@ Il dashboard dell'assicurazione di esempio è caricato con dati simulati per mos
 {: #mobileapp}
 L'applicazione starter mobile è dove i possessori della polizza d'assicurazione, come i proprietari di casa, visualizzano e rispondono alle informazioni che {{site.data.keyword.iotinsurance_short}} invia dai sensori nelle loro case.
 
-Utilizzando un dispositivo mobile, i proprietari di casi autorizzano il servizio a collegarsi al cloud del provider dei sensori per inviare e ricevere dati. Ad esempio, un proprietario di casa può ricevere una notifica nell'applicazione starter mobile quando il sensore rileva una fuoriuscita d'acqua. Per ulteriori informazioni, consulta [Installazione e collegamento di un'applicazione starter mobile](iotinsurance_mobile_app.html}).
+Utilizzando un dispositivo mobile, i proprietari di casi autorizzano il servizio a collegarsi al cloud del provider dei sensori per inviare e ricevere dati. Ad esempio, un proprietario di casa può ricevere una notifica nell'applicazione starter mobile quando il sensore rileva una fuoriuscita d'acqua. Per ulteriori informazioni, consulta [Installazione e collegamento di un'applicazione starter mobile](iotinsurance_mobile_app.html).
 
 ### API REST
 {: #rest_api}

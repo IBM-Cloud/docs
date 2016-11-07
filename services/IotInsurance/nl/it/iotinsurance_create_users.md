@@ -44,7 +44,7 @@ Crea un utente che puoi utilizzare per verificare le funzioni del dashboard e l'
 2. Crea un'associazione scudo per l'utente.
   1. Modifica il file createUserShieldAssociation.js per aggiungere il nome utente dal passo precedente nella variabile **username**.
   2. Salva il file.
-  3. Esegui `node createUserShieldAssociation.js`. Per ulteriori informazioni sugli scudi, consulta [Componenti](iotinsurance_overview.html#components}).
+  3. Esegui `node createUserShieldAssociation.js`. Per ulteriori informazioni sugli scudi, consulta [Componenti](iotinsurance_overview.html#components).
 3. (facoltativo) Il motore di analisi viene aggiornato automaticamente; tuttavia, se non vengono visualizzati i dati corretti, puoi aggiornare il motore di analisi eseguendo `node updateAnalyticsEngine.js`.
 4. (facoltativo) Simula un evento pericoloso per l'utente.
   1. Modifica il file simulateHazard.js per aggiungere il nome utente dai passi precedenti nella variabile **usr**.
