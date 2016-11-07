@@ -44,7 +44,7 @@ copyright:
   1. 编辑 createUserShieldAssociation.js 文件以在 **username** 变量中添加先前步骤中的用户名。
 
   2. 保存文件。
-  3. 运行 `node createUserShieldAssociation.js`。有关保障的更多信息，请参阅[组件](iotinsurance_overview.html#components})。
+  3. 运行 `node createUserShieldAssociation.js`。有关保障的更多信息，请参阅[组件](iotinsurance_overview.html#components)。
 3. （可选）分析引擎将自动更新；但是，如果未显示正确的数据，您可以通过运行 `node updateAnalyticsEngine.js` 刷新分析引擎。
 4. （可选）为用户模拟危险事件。
   1. 编辑 simulateHazard.js 文件以在 **usr** 变量中添加先前步骤中的用户名。

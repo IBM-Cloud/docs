@@ -44,7 +44,7 @@ copyright:
 2. 建立使用者的防護關聯。
   1. 編輯 createUserShieldAssociation.js 檔案，以在 **username** 變數中新增前一個步驟中的使用者名稱。
   2. 儲存檔案。
-  3. 執行 `node createUserShieldAssociation.js`。如需防護的相關資訊，請參閱[元件](iotinsurance_overview.html#components})。
+  3. 執行 `node createUserShieldAssociation.js`。如需防護的相關資訊，請參閱[元件](iotinsurance_overview.html#components)。
 3. （選用）自動更新分析引擎；不過，如果未顯示正確的資料，您可以執行 `node updateAnalyticsEngine.js` 來重新整理分析引擎。
 4. （選用）模擬使用者的危害事件。
   1. 編輯 simulateHazard.js 檔案，以在 **usr** 變數中新增先前步驟中的使用者名稱。

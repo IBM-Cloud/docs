@@ -37,7 +37,7 @@ copyright:
 {: #mobileapp}
 モバイル・スターター・アプリでは、保険契約者 (住宅所有者など) が、自宅にあるセンサーから {{site.data.keyword.iotinsurance_short}} によって送信される情報を表示し、それに対応します。
 
-モバイル・デバイスを使用する際に、住宅所有者はサービスにセンサー提供会社のクラウドに接続してデータを送受信することを許可します。例えば、センサーが水漏れを検知したときに、住宅所有者がモバイル・スターター・アプリで通知を受信することなどが考えられます。詳しくは、[Installing and connecting the mobile starter app](iotinsurance_mobile_app.html}) を参照してください。
+モバイル・デバイスを使用する際に、住宅所有者はサービスにセンサー提供会社のクラウドに接続してデータを送受信することを許可します。例えば、センサーが水漏れを検知したときに、住宅所有者がモバイル・スターター・アプリで通知を受信することなどが考えられます。詳しくは、[Installing and connecting the mobile starter app](iotinsurance_mobile_app.html) を参照してください。
 
 ### REST API
 {: #rest_api}

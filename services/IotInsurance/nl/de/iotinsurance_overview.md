@@ -37,7 +37,7 @@ Das Beispiel-Insurance-Dashboard wird mit simulierten Daten geladen, um Ihnen zu
 {: #mobileapp}
 Über die mobile Starter-App können Versicherungsnehmer (z. B. Hauseigentümer) die Informationen anzeigen und beantworten, die {{site.data.keyword.iotinsurance_short}} von den Sensoren in ihren Häusern sendet.
 
-Unter Verwendung eines Mobilgeräts berechtigen die Hauseigentümer den Service, eine Verbindung zur Cloud des Sensoranbieters herzustellen, um Daten zu senden und zu empfangen. Beispiel: Ein Hauseigentümer erhält eine Benachrichtigung in der mobilen Starter-App, wenn der Sensor einen Wasserleitungsschaden erkennt. Weitere Informationen finden Sie unter [Mobile Starter-App installieren und verbinden](iotinsurance_mobile_app.html}).
+Unter Verwendung eines Mobilgeräts berechtigen die Hauseigentümer den Service, eine Verbindung zur Cloud des Sensoranbieters herzustellen, um Daten zu senden und zu empfangen. Beispiel: Ein Hauseigentümer erhält eine Benachrichtigung in der mobilen Starter-App, wenn der Sensor einen Wasserleitungsschaden erkennt. Weitere Informationen finden Sie unter [Mobile Starter-App installieren und verbinden](iotinsurance_mobile_app.html).
 
 ### REST-API
 {: #rest_api}

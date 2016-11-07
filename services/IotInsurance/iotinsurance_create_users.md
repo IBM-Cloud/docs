@@ -44,7 +44,7 @@ Create a user that you can use to test the features of the dashboard and the sam
 2. Create a shield association for the user.
   1. Edit the createUserShieldAssociation.js file to add the user name from the previous step in the **username** variable.
   2. Save the file.
-  3. Run `node createUserShieldAssociation.js`. For more information about shields, see [Components](iotinsurance_overview.html#components}).
+  3. Run `node createUserShieldAssociation.js`. For more information about shields, see [Components](iotinsurance_overview.html#components).
 3. (optional) The analytics engine is updated automatically; however, if the correct data is not displayed, you can refresh the analytics engine by running `node updateAnalyticsEngine.js`.
 4. (optional) Simulate a hazard event for the user.
   1. Edit the simulateHazard.js file to add the user name from the previous steps in the **usr** variable.

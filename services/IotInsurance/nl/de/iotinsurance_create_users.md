@@ -44,7 +44,7 @@ Erstellen Sie einen Benutzer, den Sie verwenden können, um die Features des Das
 2. Erstellen Sie eine Shield-Zuordnung für den Benutzer.
   1. Bearbeiten Sie die Datei createUserShieldAssociation.js, um den Benutzernamen aus dem vorherigen Schritt in der Variablen **username** hinzuzufügen.
   2. Speichern Sie die Datei.
-  3. Führen Sie `node createUserShieldAssociation.js` aus. Weitere Informationen zu Shields finden Sie im Abschnitt [Komponenten](iotinsurance_overview.html#components}).
+  3. Führen Sie `node createUserShieldAssociation.js` aus. Weitere Informationen zu Shields finden Sie im Abschnitt [Komponenten](iotinsurance_overview.html#components).
 3. (Optional) Die Analyseengine wird automatisch aktualisiert. Wenn aber nicht die richtigen Daten angezeigt werden, können Sie die Analyseengine durch Ausführen von `node updateAnalyticsEngine.js` aktualisieren.
 4. (Optional) Simulieren Sie ein Gefahrenereignis für den Benutzer.
   1. Bearbeiten Sie die Datei simulateHazard.js, um den Benutzernamen aus den vorherigen Schritten in der Variablen **usr** hinzuzufügen.

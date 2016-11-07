@@ -44,7 +44,7 @@ Cree un usuario que pueda utilizar para probar las características del panel de
 2. Cree una asociación de coberturas para el usuario.
   1. Edite el archivo createUserShieldAssociation.js para añadir el nombre de usuario del paso anterior en la variable **username**.
   2. Guarde el archivo.
-  3. Ejecute `node createUserShieldAssociation.js`. Para obtener más información sobre las coberturas, consulte [Componentes](iotinsurance_overview.html#components}).
+  3. Ejecute `node createUserShieldAssociation.js`. Para obtener más información sobre las coberturas, consulte [Componentes](iotinsurance_overview.html#components).
 3. (opcional) El motor de analíticas se actualiza automáticamente. Sin embargo, si no se muestran los datos correctos, puede actualizar el motor de analíticas ejecutando `node updateAnalyticsEngine.js`.
 4. (opcional) Simule un suceso de riesgo para el usuario.
   1. Edite el archivo simulateHazard.js para añadir el nombre de usuario de los pasos anteriores en la variable **usr**.

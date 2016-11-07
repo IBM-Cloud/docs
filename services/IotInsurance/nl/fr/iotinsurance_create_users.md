@@ -51,7 +51,7 @@ utilisateur uniques.
 **username**.
   2. Sauvegardez le fichier.
   3. Exécutez `node createUserShieldAssociation.js`. Pour plus d'informations sur les boucliers, voir
-[Composants](iotinsurance_overview.html#components}).
+[Composants](iotinsurance_overview.html#components).
 3. (Facultatif) Le moteur d'analyse est mis à jour automatiquement ; toutefois, si les données affichées ne sont pas correctes, vous pouvez
 actualiser le moteur d'analyse en exécutant `node updateAnalyticsEngine.js`.
 4. (Facultatif) Simulez un événement de risque pour l'utilisateur.
