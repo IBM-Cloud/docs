@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-19"
 
 ---
 {:new_window: target="_blank"}
@@ -9,111 +10,109 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# {{site.data.keyword.mobileanalytics_short}} (시범) 시작하기  
-
+# {{site.data.keyword.mobileanalytics_short}} 시작하기
 {: #gettingstartedtemplate}
-*마지막 업데이트 날짜: 2016년 8월 1일*
+
+
+마지막 업데이트 날짜: 2016년 10월 19일
 {: .last-updated}
 
-{{site.data.keyword.mobileanalytics_full}} 서비스를 사용하여 모바일 앱 및 모바일 디바이스의 상태, 동작, 컨텍스트를 측정하십시오.
+{{site.data.keyword.mobileanalytics_full}}는 개발자, IT 관리자, 비즈니스 이해 당사자에게 모바일 앱의 성능 및 사용 실태에 대한 통찰을 제공합니다. 데스크 탑이나 태블릿에서 사용자의 모든 애플리케이션의 성능과 사용량을 모니터하십시오. 상태동향과 이상 항목을 빠르게 식별하고 문제를 해결하기 위해 세부적으로 분석하며 핵심 메트릭이 중요 임계값을 초과할 때 경보를 트리거합니다.
 {: shortdesc}
 
 {{site.data.keyword.mobileanalytics_short}} 서비스를 빠르게 시작하고 실행하려면 다음 단계를 따르십시오.
 
-1. [{{site.data.keyword.mobileanalytics_short}} 서비스의 인스턴스를 작성](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)한 후에는 {{site.data.keyword.Bluemix}} 대시보드의 서비스 섹션에서 타일을 클릭하여 {{site.data.keyword.mobileanalytics_short}} 콘솔에 액세스할 수 있습니다.
+1. {{site.data.keyword.mobileanalytics_short}} 서비스의 <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)--> 인스턴스를 작성한 후에는 {{site.data.keyword.Bluemix}} 대시보드의 **서비스** 섹션에서 타일을 클릭하여 {{site.data.keyword.mobileanalytics_short}} 콘솔에 액세스할 수 있습니다. 
 
-  **중요:** 새로 작성된 Mobile Analytics 서비스를 처음 열 때 서비스가 사용자 ID의 유효성을 검증할 수 있도록 {{site.data.keyword.Bluemix_notm}}에서 사용자에 대한 서비스에 필수 정보를 제공하도록 허용하는지 여부를 확인하기 위한 창이 표시될 수 있습니다. **확인**을 클릭하여 {{site.data.keyword.mobileanalytics_short}} 콘솔로 진행하십시오. 취소하면 {{site.data.keyword.mobileanalytics_short}} 콘솔이 열리지 않습니다.
-2. {{site.data.keyword.mobileanalytics_short}} [클라이언트 SDK](install-client-sdk.html)를 설치하십시오. 
+ **데모 모드**를 사용하는 {{site.data.keyword.mobileanalytics_short}} 서비스를 시작합니다. 데모 모드는 **앱 데이터** 페이지와 **경보** 페이지에서 차트를 채우므로 데이터가 표시되는 방식을 볼 수 있습니다. 사용자 자체 데이터가 있는 경우 데모 모드를 토글하여 끌 수 있습니다. {{site.data.keyword.mobileanalytics_short}} 콘솔은 데모 모드에 있는 경우 읽기 전용이므로 새 경보 정의를 작성할 수 없습니다. 
+
+2. {{site.data.keyword.mobileanalytics_short}} [클라이언트 SDK](install-client-sdk.html)를 설치하십시오. 선택적으로 {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}를 사용할 수 있습니다. 
+
 3. 클라이언트 SDK를 가져와서 다음 코드 스니펫을 사용하여 초기화하여 사용 분석을 기록하십시오.
-  #### Android
-  {: #android-initialize}
-  1. 클라이언트 SDK 가져오기:
-		
+
+	#### Android
+	{: #android-initialize}
+	1. 클라이언트 SDK 가져오기:
+
 		```
 		import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
 		import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
 		```
-
-  2. [액세스 키](sdk.html#analytics-clientkey) 값을 가져오십시오. 
-  3. 애플리케이션 코드 내에서 클라이언트 SDK를 초기화하여 사용 분석과 애플리케이션 세션을 기록하십시오. 
+		{: codeblock}
 		
+	2. 애플리케이션 코드 내에서 클라이언트 SDK를 초기화하여 사용 분석과 애플리케이션 세션을 기록하십시오([API 키](sdk.html#analytics-clientkey) 값 사용). 
+
 		```Java
-		try {
-		        BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH);
-		    } catch (MalformedURLException e) {
-		        Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
-		    }
-		   Analytics.init(getApplication(), "your_app_name", "your_access_key", Analytics.DeviceEvent.LIFECYCLE);
+			BMSClient.getInstance().initialize(this.getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
+			
+			Analytics.init(getApplication(), "your_app_name_here", "your_api_key_here", hasUserContext, Analytics.DeviceEvent.LIFECYCLE);
 		```
-    **bluemixRegion** 매개변수는 사용자가 사용 중인 Bluemix 배치를 지정합니다. 예를 들어, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`입니다.
+		{: codeblock}
+		
+    애플리케이션(`your_app_name_here`)에서 사용하도록 선택한 이름이 {{site.data.keyword.mobileanalytics_short}} 콘솔에 애플리케이션 이름으로 표시됩니다. 애플리케이션 이름은 대시보드에서 애플리케이션 로그를 검색하는 필터로 사용됩니다. 플랫폼(예: Android 및 iOS)에 걸쳐 동일한 애플리케이션 이름을 사용하는 경우, 로그가 전송된 플랫폼에 상관없이 동일한 이름 아래에서 애플리케이션의 모든 로그를 볼 수 있습니다.
+    
+    **bluemixRegion** 매개변수는 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`)를 지정합니다.  
+    <!-- , or `BMSClient.REGION_SYDNEY`.-->
+    
+    **참고:** `hasUserContext`에 대한 값을 **true** 또는 **false**로 설정하십시오. False(기본값)인 경우 각 디바이스는 활성 사용자로 계수됩니다.  [`Analytics.setUserIdentity("username");`](sdk.html#android-tracking-users) 메소드는 `hasUserContext`가 false일 경우 작동하지 않습니다. true인 경우 [`Analytics.setUserIdentity("username");`](sdk.html#android-tracking-users)의 개별 사용은 활성 사용자로 계수됩니다. `hasUserContext`가 true이고 기본 사용자 ID가 없으므로, 활성 사용자 차트를 채우도록 설정되어야 합니다.
 
   #### iOS
   {: #ios-initialize}
+  
   1. `BMSCore` 및 `BMSAnalytics` 프레임워크 가져오기: 
-
-    ```
-    import BMSCore
-    import BMSAnalytics
-    ```
-
-  2. [액세스 키](sdk.html#analytics-clientkey) 값을 가져오십시오. 
-
-  3. 애플리케이션 코드 내에서 클라이언트 SDK를 초기화하여 사용 분석과 애플리케이션 세션을 기록하십시오. 
+	```
+	import BMSCore
+	import BMSAnalytics
+	```
+	{: codeblock}
+    
+  2. 애플리케이션 코드 내에서 클라이언트 SDK를 초기화하여 사용 분석과 애플리케이션 세션을 기록하십시오([API 키](sdk.html#analytics-clientkey) 값 사용). 
+ 
+	Swift:
 	
 	```Swift
-	BMSClient.sharedInstance.initializeWithBluemixAppRoute("nil",bluemixAppGUID: "nil", bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-	Analytics.initializeWithAppName("your_app_name", accessKey: "your_access_key", deviceEvents: DeviceEvent.LIFECYCLE)
+	BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // You can change the region
+	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: DeviceEvent.lifecycle)	
 	```
+	{: codeblock}
+		
+	애플리케이션(`your_app_name_here`)에서 사용하도록 선택한 이름이 {{site.data.keyword.mobileanalytics_short}} 콘솔에 애플리케이션 이름으로 표시됩니다. 애플리케이션 이름은 대시보드에서 애플리케이션 로그를 검색하는 필터로 사용됩니다. 플랫폼(예: Android 및 iOS)에 걸쳐 동일한 애플리케이션 이름을 사용하는 경우, 로그가 전송된 플랫폼에 상관없이 동일한 이름 아래에서 애플리케이션의 모든 로그를 볼 수 있습니다.
+	
+	**bluemixRegion** 매개변수는 사용자가 사용 중인 Bluemix 배치를 지정합니다.
+예: `BMSClient.REGION_US_SOUTH` 및 `BMSClient.REGION_UK`.
 
-    **bluemixRegion** 매개변수는 사용자가 사용 중인 Bluemix 배치를 지정합니다. 예를 들어, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`입니다.  
+	<!-- , or `BMSClient.REGION_SYDNEY`. -->
+	
+	**참고:** `hasUserContext`에 대한 값을 **true** 또는 **false**로 설정하십시오. False(기본값)인 경우 각 디바이스는 활성 사용자로 계수됩니다. [`Analytics.userIdentity="username"`](sdk.html#ios-tracking-users) 메소드는 `hasUserContext`가 false일 경우 작동하지 않습니다. true인 경우 [`Analytics.userIdentity="username"`](sdk.html#ios-tracking-users)의 개별 사용은 활성 사용자로 계수됩니다. `hasUserContext`가 true이고 기본 사용자 ID가 없으므로, 활성 사용자 차트를 채우도록 설정되어야 합니다.
 
 4. 기록된 사용 분석을 Mobile Analytics 서비스로 전송하십시오. 분석을 테스트하는 간단한 방법은 애플리케이션이 시작될 때 다음 코드를 실행하는 것입니다.
 
 	#### Android
 	{: #android-send}
+
+	`Analytics.send()` 메소드를 사용하여 분석 데이터를 서버에 전송하십시오. `Analytics.send()` 메소드를 Android 애플리케이션에서 기본 활동의 `onCreate` 메소드 또는 프로젝트에 가장 적합한 위치에 배치할 수 있습니다.  
 	
-	Android 애플리케이션의 기본 활동의 `onCreate` 메소드 내 또는 프로젝트에 가장 적합한 위치에 `Analytics.send()` 메소드를 추가할 수 있습니다.
-	
+	`Analytics.send()`를 위치에 상관 없이 삽입할 수 있습니다. 
+
 	```
-	Analytics.send(new ResponseListener() {
-	    @Override
-	    public void onSuccess(Response response) {
-	        Log.d("your_app_name", "Successfully sent analytics: " + response.toString());
-	    }
-		
-	    @Override
-	    public void onFailure(Response response, Throwable throwable, JSONObject jsonObject) {
-	        Log.e("your_app_name", "Failed to send analytics: ");
-	        if (response != null) {
-	            Log.e("your_app_name", response.toString());
-	        }
-	        if (throwable != null) {
-	            Log.e("your_app_name","Stack trace: ", throwable);
-	        }
-	    }
-	});
+	Analytics.send();
 	```
-	
+	{: codeblock}
+
 	#### iOS
 	{: #ios-send}
-	
-	
-	`Analytics.send` 메소드를 사용하여 분석 데이터를 서버에 전송하십시오. 애플리케이션 위임의 `application(_:didFinishLaunchingWithOptions:)` 메소드 또는 프로젝트에 가장 적합한 위치에 `Analytics.send` 메소드를 배치하십시오. 
-		
+
+	`Analytics.send` 메소드를 사용하여 분석 데이터를 서버에 전송하십시오. `Analytics.send` 메소드를 애플리케이션 위임의 `application(_:didFinishLaunchingWithOptions:)` 메소드 또는 프로젝트에 가장 적합한 위치에 배치할 수 있습니다.  
+
 	```
-	Analytics.send { (response: Response?, error: NSError?) in
-	  if response?.statusCode == 201 {
-	      print("Successfully sent analytics: \(response?.responseText)")
-	  }
-	  else {
-	      print("Failed to send analytics: \(response?.responseText). Error: \(error?.localizedDescription)")
-	  }
-	}
+	Analytics.send()
 	```
-[애플리케이션 인스트루먼트](sdk.html) 주제를 참조하십시오.
+	{: codeblock}
+
+	추가 {{site.data.keyword.mobileanalytics_short}} 기능에 대해 알아보려면 [애플리케이션 인스트루먼트](sdk.html) 주제를 읽으십시오.
 5. 에뮬레이터 또는 디바이스에서 애플리케이션을 컴파일하고 실행하십시오.
 
-6. {{site.data.keyword.mobileanalytics_short}} **대시보드**로 이동하여 애플리케이션을 사용하는 새 디바이스 및 디바이스 총계 등의 사용 분석을 보십시오. 또한 <!-- [creating custom charts](app-monitoring.html#custom-charts), --> [경보 설정](app-monitoring.html#alerts) 및 [앱 충돌 모니터링](app-monitoring.html#monitor-app-crash)을 사용하여 앱을 모니터링할 수도 있습니다. 
+6. 애플리케이션의 사용법 분석을 보려면 {{site.data.keyword.mobileanalytics_short}} **콘솔**로 이동하십시오. <!--[creating custom charts](app-monitoring.html#custom-charts),-->[경보 설정](app-monitoring.html#alerts)과 [앱 충돌 모니터링](app-monitoring.html#monitor-app-crash)을 수행하여 애플리케이션을 모니터링할 수도 있습니다. 
 
 
 # 관련 링크
@@ -121,3 +120,7 @@ copyright:
 ## SDK
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+
+## API 참조
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
