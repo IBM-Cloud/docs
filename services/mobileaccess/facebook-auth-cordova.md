@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-11-06"
 
 ---
 {:shortdesc: .shortdesc}
@@ -119,7 +119,6 @@ The {{site.data.keyword.amashort}} Facebook client SDK must be added by Gradle w
 The  `FacebookAuthenticationManager`  API must still be registered in your native code. Add this code to the main activity `onCreate` method using the `<tenantId>` (see [Before you begin](#before-you-begin)).
 
 ```
-String realmName = "Realm";
 String tenantId = "<tenantId>";
 MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext(),tenantId);
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);

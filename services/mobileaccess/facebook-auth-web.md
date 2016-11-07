@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-11-07"
 
 ---
 {:screen: .screen}
@@ -41,7 +41,7 @@ To use Facebook as an identity provider on your website, you must add and config
 ## Configuring {{site.data.keyword.amashort}} for Facebook authentication
 {: #facebook-auth-config-ama}
 
-After you have your Facebook App ID and App Secret, and your Facebook for Developers application has been configured to serve Web clients, you can enable Facebook authentication in the {{site.data.keyword.Bluemix_notm}}  dashboard.
+After you have your Facebook App ID and App Secret, and your Facebook for Developers application has been configured to serve Web clients, you can enable Facebook authentication in the {{site.data.keyword.amashort}}  dashboard.
 
 1. Open the {{site.data.keyword.amashort}} service dashboard.
 1. From the **Manage** tab, toggle **Authorization** on.
@@ -192,7 +192,7 @@ The next step is to obtain the access and identity tokens using the previously r
 
 The identity token contains information about user identity. In case of Facebook authentication, the token will contain all the information user agreed to share, such as full name, age group, url of the profile photo, etc.  
 
-The access token enables communications with resources protected by {{site.data.keyword.amashort}} authorization filters, see see [Protecting Resources](protecting-resources.html).
+The access token enables communications with resources protected by {{site.data.keyword.amashort}} authorization filters, see [Protecting Resources](protecting-resources.html).
 
 To make requests to protected resources, add an authorization header to requests with the following structure: 
 

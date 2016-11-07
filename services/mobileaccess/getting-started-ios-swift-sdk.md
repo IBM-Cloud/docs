@@ -23,7 +23,7 @@ While the Objective-C SDK remains fully supported, and is still considered the p
 You must have:
 * An instance of a {{site.data.keyword.Bluemix_notm}} application.
 * An instance of a {{site.data.keyword.amafull}} service.
-* Your **TenantID**. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `tenantId` (also known as `appGUID`)  values are displayed in the  **App GUID / TenantId** field. You will need this value for intializing the {{site.data.keyword.amashort}} Authorization Manager.
+* Your **TenantID**. Open your service in the {{site.data.keyword.amashort}} dashboard. Click **Mobile Options**. The `tenantId` (also known as `appGUID`)  values are displayed in the  **App GUID / TenantId** field. You will need this value for intializing the {{site.data.keyword.amashort}} Authorization Manager.
 * Your **Application Route**. This is the URL of your back-end application. You need this value for for sending requests to its protected endpoints.
 * Your {{site.data.keyword.Bluemix_notm}} **Region**.  You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`,  `Sydney`, or  `United Kingdom`, and correspond to the SDK values required in the code: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.  You will need this value for intializing the {{site.data.keyword.amashort}}  SDK.
 * An Xcode project. For more information about how to set up your iOS development environment, see the [Apple Developer website](https://developer.apple.com/support/xcode/).
@@ -80,7 +80,7 @@ Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain
 ## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #init-mca-sdk-ios}
 
- Initialize the SDK by passing the `applicationGUID` parameter. A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate.
+ Initialize the SDK by passing the `tenantId` parameter. A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate.
 
 1. Import the required frameworks in the class where you want to use {{site.data.keyword.amashort}} client SDK.
 
