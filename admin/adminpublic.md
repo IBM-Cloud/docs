@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-23"
 
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # Setting up your account
 {: #account}
-Last updated: 23 October 2016
-{: .last-updated}
 
 Now that you've signed up for {{site.data.keyword.Bluemix_notm}}, you need to set up your account so that you can quickly move on to provisioning infrastructure or building applications.
 {:shortdesc}
