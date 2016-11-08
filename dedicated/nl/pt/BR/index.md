@@ -362,8 +362,7 @@ A fase seguinte é a de progressão. A fase de progressão descreve o relacionam
 |Revisar projeções | Revisar as projeções de capacidade, visto que estão relacionadas a eventos externos que podem causar impacto na capacidade. | Cliente |
 |Ajustar a capacidade |  Incluir ou remover capacidade conforme suas necessidades mudarem. | IBM |
 |Publicar atualizações e manutenção futuras | Criar documentação para a manutenção necessária de componentes da IBM. | IBM |
-|Executar manutenção | Trabalhe com a IBM para planejar a manutenção necessária dentro de uma janela de 21 dias. É possível fornecer datas que podem não funcionar para você na janela de 21 dias e a IBM
-trabalha para planejar a manutenção adequadamente. | A IBM e o cliente compartilham a responsabilidade |
+|Executar manutenção | Trabalhe com a IBM para planejar a manutenção necessária dentro de uma janela de 21 dias. É possível fornecer datas que podem não funcionar para você na janela de 21 dias e a IBM trabalha para planejar a manutenção adequadamente. | A IBM e o cliente compartilham a responsabilidade |
 |Tratar de falhas de fornecimento | Corrigir falhas de fornecimento, se ocorrerem, para serviços criados pelo cliente que estejam implementados no Catálogo. | IBM |
 |Executar varreduras de rede e de IP | Executar varreduras diárias e mensais de rede e de IP. | A IBM e o cliente compartilham a responsabilidade |
 |Fornecer acesso aos logs de auditoria | Fornecer acesso a todos os logs de auditoria de segurança e administrativos.   | A IBM e o cliente compartilham a responsabilidade |
