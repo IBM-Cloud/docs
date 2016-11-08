@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # Managing organizations and spaces
 {: #orgsspacesusers}
-Last updated: 20 October 2016
-{: .last-updated}
 
 As an account owner, you can manage your organizations by going to the **Manage Organizations** page. Organization managers can also use the Manage Organizations page to manage any organizations where they are set as the manager.
 {:shortdesc}
