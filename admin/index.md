@@ -1793,8 +1793,7 @@ Before you begin, install the cf command line interface. The
 {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
 requires cf version 6.11.2 or later. [Download Cloud Foundry command line interface](https://github.com/cloudfoundry/cli/releases){: new_window}
 
-**Restriction:** The Cloud Foundry command line interface is not supported by
-Cygwin. Use the Cloud Foundry command line interface in a command line window other than the Cygwin
+**Restriction:** The Cloud Foundry command line interface is not supported by Cygwin. Use the Cloud Foundry command line interface in a command line window other than the Cygwin
 command line window.
 
 ### Adding the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
