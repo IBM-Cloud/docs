@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  2016
+  years: 2016
 
 ---
 
@@ -11,13 +11,11 @@ copyright:
 # Utilisation de chaînes d'outils sur {{site.data.keyword.Bluemix_notm}} dédié
 {: #toolchains-using_dedicated}
 
-Dernière mise à jour : 26 août 2016
+Dernière mise à jour : 13 septembre 2016
 {: .last-updated}
 
 Vous pouvez utiliser une chaîne d'outils pour améliorer la productivité de votre travail quotidien de développement, de déploiement et de vos opérations. Après avoir configuré une chaîne d'outils, vous pouvez ajouter, supprimer ou configurer des intégrations d'outils et gérer l'accès à la chaîne d'outils.
 {: shortdesc}
-
-**Important **: Cette fonction est expérimentale. Les chaînes d'outils peuvent être instables et faire l'objet de modifications entraînant leur incompatibilité avec des versions antérieures. Elles ne sont pas recommandées pour une utilisation dans des environnements de production.  
 
 ## Configuration d'une intégration d'outil
 {: #configuring_a_tool_integration_dedicated}
@@ -61,10 +59,9 @@ Si vous supprimez une intégration d'outil de votre chaîne d'outils, la suppres
 ## Gestion des accès
 {: #managing_access_dedicated}
 
-Vous pouvez accorder l'accès à une chaîne d'outils à des utilisateurs en les ajoutant à l'organisation (org) à laquelle la chaîne d'outils est associée. Chaque chaîne d'outils est associée à une organisation spécifique, et tout membre de cette organisation peut accéder aux chaînes d'outils associées. Pour afficher l'organisation que vous utilisez actuellement, cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Icône Avatar](../icons/i-avatar-icon.svg) dans la barre de menu. Pour accéder à un ensemble différent de chaînes d'outils, changez d'organisation.
+Vous pouvez accorder l'accès à une chaîne d'outils à des utilisateurs en les ajoutant à l'organisation (org) à laquelle la chaîne d'outils est associée. Chaque chaîne d'outils est associée à une organisation spécifique, et tout membre de cette organisation peut accéder aux chaînes d'outils associées. Pour afficher l'organisation que vous utilisez actuellement, cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Icône Avatar](../icons/i-avatar-icon.svg) dans la barre de menus. Pour accéder à un ensemble différent de chaînes d'outils, changez d'organisation.
 
-Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix}}, ces utilisateurs peuvent se connecter à GitHub Enterprise à l'aide de leurs ID et mot de passe {{site.data.keyword.Bluemix_notm}}. Lorsque les utilisateurs se connectent, les comptes correspondants sont créés. Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix_notm}}, ils ne sont pas automatiquement ajoutés au référentiel GitHub Enterprise. Une personne dotée de privilèges d'administrateur pour le référentiel doit les ajouter. Pour
-plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise](../services/ghededicated/index.html){: new_window}.
+Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix}}, ces utilisateurs peuvent se connecter à GitHub Enterprise à l'aide de leurs ID et mot de passe {{site.data.keyword.Bluemix_notm}}. Lorsque les utilisateurs se connectent, les comptes correspondants sont créés. Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{site.data.keyword.Bluemix_notm}}, ils ne sont pas automatiquement ajoutés au référentiel GitHub Enterprise. Une personne dotée de privilèges d'administrateur pour le référentiel doit les ajouter. Pour plus d'informations, voir [Utilisation de Dedicated GitHub Enterprise (Lien s'ouvrant dans une nouvelle fenêtre)](../services/ghededicated/index.html){: new_window}.
 
 Pour ajouter un utilisateur, procédez comme suit : 
 

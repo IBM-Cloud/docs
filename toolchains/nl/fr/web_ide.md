@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  2015, 2016
+  years: 2015, 2016
 
 ---
 
@@ -14,12 +14,10 @@ copyright:
 # Edition de code avec Eclipse Orion {{site.data.keyword.webide}}
 {: #web_ide}
 
-Dernière mise à jour : 22 juillet 2016
+Dernière mise à jour : 9 septembre 2016
 {: .last-updated}
 
-Eclipse Orion {{site.data.keyword.webide}} est un environnement de développement basé navigateur dans lequel vous pouvez faire du développement pour le Web. Vous pouvez développer en JavaScript, HTML et CSS en vous aidant de l'assistant de contenu, de la validation de code et du contrôle des erreurs. {{site.data.keyword.webide}}
-fonctionne avec quasiment toutes les langues et propose la mise en évidence de syntaxe
-[^pour la plupart des types de fichier](https://hub.jazz.net/docs/overview/#dev_support){: new_window}. Le contrôle des sources est généré via Git ou Jazz SCM, et vous pouvez déployer le code en local afin de tester et déboguer vos applications.
+Eclipse Orion {{site.data.keyword.webide}} est un environnement de développement basé navigateur dans lequel vous pouvez faire du développement pour le Web. Vous pouvez développer en JavaScript, HTML et CSS en vous aidant de l'assistant de contenu, de la validation de code et du contrôle des erreurs. {{site.data.keyword.webide}} fonctionne avec quasiment toutes les langues et offre une mise en évidence de syntaxe pour la plupart des [types de fichier (Lien s'ouvrant dans une nouvelle fenêtre)](https://hub.jazz.net/docs/overview/#dev_support){: new_window}. Le contrôle des sources est généré via Git ou Jazz SCM, et vous pouvez déployer le code en local afin de tester et déboguer vos applications.
 {:shortdesc}
 
 Mais surtout, {{site.data.keyword.webide}} est basé sur le Web. Vous n'avez rien à installer, rien à gérer, et rien à mettre à l'échelle. Vous pouvez faire du développement depuis n'importe quel endroit, dans la mesure où vous disposez d'une connexion Internet.
@@ -28,19 +26,6 @@ Mais surtout, {{site.data.keyword.webide}} est basé sur le Web. Vous n'avez rie
 {: #editorsetup}
 
 {{site.data.keyword.webide}} est personnalisable : vous pouvez choisir les schémas de couleurs, les outils techniques et les paramètres correspondant à vos besoins de développement. Pour afficher et modifier les paramètres, depuis le menu de gauche, cliquez sur l'icône **Paramètres** <img class="inline" src="./images/webide_settings_icon.png"  alt="Icône des paramètres">.
-
-<!-- LH: I don't think we need to include the following table, so I'm commenting it out. When you're viewing the settings in the Web IDE, this information should be obvious -->
-
-<!--| Categories | Description  |
-|---|---|
-| Cloud Foundry  | Define a Cloud Foundry API and Manage URL  |
-| CSS Validation | Define the severities for CSS linting rules that you use to check your code  |
-| Editor Settings  | Configure editor-specific settings for key bindings, editor behavior, layout, and more  |
-| Editor Styles  | Configure color schemes for the languages that you use, or import a theme from another editors  |
-| Git  | Configure general settings for Git  |
-| Globalization | Define globalization settings for your code |
-| JavaScript Validation  | Define the severities for the JavaScript linting rules that you use to check your code  |
-| Plug-ins  | Install, disable, or remove plug-ins from the editor  | -->
 
 Si vous avez fréquemment besoin de changer certains paramètres lors de l'édition, vous pouvez accéder à ces paramètres rapidement via l'icône **Paramètres de l'éditeur local** <img class="inline" src="./images/webide_local_settings_icon.png"  alt="Icône Paramètres de l'éditeur local"> située dans le coin supérieur droit de l'éditeur.
 
@@ -86,16 +71,13 @@ Pour afficher la liste des raccourcis-clavier dans l'éditeur, appuyez sur Alt+M
 ## Gestion du code source
 {: #sourcecontrol}
 
-{{site.data.keyword.webide}} est intégré aux outils de gestion du code source. Pour utiliser votre référentiel Git, cliquez sur l'icône **Référentiel Git** <img class="inline" src="./images/webide_git_icon.png"  alt="Icône Référentiel Git">. Pour
-plus d'informations, voir [Source control with Git](https://hub.jazz.net/docs/git/){: new_window}.
+{{site.data.keyword.webide}} est intégré aux outils de gestion du code source. Pour utiliser votre référentiel Git, cliquez sur l'icône **Référentiel Git** <img class="inline" src="./images/webide_git_icon.png"  alt="Icône Référentiel Git">. Pour plus d'informations, voir [Source control with Git (Lien s'ouvrant dans une nouvelle fenêtre)](https://hub.jazz.net/docs/git/){: new_window}.
 
 
 ## Déploiement d'une application depuis votre espace de travail
 {: #deploy}
 
-1. Pour déployer votre application, depuis la barre d'exécution, sélectionnez ou
-[créez](https://hub.jazz.net/tutorials/livesync/#launch_configuration){: new_window} une
-configuration de lancement.
+1. Pour déployer votre application, depuis la barre d'exécution, sélectionnez ou [créez (Lien s'ouvrant dans une nouvelle fenêtre)](https://hub.jazz.net/tutorials/livesync/#launch_configuration){: new_window} une configuration de lancement.
 1. Cliquez sur l'icône de déploiement <img class="inline" src="./images/webide_deploy_button.png"  alt="Icône de déploiement">. Une instance de votre application est déployée à l'aide du contenu actuel de votre espace de travail et de l'environnement défini dans votre configuration de lancement. 
 2. Une fois voter application déployée, vous pouvez utiliser la barre d'exécution pour arrêter, redémarrer ou déboguer votre application, consulter des journaux, etc.
 ![ Barre d'exécution](images/webide_runbar.png)
@@ -115,9 +97,9 @@ configuration de lancement.
 
 Pour utiliser un éditeur en dehors de {{site.data.keyword.webide}}, configurez {{site.data.keyword.Bluemix_live}} de façon à utiliser directement vos fichiers de projet dans l'outil de votre choix. {{site.data.keyword.Bluemix_live_notm}} est une application de ligne de commande qui synchronise les changements sur votre système de fichiers local avec votre espace de travail cloud dans {{site.data.keyword.jazzhub}}. 
 
-### Avant de commencer 
+### En premier lieu 
 
-[Téléchargez et installez l'interface de ligne de commande {{site.data.keyword.Bluemix_live_notm}}](http://livesyncdownload.ng.bluemix.net){: new_window}.
+Téléchargez et installez l'[interface de ligne de commande {{site.data.keyword.Bluemix_live_notm}} (Lien s'ouvrant dans une nouvelle fenêtre)](http://livesyncdownload.ng.bluemix.net){: new_window}.
 
 ### Synchronisation de votre environnement local avec {{site.data.keyword.Bluemix_notm}}
 {: #edit_local_download}
@@ -130,7 +112,7 @@ Pour utiliser un éditeur en dehors de {{site.data.keyword.webide}}, configurez 
 	```
 	{: pre}
 
-3. Lorsque vous y êtes invité, entrez votre IBMid et votre mot de passe. 
+3. Lorsque vous y êtes invité, entrez vos IBMid et mot de passe.
 4. Affichez la liste de vos projets {{site.data.keyword.Bluemix_notm}} : 
 
 	```
@@ -141,11 +123,11 @@ Pour utiliser un éditeur en dehors de {{site.data.keyword.webide}}, configurez 
 4. Synchronisez votre environnement local avec votre projet sur {{site.data.keyword.Bluemix_notm}} :
 
 	```
-	bl sync nomProjet
+	bl sync projectName
 	```
 	{: pre}
 
-où `nomProjet` correspond au nom de votre application {{site.data.keyword.Bluemix_notm}}.
+où `projectName` correspond au nom de votre application {{site.data.keyword.Bluemix_notm}}.
 
 Une fois l'édition terminée, entrez `q` pour mettre fin à la synchronisation.
 
@@ -155,7 +137,7 @@ La fonction Desktop Sync est similaire au mode d'édition directe (Live Edit) de
 1. Dans une autre fenêtre de ligne de commande, activez la fonction Desktop Sync :
 
 	```
-	cd répertoireLocal
+	cd localDirectory
 	bl start
 	```
 	{: codeblock}
