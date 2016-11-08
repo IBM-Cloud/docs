@@ -10,13 +10,10 @@ lastupdated: "2016-10-13"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Creating a project with a Code Starter
+# Using a Code Starter to create a project
 {: #projects_code}
 
-Last updated: 13 October 2016
-{: .last-updated}
-
-You can use a Code Starter in {{site.data.keyword.Bluemix}} Mobile dashboard to create a project in the {{site.data.keyword.Bluemix_notm}} environment. This procedure does not apply to projects that use the UI Starters. See [Creating a project with a UI Starter](projects_ui.html) for instructions for UI Starters. 
+You can use a [Code Starter](starters.html#Code_Starter) in {{site.data.keyword.Bluemix}} Mobile dashboard to create a project in the {{site.data.keyword.Bluemix_notm}} environment. This procedure does not apply to projects that use the UI Starters. See [Creating a project with a UI Starter](projects_ui.html) for instructions for UI Starters. 
 {:shortdesc}
 
 Complete the following steps to create a project with a Code Starter:

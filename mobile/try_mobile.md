@@ -9,9 +9,6 @@ lastupdated: "2016-10-19"
 # Creating mobile apps from the {{site.data.keyword.mobilefirstbp}} Starter boilerplate
 {: #try_mobile}
 
-Last updated: 19 October 2016
-{: .last-updated}
-
 You can use each of the {{site.data.keyword.Bluemix}} Mobile services independently. You can also use them together, with the {{site.data.keyword.mobilefirstbp}} Starter boilerplate, to get the most benefit.
 
 To get started, use the {{site.data.keyword.mobilefirstbp}} Starter to create your app. The boilerplate enables you to complete the following actions:
@@ -48,11 +45,11 @@ You can either use all of the {{site.data.keyword.Bluemix_notm}} Mobile services
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}} service icon"> <b>{{site.data.keyword.amashort}}</b><br/>Use the {{site.data.keyword.amafull}}  service to protect Node.js and Java for Liberty applications that are hosted on {{site.data.keyword.Bluemix_notm}}. By instrumenting your mobile app with the {{site.data.keyword.amashort}} SDK, you can require users to log in to access to Node.js or {{site.data.keyword.Bluemix_notm}} Mobile services. In addition to security capabilities, {{site.data.keyword.amashort}} also gathers analytics data, so that you can monitor your mobile application performance and collect client logs and usage statistics. </td>
-<td valign="top"><b>User identity providers</b> <br/>You can use the following identity providers: <ul><li>Facebook</li><li>Google</li></ul></td>
+<td><img src="images/authentication_icon.png" alt="{{site.data.keyword.amashort}} service icon"> <b>{{site.data.keyword.amashort}}</b><br/>Use the {{site.data.keyword.amafull}}  service to protect Node.js and Java for Liberty applications that are hosted on {{site.data.keyword.Bluemix_notm}}. By instrumenting your mobile app with the {{site.data.keyword.amashort}} SDK, you can require users to log in to access to Node.js or {{site.data.keyword.Bluemix_notm}} Mobile services. <!-- In addition to security capabilities, {{site.data.keyword.amashort}} also gathers analytics data, so that you can monitor your mobile application performance and collect client logs and usage statistics.--> </td>
+<td valign="top"><b>User identity providers</b> <br/>You can use the following identity providers: <ul><li>Facebook</li><li>Google</li><li> Custom </li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Push Notifications service icon"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>The  {{site.data.keyword.mobilepushfull}} service provides a unified platform to send and manage push notifications targeted to Mobile (iOS & Android) platforms, and Web browser applications. This service manages the mapping of your application users to their devices, device platform, and browsers, and handles dispatching push notifications to subscribers. With this service, you can send broadcasts, unicasts (based on userID, deviceID), and tags (or topics) based on push notifications to your customers.</td>
+<td><img src="images/push_icon.png" alt="Push Notifications service icon"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>The  {{site.data.keyword.mobilepushfull}} service provides a unified platform to send and manage push notifications targeted to Mobile (iOS & Android) platforms, and Web browser applications. This service manages the mapping of your application users to their devices, device platform, and browsers, and handles dispatching push notifications to subscribers. With this service, you can send broadcasts, unicasts (based on userID, deviceID), and tags (or topics) based on push notifications to your customers.</td>
 <td valign="top"><b>Push service providers</b><ul><li>Apple Push Notifications Service</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>

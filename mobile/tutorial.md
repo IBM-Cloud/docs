@@ -10,9 +10,6 @@ lastupdated: "2016-10-21"
 # End-to-end tutorial of the {{site.data.keyword.visualrecognitionshort}} Code Starter
 {: #tutorial}
 
-Last updated: 21 October 2016
-{: .last-updated}
-
 The following end-to-end tutorial walks through the steps to create a project from the {{site.data.keyword.visualrecognitionshort}} Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
 
 
@@ -97,7 +94,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
 2. Open the `README.md` file in a Markdown viewer to review the steps to configure your project.
 
-   1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://new-console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
+   1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
    
    2. Open your Terminal and navigate to your project folder.
    
@@ -127,7 +124,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
 2. Open the `README.md` file in a Markdown viewer to configure your project.
 
-   1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://new-console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
+   1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
    
       Skip this step if you already have a {{site.data.keyword.visualrecognitionshort}} service instance.
    
@@ -181,6 +178,7 @@ View other tutorials.
 * [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
+* [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 
 ## Tutorials and Samples
 {: #samples}
