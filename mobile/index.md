@@ -9,8 +9,6 @@ lastupdated: "2016-10-21"
 
 # {{site.data.keyword.Bluemix}} Mobile dashboard
 {: #mobile}
-Last updated: 21 October 2016
-{: .last-updated}
 
 The {{site.data.keyword.Bluemix}} Mobile dashboard offers a single place to manage the {{site.data.keyword.Bluemix_notm}} capabilities that you need to create and manage your {{site.data.keyword.Bluemix_notm}} Mobile application. The Mobile dashboard brings the most common services that are required for a mobile developer into a single, connected experience that has been optimized for the mobile developer.
 
@@ -31,9 +29,9 @@ To get started with the Mobile dashboard, click the **Mobile** category from you
 ## Getting Started
 {: getting-started-mobiledashboard}
 
-The dashboard enables you to manage mobile apps through the concept of a project. Create a project on the **Getting Started** page by clicking **Create Project**. You will be presented with [Starter](starters.html) options that enable you to quickly start creating your app.
+The dashboard enables you to manage mobile apps through the concept of [Projects](projects.html). Create a project on the **Getting Started** page by clicking **Create Project**. You will be presented with [Starter](starters.html) options that enable you to quickly start creating your app.
 
-With the [Projects](projects.html) view, you can manage all of your projects in one place. The project holds all of the capability information that you need for the mobile app. You can easily integrate and manage Push, Analytics, and Authentication mobile services in the project, with more capabilities to follow in the near future.
+You can view and manage all of your projects in one place by selecting the Projects page. The project holds the information for all of the capabilities that are (and can be) integrated with your mobile app. If it is available, you can easily integrate and manage Push, Analytics, and Authentication mobile services in the project, with more capabilities to follow in the near future.
 
 The [Services](services.html) view shows an operational view of your existing mobile service instances. The Mobile dashboard supports a mobile developer and a mobile app management user.
 
@@ -65,6 +63,7 @@ Check back often to stay current with new features.
 * [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
+* [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 
 <!--## Tutorials and Samples
 {: #samples}

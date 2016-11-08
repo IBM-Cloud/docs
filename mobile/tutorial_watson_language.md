@@ -10,9 +10,6 @@ lastupdated: "2016-10-21"
 # Tutorial - Watson Language Code Starter
 {: #tutorial_watson_language}
 
-Last updated: 21 October 2016
-{: .last-updated}
-
 The {{site.data.keyword.Bluemix}} Mobile Code Starter for Watson Language showcases the Text To Speech and Language Translation services from Watson and gives you integration points for each of the {{site.data.keyword.Bluemix_notm}} Mobile services.
 
 
@@ -88,7 +85,7 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
 ## What to do next
 {: #tutorial_next}
 
-[Try it out!](http://new-console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}
+[Try it out!](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}
 
 
 # Related Links
@@ -111,6 +108,7 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
 * [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
+* [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 
 ## Tutorials and Samples
 {: #samples}

@@ -10,9 +10,6 @@ lastupdated: "2016-10-21"
 # Tutorial - Weather Code Starter
 {: #tutorial_weather}
 
-Last updated: 21 October 2016
-{: .last-updated}
-
 The {{site.data.keyword.Bluemix}} Mobile Code Starter for Weather showcases a scaffold project to begin working with Weather, using Swift and includes Push and Analytics integration points.
 
 
@@ -88,7 +85,7 @@ To get up and running quickly with the Weather Code Starter, follow these steps:
 ## What to do next
 {: #tutorial_next}
 
-[Try it out!](http://new-console.{DomainName}/mobile/create-project?starter=fad1d49e-f7b6-3aff-9b53-14673fca4399){: new_window}
+[Try it out!](http://console.{DomainName}/mobile/create-project?starter=fad1d49e-f7b6-3aff-9b53-14673fca4399){: new_window}
 
 
 # Related Links
@@ -111,6 +108,7 @@ To get up and running quickly with the Weather Code Starter, follow these steps:
 * [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
+* [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 
 ## Tutorials and Samples
 {: #samples}

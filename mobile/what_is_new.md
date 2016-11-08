@@ -10,9 +10,6 @@ lastupdated: "2016-10-21"
 # What's new in the Mobile dashboard
 {: #what_is_new}
 
-Last updated: 21 October 2016
-{: .last-updated}
-
 The October update of the {{site.data.keyword.Bluemix}} Mobile dashboard introduced the following changes:
 
    * You can now add Push Notifications and Analytics capabilities to your project directly from the dashboard.
@@ -63,6 +60,7 @@ Check back often to stay current with new updates.
 * [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
+* [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 
 ## Tutorials and Samples
 {: #samples}
