@@ -11,10 +11,22 @@ copyright:
 
 # Latest updates
 {: #latest_updates}
-Last updated: 19 September 2016
+Last updated: 8 November 2016
 {: .last-updated}
 
 A list of the latest updates to the service.
+
+## November 8, 2016: Updated WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* Added ability for clients to request a [Public IP](networkEnvironment.html#networkEnvironment) address for their WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} VM
+* Addressed [several security vulnerabilities](http://www-01.ibm.com/support/docview.wss?uid=swg21993842){: new_window} that affect WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} including:
+  * A vulnerability in IBM WebSphere Application Server that could allow remote attackers to execute arbitrary Java code with a serialized object from untrusted sources.
+  * A denial of service vulnerability caused by an out-of-bounds read in the TS_OBJ_print_bio function. A remote attacker could exploit this vulnerability using a specially crafted time-stamp file to cause the application to crash.
+  * A potential vulnerability in OpenSSL that could allow a remote attacker to obtain sensitive information, caused by an error in the in the Triple-DES on 64-bit block cipher, used as a part of the SSL/TLS protocol. By capturing large amounts of encrypted traffic between the SSL/TLS server and the client, a remote attacker able to conduct a man-in-the-middle attack could exploit this vulnerability to recover the plaintext data and obtain sensitive information. This vulnerability is known as the SWEET32 Birthday attack.
+  * OpenSSL is vulnerable to a denial of service. By repeatedly requesting renegotiation, a remote authenticated attacker could send an overly large OCSP Status Request extension to consume all available memory resources.
+  * OpenSSL is vulnerable to a denial of service, caused by an integer overflow in the MDC2_Update function. By using unknown attack vectors, a remote attacker could exploit this vulnerability to trigger an out-of-bounds write and cause the application to crash.
+  * A potential vulnerability in OpenSSL that allows a remote attacker to obtain sensitive information, caused by an error in the DSA implementation that allows the following of a non-constant time codepath for certain operations. An attacker could exploit this vulnerability using a cache-timing attack to recover the private DSA key.
+  * OpenSSL is vulnerable to a denial of service, caused by missing message length checks when parsing certificates. A remote authenticated attacker could exploit this vulnerability to trigger an out-of-bounds read and cause a denial of service.
 
 ## September 19, 2016: Updated WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 
