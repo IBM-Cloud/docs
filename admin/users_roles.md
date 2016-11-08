@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # Managing team members and roles
 {: #userroles}
-Last updated: 20 October 2016
-{: .last-updated}
 
 From the **Team Directory** page for your account, you can manage existing team members and their roles in your organization and spaces, as well as invite new team members. To access the team directory for your account, click **Account** &gt; **Team Directory**. 
 {:shortdesc}
