@@ -11,6 +11,8 @@ copyright:
 
 # Installation conventions
 {: #installation_conventions}
+Last updated: 28 October 2016
+{: .last-updated}
 
 ## Cell Installation Conventions
 {: cell_installation_conventions}
