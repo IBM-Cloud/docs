@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-20"
+lastupdated: "2016-11-08"
 
 ---
 
@@ -31,15 +31,15 @@ The monitoring statistics are displayed as graphs. You can set the time window 
 
 **Note:** The graphs show data based on the local time of the browser that is used to view the monitoring page.  
 
-##Monitoring on Logmet
+##Monitoring using the Grafana dashboard
 {: #logmet}
 
-Use [Logmet](https://logmet.{DomainName}) to view detailed connection statistics. 
+Use [Grafana](https://logmet.{DomainName}) to view detailed connection statistics. 
 
 1. Log in with your Bluemix credentials, and the space and org name where you have created the IBM VPN service instance.  
 2. Select the folder icon (![](images/folder.png)) on the top right.
 3. Select **VPN Service Monitoring** from the list of dashboards to view the graphs. The graphs use local time.  
 
-**Note:** You must select the **Monitoring** tab on the IBM VPN service dashboard at least once to send a query to Logmet to create the VPN service dashboard in Logmet. Logmet takes up to 10 minutes after you establish the VPN connection to show the connection statistics.
+**Note:** You must select the **Monitoring** tab on the IBM VPN service dashboard at least once to send a query to Grafana to create the VPN service dashboard in Grafana. Grafana takes up to 10 minutes after you establish the VPN connection to show the connection statistics.
 
 
