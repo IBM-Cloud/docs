@@ -1,7 +1,7 @@
 ---
 
-copyright:
-  years: 2016
+Copyright:
+  Jahre: 2016
 
 ---
 
@@ -14,27 +14,29 @@ copyright:
 # Informationen zu Toolchains    
 {: #toolchains_about}  
 
-*Letzte Aktualisierung: 11. Juli 2016*
+Letzte Aktualisierung: 13. September 2016
 {: .last-updated}
 
-Eine Toolchain ist ein Satz von Toolintegrationen, die die Entwicklungs-, Bereitstellungs- und Operationstasks unterstützen. Die Gesamtleistung einer Toolchain ist größer als die Summer aller einzelnen Toolintegrationen.    
+Eine *Toolchain* ist eine Gruppe von Toolintegrationen, die Entwicklungs-, Bereitstellungs- und Systemtasks unterstützen. Die kollektive Leistung einer Toolchain ist höher als die Summe der zugehörigen einzelnen Toolintegrationen.    
 {:shortdesc}
 
-Toolchains sind in den Public- und Dedicated-Umgebungen unter {{site.data.keyword.Bluemix}} verfügbar. Sie haben zwei Möglichkeiten, eine Toolchain zu erstellen: entweder mithilfe einer Schablone oder mithilfe einer App.
-Als Ausgangspunkt können Sie eine Toolchain-Schablone verwenden. Abhängig von der verwendeten Schablone können Sie eine Toolchain zu erstellen, die einen Satz von Toolintegrationen oder eine leere Toolchain enthält, der Sie Toolintegrationen hinzufügen können.
+Toolchains stehen in öffentlichen und dedizierten {{site.data.keyword.Bluemix}}-Umgebungen zur Verfügung. Sie können eine Toolchain auf zwei Arten erstellen: Entweder Sie verwenden eine Vorlage zum Erstellen einer Toolchain oder Sie erstellen eine Toolchain aus einer App. Als Ausgangspunkt können Sie eine Toolchain-Vorlage verwenden. Abhängig von der verwendeten Vorlage können Sie eine Toolchain erstellen, die eine bestimmte Gruppe von Toolintegrationen enthält, oder eine leere Toolchain, zu der Sie Toolintegrationen hinzufügen können.
 
-Unter {{site.data.keyword.Bluemix_notm}} Public kann je nach verwendeter Schablone oder Toolchain die Toolchain das GitHub-Repository enthalten, das mit dem App-Startercode und einer vordefinierten Delivery Pipeline gefüllt wird. Wenn Sie Änderungen mit Push-Operation an Ihr GitHub-Repository Ihrer Toolchain übertragen, erstellt die Delivery Pipeline die App automatisch und stellt sie {{site.data.keyword.Bluemix_notm}} bereit. 
+Abhängig von der verwendeten Vorlage oder Toolchain umfasst die Toolchain in der öffentlichen {{site.data.keyword.Bluemix_notm}}-Umgebung (Bluemix Public) unter Umständen ein GitHub-Repository, in dem ein App-Starter-Code und eine vorkonfigurierte Delivery Pipeline angegeben wird. Wenn Sie Änderungen per Push-Operation an das GitHub-Repository der Toolchain übertragen, erstellt die Delivery Pipeline automatisch Builds und stellt die App in {{site.data.keyword.Bluemix_notm}} bereit. 
 
-Unter {{site.data.keyword.Bluemix_notm}} Dedicated kann je nach verwendeter Toolchain die Toolchain das GitHub Enterprise-Repository enthalten, das mit dem App-Startercode und einer vordefinierten Delivery Pipeline gefüllt wird. Wenn Sie Änderungen mit Push-Operation an Ihr GitHub Enterprise-Repository Ihrer Toolchain übertragen, erstellt die Delivery Pipeline die App automatisch und stellt sie {{site.data.keyword.Bluemix_notm}} bereit.
+Abhängig von der verwendeten Toolchain umfasst die Toolchain in der dedizierten {{site.data.keyword.Bluemix_notm}}-Umgebung (Bluemix Dedicated) unter Umständen ein GitHub-Repository, in dem ein App-Starter-Code und eine vorkonfigurierte Delivery Pipeline angegeben wird. Wenn Sie Änderungen per Push-Operation an das GitHub Enterprise-Repository der Toolchain übertragen, erstellt die Delivery Pipeline automatisch Builds und stellt die Apps in {{site.data.keyword.Bluemix_notm}} bereit.
 
-## Hilfe für Toolchains abrufen 
+## Hilfe und Unterstützung für Toolchains anfordern 
 {: #gettinghelp}
 
-Wenn bei der Verwendung von Toolchains Probleme oder Fragen auftreten, können Sie nach Informationen suchen oder Fragen in einem Forum stellen.  
+Wenn Probleme auftreten oder Sie Fragen zur Verwendung von Toolchains haben, können Sie Hilfe anfordern, indem Sie nach Informationen suchen oder indem Sie Ihre Fragen in einem Forum stellen. Sie haben außerdem die Möglichkeit, ein Support-Ticket zu öffnen. 
 
-Wenn Sie zum Stellen einer Frage die Foren nutzen, zeichnen Sie Ihre Frage mit einem Tag aus, sodass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklungsteams gefunden werden kann.
-<!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
-* Wenn Sie technische Fragen zur Entwicklung oder Bereitstellung einer App mit Toolchains haben, senden Sie Ihre Fragen an [Stacküberlauf](http://stackoverflow.com/search?q=<service_keyword>+bluemix){:new_window} und zeichnen Sie Ihr Frage mit "bluemix" und "devops" aus.
-* Verwenden Sie bei Fragen zu Toolchains und bei Anweisungen zu den ersten Schritten das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/<service_name>/?smartspace=bluemix){:new_window}. Schließen Sie die Tags "devops-services" und "bluemix" ein.
+Wenn Sie die Foren verwenden, um eine Frage zu stellen, taggen Sie Ihre Frage, sodass die {{site.data.keyword.Bluemix_notm}}-Entwicklerteams auf sie aufmerksam wird.
 
-Weitere Informationen zur Verwendung der Foren finden Sie im Abschnitt [Hilfe anfordern](https://www.{DomainName}/docs/support/index.html#getting-help).
+* Wenn Sie technische Fragen zur Entwicklung oder Bereitstellung einer App mit Toolchains haben, posten Sie Ihre Frage unter [Stack Overflow (Link wird in neuem Fenster geöffnet)](http://stackoverflow.com/search?q=devops+ibm-bluemix){:new_window} und taggen Sie Ihre Frage mit "ibm-bluemix" und "devops".
+
+* Verwenden Sie für Fragen zu Toolchains und zu ersten Schritten das Forum [IBM developerWorks dW Answers (Link wird in neuem Fenster geöffnet)](https://developer.ibm.com/answers/topics/devops-services/?smartspace=bluemix){:new_window}. Taggen Sie Ihre Frage mit "devops-services" und "bluemix".
+
+Unter [Hilfe anfordern (Link wird in neuem Fenster geöffnet)](https://www.{DomainName}/docs/support/index.html#getting-help) finden Sie weitere Informationen zur Verwendung der Foren.
+
+Informationen zum Öffnen eines IBM Support-Tickets oder zu Support-Levels und Ticketprioritäten finden Sie unter [Unterstützung anfordern (Link wird in neuem Fenster geöffnet)](https://www.{DomainName}/docs/support/index.html#contacting-support).
