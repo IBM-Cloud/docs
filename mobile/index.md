@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-11-08"
 
 ---
 {:new_window: target="_blank"}
@@ -10,7 +10,7 @@ lastupdated: "2016-10-21"
 # {{site.data.keyword.Bluemix}} Mobile dashboard
 {: #mobile}
 
-The {{site.data.keyword.Bluemix}} Mobile dashboard offers a single place to manage the {{site.data.keyword.Bluemix_notm}} capabilities that you need to create and manage your {{site.data.keyword.Bluemix_notm}} Mobile application. The Mobile dashboard brings the most common services that are required for a mobile developer into a single, connected experience that has been optimized for the mobile developer.
+The {{site.data.keyword.Bluemix}} Mobile dashboard offers a single place to manage the {{site.data.keyword.Bluemix_notm}} capabilities that you need to create and manage your {{site.data.keyword.Bluemix_notm}} Mobile application. You can manage mobile apps through the concept of [Projects](projects.html). The Mobile dashboard brings the most common services that are required for a mobile developer into a single, connected experience that has been optimized for the mobile developer.
 
 The Mobile dashboard enables a mobile developer to create a project from a variety of Starters, create and connect key {{site.data.keyword.Bluemix_notm}} optimized services to your project, and quickly download working code with SDKs. The SDKs are fully integrated with capability credentials that enable you to have it running on your device in minutes. When your application is running and you have set up and configured Push, Analytics and/or Mobile Authentication capabilities, you can return to your project to monitor and manage engagement with your application users.
 
@@ -29,7 +29,7 @@ To get started with the Mobile dashboard, click the **Mobile** category from you
 ## Getting Started
 {: getting-started-mobiledashboard}
 
-The dashboard enables you to manage mobile apps through the concept of [Projects](projects.html). Create a project on the **Getting Started** page by clicking **Create Project**. You will be presented with [Starter](starters.html) options that enable you to quickly start creating your app.
+Create a project on the **Getting Started** page by clicking **Create Project**. You will be presented with [Starter](starters.html) options that enable you to quickly start creating your app.
 
 You can view and manage all of your projects in one place by selecting the Projects page. The project holds the information for all of the capabilities that are (and can be) integrated with your mobile app. If it is available, you can easily integrate and manage Push, Analytics, and Authentication mobile services in the project, with more capabilities to follow in the near future.
 
@@ -37,9 +37,6 @@ The [Services](services.html) view shows an operational view of your existing mo
 
 
 <!--You can also discover the {{site.data.keyword.Bluemix_notm}} Mobile offerings, link to the Mobile documentation and get answers from our {{site.data.keyword.Bluemix_notm}} Mobile services community on Stack Overflow.-->
-
-
-Check back often to stay current with new features.
 
 
 # Related Links
