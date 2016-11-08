@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-26"
+lastupdated: "2016-11-08"
 
 ---
 
@@ -693,7 +693,9 @@ cf ba delete-service-broker <service_broker>
 * You can update a service broker by
 entering the following command:
 
-`cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>`
+```
+cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
+```
 {: codeblock}
 
 <dl class="parml">
