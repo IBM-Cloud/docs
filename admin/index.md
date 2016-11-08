@@ -959,7 +959,9 @@ session. You use that cookie for all operations with the Admin Console.
 
 To log in to the Admin Console, run the following command:
 
-`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool`
+```
+curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -979,6 +981,7 @@ To log in to the Admin Console, run the following command:
 
 The following example shows output from this
 command:
+
 ```
 {
     "message": "Logged in",
@@ -998,7 +1001,9 @@ When you add a user, you must specify an organization. You can use the
 **Users** permission with **Read** access to list
 organizations.To list all organizations, run the following command:
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1043,7 +1048,9 @@ using the `Admin` REST API to list registered users. You must have
 **Users** permission with **Read** access to list registered
 users.To list all users, run the following command:
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1135,7 +1142,9 @@ add a user, you must provide the following information:
 
 You provide the information in a JSON file.
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1231,7 +1240,9 @@ have **Users** permission with **Write** access to remove users.
 
 To remove a user, you must provide the user ID of the user. Run the following command:
 
-`curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>`
+```
+curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1660,7 +1671,9 @@ Use the following API and code examples to update a service.
 ### Route
 {: #updateroute}
 
-`PUT /codi/v1/serviceBrokers`
+```
+PUT /codi/v1/serviceBrokers
+```
 {: screen}
 
 ### Request
@@ -1814,7 +1827,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 To see a list of commands, run the following
 command:
 
-`cf plugins`
+```
+cf plugins
+```
 {: codeblock}
 
 For more help for a command, use the `-help` option.
