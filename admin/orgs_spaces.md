@@ -58,7 +58,7 @@ When you create an organization, the organization name must be unique in {{site.
 
 You must contact [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} to delete an organization. When you request for the support team to delete an organization, all the spaces, applications, and services within the organization are deleted.
 
-The following [user roles](users_roles.html#userrolesinfo) can be assigned to team members in an organization:
+The following [user roles](/docs/admin/users_roles.html#userrolesinfo) can be assigned to team members in an organization:
 
 <ul>
 <li>Organization manager</li>
@@ -73,7 +73,7 @@ The following [user roles](users_roles.html#userrolesinfo) can be assigned to te
 
 Within an organization, you can use spaces to group a set of applications, services, and team members. Spaces are tied to a specific region in {{site.data.keyword.Bluemix_notm}}.
 
-After you add team members to an organization, you can grant them permissions to the spaces. Similar to organizations, spaces also have a set of [user roles](users_roles.html#userrolesinfo) with specific permissions that are assigned to team members:
+After you add team members to an organization, you can grant them permissions to the spaces. Similar to organizations, spaces also have a set of [user roles](/docs/admin/users_roles.html#userrolesinfo) with specific permissions that are assigned to team members:
 
 <ul>
 <li>Space manager</li>
@@ -156,7 +156,7 @@ To view the quota for your org, complete the following steps:
 3. Click **Edit Org**.
 4. Select the **QUOTA** tab.
 
-To update the quota for your organization, you must open a support ticket. For more information about openeing a support ticket, see [Getting customer support](../support/index.html#contacting-support).For more information about quota for containers, see [Quota](../containers/container_planning_org_ov.html##container_planning_quota) in the Containers documentation.
+To update the quota for your organization, you must open a support ticket. For more information about openeing a support ticket, see [Getting customer support](/docs/support/index.html#contacting-support). For more information about quota for containers, see [Quota](/docs/containers/container_planning_org_ov.html##container_planning_quota) in the Containers documentation.
 
 ## Managing domains
 {: #managedomains}
