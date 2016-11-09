@@ -28,7 +28,8 @@ You can sign up for a {{site.data.keyword.Bluemix_notm}} account by using an exi
 
 A federated ID can be used to sign up for {{site.data.keyword.Bluemix_notm}} only if your company has already worked with IBM to register.  Registering a company's domain with IBM enables users to log in to IBM products and services by using their existing company user credentials. Authentication is then handled by your company's identity provider. When you log in to {{site.data.keyword.Bluemix_notm}} with a federated ID, you are prompted to log in through your company's login page. For information about requesting to register your company or organization's domain with IBM, or for more information about the process, see [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. An IBM sponsor, such as an offering advocate or client advocate, is required when you request to register federated IDs.
 
-*Table 1. Sign up methods*
+Table 1. Sign up methods
+{: #account_table1}
 
 | Sign up methods | Details |    
 |-----------------|---------|
