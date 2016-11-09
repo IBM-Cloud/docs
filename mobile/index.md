@@ -42,19 +42,17 @@ The [Services](services.html) view shows an operational view of your existing mo
 # Related Links
 {: #rellinks}
 
-<!-- links to internal services don't work
+
 ## {{site.data.keyword.Bluemix_notm}} Mobile services
 {: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
 
-<!--## Blog Posts
-{: #general}
--->
+* [Mobile Analytics (Beta)](/docs/services/mobileanalytics/index.html){: new_window}
+* [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
+* [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
+* [Mobile Quality Assurance)](/docs/services/MobileQualityAssurance/index.html){: new_window}
+* [Push Notifications](/docs/services/mobilepush/index.html){: new_window}
+
+<!--## Blog Posts-->
 * [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
 * [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
 * [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
@@ -62,7 +60,7 @@ The [Services](services.html) view shows an operational view of your existing mo
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
 * [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 
-<!--## Tutorials and Samples
+<!--## Tutorials and Samples-->
 {: #samples}
--->
+
 * [Sample: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
