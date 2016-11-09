@@ -44,9 +44,9 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
    2. Enter your service name and click **Create**.
 
-   3. For iOS, [configure Apple Push Notification Service](../services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. For iOS, [configure Apple Push Notification Service](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
-   4. For Android, [configure Firebase Cloud Messaging](../services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. For Android, [configure Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
    
 3. Optional: Add the Analytics capability.
 
@@ -58,7 +58,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
    3. Toggle off **Demo Mode** to see your analytics data after you run your app.
    
-   4. See [Getting started with {{site.data.keyword.mobileanalytics_short}}](../services/mobileanalytics/index.html){: new_window} for more information about configuring Analytics.
+   4. See [Getting started with {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} for more information about configuring Analytics.
   
 4. Optional: Add the Authentication capability.
 
@@ -72,7 +72,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
    4. Select your identity provider and enter the required information to configure it. You can enable only one identity provider.
 
-   5. See [Getting started with {{site.data.keyword.amashort}}](../services/mobileaccess/index.html){: new_window} for more information about configuring Authentication.
+   5. See [Getting started with {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window} for more information about configuring Authentication.
 
 5. Generate your project code.
 
@@ -161,18 +161,17 @@ View other tutorials.
 # Related Links
 {: #rellinks}
 
-<!-- links to internal services don't work
+
 ## {{site.data.keyword.Bluemix_notm}} Mobile services
 {: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
 
-## Blog Posts
-{: #general}
+* [Mobile Analytics (Beta)](/docs/services/mobileanalytics/index.html){: new_window}
+* [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
+* [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
+* [Mobile Quality Assurance)](/docs/services/MobileQualityAssurance/index.html){: new_window}
+* [Push Notifications](/docs/services/mobilepush/index.html){: new_window}
+
+<!--## Blog Posts-->
 * [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
 * [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
 * [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
@@ -180,6 +179,7 @@ View other tutorials.
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
 * [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 
-## Tutorials and Samples
+<!--## Tutorials and Samples-->
 {: #samples}
-* [Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+
+* [Sample: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
