@@ -129,7 +129,7 @@ You can also use a third-party service to automatically send an email for each R
 ### Setting up incident and maintenance email notifications
 {: #setting-up-notifications}
 
-For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform notifications. Platform notifications are optional email alerts for incident and maintenance events for the {{site.data.keyword.Bluemix_notm}} platform. You can choose to receive these email notifications by clicking the **Account** menu item  &gt; **Notifications** &gt; **Platform** options. For more information about setting account notifications, go to [Setting notifications](../admin/account.html#notifications).
+For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform notifications. Platform notifications are optional email alerts for incident and maintenance events for the {{site.data.keyword.Bluemix_notm}} platform. You can choose to receive these email notifications by clicking the **Account** menu item  &gt; **Notifications** &gt; **Platform** options. For more information about setting account notifications, go to [Setting notifications](/docs/admin/account.html#notifications).
 
 
 ### Best practices for monitoring status
@@ -191,7 +191,7 @@ If you are unable to resolve your technical problem with the troubleshooting and
 If the problem is not due to an outage, open a support ticket by using one of the following options:
 
   * From the Support widget, click **Get help**. On the page that is displayed, click **GET IN TOUCH**. Fill in the form to indicate what you need technical support for.
-  * Use the [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} help page. You can submit tickets for sales, billing, IBMid and login, and technical support problems. For technical support problems, you can further select a technical group after you click **Technical Support**. For example, if you need help with Cloud Foundry apps, OpenWhisk, Containers, Virtual Servers, or Bare Metal servers, you can choose **Application Services**. If you need help with a specific service, select the corresponding service category. To determine the category that your service belongs to, see categories under [Services](../services/index.html){: new_window} in the navigation pane.  
+  * Use the [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} help page. You can submit tickets for sales, billing, IBMid and login, and technical support problems. For technical support problems, you can further select a technical group after you click **Technical Support**. For example, if you need help with Cloud Foundry apps, OpenWhisk, Containers, Virtual Servers, or Bare Metal servers, you can choose **Application Services**. If you need help with a specific service, select the corresponding service category. To determine the category that your service belongs to, see categories under [Services](/docs/services/index.html){: new_window} in the navigation pane.  
   * From [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. After you sign in to the portal, click **Open Ticket**, and then fill in the support form. 
   
 When you open a support ticket, ensure that you indicate an appropriate severity for your ticket. The severity determines how your ticket is handled. See [Support ticket severity and response time](index.html#support-ticket-severity){: new_window} for information about the different severities. If your request is urgent, but you only have free or basic support, you can upgrade your account to submit high-severity (level 1, 2, and 3) tickets. To upgrade your account to a higher support level, contact your IBM sales representative by email at sales@bluemix.net.
@@ -298,7 +298,7 @@ To diagnose and resolve problems with {{site.data.keyword.Bluemix_notm}} applica
 
 Before you collect diagnostic information, complete the following steps:
 
-  1. Ensure that you have installed the latest cf command line interface. For more information, see [Installing the cf command line interface](../starters/install_cli.html){: new_window}.
+  1. Ensure that you have installed the latest cf command line interface. For more information, see [Installing the cf command line interface](/docs/starters/install_cli.html){: new_window}.
 
      **Note:** If you do not have the latest cf command line interface installed, after the cf command line is connected to {{site.data.keyword.Bluemix_notm}}, the `cf logs` command might not return output.
 
@@ -356,7 +356,7 @@ IBM periodically sends surveys to Bluemix customers to obtain their feedback on 
 
   * [Bluemix support portal](https://support.ibmcloud.com){: new_window} 
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
-  * [Installing the cf command tool](../starters/install_cli.html){: new_window} 
+  * [Installing the cf command tool](/docs/starters/install_cli.html){: new_window} 
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
   * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   
