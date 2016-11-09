@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-03"
+
 ---
 {:shortdesc: .shortdesc}
 
@@ -16,10 +17,11 @@ Instrument your Cordova client application with {{site.data.keyword.amafull}} cl
 ## Before you begin
 {: #before-you-begin}
 You must have:
-* An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
-* The URL of your back-end application (App Route).
-* Your `tenantId` value. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need these values for intializing the SDK and for sending requests to the back-end application.
-* Your {{site.data.keyword.Bluemix_notm}} region. You can find your current Bluemix region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`, `United Kingdom`, or `Sydney`, and correspond to the SDK values required in the code: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`.
+* An instance of a  {{site.data.keyword.Bluemix_notm}} application. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+* An instance of a {{site.data.keyword.amafull}} service.
+* The URL of your back-end application (**App Route**). You will need this values for sending requests to the protected endpoints of your back-end application.
+* Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
+* Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`, `United Kingdom`, or `Sydney`, and correspond to the SDK values required in the WebView Javascript code: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`. You will need this value for initializing the {{site.data.keyword.amashort}} client.
 * A  Cordova application or an existing project. For more information about how to set up your Cordova application, see the [Cordova website](https://cordova.apache.org/).
 
 ## Installing the {{site.data.keyword.amashort}} Cordova plug-in
@@ -141,8 +143,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 Add the Authorization Manager initialization in the `AppDelegate.m` according to your version of Xcode.
 
 ```Objective-C
-  [CDVBMSClient initMCAAuthorizationManagerManager:@"<tenantId>"]; //Xcode 7 and Xcode 8 (with Swift 2.3)
-  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; // Xcode 8 (with Swift 3)
+  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
 ```
 
 
@@ -151,7 +152,7 @@ Add the Authorization Manager initialization in the `AppDelegate.m` according to
 
 After the {{site.data.keyword.amashort}} client SDK is initialized, you can start making requests to your mobile back-end service.
 
-1. Try to send a request to a protected endpoint of your new mobile back-end application. In your browser, open the following URL: `{applicationRoute}/protected` (for example: `http://my-mobile-backend.mybluemix.net/protected`).
+1. Try to send a request to a protected endpoint of your mobile back-end application. In your browser, open the following URL: `{applicationRoute}/protected` (for example: `http://my-mobile-backend.mybluemix.net/protected`).
 
 	The `/protected` endpoint of a mobile back-end application that was created with MobileFirst Services Starter boilerplate is protected with {{site.data.keyword.amashort}}. An `Unauthorized` message is returned in your browser. This message is returned because this endpoint is accessed only by mobile applications that are instrumented with {{site.data.keyword.amashort}} client SDK.
 

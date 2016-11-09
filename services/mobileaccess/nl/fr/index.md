@@ -1,18 +1,16 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 
 # Initiation à {{site.data.keyword.amashort}}
 {: #gettingstarted}
-Dernière mise à jour : 21 juillet 2016
-{: .last-updated}
 
-Ajoutez une fonctionnalité de sécurité à votre application mobile avec le service {{site.data.keyword.amafull}}. Vous pouvez configurer une authentification client et des fournisseurs d'identité de sorte que les utilisateurs
-puissent se connecter à l'application avec leur comptes Google ou Facebook existants.
+
+Ajoutez une fonctionnalité de sécurité à votre application mobile avec le service {{site.data.keyword.amafull}}. Vous pouvez configurer une autorisation client pour accéder à des ressources de back end protégées s'exécutant sur {{site.data.keyword.Bluemix_notm}}. Utilisez des fournisseurs d'identité (Google et Facebook) ou des identités personnalisées pour authentifier les utilisateurs et accorder un accès aux ressources de back-end protégées et aux applications Web.
 {:shortdesc}
 
 **Remarque :** Le service {{site.data.keyword.amashort}} était dénommé auparavant Advanced Mobile
@@ -43,7 +41,7 @@ Liberty for Java&trade; avec sécurité OAuth activée pour les applications mob
 	####Développement client
    {: #client-development}
    
-	Vous pouvez ajouter le SDK {{site.data.keyword.amashort}} à votre application Android, iOS ou Cordova existante, comme suit :
+	Vous pouvez ajouter le SDK {{site.data.keyword.amashort}} à votre application Android, iOS ou Cordova existante, comme suit : 
    * Android : ([Configuration du logiciel SDK Android](getting-started-android.html)) ([Exemple](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
   
    * iOS (SDK Swift) : ([Configuration du SDK Swift iOS](getting-started-ios-swift-sdk.html))
@@ -53,7 +51,8 @@ Liberty for Java&trade; avec sécurité OAuth activée pour les applications mob
 
    * Cordova : ([Configuration du plug-in Cordova](getting-started-cordova.html)) ([Exemple](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
    
-   **Remarque :** Bien que le SDK Objective-C continue à être totalement pris en charge et soit toujours considéré comme le SDK principal pour {{site.data.keyword.amashort}}, il est envisagé de le retirer plus tard cette année et de le remplacer par le nouveau SDK Swift. Si vous créez une application, il est vivement recommandé d'utiliser le SDK Swift (voir [Configuration du SDK Swift iOS](getting-started-ios-swift-sdk.html)).
+   **Remarque :** Bien que le SDK Objective-C continue à être totalement pris en charge et soit toujours considéré comme le SDK principal
+pour {{site.data.keyword.amashort}}, il est envisagé de le retirer plus tard cette année et de le remplacer par le nouveau SDK Swift. Si vous créez une application, il est vivement recommandé d'utiliser le SDK Swift (voir [Configuration du SDK Swift iOS](getting-started-ios-swift-sdk.html)).
 
 	####Développement Web
    {: #web-development}

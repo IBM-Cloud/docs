@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Business Analytics
 {: #businessanalytics}
-
-*Last updated: 9 December 2015*
 
 With these services, you can embed business intelligence into your applications to uncover insights more quickly and more easily from all types of data.
 {:shortdesc}

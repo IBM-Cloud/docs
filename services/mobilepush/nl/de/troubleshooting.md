@@ -7,10 +7,10 @@ copyright:
 
 # Fehlerbehebung
 {: #errors}
-Letzte Aktualisierung: 16. August 2016
+Letzte Aktualisierung: 29. August 2016
 {: .last-updated}
 
-In diesem Abschnitt finden Sie Anweisungen für die Behebung von allgemeinen Fehlern bei {{site.data.keyword.mobilepushshort}}. 
+In diesem Abschnitt finden Sie Anweisungen für die Behebung von allgemeinen Fehlern bei {{site.data.keyword.mobilepushshort}}.
 
 
 ### Internal server error occurred. Please contact admin. (Internal error code: PUSHD102E)

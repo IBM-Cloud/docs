@@ -1,14 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-
+  years: 2015, 2016 lastupdated: "2016-10-02"
 ---
 
 # Sobre {{site.data.keyword.amashort}}
 {: #mca-overview}
-Última atualização: 22 de julho de 2016
-{: .last-updated}
+
 
 O serviço {{site.data.keyword.amafull}} fornece serviços de autenticação e monitoramento para aplicativos móveis e da web que
 acessam recursos em nuvem hospedados no {{site.data.keyword.Bluemix_notm}}.
@@ -88,8 +86,7 @@ para que ela possa ser vista pelas equipes de desenvolvimento do {{site.data.key
 * Se você tiver questões técnicas sobre como desenvolver ou implementar um app com o {{site.data.keyword.amashort}}, poste sua pergunta no [Stack Overflow](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){:new_window} e identifique-a com "ibm-bluemix" e "{{site.data.keyword.amashort}}".
 * Para perguntas sobre o serviço e instruções de introdução, use o fórum do [IBM developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window}. 
 
-Consulte
-[Obtendo
+Veja [Obtendo
 ajuda](https://www.{DomainName}/docs/support/index.html#getting-help) para obter mais detalhes sobre o uso dos fóruns.
 
 Para obter informações sobre como abrir um chamado de suporte IBM ou sobre níveis de suporte e severidades de chamado, consulte [Entrando em contato com o suporte](https://www.{DomainName}/docs/support/index.html#contacting-support).

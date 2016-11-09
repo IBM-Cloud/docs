@@ -2,14 +2,12 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-16"
 
 ---
 
 # Web app custom authentication
 {: #custom-web}
-
-Last updated: 16 June 2016
-{: .last-updated}
 
 Add custom authentication to your web app
 
@@ -47,7 +45,7 @@ To start the process of authorization:
  the following end-point of the authorization server:
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
-  
+
   using the following query parameters:
    ```
    response_type=’authorization_code’
@@ -77,8 +75,8 @@ The response returned after a successful authentication contains the authorizati
  redirect_uri = <redirect_uri>
  code = <authorization code>
  ```
-  The `redirect_uri` parameter must match the `redirect_uri` from step 1. The authorization code was returned by the request in the step 2. 
-  
+  The `redirect_uri` parameter must match the `redirect_uri` from step 1. The authorization code was returned by the request in the step 2.
+
   Make sure to send this `POST` request within 10 min since the grant code is valid for 10 min max.
 
 The `POST` response body contains the *access_token* and the
@@ -90,5 +88,3 @@ The `POST` response body contains the *access_token* and the
 Now you can start making requests to your protected resources.
 All requests to protected resources should contain the `access_token`.
 Send the access token in `the-Authorization-request` header field.
-
-

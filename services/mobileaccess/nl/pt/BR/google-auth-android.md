@@ -1,16 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-
+  years: 2015, 2016 lastupdated: "2016-10-10"
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
 
 # Ativando a autenticação do Google para apps Android
 {: #google-auth-android}
 
-
-Última atualização: 04 de agosto de 2016
-{: .last-updated}
+Use o Google para autenticar usuários em seu aplicativo
+{{site.data.keyword.amafull}} Android. Inclua a funcionalidade de segurança do {{site.data.keyword.amashort}}. 
 
 ## Antes de Começar
 {: #before-you-begin}
@@ -18,6 +18,10 @@ Você deve ter:
 
 * Um projeto do Android no Android Studio que esteja configurado para trabalhar com Gradle. Ele não precisa ser instrumentado com o {{site.data.keyword.amashort}} client SDK.  
 * Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
+* Os seus valores de parâmetros de serviço. Abra o seu serviço no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de
+dispositivo móvel**. Os valores `applicationRoute` e `tenantId` (também conhecidos como `appGUID`) são
+exibidos nos campos **Rota** e **GUID / TenantId do aplicativo**. Você precisará desses valores para inicializar o SDK e para
+enviar solicitações para o aplicativo backend.
 
 Configurar a autenticação do Google para seu app Android do {{site.data.keyword.amashort}} irá requerer configuração adicional de:
 * O aplicativo {{site.data.keyword.Bluemix_notm}}
@@ -43,7 +47,9 @@ Para concluir a criação de credenciais, é necessário incluir a **impressão 
 ### Configurando o certificado de assinatura
 Para que o Google verifique a autenticidade de seu aplicativo, deve-se especificar uma impressão digital do certificado de assinatura.
 
-O sistema operacional Android requer que todos os aplicativos instalados em um dispositivo Android sejam assinados com um certificado de desenvolvedor. Um aplicativo Android pode ser construído em dois modos: depuração e liberação. É aconselhável geralmente ter certificados diferentes para os modos de depuração e liberação.  Certificados usados para assinatura de aplicativos Android no modo de depuração são empacotados com o Android SDK.  Em geral, o Android SDK é instalado automaticamente pelo Android Studio. Quando desejar liberar seu aplicativo para o Google Play, deve-se assinar o app com outro certificado que, em geral, você mesmo gera. Para obter mais informações, consulte [Assinando aplicativos Android](http://developer.android.com/tools/publishing/app-signing.html).
+O sistema operacional Android requer que todos os aplicativos instalados em um dispositivo Android sejam assinados com um certificado de desenvolvedor. Um aplicativo Android pode ser construído em dois modos: depuração e liberação. É aconselhável geralmente ter certificados diferentes para os modos de depuração e liberação.  Certificados usados para assinatura de aplicativos Android no modo de depuração são empacotados com o Android SDK.  Em geral, o Android SDK é instalado automaticamente pelo Android Studio. Quando desejar liberar seu aplicativo para o Google Play, deve-se assinar o app com outro certificado que, em geral, você mesmo gera. Para obter mais informações, veja [Assinando aplicativos Android](http://developer.android.com/tools/publishing/app-signing.html).
+
+
 
 Um keystore que contém um certificado para ambientes de desenvolvimento é armazenado em um arquivo `~/.android/debug.keystore`. A senha padrão do keystore é: `android`. Esse certificado é usado para construir aplicativos no modo de depuração.
 
@@ -52,6 +58,7 @@ Um keystore que contém um certificado para ambientes de desenvolvimento é arma
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 	```
+
 	Também é possível usar a mesma sintaxe para recuperar o hash chave do certificado no modo de liberação. Substitua o caminho do alias e do keystore no comando.
 
 1. No diálogo Credencial do console do Google, localize a linha iniciada com `SHA1` em **Impressões digitais do certificado**. Copie o valor da impressão digital obtida ao executar o comando **keytool** para a caixa de texto.
@@ -60,7 +67,10 @@ Um keystore que contém um certificado para ambientes de desenvolvimento é arma
 
 1. No diálogo Credenciais, insira o nome do pacote do aplicativo Android. 
 
-  Para localizar o nome do pacote do aplicativo Android, abra o arquivo `AndroidManifest.xml` no Android Studio e procure: `<manifest package="{your-package-name}">`. 
+  Para localizar o nome do pacote de seu aplicativo Android, abra o arquivo
+`AndroidManifest.xml` no Android Studio e procure: 
+  	
+  	`<manifest package="{your-package-name}">`
 
 1. Quando terminar, clique em **Criar**. Isso conclui a criação de credenciais.
 
@@ -75,10 +85,6 @@ Quando as credenciais são criadas com êxito, a página de credenciais exibe o 
 Agora que você possui um identificador de cliente do Google para Android, é possível ativar a autenticação do Google no Painel do {{site.data.keyword.amashort}}.
 
 1. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}.
-
-1. Clique em **Opções móveis** e anote a
-**Rota** (`applicationRoute`) e o **GUID do
-app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 
 1. Clique no ladrilho {{site.data.keyword.amashort}}. O painel do {{site.data.keyword.amashort}} é carregado.
 
@@ -107,7 +113,6 @@ app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
     	// other dependencies  
 	}
 	```
-
 	**Nota:** será possível remover a dependência do módulo `core` do grupo `com.ibm.mobilefirstplatform.clientsdk.android`, se você o tiver. O módulo `googleauthentication` faz download dele automaticamente para você. O módulo `googleauthentication` faz download e instala o Google+ SDK no projeto do Android.
 
 1. Sincronize seu projeto com o Gradle clicando em **Ferramentas > Android > Sincronizar projeto com arquivos Gradle**.
@@ -122,30 +127,25 @@ app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
 	```
 
-1. Para usar o {{site.data.keyword.amashort}} client SDK, deve-se inicializá-lo passando os parâmetros de contexto, applicationGUID e applicationRoute.
+1. Para usar o SDK do cliente do {{site.data.keyword.amashort}}, deve-se inicializar o SDK passando os parâmetros **context** e **region**.
 
-	Um local comum, mas não obrigatório, para colocar o código de inicialização está no método onCreate da atividade principal em seu aplicativo Android.
+	Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `onCreate` da atividade principal em seu aplicativo Android.
 
-1. Inicialize o client SDK e registre o gerenciador de autenticação do Google. Substitua
-*applicationRoute* e *applicationGUID* pelos valores de
-**Rota** e **GUID do app** da seção
-**Opções móveis** no painel.
+1. Inicialize o client SDK e registre o gerenciador de autenticação do Google.
 
-	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
-
-	BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this));
+	```Java 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 						
 	GoogleAuthenticationManager.getInstance().register(this);
-```
+	```
 
-  Substitua `BMSClient.REGION_UK` pela região apropriada.  Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de **Avatar** ![Ícone de Avatar](images/face.jpg "Ícone de Avatar") na barra de menus para abrir o widget **Conta e suporte**.
+  * Substitua `BMSClient.REGION_UK` pela região apropriada.  Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de **Avatar** ![Ícone de Avatar](images/face.jpg "Ícone de Avatar") na barra de menus para abrir o widget **Conta e suporte**.  O valor da região deve
+ser um destes: `BMSClient.REGION_US_SOUTH`,
+`BMSClient.REGION_SYDNEY` ou `BMSClient.REGION_UK`.
+  * Substitua `<MCAServiceTenantId>` pelo valor `tenantId` (veja [Antes de iniciar](##before-you-begin)). 
 
-   **Nota:** se seu aplicativo Android está definindo como destino o Android versão 6.0 (API nível 23) ou superior, deve-se assegurar que o aplicativo tenha uma chamada `android.permission.GET_ACCOUNTS` antes de chamar `register`. Para obter mais informações, consulte [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
+   **Nota:** se seu aplicativo Android está definindo como destino o Android versão 6.0 (API nível 23) ou superior, deve-se assegurar que o aplicativo tenha uma chamada `android.permission.GET_ACCOUNTS` antes de chamar `register`. Para obter mais informações, veja [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
 1. Inclua o código a seguir em sua Atividade:
 
@@ -163,22 +163,18 @@ app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
 Depois que o client SDK é inicializado e o Gerenciador de autenticação do Google é registrado, é possível começar a fazer solicitações para seu aplicativo backend móvel.
 
 
-Antes de iniciar o teste, deve-se ter um aplicativo backend móvel que tenha sido criado com o modelo **MobileFirst Services Starter** e já ter um recurso protegido pelo terminal `/protected` do {{site.data.keyword.amashort}}. Para obter mais informações, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Antes de iniciar o teste, deve-se ter um aplicativo backend móvel que tenha sido criado com o modelo **MobileFirst Services Starter** e já ter um recurso protegido pelo terminal `/protected` do {{site.data.keyword.amashort}}. Para obter mais informações, veja [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Tente enviar uma solicitação para o terminal protegido de seu aplicativo backend móvel no navegador de sua área de trabalho abrindo `{applicationRoute}/protected`, por exemplo: `http://my-mobile-backend.mybluemix.net/protected`.
- O terminal `/protected` de um aplicativo backend móvel criado com o Modelo MobileFirst Services está protegido com o {{site.data.keyword.amashort}}. Portanto, só é possível acessá-lo por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.
+1. Tente enviar uma solicitação para o terminal protegido de seu aplicativo backend móvel no navegador de sua área de trabalho abrindo `{applicationRoute}/protected`, por exemplo: `http://my-mobile-backend.mybluemix.net/protected`.  Para informações sobre como obter o valor `{applicationRoute}`, veja
+[Antes de iniciar](#before-you-begin). 
 
-1. Use seu aplicativo Android para fazer solicitação para o mesmo terminal. Inclua o código a seguir depois de inicializar a instância `BMSClient` e registrar o `GoogleAuthenticationManager`.
+	O terminal `/protected` de um aplicativo backend móvel criado com o Modelo MobileFirst Services está protegido com o {{site.data.keyword.amashort}}. Portanto, só é possível acessá-lo por aplicativos móveis que sejam instrumentados com o {{site.data.keyword.amashort}} client SDK. Como resultado, você verá `Unauthorized` no navegador de sua área de trabalho.
 
-	```Java
-	Request request = new Request("/protected", Request.GET);
-	request.send(this, new ResponseListener() {
-		@Override
+1. Use o seu aplicativo Android para fazer uma solicitação para o mesmo terminal protegido. Inclua o código a seguir depois de inicializar a instância `BMSClient` e registrar o `GoogleAuthenticationManager`.
+
+	```Java 	Request request = new Request("{applicationRoute}/protected", Request.GET); 	request.send(this, new ResponseListener() { 		@Override
 		public void onSuccess (Response response) {
-			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
-		}
-		@Override
+			Log.d("Myapp", "onSuccess :: " + response.getResponseText()); 			Log.d("MyApp", MCAAuthorizationManager.getInstance().getUserIdentity().toString()); 		} 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
 			if (null != t) {
 				Log.d("Myapp", "onFailure :: " + t.getMessage());
@@ -189,7 +185,7 @@ Antes de iniciar o teste, deve-se ter um aplicativo backend móvel que tenha sid
 			}
 		}
 	});
-```
+	```
 
 1. Execute o aplicativo. Uma tela Login do Google é exibida como pop-up. Após o login, o app solicita permissão para acessar recursos:
 

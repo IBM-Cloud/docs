@@ -7,12 +7,12 @@ copyright:
 
 # 監視應用程式
 {: #app-monitoring}
-前次更新：2016 年 6 月 28 日
+前次更新：2016 年 9 月 22 日
 {: .last-updated}
 
 除了安全特性之外，{{site.data.keyword.amafull}} 還會提供行動應用程式的監視及分析。您可以使用 {{site.data.keyword.amashort}} 用戶端 SDK 來記錄用戶端日誌以及監視資料。開發人員可以控制何時將此資料傳送給「{{site.data.keyword.amashort}} 服務」。將自動記載「{{site.data.keyword.amashort}} 服務」中所發生的所有安全事件（例如鑑別成功或失敗）。
-
-**附註**：{{site.data.keyword.amashort}} 服務的監視功能，預計會移轉至新的 [{{site.data.keyword.mobileanalytics_short}} 服務](https://console.ng.bluemix.net/catalog/services/mobile-analytics)。新的 Swift SDK 會利用新的 {{site.data.keyword.mobileanalytics_short}} 服務，此服務提供更豐富的分析體驗。{{site.data.keyword.mobileanalytics_short}} 服務目前處於實驗階段，預計在今年稍晚正式上市。由於預計會在 {{site.data.keyword.mobileanalytics_short}} 正式上市時停止使用 {{site.data.keyword.amashort}} 服務的監視功能，因此建議您先研究移轉應用程式以使用新的 {{site.data.keyword.mobileanalytics_short}} 服務及 Swift SDK。
+<!--
+**Note**: The monitoring functions of the {{site.data.keyword.amashort}} service are planned to be migrated to the new [{{site.data.keyword.mobileanalytics_short}} service](https://console.ng.bluemix.net/catalog/services/mobile-analytics). The new Swift SDK leverages the new {{site.data.keyword.mobileanalytics_short}} service, which provides a much richer analytics experience. The {{site.data.keyword.mobileanalytics_short}} service is currently in experimental phase with plans to be made generally available later this year. We recommend investigating migrating your applications to use the new {{site.data.keyword.mobileanalytics_short}} service and Swift SDK since the monitoring functions of {{site.data.keyword.amashort}} service are planned to be discontinued when {{site.data.keyword.mobileanalytics_short}} is generally available. -->
 
 將資料遞送至 {{site.data.keyword.amashort}} 時，您可以使用 {{site.data.keyword.amashort}} 監視儀表板來取得行動應用程式、裝置及用戶端日誌的分析洞察。預設會記錄您的應用程式對 {{site.data.keyword.amashort}} 所保護資源提出之要求的相關資訊。
 
@@ -26,7 +26,7 @@ copyright:
 ### 用戶端日誌擷取
 {: #client-side-logcapture}
 
-現場運作中的應用程式有時會遇到問題，需要開發人員注意並進行修正。通常很難重新產生這些問題。<!--in R&D.--> 從事程式碼開發的開發人員可能缺乏用於測試的環境或確切裝置。在這些狀況下，能夠在環境中發生問題時從用戶端裝置中擷取除錯日誌就會非常有用。
+現場運作中的應用程式有時會遇到問題，需要開發人員注意並進行修正。通常很難重新產生這些問題。從事程式碼開發的開發人員可能缺乏用於測試的環境或確切裝置。在這些狀況下，能夠在環境中發生問題時從用戶端裝置中擷取除錯日誌就會非常有用。
 
 ### 保留擷取的資料
 {: #preserve-captureddata}
@@ -40,7 +40,7 @@ copyright:
 
 2. 開啟 {{site.data.keyword.Bluemix_notm}} 應用程式儀表板時，按一下 {{site.data.keyword.amashort}} 磚。
 
-3. 按一下「{{site.data.keyword.amashort}} 儀表板」左側導覽列中的**監視**鏈結。
+3. 按一下 {{site.data.keyword.amashort}}「儀表板」導覽中的**監視**按鈕。
 
 
 ## 啟用、配置及使用日誌程式
@@ -58,17 +58,22 @@ copyright:
 * `INFO` - 用於報告起始設定事件以及其他可能有用的資料。
 * `DEBUG` - 用於報告除錯陳述，以協助開發人員解決應用程式問題報告。
 
+#### 記載層次情境
+{: #log-level-scenario}
+
+日誌程式層次配置為 `FATAL` 時，日誌程式會擷取未捕捉的異常狀況，但不會擷取任何導致當機事件的日誌。您可以設定更詳細的日誌程式層次，確保也會擷取可能導致 `FATAL` 日誌程式項目的日誌（例如 `WARN` 及 `ERROR`）。
+
 請確定您已起始設定 {{site.data.keyword.amashort}} 用戶端 SDK，然後才使用記載架構。下列範例示範 {{site.data.keyword.amashort}} 用戶端 SDK 記載架構的基本用法。
 
-**重要事項**：{{site.data.keyword.amashort}} 服務的監視功能，預計會移轉至新的 [{{site.data.keyword.mobileanalytics_short}} 服務](https://console.ng.bluemix.net/catalog/services/mobile-analytics)。新的 Swift SDK 會利用新的 {{site.data.keyword.mobileanalytics_short}} 服務，此服務提供更豐富的分析體驗。{{site.data.keyword.mobileanalytics_short}} 服務目前處於實驗階段，預計在今年稍晚正式上市。由於預計會在 {{site.data.keyword.mobileanalytics_short}} 正式上市時停止使用 {{site.data.keyword.amashort}} 服務的監視功能，因此建議您先研究移轉應用程式以使用新的 {{site.data.keyword.mobileanalytics_short}} 服務及 Swift SDK。
+<!-- **Important**: The monitoring functions of the {{site.data.keyword.amashort}} service are planned to be migrated to the new [{{site.data.keyword.mobileanalytics_short}} service](https://console.ng.bluemix.net/catalog/services/mobile-analytics). The new Swift SDK leverages the new {{site.data.keyword.mobileanalytics_short}} service, which provides a much richer analytics experience. The {{site.data.keyword.mobileanalytics_short}} service is currently in experimental phase with plans to be made generally available later this year. We recommend investigating migrating your applications to use the new {{site.data.keyword.mobileanalytics_short}} service and Swift SDK since the monitoring functions of {{site.data.keyword.amashort}} service are planned to be discontinued when {{site.data.keyword.mobileanalytics_short}} is generally available.-->
 
 #### Android
 {: #enable-logger-android}
 
 ```Java
-BMSClient.getInstance().initialize(context, appRoute, appGUID);
+BMSClient.getInstance().initialize(this.getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
 
-Logger logger = Logger.getInstance("myLogger");
+Logger logger = Logger.getLogger("myLogger");
 
 logger.debug("debug info");
 logger.info("info message");
@@ -76,60 +81,45 @@ logger.warn("warning message");
 logger.error("error message");
 logger.fatal("fatal message");
 ```
+{: codeblock}
 
-#### iOS - Objective-C
-{: #enable-logger-objectc}
-
-**重要事項**：雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix}} Mobile Services 的主要 SDK，不過預計在今年稍晚停止使用，改用新的 Swift SDK。
-
-Objective-C SDK 會向 {{site.data.keyword.amashort}} 服務的「監視主控台」報告監視資料。如果您依賴 {{site.data.keyword.amashort}} 服務的監視功能，請繼續使用 Objective-C SDK。
-
-```Objective-C
-[[IMFClient sharedInstance] initializeWithBackendRoute:appRoute backendGUID:appGUID];
-
-IMFLogger *logger = [IMFLogger loggerForName:@"myLogger"];
-
-[logger logDebugWithMessages:@"debug"];
-[logger logInfoWithMessages:@"info"];
-[logger logWarnWithMessages:@"warn"];
-[logger logErrorWithMessages:@"error"];
-[logger logFatalWithMessages:@"fatal"];
-
-```
+**bluemixRegion** 參數指定所使用的 Bluemix 部署（例如，`BMSClient.REGION_US_SOUTH` 及 `BMSClient.REGION_UK`）。 
 
 #### iOS - Swift
 {: #enable-logger-swift}
 
 ```Swift
-IMFClient.sharedInstance().initializeWithBackendRoute(appRoute, backendGUID: appGuid)
+BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.REGION_US_SOUTH) // You can change the region
+Analytics.initializeWithAppName(your_app_name_here, apiKey: your_api_key_here, hasUserContext: false, deviceEvents: DeviceEvent.LIFECYCLE)
 
-let logger = IMFLogger(forName: "myLogger");
+let logger = Logger.logger(forName: "myLogger")
 
-logger.logDebugWithMessages("debug");
-logger.logInfoWithMessages("info");
-logger.logWarnWithMessages("warn");
-logger.logErrorWithMessages("error");
-logger.logFatalWithMessages("fatal");
+logger.debug(“debug info")
+logger.info(“info message")
+logger.warn(“warning message")
+logger.error(“error message")
+logger.fatal(“fatal message")
 ```
-
-**附註：**{{site.data.keyword.amashort}} 用戶端 SDK 是使用 Objective-C 進行實作，因此您可能需要將 `IMFLoggerExtension.swift` 檔案新增至 Swift 專案，才能使用先前的日誌程式 API。您可以在 [{{site.data.keyword.amashort}} 用戶端 SDK 保存檔](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)中找到此檔案。
-
+{: codeblock}
+<!--
+**Note:** The {{site.data.keyword.amashort}} client SDK is implemented with Objective-C, therefore you might need to add the `IMFLoggerExtension.swift` file to your Swift project to use the previous logger API. You can find this file in the [{{site.data.keyword.amashort}} client SDK archive](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master).
+-->
 
 #### Cordova
 {: #enable-logger-android-cordova}
 
 ```JavaScript
-BMSClient.initialize(appRoute , appGUID);
+BMSClient.initialize(BMSClient.REGION_US_SOUTH); // You can change the region
 
-var logger = MFPLogger.getInstance("myLogger");
+var logger = BMSLogger.getInstance("myLogger");
 
 logger.debug("debug info");
 logger.info("info message");
 logger.warn("warning message");
 logger.error("error message");
 logger.fatal("fatal message");
-
 ```
+{: codeblock}
 
 您可以在 Logger 類別中找到下列其他方法：
 
@@ -142,7 +132,7 @@ logger.fatal("fatal message");
 **附註：**在 [SDK、範例、API 參考資料](sdks-samples-apis.html)中，尋找每一個平台的完整「日誌程式 API」參考資料。「日誌程式 API」是「{{site.data.keyword.amashort}} 用戶端 SDK 核心」的一部分。
 
 
-### 範例用法
+### 範例日誌程式用法
 {: #sample-logger-usage}
 
 下列程式碼 Snippet 顯示範例「日誌程式」用法：
@@ -151,94 +141,81 @@ logger.fatal("fatal message");
 {: #enable-logger-sample-android}
 
 ```Java
-// Enable persisting logs
-Logger.setCapture(true);
+// Configure Logger to save logs to the device so that they 
+// can later be sent to the {{site.data.keyword.amashort}} service
+// Disabled by default; set to true to enable
+Logger.storeLogs(true);
 
-// Set the minimum log level to be printed and persisted
-Logger.setLevel(Logger.LEVEL.INFO);
+// Change the minimum log level (optional)
+// The default setting is Logger.LEVEL.DEBUG
+Logger.setLogLevel(Logger.LEVEL.INFO);
 
 // Create two logger instances
-Logger logger1 = Logger.getInstance("logger1");
-Logger logger2 = Logger.getInstance("logger2");
+// You can create multiple log instances to organize your logs
+Logger logger1 = Logger.getLogger("logger1");
+Logger logger2 = Logger.getLogger("logger2");
 
 // Log messages with different levels
-logger1.debug("debug message");
+// Debug message for feature 1
+// Info message for feature 2
+logger1.debug("debug message"); 
+//the logger1.debug message is not logged because the logLevelFilter is set to Info
 logger2.info("info message");
 
-// Send persisted logs to the {{site.data.keyword.amashort}} service
+// Send logs to the {{site.data.keyword.amashort}} service
 Logger.send();
 ```
-
-#### iOS - Objective-C
-{: #enable-logger-sample-objectc}
-
-```Objective-C
-// Enable persisting logs
-[IMFLogger setCapture:YES];
-
-// Start capturing uncaught exceptions
-[IMFLogger captureUncaughtExceptions];
-
-// Set the minimum log level to be printed and persisted
-[IMFLogger setLogLevel:IMFLogLevelInfo];
-
-// Create two logger instances
-IMFLogger *logger1 = [IMFLogger loggerForName:@"logger1"];
-IMFLogger *logger2 = [IMFLogger loggerForName:@"logger2"];
-
-// Log messages with different levels
-[logger1 logDebugWithMessages:@"debug message"];
-[logger2 logInfoWithMessages:@"info message"];
-
-// Send persisted logs to the {{site.data.keyword.amashort}} service
-[IMFLogger send];
-```
+{: codeblock}
 
 #### iOS - Swift
 {: #enable-logger-sample-swift}
 
 ```Swift
-// Enable persisting logs
-IMFLogger.setCapture(true)
+// Configure Logger to save logs to the device so that they can later be sent to the {{site.data.keyword.amashort}} service
+// Disabled by default; set to true to enable
+Logger.logStoreEnabled = true
 
-// Start capturing uncaught exceptions
-IMFLogger.captureUncaughtExceptions()
-
-// Set the minimum log level to be printed and persisted
-IMFLogger.setLogLevel(IMFLogLevel.Info)
+// Change the minimum log level (optional)
+// The default setting is LogLevel.Debug
+Logger.logLevelFilter = LogLevel.Info
 
 // Create two logger instances
-let logger1 = IMFLogger(forName: "logger1");
-let logger2 = IMFLogger(forName: "logger2");
+// You can create multiple log instances to organize your logs
+let logger1 = Logger.logger(forName: "feature1Logger")
+let logger2 = Logger.logger(forName: "feature2Logger")
 
 // Log messages with different levels
-logger1.logDebugWithMessages("debug message")
-logger2.logInfoWithMessages("info message")
+logger1.debug("debug message for feature 1") 
+//the logger1.debug message is not logged because the logLevelFilter is set to Info
+logger2.info("info message for feature 2")
 
-// Send persisted logs to the {{site.data.keyword.amashort}} service
-IMFLogger.send()
-
+// Send logs to the {{site.data.keyword.amashort}} service
+Logger.send()
 ```
+{: codeblock}
 
 #### Cordova
 {: #enable-logger-sample-cordova}
 
 ```JavaScript
 // Enable persisting logs
-MFPLogger.setCapture(true);
+BMSLogger.setCapture(true);
 
 // Set the minimum log level to be printed and persisted
-MFPLogger.setLevel(MFPLogger.INFO);
+BMSLogger.setLevel(BMSLogger.INFO);
 
 // Create two logger instances
-var logger1 = MFPLogger.getInstance("logger1");
-var logger2 = MFPLogger.getInstance("logger2");// Log messages with different levels
+var logger1 = BMSLogger.getInstance("logger1");
+var logger2 = BMSLogger.getInstance("logger2");    
+
+// Log messages with different levels
 logger1.debug ("debug message");
 logger2.info ("info message");
 
 // Send persisted logs to the {{site.data.keyword.amashort}} service
-MFPLogger.send(success, failure);
+BMSLogger.send(success, failure);
 ```
+{: codeblock}
 
 ### 啟用 {{site.data.keyword.amashort}} 用戶端 SDK 內部日誌
 {: #enable-logger-sdklogs}
@@ -250,13 +227,14 @@ MFPLogger.send(success, failure);
 ```
 Logger.setSDKInternalLoggingEnabled(true);
 ```
+{: codeblock}
 
 ## 收集用量分析
 {: #usage-analytics}
 
 您可以配置 {{site.data.keyword.amashort}} 用戶端 SDK 來記錄用量分析，以及將記錄的資料傳送給 {{site.data.keyword.amashort}} 服務。
-
-**重要事項**：{{site.data.keyword.amashort}} 服務的監視功能，預計會移轉至新的 [{{site.data.keyword.mobileanalytics_short}} 服務](https://console.ng.bluemix.net/catalog/services/mobile-analytics)。新的 Swift SDK 會利用新的 {{site.data.keyword.mobileanalytics_short}} 服務，此服務提供更豐富的分析體驗。{{site.data.keyword.mobileanalytics_short}} 服務目前處於實驗階段，預計在今年稍晚正式上市。由於預計會在 {{site.data.keyword.mobileanalytics_short}} 正式上市時停止使用 {{site.data.keyword.amashort}} 服務的監視功能，因此建議您先研究移轉應用程式以使用新的 {{site.data.keyword.mobileanalytics_short}} 服務及 Swift SDK。
+<!--
+**Important**: The monitoring functions of the {{site.data.keyword.amashort}} service are planned to be migrated to the new [{{site.data.keyword.mobileanalytics_short}} service](https://console.ng.bluemix.net/catalog/services/mobile-analytics). The new Swift SDK leverages the new {{site.data.keyword.mobileanalytics_short}} service, which provides a much richer analytics experience. The {{site.data.keyword.mobileanalytics_short}} service is currently in experimental phase with plans to be made generally available later this year. We recommend investigating migrating your applications to use the new {{site.data.keyword.mobileanalytics_short}} service and Swift SDK since the monitoring functions of {{site.data.keyword.amashort}} service are planned to be discontinued when {{site.data.keyword.mobileanalytics_short}} is generally available. -->
 
 **附註：**請確定您已啟用記載擷取，再開始記錄用量分析。
 
@@ -266,68 +244,46 @@ Logger.setSDKInternalLoggingEnabled(true);
 {: #usage-analytics-android}
 
 ```Java
+// Disable recording of usage analytics (for example, to save disk space)
+// Recording is enabled by default
+Analytics.disable();
+	
 // Enable recording of usage analytics
-MFPAnalytics.enable();
-
-// Start recording application startup time
-// Add this code in the onCreate method of your main Activity
-MFPAnalytics.startLoggingApplicationStartup();
-
-// Record the duration of application startup
-// Add this code in the onStart method of your main Activity
-MFPAnalytics.logApplicationStartup();
-
-// Record application foreground and background events
-// Add this code in the onPause and onResume methods of your main Activity
-MFPAnalytics.logSessionStart();
-MFPAnalytics.logSessionEnd();
-
-// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
-MFPAnalytics.send();
+Analytics.enable();
+	
+Analytics.log(eventJSONObject);
+	
+// Send recorded usage analytics to the Mobile Analytics Service
+Analytics.send();
 ```
-
-#### iOS - Objective-C
-{: #usage-analytics-objectc}
-
-**重要事項**：雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix}} Mobile Services 的主要 SDK，不過預計在今年稍晚停止使用，改用新的 Swift SDK。
-
-Objective-C SDK 會向 {{site.data.keyword.amashort}} 服務的「監視主控台」報告監視資料。如果您依賴 {{site.data.keyword.amashort}} 服務的監視功能，請繼續使用 Objective-C SDK。
-
-```Objective-C
-// Enable usage analytics recording
-[[IMFAnalytics sharedInstance] setEnabled:YES];
-
-// Start recording application lifecycle events
-[[IMFAnalytics sharedInstance] startRecordingApplicationLifecycleEvents];
-
-
-// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
-[[IMFAnalytics sharedInstance] sendPersistedLogs];
-```
+{: codeblock}
 
 #### iOS - Swift
 {: #usage-analytics-swift}
 
 ```Swift
-// Enable usage analytics recording
-IMFAnalytics.sharedInstance().setEnabled(true)
+// Disable recording of usage analytics (for example, to save disk space)
+// Recording is enabled by default
+Analytics.enabled = false
 
-// Start recording application lifecycle events
-IMFAnalytics.sharedInstance().startRecordingApplicationLifecycleEvents()
+// Enable recording of usage analytics
+Analytics.enabled = true
 
-
-// Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
-IMFAnalytics.sharedInstance().sendPersistedLogs()
+// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
+Analytics.send()
 ```
+{: codeblock}
 
 #### Cordova
 {: #usage-analytics-cordova}
 
 ```JavaScript
 // Enable usage analytics recording
-MFPAnalytics.enable();
+BMSAnalytics.enable();
 
 // Send recorded usage analytics to the {{site.data.keyword.amashort}} Service
-MFPAnalytics.send();
+BMSAnalytics.send();
 ```
+{: codeblock}
+
 **附註：**當您開發 Cordova 應用程式時，請使用原生 API 來啟用應用程式生命週期事件記錄。

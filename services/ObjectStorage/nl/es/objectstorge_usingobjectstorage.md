@@ -69,7 +69,7 @@ Puede acceder al servicio de {{site.data.keyword.objectstorageshort}} mediante I
 * Transferencia de datos entre entornos que no están conectados directamente
 * Función de repositorio central
 
-El servicio de {{site.data.keyword.objectstorageshort}} se basa en OpenStack Swift y se puede acceder a él mediante cualquier aplicación de cliente compatible. Esta sección describe cómo utilizar el cliente de Python Swift, que es la interfaz de línea de mandatos (CLI) para la API de {{site.data.keyword.objectstorageshort}} y sus extensiones, para que funcione con los contenedores y los archivos.
+El servicio de {{site.data.keyword.objectstorageshort}} se basa en OpenStack Swift y se puede acceder a él mediante cualquier aplicación cliente compatible. Esta sección describe cómo utilizar el cliente de Python Swift, que es la interfaz de línea de mandatos (CLI) para la API de {{site.data.keyword.objectstorageshort}} y sus extensiones, para que funcione con los contenedores y los archivos.
 
 ### Instalación del cliente Swift {: #install-swift-client}
 
@@ -267,7 +267,7 @@ A continuación hay un ejemplo completo del uso del control de versiones:
 		$
 ```
 
-### Supresión de un objeto de planificación {: #schedule-object-deletion}
+### Planificación de la supresión de objetos {: #schedule-object-deletion}
 
 Puede configurar los objetos para que caduquen en una determinada cantidad de tiempo. En otras palabras, puede planificar la supresión de los objetos. Puede hacer esto haciendo uso de las cabeceras `X-Delete-At` o `X-Delete-After`. La cabecera `X-Delete-At` toma un número entero que representa el tiempo Epoch en el que se suprime el objeto. La cabecera `X-Delete_After` toma un número entero que representa el número de segundos tras los que se suprimirá el objeto.
 
@@ -287,7 +287,7 @@ Si está utilizando el cliente swift para realizar una publicación en el objeto
 ```
 		swift post -H "X-Remove-Delete-After:" container object
 ```
-Si está utilizando cURL, los mandatos serán los siguientes:
+Si está utilizando cURL, los mandatos serán los siguientes.
 
 * Para establecer el objeto que se suprimirá en "2016/04/01 08:00:00", utilice el mandato siguiente:
 ```
@@ -365,7 +365,7 @@ Para interactuar con la API de {{site.data.keyword.objectstorageshort}}, genere 
 ```
 
 
-El URL consta de cinco partes. La `<versión de la API>` es la v1. Puede encontrar el `<ID de proyecto>`, el `<espacio de nombres del contenedor>` y el `<object namespace>` de {{site.data.keyword.objectstorageshort}} en la interfaz de usuario de {{site.data.keyword.objectstorageshort}}. Para el `<punto de acceso>`, consulte la tabla siguiente:
+El URL consta de cinco partes. La `<versión de la API>` es la v1. Puede encontrar el `<ID de proyecto>`, el `<espacio de nombres del contenedor>` y el `<object namespace>` de {{site.data.keyword.objectstorageshort}} en la interfaz de usuario de {{site.data.keyword.objectstorageshort}}.  Para el `<punto de acceso>`, consulte la tabla siguiente:
 
 
 | **Región**  |   **Punto de acceso público**                     |
@@ -419,7 +419,7 @@ Para crear un contenedor denominado `my_container` en la región de almacenamien
 Para obtener más información sobre los puntos de acceso para distintas regiones, consulte la tabla [Punto de acceso de Object Storage](#access-points).
 
 
-## Comprensión de la autenticación y las credenciales {: #understanding-authentication-credentials}
+## Descripción de la autenticación y las credenciales {: #understanding-authentication-credentials}
 
 ### Generación de credenciales de {{site.data.keyword.objectstorageshort}} sin enlazar una aplicación
 

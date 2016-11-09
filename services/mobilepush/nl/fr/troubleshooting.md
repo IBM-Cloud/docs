@@ -7,7 +7,7 @@ copyright:
 
 # Traitement des incidents
 {: #errors}
-Dernière mise à jour : 16 août 2016
+Dernière mise à jour : 29 août 2016
 {: .last-updated}
 
 Utilisez cette section pour traiter les incidents courants liés aux notifications de type {{site.data.keyword.mobilepushshort}}.

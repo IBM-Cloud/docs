@@ -2,105 +2,71 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-14"
 
 ---
-# SDK、範例及 API 參考資料
+# SDK
 {: #sdk}
-前次更新：2016 年 8 月 11 日
+
+前次更新：2016 年 10 月 14 日
 {: .last-updated}
 
 若要將 {{site.data.keyword.Bluemix}} Mobile Services SDK 新增至應用程式，請選擇您要使用的 SDK，並配置相依關係管理程式以將 SDK 取回至應用程式。
 
-<table id="sdk__sdk-table-mbaas"><tbody><th><img src="images/Droid_SDK_icon.png" alt="android"></th><th><img src="images/iOS_SDK_icon.png" alt="ios"></th><th><img src="images/cordova_logo_white.png" alt="cordova"></th><tr><td><!--<img src="images/Droid_SDK_icon.png" alt="android">-->
-<!---
-<p class="cta"><a href="/docs/starters/mobilefirst/gettingstarted/android_existingproject.html#setup_sdk_gradle">Get SDK</a></p>
---->
-<!-- Android -->
-<p>範例</p>
-	<ul>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld">HelloBluemix</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">HelloPush</a>
-</li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">HelloAuthentication</a>
-</li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellotodo" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">Hello ToDo</a></li>
-</ul>
 
-<p>GitHub 上的 SDK</p>
-	<ul><li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">bms-clientsdk-android-core</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">bms-clientsdk-android-security-facebookauthentication</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">bms-clientsdk-android-security-googleauthentication</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">bms-clientsdk android-push</a></li>
-</ul>
+## 用戶端 SDK
+{: #client_sdk}
 
-<p>API 參考資料</p>
-	<ul>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">Push REST API</a></li>
-</ul>
-</td>
-
-<!-- iOS -->
-
-<td valign="top"><!--<img src="images/iOS_SDK_icon.png" alt="ios">-->
-
-<!---
-<p class="cta"><a href="/docs/starters/mobilefirst/gettingstarted/existingproject.html#setup_sdk_cocoapods">Get
-SDK</a></p> --->
-
-<p>範例</p>
-<ul>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellobluemix">HelloBluemix</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">HelloPush</a>
-</li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">HelloAuthentication</a>
-</li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellotodo" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">Hello ToDo</a></li>
-</ul>
+您可以在行動應用程式中使用下列 SDK，以運用個別功能。 
 
 
-<!--
-<p class="devops"><a href="https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master">SDK on IBM
-DevOps</a></p>
--->
-<p>{{site.data.keyword.IBM}} DevOps 上的 SDK</p>
-<ul>
-<li><a href="https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master" rel="external" title="（下載保存檔）" target="_blank">適用於 iOS 的 Bluemix MobileFirst Services SDK</a></li>
-</ul>
+### Android SDK
+{: #android_sdk}
+
+- [核心 SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core) 
+- [Analytics API SDK](https://github.com/ibm-bluemix-mobile-services/mfp-clientsdk-android-analyticsspec) 
+- [Analytics SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics) 
+- [Push SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push) 
+- [Facebook Authentication SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication) 
+- [Google Authentication SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication) 
 
 
-<p>API 參考資料</p>
-<ul>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">IMFURLProtocol</a></li>
-<li><a href="https://www.{DomainName}/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">Push REST API</a></li>
-</ul>
+### iOS SDK
+{: #ios_sdk}
 
- <!-- Cordova -->
-<td valign="top"><!--<img src="images/cordova_logo_white.png" alt="cordova">-->
-<!---
-<p class="cta"><a href="test">Get SDK</a></p>
---->
-<!---
-<ul><li><strong>Samples:</strong></li>
-<li><a href="gettingstarted/cordova.html">HelloWorld</a></li>
--->
-</ul>
+- [核心 SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
+- [Analytics API SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics-api) 
+- [Analytics SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics) 
+- [Push SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push) 
+- [Facebook Authentication SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
+- [Google Authentication SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication) 
+- [Security SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security) 
 
-<p>範例</p> 
-<ul>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld">HelloBluemix</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">HelloPush</a>
-</li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">HelloAuthentication</a>
-</li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellotodo/" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">Hello ToDo</a></li>
-</ul>
 
-<p>GitHub 上的 SDK</p>
-	<ul>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">bms-clientsdk-cordova-plugin-core</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push" rel="external" title="（在新分頁或視窗中開啟）" target="_blank">bms-clientsdk android-push</a></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
+### Cordova 外掛程式
+{: #cordova_plugin}
+
+- [Core 外掛程式](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+- [Push 外掛程式](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+
+
+## 伺服器 SDK
+{: #server_sdk}
+
+如果您有 Java、NodeJS 或 Swift 伺服器應用程式，則可以使用下列 SDK 與個別服務進行通訊。
+
+
+### Push 伺服器 SDK
+{: #push_sdk}
+
+- [Push Java 伺服器 SDK](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java) 
+- [Push Swift 伺服器 SDK](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift) 
+- [Push NodeJS 伺服器 SDK](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
+
+
+### MCA 伺服器 SDK
+{: #mca_sdk}
+
+- [MCA Swift 伺服器 SDK](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift)
+
+

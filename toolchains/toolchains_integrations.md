@@ -13,7 +13,7 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-Last updated: 27 October 2016
+Last updated: 2 November 2016
 {: .last-updated}
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
@@ -49,7 +49,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to automate the continuous 
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Delivery Pipeline**. Depending on the template that you use, different fields might be available. Review the default field values and if needed, change those settings.
 1. If you have a toolchain on {{site.data.keyword.Bluemix_notm}} Public and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Dedicated, on the Dashboard, on the **DEVOPS** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the upper-right corner of the app's Overview page, click **View Toolchain**. Then, click **Tool Integrations**. 
-1. Click the add button (+).
+1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Delivery Pipeline**.
 1. Specify a name for your new pipeline.
 1. If you plan to use your pipeline to deploy a user interface, select the **Viewable App** check box. All of the apps that your pipeline creates are shown in the **VIEW APP** list on the toolchain's Tool Integrations page.
@@ -110,8 +110,8 @@ To learn more, see [Delivery Pipeline (Link opens in a new window)](https://www.
 Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your code in {{site.data.keyword.Bluemix_notm}} by monitoring your deployments to identify risks before they are released.
 
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. 
-1. Click the add button (+).
-1. In the Tool Integrations section, click **Deployment Risk Analytics**. 
+1. Click **Add a Tool**.
+1. In the Tool Integrations section, click **DevOps Insights**. 
 1. Click **Create Integration**.
 1. Click the tile for {{site.data.keyword.DRA_short}}, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline. For more information, see [{{site.data.keyword.DRA_short}} (Link opens in a new window)](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){: new_window}.
 
@@ -126,7 +126,7 @@ The Eclipse Orion {{site.data.keyword.webide}} is an integrated web-based enviro
 To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webide}} tool integration:
 
 1. If you have a toolchain on {{site.data.keyword.Bluemix_notm}} Public and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Dedicated, on the Dashboard, on the **DEVOPS** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the upper-right corner of the app's Overview page, click **View Toolchain**. Then, click **Tool Integrations**.
-1. Click the add button (+).
+1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Eclipse Orion Web IDE**. 
 1. Click **Create Integration**.
 1. Click the tile for the new Eclipse Orion {{site.data.keyword.webide}}. Your workspace is pre-populated with your GitHub or {{site.data.keyword.ghe_short}} repos. The repos that are associated with your current toolchain are highlighted.
@@ -151,7 +151,7 @@ Configure GitHub to manage your source code on the cloud:
  ![Default target repo locations](images/toolchain_github_config.png)
    
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. 
-1. Click the add button (+).
+1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **GitHub**.
 1. If you have a GitHub repo and want to use it, type the URL. For the repository type, click **Link**.
 1. If you want to use a new GitHub repo, type a name for the GitHub repo, type the URL for the repo that you are cloning or forking, and select the repository type: 
@@ -219,8 +219,8 @@ If your team uses a tool that isn't included on the toolchains integrations list
 Configure a custom tool so that it works with other tools in your toolchain and is available to your team:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Other Tool**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**.
-1. Click the add button (+).
+1. If you have a toolchain on {{site.data.keyword.Bluemix_notm}} Public and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Dedicated, on the Dashboard, on the **DEVOPS** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the upper-right corner of the app's Overview page, click **View Toolchain**. Then, click **Tool Integrations**.
+1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Other Tool**.
 1. Type the tool name.
 1. Select the Lifecycle phase that is most closely associated with the tool. The lifecycle phase choice determines which category your tool is listed under on the Overview page.
@@ -240,8 +240,8 @@ PagerDuty integrates data from multiple monitoring systems into a single view. W
 Configure PagerDuty to send notifications when pipeline stage failures occur so that you can fix problems faster and reduce downtime:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **PagerDuty**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. 
-1. Click the add button (+).
+1. If you have a toolchain on {{site.data.keyword.Bluemix_notm}} Public and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Dedicated, on the Dashboard, on the **DEVOPS** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the upper-right corner of the app's Overview page, click **View Toolchain**. Then, click **Tool Integrations**. 
+1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **PagerDuty**
 1. Type the PagerDuty site name that is associated with your PagerDuty account. If you don't have a PagerDuty account, [register for one (Link opens in a new window)](https://signup.pagerduty.com/accounts/new){: new_window}.
 1. Type the API access key for your PagerDuty account. For instructions to find the key, see [API Authentication (Link opens in a new window)](https://signup.pagerduty.com/accounts/new){: new_window}.
@@ -263,7 +263,7 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Sauce Labs**.
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. 
-1. Click the add button (+).
+1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Sauce Labs**.
 1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message at the top of your Sauce Labs account page (Link opens in a new window)](https://saucelabs.com/account){: new_window}.
 1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page (Link opens in a new window)](https://saucelabs.com/account){: new_window}.
@@ -285,8 +285,8 @@ Slack is a cloud-based, real-time messaging and notification system. Slack provi
 Configure Slack to receive notifications about your toolchain from the tool integrations, such as test and deployment activities:
 
 1. If you are configuring this tool integration as you are creating the toolchain, in the Configurable Integrations section, click **Slack**.
-1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**.
-1. Click the add button (+).
+1. If you have a toolchain on {{site.data.keyword.Bluemix_notm}} Public and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Dedicated, on the Dashboard, on the **DEVOPS** tab, click the toolchain to open its Tool Integrations page. Alternatively, on the upper-right corner of the app's Overview page, click **View Toolchain**. Then, click **Tool Integrations**.
+1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Slack**.
 1. Type the API authentication token for your Slack account. You must use a generated full-access token to authenticate with Slack. For instructions to find the token, see [Slack authentication (Link opens in a new window)](https://api.slack.com/web#authentication){: new_window}.
 1. Type the name of the Slack channel that you want notifications to be sent to. If the channel that you specify doesn't exist, it is created. If the channel was archived, it is reactivated.

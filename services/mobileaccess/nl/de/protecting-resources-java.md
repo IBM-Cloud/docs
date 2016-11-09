@@ -2,17 +2,15 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 
 # Liberty for Java-Ressourcen mit {{site.data.keyword.amashort}} schützen
 {: #protecting-liberty}
 
-Letzte Aktualisierung: 30. Juni 2016
-{: .last-updated}
 
 
-Das {{site.data.keyword.amashort}}-Server-SDK stellt ein `OAuthTAI`-Modul für Liberty for Java&trade;-Anwendungen zur Verfügung, die in {{site.data.keyword.Bluemix}} bereitgestellt werden. Sie müssen Ihren Liberty-Server mit dem `OAuthTAI`-Modul instrumentieren, um den Server gegen unbefugten Zugriff zu schützen und Überwachungsdaten zu erfassen. 
+Das {{site.data.keyword.amashort}}-Server-SDK stellt ein `OAuthTAI`-Modul für Liberty for Java&trade;-Anwendungen zur Verfügung, die in {{site.data.keyword.Bluemix}} bereitgestellt werden. Sie müssen Ihren Liberty-Server mit dem `OAuthTAI`-Modul instrumentieren, um den Server gegen unbefugten Zugriff zu schützen und Überwachungsdaten zu erfassen.
 
 ## Vorbereitungen
 {: #before-you-begin}
@@ -23,7 +21,7 @@ Sie müssen mit der Entwicklung von Liberty for Java-Anwendungen in {{site.data.
 
 1. Laden Sie [OAuthTAI-Artefakte](https://imf-tai.{DomainName}/public/TAI.zip) herunter und extrahieren Sie sie.
 
-1. Kopieren Sie die Datei `com.ibm.worklight.oauth.tai_1.0.0.jar` in das Verzeichnis `$<wlp.user.dir>/extensions/lib`. 
+1. Kopieren Sie die Datei `com.ibm.worklight.oauth.tai_1.0.0.jar` in das Verzeichnis `$<wlp.user.dir>/extensions/lib`.
 
 	**Tipp:** `$<wlp.user.dir>` ist das Benutzerverzeichnis für die Liberty for Java-Laufzeit. Der Standardverzeichnisname ist `usr`.
 

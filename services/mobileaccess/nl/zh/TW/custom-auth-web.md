@@ -2,56 +2,61 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-03"
 
 ---
+
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
 
 #配置適用於 {{site.data.keyword.amashort}} Web 應用程式的自訂鑑別
 {: #custom-web}
 
-前次更新：2016 年 7 月 21 日
-{: .last-updated}
 
-將自訂鑑別及 {{site.data.keyword.amashort}} 安全功能新增至 Web 應用程式。
+將自訂鑑別及 {{site.data.keyword.amafull}} 安全功能新增至 Web 應用程式。
 
 ## 開始之前
 {: #before-you-begin}
+
 開始之前，您必須具有：
 
-*	Web 應用程式。 
-*	{{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用 {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)。
-*	最終重新導向的 URI（在授權處理程序完成之後）。
-
+* Web 應用程式。 
+* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用 {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)。
+* 最終重新導向的 URI（在授權處理程序完成之後）。
 
 如需相關資訊，請參閱：
- * [開始使用 {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
- * [使用自訂身分提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [建立自訂身分提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [配置 {{site.data.keyword.amashort}} 進行自訂鑑別](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+
+* [開始使用 {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+* [使用自訂身分提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
+* [建立自訂身分提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
+* [配置 {{site.data.keyword.amashort}} 進行自訂鑑別](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
-##配置自訂身分提供者 
+##配置自訂身分提供者
+{: #custom-auth-config}
 
 建立自訂身分提供者時，您必須定義 POST 方法，其中包含結構如下的路徑： 
 
 `/apps/:tenantID/<your-realm-name>/handleChallengeAnswer`
 
-`tenantID` 是 url 參數，而 `<your-realm-name>` 是您選擇的任何領域名稱。 
+`tenantID` 是 URL 參數，而 `<your-realm-name>` 是您選擇的任何領域名稱。 
 
 要求內文將包含 `challengeAnswer` 物件，其包含 `username` 及 `password`。
-在驗證使用者之後，此路徑必須傳回結構如下的 JSON 物件。 
 
+
+在驗證使用者之後，此路徑必須傳回結構如下的 JSON 物件。
 
 ```json
 { 
-            status: "success", 
+	status: "success", 
             userIdentity: { 
                 userName: <user name>, 
                 displayName: <display name> 
                 attributes: <additional attributes json> 
             } 
         } 
-
- ```
+```
+{: codeblock}
 
 **附註：**`attributes` 是選用欄位。 
 
@@ -88,14 +93,15 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
          res.json({
                   status: "failure"
                   });
-         }
-         
-         });
-
+	}
+        
+});
 ```
+{: codeblock}
 
 
 ##配置 {{site.data.keyword.amashort}} 進行自訂鑑別 
+{: #custom-auth-config}
 
 在配置您的自訂身分提供者之後，您可以在 {{site.data.keyword.amashort}} 儀表板中啟用自訂鑑別。 
 
@@ -108,7 +114,8 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 7. 儲存。 
 
 
-##使用自訂身分提供者實作 {{site.data.keyword.amashort}} 授權流程 
+##使用自訂身分提供者實作 {{site.data.keyword.amashort}} 授權流程
+{: #custom-auth-flow}
 
 `VCAP_SERVICES` 環境變數是針對每一個 {{site.data.keyword.amashort}} 服務實例自動建立的，並且包含授權處理程序所需的內容。其由 JSON 物件組成，而且可以按一下應用程式左側導覽列中的**環境變數**來進行檢視。
 
@@ -116,34 +123,39 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 1. 從 `VCAP_SERVICES` 環境變數中儲存的服務認證，擷取授權端點 (`authorizationEndpoint`) 及用戶端 ID (`clientId`)。 
 
-  **附註：**如果您已在新增 Web 支援之前將 {{site.data.keyword.amashort}} 服務新增至應用程式，則在服務認證中可能沒有記號端點。請改用下列 URL（視 {{site.data.keyword.Bluemix_notm}} 地區而定）： 
- 
-  美國南部： 
-  ```
-  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
-  ```
-  倫敦：
-  ```
-  https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization 
-  ```
-  雪梨：
-  ```
-  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
-  ```
+	**附註：**如果您已在新增 Web 支援之前將 {{site.data.keyword.amashort}} 服務新增至應用程式，則在服務認證中可能沒有記號端點。請改用下列 URL（視 {{site.data.keyword.Bluemix_notm}} 地區而定）： 
+  
+	美國南部： 
+
+	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
+  ` 
+
+	  倫敦：
+   
+
+	` https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
+   ` 
+
+	  雪梨：
+   
+
+	`  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
+  ` 
+	
 2. 使用 `response_type("code")`、`client_id` 及 `redirect_uri` 作為查詢參數，來建置授權伺服器 URI。  
-1. 從您的 Web 應用程式重新導向至產生的 URI。 
 
-下列範例會擷取 `VCAP_SERVICES` 變數中的參數、建置 URL，然後傳送重新導向要求。
+3. 從您的 Web 應用程式重新導向至產生的 URI。 
 
- ```Java
+	下列範例會擷取 `VCAP_SERVICES` 變數中的參數、建置 URL，然後傳送重新導向要求。
+
+	```Java
 var cfEnv = require("cfenv"); 
 app.get("/protected", checkAuthentication, function(req, res, next){ 
   res.send("Hello from protected endpoint"); 
   }
 ); 
 
-
-function checkAuthentication(req, res, next){ 
+	function checkAuthentication(req, res, next){ 
   // Check if user is authenticated 
   if (req.session.userIdentity){ 
     next() 
@@ -160,44 +172,48 @@ function checkAuthentication(req, res, next){
   } 
 
 } 
-
- ```
+	```
+	{: codeblock}
  
-請注意，`redirect_uri` 參數代表您的 Web 應用程式重新導向 URI，而且必須等於 {{site.data.keyword.amashort}} 儀表板中定義的 URI。  
+	請注意，`redirect_uri` 參數代表您的 Web 應用程式重新導向 URI，而且必須等於 {{site.data.keyword.amashort}} 儀表板中定義的 URI。  
 
-`state` 參數可與要求一起傳遞。此參數將傳播至自訂身分提供者 POST 方法，而且可從要求內文 (`req.body.stateId`) 存取。  
+	`state` 參數可與要求一起傳遞。此參數將傳播至自訂身分提供者 POST 方法，而且可從要求內文 (`req.body.stateId`) 存取。  
 
-在重新導向至授權端點之後，使用者將取得登入表單。在使用自訂身分提供者鑑別使用者的認證之後，{{site.data.keyword.amashort}} 服務將呼叫您的 Web 應用程式重新導向 URI，並提供授權碼作為查詢參數。  
+	在重新導向至授權端點之後，使用者將取得登入表單。在使用自訂身分提供者鑑別使用者的認證之後，{{site.data.keyword.amashort}} 服務將呼叫您的 Web 應用程式重新導向 URI，並提供授權碼作為查詢參數。  
 
-在重新導向之後，使用者將取得登入表單。在自訂身分提供者鑑別使用者的認證之後，{{site.data.keyword.amashort}} 服務將呼叫 Web 應用程式重新導向 URI，並提供授權碼作為查詢參數。 
+	在重新導向之後，使用者將取得登入表單。在自訂身分提供者鑑別使用者的認證之後，{{site.data.keyword.amashort}} 服務將呼叫 Web 應用程式重新導向 URI，並提供授權碼作為查詢參數。 
 
 ##取得記號
+{: custom-auth-tokens}
 
 下一步是使用先前收到的授權碼，取得存取記號及身分記號。為了能夠這樣做，請執行下列動作： 
 
 1. 從 `VCAP_SERVICES` 環境變數中儲存的服務認證，擷取 `authorizationEndpoint`、`clientId` 及 `secret`。 
 
-   **附註：**如果您已在新增 Web 支援之前將 {{site.data.keyword.amashort}} 服務新增至應用程式，則在服務認證中可能沒有記號端點。請改用下列 URL（視 {{site.data.keyword.Bluemix_notm}} 地區而定）： 
+	**附註：**如果您已在新增 Web 支援之前將 {{site.data.keyword.amashort}} 服務新增至應用程式，則在服務認證中可能沒有記號端點。請改用下列 URL（視 {{site.data.keyword.Bluemix_notm}} 地區而定）： 
 
- 美國南部： 
- ```
-     https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
- ```
- 倫敦：
- ```
-     https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
- ``` 
- 雪梨：
- ``` 
-     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
- ```
-1. 將 POST 要求傳送至記號伺服器 URI，並以 `grant_type`、`client_id`、`redirect_uri` 及 `code` 作為表單參數，同時以 `clientId` 及 `secret` 作為「基本」HTTP 鑑別認證。
+	美國南部： 
+  
+	`    https://mobileclientaccess.ng.bluemix.net/oauth/v2/token
+     `
+ 
+	  倫敦：
+   
+ 
+	`    https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
+     ` 
+ 
+	  雪梨：
+   
+ 
+	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
+ `
+ 
+2. 將 POST 要求傳送至記號伺服器 URI，並以 `grant_type`、`client_id`、`redirect_uri` 及 `code` 作為表單參數，同時以 `clientId` 及 `secret` 作為「基本」HTTP 鑑別認證。
 
+	下列範例程式碼會擷取必要值，並透過 POST 要求傳送它們。
 
-下列範例程式碼會擷取必要值，並透過 POST 要求傳送它們。
-
-
- ```Java
+	```Java
 var cfEnv = require("cfenv");
 var base64url = require("base64url ");
 app.get("/oauth/callback", function(req, res, next){ 
@@ -218,23 +234,28 @@ app.get("/oauth/callback", function(req, res, next){
       var parsedBody = JSON.parse(body); 
 
       req.session.accessToken = parsedBody.access_token; 
-      req.session.idToken = parsedBody.id_token; 
-      var idTokenComponents = parsedBody.id_token.split("."); // [header, payload, signature] 
-      var decodedIdentity= base64url(idTokenComponents[1]);
-      req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"]; 
-      res.redirect("/"); 
-    }
-    ).auth(mcaCredentials.clientId, mcaCredentials.secret); 
+			req.session.idToken = parsedBody.id_token; 
+			var idTokenComponents = parsedBody.id_token.split("."); // [header, payload, signature] 
+			var decodedIdentity= base64url.decode(idTokenComponents[1]);
+			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"]; 
+			res.redirect("/"); 
+		}
+		).auth(mcaCredentials.clientId, mcaCredentials.secret); 
   }
 ); 
+	```
+	{: codeblock}
+	
+	請注意，`redirect_uri` 參數必須符合先前的授權要求中所使用的 `redirect_uri`。code 參數值應該是授權要求結束時的回應中收到的授權碼。授權碼的有效時間只有 10 分鐘，過了此時間您將需要取得新的授權碼。
 
- ```
-請注意，`redirect_uri` 參數必須符合先前的授權要求中所使用的 `redirect_uri`。code 參數值應該是授權要求結束時的回應中收到的授權碼。授權碼的有效時間只有 10 分鐘，過了此時間您將需要取得新的授權碼。
-回應內文將包含 JWT 格式的 `access_token` 及 `id_token` (https://jwt.io/)。
 
-在收到存取及身分記號之後，您就可以將 Web 階段作業標示為已鑑別，並可選擇性地持續保存這些記號
+	回應內文將包含 JWT 格式的 `access_token` 及 `id_token` (https://jwt.io/)。
 
-##使用取得的存取及身分記號 
+	在收到存取及身分記號之後，您就可以將 Web 階段作業標示為已鑑別，並可選擇性地持續保存這些記號
+
+
+##使用取得的存取及身分記號
+{: #custom-auth-using-token}
 
 身分記號包含使用者身分的相關資訊。若為自訂鑑別，記號將包含自訂身分提供者在鑑別時所傳回的所有資訊。在 `imf.user` 欄位下，欄位 `displayName` 將包含自訂身分提供者所傳回的 `displayName`，而欄位 `id` 將包含 `userName`。`imf.user` 下的欄位 `attributes` 內會傳回自訂身分提供者所傳回的所有其他值。  
 

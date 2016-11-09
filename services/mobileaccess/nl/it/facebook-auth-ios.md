@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,12 +11,8 @@ copyright:
 # Abilitazione dell'autenticazione Facebook per le tue applicazioni iOS (SDK Objective-C)
 {: #facebook-auth-ios}
 
+Per utilizzare Facebook come provider di identità nelle tue applicazioni iOS {{site.data.keyword.amafull}}, aggiungi e configura la piattaforma iOS per la tua applicazione Facebook.
 
-Ultimo aggiornamento: 17 luglio 2016
-{: .last-updated}
-
-
-Per utilizzare Facebook come provider di identità nelle tue applicazioni iOS, aggiungi e configura la piattaforma iOS per la tua applicazione Facebook.
 {:shortdesc}
 
 **Nota:** mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix}}, è pianificato di abbandonarla più avanti questo anno in favore della nuova SDK Swift (consulta [Configurazione dell'SDK Swift iOS](facebook-auth-ios-swift-sdk.html)).
@@ -76,6 +72,7 @@ L'SDK client {{site.data.keyword.amashort}} è distribuito con CocoaPods, un ges
 	```
 	pod 'IMFFacebookAuthentication'
 	```
+{: codeblock}
 
 1. Salva il `Podfile` ed esegui il comando `pod install` dalla riga di comando. CocoaPods installa le dipendenze. Vengono visualizzati lo stato di avanzamento e quali componenti sono stati aggiunti.
  **Importante**: devi ora aprire il tuo progetto utilizzando il file `xcworkspace` che viene generato da CocoaPods. Di norma, il
@@ -143,6 +140,8 @@ Puoi anche aggiornare il file `info.plist` facendo clic con il pulsante destro d
 	    </dict>
 	</dict>
 ```
+{: codeblock}
+
 Aggiorna le proprietà schema URL e FacebookappID con il tuo ID applicazione Facebook.
 
  **Importante**: assicurati di non sovrascrivere alcuna proprietà esistente nel file `info.plist`. Se hai delle proprietà che si sovrappongono, devi unirle manualmente. Per ulteriori informazioni, vedi [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) e [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9).
@@ -152,7 +151,7 @@ Aggiorna le proprietà schema URL e FacebookappID con il tuo ID applicazione Fac
 
 Inizializza l'SDK client passando la rotta della tua applicazione (`applicationRoute`) e il GUID applicazione (`applicationGUID`).
 
-Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione
+Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione.
 
 1. Apri la pagina principale del dashboard {{site.data.keyword.Bluemix_notm}} e fai clic sulla tua applicazione. Fai clic su **Opzioni mobili** e annota la tua **Rotta** (`applicationRoute`) e il tuo **GUID applicazione** (`applicationGUID`).
 
@@ -166,6 +165,7 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
+{: codeblock}
 
 	####Swift
 	{: #bridgingheader-swift}
@@ -173,8 +173,8 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 	L'SDK client {{site.data.keyword.amashort}} è implementato utilizzando Objective-C, pertanto potresti dover aggiungere un'intestazione di collegamento al tuo progetto swift.
 
 	1. Fai clic con il pulsante destro del mouse sul tuo progetto in Xcode e seleziona **New File...**
-	* Nella categoria **iOS Source**, seleziona `Header file`
-	* Denominalo `BridgingHeader.h`
+	* Nella categoria **iOS Source**, scegli `Header file`.
+	* Denominalo `BridgingHeader.h`.
 	* Aggiungi le importazioni alla tua intestazione di collegamento:
 
 	```Objective-C
@@ -182,12 +182,14 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
+{: codeblock}
+
 	* Fai clic sul tuo progetto in Xcode e seleziona la scheda **Build Settings**.
 	* Cerca **Objective-C Bridging Header**.
 	* Imposta il valore sull'ubicazione del tuo file `BridgingHeader.h`, ad esempio: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	* Assicurati che la tua intestazione di collegamento venga rilevata da Xcode compilando il tuo progetto. Non dovresti vedere alcun messaggio di errore.
 
-3. Inizializza l'SDK client.	Sostituisci *applicationRoute* e *applicationGUID* con i valori **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
+3. Inizializza l'SDK client.	Sostituisci `applicationRoute` e `applicationGUID` con i valori **Rotta** e **GUID applicazione** che hai ottenuto da **Opzioni mobili** nel dashboard {{site.data.keyword.Bluemix_notm}}.
 
 	####Objective-C
 	{: #approute-objc}
@@ -197,6 +199,7 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+{: codeblock}
 
 	####Swift
 	{: #approute-swift}
@@ -205,9 +208,27 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+{: codeblock}
+
+1. Inizializza `AuthorizationManager` trasmettendo al servizio  {{site.data.keyword.amashort}} il parametro `tenantId`. Puoi trovare questo valore facendo clic sul pulsante **Visualizza credenziali** nel tile del servizio {{site.data.keyword.amashort}}.
+	####Objective-C
+	{: #authman-objc}
+
+	```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+	```
+{: codeblock}
+
+	####Swift
+	{: #authman-swift}
+
+	```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+	```
+{: codeblock}
 
 1. Segnala all'SDK Facebook l'attivazione dell'applicazione e registra il gestore autenticazione Facebook aggiungendo il seguente codice al
-metodo `application:didFinishLaunchingWithOptions` nel tuo delegato dell'applicazione. Aggiungi questo codice dopo che hai inizializzato l'istanza IMFClient. 
+metodo `application:didFinishLaunchingWithOptions` nel tuo delegato dell'applicazione. Aggiungi questo codice dopo che hai inizializzato l'istanza IMFClient.
 
 	####Objective-C
 	{: #activate-objc}
@@ -216,6 +237,7 @@ metodo `application:didFinishLaunchingWithOptions` nel tuo delegato dell'applica
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 ```
+{: codeblock}
 
 	####Swift
 	{: #activate-swift}
@@ -224,6 +246,7 @@ metodo `application:didFinishLaunchingWithOptions` nel tuo delegato dell'applica
 		FBAppEvents.activateApp()
 		IMFFacebookAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
 ```
+{: codeblock}
 
 1. Aggiungi il seguente codice al tuo delegato dell'applicazione.
 
@@ -238,6 +261,7 @@ metodo `application:didFinishLaunchingWithOptions` nel tuo delegato dell'applica
 
 	}
 ```
+{: codeblock}
 
 	####Swift
 	{: #appdelegate-swift}
@@ -284,6 +308,7 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 		}
 	}];
 	```
+{: codeblock}
 
 	####Swift
 	{: #requestpath-swift}
@@ -301,6 +326,7 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 		}
 	};
  ```
+ {: codeblock}
 
 1. Esegui la tua applicazione. Viene visualizzata una schermata di accesso Facebook.
 
@@ -321,6 +347,7 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 	```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
 	```
+{: codeblock}
 
 	####Swift
 	{: #logout-swift}
@@ -328,6 +355,7 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 	```Swift
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
 	```
+{: codeblock}
 
 	Se richiami questo codice dopo che un utente ha eseguito l'accesso con Facebook e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Facebook per scopi di autenticazione.
 

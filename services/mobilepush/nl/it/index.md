@@ -1,4 +1,4 @@
-	---
+---
 
 copyright:
  years: 2015, 2016
@@ -12,12 +12,12 @@ copyright:
 
 # Introduzione a {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Ultimo aggiornamento: 16 agosto 2016
+Ultimo aggiornamento: 17 ottobre 2016
 {: .last-updated}
 
 {:shortdesc}
 
-Il servizio {{site.data.keyword.mobilepushshort}} fornisce una piattaforma unificata per inviare e gestire {{site.data.keyword.mobilepushshort}} mobili mirate a piattaforme iOS e Android. Il servizio {{site.data.keyword.mobilepushshort}} gestisce l'associazione dei tuoi utenti dell'applicazione ai loro dispositivi e alla loro piattaforma del dispositivo e gestisce l'invio a essi di notifiche di push. Con questo servizio, puoi inviare broadcast, unicast (basati su ID dispositivo) e anche tag (o argomenti) come notifiche push ai tuoi utenti delle applicazioni mobili. Puoi anche utilizzare un SDK e le [API REST](https://mobile.{DomainName}/imfpushrestapidocs/) per sviluppare ulteriormente le tue applicazioni client.
+Il servizio {{site.data.keyword.mobilepushshort}} fornisce una piattaforma unificata per inviare e gestire le notifiche push  mobili e web mobili mirate a iOS, alle piattaforme mobili Android e ai browser web Google Chrome, Mozilla Firefox e alle estensioni e applicazioni Google Chrome. Il servizio {{site.data.keyword.mobilepushshort}} gestisce l'associazione dei tuoi utenti dell'applicazione ai loro dispositivi, alla loro piattaforma del dispositivo e ai loro browser web e gestisce l'invio a essi di notifiche di push. Con questo servizio, puoi inviare broadcast, unicast (basati su ID dispositivo) e anche tag (o argomenti) come notifiche push ai tuoi utenti delle applicazioni mobili e browser web. Puoi anche utilizzare un SDK e le [API REST](https://mobile.{DomainName}/imfpush/) per sviluppare ulteriormente le tue applicazioni client.
 
 Questa sezione descrive come configurare notifiche di push di base. Quando utilizzi una notifica di base, viene eseguita la trasmissione in broadcast
       delle notifiche invece di raggiungere una specifica serie di utenti utilizzando le tag.
@@ -50,4 +50,4 @@ Questa sezione descrive come configurare notifiche di push di base. Quando utili
 * [Push API Reference (Android)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html){: new_window}
 * [IMFPush API reference iOS](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html){: new_window}
 * [BMSPush API reference iOS (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/blob/development/Apple Docs/index.html){: new_window}
-* [REST API Reference](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}
+* [REST API Reference](https://mobile.{DomainName}/imfpush/){: new_window}

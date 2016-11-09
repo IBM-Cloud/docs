@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-28"
 
 ---
 
@@ -14,8 +16,6 @@ copyright:
 #Monitoring and logging with Cloud Foundry
 {: #monitoringandlogging}
 
-Last updated: 28 October 2016
-{: .last-updated}
 
 By monitoring your apps and reviewing logs, you can follow application execution and data flow to get a better understanding of your deployment. In addition, you can reduce the time and effort that is required to locate any issues and repair them.
 {:shortdesc}
@@ -42,7 +42,7 @@ When you are using the Cloud Foundry infrastructure to run your apps on {{site.d
 
 To monitor {{site.data.keyword.Bluemix_notm}} apps, use one of the following methods:
 
-* {{site.data.keyword.Bluemix_notm}} services. Monitoring and Analytics offers a service that you can use to monitor your application performance. In addition, this service also provides analytic features such as log analysis. For more information, see [Monitoring and Analytics](../services/monana/index.html).
+* {{site.data.keyword.Bluemix_notm}} services. Monitoring and Analytics offers a service that you can use to monitor your application performance. In addition, this service also provides analytic features such as log analysis. For more information, see [Monitoring and Analytics](/docs/services/monana/index.html).
 * Third-party options. For example, [New Relic](http://newrelic.com/){:new_window}.
 
 ###Logging for apps running on Cloud Foundry
@@ -197,7 +197,7 @@ staging task. You can use this log to troubleshoot staging problems.</p>
 </li></ul>
 
 
-**Note:** For information about how to enable application logging, see [Debugging runtime errors](../debug/index.html#debugging-runtime-errors).
+**Note:** For information about how to enable application logging, see [Debugging runtime errors](/docs/debug/index.html#debugging-runtime-errors).
 
 
 

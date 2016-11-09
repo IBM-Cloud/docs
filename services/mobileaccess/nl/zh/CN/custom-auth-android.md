@@ -2,14 +2,15 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-09"
 ---
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+
+
 
 # 针对 {{site.data.keyword.amashort}} Android 应用程序配置定制认证
 {: #custom-android}
-
-上次更新时间：2016 年 8 月 01 日
-{: .last-updated}
 
 
 配置 Android 应用程序进行定制认证，以使用 {{site.data.keyword.amashort}} 客户端 SDK，并将该应用程序连接到 {{site.data.keyword.Bluemix}}。
@@ -23,6 +24,7 @@ copyright:
  * [创建定制身份提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [配置 {{site.data.keyword.amashort}} 进行定制认证](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
+记录服务参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开服务。单击**移动选项**。`applicationRoute` 和 `tenantId`（也称为 `appGUID`）值会显示在**路由**和**应用程序 GUID/TenantId** 字段中。您将需要这些值来初始化 SDK，并将请求发送到后端应用程序。
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #custom-android-initialize}
@@ -52,18 +54,18 @@ copyright:
 
 1. 初始化 SDK。
 在 Android 应用程序中，通常会将初始化代码放置在主 Activity 的 `onCreate` 方法中，但这不是强制性的。
-将 *applicationRoute* 和 *applicationGUID* 替换为您在 {{site.data.keyword.Bluemix_notm}} 仪表板中单击应用程序中的**移动选项**所获取的**路径**和**应用程序 GUID** 值。
 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
-```
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+
+	```
+
 将 `BMSClient.REGION_UK` 替换为相应的区域。
 	
 
-要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
+要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。区域值应该为以下其中一个值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。				
+	
+
 ## AuthenticationListener 接口
 {: #custom-android-authlistener}
 
@@ -76,6 +78,8 @@ copyright:
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+
+
 #### 自变量
 {: #custom-android-onAuth-arg}
 
@@ -109,6 +113,7 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
@@ -122,8 +127,8 @@ void submitAuthenticationFailure (JSONObject info);
 package com.ibm.helloworld;
 import android.content.Context;
 import android.util.Log;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationContext;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationListener;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationContext;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -167,37 +172,41 @@ public class CustomAuthenticationListener implements AuthenticationListener {@Ov
 创建定制 AuthenticationListener 后，在开始使用前，请先向 `BMSClient` 注册该侦听器。将以下代码添加到应用程序中。对受保护资源发送任何请求之前，必须先调用此代码。
 
 ```Java
-MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+MCAAuthorizationManager mcaAuthorizationManager = 
+      MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<MCAServiceTenantId>");
 mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
 
-使用在 {{site.data.keyword.amashort}}“仪表板”中指定的 *realmName*。
+
+在代码中：
+* 将 `MCAServiceTenantId` 替换为 `tenantId` 值（请参阅[开始之前](##before-you-begin)）。 
+* 使用在 {{site.data.keyword.amashort}}“仪表板”中指定的 `realmName`。
 
 
 ## 测试认证
 {: #custom-android-testing}
 初始化客户端 SDK 并注册定制 AuthenticationListener 后，可以开始对移动后端应用程序发起请求。
 
-### 开始之前
+### 测试之前
 {: #custom-android-testing-before}
 您必须具有使用 {{site.data.keyword.mobilefirstbp}} 样板创建的应用程序，并且在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。
 
 
-1. 通过浏览器向移动后端应用程序的受保护端点 (`{applicationRoute}/protected`) 发送请求，例如 `http://my-mobile-backend.mybluemix.net/protected`。
+1. 通过浏览器向移动后端应用程序的受保护端点 (`{applicationRoute}/protected`) 发送请求，例如 `http://my-mobile-backend.mybluemix.net/protected`。有关获取 `{applicationRoute}` 值的信息，请参阅[开始之前](#before-you-begin)。 
 
 1. 使用 {{site.data.keyword.mobilefirstbp}} 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，浏览器中会显示 `Unauthorized` 消息。
 
-1. 使用 Android 应用程序对同一端点发起请求。初始化 `BMSClient` 并注册定制 AuthenticationListener 后，添加以下代码。
+1. 使用 Android 应用程序对包含 `{applicationRoute}` 的同一受保护端点发起请求。初始化 `BMSClient` 并注册定制 AuthenticationListener 后，添加以下代码。
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp",  MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -212,6 +221,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 	});
 ```
 
+	
 1. 	请求成功后，将在 LogCat 工具中显示以下输出：
 
 	![图像](images/android-custom-login-success.png)
@@ -221,6 +231,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+
 
  如果您在用户登录之后调用此代码，那么用户将注销。用户在尝试重新登录时，必须重新回答服务器发出的质询。
 

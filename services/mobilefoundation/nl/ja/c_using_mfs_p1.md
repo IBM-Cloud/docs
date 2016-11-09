@@ -2,14 +2,14 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-09-12"
 ---
 
 #	「開発者」プランの使用
 {: #using_mobilefoundation_p1}
 
-最終更新日: 2016 年 8 月 4 日
-{: .last-updated}
+<!--Last updated: 12 September 2016
+{: .last-updated}-->
 
 「{{site.data.keyword.mobilefoundation_short}}: 開発者」サービス・インスタンスを作成した後、数秒後には {{site.data.keyword.Bluemix_notm}} の`「概要」`ページにアクセスでき、ここで {{site.data.keyword.mobilefoundation_short}} サービスを使い始める上で役立つチュートリアルやビデオが提供されます。
 
@@ -32,7 +32,26 @@ copyright:
 *	**「コンソールの起動」**をクリックして {{site.data.keyword.mfp_oc_short_notm}} を起動します。
 
 
-<!--This console runs inside the container.--> このコンソールを使用して、モバイル・アプリとモバイル・デバイスの管理、モバイル・バックエンドとしてのサーバーの使用、プッシュ通知の送信などを行えます。## {{site.data.keyword.mobilefirst}} サーバーの再作成
+<!--This console runs inside the container.--> このコンソールを使用して、モバイル・アプリとモバイル・デバイスの管理、モバイル・バックエンドとしてのサーバーの使用、プッシュ通知の送信などを行えます。
+
+##  Mobile Analytics サーバーの追加
+{: #adding_analytics_server_dev}
+
+ Mobile Analytics サーバーを {{site.data.keyword.mobilefoundation_short}} サービス・インスタンスに追加することにより、{{site.data.keyword.mobilefirst}} サーバー上のモバイル・アプリケーションをモニターできるようになりました。「開発者」プランでは、単一のノードと 1 GB メモリーを持つコンテナー・グループに、Mobile Analytics サーバーを作成します。
+
+* **「Analytics の追加 (Add Analytics)」**をクリックして、Mobile Analytics サーバーを {{site.data.keyword.mobilefoundation_short}} サービス・インスタンスに追加します。
+
+プロビジョン・プロセスが始動します。このプロセスには約 10 分かかり、メッセージ・ウィンドウにはこの操作の進行が示されます。  
+
+*  {{site.data.keyword.mfp_oc_short_notm}} から、MobileFirst Analytics コンソールを起動します。
+
+* {{site.data.keyword.mfserver_short_notm}} と Mobile Analytics サーバーとの間で、シングル・サインオンが使用可能になります。Mobile Analytics サーバーは、{{site.data.keyword.mfserver_short_notm}} と同じ LTPA 鍵とユーザー資格情報で構成されます。{{site.data.keyword.mfp_oc_short_notm}} のログインに使用したのと同じ `username` と `password` を使用して、Mobile Analytics コンソールにログインできます。
+
+MobileFirst Analytics について詳しくは、[MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}を参照できます。
+
+**注:** {{site.data.keyword.mobilefoundation_short}} サービス・インスタンスを削除する場合や、{{site.data.keyword.mfserver_short_notm}} を再作成しようとする場合、Mobile Analytics サーバーは削除されます。
+
+## {{site.data.keyword.mobilefirst}} サーバーの再作成
 {: #recreate_mobilefoundation_p1}
 
 *	**「再作成」**をクリックしてサーバーを再作成します。

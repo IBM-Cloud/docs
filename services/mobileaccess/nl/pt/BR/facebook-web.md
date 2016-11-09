@@ -12,12 +12,12 @@ copyright:
 
 Use o Facebook para autenticar usuários em seu app da web.
 
-## Antes de começar
+## Antes de iniciar
 {: #facebook-auth-android-before}
 Você deve ter:
 * Um app da web.  
 * Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
-* Um ID de aplicativo e um segredo de app do Facebook. Para obter mais informações, consulte [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* Um ID de aplicativo e um segredo de app do Facebook. Para obter mais informações, veja [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
 ## Configurando um aplicativo Facebook para seu website
@@ -60,7 +60,7 @@ Para iniciar o processo de autorização:
     ```
 
 
-  O parâmetro `state` não está em uso no momento e pode ficar vazio.
+  O parâmetro `state` não está em uso por enquanto e pode permanecer vazio.
   O parâmetro `redirect_uri` é o URI para redirecionamento após a autenticação bem-sucedida ou com falha com o Facebook.
 
 1. Depois de redirecionar para o terminal de autorização, você obtém um formulário de login do

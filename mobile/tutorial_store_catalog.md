@@ -10,9 +10,6 @@ lastupdated: "2016-10-21"
 # Tutorial - Store Catalog UI Starter
 {: #tutorial_store_catalog}
 
-Last updated: 21 October 2016
-{: .last-updated}
-
 The {{site.data.keyword.Bluemix}} Store Catalog UI Starter provides a basic sales app structure that you can customize, and gives you integration points for each of the {{site.data.keyword.Bluemix_notm}} Mobile services.
 
 
@@ -62,6 +59,8 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 4. Design your app.
 
    1. Select **UI Builder** in the navigation menu to customize the design of your app.
+   
+		**Tip:** To view a quick overview of the UI Builder, select **Show me how it works** in the navigation after selecting the UI Builder.
 
    2. Select the **Design** tab in the navigation.
 
@@ -126,7 +125,7 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 ## What to do next
 {: #tutorial_next}
 
-[Try it out!](http://new-console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+[Try it out!](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
 
 
 # Related Links
@@ -149,6 +148,7 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 * [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
+* [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 
 ## Tutorials and Samples
 {: #samples}

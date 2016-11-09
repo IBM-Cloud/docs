@@ -2,17 +2,13 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Cordova-App konfigurieren
 {: #custom-cordova}
 
-Letzte Aktualisierung: 17. Juli 2016
-{: .last-updated}
-
-
-Konfigurieren Sie Ihre Cordova-Anwendung, die mit der angepassten Authentifizierung arbeitet, zur Verwendung des {{site.data.keyword.amashort}}-Client-SDK und verbinden Sie Ihre Anwendung mit {{site.data.keyword.Bluemix}}.
+Konfigurieren Sie Ihre Cordova-Anwendung, die mit der angepassten Authentifizierung arbeitet, zur Verwendung des {{site.data.keyword.amafull}}-Client-SDK und verbinden Sie Ihre Anwendung mit {{site.data.keyword.Bluemix}}.
 
 
 ## Vorbereitungen
@@ -32,17 +28,21 @@ Initialisieren Sie das SDK, indem Sie die Parameter 'applicationGUID' und 'appli
 1. Initialisieren Sie das Client-SDK.
 
 	```JavaScript
-	BMSClient.initialize(applicationRoute, applicationGUID);
+	BMSClient.initialize("applicationRoute", "applicationGUID");
 
 	```
- Ersetzen Sie *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID** aus der Anzeige **Mobile Systemerweiterungen** Ihrer Anwendung im {{site.data.keyword.Bluemix_notm}}-Dashboard.
+ * Ersetzen Sie `applicationRoute` und `applicationGUID` durch die Werte für **Route** und **App-GUID**. Diese Werte erhalten Sie, wenn Sie auf die Schaltfläche **Mobile Optionen** in Ihrer {{site.data.keyword.Bluemix_notm}}-Anwendung im {{site.data.keyword.Bluemix_notm}}-Dashboard klicken.
+	
+ 
+ 
+## {{site.data.keyword.amashort}}-AuthorizationManager initialisieren
+ {: #custom-cordova-MCAAM}
+Initialisieren Sie den `MCAAuthorizationManager` durch Übergeben des Parameters `tenantId` des {{site.data.keyword.amashort}}-Service. Diesen Wert erhalten Sie, wenn Sie auf die Schaltfläche **Berechtigungsnachweise anzeigen** der Kachel für den {{site.data.keyword.amashort}}-Service klicken.
 
-##{{site.data.keyword.amashort}}-AuthorizationManager initialisieren
-Initialisieren Sie den AuthorizationManager durch Übergeben des Parameters `tenantId` des {{site.data.keyword.amashort}}-Service, den Sie erhalten, wenn Sie auf die Schaltfläche **Berechtigungsnachweise anzeigen** der Kachel für den {{site.data.keyword.amashort}}-Service klicken. 
-
-  ```JavaScript
+```JavaScript
   MFPAuthorizationManager.initialize("tenantId");
-  ```
+        
+```
 
 ## Schnittstelle 'AuthenticationListener'
 {: #custom-cordva-auth}
@@ -77,13 +77,13 @@ Durch das Aufrufen der Methode `onAuthenticationChallengeReceived` delegiert das
 onAuthenticationSuccess: function(info){...}
 ```
 
-Diese Methode wird nach einer erfolgreichen Authentifizierung aufgerufen. Die Argumente sind ein optionales JSONObject, das erweiterte Informationen zu dem Authentifizierungserfolg enthält.
+Diese Methode wird nach einer erfolgreichen Authentifizierung aufgerufen. Die Argumente umfassen ein optionales JSON-Objekt, das erweiterte Informationen zu dem Authentifizierungserfolg enthält.
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
 
-Diese Methode wird nach einem Authentifizierungsfehler aufgerufen. Die Argumente sind ein optionales JSONObject, das erweiterte Informationen zu dem Authentifizierungsfehler enthält.
+Diese Methode wird nach einem Authentifizierungsfehler aufgerufen. Die Argumente umfassen ein optionales JSON-Objekt, das erweiterte Informationen zu dem Authentifizierungsfehler enthält.
 
 ## authenticationContext
 {: #custom-cordova-authcontext}
@@ -155,7 +155,8 @@ Nach der Initialisierung des Client-SDK und der Registrierung der angepassten Sc
 Sie müssen eine Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, sowie eine Ressource, die durch {{site.data.keyword.amashort}} geschützt wird, am Endpunkt `/protected` haben.
 
 
-1. Senden Sie eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung in Ihrem Browser, indem Sie die Adresse `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`). Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Auf den Endpunkt können nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Daher wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Browser angezeigt.
+1. Senden Sie eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung in Ihrem Browser, indem Sie die Adresse `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
+ Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Auf den Endpunkt können nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Daher wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Browser angezeigt.
 
 1. Senden Sie eine Anforderung über Ihre Cordova-Anwendung an denselben Endpunkt. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert und Ihre angepasste Schnittstelle 'AuthenticationListener' registriert haben.
 

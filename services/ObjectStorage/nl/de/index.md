@@ -2,25 +2,36 @@
 
 copyright:
   years: 2014, 2016
-
 ---
-
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
 
-# Einführung in {{site.data.keyword.objectstorageshort}}  {: #getting-started-with-object-storage}
 
-Letzte Aktualisierung: 25. August 2016
+# Einführung in {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage}
+
+*Letzte Aktualisierung: 19. Oktober 2016*
 {: .last-updated}
 
-{{site.data.keyword.objectstoragefull}} ermöglicht Ihnen zur Verwaltung Ihrer Daten den Zugriff auf ein vollständig eingerichtetes Swift {{site.data.keyword.objectstorageshort}}-Konto. Swift stellt eine vollständig verteilte Speicherplattform bereit, auf die von APIs zugegriffen werden kann. Diese Speicherplattform können Sie direkt in Ihren Anwendungen oder zu Backup-Zwecken verwenden, was sie zur einer idealen Lösung für kosteneffektiven Scale-out-Speicher macht.
+{{site.data.keyword.objectstoragefull}} bietet eine unstrukturierte Clouddatenspeicherung. Sie können Ihren Inhalt speichern und darauf zugreifen sowie interaktiv zusammenstellen und mit Apps und Services verbinden.
+{: shortdesc}
 
-**Anmerkung:** Eine providerseitige Verschlüsselung wird nicht unterstützt. Für die Verschlüsselung von Daten vor dem Hochladen ist die Clientanwendung zuständig.
+Beispiele für häufige Anwendungsfälle für den {{site.data.keyword.objectstorageshort}}-Service:
+
+* Sicherung durch Backups von Datenträgerdaten aus Ihren Instanzen
+* Verwendung als Zwischenspeicherposition bei der Übertragung umfangreicher Datenvolumen
+* Übertragung von Daten zwischen Umgebungen, die nicht direkt verbunden sind
+* Einsatz als zentrales Repository
 
 
-Führen Sie die folgenden Schritte aus, um mit der Nutzung von {{site.data.keyword.objectstorageshort}} zu beginnen:
 
-1.	Stellen Sie Ihre {{site.data.keyword.objectstorageshort}}-Instanz aus dem {{site.data.keyword.Bluemix_notm}}-Katalog bereit.
-2.	Konfigurieren Sie Ihre {{site.data.keyword.objectstorageshort}}-Instanz und klicken Sie auf **Erstellen**. Wenn Sie anfangs die Option **Nicht binden** für das Feld **App** auswählen, können Sie trotzdem weiterhin die Serviceinstanz an Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung binden, wenn Sie die Konfiguration abgeschlossen haben. Anweisungen finden Sie unter [Eigene App binden](../ObjectStorage/objectstorge_usingobjectstorage.html#using-object-storage-from-bluemix-app).
+{{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} ermöglicht Ihnen zur Verwaltung Ihrer Daten den Zugriff auf ein vollständig eingerichtetes Swift {{site.data.keyword.objectstorageshort}}-Konto. Eine providerseitige Verschlüsselung wird nicht bereitgestellt.
+
+
+1.	Stellen Sie über den {{site.data.keyword.Bluemix_notm}}-Katalog Ihre Serviceinstanz bereit. Konfigurieren Sie Ihre Instanz und klicken Sie auf **Erstellen**. Wenn Sie anfangs die Option **Nicht binden** für das Feld **App** auswählen, können Sie die Serviceinstanz dennoch zu einem späteren Zeitpunkt an Ihre {{site.data.keyword.Bluemix_notm}}-App binden.
+2. Erstellen Sie In Ihrem Serviceinstanz-Dashboard einen Container, um mit dem Speichern von Objekten zu beginnen.
+3. Fügen Sie Ihrem Container oder Bucket über das Dropdown-Menü **Aktionen** eine Datei hinzu.
+4. Um den Zugriff auf Ihre Objekte zu testen, klicken Sie auf **Download** und überprüfen Sie die Datei.
+5. Wenn Sie für die Verbindung Ihrer Instanz mit einer Anwendung bereit sind, richten Sie Ihre Serviceberechtigungsnachweise ein und [binden Sie den Service](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service).
 
 
 
@@ -38,10 +49,9 @@ Führen Sie die folgenden Schritte aus, um mit der Nutzung von {{site.data.keywo
 
 ## Lernprogramme und Beispiele
 {: #samples}
-* [Herstellen einer Verbindung zu {{site.data.keyword.objectstoragefull}} über Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
+* [Herstellen einer Verbindung zu IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} mit Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
 * [Python für den Zugriff auf {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}} verwenden](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
 * [PHP zur Nutzung von {{site.data.keyword.objectstorageshort}} verwenden](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window}
-* [pkgcloud für den Zugriff auf {{site.data.keyword.objectstoragefull}} über Node.js verwenden](https://developer.ibm.com/recipes/tutorials/use-pkgcloud-to-access-ibm-object-storage-for-bluemix-with-node-js/){: new_window}
 
 ## Kompatible Laufzeiten
 {: #buildpacks}

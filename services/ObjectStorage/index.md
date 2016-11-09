@@ -2,15 +2,16 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 
+
 # Getting started with {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage}
 
-*Last updated: 19 October 2016*
-{: .last-updated}
 
 {{site.data.keyword.objectstoragefull}} provides unstructured cloud data storage. You can store and access your content as well as interactively compose and connect to apps and services.
 {: shortdesc}

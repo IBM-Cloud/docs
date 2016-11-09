@@ -7,7 +7,7 @@ copyright:
 
 # 故障诊断
 {: #errors}
-上次更新时间：2016 年 8 月 16 日
+上次更新时间：2016 年 8 月 29 日
 {: .last-updated}
 
 使用本部分作为指南，对常见 {{site.data.keyword.mobilepushshort}} 问题进行故障诊断。

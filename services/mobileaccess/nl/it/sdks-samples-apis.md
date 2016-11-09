@@ -2,16 +2,16 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.amashort}} SDK, esempi e guida di riferimento alle API
-Ultimo aggiornamento: 17 luglio 2016
-{: .last-updated}
 
-Per aggiungere degli SDK {{site.data.keyword.amashort}} alla tua applicazione, scegli quelli che vuoi utilizzare. Quindi configura il tuo gestore dipendenze per inserire gli SDK nella tua applicazione.
+# {{site.data.keyword.amashort}} SDK, esempi e guida di riferimento alle API
+
+
+Per aggiungere degli SDK {{site.data.keyword.amafull}} alla tua applicazione, scegli quelli che vuoi utilizzare. Quindi configura il tuo gestore dipendenze per inserire gli SDK nella tua applicazione.
 {:shortdesc}
 
 **Nota:** le seguenti sezioni forniscono ulteriori informazioni sull'installazione degli SDK.
@@ -39,6 +39,7 @@ Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua app
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS (SDK Swift)
 {: #coresdk-ios-swift}
@@ -53,6 +54,7 @@ Modifica il file Podfile e aggiungi la seguente riga alle destinazioni richieste
 use_frameworks!
 pod 'BMSSecurity'
 ```
+{: codeblock}
 
 ### iOS (SDK Objective-C)
 {: #coresdk-ios}
@@ -69,6 +71,7 @@ Modifica il file Podfile e aggiungi la seguente riga alle destinazioni richieste
 ```Bash
 pod 'IMFCore'
 ```
+{: codeblock}
 
 ### Cordova
 {: #coresdk-cordova}
@@ -82,6 +85,7 @@ Installa il plugin Mobile Client Access Cordova:
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## SDK client per l'autenticazione Facebook
 {: #facebooksdk}
@@ -103,6 +107,7 @@ Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua app
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS (SDK Swift)
 {: #facebooksdk-ios-swift}
@@ -117,6 +122,7 @@ Modifica il file Podfile e aggiungi quanto segue alle destinazioni richieste:
 use_frameworks!
 pod 'BMSFacebookAuthentication'
  ```
+{: codeblock}
 
 ### iOS (SDK Objective-C)
 {: #facebooksdk-ios}
@@ -124,7 +130,7 @@ pod 'BMSFacebookAuthentication'
 [Repository Git](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
 [Guida di riferimento API](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
-*Nota:* mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix_notm}}, è pianificato di abbandonarla più avanti questo anno in favore della nuova SDK Swift. Per le nuove applicazioni consigliamo caldamente di utilizzare l'SDK Swift (consulta Configurazione dell'SDK Swift iOS).
+**Nota:** mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix_notm}}, è pianificato di abbandonarla più avanti questo anno in favore della nuova SDK Swift. Per le nuove applicazioni consigliamo caldamente di utilizzare l'SDK Swift (consulta Configurazione dell'SDK Swift iOS).
 #### Installa l'SDK Facebook con CocoaPods
 {: #facebooksdk-ios-cocoapods}
 
@@ -133,6 +139,7 @@ Modifica il Podfile, aggiungi la seguente riga ed esegui:
 ```Bash
 pod 'IMFFacebookAuthentication'
 ```
+{: codeblock}
 
 ### Cordova
 {: #facebooksdk-cordova}
@@ -147,6 +154,7 @@ Installa il plugin Cordova:
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## SDK client per l'autenticazione Google
 {: #googlesdk}
@@ -169,6 +177,7 @@ Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua app
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS (SDK Swift)
 {: #googlesdk-ios-swift}
@@ -184,6 +193,7 @@ Modifica il Podfile, aggiungi quanto segue ed esegui:
 use_frameworks!
 pod 'BMSGoogleAuthentication'
 ```
+{: codeblock}
 
 ### iOS (SDK Objective-C - obsoleto)
 {: #googlesdk-ios}
@@ -199,6 +209,7 @@ Modifica il Podfile, aggiungi la seguente riga ed esegui:
 ```Bash
 pod 'IMFGoogleAuthentication'
 ```
+{: codeblock}
 
 ### Cordova
 {: #googlesdk-cordova}
@@ -213,6 +224,7 @@ Installa il plugin:
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## SDK server per server Node.js
 {: #serversdk}
@@ -227,6 +239,7 @@ Esegui NPM per installare l'SDK:
 ```Bash
 npm install -save bms-mca-token-validation-strategy
 ```
+{: codeblock}
 
 ## SDK server per il server Liberty for Java&trade;
 {: #serverlibertysdk}
@@ -235,9 +248,10 @@ npm install -save bms-mca-token-validation-strategy
 
 #### Installa l'SDK Liberty
 {: #libertysdk}
+
 1. Copia il file `com.ibm.worklight.oauth.tai_1.0.0.jar` nella directory `$<wlp.user.dir>/extensions/lib`.
 
-**Suggerimento: ** `$<wlp.user.dir>` è la directory utente per il runtime Liberty for Java. Il nome directory predefinito è `usr`.
+  **Suggerimento: ** `$<wlp.user.dir>` è la directory utente per il runtime Liberty for Java. Il nome directory predefinito è `usr`.
 
 1. Copia la directory `OAuthTai-1.0.mf` nella directory `$<wlp.user.dir>/extension/lib/features`.
 
@@ -254,6 +268,7 @@ Esegui NPM per installare l'SDK:
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## Esempi del provider di identità personalizzato
 {: #customidprovider}
@@ -275,3 +290,4 @@ Modifica il Podfile, aggiungi la seguente riga ed esegui:
 ```Bash
 pod 'IMFURLProtocol'
 ```
+{: codeblock}

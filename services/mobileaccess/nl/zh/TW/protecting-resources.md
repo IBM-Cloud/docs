@@ -2,19 +2,19 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
-{:shortdesc: .shortdesc}
+{:shortdesc: .shortdesc} {:codeblock:.codeblock}
 
 # 使用 {{site.data.keyword.amashort}} 服務保護後端資源
 {: #protecting-resources}
 
-前次更新：2016 年 7 月 17 日
+前次更新：2016 年 8 月 22 日
 {: .last-updated}
 
 
-有了 {{site.data.keyword.amashort}} 服務，您可以利用已啟用行動功能的 OAuth 安全及監視來保護 {{site.data.keyword.Bluemix_notm}} 上執行的 Node.js 及 Java 型後端應用程式。
+有了 {{site.data.keyword.amafull}} 服務，您可以利用已啟用行動功能的 OAuth 安全及監視來保護 {{site.data.keyword.Bluemix_notm}} 上執行的 Node.js 及 Java 型後端應用程式。
 {:shortdesc}
 
 ## 開始之前
@@ -52,6 +52,8 @@ copyright:
     }
 }
 ```
+{: codeblock}
+
 * `imf.sub`：指定 ID 記號（如果沒有 ID 記號，則為用戶端的唯一 ID）的主題。
 * `imf.user`：指定從 ID 記號擷取的使用者身分。如果沒有 ID 記號，此欄位會保留空物件。
 * `imf.device`：指定從 ID 記號擷取的裝置身分。如果沒有 ID 記號，此欄位會保留空物件。

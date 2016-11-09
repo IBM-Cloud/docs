@@ -2,24 +2,23 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-10"
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
 
 # 启用 Android 应用程序的 Google 认证
 {: #google-auth-android}
 
-
-上次更新时间：2016 年 8 月 04 日
-{: .last-updated}
+使用 Google 在 {{site.data.keyword.amafull}} Android 应用程序上认证用户。添加 {{site.data.keyword.amashort}} 安全功能。 
 
 ## 开始之前
 {: #before-you-begin}
 您必须具有：
 
 * 在 Android Studio 中配置为使用 Gradle 的 Android 项目。它不需要安装 {{site.data.keyword.amashort}} 客户端 SDK。  
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。
-有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
-
+* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
+* 服务参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开服务。单击**移动选项**。`applicationRoute` 和 `tenantId`（也称为 `appGUID`）值会显示在**路由**和**应用程序 GUID/TenantId** 字段中。您将需要这些值来初始化 SDK，并将请求发送到后端应用程序。
 
 设置 {{site.data.keyword.amashort}} Android 应用程序的 Google 认证需要对以下各项进行进一步配置：
 * {{site.data.keyword.Bluemix_notm}} 应用程序
@@ -53,6 +52,7 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 	```
+
 	还可以使用相同的语法来检索发布方式证书的密钥散列。请替换命令中的别名和密钥库路径。
 
 1. 在“Google 控制台凭证”对话框的**证书指纹**下，找到以 `SHA1` 开头的行。将通过运行 **keytool** 命令获得的指纹值复制到文本框。
@@ -61,7 +61,9 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 
 1. 在“凭证”对话框中，输入 Android 应用程序的软件包名称。 
 
-  要找到 Android 应用程序的软件包名称，请在 Android Studio 中打开 `AndroidManifest.xml` 文件，然后查找：`<manifest package="{your-package-name}">`。 
+  要找到 Android 应用程序的软件包名称，请在 Android Studio 中打开 `AndroidManifest.xml` 文件，然后查找： 
+  	
+  	`<manifest package="{your-package-name}">`
 
 1. 完成后，单击**创建**。这将完成凭证创建。
 
@@ -76,8 +78,6 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 现在，您已经具有 Android 的 Google 客户端标识，可以在 {{site.data.keyword.amashort}}“仪表板”中启用 Google 认证。
 
 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。
-
-1. 单击**移动选项**，然后记录**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`)。初始化 SDK 时需要这些值。
 
 1. 单击 {{site.data.keyword.amashort}} 磁贴。这将装入 {{site.data.keyword.amashort}}“仪表板”。
 
@@ -106,9 +106,7 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
     	// other dependencies  
 	}
 	```
-
-	**注：**您可以除去对 `com.ibm.mobilefirstplatform.clientsdk.android` 组的 `core` 模块的依赖关系（如果有的话）。`googleauthentication` 模块会自动下载此依赖关系。
-`googleauthentication` 模块会下载 Google+ SDK 并将其安装在 Android 项目中。
+	**注：**您可以除去对 `com.ibm.mobilefirstplatform.clientsdk.android` 组的 `core` 模块的依赖关系（如果有的话）。`googleauthentication` 模块会自动下载此依赖关系。`googleauthentication` 模块会下载 Google+ SDK 并将其安装在 Android 项目中。
 
 1. 通过单击**工具 > Android > 使用 Gradle 文件同步项目**来使用 Gradle 同步项目。
 
@@ -122,33 +120,27 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 ```
 
-1. 要使用 {{site.data.keyword.amashort}} 客户端 SDK，您必须通过传递 context、applicationGUID 和 applicationRoute 参数来对其进行初始化。
+1. 要使用 {{site.data.keyword.amashort}} 客户端 SDK，您必须通过传递 **context** 和 **region** 参数来对其进行初始化。
 
-	在 Android 应用程序中，通常会将初始化代码放置在主 Activity 的 onCreate 方法中，但这
-不是强制性的。
+	在 Android 应用程序中，通常会将初始化代码放置在主 Activity 的 `onCreate` 方法中，但这不是强制性的。
 
-1. 初始化客户端 SDK，然后注册 Google 认证管理器。将 *applicationRoute* 和 *applicationGUID* 替换为仪表板中**移动选项**部分中的**路径**和**应用程序 GUID** 值。
+1. 初始化客户端 SDK，然后注册 Google 认证管理器。
 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
-						
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+
 	BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this));
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 						
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
 
-  将 `BMSClient.REGION_UK` 替换为相应的区域。要查看
-{{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
-
+  * 将 `BMSClient.REGION_UK` 替换为相应的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。区域值应该为以下其中一个值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。
+  * 将 `<MCAServiceTenantId>` 替换为 `tenantId` 值（请参阅[开始之前](##before-you-begin)）。 
 
    **注：**如果您的 Android 应用程序是针对 Android V6.0（API 级别 23
 ）或更高版本的，那么必须确保该应用程序具有 `android.permission.GET_ACCOUNTS`
-调用，然后才能调用 `register`。有关更多信息，请参阅
-[https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}。
+调用，然后才能调用 `register`。有关更多信息，请参阅 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}。
 
 1. 将以下代码添加到您的 Activity：
 
@@ -170,17 +162,19 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 建的移动后端应用程序，并且必须已经具有受
 {{site.data.keyword.amashort}} `/protected` 端点保护的资源。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
-1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。使用 MobileFirst Services 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。所以此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
+1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。有关获取 `{applicationRoute}` 值的信息，请参阅[开始之前](#before-you-begin)。 
 
-1. 使用 Android 应用程序对同一端点发起请求。初始化 `BMSClient` 实例并注册 `GoogleAuthenticationManager` 后，添加以下代码。
+	使用 MobileFirst Services 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。所以此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
+
+1. 使用 Android 应用程序对同一受保护端点发起请求。初始化 `BMSClient` 实例并注册 `GoogleAuthenticationManager` 后，添加以下代码。
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp", MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -193,7 +187,7 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 			}
 		}
 	});
-```
+	```
 
 1. 运行应用程序。这将弹出 Google 登录屏幕。登录之后，应用程序将请求授予许可权以访问资源：
 

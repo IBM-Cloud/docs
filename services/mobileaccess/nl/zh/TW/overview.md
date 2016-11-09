@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # 關於 {{site.data.keyword.amashort}}
 {: #mca-overview}
-前次更新：2016 年 7 月 22 日
-{: .last-updated}
+
 
 {{site.data.keyword.amafull}} 服務針對存取 {{site.data.keyword.Bluemix_notm}} 上所管理雲端資源的行動及 Web 應用程式，提供鑑別及監視服務。
 
@@ -19,7 +18,7 @@ copyright:
 ## 元件
 {: #components}
 
-* **{{site.data.keyword.amashort}} 儀表板**：配置各種鑑別類型，以及監視行動應用程式效能、分析、用量統計資料及裝置日誌。
+* **{{site.data.keyword.amashort}} 儀表板**：配置各種鑑別類型，以及監視行動應用程式效能、分析、使用情形統計資料及裝置日誌。
 * **{{site.data.keyword.amashort}} 用戶端 SDK**：檢測行動應用程式以使用 {{site.data.keyword.amashort}} 功能。支援的平台如下：iOS 8+、Android 4+ 及 Cordova。
 * **{{site.data.keyword.amashort}} 伺服器 SDK**：保護 {{site.data.keyword.Bluemix_notm}} 上所管理的資源。目前支援的運行環境為 Node.js 及 Liberty for Java&trade;。
 
@@ -28,7 +27,7 @@ copyright:
 您可以在行動應用程式中使用下列類型的鑑別：
 * **Facebook**：使用 Facebook 作為身分提供者。您的使用者利用 Facebook 認證來登入行動應用程式。
 * **Google**：使用 Google 作為身分提供者。您的使用者利用 Google+ 認證來登入行動應用程式。
-* **自訂**：建立您自己的身分提供者。您可完全控制收集及驗證的資訊類型。
+* **自訂**：建立專屬身分提供者。您可完全控制收集及驗證的資訊類型。
 
 ## 架構概觀
 {: #architecture}
@@ -54,14 +53,14 @@ copyright:
 * 使用 {{site.data.keyword.amashort}} SDK，對使用 {{site.data.keyword.amashort}} 伺服器 SDK 保護的後端資源提出要求。
 * {{site.data.keyword.amashort}} 伺服器 SDK 偵測到未獲授權的要求，並傳回 HTTP 401 + 授權範圍。
 * {{site.data.keyword.amashort}} 用戶端 SDK 自動偵測到 HTTP 401，並啟動鑑別處理程序。
-* {{site.data.keyword.amashort}} 用戶端 SDK 聯絡 {{site.data.keyword.amashort}} 服務，並要求發出授權標頭。
-* {{site.data.keyword.amashort}} 服務根據目前配置的鑑別類型來提供鑑別盤查，以要求先鑑別用戶端應用程式。
+* {{site.data.keyword.amashort}} 用戶端 SDK 會聯絡 {{site.data.keyword.amashort}} 服務，並要求發出授權標頭。
+* {{site.data.keyword.amashort}} 服務會根據目前配置的鑑別類型來提供鑑別盤查，以要求先鑑別用戶端應用程式。
 * 根據鑑別類型，{{site.data.keyword.amashort}} 用戶端 SDK：
    * Facebook 或 Google 鑑別：自動處理鑑別盤查
    * 自訂鑑別：根據開發人員所提供的邏輯來取得認證。
 * 如果已配置 Facebook 或 Google 鑑別，則 {{site.data.keyword.amashort}} 用戶端 SDK 會使用相關聯的 SDK 來取得 Facebook 或 Google 存取記號。這些記號會作為鑑別盤查回應。
 * 如果已配置「自訂」鑑別，則開發人員必須取得鑑別盤查回答，並將它提供給 {{site.data.keyword.amashort}} 用戶端 SDK。
-* 取得鑑別盤查回答之後，它會傳送給 {{site.data.keyword.amashort}} 服務。
+* 取得鑑別盤查回答之後，將它傳送至 {{site.data.keyword.amashort}} 服務。
 * 服務向相關身分提供者（Facebook/Google/自訂）驗證鑑別盤查回答。
 * 如果驗證成功，則 {{site.data.keyword.amashort}} 服務會產生授權標頭，並將標頭傳回給 {{site.data.keyword.amashort}} 用戶端 SDK。授權標頭包含兩個記號：包含存取權資訊的存取記號，以及包含現行使用者、裝置或應用程式相關資訊的 ID 記號。
 * 從此時起，使用 {{site.data.keyword.amashort}} 用戶端 SDK 所提出的所有要求都會有新取得的授權標頭。
@@ -72,14 +71,14 @@ copyright:
 ## 取得 {{site.data.keyword.amashort}} 的協助及支援
 {: #gettinghelp}
 
-如果您在使用 {{site.data.keyword.amashort}} 時發生問題，則可以透過搜尋資訊或透過討論區詢問問題來取得協助。您也可以開啟支援問題單。 
+如果您使用 {{site.data.keyword.amashort}} 時有問題或疑問，可以搜尋資訊或透過討論區提問來取得協助。您也可以開啟支援問題單。 
 
-使用討論區詢問問題時，請標記您的問題，讓 {{site.data.keyword.Bluemix_notm}} 開發團隊可以看到它。
+使用討論區提問時，請標記您的問題，以便 {{site.data.keyword.Bluemix_notm}} 開發團隊能看到它。
 
-* 如果您在使用 {{site.data.keyword.amashort}} 開發或部署應用程式時發生技術問題，請將問題張貼到 [Stack Overflow](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){:new_window}，並使用 "ibm-bluemix" 及 "{{site.data.keyword.amashort}}" 來標記問題。
+* 如果您有使用 {{site.data.keyword.amashort}} 開發或部署應用程式的相關技術問題，請將問題張貼在 [Stack Overflow](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){:new_window}，並使用 "ibm-bluemix" 和 "{{site.data.keyword.amashort}}" 來標記您的問題。
 * 若是服務及開始使用指示的相關問題，請使用 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window} 討論區。 
 
 如需使用討論區的詳細資料，請參閱[取得協助](https://www.{DomainName}/docs/support/index.html#getting-help)。
 
-如需開啟 IBM 支援問題單或是支援層次與問題單嚴重性的相關資訊，請參閱[聯絡支援中心](https://www.{DomainName}/docs/support/index.html#contacting-support)。
+如需開啟 IBM 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://www.{DomainName}/docs/support/index.html#contacting-support)。
 

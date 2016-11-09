@@ -11,7 +11,7 @@ copyright:
 # Getting started with toolchains (Beta)
 {: #toolchains_getting_started}
 
-Last updated: 27 October 2016
+Last updated: 2 November 2016
 {: .last-updated}  
 
 Toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
@@ -36,7 +36,7 @@ You can use a template as a starting point to [create a toolchain (Link opens in
    1. Open the DevOps dashboard and click the **Toolchains** page.
    2. If the **Enable Toolchains** button is shown, click it, and follow the prompts to create your toolchain.
    3. If the **Enable Toolchains** button isn't shown, toolchains are already enabled. Continue to step 2.
-1. On the DevOps dashboard, on the **Toolchains** page, click the add button (+) to create a toolchain.
+1. On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.
 1. Click a toolchain template. For example, to use an online store sample to create the toolchain, click **Microservices toolchain**. 
 1. On the toolchain creation page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain. The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
 ![Toolchain diagram](images/toolchain_diagram.png)

@@ -2,16 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.amashort}} SDK、サンプル、および API リファレンス
-最終更新日: 2016 年 7 月 17 日
-{: .last-updated}
 
-{{site.data.keyword.amashort}} SDK をアプリに追加するには、使用する SDK を選択します。次に、それらの SDK をアプリにプルするように依存関係マネージャーを構成します。
+# {{site.data.keyword.amashort}} SDK、サンプル、および API リファレンス
+{{site.data.keyword.amafull}} SDK をアプリに追加するには、使用する SDK を選択します。次に、それらの SDK をアプリにプルするように依存関係マネージャーを構成します。
 {:shortdesc}
 
 **注:** 以降のセクションに、SDK のインストールについての追加情報があります。
@@ -33,12 +31,13 @@ Core SDK には、モバイル・アプリのカスタム認証、ロギング�
 アプリの `build.gradle` ファイルにコンパイル依存関係を追加します。
 
 ```Gradle
-    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
     	name:'core',
     	version: '2.+',
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS (Swift SDK)
 {: #coresdk-ios-swift}
@@ -52,7 +51,8 @@ Podfile を編集して、必要なターゲットに以下の行を追加し、
 ```
 use_frameworks!
 pod 'BMSSecurity'
- ```
+```
+{: codeblock}
 
 ### iOS (Objective-C SDK)
 {: #coresdk-ios}
@@ -69,6 +69,7 @@ Podfile を編集して、必要なターゲットに以下の行を追加し、
 ```Bash
 pod 'IMFCore'
 ```
+{: codeblock}
 
 ### Cordova
 {: #coresdk-cordova}
@@ -82,6 +83,7 @@ Mobile Client Access Cordova プラグインをインストールします。
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## Facebook 認証用の Client SDK
 {: #facebooksdk}
@@ -97,12 +99,13 @@ cordova plugin add ibm-mfp-core
 
 アプリの `build.gradle` ファイルにコンパイル依存関係を追加します。
 ```Gradle
-    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
     	name:'facebookauthentication',
     	version: '2.+',
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS (Swift SDK)
 {: #facebooksdk-ios-swift}
@@ -117,6 +120,7 @@ Podfile を編集して、必要なターゲットに以下を追加し、実行
 use_frameworks!
 pod 'BMSFacebookAuthentication'
  ```
+{: codeblock}
 
 ### iOS (Objective-C SDK)
 {: #facebooksdk-ios}
@@ -124,7 +128,7 @@ pod 'BMSFacebookAuthentication'
 [Git リポジトリー](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git)、
 [API リファレンス](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
-*注:* Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、この SDK は今年後半には廃止され、新しい Swift SDK が後継になる予定です。新規アプリケーションには Swift SDK を強くお勧めします (『iOS Swift SDK のセットアップ』を参照してください)。
+**注:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、この SDK は今年後半には廃止され、新しい Swift SDK が後継になる予定です。新規アプリケーションには Swift SDK を強くお勧めします (『iOS Swift SDK のセットアップ』を参照してください)。
 #### CocoaPods を使用した Facebook SDK のインストール
 {: #facebooksdk-ios-cocoapods}
 
@@ -133,6 +137,7 @@ Podfile を編集して以下の行を追加し、実行します。
 ```Bash
 pod 'IMFFacebookAuthentication'
 ```
+{: codeblock}
 
 ### Cordova
 {: #facebooksdk-cordova}
@@ -147,6 +152,7 @@ pod 'IMFFacebookAuthentication'
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## Google 認証用の Client SDK
 {: #googlesdk}
@@ -163,12 +169,13 @@ cordova plugin add ibm-mfp-core
 アプリの `build.gradle` ファイルにコンパイル依存関係を追加します。
 
 ```Gradle
-    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+    compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
     	name:'googleauthentication',
     	version: '2.+',
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS (Swift SDK)
 {: #googlesdk-ios-swift}
@@ -184,6 +191,7 @@ Podfile を編集して以下を追加し、実行します。
 use_frameworks!
 pod 'BMSGoogleAuthentication'
 ```
+{: codeblock}
 
 ### iOS (Objective-C SDK - 非推奨)
 {: #googlesdk-ios}
@@ -199,6 +207,7 @@ Podfile を編集して以下の行を追加し、実行します。
 ```Bash
 pod 'IMFGoogleAuthentication'
 ```
+{: codeblock}
 
 ### Cordova
 {: #googlesdk-cordova}
@@ -213,6 +222,7 @@ pod 'IMFGoogleAuthentication'
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## Server SDK for Node.js サーバー
 {: #serversdk}
@@ -227,6 +237,7 @@ NPM を実行して SDK をインストールします。
 ```Bash
 npm install -save bms-mca-token-validation-strategy
 ```
+{: codeblock}
 
 ## Server SDK for Liberty for Java&trade; サーバー
 {: #serverlibertysdk}
@@ -235,10 +246,10 @@ npm install -save bms-mca-token-validation-strategy
 
 #### Liberty SDK のインストール
 {: #libertysdk}
-1. `com.ibm.worklight.oauth.tai_1.0.0.jar` ファイルを `$<wlp.user.dir>/extensions/lib` ディレクトリーにコピーします。
-	
 
-**ヒント:** `$<wlp.user.dir>` は、Liberty for Java ランタイム用のユーザー・ディレクトリーです。デフォルトのディレクトリー名は `usr` です。
+1. `com.ibm.worklight.oauth.tai_1.0.0.jar` ファイルを `$<wlp.user.dir>/extensions/lib` ディレクトリーにコピーします。
+
+  **ヒント:** `$<wlp.user.dir>` は、Liberty for Java ランタイム用のユーザー・ディレクトリーです。デフォルトのディレクトリー名は `usr` です。
 
 1. `OAuthTai-1.0.mf` ディレクトリーを `$<wlp.user.dir>/extension/lib/features` ディレクトリーにコピーします。
 
@@ -255,6 +266,7 @@ NPM を実行して SDK をインストールします。
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## カスタム ID プロバイダーのサンプル
 {: #customidprovider}
@@ -276,3 +288,4 @@ Podfile を編集して以下の行を追加し、実行します。
 ```Bash
 pod 'IMFURLProtocol'
 ```
+{: codeblock}

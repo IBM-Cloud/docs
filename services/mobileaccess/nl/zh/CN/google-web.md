@@ -2,14 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-09-07"
 
 ---
 
 # 启用 Web 应用程序的 Google 认证
 {: #google-auth-web}
-
-上次更新时间：2016 年 6 月 1 日
-{: .last-updated}
 
 使用 Google 登录在 Web 应用程序上认证用户。
 
@@ -49,7 +47,6 @@ copyright:
   https://imf-newauthserver.bluemix.net/oauth/v2/authorization
 
   使用以下查询参数：
-  
 	```
 response_type='authorization_code'
    client_id= <bluemix_app_guid>
@@ -67,7 +64,6 @@ response_type='authorization_code'
 
 
   使用以下查询参数：
-  
 
 	```
   	grant_type=’authorization_code’

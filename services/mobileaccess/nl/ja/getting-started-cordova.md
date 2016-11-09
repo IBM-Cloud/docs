@@ -2,23 +2,23 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
-{:shortdesc: .shortdesc}
+{:shortdesc: .shortdesc} 
 
 # Cordova プラグインのセットアップ
 {: #getting-started-cordova}
 
-最終更新日: 2016 年 7 月 17 日
-{: .last-updated}
 
-Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
+Cordova アプリケーションに {{site.data.keyword.amafull}} Client SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
+
+
 {:shortdesc}
 
 ## 開始する前に
 {: #before-you-begin}
 以下が必要です。
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
 
 
 
@@ -32,10 +32,16 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 {{site.data.keyword.amashort}} Client SDK for Cordova は、ネイティブ {{site.data.keyword.amashort}} Client SDK をラップする Cordova プラグインです。これは、Cordova コマンド・ライン・インターフェース (CLI) と、Cordova プロジェクト用のプラグイン・リポジトリーである `npmjs` を使用して配布されます。Cordova CLI は自動的にリポジトリーからプラグインをダウンロードし、Cordova アプリケーションで使用できるようにします。
 
 1. Android プラットフォームおよび iOS プラットフォームを Cordova アプリケーションに追加します。以下のコマンドのいずれかまたは両方をコマンド・ラインから実行します。
+   	
+	###Android
+	{: #install-cordova-android}
 
-	```Bash
+	```
 	cordova platform add android
 	```
+	
+	###iOS
+	{: #install-cordova-ios}
 
 	```Bash
 	cordova platform add ios
@@ -44,22 +50,22 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 2. Android プラットフォームを追加した場合は、Cordova アプリケーションの `config.xml` ファイルに、サポートされる最小 API レベルを追加する必要があります。`config.xml` ファイルを開き、以下の行を `<platform name="android">` エレメントに追加します。
 
 	```XML
-	<platform name="android">  
+	<platform name="android">
 		<preference name="android-minSdkVersion" value="15"/>
 		<preference name="android-targetSdkVersion" value="23"/>
 		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
-
-	*minSdkVersion* の値は、`15` より大でなければなりません。*targetSdkVersion* の値は、Google から入手可能な最新の Android SDK でなければなりません。
+	
+	*minSdkVersion* の値は、`15` 以上でなければなりません。*targetSdkVersion* の値は、Google から入手可能な最新の Android SDK でなければなりません。
 
 3. iOS オペレーティング・システムを追加した場合は、以下のように、ターゲット宣言で `<platform name="ios">` エレメントを更新してください。
 
 	```XML
-	<platform name="ios">
+ 	  <platform name="ios">
 		<preference name="deployment-target" value="8.0"/>
 		<!-- add deployment target declaration -->
-	</platform>
+	 </platform>
 	```
 
 4. 以下のようにして、{{site.data.keyword.amashort}} Cordova プラグインをインストールします。
@@ -74,11 +80,11 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 	{: #cordova-android}
 
 	Android Studio でプロジェクトを開く前に、コマンド・ライン・インターフェース (CLI) を通じて Cordova アプリケーションをビルドして、ビルド・エラーを回避します。
-
-		```
-		cordova build android
-		```
-
+	
+	```Bash
+	cordova build android
+	```
+	
 	####iOS
 	{: #cordova-ios}
 
@@ -86,19 +92,15 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 
 	1. 最新バージョンの Xcode を使用して、`<app_name>/platforms/ios` ディレクトリー内の `xcode.proj` ファイルを開きます。
 
-		**重要:** 「最新の Swift 構文に変換 (Convert to latest Swift syntax)」するようにというメッセージが表示されたら、「キャンセル」をクリックします。
+		**重要:** 最新の Swift 構文に変換するメッセージが表示されたら、**「キャンセル」**をクリックします。
 
 	2. **「ビルド設定 (Build Settings)」>「Swift コンパイラー - コード生成 (Swift Compiler - Code Generation)」>「Objective-C ブリッジング・ヘッダー (Objective-C Bridging Header)」**に移動し、以下のパスを追加します。
 
-			```
-			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
-			```
+		`<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h`
 
 	3. **「ビルド設定 (Build Settings)」>「リンク (Linking)」>「実行パスの検索パス (Runpath Search Paths)」**に移動し、以下の Frameworks パラメーターを追加します。
 
-			```
-			@executable_path/Frameworks
-			```
+		`@executable_path/Frameworks`
 
 	4. Xcode で、アプリケーションをビルドして実行します。
 
@@ -115,27 +117,36 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 
 1. 経路およびアプリ GUID の値は、{{site.data.keyword.Bluemix_notm}} ダッシュボードのメインページにあります。アプリ名をクリックし、次に**「モバイル・オプション」**をクリックして、SDK を初期化するための**「アプリケーション経路 (Application route)」**と**「アプリケーション GUID (Application GUID)」**の値を表示します。
 
-3. 以下の呼び出しを `index.js` ファイルに追加して、{{site.data.keyword.amashort}} Client SDK を初期化します。
-*applicationRoute* および *applicationGUID* は、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**の値に置き換えます。
+3. 以下の呼び出しを `index.js` ファイルに追加して、{{site.data.keyword.amashort}} Client SDK を初期化します。 
 
 	```JavaScript
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
+
+  * 
+`applicationRoute` および `applicationGUID` は、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**の値に置き換えます。
+
+##{{site.data.keyword.amashort}} AuthorizationManager の初期化
+{: #initializing-auth-manager}
+
+Cordova アプリケーションで以下の JavaScript コードを使用して、{{site.data.keyword.amashort}} AuthorizationManager を初期化します。
+
+```JavaScript
+MFPAuthorizationManager.initialize("tenantId");
+```
+
+`tenantId` 値を、{{site.data.keyword.amashort}} サービスの `tenantId` に置き換えます。この値は、{{site.data.keyword.amashort}} サービス・タイルの**「資格情報の表示」**ボタンをクリックすると、見つけることができます。
 
 ## モバイル・バックエンド・アプリケーションへの要求の実行
 {: #getting-started-request}
 
 {{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
-1. 新しいモバイル・バックエンド・アプリケーションの、保護されたエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` 以下に例を示します。
-
-	```
-	http://my-mobile-backend.mybluemix.net/protected
-	```
+1. 新しいモバイル・バックエンド・アプリケーションの、保護されたエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` (例えば、`http://my-mobile-backend.mybluemix.net/protected`)
 
 	MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。 `認証されていない`というメッセージがブラウザーに戻されます。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、このメッセージが返されます。
 
-1. Cordova アプリケーションを使用して、同じエンドポイントに要求を実行します。`BMSClient` を初期化した後に、以下のコードを追加してください。
+2. Cordova アプリケーションを使用して、同じエンドポイントに要求を実行します。`BMSClient` を初期化した後に、以下のコードを追加してください。
 
 	```Javascript
 	var success = function(data){
@@ -148,9 +159,10 @@ Cordova アプリケーションに {{site.data.keyword.amashort}} Client SDK �
 
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 
-	request.send(success, failure);```
+	request.send(success, failure);
+	```
 
-1. 要求が正常に実行されると、LogCat コンソールまたは Xcode コンソール (使用しているプラットフォームによって決まる) に以下の出力が表示されます。
+3. 要求が正常に実行されると、LogCat コンソールまたは Xcode コンソール (使用しているプラットフォームによって決まる) に以下の出力が表示されます。
 
 	![image](images/getting-started-android-success.png)
 

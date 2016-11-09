@@ -9,7 +9,7 @@ copyright:
 
 
 #Ativando notificações push avançadas
-Última atualização: 16 de agosto de 2016
+Última atualização: 17 de outubro de 2016
 {: .last-updated}
 
 Configure um badge iOS, som, carga útil JSON adicional, notificações acionáveis e notificações de participação.
@@ -29,9 +29,6 @@ número a ser exibido como o badge do ícone do aplicativo. Se essa propriedade
 estiver ausente, o badge não será mudado. Para remover o badge,
 configure o valor dessa propriedade para 0.
 	
-	
-
-
 ###Android
 
 Inclua seu arquivo de som no diretório `res/raw` do aplicativo Android. Ao enviar a notificação, inclua o nome do arquivo de som no campo de som do {{site.data.keyword.mobilepushshort}}.
@@ -43,7 +40,7 @@ Inclua seu arquivo de som no diretório `res/raw` do aplicativo Android. Ao envi
 	  }
  }  
 ```
-	
+    {: codeblock}	
 	
 ###iOS
 
@@ -54,13 +51,15 @@ Inclua seu arquivo de som no diretório `res/raw` do aplicativo Android. Ao envi
 	      "sound": "tt.wav",
 	  }
 }
-``` 		
+``` 
+	{: codeblock}
+		
 **Carga útil adicional** - Essa carga útil pode ser qualquer par de valores de chave e deve ser um objeto JSON que você deseja enviar com o {{site.data.keyword.mobilepushshort}}.
 
 ```
 {"key":"value", "key2":"value2"}
 ```
-
+	{: codeblock}
 
 ## Participação de notificações do Android 
 {: #hold-notifications-android}
@@ -71,13 +70,12 @@ Quando seu aplicativo entra em segundo plano, é possível que você queira que 
 @Override
 protected void onPause() {
     super.onPause();
-
     if (push != null) {
         push.hold();
     }
 } 
 ```
-
+	{: codeblock}
 ## Ativando notificações acionáveis de iOS  
 {: #enable-actionable-notifications-ios}
 
@@ -89,7 +87,7 @@ Conclua as etapas para ativar o {{site.data.keyword.mobilepushshort}} acionável
 
    Objective-C
 
-	```
+```
 	// For Objective-C
 	UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
 	    acceptAction.identifier = @"ACCEPT_ACTION";
@@ -97,11 +95,12 @@ Conclua as etapas para ativar o {{site.data.keyword.mobilepushshort}} acionável
 	     /* Optional properties
 	     acceptAction.destructive = NO;
 	  acceptAction.authenticationRequired = NO; */
-	  
-	 ```
+```
+	{: codeblock}
+
    Swift
 
-	```
+```
 	//For Swift
 	let acceptAction = UIMutableUserNotificationAction()
 	acceptAction.identifier = "ACCEPT_ACTION"
@@ -109,9 +108,10 @@ Conclua as etapas para ativar o {{site.data.keyword.mobilepushshort}} acionável
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
 	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
-	```
+```
+	{: codeblock}
 	
-	```
+```
 	//For Swift
 	let declineAction = UIMutableUserNotificationAction()
 	declineAction.identifier = "DECLINE_ACTION"
@@ -119,66 +119,71 @@ Conclua as etapas para ativar o {{site.data.keyword.mobilepushshort}} acionável
 	declineAction.destructive = true
 	declineAction.authenticationRequired = false
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
-	```
+```
+	{: codeblock}
 
 2. Crie a categoria de notificação e configure uma ação. **UIUserNotificationActionContextDefault** ou
                 **UIUserNotificationActionContextMinimal** são contextos válidos.
 
 Objective-C
 
-	```
+```
 	// For Objective-C
 	UIMutableUserNotificationCategory *callCat = [[UIMutableUserNotificationCategory alloc] init];
 	    callCat.identifier = @"POLL_CATEGORY";
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
-	```    
+```    
+	{: codeblock}
 
 Swift
 
-	```
+```
 	// For Swift
 	let pushCategory = UIMutableUserNotificationCategory()
 	pushCategory.identifier = "TODO_CATEGORY"
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
-	```
+```
+	{: codeblock}
 
 1. Crie a configuração de notificação e designe as categorias da etapa anterior.
 
 Objective-C
 
-	```
+```
 	// For Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
-	```
+```
+	{: codeblock}
 
 Swift
 
-	```
+```
 	// For Swift
 	let categories = NSSet(array:[pushCategory]);
-	```
+```
+	{: codeblock}
 
 1. Crie a notificação local ou remota e designe a ela a identidade da
 categoria.
 
 Objective-C
 
-	```
+```
 	//For Objective-C
-
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
-	```
+```
+	{: codeblock}
 
 Swift
 
-	```
+```
 	//For Swift
 	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
     UIApplication.sharedApplication().registerUserNotificationSettings(settings)
     UIApplication.sharedApplication().registerForRemoteNotifications() 
-	```
+```
+	{: codeblock}
 	
 ## Manipulando notificações de iOS acionáveis  
 {: #actionable-notifications}
@@ -197,6 +202,7 @@ método a seguir com base no identificador escolhido.
   completionHandler();
 }
 ```
+	{: codeblock}
 
 ###Swift
  
@@ -206,4 +212,5 @@ func application(application: UIApplication, handleActionWithIdentifier identifi
       completionHandler()
   }
 ```    
+	{: codeblock}
     

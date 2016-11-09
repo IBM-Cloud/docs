@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-06-20"
+
 
 ---
 
@@ -15,9 +16,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.vpn_short}} plug-in for {{site.data.keyword.Bluemix_notm}} CLI
-
-*Last updated: 20 June 2016*
-{: .last-updated}
 
 *Version:* 1.4.0
 

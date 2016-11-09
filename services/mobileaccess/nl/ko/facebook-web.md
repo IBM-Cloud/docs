@@ -60,8 +60,8 @@ response_type='authorization_code'
     ```
 
 
-  `state` 매개변수는 현재 사용 중이지 않으므로 빈 상태로 둘 수 있습니다.
-    `redirect_uri` 매개변수는 Facebook으로 인증하는 데 성공하거나 실패한 후 경로를 재지정하는 데 사용하는 uri입니다.
+  `state` 매개변수를 현재 사용 중이지 않으므로 빈 상태로 둘 수 있습니다.
+ `redirect_uri` 매개변수는 Facebook으로 인증하는 데 성공하거나 실패한 후 경로를 재지정하는 데 사용하는 uri입니다.
 
 1. 권한 엔드포인트로 경로를 재지정하고 나면 Facebook에서 로그인 양식을
    가져옵니다. `redirect_uri`로 경로를 재지정할 사용자 이름 및 비밀번호를 입력하십시오.

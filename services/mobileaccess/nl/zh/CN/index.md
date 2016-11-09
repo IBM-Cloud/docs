@@ -2,16 +2,15 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 
 # {{site.data.keyword.amashort}} 入门
 {: #gettingstarted}
-上次更新时间：2016 年 7 月 21 日
-{: .last-updated}
 
-使用 {{site.data.keyword.amafull}} 服务，将安全性添加到移动应用程序。您可以配置客户端认证和身份提供者，以便用户可使用其现有 Google 或 Facebook 帐户登录应用程序。
+
+使用 {{site.data.keyword.amafull}} 服务，将安全性添加到移动应用程序。您可以配置客户端权限，以访问在 {{site.data.keyword.Bluemix_notm}} 上运行的受保护后端资源。使用身份提供者（Google 和 Facebook）或定制身份来认证用户，并授予对受保护后端资源和 Web 应用程序的访问权。
 {:shortdesc}
 
 **注：**{{site.data.keyword.amashort}} 服务先前称为 Advanced Mobile Access。

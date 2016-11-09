@@ -2,17 +2,18 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
+
+{:screen: .screen}
+{:shortdesc: .shortdesc}
+
 
 # 启用 iOS Objective C 应用程序的 Google 认证
 {: #google-auth-ios}
 
 
-上次更新时间：2016 年 6 月 27 日
-{: .last-updated}
-
-使用 Google 登录，在 Mobile Client Access iOS 应用程序上认证用户。
+使用 Google 登录，在 {{site.data.keyword.amafull}} iOS 应用程序上认证用户。
 
 **注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK。有关我们强烈建议使用 Swift SDK 的新应用程序。本页面中的指示信息适用于 {{site.data.keyword.amashort}} 客户端 Objective-C SDK。有关使用 Swift SDK 的指示信息，请参阅[在 iOS 应用程序 (Swift SDK) 中启用 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)。
 
@@ -24,41 +25,21 @@ copyright:
 
 ## 针对 iOS 平台配置 Google 项目
 {: #google-auth-ios-project}
-要开始将 Google 用作身份提供者，请在 Google 开发者控制台中创建项目以获取 Google 客户端标识。此客户端标识是供 Google 用于确定哪个应用程序正在尝试进行连接的唯一标识。如果已经有 Google 项目，那么可以跳过描述项目创建的步骤，而开始添加凭证。
+要开始将 Google 用作身份提供者，请在 Google 开发者控制台中创建项目以获取 Google 客户端标识。此客户端标识是供 Google 用于确定哪个应用程序正在尝试进行连接的唯一标识。   
 
+1. 如果尚未创建 Google iOS 项目，请在 [Google 开发者控制台](https://console.developers.google.com)站点上按照以下步骤执行操作。
 
+1. 从**社交 API** 列表中，选择 **Google+ API**，然后单击**启用**。
 
-1. 在 [Google 开发者控制台](https://console.developers.google.com)中创建项目。如果已经有项目，那么可以跳过描述项目创建的步骤，而开始添加凭证。
-   1.    打开新项目菜单。
-
-         ![图像](images/FindProject.jpg)
-
-   2.    单击**创建项目**。
-
-         ![图像](images/CreateAProject.jpg)
-
-
-1. 从**社交 API** 列表中，选择 **Google+ API**。
-
-     ![图像](images/chooseGooglePlus.jpg)
-
-1. 在下一个屏幕中，单击**启用**。
-
-1. 选择**同意屏幕**选项卡，然后提供向用户显示的产品名称。其他值为可选项。单击**保存**。
-
-    ![图像](images/consentScreen.png)
-
-1. 从**凭证**列表中，选择 OAuth 客户端标识。
-
-     ![图像](images/chooseCredentials.png)
-
-
+1. 从**凭证**列表中，单击**创建凭证**按钮，然后选择 *OAuth 客户端标识*。
 
 1. 此时，将向您显示应用程序类型选项。请选择 **iOS**。
 
 1. 为 iOS 客户端提供有意义的名称。指定 iOS 应用程序的捆绑软件标识。要找到 iOS 应用程序的捆绑软件标识，请在 `info.plist` 文件或 Xcode 项目的**常规**选项卡中查找**捆绑软件标识**。
 
 1. 记录新的 Google iOS 客户端标识。在 {{site.data.keyword.Bluemix}} 中设置应用程序时需要此值。
+
+
 
 
 ## 配置 {{site.data.keyword.amashort}} 进行 Google 认证
@@ -76,8 +57,6 @@ copyright:
 
 1. 在 **iOS 的应用程序标识**中，指定 iOS 的 Google 客户端标识，然后单击**保存**。
 
-	注：除了 Google 客户端标识之外，进行客户端配置时还需要逆向值。要访问这两个值，请使用画笔图标下载示例 plist：
-![下载 info.plist 文件](images/download_plist.png)
 
 ## 针对 iOS 配置 {{site.data.keyword.amashort}} Google 客户端 SDK
 {: #google-auth-ios-sdk}
@@ -92,6 +71,7 @@ copyright:
 	```
 	pod 'IMFGoogleAuthentication'
 	```
+{: codeblock}
 
 1. 保存 `Podfile`，然后在命令行中运行 `pod install`。CocoaPods 会安装依赖关系。您将看到进度和添加的组件。
 
@@ -135,7 +115,11 @@ copyright:
 	</array>
 
 	```
-	更新这两个 URL 方案。	**重要信息**：请不要覆盖 `info.plist` 文件中的任何现有属性。如果您有重叠属性，那么需要手动合并属性。有关更多信息，请参阅[尝试针对 iOS 执行登录](https://developers.google.com/identity/sign-in/ios/start)。
+{: codeblock}
+
+	更新这两个 URL 方案。
+
+	**重要信息**：请不要覆盖 `info.plist` 文件中的任何现有属性。如果您有重叠属性，那么需要手动合并属性。有关更多信息，请参阅[尝试针对 iOS 执行登录](https://developers.google.com/identity/sign-in/ios/start)。
 
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
@@ -149,66 +133,93 @@ copyright:
 
 1. 将所需框架导入要使用 {{site.data.keyword.amashort}} 客户端 SDK 的类中。添加以下头：
 
-	Objective-C：
+	#### Objective-C：
 
 	```Objective-C
 	#import <IMFCore/IMFCore.h>
 	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
 	```
+{: codeblock}
 
-	Swift：
+	#### Swift：
 
 	{{site.data.keyword.amashort}} 客户端 SDK 将通过 Objective-C 实现。您可能需要将桥接头添加到 Swift 项目才能使用 SDK。
 
-	1. 在 Xcode 中右键单击项目，并选择**新建文件...**
+	1. 在 Xcode 中右键单击项目，并选择**新建文件...**。
+
 	2. 在 **iOS 源**类别中，选取**头文件**。
-	3. 将其命名为 `BridgingHeader.h`
+
+	3. 将其命名为 `BridgingHeader.h`。
+
 	4. 将以下 import 添加到桥接头：
 
-	```Objective-C
+	```Swift
 	#import <IMFCore/IMFCore.h>
 	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
 	```
+
 	5. 在 Xcode 中单击项目，然后选择**构建设置**选项卡。
+
 	6. 搜索 `Objective-C Bridging Header`。
+
 	7. 将值设置为您的 `BridgingHeader.h` 文件的位置，例如：`$(SRCROOT)/MyApp/BridgingHeader.h`。
+
 	8. 通过构建项目来确保 Xcode 选取了您的桥接头。
 
+3. 使用以下代码来初始化客户端 SDK。将 `applicationRoute` 和 `applicationGUID` 替换为从**移动选项**中获取的**路径**和**应用程序 GUID** 值。
 
-3. 使用以下代码来初始化客户端 SDK。将 *applicationRoute* 和 *applicationGUID* 替换为从**移动选项**中获取的**路径**和**应用程序 GUID** 值。
-
-	Objective-C：
+	#### Objective-C：
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+{: codeblock}
 
-	Swift：
+	#### Swift：
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+{: codeblock}
+
+1. 通过传递 {{site.data.keyword.amashort}} 服务 `tenantId` 参数来初始化 `AuthorizationManager`。您可以通过单击 {{site.data.keyword.amashort}} 服务磁贴上的**显示凭证**按钮找到此值。
+
+  ####Objective-C
+	
+  ```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+  ```
+ {: codeblock}
+
+  ####Swift
+
+  ```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+ ```
+ {: codeblock}
 
 1. 通过将以下代码添加到应用程序代表中的 `application:didFinishLaunchingWithOptions` 方法，注册 Google 认证处理程序。初始化 IMFClient 后，立即添加以下代码：
 
-	Objective-C：
+	#### Objective-C：
 
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 	```
+{: codeblock}
 
-	Swift：
+	#### Swift：
 
 	```Swift
 	IMFGoogleAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
 	```
+{: codeblock}
 
 1. 将以下代码添加到应用程序代表中。
 
-	Objective-C：
+	#### Objective-C：
 
 	```Objective-C
 	- (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -225,8 +236,9 @@ copyright:
 		return  shouldHandleGoogleURL;
 	}
 	```
+{: codeblock}
 
-	Swift：
+	#### Swift：
 
 	```Swift
 	func application(application: UIApplication, openURL url: NSURL,
@@ -241,6 +253,7 @@ IMFGoogleAuthenticationHandler.sharedInstance()
 return shouldHandleGoogleURL;
 	}
 ```
+{: codeblock}
 
 ## 测试认证
 {: #google-auth-ios-testing}
@@ -257,7 +270,7 @@ return shouldHandleGoogleURL;
 
 1. 使用 iOS 应用程序对同一端点发起请求。
 
-	Objective-C：
+	#### Objective-C：
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -275,8 +288,9 @@ return shouldHandleGoogleURL;
 		}
 	}];
 	```
+{: codeblock}
 
-	Swift：
+	#### Swift：
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"
@@ -292,6 +306,7 @@ return shouldHandleGoogleURL;
 	};
 
 	```
+{: codeblock}
 
 1. 运行应用程序。您将看到 Google 登录屏幕弹出窗口
 
@@ -307,19 +322,20 @@ return shouldHandleGoogleURL;
 		
 	通过添加以下代码，您还可以添加注销功能：
 
-	Objective C：
+	#### Objective C：
 
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
 	```
+{: codeblock}
 
-	Swift：
+	#### Swift：
 
 	```Swift
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
+{: codeblock}
 
-	如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Google 进行认证。
-此时，用户可以单击<!--in the upper-right corner of the screen-->用户名，以选择其他用户并登录。
+	如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Google 进行认证。此时，用户可以单击<!--in the upper-right corner of the screen-->用户名，以选择其他用户并登录。
 
 	您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。

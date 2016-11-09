@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-08-31"
 ---
 
 {:new_window: target="_blank"}
@@ -13,21 +13,20 @@ copyright:
 # {{site.data.keyword.mobilefoundation_short}} 시작하기
 {: #gettingstartedtemplate}
 
-마지막 업데이트 날짜: 2016년 8월 03일
-{: .last-updated}
+<!--Last updated: 31 August 2016
+{: .last-updated}-->
 
-{{site.data.keyword.mobilefoundation_long}}은 엔터프라이즈 모바일 앱을 개발, 테스트 및 작동할 수 있는 {{site.data.keyword.mfp_full}} 환경 설정을 신속히 처리합니다.
+{{site.data.keyword.mobilefoundation_long}}는 엔터프라이즈 모바일 앱을 개발, 테스트 및 작동할 수 있는 {{site.data.keyword.mfp_full}} 환경 설정을 신속히 처리합니다.
 {{site.data.keyword.mobilefoundation_short}}은 두 개의 다른 서비스 플랜 즉, Developer 및 Professional 1 Application 하에서 사용 가능합니다.
 {:shortdesc}
 
-<!-- The Professional 1 Application plan allows the {{site.data.keyword.mobilefoundation_short}} server to be deployed on a scalable container group.--> Professional 1 Application 플랜을 사용하면 Android, iOS, Windows 또는 모바일 웹 등 지원되는 운영 플랫폼 전체 또는 일부에서 빌드된 단일 애플리케이션을 관리할 수 있습니다. Developer 플랜은 <!-- does not support {{site.data.keyword.mobilefoundation_short}} deployment on a container group with more than 1 node. This plan --> 개발과 테스트에 가장 적합합니다.
+<!-- The Professional 1 Application plan allows the {{site.data.keyword.mobilefoundation_short}} server to be deployed on a scalable container group.--> Professional 1 Application 플랜을 사용하면 Android, iOS, Windows 또는 모바일 웹 등 지원되는 운영 플랫폼 전체 또는 일부에서 빌드된 단일 애플리케이션을 관리할 수 있습니다. 개발자 플랜은 <!-- does not support {{site.data.keyword.mobilefoundation_short}} deployment on a container group with more than 1 node. This plan --> 개발과 테스트에 가장 적합합니다.
 
 ## {{site.data.keyword.mobilefoundation_short}}: Developer 플랜 시작하기
 
 {{site.data.keyword.mobilefoundation_short}}: Developer의 인스턴스를 작성한 후 몇 번의 클릭으로 모바일 채널 빌드를 시작할 수 있습니다. 
 
-*	기본 구성으로 {{site.data.keyword.mobilefirst_notm}} 서버 인스턴스를 작성하려면 **기본 서버 시작**을 클릭하십시오.
-		
+*	기본 구성으로 {{site.data.keyword.mobilefirst_notm}} 서버 인스턴스를 작성하려면 **기본 서버 시작**을 클릭하십시오. 		
 
   `기본 서버 인스턴스에는 단일 노드와 1GB의 메모리가 포함됩니다.`
 
@@ -59,7 +58,7 @@ copyright:
 
     * 토폴로지, 보안 및 기타 서버 구성에 대해 고급 구성으로 {{site.data.keyword.mobilefirst_notm}} 서버 인스턴스를 작성하려면 **고급 구성으로 서버 시작**을 클릭하십시오. 자세한 정보는 [고급 구성 설정](c_using_mfs_p2.html#using_mfs_advanced_p2)을 참조하십시오. 
 
-[Mobile Foundation 서비스를 사용하여 MobileFirst Server 설정<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/ibm-containers/using-mobile-foundation/)으로 이동하여 {{site.data.keyword.mobilefoundation_short}} 시작 방법에 대해 자세히 알아보십시오. 
+{{site.data.keyword.mobilefoundation_short}} 시작 방법에 대한 자세한 정보는 [Mobile Foundation 서비스를 사용하여 MobileFirst Server 설정<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/)으로 이동하십시오.
 
 
 # 관련 링크

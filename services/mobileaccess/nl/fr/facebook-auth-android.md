@@ -2,28 +2,25 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
+
 
 # Activation de l'authentification Facebook pour les applications Android
 {: #facebook-auth-android}
 
-Dernière mise à jour : 4 août 2016
-{: .last-updated}
 
-
-Pour utiliser Facebook comme fournisseur d'identité dans vos applications Android, ajoutez et configurez la plateforme Android pour votre application
-Facebook sur le site Facebook for Developers.
+Pour utiliser Facebook comme fournisseur d'identité dans vos applications Android {{site.data.keyword.amafull}}, ajoutez et configurez la plateforme Android pour votre application Facebook sur le site Facebook for Developers.
 {:shortdesc}
 
 ## Avant de commencer
-{: #facebook-auth-android-before}
+{: #before-you-begin}
 Vous devez disposer des éléments suivants :
 * Un projet Android qui est configuré pour fonctionner avec Gradle. Le projet n'a pas besoin d'être instrumenté avec un SDK client de {{site.data.keyword.amashort}}.  
 * Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
+* Vos valeurs de paramètres de service. Ouvrez votre service dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Cliquez sur **Options pour application mobile**. Les valeurs `applicationRoute` et `tenantId` (qui portent également le nom d'`appGUID`) s'affichent dans les zones **Route** et **Identificateur global unique de l'application / ID titulaire**. Vous aurez besoin de ces valeurs pour l'initialisation du logiciel SDK et l'envoi de demandes à l'application de back-end.
 * Une application Facebook avec une plateforme Android sur le site Facebook for Developers (https://developers.facebook.com).
 
 **Important :** il n'est pas nécessaire d'installer séparément le SDK Facebook (`com.facebook.FacebookSdk`). Celui-ci est installé automatiquement par Gradle quand vous ajoutez le SDK client Facebook de {{site.data.keyword.amashort}}. Vous
@@ -53,7 +50,6 @@ la propriété `android:name` dans la section activity. Si plusieurs activités 
 		</intent-filter>
 	</activity>
 	```
-
 1. Pour que Facebook puisse vérifier l'authenticité de votre applications, vous devez spécifier le hachage SHA1 de votre certificat de développeur.
 
 	**Au sujet de la sécurité Android :** Sur le système d'exploitation Android, toutes les applications installées sur un périphérique Android doivent être signées à l'aide d'un certificat de développeur. L'application Android peut être générée dans deux modes : Debug (débogage) et Release (publication). <br/>
@@ -84,9 +80,6 @@ Android, vous pouvez activer l'authentification Facebook depuis le tableau de bo
 
 1. Ouvrez votre appli dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
-1. Cliquez sur **Options pour application mobile** et notez la valeur de **Route** (`applicationRoute`)
-et **Identificateur global unique de l'application** (`applicationGUID`). Vous aurez besoin de ces valeurs lors de l'initialisation du SDK.
-
 1. Cliquez sur la vignette {{site.data.keyword.amashort}}. Le tableau de bord {{site.data.keyword.amashort}} se charge.
 
 1. Cliquez sur le bouton **Configurer** dans le panneau **Facebook**.
@@ -111,12 +104,11 @@ Votre projet Android peut comporter deux fichiers `build.gradle` : un pour le pr
         transitive: true
     	// autres dépendances
 	}
-```
+	```
 
 	**Remarque :** vous pouvez retirer la dépendance sur le module `core` du groupe `com.ibm.mobilefirstplatform.clientsdk.android`, si elle figure dans votre fichier. Le module `facebookauthentication` télécharge le module `core` automatiquement, ainsi que le propre SDK de Facebook.
 
-  Une fois que vous avez enregistré vos mises à jour, le module `facebookauthentication` télécharge et installe tous les SDK nécessaires dans votre projet Android.
-
+	Une fois que vous avez enregistré vos mises à jour, le module `facebookauthentication` télécharge et installe tous les SDK nécessaires dans votre projet Android.
 
 1. Synchronisez votre projet avec Gradle. Cliquez sur **Tools (Outils) > Android > Sync project with Gradle Files (Synchroniser le projet avec les fichiers Gradle)**.
 
@@ -129,15 +121,15 @@ Facebook :
 		<string name="action_settings">Settings</string>
 		<string name="facebook_app_id">522733366802111</string>
 	</resources>
-```
+	```
 
 1. Dans le fichier `AndroidManifest.xml` de votre projet Android :
-   1. Ajoutez le droit d'accès à Internet sous l'élément `<manifest>` :
+	* Ajoutez le droit d'accès à Internet sous l'élément `<manifest>` :
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
-```
-  2. Ajoutez les métadonnées requises pour le SDK Facebook à l'élément `<application>` :
+	```
+	* Ajoutez les métadonnées requises pour le SDK Facebook à l'élément `<application>` :
 
 	```XML
 	<application .......>
@@ -149,9 +141,8 @@ Facebook :
 		<activity ...../>
 		<activity ...../>
 	</application>
-```
-
-   1. Ajoutez un élément Facebook activity sous vos activités existantes :
+	```
+	* Ajoutez un élément Facebook activity sous vos activités existantes :
 
 	```XML
 	<application .....>
@@ -167,25 +158,25 @@ Facebook :
 	</application>
 ```
 
-1. Initialisez le SDK client et enregistrez le gestionnaire d'authentification Facebook. Initialisez le SDK client de {{site.data.keyword.amashort}} en transmettant les paramètres de contexte, d'identificateur unique global de l'application (`applicationGUID`) et de route (`applicationRoute`).<br/>
- Il est courant d'insérer le code d'initialisation dans la méthode `onCreate` de l'activité principale de l'application Android, bien que ceci ne soit pas impératif.<br/>
- Remplacez *applicationRoute* et *applicationGUID* par les valeurs de **Route** et de **Identificateur global
-unique de l'application** dans le menu **Options pour application mobile** sur la page principale de votre application
-dans le tableau de bord Bluemix.
-
-	```Java 	BMSClient.getInstance().initialize(getApplicationContext(), 					"applicationRoute", 					"applicationGUID", 					BMSClient.REGION_UK);
+1. Initialisez le SDK client et enregistrez le gestionnaire d'authentification Facebook. Initialisez le client SDK {{site.data.keyword.amashort}} en passant le **contexte** et la **région**.<br/>
+ En général, vous pouvez placer le code d'initialisation dans la méthode `onCreate` de l'activité
+principale dans votre application Android, même si ce n'est pas obligatoire.<br/>
+ 
+	```Java
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
 	BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this));
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 
 	FacebookAuthenticationManager.getInstance().register(this);
-```
-   Remplacez `BMSClient.REGION_UK` par la région appropriée  Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Avatar**  ![icône Avatar](images/face.jpg "icône Avatar")  dans la barre de menu pour ouvrir le widget **Compte et support**.
+	```
+
+   * Remplacez `BMSClient.REGION_UK` par la région appropriée  Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Avatar**  ![icône Avatar](images/face.jpg "icône Avatar")  dans la barre de menu pour ouvrir le widget **Compte et support**. La valeur de région doit être l'une des suivantes : `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, `BMSClient.REGION_UK`.
+   
+   * Remplacez `<MCAServiceTenantId>` par la valeur `tenantId` (voir [Avant de commencer](#before-you-begin)). 
    
   **Remarque :** si votre application Android a pour cible Android version 6.0 (API niveau 23) ou supérieure, vous devez vous assurer que l'application dispose d'un appel `android.permission.GET_ACCOUNTS` avant d'appeler `register`. Pour plus d'informations, voir [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
-					
-
-
+	
 1. Ajoutez le code suivant à votre activité :
 
 	```Java 	@Override 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -195,30 +186,32 @@ dans le tableau de bord Bluemix.
 	}
 ```
 
+
 ## Test de l'authentification
 Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Facebook est enregistré, vous pouvez commencer à envoyer des
 demandes à votre back end mobile.
 
-### Avant de commencer
+### Avant de commencer à tester
 {: #facebook-auth-android-testing-before}
 Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et disposer déjà d'une ressource protégée par
 {{site.data.keyword.amashort}} sur le noeud final `/protected`. Pour configurer un noeud final `/protected`, voir la rubrique [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 1. Essayez d'envoyer depuis votre navigateur une requête à un noeud final protégé de votre nouvelle application back end mobile. Ouvrez l'URL suivante :
-`{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
-<br/>Le noeud final `/protected` d'une application back end mobile créée avec le conteneur boilerplate MobileFirst Services Starter est
+`{applicationRoute}/protected`. Exemple : `http://my-mobile-backend.mybluemix.net/protected`. Pour plus d'informations sur l'obtention de la valeur `{applicationRoute}`, voir [Avant de commencer](#before-you-begin). 
+
+	Le noeud final `/protected` d'une application back end mobile créée avec le conteneur boilerplate MobileFirst Services Starter est
 protégé par {{site.data.keyword.amashort}}. Un message signalant l'interdiction d'accéder au site (`Unauthorized`) est renvoyé au navigateur. Ce message est renvoyé car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
 
 1. A l'aide de votre application Android, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé
 le client `BMSClient` et enregistré le gestionnaire d'authentification Facebook (`FacebookAuthenticationManager`).
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp",  MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -233,25 +226,25 @@ le client `BMSClient` et enregistré le gestionnaire d'authentification Facebook
 	});
 ```
 
+	Remplacez `{applicationRoute}` par la valeur *route* que vous obtenez quand vous cliquez sur Options pour application mobile dans le tableau de bord {{site.data.keyword.Bluemix}}.
+	
 1. Lancez votre application. Un écran de connexion à Facebook s'affiche.
 
 	![image](images/android-facebook-login.png)
 
 	Cet écran peut être légèrement différent si l'appli Facebook n'est pas installée sur votre périphérique, ou si vous n'y êtes pas connecté.
-
 1. Cliquez sur **OK** pour autoriser {{site.data.keyword.amashort}} à utiliser votre ID utilisateur Facebook pour l'authentification.
 
-1. 	Lorsque votre demande aboutit, la sortie suivante figure dans l'utilitaire LogCat :
+1. Lorsque votre demande aboutit, la sortie suivante figure dans l'utilitaire LogCat :
 
 	![image](images/android-facebook-login-success.png)
 
- Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
+	Vous pouvez également ajouter une fonctionnalité de déconnexion en ajoutant le code suivant :
 
- ```
-FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
- ```
+	`FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+ `
 
- Si vous appelez ce code lorsqu'un utilisateur est connecté via Facebook, l'utilisateur est déconnecté de Facebook. Lorsque l'utilisateur tente de se
+	Si vous appelez ce code lorsqu'un utilisateur est connecté via Facebook, l'utilisateur est déconnecté de Facebook. Lorsque l'utilisateur tente de se
 reconnecter, il doit à nouveau soumettre ses données d'identification Facebook.
 
- La valeur `listener` transmise à la fonction de déconnexion peut être `null`.
+	La valeur `listener` transmise à la fonction de déconnexion peut être `null`.

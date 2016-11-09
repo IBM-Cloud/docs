@@ -2,42 +2,70 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
 
 # 啟用 Cordova 應用程式的 Google 鑑別
 {: #google-auth-cordova}
 
 
-前次更新：2016 年 7 月 21 日
-{: .last-updated}
-
-若要配置 Cordova 應用程式進行 Google 鑑別整合，您必須以 Cordova 應用程式的原生程式碼（Java、Objective-C 或 Swift）進行變更。每一個平台都必須分別進行配置。使用原生開發環境，以原生程式碼進行變更（例如，在 Android Studio 或 Xcode 中）。
+若要配置 {{site.data.keyword.amafull}} Cordova 應用程式進行 Google 鑑別整合，您必須以 Cordova 應用程式的原生程式碼（Java、Objective-C 或 Swift）進行變更。每一個平台都必須分別進行配置。使用原生開發環境，以原生程式碼進行變更（例如，在 Android Studio 或 Xcode 中）。
 
 ## 開始之前
 {: #before-you-begin}
 您必須具有：
 * 使用 {{site.data.keyword.amashort}} 用戶端 SDK 進行檢測的 Cordova 專案。如需相關資訊，請參閱[設定 Cordova 外掛程式](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)。  
 * {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
-
-
-
-
 * （選用）熟悉下列各節：
-   * [在 Android 應用程式中啟用 Google 鑑別](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
-   * [在 iOS 應用程式中啟用 Google 鑑別](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
+   * [啟用 Android 應用程式的 Google 鑑別](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
+   * [啟用 iOS 應用程式的 Google 鑑別](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
 
 
 ## 配置 Android 平台
 {: #google-auth-cordova-android}
 
-配置 Cordova 應用程式的 Android 平台進行 Google 鑑別整合所需的步驟，與原生應用程式所需的步驟極為類似。如需相關資訊，請參閱[在 Android 應用程式中啟用 Google 鑑別](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)。設定下列部分：
+配置 Cordova 應用程式的 Android 平台進行 Google 鑑別整合所需的步驟，與原生應用程式所需的步驟極為類似。請參閱[在 Android 應用程式中啟用 Google 鑑別](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)，並設定下列項目：
 
 * 配置 Android 平台的 Google 專案
 * 配置 {{site.data.keyword.amashort}} 進行 Google 鑑別
-* 配置適用於 Android 的 {{site.data.keyword.amashort}} 用戶端 SDK
 
-若為 Cordova 應用程式，請以 JavaScript 程式碼（而不是 Java 程式碼）起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。仍然必須以原生程式碼登錄 `GoogleAuthenticationManager` API。
+### 配置適用於 Android Cordova 的 {{site.data.keyword.amashort}} 用戶端 SDK
+
+
+2. 在 Android 專案資料夾中，開啟應用程式模組的 `build.gradle` 檔案（**不是**專案 `build.gradle` 檔案）。
+尋找 dependencies 區段，並新增用戶端 SDK 的編譯相依關係：
+
+	```Gradle
+	dependencies {
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+        name:'googleauthentication',
+        version: '1.+',
+        ext: 'aar',
+        transitive: true
+    	// other dependencies  
+	}
+	```
+
+2. 按一下**工具 > Android > 將專案與 Gradle 檔案同步化**，以將專案與 Gradle 同步化。
+
+3. 若為 Cordova 應用程式，請以 JavaScript 程式碼（而不是 Java 程式碼）起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。仍然必須以原生程式碼登錄 `GoogleAuthenticationManager` API。將此程式碼新增至主要活動 `onCreate` 方法： 
+
+	```Java
+	GoogleAuthenticationManager.getInstance().registerDefaultAuthenticationListener(this);
+	```
+
+1. 將下列程式碼新增至您的活動中：
+ 
+ 	```Java
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		GoogleAuthenticationManager.getInstance()
+			.onActivityResultCalled(requestCode, resultCode, data);
+	}
+```
 
 ## 配置 iOS 平台
 {: #google-auth-cordova-ios}
@@ -59,7 +87,7 @@ copyright:
 	* IMFGoogleAuthenticationHandler.h
 	* IMFGoogleAuthenticationHandler.m
 
-選取**複製檔案...** 勾選框。
+	選取**複製檔案...** 勾選框。
 
 1. 下載並安裝 [Google+ iOS SDK](http://goo.gl/9cTqyZ)。
 
@@ -73,6 +101,7 @@ copyright:
 [[ NSNotificationCenter defaultCenter] postNotification:
 		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
 ```
+{: codeblock}
 
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #google-auth-cordova-initialize}
@@ -82,8 +111,26 @@ copyright:
 ```JavaScript
 BMSClient.initialize("applicationRoute", "applicationGUID");
 ```
+{: codeblock}
 
-將 *applicationRoute* 及 *applicationGUID* 值取代為您取自儀表板上應用程式之**行動選項**區段的**路徑**及**應用程式 GUID** 值。
+將 `applicationRoute` 及 `applicationGUID` 值取代為應用程式**路徑**及**應用程式 Guid** 值。您可以從儀表板上的應用程式頁面內按一下**行動選項**按鈕，來尋找這些值。
+	
+
+
+
+##起始設定 {{site.data.keyword.amashort}} AuthorizationManager
+在 Cordova 應用程式中使用下列 JavaScript 程式碼，以起始設定 {{site.data.keyword.amashort}} AuthorizationManager。
+
+```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+  ```
+{: codeblock}
+
+將 `tenantId` 值取代為 {{site.data.keyword.amashort}} 服務 `tenantId`。按一下 {{site.data.keyword.amashort}} 服務磚上的**顯示認證**按鈕，即可找到此值。
+
+
+
+
 
 ## 測試鑑別
 {: #google-auth-cordova-test}
@@ -110,15 +157,17 @@ BMSClient.initialize("applicationRoute", "applicationGUID");
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 	request.send(success, failure);
 	```
-
+{: codeblock}
 
 1. 執行您的應用程式。即會顯示 Google 登入畫面。
 
 	![Google 登入畫面](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Google 登入畫面](images/ios-google-login.png)
+	
 	如果您未在裝置上安裝 Facebook 應用程式，或目前未登入 Facebook，則此畫面可能會稍微不同。
+
 1. 按一下**確定**，即會授權 {{site.data.keyword.amashort}} 使用 Google 使用者身分來進行鑑別。
 
-1. 	您的要求應該會成功。視使用的平台而定，您會在 LogCat/Xcode 主控台中看到下列輸出：
+1. 您的要求應該會成功。視使用的平台而定，您會在 LogCat/Xcode 主控台中看到下列輸出：
 
 	![Android 上的程式碼 Snippet](images/android-google-login-success.png)
 

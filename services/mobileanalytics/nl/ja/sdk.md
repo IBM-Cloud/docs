@@ -2,36 +2,40 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
 # {{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用するためのアプリケーションの装備
 {: #mobileanalytics_sdk}
-*最終更新日時: 2016 年 8 月 1 日*
+
+最終更新日: 2016 年 10 月 19 日
 {: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} SDK によって、モバイル・アプリケーションを装備できるようになります。
 {: shortdesc}
 
-{{site.data.keyword.mobileanalytics_short}} を使用すると、3 つのカテゴリーのデータを収集できます。それぞれ異なるレベルの装備をする必要があります:
+{{site.data.keyword.mobileanalytics_short}} を使用すると、2 つの<!--three-->カテゴリーのデータを収集できます。カテゴリーごとに異なるレベルの計装を行う必要があります:
 
-1.  事前定義データ - このカテゴリーには、すべてのアプリに適用される一般的な使用情報およびデバイス情報が含まれます。このカテゴリー内には、デバイス・メタデータ (オペレーティング・システムおよびデバイス・モデル) および使用データ (アクティブ・ユーザー数およびアプリ・セッション数) が含まれており、アプリ使用のボリューム、頻度、または期間を示します。事前定義データは、アプリで {{site.data.keyword.mobileanalytics_short}} SDK を初期設定すると自動的に収集されます。
-2. カスタム・イベント - このカテゴリーには、自身で定義したデータ、およびアプリに固有のデータが含まれます。このデータは、ページ・ビュー、ボタン・タップ、アプリ内購入など、アプリ内で発生するイベントを表します。アプリでの {{site.data.keyword.mobileanalytics_short}} SDK の初期設定に加えて、追跡対象の各カスタム・イベントに対してコードを 1 行追加する必要があります。
-3. クライアント・ログ・メッセージ - このカテゴリーを使用すると、カスタム・メッセージをログに記録するコード行を開発者がアプリ全体にわたって追加できるようになり、開発およびデバッグに役立ちます。開発者は重大度/詳細レベルを各ログ・メッセージに割り当て、その後、割り当てたレベルによってメッセージをフィルター操作したり、指定したログ・レベルの下位レベルのメッセージを無視するようにアプリを構成してストレージ・スペースを維持したりできます。クライアント・ログ・データを収集するには、アプリ内の {{site.data.keyword.mobileanalytics_short}} SDK を初期設定し、また、各ログ・メッセージのコード行を追加する必要があります。
+1. 事前定義データ - このカテゴリーには、すべてのアプリケーションに適用される一般的な使用情報およびデバイス情報が含まれます。このカテゴリー内には、デバイス・メタデータ (オペレーティング・システムおよびデバイス・モデル) および使用データ (アクティブ・ユーザー数およびアプリケーション・セッション数) が含まれており、アプリケーション使用のボリューム、頻度、または期間を示します。事前定義データは、アプリケーションで {{site.data.keyword.mobileanalytics_short}} SDK を初期設定すると自動的に収集されます。
 
-SDK は、現在 Android、iOS、および WatchOS で使用できます。
+2. アプリケーション・ログ・メッセージ - このカテゴリーでは、開発者は、開発およびデバッグに役立つカスタム・メッセージをログに記録するコード行をアプリケーション全体に追加できます。開発者は重大度/詳細レベルを各ログ・メッセージに割り当て、その後、割り当てたレベルによってメッセージをフィルター操作したり、指定したログ・レベルの下位レベルのメッセージを無視するようにアプリケーションを構成してストレージ・スペースを維持したりできます。アプリケーション・ログ・データを収集するには、アプリケーション内で {{site.data.keyword.mobileanalytics_short}} SDK を初期化し、各ログ・メッセージのコード行を追加する必要があります。
 
-## アクセス・キー値の識別
+<!--2. Custom events - This category includes data that you define yourself and that is specific to your app. This data represents events that occur within your app, such as page views, button taps, or in-app purchases. In addition to initializing the {{site.data.keyword.mobileanalytics_short}} SDK in your app, you must add a line of code for each custom event that you want to track. -->
+
+現在、SDK は、Android、iOS、WatchOS で使用できます。
+
+## サービス資格情報 API キー値の特定
 {: #analytics-clientkey}
 
-クライアント SDK をセットアップする前に、**アクセス・キー**値を識別します。アクセス・キーは、クライアント SDK の初期設定に必要です。
+クライアント SDK をセットアップする前に、**API キー**値を特定します。クライアント SDK の初期化には API キーが必要です。
 
 1. {{site.data.keyword.mobileanalytics_short}} サービス・ダッシュボードを開きます。
 2. **「サービス資格情報」**タブをクリックします。
-3. アクセス・キー値をコピーします。
+3. **「資格情報の表示」**を展開すると、API キー値が表示されます。この API キー値は、{{site.data.keyword.mobileanalytics_short}} クライアント SDK を初期設定する場合に必要です。
 
 
-## 分析を収集するための Android アプリの初期設定
+## 分析を収集するための Android アプリケーションの初期設定
 {: #initalize-ma-sdk-android}
 
 {{site.data.keyword.mobileanalytics_short}} サービスにログを送れるようにアプリケーションを初期設定します。
@@ -48,30 +52,30 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 2. Android アプリケーションのメイン・アクティビティーの `onCreate` メソッド、もしくはご使用のプロジェクトで最も適切な場所に初期設定コードを追加して、Android アプリケーションの {{site.data.keyword.mobileanalytics_short}} クライアント SDK を初期設定します。
 
 	```Java
-	try {
-            BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
-        } catch (MalformedURLException e) {
-            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
-        } 
-  ```
-  {: codeblock}
-
-  {{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用するには、**bluemixRegion** パラメーターを指定して `BMSClient` を初期設定する必要があります。初期化指定子において、**bluemixRegion** 値は、使用している {{site.data.keyword.Bluemix_notm}} デプロイメントを指定します。例えば `BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK`、あるいは `BMSClient.REGION_SYDNEY` などです。
-  <!-- Set this value with a `BMSClient.REGION` static property. -->
-
-  <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
-
-3. Android アプリケーション・オブジェクトを使用して分析を初期設定し、アプリケーション名を付けます。また、[**アクセス・キー**](#analytics-clientkey)値も必要です。
-	
-	```Java
-	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
-	// In this code example, Analytics is configured to record lifecycle events.
+	BMSClient.getInstance().initialize(this.getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
 	```
   {: codeblock}
 
-	**ヒント:** アプリケーション名は、ダッシュボードでクライアント・ログを検索する場合にフィルターとして使用されます。複数のプラットフォーム (例えば Android と iOS) で同じアプリケーション名を使用すると、ログの送信元がどのプラットフォームであっても、同じ名前のアプリケーションからのすべてのログを表示できます。
+  {{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用するには、**bluemixRegion** パラメーターを指定して `BMSClient` を初期設定する必要があります。初期化指定子の **bluemixRegion** 値で、使用する {{site.data.keyword.Bluemix_notm}} デプロイメントを指定します。例えば `BMSClient.REGION_US_SOUTH` や `BMSClient.REGION_UK` などです。
+<!-- , or `BMSClient.REGION_SYDNEY`.--> <!-- Set this value with a `BMSClient.REGION` static property. -->
 
-## 分析収集のための iOS アプリの初期設定
+  <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
+
+3. Android アプリケーション・オブジェクトを使用して分析を初期設定し、アプリケーション名を付けます。また、[**API キー**](#analytics-clientkey)値も必要です。
+	
+	```Java
+	// In this code example, Analytics is configured to record lifecycle events.
+	Analytics.init(getApplication(), "your_app_name_here", apiKey, hasUserContext, Analytics.DeviceEvent.LIFECYCLE);
+	```
+  {: codeblock}
+	
+	アプリケーション用に選択した名前 (`your_app_name_here`) は、アプリケーション名として {{site.data.keyword.mobileanalytics_short}} コンソールに表示されます。アプリケーション名は、ダッシュボードでアプリケーション・ログを検索する場合にフィルターとして使用されます。複数のプラットフォーム (例えば Android と iOS) で同じアプリケーション名を使用すると、ログの送信元がどのプラットフォームであっても、同じ名前のアプリケーションからのすべてのログを表示できます。
+	
+	**注:** `hasUserContext` の値を **true** または **false** に設定します。false (デフォルト値) の場合、各デバイスがアクティブ・ユーザーとしてカウントされます。`hasUserContext` が false の場合、[`Analytics.setUserIdentity("username")`](sdk.html#android-tracking-users) メソッドは機能しません。このメソッドは、デバイスごとにアクティブにアプリケーションを使用しているユーザー数をトラッキングできます。true の場合、[`Analytics.setUserIdentity("username")`](sdk.html#android-tracking-users) を使用するたびにアクティブ・ユーザーとしてカウントされます。`hasUserContext` が true の場合、デフォルトのユーザー ID は存在しないため、アクティブ・ユーザー・グラフにデータを取り込む場合には、ユーザー ID を設定する必要があります。
+	
+4. (sdk.html#app-monitoring-gathering-analytics) サービスに[分析データを送信](sdk.html#app-monitoring-gathering-analytics)します。
+
+## 分析収集のための iOS アプリケーションの初期設定
 {: #init-ma-sdk-ios}
 
 {{site.data.keyword.mobileanalytics_short}} サービスにログを送れるようにアプリケーションを初期設定します。Swift SDK は iOS および watchOS で使用できます。
@@ -82,58 +86,66 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   import BMSCore
   import BMSAnalytics
   ```
-  {: screen}
+  {: codeblock}
 
 2. {{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用するには、まず以下のコードを使用して `BMSClient` クラスを初期設定する必要があります。
 
   初期設定コードを、アプリケーション・デリゲートの `application(_:didFinishLaunchingWithOptions:)` メソッド内か、プロジェクトで最も適切な場所に置きます。
-
-    ```Swift
-    BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH)`
+	
+    ```Swift 
+    BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
     ```
     {: codeblock}
 
-    {{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用するには、**bluemixRegion** パラメーターを指定して `BMSClient` を初期設定する必要があります。初期化指定子において、**bluemixRegion** 値は、使用している {{site.data.keyword.Bluemix_notm}} デプロイメントを指定します。例えば `BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK`、あるいは `BMSClient.REGION_SYDNEY` などです。
+    {{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用するには、**bluemixRegion** パラメーターを指定して `BMSClient` を初期設定する必要があります。初期化指定子において、**bluemixRegion** 値は、使用する {{site.data.keyword.Bluemix_notm}} デプロイメントを指します。例えば `BMSClient.REGION_US_SOUTH` や `BMSClient.REGION_UK` などです。
+    <!-- , or `BMSClient.REGION_SYDNEY`. -->
    
    <!-- Set this value with a `BMSClient.REGION` static property. -->
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. モバイル・アプリケーション名を付けて分析を初期設定します。また、[**アクセス・キー**](#analytics-clientkey)値も必要です。
+3. モバイル・アプリケーション名を付けて分析を初期設定します。また、[**API キー**](#analytics-clientkey)値も必要です。
 
-  アプリケーション名は、{{site.data.keyword.mobileanalytics_short}} ダッシュボードでクライアント・ログを検索する場合にフィルターとして使用されます。複数のプラットフォーム (例えば Android と iOS) で同じアプリケーション名を使用すると、ログの送信元がどのプラットフォームであっても、同じ名前のアプリケーションからのすべてのログを表示できます。
+ アプリケーション名は、{{site.data.keyword.mobileanalytics_short}} ダッシュボードでアプリケーション・ログを検索する場合にフィルターとして使用されます。複数のプラットフォーム (例えば Android と iOS) で同じアプリケーション名を使用すると、ログの送信元がどのプラットフォームであっても、同じ名前のアプリケーションからのすべてのログを表示できます。
 
   オプションの `deviceEvents` パラメーターを使用すると、デバイス・レベルのイベントに関する分析が自動的に収集されます。
 
-  ### iOS
-    {: #ios-initialize-analytics}
-
-      ```
-      Analytics.initializeWithAppName("AppName", accessKey: "your_access_key",
-      deviceEvents: DeviceEvent.LIFECYCLE)
-      ```
-
-  ### watchOS
-  {: #watchos-initialize-analytics}
-
-	```
-	  Analytics.initializeWithAppName("AppName", accessKey: "your_access_key")
-	```
-
-  `Analytics.recordApplicationDidBecomeActive()` メソッドと `Analytics.recordApplicationWillResignActive()` メソッドを使用すると、WatchOS に関するデバイス・イベントを記録できます。
+ ### iOS
+ {: #ios-initialize-analytics}
+	
+ ```Swift
+ Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: DeviceEvent.lifecycle)
+ ```
+ {: codeblock}
   
-  以下の行を ExtensionDelegate クラスの `applicationDidBecomeActive()` メソッドに追加します。
+ ### watchOS
+ {: #watchos-initialize-analytics}
+	
+ ```Swift
+ Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false)
+  ```
+ {: codeblock}
+	
+ アプリケーション用に選択した名前 (`your_app_name_here`) は、アプリケーション名として {{site.data.keyword.mobileanalytics_short}} コンソールに表示されます。アプリケーション名は、ダッシュボードでアプリケーション・ログを検索する場合にフィルターとして使用されます。複数のプラットフォーム (例えば Android と iOS) で同じアプリケーション名を使用すると、ログの送信元がどのプラットフォームであっても、同じ名前のアプリケーションからのすべてのログを表示できます。
+	
+ **注:** `hasUserContext` の値を **true** または **false** に設定します。false (デフォルト値) の場合、各デバイスがアクティブ・ユーザーとしてカウントされます。`hasUserContext` が false の場合、[`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) メソッドは機能しません。このメソッドは、デバイスごとにアクティブにアプリケーションを使用しているユーザー数をトラッキングできます。`hasUserContext` が true の場合、[`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) を使用するたびにアクティブ・ユーザーとしてカウントされます。`hasUserContext` が true の場合、デフォルトのユーザー ID は存在しないため、アクティブ・ユーザー・グラフにデータを取り込む場合には、ユーザー ID を設定する必要があります。
+
+ `Analytics.recordApplicationDidBecomeActive()` メソッドと `Analytics.recordApplicationWillResignActive()` メソッドを使用すると、WatchOS に関するデバイス・イベントを記録できます。
+  
+ 以下の行を ExtensionDelegate クラスの `applicationDidBecomeActive()` メソッドに追加します。
 
 	```
 	Analytics.recordApplicationDidBecomeActive()
 	```
   {: codeblock}
 
-  以下の行を ExtensionDelegate クラスの applicationWillResignActive() メソッドに追加します:
+ 以下の行を ExtensionDelegate クラスの applicationWillResignActive() メソッドに追加します:
 	```
 	Analytics.recordApplicationWillResignActive()
 	```
   {: codeblock}
+  
+4. {{site.data.keyword.mobileanalytics_short}} サービスに[分析データを送信](sdk.html#app-monitoring-gathering-analytics)します。
 
 ## 使用分析の収集
 {: #app-monitoring-gathering-analytics}
@@ -153,13 +165,25 @@ Analytics.disable();
 // Enable recording of usage analytics
 Analytics.enable();
 	
-Analytics.log(eventJSONObject);
-	
 // Send recorded usage analytics to the Mobile Analytics Service
-Analytics.send();
+Analytics.send(new ResponseListener() {
+            @Override
+            public void onSuccess(Response response) {
+                // Handle Analytics send success here.
+            }
+
+            @Override
+            public void onFailure(Response response, Throwable throwable, JSONObject jsonObject) {
+                // Handle Analytics send failure here.
+            }
+        });
 ```
-	
-イベントをログに記録するための使用分析の例:
+{: codeblock}
+
+<!-- removed: Analytics.log(eventJSONObject); -->
+
+<!--	
+Sample usage analytics for logging an event:
 	
 ```
 // Log a custom analytics event for custom charts, which is represented by a JSON object:
@@ -167,6 +191,8 @@ JSONObject eventJSONObject = new JSONObject();
 	
 eventJSONObject.put("customProperty" , "propertyValue");
 ```
+{: codeblock}
+-->
 
 #### iOS - Swift
 {: #ios-usage-api}
@@ -174,22 +200,38 @@ eventJSONObject.put("customProperty" , "propertyValue");
 ```
 // Disable recording of usage analytics (for example, to save disk space)
 // Recording is enabled by default
-Analytics.enabled = false
+Analytics.isEnabled = false
 
 // Enable recording of usage analytics
-Analytics.enabled = true
+Analytics.isEnabled = true
 
-// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
-Analytics.send()
+// Send recorded usage analytics to the Mobile Analytics Service
+Analytics.send(completionHandler: { (response: Response?, error: Error?) in
+
+    if let response = response {
+        // Handle Analytics send success here.
+    }
+    if let error = error {
+        // Handle Analytics send failure here.
+    }
+})
 ```
+{: codeblock}
 
-イベントをログに記録するための使用分析の例:
+<!--
+Sample usage analytics for logging an event:
 
-```
+#### Swift
+{: customchartsswift}
+
+```Swift
 // Log a custom analytics event for custom charts
 let eventObject = ["customProperty": "propertyValue"]
 Analytics.log(eventObject)
 ```
+{: codeblock}
+
+-->
 
   <!--Removing Cordova for experimental-->
   <!--### Cordova-->
@@ -203,7 +245,7 @@ Analytics.log(eventObject)
   <!--Analytics.send();-->
   <!--```-->
   <!--**Note:** When you are developing Cordova applications, use the native API to enable application lifecycle event recording.-->
-
+  
 ## ロガーの有効化、構成、および使用
 {: #app-monitoring-logger}
 
@@ -246,7 +288,7 @@ Analytics.log(eventObject)
 ### ロガーの使用例
 {: #sample-logger-usage}
 
-**注:** ロギング・フレームワークを使用する前に、[{{site.data.keyword.mobileanalytics_short}} クライアント SDK](sdk.html) を使用するようにアプリを装備しておく必要があります。
+**注:** ロギング・フレームワークを使用する前に、{{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用するようにアプリケーションを装備したことを確認してください。
  
   以下のコード・スニペットにロガーの使用例を示します:
 
@@ -255,7 +297,7 @@ Analytics.log(eventObject)
 
 ```
 // Configure Logger to save logs to the device so that they 
-// can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
+// can later be sent to the Mobile Analytics service
 // Disabled by default; set to true to enable
 Logger.storeLogs(true);
 
@@ -263,13 +305,6 @@ Logger.storeLogs(true);
 // The default setting is Logger.LEVEL.DEBUG
 Logger.setLogLevel(Logger.LEVEL.INFO);
 
-// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
-Logger.send();
-```
-
-ロガーのシナリオ:
-
-```
 // Create two logger instances
 // You can create multiple log instances to organize your logs
 Logger logger1 = Logger.getLogger("logger1");
@@ -281,39 +316,58 @@ Logger logger2 = Logger.getLogger("logger2");
 logger1.debug("debug message"); 
 //the logger1.debug message is not logged because the logLevelFilter is set to Info
 logger2.info("info message");
+// Send logs to the Mobile Analytics Service
+        Logger.send(new ResponseListener() {
+                    @Override
+                    public void onSuccess(Response response) {
+                        // Handle Logger send success here.
+                    }
+
+                    @Override
+                    public void onFailure(Response response, Throwable throwable, JSONObject jsonObject) {
+                        // Handle Logger send failure here.
+                    }
+                });        
 ```
+{: codeblock}
 
 #### iOS - Swift
-{: ios-logger-sample}
+{: #ios-logger-sample-swift2}
 
 ```
-// Configure Logger to save logs to the device so that they can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
+// Configure Logger to save logs to the device so that they can later be sent to the Mobile Analytics service
 // Disabled by default; set to true to enable
-Logger.logStoreEnabled = true
+Logger.isLogStorageEnabled = true
 
 // Change the minimum log level (optional)
-// The default setting is LogLevel.Debug
-Logger.logLevelFilter = LogLevel.Info
+// The default setting is LogLevel.debug
+Logger.logLevelFilter = LogLevel.info
 
-// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
-Logger.send()
-```
-
-ロガーのシナリオ:
-    
-```
 // Create two logger instances
 // You can create multiple log instances to organize your logs
-let logger1 = Logger.logger(forName: "feature1Logger")
-let logger2 = Logger.logger(forName: "feature2Logger")
-	
-// Log messages with different levels
-logger1.debug("debug message for feature 1") 
-//the logger1.debug message is not logged because the logLevelFilter is set to Info
-logger2.info("info message for feature 2")
-```
+let logger1 = Logger.logger(name: "feature1Logger")
+let logger2 = Logger.logger(name: "feature2Logger")
 
-**ヒント**: プライバシーに関する懸念から、リリース・モードでビルドされたアプリケーションのロガー出力を無効にすることができます。デフォルトでは、ロガー・クラスはログを Xcode コンソールに出力します。ターゲットのビルド設定で、リリース・ビルド構成の **Other Swift Flags** セクションに `-D RELEASE_BUILD` フラグを追加します。
+// Log messages with different levels
+logger1.debug(message: "debug message for feature 1") 
+//the logger1.debug message is not logged because the logLevelFilter is set to info
+logger2.info(message: "info message for feature 2")
+
+// Send logs to the Mobile Analytics Service
+Logger.send(completionHandler: { (response: Response?, error: Error?) in
+    
+    if let response = response {
+        logger.debug(message: "Status code: \(response.statusCode)")
+        logger.debug(message: "Response: \(response.responseText)")
+    }
+    if let error = error {
+        logger.error(message: "Error: \(error)")
+    }
+})
+```
+{: codeblock}
+
+**ヒント:** プライバシーに関する懸念から、リリース・モードでビルドされたアプリケーションのロガー出力を無効にすることができます。デフォルトでは、ロガー・クラスはログを Xcode コンソールに出力します。ターゲットのビルド設定で、リリース・ビルド構成の **Other Swift Flags** セクションに `-D RELEASE_BUILD` フラグを追加します。
     
 
   <!-- ### Cordova-->
@@ -344,8 +398,10 @@ logger2.info("info message for feature 2")
 {: #enable-logger-print-android}
 
 ```
+{: codeblock}
 Logger.setSDKDebugLoggingEnabled(true);
 ```
+{: codeblock}
 
 #### iOS - Swift
 {: #enable-logger-print-swift}
@@ -353,41 +409,77 @@ Logger.setSDKDebugLoggingEnabled(true);
 ```
 Logger.sdkDebugLoggingEnabled = true
 ```
+{: codeblock}
 -->
+
+## 異常終了分析の報告
+{: #report-crash-analytics}
+
+分析およびログ情報を {{site.data.keyword.mobileanalytics_short}} に送信することによって、[アプリケーションの異常終了データ](app-monitoring.html#monitor-app-crash)を表示することができます。
+
+`Analytics.send()` メソッドによって、**「異常終了」**ページの**「異常終了の概要」**表および**「異常終了」**表にデータが設定されます。このセクションにあるグラフは、分析の初期設定および送信プロセスを使用して有効にすることができます。特別な構成は必要ありません。
+
+`Logger.send()` メソッドによって、**「トラブルシューティング」**ページの**「異常終了の要約」**および**「異常終了の詳細」**表にデータが設定されます。以下のような追加のステートメントをアプリケーション・コードに追加することによって、アプリケーションがログを保管および送信してこのセクションのグラフにデータを設定できるようにする必要があります。
+
+#### Android
+{: #android-crash-statement}
+
+* `Logger.storeLogs(true);`
+<!-- * `Logger.setLogLevel(Logger.LEVEL.FATAL); // or greater` -->
+
+[サンプル・ロガーの使用法](sdk.html#android-logger-sample)を参照してください。
+
+#### iOS
+{: #ios-crash-statement}
+
+* `Logger.isLogStorageEnabled = true`
+<!-- * `Logger.logLevelFilter = LogLevel.Fatal // or greater` -->
+
+[サンプル・ロガーの使用法](sdk.html##ios-logger-sample-swift2)を参照してください。
 
 ## アクティブ・ユーザーのトラッキング
 {: #trackingusers}
-オプションで、アクティブ・ユーザーのユーザー名を {{site.data.keyword.mobileanalytics_short}} に渡すことで、アプリケーションをアクティブに使用しているユーザー数をトラッキングできます。
+
+アプリケーションが 1 つのデバイスの固有のユーザーを認識できる場合は、オプションで、アクティブ・ユーザーのユーザー名を {{site.data.keyword.mobileanalytics_short}} に渡すことで、アプリケーションをアクティブに使用しているユーザー数をトラッキングできます。 
+
+`hasUserContext=true` を指定して {{site.data.keyword.mobileanalytics_short}} を初期設定することで、ユーザー・トラッキングを有効にします。そうしないと、{{site.data.keyword.mobileanalytics_short}} はデバイス 1 つにつきユーザーを 1 人しかキャプチャーしません。 
 
 #### Android
 {: #android-tracking-users}
 
-ユーザーのログイン時用の以下のコードを追加します:
+ユーザーのログイン時刻をトラッキングする場合は、以下のコードを追加します。
 
 ```
 Analytics.setUserIdentity("username");
 ```
+{: codeblock}
 
-ユーザーのログアウト時用の以下のコードを追加します:
+<!--Add the following code for when the user logs out:
 
 ```
 Analytics.clearUserIdentity();
 ```
+{: codeblock}
+-->
 
 #### iOS - Swift
 {: #ios-tracking-users}
 
-ユーザーのログイン時用の以下のコードを追加します:
+ユーザーのログイン時刻をトラッキングする場合は、以下のコードを追加します。
 
 ```
 Analytics.userIdentity = "username"
 ```
+{: codeblock}
 
-ユーザーのログアウト時用の以下のコードを追加します:
+<!--
+Add the following code for when the user logs out:
 
 ```
 Analytics.userIdentity = nil
 ```
+{: codeblock}
+-->
 
 <!--## Configuring MobileFirst Platform Foundation servers to use the {{site.data.keyword.mobileanalytics_short}} service (optional)
 {: #configmfp}
@@ -397,7 +489,7 @@ Analytics.userIdentity = nil
 
   1. Visit the dashboard for the {{site.data.keyword.mobileanalytics_short}} service where you want to send analytics data and note the browser URL for the dashboard.
   2. Determine the value for reporting analytics, as follows:
-  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before `/analytics/console/dashboard`.  
+  	1. Get the {{site.data.keyword.mobileanalytics_short}} service route from the dashboard URL. The {{site.data.keyword.mobileanalytics_short}} service route is the part of the URL before ``/analytics/console/dashboard``.  
 
   		For example, if the dashboard URL is: `http://mobile-analytics-dashboard.ng.bluemix.net/analytics/console/dashboard?instanceId=12345abcde`
       {: screen}
@@ -500,3 +592,14 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
+
+## 次の作業
+{: #what-to-do-next}
+
+{{site.data.keyword.mobileanalytics_short}} の**「コンソール」**に移動して、使用分析を表示できます。例えば、アプリケーションを使用する新規デバイスやデバイスの総数などです。<!--[creating custom charts](app-monitoring.html#custom-charts),-->[アラートを設定する](app-monitoring.html#alerts)こと、および[アプリの異常終了をモニターする](app-monitoring.html#monitor-app-crash)ことによって、アプリケーションをモニターすることもできます。
+
+# 関連リンク
+
+## API リファレンス
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

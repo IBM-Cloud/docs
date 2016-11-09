@@ -2,16 +2,15 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 
 # Introduzione a {{site.data.keyword.amashort}}
 {: #gettingstarted}
-Ultimo aggiornamento: 21 luglio 2016
-{: .last-updated}
 
-Aggiungi sicurezza alla tua applicazione mobile con il servizio {{site.data.keyword.amafull}}. Puoi configurare l'autenticazione client e i provider di identità in modo che gli utenti possano accedere all'applicazione con i loro account Google o Facebook esistenti.
+
+Aggiungi sicurezza alla tua applicazione mobile con il servizio {{site.data.keyword.amafull}}. Puoi configurare l'autorizzazione client per accedere alle risorse di backend protette in esecuzione su {{site.data.keyword.Bluemix_notm}}. Utilizza i provider di identità (Google e Facebook) o le identità personalizzate per autenticare gli utenti e concedere l'accesso alle applicazioni web e alle risorse di backend protette.
 {:shortdesc}
 
 **Nota:** il servizio {{site.data.keyword.amashort}} era precedentemente noto come Advanced Mobile Access.
@@ -21,7 +20,7 @@ Per essere operativo in tempi brevi con il servizio {{site.data.keyword.amashort
 
 1. Utilizza il dashboard {{site.data.keyword.Bluemix_notm}} per creare un'applicazione di back-end mobile o per configurarne una esistente.
   - Puoi selezionare il contenitore tipo **MobileFirst Services Starter** dal catalogo {{site.data.keyword.Bluemix_notm}}.
-  - Inoltre puoi eseguire il bind del servizio a un'applicazione esistente e configurarla. 
+  - Inoltre puoi eseguire il bind del servizio a un'applicazione esistente e configurarla.
 
    Quando utilizzi MobileFirst Services Starter, ottieni un'istanza di un runtime Node.js che viene eseguito su IBM {{site.data.keyword.Bluemix_notm}} per implementare la tua logica di back-end personalizzata. A tale applicazione Node.js viene associata mediante bind una serie di servizi mobili di base che forniscono funzioni di sicurezza, dati, push e monitoraggio. Dopo che l'applicazione {{site.data.keyword.Bluemix_notm}} Node.js è stata creata, puoi configurare il tuo ambiente di sviluppo e iniziare a utilizzare
 gli SDK {{site.data.keyword.Bluemix_notm}} Mobile Services. Puoi utilizzare gli SDK per accedere ai servizi associati mediante bind alla tua applicazione cloud con delle semplici chiamate API.
@@ -31,12 +30,12 @@ gli SDK {{site.data.keyword.Bluemix_notm}} Mobile Services. Puoi utilizzare gli 
    Proteggi le tue risorse di backend mobile in esecuzione su runtime Node.js o Liberty for Java&trade; con la sicurezza OAuth abilitata ai dispositivi mobili. Per ulteriori informazioni, vedi [Protezione delle risorse](protecting-resources.html).
    Per ulteriori informazioni sull'applicazione di back-end mobile predefinita, vedi l'applicazione di esempio [bms-hellotodo-strongloop](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop).
 
-3. Configura il tuo ambiente di sviluppo {{site.data.keyword.amashort}} core. 
+3. Configura il tuo ambiente di sviluppo {{site.data.keyword.amashort}} core.
    
 	####Sviluppo dei client
    {: #client-development}
    
-	Puoi aggiungere l'SDK {{site.data.keyword.amashort}} alla tua applicazione Android, iOS o Cordova esistente, nel seguente modo:
+	Puoi aggiungere l'SDK {{site.data.keyword.amashort}} alla tua applicazione Android, iOS o Cordova esistente, nel seguente modo: 
    * Android: ([Configurazione dell'SDK Android](getting-started-android.html)) ([Esempio](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
   
    * iOS (Swift SDK): ([Configurazione dell'SDK Swift iOS](getting-started-ios-swift-sdk.html))

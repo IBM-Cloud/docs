@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-19"
 
 ---
 {:new_window: target="_blank"}
@@ -9,112 +10,107 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Iniciación a {{site.data.keyword.mobileanalytics_short}} (Experimental)  
-
+# Iniciación a {{site.data.keyword.mobileanalytics_short}}
 {: #gettingstartedtemplate}
-*Última actualización: 1 de agosto de 2016*
+
+
+Última actualización: 19 de octubre de 2016
 {: .last-updated}
 
-Utilice el servicio de {{site.data.keyword.mobileanalytics_full}} para medir el estado, el comportamiento y el contexto de sus apps para móvil, los usuarios móviles y los dispositivos móviles.
+{{site.data.keyword.mobileanalytics_full}} proporciona a los desarrolladores, administradores de TI y a las partes interesadas del negocio información sobre el rendimiento de sus apps para móviles y cómo se utilizan. Supervise el rendimiento y el uso de todas las aplicaciones desde el escritorio o la tableta. Identifique rápidamente tendencias y anomalías, obtenga detalles para resolver problemas y desencadene alertas cuando las métricas de claves atraviesan umbrales críticos. 
 {: shortdesc}
 
 Para empezar a utilizar de inmediato el servicio de {{site.data.keyword.mobileanalytics_short}}, siga estos pasos:
 
-1. Después de [crear una instancia](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) del servicio de {{site.data.keyword.mobileanalytics_short}}, puede acceder a la consola de {{site.data.keyword.mobileanalytics_short}} pulsando el mosaico de la sección Servicios del panel de control de {{site.data.keyword.Bluemix}}.
+1. Después de crear una instancia <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)-->del servicio de {{site.data.keyword.mobileanalytics_short}}, puede acceder a la consola de {{site.data.keyword.mobileanalytics_short}} pulsando el mosaico en el panel de control de la sección **Servicios** de {{site.data.keyword.Bluemix}}.
 
-  **Importante:** La primera vez que abre el servicio de Mobile Analytics que acaba de crear, puede aparecer una ventana para confirmar que permite que {{site.data.keyword.Bluemix_notm}} proporcione su información personal necesaria al servicio para que este pueda validar su identidad. Pulse **Confirmar** para continuar en la consola de {{site.data.keyword.mobileanalytics_short}}. Si pulsa Cancelar, la consola de {{site.data.keyword.mobileanalytics_short}} no se abrirá.
-2. Instale los [SDK de cliente](install-client-sdk.html) de {{site.data.keyword.mobileanalytics_short}}.
+ El servicio de {{site.data.keyword.mobileanalytics_short}} se inicia con la **modalidad de demostración** habilitada. La modalidad de demostración rellena gráficos en las páginas **APP DATA** y **ALERTS**, de forma que puede ver cómo se mostrarán los datos. Puede desactivar la modalidad de demostración cuando tenga sus propios datos. La consola de {{site.data.keyword.mobileanalytics_short}} es de sólo lectura cuando se encuentre en modalidad de demostración, por lo que no podrá crear nuevas definiciones de alerta.
+
+2. Instale los [SDK de cliente](install-client-sdk.html) de {{site.data.keyword.mobileanalytics_short}}. De forma opcional puede utilizar la {{site.data.keyword.mobileanalytics_short}} [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}.
+
 3. Importe los SDK de cliente e inicialícelos con el siguiente fragmento de código para registrar las analíticas de uso.
-  #### Android
-  {: #android-initialize}
-  1. Importe el SDK de cliente:
-		
+
+	#### Android
+	{: #android-initialize}
+	1. Importe el SDK de cliente:
+
 		```
 		import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
 		import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
 		```
-
-  2. Obtenga el valor de la [Clave de acceso](sdk.html#analytics-clientkey).
-  3. Inicialice el SDK de cliente dentro del código de la aplicación para registrar las analíticas de uso y las sesiones de la aplicación.
+		{: codeblock}
 		
+	2. Inicialice el SDK de cliente dentro del código de la aplicación para registrar el análisis de uso y las sesiones de aplicación utilizando el valor de [clave de API](sdk.html#analytics-clientkey).
+
 		```Java
-		try {
-		        BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH);
-			}
-			catch (MalformedURLException e) {
-		        Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
-		    }
-		   Analytics.init(getApplication(), "your_app_name", "your_access_key", Analytics.DeviceEvent.LIFECYCLE);
+			BMSClient.getInstance().initialize(this.getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
+			
+			Analytics.init(getApplication(), "your_app_name_here", "your_api_key_here", hasUserContext, Analytics.DeviceEvent.LIFECYCLE);
 		```
-    El parámetro **bluemixRegion** especifica el despliegue de Bluemix utilizado (por ejemplo, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` o `BMSClient.REGION_SYDNEY`).
+		{: codeblock}
+		
+    El nombre que seleccione para la aplicación (`your_app_name_here`) se mostrará en la consola de {{site.data.keyword.mobileanalytics_short}} como el nombre de la aplicación. El nombre de la aplicación se utiliza como filtro para buscar registros de aplicaciones en el panel de control. Si utiliza el mismo nombre de aplicación en varias plataformas (por ejemplo, en Android e iOS), podrá ver todos los registros de esa aplicación con el mismo nombre, independientemente de la plataforma desde la que se han enviado los registros.
+    
+    El parámetro **bluemixRegion** especifica qué despliegue de {{site.data.keyword.Bluemix_notm}} está utilizando, por ejemplo, `BMSClient.REGION_US_SOUTH` y `BMSClient.REGION_UK`. 
+    <!-- , or `BMSClient.REGION_SYDNEY`.-->
+    
+    **Nota:** Establezca el valor para `hasUserContext` en **true** o **false**. Si es false (valor predeterminado), cada dispositivo se cuenta como un usuario activo. El método [`Analytics.setUserIdentity("username");`](sdk.html#android-tracking-users) no funcionará cuando `hasUserContext` es false. Si es true, cada uso de [`Analytics.setUserIdentity("username");`](sdk.html#android-tracking-users) cuenta como un usuario activo. No hay ninguna identidad de usuario predeterminado cuando `hasUserContext` es true y, por lo tanto, debe establecerse en rellenar los gráficos de usuario activo.
 
   #### iOS
   {: #ios-initialize}
+  
   1. Importe las infraestructuras `BMSCore` y `BMSAnalytics`:
-
-    ```
-    import BMSCore
+	```
+	import BMSCore
     import BMSAnalytics
-    ```
-
-  2. Obtenga el valor de la [Clave de acceso](sdk.html#analytics-clientkey).
-
-  3. Inicialice el SDK de cliente dentro del código de la aplicación para registrar las analíticas de uso y las sesiones de la aplicación.
+	```
+	{: codeblock}
+    
+  2. Inicialice el SDK de cliente dentro del código de la aplicación para registrar el análisis de uso y las sesiones de aplicación utilizando el valor de [clave de API](sdk.html#analytics-clientkey).
+ 
+	Swift:
 	
 	```Swift
-	BMSClient.sharedInstance.initializeWithBluemixAppRoute("nil",bluemixAppGUID: "nil", bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-	Analytics.initializeWithAppName("your_app_name", accessKey: "your_access_key", deviceEvents: DeviceEvent.LIFECYCLE)
+	BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // You can change the region
+	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: DeviceEvent.lifecycle)	
 	```
-
-    El parámetro **bluemixRegion** especifica el despliegue de Bluemix utilizado (por ejemplo, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` o `BMSClient.REGION_SYDNEY`).
+	{: codeblock}
+		
+	El nombre que seleccione para la aplicación (`your_app_name_here`) se mostrará en la consola de {{site.data.keyword.mobileanalytics_short}} como el nombre de la aplicación. El nombre de la aplicación se utiliza como filtro para buscar registros de aplicaciones en el panel de control. Si utiliza el mismo nombre de aplicación en varias plataformas (por ejemplo, en Android e iOS), podrá ver todos los registros de esa aplicación con el mismo nombre, independientemente de la plataforma desde la que se han enviado los registros.
+	
+	El parámetro **bluemixRegion** especifica qué despliegue de Bluemix está utilizando, por ejemplo `BMSClient.REGION_US_SOUTH` y `BMSClient.REGION_UK`.
+	<!-- , or `BMSClient.REGION_SYDNEY`. -->
+	
+	**Nota:** Establezca el valor para `hasUserContext` en **true** o **false**. Si es false (valor predeterminado), cada dispositivo se cuenta como un usuario activo. El método [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) no funcionará cuando `hasUserContext` es false. Si es true, cada uso de [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) cuenta como un usuario activo. No hay ninguna identidad de usuario predeterminado cuando `hasUserContext` es true y, por lo tanto, debe establecerse en rellenar los gráficos de usuario activo.
 
 4. Envíe las analíticas de uso registradas al servicio de Mobile Analytics. Una manera fácil de probar las analíticas consiste en ejecutar el siguiente código en el momento de iniciar la aplicación:
 
 	#### Android
 	{: #android-send}
+
+	Utilice el método `Analytics.send()` para enviar datos analíticos al servidor. Puede colocar el método `Analytics.send()` en cualquier lugar del método `onCreate` de la actividad principal de la aplicación de Android, o en una ubicación que sea más adecuada para su proyecto. 
 	
-	Puede añadir el método `Analytics.send()` al método `onCreate` de la actividad principal de la aplicación de Android, o bien en una ubicación que sea más adecuada para su proyecto.
-	
+	Puede insertar `Analytics.send()` en cualquier lugar.
+
 	```
-	Analytics.send(new ResponseListener() {
-	    @Override
-	    public void onSuccess(Response response) {
-	        Log.d("your_app_name", "Successfully sent analytics: " + response.toString());
-	    }
-		
-	    @Override
-	    public void onFailure(Response response, Throwable throwable, JSONObject jsonObject) {
-	        Log.e("your_app_name", "Failed to send analytics: ");
-	        if (response != null) {
-	            Log.e("your_app_name", response.toString());
-	        }
-	        if (throwable != null) {
-	            Log.e("your_app_name","Stack trace: ", throwable);
-	        }
-	    }
-	});
+	Analytics.send();
 	```
-	
+	{: codeblock}
+
 	#### iOS
 	{: #ios-send}
-	
-	
-	Utilice el método `Analytics.send` para enviar datos analíticos al servidor. Coloque el método `Analytics.send` en el método `application(_:didFinishLaunchingWithOptions:)` de la aplicación delegada o en una ubicación que sea más adecuada para su proyecto. 
-		
+
+	Utilice el método `Analytics.send` para enviar datos analíticos al servidor. Puede colocar el método `Analytics.send` en cualquier lugar del método `application(_:didFinishLaunchingWithOptions:)` de la aplicación delegada o en una ubicación que sea más adecuada para su proyecto. 
+
 	```
-	Analytics.send { (response: Response?, error: NSError?) in
-	  if response?.statusCode == 201 {
-	      print("Successfully sent analytics: \(response?.responseText)")
-	  }
-	  else {
-	      print("Failed to send analytics: \(response?.responseText). Error: \(error?.localizedDescription)")
-	  }
-	}
+	Analytics.send()
 	```
-Consulte el tema [Preparación de la aplicación](sdk.html).
+	{: codeblock}
+
+	Lea el tema [Preparación de la aplicación](sdk.html) para obtener más información sobre prestaciones adicionales de {{site.data.keyword.mobileanalytics_short}}.
 5. Compile y ejecute la aplicación en el emulador o dispositivo.
 
-6. Vaya al **panel de control** de {{site.data.keyword.mobileanalytics_short}} para ver las analíticas de uso (por ejemplo, los dispositivos nuevos y el total de dispositivos que utilizan la aplicación). También puede supervisar la app <!-- [creating custom charts](app-monitoring.html#custom-charts), --> [definiendo alertas](app-monitoring.html#alerts) y [supervisando bloqueos de la app](app-monitoring.html#monitor-app-crash). 
+6. Vaya a la **Consola** de {{site.data.keyword.mobileanalytics_short}} para ver las analíticas de uso para su aplicación. También puede supervisar la aplicación <!--[creating custom charts](app-monitoring.html#custom-charts),-->[definiendo alertas](app-monitoring.html#alerts) y [supervisando bloqueos de la app](app-monitoring.html#monitor-app-crash).
 
 
 # rellinks
@@ -122,3 +118,7 @@ Consulte el tema [Preparación de la aplicación](sdk.html).
 ## SDK
 * [SDK de Android](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [SDK de iOS](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+
+## Referencia de API
+{: #api}
+* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

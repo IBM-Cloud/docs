@@ -1,23 +1,22 @@
 ---
 
 copyright:
-  years: 2015, 2016
-
+  years: 2015, 2016 lastupdated: "2016-10-02"
 ---
 
-{:shortdesc: .shortdesc}
+{:shortdesc: .shortdesc} {:codeblock:.codeblock}
 
 # Protegendo recursos de backend com o serviço {{site.data.keyword.amashort}}
 {: #protecting-resources}
 
-Última atualização: 17 de julho de 2016
+Última atualização: 22 de agosto de 2016
 {: .last-updated}
 
 
-Com o serviço {{site.data.keyword.amashort}}, é possível proteger seus aplicativos backend Node.js e baseados em Java que estão em execução no {{site.data.keyword.Bluemix_notm}} com a segurança e o monitoramento de OAuth ativados pelo dispositivo móvel. 
+Com o serviço {{site.data.keyword.amafull}}, é possível proteger seus aplicativos backend Node.js e baseados em Java que estão em execução no {{site.data.keyword.Bluemix_notm}} com a segurança e o monitoramento de OAuth ativados pelo dispositivo móvel. 
 {:shortdesc}
 
-## Antes de começar
+## Antes de iniciar
 {: #before-you-begin}
 Antes de iniciar, assegure-se de que o serviço Node.js exista em seu aplicativo backend {{site.data.keyword.Bluemix_notm}}.
 
@@ -54,6 +53,8 @@ O contexto de segurança contém o assunto, usuário, dispositivo e as informaç
     }
 }
 ```
+{: codeblock}
+
 * `imf.sub`: especificará o assunto do token do ID ou o ID exclusivo do cliente se nenhum token de ID existir.
 * `imf.user`: especifica a identidade do usuário que é extraída do token do ID. Se não existir nenhum token de ID, esse campo reterá um objeto vazio.
 * `imf.device`: especifica a identidade do dispositivo que é extraída do token do ID. Se não existir nenhum token de ID, esse campo reterá um objeto vazio.

@@ -10,13 +10,10 @@ lastupdated: "2016-10-20"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Creating a project with a UI Starter
+# Using a UI Starter to create a project
 {: #projects_ui}
 
-Last updated: 20 October 2016
-{: .last-updated}
-
-You can use a UI Starter in {{site.data.keyword.Bluemix}} Mobile dashboard to create a project in the {{site.data.keyword.Bluemix_notm}} environment. This procedure does not apply to projects that use the Code Starters. See [Creating a project with a Code Starter](projects_code.html) for instructions for Code Starters.
+You can use a [UI Starter](starters.html#UI_Starter) in {{site.data.keyword.Bluemix}} Mobile dashboard to create a project in the {{site.data.keyword.Bluemix_notm}} environment. This procedure does not apply to projects that use the Code Starters. See [Creating a project with a Code Starter](projects_code.html) for instructions for Code Starters.
 {:shortdesc}
 
 Complete the following steps to create a project with a UI Starter:
@@ -47,7 +44,9 @@ Complete the following steps to create a project with a UI Starter:
 
    Note: Because the Code Starters do not have a customizable user interface, the *Design* tab is not available.
 
-    1. Select **UI Builder** in the navigation menu to customize the design of your app.<!--Most of the design screens have sections that begin with a navigation on the left of the screen, and the sections more specific as it moves to the right side preview of your app. Note: Not all design screens in the starters have the same sections.--> 
+    1. Select **UI Builder** in the navigation menu to customize the design of your app. 
+	
+		**Tip:** To view a quick overview of the UI Builder, select **Show me how it works** in the navigation after selecting the UI Builder. 
 	
 	2. Customize your app layout from the **Screens** tab.
 	

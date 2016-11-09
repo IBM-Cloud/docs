@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -11,19 +11,18 @@ copyright:
 # Autenticazione degli utenti con le credenziali Google
 {: #google-auth}
 
-Ultimo aggiornamento: 22 luglio 2016
 
-Puoi configurare il servizio {{site.data.keyword.amashort}} per proteggere le risorse utilizzando Google come provider di identità. I tuoi utenti dell'applicazione mobile o web possono quindi utilizzare le loro credenziali Google per l'autenticazione.
+Puoi configurare il servizio {{site.data.keyword.amafull}} per proteggere le risorse utilizzando Google come provider di identità. I tuoi utenti dell'applicazione mobile o web possono quindi utilizzare le loro credenziali Google per l'autenticazione.
 {:shortdesc}
 
-**Importante:** non devi necessariamente installare separatamente l'SDK client fornito da Google. L'SDK Google viene installato automaticamente dai gestori dipendenze quando configuri l'SDK client {{site.data.keyword.amashort}}. 
+**Importante:** non devi necessariamente installare separatamente l'SDK client fornito da Google. L'SDK Google viene installato automaticamente dai gestori dipendenze quando configuri l'SDK client {{site.data.keyword.amashort}}.
 
 ## Flusso della richiesta {{site.data.keyword.amashort}}
 {: #google-auth-overview}
 
-### Flusso della richiesta client 
+### Flusso della richiesta client
 
-Consulta il seguente diagramma per comprendere in che modo {{site.data.keyword.amashort}} si integra con Google per l'autenticazione. 
+Consulta il seguente diagramma per comprendere in che modo {{site.data.keyword.amashort}} si integra con Google per l'autenticazione.
 
 ![Diagramma del flusso della richiesta client](images/mca-sequence-google.jpg)
 

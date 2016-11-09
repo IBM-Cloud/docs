@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,12 +11,9 @@ copyright:
 # 启用 iOS 应用程序 (Objective-C SDK) 的 Facebook 认证
 {: #facebook-auth-ios}
 
-
-上次更新时间：2016 年 7 月 17 日
-{: .last-updated}
+要在 {{site.data.keyword.amafull}} iOS 应用程序中将 Facebook 用作身份提供者，请为 Facebook 应用程序添加并配置 iOS 平台。
 
 
-要在 iOS 应用程序中将 Facebook 用作身份提供者，请为 Facebook 应用程序添加并配置 iOS 平台。
 {:shortdesc}
 
 **注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK（请参阅[设置 iOS Swift SDK](facebook-auth-ios-swift-sdk.html)）。
@@ -75,6 +72,7 @@ copyright:
 	```
 	pod 'IMFFacebookAuthentication'
 	```
+{: codeblock}
 
 1. 保存 `Podfile`，然后在命令行中运行 `pod install` 命令。CocoaPods 会安装依赖关系。这将显示进度和添加的组件。
 **重要信息**：您现在必须使用 CocoaPods 生成的 `xcworkspace` 文件来打开项目。通常该文件的名称为 `{your-project-name}.xcworkspace`。  
@@ -141,6 +139,8 @@ copyright:
 	    </dict>
 	</dict>
 ```
+{: codeblock}
+
 使用 Facebook 应用程序标识更新 URL 方案和 FacebookappID 属性。
 
   **重要信息**：确保您未覆盖 `info.plist` 文件中的任何现有属性。如果您有重叠属性，必须手动进行合并。有关更多信息，请参阅 [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) 和 [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9)。
@@ -166,6 +166,7 @@ copyright:
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
+{: codeblock}
 
 	####Swift
 	{: #bridgingheader-swift}
@@ -173,8 +174,8 @@ copyright:
 	{{site.data.keyword.amashort}} 客户端 SDK 是使用 Objective-C 实现的，因此可能需要向 Swift 项目添加桥接头。
 
 	1. 在 Xcode 中右键单击项目，并选择**新建文件...**
-	* 在 **iOS 源**类别中，选取`头文件`
-	* 将其命名为 `BridgingHeader.h`
+	* 在 **iOS 源**类别中，选取`头文件`。
+	* 将其命名为 `BridgingHeader.h`。
 	* 将 import 添加到桥接头：
 
 	```Objective-C
@@ -182,6 +183,8 @@ copyright:
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
+{: codeblock}
+
 	* 在 Xcode 中单击项目，然后选择**构建设置**选项卡。
 	* 搜索 **Objective-C Bridging Header**。
 	* 将值设置为您的 `BridgingHeader.h` 文件的位置，例如：`$(SRCROOT)/MyApp/BridgingHeader.h`。
@@ -190,7 +193,7 @@ copyright:
 
 
 
-3. 初始化客户端 SDK。将 *applicationRoute* 和 *applicationGUID* 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。
+3. 初始化客户端 SDK。将 `applicationRoute` 和 `applicationGUID` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。
 
 
 
@@ -202,6 +205,7 @@ copyright:
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+{: codeblock}
 
 	####Swift
 	{: #approute-swift}
@@ -210,6 +214,24 @@ copyright:
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+{: codeblock}
+
+1. 通过传递 {{site.data.keyword.amashort}} 服务 `tenantId` 参数来初始化 `AuthorizationManager`。您可以通过单击 {{site.data.keyword.amashort}} 服务磁贴上的**显示凭证**按钮找到此值。
+	####Objective-C
+	{: #authman-objc}
+
+	```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+  ```
+{: codeblock}
+
+	####Swift
+	{: #authman-swift}
+
+	```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+ ```
+{: codeblock}
 
 1. 通过将以下代码添加到应用程序代表中的 `application:didFinishLaunchingWithOptions` 方法，通知 Facebook SDK 有关应用程序激活的信息，并注册 Facebook 认证处理程序。
 初始化 IMFClient 实例后，请添加以下代码。 	
@@ -221,6 +243,7 @@ copyright:
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 ```
+{: codeblock}
 
 	####Swift
 	{: #activate-swift}
@@ -229,6 +252,7 @@ copyright:
 		FBAppEvents.activateApp()
 		IMFFacebookAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
 ```
+{: codeblock}
 
 1. 将以下代码添加到应用程序代表中。
 
@@ -243,6 +267,7 @@ copyright:
 
 	}
 ```
+{: codeblock}
 
 	####Swift
 	{: #appdelegate-swift}
@@ -286,6 +311,7 @@ copyright:
 		}
 	}];
 	```
+{: codeblock}
 
 	####Swift
 	{: #requestpath-swift}
@@ -303,6 +329,7 @@ copyright:
 		}
 	};
  ```
+ {: codeblock}
 
 1. 运行应用程序。这将弹出 Facebook 登录屏幕。
 
@@ -323,6 +350,7 @@ copyright:
 	```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
 	```
+{: codeblock}
 
 	####Swift
 	{: #logout-swift}
@@ -330,6 +358,7 @@ copyright:
 	```Swift
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
 	```
+{: codeblock}
 
 	如果您在用户登录 Facebook 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Facebook 进行认证。
 

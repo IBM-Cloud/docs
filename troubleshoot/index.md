@@ -3,6 +3,8 @@
 copyright:
   years: 2015, 2016
   
+lastupdated: "2016-08-11"
+  
 
 ---
 
@@ -16,8 +18,6 @@ copyright:
 # Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Last updated: 11 August 2016
-{: .last-updated}
 
 
 General problems with accessing {{site.data.keyword.Bluemix}} might include a user that is unable to log in to {{site.data.keyword.Bluemix_notm}}, an account that is stuck in a pending state, and so on. However, in many cases, you can recover from these problems by following a few easy steps. 
@@ -395,7 +395,7 @@ You do not have the appropriate level of authority that is required to perform t
 To obtain the appropriate authority level, use one of the following methods: 
 {: tsResolve}
  * Select another organization and space for which you have the developer role. 
- * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing organizations and spaces](../admin/orgs_spaces.html){: new_window} for details.
+ * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html){: new_window} for details.
  
 
  
@@ -470,7 +470,7 @@ Other less common causes of a Bad Gateway error are Internet service provider (I
 
  
 
-If you suspect that a {{site.data.keyword.Bluemix_notm}} service is down, first check the [{{site.data.keyword.Bluemix_notm}} status](http://ibm.biz/bluemixstatus){: new_window} page. You might want to use the service in another {{site.data.keyword.Bluemix_notm}} region as a workaround. Detailed information is available in [Using services in another region](../services/reqnsi.html#cross_region_service){: new_window}. If the service status is normal, try the following steps to solve the problem: 
+If you suspect that a {{site.data.keyword.Bluemix_notm}} service is down, first check the [{{site.data.keyword.Bluemix_notm}} status](http://ibm.biz/bluemixstatus){: new_window} page. You might want to use the service in another {{site.data.keyword.Bluemix_notm}} region as a workaround. Detailed information is available in [Using services in another region](/docs/services/reqnsi.html#cross_region_service){: new_window}. If the service status is normal, try the following steps to solve the problem: 
 {: tsResolve}
 
   * Retry the action:
@@ -478,7 +478,7 @@ If you suspect that a {{site.data.keyword.Bluemix_notm}} service is down, first 
 	* Use a different browser.
 	* Reboot your router, your modem, and your computer. Rebooting these devices can clear up various errors that lead to the error 502. 
   * Wait and try again later. In some instances, temporary problems might occur with your Internet service provider or the {{site.data.keyword.Bluemix_notm}} services. You can wait until the temporary problems are solved.
-  * If the problem still exists, contact {{site.data.keyword.Bluemix_notm}} support. See [Contacting {{site.data.keyword.Bluemix_notm}} Support](../support/index.html#contacting-bluemix-support){: new_window} for more information. 
+  * If the problem still exists, contact {{site.data.keyword.Bluemix_notm}} support. See [Contacting {{site.data.keyword.Bluemix_notm}} Support](/docs/support/index.html#contacting-bluemix-support){: new_window} for more information. 
 
 
 
@@ -498,7 +498,7 @@ The default disk quota that is allocated for an app is 1 GB. If you need more di
 {: tsCauses}
 
  
-Use one of the following methods to specify your disk quota. The maximum disk quota that you can specify is 2 GB. If 2 GB is still not enough, try an external service such as [Object Store](../services/ObjectStorage/index.html){: new_window}.
+Use one of the following methods to specify your disk quota. The maximum disk quota that you can specify is 2 GB. If 2 GB is still not enough, try an external service such as [Object Store](/docs/services/ObjectStorage/index.html){: new_window}.
 {: tsResolve}
 
   * In the manifest.yml file, add the following item:
@@ -596,7 +596,7 @@ Delete any services instances that are not needed, or remove the limit on the nu
 	  1. Unbind the service instance from an application by typing `cf unbind-service <appname> <service_instance_name>`.
 	  2. Delete the service instance by typing `cf delete-service <service_instance_name>`.
 	  3. After you delete the service instance, you might want to restage your application that the service instance was bound to by typing `cf restage <appname>`.
-  * To remove the limit on the number of service instances that you can have, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [How to change your plan](../pricing/index.html#changing){: new_window}.
+  * To remove the limit on the number of service instances that you can have, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [How to change your plan](/docs/pricing/index.html#changing){: new_window}.
 
   
   
@@ -651,7 +651,7 @@ This error occurs when the amount of memory that is remaining for your organizat
 You can either increase the memory quota of your account, or reduce the memory that your apps use.
 {: tsResolve} 
 
-  * To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](../pricing/index.html#pay-accounts){: new_window}. 
+  * To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](/docs/pricing/index.html#pay-accounts){: new_window}. 
   * To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} user interface or the cf command line interface.
     If you use the {{site.data.keyword.Bluemix_notm}} user interface, complete the following steps:
 	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, select your application. The app details page opens.
@@ -793,7 +793,7 @@ If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by usi
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by using the Eclipse tools, you must first create a {{site.data.keyword.Bluemix_notm}} server and specify the API endpoint of the {{site.data.keyword.Bluemix_notm}} region that your organization was created in. For more information about using the Eclipse tools, see [Deploying apps with IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.  
+If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by using the Eclipse tools, you must first create a {{site.data.keyword.Bluemix_notm}} server and specify the API endpoint of the {{site.data.keyword.Bluemix_notm}} region that your organization was created in. For more information about using the Eclipse tools, see [Deploying apps with IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.  
   
   
 
@@ -992,7 +992,7 @@ Liberty buildpack uses the `server.xml` file to configure the app and generates 
 
  
 
-You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
+You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -1034,7 +1034,7 @@ This problem might happen because DevOps Services requires a `manifest.yml` file
 
  
 
-To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](../manageapps/depapps.html#appmanifest){: new_window}.
+To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 

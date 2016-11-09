@@ -2,24 +2,20 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # {{site.data.keyword.amashort}} Cordova アプリ用のカスタム認証の構成
 {: #custom-cordova}
 
-最終更新日: 2016 年 7 月 17 日
-{: .last-updated}
-
-
-{{site.data.keyword.amashort}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する Cordova アプリケーションを構成します。
+{{site.data.keyword.amafull}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する Cordova アプリケーションを構成します。
 
 
 ## 開始する前に
 {: #before-you-begin}
 カスタム ID プロバイダーを使用するように構成済みの{{site.data.keyword.amashort}} サービスのインスタンスにより保護されているリソースを持っている必要があります。また、モバイル・アプリに {{site.data.keyword.amashort}} Client SDK が装備されている必要があります。詳しくは、以下の情報を参照してください。
 
- * [{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [{{site.data.keyword.amashort}} 概説](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Cordova SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)
  * [カスタム ID プロバイダーの使用](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [カスタム ID プロバイダーの作成](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
@@ -29,19 +25,21 @@ copyright:
 {: #custom-cordova-sdk}
 applicationGUID および applicationRoute パラメーターを渡すことによって、SDK を初期化します。
 
-1. アプリケーション・パラメーター値を取得します。{{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。「**Mobile オプション**」をクリックします。**「経路」** (`applicationRoute`) と**「アプリ GUID」** (`applicationGUID`) の値が表示されます。
+1. アプリケーション・パラメーター値を取得します。{{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。**「モバイル・オプション」**をクリックします。**「経路」** (`applicationRoute`) と**「アプリ GUID」** (`applicationGUID`) の値が表示されます。
 1. Client SDK を初期化します。
 
 	```JavaScript
-	BMSClient.initialize(applicationRoute, applicationGUID);
-
+	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
-*applicationRoute* および *applicationGUID* を、{{site.data.keyword.Bluemix_notm}} ダッシュボード上のアプリケーションの**「モバイル・オプション」**パネルから取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。
+ * `applicationRoute` および `applicationGUID` を、**「経路」**値および**「AppGuid」**値に置き換えます。これらの値は、{{site.data.keyword.Bluemix_notm}} ダッシュボードで、{{site.data.keyword.Bluemix_notm}} アプリケーション内の**「モバイル・オプション」**ボタンをクリックすると見つけることができます。
+	
+ 
+ 
+## {{site.data.keyword.amashort}} AuthorizationManager の初期化
+ {: #custom-cordova-MCAAM}
+{{site.data.keyword.amashort}} サービスの `tenantId` パラメーターを渡すことによって、`MCAAuthorizationManager` を初期化します。この値は、{{site.data.keyword.amashort}} サービス・タイルの**「資格情報の表示」**ボタンをクリックすると、見つけることができます。
 
-##{{site.data.keyword.amashort}} AuthorizationManager の初期化
-{{site.data.keyword.amashort}} サービス・タイルにある**「資格情報の表示」**ボタンをクリックすると表示される、{{site.data.keyword.amashort}} サービス `tenantId` パラメーターを渡すことで、AuthorizationManager を初期化します。
-
-  ```JavaScript
+```JavaScript
   MFPAuthorizationManager.initialize("tenantId");
   ```
 
@@ -79,14 +77,13 @@ onAuthenticationChallengeReceived: function(authenticationContext, challenge) {.
 onAuthenticationSuccess: function(info){...}
 ```
 
-このメソッドは認証が成功した後で呼び出されます。オプション引数として、認証の成功に関する詳しい情報を含む JSONObject があります。
-
+このメソッドは認証が成功した後で呼び出されます。引数には、認証の成功に関する詳しい情報が含まれた、オプションの JSON オブジェクトが含まれます。
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
 
-このメソッドは認証が失敗した後で呼び出されます。オプション引数として、認証の失敗に関する詳しい情報を含む JSONObject があります。
+このメソッドは認証が失敗した後で呼び出されます。引数には、認証の失敗に関する詳しい情報が含まれた、オプションの JSON オブジェクトが含まれます。
 
 ## authenticationContext
 {: #custom-cordova-authcontext}
@@ -146,7 +143,10 @@ var customAuthenticationListener = {
 ```Java
 BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener);
 ```
-*realmName* には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用してください。## 認証のテスト
+*realmName* には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用してください。
+
+
+## 認証のテスト
 {: #custom-cordova-test}
 Client SDK が初期化され、カスタム AuthenticationListener の登録が完了すると、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 

@@ -2,16 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.amashort}} SDK、样本和 API 参考
-上次更新时间：2016 年 7 月 17 日
-{: .last-updated}
 
-要将 {{site.data.keyword.amashort}} SDK 添加到应用程序，请选择要使用的 SDK。然后，配置依赖关系管理器，以将 SDK 拉入到应用程序中。
+# {{site.data.keyword.amashort}} SDK、样本和 API 参考
+要将 {{site.data.keyword.amafull}} SDK 添加到应用程序，请选择要使用的 SDK。然后，配置依赖关系管理器，以将 SDK 拉入到应用程序中。
 {:shortdesc}
 
 **注：**后续部分提供有关安装 SDK 的其他信息。
@@ -38,6 +36,7 @@ copyright:
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS (Swift SDK)
 {: #coresdk-ios-swift}
@@ -52,6 +51,7 @@ copyright:
 use_frameworks!
 pod 'BMSSecurity'
  ```
+{: codeblock}
 
 ### iOS (Objective-C SDK)
 {: #coresdk-ios}
@@ -67,6 +67,7 @@ pod 'BMSSecurity'
 ```Bash
 pod 'IMFCore'
 ```
+{: codeblock}
 
 ### Cordova
 {: #coresdk-cordova}
@@ -80,6 +81,7 @@ pod 'IMFCore'
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## 用于 Facebook 认证的客户端 SDK
 {: #facebooksdk}
@@ -100,6 +102,7 @@ cordova plugin add ibm-mfp-core
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS (Swift SDK)
 {: #facebooksdk-ios-swift}
@@ -114,13 +117,14 @@ cordova plugin add ibm-mfp-core
 use_frameworks!
 pod 'BMSFacebookAuthentication'
  ```
+{: codeblock}
 
 ### iOS (Objective-C SDK)
 {: #facebooksdk-ios}
 
 [Git 存储库](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git)和 [API 参考](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
 
-*注：*虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK。有关我们强烈建议使用 Swift SDK 的新应用程序的信息，请参阅“设置 iOS Swift SDK”。
+**注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK。有关我们强烈建议使用 Swift SDK 的新应用程序的信息，请参阅“设置 iOS Swift SDK”。
 
 #### 使用 CocoaPods 安装 Facebook SDK
 {: #facebooksdk-ios-cocoapods}
@@ -130,6 +134,7 @@ pod 'BMSFacebookAuthentication'
 ```Bash
 pod 'IMFFacebookAuthentication'
 ```
+{: codeblock}
 
 ### Cordova
 {: #facebooksdk-cordova}
@@ -144,6 +149,7 @@ pod 'IMFFacebookAuthentication'
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## 用于 Google 认证的客户端 SDK
 {: #googlesdk}
@@ -165,6 +171,7 @@ cordova plugin add ibm-mfp-core
     	ext: 'aar',
     	transitive: true
 ```
+{: codeblock}
 
 ### iOS (Swift SDK)
 {: #googlesdk-ios-swift}
@@ -180,6 +187,7 @@ cordova plugin add ibm-mfp-core
 use_frameworks!
 pod 'BMSGoogleAuthentication'
 ```
+{: codeblock}
 
 ### iOS（Objective-C SDK - 不推荐）
 
@@ -195,6 +203,7 @@ pod 'BMSGoogleAuthentication'
 ```Bash
 pod 'IMFGoogleAuthentication'
 ```
+{: codeblock}
 
 ### Cordova
 {: #googlesdk-cordova}
@@ -209,6 +218,7 @@ pod 'IMFGoogleAuthentication'
 ```Bash
 cordova plugin add ibm-mfp-core
 ```
+{: codeblock}
 
 ## 用于 Node.js 服务器的服务器 SDK
 
@@ -224,6 +234,7 @@ cordova plugin add ibm-mfp-core
 ```Bash
 npm install -save bms-mca-token-validation-strategy
 ```
+{: codeblock}
 
 ## 用于 Liberty for Java&trade; 服务器的服务器 SDK
 {: #serverlibertysdk}
@@ -232,9 +243,10 @@ npm install -save bms-mca-token-validation-strategy
 
 #### 安装 Liberty SDK
 {: #libertysdk}
+
 1. 将 `com.ibm.worklight.oauth.tai_1.0.0.jar` 文件复制到 `$<wlp.user.dir>/extensions/lib` 目录。
 
-**提示：**`$<wlp.user.dir>` 是 Liberty for Java 运行时的用户目录。缺省目录名称为 `usr`。
+  **提示：**`$<wlp.user.dir>` 是 Liberty for Java 运行时的用户目录。缺省目录名称为 `usr`。
 
 1. 将 `OAuthTai-1.0.mf` 目录复制到 `$<wlp.user.dir>/extension/lib/features` 目录。
 
@@ -251,6 +263,7 @@ npm install -save bms-mca-token-validation-strategy
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## 定制身份提供者样本
 {: #customidprovider}
@@ -273,3 +286,4 @@ npm install -save bms-mca-oauth-sdk
 ```Bash
 pod 'IMFURLProtocol'
 ```
+{: codeblock}

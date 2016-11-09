@@ -2,16 +2,17 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-09-12"
 ---
 
 #	Utilisation du plan Professional 1 Application
 {: #using_mobilefoundation_p2}
 
-Dernière mise à jour : 4 août 2016
-{: .last-updated}
+<!--Last updated: 12 September 2016
+{: .last-updated}-->
 
-Les utilisateurs du plan Professional 1 Application peuvent créer une application mobile avec plusieurs systèmes d'exploitation mobiles. Une fois que vous avez créé l'instance de service {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, lisez la procédure ci-après pour commencer à l'utiliser.
+Les utilisateurs du plan Professional 1 Application peuvent créer une application mobile avec plusieurs systèmes d'exploitation mobiles.
+Une fois que vous avez créé l'instance de service {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, lisez la procédure ci-après pour commencer à l'utiliser.
 
 ## Conditions prérequises
 {: #prerequisites_p2}
@@ -19,9 +20,9 @@ Les utilisateurs du plan Professional 1 Application peuvent créer une applicati
 Prenez connaissance des éléments suivants avant de configurer l'instance de service {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application.
 * {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application est pris en charge uniquement avec les plans {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional (prenant en charge OLTP).
 
-* Vous devez avoir accès aux données d'identification de l'instance de service {{site.data.keyword.dashdbshort_notm}} avant de pouvoir configurer les paramètres de votre instance de service {{site.data.keyword.mobilefoundation_short}}. 
+* Vous devez avoir accès aux données d'identification de l'instance de service {{site.data.keyword.dashdbshort_notm}} avant de pouvoir configurer les paramètres de votre instance de service {{site.data.keyword.mobilefoundation_short}}.
 
-**Remarque** : L'instance de service {{site.data.keyword.dashdbshort_notm}} peut exister dans n'importe quel `espace` de votre {{site.data.keyword.Bluemix_notm}} `organisation` ou de n'importe quelle autre `organisation` à laquelle vous avez accès. Assurez-vous que vous disposez des droits nécessaires pour accéder à l'`espace` dans lequel l'instance de service {{site.data.keyword.dashdbshort_notm}} service existe. 
+**Remarque** : L'instance de service {{site.data.keyword.dashdbshort_notm}} peut exister dans n'importe quel `espace` de votre {{site.data.keyword.Bluemix_notm}} `organisation` ou de n'importe quelle autre `organisation` à laquelle vous avez accès. Assurez-vous que vous disposez des droits nécessaires pour accéder à l'`espace` dans lequel l'instance de service {{site.data.keyword.dashdbshort_notm}} service existe.
 
 
 ## Ajout de la connexion à la base de données
@@ -30,14 +31,14 @@ Prenez connaissance des éléments suivants avant de configurer l'instance de se
 ###  Premières étapes
 {: #firststeps_p2}
 
-Une fois que vous avez créé l'instance de service {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, lisez la procédure ci-après pour commencer à l'utiliser. 
+Une fois que vous avez créé l'instance de service {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, lisez la procédure ci-après pour commencer à l'utiliser.
 
 ### Configuration de la connexion à l'instance de service {{site.data.keyword.dashdbshort_notm}}
 {: #connect_dashdb_p2}
 
 Une fois l'instance de service {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application créée, la page *Overview* s'affiche et vous permet d'indiquer les informations de connexion à l'instance de service {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional.
 
-1. Sélectionnez l'{{site.data.keyword.Bluemix_notm}} `organisation` dans laquelle l'instance de service {{site.data.keyword.dashdbshort_notm}} existe. 
+1. Sélectionnez l'{{site.data.keyword.Bluemix_notm}} `organisation` dans laquelle l'instance de service {{site.data.keyword.dashdbshort_notm}} existe.
 
 + Depuis la liste des espaces disponibles dans `Organisation`, sélectionnez l'élément `Espace` {{site.data.keyword.Bluemix_notm}} dans lequel se trouve l'instance de service {{site.data.keyword.dashdbshort_notm}},
 
@@ -61,7 +62,6 @@ Une fois l'instance de service {{site.data.keyword.mobilefoundation_short}}: Pro
 * Cette option affecte les paramètres suivants à un serveur {{site.data.keyword.mfserver_long_notm}} :
     -  1 Go de mémoire. Cette taille est suffisante pour des activités de développement et des activités de test sommaires et pour des charges de travail à faible échelle.
 
-
     -	Le `nom_d'utilisateur` et le `mot_de_passe` sont générés automatiquement pour vous. Vous pouvez y accéder une fois que le serveur est en opération.
 
 L'implantation de votre serveur débute. Ce processus prend environ 10 minutes et une fenêtre de message indique la progression de l'opération. A son terme, un tableau de bord s'affiche et présente les éléments suivants :
@@ -70,12 +70,37 @@ L'implantation de votre serveur débute. Ce processus prend environ 10 minutes e
 
   -	La route de serveur créée pour vous. Utilisez cette route dans votre application mobile pour vous connecter à {{site.data.keyword.mfserver_short_notm}}.
 
-  -	Votre `nom_d'utilisateur` personnel et votre `mot_de_passe` pour accéder à la console {{site.data.keyword.mfp_oc_short_notm}}. Le `mot_de_passe` est masqué. Cliquez sur l'icône **Show Password** pour le visualiser. 
+  -	Votre `nom_d'utilisateur` personnel et votre `mot_de_passe` pour accéder à la console {{site.data.keyword.mfp_oc_short_notm}}. Le `mot_de_passe` est masqué. Cliquez sur l'icône **Show Password** pour le visualiser.
 
 *	Cliquez sur **Launch Console** pour ouvrir la console {{site.data.keyword.mfp_oc_short_notm}}.
 
 
 <!--This console runs inside the container.--> Elle vous permet de gérer vos applications, adaptateurs et périphériques mobiles, ainsi que l'utilisation de votre serveur en tant que serveur dorsal mobile, l'envoi de notifications push, etc.
+
+##  Ajout d'un serveur Mobile Analytics
+{: #adding_analytics_server_prof}
+
+ Vous pouvez maintenant surveiller votre application mobile sur un serveur {{site.data.keyword.mobilefirst}} en ajoutant un serveur Mobile Analytics à l'instance de service {{site.data.keyword.mobilefoundation_short}}.
+
+ Le plan Professional crée le serveur Mobile Analytics dans un groupe de conteneurs, l'utilisateur peut personnaliser la configuration en sélectionnant le nombre de noeuds de conteneur dans le groupe de conteneurs.
+
+ Les utilisateurs peuvent aussi connecter des volumes aux conteneurs pour conserver les données. Le volume une fois sélectionné ne peut être changé. L'espace de partage de fichiers par défaut disponible pour l'utilisateur est de 20 Go. Si l'utilisateur a besoin d'un espace de stockage supplémentaire pour conserver des données d'analyse, il est invité à acheter un partage de fichiers supplémentaire et à créer un volume en utilisant ce partage de fichier. Il peut ensuite sélectionner ce nouveau volume lors du déploiement du serveur d'analyse.
+
+ Pour plus d'informations sur l'ajout de volumes dans {{site.data.keyword.containerlong}}, voir [Stockage de données persistantes dans un volume à l'aide du tableau de bord {{site.data.keyword.Bluemix_notm}} ](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+
+* Cliquez sur commande d'ajout d'analyse pour ajouter le serveur Mobile Analytics à l'instance de service {{site.data.keyword.mobilefoundation_short}}.
+
+Le processus de mise à disposition commence. Ce processus prend environ 10 minutes et une fenêtre de
+message indique la progression de l'opération.  
+
+* Lancez MobileFirst Analytics depuis {{site.data.keyword.mfp_oc_short_notm}}.
+
+* La connexion unique est activée entre {{site.data.keyword.mfserver_short_notm}} et le serveur Mobile Analytics. Le serveur Mobile Analytics est configuré avec les mêmes clés LTPA et données d'identification de l'utilisateur que celles du serveur {{site.data.keyword.mfserver_short_notm}}. Vous pouvez vous servir des mêmes `nom_d'utilisateur` et `mot_de_passe` pour vous connecter à la console Mobile Analytics que ceux utilisés pour la connexion à {{site.data.keyword.mfp_oc_short_notm}}.
+
+Pour plus d'informations sur MobileFirst Analytics, voir [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/).
+
+**Remarque :** le serveur Mobile Analytics est retiré quand vous supprimez l'instance de service {{site.data.keyword.mobilefoundation_short}} ou si vous tentez de recréer le serveur {{site.data.keyword.mfserver_short_notm}}.
+
 ## Recréation du serveur {{site.data.keyword.mobilefirst}}
 {: #recreate_mobilefoundation_p2}
 
@@ -83,7 +108,7 @@ L'implantation de votre serveur débute. Ce processus prend environ 10 minutes e
 
 * Cette action arrête votre serveur existant et supprime les données. Une nouvelle instance de serveur est créée avec une version mise à jour, si elle est disponible. Cette action prend quelques minutes avant de s'achever.
 
-**Remarque** : Toutes les données provenant de votre instance de serveur précédente, y compris les informations sur les applications et les adaptateurs, sont conservées dans l'instance de service {{site.data.keyword.dashdbshort_notm}} configurée ; elles sont utilisées pour recréer le serveur. 
+**Remarque** : Toutes les données provenant de votre instance de serveur précédente, y compris les informations sur les applications et les adaptateurs, sont conservées dans l'instance de service {{site.data.keyword.dashdbshort_notm}} configurée ; elles sont utilisées pour recréer le serveur.
 
 ##	Paramétrage d'une configuration avancée
 {: #using_mfs_advanced_p2}

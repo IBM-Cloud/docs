@@ -7,7 +7,7 @@ copyright:
 
 # 疑難排解
 {: #errors}
-前次更新：2016 年 8 月 16 日
+前次更新：2016 年 8 月 29 日
 {: .last-updated}
 
 請使用本節作為一般 {{site.data.keyword.mobilepushshort}} 問題的疑難排解指引。

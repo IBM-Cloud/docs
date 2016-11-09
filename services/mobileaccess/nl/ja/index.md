@@ -2,17 +2,16 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 
-# {{site.data.keyword.amashort}} 入門
+# {{site.data.keyword.amashort}} 概説
        
 {: #gettingstarted}
-最終更新日: 2016 年 7 月 21 日
-{: .last-updated}
 
-{{site.data.keyword.amafull}} サービスを使用して、セキュリティーをモバイル・アプリに追加します。ユーザーが既存の Google アカウントまたは Facebook アカウントを使用してアプリにログインできるように、クライアント認証プロバイダーおよび ID プロバイダーを構成することが可能です。
+
+{{site.data.keyword.amafull}} サービスを使用して、セキュリティーをモバイル・アプリに追加します。{{site.data.keyword.Bluemix_notm}} で実行されている保護されたバックエンド・リソースにアクセスするためのクライアント許可を構成できます。ID プロバイダー (Google および Facebook) またはカスタム ID を使用して、ユーザーを認証し、保護されたバックエンド・リソースおよび Web アプリに対するアクセスを許可します。
 {:shortdesc}
 
 **注:** {{site.data.keyword.amashort}} サービスの以前の名称は Advanced Mobile Access でした。

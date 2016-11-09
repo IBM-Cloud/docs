@@ -11,6 +11,8 @@ copyright:
 
 # Reporting Issues
 {: #reporting_issues}
+Last updated: 28 October 2016
+{: .last-updated}
 
 If you experience problems with IBM WebSphere Application Server on Bluemix, you can receive assistance by using one of the following approaches:
 

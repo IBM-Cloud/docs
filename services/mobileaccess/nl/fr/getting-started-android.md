@@ -2,28 +2,26 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+
 
 # Configuration du logiciel SDK Android
 {: #getting-started-android}
 
-Dernière mise à jour : 2 août 2016
-{: .last-updated}
+Instrumentez votre application Android avec le SDK client de {{site.data.keyword.amafull}}, initialisez le SDK et envoyez des demandes à des ressources protégées et non protégées.
 
-Instrumentez votre application Android avec le SDK client de {{site.data.keyword.amashort}}, initialisez le SDK et envoyez des demandes à des ressources protégées et non protégées.
 {:shortdesc}
 
 ## Avant de commencer
 {: #before-you-begin}
 Vous devez disposer des éléments suivants :
 * Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
+* Vos valeurs de paramètres de service. Ouvrez votre service dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Cliquez sur **Options pour application mobile**. Les valeurs `applicationRoute` et `tenantId` (qui portent également le nom d'`appGUID`) s'affichent dans les zones **Route** et **Identificateur global unique de l'application / ID titulaire**. Vous aurez besoin de ces valeurs pour l'initialisation du logiciel SDK et l'envoi de demandes à l'application de back-end.
 * Un projet Android Studio, configuré pour fonctionner avec Gradle. Pour plus d'informations sur la configuration de votre environnement de développement Android,
 voir [Google Developer Tools](http://developer.android.com/sdk/index.html).
-
 
 ## Installation du SDK client de {{site.data.keyword.amashort}}
 {: #install-mca-sdk}
@@ -59,23 +57,19 @@ télécharge automatiquement des artefacts depuis les référentiels et les rend
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #initalize-mca-sdk}
 
-Initialisez le SDK en passant les paramètres `context`, `applicationGUID`, `applicationRoute` et
-`BMSClient.REGION_UK` à la méthode `initialize`.
-
-
-1. Dans la page principale du tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur votre appli. Cliquez sur **Options pour application mobile**. Les valeurs de **Route de l'application** et d'**Identificateur global unique de l'application** sont nécessaires pour initialiser le SDK.
-
-2. Initialisez le SDK client de {{site.data.keyword.amashort}} dans votre appli Android.  En général, vous pouvez placer le code d'initialisation dans la méthode `onCreate` de l'activité
+Initialisez le SDK client en passant les paramètres **context** et **region** à la méthode `initialize`. En général, vous pouvez placer le code d'initialisation dans la méthode `onCreate` de l'activité
 principale dans votre application Android, bien que cet emplacement ne soit pas obligatoire.
-<br/>Remplacez *applicationRoute* et *applicationGUID* par les valeurs de la section **Options pour application mobile** du tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
-	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+```Java
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+					
+  BMSClient.getInstance().setAuthorizationManager(
+                 MCAAuthorizationManager.createInstance(this, "MCAServiceTenantId"));
+
 ```
-Remplacez `BMSClient.REGION_UK` par la région appropriée.  Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Avatar**  ![icône Avatar](images/face.jpg "icône Avatar")  dans la barre de menu pour ouvrir le widget **Compte et support**.
+
+   * Remplacez `BMSClient.REGION_UK` par la région appropriée.  Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Avatar**  ![icône Avatar](images/face.jpg "icône Avatar")  dans la barre de menu pour ouvrir le widget **Compte et support**. La valeur de région doit être l'une des suivantes : `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` ou `BMSClient.REGION_UK`.
+   * Remplacez "MCAServiceTenantId" par la valeur **tenantId** (voir [Avant de commencer](#before-you-begin)). 
 
 ## Envoi d'une demande à votre application back end mobile
 {: #request}
@@ -83,10 +77,10 @@ Remplacez `BMSClient.REGION_UK` par la région appropriée.  Pour afficher votre
 Une fois que le SDK client {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des requêtes à votre application back end
 mobile.
 
-1. Essayez d'envoyer une requête à un noeud final protégé de votre nouvelle application back end mobile. Dans votre navigateur, ouvrez l'URL suivante :
-`{applicationRoute}/protected`. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`
-<br/>Le noeud final `/protected` d'une application back end mobile créée avec le conteneur boilerplate
-MobileFirst Services Starter est protégé par {{site.data.keyword.amashort}}. Un message `Non autorisé` est renvoyé dans votre
+1. Essayez d'envoyer une requête à un noeud final protégé de votre nouvelle application back end mobile. Dans votre navigateur, ouvrez l'URL suivante : `{applicationRoute}/protected` (`http://my-mobile-backend.mybluemix.net/protected`, par exemple).   Pour plus d'informations sur l'obtention de la valeur `{applicationRoute}`, voir [Avant de commencer](#before-you-begin). 
+	
+	Le noeud final `/protected` d'une application back end mobile créée avec le conteneur boilerplate MobileFirst Services Starter est
+protégé par {{site.data.keyword.amashort}}. Un message `Non autorisé` est renvoyé dans votre
 navigateur vu que ce noeud final n'est accessible que par les applications mobiles instrumentées avec le SDK client
 {{site.data.keyword.amashort}}.
 

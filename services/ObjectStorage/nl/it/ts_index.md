@@ -4,46 +4,55 @@ copyright:
   years: 2014, 2016
 
 ---
-
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 
 # Risoluzione dei problemi di {{site.data.keyword.objectstorageshort}}
 {: #troubleshooting}
 
-*Ultimo aggiornamento: 17 agosto 2016*
+*Ultimo aggiornamento: 19 ottobre 2016*
 {: .last-updated}
 
 Queste sono le risposte alle domande sulla risoluzione dei problemi comuni riguardanti l'utilizzo di {{site.data.keyword.objectstoragefull}}.
+{: shortdesc}
 
 ## È stato restituito un token contentpack non riconosciuto durante l'utilizzo di openstack4J con il profilo Liberty
 {: #unrecognized_token}
 
-### Sintomo
 
-È possibile che si verifichi la seguente traccia di stack quando utilizzi openstack4j con il profilo Liberty:
-
-    Exception thrown by application class 'org.openstack4j.connectors.okhttp.HttpResponseImpl.readEntity:124'
-    org.openstack4j.api.exceptions.ClientResponseException: Unrecognized token 'contentpack': was expecting ('true', 'false' or 'null') at [Source: contentpack ; line: 1, column: 12]
-    at org.openstack4j.connectors.okhttp.HttpResponseImpl.readEntity(HttpResponseImpl.java:124)
-    at org.openstack4j.core.transport.HttpEntityHandler.handle(HttpEntityHandler.java:56)
-    at org.openstack4j.connectors.okhttp.HttpResponseImpl.getEntity(HttpResponseImpl.java:68)
-    at org.openstack4j.openstack.internal.BaseOpenStackService$Invocation.execute(BaseOpenStackService.java:169)
-    at org.openstack4j.openstack.internal.BaseOpenStackService$Invocation.execute(BaseOpenStackService.java:163)
-    at org.openstack4j.openstack.storage.object.internal.ObjectStorageContainerServiceImpl.list(ObjectStorageContainerServiceImpl.java:41)
-    at com.mimotic.SecureMessageApp.HelloResource.getInformation(HelloResource.java:47)
-    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+È possibile che si verifichi la seguente traccia di stack quando utilizzi openstack4j con il profilo Liberty: 
+```
+Exception thrown by application class 'org.openstack4j.connectors.okhttp.HttpResponseImpl.readEntity:124'
+org.openstack4j.api.exceptions.ClientResponseException: Unrecognized token 'contentpack': was expecting ('true', 'false' or 'null') at [Source: contentpack ; line: 1, column: 12]
+at org.openstack4j.connectors.okhttp.HttpResponseImpl.readEntity(HttpResponseImpl.java:124)
+at org.openstack4j.core.transport.HttpEntityHandler.handle(HttpEntityHandler.java:56)
+at org.openstack4j.connectors.okhttp.HttpResponseImpl.getEntity(HttpResponseImpl.java:68)
+at org.openstack4j.openstack.internal.BaseOpenStackService$Invocation.execute(BaseOpenStackService.java:169)
+at org.openstack4j.openstack.internal.BaseOpenStackService$Invocation.execute(BaseOpenStackService.java:163)
+at org.openstack4j.openstack.storage.object.internal.ObjectStorageContainerServiceImpl.list(ObjectStorageContainerServiceImpl.java:41)
+at com.mimotic.SecureMessageApp.HelloResource.getInformation(HelloResource.java:47)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
     at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
     at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
     at java.lang.reflect.Method.invoke(Unknown Source)
+```
+{: screen}
+{: tsSymptoms}
 
-### Soluzione
 
 Questo problema è causato da un errore di caricamento della classe, dove la libreria openstack4j contiene alcuni degli stessi pacchetti forniti nel profilo Liberty.  Ad esempio, OpenStack4j utilizza JERSEY, che può essere in conflitto con le librerie Wink.
+{: tsCauses}
 
-Per risolvere il problema, utilizza la seguente procedura:
 
-1. Utilizza il caricamento della classe inverso (parentLast).
-2. Escludi jaxrs dalle funzioni abilitate.
+Puoi risolvere questo problema nei seguenti modi:
+{: tsResolve}
+  * Utilizzando il caricamento della classe inverso (parentLast). 
+  * Escludendo jaxrs dalle funzioni abilitate. 
+
 
 ## Come ottenere aiuto e supporto per {{site.data.keyword.objectstorageshort}}
 {: #gettinghelp}
@@ -54,12 +63,11 @@ puoi ottenere aiuto ricercando le informazioni o facendo delle domande in un for
 Quando utilizzi i forum per fare una domanda, contrassegna con una tag la tua domanda in modo che sia visualizzabile dai team di sviluppo {{site.data.keyword.Bluemix_notm}}.
 
 * Se hai domande tecniche sullo sviluppo o la distribuzione di un'applicazione con {{site.data.keyword.objectstorageshort}},
-inserisci la tua domanda in [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){:new_window}
+inserisci la tua domanda in [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window}
 e contrassegnala con le  tag "ibm-bluemix" e "object-storage".
-<!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/object-storage/?smartspace=bluemix){:new_window}. Includi le tag "object-storage" e "bluemix".
+* Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window}. Includi le tag "objectstorage" e "bluemix".
 
-Consulta [Come ottenere supporto](https://console.ng.bluemix.net/docs/support/index.html#getting-help) per ulteriori dettagli sull'utilizzo dei forum.
+Consulta [Come ottenere supporto](https://console.ng.bluemix.net/docs/support/index.html#getting-help){: new_window} per ulteriori dettagli sull'utilizzo dei forum.
 
 Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta
-[Come contattare il supporto](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+[Come contattare il supporto](https://console.ng.bluemix.net/docs/support/index.html#contacting-support){: new_window}.

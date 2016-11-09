@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015，2016
-lastupdated: "2016-10-12"  
+lastupdated: "2016-11-02"  
  
 
 ---
@@ -16,10 +16,10 @@ lastupdated: "2016-10-12"
 
 # Getting started with the {{site.data.keyword.autoscaling}} service
 {: #autoscaling}
-Last updated: 12 October 2016
+Last updated: 02 November 2016
 {: .last-updated}
 
-In {{site.data.keyword.Bluemix_notm}}, you can automatically manage your application capacity. Use the {{site.data.keyword.autoscalingfull}} service to automatically increase or decrease the compute capacity of your application. The number of application instances are adjusted dynamically based on the {{site.data.keyword.autoscaling}} policy that you define.
+In {{site.data.keyword.Bluemix_notm}}, you can automatically manage your application capacity. Use the {{site.data.keyword.autoscaling}} service to automatically increase or decrease the compute capacity of your application. The number of application instances are adjusted dynamically based on the {{site.data.keyword.autoscaling}} policy that you define.
 {:shortdesc} 
 
 ## Contents
@@ -107,15 +107,15 @@ console.log('App is listening on port 3000');
 To use the {{site.data.keyword.autoscaling}} RESTful API to manage the {{site.data.keyword.autoscaling}} service, complete the following prerequisites: Bind the {{site.data.keyword.autoscaling}} service with your application as specified in previous section, acquire the `AccessToken`, the URL of {{site.data.keyword.autoscaling}} API server and the `app_id` of the application that you want to scale in or out:
 
 1. For security purpose, in each request header of {{site.data.keyword.autoscaling}} RESTful API, a proper `AccessToken` obtained through CloudFoundry UAA procedure must be provided in the `Authorization` header to indicate required validation of the request. Failing to comply with this `AccessToken` results in a 401 Unauthorized response. There are two ways you can get this `AccessToken` after you install the Cloud Foundry command line tool and logged into the {{site.data.keyword.Bluemix_notm}}:<ul><li>you can obtain this token through `cf oauth-token` command:
-   ```
+```
    > cf oauth-token
    Getting OAuth token...
    OK
 
      bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNjIzMGE1YS1mNzE3LTQ0YjItOWM3Yi1kNGJkYThhZGU0NjkiLCJzdWIiOiI4OGViNjM2My1hMjkzLTRlZTItYWQ1MS0yOGVkMTZmZjMwNzQiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiXSwiY2xpZW50X2lkIjoiY2YiLCJjaWQiOiJjZiIsImF6cCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6Ijg4ZWI2MzYzLWEyOTMtNGVlMi1hZDUxLTI4ZWQxNmZmMzA3NCIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Imtqa29uZ2tqQGNuLmlibS5jb20iLCJlbWFpbCI6Imtqa29uZ2tqQGNuLmlibS5jb20iLCJyZXZfc2lnIjoiZDhlNGY0MDIiLCJpYXQiOjE0NTU2MDc1NDUsImV4cCI6MTQ1NTY1MDc0NSwiaXNzIjoiaHR0cHM6Ly91YWEuc3RhZ2UxLm5nLmJsdWVtaXgubmV0L29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCIsImNmIiwib3BlbmlkIl19.nrzsEAZmGXNOWjX8r5Xf7U8Hj5-CE1rtHg8_C-jZKSk
-   ```
+```
  The returned long string begins with “bearer” is the AccessToken that can be used in the request of {{site.data.keyword.autoscaling}} RESTful API. If you encounter errors such as “Command not found”, you can update your Cloud Foundry command line tool to a newer version.</li><li>You can also find this AccessToken in the home directory. After you logged into {{site.data.keyword.Bluemix_notm}} from the command line interface, a `.cf` folder is created in your home folder, where you can find a JSON file name `config.json`  that contains a list of the environment information of your current logging, such as organization, space, authentication endpoint and version. You can locate an entry `AccessToken` in the file as the following : 
-    ```
+```
    >cat ~/.cf/config.json
  {
   "ConfigVersion": 3,
@@ -130,11 +130,11 @@ To use the {{site.data.keyword.autoscaling}} RESTful API to manage the {{site.da
   "SSHOAuthClient": "ssh-proxy",
  .....
  }
-   ```
+```
 The `AccessToken` in the `config.json` only valid for a period of time. If you get a 401 Unauthorized response for REST API request, you might have to login in again from the command line interface to refresh the file and get the new `AcessToken`. </li></ul>
  
 2.  You can obtain the URL of {{site.data.keyword.autoscaling}} API server by checking the `VCAP_SERVICE` environment variable after you bind your application with the {{site.data.keyword.autoscaling}} service. In the `VCAP_SERVICE`, you can find the {{site.data.keyword.autoscaling}} service section, and the `api_url` is the URL of API server that your application is bound with. You need this API server URL to connect to {{site.data.keyword.autoscaling}} RESTful API service:
-   ```
+```
     {
       "Auto-Scaling": [
       {
@@ -152,9 +152,9 @@ The `AccessToken` in the `config.json` only valid for a period of time. If you g
       }
      ]
    }
-   ``` 
-  Note that this url can also be found through the `cf env APPNAME` command:
-   ```
+``` 
+Note that this url can also be found through the `cf env APPNAME` command:
+```
    > cf env Hello
    Getting env variables for app Hello in org OE_Runtimes_SVT / space RT_SVT as Alice...
    OK
@@ -182,14 +182,14 @@ The `AccessToken` in the `config.json` only valid for a period of time. If you g
       ]
      }
    ...
-   ```  
+```  
 3.  You can get the `app_id` from the `VCAP_SERVICES` enviroment variable, or just run the `cf app APPNAME --guid` command:
 
-   ```
+```
    > cf app Hello --guid
    aa8d19b6-eceb-4b6e-b034-926a87e98a51
    > 
-   ```
+```
 
 With all the above prerequisites, you can now make REST API request by using the RestClient add-on in browser or just through some tool like `curl`. 
 
@@ -213,7 +213,7 @@ With tools like `curl`, you can manage the {{site.data.keyword.autoscaling}} ser
          echo "error happens"
          exit 255
     fi
-  ```
+```
 
 ## Manage {{site.data.keyword.autoscaling}} service through {{site.data.keyword.autoscaling}} CLI 
 {: #CLI}

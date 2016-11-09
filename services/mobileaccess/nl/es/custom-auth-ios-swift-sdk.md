@@ -2,18 +2,13 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-09"
 ---
 
 # Configuración de la autenticación personalizada para la app {{site.data.keyword.amashort}} iOS (Swift SDK)
-
 {: #custom-ios}
 
-Última actualización: 1 de agosto de 2016
-{: .last-updated}
-
-
-Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amashort}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.  El nuevo SDK de {{site.data.keyword.amashort}} Swift amplía y mejora la funcionalidad proporcionada por el SDK Objetive-C de Mobile Client Access existente.
+Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amafull}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.  El nuevo SDK de {{site.data.keyword.amashort}} Swift amplía y mejora la funcionalidad proporcionada por el SDK Objetive-C de Mobile Client Access existente.
 
 **Nota:** Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como SDK principal para {{site.data.keyword.Bluemix_notm}} Mobile Services, está previsto dejar de mantener este SDK a finales del año en favor del nuevo SDK de Swift.
 
@@ -31,13 +26,13 @@ Debe tener un recurso que esté protegido por una instancia del servicio de {{si
 ## Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada
  {: #custom-auth-ios-configmca}
 
- 1. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
+ 1. Abra el panel de control de servicio.
+ 
+ 1. Pulse **Opciones móviles** y anote **Ruta** (*applicationRoute*) y **GUID de app / TenantId** (*serviceTenantID*). Necesitará estos valores cuando inicialice el SDK, y cuando envíe solicitudes a la aplicación de fondo.
 
- 1. Pulse **Opciones móviles** y anote los valores correspondientes a **Ruta** (*applicationRoute*) y a **Identificador exclusivo global de la app** (*applicationGUID*). Necesitará estos valores cuando inicialice el SDK.
+ 1. Pulse el icono de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
 
- 1. Pulse el mosaico de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
-
- 1. Pulse el mosaico **Personalizado**.
+ 1. Pulse el icono **Personalizado**.
 
  1. En **Nombre de reino**, especifique el nombre del reino personalizado.
 
@@ -51,67 +46,70 @@ Debe tener un recurso que esté protegido por una instancia del servicio de {{si
 ### Inicialización del SDK del cliente
 {: #custom-ios-sdk-initialize}
 
-Para inicializar el SDK, especifique los parámetros `applicationRoute` y `applicationGUID`. Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `application:didFinishLaunchingWithOptions` del delegado de la aplicación.
-
-1. Obtenga los valores de los parámetros de la aplicación. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles**. Los valores de `applicationRoute` y `applicationGUID` se muestran en los campos **Ruta** e **Identificador exclusivo global de la app**.
+Inicialice el SDK pasando el parámetro `applicationGUID` (tenantId). Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `application:didFinishLaunchingWithOptions` del delegado de la aplicación.
 
 1. Importe las infraestructuras necesarias en la clase en la que desea utilizar el SDK del cliente de {{site.data.keyword.amashort}}.
 
- ```Swift
- import UIKit
- import BMSCore
- import BMSSecurity
-```
+	```Swift
+	import UIKit
+	import BMSCore
+	import BMSSecurity
+	```
 
-1. Inicialice el SDK de cliente de {{site.data.keyword.amashort}}, cambie el gestor de autorización por MCAAuthorizationManager y defina un delegado de autenticación y regístrelo. Sustituya los valores de `<applicationRoute>` y `<applicationGUID>` por los valores correspondientes a **Ruta** e **Identificador exclusivo global de la app** que ha obtenido de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}. 
+1. Inicialice el SDK de cliente de {{site.data.keyword.amashort}}, cambie el gestor de autorización por `MCAAuthorizationManager` y defina y registre un delegado de autenticación.
 
-  Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono de Avatar ![Icono de Avatar](images/face.jpg "Icono de Avatar") en la barra de menú para abrir el widget Cuenta y soporte. 
-  <!--upper-left corner of the -->
+```Swift
 
-  Para `<yourProtectedRealm>`, utilice el **nombre de reino** que ha definido en el título **Custom** del panel de control de {{site.data.keyword.amashort}}.
+	let tenantId = "<serviceTenantID>"
+	let regionName = <applicationBluemixRegion>
+	let customRealm = "<yourProtectedRealm>"
 
- ```Swift
- let backendURL = "<applicationRoute>"
- let backendGUID = "<applicationGUID>"
- let customRealm = "<yourProtectedRealm>"
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: 
+		[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
- func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+		let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+	    		mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+	 //el regionName debería ser una de las siguientes constantes de BMSClient.Region: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom o BMSClient.Region.sydney
+		BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 
- BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
-
- BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
-
-  //Delegado de autorización para el manejo del reto personalizado
+	//Delegado de autorización para el manejo del reto personalizado
  class MyAuthDelegate : AuthenticationDelegate {
-      func onAuthenticationChallengeReceived(authContext: AuthenticationContext, challenge: AnyObject){
-          print("onAuthenticationChallengeReceived")
-              let answer = <An answer to the challenge sent by the backend (Should be of type [String:AnyObject])>
-              authContext.submitAuthenticationChallengeAnswer(answer)
-      }
+		func onAuthenticationChallengeReceived(_ authContext: AuthenticationContext, challenge: AnyObject){
+		    print("onAuthenticationChallengeReceived")
+		    let answer = try? Utils.parseJsonStringtoDictionary( "{\"userName\":\"" + "test" + "\",\"password\":\"" + "test" + "\"}")
+			authContext.submitAuthenticationChallengeAnswer(answer)
+		}
 
-      func onAuthenticationSuccess(info: AnyObject?) {
-           print("onAuthenticationSuccess info = \(info)")
+		func onAuthenticationSuccess(_ info: AnyObject?) {
+		    print("onAuthenticationSuccess info = \(info)")
            print("onAuthenticationSuccess")
       }
 
-      func onAuthenticationFailure(info: AnyObject?){
-        print("onAuthenticationFailure info = \(info)")
+		func onAuthenticationFailure(_ info: AnyObject?){
+		     print("onAuthenticationFailure info = \(info)")
         print("onAuthenticationFailure")
       }
-  }
+	     }
 
-  let delegate = MyAuthDelegate()
-  let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+	     let delegate = MyAuthDelegate()
+	     mcaAuthManager.registerAuthenticationDelegate(delegate, realm: customRealm)
 
- do {
-      try mcaAuthManager.registerAuthenticationDelegate(delegate, realm: customRealm)
-  } catch {
-      print("error with register: \(error)")
-  }
- return true
-      }   
- ```
+	     return true
+      }
 
+
+```
+
+En el código:
+
+* Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono de Avatar ![Icono de Avatar](images/face.jpg "Icono de Avatar") en la barra de menús para abrir el widget **Cuenta y soporte**. El valor de la región que aparece debería ser uno de los siguientes: **EE.UU. sur**, **Reino Unido** o **Sídney**, y se corresponde con las constantes necesarias en el código: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, o `BMSClient.Region.sydney`.
+* Sustituya `"<yourProtectedRealm>"` por el valor **Nombre de dominio** que ha definido en el mosaico **Personalizado** del panel de control de {{site.data.keyword.amashort}}. 
+* Sustituya `"<serviceTenantID>"` por el valor **tenantId** recuperado desde **Opciones móviles**. Consulte [Configuración de Mobile Client Access para la autenticación personalizada](#custom-auth-ios-configmca).
+
+### Inicialización del SDK del cliente
+{: #custom-ios-sdk-initialize}
+   
+  
 ## Prueba de autenticación
 {: #custom-ios-testing}
 
@@ -122,44 +120,47 @@ Después de inicializar el SDK del cliente y registrar un delegado de autorizaci
 
  Debe tener una aplicación que se haya creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y que disponga de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`.
 
-1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`.
-  El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
+1. Envíe una solicitud al punto final protegido del programa de fondo móvil en su navegador; para ello, abra `{applicationRoute}/protected`. Sustituya la `{applicationRoute}` por el valor recuperado desde las **Opciones móviles** (consulte [Configuración de Mobile Client Access para la autenticación personalizada](#custom-auth-ios-configmca)). Por ejemplo `http://my-mobile-backend.mybluemix.net/protected`.
+
+ El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
 
 1. Utilice la aplicación de iOS para realizar solicitudes al mismo punto final. Añada el código siguiente para inicializar `BMSClient` y registrar el delegado de autorización personalizad:
 
- ```Swift
- let customResourceURL = "<your protected resource's path>"
- let request = Request(url: customResourceURL, method: HttpMethod.GET)
- let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+	```Swift
+
+	let protectedResourceURL = "<your protected resource absolute path>"
+	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
+
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
   if error == nil {
-      print ("response:\(response?.responseText), no error")
+	       print ("response:\(response?.responseText), no error")
   } else {
-      print ("error: \(error)")
+	       print ("error: \(error)")
   }
- }
+	}
 
- request.sendWithCompletionHandler(callBack)
- ```
+	request.send(completionHandler: callBack)
+	 ```
 
-1. 	Cuando las solicitudes se realizan correctamente, verá la siguiente salida en la consola de Xcode:
+1. Cuando las solicitudes se realizan correctamente, verá la siguiente salida en la consola de Xcode:
 
- ```
- onAuthenticationSuccess info = Optional({
+	 ```
+	 onAuthenticationSuccess info = Optional({
      attributes =     {
-     };
+	     };
      deviceId = don;
      displayName = "Don+Lon";
      isUserAuthenticated = 1;
      userId = don;
  })
- response:Optional("Hello Don Lon"), no error
- ```
+	 response:Optional("Hello Don Lon"), no error
+	 ```
 
 1. También puede añadir la funcionalidad de finalización de sesión añadiendo este código:
 
- ```
- MCAAuthorizationManager.sharedInstance.logout(callBack)
- ```  
+	 ```
+	 MCAAuthorizationManager.sharedInstance.logout(callBack)
+	 ```  
 
  Si invoca este código después de que el usuario haya iniciado sesión, la sesión del usuario se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá volver a responder a la pregunta que reciba del servidor.
 

@@ -1,8 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
-
+  years: 2015, 2016 lastupdated: "2016-10-02"
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -11,9 +10,8 @@ copyright:
 # Autenticando usuários com as credenciais do Google
 {: #google-auth}
 
-Última atualização: 22 de julho de 2016
 
-É possível configurar o serviço {{site.data.keyword.amashort}} para proteger recursos usando o Google como provedor de identidade. Seus
+É possível configurar o serviço {{site.data.keyword.amafull}} para proteger recursos usando o Google como provedor de identidade. Seus
 usuários de aplicativo móvel ou da web podem usar suas credenciais do Google para autenticação.
 {:shortdesc}
 
@@ -24,7 +22,7 @@ usuários de aplicativo móvel ou da web podem usar suas credenciais do Google p
 
 ### Fluxo de solicitação do cliente
 
-Consulte o diagrama a seguir para entender como o {{site.data.keyword.amashort}} integra-se ao Google para autenticação.
+Veja o diagrama a seguir para entender como o {{site.data.keyword.amashort}} integra-se ao Google para autenticação.
 
 ![Diagrama do fluxo de solicitação do cliente](images/mca-sequence-google.jpg)
 

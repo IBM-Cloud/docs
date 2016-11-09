@@ -2,25 +2,36 @@
 
 copyright:
   years: 2014, 2016
-
 ---
-
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+
 
 # {{site.data.keyword.objectstorageshort}} 시작하기 {: #getting-started-with-object-storage}
 
-마지막 업데이트 날짜: 2016년 8월 25일
+*마지막 업데이트 날짜: 2016년 10월 19일*
 {: .last-updated}
 
-{{site.data.keyword.objectstoragefull}}에서는 데이터를 관리하는 데 필요한 전체 프로비저닝된 Swift {{site.data.keyword.objectstorageshort}} 계정에 대한 액세스를 제공합니다. Swift는 전체 분배된 API 액세스 가능 스토리지 플랫폼을 제공합니다. 이를 직접 애플리케이션에서 사용하거나 백업을 위해 사용하여 비용 효율이 높은 스케일 확장 스토리지를 위해 이상적인 것으로 만들 수 있습니다. 
+{{site.data.keyword.objectstoragefull}}에서는 구조화되지 않은 클라우드 데이터 스토리지를 제공합니다. 대화식으로 앱과 서비스를 작성하고 앱과 서비스에 연결할 수 있을 뿐만 아니라 컨텐츠를 저장하고 컨텐츠에 액세스할 수 있습니다.
+{: shortdesc}
 
-**참고:** 제공자 측 암호화는 제공되지 않습니다. 업로드 전에 클라이언트 애플리케이션에서 데이터를 암호화해야 합니다. 
+{{site.data.keyword.objectstorageshort}} 서비스의 몇몇 일반적인 유스 케이스는 다음과 같습니다. 
+
+* 인스턴스에서 볼륨 데이터 백업
+* 대량의 데이터를 전송하는 경우 중개 위치로 사용
+* 직접 연결되지 않은 환경 간 데이터 전송
+* 중앙 저장소 역할 수행
 
 
-{{site.data.keyword.objectstorageshort}} 시작 방법:
 
-1.	{{site.data.keyword.Bluemix_notm}} 카탈로그에서 {{site.data.keyword.objectstorageshort}} 인스턴스를 프로비저닝하십시오. 
-2.	{{site.data.keyword.objectstorageshort}} 인스턴스를 구성하고 **작성**을 클릭하십시오. 초기에 **앱** 필드에 대해 **바인딩되지 않은 상태로 두기** 옵션을 선택하는 경우 구성을 완료한 후에도 여전히 서비스 인스턴스를 {{site.data.keyword.Bluemix_notm}} 애플리케이션에 바인딩할 수 있습니다. 지시사항은 [앱 바인딩](../ObjectStorage/objectstorge_usingobjectstorage.html#using-object-storage-from-bluemix-app)을 참조하십시오. 
+{{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}}에서는 데이터를 관리할 전체 프로비저닝된 Swift {{site.data.keyword.objectstorageshort}} 계정에 대한 액세스를 제공합니다. 제공자 측 암호화는 제공되지 않습니다. 
+
+
+1.	{{site.data.keyword.Bluemix_notm}} 카탈로그에서 서비스 인스턴스를 프로비저닝하십시오. 인스턴스를 구성하고 **작성**을 클릭하십시오. 초기에 **앱** 필드에 대해 **바인딩되지 않은 상태로 두기** 옵션을 선택하는 경우 나중에 서비스 인스턴스를 {{site.data.keyword.Bluemix_notm}} 앱에 바인딩할 수 있습니다. 
+2. 서비스 인스턴스 대시보드에서 컨테이너를 작성하여 오브젝트 저장을 시작하십시오. 
+3. **조치** 드롭 다운 메뉴에서 컨테이너 또는 버킷에 파일을 추가하십시오. 
+4. 오브젝트에 대한 액세스를 테스트하려면 **다운로드**를 클릭하고 파일을 검토하십시오. 
+5. 인스턴스를 애플리케이션에 연결할 준비가 되면 서비스 신임 정보를 설정하고 [서비스 바인드](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service)를 수행하십시오. 
 
 
 
@@ -38,10 +49,9 @@ copyright:
 
 ## 튜토리얼 및 샘플 
 {: #samples}
-* [Java를 사용하여 {{site.data.keyword.objectstoragefull}}에 연결](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
+* [Java를 사용하여 IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}에 연결](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
 * [Python을 사용하여 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}}에 액세스](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
 * [PHP를 사용하여 {{site.data.keyword.objectstorageshort}} 활용](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window}
-* [pkgcloud를 사용하여 Node.js가 있는 {{site.data.keyword.objectstoragefull}}에 액세스](https://developer.ibm.com/recipes/tutorials/use-pkgcloud-to-access-ibm-object-storage-for-bluemix-with-node-js/){: new_window}
 
 ## 호환 가능 런타임 
 {: #buildpacks}

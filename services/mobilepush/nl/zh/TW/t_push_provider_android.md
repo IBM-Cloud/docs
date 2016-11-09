@@ -7,101 +7,47 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-# 配置 Google Cloud Messaging (GCM) 的認證
+# 配置 FCM 的認證
 {: #create-push-enable-gcm}
-前次更新：2016 年 8 月 16 日
+前次更新：2016 年 10 月 17 日
 {: .last-updated}
 
-取得 Google Cloud Messaging (GCM) 認證，然後在 Push 儀表板上設定 {{site.data.keyword.mobilepushshort}} Service。
+Firebase Cloud Messaging (FCM) 是用來將推送通知遞送至 Android 裝置、Google Chrome 及 Mozilla Web 瀏覽器的閘道。FCM 已取代 Google Cloud Messaging (GCM)。您需要取得 FCM 認證，然後在儀表板上設定 {{site.data.keyword.mobilepushshort}} Service。請確定將 FCM 配置用於新的應用程式。現有應用程式可以繼續使用 GCM 配置運作。
 
 ##取得傳送端 ID 及 API 金鑰
+{: #android-senderid-apikey}
 
-API 金鑰會安全地儲存並供 {{site.data.keyword.mobilepushshort}} Service 用來連接至 GCM 伺服器，而 Android SDK 在用戶端上使用傳送端 ID（專案號碼）。如需傳送端 ID 的相關資訊，請參閱 [Google Cloud Message](https://developers.google.com/cloud-messaging/gcm#arch)。
+API 金鑰會安全地儲存並供 {{site.data.keyword.mobilepushshort}} Service 用來連接至 FCM 伺服器，而適用於 Google Chrome 及 Mozilla Firefox 的 Android SDK 及 JS SDK 在用戶端上使用「傳送端 ID」（專案號碼）。 
 
-1. 在 [Google Dev Console](https://console.developers.google.com/start){: new_window} 上取得一個 Google Development 帳戶。如需 Google Cloud Messaging (GCM) 的相關資訊，請參閱[建立 Google API 專案](https://developers.google.com/console/help/new/){: new_window}。
+若要設定 FCM 以及產生 API 金鑰和「傳送端 ID」，請完成下列步驟：
 
-2. 在 Google Developers Console 上，建立新的專案。例如，"hello world"。
+1. 造訪 [Firebase 主控台](https://console.firebase.google.com/?pli=1)。
+2. 選取**建立新專案**。 
+3. 在「建立專案」視窗中，提供專案名稱、選擇國家/地區，然後按一下**建立專案**。
+3. 在導覽窗格中，按一下「設定」圖示，然後選取**專案設定**。
+4. 選擇 Cloud Messaging 標籤，以產生「伺服器 API 金鑰」及「傳送端 ID」。
 
-![建立專案](images/gcm_createproject.jpg)
+##設定適用於 Android 及 Chrome Apps and Extensions 的 {{site.data.keyword.mobilepushshort}} Service
+{: #setup-push-android}
 
-3. 在**專案名稱**中，輸入您專案的名稱，然後按一下**建立**按鈕。
-4. 按一下**首頁**，以檢視專案號碼。請記錄您的專案號碼。
+**附註：**您將需要「FCM/GCM API 金鑰」及「傳送端 ID」（專案號碼）。
 
-![GCM 專案號碼](images/gcm_projectnumber.jpg)
-
-	**附註**：當您建立專案時，會建立專案號碼（傳送端 ID）。使用此號碼，可在 Push 儀表板畫面上設定 Push Notification Service。
-
-5. 按一下 **API 及鑑別**，然後按一下**行動 API** 區段中的 **Cloud Messaging for Android**。
-
-![API](images/gcm_mobileapi.jpg)
-
-6. 按一下 **API**，然後按一下**啟用 API** 按鈕，以建立您專案的 API 金鑰。
-
-![啟用 API ](images/gcm_enable_api.jpg)
-
-7. 移至 **API 及鑑別 -> 認證**畫面。按一下**新增認證**，然後按一下 **API 金鑰**。
-
-![API 認證](images/api_credentials.jpg)
-
-8. 按一下**伺服器金鑰**選項，以在 Bluemix Push 儀表板上產生您將使用的 GCM API 金鑰。
-9. 在**名稱**欄位中，輸入伺服器 API 金鑰的名稱。
-
-![GCM 伺服器金鑰](images/gcm_serverkey.jpg)
-
-10. 按一下**建立**按鈕。即會顯示 API 金鑰。
-
-![GCM API 金鑰](images/gcm_apikey.jpg)
-
-11. 複製 GCM API 金鑰，然後按一下**確定**按鈕。您將需要專案號碼（傳送端 ID）及 API 金鑰，以在「Bluemix Push Notification 儀表板配置」畫面上配置認證。 
-
-
-##設定適用於 Android 的 {{site.data.keyword.mobilepushshort}} Service
-
-###開始之前
-{: before-you-begin}
-
-取得 GCM API 金鑰及傳送端 ID（專案號碼）。 
-
-1. 在 Bluemix 儀表板中開啟後端應用程式，然後按一下 IBM {{site.data.keyword.mobilepushshort}} Service 來開啟儀表板。
+1. 開啟 Bluemix 儀表板，然後按一下您已建立的 {{site.data.keyword.mobilepushfull}} Service 實例來開啟儀表板。即會顯示 Push 儀表板。若要設定適用於 Android 的未連結 {{site.data.keyword.mobilepushshort}} Service，請選取「未連結 {{site.data.keyword.mobilepushshort}} Service」圖示來開啟 {{site.data.keyword.mobilepushshort}} Service 儀表板。
  
-![Push 儀表板](images/bluemixdashboard_push.jpg)
 
-即會顯示 Push 儀表板。
-	
-![Push 設定](images/setup_push_main.jpg)
-若要設定適用於 Android 的未連結 {{site.data.keyword.mobilepushshort}} Service，請選取「未連結 {{site.data.keyword.mobilepushshort}} Service」圖示來開啟 {{site.data.keyword.mobilepushshort}} Service 儀表板。
- 
-	![Push 儀表板](images/push_unbound.jpg)
+![Push 儀表板](images/push_unbound.jpg)
 
-2. 按一下**設定 Push** 按鈕，以配置 GCM 認證。
-1. 在**配置**標籤上，移至 **Google Cloud Messaging** 區段，然後配置「傳送端 ID」（GCM 專案號碼）及「API 金鑰」。
+2. 按一下**設定 Push** 按鈕，以配置適用於 Android 應用程式及 Google Chrome Apps and Extensions 的 FCM/GCM 認證。
+3. 在**配置**頁面上，對於 Android，移至 **Mobile** 標籤，然後配置「傳送端 ID」（GCM 專案號碼）及「API 金鑰」。對於 Google Chrome Apps and Extensions，移至 **Web** 標籤，然後適當地配置「傳送端 ID」（FCM/GCM 專案號碼）及「API 金鑰」。
+4. 按一下**儲存**。
+5. 後續步驟。[啟用 Android 的通知](c_enable_push.html)或[啟用 Google Chrome Apps & Extensions 的通知](c_enable_push.html)。
 
-4. 按一下**儲存**按鈕。 
-5. 後續步驟。[啟用 Android 的通知](c_enable_push.html)。
+###配置 Google Chrome 及 Mozilla Firefox Web Push（使用 FCM/GCM）
+{: #config-gcm-mozilla}
 
-
-##建立適用於 Android 的未連結 {{site.data.keyword.mobilepushshort}} Service
-
-###開始之前
-{: before-you-begin}
-
-建立 {{site.data.keyword.mobilepushshort}} Service 實例。您可以使用 {{site.data.keyword.mobilepushshort}} Service 實例，而不連結至任何後端應用程式。
-
-1. 將 {{site.data.keyword.mobilepushshort}} Service 實例連結至 Bluemix 應用程式。連結時，您可以看到所有與服務相關的詳細資料都會以 JSON 格式儲存在 VCAP_SERVICES 環境變數中。 
-
-![連結 Push Notification Service](images/unbound_1.jpg)
- 
-2. 按一下**連結**，然後選擇要連結的 {{site.data.keyword.mobilepushshort}} Service 實例。將應用程式連結至 {{site.data.keyword.mobilepushshort}} Service 時，服務的資訊會以 JSON 格式儲存在應用程式的 VCAP_SERVICES 環境變數中。例如： 
-
-```
-{
-   "imfpush_Dev": [
-   {
-     "name": "neekrish_20JulUnbound",
-         "label": "imfpush_Dev",
-         "plan": "Basic",
-         "credentials": null
-      }
-   ]
-}
-```
+1. 在「Push 儀表板」導覽窗格上，選取**配置**。
+2. 選取 Web 標籤。
+![WebPush 配置](images/webpush_configure.jpg)
+3. 配置 FCM/GCM API 金鑰，以及將登錄以接收推送通知的網站 URL。
+4. 按一下**儲存**。
+5. 後續步驟。[啟用 Google Chrome 及 Mozilla Firefox 瀏覽器的通知](c_enable_push.html)。

@@ -8,21 +8,21 @@ copyright:
 {:new_window: target="_blank"}
 # 发送基本推送通知
 {: #push-send-notifications}
-上次更新时间：2016 年 8 月 16 日
+上次更新时间：2016 年 10 月 17 日
 {: .last-updated}
 
 开发应用程序后，可以发送基本推送通知（不使用标记、角标、其他有效内容或声音文件）。
 
 要发送基本推送通知，请完成所列步骤：
 
-1. 在**选择受众**中，选择以下某个受众：**所有设备**，或者按平台选择：**仅限 iOS 设备**或**仅限 Android 设备**。
+1. 选择**发送通知**，然后选择相应的**发送至**选项。 
 
 **注**：选择**所有设备**选项时，预订了 {{site.data.keyword.mobilepushshort}} 的所有设备都会收到通知。
 
 ![“通知”屏幕](images/tag_notification.jpg)
+2. 在**消息**字段中，输入消息然后单击**发送**。
 
-2. 在**创建通知**中，输入消息，然后单击**发送**。
-3. 验证设备是否收到通知。下图显示了在 Android 和 iOS 设备上前台处理 {{site.data.keyword.mobilepushshort}}的警报框。
+3. 验证设备是否收到通知。下图显示了在 Android 和 iOS 设备上前台处理 {{site.data.keyword.mobilepushshort}} 的警报框。
 
 
 ![Android 上的前台推送通知](images/Android_Screenshot.jpg)

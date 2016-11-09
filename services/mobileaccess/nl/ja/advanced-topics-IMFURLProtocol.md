@@ -2,15 +2,12 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 # IMFURLProtocol を使用した要求送信
 {: #imfurl}
 
-最終更新日: 2016 年 6 月 22 日
-{: .last-updated}
-
-場合によっては、保護リソースに要求を送信するために `IMFResourceRequest` クラスを使用できないことがあります (例えば、何らかのサード・パーティー・コードによって保護リソースに要求が送信される場合など)。考えられる解決策の 1 つは、標準 `NSURLRequest (NSMutableURLRequest)` 呼び出しと一緒に `IMFURLProtocol` API を使用することです。
+場合によっては、 {{site.data.keyword.amafull}} によって保護されたリソースに要求を送信するために `IMFResourceRequest` クラスを使用できないことがあります (例えば、何らかのサード・パーティー・コードによって保護リソースに要求が送信される場合など)。考えられる解決策の 1 つは、標準 `NSURLRequest (NSMutableURLRequest)` 呼び出しと一緒に `IMFURLProtocol` API を使用することです。
 
 **注:** `IMFURLProtocol` API は、{{site.data.keyword.amashort}} Objective-C SDK からのみ使用可能です。
 

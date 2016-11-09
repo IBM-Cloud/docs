@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-09-22"
+
 ---
 
 # Monitoring applications
 {: #app-monitoring}
-Last updated: 22 September 2016
-{: .last-updated}
 
 In addition to security features, the {{site.data.keyword.amafull}} also provides monitoring and analytics for your mobile applications. You can record client logs and monitor data with the {{site.data.keyword.amashort}} client SDK. Developers can control when to send this data to the {{site.data.keyword.amashort}} Service. All the security events, such as authentication success or failure, that occur in {{site.data.keyword.amashort}} Service are logged automatically.
 <!--
@@ -83,7 +82,7 @@ logger.fatal("fatal message");
 ```
 {: codeblock}
 
-The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example, `BMSClient.REGION_US_SOUTH` and `BMSClient.REGION_UK`. 
+The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example, `BMSClient.REGION_US_SOUTH` and `BMSClient.REGION_UK`.
 
 #### iOS - Swift
 {: #enable-logger-swift}
@@ -141,7 +140,7 @@ The following code snippets show sample Logger usage:
 {: #enable-logger-sample-android}
 
 ```Java
-// Configure Logger to save logs to the device so that they 
+// Configure Logger to save logs to the device so that they
 // can later be sent to the {{site.data.keyword.amashort}} service
 // Disabled by default; set to true to enable
 Logger.storeLogs(true);
@@ -158,7 +157,7 @@ Logger logger2 = Logger.getLogger("logger2");
 // Log messages with different levels
 // Debug message for feature 1
 // Info message for feature 2
-logger1.debug("debug message"); 
+logger1.debug("debug message");
 //the logger1.debug message is not logged because the logLevelFilter is set to Info
 logger2.info("info message");
 
@@ -185,7 +184,7 @@ let logger1 = Logger.logger(forName: "feature1Logger")
 let logger2 = Logger.logger(forName: "feature2Logger")
 
 // Log messages with different levels
-logger1.debug("debug message for feature 1") 
+logger1.debug("debug message for feature 1")
 //the logger1.debug message is not logged because the logLevelFilter is set to Info
 logger2.info("info message for feature 2")
 
@@ -247,12 +246,12 @@ Use the following APIs to start recording and sending usage analytics:
 // Disable recording of usage analytics (for example, to save disk space)
 // Recording is enabled by default
 Analytics.disable();
-	
+
 // Enable recording of usage analytics
 Analytics.enable();
-	
+
 Analytics.log(eventJSONObject);
-	
+
 // Send recorded usage analytics to the Mobile Analytics Service
 Analytics.send();
 ```

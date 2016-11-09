@@ -17,7 +17,7 @@ Utilisez Facebook pour authentifier les utilisateurs sur votre application Web.
 Vous devez disposer des éléments suivants :
 * Une application Web.  
 * Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
-* Un ID et une valeur confidentielle d'application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le portail Facebook Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* Un ID et une valeur confidentielle d'application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le site Web Facebook for Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
 ## Configuration d'une application Facebook pour votre site Web
@@ -60,8 +60,7 @@ Pour démarrer le processus d'autorisation :
     ```
 
 
-  Le paramètre `state`, qui n'est pas utilisé pour l'instant, n'a pas besoin d'être renseigné.
-  Le paramètre `redirect_uri` est l'identificateur URI qui permet une redirection après une authentification aboutie ou échouée avec Facebook.
+  Le paramètre `state`, qui n'est pas utilisé pour l'instant, n'a pas besoin d'être renseigné. Le paramètre `redirect_uri` est l'identificateur URI qui permet une redirection après une authentification aboutie ou échouée avec Facebook.
 
 1. Après redirection vers le noeud final d'autorisation, un formulaire de connexion vous est envoyé par Facebook. Entrez le nom d'utilisateur et le mot de passe pour effectuer la redirection vers l'URI `redirect_uri`.
    La réponse retournée après une redirection contient le code d'autorisation dans les paramètres de requête de la demande.

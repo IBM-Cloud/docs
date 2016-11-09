@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -11,8 +12,6 @@ lastupdated: "2016-10-02"
 
 # Authenticating users with Facebook credentials
 {: #facebook-auth-overview}
-
-
 
 You can configure the {{site.data.keyword.amafull}} service to protect resources by using Facebook as an identity provider. Your mobile or web application users can use their Facebook credentials for authentication.
 
@@ -42,19 +41,19 @@ See the following diagram to understand how {{site.data.keyword.amashort}} integ
 * The {{site.data.keyword.amashort}} client SDK  automatically resends the original request that triggered the authorization flow.
 * The {{site.data.keyword.amashort}} server SDK extracts authorization header from request, validates it with {{site.data.keyword.amashort}} service, and grants access to a back-end resource.
 
-### {{site.data.keyword.amashort}} web application request flow
+### {{site.data.keyword.amashort}} Web application request flow
 {: #mca-facebook-web-sequence}
 
-The {{site.data.keyword.amashort}} web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
+The {{site.data.keyword.amashort}} Web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
 
   * The initial request is sent by the web application (from a log-in form, for example).
-  * The final redirect is to the protected area of the web application itself, rather than back-end protected resource. 
+  * The final redirect is to the protected area of the web application itself, rather than back-end protected resource.
 
 
-## Obtaining a Facebook App ID from the Facebook for Developers website
+## Creating an application on the Facebook for Developers website
 {: #facebook-appID}
 
-To start using Facebook as identity provider, create an application on the Facebook for Developer website. During this process, a Facebook App ID is created. This is a unique identifier used by Facebook in order to know which application is attempting to connect. 
+To start using Facebook as identity provider, create an application on the Facebook for Developers website. During this process, a Facebook App ID is created. This is a unique identifier used by Facebook in order to know which application is attempting to connect.
 
 You need this value to configure Facebook authentication for your mobile or web app.
 
@@ -68,7 +67,7 @@ You need this value to configure Facebook authentication for your mobile or web 
 
 1. A security check may appear. Perform the requested action.
 
-1. The **Product Setup** page appears. Copy the **App ID** that is displayed. 
+1. The **Product Setup** page appears. Copy the **App ID** that is displayed.
 
 ## Next steps
 {: #next-steps}

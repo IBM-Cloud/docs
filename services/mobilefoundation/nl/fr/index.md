@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-08-31"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,8 @@ copyright:
 # Initiation à {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
 
-Dernière mise à jour : 3 août 2016
-{: .last-updated}
+<!--Last updated: 31 August 2016
+{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_long}} accélère la
 configuration d'un environnement {{site.data.keyword.mfp_full}} qui
@@ -41,9 +41,10 @@ défaut, cliquez sur **Start Basic Server**.
   `L'instance de serveur de base est dotée d'un seul noeud, d'1 Go de mémoire.`
 
 * Pour créer une instance de serveur
-{{site.data.keyword.mobilefirst_notm}} avec la configuration
-avancée de la topologie, de la sécurité et d'autres paramètres de
-configuration du serveur, cliquez sur **Start Server with Advanced Configuration**. Pour
+{{site.data.keyword.mobilefirst_notm}} avec la configuration avancée de
+la topologie, de la sécurité et d'autres paramètres de configuration du
+serveur, cliquez sur **Start Server with Advanced
+Configuration**. Pour
 plus d'informations, voir
 [Paramétrage
 d'une configuration avancée](c_using_mfs_p1.html#using_mfs_advanced_p1).
@@ -59,7 +60,7 @@ procédant comme suit :
 {{site.data.keyword.dashdbshort}}: Enterprise Transactional
 existant sur {{site.data.keyword.Bluemix_notm}}.
 
-    1.  Sélectionnez l'{{site.data.keyword.Bluemix_notm}} `organisation` dans laquelle l'instance de service {{site.data.keyword.dashdbshort_notm}} existe. 
+    1.  Sélectionnez l'{{site.data.keyword.Bluemix_notm}} `organisation` dans laquelle l'instance de service {{site.data.keyword.dashdbshort_notm}} existe.
 
     + Depuis la liste des espaces disponibles dans `Organisation`, sélectionnez l'élément `Espace` {{site.data.keyword.Bluemix_notm}} dans lequel se trouve l'instance de service {{site.data.keyword.dashdbshort_notm}},
 
@@ -78,7 +79,7 @@ sélectionnée en cliquant sur **Test Connection**.
 de confirmer la sélection du service {{site.data.keyword.dashdbshort_notm}}. Cela permet de créer les tables requises dans l'instance de service de base de
 données {{site.data.keyword.dashdbshort_notm}} configurée.
 
-    **Remarque :** Une fois que vous avez ajouté une connexion {{site.data.keyword.dashdbshort_notm}} à l'instance {{site.data.keyword.mobilefoundation_short}}, vous ne pouvez plus la modifier. 
+    **Remarque :** Une fois que vous avez ajouté une connexion {{site.data.keyword.dashdbshort_notm}} à l'instance {{site.data.keyword.mobilefoundation_short}}, vous ne pouvez plus la modifier.
 
 2.  Créez et démarrez le serveur.
 
@@ -96,7 +97,7 @@ Configuration**. Pour plus d'informations, voir
 [Paramétrage d'une
 configuration avancée](c_using_mfs_p2.html#using_mfs_advanced_p2).
 
-Accédez à [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/ibm-containers/using-mobile-foundation/) pour vous initier à {{site.data.keyword.mobilefoundation_short}}.
+Accédez à la page [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/) pour vous initier à {{site.data.keyword.mobilefoundation_short}}.
 
 
 # Liens connexes

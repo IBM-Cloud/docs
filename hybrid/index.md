@@ -1,12 +1,9 @@
 ---
 
- 
 
 copyright:
-
   years: 2016
-
-lastupdated: "2016-10-14" 
+lastupdated: "2016-11-09"
 
 ---
 
@@ -16,7 +13,10 @@ lastupdated: "2016-10-14"
 # Hybrid
 {: #hybrid}
 
-With public, dedicated, and local integrated deployment models, {{site.data.keyword.Bluemix_notm}} represents a new way to experience cloud. {{site.data.keyword.Bluemix_notm}} has cloud deployments that fit your needs, whether you are a small business that plans to scale, or a large enterprise that requires additional isolation. You can develop in a cloud without borders, where you can connect your private services to the [{{site.data.keyword.Bluemix_notm}} Public](/docs/public/index.html) services available from IBM. And, you and your team can use existing data, systems, and processes along with the SaaS tools available in {{site.data.keyword.Bluemix_notm}}.
+
+With public, dedicated, and local integrated deployment models, {{site.data.keyword.Bluemix_notm}} represents a new way to experience cloud. {{site.data.keyword.Bluemix_notm}} has cloud deployments that fit your needs, whether you are a small business that plans to scale, or a large enterprise that requires additional isolation. You can develop in a cloud without borders, where you can connect your private services to the {{site.data.keyword.Bluemix_notm}} Public services that are available from IBM. And, you and your team can use existing data, systems, and processes along with the SaaS tools available in {{site.data.keyword.Bluemix_notm}}. Go to [What is {{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html) for more information about {{site.data.keyword.Bluemix_notm}} Public.
+
+/overview/whatisbluemix.html#bluemixoverview
 {:shortdesc}
 
 ## Dedicated
@@ -28,8 +28,10 @@ With public, dedicated, and local integrated deployment models, {{site.data.keyw
 With {{site.data.keyword.Bluemix_notm}} Local, you can take advantage of the true value of a private cloud within your data center.  {{site.data.keyword.Bluemix_notm}} Local is delivered as-a-service and in constant collaboration with your IT team. It also enables you to leverage your existing mainframes, service-oriented architecture, processes, and data in a modern cloud platform. Learn more about [{{site.data.keyword.Bluemix_notm}} Local](/docs/local/index.html).
 
 # rellinks
+{: #rellinks}
 ## general
-* [What is {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/)
+{: #general}
+* [What is {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
 * [Getting started](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
 * [Learn about the hybrid model](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
 * [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)

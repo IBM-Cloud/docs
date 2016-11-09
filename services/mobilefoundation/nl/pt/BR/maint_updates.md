@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-08-03"
 ---
 
 {:new_window: target="_blank"}
@@ -14,8 +14,8 @@ copyright:
 e atualização
 {: #maintupdates_mf}
 
-Última atualização: 3 de agosto de 2016
-{: .last-updated}
+<!--Last updated: 03 August 2016
+{: .last-updated}-->
 
 O {{site.data.keyword.mobilefoundation_short}} provisiona um {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group-->. As
 atualizações no servidor do

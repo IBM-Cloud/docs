@@ -2,17 +2,18 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
-
-
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:pre: .pre}
 
 # Unbinding and deprovisioning your  {{site.data.keyword.objectstorageshort}} instance {: #deprovisioning-object-storage}
 
-*Last updated: 25 October 2016*
-{: .last-updated}
+
 
 ### Unbinding your instance
 If you no longer have a need for {{site.data.keyword.objectstorageshort}} in your Cloud Foundry app, but you want to maintain your saved data, you can unbind your instance of the service from your app.
@@ -38,4 +39,3 @@ If you have an unbound instance of {{site.data.keyword.objectstorageshort}} that
 3. Select **Delete service**.
 4. Click **Delete** to confirm.
 5. Click **Restage** for your change to take effect.
-

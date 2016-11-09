@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # {{site.data.keyword.amashort}} の概要
 {: #mca-overview}
-最終更新日: 2016 年 7 月 22 日
-{: .last-updated}
+
 
 {{site.data.keyword.amafull}} サービスは、{{site.data.keyword.Bluemix_notm}} 上でホストされているクラウド・リソースにアクセスするモバイル・アプリケーションおよび Web アプリケーションの認証サービスおよびモニタリング・サービスを提供します。
 

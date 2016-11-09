@@ -2,16 +2,16 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-08-03"
 ---
 
 #	Informazioni su {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
 
-Ultimo aggiornamento: 03 agosto 2016
-{: .last-updated}
+<!--Last updated: 03 August 2016
+{: .last-updated}-->
 
-Il servizio {{site.data.keyword.mobilefoundation_short}} fornisce un modo per impostare rapidamente un ambiente {{site.data.keyword.mobilefirst}} Server su{{site.data.keyword.Bluemix}}. Puoi quindi sviluppare, testare e gestire applicazioni mobili da questo ambiente cloud. 
+Il servizio {{site.data.keyword.mobilefoundation_short}} fornisce un modo per impostare rapidamente un ambiente {{site.data.keyword.mobilefirst}} Server su{{site.data.keyword.Bluemix}}. Puoi quindi sviluppare, testare e gestire applicazioni mobili da questo ambiente cloud.
 
 {{site.data.keyword.mobilefoundation_short}} fornisce agli utenti un modo facile e guidato per impostare l'ambiente {{site.data.keyword.mfserver_short_notm}} <!--in the {{site.data.keyword.containerlong}} --> su {{site.data.keyword.Bluemix_notm}}.
 

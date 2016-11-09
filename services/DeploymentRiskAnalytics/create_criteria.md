@@ -14,14 +14,13 @@ copyright:
 # Defining policies
 {: #DRA_criteria}
 
-Last updated: 13 September 2016
+Last updated: 1 November 2016
 {: .last-updated}
 
 With {{site.data.keyword.DRA_short}}, defining the policies for your application is easy. To get started, follow these steps:
 {:shortdesc}
 
-
-1. If you are creating policies for the first time, click **Let's Go**.
+1. Click the **Policies** tab.
 
 2. Click **Create Policy (+)**, and then enter a name and description for the new policy.
 

@@ -7,10 +7,10 @@ copyright:
 
 # 使用 REST API
 {: #push-api-rest}
-前次更新：2016 年 8 月 16 日
+前次更新：2016 年 10 月 17 日
 {: .last-updated}
 
-您可以對 {{site.data.keyword.mobilepushshort}} 使用 REST（具象狀態傳輸）API（應用程式介面）。也可以使用 SDK 及 [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) 來進一步開發用戶端應用程式。
+您可以對 {{site.data.keyword.mobilepushshort}} 使用 REST（具象狀態傳輸）API（應用程式介面）。也可以使用 SDK 及 [Push API](https://mobile.{DomainName}/imfpush/) 來進一步開發用戶端應用程式。
 
 運用 Push REST API，後端伺服器應用程式及用戶端可以存取 {{site.data.keyword.mobilepushshort}} 功能。
 
@@ -33,17 +33,17 @@ copyright:
 
  cf service-key {push_instance_name} {key_name}
 ```
-
+	{: codeblock}
 
 ## Accept-Language（接受語言）標頭
 {: #push-api-rest-accept}
 
-"Accept-Language" 標頭指定 [Push REST API](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} 所輸出之錯誤訊息要使用的語言。以下是錯誤訊息支援的語言：簡體中文、繁體中文、美式英文、德文、法文、義大利文、日文、韓文、葡萄牙文及西班牙文。
+"Accept-Language" 標頭指定 [Push REST API](https://mobile.{DomainName}/imfpush/){: new_window} 所輸出之錯誤訊息要使用的語言。以下是錯誤訊息支援的語言：簡體中文、繁體中文、美式英文、德文、法文、義大利文、日文、韓文、葡萄牙文及西班牙文。
 
-## appSecret
+## appSecret 
 {: #push-api-rest-secret}
 
-應用程式連結至 {{site.data.keyword.mobilepushshort}} 時，服務會產生 appSecret（唯一金鑰）並透過回應標頭進行傳遞。如果您使用的是 IBM® {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，請使用 REST API 參考資料來取得所需保護之 API 的資訊。如需 REST API 的相關資訊，請參閱「REST API 參考資料」。
+應用程式連結至 {{site.data.keyword.mobilepushshort}} 時，服務會產生 appSecret（唯一金鑰）並透過回應標頭進行傳遞。如果您使用的是 IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，請使用 REST API 參考資料來取得所需保護之 API 的資訊。如需 REST API 的相關資訊，請參閱「REST API 參考資料」。
 
 要求標頭必須包含 appSecret。如果沒有，則伺服器會傳回「401 未獲授權」的錯誤碼。將 {{site.data.keyword.mobilepushshort}} 新增至應用程式時，會建立特定的 AppID。在回應中有一個稱為 appSecret 的標頭，它用來建立「標籤」或傳送訊息。作業是透過型錄或樣板中的服務進行。
 
@@ -53,10 +53,9 @@ copyright:
 2. 按一下**顯示認證**鏈結，以顯示 appSecret (AppID)。
 
 **顯示認證**畫面會顯示 AppSecret 的相關資訊：
-
 ```
-{
- "imfpush_Dev": [
+	{
+    "imfpush_Dev": [
    {
      "name": "testapp1",
      "label": "imfpush_Dev",
@@ -64,12 +63,14 @@ copyright:
      "credentials": {
        "url": "http://imfpush.ng.bluemix.net/imfpush/v1/apps/b615b280-b37e-4042-8815-38a758f234e2",
        "admin_url": "//mobile.ng.bluemix.net/imfpushdashboard/?appGuid=b615b280-b37e-4042-8815-38a758f234e2",
-       "appSecret": "8dac71a5-2219-42b3-a9f3-dbb828ba1f04"  
+       "appSecret": "8dac71a5-2219-42b3-a9f3-dbb828ba1f04",
        }
-   }
- ]
-}
-``` 
+     }
+    ]
+    }
+```
+	{: codeblock} 
+
 
 ##Push REST API 過濾器
 {: #push-api-rest-filters}
@@ -78,14 +79,11 @@ copyright:
 
 過濾器可以使用下列語法產生：
 
-**name**
-要套用過濾器的欄位名稱。
+**name**：要套用過濾器的欄位名稱。
 
-**operator**
-說明要使用的過濾器相符項目的 ==（完全相符）或 =@（包含子字串）。
+**operator**：說明要使用的過濾器相符項目的 ==（完全相符）或 =@（包含子字串）。
 
-**expression**
-要併入結果中的值。
+**expression**：要併入結果中的值。
 
 在表示式中顯示逗點及反斜線時，必須使用反斜線跳出。
 

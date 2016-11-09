@@ -1,4 +1,4 @@
-    ---
+---
 
 copyright:
  years: 2015 2016
@@ -8,116 +8,99 @@ copyright:
 
 # Activation des applications Android pour recevoir des notifications de type {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Dernière mise à jour : 16 août 2016
+Dernière mise à jour : 19 octobre 2016
 {: .last-updated}
 
-Activez les applications Android pour la réception et l'envoi de notifications de type {{site.data.keyword.mobilepushshort}} à vos périphériques.
+Vous pouvez activer les applications Android pour recevoir des notifications {{site.data.keyword.mobilepushshort}} sur vos appareils. Android Studio, qui est un prérequis, est la méthode recommandée pour générer des projets Android. Une connaissance de base d'Android Studio est essentielle.
 
 ## Installation du logiciel SDK Push du client à l'aide de Gradle
 {: #android_install}
 
 Cette section explique comment installer et utiliser le logiciel SDK Push du client afin de développer davantage vos applications Android.
 
-Le logiciel SDK Push de Bluemix Mobile Services peut être ajouté à l'aide de Gradle. Gradle télécharge automatiquement des artefacts depuis des référentiels et les met à la disposition de votre application Android. Assurez-vous de configurer correctement Android Studio et le logiciel SDK Android Studio. Pour plus d'informations sur la configuration de votre système, voir [Android Studio Overview](https://developer.android.com/tools/studio/index.html). Pour plus d'informations sur Gradle, voir [Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html).
+Le logiciel SDK Push de Bluemix® Mobile Services peut être ajouté en utilisant Gradle. Gradle télécharge automatiquement des artefacts depuis des référentiels et les met à la disposition de votre application Android. Assurez-vous de configurer correctement Android Studio et le logiciel SDK Android Studio. Pour plus d'informations sur la configuration de votre système, voir [Android Studio Overview](https://developer.android.com/tools/studio/index.html). Pour plus d'informations sur Gradle, voir [Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html).
 
-1. Dans Android Studio, après avoir créé et ouvert une application mobile, ouvrez le fichier **build.gradle** de votre application. 
-2. Ajoutez les dépendances ci-après à votre application mobile. Ces instructions d'importation sont requises pour les fragments de code suivants :
-
-	```
-	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
+1. Dans Android Studio, après avoir créé et ouvert une application mobile, ouvrez le fichier **build.gradle** de votre application.
+2. Ajoutez les dépendances ci-après à votre application mobile. Les lignes suivantes ajoutent le logiciel SDK Push du client Bluemix™ Mobile Services et le logiciel SDK des services Google Play à vos dépendances de compilation :
+```
+com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
+```
+    {: codeblock}
+2. Configurez le projet pour vous assurer que les dépendances sont résolues.
+3. Ajoutez les dépendances ci-après à votre application mobile. Ces instructions d'importation sont requises pour les fragments de code suivants :
+```
+import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushException;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushResponseListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
-	```
+```
+    {: codeblock}
 
+2. Dans le fichier **AndroidManifest.xml**, ajoutez les droits ci-dessous. Pour afficher un exemple de manifeste, voir le [modèle d'application Android helloPush](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). Pour afficher un exemple de fichier Gradle, voir l'[exemple de fichier de génération Gradle](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
+```
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="com.ibm.clientsdk.android.app.permission.C2D_MESSAGE" />
+<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+```
+	{: codeblock}
+ Vous trouverez davantage d'informations sur les [droits Android](http://developer.android.com/guide/topics/security/permissions.html) ici.
 
-2. Ajoutez les dépendances ci-après à votre application mobile. Les lignes suivantes ajoutent le logiciel SDK Push du client Bluemix™ Mobile Services et le logiciel SDK des services Google Play à vos dépendances de compilation :
-
-	```
-	dependencies {
-	  compile group: 'com.ibm.mobilefirstplatform.clientsdk.android', 
-		name: 'push', 
-		version: '2.+',
-		ext: 'aar', 
-		transitive: true
-	}  
-	```
-3. Dans le fichier **AndroidManifest.xml**, ajoutez les droits ci-dessous. Pour afficher un exemple de manifeste, voir le [modèle d'application Android helloPush](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). Pour afficher un exemple de fichier Gradle, voir l'[exemple de fichier de génération Gradle](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
-
-	```
-	<uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="com.ibm.clientsdk.android.app.permission.C2D_MESSAGE" />
-	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-	<uses-permission android:name="android.permission.WAKE_LOCK" />
-	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
-	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-
-	```
-   Vous trouverez davantage d'informations sur les [droits Android](http://developer.android.com/guide/topics/security/permissions.html) ici.
 4. Ajoutez les paramètres d'intention de notification pour l'activité. Ce paramètre démarre l'application lorsque l'utilisateur clique sur la
 notification reçue dans la zone de notification.
+```
+<intent-filter>
+	<action android:name="Your_Android_Package_Name.IBMPushNotification"/>
+	<category  android:name="android.intent.category.DEFAULT"/>
+</intent-filter>
+```
+	{: codeblock}
+**Remarque** : remplacez *Your_Android_Package_Name* dans l'action précédente par le nom du package d'applications utilisé dans votre application.
 
-	```
-	<intent-filter>  
-		<action android:name="<Your_Android_Package_Name.IBMPushNotification"/>   
-		<category  android:name="android.intent.category.DEFAULT"/>
-	</intent-filter>
-	```
-	**Remarque** : remplacez *Your_Android_Package_Name* dans l'action précédente par le nom du package d'applications utilisé dans votre application.
-5. Ajoutez le service d'intention Google Cloud Messaging (GCM) et des filtres d'intention pour les notifications d'événements RECEIVE.
-
-	```
-	service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" />
-
-	<receiver
-	    android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.internal.MFPPushBroadcastReceiver"
-	    android:permission="com.google.android.c2dm.permission.SEND">
-	    <intent-filter>
-	        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-
-	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
-	    </intent-filter>
-	    <intent-filter>
+5. Ajoutez le service d'intention FCM (Firebase Cloud Messaging) ou GCM (Google Cloud Messaging) et des filtres d'intention pour les notifications d'événements RECEIVE.
+```
+<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" />
+<receiver
+android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.internal.MFPPushBroadcastReceiver"
+   android:permission="com.google.android.c2dm.permission.SEND">
+   <intent-filter>
+       <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+       <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
+    </intent-filter>
+    <intent-filter>
 	        <action android:name="android.intent.action.BOOT_COMPLETED" />
-
 	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
-	    </intent-filter>
-	</receiver>
-	```
+    </intent-filter>
+</receiver>
+```
+    {: codeblock}
 
+6. Le service {{site.data.keyword.mobilepushshort}} prend en charge l'extraction des notifications individuelles depuis la zone de notification. Pour les notifications atteintes à partir de la zone de notification, un descripteur ne vous est fourni que pour la notification sur laquelle vous cliquez. Toutes les notifications s'affichent quand l'application est ouverte normalement. Mettez à jour votre fichier **AndroidManifest.xml** avec le fragment de code ci-après pour utiliser cette fonctionnalité :
+
+```
+<activity android:name="
+com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
+android:theme="@android:style/Theme.NoDisplay"/>
+```
 
 ## Initialisation du logiciel SDK Push pour les applis Android
 {: #android_initialize}
 
-Le code d'initialisation se trouve généralement dans la méthode onCreate de l'activité principale de votre application Android.
-
-Pour obtenir votre route d'application et votre identificateur global unique, sélectionnez l'option Configuration du panneau de navigation pour vos services push initialisés et cliquez sur **Options pour application mobile**.
-Utilisez ces valeurs pour vos paramètres de route et d'identificateur global unique d'application. Modifiez le fragment de code pour qu'il utilise les paramètres appRoute et appGUID de votre appli Bluemix.
-
+Le code d'initialisation se trouve généralement dans la méthode onCreate de l'activité principale de votre application Android. Deux composants du logiciel SDK doivent être initialisés. Le premier est le logiciel SDK de base et l'autre, le logiciel SDK push qui repose sur le premier.
 
 ###Initialisation du logiciel SDK de base
 
 ```
-// Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
-BMSClient.getInstance().initialize(getApplicationContext(), appRoute , appGuid, bluemixRegionSuffix);
-
+// Initialize the SDK for Android
+    BMSClient.getInstance().initialize(this, BMSClient.REGION_US_SOUTH);
 ```
-
-
-####appRoute
-{: approute}
-
-Spécifie la route qui a été affectée à l'application serveur que vous avez créée dans Bluemix.
-
-####AppGUID
-{: appguid}
-
-Spécifie la clé unique qui est affectée à l'instance de service {{site.data.keyword.mobilepushshort}} sous Bluemix. Cette
-valeur est sensible à la casse. Vous pouvez obtenir cette valeur depuis Options pour application mobile sur le tableau de bord Push.
+    {: codeblock}
 
 ####bluemixRegionSuffix
 {: bluemixRegionSuffix}
@@ -135,44 +118,49 @@ Indique l'emplacement où l'appli est hébergée. Vous pouvez utiliser l'une des
 MFPPush push = MFPPush.getInstance();
 push.initialize(getApplicationContext(), "AppGUID");
 ```
+	{: codeblock}
+
 ####AppGUID
-{: AppGUID}
+{: appguid_initialize_client_push_sdk}
 
-Il s'agit de la clé AppGUID du service {{site.data.keyword.mobilepushshort}}.
+Il s'agit de la clé AppGUID du service {{site.data.keyword.mobilepushshort}}. Cette
+valeur est sensible à la casse. Ouvrez le tableau de bord de notification push et sélectionnez l'onglet de configuration. Vous pouvez obtenir cette valeur depuis Options pour application mobile, à partir de l'onglet de configuration du tableau de bord du service Push Notifications. 
 
-## Enregistrement de périphériques Android
+## Enregistrement d'appareils Android
 {: #android_register}
 
-Utilisez l'API `MFPPush.register()` pour enregistrer le périphérique auprès du service {{site.data.keyword.mobilepushshort}}. Pour enregistrer des périphériques Android, ajoutez les informations GCM (Google Cloud Messaging) dans le tableau de bord de configuration du service {{site.data.keyword.mobilepushshort}} Bluemix. Pour plus d'informations, voir [Configuration de données d'identification pour Google Cloud Messaging](t_push_provider_android.html).
+Utilisez l'API `MFPPush.register()` pour enregistrer l'appareil auprès du service {{site.data.keyword.mobilepushshort}}. Pour enregistrer des appareils Android, ajoutez les informations FCM (Firebase Cloud Messaging) et GCM (Google Cloud Messaging (GCM) dans le tableau de bord de configuration du service {{site.data.keyword.mobilepushshort}} Bluemix. Pour plus d'informations, voir [Configuration de données d'identification pour Google Cloud Messaging](t_push_provider_android.html).
 
-Copiez et collez les fragments de code suivants dans votre application mobile Android :
+Copiez les fragments de code suivants dans votre application mobile Android.
 
 ```
-	//Register Android devices
+//Register Android devices
 	push.registerDevice(new MFPPushResponseListener<String>() {
-	    @Override
+    @Override
 	    public void onSuccess(String deviceId) {
-	           //handle success here
+//handle success here
 	    }
-	    @Override
-	    public void onFailure(MFPPushException ex) {
-	    //handle failure here
+    @Override
+    public void onFailure(MFPPushException ex) {
+//handle failure here
 	    }
-	});
+});
 ```
+	{: codeblock}
+
 
 ```
-	//Handles the notification when it arrives
+//Handles the notification when it arrives
 	MFPPushNotificationListener notificationListener = new MFPPushNotificationListener() {
-	    @Override
+    @Override
 	    public void onReceive (final MFPSimplePushNotification message){
 	      // Handle Push Notification
 	    }
-	};
+};
 ```
+	{: codeblock}
 
-
-## Réception de notifications push sur des périphériques Android
+## Réception de notifications push sur des appareils Android
 {: #android_receive}
 
 Pour enregistrer l'objet notificationListener auprès de push, appelez la méthode **MFPPush.listen()**. En général, elle est appelée depuis la
@@ -180,51 +168,67 @@ méthode **onResume()** de l'activité qui traite les notifications push.
 
 1. Pour enregistrer l'objet notificationListener auprès de push, appelez la méthode **listen()**. En général, elle est appelée depuis la
 méthode **onResume()** de l'activité qui traite les notifications push.
-
-	```
-	@Override
+```
+@Override
 	protected void onResume(){
 	   super.onResume();
 	   if(push != null) {
-	       push.listen(notificationListener);
+       push.listen(notificationListener);
 	   }
-	}
-  ```
-2. Générez le projet et exécutez-le sur le périphérique ou l'émulateur. Quand la méthode onSuccess() pour le programme d'écoute des réponses dans la méthode register() est appelée, cela signifie que le périphérique a été enregistré auprès du service {{site.data.keyword.mobilepushshort}}. A ce stade, vous pouvez envoyer un message comme décrit dans la rubrique Envoi de notifications push de base.
-3. Vérifiez que vos périphériques ont reçu votre notification. Si l'application se trouve au premier-plan, la notification est traitée par **MFPPushNotificationListener**. Si elle se trouve en arrière-plan, un message est affiché dans la barre de notification.
+}
+```
+	{: codeblock}
+
+2. Générez le projet et exécutez-le sur l'appareil ou l'émulateur. Quand la méthode onSuccess() pour le programme d'écoute des réponses dans la méthode register() est appelée, cela signifie que l'appareil a été enregistré auprès du service {{site.data.keyword.mobilepushshort}}. A ce stade, vous pouvez envoyer un message comme décrit dans la rubrique Envoi de notifications push de base.
+3. Vérifiez que vos appareils ont reçu votre notification. Si l'application se trouve au premier-plan, la notification est traitée par **MFPPushNotificationListener**. Si elle se trouve en arrière-plan, un message est affiché dans la barre de notification.
 
 
 ## Envoi des notifications de type {{site.data.keyword.mobilepushshort}} de base
 {: #send}
 
-Une fois que vous avez développé vos applications, vous pouvez envoyer des notifications push de base (sans utiliser de balise, de badge, de
-contenu supplémentaire ou de fichier son).
+Une fois que vous avez développé vos applications, vous pouvez envoyer des notifications push de base.
 
-1. Dans la zone **Choisir des destinataires**, sélectionnez l'un des publics suivants :
-**Tous les terminaux** ou par plateforme : **Terminaux iOS seulement** ou
-**Terminaux Android seulement**. 
+Pour envoyer des notifications push de base, procédez comme suit :
 
-	**Remarque **: quand vous sélectionnez l'option relative à tous les périphériques, tous les périphériques qui sont abonnés à des notifications push recevront les notifications.
-
+1. Sélectionnez **Envoyer des notifications** et rédigez un message en choisissant une option **Envoyer à**. Les options prises en charge sont **Appareil par étiquette**, **ID de l'appareil**, **ID utilisateur**, **Appareils Android**, **Appareils IOS**, **Notifications Web** et **Tous les appareils**.
+**Remarque **: quand vous sélectionnez l'option relative à tous les appareils, tous les appareils qui sont abonnés à des notifications de type {{site.data.keyword.mobilepushshort}} recevront les notifications.
 ![Ecran Notifications](images/tag_notification.jpg)
 
-2. Dans la zone **Create your Notification**, entrez votre message, puis cliquez sur **Send**.
-3. Vérifiez que vos périphériques ont reçu votre notification. La capture d'écran suivante présente une boîte d'alerte relative à une notification push s'exécutant au premier plan sur un périphérique Android.
+2. Dans la zone **Message**, composez votre message. Configurez les paramètres facultatifs, selon les besoins.
+3. Cliquez sur **Envoyer**.
+3. Vérifiez que vos appareils ont reçu votre notification.
 
-![Notification push qui s'exécute au premier plan sur un périphérique Android](images/Android_Screenshot.jpg)
+La capture d'écran suivante présente une boîte d'alerte relative à une notification push s'exécutant au premier plan sur un appareil Android.
 
-La capture d'écran suivante présente une notification push qui s'exécute en arrière-plan sur un périphérique Android.
+![Notification push qui s'exécute au premier plan sur un appareil Android](images/Android_Screenshot.jpg)
 
-![Notification push qui s'exécute en arrière-plan sur un périphérique Android](images/background.jpg)
+La capture d'écran suivante présente une notification push qui s'exécute en arrière-plan sur un appareil Android.
 
+![Notification push qui s'exécute en arrière-plan sur un appareil Android](images/background.jpg)
+
+### Paramètres facultatifs pour l'envoi de notifications
+{: #send_otpional_setting}
+
+Vous pouvez personnaliser les paramètres de type {{site.data.keyword.mobilepushshort}} pour l'envoi de notifications vers des appareils Android. Les options de personnalisation facultative suivantes sont prises en charge.
+![Paramètres Android personnalisés](images/android_custom_settings.jpg)
+
+- **Touche de réduction** : des touches de réduction sont attachées aux notifications. Si plusieurs notifications arrivent séquentiellement avec la même touche de réduction quand l'appareil est hors ligne, elles sont réduites. Quand un appareil passe en ligne, il reçoit des notifications du serveur FCM/GCM et n'affiche que la dernière notification portant la même touche de réduction. Si aucune touche de réduction n'est définie, les nouveaux et les anciens messages sont stockés pour une distribution future.
+- **Son** : indique le clip audio à exécuter à réception d'une notification. Prend en charge le fichier par défaut ou utilise le nom de la ressource audio intégré dans l'application.
+- **Icône** : spécifie le nom de l'icône à afficher pour la notification. Assurez-vous de bien avoir placé l'icône dans le dossier res/drawable, avec l'application client.
+- **Priorité** : spécifie les options d'affectation de la priorité de distribution aux messages. Une priorité `élevée` ou `max` générera des notifications d'alerte, tandis que des messages dont la priorité est à `faible` ou `par défaut` n'ouvriront pas les connexions réseau sur un appareil en veille. Pour les messages dont l'option a été définie à `min`, une notification silencieuse sera émise.
+- **Visibilité** : vous pouvez choisir de définir l'option de visibilité de notification sur `public` ou `privé`. L'option `privé` limite l'affichage public ; vous pouvez choisir de l'activer si votre appareil est sécurisé avec un code ou un numéro confidentiel et que le paramètre de notification est défini sur "Masquer le contenu sensible de la notification". Quand la visibilité est configurée sur `privé`, une zone "occulter" doit être mentionnée. Seul le contenu spécifié dans la zone "occulter" s'affichera sur l'écran verrouillé et sécurisé de l'appareil. L'option `public` permet une lecture libre des notifications.
+- **Durée de vie** : cette valeur est définie en secondes. Si ce paramètre n'est pas spécifié, le serveur FCM/GCM stocke le message pendant quatre semaines et tente de le distribuer. La validité expire après quatre semaines. La plage des valeurs possibles va de 0 à 2419200 secondes.
+- ****Retarder si inactif : en définissant cette valeur à `true`, vous demandez au serveur FCM/GCM de ne pas distribuer de notification si le serveur est inactif. Définissez cette valeur à `false` pour garantir la distribution de la notification même si l'appareil est en veille.
+- **Sync**: quand cette option est définie à `true`, les notifications figurant sur tous vos appareils enregistrés sont synchronisés. Si l'utilisateur identifié par un nom d'utilisateur qui lui est propre dispose de plusieurs appareils avec la même application installée, la lecture de la notification sur un appareil garantit une suppression des notifications sur les autres appareils. Vous devez vérifier que vous êtes enregistré auprès du service {{site.data.keyword.mobilepushshort}} avec le bon ID utilisateur pour que cette option fonctionne.
+- **Contenu supplémentaire** : spécifie les valeurs de contenu personnalisées pour vos notifications.
 
 
 ## Etapes suivantes
 {: #next_steps_tags}
 
-Une fois que vous avez configuré des notifications de base, vous pouvez configurer des notifications en fonction d'une balise et des options
+Une fois que vous avez configuré les notifications de base, vous pouvez configurer des notifications basées sur des balises et des options
 avancées.
 
 Ajoutez ces fonctions de service de notification push à votre application.
 Pour utiliser des notifications basées sur les balises, voir [Notifications basées sur les balises](c_tag_basednotifications.html).
-Pour utiliser des options de notification avancées, voir [Notifications push avancées](t_advance_notifications.html).
+Pour utiliser des options de notification avancées, voir [Activation des notifications push avancées](t_advance_badge_sound_payload.html).

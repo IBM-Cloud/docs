@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02" 
 ---
 
 # 사용자 정의 인증용 {{site.data.keyword.amashort}} 구성
 {: #custom-dash}
-
-마지막 업데이트 날짜: 2016년 7월 17일
-{: .last-updated}
 
 
 모바일 앱에서 사용자 정의 인증을 사용하려면 사용자 정의 ID 제공자의 사용자 정의 인증 영역과 기본 URL을 {{site.data.keyword.amashort}} 서비스 대시보드에 등록해야 합니다. 

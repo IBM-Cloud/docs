@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-19"
 
 ---
 {:new_window: target="_blank"}
@@ -9,111 +10,107 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# {{site.data.keyword.mobileanalytics_short}} （试验版）入门  
-
+# {{site.data.keyword.mobileanalytics_short}} 入门
 {: #gettingstartedtemplate}
-*上次更新时间：2016 年 8 月 1 日*
+
+
+上次更新时间：2016 年 10 月 19 日
 {: .last-updated}
 
-使用 {{site.data.keyword.mobileanalytics_full}} 服务，可测量移动应用程序、移动用户和移动设备的状态、行为和上下文信息。
+{{site.data.keyword.mobileanalytics_full}} 帮助开发人员、IT 管理员和业务利益相关方深入了解移动应用程序的执行方式和使用方式。从台式机或图形输入板监视所有应用程序的性能和使用情况。快速识别趋势和异常，向下钻取以解决问题，并在关键度量值超过严重阈值时触发警报。
 {: shortdesc}
 
 要快速启动和运行 {{site.data.keyword.mobileanalytics_short}} 服务，请遵循下列步骤：
 
-1. 在您创建 {{site.data.keyword.mobileanalytics_short}} 服务的[实例](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)之后，可以通过单击 {{site.data.keyword.Bluemix}} 仪表板“服务”部分的磁贴，来访问 {{site.data.keyword.mobileanalytics_short}} 控制台。
+1. 在创建<!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)--> {{site.data.keyword.mobileanalytics_short}} 服务的实例之后，即可访问 {{site.data.keyword.mobileanalytics_short}} Console，方法是单击 {{site.data.keyword.Bluemix}}“仪表板”**服务**部分中的磁贴。
 
-  **重要信息：**初次打开新创建的 Mobile Analytics 服务时，可能会显示一个窗口，确认您允许 {{site.data.keyword.Bluemix_notm}} 向服务提供有关您的必要信息，以便服务可以验证您的身份。单击**确认**，继续访问 {{site.data.keyword.mobileanalytics_short}} 控制台。如果取消，{{site.data.keyword.mobileanalytics_short}} 控制台将不会打开。
-2. 安装 {{site.data.keyword.mobileanalytics_short}} [Client SDK](install-client-sdk.html)。
+ {{site.data.keyword.mobileanalytics_short}} 服务在启用**演示方式**的情况下启动。演示方式可在**应用程序数据**和**警报**页面填充图表，因此您可以查看数据的显示方式。当您具有自己的数据时，可以关闭演示方式。当处于演示方式时，{{site.data.keyword.mobileanalytics_short}} Console 是只读的，因此您无法创建新警报定义。
+
+2. 安装 {{site.data.keyword.mobileanalytics_short}} [Client SDK](install-client-sdk.html)。可以选择使用 {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}。
+
 3. 导入客户端 SDK，并使用下列代码片段对它们进行初始化，以记录使用情况分析。
-  #### Android
-  {: #android-initialize}
-  1. 导入客户端 SDK：
-		
+
+	#### Android
+	{: #android-initialize}
+	1. 导入客户端 SDK：
+
 		```
 		import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
 		import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
 		```
-
-  2. 获取您的[访问密钥](sdk.html#analytics-clientkey)值。
-  3. 在应用程序代码内部初始化客户端 SDK，以记录使用情况分析和应用程序会话。
+		{: codeblock}
 		
+	2. 使用 [API 密钥](sdk.html#analytics-clientkey)值在应用程序代码内部初始化客户端 SDK，以记录使用情况分析和应用程序会话。
+
 		```Java
-		try {
-		        BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH);
-		    } catch (MalformedURLException e) {
-		        Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
-		    }
-		   Analytics.init(getApplication(), "your_app_name", "your_access_key", Analytics.DeviceEvent.LIFECYCLE);
+			BMSClient.getInstance().initialize(this.getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
+			
+			Analytics.init(getApplication(), "your_app_name_here", "your_api_key_here", hasUserContext, Analytics.DeviceEvent.LIFECYCLE);
 		```
-**bluemixRegion** 参数指定您使用的是哪一个 Bluemix 部署，例如 `BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
+		{: codeblock}
+		
+    您针对应用程序选择的名称 (`your_app_name_here`) 会在 {{site.data.keyword.mobileanalytics_short}} Console 中显示为应用程序名称。应用程序名称用作过滤器，在仪表板中搜索应用程序日志。当您跨平台（例如 Android 和 iOS）使用相同的应用程序名称时，您可以在相同的名称下，查看该应用程序的所有日志，而无论日志发自哪个平台。
+    
+    **bluemixRegion** 参数指定您使用的是哪一个 {{site.data.keyword.Bluemix_notm}} 部署，例如 `BMSClient.REGION_US_SOUTH` 和 `BMSClient.REGION_UK`。 
+    <!-- , or `BMSClient.REGION_SYDNEY`.-->
+    
+    **注**：将 `hasUserContext` 的值设置为 **true** 或 **false**。如果是 false（缺省值），那么在计数时，每个设备都会被计为活动用户。[`Analytics.setUserIdentity("username");`](sdk.html#android-tracking-users) 方法在 `hasUserContext` 为 false 时无法使用。如果是 true，那么每次使用 [`Analytics.setUserIdentity("username");`](sdk.html#android-tracking-users) 都会在计数时被计为活动用户。当 `hasUserContext` 为 true 时，没有缺省用户身份，因此必须设置该身份以填充活动用户图表。
 
   #### iOS
   {: #ios-initialize}
+  
   1. 导入 `BMSCore` 和 `BMSAnalytics` 框架：
-
-    ```
-    import BMSCore
+	```
+	    import BMSCore
     import BMSAnalytics
     ```
-
-  2. 获取您的[访问密钥](sdk.html#analytics-clientkey)值。
-
-  3. 在应用程序代码内部初始化客户端 SDK，以记录使用情况分析和应用程序会话。
+	{: codeblock}
+    
+  2. 使用 [API 密钥](sdk.html#analytics-clientkey)值在应用程序代码内部初始化客户端 SDK，以记录使用情况分析和应用程序会话。
+ 
+	Swift：
 	
 	```Swift
-	BMSClient.sharedInstance.initializeWithBluemixAppRoute("nil",bluemixAppGUID: "nil", bluemixRegion: BMSClient.REGION_US_SOUTH) //You can change the region
-	Analytics.initializeWithAppName("your_app_name", accessKey: "your_access_key", deviceEvents: DeviceEvent.LIFECYCLE)
+	BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // You can change the region
+	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: DeviceEvent.lifecycle)	
 	```
-
-    **bluemixRegion** 参数指定您使用的是哪一个 Bluemix 部署，例如 `BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
+	{: codeblock}
+		
+	您针对应用程序选择的名称 (`your_app_name_here`) 会在 {{site.data.keyword.mobileanalytics_short}} Console 中显示为应用程序名称。应用程序名称用作过滤器，在仪表板中搜索应用程序日志。当您跨平台（例如 Android 和 iOS）使用相同的应用程序名称时，您可以在相同的名称下，查看该应用程序的所有日志，而无论日志发自哪个平台。
+	
+	**bluemixRegion** 参数指定您使用的是哪一个 Bluemix 部署，例如 `BMSClient.REGION_US_SOUTH` 和 `BMSClient.REGION_UK`。
+	<!-- , or `BMSClient.REGION_SYDNEY`. -->
+	
+	**注**：将 `hasUserContext` 的值设置为 **true** 或 **false**。如果是 false（缺省值），那么在计数时，每个设备都会被计为活动用户。[`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) 方法在 `hasUserContext` 为 false 时无法使用。如果是 true，那么每次使用 [`Analytics.userIdentity="username"`](sdk.html#ios-tracking-users) 都会在计数时被计为活动用户。当 `hasUserContext` 为 true 时，没有缺省用户身份，因此必须设置该身份以填充活动用户图表。
 
 4. 将记录的使用情况分析发送到 Mobile Analytics 服务。一个简单的方法可测试您的分析，即在应用程序启动时，运行下列代码：
 
 	#### Android
 	{: #android-send}
+
+	使用 `Analytics.send()` 方法，将分析数据发送到服务器。您可以在 Android 应用程序主要活动的 `onCreate` 方法的任何位置或最适合您项目的位置，放置 `Analytics.send()` 方法。 
 	
-	您可以在 Android 应用程序主要活动的 `onCreate` 方法中或最适合您项目的位置，添加 `Analytics.send()` 方法。
-	
+	您可以在任何位置插入 `Analytics.send()`。
+
 	```
-	Analytics.send(new ResponseListener() {
-	    @Override
-	    public void onSuccess(Response response) {
-	        Log.d("your_app_name", "Successfully sent analytics: " + response.toString());
-	    }
-		
-	    @Override
-	    public void onFailure(Response response, Throwable throwable, JSONObject jsonObject) {
-	        Log.e("your_app_name", "Failed to send analytics: ");
-	        if (response != null) {
-	            Log.e("your_app_name", response.toString());
-	        }
-	        if (throwable != null) {
-	            Log.e("your_app_name","Stack trace: ", throwable);
-	        }
-	    }
-	});
+	Analytics.send();
 	```
-	
+	{: codeblock}
+
 	#### iOS
 	{: #ios-send}
-	
-	
-	使用 `Analytics.send` 方法，将分析数据发送到服务器。将 `Analytics.send` 方法置于应用程序代表的 `application(_:didFinishLaunchingWithOptions:)` 方法中，或者置于适合您项目的位置。 
-		
+
+	使用 `Analytics.send` 方法，将分析数据发送到服务器。您可以将 `Analytics.send` 方法置于应用程序代表的 `application(_:didFinishLaunchingWithOptions:)` 方法的任何位置，或者置于适合您项目的位置。 
+
 	```
-	Analytics.send { (response: Response?, error: NSError?) in
-	  if response?.statusCode == 201 {
-	      print("Successfully sent analytics: \(response?.responseText)")
-	  }
-	  else {
-	      print("Failed to send analytics: \(response?.responseText). Error: \(error?.localizedDescription)")
-	  }
-	}
+	Analytics.send()
 	```
-请参阅[检测应用程序](sdk.html)主题。
+	{: codeblock}
+
+	请阅读[检测应用程序](sdk.html)主题，以了解其他 {{site.data.keyword.mobileanalytics_short}} 功能。
 5. 在移动仿真器或设备上编译并运行应用程序。
 
-6. 转到 {{site.data.keyword.mobileanalytics_short}} **仪表板**，以查看使用情况分析，如使用该应用程序的新设备和设备总数。您还可以通过<!-- [creating custom charts](app-monitoring.html#custom-charts), --> [设置警报](app-monitoring.html#alerts)和[监视应用程序崩溃](app-monitoring.html#monitor-app-crash)来监视应用程序。 
+6. 转到 {{site.data.keyword.mobileanalytics_short}} **Console**，以查看您应用程序的使用情况分析。您还可以通过<!--[creating custom charts](app-monitoring.html#custom-charts),-->[设置警报](app-monitoring.html#alerts)和[监视应用程序崩溃](app-monitoring.html#monitor-app-crash)来监视应用程序。
 
 
 # 相关链接
@@ -121,3 +118,7 @@ copyright:
 ## SDK
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+
+## API 参考
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

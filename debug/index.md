@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -21,21 +23,21 @@ If you experience problems with {{site.data.keyword.Bluemix}}, you can view the 
 
 Logs provide information such as whether a job runs successfully, or whether it fails. They also provide relevant information that can be used to debug and determine the cause of a problem.
 
-Logs are in a fixed format. For verbose logs, you can filter the logs or use external logging hosts to store and process the logs. For more information about log formats, viewing and filtering logs, and configuring external logging, see [Logging for apps running on Cloud Foundry](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
+Logs are in a fixed format. For verbose logs, you can filter the logs or use external logging hosts to store and process the logs. For more information about log formats, viewing and filtering logs, and configuring external logging, see [Logging for apps running on Cloud Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
 
 
 ## Debugging staging errors
 {: #debugging-staging-errors}
-You might experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}. If your app fails to stage, you can search and review staging (STG) logs to determine what has happened during the app deployment and to recover from the problem. For more information about the methods of viewing logs for Bluemix apps, see [viewing logs](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
+You might experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}. If your app fails to stage, you can search and review staging (STG) logs to determine what has happened during the app deployment and to recover from the problem. For more information about the methods of viewing logs for Bluemix apps, see [viewing logs](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
 
-To understand why your app might be failing on {{site.data.keyword.Bluemix_notm}}, you need to know how an app is deployed to {{site.data.keyword.Bluemix_notm}} and runs on it. For detailed information, see [Application deployment](../manageapps/depapps.html#appdeploy){: new_window}.
+To understand why your app might be failing on {{site.data.keyword.Bluemix_notm}}, you need to know how an app is deployed to {{site.data.keyword.Bluemix_notm}} and runs on it. For detailed information, see [Application deployment](/docs/manageapps/depapps.html#appdeploy){: new_window}.
 
 
-The following procedure shows how you can use the `cf logs` command to debug staging errors. Before you take the following steps, ensure that you have installed the cf command line interface. For more information about installing the cf command line interface, see [Installing the cf command line interface](../starters/install_cli.html){: new_window}.
+The following procedure shows how you can use the `cf logs` command to debug staging errors. Before you take the following steps, ensure that you have installed the cf command line interface. For more information about installing the cf command line interface, see [Installing the cf command line interface](/docs/starters/install_cli.html){: new_window}.
 
   1. Connect to {{site.data.keyword.Bluemix_notm}} by entering the following code in the cf command line interface:
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	 cf api https://api.ng.bluemix.net
 	 ```
 
   2. Log in to {{site.data.keyword.Bluemix_notm}} by entering `cf login`.

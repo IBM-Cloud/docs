@@ -1,28 +1,28 @@
 ---
 
 copyright:
-  years: 2015, 2016
-  
+  years: 2015, 2016 lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+
 
 # Configurando o SDK do Android
 {: #getting-started-android}
 
-Última atualização: 02 de agosto de 2016
-{: .last-updated}
+Instrumente seu aplicativo Android com o {{site.data.keyword.amafull}} client SDK, inicialize o SDK e faça as solicitações para recursos protegidos e desprotegidos.
 
-Instrumente seu aplicativo Android com o {{site.data.keyword.amashort}} client SDK, inicialize o SDK e faça as solicitações para recursos protegidos e desprotegidos.
 {:shortdesc}
 
 ## Antes de Começar
 {: #before-you-begin}
 Você deve ter:
 * Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
+* Os seus valores de parâmetros de serviço. Abra o seu serviço no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções de
+dispositivo móvel**. Os valores `applicationRoute` e `tenantId` (também conhecidos como `appGUID`) são
+exibidos nos campos **Rota** e **GUID / TenantId do aplicativo**. Você precisará desses valores para inicializar o SDK e para
+enviar solicitações para o aplicativo backend.
 * Um projeto Android Studio, configure para trabalhar com Gradle. Para obter mais informações sobre como configurar seu ambiente de desenvolvimento do Android, veja [Google Developer Tools](http://developer.android.com/sdk/index.html).
-
 
 ## Instalando o {{site.data.keyword.amashort}} client SDK
 {: #install-mca-sdk}
@@ -59,21 +59,18 @@ do projeto).
 ## Inicializando o {{site.data.keyword.amashort}} client SDK
 {: #initalize-mca-sdk}
 
-Inicialize o SDK transmitindo os parâmetros `context`, `applicationGUID`, `applicationRoute` e `BMSClient.REGION_UK` para o método `initialize`.
+Inicialize o SDK do cliente passando os parâmetros **context** e **region** para o
+método `initialize`. Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `onCreate` da atividade principal em seu aplicativo Android.
 
+```Java 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+BMSClient.getInstance().setAuthorizationManager(
+                 MCAAuthorizationManager.createInstance(this, "MCAServiceTenantId"));
 
-1. Na página principal do painel do {{site.data.keyword.Bluemix_notm}}, clique em seu app. Clique em **Opções de dispositivo móvel**. Os valores **Rota do aplicativo** e **GUID do aplicativo** são necessários para inicializar o SDK.
-
-2. Inicialize o {{site.data.keyword.amashort}} client SDK em seu aplicativo Android.  Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `onCreate` da atividade principal em seu aplicativo Android.
-<br/>Substitua os valores *applicationRoute* e *applicationGUID* pelos valores em **Opções de dispositivo móvel** no painel do {{site.data.keyword.Bluemix_notm}}.
-
-	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
 ```
-Substitua o `BMSClient.REGION_UK` pela região apropriada.  Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de **Avatar** ![Ícone de Avatar](images/face.jpg "Ícone de Avatar") na barra de menus para abrir o widget **Conta e suporte**.
+
+   * Substitua o `BMSClient.REGION_UK` pela região apropriada.  Para visualizar sua região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de **Avatar** ![Ícone de Avatar](images/face.jpg "Ícone de Avatar") na barra de menus para abrir o widget **Conta e suporte**. O valor da região deve ser um destes: `BMSClient.REGION_US_SOUTH`,
+`BMSClient.REGION_SYDNEY` ou `BMSClient.REGION_UK`.
+   * Substitua "MCAServiceTenantId" pelo valor **tenantId** (veja [Antes de iniciar](#before-you-begin)). 
 
 ## Fazendo uma solicitação para seu aplicativo backend móvel
 {: #request}
@@ -82,9 +79,11 @@ Após o SDK do cliente {{site.data.keyword.amashort}} ser inicializado, será po
 backend móvel.
 
 1. Tente enviar uma solicitação a um terminal protegido do seu novo aplicativo backend móvel. Em
-seu navegador, abra esta URL: `{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter é
-protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada em seu navegador, porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o SDK do cliente {{site.data.keyword.amashort}}.
+seu navegador, abra a URL a seguir: `{applicationRoute}/protected`
+(por exemplo `http://my-mobile-backend.mybluemix.net/protected`).   Para informações sobre como obter o valor `{applicationRoute}`, veja
+[Antes de iniciar](#before-you-begin). 
+	
+	O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter é protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada em seu navegador, porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o SDK do cliente {{site.data.keyword.amashort}}.
 
 1. Use seu aplicativo Android para fazer uma solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar o `BMSClient`:
 

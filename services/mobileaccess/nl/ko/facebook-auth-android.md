@@ -2,31 +2,25 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
+
 
 # Android 앱에서 Facebook 인증 사용
 {: #facebook-auth-android}
 
-마지막 업데이트 날짜: 2016년 8월 4일
-{: .last-updated}
 
-
-Android 애플리케이션에서 Facebook을 ID 제공자로 사용하려면, 개발자용 Facebook 사이트에서 Facebook 애플리케이션에 대해 Android 플랫폼을 추가하고 구성하십시오.
+{{site.data.keyword.amafull}} Android 애플리케이션에서 Facebook을 ID 제공자로 사용하려면, 개발자용 Facebook 사이트에서 Facebook 애플리케이션용으로 Android 플랫폼을 추가하고 구성하십시오.
 {:shortdesc}
 
 ## 시작하기 전에
-{: #facebook-auth-android-before}
+{: #before-you-begin}
 다음이 있어야 합니다.
 * Gradle과 작동하도록 구성된 Android 프로젝트. 이 프로젝트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되지 않아도 됩니다.  
 * {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
-
-
-
-
+* 서비스 매개변수 값. {{site.data.keyword.Bluemix_notm}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 값과 `tenantId`(`appGUID`라고도 함) 값이 **라우트** 필드와 **앱 GUID/TenantId** 필드에 표시됩니다. 이들 값은 SDK를 초기화하고 백엔드 애플리케이션에 요청을 보내는 데 필요합니다. 
 * 개발자용 Facebook 사이트(https://developers.facebook.com)에서 Android 플랫폼이 설치된 Facebook 앱.
 
 **중요:** Facebook SDK(`com.facebook.FacebookSdk`)를 별도로 설치하지 않아도 됩니다. {{site.data.keyword.amashort}} Facebook 클라이언트 SDK를 추가하면 Gradle에서 자동으로 Facebook SDK를 설치합니다. 개발자용 Facebook 사이트에서 Android 플랫폼을 추가하는 경우 이 단계를 건너뛸 수 있습니다. 
@@ -51,7 +45,6 @@ Android 애플리케이션에서 Facebook을 ID 제공자로 사용하려면, �
 		</intent-filter>
 	</activity>
 	```
-
 1. Facebook이 애플리케이션의 신뢰성을 보증할 수 있도록 개발자 인증서 SHA1의 해시를 지정해야 합니다. 
 
 	**Android 보안에 대한 추가 정보:** Android OS에서는 개발자 인증서를 사용하여 Android 디바이스에 설치된 모든 애플리케이션에 서명해야 합니다. Android 애플리케이션은 디버그 및 릴리스라는 두 개의 모드로 빌드할 수 있습니다. <br/>
@@ -78,8 +71,6 @@ Android 애플리케이션에서 Facebook을 ID 제공자로 사용하려면, �
 Facebook 애플리케이션 ID가 있으며 Android 클라이언트를 제공하도록 Facebook 애플리케이션을 구성한 후에는 {{site.data.keyword.amashort}} 대시보드를 사용하여 Facebook 인증을 사용으로 설정할 수 있습니다. 
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. 
-
-1. **모바일 옵션**을 클릭하고 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)를 기록해 두십시오. SDK를 초기화하는 경우 해당 값이 필요합니다. 
 
 1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드가 로드됩니다. 
 
@@ -109,17 +100,9 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 
 	**참고:** `com.ibm.mobilefirstplatform.clientsdk.android` 그룹의 `core` 모듈이 파일에 있는 경우 이 모듈에 대한 종속성을 제거할 수 있습니다. `facebookauthentication` 모듈에서 `core` 모듈 외에도 Facebook의 고유 SDK를 자동으로 다운로드합니다.
 
-  
-
-  업데이트를 저장하고 나면 `facebookauthentication` 모듈에서 필요한 모든 SDK를 다운로드하여 Android 프로젝트에 설치합니다.
-
-
-
-
+	업데이트를 저장하고 나면 `facebookauthentication` 모듈에서 필요한 모든 SDK를 다운로드하여 Android 프로젝트에 설치합니다.
 
 1. 프로젝트를 Gradle과 동기화하십시오. **도구 > Android > Gradle 파일과 프로젝트 동기화**를 클릭하십시오.
-
-
 
 1. `res/values/strings.xml` 파일을 열고 Facebook 애플리케이션 ID를 포함하는 `facebook_app_id` 문자열을 추가하십시오. 
 
@@ -132,12 +115,12 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 ```
 
 1. Android 프로젝트의 `AndroidManifest.xml` 파일에서 다음을 수행하십시오. 
-   1. `<manifest>` 요소 아래에 인터넷 액세스 권한을 추가하십시오. 
+	* `<manifest>` 요소 아래에 인터넷 액세스 권한을 추가하십시오. 
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
-  2. Facebook SDK의 필수 메타데이터를 `<application>` 요소에 추가하십시오. 
+	* Facebook SDK의 필수 메타데이터를 `<application>` 요소에 추가하십시오. 
 
 	```XML
 	<application .......>
@@ -149,14 +132,14 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 		<activity ...../>
 		<activity ...../>
 	</application>
-```
-
-   1. 기존 활동 아래에 Facebook 활성 요소를 추가하십시오. 
+	```
+	* 기존 활동 아래에 Facebook 활성 요소를 추가하십시오. 
 
 	```XML
 	<application .....>
 		<activity ...../>
 		<activity ...../>
+
 	<activity 	android:name="com.facebook.FacebookActivity"
 					android:configChanges=
 						"keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -166,29 +149,25 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 	</application>
 ```
 
-1. 클라이언트 SDK를 초기화하고 Facebook 인증 관리자를 등록하십시오. 컨텍스트, 앱 GUID(`applicationGUID`) 및 라우트(`applicationRoute`) 매개변수를 전달하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오.<br/>
- 초기화 코드를 삽입하는 일반 위치(필수는 아님)는 Android 애플리케이션에서 기본 활동의 `onCreate` 메소드에 있습니다.<br/>
- *applicationRoute* 및 *applicationGUID*를 Bluemix 대시보드에서 앱의 기본 페이지에 있는 **모바일 옵션** 메뉴의 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
-
+1. 클라이언트 SDK를 초기화하고 Facebook 인증 관리자를 등록하십시오. **컨텍스트**와 **지역**을 전달하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. <br/>
+초기화 코드를 넣는 일반적인 위치(필수는 아님)는 Android 애플리케이션에서 기본 활동의 `onCreate` 메소드입니다. <br/>
  
-
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
 	BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this));
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 
 	FacebookAuthenticationManager.getInstance().register(this);
 ```
-`BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
+
+   * `BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
+지역 값은 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` 또는 `BMSClient.REGION_UK`이어야 합니다. 
+   
+   * `<MCAServiceTenantId>`를 `tenantId` 값으로 바꾸십시오([시작하기 전에](#before-you-begin) 참조).  
    
   **참고:** Android 애플리케이션이 Android 버전 6.0(API 레벨 23) 이상을 대상으로 하는 경우, `register`를 호출하기 전에 애플리케이션에 `android.permission.GET_ACCOUNTS` 호출이 있는지 확인해야 합니다. 자세한 정보는 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}을 참조하십시오.
-					
-
-
+	
 1. 활동에 다음 코드를 추가하십시오. 
 
 	```Java
@@ -200,29 +179,31 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 	}
 ```
 
+
 ## 인증 테스트
 클라이언트 SDK가 초기화되고 Facebook 인증 관리자가 등록되면 모바일 백엔드 요청을 시작할 수 있습니다.
 
 
 
-### 시작하기 전에
+### 테스트를 시작하기 전에
 {: #facebook-auth-android-testing-before}
 {{site.data.keyword.mobilefirstbp}} 표준 유형을 사용 중 이어야 하며 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}에서 보호하는 리소스가 이미 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우 [리소스 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
-1. 브라우저에서 새로 작성된 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송해 보십시오. URL `{applicationRoute}/protected`를 여십시오. (예: `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. `Unauthorized` 메시지가 브라우저에 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 이 메시지가 리턴됩니다.
+1. 브라우저에서 새로 작성된 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송해 보십시오. URL `{applicationRoute}/protected`를 여십시오. 예를 들면, `http://my-mobile-backend.mybluemix.net/protected`입니다. `{applicationRoute}` 값을 얻는 방법에 대한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.  
+
+	MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. `Unauthorized` 메시지가 브라우저에 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 이 메시지가 리턴됩니다.
+
+
 
 1. Android 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화한 후 다음 코드를 추가하고 `FacebookAuthenticationManager`를 등록하십시오.
 
- 
-
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp", MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -237,24 +218,23 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 	});
 ```
 
+	`{applicationRoute}`를 {{site.data.keyword.Bluemix}} 대시보드에서 앱의 모바일 옵션을 클릭하면 얻을 수 있는 *라우트* 값으로 바꾸십시오. 
+	
 1. 애플리케이션을 실행하십시오. Facebook 로그인 화면이 표시됩니다. 
 
 	![이미지](images/android-facebook-login.png)
 
-	디바이스에 Facebook 앱이 설치되어 있지 않거나 현재 Facebook에 로그인하지 않은 경우 이 화면이 약간 다를 수 있습니다. 
-
+	디바이스에 Facebook 앱이 설치되어 있지 않거나 현재 Facebook에 로그인하지 않은 경우 이 화면이 약간 다를 수 있습니다.
 1. **확인**을 클릭하여 {{site.data.keyword.amashort}}가 인증을 위해 Facebook 사용자 ID를 사용하도록 권한을 부여하십시오. 
 
-1. 	요청이 성공하면 LogCat 유틸리티에 다음과 같은 출력이 표시됩니다. 
+1. 요청이 성공하면 LogCat 유틸리티에 다음과 같은 출력이 표시됩니다. 
 
 	![이미지](images/android-facebook-login-success.png)
 
- 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
+	다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
 
- ```
-FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
- ```
+	`FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);`
 
- Facebook에서 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 Facebook에서 로그아웃됩니다. 다시 로그인을 시도하는 경우, 사용자에게는 자체 Facebook 신임 정보에 대한 프롬프트가 제시됩니다. 
+	Facebook에서 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 Facebook에서 로그아웃됩니다. 다시 로그인을 시도하는 경우, 사용자에게는 자체 Facebook 신임 정보에 대한 프롬프트가 제시됩니다. 
 
- 로그아웃 기능에 전달된 `listener` 값은 `null`일 수 있습니다.
+	로그아웃 기능에 전달된 `listener` 값은 `null`일 수 있습니다.

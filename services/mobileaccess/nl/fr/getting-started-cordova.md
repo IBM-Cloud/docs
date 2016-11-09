@@ -2,18 +2,17 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
-{:shortdesc: .shortdesc}
+{:shortdesc: .shortdesc} 
 
 # Configuration du plug-in Cordova
 {: #getting-started-cordova}
 
-Dernière mise à jour : 17 juillet 2016
-{: .last-updated}
 
-Instrumentez votre application Cordova avec le SDK client {{site.data.keyword.amashort}}, initialisez le SDK et envoyez des requêtes à des ressources protégées et
+Instrumentez votre application Cordova avec le SDK client {{site.data.keyword.amafull}}, initialisez le SDK et envoyez des requêtes à des ressources protégées et
 non protégées.
+
 {:shortdesc}
 
 ## Avant de commencer
@@ -31,10 +30,16 @@ Le SDK client de {{site.data.keyword.amashort}} pour Cordova est un plug-in Cord
 CLI de Cordova télécharge automatiquement des plug-ins depuis les référentiels et les rend disponibles depuis votre application Cordova.
 
 1. Ajoutez les plateformes Android et iOS à votre application Cordova. Exécutez l'une des commandes suivantes ou les deux à partir de la ligne de commande :
+   	
+	###Android
+	{: #install-cordova-android}
 
-	```Bash
+	```
 	cordova platform add android
 	```
+	
+	###iOS
+	{: #install-cordova-ios}
 
 	```Bash
 	cordova platform add ios
@@ -51,8 +56,8 @@ name="android">` :
 		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
-
-	La valeur de *minSdkVersion* doit être supérieure à `15`. La valeur de *targetSdkVersion* doit être le dernier logiciel SDK Android mis à disposition par Google.
+	
+	La valeur de *minSdkVersion* doit être supérieure ou égale à `15`. La valeur de *targetSdkVersion* doit être le dernier logiciel SDK Android mis à disposition par Google.
 
 3. Si vous avez ajouté le système d'exploitation iOS, déclarez une cible dans l'élément `<platform name="ios">` :
 
@@ -60,7 +65,7 @@ name="android">` :
 	<platform name="ios">
 		<preference name="deployment-target" value="8.0"/>
 		<!-- add deployment target declaration -->
-	</platform>
+	 </platform>
 	```
 
 4. Installez le plug-in Cordova de {{site.data.keyword.amashort}} :
@@ -76,11 +81,11 @@ name="android">` :
 
 	Avant d'ouvrir votre projet dans Android Studio, générez votre application Cordova via votre interface de ligne de commande (CLI) pour éviter des erreurs
 de génération.
-
-		```
-		cordova build android
-		```
-
+	
+	```Bash
+	cordova build android
+	```
+	
 	####iOS
 	{: #cordova-ios}
 
@@ -89,19 +94,16 @@ de génération.
 	1. Utilisez la version Xcode la plus récente pour ouvrir votre fichier `xcode.proj` depuis le répertoire
 `<app_name>/platforms/ios`.
 
-		**Important : ** si vous recevez un message vous invitant à procéder à une conversion vers la dernière syntaxe Swift, cliquez sur Annuler.
+		**Important :** si vous recevez un message vous invitant à procéder à une conversion vers la dernière syntaxe Swift, cliquez sur **Annuler**.
 
 	2. Accédez à **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** et ajoutez le chemin d'accès suivant :
 
-			```
-			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
-			```
+		`<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h`
 
 	3. Accédez à **Build settings > Linking > Runpath Search Paths** et ajoutez le paramètre Frameworks suivant :
 
-			```
-			@executable_path/Frameworks
-			```
+		`@executable_path/Frameworks
+			`
 
 	4. Générez et exécutez votre application avec Xcode.
 
@@ -120,13 +122,26 @@ Pour utiliser le SDK client de {{site.data.keyword.amashort}}, initialisez-le en
 sur le nom de votre application, puis sur **Options pour application mobile** pour afficher les valeurs **Route de
 l'application** et **Identificateur global unique de l'application** pour initialisation du SDK.
 
-3. Ajoutez l'appel suivant à votre fichier `index.js` pour initialiser le SDK client de {{site.data.keyword.amashort}}. Remplacez
-*applicationRoute* et *applicationGUID* par les valeurs de la section **Options pour application mobile** dans le
-tableau de bord {{site.data.keyword.Bluemix_notm}}.
+3. Ajoutez l'appel suivant à votre fichier `index.js` pour initialiser le SDK client de {{site.data.keyword.amashort}}. 
 
 	```JavaScript
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
+
+  * Remplacez
+`applicationRoute` et `applicationGUID` par les valeurs de la section **Options pour application mobile** dans le
+tableau de bord {{site.data.keyword.Bluemix_notm}}.
+
+##Initialisation du gestionnaire AuthorizationManager {{site.data.keyword.amashort}}
+{: #initializing-auth-manager}
+
+Utilisez le code JavaScript suivant dans votre application Cordova pour initialiser le gestionnaire AuthorizationManager {{site.data.keyword.amashort}}.
+
+```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+```
+
+Remplacez la valeur `tenantId` par la valeur `tenantId` du service {{site.data.keyword.amashort}}. Cette valeur peut être obtenue en cliquant sur le bouton **Afficher les données d'identification**  sur la vignette du service {{site.data.keyword.amashort}}.
 
 ## Envoi d'une demande à l'application back end mobile
 {: #getting-started-request}
@@ -135,17 +150,12 @@ Une fois que le SDK client {{site.data.keyword.amashort}} est initialisé, vous 
 mobile.
 
 1. Essayez d'envoyer une requête à un noeud final protégé de votre nouvelle application back end
-mobile. Dans votre navigateur, ouvrez l'URL suivante :
-`{applicationRoute}/protected`. Exemple :
-
-	```
-	http://my-mobile-backend.mybluemix.net/protected
-	```
+mobile. Dans votre navigateur, ouvrez l'URL suivante : `{applicationRoute}/protected` (`http://my-mobile-backend.mybluemix.net/protected`, par exemple).
 
 	Le noeud final `/protected` d'une application back end mobile créée avec le conteneur boilerplate MobileFirst Services Starter est
 protégé par {{site.data.keyword.amashort}}. Un message signalant l'interdiction d'accéder au site (`Unauthorized`) est renvoyé au navigateur. Ce message est renvoyé car ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
 
-1. A l'aide de votre application Cordova, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :
+2. A l'aide de votre application Cordova, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :
 
 	```Javascript
 	var success = function(data){
@@ -161,7 +171,7 @@ protégé par {{site.data.keyword.amashort}}. Un message signalant l'interdictio
 	request.send(success, failure);
 	```
 
-1. Lorsque votre demande aboutit, la sortie suivante figure dans la console LogCat ou Xcode (selon la plateforme utilisée) :
+3. Lorsque votre demande aboutit, la sortie suivante figure dans la console LogCat ou Xcode (selon la plateforme utilisée) :
 
 	![image](images/getting-started-android-success.png)
 

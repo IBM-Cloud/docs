@@ -1,9 +1,18 @@
+---
+
+copyright:
+  years: 2016
+lastupdated: "2016-10-19"
+
+---
+
 # 从 {{site.data.keyword.mobilefirstbp}} Starter 样板创建移动应用程序
 {: #try_mobile}
-上次更新时间：2016 年 7 月 18 日
-{: .last-updated} 
 
-您可以单独使用每个 {{site.data.keyword.Bluemix}} Mobile Services。也可以通过 {{site.data.keyword.mobilefirstbp}} Starter 样板一起使用这些服务，从而获取最大好处。 
+上次更新时间：2016 年 10 月 19 日
+{: .last-updated}
+
+您可以单独使用每个 {{site.data.keyword.Bluemix}} Mobile Services。也可以通过 {{site.data.keyword.mobilefirstbp}} Starter 样板一起使用这些服务，从而获取最大好处。
 
 要开始操作，请使用 {{site.data.keyword.mobilefirstbp}} Starter 来创建您的应用程序。该样板支持完成以下操作：
 
@@ -11,7 +20,7 @@
 * 供应每个 {{site.data.keyword.Bluemix_notm}} Mobile Services 的实例，并将该服务绑定到 Node.js 应用程序。
 
 <!--
-<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate 
+<img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
 -->
 
 在使用 {{site.data.keyword.mobilefirstbp}} Starter 样板创建您的应用程序之后，可以获取每个服务的 Hello Bluemix 样本，也可以着手配置您的现有应用程序以使用 {{site.data.keyword.Bluemix_notm}} 服务。
@@ -41,8 +50,8 @@
 <td valign="top"><b>用户身份提供者</b> <br/>您可以使用以下身份提供者：<ul><li>Facebook</li><li>Google</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Push Notifications 服务图标"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} 服务提供一个统一平台来发送和管理针对 iOS 和 Android 平台的移动推送通知。此服务会管理您的应用程序用户与其设备和设备平台之间的映射，还会处理将推送通知派送给设备。使用此服务，可以向移动应用程序用户发送广播、单点广播（根据设备标识）和基于标记（或基于主题）的推送通知。</td>
-<td valign="top"><b>推送服务提供者</b><ul><li>Apple 推送通知服务</li><li>Google 云消息传递</li></ul></td>
+<td><img src="images/catalog_icons-09.png" alt="Push Notifications 服务图标"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} 服务提供一个统一平台来发送和管理针对移动（iOS 和 Android）平台和 Web 浏览器应用程序的推送通知。此服务会管理您的应用程序用户与其设备、设备平台和浏览器之间的映射，还会处理将推送通知派送给订户。使用此服务，可以基于推送通知，向客户发送广播、单点广播（基于用户标识、设备标识）和标记（或主题）。</td>
+<td valign="top"><b>推送服务提供者</b><ul><li>Apple 推送通知服务</li><li>Firebase 云消息传递</li></ul></td>
 </tr>
 <tr>
 <td><img src="images/cloudant64.png" alt="Cloudant 服务图标"> <b>Cloudant NoSQLDB</b><br/>Cloudant 是一种 NoSQL 数据库即服务 (DBaaS)。它从头开始构建，用于在全球范围内进行扩展，实现不间断运行，以及处理各种数据类型，例如 JSON、全文本和地理空间。</td>

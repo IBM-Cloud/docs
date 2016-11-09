@@ -2,15 +2,18 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-10-03"
 
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+
 
 # Activation de l'authentification Facebook pour les applications Web
+{: #facebook-auth-web}
 
-Dernière mise à jour : 27 juillet 2016
-{: .last-updated}
-
-Utilisez Facebook pour authentifier les utilisateurs sur votre application Web. Ajoutez une fonctionnalité de sécurité {{site.data.keyword.amashort}}. 
+Utilisez Facebook pour authentifier les utilisateurs sur votre application Web {{site.data.keyword.amafull}}. Ajoutez une fonctionnalité de sécurité {{site.data.keyword.amashort}}. 
 
 ## Avant de commencer
 {: #facebook-auth-android-before}
@@ -23,24 +26,26 @@ Vous devez disposer des éléments suivants :
 
 
 ## Configuration d'une application Facebook pour votre site Web
+{: #facebook-auth-config}
+
 Pour utiliser Facebook comme fournisseur d'identité dans votre site Web, vous devez ajouter et configurer la plateforme de site Web sur votre application 
 Facebook.
 
-1. Connectez-vous au [portail de développeurs Facebook](https://developers.facebook.com).
+1. Connectez-vous au site Web [Facebook for Developers](https://developers.facebook.com).
 2. Ouvrez ou créez votre application.
-3. Notez les valeurs de **Application ID** et de **App Secret**. Vous en aurez besoin pour configurer votre projet Web
+3. Notez les valeurs des zones **ID application** et **Valeur confidentielle de l'application**. Vous en aurez besoin pour configurer votre projet Web
 pour authentification Facebook dans le tableau de bord {{site.data.keyword.amashort}}.
 4. Ajoutez la plateforme **Site Web**, si elle n'existe pas.
-5. Ajoutez ou ouvrez la **Connexion Facebook** depuis la liste des produits.
+5. Ajoutez ou ouvrez la connexion Facebook dans la liste **Produits**.
 6. Entrez l'URI de noeud final de rappel du serveur d'autorisation dans la zone **URI de redirection OAuth
 valides**. Vous pouvez identifier cet URI de redirection d'autorisation dans la procédure de configuration du tableau de bord {{site.data.keyword.amashort}} qui suit.
 7. Enregistrez les changements.
 
 
-
-
 ## Configuration de {{site.data.keyword.amashort}} pour l'authentification Facebook
-Une fois que vous disposez de votre ID d'application et de la valeur confidentielle Facebook, et que votre application Facebook a été configurée pour servir les clients Web, vous pouvez activer l'authentification Facebook dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
+{: #facebook-auth-config-ama}
+
+Une fois que vous disposez de votre ID d'application et de la valeur confidentielle Facebook et que votre application Facebook a été configurée pour servir les clients Web, vous pouvez activer l'authentification Facebook dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
 1. Ouvrez le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 2. Cliquez sur la vignette de l'application pertinente pour charger l'application.
@@ -53,12 +58,11 @@ Une fois que vous disposez de votre ID d'application et de la valeur confidentie
 8. Cliquez sur **Sauvegarder**.
 
 
-
-
 ## Implémentation du flux d'autorisation {{site.data.keyword.amashort}} en utilisant Facebook comme fournisseur d'identité
+{: #facebook-auth-flow}
 
 La variable d'environnement `VCAP_SERVICES` est créée automatiquement pour chaque instance de service {{site.data.keyword.amashort}}
-et contient les propriétés requises pour le processus d'autorisation. Elle est constituée d'un objet JSON et peut être affichée en cliquant sur **Variables d'environnement** de <!--the left-side navigator of--> votre application.
+et contient les propriétés requises pour le processus d'autorisation. Elle est constituée d'un objet JSON et peut être affichée en cliquant sur **Variables d'environnement** dans votre application.
 
 Pour démarrer le processus d'autorisation :
 
@@ -66,43 +70,41 @@ Pour démarrer le processus d'autorisation :
 (`clientId`) depuis les données d'identification du service stockées dans la variable
 d'environnement `VCAP_SERVICES`. 
 
-    **Remarque :** Si vous avez créé le service {{site.data.keyword.amashort}} avant l'ajout de la prise en charge Web,
-il se peut que vous ne disposiez pas de noeuds finaux d'autorisation dans les données d'identification pour le service. Dans
-ce cas, utilisez le noeud final d'autorisation ci-dessous correspondant à votre région Bluemix :
-  
-  Sud des Etats-Unis : 
-  ```
-  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
-   ```
-  Londres : 
-   ``` 
- https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
-   ```
-  Sydney : 
-    ```
- https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization
-  ```
+	**Remarque :** si vous avez ajouté le service {{site.data.keyword.amashort}} dans votre application avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. A la place, utilisez les URL suivantes, selon votre région {{site.data.keyword.Bluemix_notm}} : 
+ 
+	Sud des Etats-Unis : 
+
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
+
+	Londres : 
+
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
+
+	Sydney : 
+
+	`  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
+  ` 
+
 2. Construisez l'URI du serveur d'autorisation en utilisant `response_type("code")`, `client_id` et
 `redirect_uri` en tant que paramètres de requête. 
+
 3. Redirigez l'utilisateur depuis votre application Web vers l'URI généré.
 
+	L'exemple suivant extrait les paramètres depuis la variable `VCAP_SERVICES`, construit l'URL et envoie la demande de redirection.
 
-
-L'exemple suivant extrait les paramètres depuis la variable `VCAP_SERVICES`, construit l'URL et envoie la demande de redirection.
-
-  ```Java
+	```Java
   var cfEnv = require("cfenv"); 
 
-  app.get("/protected", checkAuthentication, function(req, res, next){  
-      res.send("Bonjour, ceci est un noeud final protégé");
+	app.get("/protected", checkAuthentication, function(req, res, next){  
+		res.send("Bonjour, ceci est un noeud final protégé");
   }
-  ); 
+	); 
   
-  function checkAuthentication(req, res, next){
-  // Vérifie si l'utilisateur est authentifié 
+	function checkAuthentication(req, res, next){
+		// Check if user is authenticated 
   
-    if (req.session.userIdentity){   
-       next()
+		if (req.session.userIdentity){   
+			next()
      } else {   
   // If not - redirect to authorization server   
         var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
@@ -111,99 +113,98 @@ L'exemple suivant extrait les paramètres depuis la variable `VCAP_SERVICES`, co
         var redirectUri = "http://some-server/oauth/callback"; 
          // Your web application redirect URI   
 
-        var redirectUrl = authorizationEndpoint + "?response_type=code";
+			var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;
         redirectUrl += "&redirect_uri=" + redirectUri;   
   
-        res.redirect(redirectUrl);
+			res.redirect(redirectUrl);
 
       } 
-  }
-  
- ```
+	}
+	```
+	{: codeblock}
 
-   Le paramètre `redirect_uri` est l'URI de redirection après l'aboutissement ou l'échec de l'authentification avec
-Facebook.
-   
+	Le paramètre `redirect_uri` est l'URI de redirection après l'aboutissement ou l'échec de l'authentification avec
+Facebook.   
 
- Après redirection au noeud final d'autorisation, l'utilisateur reçoit un formulaire de connexion par
+	Après redirection au noeud final d'autorisation, l'utilisateur reçoit un formulaire de connexion par
 Facebook. Une fois que Facebook confirme l'identité de l'utilisateur, le service {{site.data.keyword.amashort}} appelle l'URI de redirection de votre
 application Web en soumettant le code d'accord en tant que paramètre de requête.  
 
+
 ## Obtention des jetons
+{: #facebook-auth-tokens}
 
 L'étape suivante consiste à obtenir le jeton d'accès et le jeton d'identité à l'aide du code d'accord reçu auparavant :
 
- 1.  Extrayez le jeton `tokenEndpoint`, `clientId` et `secret` depuis les données d'identification du
+1.  Extrayez le jeton `tokenEndpoint`, `clientId` et `secret` depuis les données d'identification du
 service stockées dans la variable d'environnement `VCAP_SERVICES`. 
  
-    **Remarque :** si vous avez utilisé {{site.data.keyword.amashort}} avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. A la place, utilisez les URL suivantes, selon votre région Bluemix : 
+	**Remarque :** si vous avez utilisé {{site.data.keyword.amashort}} avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. A la place, utilisez les URL suivantes, selon votre région Bluemix : 
 
-    Sud des Etats-Unis : 
-    ```
-    https://mobileclientaccess.ng.bluemix.net/oauth/v2/token 
-     ```
-    Londres : 
-      ```
-    https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
-     ```
-    Sydney : 
-      ```
-    https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
-    ```
-
- 1. Envoyez une demande POST à l'URI du serveur de jeton avec le type d'autorisation ("authorization_code"), l'élément
-`clientId` et votre URI de redirection comme paramètres de masque. Envoyez les éléments `clientId` et
+	Sud des Etats-Unis : 
+  
+	`     https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
+ `
+ 
+	Londres : 
+ 
+	`     https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
+ ` 
+ 
+	Sydney : 
+ 
+	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
+ `
+ 
+2. Envoyez une demande POST à l'URI du serveur de jeton avec le type d'autorisation ("authorization_code"), l'élément `clientId` et votre URI de redirection comme paramètres de masque. Envoyez les éléments `clientId` et
 `secret` sous forme de données d'authentification HTTP de base.
  
-Le code suivant extrait les valeurs requises et les envoie avec une requête Post.
+	Le code suivant extrait les valeurs requises et les envoie avec une demande POST.
 
-  ```Java
+	```Java
   var cfEnv = require("cfenv");
   var base64url = require("base64url ");
   var request = require('request');
   
-  app.get("/oauth/callback", function(req, res, next){ 
-    var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+	app.get("/oauth/callback", function(req, res, next){ 
+		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
     var tokenEndpoint = mcaCredentials.tokenEndpoint;
     var formData = { 
-      grant_type: "authorization_code",
-      client_id: mcaCredentials.clientId,
-      redirect_uri: "http://some-server/oauth/callback",
-     // URI de redirection d'application Web
-      code: req.query.code
-   } 
+			grant_type: "authorization_code", 
+			client_id: mcaCredentials.clientId, 
+			redirect_uri: "http://some-server/oauth/callback",
+			// Your web application redirect uri 
+			code: req.query.code 
+		} 
 
- 
-    request.post({ 
-        url: tokenEndpoint,
-        formData: formData
-      }, function (err, response, body){ 
-        var parsedBody = JSON.parse(body);
-        req.session.accessToken = parsedBody.access_token;
-        req.session.idToken = parsedBody.id_token;
-        var idTokenComponents = parsedBody.id_token.split(".");
-        // [header, payload, signature]
-        var decodedIdentity= base64url(idTokenComponents[1]);
-        req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"];
-        res.redirect("/");
-        }
-   ).auth(mcaCredentials.clientId, mcaCredentials.secret);
+		request.post( { 
+			url: tokenEndpoint,
+    formData: formData
+    }, function (err, response, body){ 
+			var parsedBody = JSON.parse(body); 			req.session.accessToken =
+parsedBody.access_token; 			req.session.idToken = parsedBody.id_token; 			var idTokenComponents = parsedBody.id_token.split("."); // [header, payload, signature] 
+			var decodedIdentity= base64url.decode(idTokenComponents[1]);
+			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"]; 
+			res.redirect("/"); 
+		}
+		).auth(mcaCredentials.clientId, mcaCredentials.secret);
    }
-  ); 
-   
-  ```
- 
- Notez que le paramètre `redirect_uri` doit correspondre au paramètre `redirect_uri` utilisé dans la demandee d'autorisation
+	);
+	```
+	{: codeblock}
+
+	Notez que le paramètre `redirect_uri` doit correspondre au paramètre `redirect_uri` utilisé dans la demandee d'autorisation
 précédente. La valeur du paramètre `code` doit être le code d'accord dans la réponse  de la demandee d'autorisation . Le code d'accord est valide pendant 10 minutes, après quoi un nouveau code doit être obtenu.
 
-Le corps de la réponse contiendra le code d'accès et le jeton d'ID au format JWT (https://jwt.io/).
+	Le corps de la réponse contiendra le code d'accès et le jeton d'ID au format JWT (https://jwt.io/).
 
-Une fois que vous avez obtenu l'accès et reçu les jetons d'identité, vous pouvez marquer la session Web comme authentifiée et, si vous le désirez,
+	Une fois que vous avez obtenu l'accès et reçu les jetons d'identité, vous pouvez marquer la session Web comme authentifiée et, si vous le désirez,
 rendre
 persistants ces jetons.  
 
-##Utilisation du jeton d'accès et du jeton d'identité obtenus 
+##Utilisation du jeton d'accès et du jeton d'identité obtenus
+{: #facebook-auth-using-token}
 
 Le jeton d'identité contient des informations sur l'identité de l'utilisateur. Dans le cas d'une authentification Facebook, le jeton contiendra toutes les informations que
 l'utilisateur a accepté de partager, comme son nom complet, son groupe d'âge, l'URL de sa photo de profil, etc.  
@@ -211,13 +212,12 @@ l'utilisateur a accepté de partager, comme son nom complet, son groupe d'âge, 
 Le jeton d'accès active les communications avec les ressources protégées par les filtres d'autorisation de
 {{site.data.keyword.amashort}}. Voir [Protection des ressources](protecting-resources.html).
 
-
 Pour soumettre des demandes à des ressources protégées, ajoutez aux demandes un en-tête Authorization doté de la structure suivante : 
 
 `Authorization=Bearer <jeton_accès> <jeton_ID>`
 
 #### Conseils
-{: tips} 
+{: #tips} 
 
 * Vous devez séparer les éléments `accessToken` et `idToken` par un espace.
 

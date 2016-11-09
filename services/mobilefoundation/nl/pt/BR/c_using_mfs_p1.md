@@ -1,15 +1,14 @@
 ---
 
 copyright:
-  years: 2016
-
+  years: 2016 lastupdated:  "2016-09-12"
 ---
 
 #	Usando o plano Developer
 {: #using_mobilefoundation_p1}
 
-Última atualização: 4 de agosto de 2016
-{: .last-updated}
+<!--Last updated: 12 September 2016
+{: .last-updated}-->
 
 Após criar a instância de serviço {{site.data.keyword.mobilefoundation_short}}: Desenvolvedor, em alguns segundos, será possível acessar a página `Visão geral`
 no {{site.data.keyword.Bluemix_notm}}, que fornece tutoriais e vídeos para ajudá-lo a
@@ -40,6 +39,29 @@ no ícone **Mostrar senha** para visualizá-lo.
 
 
 <!--This console runs inside the container.--> Com o console, é possível gerenciar os aplicativos móveis e dispositivos móveis, usar o servidor como um backend móvel, enviar notificações push e muito mais.
+
+##  Incluindo o servidor Mobile Analytics
+{: #adding_analytics_server_dev}
+
+ Agora é possível monitorar o seu aplicativo móvel no servidor {{site.data.keyword.mobilefirst}} incluindo um servidor Mobile Analytics na instância de serviço do
+{{site.data.keyword.mobilefoundation_short}}. O plano de desenvolvedor cria o servidor Mobile Analytics em um grupo de contêiner com um nó único tendo 1 GB de memória.
+
+* Clique em **Incluir Analytics** para incluir o servidor Mobile Analytics na instância de serviço do {{site.data.keyword.mobilefoundation_short}}.
+
+O processo de fornecimento inicia. Esse processo leva aproximadamente 10 minutos e uma
+janela de mensagem indica o progresso dessa operação.  
+
+* Ative o Console do MobileFirst Analytics a partir do {{site.data.keyword.mfp_oc_short_notm}}.
+
+* A conexão única é ativada entre o {{site.data.keyword.mfserver_short_notm}} e o servidor Mobile Analytics. O servidor Mobile Analytics é configurado com as mesmas chaves de LTPA e
+credenciais do usuário que o {{site.data.keyword.mfserver_short_notm}}. É possível usar o mesmo `username` e `password` para efetuar login no console do Mobile
+Analytics que aqueles usados no {{site.data.keyword.mfp_oc_short_notm}}.
+
+Para obter mais informações sobre o MobileFirst Analytics é possível referir-se ao [MobileFirst
+Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
+
+**Nota:** o servidor Mobile Analytics é removido quando você exclui a instância de serviço do {{site.data.keyword.mobilefoundation_short}} ou quando você tenta recriar o
+{{site.data.keyword.mfserver_short_notm}}.
 
 ## Recriando o servidor {{site.data.keyword.mobilefirst}}
 {: #recreate_mobilefoundation_p1}

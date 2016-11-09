@@ -13,18 +13,17 @@ lastupdated: "2016-10-21"
 # Starters
 {: #starters}
 
-Last updated: 21 October 2016
-{: .last-updated}
-
 With the {{site.data.keyword.Bluemix}} Mobile dashboard, you can create your project by using a UI Starter or a Code Starter.
+
 
 ## UI Starter
 {: #UI_Starter}
 
-
 {{site.data.keyword.Bluemix_notm}} mobile developers can use UI Starters to create apps using the UI Builder, which enables an application to be designed using a visual editor. <!--The UI Builder assists you when you have an idea to prototype quickly.--> The UI Builder is useful for sketching an idea or when you need to quickly prototype a mobile experience. The UI Builder requires little programming knowledge or mobile development for you to be productive quickly.  <!-- The UI Starters give you patterns of applications that enable you to modify and adjust to your use case needs. If you want to start from scratch and build an idea up from nothing use the Empty starter. Each UI starter is configured to be enabled with Push and Analytics capabilities if you decide to configure this for you Mobile Project.*App views can be bound to data with little programming knowledge, which enables apps to be started and native source code to be generated quickly.* -->
 
 The UI Starters offer patterns of applications that enable you to modify and adjust to your use case needs. Use the Blank starter when you want to build an idea from nothing. Each UI Starter is configured to be enabled with Push and Analytics capabilities, if you decide to configure them for your mobile project.
+
+If you are starting with a UI Starter, continue with [Using a UI Starter to create a project](projects_ui.html).
 
 <!-- If you choose to create your project with a UI Starter, you have the option to design your app from within the UI Builder.-->
 
@@ -38,9 +37,12 @@ Code Starters are optimized to be production ready starter code that focuses on 
 
 If you choose to create your project with a Code Starter, you do not have the option to design your app from within the UI Builder.
 
+If you are starting with a Code Starter, continue with [Using a Code Starter to create a project](projects_code.html).
 
 ## Tutorials
 {: #tutorials}
+
+For more in-depth instructions about how to create apps with Starters, you can use the end-to-end tutorials. 
 
 ### UI Starter tutorials
 {: #tutorials_UI}
@@ -50,6 +52,6 @@ If you choose to create your project with a Code Starter, you do not have the op
 ### Code Starter tutorials
 {: #tutorials_Code}
 
-* [End-to-end tutorial of the {{site.data.keyword.visualrecognition}} Code Starter](tutorial.html)
+* [End-to-end tutorial of the {{site.data.keyword.visualrecognitionshort}} Code Starter](tutorial.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)
 * [Tutorial - Weather](tutorial_weather.html)

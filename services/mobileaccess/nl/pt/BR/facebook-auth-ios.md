@@ -1,8 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
-
+  years: 2015, 2016 lastupdated: "2016-10-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,23 +10,25 @@ copyright:
 # Ativando a autenticação do Facebook para seus aplicativos iOS (Objective-C SDK)
 {: #facebook-auth-ios}
 
+Para usar o Facebook como provedor de identidade em seus aplicativos
+{{site.data.keyword.amafull}} iOS, inclua e configure a Plataforma iOS para seu
+aplicativo Facebook.
 
-Última atualização: 17 de julho de 2016
-{: .last-updated}
-
-
-Para usar o Facebook como provedor de identidade em seus aplicativos iOS, inclua e configure a Plataforma iOS para seu aplicativo Facebook.
 {:shortdesc}
 
-**Nota:** embora o Objective-C SDK permaneça totalmente suportado e ainda seja considerado o SDK primário para o {{site.data.keyword.Bluemix}} Mobile Services, há planos para descontinuá-lo posteriormente este ano em favor do novo Swift SDK (consulte [Configurando o iOS Swift SDK](facebook-auth-ios-swift-sdk.html)).
+**Nota:** embora o SDK do Objective-C permaneça totalmente suportado e ainda seja considerado o SDK
+primário para o {{site.data.keyword.Bluemix}} Mobile Services, há planos para descontinuá-lo posteriormente este ano em
+favor do novo SDK do Swift (veja [Configurando o SDK do
+Swift iOS](facebook-auth-ios-swift-sdk.html)).
 
 ## Antes de Começar
 {: #facebook-auth-ios-before}
 Você deve ter:
-* Um projeto do iOS configurado para trabalhar com CocoaPods.  Para obter mais informações, consulte **Instalar o CocoaPods** em [Configurando o iOS SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
+* Um projeto do iOS configurado para trabalhar com CocoaPods.  Para obter mais informações, veja **Instalar o
+CocoaPods** em [Configurando o SDK iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).
    **Nota:** não é necessário instalar o {{site.data.keyword.amashort}} client SDK principal antes de continuar.
 * Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
-* Um ID de aplicativo do Facebook. Para obter mais informações, consulte [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* Um ID de aplicativo do Facebook. Para obter mais informações, veja [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Configurando seu aplicativo Facebook para a plataforma iOS
 {: #facebook-auth-ios-config}
@@ -67,7 +68,7 @@ O {{site.data.keyword.amashort}} client SDK é distribuído com o CocoaPods, um 
 
 1. Abra o Terminal e execute o comando `pod --version`. Se você já tiver o CocoaPods instalado, o número da versão será exibido. É possível pular para a próxima seção deste tutorial.
 
-1. Instale o CocoaPods executando `sudo gem install cocoapods`. Consulte o [website do CocoaPods](https://cocoapods.org/) se precisar de orientação adicional.
+1. Instale o CocoaPods executando `sudo gem install cocoapods`. Veja o [website CocoaPods](https://cocoapods.org/) se precisar de orientação adicional.
 
 ### Instalando o {{site.data.keyword.amashort}} client SDK com o CocoaPods
 {: #facebook-auth-install-cocoapods}
@@ -77,6 +78,7 @@ O {{site.data.keyword.amashort}} client SDK é distribuído com o CocoaPods, um 
 	```
 	pod 'IMFFacebookAuthentication'
 	```
+{: codeblock}
 
 1. Salve o `Podfile` e execute o comando `pod install` a partir da linha de comandos. O CocoaPods instala as dependências. O progresso e quais componentes foram incluídos são exibidos.
  **Importante**: deve-se abrir agora o projeto usando o arquivo
@@ -144,16 +146,18 @@ Também é possível atualizar o arquivo `info.plist` clicando com o botão dire
 	    </dict>
 	</dict>
 ```
+{: codeblock}
+
 Atualize o esquema URL e as propriedades FacebookappID com seu ID do aplicativo Facebook.
 
- **Importante**: assegure-se de não substituir quaisquer propriedades existentes no arquivo `info.plist`. Se você tiver propriedades de sobreposição, deverá mesclá-las manualmente. Para obter mais informações, consulte [Configurar o projeto Xcode](https://developers.facebook.com/docs/ios/getting-started/) e [Preparando seus apps para iOS9](https://developers.facebook.com/docs/ios/ios9).
+ **Importante**: assegure-se de não substituir quaisquer propriedades existentes no arquivo `info.plist`. Se você tiver propriedades de sobreposição, deverá mesclá-las manualmente. Para obter mais informações, veja [Configurar o projeto Xcode](https://developers.facebook.com/docs/ios/getting-started/) e [Preparando seus apps para iOS9](https://developers.facebook.com/docs/ios/ios9).
 
 ## Inicializando o {{site.data.keyword.amashort}} client SDK
 {: #facebook-auth-ios-initalize}
 
 Inicialize o client SDK passando a rota do app (`applicationRoute`) e o GUID do app (`applicationGUID`).
 
-Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo
+Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo.
 
 1. Abra a página principal do painel do {{site.data.keyword.Bluemix_notm}} e clique em seu app. Clique em **Opções móveis** e anote a **Rota**
 (`applicationRoute`) e o **GUID do app**
@@ -169,6 +173,7 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
+{: codeblock}
 
 	####Swift
 	{: #bridgingheader-swift}
@@ -176,8 +181,8 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 	O {{site.data.keyword.amashort}} client SDK é implementado usando Objective-C; portanto, pode ser necessário incluir um cabeçalho ponte em seu projeto swift.
 
 	1. Clique com o botão direito no projeto em Xcode e selecione **Novo arquivo...**
-	* Na categoria **Origem iOS**, selecione `Arquivo de cabeçalho`
-	* Atribua um nome a ele `BridgingHeader.h`
+	* Na categoria **Origem iOS**, selecione `Arquivo de cabeçalho`.
+	* Denomine-o `BridgingHeader.h`.
 	* Inclua importações ao seu cabeçalho de ponte:
 
 	```Objective-C
@@ -185,15 +190,17 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
 ```
+{: codeblock}
+
 	* Clique em seu projeto em Xcode e selecione a guia **Configurações de compilação**.
 	* Procure por **Cabeçalho de ponte do Objective-C**.
 	* Configure o valor para o local do seu arquivo `BridgingHeader.h`, por exemplo: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	* Assegure-se de que seu cabeçalho de ponte esteja sendo selecionado pelo Xcode, compilando o seu projeto. Nenhuma mensagem de falha deve ser vista.
 
-3. Inicialize o client SDK.	Substitua *applicationRoute* e
-*applicationGUID* pelos valores de **Rota** e
-**GUID do app** que você obteve das **Opções móveis**
-no painel {{site.data.keyword.Bluemix_notm}}.
+3. Inicialize o client SDK.	Substitua `applicationRoute` e
+`applicationGUID` pelos valores **Route** e
+**App GUID** obtidos em **Opções móveis** no painel
+{{site.data.keyword.Bluemix_notm}}.
 
 	####Objective-C
 	{: #approute-objc}
@@ -203,6 +210,7 @@ no painel {{site.data.keyword.Bluemix_notm}}.
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+{: codeblock}
 
 	####Swift
 	{: #approute-swift}
@@ -211,6 +219,25 @@ no painel {{site.data.keyword.Bluemix_notm}}.
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+{: codeblock}
+
+1. Inicialize o `AuthorizationManager` passando o parâmetro
+`tenantId` do serviço {{site.data.keyword.amashort}}. É possível localizar esse valor clicando no botão **Mostrar credenciais** no quadro do serviço {{site.data.keyword.amashort}}.
+	####Objective-C
+	{: #authman-objc}
+
+	```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+	```
+{: codeblock}
+
+	####Swift
+	{: #authman-swift}
+
+	```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+	```
+{: codeblock}
 
 1. Notifique o Facebook SDK sobre a ativação do app e registre o Manipulador de
 autenticação do Facebook incluindo o código a seguir no método
@@ -223,6 +250,7 @@ autenticação do Facebook incluindo o código a seguir no método
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 ```
+{: codeblock}
 
 	####Swift
 	{: #activate-swift}
@@ -231,6 +259,7 @@ autenticação do Facebook incluindo o código a seguir no método
 		FBAppEvents.activateApp()
 		IMFFacebookAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
 ```
+{: codeblock}
 
 1. Inclua o código a seguir no delegado do app.
 
@@ -245,6 +274,7 @@ autenticação do Facebook incluindo o código a seguir no método
 
 	}
 ```
+{: codeblock}
 
 	####Swift
 	{: #appdelegate-swift}
@@ -291,6 +321,7 @@ Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
 		}
 	}];
 	```
+{: codeblock}
 
 	####Swift
 	{: #requestpath-swift}
@@ -308,6 +339,7 @@ Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
 		}
 	};
  ```
+ {: codeblock}
 
 1. Execute o aplicativo. Uma tela de login do Facebook é exibida.
 
@@ -328,6 +360,7 @@ console do Xcode:	![image](images/ios-facebook-login-success.png)
 	```Objective-C
 	[[IMFFacebookAuthenticationHandler sharedInstance] logout : callBack]
 	```
+{: codeblock}
 
 	####Swift
 	{: #logout-swift}
@@ -335,6 +368,7 @@ console do Xcode:	![image](images/ios-facebook-login-success.png)
 	```Swift
 	IMFFacebookAuthenticationHandler.sharedInstance().logout(callBack)
 	```
+{: codeblock}
 
 	Se você chamar esse código depois que um usuário estiver conectado ao Facebook e ele tentar efetuar login novamente, ele será solicitado a autorizar o {{site.data.keyword.amashort}} a usar o Facebook para propósitos de autenticação.
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -43,7 +44,7 @@ The {{site.data.keyword.objectstorageshort}} service offers two plan options, Fr
   </tr>
 </table>
 
-*Table 1: Comparison of Free and Standard plans*
+Table 1: Comparison of Free and Standard plans
 
 **Attention**: Users working with a {{site.data.keyword.Bluemix_notm}} trial account are able to use the Free plan. After the time in your trial expires, the associated {{site.data.keyword.objectstorageshort}} service instance will be disabled, meaning that you will be unable to access the storage account. After 30 days, your {{site.data.keyword.Bluemix_notm}} account will be purged and all data deleted. To avoid data loss, upgrade to a [Paid {{site.data.keyword.Bluemix_notm}} account](https://new-console.ng.bluemix.net/docs/admin/account.html) as soon as possible.
 

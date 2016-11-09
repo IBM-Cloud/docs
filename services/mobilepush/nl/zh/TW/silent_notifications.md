@@ -7,13 +7,12 @@ copyright:
 
 # 處理 iOS 的無聲自動通知
 {: #silent-notifications}
-前次更新：2016 年 8 月 16 日
+前次更新：2016 年 10 月 17 日
 {: .last-updated}
 
-無聲自動通知不會出現在裝置畫面上。這些通知由應用程式在背景接收，此情況會喚醒應用程式最多達 30 秒，以執行指定的背景作業。使用者可能不知道有通知送達。若要傳送 iOS 的無聲自動通知，請使用 [REST API](https://mobile.{DomainName}/imfpushrestapidocs/)。   
+無聲自動通知不會出現在裝置畫面上。這些通知由應用程式在背景接收，此情況會喚醒應用程式最多達 30 秒，以執行指定的背景作業。使用者可能不知道有通知送達。若要傳送 iOS 的無聲自動通知，請使用 [REST API](https://mobile.{DomainName}/imfpush/)。   
 
 1. 在專案中，若要傳送無聲自動推送通知，請在 `appDelegate.m` 檔案中實作下列方法。
-
 
 ```
 //For Objective C
@@ -27,26 +26,26 @@ copyright:
        NSLog(@"userInfo: %@", userInfo.description);
        _appDelegateVC.result.text = userInfo.description;
        handler(UIBackgroundFetchResultNewData);
-   }
-   else{
-       //Normal Notification
-       [[IMFPushAppManager get] notificationReceived:userInfo];
-       NSLog(@"Received a normal notification.");
-       NSLog(@"userInfo: %@", userInfo.description);
-       _appDelegateVC.result.text = userInfo.description;
-       handler(UIBackgroundFetchResultNoData);
-}
-   //Success
+    }
+    else
+	{
+    //Normal Notification
+    [[IMFPushAppManager get] notificationReceived:userInfo];
+    NSLog(@"Received a normal notification.");
+    NSLog(@"userInfo: %@", userInfo.description);
+     _appDelegateVC.result.text = userInfo.description;
+    handler(UIBackgroundFetchResultNoData);
+    }
+    //Success
 }
 ```
+    {: codeblock}
 
 若為 Swift，伺服器傳送以進行無聲自動通知的 `contentAvailable` 值，等於 1。
-
 ```
 //For Swift
-
-func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-let contentAPS = userInfo["aps"] as [NSObject : AnyObject]
+	 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+       let contentAPS = userInfo["aps"] as [NSObject : AnyObject]
        if let contentAvailable = contentAPS["content-available"] as? Int {
            //silent or mixed push
            if contentAvailable == 1 {
@@ -60,4 +59,5 @@ let contentAPS = userInfo["aps"] as [NSObject : AnyObject]
        }
     }
 ```
+	{: codeblock}
 

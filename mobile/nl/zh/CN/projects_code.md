@@ -1,0 +1,56 @@
+---
+
+copyright:
+  years: 2016
+lastupdated: "2016-10-13"
+
+---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
+# 使用代码入门模板创建项目
+{: #projects_code}
+
+上次更新时间：2016 年 10 月 13 日
+{: .last-updated}
+
+您可以使用 {{site.data.keyword.Bluemix}} Mobile 仪表板中的“代码入门模板”，在 {{site.data.keyword.Bluemix_notm}} 环境中创建项目。此过程不适用于使用“UI 入门模板”的项目。请参阅[使用 UI 入门模板创建项目](projects_ui.html)，以获取适用于“UI 入门模板”的指示信息。
+{:shortdesc}
+
+完成以下步骤，以使用“代码入门模板”创建项目：
+
+1. 在 {{site.data.keyword.Bluemix_notm}} 中创建新 Mobile 仪表板项目。
+
+ 选择 Mobile 目录后，从*入门*选项卡开始。有描述说明您可以使用的已选入门模板，以及创建项目的不同方式，具体取决于您需要多少帮助。如果您只是想要以最少的帮助开始，请选择**创建项目**。
+
+ 如果您已具有项目，那么您可以从选择*项目*选项卡开始。从 {{site.data.keyword.Bluemix_notm}} Mobile 仪表板的**项目**视图中，您可以选择要使用的项目、使用项目的*操作*来删除项目或下载项目的代码，或者创建新项目。
+
+	1. 在 {{site.data.keyword.Bluemix_notm}} 控制台上，在您使用 {{site.data.keyword.Bluemix_notm}} 徽标旁边的三条线展开菜单之后，选择 **Mobile**。 
+	
+	2. 选择**创建项目**。 
+
+	  或者，您也可以选择**项目**选项卡，以查看已在移动环境中的项目，并通过单击**创建项目**，创建新项目。
+
+	3. 单击**代码入门模板**。  
+
+	4. 选择与您要创建的应用程序类型最匹配的入门模板，然后选择**创建项目**。有 **UI 入门模板**和**代码入门模板**。有关入门模板以及如何使用它们的更多信息，请参阅[入门模板](starters.html)。 
+	
+	5. 输入项目的名称并选择**创建**。
+	
+2. 在**项目概述**屏幕上进行选择。**项目概述**屏幕显示项目的相关信息，以及您可以添加到项目的可选服务，如 Push Notifications。  
+
+	1. 可选：选择**添加**以向项目添加其中一个所列服务。当您向项目添加服务时，您会链接到主 {{site.data.keyword.Bluemix_notm}} 控制台。在 {{site.data.keyword.Bluemix_notm}} 控制台中选择 *Mobile* 类别，以查看 Mobile 服务。选择 *Push Notifications* 或其他服务，以对其进行设置。遵循适用于该服务的指示信息以配置服务。
+	
+	2. 可选：针对您要添加到项目中的任何其他功能，重复步骤 *a*。 
+
+3.  下载项目并完成设置。
+
+    1. 单击**下载代码**并选择首选语言。
+   
+    2. 解压缩归档文件，并在 Markdown 查看器中查看 `README.md` 文件，以完成设置。
+
+4.  试用您的应用程序！ 
+
+
