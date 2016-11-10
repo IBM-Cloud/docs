@@ -7,14 +7,14 @@ copyright:
 
 # About {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Last updated: 26 October 2016
+Last updated: 10 November 2016
 {: .last-updated}
 
 IBM {{site.data.keyword.mobilepushshort}} is a service that you can use to send notifications to iOS and Android mobile devices, to Google Chrome and Mozilla Firefox web browsers and also to Google Chrome Apps and Extensions. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
 
-{{site.data.keyword.mobilepushshort}} is also available as a Bluemix Dedicated service. For information about {{site.data.keyword.mobilepushshort}} as a dedicated service, see [Dedicated Services](../../dedicated/index.html). Note that the {{site.data.keyword.mobilepushshort}} monitoring tab does not show analytics data.
+{{site.data.keyword.mobilepushshort}} is also available as a Bluemix Dedicated service. For information about {{site.data.keyword.mobilepushshort}} as a dedicated service, see [Dedicated Services](docs/dedicated/index.html). Note that the {{site.data.keyword.mobilepushshort}} monitoring tab does not show analytics data.
 
-The {{site.data.keyword.mobilepushshort}} service is now OpenWhisk enabled. For more information, see [OpenWhisk](../../openwhisk/index.html).
+The {{site.data.keyword.mobilepushshort}} service is now OpenWhisk enabled. For more information, see [OpenWhisk](docs/openwhisk/index.html).
 
 
 ## {{site.data.keyword.mobilepushshort}} service process
@@ -82,7 +82,7 @@ Unicast notifications are messages targeted to a particular device or user. Unic
 
 However, Unicast notifications targeted at users require associating a user ID with a device at the time of registering the client mobile device or web browser or Chrome Apps and Extensions for {{site.data.keyword.mobilepushshort}}.   
 
-Typically, a client application will first run an authentication cycle where the mobile app user is authenticated against a authentication service like [Mobile Client Access](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html). On successful authentication, the authenticated user ID is then passed into the Push Device Registration API. 
+Typically, a client application will first run an authentication cycle where the mobile app user is authenticated against a authentication service like [Mobile Client Access](docs/services/mobileaccess/index.html). On successful authentication, the authenticated user ID is then passed into the Push Device Registration API. 
 To send a Unicast notifications through REST API, ensure that the deviceIds or userIds are provided when posting to a message resource.
 
 ###Platform-based notifications

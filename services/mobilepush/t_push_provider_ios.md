@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # Configuring credentials for APNs
 {: #create-push-credentials-apns}
-Last updated: 17 October 2016
+Last updated: 10 November 2016
 {: .last-updated}
 
 Apple Push Notification Service (APNs) allows application developers to send remote notifications from the {{site.data.keyword.mobilepushshort}} service instance on Bluemix (the provider) to iOS devices and applications. Messages are sent to a target application on the device. 
@@ -139,14 +139,12 @@ The certificates that are needed for APNs are `.p12` certificates, which contain
 
 For more information about using the APNs, see [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4).
 
-Set up APNs on the Push dashboard, as follows:
+To set up APNs on the Push Notification services dashboard, complete the steps:
 
-1. Open your backend application in the Bluemix dashboard and then click the **IBM Push Notifications** service to open the Push dashboard.
-
-	The Push dashboard displays:
-	![Set push notifications dashboard](images/wizard.jpg)
-2. On the **Configuration** tab, go to the **Apple Push Certificate** section,  select **Sandbox** (development) or **Production** (distribution) and then upload the `p.12` certificate that you created using the previous [step](#step18).
-	![Set push notifications configure tab](images/credential_screen.jpg)
+1. Select **Configure** on the Push Notification services dashboard.
+2. Choose the **Mobile** option to update the information in the **APNs Push Credentials** form.
+3. Select **Sandbox** (development) or **Production** (distribution) as appropriate and then upload the `p.12` certificate that you created using the previous [step](#step18).
+  ![Set push notifications dashboard](images/wizard.jpg)
 3. In the **Password** field, enter the password that is associated with the `.p12` certificate file, then click **Save**.
 
 After the certificates are uploaded successfully with a valid password, you can start sending notifications.

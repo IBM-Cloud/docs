@@ -8,7 +8,7 @@ years: 2015 2016
 
 # Enabling web applications to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 02 November 2016
+Last updated: 08 November 2016
 {: .last-updated}
 
 You can now enable Google Chrome and Mozilla Firefox web applications to receive   {{site.data.keyword.mobilepushshort}}.
@@ -46,7 +46,7 @@ For Mozilla Firefox browser, add the following values in `manifest.json` file.  
     {: codeblock}
 
 2. Change the `manifest_Website.json` file name to `manifest.json`.
-3. Add the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` to your root directory of your website.
+3. Add the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` to the  root directory of your website.
 3. Include the `manifest.json` in ``<head>`` tag of your html file .
 ```
  <link rel="manifest" href="manifest.json">

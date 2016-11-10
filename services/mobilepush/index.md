@@ -23,7 +23,7 @@ The {{site.data.keyword.mobilepushshort}} service provides a unified platform to
 # Related Links
 {: #rellinks}
 
-* [Overview](c_overview_push.md){: new_window}
+* [Overview](c_overview_push.html){: new_window}
 
 ## Tutorials and samples {:id="samples"}
 {: #samples}

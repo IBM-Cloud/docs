@@ -109,7 +109,7 @@ To setup the FCM project and obtain your credentials, see [Getting Your Sender I
 
 	![Adding Firebase to Android](images/FCM_5.jpg)
 
-4. In Add Firebase to your Android window, add **com.ibm.mobilefirstplatform.clientsdk.android.push** as the package name. Also add the package name of your application by repeating the step 2.
+4. In Add Firebase to your Android app window, add **com.ibm.mobilefirstplatform.clientsdk.android.push** as the package name. Also add the package name of your application by repeating the step 2.
 
 	![Adding Firebase to your Android window](images/FCM_1.jpg)
 
