@@ -457,7 +457,8 @@ Only certain services provide the ability for you to change the service plan. If
 |Service |	Information|
 |--------|-------------|
 |Presence Insights 	|If you have a Lite plan and exceed the free allowances, a 403 message displays or is logged to indicate that you are no longer authorized, and your service instance is disabled. In addition, POST REST API calls are rejected with a 403 response.<br/><br/>If your service is disabled because you exceed the free allowance, you can upgrade from a Lite plan to a Paid plan. Your service is re-enabled within 2 hours.<br/><br/>If you have a Paid plan, you can reduce your plan to the Lite plan, as long as your usage stays within the Lite plan allowance for events and total storage.<br/><br/>When you upgrade or reduce your plan, you do not need to restage or restart your apps.|
-*Table 9. Next steps for changing your plan*
+Table 9. Next steps for changing your plan
+{: #pricing_table91}
 
 ###How to change your plan through the command line interface
 
