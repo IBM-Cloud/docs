@@ -27,8 +27,8 @@ In {{site.data.keyword.Bluemix_notm}}, you can automatically manage your applica
   * [Configuring Node.js apps with the {{site.data.keyword.autoscaling}} service](#node-asagent)
   * [Manage {{site.data.keyword.autoscaling}} service through RESTful API](#RESTAPI)
   * [Manage {{site.data.keyword.autoscaling}} service through {{site.data.keyword.autoscaling}} CLI](#CLI)
-  * [Policy fields for the {{site.data.keyword.autoscaling}} service](#policyfields)
-  * [Error messages](#errmsgs)
+  * [Policy fields for the {{site.data.keyword.autoscaling}} service](#policy_fields)
+  * [Error messages](#err_msg)
 
 ## Using the {{site.data.keyword.autoscaling}} service in {{site.data.keyword.Bluemix_notm}}
 {: #as-service}
