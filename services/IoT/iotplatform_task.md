@@ -112,7 +112,7 @@ After you register a device with {{site.data.keyword.iot_short_notm}}, you can u
 - Send device messages to your {{site.data.keyword.iot_short_notm}} organization by using the MQTT protocol.
 
 **Tip:** Many connection recipes are available for the commonly used devices. For a list of recipes, see the
-[Device connection recipes](https://developer.ibm.com/recipes/?post_type=tutorials&s=IoT) that are available on IBM.com.
+[Device connection recipes](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) that are available on IBM.com.
 
 The following information is required when connecting your device:
 - URL: *org_id*.messaging.internetofthings.ibmcloud.com  

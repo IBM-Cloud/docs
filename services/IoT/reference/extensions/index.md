@@ -38,6 +38,8 @@ The built-in Jasper integration that is provided by our platform provides suppor
 
 You can access the supported operations in the device drilldown of a Jasper connected device after the following configuration steps are completed.
 
+### REST APIs for Jasper
+To access the REST API for Jasper, see the Jasper Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension) documentation.
 
 ### Configuration for Jasper
 
@@ -87,6 +89,9 @@ The AT&T extension enables the following AT&T operations:
   - The cycle start date can be set using a YYYY-MM-DD format.
 - Send SMS to SIM
 - Change rate plan
+
+### REST APIs for AT&T
+To access the REST API for AT&T, see the AT&T Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension) documentation.
 
 ### Configuration for AT&T
 
@@ -217,9 +222,10 @@ If you have a device which is connected to your {{site.data.keyword.iot_short_no
 - Last status refresh
 - Location status
 
+### REST APIs for Orange
+To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension) documentation.
+
 ### Configuration for Orange
-
-
 
 To enable the Orange extension:
 
@@ -282,6 +288,10 @@ The service approval typically takes approximately one day. After your request i
 The Weather Company extension combines weather data with your existing {{site.data.keyword.iot_short_notm}} devices. Weather data from The Weather Company appears in the device details view if an update location request has been made by using the API, or if the device has already set its location by using a device management message.
 
 **Note:** Only managed devices can set their own locations. All unmanaged devices must have their locations set manually by using the API. For more information on setting a device location, see [Update Location requests](../../devices/device_mgmt/index.html#update-location).
+
+### REST APIs for The Weather Company
+To access the REST API for The Weather Company, see the
+Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather) documentation.
 
 ### Weather Data
 
