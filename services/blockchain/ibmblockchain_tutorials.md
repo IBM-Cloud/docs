@@ -13,10 +13,10 @@ copyright:
 
 # Sample apps and tutorials
 {: #1stanchor}
-Last updated: 5 October 2016
+Last updated: 08 November 2016
 {: .last-updated}
 
-The following samples demonstrate how applications and chaincode function in an IBM Blockchain network. To learn more about the Hyperledger Fabric v0.5 code, which underpins your blockchain network, visit the [Fabric Docs](https://github.com/hyperledger/fabric/tree/master/docs) section of the Linux Foundation's Hyperledger Project.  
+The following samples demonstrate how applications and chaincode function on a test IBM Blockchain network. To learn more about the Hyperledger Fabric v0.6 code, which underpins IBM Blockchain networks, visit the [Fabric Docs](https://github.com/hyperledger/fabric/tree/v0.6/docs) for the Linux Foundation's Hyperledger  Project.  
 {:shortdesc}
 
 To experience chaincode applications in action, you can immediately deploy the Marbles, Commercial Paper or Car Lease demo below (click a Deploy to Bluemix button). Or continue reading to explore the Hello Chaincode tutorial.
@@ -26,7 +26,7 @@ To experience chaincode applications in action, you can immediately deploy the M
 - [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)  **Car Lease**  
 
 <br>
-## Using the Hello Chaincode tutorial
+## Learn chaincode tutorial
 {: #hellocc}
 This tutorial guides you through using basic building blocks to code an elementary chaincode application. You will  incrementally build a working chaincode that creates generic assets for exchanging on a network. Then you will interact with your chaincode through the network API. After completing this tutorial, you will be able to answer the following questions:
 - What is chaincode?
@@ -39,62 +39,153 @@ This tutorial guides you through using basic building blocks to code an elementa
 - How do I interact with my chaincode through the REST API?
 
 ### What is chaincode?
-Chaincode is Go (GoLang) or Java code that enables users to interact with a blockchain network. Whenever you 'invoke' a transaction on the network, you are calling a function in chaincode that reads and writes values to the ledger.
+Chaincode is Go (Golang) or Java code that enables users to interact with a blockchain network. Whenever you 'invoke' a transaction on the network, you are calling a function in chaincode that reads and writes values to the ledger.  
 
-### Implementing your first chaincode
-Complete the following topics to implement chaincode on an IBM Blockchain on Bluemix network:
-#### Setting up the environment
-1. Download and install Golang for your operating system from: [GoLang](https://golang.org/dl/).
-2. Set your GOPATH:
-	- $GOPATH is an **Environment Variable** path to your Go code and projects. Your $GOPATH must be set to get, build, and install packages outside of the standard Go tree. Therefore, $GOPATH must be unique from the $GOROOT path where your original Go tree resides. Simply create a directory and then point your $GOPATH there.
-	- Set your $GOPATH on Windows:
-		- Create a workspace directory for your project, such as C:\Users\ADMIN\Documents\GoProjects.
-		- Click your Windows **Start** menu and search for "system environment variables."
-		- Click **Edit the system environment variables**.
-		- From the **Advanced** tab, click **Environment variables**.
-		- Find your system environment variables GOPATH and GOROOT. If you need to create GOPATH, click **New**.  
-		- Your GOROOT and GOPATH values must be unique. GOROOT is auto-generated when you install Go, and should be C:\Go\.
-		- Set your GOPATH to the workspace directory that you created. In this example, **GOPATH** is  **C:\Users\ADMIN\Documents\GoProjects**.  
-		- For more details, run the command `go help gopath` or visit the [Go Documentation](https://golang.org/doc/install).
-3. Add the Hyperledger Faric v0.5 shim code to your Go path by running the following command:
+<br>
+## Setting up the development environment
+To start developing chaincode, first install the following dependencies and recommended tools:
 
-	```
-	go get github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview/core/chaincode/shim
-	```
+### Git
 
-4. **Note**: Be sure to follow the above link to import the v0.5 hyperledger-archives shim code.  The Bluemix backend is built with this same versioning; as a result, it's important for the shim version and Bluemix version to align.
+- [Git download page](https://git-scm.com/downloads)
+- [Pro Git book](https://git-scm.com/book/en/v2)
+- [Git Desktop (an alternative to the Git CLI)](https://desktop.github.com/)
 
-#### Setting up GitHub
-The Blockchain on Bluemix plans require your chaincode to be located in a [GitHub](https://Github.com/) repository. Create a GitHub account and set up Git as described at [Set Up Git](https://help.github.com/articles/set-up-git/). After setting up GitHub, complete the following steps:
-1. Go to [learn chaincode](https://github.com/IBM-Blockchain/learn-chaincode) and fork the repo.  
-2. Clone the fork to the directory specified in your $GOPATH.  
-3. The repo includes two chaincode directories:  [Start](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/start/chaincode_start.go) is the chaincode that you will start building from. [Finished](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/finished/chaincode_finished.go) is the chaincode that you will ultimately build.
-4. Ensure that the chaincode builds in your local environment. Open a command prompt, and navigate to the folder that contains `chaincode_start.go`. Enter the following command:
+Git is a fast and powerful version control tool for chaincode development, and for software development in general. Git bash, which is installed with Git for Windows, is the recommended command line terminal.
 
-	```
-	go build ./
-	```
-The command should return with no errors or messages.
+After completing the Git installations, verify that Git is installed:
 
-#### Implementing the chaincode interface
-The next step is implementing the chaincode shim interface in your Golang code. The three main functions are **Init**, **Invoke**, and **Query**. All three functions take a function name and an array of strings as input, but vary as to when they are called. You will be building up to a working chaincode that creates generic assets for exchange on a blockchain network.
+```
+$ git version
+git version 2.9.0.windows.1
+```
+
+Once you have Git installed, create an account for yourself on [GitHub](https://github.com/). The IBM Blockchain service on Bluemix requires  chaincode to be in a GitHub repository for deployment through the REST API.  
+
+## Go
+
+Go is currently the only supported language for writing chaincode on Bluemix. The Go installation includes a set of useful CLI tools for writing chaincode. For example, the `go build` command allows you to compile your chaincode before attempting to deploy it to a network. Install Go v1.6, which is the version used to develop Hyperledger Fabric v0.6:  
+
+- [Go 1.6 install](https://golang.org/dl/#go1.6.3)
+- [Go installation instructions](https://golang.org/doc/install)
+- [Go documentation and tutorials](https://golang.org/doc/)
+
+Verify that Go is properly installed by running the following commands. The output of the `go version` command can vary, depending on your operating system:
+
+```
+$ go version
+go version go1.6.3 windows/amd64
+
+$ echo $GOPATH
+C:\gopath
+```
+
+Your `GOPATH` environment variable does not have to match the prior example, but you do have to use a valid directory on your filesystem. When you run `go build` to verify that your chaincode compiles, Go looks in the `$GOPATH/src` directory for any non-standard dependencies that you list in the `import` block in your chaincode. The [Go installation instructions](https://golang.org/doc/install) guide you through GOPATH environment variable setup.  
+
+<br>
+## Hyperledger Fabric
+
+Two versions of Hyperledger Fabric are supported for Blockchain on Bluemix: v0.5 and v0.6.  As described below, your chaincode version must align with the version of Hyperledger on your Bluemix network.
+
+Attention:
+1. To enable read and write functions on the ledger, your chaincode must import the chaincode shim from Hyperledger Fabric.
+2. To compile your chaincode locally, you must have the Hyperledger Fabric code location specified in your `GOPATH` environment variable.
+
+To determine which version of Hyperledger Fabric your Bluemix instance is running, click the **Service Status** tab on your Dashboad Monitor.  Scroll down to the **Release Notes** section; the `Your network is using this version` panel will display the **Hyperledger Commit Level** that you are running:
+
+![Bluemix backend version](images/fabricversion.png "Bluemix backend version")
+Figure 1. Hyperledger Fabric version
+
+Your chaincode version must align with the Hyperledger Fabric version that you will deploy your chaincode to. For example, the network depicted in Figure 1 requires cloning the Hyperledger Fabric v0.6-preview codebase. The fabric codebase, for either version, must be stored in your  `$GOPATH/hyperledger/fabric` path:
+
+- [v0.5 Hyperledger Fabric](https://github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview)
+- [v0.6 HHyperledger Fabric](https://gerrit.hyperledger.org/r/gitweb?p=fabric.git;a=shortlog;h=refs/heads/v0.6)
+
+To install the Hyperledger Fabric v0.5 codebase, use the following git clone command:
+
+```
+# Create the parent directories on your GOPATH
+mkdir -p $GOPATH/src/github.com/hyperledger
+cd $GOAPTH/src/github.com/hyperledger
+
+# Clone the appropriate release codebase into $GOPATH/src/github.com/hyperledger/fabric
+# Note that the v0.5 release is a branch of the repository.  It is defined below after the -b argument
+git clone -b v0.5-developer-preview https://github.com/hyperledger-archives/fabric.git
+```
+
+To install the Hyperledger Fabric v0.6 codebase, use the following git clone command:
+
+```
+# The v0.6 release exists as a branch inside the Gerrit fabric repository
+git clone -b v0.6 http://gerrit.hyperledger.org/r/fabric
+```
+
+If the fabric is not properly installed in your `GOPATH`, building your chaincode will return an error similar to the following example:
+```
+$ go build .
+chaincode_example02.go:27:2: cannot find package "github.com/hyperledger/fabric/core/chaincode/shim" in any of:
+        C:\Go\src\github.com\hyperledger\fabric\core\chaincode\shim (from $GOROOT)
+        C:\gopath\src\github.com\hyperledger\fabric\core\chaincode\shim (from $GOPATH)
+```
+
+### Set up your development pipeline
+
+Use the following steps to set up a pipeline for writing, building and testing your chaincode. You will write chaincode on your local machine, verify that it compiles, and upload it to GitHub. You will then deploy and test your chaincode on your Bluemix network using the fabric REST API:
+
+1. Fork the appropriate version of the [learn chaincode](https://github.com/IBM-Blockchain/learn-chaincode) repository for your network version to your GitHub account. Fork v1.0 for a v0.5 fabric network, or fork v2.0 for a v0.6 fabric network. One option is to use the **Fork** button, located at the top right of the repository page. Forking copies the entire repository to your local machine, including all branches, which are shown by clicking the **Branch:** button at the upper left of the page. To fork using the CLI, enter the following commands into your Git Bash shell:
+
+2. Clone your fork to your $GOPATH:
+
+  ```bash
+  cd $GOPATH
+  mkdir -p src/github.com/<YOUR_GITHUB_ID_HERE>/
+  cd src/github.com/<YOUR_GITHUB_ID_HERE>/
+  git clone -b v1.0 https://github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode.git
+  OR
+  git clone -b v2.0 https://github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode.git
+  ```
+
+  You now have a copy of your fork on your local machine. You will write chaincode by changing or adding local files, pushing them to your fork on GitHub, and then deploy your chaincode to your blockchain network using the REST API on a network peer.
+
+3. Two versions of the chaincode used in this tutorial are provided: **start** is the skeleton chaincode that you will start from, and **finished* is your completed chaincode that is ready to build. First, make sure that **start** builds in your local environment:
+
+  ```bash
+  cd $GOPATH/src/github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode/start
+  go build ./
+  ```
+
+The **start** version of learn-chaincode should compile with no errors or messages. If it does not, review the prior instructions for installing Go correctly.
+
+5. Write changes to your local chaincode files, and push the updated files to your GitHub fork:
+
+  ```bash
+  cd $GOPATH/src/github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode/
+  # See what files have changed locally.  You should see chaincode_start.go
+  git status
+  # Stage all changes in the local repository for commit
+  git add --all
+  # Commit all staged changes.  Insert a short description after the -m argument
+  git commit -m "Compiled my code"
+  # Push local commits back to https://github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode/
+  git push
+  ```
+
+#### Implement the chaincode interface
+Your next step is to implement the chaincode shim interface in your Go code. The three main functions are **Init**, **Invoke** and **Query**. All three functions take a function name and an array of strings as input, but are called at different points. Your development path ends with working  chaincode that creates generic assets for exchange on a blockchain network.
 
 ### Dependencies
-The `import` statement lists dependencies that are required to build your chaincode:
+The `import` statement lists the dependencies for building your chaincode:
 1. `fmt` - contains `Println` for debugging/logging.
 2. `errors` - standard Go error format.
 3. `github.com/hyperledger/fabric/core/chaincode/shim` - code that interfaces your Golang code with a network peer.
 
-### Passing values
-
-The following chaincode values are passed:
 #### Init()
-Init is called to initialize your chaincode when you first deploy it to the network. In this example, you use `Init` to configure the initial state of one variable on the ledger.
+The `Init` function is called when you first deploy your chaincode. As the name implies, use this function to initialize your chaincode. In this  example, we `Init` configures the initial state of a single key/value pair on the ledger.
 
 In your `chaincode_start.go` file, change the `Init` function so that it stores the first `args` element to the key "hello_world":
 
 ```go
-func (t *SimpleChaincode) Init(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
+func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	if len(args) != 1 {
 		return nil, errors.New("Incorrect number of arguments. Expecting 1")
 	}
@@ -108,16 +199,15 @@ func (t *SimpleChaincode) Init(stub *shim.ChaincodeStub, function string, args [
 }
 ```
 
-This is done by using the shim function `stub.PutState`. The first argument is the key as a string, and the second argument is the value as an array of bytes. This function may return an error, which your code inspects and returns if present.
+This is done by using the stub function `stub.PutState`. This function interprets the first argument sent in the deployment request as the value to be stored under the key 'hello_world'. If an error occurs because the wrong number of arguments was passed in, or because something went wrong when writing to the ledger, this function returns an error. Otherwise, it exits cleanly, returning no messages.  
 
 #### Invoke()
-`Invoke` is called to add a transaction request to the chain. The structure of `Invoke` is simple;
-it receives a `function` argument, and based on this argument, calls Go functions in the chaincode.
+Use the `Invoke` function to call chaincode functions to do "real work" on the blockchain network. Invoke functions are captured as transactions, which get grouped into blocks for writing to the ledger. Updating the ledger is achieved by invoking your chaincode. The structure of `Invoke` is simple; it receives a function and an array of arguments. Based on the function passed in by the function parameter in the invoke request, `Invoke` will either call a helper function or return an error.
 
-In your `chaincode_start.go` file, change the `Invoke` function so that it calls a generic write function.
+In your `chaincode_start.go` file, change the `Invoke` function to call a generic write function:
 
 ```go
-func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
+func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	fmt.Println("invoke is running " + function)
 
 	// Handle different functions
@@ -132,10 +222,10 @@ func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args
 }
 ```
 
-The code is now looking for `write`, so add that function to your `chaincode_start.go` file:
+The code is now looking for `write`, so add the write function to your `chaincode_start.go` file:
 
 ```go
-func (t *SimpleChaincode) write(stub *shim.ChaincodeStub, args []string) ([]byte, error) {
+func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 	var name, value string
 	var err error
 	fmt.Println("running write()")
@@ -157,12 +247,12 @@ func (t *SimpleChaincode) write(stub *shim.ChaincodeStub, args []string) ([]byte
 This `write` function should look similar to your previous `Init` change. You can now set the key and value for `PutState`, which allows you to store any key/value pair on the blockchain ledger.
 
 #### Query()
-`Query` is called to query your chaincode state, and does not add blocks to the chain. Only deploy and invoke functions add new blocks. Use `Query` to read the value of your chaincode state's key/value pairs.
+The `Query` function is called to query your chaincode state, and does not add blocks to the chain (ledger). Only deploy and invoke functions add new blocks. Use `Query` to read the value of your chaincode state's key/value pairs.
 
 In your `chaincode_start.go` file, change the `Query` function so that it calls a generic read function:
 
 ```go
-func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
+func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	fmt.Println("query is running " + function)
 
 	// Handle different functions
@@ -175,10 +265,10 @@ func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args 
 }
 ```
 
-The code is now looking for `read`, so add that function to your `chaincode_start.go` file:
+The code is now looking for `read`, so add the 'read' function to your `chaincode_start.go` file:
 
 ```go
-func (t *SimpleChaincode) read(stub *shim.ChaincodeStub, args []string) ([]byte, error) {
+func (t *SimpleChaincode) read(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 	var name, jsonResp string
 	var err error
 
@@ -197,7 +287,7 @@ func (t *SimpleChaincode) read(stub *shim.ChaincodeStub, args []string) ([]byte,
 }
 ```
 
-This `read` function uses `GetState`, which is the complement to `PutState`. This shim function takes only one string argument, which is the name of the key to retrieve. Next, this function returns the value, as an array of bytes, to `Query`, which in turn sends it to the REST handler.
+This `read` function uses `GetState`, which is the complement to `PutState`. This shim function takes only one string argument: the name of the key to retrieve. Next, this function returns the value, as an array of bytes, to `Query`, which in turn sends it to the REST handler.
 
 #### Main()
 The `main` function executes when each peer deploys its instance of the chaincode. It starts the chaincode and registers it with the peer. No code updates are required for 'main'; both chaincode_start.go and chaincode_finished.go include a `main` function at the top of each file:
@@ -215,7 +305,6 @@ func main() {
 The fastest way to test your chaincode is to use the REST interface on your peers.
 The Swagger UI on your Bluemix dashboard monitor allows you to experiment with deploying chaincode, without writing any additional code.  
 
-<br>
 #### Swagger API
 Complete the following steps to use the Swagger API:
 
@@ -351,19 +440,19 @@ Call your generic write function with `invoke`. Change the value of `hello_world
 You have just completed writing some basic chaincode.  
 
 <br>
-## Requirements for Marbles, Commercial Paper, and Car Lease demos
+## Demo requirements
 {: #requirements}
 
-The following prerequisites are included with your Bluemix service for running the Marbles, Commercial Paper, and Car Lease applications locally. Your Bluemix environment clones the Hyperledger Fabric to provide these dependencies:
+The following prerequisites, which are included with your Bluemix service, are required for running the Marbles, Commercial Paper, and Car Lease demo applications. Your Bluemix environment clones the Hyperledger Fabric to provide these dependencies:
 
 - Bluemix ID https://console.ng.bluemix.net/ (required to create your IBM Blockchain network and provide service credentials for peers and the Certificate Authority)
 - Node.js 0.12.0+ and npm v2+
 - Golang Environment (required only to build your own chaincode)
 
-The demos require proficiency with Node.js and the express module. You must also have a conceptual understanding of 'chaincode', 'ledger', and 'peer' in a blockchain context; refer to the [Hyperledger Fabric  Glossary](https://github.com/hyperledger/fabric/blob/master/docs/glossary.md).  
+The demos also require proficiency with Node.js and the express module. You must also have a conceptual understanding of 'chaincode', 'ledger', and 'peer' in a blockchain context; refer to the [Hyperledger Fabric  Glossary](https://github.com/hyperledger/fabric/blob/v0.6/docs/glossary.md).  
 
 <br>
-## Using the Marbles demo
+## Marbles demo
 {: #marbles}
 
 The Marbles application demonstrates a simple asset transfer between two parties. The application is designed to test the JavaScript SDK, guide its development, and help developers become familiar with the SDK and chaincode.
@@ -372,20 +461,22 @@ Explore the [Marbles Tutorials](https://github.com/IBM-Blockchain/marbles/blob/m
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)  
 
 <br>
-## Using the Commercial Paper demo
+## Commercial Paper demo
 {: #commercialpaper}
 
 The Commercial Paper application demonstrates how a commercial paper trading network can be implemented using IBM Blockchain. The Commercial Paper demo explores a permissioned blockchain network, on which participants are assigned roles and corresponding levels of access. Visit the [Commercial Paper README](https://github.com/IBM-Blockchain/cp-web#readme) to learn more about the components of this demo, or deploy it  to Bluemix immediately to see the trading network in action:  
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)  
 
 <br>
-## Using the Car Lease demo
+## Car Lease demo
 {: #carlease}
 
 The Car Lease application demonstrates the lifecycle of a vehicle, from manufacturing, through a series of owners, and  finishing with the vehicle being scrapped. The demo uses Node.js for server-side programming, and Golang for chaincode running on the IBM Blockchain network. The demo includes two instances of chaincode: one defines the rules for vehicle transactions, and the other logs all vehicle transactions during its lifetime. Both chaincode programs use JSON objects to store data. Vist the [Car Lease README](https://github.com/IBM-Blockchain/car-lease-demo/blob/master/README.md) to learn more about the application architecture and vehicle attributes associated with this demo, or deploy the demo immediately to Bluemix:  
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)  
 
 <br>
+
+<!-- comment out - moving to separate file for now jh
 ## Non-deterministic chaincode
 {: #ndcc}
 
@@ -432,7 +523,10 @@ Iteration over a map type can lead to non-determinism, because order is not dete
 }
 ```
 
-<!---## Using the Node.js SDK
+-->
+
+
+<!-- ## Using the Node.js SDK
 {: #nodesdk}
 
-Use the [Hyperledger fabric client SDK ](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md) library for easier interaction with an IBM Blockchain network.  The SDK, through importing packages and libraries, allows for an application developer to build Node.js applications that can invoke functionality on the blockchain network from the client side.  Member services and asset management are now pluggable components on client side applications.  See the [Enhanced Node.js SDK](etn_sdk.html) section for full documentation and application examples.--->
+Use the [Hyperledger fabric client SDK ](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md) library for easier interaction with an IBM Blockchain network.  The SDK, through importing packages and libraries, allows for an application developer to build Node.js applications that can invoke functionality on the blockchain network from the client side.  Member services and asset management are now pluggable components on client side applications.  See the [Enhanced Node.js SDK](etn_sdk.html) section for full documentation and application examples. -->

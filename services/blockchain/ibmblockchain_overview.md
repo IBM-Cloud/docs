@@ -14,7 +14,7 @@ copyright:
 
 # About blockchain
 {: #ibmblockchain_overview}
-Last updated: 23 September 2016
+Last updated: 03 November 2016
 {: .last-updated}
 
 ## What is blockchain?
@@ -47,7 +47,6 @@ The following terms are instrumental in gaining a holistic understanding of bloc
 
 **Permissioned network**: A blockchain network where each node is required to maintain a member identity on the network, and each node has access to only the transactions that its permissions allow.  
 
-<br>
 ## Key concepts
 {: #keyconcepts}
 
@@ -75,6 +74,7 @@ Figure 1 shows typical network participants in an equities market: Asset Custodi
 2. Transactions can be triggered from any network node, but are always forwarded to the primary (leading) validating node, which orders the transactions. The primary node broadcasts the ordered transactions to all validating peers for consensus, or agreement, on the proposed order.
 3. If the order of transactions is agreed upon, the transactions are executed and appended to the ledger on each validating node. The ledger is then replicated to all network nodes.  
 
+<br>
 ## Network and application architecture
 {: #architecture}
 
@@ -108,4 +108,4 @@ A permissioned blockchain requires entities to register for long-term identity c
 
 **Chaincode Services**: Chaincode Services provides a secured and lightweight method to sandbox chaincode execution on the validating nodes. The environment is a “locked down” and secured container, along with a set of signed base images containing secure OS and chaincode language, runtime and SDK layers for Go, Java and Node.js. Additional languages can be enabled, if required.
 
-Refer to the [protocol specification](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md#fabric) for   Hyperledger Fabric 0.5 to learn more about IBM's implementation of blockchain.
+Refer to the [protocol specification](https://github.com/hyperledger/fabric/blob/v0.6/docs/protocol-spec.md#fabric) for   Hyperledger Fabric 0.5 to learn more about IBM's implementation of blockchain.

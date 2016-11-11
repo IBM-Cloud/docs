@@ -14,7 +14,7 @@ years: 2016
 
 # HFC SDK for Node.js
 {: #etn_sdk}
-Last updated: 07 October 2016
+Last updated: 09 November 2016
 {: .last-updated}
 
 The Hyperledger Fabric Client (HFC) SDK enables application developers to build Node.js applications that interact with a blockchain network. Node.js applications that leverage the HFC SDK can be used to perform the following network tasks:
@@ -26,11 +26,11 @@ The Hyperledger Fabric Client (HFC) SDK enables application developers to build 
 
 The HFC SDK provides APIs, through which applications interact with a Hyperledger Fabric blockchain network. These APIs are designed to support two pluggable components:
 
-1. Pluggable key value store, which is used to retrieve and store keys associated with a member. The  `chain.setKeyValStore()` method overrides the default file-based key value store implementation. The chain key value store is used to warehouse sensitive private keys, so access must be appropriately protected.
+1. Pluggable key value store, which is used to retrieve and store keys associated with a member. The `chain.setKeyValStore()` method overrides the default file-based key value store implementation. The chain key value store is used to warehouse sensitive private keys, so access must be appropriately protected.
 2. Pluggable member service, which is used to register and enroll members. The `chain.setMemberServices()` method  overrides the default implementation in `MemberServices`. Member services implements the Hyperledger fabric as a  permissioned blockchain network, which provides anonymity, unlinkability of transactions, and confidentiality.
 
 You can include the HFC SDK in your Node.js app by using the offline method or the npm method:
-*  offline method: first copy the files from the Hyperledger Fabric source tree  (https://github.com/hyperledger/fabric/tree/master/sdk/node/lib) into your Node.js app `/lib` directory. Then include the HFC SDK in your application by adding the following code snippet:
+*  offline method: first copy the files from the Hyperledger Fabric source tree  (https://github.com/hyperledger/fabric/tree/v0.6/sdk/node/lib) into your Node.js app `/lib` directory. Then include the HFC SDK in your application by adding the following code snippet:
 
 ```js
 var hfc = require("./lib/hfc");
@@ -39,7 +39,7 @@ var hfc = require("./lib/hfc");
 * npm method: from the command line, first install the HFC SDK from npm with the following snippet:
 
 ```
-npm install hfc@0.5.3
+npm install hfc@0.6.5
 ```
 
 Then include the HFC SDK in your application with the following code snippet:
@@ -60,78 +60,56 @@ The following HFC objects (classes and interfaces) are described at a high level
 * The `TransactionContext` class implements the bulk of the deploy, invoke and query logic. Each `TransactionContext` instance receives a unique tCert from `MemberServices`, which it always uses to submit transactions. To issue multiple transactions with the same tCert, retrieve a `TransactionContext` object directly from a Member object, and issue multiple deploy, invoke and query operations. However, using a single tCert for multiple transactions links the transactions such that they are identifiable as involving the same anonymous user. To avoid transaction linkage, call deploy, invoke, and query on the `User` or `Member` object.  
 
 <br>
+
 ## Sample Node.js application
 {: #nodesample}
 
 The following sample Node.js application leverages the HFC SDK APIs in order to interact with a Bluemix blockchain network. The program functions with both blockchain network plans (starter and HSBN), and with any client-side operating system.
 
-The objective is to use a JavaScript application--[helloblockchain.js](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/helloblockchain.js)--to successfully deploy  chaincode--[chaincode_example02](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/chaincode_example02.go)--to your Bluemix network, followed by an invocation and query.  
+The objective is to use a JavaScript application--[helloblockchain.js](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/helloblockchain.js)--to successfully deploy a piece of chaincode--[chaincode_example02](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/src/chaincode/chaincode_example02.go)--to your Bluemix network, followed by an invocation and query.  
 
 1. This program requires both Node.js and the npm JavaScript package manager.  Installing the latest version of [Node.js](https://nodejs.org/en/) will automatically include npm.  
 
-1. Open a terminal and create a directory (workspace) where you will place the helloblockchain.js source code and node modules. For example:
+1. Open a terminal and create a directory (workspace) where you want to place the source code for this demo.  For example:
 
     ```
     mkdir -p $HOME/workspace
     ```
 
-1. Go to your newly created workspace folder and install HFC v0.5.3 with the following command:
+1. Go to your newly created directory and clone the [SDK-Demo](https://github.com/IBM-Blockchain/SDK-Demo) repository.  Ensure that you have the proper version of [Git](https://git-scm.com/downloads) for your OS installed prior to executing the `git clone` command:
 
      ```
      cd $HOME/workspace
-     npm install hfc@0.5.3
+     git clone https://github.com/IBM-Blockchain/SDK-Demo.git
+     ```
+ If your network is running Hyperledger Fabric v0.5, then check out the v0.5 branch after you have cloned:
+
+     ```
+     cd $HOME/workspace/SDK-Demo
+     git checkout v0.5
      ```
 
-1. Copy the [helloblockchain.js](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/helloblockchain.js) program and save it to your workspace folder.  
-   Your `/workspace` directory should look similar to the screenshot below:
+1. Now you need to utilize the Service Credentials from a blockchain instance.
 
-   ![Node workspace](images/nodeworkspace.PNG "Node workspace")
+1. If you have not yet done so, access the [Blockchain](https://console.ng.bluemix.net/catalog/services/blockchain/) tile in Bluemix and create an instance of the service. Select either the **Starter Developer** plan or the **High Security Business Network** plan. Click the **CREATE** button once you have curated your network.  This will open up your Service Dashboard.  Click the **Service Credentials** tab on the upper portion of the page to access the peer and user enrollment data for your network.  **Note**: For HSBN networks the Service Credentials may not be auto-generated.  Simply click the **New Credential** button, which will open a new window.  Then click **Add** at the bottom of the window.  This will populate a JSON payload containing your Service Credentials.
 
-1. If you have not yet done so, access the [Blockchain](https://console.ng.bluemix.net/catalog/services/blockchain/) tile in Bluemix and create an instance of the service. Select either the **Starter Developer** plan or the **High Security Business Network** plan (![](images/green_dot.png) if approved). Click the **CREATE** button and get the **Service Credentials** by copying and pasting the JSON file; save it as ServiceCredentials.json in your local '/workspace' directory. Please ensure that you copy the entire JSON payload; it should be 202 lines in a standard editor.  **Note**: When running a blockchain instance against the Bluemix [new console](https://new-console.ng.bluemix.net/#overview) format, you will notice a difference in the output of your **Service Credentials**.  Namely, the "credentials" line is removed from the object.  To fix this add the following snippet to line 2 of your ServiceCredentials.json file:
+1. Update your ServiceCredentials.json file, which you received upon cloning the SDK-Demo repo, with your new credentials.
 
-	```
-	"credentials": {
-	```
+1. When the program is run, the HFC SDK creates the `keyValStore-<network-id>` directory within $HOME/workspace/SDK-Demo.  This `keyValStore-<network-id>` directory contains the cryptographic keys for each enrolled user.  You needn't delete the `keyValStore` directory when connecting to new Bluemix networks, rather, unique `keyValStore-<network-id>` directories will be created for each Bluemix instance.  **DO NOT** delete this crypto material until your network is deleted or reset.  Without this data, your client cannot communicate with the Bluemix CA server and enrollment will fail.
 
-1. Then add a final closing `}` to line 202 to close the object.  The layout of your ServiceCredentials.json should mirror that of the example [ServiceCredentials.json](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/ServiceCredentials.json), leaving you with a payload of 202 lines. If you obtain your credentials from a blockchain instance derived from the Bluemix [classic console](https://console.ng.bluemix.net/) format, then you needn't worry about this discrepancy.  The screenshots below depict the differences in the two layouts, with the initial showing *new console*, and the latter showing *classic*:
-
-     ![Service Credentials New Console](images/servicecreds1.png "Service Credentials New Console")
-
-     ![Service Credentials](images/servicecreds.png "Service Credentials")
-
-1. Upon adding ServiceCredentials.json, your `/workspace` directory should look similar to the following screenshot:
-
-     ![Node workspace2](images/nodeworkspace2.PNG "Node workspace 2")
-
-1. When the program is run, the HFC SDK creates the `keyValStore` directory within $HOME/workspace.  This `keyValStore` directory contains the cryptographic keys for each enrolled user.  You needn't delete the `keyValStore` directory when connecting to new Bluemix networks, rather, unique `keyValStore` directories will be created for each Bluemix instance.  
-
-1. Create a chaincode directory under your $GOPATH, as shown below. If you have not yet set a $GOPATH on your machine, follow the instructions [here](https://github.com/golang/go/wiki/GOPGATH).
+1. From your SDK-Demo folder, run the node program:
 
 	```
-	mkdir -p $GOPATH/src/chaincode_example02
-	```
-
-1. Copy [chaincode_example02.go](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/chaincode_example02.go) to this new directory - `$GOPATH/src/chaincode_example02`.  This is the actual piece of chaincode that will be deployed to the Bluemix network once you run the program.  
-
-1. Retrieve [vendor.zip](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/vendor.zip) and save it to the same directory - `$GOPATH/src/chaincode_example02`. The vendor.zip package contains libraries and dependencies from the Hyperledger Fabric v0.5 codebase. The default Windows extraction creates a path similar to: **C:\GOPATH\src\chaincode_example02\vendor**. Before extracting, you must delete the `\vendor` directory from this path, or the chaincode deployment will fail. A correct path on Windows will look similar to:  **C:\GOPATH\src\chaincode_example02\vendor\github.com\hyperledger\fabric**. (Note: One `\vendor` directory is correct.)  The irregularity of a second `\vendor` directory does not occur on Linux or OS X.
-
-1. You should now have a directory within your $GOPATH that looks similar to the following example:
-
-    ![Node $GOPATH](images/nodegopath.PNG "Node $GOPATH")
-
-1. From your local '/workspace' directory, run the node program:
-
-	```
-	node helloblockchain.js -c chaincode_example02
+	node helloblockchain.js
 	```
 	Enable debug logs:
 	```
-	DEBUG=hfc node helloblockchain.js -c chaincode_example02
+	DEBUG=hfc node helloblockchain.js
 	```
 
 	Enable gRPC traces:
 	```
-	GRPC_TRACE=all DEBUG=hfc node helloblockchain.js -c chaincode_example02
+	GRPC_TRACE=all DEBUG=hfc node helloblockchain.js
 	```
 
 If `deploy`, `invoke` and `query` transactions are successful, you will see the following messages in your terminal:
@@ -146,17 +124,22 @@ Successfully completed chaincode invoke transaction: request={"chaincodeID":"9be
 Successfully queried  chaincode function: request={"chaincodeID":"9be0a0ed3f1788e8728c8911c747d2f6d0e205fa63422dc598d498fe709b9b8d","fcn":"query","args":["a"]}, value=99
 ```
 
-Be aware that when running on a Starter Developer network it can sometimes take up to ten minutes for your chaincode container to start.  However, once started, subsequent deployments and invocations will execute immediately, because the prerequisite files have been stored on the host machine for your blockchain instance.  
+**Note**: The chaincode source code is kept under the **src/chaincode** folder in your SDK-Demo repo.  This folder **ALSO** contains a **/vendor** folder which contains libraries and dependencies from the Hyperledger Fabric codebase.  If you replace the current chaincode file -- chaincode_example02.go -- with your own chaincode, ensure that you retain the **/vendor** folder.  These dependencies are required for the peer to successfully compile your chaincode and create the container. Also, if you have any dependent libraries, make sure you add them under the **/vendor** folder.
+
+Be aware that when running on a Starter Developer network it can sometimes take a prolonged period of time for the deployment to succeed and the chaincode container to start.  However, once started, subsequent deployments and invocations will execute immediately, because the prerequisite files have been stored on the host machine for your blockchain instance.  
 
 Navigate to the **Blockchain** tab from your **Network Console**. This view shows blocks being appended to the blockchain ledger as the helloblockchain.js program issues deploy and invoke transactions. The following screenshot shows the results of running helloblockchain.js twice, with the default arguments for "a" and "b":
 
    ![Node workspace3](images/nodeworkspace3.PNG "Node workspace 3")  
 
 <br>
+
 ## Troubleshooting
-Ensure that you are running **hfc@0.5.3** by issuing either of the following commands from your **/workspace** directory:
+Ensure that you are running **hfc@0.5.4** or **hfc@0.6.5** by issuing either of the following commands from your **/workspace** directory:
   * npm list | grep hfc
   * npm list -g | grep hfc  (If installed using the global `-g` flag)
+
+Networks using the v0.5 branch will need the earlier hfc version - 0.5.4
 
 Use the following procedure if you receive a query message:
 
@@ -176,13 +159,15 @@ If you receive a handshake error, try a different `grpc` version. You can access
     - `npm list | grep grpc`
     - `npm list -g | grep grpc`  
 
+
+
 <br>
 ## Public and Private Keys
 {: #keys}
 
 Hyperledger Fabric uses certificate authorities, and their underlying public and private keys, to meet the security requirements of businesses operating on a shared blockchain. Member identity management, role management and transactional privacy can all be controlled through the HFC SDK.
 
-User and transactional privacy on a shared blockchain are managed through the implementation of a PKI (Public Key Infrastructure) framework. The PKI, through certificate authorities, manages the generation, distribution and revocation of keys and digital certificates. The complete technical specifications for PKI and Membership Services are described in the security section of the Hyperledger Fabric v0.5 [protocol specification](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md). The basic tenets of the Hyperledger Fabric PKI are explained below:
+User and transactional privacy on a shared blockchain are managed through the implementation of a PKI (Public Key Infrastructure) framework. The PKI, through certificate authorities, manages the generation, distribution and revocation of keys and digital certificates. The complete technical specifications for PKI and Membership Services are described in the security section of the Hyperledger Fabric v0.6 [protocol specification](http://hyperledger-fabric.readthedocs.io/en/v0.6/protocol-spec/). The basic tenets of the Hyperledger Fabric PKI are explained below:
 
 1. The Registration Authority (RA) validates the identity of a user who is requesting access to the blockchain network.  This can be done dynamically by a user with `registrar` authority, or manually by editing the membersrvc.yaml file. The registration process occurs out-of-band and is executed through the `RegisterUser` function. The RA assigns enrollment credentials-`<enrollID>` and `<enrollPWD>`-to the user.
 

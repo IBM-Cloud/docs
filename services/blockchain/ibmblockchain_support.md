@@ -32,13 +32,14 @@ There are several mechanisms available to obtain support and troubleshoot proble
 * Use [GitHub issues](https://github.com/IBM-Blockchain/ibm-blockchain-issues/issues) to reach the blockchain development team.  Share details and code snippets from your specific Bluemix instance.  
 * Use the [Hyperledger slack](https://hyperledgerproject.slack.com/messages/general/) channel to raise questions concerning the Hyperledger Fabric code.  
 
+
 ## Software defect issues
 
 For software defects or if your problem is unable to be solved by any of the above routes, then follow these steps to submit a help ticket:
 
 * On the upper right corner of the **Menu Bar** (shown in Figure 1) click the **Account and Support** icon (shown in Figure 2).
 
-![](images/menubar.PNG "Menu bar")  
+![](images/menubar.PNG "Menu bar")
 *Figure 1. Menu Bar*
 
 ![](images/avatar.PNG "Account and Support")  

@@ -46,4 +46,4 @@ This testing was done to ensure the stability and resiliency of PBFT when Byzant
 - Stopping 2 nodes, the network halts due to a lack of consensus.
 - Restarting one of the nodes stopped in the previous test.  The network resumes and the node that restarted syncs with the other validating peers. For detailed steps on PBFT testing, see the [Testing consensus and availability](etn_pbft.html) topic.
 
-Continue to the [Further testing](etn_next.html) topic for additional tests and verified functionality.  
+Continue to the [Additional testing](etn_next.html) topic for additional tests and verified functionality.  

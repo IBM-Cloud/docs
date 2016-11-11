@@ -21,7 +21,6 @@ Last updated: 13 October 2016
 Both the Starter Developer plan and the High Security Business Network plan enable you to test the Practical Byzantine Fault Tolerance (PBFT) consensus protocol on a four-node blockchain network. The following topics provide details about consensus in general, and PBFT in particular. Once you are ready to start testing, PBFT test cases are provided.  
 {:shortdesc}  
 
-<br>
 ## What is consensus?
 
 Consensus is a method for validating the order of requests, or transactions (deploy and invoke), on a blockchain network. The correct ordering of transactions is critical, because many transactions have a dependency on one or more prior transactions (account debits often have a dependency on prior credits, for example).
@@ -30,12 +29,12 @@ On a blockchain network, there is no centralized authority that determines the t
 
 * This guarantee is dependent upon variables such as the specific consensus protocol implemented, and the number of nodes in the blockchain network. Both Blockchain on Bluemix plans implement the PBFT consensus protocol.  
 
-<br><br>
+<br>
 ## What is PBFT?
 
 Practical Byzantine Fault Tolerance (PBFT) is one flavor of consensus protocol. The function of a consensus protocol is to maintain the order of transactions on a blockchain network, despite threats to this order. One such threat is the arbitrary concurrent failure (a type of Byzantine fault) of multiple network nodes. Using PBFT, a blockchain network of (N) nodes can withstand (f) number of Byzantine nodes, where f = (N-1)/3. In other words, PBFT ensures that a minimum of 2\*f + 1 nodes reach consensus on the order of transactions before appending them to the shared ledger. Deriving either formula reveals the rule that a PBFT network guarantees data consistency and integrity despite Byzantine faults on fewer than one-third of all network nodes.  
 
-<br><br>
+<br>
 ## PBFT and your blockchain network
 
 The 2\*f + 1 PBFT rule has the following implications for both the Starter Developer plan and the High Security Business Network plan:
@@ -63,5 +62,5 @@ Attention: Review the following notes before starting your consensus testing:
 ![](images/stopstartpeer.png "Stop and start peers")
 *Figure 1. Stop and start peers*
 
-- The test cases use **chaincode_example02**, by default, from:  https://github.com/hyperledger/fabric/blob/master/examples/chaincode/go/chaincode_example02/chaincode_example02.go. However, you can use your own chaincode, or any of the chaincode examples at:  https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go.
+- The test cases use **chaincode_example02**, by default, from: https://github.com/hyperledger/fabric/tree/v0.6/examples/chaincode/go/chaincode_example02. However, you can use your own chaincode, or any of the chaincode examples at: https://github.com/hyperledger/fabric/tree/v0.6/examples/chaincode/go.
 - Requests are batched into one transaction for processing. However, you can ensure immediate processing by relying on the batch timeout value; waiting at least two seconds before submitting the next request will process the transaction immediately.
