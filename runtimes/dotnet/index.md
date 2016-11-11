@@ -12,7 +12,8 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-Last updated: 6 October 2016
+Last updated: 10 November 2016
+{: .last-updated}
 
 The ASP.NET Core runtime on {{site.data.keyword.Bluemix}} is powered by the ASP.NET Core buildpack. ASP.NET Core 
 is a modular open source framework for building .NET web applications.
@@ -82,6 +83,7 @@ The Yeoman tool can be used to generate new project templates as described in
 For information about developing locally using Visual Studio, see [Developing with Visual Studio](../../starters/deploy_vs.html){: new_window}.
 
 ## Pushing a Published Application
+{: #pushing_published_app}
 
 If you want your application to contain all its required binaries so that the buildpack does not download any 
 external binaries, you can push a published *self-contained* application.  See [.NET Core App Types](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}
@@ -103,6 +105,7 @@ directory.
 Also note that if you are using a manifest.yml file in your application, you can specify the path to the publish output folder in your manifest.yml.  Then you don't have to be in that folder when you push the application.
 
 ## Deploying apps with multiple projects
+{: #developing_apps_with_multiple_projects}
 
 To deploy an app which contains multiple projects, you will need to specify which project you want the buildpack to run as the main project. This can be done by creating a .deployment file in the root folder of the solution which sets the path to the main project. The path to the main project can be specified as the project folder or the project file (.xproj or .csproj).
 
@@ -120,6 +123,7 @@ In this example, the buildpack would automatically compile the *MyApp.DAL* and *
 {: codeblock}
 
 ## Configuring your application to listen on the proper port
+{: #configuring_listen_proper_port}
 
 The buildpack will run your application with the *dotnet run* command and pass the command-line argument that follows
 ```
@@ -189,6 +193,13 @@ In Program.cs `Main` method, remove the following line:
 {: codeblock}
 
 These changes should allow the .NET CLI to find your application's `Views` as they will now be copied to the build output when the `dotnet run` command executes.  If your application has any other files, such as json configuration files, which are required at runtime then you should also add those to the `include` section of `copyToOutput` in the project.json file.
+
+## Troubleshooting FAQ
+{: #troubleshooting_faq}
+
+**Q**: My application fails to deploy with the message: `API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, ...}`.  What does this mean?
+
+**A**: If you are receiving a similar message when pushing your application it is most likely caused by your application exceeding either the memory or disk quota limits.  This can be resolved by increasing the quotas for your application.
 
 # rellinks
 {: #rellinks}
