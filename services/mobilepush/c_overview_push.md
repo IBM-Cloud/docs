@@ -7,14 +7,14 @@ copyright:
 
 # About {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Last updated: 11 November 2016
+Last updated: 10 November 2016
 {: .last-updated}
 
 IBM {{site.data.keyword.mobilepushshort}} is a service that you can use to send notifications to iOS and Android mobile devices, to Google Chrome and Mozilla Firefox web browsers and also to Google Chrome Apps and Extensions. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
 
-{{site.data.keyword.mobilepushshort}} is also available as a Bluemix Dedicated service. For information about {{site.data.keyword.mobilepushshort}} as a dedicated service, see [Dedicated Services](/docs/dedicated/index.html). Note that the {{site.data.keyword.mobilepushshort}} monitoring tab does not show analytics data.
+{{site.data.keyword.mobilepushshort}} is also available as a Bluemix Dedicated service. For information about {{site.data.keyword.mobilepushshort}} as a dedicated service, see [Dedicated Services](docs/dedicated/index.html). Note that the {{site.data.keyword.mobilepushshort}} monitoring tab does not show analytics data.
 
-The {{site.data.keyword.mobilepushshort}} service is now OpenWhisk enabled. For more information, see [OpenWhisk](/docs/openwhisk/index.html).
+The {{site.data.keyword.mobilepushshort}} service is now OpenWhisk enabled. For more information, see [OpenWhisk](docs/openwhisk/index.html).
 
 
 ## {{site.data.keyword.mobilepushshort}} service process
