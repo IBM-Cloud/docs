@@ -20,13 +20,13 @@ Last Updated: 1 November 2016
 * The buildpack contains a fix for a problem starting certain types of applications. Specifically, applications deployed as a server directory or a packaged server with the application files in the `dropins` directory.
 
 ### October 21, 2016: Updated Liberty buildpack v3.4-20161018-2004
-* The default Liberty runtime version `16.0.0.3` was updated to include [PI68805](http://www-01.ibm.com/support/docview.wss?uid=swg1PI68805) and [PI69141](http://www-01.ibm.com/support/docview.wss?uid=swg1PI69141) iFixes.
-* The monthly Liberty runtime version was updated to the [2016.9.0.1](https://developer.ibm.com/wasdev/blog/2016/09/23/beta-websphere-liberty-and-tools-october-2016/) release.
+* The default Liberty runtime version `16.0.0.3` was updated to include [PI68805](http://www-01.ibm.com/support/docview.wss?uid=swg1PI68805) and [PI69141](http://www-01.ibm.com/support/docview.wss?uid=swg1PI69141) iFixes. 
+* The monthly Liberty runtime version was updated to the [2016.9.0.1](https://developer.ibm.com/wasdev/blog/2016/09/23/beta-websphere-liberty-and-tools-october-2016/) release. 
 * The buildpack also contains an updated version of IBM JRE 8.0: SR3 FP12.
 * The IBM JRE 8.0 and 7.1 are now configured to enable [all TLS protocols when `SSLContext.getContext("TLS")` is called](https://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/matchsslcontext_tls.html) to match Oracle's JRE behavior. IBM JRE 7.1 is also configured to enable [all TLS protocols when `SSLContext.getDefault()` is called](https://www.ibm.com/support/knowledgecenter/SSYKE2_7.1.0/com.ibm.java.security.component.71.doc/security-component/jsse2Docs/overrideSSLprotocol.html) to match IBM's JRE 8.0 behavior.
 * The buildpack provides an updated data collector for the [Monitoring and Analytics service](../../services/monana/index.html#monana_oview).
 * The buildpack was changed back to download the latest 1.5.x [MariaDB Connector/J JDBC driver](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) when performing [auto-configuration for MySQL type of services](autoConfig.html).
-* The buildpack introduces support for customizing service auto-configuration behavior via the `LBP_SERVICE_CONFIG_<serviceType>` environment variable. For example, it can be used to change the location or version of a JDBC driver to download for the MySQL service. See the documentation of [services that support auto-configuration](autoConfig.html) for more information.
+* The buildpack introduces support for customizing service auto-configuration behavior via the `LBP_SERVICE_CONFIG_<serviceType>` environment variable. For example, it can be used to change the location or version of a JDBC driver to download for the MySQL service. See the documentation of [services that support auto-configuration](autoConfig.html) for more information. 
 * The buildpack also contains a number of [Diego](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) improvements related to application health check and the [App Management](../../manageapps/app_mng.html) functionality.
 
 ### September 16, 2016: Updated Liberty buildpack v3.3-20160912-1729
@@ -41,14 +41,14 @@ Last Updated: 1 November 2016
 * The service plug-in that provides [auto-configuration support](autoConfig.html) for the [SQL Database](../../services/SQLDB/index.html#SQLDB) service was updated to always use the JVM's trusted certificates when connecting to the service over TLS.
 
 ### July 22, 2016: Updated Liberty buildpack v3.1-20160717-2254
-* The [App Management](../../manageapps/app_mng.html) functionality was updated to support federated authentication. Also, the Node.js runtime that is used by the `devconsole` and `shell` utilities was updated to the latest `0.12.15` version.
+* The [App Management](../../manageapps/app_mng.html) functionality was updated to support federated authentication. Also, the Node.js runtime that is used by the `devconsole` and `shell` utilities was updated to the latest `0.12.15` version. 
 * The buildpack adds support for the [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/) application monitoring agent.
 * The buildpack provides an updated data collector for the [Monitoring and Analytics service](../../services/monana/index.html#monana_oview).
-* The buildpack also provides an updated version of the agent for the [Auto-Scaling service](../../services/Auto-Scaling/index.html).
+* The buildpack also provides an updated version of the agent for the [Auto-Scaling service](../../services/Auto-Scaling/index.html). 
 * The monthly Liberty runtime version was updated to the [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/) release.
 
 ### June 17, 2016: Updated Liberty buildpack v3.0-20160608-1450
-* The buildpack now contains two versions of WebSphere Liberty, the latest stable release and the latest monthly release. Specifically, it provides [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) stable release and [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) monthly release. The stable release will be used by default. See [Liberty versions](buildpackDefaults.html#liberty_versions) for additional details.
+* The buildpack now contains two versions of WebSphere Liberty, the latest stable release and the latest monthly release. Specifically, it provides [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) stable release and [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) monthly release. The stable release will be used by default. See [Liberty versions](buildpackDefaults.html#liberty_versions) for additional details. 
 * The buildpack also contains security fixes for the [Apache Standard Taglibs vulnerability](http://www-01.ibm.com/support/docview.wss?uid=swg21985531).
 
 ### May 25, 2016: Updated Liberty buildpack v2.9-20160519-1249
@@ -56,7 +56,7 @@ Last Updated: 1 November 2016
 
 ### May 5, 2016: Updated Liberty buildpack v2.8-20160430-1011
 * The buildpack contains an updated version of WebSphere Liberty based on the [April beta](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/). The updated version of Liberty makes the *logstashCollector-1.0* GA feature and the *logmetCollector-1.0* beta feature available in Bluemix.
-* The buildpack also contains updated versions of IBM JRE: 8 SR3 and 7.1 SR3 FP40.
+* The buildpack also contains updated versions of IBM JRE: 8 SR3 and 7.1 SR3 FP40. 
 * The buildpack adds initial support for the [AppDynamics](https://www.appdynamics.com/) application monitoring agent.
 * The [Dynatrace](dynatrace.html) support was improved to simplify the installation of the agent.
 * The buildpack provides an updated data collector for the [Monitoring and Analytics service](../../services/monana/index.html#monana_oview). It contains a fix for a problem with collection of the max heap data.
@@ -64,10 +64,10 @@ Last Updated: 1 November 2016
 
 ### March 25, 2016: Updated Liberty buildpack v2.7-20160321-1358
 * The buildpack contains an updated version of WebSphere Liberty based on the [March beta](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). The updated version of Liberty makes the cloudant-1.0 beta feature available in Bluemix.
-* The buildpack also contains updated versions of IBM JRE: 8 SR2 FP12 and 7.1 SR3 FP32.
-* The buildpack provides an updated version of the agent for the [Auto-Scaling service](../../services/Auto-Scaling/index.html).
+* The buildpack also contains updated versions of IBM JRE: 8 SR2 FP12 and 7.1 SR3 FP32. 
+* The buildpack provides an updated version of the agent for the [Auto-Scaling service](../../services/Auto-Scaling/index.html). 
 * The buildpack now comes with a new data collector for the [Monitoring and Analytics service](../../services/monana/index.html#monana_oview). The new collector enables configuration of monitoring thresholds and contains a number of bug fixes.
-* The buildpack provides an updated DB2® JDBC driver version 4.19.49.
+* The buildpack provides an updated DB2® JDBC driver version 4.19.49. 
 * The Node.js runtime that is used by the [devconsole and shell App Management utilities](../../manageapps/app_mng.html#app_management) was updated to the latest 0.12.12 version.
 
 ### March 7, 2016: Updated Liberty buildpack v2.6-20160225-1649

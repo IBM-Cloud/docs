@@ -13,7 +13,7 @@ copyright:
 # Environment variables
 {: #environment_variables}
 
-Last Updated: 10 June 2016
+Last Updated: 8 November 2016
 {: .last-updated}
 
 Environment variables supported by Liberty for Java.
@@ -82,6 +82,11 @@ Environment variables supported by Liberty for Java.
 <tr>
 <td>JVM_ARGS</td>
 <td>Set the [JVM arguments](customizingJRE.html)</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_xxxx</td>
+<td>[Override service configuration](autoConfig.html#override_service_config)</td>
 </tr>
 
 <tr>
