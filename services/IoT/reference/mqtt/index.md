@@ -12,7 +12,6 @@ lastupdated: "2016-09-09"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-
 # MQTT messaging
 {: #ref-mqtt}
 
@@ -26,17 +25,7 @@ MQTT runs over TCP/IP, and while it is possible to code directly to TCP/IP, you 
 
 ## Version support
 {: #version-support}
-
-{{site.data.keyword.iot_short_notm}} supports the following versions of the MQTT messaging protocol:
-
-MQTT version | Deviations | Notes
----- | --- | ---
-[3.1.1](https://www.oasis-open.org/standards#mqttv3.1.1) (recommended) | Retained messages are not supported, for example, shared subscriptions. | <ul><li>OASIS Standard.<li>ISO standard (ISO/IEC PRF 20922) <li>Improved interoperability between various clients and severs due to a more precise definition of the protocol compared to V3.1.   <li>The maximum length of the MQTT client identifier (ClientId) is increased to 256 from the 23 character limit that is imposed by V3.1. </br>The {{site.data.keyword.iot_short_notm}} service often requires longer client IDs (ClientId). </br>Long client IDs are supported regardless of the MQTT protocol version, however some V3.1 client libraries check the length of the ClientId value and enforce the 23 character limit.</ul>
-3.1 | - | MQTT V3.1 is the version of the protocol that is in widest use today.
-
-{{site.data.keyword.iot_short_notm}} supports any content that is permitted by the MQTT standard. MQTT is data-agnostic so it's possible to send images, texts in any encoding, encrypted data, and virtually every type of data in binary format. For more information about the MQTT standard, see the following resources:
-- [MQTT.org](http://mqtt.org/)
-- [HiveMQ: Introducing MQTT](http://www.hivemq.com/blog/mqtt-essentials-part-1-introducing-mqtt)
+For information about the versions of MQTT that are supported by  {{site.data.keyword.iot_short_notm}}, see [Standards and requirements](../standards_and_requirements.html#mqtt).
 
 ## Application, device, and gateway clients
 {: #device-app-clients}
@@ -109,3 +98,10 @@ Binary | No restrictions.
 **Important:** The maximum payload size on {{site.data.keyword.iot_short_notm}} is 131072 bytes. Messages with a payload that is greater than the limit are rejected. The connecting client is also disconnected, and a message appears in the diagnostic logs, as outlined in the following device message example:
 
 `Closed connection from x.x.x.x. The message size is too large for this endpoint.`
+
+## MQTT keep alive interval
+{: #mqtt-keep-alive}
+
+The MQTT keep alive interval, which is measured in seconds, defines the maximum time that can pass without communication between the client and broker. The MQTT client must ensure that, in the absence of any other communication with the broker, a PINGREQ packet is sent. The keep alive interval allows both the client and the broker to detect that the network failed, resulting in a broken connection, without needing to wait for the TCP/IP timeout period to be reached.
+
+If your {{site.data.keyword.iot_short_notm}} MQTT clients use shared subscriptions, the keep alive interval value can be set only to between 1 and 3600 seconds. If a value of 0 or a value that is greater than 3600 is requested, the {{site.data.keyword.iot_short_notm}} broker sets the keep alive interval to 3600 seconds.

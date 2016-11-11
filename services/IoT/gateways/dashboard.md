@@ -94,7 +94,7 @@ After you register a gateway with {{site.data.keyword.iot_short_notm}} use the r
 For information about connecting your gateway to {{site.data.keyword.iot_short_notm}}, see [MQTT connectivity for gateways](mqtt.html).
 
 **Tip:** There are a range of recipes available for connecting devices to {{site.data.keyword.iot_short_notm}}. For a list of recipes, see the
-[Device connection recipes](https://developer.ibm.com/recipes/?post_type=tutorials&s=IoT) that are available on IBM.com.
+[Device connection recipes](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) that are available on IBM.com.
 
 
 ## Step 3: Connecting devices through the gateway
