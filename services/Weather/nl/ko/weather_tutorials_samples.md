@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # 예:
 {: #tutorials_samples}
-
-마지막 업데이트 날짜: 2016년 7월 28일
-{: .last-updated}
 
 다음 예제와 함께 {{site.data.keyword.weather_short}} 서비스를 사용하는 방법을 학습합니다.
 {: shortdesc}

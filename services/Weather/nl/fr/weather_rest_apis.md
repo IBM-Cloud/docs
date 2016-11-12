@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-22"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Utilisation d'API REST {{site.data.keyword.weather_short}}
 {: #rest_apis}
-
-Dernière mise à jour : 22 août 2016
-{: .last-updated}
 
 Vous pouvez utiliser les [API REST](https://twcservice.{APPDomain}/rest-api/){:new_window} pour extraire des données météorologiques. Vous pouvez tester le fonctionnement des API et visualiser immédiatement les résultats pour accélérer la génération de vos applications.
 {: shortdesc}

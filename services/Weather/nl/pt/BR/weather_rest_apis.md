@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-22"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Usando as APIs REST do {{site.data.keyword.weather_short}}
 {: #rest_apis}
-
-Última atualização: 22 de agosto de 2016
-{: .last-updated}
 
 É possível usar as [APIs REST](https://twcservice.{APPDomain}/rest-api/){:new_window}
 para recuperar dados de clima. É possível testar operações de API e visualizar instantaneamente os resultados para ajudar a construir seus aplicativos mais rapidamente.
