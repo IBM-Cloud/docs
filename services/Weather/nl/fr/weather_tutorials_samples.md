@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Exemples
 {: #tutorials_samples}
-
-Dernière mise à jour : 28 juillet 2016
-{: .last-updated}
 
 Apprenez à utiliser le service {{site.data.keyword.weather_short}} à l'aide des exemples ci-après.
 {: shortdesc}

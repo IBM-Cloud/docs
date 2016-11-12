@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # 範例
 {: #tutorials_samples}
-
-前次更新：2016 年 7 月 28 日
-{: .last-updated}
 
 瞭解如何搭配使用 {{site.data.keyword.weather_short}} 服務與下列範例。
 {: shortdesc}

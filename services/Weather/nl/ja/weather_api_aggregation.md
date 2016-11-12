@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-15"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # API 集約
 {: #api_aggregation}
-
-*最終更新日: 2016 年 6 月 15 日*
-{: .last-updated}
 
 一部の {{site.data.keyword.weather_short}} API は集約することができます。集約を使用して、複数のアトミック API 呼び出しを結合して単一の HTTP 要求にすることができます。
 {: shortdesc}

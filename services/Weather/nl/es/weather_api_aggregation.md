@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-15"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Agregación de API
 {: #api_aggregation}
-
-*Última actualización: 15 de junio de 2016*
-{: .last-updated}
 
 Algunas API de {{site.data.keyword.weather_short}} se pueden agregar. Puede utilizar la agregación para combinar dos o más llamadas de API
 atómicas en una única solicitud HTTP.
