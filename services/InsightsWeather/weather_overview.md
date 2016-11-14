@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # About Insights for Weather
 {: #about_weather}
-
-*Last updated: 01 July 2016*
-{: .last-updated}
 
 Use Weather Company Data for IBM Bluemix to incorporate weather data from
 The Weather Company (TWC) into your {{site.data.keyword.Bluemix}} applications.

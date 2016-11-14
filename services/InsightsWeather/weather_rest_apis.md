@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # Using the Insights for Weather REST APIs
 {: #rest_apis}
-
-*Last updated: 01 July 2016*
-{: .last-updated}
 
 You can use the [REST APIs](https://twcservice.{APPDomain}/rest-api-deprecated/){:new_window} 
 to retrieve weather data. You can test API operations and instantly view the results to help you build your applications faster.

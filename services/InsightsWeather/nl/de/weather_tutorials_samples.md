@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # Beispiele
 {: #tutorials_samples}
-
-*Letzte Aktualisierung: 6. April 2016*
 
 Lernen Sie anhand der folgenden Beispiele, wie Sie den Service Insights for Weather verwenden können.
 {: shortdesc}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # 例
 {: #tutorials_samples}
-
-*最終更新日: 2016 年 4 月 6 日*
 
 以下の例を用いて、Insights for Weather サービスの使用方法を説明します。
 {: shortdesc}
