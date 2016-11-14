@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # 示例
 {: #tutorials_samples}
-
-*上次更新时间：2016 年 4 月 6 日*
 
 通过以下示例了解如何使用 Insights for Weather 服务。
 {: shortdesc}

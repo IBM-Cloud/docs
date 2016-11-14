@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # 예:
 {: #tutorials_samples}
-
-*마지막 업데이트 날짜: 2016년 4월 6일*
 
 다음의 예에서는 Insights for Weather 서비스를 사용하는 방법을 학습합니다.
 {: shortdesc}

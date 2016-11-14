@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # Informationen zu Insights for Weather
 {: #about_weather}
-
-*Letzte Aktualisierung: 19. Mai 2016*
 
 Verwenden Sie {{site.data.keyword.weatherfull}},
 um Wetterdaten von "The Weather Company" (TWC) in Ihre {{site.data.keyword.Bluemix}}-Anwendungen einzubinden.

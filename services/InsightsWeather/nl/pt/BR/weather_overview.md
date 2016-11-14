@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # Sobre o Insights for Weather
 {: #about_weather}
-
-*Última atualização: 19 maio de 2016*
 
 Use o
 {{site.data.keyword.weatherfull}}

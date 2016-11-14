@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # Utilisation des API REST d'Insights for Weather
 {: #rest_apis}
-
-*Dernière mise à jour : 6 avril 2016*
 
 Vous pouvez utiliser les [API REST d'Insights for Weather](https://twcservice.{APPDomain}/rest-api-deprecated/){:new_window} pour extraire des données météorologiques. Vous pouvez tester le fonctionnement des API et visualiser immédiatement les résultats pour accélérer la génération de vos applications.
 
