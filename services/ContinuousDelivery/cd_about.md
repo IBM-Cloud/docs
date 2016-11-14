@@ -14,7 +14,7 @@ copyright:
 # About {{site.data.keyword.contdelivery_short}}    
 {: #cd_about}  
 
-Last updated: 9 November 2016
+Last updated: 11 November 2016
 {: .last-updated}
 
 {{site.data.keyword.contdelivery_full}} allows you to build, test, and deliver apps using DevOps best practices and leading industry tools. 
@@ -36,7 +36,7 @@ Using the {{site.data.keyword.contdelivery_short}} service, you can complete the
  
  * Improve quality through Insights. 
  
-  Understand build status and code coverage through analytics. Use policy gates to automatically, intelligently maintain code quality.
+  Understand build status, security scan results, code coverage, and test coverage to evaluate whether to promote your app to the next environment. Use policy gates to automatically ensure quality before promotion.
   
  * Maximize uptime and user satisfaction. 
  

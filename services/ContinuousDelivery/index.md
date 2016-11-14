@@ -8,10 +8,10 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Getting started with {{site.data.keyword.contdelivery_short}}
+# Getting started with {{site.data.keyword.contdelivery_short}} (Beta)
 {: #cd_getting_started}
 
-Last updated: 9 November 2016
+Last updated: 11 November 2016
 {: .last-updated}  
 
 {{site.data.keyword.contdelivery_full}} allows your team to adopt a DevOps approach by delivering continuously using toolchains and automated build and deploy. You can create a simple deployment toolchain or a toolchain with a set of tool integrations that support development, deployment, and operations tasks. If you already have toolchains, you can view them to start working with them.
@@ -67,7 +67,7 @@ To [create and configure a continuous delivery toolchain from a template (Link o
 1. On the toolchain creation page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain. The diagram in the following image is an example. When you create a toolchain, the diagram shows each tool integration that is part of the toolchain.
  ![Toolchain_diagram](images/toolchain_diagram.png)
 1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.Bluemix}}. If you want to use a different name, change the toolchain's name.
-1. In the Configurable Integrations section, select each tool integration that you want to configure for your toolchain. Some tool integrations do not require any configuration. For information about configuring the tool integrations, see [Configuring tool integrations (Link opens in a new window)](../../toolchains/toolchains_integrations.html){: new_window}.
+1. In the Configurable Integrations section, select each tool integration that you want to configure for your toolchain. Some tool integrations do not require any configuration. For information about configuring the tool integrations, see [Configuring tool integrations (Link opens in a new window)](../../services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Click **Create**.  Several steps run automatically to set up your toolchain:
 
  * The toolchain is created.
@@ -83,7 +83,7 @@ To [create and configure a continuous delivery toolchain from a template (Link o
 You can view and work with existing toolchains:
 
 1. On the DevOps dashboard, on the **Toolchains** page, click a toolchain to open its Overview page.
-1. You can add, delete, or configure tool integrations and manage access to the toolchain. For more information about working with toolchains, see [Using toolchains on Bluemix Public (Link opens in a new window)](../../toolchains/toolchains_using.html){: new_window}.
+1. You can add, delete, or configure tool integrations and manage access to the toolchain. For more information about working with toolchains, see [Using toolchains on Bluemix Public (Link opens in a new window)](../../services/ContinuousDelivery/toolchains_using.html){: new_window}.
 1. To access a tool integration that is in your toolchain, click the tool's tile.
 
 # Related Links

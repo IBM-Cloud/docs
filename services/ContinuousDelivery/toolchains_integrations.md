@@ -13,7 +13,7 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-Last updated: 9 November 2016
+Last updated: 11 November 2016
 {: .last-updated}
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
@@ -131,7 +131,7 @@ To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webi
 1. Click **Create Integration**.
 1. Click the tile for the new Eclipse Orion {{site.data.keyword.webide}}. Your workspace is pre-populated with your GitHub or {{site.data.keyword.ghe_short}} repos. The repos that are associated with your current toolchain are highlighted.
 
-To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}} (Link opens in a new window)](../toolchains/web_ide.html){: new_window}.
+To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}} (Link opens in a new window)](../../services/ContinuousDelivery/web_ide.html){: new_window}.
 
 
 ## Configuring GitHub
@@ -153,7 +153,7 @@ Configure GitHub to manage your source code on the cloud:
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. 
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **GitHub**.
-1. If you have a GitHub repo and want to use it, type the URL. For the repository type, click **Link**.
+1. If you have a GitHub repo and want to use it, for the repository type, click **Existing**. Then, type the URL.
 1. If you want to use a new GitHub repo, type a name for the GitHub repo, type the URL for the repo that you are cloning or forking, and select the repository type: 
 
  a. To create an empty repo, click **New**. 

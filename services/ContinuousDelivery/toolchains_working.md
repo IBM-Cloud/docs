@@ -8,10 +8,10 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Getting started with toolchains
+# Working with toolchains (Beta)
 {: #toolchains_getting_started}
 
-Last updated: 9 November 2016
+Last updated: 11 November 2016
 {: .last-updated}  
 
 A *toolchain* is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
@@ -37,7 +37,7 @@ You can use a template as a starting point to [create a toolchain (Link opens in
 ![Toolchain diagram](images/toolchain_diagram.png)
 
 1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the toolchain's name.  
-1. In the Configurable Integrations section, select each tool integration that you want to configure for your toolchain. Some tool integrations do not require any configuration. For information about configuring the tool integrations, see [Configuring tool integrations (Link opens in a new window)](../toolchains/toolchains_integrations.html){: new_window}.
+1. In the Configurable Integrations section, select each tool integration that you want to configure for your toolchain. Some tool integrations do not require any configuration. For information about configuring the tool integrations, see [Configuring tool integrations (Link opens in a new window)](../../services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Click **Create**.  Several steps run automatically to set up your toolchain:
 
  * The toolchain is created.
@@ -56,7 +56,7 @@ You can create a toolchain from your app. The toolchain can support continuous d
 1. On your app's Overview page, on the Continuous Delivery tile, click **Enable**. Your app is configured for continuous delivery from a new GitHub repo that is populated with the app starter code.
 1. On the toolchain creation page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the toolchain's name.
-1. In the Configurable Integrations section, select each tool integration that you want to configure for your toolchain. Some tool integrations do not require any configuration. For information about configuring the tool integrations, see [Configuring tool integrations (Link opens in a new window)](../toolchains/toolchains_integrations.html){: new_window}.
+1. In the Configurable Integrations section, select each tool integration that you want to configure for your toolchain. Some tool integrations do not require any configuration. For information about configuring the tool integrations, see [Configuring tool integrations (Link opens in a new window)](../../services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Click **Create**.  Several steps run automatically to set up your toolchain:
 
  * The toolchain is created.
@@ -87,7 +87,7 @@ You can use a template as a starting point to create a toolchain that includes a
 ![Dedicated toolchain diagram](images/toolchain_dedicated_diagram.png)
 
 1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you already have a toolchain with that name, or if you want to use a different name, change the toolchain's name.  
-1. In the Configurable Integrations section, select each tool integration that you want to configure for your toolchain. Some tool integrations do not require any configuration. For information about configuring the tool integrations, see [Configuring tool integrations (Link opens in a new window)](../toolchains/toolchains_integrations.html){: new_window}.
+1. In the Configurable Integrations section, select each tool integration that you want to configure for your toolchain. Some tool integrations do not require any configuration. For information about configuring the tool integrations, see [Configuring tool integrations (Link opens in a new window)](../../services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Click **Create**.  Several steps run automatically to set up your toolchain:
 
  * The toolchain is created.
@@ -107,7 +107,7 @@ You can create a toolchain from your app. The toolchain can support continuous d
 1. In the upper-right corner of your app's Overview page, click **Add Toolchain**. Your app is configured for continuous delivery from a new GitHub Enterprise repo that is populated with the app starter code.
 1. On the toolchain creation page, review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.
 1. Review the default information for the toolchain settings. The toolchain's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you already have a toolchain with that name, or if you want to use a different name, change the toolchain's name.
-1. In the Configurable Integrations section, select each tool integration that you want to configure for your toolchain. Some tool integrations do not require any configuration. For information about configuring the tool integrations, see [Configuring tool integrations (Link opens in a new window)](../toolchains/toolchains_integrations.html){: new_window}.
+1. In the Configurable Integrations section, select each tool integration that you want to configure for your toolchain. Some tool integrations do not require any configuration. For information about configuring the tool integrations, see [Configuring tool integrations (Link opens in a new window)](../../services/ContinuousDelivery/toolchains_integrations.html){: new_window}.
 1. Click **Create**.  Several steps run automatically to set up your toolchain:
 
  * The toolchain is created.

@@ -18,15 +18,13 @@ copyright:
 
 # Working with {{site.data.keyword.deliverypipeline}}s {: #pipeline-working}  
 
-Last Updated: 10 November 2016
+Last Updated: 11 November 2016
 {: .last-updated}
 
-To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use the IBM Continuous {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
+To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-This information applies both to {{site.data.keyword.deliverypipeline}} and to {{site.data.keyword.deliverypipeline}} Next.
-
-With the {{site.data.keyword.deliverypipeline}} service, you can choose from several build types. You provide the build script, and {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.Bluemix_notm}} spaces, public Cloud Foundry servers, or Docker containers on IBM Containers for {{site.data.keyword.Bluemix_notm}}.  
+With {{site.data.keyword.deliverypipeline}}, you can choose from several build types. You provide the build script, and {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.Bluemix_notm}} spaces, public Cloud Foundry servers, or Docker containers on IBM Containers for {{site.data.keyword.Bluemix_notm}}.  
 
 Build jobs compile and package your app source code from Git or Jazz source control management (SCM) repositories. The build jobs produce deployable artifacts, such as WAR files or Docker containers for IBM Containers. In addition, you can run unit tests within your build automatically. Each time the source code changes, a build is triggered.
 
@@ -34,16 +32,43 @@ A deployment job takes output from a build job and deploys it to either IBM Cont
 
 You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} service so that development artifacts use IBM Containers, are tested in one region, and are deployed to production in multiple regions. For more information, see [Regions](../../overview/index.html#ov_intro__reg).
 
-There are several ways to create a pipeline, including adding a pipeline to an existing application and creating a pipeline without an existing application. If you do not already have a {{site.data.keyword.deliverypipeline}} service in your organization, you can go to the catalog, click {{site.data.keyword.deliverypipeline}} or {{site.data.keyword.deliverypipeline}} Next, and click Create.
+There are several ways to create a pipeline, including adding a pipeline to an existing application and creating a pipeline without an existing application. If you do not already have a {{site.data.keyword.deliverypipeline}} service in your organization, you can go to the catalog, click {{site.data.keyword.deliverypipeline}}, and click Create.
 
 Complete these steps to set up a {{site.data.keyword.deliverypipeline}} for an existing application:    
 
-1. On the {{site.data.keyword.Bluemix_notm}} app Dashboard, on the Overview tab, under **Continuous Delivery**, create a Git-hosted project for the app by clicking **Add Git Repo And Pipeline** or **Add Git**, depending on the context.
-1. Make sure that the **Populate the repo with the starter app package and enable the Build & Deploy pipeline** check box is selected and then click **CONTINUE**. You may need to verify your e-mail address to proceed.  
-1. After your Git repository is created, click **CLOSE**. The Add Git button is replaced by an Edit Code button and your Git URL.  
-1. To open the pipeline, click **Edit Code**, and then click **Build & Deploy**. To run the pipeline for the first time, push a change to the Git repository.
+1. On the {{site.data.keyword.Bluemix_notm}} app Dashboard, click your app.
+1. From the hamburger menu, click **Services**, and then click **DevOps**.
+1. Click **Pipelines**, and then click **Create a Pipeline**.
 
-After you add this service, you can create a multi-stage deployment pipeline in your {{site.data.keyword.Bluemix_notm}} spaces by configuring and running stages that contain build, test, and deployment jobs. On the {{site.data.keyword.deliverypipeline}} Dashboard, you can see your {{site.data.keyword.jazzhub_short}} projects and the states that they are in. You can check the status of builds, the deployed app, and recent deployments, or see the most recent logs and deployment details.  
+If you want to create a pipeline that is configured to deploy a Cloud Foundry application:    
+
+1. Select **Cloud Foundry**.  
+1. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the pipeline's default name.
+1. The app's name identifies it in Bluemix. If you want to use a different name, change the app's default name.
+1. If you don't have any existing toolchains, we'll create a toolchain for you. The toolchain will allow you to extend the capabilities of your pipeline by integrating with other tools and services. A default toolchain name is provided. If you want to use a different name, change the toolchain's name.
+1. If you already have toolchains, select the toolchain that you want to use, or enter a name for the new toolchain that you want to create.
+1. Provide the location of your GitHub repo:
+
+  a. If you already have a GitHub repo and want to use it, for the repository type, select **Link**. Search for the location of the repo or select the repo from the list of available repos.
+ 
+  b. If you want to create an empty GitHub repo, for the repository type, select **New**. Type a name for the repo.
+ 
+  c. If you want to create a copy of a GitHub repo, for the repository type, select **Copy**. Search for the location of the repo or select the repo from the list of available repos.
+ 
+  d. If you want to fork a GitHub repo so that you can contribute changes through pull requests, select **Fork**. Search for the location of the repo or select the repo from the list of available repos.
+ 
+1. Click **Create**. The pipeline is created, configured, and represented as a tile on the Toolchain's Overview page. 
+ ![Pipeline tile](images/cd_pipeline.png)
+
+If you want to create an empty pipeline without any pre-configured stages:
+
+ 1. Select **Custom**.
+ 1. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the pipeline's default name.
+ 1. If you don't have any existing toolchains, we'll create a toolchain for you. The toolchain will allow you to extend the capabilities of your pipeline by integrating with other tools and services. A default toolchain name is provided. If you want to use a different name, change the toolchain's name.
+ 1. If you already have toolchains, select the toolchain that you want to use, or enter a name for the new toolchain that you want to create.
+ 1. Click **Create**. An empty pipeline is created and represented as a tile on the Toolchain's Overview page. 
+
+From your {{site.data.keyword.deliverypipeline}} tile, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.  
 
 <article class="topic reference nested1" aria-labelledby="d68e338" lang="en-us" id="rellinks" role="article">
 <h2 class="topictitle2" id="d68e338">Related links</h2>
