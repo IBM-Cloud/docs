@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-11-13"
 
 ---
 {:shortdesc: .shortdesc}
@@ -55,8 +55,8 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	</platform>
 	```
 
-	The *minSdkVersion* value must be `15` or higher. The *targetSdkVersion* value must be the latest Android SDK that is available from Google.
-
+	The *minSdkVersion* value must be `15` or higher. The *targetSdkVersion* value must be `23`. Currently, Cordova does not support versions higher than **Android-23**.
+	
 3. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
 
 	```XML
@@ -92,7 +92,7 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 
 		**Important:** If you receive a message to convert to the latest Swift syntax, click **Cancel**.
 
-	4. Build and run your application with Xcode.
+	2. Build and run your application with Xcode.
 
 	**Note**: You may receive the following error when running `cordova build ios`. This issue is due to a bug in a dependency plugin which is being tracked in [Issue 12](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12). You can still run the iOS project in XCode through a simulator or device.
 
@@ -104,14 +104,16 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 		The device type “iOS Simulator” requires that either “name” or “id” be specified.
 		Please supply either “name” or “id”.
 	```
+	
 6. Verify that the plug-in installed successfully by running the following command:
 
 	```Bash
 	cordova plugin list
 	```
-7. Enable Keychain Sharing for iOS.
-
-  Enable **Keychain Sharing** by going to the  **Capabilities** tab and switch the **Keychain Sharing** to `On`.
+	
+7. Enable Keychain Sharing for iOS by switching **Keychain Sharing** to `On` in the **Capabilities** tab.
+  
+8. Enable **Defines Module** for iOS by switching **Defines Module** to `YES` in the **Build Settings** > **Packaging** tab.
 
 
 ## Initializing the {{site.data.keyword.amashort}} client in the Cordova WebView (Javascript)
