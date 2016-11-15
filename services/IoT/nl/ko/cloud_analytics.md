@@ -13,7 +13,7 @@ copyright:
 
 # 클라우드 분석
 {: #cloud_analytics}
-마지막 업데이트 날짜: 2016년 8월 2일
+마지막 업데이트 날짜: 2016년 8월 23일
 {: .last-updated}
 
 {{site.data.keyword.iot_short}} 클라우드 분석을 사용하면 실시간 디바이스 데이터를 기반으로 하며 충족 시에 경보 및 선택적 조치를 트리거하는 규칙 조건을 지정합니다.     
@@ -21,7 +21,7 @@ copyright:
 
 예를 들어, 디바이스를 떨어뜨리거나 디바이스의 온도가 급등할 때 경보가 사용자 디바이스의 대시보드로 전송되며 이메일이 관리자에게 발송되는지를 확인하는 규칙을 작성할 수 있습니다. 
 
-**중요:** 분석 기능은 {{site.data.keyword.iotrtinsights_full}} 서비스에서 병합됩니다. {{site.data.keyword.iot_short_notm}} 조직이 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스의 데이터 소스로 사용되는 경우 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스가 마이그레이션된 후에야 클라우드 및 에지 분석이 사용됩니다. 마이그레이션이 완료될 때까지 분석이 필요할 때는 계속 {{site.data.keyword.iotrtinsights_short}} 대시보드를 사용하십시오. 자세한 정보는 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스 대시보드 및 IBM developerWorks의 [IBM Watson IoT Platform 블로그](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}를 참조하십시오.   
+**중요:** 분석 기능은 {{site.data.keyword.iotrtinsights_full}} 서비스에서 병합됩니다. {{site.data.keyword.iot_short_notm}} 조직이 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스의 데이터 소스로 사용되는 경우 {{site.data.keyword.iotrtinsights_short}} 인스턴스가 마이그레이션된 후에야 클라우드 및 에지 분석이 사용됩니다. 마이그레이션이 완료될 때까지 분석이 필요할 때는 계속 {{site.data.keyword.iotrtinsights_short}} 대시보드를 사용하십시오. 자세한 정보는 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스 대시보드 및 IBM developerWorks의 [IBM Watson IoT Platform 블로그](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}를 참조하십시오.   
 
 ## 시작하기 전에
 {: #byb}
@@ -63,7 +63,7 @@ copyright:
 
 4. 규칙에 대한 조건부 트리거 요구사항을 구성하십시오.
 일정 기간 동안 규칙에 대해 트리거되는 경보의 수를 제어하기 위해 규칙에 대한 조건부 트리거 요구사항을 구성할 수 있습니다.
-**중요:** 조건부 트리거링은 규칙의 임의의 조건에서 작동합니다. 예를 들어, 규칙에 OR을 사용하여 설정된 다섯 개의 서로 다른 병렬 조건이 있으면 true인 각 조건이 조건부 트리거 개수에 포함됩니다.
+**중요:** 조건부 트리거링은 규칙의 임의의 조건에서 작동합니다. 예를 들어, 규칙에 OR을 사용하여 설정된 다섯 개의 서로 다른 병렬 조건이 있으면 true인 각 조건은 조건부 트리거 개수에 포함됩니다.
 규칙에 대한 조건부 트리거링을 설정하려면 다음을 수행하십시오. 
  1. 규칙 편집기에서 기본 **조건이 충족될 때마다 트리거** 링크를 클릭하여 빈도 설정 요구사항 대화 상자를 여십시오. 
  2. 규칙에서 사용할 조건부 트리거를 선택하고 구성하십시오. 
@@ -95,7 +95,7 @@ copyright:
 첫 시점의 조건이 충족될 때만 트리거되며, 조건이 더 이상 충족되지 않으면 재설정됩니다.  | 규칙은 조건이 충족될 때 트리거되지만, 역시 조건을 충족하는 연속 메시지에 대해서는 트리거되지 않습니다. 
 트리거링 기준은 규칙 조건을 충족하지 않는 첫 번째 메시지에 의해 재설정됩니다.
 
-<!-- Trigger if conditions persist for *M* *days/hours/minutes/custom*. | The rule is triggered when the conditions are met continuously for the selected time interval. </br>The rule is also triggered if the following requirements are met: <ol><li>The rule conditions are first met but are then followed by a time period during which no new messages are received.<li>The no-messages time period exceeds the selected time interval.<li>The message that ends the no-message time period meets the rule conditions.</ol>-->
+*M* *days/hours/minutes/custom*에 대한 조건이 유지되는 경우 트리거하십시오. | 일정 시간 간격 동안 수신된 모든 데이터 점이 조건에 맞거나 추가 데이터 점이 수신되지 않으면 선택한 시간 간격 후에 규칙이 트리거됩니다. 처음에 조건이 충족되면 시간 간격이 시작됩니다.
 
 
 
@@ -174,7 +174,7 @@ IFTTT 조치를 사용하여 규칙이 트리거될 때 IFTTT 레시피를 트�
 키 | 이벤트를 트리거하는 데 사용할 Maker 채널 키입니다.
 이벤트 | Maker 이벤트의 트리거로서 구성된 이벤트 이름입니다. 서로 다른 트리거로 여러 레시피를 작성할 수 있으며, 여기서 각각의 이벤트 이름은 상이합니다.
 값 1-3 | 이러한 매개변수에서 임의의 컨텐츠를 전달할 수 있으며, 이는 IFTTT 레시피의 조치에 전달됩니다. **팁:** [변수 대체](#variable_substitution)를 사용하여 헤더에 추가 데이터를 동적으로 포함할 수 있습니다.
-#### 예제: IFTTT를 사용하여 Trello 카드 게시 {: #iftttex}
+#### 예제: IFTTT를 사용하여 Trello 카드 게시{: #iftttex}
 
 이 예제에서는 IFTTT를 사용하여 Trello의 서비스 요청 목록에 카드를 게시하도록 조치가 구성되어 있습니다. 
 

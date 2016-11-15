@@ -53,7 +53,7 @@ ARM mBed NXP LPC 1768 마이크로 컨트롤러를 {{site.data.keyword.iot_short
 |`org` |조직 ID입니다. 이 값은 필수입니다. Quickstart 플로우를 사용 중인 경우 `quickstart`를 지정하십시오.|
 |`type`   |디바이스 유형입니다. 이 필드는 필수입니다. |
 |`id`   |디바이스 ID입니다. 이 필드는 필수입니다. |
-|`auth-method`   |등록된 플로우에만 필요한 선택적 필드인 인증 메소드입니다. 현재 지원되는 값은 `토큰`뿐입니다.|
+|`auth-method`   |등록된 플로우에만 필요한 선택적 필드인 인증 메소드입니다. 현재 지원되는 값은 `token`입니다.|
 |`auth-token`   |디바이스를 Watson IoT Platform에 안전하게 연결하기 위한 인증 토큰입니다. 이 필드는 등록된 플로우에만 필요한 선택적 필드입니다.|
 
 이러한 매개변수는 {{site.data.keyword.iot_short_notm}} 서비스와 상호작용하는 데 사용되는 정의를 작성합니다.
@@ -138,7 +138,7 @@ ARM mBed NXP LPC 1768 마이크로 컨트롤러를 {{site.data.keyword.iot_short
 
 이벤트는 디바이스가 {{site.data.keyword.iot_short_notm}}에 데이터를 공개하는 데 사용하는 메커니즘입니다. 디바이스에서 이벤트의 컨텐츠를 제어하고 전송하는 각 이벤트의 이름을 지정합니다.
 
-{{site.data.keyword.iot_short_notm}} 인스턴스에서 이벤트를 수신하면 수신된 이벤트의 신임 정보를 통해 전송 디바이스를 식별합니다. 즉, 디바이스가 다른 디바이스로 위장할 수 없습니다.
+{{site.data.keyword.iot_short_notm}} 인스턴스에서 이벤트를 수신할 때 수신된 이벤트의 신임 정보는 전송 중인 디바이스를 식별하며, 이는 디바이스가 다른 디바이스로 위장할 수 없음을 의미합니다. 
 
 이벤트는 MQTT 프로토콜을 통해 정의한 세 개의 [서비스 품질(QoS) 레벨](../../reference/mqtt/index.html#qos-levels)에서 공개할 수 있습니다. 기본적으로 이벤트는 QoS 0에서 공개됩니다.
 
