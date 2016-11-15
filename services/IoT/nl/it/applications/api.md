@@ -46,7 +46,7 @@ L'unica versione dell'API REST HTTP {{site.data.keyword.iot_short_notm}} support
 
 
 
-# API di messaggistica REST HTTP per le applicazioni 
+# API di messaggistica REST HTTP per le applicazioni
 {: #rest_messaging_api}
 
 ## Pubblicazione di eventi e comandi
@@ -58,15 +58,15 @@ In aggiunta all'utilizzo del protocollo di messaggistica MQTT, puoi anche config
 <pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
-### Richiesta POST event sicura 
+### Richiesta POST event sicura
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
-### Richiesta POST command non sicura 
+### Richiesta POST command non sicura
 <pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
-### Richiesta POST command sicura 
+### Richiesta POST command sicura
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
@@ -87,7 +87,7 @@ password = Authentication token
 
 Deve essere fornita un'intestazione della richiesta `Content-Type` con la richiesta. La seguente tabella mostra come i tipi supportati sono associati ai formati interni di {{site.data.keyword.iot_short_notm}}.
 
-|Intestazione Content-Type |Formato in {{site.data.keyword.iot_short_notm}}|
+|Intestazione Content-Type|Formato in {{site.data.keyword.iot_short_notm}}|
 |:---|:---|
 |testo/semplice|"text"
 |applicazione/json| "json"

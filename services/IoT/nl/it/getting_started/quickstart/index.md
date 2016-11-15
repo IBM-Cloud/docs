@@ -37,7 +37,7 @@ http://quickstart.internetofthings.ibmcloud.com/iotsensor
 
 Quando ti colleghi all'URL del dispositivo simulato su un dispositivo mobile, viene avviato un dispositivo simulato basato sul browser collegato a {{site.data.keyword.iot_short}}. Utilizza i seguenti controlli della IU per gestire i sensori:
 
-- Temperatura 
+- Temperatura
 - Umidità
 - Temperatura oggetto
 

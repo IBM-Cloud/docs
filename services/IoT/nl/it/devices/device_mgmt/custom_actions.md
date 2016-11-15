@@ -21,7 +21,7 @@ Puoi estendere le funzionalità di gestione del dispositivo in {{site.data.keywo
 Per impostazione predefinita, le seguenti azioni di gestione del dispositivo vengono fornite e supportate da {{site.data.keyword.iot_short_notm}}:
 - Riavvio dispositivo
 - Reimpostazione fabric
-- Scaricamento firmware 
+- Scaricamento firmware
 - Aggiornamento firmware
 
 Se le azioni del dispositivo predefinite fornite da {{site.data.keyword.iot_short_notm}} non sono sufficienti per le tue applicazioni e i tuoi dispositivi, puoi sviluppare ulteriori funzionalità di gestione del dispositivo implementando un pacchetto di estensione di gestione del dispositivo.
@@ -73,29 +73,29 @@ Un pacchetto di estensione di gestione del dispositivo contiene le seguenti prop
 
 |Proprietà|Descrizione|Obbligatorio
 |:---|:---|:---|
-|`bundleId`|Identificativo univoco per un estensione di gestione del dispositivo. |Sì |
+|`bundleId`|Identificativo univoco per un estensione di gestione del dispositivo.|Sì|
 |`version`|Stringa della versione per un estensione di gestione del dispositivo.|No|
 |`provider`|Stringa del provider per un estensione di gestione del dispositivo, limitata a 1024 caratteri.|No|
-|`displayName`|Associazione di coppie valore-chiave `locale`: `String` visualizzate nel dashboard {{site.data.keyword.iot_short_notm}}. Devi specificare almeno una voce.|Sì |
+|`displayName`|Associazione di coppie valore-chiave `locale`: `String` visualizzate nel dashboard {{site.data.keyword.iot_short_notm}}. Devi specificare almeno una voce.|Sì|
 |`description`|Associazione di coppie valore-chiave `locale`: `String` utilizzate per la visualizzazione nel dashboard {{site.data.keyword.iot_short_notm}}. Se definito, devi specificare almeno una voce.|No|
-|`actions`| Associazione di coppie valore-chiave `actionId`: `<action>` che definiscono le azioni contenute in un'estensione di gestione del dispositivo. Devi specificare almeno una voce.|Sì |
+|`actions`| Associazione di coppie valore-chiave `actionId`: `<action>` che definiscono le azioni contenute in un'estensione di gestione del dispositivo. Devi specificare almeno una voce.|Sì|
 
 ### Proprietà per ogni azione:
 
 |Proprietà|Descrizione|Obbligatorio
 |:---|:---|
-|`actionDisplayName`|Associazione di coppie valore-chiave `locale`: `String` visualizzate nel dashboard {{site.data.keyword.iot_short_notm}}. Devi specificare almeno una voce.|Sì |
+|`actionDisplayName`|Associazione di coppie valore-chiave `locale`: `String` visualizzate nel dashboard {{site.data.keyword.iot_short_notm}}. Devi specificare almeno una voce.|Sì|
 |`description`|Associazione di coppie valore-chiave `locale`: `String` utilizzate per la visualizzazione nel dashboard {{site.data.keyword.iot_short_notm}}. Facoltativo. Devi specificare almeno una voce.|No|
 |`parameters`|Array di parametri consentiti per un'azione in particolare. Se definito, devi specificare almeno una voce.|No|
 
-### Proprietà per ogni parametro dell'azione: 
+### Proprietà per ogni parametro dell'azione:
 
 |Proprietà|Descrizione|Obbligatorio
 |:---|:---|
-|`name`|Identificativo univoco per un parametro in un'azione |Sì |
+|`name`|Identificativo univoco per un parametro in un'azione|Sì|
 |`value`|Espressione regolare utilizzata per convalidare i valori del parametro quando viene avviata una richiesta. Se non specificato, la convalida non viene effettuata.|No|
-|`required`|Il valore booleano che determina se il parametro è obbligatorio. Il valore è impostato per impostazione predefinita su false.  |No|
-|`defaultValue`|Il valore da utilizzare se il parametro non viene fornito quando una richiesta viene avviata |No|
+|`required`|Il valore booleano che determina se il parametro è obbligatorio. Il valore è impostato per impostazione predefinita su false. |No|
+|`defaultValue`|Il valore da utilizzare se il parametro non viene fornito quando una richiesta viene avviata|No|
 
 **Nota:** i valori `bundleId`, `version`, `actionId` e `parameterId` possono contenere un massimo di 255 caratteri e possono essere formati da solo caratteri alfanumerici (a-z, A-Z, 0-9) e dai seguenti caratteri speciali:
  - trattino (-)
@@ -162,7 +162,7 @@ Per avviare le azioni di gestione del dispositivo personalizzate, utilizza il se
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-Devi fornire le seguenti informazioni quando avvii una richiesta: 
+Devi fornire le seguenti informazioni quando avvii una richiesta:
 
 - L'azione `<bundleId>/<actionId>`
 - Un elenco di dispositivi su cui avviare l'azione, al massimo 5000 dispositivi

@@ -26,11 +26,11 @@ Per utilizzare le funzioni {{site.data.keyword.iot_short}} come le regole e le a
 ## Aggiunta di uno schema del dispositivo
 {: #add_schema}
 
-Per aggiungere uno schema:   
+Per aggiungere uno schema:  
 1. Vai a **Devices > Manage Schemas** e fai clic su **Add Schema**.  
 2. Seleziona un tipo di dispositivo da associare a questo schema del messaggio. **Importante:** può essere definito solo uno schema per tipo di dispositivo.
 
-3. Aggiungi una o più proprietà.
+3. Aggiungi una o più proprietà.  
     Puoi selezionare le proprietà dal dispositivo collegato, creare proprietà virtuali per modificare o da combinare a proprietà esistenti o aggiungere le proprietà manualmente.  
 
     **Suggerimento:** le proprietà disponibili sono definite nel payload dei messaggi inviati da un dispositivo. Per informazioni sul formato del payload {{site.data.keyword.iot_short}}, consulta l'argomento [Message payload](reference/mqtt/index.html#message-payloadl "Message payload.").   
@@ -48,7 +48,7 @@ Per aggiungere uno schema:
    <!--<li>Event - A specific event to collect data for. Leave blank to collect for all events.</li>-->
    <li>Proprietà - L'identificativo della proprietà, ad esempio:  
  `temp` o `speed`  </br> Per informazioni su come identificare la proprietà dai messaggi del dispositivo, consulta [Identifying properties for your devices](#identify-datapoints "Identify properties.").</li>
-  <li>Unità di dati - Facoltativo: l'unità di dati della proprietà. Ad esempio:   
+  <li>Unità di dati - Facoltativo: l'unità di dati della proprietà. Ad esempio:  
      `C` o `Mph`  </li>
      <li> Posizioni decimali - Facoltativo, solo float: il numero di numeri decimali da includere nel dati del dispositivo.</li>
     </ul>
@@ -66,7 +66,7 @@ Per aggiungere uno schema:
     <li>Nome - Un nome descrittivo per la proprietà che viene utilizzato nei dashboard, menu e procedure guidate di {{site.data.keyword.iot_short}}.</li>
     <li>Tipo di dati - Il tipo di dati della proprietà:  
  `Float` o `Integer`.</li>
- <li>Proprietà - Un identificativo della proprietà per la proprietà virtuale. Ad esempio:   
+ <li>Proprietà - Un identificativo della proprietà per la proprietà virtuale. Ad esempio:  
 `temp_virt`</li>
     <li>Calcolo - Aggiungi uno o più componenti per definire una funzione valida. Puoi utilizzare le proprietà, i valori numerici e gli operatori matematici come +, -, \*, /, (, ) e AVG per creare il tuo calcolo. Il componente AVG viene utilizzato per calcolare il valore della proprietà medio per un periodo di tempo specificato.</br> **Importante:** il componente AVG restituisce solo i punti dati della proprietà se i dati per la proprietà selezionata provengono da un dispositivo collegato a un gateway con installato un EAA (Edge Analytics Agent). Per ulteriori informazioni, consulta [Installazione dell'agent di analisi edge](gateways/dashboard.html#edge).</li>
     <li>Unità di dati - Facoltativo: l'unità di dati della proprietà. Ad esempio: `C` o `Mph`</li>
@@ -82,17 +82,17 @@ Per aggiungere uno schema:
     <li>Seleziona la scheda **From Connected**.</li>  
     <li>Seleziona una o più proprietà da aggiungere allo schema. Queste proprietà possono essere modificate per impostare gli attributi, come il nome o l'unità di dati.  
 <!--**Important:** Each property must be unique for a schema. If you select multiple occurrences of the same property for different events, only one of the selected properties is added to the schema.</li>-->
-  <li>Fai clic su **OK** per creare la proprietà. </li>
+  <li>Fai clic su **OK** per creare la proprietà.</li>
   </ol>
   </dd>
     <dd>Le proprietà selezionate vengono aggiunte e la descrizione è impostata sul nome della proprietà. Fai clic sulla proprietà nell'elenco per modificarla e aggiungi ulteriori attributi, come il tipo di sensore, il tipo di dati e il numero di posizioni decimali.</dd>
   </dl>
-8. Fai cli su **Finish** per creare lo schema del messaggio. 
+8. Fai cli su **Finish** per creare lo schema del messaggio.
 
-## Identificazione delle proprietà per i tuoi dispositivi. 
+## Identificazione delle proprietà per i tuoi dispositivi.
 {: #identify-datapoints}
    Le proprietà per un dispositivo possono essere trovate nel dashboard {{site.data.keyword.iot_short}}.
 
 1. Nel dashboard {{site.data.keyword.iot_short}}, vai a **Devices**.
 2. Fai clic su un dispositivo per aprire una pagina che mostra i dettagli del dispositivo.
-3. Scorri verso il basso fino alla sezione **Sensor Information** per visualizzare un elenco di proprietà disponibili per un dispositivo collegato. 
+3. Scorri verso il basso fino alla sezione **Sensor Information** per visualizzare un elenco di proprietà disponibili per un dispositivo collegato.
