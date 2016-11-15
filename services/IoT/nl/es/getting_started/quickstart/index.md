@@ -78,6 +78,7 @@ Mientras se esté ejecutando el proceso anterior, puede crear el dispositivo. En
     [user@host ~]$ mosquitto_pub -h quickstart.messaging.internetofthings.ibmcloud.com -p 1883 -i "d:quickstart:mosquitto:myDeviceId" -t iot-2/evt/helloworld/fmt/json -m "{\"helloworld\": 2}"
 ```
 Cuando busque en el terminal de aplicaciones, se mostrarán los dos sucesos que acaba de publicar, tal como se describe en el resultado de ejemplo siguiente:
+
 ```
    [user@host ~]$ mosquitto_sub -h quickstart.messaging.internetofthings.ibmcloud.com -p 1883 -i "a:quickstart:myApplicationId" -t iot-2/type/mosquitto/id/myDeviceId/evt/helloworld/fmt/json
     {"helloworld": 1}
@@ -90,7 +91,7 @@ Eso es todo. Al completar el procedimiento de ejemplo de Inicio rápido, habrá:
 - Recibido el suceso en la aplicación
 
 
-## Enlaces afines
+## Enlaces relacionados
 
 - [Inicio rápido](https://quickstart.internetofthings.ibmcloud.com)
 - [Recetas de DeveloperWorks](https://developer.ibm.com/recipes)

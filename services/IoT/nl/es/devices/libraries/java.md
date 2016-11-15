@@ -14,11 +14,11 @@ copyright:
 # Java para desarrolladores de dispositivos
 {: #java}
 
-Última actualización: 02 de agosto de 2016
+Última actualización: 18 de octubre de 2016
 {: .last-updated}
 
 
-Puede utilizar Java para crear y personalizar dispositivos que interactúan con su organización en {{site.data.keyword.iot_full}}. Utilice la información y los ejemplos que se proporcionan para empezar a desarrollar los dispositivos mediante Java.
+Puede crear y personalizar dispositivos que interactúan con su organización en {{site.data.keyword.iot_full}} utilizando Java. Se proporciona una biblioteca de cliente de Java para {{site.data.keyword.iot_short_notm}}, documentación y ejemplos para ayudarle a comenzar con el desarrollo de dispositivos.
 {:shortdesc}
 
 ## Descarga del cliente y los recursos de Java
@@ -26,26 +26,29 @@ Puede utilizar Java para crear y personalizar dispositivos que interactúan con 
 
 Para acceder a las bibliotecas y a los ejemplos de cliente Java para {{site.data.keyword.iot_short_notm}}, vaya al repositorio [iot-java](https://github.com/ibm-watson-iot/iot-java) en GitHub y complete las instrucciones de instalación.
 
-
 ## Constructor
 {: #constructor}
 
-El constructor compila la instancia del cliente y acepta un objeto de propiedades que contiene las siguientes definiciones:
+El constructor compila la instancia del cliente y acepta el objeto `Propiedades`, que contiene las siguientes definiciones:
 
 |Definición |Descripción |
-|:---|:---|
-|`org` |El ID de la organización. Este campo es obligatorio. Si está utilizando un flujo de Quickstart, especifique `quickstart`.|
-|`type`  |El tipo del dispositivo. Este campo es obligatorio.|
-|`id`  |El ID del dispositivo. Este campo es obligatorio.|
-|`auth-method`   |El método de autenticación que debe utilizarse. El único valor al que se da soporte actualmente es `token`.|
-|`auth-token`   |Una señal de autenticación para conectar de forma segura el dispositivo a Watson IoT Platform.|
-|`clean-session`|Un valor true o false que sólo es necesario si desea conectar la aplicación en modalidad de suscripción duradera. De forma predeterminada, `clean-session` se establece en `true`.|
+|:----|:----|
+|`org` |Un valor necesario que debe establecerse en el ID de la organización. Si está utilizando un flujo de Quickstart, especifique `quickstart`.|
+|`type`  |Un valor obligatorio que especifica el tipo de dispositivo.|
+|`id`  |Un valor obligatorio que especifica el ID exclusivo del dispositivo.|
+|`auth-method`  |El método de autenticación que debe utilizarse. El único método al que se da soporte es `token`.|
+|`auth-token`   |Una señal de autenticación para conectar de forma segura el dispositivo a {{site.data.keyword.iot_short_notm}}.|
+|`clean-session`|Un valor true o false que sólo es necesario si desea conectar la aplicación en modalidad de suscripción duradera. De forma predeterminada, `clean-session` se establece en true.|
+|`Port`|El número de puerto al que conectarse. Especifique 8883 o 443. Si no especifica un número de puerto, el cliente se conectará a {{site.data.keyword.iot_short_notm}} en el número de puerto 8883 de forma predeterminada.|
+|`MaxInflightMessages`  |Establece el número máximo de mensajes en vuelo para la conexión. El valor predeterminado es 100.|
+|`Automatic-Reconnect`  |Un valor true o false que es necesario cuando desea que el dispositivo se conecte automáticamente a {{site.data.keyword.iot_short_notm}} mientras se encuentra en un estado desconectado. El valor predeterminado es false.|
+|`Disconnected-Buffer-Size`|El número máximo de mensajes que se pueden almacenar en memoria mientras el cliente está desconectado. El valor predeterminado es 5000.|
 
 **Nota:** Para conectar el dispositivo en modalidad de suscripción duradera, establezca `clean-session` en `false`. Para obtener más información sobre la sesión limpia, consulte la sección 'Almacenamientos intermedios de suscripción y sesión limpia' de la [documentación de MQTT](../../reference/mqtt/index.html#subscription-buffers-and-clean-session).
 
-El objeto de propiedades crea definiciones utilizadas para interactuar con el módulo de {{site.data.keyword.iot_short_notm}}.
+El objeto `Propiedades` crea definiciones que se utilizan para interactuar con el módulo de {{site.data.keyword.iot_short_notm}}.
 
-El código siguiente muestra sucesos de publicación de dispositivos en modalidad de Inicio rápido.
+El ejemplo de código siguiente muestra cómo pueden publicar los dispositivos sucesos en la modalidad de Inicio rápido.
 
 ```
 package com.ibm.iotf.sample.client.device;
@@ -139,7 +142,7 @@ public class RegisteredDeviceEventPublish {
 
 ### Utilización de un archivo de configuración
 
-En lugar de utilizar un objeto de propiedades directamente, puede utilizar un archivo de configuración que contenga los pares name-value para las propiedades. Si está utilizando un archivo de configuración que contiene un objeto de propiedades, utilice el siguiente formato de código:
+En lugar de utilizar el objeto `Propiedades` directamente, puede utilizar un archivo de configuración que contenga los pares name-value para las propiedades. Si está utilizando un archivo de configuración que contiene el objeto `Propiedades`, utilice el siguiente formato de código:
 
 ```
 package com.ibm.iotf.sample.client.device;
@@ -194,15 +197,28 @@ El contenido del archivo de configuración debe estar en el formato siguiente:
 ## Conexión con {{site.data.keyword.iot_short_notm}}
 {: #connecting_to_iotp}
 
-Conéctese a la {{site.data.keyword.iot_short_notm}} invocando la función de conexión. La función de conexión toma un parámetro booleano opcional `autoRetry`, que es `true` de forma predeterminada. El parámetro `autoRetry` permite que la biblioteca vuelva a conectarse cuando se produzca un error MqttException. Tenga en cuenta que la biblioteca no intenta volver a conectarse cuando se produce un error de MqttSecurityException porque se han utilizado detalles de registro de dispositivos incorrectos, incluso si el parámetro `autoRetry` se establece en `true`.
+
+Para conectarse a {{site.data.keyword.iot_short_notm}}, utilice la función `connect()`. La función `connect()` incluye un parámetro booleano opcional que se llama `autoRetry`, que determina si la biblioteca intenta volver a conectarse cuando haya un fallo de conexión a MqttException. De forma predeterminada, `autoRetry` se establece en true. Si falla una conexión MqttSecurityException porque se pasan detalles de registro de dispositivos incorrectos, la biblioteca no intentará volver a conectarse, incluso aunque `autoRetry` esté establecido en true.
+
+Para establecer el intervalo 'keep alive' para MQTT, puede utilizar opcionalmente el método `setKeepAliveInterval(int)` antes de llamar a la función `connect()`. El valor `setKeepAliveInterval(int)` se mide en segundos, y define el intervalo de tiempo máximo entre mensajes que se han enviado o recibido. Cuando se utiliza, el cliente puede detectar cuándo ya no está disponible el servidor sin esperar a que finalice el periodo de tiempo de espera de TCP/IP. El cliente garantiza que al menos un mensaje viaja por la red dentro de cada periodo de intervalo de 'keep alive'. Si se reciben mensajes relacionados con datos cero durante el periodo de tiempo de espera, el cliente envía un mensaje `ping` pequeño, el cual reconoce el servidor. El `setKeepAliveInterval(int)` se establece en 60 segundos de forma predeterminada. Para inhabilitar la característica de proceso 'keep alive' en el cliente, establezca el valor `setKeepAliveInterval(int)` en 0.
+
 
 ```
 DeviceClient myClient = new DeviceClient(options);
-
+myClient.setKeepAliveInterval(120);
 myClient.connect(true);
 ```
 
-Tras la correcta conexión con el servicio de {{site.data.keyword.iot_short_notm}}, el cliente del dispositivo puede realizar operaciones como, por ejemplo, publicar sucesos y suscribirse a los mandatos de dispositivos desde una aplicación.
+Para controlar el número de reintentos que se producen cuando hay una anomalía de conexión, utilice la función overloaded connect(int numberOfTimesToRetry).
+
+
+```
+DeviceClient myClient = new DeviceClient(options);
+myClient.setKeepAliveInterval(120);
+myClient.connect(10);
+```
+
+Una vez que los dispositivos se hayan conectado correctamente a {{site.data.keyword.iot_short_notm}}, pueden publicar sucesos y suscribirse a mandatos de dispositivos desde una aplicación.
 
 
 ## Publicación de sucesos
@@ -212,7 +228,7 @@ Los sucesos son el mecanismo por el que los dispositivos publican datos en el {{
 
 Cuando una instancia de {{site.data.keyword.iot_short_notm}} recibe un suceso, las credenciales del suceso recibido identifican el dispositivo de envío, lo que significa que un dispositivo no puede suplantar a otro dispositivo.
 
-Los sucesos se pueden publicar en cualquiera de los tres [niveles de calidad de servicio (QoS)](../../reference/mqtt/index.html#qos-levels) definidos por el protocolo MQTT. De forma predeterminada, los sucesos se publican en QoS=0.
+Los sucesos se pueden publicar en cualquiera de los tres [niveles de calidad de servicio (QoS)](../../reference/mqtt/index.html#qos-levels) definidos por el protocolo MQTT.  De forma predeterminada, los sucesos se publican en QoS=0.
 
 ### Sucesos de publicación en el nivel QoS predeterminado
 
@@ -230,7 +246,7 @@ myClient.publishEvent("status", event);
 
 ### Aumentar el nivel de QoS para un suceso
 
-Puede aumentar los [niveles de QoS](../../reference/mqtt/index.html#qos-levels) para los sucesos que se publican. Los sucesos que tienen un nivel de QoS mayor que cero pueden tardar un poco más en publicarse, debido a la información de recepción de confirmación adicional que se incluye.
+Puede aumentar los [niveles de QoS](../../reference/mqtt/index.html#qos-levels) para los sucesos que se publican. Los sucesos con un nivel de QoS mayor que cero pueden tardar un poco más en publicarse, debido a la información de recepción de confirmación adicional que se incluye.
 
 ```
 myClient.connect();
@@ -244,13 +260,43 @@ event.addProperty("mem",  70);
 myClient.publishEvent("status", event, 2);
 ```
 
+### Publicación de sucesos en formatos personalizados
+
+Los sucesos se pueden publicar en distintos formatos, por ejemplo, JSON, serie, binario, etc. De forma predeterminada, la biblioteca publica sucesos en formato JSON, pero puede especificar los datos en distintos formatos si lo prefiere. Por ejemplo, para publicar datos en el formato de serie, utilice el siguiente fragmento de código.
+
+```
+myClient.connect();
+
+String data = "cpu:"+getProcessCpuLoad();
+status = myClient.publishEvent("load", data, "text", 2);
+```
+
+**Nota:** En el ejemplo de código anterior, la carga útil del suceso debe estar en formato de serie.
+
+Cualquier dato XML se puede convertir a formato serie y publicarse como se indica a continuación:
+
+```
+status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
+```
+
+De forma similar, para publicar sucesos en formato binario, utilice la matriz de bytes que se describe en el ejemplo siguiente:
+
+```
+myClient.connect();
+
+byte[] cpuLoad = new byte[] {30, 35, 30, 25};
+status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
+```
+
 ### Publicar sucesos utilizando HTTP
+{: #publishing_events_http}
 
-Además de MQTT, los dispositivos pueden publicar sucesos en la {{site.data.keyword.iot_short_notm}} utilizando HTTP y utilizando los pasos siguientes:
 
-* Construir una instancia de DeviceClient utilizando el archivo de propiedades.
-* Construir un suceso que debe publicarse.
-* Especificar el nombre del suceso y publicarlo mediante el método `publishEventOverHTTP()`, como se muestra en el código siguiente:
+Además de utilizar MQTT, también puede configurar los dispositivos para publicar sucesos en {{site.data.keyword.iot_short_notm}} mediante HTTP. En los pasos siguientes se describe la secuencia para publicar sucesos a través de HTTP:
+
+1. Construir una instancia de `DeviceClient` utilizando el archivo de propiedades.
+2. Construir un suceso que debe publicarse.
+3. Especificar el nombre de archivo y, a continuación, publicar el suceso utilizando el método `publishEventOverHTTP()`, como se muestra en el ejemplo de código siguiente:
 
 ``` sourceCode
 DeviceClient myClient = new DeviceClient(deviceProps);
@@ -260,14 +306,14 @@ event.addProperty("name", "foo");
 event.addProperty("cpu",  90);
 event.addProperty("mem",  70);
 
-int httpCode = myClient.publishEventOverHTTP("blink", event);
+boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-Puede encontrar todo el código en el ejemplo de dispositivo [HttpDeviceEventPublish].
+Para ver todo el código, consulte el ejemplo de dispositivo [HttpDeviceEventPublish].
 
-En función de los valores del archivo de propiedades, el método `publishEventOverHTTP()` publica el suceso en modalidad de Inicio rápido o en modalidad de flujo registrado. Cuando el ID de organización en el archivo de propiedades es `quickstart`, el método `publishEventOverHTTP()` publica el suceso en el servicio de inicio rápido de ejemplo del dispositivo y publica el suceso en formato HTTP sin formato. Cuando se utiliza una organización registrada válida en el archivo de propiedades, este método siempre publica el suceso en HTTPS, que es HTTP a través de SSL, de forma que toda la comunicación está protegida.
+En función de los valores del archivo de propiedades, el método `publishEventOverHTTP()` publica el suceso en modalidad de Inicio rápido o en modalidad de flujo registrado. Cuando el ID de organización en el archivo de propiedades se establece en `quickstart`, el método `publishEventOverHTTP()` publica el suceso en el servicio de inicio rápido de ejemplo del dispositivo y publica el suceso en formato HTTP sin formato. Cuando se especifica una organización registrada válida en el archivo de propiedades, los sucesos se publicarán de forma segura mediante HTTPS.
 
-El protocolo HTTP proporciona una entrega 'at most once', que es similar al nivel de calidad de servicio 'at most once' (QoS 0) del protocolo MQTT. Al utilizar la entrega 'at most once' para publicar sucesos, la aplicación debe implementar la lógica de reintento cuando se produce un error.
+El protocolo HTTP proporciona una entrega 'at most once', que es similar al nivel de calidad de servicio 'at most once' (QoS 0) del protocolo MQTT. Al utilizar la entrega 'at most once' para publicar sucesos, la aplicación debe implementar la lógica de reintento siempre que haya un error.
 
 [HttpDeviceEventPublish]: https://github.com/ibm-messaging/iot-device-samples/blob/master/java/device-samples/src/main/java/com/ibm/iotf/sample/client/device/HttpDeviceEventPublish.java
 
@@ -275,7 +321,7 @@ El protocolo HTTP proporciona una entrega 'at most once', que es similar al nive
 {: #handling_commands}
 
 Cuando el cliente de dispositivo se conecta, se suscribe automáticamente a todos los mandatos para este dispositivo. Para procesar mandatos específicos, necesita registrar un método callback de mandatos.
-Los mensajes se devuelven como una instancia de la clase Command, que tiene las siguientes propiedades:
+Los mensajes se devuelven como una instancia de la clase `Command`, que contiene las siguientes propiedades:
 
 | Propiedad     |Tipos de datos     | Descripción|
 |----------------|----------------|
@@ -362,4 +408,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## Ejemplos
 {: #samples}
 
-Para obtener una lista de dispositivos y de ejemplos de gestión de dispositivos desarrollados utilizando la biblioteca de clientes Java de {{site.data.keyword.iot_short_notm}}, consulte el [repositorio de GitHub](https://github.com/ibm-messaging/iot-device-samples/tree/master/java).
+Para obtener una lista de dispositivos y de ejemplos de gestión de dispositivos desarrollados utilizando la biblioteca de clientes Java de {{site.data.keyword.iot_short_notm}}, consulte el [repositorio de GitHub iot-device-samples](https://github.com/ibm-messaging/iot-device-samples/tree/master/java).

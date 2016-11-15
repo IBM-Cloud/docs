@@ -54,10 +54,10 @@ Pulse **Mostrar más** para obtener la lista completa de tipos de tarjeta.
  1.	Otorgue al conjunto de datos un nombre de identificación.
  2. Seleccione un suceso que incluya el punto de datos que desea visualizar.
  3.	Seleccione la propiedad que representa el punto de datos.
- 4.	Establezca el tipo, la unidad, la precisión y los valores mínimo y máximo para el punto de datos.
+ 4.	Establezca el tipo, la unidad, la precisión y los valores mínimo y máximo para el punto de datos.  
  Cuando haya terminado, puede pulsar **Nuevo conjunto de datos** para añadir más conjuntos de datos o pulse **Siguiente**.
-5.	Seleccione la visualización.
-Seleccione el tipo y el tamaño de visualización que desea utilizar. Algunos tipos de tarjetas tienen más valores.
+5.	Seleccione la visualización.  
+Seleccione el tipo y el tamaño de visualización que desea utilizar.  Algunos tipos de tarjetas tienen más valores.
 <dl>
 <dt>Uso</dt>
 <dd>
@@ -107,7 +107,7 @@ Seleccione el tipo y el tamaño de visualización que desea utilizar. Algunos ti
 <tbody>
 <tr>
 <td>Visualización genérica</td>
-<td>El valor de uno o más conjuntos de datos. </br>**Consejo:** Para ver hasta tres valores de punto de datos en una tabla pequeña, elija el tamaño grande de widgets. </td>
+<td>El valor de uno o más conjuntos de datos. </br>**Consejo:** Para ver hasta tres valores de punto de datos en una tabla pequeña, elija el tamaño grande de widgets.  </td>
 </tr>
 <tr>
 <td>Gráfico en tiempo real</td>
@@ -127,7 +127,7 @@ Seleccione el tipo y el tamaño de visualización que desea utilizar. Algunos ti
 </tr>
 <tr>
 <td>Indicador</td>
-<td>El valor de un conjunto de datos que se muestra en forma de medidor. Puede configurar la visualización de umbrales para los valores good, fair, y critical del conjunto de datos. Utilice el menú Valores para establecer opcionalmente umbrales de medidor para los rangos de datos lower, middle y upper. </td>
+<td>El valor de un conjunto de datos que se muestra en forma de medidor. Puede configurar la visualización de umbrales para los valores good, fair, y critical del conjunto de datos. Utilice el menú Valores para establecer opcionalmente umbrales de medidor para los rangos de datos lower, middle y upper.  </td>
 </tr>
 </tbody>
 </table>
@@ -179,7 +179,7 @@ Seleccione el tipo y el tamaño de visualización que desea utilizar. Algunos ti
 </dd>
 </dl>
 
-6. Especifique el origen de datos para la tarjeta.
+6. Especifique el origen de datos para la tarjeta.  
 Dependiendo del tipo de tarjeta seleccionado, los datos que se visualizan en una tarjeta pueden provenir de un dispositivo o de otra tarjeta. Seleccione un dispositivo específico o una lista de dispositivos o una tarjeta de lista de alertas para el origen de datos y, a continuación, pulse **Siguiente**.
 7. Sólo tarjetas de tipo de dispositivos: Añada uno o varios conjuntos de datos a visualizar en la tarjeta.   
  1. Pulse **Conectar conjunto de datos** para añadir una propiedad a visualizar en la tarjeta.
@@ -188,7 +188,7 @@ Dependiendo del tipo de tarjeta seleccionado, los datos que se visualizan en una
  4. Escriba o seleccione la propiedad para mostrar.
  5. Especifique el tipo de la propiedad y, opcionalmente, la unidad del conjunto, la precisión y los valores mínimo y máximo para la propiedad.  
  6. Pulse **Siguiente**.
-7. Seleccione el tamaño de presentación.
+7. Seleccione el tamaño de presentación.   
 Para determinados tipos de tarjeta, puede pulsar **Valores** para configurar detalles de visualización adicionales. Pulse **Siguiente**.
 7. Proporcione un título y una descripción para la tarjeta y, opcionalmente, seleccione un esquema de color y pulse **Enviar** para crear la tarjeta.
 7.	Finalmente, coloque la tarjeta nueva en el tablero arrastrándola a una buena ubicación.  

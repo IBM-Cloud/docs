@@ -92,7 +92,7 @@ Los sucesos son el mecanismo por el que los dispositivos publican datos en el {{
 
 Cuando una instancia de {{site.data.keyword.iot_short_notm}} recibe un suceso, las credenciales del suceso recibido identifican el dispositivo de envío, lo que significa que un dispositivo no puede suplantar a otro dispositivo.
 
-Los sucesos se pueden publicar con cualquiera de los tres niveles de calidad de servicio (QoS) definidos por el protocolo MQTT. De forma predeterminada, los sucesos se publican con un nivel de QoS de `0`.
+Los sucesos se pueden publicar con cualquiera de los tres niveles de calidad de servicio (QoS) definidos por el protocolo MQTT.  De forma predeterminada, los sucesos se publican con un nivel de QoS de `0`.
 
 ### Publicar un suceso utilizando la calidad de servicio predeterminada
 

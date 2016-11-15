@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-21"
 
 ---
 
@@ -13,10 +14,11 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
-Última actualización: 30 de agosto de 2016
+Última actualización: 21 de octubre de 2016
 {: .last-updated}
 
 El {{site.data.keyword.iot_full}} es un servicio disponible en {{site.data.keyword.Bluemix}}. Puede acceder al panel de instrumentos de la organización de {{site.data.keyword.iot_short_notm}} utilizando el panel de instrumentos de {{site.data.keyword.Bluemix_notm}}. Como servicio de {{site.data.keyword.Bluemix_notm}}, {{site.data.keyword.iot_short_notm}} se puede integrar con otros servicios alojados en {{site.data.keyword.Bluemix_notm}}. Se pueden encontrar detalles de las integraciones específicas de servicio de terceros en las [Integraciones de servicio externas](/extensions/index.html)
+{:shortdesc}
 
 ## Forma en la que el {{site.data.keyword.iot_short_notm}} funciona con {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-work}
@@ -37,26 +39,24 @@ El {{site.data.keyword.iot_short_notm}} tiene suministros para un nivel de servi
 
 El {{site.data.keyword.iot_short_notm}} ofrece dos modelos de tarifas: Gratis y Estándar. La tarifa Gratis de {{site.data.keyword.iot_short_notm}} permite hasta 20 dispositivos registrados, 100 MB de datos intercambiados, y un máximo de 10 aplicaciones enlazadas.
 
-La tarifa Estándar de {{site.data.keyword.iot_short_notm}} permite un número ilimitado de dispositivos registrados, 100 MB de datos intercambiados de forma gratuita, y un coste por MB de datos intercambiados después de los primeros 100 MB.
+La tarifa de {{site.data.keyword.iot_short_notm}} permite un número ilimitado de dispositivos registrados, 100 MB de datos intercambiados de forma gratuita, y un coste por MB de datos intercambiados después de los primeros 100 MB.
 
-Para obtener más información sobre la tarifa Estándar de {{site.data.keyword.iot_short_notm}}:
+Para obtener más información sobre la tarifa de {{site.data.keyword.iot_short_notm}}:
 
-1. En el panel de instrumentos de {{site.data.keyword.Bluemix_notm}}, pulse en el {{site.data.keyword.iot_short_notm}}.
+1. En el panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el {{site.data.keyword.iot_short_notm}}.
 2. Desde el menú de navegación de la izquierda, seleccione **Plan**.
 
 Aparecerán los planes de precios.
 
-Para obtener más información sobre la facturación y las tarifas de {{site.data.keyword.Bluemix_notm}}, consulte [Detalles de precios de {{site.data.keyword.Bluemix_notm}}](https://console.stage1.ng.bluemix.net/docs/pricing/index.html).
-
-# Enlaces afines
+# Enlaces relacionados
 {: #rellinks}
 
 
-## Enlaces afines
+## Enlaces relacionados
 {: #general}
 
 * [Seguridad de {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [Seguridad de la plataforma de {{site.data.keyword.Bluemix_notm}}](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [Seguridad de la plataforma de {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [Conformidad de {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Seguridad de Softlayer](http://www.softlayer.com/security){:new_window}
-* [Conformidad de Softlayer](http://www.softlayer.com/compliance){:new_window}
+* [Seguridad de {{site.data.keyword.BluSoftlayer}}](http://www.softlayer.com/security){:new_window}
+* [Conformidad de {{site.data.keyword.BluSoftlayer}}](http://www.softlayer.com/compliance){:new_window}

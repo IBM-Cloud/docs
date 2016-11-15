@@ -13,7 +13,7 @@ copyright:
 
 # Conexión de dispositivos
 {: #iotplatform_task}
-Última actualización: 13 de septiembre de 2016
+Última actualización: 08 de septiembre de 2016
 {: .last-updated}
 
 Antes de empezar a recibir datos desde los dispositivos de IoT, debe conectarlos a {{site.data.keyword.iot_full}}. La conexión de un dispositivo a {{site.data.keyword.iot_short_notm}} implica el registro del dispositivo con {{site.data.keyword.iot_short_notm}} y, a continuación, el uso de la información de registro para configurar el dispositivo para conectarlo a {{site.data.keyword.iot_short_notm}}.
@@ -21,11 +21,11 @@ Antes de empezar a recibir datos desde los dispositivos de IoT, debe conectarlos
 
 ## Antes de empezar
 {: #byb}
- 
+
 Antes de iniciar el proceso de conexión, debe asegurarse de que los dispositivos cumplan los siguientes requisitos para comunicarse con {{site.data.keyword.iot_short_notm}}:
 
 - El dispositivo debe poder comunicarse enviando mensajes de dispositivo en [formato MQTT](reference/mqtt/index.html).
-- Los mensajes del dispositivo deben ajustarse a los requisitos de [carga útil de mensaje](reference/mqtt/index.html#message-payload) de {{site.data.keyword.iot_short_notm}}.
+- Los mensajes del dispositivo deben ajustarse a los requisitos de [carga útil de mensaje](reference/mqtt/index.html#/message-payload) {{site.data.keyword.iot_short_notm}}.
 
 Complete los pasos siguientes para conectar el dispositivo a {{site.data.keyword.iot_short_notm}}.
 
@@ -47,24 +47,24 @@ Para añadir un dispositivo desde el panel de instrumentos de {{site.data.keywor
 2. En la página de servicio, pulse **Iniciar panel de instrumentos** para iniciar la administración de la organización de {{site.data.keyword.iot_short_notm}}.
 
 3. En el panel de instrumentos Visión general, desde el panel del menú, seleccione **Dispositivos** y, a continuación, pulse **Añadir dispositivo**.
-5. Seleccione o cree un tipo de dispositivo para el dispositivo que está añadiendo.
-Cada dispositivo conectado al {{site.data.keyword.iot_short_notm}} debe estar asociado con un tipo de dispositivo. Los tipos de dispositivos son grupos de dispositivos que comparten características comunes.
+5. Seleccione o cree un tipo de dispositivo para el dispositivo que está añadiendo.  
+Cada dispositivo conectado al {{site.data.keyword.iot_short_notm}} debe estar asociado con un tipo de dispositivo. Los tipos de dispositivos son grupos de dispositivos que comparten características comunes.  
 Al añadir el primer dispositivo a la organización de {{site.data.keyword.iot_short_notm}}, no habrá disponibles tipos de dispositivos en el menú **Tipo de dispositivo**. Primero debe crear un tipo de dispositivo:
  1. Pulse **Crear tipo de dispositivo**.
  2. Especifique un nombre como, por ejemplo, `my_device_type` y una descripción para el tipo de dispositivo.
- 3. Opcional: Especifique los atributos y metadatos de tipo de dispositivo.
+ 3. Opcional: Especifique los atributos y metadatos de tipo de dispositivo.    
  **Consejo:** Puede añadir y editar atributos y metadatos más tarde.
  4. Pulse **Crear** para añadir el nuevo tipo de dispositivo.
 10. Pulse **Siguiente** para empezar el proceso de adición de su dispositivo con el tipo de dispositivo seleccionado.
-11. Especifique un ID de dispositivo. **Consejo:** Para los dispositivos conectados a la red, esto podría ser, por ejemplo, la dirección MAC del dispositivo sin dos puntos de separación.
+11. Especifique un ID de dispositivo. **Consejo:** Para los dispositivos conectados a la red, esto podría ser, por ejemplo, la dirección MAC del dispositivo sin dos puntos de separación.  
 Este ID de dispositivo se utiliza para identificar el dispositivo en el panel de instrumentos de {{site.data.keyword.iot_short_notm}} y también un parámetro obligatorio para conectar el dispositivo a {{site.data.keyword.iot_short_notm}}.
-12. Opcional: Pulse **Campos adicionales** para añadir información de dispositivo, como por ejemplo el número de serie, el fabricante, el modelo, etc.
+12. Opcional: Pulse **Campos adicionales** para añadir información de dispositivo, como por ejemplo el número de serie, el fabricante, el modelo, etc.  
  **Consejo:** Puede añadir y editar esta información más tarde.
-12. Opcional: Especifique los metadatos JSON de dispositivo.
+12. Opcional: Especifique los metadatos JSON de dispositivo.  
  **Consejo:** Puede añadir y editar metadatos de dispositivo más tarde.
 13. Pulse **Siguiente** para completar la adición de su dispositivo.
-14. Verifique que la información de resumen sea correcta y, a continuación, pulse **Añadir** para añadir la conexión.
-**Consejo:** Tiene la opción de aceptar una señal de autenticación generada automáticamente o de proporcionar una señal de autenticación usted mismo. Si decide crear su propia señal, asegúrese de que se encuentre entre los 8 y 36 caracteres, que contenga una mezcla de letras en mayúscula y minúscula, números, y guión, subrayado o punto. La señal no debe contener secuencias de caracteres repetidos, palabras de diccionario, nombres de usuario ni otras secuencias predefinidas.
+14. Verifique que la información de resumen sea correcta y, a continuación, pulse **Añadir** para añadir la conexión.  
+**Consejo:** Tiene la opción de aceptar una señal de autenticación generada automáticamente o de proporcionar una señal de autenticación usted mismo. Si decide crear su propia señal, asegúrese de que consta sólo de caracteres alfanuméricos y de cualquiera de los siguientes caracteres especiales: guión (-), subrayado (_), signo de exclamación (!), carácter &amp;amp; (&), carácter @ (@), signo de interrogación (?), asterisco (*), signo más (+), punto ( . ), o paréntesis derecho e izquierdo. La señal no debe contener secuencias de caracteres repetidos, palabras de diccionario, nombres de usuario ni otras secuencias predefinidas.
 15. En la página de información de dispositivos, copie y guarde la siguiente información de dispositivos:  
  - ID de organización, como por ejemplo `tubo8x`
  - Tipo de dispositivo, como por ejemplo `my_device_type`

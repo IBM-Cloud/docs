@@ -27,7 +27,7 @@ Están disponibles los siguientes roles de usuario estándares:
 
 Rol de usuario | Descripción
 ------------- | -------------
-Administrador | Un rol 'superusuario' que otorga acceso a todas las API relacionadas con el usuario. Los administradores no pueden acceder a operaciones restringidas a dispositivos y aplicaciones.
+Administrador | Un rol 'superusuario' que otorga acceso a todas las API relacionadas con el usuario. Los administradores no pueden acceder a operaciones restringidas a dispositivos y aplicaciones. 
 Operador | Pensado para usuarios de organizaciones frontales. Otorga acceso a la mayoría de las operaciones de organización, operaciones de control de acceso, operaciones de analíticas, operaciones de terceros y operaciones de gestión de riesgos.
 Desarrollador | Otorga acceso no restringido a operaciones de dispositivo, operaciones de registro, operaciones de memoria caché, operaciones de historian, operaciones de analíticas y operaciones de servicio de terceros. El rol proporciona acceso limitado a las operaciones de la organización, control de acceso y gestión de riesgos.
 Analista | Otorga acceso a las operaciones de analíticas, incluidas la creación, actualización y supresión de reglas, acciones y esquemas.
@@ -54,6 +54,7 @@ Programa de fondo de confianza | Está pensado para aplicaciones que no requiere
 Procesador de datos | Está pensado para las aplicaciones que realizan el proceso de analíticas y de datos. Se ha otorgado acceso limitado a las aplicaciones del procesador de datos a operaciones de organizaciones y de usuarios, pero tienen acceso completo a las operaciones de analíticas, incluidas las reglas de creación y de gestión, las reglas, acciones y esquemas.
 Visualización | Está pensada para aplicaciones que son responsables de generar visualizaciones de datos. Las aplicaciones de visualización tienen acceso a operaciones activas y almacenadas y a operaciones de panel de instrumentos.
 Dispositivo | Pensado para aplicaciones que toman el rol de dispositivos; es decir, que proporcionan un origen de los datos que se envían al {{site.data.keyword.iot_short_notm}} como si se tratara de un dispositivo. Sólo se otorga a las aplicaciones de dispositivo acceso limitado a las operaciones.
+
 Para obtener más información sobre el acceso de las operaciones de los roles de aplicación, consulte [Roles de aplicación](reference/app_roles_access.html).
 
 ## Roles de pasarela

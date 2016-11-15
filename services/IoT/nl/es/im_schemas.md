@@ -30,7 +30,7 @@ Para añadir un esquema:
 1. Vaya a **Dispositivos > Gestionar esquemas** y pulse **Añadir esquema**.  
 2. Seleccione un tipo de dispositivo para asociarlo con este esquema de mensaje. **Importante:** Sólo se puede definir un esquema para un tipo de dispositivo.
 
-3. Añada una o varias propiedades.
+3. Añada una o varias propiedades.  
     Puede seleccionar propiedades desde un dispositivo conectado, crear propiedades virtuales que modifiquen o combinen propiedades existentes, o añadir propiedades manualmente.  
 
     **Consejo:** Las propiedades disponibles se definen en la carga útil de los mensajes enviados por un dispositivo. Para obtener información sobre el formato de carga útil de {{site.data.keyword.iot_short}}, consulte el tema [Carga útil del mensaje](reference/mqtt/index.html#message-payloadl "Carga útil del mensaje.").   
@@ -39,7 +39,7 @@ Para añadir un esquema:
   <p><b>Consejo:</b> Para crear una estructura de propiedad anidada, añada en primer lugar una propiedad que tenga el tipo de datos Padre. En la tabla de propiedades, podrá pulsar ![Añadir icono hijo.](images/add_child.png "Añadir hijo") para añadir una o varias propiedades hijo.</p>
   <dd>
   <ol>
-    <li>Seleccione el separador **Manual**. </li>
+    <li>Seleccione el separador **Manual**.</li>
     <li>Defina los siguientes detalles de propiedades:
     <ul>  
       <li>Nombre: Un nombre descriptivo para la propiedad utilizada en los paneles de instrumentos, menús y asistentes de {{site.data.keyword.iot_short}}.</li>
