@@ -94,7 +94,7 @@ Os valores de *appId*, *type_id*, *device_type* e *device_id* devem ter no máxi
 - Caracteres alfanuméricos (a-z, A-Z, 0-9)
 - Traços (-)
 - Sublinhados (_)
-- Pontos (.)
+- Pontos (. )
 
 **Notas:**
 - Ao se conectar ao serviço de iniciação rápida, autenticação não é necessária.

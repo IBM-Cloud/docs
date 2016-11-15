@@ -58,7 +58,7 @@ Um aplicativo poderá publicar eventos como se eles viessem de qualquer disposit
 
 Para portabilidade de dados existentes de um dispositivo para o {{site.data.keyword.iot_short_notm}}, é possível criar um aplicativo para processar os dados e publicá-los no {{site.data.keyword.iot_short_notm}}.
 
-**Importante:** a carga útil da mensagem limita-se a no máximo 131072 bytes. As mensagens que excederem o limite serão rejeitadas.
+**Importante:** a carga útil da mensagem limita-se a no máximo 131072 bytes.  As mensagens que excederem o limite serão rejeitadas.
 
 ## Publicando comandos de dispositivo
 {: #publishing_device_commands}

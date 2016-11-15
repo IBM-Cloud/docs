@@ -14,7 +14,7 @@ copyright:
 
 # Conectividade MQTT para dispositivos
 {: #mqtt}
-Última atualização: 09 de setembro de 2016
+Última atualização: 21 de setembro de 2016
 {: .last-updated}
 
 MQTT é o protocolo primário que dispositivos e aplicativos usam para se comunicar com o {{site.data.keyword.iot_full}}. Bibliotecas do cliente, informações e amostras são fornecidas para ajudá-lo a conectar e integrar seus dispositivos com o {{site.data.keyword.iot_short_notm}}.
@@ -65,8 +65,8 @@ Os dispositivos publicam nos tópicos de eventos no formato a seguir:
 
 Em que
 
--  **event_id** é o ID do evento, por exemplo `status`. O ID de evento pode ser qualquer sequência válida em MQTT. Se caracteres curinga não forem usados, os aplicativos de assinante devem usar essa sequência em seu tópico de assinatura para receber os eventos que são publicados em seu tópico.
--  **format_string** é o formato da carga útil do evento, por exemplo, `json`. O formato pode ser qualquer sequência válida em MQTT. Se caracteres curinga não forem usados, os aplicativos de assinante deverão usar essa sequência em seu tópico de assinatura para receber eventos que são publicados em seu tópico.
+-  **event_id** é o ID do evento, por exemplo `status`.  O ID de evento pode ser qualquer sequência válida em MQTT. Se caracteres curinga não forem usados, os aplicativos de assinante devem usar essa sequência em seu tópico de assinatura para receber os eventos que são publicados em seu tópico.
+-  **format_string** é uma sequência que define o tipo de conteúdo da carga útil da mensagem, de modo que o receptor da mensagem pode determinar como analisar o conteúdo. Os valores de tipo de conteúdo comuns incluem, mas não estão limitados a "json", "xml", "txt" e "csv". O valor pode ser qualquer sequência válida em MQTT.
 
 **Importante:** a carga útil da mensagem limita-se a no máximo 131072 bytes. Mensagens maiores que esse limite são rejeitadas.
 
@@ -80,8 +80,8 @@ Os dispositivos podem assinar tópicos de comando no formato a seguir:
 {: codeblock}
 
 Em que
- - **command_id** é o ID do comando, por exemplo, `update`. O ID do comando pode ser qualquer sequência válida no protocolo MQTT. Se caracteres curinga não forem usados, um dispositivo deverá usar essa sequência em seu tópico de assinatura para receber comandos que são publicados em seu tópico.
- - **format_string** é o formato da carga útil do comando, por exemplo, `json`. O formato pode ser qualquer sequência válida no protocolo MQTT. Se caracteres curinga não forem usados, um dispositivo deverá usar essa sequência em seu tópico de assinatura para receber comandos que são publicados em seu tópico.
+ - **command_id** é o ID do comando, por exemplo, `update`. O ID do comando pode ser qualquer sequência válida no protocolo MQTT.  Se caracteres curinga não forem usados, um dispositivo deverá usar essa sequência em seu tópico de assinatura para receber comandos que são publicados em seu tópico.
+ - **format_string** é uma sequência que define o tipo de conteúdo da carga útil de comando, de modo que o receptor do comando pode determinar como analisar o conteúdo. Os valores de tipo de conteúdo comuns incluem, mas não estão limitados a "json", "xml", "txt" e "csv". O valor pode ser qualquer sequência válida em MQTT.
 
 Os dispositivos não podem assinar eventos de outros dispositivos. Um dispositivo recebe comandos que são publicados apenas em seu próprio dispositivo.
 
@@ -98,7 +98,8 @@ As mensagens com QoS=0 podem ser descartadas e não persistem após a reiniciali
 
 O {{site.data.keyword.iot_short_notm}} publica solicitações que têm um nível de QoS (qualidade de serviço) igual a 1 para suportar o enfileiramento de mensagens. Para enfileirar mensagens enviadas enquanto um dispositivo gerenciado não está conectado, configure o dispositivo para não usar sessões limpas, configurando o parâmetro `cleansession` como false.
 
-**Aviso:** se seu dispositivo gerenciado usar uma assinatura durável, quaisquer comandos de gerenciamento de dispositivo enviados a seu dispositivo enquanto ele estiver off-line serão relatados como operações com falha se o dispositivo não se reconectar ao serviço antes que a solicitação atinja o tempo limite. No entanto, quando o dispositivo se reconectar, essas solicitações serão processadas pelo dispositivo. Uma assinatura durável é especificada pelo parâmetro `cleansession=false`.
+**Aviso:**
+se o seu dispositivo gerenciado usar uma assinatura durável, qualquer comando que for enviado para seu dispositivo enquanto ele estiver off-line será relatado como operação com falha se o dispositivo não se reconectar ao serviço antes de o tempo da solicitação ser atingido. No entanto, quando o dispositivo se reconectar, essas solicitações serão processadas pelo dispositivo. Uma assinatura durável é especificada pelo parâmetro `cleansession=false`.
 
 ### Tópicos
 

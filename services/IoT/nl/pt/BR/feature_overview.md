@@ -58,7 +58,7 @@ Usando a API (interface de programação de aplicativos) de cache do último eve
 
 ### Armazenamento de dados do evento de dispositivo
 
-Os dados de evento de dispositivo de seu serviço do {{site.data.keyword.iot_short_notm}} podem ser armazenados para uso posterior. O armazenamento de dados é uma primeira etapa essencial para realizar análises de dados criteriosas para obter insights a partir desses dados. Por exemplo, é possível rastrear mudanças por períodos de tempo mais longos e armazenar conjuntos de dados para uso com ferramentas de análise de dados poderosas, incluindo uso com APIs (interfaces de programação de aplicativos) do Watson e computação cognitiva.
+Os dados de evento de dispositivo de seu serviço do {{site.data.keyword.iot_short_notm}} podem ser armazenados para uso posterior. O armazenamento de dados é uma primeira etapa essencial para realizar análises de dados criteriosas para obter insights a partir desses dados.  Por exemplo, é possível rastrear mudanças por períodos de tempo mais longos e armazenar conjuntos de dados para uso com ferramentas de análise de dados poderosas, incluindo uso com APIs (interfaces de programação de aplicativos) do Watson e computação cognitiva.
 
 ---
 
