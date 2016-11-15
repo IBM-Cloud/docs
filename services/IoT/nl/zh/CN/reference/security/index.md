@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-10-21"
 
 ---
 
@@ -14,10 +15,11 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} 安全
 {: #sec-index}
-上次更新时间：2016 年 8 月 5 日
+上次更新时间：2016 年 10 月 21 日
 {: .last-updated}
 
 作为基于云的服务，{{site.data.keyword.iot_full}} 嵌入了安全性作为其体系结构的重要方面。
+{: shortdesc}
 
 以下文档回答了有关如何保护组织数据的一些常见问题，重点介绍了以下具体方面：
 
@@ -29,9 +31,9 @@ copyright:
 ## {{site.data.keyword.iot_short_notm}} 和 {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}} 在 {{site.data.keyword.Bluemix_notm}} 平台内运行，因此依赖于 {{site.data.keyword.Bluemix_notm}} 和 IBM SoftLayer 来进行访问和连接。对 {{site.data.keyword.Bluemix_notm}} 和 IBM SoftLayer 的依赖性使得 {{site.data.keyword.Bluemix_notm}} 和 IBM SoftLayer 安全性和可靠性对于 {{site.data.keyword.iot_short_notm}} 的用户至关重要
+{{site.data.keyword.iot_short_notm}} 在 {{site.data.keyword.Bluemix_notm}} 平台内运行，因此依赖于 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer_full}} 来进行访问和连接。对 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer}} 的依赖性使得 {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.BluSoftlayer}} 安全性和可靠性对于 {{site.data.keyword.iot_short_notm}} 的用户至关重要
 
-有关 {{site.data.keyword.Bluemix_notm}} 的安全性的更多详细信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 平台安全性](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security)。
+有关 {{site.data.keyword.Bluemix_notm}} 的安全性的更多详细信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 平台安全性](https://console.ng.bluemix.net/docs/security/index.html#platform-security)。
 
 ## {{site.data.keyword.iot_short_notm}} 安全合规性
 {: #compliance}  
@@ -67,9 +69,11 @@ copyright:
 ## 如何确保设备安全地连接到 {{site.data.keyword.iot_short_notm}}？
 {: #secure-device-connection}
 
-{{site.data.keyword.iot_short_notm}} 支持通过 TLS V1.2 连接。连接的设备使用 clientId 以及向平台添加设备时生成的认证令牌的组合。MQTT V3.1.1 用于在很多平台和语言之间实现简单的互操作性。
+连接的设备使用 clientId 以及向平台添加设备时生成的认证令牌的组合。MQTT V3.1.1 用于在很多平台和语言之间实现简单的互操作性。{{site.data.keyword.iot_short_notm}} 支持通过 TLS V1.2 连接。
 
 ![映像 (image)](connectivity_platform.svg)
+
+有关 TLS 和密码套件需求的更多信息，请参阅`与 Watson IoT Platform 的应用程序、设备和网关连接`文档中的 [TLS 需求](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements)部分。
 
 ## 如何阻止 IoT 设备之间出现数据泄漏？
 {: #prevent-leak-devices}
@@ -103,7 +107,7 @@ copyright:
 {: #general}
 * [{{site.data.keyword.iot_short_notm}} 入门](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 安全性](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} 平台安全性](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} 平台安全性](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 合规性](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Softlayer 安全性](http://www.softlayer.com/security){:new_window}
-* [Softlayer 合规性](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 安全性](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 合规性](http://www.softlayer.com/compliance){:new_window}
