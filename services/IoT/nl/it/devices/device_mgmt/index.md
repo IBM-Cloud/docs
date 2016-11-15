@@ -547,16 +547,16 @@ Topic: iotdm-1/response
 
 I dispositivi possono richiedere che {{site.data.keyword.iot_short_notm}} elimini tutte le voci di log utilizzando il tipo di richiesta di eliminazione dei log.
 
-### Argomento per una richiesta di eliminazione dei log 
+### Argomento per una richiesta di eliminazione dei log
 
 
-Un dispositivo pubblica una richiesta di eliminazione dei log nel seguente argomento: 
+Un dispositivo pubblica una richiesta di eliminazione dei log nel seguente argomento:
 
 ```
 iotdevice-1/clear/diag/log
 ```
 
-### Il formato del messaggio per una richiesta di eliminazione dei log 
+### Il formato del messaggio per una richiesta di eliminazione dei log
 
 
 Formato richiesta:
@@ -582,7 +582,7 @@ Topic: iotdm-1/response
 }
 ```
 
-### Codici di risposta per una richiesta di eliminazione dei log 
+### Codici di risposta per una richiesta di eliminazione dei log
 
 |Codice di risposta |Messaggio |
 |:---|:---|
@@ -598,16 +598,16 @@ Topic: iotdm-1/response
 
 **Importante:** i dispositivi devono implementare, osservare, inviare notifiche e annullare le operazioni per supportare i tipi di richiesta [Azioni firmware - Aggiornamento](requests.html#firmware-actions-update).
 
-### Argomento per una richiesta di osservazione delle modifiche dell'attributo 
+### Argomento per una richiesta di osservazione delle modifiche dell'attributo
 
 
-Il server pubblica una richiesta di osservazione delle modifiche dell'attributo nel seguente argomento: 
+Il server pubblica una richiesta di osservazione delle modifiche dell'attributo nel seguente argomento:
 
 ```
 iotdm-1/observe
 ```
 
-### Il formato del messaggio per una richiesta di osservazione delle modifiche dell'attributo 
+### Il formato del messaggio per una richiesta di osservazione delle modifiche dell'attributo
 
 
 L'array `fields` è un array degli attributi del dispositivo dal modello del dispositivo. Se viene specificato un campo complesso, come ad esempio `mgmt.firmware`, è previsto che i relativi campi sottostanti siano aggiornati nello stesso momento in modo che sia generato un solo messaggio di notifica.
@@ -661,17 +661,17 @@ Il parametro `message` deve essere specificato nella risposta se il valore del p
 
 **Importante:** i dispositivi devono implementare, osservare, inviare notifiche e annullare le operazioni per supportare i tipi di richiesta [Azioni firmware - Aggiornamento](requests.html#firmware-actions-update).
 
-### Argomento per una richiesta di annullamento dell'osservazione dell'attributo 
+### Argomento per una richiesta di annullamento dell'osservazione dell'attributo
 
 
-Il server pubblica una richiesta di annullamento dell'osservazione dell'attributo nel seguente argomento:  
+Il server pubblica una richiesta di annullamento dell'osservazione dell'attributo nel seguente argomento:
 
 ```
 iotdm-1/cancel
 ```
 
 
-### Il formato del messaggio per una richiesta di annullamento dell'osservazione dell'attributo 
+### Il formato del messaggio per una richiesta di annullamento dell'osservazione dell'attributo
 
 
 Formato richiesta:
@@ -705,7 +705,7 @@ Topic: iotdevice-1/response
 
 
 
-## Richieste di notifica delle modifiche dell'attributo 
+## Richieste di notifica delle modifiche dell'attributo
 {: #observations-notify}
 
 {{site.data.keyword.iot_short_notm}} può effettuare una richiesta di osservazione per un attributo specifico o impostare un insieme di valori utilizzando il tipo di richiesta di notifica delle modifiche dell'attributo. Quando il valore dell'attributo o degli attributi viene modificato, il dispositivo deve inviare una notifica che contiene il valore più recente.
@@ -717,17 +717,17 @@ Quando la richiesta di notifica viene elaborata positivamente, il valore del par
 **Importante:** i dispositivi devono implementare, osservare, inviare notifiche e annullare le operazioni per supportare i tipi di richiesta [Azioni firmware - Aggiornamento](requests.html#firmware-actions-update).
 
 
-### Argomento per una richiesta di notifica delle modifiche dell'attributo 
+### Argomento per una richiesta di notifica delle modifiche dell'attributo
 
 
-Un dispositivo pubblica una richiesta di notifica delle modifiche dell'attributo nel seguente argomento: 
+Un dispositivo pubblica una richiesta di notifica delle modifiche dell'attributo nel seguente argomento:
 
 ```
 iotdevice-1/notify
 ```
 
 
-### Il formato del messaggio per una richiesta di notifica delle modifiche dell'attributo 
+### Il formato del messaggio per una richiesta di notifica delle modifiche dell'attributo
 
 
 Formato richiesta:
@@ -757,12 +757,12 @@ Topic: iotdm-1/response
 }
 ```
 
-### Codici di risposta per una richiesta di notifica delle modifiche dell'attributo 
+### Codici di risposta per una richiesta di notifica delle modifiche dell'attributo
 
 |Codice di risposta |Messaggio |
 |:---|:---|
 |200   |L'operazione è riuscita.|
 |400   |Il messaggio di input non corrisponde al formato previsto o uno dei valori è fuori dall'intervallo valido.|
-|404   |Il nome dell'argomento non è corretto o il dispositivo non è nel database oppure non esiste un'osservazione per il campo che è stato riportato |
+|404   |Il nome dell'argomento non è corretto o il dispositivo non è nel database oppure non esiste un'osservazione per il campo che è stato riportato|
 |409   |Si è verificato un conflitto durante l'aggiornamento del database del dispositivo. Per risolvere questo conflitto, semplifica l'operazione se necessario.|
 |500   |Si è verificato un errore interno|

@@ -19,7 +19,7 @@ copyright:
 
 [Quickstart](https://quickstart.internetofthings.ibmcloud.com/#/)는 디바이스를 신속하게 {{site.data.keyword.iot_full}}에 연결하는 데 사용할 수 있는 개방형 샌드박스입니다. 디바이스에서 MQTT 메시징 프로토콜을 지원하는 경우 Quickstart에 쉽게 연결할 수 있습니다.
 
-예를 들어, 여러 다른 디바이스를 Quickstart 서비스에 연결하는 방법을 설명하는 참조서 및 튜토리얼을 보려면 [DeveloperWorks Recipes](https://developer.ibm.com/recipes/)로 이동하십시오. 예를 들어 다음과 같습니다.
+예를 들어, 여러 다른 디바이스를 Quickstart 서비스에 연결하는 방법을 설명하는 레시피 및 튜토리얼을 보려면 [DeveloperWorks Recipes](https://developer.ibm.com/recipes/)로 이동하십시오. 예를 들어 다음과 같습니다.
 
 - [OpenBlocks IoT BX1G](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/)
 - [Reactive Blocks](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
@@ -29,7 +29,7 @@ copyright:
 
 ## 시뮬레이션된 디바이스
 
-Quickstart 참조서 및 튜토리얼 외에도, 웹 브라우저로 디바이스를 Quickstart 서비스에 연결하는 데 사용하는 모바일 디바이스의 브라우저 기반 시뮬레이션된 디바이스도 제공됩니다. 휴대전화 또는 태블릿에서 {{site.data.keyword.iot_short}}에 연결하는 브라우저 기반 시뮬레이션된 디바이스를 시작하려면 다음 URL을 여십시오.
+Quickstart 레시피 및 튜토리얼 외에도, 웹 브라우저로 디바이스를 Quickstart 서비스에 연결하는 데 사용하는 모바일 디바이스의 브라우저 기반 시뮬레이션된 디바이스도 제공됩니다. 휴대전화 또는 태블릿에서 {{site.data.keyword.iot_short}}에 연결하는 브라우저 기반 시뮬레이션된 디바이스를 시작하려면 다음 URL을 여십시오.
 
 ```
 http://quickstart.internetofthings.ibmcloud.com/iotsensor

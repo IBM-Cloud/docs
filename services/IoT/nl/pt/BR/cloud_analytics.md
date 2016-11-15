@@ -13,7 +13,7 @@ copyright:
 
 # Cloud Analytics
 {: #cloud_analytics}
-Última atualização: 2 de agosto de 2016
+Última atualização: 23 de agosto de 2016
 {: .last-updated}
 
 Usando análise de dados de nuvem do {{site.data.keyword.iot_short}}, você especifica as condições das regras que são baseadas em dados do dispositivo de tempo real e que acionam alertas e ações opcionais quando atendidas.    
@@ -53,7 +53,7 @@ Regras são pontos de decisão baseados em condições que correspondem a dados 
 Para criar uma regra:
 1. No painel do {{site.data.keyword.iot_short}}, acesse **Regras**.
 2. Clique em **Criar uma regra**, dê à regra um nome, forneça uma descrição, selecione um tipo de dispositivo ao qual a regra se aplica e, em seguida, clique em **Avançar**.  
-3. Para configurar a lógica de regra, inclua uma ou mais condições IF para usar como acionadores da regra.
+3. Para configurar a lógica de regra, inclua uma ou mais condições IF para usar como acionadores da regra.  
 É possível incluir condições em linhas paralelas para aplicá-las como condições OR ou incluir condições em colunas sequenciais para aplicá-las como condições AND.  
 **Importante:** para acionar uma condição que compara duas propriedades ou para acionar duas ou mais condições de propriedade combinadas em sequência usando AND, os pontos de dados de acionamento devem ser incluídos na mesma mensagem do dispositivo. Se os dados forem recebidos em mais de uma mensagem, a condição ou condições sequenciais não serão acionadas.  
 **Exemplos:**
@@ -74,7 +74,7 @@ Para configurar o acionamento condicional para uma regra:
  </ul>  
  Para obter uma descrição mais detalhada dos acionadores condicionais, consulte [Acionamento de regra condicional](#conditional "Visão geral de acionamento condicional").
 5. Crie ou selecione uma ou mais ações que ocorrem se as condições da regra forem atendidas.  
-Para obter mais informações sobre ações, consulte [Usando ações com suas regras](#shared "Criar ações").
+Para obter mais informações sobre ações, consulte [Usando ações com suas regras](#shared "Criar ações").   
  Por exemplo: uma ação pode ser enviar um e-mail ou postar uma webhook.
 3. **Opcional:** Selecione uma prioridade de alerta para a regra.  
  A prioridade é usada para classificar os alertas exibidos na placa **Análise de dados baseada em regra**. A prioridade padrão é Baixa.
@@ -94,10 +94,9 @@ Dependendo da frequência da mensagem e das condições da regra, uma regra pode
 Condição | Descrição
 ------------- | -------------
 Acionar cada vez que as condições forem atendidas. | A regra é acionada cada vez que as condições da regra são atendidas.
-Acionar se condições forem atendidas *N* vezes em *M* *dias/horas/minutos/customizado* | A regra será acionada quando as condições forem atendidas *N* vezes no intervalo de tempo selecionado e não será acionada novamente até que o período configurado tenha passado. </br>Exemplo: requisito de acionador condicional =`Acionar somente uma vez se as condições forem atendidas 4 vezes em 30 minutos`. O dispositivo envia uma nova mensagem a cada cinco minutos. Ao meio-dia, a temperatura excede inicialmente 90 graus, que atende à condição. O contador do acionador condicional é iniciado, mas a regra ainda não foi acionada. Após 15 minutos e mais três mensagens que indicam `temp > 90` serem recebidas, a regra será acionada. A regra não será então acionada por mais 15 minutos, independentemente da temperatura.
+Acionar se condições forem atendidas *N* vezes em *M* *dias/horas/minutos/customizado* | A regra será acionada quando as condições forem atendidas *N* vezes no intervalo de tempo selecionado e não será acionada novamente até que o período configurado tenha passado. </br>Exemplo: requisito de acionador condicional =`Acionar somente uma vez se as condições forem atendidas 4 vezes em 30 minutos`. O dispositivo envia uma nova mensagem a cada cinco minutos. Ao meio-dia, a temperatura excede inicialmente 90 graus, que atende à condição. O contador do acionador condicional é iniciado, mas a regra ainda não foi acionada.  Após 15 minutos e mais três mensagens que indicam `temp > 90` serem recebidas, a regra será acionada. A regra não será então acionada por mais 15 minutos, independentemente da temperatura.
 Acionar apenas na primeira vez que as condições forem atendidas e reconfigurar quando as condições não estiverem mais atendidas. | A regra será acionada quando as condições forem atendidas, mas não será então acionada para mensagens consecutivas que também atendem as condições. Os critérios de acionamento serão reconfigurados pela primeira mensagem que não atender as condições da regra.
-
-<!-- Trigger if conditions persist for *M* *days/hours/minutes/custom*. | The rule is triggered when the conditions are met continuously for the selected time interval. </br>The rule is also triggered if the following requirements are met: <ol><li>The rule conditions are first met but are then followed by a time period during which no new messages are received.<li>The no-messages time period exceeds the selected time interval.<li>The message that ends the no-message time period meets the rule conditions.</ol>-->
+Acionar se persistirem condições para *M* *days/hours/minutes/custom*. | A regra é acionada após o intervalo de tempo selecionado, se todos os pontos de dados que são recebidos durante o intervalo de tempo atenderem às condições ou se nenhum ponto de dados adicional é recebido. O intervalo de tempo inicia quando as condições são atendidas inicialmente.
 
 
 
@@ -234,7 +233,7 @@ Neste exemplo, a ação é configurada para usar o Node-RED com um nó Twilio pa
 Para criar a ação enviar mensagem de texto:
 1. No Twilio, localize ou crie um novo Serviço de sistema de mensagens a ser usado para enviar mensagens de texto a partir de sua conta do Twilio. Para obter informações, veja a [documentação do Twilio](https://www.twilio.com/help).
 2. No Bluemix, configure e acesse sua conta do Node-RED com a URL do Node-RED `http://mynodered.mybluemix.net/red/`. Para obter mais informações, veja o tópico [Criando apps com o Node-RED Starter](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html) na documentação do Bluemix.
-3. No Node-RED, crie um fluxo simples com dois nós, como [RTI-alert]->[SMS].
+3. No Node-RED, crie um fluxo simples com dois nós, como [RTI-alert]->[SMS].  
 Em que o primeiro nó é um nó http e o segundo é um nó twilio.
  1. Inclua o nó de entrada "http" e configure-o com os atributos a seguir:
   <ul>

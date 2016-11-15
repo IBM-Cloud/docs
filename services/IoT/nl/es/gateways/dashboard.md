@@ -16,7 +16,6 @@ copyright:
 {: #IoT_connectGateway}
 Última actualización: 28 de julio de 2016
 
-
 Antes de empezar a recibir datos de dispositivos conectados a las pasarelas, debe conectar la pasarela a {{site.data.keyword.iot_full}}. La conexión de una pasarela a {{site.data.keyword.iot_short_notm}} implica crear un tipo de dispositivo de pasarela y registrar la pasarela con {{site.data.keyword.iot_short_notm}}. A continuación, puede utilizar la información de registro para conectar la pasarela a {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
 
@@ -30,7 +29,7 @@ Los dispositivos de pasarela tienen permisos adicionales cuando se comparan con 
 - Registrar nuevos dispositivos en Watson IoT Platform
 - Enviar y recibir datos de su propio sensor como un dispositivo conectado directamente,
 - Enviar y recibir datos en nombre de los dispositivos
-- Ejecutar un agente de gestión de dispositivos, para que se pueda gestionar, y también gestionar los dispositivos conectados.
+- Ejecutar un agente de gestión de dispositivos, para que se pueda gestionar, y también gestionar los dispositivos conectados.  
 Para la información de desarrollador de pasarela, consulte [Conectividad de MQTT para pasarelas](mqtt.html).
 
 También puede utilizar pasarelas para realizar analíticas de extremo en los datos que están enviando los dispositivos de pasarela. Para obtener más información, consulte [Analíticas de extremo](../edge_analytics.html) e [Instalación de Edge Analytics Agent](#edge).
@@ -46,22 +45,22 @@ Para añadir una pasarela desde el panel de instrumentos de {{site.data.keyword.
 
 1. En el panel de instrumentos de {{site.data.keyword.iot_short_notm}}, seleccione **Dispositivos**.
 2. Pulse **Añadir dispositivo**.
-3. Seleccione o cree un tipo de dispositivo para el dispositivo que está añadiendo.
+3. Seleccione o cree un tipo de dispositivo para el dispositivo que está añadiendo.  
 Cada dispositivo conectado al {{site.data.keyword.iot_short_notm}} debe estar asociado con un tipo de dispositivo. Los tipos de dispositivos son grupos de dispositivos que comparten características comunes.  
  1. Pulse **Crear tipo de dispositivo** y, a continuación, **Crear tipo de pasarela**.
  2. Especifique un nombre como, por ejemplo, `my_gateway_type` y una descripción para el tipo de pasarela.
- 3. Opcional: Especifique los metadatos y los atributos de tipo de pasarela.
+ 3. Opcional: Especifique los metadatos y los atributos de tipo de pasarela.    
  **Consejo:** Puede añadir y editar atributos y metadatos más tarde.
  4. Pulse **Crear** para añadir el nuevo tipo de pasarela.
 10. Pulse **Siguiente** para comenzar el proceso de adición del dispositivo de pasarela con el tipo de pasarela seleccionado.
-11. Especifique un ID de dispositivo, como por ejemplo `my_gateway_device`.
+11. Especifique un ID de dispositivo, como por ejemplo `my_gateway_device`.  
 El ID de dispositivo se utiliza para identificar el dispositivo de pasarela en el panel de instrumentos de {{site.data.keyword.iot_short_notm}} y también es un parámetro obligatorio para conectar el dispositivo de pasarela a {{site.data.keyword.iot_short_notm}}.
-12. Opcional: Pulse **Campos adicionales** para añadir información de dispositivo de pasarela, como por ejemplo el número de serie, el fabricante, el modelo, etc.
+12. Opcional: Pulse **Campos adicionales** para añadir información de dispositivo de pasarela, como por ejemplo el número de serie, el fabricante, el modelo, etc.  
  **Consejo:** Puede añadir y editar esta información más tarde.
-12. Opcional: Especifique los metadatos JSON de dispositivo.
+12. Opcional: Especifique los metadatos JSON de dispositivo.  
  **Consejo:** Puede añadir y editar metadatos de dispositivo más tarde.
 13. Pulse **Siguiente** para completar la adición del dispositivo de pasarela.
-14. Verifique que la información de resumen sea correcta y, a continuación, pulse **Añadir** para añadir el dispositivo de pasarela.
+14. Verifique que la información de resumen sea correcta y, a continuación, pulse **Añadir** para añadir el dispositivo de pasarela.  
 **Consejo:** Tiene la opción de aceptar una señal de autenticación generada automáticamente o de proporcionar una señal de autenticación usted mismo. Si decide crear su propia señal, asegúrese de que se encuentre entre los 8 y 36 caracteres, que contenga una mezcla de letras en mayúscula y minúscula, números, y guión, subrayado o punto. La señal no debe contener secuencias de caracteres repetidos, palabras de diccionario, nombres de usuario ni otras secuencias predefinidas.
 15. En la página de información de dispositivos, copie y guarde la siguiente información de dispositivos:  
  - ID de organización, como por ejemplo `tubo8x`

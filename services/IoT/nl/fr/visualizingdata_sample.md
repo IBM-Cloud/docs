@@ -20,15 +20,15 @@ Cet exemple vous aide à visualiser les données historiques et en temps réel i
 
 Avant de pouvoir visualiser vos données, vous devez exécuter les actions suivantes :
 
-- Enregistrez vos terminaux sur votre organisation {{site.data.keyword.iot_short_notm}}. 
+- Enregistrez vos terminaux sur votre organisation {{site.data.keyword.iot_short_notm}}.
 - Assurez-vous que vos terminaux envoient des événements à {{site.data.keyword.iot_short_notm}}.
-- [Téléchargez l'exemple de visualisation](https://github.com/ibm-messaging/iot-visualization/archive/v0.2.0.zip) depuis le référentiel github et procédez à l'extraction du fichier .zip. 
+- [Téléchargez l'exemple de visualisation](https://github.com/ibm-messaging/iot-visualization/archive/v0.2.0.zip) depuis le référentiel github et procédez à l'extraction du fichier .zip.
 - [Installez l'outil de ligne de commande cf](../../starters/install_cli.html) à partir de {{site.data.keyword.Bluemix_notm}}.
 
 ## Exécution de l'exemple dans {{site.data.keyword.Bluemix_notm}}
 
 1. Créez une application dans {{site.data.keyword.Bluemix_notm}} à l'aide du logiciel SDK Node.js. Notez le nom de l'application et le nom d'hôte de l'application ; ces informations sont requises pour télécharger l'application sur {{site.data.keyword.Bluemix_notm}}.
-2. Liez votre application node.JS à votre instance {{site.data.keyword.iot_short_notm}} dans votre tableau de bord {{site.data.keyword.Bluemix_notm}} en procédant comme suit : 
+2. Liez votre application node.JS à votre instance {{site.data.keyword.iot_short_notm}} dans votre tableau de bord {{site.data.keyword.Bluemix_notm}} en procédant comme suit :
 
   a. Dans votre tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur l'application Node.JS que vous avez créée. 
 
@@ -67,7 +67,7 @@ cf push <your_application_name>
 http://<your_application_name>.mybluemix.net
 ```
 
-Tous les terminaux de votre organisation sont répertoriés dans le menu déroulant des terminaux. Lorsqu'un terminal est sélectionné, vous devriez accéder à la visualisation en temps réel des données que ce terminal envoie à votre service {{site.data.keyword.iot_short_notm}}. Pour voir les données historiques, cliquez sur le bouton **Données d'historique**. 
+Tous les terminaux de votre organisation sont répertoriés dans le menu déroulant des terminaux. Lorsqu'un terminal est sélectionné, vous devriez accéder à la visualisation en temps réel des données que ce terminal envoie à votre service {{site.data.keyword.iot_short_notm}}. Pour voir les données historiques, cliquez sur le bouton **Données d'historique**.
 
 ### Personnalisation de l'exemple
 
@@ -90,7 +90,7 @@ L'exemple d'application est structuré avec les répertoires suivants :
 - Routes : Routage de la logique et de l'application Web
 - Utils : Fonctions de programme utilitaire utilisée pour passer des appels HTTP
 - Views : Fichiers d'interface utilisateur écrits en langage Jade
-- -La bibliothèque de création de graphiques Rickshaw est utilisée afin de tracer le graphique des données historiques et en temps réel. 
+- -La bibliothèque de création de graphiques Rickshaw est utilisée afin de tracer le graphique des données historiques et en temps réel.
 
 ### Personnalisation de l'affichage des données en temps réel
 
@@ -98,7 +98,7 @@ Le répertoire contenant le code de visualisation graphique pour les données en
 
 Le fichier qui fait référence à la bibliothèque MQTT Paho pour l'abonnement à des sujets et la réception d'événements de terminal depuis {{site.data.keyword.iot_short_notm}} figure dans `public/js/historian/realtime.js`.
 
-Les événements de terminal sont transmis au fichier `realtimeGraph.js` pour tracer le graphique. 
+Les événements de terminal sont transmis au fichier `realtimeGraph.js` pour tracer le graphique.
 
 ### Personnalisation de l'affichage des données historiques
 
@@ -106,6 +106,6 @@ Le répertoire contenant le code de visualisation graphique pour les données hi
 
 Le fichier qui contrôle les appels d'API REST pour la collecte des données historiques des terminaux est `public/js/historian/historian.js`.
 
-Les données historiques sont transmises au fichier `historianGraph.js` pour tracer le graphique. 
+Les données historiques sont transmises au fichier `historianGraph.js` pour tracer le graphique.
 
-Un guide de développement plus détaillé est disponible sur le wiki Github iot-visualization. 
+Un guide de développement plus détaillé est disponible sur le wiki Github iot-visualization.

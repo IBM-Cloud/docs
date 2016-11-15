@@ -27,11 +27,12 @@ Folgende standardmäßigen Benutzerrollen sind verfügbar:
 
 Benutzerrolle | Beschreibung
 ------------- | -------------
-Administrator | Eine 'Superuser'-Rolle, die Zugriff auf alle benutzerbezogenen APIs gewährt. Administratoren können nicht auf Operationen zugreifen, die auf Geräte und Anwendungen eingeschränkt sind.
+Administrator | Eine 'Superuser'-Rolle, die Zugriff auf alle benutzerbezogenen APIs gewährt. Administratoren können nicht auf Operationen zugreifen, die auf Geräte und Anwendungen eingeschränkt sind. 
 Operator | Für Front-End-Benutzer der Organisation bestimmt. Gewährt Zugriff auf den größten Teil der Organisationsoperationen, Zugriffssteuerungsoperationen, Analyseoperationen, Operationen von Drittanbietern und Risikomanagementoperationen.
 Entwickler | Gewährt unbeschränkten Zugriff auf Geräteoperationen, Protokolloperationen, Operationen der Archivierungsfunktion, Analyseoperationen und Operationen von Drittanbieterservices. Die Rolle bietet eingeschränkten Zugriff auf Operationen der Organisation, der Zugriffssteuerung und des Risikomanagements.
 Analyst | Gewährt Zugriff auf Analyseoperationen, einschließlich der Erstellung, Aktualisierung und dem Löschen von Regeln, Aktionen und Schemas.
 Leser | Die Rolle des Standardbenutzers. Gewährt eingeschränkten Zugriff auf Operationen, die für alle Benutzer verfügbar sind.
+
 Weitere Informationen zu den Benutzerrollen finden Sie in [Benutzerrollen](reference/roles_access.html).
 
 ## Anwendungsrollen
@@ -53,6 +54,7 @@ Vertrauenswürdige Backend-Anwendung | Bestimmt für Anwendungen, die keine Inte
 Datenprozessor | Bestimmt für Anwendungen, die Analysen und Datenverarbeitung ausführen. Datenprozessoranwendungen wird eingeschränkter Zugriff auf Organisationsoperationen und Benutzeroperationen gewährt; sie haben jedoch vollständigen Zugriff auf Analyseoperationen einschließlich dem Erstellen und Verwalten von Rollen, Aktionen und Schemas.
 Visualisierung | Bestimmt für Anwendungen, die für das Generieren von Datenvisualisierungen zuständig sind. Visualisierungsanwendungen haben Zugriff auf Live-Datenoperationen und Live-Dashboard-Operationen sowie auf gespeicherte Datenoperationen bzw. Dashboardoperationen.
 Gerät | Bestimmt für Anwendungen, die die Rolle von Geräten annehmen; das bedeutet, sie stellen eine Quelle von Daten bereit, die an {{site.data.keyword.iot_short_notm}} in einer Form gesendet werden, als handele es sich bei den Anwendungen um ein Gerät. Geräteanwendungen wird nur eingeschränkter Zugriff auf Operationen gewährt.
+
 Weitere Informationen dazu, welchen Zugriff auf Operationen Anwendungsrollen haben, finden Sie in [Anwendungsrollen](reference/app_roles_access.html).
 
 ## Gateway-Rollen

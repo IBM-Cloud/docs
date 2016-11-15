@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="terminology_platform.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="C:\2.DTP\BM110ABD142\ge\iot\reference\security\bitmap.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -705,17 +705,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.47"
-     inkscape:cx="485.4605"
-     inkscape:cy="201.69264"
+     inkscape:zoom="1.4691545"
+     inkscape:cx="491.64517"
+     inkscape:cy="231.04247"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1920"
-     inkscape:window-height="1019"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-width="1600"
+     inkscape:window-height="848"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -729,7 +729,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1592,22 +1592,22 @@
          id="flowPara5808" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="201.75475"
+       x="189.75475"
        y="706.19281"
        id="text4681"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4683"
-         x="201.75475"
+         x="189.75475"
          y="706.19281"
          style="font-size:12.50000191px">VERWALTEN Sie Ihre Organisationen </tspan><tspan
          sodipodi:role="line"
-         x="201.75475"
+         x="189.75475"
          y="721.81781"
          style="font-size:12.50000191px"
          id="tspan4685">über die Watson IoT Platform- </tspan><tspan
          sodipodi:role="line"
-         x="201.75475"
+         x="189.75475"
          y="737.44281"
          style="font-size:12.50000191px"
          id="tspan4687">Webkonsole oder über die REST-APIs.</tspan></text>
@@ -1622,17 +1622,22 @@
          x="-282.9223"
          y="454.43649"
          style="font-size:12.50000191px"
-         id="tspan4687-2">GERÄTE sind die &quot;Dinge&quot; im </tspan><tspan
+         id="tspan4742">GERÄTE sind die &quot;Dinge&quot; im Internet </tspan><tspan
          sodipodi:role="line"
          x="-282.9223"
          y="470.06149"
          style="font-size:12.50000191px"
-         id="tspan4742">Internet der Dinge (Internet of Things). Geräte können </tspan><tspan
+         id="tspan3661">der Dinge (Internet of Things). Geräte </tspan><tspan
          sodipodi:role="line"
          x="-282.9223"
          y="485.68649"
          style="font-size:12.50000191px"
-         id="tspan4744">Sensoren, weiße Ware oder Mobiltelefone sein.</tspan></text>
+         id="tspan4744">können Sensoren, weiße Ware oder </tspan><tspan
+         sodipodi:role="line"
+         x="-282.9223"
+         y="501.31149"
+         style="font-size:12.50000191px"
+         id="tspan3669">Mobiltelefone sein.</tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -1858,54 +1863,54 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-88.402412"
+       x="-102.40241"
        y="620.59686"
        id="text4681-5-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="-88.402412"
+         x="-102.40241"
          y="620.59686"
          style="font-size:12.50000191px"
          id="tspan4744-3">ANWENDUNGEN werden in Ihrem Unternehmen </tspan><tspan
          sodipodi:role="line"
-         x="-88.402412"
+         x="-102.40241"
          y="636.22186"
          style="font-size:12.50000191px"
-         id="tspan4920">oder in Bluemix ausgeführt. Sie nehmen Analysen von </tspan><tspan
+         id="tspan4920">oder in Bluemix ausgeführt. Sie nehmen </tspan><tspan
          sodipodi:role="line"
-         x="-88.402412"
+         x="-102.40241"
          y="651.84686"
          style="font-size:12.50000191px"
-         id="tspan4922">Live-Gerätedaten vor, untersuchen archivierte </tspan><tspan
+         id="tspan4922">Analysen von Live-Gerätedaten vor, unter-</tspan><tspan
          sodipodi:role="line"
-         x="-88.402412"
+         x="-102.40241"
          y="667.47186"
          style="font-size:12.50000191px"
-         id="tspan4924">Gerätedaten über REST-APIs </tspan><tspan
+         id="tspan4924">suchen archivierte Gerätedaten über REST-</tspan><tspan
          sodipodi:role="line"
-         x="-88.402412"
+         x="-102.40241"
          y="683.09686"
          style="font-size:12.50000191px"
-         id="tspan4926">und senden Befehle an Geräte.</tspan></text>
+         id="tspan4926">APIs und senden Befehle an Geräte.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="230.2204"
+       x="216.2204"
        y="289.84158"
        id="text4681-5-2-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="230.2204"
+         x="216.2204"
          y="289.84158"
          style="font-size:12.50000191px"
-         id="tspan4926-4">Watson IoT Platform-ORGANISATIONEN sind das Mittel zum Gruppieren von </tspan><tspan
+         id="tspan4926-4">Watson IoT Platform-ORGANISATIONEN sind das Mittel zum Gruppieren </tspan><tspan
          sodipodi:role="line"
-         x="230.2204"
+         x="216.2204"
          y="305.46658"
          style="font-size:12.50000191px"
-         id="tspan4972">allgemeinen Geräten und Anwendungen. Geräte und Anwendungen </tspan><tspan
+         id="tspan4972">von allgemeinen Geräten und Anwendungen. Geräte und Anwendungen </tspan><tspan
          sodipodi:role="line"
-         x="230.2204"
+         x="216.2204"
          y="321.09158"
          style="font-size:12.50000191px"
          id="tspan4974">in derselben Organisation arbeiten ohne großen Aufwand Hand in Hand.</tspan></text>

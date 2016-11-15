@@ -13,6 +13,7 @@ copyright:
 
 
 # {{site.data.keyword.iot_short_notm}} 블록체인 통합을 위한 스마트 계약 개발
+
 {: #iotblockchain_link}
 마지막 업데이트 날짜: 2016년 8월 30일
 {: .last-updated}
@@ -23,22 +24,27 @@ copyright:
 Golang 체인코드 실행 파일 양식으로 스마트 계약을 개발하고 배치하십시오. {{site.data.keyword.iot_short_notm}} 블록체인 통합을 사용하면 디바이스 이벤트 데이터로 계약 업데이트 및 비즈니스 로직 실행을 트리거하고 각 트랜잭션마다 블록체인에 대해 새 원장 상태를 쓸 수 있습니다. 
 
 {{site.data.keyword.iot_short_notm}} 블록체인 통합 개발 환경은 다음 컴포넌트로 구성되어 있습니다. 
+
 - {{site.data.keyword.Bluemix_notm}} 조직:
- - IoT 블록체인 통합이 사용되는 {{site.data.keyword.iot_short_notm}} 서비스
- - {{site.data.keyword.blockchainfull_notm}} 패브릭
- - IoT 디바이스 시뮬레이터를 실행 중인 Node-RED 애플리케이션
+  - IoT 블록체인 통합이 사용되는 {{site.data.keyword.iot_short_notm}} 서비스
+  - {{site.data.keyword.blockchainfull_notm}} 패브릭
+  - IoT 디바이스 시뮬레이터를 실행 중인 Node-RED 애플리케이션
+  
+
 **참고:** 로컬로 배치된 Node-RED 환경을 사용하여 시뮬레이터를 실행할 수도 있습니다. 
+
 - 로컬 환경:
- - 스마트 계약 체인코드를 개발하고 테스트하기 위한 Hyperledger 개발 환경. 환경에는 GoLang이 포함됩니다. 
- - 블록체인 모니터링 UI
+  - 스마트 계약 체인코드를 개발하고 테스트하기 위한 Hyperledger 개발 환경. 환경에는 GoLang이 포함됩니다. 
+  - 블록체인 모니터링 UI
 - GitHub 환경:
- - 샘플 스마트 계약을 위한 IBM 제공 GitHub 저장소
- - {{site.data.keyword.blockchainfull_notm}} 패브릭에 스마트 계약을 배치하기 위한 GitHub 저장소
+  - 샘플 스마트 계약을 위한 IBM 제공 GitHub 저장소
+  - {{site.data.keyword.blockchainfull_notm}} 패브릭에 스마트 계약을 배치하기 위한 GitHub 저장소
 
 다음 다이어그램은 {{site.data.keyword.iot_short_notm}} 블록체인 통합 개발 환경을 예시합니다.
 ![IoT 블록체인 {{site.data.keyword.iot_short_notm}} 통합 아키텍처.](images/architecture_contracts.svg "IoT 블록체인 {{site.data.keyword.iot_short_notm}} 통합 아키텍처")
 
 ## 시작하기 전에
+
 {: #byb}
 
 {{site.data.keyword.blockchainfull_notm}}, 일반 블록체인 개념과의 연관성 및 해당 역할에 대한 대한 개요를 파악하십시오. 
@@ -48,29 +54,33 @@ Golang 체인코드 실행 파일 양식으로 스마트 계약을 개발하고 
 - [개발자용 {{site.data.keyword.blockchainfull_notm}}](http://www.ibm.com/blockchain/for_developers.html) - {{site.data.keyword.Bluemix_notm}}에서 실행을 위해 배치 가능한 라이브 데모와 코드의 자세한 안내를 포함하여 개발 환경에 블록체인을 적용하는 방법의 개요. 
 
 ## 샘플 스마트 계약
+
 {: #samples}
 
 다수의 샘플 계약을 [https://github.com/ibm-watson-iot/blockchain-samples](https://github.com/ibm-watson-iot/blockchain-samples)에서 다운로드할 수 있습니다. 배치 가능한 체인코드로 자체 유스 케이스를 개발하기 위한 기초로서 샘플 계약을 사용할 수 있습니다. 
 
 |샘플 계약 |설명 |
 |:---|:---|
-|[기본 블록체인 계약](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/simple_contract_hyperledger) |블록체인에서 디바이스 자산 데이터를 추적하고 저장할 수 있도록 허용하는 계약
-|[거래선 블록체인 계약](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/trade_lane_contract_hyperledger) |기본 블록체인 계약의 고급 버전|
+|[Basic: Simple Contract](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract) | 블록체인에서 디바이스 자산 데이터를 추적하고 저장할 수 있도록 허용하는 고급 계약의 단순화된 버전
+|[Advanced: IoT Generic Sample Contract](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract) | 데이터 모델과 동작에 대한 **거래선** 종류 및 많은 기능에 대한 고급 샘플 계약|
 
 
 ## {{site.data.keyword.blockchainfull_notm}} 환경 구성
+
 {: #configure_environment}
 스마트 계약의 배치 및 테스트를 시작할 수 있으려면 우선 자체 블록체인 환경을 설정해야 합니다. 
 
 **참고:** {{site.data.keyword.iot_short_notm}} 블록체인 통합은 {{site.data.keyword.blockchainfull_notm}} 패브릭 및 Hyperledger 패브릭 모두에 대한 연결을 지원합니다. 다음 예제는 {{site.data.keyword.blockchainfull_notm}}의 사용을 기반으로 합니다. 
 
 1. {{site.data.keyword.blockchainfull_notm}} 패브릭을 작성하고 구성하십시오.
+
+
 {{site.data.keyword.iot_short_notm}} 블록체인 통합에서 블록체인 원장, 스마트 계약 및 일반 블록체인 인프라를 관리하려면 {{site.data.keyword.blockchainfull_notm}} 패브릭이 필요합니다. {{site.data.keyword.Bluemix_notm}} 블록체인 통합은 {{site.data.keyword.blockchainfull_notm}}을 사용하여 체인을 관리합니다. 기존 {{site.data.keyword.blockchainfull_notm}} 환경에 액세스할 수 있으면 이를 사용할 수 있습니다. 그렇지 않으면, {{site.data.keyword.Bluemix_notm}} [카탈로그](https://console.ng.bluemix.net/catalog/services/blockchain/)에서 {{site.data.keyword.blockchainfull_notm}}의 인스턴스를 작성해야 합니다. 
 
- 1. {{site.data.keyword.Bluemix_notm}} 계정 대시보드에서 **서비스 또는 API 사용**을 클릭하십시오. 
- 2. 서비스 카탈로그의 시범 섹션을 찾고 **블록체인**을 선택하십시오.
+  1. {{site.data.keyword.Bluemix_notm}} 계정 대시보드에서 **서비스 또는 API 사용**을 클릭하십시오. 
+  2. 서비스 카탈로그의 시범 섹션을 찾고 **블록체인**을 선택하십시오.
    **팁:** {{site.data.keyword.blockchainfull_notm}} 시범 서비스 페이지로 직접 이동하려면 [여기](https://console.ng.bluemix.net/catalog/services/blockchain/)를 클릭하십시오. 
- 3. {{site.data.keyword.blockchainfull_notm}} 서비스 페이지에서 서비스 추가 선택사항을 확인하십시오.   
+  3. {{site.data.keyword.blockchainfull_notm}} 서비스 페이지에서 서비스 추가 선택사항을 확인하십시오.   
     - 영역 - 기본 `dev` 영역 외에 추가 영역이 있으면 원하는 영역에 서비스를 배치 중인지 확인하십시오. 
     - 앱 - 언바운드로 상태로 두십시오. 
     - 서비스 이름 - 선택사항으로, 서비스 이름을 기억하기 쉬운 이름으로 변경하십시오. 이 이름은 {{site.data.keyword.Bluemix_notm}} 대시보드의 {{site.data.keyword.blockchainfull_notm}} 타일에 표시됩니다. 
@@ -258,7 +268,7 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
 스마트 계약을 테스트하려면 {{site.data.keyword.iot_short_notm}}에서 디바이스를 작성하고 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하며 Blockchain Fabric에 연결하도록 IoT 블록체인을 구성한 후에 블록체인에서 디바이스 메시지를 맵핑하고 저장하도록 {{site.data.keyword.iot_short_notm}}을 구성하여 종단간 테스트를 수행하십시오. {{site.data.keyword.blockchainfull_notm}} 콘솔을 사용하면 블록체인을 보고 원장의 디바이스 데이터를 확인할 수 있습니다. 계약에서 readAsset() 함수를 지원하는 경우에는 모니터링 UI를 사용하여 블록체인을 보고 자체 시나리오의 디바이스 데이터가 블록체인에 영구 저장됨을 볼 수 있습니다. 
 
 5. {{site.data.keyword.blockchainfull_notm}}에 연결하도록 모니터링 UI를 구성하십시오.
- **팁:** 로컬 환경에서 모니터링 UI를 설치하지 않았으면 지금 이를 수행할 수 있습니다. [블록체인 모니터링 UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/monitoring_ui) GitHub 디렉토리에서 사용 가능한 모니터링 UI readme 문서의 지시사항을 따르십시오. **구성** 단추를 클릭하여 구성 설정에 액세스하십시오.
+ **팁:** 로컬 환경에서 모니터링 UI를 설치하지 않았으면 지금 이를 수행할 수 있습니다. [블록체인 모니터링 UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub 디렉토리에서 사용 가능한 모니터링 UI readme 문서의 지시사항을 따르십시오. **구성** 단추를 클릭하여 구성 설정에 액세스하십시오.
  계약에 연결하려면 다음 정보를 사용하십시오. 
 <table>
 <thead>

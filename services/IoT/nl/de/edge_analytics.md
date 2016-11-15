@@ -32,7 +32,7 @@ Das folgende Diagramm veranschaulicht die allgemeine Architektur einer {{site.da
 
 Bevor Sie mit der Erstellung von Edge-Regeln und -Aktionen beginnen:
 - Stellen Sie sicher, dass Ihr Gateway mit {{site.data.keyword.iot_short}} verbunden ist und dass Gerätedaten übertragen werden. Weitere Informationen finden Sie in [Gateways verbinden](gateways/dashboard.html).
-- Installieren Sie Edge Analytics Agent (EAA) in Ihrem Gateway. Informationen finden Sie in [Edge Analytics-Agent installieren](gateways/dashboard.html#edge).</br> **Tipp:** Für EAA aktivierte Gateways stellen EAA-Diagnosedaten in Form von Gerätenachrichten von Gateways zur Verfügung. Informationen finden Sie in [Diagnosemesswerte des Edge Analytics-Agenten](#eaa_metrics).
+- Installieren Sie Edge Analytics Agent (EAA) in Ihrem Gateway. Informationen finden Sie in [Edge Analytics-Agent installieren](gateways/dashboard.html#edge). </br> **Tipp:** Für EAA aktivierte Gateways stellen EAA-Diagnosedaten in Form von Gerätenachrichten von Gateways zur Verfügung. Informationen finden Sie in [Diagnosemesswerte des Edge Analytics-Agenten](#eaa_metrics).
 - Stellen Sie sicher, dass die Geräteeigenschaften, die Sie als Bedingungen in Ihren Regeln verwenden möchten, Schemas zugeordnet wurden. Weitere Informationen finden Sie in [Geräte verbinden](iotplatform_task.html) und [Schemas erstellen](im_schemas.html).
 
 ## Edge-Regeln und -Aktionen verwalten  
@@ -62,19 +62,19 @@ Edge-Regeln sind bedingungsbasierte Entscheidungspunkte, die gerätebezogene Ech
 Gehen Sie wie folgt vor, um eine Regel zu erstellen:
 1. Wechseln Sie im {{site.data.keyword.iot_short}}-Dashboard zu **Regeln**.
 2. Klicken Sie auf **Edge-Regel erstellen**, benennen Sie die Regel und ordnen Sie Ihr eine Beschreibung zu, wählen Sie einen Edge-Gerätetyp aus, für den die Regel gelten soll, und klicken Sie anschließend auf **Weiter**.  
-3. Richten Sie die Regellogik ein.
-Fügen Sie mindestens eine IF-Bedingung hinzu, um sie als Auslöser für die Regel zu verwenden.
-Sie können Bedingungen in parallelen Reihen hinzufügen, um sie als OR-Bedingungen anzuwenden, oder Sie können Bedingungen in sequenziellen Spalten hinzufügen, um sie als AND-Bedingungen anzuwenden.
-**Hinweis:** Damit eine Geräteeigenschaft als Eingabe für eine Regel ausgewählt werden kann, muss die Eigenschaft einem Schema zugeordnet werden. Weitere Informationen finden Sie in [Schemas erstellen](im_schemas.html).
-**Wichtig:** Um eine Bedingung auszulösen, die zwei Eigenschaften vergleicht, oder um zwei oder mehr Eigenschaftsbedingungen auszulösen, die sequenziell durch AND verbunden sind, müssen die auslösenden Datenpunkte in dieselbe Gerätenachricht eingeschlossen werden. Wenn die Daten in mehr als einer Nachricht empfangen werden, werden die sequenziellen Bedingungen nicht ausgelöst.
+3. Richten Sie die Regellogik ein.  
+Fügen Sie mindestens eine IF-Bedingung hinzu, um sie als Auslöser für die Regel zu verwenden.  
+Sie können Bedingungen in parallelen Reihen hinzufügen, um sie als OR-Bedingungen anzuwenden, oder Sie können Bedingungen in sequenziellen Spalten hinzufügen, um sie als AND-Bedingungen anzuwenden.  
+**Hinweis:** Damit eine Geräteeigenschaft als Eingabe für eine Regel ausgewählt werden kann, muss die Eigenschaft einem Schema zugeordnet werden. Weitere Informationen finden Sie in [Schemas erstellen](im_schemas.html).   
+**Wichtig:** Um eine Bedingung auszulösen, die zwei Eigenschaften vergleicht, oder um zwei oder mehr Eigenschaftsbedingungen auszulösen, die sequenziell durch AND verbunden sind, müssen die auslösenden Datenpunkte in dieselbe Gerätenachricht eingeschlossen werden. Wenn die Daten in mehr als einer Nachricht empfangen werden, werden die sequenziellen Bedingungen nicht ausgelöst.  
 **Beispiele:**
 Eine einfache Regel kann einen Alert auslösen, wenn ein Parameterwert größer als ein angegebener Wert ist:
 `temp>80`
 Eine komplexere Regel kann zu einem Auslösen führen, wenn eine Übereinstimmung mit einer Kombination aus Schwellenwerten auftritt:
 `temp>60 AND capacity>50`   
 
-4. Konfigurieren Sie für Ihre Regel Anforderungen für bedingte Auslöser.
-Zum Steuern der Anzahl von Alerts und Aktionen, die für eine Regel in einem bestimmten Zeitraum ausgelöst werden, können Sie für Ihre Regel Anforderungen für bedingte Auslöser konfigurieren.
+4. Konfigurieren Sie für Ihre Regel Anforderungen für bedingte Auslöser.  
+Zum Steuern der Anzahl von Alerts und Aktionen, die für eine Regel in einem bestimmten Zeitraum ausgelöst werden, können Sie für Ihre Regel Anforderungen für bedingte Auslöser konfigurieren.  
 **Wichtig:** Das bedingte Auslösen gilt für jede Bedingung in der Regel. Wenn beispielsweise für eine Regel mithilfe von OR fünf unterschiedliche parallele Bedingungen festgelegt wurden, wird für den Zähler des bedingten Auslösers jede Bedingung, die als 'true' erkannt wird, gezählt.
 Gehen Sie wie folgt vor, um für eine Regel das bedingte Auslösen festzulegen:
  1. Klicken Sie im Regeleditor auf den Standardlink **Jedes Mal auslösen, wenn Bedingungen erfüllt sind**, um das Dialogfeld 'Anforderung für Häufigkeit festlegen' zu öffnen.
@@ -83,12 +83,12 @@ Gehen Sie wie folgt vor, um für eine Regel das bedingte Auslösen festzulegen:
  <li>Jedes Mal auslösen, wenn Bedingungen erfüllt sind</li>
  <li>Auslösen, wenn Bedingungen N-mal in M *Zeiteinheit* erfüllt sind</li>
  </ul>  
-Eine detailliertere Beschreibung der bedingten Auslöser finden Sie in [Bedingtes Auslösen für Regeln](cloud_analytics.html#conditional "Bedingtes Auslösen - Übersicht") im Abschnitt zu Cloud Analytics.
-5. Erstellen Sie mindestens eine Aktion, die auftritt, wenn die Regelbedingungen erfüllt sind, oder wählen Sie eine Aktion aus.
-Weitere Informationen zu Edge-Aktionen finden Sie in [Edge-Aktionen erstellen](#edge_actions "Edge-Aktionen erstellen").
+ Eine detailliertere Beschreibung der bedingten Auslöser finden Sie in [Bedingtes Auslösen für Regeln](cloud_analytics.html#conditional "Bedingtes Auslösen - Übersicht") im Abschnitt zu Cloud Analytics.
+5. Erstellen Sie mindestens eine Aktion, die auftritt, wenn die Regelbedingungen erfüllt sind, oder wählen Sie eine Aktion aus.  
+Weitere Informationen zu Edge-Aktionen finden Sie in [Edge-Aktionen erstellen](#edge_actions "Edge-Aktionen erstellen").   
  Beispiel: Eine Aktion kann darin bestehen, Gerätedaten an die Cloud zu senden oder ein Alert an eine lokale Datei zu schreiben.
-3. **Optional:** Wählen Sie für die Regel eine Alertpriorität aus.
-Die Priorität wird zum Klassifizieren der Alerts verwendet, die im Board **Regelbasierte Analyse** angezeigt werden. Die Standardpriorität ist 'Niedrig'.
+3. **Optional:** Wählen Sie für die Regel eine Alertpriorität aus.  
+ Die Priorität wird zum Klassifizieren der Alerts verwendet, die im Board **Regelbasierte Analyse** angezeigt werden. Die Standardpriorität ist 'Niedrig'.
 6. Wenn Sie mit Ihrer Regel zufrieden sind, klicken Sie auf **Speichern**.
 
 Ihre Regel wird erstellt und zum Dashboard 'Durchsuchen' hinzugefügt. Über das Board **Edge-Regel-Gateways**, das sich öffnet, können Sie die Regel nun [aktivieren](#manage).
@@ -102,35 +102,36 @@ Sie können Aktionen direkt im Regeleditor erstellen oder die Aktionen auf der R
 Gehen Sie wie folgt vor, um auf der Registerkarte 'Aktionen' eine Aktion zu erstellen:
 1. Wechseln Sie im {{site.data.keyword.iot_short}}-Dashboard zu **Regeln**.
 2. Wählen Sie im Dashboard 'Regeln' die Registerkarte **Aktionen** aus.
-2. Klicken Sie auf **Aktion erstellen**, benennen Sie die Aktion, ordnen Sie ihr eine Beschreibung zu und wählen Sie einen Aktionstyp aus; klicken Sie anschließend auf **Weiter**. Edge Analytics unterstützt zwei Aktionstypen:
+2. Klicken Sie auf **Aktion erstellen**, benennen Sie die Aktion, ordnen Sie ihr eine Beschreibung zu und wählen Sie einen Aktionstyp aus; klicken Sie anschließend auf **Weiter**.  
+Edge Analytics unterstützt zwei Aktionstypen:
 <dl>
 <dt>Ereignis an Cloud weiterleiten</dt>  
 <dd>Das Geräteereignis wird an {{site.data.keyword.iot_short}} gesendet, wo es in Boards und Karten sowie mit Cloud Analytics-Regeln verwendet werden kann. Informationen finden Sie in [Integration mit Cloud Analytics](#integrate_with_cloud_analytics).    
-**Tipp:** Verwenden Sie die Cloud-Aktion zum Weiterleiten von Ereignissen zum Reduzieren der Menge von Gerätedaten, die an die Cloud gesendet werden, indem die weniger wichtigen Informationen direkt beim Gateway-Gerät herausgefiltert werden.</dd>
+**Tipp:** Verwenden Sie die Cloud-Aktion zum Weiterleiten von Ereignissen zum Reduzieren der Menge von Gerätedaten, die an die Cloud gesendet werden, indem die weniger wichtigen Informationen direkt beim Gateway-Gerät herausgefiltert werden. </dd>
 <dt>Alert</dt>  
 <dd>Alerts werden im Gateway-Gerät erstellt.</dd>
 </dl>
 3. Geben Sie die für den von Ihnen ausgewählten Aktionstyp erforderlichen Parameter an.  
 <dl>
 <dt>Ereignis an Cloud weiterleiten</dt>  
-<dd>Wählen Sie die Ereignisdaten aus, die an die Cloud weitergeleitet werden sollen, und geben Sie den Ereignisnamen an, der in der Nachricht verwendet werden soll.</br>
+<dd>Wählen Sie die Ereignisdaten aus, die an die Cloud weitergeleitet werden sollen, und geben Sie den Ereignisnamen an, der in der Nachricht verwendet werden soll. </br>
 **Tipp:** Beim Einrichten von Boards und Karten und beim Erstellen von Regeln für Cloud Analytics können Sie das Ereignis und Eigenschaften verwenden.</br>
 Sie können:
-<ul>
+ <ul>
  <li>Alle Geräteeigenschaften und virtuellen Eigenschaften einschließen
-<li>Nur schemadefinierte Eigenschaften und virtuelle Eigenschaften einschließen  
+ <li>Nur schemadefinierte Eigenschaften und virtuelle Eigenschaften einschließen  
  </ul>
  </dd>
 <dt>Alert</dt>  
 <dd>Geben Sie eine Alertnachricht an und wählen Sie mindestens ein Ziel für den Alert aus.
-<ul>
+ <ul>
  <li>An Cloud weiterleiten  
-Der Alert wird an {{site.data.keyword.iot_short}} weitergeleitet, wo er in den Boards 'Regelbasierte Analyse' und 'Gerätebezogene Analyse' angezeigt wird.
-<li>An den Gateway-Broker publizieren
+ Der Alert wird an {{site.data.keyword.iot_short}} weitergeleitet, wo er in den Boards 'Regelbasierte Analyse' und 'Gerätebezogene Analyse' angezeigt wird.
+ <li>An den Gateway-Broker publizieren
 Der Alert wird an den Gateway-Broker publiziert. Durch die Brokerkonfiguration ist festgelegt, wie der Alert für einen Benutzer zugänglich gemacht wird.
-<li>In einer lokalen Textdatei speichern
+ <li>In einer lokalen Textdatei speichern
 Der Alert wird an die auf dem Gateway-Server vorhandene lokale Textdatei *IBMEdgeAnalyticsAlerts.csv* angehängt.
-</ul>
+ </ul>
  </dd>
 </dl>
 4. Klicken Sie auf **OK**, um die neue Aktion zu erstellen.
@@ -144,9 +145,9 @@ Die Aktion steht nun im Regeleditor zur Verfügung.
 Damit eine Regel Aktionen auslöst, müssen Sie sie zunächst für mindestens ein Gateway aktivieren. Zum Aktivieren, Inaktivieren, Aktualisieren und Entfernen einer Edge-Regel für Ihre Gateways verwenden Sie das Board **Edge-Regel-Gateways**.
 
 Gehen Sie wie folgt vor, um eine Edge-Regel zu aktivieren:
-1. Klicken Sie im Dashboard 'Regeln' auf die Schaltfläche **Regel verwalten**, die zu der Edge-Regel gehört, die Sie verwalten möchten.
+1. Klicken Sie im Dashboard 'Regeln' auf die Schaltfläche **Regel verwalten**, die zu der Edge-Regel gehört, die Sie verwalten möchten.  
 Über das Board **Edge-Regel-Gateways**, das sich öffnet, wird Ihnen eine Liste aller verbundenen und für EAA aktivierten Gateways angezeigt. Der Regelstatus für Gateways, bei dem keine Regel hochgeladen und aktiviert ist, lautet *Ohne*.
-2. Suchen Sie das Gateway, für das Sie die Regel aktivieren möchten, und wählen Sie im Menü in der Spalte 'Operation auswählen' die Option **Aktivieren** aus.
+2. Suchen Sie das Gateway, für das Sie die Regel aktivieren möchten, und wählen Sie im Menü in der Spalte 'Operation auswählen' die Option **Aktivieren** aus.  
 Die Edge-Regel wird in das Gateway hochgeladen. Wenn das Hochladen beendet und die Regel aktiv ist, ändert sich der Regelstatus in **Aktiv**.  
 
 Die Regel ist nun für das Gateway aktiv und die konfigurierten Aktionen werden ausgelöst, wenn die Regelbedingungen erfüllt sind.
@@ -175,10 +176,10 @@ Weitere Informationen zur Vorgehensweise beim Erstellen von Regeln und Aktionen 
 ## Diagnosemesswerte des Edge Analytics-Agenten
 {: #eaa_metrics}
 
-Ein verbundenes und für EAA aktiviertes Gateway sendet Diagnoseinformationen als Gerätenachrichten des Ereignistyps `gateway_xv-monitor-event`.</br> **Tipp:** Sie können [Cloud Analytics](cloud_analytics.html)-Regeln verwenden, um Alertaktionen (beispielsweise E-Mail-Benachrichtigungen) zu konfigurieren, die auf den Diagnosewerten basieren, die von dem für EAA aktivierten Gateway zurückgesendet wurden. Sie können beispielsweise eine Regel erstellen, die Sie benachrichtigt, wenn der Wert für `SystemLoad` einen bestimmten Schwellenwert überschreitet.
+Ein verbundenes und für EAA aktiviertes Gateway sendet Diagnoseinformationen als Gerätenachrichten des Ereignistyps `gateway_xv-monitor-event`. </br> **Tipp:** Sie können [Cloud Analytics](cloud_analytics.html)-Regeln verwenden, um Alertaktionen (beispielsweise E-Mail-Benachrichtigungen) zu konfigurieren, die auf den Diagnosewerten basieren, die von dem für EAA aktivierten Gateway zurückgesendet wurden. Sie können beispielsweise eine Regel erstellen, die Sie benachrichtigt, wenn der Wert für `SystemLoad` einen bestimmten Schwellenwert überschreitet.
 
 Gehen Sie wie folgt vor, um Informationen zum Status des Gateways anzuzeigen:
-1. Wählen Sie im {{site.data.keyword.iot_short}}-Dashboard in der seitlichen Menüleiste die Option **Geräte** aus. 
+1. Wählen Sie im {{site.data.keyword.iot_short}}-Dashboard in der seitlichen Menüleiste die Option **Geräte** aus.
 2. Klicken Sie auf Ihr Gateway-Gerät, um die Seite mit den Gerätedetails zu öffnen.
 3. Greifen Sie auf die Diagnoseinformationen des Gateways zu:  
  - Lesen Sie den Abschnitt **Kürzliche Ereignisse**, in dem Sie eine Liste der Nachrichten finden, die kürzlich vom Gateway gesendet wurden.
@@ -189,27 +190,27 @@ Gehen Sie wie folgt vor, um Informationen zum Status des Gateways anzuzeigen:
 Eigenschaft | Beschreibung
 --- | ---
 `MsgInCount` |Die Anzahl der an den Edge Analytics-Agenten (EAA) gesendeten Nachrichten.
-`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate`  | Die geschätzte Anzahl von Nachrichten pro Sekunde, die während des vergangenen Zeitraums an den Edge Analytics-Agenten gesendet wurden.</br>**Hinweis:** `MsgInRate` ist ein Alias für `MsgInRate1Min`. `MsgInMeanRate` ist der Mittelwert für die Nachrichtenrate seit dem Start.
+`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | Die geschätzte Anzahl von Nachrichten pro Sekunde, die während des vergangenen Zeitraums an den Edge Analytics-Agenten gesendet wurden.  </br>**Hinweis:** `MsgInRate` ist ein Alias für `MsgInRate1Min`. `MsgInMeanRate` ist der Mittelwert für die Nachrichtenrate seit dem Start.
 `LastHeartBeat` | Die Zeitmarke in Millisekunden des Zeitpunkts, an dem die letzte Heartbeatnachricht generiert wurde. Mindestens alle 10 Sekunden wird eine Heartbeatnachricht generiert.
 `CurrentTimestamp` | Die Zeitmarke in Millisekunden des Zeitpunkts, an dem die aktuelle Überwachungsnachricht generiert wurde.
 `IsAlive` | Diese Eigenschaft hat den Wert '0', wenn der Unterschied zwischen `LastHeartBeat` und `CurrentTimestamp` größer als 20 Sekunden ist.
 `BytesOutCount` | Die Anzahl der Nachrichtenbyte, die vom EAA an {{site.data.keyword.iot_short}} gesendet werden.
-`BytesOutRate`, `BytesOutRate1Min`, `BytesOutRate15Min`, `BytesOutRate5Min`, `BytesOutMeanRate` | Die geschätzte Anzahl der Nachrichtenbyte pro Sekunde, die vom EAA während des vergangenen Zeitraums an {{site.data.keyword.iot_short}} gesendet wurden.</br>**Hinweis:** `BytesOutRate` ist ein Alias für `BytesOutRate1Min`. `BytesOutMeanRate` ist der seit dem Start gemessene Mittelwert.
+`BytesOutRate`, `BytesOutRate1Min`, `BytesOutRate15Min`, `BytesOutRate5Min`, `BytesOutMeanRate` | Die geschätzte Anzahl der Nachrichtenbyte pro Sekunde, die vom EAA während des vergangenen Zeitraums an {{site.data.keyword.iot_short}} gesendet wurden. </br>**Hinweis:** `BytesOutRate` ist ein Alias für `BytesOutRate1Min`. `BytesOutMeanRate` ist der seit dem Start gemessene Mittelwert.
 `BytesInCount` | Die Anzahl der Nachrichtenbyte, die von {{site.data.keyword.iot_short}} an den EAA gesendet wurden.
-`BytesInMeanRate`, `BytesInRate1Min`, `BytesInRate`, `BytesInRate15Min`, `BytesInRate5Min` | Die geschätzte Anzahl der Nachrichtenbyte pro Sekunde, die im vergangenen Zeitraum von {{site.data.keyword.iot_short}} an den EAA gesendet wurden.</br>**Hinweis:** 'BytesOutRate' ist ein Alias für 'BytesOutRate1Min'. 'BytesOutMeanRate' zählt den Mittelwert seit dem Start.
-`RuleBytesInCount` |Die Anzahl der Nachrichtenbyte, die an die Basis der EAA-Regelengine gesendet wurden.</br> **Hinweis:** Falls für einen Gerätetyp keine Regel festgelegt wurde, werden Nachrichten für diesen Gerätetyp nicht an die Basis der Regelengine gesendet.
-`RuleBytesInRate5Min`, `RuleBytesInRate`, `RuleBytesInMeanRate`, `RuleBytesInRate1Min`, `RuleBytesInRate15Min` | Die geschätzte Anzahl von Nachrichtenbyte pro Sekunde, die während des vergangenen Zeitraums an die Basis der EAA-Regelengine gesendet wurden.</br> **Hinweis:** `RuleBytesInMeanRate` ist der seit dem Start gemessene Mittelwert.
+`BytesInMeanRate`, `BytesInRate1Min`, `BytesInRate`, `BytesInRate15Min`, `BytesInRate5Min` | Die geschätzte Anzahl der Nachrichtenbyte pro Sekunde, die im vergangenen Zeitraum von {{site.data.keyword.iot_short}} an den EAA gesendet wurden. </br>**Hinweis:** 'BytesOutRate' ist ein Alias für 'BytesOutRate1Min'. 'BytesOutMeanRate' zählt den Mittelwert seit dem Start.
+`RuleBytesInCount` |Die Anzahl der Nachrichtenbyte, die an die Basis der EAA-Regelengine gesendet wurden. </br> **Hinweis:** Falls für einen Gerätetyp keine Regel festgelegt wurde, werden Nachrichten für diesen Gerätetyp nicht an die Basis der Regelengine gesendet.
+`RuleBytesInRate5Min`, `RuleBytesInRate`, `RuleBytesInMeanRate`, `RuleBytesInRate1Min`, `RuleBytesInRate15Min` | Die geschätzte Anzahl von Nachrichtenbyte pro Sekunde, die während des vergangenen Zeitraums an die Basis der EAA-Regelengine gesendet wurden. </br> **Hinweis:** `RuleBytesInMeanRate` ist der seit dem Start gemessene Mittelwert.
 `MsgOutCount` | Die Anzahl der Nachrichten, die vom Edge Analytics-Agenten (EAA) an {{site.data.keyword.iot_short}} gesendet wurden.
 `MsgOutRate`, `MsgOutMeanRate`, `MsgOutRate1Min`, `MessageOutRate5Min`, `MsgOutRate15Min` | Die geschätzte Anzahl von Nachrichtenbyte pro Sekunde, die während des vergangenen Zeitraums vom Edge Analytics-Agenten (EAA) an {{site.data.keyword.iot_short}} gesendet wurden.</br> **Hinweis:** `MsgOutRate` ist ein Alias für `MsgOutRate1Min`. `MsgOutMeanRate` ist der seit dem Start gemessene Mittelwert.
 `MsgReducePercent` | Die prozentuale Differenz zwischen eingehenden und ausgehenden Nachrichten. </br>Für die Berechnung wird folgende Formel verwendet: `(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | Die prozentuale Differenz zwischen eingehenden und ausgehenden Byte. </br>Für die Berechnung wird folgende Formel verwendet: `(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | Die prozentuale Differenz zwischen der eingehenden und der ausgehenden Nachrichtenrate. </br>Für die Berechnung wird folgende Formel verwendet: `(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | Die prozentuale Differenz zwischen eingehenden und ausgehenden Nachrichtenbyte. </br>Für die Berechnung wird folgende Formel verwendet: `(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | Die aktuelle Systembelastung des Systems, auf dem der Edge Analytics-Agent (EAA) ausgeführt wird. **Hinweis:** Die CPU-Rate wird nur gesendet, wenn auf dem System, auf dem der Edge Analytics-Agent ausgeführt wird, der Befehl `mpstat` vorhanden ist. Andernfalls wird die durchschnittliche Systembelastung der vergangenen Minute gesendet.</br>'Die durchschnittliche Systembelastung ist die für einen bestimmten Zeitraum geltende durchschnittliche Summe der Anzahl von ausführbaren Entitäten, die sich in der Warteschlange für die verfügbaren Prozessoren befinden, und der Anzahl von ausführbaren Entitäten, die auf den verfügbaren Prozessen aktiv sind. Es hängt vom Betriebssystem ab, wie die durchschnittliche Last berechnet wird; es handelt sich in der Regel jedoch um einen geglätteten zeitabhängigen Durchschnitt. Wenn die durchschnittliche Last nicht verfügbar ist, wird ein negativer Wert zurückgegeben.'  
+`SystemLoad` | Die aktuelle Systembelastung des Systems, auf dem der Edge Analytics-Agent (EAA) ausgeführt wird. **Hinweis:** Die CPU-Rate wird nur gesendet, wenn auf dem System, auf dem der Edge Analytics-Agent ausgeführt wird, der Befehl `mpstat` vorhanden ist. Andernfalls wird die durchschnittliche Systembelastung der vergangenen Minute gesendet. </br>'Die durchschnittliche Systembelastung ist die für einen bestimmten Zeitraum geltende durchschnittliche Summe der Anzahl von ausführbaren Entitäten, die sich in der Warteschlange für die verfügbaren Prozessoren befinden, und der Anzahl von ausführbaren Entitäten, die auf den verfügbaren Prozessen aktiv sind. Es hängt vom Betriebssystem ab, wie die durchschnittliche Last berechnet wird; es handelt sich in der Regel jedoch um einen geglätteten zeitabhängigen Durchschnitt. Wenn die durchschnittliche Last nicht verfügbar ist, wird ein negativer Wert zurückgegeben.'  
 Von Javadoc für 'ManagementFactory.getOperatingSystemMXBean'
 `FreeMemory` | Die Anzahl der Byte des freien Speichers für die Java Virtual Machine (JVM), auf der der Edge Analytics-Agent (EAA) ausgeführt wird.
 `MemoryUsed` | Die Anzahl der Byte des JVM-Speichers, die vom Edge Analytics-Agenten (EAA) verwendet wird.
 `InQueueSize` | Die Anzahl der Nachrichten, die zur Verarbeitung durch den Edge Analytics-Agenten in die Warteschlange gestellt wurden.
 `RuleNumber` | Die Anzahl der definierten Regeln in der Basis der Regelengine.
-`ProcessorNumber` | Für Debugzwecke. Die Anzahl der definierten Prozessoren in der Basis der Regelengine.</br>**Hinweis:** Ein Prozessor ist die minimale Ausführungseinheit in der Basis der Regelengine.
+`ProcessorNumber` | Für Debugzwecke. Die Anzahl der definierten Prozessoren in der Basis der Regelengine. </br>**Hinweis:** Ein Prozessor ist die minimale Ausführungseinheit in der Basis der Regelengine.
 `DataPointsInWindow` | Die Gesamtzahl der Datenpunkte, die im Zeitfenster gepuffert werden. Die Bytegröße eines Datenpunkts ist je nach seinem Datentyp unterschiedlich. Die Größe eines Datenpunkts mit dem Format 'float' oder 'int' beträgt beispielsweise 8 Byte, während die Größe eines Datenpunkts mit dem Typ 'string' abhängig von seiner Länge unterschiedlich ist. In den meisten Fällen können Sie die Speicherbelegung des Zeitfensters mithilfe der folgenden Formel schätzen: `DataPointsInWindow * 8`.

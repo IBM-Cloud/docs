@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="connectivity_platform.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="C:\2.DTP\BM110ABD142\ge\iot\reference\security\bitmap.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -887,17 +887,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.44"
-     inkscape:cx="239.39023"
-     inkscape:cy="93.239126"
+     inkscape:zoom="2.803259"
+     inkscape:cx="239.39024"
+     inkscape:cy="122.2348"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1920"
-     inkscape:window-height="1019"
-     inkscape:window-x="-9"
-     inkscape:window-y="1041"
+     inkscape:window-width="1600"
+     inkscape:window-height="848"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -911,7 +911,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1227,14 +1227,14 @@
          id="flowPara7065" /></flowRoot>    <text
        sodipodi:linespacing="125%"
        y="589.29645"
-       x="246.61366"
+       x="248.61366"
        font-size="11"
        id="text66184"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Internet</text>
     <path
        inkscape:connector-curvature="0"
        id="path13593"
-       d="m 277.19536,574.26549 -23.895,0 0,-0.088 c -5.456,-0.671 -9.60201,-5.278 -9.60201,-10.884 0,-6.049 4.92101,-10.971 10.97101,-10.971 0.693,0 1.38,0.064 2.054,0.192 0.752,-5.997 5.797,-10.53201 11.979,-10.53201 6.361,0 11.518,4.80201 12.033,11.05601 4.252,1.613 7.063,5.65 7.063,10.255 0,5.605 -4.146,10.213 -9.602,10.884 l 0,0.077 -1.001,0.011 z m -22.581,-2 22.544,-0.01 c 4.844,-0.176 8.638,-4.112 8.638,-8.962 0,-3.959 -2.54,-7.404 -6.32,-8.573 l -0.686,-0.212 -0.019,-0.717 c -0.144,-5.5 -4.568,-9.809 -10.071,-9.809 -5.505,0 -9.929,4.311 -10.072,9.813 l -0.034,1.321 -1.262,-0.393 c -0.858,-0.267 -1.754,-0.402 -2.665,-0.402 -4.946,0 -8.97101,4.024 -8.97101,8.971 0,4.85 3.79401,8.786 8.63801,8.962 l 0.28,0.011 z"
+       d="m 279.19536,574.26549 -23.895,0 0,-0.088 c -5.456,-0.671 -9.60201,-5.278 -9.60201,-10.884 0,-6.049 4.92101,-10.971 10.97101,-10.971 0.693,0 1.38,0.064 2.054,0.192 0.752,-5.997 5.797,-10.53201 11.979,-10.53201 6.361,0 11.518,4.80201 12.033,11.05601 4.252,1.613 7.063,5.65 7.063,10.255 0,5.605 -4.146,10.213 -9.602,10.884 l 0,0.077 -1.001,0.011 z m -22.581,-2 22.544,-0.01 c 4.844,-0.176 8.638,-4.112 8.638,-8.962 0,-3.959 -2.54,-7.404 -6.32,-8.573 l -0.686,-0.212 -0.019,-0.717 c -0.144,-5.5 -4.568,-9.809 -10.071,-9.809 -5.505,0 -9.929,4.311 -10.072,9.813 l -0.034,1.321 -1.262,-0.393 c -0.858,-0.267 -1.754,-0.402 -2.665,-0.402 -4.946,0 -8.97101,4.024 -8.97101,8.971 0,4.85 3.79401,8.786 8.63801,8.962 l 0.28,0.011 z"
        style="fill:#66d1f5;fill-opacity:1" />
     <path
        inkscape:connector-curvature="0"
@@ -1459,36 +1459,34 @@
          id="flowPara5808" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="72.772636"
+       x="68.772636"
        y="566.47717"
        id="text4681-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="72.772636"
+         x="68.772636"
          y="566.47717"
          style="font-size:12.50000191px"
-         id="tspan5832">Vollständige Unterstützung für </tspan><tspan
+         id="tspan5832">Vollständige Unterstützung</tspan><tspan
          sodipodi:role="line"
-         x="72.772636"
+         x="68.772636"
          y="582.10217"
          style="font-size:12.50000191px"
-         id="tspan5510">Konnektivität </tspan><tspan
+         id="tspan5510">für Konnektivität </tspan><tspan
          sodipodi:role="line"
-         x="72.772636"
+         x="68.772636"
          y="597.72717"
          style="font-size:12.50000191px"
          id="tspan5522">über <tspan
    style="font-weight:bold"
    id="tspan5514">TLS</tspan> (Version 1.2). </tspan><tspan
          sodipodi:role="line"
-         x="72.772636"
+         x="68.772636"
          y="613.35217"
          style="font-size:12.50000191px"
-         id="tspan5512">Offene Standards - <tspan
-   style="font-weight:bold"
-   id="tspan5516"></tspan></tspan><tspan
+         id="tspan5512">Offene Standards - </tspan><tspan
          sodipodi:role="line"
-         x="72.772636"
+         x="68.772636"
          y="628.97717"
          style="font-size:12.50000191px"
          id="tspan5525"><tspan

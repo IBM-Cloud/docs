@@ -36,7 +36,7 @@ Das folgende Beispiel zeigt einen typischen API-Schlüssel:
 {: codeblock}
 
 
-Das folgende Beispiel zeigt ein typisches Authentifizierungstoken: 
+Das folgende Beispiel zeigt ein typisches Authentifizierungstoken:
 
 ```
 MP$08VKz!8rXwnR-Q*
@@ -58,7 +58,7 @@ Eine Anwendung kann Ereignisse so publizieren, als stammten diese von einem beli
 
 Um vorhandene Daten von einem Gerät an {{site.data.keyword.iot_short_notm}} zu übertragen, können Sie eine Anwendung erstellen, mit der die Daten verarbeitet und in {{site.data.keyword.iot_short_notm}} publiziert werden.
 
-**Wichtig:** Der Umfang der Nachrichtennutzdaten ist auf maximal 131072 Byte begrenzt. Nachrichten, die den Grenzwert überschreiten, werden abgelehnt.
+**Wichtig:** Der Umfang der Nachrichtennutzdaten ist auf maximal 131072 Byte begrenzt.  Nachrichten, die den Grenzwert überschreiten, werden abgelehnt.
 
 ## Gerätebefehle publizieren
 {: #publishing_device_commands}
@@ -139,10 +139,10 @@ Stellen Sie zum Aktivieren der Lastverteilung sicher, dass die Anwendungssubskri
 <pre class="pre">A:<var class="keyword varname">Organisations-ID</var>:<var class="keyword varname">Anwendungs-ID</var></pre>
 {: codeblock}
 
-Dabei gilt: 
+Dabei gilt:
 -  Das Zeichen **A** gibt an, dass es sich bei dem Client um eine skalierbare Anwendung handelt.
--  *Organisations-ID* ist die aus sechs Zeichen bestehende eindeutige Organisations-ID, die generiert wurde, als Sie die beim ersten Registrieren des Service zugeordnete alphanumerische Zeichenfolge des Service registriert haben. 
--  *Anwendungs-ID* ist eine benutzerdefinierte eindeutige Zeichenfolge-ID für den Client. Die Zeichenfolge kann nur alphanumerische Zeichen (a-z, A-Z, 0-9) und als Sonderzeichen den Gedankenstrich (-), das Unterstreichungszeichen (_) und den Punkt (.) enthalten. 
+-  *Organisations-ID* ist die aus sechs Zeichen bestehende eindeutige Organisations-ID, die generiert wurde, als Sie die beim ersten Registrieren des Service zugeordnete alphanumerische Zeichenfolge des Service registriert haben.
+-  *Anwendungs-ID* ist eine benutzerdefinierte eindeutige Zeichenfolge-ID für den Client. Die Zeichenfolge kann nur alphanumerische Zeichen (a-z, A-Z, 0-9) und als Sonderzeichen den Gedankenstrich (-), das Unterstreichungszeichen (_) und den Punkt (.) enthalten.
 
 **Wichtig:**
 - Für skalierbare Anwendungen werden nur Subskriptionen unterstützt, die nicht permanent sind.

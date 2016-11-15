@@ -14,7 +14,7 @@ copyright:
 
 # Conectividad de MQTT para dispositivos
 {: #mqtt}
-Última actualización: 09 de septiembre de 2016
+Última actualización: 21 de septiembre de 2016
 {: .last-updated}
 
 MQTT es el protocolo primario que utilizan los dispositivos y las aplicaciones para comunicarse con el {{site.data.keyword.iot_full}}. Las bibliotecas de cliente, la información y los ejemplos se proporcionan para ayudarle a conectar e integrar los dispositivos con {{site.data.keyword.iot_short_notm}}.
@@ -65,8 +65,8 @@ Los dispositivos publican en los temas de sucesos en el formato siguiente:
 
 Donde
 
--  **event_id** es el ID del suceso, por ejemplo `status`. El ID de suceso puede ser cualquier serie válida en MQTT. Si no se utilizan comodines, las aplicaciones del suscriptor deben utilizar esta serie en su tema de suscripción para recibir los sucesos publicados en su tema.
--  **format_string** es el formato de la carga útil de suceso, por ejemplo `json`. El formato puede ser cualquier serie válida en MQTT. Si no se utilizan comodines, las aplicaciones del suscriptor deben utilizar esta serie en su tema de suscripción para recibir los sucesos publicados en su tema.
+-  **event_id** es el ID del suceso, por ejemplo `status`.  El ID de suceso puede ser cualquier serie válida en MQTT. Si no se utilizan comodines, las aplicaciones del suscriptor deben utilizar esta serie en su tema de suscripción para recibir los sucesos publicados en su tema.
+-  **format_string** es una serie que define el tipo de contenido de la carga útil del mensaje para que el receptor del mensaje pueda determinar la forma de analizar el contenido. Los valores de tipo de contenido comunes incluyen, pero no se limitan a, "json", "xml", "txt" y "csv". El valor puede ser cualquier serie válida en MQTT.
 
 **Importante:** La carga útil de mensajes está limitada a un máximo de 131072 bytes. Los mensajes mayores de este límite se rechazarán.
 
@@ -80,8 +80,8 @@ Los dispositivos pueden suscribirse a temas de mandatos en el formato siguiente:
 {: codeblock}
 
 Donde
- - **command_id** es el ID del mandato, por ejemplo, `update`. El ID de mandato puede ser cualquier serie válida en el protocolo MQTT. Si no se utilizan comodines, un dispositivo debe utilizar esta serie en su tema de suscripción para que reciba mandatos publicados en su tema.
- - **format_string** es el formato de la carga útil de mandatos, por ejemplo `json`. El formato puede ser cualquier serie válida en el protocolo MQTT. Si no se utilizan comodines, un dispositivo debe utilizar esta serie en su tema de suscripción para que reciba mandatos publicados en su tema.
+ - **command_id** es el ID del mandato, por ejemplo, `update`. El ID de mandato puede ser cualquier serie válida en el protocolo MQTT.  Si no se utilizan comodines, un dispositivo debe utilizar esta serie en su tema de suscripción para que reciba mandatos publicados en su tema.
+ - **format_string** es una serie que define el tipo de contenido de la carga útil del mandato de modo que el receptor del mandato pueda determinar la forma de analizar el contenido. Los valores de tipo de contenido comunes incluyen, pero no se limitan a, "json", "xml", "txt" y "csv". El valor puede ser cualquier serie válida en MQTT.
 
 Los dispositivos no pueden suscribirse a sucesos de otros dispositivos. Un dispositivo recibe mandatos publicados únicamente en su propio dispositivo.
 
@@ -99,7 +99,7 @@ Los mensajes con QoS=0 pueden descartarse y no persisten una vez que se reinicia
 {{site.data.keyword.iot_short_notm}} publica solicitudes que tienen un nivel de QoS de 1 para dar soporte a la puesta en cola de mensajes. Para poner en cola mensajes que se envían mientras que un dispositivo gestionado no está conectado, configure el dispositivo para que no utilice sesiones limpias estableciendo el parámetro `cleansession` en false.
 
 **Aviso:**
-  Si el dispositivo gestionado utiliza una suscripción duradera, los mandatos de gestión de dispositivos que se envíen a su dispositivo mientras esté fuera de línea se notifican como operaciones anómalas si el dispositivo no vuelve a conectarse al servicio antes de que se exceda el tiempo de espera de la solicitud. Sin embargo, cuando el dispositivo vuelve a conectarse, el dispositivo procesa dichas solicitudes. Se especifica una suscripción duradera mediante el parámetro `cleansession=false`.
+  Si el dispositivo gestionado utiliza una suscripción duradera, los mandatos que se envíen a su dispositivo mientras esté fuera de línea se notifican como operaciones anómalas si el dispositivo no vuelve a conectarse al servicio antes de que se exceda el tiempo de espera de la solicitud. Sin embargo, cuando el dispositivo vuelve a conectarse, el dispositivo procesa dichas solicitudes. Se especifica una suscripción duradera mediante el parámetro `cleansession=false`.
 
 ### Temas
 
@@ -119,7 +119,7 @@ Un dispositivo gestionado publica en los temas específicos del tipo de solicitu
 
 ### Formato de mensajes
 
-Todos los mensajes se envían en formato JSON. 
+Todos los mensajes se envían en formato JSON.
 
 **Solicitudes**  
 Las solicitudes se formatean tal como se muestra en el ejemplo de código siguiente:

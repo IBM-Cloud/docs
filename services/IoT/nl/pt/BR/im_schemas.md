@@ -47,10 +47,10 @@ Para incluir um esquema:
    `Sequência`, `Número inteiro`, `Valor flutuante` ou `Pai`.</li>
    <!--<li>Event - A specific event to collect data for. Leave blank to collect for all events.</li>-->
    <li>Propriedade - O identificador da propriedade, por exemplo:  
- `temp` ou `speed` </br> Para obter informações sobre como identificar as propriedades das mensagens do dispositivo, consulte [Identificando propriedades para seus dispositivos](#identify-datapoints "Identificar propriedades.").</li>
+ `temp` ou `speed`  </br> Para obter informações sobre como identificar as propriedades das mensagens do dispositivo, consulte [Identificando propriedades para seus dispositivos](#identify-datapoints "Identificar propriedades.").</li>
   <li>Unidade de dados - Opcional: a unidade de dados da propriedade. Por
 exemplo:  
-     `C` ou `Mph` </li>
+     `C` ou `Mph`  </li>
      <li> Casas decimais - Opcional, somente valor flutuante: o número de decimais para incluir nos dados do dispositivo.</li>
     </ul>
     </li>

@@ -63,4 +63,4 @@ copyright:
 
 포럼 사용에 대한 자세한 정보는 [도움 받기](https://www.{DomainName}/docs/support/index.html#getting-help)를 참조하십시오.
 
-IBM 지원 티겟 열기 또는 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 센터에 문의](https://www.{DomainName}/docs/support/index.html#contacting-support)를 참조하십시오.
+IBM 지원 티겟 열기 또는 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 문의](https://www.{DomainName}/docs/support/index.html#contacting-support)를 참조하십시오.

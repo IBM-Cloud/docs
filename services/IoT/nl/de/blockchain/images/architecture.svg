@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="architecture.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture.png"
+   inkscape:export-filename="C:\2.DTP\BM110ABD142\ge\iot\blockchain\images\bitmap.png"
    inkscape:export-xdpi="300.08456"
    inkscape:export-ydpi="300.08456">
   <defs
@@ -256,17 +256,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.57"
-     inkscape:cx="387.61773"
-     inkscape:cy="92.62172"
+     inkscape:zoom="1.8802369"
+     inkscape:cx="356.7589"
+     inkscape:cy="176.08542"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1920"
-     inkscape:window-height="1019"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-width="1600"
+     inkscape:window-height="848"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -538,7 +538,7 @@
          sodipodi:role="line"
          x="250.21838"
          y="627.85205"
-         id="tspan6913">Gerätesimulator</tspan> </text>
+         id="tspan6913">Gerätesimulator</tspan></text>
     <g
        id="g6940"
        transform="matrix(0.06176845,0,0,0.06559102,215.54778,564.56484)">
@@ -695,22 +695,30 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000024px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
        x="483.65396"
-       y="701.80188"
+       y="691.80188"
        id="text18189-6-6"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan18191-9-6"
          x="483.65396"
-         y="701.80188">IoT-Blockchain</tspan><tspan
+         y="691.80188">IoT-Blockchain</tspan><tspan
          sodipodi:role="line"
          x="483.65396"
-         y="715.55188"
-         id="tspan6878-4-2">Benutzerschnittstelle für die Überwachung</tspan><tspan
+         y="705.55188"
+         id="tspan3523">Benutzerschnitt-</tspan><tspan
          sodipodi:role="line"
          x="483.65396"
-         y="729.30188"
+         y="719.30188"
+         id="tspan3527">stelle für die </tspan><tspan
+         sodipodi:role="line"
+         x="483.65396"
+         y="733.05188"
+         id="tspan3529">Überwachung</tspan><tspan
+         sodipodi:role="line"
+         x="483.65396"
+         y="746.80188"
          id="tspan18193-1-8" /></text>
     <rect
        x="135.59711"
@@ -738,7 +746,7 @@
     <text
        sodipodi:linespacing="125%"
        y="557.64496"
-       x="510.22678"
+       x="504.48853"
        font-size="11"
        id="text59612"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
@@ -841,7 +849,7 @@
     <text
        sodipodi:linespacing="125%"
        y="645.70319"
-       x="510.45932"
+       x="504.72107"
        font-size="11"
        id="text59612-2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"

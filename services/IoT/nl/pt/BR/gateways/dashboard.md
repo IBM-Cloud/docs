@@ -29,7 +29,7 @@ Dispositivos de gateway têm permissões adicionais quando comparados a disposit
 - Registrar novos dispositivos no Watson IoT Platform
 - Enviar e receber seus próprios dados de sensor como um dispositivo diretamente conectado
 - Enviar e receber dados em nome dos dispositivos conectados a ele
-- Executar um agente de gerenciamento de dispositivo para que possa ser gerenciado e também gerenciar os dispositivos conectados a ele.
+- Executar um agente de gerenciamento de dispositivo para que possa ser gerenciado e também gerenciar os dispositivos conectados a ele.  
 Para obter informações para o desenvolvedor de gateway, consulte [Conectividade MQTT para gateways](mqtt.html).
 
 Também é possível usar gateways para executar Edge Analytics nos dados que os dispositivos de gateway estão enviando. Para obter mais informações, consulte [Edge Analytics](../edge_analytics.html) e [Instalando o Edge Analytics Agent](#edge).
@@ -39,28 +39,28 @@ Também é possível usar gateways para executar Edge Analytics nos dados que os
 
 O registro de um gateway envolve classificar o dispositivo como um tipo de gateway, dando ao gateway um nome e fornecendo informações do gateway. Em seguida, você fornece um token de conexão ou aceita um token que é gerado pelo {{site.data.keyword.iot_short_notm}}.
 
-**Dica:** é possível incluir gateways um por vez a partir do painel do {{site.data.keyword.iot_short_notm}} ou usar a [API do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) para incluir um ou mais gateways por vez. 
+**Dica:** é possível incluir gateways um por vez a partir do painel do {{site.data.keyword.iot_short_notm}} ou usar a [API do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) para incluir um ou mais gateways por vez.
 
 Para incluir um gateway a partir do painel do {{site.data.keyword.iot_short_notm}}:
 
 1. No painel do {{site.data.keyword.iot_short_notm}}, selecione **Dispositivos**.
 2. Clique em **Incluir dispositivo**.
-3. Selecione ou crie um tipo de dispositivo para o dispositivo que você está incluindo.
+3. Selecione ou crie um tipo de dispositivo para o dispositivo que você está incluindo.  
 Cada dispositivo conectado ao {{site.data.keyword.iot_short_notm}} deve estar associado a um tipo de dispositivo. Tipos de dispositivos são grupos de dispositivos que compartilham características.  
  1. Clique em **Criar tipo de dispositivo**, em seguida, em **Criar tipo de gateway**.
  2. Insira um nome, como `my_gateway_type`, e uma descrição para o tipo de gateway.
- 3. Opcional: insira atributos e metadados de tipo de gateway.
+ 3. Opcional: insira atributos e metadados de tipo de gateway.    
  **Dica:** é possível incluir e editar atributos e metadados posteriormente.
  4. Clique em **Criar** para incluir o novo tipo de gateway.
 10. Clique em **Avançar** para iniciar o processo de incluir seu dispositivo de gateway com o tipo de gateway selecionado.
-11. Insira um ID do dispositivo, como `my_gateway_device`.
+11. Insira um ID do dispositivo, como `my_gateway_device`.  
 O ID do dispositivo é usado para identificar o dispositivo de gateway no painel do {{site.data.keyword.iot_short_notm}} e também é um parâmetro necessário para conectar seu dispositivo de gateway ao {{site.data.keyword.iot_short_notm}}.
-12. Opcional: clique em **Campos adicionais** para incluir informações de dispositivo de gateway, como número de série, fabricante, modelo, etc.
-**Dica:** é possível incluir e editar essas informações posteriormente.
-12. Opcional: insira os metadados JSON do dispositivo.
+12. Opcional: clique em **Campos adicionais** para incluir informações de dispositivo de gateway, como número de série, fabricante, modelo, etc.  
+ **Dica:** é possível incluir e editar essas informações posteriormente.
+12. Opcional: insira os metadados JSON do dispositivo.  
  **Dica:** é possível incluir e editar metadados do dispositivo posteriormente.
 13. Clique em **Avançar** para concluir a inclusão de seu dispositivo de gateway.
-14. Verifique se as informações de resumo estão corretas e, em seguida, clique em **Incluir** para incluir o dispositivo de gateway.
+14. Verifique se as informações de resumo estão corretas e, em seguida, clique em **Incluir** para incluir o dispositivo de gateway.  
 **Dica:** você tem a opção para aceitar um token de autenticação gerado automaticamente ou você mesmo fornecer um token de autenticação. Se você optar por criar seu próprio token, certifique-se de que tenha entre oito e 36 caracteres de comprimento, contenha uma combinação de letras minúsculas e maiúsculas, números e hífen, sublinhado ou ponto. O token não deve conter sequências de caracteres repetidos, palavras de dicionário, nomes de usuário ou outras sequências predefinidas.
 15. Na página de informações do dispositivo, copie e salve as informações do dispositivo a seguir:  
  - ID da organização, como `tubo8x`

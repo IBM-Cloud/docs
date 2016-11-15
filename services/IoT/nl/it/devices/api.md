@@ -13,7 +13,7 @@ copyright:
 
 # API REST HTTP per i dispositivi
 {: #api}
-Ultimo aggiornamento: 09 settembre 2016
+Ultimo aggiornamento: 11 ottobre 2016
 {: .last-updated}
 
 **Importante:** l'API REST HTTP {{site.data.keyword.iot_full}} per la funzione dei dispositivi è disponibile solo come parte di un programma beta limitato. Futuri aggiornamenti possono includere modifiche incompatibili con la versione corrente di questa funzione. Provala e [facci sapere cosa ne pensi](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
@@ -25,7 +25,7 @@ Per accedere all'API REST HTTP {{site.data.keyword.iot_short_notm}} e ottenere u
 
 L'unica versione dell'API REST HTTP {{site.data.keyword.iot_short_notm}} supportata è la versione 2. Assicurati che le tue soluzioni {{site.data.keyword.iot_short_notm}} utilizzino la versione 2.
 
-# API di messaggistica REST HTTP per i dispositivi 
+# API di messaggistica REST HTTP per i dispositivi
 {: #rest_messaging_api}
 
 ## Pubblicazione eventi
@@ -35,11 +35,11 @@ In aggiunta all'utilizzo del protocollo di messaggistica MQTT, puoi anche config
 
 Utilizza uno dei seguenti URL per inviare una richiesta `POST` da un dispositivo collegato a {{site.data.keyword.iot_short_notm}}:
 
-### Richiesta POST non sicura 
+### Richiesta POST non sicura
 <pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
-### Richiesta POST sicura 
+### Richiesta POST sicura
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
@@ -61,10 +61,11 @@ Se stai collegando un dispositivo o un'applicazione al servizio Quickstart, inve
 
 Tutte le richieste devono includere un'intestazione di autorizzazione. L'autenticazione di base è l'unico metodo supportato. Quando un dispositivo effettua una richiesta HTTP tramite l'API REST HTTP {{site.data.keyword.iot_short_notm}}, sono necessarie le seguenti credenziali:
 
-```
-username = "use-token-auth"
-password = Authentication token
-```
+|Credenziale|Input richiesto|
+|:---|:---|
+|Nome utente|`use-token-auth`
+|Password| Il token di autenticazione che è stato generato automaticamente o specificato manualmente quando hai registrato il dispositivo.
+
 
 ### Intestazioni richiesta per tipo di contenuto
 
@@ -82,3 +83,62 @@ Deve essere fornita un'intestazione della richiesta `Content-Type` con la richie
 Simile al livello di sicurezza di distribuzione 0 di QOS (quality of service) MQTT "at most once", la messaggistica REST HTTP fornisce la fornitura del messaggio non persistente ma verifica che la richiesta sia corretta e che possa essere distribuita al server prima che invii la risposta HTTP. Un risposta che contiene un codice di stato HTTP di 200 conferma che il messaggio è stato distribuito al server. Quando utilizzi il livello di QOS (quality of service) MQTT "at most once" o l'equivalente HTTP per distribuire i messaggi dell'evento, il dispositivo o l'applicazione deve implementare la logica del nuovo tentativo per garantire la distribuzione.
 
 Per ulteriori informazioni sul protocollo MQTT e sui livelli di QOS (quality of service) per {{site.data.keyword.iot_short_notm}}, consulta [Messaggistica MQTT](../reference/mqtt/index.html).
+
+
+<--!
+Spostato dall'argomento di sviluppo Funzioni obsoleto. L'ubicazione da discutere con lo sviluppatore.
+## Ultimo evento cache
+{: #last-event-cache}
+
+Utilizzando l'API Ultima cache evento {{site.data.keyword.iot_short_notm}}, puoi richiamare l'ultimo evento che è stato inviato a un dispositivo. Funziona sia se il dispositivo è online che offline e ti consente di richiamare lo stato del dispositivo indipendentemente dalla sua ubicazione fisica o stato di utilizzo. Puoi richiamare l'ultimo valore registrato di un ID evento per un dispositivo specifico o l'ultimo valore registrato per ogni ID evento che è stato riportato da un dispositivo specifico. Gli ultimi dati evento possono essere richiamati per ogni evento specifico verificatosi negli ultimi 365 giorni.
+
+Per richiedere il valore più recente di un ID evento specifico, utilizza la seguente richiesta API, che restituisce l'ultimo valore registrato per l'ID evento “power”.
+
+```
+GET /api/v0002/device/types/<device-type>/devices/<device-id>/events/power
+```
+
+La risposta viene restituita nel seguente formato JSON:
+
+```
+{
+    "deviceId": "<device-id>",
+    "eventId": "power",
+    "format": "json",
+    "payload": "eyJzdGF0ZSI6Im9uIn0=",
+    "timestamp": "2016-03-14T14:12:06.527+0000",
+    "typeId": "<device-type>"
+}
+```
+
+**Nota:** mentre la risposta API è nel formato JSON, i payload dell'evento possono essere scritti in qualsiasi formato. I payload restituiti dall'API Ultima cache evento sono codificati in base64.
+
+Per richiedere il valore più recente di ogni ID evento che è stato riportato da un dispositivo, utilizza la seguente richiesta API:
+
+```
+GET /api/v0002/device/types/<device-type>/devices/<device-id>/events
+```
+
+La risposta includerà tutti gli ID evento che sono stati inviati dal dispositivo. Nel seguente esempio, i valori vengono restituiti per gli eventi “power” e “temperature”.
+
+```
+[
+    {
+        "deviceId": "<device-id>",
+        "eventId": "power",
+        "format": "json",
+        "payload": "eyJzdGF0ZSI6Im9uIn0=",
+        "timestamp": "2016-03-14T14:12:06.527+0000",
+        "typeId": "<device-type>"
+    },
+    {
+        "deviceId": "<device-id>",
+        "eventId": "temperature",
+        "format": "json",
+        "payload": "eyJpbnRlcm5hbCI6MjIsICJleHRlcm5hbCI6MTZ9",
+        "timestamp": "2016-03-14T14:17:44.891+0000",
+        "typeId": "<device-type>"
+    }
+]
+```
+-->

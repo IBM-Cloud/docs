@@ -545,7 +545,7 @@ O dispositivo precisa executar as seguintes atividades para suportar ações do 
 
 **1. Informar o servidor sobre o suporte a ações do dispositivo**
 
-Para executar reinicialização e reconfiguração de fábrica, o dispositivo precisa informar o {{site.data.keyword.iot_short_notm}} sobre seu suporte primeiro.Isso pode ser feito chamando o método a seguir com um valor booleano:
+Para executar reinicialização e reconfiguração de fábrica, o dispositivo precisa informar o {{site.data.keyword.iot_short_notm}} sobre seu suporte primeiro. Isso pode ser feito chamando o método a seguir com um valor booleano:
 
 ```
 managedDevice.supportsDeviceActions(true);
@@ -683,7 +683,7 @@ Para obter mais informações sobre como atualizar os atributos do dispositivo, 
 -   [RasPiFirmwareHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/RasPiFirmwareHandlerSample.java) - Uma implementação de amostra de FirmwareHandler para o Raspberry Pi.
 -   [DeviceActionHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceActionHandlerSample.java) - Uma implementação de amostra de DeviceActionHandler
 -   [ManagedDeviceWithLifetimeSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/ManagedDeviceWithLifetimeSample.java) - Uma amostra que demonstra como enviar solicitação de gerenciamento regular com tempo de vida especificado.
--   [DeviceAttributesUpdateListenerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceAttributesUpdateListenerSample.java) - Um código de listener de amostra que demonstra como receber diversas mudanças de atributos de dispositivo. 
+-   [DeviceAttributesUpdateListenerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceAttributesUpdateListenerSample.java) - Um código de listener de amostra que demonstra como receber diversas mudanças de atributos de dispositivo.
 -   [NonBlockingDiagnosticsErrorCodeUpdateSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/NonBlockingDiagnosticsErrorCodeUpdateSample.java) - Uma amostra quer demonstra como incluir ErrorCode sem esperar pela resposta do servidor.
 
 ##Receitas s

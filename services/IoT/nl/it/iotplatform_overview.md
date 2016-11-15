@@ -44,7 +44,7 @@ Un'unità può essere qualsiasi cosa che dispone di una connessione a internet e
 
 {{site.data.keyword.iot_short_notm}} riconosce due classi di dispositivo; **dispositivi gestiti** e **dispositivi non gestiti**.
 
-**Dispositivi gestiti** sono definiti come dispositivi che contengono un agent di gestione del dispositivo. Un agent di gestione del dispositivo è un insieme di logica che consente al dispositivo di interagire con il servizio di gestione del dispositivo {{site.data.keyword.iot_short_notm}} utilizzando il protocollo di gestione del dispositivo. I dispositivi gestiti possono eseguire operazioni di gestione del dispositivo inclusi gli aggiornamenti dell'ubicazione, gli scaricamenti e gli aggiornamenti del firmware, i riavvi e le reimpostazioni dei valori predefiniti. 
+**Dispositivi gestiti** sono definiti come dispositivi che contengono un agent di gestione del dispositivo. Un agent di gestione del dispositivo è un insieme di logica che consente al dispositivo di interagire con il servizio di gestione del dispositivo {{site.data.keyword.iot_short_notm}} utilizzando il protocollo di gestione del dispositivo. I dispositivi gestiti possono eseguire operazioni di gestione del dispositivo inclusi gli aggiornamenti dell'ubicazione, gli scaricamenti e gli aggiornamenti del firmware, i riavvi e le reimpostazioni dei valori predefiniti.
 
 **Dispositivi non gestiti** sono tutti i dispositivi senza un agent di gestione del dispositivo. I dispositivi non gestiti possono collegarsi a {{site.data.keyword.iot_short_notm}} e inviare e ricevere gli eventi e i comandi, ma non possono inviare le richieste di gestione del dispositivo o eseguire le operazioni di gestione del dispositivo.
 
@@ -52,7 +52,7 @@ Un'unità può essere qualsiasi cosa che dispone di una connessione a internet e
 
 I gateway sono dispositivi specializzati che dispongono delle funzionalità combinate di un'applicazione e di un dispositivo, che gli permette di funzionare come punti di accesso per altri dispositivi. I dispositivi che non possono collegarsi direttamente a internet possono accedere al servizio {{site.data.keyword.iot_short_notm}} collegandosi prima a un dispositivo gateway.
 
-I gateway devono essere registrati prima di potersi collegare al servizio. 
+I gateway devono essere registrati prima di potersi collegare al servizio.
 
 ### Applicazioni
 

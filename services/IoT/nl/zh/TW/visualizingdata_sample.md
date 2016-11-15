@@ -30,7 +30,7 @@ copyright:
 1. 使用 Node.js SDK，在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式。記下應用程式名稱和應用程式的主機名稱，將應用程式上傳至 {{site.data.keyword.Bluemix_notm}} 時，會需要此資訊。
 2. 完成下列步驟，以將 node.JS 應用程式連結至 {{site.data.keyword.Bluemix_notm}} 儀表板中的 {{site.data.keyword.iot_short_notm}} 實例：
 
-  a. 在 {{site.data.keyword.Bluemix_notm}} 儀表板中，按一下您所建立的 Node.JS 應用程式。
+  a. 在 {{site.data.keyword.Bluemix_notm}} 儀表板中，按一下您已建立的 Node.JS 應用程式。
 
   b. 按一下**連結服務或 API**，然後選取 {{site.data.keyword.iot_short_notm}} 服務，並按一下**新增**。
 3. 使用 cf 指令行工具，將目錄變更為已解壓縮的視覺化範例套件，並執行下列指令，以連接至 {{site.data.keyword.Bluemix_notm}}。

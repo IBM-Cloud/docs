@@ -20,6 +20,7 @@ copyright:
 
 您可以在 {{site.data.keyword.iot_full}} 上使用 Python 來建置及開發與組織互動的應用程式。適用於 {{site.data.keyword.iot_short_notm}} 的 Python 用戶端提供 API，透過抽出基礎通訊協定（例如 MQTT 及 HTTP）來協助與 {{site.data.keyword.iot_short_notm}} 特性的簡單互動。
 
+
 {:shortdesc}
 
 使用提供的資訊及範例，利用 Python 開始開發您的應用程式。
@@ -39,7 +40,7 @@ options 字典會建立用來與 {{site.data.keyword.iot_short_notm}} 模組互�
 |`orgId`|您的組織 ID|
 |`appId`|組織中應用程式的唯一 ID|
 |`auth-method`|鑑別方法，唯一支援的值是 `apikey`|
-|`auth-key`|選用的 API 金鑰，當 auth-method 設為 `apikey` 時為必要項目|
+|`auth-key`|選用性的 API 金鑰，當 auth-method 設為 `apikey` 時為必要項目|
 |`auth-token`|API 金鑰記號，當 auth-method 設為 `apikey` 時為必要項目|
 
 如果未提供 options 字典，用戶端會連接至 {{site.data.keyword.iot_short_notm}} 的「快速入門」服務，作為已取消登錄的裝置。
@@ -625,7 +626,8 @@ response = apiClient.retrieveDevices("iotsample-arduino", parameters);
 
 若要將裝置新增至 {{site.data.keyword.iot_short_notm}} 組織，請使用 `registerDevice()` 方法。`registerDevice()` 方法會將單一裝置新增至 {{site.data.keyword.iot_short_notm}} 組織。當您新增裝置時，可以指定下列參數：
 
-|參數|需求|說明|:---|:---|
+|參數|需求|說明
+|:---|:---|
 |`deviceTypeId`|選用|將裝置類型指派給裝置。如果裝置類型所定義的變數與 `deviceInfo` 變數所定義的變數之間發生衝突，則會優先使用裝置特定變數。|
 |`deviceId`|必要||
 |`authToken`|選用|如果未提供，鑑別記號會產生並包括在回應中。|
@@ -635,7 +637,7 @@ response = apiClient.retrieveDevices("iotsample-arduino", parameters);
 
 如需這些參數以及回應格式和程式碼的相關資訊，請參閱 [API 文件](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices)。
 
-當您使用 `registerDevice()` 方法時，請定義裝置所需的必要 deviceID 參數及選用參數，然後使用所選取的參數來呼叫方法。
+當您使用 `registerDevice()` 方法時，請定義裝置所需的必要 deviceID 參數及選用性參數，然後使用所選取的參數來呼叫方法。
 
 ### 新增裝置類型的範例程式碼
 {: #sample_device_type}
@@ -835,7 +837,7 @@ apiCli.clearAllErrorCodes(deviceTypeId, deviceId)
 使用 `addErrorCode()` 方法，以將錯誤碼新增至與裝置相關聯的錯誤碼清單。新增項目時，即可刪改清單。此方法中所需的參數是 deviceTypeId、deviceId 及 errorCode。errorCode 參數包含下列變數：
 
 - errorCode：這是必要的變數，應設為整數。此變數會設定所建立的錯誤碼數目。
-- timestamp：這是選用的變數，而且包含 ISO8601 格式之日誌項目的日期和時間。如果未包括此變數，將會以現行日期和時間自動加以新增。
+- timestamp：這是選用性的變數，而且包含 ISO8601 格式之日誌項目的日期和時間。如果未包括此變數，將會以現行日期和時間自動加以新增。
 
 ```python
 errorCode = { "errorCode": 1234, "timestamp": "2015-10-29T05:43:57.112Z" }

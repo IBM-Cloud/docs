@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="authentication_platform.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="C:\2.DTP\BM110ABD142\ge\iot\reference\security\bitmap.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -705,17 +705,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1654846"
-     inkscape:cx="392.34487"
-     inkscape:cy="100.04996"
+     inkscape:zoom="2.2567373"
+     inkscape:cx="313.27762"
+     inkscape:cy="148.47065"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1680"
-     inkscape:window-height="1023"
-     inkscape:window-x="528"
-     inkscape:window-y="-9"
+     inkscape:window-width="1600"
+     inkscape:window-height="848"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -729,7 +729,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1125,7 +1125,7 @@
          sodipodi:role="line"
          x="43.057407"
          y="536.01312"
-         id="tspan6913-6">Anwendungen</tspan> </text>
+         id="tspan6913-6">Anwendungen</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path8199"
@@ -1432,13 +1432,13 @@
          id="flowPara5808" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="235.75475"
-       y="638.19281"
+       x="213.75475"
+       y="636.19281"
        id="text4681"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="235.75475"
-         y="638.19281"
+         x="213.75475"
+         y="636.19281"
          style="font-size:12.50000191px"
          id="tspan4687">Authentifizierung über <tspan
    style="font-weight:bold"
@@ -1537,45 +1537,50 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-27.655277"
-       y="591.38055"
+       y="587.38055"
        id="text4681-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="-27.655277"
-         y="591.38055"
+         y="587.38055"
          style="font-size:12.50000191px"
-         id="tspan4687-8">Verwenden Sie <tspan
+         id="tspan4687-8">Verwenden Sie </tspan><tspan
+         sodipodi:role="line"
+         x="-27.655277"
+         y="603.00555"
+         style="font-size:12.50000191px"
+         id="tspan5834"><tspan
    style="font-weight:bold"
-   id="tspan5838"> API-Schlüssel,</tspan></tspan><tspan
+   id="tspan3610">API-Schlüssel, </tspan>um </tspan><tspan
          sodipodi:role="line"
          x="-27.655277"
-         y="607.00555"
+         y="618.63055"
          style="font-size:12.50000191px"
-         id="tspan5834">um authentifizierte </tspan><tspan
+         id="tspan11042">authentifizierte REST-</tspan><tspan
          sodipodi:role="line"
          x="-27.655277"
-         y="622.63055"
+         y="634.25555"
          style="font-size:12.50000191px"
-         id="tspan11042">REST-Aufrufe auszuführen </tspan><tspan
+         id="tspan3620">Aufrufe auszuführen </tspan><tspan
          sodipodi:role="line"
          x="-27.655277"
-         y="638.25555"
+         y="649.88055"
          style="font-size:12.50000191px"
          id="tspan5836" /><tspan
          sodipodi:role="line"
          x="-27.655277"
-         y="653.88055"
+         y="665.50555"
          style="font-size:12.50000191px"
          id="tspan5832" /></text>
     <text
        sodipodi:linespacing="125%"
        y="635.88947"
-       x="413.8291"
+       x="419.8291"
        font-size="11"
        id="text65450"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Benutzer mit IBM ID</text>
     <g
-       transform="translate(-1540.5459,252.77424)"
+       transform="translate(-1520.5459,252.77424)"
        id="g14242"
        style="fill:#66d1f5;fill-opacity:1">
       <path

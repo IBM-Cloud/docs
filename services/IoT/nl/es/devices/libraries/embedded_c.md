@@ -181,6 +181,7 @@ Cuando el cliente de dispositivo se conecta, se suscribe automáticamente a cual
 
 ```
 **Nota:** La función `yield()` permite al dispositivo recibir mandatos desde la Watson IoT Platform y mantiene la conexión activa. Si la función `yield()` no se invoca dentro del intervalo de tiempo especificado por el intervalo de keepAlive, el dispositivo no recibirá ningún mandato enviado desde la plataforma. El valor que se asigna a la función `yield()` especifica la longitud de tiempo (en milisegundos) que se pueden leer los datos desde el socket antes de que se devuelva el control a la aplicación.
+
 ## Publicación de sucesos
 {: #publishing_events}
 

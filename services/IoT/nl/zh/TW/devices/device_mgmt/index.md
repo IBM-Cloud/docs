@@ -35,7 +35,7 @@ copyright:
 2. 裝置連接至 {{site.data.keyword.iot_short_notm}}，並使用**受管理裝置**作業而變成受管理裝置。
 3. 您可以使用裝置作業來檢視及操作裝置的 meta 資料。「裝置模型」文件中概述這些作業（例如，韌體更新及裝置重新開機作業）。如需裝置模型的相關資訊，請參閱[裝置模型](https://console.ng.bluemix.net/docs/services/IoT/reference/device_model.html)。
 4. 裝置可以使用「裝置管理通訊協定」來傳遞有關其位置、診斷資訊及錯誤碼的更新。
-5. 若要處理大型裝置母體中的已廢止裝置，**受管理裝置**作業要求會包括選用的 lifetime 參數。lifetime 參數是秒數，裝置必須在此時間內提出另一個**受管理裝置**要求，來避免被分類為休眠及變成未受管理裝置。
+5. 若要處理大型裝置母體中的已廢止裝置，**受管理裝置**作業要求會包括選用性的 lifetime 參數。lifetime 參數是秒數，裝置必須在此時間內提出另一個**受管理裝置**要求，來避免被分類為休眠及變成未受管理裝置。
 6. 裝置解除任務時，您可以使用儀表板或 REST API，將它從 {{site.data.keyword.iot_short_notm}} 中移除。
 
 ### 回覆碼摘要
@@ -83,11 +83,11 @@ iotdm-1/response
 ### 管理裝置要求的訊息格式
 
 
-在「管理裝置」要求中，`d` 欄位及其所有子欄位都是選用欄位。`metadata` 及 `deviceInfo` 欄位值在傳送時會取代傳送端裝置的對應屬性。
+在「管理裝置」要求中，`d` 欄位及其所有子欄位都是選用性欄位。`metadata` 及 `deviceInfo` 欄位值在傳送時會取代傳送端裝置的對應屬性。
 
-選用的 `lifetime` 欄位指定時間長度（以秒為單位），裝置必須在此時間長度內傳送另一個「管理裝置」要求，來避免被分類為休眠以及變成未受管理裝置。如果省略 `lifetime` 欄位，或設為 `0`，則受管理裝置不會變成休眠。`lifetime` 欄位的最低支援設定是 `3600` 秒（即 1 小時）。
+選用性的 `lifetime` 欄位指定時間長度（以秒為單位），裝置必須在此時間長度內傳送另一個「管理裝置」要求，來避免被分類為休眠以及變成未受管理裝置。如果省略 `lifetime` 欄位，或設為 `0`，則受管理裝置不會變成休眠。`lifetime` 欄位的最低支援設定是 `3600` 秒（即 1 小時）。
 
-選用欄位 `supports.deviceActions` 及 `supports.firmwareActions` 指出裝置管理代理程式的功能。如果設定 `supports.deviceActions`，則代理程式支援重新開機及重設為原廠設定動作。若裝置無法區分重新開機與重設為原廠設定，則這兩個動作可以使用相同的行為。如果設定 `supports.firmwareActions`，代理程式同時支援韌體下載及韌體更新動作。
+選用性欄位 `supports.deviceActions` 及 `supports.firmwareActions` 指出裝置管理代理程式的功能。如果設定 `supports.deviceActions`，則代理程式支援重新開機及重設為原廠設定動作。若裝置無法區分重新開機與重設為原廠設定，則這兩個動作可以使用相同的行為。如果設定 `supports.firmwareActions`，代理程式同時支援韌體下載及韌體更新動作。
 
 下列範例顯示要求格式：
 
@@ -145,7 +145,7 @@ Topic: iotdm-1/response
 {: #manage-unmanage}
 
 
-裝置不再需要管理時，會使用「取消管理裝置」要求。裝置變成未受管理時，{{site.data.keyword.iot_short_notm}} 就不會再將新的裝置管理要求傳送至裝置。未受管理裝置會繼續發佈錯誤碼、日誌訊息及位置訊息。
+裝置不再需要管理時，會使用「取消管理裝置」要求。裝置變成未受管理時，{{site.data.keyword.iot_short_notm}} 就不會再將新的裝置管理要求傳送至裝置。未受管理裝置會繼續發佈錯誤碼、日誌訊息及位置訊息。  
 **重要事項：**任何受管理裝置都需要支援此作業。
 
 ### 取消管理裝置要求的主題
@@ -207,7 +207,7 @@ Topic: iotdm-1/response
 - 裝置會通知 {{site.data.keyword.iot_short_notm}} 有關位置更新。裝置會從 GPS 接收端擷取其位置，並將裝置管理訊息傳送至 {{site.data.keyword.iot_short_notm}} 實例來更新其位置。時間戳記會擷取從 GPS 接收端中擷取位置的時間。即使傳送位置更新訊息時發生延遲，時間戳記仍然有效。如果裝置管理訊息中省略時間戳記，則會使用訊息回執的日期和時間來更新位置 meta 資料。
 
 #### 使用 REST API 的手動裝置位置更新
-- 登錄裝置時，您可以使用 {{site.data.keyword.iot_short_notm}} REST API 來手動設定靜態裝置的位置 meta 資料。您也可以稍後再修改位置。時間戳記設定是選用的，但省略時，會在裝置的位置 meta 資料中設定現行日期和時間。
+- 登錄裝置時，您可以使用 {{site.data.keyword.iot_short_notm}} REST API 來手動設定靜態裝置的位置 meta 資料。您也可以稍後再修改位置。時間戳記設定是選用項目，但省略時，會在裝置的位置 meta 資料中設定現行日期和時間。
 
 ### 裝置所觸發的位置更新
 
@@ -481,7 +481,7 @@ Topic: iotdm-1/response
 ## 新增日誌要求
 {: #diag-add-log}
 
-裝置可以選擇是否通知 {{site.data.keyword.iot_short_notm}} 裝置管理支援有關新增日誌項目的變更。日誌項目包括日誌訊息、時間戳記、嚴重性及選用 base64 編碼的二進位診斷資料。
+裝置可以選擇是否通知 {{site.data.keyword.iot_short_notm}} 裝置管理支援有關新增日誌項目的變更。日誌項目包括日誌訊息、時間戳記、嚴重性及選用性 base64 編碼的二進位診斷資料。
 
 ### 新增日誌要求的主題
 裝置會將此要求發佈至下列主題：
@@ -499,7 +499,7 @@ iotdevice-1/add/diag/log
 |:---|:---|
 |`message`|指定需要新增至 {{site.data.keyword.iot_short_notm}} 的診斷訊息|
 |`timestamp`|指定 ISO8601 格式之日誌項目的日期和時間 |
-|`data`|指定選用 base64 編碼的診斷資料|
+|`data`|指定選用性 base64 編碼的診斷資料|
 |`severity`|指定訊息的嚴重性（0：參考資訊、1：警告、2：錯誤）|
 
 

@@ -20,7 +20,7 @@ Ultimo aggiornamento: 29 luglio 2016
 Puoi utilizzare Python per creare e sviluppare il codice del dispositivo per interagire con la tua organizzazione su {{site.data.keyword.iot_full}}. Il client Python per {{site.data.keyword.iot_short_notm}} fornisce un'API per facilitare la facile interazione con le funzioni {{site.data.keyword.iot_short_notm}} astraendole dai protocolli sottostanti come MQTT e HTTP.
 {:shortdesc}
 
-Utilizza le informazioni e gli esempi forniti per iniziare a sviluppare i tuoi dispositivi utilizzando Python. 
+Utilizza le informazioni e gli esempi forniti per iniziare a sviluppare i tuoi dispositivi utilizzando Python.
 
 ## Scaricamento delle risorse e del client Python
 {: #python_client_download}
@@ -72,7 +72,7 @@ except ibmiotf.ConnectionException  as e:
 ...
 ```
 
-Il file di configurazione che contiene il dizionario delle opzioni deve essere nel seguente formato: 
+Il file di configurazione che contiene il dizionario delle opzioni deve essere nel seguente formato:
 
 ```python
 
@@ -94,7 +94,7 @@ Quando viene ricevuto un evento dall'istanza {{site.data.keyword.iot_short_notm}
 
 Gli eventi possono essere pubblicati in uno dei tre livelli di QoS (quality of service) definiti dal protocollo MQTT.  Per impostazione predefinita, gli eventi vengono pubblicati al livello QoS `0`.
 
-### Pubblica un evento utilizzando il QOS (quality of service) predefinito 
+### Pubblica un evento utilizzando il QOS (quality of service) predefinito
 
 ```
 client.connect()
@@ -104,7 +104,7 @@ client.publishEvent("status", "json", myData)
 
 ### Aumento del livello QoS per un evento
 
-Puoi aumentare il [livello di QoS (quality of service)](../../reference/mqtt/index.html#qos-levels) per gli eventi pubblicati. Gli eventi con un livello QoS maggiore di `0` possono impiegare più tempo per la pubblicazione, perché sono incluse ulteriori informazioni di ricezione della conferma. 
+Puoi aumentare il [livello di QoS (quality of service)](../../reference/mqtt/index.html#qos-levels) per gli eventi pubblicati. Gli eventi con un livello QoS maggiore di `0` possono impiegare più tempo per la pubblicazione, perché sono incluse ulteriori informazioni di ricezione della conferma.
 
 **Nota:** la modalità del flusso Quickstart supporta solo un livello QoS di `0`.
 
@@ -117,7 +117,7 @@ client.publishEvent("status", "json", myData, myQosLevel)
 ## Gestione dei comandi
 {: #handling_commands}
 
-Quando il client del dispositivo si connette, effettua automaticamente la sottoscrizione a qualsiasi comando specificato per questo dispositivo. Per elaborare comandi specifici è necessario registrare un metodo di callback del comando. I messaggi vengono restituiti come un'istanza della classe comando, che contiene le seguenti proprietà: 
+Quando il client del dispositivo si connette, effettua automaticamente la sottoscrizione a qualsiasi comando specificato per questo dispositivo. Per elaborare comandi specifici è necessario registrare un metodo di callback del comando. I messaggi vengono restituiti come un'istanza della classe comando, che contiene le seguenti proprietà:
 
 |Proprietà|Tipo di dati|Descrizione|
 |:---|:---|

@@ -429,7 +429,7 @@ except IoTFCReSTException as e:
 ### Supresión de varios dispositivos
 
 
-Utilice el método `deleteMultipleDevices()` para suprimir varios dispositivos desde una organización de {{site.data.keyword.iot_short_notm}}. Una solicitud no puede tener más de 512 KB. 
+Utilice el método `deleteMultipleDevices()` para suprimir varios dispositivos desde una organización de {{site.data.keyword.iot_short_notm}}. Una solicitud no puede tener más de 512 KB.
 
 ```python
 

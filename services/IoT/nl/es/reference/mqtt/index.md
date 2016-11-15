@@ -46,7 +46,7 @@ En {{site.data.keyword.iot_short_notm}}, las clases primarias de cosas son dispo
 
 La clase de cosas que el cliente de MQTT se identifica en sí mismo en el servicio a medida que determina las capacidades del cliente al conectarse. La clase de cosas también determina el mecanismo para la autenticación de clientes.
 
-Las aplicaciones y los dispositivos también funcionan con distintos espacios de temas de MQTT. Los dispositivos funcionan dentro de un espacio de tema del ámbito del dispositivo, mientras que las aplicaciones tienen acceso completo al espacio de temas para toda una organización. Para obtener más información consulte los siguientes temas:
+Las aplicaciones y los dispositivos también funcionan con distintos espacios de temas de MQTT.  Los dispositivos funcionan dentro de un espacio de tema del ámbito del dispositivo, mientras que las aplicaciones tienen acceso completo al espacio de temas para toda una organización. Para obtener más información consulte los siguientes temas:
 
 - [Dispositivos](../../devices/mqtt.html)
 - [Aplicaciones](../../applications/mqtt.html)
@@ -79,7 +79,7 @@ La calidad de nivel de servicio "exactamente una vez" (QoS2) es la modalidad má
 ## Almacenamientos intermedios de suscripción y sesión limpia
 {: #subscription-buffers-and-clean-session}
 
-Cada suscripción desde un dispositivo o aplicación tiene asignada un almacenamiento intermedio de 5000 mensajes. El almacenamiento intermedio permite que cada aplicación o dispositivo esté detrás de los datos en tiempo real que procesa, y para también construir un proceso de un máximo de 5000 mensajes pendientes para cada suscripción que ha realizado. Cuando el almacenamiento intermedio está lleno, se descartarán los mensajes más antiguos cuando se reciba un mensaje nuevo.
+Cada suscripción desde un dispositivo o aplicación tiene asignada un almacenamiento intermedio de 5000 mensajes.  El almacenamiento intermedio permite que cada aplicación o dispositivo esté detrás de los datos en tiempo real que procesa, y para también construir un proceso de un máximo de 5000 mensajes pendientes para cada suscripción que ha realizado. Cuando el almacenamiento intermedio está lleno, se descartarán los mensajes más antiguos cuando se reciba un mensaje nuevo.
 
 Utilice la opción de sesión limpia de MQTT para acceder al almacenamiento intermedio de suscripción. Cuando la sesión limpia se establezca en false, el suscriptor recibirá mensajes del almacenamiento intermedio. Cuando la sesión limpia se establezca en true, el almacenamiento intermedio se restablecerá.
 

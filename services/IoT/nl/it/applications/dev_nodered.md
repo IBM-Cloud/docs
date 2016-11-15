@@ -31,7 +31,7 @@ IBM fornisce i nodi Node-RED per aiutarti nella connessione ai tuoi dispositivi,
 
 Watson IoT Node è una coppia di nodi per la connessione dei tuoi dispositivi o gateway a {{site.data.keyword.iot_short_notm}}. I dispositivi o i gateway possono utilizzare questi nodi per inviare eventi e per ricevere comandi dall'applicazione.
 
-Per ulteriori informazioni su Watson IoT Node, consulta le seguenti risorse:  
+Per ulteriori informazioni su Watson IoT Node, consulta le seguenti risorse:
 
 - [Watson IoT Node su GitHub](https://github.com/ibm-watson-iot/iot-nodered/tree/master/node-red-contrib-ibm-watson-iot)
 - [Documentazione Watson IoT Node](https://www.npmjs.com/package/node-red-contrib-ibm-watson-iot)

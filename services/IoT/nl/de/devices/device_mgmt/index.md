@@ -45,7 +45,7 @@ Die folgende Tabelle zeigt die Rückkehrcodes an, die in verschiedenen Stadien d
 
 |Rückkehrcode |Nachricht |
 |:---|:---|
-|200   |Operation erfolgreich |
+|200   |Operation erfolgreich|
 |202   |Akzeptiert (für initiierende Befehle)|
 |204   |Geändert (für Attributaktualisierungen)|
 |400   |Falsche Anforderung (Beispiel: Ein Gerät befindet sich für diesen Befehl nicht im entsprechenden Status)|
@@ -211,7 +211,7 @@ Ein Gerät verwendet eine Anforderung des Typs 'Position aktualisieren', um die 
 
 ### Positionsaktualisierungen, die von Geräten ausgelöst werden
 
-Für Geräte, die ihre Position bestimmen können, kann ausgewählt werden, dass der {{site.data.keyword.iot_short_notm}}-Gerätemanagementserver über Positionsänderungen benachrichtigt wird. 
+Für Geräte, die ihre Position bestimmen können, kann ausgewählt werden, dass der {{site.data.keyword.iot_short_notm}}-Gerätemanagementserver über Positionsänderungen benachrichtigt wird.
 
 ### Topic für eine Anforderung des Typs 'Position aktualisieren', die durch ein Gerät ausgelöst wird:
 
@@ -228,7 +228,7 @@ Der Server antwortet auf eine Anforderung des Typs 'Position aktualisieren' im f
 iotdm-1/response
 ```
 
-### Positionsaktualisierung, die von Benutzern oder Apps ausgelöst wird 
+### Positionsaktualisierung, die von Benutzern oder Apps ausgelöst wird
 
 
 Wenn ein Benutzer oder eine Aktualisierung die Position eines aktiven verwalteten Geräts aktualisiert, ruft das Gerät eine Aktualisierungsnachricht ab.
@@ -248,9 +248,9 @@ iotdm-1/device/update
 ### Nachrichtenformat für eine Anforderung des Typs 'Position aktualisieren'
 
 
-Das Feld `measuredDateTime` ist das Datum der Positionsmessung. Das Feld `updatedDateTime` gibt das Datum der Aktualisierung für die Geräteinformationen an. Aus Effizienzgründen werden die Aktualisierungen der Positionsinformationen von {{site.data.keyword.iot_short_notm}} manchmal im Stapelbetrieb ausgeführt, wodurch die Aktualisierungen leicht verzögert sind. Der Breitengrad und der Längengrad muss anhand des World Geodetic System 1984 (WGS84) in Dezimalgraden angegeben werden. 
+Das Feld `measuredDateTime` ist das Datum der Positionsmessung. Das Feld `updatedDateTime` gibt das Datum der Aktualisierung für die Geräteinformationen an. Aus Effizienzgründen werden die Aktualisierungen der Positionsinformationen von {{site.data.keyword.iot_short_notm}} manchmal im Stapelbetrieb ausgeführt, wodurch die Aktualisierungen leicht verzögert sind. Der Breitengrad und der Längengrad muss anhand des World Geodetic System 1984 (WGS84) in Dezimalgraden angegeben werden.
 
-Bei jeder Aktualisierung der Position werden die für den Breiten- und den Längengrad, die Höhe und die Unsicherheit angegebenen Werte als einzige mehrwertige Aktualisierung betrachtet. Der Breiten- und der Längengrad sind obligatorisch und sie müssen bei jeder Aktualisierung angegeben werden. Die Höhe und die Unsicherheit sind optional und sie können ausgelassen werden.
+Bei jeder Aktualisierung der Position werden die für den Breiten- und den Längengrad, die Höhe und die Unsicherheit angegebenen Werte als einzige mehrwertige Aktualisierung betrachtet. Der Breiten- und der Längengrad sind obligatorisch und sie müssen bei jeder Aktualisierung angegeben werden.  Die Höhe und die Unsicherheit sind optional und sie können ausgelassen werden.
 
 Wenn bei einer Aktualisierung ein optionaler Wert angegeben und bei einer späteren Aktualisierung ausgelassen wird, wird der frühere Wert durch die spätere Aktualisierung gelöscht. Jede Aktualisierung wird als vollständige mehrwertige Aktualisierung betrachtet.
 
@@ -293,7 +293,7 @@ Topic: iotdm-1/response
 
 |Antwortcode |Nachricht |
 |:---|:---|
-|200   |Die Operation war erfolgreich. |
+|200   |Die Operation war erfolgreich.|
 |400   |Die Eingabenachricht stimmt nicht mit dem erwarteten Format überein oder einer der Werte liegt außerhalb des gültigen Bereichs.|
 |404   |Der Topicname ist falsch oder das Gerät ist nicht in der Datenbank vorhanden.|
 |409   |Ein Konflikt trat bei der Gerätedatenbankaktualisierung auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
@@ -336,10 +336,10 @@ Mithilfe der REST-API kann {{site.data.keyword.iot_short_notm}} eine Anforderung
 
 |Attribut | Weitere Informationen|
 |:---|:---|
-|location  | Siehe [Position aktualisieren](index.html#update-location) |
-|metadata  | Optional |
-|deviceInfo | Optional |
-|mgmt.firmware  | Siehe [Firmware-Update-Prozess](requests.html#firmware-actions-update) |
+|location  | Siehe [Position aktualisieren](index.html#update-location)|
+|metadata  | Optional|
+|deviceInfo | Optional|
+|mgmt.firmware | Siehe [Firmware-Update-Prozess](requests.html#firmware-actions-update)|
 
 ### Topic für eine Anforderung des Typs 'Geräteattribute aktualisieren'
 
@@ -406,7 +406,7 @@ Topic: iotdevice-1/add/diag/errorCodes
 }
 ```
 
-Antwortformat: 
+Antwortformat:
 
 ```
 Eingehende Nachricht vom Server:

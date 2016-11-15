@@ -17,7 +17,8 @@ copyright:
 前次更新：2016 年 9 月 14 日
 {: .last-updated}
 
-MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的主要通訊協定。提供用戶端程式庫、資訊及範例，旨在協助您使用 MQTT 用戶端作為閘道，以將裝置連接至 {{site.data.keyword.iot_short_notm}}。{:shortdesc}
+MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的主要通訊協定。提供用戶端程式庫、資訊及範例，旨在協助您使用 MQTT 用戶端作為閘道，以將裝置連接至 {{site.data.keyword.iot_short_notm}}。
+{:shortdesc}
 
 ## 用戶端連線
 {: #client_connections}

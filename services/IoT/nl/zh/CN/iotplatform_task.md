@@ -13,7 +13,7 @@ copyright:
 
 # 连接设备
 {: #iotplatform_task}
-上次更新时间：2016 年 9 月 13 日
+上次更新时间：2016 年 9 月 8 日
 {: .last-updated}
 
 必须将 IoT 设备连接到 {{site.data.keyword.iot_full}}，才可开始从其接收数据。将设备连接到 {{site.data.keyword.iot_short_notm}} 涉及向 {{site.data.keyword.iot_short_notm}} 注册该设备，然后使用注册信息来配置该设备以连接到 {{site.data.keyword.iot_short_notm}}。
@@ -21,11 +21,11 @@ copyright:
 
 ## 开始之前
 {: #byb}
- 
+
 启动连接过程之前，必须确保您的设备满足与 {{site.data.keyword.iot_short_notm}} 通信的以下需求：
 
 - 您的设备必须能够通过发送 [MQTT 格式](reference/mqtt/index.html)的设备消息来通信。
-- 设备消息必须符合 {{site.data.keyword.iot_short_notm}} [消息有效内容](reference/mqtt/index.html#message-payload)需求。
+- 设备消息必须符合 {{site.data.keyword.iot_short_notm}} [消息有效内容](reference/mqtt/index.html#/message-payload)需求。
 
 完成以下步骤以将您的设备连接到 {{site.data.keyword.iot_short_notm}}。
 
@@ -61,7 +61,7 @@ copyright:
 12. 可选：单击**其他字段**以添加设备信息（例如，序列号、制造商和模型等）。**提示：**您可以稍后添加和编辑此信息。
 12. 可选：输入设备 JSON 元数据。**提示：**您可以稍后添加和编辑设备元数据。
 13. 单击**下一步**以完成设备的添加。
-14. 验证摘要信息是否正确，然后单击**添加**以添加连接。**提示：**您可以选择接受自动生成的认证令牌或自己提供一个认证令牌。如果选择创建自己的令牌，请确保此令牌长度为 8 - 36 个字符，并且包含大小写字母、数字以及连字符、下划线或句点的组合。此令牌不得包含重复的字符序列、字典单词、用户名或其他预定义序列。
+14. 验证摘要信息是否正确，然后单击**添加**以添加连接。**提示：**您可以选择接受自动生成的认证令牌或自己提供一个认证令牌。如果选择创建自己的令牌，请确保此令牌只包含字母数字字符以及以下特殊字符：连字符 (-)、下划线 (_)、惊叹号 (!)、& 符号、@ 符号、问号 (?)、星号 (*)、加号 (+)、句点 (.) 或左右括号。此令牌不得包含重复的字符序列、字典单词、用户名或其他预定义序列。
 15. 在设备信息页面中，复制并保存以下设备信息：  
  - 组织标识，例如 `tubo8x`
  - 设备类型，例如 `my_device_type`

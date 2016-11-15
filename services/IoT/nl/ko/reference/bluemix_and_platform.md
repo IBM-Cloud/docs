@@ -1,7 +1,8 @@
 ---
 
-copyright:
-  years: 2016
+저작권:
+  연도: 2016
+마지막 업데이트 날짜: "2016-10-21"
 
 ---
 
@@ -13,10 +14,11 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 및 {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
-마지막 업데이트 날짜: 2016년 8월 30일
+마지막 업데이트 날짜: 2016년 10월 21일
 {: .last-updated}
 
 {{site.data.keyword.iot_full}}은 {{site.data.keyword.Bluemix}}에서 사용할 수 있는 서비스입니다. {{site.data.keyword.Bluemix_notm}} 대시보드를 사용하여 {{site.data.keyword.iot_short_notm}} 조직 대시보드에 액세스할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 서비스로 {{site.data.keyword.iot_short_notm}}을 {{site.data.keyword.Bluemix_notm}}에서 호스팅되는 다른 서비스와 통합할 수 있습니다. 특정 써드파티 서비스 통합에 대한 세부사항은 [외부 서비스 통합](/extensions/index.html)에 있습니다.
+{:shortdesc}
 
 ## {{site.data.keyword.iot_short_notm}}이 {{site.data.keyword.Bluemix_notm}}와 작동하는 방식
 {: #iot-bluemix-work}
@@ -37,16 +39,14 @@ copyright:
 
 {{site.data.keyword.iot_short_notm}}에서는 두 가지 가격 책정 모델(무료 및 표준)을 제공합니다. {{site.data.keyword.iot_short_notm}} 무료에서는 최대 20개의 등록된 디바이스, 100MB의 교환된 데이터 및 최대 10개의 바인딩된 애플리케이션이 허용됩니다.
 
-{{site.data.keyword.iot_short_notm}} 표준 가격 책정에서는 무제한의 등록된 디바이스와 100MB의 교환된 데이터를 무료로 사용할 수 있으며 처음 100MB 이후에 교환된 데이터는 MB당 비용을 청구합니다.
+{{site.data.keyword.iot_short_notm}} 가격 책정에서는 무제한의 등록된 디바이스와 100MB의 교환된 데이터를 무료로 사용할 수 있으며 처음 100MB 이후에 교환된 데이터는 MB당 비용을 청구합니다.
 
-{{site.data.keyword.iot_short_notm}} 표준 가격 책정에 대한 자세한 정보는 다음을 참조하십시오.
+{{site.data.keyword.iot_short_notm}} 가격 책정에 대한 자세한 정보를 보려면 다음을 수행하십시오.
 
-1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.iot_short_notm}}을 클릭합니다.
+1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.iot_short_notm}}을 클릭하십시오.
 2. 왼쪽에 있는 탐색 메뉴에서 **플랜**을 선택합니다.
 
 가격 책정 플랜이 표시됩니다.
-
-{{site.data.keyword.Bluemix_notm}} 비용 청구 및 가격 책정에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 가격 책정 세부사항](https://console.stage1.ng.bluemix.net/docs/pricing/index.html)을 참조하십시오.
 
 # 관련 링크
 {: #rellinks}
@@ -56,7 +56,7 @@ copyright:
 {: #general}
 
 * [{{site.data.keyword.Bluemix_notm}} 보안](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} 플랫폼 보안](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} 플랫폼 보안](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 규제 준수](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Softlayer 보안](http://www.softlayer.com/security){:new_window}
-* [Softlayer 규제 준수](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 보안](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 규제 준수](http://www.softlayer.com/compliance){:new_window}

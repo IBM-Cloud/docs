@@ -53,7 +53,7 @@ Ein Gateway kann Ereignisse von sich aus und im Namen eines beliebigen anderen G
 **Beispiel**
 
 
-|    |'Typ-ID' |'Geräte-ID' |
+|    |'Typ-ID'|'Geräte-ID'|
 |:---|:---|:---|
 |Gateway 1 |mygateway |gateway1 |
 |Gerät 1 |mydevice |device1 |
@@ -172,7 +172,7 @@ Das Gateway ist Eigner der MQTT-Sitzung; dabei ist unerheblich, welche Geräte h
 
 Ein verwaltetes Gerät muss folgende Topics subskribieren, um Anforderungen und Antworten von {{site.data.keyword.iot_short_notm}} handhaben zu können:
 
--   Das verwaltete Gateway subskribiert Gerätemanagementantworten von:   
+-   Das verwaltete Gateway subskribiert Gerätemanagementantworten von:  
 <pre class="pre">iotdm-1/type/<var class="keyword varname">Typ-ID</var>/id/<var class="keyword varname">Geräte-ID</var>/response/+</pre>
 {: codeblock}
 -   Das verwaltete Gateway subskribiert Gerätemanagementanforderungen von:  
@@ -185,7 +185,7 @@ Ein verwaltetes Gateway publiziert folgende Antworten und Anforderungen:
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">Typ-ID</var>/id/<var class="keyword varname">Geräte-ID</var>/response/</pre>
 {: codeblock}
 - Gerätemanagementanforderungen werden publiziert in:  
-<pre class="pre">iotdevice-1/type/<var class="keyword varname">Typ-ID</var>/id/<var class="keyword varname">Geräte-ID</var>/ </pre>
+<pre class="pre">iotdevice-1/type/<var class="keyword varname">Typ-ID</var>/id/<var class="keyword varname">Geräte-ID</var>/</pre>
 {: codeblock}
 
 Das Gateway kann Gerätemanagementprotokollnachrichten für sich selbst und im Namen anderer verbundener Geräte verarbeiten, indem die entsprechenden Werte für **Typ-ID** und **Geräte-ID** verwendet werden.

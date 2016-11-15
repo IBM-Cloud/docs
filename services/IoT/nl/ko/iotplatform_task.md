@@ -13,7 +13,7 @@ copyright:
 
 # 디바이스 연결
 {: #iotplatform_task}
-마지막 업데이트 날짜: 2016년 9월 13일
+마지막 업데이트 날짜: 2016년 9월 8일
 {: .last-updated}
 
 IoT 디바이스에서 데이터 수신을 시작하려면 {{site.data.keyword.iot_full}}에 연결해야 합니다. 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하려면 디바이스를 {{site.data.keyword.iot_short_notm}}에 등록한 다음 {{site.data.keyword.iot_short_notm}}에 연결하도록 등록 정보를 사용하여 디바이스를 구성해야 합니다.
@@ -21,11 +21,11 @@ IoT 디바이스에서 데이터 수신을 시작하려면 {{site.data.keyword.i
 
 ## 시작하기 전에
 {: #byb}
- 
+
 연결 프로세스를 시작하기 전에 디바이스가 {{site.data.keyword.iot_short_notm}}과 통신하기 위한 다음 요구사항을 만족하는지 확인해야 합니다.
 
 - 디바이스에서 [MQTT 형식](reference/mqtt/index.html)으로 디바이스 메시지를 전송하여 통신할 수 있어야 합니다.
-- 디바이스 메시지는 {{site.data.keyword.iot_short_notm}} [메시지 페이로드](reference/mqtt/index.html#message-payload) 요구사항을 준수해야 합니다.
+- 디바이스 메시지는 {{site.data.keyword.iot_short_notm}} [메시지 페이로드](reference/mqtt/index.html#/message-payload) 요구사항을 준수해야 합니다.
 
 다음 단계를 완료하여 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하십시오.
 
@@ -64,7 +64,7 @@ IoT 디바이스에서 데이터 수신을 시작하려면 {{site.data.keyword.i
 13. **다음**을 클릭하여 디바이스의 추가를 완료합니다.
 14. 요약 정보가 올바른지 확인한 다음 **추가**를 클릭하여 연결을 추가합니다.
 **팁:** 자동으로 생성된 인증 토큰을 승인하거나 인증 토큰을 직접 제공하는 옵션이 있습니다.
-고유 토큰을 작성하도록 선택하는 경우 길이가 8 - 36자이며 대소문자가 혼합되어 있고, 숫자, 하이픈, 밑줄 또는 마침표가 포함되는지 확인합니다. 토큰에는 반복된 문자 시퀀스, 사전 단어, 사용자 이름 또는 기타 사전 정의된 시퀀스가 포함되지 않아야 합니다.
+고유 토큰을 작성하도록 선택하는 경우 영숫자 문자와 다음 특수 문자로만 구성되어 있는지 확인하십시오. 하이픈(-), 밑줄(_), 느낌표(!), 앰퍼샌드(&), 단가 기호(at sign, @), 물음표(?), 별표(*), 더하기 부호(+), 마침표( . ) 또는 오른쪽과 왼쪽 소괄호. 토큰에는 반복된 문자 시퀀스, 사전 단어, 사용자 이름 또는 기타 사전 정의된 시퀀스가 포함되지 않아야 합니다.
 15. 디바이스 정보 페이지에서 다음 디바이스 정보를 복사하고 저장합니다.  
  - 조직 ID(예: `tubo8x`)
  - 디바이스 유형(예: `my_device_type`)

@@ -20,7 +20,7 @@ Ultimo aggiornamento: 13 settembre 2016
 MQTT è il protocollo primario che i dispositivi e le applicazioni utilizzano per comunicare con {{site.data.keyword.iot_full}}. MQTT è un protocollo di trasporto di messaggistica di sottoscrizione e pubblicazione progettato per lo scambio efficiente dei dati in tempo reale tra il sensore e i dispositivi mobili.
 {:shortdesc}
 
-MQTT viene seguito su TCP/IP e mentre è possibile eseguire la codifica direttamente in TCP/IP, puoi anche scegliere di utilizzare una libreria che gestisce i dettagli del protocollo MQTT al tuo posto. Sono disponibili un'ampia gamma di librerie client MQTT. IBM contribuisce allo sviluppo e al supporto di librerie di client diversi, inclusi quelli che sono disponibili nei seguenti siti: 
+MQTT viene seguito su TCP/IP e mentre è possibile eseguire la codifica direttamente in TCP/IP, puoi anche scegliere di utilizzare una libreria che gestisce i dettagli del protocollo MQTT al tuo posto. Sono disponibili un'ampia gamma di librerie client MQTT. IBM contribuisce allo sviluppo e al supporto di librerie di client diversi, inclusi quelli che sono disponibili nei seguenti siti:
 
 - [MQTT community wiki](https://github.com/mqtt/mqtt.github.io/wiki)
 - [Eclipse Paho project](http://eclipse.org/paho/)
@@ -35,7 +35,7 @@ Versione MQTT | Deviazioni | Note
 [3.1.1](https://www.oasis-open.org/standards#mqttv3.1.1) (consigliato) | I messaggi conservati non sono supportati, ad esempio le sottoscrizioni condivise. | <ul><li>Standard OASIS<li>Standard ISO (ISO/IEC PRF 20922) <li>Migliore interoperabilità tra vari client e server grazie a una definizione più accurata del protocollo in confronto alla V3.1.   <li>La lunghezza massima dell'identificativo client MQTT (ClientId) è stata aumentata a 256 rispetto al limite di 23 caratteri imposto dalla V3.1. </br>Il servizio {{site.data.keyword.iot_short_notm}} spesso richiede ID client (ClientId) più lunghi. </br>Gli ID client lunghi sono supportati indipendentemente dalla versione del protocollo MQTT, tuttavia alcune librerie client V3.1 controllano la lunghezza del valore ClientId e forzano il limite di 23 caratteri.</ul>
 3.1 | - | MQTT V3.1 è la versione del protocollo maggiormente utilizzata oggi.
 
-{{site.data.keyword.iot_short_notm}} supporta tutto il contenuto consentito dallo standard MQTT. MQTT è indipendente dai dati per cui è possibile inviare immagini, testo con qualsiasi codifica, dati crittografati e virtualmente qualsiasi tipo di dati nel formato binario. Per ulteriori informazioni sullo standard MQTT, consulta le seguenti risorse: 
+{{site.data.keyword.iot_short_notm}} supporta tutto il contenuto consentito dallo standard MQTT. MQTT è indipendente dai dati per cui è possibile inviare immagini, testo con qualsiasi codifica, dati crittografati e virtualmente qualsiasi tipo di dati nel formato binario. Per ulteriori informazioni sullo standard MQTT, consulta le seguenti risorse:
 - [MQTT.org](http://mqtt.org/)
 - [HiveMQ: Introducing MQTT](http://www.hivemq.com/blog/mqtt-essentials-part-1-introducing-mqtt)
 
@@ -46,7 +46,7 @@ In {{site.data.keyword.iot_short_notm}}, le classi di oggetti primarie sono i di
 
 La classe di oggetti con cui il tuo client MQTT identifica se stesso come servizio determina le funzionalità del tuo client quando collegato. La classe di oggetti determina inoltre il meccanismo per l'autenticazione client.
 
-Le applicazioni e i dispositivi funzionano anche con spazi argomento MQTT differenti. I dispositivi operano all'interno di uno spazio argomenti in ambito dispositivo, mentre le applicazioni hanno accesso completo allo spazio argomenti per un'intera organizzazione.Per ulteriori informazioni, consulta i seguenti argomenti:
+Le applicazioni e i dispositivi funzionano anche con spazi argomento MQTT differenti.  I dispositivi operano all'interno di uno spazio argomenti in ambito dispositivo, mentre le applicazioni hanno accesso completo allo spazio argomenti per un'intera organizzazione. Per ulteriori informazioni, consulta i seguenti argomenti:
 
 - [Dispositivi](../../devices/mqtt.html)
 - [Applicazioni](../../applications/mqtt.html)
@@ -79,9 +79,9 @@ Il livello QOS (quality of service) "Esattamente una volta" (QoS2) è il più si
 ## Sottoscrizione buffer e ripulitura sessione
 {: #subscription-buffers-and-clean-session}
 
-A ogni sottoscrizione da un dispositivo o da applicazione viene assegnato un buffer di 5000 messaggi. Il buffer consente ad ogni applicazione o dispositivo di stare dietro all'elaborazione dei dati live e anche di creare un backlog che comprende fino a 5000 messaggi in sospeso per ogni sottoscrizione fatta. Quando il buffer è pieno, i messaggi più vecchi vengono scartati quando viene ricevuto un nuovo messaggio.
+A ogni sottoscrizione da un dispositivo o da applicazione viene assegnato un buffer di 5000 messaggi.  Il buffer consente ad ogni applicazione o dispositivo di stare dietro all'elaborazione dei dati live e anche di creare un backlog che comprende fino a 5000 messaggi in sospeso per ogni sottoscrizione fatta. Quando il buffer è pieno, i messaggi più vecchi vengono scartati quando viene ricevuto un nuovo messaggio.
 
-Utilizza l'opzione della sessione di pulitura MQTT per accedere al buffer della sottoscrizione. Quando la sessione di pulitura è impostata su false, il sottoscrittore riceve i messaggi dal buffer. Quando la sessione di pulitura è impostata su true, il buffer viene reimpostato. 
+Utilizza l'opzione della sessione di pulitura MQTT per accedere al buffer della sottoscrizione. Quando la sessione di pulitura è impostata su false, il sottoscrittore riceve i messaggi dal buffer. Quando la sessione di pulitura è impostata su true, il buffer viene reimpostato.
 
 **Nota:** i limite del buffer della sottoscrizione si applica indipendentemente dall'impostazione QOS (quality of service) utilizzata. È possibile che un messaggio inviato al livello 1 o 2 possa non essere consegnato a un'applicazione che non riesce a stare dietro alla frequenza dei messaggi per la sottoscrizione fatta.
 
@@ -98,7 +98,8 @@ Il payload del messaggio può contenere qualsiasi stringa valida, tuttavia i for
 
 La seguente tabella illustra le restrizioni del payload del messaggio per diversi tipi di formato:
 
-Formato payload  | Linee guida per casi di utilizzo specifici--------- | ----------  
+Formato payload  | Linee guida per casi di utilizzo specifici
+--------- | ----------  
 JSON | JSON è il formato standard per {{site.data.keyword.iot_short_notm}}. Se prevedi di utilizzare le analisi, le tabelle, le schede e i dashboard {{site.data.keyword.iot_short_notm}} integrati, assicurati che il formato del payload del messaggio sia conforme al testo JSON con formato corretto.
 Testo | Utilizza una codifica del carattere UTF-8 valida.
 Binario | Nessuna restrizione.

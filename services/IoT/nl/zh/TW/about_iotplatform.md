@@ -17,7 +17,7 @@ copyright:
 
 {{site.data.keyword.iot_short_notm}} 的重要領域包含「連接」、「資訊管理」、「分析」及「風險管理」。{{site.data.keyword.iot_short_notm}} 的「連接」著重於連接裝置、開發應用程式、裝置管理，以及傳訊。{{site.data.keyword.iot_short_notm}} 的「資訊管理」提供儲存裝置資料的功能，以及追蹤最後一個已知值。{{site.data.keyword.iot_short_notm}} 的「分析」可讓您分析來自 IoT 裝置的即時或歷程資料，並在 {{site.data.keyword.iot_short_notm}} 儀表板中顯示分析卡。{{site.data.keyword.iot_short_notm}} 的「風險管理」支援安全架構及連線功能。
 
-如需其中每一個領域的一些更具體特性的分析，請參閱 [{{site.data.keyword.iot_short_notm}} 特性概觀](/feature_overview.html)。
+如需其中每個領域的更具體特性的細部分析，請參閱 [{{site.data.keyword.iot_short_notm}} 特性概觀](/feature_overview.html)。
 
 # 相關鏈結
 {: #rellinks}

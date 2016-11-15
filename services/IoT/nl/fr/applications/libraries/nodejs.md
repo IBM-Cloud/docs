@@ -1,7 +1,7 @@
 ---
 
-copyright :
-  années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -27,30 +27,30 @@ Utilisez les informations et les exemples fournis pour commencer à développer 
 ## Téléchargement du client et des ressources Node.js
 {: #nodejs_client_download}
 
-Pour accéder aux bibliothèques client Node.js pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs) dans GitHub et exécutez les instructions d'installation. 
+Pour accéder aux bibliothèques client Node.js pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs) dans GitHub et exécutez les instructions d'installation.
 
 
 Pour plus d'informations, voir les ressources suivantes :
 - [Exemples d'application](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples) dans GitHub.
 - [ibmiotf](https://www.npmjs.com/package/ibmiotf) sur NPM.
-- Section [Référence](#reference_nodejs) du présent document. 
+- Section [Référence](#reference_nodejs) du présent document.
 
 
 ## Constructeur
 {: #constructor}
 
-Le constructeur génère l'instance client d'application et accepte un fichier de configuration JSON contenant les propriétés suivantes : 
+Le constructeur génère l'instance client d'application et accepte un fichier de configuration JSON contenant les propriétés suivantes :
 
 | Propriété     |Description     |
 |----------------|----------------|
-|`org` |ID de votre organisation. Cette valeur est obligatoire. |
+|`org` |ID de votre organisation. Cette valeur est obligatoire.|
 |`id`  |ID unique de votre application au sein de votre organisation.|
 |`auth-key`   |Clé d'API permettant d'établir une connexion sécurisée entre votre application et Watson IoT Platform.|
 |`auth-token`   |Jeton de clé d'API permettant d'établir une connexion sécurisée entre votre terminal et Watson IoT Platform.|
-|`type`  |Type d'abonnement. Spécifiez `shared` pour activer l'abonnement partagé. |
+|`type`  |Type d'abonnement. Spécifiez `shared` pour activer l'abonnement partagé.|
 
 
-L'utilisation de Quickstart ne requiert que les deux premières propriétés. 
+L'utilisation de Quickstart ne requiert que les deux premières propriétés.
 
 ```
   var Client = require("ibmiotf");
@@ -105,11 +105,11 @@ Pour vous connecter à {{site.data.keyword.iot_short_notm}}, soumettez une deman
 	});
 ```
 
-Après avoir établi une connexion au service {{site.data.keyword.iot_short_notm}}, le client d'application envoie un événement `connect`, par conséquent, n'importe quelle logique peut être implémentée au sein de cette fonction de rappel. 
+Après avoir établi une connexion au service {{site.data.keyword.iot_short_notm}}, le client d'application envoie un événement `connect`, par conséquent, n'importe quelle logique peut être implémentée au sein de cette fonction de rappel.
 
 
 
-Le client d'application tente automatiquement de se reconnecter lorsque sa connexion est interrompue. Lorsque la reconnexion aboutit, le client envoie un événement `reconnect`. 
+Le client d'application tente automatiquement de se reconnecter lorsque sa connexion est interrompue. Lorsque la reconnexion aboutit, le client envoie un événement `reconnect`.
 
 
 
@@ -164,7 +164,7 @@ Utilisez la fonction d'abonnement partagé pour générer des applications évol
 ## Traitement des erreurs
 {: #handling_errors}
 
-Lorsque le client d'application rencontre une erreur, un événement `error` est généré. 
+Lorsque le client d'application rencontre une erreur, un événement `error` est généré.
 
 ```
 
@@ -185,9 +185,9 @@ Lorsque le client d'application rencontre une erreur, un événement `error` est
 ## Abonnement aux événements d'un terminal
 {: #subscribing_device_events}
 
-Les événements constituent le mécanisme par lequel les terminaux publient des données sur  l'instance {{site.data.keyword.iot_short_notm}}. Le terminal contrôle le contenu de l'événement et affecte un nom à chaque événement qu'il envoie. 
+Les événements constituent le mécanisme par lequel les terminaux publient des données sur  l'instance {{site.data.keyword.iot_short_notm}}. Le terminal contrôle le contenu de l'événement et affecte un nom à chaque événement qu'il envoie.
 
-Lorsqu'un événement est reçu par l'instance {{site.data.keyword.iot_short_notm}}, les données d'identification de l'événement reçu identifient le terminal qui a envoyé l'événement, ce qui signifie qu'un terminal ne peut pas simuler les droits d'accès d'un autre terminal. 
+Lorsqu'un événement est reçu par l'instance {{site.data.keyword.iot_short_notm}}, les données d'identification de l'événement reçu identifient le terminal qui a envoyé l'événement, ce qui signifie qu'un terminal ne peut pas simuler les droits d'accès d'un autre terminal.
 
 
 Par défaut, les applications s'abonnent à tous les événements depuis tous les terminaux connectés. Utilisez les paramètres de type de terminal, d'ID de terminal, d'événement et de format de message pour contrôler la portée de l'abonnement. Les exemples de code suivants vous montrent comment utiliser ces paramètres afin de définir la portée d'un abonnement :
@@ -267,7 +267,7 @@ Par défaut, les applications s'abonnent à tous les événements depuis tous le
 	});
 ```
 
-**Remarque** : Un client unique peut prendre en charge plusieurs abonnements. 
+**Remarque** : Un client unique peut prendre en charge plusieurs abonnements.
 
 ### Traitement des événements provenant des terminaux
 
@@ -303,7 +303,7 @@ Pour traiter les événements reçus par vos abonnements, implémentez une méth
 ## Abonnement au statut des terminaux
 {: #subscribing_device_status}
 
-Par défaut, lorsque vous vous abonnez au statut de terminal, des mises à jour de statut sont reçues pour tous les terminaux connectés. Utilisez les paramètres de type et d'ID pour contrôler la portée de l'abonnement. Un client unique peut prendre en charge plusieurs abonnements. 
+Par défaut, lorsque vous vous abonnez au statut de terminal, des mises à jour de statut sont reçues pour tous les terminaux connectés. Utilisez les paramètres de type et d'ID pour contrôler la portée de l'abonnement. Un client unique peut prendre en charge plusieurs abonnements.
 
 ### Abonnement aux mises à jour de statut pour tous les terminaux
 
@@ -466,9 +466,9 @@ Le tableau suivant décrit les paramètres utilisés dans les fonctions abordée
 |Paramètre|Type de données|Description|
 |:---|:---|
 |`deviceType`|Chaîne|Type de terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
-|`deviceId`|Chaîne|ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC. |
+|`deviceId`|Chaîne|ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
 |`eventType`|Chaîne|Groupe d'événements spécifiques, par exemple, "status", "warning" et "data".|
 |`format`|Chaîne|Le format peut être n'importe quelle chaîne, par exemple, JSON.  |
 |`data`|Dictionnaire|Données du contenu du message. La longueur maximale est de 131072 octets.|
 |`payload`|Chaîne|Données du contenu du message. La longueur maximale est de 131072 octets.|
-|`topic`|Chaîne|Lors de la publication en tant que terminal, la chaîne topic n'inclut pas le type de terminal ni l'ID de terminal ; ces informations sont extraites de l'ID de client. Par exemple, `iot-2/evt/event_id/fmt/format_string`.  Lors de la publication en tant qu'application ou passerelle pour le compte d'un terminal, l'élément topic doit inclure le type de terminal et l'ID de terminal. Par exemple `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
+|`topic`|Chaîne|Lors de la publication en tant que terminal, la chaîne topic n'inclut pas le type de terminal ni l'ID de terminal ; ces informations sont extraites de l'ID de client.  Par exemple, `iot-2/evt/event_id/fmt/format_string`.  Lors de la publication en tant qu'application ou passerelle pour le compte d'un terminal, l'élément topic doit inclure le type de terminal et l'ID de terminal.  Par exemple `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|

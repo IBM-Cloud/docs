@@ -13,7 +13,7 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} 시작하기
 {: #gettingstartedtemplate}
-마지막 업데이트 날짜: 2016년 8월 26일
+마지막 업데이트 날짜: 2016년 9월 29일
 {: .last-updated}
 
 {{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}}에서는 게이트웨이 디바이스, 디바이스 관리 및 강력한 애플리케이션 액세스를 포함하는 다용도 툴킷을 제공합니다. {{site.data.keyword.iot_short_notm}}을 사용하면 연결된 디바이스 데이터를 수집하고 조직의 실시간 데이터에 대한 분석을 수행할 수 있습니다.
@@ -22,7 +22,11 @@ copyright:
 ## 시작하기 전에
 {: #byb}
 
-디바이스를 연결하고 데이터를 이용하기 전에 {{site.data.keyword.iot_short_notm}} 서비스의 인스턴스가 {{site.data.keyword.Bluemix_notm}} 조직에 있어야 합니다. [Bluemix Services Catalog의 {{site.data.keyword.iot_short_notm}} 페이지](https://console.{DomainName}/catalog/services/internet-of-things-platform/)에서 직접 작성할 수 있습니다.  
+디바이스를 연결하고 데이터를 이용하기 전에 {{site.data.keyword.Bluemix_notm}} 계정을 등록하고 {{site.data.keyword.Bluemix_notm}} 조직에서 {{site.data.keyword.iot_short_notm}} 서비스의 인스턴스를 작성하십시오. [Bluemix 서비스 카탈로그의 {{site.data.keyword.iot_short_notm}} 페이지](https://console.{DomainName}/catalog/services/internet-of-things-platform/)에서 직접 {{site.data.keyword.iot_short_notm}} 인스턴스를 작성할 수 있습니다.  
+
+{{site.data.keyword.Bluemix_notm}}에서 계정을 등록하는 방법에 대한 자세한 정보는 [Bluemix 계정 관리](https://console.ng.bluemix.net/docs/admin/account.html#signup)를 참조하십시오.
+
+대시보드에서 {{site.data.keyword.iot_short_notm}} 인스턴스를 설정하고 구성할 수 있습니다. 대시보드를 열려면 {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.iot_short_notm}} 서비스 인스턴스로 이동한 다음 **대시보드 실행**을 클릭하십시오.
 
 ## 1단계: 디바이스 연결
 {: #up_and_running}
@@ -32,7 +36,7 @@ copyright:
    |   서비스가 배치됨 | 서비스가 배치되지 않음
   ------------- | -------------
   **I 연결할 디바이스가 있음** | [{{site.data.keyword.iot_short_notm}}에 디바이스 연결](iotplatform_task.html#iotplatform_task).| [조직 데모 실행](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}에서 디바이스 연결 탐색.
-  **I 연결할 디바이스가 없음** | [Node-RED 디바이스 시뮬레이터 작성 및 연결](nodereddevice_sample.html){:new_window}. | [Watson IoT Platform Starter](https://new-console.stage1.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window} 시작하기.
+  **I 연결할 디바이스가 없음** | [Node-RED 디바이스 시뮬레이터 작성 및 연결](nodereddevice_sample.html){:new_window}. | [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window} 시작하기.
 특정 디바이스 유형을 {{site.data.keyword.iot_short_notm}}에 연결하는 방법에 대한 자세한 정보는 [developerWorks recipes](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}를 참조하십시오.  
 
 디바이스 연결 개발자 문서는 다음을 참조하십시오.

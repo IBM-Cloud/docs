@@ -24,12 +24,12 @@ copyright:
 - 固件下载
 - 固件更新
 
-如果 {{site.data.keyword.iot_short_notm}} 提供的缺省设备操作不足以满足您对设备和应用程序的操作需求，那么可以通过实现设备管理扩展包来开发更多设备管理功能。
+如果 {{site.data.keyword.iot_short_notm}} 提供的缺省设备操作对于您的设备和应用程序还不够，那么可以通过实现设备管理扩展包来开发更多设备管理功能。
 
-## 设备管理扩展程序包
+## 设备管理扩展包
 {: #device_management_ext}
 
-设备管理扩展包是一种 JSON 文档，用于定义一组设备管理操作。这些操作可以在支持这些操作的一个或多个设备上启动。操作可使用 {{site.data.keyword.iot_short_notm}} 仪表板或设备管理 REST API 命令启动。
+设备管理扩展包是一种 JSON 文档，用于定义一组设备管理操作。这些操作可以在支持这些操作的一个或多个设备上启动。这些操作可使用 {{site.data.keyword.iot_short_notm}} 仪表板或设备管理 REST API 命令来启动。
 
 以下代码样本显示设备管理扩展包的典型格式：
 
@@ -76,17 +76,17 @@ copyright:
 |`bundleId`|设备管理扩展的唯一标识。|是|
 |`version`|设备管理扩展的版本字符串。|否|
 |`provider`|设备管理扩展的提供者字符串，限制为 1024 个字符。|否|
-|`displayName`|`locale` 的映射：在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 `String` 键/值对。必须至少指定一个条目。|是|
-|`描述`|`locale` 的映射：用于在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 `String` 键/值对。如果定义，必须至少指定一个条目。|否|
-|`actions`| `actionId` 的映射：`<action>` 键/值对，用于定义设备管理扩展中包含的操作。必须至少指定一个条目。|是|
+|`displayName`|`locale` 的映射：在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 `String` 键/值对。必须指定至少一个条目。|是|
+|`描述`|`locale` 的映射：用于在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 `String` 键/值对。如果定义，必须指定至少一个条目。|否|
+|`actions`| `actionId` 的映射：`<action>` 键/值对，用于定义设备管理扩展中包含的操作。必须指定至少一个条目。|是|
 
 ### 每个操作的属性：
 
 |属性|描述|必需
 |:---|:---|
-|`actionDisplayName`|`locale` 的映射：在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 `String` 键/值对。必须至少指定一个条目。|是|
-|`描述`|`locale` 的映射：用于在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 `String` 键/值对。可选。必须至少指定一个条目。|否|
-|`parameters`|允许用于特定操作的参数的数组。如果定义，必须至少指定一个条目。|否|
+|`actionDisplayName`|`locale` 的映射：在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 `String` 键/值对。必须指定至少一个条目。|是|
+|`描述`|`locale` 的映射：用于在 {{site.data.keyword.iot_short_notm}} 仪表板中显示的 `String` 键/值对。可选。必须指定至少一个条目。|否|
+|`parameters`|针对特定操作允许的参数的数组。如果定义，必须指定至少一个条目。|否|
 
 ### 每个操作参数的属性：
 
@@ -94,10 +94,10 @@ copyright:
 |:---|:---|
 |`name`|操作中参数的唯一标识|是|
 |`value`|正则表达式，用于在启动请求时验证参数值。如果未指定，那么不会执行验证。|否|
-|`required`|布尔值，用于确定是否参数是必需的。缺省情况下，此值设置为 false。 |否|
-|`defaultValue`|如果未提供参数，当启动请求时要使用的值|否|
+|`required`|布尔值，用于确定参数是否必需。缺省情况下，此值设置为 false。 |否|
+|`defaultValue`|在发起请求时未提供参数的情况下要使用的值|否|
 
-**注：**`bundleId`、`version`、`actionId` 和 `parameterId` 值可以包含的字符数限制为 255 个，并且只能由字母数字字符（a-z、A-Z 和 0-9）和以下特殊字符组成：
+**注：**值可以包含的 `bundleId`、`version`、`actionId` 和 `parameterId` 限制为 255 个字符，并且只能由字母数字字符（a-z、A-Z 和 0-9）和以下特殊字符组成：
  - 短划线 (-)
  - 下划线 (_)
  - 点 (.)
@@ -124,7 +124,7 @@ copyright:
 ##支持定制设备管理操作
 {: #supporting_custom_device_management_actions}
 
-扩展包中定义的设备管理操作只能由支持这些操作的设备启动。设备将管理请求发布到 {{site.data.keyword.iot_short_notm}} 时，设备会指定其可以支持的操作的类型。
+扩展包中定义的设备管理操作只能由支持这些操作的设备启动。设备将管理请求发布到 {{site.data.keyword.iot_short_notm}} 时，该设备会指定其可以支持的操作的类型。
 
 要接收来自扩展包的定制操作，设备必须在请求的 supports 对象中指定扩展包的捆绑标识，如以下示例中所示：
 
@@ -165,10 +165,10 @@ copyright:
 启动请求时，必须提供以下信息：
 
 - 操作 `<bundleId>/<actionId>`
-- 要在其上启动操作的设备列表，最多包含 5000 台设备
+- 要在其上启动操作的设备的列表，最多 5000 台设备
 - 在定制操作定义中定义的参数列表
 
-用于启动请求的有效内容的格式如下：
+用于发起请求的有效内容的格式如下：
 
 ```
 	{
@@ -193,7 +193,7 @@ copyright:
 ## 处理定制设备管理操作
 {: #handling_custom_dm_actions}
 
-在设备上启动定制操作时，将向该设备发布一条 MQTT 消息。该 MQTT 消息包含指定作为请求一部分的任何参数。设备收到该 MQTT 消息时，或者运行操作，或者使用错误代码进行响应，以指示为什么当前无法完成该操作。
+在设备上启动定制操作时，将向该设备发布一条 MQTT 消息。该 MQTT 消息包含指定为请求一部分的任何参数。设备收到该 MQTT 消息时，将运行该操作，或者使用错误代码进行响应，以指示为什么当前无法完成该操作。
 
 设备操作成功完成时，设备会发布响应，其中 `rc` 值会设置为 `200`。
 
@@ -217,7 +217,7 @@ copyright:
 
 	... device carries out the requested action ...
 
-	来自设备的外发消息：
+	来自设备的出局消息：
 
 	Topic: iotdevice-1/response
 	{
@@ -232,7 +232,7 @@ copyright:
 
 以下示例演示了可以如何定义新的设备管理扩展，并执行该扩展中定义的操作。
 
-某些公司会制造 `exampleDeviceType` 设备。您可以安装并管理要在 `exampleDeviceType` 设备上运行的插件。为了方便远程管理 `exampleDeviceType` 设备上的插件，制造商通常会提供设备管理扩展，您可以将其导入到您的 {{site.data.keyword.iot_short_notm}} 组织。
+某些公司制造 `exampleDeviceType` 设备。您可以安装并管理要在 `exampleDeviceType` 设备上运行的插件。为了方便远程管理 `exampleDeviceType` 设备上的插件，制造商通常会提供设备管理扩展，您可以将其导入您的 {{site.data.keyword.iot_short_notm}} 组织。
 
 此示例中使用了以下扩展 JSON 文档：
 
@@ -386,7 +386,7 @@ copyright:
 	}
 
 ```
-使用以下 REST API 命令启动请求：
+使用以下 REST API 命令发起请求：
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
@@ -427,7 +427,7 @@ copyright:
 
 ```
 
-此时，`installPlugin` 设备管理操作完成。
+此时，`installPlugin` 设备管理操作已完成。
 
 ## API 示例
 {: #api_examples}
@@ -442,7 +442,7 @@ copyright:
 
 `curl -XGET -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 
-- 启动设备管理请求：
+- 发起设备管理请求：
 
 `curl -XPOST -d '<insert payload here>' -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 

@@ -17,7 +17,8 @@ copyright:
 Ultimo aggiornamento: 02 agosto 2016
 {: .last-updated}
 
-Puoi utilizzare C# per creare e personalizzare i dispositivi che interagiscono con la tua organizzazione su {{site.data.keyword.iot_full}}. Utilizza le informazioni e gli esempi forniti per iniziare a sviluppare i tuoi dispositivi utilizzando C#. {:shortdesc}
+Puoi utilizzare C# per creare e personalizzare i dispositivi che interagiscono con la tua organizzazione su {{site.data.keyword.iot_full}}. Utilizza le informazioni e gli esempi forniti per iniziare a sviluppare i tuoi dispositivi utilizzando C#.
+{:shortdesc}
 
 ## Scaricare le risorse e il client C#
 {: #csharp_client_download}
@@ -34,9 +35,9 @@ Il constructor crea l'istanza client e accetta gli argomenti che contengono le s
 |:---|:---|
 |`orgId`|Il tuo ID dell'organizzazione.|
 |`deviceType`|Il tipo del tuo dispositivo.|
-|`deviceId` |L'ID del tuo dispositivo. |
-|`auth-method`   |Il metodo di autenticazione da utilizzare. L'unico valore al momento supportato è `token`. |
-|`auth-token`   |Un token di autenticazione per la connessione sicura al tuo dispositivo su Watson IoT Platform. |
+|`deviceId` |L'ID del tuo dispositivo.|
+|`auth-method`   |Il metodo di autenticazione da utilizzare. L'unico valore al momento supportato è `token`.|
+|`auth-token`   |Un token di autenticazione per la connessione sicura al tuo dispositivo su Watson IoT Platform.|
 
 
 Se `deviceId` e `deviceType` sono i soli argomenti forniti, il client si collega al servizio Quickstart di {{site.data.keyword.iot_short_notm}} come un dispositivo non registrato. L'elenco degli argomenti definisce come il client si collega al modulo {{site.data.keyword.iot_short_notm}}.
@@ -57,7 +58,7 @@ public DeviceClient(string orgId, string deviceType, string deviceID, string aut
 
 I dispositivi utilizzano gli eventi per pubblicare i dati all'istanza {{site.data.keyword.iot_short_notm}}. Il dispositivo controlla il contenuto dell'evento e assegna un nome ad ogni evento che invia.
 
-Quando viene ricevuto un evento dall'istanza {{site.data.keyword.iot_short_notm}}, le credenziali dell'evento in entrata identificano il dispositivo di invio, il che significa che un dispositivo non può impersonare un altro dispositivo. 
+Quando viene ricevuto un evento dall'istanza {{site.data.keyword.iot_short_notm}}, le credenziali dell'evento in entrata identificano il dispositivo di invio, il che significa che un dispositivo non può impersonare un altro dispositivo.
 
 Gli eventi possono essere pubblicati in uno dei tre [livelli di QoS (quality of service)](../mqtt.html#managed-devices), definiti dal protocollo MQTT. Per impostazione predefinita, gli eventi vengono pubblicati al livello QoS 0.
 
@@ -71,7 +72,7 @@ deviceClient.publishEvent("event", "json", "{temp:23}");
 ```
 
 
-## Pubblicazione di un evento utilizzando il livello QOS (quality of service) definito dall'utente 
+## Pubblicazione di un evento utilizzando il livello QOS (quality of service) definito dall'utente
 {: #publish_event_user_qos}
 
 Gli eventi pubblicati a un livello QoS MQTT maggiore di `0` includono ulteriori informazioni di conferma di ricezione e possono impiegare più tempo rispetto agli eventi che hanno un livello QoS di `0`.
@@ -85,7 +86,7 @@ deviceClient.publishEvent("event", "json", "{temp:23}", 2);
 ## Gestione dei comandi
 {: #handling_commands}
 
-Quando un client del dispositivo si connette, effettua automaticamente la sottoscrizione a qualsiasi comando per questo dispositivo. Per elaborare comandi specifici devi registrare un metodo di callback del comando come mostrato nel seguente esempio: 
+Quando un client del dispositivo si connette, effettua automaticamente la sottoscrizione a qualsiasi comando per questo dispositivo. Per elaborare comandi specifici devi registrare un metodo di callback del comando come mostrato nel seguente esempio:
 
 ```
 public static void processCommand(string cmdName, string cmdFormat, string cmdData) {

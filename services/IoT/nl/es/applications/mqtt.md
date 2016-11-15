@@ -58,7 +58,7 @@ Una aplicación puede publicar sucesos como si procedieran de cualquier disposit
 
 Para portar datos existentes de un dispositivo a {{site.data.keyword.iot_short_notm}}, puede crear una aplicación para procesar los datos y publicarlos en {{site.data.keyword.iot_short_notm}}.
 
-**Importante:** La carga útil de mensajes está limitada a un máximo de 131072 bytes. Los mensajes que superen el límite se rechazarán.
+**Importante:** La carga útil de mensajes está limitada a un máximo de 131072 bytes.  Los mensajes que superen el límite se rechazarán.
 
 ## Publicación de mandatos de dispositivos
 {: #publishing_device_commands}
@@ -145,7 +145,7 @@ Donde:
 -  *appId* es un identificador de serie exclusivo definido por el usuario para el cliente. La serie puede contener sólo caracteres alfanuméricos (a-z, A-Z, 0-9) y los caracteres especiales guión (-), subrayado (_), y punto (.).
 
 **Importante:**
-- Solo se admiten suscripciones no duraderas con las aplicaciones escalables. 
+- Solo se admiten suscripciones no duraderas con las aplicaciones escalables.
 - El ID de cliente debe empezar por el carácter en mayúscula **A** que debe designar correctamente como una aplicación escalable {{site.data.keyword.iot_short_notm}}.
 - Otros clientes que forman parte de la aplicación escalable deben utilizar el mismo ID de cliente.
 

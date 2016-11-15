@@ -1,7 +1,7 @@
 ---
 
-copyright :
-  années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -18,27 +18,28 @@ Dernière mise à jour : 28 juillet 2016
 {: .last-updated}
 
 
-Vous pouvez utiliser C# pour générer et personnaliser des applications qui interagissent avec votre organisation sur {{site.data.keyword.iot_full}}. Utilisez les informations et les exemples fournis pour commencer à développer vos applications en utilisant C#. {:shortdesc}
+Vous pouvez utiliser C# pour générer et personnaliser des applications qui interagissent avec votre organisation sur {{site.data.keyword.iot_full}}. Utilisez les informations et les exemples fournis pour commencer à développer vos applications en utilisant C#.
+{:shortdesc}
 
 ## Téléchargement du client et des ressources C#
 {: #csharp_client_download}
 
-Pour accéder aux bibliothèques et exemples client C# pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iot-csharp](https://github.com/ibm-watson-iot/iot-csharp) dans GitHub et exécutez les instructions d'installation. 
+Pour accéder aux bibliothèques et exemples client C# pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iot-csharp](https://github.com/ibm-watson-iot/iot-csharp) dans GitHub et exécutez les instructions d'installation.
 
 
 ## Constructeur
 {: #constructor}
 
-Le constructeur génère l'instance client et accepte des arguments contenant les définitions suivantes : 
+Le constructeur génère l'instance client et accepte des arguments contenant les définitions suivantes :
 
 |Définition |Description |
 |:---|:---|
-|`orgId`   |ID de votre organisation. |
+|`orgId`   |ID de votre organisation.|
 |`appId`   |ID unique d'une application au sein de votre organisation.|
 |`auth-key`   |Clé d'API permettant d'établir une connexion sécurisée entre votre application et Watson IoT Platform.|
 |`auth-token`   |Jeton de clé d'API permettant d'établir une connexion sécurisée entre votre application et Watson IoT Platform.|
 
-Si `appId` est le seul argument fourni, le client se connecte au service {{site.data.keyword.iot_short_notm}} Quickstart en tant que terminal non enregistré. La liste d'arguments définit la manière dont le client se connecte au module {{site.data.keyword.iot_short_notm}}. 
+Si `appId` est le seul argument fourni, le client se connecte au service {{site.data.keyword.iot_short_notm}} Quickstart en tant que terminal non enregistré. La liste d'arguments définit la manière dont le client se connecte au module {{site.data.keyword.iot_short_notm}}.
 
 ```
 ApplicationClient applicationClient = new ApplicationClient(orgId, appId, apiKey, authToken);  
@@ -49,9 +50,9 @@ applicationClient.connect();
 ## Abonnement aux événements d'un terminal
 {: #subscribe_device_events}
 
-Les terminaux utilisent des événements pour publier des données sur  l'instance {{site.data.keyword.iot_short_notm}}. Le terminal contrôle le contenu de l'événement et affecte un nom à chaque événement qu'il envoie. 
+Les terminaux utilisent des événements pour publier des données sur  l'instance {{site.data.keyword.iot_short_notm}}. Le terminal contrôle le contenu de l'événement et affecte un nom à chaque événement qu'il envoie.
 
-Lorsqu'un événement est reçu par l'instance {{site.data.keyword.iot_short_notm}}, les données d'identification de l'événement reçu identifient le terminal qui a envoyé l'événement, ce qui signifie qu'un terminal ne peut pas simuler les droits d'accès d'un autre terminal. 
+Lorsqu'un événement est reçu par l'instance {{site.data.keyword.iot_short_notm}}, les données d'identification de l'événement reçu identifient le terminal qui a envoyé l'événement, ce qui signifie qu'un terminal ne peut pas simuler les droits d'accès d'un autre terminal.
 
 Par défaut, les applications s'abonnent à tous les événements depuis tous les terminaux connectés. Utilisez les paramètres de type de terminal, d'ID de terminal, d'événement et de format de message pour contrôler la portée de l'abonnement. Les exemples de code suivants vous montrent comment définir la portée d'un abonnement à l'aide de ces paramètres :
 
@@ -90,7 +91,7 @@ applicationClient.connect();
 applicationClient.subscribeToDeviceEvents(deviceType, deviceId, evt, "json", 0);
 ```
 
-**Remarque** : Une instance client unique peut prendre en charge plusieurs abonnements. 
+**Remarque** : Une instance client unique peut prendre en charge plusieurs abonnements.
 
 ### Traitement des événements provenant des terminaux
 
@@ -134,7 +135,7 @@ applicationClient.subscribeToDeviceStatus += processDeviceStatus;
 applicationClient.subscribeToDeviceStatus(deviceType, deviceId);
 ```
 
-**Remarque** : Une instance client unique peut prendre en charge plusieurs abonnements. 
+**Remarque** : Une instance client unique peut prendre en charge plusieurs abonnements.
 
 ### Traitement des mises à jour du statut des terminaux
 
@@ -153,7 +154,7 @@ applicationClient.subscribeToApplicationStatus();
 ## Publication des événements à partir de terminaux
 {: #publish_events_devices}
 
-Les applications peuvent publier des événements comme s'ils provenaient d'un terminal. 
+Les applications peuvent publier des événements comme s'ils provenaient d'un terminal.
 
 ```
 applicationClient.connect();
@@ -166,8 +167,8 @@ Le tableau suivant décrit les paramètres spécifiés dans la méthode `publish
 |Paramètre|Type de données|Description|
 |:---|:---|
 |`deviceType`|Chaîne| Type de terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
-|`deviceId`|Chaîne| ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC. |
-|`evt`|Chaîne| Nom de l'événement. |
+|`deviceId`|Chaîne| ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
+|`evt`|Chaîne| Nom de l'événement.|
 |`format`|Chaîne| Le format peut être n'importe quelle chaîne, par exemple, JSON.|
 |`data`|Dictionnaire| Données du contenu du message. La longueur maximale est de 131072 octets.|
 |`QoS`|Entier| Qualité de service. Les valeurs valides sont `0`, `1`, `2`. |
@@ -187,7 +188,7 @@ Le tableau suivant décrit les paramètres spécifiés dans la méthode `publish
 |Paramètre|Type de données|Description|
 |:---|:---|
 |`deviceType`|Chaîne| Type de terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
-|`deviceId`|Chaîne| ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC. |
+|`deviceId`|Chaîne| ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
 |`command`|Chaîne| Nom de la commande.|
 |`format`|Chaîne| Le format peut être n'importe quelle chaîne, par exemple, JSON.|
 |`data`|Dictionnaire| Données du contenu du message. La longueur maximale est de 131072 octets.|

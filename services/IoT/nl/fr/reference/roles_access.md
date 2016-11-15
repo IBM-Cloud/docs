@@ -13,7 +13,7 @@ copyright :
 
 # Niveaux d'accès pour des rôles d'utilisateur
 
-Les tableaux ci-après illustrent le niveau d'accès de chacun des rôles d'utilisateur. 
+Les tableaux ci-après illustrent le niveau d'accès de chacun des rôles d'utilisateur.
 
 Les tableaux répertorient les niveaux d'accès pour :
 - Les [opérations de terminal](#user-device-ops)
@@ -30,7 +30,7 @@ Les tableaux répertorient les niveaux d'accès pour :
 
 ### Opérations de terminal {: #user-device-ops}
 
-Opérations de terminal  ||| Rôles d'utilisateur|||
+Opérations de terminal ||| Rôles d'utilisateur|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrateur** | **Opérateur** | **Développeur** | **Analyste** | **Lecteur**
 Créer, mettre à jour, ou supprimer des terminaux | X | X | X | - | -
@@ -51,14 +51,14 @@ Afficher des journaux de diagnostic | X | X | X | - | -
 
 ### Opérations de journal {: #user-log-ops}
 
-Opérations de journal  ||| Rôles d'utilisateur|||
+Opérations de journal ||| Rôles d'utilisateur|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrateur** | **Opérateur** | **Développeur** | **Analyste** | **Lecteur**
 Afficher les journaux serveur | X | X | X | X | X
 
 ### Opérations de cache {: #user-cache-ops}
 
-Opérations de cache  ||| Rôles d'utilisateur|||
+Opérations de cache ||| Rôles d'utilisateur|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrateur** | **Opérateur** | **Développeur** | **Analyste** | **Lecteur**
 Afficher les données en temps réel (cache d'événement) | X | X | X | X | X
@@ -66,7 +66,7 @@ Gérer les données en temps réel (cache d'événement) | X	| X | X |	X	| -
 
 ### Opérations d'organisation {: #user-org-ops}
 
-Opérations d'organisation  ||| Rôles d'utilisateur|||
+Opérations d'organisation ||| Rôles d'utilisateur|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrateur** | **Opérateur** | **Développeur** | **Analyste** | **Lecteur**
 Configurer les paramètres de stockage|	X| - |-|-|-
@@ -85,7 +85,7 @@ Afficher les informations d'utilisation de l'organisation	|X	|X	| -|-|-
 
 ### Opérations de contrôle d'accès {: #user-access-ops}
 
-Opérations de contrôle d'accès  ||| Rôles d'utilisateur|||
+Opérations de contrôle d'accès ||| Rôles d'utilisateur|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrateur** | **Opérateur** | **Développeur** | **Analyste** | **Lecteur**
 Afficher les propriétés utilisateur, y compris les droits d'accès	|X|	X|	X|	X| -
@@ -103,7 +103,7 @@ Afficher les opérations*	|X	|X	|X	|X	|X
 
 ### Opérations d'analyse {: #user-analytics-ops}
 
-Opérations d'analyse  ||| Rôles d'utilisateur|||
+Opérations d'analyse ||| Rôles d'utilisateur|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrateur** | **Opérateur** | **Développeur** | **Analyste** | **Lecteur**
 Afficher les règles d'analyse|	X|	X|	X|	X|	X
@@ -116,7 +116,7 @@ Gérer les schémas de message d'analyse|	X|	X|	X|	X| -
 
 ### Opérations de service de tiers {: #user-third-party}
 
-Opérations de service de tiers  ||| Rôles d'utilisateur|||
+Opérations de service de tiers ||| Rôles d'utilisateur|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Administrateur** | **Opérateur** | **Développeur** | **Analyste** | **Lecteur**
 Traiter des notifications par lots depuis une plateforme externe	|X|	X	|X |-|-

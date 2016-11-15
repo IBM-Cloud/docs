@@ -120,6 +120,7 @@ El dispositivo puede conectarse a la {{site.data.keyword.iot_short_notm}} invoca
 
 ```
 Tras la correcta conexión, el dispositivo puede publicar sucesos en la {{site.data.keyword.iot_short_notm}} y puede escuchar mandatos.
+
 Además, el dispositivo puede consultar el estado de la conexión utilizando el método `isConnected()`, que se muestra en el ejemplo siguiente:
 
 ```

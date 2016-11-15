@@ -26,7 +26,7 @@ Mitgliederkonten haben standardmäßig kein Ablaufdatum. Wenn Sie Ihrer {{site.d
 
 ### Mitglieder zur {{site.data.keyword.iot_short_notm}}-Organisation hinzufügen
 
-Zum Hinzufügen von Mitgliedern zu Ihrer Organisation benötigen Sie die IBM ID des Mitglieds. Eine Bestätigung des Mitglieds benötigen Sie zum Hinzufügen des Mitglieds nicht. 
+Zum Hinzufügen von Mitgliedern zu Ihrer Organisation benötigen Sie die IBM ID des Mitglieds. Eine Bestätigung des Mitglieds benötigen Sie zum Hinzufügen des Mitglieds nicht.
 
 Gehen Sie wie folgt vor, um Ihrer {{site.data.keyword.iot_short_notm}}-Organisation ein einzelnes Mitglied hinzuzufügen:
 1. Wechseln Sie im {{site.data.keyword.iot_short_notm}}-Dashboard zu **Zugriff**.
@@ -73,8 +73,8 @@ Gehen Sie wie folgt vor, um ein Mitglied in Ihrer {{site.data.keyword.iot_short_
 2. Klicken Sie auf **Mitglied hinzufügen** und wählen Sie **Einladen** aus.
 3. Geben Sie die E-Mail-Adresse des Mitglieds ein.
 4. Wählen Sie eine Rolle für dieses Mitglied aus.
-5. Geben Sie den Betreff, den Realmnamen und den Aussteller ein.
-**Wichtig:** Stellen Sie sicher, dass die Felder für den Betreff (`Subject`), den Realmnamen (`Realm Name`) und den Aussteller (`Issuer`) die Empfehlungen und Standards von OpenID Connect einhalten. Weitere Informationen finden Sie auf der Website von [OpenID Connect](http://openid.net/connect/).
+5. Geben Sie den Betreff, den Realmnamen und den Aussteller ein. 
+   **Wichtig:** Stellen Sie sicher, dass die Felder für den Betreff (`Subject`), den Realmnamen (`Realm Name`) und den Aussteller (`Issuer`) die Empfehlungen und Standards von OpenID Connect einhalten. Weitere Informationen finden Sie auf der Website von [OpenID Connect](http://openid.net/connect/).
 6. Optional: Legen Sie ein Ablaufdatum für das Mitglied fest.
 7. Klicken Sie auf **Benutzer registrieren**.
 

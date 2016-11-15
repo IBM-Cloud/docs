@@ -26,7 +26,7 @@ Para obtener más información sobre las conexiones de la aplicación, consulte 
 
 Para crear un nuevo par de clave y señal de autenticación de API:  
 1.	En el panel de control de {{site.data.keyword.iot_short_notm}}, vaya a **Apps > Claves de API**.  
-2.	Pulse **Generar clave de API**.
+2.	Pulse **Generar clave de API**.  
 **Importante:** Tome nota del par clave y señal de API. Las señales de autenticación no son recuperables. Si pierde u olvida esta señal, tendrá que volver a registrar la clave de API para generar una nueva señal de autenticación.
  - Un ejemplo de una clave de API sería `a-organization_id-a84ps90Ajs`  
  - Un ejemplo de una señal sería `MP$08VKz!8rXwnR-Q*`  
@@ -37,7 +37,7 @@ Para crear un nuevo par de clave y señal de autenticación de API:
 
 ## Conexión de enlace de Bluemix
 {: #bluemix-binding}
-Se pueden enlazar aplicaciones a la organización de {{site.data.keyword.iot_short_notm}} desde {{site.data.keyword.Bluemix_notm}}. Al enlazar la aplicación, sólo puede comunicarse con instancias de servicio en el mismo espacio u organización. Encontrará todos los datos necesarios para que la app se comunique con la instancia de servicio en la variable de entorno VCAP_SERVICES. Si su app está enlazada a varios servicios, la variable VCAP_SERVICES contiene la información de conexión para cada instancia de servicio.   
+Se pueden enlazar aplicaciones a la organización de {{site.data.keyword.iot_short_notm}} desde {{site.data.keyword.Bluemix_notm}}. Al enlazar la aplicación, sólo puede comunicarse con instancias de servicio en el mismo espacio u organización. Encontrará todos los datos necesarios para que la app se comunique con la instancia de servicio en la variable de entorno VCAP_SERVICES. Si su app está enlazada a varios servicios, la variable VCAP_SERVICES contiene la información de conexión para cada instancia de servicio.  
 
 Sin embargo, puede utilizar instancias de servicio de otros espacios u organizaciones de la misma forma que lo hace una app externa. En lugar de crear un enlace, utilice las credenciales para configurar directamente la instancia de la app. Para obtener más información, consulte [Solicitud de una nueva instancia de servicio](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) en la documentación de {{site.data.keyword.Bluemix_notm}}.
 

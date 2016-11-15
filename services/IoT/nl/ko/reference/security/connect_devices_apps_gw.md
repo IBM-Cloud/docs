@@ -13,7 +13,7 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}}에 애플리케이션, 디바이스 및 게이트웨이 연결
 {: #connect_devices_apps_gw}
-마지막 업데이트 날짜: 2016년 9월 08일
+마지막 업데이트 날짜: 2016년 9월 8일
 {: .last-updated}
 
 MQTT 프로토콜을 통해 애플리케이션, 디바이스 및 게이트웨이를 {{site.data.keyword.iot_full}}에 연결할 수 있습니다. 디바이스에서 HTTP API를 통해 {{site.data.keyword.iot_short_notm}}에 연결하고 이벤트를 공개할 수 있습니다.

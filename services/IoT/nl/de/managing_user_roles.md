@@ -11,17 +11,17 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Benutzerrollen verwalten 
+# Benutzerrollen verwalten
 Letzte Aktualisierung: 16. September 2016
 {: .last-updated}
 
-Benutzerrollen legen fest, welche Operationen ein bestimmter Benutzer ausführen darf. Sie können die einem Benutzer zugeordnete Rolle mithilfe des {{site.data.keyword.iot_full}}-Dashboards oder mithilfe der {{site.data.keyword.iot_short_notm}}-API ändern. 
+Benutzerrollen legen fest, welche Operationen ein bestimmter Benutzer ausführen darf. Sie können die einem Benutzer zugeordnete Rolle mithilfe des {{site.data.keyword.iot_full}}-Dashboards oder mithilfe der {{site.data.keyword.iot_short_notm}}-API ändern.
 
-## Benutzerrolle mithilfe des Dashboards ändern 
+## Benutzerrolle mithilfe des Dashboards ändern
 
-1. Wählen Sie in Ihrem {{site.data.keyword.iot_short_notm}}-Dashboard in der linken Navigationsleiste die Optionen **Zugriff** > **Mitglieder** aus. 
-2. Klicken Sie auf das Symbol **Bearbeiten**, das neben dem Benutzer steht, den Sie aktualisieren möchten. 
-3. Wählen Sie eine Rolle aus und klicken Sie auf **Fertig**. 
+1. Wählen Sie in Ihrem {{site.data.keyword.iot_short_notm}}-Dashboard in der linken Navigationsleiste die Optionen **Zugriff** > **Mitglieder** aus.
+2. Klicken Sie auf das Symbol **Bearbeiten**, das neben dem Benutzer steht, den Sie aktualisieren möchten.
+3. Wählen Sie eine Rolle aus und klicken Sie auf **Fertig**.
 
 <!-- 
 ## Changing a user role by using the API

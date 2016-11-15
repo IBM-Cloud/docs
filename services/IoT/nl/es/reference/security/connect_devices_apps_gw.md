@@ -85,7 +85,7 @@ Para que se autentiquen correctamente los dispositivos, aplicaciones y pasarelas
 
 Donde
 - *orgId* es el ID de organización de seis caracteres exclusivo que se ha generado cuando se ha registrado el servicio.
-- *appId* es un identificador de serie exclusivo definido por el usuario para el cliente. 
+- *appId* es un identificador de serie exclusivo definido por el usuario para el cliente.
 - *deviceId* identifica de forma exclusiva un dispositivo o pasarela en todos los tipos y es similar a un número de serie.
 - *device_type* es el identificador para el tipo de dispositivo que se está conectando y es similar a un número de modelo.
 - *typeId* es un identificador del tipo de pasarela que se está conectando y es similar a un número de modelo.

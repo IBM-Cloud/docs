@@ -212,6 +212,8 @@ Quando o método `publishEvent()` retornar o valor false, será possível verifi
 	....
 ```
 A biblioteca não armazena os eventos que são publicados durante o estado desconectado, portanto, o dispositivo precisa chamar o método `publishEvent()` novamente para enviar esses eventos após a conexão ser restabelecida.
+
+
 ## Manipulando comandos
 {: #handling_commands}
 

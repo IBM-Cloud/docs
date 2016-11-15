@@ -256,9 +256,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.838822"
-     inkscape:cx="315.57225"
-     inkscape:cy="181.0942"
+     inkscape:zoom="1.57"
+     inkscape:cx="376.47123"
+     inkscape:cy="169.05484"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -527,22 +527,22 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="262.21838"
+       x="250.21838"
        y="608.10205"
        id="text18189-5"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3535"
-         x="262.21838"
-         y="608.10205">Simulateur</tspan><tspan
+         x="250.21838"
+         y="608.10205">Simulateur de</tspan><tspan
          sodipodi:role="line"
          id="tspan3537"
-         x="262.21838"
-         y="621.85205">de terminal</tspan><tspan
+         x="250.21838"
+         y="621.85205"> terminal</tspan><tspan
          sodipodi:role="line"
          id="tspan3539"
-         x="262.21838"
-         y="635.60205">Node-RED</tspan></text>
+         x="250.21838"
+         y="635.60205"> Node-RED</tspan></text>
     <g
        id="g6940"
        transform="matrix(0.06176845,0,0,0.06559102,215.54778,564.56484)">
@@ -701,25 +701,25 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="479.65396"
-       y="693.80188"
+       y="695.80188"
        id="text18189-6-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3523"
          x="479.65396"
-         y="693.80188">Interface utilisateur </tspan><tspan
+         y="695.80188">Interface utilisateur</tspan><tspan
          sodipodi:role="line"
          id="tspan3525"
          x="479.65396"
-         y="707.55188">de surveillance</tspan><tspan
+         y="709.55188">de surveillance</tspan><tspan
          sodipodi:role="line"
          id="tspan3527"
          x="479.65396"
-         y="721.30188">d'IoT Blockchain</tspan><tspan
+         y="723.30188">d'IoT Blockchain</tspan><tspan
          sodipodi:role="line"
          id="tspan3529"
          x="479.65396"
-         y="735.05188" /></text>
+         y="737.05188"></tspan></text>
     <rect
        x="135.59711"
        y="458.25388"
@@ -790,15 +790,15 @@
        sodipodi:linespacing="125%"
        id="text44235"
        y="514.31067"
-       x="485.79675"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="481.79675"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.75px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          id="tspan44239"
          y="514.31067"
-         x="485.79675"
+         x="481.79675"
          sodipodi:role="line">Homologue A</tspan><tspan
-         y="523.68567"
-         x="485.79675"
+         y="525.24817"
+         x="481.79675"
          sodipodi:role="line"
          id="tspan6445" /></text>
     <path
@@ -830,15 +830,15 @@
        sodipodi:linespacing="125%"
        id="text44235-7"
        y="597.70886"
-       x="486.33929"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="482.33929"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.75px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          id="tspan44239-7"
          y="597.70886"
-         x="486.33929"
+         x="482.33929"
          sodipodi:role="line">Homologue B</tspan><tspan
-         y="607.08386"
-         x="486.33929"
+         y="608.64636"
+         x="482.33929"
          sodipodi:role="line"
          id="tspan6445-3" /></text>
     <path
@@ -905,22 +905,11 @@
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        sodipodi:linespacing="125%"
-       y="509.04816"
+       y="515.04816"
        x="259.10245"
        font-size="11"
        id="text56834"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">
-      <tspan
-         sodipodi:role="line"
-         id="tspan3526"
-         x="259.10245"
-         y="509.04816">Proxy de chaîne</tspan>
-      <tspan
-         sodipodi:role="line"
-         id="tspan3528"
-         x="259.10245"
-         y="522.79816">de blocs</tspan>
-    </text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Proxy Blockchain</text>
     <path
        inkscape:connector-curvature="0"
        id="path13579-8"
