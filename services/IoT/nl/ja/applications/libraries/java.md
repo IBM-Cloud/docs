@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-24"
 
 ---
 
@@ -14,14 +15,16 @@ copyright:
 # アプリケーション開発者用の Java
 {: #java}
 
-最終更新日: 2016 年 9 月 7 日
-{: .last-updated}
 
-Java を使用して、{{site.data.keyword.iot_full}} の組織と対話するアプリケーションを作成し、カスタマイズできます。Java を使用したアプリケーションの開発を始められるように情報やサンプルが用意されているので活用してください。
+Java を使用して、{{site.data.keyword.iot_full}} の組織と対話するアプリケーションを作成し、カスタマイズできます。アプリケーション開発を簡単に始められるように、{{site.data.keyword.iot_short_notm}} に対応した Java クライアント・ライブラリー、資料、サンプルが用意されています。
+
 {:shortdesc}
 
 ## Java クライアントとリソースのダウンロード
 {: #java_client_download}
+
+最終更新日: 2016 年 10 月 25 日
+{: .last-updated}
 
 {{site.data.keyword.iot_short_notm}} 用の Java クライアント・ライブラリーとサンプルを利用するには、GitHub の [iot-java](https://github.com/ibm-watson-iot/iot-java) リポジトリーにアクセスし、インストール手順を実行します。
 
@@ -33,17 +36,21 @@ Java を使用して、{{site.data.keyword.iot_full}} の組織と対話する�
 
 | 定義     |説明     |
 |----------------|----------------|
-|`org` |組織 ID。これは必須値です。Quickstart フローを使用する場合は、`quickstart` を指定します。|
+|`org` |組織 ID に設定する必要がある必須の値。Quickstart フローを使用する場合は、`quickstart` を指定します。|
 |`id` |組織内のアプリケーション固有の ID。|
-|`auth-method`  |認証方式。現在サポートされている値は、`apikey` のみです。|
-|`auth-key`   |オプションの API キー。auth-method を `apikey` に設定する場合には必須です。  |
-|`auth-token`   |API キー・トークン。auth-method を `apikey` に設定する場合には必須です。 |
+|`auth-method`  |認証の方式。サポートされている唯一の方式は `apikey` です。|
+|`auth-key`   |オプションの API キー。auth-method の値を `apikey` に設定する場合は、これを指定する必要があります。|
+|`auth-token`   |API キー・トークン。auth-method の値を `apikey` に設定する場合は、これも指定する必要があります。 |
 |`clean-session`|true または false 値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は `true` に設定されます。|
-|`shared-subscription`|ブール値。複数のアプリケーション・インスタンス間でメッセージのロード・バランシングを行うスケーラブルなアプリケーションを作成する場合は、`true` に設定します。詳しくは、[スケーラブルなアプリケーション](mqtt.html#/scalable-applications#scalable-applications)を参照してください。
+|`Port`|接続先のポート番号。8883 か 443 のいずれかを指定してください。ポート番号を指定しない場合、クライアントは、デフォルトのポート番号 8883 で {{site.data.keyword.iot_short_notm}} に接続します。|
+|`MaxInflightMessages`  |接続の処理中メッセージの最大数を設定します。デフォルト値は 100 です。|
+|`Automatic-Reconnect`  |true か false の値。切断状態になったデバイスを自動的に {{site.data.keyword.iot_short_notm}} に再接続する場合は、これを指定する必要があります。デフォルト値は false です。|
+|`Disconnected-Buffer-Size`|クライアントの切断中にメモリー内に保管できるメッセージの最大数。デフォルト値は 5000 です。|
+|`shared-subscription`|ブール値。複数のアプリケーション・インスタンス間でメッセージのロード・バランシングを行うスケーラブルなアプリケーションを作成する場合は、true に設定する必要があります。詳しくは、[スケーラブルなアプリケーション](../mqtt.html#scalable_apps)を参照してください。
 
 `Properties` オブジェクトによって、{{site.data.keyword.iot_short_notm}} モジュールとの対話に使用する定義が作成されます。このオブジェクトのプロパティーを指定しない場合、または `quickstart` を指定した場合、クライアントは {{site.data.keyword.iot_short_notm}} Quickstart サービスに未登録のデバイスとして接続します。
 
-以下のコード・サンプルは、ApplicationClient インスタンスを `quickstart` モードで作成する方法を示しています。
+以下のコード・サンプルは、アプリケーション・クライアント (`ApplicationClient`) インスタンスを `quickstart` モードで作成する方法を示しています。
 
 ```
     import com.ibm.iotf.client.app.ApplicationClient;
@@ -55,7 +62,7 @@ Java を使用して、{{site.data.keyword.iot_full}} の組織と対話する�
     ApplicationClient myClient = new ApplicationClient(options);
 ```
 
-以下のコード・サンプルは、ApplicationClient インスタンスを登録済みフロー・モードで作成する方法を示しています。
+以下のコード・サンプルは、アプリケーション・クライアント (`ApplicationClient`) インスタンスを登録済みフロー・モードで作成する方法を示しています。
 
 ```
     Properties options = new Properties();
@@ -70,14 +77,14 @@ Java を使用して、{{site.data.keyword.iot_full}} の組織と対話する�
 
 ### 構成ファイルの使用
 
-`Properties` オブジェクトを直接含める代わりに、`Properties` オブジェクトの名前と値のペアを次の形式で含む構成ファイルを使用することもできます。
+`Properties` オブジェクトを直接含める代わりに、`Properties` オブジェクトの名前と値のペアを指定した構成ファイルを使用することができます。以下のコード・サンプルにその概要を示します。
 
 ```
     Properties props = ApplicationClient.parsePropertiesFile(new File("C:\\temp\\application.prop"));
     ApplicationClient myClient = new ApplicationClient(props);
     ...
 ```
-このアプリケーション構成ファイルは、次の形式にする必要があります。
+指定されたアプリケーション構成ファイルは、次の形式にする必要があります。
 
 ```
     [application]
@@ -92,16 +99,26 @@ Java を使用して、{{site.data.keyword.iot_full}} の組織と対話する�
 ## {{site.data.keyword.iot_short_notm}} への接続
 {: #connecting_to_iotp}
 
-{{site.data.keyword.iot_short_notm}} に接続するには、`connect()` 関数を使用します。`connect()` 関数には、`autoRetry` というオプションのブール値パラメーターが含まれていて、これにより、MqttException 接続に障害が発生した場合にライブラリーが再接続を試行するかどうかを指定します。デフォルトでは、`autoRetry` は true に設定されます。渡されたデバイス登録の詳細に誤りがあったために MqttSecurityException 接続の障害が発生した場合は、`autoRetry` が `true` に設定されていても、ライブラリーは再接続を試行しません。
+{{site.data.keyword.iot_short_notm}} に接続するには、`connect()` 関数を使用します。`connect()` 関数には、`autoRetry` というオプションのブール値パラメーターが含まれています。このパラメーターで、MqttException 接続障害が発生した場合にライブラリーが再接続を試行するかどうかを指定できます。デフォルトでは、`autoRetry` は true に設定されます。渡されたデバイス登録の詳細に誤りがあったために MqttSecurityException 接続の障害が発生した場合は、`autoRetry` が true に設定されていても、ライブラリーは再接続を試行しません。
+
+`connect()` 関数を呼び出す前に、`setKeepAliveInterval(int)` メソッドを使用して MQTT のキープアライブ間隔を設定することもできます。`setKeepAliveInterval(int)` の値は、秒単位で指定します。このメソッドで、送受信されるメッセージとメッセージの間隔の最大時間を定義できます。このメソッドを使用すると、クライアントは、TCP/IP タイムアウト期間の終了を待たずに、サーバーが使用不能になったことを検出できます。クライアントは、それぞれのキープアライブ間隔の期間中に少なくとも 1 つのメッセージがネットワークを通過するかどうかを確認します。タイムアウト期間中に受け取るデータ関連メッセージがゼロであれば、クライアントは、小さな `ping` メッセージを送信してサーバーに応答してもらいます。`setKeepAliveInterval(int)` は、デフォルトで 60 秒に設定されます。クライアントでキープアライブ処理機能を無効にする場合は、`setKeepAliveInterval(int)` の値を 0 に設定します。
 
 ```
     Properties props = ApplicationClient.parsePropertiesFile(new File("C:\\temp\\application.prop"));
     ApplicationClient myClient = new ApplicationClient(props);
-
+    myClient.setKeepAliveInterval(120);
     myClient.connect();
 ```
 
-{{site.data.keyword.iot_short_notm}} サービスに正常に接続できたら、アプリケーション・クライアントはデバイス・イベントやデバイス状況をサブスクライブし、デバイス・イベントやコマンドをパブリッシュできます。
+接続障害が発生した場合の再試行の数を制御するために、myClient.connect() 関数で整数を指定してください。以下のコード・スニペットに概要を示します。
+
+```
+DeviceClient myClient = new DeviceClient(options);
+myClient.setKeepAliveInterval(120);
+myClient.connect(10);
+```
+
+アプリケーション・クライアントは、{{site.data.keyword.iot_short_notm}} サービスに正常に接続してから、デバイスのイベントと状況にサブスクライブできます。また、デバイスのイベントとコマンドをパブリッシュすることも可能です。
 
 ## デバイス・イベントのサブスクライブ
 {: #subscribing_device_events}
@@ -164,7 +181,7 @@ Java を使用して、{{site.data.keyword.iot_full}} の組織と対話する�
 |パラメーター|データ・タイプ|説明|
 |:---|:---|
 |`event.device`|ストリング|組織内のすべてのタイプのデバイスにおいて対象デバイスを一意に識別します。|
-|`event.deviceType`|ストリング|デバイス・タイプを識別します。通常、deviceType は、特定のタスクを実行するデバイスのグループです (例えば "weatherballoon")。|
+|`event.deviceType`|ストリング|デバイス・タイプを識別します。通常、deviceType は、特定のタスクを実行するデバイスのグループです (例えば、"weatherballoon" などのデバイス・タイプを指定できます)。|
 |`event.deviceId`|ストリング|デバイスの ID を示します。通常、特定のデバイス・タイプにおいて、deviceId はそのデバイスの固有 ID です (シリアル番号や MAC アドレスなど)。|
 |`event.event`|ストリング|通常、特定の複数のイベントをグループ化するために使用します (「status」、「warning」、「data」など)。|
 |`event.format`|ストリング|形式は任意のストリング (JSON など) となります。  |
@@ -329,7 +346,7 @@ Java を使用して、{{site.data.keyword.iot_full}} の組織と対話する�
   }
 ```
 
-この状況コールバックを ApplicationClient に追加すると、基準に一致するデバイスの {{site.data.keyword.iot_short_notm}} への接続が確立されたり切断されたりした場合に `processDeviceStatus()` メソッドが呼び出されます。以下のコード・サンプルは、状況コールバック・インスタンスを ApplicationClient に追加する方法を示しています。
+この状況コールバックをアプリケーション・クライアントに追加すると、基準に一致するデバイスの {{site.data.keyword.iot_short_notm}} への接続が確立されたり切断されたりした場合に `processDeviceStatus()` メソッドが呼び出されます。以下のコード・サンプルは、状況コールバック・インスタンスをアプリケーション・クライアントに追加する方法を示しています。
 
 ```
 
@@ -337,14 +354,14 @@ Java を使用して、{{site.data.keyword.iot_full}} の組織と対話する�
     myClient.setStatusCallback(new MyStatusCallback());
     myClient.subscribeToDeviceStatus();
 ```
-アプリケーションは、他のあらゆるアプリケーション状況 (Watson IoT Platform へのアプリケーションの接続や切断など) をサブスクライブできます。以下のコード・スニペットは、組織のアプリケーション状況にサブスクライブする方法を示しています。
+アプリケーションは、他のあらゆるアプリケーション状況 ({{site.data.keyword.iot_short_notm}} へのアプリケーションの接続や切断など) をサブスクライブできます。以下のコード・スニペットは、{{site.data.keyword.iot_short_notm}} 組織のアプリケーション状況にサブスクライブする方法を示しています。
 
 ```
     myClient.connect()
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-特定のアプリケーション状況へのサブスクリプションを制御するために、多重定義メソッドが用意されています。基準に一致するアプリケーションの {{site.data.keyword.iot_short_notm}} への接続が確立されたり切断されたりした場合に processApplicationStatus() メソッドが呼び出されます。
+特定のアプリケーション状況へのサブスクリプションを制御するために、多重定義メソッドが用意されています。基準に一致するアプリケーションの {{site.data.keyword.iot_short_notm}} への接続が確立されたり切断されたりした場合に `processApplicationStatus()` メソッドが呼び出されます。
 
 
 ## デバイスからのイベントのパブリッシュ
@@ -366,18 +383,41 @@ Java を使用して、{{site.data.keyword.iot_full}} の組織と対話する�
     myClient.publishEvent(deviceType, deviceId, "blink", event);
 ```
 
+
+さまざまな形式でイベントをパブリッシュできます。例えば、JSON、ストリング、バイナリーなどの形式が可能です。デフォルトでは、ライブラリーは、JSON 形式でイベントをパブリッシュしますが、別の形式のデータを指定することもできます。例えば、ストリング形式のデータをパブリッシュする場合は、以下のコード・スニペットを使用します。
+
+```
+    myClient.connect();
+    String data = "cpu:"+60;
+    status = myClient.publishEvent("load", data, "text", 2);
+```
+**注:** 前のコード例では、イベントのペイロードをストリング形式にする必要があります。
+
+XML データは、ストリングに変換して以下のようにパブリッシュできます。
+
+```
+    status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
+```
+
+同じように、バイナリー形式のイベントをパブリッシュする場合は、バイト配列を使用します。その概要を以下の例に示します。
+
+```
+    myClient.connect();
+    byte[] cpuLoad = new byte[] {60, 35, 30, 25};
+    status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
+```
+
 ### HTTP によるイベントのパブリッシュ
 {: #publishing_events_http}
 
-MQTT のほかにも、HTTP を使用してデバイス・イベントを {{site.data.keyword.iot_short_notm}} にパブリッシュするようにアプリケーションを構成できます。そのためには、次の手順を実行します。
+MQTT のほかにも、HTTP を使用してデバイス・イベントを {{site.data.keyword.iot_short_notm}} にパブリッシュするようにアプリケーションを構成することもできます。HTTP を介してデバイス・イベントをパブリッシュする手順の概要を以下に示します。
 
-* プロパティー・ファイルを使用して ApplicationClient インスタンスを作成する
-* パブリッシュする必要があるイベントを作成する
-* イベント名、デバイス・タイプ、デバイス ID を指定する
-* 次のコードに示すように、`publishEventOverHTTP`() メソッドを使用してイベントをパブリッシュする
+1. プロパティー・ファイルを使用して ApplicationClient インスタンスを作成する。
+2. パブリッシュする必要があるイベントを作成する。
+3. イベント名、デバイス・タイプ、デバイス ID を指定する。
+4. `publishEventOverHTTP`() メソッドを使用してイベントをパブリッシュする。以下にコード例を示します。
 
 ```
-
     	ApplicationClient myClient = new ApplicationClient(props);
 
     	JsonObject event = new JsonObject();
@@ -385,14 +425,12 @@ MQTT のほかにも、HTTP を使用してデバイス・イベントを {{site
     	event.addProperty("cpu",  90);
     	event.addProperty("mem",  70);
 
-    	code = myClient.publishEventOverHTTP(deviceType, deviceId, "blink", event);
+    	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-完全なコード・サンプルを確認したい場合は、次のアプリケーション・サンプルを参照してください。
+コード・サンプル全体を確認するには、[HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java) というアプリケーションのサンプルを参照してください。
 
-[HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java)
-
-プロパティー・ファイルの設定に基づいて、`publishEventOverHTTP()` メソッドが、Quickstart または登録されたフローでイベントをパブリッシュします。`quickstart` がプロパティー・ファイルに指定された組織 ID である場合、`publishEventOverHTTP()` メソッドはイベントをプレーン HTTP 形式で {{site.data.keyword.iot_short_notm}} Quickstart サービスにパブリッシュします。登録されている有効な組織をプロパティー・ファイルに指定した場合は、イベントのパブリッシュに必ず HTTPS が使用されるため、すべての通信が保護されます。
+プロパティー・ファイルの設定に基づいて、`publishEventOverHTTP()` メソッドが、Quickstart または登録されたフローでイベントをパブリッシュします。プロパティー・ファイルで組織 ID として `quickstart` を指定すると、`publishEventOverHTTP()` メソッドは、{{site.data.keyword.iot_short_notm}} Quickstart サービスにプレーン HTTP 形式でイベントをパブリッシュします。登録されている有効な組織をプロパティー・ファイルに指定した場合は、イベントのパブリッシュに必ず HTTPS が使用されるため、すべての通信が保護されます。
 
 HTTP プロトコルによる配信は「最高 1 回」の送信です。これは、MQTT プロトコルのサービス品質レベル「最高 1 回」(QoS 0) に似ています。「最高 1 回」の送信を使用してイベントをパブリッシュする場合、アプリケーションはエラー発生時の再試行ロジックを実装する必要があります。
 
@@ -415,13 +453,37 @@ HTTP プロトコルによる配信は「最高 1 回」の送信です。これ
     myAppClient.publishCommand(deviceType, deviceId, "stop", data);
 ```
 
+### HTTP を使用したコマンドのパブリッシュ
+{: #publishing_commands_http}
 
-## 例
-{: #examples}
+MQTT のほかにも、HTTP を使用してコマンドを接続先のデバイスにパブリッシュするようにアプリケーションを構成することともできます。HTTP を使用してデバイス・イベントをパブリッシュする手順の概要を以下に示します。
 
+1. プロパティー・ファイルを使用して ApplicationClient インスタンスを作成する
+2. パブリッシュする必要があるコマンドを作成する
+3. コマンド名、デバイス・タイプ、デバイス ID を指定する
+4. 次のコードに示すように、`publishCommandOverHTTP`() メソッドを使用してコマンドをパブリッシュする
+
+```
+
+    	ApplicationClient myClient = new ApplicationClient(props);
+
+    	// Generate a JSON object of the event to be published
+	JsonObject event = new JsonObject();
+	event.addProperty("reboot", 5);
+
+	boolean response = myClient.publishCommandOverHTTP("execute", event);
+```
+
+コード・サンプル全体を確認するには、[HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java) というアプリケーションのサンプルを参照してください。
+
+HTTP プロトコルによる配信は「最高 1 回」の送信です。これは、MQTT プロトコルのサービス品質レベル「最高 1 回」(QoS 0) に似ています。「最高 1 回」の送信を使用してコマンドをパブリッシュする場合、アプリケーションはエラー発生時の再試行ロジックを実装する必要があります。詳しくは、[アプリケーションの HTTP REST API](../api.html)を参照してください。
+
+
+## サンプル
+{: #samples}
 
 -  [MQTTApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java) - デバイス・イベントをパブリッシュする方法を示すサンプル・アプリケーション。
 -   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - コマンドをデバイスにパブリッシュする方法を示すサンプル・アプリケーション。
 -  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - デバイス・イベント、デバイス・コマンド、デバイス状況、アプリケーション状況などのさまざまなイベントをサブスクライブする方法を示すサンプル・アプリケーション。
 -   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - 複数のアプリケーション・インスタンス間でメッセージのロード・バランシングを行うスケーラブルなアプリケーションを作成する方法を示すサンプル・アプリケーション。
--  [バックアップとリストアのサンプル](https://github.com/ibm-messaging/iot-backup-restore-sample) - Cloudant NoSQL データベースのデバイス構成をバックアップおよびリストアする方法を示すサンプル。
+-  [Backup-restore-sample](https://github.com/ibm-messaging/iot-backup-restore-sample) - {{site.data.keyword.cloudant}}のデバイス構成をバックアップおよびリストアする方法を示すサンプル。

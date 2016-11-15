@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2016
@@ -17,8 +17,7 @@ copyright:
 最終更新日: 2016 年 7 月 29 日
 {: .last-updated}
 
-Python を使用して、{{site.data.keyword.iot_full}} で組織と対話するデバイス・コードをビルド/開発することができます。{{site.data.keyword.iot_short_notm}} 用の Python クライアントは、MQTT や HTTP などの基礎的なプロトコルを抽象化することで、{{site.data.keyword.iot_short_notm}} 機能とのシンプルな対話を促進する API を備えています。
-{:shortdesc}
+Python を使用して、{{site.data.keyword.iot_full}} で組織と対話するデバイス・コードをビルド/開発することができます。{{site.data.keyword.iot_short_notm}} 用の Python クライアントは、MQTT や HTTP などの基礎的なプロトコルを抽象化することで、{{site.data.keyword.iot_short_notm}} 機能とのシンプルな対話を促進する API を備えています。{:shortdesc}
 
 提供されている情報と例を使用し、Python を使用したデバイスの開発を開始します。
 
