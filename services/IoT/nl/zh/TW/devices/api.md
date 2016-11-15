@@ -13,7 +13,7 @@ copyright:
 
 # 裝置的 HTTP REST API
 {: #api}
-前次更新：2016 年 9 月 9 日
+前次更新：2016 年 10 月 11 日
 {: .last-updated}
 
 **重要事項：**裝置的 {{site.data.keyword.iot_full}} HTTP REST API 特性僅是有限測試版程式的一部分。未來更新可能包括與此特性的目前版本不相容的變更。請試用，並且[讓我們知道您的想法](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html)。
@@ -61,10 +61,11 @@ copyright:
 
 所有要求都必須包括授權標頭。基本鑑別是唯一支援的方法。裝置透過 {{site.data.keyword.iot_short_notm}} HTTP REST API 提出 HTTP 要求時，需要下列認證：
 
-```
-username = "use-token-auth"
-password = Authentication token
-```
+|認證|必要輸入|
+|:---|:---|
+|使用者名稱|`use-token-auth`
+|密碼| 在登錄裝置時自動產生或手動指定的鑑別記號。
+
 
 ### Content-Type 要求標頭
 
@@ -82,3 +83,62 @@ password = Authentication token
 與 MQTT 服務品質「最多一次」遞送服務水準 0 類似，HTTP REST 傳訊提供非持續訊息遞送，但會驗證要求正確無誤，並驗證要求會先遞送至伺服器，再傳送 HTTP 回應。包含 HTTP 狀態碼 200 的回覆確認已將訊息遞送至伺服器。當您使用「最多一次」MQTT 服務品質水準或 HTTP 對等項目來遞送事件訊息時，裝置或應用程式必須實作重試邏輯來保證遞送。
 
 如需 {{site.data.keyword.iot_short_notm}} 的 MQTT 通訊協定及服務品質水準的相關資訊，請參閱 [MQTT 傳訊](../reference/mqtt/index.html)。
+
+
+<--!
+從已作廢的「特性」開發主題中移動。要與開發人員討論的位置。
+## 前次事件快取
+{: #last-event-cache}
+
+您可以使用 {{site.data.keyword.iot_short_notm}} 的「前次事件快取 API」，擷取裝置前次傳送的事件。不論裝置是連線還是離線，此作業皆可運作，如此可讓您擷取裝置狀態，而不管裝置的實體位置或使用狀態。您可以擷取特定裝置之事件 ID 的前次記錄值，或特定裝置所報告之每一個事件 ID 的前次記錄值。可針對最多 365 天之前發生的任何特定事件，擷取裝置的前次事件資料。
+
+若要要求特定事件 ID 的最新值，請使用下列 API 要求，其會傳回 "power" 事件 ID 的前次記錄值。
+
+```
+GET /api/v0002/device/types/<device-type>/devices/<device-id>/events/power
+```
+
+傳回的回應具有下列 JSON 格式：
+
+```
+{
+    "deviceId": "<device-id>",
+    "eventId": "power",
+    "format": "json",
+    "payload": "eyJzdGF0ZSI6Im9uIn0=",
+    "timestamp": "2016-03-14T14:12:06.527+0000",
+    "typeId": "<device-type>"
+}
+```
+
+**附註：**API 回應為 JSON 格式時，可以使用任何格式來撰寫事件有效負載。「前次事件快取 API」所傳回的有效負載會使用 base64 進行編碼。
+
+若要要求裝置所報告之每一個事件 ID 的最新值，請使用下列 API 要求：
+
+```
+GET /api/v0002/device/types/<device-type>/devices/<device-id>/events
+```
+
+回應將會包括裝置所傳送的所有事件 ID。在下列範例中，會傳回 "power" 及 "temperature" 事件的值。
+
+```
+[
+    {
+        "deviceId": "<device-id>",
+        "eventId": "power",
+        "format": "json",
+        "payload": "eyJzdGF0ZSI6Im9uIn0=",
+        "timestamp": "2016-03-14T14:12:06.527+0000",
+        "typeId": "<device-type>"
+    },
+    {
+        "deviceId": "<device-id>",
+        "eventId": "temperature",
+        "format": "json",
+        "payload": "eyJpbnRlcm5hbCI6MjIsICJleHRlcm5hbCI6MTZ9",
+        "timestamp": "2016-03-14T14:17:44.891+0000",
+        "typeId": "<device-type>"
+    }
+]
+```
+-->

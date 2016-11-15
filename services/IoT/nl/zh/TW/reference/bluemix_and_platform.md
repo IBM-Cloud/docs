@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-21"
 
 ---
 
@@ -13,10 +14,11 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 與 {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
-前次更新：2016 年 8 月 30 日
+前次更新：2016 年 10 月 21 日
 {: .last-updated}
 
-{{site.data.keyword.iot_full}} 是 {{site.data.keyword.Bluemix}} 中提供的服務。您可以使用 {{site.data.keyword.Bluemix_notm}} 儀表板來存取您的 {{site.data.keyword.iot_short_notm}} 組織儀表板。{{site.data.keyword.iot_short_notm}} 作為 {{site.data.keyword.Bluemix_notm}} 服務，可以與 {{site.data.keyword.Bluemix_notm}} 代管的其他服務整合。如需特定協力廠商服務整合的詳細資訊，請參閱[外部服務整合](/extensions/index.html)
+{{site.data.keyword.iot_full}} 是 {{site.data.keyword.Bluemix}} 中提供的服務。您可以使用 {{site.data.keyword.Bluemix_notm}} 儀表板來存取您的 {{site.data.keyword.iot_short_notm}} 組織儀表板。{{site.data.keyword.iot_short_notm}} 作為 {{site.data.keyword.Bluemix_notm}} 服務，可以與 {{site.data.keyword.Bluemix_notm}} 代管的其他服務整合。如需特定協力廠商服務整合的詳細資料，請參閱[外部服務整合](/extensions/index.html)
+{:shortdesc}
 
 ## {{site.data.keyword.iot_short_notm}} 如何與 {{site.data.keyword.Bluemix_notm}} 搭配運作
 {: #iot-bluemix-work}
@@ -37,16 +39,14 @@ copyright:
 
 {{site.data.keyword.iot_short_notm}} 提供兩種定價模型：「免費」和「標準」。「{{site.data.keyword.iot_short_notm}} 免費」最多容許 20 個登錄裝置、100MB 的交換資料，以及最多 10 個連結應用程式。
 
-「{{site.data.keyword.iot_short_notm}} 標準」定價不限登錄裝置數目，容許 100 MB 的免費交換資料，使用完前 100 MB 之後，依每 MB 的交換資料收費。
+{{site.data.keyword.iot_short_notm}} 定價不限登錄裝置數目，容許 100 MB 的免費交換資料，而且會在使用完前 100 MB 之後，依每 MB 的交換資料收費。
 
-如需「{{site.data.keyword.iot_short_notm}} 標準」定價的相關資訊，請執行下列動作：
+如需 {{site.data.keyword.iot_short_notm}} 定價的相關資訊，請執行下列動作：
 
-1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板上，按一下您的 {{site.data.keyword.iot_short_notm}}。
+1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板上，按一下 {{site.data.keyword.iot_short_notm}}。
 2. 從左側的導覽功能表中，選取**方案**。
 
 即會顯示定價方案。
-
-如需 {{site.data.keyword.Bluemix_notm}} 計費和定價的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 定價詳細資訊](https://console.stage1.ng.bluemix.net/docs/pricing/index.html)。
 
 # 相關鏈結
 {: #rellinks}
@@ -56,7 +56,7 @@ copyright:
 {: #general}
 
 * [{{site.data.keyword.Bluemix_notm}} 安全](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} 平台安全](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} 平台安全](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 規範](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Softlayer 安全](http://www.softlayer.com/security){:new_window}
-* [Softlayer 規範](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 安全](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 規範](http://www.softlayer.com/compliance){:new_window}

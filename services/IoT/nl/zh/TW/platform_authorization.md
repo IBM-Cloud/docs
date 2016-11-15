@@ -15,7 +15,8 @@ copyright:
 前次更新：2016 年 9 月 14 日
 {: .last-updated}
 
-若要將應用程式連接至 {{site.data.keyword.iot_full}}，您必須使用 API 金鑰和記號來連接，或在 {{site.data.keyword.Bluemix_notm}} 中直接將應用程式連結至 {{site.data.keyword.iot_short_notm}}。您可以使用存取儀表板來授與存取權。{:shortdesc}
+若要將應用程式連接至 {{site.data.keyword.iot_full}}，您必須使用 API 金鑰和記號來連接，或在 {{site.data.keyword.Bluemix_notm}} 中直接將應用程式連結至 {{site.data.keyword.iot_short_notm}}。您可以使用存取儀表板來授與存取權。
+{:shortdesc}
 
 ## API 金鑰連線
 {: #api-key}
@@ -25,7 +26,7 @@ copyright:
 
 若要建立新的 API 金鑰及鑑別記號配對，請執行下列步驟：  
 1.	在 {{site.data.keyword.iot_short_notm}} 儀表板中，移至**應用程式 > API 金鑰**。  
-2.	按一下**產生 API 金鑰**。
+2.	按一下**產生 API 金鑰**。  
 **重要事項：**記下 API 金鑰和記號配對。鑑別記號是不可回復的。如果您遺失或忘記此記號，則需要重新登錄 API 金鑰，來產生新的鑑別記號。
  - API 金鑰的範例為 `a-organization_id-a84ps90Ajs`  
  - 記號的範例為 `MP$08VKz!8rXwnR-Q*`  

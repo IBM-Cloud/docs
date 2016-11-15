@@ -52,7 +52,7 @@ copyright:
 -   DeviceFirmware（如果裝置支援「韌體動作」，則為必要）
 -   DeviceMetadata（選用）
 
-下列程式碼範例顯示如何利用範例資料，建立必要的 `DeviceInfo` 物件及選用的 `DeviceMetadata` 物件：
+下列程式碼範例顯示如何利用範例資料，建立必要的 `DeviceInfo` 物件及選用性的 `DeviceMetadata` 物件：
 
 ```
 DeviceInfo deviceInfo = new DeviceInfo.Builder().
@@ -565,7 +565,7 @@ public abstract void handleFactoryReset(DeviceAction action);
 
 **2.1 handleReboot 的範例實作**
 
-實作必須新增邏輯以重新開啟裝置，並透過 DeviceAction 物件報告重新開機的狀態。只有在發生失敗時，裝置才需要更新狀態以及選用訊息（因為成功作業會將裝置重新開機，而且裝置程式碼將沒有控制項來更新 {{site.data.keyword.iot_short_notm}}）。下面顯示 Raspberry Pi 裝置的重新開機實作範例：
+實作必須新增邏輯以重新開啟裝置，並透過 DeviceAction 物件報告重新開機的狀態。只有在發生失敗時，裝置才需要更新狀態以及選用性訊息（因為成功作業會將裝置重新開機，而且裝置程式碼將沒有控制項來更新 {{site.data.keyword.iot_short_notm}}）。下面顯示 Raspberry Pi 裝置的重新開機實作範例：
 
 ```
 public void handleReboot(DeviceAction action) {
@@ -594,7 +594,7 @@ public void handleReboot(DeviceAction action) {
 
 **2.2 handleFactoryReset 的範例實作**
 
-實作必須新增邏輯，將裝置重設為原廠設定，並透過 DeviceAction 物件報告狀態。只有在發生失敗時，裝置才需要更新狀態以及選用訊息（因為在此過程中，裝置會重新開機，而且裝置程式碼將沒有控制項來更新 {{site.data.keyword.iot_short_notm}} 的狀態）。「重設為原廠設定」實作的架構如下所示：
+實作必須新增邏輯，將裝置重設為原廠設定，並透過 DeviceAction 物件報告狀態。只有在發生失敗時，裝置才需要更新狀態以及選用性訊息（因為在此過程中，裝置會重新開機，而且裝置程式碼將沒有控制項來更新 {{site.data.keyword.iot_short_notm}} 的狀態）。「重設為原廠設定」實作的架構如下所示：
 
 ```
 public void handleFactoryReset(DeviceAction action) {

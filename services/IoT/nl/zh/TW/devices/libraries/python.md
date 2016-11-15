@@ -17,7 +17,8 @@ copyright:
 前次更新：2016 年 7 月 29 日
 {: .last-updated}
 
-您可以在 {{site.data.keyword.iot_full}} 上使用 Python 來建置及開發與組織互動的裝置程式碼。適用於 {{site.data.keyword.iot_short_notm}} 的 Python 用戶端提供 API，透過抽出基礎通訊協定（例如 MQTT 及 HTTP）來協助與 {{site.data.keyword.iot_short_notm}} 特性的簡單互動。{:shortdesc}
+您可以在 {{site.data.keyword.iot_full}} 上使用 Python 來建置及開發與組織互動的裝置程式碼。適用於 {{site.data.keyword.iot_short_notm}} 的 Python 用戶端提供 API，透過抽出基礎通訊協定（例如 MQTT 及 HTTP）來協助與 {{site.data.keyword.iot_short_notm}} 特性的簡單互動。
+{:shortdesc}
 
 使用提供的資訊及範例，利用 Python 開始開發您的裝置。
 
