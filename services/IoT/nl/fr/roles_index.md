@@ -27,11 +27,11 @@ Les rôles d'utilisateur standard suivants sont disponibles :
 
 Rôle d'utilisateur | Description
 ------------- | -------------
-Administrateur | Rôle de superutilisateur qui accorde un accès à toutes les API liées aux utilisateurs. Les administrateurs ne peuvent pas accéder à des opérations qui sont limitées à des terminaux et à des applications.
+Administrateur | Rôle de superutilisateur qui accorde un accès à toutes les API liées aux utilisateurs. Les administrateurs ne peuvent pas accéder à des opérations qui sont limitées à des terminaux et à des applications. 
 Opérateur | Destiné aux utilisateurs de l'organisation principale. Accorde un accès à la plupart des opérations d'organisation, de contrôle d'accès, d'analyse, de service de tiers et de gestion des risques.
 Développeur | Accorde un accès illimité aux opérations de terminal, de journal, de cache, d'historique, d'analyse et de service de tiers. Il fournit un accès limité aux opérations d'organisation, de contrôle d'accès et de gestion des risques.
 Analyste | Accorde un accès aux opérations d'analyse, y compris la création, la mise à jour et la suppression de règles, d'actions et de schémas.
-Lecteur  | Rôle d'utilisateur par défaut. Accorde un accès limité aux opérations disponibles pour tous les utilisateurs.
+Lecteur | Rôle d'utilisateur par défaut. Accorde un accès limité aux opérations disponibles pour tous les utilisateurs.
 
 Pour plus d'informations sur les rôles d'utilisateur, voir [Rôles d'utilisateur](reference/roles_access.html).
 
@@ -48,7 +48,7 @@ Les rôles d'application standard suivants sont disponibles :
 
 Rôle d'application | Description
 ------------- | -------------
-Standard | Rôle d'application par défaut. Accorde l'accès à la plupart des opérations d'application, mais pas aux opérations d'utilisateur ou de rôle.    
+Standard | Rôle d'application par défaut. Accorde l'accès à la plupart des opérations d'application, mais pas aux opérations d'utilisateur ou de rôle.   
 Opérations | Accorde l'accès à plus large gamme d'opérations, mais refuse l'accès aux opérations d'abonnement ou de publication.
 Sécurisée de back end | Destiné aux applications ne ne requièrent pas d'interaction avec l'opérateur système. Refuse l'accès aux opérations de gestion des terminaux, d'organisation, de rôle ou d'extension.
 Processeur de données | Destiné aux applications qui effectuent des opérations d'analyse et de traitement des données. Pour les applications de processeur de données, un accès limité est accordé aux opérations d'organisation et aux opérations d'utilisateur, mais un accès complet est accordé aux opérations d'analyse, y compris la création et la gestion de règles, d'actions et de schémas.
@@ -66,6 +66,6 @@ les rôles de passerelle standard suivants sont disponibles :
 Rôle de passerelle | Description
 ------------- | -------------
 Standard | Rôle de passerelle par défaut. Accorde un accès limité aux opérations.
-Privilégié | Destiné aux passerelles sécurisées et permet aux passerelles privilégiées d'ajouter des terminaux à {{site.data.keyword.iot_short_notm}}. Il accorde un accès aux opérations pertinentes relatives à l'ajout, la mise à jour et la gestion des terminaux et des propriétés de terminal, mais refuse tout accès aux autres opérations.   
+Privilégié | Destiné aux passerelles sécurisées et permet aux passerelles privilégiées d'ajouter des terminaux à {{site.data.keyword.iot_short_notm}}. Il accorde un accès aux opérations pertinentes relatives à l'ajout, la mise à jour et la gestion des terminaux et des propriétés de terminal, mais refuse tout accès aux autres opérations.  
 
 Pour plus d'informations sur l'accès aux opérations de rôles de passerelle, voir [Rôles de passerelle](reference/gateway_roles_access.html).

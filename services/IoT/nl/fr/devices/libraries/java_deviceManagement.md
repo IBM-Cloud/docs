@@ -1,7 +1,7 @@
 ---
 
-copyright :
-  années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -21,7 +21,7 @@ Dernière mise à jour : 2 août 2016
 
 Cette bibliothèque client explique comment utiliser des terminaux avec la bibliothèque client Java 'ibmiotf'. Pour savoir comment démarrer avec ce module, voir [Bibliothèque client Java - Introduction](../java/javaintro.html).
 
-Cette section contient des informations expliquant comment les terminaux peuvent se connecter au service de gestion des terminaux de {{site.data.keyword.iot_full}} à l'aide de Java et effectuer des opérations de gestion des terminaux, telles que la mise à jour de microprogramme, la mise à jour d'emplacement et la mise à jour de diagnostics. 
+Cette section contient des informations expliquant comment les terminaux peuvent se connecter au service de gestion des terminaux de {{site.data.keyword.iot_full}} à l'aide de Java et effectuer des opérations de gestion des terminaux, telles que la mise à jour de microprogramme, la mise à jour d'emplacement et la mise à jour de diagnostics.
 
 La section Terminal contient des informations expliquant comment les terminaux peuvent publier des événements et traiter des commandes à l'aide de la bibliothèque client Java ibmiotf.
 
@@ -41,8 +41,7 @@ La fonction de [gestion des terminaux](../reference/device_mgmt.html) améliore 
 ## Création de données de terminal
 {: #creating_device_data}
 
-Le [modèle de terminal](../reference/device_model.html) décrit les métadonnées et les caractéristiques de gestion d'un terminal. La base de données de terminaux d'{{site.data.keyword.iot_short_notm}} représente la principale source d'informations sur les terminaux.
-Les applications et les terminaux gérés peuvent envoyer des mises à jour à la base de données, telles qu'un emplacement ou la progression d'une mise à jour de microprogramme. Dès que ces mises à jour sont reçues par {{site.data.keyword.iot_short_notm}}, la base de données de terminaux est mise à jour et les informations sont disponibles pour les applications. 
+Le [modèle de terminal](../reference/device_model.html) décrit les métadonnées et les caractéristiques de gestion d'un terminal. La base de données de terminaux d'{{site.data.keyword.iot_short_notm}} représente la principale source d'informations sur les terminaux. Les applications et les terminaux gérés peuvent envoyer des mises à jour à la base de données, telles qu'un emplacement ou la progression d'une mise à jour de microprogramme. Dès que ces mises à jour sont reçues par {{site.data.keyword.iot_short_notm}}, la base de données de terminaux est mise à jour et les informations sont disponibles pour les applications.
 
 `DeviceData` est le modèle de terminal de la bibliothèque client ibmiotf et inclut les objets suivants :
 
@@ -53,7 +52,7 @@ Les applications et les terminaux gérés peuvent envoyer des mises à jour à l
 -   DeviceFirmware (obligatoire si le terminal prend en charge les actions sur le microprogramme)
 -   DeviceMetadata (facultatif)
 
-L'exemple de code suivant montre comment créer l'objet obligatoire `DeviceInfo` en même temps qu'un objet `DeviceMetadata` facultatif avec des exemples de données : 
+L'exemple de code suivant montre comment créer l'objet obligatoire `DeviceInfo` en même temps qu'un objet `DeviceMetadata` facultatif avec des exemples de données :
 
 ```
 DeviceInfo deviceInfo = new DeviceInfo.Builder().
@@ -75,7 +74,7 @@ data.addProperty("customField", "customValue");
 DeviceMetadata metadata = new DeviceMetadata(data);
 ```
 
-Utilisez l'exemple de code suivant pour créer un objet `DeviceData` incluant les objets `DeviceInfo` et `DeviceMetadata` que vous avez créés dans l'exemple précédent. 
+Utilisez l'exemple de code suivant pour créer un objet `DeviceData` incluant les objets `DeviceInfo` et `DeviceMetadata` que vous avez créés dans l'exemple précédent.
 
   ```
   DeviceData deviceData = new DeviceData.Builder().
@@ -87,10 +86,9 @@ Utilisez l'exemple de code suivant pour créer un objet `DeviceData` incluant le
 ## Construction de ManagedDevice
 {: #construct_managed_device}
 
-`ManagedDevice` est une classe de terminaux qui connecte le terminal en tant que terminal géré à {{site.data.keyword.iot_short_notm}} et permet au terminal d'effectuer une ou plusieurs opérations de gestion des terminaux. Vous pouvez également utiliser une instance `ManagedDevice` pour effectuer des opérations de terminal normales, telles que la publication d'événements de terminal et l'écoute de commandes à partir d'une application. 
+`ManagedDevice` est une classe de terminaux qui connecte le terminal en tant que terminal géré à {{site.data.keyword.iot_short_notm}} et permet au terminal d'effectuer une ou plusieurs opérations de gestion des terminaux. Vous pouvez également utiliser une instance `ManagedDevice` pour effectuer des opérations de terminal normales, telles que la publication d'événements de terminal et l'écoute de commandes à partir d'une application.
 
 `ManagedDevice` expose les constructeurs suivants pour prendre en charge différents modèles d'utilisateur :
-
 
 **Constructeur 1**
 
@@ -100,7 +98,7 @@ Le constructeur 1 construit une instance `ManagedDevice` dans {{site.data.keywor
 |:---|:---|
 |`Organization-ID` |ID de votre organisation|
 |`Device-Type` |Type de votre terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
-|`Device-ID` |ID de votre terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC. |
+|`Device-ID` |ID de votre terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
 |`Authentication-Method` |Méthode d'authentification à utiliser. La seule valeur actuellement prise en charge est `token`.|
 |`Authentication-Token` |Jeton d'authentification permettant d'établir une connexion sécurisée entre votre terminal et Watson IoT Platform.|
 
@@ -160,7 +158,7 @@ Le terminal `géré` peu appeler une méthode manage() pour participer aux activ
 managedDevice.manage();
 ```
 
-Le terminal peut utiliser une méthode manage (durée de vie) surchargée pour enregistrer le terminal pendant une période donnée. La période spécifie la durée pendant laquelle le terminal doit envoyer une autre demande **Gérer le terminal** afin de ne pas être rétrogradé au statut de terminal non géré et marqué comme étant en mode veille. 
+Le terminal peut utiliser une méthode manage (durée de vie) surchargée pour enregistrer le terminal pendant une période donnée. La période spécifie la durée pendant laquelle le terminal doit envoyer une autre demande **Gérer le terminal** afin de ne pas être rétrogradé au statut de terminal non géré et marqué comme étant en mode veille.
 
 ```
 managedDevice.manage(3600);
@@ -172,7 +170,7 @@ Pour plus d'informations sur l'opération `Manage`, voir la [documentation].
 
 ## Méthode Unmanage
 
-Un terminal peut appeler la méthode unmanage() lorsqu'il n'a plus besoin d'être géré. {{site.data.keyword.iot_short_notm}} n'envoie plus de nouvelles demandes de gestion des terminaux à ce terminal et toutes les demandes de gestion des terminaux à partir de ce terminal, autres qu'une demande **Gérer le terminal**, sont rejetées. 
+Un terminal peut appeler la méthode unmanage() lorsqu'il n'a plus besoin d'être géré. {{site.data.keyword.iot_short_notm}} n'envoie plus de nouvelles demandes de gestion des terminaux à ce terminal et toutes les demandes de gestion des terminaux à partir de ce terminal, autres qu'une demande **Gérer le terminal**, sont rejetées.
 
 ```
 managedDevice.unmanage();
@@ -184,7 +182,7 @@ Pour plus d'informations sur l'opération `Unmanage`, voir la [documentation].
 
 ## Mise à jour d'emplacement
 {: #construct_location_update}
-Les terminaux qui peuvent déterminer leur emplacement peuvent choisir de prévenir {{site.data.keyword.iot_short_notm}} de tout changement d'emplacement. Pour mettre à jour l'emplacement, le terminal doit créer une instance `DeviceData` d'abord avec l'objet `DeviceLocation`. 
+Les terminaux qui peuvent déterminer leur emplacement peuvent choisir de prévenir {{site.data.keyword.iot_short_notm}} de tout changement d'emplacement. Pour mettre à jour l'emplacement, le terminal doit créer une instance `DeviceData` d'abord avec l'objet `DeviceLocation`.
 
 ```
 // Construct the location object with latitude, longitude and elevation
@@ -209,7 +207,7 @@ if(rc == 200) {
 }
 ```
 
-Les mises à jour suivantes de l'emplacement de terminal peuvent être mises à jour en modifiant les propriétés de l'objet `DeviceLocation`, comme décrit dans l'exemple suivant : 
+Les mises à jour suivantes de l'emplacement de terminal peuvent être mises à jour en modifiant les propriétés de l'objet `DeviceLocation`, comme décrit dans l'exemple suivant :
 
 ```
 int rc = deviceLocation.update(40.28, -98.33, 11);
@@ -220,7 +218,7 @@ if(rc == 200) {
 }
 ```
 
-La méthode update() informe {{site.data.keyword.iot_short_notm}} du nouvel emplacement. 
+La méthode update() informe {{site.data.keyword.iot_short_notm}} du nouvel emplacement.
 
 Pour plus d'informations sur la mise à jour d'emplacements, voir la [documentation](../device_mgmt/operations/update.html) liée.
 
@@ -241,7 +239,7 @@ DeviceData deviceData = new DeviceData.Builder().
              build();
 ```
 
-Dès que le terminal est connecté à {{site.data.keyword.iot_short_notm}}, l'objet `ErrorCode` peut être envoyé en appelant la méthode send(), comme décrit ci-dessous : 
+Dès que le terminal est connecté à {{site.data.keyword.iot_short_notm}}, l'objet `ErrorCode` peut être envoyé en appelant la méthode send(), comme décrit ci-dessous :
 
 ```
 errorCode.send();
@@ -271,7 +269,7 @@ if(rc == 200) {
 
 ## Ajout et effacement de messages de journal
 
-Les terminaux peuvent choisir d'informer {{site.data.keyword.iot_short_notm}} que des modifications ont été apportées en ajoutant une nouvelle entrée de journal. Une entrée de journal inclut les informations suivantes : 
+Les terminaux peuvent choisir d'informer {{site.data.keyword.iot_short_notm}} que des modifications ont été apportées en ajoutant une nouvelle entrée de journal. Une entrée de journal inclut les informations suivantes :
 - Message de journal
 - Horodatage
 - Gravité
@@ -292,13 +290,13 @@ DeviceData deviceData = new DeviceData.Builder().
              build();
 ```
 
-Dès que le terminal est connecté à {{site.data.keyword.iot_short_notm}}, le message de journal peut être envoyé en appelant la méthode send(), comme décrit dans l'exemple suivant : 
+Dès que le terminal est connecté à {{site.data.keyword.iot_short_notm}}, le message de journal peut être envoyé en appelant la méthode send(), comme décrit dans l'exemple suivant :
 
 ```
 log.send();
 ```
 
-Ensuite, les nouveaux messages de journal peuvent facilement être ajoutés à {{site.data.keyword.iot_short_notm}} en appelant la méthode append, comme décrit dans l'exemple suivant : 
+Ensuite, les nouveaux messages de journal peuvent facilement être ajoutés à {{site.data.keyword.iot_short_notm}} en appelant la méthode append, comme décrit dans l'exemple suivant :
 
 ```
 int rc = log.append("sample log", new Date(), DiagnosticLog.LogSeverity.informational);
@@ -337,7 +335,7 @@ Le terminal doit exécuter les activités suivantes pour prendre en charge les a
 
 **1. Construire un objet DeviceFirmware**
 
-Pour effectuer des actions sur le microprogramme, le terminal doit construire l'objet `DeviceFirmware` et l'ajouter à `DeviceData`, comme décrit ci-dessous : 
+Pour effectuer des actions sur le microprogramme, le terminal doit construire l'objet `DeviceFirmware` et l'ajouter à `DeviceData`, comme décrit ci-dessous :
 
 ```
 DeviceFirmware firmware = new DeviceFirmware.Builder().
@@ -352,7 +350,7 @@ DeviceData deviceData = new DeviceData.Builder().
             deviceInfo(deviceInfo).
             deviceFirmware(firmware).
             metadata(metadata).
-             build();
+            build();
 
 ManagedDevice managedDevice = new ManagedDevice(options, deviceData);
 managedDevice.connect();
@@ -369,7 +367,7 @@ managedDevice.supportsFirmwareActions(true);
 managedDevice.manage();
 ```
 
-Comme la demande de gestion informe {{site.data.keyword.iot_short_notm}} de la prise en charge de l'action sur le microprogramme, la méthode manage() doit être appelée juste après la définition de la prise en charge de l'action sur le microprogramme. 
+Comme la demande de gestion informe {{site.data.keyword.iot_short_notm}} de la prise en charge de l'action sur le microprogramme, la méthode manage() doit être appelée juste après la définition de la prise en charge de l'action sur le microprogramme.
 
 **3. Créer le gestionnaire d'action sur le microprogramme**
 
@@ -384,7 +382,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 L'implémentation doit ajouter une logique pour télécharger le microprogramme et signaler le statut du téléchargement à l'aide d'un objet `DeviceFirmware`. Si l'opération de téléchargement de microprogramme aboutit, le statut prend la valeur `DOWNLOADED`, puis `UpdateStatus` prend la valeur `SUCCESS`.
 
-Si une erreur se produit lors du téléchargement de microprogramme, l'état prend la valeur `IDLE`, puis `updateStatus` prend l'une des valeurs de statut d'erreur suivantes : 
+Si une erreur se produit lors du téléchargement de microprogramme, l'état prend la valeur `IDLE`, puis `updateStatus` prend l'une des valeurs de statut d'erreur suivantes :
 
 * `OUT_OF_MEMORY
 * CONNECTION_LOST
@@ -476,7 +474,7 @@ private boolean verifyFirmware(File file, String verifier) throws IOException {
 }
 ```
 
-Pour la totalité du code, voir l'exemple de gestion des terminaux [RasPiFirmwareHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/RasPiFirmwareHandlerSample.java). 
+Pour la totalité du code, voir l'exemple de gestion des terminaux [RasPiFirmwareHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/RasPiFirmwareHandlerSample.java).
 
 
 
@@ -484,7 +482,7 @@ Pour la totalité du code, voir l'exemple de gestion des terminaux [RasPiFirmwar
 
 L'implémentation doit ajouter une logique pour installer le microprogramme téléchargé et signaler le statut de la mise à jour via l'objet `DeviceFirmware`. Si l'opération de mise à jour de microprogramme aboutit, l'état du microprogramme doit prendre la valeur IDLE et `updateStatus` doit prendre la valeur `SUCCESS`.
 
-Si une erreur se produit lors de la mise à jour de microprogramme, `updateStatus` doit prendre l'une des valeurs de statut d'erreur suivantes : 
+Si une erreur se produit lors de la mise à jour de microprogramme, `updateStatus` doit prendre l'une des valeurs de statut d'erreur suivantes :
 
 `* OUT_OF_MEMORY
 * UNSUPPORTED_IMAGE`
@@ -534,7 +532,7 @@ DeviceFirmwareHandlerSample fwHandler = new DeviceFirmwareHandlerSample();
 deviceData.addFirmwareHandler(fwHandler);
 ```
 
-Pour plus d'information sur l'action sur le microprogramme, voir [cette page](../device_mgmt/operations/firmware_actions.html). 
+Pour plus d'information sur l'action sur le microprogramme, voir [cette page](../device_mgmt/operations/firmware_actions.html).
 
 ## Actions sur les terminaux
 
@@ -554,7 +552,7 @@ managedDevice.supportsDeviceActions(true);
     managedDevice.manage();
 ```
 
-Comme la demande de gestion informe {{site.data.keyword.iot_short_notm}} de la prise en charge de l'action sur le terminal, la méthode manage() doit être appelée juste après la définition de la prise en charge de l'action sur le terminal. 
+Comme la demande de gestion informe {{site.data.keyword.iot_short_notm}} de la prise en charge de l'action sur le terminal, la méthode manage() doit être appelée juste après la définition de la prise en charge de l'action sur le terminal.
 
 **2. Créer le gestionnaire d'action sur le terminal**
 
@@ -596,7 +594,7 @@ La totalité du code est consultable dans l'exemple de gestion des terminaux [De
 
 **2.2 Exemple d'implémentation de handleFactoryReset**
 
-L'implémentation doit ajouter une logique permettant de réinitialiser le terminal avec les paramètres d'usine et signaler le statut via l'objet DeviceAction. Le terminal doit mettre à jour le statut avec un message facultatif uniquement en cas d'échec (car dans le cadre de ce processus, le terminal redémarre et n'a aucun contrôle pour mettre à jour le statut {{site.data.keyword.iot_short_notm}}). Le squelette de l'implémentation de réinitialisation avec les paramètres d'usine est présenté ci-dessous : 
+L'implémentation doit ajouter une logique permettant de réinitialiser le terminal avec les paramètres d'usine et signaler le statut via l'objet DeviceAction. Le terminal doit mettre à jour le statut avec un message facultatif uniquement en cas d'échec (car dans le cadre de ce processus, le terminal redémarre et n'a aucun contrôle pour mettre à jour le statut {{site.data.keyword.iot_short_notm}}). Le squelette de l'implémentation de réinitialisation avec les paramètres d'usine est présenté ci-dessous :
 
 ```
 public void handleFactoryReset(DeviceAction action) {
@@ -620,19 +618,18 @@ DeviceActionHandlerSample actionHandler = new DeviceActionHandlerSample();
 deviceData.addDeviceActionHandler(actionHandler);
 ```
 
-Pour plus d'informations sur l'action sur le terminal, voir [cette page](../device_mgmt/operations/device_actions.html). 
+Pour plus d'informations sur l'action sur le terminal, voir [cette page](../device_mgmt/operations/device_actions.html).
 
 
 
 ## Ecoute des modifications d'attribut de terminal
 {: #listen_device_attribute}
 
-Cette bibliothèque client ibmiotf met à jour les objets correspondants chaque fois qu'une demande de mise à jour émane de {{site.data.keyword.iot_short_notm}}. Ces demandes de mise à jour sont initiées par l'application de manière directe ou indirecte (mise à jour de microprogramme) via l'API REST {{site.data.keyword.iot_short_notm}}. En dehors de la mise à jour de ces attributs, la bibliothèque fournit un mécanisme au cours duquel le terminal peut être averti chaque fois qu'un attribut de terminal est mis à jour. 
+Cette bibliothèque client ibmiotf met à jour les objets correspondants chaque fois qu'une demande de mise à jour émane de {{site.data.keyword.iot_short_notm}}. Ces demandes de mise à jour sont initiées par l'application de manière directe ou indirecte (mise à jour de microprogramme) via l'API REST {{site.data.keyword.iot_short_notm}}. En dehors de la mise à jour de ces attributs, la bibliothèque fournit un mécanisme au cours duquel le terminal peut être averti chaque fois qu'un attribut de terminal est mis à jour.
 
 Les attributs qui peuvent être mis à jour par cette opération sont `location`, `metadata`, `device information` et `firmware`.
 
 Pour recevoir une notification, le terminal doit ajouter un code d'écoute des modifications de propriétés sur les objets qui l'intéressent.
-
 
 ```
 deviceLocation.addPropertyChangeListener(listener);
@@ -680,24 +677,16 @@ Pour plus d'informations sur la mise à jour des attributs de terminal, voir [ce
 {: #examples}
 
 -   [SampleRasPiDMAgent](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/SampleRasPiDMAgent.java) - Exemple de code d'agent indiquant comment effectuer différentes opérations de gestion des terminaux sur Raspberry Pi.
-
 -   [SampleRasPiManagedDevice](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/SampleRasPiManagedDevice.java) - Exemple de code indiquant comment effectuer des opérations sur les terminaux et des opérations de gestion.
-
 -   [SampleRasPiDMAgentWithCustomMqttAsyncClient](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/SampleRasPiDMAgentWithCustomMqttAsyncClient.java) - Exemple de code d'agent avec code MqttAsyncClient personnalisé.
-
 -   [SampleRasPiDMAgentWithCustomMqttClient](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/SampleRasPiDMAgentWithCustomMqttClient.java) - Exemple de code d'agent avec code MqttClient personnalisé.
-
 -   [RasPiFirmwareHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/RasPiFirmwareHandlerSample.java) - Exemple d'implémentation de FirmwareHandler pour le terminal Raspberry Pi.
-
 -   [DeviceActionHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceActionHandlerSample.java) - Exemple d'implémentation de DeviceActionHandler
 -   [ManagedDeviceWithLifetimeSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/ManagedDeviceWithLifetimeSample.java) - Exemple indiquant comment envoyer une demande de gestion standard avec une durée de vie définie.
-
 -   [DeviceAttributesUpdateListenerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceAttributesUpdateListenerSample.java) - Exemple de code d'écoute indiquant comment détecter différentes modifications apportées à des attributs de terminal.
-
 -   [NonBlockingDiagnosticsErrorCodeUpdateSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/NonBlockingDiagnosticsErrorCodeUpdateSample.java) - Exemple indiquant comment ajouter un code d'erreur sans attendre la réponse du serveur.
-
 
 ##Recettes
 {: #Recipes}
 
-Voir [la recette](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/) qui montre comment connecter le terminal Raspberry Pi en tant que terminal géré à {{site.data.keyword.iot_short_notm}} pour effectuer différentes opérations de gestion des terminaux étape par étape à l'aide de cette bibliothèque client. 
+Voir [la recette](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/) qui montre comment connecter le terminal Raspberry Pi en tant que terminal géré à {{site.data.keyword.iot_short_notm}} pour effectuer différentes opérations de gestion des terminaux étape par étape à l'aide de cette bibliothèque client.

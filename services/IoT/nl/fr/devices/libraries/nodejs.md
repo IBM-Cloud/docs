@@ -1,7 +1,7 @@
 ---
 
-copyright :
-  années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -25,7 +25,7 @@ Utilisez les informations et les exemples fournis pour commencer à développer 
 ## Téléchargement du client et des ressources Node.js
 {: #node.js_client_downloads}
 
-Pour accéder aux bibliothèques client Node.js pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs) dans GitHub et exécutez les instructions d'installation. 
+Pour accéder aux bibliothèques client Node.js pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs) dans GitHub et exécutez les instructions d'installation.
 
 
 Pour plus d'informations, voir les ressources suivantes :
@@ -40,13 +40,13 @@ Le constructeur crée l'instance du client de terminal. Il accepte un JSON de co
 
 |Définition |Description |
 |:---|:---|
-|`org` |ID de votre organisation. |
+|`org` |ID de votre organisation.|
 |`type`  |Type de votre terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
-|`id`  |ID de votre terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC. |
+|`id`  |ID de votre terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
 |`auth-method`   |Méthode d'authentification à utiliser. La seule valeur actuellement prise en charge est `token`.|
 |`auth-token`   |Jeton d'authentification permettant d'établir une connexion sécurisée entre votre terminal et Watson IoT Platform. Cette zone est obligatoire si `auth-method` a pour valeur `token`.|
 
-**Remarque :** Si vous souhaitez utiliser le service Quickstart, vous ne devez soumettre que les trois premières propriétés. 
+**Remarque :** Si vous souhaitez utiliser le service Quickstart, vous ne devez soumettre que les trois premières propriétés.
 
 ```
     var iotf = require("ibmiotf");
@@ -88,7 +88,7 @@ Le fichier de configuration `device.json` doit être au format suivant :
 ## Connexion à {{site.data.keyword.iot_short_notm}}
 {: #connecting_to_iotp}
 
-Vous pouvez vous connecter à {{site.data.keyword.iot_short_notm}} en appelant la fonction `connect`. 
+Vous pouvez vous connecter à {{site.data.keyword.iot_short_notm}} en appelant la fonction `connect`.
 
 ```
 	var iotf = require("ibmiotf");
@@ -112,9 +112,9 @@ Vous pouvez vous connecter à {{site.data.keyword.iot_short_notm}} en appelant l
 
 ```
 
-Une fois la connexion au service {{site.data.keyword.iot_short_notm}} établie, le client du terminal envoie un événement `connect`. Ce processus signifie que l'intégralité de la logique de terminal peut être implémentée au sein de cette fonction de rappel. 
+Une fois la connexion au service {{site.data.keyword.iot_short_notm}} établie, le client du terminal envoie un événement `connect`. Ce processus signifie que l'intégralité de la logique de terminal peut être implémentée au sein de cette fonction de rappel.
 
-Le client de terminal tente automatiquement de se reconnecter lorsque la connexion s'interrompt. Lorsque la reconnexion aboutit, le client envoie un événement `reconnect`. 
+Le client de terminal tente automatiquement de se reconnecter lorsque la connexion s'interrompt. Lorsque la reconnexion aboutit, le client envoie un événement `reconnect`.
 
 ## Journalisation
 {: #logging}
@@ -135,17 +135,17 @@ Par défaut, seuls les événements de journal de type *warn* sont enregistrés.
 	//setting the log level to debug. By default its 'warn'
 	deviceClient.log.setLevel('debug');
 
-	```
+```
 
 
 ## Publication d'événements
 {: #publishing_events}
 
-Les événements constituent le mécanisme par lequel les terminaux publient des données sur {{site.data.keyword.iot_short_notm}}. Le terminal contrôle le contenu de l'événement et affecte un nom à chaque événement qu'il envoie. 
+Les événements constituent le mécanisme par lequel les terminaux publient des données sur {{site.data.keyword.iot_short_notm}}. Le terminal contrôle le contenu de l'événement et affecte un nom à chaque événement qu'il envoie.
 
-Lorsqu'un événement est reçu par l'instance {{site.data.keyword.iot_short_notm}}, les données d'identification de l'événement reçu identifient le terminal qui a envoyé l'événement, ce qui signifie qu'un terminal ne peut pas simuler les droits d'accès d'un autre terminal. 
+Lorsqu'un événement est reçu par l'instance {{site.data.keyword.iot_short_notm}}, les données d'identification de l'événement reçu identifient le terminal qui a envoyé l'événement, ce qui signifie qu'un terminal ne peut pas simuler les droits d'accès d'un autre terminal.
 
-Vous pouvez augmenter le niveau de qualité de service (QoS) des événements qui sont publiés. La publication des événements dont le niveau QoS est supérieur à `0` peut prendre plus de temps, en raison des informations de réception de confirmation supplémentaires qui sont incluses. 
+Vous pouvez augmenter le niveau de qualité de service (QoS) des événements qui sont publiés. La publication des événements dont le niveau QoS est supérieur à `0` peut prendre plus de temps, en raison des informations de réception de confirmation supplémentaires qui sont incluses.
 
 **Remarque :** Le mode flux Quickstart ne prend en charge que le niveau QoS `0`.
 
@@ -155,8 +155,8 @@ Les événements peuvent être publiés à l'aide des propriétés suivantes :
 |Propriété |Description|
 |:---|:---|
 |`eventType`  | Type d'événement à publier, par exemple, status ou GPS. |  
-|`eventFormat`  |Format de l'événement, par exemple, JSON.  |
-|`data`  | Contenu de l'événement, qui doit correspondre à une chaîne de mémoire tampon.  |
+|`eventFormat`  |Format de l'événement, par exemple, JSON. |
+|`data`  | Contenu de l'événement, qui doit correspondre à une chaîne de mémoire tampon. |
 |`QoS`  | Qualité de service MQTT de l'événement publié. Les valeurs prises en charge sont 0, 1 et 2.|
 
 
@@ -179,15 +179,14 @@ Les événements peuvent être publiés à l'aide des propriétés suivantes :
 ## Traitement des commandes
 {: #handling_commands}
 
-Lorsque le client du terminal se connecte, il s'abonne automatiquement aux commandes de ce terminal. Pour traiter des commandes spécifiques, vous devez enregistrer une fonction de rappel de commande.
-Le client de terminal appelle la fonction de rappel de commande lorsqu'il reçoit une commande. La fonction de rappel possède les propriétés suivantes :
+Lorsque le client du terminal se connecte, il s'abonne automatiquement aux commandes de ce terminal. Pour traiter des commandes spécifiques, vous devez enregistrer une fonction de rappel de commande. Le client de terminal appelle la fonction de rappel de commande lorsqu'il reçoit une commande. La fonction de rappel possède les propriétés suivantes :
 
 |Propriété |Description|
 |:---|:---|
-|`commandName`  | Chaîne qui indique le nom de la commande appelée.  |  
-|`format`  | Chaîne qui indique le format de l'événement, par exemple, JSON.  |
-|`payload`  | Chaîne qui indique les données du contenu de la commande.   |
-|`topic`  | Lors de la publication en tant que terminal, la chaîne topic n'inclut pas le type de terminal ni l'ID de terminal ; ces informations sont extraites de l'ID de client. Par exemple, `iot-2/evt/event_id/fmt/format_string`.  Lors de la publication en tant qu'application ou passerelle pour le compte d'un terminal, l'élément topic doit inclure le type de terminal et l'ID de terminal. Par exemple `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
+|`commandName`  | Chaîne qui indique le nom de la commande appelée. |  
+|`format`  | Chaîne qui indique le format de l'événement, par exemple, JSON. |
+|`payload`  | Chaîne qui indique les données du contenu de la commande.  |
+|`topic`  | Lors de la publication en tant que terminal, la chaîne topic n'inclut pas le type de terminal ni l'ID de terminal ; ces informations sont extraites de l'ID de client.  Par exemple, `iot-2/evt/event_id/fmt/format_string`.  Lors de la publication en tant qu'application ou passerelle pour le compte d'un terminal, l'élément topic doit inclure le type de terminal et l'ID de terminal.  Par exemple `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
 
 
 ```
@@ -216,7 +215,7 @@ Le client de terminal appelle la fonction de rappel de commande lorsqu'il reçoi
 ## Traitement des erreurs
 {: #handling_errors}
 
-Lorsque le client de terminal rencontre une erreur, il envoie un événement *error*. 
+Lorsque le client de terminal rencontre une erreur, il envoie un événement *error*.
 
 ```
 	var deviceClient = new Client.IotfDevice(config);

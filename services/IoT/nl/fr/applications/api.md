@@ -1,7 +1,7 @@
 ---
 
-copyright :
-  années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -30,11 +30,9 @@ L'API REST HTTP {{site.data.keyword.iot_short_notm}} prend en charge les fonctio
 - Opérations relatives aux types de terminal (affichage de liste, création, suppression, affichage des détails et mise à jour)
 - Opérations sur les terminaux (affichage de liste, ajout, retrait, affichage des détails, mise à jour, affichage d'emplacement et affichage des informations de gestion)
 - Opérations de diagnostic d'un terminal (effacement de journaux, extraction de journaux, ajout d'informations de journal, suppression de journaux, obtention de journaux spécifiques, effacement de codes d'erreur, obtention de codes d'erreur de terminal et ajout de codes d'erreur)
-
 - Identification des erreurs de connexion (affichage de la liste des événements du journal des connexions d'un terminal)
 - Dernier cache d'événement (affichage du dernier événement pour un terminal spécifique)
 - Opérations relatives aux demandes de gestion des terminaux (affichage de la liste des demandes de gestion des terminaux, lancement de demandes, effacement du statut d'une demande, obtention des détails d'une demande, affichage de tous les statuts de demande par terminal et obtention du statut d'une demande pour un terminal spécifique)
-
 - Opérations de gestion de l'utilisation (extraction de la quantité totale de données utilisées)
 - Publication d'événement de terminal (bêta)
 - Interrogation de statut de service (extraction des statuts de service par organisation)
@@ -44,7 +42,7 @@ L'API REST HTTP {{site.data.keyword.iot_short_notm}} prend en charge les fonctio
 
 Pour accéder à l'API REST HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur la génération et la personnalisation de vos applications, voir https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
 
-La seule version de l'API REST HTTP {{site.data.keyword.iot_short_notm}} prise en charge est la version 2. Assurez-vous que vos solutions {{site.data.keyword.iot_short_notm}} utilisent bien la version 2. 
+La seule version de l'API REST HTTP {{site.data.keyword.iot_short_notm}} prise en charge est la version 2. Assurez-vous que vos solutions {{site.data.keyword.iot_short_notm}} utilisent bien la version 2.
 
 
 
@@ -74,7 +72,7 @@ Outre l'utilisation du protocole de messagerie MQTT, vous pouvez également conf
 
 Si vous connectez un terminal ou une application au service Quickstart, remplacez la valeur d'**orgId** par la chaîne 'quickstart'.
 
-Remarque : Si les applications peuvent réutiliser une connexion HTTP pour publier des événements ou des commandes sur différents terminaux, l'en-tête HTTP d'autorisation quant à lui ne peut pas être modifié. 
+Remarque : Si les applications peuvent réutiliser une connexion HTTP pour publier des événements ou des commandes sur différents terminaux, l'en-tête HTTP d'autorisation quant à lui ne peut pas être modifié.
 
 ### Authentification
 
@@ -87,7 +85,7 @@ password = Authentication token
 
 ### En-têtes de demande Content-Type
 
-Un en-tête de demande `Content-Type` doit être fourni avec la demande. Le tableau suivant présente le mappage entre les types pris en charge et les formats internes de {{site.data.keyword.iot_short_notm}}. 
+Un en-tête de demande `Content-Type` doit être fourni avec la demande. Le tableau suivant présente le mappage entre les types pris en charge et les formats internes de {{site.data.keyword.iot_short_notm}}.
 
 |En-tête Content-Type|Format dans {{site.data.keyword.iot_short_notm}}|
 |:---|:---|
@@ -98,7 +96,7 @@ Un en-tête de demande `Content-Type` doit être fourni avec la demande. Le tabl
 
 ### Qualité de service
 
-Semblable au niveau 0 ("Une fois tout au plus") de la qualité de service MQTT pour la distribution, la messagerie REST HTTP fournit une distribution de message non permanente, mais vérifie que la demande est correcte et qu'elle peut être distribuée au serveur avant que celui-ci n'envoie la réponse HTTP. Une réponse contenant le code de statut HTTP 200 indique que le message a bien été distribué au serveur. Lorsque vous utilisez le niveau de qualité de service MQTT "Une fois tout au plus" ou l'équivalent HTTP pour distribuer des messages d'événement, le terminal ou l'application doit implémenter une logique de relance afin de garantir la distribution. 
+Semblable au niveau 0 ("Une fois tout au plus") de la qualité de service MQTT pour la distribution, la messagerie REST HTTP fournit une distribution de message non permanente, mais vérifie que la demande est correcte et qu'elle peut être distribuée au serveur avant que celui-ci n'envoie la réponse HTTP. Une réponse contenant le code de statut HTTP 200 indique que le message a bien été distribué au serveur. Lorsque vous utilisez le niveau de qualité de service MQTT "Une fois tout au plus" ou l'équivalent HTTP pour distribuer des messages d'événement, le terminal ou l'application doit implémenter une logique de relance afin de garantir la distribution.
 
 
 Pour plus d'informations sur le protocole MQTT et les niveaux de qualité de service pour {{site.data.keyword.iot_short_notm}}, voir [Messagerie MQTT](../reference/mqtt/index.html).

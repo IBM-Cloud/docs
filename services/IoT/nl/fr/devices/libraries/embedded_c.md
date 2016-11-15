@@ -1,7 +1,7 @@
 ---
 
-copyright :
-  années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -17,12 +17,13 @@ copyright :
 Dernière mise à jour : 2 août 2016
 {: .last-updated}
 
-Vous pouvez utiliser Embedded C pour générer et personnaliser des terminaux qui interagissent avec votre organisation sur {{site.data.keyword.iot_full}}. Utilisez les informations et les exemples fournis pour commencer à développer vos terminaux à l'aide de Embedded C. {:shortdesc}
+Vous pouvez utiliser Embedded C pour générer et personnaliser des terminaux qui interagissent avec votre organisation sur {{site.data.keyword.iot_full}}. Utilisez les informations et les exemples fournis pour commencer à développer vos terminaux à l'aide de Embedded C.
+{:shortdesc}
 
 ## Téléchargement du client et des ressources Embedded C
 {: #embeddedc_client_download}
 
-Pour accéder aux bibliothèques et exemples client Embedded C pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iotf-embeddedc](https://github.com/ibm-messaging/iotf-embeddedc) dans GitHub et exécutez les instructions d'installation. 
+Pour accéder aux bibliothèques et exemples client Embedded C pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iotf-embeddedc](https://github.com/ibm-messaging/iotf-embeddedc) dans GitHub et exécutez les instructions d'installation.
 
 
 ## Dépendances
@@ -42,7 +43,7 @@ Pour installer la bibliothèque client {{site.data.keyword.iot_full}} pour Embed
 ```
   [root@localhost ~]# git clone https://github.com/ibm-messaging/iotf-embeddedc.git
 ```
-2. Copiez le fichier .tar de la bibliothèque Paho dans le répertoire *lib*. 
+2. Copiez le fichier .tar de la bibliothèque Paho dans le répertoire *lib*.
 ```
     cd iotf-embeddedc
     cp ~/org.eclipse.paho.mqtt.embedded-c-1.0.0.tar.gz lib/
@@ -68,7 +69,7 @@ Le client téléchargé possède la structure de fichier suivante :
 ## Initialisation de la bibliothèque client
 {: #initialize_client_library}
 
-Une fois la bibliothèque client téléchargée, elle doit être initialisée et connectée à {{site.data.keyword.iot_short_notm}}. Vous pouvez initialiser la bibliothèque client {{site.data.keyword.iot_short_notm}} pour Embedded C en transmettant des paramètres ou en utilisant un fichier de configuration. 
+Une fois la bibliothèque client téléchargée, elle doit être initialisée et connectée à {{site.data.keyword.iot_short_notm}}. Vous pouvez initialiser la bibliothèque client {{site.data.keyword.iot_short_notm}} pour Embedded C en transmettant des paramètres ou en utilisant un fichier de configuration.
 
 ### Transmission de paramètres
 
@@ -77,9 +78,9 @@ La fonction `initialize` utilise les paramètres suivants pour établir la conne
 |Définition |Description |
 |:---|:---|
 |`client`|Pointeur vers *iotfclient*.|
-|`org`|ID de votre organisation. |
-|`type` |Type de votre terminal. |
-|`id` |ID de terminal. |
+|`org`|ID de votre organisation.|
+|`type` |Type de votre terminal.|
+|`id` |ID de terminal.|
 |`auth-method` |Méthode d'authentification à utiliser. La seule valeur actuellement prise en charge est `token`.|
 |`auth-token`|Jeton d'authentification permettant d'établir une connexion sécurisée entre votre terminal et Watson IoT Platform.|
 
@@ -98,7 +99,7 @@ La fonction `initialize` utilise les paramètres suivants pour établir la conne
 
 ### Utilisation d'un fichier de configuration
 
-Vous pouvez également utiliser un fichier de configuration pour initialiser la bibliothèque client Embedded C. La fonction `initialize_configfile` prend le chemin de fichier de configuration en tant que paramètre. 
+Vous pouvez également utiliser un fichier de configuration pour initialiser la bibliothèque client Embedded C. La fonction `initialize_configfile` prend le chemin de fichier de configuration en tant que paramètre.
 
 ```
 	#include "iotfclient.h"
@@ -123,7 +124,7 @@ Le fichier de configuration doit utiliser le format suivant :
 ## Connexion au service
 {: #connecting_service}
 
-Après avoir initialisé la bibliothèque client {{site.data.keyword.iot_short_notm}} Embedded C, vous pouvez vous connecter à {{site.data.keyword.iot_short_notm}} en appelant la fonction `connectiotf`. 
+Après avoir initialisé la bibliothèque client {{site.data.keyword.iot_short_notm}} Embedded C, vous pouvez vous connecter à {{site.data.keyword.iot_short_notm}} en appelant la fonction `connectiotf`.
 
 ```
 	#include "iotfclient.h"
@@ -155,7 +156,7 @@ Lorsque le client du terminal se connecte, il s'abonne automatiquement aux comma
 
 |Propriété |Description|
 |:---|:---|
-|`commandName`  |Nom de la commande qui a été appelée.  |  
+|`commandName`  |Nom de la commande qui a été appelée. |  
 |`format`  |Format de l'événement. Le format peut être n'importe quelle chaîne, par exemple, JSON.|
 |`payload`  |Données du contenu de la commande. La longueur maximale est de 131072 octets. |
 
@@ -180,6 +181,7 @@ Lorsque le client du terminal se connecte, il s'abonne automatiquement aux comma
 
 ```
 **Remarque :** La fonction `yield()` permet au terminal de recevoir des commandes de la part de Watson IoT Platform et maintient la connexion active. Si la fonction `yield()` n'est pas appelée dans le délai spécifié par l'intervalle de signal de présence, les commandes envoyées à la plateforme ne seront pas reçues par le terminal. La valeur affectée à la fonction `yield()` spécifie la durée (en millisecondes) pendant laquelle les données peuvent être lues à partir du socket avant que l'application ne reprenne la main.
+
 ## Publication d'événements
 {: #publishing_events}
 
@@ -188,7 +190,7 @@ Les événements peuvent être publiés à l'aide des propriétés suivantes :
 |Propriété |Description|
 |:---|:---|
 |eventType  |Type d'événement publié, par exemple, status ou gps. |  
-|eventFormat  |Le format peut être n'importe quelle chaîne, par exemple, `json`.  |
+|eventFormat  |Le format peut être n'importe quelle chaîne, par exemple, `json`. |
 |data  |Données du contenu. La longueur maximale est de 131072 octets. |
 |QoS  |Niveau de qualité de service de l'événement publié. Les valeurs prises en charge sont `0`, `1` et `2`.|
 

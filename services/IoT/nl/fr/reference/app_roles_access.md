@@ -15,7 +15,7 @@ copyright :
 Dernière mise à jour : 16 septembre 2016
 {: .last-updated}
 
-Les tableaux ci-après illustrent le niveau d'accès de chacun des rôles d'application. 
+Les tableaux ci-après illustrent le niveau d'accès de chacun des rôles d'application.
 
 Les tableaux répertorient les niveaux d'accès pour :
 - Les [opérations de terminal](#app-device-ops)
@@ -33,7 +33,7 @@ Les tableaux répertorient les niveaux d'accès pour :
 
 ### Opérations de terminal {: #app-device-ops}
 
-Opérations de terminal  ||| Rôles d'application||||
+Opérations de terminal ||| Rôles d'application||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Application standard** | **Application d'opérations** | **Application sécurisée de back end** | **Application de processeur de données** | **Application de visualisation** | **Application de terminal**
 Créer, mettre à jour ou supprimer des terminaux|X|X|X|-|-|-
@@ -54,14 +54,14 @@ Afficher les journaux de diagnostic|X|X|X|-|-|-
 
 ### Opérations de journal {: #app-log-ops}
 
-Opérations de journal  ||| Rôles d'application||||
+Opérations de journal ||| Rôles d'application||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Application standard** | **Application d'opérations** | **Application sécurisée de back end** | **Application de processeur de données** | **Application de visualisation** | **Application de terminal**
 Afficher les journaux serveur|X|X|X|-|-|-
 
 ### Opérations de cache {: #app-cache-ops}
 
-Opérations de cache  ||| Rôles d'application||||
+Opérations de cache ||| Rôles d'application||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Application standard** | **Application d'opérations** | **Application sécurisée de back end** | **Application de processeur de données** | **Application de visualisation** | **Application de terminal**
 Afficher les données en temps réel (cache d'événement)|X|X|X|X|X|X
@@ -69,7 +69,7 @@ Gérer les données en temps réel (cache d'événement)|X|X|X|X|X|X
 
 ### Opérations d'organisation {: #app-org-ops}
 
-Opérations d'organisation  ||| Rôles d'application||||
+Opérations d'organisation ||| Rôles d'application||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Application standard** | **Application d'opérations** | **Application sécurisée de back end** | **Application de processeur de données** | **Application de visualisation** | **Application de terminal**
 Configurer les paramètres de stockage|-|-|-|-|-|-
@@ -88,7 +88,7 @@ Afficher les informations d'utilisation de l'organisation|X|X|-|-|-|-
 
 ### Opérations de contrôle d'accès {: #app-access-ops}
 
-Opérations de contrôle d'accès  ||| Rôles d'application||||
+Opérations de contrôle d'accès ||| Rôles d'application||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Application standard** | **Application d'opérations** | **Application sécurisée de back end** | **Application de processeur de données** | **Application de visualisation** | **Application de terminal**
 Afficher les propriétés utilisateur, y compris les droits d'accès|X|X|-|-|-|-
@@ -106,7 +106,7 @@ Afficher les opérations*|X|X|-|-|-|-
 
 ### Opérations d'analyse {: #app-analytics-ops}
 
-Opérations d'analyse  ||| Rôles d'application||||
+Opérations d'analyse ||| Rôles d'application||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Application standard** | **Application d'opérations** | **Application sécurisée de back end** | **Application de processeur de données** | **Application de visualisation** | **Application de terminal**
 Afficher les règles d'analyse|X|X|-|X|X|-
@@ -119,7 +119,7 @@ Gérer les schémas de message d'analyse|X|X|-|X|-|-
 
 ### Opérations de service de tiers {: #app-third-party}
 
-Opérations de service de tiers  ||| Rôles d'application||||
+Opérations de service de tiers ||| Rôles d'application||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Application standard** | **Application d'opérations** | **Application sécurisée de back end** | **Application de processeur de données** | **Application de visualisation** | **Application de terminal**
 Traiter des notifications par lots depuis une plateforme externe|X|X|-|-|-|-

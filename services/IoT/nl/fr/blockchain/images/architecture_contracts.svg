@@ -504,16 +504,15 @@
    fit-margin-left="0"
    fit-margin-right="0"
    fit-margin-bottom="0"
-   inkscape:zoom="1.1522959"
-   inkscape:cx="358.04308"
-   inkscape:cy="288.9883"
+   inkscape:zoom="1.09"
+   inkscape:cx="117.93583"
+   inkscape:cy="342.47434"
    inkscape:window-width="1440"
    inkscape:window-height="848"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg5645" />
-
 
 
 
@@ -656,12 +655,12 @@
    y="1086.3309"
    x="162.88678"
    height="245.70534"
-   width="338.61401"
+   width="342.50635"
    id="rect79371-1-6-6-9-8-7-80-8-4-9"
    style="fill:#f0f0ef;fill-opacity:1;fill-rule:evenodd;stroke:none" />
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000235px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    x="182.16949"
    y="1113.485"
    id="text266398-3"
@@ -691,10 +690,9 @@
    y="1271.5256"
    x="179.04974"
    height="50.000008"
-   width="149.25003"
+   width="171.30658"
    id="rect79371-1-6-6-9-8-7-3-5-2"
    style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-
 
 
 
@@ -723,23 +721,23 @@
    sodipodi:role="line" />
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000235px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
-   x="178.9794"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.00000286px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   x="198.9794"
    y="1251.5642"
    id="text266398-3-1"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
-     x="178.9794"
-     y="1251.5642"
-     id="tspan6717-07">Environnement de débogage</tspan><tspan
+     id="tspan3691"
+     x="198.9794"
+     y="1251.5642">Environnement de</tspan><tspan
      sodipodi:role="line"
-     x="178.9794"
-     y="1266.5642"
-     id="tspan4480-9">Hyperledger</tspan><tspan
+     id="tspan3693"
+     x="198.9794"
+     y="1266.5642">débogage Hyperledger</tspan><tspan
      sodipodi:role="line"
-     x="178.9794"
-     y="1281.5642"
-     id="tspan266402-8-2" /></text>
+     id="tspan3695"
+     x="198.9794"
+     y="1281.5642"></tspan></text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -753,27 +751,27 @@
      y="1368.9016" /></text>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000235px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
-   x="340.52219"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   x="370.52219"
    y="1250.8441"
    id="text266398-3-1-5"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
-     x="340.52219"
+     x="370.52219"
      y="1250.8441"
      id="tspan6717-07-9">Réseau Hyperledger </tspan><tspan
      sodipodi:role="line"
-     x="340.52219"
+     x="370.52219"
      y="1265.8441"
      id="tspan4480-9-1">pour développement</tspan><tspan
      sodipodi:role="line"
-     x="340.52219"
+     x="370.52219"
      y="1280.8441"
      id="tspan266402-8-2-8" /></text>
 </g>
 <g
    id="g60796-5-3"
-   transform="translate(243.18011,525.49581)"
+   transform="translate(237.18011,525.49581)"
    style="fill:#ffffff;fill-opacity:1">
   <path
      id="path60800-2"
@@ -1009,23 +1007,27 @@
 </g>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.00000191px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000286px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    x="288.86005"
-   y="239.8791"
+   y="233.8791"
    id="text18189-5"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
-     id="tspan3691"
+     id="tspan3683"
      x="288.86005"
-     y="239.8791">Facultatif : </tspan><tspan
+     y="233.8791">Facultatif : </tspan><tspan
      sodipodi:role="line"
-     id="tspan3693"
+     id="tspan3685"
      x="288.86005"
-     y="252.3791">Simulateur de</tspan><tspan
+     y="247.6291">Simulateur de</tspan><tspan
      sodipodi:role="line"
-     id="tspan3695"
+     id="tspan3687"
      x="288.86005"
-     y="264.87912">terminal Node-RED</tspan></text>
+     y="261.37912">terminal</tspan><tspan
+     sodipodi:role="line"
+     id="tspan3689"
+     x="288.86005"
+     y="275.12912">Node-RED</tspan></text>
 <g
    id="g6940"
    transform="matrix(0.06176845,0,0,0.06559102,254.18946,196.34194)">
@@ -1139,26 +1141,26 @@
 <text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000286px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-   x="66.478607"
+   x="64.478607"
    y="299.19809"
    id="text18189-6-6"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
      id="tspan3675"
-     x="66.478607"
+     x="64.478607"
      y="299.19809">Interface utilisateur</tspan><tspan
      sodipodi:role="line"
      id="tspan3677"
-     x="66.478607"
+     x="64.478607"
      y="312.94809">de surveillance</tspan><tspan
      sodipodi:role="line"
      id="tspan3679"
-     x="66.478607"
+     x="64.478607"
      y="326.69809">IoT Blockchain</tspan><tspan
      sodipodi:role="line"
      id="tspan3681"
-     x="66.478607"
-     y="340.44809" /></text>
+     x="64.478607"
+     y="340.44809"></tspan></text>
 <g
    id="g18195-6"
    transform="translate(-1176.2416,170.23654)"
@@ -1477,14 +1479,14 @@
    ry="0"
    rx="0"
    y="518.07263"
-   x="394.4946"
+   x="414.4946"
    height="50.000008"
-   width="149.25003"
+   width="140.16792"
    id="rect79371-1-6-6-9-8-7-3-5-2-0"
    style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
 <g
    id="g60796-5-3-3"
-   transform="translate(403.40248,525.07254)"
+   transform="translate(417.40248,525.07254)"
    style="fill:#ffffff;fill-opacity:1">
   <path
      id="path60800-2-39"
@@ -1511,7 +1513,6 @@
 
 
 
-
     image
        y=&quot;504.73132&quot;
        x=&quot;627.01056&quot;
@@ -1522,27 +1523,34 @@
        width=&quot;50&quot; /&gt;
     <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.50000143px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    x="612.237"
-   y="393.54962"
+   y="381.54962"
    id="text18189-1-2"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
-     id="tspan3741"
+     id="tspan18191-0-2"
      x="612.237"
-     y="393.54962">GitHub</tspan><tspan
+     y="381.54962" /><tspan
      sodipodi:role="line"
-     id="tspan3743"
      x="612.237"
-     y="402.92462">Votre organisation</tspan><tspan
+     y="395.29962"
+     id="tspan8202-5">GitHub</tspan><tspan
      sodipodi:role="line"
-     id="tspan3745"
      x="612.237"
-     y="412.29962">Contrats intelligents</tspan><tspan
+     y="405.60535"
+     id="tspan6808-7"
+     style="font-size:7.5px">Votre organisation</tspan><tspan
      sodipodi:role="line"
-     id="tspan3747"
      x="612.237"
-     y="421.67462" /></text>
+     y="414.98035"
+     id="tspan6878-8-6"
+     style="font-size:7.5px">Contrats intelligents</tspan><tspan
+     sodipodi:role="line"
+     x="612.237"
+     y="424.35535"
+     id="tspan18193-4-2"
+     style="font-size:7.5px" /></text>
 <rect
    ry="0"
    rx="0"
@@ -1650,7 +1658,7 @@
 </text>
 <g
    id="g60812-9-6"
-   transform="translate(673.13943,386.58951)"
+   transform="translate(679.13943,386.58951)"
    style="fill:#ffffff;fill-opacity:1">
   <path
      id="path60814-8"
@@ -1682,7 +1690,7 @@
 <text
    sodipodi:linespacing="125%"
    y="441.75061"
-   x="641.7254"
+   x="645.55084"
    font-size="11"
    id="text59612-3-7-4"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
@@ -1802,7 +1810,6 @@
 
 
 
-
  HEAD
     <rect
    ry="0"
@@ -1898,20 +1905,19 @@
 </g>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000286px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-   x="297.34351"
-   y="142.62759"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   x="301.34351"
+   y="140.62759"
    id="text18189-6-6-7"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
-     id="tspan3676"
-     x="297.34351"
-     y="142.62759">Proxy de chaîne</tspan><tspan
+     x="301.34351"
+     y="140.62759"
+     id="tspan18193-1-8-5">Proxy de</tspan><tspan
      sodipodi:role="line"
-     id="tspan3678"
-     x="297.34351"
-     y="156.37759">de blocs</tspan></text>
-
+     x="301.34351"
+     y="154.37759"
+     id="tspan5893">chaîne de blocs</tspan></text>
 
 
 
@@ -1926,66 +1932,81 @@
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; refs/remotes/IBM-Bluemix/master
   <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.50000143px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-   x="282.8642"
-   y="527.30078"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   x="272.8642"
+   y="517.30078"
    id="text18189-1-2-3"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
-     id="tspan3707"
-     x="282.8642"
-     y="527.30078">Configuration de bac à sable</tspan><tspan
+     id="tspan18191-0-2-0"
+     x="272.8642"
+     y="517.30078" /><tspan
      sodipodi:role="line"
-     id="tspan3709"
-     x="282.8642"
-     y="536.67578">Fenêtre de débogage</tspan><tspan
+     x="272.8642"
+     y="530.06671"
+     id="tspan3737"
+     style="font-size:10.00000191px">Configuration de bac à sable</tspan><tspan
      sodipodi:role="line"
-     id="tspan3711"
-     x="282.8642"
-     y="546.05078"> d'homologue</tspan><tspan
+     x="272.8642"
+     y="540.10651"
+     style="font-size:7.5px"
+     id="tspan3749">Fenêtre de débogage d'homologue</tspan><tspan
      sodipodi:role="line"
-     id="tspan3713"
-     x="282.8642"
-     y="555.42578">Fenêtre de débogage </tspan><tspan
+     x="272.8642"
+     y="549.48151"
+     style="font-size:7.5px"
+     id="tspan3751">Fenêtre de débogage de code en </tspan><tspan
      sodipodi:role="line"
-     id="tspan3715"
-     x="282.8642"
-     y="564.80078"> de code en chaîne</tspan><tspan
+     x="272.8642"
+     y="558.85651"
+     style="font-size:7.5px"
+     id="tspan3763">chaîne</tspan><tspan
      sodipodi:role="line"
-     id="tspan3717"
-     x="282.8642"
-     y="574.17578" /></text>
+     x="272.8642"
+     y="568.23151"
+     id="tspan18193-4-2-5"
+     style="font-size:7.5px" /></text>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.50000143px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-   x="444.38809"
-   y="525.97601"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   x="452.38809"
+   y="513.97601"
    id="text18189-1-2-3-4"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
-     id="tspan3729"
-     x="444.38809"
-     y="525.97601">Configuration Devnet</tspan><tspan
+     id="tspan18191-0-2-0-6"
+     x="452.38809"
+     y="513.97601" /><tspan
      sodipodi:role="line"
-     id="tspan3731"
-     x="444.38809"
-     y="535.35101">Conteneur homologue</tspan><tspan
+     x="452.38809"
+     y="526.74194"
+     id="tspan8202-5-5-6"
+     style="font-size:10.00000191px">Configuration Devnet</tspan><tspan
      sodipodi:role="line"
-     id="tspan3733"
-     x="444.38809"
-     y="544.72601">Hyperledger comportant</tspan><tspan
+     x="452.38809"
+     y="536.78174"
+     id="tspan6808-7-4-7"
+     style="font-size:7.5px">Conteneur homologue </tspan><tspan
      sodipodi:role="line"
-     id="tspan3735"
-     x="444.38809"
-     y="554.10101">un conteneur de code</tspan><tspan
+     x="452.38809"
+     y="546.15674"
+     style="font-size:7.5px"
+     id="tspan3696">Hyperledger comportant un </tspan><tspan
      sodipodi:role="line"
-     id="tspan3737"
-     x="444.38809"
-     y="563.47601">en chaîne déployé</tspan><tspan
+     x="452.38809"
+     y="555.53174"
+     id="tspan6878-8-6-3-0"
+     style="font-size:7.5px">conteneur de code en chaîne </tspan><tspan
      sodipodi:role="line"
-     id="tspan3739"
-     x="444.38809"
-     y="572.85101" /></text>
+     x="452.38809"
+     y="564.90674"
+     style="font-size:7.5px"
+     id="tspan3747">déployé</tspan><tspan
+     sodipodi:role="line"
+     x="452.38809"
+     y="574.28174"
+     id="tspan18193-4-2-5-7"
+     style="font-size:7.5px" /></text>
 <g
    id="g3967"
    transform="matrix(1.2500001,0,0,-1.2500002,592.27454,385.39189)">

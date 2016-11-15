@@ -1,7 +1,8 @@
 ﻿---
 
-copyright :
-  années : 2015, 2016
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-10-24"
 
 ---
 
@@ -14,35 +15,42 @@ copyright :
 # Java pour les développeurs d'applications
 {: #java}
 
-Dernière mise à jour : 7 septembre 2016
-{: .last-updated}
 
-Vous pouvez utiliser Java pour générer et personnaliser des applications qui interagissent avec votre organisation sur {{site.data.keyword.iot_full}}. Utilisez les informations et les exemples fournis pour commencer à développer vos applications en utilisant Java. {:shortdesc}
+Vous pouvez créer et personnaliser des applications qui interagissent avec votre organisation sur {{site.data.keyword.iot_full}} en utilisant Java. Une bibliothèque client Java pour {{site.data.keyword.iot_short_notm}}, de la documentation, ainsi que des exemples vous sont fournis pour vous permettre de vous initier au développement d'application. 
+
+{:shortdesc}
 
 ## Téléchargement du client et des ressources Java
 {: #java_client_download}
 
-Pour accéder aux bibliothèques et exemples client Java pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iot-java](https://github.com/ibm-watson-iot/iot-java) dans GitHub et exécutez les instructions d'installation. 
+Dernière mise à jour : 25 octobre 2016
+{: .last-updated}
+
+Pour accéder aux bibliothèques et exemples client Java pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iot-java](https://github.com/ibm-watson-iot/iot-java) dans GitHub et exécutez les instructions d'installation.
 
 
 ## Constructeur
 {: #constructor}
 
-Le constructeur génère l'instance client et accepte un objet `Propriétés` contenant les définitions suivantes : 
+Le constructeur génère l'instance client et accepte l'objet `Propriétés` contenant les définitions suivantes : 
 
 | Définition     |Description     |
 |----------------|----------------|
-|`org` |ID de votre organisation. Cette valeur est obligatoire. Si vous utilisez un flux Quickstart, spécifiez `quickstart`.|
+|`org` |Valeur requise qui doit être définie avec votre ID d'organisation. Si vous utilisez un flux Quickstart, spécifiez `quickstart`.|
 |`id` |ID unique de l'application au sein de votre organisation.|
-|`auth-method`  |Méthode d'authentification, pour laquelle la seule valeur actuellement prise en charge est `apikey`.|
-|`auth-key`   |Clé d'API facultative, requise lorsque le paramètre auth-method a pour valeur `apikey`.  |
-|`auth-token`   |Jeton de clé d'API, requis lorsque le paramètre auth-method a pour valeur `apikey`. |
+|`auth-method`  |Méthode d'authentification. La seule méthode prise en charge est `apikey`.|
+|`auth-key`   |Clé d'API facultative qui est requise lorsque vous affectez la valeur `apikey` au paramètre auth-method.|
+|`auth-token`   |Jeton de clé d'API qui est également requis lorsque vous affectez la valeur `apikey` au paramètre auth-method.  |
 |`clean-session`|Valeur true ou false requise uniquement si vous souhaitez connecter l'application en mode d'abonnement durable. Par défaut, `clean-session` prend la valeur `true`.|
-|`shared-subscription`|Valeur booléenne. Affectez la valeur `true` si vous souhaitez générer des applications évolutives qui équilibrent la charge des messages sur plusieurs instances de l'application. Pour plus d'informations, voir [Applications évolutives](mqtt.html#/scalable-applications#scalable-applications).
+|`Port`|Numéro de port auquel se connecter. Indiquez 8883 ou 443. Si vous n'indiquez pas de numéro de port, le client se connecte à {{site.data.keyword.iot_short_notm}} sur le numéro de port 8883 par défaut.|
+|`MaxInflightMessages`  |Définit le nombre maximal de messages en cours pour la connexion. La valeur par défaut est 100.|
+|`Automatic-Reconnect`  |Valeur true ou false qui est requise lorsque vous souhaitez reconnecter automatiquement le terminal à {{site.data.keyword.iot_short_notm}} alors qu'il est en ode déconnecté. La valeur par défaut est false.|
+|`Disconnected-Buffer-Size`|Nombre maximal de messages qui peut être stocké en mémoire alors que le client est déconnecté. La valeur par défaut est 5 000.|
+|`shared-subscription`|Valeur booléenne à laquelle vous devez affecter la valeur true si vous souhaitez construire des applications évolutives qui équilibrent la charge des messages sur plusieurs instances de l'application. Pour plus d'informations, voir [Applications évolutives](../mqtt.html#scalable_apps).
 
-L'objet `Propriétés` crée des définitions qui sont utilisées pour interagir avec le module {{site.data.keyword.iot_short_notm}}. Si vous ne spécifiez pas les propriétés de cet objet, ou si vous indiquez `quickstart`, le client se connecte au service  Quickstart de {{site.data.keyword.iot_short_notm}} en tant que terminal non enregistré. 
+L'objet `Propriétés` crée des définitions qui sont utilisées pour interagir avec le module {{site.data.keyword.iot_short_notm}}. Si vous ne spécifiez pas les propriétés de cet objet, ou si vous indiquez `quickstart`, le client se connecte au service  Quickstart de {{site.data.keyword.iot_short_notm}} en tant que terminal non enregistré.
 
-L'exemple de code suivant vous montre comment construire l'instance ApplicationClient en mode `quickstart` :
+L'exemple de code suivant vous montre comment construire l'instance de client d'application (`ApplicationClient`) en mode `quickstart` :
 
 ```
     import com.ibm.iotf.client.app.ApplicationClient;
@@ -54,7 +62,7 @@ L'exemple de code suivant vous montre comment construire l'instance ApplicationC
     ApplicationClient myClient = new ApplicationClient(options);
 ```
 
-L'exemple de code suivant vous montre comment construire l'instance ApplicationClient en mode flux enregistré : 
+L'exemple de code suivant vous montre comment construire l'instance de client d'application (`ApplicationClient`) en mode flux enregistré :
 
 ```
     Properties options = new Properties();
@@ -69,14 +77,14 @@ L'exemple de code suivant vous montre comment construire l'instance ApplicationC
 
 ### Utilisation d'un fichier de configuration
 
-Au lieu d'inclure directement un objet `Propriétés`, vous pouvez utiliser un fichier de configuration qui contient les paires nom-valeur pour l'objet `Propriétés` dans le format suivant : 
+Au lieu d'inclure directement l'objet `Propriétés`, vous pouvez utiliser un fichier de configuration qui contient les paires nom-valeur pour l'objet `Propriétés`, comme décrit dans l'exemple de code suivant : 
 
 ```
     Properties props = ApplicationClient.parsePropertiesFile(new File("C:\\temp\\application.prop"));
     ApplicationClient myClient = new ApplicationClient(props);
     ...
 ```
-Le fichier de configuration de l'application doit posséder le format suivant :
+Le fichier de configuration d'application spécifié doit être au format suivant :
 
 ```
     [application]
@@ -91,23 +99,33 @@ Le fichier de configuration de l'application doit posséder le format suivant :
 ## Connexion à {{site.data.keyword.iot_short_notm}}
 {: #connecting_to_iotp}
 
-Pour établir la connexion à {{site.data.keyword.iot_short_notm}}, utilisez la fonction `connect()`. La fonction `connect()` inclut un paramètre booléen facultatif appelé `autoRetry` qui détermine si la bibliothèque tente de se reconnecter si un échec de connexion MqttException se produit. Par défaut, `autoRetry` a pour valeur true. Si une connexion MqttSecurityException échoue en raison de détails d'enregistrement de terminal incorrects, la bibliothèque ne tente pas de se reconnecter, même si `autoRetry` a pour valeur `true`.
+Pour établir la connexion à {{site.data.keyword.iot_short_notm}}, utilisez la fonction `connect()`. La fonction `connect()` inclut un paramètre booléen facultatif appelé `autoRetry`, qui détermine si la bibliothèque tente de se reconnecter si un échec de connexion MqttException se produit. Par défaut, `autoRetry` a pour valeur true. Si une connexion MqttSecurityException échoue en raison de détails d'enregistrement de terminal incorrects, la bibliothèque ne tente pas de se reconnecter, même si `autoRetry` a pour valeur true.
+
+Afin de définir l'intervalle 'keep alive' pour MQTT, vous pouvez éventuellement utiliser la méthode `setKeepAliveInterval(int)` avant d'appeler la fonction `connect()`. La valeur `setKeepAliveInterval(int)` est mesurée en secondes et définit l'intervalle de temps maximal entre les messages envoyés ou reçus. Lorsque cette valeur d'intervalle est utilisée, le client peut détecter à quel moment le serveur n'est plus disponible sans avoir à attendre la fin du délai d'attente TCP/IP. Le client s'assure qu'au moins un message transite par le réseau au cours de chaque période d'intervalle 'keep alive'. Si aucun message relatif aux données n'est reçu pendant le délai d'attente, le client envoie un petit message `ping` dont le serveur accuse réception. Par défaut, le paramètre `setKeepAliveInterval(int)` prend la valeur 60 secondes. Pour désactiver la fonction de traitement 'keep alive' sur le client, affectez la valeur 0 au paramètre `setKeepAliveInterval(int)`. 
 
 ```
     Properties props = ApplicationClient.parsePropertiesFile(new File("C:\\temp\\application.prop"));
     ApplicationClient myClient = new ApplicationClient(props);
-
+    myClient.setKeepAliveInterval(120);
     myClient.connect();
 ```
 
-Une fois la connexion au service {{site.data.keyword.iot_short_notm}} établie, vos clients d'application peuvent s'abonner à des événements de terminal, s'abonner à des statuts de terminal et publier des événements et des commandes de terminal. 
+Pour contrôler le nombre de tentatives en cas d'échec d'une connexion, spécifiez un nombre entier dans la fonction myClient.connect(), comme indiqué dans le fragment de code suivant : 
+
+```
+    DeviceClient myClient = new DeviceClient(options);
+    myClient.setKeepAliveInterval(120);
+    myClient.connect(10);
+```
+
+Une fois connectés au service {{site.data.keyword.iot_short_notm}}, vos clients d'application peuvent s'abonner à des événements et à des statuts de terminal et publier des événements et des commandes de terminal. 
 
 ## Abonnement aux événements d'un terminal
 {: #subscribing_device_events}
 
-Les événements constituent le mécanisme par lequel les terminaux publient des données sur {{site.data.keyword.iot_short_notm}}. Le terminal contrôle le contenu de l'événement et affecte un nom à chaque événement qu'il envoie. 
+Les événements constituent le mécanisme par lequel les terminaux publient des données sur {{site.data.keyword.iot_short_notm}}. Le terminal contrôle le contenu de l'événement et affecte un nom à chaque événement qu'il envoie.
 
-Lorsqu'un événement est reçu par l'instance {{site.data.keyword.iot_short_notm}}, les données d'identification de l'événement reçu identifient le terminal qui a envoyé l'événement, ce qui signifie qu'un terminal ne peut pas simuler les droits d'accès d'un autre terminal. 
+Lorsqu'un événement est reçu par l'instance {{site.data.keyword.iot_short_notm}}, les données d'identification de l'événement reçu identifient le terminal qui a envoyé l'événement, ce qui signifie qu'un terminal ne peut pas simuler les droits d'accès d'un autre terminal.
 
 
 Par défaut, les applications s'abonnent à tous les événements depuis tous les terminaux connectés. Utilisez les paramètres de type de terminal, d'ID de terminal, d'événement et de format de message pour contrôler la portée de l'abonnement. Les exemples de code suivants vous montrent comment utiliser ces paramètres afin de définir la portée d'un abonnement :
@@ -153,22 +171,22 @@ Par défaut, les applications s'abonnent à tous les événements depuis tous le
     myClient.subscribeToDeviceEvents("iotsample-arduino", "00aabbccddee", "myEvent", "json", 0);
 ```
 
-**Remarque** : Un client unique peut prendre en charge plusieurs abonnements. 
+**Remarque** : Un client unique peut prendre en charge plusieurs abonnements.
 
 ## Traitement des événements provenant des terminaux
 {: #handling_device_events}
 
-Pour traiter les événements reçus par vos abonnements, enregistrez une méthode de rappel d'événement. Les messages sont renvoyés en tant qu'instance de la classe Event qui possède les propriétés suivantes : 
+Pour traiter les événements reçus par vos abonnements, enregistrez une méthode de rappel d'événement. Les messages sont renvoyés en tant qu'instance de la classe Event qui possède les propriétés suivantes :
 
 |Paramètre|Type de données|Description|
 |:---|:---|
-|`event.device`|Chaîne|Identifie le terminal de manière unique parmi tous les types de terminal dans l'organisation. |
+|`event.device`|Chaîne|Identifie le terminal de manière unique parmi tous les types de terminal dans l'organisation.|
 |`event.deviceType`|Chaîne|Identifie le type de terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
 |`event.deviceId`|Chaîne|Représente l'ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC. |
 |`event.event`|Chaîne|Utilisé généralement pour regrouper des événements spécifiques, par exemple, "status", "warning" et "data".|
 |`event.format`|Chaîne|Le format peut être n'importe quelle chaîne, par exemple, JSON.  |
 |`event.data`|Dictionnaire|Données du contenu du message. La longueur maximale est de 131072 octets.|
-|`event.timestamp`|Date et heure|Date et heure de l'événement. |
+|`event.timestamp`|Date et heure|Date et heure de l'événement.|
 
 
 Le code suivant illustre un exemple d'implémentation du rappel d'événement :
@@ -239,7 +257,7 @@ Comme pour l'abonnement à des événements de terminaux, l'application peut s'a
     myClient.subscribeToDeviceCommands();
 ```
 
-Des méthodes surchargées sont disponibles pour contrôler l'abonnement aux commandes. La méthode `processCommand()` est appelée lorsqu'une commande correspondant à l'abonnement à la commande est envoyée au terminal. 
+Des méthodes surchargées sont disponibles pour contrôler l'abonnement aux commandes. La méthode `processCommand()` est appelée lorsqu'une commande correspondant à l'abonnement à la commande est envoyée au terminal.
 
 
 ## Abonnement au statut des terminaux
@@ -273,12 +291,12 @@ De la même manière qu'elles s'abonnent aux événements des terminaux, les app
     myClient.subscribeToDeviceStatus("iotsample-arduino", "10aabbccddee");
 ```
 
-**Remarque** : Un client unique peut prendre en charge plusieurs abonnements. 
+**Remarque** : Un client unique peut prendre en charge plusieurs abonnements.
 
 ## Traitement des mises à jour du statut des terminaux
 {: #handling_device_status_updates}
 
-Pour traiter les mises à jour de statut reçues par vos abonnements, vous devez enregistrer une méthode de rappel d'événement d'événement de statut. Pour les événements de statut `Connect` et `Disconnect`, les messages sont renvoyés en tant qu'instance de la classe Status qui possède les propriétés suivantes : 
+Pour traiter les mises à jour de statut reçues par vos abonnements, vous devez enregistrer une méthode de rappel d'événement d'événement de statut. Pour les événements de statut `Connect` et `Disconnect`, les messages sont renvoyés en tant qu'instance de la classe Status qui possède les propriétés suivantes :
 
 
 | Paramètre     |Type de données     |
@@ -328,27 +346,28 @@ L'exemple de code suivant fournit un exemple d'implémentation du rappel de stat
   }
 ```
 
-Lorsque le rappel de statut est ajouté à ApplicationClient, la méthode `processDeviceStatus()` est appelée chaque fois qu'un terminal correspondant aux critères est connecté ou déconnecté avec {{site.data.keyword.iot_short_notm}}. L'exemple de code suivant vous montre comment ajouter l'instance de rappel de statut à ApplicationClient : 
+Lorsque le rappel de statut est ajouté au client d'application, la méthode `processDeviceStatus()` est appelée chaque fois qu'un terminal correspondant aux critères est connecté ou déconnecté avec {{site.data.keyword.iot_short_notm}}. L'exemple de code suivant vous montre comment ajouter l'instance de rappel de statut au client d'application :
+
 ```
 
     myClient.connect()
     myClient.setStatusCallback(new MyStatusCallback());
     myClient.subscribeToDeviceStatus();
 ```
-Les applications peuvent s'abonner à n'importe quel statut d'application, par exemple, les statuts de connexion et de déconnexion avec Watson IoT Platform. L'exemple de fragment de code  suivant montre comment vous abonner au statut d'application dans l'organisation :
+Les applications peuvent s'abonner à n'importe quel autre statut d'application, par exemple, les statuts de connexion et de déconnexion avec {{site.data.keyword.iot_short_notm}}. L'exemple de fragment de code suivant montre comment vous abonner au statut d'application d'une organisation {{site.data.keyword.iot_short_notm}} :
 
 ```
     myClient.connect()
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-La méthode surchargée permet de contrôler l'abonnement aux statuts d'une application donnée. La méthode processApplicationStatus() est appelée chaque fois qu'une application correspondant aux critères est connectée ou déconnectée de {{site.data.keyword.iot_short_notm}}.
+La méthode surchargée permet de contrôler l'abonnement aux statuts d'une application donnée. La méthode `processApplicationStatus()` est appelée chaque fois qu'une application correspondant aux critères est connectée ou déconnectée de {{site.data.keyword.iot_short_notm}}.
 
 
 ## Publication des événements à partir de terminaux
 {: #publishing_events_devices}
 
-L'exemple de code suivant montre comment les applications peuvent publier des événements comme s'ils provenaient d'un terminal. 
+L'exemple de code suivant montre comment les applications peuvent publier des événements comme s'ils provenaient d'un terminal.
 
 ```
 
@@ -364,18 +383,41 @@ L'exemple de code suivant montre comment les applications peuvent publier des é
     myClient.publishEvent(deviceType, deviceId, "blink", event);
 ```
 
+
+Des événements peuvent être publiés dans différents formats, par exemple, JSON, chaîne, binaire, etc. Par défaut, la bibliothèque publie des événements au format JSON, mais vous pouvez spécifier les données dans d'autres formats, si vous le souhaitez. Par exemple, pour publier des données au format chaîne, utilisez le fragment de code suivant :
+
+```
+    myClient.connect();
+    String data = "cpu:"+60;
+    status = myClient.publishEvent("load", data, "text", 2);
+```
+**Remarque :** Dans l'exemple de code précédent, le contenu de l'événement doit être au format chaîne.
+
+Toutes les données XML peuvent être converties au format chaîne et publiées comme suit :
+
+```
+    status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
+```
+
+De même, pour publier des événements au format binaire, utilisez le tableau d'octets, comme illustré dans l'exemple suivant :
+
+```
+    myClient.connect();
+    byte[] cpuLoad = new byte[] {60, 35, 30, 25};
+    status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
+```
+
 ### Publication d'événements à l'aide de HTTP
 {: #publishing_events_http}
 
-Outre MQTT, vous pouvez configurer vos applications pour qu'elles publient des événements de terminal sur {{site.data.keyword.iot_short_notm}} à l'aide de HTTP en exécutant les étapes suivantes : 
+Outre l'utilisation de MQTT, vous pouvez également configurer vos applications pour qu'elles publient des événements de terminal sur {{site.data.keyword.iot_short_notm}} via HTTP. Les étapes suivantes permettent de publier des événements de terminal via HTTP : 
 
-* Construire l'instance ApplicationClient à l'aide du fichier de propriétés
-* Construire l'événement qui doit être publié
-* Spécifier le nom d'événement, le type de terminal et l'ID de terminal
-* Publier l'événement à l'aide de la méthode `publishEventOverHTTP`(), comme illustré dans le code suivant :
+1. Construire l'instance ApplicationClient à l'aide du fichier de propriétés. 
+2. Construire l'événement qui doit être publié. 
+3. Spécifier le nom d'événement, le type de terminal et l'ID de terminal. 
+4. Publier l'événement à l'aide de la méthode `publishEventOverHTTP`(), comme illustré dans l'exemple de code suivant :
 
 ```
-
     	ApplicationClient myClient = new ApplicationClient(props);
 
     	JsonObject event = new JsonObject();
@@ -383,16 +425,14 @@ Outre MQTT, vous pouvez configurer vos applications pour qu'elles publient des �
     	event.addProperty("cpu",  90);
     	event.addProperty("mem",  70);
 
-    	code = myClient.publishEventOverHTTP(deviceType, deviceId, "blink", event);
+    	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-Pour la totalité de l'exemple de code, voir l'exemple d'application suivant :
+Pour la totalité de l'exemple de code, voir l'exemple d'application [HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java). 
 
-[HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java)
+En fonction des paramètres définis dans le fichier de propriétés, la méthode `publishEventOverHTTP()` publie l'événement en mode Quickstart ou en mode de flux enregistré. Lorsque `quickstart` est spécifié comme ID d'organisation dans le fichier de propriétés, la méthode `publishEventOverHTTP()` publie l'événement sur le service Quickstart de {{site.data.keyword.iot_short_notm}} au format HTTP normal. Lorsqu'une organisation enregistrée valide est spécifiée dans le fichier de propriétés, l'événement est toujours publié à l'aide de HTTPS de sorte que toutes les communications soient sécurisées.
 
-En fonction des paramètres définis dans le fichier de propriétés, la méthode `publishEventOverHTTP()` publie l'événement en mode Quickstart ou en mode de flux enregistré. Lorsque l'ID d'organisation défini dans le fichier de propriétés est `quickstart`, la méthode `publishEventOverHTTP()` publie l'événement sur le service Quickstart de {{site.data.keyword.iot_short_notm}} au format HTTP normal. Lorsqu'une organisation enregistrée valide est spécifiée dans le fichier de propriétés, l'événement est toujours publié à l'aide de HTTPS de sorte que toutes les communications soient sécurisées. 
-
-Le protocole HTTP fournit une distribution de type 'une fois tout au plus', semblable au niveau de qualité de service 'une fois tout au plus' (QoS 0) du protocole MQTT. Lorsque vous utilisez la distribution de type 'une fois tout au plus' pour publier des événements, l'application doit implémenter une logique de relance au cas où une erreur se produirait. 
+Le protocole HTTP fournit une distribution de type 'une fois tout au plus', semblable au niveau de qualité de service 'une fois tout au plus' (QoS 0) du protocole MQTT. Lorsque vous utilisez la distribution de type 'une fois tout au plus' pour publier des événements, l'application doit implémenter une logique de relance au cas où une erreur se produirait.
 
 
 ## Publication de commandes sur des terminaux
@@ -413,13 +453,37 @@ Les applications peuvent publier des commandes sur des terminaux connectés, com
     myAppClient.publishCommand(deviceType, deviceId, "stop", data);
 ```
 
+### Publication de commandes à l'aide de HTTP
+{: #publishing_commands_http}
+
+Outre l'utilisation de MQTT, vous pouvez également configurer vos applications pour qu'elles publient des commandes sur le terminal connecté via HTTP. Les étapes suivantes permettent de publier des événements de terminal via HTTP : 
+
+1. Construire l'instance ApplicationClient à l'aide du fichier de propriétés
+2. Construire la commande qui doit être publiée
+3. Spécifier le nom de commande, le type de terminal et l'ID de terminal
+4. Publier la commande à l'aide de la méthode `publishCommandOverHTTP`(), comme illustré dans le code suivant :
+
+```
+
+    	ApplicationClient myClient = new ApplicationClient(props);
+
+    	// Generate a JSON object of the event to be published
+	JsonObject event = new JsonObject();
+	event.addProperty("reboot", 5);
+
+	boolean response = myClient.publishCommandOverHTTP("execute", event);
+```
+
+Pour afficher la totalité de l'exemple de code, voir l'exemple d'application [HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java). 
+
+Le protocole HTTP fournit une distribution de type 'une fois tout au plus', semblable au niveau de qualité de service 'une fois tout au plus' (QoS 0) du protocole MQTT. Lorsque vous utilisez la distribution de type 'une fois tout au plus' pour publier des commandes, l'application doit implémenter une logique de relance au cas où une erreur se produirait. Pour plus d'informations, voir [API REST HTTP pour les applications](../api.html).
+
 
 ## Exemples
-{: #examples}
+{: #samples}
 
-
--  [MQTTApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java) - Exemple d'application qui vous montre comment publier des événements de terminal. 
--   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - Exemple d'application qui vous montre comment publier une commande sur un terminal. 
--  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - Exemple d'application qui vous montre comment vous abonner à différents événements, tels que des événements sur des terminaux, des commandes de terminal, des statuts de terminal et desstatutsd'application. 
--   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - Exemple d'application qui vous montre comment générer une application évolutive qui équilibre la charge des messages sur plusieurs instances de l'application. 
--  [Backup and restore sample](https://github.com/ibm-messaging/iot-backup-restore-sample) - Exemple qui vous montre comment sauvegarder et restaurer la configuration de terminal dans une base de données Cloudant NoSQL. 
+-  [MQTTApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java) - Exemple d'application qui vous montre comment publier des événements de terminal.
+-   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - Exemple d'application qui vous montre comment publier une commande sur un terminal.
+-  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - Exemple d'application qui vous montre comment vous abonner à différents événements, tels que des événements sur des terminaux, des commandes de terminal, des statuts de terminal et desstatutsd'application.
+-   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - Exemple d'application qui vous montre comment générer une application évolutive qui équilibre la charge des messages sur plusieurs instances de l'application.
+-  [Backup-restore-sample](https://github.com/ibm-messaging/iot-backup-restore-sample) - Exemple qui vous montre comment sauvegarder et restaurer la configuration de terminal dans {{site.data.keyword.cloudant}}.
