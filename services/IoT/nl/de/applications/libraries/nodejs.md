@@ -221,7 +221,7 @@ Anwendungen subskribieren standardmäßig alle Ereignisse von allen verbundenen 
 	});
 ```
 
-### Bestimmtes Ereignis von allen Geräten subskribieren 
+### Bestimmtes Ereignis von allen Geräten subskribieren
 
 
 ```
@@ -410,7 +410,7 @@ Anwendungen können Ereignisse so publizieren, als stammten sie von einem Gerät
 ```
 
 
-## Befehle in Geräten publizieren
+## Befehle für Geräte publizieren
 {: #publishing_commands_devices}
 
 Anwendungen können Befehle an verbundene Geräte publizieren. Die Funktion erfordert folgende Eigenschaften:
@@ -471,4 +471,4 @@ In der folgenden Tabelle werden die Parameter beschrieben, die in den Funktionen
 |`format`|Zeichenfolge|Das Format kann eine beliebige Zeichenfolge sein, zum Beispiel 'JSON'.  |
 |`data`|Wörterverzeichnis|Die Angaben für die Nachrichtennutzdaten. Die maximale Länge beträgt 131072 Byte.|
 |`payload`|Zeichenfolge|Die Angaben für die Nachrichtennutzdaten. Die maximale Länge beträgt 131072 Byte.|
-|`topic`|Zeichenfolge|Bei einer Publizierung als Gerät ist der Gerätetyp oder die Geräte-ID nicht in der Topic-Zeichenfolge (format_string) enthalten; diese Angaben werden aus der Client-ID übernommen. Beispiel: `iot-2/evt/event_id/fmt/format_string`. Wenn als Anwendung oder Gateway im Namen eines Geräts publiziert wird, muss das Topic den Gerätetyp (device_type) und die Geräte-ID (device_id) einschließen. Beispiel: `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
+|`topic`|Zeichenfolge|Bei einer Publizierung als Gerät ist der Gerätetyp oder die Geräte-ID nicht in der Topic-Zeichenfolge (format_string) enthalten; diese Angaben werden aus der Client-ID übernommen.  Beispiel: `iot-2/evt/event_id/fmt/format_string`.  Wenn als Anwendung oder Gateway im Namen eines Geräts publiziert wird, muss das Topic den Gerätetyp (device_type) und die Geräte-ID (device_id) einschließen.  Beispiel: `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|

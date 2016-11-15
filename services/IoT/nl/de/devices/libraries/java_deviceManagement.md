@@ -11,48 +11,48 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Java-Clientbibliothek - verwaltete Geräte 
+# Java-Clientbibliothek - verwaltete Geräte
 {: #java_deviceManagement}
 Letzte Aktualisierung: 2. August 2016
 {: .last-updated}
 
-##Einführung 
+##Einführung
 {: #introduction}
 
-Diese Clientbibliothek beschreibt, wie Geräte mit der Java-Clientbibliothek 'ibmiotf' verwendet werden. In [Java-Clientbibliothek - Einführung](../java/javaintro.html) finden Sie Unterstützung für die ersten Schritte mit diesem Modul. 
+Diese Clientbibliothek beschreibt, wie Geräte mit der Java-Clientbibliothek 'ibmiotf' verwendet werden. In [Java-Clientbibliothek - Einführung](../java/javaintro.html) finden Sie Unterstützung für die ersten Schritte mit diesem Modul.
 
-Dieser Abschnitt enthält Informationen zur Vorgehensweise, wie Geräte mithilfe von Java eine Verbindung zum {{site.data.keyword.iot_full}}-Gerätemanagementservice herstellen und Gerätemanagementoperationen wie Firmware-Update, Positionsaktualisierung und Diagnoseaktualisierung ausführen können. 
+Dieser Abschnitt enthält Informationen zur Vorgehensweise, wie Geräte mithilfe von Java eine Verbindung zum {{site.data.keyword.iot_full}}-Gerätemanagementservice herstellen und Gerätemanagementoperationen wie Firmware-Update, Positionsaktualisierung und Diagnoseaktualisierung ausführen können.
 
-Der Abschnitt 'Geräte' enthält Informationen dazu, wie Geräte mithilfe der Java-Clientbibliothek 'ibmiotf' Ereignisse publizieren und Befehle verarbeiten können. 
+Der Abschnitt 'Geräte' enthält Informationen dazu, wie Geräte mithilfe der Java-Clientbibliothek 'ibmiotf' Ereignisse publizieren und Befehle verarbeiten können.
 
-Der Abschnitt 'Anwendungen' enthält Informationen dazu, wie Anwendungen die Java-Clientbibliothekt 'ibmiotf' für die Interaktion mit Geräten verwenden können. 
+Der Abschnitt 'Anwendungen' enthält Informationen dazu, wie Anwendungen die Java-Clientbibliothekt 'ibmiotf' für die Interaktion mit Geräten verwenden können.
 
-## Gerätemanagement 
+## Gerätemanagement
 {: #device_management}
 
-Die Funktion [Gerätemanagement](../reference/device_mgmt.html) erweitert den {{site.data.keyword.iot_short_notm}}-Service um weitere Funktionen zur Verwaltung von Geräten. Beim Gerätemanagement besteht ein Unterschied zwischen verwalteten und nicht verwalteten Geräten: 
+Die Funktion [Gerätemanagement](../reference/device_mgmt.html) erweitert den {{site.data.keyword.iot_short_notm}}-Service um weitere Funktionen zur Verwaltung von Geräten. Beim Gerätemanagement besteht ein Unterschied zwischen verwalteten und nicht verwalteten Geräten:
 
--   **Verwaltete Geräte** sind als Geräte definiert, die über einen installierten Managementagenten verfügen. Der Managementagent sendet und empfängt auf das Gerät bezogene Metadaten und antwortet auf Gerätemanagementbefehle, die von {{site.data.keyword.iot_short_notm}} stammen. 
--   **Nicht verwaltete Geräte** sind sämtliche Geräte, die über keinen Gerätemanagementagenten verfügen. Alle Geräte beginnen in ihrem Lebenszyklus als nicht verwaltete Geräte und werden dadurch zu einem verwalteten Gerät, dass ein Gerätemanagementagent eine Nachricht an {{site.data.keyword.iot_short_notm}} sendet. 
+-   **Verwaltete Geräte** sind als Geräte definiert, die über einen installierten Managementagenten verfügen. Der Managementagent sendet und empfängt auf das Gerät bezogene Metadaten und antwortet auf Gerätemanagementbefehle, die von {{site.data.keyword.iot_short_notm}} stammen.
+-   **Nicht verwaltete Geräte** sind sämtliche Geräte, die über keinen Gerätemanagementagenten verfügen. Alle Geräte beginnen in ihrem Lebenszyklus als nicht verwaltete Geräte und werden dadurch zu einem verwalteten Gerät, dass ein Gerätemanagementagent eine Nachricht an {{site.data.keyword.iot_short_notm}} sendet.
 
-## Herstellen der Verbindung zum {{site.data.keyword.iot_short_notm}}-Gerätemanagementservice 
+## Herstellen der Verbindung zum {{site.data.keyword.iot_short_notm}}-Gerätemanagementservice
 {: #connecting_dm_service}
 
-## Gerätedaten erstellen 
+## Gerätedaten erstellen
 {: #creating_device_data}
 
-Im [Gerätemodell](../reference/device_model.html) werden die Metadaten und die Managementmerkmale eines Geräts beschrieben. Die Gerätedatenbank in {{site.data.keyword.iot_short_notm}} ist die Masterquelle für Geräteinformationen. Anwendungen und verwaltete Geräte können Aktualisierungen an die Datenbank senden, wie beispielsweise eine Position oder den Verarbeitungsfortschritt eines Firmware-Updates. Sobald diese Aktualisierungen von {{site.data.keyword.iot_short_notm}} empfangen werden, wird die Gerätedatenbank aktualisiert, wodurch die Informationen für Anwendungen verfügbar werden. 
+Im [Gerätemodell](../reference/device_model.html) werden die Metadaten und die Managementmerkmale eines Geräts beschrieben. Die Gerätedatenbank in {{site.data.keyword.iot_short_notm}} ist die Masterquelle für Geräteinformationen. Anwendungen und verwaltete Geräte können Aktualisierungen an die Datenbank senden, wie beispielsweise eine Position oder den Verarbeitungsfortschritt eines Firmware-Updates. Sobald diese Aktualisierungen von {{site.data.keyword.iot_short_notm}} empfangen werden, wird die Gerätedatenbank aktualisiert, wodurch die Informationen für Anwendungen verfügbar werden.
 
-`DeviceData` ist das Gerätemodell in der Clientbibliothek 'ibmiotf', das folgende Objekte enthält: 
+`DeviceData` ist das Gerätemodell in der Clientbibliothek 'ibmiotf', das folgende Objekte enthält:
 
--   DeviceInfo (erforderlich) 
--   DeviceLocation (erforderlich, wenn das Gerät die Positionsaktualisierung unterstützt) 
--   DiagnosticErrorCode (erforderlich, wenn der Fehlercode (ErrorCode) des Geräts aktualisiert werden soll) 
--   DiagnosticLog (erforderlich, wenn die Protokollinformationen des Geräts aktualisiert werden sollen) 
--   DeviceFirmware (erforderlich, wenn das Gerät Firmwareaktionen unterstützt) 
--   DeviceMetadata (optional) 
+-   DeviceInfo (erforderlich)
+-   DeviceLocation (erforderlich, wenn das Gerät die Positionsaktualisierung unterstützt)
+-   DiagnosticErrorCode (erforderlich, wenn der Fehlercode (ErrorCode) des Geräts aktualisiert werden soll)
+-   DiagnosticLog (erforderlich, wenn die Protokollinformationen des Geräts aktualisiert werden sollen)
+-   DeviceFirmware (erforderlich, wenn das Gerät Firmwareaktionen unterstützt)
+-   DeviceMetadata (optional)
 
-Das folgende Codebeispiel zeigt die Erstellung des obligatorischen `DeviceInfo`-Objekts zusammen mit dem optionalen `DeviceMetadata`-Objekt und Beispieldaten: 
+Das folgende Codebeispiel zeigt die Erstellung des obligatorischen `DeviceInfo`-Objekts zusammen mit dem optionalen `DeviceMetadata`-Objekt und Beispieldaten:
 
 ```
 DeviceInfo deviceInfo = new DeviceInfo.Builder().
@@ -74,7 +74,7 @@ data.addProperty("customField", "customValue");
 DeviceMetadata metadata = new DeviceMetadata(data);
 ```
 
-Erstellen Sie mithilfe des folgenden Codebeispiels ein `DeviceData`-Objekt, in dem die `DeviceInfo`- und `DeviceMetadata`-Objekte enthalten sind, die Sie im vorangegangenen Beispiel erstellt haben. 
+Erstellen Sie mithilfe des folgenden Codebeispiels ein `DeviceData`-Objekt, in dem die `DeviceInfo`- und `DeviceMetadata`-Objekte enthalten sind, die Sie im vorangegangenen Beispiel erstellt haben.
 
   ```
   DeviceData deviceData = new DeviceData.Builder().
@@ -83,27 +83,27 @@ Erstellen Sie mithilfe des folgenden Codebeispiels ein `DeviceData`-Objekt, in d
                build();
   ```
 
-## 'ManagedDevice' erstellen 
+## 'ManagedDevice' erstellen
 {: #construct_managed_device}
 
-`ManagedDevice` ist eine Geräteklasse, die das Gerät als verwaltetes Gerät mit {{site.data.keyword.iot_short_notm}} verbindet und dem Gerät ermöglicht, mindestens eine Gerätemanagementoperation auszuführen. Sie können zum Ausführen von üblichen Geräteoperationen wie beispielsweise dem Publizieren von Geräteereignissen und der Empfangsbereitschaft für Befehle, die von einer Anwendung stammen, auch eine `ManagedDevice`-Instanz verwenden. 
+`ManagedDevice` ist eine Geräteklasse, die das Gerät als verwaltetes Gerät mit {{site.data.keyword.iot_short_notm}} verbindet und dem Gerät ermöglicht, mindestens eine Gerätemanagementoperation auszuführen. Sie können zum Ausführen von üblichen Geräteoperationen wie beispielsweise dem Publizieren von Geräteereignissen und der Empfangsbereitschaft für Befehle, die von einer Anwendung stammen, auch eine `ManagedDevice`-Instanz verwenden.
 
-`ManagedDevice` stellt folgende Konstruktoren bereit, durch die unterschiedliche Benutzermuster unterstützt werden: 
+`ManagedDevice` stellt folgende Konstruktoren bereit, durch die unterschiedliche Benutzermuster unterstützt werden:
 
-**Konstruktur 1** 
+**Konstruktur 1**
 
-Konstruktor 1 erstellt eine `ManagedDevice`-Instanz in {{site.data.keyword.iot_short_notm}}, indem `DeviceData` und alle folgenden erforderlichen Eigenschaften akzeptiert werden: 
+Konstruktor 1 erstellt eine `ManagedDevice`-Instanz in {{site.data.keyword.iot_short_notm}}, indem `DeviceData` und alle folgenden erforderlichen Eigenschaften akzeptiert werden:
 
-|Eigenschaft  |Beschreibung  |
+|Eigenschaft |Beschreibung |
 |:---|:---|
-|`Organization-ID` |Die ID Ihrer Organisation. |
-|`Device-Type` |Der Typ Ihres Geräts. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'. |
-|`Device-ID` |Die ID Ihres Geräts. In der Regel ist 'deviceId' bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse. |
-|`Authentication-Method` |Die zu verwendende Authentifizierungsmethode. Der einzige Wert, der aktuell unterstützt ist, lautet `token`. |
-|`Authentication-Token` |Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und Watson IoT Platform. |
+|`Organization-ID` |Die ID Ihrer Organisation.|
+|`Device-Type` |Der Typ Ihres Geräts. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'.|
+|`Device-ID` |Die ID Ihres Geräts. In der Regel ist 'deviceId' bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse.|
+|`Authentication-Method` |Die zu verwendende Authentifizierungsmethode. Der einzige Wert, der aktuell unterstützt ist, lautet `token`.|
+|`Authentication-Token` |Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und Watson IoT Platform.|
 
 
-Der folgende Code umreisst, wie Sie eine `ManagedDevice`-Instanz erstellen können: 
+Der folgende Code umreisst, wie Sie eine `ManagedDevice`-Instanz erstellen können:
 
 ```
 Properties options = new Properties();
@@ -116,7 +116,7 @@ options.setProperty("Authentication-Token", "AUTH TOKEN FOR DEVICE");
 ManagedDevice managedDevice = new ManagedDevice(options, deviceData);
 ```
 
-Wenn Sie bereits eine `DeviceClient`-Instanz verwenden, werden Sie feststellen, dass die Namen der Eigenschaften leicht abweichend sind und die im {{site.data.keyword.iot_short_notm}}-Dashboard verwendeten Namen widerspiegeln. Zum Migrieren von `DeviceClient` auf `ManagedDevice` können Sie weiterhin das frühere Format verwenden, indem Sie die `ManagedDevice`-Instanz wie im folgenden Beispiel umrissen erstellen: 
+Wenn Sie bereits eine `DeviceClient`-Instanz verwenden, werden Sie feststellen, dass die Namen der Eigenschaften leicht abweichend sind und die im {{site.data.keyword.iot_short_notm}}-Dashboard verwendeten Namen widerspiegeln. Zum Migrieren von `DeviceClient` auf `ManagedDevice` können Sie weiterhin das frühere Format verwenden, indem Sie die `ManagedDevice`-Instanz wie im folgenden Beispiel umrissen erstellen:
 
 ```
 Properties options = new Properties();
@@ -128,9 +128,9 @@ options.setProperty("auth-token", "AUTH TOKEN FOR DEVICE");
 ManagedDevice managedDevice = new ManagedDevice(options, deviceData);
 ```
 
-**Konstruktor 2** 
+**Konstruktor 2**
 
-Erstellen Sie eine `ManagedDevice`-Instanz, indem Sie sowohl die `DeviceData`-Instanz als auch die `MqttClient`-Instanzen akzeptieren. Für diesen Konstruktor sind Gerätedaten (`DeviceData`) erforderlich, die mit zusätzlichen Geräteattributen wie beispielsweise Gerätetyp und Geräte-ID erstellt werden, wie im folgenden Beispiel umrissen: 
+Erstellen Sie eine `ManagedDevice`-Instanz, indem Sie sowohl die `DeviceData`-Instanz als auch die `MqttClient`-Instanzen akzeptieren. Für diesen Konstruktor sind Gerätedaten (`DeviceData`) erforderlich, die mit zusätzlichen Geräteattributen wie beispielsweise Gerätetyp und Geräte-ID erstellt werden, wie im folgenden Beispiel umrissen:
 
 ```
 // Code, mit dem 'MqttClient' (ein synchrones oder ein asynchrones MqttClient-Element) erstellt wird
@@ -148,41 +148,41 @@ DeviceData deviceData = new DeviceData.Builder().
 ManagedDevice managedDevice = new ManagedDevice(mqttClient, deviceData);
 ```
 
-**Hinweis:** Dieser Konstruktor hilft Benutzern angepasster Geräte, eine `ManagedDevice`-Instanz mithilfe der bereits erstellten und verbundenen `MqttClient`-Instanz zu erstellen, um Gerätemanagementoperationen nutzen zu können. Benutzern wird jedoch empfohlen, für die gesamte Gerätefunktionalität die Bibliothek zu verwenden. 
+**Hinweis:** Dieser Konstruktor hilft Benutzern angepasster Geräte, eine `ManagedDevice`-Instanz mithilfe der bereits erstellten und verbundenen `MqttClient`-Instanz zu erstellen, um Gerätemanagementoperationen nutzen zu können. Benutzern wird jedoch empfohlen, für die gesamte Gerätefunktionalität die Bibliothek zu verwenden.
 
-## Verwalten 
+## Verwalten
 
-Das Gerät `Manage` kann die Methode 'manage()' aufrufen, um an den Gerätemanagementaktivitäten teilzunehmen. Die Managementanforderung initiiert intern eine Verbindungsanforderung, wenn für das Gerät noch keine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wurde. 
+Das Gerät `Manage` kann die Methode 'manage()' aufrufen, um an den Gerätemanagementaktivitäten teilzunehmen. Die Managementanforderung initiiert intern eine Verbindungsanforderung, wenn für das Gerät noch keine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wurde.
 
 ```
 managedDevice.manage();
 ```
 
-Das Gerät kann die überladene Methode für die Verwaltung (Lebensdauer) verwenden, um das Gerät für einen bestimmten Zeitrahmen zu registrieren. Durch den Zeitrahmen wird die Länge der Zeit angegeben, innerhalb der das Gerät eine weitere Anforderung des Typs **Gerät verwalten** senden muss, damit es nicht auf den Status eines 'Nicht verwalteten Geräts' zurückgesetzt und als 'Ruhend' markiert wird. 
+Das Gerät kann die überladene Methode für die Verwaltung (Lebensdauer) verwenden, um das Gerät für einen bestimmten Zeitrahmen zu registrieren. Durch den Zeitrahmen wird die Länge der Zeit angegeben, innerhalb der das Gerät eine weitere Anforderung des Typs **Gerät verwalten** senden muss, damit es nicht auf den Status eines 'Nicht verwalteten Geräts' zurückgesetzt und als 'Ruhend' markiert wird.
 
 ```
 managedDevice.manage(3600);
 ```
 
-Weitere Informationen zur Operation `Manage` finden Sie in der [Dokumentation]. 
+Weitere Informationen zur Operation `Manage` finden Sie in der [Dokumentation].
 
   [documentation]:../device_mgmt/operations/manage.html
 
-## Nicht verwalten 
+## Nicht verwalten
 
-Ein Gerät kann die Methode 'unmanage()' aufrufen, wenn es nicht mehr verwaltet werden muss. {{site.data.keyword.iot_short_notm}} sendet an dieses Gerät keine neuen Managementanforderungen mehr und bis auf die Anforderung **Gerät verwalten** werden alle Gerätemanagementanforderungen dieses Geräts abgelehnt. 
+Ein Gerät kann die Methode 'unmanage()' aufrufen, wenn es nicht mehr verwaltet werden muss. {{site.data.keyword.iot_short_notm}} sendet an dieses Gerät keine neuen Managementanforderungen mehr und bis auf die Anforderung **Gerät verwalten** werden alle Gerätemanagementanforderungen dieses Geräts abgelehnt.
 
 ```
 managedDevice.unmanage();
 ```
 
-Weitere Informationen zur Operation `Unmanage` finden Sie in der [Dokumentation]. 
+Weitere Informationen zur Operation `Unmanage` finden Sie in der [Dokumentation].
 
   [documentation]:../device_mgmt/operations/manage.html
 
-## Positionsaktualisierung 
+## Positionsaktualisierung
 {: #construct_location_update}
-Für Geräte, die ihre Position bestimmen können, kann ausgewählt werden, dass {{site.data.keyword.iot_short_notm}} über Positionsaktualisierungen benachrichtigt wird. Zum Aktualisieren der Position muss das Gerät eine `DeviceData`-Instanz erstellen, wobei das `DeviceLocation`-Objekt an erster Stelle steht. 
+Für Geräte, die ihre Position bestimmen können, kann ausgewählt werden, dass {{site.data.keyword.iot_short_notm}} über Positionsaktualisierungen benachrichtigt wird. Zum Aktualisieren der Position muss das Gerät eine `DeviceData`-Instanz erstellen, wobei das `DeviceLocation`-Objekt an erster Stelle steht.
 
 ```
 // Erstellen Sie das Positionsobjekt mit Breitengrad, Längengrad und Höhe
@@ -196,7 +196,7 @@ DeviceData deviceData = new DeviceData.Builder().
              build();
 ```
 
-Wenn für das Gerät eine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wird, können Sie die Position anhand der folgenden Methode aktualisieren: 
+Wenn für das Gerät eine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wird, können Sie die Position anhand der folgenden Methode aktualisieren:
 
 ```
 int rc = deviceLocation.sendLocation();
@@ -207,7 +207,7 @@ if(rc == 200) {
 }
 ```
 
-Nachfolgende Aktualisierungen für die Geräteposition können durch Ändern der Eigenschaften des `DeviceLocation`-Objekts wie im folgenden Beispiel gezeigt aktualisiert werden: 
+Nachfolgende Aktualisierungen für die Geräteposition können durch Ändern der Eigenschaften des `DeviceLocation`-Objekts wie im folgenden Beispiel gezeigt aktualisiert werden:
 
 ```
 int rc = deviceLocation.update(40.28, -98.33, 11);
@@ -218,16 +218,16 @@ if(rc == 200) {
 }
 ```
 
-Durch die Methode 'update()' wird {{site.data.keyword.iot_short_notm}} die neue Position mitgeteilt. 
+Durch die Methode 'update()' wird {{site.data.keyword.iot_short_notm}} die neue Position mitgeteilt.
 
-Weitere Informationen zum Aktualisieren von Positionen finden Sie in der über einen Link aufzurufenden [Dokumentation](../device_mgmt/operations/update.html). 
+Weitere Informationen zum Aktualisieren von Positionen finden Sie in der über einen Link aufzurufenden [Dokumentation](../device_mgmt/operations/update.html).
 
 
 
-## Fehlercodes anhängen und löschen 
+## Fehlercodes anhängen und löschen
 {: #appending_error_codes}
 
-Für Geräte kann ausgewählt werden, dass {{site.data.keyword.iot_short_notm}} zu Änderungen in ihren Fehlercodes benachrichtigt wird. Zum Senden der Fehlercodes muss das Gerät wie im folgenden Beispiel dargestellt ein `DiagnosticErrorCode`-Objekt erstellen: 
+Für Geräte kann ausgewählt werden, dass {{site.data.keyword.iot_short_notm}} zu Änderungen in ihren Fehlercodes benachrichtigt wird. Zum Senden der Fehlercodes muss das Gerät wie im folgenden Beispiel dargestellt ein `DiagnosticErrorCode`-Objekt erstellen:
 
 ```
 DiagnosticErrorCode errorCode = new DiagnosticErrorCode(0);
@@ -239,13 +239,13 @@ DeviceData deviceData = new DeviceData.Builder().
              build();
 ```
 
-Sobald für das Gerät eine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wurde, kann der Fehlercode (`ErrorCode`) durch Aufrufen der Methode 'send()' wie folgt gesendet werden: 
+Sobald für das Gerät eine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wurde, kann der Fehlercode (`ErrorCode`) durch Aufrufen der Methode 'send()' wie folgt gesendet werden:
 
 ```
 errorCode.send();
 ```
 
-Später können neue Fehlercodes (`ErrorCodes`) ohne großen Aufwand zu {{site.data.keyword.iot_short_notm}} hinzugefügt werden, indem wie folgt die Methode 'append' aufgerufen wird: 
+Später können neue Fehlercodes (`ErrorCodes`) ohne großen Aufwand zu {{site.data.keyword.iot_short_notm}} hinzugefügt werden, indem wie folgt die Methode 'append' aufgerufen wird:
 
 ```
 int rc = errorCode.append(500);
@@ -256,7 +256,7 @@ if(rc == 200) {
 }
 ```
 
-Die Fehlercodes (`ErrorCodes`) können auch aus {{site.data.keyword.iot_short_notm}} gelöscht werden, indem die Methode 'clear()' wie folgt aufgerufen wird: 
+Die Fehlercodes (`ErrorCodes`) können auch aus {{site.data.keyword.iot_short_notm}} gelöscht werden, indem die Methode 'clear()' wie folgt aufgerufen wird:
 
 ```
 int rc = errorCode.clear();
@@ -267,15 +267,15 @@ if(rc == 200) {
 }
 ```
 
-## Protokollnachrichten anhängen und löschen 
+## Protokollnachrichten anhängen und löschen
 
-Für Geräte kann ausgewählt werden, dass {{site.data.keyword.iot_short_notm}} durch Hinzufügen eines neuen Protokolleintrags über Änderungen benachrichtigt wird. Ein Protokolleintrag enthält folgende Informationen: 
-- Protkollnachricht 
-- Zeitmarke 
-- Schweregrad 
-- binäre Diagnosedaten mit Base64-Codierung (optional) 
+Für Geräte kann ausgewählt werden, dass {{site.data.keyword.iot_short_notm}} durch Hinzufügen eines neuen Protokolleintrags über Änderungen benachrichtigt wird. Ein Protokolleintrag enthält folgende Informationen:
+- Protkollnachricht
+- Zeitmarke
+- Schweregrad
+- binäre Diagnosedaten mit Base64-Codierung (optional)
 
-Zum Senden von Protokollnachrichten muss das Gerät wie im folgenden Beispiel gezeigt ein `DiagnosticLog`-Objekt erstellen: 
+Zum Senden von Protokollnachrichten muss das Gerät wie im folgenden Beispiel gezeigt ein `DiagnosticLog`-Objekt erstellen:
 
 ```
 DiagnosticLog log = new DiagnosticLog(
@@ -290,13 +290,13 @@ DeviceData deviceData = new DeviceData.Builder().
              build();
 ```
 
-Sobald für das Gerät eine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wurde, kann die Protokollnachricht durch Aufrufen der Methode 'send()' wie im folgenden Beispiel gesendet werden: 
+Sobald für das Gerät eine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wurde, kann die Protokollnachricht durch Aufrufen der Methode 'send()' wie im folgenden Beispiel gesendet werden:
 
 ```
 log.send();
 ```
 
-Später können neue Protokollnachrichten ohne großen Aufwand zu {{site.data.keyword.iot_short_notm}} hinzugefügt werden, indem die Methode 'append' wie im folgenden Beispiel gezeigt aufgerufen wird: 
+Später können neue Protokollnachrichten ohne großen Aufwand zu {{site.data.keyword.iot_short_notm}} hinzugefügt werden, indem die Methode 'append' wie im folgenden Beispiel gezeigt aufgerufen wird:
 
 ```
 int rc = log.append("sample log", new Date(), DiagnosticLog.LogSeverity.informational);
@@ -308,7 +308,7 @@ if(rc == 200) {
 }
 ```
 
-Die Protokollnachrichten können auch aus {{site.data.keyword.iot_short_notm}} gelöscht werden, indem die Methode 'clear' wie im folgenden Beispiel gezeigt aufgerufen wird: 
+Die Protokollnachrichten können auch aus {{site.data.keyword.iot_short_notm}} gelöscht werden, indem die Methode 'clear' wie im folgenden Beispiel gezeigt aufgerufen wird:
 
 ```
 rc = log.clear();
@@ -319,23 +319,23 @@ if(rc == 200) {
 }
 ```
 
-Die Operationen zur Gerätediagnose sollen Informationen zu Gerätefehlern bereitstellen; sie geben keine Diagnoseinformationen an, die sich auf die Verbindung der Geräte zu {{site.data.keyword.iot_short_notm}} beziehen. 
+Die Operationen zur Gerätediagnose sollen Informationen zu Gerätefehlern bereitstellen; sie geben keine Diagnoseinformationen an, die sich auf die Verbindung der Geräte zu {{site.data.keyword.iot_short_notm}} beziehen.
 
-Weitere Informationen zu Diagnoseinformationen finden Sie in der [Dokumentation](../device_mgmt/operations/diagnostics.html). 
+Weitere Informationen zu Diagnoseinformationen finden Sie in der [Dokumentation](../device_mgmt/operations/diagnostics.html).
 
-## Firmwareaktionen 
+## Firmwareaktionen
 {: #firmware_actions}
 
-Der Prozess für das Firmware-Update ist in zwei unterschiedliche Aktionen aufgeteilt: 
+Der Prozess für das Firmware-Update ist in zwei unterschiedliche Aktionen aufgeteilt:
 
-* Herunterladen der Firmware 
-* Aktualisieren der Firmware 
+* Herunterladen der Firmware
+* Aktualisieren der Firmware
 
-Das Gerät muss zum Unterstützen von Firmwareaktionen folgende Aktivitäten ausführen: 
+Das Gerät muss zum Unterstützen von Firmwareaktionen folgende Aktivitäten ausführen:
 
-**1. Erstellen eines DeviceFirmware-Objekts** 
+**1. Erstellen eines DeviceFirmware-Objekts**
 
-Zum Ausführen von Firmwareaktionen muss das Gerät das `DeviceFirmware`-Objekt erstellen und es wie folgt zu `DeviceData` hinzufügen: 
+Zum Ausführen von Firmwareaktionen muss das Gerät das `DeviceFirmware`-Objekt erstellen und es wie folgt zu `DeviceData` hinzufügen:
 
 ```
 DeviceFirmware firmware = new DeviceFirmware.Builder().
@@ -356,22 +356,22 @@ ManagedDevice managedDevice = new ManagedDevice(options, deviceData);
 managedDevice.connect();
 ```
 
-Das `DeviceFirmware`-Objekt stellt die aktuelle Firmware des Geräts dar und wird zum Berichten des Status für die Aktionen 'Firmware-Download' und 'Firmware-Update' an {{site.data.keyword.iot_short_notm}} verwendet. 
+Das `DeviceFirmware`-Objekt stellt die aktuelle Firmware des Geräts dar und wird zum Berichten des Status für die Aktionen 'Firmware-Download' und 'Firmware-Update' an {{site.data.keyword.iot_short_notm}} verwendet.
 
-**2. Informieren des Servers über die Firmwareaktionsunterstützung** 
+**2. Informieren des Servers über die Firmwareaktionsunterstützung**
 
-Für das Gerät muss für das Aktionsflag für Firmware 'true' eingestellt werden, damit der Server die Firmwareanforderung initiiert. Dies wird erreicht, wenn folgende Methode mit einem booleschen Wert aufgerufen wird: 
+Für das Gerät muss für das Aktionsflag für Firmware 'true' eingestellt werden, damit der Server die Firmwareanforderung initiiert. Dies wird erreicht, wenn folgende Methode mit einem booleschen Wert aufgerufen wird:
 
 ```
 managedDevice.supportsFirmwareActions(true);
 managedDevice.manage();
 ```
 
-Wenn die Managementanforderung {{site.data.keyword.iot_short_notm}} über die Unterstützung der Firmwareaktion benachrichtigt, muss die Methode 'manage()' sofort nach der Festlegung der Unterstützung für die Firmwareaktion aufgerufen werden. 
+Wenn die Managementanforderung {{site.data.keyword.iot_short_notm}} über die Unterstützung der Firmwareaktion benachrichtigt, muss die Methode 'manage()' sofort nach der Festlegung der Unterstützung für die Firmwareaktion aufgerufen werden.
 
 **3. Erstellen des Firmwareaktionshandlers**
 
-Zum Unterstützen der Firmwareaktion muss das Gerät einen Handler erstellen und ihn zu `ManagedDevice` hinzufügen. Der Handler muss eine `DeviceFirmwareHandler`-Klasse erweitern und folgende Methoden implementieren: 
+Zum Unterstützen der Firmwareaktion muss das Gerät einen Handler erstellen und ihn zu `ManagedDevice` hinzufügen. Der Handler muss eine `DeviceFirmwareHandler`-Klasse erweitern und folgende Methoden implementieren:
 
 ```
 public abstract void downloadFirmware(DeviceFirmware deviceFirmware);
@@ -380,15 +380,15 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 **3.1 Beispielimplementierung von downloadFirmware**
 
-Durch die Implementierung muss Logik hinzugefügt werden, um die Firmware herunterzuladen und den Status des Downloads mithilfe eines `DeviceFirmware`-Objekts zu berichten. Wenn die Operation für den Download der Firmware erfolgreich ist, wird der Status auf `DOWNLOADED` festgelegt und für `UpdateStatus` wird anschließend `SUCCESS` eingestellt. 
+Durch die Implementierung muss Logik hinzugefügt werden, um die Firmware herunterzuladen und den Status des Downloads mithilfe eines `DeviceFirmware`-Objekts zu berichten. Wenn die Operation für den Download der Firmware erfolgreich ist, wird der Status auf `DOWNLOADED` festgelegt und für `UpdateStatus` wird anschließend `SUCCESS` eingestellt.
 
-Wenn während des Firmware-Downloads ein Fehler auftritt, wird für den Status die Einstellung `IDLE` festgelegt und für `updateStatus` wird anschließend einer der folgenden Werte für den Fehlerstatus eingestellt: 
+Wenn während des Firmware-Downloads ein Fehler auftritt, wird für den Status die Einstellung `IDLE` festgelegt und für `updateStatus` wird anschließend einer der folgenden Werte für den Fehlerstatus eingestellt:
 
 * `OUT_OF_MEMORY
 * CONNECTION_LOST
 * INVALID_URI`
 
-Das folgende Beispiel zeigt die Implementierung eines Firmware-Downloads für ein Raspberry Pi-Gerät: 
+Das folgende Beispiel zeigt die Implementierung eines Firmware-Downloads für ein Raspberry Pi-Gerät:
 
 ```
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
@@ -474,20 +474,20 @@ private boolean verifyFirmware(File file, String verifier) throws IOException {
 }
 ```
 
-Sie finden den vollständigen Code im Gerätemanagementbeispiel [RasPiFirmwareHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/RasPiFirmwareHandlerSample.java). 
+Sie finden den vollständigen Code im Gerätemanagementbeispiel [RasPiFirmwareHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/RasPiFirmwareHandlerSample.java).
 
 
 
-**3.2 Beispielimplementierung von updateFirmware** 
+**3.2 Beispielimplementierung von updateFirmware**
 
-Durch die Implementierung muss Logik hinzugefügt werden, um die heruntergeladene Firmware zu installieren und den Status der Aktualisierung mithilfe des `DeviceFirmware`-Objekts zu berichten. Wenn die Operation für das Firmware-Update erfolgreich ist, sollte als Status der Firmware die Einstellung IDLE (inaktiv) und als `updateStatus` sollte `SUCCESS` (Erfolg) festgelegt sein. 
+Durch die Implementierung muss Logik hinzugefügt werden, um die heruntergeladene Firmware zu installieren und den Status der Aktualisierung mithilfe des `DeviceFirmware`-Objekts zu berichten. Wenn die Operation für das Firmware-Update erfolgreich ist, sollte als Status der Firmware die Einstellung IDLE (inaktiv) und als `updateStatus` sollte `SUCCESS` (Erfolg) festgelegt sein.
 
-Wenn während des Firmware-Updates ein Fehler auftritt, sollte für `updateStatus` einer der Werte des Fehlerstatus eingestellt werden: 
+Wenn während des Firmware-Updates ein Fehler auftritt, sollte für `updateStatus` einer der Werte des Fehlerstatus eingestellt werden:
 
 `* OUT_OF_MEMORY
 * UNSUPPORTED_IMAGE`
 
-Nachfolgend wird eine Beispielimplementierung des Firmware-Updates für ein Raspberry Pi-Gerät gezeigt: 
+Nachfolgend wird eine Beispielimplementierung des Firmware-Updates für ein Raspberry Pi-Gerät gezeigt:
 
 ```
 public void updateFirmware(DeviceFirmware deviceFirmware) {
@@ -520,52 +520,52 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-Sie finden den vollständigen Code im Gerätemanagementbeispiel [RasPiFirmwareHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/RasPiFirmwareHandlerSample.java). 
+Sie finden den vollständigen Code im Gerätemanagementbeispiel [RasPiFirmwareHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/RasPiFirmwareHandlerSample.java).
 
 
-**4. Hinzufügen des Handlers zu ManagedDevice** 
+**4. Hinzufügen des Handlers zu ManagedDevice**
 
-Der erstellte Handler muss der ManagedDevice-Instanz hinzugefügt werden, sodass die Clientbibliothek 'ibmiotf' die entsprechende Methode aufruft, wenn eine Firmwareaktionsanforderung von {{site.data.keyword.iot_short_notm}} vorliegt. 
+Der erstellte Handler muss der ManagedDevice-Instanz hinzugefügt werden, sodass die Clientbibliothek 'ibmiotf' die entsprechende Methode aufruft, wenn eine Firmwareaktionsanforderung von {{site.data.keyword.iot_short_notm}} vorliegt.
 
 ```
 DeviceFirmwareHandlerSample fwHandler = new DeviceFirmwareHandlerSample();
 deviceData.addFirmwareHandler(fwHandler);
 ```
 
-Weitere Informtionen zur Firmwareaktion finden Sie auf [dieser Seite](../device_mgmt/operations/firmware_actions.html). 
+Weitere Informtionen zur Firmwareaktion finden Sie auf [dieser Seite](../device_mgmt/operations/firmware_actions.html).
 
-## Geräteaktionen 
+## Geräteaktionen
 
-{{site.data.keyword.iot_short_notm}} unterstützt folgende Geräteaktionen: 
+{{site.data.keyword.iot_short_notm}} unterstützt folgende Geräteaktionen:
 
-* Neu starten 
-* Zurücksetzen auf Werkseinstellungen 
+* Neu starten
+* Zurücksetzen auf Werkseinstellungen
 
-Das Geräte muss zur Unterstützung von Geräteaktionen folgende Aktivitäten ausführen: 
+Das Geräte muss zur Unterstützung von Geräteaktionen folgende Aktivitäten ausführen:
 
-**1. Informieren des Servers über die Geräteaktionsunterstützung** 
+**1. Informieren des Servers über die Geräteaktionsunterstützung**
 
-Zum Ausführen von 'Neu starten' und 'Zurücksetzen auf Werkseinstellungen' muss das Gerät {{site.data.keyword.iot_short_notm}} zunächst über die zugehörige Unterstützung informieren. Dies wird erreicht, wenn folgende Methode mit einem booleschen Wert aufgerufen wird: 
+Zum Ausführen von 'Neu starten' und 'Zurücksetzen auf Werkseinstellungen' muss das Gerät {{site.data.keyword.iot_short_notm}} zunächst über die zugehörige Unterstützung informieren. Dies wird erreicht, wenn folgende Methode mit einem booleschen Wert aufgerufen wird:
 
 ```
 managedDevice.supportsDeviceActions(true);
     managedDevice.manage();
 ```
 
-Wenn die Managementanforderung {{site.data.keyword.iot_short_notm}} über die Unterstützung der Geräteaktion benachrichtigt, muss die Methode 'manage()' sofort nach der Festlegung der Unterstützung für die Geräteaktion aufgerufen werden. 
+Wenn die Managementanforderung {{site.data.keyword.iot_short_notm}} über die Unterstützung der Geräteaktion benachrichtigt, muss die Methode 'manage()' sofort nach der Festlegung der Unterstützung für die Geräteaktion aufgerufen werden.
 
-**2. Erstellen des Geräteaktionshandlers** 
+**2. Erstellen des Geräteaktionshandlers**
 
-Zum Unterstützen der Geräteaktion muss das Gerät einen Handler erstellen und ihn zu 'ManagedDevice' hinzufügen. Der Handler muss eine DeviceActionHandler-Klasse erweitern und die Implementierung folgender Methoden vornehmen: 
+Zum Unterstützen der Geräteaktion muss das Gerät einen Handler erstellen und ihn zu 'ManagedDevice' hinzufügen. Der Handler muss eine DeviceActionHandler-Klasse erweitern und die Implementierung folgender Methoden vornehmen:
 
 ```
 public abstract void handleReboot(DeviceAction action);
 public abstract void handleFactoryReset(DeviceAction action);
 ```
 
-**2.1 Beispielimplementierung von handleReboot** 
+**2.1 Beispielimplementierung von handleReboot**
 
-Durch die Implementierung muss Logik hinzugefügt werden, um das Gerät neu zu starten und den Status von 'Neu starten' über das DeviceAction-Objekt berichten. Das Gerät muss den Status (zusammen mit der Ausgabe einer optionalen Nachricht) nur aktualisieren, falls ein Fehler auftritt (da das Gerät durch eine erfolgreiche Operation neu gestartet wird und der Gerätecode keine Steuerungsmöglichkeit für die Aktualisierung von {{site.data.keyword.iot_short_notm}} hat. Nachfolgend wird eine Beispielimplementierung von 'Neu starten' für ein Raspberry Pi-Gerät gezeigt: 
+Durch die Implementierung muss Logik hinzugefügt werden, um das Gerät neu zu starten und den Status von 'Neu starten' über das DeviceAction-Objekt berichten. Das Gerät muss den Status (zusammen mit der Ausgabe einer optionalen Nachricht) nur aktualisieren, falls ein Fehler auftritt (da das Gerät durch eine erfolgreiche Operation neu gestartet wird und der Gerätecode keine Steuerungsmöglichkeit für die Aktualisierung von {{site.data.keyword.iot_short_notm}} hat. Nachfolgend wird eine Beispielimplementierung von 'Neu starten' für ein Raspberry Pi-Gerät gezeigt:
 
 ```
 public void handleReboot(DeviceAction action) {
@@ -588,13 +588,13 @@ public void handleReboot(DeviceAction action) {
 }
 ```
 
-Sie finden den vollständigen Code im Gerätemanagementbeispiel [DeviceActionHandlerSample]. 
+Sie finden den vollständigen Code im Gerätemanagementbeispiel [DeviceActionHandlerSample].
 
   [DeviceActionHandlerSample]: https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceActionHandlerSample.java
 
-**2.2 Beispielimplementierung von handleFactoryReset** 
+**2.2 Beispielimplementierung von handleFactoryReset**
 
-Durch die Implementierung muss Logik hinzugefügt werden, um das Gerät auf die Werkseinstellungen zurückzusetzen und den Status über das DeviceAction-Objekt zu berichten. Das Gerät muss den Status (zusammen mit der Ausgabe einer optionalen Nachricht nur aktualisieren, falls ein Fehler vorliegt (da das Gerät im Rahmen dieses Prozesses neu gestartet wird und das Gerät keine Steuerungsmöglichkeit hat, den Status von {{site.data.keyword.iot_short_notm}} zu aktualisieren). Das Gerüst für die Implementierung von 'Zurücksetzen auf Werkseinstellungen' wird nachfolgend gezeigt: 
+Durch die Implementierung muss Logik hinzugefügt werden, um das Gerät auf die Werkseinstellungen zurückzusetzen und den Status über das DeviceAction-Objekt zu berichten. Das Gerät muss den Status (zusammen mit der Ausgabe einer optionalen Nachricht nur aktualisieren, falls ein Fehler vorliegt (da das Gerät im Rahmen dieses Prozesses neu gestartet wird und das Gerät keine Steuerungsmöglichkeit hat, den Status von {{site.data.keyword.iot_short_notm}} zu aktualisieren). Das Gerüst für die Implementierung von 'Zurücksetzen auf Werkseinstellungen' wird nachfolgend gezeigt:
 
 ```
 public void handleFactoryReset(DeviceAction action) {
@@ -609,27 +609,27 @@ public void handleFactoryReset(DeviceAction action) {
 }
 ```
 
-**3. Hinzufügen des Handlers zu ManagedDevice** 
+**3. Hinzufügen des Handlers zu ManagedDevice**
 
-Der erstellte Handler muss der ManagedDevice-Instanz hinzugefügt werden, sodass die Clientbibliothek 'ibmiotf' die entsprechende Methode aufruft, wenn eine Geräteaktionsanforderung von {{site.data.keyword.iot_short_notm}} vorliegt. 
+Der erstellte Handler muss der ManagedDevice-Instanz hinzugefügt werden, sodass die Clientbibliothek 'ibmiotf' die entsprechende Methode aufruft, wenn eine Geräteaktionsanforderung von {{site.data.keyword.iot_short_notm}} vorliegt.
 
 ```
 DeviceActionHandlerSample actionHandler = new DeviceActionHandlerSample();
 deviceData.addDeviceActionHandler(actionHandler);
 ```
 
-Weitere Informationen zur Geräteaktion finden Sie auf [dieser Seite](../device_mgmt/operations/device_actions.html). 
+Weitere Informationen zur Geräteaktion finden Sie auf [dieser Seite](../device_mgmt/operations/device_actions.html).
 
 
 
-## Empfangsbereit für Geräteattributänderungen sein 
+## Empfangsbereit für Geräteattributänderungen sein
 {: #listen_device_attribute}
 
-Mit der Clientbibliothek 'ibmiotf' werden die entsprechenden Objekte jedes Mal aktualisiert, wenn eine Aktualisierungsanforderung von {{site.data.keyword.iot_short_notm}} vorliegt; diese Aktualisierungsanforderungen werden von der Anwendung entweder direkt oder indirekt (Firmware-Update) über die {{site.data.keyword.iot_short_notm}}-REST-API initiiert. Neben der Aktualisierung dieser Attribute bietet die Bibliothek einen Mechanismus, mit dem das Gerät benachrichtigt werden kann, sobald ein Geräteattribut aktualisiert wird. 
+Mit der Clientbibliothek 'ibmiotf' werden die entsprechenden Objekte jedes Mal aktualisiert, wenn eine Aktualisierungsanforderung von {{site.data.keyword.iot_short_notm}} vorliegt; diese Aktualisierungsanforderungen werden von der Anwendung entweder direkt oder indirekt (Firmware-Update) über die {{site.data.keyword.iot_short_notm}}-REST-API initiiert. Neben der Aktualisierung dieser Attribute bietet die Bibliothek einen Mechanismus, mit dem das Gerät benachrichtigt werden kann, sobald ein Geräteattribut aktualisiert wird.
 
-Mit dieser Operation können die Attribute `location`, `metadata`, `device information` und `firmware` aktualisiert werden. 
+Mit dieser Operation können die Attribute `location`, `metadata`, `device information` und `firmware` aktualisiert werden.
 
-Damit eine Benachrichtigung erfolgt, muss das Gerät für die Objekte, die von Interesse sind, einen Listener für Eigenschaftsänderungen hinzufügen. 
+Damit eine Benachrichtigung erfolgt, muss das Gerät für die Objekte, die von Interesse sind, einen Listener für Eigenschaftsänderungen hinzufügen.
 
 ```
 deviceLocation.addPropertyChangeListener(listener);
@@ -638,7 +638,7 @@ deviceInfo.addPropertyChangeListener(listener);
 metadata.addPropertyChangeListener(listener);
 ```
 
-Das Gerät muss an der Position, an der die Benachrichtigung empfangen wird, außerdem die Methode `propertyChange()` hinzufügen. Das folgende Beispiel zeigt, wie dies implementiert werden kann: 
+Das Gerät muss an der Position, an der die Benachrichtigung empfangen wird, außerdem die Methode `propertyChange()` hinzufügen. Das folgende Beispiel zeigt, wie dies implementiert werden kann:
 
 ```
 public void propertyChange(PropertyChangeEvent evt) {
@@ -671,22 +671,22 @@ public void propertyChange(PropertyChangeEvent evt) {
 }
 ```
 
-Weitere Informationen zur Aktualisierung der Geräteattribute finden Sie auf [dieser Seite](../device_mgmt/operations/update.html). 
+Weitere Informationen zur Aktualisierung der Geräteattribute finden Sie auf [dieser Seite](../device_mgmt/operations/update.html).
 
-## Beispiele 
+## Beispiele
 {: #examples}
 
--   [SampleRasPiDMAgent](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/SampleRasPiDMAgent.java) - Beispielagentencode, der zeigt, wie verschiedene Gerätemanagementoperationen in Raspberry Pi ausgeführt werden können. 
--   [SampleRasPiManagedDevice](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/SampleRasPiManagedDevice.java) - Beispielagentencode, der zeigt, wie sowohl Geräteoperationen als auch Managementoperationen ausgeführt werden können. 
--   [SampleRasPiDMAgentWithCustomMqttAsyncClient](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/SampleRasPiDMAgentWithCustomMqttAsyncClient.java) - Beispielagentencode mit einem angepassten MqttAsyncClient-Element. 
--   [SampleRasPiDMAgentWithCustomMqttClient](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/SampleRasPiDMAgentWithCustomMqttClient.java) - Beispielagentencode mit einem angepassten MqttClient-Element. 
--   [RasPiFirmwareHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/RasPiFirmwareHandlerSample.java) - Beispielimplementierung von 'FirmwareHandler' für Raspberry Pi. 
--   [DeviceActionHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceActionHandlerSample.java) - Beispielimplementierung von 'DeviceActionHandler'. 
--   [ManagedDeviceWithLifetimeSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/ManagedDeviceWithLifetimeSample.java) - Beispiel, das zeigt, wie reguläre Managementanforderungen mit angegebener Lebenszeit gesendet werden. 
--   [DeviceAttributesUpdateListenerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceAttributesUpdateListenerSample.java) - Beispielcode für den Listener, der zeigt, wie die Empfangsbereitschaft für verschiedene Geräteattributänderungen aussieht. 
--   [NonBlockingDiagnosticsErrorCodeUpdateSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/NonBlockingDiagnosticsErrorCodeUpdateSample.java) - Beispielcode, der zeigt, wie Fehlercode (ErrorCode) hinzugefügt wird, ohne auf eine Antwort vom Server zu warten. 
+-   [SampleRasPiDMAgent](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/SampleRasPiDMAgent.java) - Beispielagentencode, der zeigt, wie verschiedene Gerätemanagementoperationen in Raspberry Pi ausgeführt werden können.
+-   [SampleRasPiManagedDevice](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/SampleRasPiManagedDevice.java) - Beispielagentencode, der zeigt, wie sowohl Geräteoperationen als auch Managementoperationen ausgeführt werden können.
+-   [SampleRasPiDMAgentWithCustomMqttAsyncClient](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/SampleRasPiDMAgentWithCustomMqttAsyncClient.java) - Beispielagentencode mit einem angepassten MqttAsyncClient-Element.
+-   [SampleRasPiDMAgentWithCustomMqttClient](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/SampleRasPiDMAgentWithCustomMqttClient.java) - Beispielagentencode mit einem angepassten MqttClient-Element.
+-   [RasPiFirmwareHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/RasPiFirmwareHandlerSample.java) - Beispielimplementierung von 'FirmwareHandler' für Raspberry Pi.
+-   [DeviceActionHandlerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceActionHandlerSample.java) - Beispielimplementierung von 'DeviceActionHandler'.
+-   [ManagedDeviceWithLifetimeSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/ManagedDeviceWithLifetimeSample.java) - Beispiel, das zeigt, wie reguläre Managementanforderungen mit angegebener Lebenszeit gesendet werden.
+-   [DeviceAttributesUpdateListenerSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/DeviceAttributesUpdateListenerSample.java) - Beispielcode für den Listener, der zeigt, wie die Empfangsbereitschaft für verschiedene Geräteattributänderungen aussieht.
+-   [NonBlockingDiagnosticsErrorCodeUpdateSample](https://github.com/ibm-messaging/iot-java/blob/master/samples/iotfdevicemanagement/src/com/ibm/iotf/sample/devicemgmt/device/NonBlockingDiagnosticsErrorCodeUpdateSample.java) - Beispielcode, der zeigt, wie Fehlercode (ErrorCode) hinzugefügt wird, ohne auf eine Antwort vom Server zu warten.
 
-##Anleitungen 
+##Anleitungen
 {: #Recipes}
 
-Lesen Sie [die Anleitung](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/), in der gezeigt wird, wie das Raspberry Pi-Gerät als verwaltetes Gerät mit {{site.data.keyword.iot_short_notm}} verbunden wird, um Schritt für Schritt verschiedene Gerätemanagementoperationen mithilfe dieser Clientbibliothek auszuführen. 
+Lesen Sie [die Anleitung](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/), in der gezeigt wird, wie das Raspberry Pi-Gerät als verwaltetes Gerät mit {{site.data.keyword.iot_short_notm}} verbunden wird, um Schritt für Schritt verschiedene Gerätemanagementoperationen mithilfe dieser Clientbibliothek auszuführen.

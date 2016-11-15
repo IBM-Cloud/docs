@@ -12,35 +12,35 @@ copyright:
 {:pre: .pre}
 
 
-# Python für Geräteentwickler 
+# Python für Geräteentwickler
 {: #python}
 Letzte Aktualisierung: 29. Juli 2016
 {: .last-updated}
 
-Verwenden Sie Python, um Gerätecode zu erstellen und zu entwickeln, der in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagiert. Der Python-Client für {{site.data.keyword.iot_short_notm}} stellt eine API bereit, die eine einfache Interaktion mit {{site.data.keyword.iot_short_notm}}-Funktionen ermöglicht, indem die zugrunde liegenden Protokolle wie MQTT und HTTP herausgezogen werden.{:shortdesc}
+Verwenden Sie Python, um Gerätecode zu erstellen und zu entwickeln, der in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagiert. Der Python-Client für {{site.data.keyword.iot_short_notm}} stellt eine API bereit, die eine einfache Interaktion mit {{site.data.keyword.iot_short_notm}}-Funktionen ermöglicht, indem die zugrunde liegenden Protokolle wie MQTT und HTTP herausgezogen werden.
+{:shortdesc}
 
 Verwenden Sie die bereitgestellten Informationen und Beispiele, um mit der Entwicklung Ihrer Geräte mithilfe von Python zu beginnen.
 
-
-## Python-Client und Ressourcen herunterladen 
+## Python-Client und Ressourcen herunterladen
 {: #python_client_download}
 
-Wechseln Sie für den Zugriff auf den Python-Client für {{site.data.keyword.iot_short_notm}} und auf andere verfügbare Ressourcen in GitHub in das Repository [iot-python](https://github.com/ibm-watson-iot/iot-python) und folgenden Sie den Installationsanweisungen. 
+Wechseln Sie für den Zugriff auf den Python-Client für {{site.data.keyword.iot_short_notm}} und auf andere verfügbare Ressourcen in GitHub in das Repository [iot-python](https://github.com/ibm-watson-iot/iot-python) und folgenden Sie den Installationsanweisungen.
 
-## Konstruktor 
+## Konstruktor
 {: #constructor}
 
-Das Optionsverzeichnis erstellt Definitionen, die für die Interaktion mit dem {{site.data.keyword.iot_short_notm}}-Modul verwendet werden. Der Konstruktor erstellt die Clientinstanz und akzeptiert ein Optionsverzeichnis, das folgende Definitionen enthält: 
+Das Optionsverzeichnis erstellt Definitionen, die für die Interaktion mit dem {{site.data.keyword.iot_short_notm}}-Modul verwendet werden. Der Konstruktor erstellt die Clientinstanz und akzeptiert ein Optionsverzeichnis, das folgende Definitionen enthält:
 
-|Definition|Beschreibung  |
+|Definition|Beschreibung |
 |:---|:---|
-|`orgId`|Die ID Ihrer Organisation. |
-|`type`|Der Typ Ihres Geräts. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'. |
-|`id`|Die ID Ihres Geräts. In der Regel ist 'deviceId' bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse. |
-|`auth-method`|Die zu verwendende Authentifizierungsmethode. Der einzige Wert, der aktuell unterstützt ist, lautet `token`. |
-|`auth-token`|Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und Watson IoT Platform. |
+|`orgId`|Die ID Ihrer Organisation.|
+|`type`|Der Typ Ihres Geräts. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'.|
+|`id`|Die ID Ihres Geräts. In der Regel ist 'deviceId' bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse.|
+|`auth-method`|Die zu verwendende Authentifizierungsmethode. Der einzige Wert, der aktuell unterstützt ist, lautet `token`.|
+|`auth-token`|Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und Watson IoT Platform.|
 
-Wenn kein Optionsverzeichnis bereitgestellt wird, wird der Client als nicht registriertes Gerät mit dem Quickstart-Service von Watson IoT Platform verbunden. 
+Wenn kein Optionsverzeichnis bereitgestellt wird, wird der Client als nicht registriertes Gerät mit dem Quickstart-Service von Watson IoT Platform verbunden.
 
 ```python
 
@@ -58,9 +58,9 @@ except ibmiotf.ConnectionException  as e:
 ...
 ```
 
-### Konfigurationsdatei verwenden 
+### Konfigurationsdatei verwenden
 
-Statt ein Optionsverzeichnis direkt zu definieren, können Sie ein Optionsverzeichnis wie im folgenden Codebeispiel gezeigt auch separat in einer Konfigurationsdatei definieren: 
+Statt ein Optionsverzeichnis direkt zu definieren, können Sie ein Optionsverzeichnis wie im folgenden Codebeispiel gezeigt auch separat in einer Konfigurationsdatei definieren:
 
 ```python
 
@@ -72,7 +72,7 @@ except ibmiotf.ConnectionException  as e:
 ...
 ```
 
-Die Konfigurationsdatei, die das Optionsverzeichnis enthält, muss folgendes Format aufweisen: 
+Die Konfigurationsdatei, die das Optionsverzeichnis enthält, muss folgendes Format aufweisen:
 
 ```python
 
@@ -85,16 +85,16 @@ auth-token=token
 
 ```
 
-## Ereignisse publizieren 
+## Ereignisse publizieren
 {: #publishing_events}
 
-Ereignisse sind der Mechanismus, über den Geräte Daten in {{site.data.keyword.iot_short_notm}} publizieren. Das Gerät steuert den Inhalt des Ereignisses und ordnet jedem Ereignis, das von ihm gesendet wird, einen Namen zu. 
+Ereignisse sind der Mechanismus, über den Geräte Daten in {{site.data.keyword.iot_short_notm}} publizieren. Das Gerät steuert den Inhalt des Ereignisses und ordnet jedem Ereignis, das von ihm gesendet wird, einen Namen zu.
 
-Wenn ein Ereignis von der {{site.data.keyword.iot_short_notm}}-Instanz empfangen wird, geben die Berechtigungsnachweise des empfangenen Ereignisses das sendende Gerät an; dies bedeutet, dass ein Gerät nicht die Identität eines anderen Geräts annehmen kann. 
+Wenn ein Ereignis von der {{site.data.keyword.iot_short_notm}}-Instanz empfangen wird, geben die Berechtigungsnachweise des empfangenen Ereignisses das sendende Gerät an; dies bedeutet, dass ein Gerät nicht die Identität eines anderen Geräts annehmen kann.
 
-Ereignisse können mit einer beliebigen der drei durch das MQTT-Protokoll definierten Servicequalitätsstufen (QoS) publiziert werden. Standardmäßig werden Ereignisse mit der Servicequalitätsstufe `0` publiziert. 
+Ereignisse können mit einer beliebigen der drei durch das MQTT-Protokoll definierten Servicequalitätsstufen (QoS) publiziert werden.  Standardmäßig werden Ereignisse mit der Servicequalitätsstufe `0` publiziert.
 
-### Ereignis mithilfe der standardmäßigen Servicequalität publizieren 
+### Ereignis mithilfe der standardmäßigen Servicequalität publizieren
 
 ```
 client.connect()
@@ -102,11 +102,11 @@ myData={'name' : 'foo', 'cpu' : 60, 'mem' : 50}
 client.publishEvent("status", "json", myData)
 ```
 
-### Servicequalitätsstufe für ein Ereignis erhöhen 
+### Servicequalitätsstufe für ein Ereignis erhöhen
 
-Sie können die [Servicequalitätsstufe](../../reference/mqtt/index.html#qos-levels) für zu publizierende Ereignisse erhöhen. Ereignisse, die eine höhere Servicequalitätsstufe als `0` aufweisen, benötigen für die Publizierung möglicherweise mehr Zeit, da zusätzliche Empfangsbestätigungsinformationen enthalten sind. 
+Sie können die [Servicequalitätsstufe](../../reference/mqtt/index.html#qos-levels) für zu publizierende Ereignisse erhöhen. Ereignisse, die eine höhere Servicequalitätsstufe als `0` aufweisen, benötigen für die Publizierung möglicherweise mehr Zeit, da zusätzliche Empfangsbestätigungsinformationen enthalten sind.
 
-**Hinweis:** Der Modus für den Quickstart-Ablauf unterstützt nur Servicequalitätsstufe `0`. 
+**Hinweis:** Der Modus für den Quickstart-Ablauf unterstützt nur Servicequalitätsstufe `0`.
 
 ```
 client.connect()
@@ -114,17 +114,17 @@ myQosLevel=2
 myData={'name' : 'foo', 'cpu' : 60, 'mem' : 50}
 client.publishEvent("status", "json", myData, myQosLevel)
 ```
-## Befehle verarbeiten 
+## Befehle verarbeiten
 {: #handling_commands}
 
-Wenn der Geräteclient eine Verbindung herstellt, subskribiert er automatisch alle für dieses Gerät geltenden Befehle. Zum Verarbeiten bestimmter Befehle müssen Sie eine Callback-Methode für Befehle registrieren. Die Nachrichten werden als Instanz der Befehlsklasse zurückgegeben, die folgende Eigenschaften enthält: 
+Wenn der Geräteclient eine Verbindung herstellt, subskribiert er automatisch alle für dieses Gerät geltenden Befehle. Zum Verarbeiten bestimmter Befehle müssen Sie eine Callback-Methode für Befehle registrieren. Die Nachrichten werden als Instanz der Befehlsklasse zurückgegeben, die folgende Eigenschaften enthält:
 
-|Eigenschaft |Datentyp |Beschreibung |
+|Eigenschaft|Datentyp|Beschreibung|
 |:---|:---|
-|`command`|Zeichenfolge |Gibt den Befehl an. |
-|`format`|Zeichenfolge |Das Format kann eine beliebige Zeichenfolge sein, zum Beispiel 'JSON'. |
-|`data`|Wörterverzeichnis |Die Angaben für die Nutzdaten. Die maximale Länge beträgt 131072 Byte. |
-|`timestamp`|Datum und Uhrzeit |Das Datum und die Uhrzeit des Ereignisses. |
+|`command`|Zeichenfolge|Gibt den Befehl an.|
+|`format`|Zeichenfolge|Das Format kann eine beliebige Zeichenfolge sein, zum Beispiel 'JSON'.|
+|`data`|Wörterverzeichnis|Die Angaben für die Nutzdaten. Die maximale Länge beträgt 131072 Byte.|
+|`timestamp`|Datum und Uhrzeit|Das Datum und die Uhrzeit des Ereignisses.|
 
 
 ```python
@@ -147,12 +147,12 @@ client.connect()
 client.commandCallback = myCommandCallback
 ```
 
-## Unterstützung für das Format angepasster Nachrichten 
+## Unterstützung für das Format angepasster Nachrichten
 {: #custom_message_format}
 
-Als Nachrichtenformat wird standardmäßig `json` festgelegt; dies bedeutet, dass die Bibliothek das Verschlüsseln und Entschlüsseln der Python-Wörterverzeichnisobjekte im Format JSON unterstützt. Wenn als Nachrichtenformat `json-iotf` festgelegt ist, wird die Nachricht in Übereinstimmung mit der JSON-Nutzdatenspezifikation von {{site.data.keyword.iot_short_notm}} verschlüsselt. Informationen zum Hinzufügen von Unterstützung für Ihre eigenen angepassten Nachrichtenformate finden Sie in GitHub im [Beispiel für das Format angepasster Nachrichten](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat). 
+Als Nachrichtenformat wird standardmäßig `json` festgelegt; dies bedeutet, dass die Bibliothek das Verschlüsseln und Entschlüsseln der Python-Wörterverzeichnisobjekte im Format JSON unterstützt. Wenn als Nachrichtenformat `json-iotf` festgelegt ist, wird die Nachricht in Übereinstimmung mit der JSON-Nutzdatenspezifikation von {{site.data.keyword.iot_short_notm}} verschlüsselt. Informationen zum Hinzufügen von Unterstützung für Ihre eigenen angepassten Nachrichtenformate finden Sie in GitHub im [Beispiel für das Format angepasster Nachrichten](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat).
 
-Wenn Sie ein angepasstes Encodermodul erstellen, müssen Sie es wie im folgenden Beispiel dargestellt im Geräteclient registrieren: 
+Wenn Sie ein angepasstes Encodermodul erstellen, müssen Sie es wie im folgenden Beispiel dargestellt im Geräteclient registrieren:
 
 ```python
 

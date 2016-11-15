@@ -50,7 +50,7 @@ applicationClient.connect();
 ## Geräteereignisse subskribieren
 {: #subscribe_device_events}
 
-Geräte verwenden Ereignisse, um Daten in der {{site.data.keyword.iot_short_notm}}-Instanz zu publizieren. Das Gerät steuert den Inhalt des Ereignisses und ordnet jedem Ereignis, das von ihm gesendet wird, einen Namen zu. 
+Geräte verwenden Ereignisse, um Daten in der {{site.data.keyword.iot_short_notm}}-Instanz zu publizieren. Das Gerät steuert den Inhalt des Ereignisses und ordnet jedem Ereignis, das von ihm gesendet wird, einen Namen zu.
 
 Wenn ein Ereignis von der {{site.data.keyword.iot_short_notm}}-Instanz empfangen wird, geben die Berechtigungsnachweise des empfangenen Ereignisses das sendende Gerät an; dies bedeutet, dass ein Gerät nicht die Identität eines anderen Geräts annehmen kann.
 
@@ -106,6 +106,7 @@ applicationClient.eventCallback += processEvent;
 applicationClient.subscribeToDeviceEvents();
 ```
 In der folgenden Tabelle werden die Parameter der Callback-Methode für Ereignisse beschrieben:
+
 |Parameter|Datentyp|Beschreibung|
 |:---|:---|
 |`eventName`|Zeichenfolge|Gibt das Ereignis an. |
@@ -173,7 +174,7 @@ In der folgenden Tabelle werden die Parameter beschrieben, die in der Methode `p
 |`QoS`|Ganze Zahl| Die Servicequalität. Gültige Werte sind `0`, `1`, `2`. |
 
 
-## Befehle in Geräten publizieren
+## Befehle für Geräte publizieren
 {: #publish_commands_devices}
 
 Anwendungen können Befehle an verbundene Geräte publizieren.
@@ -183,6 +184,7 @@ applicationClient.connect();
 applicationClient.publishCommand(deviceType, deviceId, "testcmd", "json", data, 0);
 ```
 In der folgenden Tabelle werden die Parameter beschrieben, die in der Methode `publishCommand()` angegeben sind:
+
 |Parameter|Datentyp|Beschreibung|
 |:---|:---|
 |`deviceType`|Zeichenfolge| Der Gerätetyp. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'.|

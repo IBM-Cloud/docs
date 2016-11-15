@@ -54,23 +54,23 @@ Klicken Sie auf **Mehr anzeigen**, um eine vollständige Liste der Kartentypen a
  1.	Bennen Sie das Dataset mit einem eindeutigen Namen.
  2. Wählen Sie ein Ereignis aus, das den Datenpunkt enthält, den Sie anzeigen möchten.
  3.	Wählen Sie die Eigenschaft aus, die den Datenpunkt darstellt.
- 4.	Wählen Sie den Typ, die Einheit, die Genauigkeit und die minimalen und maximalen Werte für den Datenpunkt aus.
-Nach Beenden können Sie auf **Neues Dataset** klicken, um weitere Datasets hinzuzufügen, oder Sie können auf **Weiter** klicken. 
-5.	Wählen Sie die Visualisierung aus.
-Wählen Sie den Typ und die Größe der Visualisierung aus, die Sie verwenden möchten. Einige Kartentypen haben weitere Einstellungen.
+ 4.	Wählen Sie den Typ, die Einheit, die Genauigkeit und die minimalen und maximalen Werte für den Datenpunkt aus.  
+ Nach Beenden können Sie auf **Neues Dataset** klicken, um weitere Datasets hinzuzufügen, oder Sie können auf **Weiter** klicken.
+5.	Wählen Sie die Visualisierung aus.  
+Wählen Sie den Typ und die Größe der Visualisierung aus, die Sie verwenden möchten.  Einige Kartentypen haben weitere Einstellungen.
 <dl>
-<dt>Nutzung </dt>
+<dt>Nutzung</dt>
 <dd>
 <table>
 <thead>
 <tr>
-<th>Typ </th>
-<th>Angezeigte Daten </th>
+<th>Typ</th>
+<th>Angezeigte Daten</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Gerätetypen </td>
+<td>Gerätetypen</td>
 <td>Ein Kreisdiagramm, das die Anzahl der Geräte pro Gerätetyp anzeigt.</td>
 </tr><tr>
 <td>Übertragene Daten</td>
@@ -107,11 +107,11 @@ Wählen Sie den Typ und die Größe der Visualisierung aus, die Sie verwenden m�
 <tbody>
 <tr>
 <td>Generische Visualisierung</td>
-<td>Der Wert mindestens eines Datasets.</br>**Tipp:** Zum Anzeigen von bis zu drei Datenpunkten in einer kleinen Tabelle wählen Sie die große Widgetgröße aus.</td>
+<td>Der Wert mindestens eines Datasets. </br>**Tipp:** Zum Anzeigen von bis zu drei Datenpunkten in einer kleinen Tabelle wählen Sie die große Widgetgröße aus.  </td>
 </tr>
 <tr>
 <td>Echtzeitdiagramm</td>
-<td>Mindestens ein Dataset in einem Echtzeitdiagramm, in dem geblättert werden kann. Verwenden Sie das Menü 'Einstellungen', um den Datenbereich und die Aufbewahrungsdauer, die Darstellung und die Funktionsweise sowie weitere Einstellungen für die Diagramme festzulegen.</td>
+<td>Mindestens ein Dataset in einem Echtzeitdiagramm, in dem geblättert werden kann. Verwenden Sie das Menü 'Einstellungen', um den Datenbereich und die Aufbewahrungsdauer, die Darstellung und die Funktionsweise sowie weitere Einstellungen für die Diagramme festzulegen. </td>
 </tr>
 <tr>
 <td>Balkendiagramm</td>
@@ -127,7 +127,7 @@ Wählen Sie den Typ und die Größe der Visualisierung aus, die Sie verwenden m�
 </tr>
 <tr>
 <td>Messanzeige</td>
-<td>Als Messanzeige angezeigter Wert eines Datasets. Sie können Schwellenwerte für die Anzeige der Werte 'gut', 'akzeptabel' und 'kritisch' des Datasets konfigurieren. Mit dem Menü 'Einstellungen' können Sie für die Messanzeige optional Schwellenwerte für den unteren, mittleren und oberen Datenbereich festlegen.</td>
+<td>Als Messanzeige angezeigter Wert eines Datasets. Sie können Schwellenwerte für die Anzeige der Werte 'gut', 'akzeptabel' und 'kritisch' des Datasets konfigurieren. Mit dem Menü 'Einstellungen' können Sie für die Messanzeige optional Schwellenwerte für den unteren, mittleren und oberen Datenbereich festlegen.  </td>
 </tr>
 </tbody>
 </table>
@@ -179,7 +179,7 @@ Wählen Sie den Typ und die Größe der Visualisierung aus, die Sie verwenden m�
 </dd>
 </dl>
 
-6. Geben Sie die Datenquelle der Karte an.
+6. Geben Sie die Datenquelle der Karte an.  
 Je nach dem von Ihnen ausgewählten Kartentyp stammen die auf einer Karte angezeigten Daten möglicherweise von einem Gerät oder von einer anderen Karte. Wählen Sie als Datenquelle ein bestimmtes Gerät, eine Geräteliste oder eine Alertlistenkarte aus und klicken Sie auf **Weiter**.
 7. Nur Karten für Gerätetypen: Fügen Sie mindestens ein Dataset hinzu, das in der Karte angezeigt werden soll.   
  1. Klicken Sie auf **Verbindung für Dataset herstellen**, um eine Eigenschaft hinzuzufügen, die in der Karte angezeigt werden soll.
@@ -188,7 +188,7 @@ Je nach dem von Ihnen ausgewählten Kartentyp stammen die auf einer Karte angeze
  4. Geben Sie die anzuzeigende Eigenschaft ein oder wählen Sie sie aus.
  5. Geben Sie den Typ der Eigenschaft an und legen Sie optional die Einheit, die Genauigkeit sowie den Mindest- und den Maximalwert für die Eigenschaft fest.  
  6. Klicken Sie auf **Weiter**.
-7. Wählen Sie die Größe der Darstellung.
+7. Wählen Sie die Größe der Darstellung.   
 Bei bestimmten Kartentypen können Sie auf **Einstellungen** klicken, um zusätzliche Details für die Visualisierung zu konfigurieren. Klicken Sie auf **Weiter**.
 7. Geben Sie einen Titel und eine Beschreibung für die Karte ein, wählen Sie optional ein Farbschema aus und klicken Sie anschließend auf **Übergeben**, um die Karte zu erstellen.
 7.	Positionieren Sie abschließend die neue Karte in Ihrem Board, indem Sie sie an eine gute Position ziehen.  

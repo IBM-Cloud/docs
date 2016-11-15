@@ -12,7 +12,7 @@ copyright:
 {:pre: .pre}
 
 
-# mBed C++ für Geräteentwickler 
+# mBed C++ für Geräteentwickler
 {: #mbedcpp}
 
 Letzte Aktualisierung: 2. August 2016
@@ -22,43 +22,43 @@ Verwenden Sie die [mBed C++-Clientbibliothek](https://developer.mbed.org/teams/I
 {:shortdesc}
 
 
-Weitere Informationen finden Sie in [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/) unter [developer.mbed.org](https://developer.mbed.org/). 
+Weitere Informationen finden Sie in [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/) unter [developer.mbed.org](https://developer.mbed.org/).
 
-Die Bibliothek verwendet zwar C++, es wird jedoch vermieden, dynamische Speicherzuordnungen und STL-Funktionen zu verwenden, da die mBed-Geräte in manchen Fällen idiosynkratische Speichermodelle aufweisen, die Probleme bei der Portierbarkeit verursachen können. In jedem Fall ermöglicht die Bibliothek es Ihnen die Speicherbelegung so vorhersehbar wie möglich zu gestalten. 
+Die Bibliothek verwendet zwar C++, es wird jedoch vermieden, dynamische Speicherzuordnungen und STL-Funktionen zu verwenden, da die mBed-Geräte in manchen Fällen idiosynkratische Speichermodelle aufweisen, die Probleme bei der Portierbarkeit verursachen können. In jedem Fall ermöglicht die Bibliothek es Ihnen die Speicherbelegung so vorhersehbar wie möglich zu gestalten.
 
-## Abhängigkeiten 
+## Abhängigkeiten
 {: #dependencies}
 
-|Abhängigkeit  |Beschreibung |
+|Abhängigkeit |Beschreibung|
 |:---|:---|
-|[Eclipse Paho-MQTT-Bibliothek](https://developer.mbed.org/teams/mqtt/code/MQTT/) |Bietet eine MQTT-Clientbibliothek für mBed-Geräte. Weitere Informationen finden Sie unter [Embedded MQTT C/C++ Client Libraries](http://www.eclipse.org/paho/clients/c/embedded/). |
-|[Ethernet-Schnittstellenbibliothek](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/) |Eine mBed-IP-Bibliothek über Ethernet. |
+|[Eclipse Paho-MQTT-Bibliothek](https://developer.mbed.org/teams/mqtt/code/MQTT/)|Bietet eine MQTT-Clientbibliothek für mBed-Geräte. Weitere Informationen finden Sie unter [Embedded MQTT C/C++ Client Libraries](http://www.eclipse.org/paho/clients/c/embedded/).|
+|[Ethernet-Schnittstellenbibliothek](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/)|Eine mBed-IP-Bibliothek über Ethernet.|
 
-## Verwendung der Bibliothek 
+## Verwendung der Bibliothek
 {: #library_use}
 
-Verwenden Sie bei Verwendung der mBed C++-Clientbibliothek 'IBMIoTF' den [mBed-Compiler](https://developer.mbed.org/compiler/), um Ihre Anwendungen zu erstellen. Der mBed-Compiler stellt eine schlanke C/C++-Online-IDE zur Verfügung, die für das Schreiben, Kompilieren und Herunterladen von Programmen konfiguriert wurde, die auf Ihrem mBed-Mikrocontroller ausgeführt werden sollen. 
+Verwenden Sie bei Verwendung der mBed C++-Clientbibliothek 'IBMIoTF' den [mBed-Compiler](https://developer.mbed.org/compiler/), um Ihre Anwendungen zu erstellen. Der mBed-Compiler stellt eine schlanke C/C++-Online-IDE zur Verfügung, die für das Schreiben, Kompilieren und Herunterladen von Programmen konfiguriert wurde, die auf Ihrem mBed-Mikrocontroller ausgeführt werden sollen.
 
-**Hinweis:** Für die Ausführung von mBed müssen Sie nichts installieren oder einrichten. 
+**Hinweis:** Für die Ausführung von mBed müssen Sie nichts installieren oder einrichten.
 
 Informationen zur Vorgehensweise beim Herstellen einer Verbindung zwischen dem Mikrocontroller ARM mBed NXP LPC 1768 und {{site.data.keyword.iot_short_notm}} finden Sie in der Anleitung [mBed C++ Client Library for IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/).
 
-## Konstruktor 
+## Konstruktor
 {: #constructor}
 
-Der Konstruktor erstellt die Clientinstanz und akzeptiert folgende Parameter: 
+Der Konstruktor erstellt die Clientinstanz und akzeptiert folgende Parameter:
 
-|Parameter  |Beschreibung  |
+|Parameter |Beschreibung |
 |:---|:---|
-|`org` |Die ID Ihrer Organisation. Dieser Wert ist erforderlich. Wenn Sie einen Quickstart-Ablauf verwenden, geben Sie `quickstart` an. |
-|`type`   |Der Typ Ihres Geräts. Dieses Feld ist erforderlich. |
-|`id`   |Die ID Ihres Geräts. Dieses Feld ist erforderlich. |
-|`auth-method`   |Die Authentifizierungsmethode; hier handelt es sich um ein optionales Feld, das nur für den registrierten Ablauf erforderlich ist. Der einzige Wert, der aktuell unterstützt ist, lautet `token`. |
-|`auth-token`   |Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und Watson IoT Platform. Dies ist ein optionales Feld, das nur für einen registrierten Ablauf erforderlich ist. |
+|`org` |Die ID Ihrer Organisation. Dieser Wert ist erforderlich. Wenn Sie einen Quickstart-Ablauf verwenden, geben Sie `quickstart` an.|
+|`type`   |Der Typ Ihres Geräts. Dieses Feld ist erforderlich.|
+|`id`   |Die ID Ihres Geräts. Dieses Feld ist erforderlich.|
+|`auth-method`   |Die Authentifizierungsmethode; hier handelt es sich um ein optionales Feld, das nur für den registrierten Ablauf erforderlich ist. Der einzige Wert, der aktuell unterstützt ist, lautet `token`.|
+|`auth-token`   |Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und Watson IoT Platform. Dies ist ein optionales Feld, das nur für einen registrierten Ablauf erforderlich ist.|
 
-Diese Parameter erstellen Definitionen, die für die Interaktion mit dem {{site.data.keyword.iot_short_notm}}-Service verwendet werden. 
+Diese Parameter erstellen Definitionen, die für die Interaktion mit dem {{site.data.keyword.iot_short_notm}}-Service verwendet werden.
 
-Das folgende Codebeispiel zeigt, wie eine DeviceClient-Instanz mit dem Quickstart-Service von {{site.data.keyword.iot_short_notm}} interagieren kann: 
+Das folgende Codebeispiel zeigt, wie eine DeviceClient-Instanz mit dem Quickstart-Service von {{site.data.keyword.iot_short_notm}} interagieren kann:
 
 ```
   #include "DeviceClient.h"
@@ -82,9 +82,9 @@ Das folgende Codebeispiel zeigt, wie eine DeviceClient-Instanz mit dem Quickstar
   ....
 ```
 
-Wie im vorangegangenen Codebeispiel gezeigt, verwendet 'DeviceClient' zum Herstellen einer Verbindung zu {{site.data.keyword.iot_short_notm}} die MAC-Adresse des Geräts, wenn die Geräte-ID nicht angegeben ist. Der Gerätecode kann die Methode `getDeviceId()` verwenden, um die Geräte-ID aus der DeviceClient-Instanz abzurufen. 
+Wie im vorangegangenen Codebeispiel gezeigt, verwendet 'DeviceClient' zum Herstellen einer Verbindung zu {{site.data.keyword.iot_short_notm}} die MAC-Adresse des Geräts, wenn die Geräte-ID nicht angegeben ist. Der Gerätecode kann die Methode `getDeviceId()` verwenden, um die Geräte-ID aus der DeviceClient-Instanz abzurufen.
 
-Der folgende Codeblock zeigt, wie eine DeviceClient-Instanz erstellt wird, sodass sie mit der registrierten Organisation von {{site.data.keyword.iot_short_notm}} interagiert. 
+Der folgende Codeblock zeigt, wie eine DeviceClient-Instanz erstellt wird, sodass sie mit der registrierten Organisation von {{site.data.keyword.iot_short_notm}} interagiert.
 
 ```
   #include "DeviceClient.h"
@@ -103,10 +103,10 @@ Der folgende Codeblock zeigt, wie eine DeviceClient-Instanz erstellt wird, sodas
   ....
 ```
 
-## Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen 
+## Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen
 {: #connecting_to_iotp}
 
-Das Gerät kann eine Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen, indem es die Verbindungsfunktion in der DeviceClient-Instanz aufruft. 
+Das Gerät kann eine Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen, indem es die Verbindungsfunktion in der DeviceClient-Instanz aufruft.
 
 ```
   #include "DeviceClient.h"
@@ -120,7 +120,8 @@ Das Gerät kann eine Verbindung zu {{site.data.keyword.iot_short_notm}} herstell
 
 ```
 Nach dem erfolgreichen Herstellen der Verbindung kann das Gerät in {{site.data.keyword.iot_short_notm}} Ereignisse publizieren und für Befehle empfangsbereit sein.
-Das Gerät kann darüber hinaus den Status der Verbindung mithilfe der Methode `isConnected()` abfragen; dies wird im folgenden Beispiel gezeigt: 
+
+Das Gerät kann darüber hinaus den Status der Verbindung mithilfe der Methode `isConnected()` abfragen; dies wird im folgenden Beispiel gezeigt:
 
 ```
   #include "DeviceClient.h"
@@ -132,22 +133,22 @@ Das Gerät kann darüber hinaus den Status der Verbindung mithilfe der Methode `
 ```
 
 
-## Ereignisse publizieren 
+## Ereignisse publizieren
 {: #publishing_events}
 
-Ereignisse sind der Mechanismus, über den Geräte Daten in {{site.data.keyword.iot_short_notm}} publizieren. Das Gerät steuert den Inhalt des Ereignisses und ordnet jedem Ereignis, das von ihm gesendet wird, einen Namen zu. 
+Ereignisse sind der Mechanismus, über den Geräte Daten in {{site.data.keyword.iot_short_notm}} publizieren. Das Gerät steuert den Inhalt des Ereignisses und ordnet jedem Ereignis, das von ihm gesendet wird, einen Namen zu.
 
-Wenn ein Ereignis von der {{site.data.keyword.iot_short_notm}}-Instanz empfangen wird, geben die Berechtigungsnachweise des empfangenen Ereignisses das sendende Gerät an; dies bedeutet, dass ein Gerät nicht die Identität eines anderen Geräts annehmen kann. 
+Wenn ein Ereignis von der {{site.data.keyword.iot_short_notm}}-Instanz empfangen wird, geben die Berechtigungsnachweise des empfangenen Ereignisses das sendende Gerät an; dies bedeutet, dass ein Gerät nicht die Identität eines anderen Geräts annehmen kann.
 
-Ereignisse können mit einer beliebigen der drei durch das MQTT-Protokoll definierten [Servicequalitätsstufen (Qos)](../../reference/mqtt/index.html#qos-levels) publiziert werden. Standardmäßig werden Ereignisse mit der Servicequalitätsstufe (QoS) '0' publiziert. 
+Ereignisse können mit einer beliebigen der drei durch das MQTT-Protokoll definierten [Servicequalitätsstufen (Qos)](../../reference/mqtt/index.html#qos-levels) publiziert werden. Standardmäßig werden Ereignisse mit der Servicequalitätsstufe (QoS) '0' publiziert.
 
-### Ereignis mithilfe der standardmäßigen Servicequalität publizieren 
+### Ereignis mithilfe der standardmäßigen Servicequalität publizieren
 
-Das folgende Beispiel zeigt, wie folgende Datenpunkte im JSON-Format in {{site.data.keyword.iot_short_notm}} publiziert werden: 
+Das folgende Beispiel zeigt, wie folgende Datenpunkte im JSON-Format in {{site.data.keyword.iot_short_notm}} publiziert werden:
 
-- LPC1768, wie beispielsweise die X-, Y- und Z-Achse 
-- Joystickposition 
-- Aktuell gemessener Temperaturwert 
+- LPC1768, wie beispielsweise die X-, Y- und Z-Achse
+- Joystickposition
+- Aktuell gemessener Temperaturwert
 
 ```
 	boolean status = client.connect();
@@ -166,11 +167,11 @@ Das folgende Beispiel zeigt, wie folgende Datenpunkte im JSON-Format in {{site.d
 ```
 Das vollständige Beispiel finden Sie im [IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp).
 
-### Servicequalitätsstufe für ein Ereignis erhöhen 
+### Servicequalitätsstufe für ein Ereignis erhöhen
 
-Sie können die [Servicequalitätsstufen](../../reference/mqtt/index.html#qos-levels) für zu publizierende Ereignisse erhöhen. Ereignisse, die eine höhere Servicequalitätsstufe als `0` aufweisen, benötigen für die Publizierung möglicherweise mehr Zeit, da zusätzliche Empfangsbestätigungsinformationen enthalten sind. 
+Sie können die [Servicequalitätsstufen](../../reference/mqtt/index.html#qos-levels) für zu publizierende Ereignisse erhöhen. Ereignisse, die eine höhere Servicequalitätsstufe als `0` aufweisen, benötigen für die Publizierung möglicherweise mehr Zeit, da zusätzliche Empfangsbestätigungsinformationen enthalten sind.
 
-**Hinweis:** Der Modus für den Quickstart-Ablauf unterstützt nur Servicequalitätsstufe '0'. 
+**Hinweis:** Der Modus für den Quickstart-Ablauf unterstützt nur Servicequalitätsstufe '0'.
 
 ```
 	#include "MQTTClient.h"
@@ -190,10 +191,10 @@ Sie können die [Servicequalitätsstufen](../../reference/mqtt/index.html#qos-le
 	....
 ```
 
-### Verarbeiten des Verbindungsunterbrechungsfehlers beim Publizieren von Ereignissen 
+### Verarbeiten des Verbindungsunterbrechungsfehlers beim Publizieren von Ereignissen
 
 
-Wenn die Methode `publishEvent()` den falschen Wert zurückgibt, können Sie den Status der Verbindung überprüfen und die Methode `reConnect()` aufrufen, falls die Verbindung verloren wurde. 
+Wenn die Methode `publishEvent()` den falschen Wert zurückgibt, können Sie den Status der Verbindung überprüfen und die Methode `reConnect()` aufrufen, falls die Verbindung verloren wurde.
 
 ```
 	#include "MQTTClient.h"
@@ -211,20 +212,22 @@ Wenn die Methode `publishEvent()` den falschen Wert zurückgibt, können Sie den
 	....
 ```
 Die Bibliothek speichert keine Ereignisse, die während der Verbindungsunterbrechung publiziert wurden, sodass das Gerät die Methode `publishEvent()` erneut aufrufen muss, um diese Ereignisse nach dem erneuten Verbindungsaufbau zu senden.
-## Befehle verarbeiten 
+
+
+## Befehle verarbeiten
 {: #handling_commands}
 
 Wenn der Geräteclient eine Verbindung herstellt, subskribiert er automatisch alle für dieses Geräte geltenden Befehle. Zum Verarbeiten bestimmter Befehle müssen Sie eine Callback-Methode für Befehle registrieren.
-Die Nachrichten werden als Instanz der Befehlsklasse zurückgegeben, die folgende Eigenschaften aufweist: 
+Die Nachrichten werden als Instanz der Befehlsklasse zurückgegeben, die folgende Eigenschaften aufweist:
 
-|Eigenschaft  |Beschreibung |
+|Eigenschaft |Beschreibung|
 |:---|:---|
-|`command` | Der Name des aufgerufenen Befehls. |  
-|`format`  |Das Format des Ereignisses. Das Format kann eine beliebige Zeichenfolge sein, zum Beispiel 'JSON'.  |
-|`payload`  |Die Angaben für die Nutzdaten des Befehls. Die maximale Länge beträgt 131072 Byte.  |
+|`command` | Der Name des aufgerufenen Befehls.|  
+|`format`  |Das Format des Ereignisses. Das Format kann eine beliebige Zeichenfolge sein, zum Beispiel 'JSON'. |
+|`payload`  |Die Angaben für die Nutzdaten des Befehls. Die maximale Länge beträgt 131072 Byte. |
 
 
-Mit dem folgenden Code wird eine Callback-Beispielfunktion für Befehle definiert, die den Befehl für das LED-Blinkintervall von der Anwendung verarbeitet und zur DeviceClient-Instanz hinzufügt. 
+Mit dem folgenden Code wird eine Callback-Beispielfunktion für Befehle definiert, die den Befehl für das LED-Blinkintervall von der Anwendung verarbeitet und zur DeviceClient-Instanz hinzufügt.
 
 ```
     #include "DeviceClient.h"
@@ -263,18 +266,17 @@ Das vollständige Beispiel finden Sie im [IBMIoTClientLibrarySample](https://dev
 **Hinweis:** Damit Befehle empfangen werden, muss in bestimmten Abständen die Funktion `client.yield()` aufgerufen werden.
 Die Funktion `client.yield()` ermöglicht es dem Gerät, Befehle von Watson IoT Platform zu empfangen und die Verbindung aufrecht zu erhalten. Wenn die Funktion `client.yield()` nicht innerhalb des durch das Keepalive-Intervall vorgegebenen Zeitrahmens aufgerufen wird, werden von Watson IoT Platform gesendete Befehle nicht vom Gerät empfangen. Der der Funktion `client.yield()` zugeordnete Wert gibt die Länge der Zeit (in Millisekunden) an, während der Daten aus dem Socket gelesen werden können, bevor die Steuerung an die Anwendung zurückgegeben wird.
 
-
-## Verbindung zum Client trennen 
+## Verbindung zum Client trennen
 {: #disconnect_client}
 
-Zum Trennen der Verbindung zum Client und zum Freigeben der Verbindungen führen Sie das folgende Code-Snippet aus: 
+Zum Trennen der Verbindung zum Client und zum Freigeben der Verbindungen führen Sie das folgende Code-Snippet aus:
 
 ```
 	...
 	client.disconnect();
 	....
 ```
-## Beispiele 
+## Beispiele
 {: #samples}
 
 [IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/) ist ein Codebeispiel, in dem gezeigt wird, wie die {{site.data.keyword.iot_short_notm}}-Clientbibliothek zum Herstellen einer Verbindung zwischen den Geräten 'mbed LPC1768' oder 'FRDM-K64F' und der Serviceinstanz verwendet werden kann.

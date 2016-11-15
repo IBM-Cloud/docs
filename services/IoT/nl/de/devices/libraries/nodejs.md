@@ -12,7 +12,7 @@ copyright:
 {:pre: .pre}
 
 
-# Node.js für Geräteentwickler 
+# Node.js für Geräteentwickler
 {: #nodejs}
 Letzte Aktualisierung: 14. September 2016
 {: .last-updated}
@@ -20,33 +20,33 @@ Letzte Aktualisierung: 14. September 2016
 Sie können die Clientbibliotheken und Beispiele in Node.js anpassen, um Gerätecode zu erstellen und zu entwickeln, der mit Ihrer Organisation in {{site.data.keyword.iot_full}} interagiert.
 {:shortdesc}
 
-Verwenden Sie die bereitgestellten Informationen und Beispiele, um mit der Entwicklung Ihrer Geräte mithilfe von Node.js zu beginnen. 
+Verwenden Sie die bereitgestellten Informationen und Beispiele, um mit der Entwicklung Ihrer Geräte mithilfe von Node.js zu beginnen.
 
-## Node.js-Client und Ressourcen herunterladen 
+## Node.js-Client und Ressourcen herunterladen
 {: #node.js_client_downloads}
 
-Wechseln Sie für den Zugriff auf die Java-Clientbibliotheken für {{site.data.keyword.iot_short_notm}} und auf andere verfügbare Ressourcen in GitHub in das Repository [iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs) und folgen Sie den Installationsanweisungen. 
+Wechseln Sie für den Zugriff auf die Java-Clientbibliotheken für {{site.data.keyword.iot_short_notm}} und auf andere verfügbare Ressourcen in GitHub in das Repository [iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs) und folgen Sie den Installationsanweisungen.
 
 
-Weitere Informationen finden Sie in den folgenden Ressourcen: 
+Weitere Informationen finden Sie in den folgenden Ressourcen:
 
-- [Beispiele für Geräte](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples) in GitHub 
-- Das Repository [ibmiotf](https://www.npmjs.com/package/ibmiotf) in NPM 
+- [Beispiele für Geräte](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples) in GitHub
+- Das Repository [ibmiotf](https://www.npmjs.com/package/ibmiotf) in NPM
 
-## Konstruktor 
+## Konstruktor
 {: #constructor}
 
-Der Konstruktur erstellt die Geräteclientinstanz. Es wird eine Konfigurations-JSON akzeptiert, die die folgende Definitionen enthält: 
+Der Konstruktur erstellt die Geräteclientinstanz. Es wird eine Konfigurations-JSON akzeptiert, die die folgende Definitionen enthält:
 
-|Definition |Beschreibung  |
+|Definition |Beschreibung |
 |:---|:---|
-|`org` |Die ID Ihrer Organisation. |
-|`type`  |Der Typ Ihres Geräts. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'. |
-|`id`  |Die ID Ihres Geräts. In der Regel ist 'deviceId' bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse. |
-|`auth-method`   |Die zu verwendende Authentifizierungsmethode. Der einzige Wert, der aktuell unterstützt ist, lautet `token`. |
-|`auth-token`   |Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und Watson IoT Platform. Dieses Feld ist erforderlich, wenn für `auth-method` der Wert `token` eingestellt ist. |
+|`org` |Die ID Ihrer Organisation.|
+|`type`  |Der Typ Ihres Geräts. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'.|
+|`id`  |Die ID Ihres Geräts. In der Regel ist 'deviceId' bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse.|
+|`auth-method`   |Die zu verwendende Authentifizierungsmethode. Der einzige Wert, der aktuell unterstützt ist, lautet `token`.|
+|`auth-token`   |Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und Watson IoT Platform. Dieses Feld ist erforderlich, wenn für `auth-method` der Wert `token` eingestellt ist.|
 
-**Hinweis:** Wenn Sie den Quickstart-Service verwenden möchten, müssen Sie nur die ersten drei Eigenschaften übergeben. 
+**Hinweis:** Wenn Sie den Quickstart-Service verwenden möchten, müssen Sie nur die ersten drei Eigenschaften übergeben.
 
 ```
     var iotf = require("ibmiotf");
@@ -62,9 +62,9 @@ Der Konstruktur erstellt die Geräteclientinstanz. Es wird eine Konfigurations-J
     var deviceClient = new iotf.IotfDevice(config);
 ```
 
-### Konfigurationsdatei verwenden 
+### Konfigurationsdatei verwenden
 
-Statt die Konfiguration direkt zu übergeben, können Sie wie im folgenden Beispiel gezeigt eine JSON-Konfigurationsdatei verwenden, um die erforderlichen Konfigurationseigenschaften anzugeben: 
+Statt die Konfiguration direkt zu übergeben, können Sie wie im folgenden Beispiel gezeigt eine JSON-Konfigurationsdatei verwenden, um die erforderlichen Konfigurationseigenschaften anzugeben:
 
 
 ```  
@@ -73,6 +73,7 @@ Statt die Konfiguration direkt zu übergeben, können Sie wie im folgenden Beisp
     var deviceClient = new iotf.IotfDevice(config);  
 ```
 Die Konfigurationsdatei `device.json` muss folgendes Format aufweisen:
+
 ```
 	{
 	  "org": "xxxxx",
@@ -84,10 +85,10 @@ Die Konfigurationsdatei `device.json` muss folgendes Format aufweisen:
 
 ```  
 
-## Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen 
+## Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen
 {: #connecting_to_iotp}
 
-Sie können eine Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen, indem Sie die Funktion `connect` aufrufen. 
+Sie können eine Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen, indem Sie die Funktion `connect` aufrufen.
 
 ```
 	var iotf = require("ibmiotf");
@@ -111,14 +112,14 @@ Sie können eine Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen, 
 
 ```
 
-Nach dem erfolgreichen Herstellen einer Verbindung zum {{site.data.keyword.iot_short_notm}}-Service sendet der Geräteclient ein `connect`-Ereignis. Dieser Prozess bedeutet, dass sämtliche Gerätelogik innerhalb dieser Callback-Funktion implementiert werden kann. 
+Nach dem erfolgreichen Herstellen einer Verbindung zum {{site.data.keyword.iot_short_notm}}-Service sendet der Geräteclient ein `connect`-Ereignis. Dieser Prozess bedeutet, dass sämtliche Gerätelogik innerhalb dieser Callback-Funktion implementiert werden kann.
 
-Der Geräteclient versucht bei einem Verlust der Verbindung automatisch, die Verbindung wiederherzustellen. Wenn die Verbindungswiederholung erfolgreich ist, sendet der Client das Ereignis `reconnect`. 
+Der Geräteclient versucht bei einem Verlust der Verbindung automatisch, die Verbindung wiederherzustellen. Wenn die Verbindungswiederholung erfolgreich ist, sendet der Client das Ereignis `reconnect`.
 
-## Protokollierung 
+## Protokollierung
 {: #logging}
 
-Standardmäßig werden nur Protokollereignisse des Typs *warn* protokolliert. Wenn Sie eine höhere oder niedrigere Protokollebene einstellen möchten, verwenden Sie die Funktion 'log.setLevel'. Folgende Protokollebenen werden unterstützt: 
+Standardmäßig werden nur Protokollereignisse des Typs *warn* protokolliert. Wenn Sie eine höhere oder niedrigere Protokollebene einstellen möchten, verwenden Sie die Funktion 'log.setLevel'. Folgende Protokollebenen werden unterstützt:
 - trace
 - debug
 - info
@@ -134,29 +135,29 @@ Standardmäßig werden nur Protokollereignisse des Typs *warn* protokolliert. We
 	//Als Protokollebene 'debug' festlegen. Standardmäßig ist dies 'warn'
 	deviceClient.log.setLevel('debug');
 
-	```
+```
 
 
-## Ereignisse publizieren 
+## Ereignisse publizieren
 {: #publishing_events}
 
-Ereignisse sind der Mechanismus, über den Geräte Daten in {{site.data.keyword.iot_short_notm}} publizieren. Das Gerät steuert den Inhalt des Ereignisses und ordnet jedem Ereignis, das von ihm gesendet wird, einen Namen zu. 
+Ereignisse sind der Mechanismus, über den Geräte Daten in {{site.data.keyword.iot_short_notm}} publizieren. Das Gerät steuert den Inhalt des Ereignisses und ordnet jedem Ereignis, das von ihm gesendet wird, einen Namen zu.
 
-Wenn ein Ereignis von der {{site.data.keyword.iot_short_notm}}-Instanz empfangen wird, geben die Berechtigungsnachweise des empfangenen Ereignisses das sendende Gerät an; dies bedeutet, dass ein Gerät nicht die Identität eines anderen Geräts annehmen kann. 
+Wenn ein Ereignis von der {{site.data.keyword.iot_short_notm}}-Instanz empfangen wird, geben die Berechtigungsnachweise des empfangenen Ereignisses das sendende Gerät an; dies bedeutet, dass ein Gerät nicht die Identität eines anderen Geräts annehmen kann.
 
-Sie können die Servicequalitätsstufe für zu publizierende Ereignisse erhöhen. Ereignisse, die eine höhere Servicequalitätsstufe als `0` aufweisen, benötigen für die Publizierung möglicherweise mehr Zeit, da zusätzliche Empfangsbestätigungsinformationen enthalten sind. 
+Sie können die Servicequalitätsstufe für zu publizierende Ereignisse erhöhen. Ereignisse, die eine höhere Servicequalitätsstufe als `0` aufweisen, benötigen für die Publizierung möglicherweise mehr Zeit, da zusätzliche Empfangsbestätigungsinformationen enthalten sind.
 
-**Hinweis:** Der Modus für den Quickstart-Ablauf unterstützt nur Servicequalitätsstufe `0`. 
+**Hinweis:** Der Modus für den Quickstart-Ablauf unterstützt nur Servicequalitätsstufe `0`.
 
 
-Ereignisse können mit folgenden Eigenschaften publiziert werden: 
+Ereignisse können mit folgenden Eigenschaften publiziert werden:
 
-|Eigenschaft  |Beschreibung |
+|Eigenschaft |Beschreibung|
 |:---|:---|
 |`eventType`  | Der Typ des zu publizierenden Ereignisses, beispielsweise 'status' oder 'GPS'. |  
 |`eventFormat`  |Das Format des Ereignisses, zum Beispiel 'JSON'. |
-|`data`  | Die Nutzdaten des Ereignisses, bei denen es sich um eine Pufferzeichenfolge handeln muss.  |
-|`QoS`  | Die MQTT-Servicequalität für das zu publizierende Ereignis. Unterstützt sind die Werte '0', '1' und '2'. |
+|`data`  | Die Nutzdaten des Ereignisses, bei denen es sich um eine Pufferzeichenfolge handeln muss. |
+|`QoS`  | Die MQTT-Servicequalität für das zu publizierende Ereignis. Unterstützt sind die Werte '0', '1' und '2'.|
 
 
 ```
@@ -175,18 +176,17 @@ Ereignisse können mit folgenden Eigenschaften publiziert werden:
 
 ```
 
-## Befehle verarbeiten 
+## Befehle verarbeiten
 {: #handling_commands}
 
-Wenn der Geräteclient eine Verbindung herstellt, subskribiert er automatisch alle für dieses Gerät geltenden Befehle. Zum Verarbeiten bestimmter Befehle müssen Sie eine Callback-Funktion für Befehle registrieren.
-Der Geräteclient ruft die Callback-Funktion für Befehle auf, wenn ein Befehl empfangen wird. Die Callback-Funktion weist folgende Eigenschaften auf: 
+Wenn der Geräteclient eine Verbindung herstellt, subskribiert er automatisch alle für dieses Gerät geltenden Befehle. Zum Verarbeiten bestimmter Befehle müssen Sie eine Callback-Funktion für Befehle registrieren. Der Geräteclient ruft die Callback-Funktion für Befehle auf, wenn ein Befehl empfangen wird. Die Callback-Funktion weist folgende Eigenschaften auf:
 
-|Eigenschaft  |Beschreibung |
+|Eigenschaft |Beschreibung|
 |:---|:---|
-|`commandName`  | Zeichenfolge, die den Namen des aufgerufenen Befehls angibt.  |  
-|`format`  | Zeichenfolge, die das Format des Ereignisses (beispielsweise JSON) angibt.  |
-|`payload`  | Zeichenfolge, die das Datum der Nutzdaten für den Befehl angibt.   |
-|`topic`  | Bei einer Publizierung als Gerät ist der Gerätetyp oder die Geräte-ID nicht in der Topic-Zeichenfolge (format_string) enthalten; diese Angaben werden aus der Client-ID übernommen. Beispiel: `iot-2/evt/event_id/fmt/format_string`. Wenn als Anwendung oder Gateway im Namen eines Geräts publiziert wird, muss das Topic den Gerätetyp (device_type) und die Geräte-ID (device_id) einschließen. Beispiel: `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
+|`commandName`  | Zeichenfolge, die den Namen des aufgerufenen Befehls angibt. |  
+|`format`  | Zeichenfolge, die das Format des Ereignisses (beispielsweise JSON) angibt. |
+|`payload`  | Zeichenfolge, die das Datum der Nutzdaten für den Befehl angibt.  |
+|`topic`  | Bei einer Publizierung als Gerät ist der Gerätetyp oder die Geräte-ID nicht in der Topic-Zeichenfolge (format_string) enthalten; diese Angaben werden aus der Client-ID übernommen.  Beispiel: `iot-2/evt/event_id/fmt/format_string`.  Wenn als Anwendung oder Gateway im Namen eines Geräts publiziert wird, muss das Topic den Gerätetyp (device_type) und die Geräte-ID (device_id) einschließen.  Beispiel: `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
 
 
 ```
@@ -212,10 +212,10 @@ Der Geräteclient ruft die Callback-Funktion für Befehle auf, wenn ein Befehl e
 
 ```
 
-## Fehlerbehandlung 
+## Fehlerbehandlung
 {: #handling_errors}
 
-Wenn der Geräteclient einen Fehler feststellt, sendet er das Ereignis *error*. 
+Wenn der Geräteclient einen Fehler feststellt, sendet er das Ereignis *error*.
 
 ```
 	var deviceClient = new Client.IotfDevice(config);
@@ -235,10 +235,10 @@ Wenn der Geräteclient einen Fehler feststellt, sendet er das Ereignis *error*.
 
 ```
 
-## Verbindung zum Client trennen 
+## Verbindung zum Client trennen
 {: #disconnecting_client}
 
-Das folgende Beispiel zeigt, wie Sie die Verbindung zum Client trennen und freigeben können: 
+Das folgende Beispiel zeigt, wie Sie die Verbindung zum Client trennen und freigeben können:
 
 ```
 	var deviceClient = new Client.IotfDevice(config);

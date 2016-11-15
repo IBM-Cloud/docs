@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="architecture_contracts.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\docs-staging\services\IoT\blockchain\images\architecture_contracts.png"
+   inkscape:export-filename="C:\2.DTP\BM110ABD142\ge\iot\blockchain\images\bitmap.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132"><defs
    id="defs5647">
@@ -504,15 +504,16 @@
    fit-margin-left="0"
    fit-margin-right="0"
    fit-margin-bottom="0"
-   inkscape:zoom="2.18"
-   inkscape:cx="256.75439"
-   inkscape:cy="384.55254"
-   inkscape:window-width="1920"
-   inkscape:window-height="1019"
-   inkscape:window-x="-9"
-   inkscape:window-y="1041"
+   inkscape:zoom="1.1782485"
+   inkscape:cx="358.04308"
+   inkscape:cy="288.9883"
+   inkscape:window-width="1600"
+   inkscape:window-height="848"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg5645" />
+
 
 
 
@@ -692,6 +693,7 @@
    width="149.25003"
    id="rect79371-1-6-6-9-8-7-3-5-2"
    style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+
 
 
 
@@ -1134,22 +1136,30 @@
    style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000253px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
    x="68.478607"
-   y="305.19809"
+   y="297.19809"
    id="text18189-6-6"
-   sodipodi:linespacing="125%"><tspan
+   sodipodi:linespacing="100%"><tspan
      sodipodi:role="line"
      x="68.478607"
-     y="305.19809"
+     y="297.19809"
      id="tspan5855">IoT-Blockchain</tspan><tspan
      sodipodi:role="line"
      x="68.478607"
-     y="318.94809"
-     id="tspan6878-4-2">Benutzerschnittstelle für die Überwachung</tspan><tspan
+     y="310.94809"
+     id="tspan6878-4-2">Benutzerschnitt-</tspan><tspan
      sodipodi:role="line"
      x="68.478607"
-     y="332.69809"
+     y="324.69809"
+     id="tspan3677">stelle für die </tspan><tspan
+     sodipodi:role="line"
+     x="68.478607"
+     y="338.44809"
+     id="tspan3679">Überwachung</tspan><tspan
+     sodipodi:role="line"
+     x="68.478607"
+     y="352.19809"
      id="tspan18193-1-8" /></text>
 <g
    id="g18195-6"
@@ -1194,7 +1204,7 @@
 <text
    sodipodi:linespacing="125%"
    y="172.62276"
-   x="547.18237"
+   x="541.44421"
    font-size="11"
    id="text59612"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
@@ -1286,7 +1296,7 @@
 <text
    sodipodi:linespacing="125%"
    y="260.681"
-   x="547.41492"
+   x="541.67676"
    font-size="11"
    id="text59612-2"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
@@ -1502,6 +1512,7 @@
 
 
 
+
     image
        y=&quot;504.73132&quot;
        x=&quot;627.01056&quot;
@@ -1534,10 +1545,15 @@
      x="616.237"
      y="414.98035"
      id="tspan6878-8-6"
-     style="font-size:7.5px">Intelligente Verträge</tspan><tspan
+     style="font-size:7.5px">Intelligente </tspan><tspan
      sodipodi:role="line"
      x="616.237"
      y="424.35535"
+     style="font-size:7.5px"
+     id="tspan3675">Verträge</tspan><tspan
+     sodipodi:role="line"
+     x="616.237"
+     y="433.73035"
      id="tspan18193-4-2"
      style="font-size:7.5px" /></text>
 <rect
@@ -1586,20 +1602,25 @@
      x="62.891602"
      y="404.75803"
      id="tspan6808-7-5"
-     style="font-size:7.5px">Beispiele von IBM </tspan><tspan
+     style="font-size:7.5px">Beispiele </tspan><tspan
      sodipodi:role="line"
      x="62.891602"
      y="414.13303"
      style="font-size:7.5px"
-     id="tspan6778" /><tspan
+     id="tspan3681">von IBM </tspan><tspan
      sodipodi:role="line"
      x="62.891602"
      y="423.50803"
+     style="font-size:7.5px"
+     id="tspan6778" /><tspan
+     sodipodi:role="line"
+     x="62.891602"
+     y="432.88303"
      id="tspan6878-8-6-8"
      style="font-size:7.5px" /><tspan
      sodipodi:role="line"
      x="62.891602"
-     y="432.88303"
+     y="442.25803"
      id="tspan18193-4-2-0"
      style="font-size:7.5px" /></text>
 <g
@@ -1636,7 +1657,7 @@
 <text
    sodipodi:linespacing="125%"
    y="443.44968"
-   x="111.78802"
+   x="107.96255"
    font-size="11"
    id="text59612-3-7"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
@@ -1679,7 +1700,7 @@
 <text
    sodipodi:linespacing="125%"
    y="441.75061"
-   x="641.7254"
+   x="637.89996"
    font-size="11"
    id="text59612-3-7-4"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
@@ -1789,6 +1810,7 @@
      x="71.955322"
      y="114.79636"
      id="tspan9810">Dashboard</tspan></text>
+
 
 
 
@@ -1915,6 +1937,7 @@
 
 
 
+
 =======
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; refs/remotes/IBM-Bluemix/master
   <text
@@ -1949,39 +1972,43 @@
      style="font-size:7.5px" /></text>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000286px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    x="444.38809"
-   y="521.97601"
+   y="517.97601"
    id="text18189-1-2-3-4"
-   sodipodi:linespacing="125%"><tspan
+   sodipodi:linespacing="100%"><tspan
      sodipodi:role="line"
      id="tspan18191-0-2-0-6"
      x="444.38809"
-     y="521.97601" /><tspan
+     y="517.97601" /><tspan
      sodipodi:role="line"
      x="444.38809"
-     y="535.72601"
-     id="tspan8202-5-5-6">Setup der Entwicklungsumgebung</tspan><tspan
+     y="528.97601"
+     id="tspan8202-5-5-6">Setup der Entwick-</tspan><tspan
      sodipodi:role="line"
      x="444.38809"
-     y="546.03174"
+     y="539.97601"
+     id="tspan3683">lungsumgebung</tspan><tspan
+     sodipodi:role="line"
+     x="444.38809"
+     y="548.22058"
      id="tspan6808-7-4-7"
-     style="font-size:7.5px">Hyperledger-Peer-Container</tspan><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.50000143px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Hyperledger-Peer-Container</tspan><tspan
      sodipodi:role="line"
      x="444.38809"
-     y="555.40674"
-     style="font-size:7.5px"
+     y="555.72058"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.50000143px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      id="tspan3696">mit bereitgestelltem </tspan><tspan
      sodipodi:role="line"
      x="444.38809"
-     y="564.78174"
+     y="563.22058"
      id="tspan6878-8-6-3-0"
-     style="font-size:7.5px">Chaincode-Container</tspan><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.50000143px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Chaincode-Container</tspan><tspan
      sodipodi:role="line"
      x="444.38809"
-     y="574.15674"
+     y="570.72058"
      id="tspan18193-4-2-5-7"
-     style="font-size:7.5px" /></text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000286px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start" /></text>
 <g
    id="g3967"
    transform="matrix(1.2500001,0,0,-1.2500002,592.27454,385.39189)">

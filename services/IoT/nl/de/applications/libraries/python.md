@@ -24,7 +24,6 @@ Verwenden Sie Python, um Anwendungen zu erstellen und zu entwickeln, die in {{si
 
 Verwenden Sie die bereitgestellten Informationen und Beispiele, um mit der Entwicklung von Anwendungen mithilfe von Python zu beginnen.
 
-
 ## Python-Client und Ressourcen herunterladen
 {: #python_client_download}
 
@@ -76,6 +75,7 @@ except ibmiotf.ConnectionException as e:
 ...
 ```
 Die Anwendungskonfigurationsdatei muss das folgende Format aufweisen:
+
 ```python
 
 [application]
@@ -335,7 +335,7 @@ client.publishEvent(myDeviceType, myDeviceId, "status", "json", myData)
 ```
 
 
-## Befehle in Geräten publizieren
+## Befehle für Geräte publizieren
 {: #publishing_commands_devices}
 
 
@@ -519,7 +519,7 @@ except IoTFCReSTException as e:
 ### Gerätetyp löschen
 
 
-Mit der Methode `deleteDeviceType()` können Sie in Ihrer {{site.data.keyword.iot_short_notm}}-Organisation einen Gerätetyp löschen. 
+Mit der Methode `deleteDeviceType()` können Sie in Ihrer {{site.data.keyword.iot_short_notm}}-Organisation einen Gerätetyp löschen.
 
 ```python
 
@@ -657,7 +657,7 @@ apiCli.registerDevice(deviceTypeId, deviceId, metadata, deviceInfo, location)
 
 Mit der Methode `deleteDevice()` können Sie in der {{site.data.keyword.iot_short_notm}}-Organisation ein Gerät aus einer Organisation entfernen. Wenn Sie ein Gerät mithilfe der Methode `deleteDevice()` löschen, müssen Sie die Parameter 'deviceTypeId' und 'deviceId' angeben.
 
-Das folgende Codebeispiel zeigt das für diese Methode erforderliche Format: 
+Das folgende Codebeispiel zeigt das für diese Methode erforderliche Format:
 
 ```python
 apiCli.deleteDevice(deviceTypeId, deviceId)

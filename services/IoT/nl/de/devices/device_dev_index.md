@@ -17,7 +17,8 @@ copyright:
 Letzte Aktualisierung: 26. August 2016
 {: .last-updated}
 
-Es werden Clientbibliotheken, Beispiele und Informationen bereitgestellt, die Sie beim Herstellen von Verbindungen zwischen Geräten und Ihrer {{site.data.keyword.iot_full}}-Organisation sowie Anwendungen unterstützen.{:shortdesc}
+Es werden Clientbibliotheken, Beispiele und Informationen bereitgestellt, die Sie beim Herstellen von Verbindungen zwischen Geräten und Ihrer {{site.data.keyword.iot_full}}-Organisation sowie Anwendungen unterstützen.
+{:shortdesc}
 
 Um Geräte mit {{site.data.keyword.iot_short}} zu verbinden, können Sie Code schreiben, indem Sie folgende unterstützte Protokolle und Standards verwenden.
 

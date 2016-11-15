@@ -318,6 +318,7 @@ In diesem Beispiel wird das folgende Erweiterungs-JSON-Dokument verwendet:
 
 ```
 In diesem Erweiterungspackage für das Gerätemanagement sind folgende Aktionen definiert:
+
 - **installPlugin**
 - **enablePlugin**
 - **disablePlugin**
@@ -344,6 +345,7 @@ Geräte, die für die `<Organisations-ID>` der Organisation registriert wurden, 
 
 ```
 Das Gerät empfängt von {{site.data.keyword.iot_short_notm}} folgende Antwort:
+
 ```
 	Eingehende Nachricht vom Server:
 
@@ -355,6 +357,7 @@ Das Gerät empfängt von {{site.data.keyword.iot_short_notm}} folgende Antwort:
 
 ```
 Zu diesem Zeitpunkt können Sie die in der Erweiterung `exampleIoT-exampleDeviceType-v1` definierten Geräteaktionen initiieren.
+
 Zum Initiieren der Aktion `installPlugin` werden folgende Nutzdaten verwendet:
 
 ```
@@ -384,6 +387,7 @@ Zum Initiieren der Aktion `installPlugin` werden folgende Nutzdaten verwendet:
 
 ```
 Verwenden Sie den folgenden REST-API-Befehl, um die Anforderung zu initiieren:
+
 `POST https://<Organisations-ID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
 Wenn der Befehl übergeben wurde, empfangen die Geräte `device0` und `device1` des Typs `exampleDeviceType` folgende MQTT-Nachricht:
