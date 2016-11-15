@@ -100,7 +100,7 @@ La mancata immissione delle credenziali corrette comporterà il ricevimento di u
 
 ## general
 {: #general}
-* [Aggiunta di un servizio alla tua applicazione](/docs/reqnsi.html){: new_window}
+* [Aggiunta di un servizio alla tua applicazione](/docs/services/reqnsi.html){: new_window}
 * [Sviluppo end-to-end](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [Listino prezzi di {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/){: new_window}
 * [Prerequisiti di {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

@@ -99,7 +99,7 @@ en el cuerpo de mensaje.
 
 ## General
 {: #general}
-* [Adición de un servicio a la aplicación](/docs/reqnsi.html){: new_window}
+* [Adición de un servicio a la aplicación](/docs/services/reqnsi.html){: new_window}
 * [Desarrollo de principio a fin](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [Hoja de precios de {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/){: new_window}
 * [Requisitos previos de {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

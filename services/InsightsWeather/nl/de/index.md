@@ -85,7 +85,7 @@ Antwortteil eine Nachricht über unberechtigten Zugriff ausgegeben.
 
 ## Allgemeines
 {: #general}
-* [Hinzufügen eines Service zur Anwendung](/docs/reqnsi.html){: new_window}
+* [Hinzufügen eines Service zur Anwendung](/docs/services/reqnsi.html){: new_window}
 * [End-to-End-Entwicklung](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} Preisliste](https://console.{DomainName}/pricing/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} Voraussetzungen](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

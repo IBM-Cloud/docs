@@ -73,7 +73,7 @@ lastupdated: "2016-07-01"
 
 ## 一般信息
 {: #general}
-* [Adding a service to your application](/docs/reqnsi.html){: new_window}
+* [Adding a service to your application](/docs/services/reqnsi.html){: new_window}
 * [端到端开发](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [{{site.data.keyword.Bluemix_notm}}价格表](https://console.{DomainName}/pricing/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}}先决条件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

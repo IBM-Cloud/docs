@@ -99,7 +99,7 @@ lastupdated: "2016-07-28"
 
 ## 일반
 {: #general}
-* [애플리케이션에 서비스 추가](/docs/reqnsi.html){: new_window}
+* [애플리케이션에 서비스 추가](/docs/services/reqnsi.html){: new_window}
 * [엔드-투-엔드 개발](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} 가격 책정 시트](https://console.{DomainName}/pricing/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} 전제조건](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}
