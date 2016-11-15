@@ -89,7 +89,7 @@ A falha ao inserir credenciais adequadas resultará em uma mensagem "Desautoriza
 
 ## gerais
 {: #general}
-* [Incluindo um serviço em seu aplicativo](/docs/reqnsi.html){: new_window}
+* [Incluindo um serviço em seu aplicativo](/docs/services/reqnsi.html){: new_window}
 * [Desenvolvimento de ponta a ponta](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [Folha de precificação do {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/){: new_window}
 * [Pré-requisitos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

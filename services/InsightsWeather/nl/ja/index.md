@@ -79,6 +79,6 @@ lastupdated: "2016-07-01"
 ## 一般
 {: #general}
 * [アプリケーションへのサービスの追加](/docs/reqnsi.html){: new_window}
-* [エンドツーエンド開発](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
+* [エンドツーエンド開発](https://console.{DomainName}/docs/services/cfapps/ee.html){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} 価格設定シート](https://console.{DomainName}/pricing/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} 前提条件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

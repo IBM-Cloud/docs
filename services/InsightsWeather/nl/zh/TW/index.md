@@ -75,7 +75,7 @@ lastupdated: "2016-07-01"
 
 ## 一般
 {: #general}
-* [將服務新增至您的應用程式](/docs/reqnsi.html){: new_window}
+* [將服務新增至您的應用程式](/docs/services/reqnsi.html){: new_window}
 * [端對端開發](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} 定價單](https://console.{DomainName}/pricing/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} 必要條件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}
