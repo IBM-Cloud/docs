@@ -14,35 +14,31 @@ copyright:
 # About {{site.data.keyword.contdelivery_short}}    
 {: #cd_about}  
 
-Last updated: 11 November 2016
+Last updated: 15 November 2016
 {: .last-updated}
 
-{{site.data.keyword.contdelivery_full}} allows you to build, test, and deliver apps using DevOps best practices and leading industry tools. 
+With {{site.data.keyword.contdelivery_full}}, you can build, test, and deliver applications by using DevOps practices and industry-leading tools. 
 {:shortdesc}
 
-Using the {{site.data.keyword.contdelivery_short}} service, you can complete the following tasks:
+The {{site.data.keyword.contdelivery_short}} service supports your DevOps workflows:
 
- * Create integrated DevOps toolchains to enable tool integrations that support your development, deployment, and operations tasks. 
+ * You can create integrated DevOps toolchains to enable tool integrations that support your development, deployment, and operations tasks. 
  
-  Toolchains provide an integrated set of tools to build, deploy, and manage your apps. You can create toolchains that include {{site.data.keyword.Bluemix_notm}} services, open source tools, and third party tools that make development and operations repeatable and easier to manage.
+  A toolchain is an integrated set of tools that you can use to collaboratively develop, build, deploy, test, and manage applications. You can create toolchains that include {{site.data.keyword.Bluemix_notm}} services, open source tools, and third-party tools, such as GitHub, PagerDuty, and Slack, that make development and operations repeatable and easier to manage.
  
- * Deliver continuously using an automated pipeline. 
+ * Deliver continuously by using automated pipelines. 
  
   Automate builds, unit tests, deployments, and more. Build, test, and deploy in a repeatable way with minimal human intervention. Be ready to release into production at any time.
  
- * Edit and push your code from anywhere using the rich web-based IDE. 
+ * Edit and push your code from anywhere by using the web-based IDE. 
  
-  You can choose to use the web-integrated environment built on Eclipse Orion. Create, edit, run, debug, and complete source control tasks, and seemlessly move from editing your code to deploying it to production.
+  Create, edit, run, and debug, and complete source-control tasks in GitHub. Seemlessly move from editing your code to deploying it to production.
  
- * Improve quality through Insights. 
+ * Improve quality through {{site.data.keyword.DRA_short}}. 
  
-  Understand build status, security scan results, code coverage, and test coverage to evaluate whether to promote your app to the next environment. Use policy gates to automatically ensure quality before promotion.
+  Understand the dynamics of your team as it develops and delivers code. Learn how users interact with your application. Review data to help you manage your application's operations.
   
- * Maximize uptime and user satisfaction. 
  
-  You can use the {{site.data.keyword.Bluemix_notm}} Availability Monitoring service to help your DevOps team make sure that applications are always available and meet user expectations for response time as you roll out continuous updates.
-
-
 # Related Links
 {: #rellinks}
 
