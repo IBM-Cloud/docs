@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-26" 
+lastupdated: "2016-11-16" 
 
 ---
 
@@ -46,7 +46,7 @@ In addition, there is a set of services and components that are included or opti
 |Optional | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} is a service that you can use to send notifications to iOS and Android device. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. |
 |Optional | [{{site.data.keyword.SecureGateway}}](/docs/services/SecureGateway/secure_gateway.html) | The {{site.data.keyword.SecureGateway}} service provides a secure way to connect {{site.data.keyword.Bluemix_notm}} applications to remote locations on-premises or in the cloud.  |
 |Optional | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | For increased redundancy, {{site.data.keyword.sescashort}} provides a replica of a session stored in the cache. Therefore, in the event of a brownout or outage, your client application maintains access to the session in the cache. The service supports session caching scenarios for web and mobile applications. |
-| Included | [Toolchains (beta)](/docs/toolchains/toolchains_overview.html) | A toolchain is a set of tool integrations that support development, deployment, and operations tasks. Toolchains are available in Dedicated environments, but the tool integrations that are available to you depend on how {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} was set up on your specific environment. |
+| Optional | [Toolchains (beta)](/docs/toolchains/toolchains_overview.html) | A toolchain is a set of tool integrations that support development, deployment, and operations tasks. Toolchains are available in Dedicated environments, but the tool integrations that are available to you depend on how {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} was set up on your specific environment. |
 |Optional | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | This service lets your apps communicate with and consume data collected by your connected devices, sensors and gateways. The base offering permits running a private version of the {{site.data.keyword.iot_full}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 1.6 TB of data exchange. |
 
 There are optional components that are available for you to purchase to scale and extend the capacity of your resources and services. You can purchase any of these components by contacting the sales team; go to [Contact us](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) for information about contacting a sales representative. To increase your plan for a service, you can select the plan from the service tile in your catalog.
