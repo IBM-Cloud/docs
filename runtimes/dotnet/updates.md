@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-06"
 
 ---
 
@@ -11,7 +12,6 @@ copyright:
 # Latest Updates to the ASP.NET Core buildpack
 {: #latest_updates}
 
-Last Updated: 6 October 2016
 
 A list of the latest updates in the aspnet buildpack.
 

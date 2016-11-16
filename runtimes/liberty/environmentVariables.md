@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 # Environment variables
 {: #environment_variables}
 
-Last Updated: 8 November 2016
-{: .last-updated}
-
 Environment variables supported by Liberty for Java.
 
 <table>
@@ -26,12 +24,12 @@ Environment variables supported by Liberty for Java.
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>Enable [App Management utilities](../../manageapps/app_mng.html)</td>
+<td>Enable [App Management utilities](/docs/manageapps/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>Install [App Management utilities](../../manageapps/app_mng.html)</td>
+<td>Install [App Management utilities](/docs/manageapps/app_mng.html)</td>
 </tr>
 
 <tr>

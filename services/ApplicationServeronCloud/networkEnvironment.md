@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-28"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # Network environment
 {: #networkEnvironment}
-Last updated: 28 October 2016
-{: .last-updated}
 
 After your WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} service instance is provisioned, you can access your VM in several ways. You can connect over a secure VPN to get SSH, traditional WebSphere Admin Console, and application access to your VM. You can also connect your VM to the internet with a public IP address.
 

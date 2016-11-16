@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Using New Relic
 {: #new_relic}
-
-Last Updated: 10 June 2016
-{: .last-updated}
 
 New Relic is a third-party service that provides monitoring metrics for your application. For more information on what the New Relic service provides, see [New Relic](http://newrelic.com/java).
 

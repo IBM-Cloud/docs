@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-09"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Logging and tracing
 {: #logging_tracing}
-
-Last Updated: 9 November 2016
-{: .last-updated}
 
 ## Log files
 {: #log_files}

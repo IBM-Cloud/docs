@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-04-15"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Application Server on Cloud topics
 {: #topics}
-
-*Last updated: 15 April 2016*
-{: .last-updated}
 
 1. [overview](indexWAS4Bluemix.html)
 2. [maintenanceAndUpdates](maintenanceAndUpdates.html)

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-08"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # Latest updates
 {: #latest_updates}
-Last updated: 8 November 2016
-{: .last-updated}
 
 A list of the latest updates to the service.
 
