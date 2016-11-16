@@ -8,7 +8,7 @@ copyright:
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 07 November 2016
+Last updated: 16 November 2016
 {: .last-updated}
 
 You can enable Android applications to receive push notifications to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.
@@ -200,7 +200,9 @@ MFPPushNotificationListener notificationListener = new MFPPushNotificationListen
 
 To register the notificationListener object with push, call the **MFPPush.listen()** method. This method is typically called from the **onResume()** method of the activity that is handling push notifications.
 
-1. To register the notificationListener object with push, call the **listen()** method. This method is typically called from the **onResume()** method of the activity that is handling push notifications.
+1. To register the notificationListener object with push, call the **listen()** method. This method is typically called from the **onResume()** and **onPause** methods of the activity that is handling push notifications.
+
+
 ```
 @Override
 protected void onResume(){
@@ -208,6 +210,19 @@ protected void onResume(){
    if(push != null) {
        push.listen(notificationListener);
    }
+}
+```
+	{: codeblock}
+
+
+
+```
+@Override
+protected void onPause() {
+    super.onPause();
+    if (push != null) {
+        push.hold();
+    }
 }
 ```
 	{: codeblock}
