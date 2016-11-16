@@ -18,7 +18,7 @@ copyright:
 
 # Working with {{site.data.keyword.deliverypipeline}}s {: #pipeline-working}  
 
-Last Updated: 15 November 2016
+Last Updated: 16 November 2016
 {: .last-updated}
 
 To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
@@ -40,33 +40,38 @@ Complete these steps to set up a {{site.data.keyword.deliverypipeline}} for an e
 1. From the hamburger menu, click **Services**, and then click **DevOps**.
 1. Click **Pipelines**, and then click **Create a Pipeline**.
 
-If you want to create a pipeline that is configured to deploy a Cloud Foundry application:    
+To [create a pipeline (Link opens in a new window)](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:    
 
-1. Select **Cloud Foundry**.  
-1. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the pipeline's default name.
-1. The app's name identifies it in Bluemix. If you want to use a different name, change the app's default name.
-1. If you don't have any existing toolchains, we'll create a toolchain for you. The toolchain will allow you to extend the capabilities of your pipeline by integrating with other tools and services. A default toolchain name is provided. If you want to use a different name, change the toolchain's name.
-1. If you already have toolchains, select the toolchain that you want to use, or enter a name for the new toolchain that you want to create.
-1. Provide the location of your GitHub repo:
+1. Click **Cloud Foundry**.  
+1. If you want to use a different name for the pipeline, change its default name. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}. 
+1. If you want to use a different name for the application, change its default name. The application's name identifies it in {{site.data.keyword.Bluemix_notm}}. This name is the application that the pipeline deploys to. 
+1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. Pipelines are managed by toolchains. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services.
 
-  a. If you already have a GitHub repo and want to use it, for the repository type, select **Link**. Search for the location of the repo or select the repo from the list of available repos.
+ **Tip**: Pipelines and toolchains belong to organizations (orgs). If you belong to an org that has toolchains, you can use those toolchains even if you didn't create them.
  
-  b. If you want to create an empty GitHub repo, for the repository type, select **New**. Type a name for the repo.
+1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
+1. Provide the location of your GitHub repo.
+
+ **Tip**: If you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, you are prompted to click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
+
+   * If you have a GitHub repo and want to use it, for the repository type, select **Existing**. Search for the location of the repo or select the repo from the list of available repos.
+   
+   * If you want to create an empty GitHub repo, for the repository type, select **New**. Type a name for the repo.
+   
+   * If you want to create a clone of a GitHub repo, for the repository type, select **Clone**. Search for the location of the repo or select the repo from the list of available repos.
+   
+   * If you want to fork a GitHub repo so that you can contribute changes through pull requests, select **Fork**. Search for the location of the repo or select the repo from the list of available repos.
  
-  c. If you want to create a copy of a GitHub repo, for the repository type, select **Copy**. Search for the location of the repo or select the repo from the list of available repos.
- 
-  d. If you want to fork a GitHub repo so that you can contribute changes through pull requests, select **Fork**. Search for the location of the repo or select the repo from the list of available repos.
- 
-1. Click **Create**. The pipeline is created, configured, and represented as a tile on the Toolchain's Overview page. 
+1. Click **Create**. The pipeline is created, configured, and displayed on the toolchain's Overview page. 
  ![Pipeline tile](images/cd_pipeline.png)
 
-If you want to create an empty pipeline without any pre-configured stages:
+To create an [empty pipeline (Link opens in a new window)](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
 
- 1. Select **Custom**.
- 1. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}. If you want to use a different name, change the pipeline's default name.
- 1. If you don't have any existing toolchains, we'll create a toolchain for you. The toolchain will allow you to extend the capabilities of your pipeline by integrating with other tools and services. A default toolchain name is provided. If you want to use a different name, change the toolchain's name.
- 1. If you already have toolchains, select the toolchain that you want to use, or enter a name for the new toolchain that you want to create.
- 1. Click **Create**. An empty pipeline is created and represented as a tile on the Toolchain's Overview page. 
+1. Click **Custom**.
+1. If you want to use a different name for the pipeline, change its default name. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}. 
+1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. Pipelines are managed by toolchains. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services.
+1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
+1. Click **Create**. An empty pipeline is created and represented as a tile on the toolchain's Overview page.
 
 From your {{site.data.keyword.deliverypipeline}} tile, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.  
 
