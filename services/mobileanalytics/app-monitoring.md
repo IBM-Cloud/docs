@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-10-31"
 
 ---
 # Monitoring applications with {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
-
-Last updated: 27 September 2016
-{: .last-updated}
 
 The {{site.data.keyword.mobileanalytics_full}} provides monitoring and analytics for your mobile applications. You can record application logs and monitor data with the {{site.data.keyword.mobileanalytics_short}} Client SDK. Developers can control when to send this data to the {{site.data.keyword.mobileanalytics_short}} Service. When data is delivered to {{site.data.keyword.mobileanalytics_short}}, you can use the {{site.data.keyword.mobileanalytics_short}} dashboard to get analytics insights about your mobile applications, devices, and application logs.
 {: shortdesc}
@@ -197,7 +194,7 @@ The **Crash Overview** table shows the following data columns:
 
 You can quickly see information about your application crashes the **Crashes** table. <!--In the **Overview** page of the **Dashboard** section,--> The **Crashes** bar graph shows a histogram of crashes over time.
 
-You can display data in two ways:
+You can display crash data in two ways:
 
 1. Display crash rate: crash rate over time
 2. Display total crashes: total crashes over time
@@ -205,7 +202,7 @@ You can display data in two ways:
 ### App crash troubleshooting
 {: #app-crash-troubleshooting}
 
-You can view the **Troubleshooting** page in the <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} Console to better administer your apps.
+The **Troubleshooting** page in the <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} Console offers a granular view of your app crashes.
 
 The **Crash Summary** table is sortable and includes the following data columns:
 
@@ -216,7 +213,7 @@ The **Crash Summary** table is sortable and includes the following data columns:
 * OS
 * Message
 
-Click on the + icon next to any entry to display the **Crash Details** table, which includes the following columns:
+Click the + icon next to any entry to display the **Crash Details** table, which includes the following columns:
 
 * Time Crashed
 * Application Version
@@ -229,4 +226,23 @@ Expand any entry in the **Crash Details** table to get more details, including a
 
 **Note**: The data for the **Crash Summary** table is populated by querying the fatal level app logs. If your application does not collect fatal application logs, no data is available.
 
+## Monitoring network requests
+{: #monitor-network-requests}
+
+
+View network request data for your applications in the {{site.data.keyword.mobileanalytics_short}} Console. 
+
+Data is available for the following measurements:
+	
+* Round Trip Time - defines the length of time, measured in ms, that it takes for your app to make network requests.
+* Request Count - displays how often an app makes network requests. Data also displays as an average.
+
+<!--
+## Exporting data to dashDB
+{: #dashdb}
+
+The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+
+Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
+-->
 
