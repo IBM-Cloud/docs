@@ -17,12 +17,12 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Extending the {{site.data.keyword.deliverypipeline}} service
+# Extending the {{site.data.keyword.deliverypipeline}} 
 {: #deliverypipeline_extending}
-Last updated: 29 August 2016
+Last updated: 16 November 2016
 {: .last-updated}
 
-You can extend the capabilities of the {{site.data.keyword.deliverypipeline}} service by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.
+You can extend the {{site.data.keyword.deliverypipeline}} capabilities by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -74,7 +74,7 @@ Before you begin, [review the Terms of Use for the service](http://www-03.ibm.co
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select the check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you already configured the service and bound app in your Bluemix space already, or if you want to [configure these requirements manually](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave the check box cleared.
+    * If you configured the service and bound app in your Bluemix space already, or if you want to [configure these requirements manually](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave the check box cleared.
 
   f. In the **Minutes to wait for analysis to complete** field, type a value of 0 - 59 minutes. The default value is 5 minutes. A URL to the Static Analyzer dashboard is in the console logs at the end of the job.
 
