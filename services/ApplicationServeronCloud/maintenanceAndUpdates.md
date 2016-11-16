@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-28"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # Maintenance and VM updates
 {: #maintenance_and_vm_updates}
-Last updated: 28 October 2016
-{: .last-updated}
 
 ## Maintenance Strategy
 {: #maintenance_strategy}

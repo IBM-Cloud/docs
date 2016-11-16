@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-*Last Updated: 06 July 2016*
-{: .last-updated}
 
 The Ruby runtime on {{site.data.keyword.Bluemix}} is powered by the ruby_buildpack.
 The ruby_buildpack provides a complete runtime environment for Ruby apps.
@@ -24,7 +23,7 @@ The ruby_buildpack is used if your app has a Gemfile in the root directory. It w
 {: #starter_application}
 
 {{site.data.keyword.Bluemix}} provides a Ruby starter application.  The Ruby starter application is a simple Ruby app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the  {{site.data.keyword.Bluemix}}
-environment.  See [Using the starter applications](../../cfapps/starter_app_usage.html) for help with using the starter application.
+environment.  See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter application.
 
 ## Runtime versions
 {: #runtime_versions}

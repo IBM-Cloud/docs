@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # Tomcat
 {: #tomcat_runtime}
-Last Updated: 20 October 2016
-{: .last-updated}
 
 The Tomcat runtime on {{site.data.keyword.Bluemix}} is powered by the java_buildpack.
 {: shortdesc}
@@ -29,7 +28,7 @@ For more information about the Tomcat runtime, see the
 ## Starter application
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} provides a Tomcat starter application.  The Tomcat starter application is a simple Tomcat app that provides a template that you can use. You can experiment with the starter app, and make and push changes to the Bluemix environment. See [Using the starter applications](../../cfapps/starter_app_usage.html) for help with using the starter application.
+{{site.data.keyword.Bluemix}} provides a Tomcat starter application.  The Tomcat starter application is a simple Tomcat app that provides a template that you can use. You can experiment with the starter app, and make and push changes to the Bluemix environment. See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter application.
 
 ## Runtime versions
 {: #runtime_versions}

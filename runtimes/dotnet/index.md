@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,8 +12,6 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-Last updated: 10 November 2016
-{: .last-updated}
 
 The ASP.NET Core runtime on {{site.data.keyword.Bluemix}} is powered by the ASP.NET Core buildpack. ASP.NET Core 
 is a modular open source framework for building .NET web applications.
@@ -37,7 +35,7 @@ The Bluemix ASP.NET Core buildpack is used if there are one or more folders cont
 ## Starter application
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} provides an ASP.NET Core starter application.  The ASP.NET Core starter application is a simple app that provides a template that you can use. You can experiment with the starter app, and make and push changes to the Bluemix environment.  See [Using the starter applications](../../cfapps/starter_app_usage.html) for help with using the starter application.
+{{site.data.keyword.Bluemix}} provides an ASP.NET Core starter application.  The ASP.NET Core starter application is a simple app that provides a template that you can use. You can experiment with the starter app, and make and push changes to the Bluemix environment.  See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter application.
 
 ## Runtime versions
 {: #runtime_versions}
@@ -55,7 +53,7 @@ Control the .NET CLI version with an optional global.json in the application's r
 ```
 {: codeblock}
 
-For a list of supported CLI versions see [Latest Updates to the ASP.NET Core Buildpack](../../runtimes/dotnet/updates.html). If not specified, the most current stable Release Candidate is used.
+For a list of supported CLI versions see [Latest Updates to the ASP.NET Core Buildpack](/docs/runtimes/dotnet/updates.html). If not specified, the most current stable Release Candidate is used.
 
 ### Customizing NuGet package sources
 
@@ -80,7 +78,7 @@ To most closely match how the application runs in Bluemix, follow the Linux inst
 The Yeoman tool can be used to generate new project templates as described in
 [Building Projects with Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html).
 
-For information about developing locally using Visual Studio, see [Developing with Visual Studio](../../starters/deploy_vs.html){: new_window}.
+For information about developing locally using Visual Studio, see [Developing with Visual Studio](/docs/starters/deploy_vs.html){: new_window}.
 
 ## Pushing a Published Application
 {: #pushing_published_app}

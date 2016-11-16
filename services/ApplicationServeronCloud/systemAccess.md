@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-26"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 #System Access
 {: #system_access}
-Last updated: 26 October 2016
-{: .last-updated}
 
 
 Methods of creating and managing a service instance are discussed in this section, along with various ways to access and setup access to your systems.

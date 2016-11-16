@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-Last Updated: 15 September 2016
-{: .last-updated}
 
 The Node.js runtime on {{site.data.keyword.Bluemix}} is powered by the sdk-for-nodejs buildpack.
 The sdk-for-nodejs buildpack provides a complete runtime environment for Node.js apps.
@@ -24,7 +23,7 @@ The sdk-for-nodejs buildpack is used when the application contains a **package.j
 ## Starter application
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} provides a Node.js starter applications.  The Node.js starter application is a simple Node.js app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the Bluemix environment  See [Using the starter applications](../../cfapps/starter_app_usage.html) for help with using the starter application.
+{{site.data.keyword.Bluemix}} provides a Node.js starter applications.  The Node.js starter application is a simple Node.js app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the Bluemix environment  See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter application.
 
 ## Startup command
 {: #starup_commmand}
@@ -77,12 +76,12 @@ With this code, when the application is running on Bluemix, the PORT environment
 See [Offline mode](offlineMode.html) for information on controlling the buildpack's access to external sites. 
 
 ## App Management
-{{site.data.keyword.Bluemix}} provides a number of utilities for managing and debugging your Node.js app.  See [App Management](../../manageapps/app_mng.html) for complete details.
+{{site.data.keyword.Bluemix}} provides a number of utilities for managing and debugging your Node.js app.  See [App Management](/docs/manageapps/app_mng.html) for complete details.
 
 ## Available versions
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} provides all the [currently available Node.js runtimes](http://nodejs.org/dist/). Of those, IBM provides versions which contain enhancements and bug fixes. See [Latest Updates to the Node.js Buildpack](../../runtimes/nodejs/updates.html) for more information.
+{{site.data.keyword.Bluemix}} provides all the [currently available Node.js runtimes](http://nodejs.org/dist/). Of those, IBM provides versions which contain enhancements and bug fixes. See [Latest Updates to the Node.js Buildpack](/docs/runtimes/nodejs/updates.html) for more information.
 
 The IBM Node.js buildpack caches the IBM runtime versions. So if you use IBM SDK for Node.js runtime in your application, you get faster application performance when your application is pushed to Bluemix.
 
@@ -155,7 +154,7 @@ Expess app may help work around that. For example you can do the following in yo
 See this [stackoverflow post](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
 for more information.
 
-**NOTE** [App Management](../../manageapps/app_mng.html) and FIPS_MODE are *NOT* simultaneously supported.  If the BLUEMIX_APP_MGMT_ENABLE environment variable is set and the FIPS_MODE environment variables is set to true, the app will fail to stage.
+**NOTE** [App Management](/docs/manageapps/app_mng.html) and FIPS_MODE are *NOT* simultaneously supported.  If the BLUEMIX_APP_MGMT_ENABLE environment variable is set and the FIPS_MODE environment variables is set to true, the app will fail to stage.
 
 There are various methods of checking the state of FIPS_MODE:
 <ul>
@@ -278,7 +277,7 @@ Typically the current **sdk-for-nodejs** buildpack and a back-level version are 
 {: #rellinks}
 ## general
 {: #general}
-* [Latest Updates to the Node.js Buildpack](../../runtimes/nodejs/updates.html)
-* [App Management](../../manageapps/app_mng.html)
+* [Latest Updates to the Node.js Buildpack](/docs/runtimes/nodejs/updates.html)
+* [App Management](/docs/manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [IBM API Connect](https://strongloop.com/)

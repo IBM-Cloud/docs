@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-15"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Customizing the JRE
 {: #customizing_jre}
-
-Last Updated: 15 August 2016
-{: .last-updated}
 
 Applications are run in a Java runtime environment (JRE) that is provided and configured by the Liberty buildpack. The Liberty buildpack also makes it possible to configure the JRE version or type, customize the JVM options, or overlay the JRE functions.
 
@@ -109,7 +107,7 @@ Applications can customize the JVM options with the specifications that are defi
 <tr>
 <td> OpenJDK </td>
 <td>is based on the HotSpot runtime that has the notation of -X for non-standard, -XX for developer options, and Boolean flags to enable or disable the option </td>
-<td>[HotSpot Runtime Overview](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html) </td>
+<td>[HotSpot Runtime Overview](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
