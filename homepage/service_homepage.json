@@ -38,11 +38,6 @@
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "Try toolchains",
-    "href": "toolchains/toolchains_overview.html",
-    "category_id": "devops"
-  }, {
-    "type": "extra",
     "title": "Try Dedicated GitHub Enterprise",
     "href": "services/ghededicated/index.html",
     "category_id": "devops"
