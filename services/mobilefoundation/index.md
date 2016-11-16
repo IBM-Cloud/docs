@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated:  "2016-08-31"
+lastupdated:  "2016-11-16"
 
 ---
 
@@ -56,6 +56,10 @@ After you create an instance of the {{site.data.keyword.mobilefoundation_short}}
     * To create a {{site.data.keyword.mobilefirst_notm}} server instance with advanced configuration for topology, security, and other server configuration, click **Start Server with Advanced Configuration**. See [Setting up advanced configuration](c_using_mfs_p2.html#using_mfs_advanced_p2), for more information.
 
 Go to [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/) to learn more about how to get started with {{site.data.keyword.mobilefoundation_short}}.
+
+##  Known limitations
+
+* The {{site.data.keyword.mobilefoundation_short}} service UI does not use the user selected locale-specific pattern to display numbers.
 
 
 # Related Links
