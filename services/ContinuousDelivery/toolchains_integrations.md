@@ -13,7 +13,7 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-Last updated: 11 November 2016
+Last updated: 16 November 2016
 {: .last-updated}
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
@@ -54,9 +54,9 @@ Configure the {{site.data.keyword.deliverypipeline}} to automate the continuous 
 1. Specify a name for your new pipeline.
 1. If you plan to use your pipeline to deploy a user interface, select the **Show apps in the VIEW APP menu** check box. All of the apps that your pipeline creates are shown in the **View App** list on the toolchain's Overview page.
 1. Click **Create Integration** to add the {{site.data.keyword.deliverypipeline}} to your toolchain.
-1. Click the tile for {{site.data.keyword.deliverypipeline}} to view the pipeline and configure it. To learn the basics of configuring a pipeline, see [Building and deploying pipelines (Link opens in a new window)](../services/DeliveryPipeline/build_deploy.html){: new_window}.
+1. Click the tile for {{site.data.keyword.deliverypipeline}} to view the pipeline and configure it. To learn the basics of configuring a pipeline, see [Building and deploying pipelines](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}.
 
-  **Tip**: If you want to trigger the pipeline when you push changes to your GitHub or {{site.data.keyword.ghe_short}} repository (repo), you must configure GitHub or {{site.data.keyword.ghe_short}} for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub or {{site.data.keyword.ghe_short}} repos that is associated with your toolchain. For instructions to configure GitHub, see  [GitHub](#github) section. For instructions to configure Dedicated GitHub Enterprise, see [Getting started with {{site.data.keyword.ghe_long}} (Link opens in a new window)](../services/ghededicated/index.html){: new_window}.
+  **Tip**: If you want to trigger the pipeline when you push changes to your GitHub or {{site.data.keyword.ghe_short}} repository (repo), you must configure GitHub or {{site.data.keyword.ghe_short}} for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub or {{site.data.keyword.ghe_short}} repos that is associated with your toolchain. For instructions to configure GitHub, see the [GitHub](#github) section. For instructions to configure Dedicated GitHub Enterprise, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}.
   
 1. Optional: If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Public and you want Sauce Labs to run tests on your app, configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test job. For instructions to configure the test job, see the [Configuring a Sauce Labs test job in your pipeline](#config_saucelabs) section.
 
@@ -111,7 +111,7 @@ Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your 
 
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous Delivery tile, click **View Toolchain**. Then, click **Overview**. 
 1. Click **Add a Tool**.
-1. In the Tool Integrations section, click **DevOps Insights**. 
+1. In the Tool Integrations section, click **{{site.data.keyword.DRA_short}}**. 
 1. Click **Create Integration**.
 1. Click the tile for {{site.data.keyword.DRA_short}}, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline. For more information, see [{{site.data.keyword.DRA_short}} (Link opens in a new window)](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){: new_window}.
 
@@ -131,7 +131,7 @@ To complete source control tasks, add the Eclipse Orion {{site.data.keyword.webi
 1. Click **Create Integration**.
 1. Click the tile for the new Eclipse Orion {{site.data.keyword.webide}}. Your workspace is pre-populated with your GitHub or {{site.data.keyword.ghe_short}} repos. The repos that are associated with your current toolchain are highlighted.
 
-To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}} (Link opens in a new window)](../../services/ContinuousDelivery/web_ide.html){: new_window}.
+To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webide}}](/docs/services/ContinuousDelivery/web_ide.html){: new_window}.
 
 
 ## Configuring GitHub
@@ -176,13 +176,13 @@ For more information, see [GitHub (Link opens in a new window)](https://www.ibm.
 ## Configuring Dedicated GitHub Enterprise
 {: #configghe}
 
-{{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated GitHub Enterprise is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated GitHub Enterprise and GitHub Issues, see [Using Dedicated GitHub Enterprise (Link opens in a new window)](../services/ghededicated/index.html){: new_window} and [GitHub Issues (Link opens in a new window)](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
+{{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated GitHub Enterprise is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated GitHub Enterprise and GitHub Issues, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} and [GitHub Issues (Link opens in a new window)](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
 
-You can configure {{site.data.keyword.ghe_short}} as a tool integration in your toolchain so that you can manage source code in your company's [{{site.data.keyword.Bluemix_notm}} Dedicated (Link opens in a new window)](../dedicated/index.html#dedicated){: new_window} instance.
+You can configure {{site.data.keyword.ghe_short}} as a tool integration in your toolchain so that you can manage source code in your company's [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} instance.
 
 1. If you are configuring this tool integration as you are creating the toolchain, follow these steps:
 
- a. Before you log in to Dedicated GitHub Enterprise for the first time, ask your company's region administrator to add your user ID to your {{site.data.keyword.Bluemix_notm}} Dedicated instance from your company's user registry by using LDAP. For information about setting up your {{site.data.keyword.ghe_short}} account, see [Using Dedicated GitHub Enterprise (Link opens in a new window)](../services/ghededicated/index.html){: new_window}.
+ a. Before you log in to Dedicated GitHub Enterprise for the first time, ask your company's region administrator to add your user ID to your {{site.data.keyword.Bluemix_notm}} Dedicated instance from your company's user registry by using LDAP. For information about setting up your {{site.data.keyword.ghe_short}} account, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}.
  
  b. In the Configurable Integrations section, click **{{site.data.keyword.ghe_short}}**.    
  
@@ -203,7 +203,7 @@ You can configure {{site.data.keyword.ghe_short}} as a tool integration in your 
  
 1. To use GitHub Issues for issue tracking, select the **Enable GitHub Issues** check box.
 1. Click **Create Integration**.
-1. Click the tile for the {{site.data.keyword.ghe_short}} repo that you want to work with. Your company's [{{site.data.keyword.Bluemix_notm}} Dedicated (Link opens in a new window)](../dedicated/index.html#dedicated){: new_window} instance opens, where you can view the contents of the repo.
+1. Click the tile for the {{site.data.keyword.ghe_short}} repo that you want to work with. Your company's [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} instance opens, where you can view the contents of the repo.
  
   **Tip**: You can use the integrated source code management tools in Eclipse Orion {{site.data.keyword.webide}} to edit the {{site.data.keyword.ghe_short}} repo and deploy an app from your workspace.
 
