@@ -70,7 +70,7 @@ You can create a toolchain from your app. The toolchain can support continuous d
 ##Getting started with toolchains: Dedicated
 {: #getting_started_dedicated}
 
-Each toolchain is associated with a specific org and any user that is a member of that org can access its associated toolchains. Before you create a toolchain, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) in the menu bar to open the Account and Support widget and view the org that you are working in. If that org is not the org where you want to create the toolchain, switch to another org.
+Each toolchain is associated with a specific org and any user that is a member of that org can access its associated toolchains. Before you create a toolchain, click the **{{site.data.keyword.avatar}}** icon in the menu bar to open the Account and Support widget and view the org that you are working in. If that org is not the org where you want to create the toolchain, switch to another org.
 
 ###Creating a toolchain from a template   
 {: #creating_a_toolchain_from_a_template_dedicated}
