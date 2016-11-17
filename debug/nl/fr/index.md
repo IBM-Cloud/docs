@@ -16,10 +16,7 @@ copyright:
 # Débogage
 {: #debugging}
 
-*Dernière mise à jour : 25 mai 2016*
-{: .last-updated}
-
-Si vous rencontrez des problèmes avec {{site.data.keyword.Bluemix}}, vous pouvez afficher les fichiers journaux et déboguer les erreurs. 
+Si vous rencontrez des problèmes avec {{site.data.keyword.Bluemix}}, vous pouvez afficher les fichiers journaux et déboguer les erreurs.
 {:shortdesc}
 
 Les journaux fournissent des informations telles que l'exécution réussie d'un travail ou son échec. Ils fournissent également des informations
@@ -47,17 +44,17 @@ La procédure suivante présente l'utilisation de la commande `cf logs` pour dé
 
   1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} en entrant la commande suivante sur l'interface de ligne de commande cf :
      ```
-	 cf api https://api.ng.bluemix.net
+	 cf api https://api.stage1.ng.bluemix.net
 	 ```
-	 
+
   2. Connectez-vous à {{site.data.keyword.Bluemix_notm}} en entrant `cf login`.
-  
+
   3. Procédez à l'extraction des fichiers journaux récents en entrant la commande `cf logs nom_app --recent`. Si vous souhaitez filtrer un fichier journal prolixe, utilisez l'option `grep`. Par exemple, vous pouvez entrer le code suivant pour afficher les journaux [STG] seulement :
     ```
 	cf logs nom_app --recent | grep '\[STG\]'
 	```
   4. Regardez la première erreur qui apparaît dans le journal.
-  
+
 Si vous utilisez le plug-in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} pour déployer des applications, vous pouvez examiner dans l'onglet
 **Console** de l'outil Eclipse des journaux similaires à la sortie de la commande cf logs. Vous pouvez également ouvrir une fenêtre Eclipse distincte pour contrôler `les journaux` au cours du déploiement de l'application.
 
@@ -92,7 +89,7 @@ sortie du composant DEA au cours de la phase de constitution.
 {: screen}
 
 
-Pour une application Node.js, le composant DEA utilise les informations du fichier `package.json` pour télécharger les modules. A partir de cette erreur, vous pouvez voir que l'erreur s'est produite pour le module. Il peut être nécessaire de vérifier la ligne 18 du fichier `package.json`. 
+Pour une application Node.js, le composant DEA utilise les informations du fichier `package.json` pour télécharger les modules. A partir de cette erreur, vous pouvez voir que l'erreur s'est produite pour le module. Il peut être nécessaire de vérifier la ligne 18 du fichier `package.json`.
 
 ```
 15   "jade": "~1.3.0",
@@ -116,13 +113,13 @@ Une virgule figure à la fin de la ligne 17, une paire clé-valeur est donc atte
 
 ## Débogage d'erreurs d'exécution
 {: #debugging-runtime-errors}
-Si vous rencontrez des problèmes lors de l'exécution de votre application, les journaux peuvent vous aider à déterminer la cause de l'erreur et à y remédier. 
+Si vous rencontrez des problèmes lors de l'exécution de votre application, les journaux peuvent vous aider à déterminer la cause de l'erreur et à y remédier.
 
-La journalisation de sortie standard et d'erreur standard peut être activée. Pour plus d'informations sur la manière de configurer les fichiers journaux pour des applications déployées à l'aide du pack de construction intégré {{site.data.keyword.Bluemix_notm}}, consultez la liste ci-après :
+La journalisation vers stdout (sortie standard) et stderr (erreur standard) peut être activée. Pour plus d'informations sur la manière de configurer les fichiers journaux pour des applications déployées à l'aide du pack de construction intégré {{site.data.keyword.Bluemix_notm}}, consultez la liste ci-après :
 
   * Pour les applications Liberty for Java™, voir [Liberty Profile: Logging and Trace](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
   * Pour les applications Node.js, voir [How
-to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}. 
+to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
   * Pour les applications PHP, voir [error_log](http://php.net/manual/en/function.error-log.php){: new_window}.
   * Pour les applications Python, voir [Logging
 HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}.
@@ -130,33 +127,37 @@ HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}.
 [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * Pour les applications Ruby Sinatra, voir
 [Logging](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
-  
+
 Lorsque vous entrez la commande `cf logs nom_app --recent` dans l'interface de ligne de commande cf, seuls les journaux les plus
 récents s'affichent. Pour accéder aux erreurs précédentes, vous devez extraire tous les journaux. Pour ce faire, utilisez l'une des méthodes suivantes :
-<dl> 
-<dt><strong>Service {{site.data.keyword.Bluemix_notm}} Monitoring and Analytics</strong></dt> 
-<dd>Les fonctionnalités intégrées de recherche et d'analyse de fichier journal du service Monitoring and Analytics permettent d'identifier rapidement les erreurs. Pour plus d'informations, voir <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Contrôle et analyse</a>.</dd> 
-<dt><strong>Outils tiers </strong></dt> 
+<dl>
+<dt><strong>Service {{site.data.keyword.Bluemix_notm}} Monitoring and Analytics</strong></dt>
+<dd>Les fonctionnalités intégrées de recherche et d'analyse de fichier journal du service Monitoring and Analytics permettent d'identifier rapidement les erreurs. Pour plus d'informations, voir <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Contrôle et analyse</a>.</dd>
+<dt><strong>Outils tiers </strong></dt>
 <dd>Vous pouvez collecter et exporter les journaux de votre application sur un hôte de journaux externe. Pour plus d'informations, voir
-<a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">Configuration d'hôtes de journaux externes</a>.</dd> 
-<dt><strong>Scripts pour collecter et exporter les journaux  </strong></dt> 
-<dd>Pour utiliser un script permettant de collecter et d'exporter automatiquement les journaux vers un fichier externe, vous devez vous connecter au serveur {{site.data.keyword.Bluemix_notm}} depuis votre ordinateur et disposer de suffisamment d'espace pour y télécharger les journaux. Pour plus d'informations, voir <a href="../support/index.html#collecting-diagnostic-information" target="_blank">Collecte d'informations de diagnostic</a>. </dd>
+<a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">Configuration d'hôtes de journaux externes</a>.</dd>
+<dt><strong>Scripts pour collecter et exporter les journaux  </strong></dt>
+<dd>Pour utiliser un script permettant de collecter et d'exporter automatiquement les journaux vers un fichier externe, vous devez vous connecter à la
+console {{site.data.keyword.Bluemix_notm}} depuis votre ordinateur et disposer de suffisamment d'espace pour télécharger les journaux. Pour plus d'informations, voir <a href="../support/index.html#collecting-diagnostic-information" target="_blank">Collecte d'informations de diagnostic</a>. </dd>
 </dl>
 
 Auparavant, les fichiers `stdout.log` et `stderr.log` étaient accessibles par défaut via la vue d'application dans
-le tableau de bord {{site.data.keyword.Bluemix_notm}}, sous **Fichiers** > **journaux**. Toutefois, cette journalisation d'application n'est plus disponible dans la version en cours de Cloud Foundry, où {{site.data.keyword.Bluemix_notm}} est hébergé. Pour que la journalisation de sortie standard et d'erreur standard reste accessible via le tableau de bord {{site.data.keyword.Bluemix_notm}} sous
-**Fichiers** > **journaux**, vous pouvez rediriger la journalisation vers d'autres fichiers du système de
-fichiers {{site.data.keyword.Bluemix_notm}}, selon le contexte d'exécution que vous utilisez. 
+la console {{site.data.keyword.Bluemix_notm}}, sous **Fichiers** > **journaux**. Toutefois, cette journalisation d'application n'est plus disponible dans la version en cours de Cloud Foundry, où {{site.data.keyword.Bluemix_notm}} est hébergé. 
+Pour que la journalisation des applications vers stdout (sortie standard) et stderr (erreur standard) reste accessible via la console
+{{site.data.keyword.Bluemix_notm}} sous
+**Fichiers** > **journaux**, vous pouvez rediriger la journalisation vers d'autres fichiers du système de fichiers
+{{site.data.keyword.Bluemix_notm}}, selon le contexte d'exécution que vous utilisez.
 
-  * Pour les applications Liberty for Java, la sortie dirigée vers stdout et stderr se trouve déjà dans le fichier `messages.log` situé dans le
+  * Pour les applications Liberty for Java, la sortie dirigée vers stdout (sortie standard) et stderr (erreur standard) se trouve déjà dans le fichier
+`messages.log` situé dans le
 répertoire logs. Recherchez les entrées portant respectivement le préfixe SystemOut et SystemErr.
   * Pour les applications Node.js, vous pouvez redéfinir la fonction console.log pour écrire des données explicitement dans un fichier dans le
 répertoire logs.
   * Pour les applications PHP, vous pouvez utiliser la fonction error_log pour écrire des données dans un fichier dans le répertoire logs.
   * Pour les applications Python, vous pouvez demander au consignateur d'écrire des données dans un fichier dans le répertoire logs : logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * Pour les applications Ruby, vous pouvez demander au consignateur d'écrire des données dans un fichier dans le répertoire logs.
- 
- 
+
+
 ### Débogage des modifications du code
 {: #debug_code_changes}
 
@@ -165,21 +166,19 @@ ne sont pas reflétées dans {{site.data.keyword.Bluemix_notm}}, vous pouvez dé
 exécution ou non, vous pouvez examiner les journaux générés lors du déploiement de l'application ou en phase d'exécution afin de déterminer pourquoi le nouveau code
 ne fonctionne pas.
 
-Selon la manière dont le nouveau code est déployé, choisissez l'une des méthodes suivantes pour déboguer les modifications du code : 
+Selon la manière dont le nouveau code est déployé, choisissez l'une des méthodes suivantes pour déboguer les modifications du code :
 
   * Pour un nouveau code déployé depuis la ligne de commande cf, examinez la sortie de la commande *cf
 push*. Vous pouvez utiliser en plus la commande *cf logs* pour trouver d'autres indices pour résoudre le problème. Pour plus d'informations, sur
 l'utilisation de la commande *cf logs*, voir [Affichage des journaux dans
-l'interface de ligne de commande](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}. 
+l'interface de ligne de commande](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}.
 
-  * Pour un nouveau code déployé depuis une interface graphique, telle que
-l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline, ou
-Travis-CI, vous pouvez examiner les journaux depuis l'interface. Par exemple, si vous déployez le nouveau code depuis
-l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}, vous pouvez accéder au Tableau de bord, rechercher votre application, puis afficher tous les
-journaux pour repérer des indices.   Pour plus d'informations sur l'affichage de journaux depuis l'interface utilisateur de
-{{site.data.keyword.Bluemix_notm}}, voir
-[Affichage des journaux dans le tableau de bord Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
- 
+  * Pour un nouveau code déployé depuis une interface graphique, telle que la console {{site.data.keyword.Bluemix_notm}},
+DevOps Delivery Pipeline ou Travis-CI, vous pouvez consulter les journaux depuis l'interface. Par exemple, si vous déployez le nouveau code depuis
+la console {{site.data.keyword.Bluemix_notm}}, vous pouvez accéder au tableau de bord, rechercher votre application, puis afficher
+tous les journaux pour repérer des indices. Pour plus d'informations sur l'affichage de journaux depuis la console {{site.data.keyword.Bluemix_notm}}, voir [Affichage des journaux dans le
+tableau de bord Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.
+
 
 # rellinks
 {: #rellinks}
@@ -189,9 +188,10 @@ journaux pour repérer des indices.   Pour plus d'informations sur l'affichage d
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [Initiation au service IBM Monitoring and Analytics for Bluemix](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [Fonctionnement de Bluemix](../public/index.html#howwork){: new_window}
+  * [Fonctionnement de Bluemix](../overview/whatisbluemix.html#howwork){: new_window}
   * [Installation de l'outil de commande cf](../starters/install_cli.html){: new_window}
   * [Affichage des journaux](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+
   
   
  
