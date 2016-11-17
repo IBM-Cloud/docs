@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-26"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -17,15 +17,13 @@ copyright:
 
 
 # Instalación y conexión de la app para móvil de ejemplo
-{: #iotins_gettingstarted}
-Última actualización: 15 de septiembre de 2016
-{: .last-updated}
+{: #iot4i_gettingstarted}
 
 La app para móvil de ejemplo {{site.data.keyword.iotinsurance_full}} es una implementación de referencia para un cliente móvil de {{site.data.keyword.iotinsurance_short}}. Puede utilizar la app para registrar dispositivos nuevos en el sistema y recibir alertas para los dispositivos.
 {:shortdesc}
 
 **Requisitos previos:** Antes de comenzar, asegúrese de que se cumplan los siguientes requisitos previos:
-  - Entorno de desarrollo integrado Apple Xcode 7.3 o superior.
+  - Entorno de desarrollo integrado Apple Xcode 8 o superior.
   - Un dispositivo móvil iPhone con iOS 9.0 o superior.
   - CocoaPods instalado en su sistema. Consulte el [sitio web de CocoaPods](https://guides.cocoapods.org/using/getting-started.html).
   - Los [parámetros](#iot4i_mobileParam) necesarios para conectar la app para móvil de ejemplo a su instancia del servicio.
@@ -90,7 +88,7 @@ Realice las siguientes tareas para habilitar las notificaciones push para su dis
   1. Abra Acceso de cadena de claves y seleccione **Mis certificados**.
   2. Pulse con el botón derecho en **Apple Development IOS Push Service: (bundleID)** y exporte, guarde y especifique una contraseña para el archivo.
   3. En la consola de {{site.data.keyword.Bluemix_notm}}, abra el servicio {{site.data.keyword.mobilepushshort}}.
-  4. Pulse **Configurar push**.
+  4. Pulse **Configurar**.
   5. En la sección Certificado de notificaciones push de Apple, suba el archivo PKCS 12 y especifique la contraseña.
   6. En Xcode, cambie el identificador de paquete al que ha creado antes.
   7. Ejecute la app y otorgue permisos para el Servicio de notificaciones Push.
@@ -100,7 +98,8 @@ Realice las siguientes tareas para habilitar las notificaciones push para su dis
 
 ## Referencia de API
 {: #api}
-* [Ejemplos de API de {{site.data.keyword.iotinsurance_short}}](https://iot4i-docs-api.mybluemix.net/dist/){:new_window}
+* [API de {{site.data.keyword.iotinsurance_short}}](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [Ejemplos de API de {{site.data.keyword.iotinsurance_short}}](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
 
 ## Enlaces relacionados
 {: #general}

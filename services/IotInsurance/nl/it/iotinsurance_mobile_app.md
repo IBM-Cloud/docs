@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-26"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -17,15 +17,13 @@ copyright:
 
 
 # Installazione e collegamento dell'applicazione mobile di esempio
-{: #iotins_gettingstarted}
-Ultimo aggiornamento: 15 settembre 2016
-{: .last-updated}
+{: #iot4i_gettingstarted}
 
 L'applicazione mobile di esempio {{site.data.keyword.iotinsurance_full}} è un'implementazione di riferimento per un client mobile di {{site.data.keyword.iotinsurance_short}}. Puoi utilizzare l'applicazione per registrare nuovi dispositivi nel sistema e per ricevere avvisi per i dispositivi.
 {:shortdesc}
 
 **Prerequisiti:** prima di iniziare, assicurati che siano implementati i seguenti prerequisiti:
-  - Un ambiente di sviluppo integrato Apple Xcode 7.3 o superiore.
+  - Un ambiente di sviluppo integrato Apple Xcode 8 o superiore.
   - Un dispositivo mobile iPhone iOS 9.0 o superiore.
   - CocoaPods installato sul tuo computer. Consulta il [sito web CocoaPods](https://guides.cocoapods.org/using/getting-started.html).
   - I [parametri](#iot4i_mobileParam) necessari per collegare l'applicazione mobile di esempio alla tua istanza del servizio.
@@ -88,9 +86,9 @@ Esegui le seguenti attività per abilitare le notifiche push per il tuo disposit
 
 5. Crea un file Public Key Cryptography Standards (PKCS) 12 e aggiungilo al servizio {{site.data.keyword.mobilepushshort}}.
   1. Apri Keychain Access e seleziona **My Certificates**.
-  2. Fai clic con il tasto destro su **Apple Development IOS Push Service: (bundleID)** e quindi esporta, salva e immetti una password per il file.
+  2. Fai clic con il tasto destro su **Apple Development IOS Push Service: (bundleID)** e quindi esporta, salva e immetti una password per il file. 
   3. Nella tua console {{site.data.keyword.Bluemix_notm}}, apri il servizio {{site.data.keyword.mobilepushshort}}.
-  4. Fai clic su **Setup Push**.
+  4. Fai clic su **Configura**.
   5. Nella sezione Apple Push Notifications Certificate, carica il file PKCS 12 e immetti la password password.
   6. In Xcode, modifica l'identificativo bundle con uno di quelli creati precedentemente.
   7. Esegui l'applicazione e concedi le autorizzazioni per il servizio Push Notification.
@@ -100,7 +98,8 @@ Esegui le seguenti attività per abilitare le notifiche push per il tuo disposit
 
 ## Riferimento API
 {: #api}
-* [Esempi API {{site.data.keyword.iotinsurance_short}}](https://iot4i-docs-api.mybluemix.net/dist/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
 
 ## Link correlati
 {: #general}

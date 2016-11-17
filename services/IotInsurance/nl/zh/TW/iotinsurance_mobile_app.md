@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-26"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -17,15 +17,13 @@ copyright:
 
 
 # 安裝及連接範例行動應用程式
-{: #iotins_gettingstarted}
-前次更新：2016 年 9 月 15 日
-{: .last-updated}
+{: #iot4i_gettingstarted}
 
 {{site.data.keyword.iotinsurance_full}} 範例行動應用程式是 {{site.data.keyword.iotinsurance_short}} 行動用戶端的參照實作。您可以使用應用程式在系統中登錄新裝置，以及接收裝置的警示。
 {:shortdesc}
 
 **必要條件：**開始之前，請確定已具有下列必要條件：
-  - Apple Xcode 7.3 或以上版本的整合開發環境。
+  - Apple Xcode 8 或以上版本的整合開發環境。
   - iOS 9.0 或以上版本的 iPhone 行動裝置。
   - 電腦上所安裝的 CocoaPods。請參閱 [CocoaPods 網站](https://guides.cocoapods.org/using/getting-started.html)。
   - 將範例行動應用程式連接至服務實例所需的[參數](#iot4i_mobileParam)。
@@ -47,7 +45,7 @@ copyright:
     - [applicationId](#iot4i_mobileParam) = {{site.data.keyword.amashort}} 實例的 URL
 8. 在您的電腦上，按一下箭頭以建置並執行現行架構。即會在手機上安裝範例行動應用程式。如需相關資訊，請參閱[透過 Xcode 在裝置上執行應用程式的 Apple 開發人員指示](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/LaunchingYourApponDevices/LaunchingYourApponDevices.html)。
 
-  **附註：**如果在您嘗試建置時顯示*無法啟動 IoT4I，因為您尚未驗證裝置上已信任「開發人員應用程式」憑證* 錯誤，請將您自己選取為「授信開發人員」，如下所示：  
+  **附註：**如果在您嘗試建置時顯示*無法啟動 IoT4I，因為您尚未驗證裝置上已信任「開發人員應用程式」憑證*錯誤，請將您自己選取為「授信開發人員」，如下所示：  
     1. 在手機上，移至**設定 > 一般 > 裝置管理 > yourDeveloperID**。
     2. 點選開發人員 ID 帳戶名稱，以建立開發人員 ID 的信任。
     3. 系統提示時，確認已信任開發人員 ID。
@@ -90,7 +88,7 @@ copyright:
   1. 開啟「金鑰鏈存取」，然後選取**我的憑證**。
   2. 在 **Apple 開發 IOS Push 服務：(bundleID)** 上按一下滑鼠右鍵，然後匯出、儲存及輸入檔案的密碼。
   3. 在您的 {{site.data.keyword.Bluemix_notm}} 主控台中，開啟 {{site.data.keyword.mobilepushshort}} 服務。
-  4. 按一下**設定 Push**。
+  4. 按一下**配置**。
   5. 在「Apple Push Notifications 憑證」區段中，上傳 PKCS 12 檔案，然後輸入密碼。
   6. 在 Xcode 中，將軟體組 ID 變更為您先前建立的軟體組 ID。
   7. 執行應用程式，並授與 Push Notification 服務的許可權。
@@ -100,7 +98,8 @@ copyright:
 
 ## API 參考資料
 {: #api}
-* [{{site.data.keyword.iotinsurance_short}} API 範例](https://iot4i-docs-api.mybluemix.net/dist/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API 範例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
 
 ## 相關鏈結
 {: #general}
