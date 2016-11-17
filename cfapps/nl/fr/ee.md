@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
   2015，2016
 
- 
+lastupdated: "2016-10-18"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -18,8 +18,6 @@ copyright:
 # Scénario : Développement de bout en bout
 {: #ee}
 
-*Dernière mise à jour : 16 août 2016*
-{: .last-updated}
 
 La plateforme et l'interface utilisateur {{site.data.keyword.Bluemix}}, ainsi qu'une sélection d'outils associés,
 vous permettent de construire, exécuter et déployer vos applications. Suivez ce scénario de développement de bout en bout pour
@@ -48,14 +46,16 @@ disponibilité. Voir Régions pour des détails.
 
 Dans ce scénario, vous allez développer une application Web avec Node.js. Supposez que vous vous trouvez aux Etats-Unis et que la majorité des
 utilisateurs de votre application se situent également aux Etats-Unis. Vous décidez de construire et d'exécuter votre application près de votre base
-utilisateur pour pouvoir bénéficier d'un temps d'attente des réseaux plus court. Après vous êtres connecté à {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg), puis sélectionnez la région **Sud des Etats-Unis**. Ensuite, procédez comme suit pour créer une application :
+utilisateur pour pouvoir bénéficier d'un temps d'attente des réseaux plus court. Après vous êtes connecté à {{site.data.keyword.Bluemix_notm}},
+cliquez sur le lien des préférences de compte utilisateur, puis sélectionnez la région **Sud des Etats-Unis**. Ensuite, procédez comme suit pour créer une application :
 
-  1. Sélectionnez **Traitement**.
-  2. Cliquez sur l'icône en forme de signe plus.
+  1. Accédez à **Catalogue** 
+  2. Sélectionnez **Contextes d'exécution Cloud Foundry**.
   3. Sélectionnez **SDK for Node.js**.
   4. Entrez un nom unique pour votre application, par exemple TestNode, et cliquez sur **Créer**. Le nom de
 l'application doit être unique dans l'ensemble de l'environnement {{site.data.keyword.Bluemix_notm}}.
-  
+  5. Cliquez sur **Créer**.
+
 A présent, vous pouvez lire les instructions **Commencer le codage**. Vous pouvez suivre les instructions de téléchargement, de
 modification et de déploiement du code de démarrage de TestNode.
 
@@ -79,7 +79,7 @@ procédant comme suit :
   3. Entrez un nom unique pour l'instance de service ou utilisez le nom par défaut qui est généré par
 {{site.data.keyword.Bluemix_notm}}, puis cliquez sur **Créer**.
   4. La fenêtre Reconstitution de l'application s'ouvre. Cliquez sur **Reconstituer** pour reconstituer votre application.
-  
+
 A présent, votre application est liée au service {{site.data.keyword.cloudant}}. Toutes les données nécessaires à l'application pour
 communiquer avec l'instance de service se trouvent dans la variable d'environnement VCAP_SERVICES. Ainsi,
 {{site.data.keyword.Bluemix_notm}} hébergeant plusieurs applications sur la même machine virtuelle, les applications ne peuvent pas utiliser le même numéro de port HTTP pour recevoir les demandes entrantes. Pour éviter tout conflit, un numéro de port unique est affecté à chaque application. Ce numéro de port est disponible dans la variable VCAP_APP_PORT.
@@ -120,53 +120,53 @@ que vous pouvez utiliser pour coder avec votre application. Vous pouvez choisir 
 application TestNode.
 
   1. Tout d'abord, téléchargez et développez le code de votre application.
-  
+
     1. Accédez à la page Commencer le codage de votre application. Cliquez sur le bouton **Télécharger le code du module de démarrage**
 pour télécharger le code de votre application.
     2. Procédez à l'extraction du fichier téléchargé dans un répertoire, par exemple `C:\test`.
     3. Développez le code dans votre environnement de développement intégré local.
-	
+
   2. Installez l'interface de ligne de commande **cf**.
-  
+
     1. Téléchargez le programme d'installation de l'outil de ligne de commande cf pour votre système d'exploitation.
     2. Suivez l'assistant de l'outil pour effectuer l'installation .
     3. Utilisez la commande **cf -v** pour vérifier la version de l'interface de ligne de commande cf. Exemple :
-	
+
 	```
 	cf -v
 	```
-	
+
     **Condition requise :** assurez-vous de toujours utiliser la version la plus récente de l'outil de ligne de
 commande
 cf.
   3. Une fois que vous avez installé l'interface de ligne de commande **cf**, vous devez spécifier la région
 {{site.data.keyword.Bluemix_notm}} que vous voulez utiliser avec la commande **cf api**. L'interface de ligne de commande
 **cf** utilise *https://api.URL_Bluemix*, où *URL_Bluemix* est l'adresse URL de la région. L'adresse URL de la
-région Sud des Etats-Unis est {{Domain}}. Entrez
+région Sud des Etats-Unis est stage1.ng.bluemix.net. Entrez
 la commande suivante pour vous connecter à {{site.data.keyword.Bluemix_notm}} :
-  
+
   ```
   cf api https://api.ng.bluemix.net
-  ```
-  
+   ```
+
   Pour plus d'informations sur la connexion à d'autres régions {{site.data.keyword.Bluemix_notm}}, voir Régions {{site.data.keyword.Bluemix_notm}}. Une fois que vous avez spécifié la région {{site.data.keyword.Bluemix_notm}}, les informations d'emplacement que
 vous avez indiquées sont sauvegardées.
-  
+
   4. Ensuite, vous pouvez vous connecter à {{site.data.keyword.Bluemix_notm}} avec la commande cf login.
-  
+
   ```
   cf login -u votre_ID_utilisateur -p ***** -o nom_de_votre_organisation -s nom_de_votre_espace
   ```
-  
+
   5. Une fois que vous êtes connecté à {{site.data.keyword.Bluemix_notm}},
 vous êtes prêt à déployer votre application dans {{site.data.keyword.Bluemix_notm}}. Depuis le répertoire de votre application, `C:\test`, entrez la commande suivante :
-  
+
   ```
   cf push TestNode
   ```
-  
+
   Pour plus d'informations sur la commande **cf push**, voir Téléchargement de votre application.
-  
+
   6. A présent, vous pouvez accéder à l'application en entrant l'adresse URL de l'application suivante dans un navigateur :
   ```
   http://TestNode.mybluemix.net
@@ -187,48 +187,48 @@ une instance de service Cloudant, lier votre application à l'instance de servic
 les autres services.
 
   1. Créez une instance de service Cloudant NoSQL DB.
-  
+
   Créez une instance de service à l'aide de la commande cf create-service. Exemple :
-  
+
   ```
   cf create-service cloudantNoSQLDB Shared cloudant100
   ```
-  
+
   La commande cf services permet d'afficher la liste des instances de service déjà créées.
-  
+
   ```
   cf services
   ```
-  
+
   Lorsqu'une instance de service est créée, vous pouvez la lier et l'utiliser avec chacune de vos applications.
-  
+
   2. Liez l'instance de service à votre application.
-  
+
   Pour utiliser une instance de service, vous devez la lier à votre application. Pour ce faire, utilisez la commande cf bind-service en spécifiant le
 nom de l'application et l'instance de service.
-  
+
   ```
   cf bind-service TestNode cloudant100
   ```
-  
+
   L'établissement d'une liaison entre une instance de service et une application permet à {{site.data.keyword.Bluemix_notm}} de signaler au service qu'une nouvelle application entrera en communication avec cette instance. En fonction des services, il est possible que {{site.data.keyword.Bluemix_notm}} traite l'application et l'instance de service de manière différente au cours du processus de liaison. Par exemple, certains services peuvent créer un locataire pour chaque application communiquant avec l'instance de service. Le service répond à {{site.data.keyword.Bluemix_notm}} en indiquant les informations (par exemple, les données d'identification) qui doivent être transmises à l'application en vue de l'établissement de la communication entre l'application et le service.
 
   **Remarque :** si l'application est en cours d'exécution lorsque la liaison à une instance de service est créée, la variable
 d'environnement VCAP_SERVICES est
 mise à jour lorsque cette application est à nouveau démarrée. Pour redémarrer votre application, utilisez la commande cf restart.
-  
+
   3. Utilisez l'instance de service.
-  
+
   Dans ce scénario, la variable d'environnement VCAP_SERVICES contient des informations, telles que les éléments suivants, qu'une application peut
 utiliser pour se connecter à cette instance de {{site.data.keyword.cloudant}} :
-  
+
   <dl><dt>username</dt>
   <dd>d72837bb-b341-4038-9c8e-7f7232916197-bluemix</dd>
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
   <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
-  
+
   Ainsi, votre application Node.js peut accéder à ces informations de la manière suivante :
   ```
   if (process.env.VCAP_SERVICES) {
@@ -242,16 +242,16 @@ utiliser pour se connecter à cette instance de {{site.data.keyword.cloudant}} :
                 }
         };
   ```
-  
+
   **Remarque :** comme illustré par cet exemple de code, pour vous connecter à une instance de service {{site.data.keyword.cloudant}}, vous pouvez commencer par
 vérifier si la variable
 d'environnement VCAP_SERVICES existe. Si c'est le cas, l'application peut utiliser les propriétés de la variable cloudant pour accéder à la base de
 données. Par contre, si la variable d'environnement VCAP_SERVICES n'existe pas, l'instance de service {{site.data.keyword.cloudant}} locale est utilisée avec les valeurs par
 défaut
 fournies.
-  
+
   4. Interagissez avec l'instance de service.
-  
+
   Pour interagir avec l'instance de service, utilisez les données d'identification. Les actions que vous pouvez effectuer sont la lecture, l'écriture et la mise à  jour. L'exemple suivant montre comment insérer un objet JSON dans
 l'instance de service {{site.data.keyword.cloudant}} :
   ```
@@ -275,9 +275,9 @@ var create_message = function(req, res) {
   });
 }
   ```
-  
+
   5. **Facultatif :** supprimez la liaison d'une instance de service ou supprimez une instance de service.
-  
+
   Vous pouvez décider de supprimer la liaison d'une instance de service ou de supprimer une instance de service lorsqu'elle n'est plus utilisée, ou
 lorsque vous avez besoin d'espace. Pour supprimer la liaison d'une instance de service depuis votre application, utilisez la commande **cf
 unbind-service** ;
@@ -305,7 +305,7 @@ afficher le coût de votre application. Vous pouvez afficher le coût de TestNod
 application** pour examiner la tarification de l'environnement d'exécution et du support de **SDK for Node.js**, et le prix mensuel
 total de
 votre application.
-  
+
   * Ou bien, dans la page Fiche des prix, entrez l'utilisation mensuelle du contexte d'exécution et des services pour votre application, par
 exemple 3 instances de **SDK for Node.js** avec 1 Go de mémoire pour chaque instance. Le prix mensuel est calculé et affiché.
 

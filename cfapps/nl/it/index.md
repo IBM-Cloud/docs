@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
- 
+ultimo aggiornamento: "18-04-2016" 
 
 ---
 
@@ -14,8 +14,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # Creazione di applicazioni Cloud Foundry
-*Ultimo aggiornamento: 18 aprile 2016*
-{: .last-updated}
 
 Con {{site.data.keyword.Bluemix}}, puoi
 creare la tua applicazione nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Dopo averla creata, puoi decidere di continuare a usare l'interfaccia utente, l'interfaccia riga di comando cf o {{site.data.keyword.jazzhub_title}} per
@@ -43,7 +41,7 @@ Per iniziare a creare la tua applicazione, attieniti alla seguente procedura:
 per scegliere uno starter, specificare un nome e selezionare come desideri eseguire
 la codifica.
   4. Dopo che hai terminato l'esperienza guidata, fai clic su **VISUALIZZA PANORAMICA DELL'APPLICAZIONE**. La Panoramica per la tua applicazione è visualizzata nel Dashboard.
-  5. Puoi aggiungere un servizio alla tua applicazione facendo clic su **AGGIUNGI UN SERVIZIO O UNA API** nella Panoramica dell'applicazione nell'interfaccia utente Bluemix. Cerca e seleziona i servizi dal catalogo o scorri alla fine del catalogo e fai clic su Servizi sperimentali **{{site.data.keyword.Bluemix_notm}}** per visualizzare i servizi sperimentali. In alternativa, puoi utilizzare l'interfaccia riga di comando cf. Vedi Opzioni per gestire le applicazioni.
+  5. Puoi aggiungere un servizio alla tua applicazione facendo clic su **AGGIUNGI UN SERVIZIO O UNA API** nella Panoramica dell'applicazione nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Cerca e seleziona i servizi dal catalogo o scorri alla fine del catalogo e fai clic su Servizi sperimentali **{{site.data.keyword.Bluemix_notm}}** per visualizzare i servizi sperimentali. In alternativa, puoi utilizzare l'interfaccia riga di comando cf. Vedi Opzioni per gestire le applicazioni.
   6. Nella Panoramica dell'applicazione, fai clic su Aggiungi Git per salvare la tua origine applicazione in un repository Git e creare un progetto ospitato da Git. Puoi anche distribuire l'applicazione da {{site.data.keyword.jazzhub_title}}.
 
 **Nota:** se un servizio che associ mediante bind a un'applicazione si arresta in modo anomalo, l'applicazione potrebbe interrompere l'esecuzione o provocare errori. {{site.data.keyword.Bluemix_notm}} non
@@ -76,7 +74,7 @@ della tua applicazione, anche se è in esecuzione solo una singola istanza,
 può essere riavviata o spostata su una macchina virtuale differente in
 qualsiasi momento, di norma per il bilanciamento del carico. Tutto quanto è memorizzato
 in un'archiviazione locale viene cancellato quando l'applicazione viene spostata
-o eliminata. Per la persistenza, usa uno dei servizi di archivio dati Bluemix.</dd>
+o eliminata. Per la persistenza, usa uno dei servizi di archivio dati {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>Limiti delle risorse</dt>
 <dd>Tieni presente i limiti sulle quantità di risorse che un account di prova
 può utilizzare. I limiti sono i seguenti:

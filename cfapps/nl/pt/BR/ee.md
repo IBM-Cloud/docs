@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-10-18"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -18,8 +18,6 @@ copyright:
 # Cenário: Desenvolvimento de ponta a ponta
 {: #ee}
 
-*Última atualização: 16 de agosto de 2016*
-{: .last-updated}
 
 É possível usar a interface com o usuário, a plataforma e uma
 seleção de ferramentas do {{site.data.keyword.Bluemix}} ao construir, executar
@@ -52,19 +50,16 @@ para menor latência de rede, privacidade de dados e melhor disponibilidade. Con
 
 Para este cenário, você deseja desenvolver um app da web usando Node.js. Suponha que você esteja nos EUA e a maioria dos usuários do app também esteja
 nos EUA. Você decide construir e executar o app próximo da base do
-usuário, para se beneficiar da latência de rede inferior. Depois de efetuar login no
-{{site.data.keyword.Bluemix_notm}}, clique no ícone
-**{{site.data.keyword.avatar}}**
-![ícone Avatar](../icons/i-avatar-icon.svg) e, em seguida,
-selecione a região **Sul dos EUA**. É possível, então, executar as
+usuário, para se beneficiar da latência de rede inferior. Após efetuar login no {{site.data.keyword.Bluemix_notm}}, clique no link Preferências da conta do usuário e, em seguida, selecione a região **Sul dos EUA**. É possível, então, executar as
 etapas a seguir para criar um app:
 
-  1. Selecione **Calcular**.
-  2. Clique no ícone de mais.
+  1. Acesse **Catálogo** 
+  2. Selecione **Tempos de execução do Cloud Foundry**.
   3. Selecione **SDK for Node.js**.
   4. Digite um nome exclusivo para o seu aplicativo, por exemplo, TestNode e clique em **Criar**. O nome do app deve ser exclusivo
 em todo o ambiente do {{site.data.keyword.Bluemix_notm}}.
-  
+  5. Clique **Criar**.
+
 Agora é possível ver as instruções de **Iniciar codificação**. É possível seguir as instruções para fazer download do código de início de TestNode, modificá-lo e implementá-lo.
 
 O app é designado com uma instância e 512 MB de cota de memória, por
@@ -88,12 +83,12 @@ Para usar serviços do aplicativo, é necessário criar uma instância
 de serviço e ligar o aplicativo a ela, executando
 as etapas a seguir:
   1. Clique em **Incluir um serviço ou uma API** na página Visão geral do app.
-  2. No CATÁLOGO do {{site.data.keyword.Bluemix_notm}}, selecione o serviço {{site.data.keyword.cloudant}}.
+  2. No catálogo do {{site.data.keyword.Bluemix_notm}}, selecione o serviço {{site.data.keyword.cloudant}}.
   3. Digite um nome exclusivo para a instância de serviço ou use o nome
 padrão gerado pelo {{site.data.keyword.Bluemix_notm}}
 e clique em **Criar**.
   4. A janela Remontar aplicativo é exibida. Clique em **Remontar** para remontar seu app.
-  
+
 Agora seu app está ligado ao serviço {{site.data.keyword.cloudant}}. É possível localizar todos os dados necessários para que o aplicativo se comunique com a instância de serviço na variável de ambiente VCAP_SERVICES. Por exemplo, como o
 {{site.data.keyword.Bluemix_notm}} hospeda
 diversos aplicativos na mesma máquina virtual, os aplicativos não podem usar o mesmo
@@ -132,52 +127,51 @@ várias ferramentas para você iniciar a codificação com seu app, por exemplo,
 de comandos cf e as ferramentas Eclipse. É possível escolher a interface de linha de comandos cf para iniciar a codificação com seu app TestNode.
 
   1. Primeiramente, faça o download e desenvolva o código do app.
-  
+
     1. Acesse a página Iniciar codificação do app. Clique no botão **Fazer o download do código de início**
 para fazer o download do código do app.
     2. Extraia o arquivo transferido por download em um diretório, por exemplo, `C:\test`.
     3. Desenvolva o código com seu ambiente de desenvolvimento integrado
 local.
-	
+
   2. Instale a interface da linha de comandos (CLI) **cf**.
-  
+
     1. Faça download do programa de instalação da ferramenta de linha de comandos cf para seu sistema operacional.
     2. Siga o assistente de ferramenta para concluir a instalação.
     3. Use o comando **cf -v** para verificar a versão da interface de linha de comandos cf. Por
 exemplo:
-	
+
 	```
 	cf -v
 	```
-	
+
     **Requisito:** certifique-se de sempre usar a versão mais recente da ferramenta de linha de comandos cf.
   3. Depois de instalar a interface de linha de comandos **cf**, deve-se especificar
-com qual região do {{site.data.keyword.Bluemix_notm}} você deseja trabalhar usando o comando **cf api**. A interface de linha de comandos **cf** usa *https://api.Bluemix_URL*, em que *Bluemix_URL* é a URL da região. A URL
-da região Sul dos EUA é {{Domain}}. Insira o comando a seguir para se conectar ao
+com qual região do {{site.data.keyword.Bluemix_notm}} você deseja trabalhar usando o comando **cf api**. A interface de linha de comandos **cf** usa *https://api.Bluemix_URL*, em que *Bluemix_URL* é a URL da região. A URL da região sul do EUA é stage1.ng.bluemix.net. Insira o comando a seguir para se conectar ao
 {{site.data.keyword.Bluemix_notm}}:
-  
+
   ```
   cf api https://api.ng.bluemix.net
-  ```
-  
+   ```
+
   Para obter mais informações sobre a conexão com outras regiões do {{site.data.keyword.Bluemix_notm}}, consulte as regiões do {{site.data.keyword.Bluemix_notm}}. Após especificar a região do {{site.data.keyword.Bluemix_notm}},
 as informações da localização especificadas são salvas.
-  
+
   4. Em seguida, é possível efetuar login no {{site.data.keyword.Bluemix_notm}} usando o comando cf login.
-  
+
   ```
   cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
   ```
-  
+
   5. Depois de ter efetuado login no {{site.data.keyword.Bluemix_notm}},
 você estará pronto para implementar o app novamente no {{site.data.keyword.Bluemix_notm}}. No diretório `C:\test` de seu app, insira o comando a seguir:
-  
+
   ```
   cf push TestNode
   ```
-  
+
   Para obter mais informações sobre o comando **cf push**, consulte Fazendo upload de seu app.
-  
+
   6. Agora, é possível acessar o app inserindo a URL do app
 a seguir em um navegador:
   ```
@@ -199,31 +193,31 @@ no app, é necessário criar uma instância do serviço Cloudant, ligar
 o app à instância de serviço e, em seguida, usar a instância de serviço. O mesmo procedimento se aplica a todos os outros serviços.
 
   1. Crie uma instância de serviço Cloudant NoSQL DB.
-  
+
   Use o comando cf create-service para criar uma nova instância de um serviço. Por
 exemplo:
-  
+
   ```
   cf create-service cloudantNoSQLDB Shared cloudant100
   ```
-  
+
   Também é possível usar o comando cf services para ver a lista de instâncias de serviço criadas.
-  
+
   ```
   cf services
   ```
-  
+
   Depois de uma instância de serviço ser criada, ele ficará disponível para ligação e
 uso de qualquer um de seus aplicativos.
-  
+
   2. Ligue a instância de serviço ao seu app.
-  
+
   Para usar uma instância de serviço, deve-se ligá-la ao seu aplicativo. Use o comando cf bind-service para ligar uma instância de serviço a um aplicativo especificando o nome do aplicativo e a instância de serviço criada.
-  
+
   ```
   cf bind-service TestNode cloudant100
   ```
-  
+
   A ligação de uma instância de serviço a um aplicativo permite que o
 {{site.data.keyword.Bluemix_notm}} se
 comunique com o serviço e especifique que um novo aplicativo irá se comunicar com essa
@@ -236,18 +230,18 @@ informações, como credenciais, que devem ser transmitidas ao aplicativo para c
 entre o aplicativo e o serviço.
 
   **Nota:** se o aplicativo estiver em execução quando for ligado a uma instância de serviço, a variável de ambiente VCAP_SERVICES não será atualizada até que o aplicativo seja reiniciado. Para reiniciar seu aplicativo, use o comando cf restart.
-  
+
   3. Use a instância de serviço.
-  
+
   Neste cenário, a variável de ambiente VCAP_SERVICES inclui informações, como os itens a seguir, que um aplicativo pode usar para se conectar a esta instância do {{site.data.keyword.cloudant}}:
-  
+
   <dl><dt>username</dt>
   <dd>d72837bb-b341-4038-9c8e-7f7232916197-bluemix</dd>
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
   <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
-  
+
   Por exemplo, o app Node.js pode acessar estas
 informações, conforme a seguir:
   ```
@@ -262,11 +256,11 @@ informações, conforme a seguir:
                 }
         };
   ```
-  
+
   **Nota:** conforme visto no código de amostra, para se conectar a uma instância de serviço {{site.data.keyword.cloudant}}, é possível verificar se a variável de ambiente VCAP_SERVICES existe primeiro. Se existir, o aplicativo poderá usar as propriedades da variável do cloudant para acessar o banco de dados. No entanto, se a variável de ambiente VCAP_SERVICES não estiver presente, a instância de serviço local do {{site.data.keyword.cloudant}} será usada com os valores padrão fornecidos.
-  
+
   4. Interaja com a instância de serviço.
-  
+
   É possível interagir com a instância de serviço usando as informações de credenciais. As ações que podem ser tomadas incluem leitura, gravação e atualização. O
 exemplo a seguir demonstra como inserir um objeto JSON na instância de serviço
 {{site.data.keyword.cloudant}}:
@@ -291,9 +285,9 @@ var create_message = function(req, res) {
   });
 }
   ```
-  
+
   5. **Opcional:** desvincular ou excluir uma instância de serviço.
-  
+
   Talvez você queira desvincular ou excluir uma instância de serviço quando
 ela não for mais usada ou quando você desejar liberar alguns espaços. Para desvincular uma instância de serviço do app, use o **comando cf unbind-service**; para excluir uma instância de serviço, use o comando **cf delete-service**.
 
@@ -320,7 +314,7 @@ O {{site.data.keyword.Bluemix_notm}} fornece
 um estimador e uma calculadora para você ver o custo de seu app. É possível ver o custo de TestNode das maneiras a seguir:
 
   * No painel, clique em TestNode. Em seguida, na página Visão geral, clique em **estimar o custo deste app** para ver o preço de tempo de execução e suporte do **SDK for Node.js** e o preço mensal total de seu app.
-  
+
   * Ou, na página Folha de precificação, digite o uso mensal do tempo de execução e serviços de seu app. Por exemplo, 3 instâncias de **SDK for Node.js** com 1 GB
 de memória para cada instância. O preço mensal é calculado e exibido.
 

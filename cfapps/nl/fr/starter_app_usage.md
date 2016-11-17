@@ -6,15 +6,12 @@ copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-01-12" 
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-
-*Dernière mise à jour : 12 janvier 2016*
-{: .last-updated}
 
 # Utilisation des applications de démarrage
 {: #using_starter_applications}
@@ -29,8 +26,8 @@ Contextes d'exécution.
 2. Cliquez sur le contexte d'exécution à utiliser.
 3. Connectez-vous à {{site.data.keyword.Bluemix}}, si ce n'est pas déjà fait.
 4. Indiquez le nom de l'application, modifiez le nom d'hôte si nécessaire, et cliquez sur **Créer**.
-5. La constitution de votre application commence et la page d'arrivée de votre application s'affiche dans le tableau de bord Bluemix lorsque
-votre application démarre.
+5. La constitution de votre application commence et la page d'arrivée de votre application s'affiche dans le tableau de bord {{site.data.keyword.Bluemix_notm}} lorsque votre
+application démarre.
 6. Vous pouvez suivre les instructions figurant sur cette page pour effectuer les tâches suivantes :
   * Télécharger l'interface de ligne de commande Cloud Foundry.
   * Télécharger l'application de démarrage.

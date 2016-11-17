@@ -6,7 +6,7 @@ copyright:
 
   years: 2015 2016
 
- 
+lastupdated: "2016-05-09" 
 
 ---
 
@@ -16,9 +16,6 @@ copyright:
 {:screen: .screen}
 
 #Alojamiento de apps en {{site.data.keyword.Bluemix_notm}}
-
-*Última actualización: 9 de mayo de 2016*
-{: .last-updated}
 
 <!--The whole topic is staging only -->
 
@@ -161,7 +158,7 @@ Para desplegar su app en {{site.data.keyword.Bluemix_notm}} como una app de Clou
 seleccione un ejecutable del Catálogo de {{site.data.keyword.Bluemix_notm}}. El ejecutable contiene una app Hello World iniciadora que puede sustituir por su propia app. Si no encuentra un iniciador que proporcione
 el ejecutable que quiere, puede aportar un paquete de compilación personalizado
 compatible con Cloud Foundry a {{site.data.keyword.Bluemix_notm}}, utilizando la opción -b con el
-mandato cf push. Para obtener detalles, consulte [Utilización de paquetes de compilación de la comunidad](../cfapps/byob.html).
+mandato cf push. Para obtener detalles, consulte [Utilización de paquetes de compilación de la comunidad](/docs/cfapps/byob.html).
 
 Puede utilizar las herramientas y servicios siguientes que {{site.data.keyword.Bluemix_notm}} proporciona:
 
@@ -171,7 +168,7 @@ Puede utilizar las herramientas y servicios siguientes que {{site.data.keyword.B
 |:------|:--------|
 |Interfaz de línea de mandatos de Cloud Foundry (cf cli)	|Gestione su código en el cliente local y utilizar la
 interfaz de línea de mandatos de Cloud Foundry para enviar por push su app manualmente a
-{{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Subir sus apps](../starters/upload_app.html).|
+{{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Subir sus apps](/docs/starters/upload_app.html).|
 |Eclipse	|Gestione su código en Eclipse y utilice IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} para
 enviar por push su app.|
 |Integración con Git	|Gestione su código en GitHub e integre Git en {{site.data.keyword.Bluemix_notm}}. Puede colaborar con otros desarrolladores. Su app se despliega automáticamente en
@@ -222,7 +219,7 @@ puede añadir el manifiesto de la app realizando los pasos siguientes:
   instances: 1
   memory: 512M</code></pre>
 <p>Para obtener más información sobre las opciones admitidas que puede utilizar en este archivo, consulte
-[manifiesto de la app](../manageapps/depapps.html#appmanifest).
+[manifiesto de la app](/docs/manageapps/depapps.html#appmanifest).
 
 </p></li></ol>
 </li>
@@ -250,7 +247,7 @@ con el mandato push de cf. Por ejemplo:
 * Cuando se utiliza el mandato cf push, la interfaz de línea de mandatos de copia todos los archivos y directorios del directorio actual en {{site.data.keyword.Bluemix_notm}}. Asegúrese de tener solo los archivos necesarios en su directorio de app.
 * Asegúrese de que su organización dispone de memoria suficiente para todas las instancias de su
 app. Para ver la cuota de memoria para su organización, utilice cf org org_name.
-* Para obtener más información sobre cf push, consulte [Mandatos cf](../cli/reference/cfcommands/index.html).
+* Para obtener más información sobre cf push, consulte [Mandatos cf](/docs/cli/reference/cfcommands/index.html).
 
 ##Migración de sus datos y uso de servicios
 {: #ht_service}
@@ -299,9 +296,9 @@ Foundry.
 ## Enlaces relacionados
 {: #general}
 
-* [IBM Containers](../containers/container_index.html)
-* [Virtual Machines](../virtualmachines/vm_index.html)
-* [Cómo empezar con Delivery Pipeline](../services/DeliveryPipeline/index.html)
-* [Despliegue de apps con IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
+* [IBM Containers](/docs/containers/container_index.html)
+* [Virtual Machines](/docs/virtualmachines/vm_index.html)
+* [Cómo empezar con Delivery Pipeline](/docs/services/DeliveryPipeline/index.html)
+* [Despliegue de apps con IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html)
 * [La app de factor doce (twelve-factor)](http://12factor.net/){:new_window}
 * [Alcanzar el elemento de fondo empresarial con Bluemix Secure Gateway a través de la consola](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}

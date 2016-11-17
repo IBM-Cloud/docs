@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-03-15" 
 
 ---
 
@@ -17,14 +17,12 @@ copyright:
 {:pre: .pre}
 
 # Usando buildpacks da comunidade
-*Última atualização: 15 de março de 2016*
-{: .last-updated}
 
 Se não for possível localizar um iniciador no Catálogo do {{site.data.keyword.Bluemix}} que forneça o tempo de execução desejado, será possível trazer um buildpack externo para o {{site.data.keyword.Bluemix_notm}}. É possível especificar um buildpack customizado e compatível com Cloud Foundry ao implementar o app usando o comando cf push.
 {:shortdesc}
 
-São fornecidos buildpacks externos pela comunidade do Cloud Foundry para
-utilização como seus próprios buildpacks. Antes de
+A comunidade Cloud Foundry fornece buildpacks externos para
+que você use como seus próprios buildpacks. Antes de
 implementar o app no {{site.data.keyword.Bluemix_notm}},
 certifique-se de instalar a interface de linha de comandos cf.
 
@@ -98,7 +96,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 Use o comando <strong>cf set-env</strong>. Por exemplo, insira o comando a seguir para configurar a versão Java para 1.7.0:
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &apos;{jre: { version: 1.7.0_+ }}&apos;</code></pre>
 <p>Em seguida,
 remonte seu aplicativo para efetivar a mudança:</p>
 <pre class="pre"><code>cf restage app_name</code></pre>

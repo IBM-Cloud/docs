@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
   anni: 2015, 2016
 
- 
+ultimo aggiornamento: "18-10-2016"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -18,8 +18,6 @@ copyright:
 # Scenario: sviluppo end-to-end
 {: #ee}
 
-*Ultimo aggiornamento: 16 agosto 2016*
-{: .last-updated}
 
 Puoi utilizzare l'interfaccia utente, la piattaforma e una selezione di strumenti {{site.data.keyword.Bluemix}}
 per la creazione, esecuzione e
@@ -54,14 +52,15 @@ per una bassa latenza di rete, riservatezza dei dati e maggiore disponibilità. 
 
 Per questo scenario, vuoi distribuire un'applicazione Web che utilizza Node.js. Supponiamo che ti trovi negli Stati Uniti così come la maggior parte degli utenti della
 tua applicazione. Decidi di creare ed eseguire la tua applicazione vicino alla base
-dei tuoi utenti, in modo da poter usufruire di una più bassa latenza di rete. Dopo che ti sei collegato a {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg), quindi seleziona la regione **Stati Uniti Sud**. Puoi quindi attenerti alla seguente procedura per creare un'applicazione:
+dei tuoi utenti, in modo da poter usufruire di una più bassa latenza di rete. Dopo che ti sei collegato a {{site.data.keyword.Bluemix_notm}}, fai clic sul link delle preferenze dell'account utente e seleziona la regione **Stati Uniti Sud**. Puoi quindi attenerti alla seguente procedura per creare un'applicazione:
 
-  1. Seleziona **Calcola**.
-  2. Fai clic sull'icona Più.
+  1. Vai a **Catalogo** 
+  2. Seleziona **Runtime Cloud Foundry**.
   3. Seleziona **SDK for Node.js**.
   4. Immetti un nome univoco per la tua applicazione, ad esempio TestNode, e fai clic su **Crea**. Il nome dell'applicazione deve essere univoco
 nell'intero ambiente {{site.data.keyword.Bluemix_notm}}.
-  
+  5. Fai clic su **Crea**.
+
 Puoi ora visualizzare le istruzioni **Inizia a scrivere codice**. Puoi seguire le istruzioni per scaricare, modificare e distribuire il codice starter di TestNode.
 
 All'applicazione viene assegnata 1 istanza e 512 MB di quota di memoria
@@ -85,12 +84,12 @@ Per utilizzare i servizi all'interno dell'applicazione, devi creare un'istanza
 del servizio ed eseguire il bind della tua applicazione all'istanza del servizio completando
 la seguente procedura:
   1. Fai clic su **Aggiungi un servizio o una API** nella pagina Panoramica dell'applicazione.
-  2. Nel CATALOGO {{site.data.keyword.Bluemix_notm}}, seleziona il servizio {{site.data.keyword.cloudant}}.
+  2. Nel catalogo {{site.data.keyword.Bluemix_notm}}, seleziona il servizio {{site.data.keyword.cloudant}}.
   3. Immetti un nome univoco per l'istanza del servizio o utilizza il
 nome predefinito generato da {{site.data.keyword.Bluemix_notm}},
 quindi fai clic su **Crea**.
   4. Viene visualizzata la finestra Prepara di nuovo applicazione. Fai clic su **Riprepara** per ripreparare la tua applicazione.
-  
+
 La tua applicazione è ora associata al servizio {{site.data.keyword.cloudant}}. Puoi trovare tutti i dati necessari perché l'applicazione comunichi con l'istanza del servizio nella variabile di ambiente VCAP_SERVICES. Ad esempio, poiché {{site.data.keyword.Bluemix_notm}}
 ospita diverse applicazioni sulla stessa macchina virtuale, le applicazioni
 non possono utilizzare lo stesso numero di porta HTTP per ricevere le richieste
@@ -129,54 +128,54 @@ diversi strumenti che ti consentono di iniziare a scrivere codice con la tua app
 e gli strumenti Eclipse. Puoi scegliere l'interfaccia riga di comando cf per iniziare a scrivere codice con la tua applicazione TestNode.
 
   1. Innanzitutto, scarica e sviluppa il codice della tua applicazione.
-  
+
     1. Vai alla pagina Inizia a scrivere codice della tua applicazione. Fai clic sul pulsante **Scarica codice di starter**
 per scaricare il codice della tua applicazione.
     2. Estrai il file scaricato in una directory, ad esempio `C:\test`.
     3. Sviluppa il codice con il tuo ambiente di sviluppo
 integrato locale.
-	
+
   2. Installa l'interfaccia riga di comando **cf**
 (CLI).
-  
+
     1. Scarica il programma di installazione dello strumento riga di comando cf per il tuo sistema operativo.
     2. Segui la procedura guidata dello strumento per completare l'installazione.
     3. Utilizza il comando **cf -v** per verificare la versione dell'interfaccia riga di comando cf. Ad
 esempio:
-	
+
 	```
 	cf -v
 	```
-	
+
     **Requisito:** assicurati di usare sempre la versione più recente dello strumento riga di comando cf.
   3. Dopo che hai installato l'interfaccia riga di comando **cf**,
 devi specificare qual è la regione {{site.data.keyword.Bluemix_notm}} che
-desideri gestire utilizzando il comando **cf api**. L'interfaccia riga di comando **cf** utilizza *https://api.Bluemix_URL*, dove *Bluemix_URL* è l'URL della regione. L'URL della regione Stati Uniti Sud è {{Domain}}. Immetti il seguente comando per
+desideri gestire utilizzando il comando **cf api**. L'interfaccia riga di comando **cf** utilizza *https://api.Bluemix_URL*, dove *Bluemix_URL* è l'URL della regione. L'URL della regione Stati Uniti sud è stage1.ng.bluemix.net. Immetti il seguente comando per
 stabilire una connessione a {{site.data.keyword.Bluemix_notm}}:
-  
+
   ```
   cf api https://api.ng.bluemix.net
-  ```
-  
+   ```
+
   Per ulteriori informazioni sulla connessione ad altre regioni {{site.data.keyword.Bluemix_notm}}, vedi Regioni {{site.data.keyword.Bluemix_notm}}. Dopo che hai specificato la regione {{site.data.keyword.Bluemix_notm}},
 le informazioni sull'ubicazione da te specificate vengono salvate.
-  
+
   4. Puoi quindi accedere a {{site.data.keyword.Bluemix_notm}} utilizzando il comando cf login.
-  
+
   ```
   cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
   ```
-  
+
   5. Dopo che hai eseguito l'accesso a {{site.data.keyword.Bluemix_notm}},
 sei pronto a ridistribuire l'applicazione a {{site.data.keyword.Bluemix_notm}}. Dalla directory dell'applicazione `C:\test`, immetti il seguente
 comando:
-  
+
   ```
   cf push TestNode
   ```
-  
+
   Per ulteriori informazioni sul comando **cf push**, vedi Caricamento della tua applicazione.
-  
+
   6. Puoi ora accedere all'applicazione immettendo il seguente URL
 in un browser:
   ```
@@ -198,32 +197,32 @@ all'interno dell'applicazione, devi creare un'istanza del servizio Cloudant, ese
 della tua applicazione all'istanza del servizio e farne quindi uso. La stessa procedura si applica a tutti gli altri servizi.
 
   1. Crea un'istanza del servizio Cloudant NoSQL DB.
-  
+
   Usa il comando cf create-service per creare una nuova istanza di un servizio. Ad
 esempio:
-  
+
   ```
   cf create-service cloudantNoSQLDB Shared cloudant100
   ```
-  
+
   Puoi anche usare il comando cf services per visualizzare l'elenco di istanze del servizio da te create.
-  
+
   ```
   cf services
   ```
-  
+
   Dopo essere stata creata, un'istanza del servizio è a disposizione di tutte le
 tue applicazioni che possono eseguirne il bind e farne uso.
-  
+
   2. Esegui il bind dell'istanza del servizio alla tua applicazione.
-  
+
   Per utilizzare un'istanza del servizio, devi eseguirne il bind alla
 tua applicazione. Usa il comando cf bind-service per eseguire il bind di un'istanza del servizio a un'applicazione specificando il nome applicazione e l'istanza del servizio da te creata.
-  
+
   ```
   cf bind-service TestNode cloudant100
   ```
-  
+
   L'esecuzione del bind di un'istanza del servizio a un'applicazione abilita {{site.data.keyword.Bluemix_notm}} a
 comunicare con il servizio e a specificare che una nuova applicazione comunicherà con tale
 istanza del servizio. Per servizi differenti, {{site.data.keyword.Bluemix_notm}} può
@@ -234,18 +233,18 @@ delle informazioni, come le credenziali, che devono essere passate all'applicazi
 per le comunicazioni tra l'applicazione e il servizio.
 
   **Nota:** se l'applicazione è in esecuzione quando è associata a un'istanza del servizio, la variabile di ambiente VCAP_SERVICES viene aggiornata solo dopo il riavvio dell'applicazione. Per riavviare la tua applicazione, usa il comando cf restart.
-  
+
   3. Usa l'istanza del servizio.
-  
+
   In questo scenario, la variabile di ambiente VCAP_SERVICES include delle informazioni, come i seguenti elementi, che un'applicazione può utilizzare per stabilire una connessione a questa istanza di {{site.data.keyword.cloudant}}:
-  
+
   <dl><dt>username</dt>
   <dd>d72837bb-b341-4038-9c8e-7f7232916197-bluemix</dd>
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
   <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
-  
+
   Ad esempio, la tua applicazione Node.js potrebbe accedere a queste
 informazioni nel seguente modo:
   ```
@@ -260,11 +259,11 @@ informazioni nel seguente modo:
                 }
         };
   ```
-  
+
   **Nota:** come mostrato dal codice di esempio, per stabilire una connessione a un'istanza del servizio {{site.data.keyword.cloudant}}, puoi prima controllare se la variabile di ambiente VCAP_SERVICES esiste. Se esiste, l'applicazione può utilizzare le proprietà della variabile cloudant per accedere al database. Tuttavia, se la variabile di ambiente VCAP_SERVICES non è presente, l'istanza del servizio {{site.data.keyword.cloudant}} locale viene utilizza valori predefiniti forniti.
-  
+
   4. Interagisci con l'istanza del servizio.
-  
+
   Puoi interagire con l'istanza del servizio utilizzando le informazioni delle credenziali. Le azioni che puoi eseguire includono la lettura, la scrittura e l'aggiornamento. Il
 seguente esempio illustra come inserire un oggetto JSON nell'istanza del servizio
 {{site.data.keyword.cloudant}}:
@@ -289,9 +288,9 @@ var create_message = function(req, res) {
   });
 }
   ```
-  
+
   5. **Facoltativo:** annulla il bind di un'istanza del servizio oppure eliminala.
-  
+
   È possibile che tu voglia annullare il bind di un'istanza del servizio oppure eliminarla qualora
 non sia più utilizzata o per liberare dello spazio. Per annullare il bind di un'istanza del servizio alla tua applicazione, usa il **comando cf unbind-service**; per eliminare un'istanza del servizio, usa il comando **cf delete-service**.
 
@@ -312,7 +311,7 @@ non ti addebita niente a meno che l'utilizzo non superi le franchigie concesse.
 una funzione di stima e un calcolatore per consentirti di visualizzare il costo della tua applicazione. Puoi visualizzare il costo di TestNode nei seguenti modi:
 
   * Nel tuo dashboard, fai clic su TestNode. Quindi, nella pagina Panoramica, fai clic su **Stima il costo di questa applicazione** per vedere il prezzo del runtime e del supporto **SDK for Node.js** e il prezzo totale mensile della tua applicazione.
-  
+
   * In alternativa, nella pagina Listino prezzi, immetti l'utilizzo mensile del runtime e dei servizi della tua applicazione. Ad esempio 3 istanze di **SDK for Node.js** con 1 GB
 di memoria per ciascuna istanza. Il prezzo mensile viene calcolato e visualizzato.
 

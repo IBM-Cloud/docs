@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-03-15" 
 
 ---
 
@@ -17,8 +17,6 @@ copyright:
 {:pre: .pre}
 
 # 使用社群建置套件
-*前次更新：2016 年 3 月 15 日*
-{: .last-updated}
 
 如果您在 {{site.data.keyword.Bluemix}}「型錄」中，找不到提供您想要之運行環境的入門範本，則可將外部建置套件帶到 {{site.data.keyword.Bluemix_notm}}。利用 cf push 指令部署應用程式時，可指定與 Cloud Foundry 相容的自訂建置套件。
 {:shortdesc}
@@ -88,7 +86,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 使用 <strong>cf set-env</strong> 指令。例如，請輸入下列指令將 Java 版本設為 1.7.0：
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &apos;{jre: { version: 1.7.0_+ }}&apos;</code></pre>
 <p>然後，重新編譯打包應用程式，以讓變更生效：
 </p>
 <pre class="pre"><code>cf restage app_name</code></pre>
