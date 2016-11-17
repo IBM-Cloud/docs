@@ -13,7 +13,7 @@ copyright:
 # Configuring tool integrations
 {: #integrations}
 
-Last updated: 16 November 2016
+Last updated: 17 November 2016
 {: .last-updated}
 
 You can configure tool integrations that support development, deployment, and operations tasks while you create a toolchain, or you can add and configure tool integrations to customize an existing toolchain.  
@@ -113,7 +113,7 @@ Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your 
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **{{site.data.keyword.DRA_short}}**. 
 1. Click **Create Integration**.
-1. Click the tile for {{site.data.keyword.DRA_short}}, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline. For more information, see [{{site.data.keyword.DRA_short}} (Link opens in a new window)](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){: new_window}.
+1. Click the tile for {{site.data.keyword.DRA_short}}, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline. For more information, see [{{site.data.keyword.DRA_short}} (Link opens in a new window)](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}.
 
 
 ## Adding the Eclipse Orion {{site.data.keyword.webide}}
