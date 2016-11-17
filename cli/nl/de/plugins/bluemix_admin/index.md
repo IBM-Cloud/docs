@@ -37,6 +37,8 @@ Cloud Foundry-Befehlszeilenschnittstelle wird nicht von Cygwin unterstützt. Ver
 die Cloud Foundry-Befehlszeilenschnittstelle in einem
 Befehlszeilenfenster, das sich von dem Befehlszeilenfenster von Cygwin unterscheidet.
 
+**Hinweis**: Die {{site.data.keyword.Bluemix_notm}}-Administrator-CLI wird nur für die Umgebungen {{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated verwendet. Von {{site.data.keyword.Bluemix_notm}} Public wird sie nicht unterstützt.
+
 ## {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in hinzufügen
 
 Nach der Installation der Befehlszeilenschnittstelle 'cf' können Sie das
@@ -72,7 +74,7 @@ Wenn Sie das Plug-in deinstallieren müssen, können Sie die folgenden Befehle v
 
 ## {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwenden
 
-Mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in können Sie Benutzer hinzufügen oder entfernen, Benutzer aus Organisationen zuweisen oder die Zuweisung von Benutzern aufheben und andere Management-Tasks ausführen. Sonderzeichen wie Leerzeichen, Pluszeichen (+) und Et-Zeichen (&) werden für Organisationsnamen, Bereichsnamen und Anwendungssicherheitsgruppen nicht unterstützt. Verwenden Sie die Groß- und Kleinschreibung sowie Unterstriche, um eindeutige Namen zu erstellen.
+Mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in können Sie Benutzer hinzufügen oder entfernen, Benutzer aus Organisationen zuweisen oder die Zuweisung von Benutzern aufheben und andere Management-Tasks ausführen. 
 
 Führen Sie den folgenden Befehl aus,
 um eine Liste der Befehle anzuzeigen:
@@ -117,7 +119,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**Hinweis**: Zum Hinzufügen einer bestimmten Organisation müssen Sie der Manager der Organisation sein oder die Berechtigung **Admin** (alternativ **Superuser**) oder **User** mit dem Zugriff **Write** besitzen.
+**Hinweis**: Zum Hinzufügen einer bestimmten Organisation müssen Sie ein **Administrator** mit der Berechtigung **users.write** (oder **Superuser**) sein. Wenn Sie ein Organisationsmanager sind, kann Ihnen auch die Funktion bereitgestellt werden, mit der Sie Ihrer Organisation Benutzer über einen Superuser hinzufügen können, der den Befehl **enable-managers-add-users** ausführt. Weitere Informationen hierzu finden Sie unter [Managern die Möglichkeit geben, Benutzer hinzuzufügen](index.html#clius_emau).
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -146,7 +148,7 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
 <dd class="pd">Die Berechtigung, die dem Benutzer zugewiesen wurde. Beispiel: Superuser, Basic, Katalog, Benutzer und Berichte. Weitere Informationen zu den zugewiesenen Benutzerberechtigungen finden Sie im Abschnitt [Berechtigungen](../../../admin/index.html#permissions). Dieser Parameter kann nicht mit dem Organisationsparameter in derselben Abfrage verwendet werden. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
-<dd class="pd">Der Name der Organisation, zu der der Benutzer gehört. Dieser Parameter kann nicht mit dem Organisationsparameter in derselben Abfrage verwendet werden. </dd>
+<dd class="pd">Der Name der Organisation, zu der der Benutzer gehört. Dieser Parameter kann nicht mit dem Organisationsparameter in derselben Abfrage verwendet werden.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
 <dd class="pd">Die Organisationsrolle, die dem Benutzer zugewiesen wurde. Beispiel: Manager, Abrechnungsmanager oder Auditor für die Organisation. Sie müssen mit diesem Parameter die Organisation angeben. Weitere Informationen zu Rollen finden Sie im Abschnitt [Benutzerrollen](../../../admin/users_roles.html#userrolesinfo).</dd>
 
@@ -197,6 +199,30 @@ cf ba remove-user <user_name>
 </dl>
 
 **Tipp:** Sie können auch **ba ru** als Alias für den längeren Befehlsnamen **ba remove-user** verwenden.
+
+### Managern die Möglichkeit geben, Benutzer hinzuzufügen
+{: #clius_emau}
+
+Wenn Sie in Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung über die **Superuser**-Berechtigung verfügen, können Sie Organisationsmanagern die Möglichkeit geben, den von ihnen verwalteten Organisationen Benutzer hinzuzufügen. Geben Sie den folgenden Befehl ein:
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**Tipp:** Sie können auch **ba emau** als Alias für den längeren Befehlsnamen **ba enable-managers-add-users** verwenden.
+
+### Managern die Möglichkeit nehmen, Benutzer hinzuzufügen
+{: #clius_dmau}
+
+Wenn Organisationsmanager in Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung die Fähigkeit erhalten haben, den von ihnen verwalteten Organisationen Benutzer hinzuzufügen, indem sie den Befehl **enable-managers-add-users** verwenden, und wenn Sie über die **Superuser**-Berechtigung verfügen, können Sie diese Einstellung entfernen. Geben Sie den folgenden Befehl ein:
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**Tipp:** Sie können auch **ba dmau** als Alias für den längeren Befehlsnamen **ba disable-managers-add-users** verwenden.
 
 ### Organisation hinzufügen und löschen
 
@@ -477,6 +503,25 @@ die Sichtbarkeit des Service für mehrere Organisationen aktivieren, indem Sie w
 **Tipp:** Sie können auch **ba espv** als Alias für den längeren
 Befehlsnamen **ba edit-service-plan-visibility** verwenden.
 
+### Informationen zur Ressourcennutzung anzeigen
+{: #cliresourceusage}
+
+Sie können Informationen zur Ressourcennutzung, darunter zur Nutzung von Speicher, Platte und CPU, anzeigen. Es wird eine Zusammenfassung der verfügbaren physischen und reservierten Ressourcen sowie der Nutzung dieser Ressourcen angezeigt. Zudem werden Nutzungsdaten, die vergangene Speichernutzung und die Plattenbelegung angezeigt. Die Daten zur vergangenen Speichernutzung und Plattenbelegung werden standardmäßig nach Wochen und in absteigender Reihenfolge angezeigt. Zum Anzeigen der Ressourcennutzungsinformationen verwenden Sie den folgenden Befehl:
+
+```
+cf ba resource-usage <monthly> <weekly> 
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;monthly&gt;</dt>
+<dd class="pd">Anzeige der vergangenen Nutzungsdaten für Speicher und Plattenbelegung jeweils für einen Monat.</dd>
+<dt class="pt dlterm">&lt;weekly&gt;</dt>
+<dd class="pd">Anzeige der vergangenen Nutzungsdaten für Speicher und Plattenbelegung jeweils für eine Woche. Dies ist der Standardwert.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba rsu** als Alias für den längeren Befehlsnamen **ba resource-usage** verwenden.
+
 ### Mit Service-Brokern arbeiten
 
 Mit den folgenden Befehlen können Sie alle Service-Broker auflisten, einen Service-Broker hinzufügen oder löschen oder einen Service-Broker aktualisieren.
@@ -738,3 +783,80 @@ cf ba unbind-security-group <security-group> <org> <space>
 
 **Tipp:** Sie können auch **ba usg** als Alias für den längeren Befehlsnamen **ba unbind-staging-security-group** verwenden.
 
+### Mit Buildpacks arbeiten
+{: #buildpacks}
+
+Wenn Sie über eine Schreibberechtigung für den App-Katalog verfügen, können Sie Buildpacks auflisten, erstellen, aktualisieren oder löschen.  
+#### Alle Buildpacks auflisten
+
+Verwenden Sie den folgenden Befehl, um alle Buildpacks aufzulisten oder ein bestimmtes Buildpack anzuzeigen:
+
+```
+cf ba buildpacks <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">Ein optionaler Parameter zur Angabe eines bestimmten Buildpacks, das angezeigt werden soll.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba lb** als Alias für den längeren Befehlsnamen **ba buildpacks** verwenden.
+
+#### Buildpack erstellen und hochladen
+
+Sie können ein Buildpack erstellen und hochladen. Jede komprimierte Datei mit der Dateierweiterung .zip kann hochgeladen werden. Zum Hochladen eines Buildpacks verwenden Sie den folgenden Befehl:
+
+```
+cf ba create-buildpack <buildpack_name> <file_path> <position>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">Der Name des hochzuladenden Buildpacks.</dd>
+<dt class="pt dlterm">&lt;file_path&gt;</dt>
+<dd class="pd">Der Pfad zur komprimierten Datei des Buildpacks.</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">Die Reihenfolge, in der die Buildpacks während der automatischen Buildpackerkennung geprüft werden.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba cb** als Alias für den längeren Befehlsnamen **ba create-buildpack** verwenden.
+
+#### Buildpack aktualisieren
+
+Verwenden Sie den folgenden Befehl, um ein vorhandenes Buildpack zu aktualisieren:
+
+```
+cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">Der Name des zu aktualisierenden Buildpacks.</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">Die Reihenfolge, in der die Buildpacks während der automatischen Buildpackerkennung geprüft werden.</dd>
+<dt class="pt dlterm">&lt;enabled&gt;</dt>
+<dd class="pd">Gibt an, ob das Buildpack für das Staging verwendet wird.</dd>
+<dt class="pt dlterm">&lt;locked&gt;</dt>
+<dd class="pd">Gibt an, ob das Buildpack gesperrt ist, um Aktualisierungen zu verhindern.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba ub** als Alias für den längeren Befehlsnamen **ba update-buildpack** verwenden.
+
+#### Buildpack löschen
+
+Verwenden Sie den folgenden Befehl, um ein vorhandenes Buildpack zu löschen:
+
+```
+cf ba delete-buildpack <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">Der Name des zu löschenden Buildpacks.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba db** als Alias für den längeren Befehlsnamen **ba delete-buildpack** verwenden.

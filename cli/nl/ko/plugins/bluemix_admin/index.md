@@ -30,11 +30,13 @@ LDAP 레지스트리에서 사용자를 추가할 수 있습니다.{{site.data.k
 
 시작하기 전에 cf 명령행 인터페이스를 설치하십시오.
 {{site.data.keyword.Bluemix_notm}} 관리
-CLI 플러그인에는 cf 버전 6.11.2 이상이 필요합니다.[Cloud Foundry 명령행 인터페이스 다운로드](https://github.com/cloudfoundry/cli/releases){: new_window}
+CLI 플러그인에는 cf 버전 6.11.2 이상이 필요합니다. [Cloud Foundry 명령행 인터페이스 다운로드](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **제한사항:** Cloud Foundry 명령행 인터페이스는
 Cygwin에서는 지원되지 않습니다. Cygwin 명령행 창 외의
 명령행 창에서 Cloud Foundry 명령행 인터페이스를 사용하십시오.
+
+**참고**: {{site.data.keyword.Bluemix_notm}} 관리 CLI는 {{site.data.keyword.Bluemix_notm}} 로컬 및 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에만 사용됩니다. {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 지원되지 않습니다.
 
 ## {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 추가
 
@@ -72,7 +74,7 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 ## {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 사용
 
 {{site.data.keyword.Bluemix_notm}} 관리 CLI
-플러그인을 사용하여 사용자 추가 및 제거, 조직에서 사용자 지정 및 지정 취소, 기타 관리 태스크를 수행할 수 있습니다. 조직 이름, 영역 이름 및 애플리케이션 보안 그룹을 작성할 때 공백, 더하기 부호(+) 및 앰퍼샌드(&)와 같은 특수 문자는 지원되지 않습니다. 대소문자를 혼합하거나 밑줄을 사용하여 고유한 이름을 작성하십시오.
+플러그인을 사용하여 사용자 추가 및 제거, 조직에서 사용자 지정 및 지정 취소, 기타 관리 태스크를 수행할 수 있습니다.  
 
 명령 목록을 보려면 다음 명령을 실행하십시오.
 
@@ -119,7 +121,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**참고**: 특정 조직에 사용자를 추가하려면 조직의 관리자이거나 **관리자**(사용 가능한 대체는 **수퍼유저**) 또는 **쓰기** 액세스 권한이 포함된 **사용자** 권한이 있어야 합니다. 
+**참고**: 특정 조직에 사용자를 추가하려면 **users.write** 권한이 있는 **관리자**(또는 **수퍼유저**)여야 합니다. 조직 관리자인 경우 **enable-managers-add-users** 명령을 실행하는 수퍼유저가 조직에 사용자를 추가하는 기능을 제공할 수 있습니다. 자세한 정보는 [관리자를 사용하여 사용자 추가](index.html#clius_emau)를 참조하십시오.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -204,6 +206,32 @@ cf ba remove-user <user_name>
 
 **팁:** 긴 **ba remove-user** 명령어에 대한
 별명으로 **ba ru**를 사용할 수도 있습니다.
+
+### 관리자가 사용자를 추가하도록 설정
+{: #clius_emau}
+
+{{site.data.keyword.Bluemix_notm}} 환경에 **수퍼유저** 권한이 있는 경우 조직 관리자가 관리하는 조직에 사용자를 추가하도록 설정할 수 있습니다. 다음 명령을 입력하십시오. 
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**팁:** 긴 **ba enable-managers-add-users** 명령어의
+별명으로 **ba emau**를 사용할 수도 있습니다. 
+
+### 관리자가 사용자를 추가하도록 설정 제거
+{: #clius_dmau}
+
+조직 관리자가 **enable-managers-add-users** 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} 환경에서 관리하는 조직에 사용자를 추가하도록 설정된 경우 및 **수퍼유저** 권한이 있는 경우 이 설정을 제거할 수 있습니다. 다음 명령을 입력하십시오. 
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**팁:** 긴 **ba disable-managers-add-users** 명령어의
+별명으로 **ba emau**를 사용할 수도 있습니다. 
 
 ### 조직 추가 및 삭제
 
@@ -498,6 +526,26 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 **팁:** 긴 **ba edit-service-plan-visibility** 명령어에 대한
 별명으로 **ba espv**를 사용할 수도 있습니다.
 
+### 리소스 사용량 정보 보기
+{: #cliresourceusage}
+
+메모리, 디스크 및 CPU 사용량을 포함하여 리소스 사용량 정보를 확인할 수 있습니다. 실제 및 예약 리소스의 사용량을 포함하여 사용 가능한 실제 및 예약 리소스의 요약을 볼 수 있습니다. 또한 DEA(Droplet Execution Agent) 사용량 데이터와 메모리 및 디스크 사용량 히스토리도 볼 수 있습니다. 기본적으로 매주 및 내림차순으로 메모리 및 디스크 사용량의 데이터 히스토리가 표시됩니다. 리소스 사용량 정보를 보려면 다음 명령을 사용하십시오.
+
+```
+cf ba resource-usage <monthly> <weekly> 
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;monthly&gt;</dt>
+<dd class="pd">한 달에 한 번 메모리 및 디스크 공간의 히스토리 데이터가 표시됩니다.</dd>
+<dt class="pt dlterm">&lt;weekly&gt;</dt>
+<dd class="pd">한 주에 한 번 메모리 및 디스크 용량의 히스토리 데이터가 표시됩니다. 이는 기본값입니다.</dd>
+</dl>
+
+**팁:** 긴 **ba resource-usage** 명령어의
+별명으로 **ba rsu**를 사용할 수도 있습니다. 
+
 ### 서비스 브로커에 대한 작업
 
 모든 서비스 브로커를 나열하거나 서비스 브로커를 추가 또는 삭제하거나 서비스 브로커를 업데이트하려면 다음 명령을 사용하십시오.
@@ -674,7 +722,7 @@ cf ba delete-security-group <security-group>
 
 #### 바인딩된 보안 그룹 바인드, 바인드 해제, 나열
 
-보안 그룹 바인드와 바인드 해제에 대한 자세한 정보는 [애플리케이션 보안 그룹 바인딩](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} 및 [애플리케이션 보안 그룹 바인딩 해제](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}의 내용을 참조하십시오. 
+보안 그룹 바인드와 바인드 해제에 대한 자세한 정보는 [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} 및 [Unbinding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}의 내용을 참조하십시오. 
 
 * 다음 명령을 입력하여 기본 스테이징 보안 그룹
 세트에 바인딩할 수 있습니다. 
@@ -780,3 +828,84 @@ cf ba unbind-security-group <security-group> <org> <space>
 **팁:** 긴 **ba unbind-staging-security-group** 명령어의
 별명으로 **ba usg**를 사용할 수도 있습니다. 
 
+### 빌드팩에 대한 작업
+{: #buildpacks}
+
+앱 카탈로그 쓰기 권한이 있는 경우 빌드팩을 나열, 작성, 업데이트 또는 삭제할 수 있습니다.  
+#### 모든 빌드팩 나열
+
+모든 빌드팩을 나열하거나 특정 빌드팩을 표시하려면 다음 명령을 사용하십시오.
+
+```
+cf ba buildpacks <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">보기 위한 특정 빌드팩을 지정하는 선택적 매개변수입니다.</dd>
+</dl>
+
+**팁:** 긴 **ba buildpacks** 명령어의
+별명으로 **ba lb**를 사용할 수도 있습니다. 
+
+#### 빌드팩 작성 및 업로드
+
+빌드팩을 작성하고 업로드할 수 있습니다. .zip 파일 유형이 있는 압축된 파일을 업로드할 수 있습니다. 빌드팩을 업로드하려면 다음 명령을 사용하십시오.
+
+```
+cf ba create-buildpack <buildpack_name> <file_path> <position>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">업로드할 빌드팩의 이름입니다.</dd>
+<dt class="pt dlterm">&lt;file_path&gt;</dt>
+<dd class="pd">빌드팩 압축 파일의 경로입니다.</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">빌드팩 자동 삭제 중에 빌드팩이 선택되는 순서입니다.</dd>
+</dl>
+
+**팁:** 긴 **ba create-buildpack** 명령어의
+별명으로 **ba cb**를 사용할 수도 있습니다. 
+
+#### 빌드팩 업데이트
+
+기존 빌드팩을 업데이트하려면 다음 명령을 사용하십시오.
+
+```
+cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">업데이트할 빌드팩의 이름입니다.</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">빌드팩 자동 삭제 중에 빌드팩이 선택되는 순서입니다.</dd>
+<dt class="pt dlterm">&lt;enabled&gt;</dt>
+<dd class="pd">빌드팩이 스테이징에 사용되는지를 표시합니다.</dd>
+<dt class="pt dlterm">&lt;locked&gt;</dt>
+<dd class="pd">업데이트를 방지하기 위해 빌드팩이 잠기는지를 표시합니다.</dd>
+</dl>
+
+**팁:** 긴 **ba update-buildpack** 명령어의
+별명으로 **ba ub**를 사용할 수도 있습니다. 
+
+#### 빌드팩 삭제
+
+기존 빌드팩을 삭제하려면 다음 명령을 사용하십시오.
+
+```
+cf ba delete-buildpack <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">삭제할 빌드팩의 이름입니다.</dd>
+</dl>
+
+**팁:** 긴 **ba delete-buildpack** 명령어의
+별명으로 **ba db**를 사용할 수도 있습니다. 

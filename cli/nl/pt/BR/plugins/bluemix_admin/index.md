@@ -37,6 +37,8 @@ comandos do Cloud Foundry não é suportada por
 Cygwin. Use a interface de linha de comandos do Cloud Foundry
 em uma janela de linha de comandos diferente da janela de linha de comandos do Cygwin.
 
+**Observação**: a CLI do administrador do {{site.data.keyword.Bluemix_notm}} é usada somente para o ambiente {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated. Ele não é suportado pelo {{site.data.keyword.Bluemix_notm}} Public.
+
 ## Incluindo o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
 
 Após a interface de linha de comandos do cf ser instalada, é possível
@@ -46,8 +48,7 @@ incluir o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}.
 anteriormente o plug-in Administrador do
 {{site.data.keyword.Bluemix_notm}}, poderá ser necessário desinstalar o plug-in, excluir o repositório e reinstalar para obter as atualizações mais recentes.
 
-Conclua as etapas a seguir para incluir o repositório e instalar
-o plug-in:
+Conclua as etapas a seguir para incluir o repositório e instalar o plug-in:
 
 <ol>
 <li>Para incluir o repositório do plug-in Administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/> <code> cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli </code><br/><br/>
@@ -73,8 +74,7 @@ seguida, poderá incluir o repositório atualizado e instalar o plug-in mais rec
 ## Usando o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
 
 É possível usar o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}} para incluir ou remover usuários, designar ou remover designação de usuários de organizações e
-executar outras tarefas de gerenciamento. Os caracteres especiais como espaços, sinais de mais (+) e e comercial (&) não são suportados quando você cria nomes de organização, nomes de espaço e grupos
-de segurança do aplicativo. Tente usar letras maiúsculas e minúsculas mistas ou sublinhados para criar nomes exclusivos.
+executar outras tarefas de gerenciamento. 
 
 Para ver uma lista de comandos, execute o comando
 a seguir:
@@ -95,8 +95,7 @@ deve-se conectar e efetuar login, se ainda não o fez.
 <li>Para se conectar ao terminal da API do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/> <code> cf ba api https://console.&lt;subdomain&gt;.bluemix.net </code>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomínio da URL da sua instância do
-{{site.data.keyword.Bluemix_notm}}.<br />
+<dd class="pd">Subdomínio da URL da sua instância do {{site.data.keyword.Bluemix_notm}}.<br />
 </dd>
 </dl>
 <p>É possível verificar a página Recursos e informações do Console
@@ -121,11 +120,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**Nota**: para incluir um usuário em uma organização específica,
-deve-se ser o gerente da organização ou deve-se ter a permissão de
-**Administrador**
-(a alternativa disponível é **Super usuário**) ou de
-**Usuário** com acesso de **Gravação**.
+**Observação**: para incluir um usuário em uma organização específica, deve-se ser um **Administrador** com a permissão **users.write** (ou **Super usuário**). Se você for um gerenciador de organização, também poderá receber a capacidade de incluir usuários em sua organização por um Super usuário que executa o comando **enable-managers-add-users**.  Consulte [Ativando gerenciadores para incluir usuários](index.html#clius_emau) para obter mais informações.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -155,7 +150,7 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dd class="pd">A permissão designada ao usuário. Por exemplo, superusuário, básico, catálogo, usuário e relatórios. Para obter mais informações sobre permissões de usuário designadas, consulte
 [Permissões](../../../admin/index.html#permissions). Não é possível usar esse parâmetro com o parâmetro de organização na mesma consulta. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
-<dd class="pd">O nome da organização à qual o usuário pertence. Não é possível usar esse parâmetro com o parâmetro de organização na mesma consulta. </dd>
+<dd class="pd">O nome da organização à qual o usuário pertence. Não é possível usar esse parâmetro com o parâmetro de organização na mesma consulta.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
 <dd class="pd">A função de organização designada ao usuário. Por exemplo, gerente, gerente de faturamento ou auditor para a organização. Deve-se especificar a organização com esse parâmetro. Para obter mais
 informações sobre funções, consulte [Funções de usuário](../../../admin/users_roles.html#userrolesinfo).</dd>
@@ -210,6 +205,32 @@ cf ba remove-user <user_name>
 </dl>
 
 **Dica:** também é possível usar **ba ru** como um alias para o nome do comando mais longo **ba remove-user**.
+
+### Ativando gerenciadores para incluir usuários
+{: #clius_emau}
+
+Se você tiver a permissão **Super usuário** em seu ambiente {{site.data.keyword.Bluemix_notm}}, poderá ativar os gerenciadores de organização para incluir usuários na organização que eles gerenciam. Insira o comando a seguir:
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**Dica:** também é possível usar **ba emau** como um alias para o nome mais longo do comando **ba enable-managers-add-users**.
+
+### Desativando gerenciadores de incluir usuários
+{: #clius_dmau}
+
+Se os gerenciadores de organização foram ativados para incluir usuários em organizações que eles gerenciam em seu ambiente do {{site.data.keyword.Bluemix_notm}} com o comando **enable-managers-add-users** e se você tiver a permissão **Super usuário**,
+será possível remover essa configuração.  Insira o comando a seguir:
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**Dica:** também é possível usar **ba dmau** como um alias para o nome mais longo
+do comando **ba disable-managers-add-users**.
 
 ### Incluindo e excluindo uma organização
 
@@ -297,9 +318,9 @@ funções e descrições do usuário do {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt class="pt dlterm">OrgManager</dt>
 <dd class="pd">Gerenciador de organização. Um gerenciador de organização possui autoridade para executar as ações a seguir:
 <ul>
-<li>Criar ou excluir espaços dentro da organização.</li>
+<li>Criam ou excluem espaços dentro da organização.</li>
 <li>Convidar usuários para a organização e gerenciar usuários.</li>
-<li>Gerenciar domínios da organização.</li>
+<li>Gerenciam domínios da organização.</li>
 </ul>
 </dd>
 <dt class="pt dlterm">BillingManager</dt>
@@ -505,6 +526,27 @@ organização no comando.</dd>
 </dl>
 
 **Dica:** também é possível usar **ba espv** como um alias para o nome do comando mais longo **ba edit-service-plan-visibility**.
+
+### Visualizando informações de uso do recurso
+{: #cliresourceusage}
+
+É possível visualizar informações de uso de recurso, incluindo memória, disco e uso da CPU. É possível ver um resumo dos recursos físicos e reservados disponíveis, bem como o uso de recursos físicos e reservados. Também é possível ver os dados de uso, a memória histórica e o uso de disco dos Droplet Execution Agents (DEAs). Os dados históricos para uso de memória e disco são exibidos semanalmente e em ordem decrescente, por padrão. Para visualizar as informações de uso de recurso, use o comando a seguir:
+
+```
+cf ba resource-usage <monthly> <weekly> 
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;monthly&gt;</dt>
+<dd class="pd">Visualize os dados históricos de espaço em memória e em disco um mês de cada vez.</dd>
+<dt class="pt dlterm">&lt;weekly&gt;</dt>
+<dd class="pd">Visualize os dados históricos de espaço em memória e em disco uma semana de cada vez. Este é o valor
+padrão.</dd>
+</dl>
+
+**Dica:** também é possível usar **ba rsu** como um alias para o nome mais longo do
+comando **ba resource-usage**.
 
 ### Trabalhando com brokers de serviços
 
@@ -818,3 +860,84 @@ cf ba unbind-security-group <security-group> <org> <space>
 como alias para o nome de comando mais longo **ba
 unbind-staging-security-group**.
 
+### Trabalhando com buildpacks
+{: #buildpacks}
+
+Se você tiver as permissões de gravação do catálogo do app, será possível listar, criar, atualizar ou excluir buildpacks.  
+#### Listar todos os buildpacks
+
+Use o comando a seguir para listar todos os buildpacks ou para visualizar um buildpack específico:
+
+```
+cf ba buildpacks <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">Um parâmetro opcional para especificar um buildpack específico para visualizar.</dd>
+</dl>
+
+**Dica:** também é possível usar **ba lb** como um alias para o nome mais longo do
+comando **ba buildpacks**.
+
+#### Crie e faça upload de um buildpack
+
+É possível criar e fazer upload de um buildpack. É possível fazer upload de qualquer arquivo compactado que tenha um tipo de arquivo .zip. Use o comando a seguir para fazer upload de um buildpack:
+
+```
+cf ba create-buildpack <buildpack_name> <file_path> <position>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">O nome do buildpack a ser transferido por upload.</dd>
+<dt class="pt dlterm">&lt;file_path&gt;</dt>
+<dd class="pd">O caminho para o arquivo compactado buildpack.</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">A ordem na qual os buildpacks são verificados durante a detecção automática de buildpack.</dd>
+</dl>
+
+**Dica:** também é possível usar **ba cb** como um alias para o nome mais longo do
+comando **ba create-buildpack**.
+
+#### Atualizar um buildpack
+
+Para atualizar um buildpack existente, use o comando a seguir:
+
+```
+cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">O nome do buildpack a ser atualizado.</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">A ordem na qual os buildpacks são verificados durante a detecção automática de buildpack.</dd>
+<dt class="pt dlterm">&lt;ativado&gt;</dt>
+<dd class="pd">Indica se o buildpack é usado para preparação.</dd>
+<dt class="pt dlterm">&lt;locked&gt;</dt>
+<dd class="pd">Indica se o buildpack está bloqueado para evitar atualizações.</dd>
+</dl>
+
+**Dica:** também é possível usar **ba ub** como um alias para o nome mais longo do
+comando **ba update-buildpack**.
+
+#### Excluir um buildpack
+
+Para excluir um buildpack existente, use o comando a seguir:
+
+```
+cf ba delete-buildpack <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">O nome do buildpack a ser excluído.</dd>
+</dl>
+
+**Dica:** também é possível usar **ba db** como um alias para o nome mais longo do
+comando **ba delete-buildpack**.
