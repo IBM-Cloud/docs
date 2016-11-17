@@ -8,10 +8,10 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Getting started with {{site.data.keyword.contdelivery_short}} (Beta)
+# Getting started with {{site.data.keyword.contdelivery_short}}
 {: #cd_getting_started}
 
-Last updated: 16 November 2016
+Last updated: 17 November 2016
 {: .last-updated}  
 
 Adopt a DevOps approach by using {{site.data.keyword.contdelivery_full}}, which includes toolchains that automate the building and deployment of applications. You can get started by creating a simple deployment toolchain that supports development, deployment, and operations tasks. 
