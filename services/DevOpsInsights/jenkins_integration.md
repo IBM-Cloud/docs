@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -12,10 +13,7 @@ copyright:
 {:pre: .pre}
 
 # Integrating {{site.data.keyword.DRA_short}} with Jenkins
-{: #DRA_toolchain_configure_jenkins}
-
-*Last updated: 13 September 2016*
-{: .last-updated}
+{: #toolchain_configure_jenkins}
 
 After you define the policies for {{site.data.keyword.DRA_full}} to monitor, the next step is to add {{site.data.keyword.DRA_short}} to a toolchain, and then configure a continuous delivery pipeline.
 {:shortdesc}
@@ -24,11 +22,13 @@ After you define the policies for {{site.data.keyword.DRA_full}} to monitor, the
 
 You can integrate {{site.data.keyword.DRA_short}} into one Jenkins project or across several related Jenkins projects. This allows you set quality gates, as well as receive build quality data on the {{site.data.keyword.DRA_short}} dashboard.
 
-##Prerequisites
+##Prerequisites    
+{: #DI_jenkins_prereqs}
 
 * You must have access to a local Jenkins project, or to the server that is running a Jenkins project.
 
 ##Installing the {{site.data.keyword.DRA_short}} plugin
+{: #DI_jenkins_install}
 
 To install the {{site.data.keyword.DRA_short}} plugin in your Jenkins project, follow these steps:
 
@@ -38,13 +38,14 @@ To install the {{site.data.keyword.DRA_short}} plugin in your Jenkins project, f
   4. Click **Upload**.
   5. Restart Jenkins and verify that the plugin was installed.
 
-##Integrating {{site.data.keyword.DRA_short}} with Jenkins
+##Integrating {{site.data.keyword.DRA_short}} with Jenkins    
+{: #DI_jenkins_integrate}
 
 After the plugin is installed, but before you integrate {{site.data.keyword.DRA_short}} into your Jenkins installation, go to the [control center](https://control-center.stage1.ng.bluemix.net/) and create at least one policy.
 
 For each of the jobs that you already have, and in which you want to use {{site.data.keyword.DRA_short}}:
 
-1. Add a post-build action with the type **Publish build information to {{site.data.keyword.DRA_short}}**, **Publish deployment information to {{site.data.keyword.DRA_short}}**, or **Publish test result to {{site.data.keyword.DRA_short}}**. The specific type should match the job type (build, deploy, or test). Complete the required fields. 
+1. Add a post-build action with the type **Publish build information to {{site.data.keyword.DRA_short}}**, **Publish deployment information to {{site.data.keyword.DRA_short}}**, or **Publish test result to {{site.data.keyword.DRA_short}}**. The specific type should match the job type (build, deploy, or test). Complete the required fields.
   * In the Credential field, choose your Bluemix ID and password. If they are not saved in Jenkins, click the **Add** button to add and save them.
   * In the Build Job Name field, specify your build job's name exactly as it is in Jenkins. If the build occurs together with the test job, leave this field empty. If the build job occurs outside of Jenkins, check **Builds are being done outside of Jenkins** and specify the build number and build URL.
   * For the Result File Location field, specify the result file's location. If the test doesn't generate a result file, leave this field empty. The plugin will upload a default result file based on the status of current test job.

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -14,21 +15,48 @@ copyright:
 # Viewing dashboards and reports
 {: #DRA_toolchain_reports}
 
-*Last updated: 8 November 2016*
-{: .last-updated}
-
 {{site.data.keyword.DRA_short}} provides you with a wealth of actionable information about your projects.
 {:shortdesc}
 
-## {{site.data.keyword.DRA_short}} dashboards
+## {{site.data.keyword.DRA_short}} dashboards    
+{: #DI_toolchain_dashboards}
 
-{{site.data.keyword.DRA_short}} provides dashboards that allow you to monitor build status, environment status, and test performance  across your Bluemix organization. To see them, after opening {{site.data.keyword.DRA_short}}, click the **Build Verification**, **Test Results**, or **Environments** tabs, respectively.
+{{site.data.keyword.DRA_short}} provides dashboards that display information about performance across your Bluemix organization. To see them, after you open {{site.data.keyword.DRA_short}}, click **Build Verification** or **Deploy Verification**.
 
-The dashboards are automatically populated with the most recent information from your pipelines' {{site.data.keyword.DRA_short}} test jobs. Click on the elements within the dashboards for more information about them. 
+The dashboards are automatically populated with the most recent information from your pipelines' {{site.data.keyword.DRA_short}} test jobs. Click the elements within the dashboards for more information about them.
 
-## Viewing decisions reports
+### Key performance indicators in builds    
+{: #DI_key_performance_indicators}
 
-After a pipeline has been configured and run, {{site.data.keyword.DRA_short}} starts to collect and analyze the test results from it pipeline to establish a baseline. Each time a pipeline runs, data is collected and compared against previous runs. After the analysis is complete, at each gate {{site.data.keyword.DRA_short}} decides to either allow the deployment to proceed or stop the pipeline if the rules for the gate were not met.
+The **Build Verification** page contains three graphs that contain information about the health of the selected development branch:
+
+<table>
+<thead>
+<tr>
+<th>Graph</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Latest Builds</td>
+<td>The number of recent builds that completed compared to the total number of recent builds.</td>
+</tr>
+<tr>
+<td>Tests</td>
+<td>The number of tests that passed compared to the total number of tests.</td>
+</tr>
+<tr>
+<td>Code Coverage</td>
+<td>The percentages of your code's statements and functions that are called by your tests.</td>
+</tr>
+</tbody></table>
+
+## Viewing decision reports    
+{: #DI_decision_reports}
+
+After a pipeline runs, {{site.data.keyword.DRA_short}} starts to collect and analyze the test results from it to establish a baseline. Data from every subsequent run is collected and compared against previous results. Decision gates use this data to determine when to stop a deployment. 
 
 To view the decision report for a gate from the pipeline, complete these steps:
 
