@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -12,17 +13,14 @@ copyright:
 {:pre: .pre}
 
 # Integrating {{site.data.keyword.DRA_short}} with {{site.data.keyword.deliverypipeline}}
-{: #DRA_toolchain_configure_pipeline}
-
-*Last updated: 1 November 2016*
-{: .last-updated}
+{: #toolchain_configure_pipeline}
 
 After you add {{site.data.keyword.DRA_full}} to a toolchain and define the policies it monitors, you must then integrate {{site.data.keyword.DRA_short}} with your pipeline.
 {:shortdesc}
 
 <!--##Configuring the {{site.data.keyword.deliverypipeline}}
 
-{: #DRA_toolchain_integration}
+{: #toolchain_integration}
 To use {{site.data.keyword.DRA_short}}, add it to any toolchain that uses the {{site.data.keyword.deliverypipeline}}.
 
 1. In {{site.data.keyword.Bluemix_notm}}, on the **Toolchains** tab, open a toolchain.
@@ -36,15 +34,13 @@ To use {{site.data.keyword.DRA_short}}, add it to any toolchain that uses the {{
 5. In your toolchain, click the {{site.data.keyword.deliverypipeline}} tile. You can configure {{site.data.keyword.DRA_short}} in any number of pipelines.-->
 
 ## Preparing pipeline stages for {{site.data.keyword.DRA_short}}
-{: #DRA_toolchain_pipeline_props}
+{: #toolchain_pipeline_props}
 
-**Important**: You must create several environment properties in each pipeline stage that contains build or deploy jobs to successfully integrate {{site.data.keyword.DRA_short}} with your project. 
+You must create several environment properties in each pipeline stage that contains build or deploy jobs:
 
-For each pipeline stage that contains build or deploy jobs:
+1. Click **Stage Configuration** and then **Configure stage**.
 
-1. Click **Stage Configuration** and then **Configure stage**. 
-
-2. Click **ENVIRONMENT PROPERTIES**. 
+2. Click **ENVIRONMENT PROPERTIES**.
 
 3. Add the following three text properties, and then save the changes to the stage:
 
@@ -60,7 +56,7 @@ For each pipeline stage that contains build or deploy jobs:
 </tr>
 <tr>
 <td><code>LOGICAL_ENV_NAME</code></td>
-<td>The name of the environment that the app is running in. This is used to categorize the app in {{site.data.keyword.DRA_short}} dashboards.</td>
+<td>The name of the environment that the app is running in. This property is used to categorize the app in {{site.data.keyword.DRA_short}} dashboards.</td>
 </tr>
 <tr>
 <td><code>BUILD_PREFIX</code></td>
@@ -70,7 +66,7 @@ For each pipeline stage that contains build or deploy jobs:
 
 
 ## Updating test jobs for {{site.data.keyword.DRA_short}}
-{: #DRA_toolchain_pipeline_upload}
+{: #toolchain_pipeline_upload}
 
 To get started, retrieve the setup information from a test job.
 
@@ -87,7 +83,7 @@ To get started, retrieve the setup information from a test job.
  * Result File Location
 8. Click **Save** to return to the pipeline.
 
-**Note:** The values for the **Type of Metric** and **Result File Location** fields must match the correct format.
+The values for the **Type of Metric** and **Result File Location** fields must match the correct format:
 
 <table><thead>
 <tr>
@@ -115,7 +111,7 @@ To get started, retrieve the setup information from a test job.
 *Figure 1. Upload results to DevOps Analytics*
 
 ## Defining {{site.data.keyword.DRA_short}} gates in the pipeline
-{: #DRA_toolchain_pipeline_gates}
+{: #toolchain_pipeline_gates}
 
 {{site.data.keyword.DRA_short}} gates check whether your test results comply with the defined policy. If the policy is not met, the {{site.data.keyword.DRA_short}} gate fails. Usually, gates are placed at the end of each stage of your pipeline. This location is ideal to check the quality of the build against your policy to ensure that it is safe to promote from one environment to another. However, you can put gates anywhere in the pipeline where you want a specific criterion to be checked.
 
@@ -123,10 +119,10 @@ To get started, retrieve the setup information from a test job.
 2. Click **Add Job**. For the job type, select **Test**.
 3. Enter a name for the new job, such as *Gate (Unit Test)*.
 4. For tester type, select **{{site.data.keyword.DRA_short}} Gate**.
-5. Specify the environment name. Make sure that this value matches what was defined in your [environment properties](#DRA_toolchain_pipeline_props).
+5. Specify the environment name. Make sure that this value matches what was defined in your [environment properties](#toolchain_pipeline_props).
 6. Define the policy name that is to be checked at this gate.
 
- **Note:** This name must exactly match one of the policy names that you defined. You can specify only policies that are defined in the same {{site.data.keyword.Bluemix_notm}} organization as your toolchain.
+ This name must exactly match one of the policy names that you defined. You can specify only policies that are defined in the same {{site.data.keyword.Bluemix_notm}} organization as your toolchain.
 
 7. Optional: To make a gate function in advisory mode, clear the **Stop running this stage if this job fails** check box. In advisory mode, {{site.data.keyword.DRA_short}} completes the same policy analysis at the gate and generates reports, but if a failure occurs, the pipeline is not stopped.
 8. Click **Save** to return to the pipeline.
@@ -135,4 +131,4 @@ To get started, retrieve the setup information from a test job.
 ![Deployment Risk Analytics Mocha job](images/DRA_gate_job.png)
 *Figure 2. DevOps Analytics gate*
 
-After your pipeline is configured, start to use {{site.data.keyword.DRA_short}}. For instructions, see [Running the Delivery Pipeline](./pipeline_decision_reports.html#DRA_toolchain_reports).
+After your pipeline is configured, start to use {{site.data.keyword.DRA_short}}. For instructions, see [Running the Delivery Pipeline](./pipeline_decision_reports.html#toolchain_reports).

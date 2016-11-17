@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -12,19 +13,16 @@ copyright:
 {:pre: .pre}
 
 # Getting started with {{site.data.keyword.DRA_short}} (Experimental)
-{: #DRA_gettingstarted}
+{: #gettingstarted}
 
-*Last updated: 8 November 2016*
-{: .last-updated}
-
-{{site.data.keyword.DRA_full}} allows you to maintain and improve the quality of your code in {{site.data.keyword.Bluemix_notm}} by monitoring your deployments to identify risks before they are released.
+Use {{site.data.keyword.DRA_full}} to identify risks to your builds and deployments.
 {:shortdesc}
 
-{{site.data.keyword.DRA_short}} collects and analyzes the results from unit tests, functional tests, and code coverage tools to determine whether your code meets predefined policies at specified gates in your deployment process. If your code does not meet or exceed a policy, the deployment is halted, preventing risks from being released. You can use {{site.data.keyword.DRA_short}} as a safety net for your continuous delivery environment or as a way to implement and improve quality standards over time.
+{{site.data.keyword.DRA_short}} aggregates and analyzes the results from unit tests, functional tests, and code coverage tools to determine whether your code meets predefined policies at specified gates in your deployment process. If your code does not meet or exceed a policy, the deployment is halted, preventing risky changes from being released. You can use {{site.data.keyword.DRA_short}} as a safety net for your continuous delivery environment, a way to implement and improve quality standards over time, and a data visualization tool to help you understand your project's health.
 
-{{site.data.keyword.DRA_short}} is an experimental offering and is provided as-is for development and experimentation purposes only.  To use {{site.data.keyword.DRA_short}}, add it to any toolchain that uses the {{site.data.keyword.deliverypipeline}}.
+{{site.data.keyword.DRA_short}} is an experimental offering and is provided as-is for development and experimentation purposes only. To use {{site.data.keyword.DRA_short}}, add it to any toolchain that uses the {{site.data.keyword.deliverypipeline}}.
 
-{: #DRA_catalog}
+{: #catalog}
 To access the {{site.data.keyword.DRA_short}} UI, complete the following steps from an existing toolchain:
 
 1. Click the **Add a Tool** button.
