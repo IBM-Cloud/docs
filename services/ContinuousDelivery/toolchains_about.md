@@ -14,7 +14,7 @@ copyright:
 # About toolchains    
 {: #toolchains_about}  
 
-Last updated: 15 November 2016
+Last updated: 17 November 2016
 {: .last-updated}
 
 Toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. As a starting point, you can use a toolchain template. Depending on the template that you use, you can create a toolchain that has a specific set of tool integrations or an empty toolchain that you can add tool integrations to.    
@@ -31,9 +31,9 @@ If you have problems or questions when you use toolchains, you can get help by s
 
 When you ask a question in a forum, tag your question so that the {{site.data.keyword.Bluemix_notm}} development teams see it.
 
-* If you have technical questions about developing or deploying an app with toolchains, post your question on [Stack Overflow (Link opens in new window)](http://stackoverflow.com/search?q=devops+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "devops".
+* If you have technical questions about developing or deploying an app with toolchains, post your question on [Stack Overflow (Link opens in new window)](http://stackoverflow.com/search?q=devops+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "continuous-delivery".
 
-* If you have questions about toolchains, use the [IBM developerWorks dW Answers (Link opens in a new window)](https://developer.ibm.com/answers/topics/devops-services/?smartspace=bluemix){:new_window} forum. Include the "devops-services" and "bluemix" tags.
+* If you have questions about toolchains, use the [IBM developerWorks dW Answers (Link opens in a new window)](https://developer.ibm.com/answers/topics/devops-services/?smartspace=bluemix){:new_window} forum. Include the "bluemix-continuous-delivery" tag.
 
 For more details about using the forums, see [Getting help (Link opens in a new window)](https://www.{DomainName}/docs/support/index.html#getting-help).
 
