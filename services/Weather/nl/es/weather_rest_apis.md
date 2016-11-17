@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-22"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Uso de las API REST de {{site.data.keyword.weather_short}}
 {: #rest_apis}
-
-Última actualización: 22 de agosto de 2016
-{: .last-updated}
 
 Puede utilizar las [API REST](https://twcservice.{APPDomain}/rest-api/){:new_window}
 para recuperar datos sobre el tiempo. Puede probar las operaciones de la API y ver de forma instantánea los resultados para acelerar el proceso de creación de aplicaciones.

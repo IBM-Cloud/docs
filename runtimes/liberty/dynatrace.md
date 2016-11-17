@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Using Dynatrace
 {: #using_dynatrace}
-
-Last Updated: 10 June 2016
-{: .last-updated}
 
 Dynatrace is a third-party service that provides monitoring for your app.
 

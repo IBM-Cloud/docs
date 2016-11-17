@@ -11,7 +11,7 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Visualizzazione dei dati in tempo reale utilizzando le tabelle e le schede 
+# Visualizzazione dei dati in tempo reale utilizzando le tabelle e le schede
 {: #boards_and_cards}
 Ultimo aggiornamento: 21 giugno 2016
 {: .last-updated}
@@ -29,7 +29,7 @@ Il dashboard {{site.data.keyword.iot_full}} dispone delle seguenti tabelle prede
 
 |Nome tabella | Descrizione |  
 |:---|:---|  
-|Panoramica sull'utilizzo   | Visualizza le statistiche di utilizzo per la tua organizzazione. Elenca i tipi di dispositivo e i dati utilizzati.
+|Panoramica sull'utilizzo  | Visualizza le statistiche di utilizzo per la tua organizzazione. Elenca i tipi di dispositivo e i dati utilizzati.
 |Analisi incentrata sulla regola | Visualizza le regole per la tua organizzazione. Ulteriori schede elencano gli avvisi attivati, i dispositivi associati, le proprietà del dispositivo e le informazione sull'avviso. |  
 |Analisi incentrata sul dispositivo | Visualizza i dispositivi collegati alla tua organizzazione. Ulteriori schede mostrano gli avvisi e le informazioni per un dispositivo selezionato, le proprietà del dispositivo e le informazioni sull'avviso. |
 
@@ -54,9 +54,9 @@ Fai clic su **Show more** per un elenco completo dei tipi di dispositivo.
  1.	Fornisci al dataset un nome di identificazione.
  2. Seleziona un evento che include il punto dati che desideri visualizzare.
  3.	Seleziona la proprietà che rappresenta il punto dati.
- 4.	Imposta i valori tipo, unità, precisione e minimo e massimo per il punto dati.
+ 4.	Imposta i valori tipo, unità, precisione e minimo e massimo per il punto dati.  
  Quando finito fai clic su **New Data Set** per aggiungere ulteriori dataset o fai clic su **Next**.
-5.	Seleziona la visualizzazione.
+5.	Seleziona la visualizzazione.  
 Seleziona il tipo e la dimensione di visualizzazione che vuoi utilizzare.  Alcuni tipi di schede hanno ulteriori impostazioni.
 <dl>
 <dt>Utilizzo</dt>
@@ -64,7 +64,7 @@ Seleziona il tipo e la dimensione di visualizzazione che vuoi utilizzare.  Alcun
 <table>
 <thead>
 <tr>
-<th>Tipo </th>
+<th>Tipo</th>
 <th>Dati visualizzati</th>
 </tr>
 </thead>
@@ -84,7 +84,7 @@ Seleziona il tipo e la dimensione di visualizzazione che vuoi utilizzare.  Alcun
 <table>
 <thead>
 <tr>
-<th>Tipo </th>
+<th>Tipo</th>
 <th>Dati visualizzati</th>
 </tr>
 </thead>
@@ -100,7 +100,7 @@ Seleziona il tipo e la dimensione di visualizzazione che vuoi utilizzare.  Alcun
 <dd><table>
 <thead>
 <tr>
-<th>Tipo </th>
+<th>Tipo</th>
 <th>Dati visualizzati</th>
 </tr>
 </thead>
@@ -123,7 +123,7 @@ Seleziona il tipo e la dimensione di visualizzazione che vuoi utilizzare.  Alcun
 </tr>
 <tr>
 <td>Valore</td>
-<td>Il valore non elaborato di uno o più dataset. </td>
+<td>Il valore non elaborato di uno o più dataset.</td>
 </tr>
 <tr>
 <td>Misuratore</td>
@@ -137,7 +137,7 @@ Seleziona il tipo e la dimensione di visualizzazione che vuoi utilizzare.  Alcun
 <table>
 <thead>
 <tr>
-<th>Tipo </th>
+<th>Tipo</th>
 <th>Dati visualizzati</th>
 </tr>
 </thead>
@@ -148,7 +148,7 @@ Seleziona il tipo e la dimensione di visualizzazione che vuoi utilizzare.  Alcun
 </tr>
 <tr>
 <td>Informazioni avviso</td>
-<td>Mostra le informazioni di base per un solo avviso. </td>
+<td>Mostra le informazioni di base per un solo avviso.</td>
 </tr>
 <tr>
 <td>Elenco dispositivi</td>
@@ -159,16 +159,16 @@ Seleziona il tipo e la dimensione di visualizzazione che vuoi utilizzare.  Alcun
 <td>Un elenco di avvisi per un dispositivo.</td>
 </tr>
 <tr>
-<td>Regole </td>
+<td>Regole</td>
 <td>Un elenco di regole che dispongono di avvisi.</td>
 </tr>
 <tr>
 <td>Proprietà del dispositivo</td>
-<td>Visualizza le proprietà specifiche per uno o più dispositivi. </td>
+<td>Visualizza le proprietà specifiche per uno o più dispositivi.</td>
 </tr>
 <tr>
-<td>Tutte le proprietà del dispositivo  </td>
-<td>Visualizza tutte le proprietà specifiche per uno o più dispositivi. </td>
+<td>Tutte le proprietà del dispositivo</td>
+<td>Visualizza tutte le proprietà specifiche per uno o più dispositivi.</td>
 </tr>
 <tr>
 <td>Associazione dispositivo</td>
@@ -179,7 +179,7 @@ Seleziona il tipo e la dimensione di visualizzazione che vuoi utilizzare.  Alcun
 </dd>
 </dl>
 
-6. Specifica l'origine dati per la scheda.
+6. Specifica l'origine dati per la scheda.  
 A seconda del tipo di scheda che hai selezionato, i dati visualizzati su una scheda possono provenire da un dispositivo o da un'altra scheda. Seleziona un dispositivo specifico o un elenco di dispositivi o una scheda di elenco di avvisi per l'origine dati e quindi fai clic su **Next**.
 7. Solo per le schede del tipo di dispositivi: aggiungi uno o più dataset da visualizzare nella scheda.   
  1. Fai clic su **Connect data set** per aggiungere una proprietà da visualizzare nella scheda.
@@ -187,8 +187,8 @@ A seconda del tipo di scheda che hai selezionato, i dati visualizzati su una sch
  3. Immetti o seleziona l'evento di cui visualizzare le proprietà.
  4. Immetti o seleziona la proprietà da visualizzare.
  5. Specifica il tipo della proprietà e facoltativamente imposta i valori unità, precisione, minimo e massimo per la proprietà.  
- 6. Fare clic su **Next**.
-7. Seleziona la dimensione di presentazione.
+ 6. Fai clic su **Next**.
+7. Seleziona la dimensione di presentazione.   
 Per alcuni tipi di schede, puoi fare clic su **Settings** per configurare ulteriori dettagli di visualizzazione. Fai clic su **Next**.
 7. Fornisci un tile e una descrizione per la scheda e facoltativamente seleziona uno schema di colore e quindi fai clic su **Submit** per creare la scheda.
 7.	Infine, posiziona la nuova scheda nella tua tabella trascinandola in una posizione valida.  

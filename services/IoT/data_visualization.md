@@ -33,6 +33,7 @@ The {{site.data.keyword.iot_full}} dashboard has the following default boards:
 |Usage overview  | Shows usage statistics for your organization. Lists device types and the data that is consumed.
 |Rule-Centric Analytics | Shows the rules for your organization. Additional cards list triggered alerts, associated devices, device properties, and alert information. |  
 |Device-Centric Analytics | Shows the devices that are connected to your organization. Additional cards show alerts for a selected device,  information for a selected device, device properties, and alert information. |
+|Risk and Security Management | Shows cards that summarize the overall security status. System operators and security analysts can view details of compliance, connection status for devices, the causes of connection failures, and the devices that are blocked or allowed through a blacklist or whitelist.  From the Connection Compliance card, the user can drill down to a detailed report about non-compliant devices, and can export the report to the Excel. |
 
 You can update these boards by adding, updating, and removing cards.
 

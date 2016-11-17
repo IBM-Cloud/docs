@@ -127,9 +127,9 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">Il nome dell'applicazione per cui visualizzare la cronologia della politica di ridimensionamento automatico.
 <dt class="pt dlterm">&lt;start_timestamp&gt;</dt>
-<dd class="pd">La data e ora di inizio dell'intervallo della cronologia. I formati supportati sono `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Per impostazione predefinita, la data e ora viene impostata su 50 ore avanti rispetto all'ora corrente. Consultare la <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date e Time Formats standard</a> per i dettagli relativi al formato data / ora. 
+<dd class="pd">La data e ora di inizio dell'intervallo della cronologia. I formati supportati sono `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Per impostazione predefinita, la data e ora viene impostata su 50 ore avanti rispetto all'ora corrente. Consulta la <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date e Time Formats standard</a> per i dettagli relativi al formato data e ora.
 <dt class="pt dlterm">&lt;end_timestamp&gt;</dt>
-<dd class="pd">La data e ora di fine dell'intervallo della cronologia. I formati supportati sono `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Per impostazione predefinita, la data e ora viene impostata sull'ora corrente. Consultare la <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date e Time Formats standard</a> per i dettagli relativi al formato data e ora. 
+<dd class="pd">La data e ora di fine dell'intervallo della cronologia. I formati supportati sono `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Per impostazione predefinita, la data e ora viene impostata sull'ora corrente. Consulta la <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C Date e Time Formats standard</a> per i dettagli relativi al formato data e ora.
 </dl>
 
 

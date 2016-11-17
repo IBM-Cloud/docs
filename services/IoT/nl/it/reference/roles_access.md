@@ -116,7 +116,7 @@ Gestione degli schemi del messaggio di analisi|	X|	X|	X|	X| -
 
 ### Operazioni del servizio di terze parti {: #user-third-party}
 
-Operazioni del servizio di terze parti  ||| Ruoli utente|||
+Operazioni del servizio di terze parti ||| Ruoli utente|||
 :--------: | -------------|-------------|---------------|-----|---
            | **Amministratore** | **Operatore** | **Sviluppatore** | **Analista** | **Lettore**
 Elaborazione delle notifiche batch da una piattaforma esterna	|X|	X	|X |-|-

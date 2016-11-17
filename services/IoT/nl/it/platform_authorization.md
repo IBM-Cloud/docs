@@ -27,7 +27,7 @@ Per ulteriori informazioni sulle connessioni dell'applicazione, consulta [Connet
 
 Per creare una nuova coppia di chiave API e token di autenticazione:  
 1.	Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Apps > API Keys**.  
-2.	Fai clic su **Generate API Key**.
+2.	Fai clic su **Generate API Key**.  
 **Importante:** prendi nota della coppia di chiave API e token. I token di autenticazione non sono ripristinabili. Se perdi o dimentichi questo token, dovrai registrare nuovamente la chiave API per generare un nuovo token di autenticazione.
  - Un esempio di una chiave API è `a-organization_id-a84ps90Ajs`  
  - Un esempio di un token è `MP$08VKz!8rXwnR-Q*`  
@@ -38,7 +38,7 @@ Per creare una nuova coppia di chiave API e token di autenticazione:
 
 ## Connessione bind Bluemix
 {: #bluemix-binding}
-Puoi eseguire il bind delle applicazioni alla tua organizzazione {{site.data.keyword.iot_short_notm}} da {{site.data.keyword.Bluemix_notm}}. Eseguendo il bind dell'applicazione, è possibile soltanto comunicare con le istanze del servizio nello stesso spazio o organizzazione. Puoi trovare tutti i dati necessari perché l'applicazione comunichi con l'istanza del servizio nella variabile di ambiente VCAP_SERVICES. Se la tua applicazione è associata a più servizi, la variabile VCAP_SERVICES include le informazioni di connessione per ciascuna istanza di servizio.   
+Puoi eseguire il bind delle applicazioni alla tua organizzazione {{site.data.keyword.iot_short_notm}} da {{site.data.keyword.Bluemix_notm}}. Eseguendo il bind dell'applicazione, è possibile soltanto comunicare con le istanze del servizio nello stesso spazio o organizzazione. Puoi trovare tutti i dati necessari perché l'applicazione comunichi con l'istanza del servizio nella variabile di ambiente VCAP_SERVICES. Se la tua applicazione è associata a più servizi, la variabile VCAP_SERVICES include le informazioni di connessione per ciascuna istanza di servizio.  
 
 Tuttavia, puoi utilizzare le istanze del servizio da altri spazi o organizzazioni nello stesso modo di un'applicazione esterna. Invece di creare un bind, utilizza le credenziali per configurare direttamente la tua istanza dell'applicazione. Per ulteriori informazioni, consulta [Richiesta di una nuova istanza del servizio](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) nella documentazione {{site.data.keyword.Bluemix_notm}}.
 

@@ -97,7 +97,7 @@ IBM.com에서 사용 가능한 [디바이스 연결 지침서](https://developer
 **참고:** {{site.data.keyword.iot_short_notm}} 대시보드에서 {{site.data.keyword.iot_short_notm}}에 직접 연결된 디바이스와 게이트웨이는 현재 연결되었음을 표시하는 상태 아이콘을 표시합니다. 대시보드에는 게이트웨이에 연결된 디바이스에 대한 정보가 없으므로 게이트웨이를 통해 간접적으로 연결된 디바이스는 연결이 끊김으로 표시됩니다.
 
 
-## Edge Analytics Agent 설치
+## EAA(Edge Analytics Agent) 설치
 {: #edge}
 
 EAA(Edge Analytics Agent)는 {{site.data.keyword.iot_short_notm}} 대시보드에서 에지 분석 규칙을 업로드하고 관리하여 게이트웨이에서 에지 분석 오퍼레이션을 수행하는 [Apache Quarks](http://quarks.incubator.apache.org/)를 기반으로 빌드된 소프트웨어 컴포넌트입니다. 에지 분석에 대한 자세한 정보는 [에지 분석](../edge_analytics.html)을 참조하십시오.

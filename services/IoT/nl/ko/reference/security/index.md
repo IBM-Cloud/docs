@@ -1,7 +1,8 @@
 ---
 
-copyright:
-  years: 2015, 2016
+저작권:
+  연도: 2016
+마지막 업데이트 날짜: "2016-10-21"
 
 ---
 
@@ -14,10 +15,11 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} 보안
 {: #sec-index}
-마지막 업데이트 날짜: 2016년 8월 5일
+마지막 업데이트 날짜: 2016년 10월 21일
 {: .last-updated}
 
 클라우드에서 호스트되는 서비스로서 {{site.data.keyword.iot_full}}에는 아키텍처의 중요한 요소로 보안이 임베드되어 있습니다.
+{: shortdesc}
 
 다음 문서에서는 특정 영역에 초점을 맞춰 조직 데이터 보호 방식에 대한 몇 가지 일반 질문에 응답합니다.
 
@@ -29,11 +31,11 @@ copyright:
 ## {{site.data.keyword.iot_short_notm}} 및 {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}}은 {{site.data.keyword.Bluemix_notm}} 플랫폼에서 실행되므로 {{site.data.keyword.Bluemix_notm}} 및 IBM SoftLayer를 사용하여 액세스 및 연결합니다. {{site.data.keyword.Bluemix_notm}} 및 IBM SoftLayer를 사용하므로 {{site.data.keyword.Bluemix_notm}} 및 IBM SoftLayer의 보안과 신뢰성이 {{site.data.keyword.iot_short_notm}} 사용자에게 중요합니다.
+{{site.data.keyword.iot_short_notm}}은 {{site.data.keyword.Bluemix_notm}} 플랫폼 내에서 실행되므로 액세스 및 연결에 {{site.data.keyword.Bluemix_notm}} 및 {{site.data.keyword.BluSoftlayer_full}}를 둘 다 사용합니다. {{site.data.keyword.Bluemix_notm}} 및 {{site.data.keyword.BluSoftlayer}}를 사용하기 때문에 {{site.data.keyword.Bluemix_notm}} 및 {{site.data.keyword.BluSoftlayer}}의 보안과 신뢰성이 {{site.data.keyword.iot_short_notm}} 사용자에게 중요합니다.
 
-{{site.data.keyword.Bluemix_notm}} 보안에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 플랫폼 보안](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security)을 참조하십시오.
+{{site.data.keyword.Bluemix_notm}}의 보안에 대한 세부사항은 [{{site.data.keyword.Bluemix_notm}} 플랫폼 보안](https://console.ng.bluemix.net/docs/security/index.html#platform-security)을 참조하십시오.
 
-## {{site.data.keyword.iot_short_notm}} 보안 규제 준수
+## {{site.data.keyword.iot_short_notm}} 보안 준수
 {: #compliance}  
 ![ISO 27K 아이콘](../../images/icon_iso27k1.png "ISO 27K 아이콘")   
 {{site.data.keyword.iot_short_notm}}은 정보 보안 관리 프로세스의 우수 사례를 정의하는 ISO(International Organization for Standardization) 27001 표준에 따라 인증됩니다. ISO 27001 표준은 ISMS(Information Security Management Systems)를 설정, 구현 및 문서화하기 위한 요구사항과 개별 조직의 필요에 따라 보안 제어를 구현하기 위한 요구사항을 지정합니다. ISO 27000 표준 제품군은 자산 평가 및 위험성 스케일링 프로세스를 통합하며 서면 정보, 구두 정보 및 전자 정보의 기밀성, 무결성 및 가용성 보호를 목표로 합니다.
@@ -67,9 +69,11 @@ copyright:
 ## {{site.data.keyword.iot_short_notm}}에 디바이스를 안전하게 연결하는 방법
 {: #secure-device-connection}
 
-{{site.data.keyword.iot_short_notm}}에서는 TLS v1.2를 통한 연결을 지원합니다. 연결된 디바이스에서는 플랫폼에 디바이스를 추가할 때 생성된 클라이언트 ID와 인증 토큰의 조합을 사용합니다. MQTT v3.1.1은 여러 플랫폼과 언어 간에 단순 상호 운용성을 허용하는 데 사용합니다.
+연결된 디바이스에서는 플랫폼에 디바이스를 추가할 때 생성된 클라이언트 ID와 인증 토큰의 조합을 사용합니다. MQTT v3.1.1은 여러 플랫폼과 언어 간에 단순 상호 운용성을 허용하는 데 사용합니다.{{site.data.keyword.iot_short_notm}}에서는 TLS v1.2를 통한 연결을 지원합니다. 
 
 ![이미지](connectivity_platform.svg)
+
+TLS 및 암호 스위트 요구사항에 대한 자세한 정보는 `Watson IoT Platform에 애플리케이션, 디바이스 및 게이트웨이 연결` 문서의 [TLS 요구사항](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements) 절을 참조하십시오.
 
 ## IoT 디바이스 간 데이터 누출 방지 방법
 {: #prevent-leak-devices}
@@ -103,7 +107,7 @@ copyright:
 {: #general}
 * [{{site.data.keyword.iot_short_notm}} 시작하기](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 보안](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} 플랫폼 보안](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} 플랫폼 보안](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 규제 준수](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Softlayer 보안](http://www.softlayer.com/security){:new_window}
-* [Softlayer 규제 준수](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 보안](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 규제 준수](http://www.softlayer.com/compliance){:new_window}

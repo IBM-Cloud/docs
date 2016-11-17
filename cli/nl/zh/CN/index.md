@@ -18,7 +18,7 @@ copyright:
 # CLI 和开发工具
 {: #cli}
 
-*上次更新时间：2016 年 8 月 31 日*
+*上次更新时间：2016 年 10 月 25 日*
 {: .last-updated}
 
 通过 {{site.data.keyword.Bluemix_short}}，您可以访问各种功能强大的工具，例如统一命令行界面和 CLI 插件。其中每个 CLI 下载都可用于支持您的 {{site.data.keyword.Bluemix_notm}} 体验。
@@ -29,7 +29,7 @@ copyright:
 
 下载并安装命令行界面以便为您的 {{site.data.keyword.Bluemix_notm}} 体验提供支持。 
 
-除了用于虚拟服务器管理的 [OpenStack CLI 工具](../virtualmachines/vm_index.html#vm_setup_cli){: new_window}之外，Cloud Foundry cf 命令行工具是所有其他 {{site.data.keyword.Bluemix_notm}} CLI 工具的必备软件。{{site.data.keyword.Bluemix_notm}} 命令行工具提供了管理 {{site.data.keyword.Bluemix_notm}} 环境以及 Cloud Foundry 应用程序的延伸体验。
+Cloud Foundry cf 命令行工具是所有 {{site.data.keyword.Bluemix_notm}} CLI 工具的必备软件。{{site.data.keyword.Bluemix_notm}} 命令行工具提供了管理 {{site.data.keyword.Bluemix_notm}} 环境以及 Cloud Foundry 应用程序的延伸体验。
 
 
 缺省情况下，这两种 CLI 工具均使用 443 端口。如果在 CLI 工具与 {{site.data.keyword.Bluemix_notm}} 环境之间有 HTTP 代理，那么必须使用实际 HTTP 代理 URL 和端口（如有）来配置 `http-proxy` 环境变量。请参阅 [Using the CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} 以获取更多详细信息。
@@ -45,15 +45,22 @@ copyright:
 使用更多命令轻松扩展 {{site.data.keyword.Bluemix_notm}} 命令行界面。要访问 {{site.data.keyword.Bluemix_notm}} 命令行界面插件，请参阅 [ CLI 插件存储库](https://plugins.ng.bluemix.net/)。
 
 ### 扩展 {{site.data.keyword.Bluemix_notm}} 命令行界面：bx
+{: cli_bluemix_ext}
 
-1. 要从 {{site.data.keyword.Bluemix_notm}} 注册表安装 {{site.data.keyword.Bluemix_notm}} CLI 插件，请设置插件注册表端点：
+* 要从 {{site.data.keyword.Bluemix_notm}} 注册表安装 {{site.data.keyword.Bluemix_notm}} CLI 插件，请设置插件注册表端点：
+
 ```
-bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx https://plugins.ng.bluemix.net
 ```
-2. 运行以下命令来安装插件：
+{: codeblock}
+
+* 然后，运行以下命令来安装插件：
+
 ```
-bluemix plugin install plugin_name -r bluemix-bx-staging
+bluemix plugin install plugin_name -r bluemix-bx
 ```
+{: codeblock}
+
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
 |-----|-----|-----|
@@ -61,15 +68,22 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 
 ### 扩展 Cloud Foundry 命令行界面：cf
+{: cli_cf_ext}
 
-1. 要从 {{site.data.keyword.Bluemix_notm}} 注册表安装 cf CLI 插件，请设置插件注册表端点：
+* 要从 {{site.data.keyword.Bluemix_notm}} 注册表安装 cf CLI 插件，请设置插件注册表端点：
+
 ```
-cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf https://plugins.ng.bluemix.net
 ```
-2. 运行以下命令来安装插件：
+{: codeblock}
+
+* 然后，运行以下命令来安装插件：
+
 ```
-cf install-plugin plugin_name -r bluemix-cf-staging
+cf install-plugin plugin_name -r bluemix-cf
 ```
+{: codeblock}
+
 
 | *Active Deploy* | *管理控制台* | 
 |-----------------|-----------------|
@@ -78,8 +92,6 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
 | 插件名称：ibm-containers<br> [查看文档](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | 插件名称：VPN<br> [查看文档](./plugins/vpn/index.html) |
-
-<!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
 ## ![](./images/Integrated_Dev_Tools.svg) 集成开发工具

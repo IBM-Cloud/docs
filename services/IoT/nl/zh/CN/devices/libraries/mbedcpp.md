@@ -24,7 +24,7 @@ copyright:
 
 有关更多信息，请参阅 [developer.mbed.org](https://developer.mbed.org/) 上的 [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)。
 
-虽然库使用的是 C++，但仍会避免动态内存分配和 STL 函数的使用，因为 mBed 设备有时具有特殊内存型号，会使移植变得困难。在任何情况下，库都允许尽可能使内存使用情况可预测。
+虽然库使用的是 C++，但仍会避免动态内存分配，也不会使用 STL 函数，因为有时 mBed 设备有特殊的内存型号，会使移植变得困难。在任何情况下，库都允许您尽可能使内存使用情况可预测。
 
 ## 依赖关系
 {: #dependencies}
@@ -32,7 +32,7 @@ copyright:
 |依赖关系 |描述|
 |:---|:---|
 |[Eclipse Paho MQTT 库](https://developer.mbed.org/teams/mqtt/code/MQTT/)|为 mBed 设备提供 MQTT 客户机库。有关更多信息，请参阅 [Embedded MQTT C/C++ Client Libraries](http://www.eclipse.org/paho/clients/c/embedded/)|
-|[EthernetInterface 库](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/)|基于以太网的 mBed IP 库。|
+|[EthernetInterface library](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/)|基于以太网的 mBed IP 库。|
 
 ## 如何使用库
 {: #library_use}
@@ -41,7 +41,7 @@ copyright:
 
 **注：**您不必安装或设置任何内容就能开始运行 mBed。
 
-有关如何将 ARM mBed NXP LPC 1768 微控制器连接到 {{site.data.keyword.iot_short_notm}} 的信息，请参阅 [mBed C++ Client Library for IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/) 配方。
+有关如何将 ARM mBed NXP LPC 1768 微控制器连接到 {{site.data.keyword.iot_short_notm}} 的信息，请参阅 [mBed C++ Client Library for IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/) 诀窍。
 
 ## 构造方法
 {: #constructor}
@@ -65,15 +65,15 @@ copyright:
   ....
   ....
 
-  // 设置 {{site.data.keyword.iot_short_notm}} 连接参数
-  char organization[11] = "quickstart";     // 对于注册的连接，替换为您的组织
-  char deviceType[8] = "LPC1768";           // 对于注册的连接，替换为您的设备类型
-  char deviceId[3] = "01";                  // 对于注册的连接，替换为您的设备标识
+  // Set {{site.data.keyword.iot_short_notm}} connection parameters
+  char organization[11] = "quickstart";     // For a registered connection, replace with your org
+  char deviceType[8] = "LPC1768";           // For a registered connection, replace with your device type
+  char deviceId[3] = "01";                  // For a registered connection, replace with your device id
 
-  // 创建 DeviceClient
+  // Create DeviceClient
   IoTF::DeviceClient client(organization, deviceType, deviceId);
 
-  // 如果处于 Quickstart 方式，并且未指定设备标识，请获取 DeviceID(MAC Address)
+  // Get the DeviceID(MAC Address) if we are in quickstart mode and device id is not specified
   if((strcmp(organization, QUICKSTART) == 0) && (strcmp("", deviceId) == 0))
   {
   	char tmpBuf[50];
@@ -82,23 +82,23 @@ copyright:
   ....
 ```
 
-如先前的代码样本中所示，如果未指定设备标识，那么 DeviceClient 会将设备的 MAC 地址用作设备标识来连接到 {{site.data.keyword.iot_short_notm}}。设备代码可以使用 `getDeviceId()` 方法在 DeviceClient 实例中检索设备标识。
+如先前的代码样本中所示，如果未指定设备标识，那么 DeviceClient 会将设备的 MAC 地址用作设备标识来连接到 {{site.data.keyword.iot_short_notm}}。设备代码可以使用 `getDeviceId()` 方法从 DeviceClient 实例检索设备标识。
 
-以下代码块显示了如何创建 DeviceClient 实例以便与 {{site.data.keyword.iot_short_notm}} 注册的组织进行交互。
+以下代码块显示了如何创建 DeviceClient 实例以与 {{site.data.keyword.iot_short_notm}} 注册的组织进行交互。
 
 ```
   #include "DeviceClient.h"
   ....
   ....
 
-  // 设置 {{site.data.keyword.iot_short_notm}} 连接参数
+  // Set {{site.data.keyword.iot_short_notm}} connection parameters
   char organization[11] = "hrcl78";
   char deviceType[8] = "LPC1768";
   char deviceId[3] = "LPC176801";
   char method[6] = "token";
   char token[9] = "password";
 
-  // 创建 DeviceClient
+  // Create DeviceClient
   IoTF::DeviceClient client(organization, deviceType, deviceId, method, token);
   ....
 ```
@@ -106,14 +106,14 @@ copyright:
 ## 连接到 {{site.data.keyword.iot_short_notm}}
 {: #connecting_to_iotp}
 
-设备通过在 DeviceClient 实例上调用 connect 函数来连接到 {{site.data.keyword.iot_short_notm}}。
+设备可以通过在 DeviceClient 实例上调用 connect 函数来连接到 {{site.data.keyword.iot_short_notm}}。
 
 ```
   #include "DeviceClient.h"
   ....
   ....
 
-  // 创建 DeviceClient
+  // Create DeviceClient
   IoTF::DeviceClient client(organization, deviceType, deviceId, method, token);
 
   bool status = client.connect();
@@ -139,11 +139,11 @@ copyright:
 
 {{site.data.keyword.iot_short_notm}} 实例接收到事件时，所接收事件的凭证会识别发送设备，这意味着一台设备无法冒充其他设备。
 
-可以在三个[服务质量 (QoS) 级别](../../reference/mqtt/index.html#qos-levels)中的任一级别发布事件，服务质量级别由 MQTT 协议进行定义。缺省情况下，事件在 QoS 0 级别发布。
+可以在 MQTT 协议定义的三个[服务质量 (QoS) 级别](../../reference/mqtt/index.html#qos-levels)中的任一级别发布事件。缺省情况下，事件在 QoS 0 级别发布。
 
 ### 使用缺省服务质量发布事件
 
-以下样本显示了如何将以下 JSON 格式的数据点发布到 {{site.data.keyword.iot_short_notm}}：
+以下样本显示了如何通过 JSON 格式将以下数据点发布到 {{site.data.keyword.iot_short_notm}}：
 
 - LPC1768，例如 x、y 和 z 轴
 - 操纵杆位置
@@ -152,10 +152,10 @@ copyright:
 ```
 	boolean status = client.connect();
 
-	// 创建用于保存事件的缓冲区
+	// Create buffer to hold the event
 	char buf[250];
 
-	// 使用 JSON 格式的所需数据点构造事件消息
+	// Construct an event message with desired datapoints in JSON format
 	sprintf(buf,
             "{\"d\":{\"myName\":\"IoT mbed\",\"accelX\":%0.4f,\"accelY\":%0.4f,\"accelZ\":%0.4f,
             \"temp\":%0.4f,\"joystick\":\"%s\",\"potentiometer1\":%0.4f,\"potentiometer2\":%0.4f}}",
@@ -164,10 +164,10 @@ copyright:
         status = client.publishEvent("blink", buf);
 	....
 ```
-有关完整样本，请参阅 [ IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp)。
+有关完整样本，请参阅 [IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp)。
 ### 提高事件的 QoS 级别
 
-可以提高已发布事件的 [QoS 级别](../../reference/mqtt/index.html#qos-levels)。QoS 级别大于 `0` 的事件可能所用发布时间更长，因为包含额外的接收确认信息。
+可以提高已发布事件的 [QoS 级别](../../reference/mqtt/index.html#qos-levels)。QoS 级别大于 `0` 的事件发布所用时间可能更长，因为包含额外的接收确认信息。
 
 **注：**Quickstart 流方式仅支持 QoS 0。
 
@@ -176,10 +176,10 @@ copyright:
 
 	boolean status = client.connect();
 
-	// 创建用于保存事件的缓冲区
+	// Create buffer to hold the event
 	char buf[250];
 
-	// 使用 JSON 格式的所需数据点构造事件消息
+	// Construct an event message with desired datapoints in JSON format
 	sprintf(buf,
             "{\"d\":{\"myName\":\"IoT mbed\",\"accelX\":%0.4f,\"accelY\":%0.4f,\"accelZ\":%0.4f,
             \"temp\":%0.4f,\"joystick\":\"%s\",\"potentiometer1\":%0.4f,\"potentiometer2\":%0.4f}}",
@@ -200,7 +200,7 @@ copyright:
 	status = client.publishEvent("blink", buf, MQTT::QOS2);
 
 	if(status == false) {
-	    // 检查连接是否断开，然后重试
+	    // Check if connection is lost and retry
 	    while(!client.isConnected())
 	    {
 	        client.reConnect();
@@ -209,13 +209,13 @@ copyright:
 	}
 	....
 ```
-库不会存储在未连接状态期间发布的事件，所以连接重新建立后，设备需要再次调用 `publishEvent()` 方法来发送这些事件。
+库不会存储在未连接状态期间发布的事件，所以在连接重新建立后，设备需要再次调用 `publishEvent()` 方法来发送这些事件。
 
 ## 处理命令
 {: #handling_commands}
 
 设备客户机进行连接时，会自动预订此设备的所有命令。要处理特定命令，需要注册命令回调方法。
-消息将作为 Command 类的实例返回，此类具有以下参数：
+消息将作为 Command 类的实例返回，此类具有以下属性：
 
 |属性 |描述|
 |:---|:---|
@@ -230,7 +230,7 @@ copyright:
     #include "DeviceClient.h"
     #include "Command.h"
 
-    // 处理命令并设置 LED 闪烁时间间隔
+    // Process the command and set the LED blink interval
     void processCommand(IoTF::Command &cmd)
     {
         if (strcmp(cmd.getCommand(), "blink") == 0)
@@ -255,11 +255,13 @@ WARN("Unsupported command: %s\n", cmd.getCommand());
 
     client.setCommandCallback(processCommand);
 
-    client.yield(1000);  // 允许 MQTT 客户机接收消息
+    client.yield(1000);  // allow the MQTT client to receive messages
     ....
 ```
-有关完整样本，请参阅 [ IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp)。
-**注：**必须定期调用 `client.yield()` 函数来接收命令。通过 `client.yield()` 函数，设备能接收来自 Watson IoT 平台的命令，并使连接保持活动。如果未在 keepAlive 时间间隔指定的时间范围内调用 `client.yield()` 函数，那么设备不会接收从该平台发出的任何命令。分配给 `client.yield()` 函数的值指定控制返回给应用程序之前，可以从套接字中读取数据的时间长度（以毫秒为单位）。
+有关完整样本，请参阅 [IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp)。
+**注：**必须定期调用 `client.yield()` 函数来接收命令。通过 `client.yield()` 函数，设备能接收来自 Watson IoT Platform 的命令，并使连接保持活动。如果未在 keepAlive 时间间隔指定的时间范围内调用 `client.yield()` 函数，那么设备不会接收到从该平台发出的任何命令。分配给 `client.yield()` 函数的值指定在将控制返回给应用程序之前，可以从套接字读取数据的时间长度（以毫秒为单位）。
+
+
 
 ## 断开客户机连接
 {: #disconnect_client}

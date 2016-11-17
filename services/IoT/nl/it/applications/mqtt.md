@@ -36,7 +36,7 @@ Il seguente esempio mostra una chiave API tipica:
 {: codeblock}
 
 
-Il seguente esempio mostra un token di autenticazione tipico: 
+Il seguente esempio mostra un token di autenticazione tipico:
 
 ```
 MP$08VKz!8rXwnR-Q*
@@ -98,7 +98,7 @@ Un'applicazione può sottoscriversi ai comandi che stanno venendo inviati a uno 
 ## Sottoscrizione ai messaggi di stato del dispositivo
 {: #subscribe_device_status}
 
-Un'applicazione può sottoscriversi per monitorare lo stato di uno o più dispositivi, ad esempio: 
+Un'applicazione può sottoscriversi per monitorare lo stato di uno o più dispositivi, ad esempio:
 
 -  Sottoscrizione all'argomento iot-2/type/*device_type*/id/*device_id*/mon
 
@@ -110,7 +110,7 @@ Un'applicazione può sottoscriversi per monitorare lo stato di uno o più dispos
 ## Sottoscrizione ai messaggi di stato dell'applicazione
 {: #subscribe_app_status}
 
-Un'applicazione può sottoscriversi per monitorare lo stato di una o più applicazioni, ad esempio: 
+Un'applicazione può sottoscriversi per monitorare lo stato di una o più applicazioni, ad esempio:
 
 - Sottoscrizione all'argomento iot-2/app/*appId*/mon
 
@@ -145,7 +145,7 @@ Dove:
 -  *appId* è un identificativo stringa univoco definito dall'utente per il client. La stringa può contenere solo caratteri alfanumerici (a-z, A-Z, 0-9) e i caratteri speciali trattino (-), carattere di sottolineatura (_), e punto (.).
 
 **Importante:**
-- Soltanto le sottoscrizioni non durevoli sono supportate per le applicazioni scalabili. 
+- Soltanto le sottoscrizioni non durevoli sono supportate per le applicazioni scalabili.
 - L'ID client deve iniziare con un carattere maiuscolo **A** per essere correttamente creato come un'applicazione scalabile da {{site.data.keyword.iot_short_notm}}.
 - Gli altri client che fanno parte dell'applicazione scalabile devono utilizzare lo stesso ID client.
 

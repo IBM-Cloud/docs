@@ -13,7 +13,7 @@ copyright:
 
 # 디바이스용 HTTP REST API
 {: #api}
-마지막 업데이트 날짜: 2016년 9월 9일
+마지막 업데이트 날짜: 2016년 10월 11일
 {: .last-updated}
 
 **중요:** 디바이스용 {{site.data.keyword.iot_full}} HTTP REST API 기능은 제한된 베타 프로그램의 일부로서만 사용 가능합니다. 향후 업데이트에는 이 기능의 현재 버전과 호환 가능한 변경사항이 포함될 수 있습니다. 이를 시도해 보고 [의견을 알려 주십시오](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html). 
@@ -61,10 +61,11 @@ MQTT 메시징 프로토콜의 사용과 함께, HTTP REST API 명령을 사용�
 
 모든 요청에는 권한 부여 헤더가 포함되어야 합니다. 기본 인증은 지원되는 유일한 메소드입니다. 디바이스가 {{site.data.keyword.iot_short_notm}} HTTP REST API를 통해 HTTP 요청을 작성할 때는 다음 신임 정보가 필요합니다. 
 
-```
-username = "use-token-auth"
-password = Authentication token
-```
+|신임 정보|필수 입력|
+|:---|:---|
+|사용자 이름|`use-token-auth`
+|비밀번호| 디바이스를 등록할 때 자동으로 생성하거나 수동으로 지정한 인증 토큰입니다.
+
 
 ### Content-Type 요청 헤더
 
@@ -82,3 +83,62 @@ password = Authentication token
 MQTT 서비스 품질(QoS) "최대 한 번" 전달 서비스 레벨 0과 유사하게 HTTP REST 메시징은 비지속적 메시지 전달을 제공하지만, 이는 요청이 올바른지와 HTTP 응답을 전송하기 전에 이를 서버에 전달할 수 있는지를 유효성 검증합니다. HTTP 상태 코드 200이 포함된 응답은 메시지가 서버에 전달되었는지 확인합니다. "최대 한 번" MQTT 서비스 품질(QoS) 레벨 또는 HTTP 등가물을 사용하여 이벤트 메시지를 전달하는 경우, 디바이스 및 애플리케이션은 전달을 보장하기 위한 재시도 로직을 구현해야 합니다. 
 
 MQTT 프로토콜 및 {{site.data.keyword.iot_short_notm}}의 서비스 품질(QoS) 레벨에 대한 자세한 정보는 [MQTT 메시징](../reference/mqtt/index.html)을 참조하십시오. 
+
+
+<--!
+더 이상 사용하지 않는 기능의 디바이스 주제에서 이동했습니다. 디바이스에 대해 논의할 위치입니다.
+## 마지막 이벤트 캐시
+{: #last-event-cache}
+
+{{site.data.keyword.iot_short_notm}} 마지막 이벤트 캐시 API를 사용하면 디바이스에서 보낸 마지막 이벤트를 검색할 수 있습니다. 이 작업은 디바이스의 온라인 또는 오프라인 여부에 상관없이 작동하므로, 디바이스의 실제 위치나 사용 상태와 무관하게 디바이스 상태를 검색할 수 있습니다. 특정 디바이스에 대한 이벤트 ID의 마지막으로 기록된 값 또는 특정 디바이스가 보고한 각 이벤트 ID의 마지막으로 기록된 값을 검색할 수 있습니다. 디바이스의 마지막 이벤트 데이터는 최대 365일 전에 발생한 특정 이벤트에 대해서만 검색할 수 있습니다.
+
+특정 이벤트 ID의 최근 값을 요청하려면 다음 API 요청을 사용하십시오. 이 요청은 “power” 이벤트 ID의 마지막으로 기록된 값을 리턴합니다.
+
+```
+GET /api/v0002/device/types/<device-type>/devices/<device-id>/events/power
+```
+
+응답은 다음 JSON 형식으로 리턴됩니다.
+
+```
+{
+    "deviceId": "<device-id>",
+    "eventId": "power",
+    "format": "json",
+    "payload": "eyJzdGF0ZSI6Im9uIn0=",
+    "timestamp": "2016-03-14T14:12:06.527+0000",
+    "typeId": "<device-type>"
+}
+```
+
+**참고:** API 응답이 JSON 형식일 때 이벤트 페이로드를 임의 형식으로 쓸 수 있습니다. 마지막 이벤트 캐시 API에서 리턴된 페이로드는 base64로 인코딩됩니다.
+
+디바이스가 보고한 각 이벤트 ID의 최근 값을 요청하려면 다음 API 요청을 사용하십시오.
+
+```
+GET /api/v0002/device/types/<device-type>/devices/<device-id>/events
+```
+
+응답에는 디바이스가 보낸 모든 이벤트 ID가 포함됩니다. 다음 예에서 “power” 및 “temperature” 이벤트에 대한 값이 리턴됩니다.
+
+```
+[
+    {
+        "deviceId": "<device-id>",
+        "eventId": "power",
+        "format": "json",
+        "payload": "eyJzdGF0ZSI6Im9uIn0=",
+        "timestamp": "2016-03-14T14:12:06.527+0000",
+        "typeId": "<device-type>"
+    },
+    {
+        "deviceId": "<device-id>",
+        "eventId": "temperature",
+        "format": "json",
+        "payload": "eyJpbnRlcm5hbCI6MjIsICJleHRlcm5hbCI6MTZ9",
+        "timestamp": "2016-03-14T14:17:44.891+0000",
+        "typeId": "<device-type>"
+    }
+]
+```
+-->

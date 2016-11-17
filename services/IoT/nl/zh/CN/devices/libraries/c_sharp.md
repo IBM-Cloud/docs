@@ -17,7 +17,7 @@ copyright:
 上次更新时间：2016 年 8 月 2 日
 {: .last-updated}
 
-您可以使用 C# 来构建和定制设备，以用于与 {{site.data.keyword.iot_full}} 上的组织进行交互。使用提供的信息和示例通过 C# 开始开发设备。
+您可以使用 C# 来构建和定制设备，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。使用提供的信息和示例通过 C# 开始开发设备。
 {:shortdesc}
 
 ## 下载 C# 客户机和资源
@@ -40,7 +40,7 @@ copyright:
 |`auth-token`   |用于将设备安全连接到 Watson IoT Platform 的认证令牌。|
 
 
-如果只提供了 `deviceId` 和 `deviceType` 自变量，那么客户机将作为未注册的设备连接到 {{site.data.keyword.iot_short_notm}} Quickstart 服务。自变量列表定义客户机如何连接到 {{site.data.keyword.iot_short_notm}} 模块。
+如果只提供了 `deviceId` 和 `deviceType` 自变量，那么客户机将作为未注册的设备连接到 {{site.data.keyword.iot_short_notm}} Quickstart 服务。自变量列表定义了客户机如何连接到 {{site.data.keyword.iot_short_notm}} 模块。
 
 
 ```
@@ -60,7 +60,7 @@ public DeviceClient(string orgId, string deviceType, string deviceID, string aut
 
 {{site.data.keyword.iot_short_notm}} 实例接收到事件时，入局事件的凭证会识别发送设备，这意味着一台设备无法冒充其他设备。
 
-可以在三个[服务质量 (QoS) 级别](../mqtt.html#managed-devices)中的任一级别发布事件，服务质量级别由 MQTT 协议进行定义。缺省情况下，事件在 QoS 0 级别发布。
+可以在 MQTT 协议定义的三个[服务质量 (QoS) 级别](../mqtt.html#managed-devices)中的任一级别发布事件。缺省情况下，事件在 QoS 0 级别发布。
 
 
 ## 使用缺省服务质量级别发布事件
@@ -86,7 +86,7 @@ deviceClient.publishEvent("event", "json", "{temp:23}", 2);
 ## 处理命令
 {: #handling_commands}
 
-设备客户机进行连接时，会自动预订此设备的所有命令。要处理特定命令，必须注册命令回调方法，如以下示例中所示：
+设备客户机进行连接时，会自动预订此设备的任何命令。要处理特定命令，必须注册命令回调方法，如以下示例中所示：
 
 ```
 public static void processCommand(string cmdName, string cmdFormat, string cmdData) {

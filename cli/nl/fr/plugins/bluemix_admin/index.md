@@ -31,6 +31,10 @@ Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'
 
 **Restriction :** l'interface de ligne de commande Cloud Foundry n'est pas prise en charge par Cygwin. Utilisez-la dans une fenêtre de ligne de commande autre que Cygwin.
 
+**Remarque** : l'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} n'est utilisée que
+pour l'environnement {{site.data.keyword.Bluemix_notm}} local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié. Elle n'est pas
+prise en charge par l'environnement {{site.data.keyword.Bluemix_notm}} public.
+
 ## Ajout du plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}
 
 Une fois l'interface de ligne de commande cf installée, vous pouvez ajouter le plug-in d'interface de ligne de commande d'administration
@@ -65,9 +69,7 @@ d'administration {{site.data.keyword.Bluemix_notm}}
 
 Vous pouvez utiliser le plug-in d'interface de ligne de commande d'administration
 {{site.data.keyword.Bluemix_notm}} pour ajouter ou retirer des utilisateurs, affecter des
-utilisateurs à des organisations ou annuler leur affectation, et effectuer d'autres tâches de gestion. Les caractères spéciaux tels que l'espace, le signe
-plus (+) et la perluète (&) ne sont pas admis lorsque vous créez des noms d'organisation, des noms d'espace et des groupes de sécurité
-d'application. Mélangez majuscules et minuscules ou utilisez des traits de soulignement pour créer des noms uniques. 
+utilisateurs à des organisations ou annuler leur affectation, et effectuer d'autres tâches de gestion. 
 
 Pour afficher la liste des commandes, exécutez la
 commande suivante :
@@ -112,7 +114,12 @@ cf ba add-user <nom_utilisateur> <organisation>
 ```
 {: codeblock}
 
-**Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être le responsable de l'organisation ou vous devez disposez des droits**Admin** (l'alternative disponible est **Superutilisateur**) ou **Utilisateur** avec un accès **Ecriture**.
+**Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être un **administrateur**
+disposant du droit **users.write** (ou **Superutilisateur**). Si vous êtes un responsable de l'organisation, vous
+pouvez aussi disposer de la capacité d'ajouter des utilisateurs à votre organisation via un superutilisateur qui exécute la commande
+**enable-managers-add-users**. Voir [Permettre aux responsables d'ajouter des utilisateurs](index.html#clius_emau) pour
+plus d'informations.
+
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
@@ -146,12 +153,10 @@ cf ba search-users -name=<valeur_nom_utilisateur> -permission=<valeur_droit> -or
 <dt class="pt dlterm">&lt;valeur_droit&gt;</dt>
 <dd class="pd">Droit accordé à l'utilisateur. Exemple : Superutilisateur, Accès de base, Catalogue, Utilisateur et Rapports. Pour plus d'informations sur les droits pouvant être
 affectés aux utilisateurs, voir [Droits](../../../admin/index.html#permissions). Vous ne pouvez pas utiliser ce paramètre avec le
-paramètre organization dans une même requête.
-</dd>
+paramètre organization dans une même requête. </dd>
 <dt class="pt dlterm">&lt;valeur_organisation&gt;</dt>
 <dd class="pd">Nom de l'organisation à laquelle appartient l'utilisateur. Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans une
-même requête.
-</dd>
+même requête.</dd>
 <dt class="pt dlterm">&lt;valeur_rôle&gt;</dt>
 <dd class="pd">Rôle de l'organisation affecté à l'utilisateur. Exemple : responsable, responsable de la facturation ou auditeur de l'organisation. Vous
 devez spécifier l'organisation avec ce paramètre. Pour plus d'informations sur les rôles, voir
@@ -207,6 +212,35 @@ cf ba remove-user <nom_utilisateur>
 
 **Astuce :** vous pouvez aussi utiliser **ba ru** comme alias pour le nom de commande plus long **ba
 remove-user**.
+
+### Permettre aux responsables d'ajouter des utilisateurs 
+{: #clius_emau}
+
+Si vous disposez du droit **Superutilisateur** dans votre environnement {{site.data.keyword.Bluemix_notm}}, vous pouvez
+permettre aux responsables de l'organisation d'ajouter des utilisateurs aux organisations qu'ils gèrent. Entrez la commande suivante :
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**Astuce :** vous pouvez aussi utiliser **ba emau** comme alias pour le nom de commande plus long **ba
+enable-managers-add-users**.
+
+### Empêcher les responsables d'ajouter des utilisateurs 
+{: #clius_dmau}
+
+Si des responsables de l'organisation ont été autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement
+{{site.data.keyword.Bluemix_notm}} avec la commande **enable-managers-add-users** et que vous disposez du droit
+**Superutilisateur**, vous pouvez supprimer cette capacité. Entrez la commande suivante :
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**Astuce :** vous pouvez aussi utiliser **ba dmau** comme alias pour le nom de commande plus long **ba
+disable-managers-add-users**.
 
 ### Ajout et suppression d'une organisation
 
@@ -514,6 +548,31 @@ globaux uniques supplémentaires dans la commande.</dd>
 **Astuce :** vous pouvez aussi utiliser **ba espv** comme alias pour le nom de commande plus long **ba
 edit-service-plan-visibility**.
 
+### Affichage des informations sur l'utilisation des ressources 
+{: #cliresourceusage}
+
+Vous pouvez afficher des informations sur l'utilisation des ressources, notamment sur l'utilisation de la mémoire, du disque et de l'unité centrale. Vous
+pouvez consulter un récapitulatif des ressources physiques et réservées disponibles, ainsi que l'utilisation des ressources physiques et réservées. Vous
+pouvez également afficher les données d'utilisation des agents DEA (Droplet Execution Agent) et l'utilisation historique de la mémoire et du disque. Les
+données d'historique pour l'utilisation de la mémoire et du disque sont affichées par défaut par semaine et par ordre décroissant. Pour afficher
+les informations sur l'utilisation des ressources, entrez la commande suivante :
+
+
+```
+cf ba resource-usage <monthly> <weekly> 
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;monthly&gt;</dt>
+<dd class="pd">Affichez les données d'historique pour la mémoire et l'espace disque un mois à la fois. </dd>
+<dt class="pt dlterm">&lt;weekly&gt;</dt>
+<dd class="pd">Affichez les données d'historique pour la mémoire et l'espace disque une semaine à la fois. Il s'agit de la valeur par défaut.</dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba rsu** comme alias pour le nom de commande plus long **ba
+resource-usage**.
+
 ### Utilisation de courtiers de services
 
 Utilisez les commandes ci-après pour répertorier tous les courtiers de services, ajouter ou supprimer un courtier de services, ou mettre à jour un
@@ -778,3 +837,89 @@ cf ba unbind-security-group <groupe-sécurité> <org> <espace>
 
 **Astuce :** vous pouvez aussi utiliser **ba usg** comme alias pour le nom de commande plus long **ba unbind-staging-security-group**.
 
+### Utilisation des packs de construction 
+{: #buildpacks}
+
+Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez répertorier, créer, mettre à jour et supprimer les packs de
+construction.   
+#### Répertorier tous les packs de construction 
+
+Entrez la commande suivante pour répertorier tous les packs de construction ou pour afficher un pack de construction spécifique : 
+
+```
+cf ba buildpacks <nom_pack_construction>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
+<dd class="pd">Paramètre facultatif permettant de spécifier un pack de construction particulier à afficher.
+</dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba lb** comme alias pour le nom de commande plus long **ba
+buildpacks**.
+
+#### Créer et télécharger un pack de construction 
+
+Vous pouvez créer et télécharger un pack de construction. Vous pouvez télécharger tout fichier compressé dont le type est .zip. Entrez la commande
+suivante pour télécharger un pack de construction :
+
+
+```
+cf ba create-buildpack <nom_pack_construction> <chemin_fichier> <position>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
+<dd class="pd">Nom du pack de construction à télécharger. </dd>
+<dt class="pt dlterm">&lt;chemin_fichier&gt;</dt>
+<dd class="pd">Chemin du fichier compressé du pack de construction. </dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction.
+</dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba cb** comme alias pour le nom de commande plus long **ba
+create-buildpack**.
+
+#### Mettre à jour un pack de construction 
+
+Pour mettre à jour un pack de construction existant, entrez la commande suivante : 
+
+```
+cf ba update-buildpack <nom_pack_construction> <position> <activé> <verrouillé>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
+<dd class="pd">Nom du pack de construction à mettre à jour. </dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction. </dd>
+<dt class="pt dlterm">&lt;activé&gt;</dt>
+<dd class="pd">Indique si le pack de construction est utilisé pour la constitution. </dd>
+<dt class="pt dlterm">&lt;verrouillé&gt;</dt>
+<dd class="pd">Indique si le pack de construction est verrouillé pour empêcher les mises à jour. </dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba ub** comme alias pour le nom de commande plus long **ba
+update-buildpack**.
+
+#### Supprimer un pack de construction 
+
+Pour supprimer un pack de construction existant, entrez la commande suivante : 
+
+```
+cf ba delete-buildpack <nom_pack_construction>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
+<dd class="pd">Nom du pack de construction à supprimer. </dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba db** comme alias pour le nom de commande plus long **ba
+delete-buildpack**.

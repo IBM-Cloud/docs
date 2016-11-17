@@ -1,7 +1,7 @@
 ---
 
-copyright :
-  années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -25,11 +25,11 @@ Pour les exemples, les recettes et les tutoriels qui expliquent comment vous pou
 - [Reactive Blocks](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)
 
 
-**Important :** Si votre instance {{site.data.keyword.iot_short_notm}} utilise le service Quickstart, les applications évolutives ne sont pas prises en charge. 
+**Important :** Si votre instance {{site.data.keyword.iot_short_notm}} utilise le service Quickstart, les applications évolutives ne sont pas prises en charge.
 
 ## Terminaux simulés
 
-Outre les recettes et les tutoriels Quickstart, un terminal simulé reposant sur un navigateur pour les terminaux mobiles est à votre disposition pour vous permettre de connecter n'importe quel terminal doté d'un navigateur Web au service Quickstart. Pour lancer un terminal simulé reposant sur un navigateur qui se connecte à {{site.data.keyword.iot_short}} à partir d'un téléphone mobile ou d'une tablette, ouvrez l'URL suivante : 
+Outre les recettes et les tutoriels Quickstart, un terminal simulé reposant sur un navigateur pour les terminaux mobiles est à votre disposition pour vous permettre de connecter n'importe quel terminal doté d'un navigateur Web au service Quickstart. Pour lancer un terminal simulé reposant sur un navigateur qui se connecte à {{site.data.keyword.iot_short}} à partir d'un téléphone mobile ou d'une tablette, ouvrez l'URL suivante :
 
 ```
 http://quickstart.internetofthings.ibmcloud.com/iotsensor
@@ -46,24 +46,24 @@ Lorsque vous vous connectez à l'URL de terminal simulé sur un terminal mobile,
 
 ## Visualisation de données
 
-Pour afficher les données générées depuis votre terminal mobile, assurez-vous que le terminal simulé s'exécute sur votre terminal mobile, puis démarrez l'application Quickstart. Entrez l'ID de terminal composé de 12 caractères, affiché dans l'angle supérieur droit de l'interface utilisateur. 
+Pour afficher les données générées depuis votre terminal mobile, assurez-vous que le terminal simulé s'exécute sur votre terminal mobile, puis démarrez l'application Quickstart. Entrez l'ID de terminal composé de 12 caractères, affiché dans l'angle supérieur droit de l'interface utilisateur.
 
 ![image](quickstart.png)
 
-A mesure que vous ajustez les valeurs de détection dans votre terminal simulé, vous pouvoir visualiser les données de votre terminal en temps réel dans l'application Quickstart, comme décrit dans la capture d'écran suivante : 
+A mesure que vous ajustez les valeurs de détection dans votre terminal simulé, vous pouvoir visualiser les données de votre terminal en temps réel dans l'application Quickstart, comme décrit dans la capture d'écran suivante :
 
 ![image](iotsensor_data.png)
 
 
 ## Démonstration Mosquitto
 
-[Mosquitto](http://mosquitto.org/) est un client MQTT open source multiplateforme que vous pouvez utiliser pour expérimenter le service {{site.data.keyword.iot_short}}. Après avoir installé le client Mosquitto, choisissez un ID d'application et un ID de terminal uniques. Si les ID d'application et de terminal ne sont pas uniques, votre test de connexion peut générer un conflit avec un autre utilisateur qui exécute la même procédure de test Quickstart. 
+[Mosquitto](http://mosquitto.org/) est un client MQTT open source multiplateforme que vous pouvez utiliser pour expérimenter le service {{site.data.keyword.iot_short}}. Après avoir installé le client Mosquitto, choisissez un ID d'application et un ID de terminal uniques. Si les ID d'application et de terminal ne sont pas uniques, votre test de connexion peut générer un conflit avec un autre utilisateur qui exécute la même procédure de test Quickstart.
 
-Les valeurs *appId*, *type_id*, *device_type* et *device_id* ne doivent pas comporter plus de 36 caractères et ne peuvent contenir que les caractères suivants : 
+Les valeurs *appId*, *type_id*, *device_type* et *device_id* ne doivent pas comporter plus de 36 caractères et ne peuvent contenir que les caractères suivants :
 - Caractères alphanumériques (a-z, A-Z, 0-9)
 - Tirets (-)
 - Traits de soulignement (_)
-- Points (.)
+- Points (. )
 
 Après avoir défini l'ID d'application et l'ID de terminal, créez une connexion représentant votre application à l'aide de `mosquitto_sub`. Utilisez les exemples suivants pour `<applicationId>` = myApplicationId et `<deviceId>` = myDeviceId :
 ```

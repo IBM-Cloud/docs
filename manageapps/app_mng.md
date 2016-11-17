@@ -54,7 +54,7 @@ These utilities support Liberty only.
 
   1. *debug*: Turns the Liberty application into debug mode and enables clients such as the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} to establish a remote debugging session with the application.
   
-   For more information, see [Remote Debug](../manageapps/eclipsetools/eclipsetools.html#remotedebug).
+   For more information, see [Remote Debug](/docs/manageapps/eclipsetools/eclipsetools.html#remotedebug).
    
    The *debug* utility also starts *proxy*.
    
@@ -122,7 +122,7 @@ cf restage myApp
 ##Development Mode for Eclipse Tools
 {: #devmode}
 
-Development mode is a feature of the [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) that gives developers the ability to work with their applications while they are running in the cloud.
+Development mode is a feature of the [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools) that gives developers the ability to work with their applications while they are running in the cloud.
 
 While working with their applications on {{site.data.keyword.Bluemix_notm}}, developers might feel that they cannot perform normal development activities as they might on a local environment. To tackle this issue, development mode through Eclipse Tools provides a way for you to work in the cloud while in a temporary, secure workspace.
 

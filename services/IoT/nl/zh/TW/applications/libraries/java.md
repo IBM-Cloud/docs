@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-24"
 
 ---
 
@@ -14,14 +15,16 @@ copyright:
 # 適用於應用程式開發人員的 Java
 {: #java}
 
-前次更新：2016 年 9 月 7 日
-{: .last-updated}
 
-您可以在 {{site.data.keyword.iot_full}} 上使用 Java 來建置及自訂與組織互動的應用程式。使用提供的資訊及範例，利用 Java 開始開發您的應用程式。
+您可以在 {{site.data.keyword.iot_full}} 上使用 Java 來建置及自訂與組織互動的應用程式。提供 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫、文件及範例，以協助您開始使用應用程式開發。
+
 {:shortdesc}
 
 ## 下載 Java 用戶端及資源
 {: #java_client_download}
+
+前次更新：2016 年 10 月 25 日
+{: .last-updated}
 
 若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫及範例，請移至 GitHub 中的 [iot-java](https://github.com/ibm-watson-iot/iot-java) 儲存庫，並完成安裝指示。
 
@@ -33,17 +36,21 @@ copyright:
 
 | 定義     |說明     |
 |----------------|----------------|
-|`org` |您的組織 ID。這是必要值。如果您使用的是「快速入門」流程，請指定 `quickstart`。|
+|`org` |必須設為組織 ID 的必要值。如果您使用的是「快速入門」流程，請指定 `quickstart`。|
 |`id` |組織中應用程式的唯一 ID。|
-|`auth-method`  |鑑別方法，目前唯一支援的值是 `apikey`。|
-|`auth-key`   |選用的 API 金鑰，當 auth-method 設為 `apikey` 時為必要項目。  |
-|`auth-token`   |API 金鑰記號，當 auth-method 設為 `apikey` 時為必要項目。 |
+|`auth-method`  |鑑別方法。唯一支援的方法是 `apikey`。|
+|`auth-key`   |選用性的 API 金鑰，當 auth-method 的值設為 `apikey` 時必須指定的項目。|
+|`auth-token`   |API 金鑰記號，當 auth-method 的值設為 `apikey` 時也為必要項目。 |
 |`clean-session`|true 或 false 值，只有在要於可延續訂閱模式中連接應用程式時才是必要項目。`clean-session` 預設為 `true`。|
-|`shared-subscription`|布林值。如果您想要建置可擴充應用程式來平衡多個應用程式實例的訊息負載，請設為 `true`。如需相關資訊，請參閱[可擴充應用程式](mqtt.html#/scalable-applications#scalable-applications)。
+|`Port`|要連接至的埠號。指定 8883 或 443。如果您未指定埠號，則用戶端預設會透過埠號 8883 連接至 {{site.data.keyword.iot_short_notm}}。|
+|`MaxInflightMessages`  |設定連線的進行中訊息數目上限。預設值為 100。|
+|`Automatic-Reconnect`  |true 或 false 值，要將處於斷線狀態的裝置自動重新連接至 {{site.data.keyword.iot_short_notm}} 時為必要項目。預設值為 false。|
+|`Disconnected-Buffer-Size`|用戶端斷線時，可以儲存在記憶體中的訊息數目上限。預設值為 5000。|
+|`shared-subscription`|必須在要建置可擴充應用程式來平衡多個應用程式實例的訊息負載時設為 true 的布林值。如需相關資訊，請參閱[可擴充應用程式](../mqtt.html#scalable_apps)。
 
 `Properties` 物件會建立用來與 {{site.data.keyword.iot_short_notm}} 模組互動的定義。如果您未指定此物件的內容，或指定 `quickstart`，則用戶端會連接至 {{site.data.keyword.iot_short_notm}} 的「快速入門」服務，作為已取消登錄的裝置。
 
-下列程式碼範例顯示如何在 `quickstart` 模式中建構 ApplicationClient 實例：
+下列程式碼範例顯示如何在 `quickstart` 模式中建構應用程式用戶端 (`ApplicationClient`) 實例：
 
 ```
     import com.ibm.iotf.client.app.ApplicationClient;
@@ -55,7 +62,7 @@ copyright:
     ApplicationClient myClient = new ApplicationClient(options);
 ```
 
-下列程式碼範例顯示如何在已登錄流程模式中建構 ApplicationClient 實例：
+下列程式碼範例顯示如何在已登錄流程模式中建構應用程式用戶端 (`ApplicationClient`) 實例：
 
 ```
     Properties options = new Properties();
@@ -70,14 +77,14 @@ copyright:
 
 ### 使用配置檔
 
-您可以使用包含 `Properties` 物件的名稱/值配對（格式如下）的配置檔，而非直接包括 `Properties` 物件：
+您可以使用包含 `Properties` 物件的名稱/值配對的配置檔，而非直接包括 `Properties` 物件，如下列程式碼範例所概述：
 
 ```
     Properties props = ApplicationClient.parsePropertiesFile(new File("C:\\temp\\application.prop"));
     ApplicationClient myClient = new ApplicationClient(props);
     ...
 ```
-應用程式配置檔必須為下列格式：
+指定的應用程式配置檔必須為下列格式：
 
 ```
     [application]
@@ -92,16 +99,26 @@ copyright:
 ## 連接至 {{site.data.keyword.iot_short_notm}}
 {: #connecting_to_iotp}
 
-若要連接至 {{site.data.keyword.iot_short_notm}}，請使用 `connect()` 函數。`connect()` 函數包括稱為 `autoRetry` 的選用布林參數，以決定程式庫是否在 MqttException 連線失敗時嘗試重新連接。`autoRetry` 預設為 true。如果 MqttSecurityException 連線因為傳遞的裝置登錄詳細資料不正確而失敗，則程式庫不會嘗試重新連接，即使 `autoRetry` 設為 `true`。
+若要連接至 {{site.data.keyword.iot_short_notm}}，請使用 `connect()` 函數。`connect()` 函數包括稱為 `autoRetry` 的選用性布林參數，以決定程式庫是否在 MqttException 連線失敗時嘗試重新連接。`autoRetry` 預設為 true。如果 MqttSecurityException 連線因為傳遞的裝置登錄詳細資料不正確而失敗，則程式庫不會嘗試重新連接，即使 `autoRetry` 設為 true。
+
+若要設定 MQTT 的「保留作用中」間隔，您可以選擇性地使用 `setKeepAliveInterval(int)` 方法，然後再呼叫 `connect()` 函數。`setKeepAliveInterval(int)` 值的測量單位為秒，並且定義傳送訊息或接收訊息之間的時間間隔上限。使用時，用戶端可以偵測伺服器何時無法再使用，而不用等待 TCP/IP 逾時期間結束。用戶端確保在每一個「保留作用中」間隔期間至少有一個訊息在網路之間流動。如果在逾時期間接收到零資料相關訊息，則用戶端會傳送伺服器所確認的小型 `ping` 訊息。`setKeepAliveInterval(int)` 預設為 60 秒。若要停用用戶端上的「保留作用中」處理特性，請將 `setKeepAliveInterval(int)` 值設為 0。
 
 ```
     Properties props = ApplicationClient.parsePropertiesFile(new File("C:\\temp\\application.prop"));
     ApplicationClient myClient = new ApplicationClient(props);
-
+    myClient.setKeepAliveInterval(120);
     myClient.connect();
 ```
 
-順利連接至 {{site.data.keyword.iot_short_notm}} 服務之後，您的應用程式用戶端可以訂閱裝置事件、訂閱裝置狀態，以及發佈裝置事件和指令。
+若要控制連線失敗時的重試次數，請在 myClient.connect() 函數中指定整數，如下列程式碼 Snippet 所概述：
+
+```
+    DeviceClient myClient = new DeviceClient(options);
+    myClient.setKeepAliveInterval(120);
+    myClient.connect(10);
+```
+
+應用程式用戶端在順利連接至 {{site.data.keyword.iot_short_notm}} 服務之後，即可訂閱裝置事件及狀態，也可以發佈裝置事件及指令。
 
 ## 訂閱裝置事件
 {: #subscribing_device_events}
@@ -111,7 +128,7 @@ copyright:
 {{site.data.keyword.iot_short_notm}} 實例接收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
 
 
-應用程式預設會訂閱所有已連接裝置的所有事件。使用裝置類型、裝置 ID、事件及訊息格式參數，以控制訂閱的範圍。下列程式碼範例顯示如何使用這些參數來定義訂閱的範圍：
+應用程式預設會訂閱所有已連接裝置的所有事件。使用裝置類型、裝置 ID、事件及 message-format 參數，以控制訂閱的範圍。下列程式碼範例顯示如何使用這些參數來定義訂閱的範圍：
 
 ### 訂閱所有裝置的所有事件
 
@@ -164,8 +181,8 @@ copyright:
 |參數|資料類型|說明|
 |:---|:---|
 |`event.device`|字串|唯一識別組織中所有類型裝置的裝置。|
-|`event.deviceType`|字串|識別裝置類型。一般而言，deviceType 是執行特定作業（例如，"weatherballoon"）的裝置分組。|
-|`event.deviceId`|字串|代表裝置的 ID。一般而言，針對給定的裝置類型，deviceId 是該裝置的唯一 ID（例如，序號或 MAC 位址）。|
+|`event.deviceType`|字串|識別裝置類型。一般而言，deviceType 是執行特定作業（例如，"weatherballoon" 可以是裝置類型）的裝置分組。|
+|`event.deviceId`|字串|代表裝置的 ID。一般而言，對於特定裝置類型，deviceId 是該裝置的唯一 ID（例如，序號或 MAC 位址）。|
 |`event.event`|字串|一般用來將特定事件分組（例如，"status"、"warning" 及 "data"）。|
 |`event.format`|字串|格式可以是任何字串（例如，JSON）。  |
 |`event.data`|字典|訊息有效負載的資料。長度上限是 131072 個位元組。|
@@ -329,7 +346,7 @@ copyright:
   }
 ```
 
-將狀態回呼新增至 ApplicationClient 時，只要符合準則的裝置連接或與 {{site.data.keyword.iot_short_notm}} 中斷連接，就會呼叫 `processDeviceStatus()` 方法。下列程式碼範例顯示如何將狀態回呼實例新增至 ApplicationClient：
+將狀態回呼新增至應用程式用戶端時，只要符合準則的裝置連接至 {{site.data.keyword.iot_short_notm}} 或與之中斷連線，就會呼叫 `processDeviceStatus()` 方法。下列程式碼範例顯示如何將狀態回呼實例新增至應用程式用戶端：
 
 ```
 
@@ -337,14 +354,14 @@ copyright:
     myClient.setStatusCallback(new MyStatusCallback());
     myClient.subscribeToDeviceStatus();
 ```
-應用程式可以訂閱任何其他應用程式狀態（例如 Watson IoT Platform 的應用程式連接及中斷連接）。下列程式碼 Snippet 顯示如何訂閱組織中的應用程式狀態：
+應用程式可以訂閱任何其他應用程式狀態（例如 {{site.data.keyword.iot_short_notm}} 的應用程式連接及中斷連接）。下列程式碼 Snippet 顯示如何訂閱 {{site.data.keyword.iot_short_notm}} 組織的應用程式狀態：
 
 ```
     myClient.connect()
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-超載方法可用來控制特定應用程式的狀態訂閱。只要符合準則的應用程式連接或與 {{site.data.keyword.iot_short_notm}} 中斷連接，就會呼叫 processApplicationStatus() 方法。
+超載方法可用來控制特定應用程式的狀態訂閱。只要符合準則的應用程式連接至 {{site.data.keyword.iot_short_notm}} 或與之中斷連線，就會呼叫 `processApplicationStatus()` 方法。
 
 
 ## 發佈來自裝置的事件
@@ -366,18 +383,41 @@ copyright:
     myClient.publishEvent(deviceType, deviceId, "blink", event);
 ```
 
+
+事件可以透過不同的格式（例如，JSON、字串、二進位等）進行發佈。程式庫預設會以 JSON 格式發佈事件，但是，如果您願意，可以指定不同格式的資料。例如，若要以字串格式發佈資料，請使用下列程式碼 Snippet。
+
+```
+    myClient.connect();
+    String data = "cpu:"+60;
+    status = myClient.publishEvent("load", data, "text", 2);
+```
+**附註：**在前一個程式碼範例中，事件的有效負載必須為字串格式。
+
+任何 XML 資料都可以轉換成字串並進行發佈，如下所示：
+
+```
+    status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
+```
+
+同樣地，若要以二進位格式發佈事件，請使用位元組陣列，如下列範例所概述：
+
+```
+    myClient.connect();
+    byte[] cpuLoad = new byte[] {60, 35, 30, 25};
+    status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
+```
+
 ### 使用 HTTP 發佈事件
 {: #publishing_events_http}
 
-除了 MQTT 之外，透過完成下列步驟，您還可以配置應用程式使用 HTTP 將裝置事件發佈至 {{site.data.keyword.iot_short_notm}}：
+除了使用 MQTT 之外，您還可以配置應用程式透過 HTTP 將裝置事件發佈至 {{site.data.keyword.iot_short_notm}}。下列步驟概述透過 HTTP 發佈裝置事件的序列：
 
-* 使用內容檔建構 ApplicationClient 實例
-* 建構需要發佈的事件
-* 指定事件名稱、裝置類型及裝置 ID
-* 使用 `publishEventOverHTTP`() 方法發佈事件，如下列程式碼所示：
+1. 使用內容檔建構 ApplicationClient 實例。
+2. 建構需要發佈的事件。
+3. 指定事件名稱、裝置類型及裝置 ID。
+4. 使用 `publishEventOverHTTP`() 方法發佈事件，如下列程式碼範例所示：
 
 ```
-
     	ApplicationClient myClient = new ApplicationClient(props);
 
     	JsonObject event = new JsonObject();
@@ -385,14 +425,12 @@ copyright:
     	event.addProperty("cpu",  90);
     	event.addProperty("mem",  70);
 
-    	code = myClient.publishEventOverHTTP(deviceType, deviceId, "blink", event);
+    	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-如需完整程式碼範例，請參閱下列應用程式範例：
+如需完整程式碼範例，請參閱 [HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java) 應用程式範例。
 
-[HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java)
-
-根據內容檔中的設定，`publishEventOverHTTP()` 方法會在「快速入門流程」或「已登錄流程」中發佈事件。`quickstart` 是內容檔中所指定的「組織 ID」時，`publishEventOverHTTP()` 方法會以一般 HTTP 格式將事件發佈至 {{site.data.keyword.iot_short_notm}} 的「快速入門」服務。在內容檔中指定有效的已登錄組織時，一律會使用 HTTPS 來發佈事件，因此，所有通訊都是安全的。
+根據內容檔中的設定，`publishEventOverHTTP()` 方法會在「快速入門流程」或「已登錄流程」中發佈事件。在內容檔中將 `quickstart` 指定為組織 ID 時，`publishEventOverHTTP()` 方法會以一般 HTTP 格式將事件發佈至 {{site.data.keyword.iot_short_notm}} 的「快速入門」服務。在內容檔中指定有效的已登錄組織時，一律會使用 HTTPS 來發佈事件，因此，所有通訊都是安全的。
 
 HTTP 通訊協定提供「最多一次」遞送，這與 MQTT 通訊協定的「最多一次」(QoS 0) 服務品質水準類似。當您使用「最多一次」遞送來發佈事件時，應用程式必須在發生錯誤時實作重試邏輯。
 
@@ -415,13 +453,37 @@ HTTP 通訊協定提供「最多一次」遞送，這與 MQTT 通訊協定的「
     myAppClient.publishCommand(deviceType, deviceId, "stop", data);
 ```
 
+### 使用 HTTP 發佈指令
+{: #publishing_commands_http}
+
+除了使用 MQTT 之外，您還可以配置應用程式透過 HTTP 將指令發佈至已連接的裝置。下列步驟概述使用 HTTP 發佈裝置事件的序列：
+
+1. 使用內容檔建構 ApplicationClient 實例
+2. 建構需要發佈的指令
+3. 指定指令名稱、裝置類型及裝置 ID
+4. 使用 `publishCommandOverHTTP`() 方法發佈指令，如下列程式碼所示：
+
+```
+
+    	ApplicationClient myClient = new ApplicationClient(props);
+
+    	// Generate a JSON object of the event to be published
+	JsonObject event = new JsonObject();
+	event.addProperty("reboot", 5);
+
+	boolean response = myClient.publishCommandOverHTTP("execute", event);
+```
+
+若要檢視完整程式碼範例，請參閱 [HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java) 應用程式範例。
+
+HTTP 通訊協定提供「最多一次」遞送，這與 MQTT 通訊協定的「最多一次」(QoS 0) 服務品質水準類似。當您使用「最多一次」遞送來發佈指令時，應用程式必須在發生錯誤時實作重試邏輯。如需相關資訊，請參閱[應用程式的 HTTP REST API](../api.html)。
+
 
 ## 範例
-{: #examples}
-
+{: #samples}
 
 -  [MQTTApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java) - 顯示如何發佈裝置事件的範例應用程式。
 -   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - 顯示如何將指令發佈至裝置的範例應用程式。
 -  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - 顯示如何訂閱不同事件（例如裝置事件、裝置指令、裝置狀態及應用程式狀態）的範例應用程式。
 -   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - 顯示如何建置可擴充應用程式來平衡多個應用程式實例的訊息負載的範例應用程式。
--  [備份及還原範例](https://github.com/ibm-messaging/iot-backup-restore-sample) - 顯示如何在 Cloudant NoSQL 資料庫中備份及還原裝置配置的範例。
+-  [Backup-restore-sample](https://github.com/ibm-messaging/iot-backup-restore-sample) - 顯示如何在 {{site.data.keyword.cloudant}} 中備份及還原裝置配置的範例。

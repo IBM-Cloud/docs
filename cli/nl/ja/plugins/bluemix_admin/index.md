@@ -28,6 +28,8 @@ Cloud Foundry コマンド・ライン・インターフェースを {{site.data
 
 **制限:** Cloud Foundry コマンド・ライン・インターフェースは、Cygwin ではサポートされていません。Cloud Foundry コマンド・ライン・インターフェースは Cygwin コマンド・ライン・ウィンドウ以外のコマンド・ライン・ウィンドウで使用してください。
 
+**注**: {{site.data.keyword.Bluemix_notm}} 管理 CLI は、{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated 環境でのみ使用されます。{{site.data.keyword.Bluemix_notm}} Public ではサポートされません。
+
 ## {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインの追加
 
 CF コマンド・ライン・インターフェースをインストール後、{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを追加できます。
@@ -61,7 +63,7 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 ## {{site.data.keyword.Bluemix_notm}} 管理
 CLI プラグインの使用
 
-{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用すると、ユーザーの追加と削除、組織へのユーザーの割り当てと割り当て解除、といった管理タスクを実行できます。組織名、スペース名、およびアプリケーション・セキュリティー・グループを作成するときに特殊文字 (スペース、正符号 (+)、アンパーサンド (&) など) はサポートされていません。一部を大文字にしたり下線を使用したりして、固有の名前を作成してください。
+{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用すると、ユーザーの追加と削除、組織へのユーザーの割り当てと割り当て解除、といった管理タスクを実行できます。 
 
 コマンドのリストを表示するには、次のコマンドを実行します。
 
@@ -105,7 +107,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**注**: 特定の組織にユーザーを追加するには、組織の管理者であるか、**管理**許可 (代替として**スーパーユーザー**許可が使用可能)、または**書き込み**アクセス権限がある**ユーザー**許可を持っている必要があります。
+**注**: ユーザーを特定の組織に追加するには、**users.write** (または **Superuser**) 許可を備えた**管理者**でなければなりません。組織管理者の場合、**enable-managers-add-users** コマンドを実行する Superuser から、組織にユーザーを追加する権限を付与してもらうこともできます。詳しくは、『[管理者へのユーザー追加権限の付与](index.html#clius_emau)』を参照してください。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -184,6 +186,32 @@ cf ba remove-user <user_name>
 </dl>
 
 **ヒント:** **ba remove-user** という長いコマンド名の別名として **ba ru** を使用することもできます。
+
+### 管理者へのユーザー追加権限の付与
+{: #clius_emau}
+
+{{site.data.keyword.Bluemix_notm}} 環境で **Superuser** 許可がある場合、組織管理者が、自分が管理している組織にユーザーを追加できるようにすることが可能です。次のコマンドを入力します。
+
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**ヒント:** **ba enable-managers-add-users** という長いコマンド名の別名として **ba emau**を使用することもできます。
+
+### 管理者のユーザー追加権限の無効化
+{: #clius_dmau}
+
+**enable-managers-add-users** によって組織管理者が {{site.data.keyword.Bluemix_notm}} 環境で管理している組織にユーザーを追加できるようになっている場合、**Superuser** 許可を備えていれば、この設定を削除できます。次のコマンドを入力します。
+
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**ヒント:** **ba disable-managers-add-users** という長いコマンド名の別名として **ba dmau** を使用することもできます。
 
 ### 組織の追加および削除
 
@@ -446,6 +474,25 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 **ヒント:** **ba edit-service-plan-visibility** という長いコマンド名の別名として **ba espv** を使用することもできます。
 
+### リソース使用情報の表示
+{: #cliresourceusage}
+
+メモリー、ディスク、CPU 使用量など、リソース使用情報を表示できます。使用可能な物理リソースと予約済みリソース、および物理リソースと予約済みリソースの使用量の要約を確認できます。Droplet Execution Agent (DEA) の使用データおよび履歴のメモリーとディスク使用量を確認することもできます。デフォルトでは、メモリーおよびディスク使用量の履歴データは、週次で降順に表示されます。リソース使用情報を表示するには、以下のコマンドを使用します。
+
+```
+cf ba resource-usage <monthly> <weekly> 
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;monthly&gt;</dt>
+<dd class="pd">一度に 1 カ月分ずつ、メモリーおよびディスク・スペースの履歴データを表示します。</dd>
+<dt class="pt dlterm">&lt;weekly&gt;</dt>
+<dd class="pd">一度に 1 週間分ずつ、メモリーおよびディスク・スペースの履歴データを表示します。これはデフォルト値です。</dd>
+</dl>
+
+**ヒント:** **ba resource-usage** という長いコマンド名の別名として **ba rsu**を使用することもできます。
+
 ### サービス・ブローカーの操作
 
 すべてのサービス・ブローカーのリスト、サービス・ブローカーの追加または削除、あるいはサービス・ブローカーの更新を行うには、以下のコマンドを使用します。
@@ -700,3 +747,80 @@ cf ba unbind-security-group <security-group> <org> <space>
 
 **ヒント:** **ba unbind-staging-security-group** という長いコマンド名の別名として **ba usg** を使用することもできます。
 
+### ビルドパックの操作
+{: #buildpacks}
+
+アプリ・カタログ書き込み許可がある場合、ビルドパックをリスト、作成、更新、または削除できます。  
+#### すべてのビルドパックのリスト
+
+以下のコマンドを使用して、すべてのビルドパックをリストするか、特定のビルドバックを表示します。
+
+```
+cf ba buildpacks <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">表示する特定のビルドパックを指定するオプション・パラメーター。</dd>
+</dl>
+
+**ヒント:** **ba buildpacks** という長いコマンド名の別名として **ba lb** を使用することもできます。
+
+#### ビルドパックの作成およびアップロード
+
+ビルドパックを作成およびアップロードできます。.zip ファイル・タイプの任意の圧縮ファイルをアップロードできます。以下のコマンドを使用してビルドパックをアップロードします。
+
+```
+cf ba create-buildpack <buildpack_name> <file_path> <position>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">アップロードするビルドパックの名前。</dd>
+<dt class="pt dlterm">&lt;file_path&gt;</dt>
+<dd class="pd">ビルドパック圧縮ファイルのパス。</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">ビルドパックの自動検出時にビルドパックを検査する順序。</dd>
+</dl>
+
+**ヒント:** **ba create-buildpack** という長いコマンド名の別名として **ba cb**を使用することもできます。
+
+#### ビルドパックの更新
+
+既存のビルドパックを更新するには、以下のコマンドを使用します。
+
+```
+cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">更新するビルドパックの名前。</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">ビルドパックの自動検出時にビルドパックを検査する順序。</dd>
+<dt class="pt dlterm">&lt;enabled&gt;</dt>
+<dd class="pd">ビルドパックをステージング用に使用するのかどうかを示します。</dd>
+<dt class="pt dlterm">&lt;locked&gt;</dt>
+<dd class="pd">更新されないようにビルドパックをロックするのかどうかを示します。</dd>
+</dl>
+
+**ヒント:** **ba update-buildpack** という長いコマンド名の別名として **ba ub** を使用することもできます。
+
+#### ビルドパックの削除
+
+既存のビルドパックを削除するには、以下のコマンドを使用します。
+
+```
+cf ba delete-buildpack <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">削除するビルドパックの名前。</dd>
+</dl>
+
+**ヒント:** **ba delete-buildpack** という長いコマンド名の別名として **ba db**を使用することもできます。

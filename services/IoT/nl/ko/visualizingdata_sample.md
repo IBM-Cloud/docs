@@ -30,7 +30,7 @@ copyright:
 1. Node.js SDK를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 작성합니다. 애플리케이션의 이름과 호스트 이름을 기록해 두십시오. 이 정보는 {{site.data.keyword.Bluemix_notm}}에 애플리케이션을 업로드하는 데 필요합니다.
 2. 다음 단계를 완료하여 {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.iot_short_notm}} 인스턴스에 node.JS 애플리케이션을 바인드합니다.
 
-  a. {{site.data.keyword.Bluemix_notm}} 대시보드에서 작성한 Node.JS 애플리케이션을 클릭합니다.
+  a. {{site.data.keyword.Bluemix_notm}} 대시보드에서 작성한 Node.JS 애플리케이션을 클릭하십시오.
 
   b. **서비스 또는 API 바인드**를 클릭한 다음 {{site.data.keyword.iot_short_notm}} 서비스를 선택하고 **추가**를 클릭합니다.
 3. cf 명령행 도구를 사용하여 디렉토리를 추출된 시각화 샘플 패키지로 변경하고 다음 명령을 실행하여 {{site.data.keyword.Bluemix_notm}}에 연결합니다.

@@ -28,6 +28,8 @@ copyright:
 
 **限制：**Cygwin 不支援 Cloud Foundry 指令行介面。請在非 Cygwin 指令行視窗的指令行視窗中使用 Cloud Foundry 指令行介面。
 
+**附註**：{{site.data.keyword.Bluemix_notm}} 管理 CLI 僅適用於「{{site.data.keyword.Bluemix_notm}} 本端」及「{{site.data.keyword.Bluemix_notm}} 專用」環境。「{{site.data.keyword.Bluemix_notm}} 公用」則不予支援。
+
 ## 新增 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式
 
 安裝 cf 指令行介面之後，您可以新增 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式。
@@ -61,7 +63,7 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式
 
-您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式來新增或移除使用者、對組織指派或取消指派使用者，以及執行其他管理作業。當您建立組織名稱、空間名稱及應用程式安全群組時，不支援特殊字元（例如空格、加號 (+) 及 & 符號）。請嘗試使用混合大寫或底線來建立唯一名稱。
+您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式來新增或移除使用者、對組織指派或取消指派使用者，以及執行其他管理作業。 
 
 若要查看指令清單，請執行下列指令：
 
@@ -105,7 +107,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**附註**：若要將使用者新增至特定組織，您必須是組織的管理員，或者必須具有**管理**（可用的替代項目是**超級使用者**）或具有**寫入**存取權的**使用者**許可權。
+**附註**：若要將使用者新增至特定組織，您必須是具有 **users.write**（或**超級使用者**）許可權的**管理者**。如果您是組織管理員，則也會具有執行 **enable-managers-add-users** 指令的「超級使用者」將使用者新增至組織的功能。如需相關資訊，請參閱[讓管理員新增使用者](index.html#clius_emau)。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -183,6 +185,30 @@ cf ba remove-user <user_name>
 </dl>
 
 **提示：**您也可以使用 **ba ru** 作為較長的 **ba remove-user** 指令名稱的別名。
+
+### 讓管理員新增使用者
+{: #clius_emau}
+
+如果您在 {{site.data.keyword.Bluemix_notm}} 環境中具有**超級使用者**許可權，則可以讓組織管理員將使用者新增至他們所管理的組織。輸入下列指令： 
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**提示：**您也可以使用 **ba emau** 作為較長 **ba enable-managers-add-users** 指令名稱的別名。
+
+### 停用管理員新增使用者
+{: #clius_dmau}
+
+如果已在您的 {{site.data.keyword.Bluemix_notm}} 環境中使用 **enable-managers-add-users** 指令以讓組織管理員將使用者新增至他們所管理的組織，而且您具有**超級使用者**許可權，則可以移除此設定。輸入下列指令： 
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**提示：**您也可以使用 **ba dmau** 作為較長 **ba disable-managers-add-users** 指令名稱的別名。
 
 ### 新增及刪除組織
 
@@ -439,6 +465,25 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 **提示：**您也可以使用 **ba espv** 作為較長的 **ba edit-service-plan-visibility** 指令名稱的別名。
 
+### 檢視資源用量資訊
+{: #cliresourceusage}
+
+您可以檢視資源用量資訊（包括記憶體、磁碟及 CPU 使用率）。您可以查看可用實體和保留資源以及實體和保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 用量資料以及歷程記憶體和磁碟用量。預設會以遞減順序顯示每週的記憶體及磁碟用量歷程資料。若要檢視資源用量資訊，請使用下列指令：
+
+```
+cf ba resource-usage <monthly> <weekly> 
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;monthly&gt;</dt>
+<dd class="pd">一次檢視一個月的記憶體及磁碟空間歷程資料。</dd>
+<dt class="pt dlterm">&lt;weekly&gt;</dt>
+<dd class="pd">一次檢視一週的記憶體及磁碟空間歷程資料。這是預設值。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba rsu** 作為較長 **ba resource-usage** 指令名稱的別名。
+
 ### 處理服務分配管理系統
 
 下列指令可用來列出所有服務分配管理系統、新增或刪除服務分配管理系統，或用來更新服務分配管理系統。
@@ -693,3 +738,80 @@ cf ba unbind-security-group <security-group> <org> <space>
 
 **提示：**您也可以使用 **ba usg** 作為較長的 **ba unbind-staging-security-group** 指令名稱的別名。
 
+### 使用建置套件
+{: #buildpacks}
+
+如果您具有應用程式型錄寫入權，則可以列出、建立、更新或刪除建置套件。  
+#### 列出所有建置套件
+
+使用下列指令以列出所有建置套件，或檢視特定建置套件：
+
+```
+cf ba buildpacks <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">選用參數，可指定要檢視的特定建置套件。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba lb** 作為較長 **ba buildpacks** 指令名稱的別名。
+
+#### 建立及上傳建置套件
+
+您可以建立及上傳建置套件。您可以上傳任何檔案類型為 .zip 的壓縮檔。使用下列指令，以上傳建置套件：
+
+```
+cf ba create-buildpack <buildpack_name> <file_path> <position>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">要上傳之建置套件的名稱。</dd>
+<dt class="pt dlterm">&lt;file_path&gt;</dt>
+<dd class="pd">建置套件壓縮檔的路徑。</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">在建置套件自動偵測期間檢查建置套件的順序。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba cb** 作為較長 **ba create-buildpack** 指令名稱的別名。
+
+#### 更新建置套件
+
+若要更新現有建置套件，請使用下列指令：
+
+```
+cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">要更新之建置套件的名稱。</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">在建置套件自動偵測期間檢查建置套件的順序。</dd>
+<dt class="pt dlterm">&lt;enabled&gt;</dt>
+<dd class="pd">指出是否將建置套件用於編譯打包。</dd>
+<dt class="pt dlterm">&lt;locked&gt;</dt>
+<dd class="pd">指出是否鎖定建置套件，以防止更新。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba ub** 作為較長 **ba update-buildpack** 指令名稱的別名。
+
+#### 刪除建置套件
+
+若要刪除現有建置套件，請使用下列指令：
+
+```
+cf ba delete-buildpack <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">要刪除之建置套件的名稱。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba db** 作為較長 **ba delete-buildpack** 指令名稱的別名。

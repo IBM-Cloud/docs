@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # Insights for Weather REST API の使用
 {: #rest_apis}
-
-*最終更新日: 2016 年 4 月 6 日*
 
 [Insights for Weather REST API](https://twcservice.{APPDomain}/rest-api-deprecated/){:new_window} を使用して、気象データを取得できます。API 操作をテストして即座に結果を表示できるため、アプリケーションを迅速にビルドするのに役立ちます。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-11-04"
+lastupdated: "2016-11-16"
 
 ---
 {:new_window: target="_blank"}
@@ -64,7 +64,7 @@ The following table explains the positional arguments that the Swift `tempurl` c
   </tr>
   <tr>
     <td> [path] </td>
-    <td> The full path of the object expressed as <code>/v1/<i>auth_account</i>/<i>container_name</i>/<i>object_name</i>.</code> For more information, see the <a href="https://console.ng.bluemix.net/docs/services/ObjectStorage/os_api.html#access-points">{{site.data.keyword.objectstorageshort}} URL documentation}}</a>. </td>
+    <td> The full path of the object expressed as <code>/v1/<i>auth_account</i>/<i>container_name</i>/<i>object_name</i>.</code> For more information, see the <a href="https://console.bluemix.net/docs/services/ObjectStorage/os_api.html#access-points">{{site.data.keyword.objectstorageshort}} URL documentation</a>. </td>
   </tr>
   <tr>
     <td> [key] </td>

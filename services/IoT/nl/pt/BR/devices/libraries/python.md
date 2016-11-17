@@ -92,7 +92,7 @@ Eventos são o mecanismo pelo qual os dispositivos publicam dados no {{site.data
 
 Quando um evento é recebido pela instância do {{site.data.keyword.iot_short_notm}}, as credenciais do evento recebido identificam o dispositivo de envio, o que significa que um dispositivo não pode personificar outro dispositivo.
 
-Os eventos podem ser publicados com qualquer um dos três níveis de qualidade de serviço (QoS) definidos pelo protocolo MQTT. Por padrão, os eventos são publicados com um nível de QoS (qualidade de serviço) `0`.
+Os eventos podem ser publicados com qualquer um dos três níveis de qualidade de serviço (QoS) definidos pelo protocolo MQTT.  Por padrão, os eventos são publicados com um nível de QoS (qualidade de serviço) `0`.
 
 ### Publicar um evento usando a qualidade de serviço padrão
 

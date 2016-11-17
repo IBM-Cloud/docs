@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-10-21"
 
 ---
 
@@ -14,10 +15,11 @@ copyright:
 
 # Segurança do {{site.data.keyword.iot_short_notm}}
 {: #sec-index}
-Última atualização: 5 de agosto de 2016
+Última atualização: 21 de outubro de 2016
 {: .last-updated}
 
 Como um serviço hospedado na nuvem, o {{site.data.keyword.iot_full}} integra a segurança como um aspecto importante de sua arquitetura.
+{: shortdesc}
 
 O documento a seguir responde a algumas perguntas comuns sobre como os dados de sua organização são protegidos, focando áreas específicas:
 
@@ -29,9 +31,10 @@ O documento a seguir responde a algumas perguntas comuns sobre como os dados de 
 ## {{site.data.keyword.iot_short_notm}} e {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-O {{site.data.keyword.iot_short_notm}} é executado na plataforma {{site.data.keyword.Bluemix_notm}} e, portanto, depende do {{site.data.keyword.Bluemix_notm}} e do IBM SoftLayer para acesso e conectividade. A dependência do {{site.data.keyword.Bluemix_notm}} e do IBM SoftLayer torna a segurança e a confiabilidade do {{site.data.keyword.Bluemix_notm}} e do IBM SoftLayer importantes para usuários do {{site.data.keyword.iot_short_notm}}
+O {{site.data.keyword.iot_short_notm}} é executado na plataforma do {{site.data.keyword.Bluemix_notm}} e, por isso, depende do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer_full}} para acesso e conectividade. A reliance do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer}} torna a segurança e a confiabilidade do {{site.data.keyword.Bluemix_notm}} e do {{site.data.keyword.BluSoftlayer}} importantes para os
+usuários do {{site.data.keyword.iot_short_notm}}
 
-Para obter mais detalhes sobre a segurança do {{site.data.keyword.Bluemix_notm}}, consulte [Segurança da plataforma {{site.data.keyword.Bluemix_notm}}](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security).
+Para obter mais detalhes sobre a segurança do {{site.data.keyword.Bluemix_notm}}, consulte [Segurança de plataforma do {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#platform-security).
 
 ## Conformidade de segurança do {{site.data.keyword.iot_short_notm}}
 {: #compliance}  
@@ -67,9 +70,12 @@ As credenciais de dispositivo e as chaves API podem ser individualmente revogada
 ## Como podemos assegurar que seus dispositivos se conectem de forma segura ao {{site.data.keyword.iot_short_notm}}?
 {: #secure-device-connection}
 
-O {{site.data.keyword.iot_short_notm}} suporta a conectividade por TLS v1.2. Dispositivos conectados usam uma combinação de clientId e do token de autenticação que é gerado ao incluir os dispositivos em sua plataforma. MQTT v3.1.1 é usado para permitir a interoperabilidade simples entre muitas plataformas e idiomas.
+Dispositivos conectados usam uma combinação de clientId e do token de autenticação que é gerado ao incluir os dispositivos em sua plataforma. MQTT v3.1.1 é usado para permitir a interoperabilidade simples entre muitas plataformas e idiomas. O {{site.data.keyword.iot_short_notm}} suporta a conectividade por TLS v1.2.
 
 ![imagem](connectivity_platform.svg)
+
+Para obter mais informações sobre os requisitos de TLS e do conjunto de criptografia, consulte a seção [Requisitos
+de TLS Requisitos](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements) na documentação Application, device, and gateway connections to Watson IoT Platform .
 
 ## Como podemos evitar fuga de dados entre dispositivos IoT?
 {: #prevent-leak-devices}
@@ -79,7 +85,7 @@ Padrões de mensagens seguros são produzidos. Depois de autenticados, os dispos
 * '/iot-2/evt/<event_id>/fmt/<format_string>'
 * '/iot-2/cmd/<command_id>/fmt/<format_string>'
 
-Todos os dispositivos funcionam com o mesmo espaço de tópico. As credenciais de autenticação fornecidas pelo cliente ditam a qual dispositivo este espaço de tópico terá escopo definido pelo {{site.data.keyword.iot_short_notm}}. Isso evita que os dispositivos possam personificar outro dispositivo.
+Todos os dispositivos funcionam com o mesmo espaço de tópico. As credenciais de autenticação fornecidas pelo cliente ditam a qual dispositivo este espaço de tópico terá escopo definido pelo {{site.data.keyword.iot_short_notm}}.  Isso evita que os dispositivos possam personificar outro dispositivo.
 
 A única maneira de personificar outro dispositivo é obtendo credenciais de segurança comprometidas para o dispositivo.
 
@@ -103,7 +109,7 @@ O espaço de tópico no qual os dispositivos e aplicativos operam terá escopo d
 {: #general}
 * [Introdução ao {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [Segurança do {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [Segurança da plataforma {{site.data.keyword.Bluemix_notm}}](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [Segurança de plataforma do {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [Conformidade do {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Segurança do Softlayer](http://www.softlayer.com/security){:new_window}
-* [Conformidade do Softlayer](http://www.softlayer.com/compliance){:new_window}
+* [Segurança do {{site.data.keyword.BluSoftlayer}}](http://www.softlayer.com/security){:new_window}
+* [Conformidade do {{site.data.keyword.BluSoftlayer}}](http://www.softlayer.com/compliance){:new_window}

@@ -58,7 +58,7 @@ Durch Verwendung der {{site.data.keyword.iot_short_notm}}-API für zuletzt gemel
 
 ### Datenspeicherung von Geräteereignissen
 
-Geräteereignisdaten von Ihrem {{site.data.keyword.iot_short_notm}}-Service können zur späteren Verwendung gespeichert werden. Die Datenspeicherung ist ein wichtiger erster Schritt zur Ausführung einer fundierten Analyse, um über diese Daten Einblick zu gewinnen. Sie können beispielsweise Änderungen über große Zeiträume verfolgen und Datengruppen für die Verwendung mit leistungsfähigen Analysetools speichern, einschließlich Verwendung von Watson-APIs und der kognitiven Datenverarbeitung.
+Geräteereignisdaten von Ihrem {{site.data.keyword.iot_short_notm}}-Service können zur späteren Verwendung gespeichert werden. Die Datenspeicherung ist ein wichtiger erster Schritt zur Ausführung einer fundierten Analyse, um über diese Daten Einblick zu gewinnen.  Sie können beispielsweise Änderungen über große Zeiträume verfolgen und Datengruppen für die Verwendung mit leistungsfähigen Analysetools speichern, einschließlich Verwendung von Watson-APIs und der kognitiven Datenverarbeitung.
 
 ---
 

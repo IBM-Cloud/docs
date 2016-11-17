@@ -58,7 +58,7 @@ Al utilizar la {{site.data.keyword.iot_short_notm}} Last Event Cache API, puede 
 
 ### Almacenamiento de datos de sucesos de dispositivo
 
-Los datos de sucesos de dispositivo del servicio de {{site.data.keyword.iot_short_notm}} se pueden almacenar para su uso posterior. El almacenamiento de datos es un primer paso esencial para realizar un análisis detallado de dichos datos. Por ejemplo, puede realizar un seguimiento de los cambios durante periodos de tiempo más largos y almacenar conjuntos de datos que se utilizan con unas potentes herramientas de análisis, incluido el uso con las Watson API y el cálculo cognitivo.
+Los datos de sucesos de dispositivo del servicio de {{site.data.keyword.iot_short_notm}} se pueden almacenar para su uso posterior. El almacenamiento de datos es un primer paso esencial para realizar un análisis detallado de dichos datos.  Por ejemplo, puede realizar un seguimiento de los cambios durante periodos de tiempo más largos y almacenar conjuntos de datos que se utilizan con unas potentes herramientas de análisis, incluido el uso con las API de Watson y la informática cognitiva.
 
 ---
 

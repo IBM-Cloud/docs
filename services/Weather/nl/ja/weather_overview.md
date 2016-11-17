@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-22"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # {{site.data.keyword.weather_short}} の概要
 {: #about_weather}
-
-最終更新日: 2016 年 8 月 22 日
-{: .last-updated}
 
 {{site.data.keyword.weatherfull}} を使用して、The Weather Company (TWC) からの気象データをご使用の {{site.data.keyword.Bluemix}} アプリケーションに取り込みます。
 {:shortdesc}

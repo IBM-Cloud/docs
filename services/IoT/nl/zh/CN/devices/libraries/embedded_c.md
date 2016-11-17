@@ -12,18 +12,18 @@ copyright:
 {:pre: .pre}
 
 
-# 针对设备开发者的嵌入式 C
+# 针对设备开发者的 Embedded C
 {: #embedded_c}
 上次更新时间：2016 年 8 月 2 日
 {: .last-updated}
 
-您可以使用嵌入式 C 来构建和定制设备，以用于与 {{site.data.keyword.iot_full}} 上的组织进行交互。使用提供的信息和示例通过嵌入式 C 开始开发设备。
+您可以使用 Embedded C 来构建和定制设备，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。使用提供的信息和示例通过 Embedded C 开始开发设备。
 {:shortdesc}
 
-## 下载嵌入式 C 客户机和资源
+## 下载 Embedded C 客户机和资源
 {: #embeddedc_client_download}
 
-要访问 {{site.data.keyword.iot_short_notm}} 的嵌入式 C 客户机库和样本，请转至 GitHub 中的 [iotf-embeddedc](https://github.com/ibm-messaging/iotf-embeddedc) 存储库，并完成安装指示信息。
+要访问 {{site.data.keyword.iot_short_notm}} 的 Embedded C 客户机库和样本，请转至 GitHub 中的 [iotf-embeddedc](https://github.com/ibm-messaging/iotf-embeddedc) 存储库，并完成安装指示信息。
 
 
 ## 依赖关系
@@ -37,13 +37,13 @@ copyright:
 ## 安装
 {: #installation}
 
-要安装嵌入式 C 的 {{site.data.keyword.iot_full}} 客户机库，请完成以下指示信息：
+要安装 Embedded C 的 {{site.data.keyword.iot_full}} 客户机库，请完成以下指示信息：
 
 1. 要安装最新版本的库，请在命令行上输入以下代码：
 ```
   [root@localhost ~]# git clone https://github.com/ibm-messaging/iotf-embeddedc.git
 ```
-2. 将 Paho library .tar 文件复制到 *lib* 目录。
+2. 将 Paho 库 .tar 文件复制到 *lib* 目录。
 ```
     cd iotf-embeddedc
     cp ~/org.eclipse.paho.mqtt.embedded-c-1.0.0.tar.gz lib/
@@ -69,7 +69,7 @@ copyright:
 ## 初始化客户机库
 {: #initialize_client_library}
 
-下载客户机库后，必须对其进行初始化并将其连接到 {{site.data.keyword.iot_short_notm}}。可以通过传递参数或使用配置文件来初始化嵌入式 C 的 {{site.data.keyword.iot_short_notm}} 客户机库。
+下载客户机库后，必须对其进行初始化并将其连接到 {{site.data.keyword.iot_short_notm}}。可以通过传递参数或使用配置文件来初始化 Embedded C 的 {{site.data.keyword.iot_short_notm}} 客户机库。
 
 ### 传递参数
 
@@ -124,7 +124,7 @@ copyright:
 ## 连接到服务
 {: #connecting_service}
 
-初始化 {{site.data.keyword.iot_short_notm}} 嵌入式 C 客户机库后，可以通过调用 `connectiotf` 函数来连接到 {{site.data.keyword.iot_short_notm}}。
+初始化 {{site.data.keyword.iot_short_notm}} Embedded C 客户机库后，可以通过调用 `connectiotf` 函数来连接到 {{site.data.keyword.iot_short_notm}}。
 
 ```
 	#include "iotfclient.h"
@@ -152,7 +152,7 @@ copyright:
 ## 处理命令
 {: #handling_commands}
 
-设备客户机进行连接时，会自动预订此设备的所有命令。要处理特定命令，需要通过调用 `setCommandHandler` 函数来注册命令回调函数。回调函数具有以下属性：
+设备客户机进行连接时，会自动预订此设备的任何命令。要处理特定命令，需要通过调用 `setCommandHandler` 函数来注册命令回调函数。回调函数具有以下属性：
 
 |属性 |描述|
 |:---|:---|
@@ -180,7 +180,7 @@ copyright:
 	....
 
 ```
-**注：**通过 `yield()` 函数，设备能接收来自 Watson IoT 平台的命令，并使连接保持活动。如果未在 keepAlive 时间间隔指定的时间范围内调用 `yield()` 函数，那么设备不会接收从该平台发出的任何命令。分配给 `yield()` 函数的值指定控制返回给应用程序之前，可以从套接字中读取数据的时间长度（以毫秒为单位）。
+**注：**通过 `yield()` 函数，设备能接收来自 Watson IoT Platform 的命令，并使连接保持活动。如果未在 keepAlive 时间间隔指定的时间范围内调用 `yield()` 函数，那么设备不会接收到从该平台发出的任何命令。分配给 `yield()` 函数的值指定在将控制返回给应用程序之前，可以从套接字读取数据的时间长度（以毫秒为单位）。
 
 ## 发布事件
 {: #publishing_events}
@@ -189,7 +189,7 @@ copyright:
 
 |属性 |描述|
 |:---|:---|
-|eventType  |发布的事件的类型，例如状态或 gps。 |  
+|eventType  |发布的事件的类型，例如 status 或 gps。 |  
 |eventFormat  |格式可以为任意字符串，例如 `json`。 |
 |data  |有效内容的数据。最大长度为 131072 字节。 |
 |QoS  |发布活动的服务质量级别。支持的值为 `0`、`1` 和 `2`。|

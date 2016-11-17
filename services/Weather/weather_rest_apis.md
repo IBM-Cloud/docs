@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-22"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Using the {{site.data.keyword.weather_short}} REST APIs
 {: #rest_apis}
-
-Last updated: 22 August 2016
-{: .last-updated}
 
 You can use the [REST APIs](https://twcservice.{APPDomain}/rest-api/){:new_window}
 to retrieve weather data. You can test API operations and instantly view the results

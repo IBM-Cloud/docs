@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-24"
 
 ---
 
@@ -14,13 +15,16 @@ copyright:
 # Java per gli sviluppatori dell'applicazione
 {: #java}
 
-Ultimo aggiornamento: 07 settembre 2016
-{: .last-updated}
 
-Puoi utilizzare Java per creare e personalizzare le applicazioni che interagiscono con la tua organizzazione su {{site.data.keyword.iot_full}}. Utilizza le informazioni e gli esempi forniti per iniziare a sviluppare le tue applicazioni utilizzando Java. {:shortdesc}
+Puoi utilizzare Java per creare e personalizzare le applicazioni che interagiscono con la tua organizzazione su {{site.data.keyword.iot_full}}. Una libreria client Java per {{site.data.keyword.iot_short_notm}}, la documentazione e gli esempi ti vengono forniti per iniziare ad utilizzare lo sviluppo dell'applicazione.
 
-## Scaricare le risorse e il client Java 
+{:shortdesc}
+
+## Scaricare le risorse e il client Java
 {: #java_client_download}
+
+Ultimo aggiornamento: 25 ottobre 2016
+{: .last-updated}
 
 Per accedere agli esempi e alle librerie client Java per {{site.data.keyword.iot_short_notm}}, vai al repository [iot-java](https://github.com/ibm-watson-iot/iot-java) in GitHub e completa le istruzioni di installazione.
 
@@ -28,21 +32,25 @@ Per accedere agli esempi e alle librerie client Java per {{site.data.keyword.iot
 ## Constructor
 {: #constructor}
 
-Il constructor crea l'istanza client e accetta un oggetto `Properties` che contiene le seguenti definizioni:
+Il constructor crea l'istanza client e accetta l'oggetto `Properties` che contiene le seguenti definizioni: 
 
 | Definizione     |Descrizione     |
 |----------------|----------------|
-|`org` |Il tuo ID dell'organizzazione. Questo è un valore obbligatorio. Se stai utilizzando un flusso Quickstart, specifica `quickstart`.|
-|`id` |L'ID univoco dell'applicazione nella tua organizzazione. |
-|`auth-method`  |Il metodo di autenticazione, per il quale l'unico valore al momento supportato è `apikey`.|
-|`auth-key`   |Una chiave API facoltativa, che è obbligatoria quando auth-method è impostato su `apikey`.  |
-|`auth-token`   |Un token chiave API, che è obbligatorio quando auth-method è impostato su `apikey`. |
+|`org` |Un valore obbligatorio che deve essere impostato nel tuo ID dell'organizzazione. Se stai utilizzando un flusso Quickstart, specifica `quickstart`.|
+|`id` |L'ID univoco dell'applicazione nella tua organizzazione.|
+|`auth-method`  |Il metodo di autenticazione. L'unico metodo supportato è `apikey`.|
+|`auth-key`   |Una chiave API facoltativa, che devi specificare quando imposti il valore di auth-method su `apikey`.|
+|`auth-token`   |Un token chiave API, che è inoltre obbligatorio quando imposti il valore di auth-method su `apikey`. |
 |`clean-session`|Un valore true o false obbligatorio solo se desideri collegarti all'applicazione con il metodo di sottoscrizione durevole. Per impostazione predefinita, `clean-session` è impostato su `true`.|
-|`shared-subscription`|Un valore booleano. Imposta su `true` se desideri creare applicazioni scalabili che bilanciano il carico dei messaggi tra più istanze dell'applicazione. Per ulteriori informazioni, consulta [Applicazioni scalabili](mqtt.html#/scalable-applications#scalable-applications).
+|`Porta`|Il numero di porta a cui collegarsi. Specifica 8883 o 443. Se non specifichi un numero di porta, il client si collega a {{site.data.keyword.iot_short_notm}} nel numero di porta 8883 per impostazione predefinita.|
+|`MaxInflightMessages`  |Imposta il numero massimo di messaggi in elaborazione per la connessione. Il valore predefinito è 100. |
+|`Automatic-Reconnect`  |Un valore true o false obbligatorio quando desideri ricollegare automaticamente il dispositivo a {{site.data.keyword.iot_short_notm}} mentre è in uno stato disconnesso. Il valore predefinito è false.|
+|`Disconnected-Buffer-Size`|Il numero massimo di messaggi che possono essere archiviati nella memoria mentre il client è disconnesso. Il valore predefinito è 5000.|
+|`shared-subscription`|Un valore booleano che deve essere impostato su true se desideri creare applicazioni scalabili che bilanciano il carico dei messaggi tra più istanze dell'applicazione. Per ulteriori informazioni, consulta [Applicazioni scalabili](../mqtt.html#scalable_apps).
 
 L'oggetto `Properties` crea le definizioni utilizzate per interagire con il modulo {{site.data.keyword.iot_short_notm}}. Se non specifichi le proprietà per questo oggetto o se specifichi `quickstart`, il client si collega al servizio Quickstart di {{site.data.keyword.iot_short_notm}} come un dispositivo non registrato.
 
-Il seguente esempio di codice mostra come puoi creare l'istanza ApplicationClient nella modalità `quickstart`:
+Il seguente esempio di codice mostra come puoi creare l'istanza (`ApplicationClient`) client dell'applicazione nella modalità `quickstart`:
 
 ```
     import com.ibm.iotf.client.app.ApplicationClient;
@@ -54,7 +62,7 @@ Il seguente esempio di codice mostra come puoi creare l'istanza ApplicationClien
     ApplicationClient myClient = new ApplicationClient(options);
 ```
 
-Il seguente esempio di codice mostra come puoi creare l'istanza ApplicationClient nella modalità di flusso:
+Il seguente esempio di codice mostra come puoi creare l'istanza (`ApplicationClient`) client dell'applicazione nella modalità del flusso registrato:
 
 ```
     Properties options = new Properties();
@@ -69,14 +77,14 @@ Il seguente esempio di codice mostra come puoi creare l'istanza ApplicationClien
 
 ### Utilizzo di un file di configurazione
 
-Invece di includere direttamente un oggetto `Properties`, puoi utilizzare un file di configurazione che contiene una coppia nome-valore per l'oggetto `Properties` nel seguente formato:
+Invece di includere direttamente l'oggetto `Properties`, puoi utilizzare un file di configurazione che contiene una coppia nome-valore per l'oggetto `Properties`, come descritto nel seguente esempio di codice:
 
 ```
     Properties props = ApplicationClient.parsePropertiesFile(new File("C:\\temp\\application.prop"));
     ApplicationClient myClient = new ApplicationClient(props);
     ...
 ```
-Il file di configurazione dell'applicazione deve essere nel seguente formato:
+Il file di configurazione dell'applicazione specificata deve essere nel seguente formato:
 
 ```
     [application]
@@ -91,16 +99,26 @@ Il file di configurazione dell'applicazione deve essere nel seguente formato:
 ## Connessione a {{site.data.keyword.iot_short_notm}}
 {: #connecting_to_iotp}
 
-Per collegarti a {{site.data.keyword.iot_short_notm}} utilizza la funzione `connect()`. La funzione `connect()` include un parametro booleano facoltativo denominato `autoRetry` che determina se la libreria tenta di ricollegarsi nel caso di un errore di connessione MqttException. Per impostazione predefinita, `autoRetry` è impostato su true. Se una connessione MqttSecurityException ha esito negativo perché vengono trasmessi i dettagli di registrazione del dispositivo non corretti, la libreria non tenta di ricollegarsi, anche se `autoRetry` è impostato su `true`.
+Per collegarti a {{site.data.keyword.iot_short_notm}}, utilizza la funzione `connect()`. a funzione `connect()` include un parametro booleano facoltativo denominato `autoRetry` che determina se la libreria tenta di ricollegarsi nel caso di un errore di connessione MqttException. Per impostazione predefinita, `autoRetry` è impostato su true. Se una connessione MqttSecurityException ha esito negativo perché vengono trasmessi i dettagli di registrazione del dispositivo non corretti, la libreria non tenta di ricollegarsi, anche se `autoRetry` è impostato su true. 
+
+Per impostare l'intervallo 'keepalive' per MQTT, puoi facoltativamente utilizzare il metodo `setKeepAliveInterval(int)` prima di richiamare la funzione `connect()`. Il valore `setKeepAliveInterval(int)` viene misurato in secondi e definisce l'intervallo di tempo massimo tra i messaggi inviati o ricevuti. Quando utilizzato, il client può rilevare quando il server non è più disponibile senza attendere che venga raggiunta la fine del periodo di timeout TCP/IP. Il client assicura che almeno un messaggio sia trasmesso in rete in ogni periodo di intervallo 'keepalive'. Se i messaggi correlati a zero dati vengono ricevuti durante il periodo di timeout, il client invia un piccolo messaggio `ping`, che il server riconosce. `setKeepAliveInterval(int)` è impostato su 60 secondi per impostazione predefinita. Per disabilitare la funzione di elaborazione 'keepalive' sul client, impostata il valore `setKeepAliveInterval(int)` su 0.
 
 ```
     Properties props = ApplicationClient.parsePropertiesFile(new File("C:\\temp\\application.prop"));
     ApplicationClient myClient = new ApplicationClient(props);
-
+    myClient.setKeepAliveInterval(120);
     myClient.connect();
 ```
 
-Dopo una connessione corretta al servizio {{site.data.keyword.iot_short_notm}}, i tuoi client dell'applicazione possono sottoscriversi agli eventi e agli stati del dispositivo e pubblicare i comandi e gli eventi del dispositivo.
+Per controllare il numero di tentativi che si verificano quando c'è un errore di connessione, specifica un numero intero nella funzione myClient.connect(), come descritto nel seguente frammento di codice:
+
+```
+    DeviceClient myClient = new DeviceClient(options);
+    myClient.setKeepAliveInterval(120);
+    myClient.connect(10);
+```
+
+Dopo che i tuoi client dell'applicazione si sono collegati correttamente al servizio {{site.data.keyword.iot_short_notm}}, possono sottoscriversi agli eventi e agli stati del dispositivo e possono inoltre pubblicare gli eventi e i comandi del dispositivo.
 
 ## Sottoscrizione agli eventi del dispositivo
 {: #subscribing_device_events}
@@ -112,14 +130,14 @@ Quando viene ricevuto un evento dall'istanza {{site.data.keyword.iot_short_notm}
 
 Per impostazione predefinita, le applicazioni si sottoscrivono a tutti gli eventi da tutti i dispositivi collegati. Utilizza i parametri tipo di dispositivo, ID dispositivo e formato del messaggio per controllare l'ambito della sottoscrizione. I seguenti esempi di codice mostrano come puoi utilizzare questi parametri per definire l'ambito di una sottoscrizione:
 
-### Sottoscrizione a tutti gli eventi provenienti da tutti i dispositivi 
+### Sottoscrizione a tutti gli eventi provenienti da tutti i dispositivi
 
 
 ```
     myClient.connect();
     myClient.subscribeToDeviceEvents();
 ```
-### Sottoscrizione a tutti gli eventi provenienti da tutti i dispositivi di un tipo specifico 
+### Sottoscrizione a tutti gli eventi provenienti da tutti i dispositivi di un tipo specifico
 
 
 ```
@@ -128,7 +146,7 @@ Per impostazione predefinita, le applicazioni si sottoscrivono a tutti gli event
     myClient.subscribeToDeviceEvents("iotsample-arduino");
 ```
 
-### Sottoscrizione a tutti gli eventi da un dispositivo specifico 
+### Sottoscrizione a tutti gli eventi da un dispositivo specifico
 
 
 ```
@@ -136,7 +154,7 @@ Per impostazione predefinita, le applicazioni si sottoscrivono a tutti gli event
     myClient.connect();
     myClient.subscribeToDeviceEvents("iotsample-arduino", "00aabbccddee");
 ```
-### Sottoscrizione di un evento specifico da due o più dispositivi differenti 
+### Sottoscrizione di un evento specifico da due o più dispositivi differenti
 
 ```
 
@@ -144,7 +162,7 @@ Per impostazione predefinita, le applicazioni si sottoscrivono a tutti gli event
     myClient.subscribeToDeviceEvents("iotsample-arduino", "00aabbccddee", "myEvent");
     myClient.subscribeToDeviceEvents("iotsample-arduino", "10aabbccddee", "myEvent");
 ```
-### Sottoscrizione agli eventi che vengono pubblicati in formato JSON 
+### Sottoscrizione agli eventi che vengono pubblicati in formato JSON
 
 
 ```
@@ -153,7 +171,7 @@ Per impostazione predefinita, le applicazioni si sottoscrivono a tutti gli event
     myClient.subscribeToDeviceEvents("iotsample-arduino", "00aabbccddee", "myEvent", "json", 0);
 ```
 
-**Nota**: un singolo client può supportare più sottoscrizioni. 
+**Nota**: un singolo client può supportare più sottoscrizioni.
 
 ## Gestione degli eventi dai dispositivi
 {: #handling_device_events}
@@ -163,15 +181,15 @@ Per elaborare gli eventi ricevuti dalle tue sottoscrizioni, registra un metodo d
 |Parametro|Tipo di dati|Descrizione|
 |:---|:---|
 |`event.device`|Stringa|Identifica univocamente il dispositivo tra tutti i tipi di dispositivi nell'organizzazione.|
-|`event.deviceType`|Stringa|Identifica il tipo di dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon". |
-|`event.deviceId`|Stringa|Rappresenta l'ID del dispositivo. Generalmente, per determinato tipo di dispositivo, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
-|`event.event`|Stringa|Solitamente viene utilizzato per raggruppare gli eventi specifici, ad esempio "status", "warning" e "data". |
-|`event.format`|Stringa|Il formato può essere qualsiasi stringa, ad esempio JSON.   |
-|`event.data`|Dizionario|I dati per il payload del messaggio. La lunghezza massima è di 131072 byte. |
-|`event.timestamp`|Data e ora |La data e l'ora dell'evento |
+|`event.deviceType`|Stringa|Identifica il tipo di dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio, "weatherballoon" può essere un tipo di dispositivo.|
+|`event.deviceId`|Stringa|Rappresenta l'ID del dispositivo. Generalmente, per un tipo di dispositivo specifico, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC. |
+|`event.event`|Stringa|Solitamente viene utilizzato per raggruppare gli eventi specifici, ad esempio "status", "warning" e "data".|
+|`event.format`|Stringa|Il formato può essere qualsiasi stringa, ad esempio JSON.  |
+|`event.data`|Dizionario|I dati per il payload del messaggio. La lunghezza massima è di 131072 byte.|
+|`event.timestamp`|Data e ora|La data e l'ora dell'evento|
 
 
-Il seguente codice fornisce un'implementazione di esempio del callback dell'evento: 
+Il seguente codice fornisce un'implementazione di esempio del callback dell'evento:
 
 ```
   import com.ibm.iotf.client.app.Event;
@@ -220,7 +238,7 @@ Il seguente codice fornisce un'implementazione di esempio del callback dell'even
     }
 ```
 
-Quando il callback dell'evento viene aggiunto a ApplicationClient, viene richiamato il metodo `processEvent()` se viene pubblicato un evento che corrisponde alla sottoscrizione. Il seguente frammento mostra come aggiungere il callback dell'evento in un'istanza ApplicationClient: 
+Quando il callback dell'evento viene aggiunto a ApplicationClient, viene richiamato il metodo `processEvent()` se viene pubblicato un evento che corrisponde alla sottoscrizione. Il seguente frammento mostra come aggiungere il callback dell'evento in un'istanza ApplicationClient:
 
 
 
@@ -230,7 +248,7 @@ Quando il callback dell'evento viene aggiunto a ApplicationClient, viene richiam
     myClient.subscribeToDeviceEvents();
 ```
 
-In modo simile alla sottoscrizione agli eventi del dispositivo, l'applicazione può effettuare la sottoscrizione ai comandi inviati ai dispositivi. Il seguente esempio di codice mostra come effettuare una sottoscrizione a tutti i comandi per tutti i dispositivi nell'organizzazione: 
+In modo simile alla sottoscrizione agli eventi del dispositivo, l'applicazione può effettuare la sottoscrizione ai comandi inviati ai dispositivi. Il seguente esempio di codice mostra come effettuare una sottoscrizione a tutti i comandi per tutti i dispositivi nell'organizzazione:
 
 ```
 
@@ -242,7 +260,7 @@ In modo simile alla sottoscrizione agli eventi del dispositivo, l'applicazione p
 I metodi sottoposti a overload sono disponibili per controllare la sottoscrizione ai comandi. Il metodo `processCommand()` viene richiamato quando al dispositivo viene inviato un comando che corrisponde alla sottoscrizione al comando.
 
 
-## Sottoscrizione agli stati del dispositivo 
+## Sottoscrizione agli stati del dispositivo
 {: #subscribing_device_status}
 
 In modo simile alla sottoscrizione agli eventi del dispositivo, le applicazioni possono sottoscriversi allo stato del dispositivo, come ad esempio una connessione e disconnessione a {{site.data.keyword.iot_short_notm}}. Per impostazione predefinita, questa è una sottoscrizione agli aggiornamenti dello stato per tutti i dispositivi collegati. Utilizza i parametri tipo di dispositivo e ID dispositivo per controllare l'ambito della sottoscrizione. I seguenti esempi di codice mostrano come puoi utilizzare questi parametri per definire l'ambito di una sottoscrizione:
@@ -263,7 +281,7 @@ In modo simile alla sottoscrizione agli eventi del dispositivo, le applicazioni 
     myClient.subscribeToDeviceStatus("iotsample-arduino");
 ```
 
-### Sottoscrizione agli aggiornamenti dello stato per due dispositivi differenti 
+### Sottoscrizione agli aggiornamenti dello stato per due dispositivi differenti
 
 
 ```
@@ -273,9 +291,9 @@ In modo simile alla sottoscrizione agli eventi del dispositivo, le applicazioni 
     myClient.subscribeToDeviceStatus("iotsample-arduino", "10aabbccddee");
 ```
 
-**Nota**: un singolo client può supportare più sottoscrizioni. 
+**Nota**: un singolo client può supportare più sottoscrizioni.
 
-## Gestione degli stati dai dispositivi 
+## Gestione degli stati dai dispositivi
 {: #handling_device_status_updates}
 
 Per elaborare gli aggiornamenti dello stato ricevuti dalle tue sottoscrizioni, devi registrare un metodo di callback dell'evento dello stato. Per gli stati `Connect` e `Disconnect`, i messaggi vengono restituiti come un'istanza della classe dello stato, che contiene i seguenti parametri:
@@ -328,7 +346,7 @@ Il seguente esempio di codice fornisce un'implementazione di esempio del callbac
   }
 ```
 
-Quando il callback dello stato viene aggiunto a ApplicationClient, viene richiamato il metodo `processDeviceStatus()` se viene collegato o scollegato un dispositivo che corrisponde ai criteri da {{site.data.keyword.iot_short_notm}}. Il seguente esempio di codice mostra come puoi aggiungere l'istanza di callback dello stato a ApplicationClient:
+Quando il callback dello stato viene aggiunto al client dell'applicazione, viene richiamato il metodo `processDeviceStatus()` se viene collegato o scollegato un dispositivo che corrisponde ai criteri da {{site.data.keyword.iot_short_notm}}. Il seguente esempio di codice mostra come puoi aggiungere l'istanza di callback dello stato al client dell'applicazione: 
 
 ```
 
@@ -336,20 +354,20 @@ Quando il callback dello stato viene aggiunto a ApplicationClient, viene richiam
     myClient.setStatusCallback(new MyStatusCallback());
     myClient.subscribeToDeviceStatus();
 ```
-Le applicazioni possono sottoscriversi a qualsiasi altro stato dell'applicazione, come ad esempio la connessione o disconnessione dell'applicazione da Watson IoT Platform. Il seguente frammento di codice mostra come effettuare una sottoscrizione allo stato dell'applicazione nell'organizzazione:
+Le applicazioni possono sottoscriversi a qualsiasi altro stato dell'applicazione, come ad esempio la connessione o disconnessione dell'applicazione da {{site.data.keyword.iot_short_notm}}. Il seguente frammento di codice mostra come effettuare una sottoscrizione allo stato dell'applicazione di un'organizzazione {{site.data.keyword.iot_short_notm}}:
 
 ```
     myClient.connect()
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-Il metodo di sovrascrittura è disponibile per controllare la sottoscrizione dello stato a un'applicazione in particolare. Il metodo processApplicationStatus() è richiamato se viene collegata o scollegata un'applicazione che corrisponde ai criteri da {{site.data.keyword.iot_short_notm}}.
+Il metodo di sovrascrittura è disponibile per controllare la sottoscrizione dello stato a un'applicazione in particolare. Il metodo `processApplicationStatus()` è richiamato se viene collegata o scollegata un'applicazione che corrisponde ai criteri da {{site.data.keyword.iot_short_notm}}.
 
 
 ## Pubblicazione degli eventi dai dispositivi
 {: #publishing_events_devices}
 
-Il seguente esempio di codice mostra come le applicazione possono pubblicare gli eventi come se fossero originati da un dispositivo. 
+Il seguente esempio di codice mostra come le applicazione possono pubblicare gli eventi come se fossero originati da un dispositivo.
 
 ```
 
@@ -365,18 +383,41 @@ Il seguente esempio di codice mostra come le applicazione possono pubblicare gli
     myClient.publishEvent(deviceType, deviceId, "blink", event);
 ```
 
+
+Gli eventi possono essere pubblicati in diversi formati, ad esempio, JSON, stringa, binario e altro. Per impostazione predefinita, la libreria pubblica gli eventi nel formato JSON, ma puoi specificare i dati in formati differenti se preferisci. Ad esempio, per pubblicare i dati nel formato stringa utilizza il seguente frammento di codice:
+
+```
+    myClient.connect();
+    String data = "cpu:"+60;
+    status = myClient.publishEvent("load", data, "text", 2);
+```
+**Nota:** nel precedente esempio di codice, il payload dell'evento deve essere nel formato stringa:
+
+Tutti i dati XML possono essere convertiti nel formato stringa e pubblicati nel seguente modo:
+
+```
+    status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
+```
+
+In modo simile, per pubblicare gli eventi nel formato binario, utilizza un array di byte, come descritto nel seguente esempio:
+
+```
+    myClient.connect();
+    byte[] cpuLoad = new byte[] {60, 35, 30, 25};
+    status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
+```
+
 ### Pubblica gli eventi utilizzando l'HTTP
 {: #publishing_events_http}
 
-In aggiunta a MQTT, puoi configurare le tue applicazioni in modo che pubblichino gli eventi del dispositivo in {{site.data.keyword.iot_short_notm}} utilizzando l'HTTP completando la seguente procedura:
+In aggiunta all'utilizzo di MQTT, puoi anche configurare le tue applicazioni in modo che pubblichino gli eventi del dispositivo in {{site.data.keyword.iot_short_notm}} tramite HTTP. La seguente procedura descrive la sequenza per la pubblicazione degli eventi del dispositivo tramite HTTP:
 
-* Crea l'istanza ApplicationClient utilizzando il file delle proprietà
-* Crea l'evento che deve essere pubblicato
-* Specifica il nome dell'evento, il tipo di dispositivo e l'ID del dispositivo
-* Pubblica l'evento utilizzando il metodo `publishEventOverHTTP`(), come mostrato nel seguente codice:
+1. Crea l'istanza ApplicationClient utilizzando il file delle proprietà. 
+2. Crea l'evento che deve essere pubblicato. 
+3. Specifica il nome dell'evento, il tipo di dispositivo e l'ID del dispositivo. 
+4. Pubblica l'evento utilizzando il metodo `publishEventOverHTTP`(), come mostrato nel seguente esempio di codice: 
 
 ```
-
     	ApplicationClient myClient = new ApplicationClient(props);
 
     	JsonObject event = new JsonObject();
@@ -384,14 +425,12 @@ In aggiunta a MQTT, puoi configurare le tue applicazioni in modo che pubblichino
     	event.addProperty("cpu",  90);
     	event.addProperty("mem",  70);
 
-    	code = myClient.publishEventOverHTTP(deviceType, deviceId, "blink", event);
+    	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-Per l'esempio di codice completo, consulta la seguente applicazione di esempio:
+Per l'esempio di codice completo, consulta l'applicazione di esempio [HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java).
 
-[HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java)
-
-In base alle impostazioni nel file delle proprietà, il metodo `publishEventOverHTTP()` pubblica l'evento nel flusso registrato o in  Quickstart. Quando `quickstart` è l'ID dell'organizzazione specificato nel file delle proprietà, il metodo `publishEventOverHTTP()`pubblica l'evento nel servizio Quickstart di {{site.data.keyword.iot_short_notm}} nel formato HTTP semplice. Quando viene specificata un'organizzazione registrata valida nel file delle proprietà, l'evento viene sempre pubblicato utilizzando HTTPS in modo che tutte le comunicazioni siano sicure.
+In base alle impostazioni nel file delle proprietà, il metodo `publishEventOverHTTP()` pubblica l'evento nel flusso registrato o in  Quickstart. Quando `quickstart` viene specificato come ID dell'organizzazione nel file delle proprietà, il metodo `publishEventOverHTTP()` pubblica l'evento al servizio Quickstart {{site.data.keyword.iot_short_notm}} nel formato HTTP semplice. Quando viene specificata un'organizzazione registrata valida nel file delle proprietà, l'evento viene sempre pubblicato utilizzando HTTPS in modo che tutte le comunicazioni siano sicure.
 
 Il protocollo HTTP fornisce la distribuzione 'at most once', che è simile al livello di QOS (quality of service) 'at most once' del protocollo MQTT. Quando utilizzi la distribuzione 'at most once' per pubblicare gli eventi, l'applicazione deve implementare la logica del nuovo tentativo quando si verifica un errore.
 
@@ -414,13 +453,37 @@ Le applicazioni possono pubblicare i comandi sui dispositivi connessi, come most
     myAppClient.publishCommand(deviceType, deviceId, "stop", data);
 ```
 
+### Pubblica i comandi utilizzando l'HTTP 
+{: #publishing_commands_http}
+
+In aggiunta all'utilizzo di MQTT, puoi anche configurare le tue applicazioni in modo che pubblichino i comandi al dispositivo collegato tramite HTTP. La seguente procedura descrive la sequenza per la pubblicazione degli eventi del dispositivo utilizzando HTTP: 
+
+1. Crea l'istanza ApplicationClient utilizzando il file delle proprietà
+2. Crea il comando che deve essere pubblicato 
+3. Specifica il nome del comando, il tipo di dispositivo e l'ID del dispositivo 
+4. Pubblica il comando utilizzando il metodo `publishCommandOverHTTP`(), come mostrato nel seguente codice: 
+
+```
+
+    	ApplicationClient myClient = new ApplicationClient(props);
+
+    	// Genera un oggetto JSON dell'evento da pubblicare
+	JsonObject event = new JsonObject();
+	event.addProperty("reboot", 5);
+
+	boolean response = myClient.publishCommandOverHTTP("execute", event);
+```
+
+Per visualizzare l'esempio di codice completo, consulta l'applicazione di esempio [HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java).
+
+Il protocollo HTTP fornisce la distribuzione 'at most once', che è simile al livello di QOS (quality of service) 'at most once' del protocollo MQTT. Quando utilizzi la distribuzione 'at most once' per pubblicare i comandi, l'applicazione deve implementare la logica del nuovo tentativo quando si verifica un errore. Per ulteriori informazioni, consulta [API REST HTTP per le applicazioni](../api.html).
+
 
 ## Esempi
-{: #examples}
-
+{: #samples}
 
 -  [MQTTApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/MQTTApplicationDeviceEventPublish.java) - Un'applicazione di esempio che mostra come puoi pubblicare gli eventi del dispositivo.
 -   [RegisteredApplicationCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationCommandPublish.java) - Un'applicazione di esempio che mostra come puoi pubblicare un comando in un dispositivo.
 -  [RegisteredApplicationSubscribeSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/RegisteredApplicationSubscribeSample.java) - Un'applicazione di esempio che mostra come puoi sottoscriverti a eventi differenti come gli eventi, i comandi e lo stato del dispositivo e dell'applicazione.
 -   [SharedSubscriptionSample](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/SharedSubscriptionSample.java) - Un'applicazione di esempio che mostra come puoi creare un'applicazione scalabile che bilancia il carico dei messaggi tra più istanze dell'applicazione.
--  [Esempio di backup e ripristino](https://github.com/ibm-messaging/iot-backup-restore-sample) - Un esempio che mostra come puoi eseguire il backup e il ripristino della configurazione del dispositivo in un database Cloudant NoSQL.
+-  [Esempio di backup e ripristino](https://github.com/ibm-messaging/iot-backup-restore-sample) - Un esempio che mostra come puoi eseguire il backup e il ripristino della configurazione del dispositivo in {{site.data.keyword.cloudant}}.

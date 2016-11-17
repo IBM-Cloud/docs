@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # Insights for Weather 入门
 {: #insights_weather_overview}
-
-*上次更新时间：2016 年 5 月 19 日*
 
 使用 {{site.data.keyword.weatherfull}} 可将来自 The Weather Company (TWC) 的数据合并到 {{site.data.keyword.Bluemix}} 应用程序中。
 {:shortdesc}
@@ -74,7 +73,7 @@ copyright:
 
 ## 一般信息
 {: #general}
-* [Adding a service to your application](../reqnsi.html){: new_window}
+* [Adding a service to your application](/docs/services/reqnsi.html){: new_window}
 * [端到端开发](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [{{site.data.keyword.Bluemix_notm}}价格表](https://console.{DomainName}/pricing/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}}先决条件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

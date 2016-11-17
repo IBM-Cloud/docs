@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-10-21"
 
 ---
 
@@ -14,10 +15,11 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} のセキュリティー
 {: #sec-index}
-最終更新日: 2016 年 8 月 5 日
+最終更新日: 2016 年 10 月 21 日
 {: .last-updated}
 
 {{site.data.keyword.iot_full}} はクラウド・ホスティング・サービスであるため、セキュリティーを重要視したアーキテクチャーが採用されています。
+{: shortdesc}
 
 次の文書では、組織のデータを保護する方法に関する一般的な質問の中から、特定の分野に焦点を当てて答えを提示しています。
 
@@ -29,9 +31,9 @@ copyright:
 ## {{site.data.keyword.iot_short_notm}} と {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}} は {{site.data.keyword.Bluemix_notm}} プラットフォーム内で実行されるため、アクセスと接続を {{site.data.keyword.Bluemix_notm}} と IBM SoftLayer の両方に依存しています。{{site.data.keyword.Bluemix_notm}} と IBM SoftLayer に依存しているため、{{site.data.keyword.iot_short_notm}} のユーザーにとって、{{site.data.keyword.Bluemix_notm}} と IBM SoftLayer のセキュリティーと信頼性は重要です。
+{{site.data.keyword.iot_short_notm}} は {{site.data.keyword.Bluemix_notm}} プラットフォーム内で実行されるため、アクセスと接続を {{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer_full}} の両方に依存しています。{{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer}} に依存しているため、{{site.data.keyword.iot_short_notm}} のユーザーにとって、{{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer}} のセキュリティーと信頼性は重要です。
 
-{{site.data.keyword.Bluemix_notm}} のセキュリティーについて詳しくは、[{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security)を参照してください。
+{{site.data.keyword.Bluemix_notm}} のセキュリティーについて詳しくは、[{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー](https://console.ng.bluemix.net/docs/security/index.html#platform-security)を参照してください。
 
 ## {{site.data.keyword.iot_short_notm}} のセキュリティー・コンプライアンス
 {: #compliance}  
@@ -67,9 +69,11 @@ copyright:
 ## デバイスと {{site.data.keyword.iot_short_notm}} の接続のセキュリティー保護方法
 {: #secure-device-connection}
 
-{{site.data.keyword.iot_short_notm}} は TLS v1.2 を介した接続をサポートします。接続されるデバイスは、プラットフォームにそのデバイスを追加したときに生成された clientId と認証トークンの組み合わせを使用します。多くのプラットフォームと言語で使用するときの相互運用性が高い MQTT v3.1.1 が使用されます。
+接続されるデバイスは、プラットフォームにそのデバイスを追加したときに生成された clientId と認証トークンの組み合わせを使用します。多くのプラットフォームと言語で使用するときの相互運用性が高い MQTT v3.1.1 が使用されます。{{site.data.keyword.iot_short_notm}} は TLS v1.2 を介した接続をサポートします。
 
 ![画像](connectivity_platform.svg)
+
+TLS および暗号スイートの要件について詳しくは、`Watson IoT Platform へのアプリケーション、デバイス、ゲートウェイの接続`という資料の [TLS 要件](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements)セクションを参照してください。
 
 ## IoT デバイス間のデータ・リークを回避する方法
 {: #prevent-leak-devices}
@@ -103,7 +107,7 @@ copyright:
 {: #general}
 * [{{site.data.keyword.iot_short_notm}} の概説](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [{{site.data.keyword.Bluemix_notm}} セキュリティー](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} のコンプライアンス](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Softlayer のセキュリティー](http://www.softlayer.com/security){:new_window}
-* [Softlayer のコンプライアンス](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} セキュリティー](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} のコンプライアンス](http://www.softlayer.com/compliance){:new_window}

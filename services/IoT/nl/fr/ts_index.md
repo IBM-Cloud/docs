@@ -46,20 +46,20 @@ Un terminal connecté au service {{site.data.keyword.iot_short_notm}} est décon
 Il se peut que lorsque vous vous connectez, vous utilisiez une valeur trop faible pour une option de commande ping MQTT, ce qui peut donner l'impression qu'un dépassement de délai d'attente s'est produit pour la connexion. Par exemple, si MQTT client est défini de manière incorrecte, les commandes ping ne sont pas reçues à temps, et la connexion prend fin.
 {: tsCauses}
 
-Pour résoudre ce problème, vous pouvez vérifier que vous avez correctement défini les paramètres ping et KeepAlive pour votre connexion.    
+Pour résoudre ce problème, vous pouvez vérifier que vous avez correctement défini les paramètres ping et KeepAlive pour votre connexion.   
 {: tsResolve}
 
 
 ## Aide et support pour {{site.data.keyword.iot_short_notm}}
 {: #gettinghelp}
 
-Si vous avez des problèmes ou de questions quand vous utilisez {{site.data.keyword.iot_short_notm}}, vous pouvez obtenir de l'aide en recherchant des informations précises ou en posant des questions via un forum. Vous pouvez également ouvrir un ticket de demande de service. 
+Si vous avez des problèmes ou de questions quand vous utilisez {{site.data.keyword.iot_short_notm}}, vous pouvez obtenir de l'aide en recherchant des informations précises ou en posant des questions via un forum. Vous pouvez également ouvrir un ticket de demande de service.
 
 Si vous utilisez les forums pour poser une question, libellez votre question de sorte qu'elle soit vue par les équipes de développement {{site.data.keyword.Bluemix_notm}}.
 
 * Si vous avez des questions techniques concernant le développement ou le déploiement d'une application avec {{site.data.keyword.iot_short_notm}}, publiez-les sur [Stack Overflow](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} et ajoutez les étiquettes "ibm-bluemix" et "watson-iot".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* Pour des questions relatives au service et aux instructions de mise en route, utilisez le forum [IBM developerWorks - dW Answers](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Ajoutez les étiquettes "watson-iot" et "bluemix". 
+* Pour des questions relatives au service et aux instructions de mise en route, utilisez le forum [IBM developerWorks - dW Answers](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Ajoutez les étiquettes "watson-iot" et "bluemix".
 
 Voir la rubrique expliquant comment [obtenir de l'aide](https://www.{DomainName}/docs/support/index.html#getting-help) pour plus de détails sur l'utilisation des forums.
 

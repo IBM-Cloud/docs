@@ -608,13 +608,13 @@ one organization by entering additional organization names or GUIDs in the comma
 **Tip:** You can also use **ba espv** as an alias for the longer
 **ba edit-service-plan-visibility** command name.
 
-### Viewing resource usage information
+### Viewing resource metric information
 {: #cliresourceusage}
 
-You can view resource usage information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) usage data and historical memory and disk usage. Historical data for memory and disk usage is displayed, by default, weekly and in descending order. To view the resource usage information, use the following command:
+You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) usage data and historical memory and disk usage. Historical data for memory and disk usage is displayed, by default, weekly and in descending order. To view the resource metric information, use the following command:
 
 ```
-cf ba resource-usage <monthly> <weekly>
+cf ba resource-metrics <monthly> <weekly>
 ```
 {: codeblock}
 
@@ -625,8 +625,8 @@ cf ba resource-usage <monthly> <weekly>
 <dd class="pd">View the historical data for memory and disk space a week at a time. This is the default value.</dd>
 </dl>
 
-**Tip:** You can also use **ba rsu** as an alias for the longer
-**ba resource-usage** command name.
+**Tip:** You can also use **ba rsm** as an alias for the longer
+**ba resource-metrics** command name.
 
 ### Working with service brokers
 

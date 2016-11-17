@@ -6,7 +6,7 @@ copyright:
 
   2015，2016
 
- 
+lastupdated: "2016-03-15" 
 
 ---
 
@@ -17,8 +17,6 @@ copyright:
 {:pre: .pre}
 
 # Utilisation des packs de construction intégrés de la communauté
-*Dernière mise à jour : 15 mars 2016*
-{: .last-updated}
 
 Si vous ne trouvez pas de module de démarrage qui offre le contexte d'exécution dont vous avez besoin dans le catalogue {{site.data.keyword.Bluemix}}, vous pouvez fournir un
 pack de construction externe dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez spécifier un pack de construction personnalisé et compatible avec Cloud Foundry lorsque vous déployez votre application avec la commande cf
@@ -97,7 +95,7 @@ cf push nom_app -p chemin_app -b https://github.com/dmikusa-pivotal/cf-php-build
 <ul>
 <li>
 Utilisez la commande <strong>cf set-env</strong>. Par exemple, entrez la commande suivante pour définir la version Java 1.7.0 :
-<pre class="pre"><code>cf set-env nom_app JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
+<pre class="pre"><code>cf set-env nom_app JBP_CONFIG_OPEN_JDK_JRE &apos;{jre: { version: 1.7.0_+ }}&apos;</code></pre>
 <p>Ensuite, reconstituez votre application pour appliquer
 la modification :</p>
 <pre class="pre"><code>cf restage nom_app</code></pre>

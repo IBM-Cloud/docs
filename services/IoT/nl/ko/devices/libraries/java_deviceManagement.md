@@ -11,7 +11,7 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Java Client Library - 관리 디바이스
+# Java 클라이언트 라이브러리 - 관리 디바이스
 {: #java_deviceManagement}
 마지막 업데이트 날짜: 2016년 8월 2일
 {: .last-updated}
@@ -19,7 +19,7 @@ copyright:
 ##소개
 {: #introduction}
 
-이 클라이언트 라이브러리는 Java 'ibmiotf' Client Library와 함께 디바이스를 사용하는 방법을 설명합니다. 이 모듈을 시작하는 데 관한 도움말은 [Java Client Library - 소개](../java/javaintro.html)를 참조하십시오.
+이 클라이언트 라이브러리는 Java 'ibmiotf' Client Library와 함께 디바이스를 사용하는 방법을 설명합니다. 이 모듈을 시작하는 데 관한 도움말은 [Java 클라이언트 라이브러리 - 소개](../java/javaintro.html)를 참조하십시오.
 
 이 섹션에는 Java를 사용하여 디바이스에서 {{site.data.keyword.iot_full}} 디바이스 관리 서비스를 수행하고 펌웨어 업데이트, 위치 업데이트 및 진단 업데이트와 같은 디바이스 관리 오퍼레이션을 수행하는 방법에 대한 정보가 있습니다.
 
@@ -99,7 +99,7 @@ Constructor One은 `DeviceData`와 다음 필수 특성을 모두 승인하여 {
 |`Organization-ID` |조직 ID|
 |`Device-Type` |디바이스 유형입니다. 일반적으로 deviceType은 특정 태스크를 수행하는 디바이스를 그룹화한 것입니다(예: "weatherballoon").|
 |`Device-ID` |디바이스 ID입니다. 일반적으로 지정된 디바이스 유형의 디바이스 ID는 해당 디바이스의 고유한 ID입니다(예: 일련 번호 또는 MAC 주소).|
-|`Authentication-Method` |사용할 인증 메소드입니다. 현재 지원되는 값은 `토큰`뿐입니다.|
+|`Authentication-Method` |사용할 인증 메소드입니다. 현재 지원되는 값은 `token`입니다.|
 |`Authentication-Token` |디바이스를 Watson IoT Platform에 안전하게 연결하기 위한 인증 토큰입니다.|
 
 
@@ -158,7 +158,7 @@ ManagedDevice managedDevice = new ManagedDevice(mqttClient, deviceData);
 managedDevice.manage();
 ```
 
-디바이스에서 오버로드된 관리(수명)를 사용하여 지정된 시간 범위에 디바이스를 등록할 수 있습니다. 시간 범위는 비관리 디바이스로 되돌리거나 휴지 상태로 표시되지 않도록 디바이스에서 다른 **디바이스 관리** 요청을 보내야 하는 기간을 지정합니다.
+디바이스에서 오버로드된 관리(수명)를 사용하여 지정된 시간 범위에 디바이스를 등록할 수 있습니다. 시간 범위는 비관리 디바이스로 되돌리거나 휴면 상태로 표시되지 않도록 디바이스에서 다른 **디바이스 관리** 요청을 보내야 하는 기간을 지정합니다.
 
 ```
 managedDevice.manage(3600);

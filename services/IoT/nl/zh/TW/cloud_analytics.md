@@ -13,10 +13,10 @@ copyright:
 
 # 雲端分析
 {: #cloud_analytics}
-前次更新：2016 年 8 月 2 日
+前次更新：2016 年 8 月 23 日
 {: .last-updated}
 
-您可以使用 {{site.data.keyword.iot_short}} 雲端分析，指定以即時裝置資料為依據的規則條件，用來在符合時觸發警示及選用動作。    
+您可以使用 {{site.data.keyword.iot_short}} 雲端分析，指定以即時裝置資料為依據的規則條件，用來在符合時觸發警示及選用性動作。    
 {: shortdesc}
 
 例如，您可以建立一個規則，以確保在捨棄裝置時，或裝置溫度驟升時，將警示傳送至使用者裝置上的儀表板，並將電子郵件傳送給管理者。
@@ -53,19 +53,16 @@ copyright:
 若要建立規則，請執行下列動作：
 1. 在 {{site.data.keyword.iot_short}} 儀表板中，移至**規則**。
 2. 按一下**建立規則**、指定規則名稱、提供說明、選取要套用規則的裝置類型，然後按**下一步**。  
-3. 若要設定規則邏輯，請新增一個以上的 IF 條件，用作規則的觸發程式。
-您可以在平行列中新增條件，將它們套用為 OR 條件，或您可以在循序欄中新增條件，將它們套用為 AND 條件。
-**重要事項：**若要觸發比較兩個內容的條件，或觸發兩個以上使用 AND 循序合併的內容條件，必須在相同的裝置訊息中包括觸發資料點。如果在多則訊息中收到資料，則不會觸發條件或循序條件。
-**範例：**
-如果參數值大於指定的值，則簡式規則可能會觸發警示：
-Condition = `temp_cpu>80`
-符合臨界值組合時，可能會觸發較複雜的規則：
+3. 若要設定規則邏輯，請新增一個以上的 IF 條件，用作規則的觸發程式。您可以在平行列中新增條件，將它們套用為 OR 條件，或您可以在循序欄中新增條件，將它們套用為 AND 條件。  
+**重要事項：**若要觸發比較兩個內容的條件，或觸發兩個以上使用 AND 循序合併的內容條件，必須在相同的裝置訊息中包括觸發資料點。如果在多則訊息中收到資料，則不會觸發條件或循序條件。  
+**範例：**  
+如果參數值大於指定的值，則簡式規則可能會觸發警示：  
+Condition = `temp_cpu>80`  
+符合臨界值組合時，可能會觸發較複雜的規則：  
 Condition = `temp_cpu>60 AND cpu_load>90`   
 
-4. 配置規則的條件式觸發程式需求。
-若要控制一段時間針對規則所觸發的警示數目，您可以配置規則的條件式觸發程式需求。
-**重要事項：**條件式觸發會對規則中的任何條件採取動作。例如，如果規則有五個使用 OR 設定的不同平行條件，則每一個符合的條件都會列入條件式觸發程式計數的計算中。
-若要設定規則的條件式觸發，請執行下列動作：
+4. 配置規則的條件式觸發程式需求。若要控制一段時間針對規則所觸發的警示數目，您可以配置規則的條件式觸發程式需求。  
+**重要事項：**條件式觸發會對規則中的任何條件採取動作。例如，如果規則有五個使用 OR 設定的不同平行條件，則每一個符合的條件都會列入條件式觸發程式計數的計算中。若要設定規則的條件式觸發，請執行下列動作：
  1. 在規則編輯器中，按一下預設**每次符合條件時觸發**鏈結，以開啟「設定頻率需求」對話框。
  2. 選取並配置您要在規則中使用的條件式觸發程式。
  <ul>
@@ -73,11 +70,8 @@ Condition = `temp_cpu>60 AND cpu_load>90`
  <li>在 M 個*時間單位*內符合條件 N 次時觸發</li>
  </ul>  
  如需條件式觸發程式的其他詳細說明，請參閱[條件式規則觸發](#conditional "條件式觸發概觀")。
-5. 建立或選取在符合規則條件時發生的一個以上動作。
-如需動作的相關資訊，請參閱[搭配使用動作與規則](#shared "建立動作")。
- 例如：動作可以是傳送電子郵件或張貼 Webhook。
-3. **選用項目：**選取規則的警示優先順序。
- 優先順序是用來分類**規則型分析**板中所顯示的警示。預設優先順序是「低」。
+5. 建立或選取在符合規則條件時發生的一個以上動作。如需動作的相關資訊，請參閱[搭配使用動作與規則](#shared "建立動作")。例如：動作可以是傳送電子郵件或張貼 Webhook。
+3. **選用項目：**選取規則的警示優先順序。優先順序是用來分類**規則型分析**板中所顯示的警示。預設優先順序是「低」。
 6. 當規則符合您的要求時，請按一下**儲存**進行儲存而不啟動，或按一下**啟動**進行儲存並啟動規則。
 
 即會建立您的規則。如果您啟動這個規則，則會在符合規則的條件時，將警示新增至**板 > 規則型分析**板，並執行任何規則動作。
@@ -91,12 +85,12 @@ Condition = `temp_cpu>60 AND cpu_load>90`
 
 **重要事項：**條件式觸發會對規則中的任何條件採取動作。例如，如果規則有五個使用 OR 設定的不同平行條件，則每一個符合的條件都會列入條件式觸發程式計數的計算中。
 
-條件 | 說明------------- | -------------
+條件 | 說明
+------------- | -------------
 每次符合條件時觸發 | 每次符合規則條件時，即觸發規則。
 在 *M* *天/小時/分鐘/自訂*內符合條件 *N* 次時觸發 | 在選取的時間間隔內符合條件 *N* 次時會觸發規則，而且在經過配置的時段之前都不會再次觸發。</br>範例：條件式觸發程式需求 =`Trigger only once if conditions are met 4 times in 30 minutes`。裝置每隔五分鐘會傳送一則新訊息。在中午，溫度一開始超過 90 度（這符合條件）。條件式觸發程式計數器即會啟動，但尚未觸發規則。經過 15 分鐘，而且接收到另外三則訊息指出 `temp > 90`，就會觸發規則。然後，不論溫度為何，另一個 15 分鐘內都不會觸發規則。
 只在第一次符合條件時觸發，並於不再符合條件時重設。 | 在符合條件時觸發規則，但針對也符合條件的連續訊息則不會觸發規則。第一個不符合規則條件的訊息會重設觸發準則。
-
-<!-- Trigger if conditions persist for *M* *days/hours/minutes/custom*. | The rule is triggered when the conditions are met continuously for the selected time interval. </br>The rule is also triggered if the following requirements are met: <ol><li>The rule conditions are first met but are then followed by a time period during which no new messages are received.<li>The no-messages time period exceeds the selected time interval.<li>The message that ends the no-message time period meets the rule conditions.</ol>-->
+在條件持續 *M* *天/小時/分鐘/自訂* 時觸發。 | 如果在時間間隔期間收到的所有資料點都符合條件，或未收到任何其他資料點，則會在選取的時間間隔之後觸發規則。一開始符合條件時，時間間隔即開始。
 
 
 
@@ -111,8 +105,7 @@ Condition = `temp_cpu>60 AND cpu_load>90`
 1. 在 {{site.data.keyword.iot_short}} 儀表板中，移至**規則**。
 2. 在「規則」儀表板中，選取**動作**標籤。
 2. 按一下**建立動作**、指定動作名稱及說明，並選取動作類型，然後按**下一步**。
-3. 為您所建立的動作類型提供必要的參數。
-動作類型：  
+3. 為您所建立的動作類型提供必要的參數。動作類型：  
  - [傳送電子郵件](#email "傳送電子郵件")
  - [IFTTT](#ifttt "IFTTT")
  - [Node-RED](#nodered "Node-RED")
@@ -131,7 +124,8 @@ Condition = `temp_cpu>60 AND cpu_load>90`
 
 下列參數用來配置傳送電子郵件動作：
 
-參數 | 說明---|---
+參數 | 說明
+---|---
 名稱 | 動作的名稱（用於「警示」儀表板中）。
 說明 | 動作的簡要說明。
 主旨 | 電子郵件的主旨行。預設主旨行是 "IBM Watson IoT Alert: Mail action"。
@@ -167,14 +161,15 @@ Condition = `temp_cpu>60 AND cpu_load>90`
 
 下列參數用來配置 IFTTT 動作：
 
-參數 | 說明---|---
+參數 | 說明
+---|---
 名稱 | 動作的名稱（用於「警示」儀表板中）。
 說明 | 動作的簡要說明。
 金鑰 | 用來觸發事件的「Maker 通道」金鑰。
 事件 | 配置為「Maker 事件」的觸發程式的事件名稱。您可以使用不同的觸發程式來建立多個秘訣，這些觸發程式各有不同的事件名稱。
 值 1-3 | 您可以在這些參數中傳遞任何內容，而這些參數會傳遞給 IFTTT 秘訣中的動作。**提示：**您可以使用[變數替代](#variable_substitution)，以在標頭中動態包括其他資料。
 
-#### 範例：使用 IFTTT 張貼 Trello 卡片{: #iftttex}
+#### 範例：使用 IFTTT 張貼 Trello 卡片 {: #iftttex}
 
 在此範例中，將動作配置成使用 IFTTT，以將卡片張貼到 Trello 上的服務要求清單。
 
@@ -214,7 +209,8 @@ Condition = `temp_cpu>60 AND cpu_load>90`
 
 下列參數用來配置 Node-RED 動作：
 
-參數 | 說明---|---
+參數 | 說明
+---|---
 名稱 | 動作的名稱（用於「警示」儀表板中）。
 說明 | 動作的簡要說明。
 URL | 目標 Node-RED HTTP 輸入節點的 URL。
@@ -230,8 +226,7 @@ URL | 目標 Node-RED HTTP 輸入節點的 URL。
 若要建立「傳送文字訊息」動作，請執行下列動作：
 1. 在 Twilio 中，找出或建立新的「傳訊服務」，以用來傳送 Twilio 帳戶的文字訊息。如需相關資訊，請參閱 [Twilio 文件](https://www.twilio.com/help)。
 2. 在 Bluemix 中，使用 Node-RED URL `http://mynodered.mybluemix.net/red/` 來設定並存取 Node-RED 帳戶。如需相關資訊，請參閱 Bluemix 文件中的[使用 Node-RED 入門範本建立應用程式](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html)主題。
-3. 在 Node-RED 中，建立簡式兩節點流程（例如 [RTI-alert]->[SMS]）。
-其中，第一個節點是 http 節點，第二個節點則是 twilio 節點。
+3. 在 Node-RED 中，建立簡式兩節點流程（例如 [RTI-alert]->[SMS]）。其中，第一個節點是 http 節點，第二個節點則是 twilio 節點。
  1. 新增 "http" 輸入節點，並使用下列屬性進行配置：
   <ul>
   <li>方法 - POST</li>
@@ -246,7 +241,7 @@ URL | 目標 Node-RED HTTP 輸入節點的 URL。
   <li>SMS 至 - `Phone number for the service engineer`</li>
   <li>名稱 - **SMS**</li>
   </ul>
-  4. 將節點連接在一起
+  4. 將節點連接在一起  
   將 http 與 twilio 節點連接在一起，方法是將某個節點的輸出埠拖曳至另一個節點的輸入埠。
   5. 按一下**部署**按鈕，以將流程部署至伺服器
 4. 在 {{site.data.keyword.iot_short}} 儀表板中，移至**規則 > 動作**，然後建立具有下列參數的新動作：
@@ -271,7 +266,8 @@ URL | 目標 Node-RED HTTP 輸入節點的 URL。
 
 下列參數用來配置 Webhook 動作：
 
-參數 | 說明---|---
+參數 | 說明
+---|---
 名稱 | 動作的名稱（用於「警示」儀表板中）。
 說明 | 動作的簡要說明。
 URL | 目標已啟用 Webhook 之伺服器的 URL。**提示：**您可以使用[變數替代](#variable_substitution)，以在 URL 中動態包括其他資料。
@@ -280,8 +276,7 @@ URL | 目標已啟用 Webhook 之伺服器的 URL。**提示：**您可以使用
 密碼 | 在 Web 服務需要時包括。**重要事項：**密碼是以明碼形式傳送。
 標頭 | 標頭是由金鑰及值配對所構成。**提示：**您可以使用[變數替代](#variable_substitution)，以在標頭中動態包括其他資料。
 內容類型 | 內文的內容類型：JSON、XML、WWW 形式 URL 編碼或純文字。可用於 OPTIONS、PATCH、PUT、POST 及 DELETE 方法。
-內文 | Webhook 呼叫的內文。可用於 OPTIONS、PATCH、PUT、POST 及 DELETE 方法。依預設，內文欄位會預先填入[變數替代](#variable_substitution)中所列的所有變數。
-**重要事項：**Webhook 伺服器可能需要在內文中包括某些特定欄位。例如，Slack Webhook 必須包含 "text" 欄位。   
+內文 | Webhook 呼叫的內文。可用於 OPTIONS、PATCH、PUT、POST 及 DELETE 方法。依預設，內文欄位會預先填入[變數替代](#variable_substitution)中所列的所有變數。**重要事項：**Webhook 伺服器可能需要在內文中包括某些特定欄位。例如，Slack Webhook 必須包含 "text" 欄位。   
 
 #### 範例：使用 Webhook 在 Slack 上張貼
 {: #webhookex}
@@ -311,7 +306,7 @@ URL | 目標已啟用 Webhook 之伺服器的 URL。**提示：**您可以使用
 
 變數 | 說明
 ---|---
-**URL、Head 及 Body** |
+**URL、標頭及內文** |
 `{{timestamp}}` | 訊息中的時間戳記。
 `{{orgId}}` | {{site.data.keyword.iot_short_notm}} 服務的組織 ID。
 `{{tenantId}}` | 已淘汰：{{site.data.keyword.iotrtinsights_full}} 服務的 ID。

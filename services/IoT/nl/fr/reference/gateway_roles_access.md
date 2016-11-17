@@ -15,7 +15,7 @@ copyright :
 Dernière mise à jour : 16 septembre 2016
 {: .last-updated}
 
-Les tableaux ci-après illustrent le niveau d'accès de chacun des rôles de passerelle. 
+Les tableaux ci-après illustrent le niveau d'accès de chacun des rôles de passerelle.
 
 Les tableaux répertorient les niveaux d'accès pour :
 - Les [opérations de terminal](#gateway-device-ops)
@@ -33,7 +33,7 @@ Les tableaux répertorient les niveaux d'accès pour :
 
 ### Opérations de terminal {: #gateway-device-ops}
 
-Opérations de terminal  || Rôles de passerelle|
+Opérations de terminal || Rôles de passerelle|
 :--------: | ---------------------|------------------------
            | **Passerelle standard** | **Passerelle privilégiée**
 Créer, mettre à jour ou supprimer de terminaux|-|X
@@ -54,14 +54,14 @@ Afficher des journaux de diagnostic|-|-
 
 ### Opérations de journal {: #gateway-log-ops}
 
-Opérations de journal  || Rôles de passerelle|
+Opérations de journal || Rôles de passerelle|
 :--------: | ---------------------|------------------------
            | **Passerelle standard** | **Passerelle privilégiée**
 Afficher les journaux serveur|-|-
 
 ### Opérations de cache {: #gateway-cache-ops}
 
-Opérations de cache  || Rôles de passerelle|
+Opérations de cache || Rôles de passerelle|
 :--------: | ---------------------|------------------------
            | **Passerelle standard** | **Passerelle privilégiée**
 Afficher les données en temps réel (cache d'événement)|-|-
@@ -70,7 +70,7 @@ Gérer les données en temps réel (cache d'événement)|-|-
 
 ### Opérations d'organisation {: #gateway-org-ops}
 
-Opérations d'organisation  || Rôles de passerelle|
+Opérations d'organisation || Rôles de passerelle|
 :--------: | ---------------------|------------------------
            | **Passerelle standard** | **Passerelle privilégiée**
 Configurer les paramètres de stockage|-|-
@@ -89,7 +89,7 @@ Afficher les informations d'utilisation de l'organisation|-|-
 
 ### Opérations de contrôle d'accès {: #gateway-access-ops}
 
-Opérations de contrôle d'accès  || Rôles de passerelle|
+Opérations de contrôle d'accès || Rôles de passerelle|
 :--------: | ---------------------|------------------------
            | **Passerelle standard** | **Passerelle privilégiée**
 Afficher les propriétés utilisateur (y compris les droits d'accès)|-|-
@@ -107,7 +107,7 @@ Afficher les opérations|-|-
 
 ### Opérations d'analyse {: #gateway-analytics-ops}
 
-Opérations d'analyse  || Rôles de passerelle|
+Opérations d'analyse || Rôles de passerelle|
 :--------: | ---------------------|------------------------|
            | **Passerelle standard** | **Passerelle privilégiée** |
 Afficher les règles d'analyse|-|-
@@ -120,7 +120,7 @@ Gérer les schémas de message d'analyse|-|-
 
 ### Opérations de service de tiers {: #gateway-third-party}
 
-Opérations de service de tiers  || Rôles de passerelle|
+Opérations de service de tiers || Rôles de passerelle|
 :--------: | ---------------------|------------------------
            | **Passerelle standard** | **Passerelle privilégiée**
 Traiter des notifications par lots depuis une plateforme externe|-|-

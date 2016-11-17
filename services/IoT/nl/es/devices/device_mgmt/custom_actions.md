@@ -357,6 +357,7 @@ El dispositivo recibe la respuesta siguiente desde el {{site.data.keyword.iot_sh
 
 ```
 En este punto, puede iniciar las acciones de dispositivos definidas en la ampliación `exampleIoT-exampleDeviceType-v1`.
+
 La siguiente carga útil se utiliza para iniciar una acción `installPlugin`:
 
 ```

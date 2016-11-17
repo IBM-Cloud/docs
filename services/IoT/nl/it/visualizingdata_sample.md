@@ -8,7 +8,7 @@ copyright:
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 
-# Visualizzazione dei dati del dispositivo 
+# Visualizzazione dei dati del dispositivo
 {: #visualizingdata_data}
 *Ultimo aggiornamento: 20 aprile 2016*
 {: .last-updated}
@@ -30,7 +30,7 @@ Prima di poter visualizzare i tuoi dati, devi eseguire le seguenti azioni:
 1. Crea un'applicazione in {{site.data.keyword.Bluemix_notm}} utilizzando la SDK Node.js. Prendi nota del nome e del nome host dell'applicazione, queste informazioni sono necessarie al caricamento dell'applicazione in {{site.data.keyword.Bluemix_notm}}.
 2. Esegui il bind dell'applicazione node.JS alla tua istanza {{site.data.keyword.iot_short_notm}} nel tuo dashboard {{site.data.keyword.Bluemix_notm}} completando i seguenti passi:
 
-  a. Nel tuo dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'applicazione Node.JS che hai creato.
+  a. Nel tuo dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'applicazione Node.JS che hai creato. 
 
   b. Fai clic su **Esegui il bind di un servizio o di una API** e quindi seleziona il tuo servizio {{site.data.keyword.iot_short_notm}} e fai clic su **Aggiungi**.
 3. Utilizzando lo strumento di riga di comando cf, modifica la tua directory in quella del pacchetto di esempio di visualizzazione estratto ed esegui il seguente comando per il collegamento a {{site.data.keyword.Bluemix_notm}}.
@@ -73,7 +73,7 @@ Tutti i dispositivi nella tua organizzazione sono elencati nel menu a discesa de
 
 Questa applicazione di esempio è un'applicazione web autonoma, scritta nel framework node.js. L'esempio visualizza gli eventi che sono stati inviati dai dispositivi registrati in {{site.data.keyword.iot_short_notm}}. L'esempio utilizza i seguenti strumenti:
 
-- Express: framework dell'applicazione web Node.js 
+- Express: framework dell'applicazione web Node.js
 - JQuery: chiamate IU e Ajax
 - Rickshaw: strumento di visualizzazione grafica
 - Paho: client MQTT
@@ -92,7 +92,7 @@ L'applicazione di esempio è strutturata con le seguenti directory:
 - Viste: file interfaccia utente, scritti in Jade
 - La libreria dei grafici Rickshaw è utilizzata per tracciare il grafico per i dati cronologici e in tempo reale.
 
-### Personalizzazione della visualizzazione dei dati in tempo reale 
+### Personalizzazione della visualizzazione dei dati in tempo reale
 
 La directory che contiene il codice di visualizzazione grafica per i dati in tempo reale è `public/ja/realtime`. La logica dei grafici può essere personalizzata modificando `public/js/historian/realtimeGraph.js`.
 
@@ -100,7 +100,7 @@ Il file di riferimento della libreria MQTT Paho per la sottoscrizione agli argom
 
 Gli eventi del dispositivo trasmessi al file `realtimeGraph.js` per tracciare il grafico.
 
-### Personalizzazione della visualizzazione dei dati cronologici 
+### Personalizzazione della visualizzazione dei dati cronologici
 
 La directory che contiene il codice di visualizzazione grafica per i dati del dispositivo cronologici è `public/js/historian`. La logica dei grafici può essere personalizzata modificando `public/js/historian/historianGraph.js`.
 

@@ -63,7 +63,7 @@ Os valores de *appId*, *type_id*, *device_type* e *device_id* devem ter no máxi
 - Caracteres alfanuméricos (a-z, A-Z, 0-9)
 - Traços (-)
 - Sublinhados (_)
-- Pontos (.)
+- Pontos (. )
 
 Após definir o ID do aplicativo e o ID do dispositivo, crie uma conexão que represente seu aplicativo usando `mosquitto_sub`. Use os exemplos a seguir de `<applicationId>` = myApplicationId e `<deviceId>` = myDeviceId:
 ```

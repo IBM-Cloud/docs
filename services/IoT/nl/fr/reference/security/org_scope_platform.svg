@@ -691,21 +691,21 @@
        style="opacity:1;fill:#ffffff" />
     <text
        sodipodi:linespacing="125%"
-       y="428.37378"
-       x="126.23328"
+       y="430.37378"
+       x="128.23328"
        font-size="11"
        id="text56834-0-4-8-0-89-9"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">
       <tspan
          sodipodi:role="line"
-         id="tspan3515"
-         x="126.23328"
-         y="428.37378">Pas de commande</tspan>
+         id="tspan3463"
+         x="128.23328"
+         y="430.37378">Pas de</tspan>
       <tspan
          sodipodi:role="line"
-         id="tspan3517"
-         x="126.23328"
-         y="442.12378">pour A</tspan>
+         id="tspan3465"
+         x="128.23328"
+         y="444.12378">commande pour A</tspan>
     </text>
     <rect
        style="opacity:1;fill:#000000;fill-opacity:0;stroke:none;stroke-width:0.90653205;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -728,21 +728,21 @@
        style="opacity:1;fill:#ffffff" />
     <text
        sodipodi:linespacing="125%"
-       y="429.28076"
+       y="431.28076"
        x="487.67786"
        font-size="11"
        id="text56834-0-4-8-0-89-9-0-1"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">
       <tspan
          sodipodi:role="line"
-         id="tspan3519"
-         x="487.67786"
-         y="429.28076">Pas de message</tspan>
-      <tspan
-         sodipodi:role="line"
          id="tspan3521"
          x="487.67786"
-         y="443.03076">pour l'application 1</tspan>
+         y="431.28076">Pas de message</tspan>
+      <tspan
+         sodipodi:role="line"
+         id="tspan3523"
+         x="487.67786"
+         y="445.03076">pour l'application 1</tspan>
     </text>
     <path
        inkscape:connector-curvature="0"
@@ -759,19 +759,19 @@
     <text
        sodipodi:linespacing="125%"
        y="603.26819"
-       x="123.28064"
+       x="125.28064"
        font-size="11"
        id="text56834-0-4-8-0-89-9-4"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1">
       <tspan
          sodipodi:role="line"
-         id="tspan3511"
-         x="123.28064"
+         id="tspan3459"
+         x="125.28064"
          y="603.26819">Message pour</tspan>
       <tspan
          sodipodi:role="line"
-         id="tspan3513"
-         x="123.28064"
+         id="tspan3461"
+         x="125.28064"
          y="617.01819">l'application 1</tspan>
     </text>
     <path
@@ -789,7 +789,7 @@
     <text
        sodipodi:linespacing="125%"
        y="612.35852"
-       x="442.69543"
+       x="440.69543"
        font-size="11"
        id="text56834-0-4-8-0-89-9-2"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Commande pour A</text>

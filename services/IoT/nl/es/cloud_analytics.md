@@ -13,7 +13,7 @@ copyright:
 
 # Cloud Analytics
 {: #cloud_analytics}
-Última actualización: 2 de agosto de 2016
+Última actualización: 23 de agosto de 2016
 {: .last-updated}
 
 Al utilizar cloud analytics de {{site.data.keyword.iot_short}}, especifique condiciones de reglas basadas en datos de dispositivos en tiempo real y que activen alertas y acciones opcionales cuando se cumplan.    
@@ -53,17 +53,17 @@ Las reglas son puntos de decisión basadas en condiciones que coinciden con los 
 Para crear una regla:
 1. En el panel de control de {{site.data.keyword.iot_short}}, vaya a **Reglas**.
 2. Pulse **Crear una regla**, dé un nombre a la regla, proporcione una descripción, seleccione un tipo de dispositivo al que se aplique la regla y, a continuación, pulse **Siguiente**.  
-3. Para configurar la lógica de la regla, añada una o varias condiciones IF para utilizarlas como desencadenantes para la regla.
-Puede añadir condiciones en filas paralelas para aplicarlas como condiciones OR, o puede añadir condiciones en columnas secuenciales para aplicarlas como condiciones AND.
-**Importante:** Para desencadenar una condición que compara dos propiedades o para desencadenar dos o más condiciones de propiedades que se combinan secuencialmente utilizando AND, deben incluirse los puntos de datos desencadenantes en el mismo mensaje de dispositivos. Si los datos se reciben en más de un mensaje, la condición o las condiciones secuenciales no se desencadenarán.
+3. Para configurar la lógica de la regla, añada una o varias condiciones IF para utilizarlas como desencadenantes para la regla.  
+Puede añadir condiciones en filas paralelas para aplicarlas como condiciones OR, o puede añadir condiciones en columnas secuenciales para aplicarlas como condiciones AND.  
+**Importante:** Para desencadenar una condición que compara dos propiedades o para desencadenar dos o más condiciones de propiedades que se combinan secuencialmente utilizando AND, deben incluirse los puntos de datos desencadenantes en el mismo mensaje de dispositivos. Si los datos se reciben en más de un mensaje, la condición o las condiciones secuenciales no se desencadenarán.  
 **Ejemplos:**
 Una regla sencilla puede desencadenar una alerta si un valor de parámetro es mayor que un valor especificado:
 Condición = `temp_cpu>80`
 Una regla más compleja puede desencadenarse cuando se cumple una combinación de umbrales:
 Condición = `temp_cpu>60 AND cpu_load>90`   
 
-4. Configure requisitos desencadenantes condicionales para la regla.
-Para controlar el número de alertas desencadenadas para una regla durante un periodo de tiempo, puede configurar requisitos desencadenantes condicionales para la regla.
+4. Configure requisitos desencadenantes condicionales para la regla.  
+Para controlar el número de alertas desencadenadas para una regla durante un periodo de tiempo, puede configurar requisitos desencadenantes condicionales para la regla.  
 **Importante:** El desencadenante condicional actúa en cualquier condición de la regla. Por ejemplo, si una regla tiene cinco conjuntos de condiciones paralelas distintas utilizando OR, cada condición que sea true cuenta hacia el recuento desencadenante condicional.
 Para establecer el desencadenante condicional para una regla:
  1. En el editor de reglas, pulse el enlace predeterminado **Desencadenar cada vez que se cumplan las condiciones** para abrir el recuadro de diálogo de requisitos de frecuencia establecido.
@@ -73,9 +73,10 @@ Para establecer el desencadenante condicional para una regla:
  <li>Desencadenar si las condiciones se cumplen N veces en la *Unidad de tiempo* M</li>
  </ul>  
  Para obtener una descripción más detallada de los desencadenantes condicionales, consulte [Desencadenante de reglas condicionales](#conditional "Visión general de desencadenante condicional").
-5. Cree o seleccione una o varias acciones que se producen si se cumplen las condiciones de la regla.
-Para obtener más información sobre las acciones, consulte [Utilización de acciones con las reglas](#shared "Crear acciones").   Por ejemplo: Una acción puede ser enviar un correo electrónico o publicar un webhook.
-3. **Opcional:** Seleccionar una prioridad de alerta para la regla.
+5. Cree o seleccione una o varias acciones que se producen si se cumplen las condiciones de la regla.  
+Para obtener más información sobre las acciones, consulte [Utilización de acciones con las reglas](#shared "Crear acciones").   
+ Por ejemplo: Una acción puede ser enviar un correo electrónico o publicar un webhook.
+3. **Opcional:** Seleccionar una prioridad de alerta para la regla.  
  La prioridad se utiliza para clasificar las alertas que se muestran en el tablero **Herramientas de análisis basadas en reglas**. La prioridad predeterminada es Low.
 6. Cuando esté satisfecho con la regla, pulse **Guardar** para guardar sin activar o pulse **Activar** para guardar y activar la regla.
 
@@ -86,7 +87,6 @@ Su regla se ha creado. Si activa la regla, cuando se cumplan las condiciones de 
 
 Para controlar el número de alertas desencadenadas para una regla durante un periodo de tiempo, puede configurar requisitos desencadenantes condicionales para la regla.
 
-
 En función de la frecuencia de mensajes y de las condiciones de las reglas, una regla puede desencadenarse un gran número de veces una vez que se cumpla una condición de desencadenante. Por ejemplo, si la condición es `temp >= 90` y la temperatura aumenta y se estabiliza en 91, la regla se desencadena con cada mensaje entrante. En función de la frecuencia de los mensajes de dispositivos y de las acciones que la regla tenga establecido ejecutar, es posible que este volumen de alertas llene rápidamente su bandeja de entrada de correo electrónico o desborde un canal de información de Twitter con mensajes que no proporcionan ningún valor adicional.
 
 **Importante:** El desencadenante condicional actúa en cualquier condición de la regla. Por ejemplo, si una regla tiene cinco conjuntos de condiciones paralelas distintas utilizando OR, cada condición que se cumpla cuenta hacia el recuento desencadenante condicional.
@@ -94,10 +94,9 @@ En función de la frecuencia de mensajes y de las condiciones de las reglas, una
 Condición | Descripción
 ------------- | -------------
 Desencadenar cada vez que se cumplan las condiciones | La regla se desencadena cada vez que se cumplen las condiciones de reglas.
-Desencadenar si se cumplen las condiciones *N* veces en *M* *días/horas/minutos/personalizado* | La regla se desencadena cuando se cumplen las condiciones *N* veces en el intervalo de tiempo seleccionado y no se desencadenará de nuevo hasta que haya pasado el periodo de tiempo configurado. </br>Ejemplo: El requisito desencadenante condicional =`Desencadenar solo una vez si las condiciones se cumplen cuatro veces en 30 minutos`. El dispositivo envía un mensaje nuevo cada cinco minutos. A las 12:00, la temperatura supera inicialmente los 90 grados, lo que cumple la condición. Se inicia el contador desencadenante condicional, pero la regla no se ha desencadenado todavía. Tras 15 minutos y después de que se hayan recibido tres mensajes más que indican que `temp > 90`, se desencadenará la regla. La regla no se desencadenará durante otros 15 minutos, independientemente de la temperatura.
+Desencadenar si se cumplen las condiciones *N* veces en *M* *días/horas/minutos/personalizado* | La regla se desencadena cuando se cumplen las condiciones *N* veces en el intervalo de tiempo seleccionado y no se desencadenará de nuevo hasta que haya pasado el periodo de tiempo configurado. </br>Ejemplo: El requisito desencadenante condicional =`Desencadenar solo una vez si las condiciones se cumplen cuatro veces en 30 minutos`. El dispositivo envía un mensaje nuevo cada cinco minutos. A las 12:00, la temperatura supera inicialmente los 90 grados, lo que cumple la condición. Se inicia el contador desencadenante condicional, pero la regla no se ha desencadenado todavía.  Tras 15 minutos y después de que se hayan recibido tres mensajes más que indican que `temp > 90`, se desencadenará la regla. La regla no se desencadenará durante otros 15 minutos, independientemente de la temperatura.
 Desencadenar sólo la primera vez que se cumplan las condiciones y restablecer cuando ya no se cumplan las condiciones. | La regla se desencadena cuando se cumplen las condiciones, pero no se desencadenará para mensajes consecutivos que también cumplen las condiciones. Los criterios desencadenantes los restablece el primer mensaje que no cumple las condiciones de reglas.
-
-<!-- Trigger if conditions persist for *M* *days/hours/minutes/custom*. | The rule is triggered when the conditions are met continuously for the selected time interval. </br>The rule is also triggered if the following requirements are met: <ol><li>The rule conditions are first met but are then followed by a time period during which no new messages are received.<li>The no-messages time period exceeds the selected time interval.<li>The message that ends the no-message time period meets the rule conditions.</ol>-->
+Desencadenar si las condiciones persisten para *M* *days/hours/minutes/custom*. | La regla se desencadena después del intervalo de tiempo seleccionado si todos los puntos de datos recibidos durante el intervalo de tiempo cumplen las condiciones o si no se reciben puntos de datos adicionales. El intervalo de tiempo se inicia cuando se cumplen inicialmente las condiciones.
 
 
 
@@ -112,7 +111,7 @@ Para crear una acción en el separador Acciones:
 1. En el panel de control de {{site.data.keyword.iot_short}}, vaya a **Reglas**.
 2. En el panel de control Reglas, seleccione el separador **Acciones**.
 2. Pulse **Crear una acción**, dé un nombre y una descripción a la acción y seleccione un tipo de acción y, a continuación, pulse **Siguiente**.
-3. Proporcione los parámetros necesarios para el tipo de acción que está creando.
+3. Proporcione los parámetros necesarios para el tipo de acción que está creando.  
 Tipos de acciones:  
  - [Enviar correo electrónico](#email "Enviar correo electrónico")
  - [IFTTT](#ifttt "IFTTT")
@@ -177,7 +176,7 @@ Clave | La clave Canal de Maker a utilizar para desencadenar el suceso.
 Suceso | El nombre de suceso que ha configurado como desencadenante para el Suceso de Maker. Puede crear varias recetas con desencadenantes distintos, cada uno de ellos con un nombre de suceso distinto.
 Valor 1-3 | Puede pasar cualquier contenido en estos parámetros, que se pasan a la acción en la receta IFTTT. **Consejo:** Puede utilizar [sustitución de variables](#variable_substitution) para incluir de forma dinámica datos adicionales en la cabecera.
 
-#### Ejemplo: Utilice IFTTT para publicar una tarjeta Trello{: #iftttex}
+#### Ejemplo: Utilice IFTTT para publicar una tarjeta Trello {: #iftttex}
 
 En este ejemplo, la acción está configurada para utilizar IFTTT para publicar una tarjeta a una lista de solicitudes de servicio en Trello.
 
@@ -234,7 +233,7 @@ En este ejemplo, la acción está configurada para utilizar Node-RED con un nodo
 Para crear la acción enviar mensaje de texto:
 1. En Twilio, localice o cree un nuevo Servicio de mensajería a utilizar para enviar mensajes de texto desde la cuenta de Twilio. Para obtener información, consulte la [documentación de Twilio](https://www.twilio.com/help).
 2. En Bluemix, configure y acceda a la cuenta de Node-RED con el URL de Node-RED `http://mynodered.mybluemix.net/red/`. Para obtener más información, consulte el tema [Creación de aplicaciones con el iniciador de Node-RED](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html) en la documentación de Bluemix.
-3. En Node-RED, cree un flujo simple de dos nodos, como por ejemplo [RTI-alert]->[SMS].
+3. En Node-RED, cree un flujo simple de dos nodos, como por ejemplo [RTI-alert]->[SMS].  
 Donde el primer nodo es un nodo http, y el segundo es un nodo twilio.
  1. Añada el nodo de entrada "http" y configúrelo con los atributos siguientes:
   <ul>
@@ -284,8 +283,8 @@ Método | El tipo de llamada webhook a ejecutar. Seleccione uno de los tipos sig
 Nombre de usuario | Lo incluirá el servicio web si es necesario.
 Contraseña | Lo incluirá el servicio web si es necesario. **Importante:** La contraseña se envía en texto sin cifrar.
 Cabecera | Las cabeceras se componen de la clave y de los pares de valores. **Consejo:** Puede utilizar [sustitución de variables](#variable_substitution) para incluir de forma dinámica datos adicionales en la cabecera.
-Tipo de contenido | El tipo de contenido del cuerpo: JSON, XML, formulario WWW URL codificado, o texto sin formato. Disponible para los métodos OPTIONS, PATCH, PUT, POST y DELETE.
-Cuerpo | El cuerpo de la llamada webhook. Disponible para los métodos OPTIONS, PATCH, PUT, POST y DELETE. De forma predeterminada, el campo de cuerpo se prerrellena con todas las variables listadas en [sustitución de variables](#variable_substitution). **Importante:** El servidor de webhook puede necesitar que determinados campos específicos se incluyan en el cuerpo. Por ejemplo, un webhook Slack debe contener el campo "text".   
+Tipo de contenido | El tipo de contenido del cuerpo: JSON, XML, formulario WWW URL codificado, o texto sin formato.  Disponible para los métodos OPTIONS, PATCH, PUT, POST y DELETE.
+Cuerpo | El cuerpo de la llamada webhook.  Disponible para los métodos OPTIONS, PATCH, PUT, POST y DELETE. De forma predeterminada, el campo de cuerpo se prerrellena con todas las variables listadas en [sustitución de variables](#variable_substitution). **Importante:** El servidor de webhook puede necesitar que determinados campos específicos se incluyan en el cuerpo. Por ejemplo, un webhook Slack debe contener el campo "text".   
 
 #### Ejemplo: Utilice un webhook para publicar en Slack
 {: #webhookex}

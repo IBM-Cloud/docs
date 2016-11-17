@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-22"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # {{site.data.keyword.weather_short}} REST API の使用
 {: #rest_apis}
-
-最終更新日: 2016 年 8 月 22 日
-{: .last-updated}
 
 [REST API](https://twcservice.{APPDomain}/rest-api/){:new_window} を使用して、気象データを取得できます。API 操作をテストして即座に結果を表示できるため、アプリケーションを迅速にビルドするのに役立ちます。
 {: shortdesc}

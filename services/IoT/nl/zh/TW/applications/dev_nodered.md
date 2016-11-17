@@ -17,7 +17,7 @@ copyright:
 前次更新：2016 年 9 月 1 日
 {: .last-updated}
 
-Node-RED 是一種視覺化工具，您可以用來在 {{site.data.keyword.iot_full}} 上開發應用程式、裝置及閘道。Node-RED 可讓您以全新且有趣的方式來連接硬體裝置、API 及線上服務。Node-RED 以 Node.js 為建置基礎，充分運用巨型節點模組生態系統，提供一種可以整合許多不同系統的工具。
+Node-RED 是一種視覺化工具，您可以用來在 {{site.data.keyword.iot_full}} 上開發應用程式、裝置及閘道。Node-RED 可讓您以全新且有趣的方式來連接硬體裝置、API 及線上服務。Node-RED 以 Node.js 為建置基礎，充分運用巨型 node 模組生態系統，提供一種可以整合許多不同系統的工具。
 {:shortdesc}
 
 IBM 提供 Node-RED 節點，以協助您將裝置、閘道及應用程式連接至 {{site.data.keyword.iot_short_notm}}，以及快速建立 IoT 解決方案。

@@ -5,7 +5,7 @@
 copyright:
 
   anni: 2016
-
+ultimo aggiornamento: "27-10-2016"
  
 
 ---
@@ -15,40 +15,59 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-<!-- draft - staging only -->
-
-#Collegamento degli account di fatturazione SoftLayer e {{site.data.keyword.Bluemix_notm}}
+# Aggiornamento e unificazione degli account di fatturazione {{site.data.keyword.Bluemix_notm}} e SoftLayer
 {: #softlayerlink}
-*Ultimo aggiornamento: 15 agosto 2016*
-{: .last-updated}
 
-È ora possibile collegare gli account di fatturazione SoftLayer e {{site.data.keyword.Bluemix_notm}}. Quando colleghi i tuoi account, ricevi la fatturato attraverso SoftLayer sia per le risorse SoftLayer che per le risorse {{site.data.keyword.Bluemix_notm}}. Se hai già un account, la fatturazione per {{site.data.keyword.Bluemix_notm}} tramite SoftLayer parte dal nuovo ciclo di fatturazione avviato dopo il collegamento degli account.
+Se disponi di un account {{site.data.keyword.Bluemix_notm}} di prova e vuoi accedere al dashboard Infrastruttura, devi eseguire l'aggiornamento a un account {{site.data.keyword.Bluemix_notm}} con pagamento a consumo.
+
+Puoi unificare i tuoi account {{site.data.keyword.Bluemix_notm}} e SoftLayer esistenti collegando tali account. Quando colleghi i tuoi account, ricevi la fattura attraverso {{site.data.keyword.Bluemix_notm}} sia per le risorse {{site.data.keyword.Bluemix_notm}} che per le risorse SoftLayer.
 {:shortdesc}
 
-**Importante:** tutti gli account collegati in {{site.data.keyword.Bluemix_notm}} devono essere del tipo Pagamento a consumo. Puoi creare un nuovo account Pagamento a consumo o collegarne uno esistente. In alternativa, puoi collegare un account di prova esistente, che verrà tuttavia aggiornato in un account Pagamento a consumo.  
+## Aggiornamento a un account Pagamento a consumo di {{site.data.keyword.Bluemix_notm}}
+{: #upgradetopayg}
 
-Una volta collegati gli account, puoi passare tra gli account facilmente. Puoi ancora monitorare l'utilizzo delle tue risorse {{site.data.keyword.Bluemix_notm}} nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Tuttavia, la fatturazione di tali risorse verrà mostrata nella fattura SoftLayer.
+Quando ti colleghi a {{site.data.keyword.Bluemix_notm}} utilizzando un account di prova, non puoi accedere al dashboard Infrastruttura {{site.data.keyword.Bluemix_notm}}. Se vuoi che le tue applicazioni utilizzino le risorse dell'infrastruttura, devi eseguire l'aggiornamento a un account Pagamento a consumo.
 
-Sebbene la tua fatturazione account sia stata collegata, il tuo ID di accesso varierà in base a come il tuo account SoftLayer viene autenticato:
-* Per gli utenti negli account SoftLayer che non utilizzano un ID IBM per l'autenticazione, continua a utilizzare il tuo ID SoftLayer per i prodotti e i servizi SoftLayer e il tuo ID IBM per i prodotti e i servizi {{site.data.keyword.Bluemix_notm}}.
-* Per gli utenti negli account SoftLayer che utilizzano un ID IBM per l'autenticazione, utilizza il tuo ID IBM per accedere ai tuoi account SoftLayer e {{site.data.keyword.Bluemix_notm}}.
+Per aggiornare il tuo account di prova in un account Pagamento a consumo {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
 
-**Attenzione:** una volta collegati, gli account non possono più essere scollegati.  
+ 1. Fai clic su **Account** &gt; **Fatturazione**.
+ 2. Seleziona **Aggiungi carta di credito**.
+ 3. Immetti i dettagli di fatturazione richiesti. 
+ 4. Leggi e accetta i termini e le condizioni per l'account Pagamento a consumo. 
+ 5. Al termine, fai clic su **Aggiorna**. 
+ 
+Una volta eseguito l'aggiornamento a un account Pagamento a consumo, le opzioni di **Infrastruttura** vengono elencate nel **Catalogo** {{site.data.keyword.Bluemix_notm}}. Se superi la franchigia consentita, riceverai una fattura mensile da parte di {{site.data.keyword.Bluemix_notm}}. La fattura sarà in dollari americani (USD) e verranno descritti gli addebiti delle risorse. 
+
+## Unificazione degli account {{site.data.keyword.Bluemix_notm}} e SoftLayer
+{: #unifyingaccounts}
+
+Puoi unificare i tuoi account {{site.data.keyword.Bluemix_notm}} e SoftLayer per utilizzare risorse combinate. Quando colleghi gli account {{site.data.keyword.Bluemix_notm}} e Softlayer, riceverai un'unica fattura {{site.data.keyword.Bluemix_notm}}. Se hai un account {{site.data.keyword.Bluemix_notm}} esistente, la fatturazione tramite {{site.data.keyword.Bluemix_notm}} per le risorse SoftLayer parte dal nuovo ciclo di fatturazione che inizia dopo il collegamento degli account.
+
+**Importante:** tutti gli account collegati in {{site.data.keyword.Bluemix_notm}} devono essere del tipo Pagamento a consumo. Puoi creare un nuovo account Pagamento a consumo o collegarne uno esistente. In alternativa, puoi collegare un account di prova esistente, che verrà tuttavia aggiornato in un account Pagamento a consumo. Gli account Sottoscrizione di {{site.data.keyword.Bluemix_notm}} non possono essere collegati.  
+
+Dopo che gli account sono stati collegati:
+
+* Devi utilizzare le credenziali dell'ID IBM per accedere a entrambi gli account SoftLayer e {{site.data.keyword.Bluemix_notm}}.
+* Eventuali sconti SoftLayer esistenti vengono applicati agli addebiti {{site.data.keyword.Bluemix_notm}}. 
+* Riceverai un'unica fattura in dollari americani (USD).
+* Puoi monitorare l'utilizzo delle tue risorse {{site.data.keyword.BluSoftlayer}} nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. 
+
+**Attenzione:** una volta collegati, gli account non possono più essere scollegati. 
 
 Se hai un account SoftLayer e desideri collegare gli account SoftLayer e {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
- 1. Dal {{site.data.keyword.slportal}}, fai clic su **Collega un account {{site.data.keyword.Bluemix_notm}}**. 
+
+ 1. Dal {{site.data.keyword.slportal}}, fai clic su **Collega un account {{site.data.keyword.Bluemix_notm}}**.
  2. Leggi e accetta le condizioni di collegamento degli account SoftLayer e {{site.data.keyword.Bluemix_notm}}.
  3. Quando richiesto, fornisci l'indirizzo e-mail associato al tuo account {{site.data.keyword.Bluemix_notm}}. Se non hai un account {{site.data.keyword.Bluemix_notm}}, fornisci l'indirizzo e-mail che desideri utilizzare, quindi segui le istruzioni per ricevere l'invito a {{site.data.keyword.Bluemix_notm}} e crea un account.
 
 Per collegare gli account, devi essere un utente master dell'account SoftLayer.
 
-Una volta collegati gli account, nell'intestazione generale di SoftLayer viene visualizzato il link **Vai a {{site.data.keyword.Bluemix_notm}}**. Facendo clic su questo link, arrivi alla pagina di accesso {{site.data.keyword.Bluemix_notm}}. Inoltre, **SoftLayer** è ora disponibile nell'intestazione di {{site.data.keyword.Bluemix_notm}}. Facendo clic sul collegamento, accedi attraverso una nuova finestra alla home page di {{site.data.keyword.slportal}}.
-
+Dopo aver collegato gli account, nell'intestazione generale di SoftLayer viene visualizzato il link **Vai a {{site.data.keyword.Bluemix_notm}}**. Facendo clic su questo link, arrivi alla pagina di accesso {{site.data.keyword.Bluemix_notm}}. Inoltre, il link **SoftLayer** è ora disponibile nell'intestazione di {{site.data.keyword.Bluemix_notm}}. Facendo clic sul collegamento, accedi attraverso una nuova finestra alla home page di {{site.data.keyword.slportal}}.
 
 ## Crediti per l'utilizzo di {{site.data.keyword.Bluemix_notm}} con gli account collegati
 {: #slcredit}
 
-Quando colleghi gli account di fatturazione {{site.data.keyword.Bluemix_notm}} e SoftLayer, ricevi un credito di 200 dollari per l'utilizzo di {{site.data.keyword.Bluemix_notm}}. Il credito deve essere utilizzato entro 30 giorni dal collegamento degli account.
+Quando colleghi il tuo account {{site.data.keyword.Bluemix_notm}} all'account SoftLayer, ricevi un credito di 200 dollari che puoi utilizzare solo all'interno di {{site.data.keyword.Bluemix_notm}}. Il credito deve essere utilizzato entro 30 giorni dal collegamento degli account.
 
 Per informazioni su come visualizzare i crediti e la data di scadenza, vedi [Visualizzazione dei crediti](https://console.ng.bluemix.net/docs/pricing/index.html#credits).
 
@@ -62,16 +81,41 @@ Dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} puoi scegliere di inv
 
 Per invitare membri del team a unirsi all'account {{site.data.keyword.Bluemix_notm}}, devi essere un utente master dell'account SoftLayer.
 
-Per invitare membri del team tramite {{site.data.keyword.Bluemix_notm}}:
- 1. Vai all'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) > **Account** > **Invita membri del team**.
- 2. Fai clic su **Aggiungi** per eseguire l'autenticazione nel tuo account SoftLayer e visualizzare un elenco di membri del team dal tuo account SoftLayer.
- 3. Seleziona i membri del team da invitare e fai clic su **Invia**.
+Per invitare membri del team tramite {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
 
-Puoi effettuare questa operazione più volte fino ad aggiungere più membri del team al tuo account SoftLayer.
+ 1. Fai clic su **Account** &gt; **Invita membri del team**.
+ 2. Fai clic su **Aggiungi** per eseguire l'autenticazione nel tuo account SoftLayer e visualizzare un elenco di membri del team dal tuo account {{site.data.keyword.BluSoftlayer}}.
+ 3. Seleziona i membri del team da invitare e fai clic su **Invia**.
  
-Il membro del team riceve un'e-mail che include un link **Unisciti all'organizzazione**. Se il membro non dispone di un ID IBM, viene reindirizzato a una pagina di registrazione. Successivamente, il membro del team può immettere alcune informazioni di base e creare il proprio account {{site.data.keyword.Bluemix_notm}}.
+Il membro del team riceve un'e-mail che include un link **Unisciti all'organizzazione**. Se il membro del team non dispone di un ID IBM, viene reindirizzato a una pagina di registrazione. Successivamente, il membro del team può immettere alcune informazioni di base e creare il proprio account {{site.data.keyword.Bluemix_notm}}.
 
 Per ulteriori informazioni su come invitare i membri del team attraverso l'interfaccia utente {{site.data.keyword.Bluemix_notm}}, vedi [Come invitare membri del team](https://console.ng.bluemix.net/docs/admin/users_roles.html#inviteteammembers).
+
+## Passaggio all'ID IBM
+{: #ibmid_switch}
+
+L'autenticazione in SoftLayer adesso utilizza l'ID IBM per fornire un singolo accesso in {{site.data.keyword.Bluemix_notm}}. Se disponi di un account SoftLayer esistente, puoi passare a un ID IBM. Una procedura guidata di migrazione ti guiderà in questo passaggio.
+{:shortdesc}
+
+Dopo aver iniziato il passaggio all'ID IBM, finché non si completa il processo, è possibile annullarlo. Tuttavia, ti verrà richiesto di passare all'ID IBM la prossima volta che effettuerai l'accesso.
+
+Per iniziare il passaggio dal tuo nome utente SoftLayer esistente a un ID IBM, completa la seguente procedura:
+
+ 1. In {{site.data.keyword.slportal}}, vai alla pagina Modifica profilo utente e fai clic su **Passa a ID IBM**.
+ 2. Segui le istruzioni della procedura guidata di migrazione per creare il tuo ID IBM. Dopo aver creato il tuo ID IBM, non puoi modificare l'ID, che corrisponde a un indirizzo e-mail. Puoi aggiornare l'e-mail associata al tuo profilo, ma per impostazione predefinita il valore è impostato su quello che hai definito per l'ID IBM. Dopo aver completato la procedura guidata, ti viene inviata un'e-mail.
+ 3. Quando ricevi l'e-mail, segui il link o copia l'URL in un browser e immetti il codice di registrazione. Il codice è valido per 7 giorni ed è un codice monouso.  Una volta utilizzato, non è possibile riutilizzarlo.
+ Dopo aver impostato il collegamento tra l'ID IBM e l'utente SoftLayer, puoi accedere al tuo account solo con l'ID IBM. Nella finestra di dialogo di accesso, devi utilizzare il pulsante **Accedi con ID IBM** invece di immettere nome utente e password SoftLayer.
+ 
+Se sei un nuovo cliente, quando controlli il tuo ordine ti verrà chiesto un indirizzo e-mail per il tuo account ID IBM esistente o di creare un nuovo account. 
+
+### Associazione di più account SoftLayer a un ID IBM
+{: #map_multiple_accounts}
+
+Puoi associare un ID IBM a più account SoftLayer utilizzando un'e-mail ID IBM esistente durante l'impostazione dell'account. È possibile associare un solo utente SoftLayer per ogni account al singolo ID IBM. L'ID IBM deve essere univoco all'interno di ogni account SoftLayer. Tuttavia, un utente con accesso a più account SoftLayer può utilizzare un ID IBM per accedere a diversi account SoftLayer.
+
+Ad esempio, un ID IBM può essere associato all'utente master negli account A e B e a un ulteriore utente negli account C e D. Uno degli account associato a tale ID IBM è l'account predefinito. Di solito, l'account predefinito è quello che è stato associato per primo all'ID IBM. Tuttavia, puoi cambiare l'account predefinito utilizzando una funzione di passaggio tra account nel portale clienti.
+
+Per un utente che dispone dell'accesso ID IBM a più account e per cui è abilitata l'autenticazione a due fattori, è richiesto un codice di verifica appropriato per tale autenticazione durante l'accesso e il passaggio tra gli account.
 
 ## Utilizzo di servizi {{site.data.keyword.Bluemix_notm}} con risorse SoftLayer
 {: #bluemix_services}
@@ -88,7 +132,7 @@ Ad esempio, hai mai desiderato di aggiungere da SoftLayer capacità cognitive Wa
 
 Puoi ottenere una conoscenza di *Insights and Cognitive* richiamando le API Watson dalle tue applicazioni in SoftLayer per personalizzarle maggiormente. In alternativa, utilizza i servizi *Data and Analytics* per accedere a un'analisi ad alte prestazioni per le tue applicazioni. In alternativa, selezionare un database-as-a-service in cui tu possa lasciare la gestione a {{site.data.keyword.Bluemix_notm}}.
 
-Rinnova lo sviluppo delle tue applicazioni attraverso contenitori con servizi quali {{site.data.keyword.activedeployshort}} e {{site.data.keyword.deliverypipeline}}. Puoi quindi utilizzare il servizio {{site.data.keyword.vpn_short}} per ricollegarti a SoftLayer per connettere il tuo contenitore appartenente a una rete privata alla rete privata SoftLayer. Tutte gli addebiti di utilizzo dei servizi e delle risorse di calcolo sono riportati nella fattura SoftLayer. 
+Rinnova lo sviluppo delle tue applicazioni attraverso contenitori con servizi quali {{site.data.keyword.activedeployshort}} e {{site.data.keyword.deliverypipeline}}. Puoi quindi utilizzare il servizio {{site.data.keyword.vpn_short}} per ricollegarti a SoftLayer per connettere il tuo contenitore appartenente a una rete privata alla rete privata SoftLayer. Tutti gli addebiti di utilizzo dei servizi e delle risorse di calcolo sono riportati nella fattura {{site.data.keyword.Bluemix_notm}}. 
 
 ### Servizi {{site.data.keyword.Bluemix_notm}} basati sull'API
 Non tutti i servizi {{site.data.keyword.Bluemix_notm}} possono essere utilizzati con SoftLayer. I seguenti servizi possono essere impostati in modo da essere eseguiti con il codice della tua applicazione:
@@ -134,26 +178,25 @@ Non tutti i servizi {{site.data.keyword.Bluemix_notm}} possono essere utilizzati
 
 **Nota:** non tutti i piani di questi servizi sono disponibili. Solo i piani abilitati per gli account Pagamento a consumo possono essere utilizzati con gli account collegati. Tuttavia, se disponi di un account {{site.data.keyword.Bluemix_notm}} distinto, fatturato separatamente, puoi utilizzare qualsiasi piano di uno qualsiasi di questi servizi.
 
-
 ## Fatturazione per l'utilizzo di {{site.data.keyword.Bluemix_notm}} con gli account collegati
 {: #bill_usage}
 
-Una volta collegati i tuoi account di fatturazione {{site.data.keyword.Bluemix_notm}} e SoftLayer, il successivo ciclo di fatturazione verrà addebitato in un'unica fattura SoftLayer.
+Una volta collegati i tuoi account di fatturazione {{site.data.keyword.Bluemix_notm}} e SoftLayer, il successivo ciclo di fatturazione verrà addebitato in un'unica fattura {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
 Il tuo ciclo di utilizzo di {{site.data.keyword.Bluemix_notm}} si basa sul mese di calendario, perciò l'addebito per il tuo account viene effettuato con cadenza mensile il giorno di fatturazione stabilito nel tuo accordo di addebito. Con SoftLayer, il ciclo di utilizzo inizia nel momento in cui viene avviato e viene pertanto addebitato con cadenza mensile lo stesso giorno del mese in cui hai sottoscritto l'account SoftLayer. 
 
-Quando gli account sono collegati, l'utilizzo di {{site.data.keyword.Bluemix_notm}} continua a essere misurato per il ciclo del mese corrente e viene fatturato con una fattura {{site.data.keyword.Bluemix_notm}}. Dal primo giorno del mese successivo, gli addebiti {{site.data.keyword.Bluemix_notm}} passeranno sulla tua fattura SoftLayer.
+Quando gli account sono collegati, l'utilizzo di {{site.data.keyword.Bluemix_notm}} continua a essere misurato per il ciclo del mese corrente e viene fatturato con una fattura {{site.data.keyword.Bluemix_notm}}. Dal primo giorno del mese successivo, gli addebiti {{site.data.keyword.Bluemix_notm}} e SoftLayer verranno combinati nella tua fattura {{site.data.keyword.Bluemix_notm}}.
 
-Ad esempio, se hai collegato gli account il 16 aprile, riceverai una fattura Bluemix per l'utilizzo di aprile. L'utilizzo di maggio verrà invece fatturato attraverso il tuo account SoftLayer.
+Ad esempio, se hai collegato gli account il 16 aprile, riceverai una fattura Bluemix per l'utilizzo di aprile. A seconda di quando hai collegato i tuoi account, potresti ricevere una fattura separata per l'utilizzo di SoftLayer. L'utilizzo di maggio per SoftLayer e {{site.data.keyword.Bluemix_notm}} verrà fatturato tramite l'account {{site.data.keyword.Bluemix_notm}}.
 
 ![Collegamento del riepilogo degli account Bluemix e SoftLayer](images/BluemixSoftLayerBill.svg)
 
-Una volta combinate le fatture, la tua fattura SoftLayer riporterà una sezione **{{site.data.keyword.Bluemix_notm}}** all'interno della fattura riepilogativa. Nella vista di fatturazione dettagliata, gli addebiti {{site.data.keyword.Bluemix_notm}} vengono indicati come altri servizi e iniziano con *"{{site.data.keyword.Bluemix_notm}} Piano..."*.
+Una volta collegate le fatture, la tua fattura {{site.data.keyword.Bluemix_notm}} elencherà i diversi addebiti per ogni risorsa utilizzata nelle seguenti intestazioni:
+
+* **Server Bare Metal e servizi collegati**
+* **Server virtuali e servizi collegati**
+* **Servizi non collegati**
 
 Per informazioni sulla visualizzazione dell'utilizzo di {{site.data.keyword.Bluemix_notm}}, vedi [Visualizzazione dei dettagli di utilizzo](https://console.ng.bluemix.net/docs/pricing/index.html#usage).
 
-
-# rellinks
-## generale
-* [Video: Link SoftLayer and Bluemix Accounts For a Single Invoice](https://www.youtube.com/watch?v=Xb01idt2NiU&index=1&list=PLzpeuWUENMK2d3L5qCITo2GQEt-7r0oqm)

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-21"
 
 ---
 
@@ -13,10 +14,11 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 和 {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
-上次更新时间：2016 年 8 月 30 日
+上次更新时间：2016 年 10 月 21 日
 {: .last-updated}
 
 {{site.data.keyword.iot_full}} 是 {{site.data.keyword.Bluemix}} 中提供的服务。您可以通过使用 {{site.data.keyword.Bluemix_notm}} 仪表板访问 {{site.data.keyword.iot_short_notm}} 组织仪表板。作为 {{site.data.keyword.Bluemix_notm}} 服务，{{site.data.keyword.iot_short_notm}} 可与 {{site.data.keyword.Bluemix_notm}} 上托管的其他服务集成。可以在[外部服务集成](/extensions/index.html)中找到特定第三方服务集成的详细信息
+{:shortdesc}
 
 ## {{site.data.keyword.iot_short_notm}} 如何用于 {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-work}
@@ -37,16 +39,14 @@ copyright:
 
 {{site.data.keyword.iot_short_notm}} 提供了两种定价模型：免费和标准。{{site.data.keyword.iot_short_notm}} 免费定价允许最多 20 个注册设备、交换 100 MB 的数据以及最多 10 个绑定应用程序。
 
-{{site.data.keyword.iot_short_notm}} 标准定价允许无限数量的注册设备、免费交换 100 MB 的数据，另外在达到前 100 MB 后所交换的每 MB 数据会产生开销。
+{{site.data.keyword.iot_short_notm}} 定价允许无限数量的注册设备、免费交换 100 MB 的数据，另外在达到前 100 MB 后所交换的每 MB 数据会产生开销。
 
-有关 {{site.data.keyword.iot_short_notm}} 标准定价的更多信息：
+有关 {{site.data.keyword.iot_short_notm}} 定价的更多信息：
 
 1. 在 {{site.data.keyword.Bluemix_notm}} 仪表板上，单击 {{site.data.keyword.iot_short_notm}}。
 2. 从左侧导航菜单中，选择**套餐**。
 
 这将显示定价套餐。
-
-有关 {{site.data.keyword.Bluemix_notm}} 记帐和定价的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 定价详细信息](https://console.stage1.ng.bluemix.net/docs/pricing/index.html)。
 
 # 相关链接
 {: #rellinks}
@@ -56,7 +56,7 @@ copyright:
 {: #general}
 
 * [{{site.data.keyword.Bluemix_notm}} 安全性](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} 平台安全性](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} 平台安全性](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 合规性](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Softlayer 安全性](http://www.softlayer.com/security){:new_window}
-* [Softlayer 合规性](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 安全性](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 合规性](http://www.softlayer.com/compliance){:new_window}

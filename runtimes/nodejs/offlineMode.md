@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,17 +13,15 @@ copyright:
 
 # Offline mode for node.js
 {: #offline_mode}
-Last Updated: 20 July 2016
-{: .last-updated}
 
 When a node.js application is pushed to {{site.data.keyword.Bluemix}} the SDK for Node.js buildpack
 typically downloads artifacts from external resources such as node modules from NPM.  In some
-situations such as with [Bluemix Dedicated](../../dedicated/index.html#dedicated) and
-[Bluemix Local](../../local/index.html#local),  you may want to not rely on,
+situations such as with [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) and
+[Bluemix Local](/docs/local/index.html#local),  you may want to not rely on,
 or have more explicit control over, accessing sites external to Bluemix.  
 
-The following are the external sites that the node.js buldpack can access.  In [Bluemix Dedicated](../../dedicated/index.html#dedicated) and
-[Bluemix Local](../../local/index.html#local) Bluemix environments these sites may need to be *whitelisted*.
+The following are the external sites that the node.js buldpack can access.  In [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) and
+[Bluemix Local](/docs/local/index.html#local) Bluemix environments these sites may need to be *whitelisted*.
 
 * http://nodejs.org/ may be used to ascertain available node engine versions.
 * https://s3pository.heroku.com is used to retrieve node engine versions not included in the buildpack.
@@ -53,13 +52,13 @@ Whenever you make a change to dependencies in the *package.json* file , repeat t
 ## Working with a proxy
 {: #working_with_proxy}
 
-In some environments such as [Bluemix Dedicated](../../dedicated/index.html#dedicated) and
-[Bluemix Local](../../local/index.html#local) a proxy can be configured. See
-[Working with a proxy](../../manageapps/workingWithProxy.html) for more details.
+In some environments such as [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) and
+[Bluemix Local](/docs/local/index.html#local) a proxy can be configured. See
+[Working with a proxy](/docs/manageapps/workingWithProxy.html) for more details.
 
 # rellinks
 {: #rellinks}
 ## general
 {: #general}
-* [Latest Updates to the Node.js Buildpack](../../runtimes/nodejs/updates.html)
+* [Latest Updates to the Node.js Buildpack](/docs/runtimes/nodejs/updates.html)
 * [Node.js](https://nodejs.org)

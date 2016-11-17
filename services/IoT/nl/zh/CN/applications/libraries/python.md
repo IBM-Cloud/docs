@@ -188,7 +188,7 @@ client.subscribeToDeviceEvents(deviceType=myDeviceType, deviceId=myDeviceId, msg
 
 |属性|数据类型|描述|
 |:---|:---|
-|`event.device`|字符串|在组织中所有类型的设备之间唯一标识设备|
+|`event.device`|字符串|在组织内所有类型的设备中作为该设备的唯一标识。|
 |`event.deviceType`|字符串|标识设备类型。通常，deviceType 是一组执行特定任务的设备，例如“weatherballoon”。|
 |`event.deviceId`|字符串|表示设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
 |`event.event`|字符串|通常用于对特定事件分组，例如“status”、“warning”和“data”。
@@ -780,7 +780,7 @@ apiCli.clearAllDiagnosticLogs(deviceTypeId, deviceId)
 |变量|要求|描述|
 |:---|:---|:---|
 |`message`|必需|包含要添加的诊断消息|
-|`严重性 (severity)`|可选|对应于诊断日志的严重性，可以设置为 0、1 或 2，分别对应于参考、警告和错误类别|
+|`severity`|可选|对应于诊断日志的严重性，可以设置为 0、1 或 2，分别对应于参考、警告和错误类别|
 |`data`|可选|包含诊断数据|
 |`timestamp`|可选|包含 ISO8601 格式的日志条目日期和时间，但如果未指定，那么将使用当前日期和时间|
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-15"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # API 집계
 {: #api_aggregation}
-
-*마지막 업데이트 날짜: 2016년 6월 15일*
-{: .last-updated}
 
 일부 {{site.data.keyword.weather_short}} API를 집계할 수 있습니다. 집계를 사용하여 둘 이상의 단위 API 호출을 단일 HTTP 요청으로
 결합할 수 있습니다.

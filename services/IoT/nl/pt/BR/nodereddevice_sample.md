@@ -28,7 +28,7 @@ Para criar e conectar o simulador de dispositivo Node-RED:
     1. Efetue login no {{site.data.keyword.Bluemix_notm}} em: https://console.ng.bluemix.net
     2. Selecione a guia **Catálogo**.
     3. Localize a seção Modelos do catálogo de serviços e clique em **Comunidade Node-RED Starter BETA**. **Dica:** clique [aqui](https://console.ng.bluemix.net/catalog/starters/node-red-starter/) para ir diretamente para a página do Node-RED Starter.
-    4. Na página do Node-RED Starter, selecione o espaço no qual deseja implementar o Node-RED, verifique as seleções de Criar um aplicativo e clique em **Criar** para incluir o Node-RED em sua organização do Bluemix.
+    4. Na página do Node-RED Starter, selecione o espaço no qual deseja implementar o Node-RED, verifique as seleções de Criar um aplicativo e clique em **Criar** para incluir o Node-RED em sua organização do Bluemix.  
     Por
 exemplo:  
      - Espaço: dev
@@ -38,7 +38,7 @@ exemplo:
     Deixe o resto das opções em seus valores padrão. Após o aplicativo ser implementado, você será levado à página Iniciar codificação com o Node-RED.  
     **Nota:** o processo de preparação pode levar alguns minutos.
 
-    3. Clique no link Rotas para abrir o Node-RED.
+    3. Clique no link Rotas para abrir o Node-RED.  
     Exemplo: `http://simulatedDevice.mybluemix.net`
     4. Clique em **Acessar o seu editor de fluxo do Node-RED** para abrir o editor.
     5. Copie os dados de fluxo do Node-RED localizados na seção [Dados de fluxo do nó do Node-RED](#flow_data) deste documento.
@@ -94,13 +94,13 @@ Siga estas etapas para conectar o dispositivo de amostra do Node-RED:
  9. Atualize o campo Senha com o *Token de autenticação* anteriormente salvo.
  10. Clique em **Atualizar** e, em seguida, em **OK**.
  12. No canto superior direito do editor de fluxo do Node-RED, clique em **Implementar**.
- 13. Verifique se o status de conexão do nó Publicar em IoT exibe *conectado*. **Dica:** se a conexão não for feita, verifique novamente as configurações inseridas. Até mesmo um pequeno erro de recortar e colar causará falha na conexão.
+ 13. Verifique se o status de conexão do nó Publicar em IoT exibe *conectado*.  **Dica:** se a conexão não for feita, verifique novamente as configurações inseridas. Até mesmo um pequeno erro de recortar e colar causará falha na conexão.
 
 4. Valide a conexão de dispositivo
  1. Em outra guia do navegador ou janela, abra o painel {{site.data.keyword.iot_short_notm}}.
- 2. Selecione **Dispositivos** e clique em **Device001** ou no nome do dispositivo incluído, se for diferente.
+ 2. Selecione **Dispositivos** e clique em **Device001** ou no nome do dispositivo incluído, se for diferente.  
  A página de informações sobre o dispositivo é aberta. Esta visualização permite ver o status da conexão para o seu dispositivo. O dispositivo deve aparecer como desconectado neste estágio.   
- 3. De volta ao editor de fluxo do Node-RED, clique no botão no nó Injetar para gerar uma carga útil do ativo.
+ 3. De volta ao editor de fluxo do Node-RED, clique no botão no nó Injetar para gerar uma carga útil do ativo.  
  A carga útil contém os pontos de dados a seguir:  
  ```
  {"d":

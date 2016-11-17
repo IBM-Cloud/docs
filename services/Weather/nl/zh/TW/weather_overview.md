@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-22"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # 關於 {{site.data.keyword.weather_short}}
 {: #about_weather}
-
-前次更新：2016 年 8 月 22 日
-{: .last-updated}
 
 使用 {{site.data.keyword.weatherfull}}，可以將來自 The Weather Company (TWC) 的天氣資料納入 {{site.data.keyword.Bluemix}} 應用程式中。
 {:shortdesc}

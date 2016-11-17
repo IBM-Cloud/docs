@@ -69,7 +69,7 @@ Des bibliothèques client sont fournies pour chacun des langages de programmatio
 
 ## Initiation au développement {{site.data.keyword.iot_short}}
 
-Pour commencer à développer le code pour {{site.data.keyword.iot_short_notm}} à l'aide des bibliothèques client disponibles, voir les sections suivantes dans la documentation de {{site.data.keyword.Bluemix_notm}} : 
+Pour commencer à développer le code pour {{site.data.keyword.iot_short_notm}} à l'aide des bibliothèques client disponibles, voir les sections suivantes dans la documentation de {{site.data.keyword.Bluemix_notm}} :
 
 - [Développement d'applications](applications/api.html){:new_window}
 - [Développement de terminaux](devices/api.html){:new_window}

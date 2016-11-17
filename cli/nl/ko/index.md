@@ -18,7 +18,7 @@ copyright:
 # CLI 및 개발 도구
 {: #cli}
 
-*마지막 업데이트 날짜: 2016년 8월 31일*
+*마지막 업데이트 날짜: 2016년 10월 25일*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix_short}}를 통해 통합 명령행 인터페이스 및 CLI 플러그인과 같은 강력한 도구를 이용할 수 있습니다. 각각의 CLI를 다운로드하여 {{site.data.keyword.Bluemix_notm}} 인터페이스에 사용 가능합니다.
@@ -29,7 +29,7 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}} 인터페이스를 지원하는 명령행 인터페이스를 다운로드하여 설치하십시오.  
 
-가상 서버 관리에 사용되는 [OpenStack CLI 도구](../virtualmachines/vm_index.html#vm_setup_cli){: new_window}를 제외하면, Cloud Foundry cf 명령행 도구는 기타 모든 {{site.data.keyword.Bluemix_notm}} CLI 도구를 사용하기 위한 전제조건입니다. {{site.data.keyword.Bluemix_notm}} 명령행 도구는 Cloud Foundry 애플리케이션 이외에 {{site.data.keyword.Bluemix_notm}} 환경을 관리하는 확장된 경험을 제공합니다.
+Cloud Foundry cf 명령행 도구는 모든 {{site.data.keyword.Bluemix_notm}} CLI 도구의 전제 조건입니다. {{site.data.keyword.Bluemix_notm}} 명령행 도구는 Cloud Foundry 애플리케이션 이외에 {{site.data.keyword.Bluemix_notm}} 환경을 관리하는 확장된 경험을 제공합니다.
 
 두 CLI 도구는 모두 기본적으로 443 포트를 사용합니다. CLI 도구 및 {{site.data.keyword.Bluemix_notm}} 환경 간에 HTTP 프록시가 있는 경우에는 실제 HTTP 프록시 url 및 포트(있는 경우)로 `http-proxy` 환경 변수를 구성해야 합니다. 추가 세부사항은 [HTTP 프록시 서버에서 CLI 사용](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}을 참조하십시오.
 
@@ -44,17 +44,23 @@ copyright:
 더 많은 명령으로 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 간편하게 확장합니다. {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스 플러그인에 액세스하려면 [ CLI 플러그인 저장소](https://plugins.ng.bluemix.net/)를 참조하십시오.
 
 ### {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스 확장: bx
+{: cli_bluemix_ext}
 
-1. {{site.data.keyword.Bluemix_notm}} 레지스트리에서 {{site.data.keyword.Bluemix_notm}} CLI 플러그인을 설치하려면 플러그인 레지스트리 엔드포인트를 설정하십시오.
+* {{site.data.keyword.Bluemix_notm}} 레지스트리에서 {{site.data.keyword.Bluemix_notm}} CLI 플러그인을 설치하려면 플러그인 레지스트리 엔드포인트를 설정하십시오.
 
-```
-bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
-```
-2. 다음 명령을 실행하여 플러그인을 설치하십시오.
 
 ```
-bluemix plugin install plugin_name -r bluemix-bx-staging
+bluemix plugin repo-add bluemix-bx https://plugins.ng.bluemix.net
 ```
+{: codeblock}
+
+* 그런 다음, 다음 명령을 실행하여 플러그인을 설치하십시오.
+
+```
+bluemix plugin install plugin_name -r bluemix-bx
+```
+{: codeblock}
+
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
 |-----|-----|-----|
@@ -62,17 +68,23 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 
 ### Cloud Foundry 명령행 인터페이스 확장: cf
+{: cli_cf_ext}
 
-1. {{site.data.keyword.Bluemix_notm}} 레지스트리에서 cf CLI 플러그인을 설치하려면 플러그인 레지스트리 엔드포인트를 설정하십시오.
+* {{site.data.keyword.Bluemix_notm}} 레지스트리에서 cf CLI 플러그인을 설치하려면 플러그인 레지스트리 엔드포인트를 설정하십시오.
 
-```
-cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
-```
-2. 다음 명령을 실행하여 플러그인을 설치하십시오.
 
 ```
-cf install-plugin plugin_name -r bluemix-cf-staging
+cf add-plugin-repo bluemix-cf https://plugins.ng.bluemix.net
 ```
+{: codeblock}
+
+* 그런 다음, 다음 명령을 실행하여 플러그인을 설치하십시오.
+
+```
+cf install-plugin plugin_name -r bluemix-cf
+```
+{: codeblock}
+
 
 | *Active Deploy* | *관리 콘솔* | 
 |-----------------|-----------------|
@@ -81,8 +93,6 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
 | 플러그인 이름: ibm-containers<br> [문서 보기](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | 플러그인 이름: VPN <br> [문서 보기](./plugins/vpn/index.html) |
-
-<!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
 ## ![](./images/Integrated_Dev_Tools.svg) 통합 개발 도구

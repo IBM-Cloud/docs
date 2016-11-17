@@ -62,19 +62,19 @@ Las reglas de extremo son puntos de decisión basados en condición que coincide
 Para crear una regla:
 1. En el panel de control de {{site.data.keyword.iot_short}}, vaya a **Reglas**.
 2. Pulse **Crear regla de extremo**, dé un nombre a la regla, proporcione una descripción, seleccione un tipo de dispositivo de extremo al que se aplique la regla y, a continuación, pulse **Siguiente**.  
-3. Configure la lógica de reglas.
-Añada una o varias condiciones IF para utilizar como desencadenadores para la regla.
-Puede añadir condiciones en filas paralelas para aplicarlas como condiciones OR, o puede añadir condiciones en columnas secuenciales para aplicarlas como condiciones AND.
-**Nota:** Para poder seleccionar una propiedad de dispositivo como entrada para una regla, la propiedad debe estar correlacionada con un esquema. Consulte [Creación de esquemas](im_schemas.html) para obtener más información.
-**Importante:** Para desencadenar una condición que desencadene dos o más condiciones de propiedades combinadas secuencialmente utilizando AND, los puntos de datos desencadenantes deben estar incluidos en el mismo mensaje de dispositivos. Si los datos se reciben en más de un mensaje, las condiciones secuenciales no se desencadenan.
+3. Configure la lógica de reglas.  
+Añada una o varias condiciones IF para utilizar como desencadenadores para la regla.  
+Puede añadir condiciones en filas paralelas para aplicarlas como condiciones OR, o puede añadir condiciones en columnas secuenciales para aplicarlas como condiciones AND.  
+**Nota:** Para poder seleccionar una propiedad de dispositivo como entrada para una regla, la propiedad debe estar correlacionada con un esquema. Consulte [Creación de esquemas](im_schemas.html) para obtener más información.   
+**Importante:** Para desencadenar una condición que desencadene dos o más condiciones de propiedades combinadas secuencialmente utilizando AND, los puntos de datos desencadenantes deben estar incluidos en el mismo mensaje de dispositivos. Si los datos se reciben en más de un mensaje, las condiciones secuenciales no se desencadenan.  
 **Ejemplos:**
 Una regla sencilla puede desencadenar una alerta si un valor de parámetro es mayor que un valor especificado:
 `temp>80`
 Una regla más compleja puede desencadenarse cuando se cumple una combinación de umbrales:
 `temp>60 AND capacity>50`   
 
-4. Configure requisitos desencadenantes condicionales para la regla.
-Para controlar el número de alertas y acciones desencadenadas para una regla durante un periodo de tiempo, puede configurar los requisitos desencadenantes condicionales para la regla.
+4. Configure requisitos desencadenantes condicionales para la regla.  
+Para controlar el número de alertas y acciones desencadenadas para una regla durante un periodo de tiempo, puede configurar los requisitos desencadenantes condicionales para la regla.  
 **Importante:** El desencadenante condicional actúa en cualquier condición de la regla. Por ejemplo, si una regla tiene cinco conjuntos de condiciones paralelas distintas utilizando OR, cada condición que sea true cuenta hacia el recuento desencadenante condicional.
 Para establecer el desencadenante condicional para una regla:
  1. En el editor de reglas, pulse el enlace predeterminado **Desencadenar cada vez que se cumplan las condiciones** para abrir el recuadro de diálogo de requisitos de frecuencia establecido.
@@ -84,10 +84,10 @@ Para establecer el desencadenante condicional para una regla:
  <li>Desencadenar si las condiciones se cumplen N veces en la *Unidad de tiempo* M</li>
  </ul>  
  Para obtener una descripción más detallada de los desencadenantes condicionales, consulte [Desencadenamiento de regla condicional](cloud_analytics.html#conditional "Visión general de desencadenante condicional") en la sección de analíticas de nube.
-5. Cree o seleccione una o varias acciones que se producen si se cumplen las condiciones de la regla.
-Para obtener más información sobre las acciones de extremo, consulte [Creación de acciones de extremo](#edge_actions "Crear acciones de extremo").
+5. Cree o seleccione una o varias acciones que se producen si se cumplen las condiciones de la regla.  
+Para obtener más información sobre las acciones de extremo, consulte [Creación de acciones de extremo](#edge_actions "Crear acciones de extremo").   
  Ejemplo: Una acción puede ser enviar datos de dispositivo a la nube o grabar una alerta en un archivo local.
-3. **Opcional:** Seleccionar una prioridad de alerta para la regla.
+3. **Opcional:** Seleccionar una prioridad de alerta para la regla.  
  La prioridad se utiliza para clasificar las alertas que se muestran en el tablero **Herramientas de análisis basadas en reglas**. La prioridad predeterminada es Low.
 6. Cuando esté satisfecho con la regla, pulse **Guardar**.
 
@@ -102,7 +102,8 @@ Puede crear acciones directamente en el editor de reglas o crear las acciones en
 Para crear una acción en el separador Acciones:
 1. En el panel de control de {{site.data.keyword.iot_short}}, vaya a **Reglas**.
 2. En el panel de control Reglas, seleccione el separador **Acciones**.
-2. Pulse **Crear una acción**, dé un nombre y una descripción a la acción y seleccione un tipo de acción y, a continuación, pulse **Siguiente**. Las analíticas de extremo dan soporte a dos tipos de acciones:
+2. Pulse **Crear una acción**, dé un nombre y una descripción a la acción y seleccione un tipo de acción y, a continuación, pulse **Siguiente**.  
+Las analíticas de extremo dan soporte a dos tipos de acciones:
 <dl>
 <dt>Reenviar suceso a la nube</dt>  
 <dd>El suceso de dispositivo se envía a {{site.data.keyword.iot_short}}, donde se puede utilizar en paneles y tarjetas y con reglas de analíticas de nube. Para obtener información, consulte [Integración con analíticas de nube](#integrate_with_cloud_analytics).    
@@ -144,9 +145,9 @@ La acción ahora está disponible en el editor de reglas.
 Para que una regla desencadene acciones, en primer lugar debe activarla en una o más pasarelas. Utilice el panel **Pasarelas de reglas de extremo** para activar, desactivar, actualizar y eliminar una regla de extremo en las pasarelas.
 
 Para activar una regla de extremo:
-1. Desde el panel de instrumentos Reglas, pulse el botón **Gestionar regla** para la regla de extremo que desea gestionar.
+1. Desde el panel de instrumentos Reglas, pulse el botón **Gestionar regla** para la regla de extremo que desea gestionar.  
 En el panel **Pasarelas de reglas de extremo** que se abre, verá una lista de todas las pasarelas habilitadas por EAA conectadas. El estado de la regla para las pasarelas donde la regla no se actualiza ni se activa es *None*.
-2. Localice la pasarela en la que desea activar la regla, y seleccione **Activar** desde el menú en la columna Seleccionar operación.
+2. Localice la pasarela en la que desea activar la regla, y seleccione **Activar** desde el menú en la columna Seleccionar operación.  
 La regla de extremo se carga en la pasarela. Cuando se haya completado la subida y la regla esté activa, el estado de la regla cambia a **Active**.  
 
 La regla está ahora activa en la pasarela, y las acciones configuradas se desencadenarán cuando se cumplan las condiciones de la regla.
@@ -189,7 +190,7 @@ Para ver información sobre el estado de la pasarela:
 Propiedad | Descripción
 --- | ---
 `MsgInCount` |El número de mensajes que se han enviado Edge Analytics Agent (EAA).
-`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | El número estimado de mensajes por segundo que se han enviado al EAA durante el último periodo de tiempo. </br>**Nota:** `MsgInRate` es un alias para `MsgInRate1Min`. `MsgInMeanRate` es el promedio de tasa de mensajes desde el inicio.
+`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | El número estimado de mensajes por segundo que se han enviado al EAA durante el último periodo de tiempo.  </br>**Nota:** `MsgInRate` es un alias para `MsgInRate1Min`. `MsgInMeanRate` es el promedio de tasa de mensajes desde el inicio.
 `LastHeartBeat` | La indicación de fecha y hora en milisegundos cuando se ha generado el último mensaje de latido. Un mensaje de latido se genera cada 10 segundos como mínimo.
 `CurrentTimestamp` | La indicación de fecha y hora en milisegundos cuando se ha generado el mensaje de supervisión actual.
 `IsAlive` | Esta propiedad es 0 si la diferencia entre `LastHeartBeat` y `CurrentTimestamp` es mayor que 20 segundos.

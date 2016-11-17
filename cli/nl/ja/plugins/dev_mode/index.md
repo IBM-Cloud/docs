@@ -210,7 +210,6 @@ cf restart-inplace <appName>
 ## 関連リンク
 {: #general}
 * [開発モード CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
 * [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

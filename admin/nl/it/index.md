@@ -3,9 +3,7 @@
 
 
 copyright:
-
-  anni: 2015, 2016
-
+  years: 2015, 2016
 
 
 ---
@@ -14,16 +12,20 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:pre: .pre}
+{:table: .aria-labeledby="caption"}
 
 # Gestione di {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato
 {: #mng}
-Ultimo aggiornamento: 20 settembre 2016
+
+*Ultimo aggiornamento: 20 ottobre 2016*
 {: .last-updated}
 
 Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix}} locale o {{site.data.keyword.Bluemix_notm}} dedicato, vai alla pagina **Amministrazione** per gestire risorse, monitorare l'utilizzo delle quote, amministrare le autorizzazioni utente, pianificare le notifiche di aggiornamento, visualizzare log e report di sicurezza e altro. Puoi gestire le tue organizzazioni creando degli spazi e impostando dei [ruoli e delle autorizzazioni per gli utenti](index.html#oc_useradmin); vedi [Gestione delle tue organizzazioni](../admin/orgs_spaces.html).
 {:shortdesc}
 
 *Tabella 1. Attività amministrative per la gestione della tua istanza di {{site.data.keyword.Bluemix_notm}} locale o dedicato*
+{: #caption}
 
 | Quali operazioni posso eseguire? | Dettagli |    
 |----------------|---------|
@@ -34,11 +36,12 @@ Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix}} lo
 |Gestire le autorizzazioni degli utenti amministrativi | Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE UTENTI** per aggiungere e rimuovere utenti e modifica le autorizzazioni utente. Vedi [Gestione di utenti e autorizzazioni](index.html#oc_useradmin). |
 |Esaminare report e log | Fai clic su **AMMINISTRAZIONE &gt; REPORT E LOG** per visualizzare i report di sicurezza e i log di controllo relativi alla tua istanza. Vedi [Visualizzazione dei report](index.html#oc_report). |
 |Visualizzare le informazioni sul sistema. | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** per visualizzare le informazioni di sistema, quali aggiornamenti di manutenzione in sospeso, nome e versione della tua istanza, regione, URL API, URL CLI, dettagli di configurazione LDAP, associazioni di gruppi e utenti, statistiche e domini condivisi. Vedi [Visualizzazione delle informazioni sul sistema](index.html#oc_system). |
-|Estendere le notifiche e impostare le sottoscrizioni evento | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso**. Puoi utilizzare webhook da integrare con un servizio Web a scelta per impostare una sottoscrizione di notifica evento per un aggiornamento o incidente. Vedi [Notifiche e sottoscrizioni di eventi](index.html#oc_eventsubscription). |
+|Estendere le notifiche e impostare le sottoscrizioni notifica | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso**. Puoi utilizzare webhook da integrare con un servizio Web a scelta per impostare una sottoscrizione di notifica evento per un aggiornamento o incidente. Vedi [Notifiche e sottoscrizioni di notifica](index.html#oc_eventsubscription). |
+
+**Suggerimento**: il dashboard Infrastruttura nella console {{site.data.keyword.Bluemix_notm}} è disponibile solo per gli account collegati negli ambienti di {{site.data.keyword.Bluemix_notm}} pubblico.
 
 
-
-## Notifiche e sottoscrizioni di eventi
+## Notifiche e sottoscrizioni di notifica
 {: #oc_eventsubscription}
 
 Puoi sempre conoscere lo stato del tuo ambiente consultando la pagina Stato. Non appena si verificano, gli incidenti e gli eventi di aggiornamento della manutenzione pianificata con interruzioni del servizio vengono segnalati nella pagina Stato. {{site.data.keyword.Bluemix_notm}} invia inoltre alla pagina Amministrazione dell'area Notifiche le eventuali notifiche riguardanti eventi quali aggiornamenti di manutenzione pianificati o in sospeso.
@@ -48,41 +51,46 @@ Puoi sempre conoscere lo stato del tuo ambiente consultando la pagina Stato. Non
 Puoi visualizzare le notifiche riguardanti il tuo ambiente locale o dedicato, al fine di monitorare lo stato del tuo ambiente. Consulta la seguente tabella per informazioni sui diversi tipi di notifiche e sui rispettivi punti di pubblicazione.
 
 *Tabella 2. Tipi di evento e metodi di notifica*
+{: #caption}
 
 | **Tipo di evento** | **Metodo di notifica** |       
 |-----------------|-------------------|
 | Aggiornamenti di manutenzione | L'avviso dei prossimi aggiornamenti di manutenzione viene effettuato nella pagina Amministrazione dell'area Notifiche. Vai alla pagina **Amministrazione**, quindi seleziona l'icona **Notifiche** ![Notifiche](images/icon_announcement.svg). Per visualizzare uno storico e un elenco completo delle tue notifiche complete e in sospeso, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** &gt; *Numero* **in sospeso**.|
 |  | Ricevi anche un avviso degli eventi di aggiornamento della manutenzione pianificata con interruzioni del servizio nella pagina Stato. Fai clic sull'icona **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) e seleziona **Stato**.|
 |  | Puoi estendere la funzionalità di notifica impostando una sottoscrizione che invia un'email a destinatari di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.|
-| Incidenti critici | Vieni avvisato degli incidenti critici sulla pagina Stato. Fai clic sull'icona **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) e seleziona **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione evento che invia un'email a un destinatario di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.  |  
+| Incidenti critici | Vieni avvisato degli incidenti critici sulla pagina Stato. Fai clic sull'icona **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) e seleziona **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione di notifica che invia un'email a un destinatario di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.  |  
+| Eventi di soglia | Puoi impostare una sottoscrizione di notifica che invia un'email a un destinatario di tua scelta quando nel tuo ambiente vengono raggiunte le soglie di risorse per disco fisico, memoria fisica, disco riservato o memoria riservata. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche con un servizio Web di tua scelta.  |  
 | Stato di {{site.data.keyword.Bluemix_notm}} | In qualsiasi momento puoi visualizzare l'ultimo stato della piattaforma, dei servizi e della tua istanza {{site.data.keyword.Bluemix_notm}} nella pagina Stato. Fai clic sull'icona **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) e seleziona **Stato**.  |
 
-### Impostazione di sottoscrizioni evento
+### Impostazione di sottoscrizioni di notifica
+{: #seteventsub}
 
-Puoi estendere la funzionalità delle notifiche inviate alla pagina Amministrazione e alla pagina Stato, utilizzando le sottoscrizioni evento. Utilizza le sottoscrizioni evento per configurare un'e-mail personalizzata o utilizzare dei webhook da integrare con uno strumento a scelta.  
- * Se selezioni l'opzione e-mail, le tue notifiche vengono inviate agli indirizzi e-mail specificati. Puoi selezionare le notifiche di incidenti o di aggiornamenti di manutenzione. Viene inviata una notifica e-mail iniziale. Successivamente, ogni volta che l'incidente o l'aggiornamento di manutenzione presenta delle modifiche, viene inviata un'altra notifica con la modifica apportata.  
- * Se selezioni l'opzione webhook, le tue notifiche vengono indirizzate direttamente a una destinazione a scelta, ad esempio un numero di telefono (tramite messaggio SMS). Puoi personalizzare il tipo di notifica, in particolare aggiornamenti di manutenzione o avvisi di incidente critico, e le informazioni incluse nel corpo della notifica.
+Puoi estendere la funzionalità delle notifiche inviate alla pagina Amministrazione e alla pagina Stato, utilizzando le sottoscrizioni di notifica. Utilizza le sottoscrizioni di notifica per configurare un'e-mail personalizzata o utilizzare dei webhook da integrare con uno strumento a scelta. 
+ * Se selezioni l'opzione e-mail, le notifiche vengono inviate agli indirizzi e-mail da te specificati. Puoi selezionare le notifiche di incidenti, aggiornamenti di manutenzione o soglie. Viene inviata una notifica e-mail iniziale. Successivamente, ogni volta che l'evento subisce delle modifiche, viene inviata un'altra notifica con la modifica apportata.  
+ * Se selezioni l'opzione webhook, le tue notifiche vengono indirizzate direttamente a una destinazione a scelta, ad esempio un numero di telefono (tramite messaggio SMS). Puoi personalizzare il tipo di notifica, in particolare gli aggiornamenti di manutenzione, gli avvisi di incidenti critici e le soglie. Puoi scegliere se ricevere nuove notifiche oppure notifiche sulle modifiche apportate alle sottoscrizioni e puoi indicare quali informazioni includere nel corpo di ogni notifica.
 
-**Nota**: solo gli utenti con autorizzazione Superuser (`ops.admin`) possono impostare le sottoscrizioni evento.
+**Nota**: solo gli utenti con autorizzazione Superuser (`ops.admin`) possono impostare le sottoscrizioni di notifica.
 
-Puoi accedere alla pagina **Sottoscrizioni evento** in uno dei seguenti modi:
+Per creare una sottoscrizione webhook o e-mail dalla pagina **Sottoscrizioni di notifica**, completa la seguente procedura:
 
-* Per le notifiche di aggiornamento di manutenzione, vai a **INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso &gt; Sottoscrizioni**.
-* Per le notifiche di incidente, fai clic sull'icona **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) &gt; **Stato**, quindi fai clic sull'icona **Sottoscrivi** ![Sottoscrivi](images/icon_subscribe.svg).
+1. Passa alla pagina **Sottoscrizioni di notifica**.  Vai a **INFORMAZIONI DI SISTEMA&gt; Ambiente &gt; Sottoscrizioni**.
+2. Fai clic su **Aggiungi sottoscrizione**.
+3. Completa il modulo di sottoscrizione di notifica.
 
-**Nota**: puoi accedere alla pagina di sottoscrizione evento per entrambi i tipi di notifica, utilizzando uno qualsiasi dei due metodi descritti.
+  * Per creare sottoscrizioni di notifica e-mail per gli aggiornamenti di manutenzione o gli incidenti, vedi le informazioni nella [Tabella 3](index.html#emailnotmaintinc).
+  * Per creare sottoscrizioni di notifica e-mail per le soglie, vedi le informazioni nella [Tabella 4](index.html#emailnottrhesh).
+  * Per creare sottoscrizioni di notifica webhook per gli aggiornamenti di manutenzione o gli incidenti, vedi le informazioni nella [Tabella 5](index.html#webhooknotsub).
+  * Per creare sottoscrizioni di notifica webhook per le soglie, vedi le informazioni nella [Tabella 6](index.html#webhooknotthresh).
 
-Per creare una sottoscrizione webhook o e-mail dalla pagina **Sottoscrizioni evento**, completa la seguente procedura:
+4. Una volta completato il modulo, puoi scegliere tra le seguenti opzioni:
 
-1. Fai clic su **Aggiungi sottoscrizione**.
-2. Compila il modulo di sottoscrizione evento. Per informazioni sui campi del modulo e sui valori da utilizzare nella sezione del payload e nel corpo del messaggio del template e-mail, consulta le seguenti tabelle.
-3. Una volta completato il modulo, puoi scegliere tra le seguenti opzioni:
-
-  * Fare clic su **Salva** per salvare la sottoscrizione al tuo elenco di sottoscrizioni evento.
+  * Fai clic su **Salva** per salvare la sottoscrizione nel tuo elenco di sottoscrizioni di notifica.
   * Fare clic su **Salva e verifica** per salvare e verificare la notifica.
-  * Fare clic su **Salva e chiudi** per salvare la sottoscrizione al tuo elenco di sottoscrizioni evento e tornare alla pagina precedente.
+  * Fai clic su **Salva e chiudi** per salvare la sottoscrizione nel tuo elenco di sottoscrizioni di notifica e tornare alla pagina precedente.
 
-*Tabella 3. Campi del modulo di sottoscrizione evento per una sottoscrizione e-mail*
+*Tabella 3. Campi per sottoscrizioni di notifica e-mail per gli aggiornamenti di manutenzione o gli incidenti*
+{: #caption}
+{: #emailnotmaintinc}
 
 | **Campo** | **Descrizione** |
 |-----------------|-------------------|
@@ -91,49 +99,112 @@ Per creare una sottoscrizione webhook o e-mail dalla pagina **Sottoscrizioni eve
 | Evento | Seleziona l'opzione per sottoscrivere le notifiche di un evento di **Manutenzione** o **Incidente**. |
 | Combina notifiche | Seleziona l'opzione per combinare le notifiche di incidente di tutte le regioni in una singola notifica. Questa opzione è disponibile solo per gli incidenti. |
 | Oggetto | Compila la riga oggetto dell'e-mail. Questo campo è obbligatorio.  |
-| Corpo | Immetti il testo del corpo del messaggio da inviare nell'e-mail. Puoi utilizzare i valori payload IBM per inserire nella notifica e-mail informazioni pertinenti. Vedi la tabella [Valori della sezione di payload](index.html#payload) per identificare i valori utilizzabili. Utilizza tag HTML di base per strutturare l'e-mail. Questo campo è obbligatorio. |
+| Corpo | Immetti il testo del corpo del messaggio da inviare nell'e-mail. Puoi utilizzare i valori payload IBM per inserire nella notifica e-mail informazioni pertinenti. Vedi la tabella [Valori della sezione di payload di manutenzione e incidenti](index.html#payload) per identificare i valori utilizzabili. Utilizza tag HTML di base per strutturare l'e-mail. Questo campo è obbligatorio. |
 | A: | Immetti uno o più indirizzi e-mail tramite elenco separato da virgole per indicare i destinatari della notifica e-mail. Espandi le opzioni "cc" o "bcc" per inviare copia dell'e-mail ad altri destinatari. Questo campo è obbligatorio. |
 | Descrizione | Aggiungi una descrizione univoca della sottoscrizione e stai creando. |
 
+*Tabella 4. Campi per sottoscrizioni di notifica e-mail per le soglie*
+{: #caption}
+{: #emailnottrhesh}
 
-*Tabella 4. Campi del modulo di sottoscrizione evento per una sottoscrizione webhook*
+| **Campo** | **Descrizione** |
+|-----------------|-------------------|
+| Abilitato | Seleziona questa opzione per abilitare le notifiche e-mail. Deselezionare l'opzione per disabilitare la notifica e-mail. Le sottoscrizioni sono abilitate per impostazione predefinita. |
+| Tipo | Seleziona **E-mail**. |
+| Evento | Seleziona **Soglia**. |
+| Soglia | Seleziona il tipo di soglia per cui ricevere una notifica: Disco fisico, Memoria fisica, Disco riservato o Memoria riservata. |
+| Direzione soglia | Seleziona la direzione in cui spostare i dati, in ordine crescente o decrescente, quando si supera il valore Notifica quando incrociato che hai impostato. Ad esempio, se il valore di Notifica quando incrociato è 50%,  e la direzione è decrescente, riceverai una notifica solo se la percentuale di utilizzo va da più di 50%  a meno di 50%.  Se imposti la direzione su Crescente, riceverai una notifica quando la percentuale di utilizzo va da meno di 50% a più di 50%.   |
+| Notifica quando incrociato superiore a (%) | Immetti la percentuale di soglia per cui ricevere una notifica. Se nel campo Direzione soglia hai scelto la proprietà Crescente, la notifica e-mail viene inviata quando la soglia supera questa percentuale. |
+| Notifica quando incrociato inferiore a (%) | Immetti la percentuale di soglia per cui ricevere una notifica. Se nel campo Direzione soglia hai scelto la proprietà Decrescente, la notifica e-mail viene inviata quando la soglia scende sotto questa percentuale. |
+| Descrizione | Aggiungi una descrizione univoca della sottoscrizione e stai creando. |
+| Oggetto | Compila la riga oggetto dell'e-mail. Questo campo è obbligatorio.  |
+| Corpo del messaggio | Immetti il testo del corpo del messaggio da inviare nell'e-mail. Puoi utilizzare i valori payload IBM per inserire nella notifica e-mail informazioni pertinenti. Vedi la tabella [Valori della sezione di payload di soglia](index.html#threshpayload) per identificare i valori utilizzabili. Utilizza tag HTML di base per strutturare l'e-mail. Questo campo è obbligatorio. |
+| A: | Immetti uno o più indirizzi e-mail tramite elenco separato da virgole per indicare i destinatari della notifica e-mail. Espandi le opzioni "cc" o "bcc" per inviare copia dell'e-mail ad altri destinatari. Questo campo è obbligatorio. |
+
+I dati della soglia vengono raccolti una volta ogni 6 ore. Una notifica viene inviata solo una volta quando il valore supera il valore soglia impostato. Non viene inviata una nuova notifica a meno che il valore non vada al di sotto della soglia (se hai scelto la proprietà crescente) e quindi la risuperi nuovamente. Allo stesso modo, se hai scelto la proprietà decrescente, ricevi una nuova una notifica se il valore supera la soglia impostata e quindi scende di nuovo sotto la soglia. 
+
+Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della soglia, dopo aver completato i campi nel modulo, puoi fare clic su **Salva e verifica** per salvare e verificare la notifica con i dati di esempio.
+
+*Tabella 5. Campi del modulo per una sottoscrizione di notifica webhook su manutenzione o incidenti*
+{: #caption}
+{: #webhooknotsub}
 
 | **Campo** | **Descrizione** |
 |-----------------|-------------------|
 | Abilitato | Seleziona l'opzione per abilitare la notifica. Deselezionare l'opzione per disabilitare la notifica. Le sottoscrizioni sono abilitate per impostazione predefinita. |
 | Tipo | Seleziona **Webhook** |
-| Metodo | Seleziona **GET** o **POST**. |
 | Evento | Seleziona l'opzione per sottoscrivere le notifiche di un evento di **Manutenzione** o **Incidente**. |
-| Combina notifiche | Seleziona l'opzione per combinare le notifiche di incidente di tutte le regioni in una singola notifica. Questa opzione è disponibile solo per gli incidenti. |
-| URL | Immetti l'URL per la connessione al tuo servizio Web. |
+| Autorizzazione | Scegli se abilitare l'autorizzazione.  Le opzioni sono: **Di base** o **Nessuna**. |
+| Nome utente | Se hai scelto l'autorizzazione **Di base**, immetti il tuo nome utente per il servizio Web. Se non desideri utilizzare le tue credenziali personali, puoi impostare un ID funzionale da utilizzare specificatamente con {{site.data.keyword.Bluemix_notm}}. |
+| Password | Se hai scelto l'autorizzazione **Di base**, immetti la tua password per il servizio Web. |
 | Descrizione | Aggiungi una descrizione univoca della sottoscrizione e stai creando. |
-| Nome utente | Immetti il tuo nome utente per il tuo servizio Web. Se non desideri utilizzare le tue credenziali personali, puoi impostare un ID funzionale da utilizzare specificatamente con {{site.data.keyword.Bluemix_notm}}. |
-| Password | Immetti la password per il tuo servizio Web. |
-| Payload | Se hai selezionato il metodo POST, immetti le proprietà specifiche del servizio Web che stai utilizzando insieme i valori di payload utilizzati per la notifica IBM. Vedi la tabella [Valori della sezione di payload](index.html#payload) per identificare i valori utilizzabili. Se non immetti informazioni in questa sezione, ricevi una notifica priva di informazioni aggiuntive. |
+| Nuovo evento | Seleziona questa opzione per abilitare la notifica per i nuovi eventi di manutenzione o incidente. Deselezionare l'opzione per disabilitare la notifica. |
+| Metodo | Seleziona **GET**, **POST** o **PUT**. |
+| URL | Immetti l'URL per la connessione al tuo servizio Web. |
+| Proprietà di risposta | Questo campo facoltativo è il nome della proprietà che identifica la risorsa creata dal tuo servizio Web quando viene inviata una richiesta POST o PUT. Se fornisci una proprietà di risposta per un nuovo evento e scegli di creare una sottoscrizione per le modifiche a un evento, dovrai fornirla anche per la sottoscrizione Modifica all'evento. A seconda del servizio Web utilizzato, puoi specificarla come parte dell'URL o come valore di payload.  |
+| Payload | Se hai selezionato il metodo POST o PUT, immetti le proprietà specifiche del servizio Web che stai utilizzando insieme i valori di payload utilizzati per la notifica IBM. Vedi la tabella [Valori della sezione di payload di manutenzione e incidenti](index.html#payload) per identificare i valori utilizzabili. Se non immetti informazioni in questa sezione, ricevi una notifica che non contiene informazioni aggiuntive. |
+| Modifica all'evento | Seleziona questa opzione per creare sottoscrizioni di notifica relative alle modifiche agli eventi di manutenzione o incidenti per cui hai creato le sottoscrizioni. Deselezionare l'opzione per disabilitare la notifica. |
+| Utilizza valori e payload da Nuovo evento | Usa il contenuto del campi Metodo, URL e Payload della sezione Nuovo evento. Nota che se l'opzione è selezionata, questi campi non sono disponibili per ulteriori modifiche nella sezione Modifica all'evento.  |
+| Metodo | Seleziona **GET**, **POST** o **PUT**. |
+| URL | Immetti l'URL per la connessione al tuo servizio Web. |
+| Payload | Se hai selezionato il metodo POST o PUT, immetti le proprietà specifiche del servizio Web che stai utilizzando insieme i valori di payload utilizzati per la notifica IBM. Vedi la tabella [Valori della sezione di payload di manutenzione e incidenti](index.html#payload) per identificare i valori utilizzabili. Se non immetti informazioni in questa sezione, ricevi una notifica che non contiene informazioni aggiuntive. |
+| Combina notifiche | Seleziona l'opzione per combinare le notifiche di incidente di tutte le regioni in una singola notifica. Questa opzione è disponibile solo per gli incidenti. |
 
-*Tabella 5. Valori della sezione payload*
+*Tabella 6. Campi del modulo per una sottoscrizione di notifica webhook sulle soglie*
+{: #caption}
+{: #webhooknotthresh}
+
+| **Campo** | **Descrizione** |
+|-----------------|-------------------|
+| Abilitato | Seleziona l'opzione per abilitare la notifica. Deselezionare l'opzione per disabilitare la notifica. Le sottoscrizioni sono abilitate per impostazione predefinita. |
+| Tipo | Seleziona **Webhook**. |
+| Evento | Seleziona **Soglia**. |
+| Soglia | Seleziona il tipo di soglia per cui ricevere una notifica: Disco fisico, Memoria fisica, Disco riservato o Memoria riservata. |
+| Direzione soglia | Scegli se visualizzare i dati di soglia in ordine crescente o decrescente.  |
+| Notifica quando incrociato inferiore a (%) | Se hai selezionato la **Direzione di soglia** **Decrescente**, immetti la percentuale di soglia per cui ricevere una notifica. Quando la soglia scende sotto questa percentuale, viene inviata una notifica webhook. |
+| Notifica quando incrociato superiore a (%) | Se hai selezionato la **Direzione di soglia** **Crescente**, immetti la percentuale di soglia per cui ricevere una notifica. Quando la soglia supera questa percentuale, viene inviata una notifica webhook. |
+| Descrizione | Aggiungi una descrizione univoca della sottoscrizione e stai creando. |
+| Autorizzazione | Scegli se abilitare l'autorizzazione.  Le opzioni sono: **Di base** o **Nessuna**. |
+| Nome utente | Se hai scelto l'autorizzazione di base, immetti il tuo nome utente per il servizio Web. Se non desideri utilizzare le tue credenziali personali, puoi impostare un ID funzionale da utilizzare specificatamente con {{site.data.keyword.Bluemix_notm}}. |
+| Password | Se hai scelto l'autorizzazione di base, immetti la tua password per il servizio Web.  |
+| Metodo | Seleziona **GET**, **POST** o **PUT**. |
+| URL | Immetti l'URL per la connessione al tuo servizio Web. |
+
+*Tabella 7. Valori della sezione di payload di manutenzione e incidenti*
+{: #caption}
 {: #payload}
 
 | **Valore IBM** | **Descrizione** | **Tipo di evento** |
 |----------------|----------------|------------------------|
-| {{content.title}} | Titolo del messaggio |  Aggiornamento di manutenzione e incidente |
-| {{content.message}} | Descrizione del messaggio |   Aggiornamento di manutenzione e incidente |
-| {{region}} | Regione interessata | Aggiornamento di manutenzione e incidente |
-| {{content.severity}} | Classificazione della severità | Incidente |
 | {{content.category}} | Servizi interessati | Incidente |
-| {{content.subCategoryName}} | Componenti interessati | Incidente |
-| {{status}} | Stato dell'aggiornamento | Aggiornamento di manutenzione |
-| {{content.scheduleWindow.start}} | La data di inizio pianificata per l'aggiornamento | Aggiornamento di manutenzione |
 | {{content.disruption}} | Componenti interessati | Aggiornamento di manutenzione |
+| {{content.message}} | Descrizione del messaggio |   Aggiornamento di manutenzione e incidente |
+| {{content.scheduleWindow.start}} | Data di inizio pianificata per l'aggiornamento | Aggiornamento di manutenzione |
+| {{content.scheduleWindow.end}} | Ora di fine pianificata per l'aggiornamento | Aggiornamento di manutenzione |
+| {{content.severity}} | Classificazione della severità | Incidente |
+| {{content.subCategoryName}} | Componenti interessati | Incidente |
+| {{content.title}} | Titolo del messaggio | Aggiornamento di manutenzione e incidente |
+| {{region}} | Regione interessata | Aggiornamento di manutenzione e incidente |
+| {{status}} | Stato dell'aggiornamento | Aggiornamento di manutenzione |
 | {{type}} | Aggiornamento o incidente | Aggiornamento di manutenzione e incidente |
-| {{content.scheduleWindow.end}} | L'ora di fine pianificata per l'aggiornamento | Aggiornamento di manutenzione |
 
-Quando salvi la tua sottoscrizione evento, ricevi notifiche attraverso il metodo che hai impostato. Le notifiche vengono ancora pubblicate nelle seguenti posizioni:  
- * Nella pagina Stato per gli incidenti 
+*Tabella 8. Valori della sezione di payload di soglia*
+{: #caption}
+{: #threshpayload}
+
+| **Valore IBM** | **Descrizione** | **Tipo di evento** |
+|----------------|----------------|------------------------|
+| {{content.physical_disk}} | Soglia disco fisico | Soglia |
+| {{content.physical_memory}} | Soglia memoria fisica | Soglia |  
+| {{content.reserved_disk}} | Soglia disco riservato | Soglia |
+| {{content.reserved_memory}} | Soglia memoria riservata | Soglia |
+
+Quando salvi la tua sottoscrizione di notifica, ricevi notifiche attraverso il metodo che hai impostato. Le notifiche vengono ancora pubblicate nelle seguenti posizioni:  
+ * Nella pagina Stato per gli incidenti
  * Nella pagina Stato per gli eventi di aggiornamento della manutenzione pianificata con interruzioni del servizio
  * Nell'area Notifica della pagina Amministrazione per gli aggiornamenti di manutenzione
 
-Puoi selezionare qualsiasi sottoscrizione evento salvata, visualizzare le attività recenti o modificarle come necessario. Fai clic per espandere qualsiasi voce delle attività recenti per visualizzare i dettagli della cronologia.
+Puoi selezionare qualsiasi sottoscrizione di notifica salvata, visualizzare le attività recenti o modificarle come necessario. Fai clic per espandere qualsiasi voce delle attività recenti per visualizzare i dettagli della cronologia.
 
 ## Aggiornamenti di manutenzione
 {: #oc_schedulemaintenance}
@@ -153,9 +224,13 @@ Puoi visualizzare gli aggiornamenti di manutenzione pianificata e in sospeso sol
 ### Impostazione delle finestre di manutenzione preapprovate
 {: #preapprovedmaintenance}
 
-Prima di iniziare la pianificazione e l'approvazione di aggiornamenti, devi impostare le tue finestre di manutenzione preapprovate. Gli aggiornamenti che non comportano interruzioni del servizio vengono pianificati in modo che vengano eseguiti all'interno delle finestre temporali preapprovate.
+Gli aggiornamenti di manutenzione che non comportano interruzioni del servizio sono pianificati per essere eseguiti durante finestre temporali preapprovate. Per impostazione predefinita, vengono create due finestre di aggiornamenti disponibili settimanali per il tuo sistema. Queste finestre sono in genere impostate per ripetersi ogni sabato e domenica sera. Puoi modificare le impostazioni predefinite in uno dei seguenti modi:
+ * Modifica le finestre di aggiornamento predefinite scegliendo un giorno e/o un'ora di inizio differenti.
+ * Crea una finestra di aggiornamento e quindi elimina la finestra predefinita
 
-Devi impostare un minimo di 12 ore disponibili in una settimana per un periodo minimo di due giorni per ogni settimana. Ad esempio, puoi impostare finestre temporali di 6 ore in due giorni distinti o puoi impostare finestre di 4 ore in tre giorni diversi. Per accertarti che le finestre temporali siano sufficienti per consentire l'applicazione di un aggiornamento, la durata minima di ciascuna finestra deve essere pari a quattro ore.
+Per salvare le modifiche, devi comunque rispettare il periodo di tempo minimo richiesto per ogni settimana.
+
+Devi impostare un minimo di 12 ore disponibili in una settimana per un periodo minimo di due giorni per ogni settimana. Ad esempio, puoi impostare finestre temporali di sei ore in due giorni distinti o puoi impostare finestre di quattro ore in tre giorni diversi. Per accertarti che le finestre temporali siano sufficienti per consentire l'applicazione di un aggiornamento, la durata minima di ciascuna finestra deve essere pari a 4 ore.  
 
 **Nota**: solo gli utenti con autorizzazione Superuser (`ops.admin`) possono pianificare e approvare gli aggiornamenti di manutenzione.
 
@@ -168,8 +243,11 @@ Devi impostare un minimo di 12 ore disponibili in una settimana per un periodo m
 7. Ripeti questo processo finché non hai soddisfatto i requisiti minimi per le finestre temporali settimanali.
 
 ### Impostazione delle finestre di manutenzione non disponibili
+{: #blockpreapprovedmaintenance}
 
-Dopo che hai impostato le tue finestre di manutenzione disponibili preapprovate, puoi scegliere di impostare specifiche date e ore per cui il tuo ambiente non è disponibile per gli aggiornamenti. Ad esempio, puoi scegliere un fine settimana o una vacanza ad alto traffico durante la quale non vuoi che venga applicata alcuna manutenzione per garantire che le tue applicazioni siano disponibili ai tuoi utenti.
+Puoi scegliere di impostare specifiche finestre di aggiornamento non disponibili in cui il tuo ambiente non sarà disponibile per gli aggiornamenti di manutenzione che non comportano interruzioni del servizio. Ad esempio, puoi scegliere un fine settimana o una vacanza ad alto traffico in cui non applicare alcuna manutenzione per garantire che le tue applicazioni siano disponibili ai tuoi utenti.
+
+Devi impostare un minimo di 12 ore disponibili in una settimana per un periodo minimo di due giorni per ogni settimana. Se tenti di creare una finestra di aggiornamento non disponibile, potresti non riuscire a salvare le modifiche qualora questa nuova finestra faccia sì che il sistema scenda al di sotto del minimo settimanale richiesto. In questo caso, devi prima rimuovere alcune finestre di aggiornamento non disponibili esistenti o aggiungerne delle altre prima di poter salvare la nuova finestra di aggiornamento non disponibile. Per ulteriori informazioni, vedi [Impostazione delle finestre di manutenzione preapprovate](index.html#preapprovedmaintenance).
 
 1. Vai a **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso &gt; Gestisci disponibilità**.
 2. Espandi la sezione **Gestisci finestre di aggiornamento non disponibili**.
@@ -208,7 +286,8 @@ A seconda della tua selezione, l'aggiornamento viene pianificato in modo da esse
 
 Per visualizzare le informazioni sul sistema, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA**.
 
-Puoi espandere e visualizzare diverse sezioni relative ad aggiornamenti di manutenzione in sospeso, informazioni sul sistema generali e dettagli della configurazione LDAP.
+Puoi visualizzare diverse sezioni che includono aggiornamenti di sistema in sospeso, informazioni generali sul sistema, informazioni su API e CLI e
+dettagli di configurazione LDAP.
 
 ### Aggiornamenti di sistema in sospeso
 
@@ -219,10 +298,10 @@ aggiornamenti in sospeso che richiedono un tuo intervento. Ci sono due tipi di a
 <dt>Aggiornamenti che non comportano interruzioni del servizio</dt>
 <dd>Un aggiornamento che non comporta interruzioni del servizio non influenza il tuo ambiente, le tue applicazioni in esecuzione o l'accesso dei tuoi utenti alle tue applicazioni. Questo tipo di aggiornamento non richiede un'approvazione caso per caso. Questi aggiornamenti sono applicati nelle finestre di manutenzione disponibili preapprovate da te impostate dalla pagina Aggiornamenti di sistema.</dd>
 <dt>Aggiornamenti che comportano interruzioni del servizio</dt>
-<dd>Un aggiornamento che comporta interruzioni del servizio può influenzare il tuo ambiente, le applicazioni in esecuzione o l'accesso dei tuoi utenti alle tue applicazioni. Puoi pianificare e approvare ciascuno di questi aggiornamenti di manutenzione entro la finestra di manutenzione di 21 giorni assegnata per garantire che l'aggiornamento non venga applicato durante ore lavorative critiche. Puoi selezionare la data e l'ora di distribuzione consigliata che è basata sulle tue finestre di aggiornamento preapprovate oppure puoi selezionare due ore e date aggiuntive da cui IBM può scegliere quando applica l'aggiornamento.</dd>
+<dd>Un aggiornamento che comporta interruzioni del servizio può influenzare il tuo ambiente, le applicazioni in esecuzione o l'accesso dei tuoi utenti alle tue applicazioni. Puoi pianificare e approvare ciascuno di questi aggiornamenti di manutenzione entro la finestra di manutenzione di 21 giorni assegnata per garantire che l'aggiornamento non venga applicato durante ore lavorative critiche. Puoi selezionare la data e ora di distribuzione consigliata, che si basa sulle tue finestre di aggiornamento preapprovate, oppure selezionare due ore e date aggiuntive tra cui IBM può scegliere durante l'applicazione dell'aggiornamento.</dd>
 </dl>
 
-Per ulteriori informazioni sull'impostazione delle finestre di manutenzione preapprovate e sull'impostazione di specifiche date non disponibili per la manutenzione, vedi [Aggiornamenti di manutenzione](admin/index.html#oc_schedulemaintenance).
+Per ulteriori informazioni sull'impostazione delle finestre di manutenzione preapprovate e sull'impostazione di specifiche date non disponibili per la manutenzione, vedi [Aggiornamenti di manutenzione](index.html#oc_schedulemaintenance).
 
 ### Informazioni generali sul sistema
 
@@ -255,32 +334,39 @@ Per visualizzare le informazioni sull'utilizzo delle risorse, fai clic su **AMMI
 
 Nella sezione **Utilizzo risorsa **, puoi visualizzare le seguenti informazioni:
 
-- Informazioni sull'utilizzo delle risorse, ad esempio la quantità di memoria e spazio su disco che può essere riservata e quella fisicamente disponibile e la quantità di memoria e spazio su disco realmente riservata e quella fisicamente utilizzata. Puoi anche visualizzare le informazioni relative all'utilizzo medio della CPU tra tutti gli agent DEA (Droplet Execution Agent). Per visualizzare l'utilizzo della memoria, disco o CPU da parte di DEA, fai clic su **Suddivisione**.
-Puoi vedere un riepilogo dello spazio **Riservato** e **Fisico** relativo a memoria e disco.
+- Informazioni sull'utilizzo delle risorse, ad esempio la quantità di memoria e spazio su disco che può essere riservata e quella fisicamente disponibile e la quantità di memoria e spazio su disco realmente riservata e quella fisicamente utilizzata.  Puoi anche visualizzare le informazioni relative all'utilizzo medio della CPU tra tutti gli agent DEA (Droplet Execution Agent). Per informazioni più dettagliate sull'utilizzo di memoria, disco e CPU, vedi [Dettagli memoria, disco e CPU](index.html#resourceusagedetails).
+- Informazioni sull'utilizzo della rete per la larghezza di banda in entrata e in uscita nelle ultime 6 ore o nel giorno precedente. I dati visualizzati sono basati sulla somma del traffico in entrata e in uscita per la rete pubblica e quella privata.
+- Il tempo di risposta medio per {{site.data.keyword.Bluemix_notm}} negli ultimi 10 minuti, 1 ora e 1 giorno.
+- Le transazioni medie al secondo per {{site.data.keyword.Bluemix_notm}} nel corso degli ultimi 10 minuti, dell'ultima ora e dell'ultimo giorno.
+
+#### Dettagli memoria, disco e CPU
+{: #resourceusagedetails}
+
+Nella sezione **Utilizzo risorsa**, puoi vedere un riepilogo dello spazio **Riservato** e **Fisico** relativo a memoria e disco.    
 	<dl>
 	<dt><strong>Fisico</strong></dt>
-	<dd>La quantità di memoria o spazio su disco che è stata acquistata per il tuo ambiente. </dd>
+	<dd>La quantità di memoria o spazio su disco che è stata acquistata per il tuo ambiente.</dd>
 	<dt><strong>Riservato</strong></dt>
 	<dd>La quantità totale di memoria o spazio su disco disponibile che può essere riservata da tutte le applicazioni distribuite e in esecuzione nel tuo ambiente. Poiché le applicazioni raramente utilizzano tutta la memoria riservata per loro, il valore fisico è di solito inferiore al valore riservato.</dd>
 	</dl>
 
-	Oltre alla rappresentazione grafica, puoi visualizzare la percentuale di memoria e spazio su disco utilizzata dal tuo ambiente.  Puoi anche visualizzare la quantità riservata e fisica, in GB, dell'utilizzo reale rispetto alla quantità disponibile.
-Per informazioni più dettagliate sull'utilizzo della memoria fisica e riservata, fai clic su **Cronologia.** Puoi specificare l'intervallo di tempo da visualizzare come settimanale o mensile. La vista **Cronologia di utilizzo della memoria** mostra un grafico di utilizzo della memoria nel corso del tempo da te scelto.  
+Oltre alla rappresentazione grafica, puoi visualizzare la percentuale di memoria e spazio su disco utilizzata dal tuo ambiente. Puoi anche visualizzare la quantità riservata e fisica, in GB, dell'utilizzo reale rispetto alla quantità disponibile.
 
+Per visualizzare l'utilizzo della memoria, disco o CPU da parte di DEA, fai clic su **Suddivisione**.  
+
+Per informazioni più dettagliate sull'utilizzo della memoria o del disco fisico e riservato nel tempo, fai clic su **Cronologia.** Puoi specificare l'intervallo di tempo da visualizzare come settimanale o mensile. La vista dell'utilizzo cronologico mostra un grafico di utilizzo della memoria o del disco nel corso del tempo da te scelto.  
 	<dl>
 	<dt><strong>Limite riservato</strong></dt>
-	<dd>Indicato in forma di linea tratteggiata orizzontale, il limite riservato è la quantità totale di memoria che può essere riservata collettivamente da tutte le applicazioni in esecuzione nel tuo ambiente.</dd>
+	<dd>Indicato in forma di linea tratteggiata orizzontale, il limite riservato è la quantità totale di memoria o spazio su disco che può essere riservata in blocco da tutte le applicazioni in esecuzione nel tuo ambiente.</dd>
 	<dt><strong>Riservato</strong></dt>
-	<dd>L'area Riservato mostra la memoria riservata collettivamente da tutte le applicazioni in esecuzione nel tuo ambiente.
+	<dd>L'area Riservato mostra la quantità di memoria o di spazio su disco che è attualmente riservata in blocco da tutte le applicazioni in esecuzione nel tuo ambiente.
 	<p>Per vedere quali organizzazioni hanno riservato la maggior parte della memoria in un determinato momento, passa il mouse sopra il punto lungo l'area Riservato associato a quel momento nel tempo. Puoi quindi fare clic su un'organizzazione nel grafico a torta che viene mostrato per visualizzare ulteriori informazioni su tale organizzazione.</p></dd>
 	<dt><strong>Limite fisico</strong></dt>
-	<dd>Indicato in forma di linea tratteggiata orizzontale, il limite fisico mostra la quantità di memoria fisica che è stata acquistata per il tuo ambiente.</dd>
+	<dd>Indicato in forma di linea tratteggiata orizzontale, il limite fisico mostra la quantità fisica di memoria o spazio su disco che è stata acquistata per il tuo ambiente.</dd>
 	<dt><strong>Fisico</strong></dt>
-	<dd>L'area Fisico mostra la quantità di memoria effettivamente utilizzata.</dd>
+	<dd>L'area Fisico mostra la quantità di memoria o spazio su disco effettivamente utilizzata.</dd>
 	</dl>
-- Informazioni sull'utilizzo della rete per la larghezza di banda in entrata e in uscita nelle ultime 6 ore o nel giorno precedente. I dati visualizzati sono basati sulla somma del traffico in entrata e in uscita per la rete pubblica e quella privata.
-- Il tempo di risposta medio per {{site.data.keyword.Bluemix_notm}} negli ultimi 10 minuti, 1 ora e 1 giorno.
-- Le transazioni medie al secondo per {{site.data.keyword.Bluemix_notm}} nel corso degli ultimi 10 minuti, dell'ultima ora e dell'ultimo giorno.
+
 
 ### Utilizzo dell'account
 {: #accountusage}
@@ -308,7 +394,7 @@ Puoi anche visualizzare l'utilizzo mensile e gli addebiti associati a livello di
 <ol>
 <li>Fai clic sull'icona <strong>{{site.data.keyword.avatar}}</strong> ![Avatar](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Dettagli di utilizzo</strong>.</li>
 <li>Fai clic su <strong>Pubblico</strong>.</li>
-<li>Seleziona l'organizzazione per cui desideri visualizzare i dati o <strong>Tutte le organizzazioni</strong> per visualizzare in una volta sola i dati di tutte le organizzazioni.</li>
+<li>Seleziona l'organizzazione per cui desideri visualizzare i dati.</li>
 <li>Puoi vedere i dettagli di utilizzo per le seguenti categorie:
 <ul>
 <li>Applicazioni di runtime con utilizzo</li>
@@ -351,9 +437,10 @@ agli **Eventi di amministrazione**, ai **Report DataPower**, al **Firewall** e a
 - Durante la visualizzazione di un report o log, puoi fare clic sull'icona ![Download](images/icon_download.png)
 per scaricare il report.
 
-La seguente tabella mostra l'elenco dei report di sicurezza generati per {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato. La maggior parte dei report viene generata ogni giorno.  Tuttavia, i report per gli eventi di gestione chiavi e crittografia vengono generati mensilmente. Tutti i report vengono conservati per 90 giorni nella console di gestione. Al termine dei 90 giorni, i report sono disponibili offline su richiesta a {{site.data.keyword.Bluemix_notm}} per 9 mesi. In totale, i report sono disponibili per il recupero per un massimo di 1 anno.
+La seguente tabella mostra l'elenco dei report di sicurezza generati per {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato. La maggior parte dei report viene generata ogni giorno. Tuttavia, i report per gli eventi di gestione chiavi e crittografia vengono generati mensilmente. Tutti i report vengono conservati per 90 giorni nella console di gestione. Al termine dei 90 giorni, i report sono disponibili offline su richiesta a {{site.data.keyword.Bluemix_notm}} per 9 mesi. In totale, i report sono disponibili per il recupero per un massimo di 1 anno.
 
-*Tabella 6. Elenco dei report di sicurezza*
+*Tabella 9. Elenco dei report di sicurezza*
+{: #caption}
 
 | **Categoria** | **Report** | **Descrizione** |      
 |-----------------|-------------------|---------------------|
@@ -396,14 +483,14 @@ Puoi eseguire una verifica in qualsiasi momento. Devi aver eseguito l'accesso pe
 ## Gestione del tuo catalogo
 {: #oc_catalog}
 
-Puoi gestire quali servizi e starter {{site.data.keyword.Bluemix_notm}} sono visibili agli utenti nel Catalogo {{site.data.keyword.Bluemix_notm}}. Fai clic su **AMMINISTRAZIONE &gt; GESTIONE CATALOGO**.
+Puoi gestire quali servizi {{site.data.keyword.Bluemix_notm}} sono visibili agli utenti nel Catalogo {{site.data.keyword.Bluemix_notm}}. Fai clic su **AMMINISTRAZIONE &gt; GESTIONE CATALOGO**.
 
-Seleziona un tile di servizio o di starter per modificare la visibilità del piano di servizio o starter. Per modificare la
+Seleziona un tile di servizio per modificare la visibilità del piano di servizio. Per modificare la
 visibilità, seleziona dalle seguenti opzioni:
 
-- Per visualizzare il servizio o lo starter nascosto in modo che sia visibile ai tuoi utenti nel Catalogo,
-seleziona **ABILITA TUTTI I PIANI**.
-- Per nascondere il servizio o lo starter ai tuoi utenti nel Catalogo {{site.data.keyword.Bluemix_notm}},
+- Per visualizzare il servizio nascosto in modo che sia visibile ai tuoi utenti nel
+Catalogo, seleziona **ABILITA TUTTI I PIANI**.
+- Per nascondere il servizio ai tuoi utenti nel Catalogo {{site.data.keyword.Bluemix_notm}},
 seleziona **DISABILITA TUTTI I PIANI**.
 - Per controllare la visibilità di un singolo piano, seleziona il nome del piano e utilizza quindi
 il menu a discesa per selezionare **Abilita per tutte le organizzazioni**, **Disabilita per
@@ -434,6 +521,8 @@ Le modalità d'uso del tuo broker dei servizi variano a seconda del numero di se
 
 #### Registrazione di un broker dei servizi che gestisce un unico servizio
 {: #registerbrokerui}
+
+<!-- staging only start -->
 
 Esamina le seguenti informazioni e completa la procedura per registrare il tuo broker dei servizi:
 
@@ -530,7 +619,8 @@ Quando implementi il broker dei servizi, nella risposta JSON di <code>GET /v2/ca
 
 Le seguenti tabelle possono aiutarti a compilare il file JSON.
 
-*Tabella. Campi JSON*
+*Tabella 10. Campi JSON*
+{: #caption}
 
 | **Campi JSON** | **Descrizione** |
 |-----------------|-----------------|
@@ -538,17 +628,18 @@ Le seguenti tabelle possono aiutarti a compilare il file JSON.
 |description | La descrizione del servizio visualizzata quando utilizzi il comando cf marketplace o passi il mouse sull'icona del servizio nel catalogo dell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Puoi aggiungere una singola parola o frase per la descrizione. |
 |name | Il nome del servizio visualizzato nell'interfaccia riga di comando cf. Questo nome deve essere univoco all'interno di {{site.data.keyword.Bluemix_notm}}, deve utilizzare lettere minuscole e non può contenere spazi. Dopo aver registrato il servizio con {{site.data.keyword.Bluemix_notm}}, non potrai più modificarne il nome. |
 |ID  | L'ID del servizio. Questo ID deve essere univoco in {{site.data.keyword.Bluemix_notm}} e deve essere un GUID (Globally Unique Identifier). Dopo aver registrato il servizio con {{site.data.keyword.Bluemix_notm}}, non potrai più modificare l'ID. |
-|metadata | I metadati del piano di servizio visualizzati nel catalogo {{site.data.keyword.Bluemix_notm}} e nel listino prezzi. Il campo dei metadati è facoltativo. Puoi specificare dei campi aggiuntivi per i metadati. Per ulteriori informazioni, vedi la seguente tabella per i [campi Metadati](index.html#metadatafields). |
+|metadata | I metadati del piano di servizio visualizzati nel catalogo {{site.data.keyword.Bluemix_notm}} e nel listino prezzi. Il campo dei metadati è facoltativo. Puoi specificare più campi per i metadati. Per ulteriori informazioni, vedi la seguente tabella per i [campi Metadati](index.html#metadatafields). |
 |plans | Un array di definizioni del piano di servizio. Per ulteriori informazioni, vedi la seguente tabella per i [campi Piano](index.html#planfields). |
 
-*Tabella. Campi Metadati*
+*Tabella 11. Campi Metadati*
+{: #caption}
 {: #metadatafields}
 
 | **Valori metadati** | **Descrizione** |
 |---------------------|-----------------|
 |displayName          | Il nome del piano visualizzato nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Questo nome viene visualizzato sia nel catalogo alla pagina dei dettagli del servizio che nel listino prezzi. Scrivi in maiuscolo solo la prima lettera del nome del piano. Non utilizzare "Predefinito" come nome piano predefinito, usa invece "Standard". |
 |providerDisplayName | Il nome del provider di servizi |
-|longDescription | La descrizione dettagliata per il servizio. Utilizza almeno due frasi per una descrizione lunga.  |
+|longDescription | La descrizione dettagliata per il servizio. Utilizza almeno due frasi per una descrizione lunga. |
 |plans                | Un array di definizioni del piano di servizio. Ogni voce di array del campo plans comprende i seguenti campi: name, description, free, id e metadata. Per ulteriori informazioni, vedi la seguente tabella per i [campi Piano](index.html#planfields). |
 |bullets | Un array di stringhe visualizzate per un servizio. Puoi utilizzare gli elementi bullet per fornire informazioni in aggiunta alla descrizione lunga. Il campo bullets deve contenere almeno due elementi bullet. Ogni elemento bullet include il campo del titolo e della descrizione. |
 |imageUrl | L'URL di un'immagine PNG grande  (50 x 50 pixel). |
@@ -557,15 +648,15 @@ Le seguenti tabelle possono aiutarti a compilare il file JSON.
 |featuredImageUrl | L'URL di un'immagine in evidenza (64 x 64 pixel). |
 |documentationUrl | L'URL della documentazione per il servizio. |
 |termsUrl | L'URL dei file PDF che contengono i termini dell'accordo. |
-|media (facoltativo) | Un array di elementi per visualizzare i video e le acquisizioni schermo che introducono il servizio nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Un elemento media può contenere i seguenti campi: type (image, youtube, video), thumbnailUrl (l'URL dell'immagine di anteprima per l'elemento media), url (l'URL dell'acquisizione schermo o del video YouTube), source (le origini dei video che non sono ospitati su YouTube. Il "type" delle origini del video deve essere supportato da HTML5. Includi "type" e "url" per il video) e caption (la didascalia per l'elemento media. Le didascalie consentono un accesso facilitato agli utenti con disabilità per comprendere gli elementi media). |
+|media (facoltativo) | Un array di elementi per visualizzare i video e le acquisizioni schermo che introducono il servizio nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Un elemento media può contenere i seguenti campi: type (image, youtube, video), thumbnailUrl (l'URL dell'immagine di anteprima per l'elemento media), url (l'URL dell'acquisizione schermo o del video YouTube), source (le origini dei video che non sono ospitati su YouTube. Il "type" delle origini del video deve essere supportato da HTML5. Includi "type" e "url" per il video)e caption (la didascalia per l'elemento media. Le didascalie consentono un accesso facilitato agli utenti con disabilità per comprendere gli elementi media). |
 |serviceKeysSupported | Un valore booleano che indica se l'API delle chiavi del servizio è supportata. L'API delle chiavi del servizio permette di abilitare l'utilizzo di un servizio al di fuori di {{site.data.keyword.Bluemix_notm}}. Il valore predefinito è false. |
 |plan_updateable | Un valore booleano che indica se il servizio supporta le modifiche del piano. Il valore predefinito è false. |
-|embeddableDashboard (facoltativo) | Un campo che indica come viene visualizzato il dashboard del servizio nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Se non specifichi questo campo, il dashboard viene integrato ma viene limitato a una larghezza minima di 960px e il dashboard avrà un riempimento orizzontale aggiuntivo intorno all'iframe. Puoi utilizzare true, false, drilldown o launch. Per questo valore puoi utilizzare i seguenti campi: true, false, drilldown e launch.  |
+|embeddableDashboard (facoltativo) | Un campo che indica come viene visualizzato il dashboard del servizio nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Se non specifichi questo campo, il dashboard viene integrato ma viene limitato a una larghezza minima di 960px e il dashboard avrà un ulteriore riempimento orizzontale intorno all'iframe. Puoi utilizzare true, false, drilldown o launch. Per questo valore puoi utilizzare i seguenti campi: true, false, drilldown e launch.  |
 |notCreatable (facoltativo) | Un valore booleano che indica se le istanze per il servizio possono essere create dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} e dall'interfaccia riga di comando cf. Il valore true significa che le istanze del servizio non possono essere create né dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} né dall'interfaccia riga di comando cf. Il valore predefinito è false. |
 |notCreatableMessage (facoltativo) | Un messaggio che viene visualizzato nell'interfaccia utente {{site.data.keyword.Bluemix_notm}} se non è possibile creare le istanze del servizio. Se non specifichi questo campo, verrà visualizzato il seguente messaggio predefinito: Per ricevere una notifica sulla disponibilità del servizio, confermare l'indirizzo email o immettere un nuovo indirizzo. |
 |notCreatableRobotMessage (facoltativo) | Un messaggio che viene visualizzato nell'area commenti della pagina dei dettagli del servizio nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Il messaggio viene utilizzato per indicare che un servizio potrebbe avere un problema o altre cause che lo rendono non disponibile. Puoi specificare un messaggio per spiegare il motivo. Se non specifichi questo campo, verrà visualizzato il seguente messaggio predefinito: Questo servizio non è al momento disponibile. |
 |apiReferenceUrl (facoltativo) | L'URL dell'iframe nell'area Riferimento API nella pagina dei dettagli del servizio all'interno del catalogo. Se non viene utilizzato per la pagina dei dettagli del servizio nel Catalogo, puoi immettere il valore numerico assegnato alla Documentazione API REST del tuo servizio durante la registrazione nel microservizio Documentazione API REST di {{site.data.keyword.Bluemix_notm}}. In questo modo, la documentazione dell'API REST verrà visualizzata nel dashboard del servizio. |
-|sdkDownloadUrl (facoltativo) | L'URL della pagina Web che si apre quando fai clic sul pulsante Scarica SDK. Il pulsante Scarica SDK si trova nel tile del servizio nella pagina di panoramica dell'applicazione nel Dashboard. La pagina Web si apre in una scheda del browser.  |
+|sdkDownloadUrl (facoltativo) | L'URL della pagina Web che si apre quando fai clic sul pulsante Scarica SDK. Il pulsante Scarica SDK si trova nel tile del servizio nella pagina di panoramica dell'applicazione nel Dashboard. La pagina Web si apre in una scheda del browser. |
 |serviceMonitorApi    | L'URL di un'API che restituisce i dati JSON, come mostrato nel seguente esempio, che segnala l'integrità del servizio. Devi avere serviceMonitorApi o serviceMonitorApp nei metadati del servizio. Consulta il seguente codice come esempio. |
 |serviceMonitorApp    | L'URL a un'applicazione che può essere distribuita in {{site.data.keyword.Bluemix_notm}} ed essere associata a un servizio per fornire l'output specifico dello stato del servizio. L'applicazione deve restituire il formato dei dati JSON uguale al serviceMonitorApi. Devi avere serviceMonitorApi o serviceMonitorApp nei metadati del servizio. Consulta il seguente codice come esempio. |
 
@@ -597,32 +688,36 @@ Il seguente esempio mostra come la risposta JSON di GET /v2/catalog è associata
 
 ![Dettagli del servizio nel catalogo.](images/metadata.png "Vista dettagli del servizio nel catalogo Bluemix")
 
-*Tabella. Campi Piano*
+*Tabella 12. Campi Piano*
+{: #caption}
 {: #planfields}
 
 | **Valori del piano** | **Descrizione** |
 |---------------------|-----------------|
-|name       | Il nome del piano di servizio utilizzato nell'interfaccia riga di comando cf. Il nome del piano viene, ad esempio, visualizzato nell'output del comando cf marketplace. Il nome del piano deve essere in lettere minuscole, non può contenere spazi e deve essere univoco all'interno del servizio.   |
+|name       | Il nome del piano di servizio utilizzato nell'interfaccia riga di comando cf. Il nome del piano viene, ad esempio, visualizzato nell'output del comando cf marketplace. Il nome del piano deve essere in lettere minuscole, non può contenere spazi e deve essere univoco all'interno del servizio.  |
 |description       | La descrizione del piano di servizio. La descrizione viene visualizzata quando selezioni una piano nella pagina dei dettagli del servizio nel catalogo {{site.data.keyword.Bluemix_notm}}. |
 |free      | Un valore booleano che indica se il piano di servizio è gratuito. Il valore predefinito è true. |
-|ID       | L'ID del piano di servizio. L'ID deve essere univoco all'interno di {: new_window} e deve essere un GUID.  |
+|ID       | L'ID del piano di servizio. L'ID deve essere univoco all'interno di {: new_window}e deve essere un GUID.  |
 |metadata (facoltativo)    | I metadati del piano di servizio visualizzati nel catalogo {{site.data.keyword.Bluemix_notm}} e nel listino prezzi. Il campo dei metadati è facoltativo. Nel campo metadata puoi specificare i seguenti campi: displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber) e paidOnly. Per ulteriori informazioni, vedi la seguente tabella per i [campi Metadati del piano](index.html#planmetadata). |
 
-*Tabella. Campi Metadati del piano*
+*Tabella 13. Campi Metadati del piano*
+{: #caption}
 {: #planmetadata}
 
 | **Valori dei metadati del piano** | **Descrizione** |
 |------------------------|-----------------|
-|displayName             | Il nome del piano visualizzato nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Questo nome viene visualizzato sia nel catalogo alla pagina dei dettagli del servizio che nel listino prezzi.    |
+|displayName             | Il nome del piano visualizzato nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Questo nome viene visualizzato sia nel catalogo alla pagina dei dettagli del servizio che nel listino prezzi.   |
 |type                    | Il tipo di piano. Per questo campo, puoi utilizzare i seguenti valori: subscription (un piano di sottoscrizione. Il valore predefinito è false), reservable (un piano riservabile. Questo valore viene utilizzato solo quando il piano è un piano di sottoscrizione, ossia, il valore di plan.metadata.subscription è true. Il valore predefinito è false), planDetails (quantità e descrizione dettagliata delle risorse che possono essere utilizzate con il piano. Questo valore viene utilizzato solo quando il piano è riservabile, ossia, il valore di  plan.metadata.reserveable è true.) |
 |bullets                 | Una descrizione delle risorse che possono essere utilizzate con il piano. La descrizione viene visualizzata nella colonna **Funzioni** nella pagina dei dettagli del servizio del catalogo e nel listino prezzi. |
-|costs                   | Informazioni sui costi del servizio che vengono visualizzate nella colonna Prezzo nella pagina dei dettagli del servizio del catalogo e nel listino prezzi. Ogni voce di array contiene i seguenti campi: unitId (l'ID dell'unità. Utilizza la forma plurale e scrivi in maiuscolo tutte le lettere. Per i piani gratuiti, questo campo è facoltativo), unit (la metrica utilizzata per calcolare gli addebiti del servizio. Il valore di questo campo è utilizzato nell'interfaccia utente {{site.data.keyword.Bluemix_notm}} per rappresentare la metrica di addebito) e partNumber (l'identificativo `part_number` utilizzato dal sistema di fatturazione. Per i piani gratuiti, questo campo è facoltativo).   |
+|costs                   | Informazioni sui costi del servizio che vengono visualizzate nella colonna Prezzo nella pagina dei dettagli del servizio del catalogo e nel listino prezzi. Ogni voce di array contiene i seguenti campi: unitId (l'ID dell'unità. Utilizza la forma plurale e scrivi in maiuscolo tutte le lettere. Per i piani gratuiti, questo campo è facoltativo), unit (la metrica utilizzata per calcolare gli addebiti del servizio. Il valore di questo campo è utilizzato nell'interfaccia utente {{site.data.keyword.Bluemix_notm}} per rappresentare la metrica di addebito)e partNumber (l'identificativo `part_number` utilizzato dal sistema di fatturazione. Per i piani gratuiti, questo campo è facoltativo).   |
 |paidOnly (facoltativo)     | Un valore booleano che indica se questo piano di servizio è disponibile solo per gli account a pagamento {{site.data.keyword.Bluemix_notm}}. Il valore **true** significa che il piano di servizio è destinato solo agli account a pagamento e non può essere aggiunto agli account di prova. Il valore **false** significa che il piano di servizio può essere aggiunto sia agli account a pagamento che di prova. Il valore predefinito è **false**.	  |
 
 Il seguente esempio mostra come la risposta JSON di GET /v2/catalog è associata alla pagina dei dettagli del servizio nel catalogo {{site.data.keyword.Bluemix_notm}}. In particolare, il modo in cui i campi dei metadati del piano descritti nella tabella precedente vengono associati all'interfaccia utente:
 
 ![Dettagli dei metadati del piano nel catalogo.](images/plan_metadata.png "Vista dei valori metadati del piano nel catalogo")
 
+
+<!-- staging only end -->
 
 <ol>
 <li>Una volta implementata l'API broker dei servizi, vai a <strong>AMMINISTRAZIONE</strong> &gt; <strong>GESTIONE CATALOGO</strong>.</li>
@@ -658,7 +753,7 @@ Puoi espandere e visualizzare le diverse sezioni. Puoi anche riesaminare e gesti
 
 ### Creazione di organizzazioni
 
-Per creare una nuova organizzazione e aggiungere gestori, completa la seguente procedura:
+Per creare un'organizzazione e aggiungere gestori, completa la seguente procedura:
 
 1. Fai clic su <strong>CREA ORGANIZZAZIONE</strong>.
 2. Immetti un nome per l'organizzazione.
@@ -684,11 +779,11 @@ le tue applicazioni agli spazi. Per creare uno spazio completa la seguente proce
 
 Puoi espandere la sezione **Monitoraggio quota** per visualizzare le seguenti informazioni:
 
-- Utilizzo della memoria dell'ambiente mostra in dettaglio l'utilizzo della memoria per l'intero ambiente di sistema. Il grafico mostra le seguenti informazioni: 
+- Utilizzo della memoria dell'ambiente mostra in dettaglio l'utilizzo della memoria per l'intero ambiente di sistema. Il grafico mostra le seguenti informazioni:
 <ul>
-<li>La memoria fisica in uso e il limite di memoria fisica</li>
-<li>la quota di memoria riservata e il limite di memoria riservata</li>
-<li>la quota totale di memoria per le tue organizzazioni</li>
+<li>La memoria fisica in uso e il limite di memoria fisica disponibile</li>
+<li>La quota di memoria attualmente riservata e il limite di memoria che è possibile riservare</li>
+<li>La quota totale di memoria per le tue organizzazioni</li>
 </ul>
 I seguenti tipi di utilizzo della memoria vengono visualizzati nel grafico.
 
@@ -698,20 +793,20 @@ I seguenti tipi di utilizzo della memoria vengono visualizzati nel grafico.
 	<dt><strong>Limite fisico</strong></dt>
 	<dd>La memoria fisica totale disponibile nel tuo ambiente.</dd>
 	<dt><strong>Quota riservata</strong></dt>
-	<dd>La somma di memoria riservata per tutte le applicazioni distribuite, tra tutte le organizzazioni. La somma della quota riservata può superare il limite fisico di memoria per il tuo ambiente. Ad esempio, se hai un limite di memoria fisica pari a 16 GB, potresti riservare 4 GB di memoria ciascuna per un totale di cinque diverse applicazioni. La quota riservata supera il limite fisico della memoria.  Tuttavia, in molti casi, le applicazioni potrebbero non utilizzare la quota totale riservata singolarmente a ciascuna di esse. Inoltre, è possibile che le applicazioni non utilizzino
+	<dd>La somma di memoria riservata per tutte le applicazioni distribuite, tra tutte le organizzazioni. La somma della quota riservata può superare il limite fisico di memoria per il tuo ambiente. Ad esempio, se hai un limite di memoria fisica pari a 16 GB, potresti riservare 4 GB di memoria ciascuna per un totale di cinque diverse applicazioni. La quota riservata supera il limite fisico della memoria. Tuttavia, in molti casi, le applicazioni potrebbero non utilizzare la quota totale riservata singolarmente a ciascuna di esse. Inoltre, è possibile che le applicazioni non utilizzino
 	contemporaneamente la quota totale della memoria riservata.</dd>
-	<dt><strong>Limite riservato</strong></dt>
+	<dt><strong>Limite riserva</strong></dt>
 	<dd>La memoria totale che può essere riservata tra tutte le applicazioni per il tuo ambiente.</dd>
 	<dt><strong>Quota totale</strong></dt>
 	<dd>La quota di memoria totale tra tutte le organizzazioni.</dd>
 	</dl>
-	**Nota**: i dati vengono aggiornati automaticamente ogni 4 ore. Fai clic su **Ricalcola** se desideri aggiornare i dati sulla pagina prima dell'aggiornamento automatico. 
+	**Nota**: i dati vengono aggiornati automaticamente ogni 4 ore. Fai clic su **Ricalcola** se desideri aggiornare i dati sulla pagina prima dell'aggiornamento automatico.
 
 - Utilizzo della memoria dell'organizzazione. Questa sezione mostra in dettaglio l'utilizzo della memoria a livello di organizzazione. Puoi visualizzare la quota di memoria totale, la quota riservata e la memoria fisica utilizzata da ogni organizzazione. Il grafico fornisce informazioni che vengono elencate in base alla quantità di memoria riservata per ogni organizzazione e, per impostazione predefinita, viene elencata per prima l'organizzazione che riserva la maggiore quantità di memoria. Puoi ordinare per **Utilizzo massimo memoria** e **Assegnazione memoria in eccesso**.
 
 	<dl>
 	<dt><strong>Utilizzo massimo memoria</strong></dt>
-	<dd>Usa questa opzione per identificare l'organizzazione che ha riservato la maggiore quantità di memoria.  Ordina in base all'utilizzo massimo di memoria per identificare le organizzazioni che hanno riservato la maggiore quantità di memoria. L'elenco viene ordinato in base alla quota riservata. </dd>
+	<dd>Usa questa opzione per identificare l'organizzazione che ha riservato la maggiore quantità di memoria. Ordina in base all'utilizzo massimo di memoria per identificare le organizzazioni che hanno riservato la maggiore quantità di memoria. L'elenco viene ordinato in base alla quota riservata. </dd>
 	<dt><strong>Assegnazione memoria in eccesso</strong></dt>
 	<dd>Usa questa opzione per identificare le organizzazioni che hanno una quota di memoria totale superiore a quella necessaria. Ordina per Assegnazione memoria in eccesso per identificare le organizzazioni che utilizzano
 la minore quantità di memoria per la quota assegnata per l'organizzazione. </dd>
@@ -836,11 +931,12 @@ non dispongono di autorizzazioni.
 
 È possibile assegnare agli utenti le seguenti autorizzazioni con livelli di accesso specifici (lettura o scrittura) che consentono all'utente di completare attività specifiche all'interno della console di gestione.
 
-*Tabella 7. Autorizzazioni*
+*Tabella 14. Autorizzazioni*
+{: #caption}
 
 | **Autorizzazione utente** | **Descrizione** |       
 |-----------------|-------------------|
-| Superuser | Gli utenti con l'autorizzazione **Superuser** impostata su **Attivo** possono modificare le autorizzazioni per gli altri utenti. Se hai l'autorizzazione attiva, ti viene automaticamente abilitato l'accesso completo alle altre autorizzazioni. Oltre alle attività descritte per ogni autorizzazione nella tabella, questi utenti possono anche impostare la sottoscrizione di eventi per avvertirti direttamente sulla manutenzione o gli incidenti, pianificare la manutenzione, eseguire i controlli di verifica sui componenti della console e creare organizzazioni e spazi per l'ambiente. Questa autorizzazione equivale al ruolo di amministratore (admin) per la console di gestione.   |
+| Superuser | Gli utenti con l'autorizzazione **Superuser** impostata su **Attivo** possono modificare le autorizzazioni per gli altri utenti. Se hai l'autorizzazione attiva, ti viene automaticamente abilitato l'accesso completo alle altre autorizzazioni. Oltre alle attività descritte per ogni autorizzazione nella tabella, questi utenti possono anche impostare le sottoscrizioni di notifica per essere direttamente avvertiti in merito a manutenzione o incidenti, per pianificare la manutenzione, eseguire i controlli di verifica sui componenti della console e creare organizzazioni e spazi per l'ambiente. Questa autorizzazione equivale al ruolo di amministratore (admin) per la console di gestione.  |
 | Accesso di base | Gli utenti con l'autorizzazione **Accesso di base** impostata su **Attivo** possono visualizzare l'opzione della pagina di amministrazione nell'interfaccia utente  {{site.data.keyword.Bluemix_notm}}. Gli utenti con l'autorizzazione abilitata possono avere accesso alle [Informazioni di sistema](#oc_system) e ai tile [Utilizzo della risorsa](#oc_resource). Senza questa autorizzazione, gli utenti non possono visualizzare o accedere all'opzione di menu Amministrazione. Questa autorizzazione equivale al ruolo di amministratore (admin) per la console di gestione. Equivale all'autorizzazione di accesso utilizzata precedentemente per la console di gestione. |
 | Catalogo | Agli utenti con autorizzazione **Catalogo** può essere assegnato l'accesso in **Lettura** o in **Scrittura** (modifica) per i servizi disponibili nell'istanza locale o dedicata. L'accesso in lettura consente all'utente di accedere al tile di gestione del catalogo per visualizzare i servizi disponibili. L'accesso in scrittura consente all'utente di accedere al tile [Gestione catalogo](#oc_catalog) per visualizzare i servizi, modificare la visibilità dei servizi, registrare i servizi personalizzati e controllare l'elenco di priorità del pacchetto di build. |  
 | Report | Agli utenti con autorizzazione **Report** può essere assegnato l'accesso in **Lettura** o in **Scrittura** (modifica) per i report di sicurezza. L'accesso in lettura consente all'utente di accedere al tile Report e log per scaricare i report. L'accesso in scrittura consente agli utenti di visualizzare il tile [Report e log](#oc_report) così come di utilizzare la CLI per caricare nuovi report e creare nuove categorie per l'accesso degli utenti. |
@@ -1186,7 +1282,7 @@ Il seguente esempio mostra l'output di questo
 ## API del servizio personalizzato
 {: #servicebrokerapi}
 
-Sono disponibili tre API che ti consentono di registrare o creare un nuovo servizio, di aggiornare un servizio e di eliminare un servizio.
+Sono disponibili tre API che ti consentono di registrare o creare un servizio, di aggiornare un servizio e di eliminare un servizio.
 
 Tutte le API sono relative a <code>https://console.&lt;subdomain&gt;.bluemix.net/</code>.
 
@@ -1219,7 +1315,7 @@ POST /codi/v1/serviceBrokers
 | broker_url | URL utilizzato per connettersi al broker dei servizi. |
 | owningOrganization | Organizzazione iniziale per cui aggiungere il servizio nell'elenco elementi consentiti. |
 
-*Tabella 8. Campi*
+*Tabella 15. Campi*
 
 #### Corpo
 {: #registerbody}
@@ -1291,6 +1387,9 @@ Utilizza i seguenti esempi di API e codice per aggiornare un servizio.
 ### Richiesta
 {: #updaterequest}
 
+*Tabella 16. Campi*
+{: #caption}
+
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
 | name | Nome del broker dei servizi. Questo nome non può essere modificato dal nome con cui è stato creato il servizio. |
@@ -1298,8 +1397,6 @@ Utilizza i seguenti esempi di API e codice per aggiornare un servizio.
 | auth_password | Password utilizzata per connettersi al broker dei servizi. |
 | broker_url | URL utilizzato per connettersi al broker dei servizi. |
 | owningOrganization | Organizzazione iniziale per cui aggiungere il servizio nell'elenco elementi consentiti. |
-
-*Tabella 9. Campi*
 
 #### Corpo
 {: #updatebody}
@@ -1362,11 +1459,12 @@ Content-Type: application/json
 
 Utilizza i seguenti esempi di API e codice per eliminare un servizio.
 
+*Tabella 17. Parametro*
+{: #caption}
+
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
 | name | Nome del broker dei servizi. Questo nome non può essere modificato dal nome con cui è stato creato il servizio. |
-
-*Tabella 10. Parametro*
 
 ### Rotta
 

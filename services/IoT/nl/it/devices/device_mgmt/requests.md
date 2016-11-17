@@ -52,7 +52,7 @@ Per avviare un riavvio del dispositivo utilizzando l'API REST, immetti una richi
 Fornisci le seguenti informazioni:
 
 - L'azione `device/reboot`
-- Un elenco di dispositivi da riavviare, con un massimo di 5000 dispositivi 
+- Un elenco di dispositivi da riavviare, con un massimo di 5000 dispositivi
 
 Esempio di richiesta di riavvio del dispositivo:
 
@@ -72,7 +72,7 @@ Dopo aver avviato la richiesta, viene pubblicato un messaggio MQTT in tutti i di
 
 L'azione di riavvio termina quando il dispositivo invia una richiesta di gestione del dispositivo dopo il proprio riavvio.
 
-### Argomento per la richiesta di riavvio del dispositivo 
+### Argomento per la richiesta di riavvio del dispositivo
 
 Il server pubblica una richiesta di riavvio di un dispositivo nel seguente argomento:
 
@@ -80,7 +80,7 @@ Il server pubblica una richiesta di riavvio di un dispositivo nel seguente argom
 iotdm-1/mgmt/initiate/device/reboot
 ```
 
-### Il formato del messaggio per una richiesta di riavvio del dispositivo 
+### Il formato del messaggio per una richiesta di riavvio del dispositivo
 
 
 Formato richiesta:
@@ -110,16 +110,16 @@ Topic: iotdevice-1/response
 ## Azioni dispositivo - ripristino impostazioni predefinite
 {: #device-actions-factory-reset}
 
-Puoi avviare l'azione di reimpostazione dei valori predefiniti utilizzando il dashboard {{site.data.keyword.iot_short_notm}} o utilizzando l'API REST. 
+Puoi avviare l'azione di reimpostazione dei valori predefiniti utilizzando il dashboard {{site.data.keyword.iot_short_notm}} o utilizzando l'API REST.
 
-Per avviare una reimpostazione dei valori predefiniti del dispositivo utilizzando l'API REST, immetti una richiesta POST in: 
+Per avviare una reimpostazione dei valori predefiniti del dispositivo utilizzando l'API REST, immetti una richiesta POST in:
 
 `https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Vengono fornite le seguenti informazioni: 
+Vengono fornite le seguenti informazioni:
 
 - L'azione `device/factoryReset`
-- Un elenco di dispositivi da reimpostare, con un massimo di 5000 dispositivi 
+- Un elenco di dispositivi da reimpostare, con un massimo di 5000 dispositivi
 
 Il seguente esempio fornisce una richiesta di reimpostazione del dispositivo di esempio:
 
@@ -135,9 +135,9 @@ Il seguente esempio fornisce una richiesta di reimpostazione del dispositivo di 
 }
 ```
 
-Quando viene avviata una richiesta di reimpostazione del dispositivo, viene pubblicato un messaggio MQTT in tutti i dispositivi specificati nel corpo della richiesta. Per ogni dispositivo, deve essere restituita una risposta che indica se l'azione di reimpostazione è stata avviata. Il codice di risposta viene impostato su `202` se questa azione può essere avviata immediatamente. Se il tentativo di reimpostazione dei valori predefiniti fallisce, imposta il parametro `rc` su `500` e di conseguenza il parametro `message`. Se la reimpostazione dei valori predefiniti non è supportata, imposta il parametro `rc` su `501` e di conseguenza il parametro `message`. 
+Quando viene avviata una richiesta di reimpostazione del dispositivo, viene pubblicato un messaggio MQTT in tutti i dispositivi specificati nel corpo della richiesta. Per ogni dispositivo, deve essere restituita una risposta che indica se l'azione di reimpostazione è stata avviata. Il codice di risposta viene impostato su `202` se questa azione può essere avviata immediatamente. Se il tentativo di reimpostazione dei valori predefiniti fallisce, imposta il parametro `rc` su `500` e di conseguenza il parametro `message`. Se la reimpostazione dei valori predefiniti non è supportata, imposta il parametro `rc` su `501` e di conseguenza il parametro `message`.
 
-L'azione di reimpostazione dei valori predefiniti termina quando il dispositivo invia una richiesta di gestione del dispositivo dopo la reimpostazione. 
+L'azione di reimpostazione dei valori predefiniti termina quando il dispositivo invia una richiesta di gestione del dispositivo dopo la reimpostazione.
 
 ### Argomento per la richiesta di reimpostazione dei valori predefiniti
 
@@ -201,7 +201,7 @@ L'attributo `mgmt.firmware.updateStatus` descrive lo stato dell'aggiornamento de
 |Valore |Stato | Spiegazione |  
 |:---|:---|:---|
 |0 | Riuscito | Il firmware è stato aggiornato correttamente. |
-|1 | In corso  | L'aggiornamento del firmware è stato avviato ma non ancora completato.|
+|1 | In corso | L'aggiornamento del firmware è stato avviato ma non ancora completato.|
 |2 | Memoria non sufficiente | È stata rilevata una condizione di memoria non sufficiente durante l'operazione.|
 |3 | Connessione persa     | La connessione è stata persa durante lo scaricamento del firmware. |
 |4 | Verifica non riuscita | Il firmware non ha superato la verifica. |
@@ -211,20 +211,20 @@ L'attributo `mgmt.firmware.updateStatus` descrive lo stato dell'aggiornamento de
 ## Azioni firmware - scaricare
 {: #firmware-actions-download}
 
-Puoi avviare l'azione di scaricamento del firmware utilizzando il dashboard {{site.data.keyword.iot_short_notm}} o utilizzando l'API REST. 
+Puoi avviare l'azione di scaricamento del firmware utilizzando il dashboard {{site.data.keyword.iot_short_notm}} o utilizzando l'API REST.
 
-Per avviare uno scaricamento del firmware utilizzando l'API REST, immetti una richiesta POST in: 
+Per avviare uno scaricamento del firmware utilizzando l'API REST, immetti una richiesta POST in:
 
 `https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Vengono fornite le seguenti informazioni: 
+Vengono fornite le seguenti informazioni:
 
 - L'azione `firmware/download`
-- L'URI per l'immagine del firmware 
-- Un elenco di dispositivi per ricevere l'immagine, con un massimo di 5000 dispositivi 
+- L'URI per l'immagine del firmware
+- Un elenco di dispositivi per ricevere l'immagine, con un massimo di 5000 dispositivi
 - La stringa di verifica per convalidare l'immagine (facoltativo)
 - Nome del firmware (facoltativo)
-- Versione del firmware (facoltativo) 
+- Versione del firmware (facoltativo)
 
 Il seguente esempio mostra la richiesta di scaricamento del firmware su cui si basano tutti i seguenti messaggi di esempio:
 
@@ -253,10 +253,10 @@ Il seguente esempio mostra la richiesta di scaricamento del firmware su cui si b
 }
 ```
 
-Il server di gestione del dispositivo in {{site.data.keyword.iot_short_notm}} utilizza il protocollo di gestione del dispositivo per inviare una richiesta ai dispositivi, che avvia lo scaricamento del firmware. Il processo di download è costituito dai seguenti passi: 
+Il server di gestione del dispositivo in {{site.data.keyword.iot_short_notm}} utilizza il protocollo di gestione del dispositivo per inviare una richiesta ai dispositivi, che avvia lo scaricamento del firmware. Il processo di download è costituito dai seguenti passi:
 
 1. Una richiesta di aggiornamento dei dettagli del firmware viene inviata nell'argomento `iotdm-1/device/update`.
-La richiesta di aggiornamento consente la convalida del dispositivo se il firmware richiesto è diverso dal firmware correntemente installato. Se esiste una differenza, imposta il parametro `rc` su `204`, che viene convertito nello stato `Changed`.
+La richiesta di aggiornamento consente la convalida del dispositivo se il firmware richiesto è diverso dal firmware correntemente installato. Se esiste una differenza, imposta il parametro `rc` su `204`, che viene convertito nello stato `Changed`.  
 Il seguente esempio mostra quale messaggio attendere dal precedente invio della richiesta di scaricamento del firmware di esempio e quale risposta deve essere inviata quando viene individuata una differenza:
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -292,7 +292,7 @@ Il seguente esempio mostra quale messaggio attendere dal precedente invio della 
       "reqId" : "f38faafc-53de-47a8-a940-e697552c3194"
    }
    ```
-Questa risposta attiva la richiesta successiva.
+   Questa risposta attiva la richiesta successiva.
 2. La richiesta di osservazione per lo stato dello scaricamento del firmware `iotdm-1/observe` è stata inviata.
 La richiesta di osservazione verifica se il dispositivo è pronto ad avviare lo scaricamento del firmware. Non appena lo scaricamento può essere avviato, imposta il parametro `rc` su `200` (`Ok`), l'attributo `mgmt.firmware.state` su
    `0` (`Idle`) e l'attributo `mgmt.firmware.updateStatus` su `0` (`Idle`). Il seguente codice è un scambio di esempio tra {{site.data.keyword.iot_short_notm}} e il dispositivo:
@@ -321,11 +321,11 @@ La richiesta di osservazione verifica se il dispositivo è pronto ad avviare lo 
       "reqId" : "909b477c-cd37-4bee-83fa-1d568664fbe8"
    }
    ```
-Questo scambio attiva l'ultimo passo.   
+Questo scambio attiva l'ultimo passo.  
 
 3. La richiesta di scaricamento viene inviata all'argomento `iotdm-1/mgmt/initiate/firmware/download`:
 
-   La richiesta di scaricamento indica a un dispositivo di avviare lo scaricamento del firmware. Se l'azione può essere avviata immediatamente, imposta il parametro `rc` su `202`. Il seguente codice fornisce un esempio dell'avvio di una richiesta di scaricamento: 
+   La richiesta di scaricamento indica a un dispositivo di avviare lo scaricamento del firmware. Se l'azione può essere avviata immediatamente, imposta il parametro `rc` su `202`. Il seguente codice fornisce un esempio dell'avvio di una richiesta di scaricamento:
 
    ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -421,7 +421,7 @@ Message:
 }
 ```
 
-Le seguenti informazioni sono utili per la gestione degli errori: 
+Le seguenti informazioni sono utili per la gestione degli errori:
 
 - Se l'attributo `mgmt.firmware.state` non è `0` ("In sospeso"), invia un errore con il codice di risposta `400` e un testo del messaggio facoltativo.
 - Se l'attributo `mgmt.firmware.uri` non è impostato o se non è un URI valido, imposta il parametro `rc` su `400`.
@@ -438,11 +438,11 @@ Le seguenti informazioni sono utili per la gestione degli errori:
 ## Azioni firmware - Aggiornamento
 {: #firmware-actions-update}
 
-L'installazione del firmware scaricato viene avviata mediante l'API REST immettendo una richiesta POST in: 
+L'installazione del firmware scaricato viene avviata mediante l'API REST immettendo una richiesta POST in:
 
 `https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Vengono fornite le seguenti informazioni: 
+Vengono fornite le seguenti informazioni:
 
 - L'azione `firmware/update`
 - L'elenco di dispositivi per ricevere l'immagine, tutti dello stesso tipo di dispositivo.
@@ -508,7 +508,7 @@ Dopo che l'aggiornamento del firmware è stato scaricato correttamente, il serve
 Se questa operazione può essere avviata immediatamente, imposta il parametro `rc` su `202`.
 Se il firmware non è stato precedentemente scaricato correttamente, imposta il parametro `rc` su `400`.
 
-Il seguente codice mostra un esempio: 
+Il seguente codice mostra un esempio:
 
 ```
 Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -532,7 +532,7 @@ Message:
 Per completare la richiesta di aggiornamento del firmware, il dispositivo notifica il suo stato aggiornato a {{site.data.keyword.iot_short_notm}} utilizzando un messaggio di stato pubblicato in `iotdevice-1/notify`-topic.
 Quando viene completato un aggiornamento del firmware, l'attributo `mgmt.firmware.updateStatus` viene impostato su `0` (Riuscito), l'attributo `mgmt.firmware.state` viene impostato su `0` (In sospeso). L'immagine del firmware scaricata può quindi essere eliminata dal dispositivo e l'attributo `deviceInfo.fwVersion` viene impostato sul valore dell'attributo `mgmt.firmware.version`.
 
-Il seguente codice fornisce un esempio di un messaggio di notifica: 
+Il seguente codice fornisce un esempio di un messaggio di notifica:
 
 ```
 Outgoing message from device:

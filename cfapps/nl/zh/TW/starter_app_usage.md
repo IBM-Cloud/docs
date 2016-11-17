@@ -6,15 +6,12 @@ copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-01-12" 
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-
-*前次更新：2016 年 1 月 12 日*
-{: .last-updated}
 
 # 使用入門範本應用程式
 {: #using_starter_applications}
@@ -27,7 +24,7 @@ copyright:
 2. 按一下您要使用的運行環境。
 3. 如果尚未登入 {{site.data.keyword.Bluemix}}，請進行登入。
 4. 提供應用程式名稱、視需要修改主機名稱，然後按一下**建立**。
-5. 您的應用程式會開始編譯打包，並且在應用程式啟動時會在 Bluemix「儀表板」上顯示您應用程式的登陸頁面。
+5. 您的應用程式會開始編譯打包，並且在應用程式啟動時於 {{site.data.keyword.Bluemix_notm}}「儀表板」上顯示您應用程式的登入頁面。
 6. 您可以遵循該頁面上的指示來執行下列作業：
   * 下載 Cloud Foundry 指令行介面。
   * 下載入門範本應用程式。

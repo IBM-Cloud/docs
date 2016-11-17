@@ -19,7 +19,7 @@ Las áreas clave del {{site.data.keyword.iot_short_notm}} son Conexión, Gestió
 
 Para un desglose de algunas características más específicas disponibles en cada una de estas áreas, consulte [{{site.data.keyword.iot_short_notm}} Visión general de característica](/feature_overview.html).
 
-# Enlaces afines
+# Enlaces relacionados
 {: #rellinks}
 * [Iniciación a {{site.data.keyword.iot_short_notm}}](/index.html?pos=2)
 * [{{site.data.keyword.iot_short_notm}} Arquitectura](/iotplatform_overview.html#watsoniotplatform_architecture)

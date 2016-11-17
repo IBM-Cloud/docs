@@ -17,7 +17,8 @@ copyright:
 前次更新：2016 年 8 月 26 日
 {: .last-updated}
 
-如果您的裝置無法直接連接至網際網路，您可以建置閘道裝置來擷取資料，並將資料傳送至 {{site.data.keyword.iot_full}} 組織中的應用程式。{:shortdesc}
+如果您的裝置無法直接連接至網際網路，您可以建置閘道裝置來擷取資料，並將資料傳送至 {{site.data.keyword.iot_full}} 組織中的應用程式。
+{:shortdesc}
 
 支援使用 MQTT 傳訊通訊協定在 {{site.data.keyword.iot_short}} 中進行閘道開發。
 

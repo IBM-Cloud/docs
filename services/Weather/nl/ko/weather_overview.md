@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-22"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # {{site.data.keyword.weather_short}} 정보
 {: #about_weather}
-
-마지막 업데이트 날짜: 2016년 8월 22일
-{: .last-updated}
 
 {{site.data.keyword.weatherfull}}를 사용하여 TWC(The Weather Company)의 기상 데이터를
 {{site.data.keyword.Bluemix}} 애플리케이션에 통합할 수 있습니다.

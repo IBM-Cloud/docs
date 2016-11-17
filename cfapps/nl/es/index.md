@@ -6,7 +6,7 @@ copyright:
 
   years: 2015 2016
 
- 
+lastupdated: "2016-04-18" 
 
 ---
 
@@ -14,8 +14,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # Creación de apps de Cloud Foundry
-*Última actualización: 18 de abril de 2016*
-{: .last-updated}
 
 Con {{site.data.keyword.Bluemix}}, puede crear su app en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}. Una vez creada, puede seguir utilizando la interfaz de usuario o utilizar la interfaz de línea de mandatos cf o {{site.data.keyword.jazzhub_title}} para desarrollar, planificar, desplegar o realizar un seguimiento de la app.
 {:shortdesc}
@@ -33,7 +31,7 @@ Para empezar a crear la aplicación, siga los pasos siguientes:
 para elegir un iniciador, especifique un nombre y seleccione cómo desea codificar.
   4. Cuando acabe con las instrucciones, pulse **VER
 VISIÓN GENERAL DE LA APP**. Se visualiza la Visión general de su app en el panel de control.
-  5. Puede añadir un servicio a la app pulsando **AÑADIR UN SERVICIO O API** en la Visión general de la app, en la interfaz de usuario de Bluemix. Examine y seleccione servicios del catálogo, o desplácese hasta el final del catálogo y pulse **Servicios experimentales de {{site.data.keyword.Bluemix_notm}}** para examinar servicios experimentales. También puede utilizar la interfaz de línea de mandatos cf. Consulte Opciones para trabajar con apps.
+  5. Puede añadir un servicio a la app pulsando **AÑADIR UN SERVICIO O API** en la Visión general de la app, en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}. Examine y seleccione servicios del catálogo, o desplácese hasta el final del catálogo y pulse **Servicios experimentales de {{site.data.keyword.Bluemix_notm}}** para examinar servicios experimentales. También puede utilizar la interfaz de línea de mandatos cf. Consulte Opciones para trabajar con apps.
   6. En la Visión general de la app, pulse Añadir Git para guardar el origen de la aplicación en un
 repositorio Git y crear un proyecto alojado en Git. También puede desplegar la aplicación desde {{site.data.keyword.jazzhub_title}}.
 
@@ -57,7 +55,7 @@ Después de crear la app, tiene algunas opciones para continuar añadiendo servi
 Utilice los siguientes consejos para desarrollar apps web:
 
 <dl><dt>Persistencia</dt>
-<dd>No especifique ningún almacenamiento local para las apps. Cada instancia de la aplicación, aunque sólo haya una instancia en ejecución, se puede reiniciar o mover a otra máquina virtual en cualquier momento, normalmente para equilibrar la carga. Todo lo que se almacena en almacenamiento local se borra cuando la aplicación se mueve o se suprime. Utilice uno de los servicios de almacén de datos de Bluemix para conservar los datos.</dd>
+<dd>No especifique ningún almacenamiento local para las apps. Cada instancia de la aplicación, aunque sólo haya una instancia en ejecución, se puede reiniciar o mover a otra máquina virtual en cualquier momento, normalmente para equilibrar la carga. Todo lo que se almacena en almacenamiento local se borra cuando la aplicación se mueve o se suprime. Utilice uno de los servicios de almacén de datos de {{site.data.keyword.Bluemix_notm}} para conservar los datos. </dd>
 <dt>Límites de recursos</dt>
 <dd>Tenga en cuenta los límites sobre las cantidades de recursos que puede utilizar una cuenta de prueba. Los límites son los siguientes:
 <table style="width:100%">

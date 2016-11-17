@@ -48,7 +48,7 @@ Per installare la libreria client {{site.data.keyword.iot_full}} per Embedded C,
     cd iotf-embeddedc
     cp ~/org.eclipse.paho.mqtt.embedded-c-1.0.0.tar.gz lib/
 ```
-3. Estrarre il file libreria 
+3. Estrarre il file libreria
 ```  cd lib
     tar xvzf org.eclipse.paho.mqtt.embedded-c-1.0.0.tar.gz
 ```
@@ -81,8 +81,8 @@ La funzione `initialize` utilizza i seguenti parametri per collegarsi al servizi
 |`org`|Il tuo ID dell'organizzazione.|
 |`type` |Il tipo del tuo dispositivo.|
 |`id` |L'ID del dispositivo.|
-|`auth-method` |Il metodo di autenticazione da utilizzare. L'unico valore al momento supportato è `token`. |
-|`auth-token`|Un token di autenticazione per la connessione sicura al tuo dispositivo su Watson IoT Platform. |
+|`auth-method` |Il metodo di autenticazione da utilizzare. L'unico valore al momento supportato è `token`.|
+|`auth-token`|Un token di autenticazione per la connessione sicura al tuo dispositivo su Watson IoT Platform.|
 
 
 ```
@@ -111,7 +111,7 @@ Puoi anche utilizzare un file di configurazione per inizializzare la libreria cl
 	....
 ```
 
-Il file di configurazione deve essere nel seguente formato: 
+Il file di configurazione deve essere nel seguente formato:
 
 ```
 	org=$orgId
@@ -156,7 +156,7 @@ Quando il client del dispositivo si connette, effettua automaticamente la sottos
 
 |Proprietà |Descrizione|
 |:---|:---|
-|`commandName`  |Il nome del comando che è stato richiamato.  |  
+|`commandName`  |Il nome del comando che è stato richiamato. |  
 |`format`  |Il formato dell'evento. Il formato può essere qualsiasi stringa, ad esempio JSON.|
 |`payload`  |I dati per il payload del comando. La lunghezza massima è di 131072 byte. |
 

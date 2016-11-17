@@ -1,7 +1,7 @@
 ---
 
-copyright :
-  années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -13,19 +13,19 @@ copyright :
 
 # Intégrations de service externe
 {: #ref-index}
-Dernière mise à jour : 13 septembre 2016
+Dernière mise à jour : 26 septembre 2016
 {: .last-updated}
 
-L'intégration de service externe vous permet d'accéder à des données et des opérations à partir de services tiers ou externes au sein de votre organisation {{site.date.keyword.iot_full}}. 
+L'intégration de service externe vous permet d'accéder à des données et des opérations à partir de services tiers ou externes au sein de votre organisation {{site.data.keyword.iot_full}}.
 
 ## Jasper
 {: #jasper}
 
-Jasper est une plateforme de gestion et d'administration des terminaux SIM. Elle est intégrée au tableau de bord {{site.data.keyword.iot_short_notm}}, ce qui permet d'administrer des terminaux Jasper via votre tableau de bord d'organisation {{site.data.keyword.iot_short_notm}}. 
+Jasper est une plateforme de gestion et d'administration des terminaux SIM. Elle est intégrée au tableau de bord {{site.data.keyword.iot_short_notm}}, ce qui permet d'administrer des terminaux Jasper via votre tableau de bord d'organisation {{site.data.keyword.iot_short_notm}}.
 
 ### Opérations prises en charge pour Jasper
 
-L'intégration Jasper fournie par notre plateforme assure la prise en charge des opérations Jasper suivantes  
+L'intégration Jasper fournie par notre plateforme assure la prise en charge des opérations Jasper suivantes
 
 - Affichage de l'ensemble des données Jasper
   - Affiche le statut, le plan tarifaire, l'utilisation mensuelle des données à ce jour, l'utilisation mensuelle des SMS à ce jour, l'utilisation mensuelle de la voix à ce jour, les limites de dépassement, les dates d'ajout et les dates de modification.
@@ -33,7 +33,6 @@ L'intégration Jasper fournie par notre plateforme assure la prise en charge des
   - Sélectionnez : Inventory, Activation Ready, Activated, Deactivated et Retired.
 - Affichage de l'utilisation du terminal SIM
   - Affiche la date de début du cycle, les données facturables et le total des données, les SMS facturables et le total des SMS, la voix facturable et le total pour la voix.
-
   - La date de début du cycle peut être définie au format AAAA-MM-JJ.
 - Envoi d'un SMS à un terminal SIM
 - Modification du plan tarifaire
@@ -41,25 +40,24 @@ L'intégration Jasper fournie par notre plateforme assure la prise en charge des
 Les opérations prises en charge sont accessibles dans le menu d'exploration d'un terminal connecté via Jasper, après l'exécution des étapes de configuration ci-dessous.
 
 
-
 ### Configuration pour Jasper
 
-Pour connecter votre terminal Jasper à votre organisation {{site.data.keyword.iot_short_notm}}, deux étapes de configuration doivent être exécutées au préalable. Vous devez connecter votre instance {{site.data.keyword.iot_short_notm}} à votre service Jasper, puis configurer les terminaux {{site.data.keyword.iot_short_notm}}. 
+Pour connecter votre terminal Jasper à votre organisation {{site.data.keyword.iot_short_notm}}, deux étapes de configuration doivent être exécutées au préalable. Vous devez connecter votre instance {{site.data.keyword.iot_short_notm}} à votre service Jasper, puis configurer les terminaux {{site.data.keyword.iot_short_notm}}.
 
 
 1. Activez l'extension Jasper. Pour activer l'intégration de Jasper à votre organisation {{site.data.keyword.iot_short_notm}}, procédez comme suit :
   1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions**.
   2. Sur la page **Extensions**, cliquez sur **Ajouter une extension**.
-  3. Cliquez sur **Ajouter** en regard de AT&T.
-  4. Entrez votre nom d'utilisateur, mot de passe, clé d'accès et ID de domaine AT&T.
-  5. Cliquez sur **Terminé**. 
+  3. Cliquez sur **Ajouter** en regard de Jasper.
+  4. Entrez votre nom d'utilisateur, mot de passe, clé d'accès et ID de domaine Jasper. 
+  5. Cliquez sur **Terminé**.
 
 2. Configurez vos terminaux
-Vous pouvez configurer les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}} et à votre compte Jasper afin d'afficher les données provenant de Jasper dans le tableau de bord {{site.data.keyword.iot_short_notm}}.
-**Important :** La configuration de Jasper ne peut pas être appliquée dans le cadre du processus d'ajout de terminal. Seuls les terminaux précédemment connectés peuvent être configurés avec Jasper.
+Vous pouvez configurer les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}} et à votre compte Jasper afin d'afficher les données provenant de Jasper dans le tableau de bord {{site.data.keyword.iot_short_notm}}.  
+**Important :** La configuration de Jasper ne peut pas être appliquée dans le cadre du processus d'ajout de terminal. Seuls les terminaux précédemment connectés peuvent être configurés avec Jasper.  
 Pour configurer vos terminaux connectés via Jasper, procédez comme suit :
- 1. Sur l'onglet Terminaux de votre tableau de bord {{site.data.keyword.iot_short_notm}}, localisez le terminal connecté via Jasper à configurer. 
- 2. Sélectionnez le terminal pour ouvrir la vue *Exploration du terminal*. 
+ 1. Sur l'onglet Terminaux de votre tableau de bord {{site.data.keyword.iot_short_notm}}, localisez le terminal connecté via Jasper à configurer.
+ 2. Sélectionnez le terminal pour ouvrir la vue *Exploration du terminal*.
  3. Faites défiler l'écran jusqu'à *Configuration d'une extension*.
  4. Entrez la configuration d'extension au format JSON ci-dessous, puis cliquez sur **Confirmation des modifications** pour sauvegarder votre configuration.  
 
@@ -72,14 +70,14 @@ Pour configurer vos terminaux connectés via Jasper, procédez comme suit :
 
 ```
 
-Une fois l'organisation correctement configurée, la section *Extensions* s'affiche sous la section *Configuration des extensions* dans la vue *Exploration du terminal*. 
+Une fois l'organisation correctement configurée, la section *Extensions* s'affiche sous la section *Configuration des extensions* dans la vue *Exploration du terminal*.
 
 ## AT&T
 {: #att}
 
 ### Opérations prises en charge pour AT&T
 
-L'extension AT&T permet d'effectuer les opérations AT&T suivantes 
+L'extension AT&T permet d'effectuer les opérations AT&T suivantes
 
 - Affichage de l'ensemble des données AT&T
   - Affiche le statut, le plan tarifaire, l'utilisation mensuelle des données à ce jour, l'utilisation mensuelle des SMS à ce jour, l'utilisation mensuelle de la voix à ce jour, les limites de dépassement, les dates d'ajout et les dates de modification.
@@ -87,14 +85,13 @@ L'extension AT&T permet d'effectuer les opérations AT&T suivantes
   - Sélectionnez : Inventory, Activation Ready, Activated, Deactivated et Retired.
 - Affichage de l'utilisation du terminal SIM
   - Affiche la date de début du cycle, les données facturables et le total des données, les SMS facturables et le total des SMS, la voix facturable et le total pour la voix.
-
   - La date de début du cycle peut être définie au format AAAA-MM-JJ.
 - Envoi d'un SMS à un terminal SIM
 - Modification du plan tarifaire
 
 ### Configuration pour AT&T
 
-Pour connecter votre organisation {{site.data.keyword.iot_short_notm}} à &T, vous devez effectuer une configuration d'organisation et une configuration de terminal. 
+Pour connecter votre organisation {{site.data.keyword.iot_short_notm}} à &T, vous devez effectuer une configuration d'organisation et une configuration de terminal.
 
 Pour configurer votre plateforme {{site.data.keyword.iot_short_notm}}, procédez comme suit :
 
@@ -103,17 +100,17 @@ Pour configurer votre plateforme {{site.data.keyword.iot_short_notm}}, procédez
   2. Sur la page **Extensions**, cliquez sur **Ajouter une extension**.
   3. Cliquez sur **Ajouter** en regard de AT&T.
   4. Entrez votre nom d'utilisateur, mot de passe, clé d'accès et ID de domaine AT&T.
-  5. Cliquez sur **Terminé**. 
+  5. Cliquez sur **Terminé**.
 
-Pour connecter votre organisation {{site.data.keyword.iot_short_notm}} à votre compte AT&T, deux étapes de configuration doivent être exécutées au préalable. Exécutez la configuration de l'organisation, puis configurez vos terminaux. 
+Pour connecter votre organisation {{site.data.keyword.iot_short_notm}} à votre compte AT&T, deux étapes de configuration doivent être exécutées au préalable. Exécutez la configuration de l'organisation, puis configurez vos terminaux.
 
 
 2. Configurez vos terminaux
-Vous pouvez configurer les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}}  et à votre compte AT&T afin d'afficher les données provenant d'AT&T dans le tableau de bord {{site.data.keyword.iot_short_notm}}.
-**Important :** La configuration d'AT&T ne peut pas être appliquée dans le cadre du processus d'ajout de terminal. Seuls les terminaux précédemment connectés peuvent être configurés avec AT&T.
+Vous pouvez configurer les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}}  et à votre compte AT&T afin d'afficher les données provenant d'AT&T dans le tableau de bord {{site.data.keyword.iot_short_notm}}.  
+**Important :** La configuration d'AT&T ne peut pas être appliquée dans le cadre du processus d'ajout de terminal. Seuls les terminaux précédemment connectés peuvent être configurés avec AT&T.  
 Pour configurer vos terminaux connectés via AT&T, procédez comme suit :
- 1. Sur l'onglet Terminaux de votre tableau de bord {{site.data.keyword.iot_short_notm}}, localisez le terminal connecté via AT&T à configurer. 
- 2. Sélectionnez le terminal pour ouvrir la vue *Exploration du terminal*. 
+ 1. Sur l'onglet Terminaux de votre tableau de bord {{site.data.keyword.iot_short_notm}}, localisez le terminal connecté via AT&T à configurer.
+ 2. Sélectionnez le terminal pour ouvrir la vue *Exploration du terminal*.
  3. Faites défiler l'écran jusqu'à *Configuration d'une extension*.
  4. Entrez la configuration d'extension au format JSON ci-dessous, puis cliquez sur **Confirmation des modifications** pour sauvegarder votre configuration.  
 
@@ -126,34 +123,34 @@ Pour configurer vos terminaux connectés via AT&T, procédez comme suit :
 
 ```
 
-Une fois l'organisation correctement configurée, la section *Extensions* s'affiche sous la section *Configuration des extensions* dans la vue *Exploration du terminal*. 
+Une fois l'organisation correctement configurée, la section *Extensions* s'affiche sous la section *Configuration des extensions* dans la vue *Exploration du terminal*.
 
-<!--
-## ARM mbed connector
+
+## ARM mbed Connector
 {: #arm}
 
-The ARM mbed connector is an extension that allows you to connect your ARM mbed device to your {{site.data.keyword.iot_short_notm}}. The ARM mbed extension is allows the ARM mbed portal and the {{site.data.keyword.iot_short_notm}} to send and receive data from the ARM mbed portal.
+ARM mbed Connector vous permet de connecter votre terminal ARM mbed à votre {{site.data.keyword.iot_short_notm}}. L'extension ARM mbed permet au portail ARM mbed et à {{site.data.keyword.iot_short_notm}} d'envoyer et de recevoir des données depuis le portail ARM mbed. 
 
-### Setup Configuration
+### Configuration de l'installation
 
 
-1. Enable the ARM mbed connector extension. To enable the ARM mbed connector extension complete the following steps:
-  1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Settings** and navigate to **Extensions**.
-  2. In the **Extensions** menu, click **Add Extension**.
-  3. Click **Add** next to ARM mbed connector extension.
-  4. Enter your ARM mbed access key and domain ID. You can find these by using the ARM mbed portal at https://connector.mbed.com.
-  5. Check the credentials are correct by clicking the **Check Connection** button.
-  6. Click **Done**.
+1. Activez l'extension ARM mbed Connector. Pour ce faire, procédez comme suit :
+  1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Paramètres** et accédez à **Extensions**.
+  2. Dans le menu **Extensions**, cliquez sur **Ajouter une extension**.
+  3. Cliquez sur **Ajouter** en regard de l'extension ARM mbed Connector. 
+  4. Entrez votre clé d'accès et ID de domaine ARM mbed. Ces informations se trouvent sur le portail ARM mbed (https://connector.mbed.com).
+  5. Vérifiez que les données d'identification sont correctes en cliquant sur le bouton **Vérifier la connexion**. 
+  6. Cliquez sur **Terminé**.
 
-### Payload Format
+### Format de contenu
 
-There are two types of incoming messages from the ARM mbed platform, notifications and asynchronous responses. The {{site.data.keyword.iot_short_notm}} can send commands to devices that are connected to the ARM mbed platform.
+Il existe deux types de messages entrants à partir de la plateforme ARM mbed, des notifications et des réponses asynchrones. {{site.data.keyword.iot_short_notm}} peut envoyer des commandes à des terminaux qui sont connectés à la plateforme ARM mbed. 
 
 #### Notifications
 
-Notifications are generated by changes in device or sensor data. After the {{site.data.keyword.iot_short_notm}} processes the message, it is to the device event topic in the same way as a device connected directly to the {{site.data.keyword.iot_short_notm}}. The event type used for notifications originating on devices connected to the ARM mbed platform is `notify`.
+Des notifications sont générées par les modifications apportées aux données de terminal ou de capteur. Après le traitement du message par{{site.data.keyword.iot_short_notm}}, le message est envoyé à la rubrique d'événement de terminal comme le ferait un terminal connecté directement à {{site.data.keyword.iot_short_notm}}. Le type d'événement utilisé pour les notifications émises par les terminaux connectés à la plateforme ARM mbed est `notify`.
 
-The following code sample shows the payload format for a notification sent by the ARM mbed platform API:
+L'exemple de code suivant illustre le format de contenu d'une notification envoyée par l'API de plateforme ARM mbed :
 
 ```
 {
@@ -165,11 +162,11 @@ The following code sample shows the payload format for a notification sent by th
 }
 ```
 
-#### Asynchronous responses
+#### Réponses asynchrones
 
-When the {{site.data.keyword.iot_short_notm}} sends a command to a device connected to the ARM mbed platform, the device sends a confirmation message back to the {{site.data.keyword.iot_short_notm}}. This confirmation message is called an _asynchronous response_ and uses the event type `asyncResponse`.
+Lorsque {{site.data.keyword.iot_short_notm}} envoie une commande à un terminal connecté à la plateforme ARM mbed, le terminal renvoie un message de confirmation à {{site.data.keyword.iot_short_notm}}. Ce message de confirmation est appelé *réponse asynchrone* et utilise le type d'événement `asyncResponse`.
 
-The following code sample shows the payload format for an asynchronous response sent by the ARM mbed cloud service:
+L'exemple de code suivant illustre le format de contenu d'une réponse asynchrone envoyée par le service cloud ARM mbed :
 
 ```
 {
@@ -183,9 +180,9 @@ The following code sample shows the payload format for an asynchronous response 
 }
 ```
 
-#### Sending commands to the ARM mbed platform
+#### Envoi de commandes à la plateforme ARM mbed
 
-The {{site.data.keyword.iot_short_notm}} can send commands to devices connected to the ARM mbed platform. Commands sent to the ARM mbed platform it must use the following JSON format.
+{{site.data.keyword.iot_short_notm}} peut envoyer des commandes à des terminaux connectés à la plateforme ARM mbed. Les commandes envoyées à la plateforme ARM mbed doivent utiliser le format JSON suivant :
 
 ```
 {
@@ -195,24 +192,26 @@ The {{site.data.keyword.iot_short_notm}} can send commands to devices connected 
   "payload": <Base64 encoded payload>
 }
 ```
+La méthode choisie est sensible à la casse. Le début '/' du chemin d'accès à la ressource doit être ignorée.
 
-The payload should be published to the following topic:
+
+Le contenu doit être publié dans la rubrique suivante :
 
 ```
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ```
--->
+
 
 ## Orange
 {: #orange}
 
-L'extension Orange vous permet d'afficher des données de carte SIM à partir de terminaux qui sont connectés à votre instance {{site.data.keyword.iot_short_notm}} et sur lesquels une carte SIM Orange est installée. 
+L'extension Orange vous permet d'afficher des données de carte SIM à partir de terminaux qui sont connectés à votre instance {{site.data.keyword.iot_short_notm}} et sur lesquels une carte SIM Orange est installée.
 
 https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration-with-orange-beta/
 
 ### Opérations prises en charge pour Orange
 
-Si vous disposez d'un terminal connecté à votre service {{site.data.keyword.iot_short_notm}} et dotée d'une carte SIM Orange, vous pouvez utiliser l'extension Orange pour afficher les données de carte SIM suivantes : 
+Si vous disposez d'un terminal connecté à votre service {{site.data.keyword.iot_short_notm}} et dotée d'une carte SIM Orange, vous pouvez utiliser l'extension Orange pour afficher les données de carte SIM suivantes :
 
 - Numéro de série SIM
 - statut d'activation
@@ -229,12 +228,12 @@ Pour activer l'extension Orange :
 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions**.
 2. Sur la page **Extensions**, cliquez sur **Ajouter une extension**.
 3. Cliquez sur **Ajouter** en regard de l'extension Orange.
-4. Entrez votre nom d'utilisateur et votre mot de passe Orange. 
-6. Cliquez sur **Terminé**. 
+4. Entrez votre nom d'utilisateur et votre mot de passe Orange.
+6. Cliquez sur **Terminé**.
 
-Une fois l'extension Orange activée, chaque terminal doté d'une carte SIM Orange doit être configurée pour afficher des données SIM Orange. 
+Une fois l'extension Orange activée, chaque terminal doté d'une carte SIM Orange doit être configurée pour afficher des données SIM Orange.
 
-1. Sur l'onglet Terminaux de votre tableau de bord {{site.data.keyword.iot_short_notm}}, localisez le terminal SIM Orange à configurer. 
+1. Sur l'onglet Terminaux de votre tableau de bord {{site.data.keyword.iot_short_notm}}, localisez le terminal SIM Orange à configurer.
 2. Sélectionnez le terminal, puis faites défiler l'écran jusqu'à *Configuration d'une extension*.
 3. Entrez la configuration d'extension au format JSON ci-dessous, puis cliquez sur **Confirmation des modifications** pour sauvegarder votre configuration.
 
@@ -248,29 +247,57 @@ Une fois l'extension Orange activée, chaque terminal doté d'une carte SIM Oran
 ```
 Une fois l'organisation correctement configurée, la section *Extensions* s'affiche sous la section *Configuration des extensions* dans la vue *Exploration du terminal*.
 
+## Stockage des données d'historique
+{: #historical_data}
 
-## Extensions Gestion des terminaux
+L'extension de stockage de données historiques vous permet de localiser et configurer des services de stockage de message compatibles, par exemple, [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) ou [{{site.data.keyword.messagehub_full}}](../../message_hub.html) pour vos données IoT. 
+
+## Packages de gestion des terminaux personnalisés
 {: #device_mgmt}
 
-La gestion des terminaux est une fonction principale du service {{site.data.keyword.iot_short_notm}} ; elle peut toutefois être étendue pour développer des fonctions supplémentaires. 
+La gestion des terminaux est une fonction principale du service {{site.data.keyword.iot_short_notm}} ; elle peut toutefois être étendue pour développer des fonctions supplémentaires.
 
 L'extension Gestion des terminaux vous permet d'installer des fonctions personnalisées pour la gestion des terminaux. Pour plus d'informations sur les fonctions de gestion des terminaux personnalisées, voir [Extensions personnalisées de gestion des terminaux](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
 ## Chaîne de blocs
 {: #blockchain}
 
-{{site.data.keyword.iot_short_notm}} avec chaîne de blocs permet aux terminaux IoT de fournir des données aux transactions de chaîne de blocs, ainsi, les données sont stockées dans le grand livre non modifiable de chaîne de blocs et sont utilisées dans des règles métier de contrat intelligent. {{site.data.keyword.iot_short_notm}} mappe les données de terminal au format de données qui est requis par le contrat intelligent de la chaîne de blocs et les transmet à une matrice de chaîne de blocs pour stockage dans le grand livre de chaîne de blocs. 
+{{site.data.keyword.iot_short_notm}} avec chaîne de blocs permet aux terminaux IoT de fournir des données aux transactions de chaîne de blocs, ainsi, les données sont stockées dans le grand livre non modifiable de chaîne de blocs et sont utilisées dans des règles métier de contrat intelligent. {{site.data.keyword.iot_short_notm}} mappe les données de terminal au format de données qui est requis par le contrat intelligent de la chaîne de blocs et les transmet à une matrice de chaîne de blocs pour stockage dans le grand livre de chaîne de blocs.
 
 ### Opérations prises en charge pour la chaîne de blocs
-- Déclenchement des mises à jour de contrat intelligent avec des événements de terminal. 
-- Exécution d'une logique métier de contrat intelligent pour mettre à jour un état de grand livre avec des données d'événement de terminal. 
-- Surveillance de l'état de chaîne de blocs, de transactions et de grand livre à l'aide de l'interface utilisateur de surveillance. 
+- Déclenchement des mises à jour de contrat intelligent avec des événements de terminal.
+- Exécution d'une logique métier de contrat intelligent pour mettre à jour un état de grand livre avec des données d'événement de terminal.
+- Surveillance de l'état de chaîne de blocs, de transactions et de grand livre à l'aide de l'interface utilisateur de surveillance.
 
 ### Configuration pour la chaîne de blocs
 
-L'intégration de chaîne de blocs à {{site.data.keyword.iot_short_notm}} est une offre de services qui n'est pas activée par défaut dans {{site.data.keyword.iot_short_notm}}. Pour activer la fonction dans votre environnement, procédez comme suit : 
- 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Paramètres** et accédez à **Extensions**.
- 2. Cliquez sur le lien **Informations complémentaires** en regard de l'extension de chaîne de blocs pour accéder à la page des offres de services IoT Blockchain. 
- 3. Remplissez et soumettez le formulaire de demande de service.
-L'approbation du service prend généralement une journée. Une fois votre demande approuvée, vous recevez un courrier électronique contenant les instructions permettant d'activer l'intégration de chaîne de blocs dans votre organisation {{site.data.keyword.iot_short_notm}}. 
+L'intégration de chaîne de blocs à {{site.data.keyword.iot_short_notm}} est une offre de services qui n'est pas activée par défaut dans {{site.data.keyword.iot_short_notm}}. Pour activer la fonction dans votre environnement, procédez comme suit :
+ 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions**.
+ 2. Cliquez sur le lien **Informations complémentaires** en regard de l'extension de chaîne de blocs pour accéder à la page des offres de services IoT Blockchain.
+ 3. Remplissez et soumettez le formulaire de demande de service.   
+L'approbation du service prend généralement une journée. Une fois votre demande approuvée, vous recevez un courrier électronique contenant les instructions permettant d'activer l'intégration de chaîne de blocs dans votre organisation {{site.data.keyword.iot_short_notm}}.
  5. Revenez au tableau de bord {{site.data.keyword.iot_short_notm}} pour que votre organisation puisse terminer la configuration. Pour plus d'informations, voir [Intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}}](../../bl_blockchain_integration.html).
+
+## The Weather Company
+{: #weathercompany}
+
+L'extension The Weather Company associe des données météorologiques à vos terminaux {{site.data.keyword.iot_short_notm}} existants. Les données météorologiques de The Weather Company apparaissent dans la vue de détails du terminal si une demande de mise à jour d'emplacement a été émise par l'API ou si le terminal a déjà défini son emplacement à l'aide d'un message de gestion de terminaux. 
+
+**Remarque :** Seuls les terminaux gérés peuvent définir leurs propres emplacements. Les emplacements de tous les terminaux non gérés doivent être définis manuellement à l'aide de l'API. Pour plus d'informations sur la définition d'un emplacement de terminal, voir [Demandes de mise à jour d'emplacement](../../devices/device_mgmt/index.html#update-location).
+
+### Données météorologiques
+
+Pour afficher les données météorologiques extraites pour un emplacement de terminal, localisez le terminal dans le panneau **Devices** et cliquez dessus. Dans la vue de détails du terminal, faites défiler l'écran jusqu'à la section **Extensions**. Les données météorologiques suivantes sont répertoriées :
+
+- Météo en cours. 
+- Température en cours.
+- Températures maximale et minimale prévues. 
+- Humidité relative.
+- Pression.
+- Visibilité. 
+- Vitesse du vent.
+- Direction du vent.
+- Latitude.
+- Longitude.
+
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html). -->

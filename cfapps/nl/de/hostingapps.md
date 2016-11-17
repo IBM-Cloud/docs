@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，20166
 
- 
+lastupdated: "2016-05-09" 
 
 ---
 
@@ -16,9 +16,6 @@ copyright:
 {:screen: .screen}
 
 #Apps in {{site.data.keyword.Bluemix_notm}} hosten
-
-*Letzte Aktualisierung: 9. Mai 2016*
-{: .last-updated}
 
 <!--The whole topic is staging only -->
 
@@ -88,7 +85,7 @@ Sie können Ihre Anwendungen schrittweise nach {{site.data.keyword.Bluemix_notm}
 
 Es kann erforderlich sein, in den Cloudanwendungen auf die Back-End-Daten oder -Services zuzugreifen, zum Beispiel auf ein System of Record (SOR, Kerndatensystem). In {{site.data.keyword.Bluemix_notm}} können Sie den Service 'Secure Gateway' zum Herstellen eines sicheren Tunnels zwischen einer {{site.data.keyword.Bluemix_notm}}-Organisation und dem Back-End-Netz des Unternehmens verwenden. Mithilfe des Service können die Anwendungen in {{site.data.keyword.Bluemix_notm}} auf die Daten und Services des Back-End-Netzes zugreifen. Details hierzu finden Sie unter [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}.
 
-Wenn Sie eine Anwendung in {{site.data.keyword.Bluemix_notm}} als Cloud Foundry-Anwendung bereitstellen möchten, wählen Sie eine Laufzeit aus dem {{site.data.keyword.Bluemix_notm}}-Katalog aus. Bestandteil der Laufzeit ist die Startanwendung Hello World, die Sie durch eine eigene Anwendung ersetzen können. Wenn Sie keine Startanwendung finden, von der die gewünschte Laufzeit bereitgestellt wird, können Sie ein angepasstes Cloud Foundry-kompatibles Buildpack zu {{site.data.keyword.Bluemix_notm}} hinzufügen; verwenden Sie hierzu den Befehl 'cf push' mit der Option '-b'. Details hierzu finden Sie unter [Community-Buildpacks verwenden](../cfapps/byob.html).
+Wenn Sie eine Anwendung in {{site.data.keyword.Bluemix_notm}} als Cloud Foundry-Anwendung bereitstellen möchten, wählen Sie eine Laufzeit aus dem {{site.data.keyword.Bluemix_notm}}-Katalog aus. Bestandteil der Laufzeit ist die Startanwendung Hello World, die Sie durch eine eigene Anwendung ersetzen können. Wenn Sie keine Startanwendung finden, von der die gewünschte Laufzeit bereitgestellt wird, können Sie ein angepasstes Cloud Foundry-kompatibles Buildpack zu {{site.data.keyword.Bluemix_notm}} hinzufügen; verwenden Sie hierzu den Befehl 'cf push' mit der Option '-b'. Details hierzu finden Sie unter [Community-Buildpacks verwenden](/docs/cfapps/byob.html).
 
 Sie können die folgenden Tools und Services verwenden, die von {{site.data.keyword.Bluemix_notm}} bereitgestellt werden:
 
@@ -96,7 +93,7 @@ Sie können die folgenden Tools und Services verwenden, die von {{site.data.keyw
 
 | Tool	| Methode |
 |:------|:--------|
-|Cloud Foundry-Befehlszeilenschnittstelle (Befehlszeilenschnittstelle 'cf')	|Verwalten Sie den Code auf einem lokalen Client und verwenden Sie die Cloud Foundry-Befehlszeilenschnittstelle, um Ihre Anwendung mit einer Push-Operation manuell zu {{site.data.keyword.Bluemix_notm}} zu übertragen. Weitere Informationen finden Sie unter [Apps hochladen](../starters/upload_app.html).|
+|Cloud Foundry-Befehlszeilenschnittstelle (Befehlszeilenschnittstelle 'cf')	|Verwalten Sie den Code auf einem lokalen Client und verwenden Sie die Cloud Foundry-Befehlszeilenschnittstelle, um Ihre Anwendung mit einer Push-Operation manuell zu {{site.data.keyword.Bluemix_notm}} zu übertragen. Weitere Informationen finden Sie unter [Apps hochladen](/docs/starters/upload_app.html).|
 |Eclipse	|Verwalten Sie den Code in Eclipse und verwenden Sie IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, um Ihre Anwendung mit einer Push-Operation zu übertragen.|
 |Git-Integration	|Verwalten Sie den Code mit GitHub und integrieren Sie Git in {{site.data.keyword.Bluemix_notm}}. Sie können mit anderen Entwicklern zusammenarbeiten. Die Anwendung wird automatisch in {{site.data.keyword.Bluemix_notm}} bereitgestellt, wenn Sie Änderungen am Code festschreiben. Sie müssen die Anwendung nicht manuell mit einer Push-Operation übertragen.|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Verwalten Sie den Code mithilfe eines DevOps GitHub-Repositorys und stellen Sie die Anwendung in {{site.data.keyword.Bluemix_notm}} unter Verwendung von DevOps Delivery Pipeline bereit.|
@@ -134,7 +131,7 @@ Führen Sie die folgenden Schritte aus, um die Anwendung zu migrieren:
   instances: 1
   memory: 512M</code></pre>
 <p>Weitere Informationen zu den unterstützten Optionen, die Sie in dieser Datei verwenden können, finden Sie unter
-[Anwendungsmanifest](../manageapps/depapps.html#appmanifest).
+[Anwendungsmanifest](/docs/manageapps/depapps.html#appmanifest).
 
 </p></li></ol>
 </li>
@@ -159,7 +156,7 @@ Führen Sie die folgenden Schritte aus, um die Anwendung zu migrieren:
 
 * Wenn Sie den Befehl 'cf push' verwenden, kopiert die Befehlszeilenschnittstelle 'cf' alle Dateien und Verzeichnisse aus Ihrem aktuellen Verzeichnis in {{site.data.keyword.Bluemix_notm}}. Stellen Sie sicher, dass sich in Ihrem Anwendungsverzeichnis nur die erforderlichen Dateien befinden.
 * Stellen Sie sicher, dass von Ihrer Organisation ausreichend Speicherplatz für alle Instanzen der Anwendung bereitgestellt wird. Das Speicherkontingent für Ihre Organisation können Sie mit 'cf org Organisationsname' anzeigen.
-* Weitere Informationen zum Befehl 'cf push' finden Sie unter ['cf'-Befehle](../cli/reference/cfcommands/index.html).
+* Weitere Informationen zum Befehl 'cf push' finden Sie unter ['cf'-Befehle](/docs/cli/reference/cfcommands/index.html).
 
 ##Daten migrieren und Services verwenden
 {: #ht_service}
@@ -195,9 +192,9 @@ Wenn Sie sicherstellen möchten, dass die Anwendung nach ihrer Änderung für {{
 ## Zugehörige Links
 {: #general}
 
-* [IBM Containers](../containers/container_index.html)
-* [Virtual Machines](../virtualmachines/vm_index.html)
-* [Einführung in Delivery Pipeline](../services/DeliveryPipeline/index.html)
-* [Apps mit IBM Eclipse Tools for Bluemix bereitstellen](../manageapps/eclipsetools/eclipsetools.html)
+* [IBM Containers](/docs/containers/container_index.html)
+* [Virtual Machines](/docs/virtualmachines/vm_index.html)
+* [Einführung in Delivery Pipeline](/docs/services/DeliveryPipeline/index.html)
+* [Apps mit IBM Eclipse Tools for Bluemix bereitstellen](/docs/manageapps/eclipsetools/eclipsetools.html)
 * [The Twelve-Factor App](http://12factor.net/){:new_window}
 * [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}

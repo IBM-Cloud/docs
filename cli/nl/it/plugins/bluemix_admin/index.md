@@ -36,6 +36,8 @@ l'interfaccia riga di comando Cloud Foundry](https://github.com/cloudfoundry/cli
 è supportata da Cygwin. Utilizza l'interfaccia riga di comando Cloud Foundry
 in una finestra riga di comando diversa da quella di Cygwin.
 
+**Nota**: {{site.data.keyword.Bluemix_notm}} Admin CLI è utilizzato solo per gli ambienti {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato. Non è supportato in {{site.data.keyword.Bluemix_notm}} pubblico.
+
 ## Aggiunta del plug-in {{site.data.keyword.Bluemix_notm}} Admin
 CLI
 
@@ -74,7 +76,7 @@ Se devi disinstallare il plug-in, puoi utilizzare i seguenti comandi e quindi ag
 CLI
 
 Puoi utilizzare il plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI per aggiungere o rimuovere utenti, assegnare o annullare l'assegnazione degli utenti dalle organizzazioni ed
-effettuare altre attività di gestione. I caratteri speciali come gli spazi, i segni più (+) e le e commerciali (&) non sono supportati quando crei i nomi organizzazione, i nomi spazio e i gruppi di sicurezza dell'applicazione. Prova a utilizzare combinazioni di maiuscole e minuscole o caratteri di sottolineatura per creare nomi univoci.
+effettuare altre attività di gestione. 
 
 Per visualizzare un elenco di comandi, immetti il seguente
 comando:
@@ -122,7 +124,7 @@ cf ba add-user <nome_utente> <organizzazione>
 ```
 {: codeblock}
 
-**Nota**: per aggiungere un utente a un'organizzazione specifica, devi essere il gestore dell'organizzazione o disporre dell'autorizzazione **Ammin** (in alternativa **Superuser**) o **Utente** con accesso in **Scrittura**.
+**Nota**: per aggiungere un utente a un'organizzazione specifica, devi essere un **Ammin** con autorizzazione **users.write** (o **Superuser**). Se sei un gestore organizzazione, ti può essere data la possibilità di aggiungere utenti alla tua organizzazione da un Superuser che esegue il comando **enable-managers-add-users**.  Vedi [Abilitazione dei gestori all'aggiunta di utenti](index.html#clius_emau) per ulteriori informazioni.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nome_utente&gt;</dt>
@@ -152,7 +154,7 @@ cf ba search-users -name=<valore_nome_utente> -permission=<valore_autorizzazione
 <dt class="pt dlterm">&lt;valore_autorizzazione&gt;</dt>
 <dd class="pd">L'autorizzazione assegnata all'utente. Ad esempio, superuser, di base, catalogo, utente e report. Per ulteriori informazioni sulle autorizzazioni da assegnare all'utente, vedi [Autorizzazioni](../../../admin/index.html#permissions). Non puoi utilizzare questo parametro insieme al parametro organizzazione nella stessa query. </dd>
 <dt class="pt dlterm">&lt;valore_organizzazione&gt;</dt>
-<dd class="pd">Il nome dell'organizzazione a cui appartiene l'utente. Non puoi utilizzare questo parametro insieme al parametro organizzazione nella stessa query. </dd>
+<dd class="pd">Il nome dell'organizzazione a cui appartiene l'utente. Non puoi utilizzare questo parametro insieme al parametro organizzazione nella stessa query.</dd>
 <dt class="pt dlterm">&lt;valore_ruolo&gt;</dt>
 <dd class="pd">Il ruolo dell'organizzazione assegnato all'utente. Ad esempio, gestore, gestore fatturazione o revisore dell'organizzazione. Con questo parametro devi specificare l'organizzazione. Per ulteriori informazioni sui ruoli, vedi [Ruoli utente](../../../admin/users_roles.html#userrolesinfo).</dd>
 
@@ -205,6 +207,32 @@ cf ba remove-user <nome_utente>
 
 **Suggerimento: ** puoi anche utilizzare **ba ru** come alias per
 il più lungo nome comando **ba remove-user**.
+
+### Abilitazione dei gestori all'aggiunta di utenti
+{: #clius_emau}
+
+Se disponi dell'autorizzazione **Superuser** nel tuo ambiente {{site.data.keyword.Bluemix_notm}}, puoi abilitare i gestori organizzazione ad aggiungere utenti alle organizzazioni che essi gestiscono. Immetti il seguente comando:
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**Suggerimento:** puoi anche utilizzare **ba emau** come alias per il più lungo
+nome comando **ba enable-managers-add-users**.
+
+### Disabilitazione dei gestori all'aggiunta di utenti
+{: #clius_dmau}
+
+Se i gestori organizzazione sono stati abilitati ad aggiungere utenti alle organizzazioni che essi gestiscono nel tuo ambiente {{site.data.keyword.Bluemix_notm}} con il comando **enable-managers-add-users** e disponi dell'autorizzazione **Superuser**, puoi rimuovere questa impostazione.  Immetti il seguente comando:
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**Suggerimento:** puoi anche utilizzare **ba dmau** come alias per il più lungo
+nome comando **ba disable-managers-add-users**.
 
 ### Aggiunta ed eliminazione di un'organizzazione
 
@@ -484,6 +512,26 @@ cf ba edit-service-plan-visibilities <identificativo_piano> <organizzazione_1> <
 
 **Suggerimento:** puoi anche utilizzare **ba espv** come alias per il più lungo
 nome comando **ba edit-service-plan-visibility**.
+
+### Visualizzazione di informazioni sull'utilizzo delle risorse
+{: #cliresourceusage}
+
+Puoi visualizzare le informazioni sull'utilizzo delle risorse, tra cui l'utilizzo di memoria, disco e CPU. Oltre all'utilizzo di tali risorse, puoi vedere un riepilogo delle risorse fisiche e riservate disponibili. Inoltre, puoi vedere i dati di utilizzo dei DEA (Droplet Execution Agent) e i dati cronologici per l'utilizzo di memoria e disco. Per impostazione predefinita, i dati cronologici per l'utilizzo di memoria e disco vengono visualizzati settimanalmente e in ordine decrescente. Per visualizzare le informazioni sull'utilizzo delle risorse, utilizza il seguente comando:
+
+```
+cf ba resource-usage <mensile> <settimanale>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;mensile&gt;</dt>
+<dd class="pd">Visualizzare i dati cronologici per la memoria e lo spazio su disco un mese alla volta.</dd>
+<dt class="pt dlterm">&lt;settimanale&gt;</dt>
+<dd class="pd">Visualizzare i dati cronologici per la memoria e lo spazio su disco una settimana alla volta. Questo è il valore predefinito.</dd>
+</dl>
+
+**Suggerimento:** puoi anche utilizzare **ba rsu** come alias per il più lungo
+nome comando **ba resource-usage**.
 
 ### Utilizzo dei broker dei servizi
 
@@ -771,3 +819,84 @@ cf ba unbind-security-group <gruppo-di-sicurezza> <organizzazione> <spazio>
 **Suggerimento:** puoi anche utilizzare **ba usg** come alias per il più lungo nome comando
 **ba unbind-staging-security-group**.
 
+### Gestione dei pacchetti di build
+{: #buildpacks}
+
+Se disponi di autorizzazioni di scrittura nel catalogo di applicazioni, puoi elencare, creare, aggiornare o eliminare i pacchetti di build.  
+#### Elenca tutti i pacchetti di build
+
+Utilizza il seguente comando per elencare tutti i pacchetti di build o visualizzare un pacchetto specifico:
+
+```
+cf ba buildpacks <nome_pacchettodibuild>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nome_pacchettodibuild&gt;</dt>
+<dd class="pd">Un parametro facoltativo per specificare un determinato pacchetto di build da visualizzare.</dd>
+</dl>
+
+**Suggerimento:** puoi anche utilizzare **ba lb** come alias per il più lungo
+nome comando **ba buildpacks**.
+
+#### Crea e carica un pacchetto di build
+
+Puoi creare e caricare un pacchetto di build. Puoi caricare qualsiasi file compresso che presenta un tipo di file .zip. Utilizza il seguente comando per caricare un pacchetto di build:
+
+```
+cf ba create-buildpack <nome_pacchettodibuild> <percorso_file> <posizione>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nome_pacchettodibuild&gt;</dt>
+<dd class="pd">Il nome del pacchetto di build da caricare.</dd>
+<dt class="pt dlterm">&lt;percorso_file&gt;</dt>
+<dd class="pd">Il percorso del file compresso del pacchetto di build.</dd>
+<dt class="pt dlterm">&lt;posizione&gt;</dt>
+<dd class="pd">L'ordine in cui vengono controllati i pacchetti di build durante il rilevamento automatico.</dd>
+</dl>
+
+**Suggerimento: ** puoi anche utilizzare **ba cb** come alias per il più lungo
+nome comando **ba create-buildpack**.
+
+#### Aggiorna un pacchetto di build
+
+Per aggiornare un pacchetto di build esistente, utilizza il seguente comando:
+
+```
+cf ba update-buildpack <nome_pacchettodibuild> <posizione> <abilitato> <bloccato>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nome_pacchettodibuild&gt;</dt>
+<dd class="pd">Il nome del pacchetto di build da aggiornare.</dd>
+<dt class="pt dlterm">&lt;posizione&gt;</dt>
+<dd class="pd">L'ordine in cui vengono controllati i pacchetti di build durante il rilevamento automatico.</dd>
+<dt class="pt dlterm">&lt;abilitato&gt;</dt>
+<dd class="pd">Indica se il pacchetto di build è utilizzato per la fase di preparazione.</dd>
+<dt class="pt dlterm">&lt;bloccato&gt;</dt>
+<dd class="pd">Indica se il pacchetto di build è bloccato per impedire gli aggiornamenti.</dd>
+</dl>
+
+**Suggerimento:** puoi anche utilizzare **ba ub** come alias per il più lungo
+nome comando **ba update-buildpack**.
+
+#### Elimina un pacchetto di build
+
+Per eliminare un pacchetto di build esistente, utilizza il seguente comando:
+
+```
+cf ba delete-buildpack <nome_pacchettodibuild>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nome_pacchettodibuild&gt;</dt>
+<dd class="pd">Il nome del pacchetto di build da eliminare.</dd>
+</dl>
+
+**Suggerimento: ** puoi anche utilizzare **ba db** come alias per il più lungo
+nome comando **ba delete-buildpack**.

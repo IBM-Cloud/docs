@@ -13,16 +13,20 @@ copyright:
 
 # 開始使用 {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
-前次更新：2016 年 8 月 26 日
+前次更新：2016 年 9 月 29 日
 {: .last-updated}
 
-{{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} 提供一個多用途的工具箱，其包括閘道裝置、裝置管理，以及功能強大的應用程式存取。您可以使用 {{site.data.keyword.iot_short_notm}}，收集連接裝置的資料以及分析組織產生的即時資料。
+{{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} 提供一個多用途的工具箱，其包括閘道裝置、裝置管理，以及功能強大的應用程式存取權。您可以使用 {{site.data.keyword.iot_short_notm}}，收集連接裝置的資料以及分析組織產生的即時資料。
 {:shortdesc}
 
 ## 開始之前
 {: #byb}
 
-在連接裝置及使用資料之前，{{site.data.keyword.Bluemix_notm}} 組織中必須要有 {{site.data.keyword.iot_short_notm}} 服務的實例存在。您可以直接從[「Bluemix 服務型錄」中的 {{site.data.keyword.iot_short_notm}} 頁面](https://console.{DomainName}/catalog/services/internet-of-things-platform/)建立。  
+在連接裝置及使用資料之前，請登錄 {{site.data.keyword.Bluemix_notm}} 帳戶，並在 {{site.data.keyword.Bluemix_notm}} 組織中建立 {{site.data.keyword.iot_short_notm}} 服務實例。您可以直接從 [Bluemix 服務型錄中的 {{site.data.keyword.iot_short_notm}} 頁面](https://console.{DomainName}/catalog/services/internet-of-things-platform/)建立 {{site.data.keyword.iot_short_notm}} 實例。  
+
+如需如何在 {{site.data.keyword.Bluemix_notm}} 上註冊帳戶、配置地區以及其他帳戶管理設定的詳細資訊，請參閱[管理 Bluemix 帳戶](https://console.ng.bluemix.net/docs/admin/account.html#signup)。
+
+您可以從儀表板設定及配置 {{site.data.keyword.iot_short_notm}} 實例。若要開啟儀表板，請移至 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.iot_short_notm}} 服務實例，然後按一下**啟動儀表板**。
 
 ## 步驟 1：連接您的裝置
 {: #up_and_running}
@@ -32,7 +36,7 @@ copyright:
    |   已部署的服務 | 未部署的服務
   ------------- | -------------
   **我有要連接的裝置** | [將您的裝置連接至 {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task)。| 在[播放組織示範](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}中探索裝置連線。
-  **我沒有要連接的裝置** | [建立並連接 Node-RED 裝置模擬器](nodereddevice_sample.html){:new_window}。 | 開始使用 [Watson IoT Platform 入門範本](https://new-console.stage1.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}。
+  **我沒有要連接的裝置** | [建立並連接 Node-RED 裝置模擬器](nodereddevice_sample.html){:new_window}。 | 開始使用 [Watson IoT Platform 入門範本](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}。
 如需有關如何將特定裝置類型連接至 {{site.data.keyword.iot_short_notm}} 的詳細資訊，請參閱 [developerWorks 秘訣](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}。  
 
 如需裝置連線開發人員文件，請參閱：

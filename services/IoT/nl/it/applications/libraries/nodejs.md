@@ -22,7 +22,7 @@ Ultimo aggiornamento: 29 luglio 2016
 Puoi modificare gli esempi e le librerie client in Node.js per creare e personalizzare le applicazioni che interagiscono con la tua organizzazione su {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
-Utilizza le informazioni e gli esempi forniti per iniziare a sviluppare le tue applicazioni utilizzando Node.js. 
+Utilizza le informazioni e gli esempi forniti per iniziare a sviluppare le tue applicazioni utilizzando Node.js.
 
 ## Scaricamento delle risorse e del client Node.js
 {: #nodejs_client_download}
@@ -30,7 +30,7 @@ Utilizza le informazioni e gli esempi forniti per iniziare a sviluppare le tue a
 Per accedere alle librerie client Node.js per {{site.data.keyword.iot_short_notm}} e ad altre risorse disponibili, vai al repository [iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs) in GitHub e completa le istruzioni di installazione.
 
 
-Per ulteriori informazioni, consulta le seguenti risorse: 
+Per ulteriori informazioni, consulta le seguenti risorse:
 - [Application samples](https://github.com/ibm-watson-iot/iot-nodejs/tree/master/samples) in GitHub.
 - [ibmiotf](https://www.npmjs.com/package/ibmiotf) on NPM.
 - La sessione [Riferimenti](#reference_nodejs) di questo documento.
@@ -44,9 +44,9 @@ Il constructor crea l'istanza client dell'applicazione e accetta un file di conf
 | Proprietà     |Descrizione     |
 |----------------|----------------|
 |`org` |Il tuo ID dell'organizzazione. Questo è un valore obbligatorio.|
-|`id`  |L'ID univoco della tua applicazione nella tua organizzazione. |
-|`auth-key`   |Una chiave API per la connessione sicura alla tua applicazione su Watson IoT Platform. |
-|`auth-token`   |Un token chiave API per la connessione sicura al tuo dispositivo su Watson IoT Platform. |
+|`id`  |L'ID univoco della tua applicazione nella tua organizzazione.|
+|`auth-key`   |Una chiave API per la connessione sicura alla tua applicazione su Watson IoT Platform.|
+|`auth-token`   |Un token chiave API per la connessione sicura al tuo dispositivo su Watson IoT Platform.|
 |`type`  |Il tipo di sottoscrizione. Specifica `shared` per abilitare la sottoscrizione condivisa.|
 
 
@@ -272,7 +272,7 @@ Per impostazione predefinita, le applicazioni si sottoscrivono a tutti gli event
 ### Gestione degli eventi dai dispositivi
 
 
-Per elaborare gli eventi ricevuti dalle tue sottoscrizioni, implementa un metodo di callback dell'evento. Il client dell'applicazione {{site.data.keyword.iot_short_notm}} invia l'evento `deviceEvent`. Questa funzione ha le seguenti proprietà: 
+Per elaborare gli eventi ricevuti dalle tue sottoscrizioni, implementa un metodo di callback dell'evento. Il client dell'applicazione {{site.data.keyword.iot_short_notm}} invia l'evento `deviceEvent`. Questa funzione ha le seguenti proprietà:
 
 - deviceType
 - deviceId
@@ -303,7 +303,7 @@ Per elaborare gli eventi ricevuti dalle tue sottoscrizioni, implementa un metodo
 ## Sottoscrizione agli stati del dispositivo
 {: #subscribing_device_status}
 
-Per impostazione predefinita, quando ti sottoscrivi a uno stato del dispositivo, gli aggiornamenti dello stato sono ricevuti da tutti i dispositivi collegati. Utilizza i parametri tipo e ID per controllare l'ambito della sottoscrizione. Un singolo client può supportare più sottoscrizioni. 
+Per impostazione predefinita, quando ti sottoscrivi a uno stato del dispositivo, gli aggiornamenti dello stato sono ricevuti da tutti i dispositivi collegati. Utilizza i parametri tipo e ID per controllare l'ambito della sottoscrizione. Un singolo client può supportare più sottoscrizioni.
 
 ### Sottoscrizione agli aggiornamenti dello stato per tutti i dispositivi
 
@@ -320,7 +320,7 @@ Per impostazione predefinita, quando ti sottoscrivi a uno stato del dispositivo,
 	});
 ```
 
-### Sottoscrizione agli aggiornamenti dello stato per tutti i dispositivi di un tipo specifico 
+### Sottoscrizione agli aggiornamenti dello stato per tutti i dispositivi di un tipo specifico
 
 
 ```
@@ -354,7 +354,7 @@ Per impostazione predefinita, quando ti sottoscrivi a uno stato del dispositivo,
 
 ### Gestione degli stati dai dispositivi
 
-Per elaborare gli aggiornamenti dello stato ricevuti dalle tue sottoscrizioni, implementa un metodo di callback dello stato. Il client dell'applicazione {{site.data.keyword.iot_short_notm}} invia l'evento `deviceStatus`. Questa funzione ha le seguenti proprietà: 
+Per elaborare gli aggiornamenti dello stato ricevuti dalle tue sottoscrizioni, implementa un metodo di callback dello stato. Il client dell'applicazione {{site.data.keyword.iot_short_notm}} invia l'evento `deviceStatus`. Questa funzione ha le seguenti proprietà:
 
 -   deviceType
 -   deviceId
@@ -385,7 +385,7 @@ Per elaborare gli aggiornamenti dello stato ricevuti dalle tue sottoscrizioni, i
 {: #publishing_device_events}
 
 
-Le applicazioni possono pubblicare gli eventi come se fossero originati da un dispositivo. La funzione richiede le seguenti proprietà: 
+Le applicazioni possono pubblicare gli eventi come se fossero originati da un dispositivo. La funzione richiede le seguenti proprietà:
 
 -   deviceType
 -   deviceId
@@ -413,7 +413,7 @@ Le applicazioni possono pubblicare gli eventi come se fossero originati da un di
 ## Pubblicazione dei comandi ai dispositivi
 {: #publishing_commands_devices}
 
-Le applicazioni possono pubblicare i comandi sui dispositivi connessi. La funzione richiede le seguenti proprietà: 
+Le applicazioni possono pubblicare i comandi sui dispositivi connessi. La funzione richiede le seguenti proprietà:
 
 -   deviceType
 -   deviceId

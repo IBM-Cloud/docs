@@ -1,7 +1,7 @@
 ---
 
-copyright :
-  années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -17,29 +17,30 @@ copyright :
 Dernière mise à jour : 29 juillet 2016
 {: .last-updated}
 
-Vous pouvez utiliser Python pour générer et développer un code de terminal afin d'interagir avec votre organisation sur {{site.data.keyword.iot_full}}. Le client Python pour {{site.data.keyword.iot_short_notm}} fournit une API qui facilite l'interaction simple avec les fonctions {{site.data.keyword.iot_short_notm}} en faisant abstraction des protocoles sous-jacents, tels que MQTT et HTTP.{:shortdesc}
+Vous pouvez utiliser Python pour générer et développer un code de terminal afin d'interagir avec votre organisation sur {{site.data.keyword.iot_full}}. Le client Python pour {{site.data.keyword.iot_short_notm}} fournit une API qui facilite l'interaction simple avec les fonctions {{site.data.keyword.iot_short_notm}} en faisant abstraction des protocoles sous-jacents, tels que MQTT et HTTP.
+{:shortdesc}
 
 Utilisez les informations et les exemples fournis pour commencer à développer vos terminaux à l'aide de Python.
 
 ## Téléchargement du client et des ressources Python
 {: #python_client_download}
 
-Pour accéder au client Python pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-python](https://github.com/ibm-watson-iot/iot-python) dans GitHub et exécutez les instructions d'installation. 
+Pour accéder au client Python pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-python](https://github.com/ibm-watson-iot/iot-python) dans GitHub et exécutez les instructions d'installation.
 
 ## Constructeur
 {: #constructor}
 
-Le dictionnaire d'options crée des définitions utilisées pour interagir avec le module {{site.data.keyword.iot_short_notm}}. Le constructeur génère l'instance client et accepte un dictionnaire d'options qui contient les définitions suivantes : 
+Le dictionnaire d'options crée des définitions utilisées pour interagir avec le module {{site.data.keyword.iot_short_notm}}. Le constructeur génère l'instance client et accepte un dictionnaire d'options qui contient les définitions suivantes :
 
 |Définition|Description |
 |:---|:---|
-|`orgId`|ID de votre organisation. |
+|`orgId`|ID de votre organisation.|
 |`type`|Type de votre terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
-|`id`|ID de votre terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC. |
+|`id`|ID de votre terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
 |`auth-method`|Méthode d'authentification à utiliser. La seule valeur actuellement prise en charge est `token`.|
 |`auth-token`|Jeton d'authentification permettant d'établir une connexion sécurisée entre votre terminal et Watson IoT Platform.|
 
-Si aucun dictionnaire d'options n'est fourni, le client se connecte au service QuickStart de Watson IoT Platform en tant que terminal non enregistré. 
+Si aucun dictionnaire d'options n'est fourni, le client se connecte au service QuickStart de Watson IoT Platform en tant que terminal non enregistré.
 
 ```python
 
@@ -73,7 +74,6 @@ except ibmiotf.ConnectionException  as e:
 
 Le fichier de configuration contenant le dictionnaire d'options doit être au format suivant :
 
-
 ```python
 
 [device]
@@ -88,11 +88,11 @@ auth-token=token
 ## Publication d'événements
 {: #publishing_events}
 
-Les événements constituent le mécanisme par lequel les terminaux publient des données sur {{site.data.keyword.iot_short_notm}}. Le terminal contrôle le contenu de l'événement et affecte un nom à chaque événement qu'il envoie. 
+Les événements constituent le mécanisme par lequel les terminaux publient des données sur {{site.data.keyword.iot_short_notm}}. Le terminal contrôle le contenu de l'événement et affecte un nom à chaque événement qu'il envoie.
 
-Lorsqu'un événement est reçu par l'instance {{site.data.keyword.iot_short_notm}}, les données d'identification de l'événement reçu identifient le terminal qui a envoyé l'événement, ce qui signifie qu'un terminal ne peut pas simuler les droits d'accès d'un autre terminal. 
+Lorsqu'un événement est reçu par l'instance {{site.data.keyword.iot_short_notm}}, les données d'identification de l'événement reçu identifient le terminal qui a envoyé l'événement, ce qui signifie qu'un terminal ne peut pas simuler les droits d'accès d'un autre terminal.
 
-Les événements peuvent être publiés avec n'importe lequel des trois niveaux de qualité de service (QoS) définis par le protocole MQTT. Par défaut, les événements sont publiés avec le niveau QoS `0`. 
+Les événements peuvent être publiés avec n'importe lequel des trois niveaux de qualité de service (QoS) définis par le protocole MQTT.  Par défaut, les événements sont publiés avec le niveau QoS `0`.
 
 ### Publication d'un événement à l'aide de la qualité de service par défaut
 
@@ -104,7 +104,7 @@ client.publishEvent("status", "json", myData)
 
 ### Augmentation du niveau QoS pour un événement
 
-Vous pouvez augmenter le [niveau de qualité de service (QoS)](../../reference/mqtt/index.html#qos-levels) des événements qui sont publiés. La publication des événements dont le niveau QoS est supérieur à `0` peut prendre plus de temps, en raison des informations de réception de confirmation supplémentaires qui sont incluses. 
+Vous pouvez augmenter le [niveau de qualité de service (QoS)](../../reference/mqtt/index.html#qos-levels) des événements qui sont publiés. La publication des événements dont le niveau QoS est supérieur à `0` peut prendre plus de temps, en raison des informations de réception de confirmation supplémentaires qui sont incluses.
 
 **Remarque :** Le mode flux Quickstart ne prend en charge que le niveau QoS `0`.
 
@@ -117,15 +117,14 @@ client.publishEvent("status", "json", myData, myQosLevel)
 ## Traitement des commandes
 {: #handling_commands}
 
-Lorsque le client du terminal se connecte, il s'abonne automatiquement aux commandes spécifiées pour ce terminal. Pour traiter des commandes spécifiques, vous devez enregistrer une méthode de rappel de commande.
-Les messages sont renvoyés en tant qu'instance de la classe Command qui possède les propriétés suivantes : 
+Lorsque le client du terminal se connecte, il s'abonne automatiquement aux commandes spécifiées pour ce terminal. Pour traiter des commandes spécifiques, vous devez enregistrer une méthode de rappel de commande. Les messages sont renvoyés en tant qu'instance de la classe Command qui possède les propriétés suivantes :
 
 |Propriété|Type de données|Description|
 |:---|:---|
-|`command`|Chaîne|Identifie la commande. |
+|`command`|Chaîne|Identifie la commande.|
 |`format`|Chaîne|Le format peut être n'importe quelle chaîne, par exemple, JSON.|
 |`data`|Dictionnaire|Données du contenu. La longueur maximale est de 131072 octets.|
-|`timestamp`|Date et heure|Date et heure de l'événement. |
+|`timestamp`|Date et heure|Date et heure de l'événement.|
 
 
 ```python

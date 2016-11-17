@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-22"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # {{site.data.keyword.weather_short}}-REST-APIs verwenden
 {: #rest_apis}
-
-Letzte Aktualisierung: 22. August 2016
-{: .last-updated}
 
 Sie können die [REST-APIs](https://twcservice.{APPDomain}/rest-api/){:new_window} zum Abrufen von Wetterdaten verwenden. Sie können API-Operationen testen und sofort die Ergebnisse anzeigen, um so Ihre Anwendungen schneller erstellen zu können.
 {: shortdesc}

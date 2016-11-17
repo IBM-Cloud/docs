@@ -20,7 +20,7 @@ Letzte Aktualisierung: 1. September 2016
 Node-RED ist ein grafisch orientiertes Tool, dass Sie zum Entwickeln von Anwendungen, Geräten und Gateways in {{site.data.keyword.iot_full}} verwenden können. Node-RED bietet Funktionen für neue und interessante Möglichkeiten, Verbindungen zu Hardwaregeräten, APIs und Onlineservices herzustellen. Node-RED baut auf Node.js auf und nutzt das große Ökosystem aus Knotenmodulen, um ein Tool bereitzustellen, das viele unterschiedliche Systeme integrieren kann.
 {:shortdesc}
 
-IBM stellt Node-RED-Knoten bereit, um Sie beim Verbinden Ihrer Geräte, Gateways und Anwendungen mit {{site.data.keyword.iot_short_notm}} zu unterstützen und um IoT-Lösungen schnell zu erstellen. 
+IBM stellt Node-RED-Knoten bereit, um Sie beim Verbinden Ihrer Geräte, Gateways und Anwendungen mit {{site.data.keyword.iot_short_notm}} zu unterstützen und um IoT-Lösungen schnell zu erstellen.
 
 
 ## Watson IoT Node   

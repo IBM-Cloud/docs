@@ -49,7 +49,7 @@ copyright:
 - ブロック・チェーン台帳に書き込むデータを生成するデバイスを接続します。
 [デバイスの接続](iotplatform_task.html)トピックの手順に従って、デバイスを接続します。
 - Monitoring UI をインストールします。
-Monitoring UI は、{{site.data.keyword.iot_short_notm}} とブロック・チェーン・ファブリックの間の接続を確認するために使用します。[Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/monitoring_ui) GitHub ディレクトリーにある Monitoring UI の README ドキュメントの手順に従ってください。
+Monitoring UI は、{{site.data.keyword.iot_short_notm}} とブロック・チェーン・ファブリックの間の接続を確認するために使用します。[Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub ディレクトリーにある Monitoring UI の README ドキュメントの手順に従ってください。
 
 ### IBM の基本的なシナリオを使用してすぐに開始する
 
@@ -175,7 +175,7 @@ IBM 提供の基本的な {{site.data.keyword.iot_short_notm}} ブロック・�
 {: #test_simple}
 
 IBM 提供のファブリックに接続し、デバイス・データをサンプル・コントラクトにマップしたら、デバイスからブロック・チェーン台帳へのエンドツーエンドのデータ・フローをテストすることができます。IoT Blockchain Monitoring UI を使用して、自分のアセットに関するブロック・チェーンのアクティビティーとデータを確認します。  
-**ヒント:** Monitoring UI をまだローカル環境にインストールしていない場合は、このときにインストールすることができます。[Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/monitoring_ui) GitHub ディレクトリーにある Monitoring UI の README ドキュメントの手順に従ってください。  
+**ヒント:** Monitoring UI をまだローカル環境にインストールしていない場合は、このときにインストールすることができます。[Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub ディレクトリーにある Monitoring UI の README ドキュメントの手順に従ってください。  
 1. Monitoring UI を、{{site.data.keyword.iot_short_notm}} に接続するように構成します。
  Monitoring UI で、**「CONFIGURATION」**をクリックし、Monitoring UI 接続を構成します。
  <table>

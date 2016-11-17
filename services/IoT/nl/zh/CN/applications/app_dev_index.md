@@ -20,7 +20,7 @@ copyright:
 提供的客户机库、样本和信息可帮助您为 {{site.data.keyword.iot_full}} 组织构建应用程序。
 {:shortdesc}
 
-您可以使用以下支持的协议和标准来编写代码，用于构建和管理与 {{site.data.keyword.iot_short}} 中已连接设备进行交互并使用这些设备中信息的应用程序。
+您可以使用以下受支持的协议和标准来编写代码，用于构建和管理与 {{site.data.keyword.iot_short}} 中的已连接设备进行交互并使用其中信息的应用程序：
 
 - C#
 - Java

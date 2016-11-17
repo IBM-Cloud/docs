@@ -13,7 +13,7 @@ copyright:
 
 # Geräte verbinden
 {: #iotplatform_task}
-Letzte Aktualisierung: 13. September 2016
+Letzte Aktualisierung: 8. September 2016
 {: .last-updated}
 
 Bevor Sie mit dem Empfang von Daten von Ihren IoT-Geräten beginnen können, müssen Sie sie mit {{site.data.keyword.iot_full}} verbinden. Um ein Gerät mit {{site.data.keyword.iot_short_notm}} zu verbinden, muss das Gerät für {{site.data.keyword.iot_short_notm}} registriert werden; die Registrierungsinformationen werden anschließend verwendet, um das Gerät für die Verbindung zu {{site.data.keyword.iot_short_notm}} zu konfigurieren.
@@ -21,11 +21,11 @@ Bevor Sie mit dem Empfang von Daten von Ihren IoT-Geräten beginnen können, mü
 
 ## Vorbereitende Schritte
 {: #byb}
- 
+
 Vor dem Beginn des Verbindungsprozesses müssen Sie sicherstellen, dass Ihre Geräte für die Kommunikation mit {{site.data.keyword.iot_short_notm}} folgende Anforderungen erfüllen:
 
 - Ihr Gerät muss in der Lage sein, durch Senden von Gerätenachrichten im [MQTT-Format](reference/mqtt/index.html) zu kommunizieren.
-- Die Gerätenachrichten müssen den Anforderungen an die [Nachrichtennutzdaten](reference/mqtt/index.html#message-payload) von {{site.data.keyword.iot_short_notm}} entsprechen.
+- Die Gerätenachrichten müssen den Anforderungen an die [Nachrichtennutzdaten](reference/mqtt/index.html#/message-payload) von {{site.data.keyword.iot_short_notm}} entsprechen.
 
 Führen Sie folgende Schritte aus, um für Ihr Gerät eine Verbindung zu {{site.data.keyword.iot_short_notm}} herzustellen.
 
@@ -47,22 +47,24 @@ Gehen Sie wie folgt vor, um ein Gerät über das {{site.data.keyword.iot_short_n
 2. Klicken Sie auf der Serviceseite auf **Dashboard starten**, um mit der Verwaltung Ihrer {{site.data.keyword.iot_short_notm}}-Organiation zu beginnen.
 
 3. Wählen Sie im Dashboard 'Überblick' im Menüteilfenster die Option **Geräte** aus und klicken Sie anschließend auf **Gerät hinzufügen**.
-5. Wählen oder erstellen Sie einen Gerätetyp für das Gerät, das Sie hinzufügen.
-Jedem Gerät, das mit {{site.data.keyword.iot_short_notm}} verbunden ist, muss ein Gerätetyp zugeordnet sein. Gerätetypen sind Gruppen von Geräten, denen allgemeine Merkmale gemeinsam sind. Wenn Sie Ihr erstes Gerät zur {{site.data.keyword.iot_short_notm}}-Organisation hinzufügen, stehen im Menü **Gerätetyp** keine Gerätetypen zur Verfügung. Sie müssen zunächst einen Gerätetyp erstellen:
+5. Wählen oder erstellen Sie einen Gerätetyp für das Gerät, das Sie hinzufügen.  
+Jedem Gerät, das mit {{site.data.keyword.iot_short_notm}} verbunden ist, muss ein Gerätetyp zugeordnet sein. Gerätetypen sind Gruppen von Geräten, denen allgemeine Merkmale gemeinsam sind.  
+Wenn Sie Ihr erstes Gerät zur {{site.data.keyword.iot_short_notm}}-Organisation hinzufügen, stehen im Menü **Gerätetyp** keine Gerätetypen zur Verfügung. Sie müssen zunächst einen Gerätetyp erstellen:
  1. Klicken Sie auf **Gerätetyp erstellen**.
  2. Geben Sie einen Namen wie beispielsweise `my_device_type` und eine Beschreibung des Gerätetyps ein.
- 3. Optional: Geben Sie Attribute und Metadaten zu dem Gerätetyp ein.
-**Tipp:** Sie können Attribute und Metadaten später hinzufügen und bearbeiten.
+ 3. Optional: Geben Sie Attribute und Metadaten zu dem Gerätetyp ein.    
+ **Tipp:** Sie können Attribute und Metadaten später hinzufügen und bearbeiten.
  4. Klicken Sie auf **Erstellen**, um den neuen Gerätetyp hinzuzufügen.
 10. Klicken Sie auf **Weiter**, um mit dem Hinzufügen Ihres Geräts mit dem ausgewählten Gerätetyp zu beginnen.
-11. Geben Sie eine Geräte-ID ein. **Tipp:** Bei netzverbundenen Geräten kann dies beispielsweise die MAC-Adresse des Geräts ohne trennende Doppelpunkte sein. Die Geräte-ID wird zum Ermitteln des Geräts im {{site.data.keyword.iot_short_notm}}-Dashboard verwendet und ist auch ein erforderlicher Parameter für das Herstellen einer Verbindung zwischen Ihrem Gerät und {{site.data.keyword.iot_short_notm}}.
-12. Optional: Klicken Sie auf **Zusätzliche Felder**, um Geräteeinformationen hinzuzufügen, wie beispielsweise Seriennummer, Hersteller, Modell usw.
-**Tipp:** Sie können diese Informationen später hinzufügen und bearbeiten.
-12. Optional: Geben Sie JSON-Metadaten zum Gerät ein.
-**Tipp:** Sie können Metadaten zum Gerät später hinzufügen und bearbeiten.
+11. Geben Sie eine Geräte-ID ein. **Tipp:** Bei netzverbundenen Geräten kann dies beispielsweise die MAC-Adresse des Geräts ohne trennende Doppelpunkte sein.  
+Die Geräte-ID wird zum Ermitteln des Geräts im {{site.data.keyword.iot_short_notm}}-Dashboard verwendet und ist auch ein erforderlicher Parameter für das Herstellen einer Verbindung zwischen Ihrem Gerät und {{site.data.keyword.iot_short_notm}}.
+12. Optional: Klicken Sie auf **Zusätzliche Felder**, um Geräteeinformationen hinzuzufügen, wie beispielsweise Seriennummer, Hersteller, Modell usw.  
+ **Tipp:** Sie können diese Informationen später hinzufügen und bearbeiten.
+12. Optional: Geben Sie JSON-Metadaten zum Gerät ein.  
+ **Tipp:** Sie können Metadaten zum Gerät später hinzufügen und bearbeiten.
 13. Klicken Sie auf **Weiter**, um das Hinzufügen Ihres Geräts abzuschließen.
-14. Überprüfen Sie, dass die Übersichtsinformationen richtig sind und klicken Sie anschließend auf **Hinzufügen**, um die Verbindung hinzuzufügen.
-**Tipp:** Sie haben die Option, ein automatisch generiertes Authentifizierungstoken zu akzeptieren oder selbst ein Authentifizierungstoken anzugeben. Wenn Sie auswählen, ein eigenes Token zu erstellen, müssen Sie sicherstellen, dass es eine Länge von 8-36 Zeichen hat, aus einer Mischung von Groß- und Kleinbuchstaben, Zahlen und Bindestrichen, Unterstreichungszeichen oder Punkten besteht. Das Token darf keine Folgen aus wiederholten Zeichen, Wörterbuchwörter, Benutzernamen oder andere vordefinierte Folgen enthalten.
+14. Überprüfen Sie, dass die Übersichtsinformationen richtig sind und klicken Sie anschließend auf **Hinzufügen**, um die Verbindung hinzuzufügen.  
+**Tipp:** Sie haben die Option, ein automatisch generiertes Authentifizierungstoken zu akzeptieren oder selbst ein Authentifizierungstoken anzugeben. Wenn Sie auswählen, ein eigenes Token zu erstellen, müssen Sie sicherstellen, dass es ausschließlich aus alphanumerischen Zeichen sowie aus den folgenden Sonderzeichen besteht: Bindestrich (-), Unterstreichungszeichen (_), Ausrufezeichen (!), Et-Zeichen (&), kommerzielles A (@), Fragezeichen (?), Stern (*), Pluszeichen (+), Punkt (.) oder rechte und linke runde Klammer. Das Token darf keine Folgen aus wiederholten Zeichen, Wörterbuchwörter, Benutzernamen oder andere vordefinierte Folgen enthalten.
 15. Kopieren Sie auf der Seite mit den Geräteinformationen folgende Geräteinformationen und speichern Sie sie:  
  - Organisations-ID, wie beispielsweise `tubo8x`
  - Gerätetyp, wie beispielsweise `my_device_type`

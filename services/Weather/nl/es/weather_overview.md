@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-22"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Acerca de {{site.data.keyword.weather_short}}
 {: #about_weather}
-
-Última actualización: 22 de agosto de 2016
-{: .last-updated}
 
 Utilice {{site.data.keyword.weatherfull}} para incorporar datos
 meteorológicos de The Weather Company (TWC) en las aplicaciones

@@ -6,15 +6,12 @@ copyright:
 
   years: 2015，20166
 
- 
+lastupdated: "2016-01-12" 
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-
-*Letzte Aktualisierung: 12. Januar 2016*
-{: .last-updated}
 
 # Starteranwendungen verwenden
 {: #using_starter_applications}
@@ -27,7 +24,7 @@ Führen Sie die folgenden Schritte aus, um die Starteranwendungen zu verwenden.
 2. Klicken Sie auf die Laufzeit, die verwendet werden soll.
 3. Melden Sie sich bei {{site.data.keyword.Bluemix}} an, wenn dies noch nicht geschehen ist.
 4. Geben Sie den App-Namen an, ändern Sie den Hostnamen, falls erforderlich, und klicken Sie auf **Erstellen**.
-5. Das Staging für Ihre App beginnt und die Landing-Page Ihrer App wird auf dem Bluemix-Dashboard angezeigt, wenn Ihre App startet.
+5. Das Staging für Ihre App beginnt und die Landing-Page Ihrer App wird auf dem {{site.data.keyword.Bluemix_notm}}-Dashboard angezeigt, wenn Ihre App startet.
 6. Sie können die Anweisungen auf dieser Seite für die folgenden Tasks ausführen:
   * Befehlszeilenschnittstelle von Cloud Foundry herunterladen
   * Starteranwendung herunterladen

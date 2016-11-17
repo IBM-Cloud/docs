@@ -13,10 +13,10 @@ copyright:
 
 # Integrazioni del servizio esterno
 {: #ref-index}
-Ultimo aggiornamento: 13 settembre 2016
+Ultimo aggiornamento: 26 settembre 2016
 {: .last-updated}
 
-L'integrazione del servizio esterno ti consente di accedere ai dati e alle operazioni da servizi di terze parti o esterni nella tua organizzazione {{site.date.keyword.iot_full}}.
+L'integrazione del servizio esterno ti consente di accedere ai dati e alle operazioni da servizi di terze parti o esterni nella tua organizzazione {{site.data.keyword.iot_full}}.
 
 ## Jasper
 {: #jasper}
@@ -48,8 +48,8 @@ Per collegare il tuo servizio Jasper alla tua organizzazione {{site.data.keyword
 1. Abilita l'estensione Jasper. Per abilitare l'integrazione Jasper con la tua organizzazione {{site.data.keyword.iot_short_notm}}, completa la seguente procedura:
   1. Dal dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Extensions**.
   2. Nella pagina **Extensions**, fai clic su **Add Extension**.
-  3. Fai clic su **Add** vicino a AT&T.
-  4. Immetti i tuoi nome utente, password, chiave di accesso e ID dominio AT&T.
+  3. Fai clic su **Add** vicino a Jasper.
+  4. Immetti i tuoi nome utente, password, chiave di accesso e ID dominio Jasper.
   5. Fai clic su **Done**.
 
 2. Configura i tuoi dispositivi
@@ -95,7 +95,7 @@ Per collegare la tua organizzazione {{site.data.keyword.iot_short_notm}} a AT&T 
 
 Per configurare la tua piattaforma {{site.data.keyword.iot_short_notm}}, completa la seguente procedura.
 
-1. Abilita l'estensione AT&T. Per abilitare l'integrazione AT&T con la tua organizzazione {{site.data.keyword.iot_short_notm}}, completa la seguente procedura: 
+1. Abilita l'estensione AT&T. Per abilitare l'integrazione AT&T con la tua organizzazione {{site.data.keyword.iot_short_notm}}, completa la seguente procedura:
   1. Dal dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Extensions**.
   2. Nella pagina **Extensions**, fai clic su **Add Extension**.
   3. Fai clic su **Add** vicino a AT&T.
@@ -106,9 +106,10 @@ Per collegare la tua organizzazione {{site.data.keyword.iot_short_notm}} con il 
 
 
 2. Configura i tuoi dispositivi
-Puoi configurare i dispositivi collegati alla tua organizzazione {{site.data.keyword.iot_short_notm}} e al tuo account AT&T per visualizzare i dati da AT&T nel dashboard {{site.data.keyword.iot_short_notm}}. **Importante:** la configurazione di AT&T non può essere applicata come parte del processo di aggiunta del dispositivo, solo i dispositivi precedentemente collegati possono essere configurati con AT&T.
-Per configurare i tuoi dispositivi collegati a AT&T, completa la seguente procedura: 
- 1. Nella scheda dei dispositivi del tuo dashboard {{site.data.keyword.iot_short_notm}}, trova il dispositivo collegato a  AT&T da configurare. 
+Puoi configurare i dispositivi collegati alla tua organizzazione {{site.data.keyword.iot_short_notm}} e al tuo account AT&T per visualizzare i dati da AT&T nel dashboard {{site.data.keyword.iot_short_notm}}.  
+**Importante:** la configurazione di AT&T non può essere applicata come parte del processo di aggiunta del dispositivo, solo i dispositivi precedentemente collegati possono essere configurati con AT&T.  
+Per configurare i tuoi dispositivi collegati a AT&T, completa la seguente procedura:
+ 1. Nella scheda dei dispositivi del tuo dashboard {{site.data.keyword.iot_short_notm}}, trova il dispositivo collegato a  AT&T da configurare.
  2. Selezione il dispositivo per aprire la vista *Device Drilldown*.
  3. Scorri verso il basso fino a *Extension Configuration*.
  4. Immetti la configurazione dell'estensione utilizzando il seguente formato JSON e quindi fai clic su **Confirm changes** per salvare la tua configurazione.  
@@ -124,32 +125,32 @@ Per configurare i tuoi dispositivi collegati a AT&T, completa la seguente proced
 
 Quando l'organizzazione è stata configurata correttamente, viene visualizzata la sezione *Extensions* nella sezione *Extensions Configuration* nella vista *Device Drilldown*.
 
-<!--
-## ARM mbed connector
+
+## Connettore ARM mbed
 {: #arm}
 
-The ARM mbed connector is an extension that allows you to connect your ARM mbed device to your {{site.data.keyword.iot_short_notm}}. The ARM mbed extension is allows the ARM mbed portal and the {{site.data.keyword.iot_short_notm}} to send and receive data from the ARM mbed portal.
+Il connettore ARM mbed ti consente di collegare il tuo dispositivo ARM mbed a {{site.data.keyword.iot_short_notm}}. L'estensione ARM mbed è consentita nel portale ARM mbed e {{site.data.keyword.iot_short_notm}} per inviare e ricevere i dati dal portale ARM mbed.
 
-### Setup Configuration
+### Configurazione
 
 
-1. Enable the ARM mbed connector extension. To enable the ARM mbed connector extension complete the following steps:
-  1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Settings** and navigate to **Extensions**.
-  2. In the **Extensions** menu, click **Add Extension**.
-  3. Click **Add** next to ARM mbed connector extension.
-  4. Enter your ARM mbed access key and domain ID. You can find these by using the ARM mbed portal at https://connector.mbed.com.
-  5. Check the credentials are correct by clicking the **Check Connection** button.
-  6. Click **Done**.
+1. Abilita l'estensione del connettore ARM mbed. Per abilitare l'estensione del connettore ARM mbed completa la seguente procedura:
+  1. Dal dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Settings** e naviga a **Extensions**.
+  2. Nel menu **Extensions**, fai clic su **Add Extension**.
+  3. Fai clic su **Add** vicino all'estensione del connettore ARM mbed .
+  4. Immetti i tuoi ID dominio e chiave di accesso ARM mbed. Puoi trovarli utilizzando il portale ARM mbed all'indirizzo https://connector.mbed.com.
+  5. Verifica che le credenziali siano corrette facendo clic sul pulsante **Check Connection**.
+  6. Fai clic su **Done**.
 
-### Payload Format
+### Formato payload 
 
-There are two types of incoming messages from the ARM mbed platform, notifications and asynchronous responses. The {{site.data.keyword.iot_short_notm}} can send commands to devices that are connected to the ARM mbed platform.
+Esistono due tipi di messaggi in entrata dalla piattaforma ARM mbed, le notifiche e le risposte asincrone. {{site.data.keyword.iot_short_notm}} può inviare i comandi ai dispositivi collegati alla piattaforma ARM mbed.
 
-#### Notifications
+#### Notifiche
 
-Notifications are generated by changes in device or sensor data. After the {{site.data.keyword.iot_short_notm}} processes the message, it is to the device event topic in the same way as a device connected directly to the {{site.data.keyword.iot_short_notm}}. The event type used for notifications originating on devices connected to the ARM mbed platform is `notify`.
+Le notifiche vengono generate dalle modifiche nel dispositivo e nei dati del sensore. Dopo che {{site.data.keyword.iot_short_notm}} elabora il messaggio, è presente sull'argomento evento del dispositivo nello stesso modo di un dispositivo direttamente collegato a {{site.data.keyword.iot_short_notm}}. Il tipo di evento utilizzato per le notifiche generate nei dispositivi collegati alla piattaforma ARM mbed è `notify`.
 
-The following code sample shows the payload format for a notification sent by the ARM mbed platform API:
+Il seguente esempio di codice mostra il formato del payload per una notifica inviata dall'API della piattaforma ARM mbed:
 
 ```
 {
@@ -161,11 +162,11 @@ The following code sample shows the payload format for a notification sent by th
 }
 ```
 
-#### Asynchronous responses
+#### Risposte asincrone 
 
-When the {{site.data.keyword.iot_short_notm}} sends a command to a device connected to the ARM mbed platform, the device sends a confirmation message back to the {{site.data.keyword.iot_short_notm}}. This confirmation message is called an _asynchronous response_ and uses the event type `asyncResponse`.
+Quando {{site.data.keyword.iot_short_notm}} invia un comando a un dispositivo collegato alla piattaforma ARM mbed, il dispositivo restituisce un messaggio di conferma a {{site.data.keyword.iot_short_notm}}. Questo messaggio di conferma viene denominato *risposta asincrona* e utilizza il tipo di evento `asyncResponse`.
 
-The following code sample shows the payload format for an asynchronous response sent by the ARM mbed cloud service:
+Il seguente esempio di codice mostra il formato del payload per una risposta asincrona inviata dal servizio cloud ARM mbed:
 
 ```
 {
@@ -179,9 +180,9 @@ The following code sample shows the payload format for an asynchronous response 
 }
 ```
 
-#### Sending commands to the ARM mbed platform
+#### Invio dei comandi alla piattaforma ARM mbed
 
-The {{site.data.keyword.iot_short_notm}} can send commands to devices connected to the ARM mbed platform. Commands sent to the ARM mbed platform it must use the following JSON format.
+{{site.data.keyword.iot_short_notm}} può inviare i comandi ai dispositivi collegati alla piattaforma ARM mbed. I comandi inviati alla piattaforma ARM mbed devono utilizzare il seguente formato JSON.
 
 ```
 {
@@ -191,13 +192,15 @@ The {{site.data.keyword.iot_short_notm}} can send commands to devices connected 
   "payload": <Base64 encoded payload>
 }
 ```
+Il metodo scelto è sensibile al maiuscolo/minuscolo. Il carattere iniziale '/' del percorso della risorsa deve essere ignorato.
 
-The payload should be published to the following topic:
+
+Il payload deve essere pubblicato nel seguente argomento:
 
 ```
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ```
--->
+
 
 ## Orange
 {: #orange}
@@ -213,7 +216,7 @@ Se hai un dispositivo collegato al tuo servizio {{site.data.keyword.iot_short_no
 - Numero di serie della SIM
 - Stato di attivazione
 - Ultima modifica stato
-- Ultimo aggiornamento stato 
+- Ultimo aggiornamento stato
 - Stato ubicazione
 
 ### Configurazione di Orange
@@ -230,7 +233,7 @@ Per abilitare l'estensione Orange:
 
 Dopo aver abilitato l'estensione Orange, tutti i dispositivi con una SIM card Orange devono essere configurati per visualizzare i dati della SIM Orange.
 
-1. Nella scheda dei dispositivi del tuo dashboard {{site.data.keyword.iot_short_notm}}, trova il dispositivo SIM Orange da configurare. 
+1. Nella scheda dei dispositivi del tuo dashboard {{site.data.keyword.iot_short_notm}}, trova il dispositivo SIM Orange da configurare.
 2. Selezione il dispositivo e scorri verso il basso fino a *Extension Configuration*.
 3. Immetti la configurazione dell'estensione utilizzando il seguente formato JSON e quindi fai clic su **Confirm changes** per salvare la tua configurazione.
 
@@ -244,8 +247,12 @@ Dopo aver abilitato l'estensione Orange, tutti i dispositivi con una SIM card Or
 ```
 Quando l'organizzazione è stata configurata correttamente, viene visualizzata la sezione *Extensions* nella sezione *Extensions Configuration* nella vista *Device Drilldown*.
 
+## Spazio di archiviazione dei dati cronologici
+{: #historical_data}
 
-## Estensioni di gestione dispositivo
+L'estensione di archiviazione dei dati cronologici ti permette di individuare e configurare i servizi di archiviazione dei messaggi compatibili come [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) o [{{site.data.keyword.messagehub_full}}](../../message_hub.html) per i tuoi dati IoT.
+
+## Pacchetti di gestione del dispositivo personalizzati
 {: #device_mgmt}
 
 La gestione del dispositivo è una funzione principale di {{site.data.keyword.iot_short_notm}}, tuttavia, può essere estesa per sviluppare ulteriori funzionalità.
@@ -264,9 +271,33 @@ L'estensione di gestione del dispositivo ti consente di installare funzioni pers
 
 ### Configurazione di Blockchain
 
-L'integrazione blockchain {{site.data.keyword.iot_short_notm}} è un offerta di servizi che non è attivata per impostazione predefinita in {{site.data.keyword.iot_short_notm}}. Per attivare la funzione nel tuo ambiente, completa la seguente procedura: 
- 1. Dal dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Settings** e naviga a **Extensions**.
+L'integrazione blockchain {{site.data.keyword.iot_short_notm}} è un offerta di servizi che non è attivata per impostazione predefinita in {{site.data.keyword.iot_short_notm}}. Per attivare la funzione nel tuo ambiente, completa la seguente procedura:
+ 1. Dal dashboard {{site.data.keyword.iot_short_notm}}, **Extensions**.
  2. Fai clic sul link **Tell me more** vicino all'estensione blockchain per andare alla pagina IoT Blockchain Services Offering.
- 3. Compila e invia il modulo di richiesta del servizio.
+ 3. Compila e invia il modulo di richiesta del servizio.   
 L'approvazione del servizio di solito impiega circa un giorno. Dopo che la tua richiesta è stata approvata, ricevi una email con le istruzioni su come attivare l'integrazione blockchain nella tua organizzazione {{site.data.keyword.iot_short_notm}}.
  5. Ritorna al dashboard {{site.data.keyword.iot_short_notm}} della tua organizzazione per completare la configurazione. Per ulteriori informazioni, consulta [Integrazione blockchain {{site.data.keyword.iot_short_notm}}](../../bl_blockchain_integration.html).
+
+## Weather Company
+{: #weathercompany}
+
+L'estensione Weather Company combina i dati meteo con i tuoi dispositivi {{site.data.keyword.iot_short_notm}} esistenti. I dati da Weather Company sono visualizzati nella vista dei dettagli del dispositivo se è stata effettuata una richiesta di ubicazione aggiornata utilizzando l'API o se il dispositivo ha già impostato la sua ubicazione utilizzando un messaggio di gestione del dispositivo.
+
+**Nota:** solo i dispositivi gestiti possono impostare le proprie ubicazioni. Tutti i dispositivi non gestiti devono avere le loro ubicazioni impostate manualmente utilizzando l'API. Per ulteriori informazioni sull'impostazione di un'ubicazione del dispositivo, consulta [Richieste di aggiornamento dell'ubicazione](../../devices/device_mgmt/index.html#update-location).
+
+### Dati meteo
+
+Per visualizzare i dati meteo richiamati per un'ubicazione del dispositivo, trova il dispositivo nel pannello **Devices** e fai clic su di esso. Nella vista del dispositivo dettagliata scorri fino alla sezione **Extensions**. Sono elencati i seguenti dati meteo:
+
+- Meteo corrente.
+- Temperatura corrente.
+- Temperatura massima e minima previste.
+- Umidità relativa. 
+- Pressione. 
+- Visibilità. 
+- Velocità del vento. 
+- Direzione del vento. 
+- Latitudine.
+- Longitudine.
+
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html). -->

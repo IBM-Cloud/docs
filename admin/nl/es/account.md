@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+  
 
 
 ---
@@ -17,10 +17,10 @@ copyright:
 
 # Gestión de la cuenta {{site.data.keyword.Bluemix_notm}}
 {: #mngacct}
-*Última actualización: 16 de agosto de 2016*
+*Última actualización: 20 de octubre de 2016*
 {: .last-updated}
 
-Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** para establecer notificaciones para su cuenta, ver el uso de cuenta o ver la factura.
+Vaya al enlace **Cuenta** para establecer notificaciones, ver el uso de cuenta o ver la factura.
 {:shortdesc}
 
 ## Registro en {{site.data.keyword.Bluemix_notm}}
@@ -43,14 +43,14 @@ Es posible utilizar un ID federado para registrarse en {{site.data.keyword.Bluem
 ## Configuración de notificaciones
 {: #notifications}
 
-Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; **Notificaciones** para configurar notificaciones de gastos y de cuenta generales. Las notificaciones de gastos están disponibles únicamente para propietarios de cuentas de {{site.data.keyword.Bluemix_notm}} de Pago según uso y Suscripción.
+Pulse **Cuenta** &gt; **Notificaciones** para configurar notificaciones de gastos y de cuenta generales. Las notificaciones de gastos están disponibles únicamente para propietarios de cuentas de {{site.data.keyword.Bluemix_notm}} de Pago según uso y Suscripción.
 
 Puede establecer notificaciones de correo electrónico de plataforma para incidencias de
 {{site.data.keyword.Bluemix_notm}} y mantenimiento planificado, así como establecer notificaciones de gastos que le avisen cuando la cuenta esté cerca del umbral de gasto que haya especificado. Realice las tareas siguientes para establecer tipos de notificaciones distintos para la cuenta.
 
 ### Establecimiento de notificaciones de plataforma
 
-Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; **Notificaciones** &gt; **Plataforma** para establecer notificaciones de correo electrónico para mantenimiento planificado e incidencias de {{site.data.keyword.Bluemix_notm}}. Puede seleccionar o deseleccionar cada opción para habilitar o inhabilitar la notificación por correo electrónico.
+Pulse **Cuenta** &gt; **Notificaciones** &gt; **Plataforma** para establecer notificaciones de correo electrónico para mantenimiento planificado e incidencias de {{site.data.keyword.Bluemix_notm}}. Puede seleccionar o deseleccionar cada opción para habilitar o inhabilitar la notificación por correo electrónico.
 
 ### Establecimiento de notificaciones de gastos
 {: #spendingnotifications}
@@ -60,7 +60,7 @@ Si es un propietario de cuenta de {{site.data.keyword.Bluemix_notm}} de Pago seg
 Complete los siguientes pasos para configurar notificaciones por correo electrónico para los límites de gasto:
 
 <ol>
-<li>Vaya al icono **Cuenta y soporte** ![Icono Cuenta y soporte](../admin/images/account_support.svg) &gt; **Cuenta** &gt; **Notificaciones** &gt; **Gasto**.</li>
+<li>Pulse **Cuenta** &gt; **Notificaciones** &gt; **Gasto**.</li>
 <li>Entre un valor numérico para establecer el umbral de gasto para desencadenar una notificación para cada tipo de notificación:<br />
 <ul>
 <li>Total de cuenta</li>
@@ -70,27 +70,23 @@ Complete los siguientes pasos para configurar notificaciones por correo electró
 <li>Gasto de un servicio específico</li>
 </ul>
 </li>
-<li>Seleccione **Guardar valores**.</li>
+<li>Cuando haya terminado, pulse **Guardar**.</li>
 </ol>
 
-**Nota**: si tiene una cuenta de prueba, puede actualizarla a una cuenta de Suscripción o Pago según uso para establecer los límites de gasto. Para obtener más información sobre las cuentas Pago según uso y Suscripción, consulte [Cómo se le factura](../pricing/index.html#pay-accounts).
-
+**Nota**: si tiene una cuenta de prueba, puede actualizarla a una cuenta de Suscripción o Pago según uso para establecer los límites de gasto. Para obtener más información sobre las cuentas Pago según uso y Suscripción, consulte [Cómo se le factura](/docs/pricing/index.html#pay-accounts).
 
 ## Visualización de uso
 {: #acctusage}
 
 Como propietario de cuenta o gestor de facturación para una organización, puede utilizar la vista Panel de control de uso para ver los cargos en tiempo real para los tiempos de ejecución, contenedores, servicios y soporte utilizados cada mes en sus organizaciones. Puede ver el consumo de GB por hora y de servicio de tiempo de ejecución en todas las regiones o seleccionar para ver una región determinada.
 
-Para abrir la vista Panel de control de uso, pulse el icono **{{site.data.keyword.avatar}}**
-![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Panel de control de uso**. Los gestores de facturación pueden ver los detalles sólo para las organizaciones en las que hay gestores de facturación.
+Para abrir la vista Panel de control de uso, pulse **Cuenta** &gt; *nombre_cuenta* &gt; **Panel de control de uso**. Los gestores de facturación pueden ver los detalles sólo para las organizaciones en las que hay gestores de facturación.
 
-La cuenta se factura al propietario por el uso total en el que han incurrido todas las organizaciones al final de cada ciclo de facturación. Como propietario de cuenta puede filtrar el resumen de uso por región y organización. También puede pulsar un mes concreto para ver el uso para ese mes. Seleccione **Todas las organizaciones** en la lista **Organizaciones** para ver el uso para todas las organizaciones de la cuenta.
-
+La cuenta se factura al propietario por el uso total en el que han incurrido todas las organizaciones al final de cada ciclo de facturación. Como propietario de cuenta puede filtrar el resumen de uso por región y organización. También puede pulsar un mes concreto para ver el uso para ese mes.
 
 ## Actualización de la información de facturación
 {: #account_billing}
 
-Como propietario de cuenta, puede editar, añadir o eliminar información de tarjeta de crédito guardada que está asociada a la cuenta {{site.data.keyword.Bluemix_notm}}. Vaya al icono **{{site.data.keyword.avatar}}**
-![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Facturación**.
+Como propietario de cuenta, puede editar, añadir o eliminar información de tarjeta de crédito guardada que está asociada a la cuenta {{site.data.keyword.Bluemix_notm}}. Pulse **Cuenta** &gt; *nombre_cuenta* &gt; **Facturación**.
 
-Si tiene una cuenta de SoftLayer vinculada a su cuenta de {{site.data.keyword.Bluemix_notm}}, consulte [Facturación por el uso de {{site.data.keyword.Bluemix_notm}} cuando las cuentas están vinculadas](../admin/softlayerlink.html#bill_usage) para obtener más información sobre el tipo de facturación.
+Si tiene una cuenta de SoftLayer vinculada a su cuenta de {{site.data.keyword.Bluemix_notm}}, consulte [Facturación por el uso de {{site.data.keyword.Bluemix_notm}} cuando las cuentas están vinculadas](/docs/admin/softlayerlink.html#bill_usage) para obtener más información sobre el tipo de facturación.

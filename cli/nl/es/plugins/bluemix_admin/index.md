@@ -35,6 +35,8 @@ de Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restricción:** Cygwin no admite la interfaz de línea de mandatos de Cloud Foundry. Utilice esta interfaz en una ventana de línea de mandatos que no sea la ventana de Cygwin.
 
+**Nota**: CLI de administración de {{site.data.keyword.Bluemix_notm}} sólo se utiliza para el entorno Local de {{site.data.keyword.Bluemix_notm}} y el entorno Dedicado de {{site.data.keyword.Bluemix_notm}}. No está soportado por {{site.data.keyword.Bluemix_notm}} Público.
+
 ## Adición del plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}
 
 Una vez instalada la interfaz de línea de mandatos cf, puede añadir el plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}.
@@ -67,7 +69,7 @@ Si necesita desinstalar el plug-in, puede utilizar los mandatos siguientes y, a 
 
 ## Utilización del plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}
 
-Puede utilizar el plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} para añadir o eliminar usuarios, asignar o desasignar usuarios de organizaciones y para realizar otras tareas de gestión. Los caracteres especiales, como espacios, signos de más (+) y ampersands (&) no se admiten al crear nombres de organización, nombres de espacio y grupos de seguridad de aplicación. Utilice mayúsculas y minúsculas combinadas o caracteres de subrayado para crear nombres exclusivos.
+Puede utilizar el plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} para añadir o eliminar usuarios, asignar o desasignar usuarios de organizaciones y para realizar otras tareas de gestión. 
 
 Para ver una lista de mandatos, ejecute el mandato siguiente:
 
@@ -111,9 +113,7 @@ cf ba add-user <nombre_usuario> <organización>
 ```
 {: codeblock}
 
-**Nota**: para añadir un usuario a una organización específica, debe ser el director de la organización o tener permisos de
-**Administrador** (una alternativa disponible es **Superusuario**) o **Usuario** con acceso de
-**Escritura**.
+**Nota**: para añadir un usuario a una organización específica, debe ser un **Administrador** con el permiso **users.write** (o **Superusuario**). Si es un gestor de organización, también se le puede proporcionar la posibilidad de añadir usuarios a su organización mediante un Superusuario que ejecute el mandato **enable-managers-add-users**. Consulte [Permitir a los gestores agregar usuarios](index.html#clius_emau) para obtener más información.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
@@ -141,11 +141,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">El nombre del usuario en {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">El permiso asignado al usuario. Por ejemplo, superusuario, básico, catálogo, usuario e informes. Para obtener más información sobre los permisos de usuario asignados, consulte [Permisos](../../../admin/index.html#permissions). No se puede utilizar este parámetro con el parámetro de organización en la misma consulta.</dd>
+<dd class="pd">El permiso asignado al usuario. Por ejemplo, superusuario, básico, catálogo, usuario e informes. Para obtener más información sobre los permisos de usuario asignados, consulte [Permisos](../../../admin/index.html#permissions). No se puede utilizar este parámetro con el parámetro de organización en la misma consulta. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">El nombre de la organización a la que pertenece el usuario. No se puede utilizar este parámetro con el parámetro de organización en la misma consulta.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">El rol de organización asignado al usuario. Por ejemplo, gestor, gestor de facturación o auditor de la organización.Especifique la organización con este parámetro. Para obtener más información acerca de los roles, consulte [Roles de usuario](../../../admin/users_roles.html#userrolesinfo).</dd>
+<dd class="pd">El rol de organización asignado al usuario. Por ejemplo, gestor, gestor de facturación o auditor de la organización. Especifique la organización con este parámetro. Para obtener más información acerca de los roles, consulte [Roles de usuario](../../../admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 
@@ -198,6 +198,32 @@ cf ba remove-user <nombre_usuario>
 
 **Sugerencia:** También puede usar **ba ru** como alias para un nombre de mandato
 de **ba remove-user** más largo.
+
+### Permitir a los gestores agregar usuarios
+{: #clius_emau}
+
+Si tiene el permiso **Superusuario** en el entorno de {{site.data.keyword.Bluemix_notm}}, puede permitir a los gestores de la organización que agreguen usuarios a las organizaciones que gestionan. Escriba este mandato:
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**Sugerencia:** también puede usar **ba emau** como alias para el nombre de mandato
+**ba enable-managers-add-users** más largo.
+
+### No permitir a los gestores agregar usuarios
+{: #clius_dmau}
+
+Si a los gestores de la organización se les permite agregar usuarios a las organizaciones que gestionan en el entorno de {{site.data.keyword.Bluemix_notm}} con el mandato **enable-managers-add-users**, y si tiene el permiso **Superusuario**, puede eliminar este valor. Escriba este mandato:
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**Sugerencia:** también puede usar **ba dmau** como alias para un nombre de mandato
+**ba disable-managers-add-users** más largo.
 
 ### Adición y supresión de una organización
 
@@ -473,6 +499,26 @@ cf ba edit-service-plan-visibilities <identificador_plan> <organización_1> <org
 
 **Sugerencia:** También puede usar **ba espv** como alias para el nombre de mandato
 **ba edit-service-plan-visibility** más largo.
+
+### Visualización de la información del uso de recursos
+{: #cliresourceusage}
+
+Puede ver información del uso de recursos, incluidos el uso de memoria, de disco y de CPU. Puede ver un resumen de los recursos reservados y físicos disponibles, así como el uso de los recursos reservados y físicos. También puede ver los datos de uso de DEA (Droplet Execution Agent) y el uso del disco y de la memoria histórica. Se mostrarán los datos históricos para el uso de la memoria y del disco, de forma predeterminada, de forma semanal y en orden descendente. Para ver la información de uso de recursos, utilice el mandato siguiente:
+
+```
+cf ba resource-usage <mensualmente> <semanalmente>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;mensualmente&gt;</dt>
+<dd class="pd">Ver los datos históricos para el espacio de disco y de memoria al mes a la vez.</dd>
+<dt class="pt dlterm">&lt;semanalmente&gt;</dt>
+<dd class="pd">Ver los datos históricos para el espacio de disco y de memoria a la semana a la vez. Este es el valor predeterminado.</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba rsu** como alias para el nombre de mandato
+**ba resource-usage** más largo.
 
 ### Trabajar con intermediarios de servicio
 
@@ -754,3 +800,84 @@ cf ba unbind-security-group <grupo-seguridad> <org> <espacio>
 **Sugerencia:** también puede usar **ba usg** como alias para el nombre de mandato
 **ba unbind-staging-security-group** más largo.
 
+### Trabajar con paquetes de compilación
+{: #buildpacks}
+
+Si tiene permisos de grabación en el catálogo de las apps, puede listar, crear, actualizar o suprimir paquetes de compilación.  
+#### Listar todos los paquetes de compilación
+
+Utilice el mandato siguiente para listar todos los paquetes de compilación o ver un paquete de compilación específico:
+
+```
+cf ba buildpacks <nombre_paquete_compilación>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nombre_paquete_compilación&gt;</dt>
+<dd class="pd">Un parámetro opcional para especificar un paquete de compilación concreto para ver.</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba lb** como alias para un nombre de mandato
+**ba buildpacks** más largo.
+
+#### Crear y cargar un paquete de compilación
+
+Puede crear y cargar un paquete de compilación. Puede cargar cualquier archivo comprimido que tenga un tipo de archivo .zip. Utilice el mandato siguiente para cargar un paquete de compilación:
+
+```
+cf ba create-buildpack <nombre_paquete_compilación> <vía_acceso_archivo> <posición>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nombre_paquete_compilación&gt;</dt>
+<dd class="pd">Nombre del paquete de compilación que se cargará.</dd>
+<dt class="pt dlterm">&lt;vía_acceso_archivo&gt;</dt>
+<dd class="pd">Vía de acceso al archivo comprimido del paquete de compilación.</dd>
+<dt class="pt dlterm">&lt;posición&gt;</dt>
+<dd class="pd">Orden en el que se comprueban los paquetes de compilación durante la detección automática del paquete de compilación.</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba cb** como alias para el nombre de mandato
+**ba create-buildpack** más largo.
+
+#### Actualizar un paquete de compilación
+
+Para actualizar un paquete de compilación existente, utilice el siguiente mandato:
+
+```
+cf ba update-buildpack <nombre_paquete_compilación> <posición> <habilitado> <bloqueado>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nombre_paquete_compilación&gt;</dt>
+<dd class="pd">Nombre del paquete de compilación que se actualizará.</dd>
+<dt class="pt dlterm">&lt;posición&gt;</dt>
+<dd class="pd">Orden en el que se comprueban los paquetes de compilación durante la detección automática del paquete de compilación.</dd>
+<dt class="pt dlterm">&lt;habilitado&gt;</dt>
+<dd class="pd">Indica si el paquete de compilación se utilizará para la transferencia.</dd>
+<dt class="pt dlterm">&lt;bloqueado&gt;</dt>
+<dd class="pd">Indica si el paquete de compilación está bloqueado para impedir actualizaciones.</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba ub** como alias para un nombre de mandato
+**ba update-buildpack** más largo.
+
+#### Suprimir un paquete de compilación
+
+Para suprimir un paquete de compilación existente, utilice el siguiente mandato:
+
+```
+cf ba delete-buildpack <nombre_paquete_compilación>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nombre_paquete_compilación&gt;</dt>
+<dd class="pd">Nombre del paquete de compilación que se suprimirá.</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba db** como alias para el nombre de mandato
+**ba delete-buildpack** más largo.

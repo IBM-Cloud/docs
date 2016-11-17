@@ -18,7 +18,7 @@ copyright:
 # CLI e strumenti di sviluppo
 {: #cli}
 
-*Ultimo aggiornamento: 31 agosto 2016*
+*Ultimo aggiornamento: 25 ottobre 2016*
 {: .last-updated}
 
 Con {{site.data.keyword.Bluemix_short}}, hai accesso a potenti strumenti, quali un'interfaccia riga di comando unificata e i plug-in delle CLI. Ciascuno di questi download di CLI è disponibile a supporto della tua esperienza {{site.data.keyword.Bluemix_notm}}.
@@ -29,7 +29,7 @@ Con {{site.data.keyword.Bluemix_short}}, hai accesso a potenti strumenti, quali 
 
 Scarica e installa le interfacce riga di comando a supporto della tua esperienza {{site.data.keyword.Bluemix_notm}}. 
 
-Ad eccezione dello [strumento CLI OpenStack](../virtualmachines/vm_index.html#vm_setup_cli){: new_window}, che viene utilizzato per la gestione dei server virtuali, lo strumento riga di comando cf Cloud Foundry è un requisito per tutti gli altri strumenti CLI {{site.data.keyword.Bluemix_notm}}. Lo strumento riga di comando {{site.data.keyword.Bluemix_notm}} fornisce un'esperienza ampliata per gestire il tuo ambiente {{site.data.keyword.Bluemix_notm}} oltre le applicazioni Cloud Foundry.
+Lo strumento riga di comando cf Cloud Foundry è un prerequisito per tutti gli altri strumenti CLI {{site.data.keyword.Bluemix_notm}}. Lo strumento riga di comando {{site.data.keyword.Bluemix_notm}} fornisce un'esperienza ampliata per gestire il tuo ambiente {{site.data.keyword.Bluemix_notm}} oltre le applicazioni Cloud Foundry.
 
 Questi strumenti CLI utilizzano entrambi la porta 443 per impostazione predefinita. Se è presente un proxy tra gli strumenti CLI e l'ambiente {{site.data.keyword.Bluemix_notm}}, devi configurare la variabile di ambiente `http-proxy` con la porta e l'url del proxy HTTP attuali se presenti. Per ulteriori dettagli, consulta [Utilizzo della CLI con un server proxy HTTP](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}.
 
@@ -45,15 +45,22 @@ Estendi facilmente la tua interfaccia riga di comando {{site.data.keyword.Bluemi
 riga di comando {{site.data.keyword.Bluemix_notm}}, vedi [ CLI Plug-in Repository](https://plugins.ng.bluemix.net/).
 
 ### Estendi la tua interfaccia riga di comando {{site.data.keyword.Bluemix_notm}}: bx
+{: cli_bluemix_ext}
 
-1. Per installare i plug-in CLI {{site.data.keyword.Bluemix_notm}} dal registro {{site.data.keyword.Bluemix_notm}}, imposta l'endpoint di registro di plug-in:
+* Per installare i plug-in CLI {{site.data.keyword.Bluemix_notm}} dal registro {{site.data.keyword.Bluemix_notm}}, imposta l'endpoint di registro di plug-in:
+
 ```
-bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx https://plugins.ng.bluemix.net
 ```
-2. Esegui il seguente comando per installare un plug-in:
+{: codeblock}
+
+* Immetti quindi il seguente comando per installare un plug-in:
+
 ```
-bluemix plugin install nome_plugin -r bluemix-bx-staging
+bluemix plugin install plugin_name -r bluemix-bx
 ```
+{: codeblock}
+
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
 |-----|-----|-----|
@@ -61,15 +68,22 @@ bluemix plugin install nome_plugin -r bluemix-bx-staging
 
 
 ### Estendi la tua interfaccia riga di comando Cloud Foundry: cf
+{: cli_cf_ext}
 
-1. Per installare i plug-in CLI dal registro {{site.data.keyword.Bluemix_notm}}, imposta l'endpoint di registro di plug-in:
+* Per installare i plug-in CLI dal registro {{site.data.keyword.Bluemix_notm}}, imposta l'endpoint di registro di plug-in:
+
 ```
-cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf https://plugins.ng.bluemix.net
 ```
-2. Esegui il seguente comando per installare un plug-in:
+{: codeblock}
+
+* Immetti quindi il seguente comando per installare un plug-in:
+
 ```
-cf install-plugin nome_plugin -r bluemix-cf-staging
+cf install-plugin plugin_name -r bluemix-cf
 ```
+{: codeblock}
+
 
 | *Active Deploy* | *Console di gestione* | 
 |-----------------|-----------------|
@@ -78,8 +92,6 @@ cf install-plugin nome_plugin -r bluemix-cf-staging
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
 | Nome del plug-in: ibm-containers <br> [Visualizza documenti](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Nome del plug-in: VPN <br> [Visualizza documenti](./plugins/vpn/index.html) |
-
-<!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
 ## ![](./images/Integrated_Dev_Tools.svg) Strumenti di sviluppo integrati

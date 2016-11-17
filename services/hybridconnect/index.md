@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-12"
 ---
 
 {:new_window: target="_blank"}
@@ -11,31 +11,30 @@ copyright:
 {:codeblock:.codeblock}
 
 
-# Getting started with {{site.data.keyword.HybridConnect_short}}
+# Getting started with {{site.data.keyword.HybridConnect_short}} (Experimental)
 {: #hybridconnect}
 
-*Last updated: 10 October 2016*
-{: .last-updated}
+{{site.data.keyword.HybridConnect_full}} connects to on-premises IBM software products to build a cross-product inventory and provide insights into product usage metrics.
 
-{{site.data.keyword.HybridConnect_full}} allows you to connect your on-premise IBM software products to your {{site.data.keyword.HybridConnect_short}} service instance and gain insight into your running inventory and runtime usage metrics.
 {:shortdesc}
 
-Your {{site.data.keyword.HybridConnect_short}} service instance (that you will create in the next step) is associated to a single Organization and Space and will have unique credentials.  You will have to have at least one Organization/space setup.  If you need to separate the data (for example, limiting access to specific individuals), then you can create multiple spaces within an organization, and have a service instance in each space.  Each service instance will unique credentials that you will need to provide to your IBM software products. 
+The {{site.data.keyword.HybridConnect_short}} service runs within Bluemix and receives information from the enabled on-premises IBM software products. This information is then shown within the service instance dashboard. To use the service, you must have an an {{site.data.keyword.Bluemix}} account and create the service in an organization and space.  The product and usage information about your enabled on-premises products is securely stored and viewed within the scope or context of that unique service. 
 
-You will only be able to see the information for the products configured with each set of credentials within the service instance with those credentials.  For the Experimental service, it is recommended that you use a single service instance for simplicity.
+Tip: For an experimental service, you can use a single service instance for simplicity.
 
-You can find available services in the Catalog under Services in the {{site.data.keyword.Bluemix}} user interface.  Experimental services (like {{site.data.keyword.HybridConnect_short}}) can be found in a special {{site.data.keyword.Bluemix}} Experimental Services Catalog.
+To get started with {{site.data.keyword.HybridConnect_short}}, complete the following steps:
 
-To add {{site.data.keyword.HybridConnect_short}} to your {{site.data.keyword.Bluemix}} dashboard, complete the following steps:
+1.  Update your enabled, on-premises IBM software products to the minimum prerequisite level, if required. For a product that requires a minimum supported level, install the fix pack or interim fix to enable the integration with {{site.data.keyword.HybridConnect_short}}. 
+2.  Connect your enabled, on-premises IBM software products to your {{site.data.keyword.HybridConnect_short}} service. As part of the configuration process for each product, you need the service credentials (i.e. the apikey). You can find the service credentials on the **Service Credentials tab** of your service dashboard. 
+3.  After you obtain the enablement changes and install and configure each enabled product, you may need to start or restart the products or product instances for them to provide product and usage information to the {{site.data.keyword.HybridConnect_short}} service. 
 
-<ol>
-<li>From your dashboard, click <strong>Catalog</strong> along the top of the screen.  </li>
-<li>Scroll to the end of the Catalog, and click <strong>Bluemix Experimental Services</strong>.  </li>
-<li>Click on the <strong>Integration</strong> category on the left side, or scroll down to the section with the Integration services.</li>
-<li>Click on the <strong>Hybrid Connect</strong> tile.  </li>
-<li>The service details page opens and you can read through the information.  Note that this is a Free service, so the plan shown is a Free experimental plan.  </li>
-<li>A default service name is provided, but you can change it if you wish.  If you want to specify a service name, avoid using characters other than alphabetic or numeric characters, because results might be unpredictable.  </li>
-<li>A default credentials name is provided, but you can change it if you wish.  </li>
-<li>Then click <strong>Create</strong>.  </li>
+For details on the enabling products, the minimum support level required for each product, and how to enable each product to integrate with {{site.data.keyword.HybridConnect_short}}, join the {{site.data.keyword.HybridConnect_full}} [Experimental Customer Program](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W04c8ca6d7a05_453c_8e2d_b784cde378be).
 
-</ol>
+You can view your inventory by selecting **Manage** in the service dashboard.  
+
+* In the service dashboard, the names of the products that have provided information are shown under the **All Products** choice in the **Products** pane. 
+* To show all product instances, select **All Products** from the **Products** pane.  To show product instances of a single product, select that product from the **Products** pane and they are displayed in the **Product instances** pane.
+* To show the details of a single product instance, select the product instance from the **Product instances** pane. The **Details** pane is displayed on the right side. The **Details** pane shows details of the product instance and the usage information that has been sent from the instance.
+* The **Details** tab shows product instance information, including product information, and optionally, environment information and component information.
+* The **Usage** tab shows product usage information.
+

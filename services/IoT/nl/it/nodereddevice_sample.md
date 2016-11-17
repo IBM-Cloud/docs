@@ -11,7 +11,7 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Creazione e collegamento di un simulatore del dispositivo Node-RED  
+# Creazione e collegamento di un simulatore del dispositivo Node-RED
 Utilizza Node-RED per creare un simulatore del dispositivo e per inviare i dati del dispositivo simulato alla tua organizzazione {{site.data.keyword.iot_full}}.  
 {:shortdesc}
 Ultimo aggiornamento: 26 agosto 2016
@@ -21,15 +21,15 @@ Node-RED è uno strumento per collegare dispositivi hardware, API o servizi onli
 
 Puoi eseguire la tua istanza Node-RED nel tuo proprio ambiente o utilizzarla come un'applicazione {{site.data.keyword.Bluemix_notm}}. Il seguente processo include le istruzioni per {{site.data.keyword.Bluemix_notm}}.
 
-Per creare e collegare il simulatore del dispositivo Node-RED: 
+Per creare e collegare il simulatore del dispositivo Node-RED:
 
 1. Crea il simulatore del dispositivo Node-RED
    Utilizza il simulatore del dispositivo per inviare i messaggi del dispositivo MQTT a {{site.data.keyword.iot_short_notm}}. Il simulatore del dispositivo simula un invio di dati per un contenitore merci a un broker MQTT come {{site.data.keyword.iot_short_notm}}.
     1. Accedi a {{site.data.keyword.Bluemix_notm}} all'indirizzo: https://console.ng.bluemix.net
     2. Seleziona la scheda **Catalog**.
     3. Individua la sezione dei contenitori tipo del catalogo del servizio e fai clic su **Node-RED Starter Community BETA**. **Suggerimento:** Fai clic [qui](https://console.ng.bluemix.net/catalog/starters/node-red-starter/) per andare direttamente alla pagina starter di Node-RED.
-    4. Nella pagina starter di Node-RED, seleziona lo spazio dove desideri distribuire Node-RED, verifica le selezioni per la creazione di un'applicazione e fai clic su **Create** per aggiungere Node-RED alla tua organizzazione Bluemix.
-    Ad esempio:   
+    4. Nella pagina starter di Node-RED, seleziona lo spazio dove desideri distribuire Node-RED, verifica le selezioni per la creazione di un'applicazione e fai clic su **Create** per aggiungere Node-RED alla tua organizzazione Bluemix.  
+    Ad esempio:  
      - Spazio: dev
      - Nome: myDevice
      - Host: myDevice
@@ -37,7 +37,7 @@ Per creare e collegare il simulatore del dispositivo Node-RED:
     Lascia il resto delle opzioni con i loro valori predefiniti. Dopo che l'applicazione è stata distribuita, vieni portato alla pagina Start coding with Node-RED.  
     **Nota:** il processo di preparazione può richiedere diversi minuti.
 
-    3. Fai clic sul link Routes per aprire Node-RED.
+    3. Fai clic sul link Routes per aprire Node-RED.  
     Esempio: `http://simulatedDevice.mybluemix.net`
     4. Fai clic su **Go to your Node-RED flow editor** per aprire l'editor.
     5. Copia il flusso di dati Node-RED che trovi nella sezione [Node-RED node flow data](#flow_data) di questo documento.
@@ -55,15 +55,15 @@ Segui queste istruzioni per collegare il dispositivo di esempio Node-RED:
  6. Fai clic su **Add Device**
  7. Fai clic su **Create device type**.
  9. Immetti un nome descrittivo e una descrizione per il tipo di dispositivo, come ad esempio `sample_device`.
- 10. Facoltativo: immetti gli attributi per il tipo di dispositivo. 
- 11. Facoltativo: immetti i metadati per il tipo di dispositivo. 
- 12. Fai clic su **Create** per aggiungere il nuovo tipo di dispositivo. 
+ 10. Facoltativo: immetti gli attributi per il tipo di dispositivo.
+ 11. Facoltativo: immetti i metadati per il tipo di dispositivo.
+ 12. Fai clic su **Create** per aggiungere il nuovo tipo di dispositivo.
  13. Fai clic su **Next** per aggiungere il tuo dispositivo.
  14. Immetti un ID dispositivo, come ad esempio `Device001`.
- 15. Facoltativo: immetti i metadati per il dispositivo. 
+ 15. Facoltativo: immetti i metadati per il dispositivo.
  16. Fai clic su **Next** per aggiungere una connessione del dispositivo con un token di autenticazione generato automaticamente.
- 17. Verifica che le informazioni di riepilogo siano corrette e quindi fai clic su **Add** per aggiungere la connessione. 
- 18. Nella pagina delle informazioni del dispositivo che si apre, copia e salva le informazioni sul dispositivo:   
+ 17. Verifica che le informazioni di riepilogo siano corrette e quindi fai clic su **Add** per aggiungere la connessione.
+ 18. Nella pagina delle informazioni del dispositivo che si apre, copia e salva le informazioni sul dispositivo:  
   <ul>
   <li> ID organizzazione
   <li> Tipo di dispositivo
@@ -97,9 +97,9 @@ Segui queste istruzioni per collegare il dispositivo di esempio Node-RED:
 
 4. Convalida la connessione del dispositivo
  1. In un'altra scheda o finestra del browser, apri il dashboard {{site.data.keyword.iot_short_notm}}.
- 2. Seleziona **Devices** e fai clic su **Device001** o sul nome del dispositivo che hai aggiunto, se diverso.
+ 2. Seleziona **Devices** e fai clic su **Device001** o sul nome del dispositivo che hai aggiunto, se diverso.  
  Viene visualizzata la pagina delle informazioni sul dispositivo. Questa vista ti consente di controllare lo stato della connessione del tuo dispositivo. Il dispositivo dovrebbe essere visualizzato come scollegato in questa fase.   
- 3. Torna al tuo editor del flusso Node-RED, fai clic sul pulsante del nodo Inject per generare un payload asset.
+ 3. Torna al tuo editor del flusso Node-RED, fai clic sul pulsante del nodo Inject per generare un payload asset.  
  Il payload contiene i seguenti punti dati:  
  ```
  {"d":
@@ -116,7 +116,7 @@ Segui queste istruzioni per collegare il dispositivo di esempio Node-RED:
  ```
   {:codeblock}  
 
- 3. Nella scheda di debug del pannello di destra, verifica che siano stati creati dei messaggi.   
+ 3. Nella scheda di debug del pannello di destra, verifica che siano stati creati dei messaggi.  
  4. Torna nella pagina delle informazioni sul dispositivo {{site.data.keyword.iot_short_notm}}, il dispositivo dovrebbe essere ora collegato. Verifica di visualizzare gli stessi punti dati ricevuti dal dispositivo.  
  ```
  Event	Datapoint	 Value	Time Received

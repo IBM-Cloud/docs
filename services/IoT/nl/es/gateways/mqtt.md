@@ -193,7 +193,7 @@ La pasarela puede procesar mensajes de Protocolo de gestión de dispositivos par
 ### Formato de mensajes
 {: #msg_format}
 
-Todos los mensajes se envían en formato JSON. 
+Todos los mensajes se envían en formato JSON.
 
 **Solicitudes**
 

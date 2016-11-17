@@ -56,5 +56,5 @@ Sie können in {{site.data.keyword.iot_short}} Geräte erstellen und verwalten, 
 
 ## Gateway-Entwicklung
 {: #gateway-dev}
-Wenn von Ihren Geräten keine direkte Verbindung zum Internet hergestellt werden kann, verwenden Sie die angegebenen Informationen zum Erstellen eines Gateway-Geräts, mit dem Daten abgerufen und an Anwendungen in Ihrer {{site.data.keyword.iot_short}}-Organisation gesendet werden können.
+Wenn von Ihren Geräten keine direkte Verbindung zum Internet hergestellt werden kann, verwenden Sie die angegebenen Informationen zum Erstellen eines Gateway-Geräts, mit dem Daten abgerufen und an Anwendungen in Ihrer {{site.data.keyword.iot_short}}-Organisation gesendet werden können. 
 Das Nachrichtenprotokoll MQTT wird für die Gateway-Entwicklung in {{site.data.keyword.iot_short}} unterstützt.

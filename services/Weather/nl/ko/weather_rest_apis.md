@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-22"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # {{site.data.keyword.weather_short}} REST API 사용
 {: #rest_apis}
-
-마지막 업데이트 날짜: 2016년 8월 22일
-{: .last-updated}
 
 [REST API](https://twcservice.{APPDomain}/rest-api/){:new_window}를 사용하여
 기상 데이터를 검색할 수 있습니다. API 연산을 테스트하고 즉시 결과를 봄으로써 신속하게 애플리케이션을

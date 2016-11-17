@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
- 
+ultimo aggiornamento: "15-03-2016" 
 
 ---
 
@@ -17,8 +17,6 @@ copyright:
 {:pre: .pre}
 
 # Utilizzo dei pacchetti di build della community
-*Ultimo aggiornamento: 15 marzo 2016*
-{: .last-updated}
 
 Se non riesci a trovare uno starter nel Catalogo {{site.data.keyword.Bluemix}} che ti fornisca il runtime desiderato, puoi portare tu un pacchetto di build esterno in {{site.data.keyword.Bluemix_notm}}. Puoi specificare un pacchetto di build personalizzato compatibile con Cloud Foundry quando distribuisci la tua applicazione utilizzando il comando cf push.
 {:shortdesc}
@@ -96,7 +94,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 Utilizza il comando <strong>cf set-env</strong>. Ad esempio, immetti il seguente comando per impostare la versione Java su 1.7.0:
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &apos;{jre: { version: 1.7.0_+ }}&apos;</code></pre>
 <p>Quindi, per rendere effettive
 le modifiche, prepara di nuovo la tua applicazione:</p>
 <pre class="pre"><code>cf restage app_name</code></pre>

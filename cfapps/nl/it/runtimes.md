@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
- 
+ultimo aggiornamento: "11-11-2015" 
 
 ---
 
@@ -14,7 +14,6 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # Panoramica sui runtime
-*Ultimo aggiornamento: 11 novembre 2015*
 
 Utilizza i runtime per rendere rapidamente operativa la tua applicazione, senza dover configurare e gestire macchine virtuali e sistemi operativi. In
 {{site.data.keyword.Bluemix}}, i runtime sono
@@ -26,37 +25,37 @@ per Cloud Foundry funzionano anche con {{site.data.keyword.Bluemix_notm}}. Contr
 <li>
 <p class="runtimeIcon"><img src="images/javaweb_featured.svg" alt="Java Liberty" /></p>
 <p class="runtimeTitle">Liberty for Java</p>
-<p class="runtimeLink"><a format="html" href="../runtimes/liberty/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
+<p class="runtimeLink"><a format="html" href="/docs/runtimes/liberty/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
 </li>
 <li>
 <p class="runtimeIcon"><img src="images/node_featured.svg" alt="Node.js" /></p>
 <p class="runtimeTitle">SDK for Node.js</p>
-<p class="runtimeLink"><a format="html" href="../runtimes/nodejs/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
+<p class="runtimeLink"><a format="html" href="/docs/runtimes/nodejs/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
 </li>
 <li>
 <p class="runtimeIcon"><img src="images/xpages_featured.svg" alt="XPages" /></p>
 <p class="runtimeTitle">XPages</p>
-<p class="runtimeLink"><a format="html" href="../starters/xpages/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
+<p class="runtimeLink"><a format="html" href="/docs/starters/xpages/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
 </li>
 <li>
 <p class="runtimeIcon"><img src="images/go_featured.svg" alt="Go" /></p>
 <p class="runtimeTitle">Go</p>
-<p class="runtimeLink"><a format="html" href="../runtimes/go/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
+<p class="runtimeLink"><a format="html" href="/docs/runtimes/go/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
 </li>
 <li>
 <p class="runtimeIcon"><img src="images/php_featured.svg" alt="PHP" /></p>
 <p class="runtimeTitle">PHP</p>
-<p class="runtimeLink"><a format="html" href="../runtimes/php/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
+<p class="runtimeLink"><a format="html" href="/docs/runtimes/php/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
 </li>
 <li>
 <p class="runtimeIcon"><img src="images/python_featured.svg" alt="Python" /></p>
 <p class="runtimeTitle">Python</p>
-<p class="runtimeLink"><a format="html" href="../runtimes/python/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
+<p class="runtimeLink"><a format="html" href="/docs/runtimes/python/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
 </li>
 <li>
 <p class="runtimeIcon"><img src="images/ruby_featured.svg" alt="Ruby" /></p>
 <p class="runtimeTitle">Ruby</p>
-<p class="runtimeLink"><a format="html" href="../runtimes/ruby/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
+<p class="runtimeLink"><a format="html" href="/docs/runtimes/ruby/index.html" scope="peer">VISUALIZZA DOCUMENTI</a></p>
 </li>
 <li>
 <p class="runtimeIcon"><img src="images/byod_featured.png" alt="Pacchetti di build della community" /></p>

@@ -20,9 +20,9 @@ Pour connecter votre application à {{site.data.keyword.iot_full}}, vous devez u
 
 ## Connexion à l'aide d'une clé d'API
 {: #api-key}
-Les clés d'API vous permettent de connecter des applications à votre organisation {{site.data.keyword.iot_short_notm}}. Les applications requièrent une clé d'API pour se connecter à une organisation, ainsi qu'un jeton d'authentification unique qui doit être utilisé avec cette clé d'API.   
+Les clés d'API vous permettent de connecter des applications à votre organisation {{site.data.keyword.iot_short_notm}}. Les applications requièrent une clé d'API pour se connecter à une organisation, ainsi qu'un jeton d'authentification unique qui doit être utilisé avec cette clé d'API.  
 
-Pour plus d'informations sur les connexions d'application, voir [MQTT Connectivity for Applications](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html) dans la documentation du développeur. 
+Pour plus d'informations sur les connexions d'application, voir [MQTT Connectivity for Applications](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html) dans la documentation du développeur.
 
 Pour créer une paire clé d'API/jeton d'authentification :  
 1.	Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, accédez à **Applications > Clés d'API**.  
@@ -43,6 +43,6 @@ plusieurs services, la variable VCAP_SERVICES inclut les informations de connexi
 
 Toutefois,
 vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de
-créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations, voir [Demande d'une nouvelle instance de service](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) dans la documentation {{site.data.keyword.Bluemix_notm}}. 
+créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations, voir [Demande d'une nouvelle instance de service](https://console.{DomainName}/docs/services/reqnsi.html#req_instance) dans la documentation {{site.data.keyword.Bluemix_notm}}.
 
 Pour voir les détails relatifs aux applications Bluemix qui sont liées à l'instance de service Bluemix associée à votre organisation, accédez à **Applications > Applications Bluemix**.  

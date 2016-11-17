@@ -13,7 +13,7 @@ copyright:
 
 # Analisi cloud
 {: #cloud_analytics}
-Ultimo aggiornamento: 2 agosto 2016
+Ultimo aggiornamento: 23 agosto 2016
 {: .last-updated}
 
 Utilizzando le analisi cloud {{site.data.keyword.iot_short}}, specifichi le condizioni della regola basate sui dati del dispositivo in tempo reale e che attivano gli avvisi e le azioni facoltative quando incontrate.    
@@ -53,17 +53,17 @@ Le regole sono punti di decisione che corrispondono ai dati in tempo reale con v
 Per creare una regola:
 1. Nel dashboard {{site.data.keyword.iot_short}}, passa a **Rules**.
 2. Fai clic su **Create A Rule**, fornisci un nome e una descrizione per la regola, seleziona un tipo di dispositivo a cui applicare la regola e quindi fai clic su **Next**.  
-3. Per configurare la logica della regola, aggiungi una o più condizioni IF da utilizzare come trigger per la regola.
-Puoi aggiungere condizioni in righe parallele per applicarle come condizioni OR o puoi aggiungere le condizioni in colonne sequenziali per applicarle come condizioni AND.
-**Importante:** per attivare una condizione che confronta due proprietà o per attivare due o più condizioni della proprietà combinate sequenzialmente utilizzando AND, i punti dei dati di attivazione devono essere inclusi nello stesso messaggio del dispositivo. Se i dati sono ricevuti in più di un messaggio, la condizione o le condizioni in sequenza non vengono attivate.
+3. Per configurare la logica della regola, aggiungi una o più condizioni IF da utilizzare come trigger per la regola.  
+Puoi aggiungere condizioni in righe parallele per applicarle come condizioni OR o puoi aggiungere le condizioni in colonne sequenziali per applicarle come condizioni AND.  
+**Importante:** per attivare una condizione che confronta due proprietà o per attivare due o più condizioni della proprietà combinate sequenzialmente utilizzando AND, i punti dei dati di attivazione devono essere inclusi nello stesso messaggio del dispositivo. Se i dati sono ricevuti in più di un messaggio, la condizione o le condizioni in sequenza non vengono attivate.  
 **Esempi:**
 Una regola semplice può attivare una avviso se un valore del parametro è maggiore di un valore specificato:
 Condizione = `temp_cpu>80`
 Una regola più complessa può essere attivata quando viene soddisfatta una combinazione di soglie:
 Condizione = `temp_cpu>60 AND cpu_load>90`   
 
-4. Configura i requisiti di attivazione condizionali per la tua regola.
-Per controllare il numero di avvisi che vengono attivati per un regola in un intervallo di tempo, puoi configurare i requisiti di attivazione condizionali per la tua regola.
+4. Configura i requisiti di attivazione condizionali per la tua regola.  
+Per controllare il numero di avvisi che vengono attivati per un regola in un intervallo di tempo, puoi configurare i requisiti di attivazione condizionali per la tua regola.  
 **Importante:**  l'attivazione condizionale agisce su qualsiasi condizione nella regola. Ad esempio, se una regola ha cinque condizioni parallele differenti impostate utilizzando OR, ogni condizione che è true viene conteggiata nel numero di trigger condizionali.
 Per impostare l'attivazione condizionale per un regola:
  1. Nell'editor della regola, fai clic sul link **Trigger each time conditions are met** predefinito per aprire la casella di dialogo per la configurazione dei requisiti della frequenza della serie.
@@ -73,10 +73,10 @@ Per impostare l'attivazione condizionale per un regola:
  <li>Attiva se le condizioni sono soddisfatte N volte in M *Unità di tempo*</li>
  </ul>  
  Per una descrizione più dettagliata dei trigger condizionali, consulta [Attivazione regola condizionale](#conditional "Panoramica attivazione condizionale").
-5. Crea o seleziona una o più azioni che si verificano se vengono soddisfatte le condizioni della regola.
-Per ulteriori informazioni sulle azioni, consulta [Utilizzo delle azioni con le tue regole](#shared "Crea azioni").
+5. Crea o seleziona una o più azioni che si verificano se vengono soddisfatte le condizioni della regola.  
+Per ulteriori informazioni sulle azioni, consulta [Utilizzo delle azioni con le tue regole](#shared "Crea azioni").   
  Ad esempio: un azione può essere di inviare una email o di inserire un webhook.
-3. **Facoltativo:** seleziona una priorità dell'avviso per la regola.
+3. **Facoltativo:** seleziona una priorità dell'avviso per la regola.  
  La priorità viene utilizzata per classificare gli avvisi che vengono visualizzati nella tabella **Rule-Based Analytics**. La priorità predefinita è bassa.
 6. Quando sei soddisfatto della tua regola, fai clic su **Save** per salvare senza attivare o su **Activate** per salvare e attivare la regola.
 
@@ -85,19 +85,18 @@ La tua regola è stata creata. Se attivi la regola, quando vengono soddisfatte l
 ## Attivazione regola condizionale
 {: #conditional}
 
-Per controllare il numero di avvisi che vengono attivati per un regola in un intervallo di tempo, puoi configurare i requisiti di attivazione condizionali per la tua regola. 
+Per controllare il numero di avvisi che vengono attivati per un regola in un intervallo di tempo, puoi configurare i requisiti di attivazione condizionali per la tua regola.
 
 A seconda della frequenza del messaggio e delle condizioni della regola, una regola può essere attivata molte volte dopo che è stata soddisfatta una condizione di attivazione. Ad esempio, se la condizione è `temp >= 90` e la temperatura aumenta e si stabilizza su 91, la regola viene attivata da qualsiasi messaggio in entrata. In base alla frequenza dei messaggi e alle azioni del dispositivo che la regola ha impostato di eseguire, questo volume di avvisi può velocemente riempire la casella posta in entrata o inviare una marea di feed Twitter con messaggi che non forniscono alcun valore aggiunto.
 
-**Importante:**  l'attivazione condizionale agisce su qualsiasi condizione nella regola. Ad esempio, se una regola ha cinque condizioni parallele differenti impostate utilizzando OR, ogni condizione che è soddisfatta viene conteggiata nel numero di trigger condizionali. 
+**Importante:**  l'attivazione condizionale agisce su qualsiasi condizione nella regola. Ad esempio, se una regola ha cinque condizioni parallele differenti impostate utilizzando OR, ogni condizione che è soddisfatta viene conteggiata nel numero di trigger condizionali.
 
 Condizione | Descrizione
 ------------- | -------------
 Attiva ogni volta che le condizioni sono soddisfatte | La regola viene attivata ogni volta che vengono soddisfatte le condizioni della regola.
 Attiva se le condizioni sono soddisfatte *N* volte in *M* *giorni/ore/minuti/intervallo personalizzato* | La regola viene attivata quando vengono soddisfatte le condizioni *N* volte nell'intervallo di tempo selezionato e non viene riattivata nuovamente finché non trascorre l'intervallo di tempo selezionato. </br>Esempio: il requisito di attivazione condizionale =`Trigger only once if conditions are met 4 times in 30 minutes`. Il dispositivo invia un nuovo messaggio ogni cinque minuti. A mezzogiorno, la temperatura iniziale supera i 90 gradi, che soddisfa la condizione. Il contatore di attivazione condizionale viene avviato ma la regola non è ancora stata attivata.  Dopo 15 minuti e tre ulteriori messaggi che indicano che è stato ricevuto `temp > 90`, la regola viene attivata. La regola non viene quindi attivata per altri 15 minuti indipendentemente dalla temperatura.
 Attiva solo la prima volta che vengono soddisfatte le condizioni e reimposta quando le condizioni non vengono più soddisfatte. | La regola viene attivata quando vengono soddisfatte le condizioni ma non viene attivata dei successivi messaggi che soddisfano le stesse condizioni. I criteri di attivazione sono reimpostati dal primo messaggio che non soddisfa le condizioni della regola.
-
-<!-- Trigger if conditions persist for *M* *days/hours/minutes/custom*. | The rule is triggered when the conditions are met continuously for the selected time interval. </br>The rule is also triggered if the following requirements are met: <ol><li>The rule conditions are first met but are then followed by a time period during which no new messages are received.<li>The no-messages time period exceeds the selected time interval.<li>The message that ends the no-message time period meets the rule conditions.</ol>-->
+Attiva se le condizioni sono soddisfatte per *M* *days/hours/minutes/custom*. | La regola viene attivata dopo l'intervallo di tempo selezionato se tutti i punti dati ricevuti durante l'intervallo di tempo soddisfano le condizioni o se non viene ricevuto alcun altro punto dati. L'intervallo di tempo avvia le condizioni inzialmente soddisfatte.
 
 
 
@@ -112,7 +111,7 @@ Per creare un'azione nella scheda delle azioni:
 1. Nel dashboard {{site.data.keyword.iot_short}}, passa a **Rules**.
 2. Nel dashboard delle regole, seleziona la scheda **Actions**.
 2. Fai clic su **Create An Action**, fornisci una descrizione e un nome per l'azione e seleziona un tipo di azione e fai quindi clic su **Next**.
-3. Fornisci i parametri obbligatori per il tipo di azione che stai creando.
+3. Fornisci i parametri obbligatori per il tipo di azione che stai creando.  
 Tipi di azione:  
  - [Send email](#email "Send email")
  - [IFTTT](#ifttt "IFTTT")
@@ -137,7 +136,7 @@ Parametro | Descrizione
 Nome | Il nome dell'azione, utilizzato nel dashboard degli avvisi
 Descrizione | Una breve descrizione dell'azione.
 Oggetto | La riga dell'oggetto dell'email. La riga dell'oggetto predefinita è "IBM Watson IoT Alert: Mail action".
-A  | Seleziona di inviare l'avviso soltanto a te stesso o a un elenco separato da virgole di indirizzi email. Se selezioni di inviare solo a te stesso, l'email viene inviata all'indirizzo email {{site.data.keyword.iot_short}} con cui hai eseguito l'accesso.
+A | Seleziona di inviare l'avviso soltanto a te stesso o a un elenco separato da virgole di indirizzi email. Se selezioni di inviare solo a te stesso, l'email viene inviata all'indirizzo email {{site.data.keyword.iot_short}} con cui hai eseguito l'accesso.
 Cc | Nessuno o un elenco di indirizzi email separati da virgole.
 Il corpo dell'email viene automaticamente creato dal messaggio del dispositivo nel momento in cui viene attivata la regola.  
 **Importante:** per impostazione predefinita, le email non includono i dati del dispositivo che possono includere informazioni sensibili. Modifica l'impostazione **Include Data** per i includere i dati del dispositivo.
@@ -215,7 +214,7 @@ Utilizza l'azione Node-RED per collegarti a un'applicazione Node-RED quando vien
 
 Esempio: [Utilizza Node-RED per inviare un messaggio di testo](#noderedex).
 
-Vengono utilizzati i seguenti parametri per configurare un'azione Node-RED: 
+Vengono utilizzati i seguenti parametri per configurare un'azione Node-RED:
 
 Parametro | Descrizione
 ---|---
@@ -234,7 +233,7 @@ In questo esempio, l'azione è configurata per utilizzare Node-RED con un nodo T
 Per creare l'azione di invio del messaggio di testo:
 1. In Twilio, individua o crea un nuovo servizio del messaggio da utilizzare per inviare i messaggi di testo dal tuo account Twilio. Per informazioni, consulta [Twilio documentation](https://www.twilio.com/help).
 2. In Bluemix, configura e accedi al tuo account Node-RED con l'URL Node-RED `http://mynodered.mybluemix.net/red/`. Per ulteriori informazioni, consulta l'argomento [Creating apps with Node-RED Starter](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html) nella documentazione di Bluemix.
-3. In Node-RED, crea un flusso a due nodi di esempio, come [RTI-alert]->[SMS].
+3. In Node-RED, crea un flusso a due nodi di esempio, come [RTI-alert]->[SMS].  
 Dove il primo nodo è un nodo http e il secondo nodo è un nodo twilio.
  1. Aggiungi il nodo di input "http" e configuralo con i seguenti attributi:
   <ul>
@@ -273,7 +272,7 @@ Utilizza l'azione webhook per effettuare una richiesta HTTP al servizio web basa
 
 Esempio: [Utilizza webhook per pubblicare su Slack](#webhookex).
 
-Vengono utilizzati i seguenti parametri per configurare un'azione webhook: 
+Vengono utilizzati i seguenti parametri per configurare un'azione webhook:
 
 Parametro | Descrizione
 ---|---
@@ -284,9 +283,8 @@ Metodo | Il tipo di chiamata webhook da eseguire. Seleziona uno dei seguenti tip
 Nome utente | Da includere se richiesto dal servizio web.
 Password | Da includere se richiesto dal servizio web. **Importante:** la password è inviata in cleartext.
 Intestazione | Le intestazioni sono formate dalla coppie di chiave valore. **Suggerimento:** puoi utilizzare la [sostituzione della variabile](#variable_substitution) per includere dinamicamente ulteriori dati nell'intestazione.
-Tipo di contenuto  | Il tipo di contenuto del corpo: JSON, XML, formato WWW codificato URL o testo semplice.  Disponibile per i metodi OPTIONS, PATCH, PUT, POST e DELETE.
-Corpo | Il corpo della chiamata webhook.  Disponibile per i metodi OPTIONS, PATCH, PUT, POST e DELETE. Per impostazione predefinita, il campo del corpo viene prepopolato con tutte le variabili elencate nella [sostituzione della variabile](#variable_substitution).
-**Importante:** il server webhook può richiedere di includere alcuni campi specifici nel corpo. Ad esempio, un webhook Slack deve contenere il campo "text".   
+Tipo di contenuto | Il tipo di contenuto del corpo: JSON, XML, formato WWW codificato URL o testo semplice.  Disponibile per i metodi OPTIONS, PATCH, PUT, POST e DELETE.
+Corpo | Il corpo della chiamata webhook.  Disponibile per i metodi OPTIONS, PATCH, PUT, POST e DELETE. Per impostazione predefinita, il campo del corpo viene prepopolato con tutte le variabili elencate nella [sostituzione della variabile](#variable_substitution). **Importante:** il server webhook può richiedere di includere alcuni campi specifici nel corpo. Ad esempio, un webhook Slack deve contenere il campo "text".   
 
 #### Esempio: utilizza un webhook per pubblicare su Slack
 {: #webhookex}
@@ -312,7 +310,7 @@ Per creare il post di un'azione slack:
 ### Sostituzione della variabile  
 {: #variable_substitution}
 
-Includi le seguenti sostituzioni della variabile per includere dinamicamente i dati del dispositivo. La variabile deve essere racchiusa tra due parentesi graffe. 
+Includi le seguenti sostituzioni della variabile per includere dinamicamente i dati del dispositivo. La variabile deve essere racchiusa tra due parentesi graffe.
 
 Variabile | Descrizione
 ---|---

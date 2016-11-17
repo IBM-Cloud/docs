@@ -18,7 +18,7 @@ Ultimo aggiornamento: 16 settembre 2016
 Dal dashboard di accesso, puoi controllare e gestire l'accesso alla tua organizzazione {{site.data.keyword.iot_full}}. Puoi aggiungere gli utenti aggiungendoli, registrandoli o importandoli. Puoi anche fornire diversi livelli di accesso ai tuoi utenti assegnando dei ruoli.
 {:shortdesc}
 
-## Accesso utente 
+## Accesso utente
 
 Dalla scheda **Access** del dashboard, puoi aggiungere singoli membri utilizzando le funzioni di aggiunta, invito o registrazione. Puoi anche aggiungere, invitare o registrare più membri contemporaneamente utilizzando la funzione di importazione.
 
@@ -61,7 +61,7 @@ Per invitare più membri contemporaneamente, devi caricare un file `.csv` che co
 2. Fai clic su **Add Member** e seleziona **Import**.
 3. Fasi clic su **Bulk Invite**.
 4. Seleziona un ruolo predefinito e assicurati che i numeri di colonne nel tuo file `.csv` corrispondano al numero di colonne nelle impostazioni CSV.
-5. Assicurati che il separatore di colonna nel tuo file `.csv` corrisponda al separatore di colonna nelle impostazioni CSV. 
+5. Assicurati che il separatore di colonna nel tuo file `.csv` corrisponda al separatore di colonna nelle impostazioni CSV.
 6. Fai clic su **Browse your files** o trascina il file `.csv` nella finestra **Upload CSV**.
 
 ### Registrazione di un membro con la tua organizzazione {{site.data.keyword.iot_short_notm}}
@@ -73,7 +73,7 @@ Per registrare un membro con la tua organizzazione {{site.data.keyword.iot_short
 2. Fai clic su **Add Member** e seleziona **Invite**.
 3. Immetti l'indirizzo email del membro.
 4. Seleziona un ruolo per questo membro.
-5. Immetti un oggetto, un nome realm e un emittente.
+5. Immetti un oggetto, un nome realm e un emittente. 
    **Importante:** assicurati che i campi `Subject`, `Realm Name` e `Issuer` siano conformi agli standard e alle raccomandazioni di OpenID Connect. Per ulteriori informazioni, consulta il sito web [OpenID Connect](http://openid.net/connect/).
 6. Facoltativo: imposta una data di scadenza per il membro.
 7. Fai clic su **Register Member**.

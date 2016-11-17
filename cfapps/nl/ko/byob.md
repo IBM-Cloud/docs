@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-03-15" 
 
 ---
 
@@ -17,8 +17,6 @@ copyright:
 {:pre: .pre}
 
 # 커뮤니티 빌드팩 사용
-*마지막 업데이트 날짜: 2016년 3월 15일*
-{: .last-updated}
 
 원하는 런타임을 제공하는 스타터가 {{site.data.keyword.Bluemix}} 카탈로그에 없는 경우, 외부 빌드팩을 {{site.data.keyword.Bluemix_notm}}로 가져올 수 있습니다. cf push 명령을 사용하여 앱을 배치하는 경우, 사용자 정의 Cloud Foundry 호환 가능 빌드팩을 지정할 수 있습니다.
 {:shortdesc}
@@ -87,7 +85,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 <strong>cf set-env</strong> 명령을 사용하십시오. 예를 들어 다음 명령을 입력하여 Java 버전을 1.7.0으로 설정하십시오.
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE '{jre: { version: 1.7.0_+ }}'</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &apos;{jre: { version: 1.7.0_+ }}&apos;</code></pre>
 <p>그런 다음
 앱을 다시 스테이징하여 변경사항을 적용하십시오.</p>
 <pre class="pre"><code>cf restage app_name</code></pre>

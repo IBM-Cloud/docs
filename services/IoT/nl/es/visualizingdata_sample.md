@@ -30,7 +30,7 @@ Para poder visualizar los datos, debe realizar las acciones siguientes:
 1. Cree una aplicación en {{site.data.keyword.Bluemix_notm}} utilizando el SDK Node.js. Anote el nombre de la aplicación y el nombre de host de la aplicación. Esta información es necesaria para cargar la aplicación en {{site.data.keyword.Bluemix_notm}}.
 2. Enlace la aplicación node.JS a la instancia de {{site.data.keyword.iot_short_notm}} en el panel de instrumentos de {{site.data.keyword.Bluemix_notm}} completando los pasos siguientes:
 
-  a. En el panel de instrumentos de {{site.data.keyword.Bluemix_notm}}, pulse en la aplicación Node.JS que ha creado.
+  a. En el panel de control de {{site.data.keyword.Bluemix_notm}}, pulse la aplicación Node.JS que ha creado.
 
   b. Pulse **Enlazar un servicio o API** y, a continuación, seleccione el servicio de {{site.data.keyword.iot_short_notm}} y pulse **Añadir**.
 3. Utilizando la herramienta de línea de mandatos cf, cambie el directorio al paquete de ejemplo de visualización extraído y ejecute el siguiente mandato para conectar a {{site.data.keyword.Bluemix_notm}}.

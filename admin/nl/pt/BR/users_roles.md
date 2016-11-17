@@ -17,15 +17,11 @@ copyright:
 
 # Gerenciando membros da equipe e funções
 {: #userroles}
-Última atualização: 16 de agosto de 2016
+Última atualização: 20 de outubro de 2016
 {: .last-updated}
 
 A partir da página de **Diretório da equipe** para a sua conta, é possível gerenciar membros da equipe existentes e suas funções em sua organização e espaços, bem como convidar novos
-membros da equipe. Para acessar o diretório da equipe de sua conta, acesse o ícone
-**{{site.data.keyword.avatar}}**
-![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
-**Conta** &gt; *your_account_name* &gt;
-**Diretório da equipe**. 
+membros da equipe. Para acessar o diretório da equipe de sua conta, clique em **Conta** &gt; **Diretório de equipe**.
 {:shortdesc}
 
 Proprietários da conta executam todas as operações nas organizações e espaços, incluindo o gerenciamento de membros da equipe e de suas funções designadas. Gerenciadores de organização têm acesso para
@@ -92,12 +88,10 @@ membros da equipe ou só você como o proprietário da conta.
 
 Para mudar a visibilidade da página de diretório da equipe conclua as etapas a seguir:
 
-1. Acesse o ícone **{{site.data.keyword.avatar}}**
-![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
-**Conta** &gt; *your_account_name* &gt;
-**Diretório da equipe**. 
+1. Clique em **Conta** &gt; **Diretório de equipe**.
 2. Para a opção **Visibilidade para**, clique na seleção atual para visualizar as opções.
 3. Em seguida, selecione **Todos** ou **Somente eu** com base nas necessidades atuais para a sua conta.
+4. Então clique em **Salvar**.
 
 ## Convidando membros da equipe
 {: #inviteteammembers}
@@ -106,10 +100,7 @@ Proprietários da conta e gerenciadores de organização podem convidar membros 
 eles são designados com a função de auditor automaticamente. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para convidar um membro da equipe, conclua estas etapas:
 
 <ol>
-<li>Acesse o ícone **{{site.data.keyword.avatar}}**
-![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
-**Conta** &gt; *your_account_name* &gt;
-**Convidar membro da equipe**.</li>
+<li>Clique em **Conta** &gt; **Convidar membros da equipe**.</li>
 <li>Selecione a organização para a qual deseja convidar membros da equipe.</li>
 <li>Clique em **Avançar**.</li>
 <li>Selecione os espaços para os quais deseja permitir acesso aos seus membros da equipe.</li>
@@ -126,24 +117,22 @@ eles são designados com a função de auditor automaticamente. É possível mud
 Clique em **Visualizar pendente**, para verificar se os convites estão pendentes ou aceitos. É possível optar por reenviar o e-mail de convite ou cancelar o convite para um convite
 pendente a qualquer momento.
 
-Se você tiver uma conta do SoftLayer vinculada à sua conta do {{site.data.keyword.Bluemix_notm}}, poderá incluir os membros de sua equipe do SoftLayer. Acesse o ícone **{{site.data.keyword.avatar}}**
-![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
-**Conta** &gt; *your_account_name* &gt; página
-**Convidar membros da equipe**. Em seguida, clique em
-**Incluir** na seção **Incluir membros da
-equipe do SoftLayer** para autenticar em sua conta do SoftLayer e
-visualizar uma lista de membros da equipe a partir de sua conta do SoftLayer. Para obter mais informações sobre a inclusão de membros da equipe a partir da sua conta do SoftLayer, consulte
-[Convidando membros da equipe do SoftLayer para o {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users).
+### Incluindo membros da equipe do SoftLayer
+Se você tiver uma conta do SoftLayer vinculada à sua conta do {{site.data.keyword.Bluemix_notm}}, poderá incluir os membros de sua equipe do SoftLayer.
+ 1. Acesse **Conta** > **Convidar membros da equipe**. 
+ 2. Clique em **Incluir** na seção **Incluir membros da equipe do SoftLayer** para autenticar em sua conta do SoftLayer e visualizar uma lista de membros da equipe a partir de sua conta do SoftLayer. 
+ 
+Incluir membros da equipe em sua conta do {{site.data.keyword.Bluemix_notm}} não lhes concede acesso à infraestrutura do {{site.data.keyword.Bluemix_notm}}. Para fornecer aos usuários acesso ao painel Infraestrutura, acesse **Infraestrutura** > **Conta** > **Usuários** e clique no link **Incluir usuário**. Deve-se ter permissão para incluir usuários.
+ 
+ Para obter mais informações sobre a inclusão de membros da equipe a partir da sua conta do SoftLayer, consulte
+[Convidando membros da equipe do SoftLayer para o {{site.data.keyword.Bluemix_notm}}](/docs/admin/softlayerlink.html#invite_users).
 
 ## Editando Funções
 {: #editinguserroles}
 
 Proprietários da conta e gerenciadores de organização podem editar funções de organização e espaço para membros da equipe existentes na página **Diretório da equipe**. 
 
-1. Acesse o ícone **{{site.data.keyword.avatar}}**
-![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
-**Conta** &gt; *your_account_name* &gt;
-**Diretório da equipe**.
+1. Clique em **Conta** &gt; **Diretório de equipe**.
 2. Localize o membro da equipe cujas funções você deseja editar.
 3. Clique em **Visualizar funções**.
 4. Selecione ou limpe as seleções de função de organização, para modificar o acesso à organização para o membro da equipe.
@@ -154,10 +143,21 @@ Proprietários da conta e gerenciadores de organização podem editar funções 
 
 Gerenciadores de espaço podem editar funções para os membros da equipe em seu espaço na página **Gerenciar organizações**.
 
-1. Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../icons/i-avatar-icon.svg) &gt; **Conta** &gt; *your_account_name* &gt; **Gerenciar organizações**.
+1. Clique em **Conta** &gt; **Gerenciar organizações**.
 2. Localize a organização na qual o seu espaço está.
 3. Clique em **Visualizar Detalhes**.
 4. Localize o seu espaço e clique em **Editar espaço**.
 5. Selecione a guia **Usuários**.
 6. Selecione ou limpe a opção de função de espaço para a função que você deseja incluir ou remover para o membro da equipe.
-7. Clique **Salvar.**
+7. Então clique em **Salvar**.
+
+## Removendo membros da equipe
+{: #removingteammembers}
+
+Proprietários de conta e gerenciadores de organização podem remover membros da equipe de uma conta usando a página **Diretório**. Para remover um membro da equipe, conclua as etapas a seguir:
+
+1. Clique em **Conta** &gt; **Diretório de equipe**.
+3. Localize o usuário que você deseja remover da conta e clique no ícone **Remover** ![ícone Remover](../icons/icon_remove_teamuser.svg).
+4. Na janela **Remover usuário**, clique em **Remover** para confirmar que você deseja remover o usuário especificado da conta.
+
+O usuário é removido da lista de membros da equipe exibida para a conta.

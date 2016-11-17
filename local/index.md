@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-11-07"
+lastupdated: "2016-11-11"
 
 
 ---
@@ -290,10 +290,10 @@ You can expect a process similar to the following list for the initial deploymen
 <li>You provide 7 IP addresses on your network. If you have a secured web proxy for allowing outbound access to the Internet for internal {{site.data.keyword.Bluemix_notm}} components, then you must provide the credentials to connect to it.
 <p>**Note**: If your web proxy is not secure, then you do not need to provide the credentials. Also, note that not all {{site.data.keyword.Bluemix_local_notm}} customers use a web proxy.</p></li>
 <li>{{site.data.keyword.IBM_notm}} provides a URL whitelist that must be allowed through your web proxy before starting the deployment.<br />
-<p>**Note**: To ensure that your existing or new applications can access the necessary resources, you might have to take additional steps to bundle the resources with the buildpack, or work with your security team to whitelist the URLs needed to run your applications. For more information about working with node.js and Liberty for Java buildpacks, see <a href="../runtimes/nodejs/offlineMode.html">Offline mode for node.js</a> and <a href="../runtimes/liberty/offlineMode.html">Offline mode for Liberty for Java</a>.</p>
+<p>**Note**: To ensure that your existing or new applications can access the necessary resources, you might have to take additional steps to bundle the resources with the buildpack, or work with your security team to whitelist the URLs needed to run your applications. For more information about working with node.js and Liberty for Java buildpacks, see <a href="/docs/runtimes/nodejs/offlineMode.html">Offline mode for node.js</a> and <a href="/docs/runtimes/liberty/offlineMode.html">Offline mode for Liberty for Java</a>.</p>
 </li>
 <li>You specify the domain names for the deployment, and the IDs that you want to use. You get two partially defined domains when you set up your local instance, and you pick the prefix for the two domains. For example, you pick the prefix for  <code>*mycompany*.bluemix.net</code> and <code>*mycompany*.mybluemix.net</code>. And, then you can also choose the full domain to create a custom domain.<br />
-<p>You can choose as many custom domains as you want. However, you are responsible for the certificates for the custom domains. For information about creating your custom domain, see <a href="../manageapps/updapps.html#domain">Creating and using a custom domain</a>.</p></li>
+<p>You can choose as many custom domains as you want. However, you are responsible for the certificates for the custom domains. For information about creating your custom domain, see <a href="/docs/manageapps/updapps.html#domain">Creating and using a custom domain</a>.</p></li>
 <li>You choose which technology, IPSec or OpenVPN tunnel, to use to configure Relay to connect back to the {{site.data.keyword.IBM_notm}} operations center.</li>
 <li>{{site.data.keyword.IBM_notm}} installs and starts up the inception virtual machine within the {{site.data.keyword.Bluemix_notm}} cluster. If you provide your own VMware, then an {{site.data.keyword.IBM_notm}} representative helps your customer representative to complete this task.</li>
 <li>{{site.data.keyword.IBM_notm}} configures the Relay to communicate back to the {{site.data.keyword.IBM_notm}} operations center.</li>
@@ -306,7 +306,7 @@ You can expect a process similar to the following list for the initial deploymen
 <li>You can start using your local instance that is monitored by the {{site.data.keyword.IBM_notm}} operations team in order to respond to alerts.</li>
 </ol>
 
-After your {{site.data.keyword.Bluemix_notm}} instance is set up, you can monitor and manage your {{site.data.keyword.Bluemix_notm}} instance by using the Administration page. For more information, see [Managing {{site.data.keyword.Bluemix_local_notm}} and Dedicated](../admin/index.html#mng). For information about upgrades and maintenance, see [Maintaining your local instance](index.html#maintainlocal).
+After your {{site.data.keyword.Bluemix_notm}} instance is set up, you can monitor and manage your {{site.data.keyword.Bluemix_notm}} instance by using the Administration page. For more information, see [Managing {{site.data.keyword.Bluemix_local_notm}} and Dedicated](/docs/admin/index.html#mng). For information about upgrades and maintenance, see [Maintaining your local instance](index.html#maintainlocal).
 
 ##Roles and responsibilities
 {: #rolesresponsibilities}
@@ -327,13 +327,13 @@ The following list shows the customer roles and responsibilities that you assign
 <dt>**DevOps focal**</dt>
 <dd>Works with the {{site.data.keyword.IBM_notm}} representative to plan and apply the maintenance updates that are needed for the {{site.data.keyword.Bluemix_notm}} platform, services, and runtimes. The person assigned to this role also works with the {{site.data.keyword.IBM_notm}} representative on the configuration of your {{site.data.keyword.Bluemix_local_notm}} instance.</dd>
 <dt>**IaaS specialist**</dt>
-<dd>Works with the {{site.data.keyword.IBM_notm}} representatives on the deployment plan for VMware. Typically, this is someone who is a VMware administrator in the data center. The person assigned to this role reviews the <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_local_notm}} infrastructure requirements</a> and works together with {{site.data.keyword.IBM_notm}} on an implementation plan. At the end of deployment, the person assigned to this role approves that the deployment is in compliance with the corporate standards at the IaaS layer.</dd>
+<dd>Works with the {{site.data.keyword.IBM_notm}} representatives on the deployment plan for VMware. Typically, this is someone who is a VMware administrator in the data center. The person assigned to this role reviews the <a href="/docs/local/index.html#localinfra">{{site.data.keyword.Bluemix_local_notm}} infrastructure requirements</a> and works together with {{site.data.keyword.IBM_notm}} on an implementation plan. At the end of deployment, the person assigned to this role approves that the deployment is in compliance with the corporate standards at the IaaS layer.</dd>
 <dt>**Operations focal**</dt>
 <dd>Works with the {{site.data.keyword.IBM_notm}} support team as needed once the environment is up and running. This is someone with **Superuser** access to the Administration console who can approve and schedule maintenance updates for the {{site.data.keyword.Bluemix_notm}} environment and be available at all times in the event of a critical incident. The person assigned to this role must have technical knowledge of the {{site.data.keyword.Bluemix_notm}} environment and be in a position to reach others within company that have expert skills in an area that might be affected including networking or security, for example.
 </dd>
 </dl>
 
-Your customer representatives work with {{site.data.keyword.IBM_notm}} specialists that work together to ensure that you always have the support that you need. You can upgrade to the Premium support tier to work with a dedicated Client Success Manager (CSM) for your account. For more information about the different support tiers, see [Contacting support](../support/index.html#contacting-support).The CSM completes the following types of tasks:
+Your customer representatives work with {{site.data.keyword.IBM_notm}} specialists that work together to ensure that you always have the support that you need. You can upgrade to the Premium support tier to work with a dedicated Client Success Manager (CSM) for your account. For more information about the different support tiers, see [Contacting support](/docs/support/index.html#contacting-support).The CSM completes the following types of tasks:
 
 <ul>
 <li>Provides technical coordination between you and IBM.</li>
@@ -353,7 +353,7 @@ The {{site.data.keyword.Bluemix_notm}} support and operations team that works wi
 
 From setting up your environment to continued maintenance, a variety of tasks must be completed by both you and IBM. The following tables outline the required tasks and the owners for completing the task throughout the inception, progression, and completion phases.
 
-The inception phase is used to establish the {{site.data.keyword.Bluemix_local_notm}} environment. At this point, you have already reviewed the [Local infrastructure requirements](../local/index.html#localinfra) requirements. The primary goals of this phase include the following:
+The inception phase is used to establish the {{site.data.keyword.Bluemix_local_notm}} environment. At this point, you have already reviewed the [Local infrastructure requirements](/docs/local/index.html#localinfra) requirements. The primary goals of this phase include the following:
 
 - Review the financial agreement, and establish the milestone dates for delivery.
 - Create the {{site.data.keyword.Bluemix_notm}} platform, and provide access to runtimes and services.
@@ -375,7 +375,7 @@ The inception phase is used to establish the {{site.data.keyword.Bluemix_local_n
 |Identify tools for event detection and problem determination | Identify {{site.data.keyword.IBM_notm}} and third-party tools used for event detection and problem determination at the {{site.data.keyword.Bluemix_notm}} platform level. | {{site.data.keyword.IBM_notm}} |
 |Define escalation plan | Define the escalation plan to triage and resolve events detected from the monitoring components. | {{site.data.keyword.IBM_notm}} |
 |Sign infrastructure, platform, and support agreements | Sign the subscription agreement including the financial terms and conditions for the environment. Sign the support subscription. | Customer |
-|Procure environment | Procure compute resources, network, and storage. For more information about the infrastructure requirements for the environment, see [Local infrastructure requirements](../local/index.html#localinfra). | Customer |
+|Procure environment | Procure compute resources, network, and storage. For more information about the infrastructure requirements for the environment, see [Local infrastructure requirements](/docs/local/index.html#localinfra). | Customer |
 |Install VPN solution | Install bidirectional VPN solution. | {{site.data.keyword.IBM_notm}} |
 |Install platform, application, and monitoring and management components | Install, configure, and verify platform components, such as BOSH Director, Cloud Controller, Health Manager, messaging, routers, DEAs and service providers, and the monitoring components that are defined in the escalation and problem detection plan. | {{site.data.keyword.IBM_notm}} |
 |Install and configure security components | Install and configure security components that are tied into the monitoring and escalation plan including {{site.data.keyword.IBM_notm}} QRadar, credential vault, intrusion prevention system, {{site.data.keyword.IBM_notm}} BigFix, and {{site.data.keyword.IBM_notm}} Security Privileged Identity Management. | {{site.data.keyword.IBM_notm}} |
@@ -562,7 +562,7 @@ The following types of maintenance are required for {{site.data.keyword.Bluemix_
 
 <dt>**Standard maintenance for the {{site.data.keyword.Bluemix_notm}} platform**</dt>
 <dd>Maintenance updates are applied based on coordination between you and {{site.data.keyword.IBM_notm}} within a 21-day window. You provide {{site.data.keyword.IBM_notm}} with preapproved maintenance windows and specific dates or times that might not work for you, and {{site.data.keyword.IBM_notm}} works to schedule updates during or around the dates that you selected.<br />
-<p>Go to **ADMINISTRATION > SYSTEM INFORMATION** to view scheduled and pending maintenance updates. For more information about setting your preapproved windows, unavailable dates, and viewing or approving scheduled maintenance updates, see <a href="../admin/index.html#oc_schedulemaintenance">Maintenance updates</a>.</p></dd>
+<p>Go to **ADMINISTRATION > SYSTEM INFORMATION** to view scheduled and pending maintenance updates. For more information about setting your preapproved windows, unavailable dates, and viewing or approving scheduled maintenance updates, see <a href="/docs/admin/index.html#oc_schedulemaintenance">Maintenance updates</a>.</p></dd>
 </dl>
 
 **Important**: {{site.data.keyword.IBM_notm}} reserves the right to interrupt services to apply emergency maintenance as needed. {{site.data.keyword.IBM_notm}} might change scheduled maintenance hours, but notifies you of any such changes, as well as any emergency maintenance information.
@@ -572,7 +572,7 @@ If there is a reported issue following a maintenance update, you agree with {{si
 ### Customer infrastructure maintenance
 {: #inframaintenance}
 
-{{site.data.keyword.Bluemix_local_notm}} is deployed onto the ESXi hypervisor, and the vCenter application is used to centrally manage virtual machines and ESXi hosts. {{site.data.keyword.Bluemix_notm}} supports the latest three versions of ESXi and vCenter, including all intermediate updates and patches. You can always find the latest supported versions in the [Local infrastructure requirements](../local/index.html#localinfra) documentation.
+{{site.data.keyword.Bluemix_local_notm}} is deployed onto the ESXi hypervisor, and the vCenter application is used to centrally manage virtual machines and ESXi hosts. {{site.data.keyword.Bluemix_notm}} supports the latest three versions of ESXi and vCenter, including all intermediate updates and patches. You can always find the latest supported versions in the [Local infrastructure requirements](/docs/local/index.html#localinfra) documentation.
 
 **Important**: With {{site.data.keyword.Bluemix_local_notm}} being deployed onto the ESXi hypervisor, upgrades and patches to ESXi can disrupt the availability of the local environment, including all applications and services running within environment. You must notify {{site.data.keyword.Bluemix_notm}} by using a support ticket prior to completing an upgrade or patch to ensure that the disruption does not alert the operations team in error. If you have an assigned client success manager (CSM), you can work with the CSM to communicate the upgrade schedule.
 
@@ -586,11 +586,11 @@ To ensure that your local instance is compatible with the latest supported versi
 
 ### Customer-detected issues
 
-If you identify an issue that needs attention from {{site.data.keyword.IBM_notm}} support and operations, you can contact support by using a few different methods. For information about how to contact support, see [Contacting support](../support/index.html#contacting-bluemix-support-local). Depending on the issue, you, IBM, or both work together to fix the issue.
+If you identify an issue that needs attention from {{site.data.keyword.IBM_notm}} support and operations, you can contact support by using a few different methods. For information about how to contact support, see [Contacting support](/docs/support/index.html#contacting-bluemix-support-local). Depending on the issue, you, IBM, or both work together to fix the issue.
 
 ### IBM-detected critical incidents
 
-Critical incidents are urgent, unexpected service outages, and stability issues that affect your environment or your users. If {{site.data.keyword.IBM_notm}} detects a critical incident within your environment, you are notified by a notification on the **Status** page. You can also check the Status page for any known issues for the platform or your services. For more information about the Status page, see [Viewing status](../admin/index.html#oc_status).
+Critical incidents are urgent, unexpected service outages, and stability issues that affect your environment or your users. If {{site.data.keyword.IBM_notm}} detects a critical incident within your environment, you are notified by a notification on the **Status** page. You can also check the Status page for any known issues for the platform or your services. For more information about the Status page, see [Viewing status](/docs/admin/index.html#oc_status).
 
 If you want to integrate your notifications with a web service that supports web hooks, see [Notifications and event subscriptions](/docs/admin/index.html#oc_eventsubscription) for information about how to extend your notification capabilities.
 
@@ -598,7 +598,7 @@ If you want to integrate your notifications with a web service that supports web
 
 *Figure 2. Incident response process*
 
-Depending on the issue, you, IBM, or both of you work together to fix the issue. If you have a question regarding the incident, or if you need an {{site.data.keyword.IBM_notm}} representative to help you resolve the issue, then you can open a support ticket. For information about how to contact support, see [Contacting support](../support/index.html#contacting-bluemix-support-local).
+Depending on the issue, you, IBM, or both of you work together to fix the issue. If you have a question regarding the incident, or if you need an {{site.data.keyword.IBM_notm}} representative to help you resolve the issue, then you can open a support ticket. For information about how to contact support, see [Contacting support](/docs/support/index.html#contacting-bluemix-support-local).
 
 **Note**: Severity 1 support tickets are monitored 24 hours a day, 7 days a week. Other tickets are processed from Sunday 10:00 pm GMT through Saturday 12:00 am GMT. For more information about severity of support tickets and working with support, see <a href="/docs/support/index.html#contacting-bluemix-support-local">Contacting support</a>.
 
@@ -625,7 +625,7 @@ By default, {{site.data.keyword.Bluemix_notm}} Public deploys to multiple geogra
 
 To deploy into a second location or multiple locations, you must follow a process similar to the one you took to enable your primary geographic location:
 
-1. Enable a new local environment to host additional instances of your applications. To create a new environment, contact your {{site.data.keyword.IBM_notm}} sales team to initiate the process. For more information about setting up a local instance, see [Setting up {{site.data.keyword.Bluemix_local_notm}}](../local/index.html#setuplocal). You must log in separately to access each environment. Each physical location for the hosted environments should be a minimum of 200 km away from the original location to ensure availability.
+1. Enable a new local environment to host additional instances of your applications. To create a new environment, contact your {{site.data.keyword.IBM_notm}} sales team to initiate the process. For more information about setting up a local instance, see [Setting up {{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#setuplocal). You must log in separately to access each environment. Each physical location for the hosted environments should be a minimum of 200 km away from the original location to ensure availability.
 2. Obtain the unique domain name where your new deployed app will be hosted. For example, if your original domain is *mycompany.caeast.bluemix.net*, then you can create a new local environment with a new domain such as *mycompany.cawest.bluemix.net*, and deploy to the new domain.
 3. Deploy to the new location each time you deploy your original app. For more information about deploying, see [Uploading your app](/docs/starters/upload_app.html).
 
@@ -688,5 +688,5 @@ Because protection of private data is critical, {{site.data.keyword.IBM_notm}} n
 * [Discover: {{site.data.keyword.Bluemix_local_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
 * [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} glossary](/docs/overview/glossary/index.html)
-* [Managing {{site.data.keyword.Bluemix_local_notm}} and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)
+* [Managing {{site.data.keyword.Bluemix_local_notm}} and {{site.data.keyword.Bluemix_notm}} Dedicated](/docs/admin/index.html#mng)
 * [Contacting support](/docs/support/index.html#getting-customer-support)

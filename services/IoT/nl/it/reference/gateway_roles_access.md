@@ -15,7 +15,7 @@ copyright:
 Ultimo aggiornamento: 16 settembre 2016
 {: .last-updated}
 
-Le seguenti tabelle mostrano il livello di accesso per ogni ruolo del gateway. 
+Le seguenti tabelle mostrano il livello di accesso per ogni ruolo del gateway.
 
 Le tabelle mostrano i livelli di accesso per:
 - [Operazioni del dispositivo ](#gateway-device-ops)
@@ -110,7 +110,7 @@ Visualizzazione operazioni|-|-
 Operazioni di analisi || Ruoli del gateway|
 :--------: | ---------------------|------------------------|
            | **Gateway standard** | **Gateway privilegiato** |
-Visualizzazione delle regole di analisi |-|-
+Visualizzazione delle regole di analisi|-|-
 Gestione delle regole di analisi|-|-
 Visualizzazione delle azioni di analisi|-|-
 Gestione delle azioni di analisi|-|-

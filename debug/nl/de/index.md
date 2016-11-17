@@ -16,10 +16,7 @@ copyright:
 # Fehlerbehebung
 {: #debugging}
 
-*Letzte Aktualisierung: 25. Mai 2016*
-{: .last-updated}
-
-Wenn Probleme mit {{site.data.keyword.Bluemix}} auftreten, können Sie die Protokolldateien anzeigen, um die Probleme zu untersuchen und die Fehler zu beheben. 
+Wenn Probleme mit {{site.data.keyword.Bluemix}} auftreten, können Sie die Protokolldateien anzeigen, um die Probleme zu untersuchen und die Fehler zu beheben.
 {:shortdesc}
 
 In Protokollen sind z. B. Informationen darüber enthalten, ob
@@ -41,17 +38,17 @@ Anhand der folgenden Prozedur wird veranschaulicht, wie Sie mit dem Befehl `cf l
 
   1. Stellen Sie durch Eingeben des folgenden Codes in der cf-Befehlszeilenschnittstelle eine Verbindung zu {{site.data.keyword.Bluemix_notm}} her:
      ```
-	 cf api https://api.ng.bluemix.net
+	 cf api https://api.stage1.ng.bluemix.net
 	 ```
-	 
+
   2. Melden Sie sich durch Eingeben von `cf login` an {{site.data.keyword.Bluemix_notm}} an.
-  
+
   3. Rufen Sie die neusten Protokolle durch Eingeben von `cf logs anwendungsname --recent` ab. Wenn Sie ein ausführliches Protokoll filtern möchten, verwenden Sie die Option `grep`. Sie können zum Beispiel den folgenden Code eingeben, um nur Protokolle des Typs [STG] anzuzeigen:
     ```
 	cf logs anwendungsname --recent | grep '\[STG\]'
 	```
   4. Zeigen Sie den ersten Fehler an, der im Protokoll aufgeführt wird.
-  
+
 Wenn Sie das IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}-Plug-In zum Implementieren von Anwendungen verwenden, werden in der Registerkarte **Konsole** des Eclipse-Tools Protokolle angezeigt, die der Ausgabe des Befehls 'cf logs' ähneln. Sie können auch ein separates Eclipse-Fenster zum Verfolgen der `Protokolle` öffnen, wenn Sie die Anwendung bereitstellen.
 
 Zusätzlich zum Befehl `cf logs` in {{site.data.keyword.Bluemix_notm}} können Sie auch den Service 'Monitoring and Analytics' zum Erfassen der Protokolldetails verwenden. Vom Service 'Monitoring and Analytics' werden zusätzlich auch Leistung, Status und Verfügbarkeit der Anwendungen überwacht. Außerdem werden von ihm Protokollanalysedaten für Node.js- und Liberty-Laufzeitanwendungen bereitgestellt.  
@@ -83,7 +80,7 @@ Aus dem ersten Fehler im Protokoll geht hervor, warum das Staging fehlgeschlagen
 {: screen}
 
 
-Bei einer Node.js-Anwendung werden die Informationen in der Datei `package.json` von der Komponente DEA zum Herunterladen der Module verwendet. Aus diesem Fehler lässt sich erkennen, dass der Fehler für das Modul aufgetreten ist. Somit ist es sinnvoll, die 18. Zeile der Datei `package.json` zu überprüfen. 
+Bei einer Node.js-Anwendung werden die Informationen in der Datei `package.json` von der Komponente DEA zum Herunterladen der Module verwendet. Aus diesem Fehler lässt sich erkennen, dass der Fehler für das Modul aufgetreten ist. Somit ist es sinnvoll, die 18. Zeile der Datei `package.json` zu überprüfen.
 
 ```
 15   "jade": "~1.3.0",
@@ -107,47 +104,47 @@ Da Zeile 17 mit einem Komma endet, wird in Zeile 18 ein Schlüssel/Wert-Paar erw
 
 ## Laufzeitfehler beheben
 {: #debugging-runtime-errors}
-Wenn während der Laufzeit der Anwendung Probleme auftreten, können Anwendungsprotokolle bei der Ermittlung der Fehlerursache und Behebung des Problems hilfreich sein. 
+Wenn während der Laufzeit der Anwendung Probleme auftreten, können Anwendungsprotokolle bei der Ermittlung der Fehlerursache und Behebung des Problems hilfreich sein.
 
 Insbesondere die Protokollierung der Standardausgabe (stdout) und Standardfehler (stderr) kann aktiviert sein. Weitere Informationen zum Konfigurieren der Protokolldateien für Anwendungen, die mit den integrierten {{site.data.keyword.Bluemix_notm}}-Buildpacks bereitgestellt wurden, finden Sie in der folgenden Liste:
 
   * Informationen zu Liberty for Java™-Anwendungen finden Sie unter [Liberty Profile: Logging and Trace](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
-  * Informationen zu Node.js-Anwendungen finden Sie unter [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}. 
+  * Informationen zu Node.js-Anwendungen finden Sie unter [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
   * Informationen zu PHP-Anwendungen finden Sie unter [error_log](http://php.net/manual/en/function.error-log.php){: new_window}.
   * Informationen zu Python-Anwendungen finden Sie unter [Logging HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}.
   * Informationen zu Ruby on Rails-Anwendungen finden Sie unter [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
   * Informationen zu Ruby Sinatra-Anwendungen finden Sie unter [Logging](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
-  
+
 Wenn Sie `cf logs anwendungsname --recent` in die cf-Befehlszeilenschnittstelle eingeben, werden nur die neuesten Protokoll angezeigt. Wenn Sie Protokolle für Fehler anzeigen möchten, die früher aufgetreten sind, müssen Sie alle Protokolle abrufen und in ihnen nach den Fehlern suchen. Verwenden Sie zum Abrufen aller Protokolle für Ihre Anwendung eine der folgenden Methoden:
-<dl> 
-<dt><strong>Service {{site.data.keyword.Bluemix_notm}} Monitoring and Analytics</strong></dt> 
-<dd>Die Funktionen für die integrierte Protokolldateisuche und -analyse des Service 'Monitoring and Analytics' können Ihnen dabei helfen, Fehler schnell zu finden. Weitere Informationen finden Sie unter <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Monitoring and Analytics</a>.</dd> 
-<dt><strong>Tools von Drittanbietern</strong></dt> 
-<dd>Sie können die Protokolle aus Ihrer Anwendung erfassen und in einen externen Protokollhost exportieren. Weitere Informationen finden Sie unter <a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">Externe Protokollierung konfigurieren</a>.</dd> 
-<dt><strong>Scripts zum Erfassen und Exportieren der Protokolle</strong></dt> 
-<dd>Wenn Sie ein Script verwenden möchten, um die Protokolle automatisch zu erfassen und in eine externe Datei zu exportieren, müssen Sie von Ihrem Computer eine Verbindung zum {{site.data.keyword.Bluemix_notm}}-Server herstellen und auf Ihrem Computer muss ausreichend Speicherplatz zum Herunterladen der Protokolle vorhanden sein. Weitere Informationen hierzu finden Sie unter <a href="../support/index.html#collecting-diagnostic-information" target="_blank">Diagnoseinformationen erfassen</a>. </dd>
+<dl>
+<dt><strong>Service {{site.data.keyword.Bluemix_notm}} Monitoring and Analytics</strong></dt>
+<dd>Die Funktionen für die integrierte Protokolldateisuche und -analyse des Service 'Monitoring and Analytics' können Ihnen dabei helfen, Fehler schnell zu finden. Weitere Informationen finden Sie unter <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Monitoring and Analytics</a>.</dd>
+<dt><strong>Tools von Drittanbietern</strong></dt>
+<dd>Sie können die Protokolle aus Ihrer Anwendung erfassen und in einen externen Protokollhost exportieren. Weitere Informationen finden Sie unter <a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">Externe Protokollierung konfigurieren</a>.</dd>
+<dt><strong>Scripts zum Erfassen und Exportieren der Protokolle</strong></dt>
+<dd>Wenn Sie ein Script verwenden möchten, um die Protokolle automatisch zu erfassen und in eine externe Datei zu exportieren, müssen Sie von Ihrem Computer eine Verbindung zur {{site.data.keyword.Bluemix_notm}}-Konsole herstellen und auf Ihrem Computer muss ausreichend Speicherplatz zum Herunterladen der Protokolle vorhanden sein. Weitere Informationen hierzu finden Sie unter <a href="../support/index.html#collecting-diagnostic-information" target="_blank">Diagnoseinformationen erfassen</a>. </dd>
 </dl>
 
-Auf die Dateien `stdout.log` und `stderr.log` konnte früher standardmäßig über die Anwendungsansicht im {{site.data.keyword.Bluemix_notm}}-Dashboard unter **Dateien** > **Protokolle** zugegriffen werden. Diese Anwendungsprotokollierung ist jedoch mit der aktuellen Version von Cloud Foundry nicht mehr verfügbar, von der {{site.data.keyword.Bluemix_notm}} per Hosting bereitgestellt wird. Wenn Sie weiterhin im {{site.data.keyword.Bluemix_notm}}-Dashboard über **Dateien** > **Protokolle** auf die Anwendungsprotokollierung mithilfe von 'stdout' und 'stderr' zugreifen möchten, können Sie die Protokollierung abhängig von der jeweils verwendeten Laufzeit in andere Dateien im {{site.data.keyword.Bluemix_notm}}-Dateisystem umleiten. 
+Auf die Dateien `stdout.log` und `stderr.log` konnte früher standardmäßig über die Anwendungsansicht in der {{site.data.keyword.Bluemix_notm}}-Konsole unter **Dateien** > **Protokolle** zugegriffen werden. Diese Anwendungsprotokollierung ist jedoch mit der aktuellen Version von Cloud Foundry nicht mehr verfügbar, von der {{site.data.keyword.Bluemix_notm}} per Hosting bereitgestellt wird. Wenn Sie weiterhin über die {{site.data.keyword.Bluemix_notm}}-Konsole unter **Dateien** > **Protokolle** auf die Anwendungsprotokollierung mit 'stdout' und 'stderr' zugreifen möchten, können Sie die Protokollierung abhängig von der jeweils verwendeten Laufzeit in andere Dateien im {{site.data.keyword.Bluemix_notm}}-Dateisystem umleiten.
 
   * Bei Liberty for Java-Anwendungen ist die an 'stdout' und 'stderr' übertragene Ausgabe bereits in der Datei `messages.log` im Protokollverzeichnis enthalten. Suchen Sie nach Einträgen mit dem Präfix 'SystemOut' bzw. 'SystemErr'.
   * Bei Node.js-Anwendungen können Sie die Funktion 'console.log' überschreiben, um explizit in eine Datei im Protokollverzeichnis zu schreiben.
   * Bei PHP-Anwendungen können Sie die Funktion 'error_log' verwenden, um in eine Datei im Protokollverzeichnis zu schreiben.
   * Bei Python-Anwendungen können Sie konfigurieren, dass von der Protokollfunktion in eine Datei im Protokollverzeichnis geschrieben wird: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * Bei Ruby-Anwendungen können Sie konfigurieren, dass von der Protokollfunktion in eine Datei im Protokollverzeichnis geschrieben wird.
- 
- 
+
+
 ### Debugging von Codeänderungen
 {: #debug_code_changes}
 
 Wenn Sie Codeänderungen an einer App vornehmen, die schon bereitgestellt wurde und aktiv ist, und die Codeänderungen nicht in {{site.data.keyword.Bluemix_notm}} übernommen werden, können Sie mithilfe der Protokolle ein Debugging durchführen. Unabhängig davon, ob die App aktiv ist, können Sie die Protokolle prüfen, die während der Bereitstellung oder Laufzeit der App generiert wurden, um festzustellen, warum der neue Code nicht funktioniert.
 
-Je nachdem, wie der neue Code bereitgestellt wurde, können Sie für das Debugging der Codeänderungen eine der folgenden Methoden verwenden: 
+Je nachdem, wie der neue Code bereitgestellt wurde, können Sie für das Debugging der Codeänderungen eine der folgenden Methoden verwenden:
 
-  * Wenn der neue Code über die Befehlszeilenschnittstelle 'cf' bereitgestellt wurde, überprüfen Sie die Ausgabe des Befehls *cf push*. Darüber hinaus können Sie mit dem Befehl *cf logs* weitere Hinweise zur Lösung des Problems erhalten. Weitere Informationen zur Verwendung des Befehls *cf logs* finden Sie unter [Protokolle über die Befehlszeilenschnittstelle anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}. 
+  * Wenn der neue Code über die Befehlszeilenschnittstelle 'cf' bereitgestellt wurde, überprüfen Sie die Ausgabe des Befehls *cf push*. Darüber hinaus können Sie mit dem Befehl *cf logs* weitere Hinweise zur Lösung des Problems erhalten. Weitere Informationen zur Verwendung des Befehls *cf logs* finden Sie unter [Protokolle über die Befehlszeilenschnittstelle anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}.
 
-  * Wenn der neue Code über eine GUI (z. B. {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle, DevOps Delivery Pipeline oder Travis-CI) bereitgestellt wurde, können Sie die Protokolle über die Schnittstelle prüfen. Wenn der neue Code beispielsweise über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle bereitgestellt wurde, können Sie 'Dashboard' aufrufen, die App suchen und dann die Protokolle auf Hinweise durchsuchen.   Weitere Informationen zum Anzeigen von Protokollen über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle finden Sie unter [Protokolle im Bluemix-Dashboard anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
- 
+  * Wenn der neue Code über eine GUI wie z. B. die {{site.data.keyword.Bluemix_notm}}-Konsole, DevOps Delivery Pipeline oder Travis-CI bereitgestellt wird, können Sie die Protokolle über die Schnittstelle überprüfen. Wenn der neue Code beispielsweise über die {{site.data.keyword.Bluemix_notm}}-Konsole bereitgestellt wird, können Sie zum Dashboard wechseln, Ihre App suchen und die Protokolle auf Suchhinweisbegriffe überprüfen. Weitere Informationen zum Anzeigen von Protokollen über die {{site.data.keyword.Bluemix_notm}}-Konsole finden Sie unter [Protokolle über das Bluemix-Dashboard anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
+
 
 # Zugehörige Links
 {: #rellinks}
@@ -157,9 +154,10 @@ Je nachdem, wie der neue Code bereitgestellt wurde, können Sie für das Debuggi
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [Erste Schritte mit dem IBM Bluemix-Service 'Monitoring and Analytics'](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [Arbeitsweise von Bluemix](../public/index.html#howwork){: new_window}
+  * [Arbeitsweise von Bluemix](../overview/whatisbluemix.html#howwork){: new_window}
   * [cf-Befehlstool installieren](../starters/install_cli.html){: new_window}
   * [Protokolle anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+
   
   
  

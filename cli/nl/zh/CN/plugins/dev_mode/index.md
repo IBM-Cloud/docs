@@ -211,7 +211,6 @@ cf restart-inplace <appName>
 ## 相关链接
 {: #general}
 * [开发方式 CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
 * [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 
