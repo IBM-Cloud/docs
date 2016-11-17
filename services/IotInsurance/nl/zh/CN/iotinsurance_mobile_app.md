@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-26"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -17,15 +17,13 @@ copyright:
 
 
 # 安装并连接样本移动应用程序
-{: #iotins_gettingstarted}
-上次更新时间：2016 年 9 月 15 日
-{: .last-updated}
+{: #iot4i_gettingstarted}
 
 {{site.data.keyword.iotinsurance_full}} 样本移动应用程序是 {{site.data.keyword.iotinsurance_short}} 的移动式客户机的参考实施。您可以使用应用程序在系统中注册新设备并接收设备的警报。
 {:shortdesc}
 
 **先决条件：**开始之前，请确保满足以下先决条件：
-  - Apple Xcode 7.3 或更高版本的集成开发环境。
+  - Apple Xcode 8 或更高版本的集成开发环境。
   - iOS 9.0 或更高版本的 iPhone 移动设备。
   - 已在计算机上安装了 CocoaPods。请参阅 [CocoaPods Web 站点](https://guides.cocoapods.org/using/getting-started.html)。
   - 将样本移动应用程序连接到服务实例时所需的[参数](#iot4i_mobileParam)。
@@ -91,7 +89,7 @@ devices)** 并单击 **Continue**。
   1. 打开密钥链访问并选择 **My Certificates**。
   2. 右键单击 **Apple Development IOS Push Service: (bundleID)**，然后导出、保存和输入文件密码。
   3. 在 {{site.data.keyword.Bluemix_notm}} 控制台中，打开 {{site.data.keyword.mobilepushshort}} 服务。
-  4. 单击 **Setup Push**。
+  4. 单击**配置**。
   5. 在 Apple Push Notifications Certificate 部分中，上传 PKCS 12 文件并输入密码。
   6. 在 Xcode 中，将捆绑软件标识更改为您先前创建的标识。
   7. 运行应用程序并授予推送通知服务许可权。
@@ -101,7 +99,8 @@ devices)** 并单击 **Continue**。
 
 ## API 参考
 {: #api}
-* [{{site.data.keyword.iotinsurance_short}} API 示例](https://iot4i-docs-api.mybluemix.net/dist/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API 示例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
 
 ## 相关链接
 {: #general}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-26"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -17,15 +17,13 @@ copyright:
 
 
 # Mobile Beispiel-App installieren und verbinden
-{: #iotins_gettingstarted}
-Letzte Aktualisierung: 15. September 2016
-{: .last-updated}
+{: #iot4i_gettingstarted}
 
 Die mobile Beispiel-App {{site.data.keyword.iotinsurance_full}} ist eine Referenzimplementierung für einen mobilen Client von {{site.data.keyword.iotinsurance_short}}. Sie können die App verwenden, um neue Geräte im System zu registrieren und um Alerts für die Geräte zu empfangen.
 {:shortdesc}
 
 **Voraussetzungen:** Folgendes wird vorausgesetzt:
-  - Integrierte Entwicklungsumgebung Apple Xcode Version 7.3 (oder höher).
+  - Integrierte Entwicklungsumgebung Apple Xcode Version 8 (oder höher).
   - iPhone mit iOS 9.0 (oder höher).
   - CocoaPods muss auf Ihrem Computer installiert sein. Weitere Informationen finden Sie auf der [CocoaPods-Website](https://guides.cocoapods.org/using/getting-started.html).
   - [Parameter](#iot4i_mobileParam), die erforderlich sind, um die mobile Beispiel-App mit Ihrer Instanz des Service zu verbinden.
@@ -90,7 +88,7 @@ Führen Sie die folgenden Tasks aus, um Push-Benachrichtigungen für Ihr Mobilte
   1. Öffnen Sie 'Keychain Access' und wählen Sie **My Certificates** aus.
   2. Klicken Sie mit der rechten Maustaste auf **Apple Development IOS Push Service: (bundleID)** und exportieren Sie die Datei, speichern Sie sie und geben Sie ein Kennwort für sie ein.
   3. Öffnen Sie in Ihrer {{site.data.keyword.Bluemix_notm}}-Konsole den Service '{{site.data.keyword.mobilepushshort}}'.
-  4. Klicken Sie auf **Setup Push**.
+  4. Klicken Sie auf **Konfigurieren**.
   5. Laden Sie im Abschnitt 'Apple Push Notifications Certificate' die PKCS 12-Datei hoch und geben Sie das Kennwort ein.
   6. Ändern Sie die Bundle-ID in Xcode in die zuvor von Ihnen erstellte Bundle-ID.
   7. Führen Sie die App aus und erteilen Sie Berechtigungen für den Service für Push-Benachrichtigungen.
@@ -100,7 +98,8 @@ Führen Sie die folgenden Tasks aus, um Push-Benachrichtigungen für Ihr Mobilte
 
 ## API-Referenz
 {: #api}
-* [{{site.data.keyword.iotinsurance_short}}-API-Beispiele](https://iot4i-docs-api.mybluemix.net/dist/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}}-API](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}}-API-Beispiele](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
 
 ## Zugehörige Links
 {: #general}

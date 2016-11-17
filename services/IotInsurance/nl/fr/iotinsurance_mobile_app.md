@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-26"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -17,17 +17,15 @@ copyright:
 
 
 # Installation et connexion du modèle d'application mobile
-{: #iotins_gettingstarted}
-Dernière mise à jour : 15 septembre 2016
-{: .last-updated}
+{: #iot4i_gettingstarted}
 
 Le modèle d'application mobile {{site.data.keyword.iotinsurance_full}} est une implémentation de référence d'un client mobile d'{{site.data.keyword.iotinsurance_short}}. Vous
-pouvez utiliser l'application pour enregistrer de nouveaux périphériques sur le système et recevoir des alertes pour les périphériques.
+pouvez utiliser l'application pour enregistrer de nouveaux terminaux sur le système et recevoir des alertes pour les terminaux.
 {:shortdesc}
 
 **Configuration requise :** avant de commencer, assurez-vous de disposer des éléments requis suivants :
-  - L'environnement de développement intégré Apple Xcode 7.3 ou version ultérieure.
-  - Un périphérique mobile iPhone avec iOS 9.0 ou version ultérieure.
+  - L'environnement de développement intégré Apple Xcode 8 ou version ultérieure.
+  - Un terminal mobile iPhone avec iOS 9.0 ou version ultérieure.
   - CocoaPods installé sur votre ordinateur. Voir le [site Web CocoaPods](https://guides.cocoapods.org/using/getting-started.html).
   - Les [paramètres](#iot4i_mobileParam) requis pour connecter le modèle d'application mobile à votre instance du service.
 
@@ -53,7 +51,7 @@ fichier **constants.swift** :
 votre téléphone. Pour plus d'informations, voir
 les
 [instructions
-d'exécution d'applications sur des périphériques depuis Xcode pour les développeurs Apple](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/LaunchingYourApponDevices/LaunchingYourApponDevices.html).
+d'exécution d'applications sur des terminaux depuis Xcode pour les développeurs Apple](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/LaunchingYourApponDevices/LaunchingYourApponDevices.html).
 
   **Remarque :** si une erreur *Could not launch IoT4I because you have not yet
 verified that your Developer App certificate is trusted on your device* est affichée lors de la tentative de génération, sélectionnez-vous comme
@@ -65,7 +63,7 @@ développeur digne de confiance, comme suit :
 ## Activation de notifications push pour l'application mobile
 {: #iot4i_pushNotification}
 
-Procédez comme suit afin d'activer des notifications push pour votre périphérique mobile. Vous devez disposer d'un compte de
+Procédez comme suit afin d'activer des notifications push pour votre terminal mobile. Vous devez disposer d'un compte de
 développeur Apple valide pour pouvoir utiliser le service de notification push.
 
 1. Connectez-vous à votre compte de développeur Apple à l'adresse https://developer.apple.com/account.
@@ -102,8 +100,8 @@ com.NomDeVotreOrganisation.iot4i.mobileApp).
   1. Ouvrez Keychain Access et sélectionnez **My Certificates**.
   2. Cliquez avec le bouton droit de la souris sur **Apple Development IOS Push Service: (bundleID)**, puis procédez à
 l'exportation et à la sauvegarde, et entrez un mot de passe pour le fichier.
-  3. Dans votre console {{site.data.keyword.Bluemix_notm}}, ouvrez le service {{site.data.keyword.mobilepushshort}}. 
-  4. Cliquez sur l'option **Configurer Push**.
+  3. Dans votre console {{site.data.keyword.Bluemix_notm}}, ouvrez le service {{site.data.keyword.mobilepushshort}}.
+  4. Cliquez sur **Configurer**.
   5. Dans la section Certificat Apple Push Notification, téléchargez le fichier PKCS 12 et entrez le mot de passe.
   6. Dans Xcode, remplacez l'identificateur de bundle par celui que vous avez créé précédemment.
   7. Exécutez l'application et accordez des droits pour le service Push Notifications.
@@ -113,7 +111,8 @@ l'exportation et à la sauvegarde, et entrez un mot de passe pour le fichier.
 
 ## Référence d'API
 {: #api}
-* [Exemples d'API {{site.data.keyword.iotinsurance_short}}](https://iot4i-docs-api.mybluemix.net/dist/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [Exemples d'API {{site.data.keyword.iotinsurance_short}}](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
 
 ## Liens connexes
 {: #general}

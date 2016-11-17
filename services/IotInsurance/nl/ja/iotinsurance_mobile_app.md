@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-26"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -17,15 +17,13 @@ copyright:
 
 
 # サンプル・モバイル・アプリのインストールと接続
-{: #iotins_gettingstarted}
-最終更新日: 2016 年 9 月 15 日
-{: .last-updated}
+{: #iot4i_gettingstarted}
 
 {{site.data.keyword.iotinsurance_full}} サンプル・モバイル・アプリは、{{site.data.keyword.iotinsurance_short}} のモバイル・クライアントの参照実装です。このアプリを使用して、システムに新規デバイスを登録し、デバイスのアラートを受信することができます。
 {:shortdesc}
 
 **前提条件:** 始めに、以下の前提条件が満たされていることを確認します。
-  - Apple Xcode 7.3 以降の統合開発環境。
+  - Apple Xcode 8 以降の統合開発環境。
   - iOS 9.0 以降の iPhone モバイル・デバイス。
   - CocoaPods がコンピューターにインストールされている。[CocoaPods Web サイト](https://guides.cocoapods.org/using/getting-started.html)を参照してください。
   - サンプル・モバイル・アプリをサービスのインスタンスに接続するために必要な[パラメーター](#iot4i_mobileParam)。
@@ -88,9 +86,9 @@ copyright:
 
 5. Public Key Cryptography Standards (PKCS) 12 ファイルを作成し、{{site.data.keyword.mobilepushshort}} サービスに追加します。
   1. キーチェーン・アクセスを開き、**「私の証明書 (My Certificates)」**を選択します。
-  2. **「Apple 開発 IOS プッシュ・サービス: (bundleID) (Apple Development IOS Push Service: (bundleID))」**を右クリックし、ファイルのパスワードをエクスポート、保存、および入力します。
+  2. **「Apple Development IOS Push Service: (bundleID)」**を右クリックし、ファイルのパスワードをエクスポート、保存、そして入力します。
   3. {{site.data.keyword.Bluemix_notm}} コンソールで、{{site.data.keyword.mobilepushshort}} サービスを開きます。
-  4. **「プッシュのセットアップ (Setup Push)」**をクリックします。
+  4. **「構成 (Configure)」**をクリックします。
   5. 「Apple プッシュ通知証明書 (Apple Push Notifications Certificate)」セクションで、PKCS 12 ファイルをアップロードし、パスワードを入力します。
   6. Xcode で、バンドル ID を前に作成したものに変更します。
   7. アプリを実行し、プッシュ通知サービスの許可を付与します。
@@ -100,7 +98,8 @@ copyright:
 
 ## API リファレンス
 {: #api}
-* [{{site.data.keyword.iotinsurance_short}} API サンプル](https://iot4i-docs-api.mybluemix.net/dist/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API サンプル](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
 
 ## 関連リンク
 {: #general}
