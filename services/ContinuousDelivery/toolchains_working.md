@@ -8,10 +8,10 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Working with toolchains (Beta)
+# Working with toolchains
 {: #toolchains_getting_started}
 
-Last updated: 16 November 2016
+Last updated: 17 November 2016
 {: .last-updated}  
 
 A *toolchain* is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
