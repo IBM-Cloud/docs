@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+  
 
 
 ---
@@ -17,10 +17,10 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 계정 관리
 {: #mngacct}
-*마지막 업데이트 날짜: 2016년 8월 16일*
+*마지막 업데이트 날짜: 2016년 10월 20일*
 {: .last-updated}
 
-계정에 대한 알림을 설정하거나 계정 사용량 또는 청구서를 보려면 **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg) &gt; **계정**으로 이동하십시오.
+알림을 설정하거나 계정 사용량 또는 청구서를 보려면 **계정** 링크로 이동하십시오.
 {:shortdesc}
 
 ## {{site.data.keyword.Bluemix_notm}} 등록
@@ -41,13 +41,13 @@ copyright:
 ## 알림 설정
 {: #notifications}
 
-일반 계정과 지출 알림을 설정하려면 **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg) &gt; **계정** &gt; **알림**으로 이동하십시오. 지출 알림은 구독 및 종량과금제 {{site.data.keyword.Bluemix_notm}} 계정 소유자에 대해서만 사용 가능합니다.
+일반 계정과 지출 알림을 설정하려면 **계정** &gt; **알림**을 클릭하십시오. 지출 알림은 구독 및 종량과금제 {{site.data.keyword.Bluemix_notm}} 계정 소유자에 대해서만 사용 가능합니다.
 
 {{site.data.keyword.Bluemix_notm}} 인시던트 및 계획된 유지보수에 대해 플랫폼 이메일 알림을 설정할 수 있으며, 사용자 계정이 사용자가 지정한 지출 임계값과 근사하면 사용자에게 경보를 보내는 지출 알림을 설정할 수 있습니다. 다음 태스크를 완료하여 사용자 계정의 서로 다른 알림 유형을 설정하십시오.
 
 ### 플랫폼 알림 설정
 
-{{site.data.keyword.Bluemix_notm}} 인시던트와 계획된 유지보수에 대한 이메일 알림을 설정하려면 **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg) &gt; **계정** &gt; **알림** &gt; **플랫폼**으로 이동하십시오. 각 옵션을 선택하거나 선택 취소하여 이메일 알림을 사용 또는 사용 안함으로 설정할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 인시던트와 계획된 유지보수에 대한 이메일 알림을 설정하려면 **계정** &gt; **알림** &gt; **플랫폼**을 클릭하십시오. 각 옵션을 선택하거나 선택 취소하여 이메일 알림을 사용 또는 사용 안함으로 설정할 수 있습니다.
 
 ### 지출 알림 설정
 {: #spendingnotifications}
@@ -57,7 +57,7 @@ copyright:
 지출 한계에 대한 이메일 알림을 설정하려면 다음 단계를 완료하십시오.
 
 <ol>
-<li>**계정 및 지원** 아이콘 ![계정 및 지원 아이콘](../admin/images/account_support.svg) &gt; **계정** &gt; **알림** &gt; **지출**로 이동하십시오.</li>
+<li>**계정** &gt; **알림** &gt; **지출**을 클릭하십시오.</li>
 <li>숫자 값을 입력하여 각 유형의 알림마다 알림을 트리거하기 위한 지출 임계값을 설정하십시오.<br />
 <ul>
 <li>총 금액</li>
@@ -67,25 +67,23 @@ copyright:
 <li>특정 서비스에 대한 지출</li>
 </ul>
 </li>
-<li>**설정 저장**을 선택하십시오.</li>
+<li>완료되면 **저장**을 클릭하십시오.</li>
 </ol>
 
-**참고**: 평가판 계정을 보유한 경우 구독 또는 종량과금제 계정으로 업그레이드하여 지출 한계를 설정할 수 있습니다. 종량과금제 및 구독 계정에 대한 자세한 정보는 [비용 청구 방법](../pricing/index.html#pay-accounts)을 참조하십시오.
-
+**참고**: 평가판 계정을 보유한 경우 구독 또는 종량과금제 계정으로 업그레이드하여 지출 한계를 설정할 수 있습니다. 종량과금제 및 구독 계정에 대한 자세한 정보는 [비용 청구 방법](/docs/pricing/index.html#pay-accounts)을 참조하십시오.
 
 ## 사용량 보기
 {: #acctusage}
 
 계정 소유자 또는 조직의 청구 관리자는 사용량 대시보드 보기를 사용하여 조직에서 매달 사용하는 런타임, 컨테이너, 서비스 및 지원에 대한 실시간 요금을 확인할 수 있습니다. 모든 지역의 런타임 GB-시간 및 서비스 사용량을 확인하거나 특정 지역을 확인하도록 선택할 수 있습니다.
 
-사용량 대시보드 보기를 열려면 **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg) &gt; **계정** &gt; *your_account_name* &gt; **사용량 대시보드**를 클릭하십시오. 청구 관리자는 청구 관리자를 맡고 있는 조직에 대한 세부사항만 확인할 수 있습니다. 
+사용량 대시보드 보기를 열려면 **계정** &gt; *your_account_name* &gt; **사용량 대시보드**를 클릭하십시오. 청구 관리자는 청구 관리자를 맡고 있는 조직에 대한 세부사항만 확인할 수 있습니다. 
 
-각 청구 주기가 끝날 때 모든 조직에서 발생한 총 사용량이 계정 소유자에게 청구됩니다. 계정 소유자는 지역 및 조직별로 사용량 요약을 필터링할 수 있습니다. 특정 월을 클릭하여 해당 월의 사용량을 확인할 수도 있습니다. 계정에 속한 모든 조직의 사용량을 확인하려면 **조직** 목록에서 **모든 조직**을 선택하십시오.
-
+각 청구 주기가 끝날 때 모든 조직에서 발생한 총 사용량이 계정 소유자에게 청구됩니다. 계정 소유자는 지역 및 조직별로 사용량 요약을 필터링할 수 있습니다. 특정 월을 클릭하여 해당 월의 사용량을 확인할 수도 있습니다. 
 
 ## 청구 정보 업데이트
 {: #account_billing}
 
-계정 소유자는 {{site.data.keyword.Bluemix_notm}} 계정과 연관되어 있는 저장된 신용카드 정보를 편집, 추가 또는 제거할 수 있습니다. **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg) &gt; **계정** &gt; *your_account_name* &gt; **청구**로 이동하십시오. 
+계정 소유자는 {{site.data.keyword.Bluemix_notm}} 계정과 연관되어 있는 저장된 신용카드 정보를 편집, 추가 또는 제거할 수 있습니다. **계정** &gt; *your_account_name* &gt; **비용 청구**를 클릭하십시오.
 
-SoftLayer 계정이 {{site.data.keyword.Bluemix_notm}} 계정과 연결된 경우, 청구 방법에 대한 자세한 정보는 [계정 연결 시에 {{site.data.keyword.Bluemix_notm}} 사용에 대한 청구](../admin/softlayerlink.html#bill_usage)를 참조하십시오. 
+SoftLayer 계정이 {{site.data.keyword.Bluemix_notm}} 계정과 연결된 경우, 청구 방법에 대한 자세한 정보는 [계정 연결 시에 {{site.data.keyword.Bluemix_notm}} 사용에 대한 청구](/docs/admin/softlayerlink.html#bill_usage)를 참조하십시오. 

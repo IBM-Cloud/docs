@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-10-27"
  
 
 ---
@@ -15,37 +15,50 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-<!-- draft - staging only -->
-
-#Vinculando contas de cobrança do SoftLayer e do {{site.data.keyword.Bluemix_notm}}
+# Fazendo upgrade e unificando as contas de cobrança do {{site.data.keyword.Bluemix_notm}} e do SoftLayer
 {: #softlayerlink}
-*Última atualização: 15 de agosto de 2016*
-{: .last-updated}
 
-Agora é possível vincular contas de cobrança do SoftLayer e do {{site.data.keyword.Bluemix_notm}}. Ao vincular as suas contas, você é faturado por meio do SoftLayer para ambos os recursos, do
-SoftLayer e do {{site.data.keyword.Bluemix_notm}}. Se você
-tiver uma conta existente, o faturamento por meio do SoftLayer para o
-{{site.data.keyword.Bluemix_notm}} entrará em vigor para o novo
-ciclo de faturamento que é iniciado após as contas estarem vinculadas.
+Se você tem uma conta para teste do {{site.data.keyword.Bluemix_notm}} e deseja acessar o painel Infraestrutura, deve-se fazer upgrade para uma conta pay-as-you-go do {{site.data.keyword.Bluemix_notm}}.
+
+É possível unificar suas contas de cobrança {{site.data.keyword.Bluemix_notm}} e SoftLayer existentes, vinculando as contas. Ao vincular as suas contas, você será faturado pelo {{site.data.keyword.Bluemix_notm}} pelos recursos do {{site.data.keyword.Bluemix_notm}} e do SoftLayer.
 {:shortdesc}
 
+## Fazendo upgrade para uma conta pay-as-you-go do {{site.data.keyword.Bluemix_notm}}
+{: #upgradetopayg}
+
+Ao efetuar login no {{site.data.keyword.Bluemix_notm}} usando uma conta para teste, não é possível acessar o painel Infraestrutura do {{site.data.keyword.Bluemix_notm}}. Se você deseja que seus apps usem os recursos de infraestrutura, deve-se fazer upgrade para uma conta pay-as-you-go.
+
+Para fazer upgrade de sua conta para teste para uma conta pay-as-you-go do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
+
+ 1. Clique em **Conta** &gt; **Faturamento**.
+ 2. Em seguida, clique em **Incluir cartão de crédito**.
+ 3. Insira os detalhes de faturamento necessários. 
+ 4. Leia e aceite os termos e condições para a conta pay-as-you-go. 
+ 5. Ao concluir, clique em **Fazer upgrade**. 
+ 
+Após fazer upgrade para uma conta pay-as-you-go, as opções de **Infraestrutura** são listadas no **Catálogo** {{site.data.keyword.Bluemix_notm}}. Se você usar mais do que o abono grátis, receberá uma fatura mensal do {{site.data.keyword.Bluemix_notm}}. A fatura será em dólares dos Estados Unidos (USD) e detalhará os encargos do recurso. 
+
+## Unificando as contas do {{site.data.keyword.Bluemix_notm}} e do SoftLayer
+{: #unifyingaccounts}
+
+É possível unificar suas contas do {{site.data.keyword.Bluemix_notm}} e do SoftLayer para usar os recursos combinados. Ao vincular suas contas do {{site.data.keyword.Bluemix_notm}} e do Softlayer, você receberá uma única fatura do {{site.data.keyword.Bluemix_notm}}. Se você tiver uma conta existente do {{site.data.keyword.Bluemix_notm}}, o faturamento por meio do {{site.data.keyword.Bluemix_notm}} para recursos do SoftLayer
+entrará em vigor para o novo ciclo de faturamento que se inicia após as contas serem vinculadas.
+
 **Importante:** todas as contas vinculadas no {{site.data.keyword.Bluemix_notm}} devem ser contas de Pagamento por uso. É possível criar uma nova conta de Pagamento por uso ou
-vincular uma conta de Pagamento por uso existente. Ou, é possível vincular uma conta para teste existente, mas ela terá upgrade feito para uma conta de Pagamento por uso.  
+vincular uma conta de Pagamento por uso existente. Ou, é possível vincular uma conta para teste existente, mas ela terá upgrade feito para uma conta de Pagamento por uso. As contas de assinatura do {{site.data.keyword.Bluemix_notm}} não podem ser vinculadas.  
 
-Após as suas contas serem vinculadas, é possível alternar entre contas facilmente. Ainda é possível monitorar o uso de seus recursos do {{site.data.keyword.Bluemix_notm}} na interface com o
-usuário do {{site.data.keyword.Bluemix_notm}}. No entanto, o faturamento para esses recursos agora aparecerá na fatura do SoftLayer.
+Após as suas contas serem vinculadas:
 
-Embora a sua conta de faturamento vá ser vinculada, o seu ID de login irá variar dependendo de como a sua conta do SoftLayer for autenticado:
-* Para usuários em contas do SoftLayer que não usam ID IBM para autenticação,
-continue a usar o seu ID do SoftLayer para produtos e serviços do SoftLayer e use seu
-ID IBM para produtos e serviços do {{site.data.keyword.Bluemix_notm}}.
-* Para usuários em contas do SoftLayer que usam ID IBM para autenticação, use o
-ID IBM para acessar as contas do SoftLayer e do {{site.data.keyword.Bluemix_notm}}.
+* Deve-se usar as credenciais IBMid para acessar as contas do SoftLayer e do {{site.data.keyword.Bluemix_notm}}.
+* Quaisquer descontos existentes do SoftLayer são aplicados em encargos do {{site.data.keyword.Bluemix_notm}}. 
+* Você receberá uma única fatura em dólares dos Estados Unidos (USD).
+* É possível monitorar o uso de seus recursos do {{site.data.keyword.BluSoftlayer}} na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. 
 
-**Atenção:** Após as contas serem vinculadas, elas não poderão ser desvinculadas.  
+**Atenção:** Após as contas serem vinculadas, elas não poderão ser desvinculadas. 
 
 Se você tiver uma conta do SoftLayer e desejar vincular contas do SoftLayer e do {{site.data.keyword.Bluemix_notm}}, conclua estas etapas:
- 1. A partir do {{site.data.keyword.slportal}}, clique em **Vincular uma Conta do {{site.data.keyword.Bluemix_notm}}**. 
+
+ 1. A partir do {{site.data.keyword.slportal}}, clique em **Vincular uma Conta do {{site.data.keyword.Bluemix_notm}}**.
  2. Leia e aceite os termos para vincular contas do SoftLayer e do {{site.data.keyword.Bluemix_notm}}.
  3. Quando solicitado, forneça o endereço de e-mail que está associado à sua conta do {{site.data.keyword.Bluemix_notm}}. Se você não tiver uma conta do
 {{site.data.keyword.Bluemix_notm}}, forneça o endereço de e-mail que deseja usar e, em seguida, siga as instruções para ser convidado para o {{site.data.keyword.Bluemix_notm}} e criar uma
@@ -53,15 +66,14 @@ conta.
 
 Deve-se ser um Usuário Principal na conta do SoftLayer para vincular contas.
 
-Após você ter vinculado as suas contas, **Acessar {{site.data.keyword.Bluemix_notm}}** está disponível no cabeçalho global do SoftLayer. Clicar nesse link conduz você para a
-página de login do {{site.data.keyword.Bluemix_notm}}. Além disso, o **SoftLayer** agora está disponível no cabeçalho do {{site.data.keyword.Bluemix_notm}}. Clicar no link
+Após ter vinculado as suas contas, o link **Acesse o {{site.data.keyword.Bluemix_notm}}** estará disponível no cabeçalho global do SoftLayer. Clicar nesse link conduz você para a
+página de login do {{site.data.keyword.Bluemix_notm}}. Além disso, o link **SoftLayer** agora está disponível no cabeçalho do {{site.data.keyword.Bluemix_notm}}. Clicar no link
 conduz você para a página inicial do {{site.data.keyword.slportal}} em uma nova janela.
-
 
 ## Créditos para uso do {{site.data.keyword.Bluemix_notm}} quando as contas estão vinculadas
 {: #slcredit}
 
-Ao vincular contas de cobrança do {{site.data.keyword.Bluemix_notm}} e do SoftLayer, você receberá um crédito de $ 200,00 para uso do {{site.data.keyword.Bluemix_notm}}. O crédito deve
+Ao vincular a sua conta do {{site.data.keyword.Bluemix_notm}} a partir de sua conta do SoftLayer, você receberá um crédito de $ 200,00 que poderá ser usado somente no {{site.data.keyword.Bluemix_notm}}. O crédito deve
 ser usado dentro de 30 dias da vinculação das contas.
 
 Para obter informações sobre como visualizar os créditos e a data de expiração, consulte [Visualizando créditos](https://console.ng.bluemix.net/docs/pricing/index.html#credits).
@@ -69,8 +81,7 @@ Para obter informações sobre como visualizar os créditos e a data de expiraç
 ## Convidando membros da equipe do SoftLayer para o {{site.data.keyword.Bluemix_notm}}
 {: #invite_users}
 
-É possível convidar os seus membros da equipe do SoftLayer para se associarem ao {{site.data.keyword.Bluemix_notm}} ao vincular contas do {{site.data.keyword.Bluemix_notm}} e
-do SoftLayer. Ou, é possível convidar membros da equipe do SoftLayer posteriormente, a partir da interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
+É possível convidar membros da equipe do SoftLayer para se juntarem ao {{site.data.keyword.Bluemix_notm}} quando você vincula suas contas do {{site.data.keyword.Bluemix_notm}} e do SoftLayer. Ou, é possível convidar membros da equipe do SoftLayer posteriormente, a partir da interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
 A partir da interface com o usuário do {{site.data.keyword.Bluemix_notm}}, é possível selecionar para convidar todos os membros de sua conta do SoftLayer ou é possível selecionar membros
@@ -79,21 +90,43 @@ individuais. Ao convidar membros da equipe, deve-se configurar a função de con
 
 Deve-se ser um Usuário Principal na conta do SoftLayer para convidar membros da equipe para a conta do {{site.data.keyword.Bluemix_notm}}.
 
-Para convidar membros da equipe por meio do {{site.data.keyword.Bluemix_notm}}:
- 1. Acesse o ícone **{{site.data.keyword.avatar}}**
-![ícone Avatar](../icons/i-avatar-icon.svg) >
-**Contas** > **Convidar membros da equipe**.
- 2. Clique em **Incluir** para autenticar em sua conta do SoftLayer e visualizar uma lista de membros da equipe a partir de sua conta do SoftLayer.
- 3. Selecione os membros da equipe para convidar e clique em **Enviar**.
+Para convidar membros da equipe por meio do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 
-É possível executar essa operação repetidamente conforme mais membros da equipe são incluídos em sua conta do Softlayer.
+ 1. Clique em **Conta** &gt; **Convidar membros da equipe**.
+ 2. Clique em **Incluir** para autenticar em sua conta do SoftLayer e visualizar uma lista de membros da equipe a partir de sua conta do {{site.data.keyword.BluSoftlayer}}
+ 3. Selecione os membros da equipe para convidar e clique em **Enviar**.
  
-O membro da equipe recebe um e-mail que inclui um link **Associar-se à organização**. Se
-o membro não tiver um ID IBM, ele será redirecionado para uma página de registro. Em seguida,
-o membro poderá inserir algumas informações básicas e criar a sua conta do {{site.data.keyword.Bluemix_notm}}.
+O membro da equipe recebe um e-mail que inclui um link **Associar-se à organização**. Se o membro da equipe não tiver um IBMid, ele será redirecionado para uma página de registro. Em seguida, ele poderá inserir algumas informações básicas e criar a sua conta do {{site.data.keyword.Bluemix_notm}}.
 
 Para obter mais informações sobre convidar membros da equipe por meio da interface com o usuário do {{site.data.keyword.Bluemix_notm}}, consulte
 [Convidando membros da equipe](https://console.ng.bluemix.net/docs/admin/users_roles.html#inviteteammembers).
+
+## Alternando para o IBMid
+{: #ibmid_switch}
+
+A autenticação no SoftLayer agora usa o IBMid para fornecer um login único para o {{site.data.keyword.Bluemix_notm}}. Se você tiver uma conta existente do SoftLayer, será possível alternar para um IBMid. Um assistente de migração o guiará através desse comutador.
+{:shortdesc}
+
+Após iniciar a alternância para o IBMid, contanto que você não conclua o processo, será possível cancelá-lo. Mas, você ainda será solicitado a alternar para o IBMid da próxima vez que efetuar login.
+
+Para iniciar a alternância do seu nome de usuário existente do SoftLayer para um IBMid, conclua as etapas a seguir:
+
+ 1. No {{site.data.keyword.slportal}}, acesse a página Editar perfil do usuário e clique em **Alternar para IBMid**.
+ 2. Siga os prompts do assistente de migração para criar seu IBMid. Após criar seu IBMid, não será possível mudar o ID, que é um endereço de e-mail. É possível atualizar o e-mail associado a seu perfil, mas, por padrão, esse valor é configurado como o valor que você definiu para o seu IBMid. Após concluir o assistente, um e-mail é enviado para você.
+ 3. Ao receber o e-mail, siga o link ou copie e cole a URL em um navegador e insira o seu código de registro. O código é válido por 7 dias e pode ser usado apenas uma vez.
+Após usá-lo, ele não poderá ser usado novamente.
+ Após configurar o IBMid para o link de usuário do SoftLayer, é possível efetuar login em sua conta apenas com o IBMid.  No diálogo de login, deve-se usar o botão **Efetuar login com IBMid** em vez de inserir seu nome de usuário e senha do SoftLayer.
+ 
+Se você for um novo cliente, ao efetuar check-out de sua ordem, você será solicitado a fornecer um endereço de e-mail para a sua conta do IBMid existente ou a criar uma nova conta de IBMid. 
+
+### Mapeando várias contas do SoftLayer para um IBMid
+{: #map_multiple_accounts}
+
+Ao configurar a conta, será possível associar um único IBMid a várias contas do SoftLayer usando um endereço de e-mail existente. Somente um usuário do SoftLayer para cada conta pode ser mapeado para o IBMid único. O IBMid deve ser exclusivo dentro de cada conta do SoftLayer. No entanto, um usuário com acesso a várias contas do SoftLayer pode usar um único IBMid para acessar diversas contas do SoftLayer.
+
+Por exemplo, um IBMid pode ser mapeado como o usuário principal nas contas A e B e como um usuário adicional nas contas C e D. Uma das contas mapeadas para esse IBMid é a conta padrão.  Normalmente, a conta padrão é a conta que foi mapeada primeiro para o IBMid. No entanto, é possível alternar qual conta é a conta padrão por meio do recurso de alternância de contas no Portal do Cliente.
+
+Para um usuário com acesso IBMid a várias contas com a autenticação de dois fatores ativada, será necessário um código de verificação de autenticação de dois fatores apropriado por conta durante o login e a alternância da conta.
 
 ## Usando os serviços do {{site.data.keyword.Bluemix_notm}} com ativos do SoftLayer
 {: #bluemix_services}
@@ -118,7 +151,7 @@ gerenciamento para o
 
 Modernize o seu desenvolvimento de aplicativo usando contêineres com serviços como {{site.data.keyword.activedeployshort}} e
 {{site.data.keyword.deliverypipeline}}. É possível então usar o serviço do {{site.data.keyword.vpn_short}} para construir um túnel de volta para o SoftLayer para conectar o seu contêiner em uma
-rede privada para a rede privada do SoftLayer. Todos os encargos de uso dos recursos de cálculo e serviços são refletidos em sua conta do SoftLayer. 
+rede privada para a rede privada do SoftLayer. Todos os encargos de uso dos recursos de cálculo e serviços são refletidos em sua conta do {{site.data.keyword.Bluemix_notm}}. 
 
 ### Serviços do {{site.data.keyword.Bluemix_notm}} baseados em API
 Nem todos os serviços do {{site.data.keyword.Bluemix_notm}} podem ser usados com o SoftLayer. Os serviços a seguir podem ser configurados para execução com o seu código do aplicativo:
@@ -165,31 +198,27 @@ Nem todos os serviços do {{site.data.keyword.Bluemix_notm}} podem ser usados co
 **Nota:** nem todos os planos para esses serviços estão disponíveis. Somente os planos ativados para contas de Pagamento por uso estão disponíveis para uso com contas vinculadas. No
 entanto, será possível usar qualquer plano para qualquer um desses serviços se você tiver uma conta do {{site.data.keyword.Bluemix_notm}} separada que for cobrada separadamente.
 
-
 ## Faturamento para uso do {{site.data.keyword.Bluemix_notm}} quando as contas estão vinculadas
 {: #bill_usage}
 
-Após ter vinculado as suas contas de cobrança do {{site.data.keyword.Bluemix_notm}} e do SoftLayer, o próximo ciclo de faturamento será cobrado em uma única conta do SoftLayer.
-{:shortdesc}
+Após ter vinculado suas contas de cobrança do {{site.data.keyword.Bluemix_notm}} e do SoftLayer, o próximo ciclo de faturamento será cobrado em uma única fatura do {{site.data.keyword.Bluemix_notm}}. {:shortdesc}
 
 O seu ciclo de uso do {{site.data.keyword.Bluemix_notm}} está em uma base por mês de calendário; portanto, a sua conta será faturada todo mês no dia de faturamento que foi estabelecido para
 a sua concordância com os encargos. Com o SoftLayer, o seu ciclo de uso
 começa a partir de quando você começou com o SoftLayer; portanto, você é faturado todo mês no mesmo dia do mês em que você se inscreveu para a sua conta do SoftLayer. 
 
-Quando as suas contas estão vinculadas, o seu uso do {{site.data.keyword.Bluemix_notm}} continuará a ser medido para o ciclo do mês atual e você será faturado por esse uso em uma fatura do
-{{site.data.keyword.Bluemix_notm}}. Iniciando no primeiro do próximo mês, os seus encargos do {{site.data.keyword.Bluemix_notm}} estarão na sua fatura do SoftLayer.
+Quando as suas contas estão vinculadas, o seu uso do {{site.data.keyword.Bluemix_notm}} continuará a ser medido para o ciclo do mês atual e você será faturado por esse uso em uma conta do {{site.data.keyword.Bluemix_notm}}. Iniciando no primeiro dia do próximo mês, seus encargos do {{site.data.keyword.Bluemix_notm}} e do SoftLayer serão combinados em sua fatura do {{site.data.keyword.Bluemix_notm}}.
 
-Por exemplo, se você vinculou as suas contas em 16 de abril, obterá uma fatura do Bluemix para o seu uso de abril. O seu uso de maio será faturado por meio da sua conta do SoftLayer.
+Por exemplo, se você vinculou as suas contas em 16 de abril, obterá uma fatura do Bluemix para o seu uso de abril. Dependendo de quando você vinculou as suas contas, você poderá ter uma conta separada para o uso do SoftLayer. O uso de maio tanto para o SoftLayer como para o {{site.data.keyword.Bluemix_notm}} será faturado por meio de sua conta do {{site.data.keyword.Bluemix_notm}}.
 
 ![Vinculando o resumo de contas do Bluemix e do SoftLayer](images/BluemixSoftLayerBill.svg)
 
-Após as suas contas serem combinadas, a fatura do SoftLayer terá uma seção do **{{site.data.keyword.Bluemix_notm}}** na fatura de resumo. Na visualização de faturamento
-detalhada, os encargos do {{site.data.keyword.Bluemix_notm}} serão mostrados como outros serviços e começarão com Plano do *"{{site.data.keyword.Bluemix_notm}} ..."*.
+Após as contas serem vinculadas, a sua fatura do {{site.data.keyword.Bluemix_notm}} listará os encargos diferentes para cada recurso que você utilizou sob os títulos a seguir:
+
+* **Servidores bare metal e serviços anexados**
+* **Servidores virtuais e serviços anexados**
+* **Serviços não anexados**
 
 Para obter informações sobre como visualizar o uso do {{site.data.keyword.Bluemix_notm}}, consulte [Visualizando detalhes
 de uso](https://console.ng.bluemix.net/docs/pricing/index.html#usage).
 
-
-# rellinks
-## gerais
-* [Vídeo: Vincular Contas do SoftLayer e do Bluemix para uma Única Fatura](https://www.youtube.com/watch?v=Xb01idt2NiU&index=1&list=PLzpeuWUENMK2d3L5qCITo2GQEt-7r0oqm)

@@ -3,9 +3,7 @@
 
 
 copyright:
-
   years: 2015, 2016
-
 
 
 ---
@@ -14,20 +12,20 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:pre: .pre}
+{:table: .aria-labeledby="caption"}
 
 # Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
-Última atualização: 20 de setembro de 2016
+
+*Última atualização: 20 de outubro de 2016*
 {: .last-updated}
 
-Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix}}
-Local ou o {{site.data.keyword.Bluemix_notm}} Dedicated, acesse a página
-**Administração** para gerenciar recursos, monitorar o uso de cotas,
-administrar permissões de usuário, planejar notificações de upgrade, visualizar
-relatórios e logs de segurança e mais. É possível gerenciar suas organizações criando espaços e configurando [funções de usuário e permissões](index.html#oc_useradmin); veja [Gerenciando suas organizações](../admin/orgs_spaces.html).
+Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix}} Local ou o {{site.data.keyword.Bluemix_notm}} Dedicated, acesse a página **Administração** para gerenciar recursos, monitorar o uso de cotas, administrar permissões de usuário, planejar notificações de upgrade, visualizar relatórios e logs de segurança e mais. É possível gerenciar suas organizações criando espaços e configurando [funções de usuário e permissões](index.html#oc_useradmin); veja [Gerenciando suas organizações](../admin/orgs_spaces.html).
 {:shortdesc}
 
-*Tabela 1. Tarefas administrativas para gerenciar a instância local ou dedicada do {{site.data.keyword.Bluemix_notm}}*
+*Tabela 1. Tarefas administrativas para gerenciar sua instância local ou dedicada do {{site.data.keyword.Bluemix_notm}}*
+{: #caption}
 
 | O que fazer? | Detalhes |    
 |----------------|---------|
@@ -39,11 +37,12 @@ relatórios e logs de segurança e mais. É possível gerenciar suas organizaç�
 |Gerenciar permissões de usuário administrativo | Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DE USUÁRIO** para incluir usuários, remover usuários e ajustar permissões de usuários. Veja [Gerenciando usuários e permissões](index.html#oc_useradmin). |
 |Revisar relatórios e logs | Clique em **ADMINISTRAÇÃO &gt; RELATÓRIOS E LOGS** para visualizar relatórios de segurança e logs de auditoria para sua instância. Consulte [Visualizando relatórios](index.html#oc_report). |
 |Visualizar Informações do Sistema | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA** para visualizar informações do sistema, como atualizações de manutenção pendentes, nome e versão de sua instância, região, URL da API, URL da CLI, detalhes da configuração de LDAP, mapeamentos de grupos e de usuários, estatísticas e domínios compartilhados. Consulte [Visualizando informações do sistema](index.html#oc_system). |
-|Estender notificações e configurar inscrições de eventos | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* pendente**. É possível usar webhooks para integração com um serviço da web de sua opção para configurar uma assinatura de notificação de eventos para uma atualização ou um incidente. Consulte [Notificações e inscrições de eventos](index.html#oc_eventsubscription). |
+|Estender notificações e configurar assinaturas de notificação | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* pendente**. É possível usar webhooks para integração com um serviço da web de sua opção para configurar uma assinatura de notificação de eventos para uma atualização ou um incidente. Consulte [Notificações e assinaturas de notificação](index.html#oc_eventsubscription). |
+
+**Dica**: o painel Infraestrutura no console do {{site.data.keyword.Bluemix_notm}} está disponível apenas em contas vinculadas em ambientes {{site.data.keyword.Bluemix_notm}} Public.
 
 
-
-## Notificações e inscrições de eventos
+## Notificações e assinaturas de notificação
 {: #oc_eventsubscription}
 
 Também é possível sempre saber o status de seu ambiente, verificando a página Status. À medida que ocorrem, incidentes e eventos de atualização de manutenção disruptiva planejada são relatados na página
@@ -56,6 +55,7 @@ também envia notificações para a área Notificações na página de Administr
 notificações e onde cada tipo de notificação é postado.
 
 *Tabela 2. Tipos de eventos e métodos de notificações*
+{: #caption}
 
 | **Tipo de evento** | **Método de Notificação** |       
 |-----------------|-------------------|
@@ -71,50 +71,45 @@ webhooks para integrar as notificações a partir da página Administração com
 | Incidentes críticos | Você é alertado sobre incidentes críticos na página Status. Clique
 no ícone **{{site.data.keyword.avatar}}**
 ![Avatar](../support/images/account_support.svg) e selecione
-**Status**. É
-possível ampliar o recurso de notificação configurando uma inscrição de evento que envia um e-mail a um destinatário de sua opção. Ou é possível configurar uma assinatura que use
+**Status**. É possível estender o recurso de notificação configurando uma assinatura de notificação que envia um e-mail para um destinatário de sua escolha. Ou é possível configurar uma assinatura que use
 webhooks para integrar as notificações a partir da página Administração com um serviço da web de sua opção.  |  
+| Eventos de limite | É possível configurar uma assinatura de notificação que envia um e-mail para um destinatário de sua escolha quando os limites de recursos para discos físicos, memória física, disco reservado ou memória reservada são atingidos em seu ambiente. Ou é possível configurar uma assinatura que usa webhooks para integrar as notificações a um serviço da web de sua opção.  |  
 | {{site.data.keyword.Bluemix_notm}} Status | É sempre possível visualizar o status mais recente para a plataforma, os serviços e a sua instância do {{site.data.keyword.Bluemix_notm}} na
 página Status. Clique no ícone
 **{{site.data.keyword.avatar}}**
 ![Avatar](../support/images/account_support.svg) e selecione
 **Status**.  |
 
-### Configurando assinaturas de eventos
+### Configurando assinaturas de notificação
+{: #seteventsub}
 
-É possível estender a funcionalidade das notificações que são enviadas para a página de Administração e a página Status usando inscrições de evento. Use inscrições de evento para configurar um e-mail
-customizado ou use webhooks para integrar com uma ferramenta de sua opção. 
- * Se você selecionar a opção de e-mail, as suas notificações serão enviadas aos endereços de e-mail que especificar. É possível selecionar notificações de incidentes ou atualizações de manutenção. Uma
-notificação por e-mail inicial será enviada. Em seguida, se o incidente ou a atualização de manutenção tiver uma mudança feita nela, outra notificação com a mudança será enviada sempre que uma mudança
-for feita.  
- * Se você selecionar a opção webhooks, as suas notificações serão roteadas diretamente para um destino de sua opção, como um número de telefone (por mensagem SMS). É possível customizar o tipo de notificação, especificamente atualizações de manutenção ou alertas de incidente crítico e as informações incluídas no corpo de cada notificação.
+É possível estender a funcionalidade das notificações que são enviadas para a página Administração e a página Status usando assinaturas de notificação. Use assinaturas de notificação para configurar um e-mail customizado ou use webhooks para integrar a uma ferramenta de sua opção.
+ * Se você selecionar a opção de e-mail, as suas notificações serão enviadas aos endereços de e-mail que você especificar. É possível selecionar notificações de incidentes, atualizações de manutenção ou limites. Uma
+notificação por e-mail inicial será enviada. Em seguida, se o for feita uma mudança no evento, outra notificação com a mudança será enviada sempre que uma mudança for feita.  
+ * Se você selecionar a opção webhooks, as suas notificações serão roteadas diretamente para um destino de sua opção, como um número de telefone (por mensagem SMS). É possível customizar o tipo de notificação, especificamente atualizações de manutenção, alertas de incidentes críticos ou limites. É possível customizar se deseja receber novas notificações ou notificações sobre mudanças em assinaturas e quais informações são incluídas no corpo de cada notificação.
 
-**Nota**: somente usuários com a permissão de super usuário (`ops.admin`) podem configurar inscrições de evento.
+**Nota**: somente usuários com a permissão Super usuário (`ops.admin`) podem configurar assinaturas de notificação.
 
-É possível acessar a página de **Inscrições de evento**, de uma das maneiras a seguir:
+Para criar uma assinatura de e-mail ou webhook a partir da página **Assinaturas de notificação**, conclua as etapas a seguir:
 
-* Para notificações de atualização de manutenção, acesse **INFORMAÇÕES DO SISTEMA &gt; *Número* pendente &gt; Assinaturas**.
-* Para notificações de incidentes, clique no ícone
-**{{site.data.keyword.avatar}}**
-![Avatar](../support/images/account_support.svg) &gt;
-**Status** e, em seguida, clique no ícone
-**Assinar**
-![Assinar](images/icon_subscribe.svg).
+1. Navegue até a página **Assinaturas de notificação**.  Acesse **INFORMAÇÕES DO SISTEMA &gt; Ambiente &gt; Assinaturas**.
+2. Clique em **Incluir assinatura**.
+3. Conclua o formulário de assinatura de notificação.
 
-**Nota**: é possível acessar a página de inscrição de evento para ambos os tipos de notificações usando um dos dois métodos descritos.
+  * Para criar assinaturas de notificação de e-mail sobre atualizações de manutenção ou incidentes, consulte as informações na [Tabela 3](index.html#emailnotmaintinc).
+  * Para criar assinaturas de notificação de e-mail sobre limites, consulte as informações na [Tabela 4](index.html#emailnottrhesh).
+  * Para criar assinaturas de notificação de webhook sobre atualizações de manutenção ou incidentes, consulte as informações na [Tabela 5](index.html#webhooknotsub).
+  * Para criar assinaturas de notificação de webhook sobre limites, consulte as informações na [Tabela 6](index.html#webhooknotthresh).
 
-Para criar uma assinatura de e-mail ou webhook a partir da página de **Inscrições de Evento**, conclua as etapas a seguir:
+4. Após concluir o formulário, é possível escolher a partir das opções a seguir:
 
-1. Clique em **Incluir assinatura**.
-2. Preencha o formulário de inscrição de evento. Para obter informações sobre os campos no formulário, os valores a serem usados na seção de carga útil e o corpo da mensagem do modelo de e-mail,
-revise as tabelas a seguir.
-3. Após concluir o formulário, é possível escolher a partir das opções a seguir:
-
-  * Clique em **Salvar** para salvar a assinatura em sua lista de inscrições de evento.
+  * Clique em **Salvar** para salvar a assinatura em sua lista de assinaturas de notificação.
   * Clique em **Salvar e Testar** para salvar e testar a notificação.
-  * Clique em **Salvar e Fechar** para salvar a assinatura em sua lista de inscrições de evento e retorne para a página anterior.
+  * Clique em **Salvar e fechar** para salvar a assinatura em sua lista de assinaturas de notificação e retornar para a página anterior.
 
-*Tabela 3. Campos de formulário de inscrição de evento para uma assinatura de e-mail*
+*Tabela 3. Campos para assinaturas de notificação de e-mail sobre atualizações de manutenção ou incidentes*
+{: #caption}
+{: #emailnotmaintinc}
 
 | **Campo** | **Descrição** |
 |-----------------|-------------------|
@@ -124,61 +119,126 @@ revise as tabelas a seguir.
 | Combinar notificações | Selecione a opção para combinar as notificações de incidentes
 para todas as regiões em uma única notificação. Essa opção está disponível somente para incidentes. |
 | Assunto | Insira a linha de assunto para o e-mail. Este campo é requerido.  |
-| Corpo | Insira o texto do corpo da mensagem a ser enviada no e-mail. É possível usar os valores de carga útil da IBM para preencher a notificação por e-mail com informações pertinentes. Consulte a tabela
-de [Valores da seção de carga útil](index.html#payload) para identificar quais valores é possível utilizar. Use marcas HTML básicas para estruturar o seu e-mail. Este campo é requerido. |
+| Corpo | Insira o texto do corpo da mensagem a ser enviada no e-mail. É possível usar os valores de carga útil da IBM para preencher a notificação por e-mail com informações pertinentes. Consulte a tabela [Valores da seção Carga útil de manutenção e incidente](index.html#payload) para identificar quais valores podem ser usados. Use marcas HTML básicas para estruturar o seu e-mail. Este campo é requerido. |
 | Para | Insira o endereço ou endereços de e-mail usando uma lista separada por vírgula para os destinatários da notificação por e-mail. Expanda as opções "cc" ou "bcc" para copiar outros no e-mail. Este campo é requerido. |
 | Descrição | Inclua uma descrição exclusiva para a assinatura que você está criando. |
 
+*Tabela 4. Campos para assinaturas de notificação por e-mail sobre limites*
+{: #caption}
+{: #emailnottrhesh}
 
-*Tabela 4. Campos de formulário de inscrição de evento para uma assinatura de webhook*
+| **Campo** | **Descrição** |
+|-----------------|-------------------|
+| Ativar | Selecione a opção para ativar as notificações por e-mail. Limpe a seleção para desativar a notificação por e-mail. As assinaturas são ativadas por padrão. |
+| Tipo | Selecione **E-mail**. |
+| Evento | Selecione **Limite**. |
+| Limite | Selecione o tipo de limite sobre o qual você deseja ser notificado: disco físico, memória física, disco físico reservado ou memória reservada. |
+| Direção do limite | Selecione a direção que você deseja que os dados sejam inseridos, crescente ou decrescente, ao passarem o valor Notificar ao cruzar que você configurar. Por exemplo, se o valor Notificar ao ultrapassar é 50% e a direção é decrescente, você será notificado apenas se a porcentagem de uso for
+de 50% ou mais para menos de 50%. Se você configurar a direção como crescente, você será notificado quando a porcentagem de uso for de menos de 50% para mais de 50%.   |
+| Notificar ao ultrapassar (%) | Insira a porcentagem de limite na qual você deseja ser notificado. Se você escolheu a propriedade Ascending no campo Direção do limite, a notificação por e-mail é enviada quando o limite sobe acima dessa porcentagem. |
+| Notificar ao ficar abaixo de (%) | Insira a porcentagem de limite na qual você deseja ser notificado. Se você escolheu a propriedade Descending no campo Direção do limite, a notificação por e-mail é enviada quando o limite cai abaixo dessa porcentagem. |
+| Descrição | Inclua uma descrição exclusiva para a assinatura que você está criando. |
+| Assunto | Insira a linha de assunto para o e-mail. Este campo é requerido.  |
+| Corpo da mensagem | Insira o texto do corpo da mensagem a ser enviada no e-mail. É possível usar os valores de carga útil da IBM para preencher a notificação por e-mail com informações pertinentes. Consulte a tabela [Valores da seção Carga útil do limite](index.html#threshpayload) para identificar quais valores podem ser usados. Use marcas HTML básicas para estruturar o seu e-mail. Este campo é requerido. |
+| Para | Insira o endereço ou endereços de e-mail usando uma lista separada por vírgula para os destinatários da notificação por e-mail. Expanda as opções "cc" ou "bcc" para copiar outros no e-mail. Este campo é requerido. |
+
+Os dados de limite são coletados uma vez a cada seis horas. Uma notificação é enviada apenas quando o valor cruza o valor limite que você definir. Uma nova notificação não é enviada, a menos que o valor caia abaixo do limite, se você escolheu crescente, e depois ultrapasse o limite novamente. Da mesma forma, se você escolheu decrescente, você será notificado novamente somente se o valor subir acima do limite que você configurar e, em seguida, cair abaixo do limite novamente. 
+
+Se não quiser esperar 6 horas para que a notificação seja enviada quando o limite for atendido, depois de concluir os campos no formulário, será possível clicar em **Salvar e testar** para salvar e testar a notificação com os
+dados de amostra.
+
+*Tabela 5. Campos de formulário para uma assinatura de notificação de webhook sobre manutenção ou incidentes*
+{: #caption}
+{: #webhooknotsub}
 
 | **Campo** | **Descrição** |
 |-----------------|-------------------|
 | Ativar | Selecione a opção para ativar a notificação. Limpe a seleção para desativar a
 notificação. As assinaturas são ativadas por padrão. |
 | Tipo | Selecione **Webhook** |
-| Método | Selecione **GET** ou **POST**. |
 | Evento | Selecione para ser inscrito para notificações para um evento de **Manutenção** ou **Incidente**. |
+| Autorização | Selecione se deseja ativar a autorização.  As opções são: **Básico** ou **Nenhum**. |
+| Nome de Usuário | Se você escolheu autorização **Básica**, insira o seu nome de usuário para o serviço da web. Se não desejar usar suas credenciais pessoais, será possível configurar um ID funcional para usar especificamente com o {{site.data.keyword.Bluemix_notm}}. |
+| Senha | Se você escolheu a autorização **Básica**, insira a senha para seu serviço da web. |
+| Descrição | Inclua uma descrição exclusiva para a assinatura que você está criando. |
+| Novo evento | Selecione esta opção para ativar a notificação para novos eventos de manutenção ou de incidentes. Limpe a seleção para desativar a
+notificação. |
+| Método | Selecione **GET**, **POST** ou **PUT**. |
+| URL | Insira a URL para se conectar ao seu serviço da web. |
+| Propriedade de resposta | Esse campo opcional é o nome da propriedade que identifica o recurso que é criado pelo seu serviço da web quando uma solicitação POST ou PUT é enviada. No caso de você fornecer uma propriedade de resposta para um novo evento e escolher criar uma assinatura para uma mudança em um evento, deverá também fornecê-la para a assinatura Mudança no evento. Dependendo do serviço da web que você está usando, é possível especificá-lo como parte da URL ou como um valor de carga útil.  |
+| Carga Útil | Se você selecionou os métodos POST ou PUT, insira as propriedades que são específicas para o serviço da web que você está usando emparelhado com os valores de carga útil usados para a notificação da IBM. Consulte a tabela [Valores da seção Carga útil de manutenção e incidente](index.html#payload) para identificar quais valores podem ser usados. Se você não inserir informações nessa seção, receberá uma notificação de que não tem mais informações. |
+| Mudar para evento | Selecione essa opção para criar assinaturas de notificação sobre mudanças em eventos de manutenção ou de incidentes para os quais você criou assinaturas. Limpe a seleção para desativar a
+notificação. |
+| Usar valores e carga útil do Novo evento | Usa o conteúdo dos campos Método, URL e Carga útil da seção Novo evento. Observe que se essa opção estiver marcada, esses campos não estarão disponíveis para edição adicional na seção Mudanças no evento. |
+| Método | Selecione **GET**, **POST** ou **PUT**. |
+| URL | Insira a URL para se conectar ao seu serviço da web. |
+| Carga Útil | Se você selecionou os métodos POST ou PUT, insira as propriedades que são específicas para o serviço da web que você está usando emparelhado com os valores de carga útil usados para a notificação da IBM. Consulte a tabela [Valores da seção Carga útil de manutenção e incidente](index.html#payload) para identificar quais valores podem ser usados. Se você não inserir informações nessa seção, receberá uma notificação de que não tem mais informações. |
 | Combinar notificações | Selecione a opção para combinar as notificações de incidentes
 para todas as regiões em uma única notificação. Essa opção está disponível somente para incidentes. |
-| URL | Insira a URL para se conectar ao seu serviço da web. |
-| Descrição | Inclua uma descrição exclusiva para a assinatura que você está criando. |
-| Nome de Usuário | Insira seu nome de usuário para o seu serviço da web. Se não desejar usar suas credenciais pessoais, será possível configurar um ID funcional para usar especificamente com o {{site.data.keyword.Bluemix_notm}}. |
-| Senha | Insira a senha para o seu serviço da web. |
-| Carga Útil | Se tiver selecionado o método POST, insira as propriedades específicas para o serviço da web que você está usando,
-pareadas com os valores de carga útil usados para a notificação da IBM. Consulte a tabela
-de [Valores da seção de carga útil](index.html#payload) para identificar quais valores é possível utilizar. Se você não inserir informações nesta seção, receberá uma notificação sem quaisquer informações adicionais. |
 
-*Tabela 5. Valores da seção de carga útil*
+*Tabela 6. Campos de formulário para uma assinatura de notificação de webhook sobre limites*
+{: #caption}
+{: #webhooknotthresh}
+
+| **Campo** | **Descrição** |
+|-----------------|-------------------|
+| Ativar | Selecione a opção para ativar a notificação. Limpe a seleção para desativar a
+notificação. As assinaturas são ativadas por padrão. |
+| Tipo | Selecione **Webhook**. |
+| Evento | Selecione **Limite**. |
+| Limite | Selecione o tipo de limite sobre o qual você deseja ser notificado: disco físico, memória física, disco físico reservado ou memória reservada. |
+| Direção do limite | Selecione se você deseja ver os dados de limite em ordem crescente ou decrescente.  |
+| Notificar ao ficar abaixo de (%) | Se você selecionou a **Direção de limite** **Decrescente**, insira a porcentagem de limite na qual você deseja ser notificado. Quando o limite cai abaixo dessa porcentagem, a notificação de webhook é enviada. |
+| Notificar ao ultrapassar (%) | Se você selecionou a **Direção de limite** **Crescente**, insira a porcentagem de limite na qual você deseja ser notificado. Quando o limite sobe acima dessa porcentagem, a notificação de webhook é enviada. |
+| Descrição | Inclua uma descrição exclusiva para a assinatura que você está criando. |
+| Autorização | Selecione se deseja ativar a autorização.  As opções são: **Básico** ou **Nenhum**. |
+| Nome de Usuário | Se você escolheu a autorização básica, insira seu nome de usuário para o serviço da web. Se não desejar usar suas credenciais pessoais, será possível configurar um ID funcional para usar especificamente com o {{site.data.keyword.Bluemix_notm}}. |
+| Senha | Se você escolheu a autorização básica, insira a senha para o serviço da web. |
+| Método | Selecione **GET**, **POST** ou **PUT**. |
+| URL | Insira a URL para se conectar ao seu serviço da web. |
+
+*Tabela 7. Valores da seção Carga útil de manutenção e incidente*
+{: #caption}
 {: #payload}
 
 | **Valor IBM** | **Descrição** | **Tipo do evento** |
 |----------------|----------------|------------------------|
-| {{content.title}} | título Message |  Atualização de manutenção e incidente |
-| {{content.message}} | Descrição da mensagem |   Atualização de manutenção e incidente |
-| {{region}} | Região afetada | Atualização de manutenção e incidente |
-| {{content.severity}} | Classificação de gravidade | Incidente |
 | {{content.category}} | Serviços afetados | Incidente |
-| {{content.subCategoryName}} | Componentes afetados | Incidente |
-| {{status}} | Status da atualização | Atualização de manutenção |
-| {{content.scheduleWindow.start}} | A data de início planejada para a atualização | Atualização de manutenção |
 | {{content.disruption}} | Componentes afetados | Atualização de manutenção |
+| {{content.message}} | Descrição da mensagem |   Atualização de manutenção e incidente |
+| {{content.scheduleWindow.start}} | Data de início planejada para a atualização | Atualização de manutenção |
+| {{content.scheduleWindow.end}} | Horário de encerramento planejado para a atualização | Atualização de Manutenção |
+| {{content.severity}} | Classificação de gravidade | Incidente |
+| {{content.subCategoryName}} | Componentes afetados | Incidente |
+| {{content.title}} | título Message | Atualização de manutenção e incidente |
+| {{region}} | Região afetada | Atualização de manutenção e incidente |
+| {{status}} | Status da atualização | Atualização de manutenção |
 | {{type}} | Atualização ou incidente | Atualização de manutenção e incidente |
-| {{content.scheduleWindow.end}} | O horário de encerramento planejado para a atualização | Atualização de Manutenção |
 
-Quando a sua inscrição de evento for salva, você receberá notificações por meio do método que você configurar. Notificações ainda são postadas nos locais a seguir:  
- * Na página Status para incidentes 
+*Tabela 8. Valores da seção Carga útil de limite*
+{: #caption}
+{: #threshpayload}
+
+| **Valor IBM** | **Descrição** | **Tipo do evento** |
+|----------------|----------------|------------------------|
+| {{content.physical_disk}} | Limite de disco físico | Limite |
+| {{content.physical_memory}} | Limite de memória física | Limite |  
+| {{content.reserved_disk}} | Limite de disco reservado | Limite |
+| {{content.reserved_memory}} | Limite de memória reservada | Limite |
+
+Quando a notificação de assinatura é salva, você recebe notificações por meio do método que você configurar. Notificações ainda são postadas nos locais a seguir:  
+ * Na página Status para incidentes
  * Na página Status para os eventos de atualização de manutenção disruptiva planejada
  * Na área de Notificações da página de Administração para atualizações de manutenção
 
-É possível selecionar qualquer inscrição de evento salva, visualizar a atividade recente ou editar conforme necessário. Clique para expandir qualquer entrada de atividade recente para visualizar os
+É possível selecionar qualquer assinatura de notificação salva, visualizar a atividade recente ou editar, conforme necessário. Clique para expandir qualquer entrada de atividade recente para visualizar os
 detalhes de histórico.
 
 ## Atualizações de Manutenção
 {: #oc_schedulemaintenance}
 
 É possível visualizar atualizações de manutenção planejadas e pendentes, se você tiver a permissão de superusuário (`ops.admin`), clicando em **ADMINISTRAÇÃO &gt; INFORMAÇÕES
-DO SISTEMA &gt; *Número* pendente** para acessar a página de **Atualizações do sistema**. Todos os usuários de seu ambiente podem visualizar os eventos de atualização de
+DO SISTEMA &gt; *Número* pendente** para acessar a página de **Atualizações do sistema**.  Todos os usuários de seu ambiente podem visualizar os eventos de atualização de
 manutenção disruptiva planejada clicando no ícone **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) e, em seguida, selecionando
 **Status**.
 
@@ -199,12 +259,14 @@ para selecionar três datas e horas específicas para a IBM escolher ao planejar
 ### Configurando janelas de manutenção pré-aprovadas
 {: #preapprovedmaintenance}
 
-Antes de iniciar o planejamento e aprovar atualizações, deve-se configurar as janelas de manutenção pré-aprovadas. Atualizações sem interrupção são planejadas durante os horários de janela pré-aprovados.
+As atualizações de manutenção sem interrupção são planejadas para executar durante as janelas de tempo pré-aprovadas. Por padrão, duas janelas de atualização disponíveis semanalmente são criadas para seu sistema. Essas janelas geralmente são configuradas para ocorrer a cada sábado e domingo à noite. É possível mudar as configurações padrão de uma das maneiras a seguir:
+ * Edite as janelas de atualização padrão escolhendo um dia diferente ou/e um horário de início diferente
+ * Crie uma janela de atualização e, em seguida, exclua a janela de atualização padrão
+
+Para salvar suas mudanças, deve-se ainda cumprir o mínimo necessário de tempo a cada semana.
 
 É necessário configurar no mínimo 12 horas disponíveis por semana para no mínimo
-dois dias durante cada semana. Por exemplo, é possível configurar períodos de 6 horas ao
-longo de dois dias separados ou períodos de 4 horas ao longo de três dias separados. Para assegurar que as janelas forneçam tempo suficiente para uma atualização ser aplicada, cada janela deve ter
-um mínimo de quatro horas de duração.
+dois dias durante cada semana. Por exemplo, é possível configurar janelas de seis horas em dois dias separados ou configurar janelas de quatro horas em três dias separados. Para assegurar que as janelas forneçam tempo suficiente para uma atualização a ser aplicada, cada janela deve ter um mínimo de 4 horas de duração.  
 
 **Nota**: somente usuários com a permissão de super usuário
 (`ops.admin`) podem planejar e aprovar atualizações de manutenção.
@@ -222,9 +284,12 @@ quando possível.
 7. Repita esse processo até ter atendido aos requisitos mínimos para as janelas semanais.
 
 ### Configurando janelas de manutenção indisponíveis
+{: #blockpreapprovedmaintenance}
 
-Após configurar as suas janelas de manutenção pré-aprovadas, é possível optar por configurar datas e horas específicas em que o seu ambiente não está disponível para atualizações. Por exemplo, é possível
-escolher um final de semana ou feriado de alto tráfego quando você não deseja que nenhuma manutenção seja aplicada, para assegurar que os seus aplicativos estejam disponíveis para os usuários.
+É possível escolher configurar janelas de tempo de atualização indisponíveis específicas nas quais seu ambiente não está disponível para atualizações de manutenção sem interrupção. Por exemplo, é possível escolher um final de semana ou feriado de alto tráfego quando você não deseja aplicar nenhuma manutenção para assegurar que seus aplicativos estarão disponíveis para seus usuários.
+
+É necessário configurar no mínimo 12 horas disponíveis por semana para no mínimo
+dois dias durante cada semana. Se você tentar criar uma janela de atualização indisponível, poderá não ser capaz de salvar suas mudanças se essa nova janela fizer com que o sistema caia abaixo do mínimo semanal requerido. Nesse caso, deve-se primeiro remover algumas das janelas de atualização indisponíveis existentes ou incluir mais janelas de atualização disponíveis antes de poder salvar a nova janela de atualização indisponível. Consulte [Configurando janelas de manutenção pré-aprovadas](index.html#preapprovedmaintenance) para obter mais informações.
 
 1. Acesse **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* pendente &gt; Gerenciar Disponibilidade**.
 2. Expanda a seção **Gerenciar janelas de atualização indisponíveis**.
@@ -282,7 +347,7 @@ novamente.
 Para visualizar informações do sistema, clique em
 **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA**.
 
-É possível expandir e visualizar várias seções sobre atualizações de manutenção pendentes, informações gerais do sistema e detalhes de configuração de LDAP.
+É possível visualizar várias seções, incluindo atualizações pendentes do sistema, informações do sistema geral, informações de API e de CLI e detalhes de configuração de LDAP.
 
 ### Atualizações do sistema pendentes
 
@@ -293,13 +358,12 @@ Na seção Atualizações, é possível ver o número de notificações de atual
 <dd>Uma atualização sem interrupção não afeta o seu ambiente, os seus aplicativos em execução ou o acesso de seus usuários aos seus aplicativos. Esse tipo de atualização não requer aprovação caso a caso. Essas atualizações são aplicadas nas janelas de manutenção pré-aprovadas e disponíveis que você configura na página Atualizações do sistema.</dd>
 <dt>Atualizações disruptivas</dt>
 <dd>Uma atualização disruptiva pode afetar o seu ambiente, os aplicativos em execução ou o acesso de seus usuários aos aplicativos. Você tem a capacidade de planejar e aprovar cada uma dessas atualizações de
-manutenção dentro da janela de manutenção atribuída de 21 dias, para assegurar que a atualização não seja aplicada durante as horas críticas de negócios. É possível selecionar a data e hora sugeridas de
-implementação, que são baseadas em suas janelas de manutenção pré-aprovadas ou é possível selecionar dois horários e datas adicionais para a IBM escolher ao aplicar a atualização.</dd>
+manutenção dentro da janela de manutenção atribuída de 21 dias, para assegurar que a atualização não seja aplicada durante as horas críticas de negócios. É possível selecionar a data e hora de implementação sugeridas, que são baseadas em suas janelas de manutenção pré-aprovadas ou é possível selecionar dois horários e duas datas adicionais para a IBM escolher ao aplicar a atualização.</dd>
 </dl>
 
 Para obter mais informações sobre a configuração de janelas de manutenção
 pré-aprovadas e datas indisponíveis específicas para manutenção, consulte
-[Atualizações de manutenção](admin/index.html#oc_schedulemaintenance).
+[Atualizações de manutenção](index.html#oc_schedulemaintenance).
 
 ### Informações gerais do sistema
 
@@ -335,37 +399,42 @@ Para visualizar informações de uso de recurso, clique em **ADMINISTRAÇÃO &gt
 Na seção **Uso de recurso**, é possível visualizar as informações a seguir:
 
 - Informações de uso de recurso, como a quantia de memória e de espaço em disco que pode ser reservado e quanto está fisicamente disponível e a quantia de memória e de espaço em disco que está realmente
-reservado e quanto é usado fisicamente. Também é possível ver informações sobre o uso de CPU médio em todos os Droplet Execution Agents (DEAs). Para ver o uso de sua memória, disco ou CPU pelo DEA, clique em
-**Detalhamento**.
-É possível ver um resumo das quantias **Reservadas** e **Físicas** para a sua memória e disco.
+reservado e quanto é usado fisicamente.  Também é possível ver informações sobre o uso de CPU médio em todos os Droplet Execution Agents (DEAs). Para obter informações mais detalhadas sobre memória, disco e uso da CPU, consulte [Memória, disco e detalhes da CPU](index.html#resourceusagedetails).
+- Informações de uso de rede para entrada de largura da banda e saída da largura da banda, nas últimas 6 horas ou no último dia. Os dados exibidos são baseados na soma do tráfego de entrada e de saída para as redes públicas e privadas.
+- Tempo médio de resposta para o {{site.data.keyword.Bluemix_notm}} nos últimos 10 minutos, 1 hora e 1 dia.
+- Transações médias por segundo para {{site.data.keyword.Bluemix_notm}} nos últimos 10 minutos, hora e dia.
+
+#### Memória, disco e detalhes da CPU
+{: #resourceusagedetails}
+
+Na seção **Uso de recursos**, é possível ver um resumo das quantias **Reservado** e **Físico** para sua memória e disco.    
 	<dl>
 	<dt><strong>Física</strong></dt>
-	<dd>A quantia de memória ou espaço em disco que foi comprada para o seu ambiente. </dd>
+	<dd>A quantia de memória ou espaço em disco que foi comprada para o seu ambiente.</dd>
 	<dt><strong>Reservada</strong></dt>
 	<dd>A quantia total de memória ou espaço em disco que está disponível para ser reservado por todos os aplicativos implementados e em execução em seu ambiente. Como os aplicativos raramente usam toda a
 memória que está reservada por eles, o valor físico geralmente é inferior ao valor reservado.</dd>
 	</dl>
 
-	Além da representação gráfica, é possível ver a porcentagem de memória e espaço em disco que o seu ambiente está usando. Também é possível ver ambas as quantias, reservada e física, em GB, do uso real
+Além da representação gráfica, é possível ver a porcentagem de memória e espaço em disco que o seu ambiente está usando. Também é possível ver ambas as quantias, reservada e física, em GB, do uso real
 comparado com a quantia que está disponível.
-Para ver mais informações detalhadas sobre o seu uso de memória física e reservada, clique em **Histórico.** É possível especificar o prazo para visualizar como semanal ou mensal. A
-visualização **Uso de memória histórico** mostra um gráfico de uso de memória durante o tempo que você escolher.  
 
+Para ver o uso de sua memória, disco ou CPU pelo DEA, clique em
+**Detalhamento**.  
+
+Para ver informações mais detalhadas sobre sua memória física e reservada ou sobre o uso do disco ao longo do tempo, clique em **Histórico**. É possível especificar o prazo para visualizar como semanal ou mensal. A visualização de uso histórico mostra um gráfico de memória ou o uso do disco durante o tempo que você escolher.  
 	<dl>
 	<dt><strong>Limite reservado</strong></dt>
-	<dd>Mostrado como uma linha pontilhada horizontal, o Limite reservado é a quantia total de memória que pode ser coletivamente reservada por todos os aplicativos em execução em seu ambiente.</dd>
+	<dd>Mostrado como uma linha pontilhada horizontal, o Limite reservado é a quantia total de memória ou espaço em disco que pode ser coletivamente reservada por todos os aplicativos em execução em seu ambiente.</dd>
 	<dt><strong>Reservada</strong></dt>
-	<dd>A Área reservada mostra a memória que está atualmente reservada coletivamente por todos os aplicativos em execução em seu ambiente.
-	<p>Para ver quais organizações reservaram mais memória em um determinado momento, passe o mouse sobre o ponto ao longo da Área reservada que está associado a esse momento. Em seguida, é possível clicar em uma
+	<dd>A Área reservada mostra o espaço de memória ou disco que está atualmente reservada coletivamente por todos os aplicativos em execução em seu ambiente. 	<p>Para ver quais organizações reservaram mais memória em um determinado momento, passe o mouse sobre o ponto ao longo da Área reservada que está associado a esse momento. Em seguida, é possível clicar em uma
 organização no gráfico de pizza que é exibido para ver mais informações sobre essa organização.</p></dd>
 	<dt><strong>Limite físico</strong></dt>
-	<dd>Exibido como uma linha pontilhada horizontal, o Limite físico mostra a quantia de memória física que foi comprada para o seu ambiente.</dd>
+	<dd>Mostrado como uma linha pontilhada horizontal, o Limite físico mostra a quantia de memória física ou o espaço em disco que foi adquirido para seu ambiente.</dd>
 	<dt><strong>Física</strong></dt>
-	<dd>A Área física mostra a quantia de memória que realmente está sendo usada.</dd>
+	<dd>A Área física mostra a quantia de memória ou espaço em disco que realmente está sendo usado.</dd>
 	</dl>
-- Informações de uso de rede para entrada de largura da banda e saída da largura da banda, nas últimas 6 horas ou no último dia. Os dados exibidos são baseados na soma do tráfego de entrada e de saída para as redes públicas e privadas.
-- Tempo médio de resposta para o {{site.data.keyword.Bluemix_notm}} nos últimos 10 minutos, 1 hora e 1 dia.
-- Transações médias por segundo para {{site.data.keyword.Bluemix_notm}} nos últimos 10 minutos, hora e dia.
+
 
 ### Uso de conta
 {: #accountusage}
@@ -401,7 +470,7 @@ Também é possível visualizar o uso mensal e os encargos associados no nível 
 ![Avatar](../support/images/account_support.svg) &gt;
 <strong>Conta</strong> &gt; <strong>Detalhes do uso</strong>.</li>
 <li>Clique em <strong>Public</strong>.</li>
-<li>Selecione a organização para a qual deseja ver dados ou selecione <strong>Todas as organizações</strong> para visualizar os dados para todas as organizações de uma vez.</li>
+<li>Selecione a organização para a qual deseja ver os dados.</li>
 <li>É possível ver detalhes de uso para as categorias a seguir:
 <ul>
 <li>Apps de tempo de execução que têm uso</li>
@@ -436,7 +505,7 @@ DataPower&trade;, firewall, e auditoria de login, para a instância
 do {{site.data.keyword.Bluemix_notm}}. Para visualizar relatórios e logs, clique em
 **ADMINISTRAÇÃO &gt; RELATÓRIOS E LOGS**.
 
-Selecione a partir das opções a seguir:
+Selecione entre as seguintes opções:
 
 - É possível selecionar as datas de início e de encerramento nos campos para filtrar quais relatórios e logs são
 exibidos.
@@ -453,7 +522,8 @@ relatórios é gerada em uma base diária. No entanto, a criptografia e os relat
 administração para a sua recuperação. Após esses 90 dias, os relatórios estarão disponíveis por solicitação a partir do {{site.data.keyword.Bluemix_notm}} por 9 meses. No total, os
 relatórios estarão disponíveis para recuperação por até 1 ano.
 
-*Tabela 6. Lista de relatórios de segurança*
+*Tabela 9. Lista de relatórios de segurança*
+{: #caption}
 
 | **Categoria** | **Relatório** | **Descrição** |      
 |-----------------|-------------------|---------------------|
@@ -501,19 +571,13 @@ suporte com as informações da verificação, para ter o problema resolvido rap
 ## Gerenciando seu catálogo
 {: #oc_catalog}
 
-É possível gerenciar quais serviços e iniciadores do
-{{site.data.keyword.Bluemix_notm}} ficarão visíveis
-para usuários no catálogo do {{site.data.keyword.Bluemix_notm}}. Clique em **ADMINISTRAÇÃO &gt; GERENCIAMENTO DO CATÁLOGO**.
+É possível gerenciar quais serviços do {{site.data.keyword.Bluemix_notm}} estão visíveis para os usuários no Catálogo {{site.data.keyword.Bluemix_notm}}. Clique em **ADMINISTRAÇÃO &gt; GERENCIAMENTO DO CATÁLOGO**.
 
-Selecione um título de iniciador ou serviço para editar a visibilidade do plano do iniciador ou serviço. Para
+Selecione um quadrado do serviço para editar a visibilidade do plano de serviço. Para
 editar a visibilidade, selecione dentre as opções a seguir:
 
-- Para mostrar o serviço ou o iniciador oculto para que
-ele fique visível para seus usuários no catálogo, selecione
-**ATIVAR TODOS OS PLANOS**.
-- Para ocultar o serviço ou o iniciador de seus usuários no
-catálogo do {{site.data.keyword.Bluemix_notm}}, selecione
-**DESATIVAR TODOS OS PLANOS**.
+- Para mostrar o serviço oculto para que ele fique visível para seus usuários no catálogo, selecione **ATIVAR TODOS OS PLANOS**.
+- Para ocultar o serviço de seus usuários no Catálogo {{site.data.keyword.Bluemix_notm}}, selecione **DESATIVAR TODOS OS PLANOS**.
 - Para controlar a visibilidade de um plano individual, selecione o nome do plano e, em seguida, use o menu suspenso para selecionar **Ativar para todas as organizações**, **Desativar para todas as organizações** ou **Ativar plano para organizações específicas**.
 
 <!-- staging only start -->
@@ -543,6 +607,8 @@ Os métodos para trabalhar com o seu broker de serviço variam, dependendo de qu
 #### Registrando um broker de serviço que gerencia um serviço
 {: #registerbrokerui}
 
+<!-- staging only start -->
+
 Revise as informações a seguir e conclua as etapas para registrar o seu broker de serviço:
 
 **Antes de iniciar**: <a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implemente a API do broker de serviço do Cloud Foundry</a> para ativar a comunicação
@@ -562,7 +628,7 @@ Quando você estiver implementando o broker de serviço, na resposta JSON de <co
          "displayName":"Cool Service",
          "serviceMonitorApi":"https://myservicesstatus.mybluemix.net/healthcheck/",
          "providerDisplayName":"Empresa Cool",
-         "longDescription":"Cool Service é uma solução de data warehousing e análise de dados. É possível mover rapidamente seus dados para um banco de dados colunar contido na memória de próxima geração e começar a executar consultas analíticas complexas.",
+         "longDescription":"Cool Service é uma solução de data warehousing e análise de dados. You can quickly move your data into a next-generation columnar in-memory database and start running complex analytical queries.",
                 "bullets": [
                     {
                "title": "Rápido e simples",
@@ -621,9 +687,9 @@ Quando você estiver implementando o broker de serviço, na resposta JSON de <co
                         "costs": [
                             {
                      "unitId": "INSTANCES_PER_MONTH",
-                                "unit": "MONTHLY",
-                                "partNumber": "D15UTLL"
-                            }
+                                       "unit": "MONTHLY",
+                                       "partNumber": "D15UTLL"
+                                      }
                ],
                         "displayName": "Pequeno"
                     }
@@ -637,7 +703,8 @@ Quando você estiver implementando o broker de serviço, na resposta JSON de <co
 
 As tabelas a seguir podem ajudá-lo a preencher o arquivo de JSON.
 
-*Tabela. Campos de JSON*
+*Tabela 10. Campos JSON*
+{: #caption}
 
 | **Campos de JSON** | **Descrição** |
 |-----------------|-----------------|
@@ -648,11 +715,11 @@ As tabelas a seguir podem ajudá-lo a preencher o arquivo de JSON.
 é possível mudar o nome do serviço após registrar o serviço com o {{site.data.keyword.Bluemix_notm}}. |
 |ID  | O ID do serviço. Esse ID deve ser exclusivo no {{site.data.keyword.Bluemix_notm}} e deve ser um GUID (Identificador Exclusivo Global). Não é possível mudar o ID do serviço depois de registrar o
 serviço com o {{site.data.keyword.Bluemix_notm}}. |
-|meta-dados | Os metadados de plano de serviço que são exibidos no catálogo do {{site.data.keyword.Bluemix_notm}} e na folha de precificação. O campo de metadados é um campo opcional. É possível
-especificar campos adicionais para os metadados. Consulte a tabela a seguir para [Campos de metadados](index.html#metadatafields) para obter mais informações. |
+|meta-dados | Os metadados de plano de serviço que são exibidos no catálogo do {{site.data.keyword.Bluemix_notm}} e na folha de precificação. O campo de metadados é um campo opcional. É possível especificar mais campos para os metadados. Consulte a tabela a seguir para [Campos de metadados](index.html#metadatafields) para obter mais informações. |
 |planejamentos | Uma matriz de definições de plano de serviço. Consulte a tabela a seguir para [Campos de plano](index.html#planfields) para obter mais informações. |
 
-*Tabela. Campos de metadados*
+*Tabela 11. Campos de metadados*
+{: #caption}
 {: #metadatafields}
 
 | **Valores de metadados** | **Descrição** |
@@ -661,8 +728,7 @@ especificar campos adicionais para os metadados. Consulte a tabela a seguir para
 para letras maiúsculas somente a primeira letra do nome do plano. Não use "Padrão" como o nome do plano padrão; use "Padrão" como alternativa. |
 |providerDisplayName | O nome do provedor de serviços |
 |longDescription | A descrição detalhada para o serviço. Considere usar pelo menos duas sentenças para uma descrição longa. |
-|planejamentos                | Uma matriz de definições de plano de serviço. Cada entrada de matriz do campo de planos consiste nos campos a seguir: nome, descrição, grátis, ID e metadados. Consulte a tabela
-a seguir para [Campos de plano](index.html#planfields) para obter mais informações. |
+|planejamentos                | Uma matriz de definições de plano de serviço. Cada entrada de matriz do campo de planos consiste nos campos a seguir: nome, descrição, grátis, ID e metadados. Consulte a tabela a seguir para [Campos de plano](index.html#planfields) para obter mais informações. |
 |projéteis | Uma matriz de sequências que são exibidas para um serviço. É possível usar marcadores para fornecer informações além da descrição longa. O campo de marcadores deve conter, pelo menos, dois elementos de marcador. Cada
 marcador inclui o campo de título e descrição. |
 |imageUrl | A URL de uma imagem de PNG grande (50 x 50 pixels). |
@@ -672,18 +738,17 @@ marcador inclui o campo de título e descrição. |
 |documentationUrl | A URL de documentação sobre o serviço. |
 |termsUrl | A URL para arquivos PDF que contêm termos de acordo. |
 |mídia (opcional) | Uma matriz de elementos para exibir os vídeos e as capturas de tela que introduzem o serviço na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Um elemento de mídia pode conter os campos a seguir: type (imagem, youtube, vídeo), thumbnailUrl (A URL da imagem de visualização para o elemento de mídia.), url (A URL da captura de tela ou o vídeo do YouTube.),
-source (As origens de vídeos que não estão hospedadas no YouTube. O "tipo" da origem do vídeo deve ser suportado por HTML5. Inclua "tipo" e "url" para o vídeo.) e legenda (A legenda para o elemento de mídia. As
+source (As origens de vídeos que não estão hospedadas no YouTube. O "tipo" da origem do vídeo deve ser suportado por HTML5. Inclua "tipo" e "url" para o vídeo.)e legenda (A legenda para o elemento de mídia. As
 legendas ajudam na acessibilidade para pessoas com deficiências para entenderem os seus elementos de mídia.). |
 |serviceKeysSupported | Um valor booleano que indica se a API de chaves de serviço é suportada. A API de chaves de serviço é usada para permitir que um serviço seja usado fora do {{site.data.keyword.Bluemix_notm}}. O valor padrão é false. |
 |plan_updateable | Um valor booleano que indica se o serviço suporta mudanças de plano. O valor padrão é false. |
-|embeddableDashboard (opcional) | Um campo que indica como o painel de serviço é exibido na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Se você não especificar esse campo, o painel será integrado, mas estará restrito a uma largura mínima de 960px e o painel terá preenchimento horizontal adicional ao redor do iframe. É
+|embeddableDashboard (opcional) | Um campo que indica como o painel de serviço é exibido na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Se você não especifica esse campo, o painel é integrado, mas é restrito a uma largura mínima de 960px e tem mais preenchimento horizontal ao redor do iframe. É
 possível usar verdadeiro, falso, drill down ou ativação. É possível usar os campos a seguir para este valor: verdadeiro, falso, drill down e ativação.  |
 |notCreatable (opcional) | Um valor booleano que indica se instâncias para o serviço podem ser criadas a partir da interface com o usuário do {{site.data.keyword.Bluemix_notm}} e a partir da interface da linha de comandos. Um
 valor verdadeiro significa que as instâncias de serviço não podem ser criadas a partir da interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a partir da interface da linha de comandos cf. O valor padrão é false. |
 |notCreatableMessage (opcional) | Uma mensagem que será exibida na interface com o usuário do {{site.data.keyword.Bluemix_notm}} se as instâncias de serviço não puderem ser criadas. Se você não
 especificar esse campo, a mensagem padrão a seguir será exibida: A ser notificado quando estiver disponível, confirme o seu endereço de e-mail ou insira um endereço de e-mail diferente. |
-|notCreatableRobotMessage (opcional) | Uma mensagem que é exibida na bolha de fala da página de detalhes do serviço na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. A mensagem é usada para indicar se um serviço pode ter um problema ou outro motivo que esteja causando sua indisponibilidade. É possível especificar uma mensagem para explicar o motivo. 
-Se você não especificar esse campo, a mensagem padrão a seguir será exibida: Esse serviço está indisponível atualmente. |
+|notCreatableRobotMessage (opcional) | Uma mensagem que é exibida na bolha de fala da página de detalhes do serviço na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. A mensagem é usada para indicar se um serviço pode ter um problema ou outro motivo que esteja causando sua indisponibilidade. É possível especificar uma mensagem para explicar o motivo. Se você não especificar esse campo, a mensagem padrão a seguir será exibida: Esse serviço está indisponível atualmente. |
 |apiReferenceUrl (opcional) | A URL do iframe na área Referência da API na página de detalhes do serviço em Catálogo. Se não usado para a página de detalhes do serviço no Catálogo, será possível inserir o valor
 numérico designado para o seu Doc da API REST para seu serviço ao registrá-lo no microsserviço do Doc da API REST do {{site.data.keyword.Bluemix_notm}}. Isso exibirá o seu Doc da API REST no painel de
 serviço. |
@@ -691,8 +756,8 @@ serviço. |
 |serviceMonitorApi    | A URL para uma API que retorna os dados de JSON, conforme mostrado no exemplo a seguir, que relata o funcionamento do serviço. Deve-se ter serviceMonitorApi ou
 serviceMonitorApp em seus metadados de serviço. Consulte a amostra de código a seguir para obter um exemplo. |
 |serviceMonitorApp    | A URL para um aplicativo que pode ser implementado no {{site.data.keyword.Bluemix_notm}} e ligado a um serviço para fornecer a saída específica de status de serviço. O
-aplicativo deve retornar o mesmo formato de dados de JSON que a serviceMonitorApi. Deve-se ter serviceMonitorApi ou serviceMonitorApp em seus metadados de serviço. Consulte a amostra de código a seguir para
-obter um exemplo. |
+aplicativo deve retornar o mesmo formato de dados de JSON que a serviceMonitorApi. Deve-se ter serviceMonitorApi ou
+serviceMonitorApp em seus metadados de serviço. Consulte a amostra de código a seguir para obter um exemplo. |
 
 ```
 {
@@ -722,7 +787,8 @@ O exemplo a seguir mostra como a resposta de JSON de GET /v2/catalog é mapeada 
 
 ![Detalhes do serviço no catálogo.](images/metadata.png "Visualização de detalhes do serviço do catálogo do Bluemix")
 
-*Tabela. Campos de plano*
+*Tabela 12. Campos de plano*
+{: #caption}
 {: #planfields}
 
 | **Valores de plano** | **Descrição** |
@@ -735,7 +801,8 @@ O exemplo a seguir mostra como a resposta de JSON de GET /v2/catalog é mapeada 
 possível especificar os campos a seguir no campo de metadados: displayName, tipo (assinatura, reservável, planDetails), custo, custos (unitId, unidade, partNumber) e paidOnly. Consulte a tabela
 a seguir para [Campos de metadados de plano](index.html#planmetadata) para obter mais informações. |
 
-*Tabela. Campos de metadados de plano*
+*Tabela 13. Campos de metadados de plano*
+{: #caption}
 {: #planmetadata}
 
 | **Valores de metadados de plano** | **Descrição** |
@@ -745,9 +812,9 @@ a seguir para [Campos de metadados de plano](index.html#planmetadata) para obter
 usado quando o plano é um plano de assinatura, ou seja, o valor de plan.metadata.subscription é verdadeiro. O valor-padrão é falso.), planDetails (Uma quantidade e descrição detalhadas dos recursos que podem
 ser usados com o plano. Esse valor é usado quando o plano é reservável, ou seja, o valor de plan.metadata.reserveable é verdadeiro.) |
 |projéteis                 | Uma descrição dos recursos que podem ser usados com o plano. A descrição é exibida na coluna **Recursos** na página de detalhes do serviço do catálogo e na folha de precificação. |
-|custos                   | As informações de custo sobre o serviço que é exibido na coluna Preço na página de detalhes do serviço do catálogo e na folha de precificação. Cada entrada de matriz contém os
+|custos                   | As informações de custo sobre o serviço que é exibido na coluna Preço na página de detalhes do serviço do catálogo e na folha de precificação  . Cada entrada de matriz contém os
 campos a seguir: unitId (O ID da unidade. Use a forma plural e altere para letras maiúsculas todas as letras. Para planos grátis, esse campo é opcional), unidade (A métrica que é usada para calcular os
-encargos do serviço. O valor desse campo é usado na interface com o usuário do {{site.data.keyword.Bluemix_notm}} para representar a métrica de encargo) e partNumber (O identificador
+encargos do serviço. O valor desse campo é usado na interface com o usuário do {{site.data.keyword.Bluemix_notm}} para representar a métrica de encargo)e partNumber (O identificador
 `part_number` que é usado pelo sistema de faturamento. Para planos grátis, esse campo é opcional).   |
 |paidOnly (opcional)     | Um valor booleano que indica se esse plano de serviço está disponível apenas para o {{site.data.keyword.Bluemix_notm}} pagar contas. Um valor de **true** significa que o plano de serviço é somente para contas de pagamento e não pode ser incluído em contas para teste. Um valor de **false** significa que o plano de serviço pode ser incluído nas contas de pagamento e contas para teste. O valor padrão é **false**.	  |
 
@@ -757,8 +824,10 @@ os campos de metadados do plano descritos na tabela anterior mapeiam para a inte
 ![Detalhes de metadados de plano no catálogo.](images/plan_metadata.png "Visualização de valores de metadados de plano de catálogo do Bluemix")
 
 
+<!-- staging only end -->
+
 <ol>
-<li>Após você ter implementado a API do broker de serviço, acesse <strong>ADMINISTRAÇÃO</strong> &gt; <strong>GERENCIAMENTO DE CATÁLOGO</strong>.</li>
+<li>Após implementar a API do broker de serviço, acesse <strong>ADMINISTRAÇÃO </strong> &gt; <strong>GERENCIAMENTO DE CATÁLOGO</strong>.</li>
 <li>Clique em <strong>REGISTRAR UM BROKER DE SERVIÇO</strong>.</li>
 <li>Preencha o formulário inserindo valores nos campos a seguir:
 <ul>
@@ -768,7 +837,7 @@ os campos de metadados do plano descritos na tabela anterior mapeiam para a inte
 <li>Senha do broker de serviço</li>
 </ul>
 </li>
-<li>Click <strong>CONNECT</strong>.</li>
+<li>Clique em <strong>CONECTAR</strong>.</li>
 <li>Revise as informações de seu serviço, incluindo os planos disponíveis, o ícone e a descrição do serviço.<br />
 <p><strong>Nota</strong>: se precisar mudar as informações do catálogo para o serviço, atualize seu broker de serviço e inicie o processo de registro novamente preenchendo o formulário.</p>
 </li>
@@ -791,7 +860,7 @@ Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DA ORGANIZAÇÃO**.
 
 ### Criando organizações
 
-Para criar uma nova organização e incluir gerenciadores, conclua as etapas a seguir:
+Para criar uma organização e incluir gerenciadores, conclua as etapas a seguir:
 
 1. Clique em <strong>CRIAR ORGANIZAÇÃO</strong>.
 2. Insira um nome para a organização
@@ -817,11 +886,11 @@ produção. Em seguida, é possível associar os apps aos espaços. Conclua as e
 
 É possível expandir a seção **Monitoramento de cota** para visualizar as informações a seguir:
 
-- O uso de memória do ambiente detalha o uso de memória para o ambiente do sistema integral. O gráfico mostra as informações a seguir: 
+- O uso de memória do ambiente detalha o uso de memória para o ambiente do sistema integral. O gráfico mostra as informações a seguir:
 <ul>
-<li>A memória física que está em uso e o limite de memória física</li>
-<li>a cota de memória reservada e o limite de memória reservada</li>
-<li>a cota total de memória para as suas organizações</li>
+<li>A memória física que está em uso e o limite de memória física que está disponível</li>
+<li>A cota de memória que está reservada atualmente e o limite de memória que pode ser reservada</li>
+<li>A cota total de memória para suas organizações</li>
 </ul>
 Os tipos de uso de memória a seguir são exibidos no gráfico.
 
@@ -832,7 +901,7 @@ Os tipos de uso de memória a seguir são exibidos no gráfico.
 	<dd>A memória física total disponível para seu ambiente.</dd>
 	<dt><strong>Cota reservada</strong></dt>
 	<dd>A soma de memória que é reservada para todos os aplicativos implementados, em todas as organizações. A soma da cota que é reservada pode exceder o limite de memória física para o seu ambiente. Por exemplo, se você tiver um limite de memória física de 16 GB, você poderia reservar 4 GB de memória cada para um total de cinco aplicativos diferentes. A cota que é reservada excede o limite de memória física. No entanto, em muitos casos, as organizações podem não usar a cota total que é reservada individualmente para cada aplicativo. Além disso, todos os aplicativos podem não usar a sua cota total de memória reservada ao mesmo tempo.</dd>
-	<dt><strong>Limite reservado</strong></dt>
+	<dt><strong>Reservar limite</strong></dt>
 	<dd>A memória total que pode ser reservada em todos os aplicativos para o seu ambiente.</dd>
 	<dt><strong>Cota total</strong></dt>
 	<dd>A cota de memória total em todas as organizações.</dd>
@@ -906,7 +975,7 @@ usuários a seguir e o nível de acesso necessário para concluir cada tarefa:
 localizar os usuários na tabela usando o campo **Procurar**. Também é possível filtrar a lista de usuários por sua organização e permissões. Para filtrar uma lista de usuários, conclua
 estas etapas:
   <ol>
-  <li>Clique em <strong>Filtrar</strong>. </li>
+  <li>Clique em <strong>Filtrar</strong>.</li>
   <li> Clique em <strong>Organizações</strong> ou <strong>Permissões</strong>, dependendo de por qual delas você deseja filtrar.
   <dl>
 	<dt><strong>Organização</strong></dt>
@@ -1004,13 +1073,14 @@ localizar uma organização, selecione a organização a partir da lista e cliqu
 Os usuários podem ser designados com as permissões a seguir com níveis de acesso específicos (de leitura ou gravação) que permitem que o usuário conclua tarefas específicas dentro do console
 do administrador.
 
-*Tabela 7. Permissões*
+*Tabela 14. Permissões*
+{: #caption}
 
 | **Permissão do usuário** | **Descrição** |       
 |-----------------|-------------------|
 | Superusuário | Os usuários com permissão de **Super usuário** configurada como **Ligado** podem editar permissões para outros usuários. Se você tiver a permissão ativa,
-ela ativa automaticamente o acesso total a todas as outras permissões. Além das tarefas esboçadas para cada permissão nessa tabela, eles também podem configurar inscrições de eventos para serem alertados
-diretamente sobre manutenção ou incidentes, planejarem manutenção, executarem verificações em componentes do console e criarem organizações e espaços para o ambiente. Essa permissão é equivalente à função do
+ela ativa automaticamente o acesso total a todas as outras permissões. Além das tarefas descritas para cada permissão nesta tabela, ele também pode configurar assinaturas de notificação para ser alertado diretamente sobre manutenção ou incidentes, planejar manutenção,
+executar verificações em componentes do console e criar organizações e espaços para o ambiente. Essa permissão é equivalente à função do
 administrador (admin) para o console do administrador.  |
 | Acesso básico | Os usuários com permissão de **Acesso básico** configurada
 como **Ligado** têm permissão para ver a opção da página de
@@ -1342,7 +1412,7 @@ remover usuários da instância do {{site.data.keyword.Bluemix_notm}}. Deve-se t
 permissão de **Usuários** com acesso de
 **Gravação** para remover usuários.
 
-Para remover um usuário, deve-se fornecer o ID de usuário do usuário. Execute o comando a seguir:
+Para remover um usuário, deve-se fornecer o ID de usuário do usuário. Execute o seguinte comando:
 
 `curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>`
 {: codeblock}
@@ -1379,7 +1449,7 @@ O exemplo a seguir mostra a saída a partir deste
 ## API de serviço customizado
 {: #servicebrokerapi}
 
-Há três APIs que podem ser usadas para registrar ou criar um novo serviço, atualizar um serviço e excluir um serviço.
+Há três APIs que podem ser usadas para registrar ou criar um serviço, atualizar um serviço e excluir um serviço.
 
 Todas as APIs são relativas a <code>https://console.&lt;subdomain&gt;.bluemix.net/</code>.
 
@@ -1413,7 +1483,7 @@ POST /codi/v1/serviceBrokers
 | broker_url | URL usada para conectar ao broker de serviço. |
 | owningOrganization | Organização inicial para incluir o serviço na lista de desbloqueio. |
 
-*Tabela 8. Campos*
+*Tabela 15. Campos*
 
 #### Corpo
 {: #registerbody}
@@ -1485,6 +1555,9 @@ Use a API a seguir e os exemplos de código para atualizar um serviço.
 ### Pedido
 {: #updaterequest}
 
+*Tabela 16. Campos*
+{: #caption}
+
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
 | Nome | Nome do broker de serviço. O nome com que esse serviço foi criado não pode ser mudado. |
@@ -1492,8 +1565,6 @@ Use a API a seguir e os exemplos de código para atualizar um serviço.
 | auth_password | Senha usada para conectar ao broker de serviço. |
 | broker_url | URL usada para conectar ao broker de serviço. |
 | owningOrganization | Organização inicial para incluir o serviço na lista de desbloqueio. |
-
-*Tabela 9. Campos*
 
 #### Corpo
 {: #updatebody}
@@ -1556,11 +1627,12 @@ Content-Type: application/json
 
 Use a API a seguir e os exemplos de código para excluir um serviço.
 
+*Tabela 17. Parâmetro*
+{: #caption}
+
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
 | Nome | Nome do broker de serviço. O nome com que esse serviço foi criado não pode ser mudado. |
-
-*Tabela 10. Parâmetro*
 
 ### Rotear
 
@@ -1620,15 +1692,13 @@ incluir o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}.
 anteriormente o plug-in Administrador do
 {{site.data.keyword.Bluemix_notm}}, poderá ser necessário desinstalar o plug-in, excluir o repositório e reinstalar para obter as atualizações mais recentes.
 
-Conclua as etapas a seguir para incluir o repositório e instalar
-o plug-in:
+Conclua as etapas a seguir para incluir o repositório e instalar o plug-in:
 
 <ol>
 <li>Para incluir o repositório do plug-in Administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/> <code> cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomínio da URL da sua instância do
-{{site.data.keyword.Bluemix_notm}}.</dd>
+<dd class="pd">Subdomínio da URL da sua instância do {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 </li>
 <li>Para instalar o plug-in CLI admin do
@@ -1645,6 +1715,6 @@ a seguir:
 `cf plugins`
 {: codeblock}
 
-Para obter ajuda adicional para um comando, use a opção `-help`.
+Para obter mais ajuda para um comando, use a opção `-help`.
 
 Para obter mais informações sobre como trabalhar com o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}, veja  [Admin do {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html).

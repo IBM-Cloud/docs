@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+  
 
 
 ---
@@ -17,11 +17,10 @@ copyright:
 
 # Gestion de votre compte {{site.data.keyword.Bluemix_notm}}
 {: #mngacct}
-*Dernière mise à jour : 16 août 2016*
+*Dernière mise à jour : 20 octobre 2016*
 {: .last-updated}
 
-Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** afin de définir des notifications pour votre compte, d'afficher l'utilisation de votre compte ou de consulter votre facture.
-{:shortdesc}
+Cliquez sur le lien **Compte** pour définir des notifications, afficher l'utilisation de votre compte ou consulter votre facture. {:shortdesc}
 
 ## Inscription à {{site.data.keyword.Bluemix_notm}}
 {: #signup}
@@ -41,13 +40,16 @@ Un ID fédéré peut être utilisé pour s'inscrire à {{site.data.keyword.Bluem
 ## Définition de notifications
 {: #notifications}
 
-Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; **Notifications** pour configurer des notifications relatives au compte général et aux dépenses. Les notifications relatives aux dépenses ne sont disponibles que pour les propriétaires de compte {{site.data.keyword.Bluemix_notm}} Abonnement et Paiement à la carte.
+Cliquez sur **Compte** &gt; **Notifications** pour configurer les notifications générales relatives au compte
+et aux dépenses. Les notifications relatives aux dépenses ne sont disponibles que pour les propriétaires de compte {{site.data.keyword.Bluemix_notm}} Abonnement et Paiement à la carte.
 
 Vous pouvez définir des notifications par courrier électronique de plateforme pour les incidents et la maintenance planifiée de {{site.data.keyword.Bluemix_notm}} et vous pouvez définir des notifications relatives aux dépenses qui vous envoient des alertes lorsque vous vous approchez du plafond des dépenses que vous avez spécifié pour compte. Effectuez les tâches ci-après pour définir différents types de notification pour votre compte.
 
 ### Définition de notifications de plateforme
 
-Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; **Notifications** &gt; **Plateforme** dans le but de définir des notifications par courrier électronique pour les incidents et la maintenance planifiée de {{site.data.keyword.Bluemix_notm}}. Vous pouvez sélectionner ou désélectionner chaque option pour activer ou désactiver la notification par courrier électronique.
+Cliquez sur **Compte** &gt; **Notifications** &gt; **Plateforme** pour définir des
+notifications par courrier électronique relatives aux incidents {{site.data.keyword.Bluemix_notm}} et à la maintenance planifiée.
+Vous pouvez sélectionner ou désélectionner chaque option pour activer ou désactiver la notification par courrier électronique.
 
 ### Définition des notifications relatives aux dépenses
 {: #spendingnotifications}
@@ -60,7 +62,7 @@ relative aux dépenses à tout moment, selon l'évolution de vos besoins.
 Procédez comme suit afin de configurer des notifications par courrier électronique pour les limites relatives aux dépenses :
 
 <ol>
-<li>Cliquez sur l'icône **Compte et support** ![icône Compte et support](../admin/images/account_support.svg) &gt; **Compte** &gt; **Notifications** &gt; **Dépenses**.</li>
+<li>Cliquez sur **Compte** &gt; **Notifications** &gt; **Dépenses**.</li>
 <li>Entrez une valeur numérique afin de définir un plafond pour les dépenses, en fonction duquel une notification sera déclenchée, pour chaque type de notification :<br />
 <ul>
 <li>Total lié au compte</li>
@@ -70,15 +72,14 @@ Procédez comme suit afin de configurer des notifications par courrier électron
 <li>Dépenses pour un service spécifique</li>
 </ul>
 </li>
-<li>Sélectionnez **Sauvegarder les paramètres**.</li>
+<li>Lorsque vous avez terminé, cliquez sur **Sauvegarder**.</li>
 </ol>
 
 **Remarque** : si vous disposez d'un compte d'essai, vous pouvez le mettre à niveau vers un compte d'abonnement ou de type Paiement
 à la
 carte afin de définir des limites relatives aux dépenses. Pour plus d'informations sur les comptes de type Paiement à la carte et les comptes d'abonnement,
 voir
-[Facturation](../pricing/index.html#pay-accounts).
-
+[Facturation](/docs/pricing/index.html#pay-accounts).
 
 ## Affichage de l'utilisation
 {: #acctusage}
@@ -88,22 +89,22 @@ frais en temps réel pour les contextes d'exécution, les conteneurs, les servic
 organisations. Vous pouvez afficher le nombre de Go/heure utilisés pour le contexte d'exécution, ainsi que la consommation des services dans toutes les
 régions, ou sélectionner une région particulière.
 
-Pour ouvrir la vue Tableau de bord de l'utilisation, cliquez sur l'icône **{{site.data.keyword.avatar}}**![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; *nom_votre_compte* &gt; **Tableau de bord de l'utilisation**. Les responsables de la facturation ne peuvent afficher les détails que pour les organisations pour lesquelles ils sont responsables de la
+Pour ouvrir la vue Tableau de bord de l'utilisation, cliquez sur **Compte** &gt; *nom_de_votre_compte* &gt;
+**Tableau de bord de l'utilisation**. Les responsables de la facturation ne peuvent afficher les détails que pour les organisations pour lesquelles ils sont responsables de la
 facturation.
 
 Le propriétaire de compte est facturé pour l'utilisation totale occasionnée dans toutes les organisations à la fin de chaque cycle de
 facturation. En tant que propriétaire de compte, vous pouvez filtrer le récapitulatif de l'utilisation par région et organisation. Vous pouvez aussi
 cliquer sur un mois
-particulier afin d'afficher l'utilisation pour ce mois. Sélectionnez **Toutes les organisations** dans la liste
-**Organisations** afin d'afficher l'utilisation pour toutes les organisations du compte.
-
+particulier afin d'afficher l'utilisation pour ce mois.
 
 ## Mise à jour des informations de facturation
 {: #account_billing}
 
 En tant que propriétaire de compte, vous pouvez éditer, ajouter ou supprimer des informations de carte de crédit sauvegardées qui sont associées à
-votre compte {{site.data.keyword.Bluemix_notm}}. Cliquez sur l'icône **{{site.data.keyword.avatar}}**![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; *nom_votre_compte* &gt; **Facturation**.
+votre compte {{site.data.keyword.Bluemix_notm}}. Cliquez sur **Compte** &gt; *nom_de_votre_compte* &gt;
+**Facturation**.
 
 Si vous avez un compte SoftLayer lié à votre compte {{site.data.keyword.Bluemix_notm}}, voir
-[Facturation de l'utilisation de {{site.data.keyword.Bluemix_notm}} lorsque des comptes sont liés](../admin/softlayerlink.html#bill_usage)
+[Facturation de l'utilisation de {{site.data.keyword.Bluemix_notm}} lorsque des comptes sont liés](/docs/admin/softlayerlink.html#bill_usage)
 pour plus d'informations sur la manière dont vous êtes facturé.

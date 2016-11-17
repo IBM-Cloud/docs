@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+  
 
 
 ---
@@ -17,10 +17,10 @@ copyright:
 
 # 管理您的 {{site.data.keyword.Bluemix_notm}} 帐户
 {: #mngacct}
-*上次更新时间：2016 年 8 月 16 日*
+*上次更新时间：2016 年 10 月 20 日*
 {: .last-updated}
 
-转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户**，以便为您的帐户设置通知、查看您帐户的使用情况或查看您的帐单。
+转至**帐户**链接以设置通知、查看您帐户的使用情况或查看您的帐单。
 {:shortdesc}
 
 ## 注册 {{site.data.keyword.Bluemix_notm}}
@@ -41,14 +41,13 @@ copyright:
 ## 设置通知
 {: #notifications}
 
-转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; **通知**，以设置总帐帐户和花费通知。花费通知仅可供预订和现买现付 {{site.data.keyword.Bluemix_notm}} 帐户所有者使用。
+单击**帐户** &gt; **通知**，以设置总帐帐户和花费通知。花费通知仅可供预订和现买现付 {{site.data.keyword.Bluemix_notm}} 帐户所有者使用。
 
 您可以设置 {{site.data.keyword.Bluemix_notm}} 事件和计划维护的平台电子邮件通知，您也可以设置花费通知，以在帐户接近指定的花费阈值时对您发出警报。完成以下任务，以设置帐户的不同通知类型。
 
 ### 设置平台通知
 
-转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; **通知** &gt; **平台**，以针对 {{site.data.keyword.Bluemix_notm}} 事件和计划内维护设置电子邮件通知。
-您可以选择或清除每个选项，以启用或禁用电子邮件通知。
+单击**帐户** &gt; **通知** &gt; **平台**，以针对 {{site.data.keyword.Bluemix_notm}} 事件和计划内维护设置电子邮件通知。您可以选择或清除每个选项，以启用或禁用电子邮件通知。
 
 ### 设置花费通知
 {: #spendingnotifications}
@@ -58,7 +57,7 @@ copyright:
 要设置花费限制的电子邮件通知，请完成以下步骤：
 
 <ol>
-<li>转至**帐户和支持**图标 ![“帐户和支持”图标](../admin/images/account_support.svg) &gt; **帐户** &gt; **通知** &gt; **花费**。</li>
+<li>单击**帐户** &gt; **通知** &gt; **花费**。</li>
 <li>输入数字值，以便为每种类型的通知设置用于触发通知的花费阈值：<br />
 <ul>
 <li>总帐户</li>
@@ -68,26 +67,23 @@ copyright:
 <li>特定服务的花费</li>
 </ul>
 </li>
-<li>选择**保存设置**。</li>
+<li>完成后，单击**保存**。</li>
 </ol>
 
-**注**：如果您拥有试用帐户，那么可以升级到预订帐户或现买现付帐户来设置花费限制。有关现买现付帐户和预订帐户的更多信息，请参阅[计费方式](../pricing/index.html#pay-accounts)。
-
+**注**：如果您拥有试用帐户，那么可以升级到预订帐户或现买现付帐户来设置花费限制。有关现买现付帐户和预订帐户的更多信息，请参阅[计费方式](/docs/pricing/index.html#pay-accounts)。
 
 ## 查看使用情况
 {: #acctusage}
 
 作为组织的帐户所有者或记帐管理员，您可使用“使用情况仪表板”视图来查看组织中每月使用的运行时、容器、服务和支持的实时费用。您可以查看所有区域中的运行时 GB-小时数和服务使用情况，也可选择查看特定区域的情况。
 
-要打开“使用情况仪表板”视图，请单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; *your_account_name* &gt; **使用情况仪表板**。记帐管理员只能查看其作为记帐管理员的组织的详细信息。
+要打开“使用情况仪表板”视图，请单击**帐户** &gt; *your_account_name* &gt; **使用情况仪表板**。记帐管理员只能查看其作为记帐管理员的组织的详细信息。
 
-在每个记帐周期结束时，将向帐户所有者收取所有组织中发生的总使用量费用。作为帐户所有者，您可以按区域和组织过滤使用情况摘要。您还可以单击特定的月份来查看该月份的使用情况。从**组织**列表中选择**所有组织**以查看帐户中所有组织的使用情况。
-
+在每个记帐周期结束时，将向帐户所有者收取所有组织中发生的总使用量费用。作为帐户所有者，您可以按区域和组织过滤使用情况摘要。您还可以单击特定的月份来查看该月份的使用情况。
 
 ## 更新记帐信息
 {: #account_billing}
 
-作为帐户所有者，您可以编辑、添加或除去与您的 {{site.data.keyword.Bluemix_notm}} 帐户关联的已保存信用卡信息。转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; *your_account_name* &gt; **帐单**。
+作为帐户所有者，您可以编辑、添加或除去与您的 {{site.data.keyword.Bluemix_notm}} 帐户关联的已保存信用卡信息。单击**帐户** &gt; *your_account_name*&gt; **记帐**。
 
-
-如果您具有与 {{site.data.keyword.Bluemix_notm}} 帐户相链接的 SoftLayer 帐户，请参阅[链接帐户时 {{site.data.keyword.Bluemix_notm}} 使用情况的帐单](../admin/softlayerlink.html#bill_usage)，以获取记帐方式的更多信息。
+如果您具有与 {{site.data.keyword.Bluemix_notm}} 帐户相链接的 SoftLayer 帐户，请参阅[链接帐户时 {{site.data.keyword.Bluemix_notm}} 使用情况的帐单](/docs/admin/softlayerlink.html#bill_usage)，以获取记帐方式的更多信息。
