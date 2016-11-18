@@ -40,27 +40,21 @@ Avant de commencer, installez les interfaces de ligne de commande {{site.data.ke
 <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix}}" /> </a> <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_cf_commandline.svg" alt="Télécharger l'interface de ligne de commande Cloud Foundry" /> </a> 
 </p>
 
-**Restriction :** les outils de ligne de commande ne sont pas pris en charge par Cygwin. Utilisez-les dans une fenêtre de ligne
-de commande autre que Cygwin.
+**Restriction :** les outils de ligne de commande ne sont pas pris en charge par Cygwin. Utilisez-les dans une fenêtre de ligne de commande autre que Cygwin.
 {:prereq}
 
-Une fois les interfaces de ligne de commande installées, vous pouvez commencer :
+Une fois les interfaces de ligne de commande installées, vous pouvez commencer:
 
   1. {: download} Téléchargez votre code de démarrage et procédez à l'extraction du package dans un nouveau répertoire afin de
 configurer votre environnement de développement.
 
-      
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_starter-code.svg" alt="Télécharger le code de démarrage" /> </a>
+   <a class="xref" href="http://bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_starter-code.svg" alt="Télécharger le code de démarrage" /> </a>
   
   2. Placez-vous dans le répertoire dans lequel se trouve votre code. 
   
   <pre class="pre">cd <var class="keyword varname">votre_nouveau_répertoire</var></pre>
   
-  3.  Modifiez le code de votre application si nécessaire. Il est recommandé d'exécuter l'application localement avant de la déployer dans {{site.data.keyword.Bluemix}}.<br><br>Remarquez
-le fichier `manifest.yml`. Lorsque vous déployez à nouveau votre application dans {{site.data.keyword.Bluemix}}, il est
-utilisé pour déterminer l'adresse URL de votre application, l'allocation de mémoire, le nombre d'instance et d'autres paramètres essentiels. Vous pouvez
-[en apprendre plus sur le fichier manifeste](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} dans la
-documentation Cloud Foundry.
+  3.  Modifiez le code de votre application si nécessaire. Il est recommandé d'exécuter l'application localement avant de la déployer dans {{site.data.keyword.Bluemix}}.<br><br>Remarquez le fichier `manifest.yml`. Lorsque vous déployez à nouveau votre application dans {{site.data.keyword.Bluemix}}, il est utilisé pour déterminer l'adresse URL de votre application, l'allocation de mémoire, le nombre d'instance et d'autres paramètres essentiels. Vous pouvez [en apprendre plus sur le fichier manifeste](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} dans la documentation Cloud Foundry.
   
   4. Connectez-vous à {{site.data.keyword.Bluemix}}.
   
@@ -72,11 +66,10 @@ documentation Cloud Foundry.
 "<var class="keyword varname" data-hd-keyref="org_name">nom_organisation</var>" -s
 "<var class="keyword varname" data-hd-keyref="space_name">nom_espace</var>"</pre>
   
-  6. Déployez votre application dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur la commande cf push, voir
-[Téléchargement de votre application](/docs/starters/upload_app.html).
+  6. Déployez votre application dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur la commande cf push, voir [Téléchargement de votre application](/docs/starters/upload_app.html).
   
   <pre class="pre">cf push "<var class="keyword varname" data-hd-keyref="app_name">nom_app</var>"</pre>
   
-  7. Accédez à votre application en entrant l'adresse URL suivante dans votre navigateur :
+  7. Accédez à votre application en entrant l'adresse URL suivante dans votre navigateur:
   
   <pre class="codeblock"><code><var class="keyword varname" data-hd-keyref="host">hôte</var>.<span class="keyword" data-hd-keyref="APPDomain">nom_domaine_app</span></code></pre>
