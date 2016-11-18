@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-18"
+lastupdated: "2016-11-18"
 
 ---
 
@@ -263,6 +263,7 @@ Device management is a core feature of the {{site.data.keyword.iot_short_notm}},
 
 The device management extension allows you to install custom functions for device management. For more information on custom device management functions, see [device management custom extensions](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
+<!--
 ## Blockchain
 {: #blockchain}
 
@@ -276,11 +277,15 @@ The device management extension allows you to install custom functions for devic
 ### Configuration for Blockchain
 
 {{site.data.keyword.iot_short_notm}} blockchain integration is a services offering  that is not activated by default in {{site.data.keyword.iot_short_notm}}. To activate the feature in your environment, complete the following steps:
- 1. From the {{site.data.keyword.iot_short_notm}} dashboard, **Extensions**.
+ 1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
+ 2. In the **Extensions** page, click **Add Extension**.
+ 3. Click **Add** next to the Blockchain extension.
  2. Click the **Tell me more** link next to the Blockchain extension to go to the IoT Blockchain Services Offering page.
  3. Fill out and submit the service request form.   
 The service approval typically takes approximately one day. After your request is approved, you receive an email with instructions on how to activate blockchain integration in your {{site.data.keyword.iot_short_notm}} organization.
  5. Return to the {{site.data.keyword.iot_short_notm}} dashboard for your organization to complete the setup. For more information, see [{{site.data.keyword.iot_short_notm}} blockchain integration](../../bl_blockchain_integration.html).
+
+-->
 
 ## The Weather Company
 {: #weathercompany}
