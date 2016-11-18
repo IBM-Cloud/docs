@@ -16,9 +16,9 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Building and deploying from pipelines
+# Building and deploying
 {: #deliverypipeline_build_deploy}
-Last updated: 29 August 2016
+Last updated: 17 November 2016
 {: .last-updated}
 
 The IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service allows you to implement a repeatable continuous integration and continuous delivery process.
@@ -29,7 +29,7 @@ Complete the following tasks to create and configure a pipeline.
 ## Adding a stage
 {: #deliverypipeline_add_stage}
 
-1. On the Pipeline: All Stages page, click **ADD STAGE**. The Stage Configuration page opens.
+1. On the Pipeline page, click **ADD STAGE**. The Stage Configuration page opens.
 2. Configure the stage.
   1. On the **INPUT** tab, select an input for the stage.
   2. On the **JOBS** tab, add and configure at least one job. The first stage usually has at least a build job.
@@ -44,12 +44,12 @@ Complete the following tasks to create and configure a pipeline.
 4. Configure the job.
 5. Click **SAVE**.
 
-![Adding a job to a stage](./images/AddJob.png)
+![Adding a job to a stage](./images/AddJob2.png)
 
 ## Running a stage
 {: #deliverypipeline_run_stage}
 
-You can manually run a stage by clicking the **Run Stage** icon on the Pipeline: All Stages page.
+You can manually run a stage by clicking the **Run Stage** icon on the Pipeline page.
 
 ![Clicking the Run Stage icon on a stage](./images/RunStage.png)
 
@@ -66,11 +66,11 @@ To cancel a running stage, on the stage, click **View logs and history**. In the
 A properly configured deploy job deploys your app to your target whenever the job is run. To manually run a deploy job, click the **Run Stage** icon of the stage that the job is in.
 
 ###Input revisions
-When you run a stage manually, or if it runs because the stage before it is completed, the running stage selects its input revision. Usually, the input revision is a build number. To select the input revision, the stage follows this process:
+When you run a stage manually, or if it runs because the stage before it is completed, the running stage selects its input revision. Usually, the input revision is a build number. To select the input revision, the stage follows these conditions:
 
-1. If a specific revision is selected, use it.
-2. If a specific revision is not specified, search previous stages until a stage is found that uses the same input. Find and use the last successfully run revision of that input.
-3. If a specific revision is not specified and no other stages use the specified source as input, use the latest revision of the input.
+* If a specific revision is selected, use it.
+* If a specific revision is not specified, search previous stages until a stage is found that uses the same input. Find and use the last successfully run revision of that input.
+* If a specific revision is not specified and no other stages use the specified source as input, use the latest revision of the input.
 
 **Tip:** You can deploy a previous build. On the stage that contains the build, click **View logs and history**. On the page that opens, click to expand the run number and then click the build job. Click **SEND TO**, and select a target.
 
@@ -90,7 +90,6 @@ To view the runtime log of a deployed application, click **View runtime log**.
 
 In addition to job logs, you can view unit test results, generated artifacts, and code changes for any build job.
 
-You can also run, cancel, or configure a stage from the Stage History page. At the top of the page, click **RUN** to run a stage or **CONFIGURE** to configure a stage. While a stage is running, you can cancel it by clicking the run number and then clicking CANCEL.
+You can also run, cancel, or configure a stage from the Stage History page.Click **RUN** to run a stage or **CONFIGURE** to configure a stage. While a stage is running, you can cancel it by clicking the run number and then clicking **CANCEL**.
 
-![Clicking a stage run number to select it on the Stage History page](./images/click_stage_run_number.png)
 
