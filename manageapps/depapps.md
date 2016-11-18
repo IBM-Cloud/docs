@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-07-28"
+lastupdated: "2016-11-18"
 ---
 
 
@@ -11,24 +11,83 @@ lastupdated: "2016-07-28"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Deploying apps
+# Deploying apps
 {: #deployingapps}
 
 You can deploy applications to {{site.data.keyword.Bluemix}} by using various methods, such as the command line interface and integrated development environments (IDEs). You can also use application manifests to deploy applications. By using an application manifest, you reduce the number of deployment details that you must specify every time that you deploy an application to {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
-##Application deployment
+## Application deployment
 {: #appdeploy}
 
 Deploying an application to {{site.data.keyword.Bluemix_notm}} includes two phases, staging the application and starting the application.
 
-###Staging an application
+Cloud Foundry now supports Diego, a new runtime architecture. Diego provides support for several container technologies, including Garden, Docker, and Windows containers. Future enhancements and fixes for Cloud Foundry will go directly to Diego, and will not be supported in DEA.
 
+### Staging an application with Diego
+All Diego components are designed to be clustered which means you can easily create different availability zones. Secure communication between all Diego components uses TLS.
+
+During the staging phase, Diego takes care of all aspects related with container orchestration. Distribution of the app instances are done with Diego Brain and the Cloud Controller only stages the apps. Diego Brain allocates the apps into cells with SSH access to the containers.
+
+To validate the app health, Diego supports the same PORT-based checks that are used for DEA. But, it is designed to be able to have more generic options like URL-based health checks, which should be enabled in the future.
+
+To stage apps in Diego, you must first install both the cf CLI and the [Diego-Enabler CLI Plugin](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}. This is required during the migration period only.
+
+#### Known issues
+ There are the following known issues with using Diego:
+  * Worker applications deployed with the `--no-route` option do not report as healthy. To prevent this, disable the port-based health check with the `cf set-health-check APP_NAME none` command.
+  * Diego does not use the VCAP_APP_HOST environment variable. If your code references this variable, replace it with 0.0.0.0.
+  * Diego does not use the VCAP_APP_PORT environment variable. If your code references this variable, replace it with PORT, which is set to 8080 by default.
+  * The **cf files** command is no longer supported. The replacement is the **cf ssh** command. For more details on teh **cf ssh** command, see [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
+  * Some apps might use a high number of file descriptors (inodes). If you encounter this issue, you must increase disk quota for your app with the `cf scale APP_NAME [-k DISK]` command.
+
+#### Staging a new app on Diego
+To stage a new application on Diego you must deploy the application in the command line with a flag to indicate Diego as the backend.
+
+  1. Deploy the application without starting it:
+  ```
+  $ cf push APPLICATION_NAME --no-start
+  ```
+  2. Set the Diego boolean:
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+    or alternatively:
+  ```
+  $ cf curl /v2/apps/$(cf app APPLICATION_NAME --guid) -X PUT -d '{"diego":true}'
+  ```
+  3. Start the application:
+  ```
+  $ cf start APPLICATION_NAME
+  ```
+
+For more details on the **cf push** command, see [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
+
+#### Changing an existing app to Diego
+You can transition an existing app to Diego by deploying the application with the Diego flag. The application will immediately start running on Diego and will eventually stop running on the DEAs. If you want to ensure uptime, we recommend performing a blue-green deploy by deploying a copy of your application to Diego, and then swapping routes and scaling down the DEA application.
+
+  To set the Diego flag and change your app to running on Diego:
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+
+  To transition back to DEAs:
+  ```
+  $ cf disable-diego APPLICATION_NAME
+  ```
+
+  To validate which backend the application is running on:
+  ```
+  $ cf has-diego-enabled APPLICATION_NAME
+  ```
+
+
+### Staging an application with DEA
 During the staging phase, a droplet execution agent (DEA) uses the information that you provide in the cf command line interface or the `manifest.yml` file to decide what to create for application staging. The DEA selects an appropriate buildpack to stage your application, and the result of the staging process is a droplet. For more information about deploying an application to {{site.data.keyword.Bluemix_notm}}, see [How {{site.data.keyword.Bluemix_notm}} works](/docs/overview/whatisbluemix.html#howwork).
 
 During the staging process, the DEA checks whether the buildpack matches the application. For example, a Liberty runtime for a .war file, or a Node.js runtime for .js files. The DEA then creates an isolated container that contains the buildpack and the application code. The container is managed by the Warden component. For more information, see [How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
 
-###Starting an application
+### Starting an application
 
 When an application is started, the instance or instances of the warden container are created. You can use the **cf files** command to see the files that are stored on the file system of the Warden container, such as the logs. If the application fails to start, the DEA stops the application and the entire contents of your Warden container are removed. Therefore, if an application stops or if the staging process of an application fails, log files will not be available for you to use.
 
