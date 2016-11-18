@@ -11,7 +11,7 @@ copyright:
 # Getting started with {{site.data.keyword.contdelivery_short}}
 {: #cd_getting_started}
 
-Last updated: 17 November 2016
+Last updated: 18 November 2016
 {: .last-updated}  
 
 Adopt a DevOps approach by using {{site.data.keyword.contdelivery_full}}, which includes toolchains that automate the building and deployment of applications. You can get started by creating a simple deployment toolchain that supports development, deployment, and operations tasks. 
@@ -43,11 +43,11 @@ To [create a pipeline (Link opens in a new window)](https://console.ng.bluemix.n
 
  **Tip**: If you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, you are prompted to click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
 
-   * If you have a GitHub repo and want to use it, for the repository type, select **Existing**. Search for the location of the repo or select the repo from the list of available repos.
+   * If you have a GitHub repo and want to use it, for the repository type, select **Link**. Search for the location of the repo or select the repo from the list of available repos.
    
    * If you want to create an empty GitHub repo, for the repository type, select **New**. Type a name for the repo.
    
-   * If you want to create a clone of a GitHub repo, for the repository type, select **Clone**. Search for the location of the repo or select the repo from the list of available repos.
+   * If you want to create a clone of a GitHub repo, for the repository type, select **Copy**. Search for the location of the repo or select the repo from the list of available repos.
    
    * If you want to fork a GitHub repo so that you can contribute changes through pull requests, select **Fork**. Search for the location of the repo or select the repo from the list of available repos.
  
