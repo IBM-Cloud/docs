@@ -1,42 +1,67 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2016
 lastupdated: "2016-11-20"
 
 ---
-{:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix}} Mobile dashboard
-{: #mobile}
+# Getting started with {{site.data.keyword.amashort}}
+{: #gettingstarted}
 
-The {{site.data.keyword.Bluemix}} Mobile dashboard offers a single place to manage the {{site.data.keyword.Bluemix_notm}} capabilities that you need to create and manage your {{site.data.keyword.Bluemix_notm}} Mobile application. You can manage mobile apps through the concept of [Projects](projects.html). The Mobile dashboard brings the most common services that are required for a mobile developer into a single, connected experience that has been optimized for the mobile developer.
+Add security to your mobile app with the {{site.data.keyword.amafull}} service. You can configure client authorization for accessing protected back-end resources running on {{site.data.keyword.Bluemix_notm}}. Use identity providers (Google and Facebook), or custom identities to authenticate users and grant access to protected back-end resources and Web apps.
+{:shortdesc}
 
-The Mobile dashboard enables a mobile developer to create a project from a variety of Starters, create and connect key {{site.data.keyword.Bluemix_notm}} optimized services to your project, and quickly download working code with SDKs. The SDKs are fully integrated with capability credentials that enable you to have it running on your device in minutes. When your application is running and you have set up and configured Push, Analytics and/or Mobile Authentication capabilities, you can return to your project to monitor and manage engagement with your application users.
-
-While the Mobile dashboard provides an integrated development experience, some developers might still want to have finer-grained control and wire services together manually. If this is your preferred approach, you might want to consider using the [{{site.data.keyword.mobilefirstbp}} Starter boilerplate](try_mobile.html).
+**Note:** The {{site.data.keyword.amashort}} service was previously known as Advanced Mobile Access.
 
 
-<!--With {{site.data.keyword.Bluemix}} Mobile services, you can incorporate pre-built, managed, and scalable cloud services into your mobile applications. You can focus on building your mobile apps, instead of the complexities of managing the back-end infrastructure.
+To get up and running with the {{site.data.keyword.amashort}} service:
 
-The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bluemix_notm}} where you can create mobile projects easily from within the dashboard.
--->
+1. Use one of the following options to create a bound or unbound service:
+ * Create a {{site.data.keyword.Bluemix_notm}} application using the **MobileFirst Services Starter** boilerplate from the catalog. This creates a {{site.data.keyword.amashort}} service bound to a {{site.data.keyword.Bluemix_notm}} back-end application.
+ * Create a {{site.data.keyword.amashort}} service using the  {{site.data.keyword.amashort}} dashboard.  You can  bind the service to an existing back-end application and configure it in the {{site.data.keyword.amashort}} dashboard.
 
+   When you use the MobileFirst Services Starter, you get an instance of a Node.js runtime that runs on IBM {{site.data.keyword.Bluemix_notm}} to implement your custom back-end logic. A set of core mobile services that provide security, data, push, and monitoring functions are bound to that Node.js app. After the {{site.data.keyword.Bluemix_notm}} Node.js app is created, you can set up your development environment and start to use the {{site.data.keyword.Bluemix_notm}} Mobile Services SDKs. You can use the SDKs to access the services that are bound to your cloud app with simple API calls.
 
-To get started with the Mobile dashboard, click the **Mobile** category from your {{site.data.keyword.Bluemix_notm}} Console.
+	For more information on how to create and work with projects, applications and services see [IBM Bluemix Mobile dashboard](https://console.{DomainName}/docs/mobile/index.html).
 
+2. Secure server-side resources.
 
-## Getting Started
-{: getting-started-mobiledashboard}
+   Protect your mobile back-end resources that are running on Node.js or Liberty for Java&trade; runtimes with mobile-enabled OAuth security. For more information, see [Protecting resources](protecting-resources.html).
+   To learn more about the default mobile back-end application, see the [bms-hellotodo-strongloop](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop) sample application.
 
-Create a project on the **Getting Started** page by clicking **Create Project**. You will be presented with [Starter](starters.html) options that enable you to quickly start creating your app.
+3. Set up your core {{site.data.keyword.amashort}} development environment.
 
-You can view and manage all of your projects in one place by selecting the Projects page. The project holds the information for all of the capabilities that are (and can be) integrated with your mobile app. If it is available, you can easily integrate and manage Push, Analytics, and Authentication mobile services in the project, with more capabilities to follow in the near future.
+	####Client development
+   {: #client-development}
 
-The [Services](services.html) view shows an operational view of your existing mobile service instances. The Mobile dashboard supports a mobile developer and a mobile app management user.
+	You can add the {{site.data.keyword.amashort}} SDK to your existing Android, iOS, or Cordova app, as follows:
+   * Android: ([Setting up the Android SDK](getting-started-android.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication))
 
+   * iOS (Swift SDK): ([Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html))
+      ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication))
 
-<!--You can also discover the {{site.data.keyword.Bluemix_notm}} Mobile offerings, link to the Mobile documentation and get answers from our {{site.data.keyword.Bluemix_notm}} Mobile services community on Stack Overflow.-->
+   * iOS (Objective-C SDK): ([Setting up the iOS Object-C SDK](getting-started-ios.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication))
+
+   * Cordova: ([Setting up the Cordova plug-in](getting-started-cordova.html)) ([Sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
+
+   **Note:**  While the Objective-C SDK remains fully supported, and still considered the primary SDK for {{site.data.keyword.amashort}}, there are plans to discontinue this SDK later this year in favor of the new Swift SDK. If you are creating an application, we highly recommend that you use the Swift SDK (see [Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html)).
+
+	####Web development
+   {: #web-development}
+
+   The {{site.data.keyword.amashort}} service can protect your Web application, requiring no special SDK. You can leverage different identity providers, in addition to protection provided by the {{site.data.keyword.amashort}} service. The {{site.data.keyword.amashort}} integration enables any web application, regardless of the technology it implements, to take advantage of the OAuth2 protocol. For information on setting up your {{site.data.keyword.amashort}} Web app to access the {{site.data.keyword.amashort}} service using different identity providers, see:
+
+    * [Enabling Facebook authentication for Web applications](facebook-auth-web.html)
+
+    * [Enabling Google authentication for Web applications](google-auth-web.html)
+
+    * [Enabling custom authentication for Web applications](custom-auth-web.html)
+
+4. **Optional:** Configure an identity provider for your application. You can configure one identity provider per application. Configuring an identity provider enables the users of your mobile app to log in with their existing Facebook or Google+ account. Or, you can define how users log in by creating a custom authentication.
+   * [Authenticating users with Facebook credentials](facebook-auth-overview.html)
+   * [Authenticating users with Google credentials](google-auth-overview.html)
+   * [Authenticating users with a custom identity provider](custom-auth.html)
 
 
 # Related Links
@@ -44,21 +69,25 @@ The [Services](services.html) view shows an operational view of your existing mo
 
 ## Tutorials and Samples
 {: #samples}
+* [android-helloauthentication sample](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication){: new_window}
+* [ios-helloauthentication sample (Swift SDK)](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication){: new_window}
+* [ios-helloauthentication sample (Objective-C SDK)](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication){: new_window}
 
-* [Sample: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
-* [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-* [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
-* [Video Tutorials](https://www.youtube.com/channel/UCRW4t4Hzm9gzuiq5naERkCw){: new_window}
+## SDK
+{: #sdk}
+* [Core SDK (Android)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [Core SDK (Cordova plug-in)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
+* [Core SDK (iOS - Swift) ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [Core SDK (iOS - Objective-C - Deprecated) ](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [Custom authentication - simple sample](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
+* [Custom authentication - advanced sample](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
+
+## API Reference
+{: api}
+* [Android](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html){: new_window}
+* [iOS (Objective-C SDK) - Deprecated](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html){: new_window}
+
 
 ## Related Links
 {: #general}
-
-* [Mobile Analytics (Beta)](/docs/services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](/docs/services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](/docs/services/mobilepush/index.html){: new_window}
+* [Overview](overview.html){: new_window}
