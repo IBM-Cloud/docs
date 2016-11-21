@@ -152,7 +152,7 @@ Table 3: Read access permissions by option
     Swift command:
 
     ```
-    swift post <container_name> --read-acl "<user_id>:<project_id>"
+    swift post <container_name> --read-acl "<project_id>:<user_id>"
     ```
     {: pre}
 
@@ -256,7 +256,7 @@ Table 4: Write access permissions by option
     Swift command:
 
     ```
-    swift post <container_name> --write-acl "<user_id>:<project_id>"
+    swift post <container_name> --write-acl "<project_id>:<user_id>"
     ```
     {: pre}
 
