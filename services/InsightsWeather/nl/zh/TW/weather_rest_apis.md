@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # 使用 Insights for Weather REST API
 {: #rest_apis}
-
-*前次更新：2016 年 4 月 6 日*
 
 您可以使用 [Insights for Weather REST API](https://twcservice.{APPDomain}/rest-api-deprecated/){:new_window} 來擷取氣候資料。您可以測試 API 作業並立即檢視結果，以協助您更快速地建置應用程式。
 

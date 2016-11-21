@@ -39,7 +39,7 @@ Nachdem Sie über eine Facebook-Anwendungs-ID und den geheimen Schlüssel der Ap
 1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard.
 1. Klicken Sie auf die Kachel für {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
 1. Klicken Sie auf die Kachel für Facebook.
-1. Geben Sie die Facebook-Anwendungs-ID und den geheimen Schlüssel der App ein und speichern Sie die Eingaben. 
+1. Geben Sie die Facebook-Anwendungs-ID und den geheimen Schlüssel der App ein und speichern Sie die Eingaben.
 
 
 
@@ -48,13 +48,11 @@ Nachdem Sie über eine Facebook-Anwendungs-ID und den geheimen Schlüssel der Ap
 
 Gehen Sie wie folgt vor, um den Autorisierungsprozess zu starten:
 
-
 1. Leiten Sie von Ihrer Web-App zum folgenden Endpunkt des Autorisierungsservers weiter: https://imf-newauthserver.bluemix.net/oauth/v2/authorization.
 
 1. Fügen Sie die folgenden Abfrageparameter hinzu:
-   
    ```
-response_type='authorization_code'
+    response_type='authorization_code'
     client_id= <bluemix_app_guid>
     redirect_uri= <uri für Weiterleitung nach Empfang des Autorisierungscodes>
     scope= 'openid'
@@ -75,13 +73,15 @@ response_type='authorization_code'
 
   Verwenden Sie dabei die folgenden Abfrageparameter:
   ```
-grant_type='authorization_code'
+  grant_type='authorization_code'
   client_id= <bluemix_app_guid>
   code= <authorization code>
   ```
 Der Parameter `redirect_uri` muss mit dem `redirect_uri` aus Schritt 2 übereinstimmen.
 Der Wert `code` ist der in der Antwort am Ende von Schritt 3 empfangene Autorisierungscode.
-Sie müssen diese `POST`-Anforderung innerhalb von 10 Minuten senden, da der Autorisierungscode maximal 10 Minuten gültig ist.  Der Antwortteil von `POST` sollte das `access_token` und das `id_token` in Base64-Codierung enthalten.
+Sie müssen diese `POST`-Anforderung innerhalb von 10 Minuten senden, da der Autorisierungscode maximal 10 Minuten gültig ist.
+
+  Der Antwortteil von `POST` sollte das `access_token` und das `id_token` in Base64-Codierung enthalten.
 
 ## Authentifizierung testen
 Nun können Sie mit dem Senden von Anforderungen an Ihre geschützten Ressourcen beginnen.

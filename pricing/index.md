@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-11-02"
  
 
 ---
@@ -51,9 +51,6 @@ copyright:
 # Pricing
 {: #pricing}
 
-Last updated: 20 October 2016
-{: .last-updated}
-
 You can run applications in {{site.data.keyword.Bluemix}} and try {{site.data.keyword.Bluemix_notm}} services for free. You can sign up for a free 30-day trial that gives you additional allowances, including free support. After 30 days, you can choose an account type and pay only for what you use beyond the free allowances. Bluemix provides a cost calculator for you to estimate the cost beforehand and the Usage Dashboard view for you to check the actual cost after you build your apps.
 {:shortdesc}
 
@@ -75,7 +72,8 @@ One month after the trial expiration, your applications and service configuratio
 
 ![Process flowchart of {{site.data.keyword.Bluemix_notm}} account management](acctmgmt600.png)
 
-*Figure 1. Process flowchart of {{site.data.keyword.Bluemix_notm}} account management*
+Figure 1. Process flowchart of {{site.data.keyword.Bluemix_notm}} account management
+{: #pricing_figure1}
 
 
 If you convert your account during your free trial, your free allowances are limited to allowances normally provided by each service. The allowances are no longer unlimited use allowances that are offered by many of the IBM services during the free trial.
@@ -222,7 +220,8 @@ In the simple tier model, the unit price is determined by the tier that the quan
 | Tier 4: 3001 - 4000           |      $0.60 USD                    |
 |Tier 5: &gt; 4000 | $0.40 USD | 
 
-*Table 1. Simple tier pricing table*
+Table 1. Simple tier pricing table
+{: #pricing_table1}
 
 The following table illustrates how much you pay with a plan that is based on a simple tier pricing model:
 
@@ -233,7 +232,8 @@ The following table illustrates how much you pay with a plan that is based on a 
 |2500 |	2500 × 0.75 = 1875 |	$1875 USD|
 |... |	... |	...|
 |5200 |	5200 × 0.40 = 2080 |$2080 USD|
-*Table 2. Charge calculation by using the simple tier pricing model*
+Table 2. Charge calculation by using the simple tier pricing model
+{: #pricing_table2}
 
 ####Graduated tier
 {: #graduated_tier}
@@ -247,7 +247,8 @@ In the graduated tier model, the unit price per tier decreases as your level of 
 |    Tier 3: 2001 - 3000 |	$0.75 USD |
 |    Tier 4: 3001 - 4000 |	$0.60 USD |
 |    Tier 5: &gt; 4000 |	$0.40 USD |
-*Table 3. Graduated tier pricing table*
+Table 3. Graduated tier pricing table
+{: #pricing_table3}
 
 The following table illustrates how much you pay with a plan that is based on a graduated tier pricing model:
 
@@ -258,7 +259,8 @@ The following table illustrates how much you pay with a plan that is based on a 
 |2500 |	(1000 × 1 (unit price for Tier 1)) + (1000 × 0.90 (unit price for Tier 2)) + (500 × 0.75 (unit price for Tier 3)) = 2275 |	$2275 USD |
 |... |	... |	...|
 |5200 |	(1000 × 1 (unit price for Tier 1)) + (1000 × 0.90 (unit price for Tier 2)) + (1000 × 0.75 (unit price for Tier 3)) + (1000 × 0.60 (unit price for Tier 4)) + (1200 × 0.40 (unit price for Tier 5)) = 3730 |	$3730 USD|
-*Table 4. Charge calculation by using the graduated tier pricing model*
+Table 4. Charge calculation by using the graduated tier pricing model
+{: #pricing_table4}
 
 ####Block tier
 {: #block_tier}
@@ -272,7 +274,8 @@ In the block tier model, the price is a set charge for the quantity you use with
 | Tier 3: &lt;= 3000 |	$2800 USD|
 | Tier 4: &lt;= 4000 |	$3500 USD|
 | Tier 5: &lt;= 10000 |	$5000 USD|
-*Table 5. Block tier pricing table*
+Table 5. Block tier pricing table
+{: #pricing_table5}
 
 The following table illustrates how much you pay with a plan that is based on a block tier pricing model:
 
@@ -282,7 +285,8 @@ The following table illustrates how much you pay with a plan that is based on a 
 |1500 |	The number of items falls into Tier 2, so the total price is $1900 USD. |	$1900 USD|
 |... |	... |	...|
 |5200 |	The number of items falls into Tier 5, so the total price is $5000 USD. |	$5000 USD|
-*Table 6. Charge calculation by using the block tier pricing model*
+Table 6. Charge calculation by using the block tier pricing model
+{: #pricing_table6}
 
 ### Free allowances for virtual servers
 {: #vms}
@@ -347,7 +351,8 @@ To keep the example simple, assume that the prices in the following table do not
 |Data Cache - Standard |	5 GB of cache space and a replica |	$155.00 USD/instance |
 |Data Cache - Premium |	25 GB of cache space and a replica |	$505.00 USD/instance|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB of free data storage<br/>50,000 light API calls free per month<br/>10,000 heavy API calls free per month | $1.00 USD/GB<br/>$0.03 USD/1000 light API calls<br/>$0.15 USD/1000 heavy API calls |
-*Table 7. Pricing sheet*
+Table 7. Pricing sheet
+{: #pricing_table7}
 
 ###Calculating the application price
 
@@ -407,7 +412,8 @@ Although the United States dollar (USD) is used in the pricing examples, other c
 |SEK |	  Swedish krona|
 |USD |    United States dollar|
 |ZAR |	  South African rand|
-*Table 8. Supported currencies* 
+Table 8. Supported currencies
+{: #pricing_table8}
 
 **Note:** If you have linked your {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts, the single invoice you receive is in United States dollars (USD) only.  
 
@@ -429,7 +435,7 @@ If you select a specific organization for the **Organization**, you can see the 
 
 As an account owner or a billing manager, you can use the **Usage Dashboard** page to see any credits for your account. You might have credits if, for example, you linked a SoftLayer account with a {{site.data.keyword.Bluemix_notm}} account.
 
-To open the **Usage Dashboard** page, click **Account**. On the page that is displayed, click **Usage Dashboard**. In the page, you can see any credits, if they exist, and when they expire.
+To open the **Usage Dashboard** page, click **Account** > **Usage Dashboard**. On the page, you can see any credits, if they exist, and when they expire.
 
 ##Notifications
 {: #notifications}
@@ -451,7 +457,8 @@ Only certain services provide the ability for you to change the service plan. If
 |Service |	Information|
 |--------|-------------|
 |Presence Insights 	|If you have a Lite plan and exceed the free allowances, a 403 message displays or is logged to indicate that you are no longer authorized, and your service instance is disabled. In addition, POST REST API calls are rejected with a 403 response.<br/><br/>If your service is disabled because you exceed the free allowance, you can upgrade from a Lite plan to a Paid plan. Your service is re-enabled within 2 hours.<br/><br/>If you have a Paid plan, you can reduce your plan to the Lite plan, as long as your usage stays within the Lite plan allowance for events and total storage.<br/><br/>When you upgrade or reduce your plan, you do not need to restage or restart your apps.|
-*Table 9. Next steps for changing your plan*
+Table 9. Next steps for changing your plan
+{: #pricing_table9}
 
 ###How to change your plan through the command line interface
 

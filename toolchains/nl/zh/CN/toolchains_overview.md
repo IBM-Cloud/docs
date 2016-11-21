@@ -11,7 +11,7 @@ copyright:
 # 开始使用工具链 (Beta)
 {: #toolchains_getting_started}
 
-上次更新时间：2016 年 9 月 13 日
+上次更新时间：2016 年 10 月 7 日
 {: .last-updated}  
 
 {{site.data.keyword.Bluemix}} 的 Public 和 Dedicated 环境中可使用工具链。您可以使用两种方法来创建工具链：使用模板创建工具链，或者通过应用程序创建工具链。在 {{site.data.keyword.Bluemix_notm}} Public 中，工具链仅在美国南部区域可用。
@@ -20,7 +20,12 @@ copyright:
 ##开始使用工具链：Public
 {: #getting_started_public}
 
-每一个工具链都与特定组织相关联，且作为该组织成员的任何用户都可以访问其关联的工具链。创建工具链之前，请确保您在想要创建工具链的组织中工作。要切换到其他组织，请单击菜单栏中的 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg)，以打开“帐户和支持”窗口小部件。
+**注：**请查看顶部条幅，以确保是在“新 Bluemix 体验”中执行操作。
+
+ * 如果看到有关尝试新 Bluemix 的消息，那么说明您是在“经典 Bluemix 体验”中执行操作。单击该链接以打开“新 Bluemix 体验”。
+ * 如果没有看到该消息，那么说们您已经在“新 Bluemix 体验”中。
+
+每一个工具链都与特定组织相关联，且作为该组织成员的任何用户都可以访问其关联的工具链。创建工具链之前，请确保您在想要创建工具链的组织中工作。您当前正在哪个组织中工作会显示在菜单栏中。要切换到其他组织，请单击菜单栏中的该组织，然后选择您要切换到的组织。
 
 ###通过模板创建工具链   
 {: #creating_a_toolchain_from_a_template}
@@ -28,10 +33,10 @@ copyright:
 您可以使用模板作为起始点，来创建包含一组特定工具集成的工具链。
 
 1. 如果是创建第一个工具链，请确保组织中已启用工具链：
-   1. 打开 DevOps 仪表板，并单击**工具链**选项卡。
+   1. 打开 DevOps 仪表板，然后单击**工具链**页面。
    2. 如果显示**启用工具链**按钮，请在其上单击，并遵循提示来创建工具链。
    3. 如果未显示**启用工具链**按钮，表明工具链已启用。请转至步骤 2。
-1. 在 DevOps 仪表板的**工具链**选项卡上，单击添加按钮 (+)，以创建工具链。
+1. 在 DevOps 仪表板的**工具链**页面上，单击添加按钮 (+)，以创建工具链。
 1. 单击工具链模板。例如，要使用网上商店样本来创建工具链，请单击**微型服务工具链**。 
 1. 在工具链创建页面上，复查您要创建的工具链的图。该图显示工具链中处于其生命周期阶段的每一个工具集成。以下图像中的图是示例。创建工具链时，该图显示属于工具链的每一个工具集成。
 ![工具链图](images/toolchain_diagram.png)
@@ -54,10 +59,10 @@ copyright:
 您可以从应用程序创建工具链。工具链可以支持持续开发、部署、监视等操作，且与应用程序相关联。每一个应用程序都可以与工具链相关联。当您将更改推送到工具链的 GitHub 存储库时，管道会自动构建和部署应用程序。  
 
 1. 如果是创建第一个工具链，请确保组织中已启用工具链：
-   1. 打开 DevOps 仪表板，并单击**工具链**选项卡。
+   1. 打开 DevOps 仪表板，然后单击**工具链**页面。
    2. 如果显示**启用工具链**按钮，请在其上单击，并遵循提示来创建工具链。
    3. 如果未显示**启用工具链**按钮，表明工具链已启用。请转至步骤 2。
-1. 在应用程序“概述”页面的“持续交付”磁贴上，单击**添加工具链**。或者，在 {{site.data.keyword.Bluemix_notm}}“典型经验”中，在应用程序的“概述”页面的右上角，单击**添加工具链**。此时，将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 存储库，进行持续交付。
+1. 在应用程序“概述”页面的“持续交付”磁贴上，单击**启用**。或者，在 {{site.data.keyword.Bluemix_notm}}“典型经验”中，在应用程序的“概述”页面的右上角，单击**添加工具链**。此时，将会对您的应用程序进行配置，以便可通过填充应用程序入门模板代码的新 GitHub 存储库，进行持续交付。
 1. 在工具链创建页面上，复查您要创建的工具链的图。该图显示工具链中处于其生命周期阶段的每一个工具集成。
 1. 复查工具链设置的缺省信息。工具链名称使其可在 {{site.data.keyword.Bluemix_notm}} 中进行识别。如果您的工具链已经具有该名称，或者您想要使用不同的名称，请更改工具链的名称。
 1. 在“可配置的集成”部分中，选择要为工具链配置的每一个工具集成。有些工具集成无需进行任何配置。有关配置工具集成的信息，请参阅[配置工具集成（在新窗口中打开链接）](../toolchains/toolchains_integrations.html){: new_window}。
@@ -124,7 +129,7 @@ copyright:
 
 配置工具链及其工具集成之后，您可以在“工具集成”页面中，查看工具链的可视化表示。
 
-* 如果使用的是 {{site.data.keyword.Bluemix_notm}} Public，请在 DevOps 仪表板的**工具链**选项卡上，单击工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。 
+* 如果使用的是 {{site.data.keyword.Bluemix_notm}} Public，请在 DevOps 仪表板的**工具链**页面上单击工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。 
    
 * 如果使用的是 {{site.data.keyword.Bluemix_notm}} Dedicated，请在仪表板的 **DEVOPS** 选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的右上角，单击**查看工具链**。
 
@@ -137,17 +142,17 @@ copyright:
 ![Sample toolchain](images/toolchain.png) -->
 
 
-# 相关连接
+# 相关链接
 {: #rellinks}
 
 ## 教程与样本
 {: #samples}
 
 * [Create an application with three microservices (Beta)（在新窗口中打开链接）](https://www.ibm.com/devops/method/tutorials/tutorial_microservices_part1){:new_window}
-* [Create a toolchain from a template on {{site.data.keyword.Bluemix_notm}} Dedicated (Experimental)（在新窗口中打开链接）](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window}
-* [Create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Dedicated (Experimental)（在新窗口中打开链接）](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window}
+* [在 {{site.data.keyword.Bluemix_notm}} Dedicated (Beta) 上从模板创建工具链（在新窗口中打开链接）](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window}
+* [在 {{site.data.keyword.Bluemix_notm}} Dedicated (Beta) 上从应用程序创建工具链（在新窗口中打开链接）](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window}
 
-## 相关连接
+## 相关链接
 {: #general}
 
 * [Microservices toolchain (Beta)（在新窗口中打开链接）](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window}

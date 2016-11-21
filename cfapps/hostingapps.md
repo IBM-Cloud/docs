@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-05-09" 
 
 ---
 
@@ -16,9 +16,6 @@ copyright:
 {:screen: .screen}
 
 #Hosting apps in {{site.data.keyword.Bluemix_notm}}
-
-*Last updated: 9 May 2016*
-{: .last-updated}
 
 <!--The whole topic is staging only -->
 
@@ -88,7 +85,7 @@ You can migrate your applications to {{site.data.keyword.Bluemix_notm}} in an in
 
 In your cloud applications, you might need to access the backend data or services, for example, a system of record. In {{site.data.keyword.Bluemix_notm}}, you can use the Secure Gateway service to establish a secured tunnel between a {{site.data.keyword.Bluemix_notm}} organization and the enterprise backend network. The service enables the applications on {{site.data.keyword.Bluemix_notm}} to access the backend network’s data and services. For details, see [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}.
 
-To deploy your application to {{site.data.keyword.Bluemix_notm}} as a Cloud Foundry application, select a runtime from the {{site.data.keyword.Bluemix_notm}} Catalog. The runtime contains a starter Hello World application that you can replace with your own application. If you cannot find a starter that provides the runtime you want, you can bring a custom, Cloud Foundry-compatible buildpack to {{site.data.keyword.Bluemix_notm}} by using the –b option with the cf push command. For details, see [Using community buildpacks](../cfapps/byob.html).
+To deploy your application to {{site.data.keyword.Bluemix_notm}} as a Cloud Foundry application, select a runtime from the {{site.data.keyword.Bluemix_notm}} Catalog. The runtime contains a starter Hello World application that you can replace with your own application. If you cannot find a starter that provides the runtime you want, you can bring a custom, Cloud Foundry-compatible buildpack to {{site.data.keyword.Bluemix_notm}} by using the –b option with the cf push command. For details, see [Using community buildpacks](/docs/cfapps/byob.html).
 
 You can use the following tools and services that {{site.data.keyword.Bluemix_notm}} provides:
 
@@ -96,7 +93,7 @@ You can use the following tools and services that {{site.data.keyword.Bluemix_no
 
 | Tool	| Method |
 |:------|:--------|
-|Cloud Foundry command line interface (cf cli)	|Manage your code on local client and use Cloud Foundry command line interface to push your application to {{site.data.keyword.Bluemix_notm}} manually. For more information, see [Uploading your apps](../starters/upload_app.html).|
+|Cloud Foundry command line interface (cf cli)	|Manage your code on local client and use Cloud Foundry command line interface to push your application to {{site.data.keyword.Bluemix_notm}} manually. For more information, see [Uploading your apps](/docs/starters/upload_app.html).|
 |Eclipse	|Manage your code in Eclipse and use the IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} to push your application.|
 |Git integration	|Manage your code on GitHub and integrate Git into {{site.data.keyword.Bluemix_notm}}. You can collaborate with other developers. Your application is deployed to {{site.data.keyword.Bluemix_notm}} automatically when you commit changes in the code. You do not need to push the application manually.|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Manage your code on DevOps GitHub repository and deploy your application to {{site.data.keyword.Bluemix_notm}} by using the DevOps Delivery Pipeline.|
@@ -133,7 +130,7 @@ Take the following steps to migrate your application:
   domain: mybluemix.net
   instances: 1
   memory: 512M</code></pre>
-<p>For more information about the supported options that you can use in this file, see [Application manifest](../manageapps/depapps.html#appmanifest).
+<p>For more information about the supported options that you can use in this file, see [Application manifest](/docs/manageapps/depapps.html#appmanifest).
 
 </p></li></ol>
 </li>
@@ -157,7 +154,7 @@ Take the following steps to migrate your application:
 
 * When you use the cf push command, the cf command line interface copies all of the files and directories from your current directory to {{site.data.keyword.Bluemix_notm}}. Ensure that you have only the required files in your application directory.
 * Ensure that your organization has enough memory for all instances of your application. To view the memory quota for your org, use cf org org_name.
-* For more information about cf push, see [cf commands](../cli/reference/cfcommands/index.html).
+* For more information about cf push, see [cf commands](/docs/cli/reference/cfcommands/index.html).
 
 ##Migrating your data and using services
 {: #ht_service}
@@ -191,9 +188,9 @@ To ensure that your application can run in a local environment after you modify 
 ## Related Links
 {: #general}
 
-* [IBM Containers](../containers/container_index.html)
-* [Virtual Machines](../virtualmachines/vm_index.html)
-* [Getting started with Delivery Pipeline](../services/DeliveryPipeline/index.html)
-* [Deploying apps with IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
+* [IBM Containers](/docs/containers/container_index.html)
+* [Virtual Machines](/docs/virtualmachines/vm_index.html)
+* [Getting started with Delivery Pipeline](/docs/services/DeliveryPipeline/index.html)
+* [Deploying apps with IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html)
 * [The twelve-factor app](http://12factor.net/){:new_window}
 * [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}

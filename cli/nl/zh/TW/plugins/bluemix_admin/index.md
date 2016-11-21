@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-前次更新：2016 年 8 月 17 日
+前次更新：2016 年 9 月 1 日
 {: .last-updated}
 
 
@@ -27,6 +27,8 @@ copyright:
 在開始之前，請先安裝 cf 指令行介面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式需要 cf 6.11.2 版或更新版本。[下載 Cloud Foundry 指令行介面](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **限制：**Cygwin 不支援 Cloud Foundry 指令行介面。請在非 Cygwin 指令行視窗的指令行視窗中使用 Cloud Foundry 指令行介面。
+
+**附註**：{{site.data.keyword.Bluemix_notm}} 管理 CLI 僅適用於「{{site.data.keyword.Bluemix_notm}} 本端」及「{{site.data.keyword.Bluemix_notm}} 專用」環境。「{{site.data.keyword.Bluemix_notm}} 公用」則不予支援。
 
 ## 新增 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式
 
@@ -43,12 +45,12 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">您的 {{site.data.keyword.Bluemix_notm}} 實例 URL 的子網域。例如，<code>https://console.mycompany.bluemix.net/cli</code>。</dd>
+<dd class="pd">您的 {{site.data.keyword.Bluemix_notm}} 實例 URL 的子網域。例如，<code>https://console.mycompany.bluemix.net/cli</code></dd>
 </dl>
 </li>
-<li>若要安裝 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式，請執行下列指令：<br/><br/>
+<li>若要安裝「{{site.data.keyword.Bluemix_notm}} 管理 CLI」外掛程式，請執行下列指令：<br/><br/>
 <code>
-cf install-plugin bluemix-admin-cli -r BluemixAdmin
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
 </ol>
@@ -61,7 +63,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式
 
-您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式來新增或移除使用者、對組織指派或取消指派使用者，以及執行其他管理作業。若要查看指令清單，請執行下列指令：
+您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式來新增或移除使用者、對組織指派或取消指派使用者，以及執行其他管理作業。 
+
+若要查看指令清單，請執行下列指令：
 
 
 ```
@@ -103,7 +107,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**附註**：若要將使用者新增至特定組織，您必須是組織的管理員，或者必須具有 **Admin**（可用的替代項目是 **Superuser**）或具有 **Write** 存取權的 **User** 許可權。
+**附註**：若要將使用者新增至特定組織，您必須是具有 **users.write**（或**超級使用者**）許可權的**管理者**。如果您是組織管理員，則也會具有執行 **enable-managers-add-users** 指令的「超級使用者」將使用者新增至組織的功能。如需相關資訊，請參閱[讓管理員新增使用者](index.html#clius_emau)。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -118,17 +122,23 @@ cf ba add-user <user_name> <organization>
 
 ### 搜尋使用者
 
-您可以搜尋使用者。輸入下列指令： 
+您可以搜尋使用者。視需要，輸入下列指令與選用搜尋過濾器參數（name、permission、organization 及 role）：
 
 ```
-cf ba search-users <user_name>
+cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中的使用者名稱。</dd>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">指派給使用者的許可權。例如，超級使用者、基本、型錄、使用者及報告。如需所指派使用者許可權的相關資訊，請參閱[許可權](../../../admin/index.html#permissions)。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
+<dd class="pd">使用者所屬的組織名稱。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">指派給使用者的組織角色。例如，組織的管理員、帳單管理員或審核員。您必須使用此參數來指定組織。如需角色的相關資訊，請參閱[使用者角色](../../../admin/users_roles.html#userrolesinfo)。</dd>
 
 </dl>
 
@@ -149,9 +159,9 @@ cf ba set-permissions <user_name> <permission> <access>
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中的使用者名稱。</dd>
 <dt class="pt dlterm">&lt;permission&gt;</dt>
-<dd class="pd">設定使用者的許可權：Admin（可用的替代項目是 Superuser）、Login（可用的替代項目是 Basic）、Catalog（Read 或 Write 存取權）、Reports（Read 或 Write 存取權）或 Users（Read 或 Write 存取權）。</dd>
+<dd class="pd">設定使用者的許可權：管理（可用的替代項目是「超級使用者」）、登入（可用的替代項目是「基本存取」）、型錄（「讀取」或「寫入」存取權）、報告（「讀取」或「寫入」存取權）或使用者（「讀取」或「寫入」存取權）。</dd>
 <dt class="pt dlterm">&lt;access&gt;</dt>
-<dd class="pd">對於 Catalog、Reports 或 Users 許可權，您還必須將存取層次設定為<code>讀取</code>或<code>寫入</code>。</dd>
+<dd class="pd">對於「型錄」、「報告」或「使用者」許可權，您還必須將存取層次設定為<code>讀取</code>或<code>寫入</code>。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba sp** 作為較長的 **ba set-permissions** 指令名稱的別名。
@@ -160,7 +170,7 @@ cf ba set-permissions <user_name> <permission> <access>
 
 ### 移除使用者
 
-您可以輸入下列指令，從您的 {{site.data.keyword.Bluemix_notm}} 環境中移除使用者：
+您可以輸入下列指令，從您的 {{site.data.keyword.Bluemix_notm}} 環境移除使用者：
 
 ```
 cf ba remove-user <user_name>
@@ -175,6 +185,30 @@ cf ba remove-user <user_name>
 </dl>
 
 **提示：**您也可以使用 **ba ru** 作為較長的 **ba remove-user** 指令名稱的別名。
+
+### 讓管理員新增使用者
+{: #clius_emau}
+
+如果您在 {{site.data.keyword.Bluemix_notm}} 環境中具有**超級使用者**許可權，則可以讓組織管理員將使用者新增至他們所管理的組織。輸入下列指令： 
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**提示：**您也可以使用 **ba emau** 作為較長 **ba enable-managers-add-users** 指令名稱的別名。
+
+### 停用管理員新增使用者
+{: #clius_dmau}
+
+如果已在您的 {{site.data.keyword.Bluemix_notm}} 環境中使用 **enable-managers-add-users** 指令以讓組織管理員將使用者新增至他們所管理的組織，而且您具有**超級使用者**許可權，則可以移除此設定。輸入下列指令： 
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**提示：**您也可以使用 **ba dmau** 作為較長 **ba disable-managers-add-users** 指令名稱的別名。
 
 ### 新增及刪除組織
 
@@ -408,7 +442,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
 <dd class="pd">您要啟用之服務方案的名稱或 GUID。如果輸入非唯一的服務方案名稱（例如 "Standard" 或 "Basic"），系統會提示您可從中選擇的服務方案。若要識別服務方案名稱，請從首頁選取服務種類，然後選取**新增**，以檢視該種類的服務。請按一下服務名稱，以開啟詳細資料視圖，然後您可以檢視該服務可用的服務方案名稱。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要從服務的可見性清單中移除之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
+<dd class="pd">要從服務的可見性清單移除之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba rspv** 作為較長的 **ba remove-service-plan-visibility** 指令名稱的別名。
@@ -430,6 +464,25 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 </dl>
 
 **提示：**您也可以使用 **ba espv** 作為較長的 **ba edit-service-plan-visibility** 指令名稱的別名。
+
+### 檢視資源用量資訊
+{: #cliresourceusage}
+
+您可以檢視資源用量資訊（包括記憶體、磁碟及 CPU 使用率）。您可以查看可用實體和保留資源以及實體和保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 用量資料以及歷程記憶體和磁碟用量。預設會以遞減順序顯示每週的記憶體及磁碟用量歷程資料。若要檢視資源用量資訊，請使用下列指令：
+
+```
+cf ba resource-usage <monthly> <weekly> 
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;monthly&gt;</dt>
+<dd class="pd">一次檢視一個月的記憶體及磁碟空間歷程資料。</dd>
+<dt class="pt dlterm">&lt;weekly&gt;</dt>
+<dd class="pd">一次檢視一週的記憶體及磁碟空間歷程資料。這是預設值。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba rsu** 作為較長 **ba resource-usage** 指令名稱的別名。
 
 ### 處理服務分配管理系統
 
@@ -471,7 +524,7 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 
 **提示：**您也可以使用 **ba asb** 作為較長的 **ba add-service-broker** 指令名稱的別名。
 
-* 您可以輸入下列指令來刪除服務分配管理系統，以從 {{site.data.keyword.Bluemix_notm}}「型錄」中移除自訂服務：
+* 您可以輸入下列指令來刪除服務分配管理系統，以從 {{site.data.keyword.Bluemix_notm}}「型錄」移除自訂服務：
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -510,7 +563,7 @@ cf ba delete-service-broker <service_broker>
 
 ASG 是當作虛擬防火牆使用，可控制 {{site.data.keyword.Bluemix_notm}} 環境中應用程式的出埠資料流量。每一個 ASG 都包含一份規則清單，可容許與外部網路之間的特定資料流量和通訊。您可以將一個以上的 ASG 連結至特定安全群組集（例如，用於套用廣域存取權的群組集），也可以連結至 {{site.data.keyword.Bluemix_notm}} 環境中組織內的空間。
 
-{{site.data.keyword.Bluemix_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許所有執行中應用程式或所有暫置應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
+{{site.data.keyword.Bluemix_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許對所有執行中應用程式或所有編譯打包中應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
 
 **附註**：下列可讓您使用安全群組的指令是根據 Cloud Foundry 1.6 版。
 
@@ -685,3 +738,80 @@ cf ba unbind-security-group <security-group> <org> <space>
 
 **提示：**您也可以使用 **ba usg** 作為較長的 **ba unbind-staging-security-group** 指令名稱的別名。
 
+### 使用建置套件
+{: #buildpacks}
+
+如果您具有應用程式型錄寫入權，則可以列出、建立、更新或刪除建置套件。  
+#### 列出所有建置套件
+
+使用下列指令以列出所有建置套件，或檢視特定建置套件：
+
+```
+cf ba buildpacks <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">選用參數，可指定要檢視的特定建置套件。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba lb** 作為較長 **ba buildpacks** 指令名稱的別名。
+
+#### 建立及上傳建置套件
+
+您可以建立及上傳建置套件。您可以上傳任何檔案類型為 .zip 的壓縮檔。使用下列指令，以上傳建置套件：
+
+```
+cf ba create-buildpack <buildpack_name> <file_path> <position>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">要上傳之建置套件的名稱。</dd>
+<dt class="pt dlterm">&lt;file_path&gt;</dt>
+<dd class="pd">建置套件壓縮檔的路徑。</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">在建置套件自動偵測期間檢查建置套件的順序。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba cb** 作為較長 **ba create-buildpack** 指令名稱的別名。
+
+#### 更新建置套件
+
+若要更新現有建置套件，請使用下列指令：
+
+```
+cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">要更新之建置套件的名稱。</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">在建置套件自動偵測期間檢查建置套件的順序。</dd>
+<dt class="pt dlterm">&lt;enabled&gt;</dt>
+<dd class="pd">指出是否將建置套件用於編譯打包。</dd>
+<dt class="pt dlterm">&lt;locked&gt;</dt>
+<dd class="pd">指出是否鎖定建置套件，以防止更新。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba ub** 作為較長 **ba update-buildpack** 指令名稱的別名。
+
+#### 刪除建置套件
+
+若要刪除現有建置套件，請使用下列指令：
+
+```
+cf ba delete-buildpack <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">要刪除之建置套件的名稱。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba db** 作為較長 **ba delete-buildpack** 指令名稱的別名。

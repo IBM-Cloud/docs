@@ -21,7 +21,7 @@ copyright:
 {: .last-updated}
 
 Vous pouvez installer et utiliser les plug-in de l'interface de ligne de commande Cloud Foundry (cf cli) qui sont disponibles dans le
-[référentiel de plug-in de l'interface de ligne de commande](http://plugins.{DomainName}/){: new_window}. Chaque plug-in est
+[référentiel de plug-in de l'interface de ligne de commande](http://plugins.ng.bluemix.net/){: new_window}. Chaque plug-in est
 identifié par le nom de son fichier binaire, son nom (qui est défini par le développeur), et les commandes qu'il fournit. Le nom du fichier binaire permet
 d'installer un plug-in seulement, et vous pouvez utiliser le nom du plug-in ou une commande pour toute autre action.
 {:shortdesc}

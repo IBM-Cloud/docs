@@ -180,8 +180,7 @@ Cada tipo de dados precisa ser considerado quando você planeja segurança de da
 
 A plataforma {{site.data.keyword.Bluemix_notm}} protege dados em trânsito
 assegurando o acesso do usuário final ao aplicativo usando SSL, por meio da rede, até que
-os dados atinjam o IBM DataPower Gateway no limite da rede interna do {{site.data.keyword.Bluemix_notm}}. O IBM DataPower Gateway age como um proxy reverso e fornece rescisão de SSL. 
-De lá para o aplicativo, é usado IPSEC para proteger os dados conforme eles viajam do
+os dados atinjam o IBM DataPower Gateway no limite da rede interna do {{site.data.keyword.Bluemix_notm}}. O IBM DataPower Gateway age como um proxy reverso e fornece rescisão de SSL. De lá para o aplicativo, é usado IPSEC para proteger os dados conforme eles viajam do
 IBM DataPower Gateway para o aplicativo.
 
 A segurança para dados em uso e dados em repouso é sua responsabilidade ao desenvolver o aplicativo. É possível usufruir das vantagens de vários serviços relacionados aos dados, disponíveis no catálogo do {{site.data.keyword.Bluemix_notm}} para auxiliar nessas questões.

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
 
 # Creating a custom identity provider
@@ -16,7 +17,7 @@ To create a custom identity provider, develop a web application that exposes a R
 * `base_url`: Specifies the base URL of the custom identity provider web application. The base URL is the URL to be registered in the {{site.data.keyword.amashort}} dashboard.
 * `tenant_id` : Specifies the unique identifier of the tenant. When the {{site.data.keyword.amashort}} invokes this API, it always supplies the {{site.data.keyword.Bluemix}} app GUID (`applicationGUID`).
 * `realm_name` : Specifies the custom realm name that is defined in the {{site.data.keyword.amashort}} dashboard.
-* `request_type` : Specifies one of:
+* `request_type` : Specifies one of these:
 	* `startAuthorization`: Specifies a first step of authentication process. The custom identity provider must respond with either "challenge", "success", or "failure" status.
 	* `handleChallengeAnswer`: Handles an authentication challenge response from the mobile client.
 

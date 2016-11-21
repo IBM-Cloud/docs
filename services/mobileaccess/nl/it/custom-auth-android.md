@@ -2,14 +2,15 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-09"
 ---
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+
+
 
 # Configurazione dell'autenticazione personalizzata per l'applicazione Android {{site.data.keyword.amashort}}
 {: #custom-android}
-
-Ultimo aggiornamento: 01 agosto 2016
-{: .last-updated}
 
 
 Configura la tua applicazione Android con l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connettere la tua applicazione a {{site.data.keyword.Bluemix}}.
@@ -23,6 +24,7 @@ Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.
  * [Creazione di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
+Annota i valori del tuo parametro del servizio. Apri il tuo servizio nel dashboard {{site.data.keyword.Bluemix_notm}}. Fai clic su **Opzioni mobili**. I valori `applicationRoute` e `tenantId` (conosciuti anche come `appGUID`)  sono visualizzati nei campi **Rotta** and **GUID applicazione / TenantId**. Avrai bisogno di questi valori per inizializzare l'SDK e per inviare le richieste all'applicazione di backend.
 
 ## Inizializzazione dell'SDK client {{site.data.keyword.amashort}}
 {: #custom-android-initialize}
@@ -32,12 +34,12 @@ Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.
 
 	```Gradle
 	dependencies {
-		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',
         name:'core',
         version: '2.+',
         ext: 'aar',
         transitive: true
-    	// other dependencies  
+    	// altre dipendenze
 	}
 	```
 
@@ -51,16 +53,13 @@ Aggiungi l'autorizzazione di accesso a internet sotto l'elemento `<manifest>`:
 	```
 
 1. Inizializza l'SDK.  
-Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `onCreate` dell'attività principale nella tua applicazione Android.
-Sostituisci *applicationRoute* e *applicationGUID* con i valori di **Rotta** e **GUID applicazione** che ottieni quando fai clic su **Opzioni mobili** nella tua applicazione sul dashboard {{site.data.keyword.Bluemix_notm}}.
+	Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `onCreate` dell'attività principale nella tua applicazione Android.
 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 ```
-Sostituisci `BMSClient.REGION_UK` con la regione appropriata.	 Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Avatar** ![icona Avatar](images/face.jpg "icona Avatar")  nella barra del menu per aprire il widget **Account e supporto**.				
+
+Sostituisci `BMSClient.REGION_UK` con la regione appropriata.	 Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Avatar** ![icona Avatar](images/face.jpg "icona Avatar")  nella barra del menu per aprire il widget **Account e supporto**.  Il valore della regione deve essere uno dei seguenti: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`.				
 	
 
 ## Interfaccia AuthenticationListener
@@ -75,6 +74,8 @@ Richiama questo metodo quando una richiesta di verifica dell'autenticazione pers
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+
+
 #### Argomenti
 {: #custom-android-onAuth-arg}
 
@@ -108,6 +109,7 @@ un `AuthenticationListener` personalizzato. Devi raccogliere le credenziali e ut
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
@@ -122,8 +124,8 @@ esempio dal [repository Github](https://github.com/ibm-bluemix-mobile-services/b
 package com.ibm.helloworld;
 import android.content.Context;
 import android.util.Log;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationContext;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationListener;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationContext;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -178,37 +180,41 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 Dopo che hai creato un AuthenticationListener personalizzato, registralo presso `BMSClient` prima di iniziare a utilizzare il listener. Aggiungi il seguente codice alla tua applicazione. Questo codice deve essere richiamato prima di inviare qualsiasi richiesta alle tue risorse protette.
 
 ```Java
-MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+MCAAuthorizationManager mcaAuthorizationManager = 
+      MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<MCAServiceTenantId>");
 mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
 
-Utilizza il nome di area di autenticazione (*realmName*) che hai specificato nel dashboard {{site.data.keyword.amashort}}.
+
+Nel codice:
+* Sostituisci `MCAServiceTenantId` con il valore `tenantId` (consulta [Prima di cominciare](##before-you-begin)). 
+* Utilizza il nome di area di autenticazione (`realmName`) che hai specificato nel dashboard {{site.data.keyword.amashort}}.
 
 
 ## Verifica dell'autenticazione
 {: #custom-android-testing}
 Dopo che l'SDK client è stato inizializzato e che un AuthenticationListener personalizzato è stato registrato, puoi iniziare a effettuare richieste alla tua applicazione di back-end mobile.
 
-### Prima di cominciare
+### Prima del tuo test
 {: #custom-android-testing-before}
 Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyword.mobilefirstbp}} e di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`.
 
 
-1. Invia una richiesta all'endpoint protetto (`{applicationRoute}/protected`) dell'applicaizone di backend mobile dal tuo browser, ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
+1. Invia una richiesta all'endpoint protetto (`{applicationRoute}/protected`) dell'applicazione di backend mobile dal tuo browser, ad esempio `http://my-mobile-backend.mybluemix.net/protected`. Per informazioni su come ottenere il valore `{applicationRoute}`, consulta   [Prima di cominciare](#before-you-begin). 
 
 1. L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo {{site.data.keyword.mobilefirstbp}} è protetto con {{site.data.keyword.amashort}}. All'endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, nel tuo browser viene visualizzato un messaggio `Unauthorized`.
 
-1. Utilizza la tua applicazione Android per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo che hai inizializzato `BMSClient` e registrato il tuo AuthenticationListener personalizzato.
+1. Utilizza la tua applicazione Android per effettuare una richiesta allo stesso endpoint protetto che include `{applicationRoute}`. Aggiungi il seguente codice dopo che hai inizializzato `BMSClient` e registrato il tuo AuthenticationListener personalizzato.
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp",  MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -223,6 +229,7 @@ Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyw
 	});
 ```
 
+	
 1. 	Quando la tua richiesta ha esito positivo, nello strumento LogCat è presente il seguente output:
 
 	![immagine](images/android-custom-login-success.png)
@@ -232,6 +239,7 @@ Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyw
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+
 
  Se richiami questo codice dopo che un utente ha eseguito l'accesso, l'utente viene disconnesso. Quando l'utente prova ad eseguire nuovamente l'accesso, deve rispondere nuovamente alla richiesta di verifica proveniente dal server.
 

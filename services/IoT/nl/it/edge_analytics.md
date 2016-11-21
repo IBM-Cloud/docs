@@ -12,7 +12,7 @@ copyright:
 {:pre: .pre}
 
 
-# Analisi edge 
+# Analisi edge
 {: #edge_analytics}
 Ultimo aggiornamento: 1 agosto 2016
 {: .last-updated}
@@ -30,7 +30,7 @@ Il seguente diagramma illustra l'architettura generale di un ambiente di analisi
 ## Prima di cominciare
 {: #byb}
 
-Prima di iniziare la creazione di regole e azioni edge: 
+Prima di iniziare la creazione di regole e azioni edge:
 - Assicurati che il tuo gateway sia collegato a {{site.data.keyword.iot_short}} e che i dati del dispositivo siano stati trasmessi. Consulta [Connessione ai gateway](gateways/dashboard.html) per ulteriori informazioni.
 - Installa EAA (Edge Analytics Agent) sul tuo gateway. Per informazioni, consulta [Installazione dell'agent di analisi edge](gateways/dashboard.html#edge). </br> **Suggerimento:** i gateway abilitati EAA forniscono dati di diagnostica EAA sotto forma di messaggi del dispositivo gateway. Per informazioni, consulta [Metriche di diagnostica di EAA (Edge Analytics Agent)](#eaa_metrics).
 - Assicurati che le proprietà del dispositivo che desideri utilizzare come le condizioni nelle tue regole siano state associate agli schemi. Consulta [Connessione dispositivi](iotplatform_task.html) e [Creazione di schemi](im_schemas.html) per ulteriori informazioni.
@@ -62,18 +62,19 @@ Le regole edge sono punti di decisione che corrispondono ai dati in tempo reale 
 Per creare una regola:
 1. Nel dashboard {{site.data.keyword.iot_short}}, passa a **Rules**.
 2. Fai clic su **Create Edge Rule**, fornisci un nome e una descrizione per la regola, seleziona un tipo di dispositivo edge a cui applicare la regola e quindi fai clic su **Next**.  
-3. Configura la logica della regola.
-Aggiungi una o più condizioni IF da utilizzare come trigger per la regola.
+3. Configura la logica della regola.  
+Aggiungi una o più condizioni IF da utilizzare come trigger per la regola.  
 Puoi aggiungere condizioni in righe parallele per applicarle come condizioni OR o puoi aggiungere le condizioni in colonne sequenziali per applicarle come condizioni AND.  
-**Nota:** per poter selezionare una proprietà del dispositivo come input per un regola, la proprietà deve essere associata a uno schema. Consulta [Creazione di schemi](im_schemas.html) per ulteriori informazioni.
-**Importante:** per attivare una condizione che attiva due o più condizioni della proprietà combinate sequenzialmente utilizzando AND, i punti dei dati di attivazione devono essere inclusi nello stesso messaggio del dispositivo. Se i dati sono ricevuti in più di un messaggio, le condizioni in sequenza non vengono attivate. **Esempi:**
+**Nota:** per poter selezionare una proprietà del dispositivo come input per un regola, la proprietà deve essere associata a uno schema. Consulta [Creazione di schemi](im_schemas.html) per ulteriori informazioni.   
+**Importante:** per attivare una condizione che attiva due o più condizioni della proprietà combinate sequenzialmente utilizzando AND, i punti dei dati di attivazione devono essere inclusi nello stesso messaggio del dispositivo. Se i dati sono ricevuti in più di un messaggio, le condizioni in sequenza non vengono attivate.  
+**Esempi:**
 Una regola semplice può attivare una avviso se un valore del parametro è maggiore di un valore specificato:
 `temp>80`
 Una regola più complessa può essere attivata quando viene soddisfatta una combinazione di soglie:
 `temp>60 AND capacity>50`   
 
 4. Configura i requisiti di attivazione condizionali per la tua regola.  
-Per controllare il numero di avvisi e azioni che vengono attivati per un regola in un intervallo di tempo, puoi configurare i requisiti di attivazione condizionali per la tua regola.
+Per controllare il numero di avvisi e azioni che vengono attivati per un regola in un intervallo di tempo, puoi configurare i requisiti di attivazione condizionali per la tua regola.  
 **Importante:**  l'attivazione condizionale agisce su qualsiasi condizione nella regola. Ad esempio, se una regola ha cinque condizioni parallele differenti impostate utilizzando OR, ogni condizione che è true viene conteggiata nel numero di trigger condizionali.
 Per impostare l'attivazione condizionale per un regola:
  1. Nell'editor della regola, fai clic sul link **Trigger each time conditions are met** predefinito per aprire la casella di dialogo per la configurazione dei requisiti della frequenza della serie.
@@ -84,7 +85,7 @@ Per impostare l'attivazione condizionale per un regola:
  </ul>  
  Per una descrizione più dettagliata dei trigger condizionali, consulta [Attivazione regola condizionale](cloud_analytics.html#conditional "Panoramica attivazione condizionale"), nella sessione di analisi cloud.
 5. Crea o seleziona una o più azioni che si verificano se vengono soddisfatte le condizioni della regola.  
-Per ulteriori informazioni sulle azioni edge, consulta [Creazione di azioni edge](#edge_actions "Crea azioni edge").
+Per ulteriori informazioni sulle azioni edge, consulta [Creazione di azioni edge](#edge_actions "Crea azioni edge").   
  Esempio: un azione può essere di inviare i dati del dispositivo al cloud o di scrivere un avviso in un file locale.
 3. **Facoltativo:** seleziona una priorità dell'avviso per la regola.  
  La priorità viene utilizzata per classificare gli avvisi che vengono visualizzati nella tabella **Rule-Based Analytics**. La priorità predefinita è bassa.
@@ -107,10 +108,10 @@ L'analisi edge supporta due tipi di azione:
 <dt>Inoltro dell'evento al cloud</dt>  
 <dd>L'evento del dispositivo viene inviato a {{site.data.keyword.iot_short}} dove può essere utilizzato nelle tabelle e nelle schede e con le regole di analisi cloud. Per informazioni, consulta [Integrazione con le analisi cloud](#integrate_with_cloud_analytics).    
 **Suggerimento:** utilizza l'azione di inoltro dell'evento al cloud per ridurre la quantità di dati del dispositivo inviata al cloud filtrando i dati meno importanti direttamente dal dispositivo gateway. </dd>
-<dt>Avviso </dt>  
+<dt>Avviso</dt>  
 <dd>Viene creato un avviso nel dispositivo gateway.</dd>
 </dl>
-3. Fornisci i parametri obbligatori per il tipo di azione che hai selezionato.   
+3. Fornisci i parametri obbligatori per il tipo di azione che hai selezionato.  
 <dl>
 <dt>Inoltro dell'evento al cloud</dt>  
 <dd>Seleziona i dati dell'evento da inoltrare al cloud e fornisci il nome dell'evento da utilizzare nel messaggio. </br>
@@ -118,10 +119,10 @@ L'analisi edge supporta due tipi di azione:
 Puoi:
  <ul>
  <li>Includere tutte le proprietà del dispositivo e le proprietà virtuali
- <li>Includere tutte le proprietà definite dallo schema e le proprietà virtuali   
+ <li>Includere tutte le proprietà definite dallo schema e le proprietà virtuali  
  </ul>
  </dd>
-<dt>Avviso </dt>  
+<dt>Avviso</dt>  
 <dd>Specifica un messaggio di avviso e seleziona almeno una destinazione per l'avviso.
  <ul>
  <li>Inoltra al cloud  
@@ -138,15 +139,15 @@ Puoi:
 L'azione è ora disponibile nell'editor della regola.
 
 
-## Attivazione, disattivazione e gestione delle regole edge per i tuoi gateway 
+## Attivazione, disattivazione e gestione delle regole edge per i tuoi gateway
 {: #manage}
 
 Perché una regola attivi le azioni devi prima attivarla su uno o più gateway. Utilizza la tabella **Edge Rules Gateways** per attivare, disattivare, aggiornare e rimuovere una regola edge dai tuoi gateway.
 
-Per attivare una regola edge: 
-1. Dal dashboard Rules, fai clic sul pulsante **Manage Rule** per la regola edge che desideri gestire.
+Per attivare una regola edge:
+1. Dal dashboard Rules, fai clic sul pulsante **Manage Rule** per la regola edge che desideri gestire.  
 Nella tabella **Edge Rules Gateways** che viene aperta viene visualizzato un elenco di tutti i gateway abilitati EAA collegati. Lo stato della regola per i gateway in cui la regola non è stata caricata o attivata è *None*.
-2. Individua il gateway su cui desideri attivare la regola e seleziona **Activate** dal menu nella colonna dell'operazione di selezione.
+2. Individua il gateway su cui desideri attivare la regola e seleziona **Activate** dal menu nella colonna dell'operazione di selezione.  
 La regola edge viene caricata nel gateway. Quando il caricamento viene completato e la regola è attiva, lo stato della regola si modifica in **Active**.  
 
 La regola è ora attiva nel gateway e le azioni configurate si attiveranno quando vengono riscontrate le condizioni della regola.
@@ -158,8 +159,8 @@ In aggiunta all'attivazione di una regola puoi eseguire le seguenti operazioni d
 Operazione | Descrizione
 --- | ---
 Attiva | Carica e attiva la regola nei gateway selezionati. Lo stato della regola viene impostato su *Active*.
-Disattiva  | Disattiva la regola nei gateway selezionati. La regola rimane sul gateway e può essere riattivata se necessario. Lo stato della regola viene impostato su *Inactive*.
-Aggiorna  | Carica una versione aggiornata della regola nel gateway selezionato. Utilizza questa operazione per aggiornare il gateway se lo stato della regola per il gateway è *Active (Older)*. Lo stato della regola viene impostato su *Active*.
+Disattiva | Disattiva la regola nei gateway selezionati. La regola rimane sul gateway e può essere riattivata se necessario. Lo stato della regola viene impostato su *Inactive*.
+Aggiorna | Carica una versione aggiornata della regola nel gateway selezionato. Utilizza questa operazione per aggiornare il gateway se lo stato della regola per il gateway è *Active (Older)*. Lo stato della regola viene impostato su *Active*.
 Elimina | Rimuove la regola dai gateway selezionati. Lo stato della regola torna su *None*.
 
 
@@ -172,15 +173,15 @@ Puoi anche utilizzare {{site.data.keyword.iot_short}} per eseguire analisi cloud
 
 Per ulteriori informazioni su come creare le regole e le azioni di analisi cloud, consulta [Analisi cloud](cloud_analytics.html).
 
-## Metriche di diagnostica di EAA (Edge Analytics Agent) 
+## Metriche di diagnostica di EAA (Edge Analytics Agent)
 {: #eaa_metrics}
 
 Un gateway abilitato EAA collegato invia le informazioni sulla diagnostica come i messaggi del dispositivo del tipo di evento `gateway_xv-monitor-event`. </br> **Suggerimento:** puoi utilizzare le regole di [analisi cloud](cloud_analytics.html) per configurare le azioni di avviso come le notifiche email basate sui valori di diagnostica che sono restituite al gateway abilitato EAA. Ad esempio, puoi creare una regola per avvisarti se il `SystemLoad` supera una certa soglia.
 
-Per visualizzare le informazioni sullo stato del gateway:  
+Per visualizzare le informazioni sullo stato del gateway:
 1. Nel dashboard {{site.data.keyword.iot_short}} seleziona **Devices** nella barra laterale del menu.
-2. Fai clic sul tuo dispositivo gateway per aprire la pagina dei dettagli del dispositivo. 
-3. Accedi alle informazioni di diagnostica del gateway:   
+2. Fai clic sul tuo dispositivo gateway per aprire la pagina dei dettagli del dispositivo.
+3. Accedi alle informazioni di diagnostica del gateway:  
  - Consulta la sezione **Recent Events** per un elenco di messaggi recenti che sono stati inviati dal gateway.
  - Consulta la sezione **Diagnostic logs** per eventuali avvertenze gateway e altri messaggi di diagnostica.
  - Consulta la sezione **Sensor information** per informazioni di diagnostica dettagliate dal gateway. La seguente tabella descrive le differenti proprietà che possono essere incluse nei messaggi del dispositivo gateway:

@@ -18,7 +18,7 @@ copyright:
 # Interface de ligne de commande et outils de développement
 {: #cli}
 
-*Dernière mise à jour : 28 juin 2016*
+*Dernière mise à jour : 25 octobre 2016*
 {: .last-updated}
 
 Avec {{site.data.keyword.Bluemix_short}}, vous avez accès à des outils puissants, tels qu'une interface de ligne de commande (CLI) unifiée et des plug-in CLI. Chacun de ces téléchargements d'interface de ligne de commande est accessible afin d'optimiser votre expérience avec {{site.data.keyword.Bluemix_notm}}.
@@ -30,8 +30,7 @@ Avec {{site.data.keyword.Bluemix_short}}, vous avez accès à des outils puissan
 Téléchargez et installez des interfaces de ligne de commande pour votre expérience
 {{site.data.keyword.Bluemix_notm}}. 
 
-A l'exception de l'outil de ligne de commande [OpenStack](../virtualmachines/vm_index.html#vm_setup_cli){: new_window} qui est utilisé
-pour gestion des serveurs virtuels, l'outil de ligne de commande Cloud Foundry cf est un prérequis pour tous les autres outils de ligne de commande
+L'outil de ligne de commande cf Cloud Foundry est un élément prérequis pour tous les outils d'interface de ligne de commande
 {{site.data.keyword.Bluemix_notm}}. L'outil de ligne de commande
 {{site.data.keyword.Bluemix_notm}} permet de gérer l'environnement {{site.data.keyword.Bluemix_notm}} en plus des applications Cloud
 Foundry.
@@ -47,41 +46,55 @@ Server](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} pour 
 | [Télécharger l'interface de ligne de commande](http://clis.ng.bluemix.net/) <br> [Afficher la documentation](./reference/bluemix_cli/index.html)|  [Télécharger l'interface de ligne de commande](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [Afficher la documentation](./reference/cfcommands/index.html) |
 
 
-## ![](./images/CLI_Plugin.svg) Plug-ins d'interface de ligne de commande
+## ![](./images/CLI_Plugin.svg) Plug-in d'interface de ligne de commande
 
 Etendez facilement votre interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des commandes supplémentaires. Pour accéder
 aux plug-in de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, voir le
 [référentiel de plug-in de l'interface de ligne de commande](https://plugins.ng.bluemix.net/).
 
 ### Etendez votre interface de ligne de commande {{site.data.keyword.Bluemix_notm}} : bx
+{: cli_bluemix_ext}
 
-1. Pour installer des plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} depuis le registre {{site.data.keyword.Bluemix_notm}}, définissez le noeud
+* Pour installer des plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} depuis le registre {{site.data.keyword.Bluemix_notm}}, définissez le noeud
 final du registre des plug-in :
-```
-bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
-```
-2. Exécutez la commande suivante pour installer un plug-in :
-```
-bluemix plugin install nom_plug-in -r bluemix-bx-staging
-```
 
-| *{{site.data.keyword.activedeployshort}} interface CLI* | *{{site.data.keyword.autoscaling}} interface CLI* | *Network Security Groups* |
+```
+bluemix plugin repo-add bluemix-bx https://plugins.ng.bluemix.net
+```
+{: codeblock}
+
+* Ensuite, exécutez la commande suivante pour installer un plug-in :
+
+```
+bluemix plugin install nom_plug-in -r bluemix-bx
+```
+{: codeblock}
+
+
+| *{{site.data.keyword.activedeployshort}} interface de ligne de commande* | *{{site.data.keyword.autoscaling}} interface de ligne de commande* | *Network Security Groups* |
 |-----|-----|-----|
 | Nom du plug-in : active-deploy <br> [Afficher la documentation](../services/ActiveDeploy/cli.html#cli) | Nom du plug-in : auto-scaling <br> [Afficher la documentation](./plugins/auto-scaling/index.html) |  Nom du plug-in : nsg <br> [Afficher la documentation](./plugins/networksecuritygroups/index.html)  |
 
 
 ### Etendez votre interface de ligne de commande Cloud Foundry : cf
+{: cli_cf_ext}
 
-1. Pour installer des plug-in d'interface de ligne de commande cf depuis le registre {{site.data.keyword.Bluemix_notm}}, définissez le noeud
+* Pour installer des plug-in d'interface de ligne de commande cf depuis le registre {{site.data.keyword.Bluemix_notm}}, définissez le noeud
 final du registre des
 plug-in :
+
 ```
-cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf https://plugins.ng.bluemix.net
 ```
-2. Exécutez la commande suivante pour installer un plug-in :
+{: codeblock}
+
+* Ensuite, exécutez la commande suivante pour installer un plug-in :
+
 ```
-cf install-plugin nom_plug-in -r bluemix-cf-staging
+cf install-plugin nom_plug-in -r bluemix-cf
 ```
+{: codeblock}
+
 
 | *Active Deploy* | *Console d'administration* | 
 |-----------------|-----------------|
@@ -91,8 +104,6 @@ cf install-plugin nom_plug-in -r bluemix-cf-staging
 |-----------------|-----------------|
 | Nom du plug-in : ibm-containers <br> [Afficher la documentation](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Nom du plug-in : VPN <br> [Afficher la documentation](./plugins/vpn/index.html) |
 
-<!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
-
 
 ## ![](./images/Integrated_Dev_Tools.svg) Outils de développement intégrés
 
@@ -101,6 +112,4 @@ vous préférez.
 
 | *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* |
 |-------------|----------|----------|----------|
-| [Plug-in Egit Eclipse](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [Plug-in RTC Eclipse](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Plug-in
-Liberty Eclipse](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plug-in
-Eclipse](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plug-in Rules Designer Eclipse](../services/rules/index.html#rulov002) |
+| [Plug-in Egit Eclipse](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [Plug-in RTC Eclipse](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Plug-in Liberty Eclipse](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plug-in Eclipse](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plug-in Rules Designer Eclipse](../services/rules/index.html#rulov002) |

@@ -52,7 +52,7 @@ Puoi aggiungere e configurare le integrazioni dello strumento per la tua toolcha
 Se elimini un'integrazione dello strumento dalla tua toolchain, l'eliminazione non può essere annullata. 
 
 1. Nel dashboard, nella scheda **DEVOPS**, fai clic sulla toolchain per aprirne la pagina Integrazioni dello strumento. In alternativa, nell'angolo in alto a destra della tua pagina di panoramica, fai clic su **View Toolchain**. Quindi, fai clic su **Integrazioni dello strumento**.
-1. Nel tile per l'integrazione dello strumento da eliminare, fai clic sul menu per accedere alle opzioni di configurazione. 
+1. Nel tile per l'integrazione dello strumento da eliminare, fai clic sul menu per accedere alle opzioni di configurazione.
 1. Per eliminare l'integrazione dello strumento dalla tua toolchain, fai clic su **Delete**.
 1. Conferma facendo clic su **Delete**. 
 
@@ -65,7 +65,7 @@ Quando aggiungi utenti ai tuoi spazi o organizzazioni {{site.data.keyword.Bluemi
 
 Per aggiungere un utente, completa la seguente procedura: 
 
-1. Nel dashboard, nella scheda **DEVOPS**, fai clic sulla toolchain per aprirne la pagina Integrazioni dello strumento. Quindi, fai clic su **Manage**. In alternativa, nell'angolo in alto a destra della tua pagina di panoramica, fai clic su **View Toolchain**. Quindi, fai clic su **Manage**.   
+1. Nel dashboard, nella scheda **DEVOPS**, fai clic sulla toolchain per aprirne la pagina Integrazioni dello strumento. Quindi, fai clic su **Manage**. In alternativa, nell'angolo in alto a destra della tua pagina di panoramica, fai clic su **View Toolchain**. Quindi, fai clic su **Manage**.  
 1. Fai clic sul link alla tua organizzazione. 
 1. Nella pagina Manage Organizations, fai clic su **Invite a User** e immetti l'indirizzo email dell'utente.
 1. Se desideri fornire le autorizzazioni avanzate per gestire gli utenti in {{site.data.keyword.Bluemix_notm}}, seleziona una o più delle seguenti caselle di spunta **Manager**, **Billing Manager** o **Auditor**.
@@ -77,7 +77,7 @@ Per aggiungere un utente, completa la seguente procedura:
 
 Puoi eliminare una toolchain e specificare quali delle integrazioni dello strumento associate desideri eliminare. Quando elimini una toolchain, l'eliminazione non può essere annullata.
 
-1. Nel dashboard, nella scheda **DEVOPS**, fai clic sulla toolchain per aprirne la pagina Integrazioni dello strumento. Quindi, fai clic su **Manage**. In alternativa, nell'angolo in alto a destra della tua pagina di panoramica, fai clic su **View Toolchain**. Quindi, fai clic su **Manage**. 
+1. Nel dashboard, nella scheda **DEVOPS**, fai clic sulla toolchain per aprirne la pagina Integrazioni dello strumento. Quindi, fai clic su **Manage**. In alternativa, nell'angolo in alto a destra della tua pagina di panoramica, fai clic su **View Toolchain**. Quindi, fai clic su **Manage**.
 1. Fai clic su **Delete Toolchain** e rivedi o modifica le integrazioni dello strumento che stai eliminando.
 1. Conferma l'eliminazione digitando il nome della toolchain e facendo clic su **Delete**.
 

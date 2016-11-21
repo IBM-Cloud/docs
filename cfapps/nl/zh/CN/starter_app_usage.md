@@ -6,15 +6,12 @@ copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-01-12" 
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-
-*上次更新时间：2016 年 1 月 12 日*
-{: .last-updated}
 
 # 使用入门模板应用程序
 {: #using_starter_applications}
@@ -27,7 +24,7 @@ copyright:
 2. 单击要使用的运行时。
 3. 登录到 {{site.data.keyword.Bluemix}}（如果尚未登录）。
 4. 提供应用程序名称，修改主机名（如果需要），然后单击**创建**。
-5. 应用程序将开始编译打包，并且在应用程序启动时，将在 Bluemix“仪表板”上显示应用程序的登录页面。
+5. 应用程序将开始编译打包，并且在应用程序启动时，将在 {{site.data.keyword.Bluemix_notm}}“仪表板”上显示应用程序的登录页面。
 6. 可以遵循该页面上的指示信息来执行以下任务：
   * 下载 Cloud Foundry 命令行界面。
   * 下载入门模板应用程序。

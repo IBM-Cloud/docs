@@ -1,20 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Storage
 {: #storage}
 
-*Last updated: 9 December 2015*
-
 With these storage services, gain access to reliable, cost-effective, cloud data storage.
 {: shortdesc}
-
-
-

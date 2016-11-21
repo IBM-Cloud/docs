@@ -7,10 +7,10 @@ copyright:
 
 # REST API の使用
 {: #push-api-rest}
-最終更新日: 2016 年 8 月 16 日
+最終更新日: 2016 年 10 月 17 日
 {: .last-updated}
 
-{{site.data.keyword.mobilepushshort}}には REST (Representational State Transfer) API (アプリケーション・プログラム・インターフェース) を使用できます。また、クライアント・アプリケーションをさらに開発するために、SDK および [Push API](https://mobile.{DomainName}/imfpushrestapidocs/) を使用することもできます。
+{{site.data.keyword.mobilepushshort}}には REST (Representational State Transfer) API (アプリケーション・プログラム・インターフェース) を使用できます。また、クライアント・アプリケーションをさらに開発するために、SDK および [Push API](https://mobile.{DomainName}/imfpush/) を使用することもできます。
 
 バックエンド・サーバー・アプリケーションとクライアントは、Push REST API を使用して、{{site.data.keyword.mobilepushshort}}機能にアクセスできます。
 
@@ -29,48 +29,47 @@ REST API のベース URL を取得するには、以下の手順を実行しま
 また、以下のようにコマンド・ラインを使用してサービス資格情報を取得することも可能です。
 
 ```
- cf create-service-key {push_instance_name} {key_name}
-
- cf service-key {push_instance_name} {key_name}
+    cf create-service-key {push_instance_name} {key_name}
+    cf service-key {push_instance_name} {key_name}
 ```
-
+	{: codeblock}
 
 ## Accept-Language ヘッダー
 {: #push-api-rest-accept}
 
-「Accept-Language」ヘッダーでは、[Push REST API](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window} によって出力されるエラー・メッセージに使用する言語を指定します。エラー・メッセージでサポートされる言語は、中国語 (簡体字)、中国語 (繁体字)、英語 (米国)、ドイツ語、フランス語、イタリア語、日本語、韓国語、ポルトガル語、およびスペイン語です。
+「Accept-Language」ヘッダーでは、[Push REST API](https://mobile.{DomainName}/imfpush/){: new_window} によって出力されるエラー・メッセージに使用する言語を指定します。エラー・メッセージでサポートされる言語は、中国語 (簡体字)、中国語 (繁体字)、英語 (米国)、ドイツ語、フランス語、イタリア語、日本語、韓国語、ポルトガル語、およびスペイン語です。
 
-## appSecret
+## appSecret 
 {: #push-api-rest-secret}
 
-アプリケーションが{{site.data.keyword.mobilepushshort}}にバインドされると、そのサービスによって appSecret (固有キー) が生成されて応答ヘッダーで渡されます。Bluemix の IBM® {{site.data.keyword.mobilepushshort}} の Rest API を使用する場合、REST API リファレンスを使用して、保護する必要のある API に関する情報を取得してください。REST API については、REST API リファレンスを参照してください。
+アプリケーションが {{site.data.keyword.mobilepushshort}} にバインドされると、サービスは appSecret (固有キー) を生成し、それを応答ヘッダーで渡します。IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API を使用している場合は、REST API リファレンスを使用して、保護する必要のある API に関する情報を取得してください。REST API については、REST API リファレンスを参照してください。
 
-要求ヘッダーには appSecret が含まれている必要があります。含まれていない場合、サーバーは 401 無許可エラー・コードを返します。
-{{site.data.keyword.mobilepushshort}}がアプリケーションに追加されると、特定の AppID が作成されます。応答の一部として、タグの作成やメッセージの送信に使用される appSecret というヘッダーを取得することになります。操作は、カタログまたはボイラープレートのサービスを介して行われます。
+要求ヘッダーには appSecret が含まれている必要があります。含まれていない場合、サーバーは 401 無許可エラー・コードを返します。{{site.data.keyword.mobilepushshort}} がアプリケーションに追加されると、特定の AppID が作成されます。応答の一部として、タグの作成やメッセージの送信に使用される appSecret というヘッダーを取得します。操作は、カタログまたはボイラープレートのサービスを介して行われます。
 
-appSecret の値を取得するには、以下のようにします。
+appSecret 値を取得するには、以下のようにします。
 
 1. プッシュ・サービスにバインドされている *app-name* をクリックします。
 2. **「資格情報の表示」**リンクをクリックして appSecret (AppID) を表示します。
 
 **「資格情報の表示」**画面に、AppSecret に関する情報が表示されます。
-
 ```
-{
- "imfpush_Dev": [
-   {
+	{
+    "imfpush_Dev": [
+    {
      "name": "testapp1",
      "label": "imfpush_Dev",
      "plan": "Basic",
      "credentials": {
        "url": "http://imfpush.ng.bluemix.net/imfpush/v1/apps/b615b280-b37e-4042-8815-38a758f234e2",
        "admin_url": "//mobile.ng.bluemix.net/imfpushdashboard/?appGuid=b615b280-b37e-4042-8815-38a758f234e2",
-       "appSecret": "8dac71a5-2219-42b3-a9f3-dbb828ba1f04"
+       "appSecret": "8dac71a5-2219-42b3-a9f3-dbb828ba1f04",
        }
-   }
- ]
-}
-``` 
+     }
+    ]
+    }
+```
+	{: codeblock} 
+
 
 ##Push REST API のフィルター
 {: #push-api-rest-filters}
@@ -79,14 +78,11 @@ appSecret の値を取得するには、以下のようにします。
 
 フィルターは、以下の構文で生成できます。
 
-**name**
-フィルターが適用されるフィールドの名前。
+**name**: フィルターが適用されるフィールドの名前。
 
-**operator**
-使用するフィルターの一致条件を記述する == (完全一致) または =@ (サブストリングを含むかどうか)。
+**operator**: 使用するフィルターの一致条件を記述する == (完全一致) または =@ (サブストリングを含む)。
 
-**expression**
-結果に含める値。
+**expression**: 結果に含める値。
 
 コンマおよび円記号 () は、式で表示する場合、円記号 () でエスケープする必要があります。
 
@@ -111,7 +107,7 @@ appSecret の値を取得するには、以下のようにします。
 - タグ GET API では、以下の組み合わせがサポートされます。
 - name は、name または description のいずれかのフィールドにすることができます。
 - operator として =@ が使用された場合、値はサブストリングになることがあります。
-- == が使用された場合、値は完全一致ストリングでなければなりません。
+- == が使用された場合は、値は完全一致ストリングでなければなりません。
 
 
 ##{{site.data.keyword.mobilepushshort}}の応答コード

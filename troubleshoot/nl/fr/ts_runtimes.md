@@ -329,7 +329,7 @@ Vous pouvez résoudre ce problème en suivant l'une des méthodes ci-dessous :
 ## Les objets de consignateur Log4js ne sont pas affichés dans la fenêtre en incrustation Node.js Trace
 {: #ts_logger}
 
-Les objets de consignateur Log4js ne sont pas affichés dans la fenêtre en incrustation Node.js Trace lorsque les modules log4js et ibmbluemix sont utilisés dans votre application.  	
+Les objets de consignateur Log4js ne sont pas affichés dans la fenêtre en incrustation Node.js Trace lorsque les modules log4js et ibmbluemix sont utilisés dans votre application. 	
 
  
 Les objets de consignateur Log4js ne sont pas affichés dans la fenêtre en incrustation Node.js Trace lorsque les modules log4js, winston et ibmbluemix sont utilisés dans votre application.

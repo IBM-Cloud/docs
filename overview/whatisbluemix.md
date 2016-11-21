@@ -3,7 +3,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-23"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,9 +11,6 @@ copyright:
 
 # What is {{site.data.keyword.Bluemix_notm}}?
 {: #bluemixoverview}
-
-*Last updated: 23 October 2016*
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} is {{site.data.keyword.IBM_notm}}'s innovative cloud computing platform that combines platform as a service (PaaS) with infrastructure as a service (IaaS). Additionally, {{site.data.keyword.Bluemix_notm}} has a rich catalog of cloud services that can be easily integrated with PaaS and IaaS to build business applications rapidly.
 {:shortdesc}
@@ -52,7 +49,7 @@ You can use {{site.data.keyword.Bluemix_notm}} Mobile services to incorporate pr
 
 The Services dashboard provides access to the {{site.data.keyword.Bluemix_notm}} services available from {{site.data.keyword.IBM}} and third-party providers. These include Watson, Internet of Things, Analytics, Mobile, and DevOps services:
 
-* Deliver innovative new applications faster and cheaper with just the right features using {{site.data.keyword.IBM_notm}} DevOps services and the {{site.data.keyword.Bluemix_notm}} Garage Method. When you adopt DevOps practices and create a culture of innovation and agility, you can iterate and pivot in response to the market.
+* Deliver innovative new applications faster and cheaper with just the right features using {{site.data.keyword.IBM_notm}} DevOps services and the {{site.data.keyword.Bluemix_notm}} Garage Method. When you adopt DevOps practices and create a culture of innovation and agility, you can use iterative practices and change direction in response to the market.
 * Blockchain is a peer-to-peer distributed ledger technology for a new generation of transactional applications that establishes trust, accountability, and transparency while streamlining business processes.  
 * Watson gives your apps the power of cognitive computing with a full suite of speech, vision, and data APIs.  Solve your most complex business problems by deploying a cognitive platform with Watson services.
 * {{site.data.keyword.IBM_notm}} enables you to do more with rich, integrated cloud databases and Data & Analytics services. 
@@ -67,11 +64,11 @@ The Services dashboard provides access to the {{site.data.keyword.Bluemix_notm}}
 
 The Infrastructure dashboard provides various services to fit your cloud infrastructure needs.
 
-{{site.data.keyword.Bluemix_notm}} infrastructure provides the highest performing cloud infrastructure available. {{site.data.keyword.Bluemix_notm}} infrastructure is one platform, which takes data centers around the world that are full of the widest range of cloud computing options, then integrates and automates everything. {{site.data.keyword.CloudDataCents_notm}} are filled with first class computing, storage, and networking gear. Each location is built, outfitted, and operated in the same way, so you get exactly the same capabilities and availability anywhere in our footprint. Locations are connected by the industry’s most advanced network-in-a-network, which integrates distinct public, private, and internal management networks to deliver lower total networking costs, better access, and higher speed. Also, the data centers and network share a single proprietary management system. One management tool lets you control everything--every bare metal server, virtual server, and storage device--all accessible by API, portal, and mobile applications.
+{{site.data.keyword.Bluemix_notm}} infrastructure provides the highest performing cloud infrastructure available. {{site.data.keyword.Bluemix_notm}} infrastructure is one platform, which takes data centers around the world that are full of the widest range of cloud computing options, then integrates and automates everything. {{site.data.keyword.CloudDataCents_notm}} are filled with first class computing, storage, and networking gear. Each location is built, outfitted, and operated in the same way, so you get exactly the same capabilities and availability anywhere where we are present. Locations are connected by the industry’s most advanced network-in-a-network, which integrates distinct public, private, and internal management networks to deliver lower total networking costs, better access, and higher speed. Also, the data centers and network share a single proprietary management system. One management tool lets you control everything--every bare metal server, virtual server, and storage device--all accessible by API, portal, and mobile applications.
 
 {{site.data.keyword.Bluemix_notm}} infrastructure offers powerful bare metal servers and flexible virtual servers in a single seamless platform. All are provided on demand and billed on monthly or hourly terms. Bare metal servers provide the raw horsepower for your processor-intensive and disk I/O-intensive workloads and can be configured to your exact specifications. Virtual servers allow for high speed of deployment, flexible scalability, and pay-as-you-go billing. For high performance computing, give your cloud a boost with graphics processing unit (GPU) servers, available by the hour or monthly. 
 
-{{site.data.keyword.Bluemix_notm}} infrastructure offerings are connected to a three-tiered network, segmenting public, private, and management traffic. Infrastructure on a customer's {{site.data.keyword.Bluemix_notm}} account might transfer data between one another across the private network at no cost. Infrastructure offerings, such as bare metal servers, virtual servers, and cloud storage, connect to other applications and services in the {{site.data.keyword.Bluemix_notm}} catalog, such as Watson services, containers, or runtimes, across the public network. Data transfer between those two types of offerings is metered and charged at standard public network bandwidth rates.
+{{site.data.keyword.Bluemix_notm}} infrastructure offerings are connected to a three-tiered network, segmenting public, private, and management traffic. Infrastructure on a customer's {{site.data.keyword.Bluemix_notm}} account might transfer data between such infrastructure across the private network at no cost. Infrastructure offerings, such as bare metal servers, virtual servers, and cloud storage, connect to other applications and services in the {{site.data.keyword.Bluemix_notm}} catalog, such as Watson services, containers, or runtimes, across the public network. Data transfer between those two types of offerings is metered and charged at standard public network bandwidth rates.
 
 ## Using the {{site.data.keyword.Bluemix_notm}} console
 {: #bluemixoverviewui}

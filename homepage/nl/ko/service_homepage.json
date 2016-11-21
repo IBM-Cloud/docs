@@ -43,6 +43,11 @@
     "category_id": "devops"
   }, {
     "type": "별도",
+    "title": "Dedicated GitHub Enterprise 시도",
+    "href": "services/ghededicated/index.html",
+    "category_id": "devops"
+  }, {
+    "type": "별도",
     "title": "Bluemix Mobile 대시보드 시도",
     "href": "mobile/index.html",
     "category_id": "모바일"

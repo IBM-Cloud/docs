@@ -2,13 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-06-15"
 
 ---
 
 # Enabling Facebook authentication for Web apps
-
-Last updated: 15 June 2016
-{: .last-updated}
+{: #facebook_web}
 
 Use  Facebook to authenticate users on your web app.
 
@@ -86,5 +85,3 @@ Make sure to send this `POST` request within 10 min since the authorization code
 ## Testing the authentication
 Now you can start making requests to your protected resources.
 All request to protected resources should contain the `access_token` in the Authorization request header field.
-
-

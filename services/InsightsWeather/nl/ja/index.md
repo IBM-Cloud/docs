@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # Insights for Weather 概説
 {: #insights_weather_overview}
-
-*最終更新日: 2016 年 5 月 19 日*
 
 {{site.data.keyword.weatherfull}} を使用して、The Weather Company (TWC) からの気象データをご使用の {{site.data.keyword.Bluemix}} アプリケーションに取り込みます。
 {:shortdesc}
@@ -79,7 +78,7 @@ copyright:
 
 ## 一般
 {: #general}
-* [アプリケーションへのサービスの追加](../reqnsi.html){: new_window}
-* [エンドツーエンド開発](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
+* [アプリケーションへのサービスの追加](/docs/reqnsi.html){: new_window}
+* [エンドツーエンド開発](https://console.{DomainName}/docs/services/cfapps/ee.html){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} 価格設定シート](https://console.{DomainName}/pricing/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} 前提条件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

@@ -669,7 +669,7 @@ apiCli.deleteDevice(deviceTypeId, deviceId)
 
 Utilizza il metodo `getDevice()` per richiamare un dispositivo da un'organizzazione in {{site.data.keyword.iot_short_notm}}. Quando richiami i dettagli del dispositivo utilizzando il metodo `getDevice()`, devi specificare i parametri deviceTypeId e deviceId
 
-Il seguente esempio di codice illustra il formato richiesto per questo metodo. 
+Il seguente esempio di codice illustra il formato richiesto per questo metodo.
 
 ```python
 apiCli.getDevice(deviceTypeId, deviceId)
@@ -704,7 +704,7 @@ deviceInfo = {descriptiveLocation: "London", hwVersion: "2.0.1", fwVersion: "2.5
 apiCli.updateDevice("MyDeviceType", "200020002000", deviceInfo, status)
 ```
 
-### Richiamo delle informazioni sull'ubicazione 
+### Richiamo delle informazioni sull'ubicazione
 
 
 Utilizza il metodo `getDeviceLocation()` per richiamare le informazioni sull'ubicazione di un dispositivo. I parametri necessari per il richiamo dei dati di ubicazione sono deviceTypeId e deviceId.
@@ -715,7 +715,7 @@ apiClient.getDeviceLocation("iotsample-arduino", "arduino01")
 
 La risposta a questo metodo contiene le proprietà longitude, latitude, elevation, accuracy, measuredTimeStamp e updatedTimeStamp.
 
-### Aggiornamento delle informazioni sull'ubicazione 
+### Aggiornamento delle informazioni sull'ubicazione
 
 
 Utilizza il metodo `updateDeviceLocation()` per modificare le informazioni sull'ubicazione di un dispositivo. Come per l'aggiornamento delle proprietà del dispositivo, deve essere definito il parametro deviceLocation con le modifiche che desideri applicare. Il seguente codice di esempio illustra la modifica dei dati di ubicazione per un dispositivo specifico:
@@ -781,9 +781,9 @@ Utilizza il metodo `addDiagnosticLog()` per aggiungere una voce nel log di diagn
 
 |Variabile|Requisito|Descrizione|
 |:---|:---|:---|
-|`message`|Obbligatorio|Contiene il messaggio diagnostico che desideri aggiungere |
+|`message`|Obbligatorio|Contiene il messaggio diagnostico che desideri aggiungere|
 |`severity`|Facoltativo|Corrisponde alla severità del log di diagnostica e può essere impostato su 0, 1 o 2, che corrispondono alle categorie informativo, avvertenza e errore.|
-|`data`|Facoltativo|Contiene i dati di diagnostica |
+|`data`|Facoltativo|Contiene i dati di diagnostica|
 |`timestamp`|Facoltativo|Contiene la data e l'ora della voce del log nel formato ISO8601 ma se non specificato, vengono utilizzate la data e l'ora correnti.|
 
 
@@ -854,4 +854,4 @@ Utilizza il metodo `getDeviceConnectionLogs()` per elencare gli eventi di log di
 apiCli.getDeviceConnectionLogs(deviceTypeId, deviceId)
 ```
 
-La risposta include un elenco di voci di log, che contengono messaggi di log e date/ore 
+La risposta include un elenco di voci di log, che contengono messaggi di log e date/ore

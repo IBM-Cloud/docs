@@ -19,7 +19,7 @@ copyright:
 上次更新时间：2016 年 7 月 29 日
 {: .last-updated}
 
-您可以调整 Node.js 中的客户机库和样本来构建和定制应用程序，以用于与 {{site.data.keyword.iot_full}} 上的组织进行交互。
+您可以调整 Node.js 中的客户机库和样本来构建和定制应用程序，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。
 {:shortdesc}
 
 使用提供的信息和示例通过 Node.js 开始开发应用程序。
@@ -45,8 +45,8 @@ copyright:
 |----------------|----------------|
 |`org` |组织标识。这是必需值。|
 |`id`  |组织中应用程序的唯一标识。|
-|`auth-key`   |用于将应用程序安全连接到 Watson IoT 平台的 API 密钥。|
-|`auth-token`   |用于将设备安全连接到 Watson IoT 平台的 API 密钥令牌。|
+|`auth-key`   |用于将应用程序安全连接到 Watson IoT Platform 的 API 密钥。|
+|`auth-token`   |用于将设备安全连接到 Watson IoT Platform 的 API 密钥令牌。|
 |`type`  |预订的类型。指定 `shared` 可启用共享的预订。|
 
 
@@ -77,7 +77,7 @@ copyright:
 	var appClient = new Client.IotfApplication(appClientConfig);
 ```
 
-确保 JSON 配置文件为以下格式
+确保 JSON 配置文件为以下格式：
 
 ```
     {
@@ -101,7 +101,7 @@ copyright:
 
 	appClient.on("connect", function () {
 
-	//在此添加您的代码
+	//Add your code here
 	});
 ```
 
@@ -128,18 +128,18 @@ copyright:
 	var appClient = new Client.IotfApplication(appClientConfig);
 
 	appClient.connect();
-	//将日志级别设置为“trace”
+	//setting the log level to 'trace'
 	appClient.log.setLevel('trace');
 	appClient.on("connect", function () {
 
-	//在此添加您的代码
+	//Add your code here
 	});
 ```
 
 ## 共享的预订
 {: #shared_subscriptions}
 
-使用共享的预订功能可构建可扩展应用程序，用于跨应用程序的多个实例均衡消息负载。要启用负载均衡，请将 `type` 字段设置为 `shared`，如以下示例中所示：
+使用共享的预订功能可构建可扩展应用程序，用于在应用程序的多个实例之间均衡消息负载。要启用负载均衡，请将 `type` 字段设置为 `shared`，如以下示例中所示：
 
 ```
 
@@ -153,11 +153,11 @@ copyright:
 	var appClient = new Client.IotfApplication(appClientConfig);
 
 	appClient.connect();
-	//将日志级别设置为“trace”
+	//setting the log level to 'trace'
 	appClient.log.setLevel('trace');
 	appClient.on("connect", function () {
 
-	//在此添加您的代码
+	//Add your code here
 	});
 ```
 
@@ -171,11 +171,11 @@ copyright:
 	var appClient = new Client.IotfApplication(appClientConfig);
 
 	appClient.connect();
-	//将日志级别设置为“trace”
+	//setting the log level to 'trace'
 	appClient.log.setLevel('trace');
 	appClient.on("connect", function () {
 
-	//在此添加您的代码
+	//Add your code here
 	});
 	appClient.on("error", function (err) {
 		console.log("Error : "+err);
@@ -272,7 +272,7 @@ copyright:
 ### 处理来自设备的事件
 
 
-要处理预订接收到的事件，请实现设备事件回调方法。{{site.data.keyword.iot_short_notm}} 应用程序客户机会发送事件 `deviceEvent`。此函数具有以下属性：
+要处理您的预订接收到的事件，请实现设备事件回调方法。{{site.data.keyword.iot_short_notm}} 应用程序客户机会发送事件 `deviceEvent`。此函数具有以下属性：
 
 - deviceType
 - deviceId
@@ -354,7 +354,7 @@ copyright:
 
 ### 处理来自设备的状态更新
 
-要处理预订接收到的状态更新，请实现设备状态回调方法。{{site.data.keyword.iot_short_notm}} 应用程序客户机会发送事件 `deviceStatus`。此函数具有以下属性：
+要处理您的预订接收到的状态更新，请实现设备状态回调方法。{{site.data.keyword.iot_short_notm}} 应用程序客户机会发送事件 `deviceStatus`。此函数具有以下属性：
 
 -   deviceType
 -   deviceId
@@ -385,7 +385,7 @@ copyright:
 {: #publishing_device_events}
 
 
-应用程序可以把事件当作源自设备的事件进行发布。此函数需要以下属性：
+应用程序可以将事件当作源自设备的事件进行发布。此函数需要以下属性：
 
 -   deviceType
 -   deviceId
@@ -461,14 +461,14 @@ copyright:
 ## 参考
 {: #reference_nodejs}
 
-下表描述了此 Node.js 文档中描述的函数中使用的参数：
+下表描述了此 Node.js 文档中所述函数中使用的参数：
 
 |参数|数据类型|描述|
 |:---|:---|
-|`deviceType`|字符串|设备类型。通常，deviceType 是一组执行特定任务的设备，例如“weatherballoon”。|
+|`deviceType`|字符串|设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
 |`deviceId`|字符串|设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
 |`eventType`|字符串|特定事件组，例如“status”、“warning”和“data”。|
 |`format`|字符串|格式可以为任意字符串，例如 JSON。  |
 |`data`|字典|消息有效内容的数据。最大长度为 131072 字节。|
 |`payload`|字符串|消息有效内容的数据。最大长度为 131072 字节。|
-|`topic`|字符串|发布为服务时，topic 字符串不会包含设备类型或设备标识；这两个值会从客户机标识中获取。例如，`iot-2/evt/event_id/fmt/format_string`。代表设备发布为应用程序或网关时，topic 必须包含设备类型和设备标识。例如，`iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`。|
+|`topic`|字符串|发布为设备时，topic 字符串不包含设备类型或设备标识；这两个值取自客户机标识。例如，`iot-2/evt/event_id/fmt/format_string`。代表设备发布为应用程序或网关时，topic 必须包含设备类型和设备标识。例如，`iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`。|

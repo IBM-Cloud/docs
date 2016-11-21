@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-26"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -17,16 +17,14 @@ copyright:
 
 
 # Instalando e conectando o aplicativo móvel de amostra
-{: #iotins_gettingstarted}
-Última atualização: 12 de setembro de 2016
-{: .last-updated}
+{: #iot4i_gettingstarted}
 
 O app móvel de amostra do {{site.data.keyword.iotinsurance_full}} é uma implementação de referência para um cliente móvel do {{site.data.keyword.iotinsurance_short}}. É
 possível usar o aplicativo para registrar novos dispositivos no sistema e receber alertas para os dispositivos.
 {:shortdesc}
 
 **Pré-requisitos:** antes de iniciar, assegure-se de que os pré-requisitos a seguir estejam adequados:
-  - Apple Xcode 7.3 ou ambiente de desenvolvimento integrado superior.
+  - Ambiente de desenvolvimento integrado do Apple Xcode 8 ou superior.
   - Um iOS 9.0 ou dispositivo móvel iPhone superior.
   - CocoaPods instalado no computador. Consulte o [Website do CocoaPods](https://guides.cocoapods.org/using/getting-started.html).
   - Os [parâmetros](#iot4i_mobileParam) necessários para conectar o app móvel de amostra à instância do serviço.
@@ -90,8 +88,8 @@ Execute as tarefas a seguir para ativar notificações push para seu dispositivo
 5. Crie um arquivo de Padrões de Criptografia de Chave Pública (PKCS) 12 e inclua-o no serviço {{site.data.keyword.mobilepushshort}}.
   1. Abra o Acesso Keychain e selecione **Meus certificados**.
   2. Clique com o botão direito em **Apple Development IOS Push Service: (bundleID)** e, em seguida, exporte, salve e insira uma senha para o arquivo.
-  3. No painel do {{site.data.keyword.Bluemix_notm}}, abra o serviço {{site.data.keyword.mobilepushshort}}.
-  4. Clique em **Configurar Push**.
+  3. Em seu console do {{site.data.keyword.Bluemix_notm}}, abra o serviço do {{site.data.keyword.mobilepushshort}}.
+  4. Clique em **Configurar**.
   5. Na seção Certificado do Apple Push Notifications, faça upload do arquivo PKCS 12 e insira a senha.
   6. No Xcode, mude o identificador de pacote configurável para aquele criado anteriormente.
   7. Execute o app e conceda permissões para o serviço Push Notification.
@@ -101,10 +99,11 @@ Execute as tarefas a seguir para ativar notificações push para seu dispositivo
 
 ## Referência de API
 {: #api}
-* [Exemplos de API do {{site.data.keyword.iotinsurance_short}}](https://iot4i-docs-api.mybluemix.net/dist/){:new_window}
+* [API do {{site.data.keyword.iotinsurance_short}}](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [Exemplos de API do {{site.data.keyword.iotinsurance_short}}](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
 
 ## Links Relacionados
 {: #general}
-* [Documentação do {{site.data.keyword.iot_full}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+* [Documentação do {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [Fórum de suporte do desenvolvedor](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
 * [Fórum de suporte do Stack overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix)

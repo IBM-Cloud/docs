@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}}-Administrator-CLI
 {: #bluemixadmincli}
 
-Letzte Aktualisierung: 17. August 2016
+Letzte Aktualisierung: 1. September 2016
 {: .last-updated}
 
 
@@ -37,6 +37,8 @@ Cloud Foundry-Befehlszeilenschnittstelle wird nicht von Cygwin unterstützt. Ver
 die Cloud Foundry-Befehlszeilenschnittstelle in einem
 Befehlszeilenfenster, das sich von dem Befehlszeilenfenster von Cygwin unterscheidet.
 
+**Hinweis**: Die {{site.data.keyword.Bluemix_notm}}-Administrator-CLI wird nur für die Umgebungen {{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated verwendet. Von {{site.data.keyword.Bluemix_notm}} Public wird sie nicht unterstützt.
+
 ## {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in hinzufügen
 
 Nach der Installation der Befehlszeilenschnittstelle 'cf' können Sie das
@@ -54,11 +56,12 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Die Unterdomäne der URL für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz. Beispiel: <code>https://console.mycompany.bluemix.net/cli</code>.</dd>
+<dd class="pd">Die Unterdomäne der URL für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz. Beispiel: <code>https://console.mycompany.bluemix.net/cli</code></dd>
 </dl>
 </li>
-<li>Führen Sie zum Installieren des {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-ins den folgenden Befehl aus:<br/><br/> <code>
-cf install-plugin bluemix-admin-cli -r BluemixAdmin
+<li>Führen Sie zum Installieren des {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-ins den folgenden Befehl aus:<br/><br/>
+<code>
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
 </ol>
@@ -71,7 +74,9 @@ Wenn Sie das Plug-in deinstallieren müssen, können Sie die folgenden Befehle v
 
 ## {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwenden
 
-Mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in können Sie Benutzer hinzufügen oder entfernen, Benutzer aus Organisationen zuweisen oder die Zuweisung von Benutzern aufheben und andere Management-Tasks ausführen. Führen Sie den folgenden Befehl aus,
+Mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in können Sie Benutzer hinzufügen oder entfernen, Benutzer aus Organisationen zuweisen oder die Zuweisung von Benutzern aufheben und andere Management-Tasks ausführen. 
+
+Führen Sie den folgenden Befehl aus,
 um eine Liste der Befehle anzuzeigen:
 
 ```
@@ -114,7 +119,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**Hinweis**: Zum Hinzufügen einer bestimmten Organisation müssen Sie der Manager der Organisation sein oder die Berechtigung **Admin** (alternativ **Superuser**) oder **User** mit dem Zugriff **Write** besitzen.
+**Hinweis**: Zum Hinzufügen einer bestimmten Organisation müssen Sie ein **Administrator** mit der Berechtigung **users.write** (oder **Superuser**) sein. Wenn Sie ein Organisationsmanager sind, kann Ihnen auch die Funktion bereitgestellt werden, mit der Sie Ihrer Organisation Benutzer über einen Superuser hinzufügen können, der den Befehl **enable-managers-add-users** ausführt. Weitere Informationen hierzu finden Sie unter [Managern die Möglichkeit geben, Benutzer hinzuzufügen](index.html#clius_emau).
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -129,17 +134,23 @@ cf ba add-user <user_name> <organization>
 
 ### Nach einem Benutzer suchen
 
-Sie können nach einem Benutzer suchen. Geben Sie den folgenden Befehl ein:
+Sie können nach einem Benutzer suchen. Geben Sie den folgenden Befehl in Kombination mit den optionalen Suchfilterparametern (Name, Berechtigung, Organisation und Rolle) ein:
 
 ```
-cf ba search-users <user_name>
+cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
-<dd class="pd">Der Name des Benutzers in {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
+<dd class="pd">Der Name des Benutzers in {{site.data.keyword.Bluemix_notm}}. </dd>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">Die Berechtigung, die dem Benutzer zugewiesen wurde. Beispiel: Superuser, Basic, Katalog, Benutzer und Berichte. Weitere Informationen zu den zugewiesenen Benutzerberechtigungen finden Sie im Abschnitt [Berechtigungen](../../../admin/index.html#permissions). Dieser Parameter kann nicht mit dem Organisationsparameter in derselben Abfrage verwendet werden. </dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
+<dd class="pd">Der Name der Organisation, zu der der Benutzer gehört. Dieser Parameter kann nicht mit dem Organisationsparameter in derselben Abfrage verwendet werden.</dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">Die Organisationsrolle, die dem Benutzer zugewiesen wurde. Beispiel: Manager, Abrechnungsmanager oder Auditor für die Organisation. Sie müssen mit diesem Parameter die Organisation angeben. Weitere Informationen zu Rollen finden Sie im Abschnitt [Benutzerrollen](../../../admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 
@@ -188,6 +199,30 @@ cf ba remove-user <user_name>
 </dl>
 
 **Tipp:** Sie können auch **ba ru** als Alias für den längeren Befehlsnamen **ba remove-user** verwenden.
+
+### Managern die Möglichkeit geben, Benutzer hinzuzufügen
+{: #clius_emau}
+
+Wenn Sie in Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung über die **Superuser**-Berechtigung verfügen, können Sie Organisationsmanagern die Möglichkeit geben, den von ihnen verwalteten Organisationen Benutzer hinzuzufügen. Geben Sie den folgenden Befehl ein:
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**Tipp:** Sie können auch **ba emau** als Alias für den längeren Befehlsnamen **ba enable-managers-add-users** verwenden.
+
+### Managern die Möglichkeit nehmen, Benutzer hinzuzufügen
+{: #clius_dmau}
+
+Wenn Organisationsmanager in Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung die Fähigkeit erhalten haben, den von ihnen verwalteten Organisationen Benutzer hinzuzufügen, indem sie den Befehl **enable-managers-add-users** verwenden, und wenn Sie über die **Superuser**-Berechtigung verfügen, können Sie diese Einstellung entfernen. Geben Sie den folgenden Befehl ein:
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**Tipp:** Sie können auch **ba dmau** als Alias für den längeren Befehlsnamen **ba disable-managers-add-users** verwenden.
 
 ### Organisation hinzufügen und löschen
 
@@ -398,7 +433,7 @@ cf ba disable-service-plan <plan_identifier>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen.</dd>
 </dl>
 
 **Tipp:** Sie können auch **ba dsp** als Alias für den längeren
@@ -421,7 +456,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, die der Sichtbarkeitsliste des Service hinzugefügt werden soll.</dd>
 </dl>
@@ -439,7 +474,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, die aus der Sichtbarkeitsliste des Service entfernt werden soll.</dd>
 </dl>
@@ -459,7 +494,7 @@ durch den Service, den Sie im Befehl angeben.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen. </dd>
+<dd class="pd">Der Name oder die GUID des Serviceplans, der aktiviert werden soll. Wenn Sie einen nicht eindeutigen Serviceplannamen eingeben, wie zum Beispiel 'Standard' oder 'Basic', werden Sie dazu aufgefordert, eine Auswahl aus einer angezeigten Liste mit Serviceplänen zu treffen. Wählen Sie die Servicekategorie auf der Homepage aus, um einen Serviceplannamen anzugeben. Wählen Sie dann **Hinzufügen** aus, um die Services für diese Kategorie anzuzeigen. Klicken Sie auf den Servicenamen, um die Detailansicht zu öffnen; anschließend können Sie die Namen der für diesen Service verfügbaren Servicepläne anzeigen.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, für die die Sichtbarkeit hinzugefügt werden soll. Sie können
 die Sichtbarkeit des Service für mehrere Organisationen aktivieren, indem Sie weitere Organisationsnamen oder GUIDs im Befehl angeben.</dd>
@@ -467,6 +502,25 @@ die Sichtbarkeit des Service für mehrere Organisationen aktivieren, indem Sie w
 
 **Tipp:** Sie können auch **ba espv** als Alias für den längeren
 Befehlsnamen **ba edit-service-plan-visibility** verwenden.
+
+### Informationen zur Ressourcennutzung anzeigen
+{: #cliresourceusage}
+
+Sie können Informationen zur Ressourcennutzung, darunter zur Nutzung von Speicher, Platte und CPU, anzeigen. Es wird eine Zusammenfassung der verfügbaren physischen und reservierten Ressourcen sowie der Nutzung dieser Ressourcen angezeigt. Zudem werden Nutzungsdaten, die vergangene Speichernutzung und die Plattenbelegung angezeigt. Die Daten zur vergangenen Speichernutzung und Plattenbelegung werden standardmäßig nach Wochen und in absteigender Reihenfolge angezeigt. Zum Anzeigen der Ressourcennutzungsinformationen verwenden Sie den folgenden Befehl:
+
+```
+cf ba resource-usage <monthly> <weekly> 
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;monthly&gt;</dt>
+<dd class="pd">Anzeige der vergangenen Nutzungsdaten für Speicher und Plattenbelegung jeweils für einen Monat.</dd>
+<dt class="pt dlterm">&lt;weekly&gt;</dt>
+<dd class="pd">Anzeige der vergangenen Nutzungsdaten für Speicher und Plattenbelegung jeweils für eine Woche. Dies ist der Standardwert.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba rsu** als Alias für den längeren Befehlsnamen **ba resource-usage** verwenden.
 
 ### Mit Service-Brokern arbeiten
 
@@ -601,7 +655,7 @@ cf ba create-security-group <security-group> <path-to-rules-file>
 
 **Tipp:** Sie können auch **ba csg** als Alias für den längeren Befehlsnamen **ba create-security-group** verwenden.
 
-* Geben Sie den folgenden Befehl ein, um eine Sicherheitsgruppe zu aktualisieren: 
+* Geben Sie den folgenden Befehl ein, um eine Sicherheitsgruppe zu aktualisieren:
 
 ```
 cf ba update-security-group <security-group> <path-to-rules-file>
@@ -617,7 +671,7 @@ cf ba update-security-group <security-group> <path-to-rules-file>
 
 **Tipp:** Sie können auch **ba usg** als Alias für den längeren Befehlsnamen **ba update-security-group** verwenden.
 
-* Geben Sie den folgenden Befehl ein, um eine Sicherheitsgruppe zu löschen: 
+* Geben Sie den folgenden Befehl ein, um eine Sicherheitsgruppe zu löschen:
 
 ```
 cf ba delete-security-group <security-group>
@@ -729,3 +783,80 @@ cf ba unbind-security-group <security-group> <org> <space>
 
 **Tipp:** Sie können auch **ba usg** als Alias für den längeren Befehlsnamen **ba unbind-staging-security-group** verwenden.
 
+### Mit Buildpacks arbeiten
+{: #buildpacks}
+
+Wenn Sie über eine Schreibberechtigung für den App-Katalog verfügen, können Sie Buildpacks auflisten, erstellen, aktualisieren oder löschen.  
+#### Alle Buildpacks auflisten
+
+Verwenden Sie den folgenden Befehl, um alle Buildpacks aufzulisten oder ein bestimmtes Buildpack anzuzeigen:
+
+```
+cf ba buildpacks <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">Ein optionaler Parameter zur Angabe eines bestimmten Buildpacks, das angezeigt werden soll.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba lb** als Alias für den längeren Befehlsnamen **ba buildpacks** verwenden.
+
+#### Buildpack erstellen und hochladen
+
+Sie können ein Buildpack erstellen und hochladen. Jede komprimierte Datei mit der Dateierweiterung .zip kann hochgeladen werden. Zum Hochladen eines Buildpacks verwenden Sie den folgenden Befehl:
+
+```
+cf ba create-buildpack <buildpack_name> <file_path> <position>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">Der Name des hochzuladenden Buildpacks.</dd>
+<dt class="pt dlterm">&lt;file_path&gt;</dt>
+<dd class="pd">Der Pfad zur komprimierten Datei des Buildpacks.</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">Die Reihenfolge, in der die Buildpacks während der automatischen Buildpackerkennung geprüft werden.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba cb** als Alias für den längeren Befehlsnamen **ba create-buildpack** verwenden.
+
+#### Buildpack aktualisieren
+
+Verwenden Sie den folgenden Befehl, um ein vorhandenes Buildpack zu aktualisieren:
+
+```
+cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">Der Name des zu aktualisierenden Buildpacks.</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">Die Reihenfolge, in der die Buildpacks während der automatischen Buildpackerkennung geprüft werden.</dd>
+<dt class="pt dlterm">&lt;enabled&gt;</dt>
+<dd class="pd">Gibt an, ob das Buildpack für das Staging verwendet wird.</dd>
+<dt class="pt dlterm">&lt;locked&gt;</dt>
+<dd class="pd">Gibt an, ob das Buildpack gesperrt ist, um Aktualisierungen zu verhindern.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba ub** als Alias für den längeren Befehlsnamen **ba update-buildpack** verwenden.
+
+#### Buildpack löschen
+
+Verwenden Sie den folgenden Befehl, um ein vorhandenes Buildpack zu löschen:
+
+```
+cf ba delete-buildpack <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">Der Name des zu löschenden Buildpacks.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba db** als Alias für den längeren Befehlsnamen **ba delete-buildpack** verwenden.

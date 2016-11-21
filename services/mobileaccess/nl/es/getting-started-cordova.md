@@ -2,17 +2,16 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
-{:shortdesc: .shortdesc}
+{:shortdesc: .shortdesc} 
 
 # Configuración del plug-in de Cordova
 {: #getting-started-cordova}
 
-Última actualización: 17 de julio de 2016
-{: .last-updated}
 
-Instrumente su aplicación de Cordova con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos y no protegidos.
+Instrumente su aplicación de Cordova con el SDK del cliente de {{site.data.keyword.amafull}}, inicialice el SDK y realice solicitudes a recursos protegidos y no protegidos.
+
 {:shortdesc}
 
 ## Antes de empezar
@@ -28,10 +27,16 @@ Debe tener lo siguiente:
 El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in de Cordova que incluye los SDK del cliente de {{site.data.keyword.amashort}} nativos. Se distribuye con la CLI (interfaz de línea de mandatos) y `npmjs`, un repositorio de plug-ins para proyectos de Cordova. La CLI de Cordova descarga los plug-ins automáticamente desde los repositorios y los pone a disposición de la aplicación de Cordova.
 
 1. Añada las plataformas Android e iOS a la aplicación de Cordova. Ejecute uno o ambos de los mandatos siguientes desde la línea de mandatos:
+   	
+	###Android
+	{: #install-cordova-android}
 
-	```Bash
+	```
 	cordova platform add android
 	```
+	
+	###iOS
+	{: #install-cordova-ios}
 
 	```Bash
 	cordova platform add ios
@@ -46,8 +51,8 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
-
-	El valor *minSdkVersion* debe ser superior a `15`. El valor *targetSdkVersion* debe ser al menos el último SDK de Android disponible desde Google.
+	
+	El valor *minSdkVersion* debe ser `15` o superior. El valor *targetSdkVersion* debe ser al menos el último SDK de Android disponible desde Google.
 
 3. Si ha añadido el sistema operativo iOS, actualice el elemento `<platform name="ios">` con una declaración de destino:
 
@@ -55,7 +60,7 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 	<platform name="ios">
 		<preference name="deployment-target" value="8.0"/>
 		<!-- add deployment target declaration -->
-	</platform>
+	 </platform>
 	```
 
 4. Instalación del plug-in de Cordova para {{site.data.keyword.amashort}}:
@@ -70,11 +75,11 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 	{: #cordova-android}
 
 	Antes de abrir el proyecto en Android Studio, cree la aplicación de Cordova mediante la interfaz de línea de mandatos (CLI) para evitar errores de compilación.
-
-		```
-		cordova build android
-		```
-
+	
+	```Bash
+	cordova build android
+	```
+	
 	####iOS
 	{: #cordova-ios}
 
@@ -82,19 +87,16 @@ El SDK del cliente de {{site.data.keyword.amashort}} para Cordova es un plug-in 
 
 	1. Utilice la versión más reciente de Xcode para abrir el archivo `xcode.proj` en el directorio `<nombre_app>/platforms/ios`.
 
-		**Importante:** Si recibe un mensaje para convertir a la última sintaxis de Swift, pulse Cancelar.
+		**Importante:** Si recibe un mensaje para convertir a la última sintaxis de Swift, pulse **Cancelar**.
 
 	2. Vaya a **Valores de compilación > Compilador de Swift - Generación de código > Cabecera puente de Objective-C**, y añada la siguiente vía de acceso:
 
-			```
-			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
-			```
+		`<nombre_proyecto>/Plugins/ibm-mfp-core/Bridging-Header.h`
 
 	3. Vaya a **Valores de compilación > Enlazar > Vías de acceso de búsqueda de Runpath**, y añada el siguiente parámetro de Frameworks:
 
-			```
-			@executable_path/Frameworks
-			```
+		`@executable_path/Frameworks
+			`
 
 	4. Cree y ejecute la aplicación con Xcode.
 
@@ -111,26 +113,35 @@ Para utilizar el SDK del cliente de {{site.data.keyword.amashort}}, debe inicial
 
 1. Busque los valores de GUID y ruta de la aplicación en la página principal del panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse el nombre de la app y después **Opciones móviles** para visualizar los valores de **Ruta de aplicación** y **GUID de aplicación** para inicializar el SDK.
 
-3. Añada la llamada siguiente al archivo `index.js` para inicializar el SDK del cliente de {{site.data.keyword.amashort}}. Sustituya *applicationRoute* y *applicationGUID* por los valores de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
+3. Añada la llamada siguiente al archivo `index.js` para inicializar el SDK del cliente de {{site.data.keyword.amashort}}. 
 
 	```JavaScript
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
+
+  * Sustituya `applicationRoute` y `applicationGUID` por los valores de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
+
+##Inicialización de {{site.data.keyword.amashort}} AuthorizationManager
+{: #initializing-auth-manager}
+
+Utilice el siguiente código JavaScript en la aplicación de Cordova para inicializar el AuthorizationManager de {{site.data.keyword.amashort}}.
+
+```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+```
+
+Sustituya el valor de `tenantId` por el `tenantId` del servicio de {{site.data.keyword.amashort}}. Puede encontrar este valor pulsando el botón **Mostrar credenciales** en el icono del servicio {{site.data.keyword.amashort}}.
 
 ## Cómo realizar una solicitud a la aplicación de programa de fondo móvil
 {: #getting-started-request}
 
 Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, puede empezar a realizar solicitudes a la aplicación de programa de fondo móvil.
 
-1. Intente enviar una solicitud a un punto final protegido de la nueva aplicación de programa de fondo móvil. En el navegador, abra el siguiente URL: `{applicationRoute}/protected`. Por ejemplo:
-
-	```
-	http://my-mobile-backend.mybluemix.net/protected
-	```
+1. Intente enviar una solicitud a un punto final protegido de la nueva aplicación de programa de fondo móvil. En el navegador, abra el siguiente URL: `{applicationRoute}/protected` (por ejemplo, `http://my-mobile-backend.mybluemix.net/protected`).
 
 	El punto final `/protected` de una aplicación de programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` en el navegador. Este mensaje se devuelve porque solo se accede a este punto final con aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
 
-1. Utilice la aplicación de Cordova para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
+2. Utilice la aplicación de Cordova para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
 
 	```Javascript
 	var success = function(data){
@@ -146,11 +157,11 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
 	request.send(success, failure);
 	```
 
-1. Cuando la solicitud se realiza correctamente, verá la siguiente salida en la utilidad LogCat o la consola de Xcode (según la plataforma que esté utilizando):
+3. Cuando la solicitud se realiza correctamente, verá la siguiente salida en la utilidad LogCat o la consola de Xcode (según la plataforma que esté utilizando):
 
 	![imagen](images/getting-started-android-success.png)
 
-	## Próximos pasos
+	## Pasos siguientes
 	{: #next-steps}
 
 	Cuando se ha conectado al punto final protegido, no se han necesitado credenciales. Para que los usuarios inicien sesión en la aplicación, debe configurar la autenticación de Facebook, Google o Personalizada.

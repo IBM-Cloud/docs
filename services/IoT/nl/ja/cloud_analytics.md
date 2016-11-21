@@ -13,7 +13,7 @@ copyright:
 
 # クラウド分析
 {: #cloud_analytics}
-最終更新日: 2016 年 8 月 2 日
+最終更新日: 2016 年 8 月 23 日
 {: .last-updated}
 
 {{site.data.keyword.iot_short}} クラウド分析を使用することによって、リアルタイムのデバイス・データに基づいて、条件を満たした場合にアラートやオプションのアクションを起動するルール条件を指定できます。    
@@ -97,7 +97,7 @@ Condition = `temp_cpu>60 AND cpu_load>90`
 条件が *M* *日/時間/分/カスタム*内に *N* 回満たされるとトリガーします | 選択した時間間隔内に条件が *N* 回満たされた場合にルールがトリガーされ、構成された期間が経過するまで再びトリガーされることはありません。</br>例: 条件付きトリガー要件 = `30 分以内に 4 回条件が満たされた場合に 1 回だけトリガーする`。デバイスは 5 分ごとに 1 つの新規メッセージを送信します。正午に、温度が初めて 90 度を超え、条件が満たされます。条件付きトリガーのカウンターが開始されますが、ルールはまだトリガーされません。15 分が経過し、`temp > 90` を示すさらに 3 つのメッセージを受け取ると、ルールはトリガーされます。温度にかかわらず、ルールはその後の 15 分間はトリガーされません。
 条件が初めて適合した場合にのみトリガーし、条件が適合しなくなったらリセットします。 | 条件が満たされるとルールはトリガーされますが、条件を満たす連続メッセージに対してはトリガーされません。トリガー基準は、ルール条件を満たさない最初のメッセージによってリセットされます。
 
-<!-- Trigger if conditions persist for *M* *days/hours/minutes/custom*. | The rule is triggered when the conditions are met continuously for the selected time interval. </br>The rule is also triggered if the following requirements are met: <ol><li>The rule conditions are first met but are then followed by a time period during which no new messages are received.<li>The no-messages time period exceeds the selected time interval.<li>The message that ends the no-message time period meets the rule conditions.</ol>-->
+*M* *日/時間/分/カスタム*の条件が続くとトリガーします | 選択した時間間隔中に受信したすべてのデータ・ポイントが条件を満たしている場合や、追加のデータ・ポイントを受信していない場合は、その時間間隔の後に規則がトリガーされます。時間間隔は、条件が最初に満たされた時点で開始します。
 
 
 

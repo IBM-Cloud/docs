@@ -15,8 +15,8 @@ copyright:
 Last Updated: 20 July 2016
 {: .last-updated}
 
-In some environments such as [Bluemix Dedicated](../../dedicated/index.html#dedicated) and
-[Bluemix Local](../../local/index.html#local) a proxy may be configured which effects the
+In some environments such as [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) and
+[Bluemix Local](/docs/local/index.html#local) a proxy may be configured which effects the
 behavior of your application during staging and runtime.
 
 You can configure your application to work with the proxy using the following environment variables:
@@ -38,7 +38,7 @@ dependent and unaffected by the buildpack and any of these three environment var
 ## Java applications
 {: #java_apps}
 
-For [Liberty for Java](../runtimes/liberty/index.html) and the [java_buildpack](../runtimes/tomcat/index.html) applications the proxy settings can be passd to the runtime via the **JAVA_OPTS** environment variable.  For example you can issue the command: 
+For [Liberty for Java](/docs/runtimes/liberty/index.html) and the [java_buildpack](/docs/runtimes/tomcat/index.html) applications the proxy settings can be passd to the runtime via the **JAVA_OPTS** environment variable.  For example you can issue the command: 
 ```
    $ cf se myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
@@ -50,5 +50,5 @@ and restage your application.  Your application will then use the specified prox
 {: #rellinks}
 ## general
 {: #general}
-* [Liberty for Java](../runtimes/liberty/index.html)
-* [SDK for Nodejs](../runtimes/nodejs/index.html)
+* [Liberty for Java](/docs/runtimes/liberty/index.html)
+* [SDK for Nodejs](/docs/runtimes/nodejs/index.html)

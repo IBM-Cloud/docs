@@ -250,7 +250,7 @@ iotdm-1/device/update
 
 El campo `measuredDateTime` es la fecha de medida de ubicación. El campo `updatedDateTime` es la fecha de la actualización a la información de dispositivo. Por motivos de eficiencia, {{site.data.keyword.iot_short_notm}} a veces procesa actualizaciones a la información de ubicación de modo que las actualizaciones se retrasan ligeramente. La latitud y longitud deben especificarse en grados decimales utilizando World Geodetic System 1984 (WGS84).
 
-Siempre que se actualiza la ubicación, los valores que se proporcionan para latitud, longitud, elevación e incertidumbre se consideran una sola actualización de varios valores. La latitud y la longitud son obligatorios y ambos deben proporcionarse con cada actualización. La elevación y la incertidumbre son opcionales y se pueden omitir.
+Siempre que se actualiza la ubicación, los valores que se proporcionan para latitud, longitud, elevación e incertidumbre se consideran una sola actualización de varios valores. La latitud y la longitud son obligatorios y ambos deben proporcionarse con cada actualización.  La elevación y la incertidumbre son opcionales y se pueden omitir.
 
 Si se suministra un valor opcional en una actualización y posteriormente se omite en una actualización posterior, el valor más antiguo se suprime por la actualización posterior. Cada actualización se considera un conjunto de varios valores completo.
 

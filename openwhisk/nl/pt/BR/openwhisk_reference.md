@@ -18,7 +18,7 @@ copyright:
 
 # Detalhes do sistema {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_reference}
-Última atualização: 4 de agosto de 2016
+Última atualização: 9 de setembro de 2016
 {: .last-updated}
 
 As seções a seguir fornecem mais detalhes sobre o sistema {{site.data.keyword.openwhisk}}.
@@ -103,17 +103,15 @@ Além disso, não há garantia de execução de ações atomicamente. Duas açõ
 modelo de consistência simultâneo específico para efeitos colaterais. Quaisquer efeitos
 colaterais de simultaneidade serão dependentes da implementação.
 
-### Semântica de no máximo uma vez
+### Garantias de execução de ação
 {: #openwhisk_atmostonce}
-
-O sistema suporta a chamada de ações de no máximo uma vez.
 
 Quando uma solicitação de chamada é recebida, o sistema registra a solicitação e despacha uma ativação.
 
 O sistema retorna um ID de ativação (no caso de uma chamada não de bloqueio) para
-confirmar que a chamada foi recebida. Observe que mesmo na ausência dessa resposta
-(talvez devido a uma conexão de rede interrompida), é possível que a chamada tenha sido
-recebida.
+confirmar que a chamada foi recebida.
+Observe que se houver uma falha de rede ou outra falha que intervenha antes de você receber uma resposta HTTP, será possível
+que o {{site.data.keyword.openwhisk_short}} tenha recebido e processado a solicitação.
 
 O sistema tenta chamar a ação uma vez, resultando em um dos quatro resultados a seguir:
 - *sucesso*: a chamada da ação foi concluída com sucesso.
@@ -126,6 +124,10 @@ O resultado é registrado no campo `status` do registro de ativação, como docu
 
 Cada chamada recebida com sucesso e para a qual o usuário pode ser faturado terá, eventualmente, um registro de ativação.
 
+Observe que no caso de *erro de desenvolvedor de ação*, a ação pode ter sido executada parcialmente e ter gerado efeitos colaterais
+visíveis externamente. É de responsabilidade do usuário verificar se esses efeitos colaterais realmente aconteceram e emitir lógica
+de nova tentativa, se desejado. Observe também que determinados *erros internos de whisk* indicarão que uma ação iniciou a execução,
+mas o sistema falhou antes da ação registrar a conclusão.
 
 ## Registro de ativação
 {: #openwhisk_ref_activation}
@@ -140,8 +142,7 @@ Um registro de ativação contém os campos a seguir:
 - *logs*: uma matriz de sequências com os logs produzidos pela ação
 durante sua ativação. Cada elemento de matriz corresponde a uma saída de linha para
 `stdout` ou `stderr` pela ação e inclui a hora e o
-fluxo da saída do log. A
-estrutura é da seguinte forma: ```TIMESTAMP STREAM: LOG_OUTPUT```.
+fluxo da saída do log. A estrutura é a seguinte: `TIMESTAMP STREAM: LOG_OUTPUT`.
 - *response*: um dicionário que define as chaves `success`, `status` e `result`:
   - *status*: o resultado de ativação, que pode ser um dos valores a seguir: "sucesso", "erro de aplicativo", "erro de desenvolvedor da ação", "erro interno do whisk".
   - *success*: é `true` se e somente se o status for `"sucesso"`
@@ -185,8 +186,8 @@ pode ser *síncrona* ou *assíncrona*.
 
 A ativação de uma ação JavaScript é **síncrona** se a função principal sair sob uma das condições a seguir:
 
-- A função principal sai sem executar um ```return``` 
-- A função principal sai executando uma instrução ```return``` que retorna qualquer valor *exceto* uma Promessa.
+- A função principal sai sem executar uma instrução `return`.
+- A função principal sai executando uma instrução `return` que retorna qualquer valor *exceto* uma Promessa.
 
 Aqui está um exemplo de ação síncrona.
 
@@ -205,8 +206,9 @@ function main(params) {
 {: codeblock}
 
 A ativação de uma ação JavaScript será **assíncrona** se a
-função principal sair retornando uma Promessa. Nesse caso, o sistema assume que a ação
-ainda está em execução, até que a Promessa tenha sido cumprida ou rejeitada. Comece
+função principal sair retornando uma Promessa.  Nesse caso, o sistema assume que a ação
+ainda está em execução, até que a Promessa tenha sido cumprida ou rejeitada.
+Comece
 instanciando um novo objeto Promessa e passando a ele uma função de retorno de chamada. O
 retorno de chamada aceita dois argumentos, resolver e rejeitar, que são ambos funções. Todos
 os códigos assíncronos vão dentro desse retorno de chamada.
@@ -254,61 +256,78 @@ function main(args) {
          return {done: true};
       }
   }
-````
+```
 {: codeblock}
 
 Observe que, independentemente de uma ativação ser síncrona ou assíncrona, a
 chamada da ação pode bloqueio ou não bloqueio.
 
 ### Métodos adicionais do SDK
-{: #openwhisk_ref_javascript_additsdk}
 
-A função `whisk.invoke()` chama outra ação. Ela aceita como
-argumento um dicionário que define os parâmetros a seguir: 
+A função `whisk.invoke()` chama outra ação e retorna uma Promessa para a ativação resultante. Ela aceita como
+argumento um dicionário que define os parâmetros a seguir:
 
 - *name*: o nome completo da ação a ser chamada,
 - *parameters*: um objeto JSON que representa a entrada para a ação chamada. Se omitido, usa como padrão um objeto vazio.
-- *apiKey*: a chave de autorização com a qual chamar a ação. Usa como padrão `whisk.getAuthKey()`. 
-- *blocking*: se a ação deve ser chamada no modo de bloqueio ou sem bloqueio. Usa como padrão `false`, indicando uma chamada sem bloqueio.
-- *next*: uma função de retorno de chamada opcional a ser executada quando a chamada for concluída.
+- *apiKey*: a chave de autorização com a qual chamar a ação. Usa como padrão `whisk.getAuthKey()`.
+- *blocking*: se a ação deve ser chamada no modo de bloqueio ou sem bloqueio. Quando o `blocking` é verdadeiro, a chamada irá esperar pelo resultado da ação chamada
+antes de resolver a Promessa retornada. Usa como padrão `false`, indicando uma chamada sem bloqueio.
 
-A assinatura para `next` é `function(error, activation)`, em que:
-
-- `error` é `false` se a chamada foi
-bem-sucedida e um valor *truthy* (um valor traduzido como true quando
-avaliado em um contexto booleano) se falhou, normalmente uma sequência que
-descreve o erro.
-- Em erros, `activation` pode ficar indefinida, dependendo do modo de falha.
-- Quando definida, `activation` é um dicionário com os campos a seguir:
-  - *activationId*: o ID de ativação:
-  - *result*: se a ação tiver sido chamada no
+`whisk.invoke()` retorna uma Promessa. Para fazer o sistema OpenWhisk esperar a conclusão da chamada, deve-se retornar essa Promessa a partir de sua função `main`
+da ação.
+- Se a chamada falhar, a promessa rejeitará com um objeto descrevendo a chamada com falha. Ele terá potencialmente dois campos:
+  - *erro*: um objeto descrevendo o erro - geralmente uma sequência.
+  - *ativação*: um dicionário opcional que pode ou não estar presente, dependendo da natureza da falha de chamada. Se estiver presente, ele terá os campos a seguir:
+    - *activationId*: o ID de ativação:
+    - *result*: se a ação tiver sido chamada no
 modo de bloqueio: o resultado da ação será um objeto JSON, caso contrário `undefined`.
+- Se a chamada for bem-sucedida, a promessa irá resolver com um dicionário descrevendo a ativação com campos *activationId* e *resultado* conforme descrito acima.
 
-A função `whisk.trigger()` dispara um acionador. Ela aceita como um argumento um objeto JSON com os parâmetros a seguir:
+Abaixo está um exemplo de uma chamada de bloqueio que utiliza a promessa retornada:
+```javascript
+return whisk.invoke({
+  name: 'myAction',
+  blocking: true
+})
+.then(function (activation) {
+    // activation completed successfully, activation contains the result
+    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
+})
+.catch(function (reason) {
+    console.log('An error has occured ' + reason.error);
+
+    if(reason.activation) {
+      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
+    } else {
+      console.log('Failed to create activation.');
+    }
+});
+```
+{: codeblock}
+
+A função `whisk.trigger()` dispara um acionador e retorna uma Promessa para a ativação resultante. Ela aceita como um argumento um objeto JSON com os parâmetros a seguir:
 
 - *name*: o nome completo do acionador a ser chamado.
 - *parameters*: um objeto JSON que representa a entrada para o acionador. Se omitido, usa como padrão um objeto vazio.
 - *apiKey*: a chave de autorização com a qual disparar o acionador. Usa como padrão `whisk.getAuthKey()`.
-- *next*: uma função de retorno de chamada opcional a ser executada quando o disparo for concluído.
 
-A assinatura para `next` é `function(error, activation)`, em que:
-
-- `error` é `false` se o disparo for
-bem-sucedido e um valor *truthy* se falhou, normalmente uma sequência
-que descreve o erro.
-- Em erros, `activation` pode ficar indefinida, dependendo do modo de falha.
-- Quando definido, `activation` é um dicionário com um campo `activationId` que contém o ID de ativação.
+`whisk.trigger()` retorna uma Promessa. Se você requer que o sistema OpenWhisk espere a conclusão do acionador, deverá retornar essa Promessa a partir de sua função
+`main` da ação.
+- Se o acionador falhar, a promessa rejeitará com um objeto descrevendo o erro.
+- Se o acionador for bem-sucedido, a promessa irá resolver com um dicionário com um campo `activationId` contendo o ID de ativação.
 
 A função `whisk.getAuthKey()` retorna a chave de autorização sob a qual a ação está em execução. Normalmente,
 não é necessário chamar essa função diretamente porque ela é usada
 implicitamente pelas funções `whisk.invoke()` e
-`whisk.trigger()`. 
+`whisk.trigger()`.
 
-### Ambientes de tempo de execução Node.js
+### Ambientes de tempo de execução do JavaScript
+{: #openwhisk_ref_javascript_environments}
 
-As ações JavaScript são executadas por padrão em um ambiente Node.js versão 6.2.0. O
+As ações JavaScript são executadas por padrão em um ambiente Node.js versão 6.2.0.  O
 ambiente 6.2.0 também será usado para uma ação se a sinalização `--kind`
-for explicitamente especificada com um valor 'nodejs:6' ao criar/atualizar a ação. Os
+for explicitamente especificada com um valor 'nodejs:6' ao criar/atualizar a ação.
+Os
 pacotes a seguir estão disponíveis para serem usados no ambiente Node.js 6.2.0:
 
 - apn v1.7.5
@@ -357,7 +376,8 @@ pacotes a seguir estão disponíveis para serem usados no ambiente Node.js 6.2.0
 
 O ambiente Node.js versão 0.12.14 será usado para uma ação se a sinalização
 `--kind` for explicitamente especificada com um valor 'nodejs' ao
-criar/atualizar a ação. Os pacotes a seguir estão disponíveis para serem usados no
+criar/atualizar a ação.
+Os pacotes a seguir estão disponíveis para serem usados no
 ambiente Node.js 0.12.14:
 
 - apn v1.7.4
@@ -399,23 +419,58 @@ ambiente Node.js 0.12.14:
 - xmlhttprequest v1.7.0
 - yauzl v2.3.1
 
+## Ações do Python
+
+As ações do Python são executadas por padrão usando o Python 2.7.12.
+Além da biblioteca padrão do Python, os pacotes a seguir também estão disponíveis para uso por ações do Python.
+
+- attrs v16.1.0
+- beautifulsoup4 v4.5.1
+- cffi v1.7.0
+- click v6.6
+- cryptography v1.5
+- cssselect v0.9.2
+- enum34 v1.1.6
+- flask v0.11.1
+- gevent v1.1.2
+- greenlet v0.4.10
+- httplib2 v0.9.2
+- idna v2.1
+- ipaddress v1.0.16
+- itsdangerous v0.24
+- jinja2 v2.8
+- lxml v3.6.4
+- markupsafe v0.23
+- parsel v1.0.3
+- pyasn1 v0.1.9
+- pyasn1-modules v0.0.8
+- pycparser v2.14
+- pydispatcher v2.0.5
+- pyopenssl v16.1.0
+- python-dateutil v2.5.3
+- queuelib v1.4.2
+- requests v2.11.1
+- scrapy v1.1.2
+- service-identity v16.0.0
+- simplejson v3.8.2
+- six v1.10.0
+- twisted v16.4.0
+- w3lib v1.15.0
+- werkzeug v0.11.10
+- zope.interface v4.3.1
 
 ## Ações do Docker
 {: #openwhisk_ref_docker}
 
-As ações do Docker executam binário fornecido pelo usuário em um contêiner do Docker. O binário é executado em uma imagem do Docker com base no Ubuntu 14.04 LTD, de modo que o binário deve ser compatível com essa distribuição.
+As ações do Docker executam binário fornecido pelo usuário em um contêiner do Docker. O binário é executado em uma imagem do Docker com base no
+[python:2.7.12-alpine](https://hub.docker.com/r/library/python), de maneira que o binário deve ser compatível com essa distribuição.
 
-O parâmetro "payload" de entrada da ação é passado como um argumento posicional ao programa binário e a saída padrão da execução do programa é retornada no parâmetro "result".
+A estrutura básica do Docker é uma maneira conveniente de construir imagens do Docker compatíveis com o OpenWhisk. É possível instalar a estrutura básica com o comando da CLI `wsk sdk install docker`.
 
-A estrutura básica do Docker é uma maneira conveniente de construir imagens do Docker compatíveis com o {{site.data.keyword.openwhisk_short}}. É possível instalar a estrutura básica com o comando da CLI `wsk sdk install docker`.
+O programa binário principal deve estar localizado em `/action/exec` dentro do contêiner. O executável recebe os argumentos de entrada via `stdin` e deve retornar um
+resultado via `stdout`.
 
-O programa binário principal deve ser copiado para o arquivo
-`dockerSkeleton/client/action`. Qualquer arquivo ou biblioteca de
-acompanhamento pode existir no diretório `dockerSkeleton/client`.
-
-Também é possível incluir qualquer etapa ou dependência de compilação modificando o `dockerSkeleton/Dockerfile`. Por
-exemplo, será possível instalar o Python se sua ação for um script Python.
-
+Você pode incluir qualquer etapa ou dependência de compilação modificando o `Dockerfile` incluído no `dockerSkeleton`.
 
 ## API REST
 {: #openwhisk_ref_restapi}
@@ -424,15 +479,14 @@ Todos os recursos no sistema estão disponíveis por meio de uma API REST. Exist
 
 Estes são os terminais de coleta:
 
-- `https://{BASE URL}/api/v1/namespaces`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations`
+- `https://openwhisk.{DomainName}/api/v1/namespaces`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
 
-A `{BASE URL}` é o nome do host da API OpenWhisk (por exemplo,
-openwhisk.ng.bluemix.net, 172.17.0.1 e assim por diante)
+O `openwhisk.{DomainName}` é o nome do host da API do OpenWhisk (por exemplo, openwhisk.ng.bluemix.net, 172.17.0.1 e assim por diante).
 
 Para o `{namespace}`, o caractere `_` pode ser
 usado para especificar o *namespace padrão* do usuário (isto é, endereço de e-mail).
@@ -442,12 +496,12 @@ lista de entidades na coleção.
 
 Existem terminais de entidade para cada tipo de entidade:
 
-- `https://{BASE URL}/api/v1/namespaces/{namespace}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
 
 Os terminais de namespace e ativação suportam apenas solicitações GET. Os terminais
 de ações, acionadores, regras e pacotes suportam solicitações GET, PUT e DELETE. Os
@@ -489,7 +543,7 @@ curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whi
 A API OpenWhisk suporta chamadas de solicitação-resposta de Web clients. O OpenWhisk responde para solicitações de `OPTIONS` com cabeçalhos de Compartilhamento de Recurso de Origem
 Cruzada. Atualmente, todas as origens são permitidas (ou seja, a Origem de Permissão de
 Controle de Acesso é "`*`") e os Cabeçalhos de Permissão de Controle de
-Acesso produzem Autorização e Tipo de Conteúdo. 
+Acesso produzem Autorização e Tipo de Conteúdo.
 
 **Atenção:** como o OpenWhisk suporta apenas uma chave por conta
 atualmente, não é recomendado usar CORS além de experimentos simples. Sua chave
@@ -499,7 +553,9 @@ com cuidado.
 ## Limites do sistema
 {: #openwhisk_syslimits}
 
-O {{site.data.keyword.openwhisk_short}} tem alguns limites do sistema, incluindo quanto de memória uma ação usa e quantas chamadas de ação são permitidas por hora. A tabela a seguir lista os limites padrão.
+### Ações
+O {{site.data.keyword.openwhisk_short}} tem alguns limites do sistema, incluindo quanto de memória uma ação usa e quantas chamadas de ação são permitidas por hora. A tabela a seguir lista os
+limites padrão para ações.
 
 | limite | Descrição | configuráveis | unit | Padrão |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -536,6 +592,10 @@ O {{site.data.keyword.openwhisk_short}} tem alguns limites do sistema, incluindo
 * O tamanho máximo do código da ação é 48 MB.
 * É recomendado para uma ação de JavaScript usar uma ferramenta para concatenar todos os códigos-fonte incluindo dependências em um único arquivo em pacote configurável.
 
+### Por tamanho de carga útil de ativação (MB) (Fixo: 1 MB)
+{: #openwhisk_syslimits_activationsize}
+* O tamanho do conteúdo máximo de POST mais quaisquer parâmetros preparados para uma chamada de ação ou um disparo de acionador é 1 MB.
+
 ### Por chamada simultânea de namespace (Padrão: 100)
 {: #openwhisk_syslimits_concur}
 * O número de ativações que são atualmente processadas para um namespace não pode exceder 100.
@@ -546,7 +606,7 @@ O {{site.data.keyword.openwhisk_short}} tem alguns limites do sistema, incluindo
 {: #openwhisk_syslimits_invocations}
 * O limite de taxa N é configurado para 120/3.600 e limita o número de chamadas de ações em janelas de um minuto/hora.
 * Um usuário não pode mudar esse limite ao criar a ação.
-* Uma chamada da CLI que exceder esse limite receberá um código de erro correspondente a TOO_MANY_REQUESTS.
+* Uma CLI ou chamada API que exceder esse limite receberá um código de erro correspondente ao código de status de HTTP `429: TOO MANY REQUESTS`.
 
 ### Tamanho dos parâmetros (Fixo: 1 MB)
 {: #openwhisk_syslimits_parameters}
@@ -569,3 +629,18 @@ docker](https://docs.docker.com/engine/reference/commandline/run).
 * Para obter mais informações sobre o ulimit para número máximo de processos, consulte a documentação de
 [execução do
 docker](https://docs.docker.com/engine/reference/commandline/run).
+
+### Acionador
+
+Acionadores estão sujeitos a uma taxa de disparo por minuto e por hora conforme documentado na tabela abaixo.
+
+| limite | Descrição | configuráveis | unit | Padrão |
+| ----- | ----------- | ------------ | -----| ------- |
+| minuteRate | um usuário não pode disparar mais do que essa quantia de acionadores por minuto | por usuário | number | 60 |
+| hourRate | um usuário não pode disparar mais do que essa quantia de acionadores por hora | por usuário | number | 720 |
+
+### Acionadores por minuto/hora (Fixo: 60/720)
+{: #openwhisk_syslimits_triggerratelimit}
+* O limite de taxa N é configurado para 60/720 e limita o número de acionadores que podem ser disparados em janelas de um minuto/hora.
+* Um usuário não pode mudar esse limite ao criar o acionador.
+* Uma CLI ou chamada API que exceder esse limite receberá um código de erro correspondente ao código de status de HTTP `429: TOO MANY REQUESTS`.

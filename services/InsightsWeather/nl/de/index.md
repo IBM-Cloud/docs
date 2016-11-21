@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # Einführung in Insights for Weather
 {: #insights_weather_overview}
-
-*Letzte Aktualisierung: 19. Mai 2016*
 
 Verwenden Sie {{site.data.keyword.weatherfull}},
 um Wetterdaten von "The Weather Company" (TWC) in Ihre {{site.data.keyword.Bluemix}}-Anwendungen einzubinden.
@@ -86,7 +85,7 @@ Antwortteil eine Nachricht über unberechtigten Zugriff ausgegeben.
 
 ## Allgemeines
 {: #general}
-* [Hinzufügen eines Service zur Anwendung](../reqnsi.html){: new_window}
+* [Hinzufügen eines Service zur Anwendung](/docs/services/reqnsi.html){: new_window}
 * [End-to-End-Entwicklung](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} Preisliste](https://console.{DomainName}/pricing/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} Voraussetzungen](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

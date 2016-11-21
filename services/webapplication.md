@@ -1,19 +1,18 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Web and Application
 {: #webapplication}
 
-*Last updated: 9 December 2015*
-
-Use these services to add or remove features rapidly while you develop web applications in the cloud. You can also simplify management tasks, and organize your business processes and rules. 
+Use these services to add or remove features rapidly while you develop web applications in the cloud. You can also simplify management tasks, and organize your business processes and rules.
 {:shortdesc}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-26"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -17,15 +17,13 @@ copyright:
 
 
 # 安裝及連接範例行動應用程式
-{: #iotins_gettingstarted}
-前次更新：2016 年 9 月 12 日
-{: .last-updated}
+{: #iot4i_gettingstarted}
 
 {{site.data.keyword.iotinsurance_full}} 範例行動應用程式是 {{site.data.keyword.iotinsurance_short}} 行動用戶端的參照實作。您可以使用應用程式在系統中登錄新裝置，以及接收裝置的警示。
 {:shortdesc}
 
 **必要條件：**開始之前，請確定已具有下列必要條件：
-  - Apple Xcode 7.3 或以上版本的整合開發環境。
+  - Apple Xcode 8 或以上版本的整合開發環境。
   - iOS 9.0 或以上版本的 iPhone 行動裝置。
   - 電腦上所安裝的 CocoaPods。請參閱 [CocoaPods 網站](https://guides.cocoapods.org/using/getting-started.html)。
   - 將範例行動應用程式連接至服務實例所需的[參數](#iot4i_mobileParam)。
@@ -89,8 +87,8 @@ copyright:
 5. 建立「公開金鑰密碼化標準 (PKCS) 12」檔案，並將它新增至 {{site.data.keyword.mobilepushshort}} 服務。
   1. 開啟「金鑰鏈存取」，然後選取**我的憑證**。
   2. 在 **Apple 開發 IOS Push 服務：(bundleID)** 上按一下滑鼠右鍵，然後匯出、儲存及輸入檔案的密碼。
-  3. 在您的 {{site.data.keyword.Bluemix_notm}} 儀表板中，開啟 {{site.data.keyword.mobilepushshort}} 服務。
-  4. 按一下**設定 Push**。
+  3. 在您的 {{site.data.keyword.Bluemix_notm}} 主控台中，開啟 {{site.data.keyword.mobilepushshort}} 服務。
+  4. 按一下**配置**。
   5. 在「Apple Push Notifications 憑證」區段中，上傳 PKCS 12 檔案，然後輸入密碼。
   6. 在 Xcode 中，將軟體組 ID 變更為您先前建立的軟體組 ID。
   7. 執行應用程式，並授與 Push Notification 服務的許可權。
@@ -100,10 +98,11 @@ copyright:
 
 ## API 參考資料
 {: #api}
-* [{{site.data.keyword.iotinsurance_short}} API 範例](https://iot4i-docs-api.mybluemix.net/dist/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
+* [{{site.data.keyword.iotinsurance_short}} API 範例](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
 
 ## 相關鏈結
 {: #general}
-* [{{site.data.keyword.iot_full}} 文件](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
+* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [開發人員支援討論區](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
 * [Stack Overflow 支援討論區](http://stackoverflow.com/questions/tagged/ibm-bluemix)

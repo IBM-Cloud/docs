@@ -2,142 +2,145 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-27"
 
 ---
-# {{site.data.keyword.mobileanalytics_short}} によるアプリのモニター
+# {{site.data.keyword.mobileanalytics_short}} によるアプリケーションのモニター
 {: #monitoringapps}
-*最終更新日時: 2016 年 4 月 25 日*
+
+最終更新日: 2016 年 9 月 27 日
 {: .last-updated}
 
-{{site.data.keyword.mobileanalytics_full}} には、モバイル・アプリケーションのモニタリングや分析を行う機能が備えられています。{{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用して、クライアント・ログを記録したりデータをモニターしたりできます。開発者は、このデータを {{site.data.keyword.mobileanalytics_short}} サービスに送信するタイミングを制御できます。データが {{site.data.keyword.mobileanalytics_short}} に送信されると、{{site.data.keyword.mobileanalytics_short}} ダッシュボードを使用して、モバイル・アプリケーションや、デバイス、クライアント・ログに関する分析の洞察を得ることができます。
+{{site.data.keyword.mobileanalytics_full}} には、モバイル・アプリケーションのモニタリングや分析を行う機能が備えられています。{{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用して、アプリケーション・ログを記録したりデータをモニターしたりできます。開発者は、このデータを {{site.data.keyword.mobileanalytics_short}} サービスに送信するタイミングを制御できます。データが {{site.data.keyword.mobileanalytics_short}} に送信されたら、{{site.data.keyword.mobileanalytics_short}} ダッシュボードを使用して、モバイル・アプリケーション、デバイス、アプリケーション・ログに関する分析の洞察を得ることができます。
 {: shortdesc}
 
-## カスタム・グラフによるデータの視覚化
+<!--
+
+## Visualizing data with custom charts
 {: #custom-charts}
 
-分析リポジトリーで、収集した分析データを視覚化することができます。この視覚化は、特定のユース・ケース用にデータを検査するための強力な手段となります。レポートするカスタム・データに加えて、Operational Analytics によって既に収集したデータからもグラフを作成できます。
-{: #shortdesc}
+You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
-アプリの異常終了をモニターする方法とトラブルシューティングする方法について詳しく説明します。
 
-### クライアント・ログのカスタム・グラフの作成
+### Creating custom charts for app logs
 {: #custom-charts-client-logs}
 
-プラットフォームのロガー API によって送信されたログ情報を含む、クライアント・ログのカスタム・グラフを作成できます。ログ情報には、環境、アプリ名、アプリ・バージョンなど、デバイスについてのコンテキスト情報も含まれます。
+You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
-この例では、クライアント・ログ・データを使用して、フローチャートを作成します。最後のグラフは、特定のアプリ内のログ・レベルの配分を示しています。さらに、以下のデータを使用してグラフを表示することができます。
+In this example, you use app log data to create a flow chart. The final graph shows the distribution of log levels in a specific app. You also have the following data available to show in a chart:
 
-* 特定のデータ
-  * ログ・レベル
-* メッセージ・データ
-  * タイム・スタンプ
-* デバイス OS コンテキスト・データ
-  * アプリケーション名
-  * アプリケーション・バージョン
-  * デバイス OS
-* デバイス・コンテキスト・データ
-  * デバイス ID
-  * デバイス・モデル
-  * デバイス OS バージョン
+* Specific data
+  * Log level
+* Message data
+  * Timestamp
+* Device OS contextual data
+  * Application name
+  * Application version
+  * Device OS
+* Device contextual data
+  * Device ID
+  * Device model
+  * Device OS version
 
 
-1. デバイス・ログを収集している、または分析を収集しているアプリケーションがあることを確認します。
-2. {{site.data.keyword.mobileanalytics_short}} コンソールで、**「ダッシュボード」**ページの**「カスタム・グラフ」**タブをクリックします。サーバーに送られた分析メッセージに基づいて、グラフを作成できます。
-3. **「グラフの作成」**をクリックして、新しいカスタム・グラフを作成します。
-4. 以下の値を入力します。
-  * グラフのタイトル: アプリケーションとログ・レベル
-  * イベント・タイプ: クライアント・ログ
-  * グラフのタイプ: フローチャート
-5. **「グラフの定義」**タブをクリックします。
-6. 以下の値を入力します。
-  * ソース: アプリケーション名
-  * 宛先: ログ・レベル
-  * プロパティー: アプリ名
-7. **「保存」**をクリックします。
+1. Make sure that you have an application that is collecting device logs or gathering analytics.
+2. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab on the **Dashboard** page. You can create a chart that is based on the analytics messages that were sent to the server.
+3. Click **Create Chart** to create a new custom chart and provide the following values:
+  * Chart Title: Application and Log Levels
+  * Event Type: App Logs
+  * Chart Type: Flow Chart
+5. Click the **Chart Definition** tab and provide the following values:
+  * Source: Application Name
+  * Destination: Log Level
+  * Property: your application name
+7. Click **Save**
 
-### カスタム・データのエクスポート
+### Exporting custom data
 {: #export-custom-data}
 
-各カスタム・グラフのデータは、JSON、XML、または CSV 形式でエクスポートできます。
+You can export the data from each custom chart into JSON, XML, or CSV format.
 
-エクスポートされるデータの構造は、エクスポートされるグラフによって異なります。データをエクスポートするには、カスタム・グラフの右上にあるエクスポート・アイコンをクリックします。
+The structure of the exported data depends on the chart that is being exported. To export data, click the export icon at the upper right of the custom chart.
 
 
 
-### カスタム・グラフ定義のエクスポートとインポート
+### Exporting and importing custom chart definitions
 {: #export-import-custom}
 
-{{site.data.keyword.mobileanalytics_short}} ダッシュボードで、プログラムまたは手動により、カスタム・グラフ定義をインポートおよびエクスポートすることができます。
+You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
-{{site.data.keyword.mobileanalytics_short}} ダッシュボードに少なくとも 1 つのカスタム・グラフがあることを確認してください。
-この例では、カスタム・グラフ定義のエクスポートとインポートを手動で行います。
+Ensure that you have at least one custom chart in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
+In this example, you manually export and import custom chart definitions.
 
-1. {{site.data.keyword.mobileanalytics_short}} コンソールで、**「ダッシュボード」**ページの**「カスタム・グラフ」**タブをクリックします。
-2. カスタム・グラフ定義をエクスポートするには、**「グラフのエクスポート」**をクリックします。このアクションは、`customChartsDefinition.json` ファイルを保存するダイアログを表示します。
-3. ファイルを保存する場所を選択します。
-4. 各カスタム・グラフの横にある**「グラフの削除」**アイコンをクリックして、すべてのカスタム・グラフを削除します。
-5. カスタム・グラフ定義をインポートするには、**「グラフのインポート」**をクリックします。このアクションは、ファイルを選択するダイアログを表示します。
-6. オープンするために以前にエクスポートした `customChartsDefinition.json` ファイルを選択します。
+1. In the {{site.data.keyword.mobileanalytics_short}} console, click the **Custom Charts** tab in the **Dashboard** page.
+2. To export the custom chart definitions, click **Export Charts**. This action displays a dialog to save a `customChartsDefinition.json` file.
+3. Choose a location to save the file.
+4. Click the **Delete Chart** icon next to each custom chart to delete all custom charts.
+5. To import a custom chart definition, click **Import Charts**. This action displays a dialog to choose a file.
+6. Choose the `customChartsDefinition.json` file that you previously exported to open.
 
-任意の HTTP クライアント (例えば CURL や POSTMAN など) を使用して、カスタム・グラフ定義のエクスポートとインポートをプログラムで行うこともできます。
-* エクスポートの GET エンドポイントは、`http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/` です。
-* インポートの POST エンドポイントは、`http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import` です。
+You can also export and import custom chart definitions programmatically by using your HTTP client of choice (for example, CURL or postman):
+* The GET endpoint for export is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/`.
+* The POST endpoint for import is `http://mobile-analytics-dashboard.ng.bluemix.net/analytics-service/rest/data/customCharts/import`.
 
-**注**: 既存のカスタム・グラフ定義をインポートした場合、定義が重複することになります。これはまた、{{site.data.keyword.mobileanalytics_short}} ダッシュボードにカスタム・グラフが重複して表示されることを意味します。
+**Note**: If you import a custom chart definition that exists, you end up with duplicate definitions, which also means that the {{site.data.keyword.mobileanalytics_short}} Dashboard shows duplicate custom charts.
+
+-->
 
 ## アラートの設定
 {: #alerts}
 
-MobileFirst Analytics コンソールでのアラート定義のしきい値の設定により、アクティビティーのモニターを改善できます。
-{: #shortdesc}
+{{site.data.keyword.mobileanalytics_short}} コンソールでアラート定義にしきい値を設定すると、アクティビティーのモニターに役立ちます。
 
-しきい値を構成して、しきい値を超過するとアラートをトリガーして MobileFirst Analytics コンソール・モニターに通知するようにできます。トリガーされたアラートをコンソールで視覚化するか、アラートをカスタム Webhook で処理できます。この機能により、クライアント・ログ・エラー、サーバー・ログ・エラー、ネットワーク待ち時間の長期化、認証の失敗を検出する事前対応手段が提供されます。リアクティブのしきい値やアラートにより、データをふるいにかけたり、しきい値を細分して設定したりする必要がなくなります。
 
-### クライアント・ログのアラート定義の作成
+しきい値を超過した場合にアラートをトリガーして {{site.data.keyword.mobileanalytics_short}} コンソール・モニターに通知するように、しきい値を構成することができます。トリガーされたアラートは、コンソールで視覚化したり、カスタム Webhook で処理したりできます。<!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.-->この機能は、アプリケーション・ログ・エラー、アプリケーションの異常終了、サーバー・ログ・エラーを検出するプロアクティブな手段になります。リアクティブのしきい値やアラートにより、データをふるいにかけたり、しきい値を細分して設定したりする必要がなくなります。
+
+### アプリケーション・ログのアラート定義の作成
 {: #alert-def-client-logs}
 
-クライアント・ログに基づくアラート定義を作成できます。
+アプリケーション・ログに基づくアラート定義を作成できます。
 
-この例では、クライアント・ログ・データを使用して、アラート定義を作成します。アラートは、直近の 5 分以内に受信したすべてのクライアント・ログをモニターし、アラート定義が無効になるか削除されるまで、5 分おきに継続的にチェックします。アラートは、同じアプリ名とバージョンのクライアント・エラー・ログを 3 つ以上送信した各デバイスでトリガーされます。
+この例では、アプリケーション・ログ・データを使用してアラート定義を作成します。アラートは、過去 5 分間に受け取ったすべてのアプリケーション・ログをモニターし、アラート定義が無効になるか削除されるまで、5 分ごとに検査し続けるとします。デバイスが同じアプリケーション名で同じバージョンのアプリケーション・エラー・ログを 3 つ以上送信するたびに、アラートがトリガーされます。
 
-1. MobileFirst Analytics コンソールでベル・アイコンをクリックし、**「アラート・ログ」**ページに移動します。
-2. **「アラート管理 (Alert Management)」**ページに移動し、「**アラート**の作成」をクリックします。
+1. {{site.data.keyword.mobileanalytics_short}} コンソールで、**「定義 (Definitions)」**をクリックして、「アラート定義 (Alert Definitions)」ページに進みます。
+2. **「アラートの作成」**をクリックして、アラートを作成します。
 3. 以下の値を入力します。
-	* アラート名: クライアント・ログのアラート
+	* アラート名: アプリ・ログのアラート
 	* メッセージ: エラー・メッセージのアラート
 	* 照会の頻度: 5 分
-	* イベント・タイプ: クライアント・ログ
+	* イベント・タイプ: アプリ・ログ
 		* プロパティー: ログ・レベル
 			* 値: エラー
 			* しきい値
 				* しきい値のタイプ: アプリケーション・インスタンスの合計
 
-					注:「アプリケーションの平均」オプションを選択する場合、クライアント・ログは、デバイス数によって平均化されます。例えば、デバイスが 2 つあり、一方のデバイスが 6 つのクライアント・ログを送信し、もう一方のデバイスが 3 つのクライアント・ログを送信する場合、クライアント・ログの平均は 4.5 になります。
+					**注**: 「アプリケーションの平均」オプションを選択すると、アプリ・ログ数が、デバイス数で平均化された数になります。例えば、デバイスが 2 つあり、一方のデバイスがアプリ・ログを 6 つ送信し、もう一方のデバイスがアプリ・ログを 3 つ送信した場合、アプリ・ログの平均は 4.5 になります。
 				* 演算子: 3 以上
-<!-- insert alert definition tab image? -->
 
-4. **「次へ」**または**「分布方法 (Distribution Method)」**タブをクリックし、次の値を入力します。
+	<!-- insert alert definition tab image? -->
+
+4. **「次へ」**をクリックして、次の値を入力します。
 	* 方法: 分析コンソールのみ
 
-		注: カスタマイズされた URL に JSON ペイロードとともに POST メッセージを追加で送信する場合、「分析コンソールとネットワーク・ポスト (Analytics Console and Network Post)」オプションを選択します。このオプションを選択すると、以下のフィールドが使用可能になります。
+		**注**: カスタマイズした URL に JSON ペイロードとともに POST メッセージを追加で送信する場合は、「分析コンソールとネットワーク・ポスト (Analytics Console and Network Post)」オプションを選択します。このオプションを選択すると、以下のフィールドが使用可能になります。
 		* ネットワーク・ポスト URL (Network Post URL)
         * ヘッダー (Headers)
         * 認証タイプ (Authentication Type)
 5. **「保存」**をクリックします。
 
-クライアント・ログの数がしきい値の 3 個以上のエラー・ログになった場合に 5 分の各間隔の最後にアラートをトリガーするアラート定義が作成されました。
+5 分間隔の最後にしきい値 (エラー・ログが 3 個以上) にアプリ・ログ数が達していればアラートをトリガーする、というアラート定義が作成されました。
 
-### アプリ異常終了のアラート定義の作成
+### アプリケーション異常終了のアラート定義の作成
 {: #alert-def-app-crash}
 
-アプリ異常終了に基づいてアラート定義を作成できます。
+アプリケーション異常終了に基づくアラート定義を作成できます。
 
-この例では、アプリ異常終了データを使用して、アラート定義を作成します。アラートは、直近の 2 分以内のすべてのアプリ異常終了をモニターし、アラート定義が無効になるか削除されるまで、2 分おきに継続的にチェックします。アラートは、各アプリの異常終了回数が 5 回以上になるとトリガーされます。アプリ異常終了について詳しくは、[アプリ異常終了](app_crash/c_op_analytics_crashes.html)を参照してください。
+この例では、アプリケーション異常終了データを使用して、アラート定義を作成します。アラートは、過去 2 分間におけるすべてのアプリケーション異常終了をモニターし、アラート定義が無効になるか削除されるまで、2 分ごとに検査し続けるとします。5 回以上異常終了した各アプリケーションに対してアラートがトリガーされるようにします。アプリケーション異常終了について詳しくは、[アプリケーション異常終了](#app_crash)を参照してください。
 
-1. MobileFirst Analytics コンソールで、**「アラート」**アイコンをクリックします。このアクションにより、「アラート・ログ」ページが開きます。
-2. **「アラート管理 (Alert Management)」**タブをクリックし、**「アラートの作成 (Create Alert)」**をクリックします。
+1. {{site.data.keyword.mobileanalytics_short}} コンソールで、**「定義 (Definitions)」**をクリックして、「アラート定義 (Alert Definitions)」ページを表示します。
+2. **「アラートの作成 (Create Alert)」**をクリックします。
 3. 以下の値を入力します。
-	* アラート名: アプリ異常終了のアラート
+	* アラート名: アプリケーション異常終了のアラート
 	* メッセージ: アプリ異常終了のアラート
 	* 照会の頻度: アプリケーションの異常終了
 		* アプリケーション名: 任意のアプリケーション
@@ -159,19 +162,18 @@ MobileFirst Analytics コンソールでのアラート定義のしきい値の�
 
 この例では、「アラート管理 (Alert Management)」ページからアラート定義を管理します。
 
-1. MobileFirst Analytics コンソールで、**「アラート」**アイコンをクリックします。このアクションにより、「アラート・ログ」ページが開きます。
-2. **「アラート管理 (Alerts Management)」**タブをクリックします。
-3. オプション:**「有効」**列の下のチェック・ボックスを切り替えて、特定のアラート定義を有効または無効にします。
-4. オプション: アラート定義のコピーを作成し、いくつかの値を変更する場合は、**「複写」**アイコンをクリックします。
-5. オプション: アラート定義を編集する場合は、**「鉛筆 (Pencil)」**アイコンをクリックします。
-6. オプション: アラート定義を削除する場合は、**「ごみ箱」**アイコンをクリックします。
+1. {{site.data.keyword.mobileanalytics_short}} コンソールで、**「ログ」**をクリックします。このアクションにより、「アラート・ログ」ページが開きます。
+2. オプション:**「有効」**列の下のチェック・ボックスを切り替えて、特定のアラート定義を有効または無効にします。
+3. オプション: アラート定義のコピーを作成し、いくつかの値を変更する場合は、**「複写」**アイコンをクリックします。
+4. オプション: アラート定義を編集する場合は、**「鉛筆 (Pencil)」**アイコンをクリックします。
+5. オプション: アラート定義を削除する場合は、**「ごみ箱」**アイコンをクリックします。
 
 ### アラート詳細の表示
 {: #viewing-alert-details}
 
 この例では、トリガーされたアラートの詳細を「アラート・ログ」ページから表示します。
 
-1. MobileFirst Analytics コンソールで、**「アラート」**アイコンをクリックします。このアクションにより、「アラート・ログ」ページが開きます。
+1. {{site.data.keyword.mobileanalytics_short}} コンソールで、**「ログ」**をクリックします。このアクションにより、「アラート・ログ」ページが開きます。
 2. 任意のアラートの**「+」**アイコンをクリックします。このアクションにより、**「アラート定義 (Alert Definition)」**セクションと**「アラート・インスタンス (Alert Instances)」**セクションが表示されます。
 
     **注**: 対応するアラート定義が削除も変更もされていない場合、**「アラートの編集 (Edit Alert)」**をクリックしてアラート定義を編集できます。削除または変更されている場合、**「アラートの編集 (Edit Alert)」**ボタンを使用できず、以下のメッセージが表示されます。
@@ -180,59 +182,53 @@ MobileFirst Analytics コンソールでのアラート定義のしきい値の�
 
 3. オプション: アラートを削除するには、アラートを選択し**「ごみ箱」**アイコンをクリックします。
 
-## アプリの異常終了
+## アプリケーション異常終了のモニター
 {: #monitor-app-crash}
 
-MobileFirst Analytics コンソールでアプリの異常終了に関する情報を表示し、アプリのモニターやトラブルシューティングを向上させることができます。
-{: #shortdesc}
+{{site.data.keyword.mobileanalytics_short}} コンソールでアプリケーションの異常終了に関する情報を参照すると、アプリケーションのモニターやトラブルシューティングに役立ちます。
 
-アプリの異常終了をモニターする方法とトラブルシューティングする方法について詳しく説明します。
-
-### アプリ異常終了のモニター
+### アプリケーション異常終了のモニター
 {: #app-crash}
 
-IBM MobileFirst™ Analytics コンソールの**「ダッシュボード」**セクションにアプリの異常終了に関する情報が即座に表示されます。
+**「異常終了の概要」**表に、次のデータ列が表示されます。
 
-**「ダッシュボード」**セクションの**「概要」**ページの**「異常終了」**棒グラフに、時間別の異常終了ヒストグラムが表示されます。
+* アプリケーション: アプリケーション名
+* 異常終了: そのアプリの異常終了の総数
+* 合計使用回数: ユーザーがアプリをオープンおよびクローズした回数の合計
+* 異常終了率: 使用ごとの異常終了のパーセンテージ
+
+**「異常終了」**表で、アプリケーションの異常終了に関する情報を即座に確認できます。<!--In the **Overview** page of the **Dashboard** section,-->**「異常終了 (Crashes)」**棒グラフにより、経時的な異常終了のヒストグラムが示されます。
 
 データの表示方法は 2 とおりあります。
 
 1. 異常終了率の表示: 時間別の異常終了率
 2. 合計異常終了回数の表示: 時間別の合計異常終了回数
 
-
 ### アプリ異常終了のトラブルシューティング
 {: #app-crash-troubleshooting}
 
-IBM MobileFirst Analytics コンソールの**「アプリケーション」**セクションの**「異常終了」**ページを表示して、アプリの管理を向上させることができます。
-
-**「異常終了の概要 (Crash Overview)」**表に、次のデータ列が表示されます。
-
-* アプリ: アプリ名
-* 異常終了: そのアプリの異常終了の総数
-* 合計使用回数: ユーザーがアプリをオープンおよびクローズした回数の合計
-* 異常終了率: 使用ごとの異常終了のパーセンテージ
+<!-- **Applications** section of the -->{{site.data.keyword.mobileanalytics_short}} コンソールの**「トラブルシューティング」**ページを参照すると、アプリの管理に役立ちます。
 
 **「異常終了の要約 (Crash Summary)」**表はソート可能であり、次のデータ列が含まれています。
 
 * 異常終了
 * デバイス
 * 最終異常終了日時
-* アプリ
+* アプリケーション
 * OS
 * メッセージ
 
-項目の横の + アイコンをクリックして、**「異常終了の詳細 (Crash Details)」**表を表示できます。この表には、次の列が含まれています。
+項目の横の + アイコンをクリックして、**「異常終了の詳細」**表を表示します。この表には、次の列が含まれています。
 
 * 異常終了時刻
-* アプリのバージョン
+* アプリケーション・バージョン
 * OS バージョン
 * デバイス・モデル
 * デバイス ID
 * ダウンロード: 異常終了につながるログをダウンロードするためのリンク
 
-**「異常終了の詳細 (Crash Details)」**表の項目を展開して、スタック・トレースなどの詳細を取得できます。
+**「異常終了の詳細」**表内の任意の項目を展開して、スタック・トレースなどの詳細を表示します。
 
-**注**: 重大レベルのクライアント・ログを照会することにより、**「異常終了の要約 (Crash Summary)」**表にデータが取り込まれます。アプリが重大なクライアント・ログを収集しない場合、データを使用できません。
+**注**: **「異常終了の要約 (Crash Summary)」**表のデータは、重大レベルのアプリ・ログの照会によって取り込まれます。アプリケーションで重大なアプリケーション・ログを収集していない場合、データはありません。
 
 

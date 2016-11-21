@@ -2,21 +2,16 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Angepassten Identitätsprovider erstellen
 {: #custom-create}
 
-Letzte Aktualisierung: 16. Juni 2016
-{: .last-updated}
-
 
 Zur Erstellung eines angepassten Identitätsproviders entwickeln Sie eine Webanwendung, die eine REST-konforme API bereitstellt:
 
-```
-POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
-```
+`POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>`
 
 * `base_url`: Gibt die Basis-URL der Webanwendung des angepassten Identitätsproviders an. Die Basis-URL ist die URL, die im {{site.data.keyword.amashort}}-Dashboard registriert werden muss.
 * `tenant_id`: Gibt die eindeutige Kennung des Tenants an. Wenn {{site.data.keyword.amashort}} diese API aufruft, wird immer die GUID der App für {{site.data.keyword.Bluemix}} (`applicationGUID`) übergeben.
@@ -116,7 +111,7 @@ Das Benutzeridentitätsobjekt wird vom {{site.data.keyword.amashort}}-Service zu
 ## Sicherheitsaspekte
 {: #custom-security}
 
-Jede Anforderung aus dem {{site.data.keyword.amashort}}-Service an einen angepassten Identitätsprovider enthält einen Berechtigungsheader, sodass der der angepasste Identitätsprovider überprüfen kann, ob die Anforderung von einer autorisierten Quelle kommt. Obwohl dies nicht strikt obligatorisch ist, sollten Sie in Betracht ziehen, den Berechtigungsheader zu validieren, indem Sie Ihren angepassten Identitätsprovider mit einem {{site.data.keyword.amashort}}-Server-SDK instrumentieren. Zur Verwendung dieses SDK muss Ihre angepasste Identitätsprovideranwendung mit Node.js oder Liberty for Java&trade;&trade; implementiert sein und in {{site.data.keyword.Bluemix_notm}} ausgeführt werden.
+Jede Anforderung aus dem {{site.data.keyword.amashort}}-Service an einen angepassten Identitätsprovider enthält einen Berechtigungsheader, sodass der der angepasste Identitätsprovider überprüfen kann, ob die Anforderung von einer autorisierten Quelle kommt. Obwohl dies nicht strikt obligatorisch ist, sollten Sie in Betracht ziehen, den Berechtigungsheader zu validieren, indem Sie Ihren angepassten Identitätsprovider mit einem {{site.data.keyword.amashort}}-Server-SDK instrumentieren. Zur Verwendung dieses SDK muss Ihre angepasste Identitätsprovideranwendung mit Node.js oder Liberty for Java&trade; implementiert sein und in {{site.data.keyword.Bluemix_notm}} ausgeführt werden.
 
 Der Berechtigungsheader enthält Informationen zum mobilen Client und zur mobilen App, die den Authentifizierungsprozess ausgelöst haben. Sie können den Sicherheitskontext zum Abrufen dieser Daten verwenden. Weitere Informationen finden Sie in [Ressourcen schützen](protecting-resources.html).
 

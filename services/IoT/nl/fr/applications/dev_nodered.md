@@ -1,7 +1,7 @@
 ---
 
-copyright :
-  années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -20,7 +20,7 @@ Dernière mise à jour : 1er septembre 2016
 Node-RED est un outil visuel que vous pouvez utiliser pour développer vos applications, vos terminaux et vos passerelles sur {{site.data.keyword.iot_full}}. Node-RED fournit des fonctionnalités permettant de connecter des terminaux matériels, des API et des services en ligne de façon inédite et intéressante. Node-RED est généré par dessus Node.js et exploite l'immense écosystème de module de noeuds pour fournir un outil capable d'intégrer un grand nombre de systèmes différents.
 {:shortdesc}
 
-IBM fournit des noeuds Node-RED afin de vous aider à connecter vos terminaux, passerelles et applications à {{site.data.keyword.iot_short_notm}} et à créer rapidement des solutions IoT. 
+IBM fournit des noeuds Node-RED afin de vous aider à connecter vos terminaux, passerelles et applications à {{site.data.keyword.iot_short_notm}} et à créer rapidement des solutions IoT.
 
 
 ## Watson IoT Node   
@@ -29,7 +29,7 @@ IBM fournit des noeuds Node-RED afin de vous aider à connecter vos terminaux, p
 ![Image Watson IoT Node](../images/node-red-watson.png "Image Watson IoT Node")
 
 
-Watson IoT Node est une paire de noeuds vous permettant de connecter vos terminaux ou passerelles à {{site.data.keyword.iot_short_notm}}. Les terminaux ou les passerelles peuvent utiliser ces noeuds pour envoyer des événements et pour recevoir des commandes de l'application. 
+Watson IoT Node est une paire de noeuds vous permettant de connecter vos terminaux ou passerelles à {{site.data.keyword.iot_short_notm}}. Les terminaux ou les passerelles peuvent utiliser ces noeuds pour envoyer des événements et pour recevoir des commandes de l'application.
 
 Pour plus d'informations sur Watson IoT Node, voir les ressources suivantes :
 
@@ -43,7 +43,7 @@ Pour plus d'informations sur Watson IoT Node, voir les ressources suivantes :
 
 ![Image IBM IoT App Node](../images/node-red-ibmiot.png "Image IBM IoT App Node")
 
-IBM IoT App Node est une paire de noeuds permettant de connecter vos applications à {{site.data.keyword.iot_short_notm}}. Les applications peuvent utiliser les noeuds pour recevoir des événements de terminal et pour renvoyer des commandes au terminal. 
+IBM IoT App Node est une paire de noeuds permettant de connecter vos applications à {{site.data.keyword.iot_short_notm}}. Les applications peuvent utiliser les noeuds pour recevoir des événements de terminal et pour renvoyer des commandes au terminal.
 
 Pour plus d'informations sur IBM IoT App Node, voir les ressources suivantes :
 

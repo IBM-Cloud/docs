@@ -2,19 +2,17 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-09-07"
 
 ---
 
 # Ativando a autenticação do Google para apps da web
 {: #google-auth-web}
 
-Última atualização: 1 de junho de 2016
-{: .last-updated}
-
 Use o Google Sign-In para autenticar usuários em seu app da web.
 
 
-## Antes de começar
+## Antes de iniciar
 {: #before-you-begin}
 
 Você deve ter:
@@ -57,7 +55,8 @@ Para iniciar o processo de autorização:
    state= <state>
 	```
 
-  O parâmetro `state` não está em uso no momento e pode ficar vazio.
+  O parâmetro `state` não está em uso por enquanto e pode permanecer vazio.
+  
 
   O URI do parâmetro `redirect_uri` é o redirecionamento após a autenticação bem-sucedida ou com falha com o Google.
   A resposta obtida após o redirecionamento contém o código de autorização nos parâmetros de consulta da solicitação.

@@ -2,17 +2,18 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
+
+{:screen: .screen}
+{:shortdesc: .shortdesc}
+
 
 # 啟用 iOS Objective C 應用程式的 Google 鑑別
 {: #google-auth-ios}
 
 
-前次更新：2016 年 6 月 27 日
-{: .last-updated}
-
-在 Mobile Client Access iOS 應用程式上，使用「Google 登入」來鑑別使用者。
+在 {{site.data.keyword.amafull}} iOS 應用程式上，使用「Google 登入」來鑑別使用者。
 
 **附註：**雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚停止使用此 SDK，改用新的 Swift SDK。對於新的應用程式，強烈建議使用 Swift SDK。此頁面上的指示適用於 {{site.data.keyword.amashort}} 用戶端 Objective-C SDK。如需使用 Swift SDK 的相關指示，請參閱[在 iOS 應用程式中啟用 Google 鑑別 (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)。
 
@@ -24,42 +25,21 @@ copyright:
 
 ## 配置 iOS 平台的 Google 專案
 {: #google-auth-ios-project}
-若要開始使用 Google 作為身分提供者，請在 Google Developer Console 中建立專案來取得 Google 用戶端 ID。此用戶端 ID 是唯一 ID，可讓 Google 知道哪一個應用程式正在嘗試連接。如果您已有 Google 專案，則可以跳過說明專案建立的步驟，並開始新增認證。
+若要開始使用 Google 作為身分提供者，請在 Google Developer Console 中建立專案來取得 Google 用戶端 ID。此用戶端 ID 是唯一 ID，可讓 Google 知道哪一個應用程式正在嘗試連接。   
 
+1. 如果您尚未建立 Google iOS 專案，請遵循 [Google Developer Console](https://console.developers.google.com) 網站上的步驟。
 
+1. 從**社交 API** 清單中，選擇 **Google+ API**，然後按一下**啟用**。
 
-1. 在 [Google Developer Console](https://console.developers.google.com) 中建立專案。
-如果您已有專案，則可以跳過說明專案建立的步驟，並開始新增認證。
-   1.    開啟新建專案功能表。
-
-         ![影像](images/FindProject.jpg)
-
-   2.    按一下**建立專案**。
-
-         ![影像](images/CreateAProject.jpg)
-
-
-1. 從**社交 API** 清單中，選擇 **Google+ API**。
-
-     ![影像](images/chooseGooglePlus.jpg)
-
-1. 從下一個畫面中，按一下**啟用**。
-
-1. 選取**同意畫面**標籤，並提供向使用者顯示的產品名稱。其他值是選用性的值。按一下**儲存**。
-
-    ![影像](images/consentScreen.png)
-
-1. 從**認證**清單中，選擇 OAuth 用戶端 ID。
-
-     ![影像](images/chooseCredentials.png)
-
-
+1. 從**認證**清單中，按一下**建立認證**按鈕，然後選擇 *OAuth 用戶端 ID*。
 
 1. 此時會向您呈現應用程式類型選項。請選取 **iOS**。
 
 1. 提供 iOS 用戶端的有意義名稱。指定 iOS 應用程式的軟體組 ID。若要尋找 iOS 應用程式的軟體組 ID，請在 `info.plist` 檔案或 Xcode 專案的**一般**標籤中尋找**軟體組 ID**。
 
 1. 記下您的新 Google iOS 用戶端 ID。當您在 {{site.data.keyword.Bluemix}} 中設定應用程式時，需要這個值。
+
+
 
 
 ## 配置 {{site.data.keyword.amashort}} 進行 Google 鑑別
@@ -77,7 +57,6 @@ copyright:
 
 1. 在**適用於 iOS 的應用程式 ID** 中，指定適用於 iOS 的 Google 用戶端 ID，然後按一下**儲存**。
 
-	附註：除了 Google 用戶端 ID 之外，還需要反向值以進行用戶端配置。若要存取這兩個值，請使用鉛筆圖示來下載範例 plist：![info.plist 檔案下載](images/download_plist.png)
 
 ## 配置適用於 iOS 的 {{site.data.keyword.amashort}} Google 用戶端 SDK
 {: #google-auth-ios-sdk}
@@ -92,6 +71,7 @@ copyright:
 	```
 	pod 'IMFGoogleAuthentication'
 	```
+{: codeblock}
 
 1. 儲存 `Podfile`，然後從指令行執行 `pod install`。CocoaPods 將安裝相依關係。您會看到進度及新增的元件。
 
@@ -134,6 +114,8 @@ copyright:
 	</array>
 
 	```
+{: codeblock}
+
 	更新兩個 URL 綱目。
 
 	**重要事項**：請不要置換 `info.plist` 檔案中的任何現有內容。如果有重疊的內容，則需要手動合併這些內容。如需相關資訊，請參閱 [Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start)。
@@ -145,70 +127,97 @@ copyright:
 
 放置起始設定碼的一般（但非強制）位置是在應用程式委派的 `application:didFinishLaunchingWithOptions` 方法。
 
-1. 取得 applicationGUID 及 applicationRoute 值。從 {{site.data.keyword.Bluemix_notm}} 儀表板中，按一下您的應用程式。按一下**行動選項**。即會顯示「應用程式路徑」及「應用程式 GUID」值。
+1. 取得 applicationGUID 及 applicationRoute 值。從 {{site.data.keyword.Bluemix_notm}}「儀表板」中，按一下您的應用程式。按一下**行動選項**。即會顯示「應用程式路徑」及「應用程式 GUID」值。
 
 1. 在您要使用 {{site.data.keyword.amashort}} 用戶端 SDK 的類別中，匯入必要架構。請新增下列標頭：
 
-	Objective-C：
+	#### Objective-C：
 
 	```Objective-C
 	#import <IMFCore/IMFCore.h>
 	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
 	```
+{: codeblock}
 
-	Swift：
+	#### Swift：
 
 	{{site.data.keyword.amashort}} 用戶端 SDK 是使用 Objective-C 進行實作。您可能需要將橋接標頭新增至 Swift 專案，才能使用 SDK。
 
 	1. 在 Xcode 中的專案上按一下滑鼠右鍵，然後選取**新建檔案...**。
+
 	2. 在 **iOS 來源**種類中，挑選**標頭檔**。
-	3. 將它命名為 `BridgingHeader.h`
+
+	3. 將它命名為 `BridgingHeader.h`。
+
 	4. 將下列匯入項目新增至橋接標頭：
 
-	```Objective-C
+	```Swift
 	#import <IMFCore/IMFCore.h>
 	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
 	```
+
 	5. 在 Xcode 中按一下您的專案，然後選取**建置設定**標籤。
+
 	6. 搜尋 `Objective-C Bridging Header`。
+
 	7. 將值設為 `BridgingHeader.h` 檔案的位置（例如：`$(SRCROOT)/MyApp/BridgingHeader.h`）。
+
 	8. 建置專案，以確定 Xcode 取得橋接標頭。
 
+3. 使用下列程式碼來起始設定用戶端 SDK。將 `applicationRoute` 及 `applicationGUID` 取代為您取自**行動選項**的**路徑**及**應用程式 GUID** 值。
 
-3. 使用下列程式碼來起始設定用戶端 SDK。將 *applicationRoute* 及 *applicationGUID* 取代為您取自**行動選項**的**路徑**及**應用程式 GUID** 值。
-
-	Objective-C：
+	#### Objective-C：
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+{: codeblock}
 
-	Swift：
+	#### Swift：
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
+{: codeblock}
+
+1. 藉由傳遞 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，起始設定 `AuthorizationManager`。您可以按一下 {{site.data.keyword.amashort}} 服務磚上的**顯示認證**按鈕，來尋找此值。
+
+  ####Objective-C
+	
+  ```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+  ```
+ {: codeblock}
+
+  ####Swift
+
+  ```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+ ```
+ {: codeblock}
 
 1. 將下面程式碼新增至應用程式委派中的 `application:didFinishLaunchingWithOptions` 方法，以登錄「Google 鑑別處理程式」。請在起始設定 IMFClient 之後立即新增此程式碼：
 
-	Objective-C：
+	#### Objective-C：
 
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 	```
+{: codeblock}
 
-	Swift：
+	#### Swift：
 
 	```Swift
 	IMFGoogleAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
 	```
+{: codeblock}
 
 1. 將下列程式碼新增至應用程式委派。
 
-	Objective-C：
+	#### Objective-C：
 
 	```Objective-C
 	- (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -225,8 +234,9 @@ copyright:
 		return  shouldHandleGoogleURL;
 	}
 	```
+{: codeblock}
 
-	Swift：
+	#### Swift：
 
 	```Swift
 	func application(application: UIApplication, openURL url: NSURL,
@@ -241,6 +251,7 @@ copyright:
 		return shouldHandleGoogleURL;
 	}
 ```
+{: codeblock}
 
 ## 測試鑑別
 {: #google-auth-ios-testing}
@@ -257,7 +268,7 @@ copyright:
 
 1. 使用 iOS 應用程式以對相同的端點提出要求。
 
-	Objective-C：
+	#### Objective-C：
 
 	```Objective-C
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
@@ -275,8 +286,9 @@ copyright:
 		}
 	}];
 	```
+{: codeblock}
 
-	Swift：
+	#### Swift：
 
 	```Swift
 	let requestPath = IMFClient.sharedInstance().backendRoute + "/protected"
@@ -292,6 +304,7 @@ copyright:
 	};
 
 	```
+{: codeblock}
 
 1. 執行您的應用程式。您將看到「Google 登入」蹦現畫面。
 
@@ -307,17 +320,19 @@ copyright:
 		
 	您也可以新增下列程式碼，來新增登出功能：
 
-	Objective C：
+	#### Objective C：
 
 	```Objective-C
 	[[IMFGoogleAuthenticationHandler sharedInstance] logout : callBack]
 	```
+{: codeblock}
 
-	Swift：
+	#### Swift：
 
 	```Swift
 	IMFGoogleAuthenticationHandler.sharedInstance().logout(callBack)
 	```
+{: codeblock}
 
 	如果您在使用者使用 Google 登入之後呼叫此程式碼，而且使用者嘗試重新登入，則系統會提示他們授權 {{site.data.keyword.amashort}} 使用 Google 進行鑑別。此時，使用者可以按一下使用者名稱<!--in the upper-right corner of the screen-->來進行選取，並利用另一個使用者來登入。
 

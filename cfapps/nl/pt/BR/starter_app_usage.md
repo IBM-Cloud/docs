@@ -6,15 +6,12 @@ copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-01-12" 
 
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-
-*Última atualização: 12 de janeiro de 2016*
-{: .last-updated}
 
 # Usando os aplicativos iniciadores
 {: #using_starter_applications}
@@ -27,8 +24,8 @@ Sigas estas etapas para usar os aplicativos iniciadores.
 2. Clique no tempo de execução que deseja usar.
 3. Efetue login no {{site.data.keyword.Bluemix}}, se ainda não tiver feito isso.
 4. Forneça o nome do app, modifique o nome do host se necessário e clique em **Criar**.
-5. Seu app inicia a preparação e a página de entrada de seu app no Painel do Bluemix será exibida enquanto seu app é iniciado.
-6. É possível seguir as instruções nessa página para executar as tarefas a seguir:
+5. O app inicia a preparação e a página de entrada do app no Painel do {{site.data.keyword.Bluemix_notm}} é exibida quando o app é iniciado.
+6. É possível siga as instruções nessa página para executar as tarefas a seguir:
   * Faça download da interface da linha de comandos do Cloud Foundry.
   * Faço o download do aplicativo iniciador.
   * Execute as etapas para reimplementar o aplicativo iniciador.

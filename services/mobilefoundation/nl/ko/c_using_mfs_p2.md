@@ -2,14 +2,14 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-09-12"
 ---
 
 #	Professional 1 Application 플랜 사용
 {: #using_mobilefoundation_p2}
 
-마지막 업데이트 날짜: 2016년 8월 04일
-{: .last-updated}
+<!--Last updated: 12 September 2016
+{: .last-updated}-->
 
 Professional 1 Application 플랜을 사용하면 여러 모바일 운영 체제에서 1개의 모바일 애플리케이션을 작성할 수 있습니다.
 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 서비스 인스턴스를 작성한 후에 다음 프로시저를 읽고 서비스를 시작합니다.
@@ -76,6 +76,31 @@ Professional 1 Application 플랜을 사용하면 여러 모바일 운영 체제
 
 
 <!--This console runs inside the container.--> 콘솔을 사용하여 모바일 앱, 어댑터, 모바일 디바이스를 관리하고 서버를 모바일 백엔드로 사용할 수 있으며 푸시 알림을 전송하는 등의 작업을 수행할 수 있습니다.
+
+
+
+##  Mobile Analytics 서버 추가
+{: #adding_analytics_server_prof}
+
+ 이제 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 Mobile Analytics 서버를 추가하여 {{site.data.keyword.mobilefirst}} 서버에서 모바일 애플리케이션을 모니터링할 수 있습니다. 
+
+ 전문가 플랜을 통해 컨테이너 그룹에 Mobile Analytics 서버를 작성하고, 사용자가 컨테이너 그룹에서 컨테이너 노드 수를 선택하여 구성을 사용자 정의할 수 있습니다.
+
+ 데이터를 유지하기 위해 컨테이너에 볼륨도 연결할 수 있습니다. 볼륨을 한 번 선택하면 변경할 수 없습니다. 사용 가능한 기본 파일 공유 영역은 20GB입니다. 사용자가 분석 데이터를 유지할 추가 스토리지 영역이 필요하면 추가 파일 공유를 구매하고 이 파일 공유를 사용하여 볼륨을 작성해야 합니다. 그런 다음 분석 서버를 배치하는 동안 이 새 볼륨을 선택할 수 있습니다.
+
+ {{site.data.keyword.containerlong}}에 볼륨을 추가하는 데 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 대시보드를 사용하여 볼륨에 지속적 데이터 저장](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}을 참조하십시오.
+
+* **분석 추가**를 클릭하여 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 Mobile Analytics 서버를 추가하십시오.
+
+프로비저닝 프로세스가 시작됩니다. 이 프로세스는 약 10분 정도 소요되며, 메시지 창은 이 조작의 진행상태를 표시합니다.   
+
+* {{site.data.keyword.mfp_oc_short_notm}}에서 MobileFirst Analytics Console을 실행하십시오.
+
+* {{site.data.keyword.mfserver_short_notm}}와 Mobile Analytics 서버 간에 싱글 사인온이 사용됩니다. Mobile Analytics 서버는 {{site.data.keyword.mfserver_short_notm}} 서버와 동일한 LTPA 키 및 사용자 신임 정보를 사용하여 구성합니다. {{site.data.keyword.mfp_oc_short_notm}}에 로그인하는 데 사용한 `사용자 이름` 및 `비밀번호`를 사용하여 Mobile Analytics 콘솔에 로그인할 수 있습니다.
+
+MobileFirst Analytics에 대한 자세한 정보는 [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/)를 참조할 수 있습니다.
+
+**참고:** {{site.data.keyword.mobilefoundation_short}} 서버 인스턴스를 삭제하거나 {{site.data.keyword.mfserver_short_notm}}를 다시 작성하려고 할 때 Mobile Analytics 서버가 제거됩니다.
 
 ## {{site.data.keyword.mobilefirst}} 서버 재작성
 {: #recreate_mobilefoundation_p2}

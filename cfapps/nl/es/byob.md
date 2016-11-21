@@ -6,7 +6,7 @@ copyright:
 
   years: 2015 2016
 
- 
+lastupdated: "2016-03-15" 
 
 ---
 
@@ -17,8 +17,6 @@ copyright:
 {:pre: .pre}
 
 # Utilización de compilación de la comunidad
-*Última actualización: 15 de marzo de 2016*
-{: .last-updated}
 
 Si no encuentra ningún iniciador en el Catálogo de {{site.data.keyword.Bluemix}} que proporcione
 el tiempo de ejecución que desea, puede incorporar un paquete de compilación externo
@@ -70,7 +68,7 @@ el mandato siguiente:</p>
 
 ## Paquetes de compilación externos
 
-Puede utilizar paquetes de compilación externos o personalizados en {{site.data.keyword.Bluemix_notm}}. Debe especificar el URL del paquete de compilación con la opción -b, así como la pila con la opción ```-s``` en el mandato **cf push**. Por ejemplo, para utilizar un paquete de compilación de la comunidad externo para archivos estáticos, ejecute el siguiente mandato:
+Puede utilizar paquetes de compilación externos o personalizados en {{site.data.keyword.Bluemix_notm}}. Debe especificar el URL del paquete de compilación con la opción -b, así como la pila con la opción `-s` en el mandato **cf push**. Por ejemplo, para utilizar un paquete de compilación de la comunidad externo para archivos estáticos, ejecute el siguiente mandato:
 
 ```
 cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
@@ -101,9 +99,9 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 Utilice el mandato <strong>cf set-env</strong>. Por ejemplo, especifique el mandato siguiente para establecer la versión de Java a 1.7.0:
-<pre class="pre"><code>cf set-env nombre_app JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { versión: 1.7.0_+ }}&#39;</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &apos;{jre: { version: 1.7.0_+ }}&apos;</code></pre>
 <p>A continuación,
-vuelva a transferir la app para que el cambio sea efectivo:</p>
+vuelva a transferir la app para que el cambio sea efectivo: </p>
 <pre class="pre"><code>cf restage nombre_app</code></pre>
 </li>
 <li>

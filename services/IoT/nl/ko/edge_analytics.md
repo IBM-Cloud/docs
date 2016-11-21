@@ -25,7 +25,7 @@ copyright:
 다음 다이어그램은 {{site.data.keyword.iot_full}} 에지 분석 환경의 일반 아키텍처를 설명합니다.
 ![에지 분석 아키텍처용 IBM Watson IoT Platform](images/architecture_platform_edge.svg "에지 분석 아키텍처가 포함된 IBM Watson IoT Platform")
 
-**중요:** 분석 기능은 {{site.data.keyword.iotrtinsights_full}} 서비스에서 병합됩니다. {{site.data.keyword.iot_short_notm}} 조직이 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스의 데이터 소스로 사용되는 경우 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스가 마이그레이션된 후에야 클라우드 및 에지 분석이 사용됩니다. 마이그레이션이 완료될 때까지 분석이 필요할 때는 계속 {{site.data.keyword.iotrtinsights_short}} 대시보드를 사용하십시오. 자세한 정보는 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스 대시보드 및 IBM developerWorks의 [IBM Watson IoT Platform 블로그](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}를 참조하십시오.  
+**중요:** 분석 기능은 {{site.data.keyword.iotrtinsights_full}} 서비스에서 병합됩니다. {{site.data.keyword.iot_short_notm}} 조직이 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스의 데이터 소스로 사용되는 경우 {{site.data.keyword.iotrtinsights_short}} 인스턴스가 마이그레이션된 후에야 클라우드 및 에지 분석이 사용됩니다. 마이그레이션이 완료될 때까지 분석이 필요할 때는 계속 {{site.data.keyword.iotrtinsights_short}} 대시보드를 사용하십시오. 자세한 정보는 기존 {{site.data.keyword.iotrtinsights_short}} 인스턴스 대시보드 및 IBM developerWorks의 [IBM Watson IoT Platform 블로그](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}를 참조하십시오.  
 
 ## 시작하기 전에
 {: #byb}
@@ -42,7 +42,7 @@ copyright:
 - **규칙** 대시보드를 사용하여 디바이스와 게이트웨이의 클라우드 및 에지 규칙과 조치를 작성하고 편집합니다.
 - **에지 규칙 게이트웨이** 보드는 게이트웨이에서 에지 규칙을 활성화, 비활성화, 업데이트 및 제거하는 데 사용합니다. 에지 규칙 게이트웨이 보드에 액세스하려면 규칙 대시보드에서 관리할 에지 규칙의 **규칙 관리**를 클릭하십시오. 자세한 정보는 [게이트웨이의 에지 규칙 활성화, 비활성화 및 관리](#manage)를 참조하십시오.
 
-게이트웨이 연결 디바이스의 에지 규칙과 경보에 대한 개요는 다음 보드를 사용하십시오.
+게이트웨이 연결 디바이스의 트리거된 에지 규칙과 경보에 대한 개요는 다음 보드를 사용하십시오.
 
  |보드 이름 | 설명  |  
  |:---|:---|  
@@ -57,7 +57,7 @@ copyright:
 
 에지 규칙은 조건을 충족하는 경우 에지 조치를 트리거하기 위해 사전 정의된 임계값 또는 다른 특성 데이터와 실시간 디바이스 데이터를 일치시키는 조건 기반 의사결정 지점입니다.
 
-**중요:** 디바이스 유형에 대한 규칙을 작성하려면 디바이스 유형에 대한 스키마를 작성해야 합니다. 자세한 정보는 [디바이스 유형 스키마 작성](im_schemas.html)을 참조하십시오.
+**중요:** 디바이스 유형에 대한 규칙을 작성하려면 우선 디바이스 유형에 대한 스키마를 작성해야 합니다. 자세한 정보는 [디바이스 유형 스키마 작성](im_schemas.html)을 참조하십시오.
 
 규칙을 작성하려면 다음을 수행하십시오.
 1. {{site.data.keyword.iot_short}} 대시보드에서 **규칙**으로 이동하십시오.
@@ -66,7 +66,7 @@ copyright:
 규칙의 트리거로 사용할 IF 조건을 하나 이상 추가하십시오.
 병렬 행에서 조건을 추가하여 이를 OR 조건으로 적용하거나, 순차 열에서 조건을 추가하여 이를 AND 조건으로 적용할 수 있습니다.
 **참고:** 규칙의 입력으로 디바이스 특성을 선택할 수 있으려면 특성을 스키마에 맵핑해야 합니다. 자세한 정보는 [스키마 작성](im_schemas.html)을 참조하십시오.
-**중요:** AND를 사용하여 순차적으로 결합된 두 개 이상의 특성 조건을 트리거하는 조건을 트리거하려면 트리거링 데이터 지점이 동일한 디바이스 메시지에 포함되어야 합니다. 데이터가 두 개 이상의 메시지로 수신되면 순차 조건이 트리거되지 않습니다. **예:**
+**중요:** 두 개의 특성을 비교하는 조건을 트리거하거나 AND를 사용하여 순차적으로 결합된 둘 이상의 특성 조건을 트리거하려면 트리거링 데이터 점이 동일한 디바이스 메시지에 포함되어 있어야 합니다. 데이터가 두 개 이상의 메시지로 수신되면 순차 조건이 트리거되지 않습니다. **예:**
 매개변수 값이 다음과 같이 지정된 값보다 크면 간단한 규칙을 통해 경보를 트리거할 수 있습니다.
 `temp>80`
 다음과 같은 임계값 조합이 충족되면 더욱 복잡한 규칙이 트리거할 수 있습니다.
@@ -74,13 +74,13 @@ copyright:
 
 4. 규칙에 대한 조건부 트리거 요구사항을 구성하십시오.
 일정 기간 동안 규칙에 대해 트리거된 경보 및 조치 수를 제어하려면 규칙에 맞는 조건부 트리거 요구사항을 구성할 수 있습니다.
-**중요:** 조건부 트리거링은 규칙의 모든 조건에 대해 작동합니다. 예를 들어 규칙에 OR을 사용하여 설정된 다섯 개의 서로 다른 병렬 조건이 있으면 true인 각 조건은 조건부 트리거 개수에 포함됩니다.
-규칙에 대한 조건부 트리거를 설정하려면 다음을 수행하십시오.
+**중요:** 조건부 트리거링은 규칙의 모든 조건에 대해 작동합니다. 예를 들어, 규칙에 OR을 사용하여 설정된 다섯 개의 서로 다른 병렬 조건이 있으면 true인 각 조건은 조건부 트리거 개수에 포함됩니다.
+규칙에 대한 조건부 트리거링을 설정하려면 다음을 수행하십시오.
  1. 규칙 편집기에서 기본 **조건이 충족될 때마다 트리거** 링크를 클릭하여 빈도 설정 요구사항 대화 상자를 여십시오.
  2. 규칙에서 사용할 조건부 트리거를 선택하고 구성하십시오.
  <ul>
  <li>조건이 충족될 때마다 트리거</li>
- <li>M *시간 단위*에 조건이 N번 충족되면 트리거</li>
+ <li>M *단위 시간*에 조건이 N번 충족되면 트리거</li>
  </ul>  
  조건부 트리거에 대한 자세한 설명은 클라우드 분석 섹션에서 [조건부 규칙 트리거](cloud_analytics.html#conditional "조건부 트리거 개요")를 참조하십시오.
 5. 규칙 조건이 충족되면 발생하는 하나 이상의 조치를 작성하거나 선택하십시오.
@@ -188,12 +188,12 @@ EAA 사용 게이트웨이에서 실행되는 에지 규칙 트리거 조치를 
 특성 | 설명
 --- | ---
 `MsgInCount` |EAA(Edge Analytics Agent)에 보낸 메시지 수입니다.
-`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | 마지막 기간 동안 EAA에 전송된 것으로 추정되는 초당 메시지 수입니다.</br>**참고:** `MsgInRate`는 `MsgInRate1Min`의 별명입니다. `MsgInMeanRate`는 시동된 이후의 평균 메시지 비율입니다.
+`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | 마지막 기간 동안 EAA에 전송된 것으로 추정되는 초당 메시지 수입니다.</br>**참고:** `MsgInRate`는 `MsgInRate1Min`의 별명입니다. `MsgInMeanRate`는 시작된 이후의 평균 메시지 비율입니다.
 `LastHeartBeat` | 마지막 하트비트 메시지가 생성된 밀리초 시간소인입니다. 하트비트 메시지는 최소 10초마다 생성됩니다.
 `CurrentTimestamp` | 현재 모니터링 메시지가 생성된 밀리초 시간소인입니다.
 `IsAlive` | `LastHeartBeat`와 `CurrentTimestamp` 사이의 차이가 20초보다 큰 경우 이 특성은 0입니다.
 `BytesOutCount` | EAA에서 {{site.data.keyword.iot_short}}로 보낸 메시지 바이트 수입니다.
-`BytesOutRate`, `BytesOutRate1Min`, `BytesOutRate15Min`, `BytesOutRate5Min`, `BytesOutMeanRate` | 마지막 기간 동안 EAA에서 {{site.data.keyword.iot_short}}에 보낸 것으로 추정되는 초당 메시지 바이트 수입니다. </br>**참고:** `BytesOutRate`는 `BytesOutRate1Min`의 별명입니다. `BytesOutMeanRate`는 시동된 이후의 평균 비율입니다.
+`BytesOutRate`, `BytesOutRate1Min`, `BytesOutRate15Min`, `BytesOutRate5Min`, `BytesOutMeanRate` | 마지막 기간 동안 EAA에서 {{site.data.keyword.iot_short}}에 보낸 것으로 추정되는 초당 메시지 바이트 수입니다. </br>**참고:** `BytesOutRate`는 `BytesOutRate1Min`의 별명입니다. `BytesOutMeanRate`는 시작된 이후의 평균 비율입니다.
 `BytesInCount` | {{site.data.keyword.iot_short}}에서 EAA에 보낸 메시지 바이트 수입니다.
 `BytesInMeanRate`, `BytesInRate1Min`, `BytesInRate`, `BytesInRate15Min`, `BytesInRate5Min` | 마지막 기간 동안 {{site.data.keyword.iot_short}}에서 EAA로 전송된 것으로 추정되는 초당 메시지 바이트 수입니다. </br>**참고:** BytesOutRate는 BytesOutRate1Min의 별명입니다. BytesOutMeanRate는 시동부터 평균 비율을 계수합니다.
 `RuleBytesInCount` |EAA 규칙 엔진 코어에 전송된 메시지 바이트 수입니다. </br> **참고:** 디바이스 유형에 대해 규칙이 설정되지 않은 경우 해당 디바이스 유형의 메시지가 규칙 엔진 코어에 전송되지 않습니다.

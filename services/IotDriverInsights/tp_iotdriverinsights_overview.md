@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-25"
 ---
 
 {:new_window: target="_blank"}
@@ -14,8 +14,6 @@ copyright:
 
 # About Trajectory Pattern Analysis
 {: #tp_iotdriverinsights_overview}
-Last updated: 16 June 2016
-{: .last-updated}
 
 Trajectory Pattern Analysis API is a service that is provided by {{site.data.keyword.iotdriverinsights_full}} that you can use to analyze the Origin/Destination (O/D) and route patterns of driving trips from car probe data.
 

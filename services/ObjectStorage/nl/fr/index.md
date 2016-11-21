@@ -2,34 +2,37 @@
 
 copyright:
   years: 2014, 2016
-
 ---
-
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
 
-# Initiation à {{site.data.keyword.objectstorageshort}}  {: #getting-started-with-object-storage}
 
-Dernière mise à jour : 25 août 2016
+# Initiation à {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage}
+
+*Dernière mise à jour : 19 octobre 2016*
 {: .last-updated}
 
-{{site.data.keyword.objectstoragefull}} permet d'accéder à un compte Swift {{site.data.keyword.objectstorageshort}} complet pour gérer vos données. Swift fournit une plateforme de stockage accessible par API, totalement distribuée. Vous pouvez l'utiliser directement dans vos applications ou pour les sauvegardes, ce qui en fait un outil idéal pour un stockage économique et dimensionnable.
+{{site.data.keyword.objectstoragefull}} fournit un stockage de données en cloud non structuré. Vous pouvez stocker du contenu et y accéder mais aussi composer interactivement des applications et des services et vous y connecter.
+{: shortdesc}
 
-**Remarque :** aucun chiffrement côté fournisseur n'est fourni. C'est la responsabilité de l'application client de chiffrer les données avant leur téléchargement.
+Certains cas d'utilisation courants pour le service {{site.data.keyword.objectstorageshort}} sont présentés ci-dessous :
+
+* Sauvegarde de données de volume depuis vos instances
+* Utilisation d'un emplacement intermédiaire lors du transfert de volumes importants de données
+* Transfert de données entre des environnements non directement connectés
+* Rôle de référentiel central
 
 
-Pour commencer à utiliser {{site.data.keyword.objectstorageshort}} :
 
-1.	Mettez à disposition votre instance {{site.data.keyword.objectstorageshort}}
-depuis le catalogue {{site.data.keyword.Bluemix_notm}}.
-2.	Configurez votre instance {{site.data.keyword.objectstorageshort}} et cliquez sur **Créer**. Si vous avez choisi initialement l'option **Laisser non lié** pour la zone **Application**, vous
-pourrez toujours lier l'instance de service à votre application {{site.data.keyword.Bluemix_notm}} une fois que vous aurez terminé la
-configuration. Pour des instructions, voir
-la
-rubrique
-sur
-la
-[liaison
-de votre application](../ObjectStorage/objectstorge_usingobjectstorage.html#using-object-storage-from-bluemix-app).
+{{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} permet d'accéder à un compte Swift {{site.data.keyword.objectstorageshort}} complet pour gérer vos données. Aucun chiffrement côté fournisseur n'est fourni.
+
+
+1.	Mettez à disposition votre instance depuis le catalogue {{site.data.keyword.Bluemix_notm}}. Configurez votre instance et cliquez sur **Créer**. Si vous avez choisi initialement l'option **Laisser non lié** pour la zone **Application**, vous
+pourrez toujours lier l'instance de service à votre application {{site.data.keyword.Bluemix_notm}} ultérieurement.
+2. Dans votre tableau de bord d'instance de service, créez un conteneur pour commencer à stocker des objets.
+3. Ajoutez un fichier dans votre conteneur ou compartiment depuis le menu déroulant **Actions**.
+4. Pour tester l'accès à vos objets, cliquez sur **Télécharger** et révisez le fichier.
+5. Quand vous êtes prêt à connecter votre instance à une application, configurez vos données d'identification de service et [liez le service](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service).
 
 
 
@@ -47,10 +50,9 @@ de votre application](../ObjectStorage/objectstorge_usingobjectstorage.html#usin
 
 ## Tutoriels et exemples
 {: #samples}
-* [Connecting to {{site.data.keyword.objectstoragefull}} with Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
+* [Connecting to IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} with Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
 * [Use Python to access your {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}}](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
 * [Use PHP to leverage {{site.data.keyword.objectstorageshort}}](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window}
-* [Use pkgcloud to access {{site.data.keyword.objectstoragefull}} with Node.js](https://developer.ibm.com/recipes/tutorials/use-pkgcloud-to-access-ibm-object-storage-for-bluemix-with-node-js/){: new_window}
 
 ## Contextes d'exécution compatibles
 {: #buildpacks}

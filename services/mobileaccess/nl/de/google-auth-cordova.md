@@ -2,38 +2,70 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
 
 # Google-Authentifizierung für Cordova-Apps aktivieren
 {: #google-auth-cordova}
 
 
-Letzte Aktualisierung: 21. Juli 2016
-{: .last-updated}
-
-Zur Konfiguration von Cordova-Anwendungen für die Integration der Google-Authentifizierung müssen Sie Änderungen am nativen Code der Cordova-Anwendung (Java, Objective-C oder Swift) durchführen. Jede Plattform muss separat konfiguriert werden. Verwenden Sie die native Entwicklungsumgebung, um Änderungen an nativem Code vorzunehmen, wie zum Beispiel Android Studio oder Xcode.
+Zur Konfiguration Ihrer {{site.data.keyword.amafull}}-Cordova-Anwendungen für die Integration der Google-Authentifizierung müssen Sie Änderungen am nativen Code der Cordova-Anwendung (Java, Objective-C oder Swift) durchführen. Jede Plattform muss separat konfiguriert werden. Verwenden Sie die native Entwicklungsumgebung, um Änderungen an nativem Code vorzunehmen, wie zum Beispiel Android Studio oder Xcode.
 
 ## Vorbereitungen
 {: #before-you-begin}
 Voraussetzungen:
-* Cordova-Projekt, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist. Weitere Informationen finden Sie in [Cordova-Plug-in einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
+* Cordova-Projekt, das mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert ist.  Weitere Informationen finden Sie in [Cordova-Plug-in einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).  
 * Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
 * (Optional) Machen Sie sich mit den folgenden Abschnitten vertraut:
-   * [Google-Authentifizierung in Android-Apps aktivieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
-   * [Google-Authentifizierung in iOS-Apps aktivieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
+   * [Google-Authentifizierung für Android-Apps aktivieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
+   * [Google-Authentifizierung für iOS-Apps aktivieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
 
 
 ## Android-Plattform konfigurieren
 {: #google-auth-cordova-android}
 
-Die Schritte, die zur Konfiguration der Android-Plattform einer Cordova-Anwendung für die Integration der Google-Authentifizierung erforderlich sind, sind den Schritten, die für native Anwendungen erforderlich sind, sehr ähnlich. Weitere Informationen finden Sie in [Google-Authentifizierung in Android-Apps aktivieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html). Richten Sie die folgenden Teile ein:
+Die Schritte, die zur Konfiguration der Android-Plattform einer Cordova-Anwendung für die Integration der Google-Authentifizierung erforderlich sind, sind den Schritten, die für native Anwendungen erforderlich sind, sehr ähnlich. Weitere Informationen finden Sie in [Google-Authentifizierung in Android-Apps aktivieren](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html); richten Sie Folgendes ein:
 
 * Google-Projekt für die Android-Plattform konfigurieren
 * {{site.data.keyword.amashort}} für die Google-Authentifizierung konfigurieren
-* {{site.data.keyword.amashort}}-Client-SDK für Android konfigurieren
 
-Initialisieren Sie für Cordova-Anwendungen das {{site.data.keyword.amashort}}-Client-SDK in Ihrem JavaScript-Code anstatt im Java-Code. Die API `GoogleAuthenticationManager` muss trotzdem in Ihrem nativen Code registriert werden.
+### {{site.data.keyword.amashort}}-Client-SDK fur Android (Cordova) konfigurieren
+
+
+2. Öffnen Sie in Ihrem Android-Projektordner die Datei `build.gradle` für das Anwendungsmodul (**nicht** die Projektdatei `build.gradle`).
+Suchen Sie den Abschnitt für Abhängigkeiten ('dependencies') und fügen Sie eine neue Abhängigkeit 'compile' für das Client-SDK hinzu:
+
+	```Gradle
+	dependencies {
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+        name:'googleauthentication',
+        version: '1.+',
+        ext: 'aar',
+        transitive: true
+    	// other dependencies  
+	}
+	```
+
+2. Synchronisieren Sie Ihr Projekt mit Gradle, indem Sie auf **Tools > Android > Sync Project with Gradle Files** klicken.
+
+3. Initialisieren Sie für Cordova-Anwendungen das {{site.data.keyword.amashort}}-Client-SDK in Ihrem JavaScript-Code anstatt im Java-Code. Die API `GoogleAuthenticationManager` muss trotzdem in Ihrem nativen Code registriert werden. Fügen Sie diesen Code zur Methode `onCreate` für Hauptaktivitäten hinzu: 
+
+	```Java
+	GoogleAuthenticationManager.getInstance().registerDefaultAuthenticationListener(this);
+	```
+
+1. Fügen Sie Ihrer Aktivität den folgenden Code hinzu:
+ 
+ 	```Java
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	     super.onActivityResult(requestCode, resultCode, data);
+		GoogleAuthenticationManager.getInstance()
+	         .onActivityResultCalled(requestCode, resultCode, data);
+	}
+	```
 
 ## iOS-Plattform konfigurieren
 {: #google-auth-cordova-ios}
@@ -55,7 +87,7 @@ Die Schritte, die zur Konfiguration der iOS-Plattform einer Cordova-Anwendung f�
 	* IMFGoogleAuthenticationHandler.h
 	* IMFGoogleAuthenticationHandler.m
 
-Wählen Sie das Kontrollkästchen **Copy files....** aus.
+	Wählen Sie das Kontrollkästchen **Copy files....** aus.
 
 1. Laden Sie das [Google+ iOS SDK](http://goo.gl/9cTqyZ) herunter und installieren Sie es.
 
@@ -69,6 +101,7 @@ Fügen Sie die folgende Zeile der Methode `application:openURL:sourceApplication
 [[ NSNotificationCenter defaultCenter] postNotification:
 		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];      
 ```
+{: codeblock}
 
 ## {{site.data.keyword.amashort}}-Client-SDK initialisieren
 {: #google-auth-cordova-initialize}
@@ -78,12 +111,30 @@ Verwenden Sie den folgenden JavaScript-Code in Ihrer Cordova-Anwendung, um das {
 ```JavaScript
 BMSClient.initialize("applicationRoute", "applicationGUID");
 ```
+{: codeblock}
 
-Ersetzen Sie die Werte für *applicationRoute* und *applicationGUID* durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** Ihrer Anwendung im Dashboard ermittelt haben.
+Ersetzen Sie die Werte für `applicationRoute` und `applicationGUID` durch die Anwendungswerte für **Route** und **App-Guid**. Diese Werte erhalten Sie, wenn Sie auf der Anwendungsseite im Dashboard auf die Schaltfläche **Mobile Optionen** klicken.
+	
+
+
+
+##{{site.data.keyword.amashort}}-AuthorizationManager initialisieren
+Verwenden Sie den folgenden JavaScript-Code in Ihrer Cordova-Anwendung, um den {{site.data.keyword.amashort}} AuthorizationManager zu initialisieren.
+
+```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+```
+{: codeblock}
+
+Ersetzen Sie den Wert für `tenantId` durch den Wert für die `tenantId` des {{site.data.keyword.amashort}}-Service. Diesen Wert erhalten Sie, wenn Sie auf die Schaltfläche **Berechtigungsnachweise anzeigen** der Kachel für den {{site.data.keyword.amashort}}-Service klicken.
+
+
+
+
 
 ## Authentifizierung testen
 {: #google-auth-cordova-test}
-Nach der Initialisierung des Client-SDK können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen. 
+Nach der Initialisierung des Client-SDK können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen.
 
 ### Vorbereitungen
 {: #google-auth-cordova-testing-before}
@@ -106,15 +157,16 @@ Sie müssen über eine Back-End-Anwendung verfügen, die durch {{site.data.keywo
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 	request.send(success, failure);
 	```
-
+{: codeblock}
 
 1. Führen Sie Ihre Anwendung aus. Die Google-Anmeldeanzeige wird geöffnet.
 
 	![Google-Anmeldeanzeige](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Google-Anmeldeanzeige](images/ios-google-login.png)
+	
 	Diese Anzeige sieht möglicherweise geringfügig anders aus, wenn Sie die Facebook-App nicht auf Ihrem Gerät installiert haben oder wenn Sie zurzeit nicht bei Facebook angemeldet sind.
-1. Indem Sie auf **OK** klicken, berechtigen Sie {{site.data.keyword.amashort}}, Ihre Google-Benutzeridentität zu Authentifizierungszwecken zu nutzen. 
+1. Indem Sie auf **OK** klicken, berechtigen Sie {{site.data.keyword.amashort}}, Ihre Google-Benutzeridentität zu Authentifizierungszwecken zu nutzen.
 
-1. 	Ihre Anforderung sollte erfolgreich ausgeführt werden. Abhängig von der verwendeten Plattform sollte die folgende Ausgabe in der LogCat/Xcode-Konsole angezeigt werden: 
+1. Ihre Anforderung sollte erfolgreich ausgeführt werden. Abhängig von der verwendeten Plattform sollte die folgende Ausgabe in der LogCat/Xcode-Konsole angezeigt werden:
 
 	![Code-Snippet von Android](images/android-google-login-success.png)
 

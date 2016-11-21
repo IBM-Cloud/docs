@@ -14,8 +14,8 @@
    viewBox="0 0 788.41142 517.00362"
    id="svg5645"
    version="1.1"
-   inkscape:version="0.48.5 r"
-   sodipodi:docname="iot4e_architecture.svg"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="IoT4E_architecture.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
@@ -1790,10 +1790,10 @@
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1680"
-     inkscape:window-height="987"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
+     inkscape:window-width="1920"
+     inkscape:window-height="1028"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      fit-margin-top="0.2"
      fit-margin-left="0.2"
@@ -1983,8 +1983,7 @@
          cy="459.80499"
          r="32.000004"
          id="circle5718-26"
-         style="fill:#9e215f"
-         d="m 211.44747,459.80499 c 0,17.67312 -14.32689,32.00001 -32.00001,32.00001 -17.67311,0 -32,-14.32689 -32,-32.00001 0,-17.67311 14.32689,-32 32,-32 17.67312,0 32.00001,14.32689 32.00001,32 z" />
+         style="fill:#9e215f" />
       <path
          class="st58"
          d="m 189.84748,448.90498 -11.5,0 0,32.60001 9.7,9.1 c 10.9,-3 19.4,-11.6 22.4,-22.40001 l -20.6,-19.3 z"
@@ -2058,8 +2057,7 @@
          sodipodi:role="line"
          x="291.50089"
          y="431.56644"
-         id="tspan6702"
-         style="-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">サンプル・モバイル・アプリ</tspan></text>
+         id="tspan6702">Sample mobile app</tspan></text>
     <g
        id="g6649-4-6"
        transform="matrix(0.49001738,0,0,0.46831598,179.48691,211.85984)">
@@ -2069,8 +2067,7 @@
          cy="459.80499"
          r="32.000004"
          id="circle5718-26-0"
-         style="fill:#9e215f"
-         d="m 211.44747,459.80499 c 0,17.67312 -14.32689,32.00001 -32.00001,32.00001 -17.67311,0 -32,-14.32689 -32,-32.00001 0,-17.67311 14.32689,-32 32,-32 17.67312,0 32.00001,14.32689 32.00001,32 z" />
+         style="fill:#9e215f" />
       <path
          class="st58"
          d="m 189.84748,448.90498 -11.5,0 0,32.60001 9.7,9.1 c 10.9,-3 19.4,-11.6 22.4,-22.40001 l -20.6,-19.3 z"
@@ -2148,8 +2145,7 @@
              r="0.60000002"
              cy="17.9"
              cx="11.8"
-             style="fill:#dcf5ff"
-             d="m 12.4,17.9 c 0,0.33137 -0.268629,0.6 -0.6,0.6 -0.331371,0 -0.6,-0.26863 -0.6,-0.6 0,-0.331371 0.268629,-0.6 0.6,-0.6 0.331371,0 0.6,0.268629 0.6,0.6 z" />
+             style="fill:#dcf5ff" />
         </g>
         <polygon
            id="polygon13"
@@ -2183,8 +2179,7 @@
            id="tspan4579"
            y="438.79944"
            x="486.05368"
-           sodipodi:role="line"
-           style="-inkscape-font-specification:ms ui;font-family:ms ui">サービス</tspan></text>
+           sodipodi:role="line">Service</tspan></text>
     </g>
     <g
        id="g4731-3"
@@ -2202,8 +2197,7 @@
            id="tspan6702-1"
            y="509.96609"
            x="61.470284"
-           sodipodi:role="line"
-           style="-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">コンシューマー</tspan></text>
+           sodipodi:role="line">Consumer</tspan></text>
       <rect
          style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="rect79371-1-6-6-9-8-7-3-5-1-4-5"
@@ -2278,9 +2272,7 @@
            style="font-size:11.25000095px"
            sodipodi:role="line"
            x="461.03171"
-           y="3.7135651">IoT <tspan
-   style="-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-   id="tspan5816">デバイスの製造メーカー</tspan></tspan><tspan
+           y="3.7135651">IoT device manufacturer</tspan><tspan
            id="tspan7318-8-6-0"
            sodipodi:role="line"
            x="461.03171"
@@ -2302,10 +2294,10 @@
     <text
        sodipodi:linespacing="125%"
        y="22.053659"
-       x="735.34021"
+       x="739.34021"
        font-size="13"
        id="text56812-7"
-       style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold">IBM® Bluemix</text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Bluemix</text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2316,7 +2308,7 @@
          sodipodi:role="line"
          id="tspan7308"
          x="499.67679"
-         y="92.553978" /></text>
+         y="92.553978"> </tspan></text>
     <rect
        ry="0"
        rx="0"
@@ -2340,8 +2332,7 @@
          sodipodi:role="line"
          x="499.79694"
          y="103.36868"
-         id="tspan9810"
-         style="-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">ダッシュボード</tspan></text>
+         id="tspan9810">Dashboard</tspan></text>
     <g
        id="g5722"
        transform="matrix(0.08090742,0,0,0.08307112,454.6233,71.786196)"
@@ -2400,13 +2391,11 @@
          id="tspan44239-7"
          y="216.68509"
          x="509.94742"
-         sodipodi:role="line">REST API &amp; </tspan><tspan
+         sodipodi:role="line">Rest &amp; </tspan><tspan
          y="230.43509"
          x="509.94742"
          sodipodi:role="line"
-         id="tspan7973"><tspan
-   style="-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-   id="tspan5820">リアルタイムの</tspan> API</tspan><tspan
+         id="tspan7973">Real-time APIs</tspan><tspan
          y="244.18509"
          x="509.94742"
          sodipodi:role="line"
@@ -2531,8 +2520,7 @@
          cy="459.80499"
          r="32.000004"
          id="circle5718-26-0-2"
-         style="fill:#9e215f"
-         d="m 211.44747,459.80499 c 0,17.67312 -14.32689,32.00001 -32.00001,32.00001 -17.67311,0 -32,-14.32689 -32,-32.00001 0,-17.67311 14.32689,-32 32,-32 17.67312,0 32.00001,14.32689 32.00001,32 z" />
+         style="fill:#9e215f" />
       <path
          class="st58"
          d="m 189.84748,448.90498 -11.5,0 0,32.60001 9.7,9.1 c 10.9,-3 19.4,-11.6 22.4,-22.40001 l -20.6,-19.3 z"
@@ -2592,18 +2580,16 @@
        id="text44241-1-5-9"
        y="171.24385"
        x="702.77588"
-       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          id="tspan4579-7-5"
          y="171.24385"
          x="702.77588"
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic">シミュレーション・</tspan><tspan
+         sodipodi:role="line">Simulated sample </tspan><tspan
          y="184.99385"
          x="702.77588"
          sodipodi:role="line"
-         id="tspan4890"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic">サンプル・デバイス</tspan></text>
+         id="tspan4890">devices</tspan></text>
     <g
        transform="matrix(0.88229753,0,0,0.8706004,649.54495,164.80866)"
        id="g3-96">
@@ -2646,8 +2632,7 @@
          cy="459.80499"
          r="32.000004"
          id="circle5718-26-0-2-4"
-         style="fill:#9e215f"
-         d="m 211.44747,459.80499 c 0,17.67312 -14.32689,32.00001 -32.00001,32.00001 -17.67311,0 -32,-14.32689 -32,-32.00001 0,-17.67311 14.32689,-32 32,-32 17.67312,0 32.00001,14.32689 32.00001,32 z" />
+         style="fill:#9e215f" />
       <path
          class="st58"
          d="m 189.84748,448.90498 -11.5,0 0,32.60001 9.7,9.1 c 10.9,-3 19.4,-11.6 22.4,-22.40001 l -20.6,-19.3 z"
@@ -2716,9 +2701,7 @@
          y="338.22162"
          x="300.1373"
          sodipodi:role="line"
-         id="tspan7488">Starter <tspan
-   style="-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-   id="tspan5822">アプリ</tspan></tspan></text>
+         id="tspan7488">Starter app</tspan></text>
     <g
        transform="matrix(0.88229753,0,0,0.8706004,246.21183,317.84197)"
        id="g3-96-0">
@@ -2781,16 +2764,16 @@
          x="261.233"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
-           style="font-size:11.25000095000000000px;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           style="font-size:11.25000095px"
            id="tspan4945-3"
            y="125.51817"
            x="261.233"
-           sodipodi:role="line">家庭用電化製品</tspan><tspan
-           style="font-size:11.25000095000000000px;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+           sodipodi:role="line">Consumer electronics</tspan><tspan
+           style="font-size:11.25000095px"
            id="tspan5228"
            y="139.58067"
            x="261.233"
-           sodipodi:role="line">登録サービス</tspan></text>
+           sodipodi:role="line">registration service</tspan></text>
     </g>
     <g
        id="g5499"
@@ -2815,9 +2798,7 @@
            id="tspan5558"
            y="257.88394"
            x="260.74411"
-           sodipodi:role="line">IoT <tspan
-   style="-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
-   id="tspan5818">コンシューマー・アクセス</tspan></tspan></text>
+           sodipodi:role="line">IoT consumer access</tspan></text>
     </g>
     <g
        id="g4161"
@@ -2831,8 +2812,7 @@
            cx="64.886116"
            class="st0"
            id="XMLID_1_"
-           style="fill:#01b39f"
-           d="m 96.88612,-16.283342 c 0,17.6731137 -14.32689,32.000003 -32.000004,32.000003 -17.673114,0 -32.000004,-14.3268893 -32.000004,-32.000003 0,-17.673114 14.32689,-32.000004 32.000004,-32.000004 17.673114,0 32.000004,14.32689 32.000004,32.000004 z" />
+           style="fill:#01b39f" />
         <g
            transform="translate(6.497225,1.7166653)"
            id="g7421">
@@ -2894,7 +2874,7 @@
          x="298.36966"
          y="104.32381"
          id="tspan7485"
-         style="font-weight:bold;font-size:11.25000095000000000px;-inkscape-font-specification:MS UI Gothic Bold;font-family:MS UI Gothic;font-style:normal;font-stretch:normal;font-variant:normal">サービス</tspan></text>
+         style="font-weight:bold;font-size:11.25000095px">Service</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44235-7-4"
@@ -2905,7 +2885,7 @@
          y="226.88509"
          x="301.00787"
          sodipodi:role="line"
-         id="tspan7973-9">REST  API</tspan><tspan
+         id="tspan7973-9">Rest  APIs</tspan><tspan
          y="240.63509"
          x="301.00787"
          sodipodi:role="line"

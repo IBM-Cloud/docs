@@ -2,17 +2,17 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
-{:shortdesc: .shortdesc}
+{:shortdesc: .shortdesc} 
 
 # Cordova 플러그인 설정
 {: #getting-started-cordova}
 
-마지막 업데이트 날짜: 2016년 7월 17일
-{: .last-updated}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하여 Cordova 애플리케이션을 인스트루먼트하고, SDK를 초기화하며 보호 및 비보호 리소스에 대한 요청을 작성하십시오.
+{{site.data.keyword.amafull}} 클라이언트 SDK를 사용하여 Cordova 애플리케이션을 인스트루먼트하고, SDK를 초기화하며 보호 및 비보호 리소스에 대한 요청을 작성하십시오.
+
+
 {:shortdesc}
 
 ## 시작하기 전에
@@ -32,10 +32,16 @@ copyright:
 Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.data.keyword.amashort}} 클라이언트 SDK를 랩핑하는 Cordova 플러그인입니다. Cordova CLI(Command Line Interface) 및 `npmjs`, Cordova 프로젝트에 대한 플러그인 저장소를 사용하여 분배됩니다. Cordova CLI는 저장소에서 자동으로 플러그인을 다운로드하고 Cordova 애플리케이션에서 플러그인을 사용할 수 있게 합니다. 
 
 1. Android 및 iOS 플랫폼을 Cordova 애플리케이션에 추가하십시오. 명령행에서 다음 명령 중 하나 또는 둘 다 실행하십시오. 
+   	
+	###Android
+	{: #install-cordova-android}
 
-	```Bash
+	```
 	cordova platform add android
 	```
+	
+	###iOS
+	{: #install-cordova-ios}
 
 	```Bash
 	cordova platform add ios
@@ -50,8 +56,8 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
-
-	*minSdkVersion* 값은 `15`보다 커야 합니다. *targetSdkVersion* 값은 Google에서 사용 가능한 최신 Android SDK여야 합니다.  
+	
+	*minSdkVersion* 값은 `15` 이상이어야 합니다. *targetSdkVersion* 값은 Google에서 사용 가능한 최신 Android SDK여야 합니다.  
 
 3. iOS 운영 체제를 추가한 경우 `<platform name="ios">` 요소를 대상 선언으로 업데이트하십시오. 
 
@@ -59,7 +65,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 	<platform name="ios">
 		<preference name="deployment-target" value="8.0"/>
 		<!-- add deployment target declaration -->
-	</platform>
+	 </platform>
 	```
 
 4. {{site.data.keyword.amashort}} Cordova 플러그인을 설치하십시오. 
@@ -74,11 +80,11 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 	{: #cordova-android}
 
 	Android Studio에서 프로젝트를 열기 전에 빌드 오류를 방지하기 위해 명령행 인터페이스(CLI)를 통해 Cordova 애플리케이션을 빌드하십시오.
-
-		```
-		cordova build android
-		```
-
+	
+	```Bash
+	cordova build android
+	```
+	
 	####iOS
 	{: #cordova-ios}
 
@@ -86,19 +92,16 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 
 	1. 최신 Xcode 버전을 사용하여 `<app_name>/platforms/ios` 디렉토리에서 `xcode.proj` 파일을 여십시오. 
 
-		**중요:** 메시지를 수신하여 최신 Swift 구문으로 변환하려면 취소를 클릭하십시오.
+		**중요:** 최신 Swift 구문으로 변환하라는 메시지가 수신되면 **취소**를 클릭하십시오.
 
 	2. **빌드 설정 > Swift 컴파일러 - 코드 생성 > Objective-C 브리징 헤더**로 이동하여 다음 경로를 추가하십시오. 
 
-			```
-			<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h
-			```
+		`<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h`
 
 	3. **빌드 설정 > 링크 > Runpath 검색 경로**로 이동하여 다음 프레임워크 매개변수를 추가하십시오. 
 
-			```
-			@executable_path/Frameworks
-			```
+		`@executable_path/Frameworks
+			`
 
 	4. Xcode로 애플리케이션을 빌드하고 실행하십시오.
 
@@ -115,26 +118,35 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드의 기본 페이지에서 라우트 및 앱 GUID 값을 찾으십시오. SDK를 초기화하려면 앱 이름을 클릭한 다음 **애플리케이션 라우트** 및 **애플리케이션 GUID** 값을 표시하도록 **모바일 옵션**을 클릭하십시오. 
 
-3. 다음 호출을 `index.js` 파일에 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. *applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션** 값으로 바꾸십시오.
+3. 다음 호출을 `index.js` 파일에 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오.  
 
 	```JavaScript
 	BMSClient.initialize("applicationRoute", "applicationGUID");
 	```
+
+  * `applicationRoute` 및 `applicationGUID`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션** 값으로 바꾸십시오.
+
+##{{site.data.keyword.amashort}} AuthorizationManager 초기화
+{: #initializing-auth-manager}
+
+Cordova 애플리케이션에서 다음 JavaScript 코드를 사용하여 {{site.data.keyword.amashort}} AuthorizationManager를 초기화하십시오.
+
+```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+  ```
+
+`tenantId` 값을 {{site.data.keyword.amashort}} 서비스 `tenantId`로 바꾸십시오. {{site.data.keyword.amashort}} 서비스 타일의 **신임 정보 표시** 단추를 클릭하여 이 값을 찾을 수 있습니다. 
 
 ## 모바일 백엔드 애플리케이션에 대한 요청 작성
 {: #getting-started-request}
 
 {{site.data.keyword.amashort}} 클라이언트 SDK가 설치되고 나면 모바일 백엔드 애플리케이션에 대한 요청 작성을 시작할 수 있습니다. 
 
-1. 요청을 새 모바일 백엔드의 보호 엔드포인트로 전송하십시오. 브라우저에서 URL `{applicationRoute}/protected`를 여십시오. 예를 들면 다음과 같습니다. 
-
-	```
-	http://my-mobile-backend.mybluemix.net/protected
-	```
+1. 요청을 새 모바일 백엔드의 보호 엔드포인트로 전송하십시오. 브라우저에서 URL `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 여십시오.
 
 	MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 브라우저에 `Unauthorized` 메시지가 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스되므로 이 메시지가 리턴됩니다.
 
-1. Cordova 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. `BMSClient`를 초기화한 후에 다음 코드를 추가하십시오. 
+2. Cordova 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. `BMSClient`를 초기화한 후에 다음 코드를 추가하십시오. 
 
 	```Javascript
 	var success = function(data){
@@ -150,7 +162,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 	request.send(success, failure);
 	```
 
-1. 요청에 성공하는 경우 LogCat 또는 Xcode 콘솔에 다음 출력이 표시됩니다(사용 중인 플랫폼에 따라 다름). 
+3. 요청에 성공하는 경우 LogCat 또는 Xcode 콘솔에 다음 출력이 표시됩니다(사용 중인 플랫폼에 따라 다름). 
 
 	![이미지](images/getting-started-android-success.png)
 

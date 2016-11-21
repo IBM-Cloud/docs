@@ -136,15 +136,20 @@ Como um exemplo, crie uma regra que chame a ação hello sempre que uma atualiza
   ```
   {: pre}
 
-3. Crie e ative a regra. Os três parâmetros são o nome da regra, o acionador e a ação.
+3. Crie a regra. Observe que a regra será ativada no momento da criação, o que significa que ela estará disponível imediatamente para responder às ativações de seu acionador. Os três parâmetros são o nome da regra, o acionador e a ação.
   ```
-  wsk rule create --enable myRule locationUpdate hello
+  wsk rule create myRule locationUpdate hello
+  ```
+  {: pre}
+
+  A qualquer momento, é possível escolher desativar uma regra.
+  ```
+  wsk rule disable myRule
   ```
   {: pre}
 
 4. Dispare o acionador locationUpdate. Toda vez que você disparar um evento, a
 ação hello será chamada com os parâmetros do evento.
-  
   ```
   wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
   ```
@@ -183,5 +188,4 @@ ação hello será chamada com os parâmetros do evento.
 É possível criar várias regras que associem o mesmo acionador a diferentes ações.
 O acionador e a ação que fazem uma regra devem estar no mesmo namespace e não podem pertencer a um pacote.
 Se você desejar usar uma ação que pertença a um pacote, será possível copiar a ação em seu
-namespace. Por exemplo: `wsk action create echo --copy
-/whisk.system/samples/echo`.
+namespace. Por exemplo: `wsk action create echo --copy /whisk.system/utils/echo`.

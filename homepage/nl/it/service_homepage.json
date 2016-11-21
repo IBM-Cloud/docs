@@ -1,7 +1,7 @@
 {
   "id": "docs_homepage_services",
   "title": "Come utilizzare i servizi Bluemix",
-  "subtitle": "Informazioni relative ai tipi di servizio e sulla disponibilità ",
+  "subtitle": "Informazioni relative ai tipi di servizio e sulla disponibilità",
   "subtitleHref": "services/index.html",
   "items": [{
     "id": "cfApp",
@@ -40,6 +40,11 @@
     "type": "extra",
     "title": "Prova i toolchain",
     "href": "toolchains/toolchains_overview.html",
+    "category_id": "devops"
+  }, {
+    "type": "extra",
+    "title": "Prova Dedicated GitHub Enterprise",
+    "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
     "type": "extra",

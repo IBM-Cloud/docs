@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，20166
 
- 
+lastupdated: "2016-04-18" 
 
 ---
 
@@ -14,8 +14,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # Cloud Foundry-Apps erstellen
-*Letzte Aktualisierung: 18. April 2016*
-{: .last-updated}
 
 In {{site.data.keyword.Bluemix}} können Sie Ihre Anwendung in der
 {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle erstellen. Nachdem die Anwendung erstellt wurde, können Sie wählen, ob Sie weiterhin die Benutzerschnittstelle, die Befehlszeilenschnittstelle 'cf' oder {{site.data.keyword.jazzhub_title}} verwenden möchten, um Ihre Anwendung zu entwickeln, zu verfolgen, zu planen und bereitzustellen.
@@ -38,7 +36,7 @@ Gehen Sie wie folgt vor, um mit der Erstellung Ihrer Anwendung zu beginnen:
   2. Klicken Sie auf **Anwendung erstellen**.
   3. Klicken Sie auf **Web** und befolgen Sie die Anweisungen, um einen Starter auszuwählen, einen Namen anzugeben und zu entscheiden, welchen Code Sie verwenden möchten.
   4. Nachdem Sie die Anweisungen abgeschlossen haben, klicken Sie auf **App-Übersicht anzeigen**. Die Übersichtsseite der App wird im Dashboard angezeigt.
-  5. Sie können Ihrer App einen Service hinzufügen, indem Sie in der Anwendungsübersicht in der Bluemix-Benutzerschnittstelle auf **Service oder API hinzufügen** klicken. Durchsuchen Sie den Katalog und wählen Sie Services aus oder blättern Sie zum Ende des Katalogs und klicken Sie auf **{{site.data.keyword.Bluemix_notm}} Experimental Services**, um die experimentellen Services zu durchsuchen. Sie haben auch die Möglichkeit, die Befehlszeilenschnittstelle 'cf' zu verwenden. Weitere Informationen finden Sie unter 'Optionen für das Arbeiten mit Anwendungen'.
+  5. Sie können Ihrer App einen Service hinzufügen, indem Sie in der App-Übersicht in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle auf **Service oder API hinzufügen** klicken. Durchsuchen Sie den Katalog und wählen Sie Services aus oder blättern Sie zum Ende des Katalogs und klicken Sie auf **{{site.data.keyword.Bluemix_notm}} Experimental Services**, um die experimentellen Services zu durchsuchen. Sie haben auch die Möglichkeit, die Befehlszeilenschnittstelle 'cf' zu verwenden. Weitere Informationen finden Sie unter 'Optionen für das Arbeiten mit Anwendungen'.
   6. Klicken Sie in der Anwendungsübersicht auf 'Git hinzufügen', um Ihre Anwendungsquelle in einem Git-Repository zu speichern und ein von Git gehostetes Projekt zu erstellen. Sie können die Anwendung auch über
 {{site.data.keyword.jazzhub_title}}
 bereitstellen.
@@ -70,7 +68,7 @@ Nutzen Sie bei der Entwicklung Ihrer Webanwendungen die folgenden Tipps:
 <dd>Geben Sie für Ihre Anwendungen keinen lokalen Speicher an. Jede Instanz Ihrer Anwendung kann jederzeit
 erneut gestartet oder auf eine andere virtuelle Maschine verschoben werden. Dies gilt auch dann, wenn nur eine einzige Instanz aktiv ist. Dies geschieht
 üblicherweise, um einen Lastausgleich zu erreichen. Wenn die Anwendung verschoben oder gelöscht wird, gehen sämtliche Daten im
-lokalen Speicher verloren. Verwenden Sie zwecks Persistenz einen der Datenspeicherservices von Bluemix.</dd>
+lokalen Speicher verloren. Verwenden Sie zwecks Persistenz einen der Datenspeicherservices von {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>Ressourcengrenzen</dt>
 <dd>Berücksichtigen Sie die Grenzwerte im Hinblick auf die Ressourcenmengen, die bei einem Testkonto verwendet
 werden können. Es gelten folgende Grenzwerte:

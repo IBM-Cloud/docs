@@ -42,7 +42,7 @@ Vous pouvez ajouter et configurer des intégrations d'outils pour votre chaîne 
 
 1. Dans le tableau de bord, onglet **DEVOPS**, cliquez sur la chaîne d'outils pour ouvrir la page d'intégration d'outil correspondante. Vous pouvez également, dans le coin supérieur droit de la page de présentation de l'application, cliquer sur **Afficher la chaîne d'outils**. Cliquez ensuite sur **Intégrations d'outils**.
 1. Pour afficher la liste des intégrations d'outils à ajouter, cliquez sur le bouton d'ajout (+).
-1. Cliquez sur l'intégration d'outil à ajouter. 
+1. Cliquez sur l'intégration d'outil à ajouter.
 1. Entrez les informations requises pour configurer l'intégration d'outil. 
 1. Cliquez sur **Créer une intégration** pour ajouter l'intégration d'outil à votre chaîne d'outils.
 
@@ -52,7 +52,7 @@ Vous pouvez ajouter et configurer des intégrations d'outils pour votre chaîne 
 Si vous supprimez une intégration d'outil de votre chaîne d'outils, la suppression est irréversible. 
 
 1. Dans le tableau de bord, onglet **DEVOPS**, cliquez sur la chaîne d'outils pour ouvrir la page d'intégration d'outil correspondante. Vous pouvez également, dans le coin supérieur droit de la page de présentation de l'application, cliquer sur **Afficher la chaîne d'outils**. Cliquez ensuite sur **Intégrations d'outils**.
-1. Sur la vignette de l'intégration d'outil à supprimer, cliquez sur le menu pour accéder aux options de configuration. 
+1. Sur la vignette de l'intégration d'outil à supprimer, cliquez sur le menu pour accéder aux options de configuration.
 1. Pour supprimer l'intégration d'outil de votre chaîne d'outils, cliquez sur **Supprimer**.
 1. Confirmez en cliquant sur **Supprimer**. 
 
@@ -65,8 +65,8 @@ Lorsque vous ajoutez des utilisateurs à votre organisation et vos espaces {{sit
 
 Pour ajouter un utilisateur, procédez comme suit : 
 
-1. Dans le tableau de bord, onglet **DEVOPS**, cliquez sur la chaîne d'outils pour ouvrir la page d'intégration d'outil correspondante. Cliquez ensuite sur **Gérer**. Vous pouvez également, dans le coin supérieur droit de la page de présentation de l'application, cliquer sur **Afficher la chaîne d'outils**. Cliquez ensuite sur **Gérer**.   
-1. Cliquez sur le lien de votre organisation.  
+1. Dans le tableau de bord, onglet **DEVOPS**, cliquez sur la chaîne d'outils pour ouvrir la page d'intégration d'outil correspondante. Cliquez ensuite sur **Gérer**. Vous pouvez également, dans le coin supérieur droit de la page de présentation de l'application, cliquer sur **Afficher la chaîne d'outils**. Cliquez ensuite sur **Gérer**.  
+1. Cliquez sur le lien de votre organisation. 
 1. Dans la page de gestion des organisations, cliquez sur **Inviter un utilisateur** et entrez l'adresse électronique de l'utilisateur.
 1. Si vous souhaitez donner des droits avancés à des responsables {{site.data.keyword.Bluemix_notm}} d'organisations, sélectionnez une ou plusieurs des cases à cocher **Responsable**, **Responsable de la facturation** et **Auditeur**.
 1. Cliquez sur **INVITER**.
@@ -77,8 +77,8 @@ Pour ajouter un utilisateur, procédez comme suit :
 
 Vous pouvez supprimer une chaîne d'outils et spécifier les intégrations d'outils associées à supprimer. Lorsque vous supprimez une chaîne d'outils, la suppression est irréversible.
 
-1. Dans le tableau de bord, onglet **DEVOPS**, cliquez sur la chaîne d'outils pour ouvrir la page d'intégration d'outil correspondante. Cliquez ensuite sur **Gérer**. Vous pouvez également, dans le coin supérieur droit de la page de présentation de l'application, cliquer sur **Afficher la chaîne d'outils**. Cliquez ensuite sur **Gérer**. 
-1. Cliquez sur **Supprimer la chaîne d'outils**, examinez et modifiez éventuellement la liste des intégrations d'outils à supprimer. 
+1. Dans le tableau de bord, onglet **DEVOPS**, cliquez sur la chaîne d'outils pour ouvrir la page d'intégration d'outil correspondante. Cliquez ensuite sur **Gérer**. Vous pouvez également, dans le coin supérieur droit de la page de présentation de l'application, cliquer sur **Afficher la chaîne d'outils**. Cliquez ensuite sur **Gérer**.
+1. Cliquez sur **Supprimer la chaîne d'outils**, examinez et modifiez éventuellement la liste des intégrations d'outils à supprimer.
 1. Confirmez la suppression en entrant le nom de la chaîne d'outils et en cliquant sur **Supprimer**.
 
  **Conseil** : Lorsque vous supprimez une intégration d'outil GitHub Enterprise, le référentiel GitHub Enterprise associé n'est pas supprimé de GitHub Enterprise. Vous devez supprimer manuellement le référentiel depuis GitHub Enterprise.

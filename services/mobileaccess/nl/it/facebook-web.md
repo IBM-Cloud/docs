@@ -60,7 +60,7 @@ Per avviare il processo di autorizzazione:
     ```
 
 
-  Il parametro `state` non è utilizzato per ora e può essere lasciato vuoto.
+  Il parametro `state` non è utilizzato per ora e può essere rimanere vuoto.
   Il parametro `redirect_uri` è l'uri per il reindirizzamento dopo l'esito positivo o negativo dell'autenticazione con Facebook.
 
 1. Dopo il reindirizzamento dell'endpoint di autorizzazione visualizzerai un modulo

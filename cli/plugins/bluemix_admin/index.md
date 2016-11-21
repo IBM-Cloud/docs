@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-
+lastupdated: "2016-11-08"
 
 ---
 
@@ -18,15 +18,12 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} admin CLI
 {: #bluemixadmincli}
 
-Last updated: 1 September 2016
-{: .last-updated}
-
 
 You can manage users for your
 {{site.data.keyword.Bluemix_notm}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated environment by
 using the Cloud Foundry command line interface with the
 {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in. For
-example, you can add users from an LDAP registry. If you are looking for information about managing your {{site.data.keyword.Bluemix_notm}} Public account, see [Administering](../../../admin/adminpublic.html#administer).
+example, you can add users from an LDAP registry. If you are looking for information about managing your {{site.data.keyword.Bluemix_notm}} Public account, see [Administering](/docs/admin/adminpublic.html#administer).
 
 Before you begin, install the cf command line interface. The
 {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
@@ -67,13 +64,13 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 
 If you need to uninstall the plug-in, you can use the following commands, then you can add the updated repository and install the latest plug-in:
 
-* Uninstall the plug-in: `cf uninstall-plugin-repo BluemixAdminCLI`
+* Uninstall the plug-in: `cf uninstall-plugin BluemixAdminCLI`
 * Remove the plugin repository: `cf remove-plugin-repo BluemixAdmin`
 
 
 ## Using the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
 
-You can use the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks. 
+You can use the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in to add or remove users, assign or unassign users from orgs, and to perform other management tasks.
 
 To see a list of commands, run the following
 command:
@@ -150,11 +147,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">The name of the user in {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">The permission assigned to the user. For example, superuser, basic, catalog, user, and reports. For more information about assigned user permissions, see [Permissions](../../../admin/index.html#permissions). You cannot use this parameter with the organization parameter in the same query. </dd>
+<dd class="pd">The permission assigned to the user. For example, superuser, basic, catalog, user, and reports. For more information about assigned user permissions, see [Permissions](/docs/admin/index.html#permissions). You cannot use this parameter with the organization parameter in the same query. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">The organization name that the user belongs to. You cannot use this parameter with the organization parameter in the same query.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">The organization role assigned to the user. For example, manager, billing manager, or auditor for the organization. You must specify the organization with this parameter. For more information about roles, see [User roles](../../../admin/users_roles.html#userrolesinfo).</dd>
+<dd class="pd">The organization role assigned to the user. For example, manager, billing manager, or auditor for the organization. You must specify the organization with this parameter. For more information about roles, see [User roles](/docs/admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 
@@ -286,7 +283,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to assign the user to.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">See [Roles](../../../admin/users_roles.html) for
+<dd class="pd">See [Roles](/docs/admin/users_roles.html) for
 {{site.data.keyword.Bluemix_notm}} user roles and
 descriptions.</dd>
 </dl>
@@ -311,7 +308,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">The name or GUID of the {{site.data.keyword.Bluemix_notm}} org to assign the user to.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">See [Roles](../../../admin/users_roles.html) for
+<dd class="pd">See [Roles](/docs/admin/users_roles.html) for
 {{site.data.keyword.Bluemix_notm}} user roles and
 descriptions.</dd>
 </dl>
@@ -356,6 +353,89 @@ cf ba set-quota <organization> <plan>
 
 **Tip:** You can also use **ba sq** as an alias for the longer
 **ba set-quota** command name.
+
+
+### Finding and setting container quotas for an organization
+{: #containquotas}
+
+You can find and set quotas for containers in an organization.
+
+To find the quota for containers for an organization, enter the following command:
+
+```
+cf bluemix-admin containers-quota <organization>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">The name or ID of the organization in Bluemix. This parameter is required.</dd>
+</dl>
+
+**Tip:** You can also use **ba cq** as an alias for the longer
+**bluemix-admin containers-quota** command name.
+
+To set the quota for containers in an organization, enter the following command with at least one of the options included:
+
+```
+cf bluemix-admin set-containers-quota <organization> <options>
+```
+{: codeblock}
+
+**Note**: You can include multiple options, but you must include at least one.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">The name or ID of the organization in Bluemix. This parameter is required.</dd>
+<dt class="pt dlterm">&lt;options&gt;</dt>
+<dd class="pd">Include one or more of the following options in which the value must be an integer:
+<ul>
+<li>floating-ips-max &lt;value&gt;</li>
+<li>floating-ips-space-default &lt;value&gt;</li>
+<li>memory-max &lt;value&gt;</li>
+<li>memory-space-default &lt;value&gt;</li>
+<li>image-limit &lt;value&gt;</li>
+</ul>
+</dd>
+</dl>
+
+**Tip:** You can also use the following short names as an alias for the longer
+options names:
+<dl class="parml">
+<dt class="pt dlterm">floating-ips-max &lt;value&gt;</dt>
+<dd class="pd"><strong>fim</strong></dd>
+<dt class="pt dlterm">floating-ips-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>fisd</strong></dd>
+<dt class="pt dlterm">memory-max &lt;value&gt;</dt>
+<dd class="pd"><strong>mm</strong></dd>
+<dt class="pt dlterm">memory-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>msd</strong></dd>
+<dt class="pt dlterm">image-limit &lt;value&gt;</dt>
+<dd class="pd"><strong>il</strong></dd>
+</dl>
+
+Optionally, you can provide a file containing specific configuration parameters in a valid JSON object. If you use the **-file** option, it takes precedence and the other options are ignored. To provide a file instead of setting the options, enter the following command:
+
+```
+cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+```
+{: codeblock}
+
+The JSON file should have the format shown in the following example:
+
+```
+{
+  "floating_ips_max": 10,
+  "floating_ips_space_default": 0,
+  "ram_max": 4096,
+  "ram_space_default": 0,
+  "image_limit": 10
+}  
+```
+{: codeblock}
+
+**Tip:** You can also use **ba scq** as an alias for the longer
+**bluemix-admin set-containers-quota** command name.
 
 ### Adding, deleting, and retrieving reports
 
@@ -515,9 +595,7 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 ```
 {: codeblock}
 
-**Note:** This
-command replaces existing visible services for the specified organizations with the service that you
-specify in the command.
+**Note:** This command replaces existing visible services for the specified organizations with the service that you specify in the command.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
@@ -530,13 +608,13 @@ one organization by entering additional organization names or GUIDs in the comma
 **Tip:** You can also use **ba espv** as an alias for the longer
 **ba edit-service-plan-visibility** command name.
 
-### Viewing resource usage information
+### Viewing resource metric information
 {: #cliresourceusage}
 
-You can view resource usage information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) usage data and historical memory and disk usage. Historical data for memory and disk usage is displayed, by default, weekly and in descending order. To view the resource usage information, use the following command:
+You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) usage data and historical memory and disk usage. Historical data for memory and disk usage is displayed, by default, weekly and in descending order. To view the resource metric information, use the following command:
 
 ```
-cf ba resource-usage <monthly> <weekly> 
+cf ba resource-metrics <monthly> <weekly>
 ```
 {: codeblock}
 
@@ -547,8 +625,8 @@ cf ba resource-usage <monthly> <weekly>
 <dd class="pd">View the historical data for memory and disk space a week at a time. This is the default value.</dd>
 </dl>
 
-**Tip:** You can also use **ba rsu** as an alias for the longer
-**ba resource-usage** command name.
+**Tip:** You can also use **ba rsm** as an alias for the longer
+**ba resource-metrics** command name.
 
 ### Working with service brokers
 
@@ -615,7 +693,9 @@ cf ba delete-service-broker <service_broker>
 * You can update a service broker by
 entering the following command:
 
-`cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>`
+```
+cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
+```
 {: codeblock}
 
 <dl class="parml">

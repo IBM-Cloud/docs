@@ -37,7 +37,7 @@ copyright:
 
 使用以下其中一种方法来安装 dev_mode 命令行工具：
 - 本地安装。
-  1. 从 [IBM Bluemix CLI Plugin Repository](http://plugins.{DomainName}) 下载适用于您的平台的 dev_mode 插件。
+  1. 从 [IBM Bluemix CLI Plugin Repository](http://plugins.ng.bluemix.net) 下载适用于您的平台的 dev_mode 插件。
   2. 转至保存 dev_mode 插件的文件夹，并使用 cf install-plugin 命令安装 dev_mode 插件。例如： 
   
         ```
@@ -211,7 +211,6 @@ cf restart-inplace <appName>
 ## 相关链接
 {: #general}
 * [开发方式 CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
 * [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

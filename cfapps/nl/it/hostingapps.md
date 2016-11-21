@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
- 
+ultimo aggiornamento: "09-05-2016" 
 
 ---
 
@@ -16,9 +16,6 @@ copyright:
 {:screen: .screen}
 
 #Host delle applicazioni in {{site.data.keyword.Bluemix_notm}}
-
-*Ultimo aggiornamento: 9 maggio 2016*
-{: .last-updated}
 
 <!--The whole topic is staging only -->
 
@@ -158,7 +155,7 @@ su {{site.data.keyword.Bluemix_notm}} di
 accedere ai servizi e ai dati della rete backend. Per i dettagli, vedi [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}.
 
 Per distribuire la tua applicazione su {{site.data.keyword.Bluemix_notm}} come
-applicazione Cloud Foundry, seleziona un runtime dal Catalogo {{site.data.keyword.Bluemix_notm}}. Il runtime contiene un'applicazione starter Hello World che puoi sostituire con la tua propria applicazione. Se non riesci a trovare uno starter con il runtime desiderato, puoi portare un pacchetto di build personalizzato compatibile con Cloud Foundry in {{site.data.keyword.Bluemix_notm}} utilizzando l'opzione –b con il comando cf push. Per i dettagli, vedi [Utilizzo dei pacchetti di build della community](../cfapps/byob.html).
+applicazione Cloud Foundry, seleziona un runtime dal Catalogo {{site.data.keyword.Bluemix_notm}}. Il runtime contiene un'applicazione starter Hello World che puoi sostituire con la tua propria applicazione. Se non riesci a trovare uno starter con il runtime desiderato, puoi portare un pacchetto di build personalizzato compatibile con Cloud Foundry in {{site.data.keyword.Bluemix_notm}} utilizzando l'opzione –b con il comando cf push. Per i dettagli, vedi [Utilizzo dei pacchetti di build della community](/docs/cfapps/byob.html).
 
 Puoi usare i seguenti servizi e strumenti forniti da {{site.data.keyword.Bluemix_notm}}:
 
@@ -167,7 +164,7 @@ Puoi usare i seguenti servizi e strumenti forniti da {{site.data.keyword.Bluemix
 | Strumento	| Metodo |
 |:------|:--------|
 |Interfaccia riga di comando Cloud Foundry (cf cli)	|Gestisci il tuo codice su un client locale e utilizza l'interfaccia riga di comando
-Cloud Foundry per eseguire manualmente il push della tua applicazione su {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Caricamento delle tue applicazioni](../starters/upload_app.html).|
+Cloud Foundry per eseguire manualmente il push della tua applicazione su {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Caricamento delle tue applicazioni](/docs/starters/upload_app.html).|
 |Eclipse	|Gestisci il tuo codice in Eclipse e utilizza gli strumenti di IBM Eclipse per {{site.data.keyword.Bluemix_notm}} per distribuire la tua applicazione.|
 |Integrazione di Git	|Gestisci il tuo codice su GitHub e integra Git
 in {{site.data.keyword.Bluemix_notm}}. Puoi collaborare con altri sviluppatori. La tua applicazione viene distribuita
@@ -219,7 +216,7 @@ dell'interfaccia riga di comando cf:
   instances: 1
   memory: 512M</code></pre>
 <p>Per ulteriori informazioni sulle
-opzioni supportate utilizzabili in questo file, vedi il [Manifesto dell'applicazione](../manageapps/depapps.html#appmanifest).
+opzioni supportate utilizzabili in questo file, vedi il [Manifesto dell'applicazione](/docs/manageapps/depapps.html#appmanifest).
 
 </p></li></ol>
 </li>
@@ -254,7 +251,7 @@ in esecuzione.</li>
 * Quando utilizzi il comando cf push, l'interfaccia riga di comando cf copia tutti i file e tutte le directory dalla tua directory corrente a {{site.data.keyword.Bluemix_notm}}. Assicurati di avere solo i file richiesti nella directory della tua applicazione.
 * Accertati che la memoria della tua organizzazione sia sufficiente per tutte le istanze
 della tua applicazione. Per visualizzare la quota di memoria per la tua organizzazione, utilizza cf org org_name.
-* Per ulteriori informazioni su cf push, vedi [comandi cf](../cli/reference/cfcommands/index.html).
+* Per ulteriori informazioni su cf push, vedi [comandi cf](/docs/cli/reference/cfcommands/index.html).
 
 ##Migrazione dei tuoi dati e utilizzo dei servizi
 {: #ht_service}
@@ -305,9 +302,9 @@ Foundry.
 ## Link correlati
 {: #general}
 
-* [IBM Containers](../containers/container_cli_ov.html)
-* [Virtual Machine](../virtualmachines/vm_index.html)
-* [Introduzione a Delivery Pipeline](../services/DeliveryPipeline/index.html)
-* [Distribuzione di applicazioni con IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
+* [IBM Containers](/docs/containers/container_index.html)
+* [Virtual Machine](/docs/virtualmachines/vm_index.html)
+* [Introduzione a Delivery Pipeline](/docs/services/DeliveryPipeline/index.html)
+* [Distribuzione di applicazioni con IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html)
 * [Twelve-factor app](http://12factor.net/){:new_window}
 * [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}

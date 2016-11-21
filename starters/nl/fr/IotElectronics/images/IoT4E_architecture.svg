@@ -2057,7 +2057,7 @@
          sodipodi:role="line"
          x="291.50089"
          y="431.56644"
-         id="tspan6702">Application mobile exemple</tspan></text>
+         id="tspan6702">Sample mobile app</tspan></text>
     <g
        id="g6649-4-6"
        transform="matrix(0.49001738,0,0,0.46831598,179.48691,211.85984)">
@@ -2175,11 +2175,11 @@
            id="tspan6702-6"
            y="425.04944"
            x="486.05368"
-           sodipodi:role="line">Service Mobile</tspan><tspan
+           sodipodi:role="line">Mobile Client Access </tspan><tspan
            id="tspan4579"
            y="438.79944"
            x="486.05368"
-           sodipodi:role="line">Client Access</tspan></text>
+           sodipodi:role="line">Service</tspan></text>
     </g>
     <g
        id="g4731-3"
@@ -2197,7 +2197,7 @@
            id="tspan6702-1"
            y="509.96609"
            x="61.470284"
-           sodipodi:role="line">Consommateur</tspan></text>
+           sodipodi:role="line">Consumer</tspan></text>
       <rect
          style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="rect79371-1-6-6-9-8-7-3-5-1-4-5"
@@ -2272,7 +2272,7 @@
            style="font-size:11.25000095px"
            sodipodi:role="line"
            x="461.03171"
-           y="3.7135651">Fabricant de terminal IoT</tspan><tspan
+           y="3.7135651">IoT device manufacturer</tspan><tspan
            id="tspan7318-8-6-0"
            sodipodi:role="line"
            x="461.03171"
@@ -2328,11 +2328,11 @@
          sodipodi:role="line"
          x="499.79694"
          y="89.618675"
-         id="tspan5792">Tableau de bord</tspan><tspan
+         id="tspan5792">Watson IoT Platform</tspan><tspan
          sodipodi:role="line"
          x="499.79694"
          y="103.36868"
-         id="tspan9810">Watson IoT Platform</tspan></text>
+         id="tspan9810">Dashboard</tspan></text>
     <g
        id="g5722"
        transform="matrix(0.08090742,0,0,0.08307112,454.6233,71.786196)"
@@ -2391,11 +2391,11 @@
          id="tspan44239-7"
          y="216.68509"
          x="509.94742"
-         sodipodi:role="line">API REST</tspan><tspan
+         sodipodi:role="line">Rest &amp; </tspan><tspan
          y="230.43509"
          x="509.94742"
          sodipodi:role="line"
-         id="tspan7973">en temps réel</tspan><tspan
+         id="tspan7973">Real-time APIs</tspan><tspan
          y="244.18509"
          x="509.94742"
          sodipodi:role="line"
@@ -2585,11 +2585,11 @@
          id="tspan4579-7-5"
          y="171.24385"
          x="702.77588"
-         sodipodi:role="line">Exemples de terminaux</tspan><tspan
+         sodipodi:role="line">Simulated sample </tspan><tspan
          y="184.99385"
          x="702.77588"
          sodipodi:role="line"
-         id="tspan4890">simulés</tspan></text>
+         id="tspan4890">devices</tspan></text>
     <g
        transform="matrix(0.88229753,0,0,0.8706004,649.54495,164.80866)"
        id="g3-96">
@@ -2697,11 +2697,11 @@
          y="324.47162"
          x="300.1373"
          sodipodi:role="line"
-         id="tspan4890-1">Application de module de démarrage</tspan><tspan
+         id="tspan4890-1">IoT for Electronics</tspan><tspan
          y="338.22162"
          x="300.1373"
          sodipodi:role="line"
-         id="tspan7488">d'IoT for Electronics</tspan></text>
+         id="tspan7488">Starter app</tspan></text>
     <g
        transform="matrix(0.88229753,0,0,0.8706004,246.21183,317.84197)"
        id="g3-96-0">
@@ -2768,12 +2768,12 @@
            id="tspan4945-3"
            y="125.51817"
            x="261.233"
-           sodipodi:role="line">Service d'enregistrement</tspan><tspan
+           sodipodi:role="line">Consumer electronics</tspan><tspan
            style="font-size:11.25000095px"
            id="tspan5228"
            y="139.58067"
            x="261.233"
-           sodipodi:role="line">consommateur Electronics</tspan></text>
+           sodipodi:role="line">registration service</tspan></text>
     </g>
     <g
        id="g5499"
@@ -2798,7 +2798,7 @@
            id="tspan5558"
            y="257.88394"
            x="260.74411"
-           sodipodi:role="line">Accès consommateur IoT</tspan></text>
+           sodipodi:role="line">IoT consumer access</tspan></text>
     </g>
     <g
        id="g4161"
@@ -2869,12 +2869,12 @@
          x="298.36966"
          y="90.261307"
          id="tspan5228-6"
-         style="font-weight:bold;font-size:11.25000095px">Service</tspan><tspan
+         style="font-weight:bold;font-size:11.25000095px">IoT for Electronics</tspan><tspan
          sodipodi:role="line"
          x="298.36966"
          y="104.32381"
          id="tspan7485"
-         style="font-weight:bold;font-size:11.25000095px">IoT for Electronics</tspan></text>
+         style="font-weight:bold;font-size:11.25000095px">Service</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44235-7-4"
@@ -2885,7 +2885,7 @@
          y="226.88509"
          x="301.00787"
          sodipodi:role="line"
-         id="tspan7973-9">API REST</tspan><tspan
+         id="tspan7973-9">Rest  APIs</tspan><tspan
          y="240.63509"
          x="301.00787"
          sodipodi:role="line"

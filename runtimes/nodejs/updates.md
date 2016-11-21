@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Latest Updates to the sdk-for-nodejs buildpack
 {: #latest_updates}
-
-Last Updated: 7 October 2016
-{: .last-updated}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
 ## October 7, 2016: Updated Node.js buildpack v3.8-20161006-1211
@@ -27,7 +25,7 @@ This release includes bug fixes, including those from the [Cloud Foundry’s Nod
 
 The release removes support for the strongpm App Management handler as announced in [Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
 
-Note that there is a known issue when using Node.js 6.x and [Development Mode](../../manageapps/app_mng.html#devmode). As a work around you will need to restage your application after enabling Development Mode before you can begin using it.
+Note that there is a known issue when using Node.js 6.x and [Development Mode](/docs/manageapps/app_mng.html#devmode). As a work around you will need to restage your application after enabling Development Mode before you can begin using it.
 
 ## July 22, 2016: Updated Node.js buildpack v3.6-20160715-0749
 This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1, and 6.2.2. The default is now 4.4.7.
@@ -148,7 +146,7 @@ This release of the Node.js buildpack features the integration of [StrongLoop Pr
 ## June 15, 2015: Updated Node.js buildpack v2.0-20150608-1503
 
 In this release, we synced our Node.js buildpack with the latest [CF community Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack), which comes with a number of new features from the community.
-In addition, we revamped the App Management feature in the Node.js buildpack, which enables utilities like shell, node-inspector, Bluemix Live Sync, and more. See [App Management](../../manageapps/app_mng.html) for details.
+In addition, we revamped the App Management feature in the Node.js buildpack, which enables utilities like shell, node-inspector, Bluemix Live Sync, and more. See [App Management](/docs/manageapps/app_mng.html) for details.
 
 ## May 5, 2015: Updated Node.js buildpack v1.17-20150429-1033
 
@@ -176,7 +174,7 @@ In addition, we revamped the App Management feature in the Node.js buildpack, wh
   * Desktop Sync: Synchronize any (Windows) desktop tree to a cloud-based project workspace
   * Live Edit: Allows you to make changes to a Node.js application that runs in Bluemix and test them in your browser right away.
   * Debug: Shell into your environment and debug! You can edit code dynamically, insert breakpoints, step through code, restart the runtime, and more by using the Node Inspector debugger
-  * See [App Management](../../manageapps/app_mng.html#Utilities) for more information.
+  * See [App Management](/docs/manageapps/app_mng.html#Utilities) for more information.
 * We pulled in the latest changes from the [Cloud Foundry’s Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack). This change comes with a number of bug-fixes and improvements made by the community.
 * The Node.js buildpack now comes with [IBM SDK for Node.js v1.1.0.13](https://developer.ibm.com/node/sdk/).
 

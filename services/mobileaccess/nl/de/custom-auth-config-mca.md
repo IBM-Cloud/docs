@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02" 
 ---
 
 # {{site.data.keyword.amashort}} für eine angepasste Authentifizierung konfigurieren
 {: #custom-dash}
-
-Letzte Aktualisierung: 17. Juli 2016
-{: .last-updated}
 
 
 Zur Verwendung einer angepassten Authentifizierung mit Ihrer mobilen App müssen Sie den Realm einer angepassten Authentifizierung und die Basis-URL Ihres angepassten Identitätsproviders im {{site.data.keyword.amashort}}-Service-Dashboard registrieren.
@@ -17,7 +14,7 @@ Zur Verwendung einer angepassten Authentifizierung mit Ihrer mobilen App müssen
 ## Vorbereitungen
 {: #custom-dash-begin}
 * Lesen Sie die Informationen in [Einführung](index.html).
-* Schützen Sie Ihre Back-End-Anwendung mit dem {{site.data.keyword.amashort}}-Server-SDK. Weitere Informationen finden Sie in [Ressourcen schützen](protecting-resources.html).
+* Schützen Sie Ihre Back-End-Anwendung mit dem {{site.data.keyword.amashort}}-Server-SDK.  Weitere Informationen finden Sie in [Ressourcen schützen](protecting-resources.html).
 * Führen Sie eine aktive Anwendung eines Identitätsproviders aus.
 
 ## Angepasste Authentifizierung im {{site.data.keyword.Bluemix}}-Dashboard konfigurieren

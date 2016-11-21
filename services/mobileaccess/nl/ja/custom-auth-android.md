@@ -2,14 +2,15 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-09"
 ---
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+
+
 
 # {{site.data.keyword.amashort}} Android アプリ用のカスタム認証の構成
 {: #custom-android}
-
-最終更新日: 2016 年 8 月 1 日
-{: .last-updated}
 
 
 {{site.data.keyword.amashort}} Client SDK の使用のためにカスタム認証を使用するよう Android アプリケーションを構成し、アプリケーションを {{site.data.keyword.Bluemix}} に接続します。
@@ -18,12 +19,13 @@ copyright:
 {: #before-you-begin}
 カスタム ID プロバイダーを使用するように構成済みの{{site.data.keyword.amashort}} サービスのインスタンスにより保護されているリソースを持っている必要があります。また、モバイル・アプリに {{site.data.keyword.amashort}} Client SDK が装備されている必要があります。詳しくは、以下の情報を参照してください。
 
- * [{{site.data.keyword.amashort}} 入門](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
+ * [{{site.data.keyword.amashort}} 概説](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Android SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
  * [カスタム ID プロバイダーの使用](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [カスタム ID プロバイダーの作成](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
+サービス・パラメーター値をメモします。{{site.data.keyword.Bluemix_notm}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**をクリックします。`applicationRoute` および `tenantId` (`appGUID` とも呼ばれる) の値が、**「経路」**および**「アプリ GUID」/「TenantId」**フィールドに表示されます。これらの値は、SDK を初期化するため、および要求をバックエンド・アプリケーションに送信するために必要になります。
 
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #custom-android-initialize}
@@ -51,18 +53,19 @@ copyright:
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
 
-1. SDK を初期化します。初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。*applicationRoute* および *applicationGUID* を、{{site.data.keyword.Bluemix_notm}} ダッシュボード上のアプリ内で**「モバイル・オプション」**をクリックしたときに取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。
+1. SDK を初期化します。初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。
 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 ```
+
 `BMSClient.REGION_UK` は適切な地域に置き換えてください。
 	
 
 {{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。	
+	
+
+地域値は、`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、または `BMSClient.REGION_UK` のうちいずれかのはずです。				
 	
 
 ## AuthenticationListener インターフェース
@@ -77,6 +80,8 @@ copyright:
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+
+
 #### 引数
 {: #custom-android-onAuth-arg}
 
@@ -110,6 +115,7 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
@@ -123,8 +129,8 @@ void submitAuthenticationFailure (JSONObject info);
 package com.ibm.helloworld;
 import android.content.Context;
 import android.util.Log;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationContext;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationListener;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationContext;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -179,37 +185,41 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 カスタム AuthenticationListener を作成したら、そのリスナーの使用を開始する前に `BMSClient` に登録します。以下のコードをアプリケーションに追加します。このコードは保護リソースに要求を送信する前に呼び出される必要があります。
 
 ```Java
-MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+MCAAuthorizationManager mcaAuthorizationManager = 
+      MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<MCAServiceTenantId>");
 mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
 
-*realmName* には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用してください。
+
+コードの中で次のようにします。
+* `MCAServiceTenantId` を `tenantId` 値 (『[開始する前に](##before-you-begin)』を参照) に置き換えます。 
+* `realmName` には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用してください。
 
 
 ## 認証のテスト
 {: #custom-android-testing}
 Client SDK が初期化され、カスタム AuthenticationListener の登録が完了すると、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
-### 開始する前に
+### テストする前に
 {: #custom-android-testing-before}
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたアプリケーションと、 `/protected` エンドポイントで{{site.data.keyword.amashort}} により保護されているリソースを持っている必要があります。
 
 
-1. モバイル・バックエンド・アプリケーションの保護エンドポイント (`{applicationRoute}/protected`) にブラウザーから要求を送信します。例えば、`http://my-mobile-backend.mybluemix.net/protected` です。
+1. モバイル・バックエンド・アプリケーションの保護エンドポイント (`{applicationRoute}/protected`) にブラウザーから要求を送信します。例えば、`http://my-mobile-backend.mybluemix.net/protected` です。`{applicationRoute}` 値の取得については、『[開始する前に](#before-you-begin)』を参照してください。 
 
 1. {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。その結果、`承認されていない`というメッセージがブラウザーに表示されます。
 
-1. Android アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後で次のコードを追加して、カスタムの AuthenticationListener を登録します。
+1. Android アプリケーションを使用して、`{applicationRoute}` が含まれている同じ保護エンドポイントへ要求を出します。`BMSClient` を初期化した後で次のコードを追加して、カスタムの AuthenticationListener を登録します。
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp",  MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -224,6 +234,7 @@ Client SDK が初期化され、カスタム AuthenticationListener の登録が
 	});
 ```
 
+	
 1. 	要求が成功したら、LogCat ツールで以下のように出力されます。
 
 	![image](images/android-custom-login-success.png)
@@ -233,6 +244,7 @@ Client SDK が初期化され、カスタム AuthenticationListener の登録が
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+
 
  ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。
 

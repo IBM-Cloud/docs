@@ -1,4 +1,4 @@
-	---
+---
 
 copyright:
  years: 2015, 2016
@@ -12,12 +12,12 @@ copyright:
 
 # Einführung in {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Letzte Aktualisierung: 16. August 2016
+Letzte Aktualisierung: 17. Oktober 2016
 {: .last-updated}
 
 {:shortdesc}
 
-Der {{site.data.keyword.mobilepushshort}}-Service bietet eine gemeinsame Plattform zum Senden und Verwalten von mobilen Push-Benachrichtigungen, die iOS- und Android-Plattformen zum Ziel haben. Der {{site.data.keyword.mobilepushshort}}-Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten sowie zur Geräteplattform und verarbeitet die Zuteilung von Push-Benachrichtigungen an die Benutzer. Mit diesem Service können Sie Rundsendungen und Unicasts (auf der Basis der 'deviceID') sowie Tags (Themen) als Push-Benachrichtigungen an Ihre Benutzer mobiler Anwendungen senden. Sie können auch ein Software Development Kit (SDK) und [REST-APIs](https://mobile.{DomainName}/imfpushrestapidocs/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
+Der {{site.data.keyword.mobilepushshort}}-Service bietet eine gemeinsame Plattform zum Senden und Verwalten von mobilen und Web-Push-Benachrichtigungen, die iOS-, mobile Android-Plattformen oder Google Chrome- und Mozilla Firefox-Webbrowser und Google Chrome-Apps und Erweiterungen zum Ziel haben. Der {{site.data.keyword.mobilepushshort}}-Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten sowie zur Geräteplattform und zu Webbrowsern und verarbeitet die Zuteilung von Push-Benachrichtigungen an die Benutzer. Mit diesem Service können Sie Rundsendungen und Unicasts (auf der Basis der 'deviceID') sowie Tags (Themen) als Push-Benachrichtigungen an Ihre Benutzer mobiler Anwendungen und Web-Browser-Anwendungen senden. Sie können auch ein Software Development Kit (SDK) und [REST-APIs](https://mobile.{DomainName}/imfpush/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
 
 In diesem Abschnitt wird beschrieben, wie einfache Push-Benachrichtigungen eingerichtet werden. Wenn Sie eine einfache Benachrichtigung verwenden, wird die Benachrichtigung als Rundsendung versendet und nicht mithilfe von Tags an einen bestimmten Benutzerkreis.
 
@@ -49,4 +49,4 @@ In diesem Abschnitt wird beschrieben, wie einfache Push-Benachrichtigungen einge
 * [Push-API-Referenz (Android)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html){: new_window}
 * [IMFPush-API-Referenz (iOS)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html){: new_window}
 * [BMSPush-API-Referenz (iOS) (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/blob/development/Apple Docs/index.html){: new_window}
-* [REST-API-Referenz](https://mobile.{DomainName}/imfpushrestapidocs/){: new_window}
+* [REST-API-Referenz](https://mobile.{DomainName}/imfpush/){: new_window}

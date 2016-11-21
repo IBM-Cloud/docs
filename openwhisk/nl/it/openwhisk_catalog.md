@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  anni: 2016
 
  
 
@@ -16,9 +16,9 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Utilizzo di servizi abilitati a {{site.data.keyword.openwhisk_short}} 
+# Utilizzo dei servizi {{site.data.keyword.Bluemix_notm}} abilitati per {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_ecosystem}
-*Ultimo aggiornamento: 28 marzo 2016*
+Ultimo aggiornamento: 09 settembre 2016
 {: .last-updated}
 
 In {{site.data.keyword.openwhisk}}, un catalogo di pacchetti mette a tua disposizione un modo facile per migliorare la tua applicazione con delle utili funzionalità e di accedere ai servizi interni nell'ecosistema. Sono esempi di servizi esterni con attivazione {{site.data.keyword.openwhisk_short}}: Cloudant, The Weather Company, Slack e GitHub.
@@ -42,6 +42,7 @@ Il pacchetto `/whisk.system/cloudant` ti consente di lavorare con un database Cl
 I seguenti argomenti descrivono la configurazione di un database Cloudant, la configurazione di un pacchetto associato e l'utilizzo di azioni e feed nel pacchetto `/whisk.system/cloudant`.
 
 ### Configurazione di un database Cloudant in {{site.data.keyword.Bluemix_notm}}
+{: #openwhisk_catalog_cloudant_in}
 
 Se stai utilizzando {{site.data.keyword.openwhisk_short}} da {{site.data.keyword.Bluemix}}, {{site.data.keyword.openwhisk_short}} crea automaticamente i bind di pacchetto per le tue istanze del servizio {{site.data.keyword.Bluemix_notm}} Cloudant. Se non stai utilizzando {{site.data.keyword.openwhisk_short}} e Cloudant da {{site.data.keyword.Bluemix_notm}}, vai direttamente al passo successivo.
 
@@ -80,9 +81,9 @@ Se stai utilizzando {{site.data.keyword.openwhisk_short}} da {{site.data.keyword
   ```
   {: screen}
 
-  Dovresti vedere il nome completo del bind di pacchetto che corrisponde alla tua istanza del servizio {{site.data.keyword.Bluemix_notm}} Cloudant.
+  Viene visualizzato il nome completo del bind di pacchetto che corrisponde alla tua istanza del servizio {{site.data.keyword.Bluemix_notm}} Cloudant.
 
-4. Verifica che il bind di pacchetto creato precedentemente sia configurato con il tuo host e le tue credenziali dell'istanza del servizio {{site.data.keyword.Bluemix_notm}} Cloudant.
+4. Verifica che il bind di pacchetto creato precedentemente sia configurato con l'host e le credenziali della tua istanza del servizio {{site.data.keyword.Bluemix_notm}} Cloudant.
 
   ```
   wsk package get /my{{site.data.keyword.Bluemix_notm}}Org_my{{site.data.keyword.Bluemix_notm}}Space/{{site.data.keyword.Bluemix_notm}}_testCloudant_Credentials-1
@@ -110,6 +111,7 @@ Se stai utilizzando {{site.data.keyword.openwhisk_short}} da {{site.data.keyword
   {: screen}
 
 ### Configurazione di un database Cloudant esternamente a {{site.data.keyword.Bluemix_notm}}
+{: #openwhisk_catalog_cloudant_outside}
 
 Se non stai utilizzando {{site.data.keyword.openwhisk_short}} in {{site.data.keyword.Bluemix_notm}} o se vuoi configurare il tuo database Cloudant esternamente a {{site.data.keyword.Bluemix_notm}}, devi creare manualmente un bind di pacchetto per il tuo account Cloudant. Ti servono il nome host, il nome utente e la password dell'account Cloudant.
 
@@ -134,6 +136,7 @@ Se non stai utilizzando {{site.data.keyword.openwhisk_short}} in {{site.data.key
 
 
 ### In ascolto delle modifiche a un database Cloudant
+{: #openwhisk_catalog_cloudant_listen}
 
 Puoi utilizzare il feed `changes` per configurare un servizio per attivare un trigger ogni volta che viene apportata una modifica al tuo database Cloudant. I parametri sono i seguenti:
 
@@ -163,11 +166,11 @@ Puoi utilizzare il feed `changes` per configurare un servizio per attivare un tr
 
 4. Osserva le nuove attivazioni per il trigger `myCloudantTrigger` trigger per ogni modifica di documento.
 
-**Nota**: se non sei in grado di osservare le nuove attivazioni, consulta le sezioni successive relative alla lettura da, e alla scrittura in, un database Cloudant. Verificare i passi relativi alla lettura e alla scrittura qui di seguito aiuterà a verificare che le tue credenziali Cloudant siano corrette.
+**Nota**: se non sei in grado di osservare le nuove attivazioni, consulta le sezioni successive relative alla lettura da, e alla scrittura in, un database Cloudant. L'esecuzione di test sulle seguenti procedure di lettura e scrittura aiuterà a verificare la correttezza delle credenziali Cloudant.
 
 Puoi ora creare le regole e associarle alle azioni per reagire agli aggiornamenti dei documenti.
 
-Il contenuto degli eventi generati dipende dal valore del parametro `includeDoc` durante la creazione del trigger. Se è impostato su true, ogni evento di trigger che viene attivato include il documento Cloudant modificato. Considera, ad esempio, il seguente documento modificato:
+Il contenuto degli eventi generati dipende dal valore del parametro `includeDoc` alla creazione del trigger. Se il parametro è impostato su true, ogni evento di trigger che viene attivato include il documento Cloudant modificato. Considera, ad esempio, il seguente documento modificato:
 
   ```
   {
@@ -183,7 +186,7 @@ Il codice in questo esempio genera un evento di trigger con i parametri `_id`, `
 In caso contrario, se `includeDoc` è false, gli eventi includono i seguenti parametri:
 
 - `id`: l'ID documento.
-- `seq`: l'identificativo sequenza generato da Cloudant.
+- `seq`: l'identificativo della sequenza generato da Cloudant.
 - `changes`: un array di oggetti, ciascuno dei quali con un campo `rev` che contiene l'ID revisione del documento.
 
 La rappresentazione JSON dell'evento di trigger è la seguente:
@@ -202,17 +205,18 @@ La rappresentazione JSON dell'evento di trigger è la seguente:
 
 
 ### Scrittura in un database Cloudant
+{: #openwhisk_catalog_cloudant_write}
 
 Puoi utilizzare un'azione per memorizzare un documento in un database Cloudant denominato `testdb`. Assicurati che questo database esista nel tuo account Cloudant.
 
 1. Memorizza un documento utilizzando l'azione `write` nel bind di pacchetto che hai creato precedentemente. Accertati di sostituire `/myNamespace/myCloudant` con il tuo nome pacchetto.
 
   ```
-  wsk action invoke /myNamespace/myCoudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
   ```
   {: pre}
   ```
-  ok: invoked /myNamespace/myCoudant/write with id 62bf696b38464fd1bcaff216a68b8287
+  ok: invoked /myNamespace/myCloudant/write with id 62bf696b38464fd1bcaff216a68b8287
   {
     "id": "heisenberg",
     "ok": true,
@@ -227,13 +231,14 @@ Puoi utilizzare un'azione per memorizzare un documento in un database Cloudant d
 
 
 ### Lettura da un database Cloudant
+{: #openwhisk_catalog_cloudant_read}
 
 Puoi utilizzare un'azione per recuperare un documento da un database Cloudant denominato `testdb`. Assicurati che questo database esista nel tuo account Cloudant.
 
 1. Recupera un documento utilizzando l'azione `read` nel bind di pacchetto che hai creato precedentemente. Accertati di sostituire `/myNamespace/myCloudant` con il tuo nome pacchetto.
 
   ```
-  wsk action invoke /myNamespace/myCoudant/read --blocking --result --param dbname testdb --param id heisenberg
+  wsk action invoke /myNamespace/myCloudant/read --blocking --result --param dbname testdb --param id heisenberg
   ```
   {: pre}
   ```
@@ -249,7 +254,7 @@ Puoi utilizzare un'azione per recuperare un documento da un database Cloudant de
 ## Utilizzo del pacchetto Alarm
 {: #openwhisk_catalog_alarm}
 
-Il pacchetto `/whisk.system/alarms` può essere utilizzato per attivare un trigger con una specifica frequenza. Ciò è utile per configurare i lavori o le attività ricorrenti, come il richiamo di un'azione di backup del sistema ogni ora.
+Il pacchetto `/whisk.system/alarms` può essere utilizzato per attivare un trigger con una frequenza specifica. Ciò è utile per configurare i lavori o le attività ricorrenti, come il richiamo di un'azione di backup del sistema ogni ora.
 
 Il pacchetto include il seguente feed.
 
@@ -260,10 +265,11 @@ Il pacchetto include il seguente feed.
 
 
 ### Attivazione di un evento di trigger periodicamente
+{: #openwhisk_catalog_alarm_fire}
 
 Il feed `/whisk.system/alarms/alarm` configura il servizio Alarm per attivare un evento di trigger con una specifica frequenza. I parametri sono i seguenti:
 
-- `cron`: una stringa, basata sulla sintassi crontab Unix, che indica quando attivare il trigger in UTC (Coordinated Universal Time). La stringa è una sequenza di sei campi separati da spazi: `X X X X X X `. Per ulteriori dettagli sull'utilizzo della sintassi cron, consulta: https://github.com/ncb000gt/node-cron. Ecco alcuni esempi della frequenza indicata dalla stringa:
+- `cron`: una stringa, basata sulla sintassi crontab Unix, che indica quando attivare il trigger in UTC (Coordinated Universal Time). La stringa è una sequenza di sei campi separati da spazi: `X X X X X X `. Per ulteriori dettagli sull'utilizzo di sintassi cron, consulta: https://github.com/ncb000gt/node-cron. Di seguito sono riportati alcuni esempi della frequenza indicata dalla stringa:
 
   - `* * * * * *`: ogni secondo.
   - `0 * * * * *`: all'inizio di ogni minuto.
@@ -274,7 +280,7 @@ Il feed `/whisk.system/alarms/alarm` configura il servizio Alarm per attivare un
 
 - `maxTriggers`: arrestare l'attivazione dei trigger quando viene raggiunto questo limite. Il valore predefinito è 1000. Puoi impostarlo su un massimo di 10.000. Se tenti di impostare più di 10.000, la richiesta viene rifiutata.
 
-Il seguente è un esempio di creazione di un trigger che verrà attivato una volta ogni 20 secondi con i valori `name` e `place` nell'evento di trigger.
+Di seguito viene riportato un esempio di creazione di un trigger che verrà attivato una volta ogni 20 secondi con i valori `name` e `place` nell'evento di trigger.
 
   ```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
@@ -287,33 +293,35 @@ Ogni evento generato includerà come parametri le proprietà specificate nel val
 ## Utilizzo del pacchetto Weather
 {: #openwhisk_catalog_weather}
 
-Con il pacchetto `/whisk.system/weather` è possibile richiamare comodamente l'API IBM Weather Insights.
+Il pacchetto `/whisk.system/weather` offre un pratico modo per richiamare l'API Weather Company Data for IBM Bluemix.
 
 Il pacchetto include la seguente azione.
 
 | Entità | Tipo | Parametri | Descrizione |
 | --- | --- | --- | --- |
-| `/whisk.system/weather` | pacchetto | apiKey | Servizi dall'API IBM Weather Insights  |
-| `/whisk.system/weather/forecast` | azione | apiKey, latitude, longitude, timePeriod | Previsione per il periodo di tempo specificato|
+| `/whisk.system/weather` | pacchetto | username, password | Servizi dall'API Weather Company Data for IBM Bluemix  |
+| `/whisk.system/weather/forecast` | azione | latitude, longitude, timePeriod | Previsione per il periodo di tempo specificato|
 
-Anche se non è obbligatorio, ti consigliamo di creare un bind di pacchetto con il valore `apiKey`. In questo modo non dovrai specificare la chiave ogni volta che richiami le azioni nel pacchetto.
+Si consiglia di effettuare la creazione di un bind di pacchetto con i valori `username` e `password`. In questo modo, non dovrai specificare le credenziali ogni volta che richiami le azioni nel pacchetto.
 
 ### Come ottenere una previsione meteo per una località
+{: #openwhisk_catalog_weather_forecast}
 
 L'azione `/whisk.system/weather/forecast` restituisce una previsione meteo per una località, richiamando un'API The Weather Company. I parametri sono i seguenti:
 
-- `apiKey`: una chiave API per The Weather Company autorizzata a richiamare l'API di previsione.
+- `username`: nome utente per The Weather Company Data for IBM Bluemix che ha diritto a richiamare l'API delle previsioni.
+- `password`: password per The Weather Company Data for IBM Bluemix che ha diritto a richiamare l'API delle previsioni.
 - `latitude`: la coordinata della latitudine della località.
 - `longitude`: la coordinata della longitudine della località.
-- `timeperiod`: periodo di tempo per la previsione. Le opzioni valide sono '10day' (impostazione predefinita): restituisce una previsione giornaliera per un periodo di 10 giorni, '24hour': restituisce una previsione oraria per 2 giorni, 'current': restituisce le condizioni meteorologiche correnti, 'timeseries': restituisce le rilevazioni in tempo reale e quelle delle ultime 24 ore dalla data/ora corrente. 
+- `timeperiod`: periodo di tempo per la previsione. Le opzioni valide sono '10day' - (impostazione predefinita) restituisce una previsione giornaliera per un periodo di 10 giorni, '48hour' - restituisce una previsione oraria per 2 giorni, 'current' - restituisce le condizioni meteorologiche correnti, 'timeseries' - restituisce le rilevazioni in tempo reale e quelle delle ultime 24 ore dalla data/ora corrente.
 
 
-Il seguente è un esempio di creazione di un bind di pacchetto e di successivo ottenimento di una previsione meteo a 10 giorni.
+Di seguito viene riportato un esempio di creazione di un bind di pacchetto e successiva acquisizione di una previsione meteo di 10 giorni.
 
 1. Crea un bind di pacchetto con la tua chiave API.
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param apiKey 'MY_WEATHER_API'
+  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
   ```
   {: pre}
 
@@ -364,15 +372,16 @@ Il pacchetto include le seguenti azioni.
 | `/whisk.system/watson/speechToText` | azione | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertire audio in testo |
 | `/whisk.system/watson/textToSpeech` | azione | payload, voice, accept, encoding, username, password | Convertire testo in audio |
 
-Anche se non è obbligatorio, ti consigliamo di creare un bind di pacchetto con i valori `username` e `password`. In questo modo, non dovrai specificare queste credenziali ogni volta che richiami le azioni nel pacchetto.
+Si consiglia di effettuare la creazione di un bind di pacchetto con i valori `username` e `password`. In questo modo, non dovrai specificare queste credenziali ogni volta che richiami le azioni nel pacchetto.
 
 ### Traduzione di testo
+{: #openwhisk_catalog_watson_translate}
 
 L'azione `/whisk.system/watson/translate` traduce il testo da una lingua a un'altra. I parametri sono i seguenti:
 
-- `username`: il nome utente della API Watson.
+- `username`: il nome utente dell'API Watson API.
 - `password`: la password della API Watson.
-- `translateParam`: il parametro di input da tradurre. Ad esempio, se `translateParam=payload`, il valore del parametro `payload` passato all'azione viene tradotto.
+- `translateParam`: il parametro di input che indica il testo da tradurre. Ad esempio, se `translateParam=payload`, viene tradotto il valore del parametro `payload` che viene passato all'azione.
 - `translateFrom`: un codice a due cifre della lingua di origine.
 - `translateTo`: un codice a due cifre della lingua di destinazione.
 
@@ -401,14 +410,15 @@ Il seguente è un esempio di creazione di un bind di pacchetto e di traduzione d
 
 
 ### Identificazione della lingua di un testo
+{: #openwhisk_catalog_watson_identifylang}
 
 L'azione `/whisk.system/watson/languageId` identifica la lingua di un testo. I parametri sono i seguenti:
 
-- `username`: il nome utente della API Watson.
+- `username`: il nome utente dell'API Watson API.
 - `password`: la password della API Watson.
 - `payload`: il testo da identificare.
 
-Il seguente è un esempio di creazione di un bind di pacchetto e di identificazione della lingua di un testo.
+Di seguito viene riportato un esempio di creazione di un bind di pacchetto e identificazione della lingua di un testo.
 
 1. Crea un bind di pacchetto con le tue credenziali Watson.
 
@@ -434,17 +444,18 @@ Il seguente è un esempio di creazione di un bind di pacchetto e di identificazi
 
 
 ### Conversione da testo a voce
+{: #openwhisk_catalog_watson_texttospeech}
 
 L'azione `/whisk.system/watson/textToSpeech` converte un testo in un discorso audio. I parametri sono i seguenti:
 
-- `username`: il nome utente della API Watson.
+- `username`: il nome utente dell'API Watson API.
 - `password`: la password della API Watson.
 - `payload`: il testo da convertire in voce.
 - `voice`: la voce dello speaker.
 - `accept`: il formato del file audio.
 - `encoding`: la codifica dei dati binari del file audio.
 
-Di seguito è riportato un esempio di creazione di un bind di pacchetto e di una conversione da testo a voce.
+Di seguito viene riportato un esempio di creazione di un bind di pacchetto e conversione da testo a voce.
 
 1. Crea un bind di pacchetto con le tue credenziali Watson.
 
@@ -468,10 +479,11 @@ Di seguito è riportato un esempio di creazione di un bind di pacchetto e di una
 
 
 ### Conversione da voce a testo
+{: #openwhisk_catalog_watson_speechtotext}
 
 L'azione `/whisk.system/watson/speechToText` converte il discorso audio in testo. I parametri sono i seguenti:
 
-- `username`: il nome utente della API Watson.
+- `username`: il nome utente dell'API Watson API.
 - `password`: la password della API Watson.
 - `payload`: i dati binari audio codificati da convertire in testo.
 - `content_type`: il tipo MIME dell'audio.
@@ -489,7 +501,7 @@ L'azione `/whisk.system/watson/speechToText` converte il discorso audio in testo
 - `word_confidence`: indica se per ciascuna parola deve essere restituita una misura di attendibilità compresa nell'intervallo da 0 a 1.
 - `X-Watson-Learning-Opt-Out`: indica se annullare la selezione della raccolta dati per la chiamata.
  
-Di seguito è riportato un esempio di creazione di un bind di pacchetto e di una conversione da voce a testo.
+Di seguito viene riportato un esempio di creazione di un bind di pacchetto e conversione da voce a testo.
 
 1. Crea un bind di pacchetto con le tue credenziali Watson.
 
@@ -524,9 +536,10 @@ Il pacchetto include le seguenti azioni:
 | `/whisk.system/slack` | pacchetto | url, channel, username | Interagire con la API Slack |
 | `/whisk.system/slack/post` | azione | text, url, channel, username | Pubblicare un messaggio su un canale Slack |
 
-Anche se non è obbligatorio, ti consigliamo di creare un bind di pacchetto con i valori `username`, `url` e 'channel'. Con il bind, non dovrai specificare i valori ogni volta che richiami l'azione nel pacchetto.
+Si consiglia di effettuare la creazione di un bind di pacchetto con i valori `username`, `url` e `channel`. Con il bind, non dovrai specificare i valori ogni volta che richiami l'azione nel pacchetto.
 
 ### Pubblicazione di un messaggio in un canale Slack
+{: #openwhisk_catalog_slack_post}
 
 L'azione `/whisk.system/slack/post` pubblica un messaggio in uno specifico canale Slack. I parametri sono i seguenti:
 
@@ -534,12 +547,13 @@ L'azione `/whisk.system/slack/post` pubblica un messaggio in uno specifico canal
 - `channel`: il canale Slack nel quale pubblicare il messaggio.
 - `username`: il nome con il quale pubblicare il messaggio.
 - `text`: un messaggio da pubblicare.
+- `token`: (facoltativo) un [token di accesso](https://api.slack.com/tokens) Slack. Vedi [sotto](./openwhisk_catalog.html#openwhisk_catalog_slack_token) per ulteriori dettagli sull'utilizzo dei token di accesso Slack.
 
 Il seguente è un esempio di configurazione di Slack, creazione di un bind di pacchetto e pubblicazione di un messaggio in un canale.
 
 1. Configura un [webhook in entrata](https://api.slack.com/incoming-webhooks) Slack per il tuo team.
 
-  Dopo che Slack è stato configurato, dovresti ottenere un URL Webhook simile al seguente `https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`. Ti servirà nel prossimo passo.
+  Dopo che Slack è stato configurato, ottieni un URL webhook simile a `https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`. Ti servirà nel prossimo passo.
 
 2. Crea un bind di pacchetto con le tue credenziali Slack, il canale in cui vuoi pubblicare il messaggio e il nome utente con il quale vuoi farlo.
 
@@ -555,6 +569,10 @@ Il seguente è un esempio di configurazione di Slack, creazione di un bind di pa
   ```
   {: pre}
 
+### Utilizzo dell'API basata sul token Slack
+{: #openwhisk_catalog_slack_token}
+
+Se preferisci, puoi scegliere di utilizzare l'API basata su token Slack anziché l'API webhook. Se così fosse, devi passare un parametro `token` che contiene il tuo [token di accesso](https://api.slack.com/tokens) Slack. Puoi quindi utilizzare qualsiasi [metodo API Slack](https://api.slack.com/methods) come tuo parametro `url`. Ad esempio, per pubblicare un messaggio, puoi utilizzare il valore di parametro `url` [slack.postMessage](https://api.slack.com/methods/chat.postMessage).
 
 ## Utilizzo del pacchetto GitHub
 {: #openwhisk_catalog_github}
@@ -568,15 +586,16 @@ Il pacchetto include il seguente feed:
 | `/whisk.system/github` | pacchetto | username, repository, accessToken | Interagire con la API GitHub |
 | `/whisk.system/github/webhook` | feed | events, username, repository, accessToken | Attivare gli eventi di trigger in caso di attività GitHub |
 
-Anche se non è obbligatorio, ti consigliamo di creare un bind di pacchetto con i valori `username`, `repository` e `accessToken`.  Con il bind, non dovrai specificare i valori ogni volta che usi il feed nel pacchetto.
+Si consiglia di effettuare la creazione di un bind di pacchetto con i valori `username`, `repository` e `accessToken`.  Con il bind, non dovrai specificare i valori ogni volta che usi il feed nel pacchetto.
 
 ### Attivazione di un evento di trigger in caso di attività GitHub
+{: #openwhisk_catalog_github_fire}
 
 Il feed `/whisk.system/github/webhook` configura un servizio per attivare un trigger in caso di attività in uno specifico repository GitHub. I parametri sono i seguenti:
 
 - `username`: il nome utente del repository GitHub.
 - `repository`: Il repository GitHub.
-- `accessToken`: il tuo token di accesso personale GitHub. Quando [crei il tuo token](https://github.com/settings/tokens), assicurati di selezionare gli ambiti repo:status e public_repo. Assicurati inoltre di non avere di Webhook già definiti per il tuo repository.
+- `accessToken`: il tuo token di accesso personale GitHub. Quando [crei il tuo token](https://github.com/settings/tokens), assicurati di selezionare gli ambiti repo:status e public_repo. Assicurati inoltre di non avere webhook già definiti per il tuo repository.
 - `events`: il [tipo di evento GitHub](https://developer.github.com/v3/activity/events/types/) a cui sei interessato.
 
 Il seguente è un esempio di creazione di un trigger che verrà attivato ogni volta che viene eseguito un nuovo commit in un repository GitHub.
@@ -592,16 +611,16 @@ Il seguente è un esempio di creazione di un trigger che verrà attivato ogni vo
   ```
   {: pre}
 
-3. Crea un trigger per il tipo di evento `push` di GitHub utilizzando il tuo feed `myGit/webhook`.
+3. Crea un trigger per il tipo di evento `push` di GitHub utilizzando il feed `myGit/webhook`.
 
   ```
   wsk trigger create myGitTrigger --feed myGit/webhook --param events push
   ```
   {: pre}
 
-Un commit al repository Github tramite un `git push` causerà l'attivazione del trigger dal webhook. Se è presente una regola che corrisponde al trigger, sarà richiamata l'azione associata.
-L'azione riceve il payload del webhook Github come parametro di input. Ogni evento webhook Github ha uno schema JSON simile ma un oggetto payload univoco che è determinato dal proprio tipo di evento.
-Per ulteriori informazioni sul contenuto del payload consulta la documentazione API [Github events and payload](https://developer.github.com/v3/activity/events/types/).
+Un commit al repository GitHub mediante `git push` comporta l'attivazione del trigger da parte del webhook. Se è presente una regola che corrisponde al trigger, sarà richiamata l'azione associata.
+L'azione riceve il payload del webhook GitHub come parametro di input. Ogni evento webhook Github ha uno schema JSON simile, ma è un oggetto payload univoco che è determinato dal proprio tipo di evento.
+Per ulteriori informazioni sul contenuto del payload, consulta la documentazione API [GitHub events and payload](https://developer.github.com/v3/activity/events/types/).
 
 
 ## Utilizzo del pacchetto Push
@@ -609,18 +628,19 @@ Per ulteriori informazioni sul contenuto del payload consulta la documentazione 
 
 Il pacchetto `/whisk.system/pushnotifications` ti consente di lavorare con un servizio push. 
 
-Il pacchetto include il seguente feed:
+Il pacchetto include l'azione e il feed che seguono:
 
 | Entità | Tipo | Parametri | Descrizione |
 | --- | --- | --- | --- |
 | `/whisk.system/pushnotifications` | pacchetto | appId, appSecret  | Lavorare con il servizio push |
-| `/whisk.system/pushnotifications/sendMessage` | azione | text, url, deviceIds, platforms, tagNames, apnsBadge, apnsCategory, apnsActionKeyTitle, apnsSound, apnsPayload, apnsType, gcmCollapseKey, gcmDelayWhileIdle, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive | Invia una notifica push ai dispositivi specificati. |
-| `/whisk.system/pushnotifications/webhook` | feed | events | Attiva gli eventi trigger sulle attività del dispositivo (registrazione(annullamento della registrazione del dispositivo) / sottoscrizione(annullamento della sottoscrizione)) sul servizio push |
-Anche se non è obbligatorio, ti consigliamo di creare un bind di pacchetto con i valori `appId` e `appSecret`. In questo modo, non dovrai specificare queste credenziali ogni volta che richiami le azioni nel pacchetto.
+| `/whisk.system/pushnotifications/sendMessage` | azione | text, url, deviceIds, platforms, tagNames, apnsBadge, apnsCategory, apnsActionKeyTitle, apnsSound, apnsPayload, apnsType, gcmCollapseKey, gcmDelayWhileIdle, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive | Invia notifica di push a uno o più dispositivi specificati |
+| `/whisk.system/pushnotifications/webhook` | feed | events | Attiva gli eventi trigger sulle attività del dispositivo (registrazione, annullamento della registrazione, sottoscrizione o annullamento della sottoscrizione del dispositivo) sul servizio Push |
+Si consiglia di effettuare la creazione di un bind di pacchetto con i valori `appId` e `appSecret`. In questo modo, non dovrai specificare queste credenziali ogni volta che richiami le azioni nel pacchetto.
 
-### Configurazione del pacchetto IBM Push Notifications
+### Creazione di un bind di pacchetto Push
+{: #openwhisk_catalog_pushnotifications_create}
 
-Durante la creazione di un pacchetto IBM Push Notifications devi fornire i seguenti parametri,
+Durante la creazione di un bind di pacchetto Notifiche di push, devi specificare i seguenti parametri:
 
 -  `appId`: il GUID dell'applicazione Bluemix.
 -  `appSecret`: l'appSecret del servizio di notifica push Bluemix.
@@ -631,7 +651,7 @@ Il seguente è un esempio di creazione di un bind di pacchetto.
 
 2. Inizializza il servizio di notifica push ed esegui il bind del servizio all'applicazione Bluemix.
 
-3. Configura l'[applicazione IBM Push Notification](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
+3. Configura l'[applicazione Notifica di push](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
 
   Assicurati di ricordare il `GUID applicazione` e il `Segreto applicazione` dell'applicazione Bluemix che hai creato.
 
@@ -656,23 +676,24 @@ Il seguente è un esempio di creazione di un bind di pacchetto.
   ```
   {: screen}
 
-### Invio di notifiche di push 
+### Invio di notifiche di push
+{: #openwhisk_catalog_pushnotifications_send}
 
 L'azione `/whisk.system/pushnotifications/sendMessage` invia notifiche push ai dispositivi registrati. I parametri sono i seguenti:
-- `text` - il messaggio della notifica da mostrare all'utente. Esempio: -p text "Hi ,{{site.data.keyword.openwhisk}} send a notification".
-- `url`: un URL facoltativo che può essere inviato con l'avviso. Esempio: -p url "https:\\www.w3.ibm.com".
-- `gcmPayload` - il payload JSON personalizzato che sarà inviato come parte del messaggio di notifica. Esempio: -p gcmPayload "{"hi":"hello"}"
-- `gcmSound` - il file audio (sul dispositivo) che tenterà di essere eseguito quando la notifica arriva al dispositivo.
-- `gcmCollapseKey` - questo parametro identifica un gruppo di messaggi
-- `gcmDelayWhileIdle` - quando questo parametro è impostato su true, indica che il messaggio non può essere inviato finché il dispositivo non diventa attivo.
-- `gcmPriority` - imposta la priorità del messaggio.
-- `gcmTimeToLive` - questo parametro specifica il tempo (in secondi) in cui il messaggio viene conservato nell'archivio GCM se il dispositivo è offline.
-- `apnsBadge` - il numero da visualizzare come badge dell'icona dell'applicazione.
-- `apnsCategory` -  l'identificativo della categoria da utilizzare per le notifiche push interattive.
-- `apnsIosActionKey` - il titolo per la chiave azione.
-- `apnsPayload` - il payload JSON personalizzato che sarà inviato come parte del messaggio di notifica. 
-- `apnsType` - ['DEFAULT', 'MIXED', 'SILENT'].
-- `apnsSound` - il nome del file audio nel bundle dell'applicazione. L'audio di questo file viene riprodotto come un avviso.
+- `text`: il messaggio della notifica visualizzato dall'utente. Ad esempio: `-p text "Hi ,OpenWhisk send a notification"`.
+- `url`: un URL facoltativo che può essere inviato con l'avviso. Ad esempio: `-p url "https:\\www.w3.ibm.com"`.
+- `gcmPayload`: payload JSON personalizzato che verrà inviato come parte del messaggio di notifica. Ad esempio: `-p gcmPayload "{"hi":"hello"}"`
+- `gcmSound`: il file audio (sul dispositivo) che tenterà di essere eseguito quando la notifica arriva al dispositivo.
+- `gcmCollapseKey`: questo parametro identifica un gruppo di messaggi.
+- `gcmDelayWhileIdle`: quando questo parametro è impostato su true, indica che il messaggio non verrà inviato finché il dispositivo non diventa attivo.
+- `gcmPriority`: imposta la priorità del messaggio.
+- `gcmTimeToLive`: questo parametro specifica per quanto tempo (in secondi) il messaggio viene conservato nella memoria GCM se il dispositivo è offline.
+- `apnsBadge`: il numero da visualizzare come badge dell'icona dell'applicazione.
+- `apnsCategory`: l'identificativo della categoria da utilizzare per le notifiche di push interattive.
+- `apnsIosActionKey`: il titolo per la chiave Azione.
+- `apnsPayload`: payload JSON personalizzato che verrà inviato come parte del messaggio di notifica.
+- `apnsType`: ['DEFAULT', 'MIXED', 'SILENT'].
+- `apnsSound`: il nome del file audio nel bundle dell'applicazione. L'audio di questo file viene riprodotto come un avviso.
 
 Questo è un esempio di invio di una notifica push dal pacchetto pushnotification.
 
@@ -694,26 +715,27 @@ Questo è un esempio di invio di una notifica push dal pacchetto pushnotificatio
   ```
   {: screen}
 
-### Attivazione di un evento di trigger per l'attività del servizio IBM Push Notifications
+### Attivazione di un evento di trigger sull'attività push
+{: #openwhisk_catalog_pushnotifications_fire}
 
-`/whisk.system/pushnotifications/webhook` configura il servizio IBM Push Notifications per attivare un trigger quando è presente un'attività come la registrazione / l'annullamento della registrazione del dispositivo o la sottoscrizione / annullamento della sottoscrizione in un'applicazione specificata
+`/whisk.system/pushnotifications/webhook` configura il servizio Push per attivare un trigger quando, in un'applicazione specificata, si verifica un'attività del dispositivo, ad esempio la registrazione/l'annullamento della registrazione o la sottoscrizione/l'annullamento della sottoscrizione del dispositivo.
 
 I parametri sono i seguenti:
 
-- `appId:` l'appSecret del servizio di notifica push Bluemix.
-- `appSecret:` il GUID dell'applicazione Bluemix.
+- `appId:` il GUID dell'applicazione Bluemix.
+- `appSecret:` l'appSecret del servizio di notifica push Bluemix.
 - `events:` gli eventi supportati sono `onDeviceRegister`, `onDeviceUnregister`, `onDeviceUpdate`, `onSubscribe`, `onUnsubscribe`.Per ricevere notifiche da tutti gli eventi utilizzare il carattere jolly `*`.
 
-Il seguente è un esempio di creazione di un trigger che verrà attivato ogni volta che viene registrato un nuovo dispositivo con l'applicazione del servizio IBM Push Notifications.
+Di seguito viene riportato un esempio di creazione di un trigger che verrà attivato ogni volta che viene registrato un nuovo dispositivo con l'applicazione del servizio di notifiche di push.
 
-1. Crea un bind di pacchetto configurato per il tuo servizio IBM Push Notifications con il tuo appId e appSecret.
+1. Crea un bind di pacchetto configurato per il tuo servizio di notifica di push con i tuoi appId e appSecret.
 
   ```
   wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
   ```
   {: pre}
 
-2. Crea un trigger per il tipo di evento `onDeviceRegister` del servizio IBM Push Notifications utilizzando il tuo feed `myPush/webhook`.
+2. Crea un trigger per il tipo di evento `onDeviceRegister` del servizio di notifica di push utilizzando il feed `myPush/webhook`.
 
   ```
   wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister

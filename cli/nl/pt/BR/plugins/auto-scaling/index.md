@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2015，2016
 
  
 
@@ -17,13 +17,15 @@ copyright:
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-*Última atualização: 25 de fevereiro de 2016*
+Última atualização: 25 de fevereiro de 2016
 {: .last-updated}
+
 
 É possível configurar o serviço {{site.data.keyword.autoscaling}} usando o {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}}. O {{site.data.keyword.autoscaling}} CLI suporta Linux64, Win64 e OSX e fornece funcionalidade semelhante ao ajuste automático de escala que a API RESTful fornece.
 {: shortdesc}
 
-Antes de iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Veja [Fazer download do {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.{DomainName}/ui/home.html){: new_window} para obter instruções.
+Antes de iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Consulte [CLI de Download do {{site.data.keyword.Bluemix_notm}}
+](http://plugins.ng.bluemix.net/ui/home.html){: new_window} para obter instruções.
 
 ## Incluindo o plug-in do {{site.data.keyword.Bluemix_notm}} CLI
 
@@ -43,7 +45,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 É possível anexar uma política de ajuste automático de escala a um app específico. Execute o seguinte comando:
 
-```bx as policy-attach <APP_NAME> -p <policy_file>```
+```
+bx as policy-attach <APP_NAME> -p <policy_file>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -58,7 +62,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 É possível gerar uma política de ajuste automático de escala respondendo às perguntas na interface de linha de comandos. Dependendo de sua entrada, um arquivo JSON que contém a definição da política de ajuste automático de escala é salvo com o nome que você inserir. Se não inserir o nome do arquivo, o conteúdo da política será impresso na linha de comandos diretamente sem que seja salvo em um arquivo. Execute o seguinte comando:
 
-```bx as policy-create```
+```
+bx as policy-create
+```
 {: codeblock}
 
 
@@ -66,7 +72,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 É possível mostrar a política de ajuste automático de escala de um app. O conteúdo da política é impresso na linha de comandos diretamente. Execute o seguinte comando:
 
-```bx as policy-show <APP_NAME> [--json]```
+```
+bx as policy-show <APP_NAME> [--json]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -81,7 +89,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 É possível remover uma política de ajuste automático de escala de um app. Execute o seguinte comando:
 
-```bx as policy-detach <APP_NAME>```
+```
+bx as policy-detach <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -94,7 +104,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 É possível ativar ou desativar a política de ajuste automático de escala de um app específico. Execute o seguinte comando:
 
-```bx as policy-enable|policy-disable <APP_NAME>```
+```
+bx as policy-enable|policy-disable <APP_NAME>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -107,7 +119,9 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 É possível mostrar o histórico da atividade de ajuste automático de escala de um app específico. Uma tabela de registros de histórico de ajuste automático de escala é exibida na interface de linha de comandos.
 
-```bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]```
+```
+bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
+```
 {: codeblock}
 
 <dl class="parml">
@@ -119,14 +133,16 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 <dd class="pd">O registro de data e hora do término do intervalo de histórico. Os formatos suportados são `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Por padrão, o registro de data e hora está configurado para o horário atual. Veja o <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Padrão de formatos de data e hora do W3C</a> para obter detalhes sobre o formato do registro de data e hora. 
 </dl>
 
+
+
 **Dica:** Também é possível usar a opção **--json** para impressão elegante da resposta JSON original.
 
 # rellinks
-{: #rellinks}
+{: rellinks}
 ## gerais
-{: #general}
+{: general}
 * [{{site.data.keyword.autoscaling}} serviço](../../../services/Auto-Scaling/index.html)
-* [{{site.data.keyword.Bluemix_notm}}CLI](http://plugins.{DomainName}/ui/home.html){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [Padrão de formatos de data e hora do W3C](https://www.w3.org/TR/NOTE-datetime){: new_window}
 
 

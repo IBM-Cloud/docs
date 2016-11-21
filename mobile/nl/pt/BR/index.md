@@ -2,108 +2,58 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-13"
 
 ---
 {:new_window: target="_blank"}
 
-# Criando projetos móveis a partir do Painel móvel
+# {{site.data.keyword.Bluemix}} Painel móvel
 {: #mobile}
-Última atualização: 21 de julho de 2016
-{: .last-updated} 
+Última atualização: 13 de outubro de 2016
+{: .last-updated}
 
-Com os Serviços móveis do {{site.data.keyword.Bluemix}}, é possível incorporar serviços de nuvem pré-construídos, gerenciados e escaláveis em seus aplicativos móveis sem depender do envolvimento da TI. Você pode focar na construção dos seus apps móveis em vez de nas complexidades de gerenciamento da infraestrutura de backend.
+O painel do {{site.data.keyword.Bluemix}} Mobile oferece um único local para gerenciar os recursos do {{site.data.keyword.Bluemix_notm}} que você precisa para criar e gerenciar seu aplicativo {{site.data.keyword.Bluemix_notm}} Mobile. O painel Móvel traz os serviços mais comuns que são necessários a um desenvolvedor móvel para uma experiência única e conectada que foi otimizada para o desenvolvedor móvel.
 
-O Painel móvel fornece uma experiência integrada no {{site.data.keyword.Bluemix_notm}}. É possível criar novos projetos móveis facilmente a partir do painel. Com a visualização **Projetos**, é possível gerenciar todos os seus projetos em um lugar. A visualização **Serviços** mostra suas instâncias de serviço móvel existentes.
+O painel Móvel permite que um desenvolvedor móvel crie um projeto de uma variedade
+de Iniciadores, crie e conecte os principais serviços otimizados pelo
+{{site.data.keyword.Bluemix_notm}} para o projeto e faça download rapidamente
+do código de trabalho com SDKs. Os SDKs estão totalmente integrados com credenciais de
+recurso que permitem a você tê-lo em execução em seu dispositivo em minutos. Quando seu
+aplicativo está em execução e você precisa instalar e configurar recursos de Push,
+Analítica e Autenticação móvel, é possível retornar ao seu projeto para monitorar e
+gerenciar engajamento com os usuários do aplicativo.
 
-Para visualizar o Painel móvel, clique na categoria **Móvel** em sua página inicial do {{site.data.keyword.Bluemix_notm}}.
-<img src="images/mobile_dashboard.jpg" alt="{{site.data.keyword.Bluemix_notm}} home">
+Enquanto o painel Móvel fornece uma experiência de desenvolvimento integrado, alguns desenvolvedores podem ainda querer ter controle mais granular e serviços de ligação juntos manualmente. Se essa for sua abordagem preferencial, você poderá querer considerar o uso do [modelo do Starter do {{site.data.keyword.mobilefirstbp}}](try_mobile.html).
 
-Para iniciar, clique em **Novo projeto** na visualização **Projetos** do Painel móvel.
 
-## Visão geral de serviços móveis do {{site.data.keyword.Bluemix_notm}}
-{: #mobile_services_overview}
+<!--With {{site.data.keyword.Bluemix}} Mobile services, you can incorporate pre-built, managed, and scalable cloud services into your mobile applications. You can focus on building your mobile apps, instead of the complexities of managing the back-end infrastructure.
 
-A tabela a seguir representa os Serviços móveis do {{site.data.keyword.Bluemix_notm}} disponíveis. É possível usar serviços individuais a partir do catálogo {{site.data.keyword.Bluemix_notm}} ou é possível integrá-los em seu projeto móvel.
+The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bluemix_notm}} where you can create mobile projects easily from within the dashboard.
+-->
 
-<table summary="Esta tabela descreve Serviços móveis do {{site.data.keyword.Bluemix_notm}} e fornece links para a documentação do serviço">
-<caption>Tabela 1. Serviços móveis do {{site.data.keyword.Bluemix_notm}}</caption>
-<th>Serviço móvel do {{site.data.keyword.Bluemix_notm}}</th>
-<th>Descrição</th>
-<tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icon"><br/>{{site.data.keyword.mobileanalytics_short}} (Experimental)</td>
-<td valign="top">Use o serviço {{site.data.keyword.mobileanalytics_full}} para medir o estado, comportamento e contexto dos seus aplicativos móveis, usuários móveis e dispositivos móveis.<br/><br/>
-Leia mais sobre operar esse serviço na documentação do <a href="../services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} documentation link">{{site.data.keyword.mobileanalytics_short}}</a>.
-</td>
-</tr>
-<tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}}ícone de serviço"><br/>{{site.data.keyword.amashort}}</td>
-<td valign="top">Use o serviço {{site.data.keyword.amafull}} para incluir a funcionalidade de segurança em seu aplicativo móvel. É possível configurar a autenticação de cliente e os provedores de identidade para que os usuários possam efetuar login no aplicativo com suas contas Google ou Facebook existentes.<br/><br/>
-Leia mais sobre operar esse serviço na documentação <a href="../services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} documentation link">{{site.data.keyword.amashort}}</a>.</td>
-</tr>
-<tr>
-<td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}}ícone de serviço"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
-<td valign="top">Use o serviço {{site.data.keyword.mobilefoundation_long}} para expedir a configuração de um ambiente {{site.data.keyword.mfp_full}} a partir do qual é possível desenvolver, testar e operar aplicativos móveis corporativos.<br/><br/> Leia mais sobre operar esse serviço na documentação
-<a href="../services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} documentation link">{{site.data.keyword.mobilefoundation_short}}</a>.</td>
-</tr>
-<tr>
-<td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}}ícone de serviço"><br/>{{site.data.keyword.mqa}}</td>
-<td valign="top">Use o serviço {{site.data.keyword.mqafull}} para descobrir e configurar serviços de qualidade móveis para seus aplicativos. É possível visualizar métricas de qualidade de alto nível para seus apps móveis para obter uma compreensão rápida dos problemas dos apps com os quais você está trabalhando. Essas métricas incluem informações sobre travamentos, erros, feedback do usuário e impressão do usuário. Ao visualizar essas informações para seus aplicativos, é possível determinar se deve investigar problemas específicos adicionalmente.<br/><br/>
-Leia mais sobre operar esse serviço na documentação <a href="../services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} documentation link">{{site.data.keyword.mqa}}</a>.</td>
-</tr>
-<tr>
-<td><img src="images/catalog_icons-09.png" alt="ícone de serviço das Notificações Push"><br/>{{site.data.keyword.mobilepushshort}}</td>
-<td valign="top">Use o serviço {{site.data.keyword.mobilepushfull}} para enviar e gerenciar notificações push móveis destinadas a plataformas iOS e Android. Esse serviço gerencia o mapeamento dos usuários do aplicativo para seus dispositivos, plataforma de dispositivo e manipula o despacho de notificações push para os dispositivos. com esse serviço, é possível enviar transmissões, unicasts (com base no userID, deviceID) e tags (ou tópicos) baseados nas notificações push para seus usuários de aplicativo móvel.<br/><br/>
-Leia mais sobre operar esse serviço na documentação <a href="../services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} documentation link">{{site.data.keyword.mobilepushshort}}</a>.</td>
-</table>
 
-## Integrando serviços móveis
-{: #services_integration}
-É possível integrar seus Serviços móveis existentes do {{site.data.keyword.Bluemix_notm}}, como {{site.data.keyword.mobilepushshort}} e {{site.data.keyword.cloudant}}, em seu projeto.
+Para uma introdução ao painel Móvel, clique na categoria **Móvel** a partir do Console do {{site.data.keyword.Bluemix_notm}}.
 
-#### Integrando o {{site.data.keyword.mobilepushshort}}
-{: #push_integration}
 
-Para integrar o serviço existente do {{site.data.keyword.mobilepushshort}}, siga estas etapas:
+## Guia de Introdução
+{: getting-started-mobiledashboard}
 
-1. Clique em sua instância de serviço do {{site.data.keyword.mobilepushshort}}.
-2. Clique em **Opções móveis** e copie os valores **Route** e **AppGuid**.
+O painel permite que você gerencie apps móveis por meio do conceito de um projeto. Crie um projeto na página **Introdução** clicando em **Criar projeto**. Serão apresentadas as opções do [Iniciador](starters.html) que permitem a você começar a criar rapidamente seu app.
 
-   **Nota**: seu serviço {{site.data.keyword.mobilepushshort}} deve ser ligado a um aplicativo para ver **Opções móveis**.
+Com a visualização [Projetos](projects.html), é possível gerenciar todos os seus projetos em um lugar. O
+projeto contém todas as informações de capacidade que você precisa para o app móvel. É
+possível integrar e gerenciar facilmente os serviços móveis de Push, Analítica e
+Autenticação no projeto, com mais recursos a seguir no futuro próximo.
 
-3. Navegue novamente até a visualização **Projetos** do Painel móvel.
-4. Clique em seu projeto para editá-lo.
-5. Clique em **Push** e ative as notificações.
-6. Forneça o valor **AppGuid** que copiou anteriormente no **ID do aplicativo**.
-7. Forneça o valor de **Rota** que copiou
-anteriormente na **URL de rota do aplicativo**.
+A visualização [Serviços](services.html) mostra uma visão
+operacional das instâncias de serviços móveis existentes. O painel Móvel suporta um
+desenvolvedor móvel e um usuário de gerenciamento de app móvel.
 
-#### Integrando o {{site.data.keyword.cloudant}}
-{: #cloudant_integration}
 
-Para integrar o serviço existente do {{site.data.keyword.cloudant}}, siga estas etapas:
+<!--You can also discover the {{site.data.keyword.Bluemix_notm}} Mobile offerings, link to the Mobile documentation and get answers from our {{site.data.keyword.Bluemix_notm}} Mobile services community on Stack Overflow.-->
 
-1. Clique em sua instância de serviço do {{site.data.keyword.cloudant}}.
-2. Clique em **ATIVAR**.
-3. Na visualização **Bancos de dados**, clique no Nome do banco de dados.
-4. Clique em **API** e copie o valor de **Chave API** por meio do nome do banco de dados.
 
-   **Nota**: não copie o conteúdo depois do nome do banco de dados.
-   
-5. Clique em **Permissões** >
-**Gerar chave API** e copie os valores de
-**Chave** e **Senha**.
-6. Navegue novamente até a visualização **Projetos** do Painel móvel.
-7. Clique em seu projeto para editá-lo.
-8. Clique em **Dados** > **+ origem de dados** > **Cloudant** e forneça o nome
-da origem de dados e clique em **Incluir**.
-9. Clique em **Configuração de Cloudant**.
-10. Forneça o valor de **Chave API** que
-copiou anteriormente na **URL da API**.
-11. Forneça o valor **Chave** que copiou
-anteriormente no **Usuário**.
-12. Forneça o valor de **Senha** que
-copiou anteriormente na **Senha**.
-13. Clique em **Ok**.
+Verifique novamente várias vezes para se manter atualizado com novos recursos.
 
 
 # Links relacionados
@@ -112,23 +62,28 @@ copiou anteriormente na **Senha**.
 <!-- links to internal services don't work
 ## {{site.data.keyword.Bluemix_notm}} Mobile services
 {: #general}
-* [Mobile Analytics (Experimental)](../services/mobileanalytics/index.html){: new_window}
+* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
 * [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
 * [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
 * [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
 * [Push Notifications](../services/mobilepush/index.html){: new_window}
 -->
 
-## Postagens do blog
+<!--## Blog Posts
 {: #general}
+-->
 * [Postagem do blog: Introducing the Bluemix Mobile
 dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
+* [Postagem
+do blog: Introducing the next generation of the Bluemix Mobile dashboard](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
+* [Postagem
+do blog: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Postagem do blog: Bluemix
 Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Postagem do blog: Bluemix
 Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
- 
-## Tutoriais e amostras
-{: #samples}
-* [Backend móvel para Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
 
+<!--## Tutorials and Samples
+{: #samples}
+-->
+* [Amostra: Backend móvel para Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}

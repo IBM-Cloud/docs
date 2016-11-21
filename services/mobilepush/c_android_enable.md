@@ -8,10 +8,10 @@ copyright:
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 21 October 2016
+Last updated: 16 November 2016
 {: .last-updated}
 
-You can enable Android applications to receive {{site.data.keyword.mobilepushshort}} to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.
+You can enable Android applications to receive push notifications to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.
 
 ## Installing the client Push SDK with Gradle
 {: #android_install}
@@ -20,30 +20,41 @@ This section describes how to install and use the client Push SDK to further dev
 
 Bluemix® Mobile Services Push SDK can be added using Gradle. Gradle automatically downloads artifacts from repositories and makes them available to your Android application. Ensure that you correctly set up Android Studio and the Android Studio SDK. For more information about how to set up your system, see [Android Studio Overview](https://developer.android.com/tools/studio/index.html). For information about Gradle, see [Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html).
 
-1. In Android Studio, after creating and opening your mobile application, open your application **build.gradle** file.
-2. Add the following dependencies to your mobile application. The following lines adds Bluemix™ Mobile services Push client SDK and the Google play services SDK to your compile scope dependencies.
-```
-com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
-```
-    {: codeblock}
-2. Build the project to ensure that the dependencies are resolved.
-3. Add the following dependencies to your mobile application. These import statements are required for code snippets:
-```
-import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
-import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush;
-import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushException;
-import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushResponseListener;
-import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
-import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
-```
-    {: codeblock}
+After creating and opening your mobile application, complete the following steps using the Android Studio.
 
-2. In the **AndroidManifest.xml** file, add the following permissions. To view a sample manifest, see [Android helloPush Sample Application](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). To view a sample Gradle file, see [Sample Build Gradle file](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
+1. Add dependencies to your Module level **build.gradle** file. 
+	- Add the following dependency to include the Bluemix™ Mobile services Push client SDK and the Google play services SDK to your compile scope dependencies.
+	```
+	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
+	```
+    {: codeblock}
+	
+	- Add the following dependency only at the end of the file.
+	```
+	'com.google.gms.google-services'
+	```
+    {: codeblock}
+	- Add the following dependencies to import statements that are required for code snippets.
+	```
+	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
+	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush;
+	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushException;
+	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushResponseListener;
+	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
+	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
+	```
+    {: codeblock}
+3. Add the following dependencies to your Project level **build.gradle** file.
+```
+dependencies {
+    classpath 'com.android.tools.build:gradle:2.2.0'
+    classpath 'com.google.gms:google-services:3.0.0'
+}
+``` 
+    {: codeblock}
+5. In the **AndroidManifest.xml** file, add the following permissions. To view a sample manifest, see [Android helloPush Sample Application](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). To view a sample Gradle file, see [Sample Build Gradle file](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="com.ibm.clientsdk.android.app.permission.C2D_MESSAGE" />
-<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-<uses-permission android:name="android.permission.WAKE_LOCK" />
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -62,21 +73,21 @@ import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotif
 	{: codeblock}
 **Note**: Replace *Your_Android_Package_Name* in the previous action with the application package name used in your application.
 
-5. Add the Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) intent service and intent filters for the RECEIVE event notifications.
+5. Add the Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) intent service and intent filters for the RECEIVE and REGISTRATION event notifications.
 ```
-<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" />
-<receiver
-android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.internal.MFPPushBroadcastReceiver"
-   android:permission="com.google.android.c2dm.permission.SEND">
-   <intent-filter>
-       <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-       <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
-    </intent-filter>
+<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
+    android:exported="true" >
     <intent-filter>
-       <action android:name="android.intent.action.BOOT_COMPLETED" />
-       <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
     </intent-filter>
-</receiver>
+</service>
+<service
+    android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush"
+    android:exported="true" >
+    <intent-filter>
+        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+    </intent-filter>
+</service>
 ```
     {: codeblock}
 
@@ -87,6 +98,32 @@ android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.internal.MFPPus
 com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
 android:theme="@android:style/Theme.NoDisplay"/>
 ```
+    {: codeblock}
+
+To setup the FCM project and obtain your credentials, see [Getting Your Sender ID and API key](t_push_provider_android.html). Complete the following steps using the Firebase Cloud Messaging (FCM) console.
+
+1. In the Firebase console, click the **Project Settings** icon.
+	![Firebase Project Settings](images/FCM_4.jpg)
+
+3. Select **ADD APP** or **Add Firebase to your Android app icon** from the General tab on the Your apps pane.
+
+	![Adding Firebase to Android](images/FCM_5.jpg)
+
+4. In Add Firebase to your Android app window, add **com.ibm.mobilefirstplatform.clientsdk.android.push** as the package name. Also add the package name of your application by repeating the step 2.
+
+	![Adding Firebase to your Android window](images/FCM_1.jpg)
+
+5. Click **Continue** to copy the config file. 
+6. Click **Finish** to add the **build.gradle** file.
+7. Download the generated **google-services.json** file.
+
+	![The google-services.json file](images/FCM_3.jpg)
+
+8. Add the **google-services.json** file to the root directory of your application.
+
+	![Adding the json file to the root directory of your application](images/FCM_7.jpg)
+
+Build and run your application.
 
 ## Initializing the Push SDK for Android apps
 {: #android_initialize}
@@ -163,7 +200,9 @@ MFPPushNotificationListener notificationListener = new MFPPushNotificationListen
 
 To register the notificationListener object with push, call the **MFPPush.listen()** method. This method is typically called from the **onResume()** method of the activity that is handling push notifications.
 
-1. To register the notificationListener object with push, call the **listen()** method. This method is typically called from the **onResume()** method of the activity that is handling push notifications.
+1. To register the notificationListener object with push, call the **listen()** method. This method is typically called from the **onResume()** and **onPause** methods of the activity that is handling push notifications.
+
+
 ```
 @Override
 protected void onResume(){
@@ -171,6 +210,19 @@ protected void onResume(){
    if(push != null) {
        push.listen(notificationListener);
    }
+}
+```
+	{: codeblock}
+
+
+
+```
+@Override
+protected void onPause() {
+    super.onPause();
+    if (push != null) {
+        push.hold();
+    }
 }
 ```
 	{: codeblock}

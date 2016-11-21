@@ -9,7 +9,7 @@ copyright:
 
 
 #啟用進階推送通知
-前次更新：2016 年 8 月 16 日
+前次更新：2016 年 10 月 17 日
 {: .last-updated}
 
 配置 iOS 徽章、音效、其他 JSON 有效負載、可採取動作的通知，以及保存通知。
@@ -24,9 +24,6 @@ copyright:
 	- **音效檔** - 輸入指向行動應用程式中音效檔的字串。在有效負載中，指定要使用之音效檔的字串名稱。
 	- **iOS 徽章** - 對於 iOS 裝置，這是要顯示為應用程式圖示徽章的號碼。如果沒有此內容，則不會變更徽章。若要移除徽章，請將此內容的值設為 0。
 	
-	
-
-
 ###Android
 
 在 Android 應用程式的 `res/raw` 目錄中，新增您的音效檔。傳送通知時，在 {{site.data.keyword.mobilepushshort}} 的音效欄位中新增音效檔名稱。
@@ -38,7 +35,7 @@ copyright:
   }
  }  
 ```
-	
+    {: codeblock}	
 	
 ###iOS
 
@@ -49,13 +46,17 @@ copyright:
       "sound": "tt.wav",
   }
 }
-``` 		
+``` 
+	{: codeblock}
+		
 **其他有效負載** - 此有效負載可以是任意鍵值組，而且必須是您要與 {{site.data.keyword.mobilepushshort}} 一起傳送的 JSON 物件。
+
+
 
 ```
 {"key":"value", "key2":"value2"}
 ```
-
+	{: codeblock}
 
 ## 保存 Android 通知 
 {: #hold-notifications-android}
@@ -64,13 +65,14 @@ copyright:
 
 ```
 @Override
-protected void onPause() {super.onPause();
-if (push != null) {
+protected void onPause() {
+    super.onPause();
+    if (push != null) {
         push.hold();
     }
 } 
 ```
-
+	{: codeblock}
 ## 啟用可採取動作的 iOS 通知  
 {: #enable-actionable-notifications-ios}
 
@@ -82,7 +84,7 @@ if (push != null) {
 
    Objective-C
 
-	```
+```
 	// For Objective-C
 	UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
 	    acceptAction.identifier = @"ACCEPT_ACTION";
@@ -91,9 +93,11 @@ if (push != null) {
 	     acceptAction.destructive = NO;
 	  acceptAction.authenticationRequired = NO; */
 	  ```
+	{: codeblock}
+
    Swift
 
-	```
+```
 	//For Swift
 	let acceptAction = UIMutableUserNotificationAction()
 	acceptAction.identifier = "ACCEPT_ACTION"
@@ -102,8 +106,9 @@ if (push != null) {
 	acceptAction.authenticationRequired = false
 	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 	```
+	{: codeblock}
 	
-	```
+```
 	//For Swift
 	let declineAction = UIMutableUserNotificationAction()
 	declineAction.identifier = "DECLINE_ACTION"
@@ -112,62 +117,68 @@ if (push != null) {
 	declineAction.authenticationRequired = false
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
 	```
+	{: codeblock}
 
 2. 建立通知種類並設定動作。**UIUserNotificationActionContextDefault** 或 **UIUserNotificationActionContextMinimal** 是有效的環境定義。
 
 Objective-C
 
-	```
+```
 	// For Objective-C
 	UIMutableUserNotificationCategory *callCat = [[UIMutableUserNotificationCategory alloc] init];
 	    callCat.identifier = @"POLL_CATEGORY";
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
 	```    
+	{: codeblock}
 
 Swift
 
-	```
+```
 	// For Swift
 	let pushCategory = UIMutableUserNotificationCategory()
 	pushCategory.identifier = "TODO_CATEGORY"
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
 	```
+	{: codeblock}
 
 1. 建立通知設定，並指派先前步驟的種類。
 
 Objective-C
 
-	```
+```
 	// For Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
 	```
+	{: codeblock}
 
 Swift
 
-	```
+```
 	// For Swift
 	let categories = NSSet(array:[pushCategory]);
 	```
+	{: codeblock}
 
 1. 建立本端或遠端通知，並為其指派種類身分。
 
 Objective-C
 
-	```
+```
 	//For Objective-C
-
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-[[UIApplication sharedApplication] registerForRemoteNotifications];
-	```
+	[[UIApplication sharedApplication] registerForRemoteNotifications];
+```
+	{: codeblock}
 
 Swift
 
-	```
+```
 	//For Swift
 	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
     UIApplication.sharedApplication().registerUserNotificationSettings(settings)
     UIApplication.sharedApplication().registerForRemoteNotifications() 
 	```
+	{: codeblock}
 	
 ## 處理可採取動作的 iOS 通知  
 {: #actionable-notifications}
@@ -185,6 +196,7 @@ Swift
   completionHandler();
 }
 ```
+	{: codeblock}
 
 ###Swift
  
@@ -194,4 +206,5 @@ func application(application: UIApplication, handleActionWithIdentifier identifi
       completionHandler()
   }
 ```    
+	{: codeblock}
     

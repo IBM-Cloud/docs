@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2016
@@ -18,7 +18,7 @@ copyright:
 
 # ユーザーとシールド関連付けの作成
 {: #gettingstartedtemplate}
-最終更新日: 2016 年 9 月 12 日
+最終更新日: 2016 年 9 月 15 日
 {: .last-updated}
 
 {{site.data.keyword.iotinsurance_short}} サービスを作成して必要なサポート・サービスとアプリをデプロイした後、許可ユーザーとシールドの関連付けを作成してサービスをテストすることができます。
@@ -28,10 +28,10 @@ copyright:
 
 - [Node.js](https://nodejs.org/en/) がコンピューターにインストールされている。  
 - Node.js に対応するランタイム環境 (Eclipse など)。
-- Git ソフトウェアおよび [API サンプルの GitHub ソース・コード・リポジトリー](https://github.com/ibm-watson-iot/ioti-samples)へのアクセス。あるいは、[ソース・コード・ファイルを含むアーカイブ](https://github.com/ibm-watson-iot/ioti-samples/archive/master.zip)をダウンロードすることもできます。
+- Git ソフトウェアおよび [API サンプルの GitHub ソース・コード・リポジトリー](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)へのアクセス。あるいは、[ソース・コード・ファイルを含むアーカイブ](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/archive/master.zip)をダウンロードすることもできます。
 - 準備しておいたソース・コード。
 ソース・コードを準備するには、以下のステップを実行します。
-  1. [GitHub ソース・コードのリポジトリー](https://github.com/ibm-watson-iot/ioti-samples)をコンピューターに複製またはダウンロードします。
+  1. [GitHub ソース・コードのリポジトリー](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs)をコンピューターに複製またはダウンロードします。
   2. コマンド・プロンプトを使用して、複製されたソース・コード・ファイルが含まれるフォルダーに移動し、`npm install` コマンドを実行して、プロジェクトのオープン・ソース前提条件をインストールします。
 
 ダッシュボードとサンプル・モバイル・アプリの機能をテストするために使用できるユーザーを作成します。
@@ -44,7 +44,7 @@ copyright:
 2. ユーザーのシールド関連付けを作成します。
   1. createUserShieldAssociation.js ファイルを編集して、前のステップのユーザー名を **username** 変数に追加します。
   2. ファイルを保存します。
-  3. `node createUserShieldAssociation.js` を実行します。シールドについて詳しくは、[コンポーネント](iotinsurance_overview.html#components})を参照してください。
+  3. `node createUserShieldAssociation.js` を実行します。シールドについて詳しくは、[コンポーネント](iotinsurance_overview.html#components)を参照してください。
 3. (オプション) 分析エンジンは自動的に更新されますが、正しいデータが表示されない場合は、`node updateAnalyticsEngine.js` を実行して分析エンジンを更新してください。
 4. (オプション) ユーザーに対するハザード・イベントをシミュレートします。
   1. simulateHazard.js ファイルを編集して、前のステップのユーザー名を **usr** 変数に追加します。

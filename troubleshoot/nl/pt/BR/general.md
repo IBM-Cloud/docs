@@ -34,7 +34,7 @@ uma instância de serviço que já foi excluída do controlador de nuvem.
 {:shortdesc}
 
 
-Ao tentar excluir uma instância de serviço, você verá a mensagem de erro do broker de serviço, ```Tempo limite do gateway```.
+Quando você tenta excluir uma instância de serviço, vê a mensagem de erro do broker de serviço, `Tempo limite do gateway`.
 {: tsSymptoms}
 
 

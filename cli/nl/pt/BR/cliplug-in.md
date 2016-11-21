@@ -20,6 +20,7 @@ copyright:
 *Última atualização: 2 de fevereiro de 2016*
 {: .last-updated}
 
-É possível instalar e usar plug-ins do Cloud Foundry Command Line Interface (cf cli) que estão disponíveis no [Repositório de plug-ins da CLI](http://plugins.{DomainName}/){: new_window}. Cada plug-in é identificado por seu nome de arquivo binário, seu nome de plug-in definido pelo desenvolvedor e os comandos que o plug-in fornece. É possível usar o nome do arquivo binário apenas para instalar um plug-in e usar o nome do plug-in ou um comando para qualquer outra ação.
+É possível instalar e usar plug-ins da Interface da linha de comandos do Cloud Foundry (cf cli) que estão disponíveis no [Repositório de plug-in da
+CLI](http://plugins.ng.bluemix.net/){: new_window}. Cada plug-in é identificado por seu nome de arquivo binário, seu nome de plug-in definido pelo desenvolvedor e os comandos que o plug-in fornece. É possível usar o nome do arquivo binário apenas para instalar um plug-in e usar o nome do plug-in ou um comando para qualquer outra ação.
 {:shortdesc}
 

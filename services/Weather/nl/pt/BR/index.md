@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Introdução ao {{site.data.keyword.weather_short}}
 {: #insights_weather_overview}
-
-Última atualização: 28 de julho de 2016
-{: .last-updated}
 
 Use o
 {{site.data.keyword.weatherfull}}
@@ -105,7 +103,7 @@ A falha ao inserir credenciais adequadas resulta em uma mensagem *Não autorizad
 
 ## gerais
 {: #general}
-* [Incluindo um serviço em seu aplicativo](../reqnsi.html){: new_window}
+* [Incluindo um serviço em seu aplicativo](/docs/services/reqnsi.html){: new_window}
 * [Desenvolvimento de ponta a ponta](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [Folha de precificação do {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/){: new_window}
 * [Pré-requisitos do {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

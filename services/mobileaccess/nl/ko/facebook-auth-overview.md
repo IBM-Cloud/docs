@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -12,10 +12,11 @@ copyright:
 # Facebook 신임 정보로 사용자 인증
 {: #facebook-auth-overview}
 
-마지막 업데이트 날짜: 2016년 7월 22일
-{: .last-updated}
 
-ID 제공자로 Facebook을 사용하여 리소스를 보호하도록 {{site.data.keyword.amashort}} 서비스를 구성할 수 있습니다. 모바일 또는 웹 애플리케이션 사용자는 인증을 위해 Facebook 신임 정보를 사용할 수 있습니다.
+
+ID 제공자로 Facebook을 사용하여 리소스를 보호하도록 {{site.data.keyword.amafull}} 서비스를 구성할 수 있습니다. 모바일 또는 웹 애플리케이션 사용자는 인증을 위해 Facebook 신임 정보를 사용할 수 있습니다.
+
+
 {:shortdesc}
 
 **중요**: Facebook에서 제공하는 클라이언트 SDK를 별도로 설치할 필요가 없습니다. {{site.data.keyword.amashort}} Facebook 클라이언트 SDK를 구성할 때 종속성 관리자가 Facebook SDK를 자동으로 설치합니다.
@@ -51,19 +52,24 @@ ID 제공자로 Facebook을 사용하여 리소스를 보호하도록 {{site.dat
   * 최종 경로는 백엔드 보호 리소스보다 웹 애플리케이션 자체의 보호 영역으로 재지정됩니다. 
 
 
-## Facebook 개발자 포털에서 Facebook 애플리케이션 ID 얻기
+## Facebook for Developers 웹 사이트에서 Facebook 앱 ID 얻기
 {: #facebook-appID}
 
-ID 제공자로 Facebook 사용을 시작하려면 Facebook 개발자 포털에서 애플리케이션을 작성해야 합니다. 이 프로세스 중에 Facebook 애플리케이션 ID를 얻게 되며, 이 ID는 연결하려고 시도하는 애플리케이션을 Facebook에서 인지할 수 있게 하는 고유 ID입니다. 
+Facebook을 ID 제공자로 사용하려면 개발자용 Facebook 웹 사이트에서 애플리케이션을 작성하십시오. 이 프로세스 중에 Facebook 앱 ID가 작성됩니다. 이 ID는 연결을 시도하는 애플리케이션을 알기 위해 Facebook에서 사용되는 고유 ID입니다.  
 
-1. [Facebook 개발자 포털](https://developers.facebook.com)을 여십시오. 
+모바일 또는 웹 앱에 적합하게 Facebook 인증을 구성하는 데 이 값이 필요합니다. 
 
-1. 메뉴에서 **내 앱**을 클릭하고 **새 앱 작성**을 선택하십시오.
-iOS 또는 Android 애플리케이션을 선택하고 다음 화면에서 **건너뛰기 및 앱 ID 작성**을 클릭하십시오. 
+1. [Facebook for Developers](https://developers.facebook.com) 사이트에 액세스하십시오. 
 
-1. 선택사항의 애플리케이션 표시 이름을 설정하고 카테고리를 선택하십시오. 계속하려면 **앱 ID 작성**을 클릭하십시오. 
+1. **내 앱** 풀다운 목록을 열고 **새 앱 추가**를 선택하십시오. 
 
-1. 표시되는 **앱 ID**를 복사하십시오. 이 값이 Facebook 애플리케이션 ID입니다. 모바일 또는 웹 앱을 사용하여 Facebook 인증을 구성하는 데 해당 값이 필요합니다. 
+1. **표시 이름** 값과 **문의 이메일 값** 값을 입력하고 풀다운 목록에서 **카테고리**를 선택하십시오. 
+
+1. **새 앱 ID 작성**을 클릭하십시오. 
+
+1. 보안 검사가 표시됩니다. 요청되는 조치를 수행하십시오. 
+
+1. **제품 설정** 페이지가 표시됩니다. 표시되는 **앱 ID**를 복사하십시오.  
 
 ## 다음 단계
 {: #next-steps}

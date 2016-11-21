@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # Acerca de Insights for Weather
 {: #about_weather}
-
-*Última actualización: 19 de mayo de 2016*
 
 Utilice {{site.data.keyword.weatherfull}} para incorporar datos
 meteorológicos de The Weather Company (TWC) en las aplicaciones

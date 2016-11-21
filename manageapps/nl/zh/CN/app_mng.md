@@ -5,7 +5,6 @@ copyright:
 
 ---
 
-
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -14,7 +13,7 @@ copyright:
 #管理 Liberty 和 Node.js 应用程序
 {: #app_management}
 
-*上次更新时间：2016 年 3 月 17 日*
+上次更新时间：2016 年 9 月 15 日
 {: .last-updated}
 
 应用程序管理实用程序是一组开发和调试实用程序，可以对 {{site.data.keyword.Bluemix}} 上的 Liberty 和 Node.js 应用程序启用这些实用程序。
@@ -72,42 +71,8 @@ http://<yourappname>.mybluemix.net/bluemix-debug/shell
   inspector 进程在应用程序容器中运行。使用此实用程序可创建 CPU 使用情况概要文件，添加断点和调试代码，所有这些操作都可在应用程序在 {{site.data.keyword.Bluemix_notm}} 上运行的同时执行。有关 Node Inspector 模块的更多信息，请参阅 [node-inspector on GitHub](https://github.com/node-inspector/node-inspector){:new_window}。
   
   *inspector* 实用程序还会启动 *proxy*。
-  
-  2. *strongpm*：启用 [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} 以通过 [StrongLoop Metrics、Profiling 和 Tracing](https://strongloop.com/node-js/devops-tools/){:new_window} 等实用程序来分析 Node.js 应用程序。
-    
-  *strongpm* 实用程序还会启动 *proxy*。
-  
-  要为 Node.js 应用程序配置 [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window}，请执行以下步骤：
-
-    1. 配置 *strongpm* BlUEMIX_APP_MGMT_ENABLE 环境变量，并重新编译打包应用程序。
-    
-	```
-cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
-    cf restage <appname>
-    ```
 	
-    2. 在 Cloud Foundry 命令行中，向应用程序添加路径，该路径将“-pm”附加到应用程序名称，例如 <appname>-pm.mybluemix.net。
-    
-	```
-cf map-route <appname> ng.bluemix.net -n <appname>-pm
-    ```
-	
-    3. 在本地工作站上，安装 [StrongLoop npm 模块](https://www.npmjs.com/package/strongloop){:new_window}。
-    
-	```
-    npm install -g strongloop
-    ```
-	
-    4. 在 [StrongLoop 的 Web 站点](https://strongloop.com/register/){:new_window}上创建帐户。
-    5. 在本地工作站上启动 Arc，然后使用创建的帐户登录。
-    
-	```
-    slc arc
-    ```
-	
-    6. 浏览到 Arc 内的 Process Manager 视图。在 Process Manager 中，输入新创建的路径与端口 80。按“激活”按钮。有关更多详细信息，请参阅[有关使用 Arc 的完整文档](https://docs.strongloop.com/display){:new_window}。
-	
-  3. *trace*：动态设置跟踪级别（如果应用程序使用的是 *log4js*、*ibmbluemix* 或 *bunyan* 日志记录模块）。
+  2. *trace*：动态设置跟踪级别（如果应用程序使用的是 *log4js*、*ibmbluemix* 或 *bunyan* 日志记录模块）。
   
   **注：**支持的依赖关系版本：
 
@@ -116,6 +81,8 @@ cf map-route <appname> ng.bluemix.net -n <appname>-pm
     * ibmbluemix：(1.0.0-20140707-1250)-(1.0.0-20150409-1328)
   
   转至 {{site.data.keyword.Bluemix_notm}} Web 控制台的“实例详细信息”页面，然后选择**操作**以查看 UI。
+
+  如果是使用“-b buildpack”选项启动的应用程序，那么 *trace* 实用程序不可用。
 
   *trace* 实用程序不会启动 *proxy*。
 

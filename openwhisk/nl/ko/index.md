@@ -16,11 +16,11 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# {{site.data.keyword.openwhisk_short}} 시작하기
-마지막 업데이트 날짜: 2016년 8월 4일
+# {{site.data.keyword.openwhisk_short}}(베타) 시작하기
+마지막 업데이트 날짜: 2016년 9월 9일
 {: .last-updated}
 
-{{site.data.keyword.openwhisk}}는 이벤트 주도적인 분배된 컴퓨팅 서비스입니다. {{site.data.keyword.openwhisk_short}}는 HTTP를 통한 웹 또는 모바일 앱의 직접 호출이나 이벤트에 응답하여 애플리케이션 로직을 실행합니다. Cloudant 같은 Bluemix 서비스와 외부 소스에서 이벤트를 제공할 수 있습니다. 개발자는 애플리케이션 로직 작성 및 On-Demand 실행이 수행되는 조치 작성에 집중할 수 있습니다. 조치 실행 비율은 항상 이벤트 비율과 일치하므로 스케일링, 복원성, 최적 활용도가 상속됩니다. 사용한 부분만 요금을 지불하며 서버를 관리할 필요가 없습니다. 또한 [소스 코드](https://github.com/openwhisk/openwhisk)를 얻어서 스스로 시스템을 실행할 수 있습니다.
+{{site.data.keyword.openwhisk}}는 이벤트로 구동되는 분산형 계산 서비스이며 Serverless 컴퓨팅 또는 FaaS(Function as a Service)라고도 합니다. {{site.data.keyword.openwhisk_short}}는 HTTP를 통한 웹 또는 모바일 앱에서의 직접 호출이나 이벤트에 응답하여 애플리케이션 로직을 실행합니다. Cloudant 같은 Bluemix 서비스와 외부 소스에서 이벤트를 제공할 수 있습니다. 개발자는 애플리케이션 로직 작성 및 On-Demand 실행이 수행되는 조치 작성에 집중할 수 있습니다. 조치 실행 비율은 항상 이벤트 비율과 일치하므로 스케일링, 복원성, 최적 활용도가 상속됩니다. 사용한 부분만 요금을 지불하며 서버를 관리할 필요가 없습니다. 또한 [소스 코드](https://github.com/openwhisk/openwhisk)를 얻어서 스스로 시스템을 실행할 수 있습니다.
 {: shortdesc}
 
 {{site.data.keyword.openwhisk_short}} 작동 방법에 대한 세부사항은 [{{site.data.keyword.openwhisk_short}} 정보](./openwhisk_about.html)를 참조하십시오.
@@ -31,8 +31,11 @@ copyright:
 {{site.data.keyword.openwhisk_short}} 명령행 인터페이스(CLI)를 사용하여 네임스페이스 및 권한 키를 설정할 수 있습니다. [CLI 구성](https://new-console.{DomainName}/openwhisk/cli){: new_window}으로 이동하고 지시사항에 따라 이를 설치하십시오.
  
 
-**지원 중단 알림** Python을 설치할 필요가 없는 새 CLI를 사용할 수 있습니다.
-이전 CLI(Python 기반)는 현재 더 이상 사용되지 않으며 백업 다운로드 옵션으로만 사용 가능합니다. 더 이상 사용되지 않는 CLI를 사용하려는 경우 시스템에 Python 2.7이 설치되어 있어야 합니다.  
+### HTTPS 프록시를 사용하도록 CLI 구성
+
+HTTPS 프록시를 사용하도록 CLI를 설정할 수 있습니다. HTTPS 프록시를 설정하려면 `HTTPS_PROXY`라는 환경 변수를
+ 작성해야 합니다. 이 변수는 `{PROXY IP}:{PROXY PORT}` 형식을 사용하여 HTTPS 프록시의 주소 및 해당 포트로 설정해야 합니다. 
+
 
 CLI를 사용하여 {{site.data.keyword.openwhisk_short}}를 설정한 후 명령행에서 이를 시작할 수 있습니다. 
 

@@ -256,7 +256,7 @@ En el ejemplo siguiente se muestra la solicitud de descarga de firmware en la qu
 El servidor de gestión de dispositivos de {{site.data.keyword.iot_short_notm}} utiliza el Protocolo de gestión de dispositivos para enviar una solicitud a los dispositivos, lo que inicia la descarga de firmware. El proceso de descarga consta de los pasos siguientes:
 
 1. Se envía una solicitud de actualización de detalles de firmware en el tema `iotdm-1/device/update`.
-La solicitud de actualización permite validarse al dispositivo si el firmware solicitado difiere del firmware actualmente instalado. Si hay una diferencia, establezca el parámetro `rc` en `204`, que se convierte en el estado `Changed`.
+La solicitud de actualización permite validarse al dispositivo si el firmware solicitado difiere del firmware actualmente instalado. Si hay una diferencia, establezca el parámetro `rc` en `204`, que se convierte en el estado `Changed`.  
 En el ejemplo siguiente se muestra qué mensaje se espera para la solicitud de descarga de firmware de ejemplo enviada anteriormente y qué respuesta se debe enviar cuando se detecta una diferencia:
 ```
    Solicitud entrante de la {{site.data.keyword.iot_short_notm}}:

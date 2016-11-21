@@ -27,7 +27,7 @@ As funções de usuário padrão a seguir estão disponíveis:
 
 Atribuição de usuário | Descrição
 ------------- | -------------
-Administrador | Uma função 'super usuário' que concede acesso a todas as APIs (interfaces de programação de aplicativos) relacionados ao usuário. Os administradores não podem acessar operações que são restritas a dispositivos e aplicativos.
+Administrador | Uma função 'super usuário' que concede acesso a todas as APIs (interfaces de programação de aplicativos) relacionados ao usuário. Os administradores não podem acessar operações que são restritas a dispositivos e aplicativos. 
 Operador | Destinada a usuários da organização de front-end. Concede acesso à maioria das operações da organização, controle de acesso de controle de acesso, operações de análise de dados, operações de terceiros e operações de gerenciamento de risco.
 Developer | Concede acesso sem restrição a operações de dispositivo, operações de log, operações de cache, operações de historiador, operações de análise de dados e operações de serviços de terceiros. A função fornece acesso limitado às operações de organização, de controle de acesso e de gerenciamento de risco.
 Analista | Concede acesso a operações de análise de dados, incluindo criar, atualizar e excluir regras, ações e esquemas.
@@ -37,7 +37,7 @@ Para obter mais informações sobre as funções de usuário, consulte [Funçõe
 
 ## Funções de Aplicativo
 {: #application_roles}
-É possível designar funções de aplicativo para conceder ou negar o acesso de seus aplicativos a operações específicas.  Todas as funções de aplicativo negam acesso às operações a seguir:
+É possível designar funções de aplicativo para conceder ou negar o acesso de seus aplicativos a operações específicas. Todas as funções de aplicativo negam acesso às operações a seguir:
 
 - Todas as operações de gerenciamento de risco
 - Configure os parâmetros de armazenamento

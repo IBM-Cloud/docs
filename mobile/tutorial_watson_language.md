@@ -10,9 +10,6 @@ lastupdated: "2016-10-21"
 # Tutorial - Watson Language Code Starter
 {: #tutorial_watson_language}
 
-Last updated: 21 October 2016
-{: .last-updated}
-
 The {{site.data.keyword.Bluemix}} Mobile Code Starter for Watson Language showcases the Text To Speech and Language Translation services from Watson and gives you integration points for each of the {{site.data.keyword.Bluemix_notm}} Mobile services.
 
 
@@ -48,9 +45,9 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
 
    2. Enter your service name and click **Create**.
 
-   3. For iOS, [configure Apple Push Notification Service](../services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. For iOS, [configure Apple Push Notification Service](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
-   4. For Android, [configure Google Cloud Messaging](../services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. For Android, [configure Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
    
 3. Optional: Add the Analytics capability.
 
@@ -74,7 +71,7 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
    
    4. Select your identity provider and enter the required information to configure it. You can enable only one identity provider.
 
-   5. See [Getting started with Mobile Client Access](../services/mobileaccess/index.html){: new_window} for more information about configuring authentication.
+   5. See [Getting started with Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window} for more information about configuring authentication.
 
 5. Download your project.
 
@@ -88,30 +85,4 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
 ## What to do next
 {: #tutorial_next}
 
-[Try it out!](http://new-console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}
-
-
-# Related Links
-{: #rellinks}
-
-<!-- links to internal services don't work
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
-
-## Blog Posts
-{: #general}
-* [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
-## Tutorials and Samples
-{: #samples}
-* [Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+[Try it out!](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}

@@ -77,7 +77,7 @@ copyright:
 |{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.IntegrationTestingshort}}	|是		|是		|否|
 |{{site.data.keyword.iot_short}}		|是		|是		|否|
-|{{site.data.keyword.keymanagementserviceshort}}	|否		|是		|否|
+|{{site.data.keyword.keymanagementserviceshort}}	|是		|是		|否|
 |{{site.data.keyword.languagetranslationshort}}	|是		|是		|是|
 |{{site.data.keyword.messagehub}}		|是		|是		|否|
 |{{site.data.keyword.messageresonanceshort}}	|是		|是		|否|

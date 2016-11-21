@@ -98,7 +98,7 @@ Par exemple, créez un déclencheur pour envoyer les mises à jour de l'emplacem
  
   ```
   triggers
-  /someNamespace/locationUpdate                            private
+  /un_espace_nom/locationUpdate                            private
   ```
   {: screen}
 
@@ -107,7 +107,7 @@ Par exemple, créez un déclencheur pour envoyer les mises à jour de l'emplacem
 3. Ensuite, exécutez un événement déclencheur en spécifiant le nom du déclencheur et des paramètres :
 
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name "Daniel" --param place "Marseille"
   ```
   {: pre}
 
@@ -117,7 +117,7 @@ Par exemple, créez un déclencheur pour envoyer les mises à jour de l'emplacem
   {: screen}
 
 Un déclencheur qui est lancé sans aucune règle associée n'a aucun effet visible.
-Les déclencheurs ne peuvent pas être créés au sein d'un package ; ils doivent être créés directement sous un espace de noms. 
+Les déclencheurs ne peuvent pas être créés au sein d'un package ; ils doivent être créés directement sous un espace de noms.
 
 ## Association de déclencheurs et d'actions à l'aide de règles
 {: #openwhisk_rules_assoc}
@@ -146,16 +146,23 @@ Par exemple, créez une règle qui appelle l'action hello à chaque fois qu'une 
   ```
   {: pre}
 
-3. Créez et activez la règle. Les trois paramètres sont le nom de la règle, le déclencheur et l'action.
+3. Créez la règle. Elle est activée au moment de la création, ce qui signifie qu'elle est disponible immédiatement pour répondre aux activations
+de votre déclencheur. Les trois paramètres sont le nom de la règle, le déclencheur et l'action.
   ```
-  wsk rule create --enable maRègle locationUpdate hello
+  wsk rule create maRègle locationUpdate hello
   ```
+  {: pre}
+
+  A tout moment, vous pouvez choisir de désactiver une règle.
+  ```
+  wsk rule disable maRègle
+```
   {: pre}
 
 4. Exécutez le déclencheur locationUpdate. A chaque fois que vous déclenchez un événement, l'action hello est appelée avec les paramètres
 d'événement.
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name "Daniel" --param place "Marseille"
   ```
   {: pre}
   
@@ -182,7 +189,7 @@ d'événement.
   {: pre}
   ```
   {
-     "payload": "Hello, Donald from Washington, D.C."
+     "payload": "Hello, Daniel de Marseille"
   }
   ```
   {: screen}
@@ -191,4 +198,6 @@ d'événement.
 
 Vous pouvez créer plusieurs règles qui associent le même déclencheur à des actions différentes.
 Le déclencheur et l'action qui constituent une règle doivent figurer dans le même espace de noms et ne peuvent pas appartenir à un package.
-Si vous souhaitez utiliser une action qui appartient à un package, vous pouvez copier l'action dans votre espace de noms. Par exemple : `wsk action create echo --copy /whisk.system/samples/echo`.
+Si vous souhaitez utiliser une action qui appartient à un package, vous pouvez copier l'action dans votre espace de noms. Exemple : `wsk
+action
+create echo --copy /whisk.system/utils/echo`.

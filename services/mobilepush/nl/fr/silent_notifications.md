@@ -7,17 +7,15 @@ copyright:
 
 # Traitement des notifications silencieuses pour iOS
 {: #silent-notifications}
-Dernière mise à jour : 16 août 2016
+Dernière mise à jour : 17 octobre 2016
 {: .last-updated}
 
-Les notifications silencieuses n'apparaissent pas sur l'écran du
-périphérique. Elles sont
+Les notifications silencieuses n'apparaissent pas sur l'écran de l'appareil. Elles sont
 reçues par l'application en arrière-plan, qui sort alors de veille pendant une durée maximale de 30 secondes
 pour effectuer la tâche d'arrière-plan spécifiée. Un utilisateur peut ne pas
-être conscient de l'arrivée de la notification. Pour envoyer des notifications en mode silencieux pour iOS, utilisez l'[API REST](https://mobile.{DomainName}/imfpushrestapidocs/).   
+être conscient de l'arrivée de la notification. Pour envoyer des notifications en mode silencieux pour iOS, utilisez l'[API REST](https://mobile.{DomainName}/imfpush/).   
 
 1. Pour envoyer des notifications push en mode silencieux, implémentez la méthode suivante dans le fichier `appDelegate.m` dans votre projet.
-
 
 ```
 //For Objective C
@@ -25,30 +23,28 @@ pour effectuer la tâche d'arrière-plan spécifiée. Un utilisateur peut ne pas
 {
    NSNumber *contentAvailable = userInfo[@"aps"][@"content-available"];
    if([contentAvailable intValue]== 1){
-       [[IMFPushClient sharedInstance] application:application didReceiveRemoteNotification:userInfo];
-       
+      [[IMFPushClient sharedInstance] application:application didReceiveRemoteNotification:userInfo];
        //Perform background task
        NSLog(@"Received a silent push..");
        NSLog(@"userInfo: %@", userInfo.description);
        _appDelegateVC.result.text = userInfo.description;
        handler(UIBackgroundFetchResultNewData);
-   }
-   else{
-       //Normal Notification
-       [[IMFPushAppManager get] notificationReceived:userInfo];
-       
-       NSLog(@"Received a normal notification.");
-       NSLog(@"userInfo: %@", userInfo.description);
-       _appDelegateVC.result.text = userInfo.description;
-       handler(UIBackgroundFetchResultNoData);
-       
-   }
-   //Success
+    }
+    else
+	{
+    //Normal Notification
+    [[IMFPushAppManager get] notificationReceived:userInfo];
+    NSLog(@"Received a normal notification.");
+    NSLog(@"userInfo: %@", userInfo.description);
+     _appDelegateVC.result.text = userInfo.description;
+    handler(UIBackgroundFetchResultNoData);
+    }
+    //Success
 }
 ```
+    {: codeblock}
 
 Pour Swift, la valeur de `contentAvailable` envoyée par le serveur pour les notifications silencieuses est égale à 1.
-
 ```
 //For Swift
 
@@ -62,9 +58,10 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
                completionHandler(UIBackgroundFetchResult.NoData)
            }
        } else {
-   //Default notification 
+    //Default notification 
            completionHandler(UIBackgroundFetchResult.NoData)
        }
     }
 ```
+	{: codeblock}
 

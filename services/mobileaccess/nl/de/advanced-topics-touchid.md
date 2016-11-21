@@ -2,16 +2,13 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 
 # Zugriff mit Touch ID berechtigen
 {: #before-you-begin}
 
-Letzte Aktualisierung: 20. Juli 2016
-{: .last-updated}
-
-Touch ID ist eine Fingerabdruckerkennungsfunktion für iOS-Geräte. Sie können Touch ID verwenden, um Berechtigungsinformationen für eine zukünftige Verwendung automatisch zu schützen. 
+Touch ID ist eine Fingerabdruckerkennungsfunktion für iOS-Geräte. Sie können Touch ID mit dem {{site.data.keyword.amafull}}-Service verwenden, um Berechtigungsinformationen für eine zukünftige Verwendung automatisch zu schützen. 
 
 **Anmerkung:** Touch ID ist nur über das {{site.data.keyword.amashort}}-Objective-C-SDK verfügbar.
 

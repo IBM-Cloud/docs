@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-11-03"
  
 
 ---
@@ -15,15 +15,33 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-<!-- draft - staging only -->
-
-# Linking SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts
+# Upgrading and unifying {{site.data.keyword.Bluemix_notm}} and SoftLayer billing accounts
 {: #softlayerlink}
-*Last updated: 23 October 2016*
-{: .last-updated}
 
-You can now link SoftLayer and {{site.data.keyword.Bluemix_notm}} billing accounts. When you link your accounts, you are billed through {{site.data.keyword.Bluemix_notm}} for both SoftLayer and {{site.data.keyword.Bluemix_notm}} resources. If you have an existing {{site.data.keyword.Bluemix_notm}} account, billing through {{site.data.keyword.Bluemix_notm}} for SoftLayer for takes effect for the new billing cycle that starts after the accounts are linked.
+If you have a {{site.data.keyword.Bluemix_notm}} trial account and you want to access the Infrastructure dashboard, you must upgrade to a {{site.data.keyword.Bluemix_notm}} Pay-As-You-Go account. You also must upgrade if you want to use other chargeable resources that are not available within a trial account, or your trial account finishes. 
+
+You can unify your existing {{site.data.keyword.Bluemix_notm}} and SoftLayer billing accounts by linking the accounts. When you link your accounts, you are billed through {{site.data.keyword.Bluemix_notm}} for both {{site.data.keyword.Bluemix_notm}} and SoftLayer resources.
 {:shortdesc}
+
+## Upgrading to a {{site.data.keyword.Bluemix_notm}} Pay-As-You-Go account
+{: #upgradetopayg}
+
+When you log in to {{site.data.keyword.Bluemix_notm}} by using a trial account, you cannot access the {{site.data.keyword.Bluemix_notm}} Infrastructure dashboard. If you want your apps to use the infrastructure resources, you must upgrade to a Pay-As-You-Go account.
+
+To upgrade your trial account to a {{site.data.keyword.Bluemix_notm}} Pay-As-You-Go account, complete the following steps:
+
+ 1. Click **Account** &gt; **Billing**.
+ 2. Then, click **Add Credit Card**.
+ 3. Enter the required billing details. 
+ 4. Read and accept the terms and conditions for the Pay-As-You-Go account. 
+ 5. When you are finished, click **Upgrade**. 
+ 
+After you upgrade to a Pay-As-You-Go account, the **Infrastructure** options are listed in the {{site.data.keyword.Bluemix_notm}} **Catalog**. If you use more than the free allowance, you will receive a monthly {{site.data.keyword.Bluemix_notm}} invoice. The invoice will be in United States dollars (USD) and will detail your resource charges. 
+
+## Unifying your {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts
+{: #unifyingaccounts}
+
+You can unify your {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts to make use of the combined resources. When you link your {{site.data.keyword.Bluemix_notm}} and Softlayer accounts, you will receive a single {{site.data.keyword.Bluemix_notm}} invoice. If you have an existing {{site.data.keyword.Bluemix_notm}} account, billing through {{site.data.keyword.Bluemix_notm}} for SoftLayer resources takes effect for the new billing cycle that starts after the accounts are linked.
 
 **Important:** All linked accounts in {{site.data.keyword.Bluemix_notm}} must be Pay-As-You-Go accounts. You can create a new Pay-As-You-Go account or link an existing Pay-As-You-Go account. Or, you can link an existing trial account, but it will be upgraded to a Pay-As-You-Go account. Subscription {{site.data.keyword.Bluemix_notm}} accounts cannot be linked.  
 
@@ -45,6 +63,8 @@ If you have a SoftLayer account, and you want to link SoftLayer and {{site.data.
 You must be a Master User in the SoftLayer account to link accounts.
 
 After you have linked your accounts, the **Go to {{site.data.keyword.Bluemix_notm}}** link is available in the SoftLayer global header. Clicking this link takes you to the {{site.data.keyword.Bluemix_notm}} login page. In addition, the **SoftLayer** link is now available in the {{site.data.keyword.Bluemix_notm}} header. Clicking the link takes you to the home page of the {{site.data.keyword.slportal}} in a new window.
+
+{{site.data.keyword.Bluemix_notm}} infrastructure offerings are connected to a three-tiered network, segmenting public, private, and management traffic. Infrastructure offerings on a customer's {{site.data.keyword.Bluemix_notm}} account might transfer data between one another across the private network at no cost. Infrastructure offerings, such as bare metal servers, virtual servers, and cloud storage, connect to other applications and services in the {{site.data.keyword.Bluemix_notm}} catalog, such as Watson services, containers, or runtimes, across the public network. Data transfer between those two types of offerings is metered and charged at standard public network bandwidth rates.
 
 ## Credits for {{site.data.keyword.Bluemix_notm}} usage when accounts are linked
 {: #slcredit}

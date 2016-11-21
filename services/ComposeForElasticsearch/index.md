@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-09-20"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Getting started with Compose for Elasticsearch
 {: #getting-started-with-compose-for-elasticsearch}
-
-Last updated: 20 September 2016
-{: .last-updated}
 
 {{site.data.keyword.composeForElasticsearch_full}} combines the power of a full text search engine with the indexing strengths of a JSON document database. Together they create a powerful tool for rich data analysis on large volumes of data. With Elasticsearch, your searching can be scored for exactness, letting you dig through your data set for those close matches and near misses that you might be missing.
 {:shortdesc}

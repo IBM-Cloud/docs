@@ -706,8 +706,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1654846"
-     inkscape:cx="399.63797"
-     inkscape:cy="92.756856"
+     inkscape:cx="392.34487"
+     inkscape:cy="100.04996"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1431,15 +1431,18 @@
            y="-62.752552" /></flowRegion><flowPara
          id="flowPara5808" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000191px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="235.75475"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="197.75475"
        y="636.19281"
        id="text4681"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3612"
-         x="235.75475"
-         y="636.19281">Authentification via IBMid</tspan></text>
+         x="197.75475"
+         y="636.19281"
+         style="font-size:12.50000191px"
+         id="tspan4687">Authentification via <tspan
+   style="font-weight:bold"
+   id="tspan5809">un ID IBM</tspan>.</tspan></text>
     <rect
        x="152.64145"
        y="527.10138"
@@ -1532,32 +1535,45 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:12.50000149px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'sans-serif, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-27.655277"
        y="591.38055"
        id="text4681-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3600">Utilisation de clés d'API</tspan><tspan
+         x="-27.655277"
+         y="591.38055"
+         style="font-size:12.50000191px"
+         id="tspan4687-8">Utilisation de <tspan
+   style="font-weight:bold"
+   id="tspan5838"> clés d'API</tspan></tspan><tspan
          sodipodi:role="line"
-         id="tspan3602">pour passer des appels</tspan><tspan
+         x="-27.655277"
+         y="607.00555"
+         style="font-size:12.50000191px"
+         id="tspan5834">pour passer des appels </tspan><tspan
          sodipodi:role="line"
-         id="tspan3604">REST authentifiés</tspan><tspan
+         x="-27.655277"
+         y="622.63055"
+         style="font-size:12.50000191px"
+         id="tspan11042">REST authentifiés</tspan><tspan
          sodipodi:role="line"
-         id="tspan3606"></tspan><tspan
+         x="-27.655277"
+         y="638.25555"
+         style="font-size:12.50000191px"
+         id="tspan5836" /><tspan
          sodipodi:role="line"
-         id="tspan3608"></tspan></text>
+         x="-27.655277"
+         y="653.88055"
+         style="font-size:12.50000191px"
+         id="tspan5832" /></text>
     <text
        sodipodi:linespacing="125%"
        y="635.88947"
        x="413.8291"
        font-size="11"
        id="text65450"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000155px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;">
-      <tspan
-         sodipodi:role="line"
-         id="tspan3614">Utilisateur ayant un IBMid</tspan>
-    </text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Utilisateur avec ID IBM</text>
     <g
        transform="translate(-1540.5459,252.77424)"
        id="g14242"

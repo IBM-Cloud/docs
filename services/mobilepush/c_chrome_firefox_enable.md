@@ -8,7 +8,7 @@ years: 2015 2016
 
 # Enabling web applications to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 17 October 2016
+Last updated: 08 November 2016
 {: .last-updated}
 
 You can now enable Google Chrome and Mozilla Firefox web applications to receive   {{site.data.keyword.mobilepushshort}}.
@@ -26,7 +26,7 @@ Download the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest_Website.js
 
 1. Edit the `manifest_Website.json` file.
 
-For Google Chrome browser, change `name` to your site's name. Change `gcm_sender_id` to your Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) sender_ID. For more information, see [Google documentation](https://developers.google.com/web/fundamentals/getting-started/codelabs/push-notifications/#make_a_project_on_the_google_developer_console). The gcm_sender_id value contains only numbers.
+For Google Chrome browser, change `name` to your site's name. For example, `www.dailynewsupdates.com`. Change the `gcm_sender_id` to your Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) sender_ID. For more information, see [Getting Your Sender ID and API key](t_push_provider_android.html). The gcm_sender_id value contains only numbers.
 
 ```
  {
@@ -46,13 +46,13 @@ For Mozilla Firefox browser, add the following values in `manifest.json` file.  
     {: codeblock}
 
 2. Change the `manifest_Website.json` file name to `manifest.json`.
-3. Add the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` to your root directory.
+3. Add the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` to the  root directory of your website.
 3. Include the `manifest.json` in ``<head>`` tag of your html file .
 ```
  <link rel="manifest" href="manifest.json">
 ```
     {: codeblock}
-4. Include Bluemix Web push SDK to the web application from GitHub.
+4. Include Bluemix Web push SDK in your web application.
 ```
  <script src="BMSPushSDK.js" async></script>
 ```
@@ -81,7 +81,7 @@ The `App Region` specifies the location where the {{site.data.keyword.mobilepush
   "appRegion":"Region where service hosted",
    "clientSecret":"clientSecret of your push service"
     }
-  bmsPush.initialize(params, callback)
+  bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
 
@@ -129,7 +129,7 @@ The following image shows the web notifications option in the dashboard.
 ## Next steps
   {: #next_steps_tags}
 
-After you have successfully set up basic notifications, you can configure configure tag-based notifications and advanced options.
+After you have successfully set up basic notifications, you can choose to configure tag-based notifications and advanced options.
 
 Add these {{site.data.keyword.mobilepushshort}} service features to your app. To use tag-based notifications, see [Tag-based Notifications](c_tag_basednotifications.html). To use advanced notifications options, see [Advanced notifications](t_advance_badge_sound_payload.html).
 

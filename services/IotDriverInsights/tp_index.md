@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-25"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,6 @@ copyright:
 
 # Getting started with Trajectory Pattern Analysis
 {: #tp_index}
-Last updated: 16 June 2016
-{: .last-updated}
 
 Trajectory Pattern Analysis API is a service within the {{site.data.keyword.Bluemix_notm}}   {{site.data.keyword.iotdriverinsights_full}} service that you can use to analyze the Origin/Destination (O/D) and route patterns of driving trips from car probe data.
 

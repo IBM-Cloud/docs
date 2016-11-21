@@ -2,16 +2,15 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 
 # 開始使用 {{site.data.keyword.amashort}}
 {: #gettingstarted}
-前次更新：2016 年 7 月 21 日
-{: .last-updated}
 
-使用 {{site.data.keyword.amafull}} 服務，將安全新增至您的行動應用程式。您可以配置用戶端鑑別和身分提供者，讓使用者可以利用其現有的 Google 或 Facebook 帳戶登入應用程式。
+
+使用 {{site.data.keyword.amafull}} 服務，將安全新增至您的行動應用程式。您可以配置用戶端授權，以存取在 {{site.data.keyword.Bluemix_notm}} 上執行的受保護後端資源。使用身分提供者（Google 及 Facebook）或自訂身分來鑑別使用者，以及授與受保護後端資源及 Web 應用程式的存取權。
 {:shortdesc}
 
 **附註：**{{site.data.keyword.amashort}} 服務先前稱為 Advanced Mobile Access。

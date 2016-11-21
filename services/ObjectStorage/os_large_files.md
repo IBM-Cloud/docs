@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -12,8 +13,7 @@ copyright:
 
 
 # Working with large files {: #large-files}
-*Last updated: 19 October 2016*
-{: .last-updated}
+
 
 Uploading objects is limited to a maximum size of 5 GB in a single upload. However, you can still upload objects larger than 5GB if segment them into smaller objects. Once the segmented objects have been uploaded, a manifest file is also needed to concatenate the segments into the original object. There are two ways to do this: Dynamic Large Objects (DLO) and Static Large Objects (SLO).
 {: shortdesc}
@@ -47,14 +47,14 @@ You can segment the objects so that they are 5GB or less yourself, and then uplo
     curl -i -X PUT --data-binary @segment2 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_name>/<object_name>/000002
     ```
     {: pre}
-    
+
 3. Upload an empty manifest file with the header `X-Object-Manifest` set to the corresponding `<container>/prefix>` value.
 
     ```
     curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Object-Manifest: <container_name>/<object_name>/" https://<object-storage_url>/<manifest_container_name>/<object_name>
     ```
     {: pre}
-    
+
     **Note**: The manifest file must be empty. If not, the content of the file will be considered as one of the segments and will fall in the order of concatenation that is dictated by the sorted names.
 4. Download the object. You will receive the whole object as a result. You can add or remove segments without having to update the manifest file. Segments with the correct prefix will remain part of the object. Deleting the manifest will not delete the segments.
 
@@ -102,7 +102,7 @@ You can upload large files by completing the following steps:
     curl -i -X PUT --data-binary @segment3 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_one>/<segment>
     ```
     {: pre}
-    
+
 2. Build the manifest:
 
     ```
@@ -125,21 +125,21 @@ You can upload large files by completing the following steps:
     ]
     ```
     {: pre}
-    
+
 3. Upload the manifest. To do this, you must add the query `multipart-manifest=put` to the name of the manifest by running the following command:
 
     ```
     curl -i -X PUT --data-binary @object_name -H "X-Auth-Token: <token>" https://<object-storage_url>/container_two/<object_name>?multipart-manifest=put
     ```
     {: pre}
-    
+
 4. Download the object.
 
     ```
     curl -O -X GET -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
-    
+
 Here are some commands that you might need when working with Static Large Objects.
 
 * To download the content of the manifest file, you must add the query `multipart-manifest=get` to your command. The content you receive will not be identical to the content you uploaded.
@@ -148,14 +148,14 @@ Here are some commands that you might need when working with Static Large Object
     curl -O -X GET -H "X-Auth-Token:<token>" https://<object-storage_url>/<container_two>/<object_name>?multipart-manifest=get
     ```
     {: pre}
-    
+
 * To delete the manifest run the following command:
 
     ```
     curl -i -X DELETE -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
-    
+
 * To delete the manifest and all the segments, add the query `multipart-manifest=delete` after the name of the manifest:
 
     ```

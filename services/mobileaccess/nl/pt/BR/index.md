@@ -1,20 +1,18 @@
 ---
 
 copyright:
-  years: 2015, 2016
-
+  years: 2015, 2016 lastupdated: "2016-10-02"
 ---
 
 
 # Introdução ao
 {{site.data.keyword.amashort}}
 {: #gettingstarted}
-Última atualização: 21 de julho de 2016
-{: .last-updated}
 
-Inclua segurança em seu app móvel com o serviço {{site.data.keyword.amafull}}. É possível configurar a autenticação de cliente e
-os provedores de identidade para que os usuários possam efetuar login no app com suas
-contas existentes do Google ou Facebook.
+
+Inclua segurança em seu app móvel com o serviço {{site.data.keyword.amafull}}. É possível configurar a autorização do cliente para acessar recursos de
+backend protegidos em execução no {{site.data.keyword.Bluemix_notm}}. Use provedores de identidade (Google e Facebook) ou identidades customizadas para
+autenticar usuários e conceder acesso a recursos de backend protegidos e aplicativos da web.
 {:shortdesc}
 
 **Nota:** O serviço {{site.data.keyword.amashort}} era
@@ -31,8 +29,7 @@ Para fazer com que o serviço {{site.data.keyword.amashort}} funcione:
   
 2. Recursos seguros do lado do servidor.
 
-   Proteja seus recursos de backend móveis que estejam em execução nos tempos de execução Node.js ou Liberty for Java&trade; com a segurança OAuth ativada para dispositivo móvel. Para obter mais informações, consulte [Protegendo recursos](protecting-resources.html).
-   Para aprender mais sobre o aplicativo backend móvel padrão, consulte o aplicativo de amostra [bms-hellotodo-strongloop](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop).
+   Proteja seus recursos de backend móveis que estejam em execução nos tempos de execução Node.js ou Liberty for Java&trade; com a segurança OAuth ativada para dispositivo móvel. Para obter mais informações, veja [Protegendo recursos](protecting-resources.html). Para aprender mais sobre o aplicativo backend móvel padrão, consulte o aplicativo de amostra [bms-hellotodo-strongloop](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop).
 
 3. Configure seu ambiente de desenvolvimento principal do {{site.data.keyword.amashort}}.
    
@@ -50,7 +47,8 @@ Para fazer com que o serviço {{site.data.keyword.amashort}} funcione:
    * Cordova: ([Configurando o plug-in do Cordova](getting-started-cordova.html)) ([Amostra](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication))
    
    **Nota:** embora o Objective-C SDK permaneça totalmente suportado e ainda considerado o SDK primário para o
-{{site.data.keyword.amashort}}, há planos para descontinuar esse SDK posteriormente este ano em favor do novo Swift SDK. Se você estiver criando um aplicativo, é altamente recomendável usar o Swift SDK (consulte [Configurando o iOS Swift SDK](getting-started-ios-swift-sdk.html)).
+{{site.data.keyword.amashort}}, há planos para descontinuar esse SDK posteriormente este ano em favor do novo Swift SDK. Se você está criando um aplicativo, é altamente recomendável usar o SDK do Swift (veja
+[Configurando o SDK do Swift iOS](getting-started-ios-swift-sdk.html)).
 
 	####Desenvolvimento da Web
    {: #web-development}
@@ -72,7 +70,7 @@ provedores de identidade, consulte:
 
 5. Configure seu monitoramento de aplicativo e criação de log.
 
-    Para obter mais informações, consulte [Monitorando aplicativos](app-monitoring.html).
+    Para obter mais informações, veja [Monitorando aplicativos](app-monitoring.html).
 
 # Links relacionados
 {: #rellinks}

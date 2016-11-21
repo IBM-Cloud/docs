@@ -1,7 +1,7 @@
 ---
 
-copyright :
-  années : 2015, 2016
+copyright:
+  years: 2015, 2016
 
 ---
 
@@ -26,14 +26,12 @@ Par défaut, les actions de gestion des terminaux suivantes sont fournies et pri
 
 Si les actions de terminal par défaut qui sont fournies par {{site.data.keyword.iot_short_notm}} ne sont pas suffisantes pour vos terminaux et vos applications, vous pouvez développer des fonctions de gestion de terminaux supplémentaires en implémentant un package d'extension de gestion des terminaux.
 
-
 ## Packages d'extension de gestion des terminaux
 {: #device_management_ext}
 
-Un package d'extension de gestion des terminaux est un document JSON qui définit un ensemble d'actions de gestion des terminaux. Les actions peuvent être lancées sur un ou plusieurs terminaux qui prennent en charge les actions. Les actions sont lancées à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} ou des commandes d'API REST de gestion des terminaux. 
+Un package d'extension de gestion des terminaux est un document JSON qui définit un ensemble d'actions de gestion des terminaux. Les actions peuvent être lancées sur un ou plusieurs terminaux qui prennent en charge les actions. Les actions sont lancées à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} ou des commandes d'API REST de gestion des terminaux.
 
 L'exemple de code suivant présente le format standard d'un package d'extension de gestion des terminaux :
-
 
 ```
 
@@ -95,8 +93,8 @@ Un package d'extension de gestion des terminaux contient les propriétés suivan
 |Propriété|Description|Obligatoire
 |:---|:---|
 |`name`|Identificateur unique d'un paramètre dans une action|Oui|
-|`value`|Expression régulière utilisée pour valider des valeurs de paramètre lorsqu'une demande est lancée. Si la propriété n'est pas spécifiée, la validation n'a pas lieu. |Non|
-|`required`|Valeur booléenne qui détermine si le paramètre est obligatoire. La valeur par défaut est false.  |Non|
+|`value`|Expression régulière utilisée pour valider des valeurs de paramètre lorsqu'une demande est lancée. Si la propriété n'est pas spécifiée, la validation n'a pas lieu.|Non|
+|`required`|Valeur booléenne qui détermine si le paramètre est obligatoire. La valeur par défaut est false. |Non|
 |`defaultValue`|Valeur à utiliser si le paramètre n'est pas fourni lorsqu'une demande est lancée.|Non|
 
 **Remarque :** Les valeurs `bundleId`, `version`, `actionId` et `parameterId` sont limitées à 255 caractères et ne peuvent comporter que des caractères alphanumériques (a-z, A-Z, 0-9), ainsi que les caractères spéciaux suivants :
@@ -120,22 +118,22 @@ Utilisez les commandes d'API REST {{site.data.keyword.iot_short_notm}} suivantes
 - Pour supprimer un package d'extension de gestion des terminaux :
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-Pour plus d'informations sur les API REST pour les packages d'extension de gestion des terminaux, voir la [documentation {{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}. 
+Pour plus d'informations sur les API REST pour les packages d'extension de gestion des terminaux, voir la [documentation {{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ##Prise en charge des actions de gestion des terminaux personnalisées
 {: #supporting_custom_device_management_actions}
 
-Les actions de gestion des terminaux qui sont définies dans vos packages d'extension ne peuvent être lancées que par des terminaux qui prennent en charge ces actions. Lorsqu'un terminal publie une demande de gestion sur {{site.data.keyword.iot_short_notm}}, le terminal spécifie les types d'action qu'il peut prendre en charge. 
+Les actions de gestion des terminaux qui sont définies dans vos packages d'extension ne peuvent être lancées que par des terminaux qui prennent en charge ces actions. Lorsqu'un terminal publie une demande de gestion sur {{site.data.keyword.iot_short_notm}}, le terminal spécifie les types d'action qu'il peut prendre en charge.
 
-Pour recevoir des actions personnalisées d'un package d'extension, le terminal doit spécifier l'identificateur de bundle du package d'extension dans l'objet supports de la demande, comme illustré dans l'exemple suivant : 
+Pour recevoir des actions personnalisées d'un package d'extension, le terminal doit spécifier l'identificateur de bundle du package d'extension dans l'objet supports de la demande, comme illustré dans l'exemple suivant :
 
 ```
 	Message sortant depuis le terminal :
 
-Topic: iotdevice-1/mgmt/manage
+	Topic: iotdevice-1/mgmt/manage
 {
-    "d": {
+		"d": {
 			"supports": {
 				"deviceActions": false,
 				"firmwareActions": false,
@@ -160,11 +158,11 @@ Pour plus d'informations sur les demandes de gestion des terminaux, voir [Protoc
 ## Lancement des actions de gestion des terminaux personnalisées
 {: #initiating_custom_dm_actions}
 
-Pour lancer des actions de gestion des terminaux personnalisées, utilisez la commande d'API REST suivante (commande par défaut pour le lancement des actions de gestion des commandes) : 
+Pour lancer des actions de gestion des terminaux personnalisées, utilisez la commande d'API REST suivante (commande par défaut pour le lancement des actions de gestion des commandes) :
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-Vous devez indiquer les informations suivantes lorsque vous lancez une demande : 
+Vous devez indiquer les informations suivantes lorsque vous lancez une demande :
 
 - L'action `<bundleId>/<actionId>`
 - Une liste de terminaux sur lesquels lancer l'action (5 000 terminaux au maximum)
@@ -195,16 +193,16 @@ Le contenu pour le lancement d'une demande est au format suivant :
 ## Traitement des actions de gestion des terminaux personnalisées
 {: #handling_custom_dm_actions}
 
-Lorsqu'une action personnalisée est lancée sur un terminal, un message MQTT est publié sur le terminal. Le message MQTT contient des paramètres qui ont été spécifiés dans le cadre de la demande. Lorsque le terminal reçoit le message MQTT, il exécute l'action ou il répond avec un code d'erreur indiquant la raison pour laquelle l'action ne peut pas être exécutée pour le moment. 
+Lorsqu'une action personnalisée est lancée sur un terminal, un message MQTT est publié sur le terminal. Le message MQTT contient des paramètres qui ont été spécifiés dans le cadre de la demande. Lorsque le terminal reçoit le message MQTT, il exécute l'action ou il répond avec un code d'erreur indiquant la raison pour laquelle l'action ne peut pas être exécutée pour le moment.
 
 Lorsqu'une action de terminal aboutit, le terminal publie une réponse dans laquelle la valeur `rc` prend la valeur `200`.
 
-L'extrait suivant fournit un exemple de l'échange qui a lieu entre un serveur et un terminal. 
+L'extrait suivant fournit un exemple de l'échange qui a lieu entre un serveur et un terminal.
 
 ```
 	Message entrant depuis le serveur :
 
-Topic: iotdm-1/mgmt/custom/<bundleId>/<actionId>
+	Topic: iotdm-1/mgmt/custom/<bundleId>/<actionId>
 	{
 		"d": {
 			"fields": [
@@ -234,7 +232,7 @@ Topic: iotdm-1/mgmt/custom/<bundleId>/<actionId>
 
 L'exemple suivant vous montre comment définir une nouvelle extension de gestion des terminaux et comment exécuter une action qui est définie dans cette extension.
 
-Certaines sociétés fabriquent des terminaux `exampleDeviceType`. Vous pouvez installer et gérer des plug-ins pour qu'ils s'exécutent sur des terminaux `exampleDeviceType`. Pour faciliter la gestion à distance de plug-ins sur les terminaux `exampleDeviceType`, le fabricant fournit généralement une extension de gestion des terminaux que vous pouvez importer dans votre organisation {{site.data.keyword.iot_short_notm}}. 
+Certaines sociétés fabriquent des terminaux `exampleDeviceType`. Vous pouvez installer et gérer des plug-ins pour qu'ils s'exécutent sur des terminaux `exampleDeviceType`. Pour faciliter la gestion à distance de plug-ins sur les terminaux `exampleDeviceType`, le fabricant fournit généralement une extension de gestion des terminaux que vous pouvez importer dans votre organisation {{site.data.keyword.iot_short_notm}}.
 
 Le document JSON d'extension suivant est utilisé dans cet exemple :
 
@@ -330,14 +328,14 @@ Pour ajouter l'extension, utilisez la commande d'API REST suivante :
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
 
-Les terminaux qui sont enregistrés sur l'organisation `<orgID>` peuvent spécifier qu'ils prennent en charge des actions `exampleDeviceType-actions-v1` lorsqu'ils publient une demande de gestion, illustrée dans l'exemple suivant : 
+Les terminaux qui sont enregistrés sur l'organisation `<orgID>` peuvent spécifier qu'ils prennent en charge des actions `exampleDeviceType-actions-v1` lorsqu'ils publient une demande de gestion, illustrée dans l'exemple suivant :
 
 ```
 	Message sortant depuis le terminal :
 
-Topic: iotdevice-1/mgmt/manage
+	Topic: iotdevice-1/mgmt/manage
 {
-    "d": {
+		"d": {
 			"supports": {
 				"exampleDeviceType-actions-v1": true
 			}
@@ -392,7 +390,7 @@ Lancez la demande à l'aide de la commande d'API REST suivante :
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-Lorsque la commande est soumise, les terminaux `device0` et `device1` de type `exampleDeviceType` reçoivent le message MQTT suivant : 
+Lorsque la commande est soumise, les terminaux `device0` et `device1` de type `exampleDeviceType` reçoivent le message MQTT suivant :
 
 ```
 	Message entrant depuis le serveur :
@@ -416,12 +414,12 @@ Lorsque la commande est soumise, les terminaux `device0` et `device1` de type `e
 
 ```
 
-Chaque terminal exécute une action sur le message et installe le plug-in spécifié. Lorsque l'installation est terminée, les terminaux soumettent un message pour indiquer que l'action a abouti. 
+Chaque terminal exécute une action sur le message et installe le plug-in spécifié. Lorsque l'installation est terminée, les terminaux soumettent un message pour indiquer que l'action a abouti.
 
 ```
 	Message sortant depuis le terminal :
 
-Topic: iotdevice-1/response
+	Topic: iotdevice-1/response
 	{
 		"rc": 200,
 		"reqId": "d38faafc-53de-47a8-a940-e697552c3194"
@@ -429,7 +427,7 @@ Topic: iotdevice-1/response
 
 ```
 
-A ce stade, l'action de gestion des terminaux `installPlugin` est terminée. 
+A ce stade, l'action de gestion des terminaux `installPlugin` est terminée.
 
 ## Exemples d'API
 {: #api_examples}

@@ -17,7 +17,7 @@ copyright:
 前次更新：2016 年 9 月 9 日
 {: .last-updated}
 
-Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 開發的瀏覽器型開發環境。有了內容輔助、程式碼完成及錯誤檢查的協助，您就可以使用 JavaScript、HTML 及 CSS 進行開發。{{site.data.keyword.webide}} 幾乎使用任何語言，並且提供大部分[檔案類型（在新視窗中開啟鏈結）](https://hub.jazz.net/docs/overview/#dev_support){: new_window}的語法強調顯示。來源控制是透過 Git 或 Jazz SCM 所建置，而且您可以在本端部署程式碼來測試及除錯應用程式。
+Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 進行開發的瀏覽器型開發環境。有了內容輔助、程式碼完成及錯誤檢查的協助，您就可以使用 JavaScript、HTML 及 CSS 進行開發。{{site.data.keyword.webide}} 幾乎使用任何語言，並且提供大部分[檔案類型（在新視窗中開啟鏈結）](https://hub.jazz.net/docs/overview/#dev_support){: new_window}的語法強調顯示。來源控制是透過 Git 或 Jazz SCM 所建置，而且您可以在本端部署程式碼來測試及除錯應用程式。
 {:shortdesc}
 
 最好的是，{{site.data.keyword.webide}} 採用 Web 技術。您沒有要安裝的項目、要維護的項目，以及要調整的項目。您可以在具有網際網路連線的任何位置進行開發。
@@ -26,19 +26,6 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 開發�
 {: #editorsetup}
 
 {{site.data.keyword.webide}} 可進行自訂，以選擇色系、技術工具，以及符合開發需求的設定。若要檢視及修改設定，請從左邊的功能表中，按一下**設定**圖示 <img class="inline" src="./images/webide_settings_icon.png"  alt="「設定」圖示">。
-
-<!-- LH: I don't think we need to include the following table, so I'm commenting it out. When you're viewing the settings in the Web IDE, this information should be obvious -->
-
-<!--| Categories | Description  |
-|---|---|
-| Cloud Foundry  | Define a Cloud Foundry API and Manage URL  |
-| CSS Validation | Define the severities for CSS linting rules that you use to check your code  |
-| Editor Settings  | Configure editor-specific settings for key bindings, editor behavior, layout, and more  |
-| Editor Styles  | Configure color schemes for the languages that you use, or import a theme from another editors  |
-| Git  | Configure general settings for Git  |
-| Globalization | Define globalization settings for your code |
-| JavaScript Validation  | Define the severities for the JavaScript linting rules that you use to check your code  |
-| Plug-ins  | Install, disable, or remove plug-ins from the editor  | -->
 
 如果您經常需要在編輯時變更特定設定，則可以從編輯器右上角的**本端編輯器設定**圖示 <img class="inline" src="./images/webide_local_settings_icon.png"  alt="「本端編輯器設定」圖示"> 快速存取這些設定。
 
@@ -92,7 +79,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 開發�
 
 1. 若要部署應用程式，請從執行列中選取或[建立（在新視窗中開啟鏈結）](https://hub.jazz.net/tutorials/livesync/#launch_configuration){: new_window}啟動配置。
 1. 按一下部署圖示 <img class="inline" src="./images/webide_deploy_button.png"  alt="部署圖示">。使用您工作區的現行內容以及啟動配置中所定義的環境，即可部署您應用程式的實例。 
-2. 部署應用程式之後，即可使用執行列來停止、重新啟動或除錯應用程式、檢視日誌，以及其他作業。
+2. 部署應用程式之後，即可使用執行列來停止、重新啟動或除錯應用程式、檢視日誌，以及執行其他作業。
 ![執行列](images/webide_runbar.png)
 
 <!-- LH: I'm commenting out the following list because I think this information is obvious from the UI. I also updated the preceding sentence to mention a few things that you can do from the run bar.
@@ -108,7 +95,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 開發�
  ## 在 {{site.data.keyword.webide}} 外部編輯
 {: #editlocal}
 
-若要使用 {{site.data.keyword.webide}} 以外的編輯器，請設定 {{site.data.keyword.Bluemix_live}}，直接在任何工具中使用專案檔。{{site.data.keyword.Bluemix_live_notm}} 是一種指令行應用程式，可同步化本端檔案系統中的變更與 {{site.data.keyword.jazzhub}} 中的雲端工作區。 
+若要使用 {{site.data.keyword.webide}} 以外的編輯器，請設定 {{site.data.keyword.Bluemix_live}}，以便直接在任何工具中使用專案檔。{{site.data.keyword.Bluemix_live_notm}} 是一種指令行應用程式，可同步化本端檔案系統中的變更與 {{site.data.keyword.jazzhub}} 中的雲端工作區。 
 
 ### 開始之前 
 
@@ -125,7 +112,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是一種您可以針對 Web 開發�
 	```
 	{: pre}
 
-3. 系統提示您時，請輸入 IBMid 及密碼。
+3. 系統提示您時，請輸入 IBM ID 及密碼。
 4. 檢視 {{site.data.keyword.Bluemix_notm}} 專案清單： 
 
 	```

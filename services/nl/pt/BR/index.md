@@ -89,7 +89,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.weather_short}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.IntegrationTestingshort}}	|Sim		|Sim		|Não|
 |{{site.data.keyword.iot_short}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.keymanagementserviceshort}}	|Não		|Sim		|Não|
+|{{site.data.keyword.keymanagementserviceshort}}	|Sim		|Sim		|Não|
 |{{site.data.keyword.languagetranslationshort}}	|Sim		|Sim		|Sim|
 |{{site.data.keyword.messagehub}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.messageresonanceshort}}	|Sim		|Sim		|Não|

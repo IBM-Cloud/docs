@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-27"
  
 
 ---
@@ -19,8 +19,6 @@ copyright:
 # Creating and invoking {{site.data.keyword.openwhisk_short}} actions
 {: #openwhisk_actions}
 
-Last updated: 27 September 2016
-{: .last-updated}
 
 Actions are stateless code snippets that run on the {{site.data.keyword.openwhisk}} platform. An action can be a JavaScript function, a Swift function, or a custom executable program packaged in a Docker container. For example, an action can be used to detect the faces in an image, aggregate a set of API calls, or post a Tweet.
 {:shortdesc}
@@ -159,10 +157,32 @@ Parameters can be passed to the action when it is invoked.
   wsk action update hello hello.js
   ```
   {: pre}
+
+3.  Parameters can be provided explicitly on the command-line, or by supplying a file containing the desired parameters
+
+  To pass parameters directly through the command-line, supply a key/value pair to the `--param` flag:
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
+
+  In order to use a file containing parameter content, create a file containing the parameters in JSON format. The
+  filename must then be passed to the `param-file` flag:
+
+  Example parameter file called parameters.json:
+  ```
+  {
+      "name": "Bernie",
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {
       "payload": "Hello, Bernie from Vermont"
@@ -170,7 +190,7 @@ Parameters can be passed to the action when it is invoked.
   ```
   {: screen}
 
-  Notice the use of the `--param` option to specify a parameter name and value, and the `--result` option to display only the invocation result.
+  Notice the use of the `--result` option to display only the invocation result.
 
 ### Setting default parameters
 {: #openwhisk_binding_actions}
@@ -179,10 +199,28 @@ Actions can be invoked with multiple named parameters. Recall that the `hello` a
 
 Rather than pass all the parameters to an action every time, you can bind certain parameters. The following example binds the *place* parameter so that the action defaults to the place "Vermont":
  
-1. Update the action by using the `--param` option to bind parameter values.
+1. Update the action by using the `--param` option to bind parameter values, or by passing a file that contains the parameters to `--param-file`
+
+  To specify default parameters explicitly on the command-line, provide a key/value pair to the `param` flag:
 
   ```
   wsk action update hello --param place Vermont
+  ```
+  {: pre}
+
+  Passing parameters from a file requires the creation of a file containing the desired content in JSON format.
+  The filename must then be passed to the `-param-file` flag:
+
+  Example parameter file called parameters.json:
+  ```
+  {
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action update hello --param-file parameters.json
   ```
   {: pre}
 
@@ -203,10 +241,30 @@ Rather than pass all the parameters to an action every time, you can bind certai
 
 3. Invoke the action, passing both `name` and `place` values. The latter overwrites the value that is bound to the action.
 
+  Using the `--param` flag:
+
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
+  Using the `--param-file` flag:
+
+  File parameters.json:
+  ```
+  {
+    "name": "Bernie",
+    "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -234,7 +292,7 @@ JavaScript functions that run asynchronously may need to return the activation r
 
   Notice that the `main` function returns a Promise, which indicates that the activation hasn't completed yet, but is expected to in the future.
 
-  The `setTimeout()` JavaScript function in this case waits for twenty seconds before calling the callback function.  This represents the asynchronous code and goes inside the Promise's callback function.
+  The `setTimeout()` JavaScript function in this case waits for two seconds before calling the callback function.  This represents the asynchronous code and goes inside the Promise's callback function.
 
   The Promise's callback takes two arguments, resolve and reject, which are both functions.  The call to `resolve()` fulfills the Promise and indicates that the activation has completed normally.
 
@@ -342,8 +400,85 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   }
   ```
   {: screen}
-  
-### Creating action sequences
+
+### Packaging an action as a Node.js module
+
+As an alternative to writing all your action code in a single JavaScript source file, you can write an action as a `npm` package. Consider as an example a directory with the following files:
+
+First, `package.json`:
+
+```
+{
+  "name": "my-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies" : {
+    "left-pad" : "1.1.3"
+  }
+}
+```
+{: codeblock}
+
+Then, `index.js`:
+
+```
+function myAction(args) {
+    const leftPad = require("left-pad")
+    const lines = args.lines || [];
+    return { padded: lines.map(l => leftPad(l, 30, ".")) }
+}
+
+exports.main = myAction;
+```
+{: codeblock}
+
+Note that the action is exposed through `exports.main`; the action handler itself can have any name, as long as it conforms to the usual signature of accepting an object and returning an object (or a `Promise` of an object).
+
+To create an OpenWhisk action from this package:
+
+1. Install first all dependencies locally
+
+  ```
+  npm install
+  ```
+  {: pre}
+
+2. Create a `.zip` archive containing all files (including all dependencies):
+
+  ```
+  zip -r action.zip *
+  ```
+  {: pre}
+
+3. Create the action:
+
+  ```
+  wsk action create packageAction --kind nodejs:6 action.zip
+  ```
+  {: pre}
+
+  Note that when creating an action from a `.zip` archive using the CLI tool, you must explicitly provide a value for the `--kind` flag.
+
+4. You can invoke the action like any other:
+
+  ```
+  wsk action invoke --blocking --result packageAction --param lines "[\"and now\", \"for something completely\", \"different\" ]"
+  ```
+  {: pre}
+  ```
+  {
+      "padded": [
+          ".......................and now",
+          "......for something completely",
+          ".....................different"
+      ]
+  }
+  ```
+  {: screen}
+
+Finally, note that while most `npm` packages install JavaScript sources on `npm install`, some also install and compile binary artifacts. The archive file upload currently does not support binary dependencies but rather only JavaScript dependencies. Action invocations may fail if the archive includes binary dependencies.
+
+## Creating action sequences
 {: #openwhisk_create_action_sequence}
 
 You can create an action that chains together a sequence of actions.
@@ -509,6 +644,76 @@ wsk action invoke --blocking --result helloSwift --param name World
 **Attention:** Swift actions run in a Linux environment. Swift on Linux is still in
 development, and {{site.data.keyword.openwhisk_short}} usually uses the latest available release, which is not necessarily stable. In addition, the version of Swift that is used with {{site.data.keyword.openwhisk_short}} might be inconsistent with versions of Swift from stable releases of XCode on MacOS.
 
+## Creating Java actions
+{: #openwhisk_actions_java}
+
+The process of creating Java actions is similar to that of JavaScript and Swift actions. The following sections guide you through creating and invoking a single Java action, and adding parameters to that action.
+
+In order to compile, test and archive Java files, you must have a [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installed locally.
+
+### Creating and invoking an action
+{: #openwhisk_actions_java_invoke}
+
+A Java action is a Java program with a method called `main` that has the exact signature as follows:
+```
+public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
+```
+{: codeblock}
+
+For example, create a Java file called `Hello.java` with the following content:
+
+```
+import com.google.gson.JsonObject;
+public class Hello {
+    public static JsonObject main(JsonObject args) {
+        String name = "stranger";
+        if (args.has("name"))
+            name = args.getAsJsonPrimitive("name").getAsString();
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+    }
+}
+```
+{: codeblock}
+
+Then, compile `Hello.java` into a JAR file `hello.jar` as follows:
+```
+javac Hello.java
+jar cvf hello.jar Hello.class
+```
+{: pre}
+
+**Note:** [google-gson](https://github.com/google/gson) must exist in your Java CLASSPATH when compiling the Java file.
+
+You can create a OpenWhisk action called `helloJava` from this JAR file as
+follows:
+
+```
+wsk action create helloJava hello.jar
+```
+{: pre}
+
+When you use the command line and a `.jar` source file, you do not need to
+specify that you are creating a Java action;
+the tool determines that from the file extension.
+
+Action invocation is the same for Java actions as it is for Swift and JavaScript actions:
+
+```
+wsk action invoke --blocking --result helloJava --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
+
+**Note:** If the JAR file has more than one class with a main method matching required signature, the CLI tool uses the first one reported by `jar -tf`.
+
 
 ## Creating Docker actions
 {: #openwhisk_actions_docker}
@@ -615,10 +820,10 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   ```
   {: screen}
   
-  To update the Docker action, run buildAndPush.sh to refresh the image on Docker Hub, this will allow the next time the system pulls your Docker image to run the new code for your action. 
-  If there are no warm containers any new invocations will use the new Docker image. 
-  **Note:** If there is a warm container using a previous version of your Docker image, any new invocations will continue to use this image until you run `wsk action update` on the action. The action update forces the system to pull the Docker image again.
-  
+  To update the Docker action, run buildAndPush.sh to upload the latest image to Docker Hub. This will allow the system to pull your new Docker image the next time it runs the code for your action.
+  If there are no warm containers any new invocations will use the new Docker image.
+  However, if there is a warm container using a previous version of your Docker image, any new invocations will continue to use that image unless you run wsk action update. This will indicate to the system that for new invocations it should execute a docker pull to get your new Docker image.
+ 
   ```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```

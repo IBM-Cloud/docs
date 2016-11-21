@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-31"
 ---
 
 {:new_window: target="\_blank"}
@@ -10,8 +10,6 @@ copyright:
 
 # About {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
-*Last updated: 19 September 2016*
-{: .last-updated}
 
 {{site.data.keyword.iotelectronics_full}} is a fully integrated IoT production instance that lets your apps communicate with and consume data that is collected by your connected appliances, sensors, and gateways.
 {:shortdesc}
@@ -30,7 +28,7 @@ Quickly explore the features of the {{site.data.keyword.iotelectronics}} solutio
 Create simulated appliances and connect them to the platform to see streaming live data. Use a web-based app to simulate how an appliance receives commands and performs operations. Mimic failures to generate notices and alerts. For the purposes of demonstration, washers are used as the simulated appliance within the {{site.data.keyword.iotelectronics}} starter. The appliance you choose to connect could be any type of smart electronics device.  
 
 ### Try a sample consumer mobile app
-Use an iOS phone to see how an appliance owner can interact with the appliance. Send commands to the appliance and receive updates from the appliance by using the platform and {{site.data.keyword.Bluemix_notm}}. Mimic failure events and view the results in the mobile app.
+Use your iOS or Android mobile device to see how an appliance owner can interact with the appliance. Send commands to the appliance and receive updates from the appliance by using the platform and {{site.data.keyword.Bluemix_notm}}. Mimic failure events and view the results in the mobile app.
 
 ### Connect your own electronic appliances
 Connect your own appliances securely to the cloud and start customizing your own apps. A set of verified examples and recipes is available that you can modify and use for proofs of concept, testing, and experimentation.
@@ -53,7 +51,7 @@ The {{site.data.keyword.iotelectronics}} starter uses the {{site.data.keyword.io
 
 **{{site.data.keyword.sdk4nodefull}}** enables you to develop, deploy, and scale server-side JavaScript&reg; apps and provides enhanced performance, security, and serviceability.
 
-**Sample mobile app** lets you view the status of and communicate with a simulated appliance by using your iOS phone. Find out how to get the mobile app in [Using the Mobile app](iotelectronics_config_mobile.html).
+**Sample mobile app** lets you view the status of and communicate with a simulated appliance by using your mobile device such as a smart phone or tablet. Find out how to get the mobile app in [Using the Mobile app](iotelectronics_config_mobile.html).
 
 # Related Links
 {: #rellinks}

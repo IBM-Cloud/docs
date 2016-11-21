@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # Insights for Weather 시작하기
 {: #insights_weather_overview}
-
-*마지막 업데이트 날짜: 2016년 5월 19일*
 
 {{site.data.keyword.weatherfull}}를 사용하여 TWC(The Weather Company)의 기상 데이터를
 {{site.data.keyword.Bluemix}} 애플리케이션에 통합할 수 있습니다.
@@ -82,7 +81,7 @@ copyright:
 
 ## 일반
 {: #general}
-* [애플리케이션에 서비스 추가](../reqnsi.html){: new_window}
+* [애플리케이션에 서비스 추가](/docs/services/reqnsi.html){: new_window}
 * [엔드-투-엔드 개발](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} 가격 책정 시트](https://console.{DomainName}/pricing/){: new_window}
 * [{{site.data.keyword.Bluemix_notm}} 전제조건](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

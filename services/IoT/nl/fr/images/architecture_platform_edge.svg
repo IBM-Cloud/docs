@@ -776,7 +776,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3155765"
-     inkscape:cx="429.6939"
+     inkscape:cx="416.39175"
      inkscape:cy="111.03025"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -1128,7 +1128,7 @@
            y="-39.357193" /></flowRegion><flowPara
          id="flowPara7065" /></flowRoot>    <text
        sodipodi:linespacing="125%"
-       y="647.23334"
+       y="649.23334"
        x="141.24741"
        font-size="11"
        id="text66184"
@@ -1590,19 +1590,15 @@
        style="opacity:1;fill:none;stroke:#000000;stroke-width:1.50000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutM-3-0-1-6-5)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000191px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
-       x="71.425186"
-       y="537.54181"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.00000119px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
+       x="-16.57482"
+       y="541.54181"
        id="text18189-1-0-1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3621"
-         x="71.425179"
-         y="537.54181">Passerelles sur lesquelles Edge Analytics est</tspan><tspan
+         id="tspan3621">Passerelles sur lesquelles Edge Analytics est</tspan><tspan
          sodipodi:role="line"
-         id="tspan3623"
-         x="72.950577"
-         y="551.29181">activé avec Edge Analytics Agent (EAA). </tspan></text>
+         id="tspan3623">activé avec Edge Analytics Agent (EAA). </tspan></text>
     <rect
        ry="0"
        rx="0"

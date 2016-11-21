@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-10-27"
  
 
 ---
@@ -15,40 +15,60 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-<!-- draft - staging only -->
-
-#SoftLayer 및 {{site.data.keyword.Bluemix_notm}} 청구 계정 연결
+# {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정 업그레이드 및 통합
 {: #softlayerlink}
-*마지막 업데이트 날짜: 2016년 8월 15일*
-{: .last-updated}
 
-이제 SoftLayer 및 {{site.data.keyword.Bluemix_notm}} 청구 계정을 연결할 수 있습니다. 계정을 연결하면, SoftLayer 및 {{site.data.keyword.Bluemix_notm}} 리소스 모두가 SoftLayer를 통해 청구됩니다. 기존 계정을 보유하는 경우, {{site.data.keyword.Bluemix_notm}}의 SoftLayer를 통한 청구는 계정이 연결된 이후 시작되는 새 청구 주기에 적용됩니다.
+{{site.data.keyword.Bluemix_notm}} 평가판 계정을 보유하고 있으며 인프라 대시보드에 액세스하려는 경우 {{site.data.keyword.Bluemix_notm}} 종량과금제 계정으로 업그레이드해야 합니다. 
+
+계정을 연결하여 기존 {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정을 통합할 수 있습니다. 계정을 연결하면, {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 리소스 모두가 {{site.data.keyword.Bluemix_notm}}를 통해 청구됩니다.
 {:shortdesc}
 
-**중요사항:** {{site.data.keyword.Bluemix_notm}}의 모든 연결된 계정은 종량과금제 계정이어야 합니다. 종량과금제 계정을 새로 작성하거나 기존 종량과금제 계정을 연결할 수 있습니다. 또는 기존 시험판 계정을 연결할 수 있지만, 이는 종량과금제 계정으로 업그레이드됩니다.   
+## {{site.data.keyword.Bluemix_notm}} 종량과금제 계정으로 업그레이드
+{: #upgradetopayg}
 
-계정이 연결된 후에는 계정 간에 쉽게 전환할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 {{site.data.keyword.Bluemix_notm}} 리소스의 사용량을 계속 모니터할 수 있습니다. 그러나 이러한 리소스에 대한 청구는 이제 SoftLayer 송장에 나타납니다. 
+평가판 계정을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하는 경우 {{site.data.keyword.Bluemix_notm}} 인프라 대시보드에 액세스할 수 없습니다. 앱에서 인프라 리소스를 사용하려는 경우 종량과금제 계정으로 업그레이드해야 합니다. 
 
-계정 청구가 연결되지만, 로그인 ID가 SoftLayer 계정 인증 방식에 따라 다릅니다.
-* SoftLayer 계정에 있는 사용자 중 인증에 IBM ID를 사용하지 않는 사용자의 경우 SoftLayer 제품과 서비스에는 계속해서 SoftLayer ID를 사용하고 {{site.data.keyword.Bluemix_notm}} 제품 및 서비스에는 IBM ID를 사용하십시오. 
-* SoftLayer 계정에 있는 사용자 중 인증에 IBM ID를 사용하는 사용자는 IBM ID를 사용하여 SoftLayer 계정과 {{site.data.keyword.Bluemix_notm}} 계정에 액세스하십시오. 
+평가판 계정을 {{site.data.keyword.Bluemix_notm}} 종량과금제 계정으로 업그레이드하려면 다음 단계를 따르십시오. 
 
-**주의:** 일단 계정이 연결되면 연결을 해제할 수 없습니다.   
+ 1. **계정** &gt; **비용 청구**를 클릭하십시오.
+ 2. 그런 다음 **신용카드 추가**를 클릭하십시오. 
+ 3. 필수 비용 청구 세부사항을 입력하십시오.  
+ 4. 종량과금제 계정에 대한 이용약관을 읽은 후 동의하십시오.  
+ 5. 완료하면 **업그레이드**를 클릭하십시오.  
+ 
+종량과금제 계정으로 업그레이드한 후 **인프라** 옵션이 {{site.data.keyword.Bluemix_notm}} **카탈로그**에 표시됩니다. 무료 사용량을 초과하여 사용한 경우 매달 {{site.data.keyword.Bluemix_notm}} 송장을 받게 됩니다. 송장은 미국 달러(USD)로 청구되며 리소스 비용에 대한 세부사항이 기재되어 있습니다.  
+
+## {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 계정 통합
+{: #unifyingaccounts}
+
+{{site.data.keyword.Bluemix_notm}} 및 SoftLayer 계정을 통합하여 결합된 리소스를 이용할 수 있습니다. {{site.data.keyword.Bluemix_notm}}와 Softlayer 계정을 연결한 경우 단일 {{site.data.keyword.Bluemix_notm}} 송장을 받게 됩니다. 기존 {{site.data.keyword.Bluemix_notm}} 계정을 보유하는 경우, {{site.data.keyword.Bluemix_notm}}를 통한 SoftLayer 리소스의 청구는 계정이 연결된 이후 시작되는 새 청구 주기에 적용됩니다.
+
+
+**중요사항:** {{site.data.keyword.Bluemix_notm}}의 모든 연결된 계정은 종량과금제 계정이어야 합니다. 종량과금제 계정을 새로 작성하거나 기존 종량과금제 계정을 연결할 수 있습니다. 또는 기존 시험판 계정을 연결할 수 있지만, 이는 종량과금제 계정으로 업그레이드됩니다. 구독 {{site.data.keyword.Bluemix_notm}} 계정을 연결할 수 없습니다.   
+
+계정이 연결된 후 다음을 수행하십시오. 
+
+* IBM ID 신임 정보를 사용하여 SoftLayer 계정과 {{site.data.keyword.Bluemix_notm}} 계정에 액세스하십시오. 
+* 기존 SoftLayer 할인은 {{site.data.keyword.Bluemix_notm}} 비용에 적용됩니다.  
+* 미국 달러(USD)로 된 송장을 받게 됩니다. 
+* {{site.data.keyword.BluSoftlayer}} 사용자 인터페이스에서 {{site.data.keyword.Bluemix_notm}} 리소스의 사용량을 모니터링할 수 있습니다.  
+
+**주의:** 일단 계정이 연결되면 연결을 해제할 수 없습니다.  
 
 SoftLayer 계정을 보유 중이며 {{site.data.keyword.Bluemix_notm}} 계정을 연결하려면 다음 단계를 완료하십시오. 
- 1. {{site.data.keyword.slportal}}에서 **{{site.data.keyword.Bluemix_notm}} 계정 연결**을 클릭하십시오.  
+
+ 1. {{site.data.keyword.slportal}}에서 **{{site.data.keyword.Bluemix_notm}} 계정 연결**을 클릭하십시오. 
  2. SoftLayer 및 {{site.data.keyword.Bluemix_notm}} 계정의 연결과 관련된 이용 약관을 읽고 이에 동의하십시오. 
  3. 요청이 있으면 {{site.data.keyword.Bluemix_notm}} 계정과 연관된 이메일 주소를 입력하십시오. {{site.data.keyword.Bluemix_notm}} 계정이 없으면, 사용하고자 하는 이메일 주소를 입력한 후에 지시사항에 따라 {{site.data.keyword.Bluemix_notm}}에 방문하여 계정을 작성하십시오. 
 
 계정을 연결하려면 SoftLayer 계정의 마스터 사용자여야 합니다. 
 
-계정이 연결되면, SoftLayer 글로벌 헤더에서 **{{site.data.keyword.Bluemix_notm}}로 이동**을 사용할 수 있습니다. 이 링크를 클릭하면 {{site.data.keyword.Bluemix_notm}} 로그인 페이지로 이동됩니다. 또한 {{site.data.keyword.Bluemix_notm}} 헤더에서 이제 **SoftLayer**를 사용할 수 있습니다. 링크를 클릭하면 새 창에서 {{site.data.keyword.slportal}}의 홈 페이지로 이동됩니다. 
-
+계정이 연결되면, SoftLayer 글로벌 헤더에서 **{{site.data.keyword.Bluemix_notm}}로 이동** 링크를 사용할 수 있습니다. 이 링크를 클릭하면 {{site.data.keyword.Bluemix_notm}} 로그인 페이지로 이동됩니다. 또한 {{site.data.keyword.Bluemix_notm}} 헤더에서 이제 **SoftLayer** 링크를 사용할 수 있습니다. 링크를 클릭하면 새 창에서 {{site.data.keyword.slportal}}의 홈 페이지로 이동됩니다. 
 
 ## 계정 연결 시의 {{site.data.keyword.Bluemix_notm}} 사용에 대한 크레딧
 {: #slcredit}
 
-{{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정을 연결하면 {{site.data.keyword.Bluemix_notm}} 사용에 대해 $200.00 크레딧을 받습니다. 크레딧은 계정 연결 이후 30일 내에 사용해야 합니다. 
+SoftLayer 계정에서 {{site.data.keyword.Bluemix_notm}} 계정을 연결하는 경우 {{site.data.keyword.Bluemix_notm}} 내에서만 사용할 수 있는 $200.00의 크레딧을 받게 됩니다. 크레딧은 계정 연결 이후 30일 내에 사용해야 합니다. 
 
 크레딧 및 만기 날짜를 보는 방법에 대한 정보는 [크레딧 보기](https://console.ng.bluemix.net/docs/pricing/index.html#credits)를 참조하십시오.
 
@@ -62,16 +82,40 @@ SoftLayer 계정을 보유 중이며 {{site.data.keyword.Bluemix_notm}} 계정�
 
 {{site.data.keyword.Bluemix_notm}} 계정에 팀 구성원을 초대하려면 SoftLayer 계정의 마스터 사용자이어야 합니다. 
 
-{{site.data.keyword.Bluemix_notm}}를 통해 팀 구성원을 초대하려면 다음을 수행하십시오. 
- 1. **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg) > **계정** > **팀 구성원 초대**로 이동하십시오. 
- 2. **추가**를 클릭하여 SoftLayer 계정으로 인증하고 SoftLayer 계정에서 팀 구성원의 목록을 보십시오. 
- 3. 초대할 팀 구성원을 선택하고 **전송**을 클릭하십시오. 
+{{site.data.keyword.Bluemix_notm}}를 통해 팀 구성원을 초대하려면 다음 단계를 완료하십시오. 
 
-추가적인 팀 구성원이 Softlayer 계정에 추가될 수 있도록 이 조작을 반복해서 수행할 수 있습니다. 
+ 1. **계정** &gt; **팀 구성원 초대**를 클릭하십시오.
+ 2. **추가**를 클릭하여 SoftLayer 계정으로 인증하고 {{site.data.keyword.BluSoftlayer}} 계정에서 팀 구성원의 목록을 보십시오. 
+ 3. 초대할 팀 구성원을 선택하고 **전송**을 클릭하십시오. 
  
-팀 구성원은 **조직 가입** 링크가 포함된 이메일을 받습니다. 구성원에게 IBM ID가 없으면 구성원이 등록 페이지로 경로 재지정됩니다. 그리고 구성원은 일부 기본 정보를 입력하고 {{site.data.keyword.Bluemix_notm}} 계정을 작성할 수 있습니다. 
+팀 구성원은 **조직 가입** 링크가 포함된 이메일을 받습니다. 팀 구성원에게 IBM ID가 없으면 팀 구성원이 등록 페이지로 경로 재지정됩니다. 그리고 팀 구성원은 일부 기본 정보를 입력하고 {{site.data.keyword.Bluemix_notm}} 계정을 작성할 수 있습니다. 
 
 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 통한 팀 구성원 초대에 대한 자세한 정보는 [팀 구성원 초대](https://console.ng.bluemix.net/docs/admin/users_roles.html#inviteteammembers)를 참조하십시오. 
+
+## IBM ID로 전환
+{: #ibmid_switch}
+
+이제 SoftLayer의 인증은 {{site.data.keyword.Bluemix_notm}}에 대한 단일 로그인을 제공하는 IBM ID를 사용합니다. 기존 SoftLayer 계정이 있는 경우 IBM ID로 전환할 수 있습니다. 마이그레이션 마법사가 이 전환을 통해 사용자를 안내합니다.
+{:shortdesc}
+
+IBM ID로의 전환을 시작한 후 프로세스를 완료하지 않은 경우에는 이를 취소할 수 있습니다. 그러나 다음 번에 로그인할 때 전환하라는 메시지가 계속해서 표시될 것입니다. 
+
+기존 SoftLayer 사용자 이름을 IBM ID로 전환하는 작업을 시작하려면 다음 단계를 완료하십시오. 
+
+ 1. {{site.data.keyword.slportal}}에서 사용자 프로파일 편집으로 이동한 후 **IBM ID로 전환**을 클릭하십시오.
+ 2. 마이그레이션 마법사 프롬프트를 따라 IBM ID를 작성하십시오. IBM ID를 작성하면 이메일 주소인 ID를 변경할 수 없습니다. 사용자의 프로파일과 연관된 이메일을 업데이트할 수 있으나 기본적으로 이 값은 IBM ID에 대해 정의한 값으로 설정됩니다. 마법사를 완료하면 이메일이 전송됩니다. 
+ 3. 이메일을 수신하면 링크를 따르거나 URL을 브라우저로 복사하고 등록 코드를 입력하십시오. 코드는 7일간 유효하며 한 번만 사용 가능합니다. 사용한 후에는 다시 사용할 수 없습니다. IBM ID를 SoftLayer 사용자 링크로 설정한 후 IBM ID로만 계정에 로그인할 수 있습니다. SoftLayer 사용자 이름 및 비밀번호를 입력하는 대신에 로그인 대화 상자에서 **IBM ID로 로그인** 단추를 사용해야 합니다. 
+ 
+신규 고객인 경우 주문을 완료할 때 기존 IBM ID 계정에 대한 이메일 주소 또는 새 IBM ID 계정 생성을 요청 받습니다.  
+
+### 여러 SoftLayer 계정을 하나의 IBM ID로 맵핑
+{: #map_multiple_accounts}
+
+주문을 설정할 때 기존 IBM ID 이메일 주소를 사용하여 하나의 IBM ID를 여러 SoftLayer 계정과 연관시킬 수 있습니다. 각 계정에 대한 한 명의 SoftLayer 사용자만 단일 IBM ID로 맵핑될 수 있습니다. IBM ID는 각 SoftLayer 계정 내에서 고유해야 합니다. 그러나 여러 SoftLayer 계정에 대한 액세스 권한이 있는 한 명의 사용자가 여러 SoftLayer 계정에 액세스할 수 있는 하나의 IBM ID를 사용할 수 있습니다. 
+
+예를 들어, IBM ID는 계정 A 및 B의 마스터 사용자 및 계정 C 및 계정 D의 추가 사용자로 맵핑할 수 있습니다. 해당 IBM ID로 맵핑되는 계정 중 하나가 기본 계정이 됩니다. 일반적으로 기본 계정은 IBM ID로 처음 맵핑되는 계정입니다. 그러나 고객 포털의 계정 전환 기능을 통해 계정(기본 계정)을 전환할 수 있습니다. 
+
+2단계 인증이 사용된 여러 계정에 대한 IBM ID 액세스 권한이 있는 사용자의 경우 계정 로그인 및 계정 전환 중에 적절한 2단계 인증 확인 코드(계좌당)가 필요합니다. 
 
 ## SoftLayer 자산으로 {{site.data.keyword.Bluemix_notm}} 서비스 사용
 {: #bluemix_services}
@@ -86,9 +130,9 @@ SoftLayer 자산으로 API 기반 퍼블릭 {{site.data.keyword.Bluemix_notm}} �
 3. 서비스 신임 정보를 복사하고 이를 사용자 애플리케이션에 추가하여 기존 코드로 실행할 서비스를 설정하십시오. 
 4. 앱을 업데이트한 후에 SoftLayer 인프라에 새 버전을 배치하십시오. 
 
-SoftLayer에서 사용자 앱의 Watson API를 호출하여 이를 보다 개인화함으로써 *Insights 및 Cognitive* 지식을 얻을 수 있습니다. 또는 *데이터 및 분석* 서비스를 사용하여 앱에 대한 고성능 분석을 활용할 수 있습니다. 또는 {{site.data.keyword.Bluemix_notm}}에 관리를 맡길 수 있는 DaaS(database-as-a-service)를 선택하십시오. 
+SoftLayer에서 사용자 앱의 Watson API를 호출하여 이를 보다 개인화함으로써 *Insights 및 코그너티브* 지식을 얻을 수 있습니다. 또는 *데이터 및 분석* 서비스를 사용하여 앱에 대한 고성능 분석을 활용할 수 있습니다. 또는 {{site.data.keyword.Bluemix_notm}}에 관리를 맡길 수 있는 DaaS(Database-as-a-Service)를 선택하십시오. 
 
-{{site.data.keyword.activedeployshort}} 및 {{site.data.keyword.deliverypipeline}} 등의 서비스와 함께 컨테이너를 사용하여 애플리케이션 개발을 현대화하십시오. 그리고 {{site.data.keyword.vpn_short}} 서비스를 사용하여 SoftLayer로 다시 터널링함으로써 사설 네트워크의 컨테이너를 SoftLayer 사설 네트워크에 연결할 수 있습니다. 컴퓨팅 리소스 및 서비스에 대한 모든 사용 비용은 SoftLayer 청구에 반영됩니다.  
+{{site.data.keyword.activedeployshort}} 및 {{site.data.keyword.deliverypipeline}} 등의 서비스와 함께 컨테이너를 사용하여 애플리케이션 개발을 현대화하십시오. 그리고 {{site.data.keyword.vpn_short}} 서비스를 사용하여 SoftLayer로 다시 터널링함으로써 사설 네트워크의 컨테이너를 SoftLayer 사설 네트워크에 연결할 수 있습니다. 컴퓨팅 리소스 및 서비스에 대한 모든 사용 비용은 {{site.data.keyword.Bluemix_notm}} 청구서에 반영됩니다.  
 
 ### API 기반 {{site.data.keyword.Bluemix_notm}} 서비스
 일부 {{site.data.keyword.Bluemix_notm}} 서비스는 SoftLayer에서 사용될 수 없습니다. 
@@ -135,26 +179,25 @@ SoftLayer에서 사용자 앱의 Watson API를 호출하여 이를 보다 개인
 
 **참고:** 이 서비스의 일부 플랜은 사용 가능하지 않습니다. 종량과금제 계정에 사용되는 플랜만 연결된 계정에서 사용될 수 있습니다. 그러나 별도로 청구되는 별도의 {{site.data.keyword.Bluemix_notm}} 계정이 있으면 이러한 서비스에 대해 임의의 플랜을 사용할 수 있습니다. 
 
-
 ## 계정 연결 시의 {{site.data.keyword.Bluemix_notm}} 사용에 대한 청구
 {: #bill_usage}
 
-{{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정을 연결한 이후, 다음 청구 주기는 단일 SoftLayer 청구로 부과됩니다.
+{{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정을 연결한 이후, 다음 청구 주기는 단일 {{site.data.keyword.Bluemix_notm}} 청구로 부과됩니다.
 {:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} 사용 주기가 달력 월 기반이므로, 사용자 계정은 비용 계약에 대해 설정된 청구일에 매월 청구됩니다. SoftLayer에서 사용 주기는 SoftLayer가 시작된 시점에서 시작됩니다. 따라서 사용자에게는 매월 SoftLayer 계정에 서명한 날과 동일한 날에 청구됩니다.  
 
-계정이 연결되면, {{site.data.keyword.Bluemix_notm}} 사용량이 계속해서 당월 주기에 대해 측정되며 사용자는 {{site.data.keyword.Bluemix_notm}} 송장에서 해당 사용량에 대해 청구됩니다. 다음 달 초에서 시작하여, {{site.data.keyword.Bluemix_notm}} 비용은 SoftLayer 송장에서 부과됩니다. 
+계정이 연결되면, {{site.data.keyword.Bluemix_notm}} 사용량이 계속해서 당월 주기에 대해 측정되며 사용자는 {{site.data.keyword.Bluemix_notm}} 송장에서 해당 사용량에 대해 청구됩니다. 다음 달 초에 시작하여, {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 비용은 {{site.data.keyword.Bluemix_notm}} 송장에서 통합됩니다. 
 
-예를 들어, 4월 16일에 계정을 연결한 경우에는 4월 사용량에 대해 Bluemix 송장을 받습니다. 5월 사용량은 SoftLayer 계정을 통해 청구됩니다. 
+예를 들어, 4월 16일에 계정을 연결한 경우에는 4월 사용량에 대해 Bluemix 송장을 받습니다. 연결된 계정에 따라 SoftLayer 사용량에 대해 별도로 청구될 수 있습니다. SoftLayer 및 {{site.data.keyword.Bluemix_notm}}의 사용량이 {{site.data.keyword.Bluemix_notm}} 계정을 통해 청구될 수 있습니다. 
 
 ![Bluemix 및 SoftLayer 계정 연결 요약](images/BluemixSoftLayerBill.svg)
 
-청구가 결합되면, SoftLayer 송장의 요약 송장에는 **{{site.data.keyword.Bluemix_notm}}** 섹션이 있습니다. 상세 청구 보기에서 {{site.data.keyword.Bluemix_notm}} 비용은 다른 서비스로서 나타나며 *"{{site.data.keyword.Bluemix_notm}} 플랜..."으로 시작됩니다. *.
+청구서가 연결된 후 {{site.data.keyword.Bluemix_notm}} 송장이 사용한 각 리소스에 대한 개별 비용을 다음 표제 아래에 표시합니다. 
+
+* **베어메탈 서버 및 첨부된 서비스**
+* **가상 서버 및 첨부된 서비스**
+* **첨부되지 않은 서비스**
 
 {{site.data.keyword.Bluemix_notm}} 사용량을 보는 방법에 대한 정보는 [사용량 세부사항 보기](https://console.ng.bluemix.net/docs/pricing/index.html#usage)를 참조하십시오. 
 
-
-# 관련 링크
-## 일반
-* [동영상: 단일 송장에 대한 SoftLayer 및 Bluemix 계정 연결](https://www.youtube.com/watch?v=Xb01idt2NiU&index=1&list=PLzpeuWUENMK2d3L5qCITo2GQEt-7r0oqm)

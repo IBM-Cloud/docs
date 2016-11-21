@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-05-09" 
 
 ---
 
@@ -16,9 +16,6 @@ copyright:
 {:screen: .screen}
 
 #{{site.data.keyword.Bluemix_notm}} でのアプリのホスティング
-
-*最終更新日: 2016 年 5 月 9 日*
-{: .last-updated}
 
 <!--The whole topic is staging only -->
 
@@ -88,7 +85,7 @@ copyright:
 
 クラウド・アプリケーション内で、バックエンドのデータまたはサービス (例えば、SoR) にアクセスすることが必要になる場合があります。{{site.data.keyword.Bluemix_notm}} では、Secure Gateway サービスを使用して、{{site.data.keyword.Bluemix_notm}} 組織とエンタープライズ・バックエンド・ネットワークの間にセキュア・トンネルを確立できます。このサービスによって、{{site.data.keyword.Bluemix_notm}} 上のアプリケーションがバックエンド・ネットワークのデータおよびサービスにアクセスできるようになります。詳細については、「[Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}」を参照してください。
 
-アプリケーションを Cloud Foundry アプリケーションとして {{site.data.keyword.Bluemix_notm}} にデプロイするには、{{site.data.keyword.Bluemix_notm}} カタログからランタイムを選択します。ランタイムには、スターター・アプリケーション Hello World が含まれていて、これを自分のアプリケーションに置き換えることができます。使用したいランタイムを提供するスターターが見つからない場合は、cf push コマンドで -b オプションを使用して、Cloud Foundry 互換のカスタム・ビルドパックを {{site.data.keyword.Bluemix_notm}} に持ち込むことができます。詳しくは、『[コミュニティー・ビルドパックの使用](../cfapps/byob.html)』を参照してください。
+アプリケーションを Cloud Foundry アプリケーションとして {{site.data.keyword.Bluemix_notm}} にデプロイするには、{{site.data.keyword.Bluemix_notm}} カタログからランタイムを選択します。ランタイムには、スターター・アプリケーション Hello World が含まれていて、これを自分のアプリケーションに置き換えることができます。使用したいランタイムを提供するスターターが見つからない場合は、cf push コマンドで -b オプションを使用して、Cloud Foundry 互換のカスタム・ビルドパックを {{site.data.keyword.Bluemix_notm}} に持ち込むことができます。詳しくは、『[コミュニティー・ビルドパックの使用](/docs/cfapps/byob.html)』を参照してください。
 
 {{site.data.keyword.Bluemix_notm}} が提供する以下のツールおよびサービスを使用できます。
 
@@ -96,7 +93,7 @@ copyright:
 
 | ツール	|  方法  |
 |:------|:--------|
-|Cloud Foundry コマンド・ライン・インターフェース (cf cli)	|ローカル・クライアントでコードを管理し、Cloud Foundry コマンド・ライン・インターフェースを使用してアプリケーションを手動で {{site.data.keyword.Bluemix_notm}} にプッシュします。詳しくは、『[アプリケーションのアップロード](../starters/upload_app.html)』を参照してください。|
+|Cloud Foundry コマンド・ライン・インターフェース (cf cli)	|ローカル・クライアントでコードを管理し、Cloud Foundry コマンド・ライン・インターフェースを使用してアプリケーションを手動で {{site.data.keyword.Bluemix_notm}} にプッシュします。詳しくは、『[アプリケーションのアップロード](/docs/starters/upload_app.html)』を参照してください。|
 |Eclipse	|Eclipse でコードを管理し、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリケーションをプッシュします。|
 |Git 統合	|GitHub でコードを管理し、Git を {{site.data.keyword.Bluemix_notm}} に統合します。他の開発者と共同作業することができます。コードの変更をコミットすると、アプリケーションは自動的に {{site.data.keyword.Bluemix_notm}} にデプロイされます。アプリケーションを手動でプッシュする必要はありません。|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|DevOps GitHub リポジトリーでコードを管理し、DevOps Delivery Pipeline を使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイします。|
@@ -133,7 +130,7 @@ copyright:
   domain: mybluemix.net
   instances: 1
   memory: 512M</code></pre>
-<p>このファイル内で使用できるサポートされるオプションについて詳しくは、『[アプリケーション・マニフェスト](../manageapps/depapps.html#appmanifest)』を参照してください。
+<p>このファイル内で使用できるサポートされるオプションについて詳しくは、『[アプリケーション・マニフェスト](/docs/manageapps/depapps.html#appmanifest)』を参照してください。
 
 </p></li></ol>
 </li>
@@ -156,7 +153,7 @@ copyright:
 
 * cf コマンド・ライン・インターフェースは、cf push コマンドが使用されると、すべてのファイルおよびディレクトリーを現行ディレクトリーから {{site.data.keyword.Bluemix_notm}} にコピーします。アプリケーション・ディレクトリーには必要なファイルだけを保管しておくようにしてください。
 * 組織のメモリーがアプリケーションのすべてのインスタンスにとって十分であることを確認してください。組織のメモリー割り当て量を表示するには、cf org org_name を使用します。
-* cf push について詳しくは、『[cf コマンド](../cli/reference/cfcommands/index.html)』を参照してください。
+* cf push について詳しくは、『[cf コマンド](/docs/cli/reference/cfcommands/index.html)』を参照してください。
 
 ##データのマイグレーションおよびサービスの使用
 {: #ht_service}
@@ -190,9 +187,9 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 ## 関連リンク
 {: #general}
 
-* [IBM Containers](../containers/container_index.html)
-* [Virtual Machines](../virtualmachines/vm_index.html)
-* [Delivery Pipeline 概説](../services/DeliveryPipeline/index.html)
-* [IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ](../manageapps/eclipsetools/eclipsetools.html)
+* [IBM Containers](/docs/containers/container_index.html)
+* [仮想マシン](/docs/virtualmachines/vm_index.html)
+* [Delivery Pipeline 概説](/docs/services/DeliveryPipeline/index.html)
+* [IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ](/docs/manageapps/eclipsetools/eclipsetools.html)
 * [The twelve-factor app](http://12factor.net/){:new_window}
 * [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}

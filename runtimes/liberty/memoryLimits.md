@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Memory limits and the Liberty buildpack
 {: #memory_limits}
-
-Last Updated: 10 June 2016
-{: .last-updated}
 
 A memory limit must be specified when you deploy an application with the Liberty buildpack.
 

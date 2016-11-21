@@ -2,19 +2,15 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-09"
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 
 # iOS アプリ用の Google 認証の使用可能化 (Swift SDK)
 {: #google-auth-ios}
 
-最終更新日: 2016 年 8 月 1 日
-{: .last-updated}
-
-Google Sign-In を使用して、{{site.data.keyword.amashort}} iOS Swift アプリのユーザーを認証します。新しくリリースされた {{site.data.keyword.amashort}} Swift SDK は、既存の Mobile Client Access Objective-C SDK によって提供される機能を増強します。
+Google Sign-In を使用して、{{site.data.keyword.amafull}} iOS Swift アプリのユーザーを認証します。新しくリリースされた {{site.data.keyword.amashort}} Swift SDK は、既存の Mobile Client Access Objective-C SDK によって提供される機能を増強します。
 
 **注:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、今年後半には廃止され、この新しい Swift SDK が後継になる予定です。
 
@@ -25,7 +21,7 @@ Google Sign-In を使用して、{{site.data.keyword.amashort}} iOS Swift アプ
 以下が必要です。
 
 * Xcode の iOS プロジェクト。{{site.data.keyword.amashort}} Client SDK が装備されている必要はありません。  
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
 
 
 
@@ -65,6 +61,7 @@ Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-
  ```
  #import <Google/SignIn.h>
  ```
+ {: codeblock}
 
  ブリッジング・ヘッダー・ファイルの更新について詳しくは、[Enable sign-in](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in) のステップ 1 を参照してください。
 
@@ -73,11 +70,9 @@ Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-
 
 これで iOS のクライアント ID を取得したので、{{site.data.keyword.Bluemix}} ダッシュボードで Google 認証を使用可能にすることができます。
 
-1. {{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。
+1. {{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。
 
-1. **「モバイル・オプション」**をクリックし、**「経路」** (*applicationRoute*) と **「アプリ GUID」** (*applicationGUID*) のメモを取ります。SDK を初期化する際に、これらの値が必要になります。
-
-1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードがロードされます。
+1. **「モバイル・オプション」**をクリックし、**「経路」** (*applicationRoute*) と **「アプリ GUID」/「TenantId」** (*tenantId*) のメモを取ります。SDK を初期化する際、および要求をバックエンド・アプリケーションに送信する際に、これらの値が必要になります。
 
 1. **「Google」**パネルで**「構成」**ボタンをクリックします。
 
@@ -95,7 +90,11 @@ Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-
 ```
 sudo gem install cocoapods
 ```
-詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。### CocoaPods を使用した {{site.data.keyword.amashort}} Client Swift SDK のインストール
+{: codeblock}
+
+詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。
+
+### CocoaPods を使用した {{site.data.keyword.amashort}} Client Swift SDK のインストール
 {: #facebook-auth-install-swift-cocoapods}
 
 1. iOS プロジェクト内に `Podfile` がない場合、`pod init` を実行してファイルを作成します。
@@ -106,6 +105,7 @@ sudo gem install cocoapods
  use_frameworks!
  pod 'BMSGoogleAuthentication'
  ```
+ {: codeblock}
  
  **注:** 既に {{site.data.keyword.amashort}} コア SDK をインストール済みの場合は、行 `pod 'BMSSecurity'` を削除できます。`BMSGoogleAuthentication` pod は、必要なすべてのフレームワークをインストールします。
 	
@@ -122,46 +122,43 @@ sudo gem install cocoapods
 ## {{site.data.keyword.amashort}} Client Swift SDK の初期化
 {: #google-auth-ios-initialize}
 
-{{site.data.keyword.amashort}} Client SDK を使用するには、`applicationGUID` パラメーターと `applicationRoute` パラメーターを渡して SDK を初期化する必要があります。
+{{site.data.keyword.amashort}} Client SDK を使用するには、`applicationGUID` (`tenantID`) パラメーターを渡して、それを初期化します。
 
 初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。
 
-1. アプリケーション・パラメーター値を取得します。{{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。「**Mobile オプション**」をクリックします。`applicationRoute` と `applicationGUID` の値は、**「経路」**フィールドと**「アプリ GUID」**フィールドに表示されます。
-
 1. {{site.data.keyword.amashort}} Client SDK を使用したいクラス内で必要なフレームワークをインポートします。以下のヘッダーを追加します。
 
- ```Swift
- import UIKit
- import BMSCore
- import BMSSecurity
-```
+	 ```Swift
+	let tenantId = "<serviceTenantID>"
+	let regionName = <applicationBluemixRegion>
 
-1. 以下のコードを使用して、Client SDK を初期化します。`<applicationRoute>` および `<applicationGUID>` を、{{site.data.keyword.Bluemix_notm}} ダッシュボードの**「モバイル・オプション」**から取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。`<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+	    		mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+	 /// regionName は以下のいずれか: BMSClient.Region.usSouth、BMSClient.Region.unitedKingdom、BMSClient.Region.sydney
+	    BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+		GoogleAuthenticationManager.sharedInstance.register()
+		return true
+	}
 
- ```Swift
- let backendURL = "<applicationRoute>"
- let backendGUID = "<applicationGUID>"
-
- func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-// Initialize the client SDK.BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
-
- BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
-
- GoogleAuthenticationManager.sharedInstance.register()
-      return true
-      }
-
- // [START openurl]
-      func application(application: UIApplication,
-          openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-             return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+	// [START openurl]
+	    func application(_ application: UIApplication,
+			     open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
       }
 
  @available(iOS 9.0, *)
- func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
- return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, options: options)
+ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, options: options)
   }
  ```
+
+ コードの中で次のようにします。
+ 	* `<serviceTenantID>` を、**「モバイル・オプション」**で取得した値 (『[Google 認証用の Mobile Client Access の構成](#google-auth-ios-config)』を参照) に置き換えます。 
+	* `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
+表示される地域の値は、**「米国南部」**、**「英国」**、または**「シドニー」**のいずれかでなければならず、またコードで必要な値 (`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom`、または `BMSClient.Region.sydney`) に対応している必要があります。
+	
+
 
 ## 認証のテスト
 {: #google-auth-ios-testing}
@@ -174,42 +171,37 @@ Client SDK が初期化され、Google 認証マネージャーの登録が完�
 {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
 
-1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。
+1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` を開いて、モバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。`{applicationRoute}` を、**「モバイル・オプション」**で取得した値 (『[Google 認証用の Mobile Client Access の構成](#google-auth-ios-config)』を参照) に置き換えます。例: `http://my-mobile-backend.mybluemix.net/protected`。
 
 1. MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} によって保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみです。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
 
 1. iOS アプリケーションを使用して、同じエンドポイントへ要求を出します。
 
  ```Swift
-  let protectedResourceURL = "<Your protected resource URL>" // any protected resource
-  let request = Request(url: protectedResourceURL , method: HttpMethod.GET)
-  let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+	let protectedResourceURL = "<your protected resource absolute path>"
+	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
+
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
   if error == nil {
           print ("response:\(response?.responseText), no error")
  } else {
     print ("error: \(error)")
- }
- }
+  }
+  }
 
- request.sendWithCompletionHandler(callBack)
- ```
+	request.send(completionHandler: callBack)
 
+	```
 1. アプリケーションを実行します。Google のログイン画面のポップアップが表示されます。
 
  ![image](images/ios-google-login.png)
 
 1. ログインして**「OK」**をクリックすると、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可したことになります。
 
-1. 	ユーザーの要求は正常に処理されます。以下の内容がログに出力されます。
+1. ユーザーの要求は正常に処理されます。以下の内容がログに出力されます。
 
  ```
- onAuthenticationSuccess info = Optional({attributes = {};
-     deviceId = 105747725068605084657;
-     displayName = "donlonqwerty@gmail.com";
-     isUserAuthenticated = 1;
-     userId = 105747725068605084657;
- })
- response:Optional("Hello, this is a protected resource!"), no error
+ response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
  ```
 {: screen}
 

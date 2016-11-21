@@ -1,15 +1,14 @@
 ---
 
 copyright:
-  years: 2016
-
+  years: 2016 lastupdated:  "2016-09-12"
 ---
 
 #	Usando o plano Professional 1 Application
 {: #using_mobilefoundation_p2}
 
-Última atualização: 4 de agosto de 2016
-{: .last-updated}
+<!--Last updated: 12 September 2016
+{: .last-updated}-->
 
 Com o plano Professional 1 Application, os usuários podem criar 1 aplicativo móvel com vários sistemas operacionais móveis.
 Depois de criar a instância de serviço {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, leia o procedimento a seguir para iniciar o serviço.
@@ -88,6 +87,39 @@ no ícone **Mostrar senha** para visualizá-lo.
 <!--This console runs inside the container.--> Com o console, é possível
 gerenciar seus aplicativos móveis, adaptadores e dispositivos móveis, usar seu servidor como um
 backend móvel, enviar notificações push e muito mais.
+
+##  Incluindo o servidor Mobile Analytics
+{: #adding_analytics_server_prof}
+
+ Agora é possível monitorar o seu aplicativo móvel no servidor {{site.data.keyword.mobilefirst}} incluindo um servidor Mobile Analytics na instância de serviço do
+{{site.data.keyword.mobilefoundation_short}}.
+
+ O plano profissional cria o servidor Mobile Analytics em um grupo de contêiner. O usuário pode customizar a configuração selecionando o número de nós do contêiner no grupo de contêiner.
+
+ Os usuários podem anexar volumes nos contêineres para persistir dados. O volume, uma vez selecionado, não pode ser mudado. 20 GB é o espaço de compartilhamento de arquivo padrão disponível para o
+usuário. Se o usuário precisar de espaço de armazenamento adicional para persistir dados de analítica, ele precisará comprar compartilhamento de arquivo adicional e criar um volume usando esse
+compartilhamento de arquivo. Ele poderá, então, selecionar esse novo volume enquanto implementa o servidor analítico.
+
+ Para obter mais informações sobre a inclusão de volumes no {{site.data.keyword.containerlong}}, consulte
+[Armazenando
+dados persistentes em um volume usando o Painel do {{site.data.keyword.Bluemix_notm}} ](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+
+* Clique em **Incluir Analytics** para incluir o servidor Mobile Analytics na instância de serviço do {{site.data.keyword.mobilefoundation_short}}.
+
+O processo de fornecimento inicia. Esse processo leva aproximadamente 10 minutos e uma
+janela de mensagem indica o progresso dessa operação.  
+
+* Ative o Console do MobileFirst Analytics a partir do {{site.data.keyword.mfp_oc_short_notm}}.
+
+* A conexão única é ativada entre o {{site.data.keyword.mfserver_short_notm}} e o servidor Mobile Analytics. O servidor Mobile Analytics é configurado com as mesmas chaves de LTPA e
+credenciais do usuário que o servidor {{site.data.keyword.mfserver_short_notm}}. É possível usar o mesmo `username` e `password` para efetuar login no console do Mobile
+Analytics que aqueles usados no {{site.data.keyword.mfp_oc_short_notm}}.
+
+Para obter mais informações sobre o MobileFirst Analytics é possível referir-se ao [MobileFirst
+Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/).
+
+**Nota:** o servidor Mobile Analytics é removido quando você exclui a instância de serviço do {{site.data.keyword.mobilefoundation_short}} ou quando você tenta recriar o
+{{site.data.keyword.mfserver_short_notm}}.
 
 ## Recriando o servidor {{site.data.keyword.mobilefirst}}
 {: #recreate_mobilefoundation_p2}

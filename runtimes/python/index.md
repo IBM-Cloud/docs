@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # Python
 {: #python_runtime}
-*Last updated: 06 July 2016*
-{: .last-updated}
 
 The Python runtime on {{site.data.keyword.Bluemix}} is powered by the python_buildpack.
 The python_buildpack provides a complete runtime environment for both Python 2 and Python 3 apps.
@@ -24,7 +23,7 @@ The python_buildpack will be used if your app's root directory contains a requir
 {: #starter_application}
 
 {{site.data.keyword.Bluemix}} provides a Python starter application.  The Python starter application is a simple Python app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix}}
-environment.  See [Using the starter applications](../../cfapps/starter_app_usage.html) for help with using the starter application.
+environment.  See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter application.
 
 ## Runtime versions
 {: #runtime_versions}

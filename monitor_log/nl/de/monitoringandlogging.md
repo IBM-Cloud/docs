@@ -14,7 +14,7 @@ copyright:
 #Überwachung und Protokollierung
 {: #monitoringandlogging}
 
-*Letzte Aktualisierung: 1. Juli 2016*
+Letzte Aktualisierung: 2. September 2016
 {: .last-updated}
 
 Indem Sie Ihre Apps überwachen und Protokolle überprüfen, können Sie die Anwendungsausführung und den Datenfluss verfolgen, um Ihre Bereitstellung besser zu verstehen. Darüber hinaus können Sie die Zeit und den Aufwand für das Auffinden und Beheben von Problemen reduzieren.
@@ -50,6 +50,11 @@ Setzen Sie zur Überwachung von {{site.data.keyword.Bluemix_notm}}-Apps eine der
 
 Protokolldateien werden automatisch erstellt, wenn Sie die Cloud Foundry-Infrastruktur verwenden, um Ihre Apps in {{site.data.keyword.Bluemix_notm}} auszuführen. Wenn in einer der Phasen von der Entwicklung bis zur Laufzeit Fehler auftreten, können Sie die Protokolle auf Hinweise prüfen, die Ihnen bei der Lösung des Problems möglicherweise helfen.
 
+###Protokollspeicherung
+{: #log_retention}
+
+* In den Bluemix Cloud Foundry-Apps werden die Protokolldaten standardmäßig 30 Tage lang gespeichert.
+
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
 
@@ -60,7 +65,7 @@ Protokolldateien werden automatisch erstellt, wenn Sie die Cloud Foundry-Infrast
 Protokolle für {{site.data.keyword.Bluemix_notm}}-Anwendungen werden in einem festen Format angezeigt, ähnlich dem folgenden Muster:
 
 ```
-1         2         3         4         5
+         1         2         3         4         5
 12345678901234567890123456789012345678901234567890
 --------------------------------------------------
 yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
@@ -134,7 +139,7 @@ Sie können die Protokolle für Ihre Cloud Foundry-Apps an drei Positionen anzei
 
 Führen Sie die folgenden Schritte aus, um die Bereitstellungs- oder Laufzeitprotokolle anzuzeigen:
 1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und klicken Sie dann auf die Kachel für Ihre App auf dem Dashboard. Die Seite mit den Anwendungsdetails wird angezeigt.
-2. Klicken Sie in der linken Navigationsleiste auf **Protokolle**.
+2. Klicken Sie in der Navigationsleiste auf **Protokolle**.
 
 In der Konsole für **Protokolle** können Sie die kürzlich generierten Protokolle für Ihre App oder Protokollendabschnitte in Echtzeit anzeigen. Darüber hinaus können Sie Protokolle nach Protokolltyp und Kanal filtern.
 
@@ -202,7 +207,8 @@ cf logs App-Name --recent | cut -c 29-40,46-
 ```
 
 Für weitere Informationen zur Option **grep** geben Sie 'cut --help' ein.
-* Zum Anzeigen von Protokolleinträgen, die bestimmte Schlüsselwörter enthalten, verwenden Sie die Option **grep**. Protokolleinträge, die das Schlüsselwort '[APP' enthalten, können Sie beispielsweise mithilfe des folgenden Befehls anzeigen:
+* Zum Anzeigen von Protokolleinträgen, die bestimmte Schlüsselwörter enthalten, verwenden Sie die Option **grep**. Protokolleinträge, die das Schlüsselwort `[APP` enthalten, können Sie beispielsweise mithilfe des folgenden Befehls anzeigen:
+
 ```
 cf logs App-Name --recent | grep '\[App'
 ```
@@ -223,15 +229,15 @@ Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer App und dem Syst
 
   2. Erstellen Sie eine vom Benutzer bereitgestellte Serviceinstanz.
      
-	 Verwenden Sie den Befehl ```cf create-user-provided-service ``` (oder die Kurzversion des Befehls ```cups```), um eine vom Benutzer bereitgestellte Serviceinstanz zu erstellen:  
+	 Verwenden Sie den Befehl `cf create-user-provided-service ` (oder die Kurzversion des Befehls `cups`), um eine vom Benutzer bereitgestellte Serviceinstanz zu erstellen: 
 	 ```
 	 cf create-user-provided-service <Servicename> -l <Protokollierungsendpunkt>
-```
-	 **Servicename**
-	
+	 ```
+	 &lt;Servicename&gt;
+	 
 	 Der Name der vom Benutzer bereitgestellten Serviceinstanz.
 	 
-	 **Protokollierungsendpunkt**
+	 &lt;Protokollierungsendpunkt&gt;
 	 
 	 Der Protokollierungsendpunkt, an den {{site.data.keyword.Bluemix_notm}} Protokolle sendet. In der folgenden Tabelle finden Sie Informationen zu den Werten, durch die die Variable *Protokollierungsendpunkt* in Ihrem Fall ersetzt werden kann:
 	 
@@ -266,18 +272,18 @@ Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer App und dem Syst
 	 Verwenden Sie den folgenden Befehl, um die Serviceinstanz an Ihre App zu binden: 
 	
 	 ```
-	 cf bind-service App-Name <Servicename>
-```
-	 **Appname**
-	
+	 cf bind-service <appname> <service_name>
+	 ```
+	 &lt;Appname&gt;
+	 
 	 Der Name Ihrer App.
 	 
-	 **Servicename**
+	 &lt;Servicename&gt;
 	 
 	 Der Name der vom Benutzer bereitgestellten Serviceinstanz.
 	 
   4. Führen Sie ein erneutes Staging für die App durch. 
-     Geben Sie ```cf restage appname``` ein, damit die Änderungen wirksam werden. 
+     Geben Sie `cf restage appname` ein, damit die Änderungen wirksam werden. 
 
 #### Protokolle in externen Hosts anzeigen
 {: #viewing_logs_external}
@@ -290,7 +296,7 @@ Wenn Protokolle generiert werden, können Sie nach einer kurzen Verzögerung Nac
 ### Beispiel: Streaming von Cloud Foundry-Anwendungsprotokollen in Splunk 
 {: #splunk}
 
-In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter Verwendung von IBM Virtual Servers Beta und des Ubuntu-Image. Die Cloud Foundry-Anwendungsprotokolle sollen per Streaming von {{site.data.keyword.Bluemix_notm}} in Splunk übertragen werden. 
+In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter Verwendung von IBM Virtual Servers Beta und des Ubuntu-Image.  Die Cloud Foundry-Anwendungsprotokolle sollen per Streaming von {{site.data.keyword.Bluemix_notm}} in Splunk übertragen werden. 
 
   1. Zunächst muss Splunk von Jane installiert werden.
 
@@ -298,7 +304,7 @@ In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter 
        
 	    ```
         dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
-```
+        ```
 	   
      b. Jane installiert und korrigiert das RFC5424-Add-on der syslog-Technologie für die Integration mit {{site.data.keyword.Bluemix_notm}}. Weitere Informationen zur Installation des Add-ons finden Sie in der [Cloud Foundry-Richtlinie](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.  
 
@@ -307,19 +313,21 @@ In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter 
 	    ```
         cd /opt/splunk/etc/apps
         tar xvfz ~/rfc5424-syslog_11.tgz
-```
+        ```
 	   
         Anschließend korrigiert Jane das Add-on, indem sie */opt/splunk/etc/apps/rfc5424/default/transforms.conf* durch eine neue Datei *transforms.conf* ersetzt, die den folgenden Text enthält:
 	   
 	    ```
-[rfc5424_host]
+        [rfc5424_host]
         DEST_KEY = MetaData:Host
         REGEX = <\d+>\d{1}\s{1}\S+\s{1}(\S+)
-        FORMAT = host::$1[rfc5424_header]
+        FORMAT = host::$1
+
+        [rfc5424_header]
         REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
         FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
         MV_ADD = true
-```
+        ```
         {:screen}	   
 
      Nach der Installation von Splunk muss Jane einige Ports auf der Ubuntu-Maschine öffnen, damit der eingehende syslog-Drain (Port 5140) und die Splunk-Webbenutzerschnittstelle (Port 8000) akzeptiert werden, da für den virtuellen {{site.data.keyword.Bluemix_notm}}-Server standardmäßig eine Firewall eingerichtet ist.
@@ -331,18 +339,18 @@ In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter 
        iptables -A INPUT -p tcp --sport 5140 -j ACCEPT
        iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
        iptables -A INPUT -p tcp --sport 8000 -j ACCEPT
-```
+	   ```
 	   {:screen}	
 	  
 	   Anschließend startet Jane die Ausführung von Splunk mithilfe des folgenden Befehls:
 
        ```
 	   /opt/splunk/bin/splunk start --accept-license
-```
+       ```
 		
   2. Jane konfiguriert die Splunk-Einstellungen, um den syslog-Drain von {{site.data.keyword.Bluemix_notm}} zu akzeptieren. Für den syslog-Drain muss eine Dateneingabe erstellt werden.
 
-     a. Jane klickt auf der linken Seite der Splunk-Webschnittstelle auf **Data > Data inputs**. Eine Liste der von Splunk unterstützten Eingabetypen wird angezeigt. 
+     a. Jane klickt auf der Splunk-Webschnittstelle auf **Data > Data inputs**. Eine Liste der von Splunk unterstützten Eingabetypen wird angezeigt. 
 	 
      b. Jane wählt **TCP** aus, da der syslog-Drain das TCP-Protokoll verwendet.
 	 
@@ -362,7 +370,7 @@ In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter 
 	 
      ```
      cf cups splunk -l syslog://dummyhost:5140
-```
+     ```
         
      **Hinweis:** *dummyhost* ist nicht der richtige Name. Er wird verwendet, um den tatsächlichen Hostnamen zu verdecken. 
 
@@ -371,7 +379,7 @@ In diesem Beispiel erstellt die Entwicklerin Jane einen virtuellen Server unter 
 	 ```
      cf bind-service myapp splunk
      cf restage myapp
-```
+     ```
 		
 
 Jane testet die App und gibt dann die folgende Abfragezeichenfolge in die Splunk-Webschnittstelle ein:

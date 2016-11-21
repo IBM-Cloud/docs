@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-09"
  
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # Using {{site.data.keyword.Bluemix_notm}} services that are enabled for {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_ecosystem}
-Last updated: 9 September 2016
-{: .last-updated}
 
 In {{site.data.keyword.openwhisk}}, a catalog of packages gives you an easy way to enhance your app with useful capabilities, and to access external services in the ecosystem. Examples of external services that are {{site.data.keyword.openwhisk_short}}-enabled include Cloudant, The Weather Company, Slack, and GitHub.
 {: shortdesc}

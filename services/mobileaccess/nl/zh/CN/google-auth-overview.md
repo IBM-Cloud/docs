@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -11,9 +11,8 @@ copyright:
 # 使用 Google 凭证认证用户
 {: #google-auth}
 
-上次更新时间：2016 年 7 月 22 日
 
-您可以将 {{site.data.keyword.amashort}} 服务配置为将 Google 用作身份提供者来保护资源。然后，您的移动或 Web 应用程序用户可以使用自己的 Google 凭证进行认证。
+您可以将 {{site.data.keyword.amafull}} 服务配置为将 Google 用作身份提供者来保护资源。然后，您的移动或 Web 应用程序用户可以使用自己的 Google 凭证进行认证。
 {:shortdesc}
 
 **重要信息**：您无需单独安装 Google 提供的客户端 SDK。配置

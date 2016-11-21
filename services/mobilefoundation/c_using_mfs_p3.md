@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-10-14"
+
 ---
 
 #	Using the Developer Pro plan
 {: #using_mobilefoundation_p3}
-
-<!--Last updated: 14 October 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}}: Developer Pro is suitable for team-based development and testing, this plan is not suitable for production.
 
@@ -87,7 +85,7 @@ The process of provisioning your server starts. This process takes about 10 minu
 
  Users can also attach volumes to the containers to persist data. The volume once selected cannot be changed. 20 GB is the default file share space available to the user. If the user needs additional storage space to persist analytics data, he is required to buy additional file share and create a volume using this file share. He can then select this new volume while deploying the analytics server.
 
- For more information on adding volumes to {{site.data.keyword.containerlong}}, refer to [Storing persistent data in a volume by using the {{site.data.keyword.Bluemix_notm}} Dashboard  ](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ For more information on adding volumes to {{site.data.keyword.containerlong}}, refer to [Storing persistent data in a volume by using the {{site.data.keyword.Bluemix_notm}} Dashboard  ](https://www.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Click **Add Analytics** to add the Mobile Analytics server to the {{site.data.keyword.mobilefoundation_short}} service instance.
 

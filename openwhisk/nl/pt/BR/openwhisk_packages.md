@@ -45,15 +45,18 @@ Vários pacotes são registrados com o {{site.data.keyword.openwhisk_short}}. É
   ```
   {: pre}
   ```
-  pacotes
-  /whisk.system/alarms                                              compartilhado
-  /whisk.system/cloudant                                            compartilhado
-  /whisk.system/github                                              compartilhado
-  /whisk.system/samples                                             compartilhado
-  /whisk.system/slack                                               compartilhado
-  /whisk.system/util                                                compartilhado
-  /whisk.system/watson                                              compartilhado
-  /whisk.system/weather                                             compartilhado
+  packages
+  /whisk.system/cloudant                                                 compartilhado
+  /whisk.system/alarms                                                   compartilhado
+  /whisk.system/watson                                                   compartilhado
+  /whisk.system/websocket                                                compartilhado
+  /whisk.system/weather                                                  compartilhado
+  /whisk.system/system                                                   compartilhado
+  /whisk.system/utils                                                    compartilhado
+  /whisk.system/slack                                                    compartilhado
+  /whisk.system/samples                                                  compartilhado
+  /whisk.system/github                                                   compartilhado
+  /whisk.system/pushnotifications                                        compartilhado
   ```
   {: screen}
 
@@ -168,11 +171,11 @@ No exemplo simples a seguir, você faz a ligação com o pacote `/whisk.system/s
   ```
   {: pre}
   ```
-  pacote /myNamespace/valhallaSamples
-   action /myNamespace/valhallaSamples/greeting: imprimir uma saudação amistosa
-   action /myNamespace/valhallaSamples/wordCount: contar palavras em uma sequência
-   action /myNamespace/valhallaSamples/helloWorld: imprimir no console
-   action /myNamespace/valhallaSamples/echo: retorna os argumentos de entrada, não mudados
+  package /myNamespace/valhallaSamples
+   action /myNamespace/valhallaSamples/greeting: Retorna uma saudação amistosa
+   action /myNamespace/valhallaSamples/wordCount: Contar palavras em uma sequência
+   action /myNamespace/valhallaSamples/helloWorld: Demonstra recursos de criação de log
+   action /myNamespace/valhallaSamples/curl: Enrolar uma url de host
   ```
   {: screen}
 
@@ -212,8 +215,7 @@ No exemplo simples a seguir, você faz a ligação com o pacote `/whisk.system/s
 ## Criando e usando feeds acionadores
 {: #openwhisk_package_trigger}
 
-Feeds oferecem uma maneira conveniente para configurar uma origem de eventos externos para disparar esses eventos para um acionador do {{site.data.keyword.openwhisk_short}}. 
-Este exemplo mostra como usar um feed no pacote Alarmes para disparar um acionador a cada segundo e como usar uma regra para chamar uma ação a cada segundo.
+Feeds oferecem uma maneira conveniente para configurar uma origem de eventos externos para disparar esses eventos para um acionador do {{site.data.keyword.openwhisk_short}}. Este exemplo mostra como usar um feed no pacote Alarmes para disparar um acionador a cada segundo e como usar uma regra para chamar uma ação a cada segundo.
 
 1. Obtenha uma descrição do feed no pacote `/whisk.system/alarms`.
 

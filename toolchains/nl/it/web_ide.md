@@ -27,19 +27,6 @@ Cosa più importante, {{site.data.keyword.webide}} si avvale della tecnologia we
 
 {{site.data.keyword.webide}} è personalizzabile in modo che puoi scegliere gli schemi di colori, gli strumenti tecnici e le impostazioni che incontrano i tuoi bisogni di sviluppo. Per visualizzare e modificare le impostazioni, dal menu di sinistra, fai clic sull'icona **Impostazioni** <img class="inline" src="./images/webide_settings_icon.png"  alt="L'icona impostazioni">.
 
-<!-- LH: I don't think we need to include the following table, so I'm commenting it out. When you're viewing the settings in the Web IDE, this information should be obvious -->
-
-<!--| Categories | Description  |
-|---|---|
-| Cloud Foundry  | Define a Cloud Foundry API and Manage URL  |
-| CSS Validation | Define the severities for CSS linting rules that you use to check your code  |
-| Editor Settings  | Configure editor-specific settings for key bindings, editor behavior, layout, and more  |
-| Editor Styles  | Configure color schemes for the languages that you use, or import a theme from another editors  |
-| Git  | Configure general settings for Git  |
-| Globalization | Define globalization settings for your code |
-| JavaScript Validation  | Define the severities for the JavaScript linting rules that you use to check your code  |
-| Plug-ins  | Install, disable, or remove plug-ins from the editor  | -->
-
 Se hai spesso bisogno di modificare alcune impostazioni mentre lavori, puoi accedere a queste impostazioni velocemente dall'icona **Impostazioni editor locali** <img class="inline" src="./images/webide_local_settings_icon.png"  alt="Icona Impostazioni editor locali"> nell'angolo in alto a destra dell'editor
 
 ![Impostazioni dell'editor locali](images/webide_local_editor_settings.png)

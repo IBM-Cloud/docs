@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-13"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Device Management Protocol
 {: #index}
-Last updated: 13 September 2016
-{: .last-updated}
 
 ## Introduction
 {: #introduction}

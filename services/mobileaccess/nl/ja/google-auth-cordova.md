@@ -2,38 +2,69 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
+{:screen: .screen}
+{:shortdesc: .shortdesc}
 
 # Cordova アプリ用の Google 認証の使用可能化
 {: #google-auth-cordova}
 
 
-最終更新日: 2016 年 7 月 21 日
-{: .last-updated}
-
-Cordova アプリケーションを Google 認証統合用に構成するには、Cordova アプリケーションのネイティブ・コード (Java、Objective-C、または Swift) で変更を行う必要があります。各プラットフォームは別々に構成する必要があります。ネイティブ・コードの変更は、Android Studio や Xcode などのネイティブ開発環境で行ってください。
+{{site.data.keyword.amafull}} Cordova アプリケーションを Google 認証統合用に構成するには、Cordova アプリケーションのネイティブ・コード (Java、Objective-C、または Swift) で変更を行う必要があります。各プラットフォームは別々に構成する必要があります。ネイティブ・コードの変更は、Android Studio や Xcode などのネイティブ開発環境で行ってください。
 
 ## 開始する前に
 {: #before-you-begin}
 以下が必要です。
 * {{site.data.keyword.amashort}} Client SDK が装備された Cordova プロジェクト。詳しくは、[Cordova プラグインのセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)を参照してください。  
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
 * (オプション) 次のセクションの内容をよく理解してください。
-   * [Android アプリでの Google 認証の使用可能化](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
-   * [iOS アプリでの Google 認証の使用可能化](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
+   * [Android アプリ用の Google 認証の使用可能化](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
+   * [iOS アプリ用の Google 認証の使用可能化](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios.html)
 
 
 ## Android プラットフォームの構成
 {: #google-auth-cordova-android}
 
-Cordova アプリケーションの Android プラットフォームを Google 認証統合用に構成するために必要なステップは、ネイティブ・アプリケーションに必要なステップに非常に似ています。詳細情報については、[Android アプリでの Google 認証の使用可能化](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)を参照してください。以下のセットアップを行います。
+Cordova アプリケーションの Android プラットフォームを Google 認証統合用に構成するために必要なステップは、ネイティブ・アプリケーションに必要なステップに非常に似ています。[Android アプリでの Google 認証の使用可能化](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)を参照して、以下をセットアップします。
 
 * Android プラットフォーム用の Google プロジェクトの構成
 * Google 認証用の {{site.data.keyword.amashort}} の構成
-* Android 用の {{site.data.keyword.amashort}} Client SDK の構成
 
-Cordova アプリケーションの場合、Java コードではなく JavaScript コードで {{site.data.keyword.amashort}} Client SDK を初期化する必要があります。ネイティブ・コードでの `GoogleAuthenticationManager` API の登録はまだ必要になります。
+### Android Cordova 用の {{site.data.keyword.amashort}} Client SDK の構成
+
+
+2. Android プロジェクト・フォルダーで、アプリケーション・モジュールの `build.gradle` ファイルを開きます (プロジェクト `build.gradle` ファイル**ではありません**)。以下のように、依存関係セクションを見つけ、Client SDK の新しいコンパイル依存関係を追加します。
+
+	```Gradle
+	dependencies {
+		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
+        name:'googleauthentication',
+        version: '1.+',
+        ext: 'aar',
+        transitive: true
+    	// other dependencies  
+	}
+	```
+
+2. **「ツール」>「Android」>「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**をクリックして Gradle とプロジェクトを同期します。
+
+3. Cordova アプリケーションの場合、Java コードではなく JavaScript コードで {{site.data.keyword.amashort}} Client SDK を初期化する必要があります。ネイティブ・コードでの `GoogleAuthenticationManager` API の登録はまだ必要になります。次のコードをメイン・アクティビティー `onCreate` メソッドに追加します。 
+
+	```Java
+	GoogleAuthenticationManager.getInstance().registerDefaultAuthenticationListener(this);
+	```
+
+1. 以下のコードをアクティビティーに追加します。
+ 
+ 	```Java
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		GoogleAuthenticationManager.getInstance()
+			.onActivityResultCalled(requestCode, resultCode, data);
+	}
+```
 
 ## iOS プラットフォームの構成
 {: #google-auth-cordova-ios}
@@ -55,7 +86,7 @@ Cordova アプリケーションの iOS プラットフォームを Google 認�
 	* IMFGoogleAuthenticationHandler.h
 	* IMFGoogleAuthenticationHandler.m
 
-**「Copy files....(ファイルのコピー)」**チェック・ボックスを選択します。
+	**「Copy files....(ファイルのコピー)」**チェック・ボックスを選択します。
 
 1. [Google+ iOS SDK](http://goo.gl/9cTqyZ) をダウンロードしインストールします。
 
@@ -69,6 +100,7 @@ Cordova アプリケーションの iOS プラットフォームを Google 認�
 [[ NSNotificationCenter defaultCenter] postNotification:
 		[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
 ```
+{: codeblock}
 
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #google-auth-cordova-initialize}
@@ -78,8 +110,26 @@ Cordova アプリケーションで以下の JavaScript コードを使用して
 ```JavaScript
 BMSClient.initialize("applicationRoute", "applicationGUID");
 ```
+{: codeblock}
 
-*applicationRoute* および *applicationGUID* の値を、ダッシュボード上のアプリケーションの**「モバイル・オプション」**セクションから取得した**「経路」**および**「アプリ GUID」**の値に置き換えます。
+`applicationRoute` 値および `applicationGUID` 値を、アプリケーションの **「経路」**値および**「AppGuid」**値に置き換えます。これらの値は、ダッシュボードのアプリケーション・ページで**「モバイル・オプション」**ボタンをクリックすると見つけることができます。
+	
+
+
+
+##{{site.data.keyword.amashort}} AuthorizationManager の初期化
+Cordova アプリケーションで以下の JavaScript コードを使用して、{{site.data.keyword.amashort}} AuthorizationManager を初期化します。
+
+```JavaScript
+  MFPAuthorizationManager.initialize("tenantId");
+  ```
+{: codeblock}
+
+`tenantId` 値を、{{site.data.keyword.amashort}} サービスの `tenantId` に置き換えます。この値は、{{site.data.keyword.amashort}} サービス・タイルの**「資格情報の表示」**ボタンをクリックすると、見つけることができます。
+
+
+
+
 
 ## 認証のテスト
 {: #google-auth-cordova-test}
@@ -106,15 +156,15 @@ Client SDK が初期化されたら、モバイル・バックエンド・アプ
 	var request = new MFPRequest("/protected", MFPRequest.GET);
 	request.send(success, failure);
 	```
-
+{: codeblock}
 
 1. アプリケーションを実行します。Google のログイン画面が表示されます。
 
 	![Google のログイン画面](images/android-google-login.png) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	![Google のログイン画面](images/ios-google-login.png)
-	この画面は、ご使用のデバイスに Facebook アプリがインストールされていない場合や現在 Facebook にログインしていない場合、若干異なって見える可能性があります。
-1. **「OK」**をクリックして、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可します。
+	
+	この画面は、デバイスに Facebook アプリをインストールしていない場合、または現在 Facebook に ログインしていない場合は少し違って見えるかもしれません。 1. **「OK」**をクリックして、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可します。
 
-1. 	ユーザーの要求は正常に処理されます。使用しているプラットフォームに応じて、LogCat/Xcode コンソールに以下の出力が表示されます。
+1. ユーザーの要求は正常に処理されます。使用しているプラットフォームに応じて、LogCat/Xcode コンソールに以下の出力が表示されます。
 
 	![Android のコード・スニペット](images/android-google-login-success.png)
 

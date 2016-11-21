@@ -9,7 +9,7 @@ copyright:
 
 
 #Habilitación de notificaciones push avanzadas
-Última actualización: 16 de agosto de 2016
+Última actualización: 17 de octubre de 2016
 {: .last-updated}
 
 Configure un identificador de iOS, un sonido, una carga útil de JSON adicional, notificaciones accionables y notificaciones retenidas.
@@ -21,17 +21,9 @@ Configure un identificador y un sonido de iOS, y carga útil adicional de JSON.
 
 1. En el panel de control {{site.data.keyword.mobilepushshort}}, vaya al separador **Notificaciones**.
 2. Vaya a la sección **Campos opcionales** para configurar las características de {{site.data.keyword.mobilepushshort}}. 
-	- **Archivo de sonido**: Escriba una serie que apunte al archivo de sonido
-                            de la app móvil. En la carga útil, especifique el nombre de serie del
-                            archivo de sonido a utilizar.
-	- **Identificador iOS**: Para dispositivos iOS, el número
-                            que se mostrará como el identificador del icono de app. Si falta esta propiedad, el
-                            identificador no se modificará. Para eliminar el identificador, establezca el valor de esta
-                            propiedad en 0.
+	- **Archivo de sonido**: Escriba una serie que apunte al archivo de sonido de la app móvil. En la carga útil, especifique el nombre de serie del archivo de sonido a utilizar.
+	- **Identificador iOS**: Para dispositivos iOS, el número que se mostrará como el identificador del icono de app. Si falta esta propiedad, el identificador no se modificará. Para eliminar el identificador, establezca el valor de esta propiedad en 0.
 	
-	
-
-
 ###Android
 
 Añada el archivo de sonido en el directorio `res/raw` de la aplicación android. Al enviar la notificación, añada el nombre del archivo de sonido en el campo de sonido de {{site.data.keyword.mobilepushshort}}.
@@ -43,7 +35,7 @@ Añada el archivo de sonido en el directorio `res/raw` de la aplicación android
 	  }
  }  
 ```
-	
+    {: codeblock}	
 	
 ###iOS
 
@@ -54,13 +46,15 @@ Añada el archivo de sonido en el directorio `res/raw` de la aplicación android
 	      "sound": "tt.wav",
 	  }
 }
-``` 		
+``` 
+	{: codeblock}
+		
 **Carga útil adicional**: Esta carga útil puede ser cualquier par de clave-valor y debe ser un objeto JSON que desee enviar con la {{site.data.keyword.mobilepushshort}}.
 
 ```
 {"key":"value", "key2":"value2"}
 ```
-
+	{: codeblock}
 
 ## Retención de notificaciones de Android 
 {: #hold-notifications-android}
@@ -71,17 +65,16 @@ Cuando su aplicación entre en segundo plano, probablemente querrá que la {{sit
 @Override
 protected void onPause() {
     super.onPause();
-
     if (push != null) {
         push.hold();
     }
 } 
 ```
-
+	{: codeblock}
 ## Habilitación de notificaciones de iOS accionables  
 {: #enable-actionable-notifications-ios}
 
-A diferencia de las {{site.data.keyword.mobilepushshort}} convencionales, estas solicitan a los usuarios que realicen una selección al recibir la alerta de notificación sin abrir la app.  
+A diferencia de las {{site.data.keyword.mobilepushshort}} convencionales, estas solicitan a los usuarios que realicen una selección al recibir la alerta de notificación sin abrir la app. 
 
 Siga estos pasos para habilitar las {{site.data.keyword.mobilepushshort}} accionables en la aplicación.
 
@@ -89,7 +82,7 @@ Siga estos pasos para habilitar las {{site.data.keyword.mobilepushshort}} accion
 
    Objective-C
 
-	```
+```
 	// For Objective-C
 	UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
 	    acceptAction.identifier = @"ACCEPT_ACTION";
@@ -97,11 +90,12 @@ Siga estos pasos para habilitar las {{site.data.keyword.mobilepushshort}} accion
 	     /* Optional properties
 	     acceptAction.destructive = NO;
 	  acceptAction.authenticationRequired = NO; */
-	  
-	 ```
+```
+	{: codeblock}
+
    Swift
 
-	```
+```
 	//For Swift
 	let acceptAction = UIMutableUserNotificationAction()
 	acceptAction.identifier = "ACCEPT_ACTION"
@@ -109,9 +103,10 @@ Siga estos pasos para habilitar las {{site.data.keyword.mobilepushshort}} accion
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
 	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
-	```
+```
+	{: codeblock}
 	
-	```
+```
 	//For Swift
 	let declineAction = UIMutableUserNotificationAction()
 	declineAction.identifier = "DECLINE_ACTION"
@@ -119,65 +114,69 @@ Siga estos pasos para habilitar las {{site.data.keyword.mobilepushshort}} accion
 	declineAction.destructive = true
 	declineAction.authenticationRequired = false
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
-	```
+```
+	{: codeblock}
 
-2. Cree la categoría de notificaciones y configure una acción. **UIUserNotificationActionContextDefault** o
-                **UIUserNotificationActionContextMinimal** son contextos válidos.
+2. Cree la categoría de notificaciones y configure una acción. **UIUserNotificationActionContextDefault** o **UIUserNotificationActionContextMinimal** son contextos válidos.
 
 Objective-C
 
-	```
+```
 	// For Objective-C
 	UIMutableUserNotificationCategory *callCat = [[UIMutableUserNotificationCategory alloc] init];
 	    callCat.identifier = @"POLL_CATEGORY";
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
-	```    
+```    
+	{: codeblock}
 
 Swift
 
-	```
+```
 	// For Swift
 	let pushCategory = UIMutableUserNotificationCategory()
 	pushCategory.identifier = "TODO_CATEGORY"
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
-	```
+```
+	{: codeblock}
 
 1. Cree el valor de notificación y asigne las categorías del paso anterior.
 
 Objective-C
 
-	```
+```
 	// For Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
-	```
+```
+	{: codeblock}
 
 Swift
 
-	```
+```
 	// For Swift
 	let categories = NSSet(array:[pushCategory]);
-	```
+```
+	{: codeblock}
 
 1. Cree una notificación remota o local y asígnele la identidad de la categoría.
 
 Objective-C
 
-	```
-	//For Objective-C
-
+```
+	//Para Objective-C
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-
 	[[UIApplication sharedApplication] registerForRemoteNotifications];
-	```
+```
+	{: codeblock}
 
 Swift
 
-	```
+```
 	//For Swift
 	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
     UIApplication.sharedApplication().registerUserNotificationSettings(settings)
     UIApplication.sharedApplication().registerForRemoteNotifications() 
-	```
+```
+	{: codeblock}
 	
 ## Gestión de notificaciones de iOS accionables  
 {: #actionable-notifications}
@@ -195,6 +194,7 @@ Al recibir una notificación que necesita reacciones, el control se pasa al sigu
   completionHandler();
 }
 ```
+	{: codeblock}
 
 ###Swift
  
@@ -204,4 +204,5 @@ func application(application: UIApplication, handleActionWithIdentifier identifi
       completionHandler()
   }
 ```    
+	{: codeblock}
     

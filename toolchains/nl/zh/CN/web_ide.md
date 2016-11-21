@@ -27,19 +27,6 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于浏览器的开发环境，�
 
 {{site.data.keyword.webide}} 可进行定制，因此您可以选择满足开发需要的颜色方案、技术工具和设置。要查看和修改设置，请从左侧菜单中，单击**设置**图标 <img class="inline" src="./images/webide_settings_icon.png"  alt="“设置”图标">。
 
-<!-- LH: I don't think we need to include the following table, so I'm commenting it out. When you're viewing the settings in the Web IDE, this information should be obvious -->
-
-<!--| Categories | Description  |
-|---|---|
-| Cloud Foundry  | Define a Cloud Foundry API and Manage URL  |
-| CSS Validation | Define the severities for CSS linting rules that you use to check your code  |
-| Editor Settings  | Configure editor-specific settings for key bindings, editor behavior, layout, and more  |
-| Editor Styles  | Configure color schemes for the languages that you use, or import a theme from another editors  |
-| Git  | Configure general settings for Git  |
-| Globalization | Define globalization settings for your code |
-| JavaScript Validation  | Define the severities for the JavaScript linting rules that you use to check your code  |
-| Plug-ins  | Install, disable, or remove plug-ins from the editor  | -->
-
 如果在编辑时经常需要更改某些设置，您可以从编辑器右上角的**本地编辑器设置**图标 <img class="inline" src="./images/webide_local_settings_icon.png"  alt="“本地编辑器设置”图标"> 快速访问这些设置。
 
 ![本地编辑器设置](images/webide_local_editor_settings.png)

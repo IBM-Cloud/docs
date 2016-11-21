@@ -27,19 +27,6 @@ Lo mejor de todo es que {{site.data.keyword.webide}} está basado en la web. No 
 
 {{site.data.keyword.webide}} se puede personalizar para que pueda elegir los esquemas de colores, las herramientas técnicas y los valores que cumplan sus necesidades de desarrollo. Para ver y modificar los valores, desde el menú de la izquierda, pulse el icono **Settings** <img class="inline" src="./images/webide_settings_icon.png"  alt="El icono de valores">.
 
-<!-- LH: I don't think we need to include the following table, so I'm commenting it out. When you're viewing the settings in the Web IDE, this information should be obvious -->
-
-<!--| Categories | Description  |
-|---|---|
-| Cloud Foundry  | Define a Cloud Foundry API and Manage URL  |
-| CSS Validation | Define the severities for CSS linting rules that you use to check your code  |
-| Editor Settings  | Configure editor-specific settings for key bindings, editor behavior, layout, and more  |
-| Editor Styles  | Configure color schemes for the languages that you use, or import a theme from another editors  |
-| Git  | Configure general settings for Git  |
-| Globalization | Define globalization settings for your code |
-| JavaScript Validation  | Define the severities for the JavaScript linting rules that you use to check your code  |
-| Plug-ins  | Install, disable, or remove plug-ins from the editor  | -->
-
 Si necesita cambiar con frecuencia determinados valores mientras edita, puede acceder a dichos valores rápidamente desde el icono **Valores del editor local** <img class="inline" src="./images/webide_local_settings_icon.png"  alt="Icono de Valores del editor local"> en la esquina superior derecha del editor
 
 ![Valores del editor local](images/webide_local_editor_settings.png)

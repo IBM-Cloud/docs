@@ -7,7 +7,7 @@ copyright:
 
 # Resolución de problemas
 {: #errors}
-Última actualización: 16 de agosto de 2016
+Última actualización: 29 de agosto de 2016
 {: .last-updated}
 
 Utilice esta sección como guía para la resolución de problemas comunes de {{site.data.keyword.mobilepushshort}}.

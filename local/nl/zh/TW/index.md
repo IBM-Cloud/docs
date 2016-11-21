@@ -15,7 +15,7 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}} 本端
 {: #local}
-*前次更新：2016 年 8 月 16 日*
+*前次更新：2016 年 9 月 15 日*
 {: .last-updated}
 
 「{{site.data.keyword.Bluemix}} 本端」將 {{site.data.keyword.Bluemix_notm}} 雲端型平台的功能及靈活性帶給資料中心。使用「{{site.data.keyword.Bluemix_notm}} 本端」，您可以利用公司防火牆來保護最機密的工作負載，同時安全地連接至「{{site.data.keyword.Bluemix_notm}} 公用」並與它同步。
@@ -36,10 +36,10 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |內含 | [{{site.data.keyword.Bluemix_notm}} 運行環境](../cfapps/runtimes.html) | 使用運行環境可快速啟動並執行您的應用程式，而不需要設定及管理機器和作業系統。您可以在「{{site.data.keyword.Bluemix_notm}} 本端」實例中使用所有 {{site.data.keyword.Bluemix_notm}} 運行環境。|
 |內含 | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | 根據原則，動態增加或減少應用程式的運算資源能力。使用此服務，即可在「{{site.data.keyword.Bluemix}} 本端」環境中無限制地使用。|
 |選用 | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} 將 {{site.data.keyword.APIM}} 及 IBM StrongLoop 整合成單一供應項目，提供綜合性解決方案來建立、執行、管理及強制執行 API 和微服務。 |
-|選用 | [{{site.data.keyword.APIM}}](../services/APIManagement/index.html) | 使用 {{site.data.keyword.APIMfull}} 服務來組合、管理及社交化 API。您可以使用 Proxy URL 或組合來自 HTTP 資料來源中的資料，以匯入 API 與資源。使用 {{site.data.keyword.APIM}} 服務的好處是您可以管理 API 的使用方式。 |
 |選用 | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} 提供對於始終處於開啟狀態之完整受管理 NoSQL JSON 資料層的存取。此服務與 CouchDB 相容，而且可透過方便使用的 HTTP 介面來存取，可用於行動及 Web 應用程式模型。如需相關資訊，請參閱完整本端環境的[文件](http://docs.cloudant.com/BluemixLocal.html){: new_window}及[硬體需求](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window}。 |
-|選用（測試版） | {{site.data.keyword.containershort}} | 在「{{site.data.keyword.Bluemix_notm}} 本端」上執行 Docker 容器。容器是虛擬軟體物件，其包括應用程式需要執行的所有元素。容器具有資源隔離及配置的優點，而且比虛擬機器（舉例來說）更容易攜帶且更具效率。 |
+|選用 | [{{site.data.keyword.containershort}}](../containers/container_index.html)  | 在「{{site.data.keyword.Bluemix_notm}} 本端」上執行 Docker 容器。容器是虛擬軟體物件，其中包含應用程式執行所需的所有元素。容器具有資源隔離及配置的優點，而且比虛擬機器（舉例來說）更容易攜帶且更具效率。如需硬體需求的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 專用及 Bluemix 本端中的 IBM {{site.data.keyword.containershort}}](../containers/container_dl.html)。 |
 |選用 | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | 此服務提供記憶體內的資料網格，它支援應用程式的分散式快取情境。包含 50 GB 的記憶體內快取。 |
+|選用 | [{{site.data.keyword.mobilepush}}](../services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} 是一種服務，可用來將通知傳送至 iOS 及 Android 裝置。可以將通知目標設為所有應用程式使用者或一組使用標籤的特定使用者和裝置。您可以管理裝置、標籤及訂閱。您也可以使用 SDK（軟體開發套件）及「具象狀態傳輸 (REST)」應用程式介面 (API) 來進一步開發用戶端應用程式。 |
 |選用 | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | 為了提高備援，{{site.data.keyword.sescashort}} 會提供快取中所儲存階段作業的抄本。因此，電壓過低或作業中斷時，用戶端應用程式仍然保有快取中階段作業的存取權。此服務支援 Web 及行動應用程式的階段作業快取情境。 |
 |選用 | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | 此服務可讓您的應用程式與已連接的裝置、感應器及閘道進行通訊，並且耗用這些項目所收集的資料。本端基本供應項目包括起始環境，此環境允許在本端環境內執行專用版本的 {{site.data.keyword.iot_full}}，其容量為 100,000 台同時連接的裝置或應用程式，以及 1.6 TB 的資料交換。 |
 
@@ -57,9 +57,10 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |{{site.data.keyword.Bluemix_notm}} 本端 {{site.data.keyword.apiconnect_short}} Professional 10 萬個 API 呼叫增加| {{site.data.keyword.apiconnect_short}} Professional 環境的延伸，每月可提供 10 萬個 API 呼叫的額外容量。 |
 |{{site.data.keyword.Bluemix_notm}} 本端 {{site.data.keyword.apiconnect_short}} Enterprise 2500 萬個 API 呼叫 | 此環境允許以每月 2500 萬個 API 呼叫的容量，執行專用版本的 {{site.data.keyword.apiconnect_short}}，目標為整個企業的 API 專案。 |
 |{{site.data.keyword.Bluemix_notm}} 本端 {{site.data.keyword.apiconnect_short}} Enterprise 10 萬個 API 呼叫增加 | {{site.data.keyword.apiconnect_short}} Enterprise 環境的延伸，每月可提供 10 萬個 API 呼叫的額外容量。 |
-|「{{site.data.keyword.Bluemix_notm}} 本端」{{site.data.keyword.APIM}} 500 個 API 呼叫容量增加 | 此環境允許針對 {{site.data.keyword.Bluemix_notm}} 執行專用版本的 {{site.data.keyword.APIM}}，其容量為每秒 500 個 API 呼叫。 |
 |{{site.data.keyword.Bluemix_notm}} 本端 {{site.data.keyword.cloudant}} 叢集 | 此環境允許部署 {{site.data.keyword.cloudant}} 服務的 3 節點叢集。節點的資料容量取決於您為本端環境提供的基礎架構。 |
 |「{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} 本端」漸進式增加 | 「{{site.data.keyword.iot_full}} 本端」基本服務供應項目再加上一個環境，此環境允許在本端環境內執行專用版本的 {{site.data.keyword.iot_full}}，其容量為 100,000 台同時連接的裝置或應用程式，以及 0.5 TB 的資料交換。 |
+|IBM {{site.data.keyword.mobilepush}} 本端 | 此環境允許部署及執行每秒可接受 300 個要求的 {{site.data.keyword.mobilepush}} 實例。 |
+|「IBM {{site.data.keyword.mobilepush}} 本端」附加程式實例 | 此環境允許部署及執行每秒可接受 300 個額外要求的 {{site.data.keyword.mobilepush}} 實例。 |
 
 
 **附註**：「{{site.data.keyword.Bluemix_notm}} 本端」元件可能會指出特定的已配置容量（例如 GB 數或每秒交易數）。因為任何雲端服務配置的實際容量實際上會因許多因素而不同，所以實際容量實際上可能會高於或低於已配置的容量。
@@ -78,7 +79,6 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |{{site.data.keyword.alertnotificationshort}}		|是		|是			|是		|
 |{{site.data.keyword.appseccloudshort}}		|是		|是		|是 |
 |{{site.data.keyword.hadoopst}}			|是		|否		|否 |
-|{{site.data.keyword.APIM}}			|是		|是		|是 |
 |{{site.data.keyword.rules_short}}		|是		|是		|是 |
 |{{site.data.keyword.cloudant}}			|是		|是		|是 |
 |{{site.data.keyword.conceptexpansionshort}}	|是		|是		|是|
@@ -143,12 +143,12 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 <dt>**運算**</dt>
 <dd>「{{site.data.keyword.Bluemix_notm}} 本端」根據 Cloud Foundry 來使用以應用程式為中心的運行環境。</dd>
 <dt>**安全智慧**</dt>
-<dd><p>IBM 使用 QRadar Security Intelligence Platform 來提供用於整合數個主要元件的統一架構。這些元件包括安全資訊及事件管理、日誌管理、異常偵測、事件鑑識，以及配置和漏洞管理。Bluemix 也會使用 IBM QRadar 安全資訊及事件管理 (SIEM)，來監視特許使用者動作以及應用程式開發人員的成功和不成功登入嘗試。QRadar 報告可讓客戶透過「管理」頁面的「報告及日誌」區段來查看該事件資料。如需安全報告的相關資訊，請參閱[檢視報告](../admin/index.html#oc_report)。</p>
+<dd><p>IBM 使用 QRadar Security Intelligence Platform 來提供用於整合數個主要元件的統一架構。這些元件包括安全資訊及事件管理、日誌管理、異常偵測、偶發事件鑑識，以及配置和漏洞管理。Bluemix 也會使用 IBM QRadar 安全資訊及事件管理 (SIEM)，來監視特許使用者動作以及應用程式開發人員的成功和不成功登入嘗試。QRadar 報告可讓客戶透過「管理」頁面的「報告及日誌」區段來查看該事件資料。如需安全報告的相關資訊，請參閱[檢視報告](../admin/index.html#oc_report)。</p>
 <p>IBM BigFix 確保依適當的頻率套用作業系統的修正程式。修補程序是自動化程序，而且您與 IBM 都同意排程。如需維護及升級的相關資訊，請參閱[維護本端實例](index.html#maintainlocal)。</p>
 </dd>
 </dl>
 
-您的應用程式部署在 Cloud Foundry 虛擬機器上執行的虛擬容器內。設定 {{site.data.keyword.Bluemix_notm}} 時，已部署所有 Cloud Foundry 元件（例如雲端控制器、性能管理程式、路由器及 Droplet Execution Agent (DEA)）。各種 {{site.data.keyword.Bluemix_notm}} 管理元件也會包括在 {{site.data.keyword.Bluemix_notm}} 部署中。
+您的應用程式部署在 Cloud Foundry 虛擬機器上執行的虛擬容器內。設定 {{site.data.keyword.Bluemix_notm}} 時，已部署所有 Cloud Foundry 元件（例如雲端控制器、性能管理程式、路由器及 Droplet Execution Agent (DEA)）。各種 {{site.data.keyword.Bluemix_notm}} 管理元件也會包含在 {{site.data.keyword.Bluemix_notm}} 部署中。
 
 DataPower 應用裝置提供對 {{site.data.keyword.Bluemix_notm}} 應用程式網域的存取。這些應用裝置會連接至可從您的內部網路存取的網路。部署應用程式及服務的使用者可從網路存取，而該網路可從您的內部網路存取。您必須提供 7 個具有出埠網際網路存取權的 IP 位址。DataPower 應用裝置會從這些客戶 IP 位址遞送至隔離的 {{site.data.keyword.Bluemix_notm}} 部署。如需網路規格和基礎架構需求的相關資訊，請參閱[「{{site.data.keyword.Bluemix_notm}} 本端」基礎架構需求](../local/index.html#localinfra)。
 
@@ -161,7 +161,7 @@ DataPower 應用裝置提供對 {{site.data.keyword.Bluemix_notm}} 應用程式�
 
 只有在本端環境上與您一起工作的 IBM 團隊才能安全地存取您的 {{site.data.keyword.Bluemix_notm}} 實例。在連線程序的多個步驟期間使用雙重鑑別，以保護本端環境存取的安全。IBM 提供可存取您環境的已核准使用者及 ID 清單，之後您就可以審核任何對您環境的存取。透過產生安全報告，即可找出誰存取您的環境，以及其存取時間和原因。如需產生安全報告的相關資訊，請參閱[安全報告](../security/index.html#reports)。
 
-您可以使用管理者身分完整查看環境的事件、問題、變更、容量及安全管理。您可以使用「管理」頁面來存取您環境的相關資訊。「轉遞」技術會使用最新的資料，讓「管理」頁面保有最新資料。如需進行更新及問題修復的使用者存取權、安全日誌、聯合型錄控制及通訊的相關資訊，請參閱[管理 {{site.data.keyword.Bluemix_notm}} 本端及 {{site.data.keyword.Bluemix_notm}} 專用](../admin/index.html#mng)。
+您可以使用管理者身分完整查看環境的偶發事件、問題、變更、容量及安全管理。您可以使用「管理」頁面來存取您環境的相關資訊。「轉遞」技術會使用最新的資料，讓「管理」頁面保有最新資料。如需進行更新及問題修復的使用者存取權、安全日誌、聯合型錄控制及通訊的相關資訊，請參閱[管理 {{site.data.keyword.Bluemix_notm}} 本端及 {{site.data.keyword.Bluemix_notm}} 專用](../admin/index.html#mng)。
 
 ##設定 {{site.data.keyword.Bluemix_notm}} 本端實例
 {: #setuplocal}
@@ -371,7 +371,7 @@ ESXi 是一種在實體伺服器上執行的虛擬化層級，它會將處理器
 </dd>
 <dt>**高可用性**</dt>
 <dd>
-若要支援單一節點失效，您必須具有 n+1 個 ESXi。例如，如果搭配使用兩個 16x 核心與 256 GB ESXi 伺服器以符合 32 個核心及 512 GB 的記憶體，您需要其中三部伺服器來支援單一節點的完整失敗。
+若要支援單一節點失效，您必須具有 n+1 個 ESXi。例如，如果使用兩台 16 個核心及 256 GB ESXi 伺服器以符合 32 個核心及 512 GB 的記憶體，則您需要三台這樣的伺服器才能支援單一節點的完整失敗。
 <p><strong>附註：</strong>為了保證資源，客戶的 VMware 管理者可能會決定要在叢集內強制執行嚴格的高可用性失效接手。如果您選擇繼續，而不使用高可用性失效接手，則可以符合最低的 32 個核心及 512 GB 資源需求。</p>
 </dd>
 <dt>**網路**</dt>
@@ -453,7 +453,7 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 ### 增加 Droplet Execution Agent (DEA) 儲存區
 每一個 DEA 都配置有：
 - 16 或 32 GB 的 RAM
-- 2x 或 4x vCPU
+- 2 個或 4 個 vCPU
 - 150 或 300 GB 的儲存空間
 
 例如，如果 ESXi 主機大小為 256 GB 記憶體且具有 16 個核心，則會新增八個 DEA。如果 ESXi 主機大小為 64 GB 記憶體且具有 8 個核心，則需要新增兩個 ESXi 及四個 DEA。每四個 DEA 需要額外的 1.5 TB 儲存空間。此範例是根據配置有 32 GB RAM、4 個 vCPU 及 300 GB 儲存空間的 DEA。
@@ -494,28 +494,28 @@ IBM 會傳送廣播訊息，詳述針對「狀態」頁面上每一個維護時�
 
 {{site.data.keyword.Bluemix_notm}} 會竭盡所能地使本端環境與最新的 ESXi 和 vCenter 版本相容。不過，可能還是會有一小段時間不支援最新的 ESXi 和 vCenter 版本。在套用任何更新項目之前，請參閱[本端基礎架構需求](../local/index.html#localinfra)文件，以取得最新相容版本的資訊。
 
-## 事件回應及支援
+## {{site.data.keyword.Bluemix_notm}} 本端的偶發事件回應及支援
 {: #incidentresponse}
 
 ### 客戶偵測到的問題
 
 如果您識別到需要 IBM 支援中心及作業注意的問題，則可以使用數種不同的方法來聯絡支援中心。如需如何聯絡支援中心的相關資訊，請參閱[聯絡支援中心](../support/index.html#contacting-bluemix-support-local)。根據問題，您及（或）IBM 會一起合作來修正問題。
 
-### IBM 偵測到的重要事件
+### IBM 偵測到的重要偶發事件
 
-重要事件包含緊急、非預期的服務中斷，以及影響環境或使用者的穩定性問題。如果 IBM 在您的環境內偵測到重要事件，則會透過**狀態**頁面上的通知來通知您。您也可以檢查「狀態」頁面，以尋找平台或您服務的任何已知問題。如需「狀態」頁面的相關資訊，請參閱[檢視狀態](../admin/index.html#oc_status)。 
+重要偶發事件包含緊急、非預期的服務中斷，以及影響環境或使用者的穩定性問題。如果 IBM 在您的環境內偵測到重要偶發事件，則會透過**狀態**頁面上的通知來通知您。您也可以檢查「狀態」頁面，以尋找平台或您服務的任何已知問題。如需「狀態」頁面的相關資訊，請參閱[檢視狀態](../admin/index.html#oc_status)。 
 
 如果您要整合您的通知與支援 Webhook 的 Web 服務，請參閱[通知及事件訂閱](../admin/index.html#oc_eventsubscription)，以取得如何延伸通知功能的相關資訊。
 
-![事件回應程序](images/incidentresponseprocess.png "事件回應程序")
+![偶發事件回應程序](images/incidentresponseprocess.png "偶發事件回應程序")
 
-*圖 2. 事件回應程序*
+*圖 2. 偶發事件回應程序*
 
-根據問題，您及（或）IBM 會一起合作來修正問題。如果您有關於事件的問題，或者需要 IBM 業務代表來協助您解決問題，則可以開啟支援問題單。如需如何聯絡支援中心的相關資訊，請參閱[聯絡支援中心](../support/index.html#contacting-bluemix-support-local)。
+根據問題，您及（或）IBM 會一起合作來修正問題。如果您有關於偶發事件的問題，或者需要 IBM 業務代表來協助您解決問題，則可以開啟支援問題單。如需如何聯絡支援中心的相關資訊，請參閱[聯絡支援中心](../support/index.html#contacting-bluemix-support-local)。
 
 **附註**：我們會 24 小時全年無休地監視嚴重性 1 支援問題單。其他問題單的處理時間是從星期日晚上 10:00 GMT 到星期六凌晨 12:00 GMT。如需支援問題單嚴重性以及與支援中心合作的相關資訊，請參閱<a href="../support/index.html#contacting-bluemix-support-local">聯絡支援中心</a>。
 
-## 災難回復
+## {{site.data.keyword.Bluemix_notm}} 本端的災難回復
 {: #dr}
 
 「{{site.data.keyword.Bluemix_short}} 本端」災難回復的設定方式與使用「{{site.data.keyword.Bluemix_short}} 公用」類似。「{{site.data.keyword.Bluemix_short}} 公用」提供一個連續可用的平台，以使用多種失敗安全的措施來進行創新，確保您的組織、空間及應用程式隨時可用。將應用程式部署至多個地理區域會啟用持續可用性，以免於非計劃性地同時損失多個硬體或軟體元件，或損失整個資料中心，以便即使在某個地理位置發生自然災難時，仍將可以使用替代地理位置中的分散式「{{site.data.keyword.Bluemix_notm}} 公用」應用程式實例。

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-22"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # 使用 {{site.data.keyword.weather_short}} REST API
 {: #rest_apis}
-
-上次更新时间：2016 年 8 月 22 日
-{: .last-updated}
 
 您可以使用 [REST API](https://twcservice.{APPDomain}/rest-api/){:new_window} 来检索天气数据。可以测试 API 操作并立即查看结果，以帮助您更快地构建应用程序。
 {: shortdesc}

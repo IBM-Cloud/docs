@@ -4,50 +4,78 @@ copyright:
   years: 2014, 2016
 
 ---
-
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
 
-# Perguntas frequentes {: #faq} 
+# Perguntas frequentes {: #faq}
 
-*Última atualização: 18 de julho de 2016*
+*Última atualização: 19 de outubro de 2016*
 {: .last-updated}
 
-
-## Como os preços variam dependendo do plano que eu escolher? {: #plan-price}
-A precificação varia dependendo do plano escolhido. Para obter mais informações sobre precificação, consulte a [Folha de precificação do IBM Bluemix](https://console.ng.bluemix.net/pricing/){: new_window} ou use a [Calculadora](https://console.ng.bluemix.net/?direct=classic/#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window} para obter estimativas mais detalhadas.
+Esta FAQ fornece respostas às perguntas comuns sobre o serviço {{site.data.keyword.objectstorageshort}}.
+{: shortdesc}
 
 
 ## Quais contas e planos de pagamento posso usar para o {{site.data.keyword.objectstorageshort}}? {: #account-payment}
-O serviço {{site.data.keyword.objectstorageshort}} é fornecido com várias opções de planos. A partir de nossa liberação de disponibilidade geral, dois planos são oferecidos no momento, Padrão e Grátis. O plano Padrão está disponível somente para Contas pagas do {{site.data.keyword.Bluemix_notm}}, seja Pagamento por uso ou Assinatura, e para usuários internos da IBM. O plano Padrão inclui um Abono de crédito grátis introdutório de 5 GB no uso de armazenamento por conta.
 
-Contas para teste que ainda estejam ativas podem usar o plano Grátis, que permite a existência de somente uma instância em uma Organização do {{site.data.keyword.Bluemix_notm}}. Depois que o tempo na avaliação do {{site.data.keyword.Bluemix_notm}} expirar, a instância de serviço associada do {{site.data.keyword.objectstorageshort}} será desativada, ou seja, a conta de armazenamento não poderá ser acessada pela interface com o usuário ou pela linha de comandos do {{site.data.keyword.Bluemix_notm}}. Depois de um período de cortesia de 30 dias, sua conta do {{site.data.keyword.Bluemix_notm}} será limpa e todos os dados excluídos. Para evitar perda de dados, recomenda-se fazer upgrade para uma Conta paga do {{site.data.keyword.Bluemix_notm}} o mais rápido possível. Para fazer upgrade de sua conta, clique no menu de gerenciamento de usuários e selecione **Conta**, que fornece instruções sobre o processo de upgrade.
+O serviço {{site.data.keyword.objectstorageshort}} oferece duas opções de plano, Free e Standard. A [precificação](https://console.ng.bluemix.net/pricing/) varia dependendo do plano escolhido.
+
+<table>
+  <tr>
+    <th> Plano grátis </th>
+    <th> Plano padrão </th>
+  </tr>
+  <tr>
+    <td> Permite que exista somente uma instância de serviço por vez em uma organização do {{site.data.keyword.Bluemix_notm}} </td>
+    <td> Instâncias de serviço ilimitadas</td>
+  </tr>
+  <tr>
+    <td> Disponível para todos </td>
+    <td> Disponível somente para contas pagas do {{site.data.keyword.Bluemix_notm}} e usuários internos da IBM </td>
+  </tr>
+  <tr>
+    <td> Free </td>
+    <td> Pague conforme o uso ou planos de pagamento de assinatura </td>
+  </tr>
+  <tr>
+    <td> Inclui um limite de uso de armazenamento introdutório de 5 GB </td>
+    <td> Armazenamento ilimitado </td>
+  </tr>
+</table>
+
+*Tabela 1: Comparação dos planos Free e Standard*
+
+**Atenção**: os usuários que trabalham com uma conta para teste
+do {{site.data.keyword.Bluemix_notm}} podem usar o plano Free. Depois que o
+tempo da sua avaliação expirar, a instância de serviço do
+{{site.data.keyword.objectstorageshort}} associada será desativada, significando
+que você não conseguirá acessar a conta de armazenamento. Após 30 dias, sua conta do
+{{site.data.keyword.Bluemix_notm}} será limpa e todos os dados excluídos. Para
+evitar a perda de dados, faça upgrade para uma
+[Conta do {{site.data.keyword.Bluemix_notm}} paga](https://new-console.ng.bluemix.net/docs/admin/account.html) assim que for possível.
 
 ## Como mudar meu plano? {: #changeplan}  
-É possível fazer upgrade de instâncias criadas por meio de Beta ou no plano Grátis para o plano Padrão. A organização associada deve ser uma conta paga do {{site.data.keyword.Bluemix_notm}}. Não é possível fazer upgrade de contas para teste com instâncias do {{site.data.keyword.objectstorageshort}} para o plano Padrão, e fazer downgrade de instâncias no plano Padrão para outros planos. Ao fazer upgrade, sua instância de serviço e dados do cliente são movidos para o novo plano.
+É possível fazer upgrade de instâncias criadas por meio de Beta ou no plano Grátis para o plano Padrão. A organização associada deve ser uma conta paga do {{site.data.keyword.Bluemix_notm}}. As
+contas para teste com instâncias de armazenamento de objeto não podem ser atualizadas
+para o plano Standard e não é possível fazer downgrade das instâncias no plano Standard para
+outros planos. Ao fazer upgrade, sua instância de serviço e dados do cliente são movidos para o novo plano.
 
-Para fazer upgrade do plano:
+Para fazer upgrade:
 1.	Na interface com o usuário do {{site.data.keyword.objectstorageshort}}, clique em **Plano**.
 2.	Selecione **Padrão** como o novo plano e, em seguida, clique em **Salvar**.
 
-Também é possível mudar seu plano de pagamento usando a interface de linha de comandos. Para obter mais informações, consulte [Como mudar seu plano](../../pricing/index.html#changing).
-
+É possível também [mudar seu plano de pagamento](../../pricing/index.html#changing) usando a interface da linha de comandos.
 
 ## Como serei encarregado e cobrado pelo meu uso do {{site.data.keyword.objectstorageshort}}? {: #charge-bill}
 
-O serviço do {{site.data.keyword.objectstorageshort}} cobra somente pelo que você usa.  Não há taxa mínima, taxas de configuração ou compromissos para iniciar o uso do serviço. Não há cobrança por solicitação de API ou tráfego de rede por dados de entrada.
+O serviço do {{site.data.keyword.objectstorageshort}} cobra somente pelo que você usa.  Não
+há taxas de configuração ou compromissos para começar a usar o serviço. Você não é
+cobrado por solicitações de API ou tráfego de rede de dados de entrada.
 
-Seu uso do {{site.data.keyword.objectstorageshort}} é faturado com base no uso de armazenamento dentro do ciclo de faturamento. Isto inclui todos os dados de objeto nos contêineres que foram criados em sua conta da organização no {{site.data.keyword.Bluemix_notm}}. 
+O {{site.data.keyword.objectstorageshort}} é faturado com base no seu uso de armazenamento dentro do ciclo de faturamento. Isso inclui todos os dados do objeto em contêineres que você criou dentro da organização do {{site.data.keyword.Bluemix_notm}}.
 
-Os encargos de Transferência dos dados de saída se aplicam sempre quando dados são lidos a partir de quaisquer dos seus contêineres de objetos na rede pública. A largura da banda de saída pública é faturada para toda a largura de banda consumida no ciclo de faturamento.
+Um encargo de Transferência de dados de saída se aplica sempre que os dados são
+lidos de qualquer contêiner de objeto por meio da rede pública. Toda a largura de banda
+que é consumida no ciclo de faturamento é faturada como Largura de banda de saída pública.
 
-Os componentes de métricas para a precificação do {{site.data.keyword.objectstorageshort}} são os seguintes:
-* Uso de armazenamento  - $0.04 por GB por mês
-* Transferência de dados de saída pública  - $0.09 por GB por mês 
-
-Ao final do ciclo de faturamento, o {{site.data.keyword.Bluemix_notm}}  faturará o cliente automaticamente pelo uso no período de faturamento atual. É possível visualizar seus encargos para o período atual de faturamento via relatório do {{site.data.keyword.Bluemix_notm}}.
-
-O plano de serviço padrão que é liberado para Londres e Dallas têm a mesma precificação.
-
-## Como a replicação de dados é executada no {{site.data.keyword.objectstorageshort}}? {: #replication}
-O serviço {{site.data.keyword.objectstorageshort}} mantém três cópias de seus dados, que são replicadas entre múltiplos nós de armazenamento. Para obter informações adicionais, consulte o documento [OpenStack Swift Replication](http://docs.openstack.org/developer/swift/overview_replication.html){: new_window}.
-
+Ao final do ciclo de faturamento, o {{site.data.keyword.Bluemix_notm}} fatura automaticamente o uso durante esse período. É possível visualizar seus encargos para o período atual de faturamento via relatório do {{site.data.keyword.Bluemix_notm}}.

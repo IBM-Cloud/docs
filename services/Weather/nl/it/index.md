@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Introduzione a {{site.data.keyword.weather_short}}
 {: #insights_weather_overview}
-
-Ultimo aggiornamento: 28 luglio 2016
-{: .last-updated}
 
 Utilizza {{site.data.keyword.weatherfull}} per incorporare i dati meteo da
 The Weather Company (TWC) nelle tue applicazioni {{site.data.keyword.Bluemix}}.
@@ -102,7 +100,7 @@ La mancata immissione delle credenziali corrette comporterà il ricevimento di u
 
 ## general
 {: #general}
-* [Aggiunta di un servizio alla tua applicazione](../reqnsi.html){: new_window}
+* [Aggiunta di un servizio alla tua applicazione](/docs/services/reqnsi.html){: new_window}
 * [Sviluppo end-to-end](https://console.{DomainName}/docs/cfapps/ee.html){: new_window}
 * [Listino prezzi di {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/){: new_window}
 * [Prerequisiti di {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

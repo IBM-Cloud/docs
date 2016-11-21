@@ -77,7 +77,7 @@ copyright:
 |{{site.data.keyword.weather_short}}		|예		|예		|예|
 |{{site.data.keyword.IntegrationTestingshort}}	|예		|예		|아니오|
 |{{site.data.keyword.iot_short}}		|예		|예		|아니오|
-|{{site.data.keyword.keymanagementserviceshort}}	|아니오		|예		|아니오|
+|{{site.data.keyword.keymanagementserviceshort}}	|예		|예		|아니오|
 |{{site.data.keyword.languagetranslationshort}}	|예		|예		|예|
 |{{site.data.keyword.messagehub}}		|예		|예		|아니오|
 |{{site.data.keyword.messageresonanceshort}}	|예		|예		|아니오|

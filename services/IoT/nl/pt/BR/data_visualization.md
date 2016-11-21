@@ -54,10 +54,10 @@ Clique em **Mostrar mais** para a lista completa de tipos de cartão.
  1.	Forneça ao conjunto de dados um nome de identificação.
  2. Selecione um evento que inclua o ponto de dados que você deseja exibir.
  3.	Selecione a propriedade que representa o ponto de dados.
- 4.	Configure o tipo, a unidade, a precisão e os valores mínimo e máximo para o ponto de dados.
+ 4.	Configure o tipo, a unidade, a precisão e os valores mínimo e máximo para o ponto de dados.  
  Quando você tiver terminado, será possível clicar em **Novo conjunto de dados** para incluir mais conjuntos de dados ou clicar em **Avançar**.
 5.	Selecione a visualização.  
-Selecione o tipo e o tamanho da visualização que você deseja usar. Alguns tipos de cartão têm mais configurações.
+Selecione o tipo e o tamanho da visualização que você deseja usar.  Alguns tipos de cartão têm mais configurações.
 <dl>
 <dt>Uso</dt>
 <dd>
@@ -107,7 +107,7 @@ Selecione o tipo e o tamanho da visualização que você deseja usar. Alguns tip
 <tbody>
 <tr>
 <td>Visualização genérica</td>
-<td>O valor de um ou mais conjuntos de dados. </br>**Dica:** para ver até três valores de pontos de dados em uma tabela pequena, escolha o tamanho de widget grande. </td>
+<td>O valor de um ou mais conjuntos de dados. </br>**Dica:** para ver até três valores de pontos de dados em uma tabela pequena, escolha o tamanho de widget grande.  </td>
 </tr>
 <tr>
 <td>Gráfico em tempo real</td>
@@ -127,7 +127,7 @@ Selecione o tipo e o tamanho da visualização que você deseja usar. Alguns tip
 </tr>
 <tr>
 <td>Medidor</td>
-<td>O valor de um conjunto de dados mostrado como um medidor. É possível configurar limites de exibição para valores bom, justo e crítico do conjunto de dados. Use o menu Configurações para opcionalmente configurar limites do medidor para intervalos de dados inferior, intermediário e superior. </td>
+<td>O valor de um conjunto de dados mostrado como um medidor. É possível configurar limites de exibição para valores bom, justo e crítico do conjunto de dados. Use o menu Configurações para opcionalmente configurar limites do medidor para intervalos de dados inferior, intermediário e superior.  </td>
 </tr>
 </tbody>
 </table>
@@ -179,7 +179,7 @@ Selecione o tipo e o tamanho da visualização que você deseja usar. Alguns tip
 </dd>
 </dl>
 
-6. Especifique a origem de dados para o cartão.
+6. Especifique a origem de dados para o cartão.  
 Dependendo do tipo de cartão selecionado, os dados exibidos em um cartão podem vir de um dispositivo ou de outro cartão. Selecione um dispositivo específico, uma lista de dispositivos ou um cartão de lista de alertas para a origem de dados e clique em **Avançar**.
 7. Somente para cartões de tipo de dispositivo: inclua um ou mais conjuntos de dados para exibir no cartão.   
  1. Clique em **Conectar conjunto de dados** para incluir uma propriedade para exibir no cartão.
@@ -188,7 +188,7 @@ Dependendo do tipo de cartão selecionado, os dados exibidos em um cartão podem
  4. Insira ou selecione a propriedade para exibir.
  5. Especifique o tipo da propriedade e, opcionalmente, configure a unidade, a precisão, os valores mínimo e máximo para a propriedade.  
  6. Clique em **Avançar**.
-7. Selecione o tamanho da apresentação.
+7. Selecione o tamanho da apresentação.   
 Para determinados tipos de cartão, é possível clicar em **Configurações** para configurar detalhes de visualização adicionais. Clique em **Avançar**.
 7. Forneça um título e uma descrição para o cartão e, opcionalmente, selecione um esquema de cores e, em seguida, clique em **Enviar** para criar o cartão.
 7.	Por fim, posicione o novo cartão em sua placa arrastando-o para uma boa localização.  

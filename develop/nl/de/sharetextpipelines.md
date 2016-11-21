@@ -123,7 +123,7 @@ job: <Jobname>			   	;nur für Job-Eingaben
 ```
 {: codeblock} 
 
-Trigger:
+Auslöser:
 ```
 type: 'commit' | 'stage'
 [enabled: 'true | 'false'] ;true, wenn keine Angabe gemacht wird
@@ -189,7 +189,8 @@ Bevor die Pipeline aus einer Datei des Typs `pipeline.yml` erstellt wird, werden
         target:
           url: http://api.ng.bluemix.net
           organization: ${CF_ORGANIZATION}
-        script: \"echo ${CF_ORGANIZATION}\"...
+        script: \"echo ${CF_ORGANIZATION}\"                
+      ...
     "
   }
 }

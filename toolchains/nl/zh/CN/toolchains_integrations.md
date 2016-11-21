@@ -13,7 +13,7 @@ copyright:
 # 配置工具集成
 {: #integrations}
 
-上次更新时间：2016 年 9 月 13 日
+上次更新时间：2016 年 10 月 18 日
 {: .last-updated}
 
 您可以在创建工具链时配置支持开发、部署和操作任务的工具集成，或者您可以添加并配置工具集成，以定制现有工具链。  
@@ -21,22 +21,23 @@ copyright:
 
 **重要信息**：在 {{site.data.keyword.Bluemix_notm}} Public 中，工具链仅在美国南部区域可用。
 
-根据您是在 {{site.data.keyword.Bluemix_notm}} Public 还是 {{site.data.keyword.Bluemix_notm}} Dedicated 中使用工具链，工具链可添加和配置的工具集成有所不同。
+根据您是在 {{site.data.keyword.Bluemix_notm}} Public 还是 {{site.data.keyword.Bluemix_notm}} Dedicated 中使用工具链，工具链可添加和配置的工具集成有所不同。如果要在 {{site.data.keyword.Bluemix_notm}} Dedicated 上使用工具链，那么哪些工具集成可用将取决于 {{site.data.keyword.jazzhub_title}} 在您的特定环境中如何设置。
 
 *表 1. {{site.data.keyword.Bluemix_notm}} Public 和 Dedicated 中，工具链可使用的工具集成*
 
-|工具集成 |在 {{site.data.keyword.Bluemix_notm}} Public 中可用	|在 {{site.data.keyword.Bluemix_notm}} Dedicated 中可用|
+|工具集成 |在 {{site.data.keyword.Bluemix_notm}} Public 中可用	|在 {{site.data.keyword.Bluemix_notm}} Dedicated 中可用（具体取决于环境）|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.deliverypipeline}} 		|是	   	|是  		|
 |{{site.data.keyword.DRA_short}} 		|是		|否			|
 |Eclipse Orion {{site.data.keyword.webide}}		|是		|是			|
-|GitHub		|是		|否		|
+|GitHub		|是		|是		|
 |Dedicated GitHub Enterprise			|否		|是		|
-|PagerDuty			|是		|否		|
+|Other Tool			|是		|是		|
+|PagerDuty			|是		|是		|
 |Sauce Labs		|是		|否		|
-|Slack			|是		|否		|
+|Slack			|是		|是		|
 
-**提示**：如果您想要在 {{site.data.keyword.Bluemix_notm}} Public 中开始使用源代码进行开发，请配置 GitHub 工具集成，然后再配置 {{site.data.keyword.deliverypipeline}}。如果您想要在 {{site.data.keyword.Bluemix_notm}} Dedicated 中开始使用代码进行开发，请配置 {{site.data.keyword.ghe_short}} 工具集成，然后再配置 {{site.data.keyword.deliverypipeline}}。 
+**提示**：如果您想要在 {{site.data.keyword.Bluemix_notm}} Public 中开始使用源代码进行开发，请配置 GitHub 工具集成，然后再配置 {{site.data.keyword.deliverypipeline}}。如果要在 {{site.data.keyword.Bluemix_notm}} Dedicated 上开始使用您的代码进行开发，请先配置 {{site.data.keyword.ghe_short}} 工具集成或 GitHub 工具集成，然后再配置 {{site.data.keyword.deliverypipeline}}。 
 
 
 ## 配置 Delivery Pipeline
@@ -47,7 +48,7 @@ copyright:
 配置 {{site.data.keyword.deliverypipeline}} 以自动持续构建、测试和部署应用程序： 
 
 1. 如果您在创建工具链时配置此工具集成，请在“可配置的集成”部分中，单击 **Delivery Pipeline**。根据您所使用的模板，可能会有不同的字段可用。请复查缺省字段值，如果必要，更改那些设置。
-1. 如果您在 {{site.data.keyword.Bluemix_notm}} Public 中具有某个工具链，且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。如果您在 {{site.data.keyword.Bluemix_notm}} Dedicated 中使用工具链，请在仪表板的 **DEVOPS** 选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的右上角，单击**查看工具链**。然后，单击**工具集成**。 
+1. 如果您在 {{site.data.keyword.Bluemix_notm}} Public 中有工具链，并且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**页面上单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。如果您在 {{site.data.keyword.Bluemix_notm}} Dedicated 中使用工具链，请在仪表板的 **DEVOPS** 选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的右上角，单击**查看工具链**。然后，单击**工具集成**。 
 1. 单击添加按钮 (+)。
 1. 在“工具集成”部分中，单击 **Delivery Pipeline**。
 1. 指定新管道的名称。
@@ -108,7 +109,7 @@ npm install
  
 添加 {{site.data.keyword.DRA_short}}，以在发行部署之前，监视这些部署以识别风险，从而保持并提高 {{site.data.keyword.Bluemix_notm}} 中代码的质量。
 
-1. 如果您具有工具链，且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。 
+1. 如果您有工具链，并且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**页面上单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。 
 1. 单击添加按钮 (+)。
 1. 在“工具集成”部分中，单击 **Deployment Risk Analytics**。 
 1. 单击**创建集成**。
@@ -124,7 +125,7 @@ Eclipse Orion {{site.data.keyword.webide}} 是基于 Web 的集成环境，您�
  
 要完成源代码控制任务，请添加 Eclipse Orion {{site.data.keyword.webide}} 工具集成：
 
-1. 如果您在 {{site.data.keyword.Bluemix_notm}} Public 中具有某个工具链，且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。如果您在 {{site.data.keyword.Bluemix_notm}} Dedicated 中使用工具链，请在仪表板的 **DEVOPS** 选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的右上角，单击**查看工具链**。然后，单击**工具集成**。
+1. 如果您在 {{site.data.keyword.Bluemix_notm}} Public 中有工具链，并且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**页面上单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。如果您在 {{site.data.keyword.Bluemix_notm}} Dedicated 中使用工具链，请在仪表板的 **DEVOPS** 选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的右上角，单击**查看工具链**。然后，单击**工具集成**。
 1. 单击添加按钮 (+)。
 1. 在“工具集成”部分中，单击 **Eclipse Orion Web IDE**。 
 1. 单击**创建集成**。
@@ -144,12 +145,12 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
 
 1. 如果您在创建工具链时配置此工具集成，请遵循以下步骤：
 
- a. 在“可配置的集成”部分中，单击 **GitHub**。如果您未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitHub，请单击**授权**，以转至 GitHub Web 站点。如果您没有活动 GitHub 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitHub 帐户。如果您具有活动 GitHub 会话但最近未输入过密码，那么系统可能会提示您输入 GitHub 密码以进行确认。
+ a. 在“可配置的集成”部分中，单击 **GitHub**。如果您要在 {{site.data.keyword.Bluemix_notm}} Public 上创建工具链，但尚未授权 {{site.data.keyword.Bluemix_notm}} 访问 GitHub，请单击**授权**以转至 GitHub Web 站点。如果您没有活动 GitHub 会话，那么系统会提示您登录。单击**授权应用程序**，以允许 {{site.data.keyword.Bluemix_notm}} 访问 GitHub 帐户。如果您具有活动 GitHub 会话但最近未输入过密码，那么系统可能会提示您输入 GitHub 密码以进行确认。
  
  b. 复查 GitHub 存储库的缺省目标存储库位置。那些存储库是从样本存储库克隆而来。如果需要，请更改目标存储库的名称。
 ![缺省目标存储库位置](images/toolchain_github_config.png)
    
-1. 如果您具有工具链，且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。 
+1. 如果您有工具链，并且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**页面上单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。 
 1. 单击添加按钮 (+)。
 1. 在“工具集成”部分中，单击 **GitHub**。
 1. 如果您具有 GitHub 存储库且想要使用它，请输入 URL。对于存储库类型，请单击**链接**。
@@ -187,7 +188,7 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
  
  c. 复查新 {{site.data.keyword.ghe_short}} 存储库的缺省名称。如果需要，请更改新存储库的名称。下图显示了从样本存储库克隆的存储库示例。您可以使用现有存储库或新存储库。要使用新存储库，您可以创建空的存储库、克隆存储库或派生存储库。![缺省存储库位置](images/toolchain_ghe_config.png)
    
-1. 如果您在 {{site.data.keyword.Bluemix_notm}} Public 中具有某个工具链，且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。如果您在 {{site.data.keyword.Bluemix_notm}} Dedicated 中使用工具链，请在仪表板的 **DEVOPS** 选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的右上角，单击**查看工具链**。然后，单击**工具集成**。
+1. 如果您在 {{site.data.keyword.Bluemix_notm}} Public 中有工具链，并且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**页面上单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。如果您在 {{site.data.keyword.Bluemix_notm}} Dedicated 中使用工具链，请在仪表板的 **DEVOPS** 选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的右上角，单击**查看工具链**。然后，单击**工具集成**。
 1. 单击添加按钮 (+)。
 1. 在“工具集成”部分中，单击 **{{site.data.keyword.ghe_short}}**。
 1. 如果您具有 {{site.data.keyword.ghe_short}} 存储库且想要使用，请输入该存储库的 URL。对于存储库类型，请单击**现有**。
@@ -209,6 +210,27 @@ GitHub Issues 是一种跟踪工具，可将您的全部工作和计划保留在
 
 <!-- 8/23/2016: The GHE Dedicated content has been moved to docs-staging/services/ghededicated/index.md -->
 
+## 配置定制工具 (Other Tool)
+{: #othertool}
+
+如果您的团队使用工具链集成列表中不包含的工具，那么您可以集成定制工具。 
+
+配置定制工具，以便与工具链中的其他工具一起使用，并且可供您的团队使用：
+1. 如果要在创建工具链时配置此工具集成，请在“可配置的集成”部分中，单击 **Other Tool**。
+
+1. 如果您有工具链，并且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**页面上单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。
+1. 单击添加按钮 (+)。
+1. 在“工具集成”部分中，单击 **Other Tool**。
+1. 输入工具名称。
+1. 选择与该工具关联最紧密的生命周期阶段。选择哪个生命周期阶段将决定在“工具链集成”页面中，您的工具列在哪个类别之下。
+1. 添加图标 URL。该图标将显示在工具集成卡上。
+1. 添加文档 URL。
+1. 指定工具实例名称。例如：我的团队工具。
+1. 添加工具实例 URL。单击工具集成卡可转至您为该工具实例所列出的 URL。
+1. 添加工具的描述。
+1. （高级）根据需要添加其他属性。例如，列出您的工具与工具链中其他工具集成所需的任何信息或属性。  
+1. 单击**创建集成**。
+
 ## 配置 PagerDuty
 {: #pagerduty}
 
@@ -217,7 +239,7 @@ PagerDuty 可将多个监视系统的数据集成到单一视图。发生问题�
 配置 PagerDuty，以在发生管道阶段失败时发送通知，以便您可以更快速地修正问题，并缩短停机时间：
 
 1. 如果您在创建工具链时配置此工具集成，请在“可配置的集成”部分中，单击 **PagerDuty**。
-1. 如果您具有工具链，且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。 
+1. 如果您有工具链，并且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**页面上单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。 
 1. 单击添加按钮 (+)。
 1. 在“工具集成”部分中，单击 **PagerDuty**
 1. 输入与 PagerDuty 帐户相关联的 PagerDuty 站点名称。如果您没有 PagerDuty 帐户，请[注册帐户（在新窗口中打开链接）](https://signup.pagerduty.com/accounts/new){: new_window}。
@@ -239,7 +261,7 @@ Sauce Labs 运行功能单元测试。当 Sauce Labs 测试套件配置为 {{sit
 配置 Sauce Labs，以在多个操作系统和浏览器上运行自动功能测试，以便您可以模拟用户可能使用 Web 站点或应用程序的方式。
 
 1. 如果您在创建工具链时配置此工具集成，请在“可配置的集成”部分中，单击 **Sauce Labs**。
-1. 如果您具有工具链，且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。 
+1. 如果您有工具链，并且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**页面上单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。 
 1. 单击添加按钮 (+)。
 1. 在“工具集成”部分中，单击 **Sauce Labs**。
 1. 输入与 Sauce Labs 帐户相关联的用户名。您可以[在 Sauce Labs 帐户页面顶部的欢迎消息中查找用户名（在新窗口中打开链接）](https://saucelabs.com/account){: new_window}。
@@ -262,7 +284,7 @@ Slack 是基于云的实时消息传递和通知系统。Slack 提供持久交�
 配置 Slack，以从工具集成接收有关工具链的通知，如测试和部署活动：
 
 1. 如果您在创建工具链时配置此工具集成，请在“可配置的集成”部分中，单击 **Slack**。
-1. 如果您具有工具链，且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**选项卡上，单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。
+1. 如果您有工具链，并且要将此工具集成添加到该工具链，请在 DevOps 仪表板的**工具链**页面上单击该工具链，以打开其“工具集成”页面。或者，在应用程序“概述”页面的“持续交付”磁贴上，单击**查看工具链**。然后，单击**工具集成**。
 1. 单击添加按钮 (+)。
 1. 在“工具集成”部分中，单击 **Slack**。
 1. 输入 Slack 帐户的 API 认证令牌。您必须使用生成的完全访问令牌，向 Slack 进行认证。有关查找令牌的指示信息，请参阅 [Slack 认证（在新窗口中打开链接）](https://api.slack.com/web#authentication){: new_window}。
@@ -271,3 +293,11 @@ Slack 是基于云的实时消息传递和通知系统。Slack 提供持久交�
 1. 单击 Slack 的磁贴。您可以在已配置的 Slack 通道中查看工具链的所有活动。
 
 要了解更多信息，请参阅 [Slack（在新窗口中打开链接）](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}。
+
+
+
+
+
+
+
+

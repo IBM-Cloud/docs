@@ -18,7 +18,7 @@ copyright:
 # CLI と開発ツール
 {: #cli}
 
-*最終更新日: 2016 年 6 月 28 日*
+*最終更新日: 2016 年 10 月 25 日*
 {: .last-updated}
 
 {{site.data.keyword.Bluemix_short}} では、統合コマンド・ライン・インターフェースおよび CLI プラグインなどの強力なツールにアクセスできます。これらの各 CLI のダウンロードは、ユーザーの {{site.data.keyword.Bluemix_notm}} 体験をサポートするためにすべて使用可能です。
@@ -29,7 +29,7 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}} の体験をサポートするコマンド・ライン・インターフェースをダウンロードしてインストールします。 
 
-仮想サーバー管理に使用する [OpenStack CLI ツール](../virtualmachines/vm_index.html#vm_setup_cli){: new_window}を除き、Cloud Foundry cf コマンド・ライン・ツールは、他のすべての {{site.data.keyword.Bluemix_notm}} CLI ツールの前提条件です。{{site.data.keyword.Bluemix_notm}} コマンド・ライン・ツールでは、Cloud Foundry アプリケーションの他に、{{site.data.keyword.Bluemix_notm}} 環境を管理するための拡張機能も体験できます。
+Cloud Foundry cf コマンド・ライン・ツールは、すべての {{site.data.keyword.Bluemix_notm}} CLI ツールの前提条件です。{{site.data.keyword.Bluemix_notm}} コマンド・ライン・ツールでは、Cloud Foundry アプリケーションの他に、{{site.data.keyword.Bluemix_notm}} 環境を管理するための拡張機能も体験できます。
 
 デフォルトでは、CLI ツールは両方とも 443 ポートを使用します。CLI ツールと {{site.data.keyword.Bluemix_notm}} 環境の間に HTTP プロキシーがある場合、実際の HTTP プロキシーの URL とポート (ある場合) を使用して、`http-proxy` 環境変数を構成する必要があります。詳しくは、『[Using the CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}』を参照してください。
 
@@ -44,15 +44,22 @@ copyright:
 ご使用の {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースを、多くのコマンドで簡単に拡張します。{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースのプラグインにアクセスするには、『[ CLI プラグイン・リポジトリー](https://plugins.ng.bluemix.net/)』を参照してください。
 
 ### {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースの拡張: bx
+{: cli_bluemix_ext}
 
-1. {{site.data.keyword.Bluemix_notm}} レジストリーから {{site.data.keyword.Bluemix_notm}} CLI プラグインをインストールするには、プラグイン・レジストリーのエンドポイントを次のようにして設定します。
+* {{site.data.keyword.Bluemix_notm}} レジストリーから {{site.data.keyword.Bluemix_notm}} CLI プラグインをインストールするには、プラグイン・レジストリーのエンドポイントを次のようにして設定します。
+
 ```
-bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx https://plugins.ng.bluemix.net
 ```
-2. プラグインをインストールするには、次のコマンドを実行します。
+{: codeblock}
+
+* 次に、以下のコマンドを実行してプラグインをインストールします。
+
 ```
-bluemix plugin install plugin_name -r bluemix-bx-staging
+bluemix plugin install plugin_name -r bluemix-bx
 ```
+{: codeblock}
+
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *ネットワーク・セキュリティー・グループ* |
 |-----|-----|-----|
@@ -60,15 +67,22 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 
 ### Cloud Foundry コマンド・ライン・インターフェースの拡張: cf
+{: cli_cf_ext}
 
-1. {{site.data.keyword.Bluemix_notm}} レジストリーから cf CLI プラグインをインストールするには、プラグイン・レジストリーのエンドポイントを次のようにして設定します。
+* {{site.data.keyword.Bluemix_notm}} レジストリーから cf CLI プラグインをインストールするには、プラグイン・レジストリーのエンドポイントを次のようにして設定します。
+
 ```
-cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf https://plugins.ng.bluemix.net
 ```
-2. プラグインをインストールするには、次のコマンドを実行します。
+{: codeblock}
+
+* 次に、以下のコマンドを実行してプラグインをインストールします。
+
 ```
-cf install-plugin plugin_name -r bluemix-cf-staging
+cf install-plugin plugin_name -r bluemix-cf
 ```
+{: codeblock}
+
 
 | *Active Deploy* | *管理コンソール* | 
 |-----------------|-----------------|
@@ -77,8 +91,6 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
 | プラグイン名: ibm-containers<br> [資料の表示](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | プラグイン名: VPN <br> [資料の表示](./plugins/vpn/index.html) |
-
-<!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
 ## ![](./images/Integrated_Dev_Tools.svg) 統合開発ツール

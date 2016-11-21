@@ -2,17 +2,18 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:shortdesc: .shortdesc}
 
 # iOS Objective-C SDK 설정 
 {: #getting-started-ios}
 
-마지막 업데이트 날짜: 2016년 7월 17일
-{: .last-updated}
 
-{{site.data.keyword.amashort}} SDK를 사용하여 iOS 애플리케이션을 인스트루먼트하고, SDK를 초기화하며 보호 및 비보호 리소스에 대한 요청을 작성하십시오. {:shortdesc}
+
+{{site.data.keyword.amafull}} SDK를 사용하여 iOS 애플리케이션을 인스트루먼트하고, SDK를 초기화하며 보호 및 비보호 리소스에 대한 요청을 작성하십시오. 
+
+{:shortdesc}
 
 **중요:** Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만 새로운 Swift SDK를 위해 올해 말해 중단될 계획입니다. 새 애플리케이션에서는 Swift SDK를 사용하는 것이 좋습니다([iOS Swift SDK 설정](getting-started-ios-swift-sdk.html) 참조). 
 
@@ -35,13 +36,17 @@ copyright:
 ### CocoaPods 설치
 {: #install-cocoapods}
 
-1. 터미널을 열고 **pod --version** 명령을 실행하십시오. 이미 CocoaPods가 설치되어 있는 경우 버전 번호가 표시됩니다. SDK를 설치하기 위해 다음 섹션으로 건너뛸 수 있습니다. 
+1. 터미널을 열고 **pod --version** 명령을 실행하십시오. 이미 CocoaPods가 설치되어 있는 경우 버전 번호가 표시됩니다. SDK를 설치하는 다음 섹션으로 건너뛰십시오. 
 
 1. CocoaPods가 설치되어 있지 않은 경우에는 다음을 실행하십시오. 
+
 ```
 sudo gem install cocoapods
 ```
+
 자세한 정보는 [CocoaPods 웹 사이트](https://cocoapods.org/)를 참조하십시오.
+
+
 
 ### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #install-sdk-cocoapods}
@@ -57,8 +62,9 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 	pod 'IMFCore'
 	```
 
-1. `Podfile` 파일을 저장하고 명령행에서 `pod install`을 실행하십시오. <br/>Cocoapods가 추가된 종속 항목을 설치합니다. 진행상태 및 추가된 컴포넌트를 확인할 수 있습니다. <br/>
-**중요**: CocoaPods는 `xcworkspace` 파일을 생성합니다. 앞으로 프로젝트에 대해 작업하려면 이 파일을 열어야 합니다. 
+1. `Podfile` 파일을 저장하고 명령행에서 `pod install`을 실행하십시오. <br/>Cocoapods가 추가된 종속 항목을 설치하고 추가된 컴포넌트를 표시합니다.<br/>
+
+	**중요**: CocoaPods는 `xcworkspace` 파일을 생성합니다. 앞으로 프로젝트에 대해 작업하려면 이 파일을 열어야 합니다. 
 
 1. iOS 프로젝트 작업공간을 여십시오. CocoaPods에서 생성한 `xcworkspace` 파일을 여십시오. 예: `{your-project-name}.xcworkspace`. `open {your-project-name}.xcworkspace`를 실행하십시오. 
 
@@ -66,7 +72,6 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 {: #init-mca-sdk-ios}
 
 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려면 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`) 매개변수를 전달하여 SDK를 초기화해야 합니다.
-
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드의 기본 페이지에서 사용자 앱을 클릭하십시오. **모바일 옵션**을 클릭하십시오. SDK를 초기화하려면 **라우트** 및 **앱 GUID** 값이 필요합니다.
 
@@ -79,7 +84,7 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 	  #import <IMFCore/IMFCore.h>
 	
 	```
-	
+
 	####Swift
 	{: #sdk-swift}
 	
@@ -93,7 +98,7 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 	1. 프로젝트를 빌드하여 Xcode가 브리징 헤더를 선택 중인지 확인하십시오. 실패 메시지가 표시되지 않아야 합니다. 
 	
 1. 다음 코드를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드입니다. <br/>
-*applicationRoute* 및 *applicationGUID*를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션** 값으로 대체하십시오. 
+``applicationRoute`` 및 vapplicationGUID`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션** 값으로 바꾸십시오. 
 
 	####Objective-C
 	{: #sharedinstance-objc}
@@ -103,19 +108,35 @@ CocoaPods가 `Podfile` 파일을 작성하고 이 파일에서 사용자는 iOS 
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+
 	####Swift
 	{: #sharedinstance-swift}
 	```Swift
  		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
 
-## 모바일 백엔드에 대한 요청 작성
+## AuthorizationManager 초기화
+{{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 전달하여 `AuthorizationManager`를 초기화하십시오. {{site.data.keyword.amashort}} 서비스 타일의 **신임 정보 표시** 단추를 클릭하여 이 값을 찾으십시오. 
+
+####Objective-C
+	
+```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+  ```
+
+####Swift
+
+```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+ ```
+
+## 모바일 백엔드 애플리케이션에 대한 요청 작성
 {: #request}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK가 초기화되면 모바일 백엔드 요청을 시작할 수 있습니다.
+{{site.data.keyword.amashort}} 클라이언트 SDK가 설치되고 나면 모바일 백엔드 애플리케이션에 대한 요청 작성을 시작할 수 있습니다. 
 
-1. 브라우저에서 모바일 백엔드의 보호 엔드포인트에 요청을 전송하십시오. URL `{applicationRoute}/protected`를 여십시오. (예: `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}를 사용하여 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 브라우저에 `Unauthorized` 메시지가 리턴됩니다.
+1. 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트에 요청을 전송하십시오. URL `{applicationRoute}/protected`를 여십시오. (예: `http://my-mobile-backend.mybluemix.net/protected`)
+<br/>MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 브라우저에 `Unauthorized` 메시지가 리턴됩니다.
 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. `IMFClient`를 초기화한 후에 다음 코드를 추가하십시오. 
 

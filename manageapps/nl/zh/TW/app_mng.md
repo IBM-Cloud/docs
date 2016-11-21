@@ -5,7 +5,6 @@ copyright:
 
 ---
 
-
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
@@ -14,7 +13,7 @@ copyright:
 #管理 Liberty 及 Node.js 應用程式
 {: #app_management}
 
-*前次更新：2016 年 3 月 17 日*
+前次更新：2016 年 9 月 15 日
 {: .last-updated}
 
 「應用程式管理」是一組開發及除錯公用程式，可以針對您在 {{site.data.keyword.Bluemix}} 上的 Liberty 和 Node.js 應用程式啟用。
@@ -74,42 +73,8 @@ http://<yourappname>.mybluemix.net/bluemix-debug/shell
   inspector 處理程序是在應用程式容器中執行。使用此公用程式，可建立 CPU 使用率設定檔、新增岔斷點，以及對程式碼進行除錯，而這些作業都是應用程式在 {{site.data.keyword.Bluemix_notm}} 上執行時進行。如需 Node Inspector 模組的相關資訊，請參閱 [GitHub 上的 node-inspector](https://github.com/node-inspector/node-inspector){:new_window}。
   
   *inspector* 公用程式也會啟動 *proxy*。
-  
-  2. *strongpm*：啟用 [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window}，以使用 [StrongLoop Metrics、Profiling 及 Tracing](https://strongloop.com/node-js/devops-tools/){:new_window} 之類的公用程式來分析 Node.js 應用程式。
-    
-  *strongpm* 公用程式也會啟動 *proxy*。
-  
-  採取下列步驟，以使用 [StrongLoop Arc](https://strongloop.com/node-js/arc){:new_window} 來配置 Node.js 應用程式。
-
-    1. 配置 *strongpm* BlUEMIX_APP_MGMT_ENABLE 環境變數，然後重新編譯打包應用程式。
-    
-	```
-cf set-env <appname> BLUEMIX_APP_MGMT_ENABLE strongpm
-    cf restage <appname>
-    ```
 	
-    2. 從 Cloud Foundry 指令行中，新增應用程式的路徑，其中路徑裡的應用程式名稱後面附加了 "-pm"，例如 <appname>-pm.mybluemix.net。
-    
-	```
-cf map-route <appname> ng.bluemix.net -n <appname>-pm
-    ```
-	
-    3. 在本端工作站上安裝 [StrongLoop npm 模組](https://www.npmjs.com/package/strongloop){:new_window}。
-    
-	```
-npm install -g strongloop
-    ```
-	
-    4. 在 [StrongLoop 網站](https://strongloop.com/register/){:new_window}上建立帳戶。
-    5. 在本端工作站上啟動 Arc，並使用您建立的帳戶登入。
-    
-	```
-slc arc
-    ```
-	
-    6. 導覽至 Arc 內的「程序管理程式」視圖。將含有埠 80 的新建路徑輸入「程序管理程式」。按「啟動」按鈕。如需詳細資料，請參閱[有關使用 Arc 的完整文件](https://docs.strongloop.com/display){:new_window}。
-	
-  3. *trace*：如果您的應用程式使用 *log4js*、*ibmbluemix* 或 *bunyan* 記載模組，則會動態設定追蹤層次。
+  2. *trace*：如果您的應用程式使用 *log4js*、*ibmbluemix* 或 *bunyan* 記載模組，則會動態設定追蹤層次。
   
   **附註：**支援的相依關係版本：
 
@@ -118,6 +83,8 @@ slc arc
     * ibmbluemix：(1.0.0-20140707-1250)-(1.0.0-20150409-1328)
   
   移至 {{site.data.keyword.Bluemix_notm}} Web 主控台中的「實例詳細資料」頁面，然後選取**動作**以查看使用者介面。
+
+  使用 "-b buildpack" 選項啟動應用程式時，無法使用 *trace* 公用程式。
 
   *trace* 公用程式不會啟動 *proxy*。
 

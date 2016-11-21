@@ -20,10 +20,10 @@ copyright:
 提供的客户机库、样本和信息可帮助您将设备连接到 {{site.data.keyword.iot_full}} 组织和应用程序。
 {:shortdesc}
 
-您可以使用以下支持的协议和标准来编写代码，用于将设备连接到 {{site.data.keyword.iot_short}}。
+您可以使用以下受支持的协议和标准来编写代码，用于将设备连接到 {{site.data.keyword.iot_short}}。
 
 - C#
-- 嵌入式 C
+- Embedded C
 - Java
 - mBed C++
 - MQTT 消息传递

@@ -2,17 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # iOS용 {{site.data.keyword.amashort}} 클라이언트 SDK(Objective-C) 구성
 {: #custom-ios}
 
-마지막 업데이트 날짜: 2016년 7월 21일
-{: .last-updated}
 
-
-사용자 정의 인증을 사용하는 iOS 애플리케이션이 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하고 애플리케이션을 {{site.data.keyword.Bluemix}}에 연결하도록 구성하십시오.
+사용자 정의 인증을 사용하는 iOS 애플리케이션이 {{site.data.keyword.amafull}} 클라이언트 SDK를 사용하고 애플리케이션을 {{site.data.keyword.Bluemix}}에 연결하도록 구성하십시오.
 
 **참고:** Swift로 iOS 앱을 개발하는 경우 {{site.data.keyword.amashort}} 클라이언트 Swift SDK 사용을 고려하십시오. 이 페이지의 지시사항은 {{site.data.keyword.amashort}} 클라이언트 Objective-C SDK에 적용됩니다. 새 Swift SDK 사용에 대한 지시사항은 [iOS용 {{site.data.keyword.amashort}} 클라이언트 SDK(Swift SDK) 구성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html)을 참조하십시오.
 
@@ -48,7 +45,7 @@ CocoaPods가 추가된 종속 항목을 설치합니다. 진행상태 및 추가
 
 
 
-## 클라이언트 SDK 초기화
+### 클라이언트 SDK 초기화
 {: #custom-ios-sdk-initialize}
 
 애플리케이션 라우트(`applicationRoute`) 및 GUID(`applicationGUID`) 매개변수를 전달하여 SDK를 초기화하십시오. 초기화 코드를 삽입하는 일반 위치(필수는 아님)는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 있습니다. 
@@ -77,7 +74,7 @@ CocoaPods가 추가된 종속 항목을 설치합니다. 진행상태 및 추가
 
 1. 클라이언트 SDK를 초기화하십시오. applicationRoute 및 applicationGUID를 **모바일 옵션**에서 얻은 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)의 값으로 바꾸십시오.
 
-	###Objective-C:
+	Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -85,7 +82,7 @@ CocoaPods가 추가된 종속 항목을 설치합니다. 진행상태 및 추가
 			backendGUID:@"applicationGUID"];
 	```
 
-	###Swift:
+	Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
@@ -93,18 +90,20 @@ CocoaPods가 추가된 종속 항목을 설치합니다. 진행상태 및 추가
 	```
 
 ## AuthorizationManager 초기화
-{{site.data.keyword.amashort}} 서비스 타일의 **신임 정보 표시** 단추를 클릭할 때 가져오는 {{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 눌러서 AuthorizationManager를 초기화하십시오.
+{{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 전달하여 AuthorizationManager를 초기화하십시오. {{site.data.keyword.amashort}} 서비스 타일의 **신임 정보 표시** 단추를 클릭하여 이 값을 찾을 수 있습니다. 
 
-### Objective-C
-  ```Objective-C
-     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
-  ```
+
+### Objective-C:
+
+```Objective-
+ [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+```
 
 ### Swift:
- ```Swift
+
+```Swift
   IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
  ```
-
 
 
 ## IMFAuthenticationHandler 위임자

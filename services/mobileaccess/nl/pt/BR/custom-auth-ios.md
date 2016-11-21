@@ -1,18 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
-
+  years: 2015, 2016 lastupdated: "2016-10-02"
 ---
 
 # Configurando o SDK do cliente {{site.data.keyword.amashort}} para iOS (Objective-C)
 {: #custom-ios}
 
-Última atualização: 21 de julho de 2016
-{: .last-updated}
 
-
-Configure seu aplicativo iOS que está usando autenticação customizada para usar o {{site.data.keyword.amashort}} client SDK e conecte seu aplicativo ao {{site.data.keyword.Bluemix}}.
+Configure seu aplicativo iOS que está usando autenticação customizada para utilizar
+o SDK do cliente {{site.data.keyword.amafull}} e conectar seu aplicativo ao {{site.data.keyword.Bluemix}}.
 
 **Nota:** se você estiver desenvolvendo seu app iOS no Swift, considere o uso do {{site.data.keyword.amashort}} client Swift SDK. As instruções nesta página se aplicam ao {{site.data.keyword.amashort}} client Objective-C SDK. Para obter instruções sobre como usar o novo Swift SDK, consulte [Configurando o {{site.data.keyword.amashort}} client SDK for iOS (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-ios-swift-sdk.html).
 
@@ -48,10 +45,10 @@ O CocoaPods instala as dependências incluídas. O progresso e quais componentes
 
 
 
-## Inicializando o client SDK
+### Inicializando o client SDK
 {: #custom-ios-sdk-initialize}
 
-Inicialize o SDK passando os parâmetros de rota do aplicativo (`applicationRoute`) e GUID (`applicationGUID`). Um local comum, mas não obrigatório, para colocar o código de inicialização é no método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo
+Inicialize o SDK passando os parâmetros de rota do aplicativo (`applicationRoute`) e GUID (`applicationGUID`). Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo
 
 1. Obter valores de parâmetro do aplicativo. Abra seu app no painel do {{site.data.keyword.Bluemix_notm}}. Clique em **Opções móveis** para ver os valores de **Route** (`applicationRoute`) e **App GUID** (`applicationGUID`).
 
@@ -77,7 +74,7 @@ Inicialize o SDK passando os parâmetros de rota do aplicativo (`applicationRout
 
 1. Inicialize o client SDK. Substitua applicationRoute e applicationGUID pelos valores de **Route** (`applicationRoute`) e **App GUID** (`applicationGUID`) que você obteve das **Opções móveis**.
 
-	###Objective-C:
+	Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
@@ -85,7 +82,7 @@ Inicialize o SDK passando os parâmetros de rota do aplicativo (`applicationRout
 			backendGUID:@"applicationGUID"];
 	```
 
-	###Swift:
+	Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
@@ -93,18 +90,21 @@ Inicialize o SDK passando os parâmetros de rota do aplicativo (`applicationRout
 	```
 
 ## Inicializando o AuthorizationManager
-Inicialize o AuthorizationManager passando o parâmetro `tenantId` do serviço {{site.data.keyword.amashort}} obtido ao clicar no botão **Mostrar credenciais** no quadro do serviço {{site.data.keyword.amashort}}.
+Inicialize o AuthorizationManager passando o parâmetro `tenantId`
+do serviço {{site.data.keyword.amashort}}. É possível localizar esse valor clicando no botão **Mostrar credenciais** no quadro do serviço {{site.data.keyword.amashort}}.
 
-### Objective-C
-  ```Objective-C
-     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
-  ```
+
+### Objective-C:
+
+```Objective-
+ [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+```
 
 ### Swift:
- ```Swift
-  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
- ```
 
+```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+```
 
 
 ## Delegado IMFAuthenticationHandler

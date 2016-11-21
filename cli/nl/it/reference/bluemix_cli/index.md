@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  anni: 2015, 2016
 
  
 ---
@@ -16,14 +16,14 @@ copyright:
 # Comandi {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
 
-Ultimo aggiornamento: 20 luglio 2016
+Ultimo aggiornamento: 25 ottobre 2016
 {: .last-updated}
 
-*Versione:* 0.4.0
+Versione: 0.4.1
 
 L'interfaccia di riga comando (CLI) {{site.data.keyword.Bluemix_notm}} fornisce una serie di comandi che vengono raggruppati in base allo spazio dei nomi per consentire agli utenti di interagire con {{site.data.keyword.Bluemix_notm}}. Alcuni comandi {{site.data.keyword.Bluemix_notm}} incapsulano comandi cf esistenti, mentre altri forniscono funzionalità estese agli utenti {{site.data.keyword.Bluemix_notm}}. Le seguenti informazioni elencano i comandi supportati dalla CLI {{site.data.keyword.Bluemix_notm}} e includono i relativi nomi, opzioni, utilizzo, prerequisiti, descrizioni ed esempi.
 {:shortdesc}
- 
+
 **Nota:** i *Prerequisiti* elencano quali azioni sono richieste prima di utilizzare il comando. I comandi che non hanno azioni prerequisite elencano **Nessuno**. Altrimenti, i prerequisiti possono includere una o più delle seguenti azioni:
 <dl>
 <dt>Endpoint</dt>
@@ -43,163 +43,163 @@ L'interfaccia di riga comando (CLI) {{site.data.keyword.Bluemix_notm}} fornisce 
 Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluemix più utilizzati.
 
 
-<table summary="Comandi bluemix generali."> 
+<table summary="Comandi bluemix generali.">
  <thead>
  <th colspan="5">Comandi bluemix generali</th>
  </thead>
- <tbody> 
- <tr> 
- <td>[bluemix help](index.html#bluemix_help)</td> 
- <td>[bluemix api](index.html#bluemix_api)</td> 
+ <tbody>
+ <tr>
+ <td>[bluemix help](index.html#bluemix_help)</td>
+ <td>[bluemix api](index.html#bluemix_api)</td>
  <td>[bluemix_login](index.html#bluemix_login)</td>
  <td>[bluemix logout](index.html#bluemix_logout)</td>
  <td>[bluemix target](index.html#bluemix_target)</td>
- </tr> 
- <tr> 
- <td>[bluemix info](index.html#bluemix_info) </td> 
- <td>[bluemix config](index.html#bluemix_config)</td> 
+ </tr>
+ <tr>
+ <td>[bluemix info](index.html#bluemix_info) </td>
+ <td>[bluemix config](index.html#bluemix_config)</td>
  <td>[bluemix list](index.html#bluemix_list)</td>
  <td>[bluemix scale](index.html#bluemix_scale)</td>
  <td>[bluemix curl](index.html#bluemix_curl)</td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *Tabella 1. Comandi bluemix generali*
 
 
 
-<table summary="Comandi bluemix che puoi utilizzare per la gestione di organizzazioni, spazi e utenti."> 
+<table summary="Comandi bluemix che puoi utilizzare per la gestione di organizzazioni, spazi e utenti.">
  <thead>
  <th colspan="5">Comandi per la gestione di organizzazioni, spazi e utenti</th>
  </thead>
- <tbody> 
- <tr> 
- <td>[bluemix iam orgs](index.html#bluemix_iam_orgs)</td> 
- <td>[bluemix iam org](index.html#bluemix_iam_org)</td> 
+ <tbody>
+ <tr>
+ <td>[bluemix iam orgs](index.html#bluemix_iam_orgs)</td>
+ <td>[bluemix iam org](index.html#bluemix_iam_org)</td>
  <td>[bluemix iam org-create](index.html#bluemix_iam_org_create)</td>
  <td>[bluemix iam org-replicate](index.html#bluemix_iam_org_replicate)</td>
  <td>[bluemix iam org-rename](index.html#bluemix_iam_org_rename)</td>
- </tr> 
- <tr> 
- <td>[bluemix iam org-delete](index.html#bluemix_iam_org_delete)</td> 
- <td>[bluemix iam spaces](index.html#bluemix_iam_spaces)</td> 
+ </tr>
+ <tr>
+ <td>[bluemix iam org-delete](index.html#bluemix_iam_org_delete)</td>
+ <td>[bluemix iam spaces](index.html#bluemix_iam_spaces)</td>
  <td>[bluemix iam space](index.html#bluemix_iam_space)</td>
  <td>[bluemix iam space-create](index.html#bluemix_iam_space_create)</td>
  <td>[bluemix iam space-rename](index.html#bluemix_iam_space_rename)</td>
  </tr>
- <tr> 
- <td>[bluemix iam space-delete](index.html#bluemix_iam_space_delete)</td> 
- <td>[bluemix iam account-users](index.html#bluemix_iam_account-users)</td> 
+ <tr>
+ <td>[bluemix iam space-delete](index.html#bluemix_iam_space_delete)</td>
+ <td>[bluemix iam account-users](index.html#bluemix_iam_account-users)</td>
  <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account-user-invite)</td>
  <td>[bluemix iam org-users](index.html#bluemix_iam_org_users)</td>
  <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  </tr>
- <tr> 
- <td>[bluemix iam org-role-unset](index.html#bluemix_iam_org_role_unset)</td> 
- <td>[bluemix iam space-users](index.html#bluemix_iam_space_users)</td> 
+ <tr>
+ <td>[bluemix iam org-role-unset](index.html#bluemix_iam_org_role_unset)</td>
+ <td>[bluemix iam space-users](index.html#bluemix_iam_space_users)</td>
  <td>[bluemix iam space-role-set](index.html#bluemix_iam_space_role_set)</td>
  <td>[bluemix iam space-role-unset](index.html#bluemix_iam_space_role_unset)</td>
  <td></td>
  </tr>
- </tbody> 
- </table> 
+ </tbody>
+ </table>
 *Tabella 2. Comandi per la gestione di organizzazioni, spazi e utenti*
 
 
 
-<table summary=" Comandi bluemix che puoi utilizzare per la gestione delle applicazioni Cloud Foundry."> 
+<table summary=" Comandi bluemix che puoi utilizzare per la gestione delle applicazioni Cloud Foundry.">
  <thead>
  <th colspan="5">Comandi per la gestione di applicazioni cf</th>
  </thead>
- <tbody> 
- <tr> 
+ <tbody>
+ <tr>
  <td>[bluemix app push](index.html#bluemix_app_push)</td>
- <td>[bluemix app list](index.html#bluemix_app_list)</td> 
- <td>[bluemix app show](index.html#bluemix_app_show)</td> 
+ <td>[bluemix app list](index.html#bluemix_app_list)</td>
+ <td>[bluemix app show](index.html#bluemix_app_show)</td>
  <td>[bluemix app scale](index.html#bluemix_app_scale)</td>
  <td>[bluemix app delete](index.html#bluemix_app_delete)</td>
- </tr> 
- <tr> 
+ </tr>
+ <tr>
  <td>[bluemix app rename](index.html#bluemix_app_rename)</td>
- <td>[bluemix app start](index.html#bluemix_app_start)</td> 
- <td>[bluemix app stop](index.html#bluemix_app_stop)</td> 
+ <td>[bluemix app start](index.html#bluemix_app_start)</td>
+ <td>[bluemix app stop](index.html#bluemix_app_stop)</td>
  <td>[bluemix app restart](index.html#bluemix_app_restart)</td>
  <td>[bluemix app restage](index.html#bluemix_app_restage)</td>
  </tr>
- <tr> 
+ <tr>
  <td>[bluemix app instance-restart](index.html#bluemix_app_instance_restart)</td>
- <td>[bluemix app events](index.html#bluemix_app_events)</td> 
- <td>[bluemix app files](index.html#bluemix_app_files)</td> 
+ <td>[bluemix app events](index.html#bluemix_app_events)</td>
+ <td>[bluemix app files](index.html#bluemix_app_files)</td>
  <td>[bluemix app logs](index.html#bluemix_app_logs)</td>
  <td>[bluemix app env](index.html#bluemix_app_env)</td>
  </tr>
- <tr> 
+ <tr>
  <td>[bluemix app env-set](index.html#bluemix_app_env_set)</td>
- <td>[bluemix app env-unset](index.html#bluemix_app_env_unset)</td> 
- <td>[bluemix app stacks](index.html#bluemix_app_stacks)</td> 
+ <td>[bluemix app env-unset](index.html#bluemix_app_env_unset)</td>
+ <td>[bluemix app stacks](index.html#bluemix_app_stacks)</td>
  <td>[bluemix app stack](index.html#bluemix_app_stack)</td>
  <td>[bluemix app manifest-create](index.html#bluemix_app_manifest_create)</td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *Tabella 3. Comandi per la gestione di applicazioni cf*
 
 
-<table summary="Comandi bluemix che puoi utilizzare per la gestione dei servizi Bluemix."> 
+<table summary="Comandi bluemix che puoi utilizzare per la gestione dei servizi Bluemix.">
  <thead>
  <th colspan="5">Comandi per la gestione dei servizi Bluemix</th>
  </thead>
- <tbody> 
- <tr> 
+ <tbody>
+ <tr>
  <td>[bluemix service offerings](index.html#bluemix_service_offerings)</td>
- <td>[bluemix service list](index.html#bluemix_service_list)</td> 
- <td>[bluemix service show](index.html#bluemix_service_show)</td> 
+ <td>[bluemix service list](index.html#bluemix_service_list)</td>
+ <td>[bluemix service show](index.html#bluemix_service_show)</td>
  <td>[bluemix service create](index.html#bluemix_service_create)</td>
  <td>[bluemix service update](index.html#bluemix_service_update)</td>
- </tr> 
- <tr> 
+ </tr>
+ <tr>
  <td>[bluemix service delete](index.html#bluemix_service_delete)</td>
- <td>[bluemix service rename](index.html#bluemix_service_rename)</td> 
- <td>[bluemix service bind](index.html#bluemix_service_bind)</td> 
+ <td>[bluemix service rename](index.html#bluemix_service_rename)</td>
+ <td>[bluemix service bind](index.html#bluemix_service_bind)</td>
  <td>[bluemix service unbind](index.html#bluemix_service_unbind)</td>
  <td>[bluemix service key-create](index.html#bluemix_service_key_create)</td>
  </tr>
- <tr> 
+ <tr>
  <td>[bluemix service key-delete](index.html#bluemix_service_key_delete)</td>
- <td>[bluemix service keys](index.html#bluemix_service_keys)</td> 
- <td>[bluemix service key-show](index.html#bluemix_service_key_show)</td> 
+ <td>[bluemix service keys](index.html#bluemix_service_keys)</td>
+ <td>[bluemix service key-show](index.html#bluemix_service_key_show)</td>
  <td>[bluemix service user-provided-create](index.html#bluemix_service_user_provided_create)</td>
  <td>[bluemix service user-provided-update](index.html#bluemix_service_user_provided_update)</td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *Tabella 4. Comandi per la gestione dei servizi Bluemix*
 
 
 <table summary="comandi bluemix che puoi utilizzare per gestire il catalogo, i plug-in, la fatturazione e le impostazioni di sicurezza Bluemix.">
  <thead>
- <th colspan="5">Comandi per la gestione delle impostazioni di sicurezza, dei plug-in, della fatturazione e del catalogo Bluemix </th>
+ <th colspan="5">Comandi per la gestione delle impostazioni di sicurezza, dei plug-in, della fatturazione e del catalogo Bluemix</th>
  </thead>
- <tbody> 
- <tr> 
+ <tbody>
+ <tr>
  <td>[bluemix catalog templates](index.html#bluemix_catalog_templates)</td>
- <td>[bluemix catalog template](index.html#bluemix_catalog_template)</td> 
- <td>[bluemix catalog template-run](index.html#bluemix_catalog_template_run)</td> 
+ <td>[bluemix catalog template](index.html#bluemix_catalog_template)</td>
+ <td>[bluemix catalog template-run](index.html#bluemix_catalog_template_run)</td>
  <td>[bluemix plugin repos](index.html#bluemix_plugin_repos)</td>
- <td>[bluemix plugin repo-add](index.html#bluemix_plugin_repo_add)</td> 
- </tr> 
- <tr> 
- <td>[bluemix plugin repo-remove](index.html#bluemix_plugin_repo_remove)</td> 
+ <td>[bluemix plugin repo-add](index.html#bluemix_plugin_repo_add)</td>
+ </tr>
+ <tr>
+ <td>[bluemix plugin repo-remove](index.html#bluemix_plugin_repo_remove)</td>
  <td>[bluemix plugin repo-plugins](index.html#bluemix_plugin_repo_plugins)</td>
  <td>[bluemix plugin list](index.html#bluemix_plugin_list)</td>
  <td>[bluemix plugin install](index.html#bluemix_plugin_install)</td>
- <td>[bluemix plugin uninstall](index.html#bluemix_plugin_uninstall)</td> 
- </tr> 
- <tr> 
- <td>[bluemix bss account-usage](index.html#bluemix_bss_account_usage)</td> 
+ <td>[bluemix plugin uninstall](index.html#bluemix_plugin_uninstall)</td>
+ </tr>
+ <tr>
+ <td>[bluemix bss account-usage](index.html#bluemix_bss_account_usage)</td>
  <td>[bluemix bss org-usage](index.html#bluemix_bss_org_usage)</td>
  <td>[bluemix bss orgs-usage-summary](index.html#bluemix_orgs_usage_summary)</td>
- <td>[bluemix security cert](index.html#bluemix_security_cert)</td> 
+ <td>[bluemix security cert](index.html#bluemix_security_cert)</td>
  <td>[bluemix security cert-add](index.html#bluemix_security_cert_add)</td>
  </tr>
  <tr>
@@ -207,121 +207,128 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  <td></td>
  <td></td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *Tabella 5. Comandi per la gestione delle impostazioni di sicurezza, dei plug-in, della fatturazione e del catalogo Bluemix*
 
 
 
-<table summary="Comandi bluemix che puoi utilizzare per la gestione delle impostazioni di rete."> 
+<table summary="Comandi bluemix che puoi utilizzare per la gestione delle impostazioni di rete.">
  <thead>
  <th colspan="5">Comandi per la gestione delle impostazioni di rete</th>
  </thead>
- <tbody> 
- <tr> 
+ <tbody>
+ <tr>
  <td>[bluemix network regions](index.html#bluemix_network_regions)</td>
  <td>[bluemix network region-set](index.html#bluemix_network_region_set)</td>
  <td>[bluemix network routes](index.html#bluemix_network_routes)</td>
- <td>[bluemix network route-check](index.html#bluemix_network_route_check)</td> 
- <td>[bluemix network route-map](index.html#bluemix_network_route_map)</td> 
- </tr> 
- <tr> 
+ <td>[bluemix network route-check](index.html#bluemix_network_route_check)</td>
+ <td>[bluemix network route-map](index.html#bluemix_network_route_map)</td>
+ </tr>
+ <tr>
  <td>[bluemix network route-unmap](index.html#bluemix_network_route_unmap)</td>
  <td>[bluemix network route-create](index.html#bluemix_network_route_create)</td>
  <td>[bluemix network route-delete](index.html#bluemix_network_route_delete)</td>
- <td>[bluemix network orphaned-routes-delete](index.html#bluemix_network_orphaned_routes_delete)</td> 
- <td>[bluemix network domains](index.html#bluemix_network_domains)</td> 
- </tr> 
- <tr> 
+ <td>[bluemix network orphaned-routes-delete](index.html#bluemix_network_orphaned_routes_delete)</td>
+ <td>[bluemix network domains](index.html#bluemix_network_domains)</td>
+ </tr>
+ <tr>
  <td>[bluemix network domain-create](index.html#bluemix_network_domain_create)</td>
  <td>[bluemix network domain-delete](index.html#bluemix_network_domain_delete)</td>
  <td>[bluemix network shared-domain-create](index.html#bluemix_network_shared_domain_create)</td>
  <td>[bluemix network shared-domain-delete](index.html#bluemix_network_shared_domain_delete)</td>
  <td></td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *Tabella 6. Comandi per la gestione delle impostazioni di rete*
 
 
 
-<table summary="Comandi bluemix che puoi utilizzare per la gestione dei contenitori in Bluemix."> 
+<table summary="Comandi bluemix che puoi utilizzare per la gestione dei contenitori in Bluemix.">
  <thead>
  <th colspan="5">Comandi per la gestione dei contenitori in Bluemix</th>
  </thead>
- <tbody> 
- <tr> 
- <td>[bluemix ic init](index.html#bluemix_ic_init)</td> 
+ <tbody>
+ <tr>
  <td>[bluemix ic attach](index.html#bluemix_ic_attach)</td>
  <td>[bluemix ic build](index.html#bluemix_ic_build)</td>
- <td>[bluemix ic create](index.html#bluemix_ic_create)</td>
- <td>[bluemix ic cpi](index.html#bluemix_ic_cpi)</td> 
- </tr> 
- <tr> 
- <td>[bluemix ic exec](index.html#bluemix_ic_exec)</td> 
- <td>[bluemix ic groups](index.html#bluemix_ic_groups)</td>
+ <td>[bluemix ic cp](index.html#bluemix_ic_cp)</td>
+ <td>[bluemix ic cpi](index.html#bluemix_ic_cpi)</td>
+ <td>[bluemix ic exec](index.html#bluemix_ic_exec)</td>
+ </tr>
+ <tr>
+ <td>[bluemix ic group-create](index.html#bluemix_ic_group_create)</td>
  <td>[bluemix ic group-inspect](index.html#bluemix_ic_group_inspect)</td>
  <td>[bluemix ic group-instances](index.html#bluemix_ic_group_instances)</td>
- <td>[bluemix ic group-create](index.html#bluemix_ic_group_create)</td> 
- </tr>
- <tr> 
- <td>[bluemix ic group-update](index.html#bluemix_ic_group_update)</td> 
  <td>[bluemix ic group-remove](index.html#bluemix_ic_group_remove)</td>
- <td>[bluemix ic images](index.html#bluemix_ic_images)</td>
- <td>[bluemix ic inspect](index.html#bluemix_ic_inspect)</td>
- <td>[bluemix ic info](index.html#bluemix_ic_info)</td> 
+ <td>[bluemix ic group-update](index.html#bluemix_ic_group_update)</td>
  </tr>
- <tr> 
- <td>[bluemix ic ips](index.html#bluemix_ic_ips)</td> 
- <td>[bluemix ic ip-request](index.html#ip_request)</td>
- <td>[bluemix ic ip-release](index.html#bluemix_ic_ip_release)</td>
+ <tr>
+  <td>[bluemix ic groups](index.html#bluemix_ic_groups)</td>
+  <td>[bluemix ic info](index.html#bluemix_ic_info)</td>
+  <td>[bluemix ic init](index.html#bluemix_ic_init)</td>
+  <td>[bluemix ic images](index.html#bluemix_ic_images)</td>
+  <td>[bluemix ic inspect](index.html#bluemix_ic_inspect)</td>
+ </tr>
+ <tr>
  <td>[bluemix ic ip-bind](index.html#bluemix_ic_ip_bind)</td>
- <td>[bluemix ic ip-unbind](index.html#bluemix_ic_ip_unbind)</td> 
+ <td>[bluemix ic ip-release](index.html#bluemix_ic_ip_release)</td>
+ <td>[bluemix ic ip-request](index.html#ip_request)</td>
+ <td>[bluemix ic ip-unbind](index.html#bluemix_ic_ip_unbind)</td>
+ <td>[bluemix ic ips](index.html#bluemix_ic_ips)</td>
  </tr>
- <tr> 
- <td>[bluemix ic kill](index.html#bluemix_ic_kill)</td> 
+ <tr>
+ <td>[bluemix ic kill](index.html#bluemix_ic_kill)</td>
+ <td>[bluemix ic logs](index.html#bluemix_ic_logs)</td>
  <td>[bluemix ic namespace-get](index.html#bluemix_ic_namespace_get)</td>
  <td>[bluemix ic namespace-set](index.html#bluemix_ic_namespace_set)</td>
  <td>[bluemix ic pause](index.html#pause)</td>
- <td>[bluemix ic unpause](index.html#unpause)</td>
  </tr>
- <tr> 
- <td>[bluemix ic port](index.html#bluemix_ic_port)</td> 
+ <tr>
+ <td>[bluemix ic port](index.html#bluemix_ic_port)</td>
  <td>[bluemix ic ps](index.html#bluemix_ic_ps)</td>
+ <td>[bluemix ic rename](index.html#bluemix_ic_rename)</td>
+ <td>[bluemix ic reprovision](index.html#bluemix_ic_reprovision)</td>
  <td>[bluemix ic restart](index.html#bluemix_ic_restart)</td>
- <td>[bluemix ic rm](index.html#bluemix_ic_rm)</td>
- <td>[bluemix ic rmi](index.html#bluemix_ic_rmi)</td> 
  </tr>
- <tr> 
- <td>[bluemix ic run](index.html#bluemix_ic_run)</td> 
+ <tr>
+ <td>[bluemix ic rm](index.html#bluemix_ic_rm)</td>
+ <td>[bluemix ic rmi](index.html#bluemix_ic_rmi)</td>
  <td>[bluemix ic route-map](index.html#bluemix_ic_route_map)</td>
  <td>[bluemix ic route-unmap](index.html#bluemix_ic_route_unmap)</td>
- <td>[bluemix ic start](index.html#ic_start)</td>
- <td>[bluemix ic stop](index.html#ic_stop)</td> 
+ <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
- <tr> 
- <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td> 
+ <tr>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic start](index.html#ic_start)</td>
+ <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
+ <td>[bluemix ic stop](index.html#ic_stop)</td>
+ </tr>
+ <tr>
  <td>[bluemix ic top](index.html#bluemix_ic_top)</td>
- <td>[bluemix ic volumes](index.html#bluemix_ic_volumes)</td>
+ <td>[bluemix ic unpause](index.html#unpause)</td>
+ <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
  <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
  </tr>
- <tr> 
- <td>[bluemix ic volume-remove](index.html#bluemix_ic_volume_remove)</td> 
- <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td> 
- <td>[bluemix ic volume-fs-create](index.html#bluemix_ic_volume_fs_create)</td> 
- <td>[bluemix ic volume-fs-remove](index.html#bluemix_ic_volume_fs_remove)</td> 
+ <tr>
+ <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
+ <td>[bluemix ic volume-fs-create](index.html#bluemix_ic_volume_fs_create)</td>
+ <td>[bluemix ic volume-fs-remove](index.html#bluemix_ic_volume_fs_remove)</td>
  <td>[bluemix ic volume-fs-inspect](index.html#bluemix_ic_volume_fs_inspect)</td>
+ <td>[bluemix ic volume-fs-flavors](index.html#bluemix_ic_volume_fs_flavors)</td>
  </tr>
  <tr>
- <td>[bluemix ic volume-fs-flavors](index.html#bluemix_ic_volume_fs_flavors)</td> 
+ <td>[bluemix ic volume-remove](index.html#bluemix_ic_volume_remove)</td>
+ <td>[bluemix ic volumes](index.html#bluemix_ic_volumes)</td>
  <td>[bluemix ic wait](index.html#bluemix_ic_wait)</td>
+ <td>[bluemix ic wait-status](index.html#bluemix_ic_wait_status)</td>
  <td>[bluemix ic version](index.html#bluemix_ic_version)</td>
- <td></td>
- <td></td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *Tabella 7. Comandi per la gestione dei contenitori in Bluemix*
 
 
@@ -359,19 +366,19 @@ Visualizzare la guida per il comando `info`:
 bluemix help info
 ```
 
-Visualizzare la guida per lo spazio dei nomi `ic`:
+Visualizzare la guida per il plug-in `ic`:
 
 ```
 bluemix help ic
 ```
 
-o 
+o
 
 ```
 bluemix ic help
 ```
 
-Visualizzare la guida per il comando `group-create` sotto lo spazio dei nomi `ic`:
+Visualizzare la guida per il comando `group-create` sotto il plug-in `ic`:
 
 ```
 bluemix ic help group-create
@@ -508,15 +515,15 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
 
 <strong>Opzioni del comando</strong>:
    <dl>
-   <dt>--http-timeout <i>TIMEOUT_IN_SECONDI</i></dt>
+   <dt>--http-timeout <i>TIMEOUT_IN_SECONDS</i></dt>
    <dd>Il valore di timeout per le richieste HTTP. Il valore predefinito è 60 secondi.</dd>
    <dt>--trace true|false|<i>path-to-file</i></dt>
    <dd>Traccia le richieste HTTP nel terminale o file specificato.</dd>
-   <dt>--color true|false</dt>
+   <dt>--color true|false</dt>
    <dd>Abilita o disabilita l'output a colori. L'output a colori è abilitato per impostazione predefinita.</dd>
    <dt>--locale <i>LOCALE|CLEAR</i></dt>
    <dd>Imposta una locale predefinita. Se la LOCALE è <i>CLEAR</i>, la locale precedente viene eliminata.</dd>
-   <dt>--check-version true|false</dt>
+   <dt>--check-version true|false</dt>
    <dd>Abilita o disabilita il controllo della versione della CLI</dd>
    </dl>
 
@@ -749,7 +756,7 @@ bluemix iam org-create ORG_NAME
    <dt>NOME_ORGANIZZAZIONE (obbligatorio)</dt>
    <dd>Il nome dell'organizzazione in fase di creazione.</dd>
    </dl>
-   
+
 <strong>Esempi</strong>:
 
 Creare un'organizzazione denominata `IBM`.
@@ -1670,13 +1677,13 @@ bluemix bss orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
 Elencare le informazioni sul certificato di un dominio.
 
 ```
-bluemix security cert NOME_DOMINIO
+bluemix security cert DOMAIN_NAME
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
 
 <strong>Opzioni del comando</strong>:
-   
+
    <dl>
    <dt>NOME_DOMINIO (obbligatorio)</dt>
    <dd>Il dominio che ospita il certificato.</dd>
@@ -1913,10 +1920,6 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 ```
 
 
-
-
-
-
 ## bluemix plugin uninstall
 {: #bluemix_plugin_uninstall}
 
@@ -1944,32 +1947,10 @@ bluemix plugin uninstall IBM-Containers
 ```
 
 
-## bluemix ic init
-{: #bluemix_ic_init}
-
-Inizializzare l'ambiente dei contenitori sulla macchina locale in uso per sfruttare appieno le funzioni del servizio IBM Containers.
-
-```
-bluemix ic init
-```
-
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
-
-**Nota:** prima dell'inizializzazione, accertati che la CLI Docker (docker) sia installata e configurato nella tua variabile di ambiente PATH. Per passare a un'altra regione, utilizza il comando `bluemix region-set`. 
-
-<strong>Esempi</strong>:
-
-Passare alla regione `us-south`:
-
-```
-bluemix region-set us-south
-```
-
-
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-Controllare un contenitore in esecuzione o visualizzarne l'output. Utilizza `CTRL+C` per uscire e arrestare il contenitore. Questo comando richiama la CLI Docker. Per ulteriori informazioni, vedi il comando [attach](https://docs.docker.com/reference/commandline/attach/){: new_window} nella guida di Docker. 
+Controllare un contenitore in esecuzione o visualizzarne l'output. Utilizza `CTRL+C` per uscire e arrestare il contenitore. Questo comando richiama la CLI Docker. Per ulteriori informazioni, vedi il comando [attach](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} nella guida di Docker.
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -1985,7 +1966,7 @@ bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
    <dt>--sig-proxy (facoltativo)</dt>
    <dd>Eseguire il proxy di tutti i segnali ricevuti nel processo. Il
 valore predefinito è <i>true</i>.</dd>
-   <dt>CONTENITORE (obbligatorio)</dt>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
     </dl>
 
@@ -2000,7 +1981,7 @@ bluemix ic attach my_container
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-Richiamare il servizio di build IBM Containers per creare un'immagine Docker in locale o nel tuo repository {{site.data.keyword.Bluemix_notm}} privato. Questo comando richiama la CLI Docker. Per ulteriori informazioni, vedi il comando [build](https://docs.docker.com/reference/commandline/build/){: new_window} nella guida di Docker. 
+Richiamare il servizio di build IBM Containers per creare un'immagine Docker in locale o nel tuo repository {{site.data.keyword.Bluemix_notm}} privato. Questo comando richiama la CLI Docker. Per ulteriori informazioni, vedi il comando [build](https://docs.docker.com/engine/reference/commandline/build/){: new_window} nella guida di Docker.
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -2014,11 +1995,11 @@ bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFI
    <dd>Il nome repository da applicare all'immagine in fase di creazione.</dd>
    <dt>--no-cache (facoltativo)</dt>
    <dd>Non utilizzare la cache quando viene creata l'immagine. Il valore predefinito è <i>false</i>.</dd>
-   <dt>-p|--pull (facoltativo)</dt>
+   <dt>--pull (facoltativo)</dt>
    <dd>Provare a estrarre l'immagine di base dal registro anche se è memorizzata nella cache.</dd>
    <dt>-q|--quiet (facoltativo)</dt>
    <dd>Sopprimere l'output dettagliato generato dai contenitori. Il valore predefinito è <i>false</i>.</dd>
-   <dt>POSIZIONE_DOCKERFILE (obbligatorio)</dt>
+   <dt><i>DOCKERFILE_LOCATION</i> (obbligatorio)</dt>
    <dd>Il percorso verso Dockerfile e contesto sull'host locale.</dd>
     </dl>
 
@@ -2030,10 +2011,9 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 ```
 
 
-## bluemix ic create
-{: #bluemix_ic_create}
-
-Creare un nuovo contenitore nel tuo repository {{site.data.keyword.Bluemix_notm}}. Questo comando include il comando `docker create`. Per ulteriori informazioni, vedi il comando [create](https://docs.docker.com/reference/commandline/create/){: new_window} nella guida di Docker.
+## bluemix ic cp
+{: #bluemix_ic_cp}
+Copia file o cartelle tra un contenitore e il file system locale. Questo comando richiama la CLI Docker. Per ulteriori informazioni, vedi il comando [cp](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} nella guida di Docker. 
 
 
 ## bluemix ic cpi
@@ -2049,9 +2029,9 @@ bluemix ic cpi IMMAGINE_DI_ORIGINE IMMAGINE_DI_DESTINAZIONE
 
 <strong>Opzioni del comando</strong>:
    <dl>
-   <dt>IMMAGINE_DI_ORIGINE (obbligatorio)</dt>
+   <dt><i>IMMAGINE_DI_ORIGINE</i> (obbligatorio)</dt>
    <dd>Il nome del repository e dell'immagine di origine.</dd>
-   <dt>IMMAGINE_DI_DESTINAZIONE (obbligatorio)</dt>
+   <dt><i>IMMAGINE_DI_DESTINAZIONE</i> (obbligatorio)</dt>
    <dd>L'URL del repository {{site.data.keyword.Bluemix_notm}} privato, che include lo spazio dei nomi e il nome dell'immagine di destinazione. Una tag per l'immagine è facoltativa.</dd>
    </dl>
 
@@ -2063,7 +2043,7 @@ Copiare un'immagine dal repository di origine nel repository privato ed aggiunge
 bluemix ic cpi source_repository/source_image_name private_registry_URL/destination_image_name:tag
 ```
 
-Copiare l'immagine `sinatra` dal repository `training` nel repository privato `registry.ng.bluemix.net/mynamespace` e il nome dell'immagine `mysinatra`. Aggiungere una tag `v1` per l'immagine `mysinatra`. 
+Copiare l'immagine `sinatra` dal repository `training` nel repository privato `registry.ng.bluemix.net/mynamespace` e il nome dell'immagine `mysinatra`. Aggiungere una tag `v1` per l'immagine `mysinatra`.
 
 ```
 bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
@@ -2073,8 +2053,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ## bluemix ic exec
 {: #bluemix_ic_exec}
 
-
-Eseguire un comando all'interno di un contenitore. Per ulteriori informazioni, vedi il comando [exec](https://docs.docker.com/reference/commandline/exec/){: new_window} nella guida di Docker.
+Eseguire un comando all'interno di un contenitore. Per ulteriori informazioni, vedi il comando [exec](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} nella guida di Docker.
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -2091,9 +2070,9 @@ bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
    <dd>Modalità interattiva. L'input standard rimane visualizzato. Immetti <i>exit</i> per uscire.</dd>
    <dt>-u <i>UTENTE</i>|--user <i>UTENTE</i> (facoltativo)</dt>
    <dd>Il nome utente.</dd>
-   <dt>CONTENITORE (obbligatorio)</dt>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
-   <dt>CMD (facoltativo)</dt>
+   <dt><i>CMD</i> (facoltativo)</dt>
    <dd>Il comando da eseguire all'interno del contenitore o dei contenitori specificati.</dd>
    </dl>
 
@@ -2112,16 +2091,98 @@ bluemix ic exec my_container date
 ```
 
 
-## bluemix ic groups
-{: #bluemix_ic_groups}
+## bluemix ic group-create
+{: #bluemix_ic_group_create}
 
-Elencare i gruppi di contenitori nel repository {{site.data.keyword.Bluemix_notm}} privato dell'organizzazione.
+Creare un gruppo di contenitori scalabile.
 
 ```
-bluemix ic groups
+bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMORY_SIZE] [-n,--hostname HOSTNAME] [-d,--domain DOMAIN] [--env,-e ENV_KEY=ENV_VAL] [--env-file ENVIRONMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--max MAX_INSTANCE_COUNT] [--desired DESIRED_INSTANCE_COUNT] [--anti false|true] [--auto false|true] IMAGE_NAME [CMD [CMD ...]]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+   <dl>
+    <dt><i>IMAGE_NAME</i> (obbligatorio)</dt>
+   <dd>L'immagine da includere in ciascuna istanza del contenitore del gruppo di contenitori. L'immagine può essere seguita da un elenco di comandi, ma non da opzioni. Includi tutte le opzioni prima di specificare l'immagine. <br><br>Se utilizzi un'immagine nel repository {{site.data.keyword.Bluemix_notm}} privato della tua organizzazione, specificala con il seguente formato: <i>registry.ng.bluemix.net/SPAZIO_NOMI/IMMAGINE</i>. <br><br>Se utilizzi un'immagine fornita da IBM Containers, non includere lo spazio dei nomi della tua organizzazione. Specifica l'immagine con il seguente formato: <i>registry.ng.bluemix.net/IMMAGINE</i>. </dd>
+   <dt>--name <i>GROUP_NAME</i> (obbligatorio)</dt>
+   <dd>Assegnare un nome al gruppo. <i>-n</i> è stato dichiarato obsoleto.<br>
+   <strong>Suggerimento:</strong> il nome del contenitore deve iniziare con una lettera. Il nome può includere lettere maiuscole, lettere minuscole, numeri, punti., caratteri di sottolineatura _, o trattini -.</dd>
+   <dt>-m <i>MEMORY_SIZE</i>|--memory <i>MEMORY_SIZE</i> (facoltativo)</dt>
+   <dd>Assegnare un limite di memoria al gruppo in MB. Quando crei un gruppo di contenitori dalla CLI, il valore predefinito per ogni istanza del contenitore è <i>64</i> MB. Quando crei un gruppo di contenitori dal Dashboard {{site.data.keyword.Bluemix_notm}}, il valore predefinito per ogni istanza del contenitore è <i>256</i> MB. I valori accettati sono <i>64</i>, <i>256</i>, <i>512</i>, <i>1024</i> e <i>2048</i>. Una volta assegnato, il limite di memoria non può essere modificato.</dd>
+   <dt>-n <i>HOSTNAME</i>|--hostname <i>HOSTNAME</i> (facoltativo)</dt>
+   <dd>Il nome host, quale ad esempio <i>mycontainerhost</i>. L'host e il dominio si combinano per formare l'URL completo della rotta pubblica, quale ad esempio <i>http://mycontainerhost.mybluemix.net</i>. Quando esamini i dettagli di un gruppo di contenitori con il comando <i>bluemix ic group-inspect</i>, l'host e il dominio vengono elencati insieme come rotta.</dd>
+   <dt>-d <i>DOMINIO</i>|--domain <i>DOMINIO</i> (facoltativo)</dt>
+   <dd>Di solito, il dominio è <i>.mybluemix.net</i>. L'host e il dominio vengono combinati per formare l'URL completo della rotta pubblica, quale ad esempio <i>http://mycontainerhost.mybluemix.net</i>. Quando esamini i dettagli di un gruppo di contenitori con il comando <i>bluemix ic group-inspect</i>, l'host e il dominio vengono elencati insieme come rotta.</dd>
+   <dt>-e <i>ENV_KEY=ENV_VAL</i>|--env <i>ENV_KEY=ENV_VAL</i> (facoltativo)</dt>
+   <dd>Imposta la variabile di ambiente. In caso di più chiavi, elencale separatamente. Se sono incluse virgolette, includile racchiudendo sia il valore che il nome della variabile di ambiente. Ad esempio: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  La seguente tabella mostra alcune variabili di ambiente comunemente utilizzate che puoi specificare:</dd>
+    </dl>
+
+
+|  Variabile di ambiente                              |     Descrizione                            |
+| :----------------------------- | :------------------------------ |
+| CCS_BIND_APP=*&lt;nome_applicazione&gt;*       | Eseguire il bind di un servizio a un contenitore. Utilizza la variabile di ambiente `CCS_BIND_APP` per eseguire il bind di un'applicazione al contenitore. L'applicazione viene associata tramite bind al servizio di destinazione e funge da ponte che consente a {{site.data.keyword.Bluemix_notm}} di portare le informazioni `VCAP_SERVICES` dell'applicazione ponte all'istanza del contenitore in esecuzione. Per ulteriori informazioni sulla creazione di un'applicazione ponte, vedi [Esecuzione del bind di un servizio a un contenitore](../../../containers/container_integrations_binding.html){: new_window}. |
+| CCS_BIND_SRV=*&lt;nome_istanza_servizio1&gt;*,*&lt;nome_istanza_servizio2&gt;* | Per eseguire direttamente il bind di un servizio Bluemix a un contenitore senza utilizzare un'applicazione ponte, utilizza CCS_BIND_SRV. Questo bind consente a Bluemix di inserire le informazioni VCAP_SERVICES nell'istanza del contenitore in esecuzione. Per elencare più servizi Bluemix, puoi includerli come parte della stessa variabile di ambiente. |
+| LOG_LOCATIONS=*&lt;&gt;percorso_verso_file* | Aggiungere un file di log da monitorare nel contenitore. Includi la variabile di ambiente `LOG_LOCATIONS` in un percorso verso il file di log. |
+*Tabella 8. Variabili di ambiente di uso comune*
+
+ <dl>
+   <dt>--env-file <i>FILE_VARIABILE_AMBIENTE</i> (facoltativo)</dt>
+   <dd> Importa variabili di ambiente da un file dove ENVFILE è il percorso del tuo file nella directory locale. Ogni riga nel file rappresenta una coppia key=value. </dd>
+   <dt>--volume <i>VOLUME</i>:<i>PERCORSO_CONTENITORE</i>[:ro] (facoltativo)</dt>
+   <dd>Collegare un volume a un contenitore, specificando i dettagli nel formato <i>IDVolume:PercorsoContenitore[:ro]</i>.
+   <ul>
+   <li><i>VOLUME</i>: l'ID o nome del volume.</li>
+   <li><i>PERCORSO_CONTENITORE</i>: il percorso assoluto per il volume del contenitore.</li>
+   <li>ro: facoltativo. La specifica di <i>ro</i> rende il volume di sola lettura invece della lettura/scrittura predefinita.</li></ul>
+   </dd>
+   <dt>-p <i>PORTA</i>|--publish <i>PORTA</i> (facoltativo)</dt>
+   <dd>Esporre la porta per il traffico HTTP. I contenitori del tuo gruppo devono essere in ascolto sulla porta HTTP. Non possono essere effettuate richieste HTTPS. Per i gruppi di contenitori, non puoi includere più porte. <br><br>Quando specifichi una porta, stai rendendo l'applicazione disponibile al programma di bilanciamento del carico {{site.data.keyword.Bluemix_notm}} o ai contenitori che stanno provando a raggiungere l'host nello stesso spazio {{site.data.keyword.Bluemix_notm}}. Quindi i contenitori o il bilanciamento del carico {{site.data.keyword.Bluemix_notm}} possono utilizzare la porta per raggiungere l'host e l'applicazione nello stesso spazio {{site.data.keyword.Bluemix_notm}}. Se nel Dockerfile è specificata una porta per l'immagine che stai utilizzando, includila. <br>
+   <strong>Suggerimenti</strong>: <ul>
+   <li>Per l'immagine Liberty Server certificata da IBM o una versione modificata di questa immagine, immetti la porta 9080.</li>
+   <li>Per l'immagine Node.js certificata da IBM o una versione modificata di questa immagine, immetti la porta 8000.</li>
+   </ul>
+   </dd>
+   <dt>-P (facoltativo)</dt>
+   <dd>Pubblica tutte le porte</dd>
+   <dt>--min <i>MIN_INSTANCE_COUNT</i> (facoltativo)</dt>
+   <dd>Il numero minimo di istanze. Il valore predefinito è 1. Se imposti un numero minimo di istanze, una volta creato il gruppo di contenitori non è più possibile modificare questo valore.</dd>
+   <dt>--max <i>MAX_INSTANCE_COUNT</i> (facoltativo)</dt>
+   <dd>Il numero massimo di istanze. Il valore predefinito è 2. Se imposti un numero massimo di istanze, una volta creato il gruppo di contenitori non è più possibile modificare questo valore.</dd>
+   <dt>--desired <i>DESIRED_INSTANCE_COUNT</i> (facoltativo)</dt>
+   <dd>Il numero di istanze da te richiesto. Il valore predefinito è 2.</dd>
+   <dt>--auto (facoltativo)</dt>
+   <dd>Quando si crea il gruppo di contenitori e il ripristino automatico è abilitato, IBM Containers verifica l'integrità di ciascuna istanza con una richiesta HTTP alla porta assegnata.<br>
+   Se non viene ricevuta alcuna risposta da un'istanza del contenitore entro 2 intervalli consecutivi di 90 secondi, l'istanza viene rimossa e sostituita con una nuova istanza. Se il contenitore risponde non viene effettuata alcuna azione. Questo processo viene ripetuto continuamente. In una finestra di 30 minuti, se il numero totale di differenti contenitori membri del gruppo è uguale o 3 volte maggiore della dimensione massima osservata per il gruppo stesso, il ripristino automatico viene disabilitato in modo permanente per il gruppo di contenitori. Per abilitare di nuovo il ripristino automatico, devi ricreare il gruppo di contenitori.</dd>
+  <dt>--anti (facoltativo)</dt>
+  <dd> Utilizza l'opzione anti-affinity per rendere il tuo gruppo di contenitori molto più disponibile. L'opzione --anti forza l'inserimento di ogni istanza di contenitore del tuo gruppo in un nodo di elaborazione fisico separato, riducendo così la possibilità che si verifichi un arresto anomalo di tutti i contenitori nel gruppo a causa di un errore hardware. Potresti non essere in grado di utilizzare questa opzione con gruppi di dimensione maggiore in quanto ogni regione e organizzazione Bluemix ha a disposizione una serie di nodi di elaborazione limitata per la distribuzione. Se la distribuzione non riesce, riduci il numero di istanze del contenitore nel gruppo o rimuovi l'opzione --anti. </dd>
+   <dt><i>CMD</i> (facoltativo)</dt>
+   <dd>Il comando e gli argomenti trasmessi al gruppo di contenitori per l'esecuzione. Questo comando deve essere un comando a esecuzione prolungata. Non utilizzare un comando di breve durata che non viene eseguito per molto tempo, quale ad esempio <i>/bin/date</i>, poiché tale comando potrebbe provocare un arresto anomalo del contenitore.  <br> <strong>Note:</strong> <ul>
+   <li>Il comando e i relativi argomenti devono trovarsi alla fine della riga di comando <i>bluemix ic run</i>.</li>
+   <li>Se gli argomenti del comando includono il trattino -, come in <i>-c</i> nel comando di esempio precedente, il comando deve essere preceduto da due trattini (--).</li>
+   </ul></dd>
+   </dl>
+
+
+<strong>Esempi</strong>:
+
+Creare un gruppo di contenitori `my_container_group` utilizzando l'immagine `registry.ng.bluemix.net/ibmnode` fornita da IBM Containers, quindi eseguire il comando di lunga durata `ping localhost` su tale gruppo di contenitori:
+
+```
+bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode ping localhost
+```
+
+Creare un gruppo di contenitori `my_container_group` utilizzando l'immagine `registry.ng.bluemix.net/ibmnode` fornita da IBM Containers, quindi eseguire il comando di lunga durata `tail -f /dev/null` su tale gruppo di contenitori:
+
+```
+bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode -- tail -f /dev/null
+```
+
+Creare un gruppo scalabile `mygroup` con il ripristino automatico abilitato, utilizzando l'immagine `registry.ng.bluemix.net/ibmliberty`. La porta è `9080`, il nome host è `mycontainerhost`, il nome dominio è `mybluemix.net`.
+```
+bluemix ic group-create -p 9080 --auto -n mycontainerhost -d mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty
+```
 
 
 ## bluemix ic group-inspect
@@ -2138,7 +2199,7 @@ bluemix ic group-inspect GRUPPO_CONTENITORI
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>GRUPPO_CONTENITORI (obbligatorio)</dt>
+   <dt><i>GRUPPO_CONTENITORI</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del gruppo di contenitori.</dd>
    </dl>
 
@@ -2164,7 +2225,7 @@ bluemix ic group-instances GRUPPO_CONTENITORI
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>GRUPPO_CONTENITORI (obbligatorio)</dt>
+   <dt><i>GRUPPO_CONTENITORI</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del gruppo di contenitori.</dd>
    </dl>
 
@@ -2176,142 +2237,13 @@ bluemix ic group-instances my_group
 ```
 
 
-## bluemix ic group-create
-{: #bluemix_ic_group_create}
-
-Creare un gruppo di contenitori scalabile.
-
-```
-bluemix ic group-create [-p PORT|--publish port] [-m MEMORY|--memory MEMORY] [-e ENV|--env ENV] [-v VOLUME:CONTAINER_PATH] [--min MIN] [--max MAX] [--desired DESIRED] [--auto] [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] [--name NAME] IMAGE [CMD]
-```
-
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
-
-<strong>Opzioni del comando</strong>:
-   <dl>
-   <dt>-m <i>MEMORIA</i>|--memory <i>MEMORIA</i> (facoltativo)</dt>
-   <dd>Assegnare un limite di memoria al gruppo in MB. Quando crei un gruppo di contenitori dalla CLI, il valore predefinito per ogni istanza del contenitore è <i>64</i> MB. Quando crei un gruppo di contenitori dal Dashboard {{site.data.keyword.Bluemix_notm}}, il valore predefinito per ogni istanza del contenitore è <i>256</i> MB. I valori accettati sono <i>64</i>, <i>256</i>, <i>512</i>, <i>1024</i> e <i>2048</i>. Una volta assegnato, il limite di memoria non può essere modificato.</dd>
-   <dt>-e <i>AMB</i>|--env <i>AMB</i> (facoltativo)</dt>
-   <dd>Impostare la variabile di ambiente, dove **AMB** è una coppia `chiave=valore`. In caso di più chiavi, elencale separatamente. Se sono incluse virgolette, includile racchiudendo sia il valore che il nome della variabile di ambiente. Ad esempio: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  La seguente tabella mostra alcune variabili di ambiente comunemente utilizzate che puoi specificare:</dd>
-    </dl>
-
-
-|  Variabile di ambiente                              |     Descrizione                            |
-| :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;nome_applicazione&gt;*       | Eseguire il bind di un servizio a un contenitore. Utilizza la variabile di ambiente `CCS_BIND_APP` per eseguire il bind di un'applicazione al contenitore. L'applicazione viene associata tramite bind al servizio di destinazione e funge da ponte che consente a {{site.data.keyword.Bluemix_notm}} di portare le informazioni `VCAP_SERVICES` dell'applicazione ponte all'istanza del contenitore in esecuzione. Per ulteriori informazioni sulla creazione di un'applicazione ponte, vedi [Esecuzione del bind di un servizio a un contenitore](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov){: new_window}. |
-| CCS_SSH_KEY=*&lt;chiave_ssh_pubblica&gt;* | Aggiungere una chiave SSH a un contenitore quando lo si crea. Puoi aggiungere la chiave SSH utilizzando la variabile di ambiente quando crei il contenitore dal dashboard {{site.data.keyword.Bluemix_notm}} o dalla CLI. Per ulteriori informazioni sulle chiavi SSH, vedi [Accesso a un contenitore](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}. |
-| LOG_LOCATIONS=*&lt;&gt;percorso_verso_file* | Aggiungere un file di log da monitorare nel contenitore. Includi la variabile di ambiente `LOG_LOCATIONS` in un percorso verso il file di log. |
-*Tabella 8. Variabili di ambiente di uso comune*
-
-   <dl>
-   <dt>-v VOLUME:PERCORSO_CONTENITORE[:ro]|--volume VOLUME:PERCORSO_CONTENITORE[:ro] (facoltativo)</dt>
-   <dd>Collegare un volume a un contenitore, specificando i dettagli nel formato <i>IDVolume:PercorsoContenitore[:ro]</i>.
-   <ul>
-   <li>VOLUME: l'ID o il nome del volume.</li>
-   <li>PERCORSO_CONTENITORE: il percorso assoluto per il volume del contenitore.</li>
-   <li>ro: facoltativo. La specifica di <i>ro</i> rende il volume di sola lettura invece della lettura/scrittura predefinita.</li></ul>
-   </dd>
-   <dt>-p <i>PORTA</i>|--publish <i>PORTA</i> (facoltativo)</dt>
-   <dd>Esporre la porta per il traffico HTTP. I contenitori del tuo gruppo devono essere in ascolto sulla porta HTTP. Non possono essere effettuate richieste HTTPS. Per i gruppi di contenitori, non puoi includere più porte. <br><br>Quando specifichi una porta, stai rendendo l'applicazione disponibile al programma di bilanciamento del carico {{site.data.keyword.Bluemix_notm}} o ai contenitori che stanno provando a raggiungere l'host nello stesso spazio {{site.data.keyword.Bluemix_notm}}. Quindi i contenitori o il bilanciamento del carico {{site.data.keyword.Bluemix_notm}} possono utilizzare la porta per raggiungere l'host e l'applicazione nello stesso spazio {{site.data.keyword.Bluemix_notm}}. Se nel Dockerfile è specificata una porta per l'immagine che stai utilizzando, includila. <br> 
-   <strong>Suggerimenti</strong>: <ul>
-   <li>Per l'immagine Liberty Server certificata da IBM o una versione modificata di questa immagine, immetti la porta 9080.</li>
-   <li>Per l'immagine Node.js certificata da IBM o una versione modificata di questa immagine, immetti la porta 8000.</li>
-   </ul>
-   </dd>
-   <dt>--min <i>MIN</i> (facoltativo)</dt>
-   <dd>Il numero minimo di istanze. Il valore predefinito è 1. Se imposti un numero minimo di istanze, una volta creato il gruppo di contenitori non è più possibile modificare questo valore.</dd>
-   <dt>--max <i>MAX</i> (facoltativo)</dt>
-   <dd>Il numero massimo di istanze. Il valore predefinito è 2. Se imposti un numero massimo di istanze, una volta creato il gruppo di contenitori non è più possibile modificare questo valore.</dd>
-   <dt>--desired <i>DESIDERATE</i> (facoltativo)</dt>
-   <dd>Il numero di istanze da te richiesto. Il valore predefinito è 2.</dd>
-   <dt>--auto (facoltativo)</dt>
-   <dd>Quando si crea il gruppo di contenitori e il ripristino automatico è abilitato, IBM Containers verifica l'integrità di ciascuna istanza con una richiesta HTTP alla porta assegnata.<br>
-   Se non viene ricevuta alcuna risposta da un'istanza del contenitore entro 2 intervalli consecutivi di 90 secondi, l'istanza viene rimossa e sostituita con una nuova istanza. Se il contenitore risponde non viene effettuata alcuna azione. Questo processo viene ripetuto continuamente. In una finestra di 30 minuti, se il numero totale di differenti contenitori membri del gruppo è uguale o 3 volte maggiore della dimensione massima osservata per il gruppo stesso, il ripristino automatico viene disabilitato in modo permanente per il gruppo di contenitori. Per abilitare di nuovo il ripristino automatico, devi ricreare il gruppo di contenitori.</dd>
-   <dt>-n <i>HOST</i>|--hostname <i>HOST</i> (facoltativo)</dt>
-   <dd>Il nome host, quale ad esempio <i>mycontainerhost</i>. L'host e il dominio si combinano per formare l'URL completo della rotta pubblica, quale ad esempio <i>http://mycontainerhost.mybluemix.net</i>. Quando esamini i dettagli di un gruppo di contenitori con il comando <i>bluemix ic group-inspect</i>, l'host e il dominio vengono elencati insieme come rotta.</dd>
-   <dt>-d <i>DOMINIO</i>|--domain <i>DOMINIO</i> (facoltativo)</dt>
-   <dd>Di solito, il dominio è <i>.mybluemix.net</i>. L'host e il dominio vengono combinati per formare l'URL completo della rotta pubblica, quale ad esempio <i>http://mycontainerhost.mybluemix.net</i>. Quando esamini i dettagli di un gruppo di contenitori con il comando <i>bluemix ic group-inspect</i>, l'host e il dominio vengono elencati insieme come rotta.</dd>
-   <dt>--name <i>NOME</i> (obbligatorio)</dt>
-   <dd>Assegnare un nome al gruppo. <i>-n</i> è stato dichiarato obsoleto.<br>
-   <strong>Suggerimento:</strong> il nome del contenitore deve iniziare con una lettera. Il nome può includere lettere maiuscole, lettere minuscole, numeri, punti., caratteri di sottolineatura _, o trattini -.</dd>
-   <dt>IMMAGINE (obbligatorio)</dt>
-   <dd>L'immagine da includere in ciascuna istanza del contenitore del gruppo di contenitori. L'immagine può essere seguita da un elenco di comandi, ma non da opzioni. Includi tutte le opzioni prima di specificare l'immagine. <br><br>Se utilizzi un'immagine nel repository {{site.data.keyword.Bluemix_notm}} privato della tua organizzazione, specificala con il seguente formato: <i>registry.ng.bluemix.net/SPAZIO_NOMI/IMMAGINE</i>. <br><br>Se utilizzi un'immagine fornita da IBM Containers, non includere lo spazio dei nomi della tua organizzazione. Specifica l'immagine con il seguente formato: <i>registry.ng.bluemix.net/IMMAGINE</i>. </dd>
-   <dt>CMD (facoltativo)</dt>
-   <dd>Il comando e gli argomenti trasmessi al gruppo di contenitori per l'esecuzione. Questo comando deve essere un comando a esecuzione prolungata. Non utilizzare un comando di breve durata che non viene eseguito per molto tempo, quale ad esempio <i>/bin/date</i>, poiché tale comando potrebbe provocare un arresto anomalo del contenitore.  <br> <strong>Note:</strong> <ul>
-   <li>Il comando e i relativi argomenti devono trovarsi alla fine della riga di comando <i>bluemix ic run</i>.</li>
-   <li>Se gli argomenti del comando includono il trattino -, come in <i>-c</i> nel comando di esempio precedente, il comando deve essere preceduto da due trattini (--).</li>
-   </ul></dd>
-   </dl>
-
-
-<strong>Esempi</strong>:
-
-Creare un gruppo di contenitori `my_container_group` utilizzando l'immagine `registry.ng.bluemix.net/ibmnode` fornita da IBM Containers, quindi eseguire il comando di lunga durata `ping localhost` su tale gruppo di contenitori:
-
-```
-bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode ping localhost
-```
-
-Creare un gruppo di contenitori `my_container_group` utilizzando l'immagine `registry.ng.bluemix.net/ibmnode` fornita da IBM Containers, quindi eseguire il comando di lunga durata `tail -f /dev/null` su tale gruppo di contenitori:
-
-```
-bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode -- tail -f /dev/null
-```
-
-Creare un gruppo scalabile `mygroup` con il ripristino automatico abilitato, utilizzando l'immagine `registry.ng.bluemix.net/ibmliberty`. La porta è `9080`, il nome host è `mycontainerhost`, il nome dominio è `.mybluemix.net`.
-```
-bluemix ic group-create -p 9080 --auto -n mycontainerhost -d .mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty 
-```
-
-
-## bluemix ic group-update
-{: #bluemix_ic_group_update}
-
-Aggiornare un gruppo di contenitori.
-
-
-```
-bluemix ic group-update [--min MIN] [--max MAX] [--desired DESIRED] [--auto] CONTAINER_GROUP
-```
-
-**Suggerimento:** per aggiornare il nome host o il dominio di un gruppo di contenitori, utilizza `bluemix ic route-map [-n HOST][-d DOMAIN] GRUPPO_CONTENITORI`.
-
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
-
-<strong>Opzioni del comando</strong>:
- <dl>
-   <dt>--min <i>MIN</i> (facoltativo)</dt>
-   <dd>Il numero minimo di istanze. Il valore predefinito è <i>1</i>. Una volta impostato un numero minimo di istanze, questo valore non può più essere modificato.</dd>
-   <dt>--max <i>MAX</i> (facoltativo)</dt>
-   <dd>Il numero massimo di istanze. Il valore predefinito è <i>2</i>. Una volta impostato un numero massimo di istanze, questo valore non può più essere modificato.</dd>
-   <dt>--desired <i>DESIDERATE</i> (facoltativo)</dt>
-   <dd>Il numero di istanze da te richiesto. Il valore predefinito è <i>2</i>.</dd>
-    </dl>
-
-**Suggerimento:** è possibile specificare una sola delle seguenti opzioni alla volta: `--min MIN`, `--max MAX` o `--desired DESIDERATO`.
-
-   <dl>
-   <dt>--auto (facoltativo)</dt>
-   <dd>Riavviare automaticamente le istanze non riuscite, abilitando il ripristino automatico.</dd>
-   <dt>GRUPPO_CONTENITORI (obbligatorio)</dt>
-   <dd>Il nome o l'ID del gruppo di contenitori.</dd>
-   </dl>
-
-<strong>Esempi</strong>:
-
-Il seguente esempio mostra una richiesta di aggiornamento del gruppo di contenitori `my_group`:
-```
-bluemix ic group-update --max 5 my_group
-```
-
-
 ## bluemix ic group-remove
 {: #bluemix_ic_group_remove}
 
-Rimuovere un gruppo di contenitori dal repository {{site.data.keyword.Bluemix_notm}} privato dell'organizzazione.
+Rimuovere un gruppo di contenitori da uno spazio.
 
 ```
-bluemix ic group-remove [-f|--force] CONTAINER_GROUP
+bluemix ic group-remove [-f|--force] GROUP_NAME [GROUP_NAME2 [...]]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
@@ -2321,7 +2253,7 @@ bluemix ic group-remove [-f|--force] CONTAINER_GROUP
    <dl>
    <dt>-f|--force (facoltativo)</dt>
    <dd>Forza la rimozione di un contenitore in esecuzione o in errore.</dd>
-   <dt>GRUPPO_CONTENITORI (obbligatorio)</dt>
+   <dt><i>NOME GRUPPO</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del gruppo di contenitori.</dd>
    </dl>
 
@@ -2334,13 +2266,65 @@ bluemix ic group-remove my_group
 ```
 
 
+## bluemix ic group-update
+{: #bluemix_ic_group_update}
+
+Aggiornare un gruppo di contenitori.
+
+
+```
+bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=ENV_VAL] GROUP_NAME
+```
+
+**Suggerimento:** per aggiornare il nome host o il dominio di un gruppo di contenitori, utilizza `bluemix ic route-map [-n HOST][-d DOMAIN] GRUPPO_CONTENITORI`.
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+ <dl>
+   <dt>--anti (facoltativo)</dt>
+   <dd>Utilizza l'opzione anti-affinity per rendere il tuo gruppo di contenitori molto più disponibile. L'opzione --anti forza l'inserimento di ogni istanza di contenitore del tuo gruppo in un nodo di elaborazione fisico separato, riducendo così la possibilità che si verifichi un arresto anomalo di tutti i contenitori nel gruppo a causa di un errore hardware. Potresti non essere in grado di utilizzare questa opzione con gruppi di dimensione maggiore in quanto ogni regione e organizzazione Bluemix ha a disposizione una serie di nodi di elaborazione limitata per la distribuzione. Se la distribuzione non riesce, riduci il numero di istanze del contenitore nel gruppo o rimuovi l'opzione --anti.</dd>
+   <dt>--desired <i>DESIRED_INSTANCE_COUNT</i> (facoltativo)</dt>
+   <dd>Il numero di istanze da te richiesto. Il valore predefinito è <i>2</i>.</dd>
+   <dt>-e <i>ENV_KEY=ENV_VAL</i>(facoltativo)</dt>
+   <dd>Imposta la variabile di ambiente. In caso di più chiavi, elencale separatamente. Se sono incluse virgolette, includile racchiudendo sia il valore che il nome della variabile di ambiente. Ad esempio: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.</dd>
+   <dt><i>NOME GRUPPO</i> (obbligatorio)</dt>
+   <dd>Il nome o l'ID del gruppo di contenitori.</dd>
+   </dl>
+
+<strong>Esempi</strong>:
+
+Il seguente esempio mostra una richiesta di aggiornamento del gruppo di contenitori `my_group`:
+```
+bluemix ic group-update --desired 5 my_group
+```
+
+
+## bluemix ic groups
+{: #bluemix_ic_groups}
+
+Elencare i gruppi di contenitori nel repository {{site.data.keyword.Bluemix_notm}} privato dell'organizzazione.
+
+```
+bluemix ic groups [-q]
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+	<dl>
+	<dt>-q (facoltativo)</dt>
+   	<dd>Visualizza solo gli ID gruppo</dd>
+	</dl>
+
+
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-Visualizzare un elenco di tutte le immagini disponibili nel repository {{site.data.keyword.Bluemix_notm}} privato dell'organizzazione. Per ulteriori informazioni, vedi il comando [images](https://docs.docker.com/reference/commandline/images){: new_window} nella guida di Docker. L'elenco include l'ID immagine, la data di creazione e il nome dell'immagine.
+Visualizzare un elenco di tutte le immagini disponibili nel repository {{site.data.keyword.Bluemix_notm}} privato dell'organizzazione. Per ulteriori informazioni, vedi il comando [images](https://docs.docker.com/engine/reference/commandline/images){: new_window} nella guida di Docker. L'elenco include l'ID immagine, la data di creazione e il nome dell'immagine.
 
 ```
-bluemix ic images [-a|--all] [--no-trunc] [-q|--quiet]
+bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione, Docker
@@ -2350,6 +2334,8 @@ bluemix ic images [-a|--all] [--no-trunc] [-q|--quiet]
    <dl>
    <dt>-a|--all (facoltativo)</dt>
    <dd>Includere tutti i livelli di immagine per ciascuna immagine del repository dell'organizzazione e non solo il più recente.</dd>
+   <dt>-f (facoltativo)</dt>
+   <dd>Filtrare l'elenco di immagini in base alla condizione fornita.</dd>
    <dt>--no-trunc (facoltativo)</dt>
    <dd>Non troncare l'output.</dd>
    <dt>-q|--quiet (facoltativo)</dt>
@@ -2361,38 +2347,6 @@ bluemix ic images [-a|--all] [--no-trunc] [-q|--quiet]
 Il seguente esempio mostra una richiesta di elenco delle immagini disponibili per l'organizzazione:
 ```
 bluemix ic images
-```
-
-
-## bluemix ic inspect
-{: #bluemix_ic_inspect}
-
-Visualizzare le informazioni su un contenitore. Per ulteriori informazioni, vedi il comando [inspect](https://docs.docker.com/reference/commandline/inspect){: new_window} nella guida di Docker.
-
-```
-bluemix ic inspect [IMAGE|images|CONTAINER]
-```
-
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione, Docker
-
-<strong>Opzioni del comando</strong>:
-
-   <dl>
-   <dt>IMMAGINE (obbligatorio)</dt>
-   <dd>Visualizzare informazioni dettagliate su un'immagine specifica indicando l'ID o il nome dell'immagine.</dd>
-   <dt>images (obbligatorio)</dt>
-   <dd>Visualizzare informazioni dettagliate su tutte le immagini del tuo repository.</dd>
-   <dt>CONTENITORE (obbligatorio)</dt>
-   <dd>Visualizzare informazioni dettagliate su un contenitore specifico, indicando l'ID o il nome del contenitore.</dd>
-   </dl>
-
-**Suggerimento:** non è possibile specificare *IMMAGINE*, *images* o il *CONTENITORE* contemporaneamente. 
-
-<strong>Esempi</strong>:
-
-Il seguente esempio mostra una richiesta di controllo di un contenitore denominato `proxy`: 
-```
-bluemix ic inspect proxy
 ```
 
 
@@ -2408,64 +2362,58 @@ bluemix ic info
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
 
-## bluemix ic ips
-{: #bluemix_ic_ips}
+## bluemix ic init
+{: #bluemix_ic_init}
 
-Elencare gli indirizzi IP a virgola mobile disponibili per l'utente che ha effettuato l'accesso. L'elenco include gli indirizzi IP e l'ID contenitore a cui sono collegati gli indirizzi IP. Se l'indirizzo IP non è in uso, non verrà visualizzato alcun ID contenitore.
+Inizializzare l'ambiente dei contenitori sulla macchina locale in uso per sfruttare appieno le funzioni del servizio IBM Containers.
 
 ```
-bluemix ic ips [-a|--all]
+bluemix ic init
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
-<strong>Opzioni del comando</strong>:
-
-   <dl>
-   <dt>-a|--all (facoltativo)</dt>
-   <dd>Elencare tutti gli indirizzi IP. Per impostazione predefinita,
-vengono restituiti solo gli indirizzi IP disponibili.</dd>
-   </dl>
-
+**Nota:** prima dell'inizializzazione, accertati che la CLI Docker (docker) sia installata e configurato nella tua variabile di ambiente PATH. Per passare a un'altra regione, utilizza il comando `bluemix region-set`.
 
 <strong>Esempi</strong>:
 
-Il seguente esempio mostra una richiesta di elenco di tutti gli indirizzi IP per l'organizzazione, disponibili o meno.
-```
-bluemix ic ips -a
-```
-
-
-## bluemix ic ip-request
-{: #ip_request}
-Richiedere un nuovo indirizzo IP mobile.
+Passare alla regione `us-south`:
 
 ```
-bluemix ic ip-request
+bluemix region-set us-south
 ```
 
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
 
+## bluemix ic inspect
+{: #bluemix_ic_inspect}
 
-## bluemix ic ip-release
-{: #bluemix_ic_ip_release}
-
-Rilasciare un indirizzo IP a virgola mobile dall'istanza del servizio cloud del contenitore.
+Visualizzare le informazioni su un contenitore. Per ulteriori informazioni, vedi il comando [inspect](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} nella guida di Docker.
 
 ```
-bluemix ic ip-release INDIRIZZO_IP
+bluemix ic inspect [IMAGE|images|CONTAINER]
 ```
 
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione, Docker
 
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>INDIRIZZO_IP (obbligatorio)</dt>
-   <dd>L'indirizzo IP da rilasciare.</dd>
+   <dt><i>IMAGE</i> (obbligatorio)</dt>
+   <dd>Visualizzare informazioni dettagliate su un'immagine specifica indicando l'ID o il nome dell'immagine.</dd>
+   <dt>images (obbligatorio)</dt>
+   <dd>Visualizzare informazioni dettagliate su tutte le immagini del tuo repository.</dd>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
+   <dd>Visualizzare informazioni dettagliate su un contenitore specifico, indicando l'ID o il nome del contenitore.</dd>
    </dl>
 
+**Suggerimento:** non è possibile specificare *IMMAGINE*, *images* o il *CONTENITORE* contemporaneamente.
 
+<strong>Esempi</strong>:
+
+Il seguente esempio mostra una richiesta di controllo di un contenitore denominato `proxy`:
+```
+bluemix ic inspect proxy
+```
 
 
 ## bluemix ic ip-bind
@@ -2482,9 +2430,9 @@ bluemix ic ip-bind CONTENITORE INDIRIZZO_IP
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>INDIRIZZO_IP (obbligatorio)</dt>
+   <dt><i>IP_ADDRESS</i> (obbligatorio)</dt>
    <dd>L'indirizzo IP da associare mediante bind.</dd>
-   <dt>CONTENITORE (obbligatorio)</dt>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore da associare mediante bind.</dd>
    </dl>
 
@@ -2494,6 +2442,43 @@ Il seguente esempio mostra una richiesta di bind dell'indirizzo IP `192.123.12.1
 ```
 bluemix ic ip-bind 192.123.12.12 proxy
 ```
+
+
+## bluemix ic ip-release
+{: #bluemix_ic_ip_release}
+
+Rilasciare un indirizzo IP a virgola mobile dall'istanza del servizio cloud del contenitore.
+
+```
+bluemix ic ip-release IP_ADDRESS [IP_ADDRESS2 [...]]
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt><i>IP_ADDRESS</i> (obbligatorio)</dt>
+   <dd>L'indirizzo IP da rilasciare.</dd>
+   </dl>
+
+
+## bluemix ic ip-request
+{: #ip_request}
+Richiedere un nuovo indirizzo IP mobile.
+
+```
+bluemix ic ip-request [-q]
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt>-q (facoltativo)</dt>
+   <dd>Elenca solo gli indirizzi IP, senza l'ID per i contenitori associati a tali indirizzi IP.</dd>
+   </dl>
 
 
 ## bluemix ic ip-unbind
@@ -2512,9 +2497,9 @@ bluemix ic ip-unbind INDIRIZZO_IP CONTENITORE
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>INDIRIZZO_IP (obbligatorio)</dt>
+   <dt><i>IP_ADDRESS</i> (obbligatorio)</dt>
    <dd>L'indirizzo IP da scollegare.</dd>
-   <dt>CONTENITORE (obbligatorio)</dt>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore da scollegare.</dd>
    </dl>
 
@@ -2526,10 +2511,37 @@ bluemix ic ip-unbind 192.123.12.12 proxy
 ```
 
 
+## bluemix ic ips
+{: #bluemix_ic_ips}
+
+Elencare gli indirizzi IP a virgola mobile disponibili per l'utente che ha effettuato l'accesso. L'elenco include gli indirizzi IP e l'ID contenitore a cui sono collegati gli indirizzi IP. Se l'indirizzo IP non è in uso, non verrà visualizzato alcun ID contenitore.
+
+```
+bluemix ic ips [-q]
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt>-q (facoltativo)</dt>
+   <dd>Elenca solo gli indirizzi IP, senza l'ID per i contenitori associati a tali indirizzi IP.</dd>
+   </dl>
+
+
+<strong>Esempi</strong>:
+
+Il seguente esempio mostra una richiesta per ricevere un elenco di tutti gli indirizzi IP per l'organizzazione.
+```
+bluemix ic ips -q
+```
+
+
 ## bluemix ic kill
 {: #bluemix_ic_kill}
 
-Arrestare un processo in esecuzione in un contenitore senza arrestare il contenitore. Per ulteriori informazioni, vedi il comando [kill](https://docs.docker.com/reference/commandline/kill/){: new_window} nella guida di Docker.
+Arrestare un processo in esecuzione in un contenitore senza arrestare il contenitore. Per ulteriori informazioni, vedi il comando [kill](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} nella guida di Docker.
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -2542,7 +2554,7 @@ bluemix ic kill [-s CMD|--signal CMD] CONTAINER
    <dl>
    <dt>-s <i>CMD</i>|--signal <i>CMD</i> (facoltativo)</dt>
    <dd>Inviare un comando al processo in esecuzione nel contenitore.</dd>
-   <dt>CONTENITORE (obbligatorio)</dt>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
    </dl>
 
@@ -2555,10 +2567,19 @@ bluemix ic kill proxy
 ```
 
 
+## bluemix ic logs
+{: #bluemix_ic_logs}
+
+Mostra i log di output o di errore per un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [logs](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} nella guida di Docker.
+```
+bluemix ic logs [OPTIONS] CONTAINER
+```
+
+
 ## bluemix ic namespace-get
 {: #bluemix_ic_namespace_get}
 
-Visualizzare il nome del repository di immagini {{site.data.keyword.Bluemix_notm}} privato dell'organizzazione a cui si desidera accedere.
+Visualizzare il nome del repository di immagini {{site.data.keyword.Bluemix_notm}} privato dell'organizzazione a cui sei collegato.
 
 ```
 bluemix ic namespace-get
@@ -2570,7 +2591,7 @@ bluemix ic namespace-get
 ## bluemix ic namespace-set
 {: #bluemix_ic_namespace_set}
 
-Impostare il nome del repository di immagini {{site.data.keyword.Bluemix_notm}} privato dell'organizzazione a cui si accede.
+Impostare il nome del repository di immagini {{site.data.keyword.Bluemix_notm}} privato dell'organizzazione a cui sei collegato.
 
 *Limitazione*: non puoi utilizzare un trattino `-` nel nome del tuo spazio dei nomi del repository.
 
@@ -2583,16 +2604,15 @@ bluemix ic namespace-set NOME
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>NOME (obbligatorio)</dt>
-   <dd>Una funzione da eseguire una sola volta per impostare lo spazio dei nomi del repository per la tua organizzazione, se non già impostato. Una volta impostato lo spazio dei nomi, reinizializza IBM Containers attraverso il comando <i>bluemix ic init</i> prima di continuare.</dd>
+   <dt><i>NOME</i> (obbligatorio)</dt>
+   <dd>Una funzione da eseguire una sola volta per impostare lo spazio dei nomi del repository per la tua organizzazione, se non già impostato. Una volta impostato lo spazio dei nomi, reinizializza IBM Containers attraverso il comando `bluemix ic init` prima di continuare.</dd>
    </dl>
-
 
 
 ## bluemix ic pause
 {: #pause}
 
-Mettere in pausa tutti i processi all'interno di un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [pause](https://docs.docker.com/reference/commandline/pause/){: new_window} nella guida di Docker. Per arrestare un contenitore, vedi il comando [bluemix ic unpause](#unpause).
+Mettere in pausa tutti i processi all'interno di un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [pause](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} nella guida di Docker. Per arrestare un contenitore, vedi il comando [bluemix ic unpause](#unpause).
 
 ```
 bluemix ic pause CONTENITORE
@@ -2602,7 +2622,7 @@ bluemix ic pause CONTENITORE
 
 <strong>Opzioni del comando</strong>:
    <dl>
-   <dt>CONTENITORE (obbligatorio)</dt>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
    </dl>
 
@@ -2613,10 +2633,10 @@ bluemix ic pause CONTENITORE
 - Comando non riuscito con il servizio cloud del contenitore
 
  `{messaggio}`
-  
+
  Dove `{messaggio}` è
 l'errore correlato.
- 
+
 - Comando non riuscito - Impossibile connettersi al servizio cloud del contenitore
 
 <strong>Esempi</strong>:
@@ -2627,57 +2647,18 @@ bluemix ic pause proxy
 ```
 
 
-## bluemix ic unpause
-{: #unpause}
-
-Riprendere tutti i processi all'interno di un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [unpause](https://docs.docker.com/reference/commandline/unpause/){: new_window} nella guida di Docker. Per mettere in pausa un contenitore, vedi il comando [bluemix ic pause](#pause).
-
-```
-bluemix ic unpause CONTENITORE
-```
-
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione, Docker
-
-<strong>Opzioni del comando</strong>:
-
-   <dl>
-   <dt>CONTENITORE (obbligatorio)</dt>
-   <dd>Il nome o l'ID del contenitore.</dd>
-   </dl>
-
-<strong>Risposte</strong>:
-
-- Esecuzione del contenitore ripresa correttamente.
-
-- Comando non riuscito con il servizio cloud del contenitore 
-
- `{messaggio}` 
- 
- Dove `{messaggio}` è
-l'errore correlato.
- 
-- Comando non riuscito - Impossibile connettersi al servizio cloud del contenitore
-
-<strong>Esempi</strong>:
-
-Il seguente esempio mostra una richiesta di ripresa dell'esecuzione di un contenitore denominato `proxy`:
-```
-bluemix ic unpause proxy
-```
-
-
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-Elenca le associazioni delle porte o un'associazione specifica del contenitore. Questo comando include il comando `docker port`. Per ulteriori informazioni, vedi il comando [port](https://docs.docker.com/reference/commandline/port/){: new_window} nella guida di Docker.
+Elenca le associazioni delle porte o un'associazione specifica del contenitore. Questo comando include il comando `docker port`. Per ulteriori informazioni, vedi il comando [port](https://docs.docker.com/engine/reference/commandline/port/){: new_window} nella guida di Docker.
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-Visualizzare un elenco di contenitori in esecuzione nello spazio dei nomi dell'utente che ha effettuato l'accesso. Per impostazione predefinita, questo comando mostra solo i contenitori in esecuzione. Per ulteriori informazioni, vedi il comando [ps](https://docs.docker.com/reference/commandline/ps/){: new_window} nella guida di Docker.
+Visualizzare un elenco di contenitori in esecuzione nello spazio dei nomi dell'utente che ha effettuato l'accesso. Per impostazione predefinita, questo comando mostra solo i contenitori in esecuzione. Per ulteriori informazioni, vedi il comando [ps](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} nella guida di Docker.
 
 ```
-bluemix ic ps [-a|--all] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
+bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione, Docker
@@ -2687,6 +2668,8 @@ bluemix ic ps [-a|--all] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
    <dl>
    <dt>-a|--all (facoltativo)</dt>
    <dd>Visualizzare tutti i contenitori, sia quelli in esecuzione sia quelli arrestati.</dd>
+   <dt>--filter env=<i>SEARCH_CRITERIA</i> (facoltativo)</dt>
+   <dd>Cerca i contenitori che hanno uno specifico valore di variabile di ambiente. Puoi filtrare i tuoi contenitori in base a qualsiasi chiave o valore di variabile di ambiente elencato nella sezione Env della tua risposta CLI quando ispezioni un contenitore. Sostituisci SEARCH_CRITERIA con la chiave o valore che stai cercando. I tuoi criteri di ricerca non devono necessariamente essere una corrispondenza esatta. </dd>
    <dt>-s|--size (facoltativo)</dt>
    <dd>Elencare le dimensioni dei contenitori.</dd>
    <dt>-l <i>NUM</i>|--limit <i>NUM</i> (facoltativo)</dt>
@@ -2694,7 +2677,6 @@ bluemix ic ps [-a|--all] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
    <dt>-q|--quiet (facoltativo)</dt>
    <dd>Visualizzare solo gli ID contenitore.</dd>
    </dl>
-
 
 
 <strong>Esempi</strong>:
@@ -2705,10 +2687,49 @@ bluemix ic ps -a
 ```
 
 
+## bluemix ic rename
+{: #bluemix_ic_rename}
+Rinomina un contenitore. Per ulteriori informazioni, vedi il comando [rename](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} nella guida di Docker.
+
+```
+bluemix ic rename OLD_NAME NEW_NAME
+```
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione, Docker
+
+<strong>Opzioni del comando</strong>:
+
+<dl>
+   <dt><i>OLD_NAME</i> (obbligatorio)</dt>
+   <dd>Il vecchio nome del contenitore.</dd>
+   <dt><i>NEW_NAME</i> (obbligatorio)</dt>
+   <dd>Il nuovo nome del contenitore.</dd>
+   </dl>
+
+
+## bluemix ic reprovision
+{: #bluemix_ic_reprovision}
+
+Ricrea il servizio IBM Containers nello spazio Bluemix a cui sei collegato. La quota originale per lo spazio viene mantenuta.
+
+<strong>Importante</strong>: quando esegui questo comando, nessuno dei tuoi singoli contenitori e gruppi in questo spazio verrà migrato nello spazio di cui è stato eseguito di nuovo il provisioning e verranno rimossi durante il processo di migrazione. 
+
+```
+bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
+```
+<strong>Opzioni del comando</strong>:
+
+<dl>
+   <dt>--force|-f (facoltativo)</dt>
+   <dd>Forza la nuova creazione del servizio IBM Containers nello spazio Bluemix.</dd>
+   <dt><i>AVAILABILITY_ZONE</i> (facoltativo)</dt>
+   <dd>Il nome della zona di disponibilità IBM Containers in cui vengono distribuiti i tuoi contenitori. Se non si specifica alcuna zona di disponibilità, viene utilizzata la zona predefinita impostata per la regione.</dd>
+   </dl>
+
+
 ## bluemix ic restart
 {: #bluemix_ic_restart}
 
-Riavviare un contenitore. Per ulteriori informazioni, vedi il comando [restart](https://docs.docker.com/reference/commandline/restart/){: new_window} nella guida di Docker.
+Riavviare un contenitore. Per ulteriori informazioni, vedi il comando [restart](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} nella guida di Docker.
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -2719,7 +2740,7 @@ bluemix ic restart CONTAINER [-t SECS|--time SECS]
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>CONTENITORE (obbligatorio)</dt>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
    <dt>-t <i>SECONDI</i>|--time <i>SECONDI</i> (facoltativo)</dt>
    <dd>Il numero di secondi di attesa prima che il contenitore venga riavviato.</dd>
@@ -2730,13 +2751,13 @@ bluemix ic restart CONTAINER [-t SECS|--time SECS]
 
 - Contenitore riavviato correttamente.
 
-- Comando non riuscito con il servizio cloud del contenitore 
+- Comando non riuscito con il servizio cloud del contenitore
 
- `{messaggio}` 
- 
+ `{messaggio}`
+
  Dove `{messaggio}` è
 l'errore correlato.
- 
+
 - Comando non riuscito - Impossibile connettersi al servizio cloud del contenitore
 
 <strong>Esempi</strong>:
@@ -2750,7 +2771,7 @@ bluemix ic restart proxy
 ## bluemix ic rm
 {: #bluemix_ic_rm}
 
-Rimuovere un contenitore. Per ulteriori informazioni, vedi il comando [rm](https://docs.docker.com/reference/commandline/rm/){: new_window} nella guida di Docker.
+Rimuovere un contenitore. Per ulteriori informazioni, vedi il comando [rm](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} nella guida di Docker.
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -2763,7 +2784,7 @@ bluemix ic rm [-f|--force] CONTAINER
    <dl>
    <dt>-f|--force (facoltativo)</dt>
    <dd>Forza la rimozione di un contenitore in esecuzione o in errore.</dd>
-   <dt>CONTENITORE (obbligatorio)</dt>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
    </dl>
 
@@ -2771,13 +2792,13 @@ bluemix ic rm [-f|--force] CONTAINER
 
 - Contenitore rimosso correttamente.
 
-- Comando non riuscito con il servizio cloud del contenitore 
+- Comando non riuscito con il servizio cloud del contenitore
 
- `{messaggio}` 
- 
+ `{messaggio}`
+
  Dove `{messaggio}` è
 l'errore correlato.
- 
+
 - Comando non riuscito - Impossibile connettersi al servizio cloud del contenitore.
 
 <strong>Esempi</strong>:
@@ -2791,7 +2812,7 @@ bluemix ic rm proxy
 ## bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-Rimuovere un'immagine dallo spazio dei nomi dell'utente che ha effettuato l'accesso. Per ulteriori informazioni, vedi il comando [rmi](https://docs.docker.com/reference/commandline/rmi/){: new_window} nella guida di Docker.
+Rimuovere un'immagine dallo spazio dei nomi dell'utente che ha effettuato l'accesso. Per ulteriori informazioni, vedi il comando [rmi](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} nella guida di Docker.
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -2804,7 +2825,7 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
    <dl>
    <dt>-R <i>REGISTRO</i>|--registry <i>REGISTRO</i> (facoltativo)</dt>
    <dd>Modificare l'host del registro. Per impostazione predefinita verrà utilizzato il registro che hai specificato nel comando <i>bluemix ic init</i>.</dd>
-   <dt>IMMAGINE (obbligatorio)</dt>
+   <dt><i>IMAGE</i> (obbligatorio)</dt>
    <dd>Il nome dell'immagine che desideri rimuovere. Se non viene specificata
 una tag nel nome immagine, per impostazione predefinita viene eliminata
 l'immagine contrassegnata come <i>latest</i>.</dd>
@@ -2816,15 +2837,15 @@ l'immagine contrassegnata come <i>latest</i>.</dd>
 
  Dove `{IMMAGINE}` è il
 nome dell'immagine che è stata rimossa.
- 
+
 - Errore. Nessun host registro specificato.
 
 - Rimozione dell'immagine non riuscita - Impossibile connettersi al registro cloud del contenitore
 
-- Comando non riuscito con il servizio cloud del contenitore 
+- Comando non riuscito con il servizio cloud del contenitore
 
  `{messaggio}`
- 
+
  Dove `{messaggio}` è
 l'errore correlato.
 
@@ -2833,89 +2854,6 @@ l'errore correlato.
 Il seguente esempio mostra una richiesta di rimozione dell'immagine `mynamespace/myimage:latest`:
 ```
 bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
-```
-
-
-## bluemix ic run
-{: #bluemix_ic_run}
-
-Avviare un nuovo contenitore nel servizio cloud del contenitore da
-un nome immagine. Per ulteriori informazioni, vedi il comando [run](https://docs.docker.com/reference/commandline/run/){: new_window} nella guida di Docker.
-
-
-
-```
-bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV|--env ENV] [-v VOLUME:CONTAINER_PATH] -n NAME|--name NAME [--link NAME:ALIAS] [-it] IMAGE [CMD [CMD ...]]
-```
-**Nota:** accertati che lo strumento di comando Cloud Foundry sia installato e di disporre di un token Cloud Foundry. Se si accede correttamente tramite `bluemix login` e `bluemix ic init` vengono creati i certificati e i token richiesti. 
-
-
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione, Docker
-
-<strong>Opzioni del comando</strong>:
-
-   <dl>
-   <dt>-p <i>PORTA</i>|--publish <i>PORTA</i> (facoltativo)</dt>
-   <dd>Esporre la porta per il traffico HTTP. Includi le eventuali porte specificate nel Dockerfile per l'immagine che stai utilizzando. Puoi includere più porte con più opzioni <i>-p</i>. L'esposizione di una porta comporta automaticamente il bind di un indirizzo IP pubblico, se disponibile, al contenitore. <br><br>Se disponi già di un indirizzo IP nello spazio che desideri associare mediante bind al contenitore, puoi specificare l'indirizzo IP invece di eseguirne il bind successivamente. L'indirizzo IP deve essere specificato nel seguente formato: &lt;indirizzo_IP&gt;:&lt;porta_contenitore&gt;:&lt;porta_contenitore&gt; <br><br>Per ulteriori informazioni sulla richiesta di indirizzi IP per uno spazio, vedi il comando <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a>. <br><br>Quando specifichi una porta, stai rendendo l'applicazione disponibile al programma di bilanciamento del carico {{site.data.keyword.Bluemix_notm}} o ai contenitori dello stesso spazio {{site.data.keyword.Bluemix_notm}} che stanno provando a raggiungere l'host. Se nel Dockerfile è specificata una porta per l'immagine che stai utilizzando, includila. <br><br><strong>Suggerimenti:</strong><ul><li>Per l'immagine Liberty Server certificata da IBM o una versione modificata di questa immagine, immetti la porta 9080.</li><li>Per l'immagine Node.js certificata da IBM o una versione modificata di questa immagine, immetti la porta 8000.</li></ul></dd>
-   <dt>-P (facoltativo)</dt>
-   <dd>Esporre automaticamente le porte specificate nel Dockerfile dell'immagine per il traffico HTTP.</dd>
-   <dt>-m <i>MEMORIA</i>|--memory <i>MEMORIA</i> (facoltativo)</dt>
-   <dd>Assegnare un limite di memoria al gruppo in MB. Quando crei un gruppo di contenitori dalla CLI, il valore predefinito per ogni istanza del contenitore è 64 MB.  Quando crei un gruppo di contenitori dal Dashboard {{site.data.keyword.Bluemix_notm}}, il valore predefinito per ciascuna istanza è 256 MB. I valori accettati sono 64, 256, 512, 1024 e 2048. Una volta assegnato, il limite di memoria non può essere modificato.</dd>
-   <dt>-e <i>AMB</i>|--env <i>AMB</i> (facoltativo)</dt>
-   <dd>Impostare la variabile di ambiente, dove <i>AMB</i> è una coppia chiave=valore. In caso di più chiavi, elencale separatamente. Se includi virgolette, fallo racchiudendo sia il valore che il nome della variabile di ambiente. Ad esempio: -e "key1=value1" -e "key2=value2" -e "key3=value3". La seguente tabella mostra alcune variabili di ambiente comunemente utilizzate che puoi specificare:</dd>
-   </dl>
-
-
-|      Variabile di ambiente                          |   Descrizione                              |
-| :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;nome_applicazione&gt;*       | Eseguire il bind di un servizio a un contenitore. Utilizza la variabile di ambiente `CCS_BIND_APP` per eseguire il bind di un'applicazione al contenitore. L'applicazione viene associata mediante bind al servizio di destinazione e funge da ponte che consente a {{site.data.keyword.Bluemix_notm}} di portare le informazioni `VCAP_SERVICES` dell'applicazione ponte nell'istanza del contenitore in esecuzione. Per ulteriori informazioni sulla creazione di un'applicazione ponte, vedi [Esecuzione del bind di un servizio a un contenitore](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov){: new_window}. |
-| CCS_SSH_KEY=*&lt;chiave_ssh_pubblica&gt;* | Aggiungere una chiave SSH a un contenitore quando lo si crea. Puoi aggiungere la chiave SSH utilizzando la variabile di ambiente quando crei un contenitore dal dashboard {{site.data.keyword.Bluemix_notm}} o dalla CLI. Per ulteriori informazioni sulle chiavi SSH, vedi [Accesso a un contenitore](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}. |
-| LOG_LOCATIONS=*&lt;&gt;percorso_verso_file* | Aggiungere un file di log da monitorare nel contenitore. Includi la variabile di ambiente `LOG_LOCATIONS` in un percorso verso il file di log. |
-*Tabella 9. Variabili d'ambiente più utilizzate*
-
-
-   <dl>
-   <dt>-v VOLUME:PERCORSO_CONTENITORE[:ro]|--volume VOLUME:PERCORSO_CONTENITORE[:ro] (facoltativo)</dt>
-   <dd>Collegare un volume a un contenitore, specificando i dettagli nel formato <i>IDVolume:PercorsoContenitore[:ro]</i>.
-   <ul>
-   <li>VOLUME: l'ID o il nome del volume.</li>
-   <li>PERCORSO_CONTENITORE: il percorso assoluto per il volume del contenitore.</li>
-   <li>ro: facoltativo. La specifica di <i>ro</i> rende il volume di sola lettura invece della lettura/scrittura predefinita.</li></ul>
-   </dd>
-   <dt>-n <i>NOME</i>|--name <i>NOME</i> (facoltativo)</dt>
-   <dd>Assegnare un nome al contenitore. <br> <strong>Suggerimento:</strong> il nome del contenitore deve iniziare con una lettera. Il nome può includere lettere maiuscole, lettere minuscole, numeri, punti., caratteri di sottolineatura _, o trattini -.</dd>
-   <dt>--link <i>NOME</i>:<i>ALIAS</i> (facoltativo)</dt>
-   <dd>Ogni volta che desideri che un contenitore comunichi con un altro contenitore in esecuzione, puoi farvi riferimento utilizzando un alias del nome host.</dd>
-   <dt>-it (facoltativo)</dt>
-   <dd>Eseguire il contenitore in modalità interattiva. Una volta creato il contenitore, mantieni l'input standard visualizzato. Immetti <i>exit</i> per uscire.</dd>
-   <dt>IMMAGINE (obbligatorio)</dt>
-   <dd>L'immagine da includere nel contenitore. L'immagine può essere seguita da un elenco di comandi, ma non da opzioni. Includi tutte le opzioni prima di specificare un'immagine. Includi tutte le opzioni prima di specificare l'immagine. <br><br>Se utilizzi un'immagine nel repository {{site.data.keyword.Bluemix_notm}} privato della tua organizzazione, specificala con il seguente formato: <i>registry.ng.bluemix.net/SPAZIO_NOMI/IMMAGINE</i>. <br><br>Se utilizzi un'immagine fornita da IBM Containers, specificala nel seguente formato: <i>registry.ng.bluemix.net/IMMAGINE</i>. </dd>
-   <dt>CMD (facoltativo)</dt>
-   <dd>Il comando e gli argomenti trasmessi al gruppo di contenitori per l'esecuzione. Questo comando deve essere un comando a esecuzione prolungata. Non utilizzare un comando di breve durata che non viene eseguito per molto tempo, quale ad esempio <i>/bin/date</i>, poiché tale comando potrebbe provocare un arresto anomalo del contenitore.</dd>
-   </dl>
-
-
-<strong>Esempi</strong>:
-
-Esegui il comando a esecuzione prolungata `sh -c "while true; do date; sleep 20; done"` sul contenitore `mio_contenitore` creato sull'immagine `registry.ng.bluemix.net/ibmnode`. 
-```
-bluemix ic run --name mio_contenitore registry.ng.bluemix.net/ibmnode -- sh -c "while true; do date; sleep 20; done"
-```
-
-
-Creare e successivamente riavviare un contenitore `proxy` con un limite di memoria di `1024` MB utilizzando l'immagine `mio_spazioNomi/nginx`, dove `mio_spazioNomi` è lo spazio dei nomi associato agli utenti che hanno effettuato l'accesso.
-```
-bluemix ic run -n proxy -m 1024 registry.ng.bluemix.net/my_namespace/nginx
-```
-
-Creare e successivamente riavviare un contenitore utilizzando l'immagine `mio_spazioNomi/blog`, trasmettere le credenziali come variabili di ambiente. `mio_spazioNomi` è lo spazio dei nomi associato agli utenti che hanno effettuato l'accesso.
-```
-bluemix ic run -n mio_contenitore -e USER=johnsmith -e PASS=password registry.ng.bluemix.net/mio_spazioNomi/blog
-```
-
-Aggiungere un volume a un contenitore utilizzando l'immagine `mio_spazioNomi/blog`, dove `mio_spazioNomi` è lo spazio dei nomi associato agli utenti che hanno effettuato l'accesso.
-```
-bluemix ic run -n mio_contenitore -v VolId1:/first/path -v VolId2:/second/path registry.ng.bluemix.net/mio_spazioNomi/blog
 ```
 
 
@@ -2937,15 +2875,15 @@ bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTA
    <dd>Il nome host della rotta. Il nome host costituisce la prima parte dell'URL completo della rotta pubblica, quale ad esempio <i>mycontainerhost</i> nell'URL <i>mycontainerhost.mybluemix.net</i>.</dd>
    <dt>-d <i>DOMINIO</i>|--domain <i>DOMINIO</i> (facoltativo)</dt>
    <dd>Il nome dominio della rotta, che costituisce la seconda parte dell'URL completo della rotta pubblica. Nella maggior parte dei casi, il dominio è <i>mybluemix.net</i>. Puoi anche utilizzare questo parametro per specificare un dominio privato.</dd>
-   <dt>GRUPPO_CONTENITORI (obbligatorio)</dt>
+   <dt><i>GRUPPO_CONTENITORI</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del gruppo di contenitori.</dd>
    </dl>
 
 <strong>Esempi</strong>:
 
-Il seguente esempio mostra una richiesta di associazione della rotta del gruppo denominato `GRUPPO1`, dove `mio_host` è il nome dell'host e `organization.com` è il dominio.
+Il seguente esempio mostra una richiesta di associazione della rotta del gruppo denominato `GROUP1`, dove `my_host` è il nome host e `mybluemix.net` è il dominio.
 ```
-bluemix ic route-map -n mio_host -d organization.com GRUPPO1
+bluemix ic route-map -n my_host -d mybluemix.net GROUP1
 ```
 
 
@@ -2967,7 +2905,7 @@ bluemix ic route-unmap [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CON
    <dd>Il nome host della rotta.</dd>
    <dt>-d <i>DOMINIO</i>|--domain <i>DOMINIO</i> (facoltativo)</dt>
    <dd>Il nome dominio della rotta.</dd>
-   <dt>GRUPPO_CONTENITORI (obbligatorio)</dt>
+   <dt><i>GRUPPO_CONTENITORI</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del gruppo di contenitori.</dd>
    </dl>
 
@@ -2979,9 +2917,127 @@ bluemix ic route-unmap -n mio_host -d organization.com GRUPPO1
 ```
 
 
+## bluemix ic run
+{: #bluemix_ic_run}
+
+Avviare un nuovo contenitore nel servizio cloud del contenitore da
+un nome immagine. Per ulteriori informazioni, vedi il comando [run](https://docs.docker.com/engine/reference/commandline/run/){: new_window} nella guida di Docker.
+
+
+```
+bluemix ic run [-p PORT|--publish PORTA] [-P] [-m MEMORIA|--memory MEMORIA] [-e ENV|--env ENV] [--volume VOLUME:PERCORSO_CONTENITORE] -n NOME|--name NOME [--link NOME:ALIAS] [-it] IMMAGINE [CMD [CMD ...]]
+```
+**Nota:** accertati che lo strumento di comando Cloud Foundry sia installato e di disporre di un token Cloud Foundry. Se si accede correttamente tramite `bluemix login` e `bluemix ic init` vengono creati i certificati e i token richiesti.
+
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione, Docker
+
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt>-p <i>PORTA</i>|--publish <i>PORTA</i> (facoltativo)</dt>
+   <dd>Esporre la porta per il traffico HTTP. Includi le eventuali porte specificate nel Dockerfile per l'immagine che stai utilizzando. Puoi includere più porte con più opzioni <i>-p</i>. L'esposizione di una porta comporta automaticamente il bind di un indirizzo IP pubblico, se disponibile, al contenitore. <br><br>Se disponi già di un indirizzo IP nello spazio che desideri associare mediante bind al contenitore, puoi specificare l'indirizzo IP invece di eseguirne il bind successivamente. L'indirizzo IP deve essere specificato nel seguente formato: &lt;indirizzo_IP&gt;:&lt;porta_contenitore&gt;:&lt;porta_contenitore&gt; <br><br>Per ulteriori informazioni sulla richiesta di indirizzi IP per uno spazio, vedi il comando <a href="index.html#ip_request" target="_blank">bluemix ic ip-request</a>. <br><br>Quando specifichi una porta, stai rendendo l'applicazione disponibile al programma di bilanciamento del carico {{site.data.keyword.Bluemix_notm}} o ai contenitori dello stesso spazio {{site.data.keyword.Bluemix_notm}} che stanno provando a raggiungere l'host. Se nel Dockerfile è specificata una porta per l'immagine che stai utilizzando, includila. <br><br><strong>Suggerimenti:</strong><ul><li>Per l'immagine Liberty Server certificata da IBM o una versione modificata di questa immagine, immetti la porta 9080.</li><li>Per l'immagine Node.js certificata da IBM o una versione modificata di questa immagine, immetti la porta 8000.</li></ul></dd>
+   <dt>-P (facoltativo)</dt>
+   <dd>Esporre automaticamente le porte specificate nel Dockerfile dell'immagine per il traffico HTTP.</dd>
+   <dt>-m <i>MEMORIA</i>|--memory <i>MEMORIA</i> (facoltativo)</dt>
+   <dd>Assegnare un limite di memoria al gruppo in MB. Quando crei un gruppo di contenitori dalla CLI, il valore predefinito per ogni istanza del contenitore è 64 MB.  Quando crei un gruppo di contenitori dal Dashboard {{site.data.keyword.Bluemix_notm}}, il valore predefinito per ciascuna istanza è 256 MB. I valori accettati sono 64, 256, 512, 1024 e 2048. Una volta assegnato, il limite di memoria non può essere modificato.</dd>
+   <dt>-e <i>AMB</i>|--env <i>AMB</i> (facoltativo)</dt>
+   <dd>Impostare la variabile di ambiente, dove <i>AMB</i> è una coppia chiave=valore. In caso di più chiavi, elencale separatamente. Se includi virgolette, fallo racchiudendo sia il valore che il nome della variabile di ambiente. Ad esempio: -e "key1=value1" -e "key2=value2" -e "key3=value3". La seguente tabella mostra alcune variabili di ambiente comunemente utilizzate che puoi specificare:</dd>
+   </dl>
+
+
+|      Variabile di ambiente                          |   Descrizione                              |
+| :----------------------------- | :------------------------------ |
+| CCS_BIND_APP=*&lt;nome_applicazione&gt;*       | Eseguire il bind di un servizio a un contenitore. Utilizza la variabile di ambiente `CCS_BIND_APP` per eseguire il bind di un'applicazione al contenitore. L'applicazione viene associata mediante bind al servizio di destinazione e funge da ponte che consente a {{site.data.keyword.Bluemix_notm}} di portare le informazioni `VCAP_SERVICES` dell'applicazione ponte nell'istanza del contenitore in esecuzione. Per ulteriori informazioni sulla creazione di un'applicazione ponte, vedi [Esecuzione del bind di un servizio a un contenitore](../../../containers/container_integrations_binding.html){: new_window}. |
+| CCS_BIND_SRV=*&lt;nome_istanza_servizio1&gt;*,*&lt;nome_istanza_servizio2&gt;* | Per eseguire direttamente il bind di un servizio Bluemix a un contenitore senza utilizzare un'applicazione ponte, utilizza CCS_BIND_SRV. Questo bind consente a Bluemix di inserire le informazioni VCAP_SERVICES nell'istanza del contenitore in esecuzione. Per elencare più servizi Bluemix, puoi includerli come parte della stessa variabile di ambiente. |
+| LOG_LOCATIONS=*&lt;&gt;percorso_verso_file* | Aggiungere un file di log da monitorare nel contenitore. Includi la variabile di ambiente `LOG_LOCATIONS` in un percorso verso il file di log. |
+*Tabella 9. Variabili d'ambiente più utilizzate*
+
+
+   <dl>
+   <dt>--volume <i>VOLUME</i>:<i>PERCORSO_CONTENITORE</i>[:ro] (facoltativo)</dt>
+   <dd>Collegare un volume a un contenitore, specificando i dettagli nel formato <i>IDVolume:PercorsoContenitore[:ro]</i>.
+   <ul>
+   <li><i>VOLUME</i>: l'ID o nome del volume.</li>
+   <li><i>PERCORSO_CONTENITORE</i>: il percorso assoluto per il volume del contenitore.</li>
+   <li>ro: facoltativo. La specifica di <i>ro</i> rende il volume di sola lettura invece della lettura/scrittura predefinita.</li></ul>
+   </dd>
+   <dt>-n <i>NOME</i>|--name <i>NOME</i> (facoltativo)</dt>
+   <dd>Assegnare un nome al contenitore. <br> <strong>Suggerimento:</strong> il nome del contenitore deve iniziare con una lettera. Il nome può includere lettere maiuscole, lettere minuscole, numeri, punti., caratteri di sottolineatura _, o trattini -.</dd>
+   <dt>--link <i>NOME</i>:<i>ALIAS</i> (facoltativo)</dt>
+   <dd>Ogni volta che desideri che un contenitore comunichi con un altro contenitore in esecuzione, puoi farvi riferimento utilizzando un alias del nome host.</dd>
+   <dt>-it (facoltativo)</dt>
+   <dd>Eseguire il contenitore in modalità interattiva. Una volta creato il contenitore, mantieni l'input standard visualizzato. Immetti <i>exit</i> per uscire.</dd>
+   <dt><i>IMAGE</i> (obbligatorio)</dt>
+   <dd>L'immagine da includere nel contenitore. L'immagine può essere seguita da un elenco di comandi, ma non da opzioni. Includi tutte le opzioni prima di specificare un'immagine. Includi tutte le opzioni prima di specificare l'immagine. <br><br>Se utilizzi un'immagine nel repository {{site.data.keyword.Bluemix_notm}} privato della tua organizzazione, specificala con il seguente formato: <i>registry.ng.bluemix.net/SPAZIO_NOMI/IMMAGINE</i>. <br><br>Se utilizzi un'immagine fornita da IBM Containers, specificala nel seguente formato: <i>registry.ng.bluemix.net/IMMAGINE</i>. </dd>
+   <dt><i>CMD</i> (facoltativo)</dt>
+   <dd>Il comando e gli argomenti trasmessi al gruppo di contenitori per l'esecuzione. Questo comando deve essere un comando a esecuzione prolungata. Non utilizzare un comando di breve durata che non viene eseguito per molto tempo, quale ad esempio <i>/bin/date</i>, poiché tale comando potrebbe provocare un arresto anomalo del contenitore.</dd>
+   </dl>
+
+
+<strong>Esempi</strong>:
+
+Esegui il comando a esecuzione prolungata `sh -c "while true; do date; sleep 20; done"` sul contenitore `mio_contenitore` creato sull'immagine `registry.ng.bluemix.net/ibmnode`.
+```
+bluemix ic run --name mio_contenitore registry.ng.bluemix.net/ibmnode -- sh -c "while true; do date; sleep 20; done"
+```
+
+
+Creare e successivamente riavviare un contenitore `proxy` con un limite di memoria di `1024` MB utilizzando l'immagine `mio_spazioNomi/nginx`, dove `mio_spazioNomi` è lo spazio dei nomi associato agli utenti che hanno effettuato l'accesso.
+```
+bluemix ic run -n proxy -m 1024 registry.ng.bluemix.net/my_namespace/nginx
+```
+
+Creare e successivamente riavviare un contenitore utilizzando l'immagine `mio_spazioNomi/blog`, trasmettere le credenziali come variabili di ambiente. `mio_spazioNomi` è lo spazio dei nomi associato agli utenti che hanno effettuato l'accesso.
+```
+bluemix ic run -n mio_contenitore -e USER=johnsmith -e PASS=password registry.ng.bluemix.net/mio_spazioNomi/blog
+```
+
+Aggiungere un volume a un contenitore utilizzando l'immagine `mio_spazioNomi/blog`, dove `mio_spazioNomi` è lo spazio dei nomi associato agli utenti che hanno effettuato l'accesso.
+```
+bluemix ic run -n mio_contenitore -v VolId1:/first/path -v VolId2:/second/path registry.ng.bluemix.net/mio_spazioNomi/blog
+```
+
+
+## bluemix ic service-bind
+{: #bluemix_ic_service-bind}
+
+Aggiungi un servizio a un gruppo di contenitori in esecuzione. Questo comando è disponibile solo per i gruppi di contenitori. I singoli contenitori devono essere associati tramite bind a un servizio come parte del comando bluemix ic run.
+
+```
+bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE
+```
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt><i>NOME GRUPPO</i> (obbligatorio)</dt>
+   <dd>L'ID o il nome del gruppo.</dd>
+   <dt><i>ISTANZA_SERVIZIO</i> (obbligatorio)</dt>
+   <dd>Il nome dell'istanza del servizio da aggiungere al gruppo di contenitori.</dd>
+   </dl>
+
+
+## bluemix ic service-unbind
+{: #bluemix_ic_service-unbind}
+
+Rimuovi un servizio da un gruppo di contenitori in esecuzione. Questo comando è disponibile solo per i gruppi di contenitori. I singoli contenitori devono rimuovere il contenitore e crearne uno nuovo senza il servizio.
+
+```
+bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
+```
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt><i>NOME GRUPPO</i> (obbligatorio)</dt>
+   <dd>L'ID o il nome del gruppo.</dd>
+   <dt><i>ISTANZA_SERVIZIO</i> (obbligatorio)</dt>
+   <dd>Il nome dell'istanza del servizio da aggiungere al gruppo di contenitori.</dd>
+   </dl>
+
+
 ## bluemix ic start
 {: #ic_start}
-Avviare un contenitore arrestato. Per ulteriori informazioni, vedi il comando [start](https://docs.docker.com/reference/commandline/start/){: new_window} nella guida di Docker. Per arrestare un contenitore, vedi il comando [bluemix ic stop](#ic_stop).
+Avviare un contenitore arrestato. Per ulteriori informazioni, vedi il comando [start](https://docs.docker.com/engine/reference/commandline/start/){: new_window} nella guida di Docker. Per arrestare un contenitore, vedi il comando [bluemix ic stop](#ic_stop).
 
 ```
 bluemix ic start CONTENITORE
@@ -2992,7 +3048,7 @@ bluemix ic start CONTENITORE
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>CONTENITORE (obbligatorio)</dt>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
    </dl>
 
@@ -3004,10 +3060,10 @@ bluemix ic start CONTENITORE
 - Comando non riuscito con il servizio cloud del contenitore
 
  `{messaggio}`
-  
+
  Dove `{messaggio}` è
 l'errore correlato.
- 
+
 - Comando non riuscito - Impossibile connettersi al servizio cloud del contenitore
 
 <strong>Esempi</strong>:
@@ -3018,50 +3074,10 @@ bluemix ic start proxy
 ```
 
 
-## bluemix ic stop  
-{: #ic_stop}
-Arrestare un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [stop](https://docs.docker.com/reference/commandline/stop/){: new_window} nella guida di Docker. Per avviare un contenitore, vedi il comando [bluemix ic start](#ic_start).
-
-```
-bluemix ic stop CONTAINER [-t SECS|--time SECS]
-```
-
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione, Docker
-
-<strong>Opzioni del comando</strong>:
-
-   <dl>
-   <dt>CONTENITORE (obbligatorio)</dt>
-   <dd>Il nome o l'ID del contenitore.</dd>
-   <dt>-t <i>SECONDI</i>|--time <i>SECONDI</i> (facoltativo)</dt>
-   <dd>Il numero di secondi di attesa prima che il contenitore venga arrestato.</dd>
-   </dl>
-
-<strong>Risposte</strong>:
-
-- Contenitore arrestato correttamente.
-
-- Comando non riuscito con il servizio cloud del contenitore
-
- `{messaggio}`
-  
- Dove `{messaggio}` è
-l'errore correlato.
- 
-- Comando non riuscito - Impossibile connettersi al servizio cloud del contenitore
-
-<strong>Esempi</strong>:
-
-Il seguente esempio mostra una richiesta di arresto di un contenitore denominato `proxy`.
-```
-bluemix ic stop proxy
-```
-
-
 ## bluemix ic stats
 {: #bluemix_ic_stats}
 
-Visualizzare le statistiche di utilizzo in tempo reale per uno o più contenitori. Utilizza `CTRL+C` per chiudere. Per ulteriori informazioni, vedi il comando [stats](https://docs.docker.com/reference/commandline/stats/){: new_window} nella guida di Docker.
+Visualizzare le statistiche di utilizzo in tempo reale per uno o più contenitori. Utilizza `CTRL+C` per chiudere. Per ulteriori informazioni, vedi il comando [stats](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} nella guida di Docker.
 
 ```
 bluemix ic stats [--no-stream] CONTENITORE [CONTENITORE]
@@ -3072,7 +3088,7 @@ bluemix ic stats [--no-stream] CONTENITORE [CONTENITORE]
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>CONTENITORE (obbligatorio)</dt>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
    <dt>--no-stream (facoltativo)</dt>
    <dd>Visualizzare solo il risultato più recente, senza includere informazioni precedenti.</dd>
@@ -3086,10 +3102,50 @@ bluemix ic stats --no-stream mio_contenitore
 ```
 
 
+## bluemix ic stop  
+{: #ic_stop}
+Arrestare un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [stop](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} nella guida di Docker. Per avviare un contenitore, vedi il comando [bluemix ic start](#ic_start).
+
+```
+bluemix ic stop CONTAINER [-t SECS|--time SECS]
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione, Docker
+
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
+   <dd>Il nome o l'ID del contenitore.</dd>
+   <dt>-t <i>SECONDI</i>|--time <i>SECONDI</i> (facoltativo)</dt>
+   <dd>Il numero di secondi di attesa prima che il contenitore venga arrestato.</dd>
+   </dl>
+
+<strong>Risposte</strong>:
+
+- Contenitore arrestato correttamente.
+
+- Comando non riuscito con il servizio cloud del contenitore
+
+ `{messaggio}`
+
+ Dove `{messaggio}` è
+l'errore correlato.
+
+- Comando non riuscito - Impossibile connettersi al servizio cloud del contenitore
+
+<strong>Esempi</strong>:
+
+Il seguente esempio mostra una richiesta di arresto di un contenitore denominato `proxy`.
+```
+bluemix ic stop proxy
+```
+
+
 ## bluemix ic top
 {: #bluemix_ic_top}
 
-Mostrare i processi in esecuzione nel contenitore. Per ulteriori informazioni, vedi il comando [top](https://docs.docker.com/reference/commandline/top/){: new_window} nella guida di Docker.
+Mostrare i processi in esecuzione nel contenitore. Per ulteriori informazioni, vedi il comando [top](https://docs.docker.com/engine/reference/commandline/top/){: new_window} nella guida di Docker.
 
 ```
 bluemix ic top CONTENITORE [CONTENITORE]
@@ -3100,7 +3156,7 @@ bluemix ic top CONTENITORE [CONTENITORE]
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>CONTENITORE (obbligatorio)</dt>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
    </dl>
 
@@ -3112,16 +3168,204 @@ bluemix ic top mio_contenitore
 ```
 
 
-## bluemix ic volumes
-{: #bluemix_ic_volumes}
+## bluemix ic unpause
+{: #unpause}
 
-Elencare i volumi.
+Riprendere tutti i processi all'interno di un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [unpause](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} nella guida di Docker. Per mettere in pausa un contenitore, vedi il comando [bluemix ic pause](#pause).
 
 ```
-bluemix ic volumes
+bluemix ic unpause CONTENITORE
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione, Docker
+
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
+   <dd>Il nome o l'ID del contenitore.</dd>
+   </dl>
+
+<strong>Risposte</strong>:
+
+- Esecuzione del contenitore ripresa correttamente.
+
+- Comando non riuscito con il servizio cloud del contenitore
+
+ `{messaggio}`
+
+ Dove `{messaggio}` è
+l'errore correlato.
+
+- Comando non riuscito - Impossibile connettersi al servizio cloud del contenitore
+
+<strong>Esempi</strong>:
+
+Il seguente esempio mostra una richiesta di ripresa dell'esecuzione di un contenitore denominato `proxy`:
+```
+bluemix ic unpause proxy
+```
+
+
+## bluemix ic unprovision
+{: #bluemix_ic_unprovision}
+
+Elimina il servizio IBM Containers dallo spazio Bluemix a cui sei collegato.
+
+<strong>Attenzione</strong>: quando esegui questo comando, tutti i tuoi singoli contenitori e gruppi di contenitori vengono persi. Il tuo spazio sarà ancora disponibile in Bluemix. Per iniziare a utilizzare di nuovo IBM Containers, devi eseguire `bluemix ic reprovision` per effettuare nuovamente il provisioning del servizio IBM Containers.
+
+```
+bluemix ic reprovision [--force|-f]
+```
+<strong>Opzioni del comando</strong>:
+
+<dl>
+   <dt>--force|-f (facoltativo)</dt>
+   <dd>Forza l'eliminazione di Bluemix dallo spazio Bluemix.</dd>
+ </dl>
+
+
+## bluemix ic version
+{: #bluemix_ic_version}
+
+Mostrare la versione di Docker e dell'API IBM Containers.
+
+```
+bluemix ic version
+```
+
+<strong>Prerequisiti</strong>:  Docker
+
+Per visualizzare la versione di IBM Containers, eseguire `bluemix ic info`. Per ulteriori informazioni, vedi il comando [version](https://docs.docker.com/engine/reference/commandline/version/){: new_window} nella guida di Docker.
+
+
+## bluemix ic volume-create
+{: #bluemix_ic_volume_create}
+
+Creare un volume.
+
+```
+bluemix ic volume-create NOME_VOLUME NOME_FS
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt><i>NOME_FS</i> (facoltativo)</dt>
+   <dd>Il nome della condivisione file. Se non viene denominata o non è disponibile alcuna condivisione file, il volume sarà creato nella condivisione file predefinita dello spazio.</dd>
+   <dt><i>NOME_VOLUME</i> (obbligatorio)</dt>
+   <dd>Il nome del volume. Il nome può contenere lettere minuscole, numeri, caratteri di sottolineatura (_) e trattini (-).</dd>
+   </dl>
+
+
+<strong>Esempi</strong>:
+
+Il seguente esempio mostra una richiesta di creazione di un volume.
+```
+bluemix ic volume-create volume_name fileshare_name
+```
+
+
+## bluemix ic volume-fs
+{: #bluemix_ic_volume_fs}
+
+Elencare le condivisioni file.
+
+```
+bluemix ic volume-fs
+```
+
+
+## bluemix ic volume-fs-create
+{: #bluemix_ic_volume_fs_create}
+
+Creare una condivisione file.
+
+```
+bluemix ic volume-fs-create NOME_CONDIVISIONE_FILE
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt><i>NOME_CONDIVISIONE_FILE</i> (obbligatorio)</dt>
+   <dd>Il nome della condivisione file. Il nome può contenere lettere minuscole, numeri, caratteri di sottolineatura (_) e trattini (-).</dd>
+   </dl>
+
+<strong>Esempi</strong>:
+
+Il seguente esempio mostra una richiesta di creazione di una condivisione file.
+```
+bluemix ic volume-fs-create my_file_share
+```
+
+
+## bluemix ic volume-fs-flavors
+{: #bluemix_ic_volume_fs_flavors}
+
+Elencare tutte le caratteristiche della condivisione file.
+
+```
+bluemix ic volume-fs-flavors
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+
+## bluemix ic volume-fs-inspect
+{: #bluemix_ic_volume_fs_inspect}
+
+Ispezionare una condivisione file.
+
+```
+bluemix ic volume-fs-inspect NOME_CONDIVISIONE_FILE
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+
+  <dl>
+  <dt><i>NOME_CONDIVISIONE_FILE</i> (obbligatorio)</dt>
+   <dd>Il nome della condivisione file. </dd>
+   </dl>
+
+<strong>Esempi</strong>:
+
+Il seguente esempio è una richiesta di ispezione di una condivisione file, dove `my_file_share` è il nome della condivisione file.
+```
+bluemix ic volume-fs-inspect my_file_share
+```
+
+
+## bluemix ic volume-fs-remove
+{: #bluemix_ic_volume_fs_remove}
+
+Rimuovere una condivisione file.
+
+```
+bluemix ic volume-fs-remove NOME_CONDIVISIONE_FILE
+```
+
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
+
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt><i>NOME_CONDIVISIONE_FILE</i> (obbligatorio)</dt>
+   <dd>Il nome della condivisione file. </dd>
+   </dl>
+
+<strong>Esempi</strong>:
+
+Il seguente esempio mostra una richiesta di rimozione di una condivisione file, dove `my_file_share` è il nome della condivisione file.
+```
+bluemix ic volume-fs-remove my_file_share
+```
 
 
 ## bluemix ic volume-inspect
@@ -3138,7 +3382,7 @@ bluemix ic volume-inspect NOME_VOLUME
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>NOME_VOLUME (obbligatorio)</dt>
+   <dt><i>NOME_VOLUME</i> (obbligatorio)</dt>
    <dd>Il nome del volume.</dd>
    </dl>
 
@@ -3147,33 +3391,6 @@ bluemix ic volume-inspect NOME_VOLUME
 Il seguente esempio è una richiesta di ispezione di un volume, dove `nome_volume` è il nome del volume.
 ```
 bluemix ic volume-inspect volume_name
-```
-
-
-## bluemix ic volume-create
-{: #bluemix_ic_volume_create}
-
-Creare un volume.
-
-```
-bluemix ic volume-create NOME_VOLUME
-```
-
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
-
-<strong>Opzioni del comando</strong>:
-
-   <dl>
-   <dt>NOME_VOLUME (obbligatorio)</dt>
-   <dd>Il nome del volume. Il nome può contenere lettere minuscole, numeri, caratteri di sottolineatura (_) e trattini (-).</dd>
-   </dl>
-
-
-<strong>Esempi</strong>:
-
-Il seguente esempio mostra una richiesta di creazione di un volume.
-```
-bluemix ic volume-create nome_volume 
 ```
 
 
@@ -3191,7 +3408,7 @@ bluemix ic volume-remove NOME_VOLUME
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>NOME_VOLUME (obbligatorio)</dt>
+   <dt><i>NOME_VOLUME</i> (obbligatorio)</dt>
    <dd>Il nome del volume.</dd>
     </dl>
 
@@ -3202,108 +3419,23 @@ Il seguente esempio mostra una richiesta di rimozione di un volume, dove `nome_v
 bluemix ic volume-remove nome_volume
 ```
 
-## bluemix ic volume-fs
-{: #bluemix_ic_volume_fs}
 
-Elencare i file system.
+## bluemix ic volumes
+{: #bluemix_ic_volumes}
 
-```
-bluemix ic volume-fs
-```
-
-## bluemix ic volume-fs-create
-{: #bluemix_ic_volume_fs_create}
-
-Creare un nuovo file system.
+Elencare i volumi.
 
 ```
-bluemix ic volume-fs-create FILE_SYSTEM_NAME
+bluemix ic volumes
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
-
-<strong>Opzioni del comando</strong>:
-
-   <dl>
-   <dt>NOME_FILE_SYSTEM (obbligatorio)</dt>
-   <dd>Il nome del file system. Il nome può contenere lettere minuscole, numeri, caratteri di sottolineatura (_) e trattini (-).</dd>
-   </dl>
-
-<strong>Esempi</strong>:
-
-Il seguente esempio mostra una richiesta di creazione di un file system.
-```
-bluemix ic volume-fs-create my_file_system 
-```
-
-## bluemix ic volume-fs-remove
-{: #bluemix_ic_volume_fs_remove}
-
-Rimuovere un file system.
-
-```
-bluemix ic volume-fs-remove FILE_SYSTEM_NAME
-```
-
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
-
-<strong>Opzioni del comando</strong>:
-
-   <dl>
-   <dt>NOME_FILE_SYSTEM (obbligatorio)</dt>
-   <dd>Il nome del file system.</dd>
-   </dl>
-
-<strong>Esempi</strong>:
-
-Il seguente esempio mostra una richiesta di rimozione di un file system, dove `my_file_system` è il nome del file system.
-```
-bluemix ic volume-fs-remove my_file_system
-```
-
-## bluemix ic volume-fs-inspect
-{: #bluemix_ic_volume_fs_inspect}
-
-Ispezionare un file system.
-
-```
-bluemix ic volume-fs-inspect FILE_SYSTEM_NAME
-```
-
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
-
-<strong>Opzioni del comando</strong>:
-
-  <dl>
-   <dt>NOME_FILE_SYSTEM (obbligatorio)</dt>
-   <dd>Il nome del file system.</dd>
-   </dl>
-
-<strong>Esempi</strong>:
-
-Il seguente esempio è una richiesta di ispezione di un file system, dove `my_file_system` è il nome del volume.
-```
-bluemix ic volume-fs-inspect my_file_system
-```
-
-
-## bluemix ic volume-fs-flavors
-{: #bluemix_ic_volume_fs_flavors}
-
-Elencare tutte le caratteristiche del file system.
-
-```
-bluemix ic volume-fs-flavors
-```
-
-<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
-
 
 
 ## bluemix ic wait
 {: #bluemix_ic_wait}
 
-Chiudere un contenitore e visualizzare il codice di uscita come conferma. Per ulteriori informazioni, vedi il comando [wait](https://docs.docker.com/reference/commandline/wait/){: new_window} nella guida di Docker.
+Chiudere un contenitore e visualizzare il codice di uscita come conferma. Per ulteriori informazioni, vedi il comando [wait](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} nella guida di Docker.
 
 ```
 bluemix ic wait CONTENITORE [CONTENITORE]
@@ -3314,7 +3446,7 @@ bluemix ic wait CONTENITORE [CONTENITORE]
 <strong>Opzioni del comando</strong>:
 
    <dl>
-   <dt>CONTENITORE (obbligatorio)</dt>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
    <dd>Il nome o l'ID del contenitore.</dd>
    </dl>
 
@@ -3326,18 +3458,32 @@ bluemix ic wait mio_contenitore
 ```
 
 
-## bluemix ic version
-{: #bluemix_ic_version}
+## bluemix ic wait-status
+{: #bluemix_ic_wait_status}
 
-Mostrare la versione di Docker. 
+Attendere che un singolo contenitore o gruppo di contenitori raggiunga lo stato non temporaneo. Durante questo tempo di attesa, la riga di comando non viene restituita e non puoi immettere i comandi. Non appena il contenitore raggiunge lo stato non temporaneo, viene visualizzato il messaggio OK. Per i singoli contenitori, gli stati non temporanei includono In esecuzione, Arresto, Arresto anomalo, In pausa o Sospeso. Per i gruppi di contenitori, gli stati non temporanei includono CREATE_COMPLETE, UPDATE_COMPLETE o FAILED
 
 ```
-bluemix ic version
+bluemix ic wait-status CONTAINER
 ```
 
-<strong>Prerequisiti</strong>:  Docker
+<strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione, Docker
 
-Per visualizzare la versione di IBM Containers, eseguire `bluemix ic info`. Per ulteriori informazioni, vedi il comando [version](https://docs.docker.com/reference/commandline/version/){: new_window} nella guida di Docker.
+<strong>Opzioni del comando</strong>:
+
+   <dl>
+   <dt><i>CONTAINER</i> (obbligatorio)</dt>
+   <dd>Il nome o l'ID del contenitore.</dd>
+   </dl>
+
+<strong>Esempi</strong>:
+
+Il seguente esempio mostra una richiesta di chiusura di un contenitore denominato `mio_contenitore`:
+```
+bluemix ic wait mio_contenitore
+```
+
+
 
 # Link correlati
 {: #rellinks}

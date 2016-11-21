@@ -20,13 +20,13 @@ Dernière mise à jour : 13 septembre 2016
 Une *chaîne d'outils* est un ensemble d'intégrations d'outils prenant en charge des tâches de développement, de déploiement et d'opérations. La puissance collective d'une chaîne d'outils est supérieure à la somme de ses intégrations d'outils individuelles.    
 {:shortdesc}
 
-Les chaînes d'outils sont disponibles dans les environnements {{site.data.keyword.Bluemix}} public et dédié. Vous pouvez créer une chaîne d'outils de deux façons : à l'aide d'un modèle ou à partir d'une application. Comme point de départ, vous pouvez utiliser un modèle de chaîne d'outils. En fonction du modèle utilisé, vous pouvez créer une chaîne d'outils possédant un ensemble spécifique d'intégrations d'outils ou une chaîne d'outils vide dans laquelle ajouter des intégrations d'outils. 
+Les chaînes d'outils sont disponibles dans les environnements {{site.data.keyword.Bluemix}} public et dédié. Vous pouvez créer une chaîne d'outils de deux façons : à l'aide d'un modèle ou à partir d'une application. Comme point de départ, vous pouvez utiliser un modèle de chaîne d'outils. En fonction du modèle utilisé, vous pouvez créer une chaîne d'outils possédant un ensemble spécifique d'intégrations d'outils ou une chaîne d'outils vide dans laquelle ajouter des intégrations d'outils.
 
 Sur {{site.data.keyword.Bluemix_notm}} public, selon le modèle ou la chaîne d'outils que vous utilisez, il est possible que la chaîne d'outils inclue un référentiel GitHub (repo) rempli avec le code de démarrage d'application et un pipeline de distribution préconfiguré. Lorsque vous envoyez des modifications au référentiel GitHub de la chaîne d'outils, le pipeline de distribution génère et déploie automatiquement l'application sur {{site.data.keyword.Bluemix_notm}}. 
 
 Sur {{site.data.keyword.Bluemix_notm}} dédié, selon la chaîne d'outils utilisée, il est possible que celle-ci inclue un référentiel GitHub Enterprise rempli avec le code de démarrage d'application et un pipeline de distribution préconfiguré. Lorsque vous envoyez des modifications au référentiel GitHub Enterprise de la chaîne d'outils, le pipeline de distribution génère et déploie automatiquement les applications sur {{site.data.keyword.Bluemix_notm}}.
 
-## Aide et assistance pour les chaînes d'outils  
+## Aide et assistance pour les chaînes d'outils 
 {: #gettinghelp}
 
 Si vous rencontrez des problèmes lors de l'utilisation de chaînes d'outils, ou si vous avez des questions, vous pouvez obtenir de l'aide en recherchant des informations ou en posant des questions via un forum. Vous pouvez également ouvrir un ticket de demande de service. 

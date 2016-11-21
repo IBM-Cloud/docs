@@ -27,7 +27,7 @@ Die folgenden Abschnitte enthalten detaillierte Informationen zu {{site.data.key
 ## Funktionsweise von {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_how}
 
-{{site.data.keyword.openwhisk_short}} ist eine ereignisgesteuerte Berechnungsplattform, die Code in Reaktion auf Ereignisse oder direkte Aufrufe ausführt.
+{{site.data.keyword.openwhisk_short}} ist eine ereignisgesteuerte Berechnungsplattform (auch serverunabhängiges Computing oder Function as a Service (FaaS)), die Code in Reaktion auf Ereignisse oder direkte Aufrufe ausführt.
 
 In der folgenden Abbildung ist die allgemeine {{site.data.keyword.openwhisk_short}}-Architektur dargestellt.
 

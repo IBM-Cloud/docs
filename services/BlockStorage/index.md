@@ -2,16 +2,16 @@
 
 # {{site.data.keyword.blockstorageshort}} (Beta) is deprecated
 
-Last updated: 24 October 2016
+Last updated: 26 October 2016
 {: .last-updated}
 
 If you’re an existing {{site.data.keyword.blockstoragefull}} (Beta) user, you can continue to use the service until 24 December 2016. 
 
-**This service is deprecated:** Existing volumes can be managed until 24 December 2016.
+**This service is deprecated:** Existing volumes can be managed until 24 December 2016. For more information, see [Retirement of Beta Services – Virtual Servers, Block Storage, Network Security Groups](https://www.ibm.com/blogs/bluemix/?p=55163).
 
 **New Endurance and Performance storage solutions available in IBM Bluemix**
 
-You can now deploy block storage globally through the new **Infrastructure** category in IBM Bluemix®. For more information about using the Endurance and Performance storage solutions in the **Infrastructure** category, see [Endurance Storage](https://knowledgelayer.softlayer.com/topic/endurance-storage) and [Performance Storage](https://knowledgelayer.softlayer.com/topic/performance-storage).
+You can now deploy block storage globally through the new **Infrastructure** category in IBM Bluemix®. For more information about using the Endurance and Performance storage solutions in the **Infrastructure** category, see [Block Storage](https://www.ibm.com/cloud-computing/bluemix/block-storage). For additional documentation, see [Endurance Storage](https://knowledgelayer.softlayer.com/topic/endurance-storage) or [Performance Storage](https://knowledgelayer.softlayer.com/topic/performance-storage).
 
 ## Save data from your existing block storage volumes before 28 November 2016
 

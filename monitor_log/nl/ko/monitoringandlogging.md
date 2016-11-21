@@ -14,7 +14,7 @@ copyright:
 #모니터링 및 로깅
 {: #monitoringandlogging}
 
-*마지막 업데이트 날짜: 2016년 7월 1일*
+마지막 업데이트 날짜: 2016년 9월 2일
 {: .last-updated}
 
 앱을 모니터링하고 로그를 검토하면서 애플리케이션 실행을 따라 가면 배치에 대해 더 잘 이해할 수 있습니다. 또한 문제를 찾아 이를 해결하는 데 드는 시간과 노력을 줄일 수 있습니다.
@@ -42,13 +42,18 @@ Cloud Foundry 인프라를 사용하여 {{site.data.keyword.Bluemix_notm}}에서
 
 {{site.data.keyword.Bluemix_notm}} 앱을 모니터하려면 다음 방법 중 하나를 사용하십시오.
 
-* {{site.data.keyword.Bluemix_notm}} 서비스. 모니터링 및 분석은 애플리케이션 성능을 모니터링할 때 사용할 수 있는 서비스를 제공합니다. 또한 이 서비스는 로그 분석과 같은 분석 기능도 제공합니다. 자세한 정보는 [모니터링 및 분석](../services/monana/index.html)을 참조하십시오. 
+* {{site.data.keyword.Bluemix_notm}} 서비스. Monitoring and Analytics는 애플리케이션 성능을 모니터링할 때 사용할 수 있는 서비스를 제공합니다. 또한 이 서비스는 로그 분석과 같은 분석 기능도 제공합니다. 자세한 정보는 [Monitoring and Analytics](../services/monana/index.html)를 참조하십시오. 
 * 써드파티 옵션. 예를 들어, [New Relic](http://newrelic.com/){:new_window}이 있습니다. 
 
 ###Cloud Foundry에서 실행 중인 앱 로깅
 {: #logging_for_bluemix_apps}
 
 로그 파일은 Cloud Foundry 인프라를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 앱을 실행할 때 자동으로 작성됩니다. 배치에서 런타임까지 어느 단계에서 오류가 발생하더라도 로그를 확인하여 문제를 해결하는 데 도움이 되는 단서를 얻을 수 있습니다.
+
+###로그 보유
+{: #log_retention}
+
+* Bluemix Cloud Foundry 앱에서 로그 데이터는 기본적으로 30일 동안 저장됩니다. 
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -134,7 +139,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 
 배치 또는 런타임 로그를 보려면 다음 단계를 완료하십시오.
 1. {{site.data.keyword.Bluemix_notm}}에 로그인한 다음 대시보드에서 사용자의 앱에 대한 타일을 클릭하십시오. 앱 세부사항 페이지가 표시됩니다.
-2. 왼쪽 탐색줄에서 **로그**를 클릭하십시오.
+2. 탐색줄에서 **로그**를 클릭하십시오.
 
 **로그** 콘솔에서 앱에 대한 최신 로그 또는 실시간 비상 로그를 볼 수 있습니다. 또한 로그 유형 및 채널별로 로그를 필터링할 수 있습니다.
 
@@ -206,7 +211,7 @@ cf logs appname --recent | cut -c 29-40,46-
 ```
 
 **grep** 옵션에 대한 자세한 정보를 보려면 cut --help를 입력하십시오. 
-* 특정 키워드가 포함된 로그 항목을 표시하려면 **grep** 옵션을 사용하십시오. 예를 들어, [APP 키워드가 포함된 로그 항목을 표시하려면 다음 명령을 사용하십시오.
+* 특정 키워드가 포함된 로그 항목을 표시하려면 **grep** 옵션을 사용하십시오. 예를 들어, `[APP` 키워드가 포함된 로그 항목을 표시하려면 다음 명령을 사용하십시오. 
 
 ```
 cf logs appname --recent | grep '\[App'
@@ -228,15 +233,15 @@ cf logs appname --recent | grep '\[App'
 
   2. 사용자 제공 서비스 인스턴스를 작성하십시오.
      
-	 서비스 제공 서비스 인스턴스를 작성하려면 ```cf create-user-provided-service``` 명령(또는 ```cups```, 명령의 짧은 버전)을 사용하십시오. 
+	 사용자 제공 서비스 인스턴스를 작성하려면 `cf create-user-provided-service` 명령(또는 이 명령의 짧은 버전인 `cups`)을 사용하십시오. 
 	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 	 ```
-	 **service_name**
+	 &lt;service_name&gt;
 	 
 	 사용자 제공 서비스 인스턴스의 이름입니다.
 	 
-	 **logging_endpoint**
+	 &lt;logging_endpoint&gt;
 	 
 	 {{site.data.keyword.Bluemix_notm}}에서 로그를 전송하는 로깅 엔드포인트입니다. *logging_endpoint*를 사용자의 값으로 교체하려면 다음 표를 참조하십시오.
 	 
@@ -271,18 +276,18 @@ cf logs appname --recent | grep '\[App'
 	 다음 명령을 사용하여 서비스 인스턴스를 앱에 바인딩하십시오. 
 	
 	 ```
-	 cf bind-service appname <service_name>
-	```
-	 **appname**
+	 cf bind-service <appname> <service_name>
+	 ```
+	 &lt;appname&gt;
 	 
 	 앱의 이름입니다.
 	 
-	 **service_name**
+	 &lt;service_name&gt;
 	 
 	 사용자 제공 서비스 인스턴스의 이름입니다.
 	 
   4. 앱을 다시 스테이징하십시오.
-     유형```cf restage appname``` 변경사항이 적용되도록 하십시오. 
+     변경사항을 적용하려면 `cf restage appname`을 입력하십시오.  
 
 #### 외부 호스트에서 로그 보기
 {: #viewing_logs_external}
@@ -329,7 +334,7 @@ cd /opt/splunk/etc/apps
 
      c. Splunk가 설정되면, Jane은 Ubuntu 시스템의 일부 포트를 열어서 수신 syslog 드레인(포트 5140) 및 Splunk 웹 UI(포트 8000)를 허용해야 합니다. {{site.data.keyword.Bluemix_notm}} 가상 서버에 방화벽이 기본적으로 설정되어 있기 때문입니다. 
 	   
-	    **참고:** iptable 구성은 Jane의 평가 용도로 여기서 수행되며, 이는 임시적입니다. 프로덕션에서 Bluemix 가상 서버의 방화벽 설정을 구성하려면, [네트워크 보안 그룹](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} 문서에서 세부사항을 참조하십시오. 
+	    **참고:** iptable 구성은 Jane의 평가 용도로 여기서 수행되며, 이는 임시적입니다. 프로덕션에서 Bluemix 가상 서버의 방화벽 설정을 구성하려면, [Network Security Groups](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} 문서에서 세부사항을 참조하십시오. 
 	 
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
@@ -347,7 +352,7 @@ cd /opt/splunk/etc/apps
 		
   2. Jane은 {{site.data.keyword.Bluemix_notm}}에서 syslog 드레인을 허용하도록 Splunk 설정을 구성합니다. Jane은 syslog 드레인에 대한 데이터 입력을 작성해야 합니다. 
 
-     a. Splunk 웹 인터페이스의 왼쪽에서 Jane은 **데이터 > 데이터 입력**을 클릭합니다. Splunk에서 지원하는 입력 유형의 목록이 표시됩니다.  
+     a. Splunk 웹 인터페이스에서 Jane은 **데이터 > 데이터 입력**을 클릭합니다. Splunk에서 지원하는 입력 유형의 목록이 표시됩니다.  
 	 
      b. syslog 드레인이 TCP 프로토콜을 사용하므로, Jane은 **TCP**를 선택합니다. 
 	 
@@ -359,7 +364,7 @@ cd /opt/splunk/etc/apps
 	 
      f. **색인** 필드에서 Jane은 **색인 새로 작성**을 클릭합니다. 그리고 새 색인의 이름을 "bluemix"로 지정한 후에 **저장**을 클릭합니다. 
 	 
-     g. 최종적으로 **검토** 창에서, Jane은 설정이 올바른지 확인한 후에 **제출**을 클릭하여 이 데이터 입력을 사용합니다. 
+     g. 마지막으로 **검토** 창에서 Jane은 설정이 올바른지 확인한 후에 **제출**을 클릭하여 이 데이터 입력을 사용 가능하게 설정합니다. 
 
   3. {{site.data.keyword.Bluemix_notm}}에서, Jane은 syslog 드레인 서비스를 작성하고 이 서비스를 앱에 바인드합니다. 
 

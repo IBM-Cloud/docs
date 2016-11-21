@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-08-31"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,8 @@ copyright:
 # Einführung in {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
 
-Letzte Aktualisierung: 03. August 2016
-{: .last-updated}
+<!--Last updated: 31 August 2016
+{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_long}} beschleunigt die Einrichtung einer {{site.data.keyword.mfp_full}}-Umgebung, von der Sie mobile Unternehmens-Apps entwickeln, testen und betreiben können. {{site.data.keyword.mobilefoundation_short}} ist mit zwei verschiedenen Serviceplänen verfügbar: Developer und Professional 1 Application.
 {:shortdesc}
@@ -57,7 +57,7 @@ Nachdem Sie eine Instanz von {{site.data.keyword.mobilefoundation_short}}: Profe
 
     * Zur Erstellung einer {{site.data.keyword.mobilefirst_notm}}-Serverinstanz mit erweiterter Konfiguration für Topologie, Sicherheit und weitere Serverkonfigurationen klicken Sie auf **Server mit erweiterter Konfiguration starten**. Weitere Informationen finden Sie in [Erweiterte Konfiguration einrichten](c_using_mfs_p2.html#using_mfs_advanced_p2).
 
-Lesen Sie im Abschnitt zur Verwendung des Mobile Foundation-Service zur Einrichtung des MobileFirst-Servers ([Using the Mobile Foundation service to set up MobileFirst Server](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/ibm-containers/using-mobile-foundation/)), um mehr darüber zu erfahren, wie Sie mit der Verwendung von {{site.data.keyword.mobilefoundation_short}} beginnen.
+Lesen Sie im Abschnitt zur Verwendung des Mobile Foundation-Service zur Einrichtung des MobileFirst-Servers ([Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/)), um mehr darüber zu erfahren, wie Sie mit der Verwendung von {{site.data.keyword.mobilefoundation_short}} beginnen.
 
 
 # Zugehörige Links

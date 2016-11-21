@@ -2,14 +2,15 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-09"
 ---
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+
+
 
 # Configuración de la autenticación personalizada para la app {{site.data.keyword.amashort}} Android
 {: #custom-android}
-
-Última actualización: 1 de agosto de 2016
-{: .last-updated}
 
 
 Configure su aplicación de Android con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amashort}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.
@@ -23,6 +24,7 @@ Debe tener un recurso que esté protegido por una instancia del servicio de {{si
  * [Creación de un proveedor de identidad personalizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
+Anote los valores de los parámetros del servicio. Abra el servicio en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles**. Los valores `applicationRoute` y `tenantId` (también conocidos como `appGUID`) se muestran en los campos **Ruta** y **GUID de app / TenantId**. Necesitará estos valores para inicializar el SDK y para enviar solicitudes a la aplicación de fondo.
 
 ## Inicialización del SDK del cliente de {{site.data.keyword.amashort}}
 {: #custom-android-initialize}
@@ -51,16 +53,15 @@ Añada el permiso de acceso a Internet al elemento `<manifest>`:
 	```
 
 1. Inicialice el SDK.  
-Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.
-Sustituya *applicationRoute* y *applicationGUID* por los valores de **Ruta** e **Identificador exclusivo global de la app** que se obtienen al pulsar **Opciones móviles** en la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
+	Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.
 
 	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 ```
-Sustituya el `BMSClient.REGION_UK` con la región adecuada.	 Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono **Avatar**  ![Icono de Avatar](images/face.jpg "Icono de Avatar") en la barra de menú para abrir el widget **Cuenta y soporte**.
+
+Sustituya el `BMSClient.REGION_UK` con la región adecuada. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono de **Avatar** ![Icono de Avatar](images/face.jpg "Icono de Avatar") de la barra de menús para abrir el widget **Cuenta y soporte**. El valor de región debe ser uno de los siguientes: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`.				
+	
+
 ## Interfaz AuthenticationListener
 {: #custom-android-authlistener}
 
@@ -73,6 +74,8 @@ Llame a este método cuando se reciba un cambio de autenticación personalizada 
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+
+
 #### Argumentos
 {: #custom-android-onAuth-arg}
 
@@ -104,6 +107,7 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
@@ -117,8 +121,8 @@ Este ejemplo de AuthenticationListener está diseñado para que funcione con un 
 package com.ibm.helloworld;
 import android.content.Context;
 import android.util.Log;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationContext;
-import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthenticationListener;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationContext;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.mca.api.AuthenticationListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -172,37 +176,41 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 Después de crear una clase AuthenticationListener personalizada, regístrela con `BMSClient` antes de empezar a utilizar la escucha. Añada el código siguiente a la aplicación. Debe llamarse a este código antes de enviar solicitudes a los recursos protegidos.
 
 ```Java
-MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext());
+MCAAuthorizationManager mcaAuthorizationManager = 
+      MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<MCAServiceTenantId>");
 mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
 
-Utilice el valor de *realmName* que indicó en el panel de control de {{site.data.keyword.amashort}}.
+
+En el código:
+* Sustituya `MCAServiceTenantId` por el valor `tenantId` (consulte [Antes de comenzar](##before-you-begin)). 
+* Utilice el valor de `realmName` que indicó en el panel de control de {{site.data.keyword.amashort}}.
 
 
 ## Prueba de autenticación
 {: #custom-android-testing}
 Después de inicializar el SDK del cliente y registrar una AuthenticationListener personalizada, puede empezar a realizar solicitudes a la aplicación de fondo móvil.
 
-### Antes de empezar
+### Antes de probar
 {: #custom-android-testing-before}
 Debe tener una aplicación que se haya creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y que disponga de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`.
 
 
-1. Envíe una solicitud al punto final protegido (`{applicationRoute}/protected`) de la aplicación de fondo móvil del navegador, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`.
+1. Envíe una solicitud al punto final protegido (`{applicationRoute}/protected`) de la aplicación de fondo móvil del navegador, por ejemplo `http://my-mobile-backend.mybluemix.net/protected`. Para obtener información sobre cómo obtener el valor `{applicationRoute}`, consulte [Antes de comenzar](#before-you-begin). 
 
 1. El punto final `/protected` de un programa de fondo móvil que se ha creado con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} está protegido con {{site.data.keyword.amashort}}. Solo pueden acceder al punto final las aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}. Si no, se muestra un mensaje `Unauthorized` en el navegador.
 
-1. Utilice la aplicación de Android para realizar solicitudes al mismo punto final. Añada el código siguiente después de inicializar `BMSClient` y registrar la clase AuthenticationListener personalizada.
+1. Utilice la aplicación de Android para realizar solicitudes al mismo punto final protegido que incluya la `{applicationRoute}`. Añada el código siguiente después de inicializar `BMSClient` y registrar la clase AuthenticationListener personalizada.
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("{applicationRoute}/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
 			Log.d("Myapp", "onSuccess :: " + response.getResponseText());
-			Log.d("MyApp", AuthorizationManager.getInstance().getUserIdentity().toString());
+			Log.d("MyApp",  MCAAuthorizationManager.getInstance().getUserIdentity().toString());
 		}
 		@Override
 		public void onFailure (Response response, Throwable t, JSONObject extendedInfo) {
@@ -217,6 +225,7 @@ Debe tener una aplicación que se haya creado con el contenedor modelo de {{site
 	});
 ```
 
+	
 1. 	Cuando la solicitud se realiza correctamente, se muestra la siguiente salida en la herramienta LogCat:
 
 	![imagen](images/android-custom-login-success.png)
@@ -226,6 +235,7 @@ Debe tener una aplicación que se haya creado con el contenedor modelo de {{site
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+
 
  Si invoca este código después de que el usuario haya iniciado sesión, la sesión del usuario se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá volver a responder a la pregunta que reciba del servidor.
 

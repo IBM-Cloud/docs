@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-08-03"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,8 @@ copyright:
 # 維護及更新
 {: #maintupdates_mf}
 
-前次更新：2016 年 8 月 3 日
-{: .last-updated}
+<!--Last updated: 03 August 2016
+{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} 佈建一個 {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group-->。{{site.data.keyword.mobilefoundation_short}} 伺服器的更新會通知使用者。您可以選擇在您方便的時候更新 {{site.data.keyword.mobilefoundation_short}} 伺服器。
 {:shortdesc}

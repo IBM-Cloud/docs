@@ -7,95 +7,72 @@ copyright:
 
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
 # Usando o aplicativo móvel
 {: #iot4e_using_mobile}
-*Última atualização: 14 de junho de 2016*
+*Última atualização: 19 de setembro de 2016*
 {: .last-updated}
 
 Inicie com o aplicativo móvel do {{site.data.keyword.iotelectronics_full}} para ver como é possível receber alertas, enviar comandos e verificar o status dos seus dispositivos conectados.
 {:shortdesc}
 
-Conclua as seguintes tarefas:
-1. [Faça download do aplicativo móvel](#iot4e_downloadmobile).
-2. [Configure o {{site.data.keyword.amafull}}](#iot4e_configureMCA).
-3. [Conecte o seu dispositivo móvel no ambiente do {{site.data.keyword.iotelectronics}}](#iot4e_connecting_mobile).
-4. [Registre e controle um dispositivo em seu dispositivo móvel](#iot4e_adding_appliance).
+## Antes de começar
+
+Antes de poder usar o aplicativo móvel, deve-se concluir as tarefas a seguir:
+  - Implemente uma instância do iniciador do {{site.data.keyword.iotelectronics}} em sua organização do {{site.data.keyword.Bluemix_notm}}. Implementar uma instância do iniciador
+automaticamente implementa os aplicativos de componente e os serviços do iniciador.
+  - [Ative comunicações móveis e segurança](iotelectronics_config_mca.html) configurando {{site.data.keyword.amafull}}.
+
+## Introdução ao aplicativo móvel
+Para iniciar o aplicativo móvel, conclua as tarefas a seguir:
+1. [Faça download do aplicativo móvel](#iot4e_downloadmobile) em seu dispositivo móvel.
+2. [Conecte o aplicativo móvel ao ambiente do {{site.data.keyword.iotelectronics}}](#iot4e_connecting_mobile) e registre os seus dispositivos.
 
 
- ## Fazendo download do aplicativo móvel
+ ### Fazendo download do aplicativo móvel
  {: #iot4e_downloadmobile}
  Para chegar ao aplicativo móvel, faça download e instale-o em seu telefone a partir da Apple App store.  Em seu telefone, abra a App store e procure por "ibm iot". Escolha **IBM IoT for Electronics** e
 instale.
 
  Como alternativa, é possível instalá-lo em seu telefone usando o [iTunes](https://itunes.apple.com/us/app/ibm-iot-for-electronics/id1103404928?ls=1&mt=8).
 
-## Configurando o {{site.data.keyword.amashort}}
-{: #iot4e_configureMCA}
 
-Antes de poder conectar-se ao aplicativo móvel, deve-se configurar {{site.data.keyword.amafull}}.  
-
-  1. Na guia **Conexões** em seu {{site.data.keyword.iotelectronics}}, abra o aplicativo {{site.data.keyword.amashort}}. (Também é possível acessar o aplicativo a partir do seu painel {{site.data.keyword.Bluemix_notm}}.)  
-
-    ![Como localizar {{site.data.keyword.amashort}}.](images/IoT4E_Connections.svg "{{site.data.keyword.iotelectronics}} connections")
-
-  2. Na seção **Customizado**, clique em **Configurar**.
-
-   ![Configurar o {{site.data.keyword.amashort}}.](images/MCA_config_pg.svg "{{site.data.keyword.amashort}} Set Up Authentication page")  
-
-  3. Insira as credenciais de autenticação a seguir:
-    - **Nome da região**: insira **myRealm**.
-    - **URL**: insira a URL para identificar seu aplicativo iniciador {{site.data.keyword.iotelectronics}} no
-formato a seguir: **https://<*myIoT4eStarterApp*>.mybluemix.net**  
-
-      **Dica:** assegure-se de usar o prefixo seguro `https://` na URL. É possível localizar a URL do seu aplicativo Starter clicando em **Opções
-móveis**.
-
-  ![{{site.data.keyword.amashort}} Entrada de autenticação customizada.](images/MCA_config_pg2.svg "{{site.data.keyword.amashort}} Custom Authenticationentry")  
-
-
-  4. Salve.
-
-## Conectando o aplicativo móvel ao seu ambiente {{site.data.keyword.iotelectronics}}
+### Conectando o aplicativo móvel
 {: #iot4e_connecting_mobile}
 
-Para visualizar seus dispositivos simulados em seu aplicativo móvel, deve-se conectar o aplicativo móvel ao seu ambiente {{site.data.keyword.iotelectronics}} Bluemix.
+Para conectar o aplicativo móvel ao seu ambiente e registrar os seus dispositivos, execute as tarefas a seguir:
 
-Para conectar o aplicativo móvel, siga estas etapas:
+1. Abra o seu aplicativo iniciador {{site.data.keyword.itoelectronics}}. Para obter instruções, consulte [Abrindo o aplicativo
+iniciador](iot4ecreatingappliances.html#iot4e_openAppMain).
 
-  1. Em seu computador, inicie seu aplicativo {{site.data.keyword.iotelectronics}} e clique em **Visualizar aplicativo** para exibir o aplicativo iniciador.  
+2. Selecione **Controlar remotamente seus dispositivos conectados**.
 
-  ![{{site.data.keyword.iotelectronics}}  Página Introdução ao aplicativo de visualização destacado.](images/IoT4E_getting_started.svg "{{site.data.keyword.iotelectronics}} Getting Started page with View App")  
-  2. Selecione **Controlar remotamente seus dispositivos conectados**.
+    ![ experiência do iniciador do {{site.data.keyword.iotelectronics}}](images/IoT4E_remotely_option.png "{{site.data.keyword.iotelectronics}} starter experience")
 
-  ![Selecione a
-experiência do aplicativo do consumidor do {{site.data.keyword.iotelectronics}}.](images/IoT4E_consumer_app.svg "{{site.data.keyword.iotelectronics}} Consumer app experience")
+3. Crie uma ou mais arruelas rolando para a seção que está rotulada **Em seguida, escolha ou inclua a nova arruela simulada** e, em seguida, clicando no ícone +. Uma nova lavadora é criada.
 
-  3. Crie uma ou mais lavadoras. O aplicativo móvel não pode se conectar até que uma lavadora seja criada.
+    ![Incluir arruela](images/IoT4E_add_washer.png "Incluir arruela")
 
-  4.	Role até o código QR de Conexão e varra-o usando o dispositivo móvel. O código QR de Conexão é localizado na seção rotulada
-`Para conectar o aplicativo ao ambiente, será solicitado que varra este Código QR`.
+4.	Role até o código QR de Conexão e varra-o usando o dispositivo móvel. O código QR de Conexão é localizado na seção rotulada
+**Para conectar o aplicativo ao ambiente, será solicitado que varra este Código QR**.
 
-  ![Verifique o
-código QR de Conexão do {{site.data.keyword.iotelectronics}}.](images/iot4e_mobile_connect_QR.svg "{{site.data.keyword.iotelectronics}} Connection QR code")
+  ![Código Quick Response de conexão.](images/iot4e_mobile_connect_QR.png "{{site.data.keyword.iotelectronics}} Connection QR code")
 
-  5. Insira as credenciais de login. Sua identificação de usuário e senha podem ter qualquer comprimento. Lembre-se de suas credenciais de login para sessões futuras.  
+5. Em seu dispositivo móvel, insira as credenciais de login. Sua identificação de usuário e senha podem ter qualquer comprimento. Lembre-se de suas credenciais de login para sessões futuras. O seu
+dispositivo móvel agora está registrado em seu ambiente do {{site.data.keyword.iotelectronics}} e você está pronto para registrar os dispositivos individuais.
 
-## Registrando e controlando um dispositivo em seu dispositivo móvel
-{: #iot4e_adding_appliance}
+6. Em seu computador, role até uma lavadora simulada e clique nela para exibir seus dados e código QR do Dispositivo.
 
-Para visualizar o status do dispositivo e receber notificações, deve-se registrar o dispositivo usando seu aplicativo móvel.
+  ![Selecione uma lavadora.](images/IoT4E_mobile_washer_QR.png "Select a washer.")
 
-Para registrar um dispositivo, conclua as etapas a seguir:
+7.	Use o seu dispositivo móvel para varrer o Código Quick Response da arruela. A arruela está agora registrada e o status da arruela aparece em seu telefone celular.
 
-  1. Em seu computador, role até uma lavadora simulada e clique nela para exibir seus dados e código QR do Dispositivo.
-
-  ![Selecione uma lavadora.](images/IoT4E_mobile_washer_QR.svg "Select a washer.")
-
-  2.	Use seu dispositivo móvel para varrer o código QR da lavadora para registrá-la em seu telefone celular. Você verá o status da lavadora em seu telefone celular.
-
-  3. Em seu computador, selecione um problema com a lavadora, como Falha da placa ou Vibração forte.  O problema envia um alerta ao seu telefone celular.
+#### O que Vem Depois
+Agora é possível visualizar alertas e controlar a arruela usando o seu dispositivo móvel. Tente isso executando as etapas a seguir:
+  - Em seu computador, selecione um problema com a lavadora, como Falha da placa ou Vibração forte. O problema envia um alerta ao seu telefone celular.
+  - Em seu dispositivo móvel, clique em **Iniciar a lavagem** para iniciar a máquina. É possível ver o status da arruela mudar em seu computador conforme ele passa por cada ciclo
+de lavagem.

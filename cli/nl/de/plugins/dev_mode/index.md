@@ -37,35 +37,35 @@ Mit der CLI 'dev_mode' können Sie die folgenden Tasks ausführen:
 
 Installieren Sie das Befehlszeilentool 'dev_mode' über eine der folgenden Methoden:
 - Lokale Installation.
-  1. Laden Sie das dev_mode-Plug-in für Ihre Plattform aus dem [IBM Bluemix-CLI-Plug-in-Repository](http://plugins.{DomainName}) herunter.
+  1. Laden Sie das dev_mode-Plug-in für Ihre Plattform aus dem [IBM Bluemix-CLI-Plug-in-Repository](http://plugins.ng.bluemix.net) herunter.
   2. Wechseln Sie zu dem Ordner mit dem dev_mode-Plug-in und installieren Sie das Plug-in mithilfe des Befehls 'cf install-plugin'. Beispiel: 
   
         ```
-cf install-plugin dev_mode-linux64
+        cf install-plugin dev_mode-linux64
         ```
 
 - Installation aus dem Bluemix-CLI-Repository
   1. Fügen Sie das Repository 'bluemix-repo' zu den Cloud Foundry-CLI-Repositorys hinzu, indem Sie den folgenden Befehl verwenden:
   
         ```
-cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
+        cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
   2. Geben Sie 'cf repo-plugins' ein. Daraufhin wird das dev_mode-Plug-in im Repository 'bluemix-repo' angezeigt.
 		
 		```
-cf repo-plugins
+        cf repo-plugins
         ```
   
   3. Installieren Sie das dev_mode-Plug-in in die Cloud Foundry-CLI-Plug-ins, indem Sie den folgenden Befehl verwenden:
   
         ```
-cf install-plugin dev_mode -r bluemix-repo
+        cf install-plugin dev_mode -r bluemix-repo
         ```
 
 ## Befehle der CLI 'dev_mode' anzeigen
 
-Verwenden Sie den folgenden Befehl, um alle Befehle der CLI 'dev_mode' anzuzeigen: 
+Verwenden Sie den folgenden Befehl, um alle Befehle der CLI 'dev_mode' anzuzeigen:
 
 ```
 cf plugins
@@ -212,7 +212,6 @@ cf restart-inplace <App-Name>
 ## Zugehörige Links
 {: #general}
 * [Befehlszeilenschnittstelle (CLI) für Entwicklungsmodus](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
 * [DevOps-Web-IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

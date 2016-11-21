@@ -18,7 +18,7 @@ copyright:
 # Interface de ligne de commande pour l'administration de {{site.data.keyword.Bluemix_notm}}
 {: #bluemixadmincli}
 
-Dernière mise à jour 17 août 2016
+Dernière mise à jour : 1 septembre 2016
 {: .last-updated}
 
 
@@ -30,6 +30,10 @@ un registre LDAP. Pour des informations sur la gestion de votre compte {{site.da
 Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restriction :** l'interface de ligne de commande Cloud Foundry n'est pas prise en charge par Cygwin. Utilisez-la dans une fenêtre de ligne de commande autre que Cygwin.
+
+**Remarque** : l'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} n'est utilisée que
+pour l'environnement {{site.data.keyword.Bluemix_notm}} local et l'environnement {{site.data.keyword.Bluemix_notm}} dédié. Elle n'est pas
+prise en charge par l'environnement {{site.data.keyword.Bluemix_notm}} public.
 
 ## Ajout du plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}
 
@@ -47,12 +51,10 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;sous-domaine&gt;.bluemix.net
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;sous-domaine&gt;</dt>
-<dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.Bluemix_notm}}. Par exemple, <code>https://console.mycompany.bluemix.net/cli</code>.</dd>
+<dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.Bluemix_notm}}. Exemple : <code>https://console.masociété.bluemix.net/cli</code></dd>
 </dl>
 </li>
-<li>Pour installer le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :<br/><br/> <code>
-cf install-plugin bluemix-admin-cli -r BluemixAdmin
-</code>
+<li>Pour installer le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante : <br/><br/> <code> cf install-plugin BluemixAdminCLI -r BluemixAdmin</code>
 </li>
 </ol>
 
@@ -67,7 +69,9 @@ d'administration {{site.data.keyword.Bluemix_notm}}
 
 Vous pouvez utiliser le plug-in d'interface de ligne de commande d'administration
 {{site.data.keyword.Bluemix_notm}} pour ajouter ou retirer des utilisateurs, affecter des
-utilisateurs à des organisations ou annuler leur affectation, et effectuer d'autres tâches de gestion. Pour afficher la liste des commandes, exécutez la
+utilisateurs à des organisations ou annuler leur affectation, et effectuer d'autres tâches de gestion. 
+
+Pour afficher la liste des commandes, exécutez la
 commande suivante :
 
 ```
@@ -91,7 +95,7 @@ cf ba api https://console.&lt;sous-domaine&gt;.bluemix.net
 <dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.Bluemix_notm}}.<br />
 </dd>
 </dl>
-<p>Vous trouverez l'adresse URL correcte dans la page Resources Information de la console d'administration. L'adresse URL est affichée dans la section API Information, dans la zone **API
+<p>Vous trouverez l'adresse URL correcte dans la page des informations sur les ressources de la console d'administration. L'adresse URL est affichée dans la section API Information, dans la zone **API
 URL**.</p>
 </li>
 <li>Connectez-vous à {{site.data.keyword.Bluemix_notm}} avec la commande suivante :<br/><br/>
@@ -103,15 +107,19 @@ cf login
 
 ### Ajout d'un utilisateur
 
-Vous pouvez ajouter un utilisateur à votre environnement {{site.data.keyword.Bluemix_notm}} depuis le registre d'utilisateurs pour votre environnement.
-Entrez la commande suivante :
+Vous pouvez ajouter un utilisateur à votre environnement {{site.data.keyword.Bluemix_notm}} depuis le registre d'utilisateurs pour votre environnement. Entrez la commande suivante :
 
 ```
 cf ba add-user <nom_utilisateur> <organisation>
 ```
 {: codeblock}
 
-**Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être le responsable de l'organisation ou vous devez disposez des droits**Admin** (l'alternative disponible est **Superutilisateur**) ou **Utilisateur** avec un accès **Ecriture**. 
+**Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être un **administrateur**
+disposant du droit **users.write** (ou **Superutilisateur**). Si vous êtes un responsable de l'organisation, vous
+pouvez aussi disposer de la capacité d'ajouter des utilisateurs à votre organisation via un superutilisateur qui exécute la commande
+**enable-managers-add-users**. Voir [Permettre aux responsables d'ajouter des utilisateurs](index.html#clius_emau) pour
+plus d'informations.
+
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
@@ -128,17 +136,31 @@ cf ba add-user <nom_utilisateur> <organisation>
 
 ### Recherche d'un utilisateur
 
-Vous pouvez rechercher un utilisateur. Entrez la commande suivante :
+Vous pouvez rechercher un utilisateur. Entrez la commande suivante en conjonction avec les paramètres de filtre de recherche facultatifs en fonction
+de vos besoins (name,
+permission, organization et role) :
 
 ```
-cf ba search-users <nom_utilisateur>
+cf ba search-users -name=<valeur_nom_utilisateur> -permission=<valeur_droit> -organization=<valeur_organisation>
+-role=<valeur_rôle>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
-<dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt class="pt dlterm">&lt;valeur_nom_utilisateur&gt;</dt>
+<dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}. </dd>
+<dt class="pt dlterm">&lt;valeur_droit&gt;</dt>
+<dd class="pd">Droit accordé à l'utilisateur. Exemple : Superutilisateur, Accès de base, Catalogue, Utilisateur et Rapports. Pour plus d'informations sur les droits pouvant être
+affectés aux utilisateurs, voir [Droits](../../../admin/index.html#permissions). Vous ne pouvez pas utiliser ce paramètre avec le
+paramètre organization dans une même requête. </dd>
+<dt class="pt dlterm">&lt;valeur_organisation&gt;</dt>
+<dd class="pd">Nom de l'organisation à laquelle appartient l'utilisateur. Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans une
+même requête.</dd>
+<dt class="pt dlterm">&lt;valeur_rôle&gt;</dt>
+<dd class="pd">Rôle de l'organisation affecté à l'utilisateur. Exemple : responsable, responsable de la facturation ou auditeur de l'organisation. Vous
+devez spécifier l'organisation avec ce paramètre. Pour plus d'informations sur les rôles, voir
+[Rôles utilisateur](../../../admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 
@@ -190,6 +212,35 @@ cf ba remove-user <nom_utilisateur>
 
 **Astuce :** vous pouvez aussi utiliser **ba ru** comme alias pour le nom de commande plus long **ba
 remove-user**.
+
+### Permettre aux responsables d'ajouter des utilisateurs 
+{: #clius_emau}
+
+Si vous disposez du droit **Superutilisateur** dans votre environnement {{site.data.keyword.Bluemix_notm}}, vous pouvez
+permettre aux responsables de l'organisation d'ajouter des utilisateurs aux organisations qu'ils gèrent. Entrez la commande suivante :
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**Astuce :** vous pouvez aussi utiliser **ba emau** comme alias pour le nom de commande plus long **ba
+enable-managers-add-users**.
+
+### Empêcher les responsables d'ajouter des utilisateurs 
+{: #clius_dmau}
+
+Si des responsables de l'organisation ont été autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement
+{{site.data.keyword.Bluemix_notm}} avec la commande **enable-managers-add-users** et que vous disposez du droit
+**Superutilisateur**, vous pouvez supprimer cette capacité. Entrez la commande suivante :
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**Astuce :** vous pouvez aussi utiliser **ba dmau** comme alias pour le nom de commande plus long **ba
+disable-managers-add-users**.
 
 ### Ajout et suppression d'une organisation
 
@@ -497,6 +548,31 @@ globaux uniques supplémentaires dans la commande.</dd>
 **Astuce :** vous pouvez aussi utiliser **ba espv** comme alias pour le nom de commande plus long **ba
 edit-service-plan-visibility**.
 
+### Affichage des informations sur l'utilisation des ressources 
+{: #cliresourceusage}
+
+Vous pouvez afficher des informations sur l'utilisation des ressources, notamment sur l'utilisation de la mémoire, du disque et de l'unité centrale. Vous
+pouvez consulter un récapitulatif des ressources physiques et réservées disponibles, ainsi que l'utilisation des ressources physiques et réservées. Vous
+pouvez également afficher les données d'utilisation des agents DEA (Droplet Execution Agent) et l'utilisation historique de la mémoire et du disque. Les
+données d'historique pour l'utilisation de la mémoire et du disque sont affichées par défaut par semaine et par ordre décroissant. Pour afficher
+les informations sur l'utilisation des ressources, entrez la commande suivante :
+
+
+```
+cf ba resource-usage <monthly> <weekly> 
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;monthly&gt;</dt>
+<dd class="pd">Affichez les données d'historique pour la mémoire et l'espace disque un mois à la fois. </dd>
+<dt class="pt dlterm">&lt;weekly&gt;</dt>
+<dd class="pd">Affichez les données d'historique pour la mémoire et l'espace disque une semaine à la fois. Il s'agit de la valeur par défaut.</dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba rsu** comme alias pour le nom de commande plus long **ba
+resource-usage**.
+
 ### Utilisation de courtiers de services
 
 Utilisez les commandes ci-après pour répertorier tous les courtiers de services, ajouter ou supprimer un courtier de services, ou mettre à jour un
@@ -581,13 +657,13 @@ update-service-broker**.
 
 ### Utilisation de groupes de sécurité d'application
 
-Pour utiliser des groupes de sécurité d'application, vous devez être un administrateur avec accès complet pour l'environnement local ou dédié. Tous les utilisateurs de l'environnement peuvent répertorier les groupes de sécurité d'application disponibles pour l'organisation ciblée par la commande. En revanche, pour créer, mettre à jour ou lier des groupes de sécurité d'application, vous devez être un administrateur de l'environnement {{site.data.keyword.Bluemix_notm}}. 
+Pour utiliser des groupes de sécurité d'application, vous devez être un administrateur avec accès complet pour l'environnement local ou dédié. Tous les utilisateurs de l'environnement peuvent répertorier les groupes de sécurité d'application disponibles pour l'organisation ciblée par la commande. En revanche, pour créer, mettre à jour ou lier des groupes de sécurité d'application, vous devez être un administrateur de l'environnement {{site.data.keyword.Bluemix_notm}}.
 
-Les groupes de sécurité d'application fonctionnent comme des pare-feu virtuels qui contrôlent le trafic sortant des applications de votre environnement {{site.data.keyword.Bluemix_notm}}. Chaque groupe de sécurité d'application comprend une liste de règles autorisant un trafic et des communications spécifiques vers et depuis le réseau externe. Vous pouvez lier un ou plusieurs groupes de sécurité d'application à un ensemble de groupes donné, par exemple, un ensemble de groupes utilisé pour l'application d'un accès global, ou vous pouvez effectuer une liaison à des espaces d'une organisation dans votre environnement {{site.data.keyword.Bluemix_notm}}. 
+Les groupes de sécurité d'application fonctionnent comme des pare-feu virtuels qui contrôlent le trafic sortant des applications de votre environnement {{site.data.keyword.Bluemix_notm}}. Chaque groupe de sécurité d'application comprend une liste de règles autorisant un trafic et des communications spécifiques vers et depuis le réseau externe. Vous pouvez lier un ou plusieurs groupes de sécurité d'application à un ensemble de groupes donné, par exemple, un ensemble de groupes utilisé pour l'application d'un accès global, ou vous pouvez effectuer une liaison à des espaces d'une organisation dans votre environnement {{site.data.keyword.Bluemix_notm}}.
 
 A l'origine, {{site.data.keyword.Bluemix_notm}} est configuré avec un accès global restreint au réseau externe. Deux groupes de sécurité créés par IBM, `public_networks` et `dns`, permettent un accès global au réseau externe lorsque vous liez ces deux groupes aux ensembles de groupes de sécurité Cloud Foundry. Les deux ensembles de groupes de sécurité Cloud Foundry qui sont utilisés pour appliquer un accès global sont **Default Staging** et **Default Running**. Ces ensembles de groupes appliquent les règles autorisant le trafic vers toutes les applications en cours d'exécution ou toutes les applications en cours de constitution. Si vous ne souhaitez pas établir de liaison à ces deux ensembles de groupes de sécurité, vous pouvez annuler la liaison à ces ensembles de groupes Cloud Foundry, puis lier le groupe de sécurité à un espace donné. Pour plus d'informations, voir [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**Remarque** : les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry. 
+**Remarque** : les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry.
 
 #### Recensement, création, mise à jour et suppression des groupes de sécurité
 
@@ -604,7 +680,6 @@ cf ba security-groups
 
 * Vous pouvez afficher les détails d'un groupe de sécurité donné en entrant la commande suivante :
 
-
 ```
 cf ba security-groups <groupe-sécurité>
 ```
@@ -616,11 +691,10 @@ cf ba security-groups <groupe-sécurité>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba sg** comme alias pour le nom de commande plus long
-**ba security-groups** avec le paramètre `security-group`. 
+**ba security-groups** avec le paramètre `security-group`.
 
 
-* Vous pouvez créer un groupe de sécurité en entrant la commande ci-après.
-Le préfixe `adminconsole_` est ajouté au nom de chaque groupe de sécurité que vous créez afin de le distinguer des groupes de sécurité créés par IBM. 
+* Vous pouvez créer un groupe de sécurité en entrant la commande ci-après. Le préfixe `adminconsole_` est ajouté au nom de chaque groupe de sécurité que vous créez afin de le distinguer des groupes de sécurité créés par IBM.
 
 ```
 cf ba create-security-group <groupe-sécurité> <chemin-vers-fichier-règles>
@@ -673,7 +747,6 @@ Pour plus d'informations sur la liaison et l'annulation de liaison des groupes d
 
 * Vous pouvez établir une liaison à l'ensemble de groupes de sécurité Default Staging en entrant la commande suivante :
 
-
 ```
 cf ba bind-staging-security-group <groupe-sécurité>
 ```
@@ -687,7 +760,6 @@ cf ba bind-staging-security-group <groupe-sécurité>
 **Astuce :** vous pouvez aussi utiliser **ba bssg** comme alias pour le nom de commande plus long **ba bind-staging-security-group**.
 
 * Vous pouvez établir une liaison à l'ensemble de groupes de sécurité Default Running en entrant la commande suivante :
-
 
 ```
 cf ba bind-running-security-group <groupe-sécurité>
@@ -703,7 +775,6 @@ cf ba bind-running-security-group <groupe-sécurité>
 
 * Vous pouvez annuler la liaison à un ensemble de groupes de sécurité Default Staging en entrant la commande suivante :
 
-
 ```
 cf ba cf ba unbind-staging-security-group <groupe-sécurité>
 ```
@@ -717,7 +788,6 @@ cf ba cf ba unbind-staging-security-group <groupe-sécurité>
 **Astuce :** vous pouvez aussi utiliser **ba ussg** comme alias pour le nom de commande plus long **ba unbind-staging-security-group**.
 
 * Vous pouvez annuler la liaison à un ensemble de groupes de sécurité Default Running en entrant la commande suivante :
-
 
 ```
 cf ba unbind-running-security-group <groupe-sécurité>
@@ -767,3 +837,89 @@ cf ba unbind-security-group <groupe-sécurité> <org> <espace>
 
 **Astuce :** vous pouvez aussi utiliser **ba usg** comme alias pour le nom de commande plus long **ba unbind-staging-security-group**.
 
+### Utilisation des packs de construction 
+{: #buildpacks}
+
+Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez répertorier, créer, mettre à jour et supprimer les packs de
+construction.   
+#### Répertorier tous les packs de construction 
+
+Entrez la commande suivante pour répertorier tous les packs de construction ou pour afficher un pack de construction spécifique : 
+
+```
+cf ba buildpacks <nom_pack_construction>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
+<dd class="pd">Paramètre facultatif permettant de spécifier un pack de construction particulier à afficher.
+</dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba lb** comme alias pour le nom de commande plus long **ba
+buildpacks**.
+
+#### Créer et télécharger un pack de construction 
+
+Vous pouvez créer et télécharger un pack de construction. Vous pouvez télécharger tout fichier compressé dont le type est .zip. Entrez la commande
+suivante pour télécharger un pack de construction :
+
+
+```
+cf ba create-buildpack <nom_pack_construction> <chemin_fichier> <position>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
+<dd class="pd">Nom du pack de construction à télécharger. </dd>
+<dt class="pt dlterm">&lt;chemin_fichier&gt;</dt>
+<dd class="pd">Chemin du fichier compressé du pack de construction. </dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction.
+</dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba cb** comme alias pour le nom de commande plus long **ba
+create-buildpack**.
+
+#### Mettre à jour un pack de construction 
+
+Pour mettre à jour un pack de construction existant, entrez la commande suivante : 
+
+```
+cf ba update-buildpack <nom_pack_construction> <position> <activé> <verrouillé>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
+<dd class="pd">Nom du pack de construction à mettre à jour. </dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction. </dd>
+<dt class="pt dlterm">&lt;activé&gt;</dt>
+<dd class="pd">Indique si le pack de construction est utilisé pour la constitution. </dd>
+<dt class="pt dlterm">&lt;verrouillé&gt;</dt>
+<dd class="pd">Indique si le pack de construction est verrouillé pour empêcher les mises à jour. </dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba ub** comme alias pour le nom de commande plus long **ba
+update-buildpack**.
+
+#### Supprimer un pack de construction 
+
+Pour supprimer un pack de construction existant, entrez la commande suivante : 
+
+```
+cf ba delete-buildpack <nom_pack_construction>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
+<dd class="pd">Nom du pack de construction à supprimer. </dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba db** comme alias pour le nom de commande plus long **ba
+delete-buildpack**.

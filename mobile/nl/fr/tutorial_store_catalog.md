@@ -1,0 +1,239 @@
+---
+
+copyright:
+  years: 2016
+lastupdated: "2016-10-13"
+
+---
+{:new_window: target="_blank"}
+
+# Tutoriel - Module de démarrage pour l'interface utilisateur du
+catalogue magasin
+{: #tutorial_store_catalog}
+
+Dernière mise à jour : 13 octobre 2016
+{: .last-updated}
+
+Le module de démarrage pour l'interface utilisateur du catalogue
+magasin {{site.data.keyword.Bluemix}} fournit une structure
+d'applications de ventes de base que vous pouvez personnaliser, ainsi que des
+points d'intégration pour chacun des services {{site.data.keyword.Bluemix_notm}} Mobile.
+
+
+## Configuration requise
+{: #tutorial_requirements}
+
+* Un compte [Bluemix](http://bluemix.net)
+
+
+## Initiation
+{: #tutorial_gs}
+
+Pour être rapidement opérationnel avec le module de démarrage pour
+l'interface utilisateur du catalogue magasin, procédez comme suit : 
+
+1. Créez un projet de tableau de bord Mobile dans
+{{site.data.keyword.Bluemix_notm}}.
+
+   1. Dans la page **Initiation** du tableau de bord
+Mobile, cliquez sur **Créer un projet**.
+
+      Vous pouvez également cliquer sur **Créer un
+projet** dans la page **Projets**.
+
+   2. Sélectionnez **Modules de démarrage pour l'interface
+utilisateur**, si cette option n'est pas déjà sélectionnée. 
+
+   3. Sélectionnez **Catalogue magasin** et cliquez
+sur **Créer un projet**.
+
+   4. Entrez le nom de votre projet et cliquez sur
+**Créer**.
+
+2. Facultatif : ajoutez la fonction Notifications push.
+
+   1. Cliquez sur **Ajouter** pour
+**Notifications push** dans la page **Présentation
+du projet**.
+
+      Vous pouvez également cliquer sur **Créer**
+dans la page **Notifications push**.
+
+   2. Entrez le nom de votre service et cliquez sur
+**Créer**.
+
+   3. Pour iOS,
+[configurez Apple
+Push Notification Service](../services/mobilepush/t_push_provider_ios.html){: new_window}.
+
+   4. Pour Android,
+[configurez
+Google Cloud Messaging](../services/mobilepush/t_push_provider_android.html){: new_window}.
+
+3. Facultatif : ajoutez d'autres services.
+
+   1. Cliquez sur **Ajouter** pour le service dans la
+page **Présentation du projet**.
+
+   2. Entrez le nom de votre service et cliquez sur
+**Créer**.
+
+   3. Suivez les instructions de configuration du service. 
+
+4. Concevez votre application.
+
+   1. Sélectionnez **Générateur
+d'interface graphique** dans le menu de navigation pour personnaliser
+la conception de votre application. 
+
+   2. Sélectionnez l'onglet **Conception** dans la navigation.
+
+      Il s'agit d'un espace de travail permettant de concevoir votre
+application et de simuler son apparence.
+
+   3. Si vous le souhaitez, ajoutez de nouveaux écrans en sélectionnant
+**Ajouter des écrans**. Indiquez le nom des nouveaux écrans
+pour y faire référence plus facilement dans votre application. Les nouveaux
+écrans sont créés au même niveau que l'écran principal, quel que soit l'élément
+sélectionné dans l'arborescence. Vous pouvez sélectionnez les types d'écran
+suivants : 
+      * Menu
+      * Liste
+      * Carte
+      * Personnalisé
+      * Graphique	   
+
+   4. Vous pouvez modifier le titre du menu de votre application en
+sélectionnant la zone de texte *Menu* dans la section
+**Présentation** de l'interface et en remplaçant son contenu
+dans la zone **Données à afficher**. Visualisez vos mises à
+jour dans la section du périphérique simulé.
+
+      Mettez à jour les éléments de conception en sélectionnant chacun
+d'entre eux et en mettant à jour leurs informations, si nécessaire. Ces
+éléments s'affichent sous forme d'arborescence. Vous pouvez modifier l'ordre
+d'affichage des éléments du menu en les faisant glisser vers un nouvel
+emplacement. Tous les enfants de l'élément sont également déplacés avec leur
+parent. Les informations textuelles des éléments d'arborescence qui s'affichent
+dans les zones **Données à afficher** font référence au
+contenu de la feuille de calcul des sources de données. *Ne modifiez pas
+ces éléments dans la vue **Conception**, car ils sont
+remplacés par le contenu des Sources de données identifiées dans la vue
+**Données**.*
+
+		Un élément identifié dans l'arborescence comme un
+*Formulaire* est indépendant et ne peut pas être modifié en ligne. 
+Il ne fait référence à aucune information issue d'une source de données. 
+
+   5. Sélectionnez **Données** dans la navigation
+pour afficher les données utilisées par l'application. Il existe des
+informations par défaut dans le modèle ; vous avez cependant la possibilité de
+modifier la source des données en sélectionnant
+**Création**. Vous pouvez faire référence à plusieurs
+sources de données, il convient donc d'indiquer un nom pour chacune d'entre
+elles. Vous pouvez sélectionner les sources de données suivantes :
+      * Cloud
+      * Local
+      * Cloudant
+      * Google Sheets
+      * Excel Online
+      * Google Drive
+
+      Vous pouvez également importer, exporter ou modifier le contenu
+du tableau en le sélectionnant et en utilisant les différents boutons.
+
+	  Remarque : Si vous importez des données qui ne correspondent pas à
+la structure des données par défaut, activez le curseur de remplacement de
+schéma. Par exemple, dans le cas d'un fichier .csv qui comporte moins de
+colonnes que les données fournies avec le module de démarrage. 
+
+   6. Sélectionnez **Accès utilisateur** dans la
+navigation afin de modifier les droits d'accès pour votre projet. Vous pouvez
+activer et désactiver l'accès utilisateur à l'aide de l'interrupteur. Lorsque
+l'accès utilisateur est activé, vous pouvez définir un délai d'expiration pour
+les utilisateurs inactifs et les données d'identification des utilisateurs qui
+peuvent accéder à l'application. 
+
+   7. Sélectionnez **Paramètres** dans le menu de
+navigation pour modifier les informations générales relatives aux couleurs de
+votre projet. Cet écran vous permet de saisir votre clé d'API Google, si elle
+est requise pour les services que vous avez ajoutés au projet. Il vous permet
+aussi d'ajouter votre identificateur de bundle unique enregistré dans l'Apple
+Store ou le Google Play Store.
+
+      Si vous voulez ajouter le kit de développement de logiciels (SDK)
+IBM MobileFirst Foundation au projet, placez l'interrupteur en position active. 
+
+   8. Si vous avez positionné l'interrupteur de manière à ajouter IBM
+MobileFirst Platform Foundation à votre projet dans l'écran
+*Paramètres*, l'élément **Foundation** apparaît
+dans la navigation. Sélectionnez **Foundation** et indiquez
+les informations requises spécifiques à IBM MobileFirst Platform Foundation.
+
+   9. Sélectionnez **Publier** dans le menu de
+navigation afin d'entrer les informations finales permettant de créer votre
+application mobile. Vous pouvez indiquer votre Identificateur de bundle pour
+iOS et l'Identificateur d'application pour Android.
+
+       Si vous créez une application iOS, vous devez vous procurer
+votre Identificateur de bundle, votre certificat de distribution sous forme de
+fichier *.p12* et votre Profil de mise à disposition sous forme de
+fichier *.mobileprovision* auprès du portail de mise à disposition
+Apple. Ces trois éléments doivent être créés en même temps et avec le même
+ordinateur que celui que vous projetez d'utiliser pour publier votre
+application mobile dans l'Apple Store. Le certificat de distribution et le
+profil de mise à disposition doivent être basés sur l'identificateur de bundle.  	
+
+5. Téléchargez votre projet.
+
+   1. Cliquez sur **Code** et sélectionnez votre
+plateforme ou votre langage de programmation préféré. 
+
+   2. Pour Android, vous avez le choix parmi les options suivantes une
+fois le code généré :
+
+      **Télécharger le code**
+
+      **Télécharger APK**
+
+      **Télécharger avec le code QR**
+
+   3. Pour iOS, vous pouvez choisi l'option suivante une fois
+le code généré :
+
+      **Télécharger le code**
+
+6. Exécutez votre application sur le périphérique ou sur le
+simulateur. 
+
+
+## Etape suivante
+{: #tutorial_next}
+
+[Essayez !](http://new-console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+
+
+# Liens connexes
+{: #rellinks}
+
+<!-- links to internal services don't work
+## {{site.data.keyword.Bluemix_notm}} Mobile services
+{: #general}
+* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
+* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
+* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
+* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
+* [Push Notifications](../services/mobilepush/index.html){: new_window}
+-->
+
+## Articles de blogue
+{: #general}
+* [Article de blogue : Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
+* [Article de blogue : Introducing the next generation of the Bluemix Mobile dashboard](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
+* [Article de blogue : Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
+* [Article de blogue : Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
+* [Article de blogue : Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
+
+## Tutoriels et exemples
+{: #samples}
+* [Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}

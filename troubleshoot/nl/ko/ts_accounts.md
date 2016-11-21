@@ -65,7 +65,7 @@ copyright:
 {: tsSymptoms} 
 
 
-`BXNUI0097E: Before you can add an app, at least one space must be associated with your organization and region. 대시보드에서 영역 작성을 클릭하십시오. When the space is created, try again.`
+`BXNUI0097E: Before you can add an app, at least one space must be associated with your organization and region. On the Dashboard, click Create a Space. When the space is created, try again.`
 
 
 
@@ -78,7 +78,7 @@ copyright:
 {: tsResolve}
  
   * {{site.data.keyword.Bluemix_notm}} 대시보드에서 영역을 작성할 조직을 선택한 다음 **영역 작성**을 클릭하십시오.
-  * cf 명령행 인터페이스에서 ```cf create-space <space_name> -o <organization_name>```을 입력하십시오.
+  * cf 명령행 인터페이스에서 `cf create-space <space_name> -o <organization_name>`을 입력하십시오.
   
   
   

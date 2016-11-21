@@ -2,24 +2,21 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Benutzer mit angepasstem Identitätsprovider authentifizieren
 {: #custom-id}
 
-Letzte Aktualisierung: 22. Juli 2016
-{: .last-updated}
 
-
-Erstellen Sie einen angepassten Identitätsprovider und implementieren Sie eigene Logik zur Erfassung und Validierung von Berechtigungsnachweisen. Ein angepasster Identitätsprovider ist eine Webanwendung, die eine REST-konforme Schnittstelle bereitstellt. Sie können den angepassten Identitätsprovider lokal oder auf {{site.data.keyword.Bluemix}} betreiben. Die einzige Voraussetzung besteht darin, dass der angepasste Identitätsprovider über das öffentliche Internet erreichbar sein muss, sodass er mit dem {{site.data.keyword.amashort}}-Service kommunizieren kann.
+Erstellen Sie einen angepassten Identitätsprovider, der den {{site.data.keyword.amafull}}-Service nutzt, und implementieren Sie eigene Logik zur Erfassung und Validierung von Berechtigungsnachweisen. Ein angepasster Identitätsprovider ist eine Webanwendung, die eine REST-konforme Schnittstelle bereitstellt. Sie können den angepassten Identitätsprovider lokal oder auf {{site.data.keyword.Bluemix}} betreiben. Die einzige Voraussetzung besteht darin, dass der angepasste Identitätsprovider über das öffentliche Internet erreichbar sein muss, sodass er mit dem {{site.data.keyword.amashort}}-Service kommunizieren kann.
 
 ## {{site.data.keyword.amashort}}-Anforderungsablauf für angepasste Identität
 {: #custom-id-ovr}
 
 
 ### {{site.data.keyword.amashort}}-Anforderungsablauf für Client
-  Das folgende Diagramm zeigt, wie {{site.data.keyword.amashort}} einen angepassten Identitätsprovider integriert. 
+ Das folgende Diagramm zeigt, wie {{site.data.keyword.amashort}} einen angepassten Identitätsprovider integriert.
 
 ![Anforderungsablaufdiagramm](images/mca-sequence-custom.jpg)
 
@@ -41,10 +38,10 @@ Erstellen Sie einen angepassten Identitätsprovider und implementieren Sie eigen
 ### {{site.data.keyword.amashort}}-Anforderungsablauf für Webanwendung
 {: #mca-custom-web-sequence}
 
-Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist vergleichbar mit dem Ablauf für einen mobilen Client. {{site.data.keyword.amashort}} schützt jedoch die Webanwendung anstatt einer {{site.data.keyword.Bluemix_notm}}-Back-End-Ressource. 
+Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist vergleichbar mit dem Ablauf für einen mobilen Client. {{site.data.keyword.amashort}} schützt jedoch die Webanwendung anstatt einer {{site.data.keyword.Bluemix_notm}}-Back-End-Ressource.
 
-  * Die ursprüngliche Anforderung wird von der Webanwendung (zum Beispiel von einem Anmeldeformular) gesendet. 
-  * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource.  
+  * Die ursprüngliche Anforderung wird von der Webanwendung (zum Beispiel von einem Anmeldeformular) gesendet.
+  * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource. 
 
 
 
@@ -84,7 +81,7 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 	```
 1. Sie können angepasste Logik für die Validierung der bereitgestellten Antwort auf eine Authentifizierungsanforderung implementieren.
 
-1. Sie können ein angepasstes Benutzeridentitätsobjekt definieren, das beliebige erforderliche angepasste Eigenschaften enthält. Es folgt ein Beispiel für ein angepasstes Benutzeridentitätsobjekt, das nach einer erfolgreichen Authentifizierung vom Client abgerufen wird: 
+1. Sie können ein angepasstes Benutzeridentitätsobjekt definieren, das beliebige erforderliche angepasste Eigenschaften enthält. Es folgt ein Beispiel für ein angepasstes Benutzeridentitätsobjekt, das nach einer erfolgreichen Authentifizierung vom Client abgerufen wird:
 
 	```JavaScript
 	{
@@ -124,7 +121,7 @@ Der angepasste Identitätsprovider wird standardmäßig als statusunabhängige A
 ## Angepasster Realm
 {: #custom-id-custom}
 
-Ein angepasster Identitätsprovider unterstützt genau einen angepassten Authentifizierungsrealm. Zur Verarbeitung eingehender Authentifizierungsanforderungen (Challenges) erstellen und registrieren Sie eine Instanz von `AuthenticationDelegate` /	`AuthenticationListener` in Ihrer Clientanwendung. Definieren Sie den angepassten Authentifizierungsrealmnamen, wenn Sie einen angepassten Identitätsprovider im {{site.data.keyword.amashort}}-Dashboard konfigurieren. Das Realm gibt die spezifische {{site.data.keyword.amashort}}-Serviceinstanz einer eingehenden Anforderung an. 
+Ein angepasster Identitätsprovider unterstützt genau einen angepassten Authentifizierungsrealm. Zur Verarbeitung eingehender Authentifizierungsanforderungen (Challenges) erstellen und registrieren Sie eine Instanz von `AuthenticationDelegate` /	`AuthenticationListener` in Ihrer Clientanwendung. Definieren Sie den angepassten Authentifizierungsrealmnamen, wenn Sie einen angepassten Identitätsprovider im {{site.data.keyword.amashort}}-Dashboard konfigurieren. Das Realm gibt die spezifische {{site.data.keyword.amashort}}-Serviceinstanz einer eingehenden Anforderung an.
 
 ## Nächste Schritte
 {: #next-steps}

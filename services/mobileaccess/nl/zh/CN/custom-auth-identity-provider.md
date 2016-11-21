@@ -2,21 +2,16 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # 创建定制身份提供者
 {: #custom-create}
 
-上次更新时间：2016 年 6 月 16 日
-{: .last-updated}
-
 
 要创建定制身份提供者，请开发用于公开 RESTful API 的 Web 应用程序：
 
-```
-POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
-```
+`POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>`
 
 * `base_path`：指定定制身份提供者 Web 应用程序的基本 URL。基本 URL 是要在 {{site.data.keyword.amashort}}“仪表板”中注册的 URL。
 * `tenant_id`：指定租户的唯一标识。{{site.data.keyword.amashort}} 调用此 API 时，会始终提供{{site.data.keyword.Bluemix}}应用程序 GUID (`applicationGUID`)。
@@ -117,7 +112,7 @@ POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
 ## 安全注意事项
 {: #custom-security}
 
-从 {{site.data.keyword.amashort}} 服务到定制身份提供者的每个请求都包含一个 Authorization 头，这样定制身份提供者就能验证该请求是否来自授权的源。请考虑通过在定制身份提供者中安装 {{site.data.keyword.amashort}} 服务器 SDK 来验证 Authorization 头，不过这并不是严格必需的。要使用此 SDK，定制身份提供者应用程序必须使用 Node.js 或 Liberty for Java&trade;&trade; 来实现，并在 {{site.data.keyword.Bluemix_notm}} 上运行。
+从 {{site.data.keyword.amashort}} 服务到定制身份提供者的每个请求都包含一个 Authorization 头，这样定制身份提供者就能验证该请求是否来自授权的源。请考虑通过在定制身份提供者中安装 {{site.data.keyword.amashort}} 服务器 SDK 来验证 Authorization 头，不过这并不是严格必需的。要使用此 SDK，定制身份提供者应用程序必须使用 Node.js 或 Liberty for Java&trade; 来实现，并在 {{site.data.keyword.Bluemix_notm}} 上运行。
 
 Authorization 头包含有关触发了认证过程的移动客户端和移动应用程序的信息。可以使用安全上下文来检索此数据。有关更多信息，请参阅[保护资源](protecting-resources.html)。
 

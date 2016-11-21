@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-25"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,8 +14,6 @@ copyright:
 
 # Getting started with {{site.data.keyword.iotmapinsights_short}}
 {: #iotdriverinsights_index}
-Last updated: 13 October 2016
-{: .last-updated}
 
 {{site.data.keyword.iotmapinsights_full}} is a service on {{site.data.keyword.Bluemix}} that you can use to enable geospatial functions, such as map matching and shortest path search for global road networks, in your applications. Use the powerful capabilities of {{site.data.keyword.iotmapinsights_short}} to build smart automotive solutions.
 {:shortdesc}
@@ -30,9 +28,6 @@ The following features are available by using the {{site.data.keyword.iotmapinsi
 |Road geometry data retrieval|Retrieve the mapped road network to draw road shapes on a map|
 |Dynamic shortest path search|Search for the shortest route that incorporates real-time events, such as traffic|
 |Real-time traffic event manipulation|Add real-time map-matched events, such as traffic conditions, to improve route planning results|
-
-## Starter experience
-Experience the capabilities of {{site.data.keyword.iotmapinsights_short}} and other {{site.data.keyword.iot4auto_short}} services. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience](https://iot-automotive-starter.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use {{site.data.keyword.iot4auto_short}} services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
 
 ## Before you begin
 {: #byb}
@@ -97,6 +92,10 @@ Search for traffic events that are within a specific rectangular area and option
 4. Optional: Remove a traffic event that is no longer valid by using the `deleteEvent` API  command.
 5. Optional: Retrieve an area on the road that is affected by a traffic event by using the `getAffectedLinksInformation` API command.
 
+## Starter experience
+Experience the capabilities of {{site.data.keyword.iotmapinsights_short}} and other {{site.data.keyword.iot4auto_short}} services. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use several {{site.data.keyword.iot4auto_short}} services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
+
+
 # Related Links
 {: #rellinks}
 
@@ -116,7 +115,7 @@ Search for traffic events that are within a specific rectangular area and option
 ## Tutorials and Samples
 {: #samples}
 
-* [IBM IoT for Automotive Starter Experience](https://iot-automotive-starter.mybluemix.net){:new_window}
+* [IBM IoT for Automotive Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window}
 * [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
 * [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
 

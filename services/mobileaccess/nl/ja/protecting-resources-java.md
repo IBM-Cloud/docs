@@ -2,14 +2,12 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 
 # {{site.data.keyword.amashort}} を使用した Liberty for Java リソースの保護
 {: #protecting-liberty}
 
-最終更新日: 2016 年 6 月 30 日
-{: .last-updated}
 
 
 {{site.data.keyword.amashort}} Server SDK は、{{site.data.keyword.Bluemix}} にデプロイされる Liberty for Java&trade; アプリケーション用の `OAuthTAI` モジュールを提供します。Liberty サーバーを無許可アクセスから保護し、モニタリング情報を収集するには、`OAuthTAI` モジュールをサーバーに装備する必要があります。
@@ -87,7 +85,7 @@ Liberty for Java アプリケーションによってホストされているリ
 	</security-constraint>
 
 	<security-role id="SecurityRole_TAIUserRole" >
-<description>This is the role that MFP OAuthTAI uses to protect the resource, and it is required to be mapped to 'ALL_AUTHENTICATED_USERS' in Liberty</description>
+		<description>This is the role that MFP OAuthTAI uses to protect the resource, and it is required to be mapped to 'ALL_AUTHENTICATED_USERS' in Liberty</description>
 		<role-name>TAIUserRole</role-name>
 	</security-role>
 	```
@@ -117,7 +115,9 @@ Subject callerSubject = WSSubject.getCallerSubject();
 WSCredential callerCredential =
     callerSubject.getPublicCredentials(WSCredential.class).iterator().next();
 ```
-詳しくは、[WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html)を参照してください。#### com.worklight.oauth.tai.WLCredential プロパティー
+詳しくは、[WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html)を参照してください。
+
+#### com.worklight.oauth.tai.WLCredential プロパティー
 {: #WLCredential}
 `WLCredential` インターフェースは、ユーザー、デバイス、およびアプリケーションについての固有の詳細情報を取得するための API を提供します。
 

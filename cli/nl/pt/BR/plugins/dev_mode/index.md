@@ -41,7 +41,7 @@ detalhes.
 Use um dos métodos a seguir para instalar a ferramenta de linha de comandos dev_mode:
 - Instalar localmente.
   1. Faça o download do plug-in dev_mode para sua plataforma a partir do [Repositório de
-Plug-ins de CLI do IBM Bluemix](http://plugins.{DomainName}).
+Plug-ins de CLI do IBM Bluemix](http://plugins.ng.bluemix.net).
   2. Acesse a pasta em que o plug-in dev_mode está salvo e instale o plug-in dev_mode usando o comando cf install-plugin. Por
 exemplo: 
   
@@ -217,7 +217,6 @@ cf restart-inplace <appName>
 ## Links Relacionados
 {: #general}
 * [CLI do Modo de desenvolvimento](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
 * [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

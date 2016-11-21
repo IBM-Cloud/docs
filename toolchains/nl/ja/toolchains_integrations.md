@@ -13,7 +13,7 @@ copyright:
 # ツール統合の構成
 {: #integrations}
 
-最終更新日: 2016 年 9 月 13 日
+最終更新日: 2016 年 10 月 18 日
 {: .last-updated}
 
 ツールチェーンを作成するときに開発、デプロイメント、運用の作業をサポートするツール統合を構成したり、既存のツールチェーンにツール統合を追加、構成してカスタマイズしたりできます。  
@@ -22,21 +22,24 @@ copyright:
 **重要**: {{site.data.keyword.Bluemix_notm}} Public の場合、ツールチェーンは米国南部地域でのみ利用可能です。
 
 ツールチェーンに追加して構成できるツール統合は、ツールチェーンを {{site.data.keyword.Bluemix_notm}} Public で使用するか {{site.data.keyword.Bluemix_notm}} Dedicated で使用するかによって異なります。
+{{site.data.keyword.Bluemix_notm}} Dedicated でツールチェーンを使用している場合、利用可能なツール統合は、特定の環境で {{site.data.keyword.jazzhub_title}} がセットアップされる方法によって異なります。
 
 *表 1. {{site.data.keyword.Bluemix_notm}} Public と Dedicated のツールチェーンで使用できるツール統合*
 
-|ツール統合 |{{site.data.keyword.Bluemix_notm}} Public で利用可能	|{{site.data.keyword.Bluemix_notm}} Dedicated で利用可能|
+|ツール統合 |{{site.data.keyword.Bluemix_notm}} Public で利用可能	|{{site.data.keyword.Bluemix_notm}} Dedicated で利用可能 (環境依存)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.deliverypipeline}} 		|可	   	|可  		|
 |{{site.data.keyword.DRA_short}} 		|可		|不可			|
 |Eclipse Orion {{site.data.keyword.webide}}		|可		|可			|
-|GitHub		|可		|不可		|
+|GitHub		|可		|可		|
 |Dedicated GitHub Enterprise			|不可		|可		|
-|PagerDuty			|可		|不可		|
+|他のツール			|可		|可		|
+|PagerDuty			|可		|可		|
 |Sauce Labs		|可		|不可		|
-|Slack			|可		|不可		|
+|Slack			|可		|可		|
 
-**ヒント**: {{site.data.keyword.Bluemix_notm}} Public でソース・コードの開発を開始する場合は、{{site.data.keyword.deliverypipeline}} を構成する前に GitHub ツール統合を構成してください。{{site.data.keyword.Bluemix_notm}} Dedicated でコードの開発を開始する場合は、{{site.data.keyword.deliverypipeline}} を構成する前に {{site.data.keyword.ghe_short}} ツール統合を構成してください。 
+**ヒント**: {{site.data.keyword.Bluemix_notm}} Public でソース・コードの開発を開始する場合は、{{site.data.keyword.deliverypipeline}} を構成する前に GitHub ツール統合を構成してください。
+{{site.data.keyword.Bluemix_notm}} Dedicated でコードの開発を開始する場合は、{{site.data.keyword.deliverypipeline}} を構成する前に {{site.data.keyword.ghe_short}} ツール統合または GitHub ツール統合を構成してください。 
 
 
 ## Delivery Pipeline の構成
@@ -47,7 +50,7 @@ copyright:
 {{site.data.keyword.deliverypipeline}} を構成し、アプリケーションの継続的なビルド、テスト、デプロイメントを自動化します。 
 
 1. ツールチェーンを作成しているときにこのツール統合を構成する場合は、「構成可能な統合 (Configurable Integrations)」セクションで、**「Delivery Pipeline」**をクリックします。使用するテンプレートに応じて、異なるフィールドを利用できます。デフォルトのフィールド値を確認し、必要に応じてそれらの設定を変更します。
-1. {{site.data.keyword.Bluemix_notm}} Public のツールチェーンにこのツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。{{site.data.keyword.Bluemix_notm}} Dedicated でツールチェーンを使用する場合は、ダッシュボードの**「DEVOPS」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの右上隅にある**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。 
+1. {{site.data.keyword.Bluemix_notm}} Public のツールチェーンにこのツール統合を追加する場合は、DevOps ダッシュボードの **「ツールチェーン」**ページで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。{{site.data.keyword.Bluemix_notm}} Dedicated でツールチェーンを使用する場合は、ダッシュボードの**「DEVOPS」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの右上隅にある**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。 
 1. 追加ボタン (+) をクリックします。
 1. 「ツール統合 (Tool Integrations)」セクションで、**「Delivery Pipeline」**をクリックします。
 1. 新しいパイプラインの名前を指定します。
@@ -110,7 +113,7 @@ npm install
  
 {{site.data.keyword.DRA_short}} を追加し、デプロイメントをモニタリングしてリリース前にリスクを洗い出すことで、{{site.data.keyword.Bluemix_notm}} のコードの品質を維持し、向上させることができます。
 
-1. 既に存在するツールチェーンに、このツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。 
+1. 既に存在するツールチェーンに、このツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**ページで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。 
 1. 追加ボタン (+) をクリックします。
 1. 「ツール統合 (Tool Integrations)」セクションで、**「Deployment Risk Analytics」**をクリックします。 
 1. **「統合の作成 (Create Integration)」**をクリックします。
@@ -127,7 +130,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、ソース管理タスクを作�
  
 ソース管理タスクを完了させるために、Eclipse Orion {{site.data.keyword.webide}} ツール統合を追加します。
 
-1. {{site.data.keyword.Bluemix_notm}} Public のツールチェーンにこのツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。{{site.data.keyword.Bluemix_notm}} Dedicated でツールチェーンを使用する場合は、ダッシュボードの**「DEVOPS」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの右上隅にある**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。
+1. {{site.data.keyword.Bluemix_notm}} Public のツールチェーンにこのツール統合を追加する場合は、DevOps ダッシュボードの **「ツールチェーン」**ページで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。{{site.data.keyword.Bluemix_notm}} Dedicated でツールチェーンを使用する場合は、ダッシュボードの**「DEVOPS」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの右上隅にある**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。
 1. 追加ボタン (+) をクリックします。
 1. 「ツール統合 (Tool Integrations)」セクションで、**「Eclipse Orion Web IDE」**をクリックします。 
 1. **「統合の作成 (Create Integration)」**をクリックします。
@@ -147,12 +150,12 @@ GitHub を構成して、クラウドでソース・コードを管理します�
 
 1. ツールチェーンを作成しているときにこのツール統合を構成する場合は、次の手順を実行します。
 
- a. 「構成可能な統合 (Configurable Integrations)」セクションで、**「GitHub」**をクリックします。GitHub へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「許可 (Authorize)」**をクリックして、GitHub の Web サイトに移動します。アクティブな GitHub セッションがない場合は、ログインを求めるプロンプトが出されます。**「アプリケーションを許可 (Authorize Application)」**をクリックして、{{site.data.keyword.Bluemix_notm}} が GitHub アカウントにアクセスできるようにします。アクティブな GitHub セッションがあるが、最近パスワードを入力していない場合は、確認のために GitHub パスワードを入力するよう求めるプロンプトが出される場合があります。
+ a. 「構成可能な統合 (Configurable Integrations)」セクションで、**「GitHub」**をクリックします。{{site.data.keyword.Bluemix_notm}} Public でツールチェーンを作成し、GitHub へのアクセスを {{site.data.keyword.Bluemix_notm}} に許可していない場合は、**「許可 (Authorize)」**をクリックして、GitHub の Web サイトに移動します。アクティブな GitHub セッションがない場合は、ログインを求めるプロンプトが出されます。**「アプリケーションを許可 (Authorize Application)」**をクリックして、{{site.data.keyword.Bluemix_notm}} が GitHub アカウントにアクセスできるようにします。アクティブな GitHub セッションがあるが、最近パスワードを入力していない場合は、確認のために GitHub パスワードを入力するよう求めるプロンプトが出される場合があります。
  
  b. GitHub リポジトリーのデフォルトのターゲット・リポジトリーのロケーションを確認します。これらのリポジトリーは、サンプル・リポジトリーのクローンです。必要に応じて、ターゲット・リポジトリーの名前を変更します。
 ![デフォルトのターゲット・リポジトリーのロケーション](images/toolchain_github_config.png)
    
-1. 既に存在するツールチェーンに、このツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。 
+1. 既に存在するツールチェーンに、このツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**ページで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。 
 1. 追加ボタン (+) をクリックします。
 1. 「ツール統合 (Tool Integrations)」セクションで、**「GitHub」**をクリックします。
 1. 既存の GitHub リポジトリーを使用する場合は、その URL を入力します。リポジトリー・タイプで、**「リンク (Link)」**をクリックします。
@@ -190,7 +193,7 @@ GitHub を構成して、クラウドでソース・コードを管理します�
  
  c. 新しい {{site.data.keyword.ghe_short}} リポジトリーのデフォルト名を確認します。必要に応じて新しいリポジトリーの名前を変更してください。以下の画像は、サンプル・リポジトリーから複製したリポジトリーの例です。既存のリポジトリーを使用することも、新しいリポジトリーを使用することもできます。新しいリポジトリーを使用する場合は、空のリポジトリーを作成するか、リポジトリーのクローンを作成するか、リポジトリーをフォークします。![リポジトリーのデフォルトの場所](images/toolchain_ghe_config.png)
    
-1. {{site.data.keyword.Bluemix_notm}} Public のツールチェーンにこのツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。{{site.data.keyword.Bluemix_notm}} Dedicated でツールチェーンを使用する場合は、ダッシュボードの**「DEVOPS」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの右上隅にある**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。
+1. {{site.data.keyword.Bluemix_notm}} Public のツールチェーンにこのツール統合を追加する場合は、DevOps ダッシュボードの **「ツールチェーン」**ページで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。{{site.data.keyword.Bluemix_notm}} Dedicated でツールチェーンを使用する場合は、ダッシュボードの**「DEVOPS」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの右上隅にある**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。
 1. 追加ボタン (+) をクリックします。
 1. 「ツール統合 (Tool Integrations)」セクションで、**「{{site.data.keyword.ghe_short}}」**をクリックします。
 1. 既存の {{site.data.keyword.ghe_short}} リポジトリーを使用する場合は、そのリポジトリーの URL を入力します。リポジトリーのタイプとして、**「既存」**をクリックしてください。
@@ -212,6 +215,28 @@ GitHub を構成して、クラウドでソース・コードを管理します�
 
 <!-- 8/23/2016: The GHE Dedicated content has been moved to docs-staging/services/ghededicated/index.md -->
 
+## カスタム・ツール (他のツール) の構成
+{: #othertool}
+
+チームが、ツールチェーン統合リストに含まれていないツールを使用する場合、カスタム・ツールを統合できます。 
+
+カスタム・ツールを構成し、それがツールチェーンで他のツールと連携し、チームで利用可能になるようにします。
+1. ツールチェーンを作成しているときにこのツール統合を構成する場合は、「構成可能な統合 (Configurable Integrations)」セクションで、**「他のツール (Other Tool)」**をクリックします。
+
+1. 既に存在するツールチェーンに、このツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**ページで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。
+1. 追加ボタン (+) をクリックします。
+1. 「ツール統合 (Tool Integrations)」セクションで、**「他のツール (Other Tool)」**をクリックします。
+1. ツール名を入力します。
+1. ツールに最も関連の強いライフサイクル・フェーズを選択します。ライフサイクル・フェーズの選択は、「ツールチェーン統合 (Toolchains Integrations)」ページのどのカテゴリーの下に
+ツールがリストされるかを決定します。
+1. アイコンの URL を追加します。アイコンは、ご使用のツールの統合カードに表示されます。
+1. 資料 URL を追加します。
+1. ツール・インスタンス名を指定します。例えば: マイ・チーム・ツール。
+1. ツール・インスタンスの URL を追加します。ツール統合カードをクリックすると、ツール・インスタンス用にリストした URL に移動します。
+1. ツールの説明を追加します。
+1. (拡張機能) 必要に応じて、追加のプロパティーを追加します。例えば、ツールチェーンの他のツールと統合するために、ご使用のツールに必要な情報または属性をリストします。  
+1. **「統合の作成 (Create Integration)」**をクリックします。
+
 ## PagerDuty の構成
 {: #pagerduty}
 
@@ -220,7 +245,7 @@ PagerDuty は、複数のモニタリング・システムのデータを単一�
 パイプライン・ステージの障害が発生したときに通知を送信するよう PagerDuty を構成し、問題を迅速に修正して、ダウン時間を減少できるようにします。
 
 1. ツールチェーンを作成しているときにこのツール統合を構成する場合は、「構成可能な統合 (Configurable Integrations)」セクションで、**「PagerDuty」**をクリックします。
-1. 既に存在するツールチェーンに、このツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。 
+1. 既に存在するツールチェーンに、このツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**ページで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。 
 1. 追加ボタン (+) をクリックします。
 1. 「ツール統合 (Tool Integrations)」セクションで、**「PagerDuty」**をクリックします。
 1. PagerDuty アカウントと関連付けられている PagerDuty のサイト名を入力します。PagerDuty アカウントがない場合は、[アカウントを登録します (リンク先が新しいウィンドウで開きます)](https://signup.pagerduty.com/accounts/new){: new_window}。
@@ -242,7 +267,7 @@ Sauce Labs は、機能単体テストを実行します。Sauce Labs のテス�
 自動化された機能テストを複数のオペレーティング・システムとブラウザーで実行するように Sauce Labs を構成します。これにより、ユーザーが Web サイトまたはアプリケーションを使用する可能性がある方法をエミュレートできます。
 
 1. ツールチェーンを作成しているときにこのツール統合を構成する場合は、「構成可能な統合 (Configurable Integrations)」セクションで、**「Sauce Labs」**をクリックします。
-1. 既に存在するツールチェーンに、このツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。 
+1. 既に存在するツールチェーンに、このツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**ページで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。 
 1. 追加ボタン (+) をクリックします。
 1. 「ツール統合 (Tool Integrations)」セクションで、**「Sauce Labs」**をクリックします。
 1. Sauce Labs アカウントと関連付けられているユーザー名を入力します。[Sauce Labs アカウント・ページの上部にあるウェルカム・メッセージでユーザー名を確認できます (リンク先が新しいウィンドウで開きます)](https://saucelabs.com/account){: new_window}。
@@ -267,7 +292,7 @@ Slack が提供する永続的なチャットは、E メールの代わりに使
 テストやデプロイのアクティビティーなどのツールチェーンに関する通知をツール統合から受信するように Slack を構成します。
 
 1. ツールチェーンを作成しているときにこのツール統合を構成する場合は、「構成可能な統合 (Configurable Integrations)」セクションで、**「Slack」**をクリックします。
-1. 既に存在するツールチェーンに、このツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**タブで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。
+1. 既に存在するツールチェーンに、このツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**ページで、ツールチェーンをクリックして「ツール統合 (Tool Integrations)」ページを開きます。または、アプリの「概要」ページの「継続的デリバリー (Continuous Delivery)」タイルで、**「ツールチェーンの表示」**をクリックします。次に、**「ツール統合 (Tool Integrations)」**をクリックします。
 1. 追加ボタン (+) をクリックします。
 1. 「ツール統合 (Tool Integrations)」セクションで、**「Slack」**をクリックします。
 1. Slack アカウントの API 認証トークンを入力します。Slack での認証には、生成されたフルアクセス・トークンを使用する必要があります。トークンを確認する方法については、[Slack 認証 (リンク先が新しいウィンドウで開きます)](https://api.slack.com/web#authentication){: new_window} を参照してください。
@@ -276,3 +301,11 @@ Slack が提供する永続的なチャットは、E メールの代わりに使
 1. Slack のタイルをクリックします。構成した Slack チャネルでツールチェーンのアクティビティーをすべて表示できます。
 
 詳しくは、[Slack (リンク先が新しいウィンドウで開きます)](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window} を参照してください。
+
+
+
+
+
+
+
+

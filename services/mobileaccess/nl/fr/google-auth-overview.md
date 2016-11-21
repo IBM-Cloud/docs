@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -11,9 +11,8 @@ copyright:
 # Authentification des utilisateurs avec des données d'identification Google
 {: #google-auth}
 
-Dernière mise à jour : 22 juillet 2016
 
-Vous pouvez configurer la protection des ressources dans le service {{site.data.keyword.amashort}}, en utilisant Google en tant que fournisseur d'identité. Les utilisateurs de votre application mobile ou Web peuvent alors s'authentifier avec leurs données d'identification Google.
+Vous pouvez configurer la protection des ressources dans le service {{site.data.keyword.amafull}}, en utilisant Google en tant que fournisseur d'identité. Les utilisateurs de votre application mobile ou Web peuvent alors s'authentifier avec leurs données d'identification Google.
 {:shortdesc}
 
 **Important :** il n'est pas nécessaire d'installer séparément le SDK client fourni par Google. Le SDK Google est installé automatiquement par les gestionnaires de dépendances lors de la configuration du SDK client de {{site.data.keyword.amashort}}.

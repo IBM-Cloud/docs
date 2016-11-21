@@ -68,14 +68,14 @@ Un gateway può pubblicare gli eventi per se stesso o per conto di qualsiasi dis
 ## Sottoscrizione ai comandi
 {: #subscribing_cmds}
 
-Un gateway può sottoscriversi ai comandi indirizzati al gateway stesso o a qualsiasi dispositivo nell'organizzazione, inclusi altri gateway. Per la sottoscrizione ai comandi, utilizza il seguente argomento e sostituisci i valori `typeId` e `deviceId` appropriati. 
+Un gateway può sottoscriversi ai comandi indirizzati al gateway stesso o a qualsiasi dispositivo nell'organizzazione, inclusi altri gateway. Per la sottoscrizione ai comandi, utilizza il seguente argomento e sostituisci i valori `typeId` e `deviceId` appropriati.
 
 <pre class="pre">iot-2/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/cmd/<var class="keyword varname">commandId</var>/fmt/<var class="keyword varname">formatString</var></pre>
 {: codeblock}
 
 Il carattere jolly `+` MQTT può essere utilizzato per `typeId`, `deviceId`, `commandId` e `formatString` per la sottoscrizione a più origini del comando.
 
-**Esempio:** 
+**Esempio:**
 
 |Dispositivo |`typeId`|`deviceId`|
 |:---|:---|
@@ -95,13 +95,13 @@ Il carattere jolly `+` MQTT può essere utilizzato per `typeId`, `deviceId`, `co
 ## Registrazione automatica dei gateway
 {: #auto-reg}
 
-I dispositivi gateway possono automaticamente registrare i dispositivi a loro collegati. Quando un gateway pubblica un messaggio o si sottoscrive ad un argomento per conto di un dispositivo non registrato, tale dispositivo viene registrato automaticamente. 
+I dispositivi gateway possono automaticamente registrare i dispositivi a loro collegati. Quando un gateway pubblica un messaggio o si sottoscrive ad un argomento per conto di un dispositivo non registrato, tale dispositivo viene registrato automaticamente.
 
 Le richieste di registrazione dai dispositivi gateway sono limitate a 128 richieste in attesa alla volta. Il tentativo di collegare molti nuovi dispositivi può causare un ritardo nella registrazione dei dispositivi tramite il gateway.
 
 **Avvertenza**
 
-Se il gateway non riesce a registrare un dispositivo automatico, non tenta di registrare di nuovo tale dispositivo per un breve periodo di tempo. Tutti i messaggi o le sottoscrizioni dai dispositivi in errore vengono eliminati durante tale periodo. 
+Se il gateway non riesce a registrare un dispositivo automatico, non tenta di registrare di nuovo tale dispositivo per un breve periodo di tempo. Tutti i messaggi o le sottoscrizioni dai dispositivi in errore vengono eliminati durante tale periodo.
 
 ## Notifiche gateway
 {: #notification}
@@ -138,7 +138,7 @@ Dove
 -   `Return_Code` è il codice di ritorno
 -   `Message` è il messaggio di errore
 
-Un gateway può ricevere le seguenti notifiche: 
+Un gateway può ricevere le seguenti notifiche:
 
 -   L'argomento non corrisponde ad alcuna regola dell'argomento consentita.
 -   Il tipo di dispositivo non è valido.
@@ -155,7 +155,7 @@ Il supporto per la gestione del ciclo di vita del dispositivo è facoltativo. Il
 ### Livelli di QOS (quality of service) e sessione di pulizia
 {: #quality_service}
 
-I gateway gestiti possono pubblicare i messaggi con un livello di QOS (quality of service) di 0 o 1. I messaggi dal gateway non devono essere messaggi conservati. 
+I gateway gestiti possono pubblicare i messaggi con un livello di QOS (quality of service) di 0 o 1. I messaggi dal gateway non devono essere messaggi conservati.
 
 I messaggi con QoS=0 possono essere scartati e non sono conservati dopo il riavvio del server di messaggistica. I messaggi con QoS=1 possono essere accodati e sono conservati dopo il riavvio del server di messaggistica. La durata della sottoscrizione determina se una richiesta viene accodata. Il parametro `cleansession` della connessione che effettua la sottoscrizione determina la durata della sottoscrizione.  
 
@@ -175,7 +175,7 @@ Un gateway gestito deve sottoscriversi ai seguenti argomenti per gestire le rich
 -   Il gateway gestito si sottoscrive alle risposte di gestione del dispositivo in:  
 <pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/+</pre>
 {: codeblock}
--   Il gateway gestito si sottoscrive alle richieste di gestione del dispositivo in:   
+-   Il gateway gestito si sottoscrive alle richieste di gestione del dispositivo in:  
 <pre class="pre">iotdm-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/+</pre>
 {: codeblock}
 
@@ -184,7 +184,7 @@ Un gateway pubblica le seguenti risposte e richieste:
 - Le risposte di gestione del dispositivo sono pubblicate in:  
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/response/</pre>
 {: codeblock}
-- Le richieste di gestione del dispositivo sono pubblicate in:   
+- Le richieste di gestione del dispositivo sono pubblicate in:  
 <pre class="pre">iotdevice-1/type/<var class="keyword varname">typeId</var>/id/<var class="keyword varname">deviceId</var>/</pre>
 {: codeblock}
 
@@ -204,7 +204,7 @@ Le richieste sono formattate come mostrato nel seguente esempio di codice:
 ```
 
 -   `d` contiene tutti i dati rilevanti per la richiesta
--   `reqId` è un identificativo della richiesta e deve essere copiato in una risposta. Se non è richiesta una risposta, il campo non viene utilizzato. 
+-   `reqId` è un identificativo della richiesta e deve essere copiato in una risposta. Se non è richiesta una risposta, il campo non viene utilizzato.
 
 **Risposte**
 
@@ -222,4 +222,4 @@ Dove:
 -   `rc` è un codice risultato della richiesta originale.
 -   `message` è un elemento facoltativo con una descrizione di testo del codice di risposta.
 -   `d` è un elemento di dati facoltativo che accompagna la risposta.
--   `reqId` è l'ID della richiesta della richiesta originale. L'ID della richiesta viene utilizzato per collegare le risposte alle richieste e il dispositivo deve assicurarsi che tutti gli ID della richiesta siano univoci. Le risposte alle richieste {{site.data.keyword.iot_short_notm}} devono contenere il valore `reqId` corretto. 
+-   `reqId` è l'ID della richiesta della richiesta originale. L'ID della richiesta viene utilizzato per collegare le risposte alle richieste e il dispositivo deve assicurarsi che tutti gli ID della richiesta siano univoci. Le risposte alle richieste {{site.data.keyword.iot_short_notm}} devono contenere il valore `reqId` corretto.

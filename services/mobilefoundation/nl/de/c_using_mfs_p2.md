@@ -2,14 +2,14 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-09-12"
 ---
 
 #	Professional 1 Application-Plan verwenden
 {: #using_mobilefoundation_p2}
 
-Letzte Aktualisierung: 04. August 2016
-{: .last-updated}
+<!--Last updated: 12 September 2016
+{: .last-updated}-->
 
 Mit dem Professional 1 Application-Plan können Benutzer 1 mobile Anwendung mit mehreren Betriebssystemen für mobile Geräte erstellen.
 Nach der Erstellung der Serviceinstanz von {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application lesen Sie die folgende Prozedur, um die Arbeit mit dem Service zu beginnen.
@@ -79,6 +79,29 @@ Informationen angezeigt:
 
 
 <!--This console runs inside the container.--> Mit der Konsole können Sie Ihre mobilen Apps, Adapter und Geräte verwalten, Ihren Server als mobiles Back-End verwenden, Push-Benachrichtigungen senden usw.
+
+##  Mobile Analytics-Server hinzufügen
+{: #adding_analytics_server_prof}
+
+ Sie können Ihre mobile Anwendung nun auf dem {{site.data.keyword.mobilefirst}}-Server überwachen, indem Sie einen Mobile Analytics-Server zur Instanz des Service {{site.data.keyword.mobilefoundation_short}} hinzufügen.
+
+ Durch den professionellen Plan wird der Mobile Analytics-Server in einer Containergruppe erstellt; der Benutzer kann die Konfiguration durch Auswahl der Anzahl von Containerknoten in der Containergruppe anpassen.
+
+ Benutzer können auch Datenträger an die Container anhängen, um Daten dauerhaft zu speichern. Wird ein Datenträger einmal ausgewählt, kann er nicht mehr geändert werden. 20 GB Speicherplatz für die Dateifreigabe stehen dem Benutzer standardmäßig zur Verfügung. Benötigt der Benutzer zusätzlichen Speicherplatz, um die Analysedaten dauerhaft zu speichern, muss er weiteren Speicherplatz für die Dateifreigabe erwerben und mit dieser Dateifreigabe einen Datenträger erstellen. Anschließend kann er diesen neuen Datenträger auswählen und den Analyseserver bereitstellen.
+
+ Weitere Informationen zum Hinzufügen von Datenträgern zu {{site.data.keyword.containerlong}} finden Sie im Abschnitt zum [Persistenten Speichern von Daten auf einem Datenträger über das {{site.data.keyword.Bluemix_notm}}-Dashboard](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+
+* Klicken Sie auf die Option zum Hinzufügen der Analyse, um den Mobile Analytics-Server zur Instanz des {{site.data.keyword.mobilefoundation_short}}-Service hinzuzufügen.
+
+Der Prozess der Bereitstellung wird gestartet. Dieser Prozess dauert ungefähr 10 Minuten; in einem Nachrichtenfenster wird der Fortschritt dieser Operation angezeigt.  
+
+* Starten Sie die MobileFirst Analytics Console über die {{site.data.keyword.mfp_oc_short_notm}}.
+
+* Für den {{site.data.keyword.mfserver_short_notm}} und den Mobile Analytics-Server ist Single Sign-on aktiviert. Der Mobile Analytics-Server ist mit denselben LTPA-Schlüsseln und denselben Benutzerberechtigungen konfiguriert wie der {{site.data.keyword.mfserver_short_notm}}-Server. Sie können für die Anmeldung an der Mobile Analytics Console den `Benutzernamen` und das `Kennwort` verwenden, die Sie auch für die Anmeldung bei der {{site.data.keyword.mfp_oc_short_notm}} verwendet haben.
+
+Weitere Informationen zu MobileFirst Analytics finden Sie unter [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/).
+
+**Anmerkung:** Der Mobile Analytics-Server wird entfernt, wenn Sie die Instanz des Service {{site.data.keyword.mobilefoundation_short}} löschen oder wenn Sie versuchen, den {{site.data.keyword.mfserver_short_notm}} erneut zu erstellen.
 
 ## {{site.data.keyword.mobilefirst}} Server erneut erstellen
 {: #recreate_mobilefoundation_p2}

@@ -48,7 +48,7 @@ copyright:
 - [{{site.data.keyword.iot_short_notm}} 블록체인 통합을 사용하십시오](reference/extensions/index.html). 
 - 블록체인 원장에 기록할 데이터를 생성하는 디바이스를 연결하십시오.
 [디바이스 연결](iotplatform_task.html) 주제의 지시사항에 따라 디바이스를 연결하십시오. 
-- 모니터링 UI를 설치하십시오. 모니터링 UI는 {{site.data.keyword.iot_short_notm}} 및 Blockchain Fabric 간의 연결을 확인하는 데 사용됩니다. [블록체인 모니터링 UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/monitoring_ui) GitHub 디렉토리에서 사용 가능한 모니터링 UI readme 문서의 지시사항을 따르십시오. 
+- 모니터링 UI를 설치하십시오. 모니터링 UI는 {{site.data.keyword.iot_short_notm}} 및 Blockchain Fabric 간의 연결을 확인하는 데 사용됩니다. [블록체인 모니터링 UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub 디렉토리에서 사용 가능한 모니터링 UI readme 문서의 지시사항을 따르십시오. 
 
 ### IBM 기본 시나리오를 사용하여 빨리 시작하기
 
@@ -173,7 +173,7 @@ IBM 제공 기본 {{site.data.keyword.iot_short_notm}} 블록체인 통합 환�
 {: #test_simple}
 
 IBM 제공 패브릭에 연결되었으며 디바이스 데이터를 샘플 계약에 맵핑한 경우에는 디바이스에서 블록체인 원장으로의 종단간 데이터 플로우를 테스트할 수 있습니다. IoT 블록체인 모니터링 UI를 사용하면 자산에 대한 블록체인 활동 및 데이터를 볼 수 있습니다.   
-**팁:** 모니터링 UI가 아직 로컬 환경에 설치되지 않았으면 지금 이를 설치할 수 있습니다. [블록체인 모니터링 UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/monitoring_ui) GitHub 디렉토리에서 사용 가능한 모니터링 UI readme 문서의 지시사항을 따르십시오.   
+**팁:** 모니터링 UI가 아직 로컬 환경에 설치되지 않았으면 지금 이를 설치할 수 있습니다. [블록체인 모니터링 UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub 디렉토리에서 사용 가능한 모니터링 UI readme 문서의 지시사항을 따르십시오.   
 1. {{site.data.keyword.iot_short_notm}}에 연결하도록 모니터링 UI를 구성하십시오.
  모니터링 UI에서 **구성**을 클릭하여 모니터링 UI 연결을 구성하십시오. 
  <table>

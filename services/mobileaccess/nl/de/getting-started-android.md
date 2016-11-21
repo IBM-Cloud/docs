@@ -2,27 +2,25 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+
 
 # Android-SDK einrichten
 {: #getting-started-android}
 
-Letzte Aktualisierung: 02. August 2016
-{: .last-updated}
+Instrumentieren Sie Ihre Android-Anwendung mit dem {{site.data.keyword.amafull}}-Client-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und nicht geschützte Ressourcen.
 
-Instrumentieren Sie Ihre Android-Anwendung mit dem {{site.data.keyword.amashort}}-Client-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und nicht geschützte Ressourcen.
 {:shortdesc}
 
 ## Vorbereitungen
 {: #before-you-begin}
 Voraussetzungen:
 * Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
+* Die Parameterwerte Ihres Service. Öffnen Sie den Service im {{site.data.keyword.Bluemix_notm}}-Dashboard. Klicken Sie auf **Mobile Systemerweiterungen**. In den Feldern **Route** und **App-GUID/TenantId** werden die Werte `applicationRoute` und `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Diese Werte benötigen Sie für die Initialisierung des SDK und zum Senden von Anforderungen an die Back-End-Anwendung.
 * Android Studio-Projekt, das für das Arbeiten mit Gradle eingerichtet ist. Weitere Informationen zur Einrichtung Ihrer Android-Entwicklungsumgebung finden Sie in [Google Developer Tools](http://developer.android.com/sdk/index.html).
-
 
 ## {{site.data.keyword.amashort}}-Client-SDK installieren
 {: #install-mca-sdk}
@@ -31,9 +29,9 @@ Das {{site.data.keyword.amashort}}-Client-SDK wird mit Gradle, einem Abhängigke
 
 1. Erstellen Sie ein Android Studio-Projekt oder öffnen Sie ein vorhandenes Projekt.
 
-1. Öffnen Sie die Datei `build.gradle` für Ihre Anwendung (**nicht** die Datei `build.gradle` für das Projekt). 
+1. Öffnen Sie die Datei `build.gradle` für Ihre Anwendung (**nicht** die Datei `build.gradle` für das Projekt).
 
-1. Suchen Sie den Abschnitt **dependencies** in der Datei `build.gradle`. Fügen Sie eine Abhängigkeit 'compile' für das {{site.data.keyword.amashort}}-Client-SDK hinzu:
+1. Suchen Sie den Abschnitt **dependencies** in der Datei `build.gradle`.  Fügen Sie eine Abhängigkeit 'compile' für das {{site.data.keyword.amashort}}-Client-SDK hinzu:
 
 	```Gradle
 	dependencies {
@@ -57,31 +55,27 @@ Das {{site.data.keyword.amashort}}-Client-SDK wird mit Gradle, einem Abhängigke
 ## {{site.data.keyword.amashort}}-Client-SDK initialisieren
 {: #initalize-mca-sdk}
 
-Initialisieren Sie das SDK, indem Sie die Parameter `context`, `applicationGUID`, `applicationRoute` und `BMSClient.REGION_UK` an die Methode `initialize` übergeben.
+Initialisieren Sie das SDK, indem Sie die Parameter **context** und **region** an die Methode `initialize` übergeben. Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `onCreate` der Hauptaktivität in Ihrer Android-Anwendung.
 
+```Java
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+					
+  BMSClient.getInstance().setAuthorizationManager(
+                 MCAAuthorizationManager.createInstance(this, "MCAServiceTenantId"));
 
-1. Klicken Sie auf der Hauptseite des {{site.data.keyword.Bluemix_notm}}-Dashboards auf Ihre App. Klicken Sie auf **Mobile Systemerweiterungen**. Sie benötigen die Werte für die **Anwendungsroute** und die **Anwendungs-GUID** für die Initialisierung des SDK.
-
-2. Initialisieren Sie das {{site.data.keyword.amashort}}-Client-SDK in Ihrer Android-Anwendung. Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `onCreate` der Hauptaktivität in Ihrer Android-Anwendung.
-<br/>Ersetzen Sie die Werte *applicationRoute* und *applicationGUID* durch die Werte unter **Mobile Systemerweiterungen** im {{site.data.keyword.Bluemix_notm}}-Dashboard.
-
-	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
 ```
-Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region.
 
-Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen.
-				 	
+   * Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region.  Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen. Der Regionswert muss einer der folgenden sein: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`.
+   * Ersetzen Sie "MCAServiceTenantId" durch den Wert **tenantId** (siehe [Vorbereitungen](#before-you-begin)). 
+
 ## Anforderung an mobile Back-End-Anwendung senden
 {: #request}
 
-Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen. 
+Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen.
 
-1. Versuchen Sie, eine Anforderung an den geschützten Endpunkt Ihrer neuen mobilen Back-End-Anwendung zu senden. Öffnen Sie in Ihrem Browser die folgende URL: `{applicationRoute}/protected`. Beispiel: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der MobileFirst Services Starter-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Eine Nachricht des Typs `Unauthorized` (Nicht autorisiert) wird in Ihrem Browser zurückgegeben, weil auf diesen Endpunkt nur mobile Anwendungen zugreifen können, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind.
+1. Versuchen Sie, eine Anforderung an den geschützten Endpunkt Ihrer neuen mobilen Back-End-Anwendung zu senden. Öffnen Sie in Ihrem Browser die folgende URL: `{applicationRoute}/protected` (z. B. `http://my-mobile-backend.mybluemix.net/protected`).   Informationen zum Abrufen des Wertes für `{applicationRoute}` finden Sie unter [Vorbereitungen](#before-you-begin). 
+	
+	Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der MobileFirst Services Starter-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Eine Nachricht des Typs `Unauthorized` (Nicht autorisiert) wird in Ihrem Browser zurückgegeben, weil auf diesen Endpunkt nur mobile Anwendungen zugreifen können, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind.
 
 1. Verwenden Sie Ihre Android-Anwendung, um eine Anforderung an denselben Endpunkt zu senden. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert haben:
 
@@ -105,7 +99,7 @@ Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können S
 	});
 	```
 
-1. Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe im Dienstprogramm LogCat angezeigt:	
+1. Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe im Dienstprogramm LogCat angezeigt:
 
 	![Bild](images/getting-started-android-success.png)
 

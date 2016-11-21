@@ -2,14 +2,12 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 
 # 通过 {{site.data.keyword.amashort}} 保护 Liberty for Java 资源
 {: #protecting-liberty}
 
-上次更新时间：2016 年 6 月 30 日
-{: .last-updated}
 
 
 {{site.data.keyword.amashort}} 服务器 SDK 为部署在 {{site.data.keyword.Bluemix}} 上的 Liberty for Java&trade; 应用程序提供了 `OAuthTAI` 模块。必须在 Liberty 服务器中安装 `OAuthTAI` 模块，以保护其不受未经授权的访问，并获取监视信息。

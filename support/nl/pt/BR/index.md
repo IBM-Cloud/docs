@@ -213,7 +213,7 @@ Se você não conseguir resolver seu problema técnico com a resolução de prob
 
 Se o problema não for devido a uma indisponibilidade e você for um cliente em um país ou região, excluindo a China, abra um chamado de suporte usando uma das opções a seguir:
 
-  * No widget Conta e Suporte, clique em **Obter ajuda**.Na página exibida, clique em **ENTRAR EM CONTATO**. Preencha o formulário para indicar o motivo pelo qual você precisa
+  * No widget Conta e Suporte, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**. Preencha o formulário para indicar o motivo pelo qual você precisa
 do suporte técnico.
   * Use a página da ajuda [Suporte IBM do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window}. É
 possível enviar chamados para problemas de vendas, faturamento, ID IBM, login e suporte
@@ -269,7 +269,8 @@ Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Dedicated na China
 Se você for um cliente do {{site.data.keyword.Bluemix_notm}} Local, o suporte será fornecido pela equipe de suporte do IBM {{site.data.keyword.Bluemix_notm}}. No entanto, como é possível que você não tenha um ID IBM, existem algumas opções diferentes para obter suporte.
 
 <ul>
-<li>Entre em contato com o suporte abrindo um novo chamado usando a página da ajuda <a href="http://ibm.biz/bluemixsupport" target="_blank">Suporte IBM do {{site.data.keyword.Bluemix_notm}}</a>. É possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Local** para o campo Região.
+<li>Entre em contato com o suporte abrindo um novo chamado usando a página da ajuda <a href="http://ibm.biz/bluemixsupport" target="_blank">Suporte IBM do {{site.data.keyword.Bluemix_notm}}</a>. É
+possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Local** para o campo Região.
 <p>Os envios de formulário são monitorados a partir de domingo às 22h UTC até sexta-feira às 23h59 UTC.</p>
 </li>
 <li>Se você tiver um ID IBM e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, clique no ícone {{site.data.keyword.avatar}} <img src="images/account_support.svg" alt="ícone Avatar" /> na barra de menus e depois clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>

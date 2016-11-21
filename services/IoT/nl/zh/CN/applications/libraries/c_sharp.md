@@ -18,7 +18,7 @@ copyright:
 {: .last-updated}
 
 
-您可以使用 C# 来构建和定制应用程序，以用于与 {{site.data.keyword.iot_full}} 上的组织进行交互。使用提供的信息和示例通过 C# 开始开发应用程序。
+您可以使用 C# 来构建和定制应用程序，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。使用提供的信息和示例通过 C# 开始开发应用程序。
 {:shortdesc}
 
 ## 下载 C# 客户机和资源
@@ -36,8 +36,8 @@ copyright:
 |:---|:---|
 |`orgId`   |组织标识。|
 |`appId`   |组织中应用程序的唯一标识。|
-|`auth-key`   |用于将应用程序安全连接到 Watson IoT 平台的 API 密钥。|
-|`auth-token`   |用于将应用程序安全连接到 Watson IoT 平台的 API 令牌。|
+|`auth-key`   |用于将应用程序安全连接到 Watson IoT Platform 的 API 密钥。|
+|`auth-token`   |用于将应用程序安全连接到 Watson IoT Platform 的 API 密钥令牌。|
 
 如果 `appId` 是提供的唯一自变量，那么客户机将作为未注册的设备连接到 {{site.data.keyword.iot_short_notm}} Quickstart 服务。自变量列表定义客户机如何连接到 {{site.data.keyword.iot_short_notm}} 模块。
 
@@ -95,11 +95,11 @@ applicationClient.subscribeToDeviceEvents(deviceType, deviceId, evt, "json", 0);
 
 ### 处理来自设备的事件
 
-要处理预订接收到的事件，请注册事件回调方法，如以下示例中所示：
+要处理您的预订接收到的事件，请注册事件回调方法，如以下示例中所示：
 
 ```
 public static void processEvent(String eventName, string eventFormat, string eventData) {
-// 执行某些操作
+// Do something
 }
 applicationClient.connect();
 applicationClient.eventCallback += processEvent;
@@ -139,7 +139,7 @@ applicationClient.subscribeToDeviceStatus(deviceType, deviceId);
 
 ### 处理来自设备的状态更新
 
-要处理预订接收到的状态更新，请注册事件回调方法，如以下示例中所示：
+要处理您的预订接收到的状态更新，请注册事件回调方法，如以下示例中所示：
 
 ```
 public static void processDeviceStatus(String deviceType, string deviceId, string data)
@@ -154,7 +154,7 @@ applicationClient.subscribeToApplicationStatus();
 ## 发布来自设备的事件
 {: #publish_events_devices}
 
-应用程序可以把事件当作源自设备的事件进行发布。
+应用程序可以将事件当作源自设备的事件进行发布。
 
 ```
 applicationClient.connect();
@@ -166,7 +166,7 @@ applicationClient.publishEvent(deviceType, deviceId, evt, data, 0);
 
 |参数|数据类型|描述|
 |:---|:---|
-|`deviceType`|字符串| 设备类型。通常，deviceType 是一组执行特定任务的设备，例如“weatherballoon”。|
+|`deviceType`|字符串| 设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
 |`deviceId`|字符串| 设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
 |`evt`|字符串| 事件的名称。|
 |`format`|字符串| 格式可以为任意字符串，例如 JSON。|
@@ -187,7 +187,7 @@ applicationClient.publishCommand(deviceType, deviceId, "testcmd", "json", data, 
 
 |参数|数据类型|描述|
 |:---|:---|
-|`deviceType`|字符串| 设备类型。通常，deviceType 是一组执行特定任务的设备，例如“weatherballoon”。|
+|`deviceType`|字符串| 设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
 |`deviceId`|字符串| 设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
 |`command`|字符串| 命令的名称。|
 |`format`|字符串| 格式可以为任意字符串，例如 JSON。|

@@ -18,7 +18,7 @@ copyright:
 # CLI- und Dev-Tools
 {: #cli}
 
-*Letzte Aktualisierung: 28. Juni 2016*
+*Letzte Aktualisierung: 25. Oktober 2016*
 {: .last-updated}
 
 Mit {{site.data.keyword.Bluemix_short}} haben Sie Zugriff auf leistungsfähige Tools wie zum Beispiel eine einheitliche Befehlszeilenschnittstelle und CLI-Plug-ins. Alle diese CLI-Downloads werden zur Unterstützung Ihrer Arbeit mit {{site.data.keyword.Bluemix_notm}} zur Verfügung gestellt.
@@ -29,7 +29,7 @@ Mit {{site.data.keyword.Bluemix_short}} haben Sie Zugriff auf leistungsfähige T
 
 Sie können Befehlszeilenschnittstellen herunterladen und installieren, die Sie beim Arbeiten mit {{site.data.keyword.Bluemix_notm}} unterstützen. 
 
-Das Cloud Foundry-Befehlszeilentool 'cf' ist eine Voraussetzung für alle anderen CLI-Tools von {{site.data.keyword.Bluemix_notm}}. Eine Ausnahme bildet das [OpenStack-CLI-Tool](../virtualmachines/vm_index.html#vm_setup_cli){: new_window} zur Verwaltung virtueller Server. Das {{site.data.keyword.Bluemix_notm}}-Befehlszeilentool stellt neben Cloud Foundry-Anwendungen umfassende Erfahrung zur Verwaltung Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung bereit.
+Das Cloud Foundry-Befehlszeilentool 'cf' ist eine Voraussetzung für alle anderen CLI-Tools von {{site.data.keyword.Bluemix_notm}}. Das {{site.data.keyword.Bluemix_notm}}-Befehlszeilentool stellt neben Cloud Foundry-Anwendungen umfassende Erfahrung zur Verwaltung Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung bereit.
 
 Beide CLI-Tools verwenden standardmäßig den Port 443. Wenn sich ein HTTP-Proxy zwischen den CLI-Tools und der {{site.data.keyword.Bluemix_notm}}-Umgebung befindet, müssen Sie die Umgebungsvariable `http-proxy` mit der tatsächlichen URL und dem Port (falls vorhanden) des HTTP-Proxys konfigurieren. Details hierzu finden Sie in [Using the CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}.
 
@@ -44,15 +44,22 @@ Beide CLI-Tools verwenden standardmäßig den Port 443. Wenn sich ein HTTP-Proxy
 Sie können die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle ohne großen Aufwand durch zusätzliche Befehle erweitern. Zugriff auf die {{site.data.keyword.Bluemix_notm}} -Befehlszeilenschnittstellen-Plug-ins erhalten Sie über das [-CLI-Plug-in-Repository](https://plugins.ng.bluemix.net/).
 
 ### Erweitern Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle: bx
+{: cli_bluemix_ext}
 
-1. Zum Installieren von {{site.data.keyword.Bluemix_notm}}-CLI-Plug-ins über die {{site.data.keyword.Bluemix_notm}}-Registry müssen Sie den Plug-in-Registry-Endpunkt festlegen:
+* Zum Installieren von {{site.data.keyword.Bluemix_notm}}-CLI-Plug-ins über die {{site.data.keyword.Bluemix_notm}}-Registry müssen Sie den Plug-in-Registry-Endpunkt festlegen:
+
 ```
-bluemix plugin repo-add bluemix-bx-staging https://plugins.ng.bluemix.net
+bluemix plugin repo-add bluemix-bx https://plugins.ng.bluemix.net
 ```
-2. Führen Sie den folgenden Befehl aus, um ein Plug-in zu installieren:
+{: codeblock}
+
+* Anschließend führen Sie den folgenden Befehl aus, um ein Plug-in zu installieren:
+
 ```
-bluemix plugin install plugin_name -r bluemix-bx-staging
+bluemix plugin install plugin_name -r bluemix-bx
 ```
+{: codeblock}
+
 
 | *{{site.data.keyword.activedeployshort}}-CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
 |-----|-----|-----|
@@ -60,15 +67,22 @@ bluemix plugin install plugin_name -r bluemix-bx-staging
 
 
 ### Erweitern Sie die Cloud Foundry-Befehlszeilenschnittstelle: cf
+{: cli_cf_ext}
 
-1. Zum Installieren von CLI-Plug-ins über die {{site.data.keyword.Bluemix_notm}}-Registry müssen Sie den Plug-in-Registry-Endpunkt festlegen:
+* Zum Installieren von CLI-Plug-ins über die {{site.data.keyword.Bluemix_notm}}-Registry müssen Sie den Plug-in-Registry-Endpunkt festlegen:
+
 ```
-cf add-plugin-repo bluemix-cf-staging https://plugins.ng.bluemix.net
+cf add-plugin-repo bluemix-cf https://plugins.ng.bluemix.net
 ```
-2. Führen Sie den folgenden Befehl aus, um ein Plug-in zu installieren:
+{: codeblock}
+
+* Anschließend führen Sie den folgenden Befehl aus, um ein Plug-in zu installieren:
+
 ```
-cf install-plugin plugin_name -r bluemix-cf-staging
+cf install-plugin plugin_name -r bluemix-cf
 ```
+{: codeblock}
+
 
 | *Active Deploy* | *Admin Console* | 
 |-----------------|-----------------|
@@ -77,8 +91,6 @@ cf install-plugin plugin_name -r bluemix-cf-staging
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
 | Plug-in-Name: ibm-containers <br> [Dokumentation anzeigen](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Plug-in-Name: VPN <br> [Dokumentation anzeigen](./plugins/vpn/index.html) |
-
-<!-- View docs link for bluemix-admin plug-in cannot go live until December time frame. Check in with Michelle -->
 
 
 ## ![](./images/Integrated_Dev_Tools.svg) Integrierte Entwicklungstools

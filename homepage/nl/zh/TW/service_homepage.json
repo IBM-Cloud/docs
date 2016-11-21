@@ -43,6 +43,11 @@
     "category_id": "devops"
   }, {
     "type": "extra",
+    "title": "嘗試專用 GitHub Enterprise",
+    "href": "services/ghededicated/index.html",
+    "category_id": "devops"
+  }, {
+    "type": "extra",
     "title": "嘗試 Bluemix Mobile 儀表板",
     "href": "mobile/index.html",
     "category_id": "mobile"

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+  lastupdated: "2016-10-31"
 
 ---
 
@@ -11,47 +12,23 @@ copyright:
 
 
 # Using the starter app
-*Last updated: 15 September 2016*
-{: .last-updated}
-
 Create simulated appliances in the {{site.data.keyword.iotelectronics_full}} starter app. Experience how an enterprise manufacturer can monitor appliances that are connected to the {{site.data.keyword.iot_short_notm}}. Manually interact with the simulated appliance to trigger alerts, notifications, and actions.
 {:shortdesc}
 
 
 ## Opening the starter app
-{: #iot4e_openAppMain}
-
-Because the method of opening the starter app varies slightly depending on which version of the {{site.data.keyword.Bluemix_notm}} console you use, you should read the instructions for the appropriate version.
-
-You can determine which version you are using by looking for the following options:
-  - [New {{site.data.keyword.Bluemix_notm}}](#iot4e_openApp). If you are using the New {{site.data.keyword.Bluemix_notm}} experience, **Try the New Bluemix** is *not* displayed in the header section.
-  - [Classic {{site.data.keyword.Bluemix_notm}}](#iot4e_openApp_c). If you are using the Classic {{site.data.keyword.Bluemix_notm}} experience, **Try the New Bluemix** appears in the heading section.  
-
-**Tip:** To switch to the Classic {{site.data.keyword.Bluemix_notm}} experience, click your user name in the header section and then scroll down and click **Switch to Classic**. To switch to the New {{site.data.keyword.Bluemix_notm}} experience, click **Try the New Bluemix** in the header section.
-
-### Opening the starter app in the New {{site.data.keyword.Bluemix_notm}} experience.
 {: #iot4e_openApp}
+
 1. In your {{site.data.keyword.Bluemix_notm}} dashboard, start your {{site.data.keyword.iotelectronics}} starter application by clicking the starter application tile.
 
-    ![{{site.data.keyword.iotelectronics}} in the dashboard, New Experience.](images/IoT4E_bm_dashboard.png "{{site.data.keyword.iotelectronics}} in the dashboard, New Experience")
+    ![{{site.data.keyword.iotelectronics}} in the dashboard.](images/IoT4E_bm_dashboard.png "{{site.data.keyword.iotelectronics}} in the dashboard")
 
 2. Wait for the *Your app is running* status message in the header and then click **View App** to display the starter app.  
 
-    ![{{site.data.keyword.iotelectronics}} in the dashboard, New Experience.](images/IoT4E_view_app.png "{{site.data.keyword.iotelectronics}} in the dashboard, New Experience")
-
-### Opening the starter app in the Classic {{site.data.keyword.Bluemix_notm}} experience.
-{: #iot4e_openApp_c}
-
-1. In your {{site.data.keyword.Bluemix_notm}} dashboard, start your {{site.data.keyword.iotelectronics}} starter application by clicking the starter application tile.
-
-    ![{{site.data.keyword.iotelectronics}} in the dashboard, Classic.](images/IoT4E_bm_dashboard_c.png "{{site.data.keyword.iotelectronics}} in the dashboard, Classic")
-
-2. Wait for the *Your app is running* status message in the App Health section and then, in the main window, by the application name, click the **Routes** URL to display the starter app.  
-
-    ![{{site.data.keyword.iotelectronics}} in the dashboard, Classic.](images/IoT4E_view_app_c.png "{{site.data.keyword.iotelectronics}} in the dashboard")
+    ![{{site.data.keyword.iotelectronics}} view app.](images/IoT4E_view_app.png "{{site.data.keyword.iotelectronics}} view app")
 
 ## Creating simulated appliances
-{: #iot4eCreateAppliances}
+{: #create_sim}
 
 In the starter app, you can create and control simulated appliances as the appliance manufacturer or as a consumer. Status and event data for these simulated appliances are stored and can be viewed in {{site.data.keyword.iot_full}}.
 

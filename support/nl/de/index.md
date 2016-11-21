@@ -43,7 +43,7 @@ Die Foren Stack Overflow und dW Answers bieten beide eine breite Palette durchsu
   * Wechseln Sie in China zu den [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}, um Fragen zu stellen.
 
 Sie können eine Frage in Stack Overflow auch direkt vom Widget 'Konto und Unterstützung' aus stellen, indem Sie die folgenden Schritte ausführen:
-  1. Klicken Sie im Widget 'Konto und Unterstützung' auf die Option **Hilfe anfordern**.  
+  1. Klicken Sie im Widget 'Konto und Unterstützung' auf die Option **Hilfe anfordern**. 
   2. Geben Sie auf der angezeigten Seite im Suchfeld Ihre Frage ein, um nach Antworten darauf zu suchen. 
   3. Wird die erwartete Antwort nicht zurückgegeben, klicken Sie auf **An Stack Overflow posten**, um Ihr Problem zu posten.
 
@@ -59,9 +59,9 @@ Die Seite 'Status' in {{site.data.keyword.Bluemix_notm}} ist der zentrale Ort zu
 Auf der Seite 'Status' sind die folgenden Informationen zu finden:
 
   * Der aktuelle Status von Services und Komponenten in allen {{site.data.keyword.Bluemix_notm}}-Regionen.
-  * Eine Liste mit Ankündigungen in chronologischer Reihenfolge zu Wartungszwecken und zur Behebung von Störungen. Für weitere Details können Sie die Liste filtern oder eine einzelne Ankündigung öffnen.
+  * Eine Liste mit Ankündigungen in chronologischer Reihenfolge zu Wartungszwecken und zur Behebung von Vorfällen. Für weitere Details können Sie die Liste filtern oder eine einzelne Ankündigung öffnen.
   * Geplante Wartungszeiten, die mindestens 24 Stunden im Voraus angekündigt werden, außer in extremen Situationen.
-  * Ungeplante Störungen oder Ausfallzeiten, die mitgeteilt werden, sobald das {{site.data.keyword.Bluemix_notm}}-Team diese bemerkt. Benachrichtigungen zu Störungen werden regelmäßig aktualisiert, bis die Probleme behoben sind.
+  * Ungeplante Vorfälle oder Ausfallzeiten, die mitgeteilt werden, sobald das {{site.data.keyword.Bluemix_notm}}-Team diese bemerkt. Benachrichtigungen zu Vorfällen werden regelmäßig aktualisiert, bis die Probleme behoben sind.
   * Referenzen auf Sicherheitsbulletins, die die verschiedenen {{site.data.keyword.Bluemix_notm}}-Services oder die Plattform betreffen.
   * Weitere plattformweite Ankündigungen allgemeiner Art, die Sie interessieren könnten.
   * Ein RSS-Feed, den Sie abonnieren können.
@@ -86,7 +86,7 @@ Führen Sie die folgenden Schritte durch, um einen RSS-Feed zu abonnieren:
 
 	Im Abschnitt **Hilfe** Ihre Readers finden Sie weitere Informationen. 	   
 
-Weitere Methoden zum Lesen von RSS-Feeds stehen über Web-Browser-Plug-ins zur Verfügung. Beispiele: 
+Weitere Methoden zum Lesen von RSS-Feeds stehen über Web-Browser-Plug-ins zur Verfügung. Beispiele:
   * [RSS-Feed-](http://feeder.co/){: new_window}-Reader für Chrome 
   * [Brief](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window}-Add-on für Firefox
 
@@ -120,9 +120,9 @@ Bei {{site.data.keyword.Bluemix_notm}} Public können Sie sich für Plattformben
 	  * Direktes Navigieren zur Seite [Status](http://ibm.biz/bluemixstatus){: new_window}.
 	  * Verwenden des RSS-Feeds oder eines Weiterleitungsservers, der RSS-Feeds an eine E-Mail-Adresse weiterleitet
 
-  * Prüfen, ob derzeit Wartungszeiten existieren oder ob es eine Störung gibt
+  * Prüfen, ob derzeit Wartungszeiten existieren oder ob es einen Vorfall gibt
 
-	Wenn Sie vermuten, dass {{site.data.keyword.Bluemix_notm}} nicht wie erwartet funktioniert, überprüfen Sie die Seite 'Status' auf aktuelle Wartungszeiten oder eine aktuelle Störung hin. Wenn Sie eine Störung melden möchten, die noch nicht auf der Seite 'Status' aufgeführt ist, öffnen Sie ein Support-Ticket über das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg) in der Menüleiste oder über die Hilfetextseite für [IBM Bluemix Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window}.
+	Wenn Sie vermuten, dass {{site.data.keyword.Bluemix_notm}} nicht wie erwartet funktioniert, überprüfen Sie die Seite 'Status' auf aktuelle Wartungszeiten oder ein aktueller Vorfall hin. Wenn Sie einen Vorfall melden möchten, die noch nicht auf der Seite 'Status' aufgeführt ist, öffnen Sie ein Support-Ticket über das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg) in der Menüleiste oder über die Hilfetextseite für [IBM Bluemix Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window}.
 
   * Nutzen der Vorteile mehrerer {{site.data.keyword.Bluemix_notm}}-Regionen
 
@@ -145,7 +145,7 @@ Bei {{site.data.keyword.Bluemix_notm}} Public können Sie sich für Plattformben
 
 Sie können Support-Tickets öffnen, wenn Sie über ein gültiges {{site.data.keyword.Bluemix_notm}}-Konto verfügen. 
 
-Wenn Sie über ein {{site.data.keyword.Bluemix_notm}}-Konto verfügen, das mit einem SoftLayer-Konto verknüpft ist, können Sie Support-Tickets für {{site.data.keyword.Bluemix_notm}} über das SoftLayer-Kundenportal oder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle öffnen. 
+Wenn Sie über ein {{site.data.keyword.Bluemix_notm}}-Konto verfügen, das mit einem SoftLayer-Konto verknüpft ist, können Sie Support-Tickets für {{site.data.keyword.Bluemix_notm}} über das SoftLayer-Kundenportal oder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle öffnen.
 
 ### Kontaktaufnahme mit dem Support für {{site.data.keyword.Bluemix_notm}} Public
 {: #contacting-bluemix-support}
@@ -234,8 +234,8 @@ In der folgenden Tabelle sind einige allgemeine Beispiele für Supportfälle mit
 Priorität | Prioritätsdefinition | Angestrebte Reaktionszeiten | Abgedeckte Reaktionszeiten
 ------|-------- | --- | --- |
 Priorität 1 | <strong>Kritischer Einfluss auf die Geschäftsabläufe oder Serviceausfall.</strong> <br> Geschäftskritische Funktionen nicht betriebsbereit oder kritische Schnittstelle ausgefallen. Diese Prioritätsstufe gilt in der Regel für eine Produktionsumgebung und zeigt an, dass nicht erreichbare Services kritische Auswirkungen für Betriebsabläufe haben.  Für diesen Zustand ist eine sofortige Lösung erforderlich. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Innerhalb einer Stunde</li><li><strong>Premium:</strong> Innerhalb einer Stunde</li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> 24x7</li><li><strong>Premium:</strong> 24x7</li></ul> 			   
-Priorität 2 | <strong>Signifikanter Einfluss auf die Geschäftsabläufe.</strong> <br> Die Verwendung eines Servicefeature oder einer Funktion ist sehr stark eingeschränkt oder die Einhaltung von Geschäftsterminen ist gefährdet. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Innerhalb von 2 Stunden</li><li><strong>Premium:</strong> Innerhalb von 90 Minuten </li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
-Priorität 3 | <strong>Geringfügiger Einfluss auf die Geschäftsabläufe.</strong> <br> Ein Servicefeature oder eine Funktion ist verwendbar, aber die Verwendbarkeit ist durch Probleme eingeschränkt. Es werden keine kritischen Auswirkungen auf Betriebsoperationen verursacht. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Innerhalb von 4 Stunden</li><li><strong>Premium:</strong> Innerhalb von 2 Stunden</li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend</li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
+Priorität 2 | <strong>Signifikanter Einfluss auf die Geschäftsabläufe.</strong> <br> Die Verwendung eines Servicefeature oder einer Funktion ist sehr stark eingeschränkt oder die Einhaltung von Geschäftsterminen ist gefährdet. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Innerhalb von 2 Stunden</li><li><strong>Premium:</strong> Innerhalb von 90 Minuten </li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
+Priorität 3 | <strong>Geringfügiger Einfluss auf die Geschäftsabläufe.</strong> <br> Ein Servicefeature oder eine Funktion ist verwendbar, aber die Verwendbarkeit ist durch Probleme eingeschränkt. Es werden keine kritischen Auswirkungen auf Betriebsoperationen verursacht. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Innerhalb von 4 Stunden</li><li><strong>Premium:</strong> Innerhalb von 2 Stunden</li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
 Priorität 4 | <strong>Minimaler Einfluss auf die Geschäftsabläufe.</strong> <br> Eine Anfrage oder eine Anforderung nicht technischer Art. | <ul><li><strong>Free:</strong> Bestmöglich </li><li><strong>Basic:</strong> Bestmöglich</li><li><strong>Standard:</strong> Innerhalb von 8 Stunden</li><li><strong>Premium:</strong> Innerhalb von 4 Stunden</li></ul> | <ul><li><strong>Free:</strong> Betriebszeiten </li><li><strong>Basic:</strong> Betriebszeiten </li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
 *Tabelle 2. Prioritätsdefinition und Reaktionszeit*
 

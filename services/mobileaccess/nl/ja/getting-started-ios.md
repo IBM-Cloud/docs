@@ -2,17 +2,18 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:shortdesc: .shortdesc}
 
 # iOS Objective-C SDK のセットアップ
 {: #getting-started-ios}
 
-最終更新日: 2016 年 7 月 17 日
-{: .last-updated}
 
-iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
+
+iOS アプリケーションに {{site.data.keyword.amafull}} SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
+
+
 {:shortdesc}
 
 **重要:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、この SDK は今年後半には廃止され、新しい Swift SDK が後継になる予定です。新規アプリケーションには Swift SDK を使用することを強くお勧めします ([iOS Swift SDK のセットアップ](getting-started-ios-swift-sdk.html)を参照してください)。
@@ -20,7 +21,7 @@ iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し�
 ## 開始する前に
 {: #before-you-begin}
 以下が必要です。
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[入門](index.html)を参照してください。
+* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
 
 
 
@@ -36,12 +37,14 @@ iOS アプリケーションに {{site.data.keyword.amashort}} SDK を装備し�
 ### CocoaPods のインストール
 {: #install-cocoapods}
 
-1. 端末を開き、**pod --version** コマンドを実行します。既に CocoaPods がインストールされている場合は、バージョン番号が表示されます。次のセクションにスキップして SDK をインストールできます。
+1. 端末を開き、**pod --version** コマンドを実行します。既に CocoaPods がインストールされている場合は、バージョン番号が表示されます。次のセクションにスキップして SDK をインストールします。
 
 1. CocoaPods をインストールしていない場合は、以下を実行します。
+
 ```
 sudo gem install cocoapods
 ```
+
 詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。
 
 ### CocoaPods を使用した {{site.data.keyword.amashort}} Client SDK のインストール
@@ -57,8 +60,9 @@ sudo gem install cocoapods
 	pod 'IMFCore'
 	```
 
-1. `Podfile` ファイルを保存し、コマンド・ラインから `pod install` を実行します。<br/>Cocoapods が、追加の依存関係をインストールします。進行状況と、どのコンポーネントが追加されたかを確認できます。<br/>
-**重要**: CocoaPods は、`xcworkspace` ファイルを生成します。プロジェクトの開発を進めるためには、このファイルを開く必要があります。
+1. `Podfile` ファイルを保存し、コマンド・ラインから `pod install` を実行します。<br/>Cocoapods が追加の依存関係をインストールし、追加されたコンポーネントを表示します。<br/>
+
+	**重要**: CocoaPods は `xcworkspace` ファイルを生成します。プロジェクトの開発を進めるためには、このファイルを開く必要があります。
 
 1. iOS プロジェクト・ワークスペースを開きます。CocoaPods によって生成された `xcworkspace` ファイルを開きます。例えば、`{your-project-name}.xcworkspace` などです。`open {your-project-name}.xcworkspace` を実行します。
 
@@ -67,8 +71,7 @@ sudo gem install cocoapods
 
 {{site.data.keyword.amashort}} Client SDK を使用するには、**「経路」** (`applicationRoute`) および **「アプリ GUID」** (`applicationGUID`) のパラメーターを渡すことによって、SDK を初期化する必要があります。
 
-
-1. {{site.data.keyword.Bluemix_notm}} ダッシュボードのメインページからアプリをクリックします。「**Mobile オプション**」をクリックします。SDK を初期化するには、**「経路」**および**「アプリ GUID」**の値が必要です。
+1. {{site.data.keyword.Bluemix_notm}} ダッシュボードのメインページからアプリをクリックします。**「モバイル・オプション」**をクリックします。SDK を初期化するには、**「経路」**および**「アプリ GUID」**の値が必要です。
 
 1. 以下のヘッダーを追加することで、{{site.data.keyword.amashort}} Client SDK を使用するクラスに `IMFCore` フレームワークをインポートします。
 
@@ -79,7 +82,7 @@ sudo gem install cocoapods
 	  #import <IMFCore/IMFCore.h>
 	
 	```
-	
+
 	####Swift
 	{: #sdk-swift}
 	
@@ -93,7 +96,7 @@ sudo gem install cocoapods
 	1. プロジェクトをビルドすることで、Xcode によってご使用のブリッジング・ヘッダーが選択されることを確認してください。失敗メッセージは表示されないはずです。
 	
 1. 以下のコードを使用して、{{site.data.keyword.amashort}} Client SDK を初期化します。初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。<br/>
-*applicationRoute* および *applicationGUID* は、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**の値に置換します。
+`applicationRoute` および vapplicationGUID を、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**からの値に置き換えます。
 
 	####Objective-C
 	{: #sharedinstance-objc}
@@ -103,19 +106,35 @@ sudo gem install cocoapods
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+
 	####Swift
 	{: #sharedinstance-swift}
 	```Swift
  		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
 
-## モバイル・バックエンドへの要求の実行
+## AuthorizationManager の初期化
+{{site.data.keyword.amashort}} サービスの `tenantId` パラメーターを渡すことによって、`AuthorizationManager` を初期化します。この値は、{{site.data.keyword.amashort}} サービス・タイルの**「資格情報の表示」**ボタンをクリックして見つけます。
+
+####Objective-C
+	
+```Objective-C
+  	   [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+```
+
+####Swift
+
+```Swift
+	   IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+```
+
+## モバイル・バックエンド・アプリケーションへの要求の実行
 {: #request}
 
-{{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンドに要求を出すことができるようになります。
+{{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
-1. ブラウザーで、モバイル・バックエンド上の保護されたエンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
-<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンドの`/protected` エンドポイントは、{{site.data.keyword.amashort}}で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
+1. ブラウザーで、モバイル・バックエンド・アプリケーション上の保護されたエンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)
+<br/>MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
 
 1. iOS アプリケーションを使用して、同じエンドポイントへ要求を出します。`IMFClient` を初期化した後に、以下のコードを追加します。
 
@@ -161,7 +180,7 @@ sudo gem install cocoapods
 
 ## 次のステップ
 {: #next-steps}
-保護されているエンドポイントに繋がった場合、資格情報は必要とされません。アプリケーションにユーザーのログインを要求する場合、Facebook、Google またはカスタム認証を構成する必要があります。
+保護されているエンドポイントに接続する場合、資格情報は必要ありませんでした。アプリケーションにユーザーのログインを要求する場合、Facebook、Google またはカスタム認証を構成する必要があります。
   * [Facebook](facebook-auth-ios.html)
   * [Google](google-auth-ios.html)
   * [カスタム](custom-auth-ios.html)

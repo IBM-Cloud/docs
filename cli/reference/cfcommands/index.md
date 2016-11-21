@@ -6,7 +6,7 @@ copyright:
 
   years: 2016
 
-
+lastupdated: "2016-11-14"
 
 ---
 
@@ -18,9 +18,6 @@ copyright:
 
 # Cloud Foundry (cf) commands
 {: #cf}
-
-Last updated: 20 October 2016
-{: .last-updated}
 
 The Cloud Foundry (cf) command line interface (CLI) provides a set of commands for managing your apps. The following information lists the cf commands used most commonly for managing apps and includes their names, options, usage, prerequisites, descriptions, and examples. To list all of the cf commands and associated help information, use `cf help`. Use `cf command_name -h` to view detailed help information for a particular command.
 {: shortdesc}
@@ -74,6 +71,7 @@ Use the index in the following table to refer to the frequently used Cloud Found
  <td>[scale](index.html#cf_scale)</td>
  <td>[services](index.html#cf_services)
  <td>[set-env](index.html#cf_set-env)</td>
+ <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](index.html#cf_stop)</td>
  </tr>
  </tbody>
@@ -656,6 +654,42 @@ cf set-env appname var_name var_value
 Set an environment variable named `variable_a` with a value of `123` for the application named `my_app`.
 ```
 cf set-env my_app variable_a 123
+```
+{: codeblock}
+
+
+## cf ssh
+{: #cf_ssh}
+
+Securely logs you into an application container. By default, SSH accesses the container running the first instance of the application, which is the instance with index 0.
+
+```
+cf ssh
+```
+<strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
+
+You must also configure your Cloud Foundry deployment to allow SSH access to application instances. For details, see [Configuring SSH Access for Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}
+
+<strong>Command options</strong>:
+
+<dl>
+<dt>appname</dt>
+<dd>The name of the application. If SSH is allowed, you can use this option to start an interactive SSH session with a VM hosting the application.</dd>
+<dt>-i</dt>
+<dd>Targets a specific instance of an application.</dd>
+<dt>-L</dt>
+<dd>Enables local port forwarding, which binds an output port on your machine to an input port on the application VM.</dd>
+<dt>-N</dt>
+<dd>Do not run a remote command.</dd>
+<dt>-t, -tt, or -T</dt>
+<dd>Enables you to run an SSH session in pseudo-tty mode rather than generate terminal line output.<dd>
+</dl>
+
+<strong>Examples</strong>:
+
+Start an interactive SSH session with a VM hosting an application named `my_app`.
+```
+$ cf ssh my_app
 ```
 {: codeblock}
 

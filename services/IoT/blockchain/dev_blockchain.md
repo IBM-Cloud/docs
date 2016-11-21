@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,10 +14,7 @@ copyright:
 
 
 # Developing smart contracts for {{site.data.keyword.iot_short_notm}} blockchain integration
-
 {: #iotblockchain_link}
-Last updated: 30 August 2016
-{: .last-updated}
 
 Use {{site.data.keyword.blockchainfull}} and the Hyperledger development environment to create and test your own smart contracts deriving from IBM-provided sample contracts.
 {:shortdesc}

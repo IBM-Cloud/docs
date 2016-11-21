@@ -30,7 +30,7 @@ Per collegare i client dispositivo, applicazione e gateway alla tua stanza {{sit
 <pre class="pre"><var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com</pre>
 {: codeblock}
 
-### API REST HTTP per l'URL di connessione 
+### API REST HTTP per l'URL di connessione
 
 <pre class="pre">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
@@ -40,7 +40,7 @@ Per collegare i client dispositivo, applicazione e gateway alla tua stanza {{sit
 - *orgId* è l'ID dell'organizzazione univoco generato quando hai registrato l'istanza del servizio.
 - Se stai collegando un dispositivo o un'applicazione al servizio Quickstart, specifica 'quickstart' per il valore *orgId*.
 
-## Porta di sicurezza 
+## Porta di sicurezza
 {: #client_port_security}
 
 Assicurati che le porte richieste siano aperte e abilitate per la comunicazione.
@@ -77,10 +77,10 @@ I dispositivi e i gateway collegati direttamente a {{site.data.keyword.iot_short
 
 Per i dispositivi, le applicazioni e i gateway correttamente autenticati, definisci ogni client MQTT utilizzando il seguente formato e identificativi client:
 
-|Tipo di client  |ID|Formato ID MQTT|
+|Tipo di client |ID|Formato ID MQTT|
 |:---|:---|:---|
 |Applicazioni|a|<pre class="pre">a:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
-|Applicazioni scalabili |A|<pre class="pre">A:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
+|Applicazioni scalabili|A|<pre class="pre">A:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
 |Dispositivi|d|<pre class="pre">d:<var class="keyword varname">orgId</var>:<var class="keyword varname">deviceType</var>:<var class="keyword varname">deviceId</var></pre>|
 |Gateway|g|<pre class="pre">g:<var class="keyword varname">orgId</var>:<var class="keyword varname">typeId</var>:<var class="keyword varname">deviceId</var></pre>|
 
@@ -98,15 +98,15 @@ I valori *appId*, *type_id*, *device_type* e *device_id* non devono essere maggi
 - Punti ( . )
 
 **Note:**
-- Quando ti colleghi al servizio Quickstart, l'autenticazione non è richiesta. 
+- Quando ti colleghi al servizio Quickstart, l'autenticazione non è richiesta.
 - Non hai bisogno di registrare un'applicazione prima del collegamento.
 
 
-### Connessione delle applicazioni utilizzando MQTT 
+### Connessione delle applicazioni utilizzando MQTT
 
-Le applicazioni {{site.data.keyword.iot_short_notm}} richiedono una chiave API per collegarsi in un'organizzazione. Quando viene registrata una chiave API, viene generato un token, che deve essere utilizzato con tale chiave API. 
+Le applicazioni {{site.data.keyword.iot_short_notm}} richiedono una chiave API per collegarsi in un'organizzazione. Quando viene registrata una chiave API, viene generato un token, che deve essere utilizzato con tale chiave API.
 
-Il seguente codice fornisce un esempio di una chiave API: 
+Il seguente codice fornisce un esempio di una chiave API:
 
 <pre class="pre">a-<var class="keyword varname">orgId</var>-a84ps90Ajs</pre>
 {: codeblock}
@@ -117,7 +117,7 @@ Il seguente esempio mostra un token di autenticazione tipico:
  MP$08VKz!8rXwnR-Q*
 ```
 
-Quando effettui una connessione MQTT utilizzando una chiave API, assicurati di rispettare i seguenti requisiti: 
+Quando effettui una connessione MQTT utilizzando una chiave API, assicurati di rispettare i seguenti requisiti:
 
 - L'ID client MQTT deve essere nel seguente formato: a:*orgId*:*appId*
 - Il nome utente MQTT è la chiave API, ad esempio, a-*orgId*-a84ps90Ajs

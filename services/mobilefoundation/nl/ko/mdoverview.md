@@ -2,18 +2,18 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-08-03"
 ---
 
 #	{{site.data.keyword.mobilefoundation_short}} 정보
 {: #overview_mobilefoundation}
 
-마지막 업데이트 날짜: 2016년 8월 03일
-{: .last-updated}
+<!--Last updated: 03 August 2016
+{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} 서비스는 {{site.data.keyword.Bluemix}}에서 {{site.data.keyword.mobilefirst}} 서버 환경을 빠르게 설정하는 방법을 제공합니다. 그런 다음 이 클라우드 환경에서 모바일 앱을 개발하고 테스트하며 관리할 수 있습니다. 
 
-{{site.data.keyword.mobilefoundation_short}}에서는 {{site.data.keyword.mfserver_short_notm}} <!--in the {{site.data.keyword.containerlong}} -->환경을 {{site.data.keyword.Bluemix_notm}}에서 설정하는 방식을 간단하게 안내합니다. 
+{{site.data.keyword.mobilefoundation_short}}에서는 {{site.data.keyword.Bluemix_notm}}에 {{site.data.keyword.mfserver_short_notm}} <!--in the {{site.data.keyword.containerlong}} --> 환경을 설정하는 손쉬운 안내 방식의 수단을 제공합니다.
 
 {{site.data.keyword.mobilefoundation_short}}은 다음과 같은 구성요소로 이루어져 있습니다.
 

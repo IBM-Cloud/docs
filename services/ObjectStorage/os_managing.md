@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -11,8 +12,7 @@ copyright:
 {:pre: .pre}
 
 # Managing {{site.data.keyword.objectstorageshort}} across regions {: #multi-regions}
-*Last updated: 19 October 2016*
-{: .last-updated}
+
 
 The {{site.data.keyword.objectstorageshort}} service supports the Dallas and London storage regions. These storage regions are independent of the {{site.data.keyword.Bluemix_notm}} region, such as US-South and United Kingdom, in which the {{site.data.keyword.objectstorageshort}} service instance is created. If you create an instance in the US-South {{site.data.keyword.Bluemix_notm}} region, you can read and write data to either the Dallas or London storage region.
 {: shortdesc}

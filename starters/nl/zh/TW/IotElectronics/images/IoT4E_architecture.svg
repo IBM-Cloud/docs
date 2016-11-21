@@ -14,20 +14,13 @@
    viewBox="0 0 788.41142 517.00362"
    id="svg5645"
    version="1.1"
-   inkscape:version="0.47 r22583"
-   sodipodi:docname="iot4e_architecture.svg"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="IoT4E_architecture.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
      id="defs5647">
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 258.50183 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="788.41132 : 258.50183 : 1"
-       inkscape:persp3d-origin="394.20566 : 172.33455 : 1"
-       id="perspective493" />
     <marker
        inkscape:stockid="TriangleOutM"
        orient="auto"
@@ -1792,28 +1785,22 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.44"
      inkscape:cx="360.42883"
-     inkscape:cy="170.34256"
+     inkscape:cy="253.45878"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1440"
-     inkscape:window-height="853"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
+     inkscape:window-width="1920"
+     inkscape:window-height="1028"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      fit-margin-top="0.2"
      fit-margin-left="0.2"
      fit-margin-right="0.2"
      fit-margin-bottom="0.2"
      inkscape:snap-text-baseline="true"
-     showguides="true"
-     inkscape:guide-bbox="true">
-    <sodipodi:guide
-       orientation="1,0"
-       position="-111.80556,71.527778"
-       id="guide3305" />
-  </sodipodi:namedview>
+     showguides="false" />
   <metadata
      id="metadata5650">
     <rdf:RDF>
@@ -1996,8 +1983,7 @@
          cy="459.80499"
          r="32.000004"
          id="circle5718-26"
-         style="fill:#9e215f"
-         d="m 211.44747,459.80499 c 0,17.67312 -14.32689,32.00001 -32.00001,32.00001 -17.67311,0 -32,-14.32689 -32,-32.00001 0,-17.67311 14.32689,-32 32,-32 17.67312,0 32.00001,14.32689 32.00001,32 z" />
+         style="fill:#9e215f" />
       <path
          class="st58"
          d="m 189.84748,448.90498 -11.5,0 0,32.60001 9.7,9.1 c 10.9,-3 19.4,-11.6 22.4,-22.40001 l -20.6,-19.3 z"
@@ -2063,7 +2049,7 @@
        style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.99999954px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="291.50089"
        y="431.56644"
        id="text44241"
@@ -2081,8 +2067,7 @@
          cy="459.80499"
          r="32.000004"
          id="circle5718-26-0"
-         style="fill:#9e215f"
-         d="m 211.44747,459.80499 c 0,17.67312 -14.32689,32.00001 -32.00001,32.00001 -17.67311,0 -32,-14.32689 -32,-32.00001 0,-17.67311 14.32689,-32 32,-32 17.67312,0 32.00001,14.32689 32.00001,32 z" />
+         style="fill:#9e215f" />
       <path
          class="st58"
          d="m 189.84748,448.90498 -11.5,0 0,32.60001 9.7,9.1 c 10.9,-3 19.4,-11.6 22.4,-22.40001 l -20.6,-19.3 z"
@@ -2130,10 +2115,9 @@
     </g>
     <g
        id="g14882"
-       transform="translate(2.6944449,-48.694446)"
-       style="-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.99999954px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">
+       transform="translate(2.6944449,-48.694446)">
       <rect
-         style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.99999954px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+         style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="rect79371-1-6-6-9-8-7-3-5-1-4-30"
          width="163.83337"
          height="50.000011"
@@ -2143,40 +2127,37 @@
          ry="0" />
       <g
          id="g3-9"
-         transform="matrix(1.7183909,0,0,1.3488077,448.53162,413.45462)"
-         style="-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:7.22531302px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">
+         transform="matrix(1.7183909,0,0,1.3488077,448.53162,413.45462)">
         <g
-           id="g5"
-           style="-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:7.22531302px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">
+           id="g5">
           <path
              id="path7-7"
              d="m 16.6,19.1 -9.6,0 c -0.5,0 -1,-0.4 -1,-1 l 0,-16 c 0,-0.5 0.4,-1 1,-1 l 9.6,0 c 0.5,0 1,0.4 1,1 l 0,16 c 0,0.5 -0.4,1 -1,1 z"
              inkscape:connector-curvature="0"
-             style="fill:#3b4b54;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:7.22531302px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" />
+             style="fill:#3b4b54" />
           <path
              id="path9"
              d="m 15.4,16.7 -7.1,0 c -0.6,0 -1,-0.5 -1,-1 l 0,-12.2 c 0,-0.6 0.5,-1 1,-1 l 7.1,0 c 0.6,0 1,0.5 1,1 l 0,12.1 c 0,0.6 -0.5,1.1 -1,1.1 z"
              inkscape:connector-curvature="0"
-             style="fill:#dcf5ff;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:7.22531302px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" />
+             style="fill:#dcf5ff" />
           <circle
              id="circle11"
              r="0.60000002"
              cy="17.9"
              cx="11.8"
-             style="fill:#dcf5ff;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:7.22531302px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-             d="m 12.4,17.9 c 0,0.33137 -0.268629,0.6 -0.6,0.6 -0.331371,0 -0.6,-0.26863 -0.6,-0.6 0,-0.331371 0.268629,-0.6 0.6,-0.6 0.331371,0 0.6,0.268629 0.6,0.6 z" />
+             style="fill:#dcf5ff" />
         </g>
         <polygon
            id="polygon13"
            points="14.5,19.1 6,18.8 6,1.3 14.5,5.5 "
-           style="opacity:0.18999999000000001;fill:#474747;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:7.22531302px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" />
+           style="opacity:0.18999999;fill:#474747" />
         <polygon
            id="polygon15"
            points="10,23 6,18.8 6,1.3 10,5.5 "
-           style="fill:#f47d64;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:7.22531302px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" />
+           style="fill:#f47d64" />
       </g>
       <rect
-         style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.99999954px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+         style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="rect79371-1-6-6-9-8-7-3-5-2-2-9-1-9-6-3-1-7"
          width="121.18111"
          height="32.638908"
@@ -2189,7 +2170,7 @@
          id="text44241-1"
          y="425.04944"
          x="486.05368"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.99999954px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            id="tspan6702-6"
            y="425.04944"
@@ -2203,40 +2184,44 @@
     <g
        id="g4731-3"
        transform="translate(17.361123,-20.138893)" />
-    <text
-       xml:space="preserve"
-       style="font-size:10.99999954px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic"
-       x="39.414726"
-       y="456.93829"
-       id="text44241-2"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         x="39.414726"
-         y="456.93829"
-         id="tspan6702-1">消費者</tspan></text>
-    <rect
-       ry="0"
-       rx="0"
-       y="404.41608"
-       x="41.489098"
-       height="41.666676"
-       width="47.166702"
-       id="rect79371-1-6-6-9-8-7-3-5-1-4-5"
-       style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <g
-       transform="matrix(0.46469903,0,0,0.43287032,50.202079,411.39757)"
-       id="g3"
-       style="fill:#ffffff">
-      <path
-         inkscape:connector-curvature="0"
-         d="M 32,42 C 43.047,42 52,33.047 52,22 52,10.953 43.047,2 32,2 20.953,2 12,10.953 12,22 12,33.047 20.953,42 32,42 z M 32,4 c 9.926,0 18,8.075 18,18 0,9.925 -8.074,18 -18,18 C 22.074,40 14,31.925 14,22 14,12.075 22.074,4 32,4 z"
-         id="path5"
-         style="fill:#ffffff" />
-      <path
-         inkscape:connector-curvature="0"
-         d="m 48,46 -32,0 c -4.418,0 -8,3.582 -8,8 l 0,8 48,0 0,-8 c 0,-4.418 -3.582,-8 -8,-8 z"
-         id="path7"
-         style="fill:#ffffff" />
+       id="g13249"
+       transform="translate(-22.055558,-53.02779)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text44241-2"
+         y="509.96609"
+         x="61.470284"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan6702-1"
+           y="509.96609"
+           x="61.470284"
+           sodipodi:role="line">消費者</tspan></text>
+      <rect
+         style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="rect79371-1-6-6-9-8-7-3-5-1-4-5"
+         width="47.166702"
+         height="41.666676"
+         x="63.544655"
+         y="457.44388"
+         rx="0"
+         ry="0" />
+      <g
+         style="fill:#ffffff"
+         id="g3"
+         transform="matrix(0.46469903,0,0,0.43287032,72.257637,464.42536)">
+        <path
+           style="fill:#ffffff"
+           id="path5"
+           d="M 32,42 C 43.047,42 52,33.047 52,22 52,10.953 43.047,2 32,2 20.953,2 12,10.953 12,22 12,33.047 20.953,42 32,42 Z M 32,4 c 9.926,0 18,8.075 18,18 0,9.925 -8.074,18 -18,18 C 22.074,40 14,31.925 14,22 14,12.075 22.074,4 32,4 Z"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#ffffff"
+           id="path7"
+           d="m 48,46 -32,0 c -4.418,0 -8,3.582 -8,8 l 0,8 48,0 0,-8 c 0,-4.418 -3.582,-8 -8,-8 z"
+           inkscape:connector-curvature="0" />
+      </g>
     </g>
     <path
        inkscape:connector-curvature="0"
@@ -2244,59 +2229,63 @@
        d="m 536.3671,16.187888 -0.3543,46.122997"
        style="fill:none;stroke:#000000;stroke-width:1.49671447;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-17-4-6);marker-end:url(#TriangleOutM-96-1-0)"
        sodipodi:nodetypes="cc" />
-    <rect
-       ry="0"
-       rx="0"
-       y="-42.931622"
-       x="512.67792"
-       height="41.666676"
-       width="47.166702"
-       id="rect79371-1-6-6-9-8-7-3-5-1-4-5-8"
-       style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <g
-       style="fill:#ffffff"
-       id="g3-7"
-       transform="translate(520.26126,-39.083948)">
-      <path
-         style="fill:#ffffff"
-         id="path5-3"
-         d="M 18,5 18,1 14,1 14,5 6,5 6,31 26,31 26,5 18,5 z M 16,2 c 0.552,0 1,0.448 1,1 0,0.552 -0.448,1 -1,1 -0.552,0 -1,-0.448 -1,-1 0,-0.552 0.448,-1 1,-1 z m 8,27 -16,0 0,-22 6,0 0,2 4,0 0,-2 6,0 0,22 z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:#ffffff"
-         id="path7-81"
-         d="m 16,11 c -2.762,0 -5,2.238 -5,5 0,2.762 2.238,5 5,5 2.762,0 5,-2.238 5,-5 0,-2.762 -2.238,-5 -5,-5 z m 0,8 c -1.654,0 -3,-1.346 -3,-3 0,-1.654 1.346,-3 3,-3 1.654,0 3,1.346 3,3 0,1.654 -1.346,3 -3,3 z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:#ffffff"
-         id="path9-7"
-         d="m 12,23 c -1.104,0 -2,0.896 -2,2 l 0,2 12,0 0,-2 c 0,-1.104 -0.896,-2 -2,-2 l -8,0 z"
-         inkscape:connector-curvature="0" />
+       id="g11626"
+       transform="translate(14.000001,6.0000006)">
+      <rect
+         style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="rect79371-1-6-6-9-8-7-3-5-1-4-5-8"
+         width="47.166702"
+         height="41.666676"
+         x="498.67789"
+         y="-48.931622"
+         rx="0"
+         ry="0" />
+      <g
+         transform="translate(506.26126,-45.083949)"
+         id="g3-7"
+         style="fill:#ffffff">
+        <path
+           inkscape:connector-curvature="0"
+           d="M 18,5 18,1 14,1 14,5 6,5 6,31 26,31 26,5 18,5 Z M 16,2 c 0.552,0 1,0.448 1,1 0,0.552 -0.448,1 -1,1 -0.552,0 -1,-0.448 -1,-1 0,-0.552 0.448,-1 1,-1 z m 8,27 -16,0 0,-22 6,0 0,2 4,0 0,-2 6,0 0,22 z"
+           id="path5-3"
+           style="fill:#ffffff" />
+        <path
+           inkscape:connector-curvature="0"
+           d="m 16,11 c -2.762,0 -5,2.238 -5,5 0,2.762 2.238,5 5,5 2.762,0 5,-2.238 5,-5 0,-2.762 -2.238,-5 -5,-5 z m 0,8 c -1.654,0 -3,-1.346 -3,-3 0,-1.654 1.346,-3 3,-3 1.654,0 3,1.346 3,3 0,1.654 -1.346,3 -3,3 z"
+           id="path7-81"
+           style="fill:#ffffff" />
+        <path
+           inkscape:connector-curvature="0"
+           d="m 12,23 c -1.104,0 -2,0.896 -2,2 l 0,2 12,0 0,-2 c 0,-1.104 -0.896,-2 -2,-2 l -8,0 z"
+           id="path9-7"
+           style="fill:#ffffff" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         x="461.03171"
+         y="3.7135651"
+         id="text44235-7-3-6-4-0-2-7-0"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan7345-7-3-0"
+           style="font-size:11.25000095px"
+           sodipodi:role="line"
+           x="461.03171"
+           y="3.7135651">IoT 裝置製造商</tspan><tspan
+           id="tspan7318-8-6-0"
+           sodipodi:role="line"
+           x="461.03171"
+           y="17.776066" /><tspan
+           id="tspan7312-8-7-6"
+           sodipodi:role="line"
+           x="461.03171"
+           y="31.838568" /><tspan
+           id="tspan6445-3-9-6-2-1-1-7-0"
+           sodipodi:role="line"
+           x="461.03171"
+           y="45.90107" /></text>
     </g>
-    <text
-       sodipodi:linespacing="125%"
-       id="text44235-7-3-6-4-0-2-7-0"
-       y="9.7135658"
-       x="499.03171"
-       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic"
-       xml:space="preserve"><tspan
-         y="9.7135658"
-         x="499.03171"
-         sodipodi:role="line"
-         style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic"
-         id="tspan7345-7-3-0">IoT 裝置製造商</tspan><tspan
-         y="23.463566"
-         x="499.03171"
-         sodipodi:role="line"
-         id="tspan7318-8-6-0" /><tspan
-         y="37.213566"
-         x="499.03171"
-         sodipodi:role="line"
-         id="tspan7312-8-7-6" /><tspan
-         y="50.963566"
-         x="499.03171"
-         sodipodi:role="line"
-         id="tspan6445-3-9-6-2-1-1-7-0" /></text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4-4-0-5"
@@ -2331,7 +2320,7 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.99999954px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="499.79694"
        y="89.618675"
        id="text44241-25"
@@ -2397,7 +2386,7 @@
        id="text44235-7"
        y="216.68509"
        x="509.94742"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.99999954px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          id="tspan44239-7"
          y="216.68509"
@@ -2531,8 +2520,7 @@
          cy="459.80499"
          r="32.000004"
          id="circle5718-26-0-2"
-         style="fill:#9e215f"
-         d="m 211.44747,459.80499 c 0,17.67312 -14.32689,32.00001 -32.00001,32.00001 -17.67311,0 -32,-14.32689 -32,-32.00001 0,-17.67311 14.32689,-32 32,-32 17.67312,0 32.00001,14.32689 32.00001,32 z" />
+         style="fill:#9e215f" />
       <path
          class="st58"
          d="m 189.84748,448.90498 -11.5,0 0,32.60001 9.7,9.1 c 10.9,-3 19.4,-11.6 22.4,-22.40001 l -20.6,-19.3 z"
@@ -2592,7 +2580,7 @@
        id="text44241-1-5-9"
        y="171.24385"
        x="702.77588"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.99999954px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          id="tspan4579-7-5"
          y="171.24385"
@@ -2644,8 +2632,7 @@
          cy="459.80499"
          r="32.000004"
          id="circle5718-26-0-2-4"
-         style="fill:#9e215f"
-         d="m 211.44747,459.80499 c 0,17.67312 -14.32689,32.00001 -32.00001,32.00001 -17.67311,0 -32,-14.32689 -32,-32.00001 0,-17.67311 14.32689,-32 32,-32 17.67312,0 32.00001,14.32689 32.00001,32 z" />
+         style="fill:#9e215f" />
       <path
          class="st58"
          d="m 189.84748,448.90498 -11.5,0 0,32.60001 9.7,9.1 c 10.9,-3 19.4,-11.6 22.4,-22.40001 l -20.6,-19.3 z"
@@ -2705,7 +2692,7 @@
        id="text44241-1-5-9-1"
        y="324.47162"
        x="300.1373"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.99999954px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="324.47162"
          x="300.1373"
@@ -2760,10 +2747,9 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <g
        id="g5515"
-       transform="translate(7.888884,2.3611072)"
-       style="-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.99999954px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">
+       transform="translate(7.888884,2.3611072)">
       <rect
-         style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.99999954px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+         style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="rect79371-1-6-6-9-8-7-3-5-2-2-9-1"
          width="152.43105"
          height="32.638893"
@@ -2776,14 +2762,14 @@
          id="text18189-5-9-6"
          y="125.51817"
          x="261.233"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.99999954px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
-           style="font-size:10.99999954px;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+           style="font-size:11.25000095px"
            id="tspan4945-3"
            y="125.51817"
            x="261.233"
            sodipodi:role="line">消費性電子</tspan><tspan
-           style="font-size:10.99999954px;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+           style="font-size:11.25000095px"
            id="tspan5228"
            y="139.58067"
            x="261.233"
@@ -2791,10 +2777,9 @@
     </g>
     <g
        id="g5499"
-       transform="translate(9.972218,-76.694453)"
-       style="-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.99999954px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">
+       transform="translate(9.972218,-76.694453)">
       <rect
-         style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10.99999954px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+         style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="rect79371-1-6-6-9-8-7-3-5-2-2-9-1-9-6-4"
          width="152.43109"
          height="32.638905"
@@ -2807,9 +2792,9 @@
          id="text18189-5-9-6-7-8-7"
          y="257.88394"
          x="260.74411"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.99999954px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
-           style="font-size:10.99999954px;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+           style="font-size:11.25000095px"
            id="tspan5558"
            y="257.88394"
            x="260.74411"
@@ -2827,8 +2812,7 @@
            cx="64.886116"
            class="st0"
            id="XMLID_1_"
-           style="fill:#01b39f"
-           d="m 96.88612,-16.283342 c 0,17.6731137 -14.32689,32.000003 -32.000004,32.000003 -17.673114,0 -32.000004,-14.3268893 -32.000004,-32.000003 0,-17.673114 14.32689,-32.000004 32.000004,-32.000004 17.673114,0 32.000004,14.32689 32.000004,32.000004 z" />
+           style="fill:#01b39f" />
         <g
            transform="translate(6.497225,1.7166653)"
            id="g7421">
@@ -2876,7 +2860,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.99999954px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="298.36966"
        y="90.261307"
        id="text18189-5-9-6-4"
@@ -2885,12 +2869,12 @@
          x="298.36966"
          y="90.261307"
          id="tspan5228-6"
-         style="font-weight:normal;font-size:10.99999954px;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">IoT for Electronics</tspan><tspan
+         style="font-weight:bold;font-size:11.25000095px">IoT for Electronics</tspan><tspan
          sodipodi:role="line"
          x="298.36966"
          y="104.32381"
          id="tspan7485"
-         style="font-weight:normal;font-size:10.99999954px;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">服務</tspan></text>
+         style="font-weight:bold;font-size:11.25000095px">服務</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44235-7-4"

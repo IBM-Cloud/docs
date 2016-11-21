@@ -46,12 +46,12 @@ Il seguente diagramma illustra l'ambiente di integrazione blockchain {{site.data
 
 - Ottieni una panoramica di {{site.data.keyword.iot_short_notm}}, come si relaziona al concetto di blockchain generale e cosa può fare per te all'indirizzo [{{site.data.keyword.iot_short_notm}}](http://www.ibm.com/blockchain/) su IBM.com.
 - [Abilita l'integrazione blockchain {{site.data.keyword.iot_short_notm}}](reference/extensions/index.html).
-- Collega i dispositivi che producono i dati che vuoi scrivere nel ledger blockchain.
+- Collega i dispositivi che producono i dati che vuoi scrivere nel ledger blockchain.  
 Segui le istruzioni nell'argomento [Connessione dispositivi](iotplatform_task.html) per collegare i tuoi dispositivi.
 - Installazione della IU di monitoraggio.
-La IU di monitoraggio viene utilizzata per verificare la connessione tra {{site.data.keyword.iot_short_notm}} e il fabric blockchain. Segui le istruzioni nel documento readme della IU di monitoraggio disponibile nella directory GitHub [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/monitoring_ui).
+La IU di monitoraggio viene utilizzata per verificare la connessione tra {{site.data.keyword.iot_short_notm}} e il fabric blockchain. Segui le istruzioni nel documento readme della IU di monitoraggio disponibile nella directory GitHub [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui).
 
-### Utilizzo dello scenario di base di IBM per un'introduzione veloce 
+### Utilizzo dello scenario di base di IBM per un'introduzione veloce
 
 Per iniziare velocemente a testare l'integrazione blockchain {{site.data.keyword.iot_short_notm}}, puoi collegarti a un fabric fornito da IBM e associare un dispositivo di esempio Node-RED al contratto di esempio fornito da IBM.  I passi necessari per questo scenario sono etichettati come **Scenario di base di IBM** in questo argomento.  
 **Importante:** fai attenzione che il ledger blockchain di esempio fornito da IBM e tutti i relativi dati siano visibili a tutti gli utenti nel blockchain di esempio. Non archiviare informazioni sensibili nel blockchain di esempio fornito da IBM. In aggiunta, i fabric di esempio che supportano l'esempio e scambiano i contratti commerciali sono soggetti a modifiche, incluse le informazioni di connessione per ogni peer. I dettagli della connessione sono forniti nella pagina wiki [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) nella community Watson IoT Blockchain.
@@ -100,8 +100,8 @@ Poiché l'integrazione blockchain {{site.data.keyword.iot_short_notm}} è abilit
 <td>L'indirizzo `api_host` per il server di convalida del peer 1</td>
 </tr>
 <tr>
-<td>Numero di porta </td>
-<td>Il numero `api_port` <ul><li>Utilizza la porta 80 se la tua implementazione non utilizza TLS.</li><li>Utilizza la porta 443 se la tua implementazione utilizza TLS.</li></ul></td>
+<td>Numero di porta</td>
+<td>Il numero `api_port`<ul><li>Utilizza la porta 80 se la tua implementazione non utilizza TLS.</li><li>Utilizza la porta 443 se la tua implementazione utilizza TLS.</li></ul></td>
 </tr>
 <tr>
 <td>Utilizza TLS</td>
@@ -134,16 +134,16 @@ Per associare i dati del dispositivo a un contratto:
  1. Dal dashboard {{site.data.keyword.iot_short_notm}}, fai clic su ![Blockchain.](blockchain/images/platform_blockchain.png "Blockchain") nella barra laterale del menu.
  3. Fai clic su **Map Device Data**.
  4. Seleziona il tipo di dispositivo per cui desideri archiviare i dati nel blockchain.
- 5. Immetti il nome dell'evento che desideri archiviare.
+ 5. Immetti il nome dell'evento che desideri archiviare.  
  **Suggerimento:** il nome dell'evento predefinito per il dispositivo Node-RED di esempio è obc. Per trovare i tipi di evento per un dispositivo, dal dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Devices** e fai clic sul nome del dispositivo per aprirne la pagina dei dettagli. Scorri verso il basso fino alla sezione **Sensor Information** per visualizzare un elenco dei punti dati e degli eventi disponibili per il dispositivo. Puoi modificare il nome dell'evento che il servizio Node-RED pubblica aggiornando il campo dell'argomento in Publish to IoT mqtt out node.  
- 6. Fare clic su **Next**.
+ 6. Fai clic su **Next**.
  6. Seleziona l'istanza fabric che hai precedentemente creato.
  7. Immetti l'ID e il nome del contratto.  
 <table>
 <thead>
 <tr>
 <th>Parametro</th>
-<th>Commento </th>
+<th>Commento</th>
 </tr>
 </thead>
 <tbody>
@@ -162,8 +162,8 @@ Per associare i dati del dispositivo a un contratto:
 **Scenario di base IBM:** lo smart contract predistribuito di esempio ti lascia associare i punti dati del dispositivo ad alcuni attributi del contratto per archiviare i valori dei punti dati nel ledger blockchain. Utilizza il contratto di esempio per verificare l'associazione dei dati del dispositivo prima di tentare dei contratti commerciali più avanzati o di scrivere i tuoi propri contratti. L'ID del contratto viene fornito nella pagina wiki [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) nella community Watson IoT Blockchain.
 
 
- 8. Crea una rotta per associare le proprietà del dispositivo ai parametri del contratto.
- I parametri disponibili nel contratto vengono importati. Per ogni parametro, immetti una proprietà dell'evento corrispondente.
+ 8. Crea una rotta per associare le proprietà del dispositivo ai parametri del contratto.  
+ I parametri disponibili nel contratto vengono importati. Per ogni parametro, immetti una proprietà dell'evento corrispondente.  
  **Importante:** non includere `d.` che precede i punti dati nel messaggio del dispositivo.
  **Scenario di base IBM:** se stai utilizzando i contratti forniti da IBM, associa i seguenti parametri elencati nella pagina wiki [Data mapping](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping) nella community Watson IoT Blockchain.
  9. Nella pagina di riepilogo, verifica che tutte le informazioni sia state immesse correttamente.
@@ -171,18 +171,18 @@ Per associare i dati del dispositivo a un contratto:
 
 Congratulazioni, sei pronto!
 
-## Verifica della versione del smart contract di esempio fornito da IBM 
+## Verifica della versione del smart contract di esempio fornito da IBM
 {: #test_simple}
 
 Se sei collegato al fabric fornito da IBM e hai associato i tuoi dati del dispositivo al contratto di esempio, puoi verificare il flusso di dati end-to-end dal dispositivo al ledger blockchain. Utilizza la IU di monitoraggio blockchain IoT per visualizzare i dati e l'attività blockchain per i tuoi asset.  
-**Suggerimento:** se la IU di monitoraggio non è ancora stata installata nel tuo ambiente locale, puoi installarla ora. Segui le istruzioni nel documento readme della IU di monitoraggio disponibile nella directory GitHub [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/monitoring_ui).  
-1. Configura la IU di monitoraggio per collegarsi a {{site.data.keyword.iot_short_notm}}.
+**Suggerimento:** se la IU di monitoraggio non è ancora stata installata nel tuo ambiente locale, puoi installarla ora. Segui le istruzioni nel documento readme della IU di monitoraggio disponibile nella directory GitHub [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui).  
+1. Configura la IU di monitoraggio per collegarsi a {{site.data.keyword.iot_short_notm}}.  
  Nella IU di monitoraggio, fai clic su **CONFIGURATION** per configurare la connessione della IU di monitoraggio:
  <table>
 <thead>
 <tr>
 <th>Parametro</th>
-<th>Commento </th>
+<th>Commento</th>
 </tr>
 </thead>
 <tbody>
@@ -205,13 +205,13 @@ Se sei collegato al fabric fornito da IBM e hai associato i tuoi dati del dispos
 </tbody>
 </table>
 **Scenario di base IBM:** per configurare la IU di monitoraggio per collegarsi ai contratti commerciali o di base, utilizza i dettagli della connessione forniti nella pagina wiki [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) nella community Watson IoT Blockchain.
-2. Nell'editor del flusso Node-RED, fai clic sul pulsante sul nodo CON123 per trasmettere i dati del dispositivo, inviati come un messaggio a {{site.data.keyword.iot_short_notm}} e scritti nel ledger {{site.data.keyword.iot_short_notm}} dal contratto semplice.
+2. Nell'editor del flusso Node-RED, fai clic sul pulsante sul nodo CON123 per trasmettere i dati del dispositivo, inviati come un messaggio a {{site.data.keyword.iot_short_notm}} e scritti nel ledger {{site.data.keyword.iot_short_notm}} dal contratto semplice.   
 **Suggerimento:** per avere un flusso di dati continuo, fai doppio clic sul nodo di trasmissione, imposta il parametro Repeat su `interval` e configura un intervallo appropriato, come ad esempio ogni minuto.
 3. Nella IU di monitoraggio, verifica che i dati del dispositivo siano visualizzati come previsto nei blocchi blockchain.  
-  1. Verifica che i blocchi siano aggiunti alla catena quando trasmetti i dati dal dispositivo.
+  1. Verifica che i blocchi siano aggiunti alla catena quando trasmetti i dati dal dispositivo.  
   **Importante:** non utilizzare il pulsante di aggiornamento del browser per aggiornare la IU di monitoraggio. La IU si aggiorna automaticamente ogni pochi secondi. Utilizzando il pulsante di aggiornamento del browser reimposti le configurazioni della IU ai valori predefiniti e devi riconfigurare la IU di monitoraggio per visualizzare il tuo blockchain del contratto.
   2. Per visualizzare le ultime informazioni sul ledger per il tuo asset, nel campo di ricerca dell'ID dell'asset, immetti l'ID del tuo asset e fai clic su **SUBMIT**. Esempio: `CON123`
-  Per visualizzare i dati blockchain per più di un asset che utilizzano lo stesso contratto, immetti il nome dell'asset e fai clic su **SUBMIT**. Fai clic su **RESET** per ricominciare.
+  Per visualizzare i dati blockchain per più di un asset che utilizzano lo stesso contratto, immetti il nome dell'asset e fai clic su **SUBMIT**. Fai clic su **RESET** per ricominciare.  
   **Suggerimenti:**
     - L'attivazione del polling della funzione delle modifiche ti assicurerà che la IU esegue continuativamente il polling di tutte le modifiche all'asset sotto osservazione / monitoraggio e che esegue l'aggiornamento non appena viene applicata una modifica nel blockchain.
     - L'ID dell'asset predefinito per il dispositivo blockchain è "CON123". Se hai modificato il messaggio del dispositivo o hai aggiornato l'ID dell'asset nel simulatore del dispositivo Node-RED, puoi ricercare l'ID dell'asset in {{site.data.keyword.iot_short_notm}}. Vai alla pagina **Devices** e fai clic sul tuo dispositivo per aprire la pagina dei dettagli del dispositivo. Scorri verso il basso fino alla sezione **Sensor Information** per visualizzare un elenco dei punti dati per il dispositivo. Utilizza il valore per il punto dati `d.assetID` per il tuo ID dell'asset.

@@ -2,28 +2,23 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
+
 
 # 设置 iOS Swift SDK
 {: #getting-started-ios}
 
-上次更新时间：2016 年 8 月 01 日
-{: .last-updated}
+{{site.data.keyword.amafull}} 已发行新的 Swift SDK，为现有 {{site.data.keyword.amashort}} Objective-C SDK 提供的功能增添了新功能，同时也改进了现有功能，使得认证应用程序变得更加轻松，并为您的后端资源提供更好地保护。在 iOS Swift 应用程序中安装 {{site.data.keyword.amashort}} SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
 
-{{site.data.keyword.amashort}} 已发行新的 Swift SDK，为现有 {{site.data.keyword.amashort}} Objective-C SDK 提供的功能增添了新功能，同时也改进了现有功能，使得认证应用程序变得更加轻松，并为您的后端资源提供更好地保护。在 iOS Swift 应用程序中安装 {{site.data.keyword.amashort}} SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
+
 {:shortdesc}
 
 **注：**Objective-C SDK 会将监视数据报告给 {{site.data.keyword.amashort}} 服务的监视控制台。如果您依赖于 {{site.data.keyword.amashort}} 服务的监视功能，那么您需要继续使用 Objective-C SDK。
 
 虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用 Objective-C SDK，以支持此新的 Swift SDK。 
-
-
-
-
 
 
 ## 开始之前
@@ -44,10 +39,14 @@ copyright:
 1. 在终端窗口中，运行 **pod --version** 命令。如果已经安装了 CocoaPods，那么将显示版本号，且您可以跳到下一个部分来安装 SDK。
 
 1. 如果未安装 CocoaPods，请运行：
+
 ```
 sudo gem install cocoapods
 ```
+
 有关更多信息，请参阅 [CocoaPods Web 站点](https://cocoapods.org/)。
+
+
 
 ### 使用 CocoaPods 安装 {{site.data.keyword.amashort}} 客户端 SDK
 {: #install-sdk-cocoapods}
@@ -63,6 +62,7 @@ sudo gem install cocoapods
 use_frameworks!
  pod 'BMSSecurity'
 	```
+
   **提示：**您可以将 `use_frameworks!` 添加到 Xcode 目标中，而不是置于 Podfile 中。
 
 1. 保存 `Podfile` 文件，然后在命令行中运行 `pod install`。Cocoapods 会安装相关依赖项，并显示添加的依赖项和 Pods。<br/>
@@ -70,63 +70,76 @@ use_frameworks!
 
    **重要信息**：CocoaPods 会生成 `xcworkspace` 文件。必须打开此文件才能继续处理项目。
 
-1. 打开 iOS 项目工作空间。打开 CocoaPods 生成的 `xcworkspace` 文件。例如：`{your-project-name}.xcworkspace`。运行 `open {your-project-name}.xcworkspace`。
+1. 打开 iOS 项目工作空间。打开 CocoaPods 生成的 `xcworkspace` 文件。例如，对于 `{your-project-name}.xcworkspace`，请运行：
+
+	`open {your-project-name}.xcworkspace`
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #init-mca-sdk-ios}
 
- 通过传递 `applicationRoute` 和 `applicationGUID` 参数来初始化 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
+ 通过传递 `applicationGUID` 参数来初始化 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
+ 
 
-1. 获取应用程序参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。单击**移动选项**。**路径**和**应用程序 GUID** 字段中将显示 `applicationRoute` 和 `applicationGUID` 值。
+1. 获取服务参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开服务。单击**移动选项**。`applicationRoute` 和 `tenantId`（也称为 `appGUID`）值会显示在**路由**和**应用程序 GUID/TenantId** 字段中。您将需要这些值来初始化 SDK，并将请求发送到后端应用程序。
 
 1. 将所需框架导入要使用 {{site.data.keyword.amashort}} 客户端 SDK 的类中。
 
  ```Swift
  import BMSCore
  import BMSSecurity
- ```  
-
-1. 初始化 {{site.data.keyword.amashort}} 客户端 SDK。将 `<applicationRoute>` 和 `<applicationGUID>` 替换为从 {{site.data.keyword.Bluemix_notm}} 仪表板中的**移动选项**获取的**路径**和**应用程序 GUID** 值。将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。
-要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
-
-
-
- ```Swift
- let backendURL = "<applicationRoute>"
- let backendGUID = "<applicationGUID>"
-
- func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-// Initialize the client SDK.BMSClient.sharedInstance.initializeWithBluemixAppRoute(backendURL, bluemixAppGUID: backendGUID, bluemixRegion: BMSClient.<applicationBluemixRegion>)
-
- BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
-
- return true
- }
  ```
 
+1. 初始化 {{site.data.keyword.amashort}} 客户端 SDK。
+
+```Swift
+	let tenantId = "<serviceTenantID>"
+	let regionName = <applicationBluemixRegion>
+
+	func application(_ application: UIApplication, 
+	    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+    mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+      // possible values for regionName: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, BMSClient.Region.sydney
+	BMSClient.sharedInstance.authorizationManager = mcaAuthManager	
+	return true
+	}
+ ```
+
+* 将 `tenantId` 值替换为从**移动选项**获取的值。请参阅**步骤 1**。
+* 将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。显示的区域值应为以下某个值：**美国南部**、**英国**或**悉尼**，并对应于代码中需要的常量值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
+
+   
 ## 对移动后端应用程序发起请求
 {: #request}
 
 初始化 {{site.data.keyword.amashort}} 客户端 SDK 后，可以开始对移动后端应用程序发起请求。
 
-1. 尝试在浏览器中对移动后端应用程序上的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`
-<br/>使用 MobileFirst Services Starter 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会在浏览器中返回 `Unauthorized` 消息。
+1. 尝试在浏览器中对移动后端应用程序上的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`，将 `{applicationRoute}` 替换为从**移动选项**中检索到的 **applicationRoute** 值（请参阅[初始化 Mobile Client Access 客户端 SDK](#init-mca-sdk-ios)）。例如：
+ 
+
+	`http://my-mobile-backend.mybluemix.net/protected
+	`
+
+	使用 MobileFirst Services Starter 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会在浏览器中返回 `Unauthorized` 消息。
+
+
 
 1. 使用 iOS 应用程序对同一端点发起请求。初始化 `BMSClient` 后，添加以下代码：
 
  ```Swift
- let customResourceURL = "<your protected resource's path>"
- let request = Request(url: customResourceURL, method: HttpMethod.GET)
- let callBack:BmsCompletionHandler = {(response: Response?, error: NSError?) in
+	let customResourceURL = "<your protected resource absolute path>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
+
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
   if error == nil {
       print ("response:\(response?.responseText), no error")
      } else {
          print ("error: \(error)")
-     }
- }
-
- request.sendWithCompletionHandler(callBack)
+  }
+  }
+	request.send(completionHandler: callBack)
  ```
+ {: codeblock}
 
 1.  请求成功后，将在 Xcode 控制台中显示以下输出：
 

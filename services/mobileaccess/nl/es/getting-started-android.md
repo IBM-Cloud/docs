@@ -2,27 +2,25 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-10"
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-{:codeblock:.codeblock}
+
 
 # Configuración del SDK de Android
 {: #getting-started-android}
 
-Última actualización: 2 de agosto de 2016
-{: .last-updated}
+Instrumente su aplicación de Android con el SDK del cliente de {{site.data.keyword.amafull}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos.
 
-Instrumente su aplicación de Android con el SDK del cliente de {{site.data.keyword.amashort}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos.
 {:shortdesc}
 
 ## Antes de empezar
 {: #before-you-begin}
 Debe tener lo siguiente:
 * Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de una aplicación de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
+* Los valores del parámetro de servicio. Abra el servicio en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles**. Los valores `applicationRoute` y `tenantId` (también conocidos como `appGUID`) se muestran en los campos **Ruta** y **GUID de app / TenantId**. Necesitará estos valores para inicializar el SDK y para enviar solicitudes a la aplicación de fondo.
 * Un proyecto de Android Studio, configurado para funcionar con Gradle. Para obtener más información sobre la configuración del entorno de desarrollo de Android, consulte las [Herramientas del desarrollador de Google](http://developer.android.com/sdk/index.html).
-
 
 ## Instalación del SDK del cliente de {{site.data.keyword.amashort}}
 {: #install-mca-sdk}
@@ -57,29 +55,27 @@ El SDK del cliente de {{site.data.keyword.amashort}} se distribuye con Gradle, u
 ## Inicialización del SDK del cliente de {{site.data.keyword.amashort}}
 {: #initalize-mca-sdk}
 
-Inicialice el SDK pasando los parámetros `context`, `applicationGUID`, `applicationRoute` y `BMSClient.REGION_UK` al método `initialize`.
+Inicialice el SDK de cliente pasando los parámetros **context** y **region** al método `initialize`. Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.
 
+```Java
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+					
+  BMSClient.getInstance().setAuthorizationManager(
+                 MCAAuthorizationManager.createInstance(this, "MCAServiceTenantId"));
 
-1. Desde la página principal del panel de control de {{site.data.keyword.Bluemix_notm}}, haga clic en la aplicación. Pulse **Opciones móviles**. Necesita los valores **Ruta de aplicación** y **GUID de aplicación** para inicializar el SDK.
-
-2. Inicialice el SDK del cliente de {{site.data.keyword.amashort}} en la aplicación de Android.  Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.
-<br/>
-Sustituya *applicationRoute* y *applicationGUID* por los valores de **Opciones móviles** en el panel de control de {{site.data.keyword.Bluemix_notm}}.
-
-	```Java
-	BMSClient.getInstance().initialize(getApplicationContext(),
-					"applicationRoute",
-					"applicationGUID",
-					BMSClient.REGION_UK);
 ```
-Sustituya el `BMSClient.REGION_UK` con la región adecuada.  Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono **Avatar**  ![Icono de Avatar](images/face.jpg "Icono de Avatar") en la barra de menú para abrir el widget **Cuenta y soporte**.
+
+   * Sustituya el `BMSClient.REGION_UK` con la región adecuada. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono de **Avatar** ![Icono de Avatar](images/face.jpg "Icono de Avatar") de la barra de menús para abrir el widget **Cuenta y soporte**. El valor de región debe ser uno de los siguientes: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o  `BMSClient.REGION_UK`.
+   * Sustituya "MCAServiceTenantId" por el valor **tenantId** (consulte [Antes de comenzar](#before-you-begin)). 
+
 ## Cómo realizar una solicitud a la aplicación de programa de fondo móvil
 {: #request}
 
 Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, puede empezar a realizar solicitudes a la aplicación de programa de fondo móvil.
 
-1. Intente enviar una solicitud a un punto final protegido de la nueva aplicación de programa de fondo móvil. En el navegador, abra el siguiente URL: `{applicationRoute}/protected`. Por ejemplo: `http://mi-programa-fondo-móvil.mybluemix.net/protected`
-<br/>El punto final `/protected` de una aplicación de programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` al navegador porque solo se puede acceder a este punto final mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
+1. Intente enviar una solicitud a un punto final protegido de la nueva aplicación de programa de fondo móvil. En el navegador, abra el siguiente URL: `{applicationRoute}/protected` (por ejemplo, `http://my-mobile-backend.mybluemix.net/protected`).   Para obtener información sobre cómo obtener el valor `{applicationRoute}`, consulte [Antes de comenzar](#before-you-begin). 
+	
+	El punto final `/protected` de una aplicación de programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` al navegador porque solo se puede acceder a este punto final mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
 
 1. Utilice la aplicación de Android para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
 
@@ -107,7 +103,7 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
 
 	![imagen](images/getting-started-android-success.png)
 
-## Próximos pasos
+## Pasos siguientes
 {: #next-steps}
 
 Cuando se ha conectado al punto final protegido, no se han necesitado credenciales. Para que los usuarios inicien sesión en la aplicación, debe configurar la autenticación de Facebook, Google o Personalizada.

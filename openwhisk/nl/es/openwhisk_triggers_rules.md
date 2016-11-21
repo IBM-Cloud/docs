@@ -18,13 +18,14 @@ copyright:
 
 # Creación de desencadenantes y reglas
 {: #openwhisk_triggers}
-*Última actualización: 22 de febrero de 2016*
+Última actualización: 22 de febrero de 2016
 {: .last-updated}
 
 Los desencadenantes y reglas de {{site.data.keyword.openwhisk}} aportan prestaciones dirigidas por sucesos a la plataforma. Los sucesos de orígenes de sucesos externos e internos se ponen en el canal por medio de un desencadenante, y las reglas permiten sus acciones de respuesta para dichos sucesos.
 {: shortdesc}
 
-## Desencadenantes
+## Creación de desencadenantes
+{: #openwhisk_triggers_create}
 
 Los desencadenantes son un canal con nombre para una clase de sucesos. A continuación se muestran ejemplos de desencadenantes:
 - Un desencadenante de sucesos de actualización de ubicación.
@@ -41,7 +42,8 @@ que {{site.data.keyword.openwhisk_short}} pueda consumir. Estos son algunos ejem
 documento en una base de datos.
 - Una información de entrada Git que desencadena un suceso por cada confirmación contra un repositorio Git.
 
-## Rules
+## Utilización de reglas
+{: #openwhisk_rules_use}
 
 Una regla asocia un desencadenante a una acción, con cada activación del desencadenante que hace que se invoque la acción
 correspondiente con un suceso de desencadenante como entrada.
@@ -67,7 +69,7 @@ Las tres reglas establecen el comportamiento siguiente: las imágenes en ambos t
 subidas se clasifican y se genera una versión de miniatura. 
 
 ## Creación y activación de desencadenante
-{: #openwhisk_triggers}
+{: #openwhisk_triggers_fire}
 
 Los desencadenantes se pueden activar cuando se producen determinados sucesos, o bien se pueden activar manualmente.
 
@@ -112,12 +114,11 @@ Como ejemplo, cree un desencadenante para enviar actualizaciones de ubicación d
   ```
   {: screen}
 
-   Los sucesos que active para el desencadenante statusUpdate actualmente no hacen nada. Para ser útil, el
-desencadenante necesita una regla que la asocie con una acción.
+Un desencadenante que se activa sin una regla que lo acompañe con la que cotejarlo, no tendrá ningún efecto visible.
+Los desencadenantes no se pueden crear dentro de un paquete; deben crearse directamente bajo un espacio de nombres.
 
-
-## Uso de reglas para asociar desencadenantes y acciones
-{: #openwhisk_rules}
+## Asociación de desencadenantes y acciones utilizando reglas
+{: #openwhisk_rules_assoc}
 
 Las reglas se utilizan para asociar un desencadenante con una acción. Cada vez que se activa un suceso desencadenante, la acción
 se invoca con parámetros de suceso.
@@ -143,9 +144,15 @@ Como ejemplo, cree una regla que invoque la acción hello siempre que se publiqu
   ```
   {: pre}
 
-3. Cree y habilite la regla. Los tres parámetros son el nombre de la regla, el desencadenante y la acción.
+3. Cree la regla. Tenga en cuenta que la regla se habilitará después de crearse; es decir, estará disponible de forma inmediata para responder a las activaciones del desencadenante. Los tres parámetros son el nombre de la regla, el desencadenante y la acción.
   ```
-  wsk rule create --enable myRule locationUpdate hello
+  wsk rule create myRule locationUpdate hello
+  ```
+  {: pre}
+
+  Puede inhabilitar una regla en cualquier momento.
+  ```
+  wsk rule disable myRule
   ```
   {: pre}
 
@@ -185,4 +192,6 @@ Como ejemplo, cree una regla que invoque la acción hello siempre que se publiqu
 
   Verá que la acción hello ha recibido la carga del suceso y ha devuelto la serie prevista.
 
-  Puede crear varias reglas que se asocien con el mismo desencadenante con distintas acciones.
+Puede crear varias reglas que se asocien con el mismo desencadenante con distintas acciones.
+El desencadenante y la acción que componen una regla deben estar en el mismo espacio de nombre y no pueden pertenecer a un paquete.
+Si desea utilizar una acción que pertenece a un paquete, puede copiar la acción en el espacio de nombres. Por ejemplo: `wsk action create echo --copy /whisk.system/utils/echo`.

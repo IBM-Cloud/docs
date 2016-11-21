@@ -21,7 +21,7 @@ copyright:
 {: .last-updated}
 
 **Cette interface de ligne de commande est obsolète :** au lieu d'utiliser l'interface de ligne de commande en mode développement
-(dev_mode), utilisez IBM Eclipse Tools for Bluemix ou l'interface IDE Web DevOps. Vous pouvez continuer à utiliser l'interface CLI dev_mode
+(dev_mode), utilisez IBM Eclipse Tools for Bluemix ou l'interface IDE Web DevOps. Vous pouvez continuer à utiliser l'interface de ligne de commande dev_mode
 jusqu'au 30 juin 2016.
 
 Via l'interface de ligne de commande en mode développement (CLI dev_mode), vous pouvez mettre à jour vos applications alors qu'elles s'exécutent dans le
@@ -31,7 +31,7 @@ applications Liberty et IBM Node.js.
 {: shortdesc}
  
 
-Vous pouvez effectuer les tâches suivantes à l'aide de l'interface CLI dev_mode :
+Vous pouvez effectuer les tâches suivantes à l'aide de l'interface de ligne de commande dev_mode :
 - Basculement de votre application entre le mode développement et le mode normal.
 - Mise à jour des fichiers d'application de manière incrémentielle sans nouvelle commande push.
 - Démarrage, arrêt ou redémarrage de votre application dans le conteneur existant.
@@ -43,7 +43,7 @@ Vous pouvez effectuer les tâches suivantes à l'aide de l'interface CLI dev_mod
 Utilisez l'une des méthodes suivantes pour installer l'outil de ligne de commande dev_mode :
 - Installation locale
   1. Téléchargez le plug-in dev_mode correspondant à votre plateforme depuis le [référentiel de plug-in
-de l'interface de ligne de commande IBM Bluemix](http://plugins.{DomainName}).
+de l'interface de ligne de commande IBM Bluemix](http://plugins.ng.bluemix.net).
   2. Accédez au dossier dans lequel le plug-in dev_mode est enregistré et installez ce plug-in via la commande cf install-plugin. Par exemple : 
   
         ```
@@ -77,7 +77,7 @@ Pour afficher toutes les commandes CLI dev_mode, utilisez la commande suivante :
 cf plugins
 ```
 
-## Index des commandes de l'interface CLI dev_mode
+## Index des commandes de l'interface de ligne de commande dev_mode
 {: #dev_mode_cmds_index}
 
 Utilisez l'index de la table suivante pour consulter les commandes CLI dev_mode fréquemment utilisées :
@@ -218,7 +218,6 @@ cf restart-inplace <nom_app>
 ## Liens connexes
 {: #general}
 * [Interface de ligne de commande en mode développement](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html){:new_window}
 * [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
 
 

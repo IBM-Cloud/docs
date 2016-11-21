@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-05-09" 
 
 ---
 
@@ -16,9 +16,6 @@ copyright:
 {:screen: .screen}
 
 #{{site.data.keyword.Bluemix_notm}}에서 앱 호스팅
-
-*마지막 업데이트 날짜: 2016년 5월 9일*
-{: .last-updated}
 
 <!--The whole topic is staging only -->
 
@@ -88,7 +85,7 @@ copyright:
 
 클라우드 애플리케이션에서 백엔드 데이터 또는 서비스에 액세스해야 할 수 있습니다(예: SOR(System of Record)). {{site.data.keyword.Bluemix_notm}}에서는 Secure Gateway 서비스를 사용하여 {{site.data.keyword.Bluemix_notm}} 조직 및 엔터프라이즈 백엔드 네트워크 간의 보안 터널을 설정할 수 있습니다. 이 서비스를 사용하여 {{site.data.keyword.Bluemix_notm}}의 애플리케이션은 백엔드 네트워크의 데이터 및 서비스에 액세스할 수 있습니다. 세부사항은 [콘솔을 통해 Secure Gateway로 엔터프라이즈 백엔드 접속](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}을 참조하십시오.
 
-애플리케이션을 Cloud Foundry 애플리케이션으로서 {{site.data.keyword.Bluemix_notm}}에 배치하려면 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 런타임을 선택하십시오. 런타임에는 자체 애플리케이션과 대체할 수 있는 스타터 Hello World 애플리케이션이 포함되어 있습니다. 원하는 런타임을 제공하는 스타터를 찾을 수 없는 경우에는 cf push 명령에서 –b 옵션을 사용하여 {{site.data.keyword.Bluemix_notm}}로 사용자 정의, Cloud Foundry 호환 가능 빌드팩을 가져올 수 있습니다. 세부사항은 [커뮤니티 빌드팩 사용](../cfapps/byob.html)을 참조하십시오.
+애플리케이션을 Cloud Foundry 애플리케이션으로서 {{site.data.keyword.Bluemix_notm}}에 배치하려면 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 런타임을 선택하십시오. 런타임에는 자체 애플리케이션과 대체할 수 있는 스타터 Hello World 애플리케이션이 포함되어 있습니다. 원하는 런타임을 제공하는 스타터를 찾을 수 없는 경우에는 cf push 명령에서 –b 옵션을 사용하여 {{site.data.keyword.Bluemix_notm}}로 사용자 정의, Cloud Foundry 호환 가능 빌드팩을 가져올 수 있습니다. 세부사항은 [커뮤니티 빌드팩 사용](/docs/cfapps/byob.html)을 참조하십시오.
 
 {{site.data.keyword.Bluemix_notm}}에서 제공하는 다음의 도구 및 서비스를 사용할 수 있습니다. 
 
@@ -96,7 +93,7 @@ copyright:
 
 | 도구	| 방법 |
 |:------|:--------|
-|Cloud Foundry 명령행 인터페이스(cf cli)	|로컬 클라이언트에서 코드를 관리하고 Cloud Foundry 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 수동으로 푸시하십시오. 자세한 정보는 [앱 업로드](../starters/upload_app.html)를 참조하십시오. |
+|Cloud Foundry 명령행 인터페이스(cf cli)	|로컬 클라이언트에서 코드를 관리하고 Cloud Foundry 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 수동으로 푸시하십시오. 자세한 정보는 [앱 업로드](/docs/starters/upload_app.html)를 참조하십시오. |
 |Eclipse	|Eclipse에서 코드를 관리하고 {{site.data.keyword.Bluemix_notm}}용 IBM Eclipse 도구를 사용하여 애플리케이션을 푸시하십시오.|
 |Git 통합	|GitHub에서 코드를 관리하고 Git를 {{site.data.keyword.Bluemix_notm}}로 통합하십시오. 다른 개발자과 협업할 수 있습니다. 애플리케이션은 코드의 변경사항을 커미트할 때 {{site.data.keyword.Bluemix_notm}}에 자동으로 배치됩니다. 애플리케이션을 수동으로 푸시할 필요가 없습니다. |
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|DevOps GitHub 저장소에서 코드를 관리하고 DevOps Delivery Pipeline을 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하십시오. |
@@ -131,7 +128,7 @@ Cloud Foundry 플랫폼이 애플리케이션 요구사항을 충족하지 않�
   domain: mybluemix.net
   instances: 1
   memory: 512M</code></pre>
-<p>이 파일에서 사용할 수 있는 지원 옵션에 대한 자세한 정보는 [애플리케이션 Manifest](../manageapps/depapps.html#appmanifest)를 참조하십시오. </p></li></ol>
+<p>이 파일에서 사용할 수 있는 지원 옵션에 대한 자세한 정보는 [애플리케이션 Manifest](/docs/manageapps/depapps.html#appmanifest)를 참조하십시오. </p></li></ol>
 </li>
 
 <li>애플리케이션을 푸시하십시오. cf push 명령을 사용하여 애플리케이션을 업로드할 수 있습니다.
@@ -153,7 +150,7 @@ Cloud Foundry 플랫폼이 애플리케이션 요구사항을 충족하지 않�
 
 * cf push 명령을 사용하는 경우에는 cf 명령행 인터페이스가 현재 디렉토리의 모든 파일 및 디렉토리를 {{site.data.keyword.Bluemix_notm}}에 복사합니다. 애플리케이션 디렉토리에 필요한 파일만 있는지 확인하십시오.
 * 애플리케이션의 모든 인스턴스에 대해 조직에 충분한 메모리가 있는지 확인하십시오. 사용자 조직의 메모리 할당량을 보려면 cf org org_name을 사용하십시오.
-* cf push에 대한 자세한 정보는 [cf commands](../cli/reference/cfcommands/index.html) 명령을 참조하십시오.
+* cf push에 대한 자세한 정보는 [cf commands](/docs/cli/reference/cfcommands/index.html) 명령을 참조하십시오.
 
 ##데이터 마이그레이션 및 서비스 사용
 {: #ht_service}
@@ -187,9 +184,9 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 ## 관련 링크
 {: #general}
 
-* [IBM Containers](../containers/container_index.html)
-* [가상 머신](../virtualmachines/vm_index.html)
-* [Delivery Pipeline 시작하기](../services/DeliveryPipeline/index.html)
-* [IBM Eclipse Tools for Bluemix를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.html)
+* [IBM Containers](/docs/containers/container_index.html)
+* [가상 머신](/docs/virtualmachines/vm_index.html)
+* [Delivery Pipeline 시작하기](/docs/services/DeliveryPipeline/index.html)
+* [IBM Eclipse Tools for Bluemix를 사용하여 앱 배치](/docs/manageapps/eclipsetools/eclipsetools.html)
 * [12-요소 앱](http://12factor.net/){:new_window}
 * [콘솔을 통해 Bluemix Secure Gateway로 엔터프라이즈 백엔드 접속](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}

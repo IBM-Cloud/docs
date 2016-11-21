@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-09-20"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Getting started with {{site.data.keyword.composeForEtcd}}
 {: #getting-started-with-compose-for-etcd}
-
-Last updated: 20 September 2016
-{: .last-updated}
 
 etcd is a key-value store that holds the always-correct data that you need to coordinate and manage your server cluster for distributed server configuration management. etcd uses the RAFT consensus algorithm to assure data consistency in your cluster. It  enforces the order in which operations take place on the data so that every node in the cluster arrives at the same result in the same way. {{site.data.keyword.composeForEtcd_full}} adds automatic backups of your configuration data that is stored in etcd. An intuitive administrative interface lets you monitor, scale, and administer your deployment with ease.
 {:shortdesc}

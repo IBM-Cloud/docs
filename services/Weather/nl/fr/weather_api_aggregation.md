@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-15"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Agrégation des API
 {: #api_aggregation}
-
-*Dernière mise à jour : 15 juin 2016*
-{: .last-updated}
 
 Certaines API d'{{site.data.keyword.weather_short}} peuvent être agrégées. Une agrégation permet d'associer plusieurs appels d'API atomiques dans la même demande HTTP.
 {: shortdesc}

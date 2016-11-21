@@ -20,25 +20,12 @@ Dernière mise à jour : 9 septembre 2016
 Eclipse Orion {{site.data.keyword.webide}} est un environnement de développement basé navigateur dans lequel vous pouvez faire du développement pour le Web. Vous pouvez développer en JavaScript, HTML et CSS en vous aidant de l'assistant de contenu, de la validation de code et du contrôle des erreurs. {{site.data.keyword.webide}} fonctionne avec quasiment toutes les langues et offre une mise en évidence de syntaxe pour la plupart des [types de fichier (Lien s'ouvrant dans une nouvelle fenêtre)](https://hub.jazz.net/docs/overview/#dev_support){: new_window}. Le contrôle des sources est généré via Git ou Jazz SCM, et vous pouvez déployer le code en local afin de tester et déboguer vos applications.
 {:shortdesc}
 
-Mais surtout, {{site.data.keyword.webide}} est basé sur le Web. Vous n'avez rien à installer, rien à gérer, et rien à mettre à l'échelle. Vous pouvez faire du développement depuis n'importe quel endroit, dans la mesure où vous disposez d'une connexion Internet. 
+Mais surtout, {{site.data.keyword.webide}} est basé sur le Web. Vous n'avez rien à installer, rien à gérer, et rien à mettre à l'échelle. Vous pouvez faire du développement depuis n'importe quel endroit, dans la mesure où vous disposez d'une connexion Internet.
 
 ## Configuration de l'éditeur
 {: #editorsetup}
 
 {{site.data.keyword.webide}} est personnalisable : vous pouvez choisir les schémas de couleurs, les outils techniques et les paramètres correspondant à vos besoins de développement. Pour afficher et modifier les paramètres, depuis le menu de gauche, cliquez sur l'icône **Paramètres** <img class="inline" src="./images/webide_settings_icon.png"  alt="Icône des paramètres">.
-
-<!-- LH: I don't think we need to include the following table, so I'm commenting it out. When you're viewing the settings in the Web IDE, this information should be obvious -->
-
-<!--| Categories | Description  |
-|---|---|
-| Cloud Foundry  | Define a Cloud Foundry API and Manage URL  |
-| CSS Validation | Define the severities for CSS linting rules that you use to check your code  |
-| Editor Settings  | Configure editor-specific settings for key bindings, editor behavior, layout, and more  |
-| Editor Styles  | Configure color schemes for the languages that you use, or import a theme from another editors  |
-| Git  | Configure general settings for Git  |
-| Globalization | Define globalization settings for your code |
-| JavaScript Validation  | Define the severities for the JavaScript linting rules that you use to check your code  |
-| Plug-ins  | Install, disable, or remove plug-ins from the editor  | -->
 
 Si vous avez fréquemment besoin de changer certains paramètres lors de l'édition, vous pouvez accéder à ces paramètres rapidement via l'icône **Paramètres de l'éditeur local** <img class="inline" src="./images/webide_local_settings_icon.png"  alt="Icône Paramètres de l'éditeur local"> située dans le coin supérieur droit de l'éditeur.
 
@@ -58,17 +45,17 @@ Par défaut, les paramètres de style et de taille de police de l'éditeur sont 
 ## Edition de code
 {: #editcode}
 
-{{site.data.keyword.webide}} comporte deux sections principales. La première section correspond au navigateur de fichiers, situé à gauche, qui affiche vos fichiers de projet dans une structure arborescente. Depuis le navigateur de fichiers, vous pouvez créer, renommer, supprimer et gérer vos fichiers et dossiers. 
+{{site.data.keyword.webide}} comporte deux sections principales. La première section correspond au navigateur de fichiers, situé à gauche, qui affiche vos fichiers de projet dans une structure arborescente. Depuis le navigateur de fichiers, vous pouvez créer, renommer, supprimer et gérer vos fichiers et dossiers.
 
-**Conseil :** Pour télécharger des fichiers dans le navigateur de fichiers, faites-les glisser depuis votre ordinateur vers le navigateur. 
+**Conseil :** Pour télécharger des fichiers dans le navigateur de fichiers, faites-les glisser depuis votre ordinateur vers le navigateur.
 
-La seconde section correspond à la sous-fenêtre de l'éditeur, située sur la droite. L'éditeur fournit plusieurs fonctions de codage, notamment l'assistant de contenu et la validation de la syntaxe. 
+La seconde section correspond à la sous-fenêtre de l'éditeur, située sur la droite. L'éditeur fournit plusieurs fonctions de codage, notamment l'assistant de contenu et la validation de la syntaxe.
 
 ![Web IDE](images/webide.png)
 
 ### Utilisation de plusieurs fichiers
 1. Pour utiliser deux fichiers en même temps, cliquez sur l'icône **Changer le mode de fractionnement de l'éditeur** <img class="inline" src="./images/webide_split_editor_icon.png"  alt="Icône Fractionner l'éditeur"> situé en haut de l'éditeur.
-2. Dans le menu qui s'ouvre, sélectionnez une vue. 
+2. Dans le menu qui s'ouvre, sélectionnez une vue.
 
  Une fois que vous avez sélectionné une vue, si un fichier était déjà ouvert dans l'éditeur, il s'affiche dans les deux vues.
 

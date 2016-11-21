@@ -2,17 +2,13 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Configurazione dell'autenticazione personalizzata per la tua applicazione Cordova {{site.data.keyword.amashort}}
 {: #custom-cordova}
 
-Ultimo aggiornamento: 17 luglio 2016
-{: .last-updated}
-
-
-Configura la tua applicazione Cordova che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amashort}} e connettere la tua applicazione a {{site.data.keyword.Bluemix}}.
+Configura la tua applicazione Cordova che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amafull}} e connettere la tua applicazione a {{site.data.keyword.Bluemix}}.
 
 
 ## Prima di cominciare
@@ -32,19 +28,21 @@ Inizializza l'SDK passando i parametri applicationGUID e applicationRoute.
 1. Inizializza l'SDK client.
 
 	```JavaScript
-	BMSClient.initialize(applicationRoute, applicationGUID);
+BMSClient.initialize("applicationRoute", "applicationGUID");
 
 	```
- Sostituisci *applicationRoute* e *applicationGUID* con i valori di **Rotta** e **GUID applicazione** dal
-pannello **Opzioni mobili** della tua applicazione sul dashboard {{site.data.keyword.Bluemix_notm}}.
+ * Sostituisci `applicationRoute` e `applicationGUID` con i valori **Route** e **AppGuid**. Questi valori possono essere trovati facendo clic sul pulsante **Opzioni mobili** nella tua applicazione {{site.data.keyword.Bluemix_notm}} nel dashboard {{site.data.keyword.Bluemix_notm}}.
+	
+ 
+ 
+## Inizializzazione di AuthorizationManager {{site.data.keyword.amashort}}
+ {: #custom-cordova-MCAAM}
+Inizializza `MCAAuthorizationManager` trasmettendo al servizio  {{site.data.keyword.amashort}} il parametro `tenantId`. Puoi trovare questo valore facendo clic sul pulsante **Visualizza credenziali** nel tile del servizio {{site.data.keyword.amashort}}.
 
-
-##Inizializzazione di AuthorizationManager {{site.data.keyword.amashort}} 
-Inizializza AuthorizationManager passando il parametro `tenantId` del servizio {{site.data.keyword.amashort}}  ottenuto dopo aver fatto clic sul pulsante  **Visualizza credenziali** nel tile del servizio {{site.data.keyword.amashort}}.
-
-  ```JavaScript
+```JavaScript
   MFPAuthorizationManager.initialize("tenantId");
-  ```
+        
+```
 
 ## Interfaccia listener di autenticazione
 {: #custom-cordva-auth}
@@ -79,13 +77,13 @@ Richiamando il metodo `onAuthenticationChallengeReceived`, l'SDK client {{site.d
 onAuthenticationSuccess: function(info){...}
 ```
 
-Questo metodo viene richiamato dopo un'autenticazione con esito positivo. Gli argomenti includono un JSONObject facoltativo che contiene informazioni estese sull'esito positivo dell'autenticazione.
+Questo metodo viene richiamato dopo un'autenticazione con esito positivo. Gli argomenti includono un oggetto JSON facoltativo che contiene informazioni estese sull'esito positivo dell'autenticazione.
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
 
-Questo metodo viene richiamato dopo un esito negativo dell'autenticazione. Gli argomenti includono un JSONObject facoltativo che contiene informazioni estese sull'esito negativo dell'autenticazione.
+Questo metodo viene richiamato dopo un esito negativo dell'autenticazione. Gli argomenti includono un oggetto JSON facoltativo che contiene informazioni estese sull'esito negativo dell'autenticazione.
 
 ## authenticationContext
 {: #custom-cordova-authcontext}

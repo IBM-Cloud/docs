@@ -25,7 +25,7 @@ Questa sezione contiene le informazioni su come i dispositivi del servizio di ge
 
 La sezione Dispositivo contiene informazioni su come i dispositivi possono pubblicare gli eventi e gestire i comandi utilizzando la libreria client ibmiotf Java.
 
-La sezione Applicazioni contiene informazioni su come le applicazioni possono utilizzare la libreria client ibmiotf Java per interagire con i dispositivi. 
+La sezione Applicazioni contiene informazioni su come le applicazioni possono utilizzare la libreria client ibmiotf Java per interagire con i dispositivi.
 
 ## Gestione del dispositivo
 {: #device_management}
@@ -38,7 +38,7 @@ La funzione [gestione del dispositivo](../reference/device_mgmt.html) migliora i
 ## Connessione al servizio di gestione del dispositivo {{site.data.keyword.iot_short_notm}}
 {: #connecting_dm_service}
 
-## Creazione dei dati del dispositivo 
+## Creazione dei dati del dispositivo
 {: #creating_device_data}
 
 Il [modello dispositivo](../reference/device_model.html) descrive le caratteristiche di gestione e metadati di un dispositivo. Il database del dispositivo in {{site.data.keyword.iot_short_notm}} è l'origine principale delle informazioni sul dispositivo. Le applicazioni e i dispositivi gestiti sono in grado di inviare gli aggiornamenti al database come un'ubicazione o il progresso di un aggiornamento firmware. Una volta che sono stati ricevuti questi aggiornamenti da {{site.data.keyword.iot_short_notm}}, il database del dispositivo viene aggiornato, rendendo le informazioni disponibili per le applicazioni.
@@ -267,7 +267,7 @@ if(rc == 200) {
 }
 ```
 
-## Aggiunta e cancellazione dei messaggi di log 
+## Aggiunta e cancellazione dei messaggi di log
 
 I dispositivi possono scegliere di inviare notifiche a {{site.data.keyword.iot_short_notm}} sulle modifiche aggiungendo una nuova voce di log. Una voce di log include le seguenti informazioni:
 - Messaggio di log
@@ -275,7 +275,7 @@ I dispositivi possono scegliere di inviare notifiche a {{site.data.keyword.iot_s
 - Severità
 - Dati di diagnostica binari basati su base64 (facoltativo)
 
-Per inviare i messaggi di log, il dispositivo ha bisogno di creare un oggetto `DiagnosticLog` come descritto nel seguente esempio: 
+Per inviare i messaggi di log, il dispositivo ha bisogno di creare un oggetto `DiagnosticLog` come descritto nel seguente esempio:
 
 ```
 DiagnosticLog log = new DiagnosticLog(
@@ -326,7 +326,7 @@ Per ulteriori informazioni sull'operazione di diagnostica, fai riferimento alla 
 ## Azioni firmware
 {: #firmware_actions}
 
-Il processo di aggiornamento Firmware è diviso in due azioni distinte: 
+Il processo di aggiornamento Firmware è diviso in due azioni distinte:
 
 * Scaricamento del firmware
 * Aggiornamento del firmware
@@ -618,7 +618,7 @@ DeviceActionHandlerSample actionHandler = new DeviceActionHandlerSample();
 deviceData.addDeviceActionHandler(actionHandler);
 ```
 
-Fai riferimento a [questa pagina](../device_mgmt/operations/device_actions.html) per ulteriori informazioni sull'azione del dispositivo. 
+Fai riferimento a [questa pagina](../device_mgmt/operations/device_actions.html) per ulteriori informazioni sull'azione del dispositivo.
 
 
 
@@ -638,7 +638,7 @@ deviceInfo.addPropertyChangeListener(listener);
 metadata.addPropertyChangeListener(listener);
 ```
 
-Inoltre, il dispositivo deve implementare il metodo `propertyChange()` su cui riceve la notifica. Il seguente esempio illustra come può essere implementato: 
+Inoltre, il dispositivo deve implementare il metodo `propertyChange()` su cui riceve la notifica. Il seguente esempio illustra come può essere implementato:
 
 ```
 public void propertyChange(PropertyChangeEvent evt) {

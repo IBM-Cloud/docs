@@ -13,6 +13,7 @@ copyright:
 
 
 # {{site.data.keyword.iot_short_notm}} ブロック・チェーン統合のスマート・コントラクトの作成
+
 {: #iotblockchain_link}
 最終更新日: 2016 年 8 月 30 日
 {: .last-updated}
@@ -23,22 +24,27 @@ copyright:
 Go 言語のチェーン・コードの実行可能ファイル形式で、スマート・コントラクトを開発してデプロイします。{{site.data.keyword.iot_short_notm}} ブロック・チェーン統合を使用し、デバイス・イベント・データによってコントラクト更新とビジネス・ロジック実行をトリガーし、新しい台帳状態を各トランザクションのブロック・チェーンに書き込みます。
 
 {{site.data.keyword.iot_short_notm}} ブロック・チェーン統合開発環境は、次のコンポーネントで構成されます。
+
 - {{site.data.keyword.Bluemix_notm}} 組織:
- - IoT ブロック・チェーン統合が有効な状態の {{site.data.keyword.iot_short_notm}} サービス
- - {{site.data.keyword.blockchainfull_notm}} ファブリック
- - IoT デバイス・シミュレーターを実行する Node-RED アプリケーション
- **注:** シミュレーターを実行するためにローカルにデプロイした Node-RED 環境を使用することもできます。
+  - IoT ブロック・チェーン統合が有効な状態の {{site.data.keyword.iot_short_notm}} サービス
+  - {{site.data.keyword.blockchainfull_notm}} ファブリック
+  - IoT デバイス・シミュレーターを実行する Node-RED アプリケーション
+   
+
+**注:** シミュレーターを実行するためにローカルにデプロイした Node-RED 環境を使用することもできます。
+
 - ローカル環境:
- - スマート・コントラクト・チェーン・コードを開発、テストするための Hyperledger 開発環境。この環境には Go 言語が含まれています。
- - Blockchain Monitoring UI
+  - スマート・コントラクト・チェーン・コードを開発、テストするための Hyperledger 開発環境。この環境には Go 言語が含まれています。
+  - Blockchain Monitoring UI
 - GitHub 環境:
- - IBM 提供のサンプル・スマート・コントラクト用 GitHub リポジトリー
- - スマート・コントラクトを {{site.data.keyword.blockchainfull_notm}} ファブリックにデプロイするための GitHub リポジトリー
+  - IBM 提供のサンプル・スマート・コントラクト用 GitHub リポジトリー
+  - スマート・コントラクトを {{site.data.keyword.blockchainfull_notm}} ファブリックにデプロイするための GitHub リポジトリー
 
 次の図は、{{site.data.keyword.iot_short_notm}} ブロック・チェーン統合開発環境を示しています。
 ![IoT ブロック・チェーン {{site.data.keyword.iot_short_notm}} 統合アーキテクチャー。](images/architecture_contracts.svg "IoT ブロック・チェーン {{site.data.keyword.iot_short_notm}} 統合アーキテクチャー")
 
 ## 始めに
+
 {: #byb}
 
 {{site.data.keyword.blockchainfull_notm}} の概要と、それとブロック・チェーンの一般概念との関連性、それを使用する利点について確認します。
@@ -48,29 +54,33 @@ Go 言語のチェーン・コードの実行可能ファイル形式で、ス�
 - [{{site.data.keyword.blockchainfull_notm}} for Developers](http://www.ibm.com/blockchain/for_developers.html) - ブロック・チェーンを開発環境に組み込む方法の概要 (ライブ・デモによる段階的な説明と、{{site.data.keyword.Bluemix_notm}} にデプロイして実行できるコードが含まれています)。
 
 ## サンプルのスマート・コントラクト
+
 {: #samples}
 
 [https://github.com/ibm-watson-iot/blockchain-samples](https://github.com/ibm-watson-iot/blockchain-samples) から多数のサンプル・コントラクトをダウンロードできます。これらのサンプル・コントラクトを土台として使用し、デプロイ可能なチェーン・コードに独自のユースケースを組み込んで開発することができます。
 
 |サンプル・コントラクト |説明 |
 |:---|:---|
-|[基本的なブロック・チェーン・コントラクト](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/simple_contract_hyperledger) |ブロック・チェーンのデバイス・アセット・データを追跡して格納できるコントラクト
-|[トレード・レーン・ブロック・チェーン・コントラクト](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/trade_lane_contract_hyperledger) |基本的なブロック・チェーン・コントラクトを拡張したバージョン|
+|[基本: シンプル・コントラクト](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract) | ブロック・チェーンのデバイス・アセット・データを追跡して格納するための簡略版の拡張コントラクト
+|[拡張: IoT 汎用サンプル・コントラクト](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract) | データ・モデルと動作に数多くの機能や**トレード・レーン**の特色を追加した拡張サンプル・コントラクト|
 
 
 ## {{site.data.keyword.blockchainfull_notm}} 環境の構成
+
 {: #configure_environment}
 スマート・コントラクトをデプロイしてテストする前に、自分用のブロック・チェーン環境をセットアップする必要があります。
 
 **注:** {{site.data.keyword.iot_short_notm}} ブロック・チェーン統合は、{{site.data.keyword.blockchainfull_notm}} ファブリックと Hyperledger ファブリックの両方への接続をサポートしています。以下の例は、{{site.data.keyword.blockchainfull_notm}} を使用することを前提としています。
 
 1. {{site.data.keyword.blockchainfull_notm}} ファブリックを作成し、構成します。
+
+
 {{site.data.keyword.iot_short_notm}} ブロック・チェーン統合では、ブロック・チェーン台帳、スマート・コントラクト、一般的なブロック・チェーン・インフラストラクチャーを管理するために {{site.data.keyword.blockchainfull_notm}} ファブリックが必要です。{{site.data.keyword.Bluemix_notm}} ブロック・チェーン統合は、{{site.data.keyword.blockchainfull_notm}} を使用してチェーンを管理します。利用できる既存の {{site.data.keyword.blockchainfull_notm}} 環境がある場合は、その環境を使用できます。環境がない場合は、{{site.data.keyword.blockchainfull_notm}} インスタンスを {{site.data.keyword.Bluemix_notm}} [カタログ](https://console.ng.bluemix.net/catalog/services/blockchain/)から作成する必要があります。
 
- 1. {{site.data.keyword.Bluemix_notm}} アカウントのダッシュボードから、**「サービスまたは API の使用」**をクリックします。
- 2. サービス・カタログの試験セクションを見つけ、**「ブロック・チェーン」**を選択します。
+  1. {{site.data.keyword.Bluemix_notm}} アカウントのダッシュボードから、**「サービスまたは API の使用」**をクリックします。
+  2. サービス・カタログの試験セクションを見つけ、**「ブロック・チェーン」**を選択します。
    **ヒント:** [こちら](https://console.ng.bluemix.net/catalog/services/blockchain/)をクリックすると、{{site.data.keyword.blockchainfull_notm}} 試験サービス・ページに直接移動できます。
- 3. {{site.data.keyword.blockchainfull_notm}} サービス・ページで、「サービスの追加」選択内容を確認します。  
+  3. {{site.data.keyword.blockchainfull_notm}} サービス・ページで、「サービスの追加」選択内容を確認します。  
     - スペース - デフォルトの `dev` スペース以外のスペースがある場合は、サービスのデプロイ先が意図したスペースであることを確認してください。
     - アプリ - アンバインドのままにします。
     - サービス名 - 覚えやすいサービス名に変更することもできます。この名前は、{{site.data.keyword.Bluemix_notm}} ダッシュボードの {{site.data.keyword.blockchainfull_notm}} タイルに表示されます。
@@ -266,7 +276,7 @@ IBM は多数のスマート・コントラクトを提供しています。ダ�
 スマート・コントラクトをテストするには、エンドツーエンドのテストを実行します。そのためには、デバイスを {{site.data.keyword.iot_short_notm}} で作成し、デバイスを {{site.data.keyword.iot_short_notm}} に接続し、IoT Blockchain をブロック・チェーン・ファブリックに接続するように構成し、{{site.data.keyword.iot_short_notm}} を、デバイス・メッセージをマップしてブロック・チェーンに格納するように構成します。{{site.data.keyword.blockchainfull_notm}} コンソールを使用すると、ブロック・チェーンを表示して、台帳内のデバイス・データを確認できます。コントラクトが readAsset() 関数をサポートしている場合には、Monitoring UI を使用してブロック・チェーンを表示し、自分のシナリオから生成されたデバイス・データが、消えずにブロック・チェーンに格納される様子を確認できます。
 
 5. {{site.data.keyword.blockchainfull_notm}} に接続するように Monitoring UI を構成します。
- **ヒント:** Monitoring UI をローカル環境にインストールしていない場合には、このときにインストールすることができます。[Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/monitoring_ui) GitHub ディレクトリーにある Monitoring UI の README ドキュメントの手順に従ってください。
+ **ヒント:** Monitoring UI をローカル環境にインストールしていない場合には、このときにインストールすることができます。[Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub ディレクトリーにある Monitoring UI の README ドキュメントの手順に従ってください。
  **「CONFIGURATION」**ボタンをクリックして構成設定にアクセスします。
  次の情報を使用して、コントラクトに接続します。
 <table>

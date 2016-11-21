@@ -18,7 +18,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 系统详细信息
 {: #openwhisk_reference}
-上次更新时间：2016 年 8 月 4 日
+上次更新时间：2016 年 9 月 9 日
 {: .last-updated}
 
 以下各部分提供了有关 {{site.data.keyword.openwhisk}} 系统的更多详细信息。
@@ -93,14 +93,12 @@ copyright:
 
 此外，不保证操作以原子方式执行。两个操作可以并行运行，其副作用可能会交错。对于副作用，OpenWhisk 并不能确保任何特定的并行一致性模型。任何并行副作用都将依赖于实施。
 
-### 至多一次语义
+### 操作执行保证
 {: #openwhisk_atmostonce}
-
-系统支持操作的至多一次调用。
 
 收到调用请求时，系统会记录该请求，并分派激活。
 
-系统会返回激活标识（对于非阻塞调用），以确认收到了调用。请注意，即便缺少此响应（可能是因为网络连接中断），也可能会收到调用。
+系统会返回激活标识（对于非阻塞调用），以确认收到了调用。请注意，如果在接收 HTTP 响应之前存在网络故障或其他引起干预的故障，那么 {{site.data.keyword.openwhisk_short}} 可以接收并处理请求。
 
 系统尝试调用操作一次，产生以下四个结果之一：
 - *success*：操作调用成功完成。
@@ -111,6 +109,7 @@ copyright:
 
 成功收到的每个调用以及可能对用户记帐的每个调用最终都将具有激活记录。
 
+请注意，对于 *操作开发者错误*，操作可能已部分运行并生成外部可视的副作用。用户应负责检查是否实际发生了此类副作用并根据需要发出重试逻辑。另请注意，某些 *whisk 内部错误*将指示操作已开始运行，但在操作注册完成之前系统发生故障。
 
 ## 激活记录
 {: #openwhisk_ref_activation}
@@ -122,7 +121,7 @@ copyright:
 - *activationId*：激活标识。
 - *start* 和 *end*：记录激活开始时间和结束时间的时间戳记。值为 [UNIX 时间格式](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_15)。
 - *namespace* 和 `name`：实体的名称空间和名称。
-- *logs*：字符串数组，其中包含在操作激活期间由操作生成的日志。每个数组元素对应于操作向 ``stdout`` 或 ``stderr` 生成的一行输出，并且包含日志输出的时间和流。结构如下：```TIMESTAMP STREAM: LOG_OUTPUT```.
+- *logs*：字符串数组，其中包含在操作激活期间由操作生成的日志。每个数组元素对应于操作向 `stdout` 或 `stderr` 生成的一行输出，并且包含日志输出的时间和流。结构如下：`TIMESTAMP STREAM: LOG_OUTPUT`。
 - *response*：用于定义 `success`、`status` 和 `result` 键的字典：
   - *status*：激活结果，可能为以下某个值：“success”、“application error”、“action developer error”和“whisk internal error”。
   - *success*：当且仅当 status 为“`success`”时，此项为 `true`
@@ -160,8 +159,8 @@ JavaScript 函数即便返回之后，仍在回调函数中继续执行是很常
 
 如果 main 函数在以下某个条件下退出，那么 JavaScript 操作的激活是**同步**的：
 
-- main 函数在不执行 ```return``` 语句的情况下退出。
-- main 函数通过执行 ```return``` 语句退出，此语句返回*除* Promise 以外的任何值。
+- main 函数在不执行 `return` 语句的情况下退出。
+- main 函数通过执行 `return` 语句退出，此语句返回*除* Promise 以外的任何值。
 
 下面是异步操作的示例。
 
@@ -201,7 +200,7 @@ function main(args) {
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
-            reject({ done: true });
+        reject({ done: true });
        }, 100);
     })
  }
@@ -216,7 +215,7 @@ function main(args) {
          // asynchronous activation
          return new Promise(function(resolve, reject) {
                 setTimeout(function() {
-            resolve({ done: true });
+        resolve({ done: true });
                 }, 100);
              })
       } else {
@@ -224,46 +223,64 @@ function main(args) {
          return {done: true};
       }
   }
-````
+```
 {: codeblock}
 
 请注意，不管激活是同步还是异步的，操作的调用都可以是阻塞或非阻塞调用。
 
 ### 其他 SDK 方法
-{: #openwhisk_ref_javascript_additsdk}
 
-`whisk.invoke()` 函数会调用其他操作。它会接受定义以下参数的字典作为自变量：
+`whisk.invoke()` 函数会调用其他操作，并对生成的激活返回 Promise。它会接受定义以下参数的字典作为自变量：
 
 - *name*：要调用的操作的标准名称。
 - *parameters*：表示所调用操作的输入的 JSON 对象。如果省略，缺省值为空对象。
-- *apiKey*：用于调用操作的授权密钥。缺省值为 `whisk.getAuthKey()`。 
-- *blocking*：操作应该以阻塞还是非阻塞方式调用。缺省值为 `false`，指示非阻塞调用。
-- *next*：调用完成时要执行的可选回调函数。
+- *apiKey*：用于调用操作的授权密钥。缺省值为 `whisk.getAuthKey()`。
+- *blocking*：操作应该以阻塞还是非阻塞方式调用。`blocking` 为 true 时，调用将等待已调用操作的结果，得到结果后才会解析返回的 Promise。缺省值为 `false`，指示非阻塞调用。
 
-`next` 的特征符为 `function(error, activation)`，其中：
+`whisk.invoke()` 返回 Promise。为了使 OpenWhisk 系统等待调用完成，必须从操作的 `main` 函数返回此 Promise。
+- 如果调用失败，Promise 将通过描述失败调用的对象予以拒绝。这可能具有两个字段：
+  - *error*：描述错误的对象 - 通常为字符串。
+  - *activation*：可选字典，不一定存在，具体取决于调用失败的性质。如果存在，那么将具有以下字段：
+    - *activationId*：激活标识。
+    - *result*：如果操作是以阻塞方式调用的，操作结果为 JSON 对象，否则为 `undefined`。
+- 如果调用成功，Promise 将通过字典进行解析，字典描述具有上述 *activationId* 和 *result* 字段的激活。
 
-- 如果调用成功，那么 `error` 为 `false`，如果调用失败，那么为 *truthy* 值（在布尔上下文中评估时会转换为 true 的值），通常是描述错误的字符串。
-- 出错时，`activation` 可能未定义，具体取决于失败方式。
-- 定义时，`activation` 是包含以下字段的字典：
-  - *activationId*：激活标识。
-  - *result*：如果操作是以阻塞方式调用的，操作结果为 JSON 对象，否则为 `undefined`。
+下面是利用所返回 Promise 的阻塞调用的示例：
+```javascript
+return whisk.invoke({
+  name: 'myAction',
+  blocking: true
+})
+.then(function (activation) {
+    // activation completed successfully, activation contains the result
+    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
+})
+.catch(function (reason) {
+    console.log('An error has occured ' + reason.error);
 
-`whisk.trigger()` 函数会触发触发器。它会接受带有以下参数的 JSON 对象作为自变量：
+    if(reason.activation) {
+      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
+    } else {
+      console.log('Failed to create activation.');
+    }
+});
+```
+{: codeblock}
+
+`whisk.trigger()` 函数会触发触发器，并对生成的激活返回 Promise。它会接受带有以下参数的 JSON 对象作为自变量：
 
 - *name*：要调用的触发器的标准名称。
 - *parameters*：表示触发器的输入的 JSON 对象。如果省略，缺省值为空对象。
 - *apiKey*：用于触发触发器的授权密钥。缺省值为 `whisk.getAuthKey()`。
-- *next*：触发完成时要执行的可选回调。
 
-`next` 的特征符为 `function(error, activation)`，其中：
-
-- 如果触发成功，那么 `error` 为 `false`，如果触发失败，那么为 *truthy* 值，通常是描述错误的字符串。
-- 出错时，`activation` 可能未定义，具体取决于失败方式。
-- 定义时，`activation` 是带有 `activationId` 字段（包含激活标识）的字典。
+`whisk.trigger()` 返回 Promise。如果需要 OpenWhisk 系统等待触发完成，那么应该从操作的 `main` 函数返回此 Promise。
+- 如果触发失败，Promise 将通过描述错误的对象予以拒绝。
+- 如果触发成功，Promise 将通过字典进行解析，字典具有包含激活标识的 `activationId` 字段。
 
 `whisk.getAuthKey()` 函数将返回当前运行操作所使用的授权密钥。通常，无需直接调用此函数，因为它由 `whisk.invoke()` 和 `whisk.trigger()` 函数隐式使用。
 
-### Node.js 运行时环境
+### JavaScript 运行时环境
+{: #openwhisk_ref_javascript_environments}
 
 JavaScript 操作缺省情况下在 Node.js V6.2.0 环境中执行。如果在创建/更新操作时使用“nodejs:6”值明确指定 `--kind` 标记，那么 6.2.0 环境也将用于操作。
 以下包可在 Node.js 6.2.0 环境中使用：
@@ -354,20 +371,55 @@ JavaScript 操作缺省情况下在 Node.js V6.2.0 环境中执行。如果在�
 - xmlhttprequest v1.7.0
 - yauzl v2.3.1
 
+## Python 操作
+
+缺省情况下，Python 操作使用 Python 2.7.12 执行。除了标准 Python 库外，以下包也可供 Python 操作使用。
+
+- attrs v16.1.0
+- beautifulsoup4 v4.5.1
+- cffi v1.7.0
+- click v6.6
+- cryptography v1.5
+- cssselect v0.9.2
+- enum34 v1.1.6
+- flask v0.11.1
+- gevent v1.1.2
+- greenlet v0.4.10
+- httplib2 v0.9.2
+- idna v2.1
+- ipaddress v1.0.16
+- itsdangerous v0.24
+- jinja2 v2.8
+- lxml v3.6.4
+- markupsafe v0.23
+- parsel v1.0.3
+- pyasn1 v0.1.9
+- pyasn1-modules v0.0.8
+- pycparser v2.14
+- pydispatcher v2.0.5
+- pyopenssl v16.1.0
+- python-dateutil v2.5.3
+- queuelib v1.4.2
+- requests v2.11.1
+- scrapy v1.1.2
+- service-identity v16.0.0
+- simplejson v3.8.2
+- six v1.10.0
+- twisted v16.4.0
+- w3lib v1.15.0
+- werkzeug v0.11.10
+- zope.interface v4.3.1
 
 ## Docker 操作
 {: #openwhisk_ref_docker}
 
-Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二进制文件在基于 Ubuntu 14.04 LTD 的 Docker 映像中运行，所以该二进制文件必须与此分发版兼容。
+Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二进制文件在基于 [python:2.7.12-alpine](https://hub.docker.com/r/library/python) 的 Docker 映像中运行，所以该二进制文件必须与此分发版兼容。
 
-操作输入“payload”参数会作为位置参数传递给二进制程序，并且在“result”参数中会返回执行该程序生成的标准输出。
+通过 Docker 框架，可以方便地构建兼容 OpenWhisk 的 Docker 映像。可以使用 `wsk sdk install docker` CLI 命令安装该框架。
 
-通过 Docker 框架，可以方便地构建兼容 {{site.data.keyword.openwhisk_short}} 的 Docker 映像。可以使用 `wsk sdk install docker` CLI 命令安装该框架。
+主二进制程序必须位于容器内的 `/action/exec` 中。可执行文件通过 `stdin` 接收输入自变量，并且必须通过 `stdout` 返回结果。
 
-主二进制程序会复制到 `dockerSkeleton/client/action` 文件。任何附带文件或库都可以存在于 `dockerSkeleton/client` 目录中。
-
-您还可以通过修改 `dockerSkeleton/Dockerfile` 来包含任何编译步骤或依赖关系。例如，如果操作是 Python 脚本，那么可以安装 Python。
-
+您可以通过修改 `dockerSkeleton` 中包含的 `Dockerfile` 来包含任何编译步骤或依赖关系。
 
 ## REST API
 {: #openwhisk_ref_restapi}
@@ -376,14 +428,14 @@ Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二�
 
 以下是集合端点：
 
-- `https://{BASE URL}/api/v1/namespaces`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations`
+- `https://openwhisk.{DomainName}/api/v1/namespaces`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
 
-`{BASE URL}` 是 OpenWhisk API 主机名（例如 openwhisk.ng.bluemix.net、172.17.0.1 等）。
+`openwhisk.{DomainName}` 是 OpenWhisk API 主机名（例如，openwhisk.ng.bluemix.net、172.17.0.1 等）。
 
 对于 `{namespace}`，可以使用字符 `_` 来指定用户的 *缺省名称空间*（即电子邮件地址）。
 
@@ -391,12 +443,12 @@ Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二�
 
 每一个实体类型都具有实体端点：
 
-- `https://{BASE URL}/api/v1/namespaces/{namespace}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://{BASE URL}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
 
 名称空间和激活端点仅支持 GET 请求。操作、触发器、规则和包端点支持 GET、PUT 和 DELETE 请求。操作、触发器和规则的端点还支持 POST 请求，其用于调用操作和触发器，以及启用或禁用规则。有关详细信息，请参阅 [API参考](https://new-console.{DomainName}/apidocs/98)。
 
@@ -435,7 +487,8 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 ## 系统限制
 {: #openwhisk_syslimits}
 
-{{site.data.keyword.openwhisk_short}} 存在一些系统限制，包括一个操作使用的内存量和每小时允许的操作调用数。下表列出了缺省限制。
+### 操作
+{{site.data.keyword.openwhisk_short}} 存在一些系统限制，包括一个操作使用的内存量和每小时允许的操作调用数。下表列出了操作的缺省限制。
 
 | 限制 | 描述 | 可配置 | 单位 | 缺省值 |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -471,6 +524,10 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 * 操作的最大代码大小为 48MB。
 * 建议 JavaScript 操作使用工具，将所有源代码（包括依赖关系）连接为单个捆绑文件。
 
+### 每个激活有效内容大小 (MB)（固定值：1 MB）
+{: #openwhisk_syslimits_activationsize}
+* 最大 POST 内容大小加上用于操作调用或触发的任何加工参数等于 1 MB。
+
 ### 每个名称空间的并行调用数（缺省值：100）
 {: #openwhisk_syslimits_concur}
 * 当前为一个名称空间处理的激活数不能超过 100。
@@ -481,7 +538,7 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 {: #openwhisk_syslimits_invocations}
 * 速率限制 N 设置为 120/3600，用于限制 1 分钟/小时时段中的操作调用数。
 * 用户在创建操作时不能更改此限制。
-* 超过此限制的 CLI 调用将收到与 TOO_MANY_REQUESTS 对应的错误代码。
+* 超过此限制的 CLI 或 API 调用将收到与 HTTP 状态码“`429：请求过多`”对应的错误代码。
 
 ### 参数的大小（固定值：1MB）
 {: #openwhisk_syslimits_parameters}
@@ -500,3 +557,18 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 * 用户可用的最大进程数为 512（同时适用于硬限制和软限制）。
 * docker run 命令使用自变量 `--ulimit nproc=512:512`。
 * 有关最大进程数 ulimit 的更多信息，请参阅 [docker run](https://docs.docker.com/engine/reference/commandline/run) 文档。
+
+### 触发器
+
+触发器受每分钟和每小时触发率的影响，如下表中所述。
+
+| 限制 | 描述 | 可配置 | 单位 | 缺省值 |
+| ----- | ----------- | ------------ | -----| ------- |
+| minuteRate | 用户每分钟触发的触发器数不能超过此值 | 每个用户 | 个 | 60 |
+| hourRate | 用户每小时触发的触发器数不能超过此值 | 每个用户 | 个 | 720 |
+
+### 每分钟/小时的触发器数（固定值：60/720）
+{: #openwhisk_syslimits_triggerratelimit}
+* 速率限制 N 设置为 60/720，用于限制 1 分钟/小时时段中可能触发的触发器数。
+* 用户在创建触发器时不能更改此限制。
+* 超过此限制的 CLI 或 API 调用将收到与 HTTP 状态码“`429：请求过多`”对应的错误代码。

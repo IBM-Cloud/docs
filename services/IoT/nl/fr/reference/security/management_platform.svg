@@ -720,7 +720,8 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     showguides="false" />
   <metadata
      id="metadata5650">
     <rdf:RDF>
@@ -1445,30 +1446,52 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">REST</text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:12.50000112px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'sans-serif, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-27.538048"
        y="590.55298"
        id="text4681-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3604">Utilisation de  clés d'API</tspan><tspan
+         x="-27.538048"
+         y="590.55298"
+         style="font-size:12.50000191px"
+         id="tspan4687-8">Utilisation de <tspan
+   style="font-weight:bold"
+   id="tspan5838">clés d'API</tspan></tspan><tspan
          sodipodi:role="line"
-         id="tspan3606">pour passer des appels</tspan><tspan
+         x="-27.538048"
+         y="606.17798"
+         style="font-size:12.50000191px"
+         id="tspan5834">pour passer des appels </tspan><tspan
          sodipodi:role="line"
-         id="tspan3608">REST authentifiés</tspan><tspan
+         x="-27.538048"
+         y="621.80298"
+         style="font-size:12.50000191px"
+         id="tspan11042">REST authentifiés</tspan><tspan
          sodipodi:role="line"
-         id="tspan3610"></tspan><tspan
+         x="-27.538048"
+         y="637.42798"
+         style="font-size:12.50000191px"
+         id="tspan5836" /><tspan
          sodipodi:role="line"
-         id="tspan3612"></tspan></text>
+         x="-27.538048"
+         y="653.05298"
+         style="font-size:12.50000191px"
+         id="tspan5832" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:12.50000112px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'sans-serif, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
-       x="231.09512"
-       y="639.76343"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="225.09512"
+       y="637.76343"
        id="text4681"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3602">Authentification via IBMid</tspan></text>
+         x="225.09512"
+         y="637.76343"
+         style="font-size:12.50000191px"
+         id="tspan4687">Authentification via <tspan
+   style="font-weight:bold"
+   id="tspan5809">un ID IBM</tspan>.</tspan></text>
     <g
        id="g11065"
        transform="translate(246.68159,543.97041)">

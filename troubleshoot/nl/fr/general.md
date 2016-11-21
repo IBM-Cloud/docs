@@ -31,7 +31,7 @@ Il se peut que vous receviez un message d'erreur lorsque vous tentez de supprime
 {:shortdesc}
 
 
-Lorsque vous tentez de supprimer une instance de service, le message d'erreur du courtier de services ```Gateway timeout``` s'affiche.
+Lorsque vous tentez de supprimer une instance de service, le message d'erreur du courtier de services `Gateway timeout` s'affiche.
 {: tsSymptoms}
 
 

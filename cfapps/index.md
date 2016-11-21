@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-04-18" 
 
 ---
 
@@ -14,8 +14,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # Creating Cloud Foundry apps
-*Last updated: 18 April 2016*
-{: .last-updated}
 
 With {{site.data.keyword.Bluemix}}, you can create your app in the {{site.data.keyword.Bluemix_notm}} user interface. After it's created, you can decide to continue to use the UI, use the cf command line interface, or use {{site.data.keyword.jazzhub_title}} to develop, track, plan, and deploy your app.
 {:shortdesc}

@@ -140,10 +140,16 @@ wsk action update hello hello.js
   ```
   {: pre}
 
-3. ルールを作成して有効にします。3 つのパラメーターは、ルールの名前、トリガー、およびアクションです。
+3. ルールを作成します。ルールは作成時に有効化されることに注意してください。つまり、ルールは即時にトリガーのアクティベーションに応答できるようになります。3 つのパラメーターは、ルールの名前、トリガー、およびアクションです。
 
   ```
-wsk rule create --enable myRule locationUpdate hello
+  wsk rule create myRule locationUpdate hello
+  ```
+  {: pre}
+
+  ルールを無効にすることをいつでも選択できます。
+  ```
+  wsk rule disable myRule
   ```
   {: pre}
 
@@ -185,4 +191,4 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   hello アクションがイベント・ペイロードを受け取り、予期されるストリングを戻したことが分かります。
 
 複数のルールを作成して、同じトリガーを異なるアクションに関連付けることができます。ルールを構成するトリガーとアクションは、同じ名前空間内に存在する必要があり、パッケージに属していてはなりません。
-パッケージに属しているアクションを使用する場合は、そのアクションを名前空間にコピーします。例えば、`wsk action create echo --copy /whisk.system/samples/echo` などです。
+パッケージに属しているアクションを使用する場合は、そのアクションを名前空間にコピーします。例えば、`wsk action create echo --copy /whisk.system/utils/echo` です。

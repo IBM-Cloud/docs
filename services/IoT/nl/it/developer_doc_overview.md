@@ -35,7 +35,7 @@ Esistono molti modi in cui puoi configurare e collegare i tuoi dispositivi a {{s
 
 Puoi creare e gestire le applicazioni in {{site.data.keyword.iot_short}} utilizzando i seguenti standard e protocolli supportati:
 
-- Protocollo di messaggistica MQTT 
+- Protocollo di messaggistica MQTT
 - Python
 - Node.js
 - Java
@@ -44,9 +44,9 @@ Puoi creare e gestire le applicazioni in {{site.data.keyword.iot_short}} utilizz
 ## Sviluppo del dispositivo
 {: #device-dev}
 
-Puoi creare e gestire i dispositivi in {{site.data.keyword.iot_short}} utilizzando i seguenti standard e protocolli supportati: 
+Puoi creare e gestire i dispositivi in {{site.data.keyword.iot_short}} utilizzando i seguenti standard e protocolli supportati:
 
-- Protocollo di messaggistica MQTT 
+- Protocollo di messaggistica MQTT
 - Python
 - Node.js
 - Java
@@ -56,5 +56,5 @@ Puoi creare e gestire i dispositivi in {{site.data.keyword.iot_short}} utilizzan
 
 ## Sviluppo del gateway
 {: #gateway-dev}
-Se i tuoi dispositivi non possono collegarsi direttamente a internet, utilizza le informazioni fornite per creare un dispositivo gateway per richiamare e inviare i dati alle applicazioni nella tua organizzazione {{site.data.keyword.iot_short}}.
+Se i tuoi dispositivi non possono collegarsi direttamente a internet, utilizza le informazioni fornite per creare un dispositivo gateway per richiamare e inviare i dati alle applicazioni nella tua organizzazione {{site.data.keyword.iot_short}}. 
 Il protocollo di messaggistica MQTT è supportato per lo sviluppo del gateway in {{site.data.keyword.iot_short}}.

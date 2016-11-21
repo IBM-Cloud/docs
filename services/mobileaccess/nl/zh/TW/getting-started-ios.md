@@ -2,17 +2,18 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:shortdesc: .shortdesc}
 
 # 設定 iOS Objective-C SDK
 {: #getting-started-ios}
 
-前次更新：2016 年 7 月 17 日
-{: .last-updated}
 
-使用 {{site.data.keyword.amashort}} SDK 檢測 iOS 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
+
+使用 {{site.data.keyword.amafull}} SDK 檢測 iOS 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
+
+
 {:shortdesc}
 
 **重要事項：**雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚停止使用此 SDK，改用新的 Swift SDK。對於新的應用程式，強烈建議使用 Swift SDK（請參閱[設定 iOS Swift SDK](getting-started-ios-swift-sdk.html)）。
@@ -21,10 +22,6 @@ copyright:
 {: #before-you-begin}
 您必須具有：
 * {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
-
-
-
-
 * Xcode 專案。  
 
 
@@ -36,13 +33,14 @@ copyright:
 ### 安裝 CocoaPods
 {: #install-cocoapods}
 
-1. 開啟「終端機」，並執行 **pod --version** 指令。如果您已經安裝 CocoaPods，則會顯示版本號碼。您可以跳到下一節來安裝 SDK。
+1. 開啟「終端機」，並執行 **pod --version** 指令。如果您已經安裝 CocoaPods，則會顯示版本號碼。請跳到下一節來安裝 SDK。
 
 1. 如果您未安裝 CocoaPods，請執行：
 
 ```
 sudo gem install cocoapods
 ```
+
 如需相關資訊，請參閱 [CocoaPods 網站](https://cocoapods.org/)。
 
 ### 使用 CocoaPods 安裝 {{site.data.keyword.amashort}} 用戶端 SDK
@@ -58,7 +56,9 @@ sudo gem install cocoapods
 	pod 'IMFCore'
 	```
 
-1. 儲存 `Podfile` 檔案，然後從指令行執行 `pod install`。<br/>Cocoapods 將安裝新增的相依關係。您可以看到進度及新增的元件。<br/>**重要事項**：CocoaPods 會產生 `xcworkspace` 檔案。您必須開啟此檔案，才能繼續處理專案。
+1. 儲存 `Podfile` 檔案，然後從指令行執行 `pod install`。<br/>Cocoapods 會安裝新增的相依關係，並顯示新增的元件。<br/>
+
+	**重要事項**：CocoaPods 會產生 `xcworkspace` 檔案。您必須開啟此檔案，才能繼續處理專案。
 
 1. 開啟 iOS 專案工作區。開啟 CocoaPods 所產生的 `xcworkspace` 檔案。例如：`{your-project-name}.xcworkspace`。執行 `open {your-project-name}.xcworkspace`。
 
@@ -66,7 +66,6 @@ sudo gem install cocoapods
 {: #init-mca-sdk-ios}
 
 若要使用 {{site.data.keyword.amashort}} 用戶端 SDK，您必須傳遞**路徑** (`applicationRoute`) 及**應用程式 GUID** (`applicationGUID`) 參數來起始設定 SDK。
-
 
 1. 從 {{site.data.keyword.Bluemix_notm}} 儀表板的主頁面，按一下應用程式。按一下**行動選項**。您需要有**路徑**及**應用程式 GUID** 值，才能起始設定 SDK。
 
@@ -79,7 +78,7 @@ sudo gem install cocoapods
 	  #import <IMFCore/IMFCore.h>
 	
 	```
-	
+
 	####Swift
 	{: #sdk-swift}
 	
@@ -92,7 +91,8 @@ sudo gem install cocoapods
 	1. 將值設為 `BridgingHeader.h` 檔案的位置（例如 `$(SRCROOT)/MyApp/BridgingHeader.h`）。
 	1. 建置專案，以確定 Xcode 取得橋接標頭。您應該不會看到任何失敗訊息。
 	
-1. 使用下列程式碼來起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。放置起始設定碼的一般（但非強制）位置是在應用程式委派的 `application:didFinishLaunchingWithOptions` 方法。<br/>請將 *applicationRoute* 及 *applicationGUID* 取代為 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的值。
+1. 使用下列程式碼來起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。放置起始設定碼的一般（但非強制）位置是在應用程式委派的 `application:didFinishLaunchingWithOptions` 方法。<br/>
+將 `applicationRoute` 及 vapplicationGUID 取代為 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的值。
 
 	####Objective-C
 	{: #sharedinstance-objc}
@@ -102,19 +102,35 @@ sudo gem install cocoapods
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
+
 	####Swift
 	{: #sharedinstance-swift}
 	```Swift
  		MFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",backendGUID: "applicationGUID")
 	```
 
-## 對行動後端提出要求
+## 起始設定 AuthorizationManager
+藉由傳遞 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，起始設定 `AuthorizationManager`。按一下 {{site.data.keyword.amashort}} 服務磚上的**顯示認證**按鈕，來尋找此值。
+
+####Objective-C
+	
+```Objective-C
+     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+  ```
+
+####Swift
+
+```Swift
+  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+ ```
+
+## 對行動後端應用程式提出要求
 {: #request}
 
-起始設定 {{site.data.keyword.amashort}} 用戶端 SDK 之後，即可開始對行動後端提出要求。
+起始設定 {{site.data.keyword.amashort}} 用戶端 SDK 之後，即可開始對行動後端應用程式提出要求。
 
-1. 嘗試在瀏覽器中將要求傳送給行動後端上的受保護端點。開啟下列 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`。
-<br/>使用 MobileFirst Services Starter 樣板所建立之行動後端的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。在瀏覽器中會傳回 `Unauthorized` 訊息，因為只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。
+1. 嘗試在瀏覽器中將要求傳送給行動後端應用程式上的受保護端點。開啟下列 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`。
+<br/>使用 MobileFirst Services Starter 樣板所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。在瀏覽器中會傳回 `Unauthorized` 訊息，因為只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。
 
 1. 使用 iOS 應用程式以對相同的端點提出要求。起始設定 `IMFClient` 之後，請新增下列程式碼：
 

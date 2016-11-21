@@ -7,7 +7,7 @@ copyright:
 
 # トラブルシューティング
 {: #errors}
-最終更新日: 2016 年 8 月 16 日
+最終更新日: 2016 年 8 月 29 日
 {: .last-updated}
 
 このセクションは、{{site.data.keyword.mobilepushshort}}の一般的な問題をトラブルシューティングするためのガイドとして使用してください。

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-15"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # API 聚集
 {: #api_aggregation}
-
-*前次更新：2016 年 6 月 15 日*
-{: .last-updated}
 
 部分 {{site.data.keyword.weather_short}} API 可予以聚集。您可以使用聚集，將兩個以上的基本 API 呼叫合併為單一 HTTP 要求。
 {: shortdesc}

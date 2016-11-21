@@ -16,7 +16,7 @@ copyright:
 前次更新：2016 年 8 月 1 日
 {: .last-updated}
 
-{{site.data.keyword.iot_full}} 提供對 IoT 裝置和資料的強大應用程式存取能力，可協助您快速編寫分析應用程式、視覺化儀表板及行動式 IoT 應用程式。
+{{site.data.keyword.iot_full}} 提供對 IoT 裝置和資料的強大應用程式存取權，可協助您快速編寫分析應用程式、視覺化儀表板及行動式 IoT 應用程式。
 {:shortdesc}
 
 {{site.data.keyword.iot_short_notm}} 可讓您執行強大的裝置管理作業、儲存與存取裝置資料，以及連接各種裝置和閘道裝置。{{site.data.keyword.iot_short_notm}} 使用 MQTT 和傳輸層安全 (TLS)，在您的裝置之間提供安全通訊。

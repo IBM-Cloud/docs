@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，20166
 
- 
+lastupdated: "2016-10-18"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -18,8 +18,6 @@ copyright:
 # Szenario: End-to-End-Entwicklung
 {: #ee}
 
-*Letzte Aktualisierung: 16. August 2016*
-{: .last-updated}
 
 Sie können die {{site.data.keyword.Bluemix}}-Benutzerschnittstelle, -Plattform und eine Auswahl von Tools verwenden, wenn Sie Ihre Apps erstellen, ausführen und bereitstellen. Befolgen Sie dieses umfassende Entwicklungsszenario, um zu beginnen.
 {:shortdesc}
@@ -36,13 +34,14 @@ Nachdem Sie sich registriert haben, beginnen Sie in der {{site.data.keyword.Blue
 
 In {{site.data.keyword.Bluemix_notm}} werden Apps Organisationen und Bereichen zugeordnet. Eine Organisation wird von mehreren Mitarbeitern verwendet, die ihr Eigner sind. Zunächst erhalten Sie eine Standardorganisation, die nach Ihrem Benutzernamen benannt ist, und Sie sind der einzige Mitarbeiter. Sie erhalten auch einen Bereich innerhalb dieser Organisation. Der Bereich ist eine Umgebung, in der Ihre Apps ausgeführt werden. Beispiel: Sie können einen Entwicklungsbereich als Entwicklungsumgebung verwenden, einen Testbereich als Testumgebung und einen Produktionsbereich als Produktionsumgebung. Darüber hinaus gehört jede Umgebung zu einer Region. Mit {{site.data.keyword.Bluemix_notm}} können Sie Ihre Anwendungen in einer bestimmten geografischen Region bereitstellen, um die Netzlatenz zu verringern und den Datenschutz und die Verfügbarkeit zu verbessern. Details finden Sie unter 'Regionen'.
 
-In diesem Szenario möchten Sie mithilfe von Node.js eine Web-App entwickeln. Sie befinden sich in den USA, ebenso wie die meisten Ihrer App-Benutzer. Sie entscheiden sich, Ihre App in der Nähe Ihrer Benutzerbasis zu erstellen und auszuführen, sodass Sie von der geringeren Netzlatenz profitieren können. Klicken Sie nach der Anmeldung an {{site.data.keyword.Bluemix_notm}} auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) und wählen Sie die Region **Vereinigte Staaten (Süden)** aus. Führen Sie anschließend die folgenden Schritte zum Erstellen einer App aus:
+In diesem Szenario möchten Sie mithilfe von Node.js eine Web-App entwickeln. Sie befinden sich in den USA, ebenso wie die meisten Ihrer App-Benutzer. Sie entscheiden sich, Ihre App in der Nähe Ihrer Benutzerbasis zu erstellen und auszuführen, sodass Sie von der geringeren Netzlatenz profitieren können. Klicken Sie nach der Anmeldung bei {{site.data.keyword.Bluemix_notm}} auf den Link zu den Benutzerkontovorgaben und wählen Sie anschließend die Region **Vereinigte Staaten (Süden)** aus. Führen Sie anschließend die folgenden Schritte zum Erstellen einer App aus:
 
-  1. Wählen Sie **Compute** aus.
-  2. Klicken Sie auf das Plussymbol.
+  1. Rufen Sie **Katalog** auf. 
+  2. Wählen Sie **Cloud Foundry-Laufzeiten**.
   3. Wählen Sie **SDK for Node.js** aus.
   4. Geben Sie einen eindeutigen Namen für Ihre App ein. Zum Beispiel: TestNode. Klicken Sie anschließend auf **Erstellen**. Der Name der App muss in der gesamten {{site.data.keyword.Bluemix_notm}}-Umgebung eindeutig sein.
-  
+  5. Klicken Sie auf **Erstellen**.
+
 Jetzt werden die **Coding beginnen**-Anweisungen angezeigt. Sie können die Anweisungen befolgen, um den Startercode von TestNode herunterzuladen, zu ändern und bereitzustellen.
 
 Der App ist standardmäßig ein Kontingent von 1 Instanz und 512 MB Speicher zugewiesen. Sie können den
@@ -61,10 +60,10 @@ von {{site.data.keyword.Bluemix_notm}} bereitgestellt wird, zu verwenden.
 
 Um Services in der Anwendung verwenden zu können, müssen Sie eine entsprechende Serviceinstanz erstellen und Ihre Anwendung an die Serviceinstanz binden, indem Sie die folgenden Schritte ausführen:
   1. Klicken Sie auf der Übersichtsseite der App auf **Service oder API hinzufügen**.
-  2. Wählen Sie im {{site.data.keyword.Bluemix_notm}}-Katalog den Service {{site.data.keyword.cloudant}} aus.
+  2. Wählen Sie im {{site.data.keyword.Bluemix_notm}}-Katalog den {{site.data.keyword.cloudant}}-Service aus.
   3. Geben Sie einen eindeutigen Namen für die Serviceinstanz ein oder verwenden Sie den Standardnamen, der von {{site.data.keyword.Bluemix_notm}} generiert wird, und klicken Sie auf **Erstellen**.
   4. Das Fenster 'Erneutes Staging für Anwendung' wird angezeigt. Klicken Sie auf **Erneutes Staging**, um für Ihre App ein erneutes Staging durchzuführen.
-  
+
 Nun wird Ihre App an den Service {{site.data.keyword.cloudant}} gebunden. In der Umgebungsvariablen VCAP_SERVICES finden Sie alle erforderlichen Daten für die Kommunikation zwischen der Anwendung und der Serviceinstanz. Beispiel: Da {{site.data.keyword.Bluemix_notm}} mehrere Anwendungen auf derselben virtuellen Maschine hostet, können Anwendungen
 nicht dieselbe HTTP-Portnummer verwenden, um eingehende Anforderungen zu empfangen. Um Konflikte zu vermeiden, erhält jede Anwendung eine eindeutige Portnummer. Diese Portnummer wird über die Variable VCAP_APP_PORT zur Verfügung gestellt.
 
@@ -99,48 +98,47 @@ In {{site.data.keyword.Bluemix_notm}} werden verschiedene Tools bereitgestellt, 
 TestNode zu beginnen.
 
   1. Laden Sie als erstes den Code Ihrer App herunter und entwickeln Sie ihn.
-  
+
     1. Wechseln Sie zur Seite 'Coding beginnen' Ihrer App. klicken Sie auf die Schaltfläche **Startercode herunterladen**, um den Code für Ihre App herunterzuladen.
     2. Extrahieren Sie die heruntergeladene Datei in ein Verzeichnis, z. B. `C:\test`.
     3. Entwickeln Sie den Code mit Ihrer lokalen integrierten Entwicklungsumgebung.
-	
+
   2. Installieren Sie die Befehlszeilenschnittstelle (Command Line Interface, CLI) **cf**.
-  
+
     1. Laden Sie das Installationsprogramm für das Befehlszeilentool 'cf' für Ihr Betriebssystem herunter.
     2. Befolgen Sie die Anweisungen im Assistenten des Tools, um die Installation auszuführen.
     3. Überprüfen Sie mithilfe des Befehls **cf -v** die Version der Befehlszeilenschnittstelle 'cf'. Beispiel:
-	
+
 	```
 	cf -v
 	```
-	
+
     **Anforderung:** Vergewissern Sie sich, dass Sie stets die neueste Version des Befehlszeilentools 'cf' verwenden.
-  3. Nach der Installation der Befehlszeilenschnittstelle **cf** müssen Sie angeben, mit welcher {{site.data.keyword.Bluemix_notm}}-Region Sie arbeiten wollen, indem Sie den Befehl **cf api** verwenden. Die Befehlszeilenschnittstelle **cf** verwendet *https://api.Bluemix-URL*, wobei *Bluemix-URL* die URL der Region ist. Die URL der Region 'Vereinigte Staaten (Süden)' lautet: {{Domain}}. Geben Sie den folgenden Befehl ein, um eine Verbindung zu
+  3. Nach der Installation der Befehlszeilenschnittstelle **cf** müssen Sie angeben, mit welcher {{site.data.keyword.Bluemix_notm}}-Region Sie arbeiten wollen, indem Sie den Befehl **cf api** verwenden. Die Befehlszeilenschnittstelle **cf** verwendet *https://api.Bluemix-URL*, wobei *Bluemix-URL* die URL der Region ist. Die URL der Region 'Vereinigte Staaten (Süden)' lautet stage1.ng.bluemix.net. Geben Sie den folgenden Befehl ein, um eine Verbindung zu
 {{site.data.keyword.Bluemix_notm}} herzustellen:
-  
+
   ```
-cf api https://api.ng.bluemix.net
-  ```
-  
+  cf api https://api.ng.bluemix.net
+   ```
+
   Weitere Informationen zum Herstellen einer Verbindung zu anderen {{site.data.keyword.Bluemix_notm}}-Regionen finden Sie im Abschnitt zu den {{site.data.keyword.Bluemix_notm}}-Regionen. Nach Angabe der {{site.data.keyword.Bluemix_notm}}-Region werden die von Ihnen angegebenen Positionsinformationen
 gespeichert.
-  
+
   4. Melden Sie sich als Nächstes bei {{site.data.keyword.Bluemix_notm}} an, indem Sie den Befehl 'cf login' verwenden.
-  
+
   ```
-cf login -u eigene_benutzer-id -p ***** -o name_der_eigenen_organisation -s name_des_eigenen_bereichs
+  cf login -u eigene_benutzer-id -p ***** -o name_der_eigenen_organisation -s name_des_eigenen_bereichs
   ```
-  
+
   5. Nachdem Sie sich bei {{site.data.keyword.Bluemix_notm}} angemeldet haben, können Sie Ihre App in {{site.data.keyword.Bluemix_notm}} bereitstellen. Geben Sie im Verzeichnis (`C:\test`) der App den folgenden Befehl ein:
-  
+
   ```
-cf push TestNode
+  cf push TestNode
   ```
-  
+
   Weitere Informationen zum Befehl **cf push** finden Sie unter 'Anwendung hochladen'.
-  
+
   6. Nun können Sie auf die App zugreifen, indem Sie die folgende Anwendungs-URL in einen Browser eingeben:
-  
   ```
   http://TestNode.mybluemix.net
   ```
@@ -158,31 +156,31 @@ mithilfe der Befehlszeilenschnittstelle 'cf' hinzufügen.
 Um den Service {{site.data.keyword.cloudant}} in der App verwenden zu können, müssen Sie eine Cloudant-Serviceinstanz erstellen und Ihre App an die Serviceinstanz binden, bevor Sie die Serviceinstanz anschließend verwenden. Dasselbe Verfahren gilt auch für alle anderen Services.
 
   1. Erstellen Sie eine Cloudant NoSQL DB-Serviceinstanz.
-  
+
   Verwenden Sie den Befehl 'cf create-service', um eine neue Instanz eines Service zu erstellen. Beispiel:
-  
+
   ```
-cf create-service cloudantNoSQLDB Shared cloudant100
+  cf create-service cloudantNoSQLDB Shared cloudant100
   ```
-  
+
   Sie können auch den Befehl 'cf services' verwenden, um eine Liste der Serviceinstanzen anzuzeigen, die Sie erstellt haben.
-  
+
   ```
-cf services
+  cf services
   ```
-  
+
   Nach Erstellung einer Serviceinstanz ist diese Instanz für alle Ihre Anwendungen verfügbar und kann entsprechend gebunden und verwendet werden.
-  
+
   2. Binden Sie die Serviceinstanz an Ihre App.
-  
+
   Um eine Serviceinstanz verwenden zu können, müssen Sie die Instanz an Ihre Anwendung binden. Verwenden Sie den Befehl
 'cf bind-service', um eine Serviceinstanz an eine Anwendung zu binden, indem Sie den Anwendungsnamen und die erstellte Serviceinstanz
 angeben.
-  
+
   ```
-cf bind-service TestNode cloudant100
+  cf bind-service TestNode cloudant100
   ```
-  
+
   Durch das Binden einer Serviceinstanz an eine Anwendung kann {{site.data.keyword.Bluemix_notm}} mit dem Service kommunizieren und angeben, dass eine neue Anwendung mit der betreffenden Serviceinstanz kommunizieren wird. Die Verarbeitung der Anwendung und der Serviceinstanz durch
 {{site.data.keyword.Bluemix_notm}} während der Bindung kann je nach Service unterschiedlich
 sein. Beispiel: Einige Services erstellen unter Umständen für jede Anwendung, die mit der Serviceinstanz kommuniziert, einen neuen Tenant. Der Service gibt eine
@@ -192,24 +190,23 @@ an die Anwendung übergeben werden müssen, um die Kommunikation zwischen der An
   **Hinweis:** Ist die Anwendung gerade aktiv, wenn sie an eine Serviceinstanz gebunden wird, so wird die Umgebungsvariable
 VCAP_SERVICES erst nach einem Neustart der Anwendung aktualisiert. Verwenden Sie den Befehl
 'cf restart', um Ihre Anwendung erneut zu starten.
-  
+
   3. Verwenden Sie die Serviceinstanz.
-  
+
   In diesem Szenario enthält die Umgebungsvariable VCAP_SERVICES Informationen wie beispielsweise die folgenden Elemente, die eine Anwendung
 verwenden kann, um eine Verbindung zu dieser Instanz von {{site.data.keyword.cloudant}} herzustellen:
-  
+
   <dl><dt>username (Benutzername)</dt>
   <dd>d72837bb-b341-4038-9c8e-7f7232916197-bluemix</dd>
   <dt>password (Kennwort)</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url (URL)</dt>
   <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
-  
+
   Beispiel: Ihre Node.js-App könnte wie folgt auf diese Informationen zugreifen:
-  
   ```
-if (process.env.VCAP_SERVICES) {
-    var env = JSON.parse(process.env.VCAP_SERVICES);
+  if (process.env.VCAP_SERVICES) {
+        var env = JSON.parse(process.env.VCAP_SERVICES);
         var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {
@@ -219,21 +216,21 @@ if (process.env.VCAP_SERVICES) {
                 }
         };
   ```
-  
+
   **Hinweis:** Wie der Beispielcode zeigt, kann zur Herstellung einer Verbindung mit einer Serviceinstanz von {{site.data.keyword.cloudant}} zunächst überprüft werden, ob die
 Umgebungsvariable VCAP_SERVICES vorhanden ist. Ist die Umgebungsvariable vorhanden, kann die
 Anwendung die Eigenschaften der Variablen 'cloudant' verwenden, um auf die Datenbank zuzugreifen. Ist
 die Umgebungsvariable VCAP_SERVICES hingegen nicht vorhanden, wird die lokale Serviceinstanz von {{site.data.keyword.cloudant}} mit den bereitgestellten Standardwerten verwendet.
-  
+
   4. Interagieren Sie mit der Serviceinstanz.
-  
+
   Sie können mit einer Serviceinstanz interagieren, indem Sie die entsprechenden Berechtigungsnachweisinformationen verwenden. Zu den möglichen Aktionen gehören Lese-, Schreib- und Aktualisierungsvorgänge. Das folgende Beispiel veranschaulicht, wie ein JSON-Objekt in die Serviceinstanz von
 {{site.data.keyword.cloudant}} eingefügt wird:
-  
   ```
-// Neue Nachricht erstellen
+  // Neue Nachricht erstellen
 var create_message = function(req, res) {
-  require('cloudantdb').connect(cloudant.url, function(err, conn) {    var collection = conn.collection('messages');
+  require('cloudantdb').connect(cloudant.url, function(err, conn) {
+    var collection = conn.collection('messages');
 
     // Nachrichtendatensatz erstellen
     var parsedUrl = require('url').parse(req.url, true);
@@ -250,9 +247,9 @@ var create_message = function(req, res) {
   });
 }
   ```
-  
+
   5. **Optional:** Heben Sie die Bindung einer Serviceinstanz auf oder löschen Sie die Serviceinstanz.
-  
+
   Möglicherweise möchten Sie eine Serviceinstanz löschen oder ihre Bindung aufheben, wenn sie nicht mehr verwendet wird oder Sie Speicher freigeben möchten. Um die Bindung einer Serviceinstanz an Ihre App aufzuheben, verwenden Sie den Befehl
 **cf unbind-service**; um eine Serviceinstanz zu löschen, verwenden Sie den Befehl **cf delete-service**.
 
@@ -273,7 +270,7 @@ hinzufügen, um {{site.data.keyword.Bluemix_notm}} weiterhin nutzen zu können. 
 {{site.data.keyword.Bluemix_notm}} stellt einen Schätzer und eine Berechnungsfunktion zum Anzeigen Ihrer App-Kosten zur Verfügung. Sie können die Kosten von TestNode folgendermaßen anzeigen:
 
   * Klicken Sie in Ihrem Dashboard auf TestNode. Klicken Sie anschließend auf der Übersichtsseite auf **Kosten dieser Anwendung schätzen**, um den Preis für die Laufzeit **SDK for Node.js** und den monatlichen Gesamtpreis der App anzuzeigen.
-  
+
   * Geben Sie alternativ auf der Seite 'Preisliste' die monatliche Nutzung
 der Laufzeit und Services Ihrer App ein. Beispiel: 3 Instanzen von **SDK for Node.js** mit 1 GB Speicher pro Instanz. Der monatliche Preis wird berechnet und angezeigt.
 

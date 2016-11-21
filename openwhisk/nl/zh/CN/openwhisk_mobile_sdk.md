@@ -13,7 +13,7 @@ copyright:
 
 # 使用 {{site.data.keyword.openwhisk_short}} 移动 SDK
 {: #openwhisk_mobile_sdk}
-上次更新时间：2016 年 8 月 4 日
+上次更新时间：2016 年 8 月 26 日
 {: .last-updated}
 
 {{site.data.keyword.openwhisk}} 提供了用于 iOS 和 watchOS 2 设备的移动 SDK，支持移动应用程序轻松触发远程触发器以及调用远程操作。Android 版本当前不可用；Android 开发者可直接使用 {{site.data.keyword.openwhisk}} REST API。
@@ -32,16 +32,15 @@ copyright:
 {{site.data.keyword.openwhisk_short}} 移动 SDK 可通过 CocoaPods 进行公共分发。假定 CocoaPods 已安装，请将以下行放到入门模板应用程序项目目录中名为“Podfile”的文件中。 
 
 ```
-source 'https://github.com/openwhisk/openwhisk-podspecs.git'use_frameworks!
+install! 'cocoapods', :deterministic_uuids => false
+use_frameworks!
 
 target 'MyApp' do
-     platform :ios, '9.0'
-     pod 'OpenWhisk'
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 
-target 'MyApp WatchKit Extension' do
-     platform :watchos, '2.0'
-     pod 'OpenWhisk-Watch'
+target 'MyApp WatchKit Extension' do 
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
 end
 ```
 {: codeblock}
@@ -54,7 +53,7 @@ end
 在应用程序的项目目录中创建文件并命名为“Cartfile”。在文件中添加以下行：
 
 ```
-github "openwhisk/openwhisk-client-swift.git" ~> 0.1.0 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.1.7 # Or latest version
 ```
 {: codeblock}
 

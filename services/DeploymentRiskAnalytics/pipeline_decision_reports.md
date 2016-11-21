@@ -11,26 +11,26 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Viewing decision reports
+# Viewing dashboards and reports
 {: #DRA_toolchain_reports}
 
-*Last updated: 25 August 2016*
+*Last updated: 21 October 2016*
 {: .last-updated}
 
-To run {{site.data.keyword.DRA_short}} in the pipeline, start the pipeline from the initial stage as you normally would, or if you would prefer to just test {{site.data.keyword.DRA_short}}, run a stage that contains {{site.data.keyword.DRA_short}} jobs.
+{{site.data.keyword.DRA_short}} provides you with a wealth of actionable information about your projects.
 {:shortdesc}
 
-##The {{site.data.keyword.DRA_short}} dashboard
+## {{site.data.keyword.DRA_short}} dashboards
 
-The {{site.data.keyword.DRA_short}} dashboard allows you to monitor test performance and code coverage across your Bluemix organization at a glance. To see it, after opening {{site.data.keyword.DRA_short}}, click the **Build status** tab.
+{{site.data.keyword.DRA_short}} provides dashboards that allow you to monitor build status, environment status, and test performance  across your Bluemix organization. To see them, after opening {{site.data.keyword.DRA_short}}, click the **Build Verification**, **Test Results**, or **Environments** tabs, respectively.
 
-The dashboard is automatically populated with the most recent test results and code coverage figures for every microservice in your organization. Click the arrow beside an environment to see the tests that it comprises.
+The dashboards are automatically populated with the most recent information from your pipelines' {{site.data.keyword.DRA_short}} test jobs. Click on the elements within the dashboards for more information about them. 
 
 ## Viewing decisions reports
 
 After a pipeline has been configured and run, {{site.data.keyword.DRA_short}} starts to collect and analyze the test results from it pipeline to establish a baseline. Each time a pipeline runs, data is collected and compared against previous runs. After the analysis is complete, at each gate {{site.data.keyword.DRA_short}} decides to either allow the deployment to proceed or stop the pipeline if the rules for the gate were not met.
 
-To view the decision report for a gate, complete these steps:
+To view the decision report for a gate from the pipeline, complete these steps:
 
    1. On the stage that contains the gate to check, click **View logs and history**.
 

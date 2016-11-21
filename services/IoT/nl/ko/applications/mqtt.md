@@ -17,7 +17,7 @@ copyright:
 마지막 업데이트 날짜: 2016년 8월 31일
 {: .last-updated}
 
-MQTT는 {{site.data.keyword.iot_full}}과 통신하기 위해 디바이스 및 애플리케이션이 사용하는 기본 프로토콜입니다. {{site.data.keyword.iot_short_notm}} 애플리케이션을 연결하고 통합하는 데 도움이 되도록 클라이언트 라이브러리, 정보 및 샘플이 제공됩니다.
+MQTT는 디바이스와 애플리케이션이 {{site.data.keyword.iot_full}}과 통신하는 데 사용하는 기본 프로토콜입니다. {{site.data.keyword.iot_short_notm}} 애플리케이션을 연결하고 통합하는 데 도움이 되도록 클라이언트 라이브러리, 정보 및 샘플이 제공됩니다.
 {:shortdesc}
 
 ## 클라이언트 연결

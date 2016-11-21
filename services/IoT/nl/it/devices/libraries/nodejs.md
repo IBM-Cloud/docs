@@ -20,7 +20,7 @@ Ultimo aggiornamento: 14 settembre 2016
 Puoi modificare gli esempi e le librerie client in Node.js per creare e sviluppare il codice del dispositivo che interagisce con la tua organizzazione su {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
-Utilizza le informazioni e gli esempi forniti per iniziare a sviluppare i tuoi dispositivi utilizzando Node.js. 
+Utilizza le informazioni e gli esempi forniti per iniziare a sviluppare i tuoi dispositivi utilizzando Node.js.
 
 ## Scaricamento delle risorse e del client Node.js
 {: #node.js_client_downloads}
@@ -135,7 +135,7 @@ Per impostazione predefinita, vengono registrati solo gli eventi di log del tipo
 	//impostazione del livello di log per eseguire il debug. Per impostazione predefinita è 'warn'
 	deviceClient.log.setLevel('debug');
 
-	```
+```
 
 
 ## Pubblicazione eventi
@@ -145,7 +145,7 @@ Gli eventi sono meccanismi con cui i dispositivi pubblicano i dati in {{site.dat
 
 Quando viene ricevuto un evento dall'istanza {{site.data.keyword.iot_short_notm}}, le credenziali dell'evento ricevuto identificano il dispositivo di invio, il che significa che un dispositivo non può impersonare un altro dispositivo.
 
-Puoi aumentare il livello di QoS (quality of service) per gli eventi pubblicati. Gli eventi con un livello QoS maggiore di `0` possono impiegare più tempo per la pubblicazione, perché sono incluse ulteriori informazioni di ricezione della conferma. 
+Puoi aumentare il livello di QoS (quality of service) per gli eventi pubblicati. Gli eventi con un livello QoS maggiore di `0` possono impiegare più tempo per la pubblicazione, perché sono incluse ulteriori informazioni di ricezione della conferma.
 
 **Nota:** la modalità del flusso Quickstart supporta solo un livello QoS di `0`.
 
@@ -154,9 +154,9 @@ Gli eventi possono essere pubblicati con le seguenti proprietà:
 
 |Proprietà |Descrizione|
 |:---|:---|
-|`eventType`  | Il tipo di evento che deve essere pubblicato, ad esempio stato o GPS.  |  
-|`eventFormat`  |Il formato dell'evento, ad esempio, JSON.  |
-|`data`  | Il payload dell'evento, che deve essere una stringa di buffer.  |
+|`eventType`  | Il tipo di evento che deve essere pubblicato, ad esempio stato o GPS. |  
+|`eventFormat`  |Il formato dell'evento, ad esempio, JSON. |
+|`data`  | Il payload dell'evento, che deve essere una stringa di buffer. |
 |`QoS`  | Il QOS (quality of service) di MQTT per la pubblicazione degli eventi. I valori supportati sono 0, 1 e 2.|
 
 
@@ -179,13 +179,13 @@ Gli eventi possono essere pubblicati con le seguenti proprietà:
 ## Gestione dei comandi
 {: #handling_commands}
 
-Quando il client del dispositivo si connette, effettua automaticamente la sottoscrizione a qualsiasi comando per questo dispositivo. Per elaborare comandi specifici devi registrare una funzione di callback del comando.  Il client del dispositivo richiama la funzione di callback del comando quando viene ricevuto un comando. La funzione di callback ha le seguenti proprietà:
+Quando il client del dispositivo si connette, effettua automaticamente la sottoscrizione a qualsiasi comando per questo dispositivo. Per elaborare comandi specifici devi registrare una funzione di callback del comando. Il client del dispositivo richiama la funzione di callback del comando quando viene ricevuto un comando. La funzione di callback ha le seguenti proprietà:
 
 |Proprietà |Descrizione|
 |:---|:---|
-|`commandName`  | Una stringa, che specifica il nome del comando che è stato richiamato.  |  
-|`format`  | Una stringa, che specifica il formato dell'evento, ad esempio, JSON.  |
-|`payload`  | Una stringa, che specifica i dati per il payload del comando.   |
+|`commandName`  | Una stringa, che specifica il nome del comando che è stato richiamato. |  
+|`format`  | Una stringa, che specifica il formato dell'evento, ad esempio, JSON. |
+|`payload`  | Una stringa, che specifica i dati per il payload del comando.  |
 |`topic`  | Quando pubblicato come un dispositivo, la stringa topic non include il tipo o l'ID del dispositivo; vengono presi dall'ID del client.  Ad esempio, `iot-2/evt/event_id/fmt/format_string`.  Quando pubblicato come un'applicazione o un gateway invece di come un dispositivo, la stringa topic deve includere l'ID e il tipo del dispositivo.  Ad esempio `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
 
 
@@ -198,7 +198,7 @@ Quando il client del dispositivo si connette, effettua automaticamente la sottos
 		//pubblica un evento con il QOS (quality of service) predefinito
        deviceClient.publish("status","json",'{"d" : { "cpu" : 60, "mem" : 50 }}');
 
-       });
+	});
 
 	deviceClient.on("command", function (commandName,format,payload,topic) {
 		if(commandName === "blink") {
@@ -215,7 +215,7 @@ Quando il client del dispositivo si connette, effettua automaticamente la sottos
 ## Gestione degli errori
 {: #handling_errors}
 
-Quando il client del dispositivo rileva un errore, invia un evento *errore*. 
+Quando il client del dispositivo rileva un errore, invia un evento *errore*.
 
 ```
 	var deviceClient = new Client.IotfDevice(config);
@@ -226,7 +226,7 @@ Quando il client del dispositivo rileva un errore, invia un evento *errore*.
 		//pubblica un evento con il QOS (quality of service) predefinito
        deviceClient.publish("status","json",'{"d" : { "cpu" : 60, "mem" : 50 }}');
 
-       });
+	});
 
 	deviceClient.on("error", function (err) {
 		console.log("Error : "+err);
@@ -238,7 +238,7 @@ Quando il client del dispositivo rileva un errore, invia un evento *errore*.
 ## Disconnessione del client
 {: #disconnecting_client}
 
-Il seguente esempio mostra come puoi scollegare il client e rilasciare la connessione: 
+Il seguente esempio mostra come puoi scollegare il client e rilasciare la connessione:
 
 ```
 	var deviceClient = new Client.IotfDevice(config);

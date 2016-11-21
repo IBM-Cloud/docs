@@ -14,7 +14,7 @@ copyright:
 # {{site.data.keyword.iot_short}} 开发者文档
 {: #developer_doc_overview}
 
-提供的样本可帮助您在 {{site.data.keyword.iot_full}} 组织内构建应用程序和集成设备。
+提供的内容和样本可帮助您在 {{site.data.keyword.iot_full}} 组织内构建应用程序和集成设备。
 
 
 {:shortdesc}
@@ -34,7 +34,7 @@ copyright:
 ## 应用系统开发
 {: #app-dev}
 
-您可以使用以下支持的协议和标准，在 {{site.data.keyword.iot_short}} 中构建和管理应用程序：
+您可以使用以下受支持的协议和标准，在 {{site.data.keyword.iot_short}} 中构建和管理应用程序：
 
 - MQTT 消息传递协议
 - Python
@@ -45,14 +45,14 @@ copyright:
 ## 设备开发
 {: #device-dev}
 
-您可以使用以下支持的协议和标准，在 {{site.data.keyword.iot_short}} 中构建和管理设备：
+您可以使用以下受支持的协议和标准，在 {{site.data.keyword.iot_short}} 中构建和管理设备：
 
 - MQTT 消息传递协议
 - Python
 - Node.js
 - Java
 - C#
-- 嵌入式 C
+- Embedded C
 - mBed C++
 
 ## 网关开发

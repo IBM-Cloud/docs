@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 #Services
 {: #services}
-
-*Last updated: 21 October 2016*
-{: .last-updated} 
 
 You can find available services in the **Catalog** under **Services** in the {{site.data.keyword.Bluemix}} user interface.
 {:shortdesc}
@@ -41,10 +39,10 @@ Predefined services are available in {{site.data.keyword.Bluemix_notm}} for mobi
 
 |Type	|Description	|Support details|
 |:------|:--------------|:--------------|
-|IBM	|A service that is provided by IBM and is generally available.	|Problems that are determined to be a defect in an IBM-provided service that is generally available are supported. Support is provided based on the severity that you set. For more information about ticket severity, see [Contacting support](../support/index.html#contacting-bluemix-support){: new_window}.|
+|IBM	|A service that is provided by IBM and is generally available.	|Problems that are determined to be a defect in an IBM-provided service that is generally available are supported. Support is provided based on the severity that you set. For more information about ticket severity, see [Contacting support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 |Third Party	|A service that is provided by a company other than IBM.	|Support for third-party services is provided by the service provider. If a problem is investigated by IBM and the problem is determined to be a defect in a third-party service, IBM is not obligated to provide a fix. IBM will share analysis with the third-party service provider if needed.|
 |Community	|A service that is provided by an open source community.	|Support for community services is provided by the {{site.data.keyword.Bluemix_notm}} Developers Community. If a problem is investigated by IBM and the problem is determined to be a defect in a community service, IBM is not obligated to provide a fix.|
-|Beta	|A service that is not production-ready and is in a trial stage of development. A Beta service can help the development and marketing teams assess the value of the services before they make the service generally available.	|Problems that are determined to be a defect in an IBM-provided beta service are supported, but IBM is not obligated to provide a fix. In addition, the problem ticket will be assigned a severity 3 or 4 where applicable. For information about ticket severity, see [Contacting support](../support/index.html#contacting-bluemix-support){: new_window}.|
+|Beta	|A service that is not production-ready and is in a trial stage of development. A Beta service can help the development and marketing teams assess the value of the services before they make the service generally available.	|Problems that are determined to be a defect in an IBM-provided beta service are supported, but IBM is not obligated to provide a fix. In addition, the problem ticket will be assigned a severity 3 or 4 where applicable. For information about ticket severity, see [Contacting support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 *Table 1. {{site.data.keyword.Bluemix_notm}} services support information*
 
 
@@ -199,7 +197,7 @@ If you use the cf command line interface to request a service instance, complete
 You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.Bluemix_notm}} services, see [Enabling external apps to use {{site.data.keyword.Bluemix_notm}} services](#accser_external){: new_window}.
 
 
-## Configuring your application to interact with a service 
+## Configuring your application to interact with a service
 {: #config}
 
 After you bind a service instance to your application, you must configure your application to interact with the service.
@@ -210,7 +208,7 @@ Each service might require a different mechanism for communicating with applicat
 * To interact with mobile back-end services, use the information that {{site.data.keyword.Bluemix_notm}} provides such as the application identity (app ID), security information that is specific to the client, and the access URI for the application. The mobile services typically work in context with each other so that context information, such as the name of the application developer and the user that uses the application, can be shared across the set of services.
 * To interact with web applications or server-side cloud code for mobile applications, use the information that {{site.data.keyword.Bluemix_notm}} provides such as the runtime credentials in the *VCAP_SERVICES* environment variable of the application. The value of the *VCAP_SERVICES* environment variable is the serialization of a JSON object. The variable contains the runtime data that is required to interact with the services that the application is bound to. The format of the data is different for different services. You might need to read the service documentation about what to expect and how to interpret each piece of information.
 
-If a service that you bind to an application crashes, the application might stop running or have errors. {{site.data.keyword.Bluemix_notm}} does not automatically restart the application to recover from these problems. Consider coding your application to identify and recover from outages, exceptions, and connection failures. See the [Apps won't be automatically restarted](../troubleshoot/index.html#ts_topmenubar) troubleshooting topic for more information.
+If a service that you bind to an application crashes, the application might stop running or have errors. {{site.data.keyword.Bluemix_notm}} does not automatically restart the application to recover from these problems. Consider coding your application to identify and recover from outages, exceptions, and connection failures. See the [Apps won't be automatically restarted](/docs/troubleshoot/index.html#ts_topmenubar) troubleshooting topic for more information.
 
 ## Enabling external apps to use {{site.data.keyword.Bluemix_notm}} services
 {: #accser_external}
@@ -293,7 +291,7 @@ If you have a service instance that is created and bound to apps in one region, 
 
   * Use the service credentials to configure your app instance directly. See [Enabling external apps to use {{site.data.keyword.Bluemix_notm}} service](#accser_external){: new_window} for details.
   * Create a user-provided service as a bridge.
-    
+
 	Assume that you are starting in the region where you want to use the service instance. To use a service instance that exists in another region, complete the following steps:
 
       1. Switch to the region where the service instance exists. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand **Region** or click the **Region** icon, and then select the region where the service instance exists.
@@ -330,7 +328,7 @@ To use a service instance from another service, complete the following steps:
 1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click
 the tile for the service that you want to access. The dashboard for the service is displayed.
 2. In the navigation pane, click **Manage** to authorize the binding from other service instances by using the console of the service instance.
-3. If you want to deny other services access to the service instance, click **Service Access Authorization** in the navigation pane and then use **Revoke** to remove the service binding. 
+3. If you want to deny other services access to the service instance, click **Service Access Authorization** in the navigation pane and then use **Revoke** to remove the service binding.
 
 # rellinks
 {: #rellinks}
@@ -338,7 +336,5 @@ the tile for the service that you want to access. The dashboard for the service 
 ## general
 {: #general}
 
-* [Binding a service by using {{site.data.keyword.Bluemix_notm}} user interface](../cfapps/ee.html#ee_bindui)
-* [Retrieving VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
-
-
+* [Binding a service by using {{site.data.keyword.Bluemix_notm}} user interface](/docs/cfapps/ee.html#ee_bindui)
+* [Retrieving VCAP_SERVICES](/docs/cli/vcapsvc.html#retrieving)

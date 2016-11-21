@@ -18,7 +18,7 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-上次更新时间：2016 年 8 月 17 日
+上次更新时间：2016 年 9 月 1 日
 {: .last-updated}
 
 
@@ -27,6 +27,8 @@ copyright:
 开始之前，请安装 cf 命令行界面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **限制：**Cygwin 不支持 Cloud Foundry 命令行界面。请在非 Cygwin 命令行窗口中使用 Cloud Foundry 命令行界面。
+
+**注**：{{site.data.keyword.Bluemix_notm}} 管理 CLI 仅用于 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated 环境。{{site.data.keyword.Bluemix_notm}} Public 不支持该管理 CLI。
 
 ## 添加 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件
 
@@ -43,12 +45,12 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 实例的 URL 的子域。例如，<code>https://console.mycompany.bluemix.net/cli</code>。</dd>
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} 实例的 URL 的子域。例如，<code>https://console.mycompany.bluemix.net/cli</code></dd>
 </dl>
 </li>
 <li>要安装 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件，请运行以下命令：<br/><br/>
 <code>
-cf install-plugin bluemix-admin-cli -r BluemixAdmin
+cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
 </ol>
@@ -61,7 +63,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件
 
-您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件来添加或除去用户、向组织分配或取消分配用户，以及执行其他管理任务。要查看命令的列表，请运行以下命令：
+您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件来添加或除去用户、向组织分配或取消分配用户，以及执行其他管理任务。 
+
+要查看命令的列表，请运行以下命令：
 
 ```
 cf plugins
@@ -102,7 +106,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**注**：要向特定组织添加用户，您必须是该组织的管理员或者您必须拥有 **Admin** 许可权（可用替代项为 **Superuser**）或拥有具有 **Write** 访问权的 **User** 许可权。
+**注**：要向特定组织添加用户，您必须是拥有 **users.write** 许可权（或 **Superuser** 许可权）的**管理员**。如果您是组织管理员，那么您还能够通过 Superuser 来运行 **enable-managers-add-users** 命令，以向组织添加用户。有关更多信息，请参阅[允许管理员添加用户](index.html#clius_emau)。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -117,17 +121,23 @@ cf ba add-user <user_name> <organization>
 
 ### 搜索用户
 
-可以搜索用户。输入以下命令：
+可以搜索用户。输入以下命令，并根据需要使用可选的搜索过滤参数（name、permission、organization 和 role）：
 
 ```
-cf ba search-users <user_name>
+cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
 ```
 {: codeblock}
 
 <dl class="parml">
 
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中用户的名称。</dd>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">分配给用户的许可权。例如，superuser、basic、catalog、user 和 reports。有关分配的用户许可权的更多信息，请参阅[许可权](../../../admin/index.html#permissions)。不能将此参数与 organization 参数用于同一查询中。</dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
+<dd class="pd">用户所属的组织名称。不能将此参数与 organization 参数用于同一查询中。</dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">分配给用户的组织角色。例如，组织的管理员、记帐管理员或审计员。使用此参数时必须指定组织。有关角色的更多信息，请参阅[用户角色](../../../admin/users_roles.html#userrolesinfo)。</dd>
 
 </dl>
 
@@ -174,6 +184,30 @@ cf ba remove-user <user_name>
 </dl>
 
 **提示：****ba remove-user** 命令名较长，您还可以使用 **ba ru** 作为其别名。
+
+### 允许管理员添加用户
+{: #clius_emau}
+
+如果您在 {{site.data.keyword.Bluemix_notm}} 环境中有 **Superuser** 许可权，那么可以允许组织管理员向其管理的组织添加用户。输入以下命令：
+
+```
+cf ba enable-managers-add-users
+```
+{: codeblock}
+
+**提示：****ba enable-managers-add-users** 命令名较长，您还可以使用 **ba emau** 作为其别名。
+
+### 禁止管理员添加用户
+{: #clius_dmau}
+
+如果在 {{site.data.keyword.Bluemix_notm}} 环境中已允许组织管理员通过 **enable-managers-add-users** 命令向其管理的组织添加用户，并且您有 **Superuser** 许可权，那么可以除去此设置。输入以下命令：
+
+```
+cf ba disable-managers-add-users
+```
+{: codeblock}
+
+**提示：****ba disable-managers-add-users** 命令名较长，您还可以使用 **ba dmau** 作为其别名。
 
 ### 添加和删除组织
 
@@ -429,6 +463,25 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 </dl>
 
 **提示：****ba edit-service-plan-visibility** 命令名较长，您还可以使用 **ba espv** 作为其别名。
+
+### 查看资源使用情况信息
+{: #cliresourceusage}
+
+您可以查看资源使用情况信息，包括内存、磁盘和 CPU 使用情况。可以查看可用物理资源和保留资源的摘要，以及物理资源和保留资源使用情况的摘要。此外，还可以查看 Droplet Execution Agent (DEA) 使用情况数据以及内存和磁盘的历史使用情况。缺省情况下，将按降序显示每周内存和磁盘使用情况的历史数据。要查看资源使用情况信息，请使用以下命令：
+
+```
+cf ba resource-usage <monthly> <weekly> 
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;monthly&gt;</dt>
+<dd class="pd">一次查看一个月的内存和磁盘空间历史数据。</dd>
+<dt class="pt dlterm">&lt;weekly&gt;</dt>
+<dd class="pd">一次查看一周的内存和磁盘空间历史数据。这是缺省值。</dd>
+</dl>
+
+**提示：****ba resource-usage** 命令名较长，您还可以使用 **ba rsu** 作为其别名。
 
 ### 使用服务代理程序
 
@@ -690,3 +743,80 @@ cf ba unbind-security-group <security-group> <org> <space>
 
 **提示：****ba unbind-staging-security-group** 命令名较长，您还可以使用 **ba usg** 作为其别名。
 
+### 使用 buildpack
+{: #buildpacks}
+
+如果您有应用程序目录写许可权，那么可以列出、创建、更新或删除 buildpack。  
+#### 列出所有 buildpack
+
+使用以下命令可列出所有 buildpack 或查看特定 buildpack：
+
+```
+cf ba buildpacks <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">可选参数，用于指定要查看的特定 buildpack。</dd>
+</dl>
+
+**提示：****ba buildpacks** 命令名较长，您还可以使用 **ba lb** 作为其别名。
+
+#### 创建并上传 buildpack
+
+您可以创建并上传 buildpack。可以上传文件类型为 .zip 的任何压缩文件。使用以下命令可上传 buildpack：
+
+```
+cf ba create-buildpack <buildpack_name> <file_path> <position>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">要上传的 buildpack 的名称。</dd>
+<dt class="pt dlterm">&lt;file_path&gt;</dt>
+<dd class="pd">buildpack 压缩文件的路径。</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">在 buildpack 自动检测期间检查 buildpack 的顺序。</dd>
+</dl>
+
+**提示：****ba create-buildpack** 命令名较长，您还可以使用 **ba cb** 作为其别名。
+
+#### 更新 buildpack
+
+要更新现有 buildpack，请使用以下命令：
+
+```
+cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">要更新的 buildpack 的名称。</dd>
+<dt class="pt dlterm">&lt;position&gt;</dt>
+<dd class="pd">在 buildpack 自动检测期间检查 buildpack 的顺序。</dd>
+<dt class="pt dlterm">&lt;enabled&gt;</dt>
+<dd class="pd">指示 buildpack 是否用于编译打包。</dd>
+<dt class="pt dlterm">&lt;locked&gt;</dt>
+<dd class="pd">指示 buildpack 是否已锁定以阻止更新。</dd>
+</dl>
+
+**提示：****ba update-buildpack** 命令名较长，您还可以使用 **ba ub** 作为其别名。
+
+#### 删除 buildpack
+
+要删除现有 buildpack，请使用以下命令：
+
+```
+cf ba delete-buildpack <buildpack_name>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;buildpack_name&gt;</dt>
+<dd class="pd">要删除的 buildpack 的名称。</dd>
+</dl>
+
+**提示：****ba delete-buildpack** 命令名较长，您还可以使用 **ba db** 作为其别名。

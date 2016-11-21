@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-01"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # Usando as APIs REST do Insights for Weather
 {: #rest_apis}
-
-*Última atualização: 06 de abril de 2016*
 
 É possível usar as [APIs REST do Insights for Weather](https://twcservice.{APPDomain}/rest-api-deprecated/){:new_window}
 para recuperar dados de clima. É possível testar operações de API e visualizar instantaneamente os resultados para ajudar a construir seus aplicativos mais rapidamente.

@@ -2,16 +2,13 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02"  
 ---
 
 # 在后端应用程序与服务之间进行通信
 {: #backend-comm}
 
-上次更新时间：2016 年 7 月 21 日
-{: .last-updated}
-
-在某些场景中，可能需要将来自正在 {{site.data.keyword.Bluemix}} 上运行的后端应用程序的请求，发送到受 {{site.data.keyword.amashort}} 服务保护的其他后端服务（例如 {{site.data.keyword.cloudant}} 服务）。在这些情况下，必须将 OAuth 令牌添加到请求。
+在某些场景中，可能需要将来自正在 {{site.data.keyword.Bluemix}} 上运行的后端应用程序的请求，发送到受 {{site.data.keyword.amafull}} 服务保护的其他后端服务（例如 {{site.data.keyword.cloudant}} 服务）。在这些情况下，必须将 OAuth 令牌添加到请求。
 
 使用 `bms-mca-oauth-sdk npmjs` 模块来获取 OAuth 令牌，并将其注入到请求中。
 

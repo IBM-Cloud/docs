@@ -2,21 +2,16 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # Création d'un fournisseur d'identité personnalisé
 {: #custom-create}
 
-Dernière mise à jour : 16 juin 2016
-{: .last-updated}
-
 
 Pour créer un fournisseur d'identité personnalisé, développez une application Web qui expose une API RESTful :
 
-```
-POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>
-```
+`POST <base_url>/apps/<tenant_id>/<realm_name>/<request_type>`
 
 * `base_url`: URL de base de l'application de fournisseur d'identité personnalisé. L'URL de base est l'adresse URL à enregistrer
 dans le tableau de bord {{site.data.keyword.amashort}}.
@@ -121,7 +116,7 @@ L'objet identité de l'utilisateur est utilisé par le service {{site.data.keywo
 
 Chaque demande du service {{site.data.keyword.amashort}} à un fournisseur d'identité personnalisé contient un en-tête d'autorisation lui permettant de vérifier que la demande provient d'une source autorisée. Même si cette opération n'est pas obligatoire, il est recommandé de valider l'en-tête d'autorisation en instrumentant le fournisseur d'identité personnalisé avec un SDK serveur de {{site.data.keyword.amashort}}. Pour
 utiliser ce SDK, votre fournisseur d'identité personnalisé doit être implémenté avec Node.js ou Liberty
-for Java&trade;&trade; et s'exécuter sur {{site.data.keyword.Bluemix_notm}}.
+for Java&trade; et s'exécuter sur {{site.data.keyword.Bluemix_notm}}.
 
 L'en-tête d'autorisation contient des informations sur le client mobile et l'appli mobile qui a déclenché le processus d'authentification. Vous pouvez utiliser le contexte de sécurité pour récupérer ces données. Pour plus d'informations, voir [Protection des ressources](protecting-resources.html).
 

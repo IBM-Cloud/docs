@@ -16,14 +16,14 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} (bx) 命令
 {: #bluemix_cli}
 
-上次更新时间：2016 年 8 月 4 日
+上次更新时间：2016 年 10 月 25 日
 {: .last-updated}
 
 版本：0.4.1
 
 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 提供了一组按名称空间分组的命令，供用户用于与 {{site.data.keyword.Bluemix_notm}} 进行交互。一些 {{site.data.keyword.Bluemix_notm}} 命令是现有 cf 命令的包装程序，而另一些为 {{site.data.keyword.Bluemix_notm}} 用户提供了扩展功能。以下信息列出了 {{site.data.keyword.Bluemix_notm}} CLI 支持的命令，并包含命令名称、选项、用法、先决条件、描述和示例。
 {:shortdesc}
- 
+
 **注：***先决条件*列出使用命令前必须执行的操作。没有任何先决条件操作的命令会列出**无**。否则，先决条件可能会包含以下一个或多个操作：
 <dl>
 <dt>端点</dt>
@@ -47,23 +47,23 @@ copyright:
  <thead>
  <th colspan="5">常规 bluemix 命令</th>
  </thead>
- <tbody> 
- <tr> 
- <td>[bluemix help](index.html#bluemix_help)</td> 
- <td>[bluemix api](index.html#bluemix_api)</td> 
+ <tbody>
+ <tr>
+ <td>[bluemix help](index.html#bluemix_help)</td>
+ <td>[bluemix api](index.html#bluemix_api)</td>
  <td>[bluemix_login](index.html#bluemix_login)</td>
  <td>[bluemix logout](index.html#bluemix_logout)</td>
  <td>[bluemix target](index.html#bluemix_target)</td>
- </tr> 
- <tr> 
- <td>[bluemix info](index.html#bluemix_info) </td> 
- <td>[bluemix config](index.html#bluemix_config)</td> 
+ </tr>
+ <tr>
+ <td>[bluemix info](index.html#bluemix_info) </td>
+ <td>[bluemix config](index.html#bluemix_config)</td>
  <td>[bluemix list](index.html#bluemix_list)</td>
  <td>[bluemix scale](index.html#bluemix_scale)</td>
  <td>[bluemix curl](index.html#bluemix_curl)</td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *表 1. 常规 bluemix 命令*
 
 
@@ -72,37 +72,37 @@ copyright:
  <thead>
  <th colspan="5">用于管理组织、空间和用户的命令</th>
  </thead>
- <tbody> 
- <tr> 
+ <tbody>
+ <tr>
  <td>[bluemix iam orgs](index.html#bluemix_iam_orgs)</td>
- <td>[bluemix iam org](index.html#bluemix_iam_org)</td> 
+ <td>[bluemix iam org](index.html#bluemix_iam_org)</td>
  <td>[bluemix iam org-create](index.html#bluemix_iam_org_create)</td>
  <td>[bluemix iam org-replicate](index.html#bluemix_iam_org_replicate)</td>
  <td>[bluemix iam org-rename](index.html#bluemix_iam_org_rename)</td>
- </tr> 
- <tr> 
+ </tr>
+ <tr>
  <td>[bluemix iam org-delete](index.html#bluemix_iam_org_delete)</td>
- <td>[bluemix iam spaces](index.html#bluemix_iam_spaces)</td> 
+ <td>[bluemix iam spaces](index.html#bluemix_iam_spaces)</td>
  <td>[bluemix iam space](index.html#bluemix_iam_space)</td>
  <td>[bluemix iam space-create](index.html#bluemix_iam_space_create)</td>
  <td>[bluemix iam space-rename](index.html#bluemix_iam_space_rename)</td>
  </tr>
- <tr> 
+ <tr>
  <td>[bluemix iam space-delete](index.html#bluemix_iam_space_delete)</td>
- <td>[bluemix iam account-users](index.html#bluemix_iam_account-users)</td> 
+ <td>[bluemix iam account-users](index.html#bluemix_iam_account-users)</td>
  <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account-user-invite)</td>
  <td>[bluemix iam org-users](index.html#bluemix_iam_org_users)</td>
  <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  </tr>
- <tr> 
+ <tr>
  <td>[bluemix iam org-role-unset](index.html#bluemix_iam_org_role_unset)</td>
- <td>[bluemix iam space-users](index.html#bluemix_iam_space_users)</td> 
+ <td>[bluemix iam space-users](index.html#bluemix_iam_space_users)</td>
  <td>[bluemix iam space-role-set](index.html#bluemix_iam_space_role_set)</td>
  <td>[bluemix iam space-role-unset](index.html#bluemix_iam_space_role_unset)</td>
  <td></td>
  </tr>
- </tbody> 
- </table> 
+ </tbody>
+ </table>
 *表 2. 用于管理组织、空间和用户的命令*
 
 
@@ -111,37 +111,37 @@ copyright:
  <thead>
  <th colspan="5">用于管理 cf 应用程序的命令</th>
  </thead>
- <tbody> 
- <tr> 
+ <tbody>
+ <tr>
  <td>[bluemix app push](index.html#bluemix_app_push)</td>
  <td>[bluemix app list](index.html#bluemix_app_list)</td>
-<td>[bluemix app show](index.html#bluemix_app_show)</td> 
+<td>[bluemix app show](index.html#bluemix_app_show)</td>
  <td>[bluemix app scale](index.html#bluemix_app_scale)</td>
  <td>[bluemix app delete](index.html#bluemix_app_delete)</td>
- </tr> 
- <tr> 
+ </tr>
+ <tr>
  <td>[bluemix app rename](index.html#bluemix_app_rename)</td>
  <td>[bluemix app start](index.html#bluemix_app_start)</td>
-<td>[bluemix app stop](index.html#bluemix_app_stop)</td> 
+<td>[bluemix app stop](index.html#bluemix_app_stop)</td>
  <td>[bluemix app restart](index.html#bluemix_app_restart)</td>
  <td>[bluemix app restage](index.html#bluemix_app_restage)</td>
  </tr>
- <tr> 
+ <tr>
  <td>[bluemix app instance-restart](index.html#bluemix_app_instance_restart)</td>
  <td>[bluemix app events](index.html#bluemix_app_events)</td>
-<td>[bluemix app files](index.html#bluemix_app_files)</td> 
+<td>[bluemix app files](index.html#bluemix_app_files)</td>
  <td>[bluemix app logs](index.html#bluemix_app_logs)</td>
  <td>[bluemix app env](index.html#bluemix_app_env)</td>
  </tr>
- <tr> 
+ <tr>
  <td>[bluemix app env-set](index.html#bluemix_app_env_set)</td>
  <td>[bluemix app env-unset](index.html#bluemix_app_env_unset)</td>
-<td>[bluemix app stacks](index.html#bluemix_app_stacks)</td> 
+<td>[bluemix app stacks](index.html#bluemix_app_stacks)</td>
  <td>[bluemix app stack](index.html#bluemix_app_stack)</td>
  <td>[bluemix app manifest-create](index.html#bluemix_app_manifest_create)</td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *表 3. 用于管理 cf 应用程序的命令*
 
 
@@ -149,30 +149,30 @@ copyright:
  <thead>
  <th colspan="5">用于管理 Bluemix 服务的命令</th>
  </thead>
- <tbody> 
- <tr> 
+ <tbody>
+ <tr>
  <td>[bluemix service offerings](index.html#bluemix_service_offerings)</td>
  <td>[bluemix service list](index.html#bluemix_service_list)</td>
- <td>[bluemix service show](index.html#bluemix_service_show)</td> 
+ <td>[bluemix service show](index.html#bluemix_service_show)</td>
  <td>[bluemix service create](index.html#bluemix_service_create)</td>
  <td>[bluemix service update](index.html#bluemix_service_update)</td>
- </tr> 
- <tr> 
+ </tr>
+ <tr>
  <td>[bluemix service delete](index.html#bluemix_service_delete)</td>
  <td>[bluemix service rename](index.html#bluemix_service_rename)</td>
- <td>[bluemix service bind](index.html#bluemix_service_bind)</td> 
+ <td>[bluemix service bind](index.html#bluemix_service_bind)</td>
  <td>[bluemix service unbind](index.html#bluemix_service_unbind)</td>
  <td>[bluemix service key-create](index.html#bluemix_service_key_create)</td>
  </tr>
- <tr> 
+ <tr>
  <td>[bluemix service key-delete](index.html#bluemix_service_key_delete)</td>
  <td>[bluemix service keys](index.html#bluemix_service_keys)</td>
- <td>[bluemix service key-show](index.html#bluemix_service_key_show)</td> 
+ <td>[bluemix service key-show](index.html#bluemix_service_key_show)</td>
  <td>[bluemix service user-provided-create](index.html#bluemix_service_user_provided_create)</td>
  <td>[bluemix service user-provided-update](index.html#bluemix_service_user_provided_update)</td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *表 4. 用于管理 Bluemix 服务的命令*
 
 
@@ -180,26 +180,26 @@ copyright:
 <thead>
  <th colspan="5">用于管理 Bluemix 目录、插件、帐单和安全设置的命令</th>
  </thead>
- <tbody> 
- <tr> 
+ <tbody>
+ <tr>
  <td>[bluemix catalog templates](index.html#bluemix_catalog_templates)</td>
  <td>[bluemix catalog template](index.html#bluemix_catalog_template)</td>
-<td>[bluemix catalog template-run](index.html#bluemix_catalog_template_run)</td> 
+<td>[bluemix catalog template-run](index.html#bluemix_catalog_template_run)</td>
  <td>[bluemix plugin repos](index.html#bluemix_plugin_repos)</td>
- <td>[bluemix plugin repo-add](index.html#bluemix_plugin_repo_add)</td> 
- </tr> 
- <tr> 
- <td>[bluemix plugin repo-remove](index.html#bluemix_plugin_repo_remove)</td> 
+ <td>[bluemix plugin repo-add](index.html#bluemix_plugin_repo_add)</td>
+ </tr>
+ <tr>
+ <td>[bluemix plugin repo-remove](index.html#bluemix_plugin_repo_remove)</td>
  <td>[bluemix plugin repo-plugins](index.html#bluemix_plugin_repo_plugins)</td>
  <td>[bluemix plugin list](index.html#bluemix_plugin_list)</td>
  <td>[bluemix plugin install](index.html#bluemix_plugin_install)</td>
- <td>[bluemix plugin uninstall](index.html#bluemix_plugin_uninstall)</td> 
- </tr> 
- <tr> 
- <td>[bluemix bss account-usage](index.html#bluemix_bss_account_usage)</td> 
+ <td>[bluemix plugin uninstall](index.html#bluemix_plugin_uninstall)</td>
+ </tr>
+ <tr>
+ <td>[bluemix bss account-usage](index.html#bluemix_bss_account_usage)</td>
  <td>[bluemix bss org-usage](index.html#bluemix_bss_org_usage)</td>
  <td>[bluemix bss orgs-usage-summary](index.html#bluemix_orgs_usage_summary)</td>
- <td>[bluemix security cert](index.html#bluemix_security_cert)</td> 
+ <td>[bluemix security cert](index.html#bluemix_security_cert)</td>
  <td>[bluemix security cert-add](index.html#bluemix_security_cert_add)</td>
  </tr>
  <tr>
@@ -207,8 +207,8 @@ copyright:
  <td></td>
  <td></td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *表 5. 用于管理 Bluemix 目录、插件、帐单和安全设置的命令*
 
 
@@ -217,30 +217,30 @@ copyright:
  <thead>
  <th colspan="5">用于管理网络设置的命令</th>
  </thead>
- <tbody> 
- <tr> 
+ <tbody>
+ <tr>
  <td>[bluemix network regions](index.html#bluemix_network_regions)</td>
  <td>[bluemix network region-set](index.html#bluemix_network_region_set)</td>
  <td>[bluemix network routes](index.html#bluemix_network_routes)</td>
- <td>[bluemix network route-check](index.html#bluemix_network_route_check)</td> 
- <td>[bluemix network route-map](index.html#bluemix_network_route_map)</td> 
- </tr> 
- <tr> 
+ <td>[bluemix network route-check](index.html#bluemix_network_route_check)</td>
+ <td>[bluemix network route-map](index.html#bluemix_network_route_map)</td>
+ </tr>
+ <tr>
  <td>[bluemix network route-unmap](index.html#bluemix_network_route_unmap)</td>
  <td>[bluemix network route-create](index.html#bluemix_network_route_create)</td>
  <td>[bluemix network route-delete](index.html#bluemix_network_route_delete)</td>
- <td>[bluemix network orphaned-routes-delete](index.html#bluemix_network_orphaned_routes_delete)</td> 
- <td>[bluemix network domains](index.html#bluemix_network_domains)</td> 
- </tr> 
- <tr> 
+ <td>[bluemix network orphaned-routes-delete](index.html#bluemix_network_orphaned_routes_delete)</td>
+ <td>[bluemix network domains](index.html#bluemix_network_domains)</td>
+ </tr>
+ <tr>
  <td>[bluemix network domain-create](index.html#bluemix_network_domain_create)</td>
  <td>[bluemix network domain-delete](index.html#bluemix_network_domain_delete)</td>
  <td>[bluemix network shared-domain-create](index.html#bluemix_network_shared_domain_create)</td>
  <td>[bluemix network shared-domain-delete](index.html#bluemix_network_shared_domain_delete)</td>
  <td></td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *表 6. 用于管理网络设置的命令*
 
 
@@ -249,93 +249,86 @@ copyright:
  <thead>
  <th colspan="5">用于在 Bluemix 上管理容器的命令</th>
  </thead>
- <tbody> 
- <tr> 
- <td>[bluemix ic init](index.html#bluemix_ic_init)</td> 
+ <tbody>
+ <tr>
  <td>[bluemix ic attach](index.html#bluemix_ic_attach)</td>
  <td>[bluemix ic build](index.html#bluemix_ic_build)</td>
- <td>[bluemix ic cp](index.html#bluemix_ic_cp)</td> 
- <td>[bluemix ic cpi](index.html#bluemix_ic_cpi)</td> 
- </tr> 
- <tr> 
- <td>[bluemix ic create](index.html#bluemix_ic_create)</td>
- <td>[bluemix ic exec](index.html#bluemix_ic_exec)</td> 
- <td>[bluemix ic groups](index.html#bluemix_ic_groups)</td>
- <td>[bluemix ic group-inspect](index.html#bluemix_ic_group_inspect)</td>
- <td>[bluemix ic group-instances](index.html#bluemix_ic_group_instances)</td>
- </tr>
- <tr> 
- <td>[bluemix ic group-create](index.html#bluemix_ic_group_create)</td> 
- <td>[bluemix ic group-update](index.html#bluemix_ic_group_update)</td> 
- <td>[bluemix ic group-remove](index.html#bluemix_ic_group_remove)</td>
- <td>[bluemix ic images](index.html#bluemix_ic_images)</td>
- <td>[bluemix ic inspect](index.html#bluemix_ic_inspect)</td>
+ <td>[bluemix ic cp](index.html#bluemix_ic_cp)</td>
+ <td>[bluemix ic cpi](index.html#bluemix_ic_cpi)</td>
+ <td>[bluemix ic exec](index.html#bluemix_ic_exec)</td>
  </tr>
  <tr>
- <td>[bluemix ic info](index.html#bluemix_ic_info)</td> 
- <td>[bluemix ic ips](index.html#bluemix_ic_ips)</td> 
- <td>[bluemix ic ip-request](index.html#ip_request)</td>
- <td>[bluemix ic ip-release](index.html#bluemix_ic_ip_release)</td>
- <td>[bluemix ic ip-bind](index.html#bluemix_ic_ip_bind)</td>
+ <td>[bluemix ic group-create](index.html#bluemix_ic_group_create)</td>
+ <td>[bluemix ic group-inspect](index.html#bluemix_ic_group_inspect)</td>
+ <td>[bluemix ic group-instances](index.html#bluemix_ic_group_instances)</td>
+ <td>[bluemix ic group-remove](index.html#bluemix_ic_group_remove)</td>
+ <td>[bluemix ic group-update](index.html#bluemix_ic_group_update)</td>
  </tr>
- <tr> 
- <td>[bluemix ic ip-unbind](index.html#bluemix_ic_ip_unbind)</td> 
- <td>[bluemix ic kill](index.html#bluemix_ic_kill)</td> 
+ <tr>
+  <td>[bluemix ic groups](index.html#bluemix_ic_groups)</td>
+  <td>[bluemix ic info](index.html#bluemix_ic_info)</td>
+  <td>[bluemix ic init](index.html#bluemix_ic_init)</td>
+  <td>[bluemix ic images](index.html#bluemix_ic_images)</td>
+  <td>[bluemix ic inspect](index.html#bluemix_ic_inspect)</td>
+ </tr>
+ <tr>
+ <td>[bluemix ic ip-bind](index.html#bluemix_ic_ip_bind)</td>
+ <td>[bluemix ic ip-release](index.html#bluemix_ic_ip_release)</td>
+ <td>[bluemix ic ip-request](index.html#ip_request)</td>
+ <td>[bluemix ic ip-unbind](index.html#bluemix_ic_ip_unbind)</td>
+ <td>[bluemix ic ips](index.html#bluemix_ic_ips)</td>
+ </tr>
+ <tr>
+ <td>[bluemix ic kill](index.html#bluemix_ic_kill)</td>
  <td>[bluemix ic logs](index.html#bluemix_ic_logs)</td>
  <td>[bluemix ic namespace-get](index.html#bluemix_ic_namespace_get)</td>
  <td>[bluemix ic namespace-set](index.html#bluemix_ic_namespace_set)</td>
+ <td>[bluemix ic pause](index.html#pause)</td>
  </tr>
  <tr>
- <td>[bluemix ic pause](index.html#pause)</td>
- <td>[bluemix ic unpause](index.html#unpause)</td> 
- <td>[bluemix ic port](index.html#bluemix_ic_port)</td> 
+ <td>[bluemix ic port](index.html#bluemix_ic_port)</td>
  <td>[bluemix ic ps](index.html#bluemix_ic_ps)</td>
  <td>[bluemix ic rename](index.html#bluemix_ic_rename)</td>
- </tr>
- <tr>
  <td>[bluemix ic reprovision](index.html#bluemix_ic_reprovision)</td>
- <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic restart](index.html#bluemix_ic_restart)</td>
- <td>[bluemix ic rm](index.html#bluemix_ic_rm)</td>
- <td>[bluemix ic rmi](index.html#bluemix_ic_rmi)</td> 
  </tr>
  <tr>
- <td>[bluemix ic run](index.html#bluemix_ic_run)</td> 
+ <td>[bluemix ic rm](index.html#bluemix_ic_rm)</td>
+ <td>[bluemix ic rmi](index.html#bluemix_ic_rmi)</td>
  <td>[bluemix ic route-map](index.html#bluemix_ic_route_map)</td>
  <td>[bluemix ic route-unmap](index.html#bluemix_ic_route_unmap)</td>
- <td>[bluemix ic start](index.html#ic_start)</td>
- <td>[bluemix ic stop](index.html#ic_stop)</td> 
+ <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
- <tr> 
- <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
- <td>[bluemix ic top](index.html#bluemix_ic_top)</td>
+ <tr>
  <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
  <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
- <td>[bluemix ic volumes](index.html#bluemix_ic_volumes)</td>
+ <td>[bluemix ic start](index.html#ic_start)</td>
+ <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
+ <td>[bluemix ic stop](index.html#ic_stop)</td>
  </tr>
  <tr>
+ <td>[bluemix ic top](index.html#bluemix_ic_top)</td>
+ <td>[bluemix ic unpause](index.html#unpause)</td>
+ <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>  
- <td>[bluemix ic volume-remove](index.html#bluemix_ic_volume_remove)</td>
- <td>[bluemix ic volume-space-add](index.html#bluemix_ic_volume_space_add)</td>
- <td>[bluemix ic volume-space-remove](index.html#bluemix_ic_volume_space_remove)</td>  
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
  </tr>
  <tr>
- <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td> 
- <td>[bluemix ic volume-fs-create](index.html#bluemix_ic_volume_fs_create)</td> 
- <td>[bluemix ic volume-fs-remove](index.html#bluemix_ic_volume_fs_remove)</td> 
+ <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
+ <td>[bluemix ic volume-fs-create](index.html#bluemix_ic_volume_fs_create)</td>
+ <td>[bluemix ic volume-fs-remove](index.html#bluemix_ic_volume_fs_remove)</td>
  <td>[bluemix ic volume-fs-inspect](index.html#bluemix_ic_volume_fs_inspect)</td>
- <td>[bluemix ic volume-fs-flavors](index.html#bluemix_ic_volume_fs_flavors)</td> 
+ <td>[bluemix ic volume-fs-flavors](index.html#bluemix_ic_volume_fs_flavors)</td>
  </tr>
  <tr>
+ <td>[bluemix ic volume-remove](index.html#bluemix_ic_volume_remove)</td>
+ <td>[bluemix ic volumes](index.html#bluemix_ic_volumes)</td>
  <td>[bluemix ic wait](index.html#bluemix_ic_wait)</td>
  <td>[bluemix ic wait-status](index.html#bluemix_ic_wait_status)</td>
  <td>[bluemix ic version](index.html#bluemix_ic_version)</td>
- <td></td>
- <td></td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *表 7. 用于在 Bluemix 上管理容器的命令*
 
 
@@ -367,25 +360,25 @@ bluemix help [COMMAND|NAMESPACE]
 bluemix help
 ```
 
-显示 `info` 命令的帮助信息：
+显示 `info` 命令的帮助：
 
 ```
 bluemix help info
 ```
 
-显示 `ic` 名称空间的帮助：
+显示 `ic` 插件的帮助：
 
 ```
 bluemix help ic
 ```
 
-或 
+或
 
 ```
 bluemix ic help
 ```
 
-显示 `ic` 名称空间下 `group-create` 命令的帮助信息：
+显示 `ic` 插件下 `group-create` 命令的帮助：
 
 ```
 bluemix ic help group-create
@@ -763,7 +756,7 @@ bluemix iam org-create ORG_NAME
    <dt>ORG_NAME（必需）</dt>
    <dd>要创建的组织的名称。</dd>
    </dl>
-   
+
 <strong>示例</strong>：
 
 创建名为 `IBM` 的组织。
@@ -1690,7 +1683,7 @@ bluemix security cert DOMAIN_NAME
 <strong>先决条件</strong>：端点和登录
 
 <strong>命令选项</strong>：
-   
+
    <dl>
    <dt>DOMAIN_NAME（必需）</dt>
    <dd>托管证书的域。</dd>
@@ -1927,10 +1920,6 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 ```
 
 
-
-
-
-
 ## bluemix plugin uninstall
 {: #bluemix_plugin_uninstall}
 
@@ -1958,32 +1947,10 @@ bluemix plugin uninstall IBM-Containers
 ```
 
 
-## bluemix ic init
-{: #bluemix_ic_init}
-
-初始化本地计算机上的容器环境，以使用 IBM Containers 服务的完整功能。
-
-```
-bluemix ic init
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-**注：**初始化之前，请确保 Docker CLI (docker) 已安装并在 PATH 环境变量中配置。要切换到其他区域，请使用 `bluemix region-set` 命令。 
-
-<strong>示例</strong>：
-
-切换到 `us-south` 区域：
-
-```
-bluemix region-set us-south
-```
-
-
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-控制正在运行的容器或查看其输出。使用 `CTRL+C` 以退出并停止容器。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [attach](https://docs.docker.com/reference/commandline/attach/){: new_window} 命令。 
+控制正在运行的容器或查看其输出。使用 `CTRL+C` 以退出并停止容器。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [attach](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} 命令。
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -1998,7 +1965,7 @@ bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
    <dd>不包含标准输入。</dd>
    <dt>--sig-proxy（可选）</dt>
    <dd>将所有接收到的信号通过代理传递到进程。缺省值为 <i>true</i>。</dd>
-   <dt>CONTAINER（必需）</dt>
+   <dt><i>CONTAINER</i>（必需）</dt>
    <dd>容器名称或标识。</dd>
     </dl>
 
@@ -2014,7 +1981,7 @@ bluemix ic attach my_container
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-调用 IBM Containers 构建服务，用于在本地或在专用 {{site.data.keyword.Bluemix_notm}} 存储库中构建 Docker 映像。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [build](https://docs.docker.com/reference/commandline/build/){: new_window} 命令。 
+调用 IBM Containers 构建服务，用于在本地或在专用 {{site.data.keyword.Bluemix_notm}} 存储库中构建 Docker 映像。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [build](https://docs.docker.com/engine/reference/commandline/build/){: new_window} 命令。
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -2028,11 +1995,11 @@ bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFI
    <dd>要应用到所创建映像的存储库名称。</dd>
    <dt>--no-cache（可选）</dt>
    <dd>在构建映像时不使用高速缓存。缺省值为 <i>false</i>。</dd>
-   <dt>-p|--pull（可选）</dt>
+   <dt>--pull（可选）</dt>
    <dd>尝试从注册表拉取基本映像（即使它已高速缓存）。</dd>
    <dt>-q|--quiet（可选）</dt>
    <dd>禁止显示容器生成的详细输出。缺省值为 <i>false</i>。</dd>
-   <dt>DOCKERFILE_LOCATION（必需）</dt>
+   <dt><i>DOCKERFILE_LOCATION</i>（必需）</dt>
    <dd>本地主机上 Dockerfile 和上下文的路径。</dd>
     </dl>
 
@@ -2044,9 +2011,10 @@ bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFI
 bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 ```
 
+
 ## bluemix ic cp
 {: #bluemix_ic_cp}
-在容器与本地文件系统之间复制文件或文件夹。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [build](https://docs.docker.com/reference/commandline/cp/){: new_window} 命令。
+在容器与本地文件系统之间复制文件或文件夹。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [cp](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} 命令。
 
 
 ## bluemix ic cpi
@@ -2062,9 +2030,9 @@ bluemix ic cpi SOURCE_IMAGE DESTINATION_IMAGE
 
 <strong>命令选项</strong>：
    <dl>
-   <dt>SOURCE_IMAGE（必需）</dt>
+   <dt><i>SOURCE_IMAGE</i>（必需）</dt>
    <dd>源存储库和映像名称。</dd>
-   <dt>DESTINATION_IMAGE（必需）</dt>
+   <dt><i>DESTINATION_IMAGE</i>（必需）</dt>
    <dd>专用 {{site.data.keyword.Bluemix_notm}} 存储库 URL，其中包含名称空间和目标映像名称。映像的标记是可选的。</dd>
    </dl>
 
@@ -2076,22 +2044,17 @@ bluemix ic cpi SOURCE_IMAGE DESTINATION_IMAGE
 bluemix ic cpi source_repository/source_image_name private_registry_URL/destination_image_name:tag
 ```
 
-将 `sinatra` 映像从 `training` 存储库复制到专用存储库 `registry.ng.bluemix.net/mynamespace`，然后将该映像命名为 `mysinatra`。为映像 `mysinatra` 添加标记 `v1`。 
+将 `sinatra` 映像从 `training` 存储库复制到专用存储库 `registry.ng.bluemix.net/mynamespace`，然后将该映像命名为 `mysinatra`。为映像 `mysinatra` 添加标记 `v1`。
 
 ```
 bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ```
 
-## bluemix ic create
-{: #bluemix_ic_create}
-
-在 {{site.data.keyword.Bluemix_notm}} 存储库中创建新容器。此命令会对 `docker create` 命令打包。有关更多信息，请参阅 Docker 帮助中的 [create](https://docs.docker.com/reference/commandline/create/){: new_window} 命令。
 
 ## bluemix ic exec
 {: #bluemix_ic_exec}
 
-
-在容器内执行命令。有关更多信息，请参阅 Docker 帮助中的 [exec](https://docs.docker.com/reference/commandline/exec/){: new_window} 命令。
+在容器内执行命令。有关更多信息，请参阅 Docker 帮助中的 [exec](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} 命令。
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -2108,9 +2071,9 @@ bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
    <dd>交互方式。使标准输入保持显示。输入 <i>exit</i> 以退出。</dd>
    <dt>-u <i>USER</i>|--user <i>USER</i>（可选）</dt>
    <dd>用户名。</dd>
-   <dt>CONTAINER（必需）</dt>
+   <dt><i>CONTAINER</i>（必需）</dt>
    <dd>容器名称或标识。</dd>
-   <dt>CMD（可选）</dt>
+   <dt><i>CMD</i>（可选）</dt>
    <dd>要在指定的一个或多个容器内执行的命令。</dd>
    </dl>
 
@@ -2129,22 +2092,99 @@ bluemix ic exec my_container date
 ```
 
 
-## bluemix ic groups
-{: #bluemix_ic_groups}
+## bluemix ic group-create
+{: #bluemix_ic_group_create}
 
-列出组织的专用 {{site.data.keyword.Bluemix_notm}} 存储库中的容器组。
+创建可扩展容器组。
 
 ```
-bluemix ic groups [-q]
+bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMORY_SIZE] [-n,--hostname HOSTNAME] [-d,--domain DOMAIN] [--env,-e ENV_KEY=ENV_VAL] [--env-file ENVIRONMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--max MAX_INSTANCE_COUNT] [--desired DESIRED_INSTANCE_COUNT] [--anti false|true] [--auto false|true] IMAGE_NAME [CMD [CMD ...]]
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
 
 <strong>命令选项</strong>：
-	<dl>
-	<dt>-q（可选）</dt>
-   	<dd>仅显示组标识</dd>
-	</dl>
+   <dl>
+    <dt><i>IMAGE_NAME</i>（必需）</dt>
+   <dd>要包含在容器组中的每个容器实例内的映像。可以在映像之后列出命令，但不要在映像之后放置任何选项。请在指定映像之前包含所有选项。<br><br>如果在组织的专用 {{site.data.keyword.Bluemix_notm}} 存储库中使用映像，请使用以下格式指定映像：<i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i>。<br><br>如果使用 IBM Containers 提供的映像，请不要包含组织的名称空间。使用以下格式指定映像：<i>registry.ng.bluemix.net/IMAGE</i>。</dd>
+   <dt>--name <i>GROUP_NAME</i>（必需）</dt>
+   <dd>为组分配名称。不推荐使用 <i>-n</i>。<br>
+   <strong>提示：</strong>容器名称必须以字母开头。名称可以包含大写字母、小写字母、数字、句点 .、下划线 _ 或连字符 -。</dd>
+   <dt>-m <i>MEMORY_SIZE</i>|--memory <i>MEMORY_SIZE</i>（可选）</dt>
+   <dd>为组分配内存限制 (MB)。在 CLI 中创建容器组时，每个容器实例的缺省值为 <i>64</i> MB。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中创建容器组时，每个容器实例的缺省值为 <i>256</i> MB。接受的值为 <i>64</i>、<i>256</i>、<i>512</i>、<i>1024</i> 和 <i>2048</i>。分配内存限制后，此值无法更改。</dd>
+   <dt>-n <i>HOSTNAME</i>|--hostname <i>HOSTNAME</i>（可选）</dt>
+   <dd>主机名，如 <i>mycontainerhost</i>。主机和域组合在一起构成了完整的公共路径 URL，例如 <i>http://mycontainerhost.mybluemix.net</i>。使用 <i>bluemix ic group-inspect</i> 命令来查看容器组的详细信息时，主机和域会作为路径一起列出。</dd>
+   <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i>（可选）</dt>
+   <dd>通常，域为 <i>.mybluemix.net</i>。主机和域组合在一起构成了完整的公共路径 URL，例如 <i>http://mycontainerhost.mybluemix.net</i>。使用 <i>bluemix ic group-inspect</i> 命令来查看容器组的详细信息时，主机和域会作为路径一起列出。</dd>
+   <dt>-e <i>ENV_KEY=ENV_VAL</i>|--env <i>ENV_KEY=ENV_VAL</i>（可选）</dt>
+   <dd>设置环境变量。单独列出多个键。如果包含引号，请用引号将环境变量名称和值括起。例如：`-e "key1=value1" -e "key2=value2" -e "key3=value3"`。下表显示了可以指定的一些常用环境变量：</dd>
+    </dl>
+
+
+|  环境变量                              |     描述                            |
+| :----------------------------- | :------------------------------ |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用 `CCS_BIND_APP` 环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅[将服务绑定到容器](../../../containers/container_integrations_binding.html){: new_window}。 |
+| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 要在不使用网桥应用程序的情况下将 Bluemix 服务直接绑定到容器，请使用 CCS_BIND_SRV。此绑定允许 Bluemix 将 VCAP_SERVICES 信息插入正在运行的容器实例中。要列出多个 Bluemix 服务，请将这些服务包含在同一环境变量中。 |
+| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 添加要在容器中监视的日志文件。请包含 `LOG_LOCATIONS` 环境变量以及日志文件的路径。 |
+*表 8. 常用环境变量*
+
+   <dl>
+   <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i>（可选）</dt>
+   <dd> 从文件导入环境变量，其中 ENVFILE 是本地目录上您文件的路径。文件中的每一行代表一个 key=value 对。</dd>
+   <dt>--volume <i>VOLUME</i>:<i>CONTAINER_PATH</i>[:ro]（可选）</dt>
+   <dd>通过使用格式 <i>VolumeId:ContainerPath[:ro]</i> 指定详细信息来将卷连接到容器。
+<ul>
+   <li><i>VOLUME</i>：卷标识或名称。</li>
+   <li><i>CONTAINER_PATH</i>：容器中卷的绝对路径。</li>
+   <li>ro：可选。指定 <i>ro</i> 会将卷设为只读，而不是缺省的读/写。</li></ul>
+   </dd>
+   <dt>-p <i>PORT</i>|--publish <i>PORT</i>（可选）</dt>
+   <dd>公开用于 HTTP 流量的端口。组中的容器必须侦听该 HTTP 端口。无法发出 HTTPS 请求。对于容器组，不能包含多个端口。<br><br>指定端口时，您使应用程序可用于相同 {{site.data.keyword.Bluemix_notm}} 空间中正尝试联系主机的 {{site.data.keyword.Bluemix_notm}} 负载均衡器或容器。然后，{{site.data.keyword.Bluemix_notm}} 负载均衡器或容器可以使用该端口来访问同一 {{site.data.keyword.Bluemix_notm}} 空间中的主机和应用程序。如果在 Dockerfile 中为要使用的映像指定了端口，请包含该端口。<br>
+   <strong>提示</strong>：<ul>
+   <li>对于 IBM 认证的 Liberty Server 映像或此映像的修改版本，请输入端口 9080。</li>
+   <li>对于 IBM 认证的 Node.js 映像或此映像的修改版本，请输入端口 8000。</li>
+   </ul>
+   </dd>
+   <dt>-P（可选）</dt>
+   <dd>发布所有端口</dd>
+   <dt>--min <i>MIN_INSTANCE_COUNT</i>（可选）</dt>
+   <dd>最小实例数。缺省值为 1。如果设置了最小实例数，那么创建容器组后，无法更改此值。</dd>
+   <dt>--max <i>MAX_INSTANCE_COUNT</i>（可选）</dt>
+   <dd>最大实例数。缺省值为 2。如果设置了最大实例数，那么创建容器组后，无法更改此值。</dd>
+   <dt>--desired <i>DESIRED_INSTANCE_COUNT</i>（可选）</dt>
+   <dd>需要的实例数。缺省值为 2。</dd>
+   <dt>--auto（可选）</dt>
+   <dd>创建容器组并启用自动恢复后，IBM Containers 会通过向所分配的端口发送 HTTP 请求来检查每个实例的运行状况。<br>
+在接下来的两个 90 秒的时间间隔内，如果没有收到来自某个容器实例的响应，那么会除去该实例并替换为新实例。如果该容器有响应，那么不会执行任何操作。此过程会持续重复。在 30 分钟的时段内，如果容器组中不同容器的总数等于或超过该容器组最大大小的 3 倍，那么会对该容器组永久禁用自动恢复。要重新启用自动恢复，必须重新创建容器组。</dd>
+  <dt>--anti（可选）</dt>
+  <dd> 使用反亲缘关系，可使您的容器组具有更高的可用性。--anti 选项强制将组中的每一个容器实例置于独立的物理计算节点上，这可降低因硬件故障而导致组中所有容器崩溃的几率。您可能无法对较大的组大小使用此选项，因为每一个 Bluemix 区域和组织在可用于部署的计算节点集方面存在限制。如果部署不成功，请减少组中的容器实例数或移除 --anti 选项。</dd>
+   <dt><i>CMD</i>（可选）</dt>
+   <dd>该命令和自变量会传递到容器组以便执行。此命令必须是长时间运行命令。不要使用不会运行很长时间的短时间运行命令（例如 <i>/bin/date</i>），因为短时间运行命令可能会导致容器崩溃。<br> <strong>注：</strong> <ul>
+   <li>命令及其自变量必须位于 <i>bluemix ic run</i> 命令行的末尾。</li>
+   <li>如果命令自变量包含连字符 -（如先前命令示例中的 <i>-c</i> 所示），那么必须在命令前面添加两个连字符 --。</li>
+   </ul></dd>
+   </dl>
+
+
+<strong>示例</strong>：
+
+使用 IBM Containers 提供的 `registry.ng.bluemix.net/ibmnode` 映像创建容器组 `my_container_group`，然后对该容器组运行长时间运行的命令 `ping localhost`：
+
+```
+bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode ping localhost
+```
+
+使用 IBM Containers 提供的 `registry.ng.bluemix.net/ibmnode` 映像创建容器组 `my_container_group`，然后对该容器组运行长时间运行的命令 `tail -f /dev/null`：
+
+```
+bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode -- tail -f /dev/null
+```
+
+使用 `registry.ng.bluemix.net/ibmliberty` 映像创建可扩展组 `mygroup`，并启用自动恢复。端口为 `9080`，主机名为 `mycontainerhost`，域名为 `mybluemix.net`。
+```
+bluemix ic group-create -p 9080 --auto -n mycontainerhost -d mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty
+```
+
 
 ## bluemix ic group-inspect
 {: #bluemix_ic_group_inspect}
@@ -2160,7 +2200,7 @@ bluemix ic group-inspect CONTAINER_GROUP
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>CONTAINER_GROUP（必需）</dt>
+   <dt><i>CONTAINER_GROUP</i>（必需）</dt>
    <dd>容器组标识或名称。</dd>
    </dl>
 
@@ -2187,7 +2227,7 @@ bluemix ic group-instances CONTAINER_GROUP
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>CONTAINER_GROUP（必需）</dt>
+   <dt><i>CONTAINER_GROUP</i>（必需）</dt>
    <dd>容器组标识或名称。</dd>
    </dl>
 
@@ -2200,162 +2240,10 @@ bluemix ic group-instances my_group
 ```
 
 
-## bluemix ic group-create
-{: #bluemix_ic_group_create}
-
-创建可扩展容器组。
-
-```
-bluemix ic group-create --name GROUP_NAME [--memory,-m MEMORY_SIZE] [-n,--hostname HOSTNAME] [-d,--domain DOMAIN] [--env,-e ENV_KEY=ENV_VAL] [--env-file ENVIRONMENT_VARIABLE_FILE] [--publish,-p PORT] [-P false|true] [--volume,-v VOLUME] [--min MIN_INSTANCE_COUNT] [--max MAX_INSTANCE_COUNT] [--desired DESIRED_INSTANCE_COUNT] [--anti false|true] [--bind SERVICE_INSTANCE_NAME] IMAGE_NAME [CMD [CMD ...]]
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-   <dl>
-    <dt>IMAGE_NAME（必需）</dt>
-   <dd>要包含在容器组中的每个容器实例内的映像。可以在映像之后列出命令，但不要在映像之后放置任何选项。请在指定映像之前包含所有选项。<br><br>如果在组织的专用 {{site.data.keyword.Bluemix_notm}} 存储库中使用映像，请使用以下格式指定映像：<i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i>。<br><br>如果使用 IBM Containers 提供的映像，请不要包含组织的名称空间。使用以下格式指定映像：<i>registry.ng.bluemix.net/IMAGE</i>。</dd>
-   
-   <dt>--name <i>GROUP_NAME</i>（必需）</dt>
-   <dd>为组分配名称。不推荐使用 <i>-n</i>。<br>
-   <strong>提示：</strong>容器名称必须以字母开头。名称可以包含大写字母、小写字母、数字、句点 .、下划线 _ 或连字符 -。</dd>
-  
-   <dt>-m <i>MEMORY_SIZE</i>|--memory <i>MEMORY_SIZE</i>（可选）</dt>
-   <dd>为组分配内存限制 (MB)。在 CLI 中创建容器组时，每个容器实例的缺省值为 <i>64</i> MB。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中创建容器组时，每个容器实例的缺省值为 <i>256</i> MB。接受的值为 <i>64</i>、<i>256</i>、<i>512</i>、<i>1024</i> 和 <i>2048</i>。分配内存限制后，此值无法更改。</dd>
-   
-   <dt>-n <i>HOSTNAME</i>|--hostname <i>HOSTNAME</i>（可选）</dt>
-   <dd>主机名，如 <i>mycontainerhost</i>。主机和域组合在一起构成了完整的公共路径 URL，例如 <i>http://mycontainerhost.mybluemix.net</i>。使用 <i>bluemix ic group-inspect</i> 命令来查看容器组的详细信息时，主机和域会作为路径一起列出。</dd>
-   <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i>（可选）</dt>
-   <dd>通常，域为 <i>.mybluemix.net</i>。主机和域组合在一起构成了完整的公共路径 URL，例如 <i>http://mycontainerhost.mybluemix.net</i>。使用 <i>bluemix ic group-inspect</i> 命令来查看容器组的详细信息时，主机和域会作为路径一起列出。</dd>
-   
-   <dt>-e <i>ENV_KEY=ENV_VAL</i>|--env <i>ENV_KEY=ENV_VAL</i>（可选）</dt>
-   <dd>设置环境变量。单独列出多个键。如果包含引号，请用引号将环境变量名称和值括起。例如：`-e "key1=value1" -e "key2=value2" -e "key3=value3"`。下表显示了可以指定的一些常用环境变量：</dd>
-    </dl>
- 
-
-|  环境变量                              |     描述                            |
-| :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用 `CCS_BIND_APP` 环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅[将服务绑定到容器](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov){: new_window}。 |
-| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | 创建容器时，向容器添加 SSH 密钥。在 {{site.data.keyword.Bluemix_notm}}“仪表板”或 CLI 中创建容器时，可以使用此环境变量来添加 SSH 密钥。有关 SSH 密钥的更多信息，请参阅[登录到容器](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}。 |
-| LOG_LOCATIONS=*&lt;path_to_file&gt;* | 添加要在容器中监视的日志文件。请包含 `LOG_LOCATIONS` 环境变量以及日志文件的路径。 |
-*表 8. 常用环境变量*
-
-   <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i>（可选）</dt>
-   <dd> 从文件导入环境变量，其中 ENVFILE 是本地目录上您文件的路径。文件中的每一行代表一个 key=value 对。</dd>
-    </dl>
-   <dl>
-   <dt>-v VOLUME:CONTAINER_PATH[:ro]|--volume VOLUME:CONTAINER_PATH[:ro]（可选）</dt>
-   <dd>通过使用格式 <i>VolumeId:ContainerPath[:ro]</i> 指定详细信息来将卷连接到容器。
-<ul>
-   <li>VOLUME：卷标识或名称。</li>
-   <li>CONTAINER_PATH：容器中卷的绝对路径。</li>
-   <li>ro：可选。指定 <i>ro</i> 会将卷设为只读，而不是缺省的读/写。</li></ul>
-   </dd>
-   <dt>-p <i>PORT</i>|--publish <i>PORT</i>（可选）</dt>
-   <dd>公开用于 HTTP 流量的端口。组中的容器必须侦听该 HTTP 端口。无法发出 HTTPS 请求。对于容器组，不能包含多个端口。<br><br>指定端口时，您使应用程序可用于相同 {{site.data.keyword.Bluemix_notm}} 空间中正尝试联系主机的 {{site.data.keyword.Bluemix_notm}} 负载均衡器或容器。然后，{{site.data.keyword.Bluemix_notm}} 负载均衡器或容器可以使用该端口来访问同一 {{site.data.keyword.Bluemix_notm}} 空间中的主机和应用程序。如果在 Dockerfile 中为要使用的映像指定了端口，请包含该端口。<br> 
-   <strong>提示</strong>：<ul>
-   <li>对于 IBM 认证的 Liberty Server 映像或此映像的修改版本，请输入端口 9080。</li>
-   <li>对于 IBM 认证的 Node.js 映像或此映像的修改版本，请输入端口 8000。</li>
-   </ul>
-   </dd>
-   <dt>-P（可选）</dt>
-   <dd>发布所有端口</dd>
-   
-   <dt>--min <i>MIN_INSTANCE_COUNT</i>（可选）</dt>
-   <dd>最小实例数。缺省值为 1。如果设置了最小实例数，那么创建容器组后，无法更改此值。</dd>
-   
-   <dt>--max <i>MAX_INSTANCE_COUNT</i>（可选）</dt>
-   <dd>最大实例数。缺省值为 2。如果设置了最大实例数，那么创建容器组后，无法更改此值。</dd>
-   
-   <dt>--desired <i>DESIRED_INSTANCE_COUNT</i>（可选）</dt>
-   <dd>需要的实例数。缺省值为 2。</dd>
-   
-   <dt>--auto（可选）</dt>
-   <dd>创建容器组并启用自动恢复后，IBM Containers 会通过向所分配的端口发送 HTTP 请求来检查每个实例的运行状况。<br>
-在接下来的两个 90 秒的时间间隔内，如果没有收到来自某个容器实例的响应，那么会除去该实例并替换为新实例。如果该容器有响应，那么不会执行任何操作。此过程会持续重复。在 30 分钟的时段内，如果容器组中不同容器的总数等于或超过该容器组最大大小的 3 倍，那么会对该容器组永久禁用自动恢复。要重新启用自动恢复，必须重新创建容器组。</dd>
-  <dt>--anti（可选）</dt>
-  <dd> 使用反亲缘关系，可使您的容器组具有更高的可用性。--anti 选项强制将组中的每一个容器实例置于独立的物理计算节点上，这可降低因硬件故障而导致组中所有容器崩溃的几率。您可能无法对较大的组大小使用此选项，因为每一个 Bluemix 区域和组织在可用于部署的计算节点集方面存在限制。如果部署不成功，请减少组中的容器实例数或移除 --anti 选项。</dd>
-    
-   <dt>--bind SERVICE_INSTANCE_NAME（可选）</dt>
-   <dd> 将服务添加到正在运行的容器组。</dd>
-   
-   <dt>CMD（可选）</dt>
-   <dd>该命令和自变量会传递到容器组以便执行。此命令必须是长时间运行命令。不要使用不会运行很长时间的短时间运行命令（例如 <i>/bin/date</i>），因为短时间运行命令可能会导致容器崩溃。<br> <strong>注：</strong> <ul>
-   <li>命令及其自变量必须位于 <i>bluemix ic run</i> 命令行的末尾。</li>
-   <li>如果命令自变量包含连字符 -（如先前命令示例中的 <i>-c</i> 所示），那么必须在命令前面添加两个连字符 --。</li>
-   </ul></dd>
-   </dl>
-
-
-<strong>示例</strong>：
-
-使用 IBM Containers 提供的 `registry.ng.bluemix.net/ibmnode` 映像创建容器组 `my_container_group`，然后对该容器组运行长时间运行的命令 `ping localhost`：
-
-```
-bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode ping localhost
-```
-
-使用 IBM Containers 提供的 `registry.ng.bluemix.net/ibmnode` 映像创建容器组 `my_container_group`，然后对该容器组运行长时间运行的命令 `tail -f /dev/null`：
-
-```
-bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode -- tail -f /dev/null
-```
-
-使用 `registry.ng.bluemix.net/ibmliberty` 映像创建可扩展组 `mygroup`，并启用自动恢复。端口为 `9080`，主机名为 `mycontainerhost`，域名为 `.mybluemix.net`。
-
-```
-bluemix ic group-create -p 9080 --auto -n mycontainerhost -d .mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty 
-```
-
-
-## bluemix ic group-update
-{: #bluemix_ic_group_update}
-
-更新容器组。
-
-
-```
-bluemix ic group-update [--min MIN_INSTANCE_COUNT] [--max MAX_INSTANCE_COUNT] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=ENV_VAL] GROUP_NAME
-```
-
-**提示：**要更新容器组的主机名或域，请使用 `bluemix ic route-map [-n HOST][-d DOMAIN] CONTAINER_GROUP`。
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
- <dl>
-   <dt>--min <i>MIN_INSTANCE_COUNT</i>（可选）</dt>
-   <dd>最小实例数。缺省值为 <i>1</i>。设置了最小实例数后，无法更改此值。</dd>
-   <dt>--max <i>MAX_INSTANCE_COUNT</i>（可选）</dt>
-   <dd>最大实例数。缺省值为 <i>2</i>。设置了最大实例数后，无法更改此值。</dd>
-   <dt>--desired <i>DESIRED_INSTANCE_COUNT</i>（可选）</dt>
-   <dd>需要的实例数。缺省值为 <i>2</i>。</dd>
-   </dl>
-
-**提示：**一次只能指定 `--min MIN_INSTANCE_COUNT`、`--max MAX_INSTANCE_COUNT` 或 `--desired DESIRED_INSTANCE_COUNT` 选项中的一个。
-
-   <dl>
-   <dt>-e <i>ENV_KEY=ENV_VAL</i>（可选）</dt>
-   <dd>设置环境变量。单独列出多个键。如果包含引号，请用引号将环境变量名称和值括起。例如：`-e "key1=value1" -e "key2=value2" -e "key3=value3"`。</dd>
-    </dl>
-   <dl>
-   <dt>GROUP_NAME（必需）</dt>
-   <dd>容器组标识或名称。</dd>
-   </dl>
-
-<strong>示例</strong>：
-
-以下示例显示用于更新容器组 `my_group` 的请求：
-
-```
-bluemix ic group-update --max 5 my_group
-```
-
-
 ## bluemix ic group-remove
 {: #bluemix_ic_group_remove}
 
-从组织专用 {{site.data.keyword.Bluemix_notm}} 存储库中除去容器组。
+从空间中除去容器组。
 
 ```
 bluemix ic group-remove [-f|--force] GROUP_NAME [GROUP_NAME2 [...]]
@@ -2368,7 +2256,7 @@ bluemix ic group-remove [-f|--force] GROUP_NAME [GROUP_NAME2 [...]]
    <dl>
    <dt>-f|--force（可选）</dt>
    <dd>强制除去正在运行的或发生故障的容器。</dd>
-   <dt>GROUP_NAME（必需）</dt>
+   <dt><i>GROUP_NAME</i>（必需）</dt>
    <dd>容器组标识或名称。</dd>
    </dl>
 
@@ -2382,13 +2270,66 @@ bluemix ic group-remove my_group
 ```
 
 
+## bluemix ic group-update
+{: #bluemix_ic_group_update}
+
+更新容器组。
+
+
+```
+bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=ENV_VAL] GROUP_NAME
+```
+
+**提示：**要更新容器组的主机名或域，请使用 `bluemix ic route-map [-n HOST][-d DOMAIN] CONTAINER_GROUP`。
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+ <dl>
+   <dt>--anti（可选）</dt>
+   <dd>使用反亲缘关系，可使您的容器组具有更高的可用性。--anti 选项强制将组中的每一个容器实例置于独立的物理计算节点上，这可降低因硬件故障而导致组中所有容器崩溃的几率。您可能无法对较大的组大小使用此选项，因为每一个 Bluemix 区域和组织在可用于部署的计算节点集方面存在限制。如果部署不成功，请减少组中的容器实例数或移除 --anti 选项。</dd>
+   <dt>--desired <i>DESIRED_INSTANCE_COUNT</i>（可选）</dt>
+   <dd>需要的实例数。缺省值为 <i>2</i>。</dd>
+   <dt>-e <i>ENV_KEY=ENV_VAL</i>（可选）</dt>
+   <dd>设置环境变量。单独列出多个键。如果包含引号，请用引号将环境变量名称和值括起。例如：`-e "key1=value1" -e "key2=value2" -e "key3=value3"`。</dd>
+   <dt><i>GROUP_NAME</i>（必需）</dt>
+   <dd>容器组标识或名称。</dd>
+   </dl>
+
+<strong>示例</strong>：
+
+以下示例显示用于更新容器组 `my_group` 的请求：
+
+```
+bluemix ic group-update --desired 5 my_group
+```
+
+
+## bluemix ic groups
+{: #bluemix_ic_groups}
+
+列出组织的专用 {{site.data.keyword.Bluemix_notm}} 存储库中的容器组。
+
+```
+bluemix ic groups [-q]
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+	<dl>
+	<dt>-q（可选）</dt>
+   	<dd>仅显示组标识</dd>
+	</dl>
+
+
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-查看组织的专用 {{site.data.keyword.Bluemix_notm}} 存储库中所有可用映像的列表。有关更多信息，请参阅 Docker 帮助中的 [images](https://docs.docker.com/reference/commandline/images){: new_window} 命令。此列表包含映像标识、创建日期和映像名称。
+查看组织的专用 {{site.data.keyword.Bluemix_notm}} 存储库中所有可用映像的列表。有关更多信息，请参阅 Docker 帮助中的 [images](https://docs.docker.com/engine/reference/commandline/images){: new_window} 命令。此列表包含映像标识、创建日期和映像名称。
 
 ```
-bluemix ic images [-a|--all] [--no-trunc] [-q|--quiet]
+bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
 ```
 
 <strong>先决条件</strong>：端点、登录、目标和 Docker
@@ -2398,6 +2339,8 @@ bluemix ic images [-a|--all] [--no-trunc] [-q|--quiet]
    <dl>
    <dt>-a|--all（可选）</dt>
    <dd>包含组织的存储库中每个映像的所有映像层，而不仅仅包含最近的层。</dd>
+   <dt>-f（可选）</dt>
+   <dd>按提供的条件过滤映像列表。</dd>
    <dt>--no-trunc（可选）</dt>
    <dd>不截断输出。</dd>
    <dt>-q|--quiet（可选）</dt>
@@ -2413,38 +2356,6 @@ bluemix ic images
 ```
 
 
-## bluemix ic inspect
-{: #bluemix_ic_inspect}
-
-查看有关容器的信息。有关更多信息，请参阅 Docker 帮助中的 [inspect](https://docs.docker.com/reference/commandline/inspect){: new_window} 命令。
-
-```
-bluemix ic inspect [IMAGE|images|CONTAINER]
-```
-
-<strong>先决条件</strong>：端点、登录、目标和 Docker
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>IMAGE（必需）</dt>
-   <dd>通过指定映像名称或标识来查看有关特定映像的详细信息。</dd>
-   <dt>images（必需）</dt>
-   <dd>查看有关存储库中所有映像的详细信息。</dd>
-   <dt>CONTAINER（必需）</dt>
-   <dd>通过指定容器名称或标识来查看有关特定容器的详细信息。</dd>
-   </dl>
-
-**提示：**一次只能指定 *IMAGE*、*images* 或 *CONTAINER* 中的一个。 
-
-<strong>示例</strong>：
-
-以下示例显示用于检查名为 `proxy` 的容器的请求： 
-```
-bluemix ic inspect proxy
-```
-
-
 ## bluemix ic info
 {: #bluemix_ic_info}
 
@@ -2455,6 +2366,157 @@ bluemix ic info
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
+
+
+## bluemix ic init
+{: #bluemix_ic_init}
+
+初始化本地计算机上的容器环境，以使用 IBM Containers 服务的完整功能。
+
+```
+bluemix ic init
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+**注：**初始化之前，请确保 Docker CLI (docker) 已安装并在 PATH 环境变量中配置。要切换到其他区域，请使用 `bluemix region-set` 命令。
+
+<strong>示例</strong>：
+
+切换到 `us-south` 区域：
+
+```
+bluemix region-set us-south
+```
+
+
+## bluemix ic inspect
+{: #bluemix_ic_inspect}
+
+查看有关容器的信息。有关更多信息，请参阅 Docker 帮助中的 [inspect](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} 命令。
+
+```
+bluemix ic inspect [IMAGE|images|CONTAINER]
+```
+
+<strong>先决条件</strong>：端点、登录、目标和 Docker
+
+<strong>命令选项</strong>：
+
+   <dl>
+   <dt><i>IMAGE</i>（必需）</dt>
+   <dd>通过指定映像名称或标识来查看有关特定映像的详细信息。</dd>
+   <dt>images（必需）</dt>
+   <dd>查看有关存储库中所有映像的详细信息。</dd>
+   <dt><i>CONTAINER</i>（必需）</dt>
+   <dd>通过指定容器名称或标识来查看有关特定容器的详细信息。</dd>
+   </dl>
+
+**提示：**一次只能指定 *IMAGE*、*images* 或 *CONTAINER* 中的一个。
+
+<strong>示例</strong>：
+
+以下示例显示用于检查名为 `proxy` 的容器的请求：
+```
+bluemix ic inspect proxy
+```
+
+
+## bluemix ic ip-bind
+{: #bluemix_ic_ip_bind}
+
+将可用浮动 IP 地址绑定到容器。
+
+```
+bluemix ic ip-bind IP_ADDRESS CONTAINER
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+
+   <dl>
+   <dt><i>IP_ADDRESS</i>（必需）</dt>
+   <dd>要绑定的 IP 地址。</dd>
+   <dt><i>CONTAINER</i>（必需）</dt>
+   <dd>要绑定的容器标识或名称。</dd>
+   </dl>
+
+<strong>示例</strong>：
+
+以下示例显示用于将 IP 地址 `192.123.12.12` 绑定到容器 `proxy` 的请求：
+
+```
+bluemix ic ip-bind 192.123.12.12 proxy
+```
+
+
+## bluemix ic ip-release
+{: #bluemix_ic_ip_release}
+
+从容器云服务实例释放浮动 IP 地址。
+
+```
+bluemix ic ip-release IP_ADDRESS [IP_ADDRESS2 [...]]
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+
+   <dl>
+   <dt><i>IP_ADDRESS</i>（必需）</dt>
+   <dd>要释放的 IP 地址。</dd>
+   </dl>
+
+
+## bluemix ic ip-request
+{: #ip_request}
+请求新的浮动 IP 地址。
+
+```
+bluemix ic ip-request [-q]
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+
+   <dl>
+   <dt>-q（可选）</dt>
+   <dd>仅列出 IP 地址，而不列出绑定到那些 IP 地址的容器的标识。</dd>
+   </dl>
+
+
+## bluemix ic ip-unbind
+{: #bluemix_ic_ip_unbind}
+
+将浮动 IP 地址从其容器取消绑定。
+
+公共 IP 地址是 IBM Containers 中的有限资源。因此，对于免费试用版用户，如果有分配给空间的公共 IP 地址未绑定到容器，那么会大约每周回收一次这些公共 IP 地址。对于现买现付客户或预订客户，永远都不会回收这些未绑定的公共 IP 地址。
+
+```
+bluemix ic ip-unbind IP_ADDRESS CONTAINER
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+
+   <dl>
+   <dt><i>IP_ADDRESS</i>（必需）</dt>
+   <dd>要取消绑定的 IP 地址。</dd>
+   <dt><i>CONTAINER</i>（必需）</dt>
+   <dd>要取消绑定的容器标识或名称。</dd>
+   </dl>
+
+<strong>示例</strong>：
+
+以下示例显示用于取消 IP 地址 `192.123.12.12` 与容器 `proxy` 的绑定的请求：
+
+```
+bluemix ic ip-unbind 192.123.12.12 proxy
+```
 
 
 ## bluemix ic ips
@@ -2485,109 +2547,10 @@ bluemix ic ips -q
 ```
 
 
-## bluemix ic ip-request
-{: #ip_request}
-请求新的浮动 IP 地址。
-
-```
-bluemix ic ip-request [-q]
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>-q（可选）</dt>
-   <dd>仅列出 IP 地址，而不列出绑定到那些 IP 地址的容器的标识。</dd>
-   </dl>
-
-
-## bluemix ic ip-release
-{: #bluemix_ic_ip_release}
-
-从容器云服务实例释放浮动 IP 地址。
-
-```
-bluemix ic ip-release IP_ADDRESS [IP_ADDRESS2 [...]]
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>IP_ADDRESS（必需）</dt>
-   <dd>要释放的 IP 地址。</dd>
-   </dl>
-
-
-
-
-## bluemix ic ip-bind
-{: #bluemix_ic_ip_bind}
-
-将可用浮动 IP 地址绑定到容器。
-
-```
-bluemix ic ip-bind IP_ADDRESS CONTAINER
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>IP_ADDRESS（必需）</dt>
-   <dd>要绑定的 IP 地址。</dd>
-   <dt>CONTAINER（必需）</dt>
-   <dd>要绑定的容器标识或名称。</dd>
-   </dl>
-
-<strong>示例</strong>：
-
-以下示例显示用于将 IP 地址 `192.123.12.12` 绑定到容器 `proxy` 的请求：
-
-```
-bluemix ic ip-bind 192.123.12.12 proxy
-```
-
-
-## bluemix ic ip-unbind
-{: #bluemix_ic_ip_unbind}
-
-将浮动 IP 地址从其容器取消绑定。
-
-公共 IP 地址是 IBM Containers 中的有限资源。因此，对于免费试用版用户，如果有分配给空间的公共 IP 地址未绑定到容器，那么会大约每周回收一次这些公共 IP 地址。对于现买现付客户或预订客户，永远都不会回收这些未绑定的公共 IP 地址。
-
-```
-bluemix ic ip-unbind IP_ADDRESS CONTAINER
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>IP_ADDRESS（必需）</dt>
-   <dd>要取消绑定的 IP 地址。</dd>
-   <dt>CONTAINER（必需）</dt>
-   <dd>要取消绑定的容器标识或名称。</dd>
-   </dl>
-
-<strong>示例</strong>：
-
-以下示例显示用于取消 IP 地址 `192.123.12.12` 与容器 `proxy` 的绑定的请求：
-
-```
-bluemix ic ip-unbind 192.123.12.12 proxy
-```
-
-
 ## bluemix ic kill
 {: #bluemix_ic_kill}
 
-停止容器中正在运行的进程而不停止容器。有关更多信息，请参阅 Docker 帮助中的 [kill](https://docs.docker.com/reference/commandline/kill/){: new_window} 命令。
+停止容器中正在运行的进程而不停止容器。有关更多信息，请参阅 Docker 帮助中的 [kill](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} 命令。
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -2600,7 +2563,7 @@ bluemix ic kill [-s CMD|--signal CMD] CONTAINER
    <dl>
    <dt>-s <i>CMD</i>|--signal <i>CMD</i>（可选）</dt>
    <dd>向正在容器中运行的进程发送命令。</dd>
-   <dt>CONTAINER（必需）</dt>
+   <dt><i>CONTAINER</i>（必需）</dt>
    <dd>容器标识或名称。</dd>
    </dl>
 
@@ -2613,10 +2576,11 @@ bluemix ic kill [-s CMD|--signal CMD] CONTAINER
 bluemix ic kill proxy
 ```
 
+
 ## bluemix ic logs
 {: #bluemix_ic_logs}
 
-显示正在运行的容器的输出或错误日志。有关更多信息，请参阅 Docker 帮助中的 [kill](https://docs.docker.com/reference/commandline/logs/){: new_window} 命令。
+显示正在运行的容器的输出或错误日志。有关更多信息，请参阅 Docker 帮助中的 [logs](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} 命令。
 ```
 bluemix ic logs [OPTIONS] CONTAINER
 ```
@@ -2650,16 +2614,15 @@ bluemix ic namespace-set NAME
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>NAME（必需）</dt>
-   <dd>仅一次性功能，用于设置组织的存储库名称空间（如果尚未设置）。设置名称空间后，请通过 <i>bluemix ic init</i> 命令重新初始化 IBM Containers，然后再继续。</dd>
+   <dt><i>NAME</i>（必需）</dt>
+   <dd>仅一次性功能，用于设置组织的存储库名称空间（如果尚未设置）。设置名称空间后，请通过 `bluemix ic init` 命令重新初始化 IBM Containers，然后再继续。</dd>
    </dl>
-
 
 
 ## bluemix ic pause
 {: #pause}
 
-暂停正在运行的容器内的所有进程。有关更多信息，请参阅 Docker 帮助中的 [pause](https://docs.docker.com/reference/commandline/pause/){: new_window} 命令。要停止容器，请参阅 [bluemix ic unpause](#unpause) 命令。
+暂停正在运行的容器内的所有进程。有关更多信息，请参阅 Docker 帮助中的 [pause](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} 命令。要停止容器，请参阅 [bluemix ic unpause](#unpause) 命令。
 
 ```
 bluemix ic pause CONTAINER
@@ -2669,7 +2632,7 @@ bluemix ic pause CONTAINER
 
 <strong>命令选项</strong>：
    <dl>
-   <dt>CONTAINER（必需）</dt>
+   <dt><i>CONTAINER</i>（必需）</dt>
    <dd>容器名称或标识。</dd>
    </dl>
 
@@ -2680,9 +2643,9 @@ bluemix ic pause CONTAINER
 - 针对容器云服务的命令失败
 
  `{message}`
-  
+
  其中，`{message}` 是相关错误。
- 
+
 - 命令失败 - 无法连接到容器云服务
 
 <strong>示例</strong>：
@@ -2694,57 +2657,18 @@ bluemix ic pause proxy
 ```
 
 
-## bluemix ic unpause
-{: #unpause}
-
-取消暂停正在运行的容器内的所有进程。有关更多信息，请参阅 Docker 帮助中的 [unpause](https://docs.docker.com/reference/commandline/unpause/){: new_window} 命令。要暂停容器，请参阅 [bluemix ic pause](#pause) 命令。
-
-```
-bluemix ic unpause CONTAINER
-```
-
-<strong>先决条件</strong>：端点、登录、目标和 Docker
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>CONTAINER（必需）</dt>
-   <dd>容器名称或标识。</dd>
-   </dl>
-
-<strong>响应</strong>：
-
-- 已成功取消暂停容器。
-
-- 针对容器云服务的命令失败 
-
- `{message}` 
- 
- 其中，`{message}` 是相关错误。
- 
-- 命令失败 - 无法连接到容器云服务
-
-<strong>示例</strong>：
-
-以下示例显示用于取消暂停名为 `proxy` 的容器的请求：
-
-```
-bluemix ic unpause proxy
-```
-
-
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-列出容器的端口映射或特定映射。此命令会对 `docker port` 命令打包。有关更多信息，请参阅 Docker 帮助中的 [port](https://docs.docker.com/reference/commandline/port/){: new_window} 命令。
+列出容器的端口映射或特定映射。此命令会对 `docker port` 命令打包。有关更多信息，请参阅 Docker 帮助中的 [port](https://docs.docker.com/engine/reference/commandline/port/){: new_window} 命令。
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-查看正在已登录用户的名称空间中运行的容器的列表。缺省情况下，此命令仅显示正在运行的容器。有关更多信息，请参阅 Docker 帮助中的 [ps](https://docs.docker.com/reference/commandline/ps/){: new_window} 命令。
+查看正在已登录用户的名称空间中运行的容器的列表。缺省情况下，此命令仅显示正在运行的容器。有关更多信息，请参阅 Docker 帮助中的 [ps](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} 命令。
 
 ```
-bluemix ic ps [-a|--all] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
+bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
 ```
 
 <strong>先决条件</strong>：端点、登录、目标和 Docker
@@ -2754,6 +2678,8 @@ bluemix ic ps [-a|--all] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
    <dl>
    <dt>-a|--all（可选）</dt>
    <dd>显示所有容器（包括正在运行和已停止的容器）。</dd>
+   <dt>--filter env=<i>SEARCH_CRITERIA</i>（可选）</dt>
+   <dd>搜索具有特定环境变量值的容器。您可以按在检查容器时 CLI 响应的 Env 部分中列出的任何环境变量键或值来过滤容器。将 SEARCH_CRITERIA 替换为要查找的键或值。搜索条件无需是完全匹配的。</dd>
    <dt>-s|--size（可选）</dt>
    <dd>列出容器的大小。</dd>
    <dt>-l <i>NUM</i>|--limit <i>NUM</i>（可选）</dt>
@@ -2761,7 +2687,6 @@ bluemix ic ps [-a|--all] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
    <dt>-q|--quiet（可选）</dt>
    <dd>仅显示容器标识。</dd>
    </dl>
-
 
 
 <strong>示例</strong>：
@@ -2772,9 +2697,10 @@ bluemix ic ps [-a|--all] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
 bluemix ic ps -a
 ```
 
+
 ## bluemix ic rename
 {: #bluemix_ic_rename}
-重命名容器。有关更多信息，请参阅 Docker 帮助中的 [ps](https://docs.docker.com/reference/commandline/rename/){: new_window} 命令。
+重命名容器。有关更多信息，请参阅 Docker 帮助中的 [rename](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} 命令。
 
 ```
 bluemix ic rename OLD_NAME NEW_NAME
@@ -2784,18 +2710,19 @@ bluemix ic rename OLD_NAME NEW_NAME
 <strong>命令选项</strong>：
 
 <dl>
-   <dt>OLD_NAME（必需）</dt>
+   <dt><i>OLD_NAME</i>（必需）</dt>
    <dd>容器的旧名称。</dd>
-   <dt>NEW_NAME（必需）</dt>
+   <dt><i>NEW_NAME</i>（必需）</dt>
    <dd>容器的新名称。</dd>
    </dl>
+
 
 ## bluemix ic reprovision
 {: #bluemix_ic_reprovision}
 
 在登录的 Bluemix 空间中重新创建 IBM Containers 服务。空间的原始配额会保留。
 
-<strong>重要事项</strong>：运行此命令时，此空间内的所有单个容器和组将不会迁移到重新供应的空间，且在迁移过程中将会移除。映像和卷将不会受到影响。
+<strong>重要事项</strong>：运行此命令时，此空间内的所有单个容器和组都不会迁移到重新供应的空间，且在迁移过程中将会除去。 
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
@@ -2805,31 +2732,15 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 <dl>
    <dt>--force|-f（可选）</dt>
    <dd>强制在 Bluemix 空间中重新创建 IBM Containers 服务。</dd>
-   <dt>ENVIRONMENT_NAME（可选）</dt>
-   <dd>部署容器所在的 IBM Containers 环境的名称。如果未指定环境名称，那么将会使用针对区域设置的缺省环境。</dd>
+   <dt><i>AVAILABILITY_ZONE</i>（可选）</dt>
+   <dd>部署容器所在的 IBM Containers 可用性区域的名称。如果未指定可用性区域，那么将会使用针对区域设置的缺省可用性区域。</dd>
    </dl>
 
-## bluemix ic unprovision
-{: #bluemix_ic_unprovision}
 
-在登录的 Bluemix 空间中删除 IBM Containers 服务。
-
-<strong>注意</strong>：运行此命令后，所有单个容器和容器组都会丢失。您的空间在 Bluemix 中仍可用。要再次开始使用 IBM Containers，您必须运行 Bluemix 以再次供应 IBM Containers 服务。
-
-```
-bluemix ic reprovision [--force|-f] 
-```
-<strong>命令选项</strong>：
-
-<dl>
-   <dt>--force|-f（可选）</dt>
-   <dd>强制从 Bluemix 空间删除 Bluemix。</dd>
- </dl>
- 
 ## bluemix ic restart
 {: #bluemix_ic_restart}
 
-重新启动容器。有关更多信息，请参阅 Docker 帮助中的 [restart](https://docs.docker.com/reference/commandline/restart/){: new_window} 命令。
+重新启动容器。有关更多信息，请参阅 Docker 帮助中的 [restart](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} 命令。
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -2840,7 +2751,7 @@ bluemix ic restart CONTAINER [-t SECS|--time SECS]
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>CONTAINER（必需）</dt>
+   <dt><i>CONTAINER</i>（必需）</dt>
    <dd>容器名称或标识。</dd>
    <dt>-t <i>SECS</i>|--time <i>SECS</i>（可选）</dt>
    <dd>重新启动容器之前要等待的秒数。</dd>
@@ -2851,12 +2762,12 @@ bluemix ic restart CONTAINER [-t SECS|--time SECS]
 
 - 已成功重新启动容器。
 
-- 针对容器云服务的命令失败 
+- 针对容器云服务的命令失败
 
- `{message}` 
- 
+ `{message}`
+
  其中，`{message}` 是相关错误。
- 
+
 - 命令失败 - 无法连接到容器云服务
 
 <strong>示例</strong>：
@@ -2871,7 +2782,7 @@ bluemix ic restart proxy
 ## bluemix ic rm
 {: #bluemix_ic_rm}
 
-除去容器。有关更多信息，请参阅 Docker 帮助中的 [rm](https://docs.docker.com/reference/commandline/rm/){: new_window} 命令。
+除去容器。有关更多信息，请参阅 Docker 帮助中的 [rm](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} 命令。
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -2884,7 +2795,7 @@ bluemix ic rm [-f|--force] CONTAINER
    <dl>
    <dt>-f|--force（可选）</dt>
    <dd>强制除去正在运行的或发生故障的容器。</dd>
-   <dt>CONTAINER（必需）</dt>
+   <dt><i>CONTAINER</i>（必需）</dt>
    <dd>容器名称或标识。</dd>
    </dl>
 
@@ -2892,12 +2803,12 @@ bluemix ic rm [-f|--force] CONTAINER
 
 - 已成功除去容器。
 
-- 针对容器云服务的命令失败 
+- 针对容器云服务的命令失败
 
- `{message}` 
- 
+ `{message}`
+
  其中，`{message}` 是相关错误。
- 
+
 - 命令失败 - 无法连接到容器云服务。
 
 <strong>示例</strong>：
@@ -2912,7 +2823,7 @@ bluemix ic rm proxy
 ## bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-从已登录用户的名称空间除去映像。有关更多信息，请参阅 Docker 帮助中的 [rmi](https://docs.docker.com/reference/commandline/rmi/){: new_window} 命令。
+从已登录用户的名称空间除去映像。有关更多信息，请参阅 Docker 帮助中的 [rmi](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} 命令。
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -2925,7 +2836,7 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
    <dl>
    <dt>-R <i>REGISTRY</i>|--registry <i>REGISTRY</i>（可选）</dt>
    <dd>更改注册表主机。缺省行为是使用在 <i>bluemix ic init</i> 命令中指定的注册表。</dd>
-   <dt>IMAGE（必需）</dt>
+   <dt><i>IMAGE</i>（必需）</dt>
    <dd>要除去的映像的名称。如果未在映像名称中指定标记，那么缺省情况下会删除标记为 <i>latest</i> 的映像。</dd>
    </dl>
 
@@ -2934,15 +2845,15 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
 - 已除去：`{IMAGE}`
 
  其中，`{IMAGE}` 是已除去映像的名称。
- 
+
 - 错误！未指定注册表主机。
 
 - 除去映像失败 - 无法连接到容器云注册表
 
-- 针对容器云服务的命令失败 
+- 针对容器云服务的命令失败
 
  `{message}`
- 
+
  其中，`{message}` 是相关错误。
 
 <strong>示例</strong>：
@@ -2954,15 +2865,74 @@ bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 ```
 
 
+## bluemix ic route-map
+{: #bluemix_ic_route_map}
+
+建立用于访问容器组的因特网传输路径。可以使用此命令来建立新路径或更新现有路径。
+
+```
+bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+
+   <dl>
+   <dt>-n <i>HOST</i>|--hostname <i>HOST</i>（可选）</dt>
+   <dd>路径的主机名。主机名是完整公共路径 URL 的第一部分，例如 URL <i>mycontainerhost.mybluemix.net</i> 中的 <i>mycontainerhost</i>。</dd>
+   <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i>（可选）</dt>
+   <dd>路径的域名，这是完整公共路径 URL 的第二部分。在大多数情况下，域为 <i>mybluemix.net</i>。您还可使用此参数来指定专用域。</dd>
+   <dt><i>CONTAINER_GROUP</i>（必需）</dt>
+   <dd>容器组标识或名称。</dd>
+   </dl>
+
+<strong>示例</strong>：
+
+以下示例显示用于映射组 `GROUP1` 的路径的请求，其中 `my_host` 是主机名，`mybluemix.net` 是域。
+```
+bluemix ic route-map -n my_host -d mybluemix.net GROUP1
+```
+
+
+## bluemix ic route-unmap
+{: #bluemix_ic_route_unmap}
+
+建立用于访问容器组的因特网传输路径。可以使用此命令来建立新路径或更新现有路径。
+
+```
+bluemix ic route-unmap [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+
+   <dl>
+   <dt>-n <i>HOST</i>|--hostname <i>HOST</i>（可选）</dt>
+   <dd>路径的主机名。</dd>
+   <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i>（可选）</dt>
+   <dd>路径的域名。</dd>
+   <dt><i>CONTAINER_GROUP</i>（必需）</dt>
+   <dd>容器组标识或名称。</dd>
+   </dl>
+
+<strong>示例</strong>：
+
+以下示例是用于取消映射组 `GROUP1` 的路径的请求，其中 `my_host` 是主机名，`organization.com` 是域。
+```
+bluemix ic route-unmap -n my_host -d organization.com GROUP1
+```
+
+
 ## bluemix ic run
 {: #bluemix_ic_run}
 
-通过映像名称在容器云服务中启动新容器。有关更多信息，请参阅 Docker 帮助中的 [run](https://docs.docker.com/reference/commandline/run/){: new_window} 命令。
-
+通过映像名称在容器云服务中启动新容器。有关更多信息，请参阅 Docker 帮助中的 [run](https://docs.docker.com/engine/reference/commandline/run/){: new_window} 命令。
 
 
 ```
-bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV|--env ENV] [-v VOLUME:CONTAINER_PATH] -n NAME|--name NAME [--link NAME:ALIAS] [-it] IMAGE [CMD [CMD ...]]
+bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV|--env ENV] [--volume VOLUME:CONTAINER_PATH] -n NAME|--name NAME [--link NAME:ALIAS] [-it] IMAGE [CMD [CMD ...]]
 ```
 **注：**确保已安装 Cloud Foundry 命令工具，并且您具有 Cloud Foundry 令牌。使用 `bluemix login` 成功登录，然后使用 `bluemix ic init` 生成必需的令牌和证书。
 
@@ -2985,18 +2955,18 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 
 |      环境变量                          |   描述                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用 `CCS_BIND_APP` 环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅[将服务绑定到容器](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_binding_ov){: new_window}。 |
-| CCS_SSH_KEY=*&lt;public_ssh_key&gt;* | 创建容器时，向容器添加 SSH 密钥。在 {{site.data.keyword.Bluemix_notm}} 仪表板或 CLI 中创建容器时，可以使用此环境变量来添加 SSH 密钥。有关 SSH 密钥的更多信息，请参阅[登录到容器](http://www.ng.bluemix.net/docs/containers/container_creating_ov.html#container_cli_login_ssh){: new_window}。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用 `CCS_BIND_APP` 环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅[将服务绑定到容器](../../../containers/container_integrations_binding.html){: new_window}。 |
+| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 要在不使用网桥应用程序的情况下将 Bluemix 服务直接绑定到容器，请使用 CCS_BIND_SRV。此绑定允许 Bluemix 将 VCAP_SERVICES 信息插入正在运行的容器实例中。要列出多个 Bluemix 服务，请将这些服务包含在同一环境变量中。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 添加要在容器中监视的日志文件。请包含 `LOG_LOCATIONS` 环境变量以及日志文件的路径。 |
 *表 9. 常用环境变量*
 
 
    <dl>
-   <dt>-v VOLUME:CONTAINER_PATH[:ro]|--volume VOLUME:CONTAINER_PATH[:ro]（可选）</dt>
+   <dt>--volume <i>VOLUME</i>:<i>CONTAINER_PATH</i>[:ro]（可选）</dt>
    <dd>通过使用格式 <i>VolumeId:ContainerPath[:ro]</i> 指定详细信息来将卷连接到容器。
 <ul>
-   <li>VOLUME：卷标识或名称。</li>
-   <li>CONTAINER_PATH：容器中卷的绝对路径。</li>
+   <li><i>VOLUME</i>：卷标识或名称。</li>
+   <li><i>CONTAINER_PATH</i>：容器中卷的绝对路径。</li>
    <li>ro：可选。指定 <i>ro</i> 会将卷设为只读，而不是缺省的读/写。</li></ul>
    </dd>
    <dt>-n <i>NAME</i>|--name <i>NAME</i>（必需）</dt>
@@ -3005,16 +2975,16 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
    <dd>每当您希望让某个容器与另一个正在运行的容器通信时，可以使用主机名的别名来指代该容器。</dd>
    <dt>-it（可选）</dt>
    <dd>以交互方式运行容器。创建容器后，使标准输入保持显示。输入 <i>exit</i> 以退出。</dd>
-   <dt>IMAGE（必需）</dt>
+   <dt><i>IMAGE</i>（必需）</dt>
    <dd>要包含在容器中的映像。可以在映像之后列出命令，但不要在映像之后放置任何选项。请在指定映像之前包含所有选项。请在指定映像之前包含所有选项。<br><br>如果在组织的专用 {{site.data.keyword.Bluemix_notm}} 存储库中使用映像，请使用以下格式指定映像：<i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i>。<br><br>如果使用 IBM Containers 提供的映像，请使用以下格式指定映像：<i>registry.ng.bluemix.net/IMAGE</i>。</dd>
-   <dt>CMD（可选）</dt>
+   <dt><i>CMD</i>（可选）</dt>
    <dd>该命令和自变量会传递到容器组以便执行。此命令必须是长时间运行命令。不要使用不会运行很长时间的短时间运行命令（例如 <i>/bin/date</i>），因为短时间运行命令可能会导致容器崩溃。</dd>
    </dl>
 
 
 <strong>示例</strong>：
 
-对基于 `registry.ng.bluemix.net/ibmnode` 映像构建的 `my_container` 容器，运行长时间运行的命令 `sh -c "while true;do date; sleep 20; done"`。 
+对基于 `registry.ng.bluemix.net/ibmnode` 映像构建的 `my_container` 容器，运行长时间运行的命令 `sh -c "while true;do date; sleep 20; done"`。
 ```
 bluemix ic run --name my_container registry.ng.bluemix.net/ibmnode -- sh -c "while true; do date; sleep 20; done"
 ```
@@ -3039,69 +3009,45 @@ bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path regi
 ```
 
 
-## bluemix ic route-map
-{: #bluemix_ic_route_map}
+## bluemix ic service-bind
+{: #bluemix_ic_service-bind}
 
-建立用于访问容器组的因特网传输路径。可以使用此命令来建立新路径或更新现有路径。
+将服务添加到正在运行的容器组。此命令仅可用于容器组。单个容器必须将服务绑定为 bluemix ic run 命令的一部分。
 
 ```
-bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
+bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE 
 ```
-
-<strong>先决条件</strong>：端点、登录和目标
-
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>-n <i>HOST</i>|--hostname <i>HOST</i>（可选）</dt>
-   <dd>路径的主机名。主机名是完整公共路径 URL 的第一部分，例如 URL <i>mycontainerhost.mybluemix.net</i> 中的 <i>mycontainerhost</i>。</dd>
-   <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i>（可选）</dt>
-   <dd>路径的域名，这是完整公共路径 URL 的第二部分。在大多数情况下，域为 <i>mybluemix.net</i>。您还可使用此参数来指定专用域。</dd>
-   <dt>CONTAINER_GROUP（必需）</dt>
-   <dd>容器组标识或名称。</dd>
+   <dt><i>GROUP_NAME</i>（必需）</dt>
+   <dd>组标识或名称。</dd>
+   <dt><i>SERVICE_INSTANCE</i>（必需）</dt>
+   <dd>要添加到容器组的服务实例的名称。</dd>
    </dl>
 
-<strong>示例</strong>：
 
-以下示例是用于映射组 `GROUP1` 的路径的请求，其中 `my_host` 是主机名，`organization.com` 是域。
-```
-bluemix ic route-map -n my_host -d organization.com GROUP1
-```
+## bluemix ic service-unbind
+{: #bluemix_ic_service-unbind}
 
-
-## bluemix ic route-unmap
-{: #bluemix_ic_route_unmap}
-
-建立用于访问容器组的因特网传输路径。可以使用此命令来建立新路径或更新现有路径。
+将服务从运行中容器组除去。此命令仅可用于容器组。单个容器必须除去容器并创建不带服务的新容器。
 
 ```
-bluemix ic route-unmap [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTAINER_GROUP
+bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE 
 ```
-
-<strong>先决条件</strong>：端点、登录和目标
-
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>-n <i>HOST</i>|--hostname <i>HOST</i>（可选）</dt>
-   <dd>路径的主机名。</dd>
-   <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i>（可选）</dt>
-   <dd>路径的域名。</dd>
-   <dt>CONTAINER_GROUP（必需）</dt>
-   <dd>容器组标识或名称。</dd>
+   <dt><i>GROUP_NAME</i>（必需）</dt>
+   <dd>组标识或名称。</dd>
+   <dt><i>SERVICE_INSTANCE</i>（必需）</dt>
+   <dd>要添加到容器组的服务实例的名称。</dd>
    </dl>
-
-<strong>示例</strong>：
-
-以下示例是用于取消映射组 `GROUP1` 的路径的请求，其中 `my_host` 是主机名，`organization.com` 是域。
-```
-bluemix ic route-unmap -n my_host -d organization.com GROUP1
-```
 
 
 ## bluemix ic start
 {: #ic_start}
-启动已停止的容器。有关更多信息，请参阅 Docker 帮助中的 [start](https://docs.docker.com/reference/commandline/start/){: new_window} 命令。要停止容器，请参阅 [bluemix ic stop](#ic_stop) 命令。
+启动已停止的容器。有关更多信息，请参阅 Docker 帮助中的 [start](https://docs.docker.com/engine/reference/commandline/start/){: new_window} 命令。要停止容器，请参阅 [bluemix ic stop](#ic_stop) 命令。
 
 ```
 bluemix ic start CONTAINER
@@ -3112,7 +3058,7 @@ bluemix ic start CONTAINER
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>CONTAINER（必需）</dt>
+   <dt><i>CONTAINER</i>（必需）</dt>
    <dd>容器名称或标识。</dd>
    </dl>
 
@@ -3124,9 +3070,9 @@ bluemix ic start CONTAINER
 - 针对容器云服务的命令失败
 
  `{message}`
-  
+
  其中，`{message}` 是相关错误。
- 
+
 - 命令失败 - 无法连接到容器云服务
 
 <strong>示例</strong>：
@@ -3138,50 +3084,10 @@ bluemix ic start proxy
 ```
 
 
-## bluemix ic stop  
-{: #ic_stop}
-停止正在运行的容器。有关更多信息，请参阅 Docker 帮助中的 [stop](https://docs.docker.com/reference/commandline/stop/){: new_window} 命令。要启动容器，请参阅 [bluemix ic start](#ic_start) 命令。
-
-```
-bluemix ic stop CONTAINER [-t SECS|--time SECS]
-```
-
-<strong>先决条件</strong>：端点、登录、目标和 Docker
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>CONTAINER（必需）</dt>
-   <dd>容器名称或标识。</dd>
-   <dt>-t <i>SECS</i>|--time <i>SECS</i>（可选）</dt>
-   <dd>终止容器之前要等待的秒数。</dd>
-   </dl>
-
-<strong>响应</strong>：
-
-- 已成功停止容器。
-
-- 针对容器云服务的命令失败
-
- `{message}`
-  
- 其中，`{message}` 是相关错误。
- 
-- 命令失败 - 无法连接到容器云服务
-
-<strong>示例</strong>：
-
-以下示例显示用于停止名为 `proxy` 的容器的请求。
-
-```
-bluemix ic stop proxy
-```
-
-
 ## bluemix ic stats
 {: #bluemix_ic_stats}
 
-对于一个或多个容器，请查看实时使用情况统计信息。使用 `CTRL+C` 以退出。有关更多信息，请参阅 Docker 帮助中的 [stats](https://docs.docker.com/reference/commandline/stats/){: new_window} 命令。
+对于一个或多个容器，请查看实时使用情况统计信息。使用 `CTRL+C` 以退出。有关更多信息，请参阅 Docker 帮助中的 [stats](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} 命令。
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -3192,7 +3098,7 @@ bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>CONTAINER（必需）</dt>
+   <dt><i>CONTAINER</i>（必需）</dt>
    <dd>容器名称或标识。</dd>
    <dt>--no-stream（可选）</dt>
    <dd>仅显示最新结果，而不包含其之前的任何信息。</dd>
@@ -3207,10 +3113,50 @@ bluemix ic stats --no-stream my_container
 ```
 
 
+## bluemix ic stop  
+{: #ic_stop}
+停止正在运行的容器。有关更多信息，请参阅 Docker 帮助中的 [stop](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} 命令。要启动容器，请参阅 [bluemix ic start](#ic_start) 命令。
+
+```
+bluemix ic stop CONTAINER [-t SECS|--time SECS]
+```
+
+<strong>先决条件</strong>：端点、登录、目标和 Docker
+
+<strong>命令选项</strong>：
+
+   <dl>
+   <dt><i>CONTAINER</i>（必需）</dt>
+   <dd>容器名称或标识。</dd>
+   <dt>-t <i>SECS</i>|--time <i>SECS</i>（可选）</dt>
+   <dd>终止容器之前要等待的秒数。</dd>
+   </dl>
+
+<strong>响应</strong>：
+
+- 已成功停止容器。
+
+- 针对容器云服务的命令失败
+
+ `{message}`
+
+ 其中，`{message}` 是相关错误。
+
+- 命令失败 - 无法连接到容器云服务
+
+<strong>示例</strong>：
+
+以下示例显示用于停止名为 `proxy` 的容器的请求。
+
+```
+bluemix ic stop proxy
+```
+
+
 ## bluemix ic top
 {: #bluemix_ic_top}
 
-显示正在容器中运行的进程。有关更多信息，请参阅 Docker 帮助中的 [top](https://docs.docker.com/reference/commandline/top/){: new_window} 命令。
+显示正在容器中运行的进程。有关更多信息，请参阅 Docker 帮助中的 [top](https://docs.docker.com/engine/reference/commandline/top/){: new_window} 命令。
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -3221,7 +3167,7 @@ bluemix ic top CONTAINER [CONTAINER]
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>CONTAINER（必需）</dt>
+   <dt><i>CONTAINER</i>（必需）</dt>
    <dd>容器名称或标识。</dd>
    </dl>
 
@@ -3233,55 +3179,207 @@ bluemix ic top CONTAINER [CONTAINER]
 bluemix ic top my_container
 ```
 
-## bluemix ic service-bind
-{: #bluemix_ic_service-bind}
 
-将服务添加到正在运行的容器组。此命令仅可用于容器组。单个容器必须将服务绑定为 bluemix ic run 命令的一部分。 
+## bluemix ic unpause
+{: #unpause}
+
+取消暂停正在运行的容器内的所有进程。有关更多信息，请参阅 Docker 帮助中的 [unpause](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} 命令。要暂停容器，请参阅 [bluemix ic pause](#pause) 命令。
 
 ```
-bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE 
+bluemix ic unpause CONTAINER
+```
+
+<strong>先决条件</strong>：端点、登录、目标和 Docker
+
+<strong>命令选项</strong>：
+
+   <dl>
+   <dt><i>CONTAINER</i>（必需）</dt>
+   <dd>容器名称或标识。</dd>
+   </dl>
+
+<strong>响应</strong>：
+
+- 已成功取消暂停容器。
+
+- 针对容器云服务的命令失败
+
+ `{message}`
+
+ 其中，`{message}` 是相关错误。
+
+- 命令失败 - 无法连接到容器云服务
+
+<strong>示例</strong>：
+
+以下示例显示用于取消暂停名为 `proxy` 的容器的请求：
+
+```
+bluemix ic unpause proxy
+```
+
+
+## bluemix ic unprovision
+{: #bluemix_ic_unprovision}
+
+在登录的 Bluemix 空间中删除 IBM Containers 服务。
+
+<strong>注意</strong>：运行此命令后，所有单个容器和容器组都会丢失。您的空间在 Bluemix 中仍可用。要再次开始使用 IBM Containers，您必须运行 `bluemix ic reprovision` 以再次供应 IBM Containers 服务。
+
+```
+bluemix ic reprovision [--force|-f] 
 ```
 <strong>命令选项</strong>：
 
 <dl>
-   <dt>GROUP_NAME（必需）</dt>
-   <dd>组标识或名称。</dd>
-   
-   <dt>SERVICE_INSTANCE（必需）</dt>
-   <dd>要添加到容器组的服务实例的名称。</dd>
-   </dl>
-   
+   <dt>--force|-f（可选）</dt>
+   <dd>强制从 Bluemix 空间删除 Bluemix。</dd>
+ </dl>
 
-## bluemix ic service-unbind
-{: #bluemix_ic_service-unbind}
 
-将服务从运行中容器组除去。此命令仅可用于容器组。单个容器必须除去容器并创建不带服务的新容器。
+## bluemix ic version
+{: #bluemix_ic_version}
+
+显示 Docker 和 IBM Containers API 的版本。
 
 ```
-bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE 
+bluemix ic version
 ```
-<strong>命令选项</strong>：
 
-<dl>
-   <dt>GROUP_NAME（必需）</dt>
-   <dd>组标识或名称。</dd>
-   
-   <dt>SERVICE_INSTANCE（必需）</dt>
-   <dd>要添加到容器组的服务实例的名称。</dd>
-   </dl>
-   
+<strong>先决条件</strong>：Docker
+
+要查看 IBM Containers 的版本，请运行 `bluemix ic info`。有关更多信息，请参阅 Docker 帮助中的 [version](https://docs.docker.com/engine/reference/commandline/version/){: new_window} 命令。
 
 
-## bluemix ic volumes
-{: #bluemix_ic_volumes}
+## bluemix ic volume-create
+{: #bluemix_ic_volume_create}
 
-列出卷。
+创建卷。
 
 ```
-bluemix ic volumes
+bluemix ic volume-create VOLUME_NAME FS_NAME
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+
+   <dl>
+   <dt><i>FS_NAME</i>（可选）</dt>
+   <dd>文件共享名称。如果没有文件共享可用或者未指定文件共享，那么卷将在空间的缺省文件共享上进行构建。</dd>
+   <dt><i>VOLUME_NAME</i>（必需）</dt>
+   <dd>卷名称。名称可以包含小写字母、数字、下划线 _ 和连字符 -。</dd>
+   </dl>
+
+
+<strong>示例</strong>：
+
+以下示例显示用于创建卷的请求。
+
+```
+bluemix ic volume-create volume_name fileshare_name
+```
+
+
+## bluemix ic volume-fs
+{: #bluemix_ic_volume_fs}
+
+列出文件共享。
+
+```
+bluemix ic volume-fs
+```
+
+
+## bluemix ic volume-fs-create
+{: #bluemix_ic_volume_fs_create}
+
+创建文件共享。
+
+```
+bluemix ic volume-fs-create FILE_SHARE_NAME
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+
+   <dl>
+   <dt><i>FILE_SHARE_NAME</i>（必需）</dt>
+   <dd>文件共享名称。名称可以包含小写字母、数字、下划线 _ 和连字符 -。</dd>
+   </dl>
+
+<strong>示例</strong>：
+
+以下示例显示用于创建文件共享的请求。
+```
+bluemix ic volume-fs-create my_file_share
+```
+
+
+## bluemix ic volume-fs-flavors
+{: #bluemix_ic_volume_fs_flavors}
+
+列出所有文件共享类型模板。
+
+```
+bluemix ic volume-fs-flavors
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+
+## bluemix ic volume-fs-inspect
+{: #bluemix_ic_volume_fs_inspect}
+
+检查文件共享。
+
+```
+bluemix ic volume-fs-inspect FILE_SHARE_NAME
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+
+  <dl>
+  <dt><i>FILE_SHARE_NAME</i>（必需）</dt>
+   <dd>文件共享名称。</dd>
+   </dl>
+
+<strong>示例</strong>：
+
+以下示例是用于检查文件共享的请求，其中 `my_file_share` 是文件共享的名称。
+```
+bluemix ic volume-fs-inspect my_file_share
+```
+
+
+## bluemix ic volume-fs-remove
+{: #bluemix_ic_volume_fs_remove}
+
+除去文件共享。
+
+```
+bluemix ic volume-fs-remove FILE_SHARE_NAME
+```
+
+<strong>先决条件</strong>：端点、登录和目标
+
+<strong>命令选项</strong>：
+
+   <dl>
+   <dt><i>FILE_SHARE_NAME</i>（必需）</dt>
+   <dd>文件共享名称。</dd>
+   </dl>
+
+<strong>示例</strong>：
+
+以下示例显示用于除去文件共享的请求，其中 `my_file_share` 是文件共享的名称。
+
+```
+bluemix ic volume-fs-remove my_file_share
+```
 
 
 ## bluemix ic volume-inspect
@@ -3298,7 +3396,7 @@ bluemix ic volume-inspect VOLUME_NAME
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>VOLUME_NAME（必需）</dt>
+   <dt><i>VOLUME_NAME</i>（必需）</dt>
    <dd>卷名称。</dd>
    </dl>
 
@@ -3308,34 +3406,6 @@ bluemix ic volume-inspect VOLUME_NAME
 
 ```
 bluemix ic volume-inspect volume_name
-```
-
-
-## bluemix ic volume-create
-{: #bluemix_ic_volume_create}
-
-创建卷。
-
-```
-bluemix ic volume-create VOLUME_NAME
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>VOLUME_NAME（必需）</dt>
-   <dd>卷名称。名称可以包含小写字母、数字、下划线 _ 和连字符 -。</dd>
-   </dl>
-
-
-<strong>示例</strong>：
-
-以下示例显示用于创建卷的请求。
-
-```
-bluemix ic volume-create volume_name 
 ```
 
 
@@ -3353,7 +3423,7 @@ bluemix ic volume-remove VOLUME_NAME
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>VOLUME_NAME（必需）</dt>
+   <dt><i>VOLUME_NAME</i>（必需）</dt>
    <dd>卷名称。</dd>
     </dl>
 
@@ -3365,154 +3435,23 @@ bluemix ic volume-remove VOLUME_NAME
 bluemix ic volume-remove volume_name
 ```
 
-## bluemix ic volume-space-add
-{: #bluemix_ic_volume_space_add}
 
-将空间添加到卷
+## bluemix ic volumes
+{: #bluemix_ic_volumes}
 
-```
-bluemix ic volume-space-add VOLUME_NAME SPACE_NAME [SPACE2_NAME [...]]
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>VOLUME_NAME（必需）</dt>
-   <dd>卷名称。</dd>
-   
-   <dt>SPACE_NAME（必需）</dt>
-   <dd>空间名称。</dd>
-   </dl>
-   
-## bluemix ic volume-space-remove
-{: #bluemix_ic_volume_space_remove}
-
-从卷移除空间
+列出卷。
 
 ```
-bluemix ic volume-space-remove VOLUME_NAME SPACE_NAME [SPACE2_NAME [...]]
+bluemix ic volumes
 ```
 
 <strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>VOLUME_NAME（必需）</dt>
-   <dd>卷名称。</dd>
-   
-   <dt>SPACE_NAME（必需）</dt>
-   <dd>空间名称。</dd>
-   </dl>
-
-
-## bluemix ic volume-fs
-{: #bluemix_ic_volume_fs}
-
-列出文件系统。
-
-```
-bluemix ic volume-fs
-```
-
-## bluemix ic volume-fs-create
-{: #bluemix_ic_volume_fs_create}
-
-创建新文件系统。
-
-```
-bluemix ic volume-fs-create FILE_SYSTEM_NAME
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>FILE_SYSTEM_NAME（必需）</dt>
-   <dd>文件系统名称。名称可以包含小写字母、数字、下划线 _ 和连字符 -。</dd>
-   </dl>
-
-<strong>示例</strong>：
-
-以下示例显示用于创建文件系统的请求。
-
-```
-bluemix ic volume-fs-create my_file_system 
-```
-
-## bluemix ic volume-fs-remove
-{: #bluemix_ic_volume_fs_remove}
-
-除去文件系统。
-
-```
-bluemix ic volume-fs-remove FILE_SYSTEM_NAME
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-
-   <dl>
-   <dt>FILE_SYSTEM_NAME（必需）</dt>
-   <dd>文件系统名称。</dd>
-   </dl>
-
-<strong>示例</strong>：
-
-以下示例显示用于除去文件系统的请求，其中 `my_file_system` 是文件系统的名称。
-
-```
-bluemix ic volume-fs-remove my_file_system
-```
-
-## bluemix ic volume-fs-inspect
-{: #bluemix_ic_volume_fs_inspect}
-
-检查文件系统。
-
-```
-bluemix ic volume-fs-inspect FILE_SYSTEM_NAME
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-
-  <dl>
-   <dt>FILE_SYSTEM_NAME（必需）</dt>
-   <dd>文件系统名称。</dd>
-   </dl>
-
-<strong>示例</strong>：
-
-以下示例是用于检查文件系统的请求，其中 `my_file_system` 是文件系统的名称。
-
-```
-bluemix ic volume-fs-inspect my_file_system
-```
-
-
-## bluemix ic volume-fs-flavors
-{: #bluemix_ic_volume_fs_flavors}
-
-列出所有文件系统类型模板。
-
-```
-bluemix ic volume-fs-flavors
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
 
 
 ## bluemix ic wait
 {: #bluemix_ic_wait}
 
-退出容器并显示退出代码以作为确认。有关更多信息，请参阅 Docker 帮助中的 [wait](https://docs.docker.com/reference/commandline/wait/){: new_window} 命令。
+退出容器并显示退出代码以作为确认。有关更多信息，请参阅 Docker 帮助中的 [wait](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} 命令。
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -3523,7 +3462,7 @@ bluemix ic wait CONTAINER [CONTAINER]
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>CONTAINER（必需）</dt>
+   <dt><i>CONTAINER</i>（必需）</dt>
    <dd>容器名称或标识。</dd>
    </dl>
 
@@ -3534,6 +3473,7 @@ bluemix ic wait CONTAINER [CONTAINER]
 ```
 bluemix ic wait my_container
 ```
+
 
 ## bluemix ic wait-status
 {: #bluemix_ic_wait_status}
@@ -3549,7 +3489,7 @@ bluemix ic wait-status CONTAINER
 <strong>命令选项</strong>：
 
    <dl>
-   <dt>CONTAINER（必需）</dt>
+   <dt><i>CONTAINER</i>（必需）</dt>
    <dd>容器名称或标识。</dd>
    </dl>
 
@@ -3561,18 +3501,7 @@ bluemix ic wait-status CONTAINER
 bluemix ic wait my_container
 ```
 
-## bluemix ic version
-{: #bluemix_ic_version}
 
-显示 Docker 的版本。 
-
-```
-bluemix ic version
-```
-
-<strong>先决条件</strong>：Docker
-
-要查看 IBM Containers 的版本，请运行 `bluemix ic info`。有关更多信息，请参阅 Docker 帮助中的 [version](https://docs.docker.com/reference/commandline/version/){: new_window} 命令。
 
 # 相关链接
 {: #rellinks}

@@ -14,7 +14,7 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Plug-in {{site.data.keyword.vpn_short}} pour l'interface CLI de {{site.data.keyword.Bluemix_notm}}
+# Plug-in {{site.data.keyword.vpn_short}} pour l'interface de ligne de commande de {{site.data.keyword.Bluemix_notm}}
 
 *Dernière mise à jour : 20 juin 2016*
 {: .last-updated}
@@ -29,7 +29,7 @@ Le plug-in {{site.data.keyword.vpn_short}} est disponible pour les systèmes d'e
 Les instructions qui suivent s'appliquent au plug-in CLI {{site.data.keyword.Bluemix_notm}}. Pour utiliser le plug-in avec le plug-in CLI Cloud Foundry (cf), voir [Plug-in CLI {{site.data.keyword.vpn_short}} pour CLI cf](../vpn/index.html).
 
 
-Vous trouverez ci-après la liste de toutes les commandes qui sont prises en charge par le plug-in {{site.data.keyword.vpn_short}} pour l'interface CLI de Bluemix, ainsi que leurs noms, leurs options, leur syntaxe, leurs prérequis, leurs descriptions et des exemples. Pour savoir comment installer le plug-in vpn, voir [Etendez votre interface de ligne de commande de Bluemix](../../index.html#cli_bluemix_ext).
+Vous trouverez ci-après la liste de toutes les commandes qui sont prises en charge par le plug-in {{site.data.keyword.vpn_short}} pour l'interface de ligne de commande de Bluemix, ainsi que leurs noms, leurs options, leur syntaxe, leurs prérequis, leurs descriptions et des exemples. Pour savoir comment installer le plug-in vpn, voir [Etendez votre interface de ligne de commande de Bluemix](../../index.html#cli_bluemix_ext).
 
 **Remarque :** la zone *Prérequis* répertorie les actions qui sont requises avant l'utilisation de la commande. Il
 peut s'agir d'une ou de plusieurs des actions suivantes :

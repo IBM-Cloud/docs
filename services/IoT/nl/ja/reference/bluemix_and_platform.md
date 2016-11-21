@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-21"
 
 ---
 
@@ -13,10 +14,10 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
-最終更新日: 2016 年 8 月 30 日
+最終更新日: 2016 年 10 月 21 日
 {: .last-updated}
 
-{{site.data.keyword.iot_full}} は、{{site.data.keyword.Bluemix}} で利用可能なサービスです。{{site.data.keyword.iot_short_notm}} 組織のダッシュボードには、{{site.data.keyword.Bluemix_notm}} ダッシュボードを使用してアクセスできます。{{site.data.keyword.Bluemix_notm}} サービスとして、{{site.data.keyword.iot_short_notm}} は、{{site.data.keyword.Bluemix_notm}} 上でホストされる他のサービスと統合することができます。特定のサード・パーティー・サービス統合の詳細については、[外部サービスの統合](/extensions/index.html)を参照してください
+{{site.data.keyword.iot_full}} は、{{site.data.keyword.Bluemix}} で利用可能なサービスです。{{site.data.keyword.iot_short_notm}} 組織のダッシュボードには、{{site.data.keyword.Bluemix_notm}} ダッシュボードを使用してアクセスできます。{{site.data.keyword.Bluemix_notm}} サービスとして、{{site.data.keyword.iot_short_notm}} は、{{site.data.keyword.Bluemix_notm}} 上でホストされる他のサービスと統合することができます。特定のサード・パーティー・サービス統合の詳細については、[外部サービスの統合](/extensions/index.html)を参照してください{:shortdesc}
 
 ## {{site.data.keyword.iot_short_notm}} と {{site.data.keyword.Bluemix_notm}} の連携方法
 {: #iot-bluemix-work}
@@ -37,16 +38,14 @@ copyright:
 
 {{site.data.keyword.iot_short_notm}} では、無料と標準の 2 種類の価格設定モデルがあります。{{site.data.keyword.iot_short_notm}} の無料では、20 台までの登録デバイス、100MB のデータ交換、最大 10 個のバインド・アプリケーションが可能です。
 
-{{site.data.keyword.iot_short_notm}} の標準価格設定では、登録デバイスの台数は無制限、100 MB の無料のデータ交換が可能であり、最初の 100 MB のデータ交換後は 1 MB ごとにコストがかかります。
+{{site.data.keyword.iot_short_notm}} の価格設定では、登録デバイスの台数は無制限、100 MB の無料のデータ交換が可能であり、最初の 100 MB のデータ交換後は 1 MB ごとにコストがかかります。
 
-{{site.data.keyword.iot_short_notm}} の標準価格設定について詳しくは、以下を参照してください。
+{{site.data.keyword.iot_short_notm}} の価格設定について詳しくは、以下を参照してください。
 
 1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、{{site.data.keyword.iot_short_notm}} をクリックします。
 2. 左側のナビゲーション・メニューで、**「プラン」**を選択します。
 
 価格設定プランが表示されます。
-
-{{site.data.keyword.Bluemix_notm}} の請求と価格設定について詳しくは、[{{site.data.keyword.Bluemix_notm}} pricing details](https://console.stage1.ng.bluemix.net/docs/pricing/index.html) を参照してください。
 
 # 関連リンク
 {: #rellinks}
@@ -56,7 +55,7 @@ copyright:
 {: #general}
 
 * [{{site.data.keyword.Bluemix_notm}} セキュリティー](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー](https://new-console.stage1.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} のコンプライアンス](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Softlayer のセキュリティー](http://www.softlayer.com/security){:new_window}
-* [Softlayer のコンプライアンス](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} セキュリティー](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} のコンプライアンス](http://www.softlayer.com/compliance){:new_window}

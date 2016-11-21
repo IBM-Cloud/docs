@@ -54,14 +54,14 @@ Visualizzazione log di diagnostica|X|X|X|-|-|-
 
 ### Operazioni di log {: #app-log-ops}
 
-Operazioni di log  ||| Ruoli applicazione||||
+Operazioni di log ||| Ruoli applicazione||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Applicazione standard** | **Applicazione Operazioni** | **Applicazione di back-end attendibile** | **Applicazione del processore dati** | **Applicazione di visualizzazione** | **Applicazione del dispositivo**
 Visualizzazione log del server|X|X|X|-|-|-
 
 ### Operazioni cache {: #app-cache-ops}
 
-Operazioni cache  ||| Ruoli applicazione||||
+Operazioni cache ||| Ruoli applicazione||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Applicazione standard** | **Applicazione Operazioni** | **Applicazione di back-end attendibile** | **Applicazione del processore dati** | **Applicazione di visualizzazione** | **Applicazione del dispositivo**
 Visualizzazione dati live (cache evento)|X|X|X|X|X|X
@@ -69,7 +69,7 @@ Gestione dei dati live (cache evento)|X|X|X|X|X|X
 
 ### Operazioni dell'organizzazione {: #app-org-ops}
 
-Operazioni dell'organizzazione  ||| Ruoli applicazione||||
+Operazioni dell'organizzazione ||| Ruoli applicazione||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Applicazione standard** | **Applicazione Operazioni** | **Applicazione di back-end attendibile** | **Applicazione del processore dati** | **Applicazione di visualizzazione** | **Applicazione del dispositivo**
 Configurazione dei parametri di archiviazione|-|-|-|-|-|-
@@ -88,7 +88,7 @@ Visualizzazione delle informazioni sull'utilizzo dell'organizzazione|X|X|-|-|-|-
 
 ### Operazioni di controllo dell'accesso {: #app-access-ops}
 
-Operazioni di controllo dell'accesso  ||| Ruoli applicazione||||
+Operazioni di controllo dell'accesso ||| Ruoli applicazione||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Applicazione standard** | **Applicazione Operazioni** | **Applicazione di back-end attendibile** | **Applicazione del processore dati** | **Applicazione di visualizzazione** | **Applicazione del dispositivo**
 Visualizzazione delle proprietà degli utenti, inclusi i diritti di accesso|X|X|-|-|-|-
@@ -96,7 +96,7 @@ Visualizzazione delle proprie proprietà utente, inclusi i diritti di accesso|-|
 Gestione degli utenti, inclusi i diritti di accesso|-|X|-|-|-|-
 Visualizzazione delle proprietà della chiave API, inclusi i diritti di accesso|X|X|-|-|-|-
 Visualizzazione delle proprie proprietà della chiave API, inclusi i diritti di accesso|X|X|X|X|X|X
-Creazione, aggiornamento, eliminazione delle chiavi API, inclusi i diritti di accesso |-|X|-|-|-|-
+Creazione, aggiornamento, eliminazione delle chiavi API, inclusi i diritti di accesso|-|X|-|-|-|-
 Visualizzazione delle proprietà del dispositivo, inclusi i diritti di accesso|X|X|X|X|X|-
 Visualizzazione delle proprie proprietà del dispositivo, inclusi i diritti di accesso|-|-|-|-|-|-
 Creazione, aggiornamento, eliminazione del dispositivo, inclusi i diritti di accesso|X|X|X|-|-|-
@@ -106,7 +106,7 @@ Visualizzazione delle operazioni*|X|X|-|-|-|-
 
 ### Operazioni di analisi {: #app-analytics-ops}
 
-Operazioni di analisi  ||| Ruoli applicazione||||
+Operazioni di analisi ||| Ruoli applicazione||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Applicazione standard** | **Applicazione Operazioni** | **Applicazione di back-end attendibile** | **Applicazione del processore dati** | **Applicazione di visualizzazione** | **Applicazione del dispositivo**
 Visualizzazione delle regole di analisi|X|X|-|X|X|-
@@ -119,7 +119,7 @@ Gestione degli schemi del messaggio di analisi|X|X|-|X|-|-
 
 ### Operazioni del servizio di terze parti {: #app-third-party}
 
-Operazioni del servizio di terze parti  ||| Ruoli applicazione||||
+Operazioni del servizio di terze parti ||| Ruoli applicazione||||
 :--------: | -------------|-------------|---------------|-----|---
            | **Applicazione standard** | **Applicazione Operazioni** | **Applicazione di back-end attendibile** | **Applicazione del processore dati** | **Applicazione di visualizzazione** | **Applicazione del dispositivo**
 Elaborazione delle notifiche batch da una piattaforma esterna|X|X|-|-|-|-

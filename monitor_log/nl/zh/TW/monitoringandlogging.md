@@ -14,7 +14,7 @@ copyright:
 #監視及記載
 {: #monitoringandlogging}
 
-*前次更新：2016 年 7 月 1 日*
+前次更新：2016 年 9 月 2 日
 {: .last-updated}
 
 監視應用程式以及檢閱日誌，即可遵循應用程式執行及資料流程，以深入瞭解部署。此外，您還可以減少找到任何問題並進行修復所需的時間及工作量。
@@ -49,6 +49,11 @@ copyright:
 {: #logging_for_bluemix_apps}
 
 當您使用 Cloud Foundry 基礎架構在 {{site.data.keyword.Bluemix_notm}} 上執行應用程式時，會自動建立日誌檔。當您在從部署到運行環境的任何階段中發生錯誤時，可以檢查日誌以尋找可能有助於解決問題的線索。
+
+###日誌保留
+{: #log_retention}
+
+* 在 Bluemix Cloud Foundry 應用程式中，日誌資料預設會儲存 30 天。
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -134,7 +139,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 
 若要查看部署或運行環境日誌，請完成下列步驟：
 1. 登入 {{site.data.keyword.Bluemix_notm}}，然後在「儀表板」按一下您的應用程式磚。即會顯示「應用程式詳細資料」頁面。
-2. 在左導覽列中，按一下**日誌**。
+2. 在導覽列中，按一下**日誌**。
 
 在**日誌**主控台中，您可以檢視應用程式的最新日誌，或即時讀取日誌尾端的內容。此外，您還可以依日誌類型及通道來過濾日誌。
 
@@ -201,7 +206,8 @@ cf logs appname --recent | cut -c 29-40,46-
 ```
 
 如需 **grep** 選項的相關資訊，請鍵入 cut --help。
-* 若要顯示包含特定關鍵字的日誌項目，請使用 **grep** 選項。例如，若要顯示包含關鍵字 [APP 的日誌項目，您可以使用下列指令：
+* 若要顯示包含特定關鍵字的日誌項目，請使用 **grep** 選項。例如，若要顯示包含關鍵字 `[APP` 的日誌項目，您可以使用下列指令：
+
 ```
 cf logs appname --recent | grep '\[App'
 ```
@@ -224,16 +230,15 @@ cf logs appname --recent | grep '\[App'
 
   2. 建立使用者提供的服務實例。
      
-	 使用 `cf create-user-provided-service` 指令（或 `cups`，這個指令的簡短版本），以建立使用者提供的服務實例：
-	  
+	 使用 `cf create-user-provided-service` 指令（或 `cups`，這是此指令的簡短版本），以建立使用者提供的服務實例： 
 	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 ```
-	 **service_name**
+	 &lt;service_name&gt;
 	 
 	 使用者提供的服務實例的名稱。
 	 
-	 **logging_endpoint**
+	 &lt;logging_endpoint&gt;
 	 
 	 {{site.data.keyword.Bluemix_notm}} 將日誌傳送至其中的記載端點。請參閱下表，以將 *logging_endpoint* 取代為您的值：
 	 
@@ -268,13 +273,13 @@ cf logs appname --recent | grep '\[App'
 	 使用下列指令，將服務實例連結至您的應用程式： 
 	
 	 ```
-	 cf bind-service appname <service_name>
-```
-	 **appname**
+	 cf bind-service <appname> <service_name>
+	 ```
+	 &lt;appname&gt;
 	 
 	 應用程式的名稱。
 	 
-	 **service_name**
+	 &lt;service_name&gt;
 	 
 	 使用者提供的服務實例的名稱。
 	 
@@ -292,7 +297,7 @@ cf logs appname --recent | grep '\[App'
 ### 範例：將 Cloud Foundry 應用程式日誌串流至 Splunk 
 {: #splunk}
 
-在此範例中，一位名叫 Jane 的開發人員使用　IBM Virtual Servers 測試版和 Ubuntu 映像檔來建立虛擬伺服器。Jane 嘗試將 Cloud Foundry 應用程式日誌從 {{site.data.keyword.Bluemix_notm}} 串流至 Splunk。 
+在此範例中，一位名叫 Jane 的開發人員使用 IBM Virtual Servers 測試版和 Ubuntu 映像檔來建立虛擬伺服器。Jane 嘗試將 Cloud Foundry 應用程式日誌從 {{site.data.keyword.Bluemix_notm}} 串流至 Splunk。 
 
   1. 一開始，Jane 先設定 Splunk。
 
@@ -344,7 +349,7 @@ dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
 		
   2. Jane 配置 Splunk 設定，以從 {{site.data.keyword.Bluemix_notm}} 接受 syslog drain。她必須為 syslog drain 建立資料輸入。
 
-     a. Jane 從 Splunk Web 介面左側按一下**資料 > 資料輸入**。畫面上會顯示 Splunk 支援的輸入類型清單。 
+     a. 從 Splunk Web 介面中，Jane 按一下**資料 > 資料輸入**。畫面上會顯示 Splunk 支援的輸入類型清單。 
 	 
      b. 她選取 **TCP**，因為 syslog drain 使用 TCP 通訊協定。
 	 

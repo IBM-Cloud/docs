@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-02" 
 ---
 
 # 配置 {{site.data.keyword.amashort}} 进行定制认证
 {: #custom-dash}
-
-上次更新时间：2016 年 7 月 17 日
-{: .last-updated}
 
 
 要将定制认证用于移动应用程序，必须在 {{site.data.keyword.amashort}} 服务仪表板中注册定制身份提供者的定制认证域和基本 URL。

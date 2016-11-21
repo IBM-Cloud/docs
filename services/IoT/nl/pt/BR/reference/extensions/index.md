@@ -13,10 +13,10 @@ copyright:
 
 # Integrações de serviços externos
 {: #ref-index}
-Última atualização: 13 de setembro de 2016
+Última atualização: 26 de setembro de 2016
 {: .last-updated}
 
-A integração de serviços externos permite acessar dados e operações de terceiros ou serviços externos em sua organização do {{site.date.keyword.iot_full}}.
+A integração de serviços externos permite acessar dados e operações de terceiros ou serviços externos em sua organização do {{site.data.keyword.iot_full}}.
 
 ## Jasper
 {: #jasper}
@@ -48,13 +48,13 @@ Para conectar seu serviço Jasper à sua organização do {{site.data.keyword.io
 1. Ative a extensão Jasper. Para ativar a integração de Jasper com sua organização do {{site.data.keyword.iot_short_notm}}, conclua as etapas a seguir:
   1. No painel do {{site.data.keyword.iot_short_notm}}, selecione **Extensões**.
   2. Na página **Extensões**, clique em **Incluir extensão**.
-  3. Clique em **Incluir** ao lado de AT&T.
-  4. Insira seu nome do usuário, senha, chave de acesso e ID do domínio da AT&T.
+  3. Clique em **Incluir** próximo a Jasper.
+  4. Insira o nome de usuário do Jasper, senha, chave de acesso e ID do domínio.
   5. Clique em **Pronto**.
 
 2. Configure seus dispositivos
-É possível configurar os dispositivos que estão conectados à sua organização do {{site.data.keyword.iot_short_notm}} e à sua conta Jasper para exibir dados de Jasper no painel do {{site.data.keyword.iot_short_notm}}.
-**Importante:** a configuração de Jasper não pode ser aplicada como parte do processo Incluir dispositivo, apenas dispositivos conectados anteriormente podem ser configurados com Jasper.
+É possível configurar os dispositivos que estão conectados à sua organização do {{site.data.keyword.iot_short_notm}} e à sua conta Jasper para exibir dados de Jasper no painel do {{site.data.keyword.iot_short_notm}}.  
+**Importante:** a configuração de Jasper não pode ser aplicada como parte do processo Incluir dispositivo, apenas dispositivos conectados anteriormente podem ser configurados com Jasper.  
 Para configurar seus dispositivos conectados Jasper, conclua as etapas a seguir:
  1. Na guia dispositivos do painel do {{site.data.keyword.iot_short_notm}}, localize o dispositivo conectado Jasper a ser configurado.
  2. Selecione o dispositivo para abrir a visualização *Drill down de dispositivo*.
@@ -106,8 +106,8 @@ Para conectar sua organização do {{site.data.keyword.iot_short_notm}} à sua c
 
 
 2. Configure seus dispositivos
-É possível configurar os dispositivos que estão conectados à sua organização do {{site.data.keyword.iot_short_notm}} e à sua conta da AT&T para exibir dados da AT&T no painel do {{site.data.keyword.iot_short_notm}}.
-**Importante:** a configuração da AT&T não pode ser aplicada como parte do processo Incluir dispositivo, apenas dispositivos conectados anteriormente podem ser configurados com a AT&T.
+É possível configurar os dispositivos que estão conectados à sua organização do {{site.data.keyword.iot_short_notm}} e à sua conta da AT&T para exibir dados da AT&T no painel do {{site.data.keyword.iot_short_notm}}.  
+**Importante:** A configuração da AT&T não pode ser aplicada como parte do processo Incluir dispositivo, apenas dispositivos conectados anteriormente podem ser configurados com a AT&T.
 Para configurar seus dispositivos conectados ao AT&T, conclua as etapas a seguir:
  1. Na guia dispositivos do painel do {{site.data.keyword.iot_short_notm}}, localize o dispositivo conectado ao AT&T a ser configurado.
  2. Selecione o dispositivo para abrir a visualização *Drill down de dispositivo*.
@@ -125,32 +125,32 @@ Para configurar seus dispositivos conectados ao AT&T, conclua as etapas a seguir
 
 Quando a organização estiver configurada com sucesso, a seção *Extensões* será exibida na seção *Configuração de extensões* na visualização *Drill down de dispositivo*.
 
-<!--
-## ARM mbed connector
+
+## Conector ARM mbed
 {: #arm}
 
-The ARM mbed connector is an extension that allows you to connect your ARM mbed device to your {{site.data.keyword.iot_short_notm}}. The ARM mbed extension is allows the ARM mbed portal and the {{site.data.keyword.iot_short_notm}} to send and receive data from the ARM mbed portal.
+O conector ARM mbed permite que você conecte seu dispositivo ARM mbed para seu{{site.data.keyword.iot_short_notm}}. A extensão ARM mbed permite que o portal ARM mbed e o {{site.data.keyword.iot_short_notm}} para enviar e receber dados do portal ARM mbed.
 
-### Setup Configuration
+### Configuração de Instalação
 
 
-1. Enable the ARM mbed connector extension. To enable the ARM mbed connector extension complete the following steps:
-  1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Settings** and navigate to **Extensions**.
-  2. In the **Extensions** menu, click **Add Extension**.
-  3. Click **Add** next to ARM mbed connector extension.
-  4. Enter your ARM mbed access key and domain ID. You can find these by using the ARM mbed portal at https://connector.mbed.com.
-  5. Check the credentials are correct by clicking the **Check Connection** button.
-  6. Click **Done**.
+1. Ative a extensão de conector ARM mbed. Para ativar a extensão de conector ARM mbed, conclua as seguintes etapas:
+  1. No painel do {{site.data.keyword.iot_short_notm}}, selecione **Configurações** e navegue até **Extensões**.
+  2. No menu **Extensões**, clique em **Incluir extensão**.
+  3. Clique em **Incluir** próximo à extensão de conector ARM mbed.
+  4. Insira sua chave de acesso e ID do domínio do ARM mbed. É possível localizá-los usando o portal ARM mbed em https://connector.mbed.com.
+  5. Verifique se as credenciais estão corretas clicando no botão **Verificar conexão**.
+  6. Clique em **Pronto**.
 
-### Payload Format
+### Formato de carga útil
 
-There are two types of incoming messages from the ARM mbed platform, notifications and asynchronous responses. The {{site.data.keyword.iot_short_notm}} can send commands to devices that are connected to the ARM mbed platform.
+Há dois tipos de mensagens recebidas da plataforma ARM mbed, notificações e respostas assíncronas. O {{site.data.keyword.iot_short_notm}} pode enviar comandos para dispositivos que estão conectados à plataforma ARM mbed.
 
-#### Notifications
+#### Notificações
 
-Notifications are generated by changes in device or sensor data. After the {{site.data.keyword.iot_short_notm}} processes the message, it is to the device event topic in the same way as a device connected directly to the {{site.data.keyword.iot_short_notm}}. The event type used for notifications originating on devices connected to the ARM mbed platform is `notify`.
+As notificações são geradas por mudanças nos dados do dispositivo ou do sensor. Depois que o {{site.data.keyword.iot_short_notm}} processa a mensagem, ele é o tópico do evento de dispositivo da mesma maneira que um dispositivo conectado diretamente ao {{site.data.keyword.iot_short_notm}}. O tipo de evento usado para notificações de origem em dispositivos conectados à plataforma ARM mbed é `notify`.
 
-The following code sample shows the payload format for a notification sent by the ARM mbed platform API:
+A amostra de código a seguir mostra o formato de carga útil para uma notificação enviada pela API da plataforma ARM mbed
 
 ```
 {
@@ -162,11 +162,11 @@ The following code sample shows the payload format for a notification sent by th
 }
 ```
 
-#### Asynchronous responses
+#### Respostas assíncronas
 
-When the {{site.data.keyword.iot_short_notm}} sends a command to a device connected to the ARM mbed platform, the device sends a confirmation message back to the {{site.data.keyword.iot_short_notm}}. This confirmation message is called an *asynchronous response* and uses the event type `asyncResponse`.
+Quando o {{site.data.keyword.iot_short_notm}} envia um comando para um dispositivo conectado à plataforma ARM mbed, o dispositivo envia uma mensagem de confirmação de volta ao {{site.data.keyword.iot_short_notm}}. Essa mensagem de confirmação é chamada de *resposta assíncrona* e usa o tipo de evento `asyncResponse`.
 
-The following code sample shows the payload format for an asynchronous response sent by the ARM mbed cloud service:
+A amostra de código a seguir mostra o formato de carga útil para uma resposta assíncrona enviada pelo serviço de nuvem ARM mbed:
 
 ```
 {
@@ -180,9 +180,9 @@ The following code sample shows the payload format for an asynchronous response 
 }
 ```
 
-#### Sending commands to the ARM mbed platform
+#### Enviando comandos para a plataforma ARM mbed
 
-The {{site.data.keyword.iot_short_notm}} can send commands to devices connected to the ARM mbed platform. Commands sent to the ARM mbed platform it must use the following JSON format.
+O {{site.data.keyword.iot_short_notm}} pode enviar comandos para dispositivos conectados à plataforma ARM mbed. Os comandos enviados da plataforma ARM mbed deve usar o formato JSON a seguir.
 
 ```
 {
@@ -192,13 +192,13 @@ The {{site.data.keyword.iot_short_notm}} can send commands to devices connected 
   "payload": <Base64 encoded payload>
 }
 ```
-
-The payload should be published to the following topic:
+O método escolhido faz distinção entre maiúsculas e minúsculas. O caractere inicial '/' do caminho de recurso deve ser ignorado.
+A carga útil deve ser publicada no tópico a seguir:
 
 ```
 iot-2/type/<device_type>/id/<deviceId>/cmd/<command_type>/fmt/<command_format>
 ```
--->
+
 
 ## Orange
 {: #orange}
@@ -245,8 +245,13 @@ Após a extensão da Orange ter sido ativada, cada dispositivo com um cartão M�
 ```
 Quando a organização estiver configurada com sucesso, a seção *Extensões* será exibida na seção *Configuração de extensões* na visualização *Drill down de dispositivo*.
 
+## Armazenamento de dados históricos
+{: #historical_data}
 
-## Extensões de gerenciamento de dispositivo
+A extensão de armazenamento de dados históricos permite localizar e configurar serviços de armazenamento de mensagens compatíveis, tais como [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html)
+ou [{{site.data.keyword.messagehub_full}}](../../message_hub.html) para seus dados da IoT.
+
+## Pacotes de gerenciamento de dispositivos customizados
 {: #device_mgmt}
 
 O gerenciamento de dispositivo é um recurso principal do {{site.data.keyword.iot_short_notm}}, no entanto, ele pode ser estendido para desenvolver funcionalidade adicional.
@@ -266,8 +271,32 @@ O {{site.data.keyword.iot_short_notm}} com blockchain permite que dispositivos I
 ### Configuração para blockchain
 
 A integração de blockchain ao {{site.data.keyword.iot_short_notm}} é uma oferta de serviços que não está ativada por padrão no {{site.data.keyword.iot_short_notm}}. Para ativar o recurso em seu ambiente, conclua as etapas a seguir:
- 1. No painel do {{site.data.keyword.iot_short_notm}}, selecione **Configurações** e navegue até **Extensões**.
+ 1. No painel {{site.data.keyword.iot_short_notm}}, **Extensões**.
  2. Clique no link **Diga-me mais** ao lado da extensão Blockchain para acessar a página Oferta de serviços blockchain de IoT.
- 3. Preencha e envie o formulário de solicitação de serviço.
+ 3. Preencha e envie o formulário de solicitação de serviço.   
 A aprovação do serviço geralmente leva aproximadamente um dia. Após sua solicitação ser aprovada, você receberá um e-mail com instruções sobre como ativar a integração de blockchain em sua organização do {{site.data.keyword.iot_short_notm}}.
  5. Retorne ao painel do {{site.data.keyword.iot_short_notm}} de sua organização para concluir a configuração. Para obter mais informações, consulte [Integração de blcokchain ao {{site.data.keyword.iot_short_notm}}](../../bl_blockchain_integration.html).
+
+## The Weather Company
+{: #weathercompany}
+
+A extensão Weather Company combina dados de clima com seus dispositivos {{site.data.keyword.iot_short_notm}} existentes. Os dados de clima do Weather Company aparecem na visualização de detalhes do dispositivo se uma solicitação de localização de atualização foi feita usando a API ou se o dispositivo já tiver configurado seu local usando uma mensagem de gerenciamento de dispositivo.
+
+**Observação:** apenas dispositivos gerenciados podem configurar suas próprias localizações. Todos os dispositivos não gerenciados devem ter seus locais configurados manualmente usando a API. Para obter mais informações sobre a configuração de um local do dispositivo, consulte [Atualizar solicitações de localização](../../devices/device_mgmt/index.html#update-location).
+
+### Dados Meteorológicos
+
+Para visualizar os dados de clima recuperados para um local do dispositivo, localize o dispositivo na área de janela **Dispositivos** e clique nele. Na visualização de dispositivo detalhada, role para baixo para a seção **Extensões**. Os dados de clima a seguir são listados:
+
+- Clima atual.
+- Temperatura atual.
+- A temperatura máxima e mínima predita.
+- Umidade relativa.
+- Pressão.
+- Visibilidade.
+- Velocidade do vento.
+- Direção do vento.
+- Latitude.
+- Longitude.
+
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html). -->

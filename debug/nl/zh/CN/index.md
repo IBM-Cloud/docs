@@ -16,9 +16,6 @@ copyright:
 # 调试
 {: #debugging}
 
-*上次更新时间：2016 年 5 月 25 日*
-{: .last-updated}
-
 如果您遇到 {{site.data.keyword.Bluemix}} 问题，那么可以查看日志文件来调查问题并调试错误。
 {:shortdesc}
 
@@ -38,18 +35,18 @@ copyright:
 
   1. 通过在 cf 命令行界面中输入以下代码，连接 {{site.data.keyword.Bluemix_notm}}：
      ```
-	 cf api https://api.ng.bluemix.net
+	 cf api https://api.stage1.ng.bluemix.net
 	 ```
-	 
+
   2. 通过输入 `cf login`，登录 {{site.data.keyword.Bluemix_notm}}。
-  
+
   3. 通过输入 `cf logs appname --recent`，检索最新的日志。如果您想要过滤详细日志，请使用 `grep` 选项。例如，您可以输入以下代码以仅显示 [STG] 日志：
     
     ```
 	cf logs appname --recent | grep '\[STG\]'
 	```
   4. 查看日志中所显示的第一个错误。
-  
+
 如果使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 插件来部署应用程序，那么可以在 Eclipse 工具的**控制台**选项卡中看到类似于 cf logs 输出的日志。部署应用程序时，还可以打开单独的 Eclipse 窗口来跟踪`日志`。
 
 除 `cf logs` 命令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您也可以使用 Monitoring and Analytics 服务来收集日志详细信息。此外，Monitoring and Analytics 服务还会监视您应用程序的性能、运行状况和可用性。它还提供 Node.js 和 Liberty 运行时应用程序的日志分析。  
@@ -81,7 +78,7 @@ copyright:
 {: screen}
 
 
-对于 Node.js 应用程序，DEA 使用 `package.json` 文件中的信息来下载模块。从此错误，您可以看到模块发生错误。因此，您可能需要复查 `package.json` 文件中的第 18 行。 
+对于 Node.js 应用程序，DEA 使用 `package.json` 文件中的信息来下载模块。从此错误，您可以看到模块发生错误。因此，您可能需要复查 `package.json` 文件中的第 18 行。
 
 ```
 15   "jade": "~1.3.0",
@@ -105,48 +102,48 @@ copyright:
 
 ## 调试运行时错误
 {: #debugging-runtime-errors}
-如果在运行时遇到应用程序问题，应用程序日志可帮助查明错误原因并从该问题中进行恢复。 
+如果在运行时遇到应用程序问题，应用程序日志可帮助查明错误原因并从该问题中进行恢复。
 
 尤其是，可以启用 stdout 和 stderr 日志记录。有关如何为通过使用 {{site.data.keyword.Bluemix_notm}} 内置 buildpack 部署的应用程序配置日志文件的更多信息，请参阅以下列表：
 
   * 对于 Liberty for Java™ 应用程序，请参阅 [Liberty Profile: Logging and Trace](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}。
-  * 对于 Node.js 应用程序，请参阅 [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}。 
+  * 对于 Node.js 应用程序，请参阅 [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}。
   * 对于 PHP 应用程序，请参阅 [error_log](http://php.net/manual/en/function.error-log.php){: new_window}。
   * 对于 Python 应用程序，请参阅 [Logging HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}。
   * 对于 Ruby on Rails 应用程序，请参阅 [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}。
   * 对于 Ruby Sinatra 应用程序，请参阅 [Logging](http://www.sinatrarb.com/intro.html#Logging){: new_window}。
-  
+
 在 cf 命令行界面中输入 `cf logs appname --recent` 后，仅会显示最新的日志。要查看先前发生的错误的日志，必须检索所有日志并搜索错误。要检索应用程序的所有日志，请使用以下一种方法：
-<dl> 
-<dt><strong>{{site.data.keyword.Bluemix_notm}} Monitoring and Analytics 服务</strong></dt> 
+<dl>
+<dt><strong>{{site.data.keyword.Bluemix_notm}} Monitoring and Analytics 服务</strong></dt>
 <dd>Monitoring and Analytics 服务的集成日志文件搜索和分析功能可帮助您快速识别错误。有关更多信息，请参阅 <a href="../services/monana/index.html#gettingstartedtemplate" target="_blank">Monitoring and
-Analytics</a>。</dd> 
-<dt><strong>第三方工具</strong></dt> 
-<dd>您可以从应用程序收集日志并导出到外部日志主机。有关更多信息，请参阅<a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">配置外部日志记录</a>。</dd> 
-<dt><strong>用于收集和导出日志的脚本</strong></dt> 
-<dd>要使用脚本自动收集日志并导出到外部文件，必须从计算机连接到 {{site.data.keyword.Bluemix_notm}} 服务器，并且计算机上必须具有足够的空间以下载日志。有关更多信息，请参阅<a href="../support/index.html#collecting-diagnostic-information" target="_blank">收集诊断信息</a>。</dd>
+Analytics</a>。</dd>
+<dt><strong>第三方工具</strong></dt>
+<dd>您可以从应用程序收集日志并导出到外部日志主机。有关更多信息，请参阅<a href="../monitor_log/monitoringandlogging.html#thirdparty_logging" target="_blank">配置外部日志记录</a>。</dd>
+<dt><strong>用于收集和导出日志的脚本</strong></dt>
+<dd>要使用脚本自动收集日志并导出到外部文件，必须从计算机连接到 {{site.data.keyword.Bluemix_notm}} 控制台，并且计算机上必须有足够的空间用于下载日志。有关更多信息，请参阅<a href="../support/index.html#collecting-diagnostic-information" target="_blank">收集诊断信息</a>。</dd>
 </dl>
 
-以前，缺省情况下，可以在 {{site.data.keyword.Bluemix_notm}}“仪表板”中“应用程序”视图的**文件** > **日志**下访问 `stdout.log` 和 `stderr.log` 文件。但是，对于托管 {{site.data.keyword.Bluemix_notm}} 的当前版本的 Cloud Foundry，应用程序日志记录不再可用。要继续保持可在 {{site.data.keyword.Bluemix_notm}}“仪表板”中的**文件** > **日志**下访问 stdout 和 stderr 应用程序日志记录，可以将日志记录重定向到 {{site.data.keyword.Bluemix_notm}} 文件系统中的其他文件，具体取决于正在使用的运行时。 
+以前，缺省情况下，可以在 {{site.data.keyword.Bluemix_notm}} 控制台中“应用程序”视图的**文件** > **日志**下访问 `stdout.log` 和 `stderr.log` 文件。但是，对于托管 {{site.data.keyword.Bluemix_notm}} 的当前版本的 Cloud Foundry，应用程序日志记录不再可用。要继续保持可在 {{site.data.keyword.Bluemix_notm}} 控制台中的**文件** > **日志**下访问 stdout 和 stderr 应用程序日志记录，可以将日志记录重定向到 {{site.data.keyword.Bluemix_notm}} 文件系统中的其他文件，具体取决于正在使用的运行时。
 
   * 对于 Liberty for Java 应用程序，定向到 stdout 和 stderr 的输出已包含在日志目录下的 `messages.log` 文件中。分别查找以 SystemOut 和 SystemErr 为前缀的条目。
   * 对于 Node.js 应用程序，可以覆盖 console.log 函数以明确写入日志目录中的文件。
   * 对于 PHP 应用程序，您可以使用 error_log 函数来写入日志目录中的文件。
   * 对于 Python 应用程序，您可以让记录器将日志写入日志目录中的文件：logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
   * 对于 Ruby 应用程序，您可以让记录器将日志写入日志目录中的文件。
- 
- 
+
+
 ### 调试代码更改
 {: #debug_code_changes}
 
 如果您对已经部署且正在运作的应用程序进行代码更改，但您的代码更改并未反映在 {{site.data.keyword.Bluemix_notm}} 中，那么您可以使用日志进行调试。无论您的应用程序运行与否，您都可以检查应用程序部署期间或运行时生成的日志，来对新代码不运作的原因进行调试。
 
-根据部署新代码的方式，选择下列其中一个方法，来调试代码更改： 
+根据部署新代码的方式，选择下列其中一个方法，来调试代码更改：
 
-  * 对于从 cf 命令行部署的新代码，检查 *cf push* 命令的输出。此外，您还可以使用 *cf logs* 命令来查找解决问题的更多线索。有关如何使用 *cf logs* 命令的更多信息，请参阅[从命令行界面查看日志](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}。 
+  * 对于从 cf 命令行部署的新代码，检查 *cf push* 命令的输出。此外，您还可以使用 *cf logs* 命令来查找解决问题的更多线索。有关如何使用 *cf logs* 命令的更多信息，请参阅[从命令行界面查看日志](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}。
 
-  * 对于从 GUI（如 {{site.data.keyword.Bluemix_notm}} 用户界面、DevOps Delivery Pipeline 或 Travis-CI）部署的新代码，您可以从界面检查日志。例如，如果您从 {{site.data.keyword.Bluemix_notm}} 用户界面部署新代码，那么您可以转至“仪表板”、查找应用程序，然后查看日志以获取线索。有关如何从 {{site.data.keyword.Bluemix_notm}} 用户界面查看日志的更多信息，请参阅[从 Bluemix 仪表板查看日志](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}。  
- 
+  * 对于从 GUI（如 {{site.data.keyword.Bluemix_notm}} 控制台、DevOps Delivery Pipeline 或 Travis-CI）部署的新代码，您可以从界面检查日志。例如，如果您从 {{site.data.keyword.Bluemix_notm}} 控制台部署新代码，那么您可以转至“仪表板”，查找应用程序，然后查看日志以获取线索。有关如何从 {{site.data.keyword.Bluemix_notm}} 控制台查看日志的更多信息，请参阅[从 Bluemix 仪表板查看日志](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}。  
+
 
 # 相关链接
 {: #rellinks}
@@ -156,9 +153,10 @@ Analytics</a>。</dd>
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [IBM Monitoring and Analytics for Bluemix 服务入门](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [Bluemix 工作原理](../public/index.html#howwork){: new_window}
+  * [Bluemix 工作原理](../overview/whatisbluemix.html#howwork){: new_window}
   * [安装 cf 命令工具](../starters/install_cli.html){: new_window}
   * [查看日志](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+
   
   
  

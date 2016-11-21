@@ -24,7 +24,7 @@ copyright:
 보안 애플리케이션 개발을 위한 명확한 선택사항을 보유한 플랫폼이 됩니다.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}}는 시스템, 네트워킹 및 보안 엔지니어링과 관련한 IBM의 우수 사례에 의해 구동되는 보안 정책을 고수함으로써 보안 준비성을 보장합니다. 이러한 정책에는 소스 코드 스캔, 동적 스캔, 위협 모델링 및 침입 테스트 등의 실행이 포함됩니다. {{site.data.keyword.Bluemix_notm}}는 보안 인시던트 관리를 위해 IBM PSIRT(Product Security Incident Response Team) 프로세스를 따릅니다. 세부사항은 [IBM Security Vulnerability Management(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 사이트를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}}는 시스템, 네트워킹 및 보안 엔지니어링과 관련한 IBM의 우수 사례에 의해 구동되는 보안 정책을 고수함으로써 보안 준비성을 보장합니다. 이러한 정책에는 소스 코드 스캔, 동적 스캔, 위협 모델링 및 침입 테스트 등의 실행이 포함됩니다. {{site.data.keyword.Bluemix_notm}}는 보안 인시던트 관리를 위해 IBM Product Security Incident Response Team(PSIRT) 프로세스를 따릅니다. 세부사항은 [IBM Security Vulnerability Management(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 사이트를 참조하십시오.
 
 {{site.data.keyword.Bluemix_notm}} 퍼블릭 및 데디케이티드에서는 IBM SoftLayer IaaS(Infrastructure as a Service) 클라우드 서비스를 사용하고 해당 보안 아키텍처를 완전히 활용합니다. SoftLayer IaaS는 애플리케이션과 데이터에 대한 다중의 중첩된 보안 티어를 제공합니다. {{site.data.keyword.Bluemix_notm}} 로컬의 경우
 사용자는 회사 방화벽 뒤의 사용자 소유 데이터 센터에서 {{site.data.keyword.Bluemix_notm}} 로컬을
@@ -248,7 +248,7 @@ Secure Gateway 서비스를 사용하면 사내 구축형 또는 클라우드에
 
 ### 보안 정보 및 이벤트 관리
 
-You can use security information and event management (SIEM) 도구를 사용하여 애플리케이션 로그의 보안 경보를 분석할 수 있습니다. 이러한 도구 중 하나가 클라우드 환경에서 지능형 보안을 제공하는 IBM Security QRadar&reg; SIEM입니다. 자세한 정보는 [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}을 참조하십시오. 
+보안 정보 및 이벤트 관리(SIEM) 도구를 사용하여 애플리케이션 로그의 보안 경보를 분석할 수 있습니다. 이러한 도구 중 하나가 클라우드 환경에서 지능형 보안을 제공하는 IBM Security QRadar&reg; SIEM입니다. 자세한 정보는 [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}을 참조하십시오. 
 
 ## {{site.data.keyword.Bluemix_notm}} 보안 배치
 {: #security-deployment}

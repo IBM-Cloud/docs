@@ -27,7 +27,7 @@ copyright:
 ## {{site.data.keyword.openwhisk_short}} 的工作方式
 {: #openwhisk_how}
 
-{{site.data.keyword.openwhisk_short}} 是一种事件驱动型计算平台，用于运行代码以响应事件或直接调用。
+{{site.data.keyword.openwhisk_short}} 是一种事件驱动型计算平台，也称为无服务器计算或功能即服务 (FaaS)，用于运行代码以响应事件或直接调用。
 
 下图显示了高层次的 {{site.data.keyword.openwhisk_short}} 体系结构。
 

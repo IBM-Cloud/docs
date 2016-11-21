@@ -14,7 +14,7 @@ copyright:
 
 # Connettività MQTT per i dispositivi
 {: #mqtt}
-Ultimo aggiornamento: 09 settembre 2016
+Ultimo aggiornamento: 21 settembre 2016
 {: .last-updated}
 
 MQTT è il protocollo primario che i dispositivi e le applicazioni utilizzano per comunicare con {{site.data.keyword.iot_full}}. Le librerie client, le informazioni e gli esempi sono forniti per aiutarti nel collegarti e integrare i tuoi dispositivi con {{site.data.keyword.iot_short_notm}}.
@@ -26,7 +26,7 @@ MQTT è il protocollo primario che i dispositivi e le applicazioni utilizzano pe
 Per informazioni sulla sicurezza client e su come collegare i client MQTT ai dispositivi in {{site.data.keyword.iot_short_notm}}, consulta [Connecting applications, devices, and gateways to {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
 
 
-## Connessione dei dispositivi al servizio Quickstart 
+## Connessione dei dispositivi al servizio Quickstart
 {: #connecting_devices}
 
 Il servizio Quickstart è il livello di servizio più veloce. Non offre la conferma di ricezione e non supporta livelli QoS (quality of service) MQTT maggiori di zero. Quando ti colleghi al servizio Quickstart, l'autenticazione o la registrazione non è richiesta, e il `orgId` deve essere impostato su `quickstart`.
@@ -66,9 +66,9 @@ I dispositivi eseguono la pubblicazione degli argomenti dell'evento nel seguente
 Dove
 
 -  **event_id** è l'ID dell'evento, ad esempio `status`.  L'ID evento può essere qualsiasi stringa che è valida in MQTT. Se non sono utilizzati i caratteri jolly, le applicazioni del sottoscrittore devono utilizzare questa stringa nel loro argomento di sottoscrizione per ricevere gli eventi che vengono pubblicati nei loro argomenti.
--  **format_string** è il formato del payload dell'evento, ad esempio `json`. Il formato può essere qualsiasi stringa che è valida in MQTT. Se non sono utilizzati i caratteri jolly, le applicazioni del sottoscrittore devono utilizzare questa stringa nel loro argomento di sottoscrizione per ricevere gli eventi che vengono pubblicati nei loro argomenti.
+-  **format_string** è una stringa che definisce il tipo di contenuto del payload del messaggio in modo che il ricevente del messaggio possa determinare come analizzare il contenuto. I valori di tipo di contenuto includono ma non sono limitati a "json", "xml", "txt" e "csv". Il valore può essere qualsiasi stringa che è valida in MQTT. 
 
-**Importante:** il payload dei messaggi è limitato ad un massimo di 131072 byte. I messaggi che superano questo limite vengono rifiutati. 
+**Importante:** il payload dei messaggi è limitato ad un massimo di 131072 byte. I messaggi che superano questo limite vengono rifiutati.
 
 
 ## Sottoscrizione ai comandi
@@ -81,9 +81,9 @@ I dispositivi possono sottoscriversi agli argomenti del comando nel seguente for
 
 Dove
  - **command_id** è l'ID del comando, ad esempio, `update`. L'ID comando può essere qualsiasi stringa che è valida nel protocollo MQTT.  Se non sono utilizzati i caratteri jolly, un dispositivo deve utilizzare questa stringa nel proprio argomento di sottoscrizione per ricevere i comandi che vengono pubblicati nel loro argomento.
- - **format_string** è il formato del payload del comando, ad esempio `json`. Il formato può essere qualsiasi stringa che è valida nel protocollo MQTT. Se non sono utilizzati i caratteri jolly, un dispositivo deve utilizzare questa stringa nel proprio argomento di sottoscrizione per ricevere i comandi che vengono pubblicati nel loro argomento.
+ - **format_string** è una stringa che definisce il tipo di contenuto del payload del comando in modo che il ricevente del comando possa determinare come analizzare il contenuto. I valori di tipo di contenuto includono ma non sono limitati a "json", "xml", "txt" e "csv". Il valore può essere qualsiasi stringa che è valida in MQTT. 
 
-I dispositivi possono sottoscriversi agli eventi da altri dispositivi. Un dispositivo riceve i comandi che vengono pubblicati soltanto per il proprio dispositivo. 
+I dispositivi possono sottoscriversi agli eventi da altri dispositivi. Un dispositivo riceve i comandi che vengono pubblicati soltanto per il proprio dispositivo.
 
 ## Dispositivi gestiti
 {: #managed-devices}
@@ -99,7 +99,7 @@ I messaggi con QoS=0 possono essere scartati e non sono conservati dopo il riavv
 {{site.data.keyword.iot_short_notm}} pubblica le richieste che hanno un livello QoS di 1 per supportare l'accodamento dei messaggi. Per accodare i messaggi inviati mentre un dispositivo gestito non è collegato, configura il dispositivo per non utilizzare le sessioni di pulitura impostando il parametro `cleansession` su false.
 
 **Avvertenza:**
-  Se il tuo dispositivo gestito utilizza una sottoscrizione durevole, tutti i comandi di gestione del dispositivo che vengono inviati al tuo dispositivo mentre è offline sono riportati come operazioni non riuscite se il dispositivo non si ricollega al servizio prima del timeout della richiesta. Tuttavia, quando il dispositivo si ricollega, queste richieste vengono elaborate dal dispositivo. Una sottoscrizione durevole viene specificata dal parametro `cleansession=false`.
+  Se il tuo dispositivo gestito utilizza una sottoscrizione durevole, tutti i comandi che vengono inviati al tuo dispositivo mentre è offline sono riportati come operazioni non riuscite se il dispositivo non si ricollega al servizio prima del timeout della richiesta. Tuttavia, quando il dispositivo si ricollega, queste richieste vengono elaborate dal dispositivo. Una sottoscrizione durevole viene specificata dal parametro `cleansession=false`.
 
 ### Argomenti
 
@@ -133,7 +133,7 @@ Dove:
  - **reqId** è un identificativo della richiesta e deve essere copiato in una risposta. Se non è richiesta una risposta, puoi omettere il campo *reqId*.
 
 **Risposte**  
-Le risposte sono formattate come mostrato nel seguente esempio di codice: 
+Le risposte sono formattate come mostrato nel seguente esempio di codice:
 ```
         {
             "rc": 0,

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+  
 
 
 ---
@@ -17,10 +17,10 @@ copyright:
 
 # Gestión de organizaciones y espacios
 {: #orgsspacesusers}
-*Última actualización: 16 de mayo de 2016*
+Última actualización: 20 de octubre de 2016
 {: .last-updated}
 
-Como propietario de la cuenta, puede gestionar las organizaciones en la página **icono Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; **Gestionar organizaciones**. Los gestores de organizaciones también pueden utilizar la página Gestionar organizaciones para gestionar todas las organizaciones en las que se han establecido como gestor.
+Como propietario de la cuenta, puede gestionar las organizaciones accediendo a la página **Gestionar organizaciones**. Los gestores de organizaciones también pueden utilizar la página Gestionar organizaciones para gestionar todas las organizaciones en las que se han establecido como gestor.
 {:shortdesc}
 
 Las tareas de gestión incluyen las siguientes:
@@ -31,6 +31,8 @@ Las tareas de gestión incluyen las siguientes:
 * Listado de los miembros del equipo añadidos a la cuenta u organización
 * Gestión o visualización de la cuota
 * Gestión de dominios personalizados
+
+**Nota**: Debe ser el propietario de la cuenta de Pago según uso para crear una organización.
 
 ## Organizaciones
 {: #orginfo}
@@ -90,32 +92,30 @@ Tras añadir miembros del equipo a una organización, puede otorgarles permisos 
 
 Solamente los propietarios de cuentas con cuentas Pago según uso pueden crear una organización. Puede crear una organización completando los siguientes pasos:
 
-1. Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; página **Gestionar organizaciones**.
+1. Pulse la página **Cuenta** &gt; **Gestionar organizaciones**.
 2. Pulse **Añadir una nueva organización**.
 3. Escriba el nombre de la organización.
 4. Pulse **Añadir**.
 
 Puede crear espacios en la organización; por ejemplo, un espacio *dev* como entorno de desarrollo, un espacio *test* como entorno de prueba y un espacio *production* como entorno de producción. Luego puede asociar sus apps a los espacios. Complete los siguientes pasos para crear un espacio:
 
-1. Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; página **Gestionar organizaciones**.
+1. Pulse la página **Cuenta** &gt; **Gestionar organizaciones**.
 2. Identifique la organización a la que desea añadir un espacio y seleccione **Ver detalles**.
-3. Pulse **Editar**.
 4. Pulse **Añadir un espacio**.
 5. Especifique el nombre de espacio.
 6. Pulse **Añadir**.
 
-
 ## Cambio de nombre de una organización
 {: #orgrename}
 
-Siga estos pasos para cambiar el nombre de la organización:
+Siga los pasos siguientes para cambiar el nombre de la organización:
 
-1. Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; página **Gestionar organizaciones**.
+1. Pulse la página **Cuenta** &gt; **Gestionar organizaciones**.
 2. Identifique la organización que desea editar y seleccione **Ver detalles**.
-3. Seleccione **Editar**.
+3. Seleccione **Editar organización**.
 4. Seleccione **Editar** para el título de la organización.
 5. Escriba el nuevo nombre de organización.
-6. Pulse **Guardar**.
+6. Pulse **GUARDAR**.
 
 ## Supresión de una organización o un espacio existente
 {: #deleteorgs}
@@ -126,27 +126,27 @@ Como propietario de cuenta, puede ponerse en contacto con el soporte de [{{site.
 
 Puede suprimir un espacio desde la página **Gestionar organizaciones**:
 
-1. Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; página **Gestionar organizaciones**.
+1. Pulse la página **Cuenta** &gt; **Gestionar organizaciones**.
 2. Identifique la organización que desea editar y seleccione **Ver detalles**.
-3. Identifique el espacio que desea suprimir y seleccione **Editar**.
-4. Pulse **Suprimir el espacio**.
+3. Identifique el espacio que desea suprimir y seleccione **Editar espacio**.
+4. Pulse **Suprimir espacio**.
 
 ## Listado de miembros
 {: #listmembers}
 
 Complete los siguientes pasos para listar los miembros para una organización específica:
 
-1. Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; **Gestionar organizaciones**.
+1. Pulse la página **Cuenta** &gt; **Gestionar organizaciones**.
 2. Identifique la organización para la que desea ver los miembros y pulse **Ver detalles**.
-3. Pulse **Editar**.
-4. Puede ver los miembros de su organización y sus roles en el separador **Usuarios**.
+3. Pulse **Editar organización**.
+4. Puede ver los miembros de su organización y sus roles en el separador **USUARIOS**.
 
 Complete los siguientes pasos para listar los miembros para un espacio específico:
 
-1. Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; página **Gestionar organizaciones**.
+1. Pulse la página **Cuenta** &gt; **Gestionar organizaciones**.
 2. Identifique la organización para la que desea ver los miembros y pulse **Ver detalles**.
-3. Identifique el espacio para el que desea ver los miembros y pulse **Editar**.
-4. Puede ver los miembros de su espacio y sus roles en el separador **Usuarios**.
+3. Identifique el espacio para el que desea ver los miembros y pulse **Editar espacio**.
+4. Puede ver los miembros de su espacio y sus roles en el separador **USUARIOS**.
 
 ## Gestión de cuota
 {: #managequota}
@@ -155,22 +155,22 @@ Como propietario de cuenta o gestor de organización, puede ver la cuota asignad
 
 Para ver la cuota para la organización, complete los siguientes pasos:
 
-1. Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; página **Gestionar organizaciones**.
+1. Pulse la página **Cuenta** &gt; **Gestionar organizaciones**.
 2. Identifique la organización para la que desea ver la cuota y pulse **Ver detalles**.
-3. Pulse **Editar**.
-4. Seleccione el separador **Cuota**.
+3. Pulse **Editar organización**.
+4. Seleccione el separador **CUOTA**.
 
-Para actualizar la cuota para la organización, debe abrir una incidencia de soporte. Para obtener más información sobre cómo abrir una incidencia de soporte, consulte [Obtención de soporte al cliente](../support/index.html#contacting-support). Para obtener más información sobre la cuota para los contenedores, consulte [Cuota](../containers/container_creating_ov.html#container_quota) en la documentación Contenedores.
+Para actualizar la cuota para la organización, debe abrir una incidencia de soporte. Para obtener más información sobre cómo abrir una incidencia de soporte, consulte [Obtención de soporte al cliente](../support/index.html#contacting-support). Para obtener más información sobre la cuota para los contenedores, consulte [Cuota](../containers/container_planning_org_ov.html##container_planning_quota) en la documentación Contenedores.
 
 ## Gestión de dominios
 {: #managedomains}
 
 Como propietario de cuenta o gestor de organización, puede ver el dominio del sistema y añadir dominios personalizados para aplicaciones que están incluidas dentro una organización y sus espacios. Como gestor de espacios, el separador **Dominios** para un espacio es una lista de solo lectura de los dominios asignados al espacio. 
 
-1. Vaya al icono **Cuenta y soporte** ![icono Cuenta y soporte](../admin/images/account_support.svg) &gt; página **Gestionar organizaciones**.
+1. Pulse la página **Cuenta** &gt; **Gestionar organizaciones**.
 2. Identifique la organización para la que desea ver o editar los dominios.
 3. Seleccione **Ver detalles** para esa organización.
-4. Pulse **Editar**.
-5. Pulse **Dominios**.
+4. Pulse **Editar organización**.
+5. Pulse **DOMINIOS**.
 
-Si añade un dominio personalizado, debe configurar el servidor DNS para resolver el dominio personalizado para que apunte al dominio del sistema de {{site.data.keyword.Bluemix_notm}}. De este modo, cuando {{site.data.keyword.Bluemix_notm}} recibe una solicitud para el dominio personalizado, puede direccionarlo correctamente a la app. El dominio del sistema siempre está disponible en un espacio y también se pueden asignar dominios personalizados a un espacio. Las aplicaciones creadas en un espacio pueden utilizar cualquiera de los dominios listados para ese espacio. Para obtener más información sobre cómo crear y utilizar dominios personalizados, consulte [Utilización de un dominio personalizado](../manageapps/updapps.html#domain).
+Si añade un dominio personalizado, debe configurar el servidor DNS para resolver el dominio personalizado para que apunte al dominio del sistema de {{site.data.keyword.Bluemix_notm}}. De este modo, cuando {{site.data.keyword.Bluemix_notm}} recibe una solicitud para el dominio personalizado, puede direccionarlo correctamente a la app. El dominio del sistema siempre está disponible en un espacio y también se pueden asignar dominios personalizados a un espacio. Las aplicaciones creadas en un espacio pueden utilizar cualquiera de los dominios listados para ese espacio. Para obtener más información sobre cómo crear y utilizar dominios personalizados, consulte [Utilización de un dominio personalizado](/docs/manageapps/updapps.html#domain).

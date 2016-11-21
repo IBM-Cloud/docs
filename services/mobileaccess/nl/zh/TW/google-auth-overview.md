@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -11,9 +11,8 @@ copyright:
 # 使用 Google 認證鑑別使用者
 {: #google-auth}
 
-前次更新：2016 年 7 月 22 日
 
-您可以配置 {{site.data.keyword.amashort}} 服務以使用 Google 作為身分提供者來保護資源。然後，您的行動或 Web 應用程式使用者可以使用其 Google 認證進行鑑別。
+您可以配置 {{site.data.keyword.amafull}} 服務以使用 Google 作為身分提供者來保護資源。然後，您的行動或 Web 應用程式使用者可以使用其 Google 認證進行鑑別。
 {:shortdesc}
 
 **重要事項：**您不需要個別安裝 Google 所提供的 Client SDK。當您配置 {{site.data.keyword.amashort}} Client SDK 時，相依關係管理程式會自動安裝 Google SDK。

@@ -7,7 +7,7 @@ copyright:
 
 {:shortdesc: .shortdesc} 
 
-# 데이터 및 분석
+# Data & Analytics
 {: #data_analytics}
 
 *마지막 업데이트 날짜: 2016년 3월 9일*

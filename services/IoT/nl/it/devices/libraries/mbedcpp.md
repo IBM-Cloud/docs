@@ -46,7 +46,7 @@ Per informazioni su come collegare un microcontroller ARM mBed NXP LPC 1768 la r
 ## Constructor
 {: #constructor}
 
-Il constructor crea l'istanza client e accetta i seguenti parametri: 
+Il constructor crea l'istanza client e accetta i seguenti parametri:
 
 |Parametro |Descrizione |
 |:---|:---|
@@ -54,7 +54,7 @@ Il constructor crea l'istanza client e accetta i seguenti parametri:
 |`type`   |Il tipo del tuo dispositivo. Questo campo è obbligatorio.|
 |`id`   |L'ID del tuo dispositivo. Questo campo è obbligatorio.|
 |`auth-method`   |Il metodo di autenticazione, che è un campo facoltativo necessario solo per un flusso registrato. L'unico valore al momento supportato è `token`.|
-|`auth-token`   |Un token di autenticazione per la connessione sicura al tuo dispositivo su Watson IoT Platform. Questo è un campo facoltativo necessario solo per un flusso registrato. |
+|`auth-token`   |Un token di autenticazione per la connessione sicura al tuo dispositivo su Watson IoT Platform. Questo è un campo facoltativo necessario solo per un flusso registrato.|
 
 Questi parametri creano le definizioni utilizzate per interagire con il servizio {{site.data.keyword.iot_short_notm}}.
 
@@ -265,7 +265,6 @@ Per l'esempio completo, consulta [ IBMIoTClientLibrarySample](https://developer.
 
 **Nota:** la funzione `client.yield()` deve essere richiamata periodicamente per ricevere i comandi.
 La funzione `client.yield()` abilita il dispositivo a ricevere i comandi da Watson IoT Platform e a mantenere la connessione attiva. Se la funzione `client.yield()` non è richiamata nell'intervallo di tempo specificato nell'intervallo keepAlive, tutti i comandi inviati dalla piattaforma non saranno ricevuti dal dispositivo. Il valore assegnato alla funzione `client.yield()` specifica la durata (in millisecondi) in cui i dati possono essere letti dal socket prima che il controllo sia restituito all'applicazione.
-
 
 ## Disconnessione del client
 {: #disconnect_client}

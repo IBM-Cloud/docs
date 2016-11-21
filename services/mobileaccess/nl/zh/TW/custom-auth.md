@@ -2,17 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # 使用自訂身分提供者鑑別使用者
 {: #custom-id}
 
-前次更新：2016 年 7 月 22 日
-{: .last-updated}
 
-
-建立自訂身分提供者並實作您自己的邏輯，來收集及驗證認證。自訂身分提供者是可公開 RESTful 介面的 Web 應用程式。您可以在內部部署或在 {{site.data.keyword.Bluemix}} 上管理自訂身分提供者。唯一的需求是必須可從公用網際網路存取自訂身分提供者，讓它與 {{site.data.keyword.amashort}} 服務通訊。
+建立使用 {{site.data.keyword.amafull}} 服務的自訂身分提供者，並實作您自己的邏輯來收集及驗證認證。自訂身分提供者是可公開 RESTful 介面的 Web 應用程式。您可以在內部部署或在 {{site.data.keyword.Bluemix}} 上管理自訂身分提供者。唯一的需求是必須可從公用網際網路存取自訂身分提供者，讓它與 {{site.data.keyword.amashort}} 服務通訊。
 
 ## {{site.data.keyword.amashort}} 自訂身分要求流程
 {: #custom-id-ovr}

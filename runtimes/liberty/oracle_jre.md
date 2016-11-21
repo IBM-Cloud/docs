@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-21"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Using Oracle JRE
 {: #using_oraacle_jre}
-
-Last Updated: 21 June 2016
-{: .last-updated}
 
 You can run your Liberty application on Bluemix with the Oracle JRE if you choose to.  To do so you must
 * host the JRE in a location that the buildpack can download it from,

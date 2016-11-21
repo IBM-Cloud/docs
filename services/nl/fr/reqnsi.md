@@ -410,7 +410,6 @@ Pour utiliser une instance de service depuis un autre service, procédez comme s
 service s'ouvre.
 2. Dans le panneau de navigation, cliquez sur **Gérer** pour autoriser la liaison depuis d'autres instances de service à
 l'aide de la console de l'instance de service.
-
 3. Si vous voulez refuser à d'autres services l'accès à l'instance de service, cliquez sur **Autorisation d'accès au service** dans le
 panneau de navigation, puis utilisez **Révoquer** pour supprimer la liaison de service. 
 

@@ -23,9 +23,9 @@ copyright:
 
 도구 체인은 {{site.data.keyword.Bluemix}}의 퍼블릭 및 데디케이티드 환경에서 사용할 수 있습니다. 템플리트를 사용하여 도구 체인을 작성하거나 앱에서 도구 체인을 작성하는 식의 두 방식으로 도구 체인을 작성할 수 있습니다. 시작점으로 도구 체인 템플리트를 사용할 수 있습니다. 사용하는 템플리트에 따라 특정 도구 통합 세트가 있는 도구 체인을 작성하거나 도구 통합을 추가할 수 있는 비어 있는 도구 체인을 작성할 수 있습니다.
 
-{{site.data.keyword.Bluemix_notm}} 퍼블릭에서 사용하는 템플리트 또는 도구 체인에 따라 도구 체인에는 앱 스타터 코드 및 사전 구성된 Delivery Pipeline으로 채워진 GitHub 저장소(repo)가 포함될 수 있습니다. 도구 체인의 GitHub 저장소에 변경사항을 푸시하면 Delivery Pipeline에서 자동으로 앱을 빌드하여 {{site.data.keyword.Bluemix_notm}}에 배포합니다. 
+{{site.data.keyword.Bluemix_notm}} 퍼블릭에서 사용하는 템플리트 또는 도구 체인에 따라 도구 체인에는 앱 스타터 코드 및 사전 구성된 Delivery Pipeline으로 채워진 GitHub 저장소(repo)가 포함될 수 있습니다. 도구 체인의 GitHub 저장소에 변경사항을 푸시하면 Delivery Pipeline에서 자동으로 앱을 빌드하여 {{site.data.keyword.Bluemix_notm}}에 배치합니다. 
 
-{{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용하는 도구 체인에 따라 도구 체인에는 앱 스타터 코드 및 사전 구성된 Delivery Pipeline으로 채워진 GitHub Enterprise 저장소가 포함될 수 있습니다. 도구 체인의 GitHub Enterprise 저장소에 변경사항을 푸시하면 Delivery Pipeline에서 자동으로 앱을 빌드하여 {{site.data.keyword.Bluemix_notm}}에 배포합니다.
+{{site.data.keyword.Bluemix_notm}} 데디케이티드에서 사용하는 도구 체인에 따라 도구 체인에는 앱 스타터 코드 및 사전 구성된 Delivery Pipeline으로 채워진 GitHub Enterprise 저장소가 포함될 수 있습니다. 도구 체인의 GitHub Enterprise 저장소에 변경사항을 푸시하면 Delivery Pipeline에서 자동으로 앱을 빌드하여 {{site.data.keyword.Bluemix_notm}}에 배치합니다.
 
 ## 도구 체인에 대한 도움 및 지원 받기 
 {: #gettinghelp}

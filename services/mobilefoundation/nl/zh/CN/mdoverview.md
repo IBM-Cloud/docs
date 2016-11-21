@@ -2,18 +2,18 @@
 
 copyright:
   years: 2016
-
+lastupdated:  "2016-08-03"
 ---
 
 #	关于 {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
 
-上次更新时间：2016 年 8 月 3 日
-{: .last-updated}
+<!--Last updated: 03 August 2016
+{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} 服务提供在 {{site.data.keyword.Bluemix}} 上快速设置 {{site.data.keyword.mobilefirst}} 服务器环境的方法。然后，可以从此云环境开发、测试和管理移动应用程序。
 
-{{site.data.keyword.mobilefoundation_short}} 可指导用户轻松地在 {{site.data.keyword.Bluemix_notm}} 上设置 {{site.data.keyword.mfserver_short_notm}} <!--in the {{site.data.keyword.containerlong}} -->环境。
+{{site.data.keyword.mobilefoundation_short}} 可指导用户轻松地在 {{site.data.keyword.Bluemix_notm}} 上设置 {{site.data.keyword.mfserver_short_notm}}<!--in the {{site.data.keyword.containerlong}} -->环境。
 
 {{site.data.keyword.mobilefoundation_short}} 包含以下组件：
 

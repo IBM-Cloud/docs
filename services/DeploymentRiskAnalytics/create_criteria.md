@@ -14,14 +14,13 @@ copyright:
 # Defining policies
 {: #DRA_criteria}
 
-Last updated: 13 September 2016
+Last updated: 1 November 2016
 {: .last-updated}
 
 With {{site.data.keyword.DRA_short}}, defining the policies for your application is easy. To get started, follow these steps:
 {:shortdesc}
 
-
-1. If you are creating policies for the first time, click **Let's Go**.
+1. Click the **Policies** tab.
 
 2. Click **Create Policy (+)**, and then enter a name and description for the new policy.
 
@@ -54,7 +53,7 @@ You can use Sauce Labs with {{site.data.keyword.DRA_short}} by adding the Sauce 
 You can see the full titles of all the tests in the logs after a run.  
 
 **Notes:**  
-1. Deployment Risk Analytics currently does not support **critical tests** that contain a hyphen in the full title.    
+1. {{site.data.keyword.DRA_short}} does not support critical tests that contain a hyphen in the full title.    
 2. If you change your organization name, you must recreate policies and you will not have access to previous decision reports.
 
 ## Creating functional verification test rules

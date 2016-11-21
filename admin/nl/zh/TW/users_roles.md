@@ -17,10 +17,10 @@ copyright:
 
 # 管理團隊成員和角色
 {: #userroles}
-前次更新：2016 年 8 月 16 日
+前次更新：2016 年 10 月 20 日
 {: .last-updated}
 
-從您帳戶的**團隊目錄**頁面中，您可以管理組織和空間中的現有團隊成員及其角色，以及邀請新的團隊成員。若要存取您帳戶的團隊目錄，請移至**{{site.data.keyword.avatar}}**帳戶 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; *your_account_name* &gt; **團隊目錄**。
+從您帳戶的**團隊目錄**頁面中，您可以管理組織和空間中的現有團隊成員及其角色，以及邀請新的團隊成員。若要存取您帳戶的團隊目錄，請按一下**帳戶** &gt; **團隊目錄**。
 {:shortdesc}
 
 帳戶擁有者會對組織和空間執行所有作業（包括管理團隊成員及其指派的角色）。組織管理員具有邀請團隊成員以及管理角色的存取權。空間管理員可以使用**管理組織**頁面，將現有帳戶成員新增至空間，以及調整其角色。若要進一步瞭解角色，請參閱下列資訊。
@@ -68,9 +68,10 @@ copyright:
 
 若要變更團隊目錄頁面的可見性，請完成下列步驟：
 
-1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; *your_account_name* &gt; **團隊目錄**。 
+1. 按一下**帳戶** &gt; **團隊目錄**。
 2. 針對**可檢視者**選項，按一下目前的選擇，以檢視選項。
 3. 然後，根據帳戶目前的需求，選取**全部**或**只有我**。
+4. 然後，按一下**儲存**。
 
 ## 邀請團隊成員
 {: #inviteteammembers}
@@ -78,7 +79,7 @@ copyright:
 帳戶擁有者及組織管理員可以從「邀請團隊成員」頁面邀請團隊成員加入組織。團隊成員在新增時會自動獲指派審核員角色。您稍後可以在「團隊目錄」頁面上變更角色。若要邀請團隊成員，請完成下列步驟：
 
 <ol>
-<li>移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; *your_account_name* &gt; **邀請團隊成員**。</li>
+<li>按一下**帳戶** &gt; **邀請團隊成員**。</li>
 <li>選取您要邀請團隊成員加入的組織。</li>
 <li>按**下一步**。</li>
 <li>選取您要容許團隊成員存取的空間。</li>
@@ -94,14 +95,21 @@ copyright:
 
 按一下**檢視擱置**，確認是擱置邀請還是已接受邀請。針對擱置的邀請，您隨時都可以選擇重新傳送邀請電子郵件或取消邀請。
 
-如果您有 SoftLayer 帳戶鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶，則可以新增 SoftLayer 團隊成員。移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; *your_account_name* &gt; **邀請團隊成員**頁面。然後，在**新增 SoftLayer 團隊成員**區段中按一下**新增**，以鑑別至 SoftLayer 帳戶中，並從 SoftLayer 帳戶檢視團隊成員清單。如需從 SoftLayer 帳戶新增團隊成員的相關資訊，請參閱[邀請 SoftLayer 團隊成員加入 {{site.data.keyword.Bluemix_notm}}](../admin/softlayerlink.html#invite_users)。
+### 新增 SoftLayer 團隊成員
+如果您有 SoftLayer 帳戶鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶，則可以新增 SoftLayer 團隊成員。
+ 1. 移至**帳戶** > **邀請團隊成員**。 
+ 2. 按一下**新增 SoftLayer 團隊成員**區段中的**新增**，以鑑別 SoftLayer 帳戶，並利用 SoftLayer 帳戶檢視團隊成員清單。 
+ 
+將團隊成員新增至 {{site.data.keyword.Bluemix_notm}} 帳戶，不會將 {{site.data.keyword.Bluemix_notm}}「基礎架構」存取權授與他們。若要將「基礎架構」儀表板存取權授與使用者，請移至**基礎架構** > **帳戶** > **使用者**，然後按一下**新增使用者**鏈結。您必須具有新增使用者的許可權。
+ 
+ 如需從 SoftLayer 帳戶新增團隊成員的相關資訊，請參閱[邀請 SoftLayer 團隊成員加入 {{site.data.keyword.Bluemix_notm}}](/docs/admin/softlayerlink.html#invite_users)。
 
 ## 編輯角色
 {: #editinguserroles}
 
 帳戶擁有者和組織管理員可以在**團隊目錄**頁面上編輯現有團隊成員的組織和空間角色。 
 
-1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; *your_account_name* &gt; **團隊目錄**。
+1. 按一下**帳戶** &gt; **團隊目錄**。
 2. 找出您要編輯其角色的團隊成員。
 3. 按一下**檢視角色**。
 4. 選取或清除組織角色選項，以修改團隊成員的組織存取權。
@@ -112,10 +120,21 @@ copyright:
 
 空間管理員可以在**管理組織**頁面上編輯其空間中團隊成員的角色。
 
-1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; *your_account_name* &gt; **管理組織**。
+1. 按一下**帳戶** &gt; **管理組織**。
 2. 找出您空間所在的組織。
 3. 按一下**檢視詳細資料**。
 4. 找出您的空間，然後按一下**編輯空間**。
 5. 選取**使用者**標籤。
 6. 針對您要對團隊成員新增或移除的角色，選取或清除空間角色選項。
-7. 按一下**儲存**。
+7. 然後，按一下**儲存**。
+
+## 移除團隊成員
+{: #removingteammembers}
+
+帳戶擁有者及組織管理員可以使用**團隊目錄**頁面，從帳戶移除團隊成員。若要移除團隊成員，請完成下列步驟：
+
+1. 按一下**帳戶** &gt; **團隊目錄**。
+3. 找到您要從帳戶中移除的使用者，然後按一下**移除**圖示 ![「移除」圖示](../icons/icon_remove_teamuser.svg)。
+4. 在**移除使用者**視窗中，按一下**移除**，以確認您要從帳戶中移除指定的使用者。
+
+即會從針對帳戶所顯示的團隊成員清單中移除使用者。

@@ -2,17 +2,14 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-02"
 ---
 
 # 使用定制身份提供者认证用户
 {: #custom-id}
 
-上次更新时间：2016 年 7 月 22 日
-{: .last-updated}
 
-
-创建定制身份提供者，并实现自己的逻辑来收集和验证凭证。定制身份提供者是一种用于公开 RESTful 接口的 Web 应用程序。可以在内部部署或 {{site.data.keyword.Bluemix}} 上托管定制身份提供者。唯一的要求是定制身份提供者必须可从公共因特网进行访问，以便其能与 {{site.data.keyword.amashort}} 服务进行通信。
+创建使用 {{site.data.keyword.amafull}} 服务的定制身份提供者，并实施自己的逻辑来收集和验证凭证。定制身份提供者是一种用于公开 RESTful 接口的 Web 应用程序。可以在内部部署或 {{site.data.keyword.Bluemix}} 上托管定制身份提供者。唯一的要求是定制身份提供者必须可从公共因特网进行访问，以便其能与 {{site.data.keyword.amashort}} 服务进行通信。
 
 ## {{site.data.keyword.amashort}} 定制身份请求流
 {: #custom-id-ovr}

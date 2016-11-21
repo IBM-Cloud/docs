@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 #Services
 {: #services}
-*Last updated: 23 October 2016*
 
 {{site.data.keyword.Bluemix_notm}} makes it easy for you to implement, host, and scale services and apps. You can focus on your application logic and application design.
 {:shortdesc}
@@ -21,10 +21,10 @@ Multiple levels of support are provided for {{site.data.keyword.Bluemix_notm}} s
 
 |Type	|Description	|Support details|
 |:------|:--------------|:--------------|
-|IBM	|A service that is provided by IBM and is generally available.	|Problems that are determined to be a defect in an IBM-provided service that is generally available are supported. Support is provided based on the severity that you set. For more information about ticket severity, see [Contacting support](../support/index.html#contacting-bluemix-support){: new_window}.|
+|IBM	|A service that is provided by IBM and is generally available.	|Problems that are determined to be a defect in an IBM-provided service that is generally available are supported. Support is provided based on the severity that you set. For more information about ticket severity, see [Contacting support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 |Third Party	|A service that is provided by a company other than IBM.	|Support for third-party services is provided by the service provider. If a problem is investigated by IBM and the problem is determined to be a defect in a third-party service, IBM is not obligated to provide a fix. IBM will share analysis with the third-party service provider if needed.|
 |Community	|A service that is provided by an open source community.	|Support for community services is provided by the {{site.data.keyword.Bluemix_notm}} Developers Community. If a problem is investigated by IBM and the problem is determined to be a defect in a community service, IBM is not obligated to provide a fix.|
-|Beta	|A service that is not production-ready and is in a trial stage of development. A Beta service can help the development and marketing teams assess the value of the services before they make the service generally available.	|Problems that are determined to be a defect in an IBM-provided beta service are supported, but IBM is not obligated to provide a fix. In addition, the problem ticket will be assigned a severity 3 or 4 where applicable. For information about ticket severity, see [Contacting support](../support/index.html#contacting-bluemix-support){: new_window}.|
+|Beta	|A service that is not production-ready and is in a trial stage of development. A Beta service can help the development and marketing teams assess the value of the services before they make the service generally available.	|Problems that are determined to be a defect in an IBM-provided beta service are supported, but IBM is not obligated to provide a fix. In addition, the problem ticket will be assigned a severity 3 or 4 where applicable. For information about ticket severity, see [Contacting support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 *Table 1. {{site.data.keyword.Bluemix_notm}} services support information*
 
 ##Experimental services
@@ -81,7 +81,7 @@ Not all services are available for purchase in every {{site.data.keyword.Bluemix
 |{{site.data.keyword.GlobalizationPipeline_short}}	|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
 |{{site.data.keyword.dataworks_short}}		|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region |
 |{{site.data.keyword.openwhisk}}		|Hosted in Dallas,US		|Not available in region		|Not available in region |
-|{{site.data.keyword.containerlong}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
+|{{site.data.keyword.containerlong}}		|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region |
 |{{site.data.keyword.datastagefull}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
 |{{site.data.keyword.graphshort}}       |Hosted in Dallas,US		|Hosted in Dallas,US		|Not available in region |
 |{{site.data.keyword.mdmcloudfull}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
@@ -137,7 +137,7 @@ Not all services are available for purchase in every {{site.data.keyword.Bluemix
 
 ## Continued availability for services
 {: #services_availability}
-{{site.data.keyword.Bluemix_notm}} has identified a set of services as Tier 1. IBM will not withdraw any Tier 1 service without either making a functional equivalent available or providing at least five year's notice of the withdrawal. 
+{{site.data.keyword.Bluemix_notm}} has identified a set of services as Tier 1. IBM will not withdraw any Tier 1 service without either making a functional equivalent available or providing at least five year's notice of the withdrawal.
 
 The following services are classified as Tier 1:
   * {{site.data.keyword.apiconnect_short}}
@@ -151,9 +151,9 @@ The following services are classified as Tier 1:
   * PostgresSQL by Compose
   * {{site.data.keyword.ssofull}}
 
-To read more about terms of use for services, see: [{{site.data.keyword.Bluemix_notm}} terms](../navigation/notices.html#terms).
+To read more about terms of use for services, see: [{{site.data.keyword.Bluemix_notm}} terms](/docs/navigation/notices.html#terms).
 
 ## Service deprecation
 {: #service_deprecation}
 
-IBM will provide at least 30 days notice of its intention to discontinue or replace a generally available service. If an equivalent replacement is not provided, for at least 12 months from the date of that announcement, IBM will use commercially reasonable means to continue the operation and support of previously deployed instances of the service. 
+IBM will provide at least 30 days notice of its intention to discontinue or replace a generally available service. If an equivalent replacement is not provided, for at least 12 months from the date of that announcement, IBM will use commercially reasonable means to continue the operation and support of previously deployed instances of the service.

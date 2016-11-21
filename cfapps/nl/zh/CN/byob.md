@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-03-15" 
 
 ---
 
@@ -17,8 +17,6 @@ copyright:
 {:pre: .pre}
 
 # 使用社区 buildpack
-*上次更新时间：2016 年 3 月 15 日*
-{: .last-updated}
 
 如果在 {{site.data.keyword.Bluemix}}“目录”中找不到提供所需运行时的入门模板，那么可以将外部 buildpack 添加到 {{site.data.keyword.Bluemix_notm}} 中。使用 cf push 命令部署应用程序时，可以指定 Cloud Foundry 兼容的定制 buildpack。
 {:shortdesc}
@@ -61,7 +59,7 @@ nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zi
 
 ## 外部 buildpack
 
-您可以在 {{site.data.keyword.Bluemix_notm}} 中使用外部或定制 buildpack。在 **cf push** 命令中，必须使用 -b 选项来指定 buildpack 的 URL，并使用 ```-s``` 选项来指定堆栈。例如，要对静态文件使用外部社区 buildpack，请运行以下命令：
+您可以在 {{site.data.keyword.Bluemix_notm}} 中使用外部或定制 buildpack。在 **cf push** 命令中，必须使用 -b 选项来指定 buildpack 的 URL，并使用 `-s` 选项来指定堆栈。例如，要对静态文件使用外部社区 buildpack，请运行以下命令：
 
 ```
 cf push app_name -p app_path -b https://github.com/cloudfoundry-incubator/staticfile-buildpack.git -s cflinuxfs2
@@ -87,7 +85,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <ul>
 <li>
 使用 <strong>cf set-env</strong> 命令。例如，输入以下命令，将 Java 版本设置为 1.7.0：
-<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &#39;{jre: { version: 1.7.0_+ }}&#39;</code></pre>
+<pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &apos;{jre: { version: 1.7.0_+ }}&apos;</code></pre>
 <p>然后，重新编译打包应用程序以使更改生效：</p>
 <pre class="pre"><code>cf restage app_name</code></pre>
 </li>

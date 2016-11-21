@@ -186,7 +186,7 @@ Cuando el cliente de dispositivo se conecta, se suscribe automáticamente a cual
 |`commandName`  | Una serie, que especifica el nombre del mandato que se ha invocado. |  
 |`format`  | Una serie, que especifica el formato del suceso, por ejemplo, JSON. |
 |`payload`  | Una serie, que especifica los datos para la carga útil de mandatos.  |
-|`topic`  | Cuando se publica como un dispositivo, la serie de temas no incluye el tipo de dispositivo ni el ID de dispositivo; estos se toman del ID de cliente. Por ejemplo, `iot-2/evt/event_id/fmt/format_string`. Al publicar como una aplicación o pasarela en nombre de un dispositivo, el tema debe incluir el tipo de dispositivo y el ID de dispositivo. Por ejemplo `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
+|`topic`  | Cuando se publica como un dispositivo, la serie de temas no incluye el tipo de dispositivo ni el ID de dispositivo; estos se toman del ID de cliente.  Por ejemplo, `iot-2/evt/event_id/fmt/format_string`.  Al publicar como una aplicación o pasarela en nombre de un dispositivo, el tema debe incluir el tipo de dispositivo y el ID de dispositivo.  Por ejemplo `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
 
 
 ```

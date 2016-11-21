@@ -2,33 +2,37 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
 # 檢測應用程式以使用 {{site.data.keyword.mobileanalytics_short}} Client SDK
 {: #mobileanalytics_sdk}
-*前次更新：：2016 年 8 月 1 日*
+
+前次更新：2016 年 10 月 19 日
 {: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} SDK 可讓您檢測行動應用程式。
 {: shortdesc}
 
-{{site.data.keyword.mobileanalytics_short}} 可讓您收集三種種類的資料，而且各需要不同程度的檢測：
+{{site.data.keyword.mobileanalytics_short}} 可讓您收集兩<!--three-->種種類的資料，而且各需要不同程度的檢測：
 
-1.  預先定義的資料 - 此種類包括適用於所有應用程式的一般用法及裝置資訊。在此種類內，是指出應用程式使用數量、頻率或持續時間的裝置 meta 資料（作業系統及裝置模型）及用法資料（作用中使用者及應用程式階段作業）。在應用程式中起始設定 {{site.data.keyword.mobileanalytics_short}} SDK 之後，會自動收集預先定義的資料。
-2. 自訂事件 - 此種類包括您自行定義及應用程式特有的資料。這個資料代表您應用程式內發生的事件，例如頁面檢視、按鈕點選或應用程式內採購。除了在應用程式中起始設定 {{site.data.keyword.mobileanalytics_short}} SDK 之外，您還必須為您要追蹤的每一個自訂事件新增一行程式碼。
-3. 用戶端日誌訊息 - 此種類可讓開發人員在應用程式內新增程式碼行，以記載自訂訊息來協助開發和除錯。開發人員會將嚴重性/詳細層次指派給每一個日誌訊息，而且後續可以依指派的層次過濾訊息，或透過配置應用程式忽略低於給定記載層次的訊息來保留儲存空間。若要收集用戶端日誌資料，您必須在應用程式內起始設定 {{site.data.keyword.mobileanalytics_short}} SDK，以及為每一個日誌訊息新增一行程式碼。
+1. 預先定義的資料 - 此種類包括適用於所有應用程式的一般用法及裝置資訊。在此種類內的是指出應用程式使用數量、頻率或持續時間的裝置 meta 資料（作業系統和裝置模型）及用法資料（作用中使用者和應用程式階段作業）。在應用程式中起始設定 {{site.data.keyword.mobileanalytics_short}} SDK 之後，會自動收集預先定義的資料。
+
+2. 應用程式日誌訊息 - 此種類可讓開發人員在應用程式內新增程式碼行，以記載自訂訊息來協助開發和除錯。開發人員會將嚴重性/詳細層次指派給每一個日誌訊息，而且後續可以依指派的層次過濾訊息，或透過配置應用程式忽略低於給定記載層次的訊息來保留儲存空間。若要收集應用程式日誌資料，您必須在應用程式內起始設定 {{site.data.keyword.mobileanalytics_short}} SDK，以及為每一個日誌訊息新增一行程式碼。
+
+<!--2. Custom events - This category includes data that you define yourself and that is specific to your app. This data represents events that occur within your app, such as page views, button taps, or in-app purchases. In addition to initializing the {{site.data.keyword.mobileanalytics_short}} SDK in your app, you must add a line of code for each custom event that you want to track. -->
 
 SDK 目前適用於 Android、iOS 及 WatchOS。
 
-## 識別存取金鑰值
+## 識別服務認證 API 金鑰值
 {: #analytics-clientkey}
 
-請先識別**存取金鑰**值，才能設定 Client SDK。需要有「存取金鑰」，才能起始設定 Client SDK。
+識別設定 Client SDK 之前的 **API 金鑰**值。需要有「API 金鑰」，才能起始設定 Client SDK。
 
 1. 開啟 {{site.data.keyword.mobileanalytics_short}} 服務儀表板。
 2. 按一下**服務認證**標籤。
-3. 複製您的存取金鑰值。
+3. 展開**檢視認證**，以顯示「API 金鑰」值。當您起始設定 {{site.data.keyword.mobileanalytics_short}} Client SDK 時，需要「API 金鑰」值。
 
 
 ## 起始設定 Android 應用程式來收集分析
@@ -36,7 +40,7 @@ SDK 目前適用於 Android、iOS 及 WatchOS。
 
 起始設定應用程式，以啟用將日誌傳送至 {{site.data.keyword.mobileanalytics_short}} 服務。
 
-1. 將下列 `import` 陳述式新增至專案檔開頭處，以匯入 Client SDK：
+1. 在專案檔開頭處新增下列 `import` 陳述式，以匯入 Client SDK：
 
   ```
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
@@ -48,28 +52,28 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 2. 在 Android 應用程式中主要活動的 `onCreate` 方法中或最適合您專案的位置中新增起始設定碼，以在 Android 應用程式中起始設定 {{site.data.keyword.mobileanalytics_short}} Client SDK。
 
 	```Java
-	try {
-            BMSClient.getInstance().initialize(this.getApplicationContext(), "", "", BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
-        } catch (MalformedURLException e) {
-            Log.e("your_app_name","URL should not be malformed:  " + e.getLocalizedMessage());
-        } 
-  ```
-  {: codeblock}
-
-  若要使用 {{site.data.keyword.mobileanalytics_short}} Client SDK，您必須起始設定 `BMSClient` 與 **bluemixRegion** 參數。在起始設定程式中，**bluemixRegion** 值指定您所使用的 {{site.data.keyword.Bluemix_notm}} 部署（例如，`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`）。
-  <!-- Set this value with a `BMSClient.REGION` static property. -->
-
-  <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
-
-3. 起始設定 Analytics，方法是使用 Android 應用程式物件，並將您的應用程式名稱提供給它。您還需要[**存取金鑰**](#analytics-clientkey)值。
-	
-	```Java
-	Analytics.init(getApplication(), "my_app", apiKey, Analytics.DeviceEvent.LIFECYCLE);
-	// In this code example, Analytics is configured to record lifecycle events.
+	BMSClient.getInstance().initialize(this.getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
 	```
   {: codeblock}
 
-	**提示：**應用程式名稱是用來作為過濾器，以在儀表板中搜尋用戶端日誌。當您跨平台（例如，Android 及 iOS）使用相同的應用程式名稱時，不論是從哪個平台傳送日誌，都可以看到同名應用程式的所有日誌。
+  若要使用 {{site.data.keyword.mobileanalytics_short}} Client SDK，您必須起始設定 `BMSClient` 與 **bluemixRegion** 參數。在起始設定程式中，**bluemixRegion** 值指定您所使用的 {{site.data.keyword.Bluemix_notm}} 部署（例如，`BMSClient.REGION_US_SOUTH` 及 `BMSClient.REGION_UK`）。
+    <!-- , or `BMSClient.REGION_SYDNEY`.-->  <!-- Set this value with a `BMSClient.REGION` static property. -->
+
+  <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
+
+3. 起始設定 Analytics，方法是使用 Android 應用程式物件，並將您的應用程式名稱提供給它。您還需要 [**API 金鑰**](#analytics-clientkey)值。
+	
+	```Java
+	// In this code example, Analytics is configured to record lifecycle events.
+	Analytics.init(getApplication(), "your_app_name_here", apiKey, hasUserContext, Analytics.DeviceEvent.LIFECYCLE);
+	```
+  {: codeblock}
+	
+	您為應用程式所選取的名稱 (`your_app_name_here`) 會在 {{site.data.keyword.mobileanalytics_short}} 主控台中顯示為應用程式名稱。應用程式名稱是用來作為過濾器，以在儀表板中搜尋應用程式日誌。當您跨平台（例如，Android 及 iOS）使用相同的應用程式名稱時，不論是從哪個平台傳送日誌，都可以看到同名應用程式的所有日誌。
+	
+	**附註：**請將 `hasUserContext` 的值設為 **true** 或 **false**。如果是 false（預設值），每一個裝置即視為作用中使用者。當 `hasUserContext` 為 false 時，[`Analytics.setUserIdentity("username")`](sdk.html#android-tracking-users) 方法（可讓您追蹤每個裝置中主動使用您應用程式的使用者數目）無法運作。如果是 true，則每次使用 [`Analytics.setUserIdentity("username")`](sdk.html#android-tracking-users) 時都會視為作用中使用者。當 `hasUserContext` 為 true 時，沒有預設的使用者身分，因此必須設為移入作用中使用者圖表。
+	
+4. [傳送分析資料](sdk.html#app-monitoring-gathering-analytics)至 (sdk.html#app-monitoring-gathering-analytics) 服務。
 
 ## 起始設定 iOS 應用程式來收集分析
 {: #init-ma-sdk-ios}
@@ -82,58 +86,66 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   import BMSCore
   import BMSAnalytics
   ```
-  {: screen}
+  {: codeblock}
 
 2. 若要使用 {{site.data.keyword.mobileanalytics_short}} Client SDK，您必須先使用下列程式碼來起始設定 `BMSClient` 類別。
 
   將起始設定碼放在應用程式委派的 `application(_:didFinishLaunchingWithOptions:)` 方法中或最適合您專案的位置中。
-
-    ```Swift
-    BMSClient.sharedInstance.initializeWithBluemixAppRoute(nil, bluemixAppGUID: nil, bluemixRegion: BMSClient.REGION_US_SOUTH)`
+	
+    ```Swift 
+    BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
     ```
     {: codeblock}
 
-    若要使用 {{site.data.keyword.mobileanalytics_short}} Client SDK，您必須起始設定 `BMSClient` 與 **bluemixRegion** 參數。在起始設定程式中，**bluemixRegion** 值指定您所使用的 {{site.data.keyword.Bluemix_notm}} 部署（例如，`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`）。
+    若要使用 {{site.data.keyword.mobileanalytics_short}} Client SDK，您必須起始設定 `BMSClient` 與 **bluemixRegion** 參數。在起始設定程式中，**bluemixRegion** 值指定您所使用的 {{site.data.keyword.Bluemix_notm}} 部署（例如，`BMSClient.REGION_US_SOUTH` 或 `BMSClient.REGION_UK`）。
+    <!-- , or `BMSClient.REGION_SYDNEY`. -->
    
    <!-- Set this value with a `BMSClient.REGION` static property. -->
 
    <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
 
-3. 起始設定 Analytics，方法是將行動應用程式的名稱提供給它。您還需要[**存取金鑰**](#analytics-clientkey)值。
+3. 起始設定 Analytics，方法是將行動應用程式的名稱提供給它。您還需要 [**API 金鑰**](#analytics-clientkey)值。
 
-  應用程式名稱是用來作為過濾器，以在「{{site.data.keyword.mobileanalytics_short}} 儀表板」中搜尋用戶端日誌。跨平台（例如，Android 及 iOS）使用相同的應用程式名稱，不論是從哪個平台傳送日誌，都可以看到同名應用程式的所有日誌。
+ 應用程式名稱是用來作為過濾器，以在「{{site.data.keyword.mobileanalytics_short}} 儀表板」中搜尋應用程式日誌。跨平台（例如，Android 及 iOS）使用相同的應用程式名稱，不論是從哪個平台傳送日誌，都可以看到同名應用程式的所有日誌。
 
   選用 `deviceEvents` 參數會自動收集裝置層次事件的分析。
 
-  ### iOS
-    {: #ios-initialize-analytics}
-
-      ```
-      Analytics.initializeWithAppName("AppName", accessKey: "your_access_key",
-      deviceEvents: DeviceEvent.LIFECYCLE)
-      ```
-
-  ### watchOS
-  {: #watchos-initialize-analytics}
-
-	```
-	  Analytics.initializeWithAppName("AppName", accessKey: "your_access_key")
-	```
-
-  您可以使用 `Analytics.recordApplicationDidBecomeActive()` 及 `Analytics.recordApplicationWillResignActive()` 方法，來記錄 WatchOS 上的裝置事件。
+ ### iOS
+ {: #ios-initialize-analytics}
+	
+ ```Swift
+ Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: DeviceEvent.lifecycle)
+ ```
+ {: codeblock}
   
-  將下列這一行新增至 ExtensionDelegate 類別的 `applicationDidBecomeActive()` 方法。
+ ### watchOS
+ {: #watchos-initialize-analytics}
+	
+ ```Swift
+ Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false)
+  ```
+ {: codeblock}
+	
+ 您為應用程式所選取的名稱 (`your_app_name_here`) 會在 {{site.data.keyword.mobileanalytics_short}} 主控台中顯示為應用程式名稱。應用程式名稱是用來作為過濾器，以在儀表板中搜尋應用程式日誌。當您跨平台（例如，Android 及 iOS）使用相同的應用程式名稱時，不論是從哪個平台傳送日誌，都可以看到同名應用程式的所有日誌。
+	
+ **附註：**請將 `hasUserContext` 的值設為 **true** 或 **false**。如果是 false（預設值），每一個裝置即視為作用中使用者。當 `hasUserContext` 為 false 時，[`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) 方法（可讓您追蹤每個裝置中主動使用您應用程式的使用者數目）無法運作。如果 `hasUserContext` 是 true，則每次使用 [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) 時都會視為作用中使用者。當 `hasUserContext` 為 true 時，沒有預設的使用者身分，因此必須設為移入作用中使用者圖表。
+
+ 您可以使用 `Analytics.recordApplicationDidBecomeActive()` 及 `Analytics.recordApplicationWillResignActive()` 方法，來記錄 WatchOS 上的裝置事件。
+  
+ 將下列這一行新增至 ExtensionDelegate 類別的 `applicationDidBecomeActive()` 方法。
 
 	```
 	Analytics.recordApplicationDidBecomeActive()
 	```
   {: codeblock}
 
-  將下列這一行新增至 ExtensionDelegate 類別的 applicationWillResignActive() 方法：
+ 將下列這一行新增至 ExtensionDelegate 類別的 applicationWillResignActive() 方法：
 	```
 	Analytics.recordApplicationWillResignActive()
 ```
   {: codeblock}
+  
+4. [傳送分析資料](sdk.html#app-monitoring-gathering-analytics)至 {{site.data.keyword.mobileanalytics_short}} 服務。
 
 ## 收集用法分析
 {: #app-monitoring-gathering-analytics}
@@ -148,12 +160,30 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 ```
 // Disable recording of usage analytics (for example, to save disk space)
 // Recording is enabled by default
-Analytics.disable();// Enable recording of usage analytics
-Analytics.enable();Analytics.log(eventJSONObject);// Send recorded usage analytics to the Mobile Analytics Service
-Analytics.send();
-```
+Analytics.disable();
 	
-用於記載事件的用法分析範例：
+// Enable recording of usage analytics
+Analytics.enable();
+	
+// Send recorded usage analytics to the Mobile Analytics Service
+Analytics.send(new ResponseListener() {
+            @Override
+	    public void onSuccess(Response response) {
+	        // Handle Analytics send success here.
+            }
+
+            @Override
+            public void onFailure(Response response, Throwable throwable, JSONObject jsonObject) {
+                // Handle Analytics send failure here.
+            }
+        });
+```
+{: codeblock}
+
+<!-- removed: Analytics.log(eventJSONObject); -->
+
+<!--	
+Sample usage analytics for logging an event:
 	
 ```
 // Log a custom analytics event for custom charts, which is represented by a JSON object:
@@ -161,6 +191,8 @@ JSONObject eventJSONObject = new JSONObject();
 	
 eventJSONObject.put("customProperty" , "propertyValue");
 ```
+{: codeblock}
+-->
 
 #### iOS - Swift
 {: #ios-usage-api}
@@ -168,22 +200,38 @@ eventJSONObject.put("customProperty" , "propertyValue");
 ```
 // Disable recording of usage analytics (for example, to save disk space)
 // Recording is enabled by default
-Analytics.enabled = false
+Analytics.isEnabled = false
 
 // Enable recording of usage analytics
-Analytics.enabled = true
+Analytics.isEnabled = true
 
-// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
-Analytics.send()
+// Send recorded usage analytics to the Mobile Analytics Service
+Analytics.send(completionHandler: { (response: Response?, error: Error?) in
+
+    if let response = response {
+        // Handle Analytics send success here.
+    }
+    if let error = error {
+        // Handle Analytics send failure here.
+    }
+})
 ```
+{: codeblock}
 
-用於記載事件的用法分析範例：
+<!--
+Sample usage analytics for logging an event:
 
-```
+#### Swift
+{: customchartsswift}
+
+```Swift
 // Log a custom analytics event for custom charts
 let eventObject = ["customProperty": "propertyValue"]
 Analytics.log(eventObject)
 ```
+{: codeblock}
+
+-->
 
   <!--Removing Cordova for experimental-->
   <!--### Cordova-->
@@ -197,7 +245,7 @@ Analytics.log(eventObject)
   <!--Analytics.send();-->
   <!--```-->
   <!--**Note:** When you are developing Cordova applications, use the native API to enable application lifecycle event recording.-->
-
+  
 ## 啟用、配置及使用日誌程式
 {: #app-monitoring-logger}
 
@@ -240,7 +288,7 @@ Analytics.log(eventObject)
 ### 日誌程式用法範例
 {: #sample-logger-usage}
 
-**附註：**請先確定已檢測過應用程式使用 [{{site.data.keyword.mobileanalytics_short}} Client SDK](sdk.html)，然後再使用記載架構。
+**附註：**請先確定您已檢測應用程式以使用 {{site.data.keyword.mobileanalytics_short}} Client SDK，然後使用記載架構。
  
   下列程式碼 Snippet 顯示「日誌程式」用法範例：
 
@@ -249,19 +297,14 @@ Analytics.log(eventObject)
 
 ```
 // Configure Logger to save logs to the device so that they 
-// can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
+// can later be sent to the Mobile Analytics service
 // Disabled by default; set to true to enable
 Logger.storeLogs(true);
 
 // Change the minimum log level (optional)
 // The default setting is Logger.LEVEL.DEBUG
-Logger.setLogLevel(Logger.LEVEL.INFO);// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
-Logger.send();
-```
+Logger.setLogLevel(Logger.LEVEL.INFO);
 
-日誌程式情境：
-
-```
 // Create two logger instances
 // You can create multiple log instances to organize your logs
 Logger logger1 = Logger.getLogger("logger1");
@@ -273,39 +316,58 @@ Logger logger2 = Logger.getLogger("logger2");
 logger1.debug("debug message");
 //the logger1.debug message is not logged because the logLevelFilter is set to Info
 logger2.info("info message");
+// Send logs to the Mobile Analytics Service
+        Logger.send(new ResponseListener() {
+                    @Override
+	    public void onSuccess(Response response) {
+	        // Handle Logger send success here.
+                    }
+
+                    @Override
+                    public void onFailure(Response response, Throwable throwable, JSONObject jsonObject) {
+                        // Handle Logger send failure here.
+                    }
+                });        
 ```
+{: codeblock}
 
 #### iOS - Swift
-{: ios-logger-sample}
+{: #ios-logger-sample-swift2}
 
 ```
-// Configure Logger to save logs to the device so that they can later be sent to the {{site.data.keyword.mobileanalytics_short}} service
+// Configure Logger to save logs to the device so that they can later be sent to the Mobile Analytics service
 // Disabled by default; set to true to enable
-Logger.logStoreEnabled = true
+Logger.isLogStorageEnabled = true
 
 // Change the minimum log level (optional)
-// The default setting is LogLevel.Debug
-Logger.logLevelFilter = LogLevel.Info
+// The default setting is LogLevel.debug
+Logger.logLevelFilter = LogLevel.info
 
-// Send logs to the {{site.data.keyword.mobileanalytics_short}} Service
-Logger.send()
-```
-
-日誌程式情境：
-    
-```
 // Create two logger instances
 // You can create multiple log instances to organize your logs
-let logger1 = Logger.logger(forName: "feature1Logger")
-let logger2 = Logger.logger(forName: "feature2Logger")
-	
-// Log messages with different levels
-logger1.debug("debug message for feature 1")
-//the logger1.debug message is not logged because the logLevelFilter is set to Info
-logger2.info("info message for feature 2")
-```
+let logger1 = Logger.logger(name: "feature1Logger")
+let logger2 = Logger.logger(name: "feature2Logger")
 
-**提示**：基於隱私權考量，您可以針對使用發行模式建置的應用程式停用「日誌程式」輸出。「日誌程式」類別預設會將日誌列印至 Xcode 主控台。在您目標的建置設定中，將 `-D RELEASE_BUILD` 旗標新增至發行建置配置的**其他 Swift 旗標**區段。
+// Log messages with different levels
+logger1.debug(message: "debug message for feature 1") 
+//the logger1.debug message is not logged because the logLevelFilter is set to info
+logger2.info(message: "info message for feature 2")
+
+// Send logs to the Mobile Analytics Service
+Logger.send(completionHandler: { (response: Response?, error: Error?) in
+    
+    if let response = response {
+        logger.debug(message: "Status code: \(response.statusCode)")
+        logger.debug(message: "Response: \(response.responseText)")
+    }
+    if let error = error {
+        logger.error(message: "Error: \(error)")
+    }
+})
+```
+{: codeblock}
+
+**提示：**基於隱私權考量，您可以針對使用發行模式建置的應用程式停用「日誌程式」輸出。「日誌程式」類別預設會將日誌列印至 Xcode 主控台。在您目標的建置設定中，將 `-D RELEASE_BUILD` 旗標新增至發行建置配置的**其他 Swift 旗標**區段。
     
 
   <!-- ### Cordova-->
@@ -336,8 +398,10 @@ logger2.info("info message for feature 2")
 {: #enable-logger-print-android}
 
 ```
+{: codeblock}
 Logger.setSDKDebugLoggingEnabled(true);
 ```
+{: codeblock}
 
 #### iOS - Swift
 {: #enable-logger-print-swift}
@@ -345,41 +409,77 @@ Logger.setSDKDebugLoggingEnabled(true);
 ```
 Logger.sdkDebugLoggingEnabled = true
 ```
+{: codeblock}
 -->
+
+## 報告損毀分析
+{: #report-crash-analytics}
+
+將分析及日誌資訊傳送至 {{site.data.keyword.mobileanalytics_short}}，即可查看[應用程式損毀資料](app-monitoring.html#monitor-app-crash)。
+
+`Analytics.send()` 方法會在**損毀**頁面上移入**損毀概觀**及**損毀**表格。本節中的圖表是使用起始設定並傳送分析處理程序所啟用；不需要特殊配置。
+
+`Logger.send()` 方法會在**疑難排解**頁面上移入**損毀摘要**及**損毀詳細資料**表格。您必須讓應用程式儲存及傳送日誌以移入本節中的圖表，方法是在應用程式碼中新增其他陳述式：
+
+#### Android
+{: #android-crash-statement}
+
+* `Logger.storeLogs(true);`
+<!-- * `Logger.setLogLevel(Logger.LEVEL.FATAL); // or greater` -->
+
+請參閱[日誌程式用法範例](sdk.html#android-logger-sample)。
+
+#### iOS
+{: #ios-crash-statement}
+
+* `Logger.isLogStorageEnabled = true`
+<!-- * `Logger.logLevelFilter = LogLevel.Fatal // or greater` -->
+
+請參閱[日誌程式用法範例](sdk.html##ios-logger-sample-swift2)。
 
 ## 追蹤作用中使用者
 {: #trackingusers}
-您可以選擇性地追蹤有多少位使用者正在活躍地使用您的應用程式，方法是將作用中使用者的使用者名稱傳遞至 {{site.data.keyword.mobileanalytics_short}}。
+
+如果您的應用程式可以辨識裝置上的唯一使用者，則您可以選擇性地追蹤有多少位使用者正在主動使用您的應用程式，方法是將作用中使用者的使用者名稱傳遞至 {{site.data.keyword.mobileanalytics_short}}。 
+
+使用 `hasUserContext=true` 來起始設定 {{site.data.keyword.mobileanalytics_short}}，以啟用使用者追蹤。否則，{{site.data.keyword.mobileanalytics_short}} 對於每個裝置只會擷取一位使用者。 
 
 #### Android
 {: #android-tracking-users}
 
-對使用者登入時新增下列程式碼：
+請新增下列程式碼，以在使用者登入時進行追蹤：
 
 ```
 Analytics.setUserIdentity("username");
 ```
+{: codeblock}
 
-對使用者登出時新增下列程式碼：
+<!--Add the following code for when the user logs out:
 
 ```
 Analytics.clearUserIdentity();
 ```
+{: codeblock}
+-->
 
 #### iOS - Swift
 {: #ios-tracking-users}
 
-對使用者登入時新增下列程式碼：
+請新增下列程式碼，以在使用者登入時進行追蹤：
 
 ```
 Analytics.userIdentity = "username"
 ```
+{: codeblock}
 
-對使用者登出時新增下列程式碼：
+<!--
+Add the following code for when the user logs out:
 
 ```
 Analytics.userIdentity = nil
 ```
+{: codeblock}
+-->
 
 <!--## Configuring MobileFirst Platform Foundation servers to use the {{site.data.keyword.mobileanalytics_short}} service (optional)
 {: #configmfp}
@@ -492,3 +592,14 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 </dl>
   
 -->
+
+## 下一步
+{: #what-to-do-next}
+
+您現在可以移至 {{site.data.keyword.mobileanalytics_short}} **主控台**以查看用法分析（例如，使用應用程式的新裝置及裝置總數）。您也可以<!--[creating custom charts](app-monitoring.html#custom-charts),-->[設定警示](app-monitoring.html#alerts)及[監視應用程式損毀](app-monitoring.html#monitor-app-crash)來監視應用程式。
+
+# 相關鏈結
+
+## API 參考資料
+{: #api}
+* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

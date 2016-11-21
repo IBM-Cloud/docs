@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-2"
+
 ---
 
 # Authenticating users with a custom identity provider
@@ -35,16 +36,13 @@ Create a custom identity provider that uses the {{site.data.keyword.amafull}} se
 * The {{site.data.keyword.amashort}} client SDK automatically resends the original request that triggered the authorization flow.
 * The {{site.data.keyword.amashort}} server SDK extracts authorization header from the request, validates it with the {{site.data.keyword.amashort}} service, and grants access to a back-end resource.
 
-### {{site.data.keyword.amashort}} web application request flow
+### {{site.data.keyword.amashort}} Web application request flow
 {: #mca-custom-web-sequence}
 
-The {{site.data.keyword.amashort}} web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
+The {{site.data.keyword.amashort}} Web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
 
-  * The initial request is sent by the web application (from a log-in form, for example).
-  * The final redirect is to the protected area of the web application itself, rather than back-end protected resource. 
-
-
-
+  * The initial request is sent by the Web application (from a log-in form, for example).
+  * The final redirect is to the protected area of the Web application itself, rather than back-end protected resource. 
 
 ## Understanding custom identity providers
 {: #custom-id-about}
@@ -53,7 +51,7 @@ With a custom identity provider, you can supply custom authentication challenges
 
 When you create a custom identity provider, you might:
 
-1. Customize an authentication challenge to be sent by the {{site.data.keyword.amashort}} service to the mobile or web client application. An authentication challenge is a JSON object that contains any custom data. The client can use this custom data to customize authentication flows.
+1. Customize an authentication challenge to be sent by the {{site.data.keyword.amashort}} service to the mobile or Web client application. An authentication challenge is a JSON object that contains any custom data. The client can use this custom data to customize authentication flows.
 
   Example of a custom authentication challenge:
 

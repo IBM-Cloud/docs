@@ -19,8 +19,7 @@ permitindo criação de log e estatísticas de uso do cliente.
 Nota: o serviço {{site.data.keyword.amashort}} era conhecido anteriormente como Advanced Mobile Access.
 {: shortdesc}
 
-1. Configure um backend móvel no Bluemix e configure o SDK em seu app móvel. Para obter mais informações, consulte
-[Introdução](getting-started.html).
+1. Configure um backend móvel no Bluemix e configure o SDK em seu app móvel. Para obter mais informações, veja [Introdução](getting-started.html).
 1. Recursos seguros do lado do servidor. Proteja seus recursos de backend móvel
 que estão em execução nos tempos de execução do Node.js ou Liberty for Java&trade; com a
 segurança do OAuth ativada para dispositivo móvel. Para obter mais informações, veja [Protegendo recursos](protecting-resources.html).

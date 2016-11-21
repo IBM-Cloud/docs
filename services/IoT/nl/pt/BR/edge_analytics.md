@@ -62,11 +62,11 @@ Regras de Edge Analytics são pontos de decisão baseados em condições que cor
 Para criar uma regra:
 1. No painel do {{site.data.keyword.iot_short}}, acesse **Regras**.
 2. Clique em **Criar regra de Edge Analytics**, dê à regra um nome, forneça uma descrição, selecione um tipo de dispositivo de Edge Analytics ao qual a regra se aplica e, em seguida, clique em **Avançar**.  
-3. Configure a lógica de regra.
-Inclua uma ou mais condições IF para usar como acionadores para a regra.
+3. Configure a lógica de regra.  
+Inclua uma ou mais condições IF para usar como acionadores para a regra.  
 É possível incluir condições em linhas paralelas para aplicá-las como condições OR ou incluir condições em colunas sequenciais para aplicá-las como condições AND.  
-**Nota:** para poder selecionar uma propriedade do dispositivo como entrada para uma regra, a propriedade deve ser mapeada para um esquema. Consulte [Criando esquemas](im_schemas.html) para obter mais informações.
-**Importante:** para acionar uma condição que aciona duas ou mais condições de propriedade combinadas em sequência usando AND, os pontos de dados de acionamento devem ser incluídos na mesma mensagem do dispositivo. Se os dados forem recebidos em mais de uma mensagem, as condições sequenciais não serão acionadas.
+**Nota:** para poder selecionar uma propriedade do dispositivo como entrada para uma regra, a propriedade deve ser mapeada para um esquema. Consulte [Criando esquemas](im_schemas.html) para obter mais informações.   
+**Importante:** para acionar uma condição que aciona duas ou mais condições de propriedade combinadas em sequência usando AND, os pontos de dados de acionamento devem ser incluídos na mesma mensagem do dispositivo. Se os dados forem recebidos em mais de uma mensagem, as condições sequenciais não serão acionadas.  
 **Exemplos:**
 uma regra simples pode acionar um alerta se um valor de parâmetro for maior que um valor especificado:
 `temp>80`
@@ -74,7 +74,7 @@ uma regra mais complexa pode ser acionada quando uma combinação de limites for
 `temp>60 AND capacity>50`   
 
 4. Configure os requisitos de acionador condicional para a sua regra.  
-Para controlar o número de alertas e ações que são acionados por uma regra durante um período, é possível configurar requisitos de acionador condicional para a sua regra.
+Para controlar o número de alertas e ações que são acionados por uma regra durante um período, é possível configurar requisitos de acionador condicional para a sua regra.  
 **Importante:** o acionamento condicional age em qualquer condição na regra. Por exemplo, se uma regra tiver cinco condições paralelas diferentes configuradas usando OR, cada condição verdadeira será incluída na contagem do acionador condicional.
 Para configurar o acionamento condicional para uma regra:
  1. No editor de regras, clique no link **Acionar cada vez que as condições forem atendidas** padrão para abrir a caixa de diálogo para configurar requisitos de frequência.
@@ -85,7 +85,7 @@ Para configurar o acionamento condicional para uma regra:
  </ul>  
  Para obter uma descrição mais detalhada dos acionadores condicionais, consulte [Acionamento de regra condicional](cloud_analytics.html#conditional "Visão geral de acionamento condicional") na seção Cloud Analytics.
 5. Crie ou selecione uma ou mais ações que ocorrem se as condições da regra forem atendidas.  
-Para obter mais informações sobre ações de Edge Analytics, consulte [Criando ações de Edge Analytics](#edge_actions "Criar ações de Edge Analytics").
+Para obter mais informações sobre ações de Edge Analytics, consulte [Criando ações de Edge Analytics](#edge_actions "Criar ações de Edge Analytics").   
  Exemplo: uma ação pode ser enviar dados do dispositivo para a nuvem ou gravar um alerta em um arquivo local.
 3. **Opcional:** Selecione uma prioridade de alerta para a regra.  
  A prioridade é usada para classificar os alertas exibidos na placa **Análise de dados baseada em regra**. A prioridade padrão é Baixa.
@@ -102,7 +102,7 @@ Sua regra está criada e incluída no painel de navegação. Agora é possível 
 Para criar uma ação na guia Ações:
 1. No painel do {{site.data.keyword.iot_short}}, acesse **Regras**.
 2. No painel Regras, selecione a guia **Ações**.
-2. Clique em **Criar uma ação**, forneça à ação um nome e uma descrição e selecione um tipo de ação, em seguida, clique em **Avançar**.
+2. Clique em **Criar uma ação**, forneça à ação um nome e uma descrição e selecione um tipo de ação, em seguida, clique em **Avançar**.  
 Edge Analytics suporta dois tipos de ações:
 <dl>
 <dt>Encaminhar evento para a nuvem</dt>  
@@ -145,9 +145,9 @@ A ação agora está disponível no editor de regras.
 Para que uma regra acione ações, deve-se primeiramente ativá-la em um ou mais gateways. Você usa a placa **Gateways de regras de Edge Analytics** para ativar, desativar, atualizar e remover uma regra de Edge Analytics em seus gateways.
 
 Para ativar uma regra de Edge Analytics:
-1. No painel Regras, clique no botão **Gerenciar regra** para a regra de Edge Analytics que você deseja gerenciar.
+1. No painel Regras, clique no botão **Gerenciar regra** para a regra de Edge Analytics que você deseja gerenciar.  
 Na placa **Gateways de regras de Edge Analytics** que se abre, você vê uma lista de todos os gateways ativados para EAA conectados. O status da regra para gateways em que a regra não foi transferida por upload e está ativada é *Nenhum*.
-2. Localize o gateway no qual deseja ativar a regra e selecione **Ativar** no menu da coluna Selecionar operação.
+2. Localize o gateway no qual deseja ativar a regra e selecione **Ativar** no menu da coluna Selecionar operação.  
 A regra de Edge Analytics é transferida por upload para o gateway. Quando o upload for concluído e a regra estiver ativa, o status da regra muda para **Ativo**.  
 
 A regra agora está ativa no gateway e as ações configuradas serão acionadas quando as condições da regra forem atendidas.
@@ -190,7 +190,7 @@ Para ver informações sobre o estado do gateway:
 Propriedade | Descrição
 --- | ---
 `MsgInCount` |O número de mensagens que foram enviadas ao Edge Analytics Agent (EAA).
-`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | O número estimado de mensagens por segundo que foram enviadas ao EAA durante o último período. </br>**Nota:** `MsgInRate` é um alias de `MsgInRate1Min`. `MsgInMeanRate` é a taxa média de mensagens desde a inicialização.
+`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | O número estimado de mensagens por segundo que foram enviadas ao EAA durante o último período.  </br>**Nota:** `MsgInRate` é um alias de `MsgInRate1Min`. `MsgInMeanRate` é a taxa média de mensagens desde a inicialização.
 `LastHeartBeat` | O registro de data e hora em milissegundos quando a última mensagem de pulsação foi gerada. Uma mensagem de pulsação é gerada a cada 10 segundos no mínimo.
 `CurrentTimestamp` | O registro de data e hora em milissegundos quando a mensagem de monitoramento atual foi gerada.
 `IsAlive` | Essa propriedade será 0 se a diferença entre `LastHeartBeat` e `CurrentTimestamp` for maior que 20 segundos.
@@ -203,7 +203,7 @@ Propriedade | Descrição
 `MsgOutCount` | O número de mensagens que foram enviadas pelo EAA ao {{site.data.keyword.iot_short}}.
 `MsgOutRate`, `MsgOutMeanRate`, `MsgOutRate1Min`, `MessageOutRate5Min`, `MsgOutRate15Min` | O número estimado de bytes de mensagens por segundo que são enviados pelo EAA ao {{site.data.keyword.iot_short}} durante o último período.</br> **Nota:** `MsgOutRate` é um alias de `MsgOutRate1Min`. `MsgOutMeanRate` é a taxa média desde a inicialização.
 `MsgReducePercent` | A diferença de porcentagem entre mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgIn - msgOut) / msgIn` `BytesReducePercent` | A diferença de porcentagem entre bytes recebidos e de saída. </br>A fórmula a seguir é usada para o cálculo: `(bytesIn - bytesOut) / bytesIn`
-`MsgRateReduce` | A diferença de porcentagem entre a taxa de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgInRate - msgOutRate) / msgInRate` `BytesRateReduce` | A diferença de porcentagem entre bytes de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(bytesInRate - bytesOutRate) / bytesInRate` `SystemLoad` | O carregamento do sistema atual para o sistema no qual o EAA está em execução. **Nota:** a taxa da CPU (unidade central de processamento) será enviada apenas se o comando `mpstat` estiver disponível no sistema no qual o EAA está em execução. Caso contrário, a média de carregamento do sistema para o último minuto será enviada. </br>"A média de carregamento do sistema é a soma do número de entidades executáveis enfileiradas para os processadores disponíveis e do número de entidades executáveis que são executadas nos processadores disponíveis em média ao longo de um tempo. A maneira na qual a média de carregamento é calculada é específica do sistema operacional, mas geralmente é uma média controlada dependente de tempo. Se a média de carregamento não estiver disponível, um valor negativo será retornado.”  
+`MsgRateReduce` | A diferença de porcentagem entre a taxa de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgInRate - msgOutRate) / msgInRate` `BytesRateReduce` | A diferença de porcentagem entre bytes de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(bytesInRate - bytesOutRate) / bytesInRate` `SystemLoad` | O carregamento do sistema atual para o sistema no qual o EAA está em execução. **Nota:** a taxa da CPU (unidade central de processamento) será enviada apenas se o comando `mpstat` estiver disponível no sistema no qual o EAA está em execução. Caso contrário, a média de carregamento do sistema para o último minuto será enviada. </br>"A média de carregamento do sistema é a soma do número de entidades executáveis enfileiradas para os processadores disponíveis e do número de entidades executáveis que são executadas nos processadores disponíveis em média ao longo de um tempo. A maneira na qual a média de carregamento é calculada é específica do sistema operacional, mas geralmente é uma média controlada dependente de tempo. Se a média de carregamento não estiver disponível, um valor negativo será retornado. ”  
 De javadoc para ManagementFactory.getOperatingSystemMXBean
 `FreeMemory` | O número de bytes de memória livre para a Java Virtual Machine (JVM) na qual o EAA está em execução.
 `MemoryUsed` | O número de bytes de memória da JVM usado pelo EAA.

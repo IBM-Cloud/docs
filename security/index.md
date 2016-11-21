@@ -5,6 +5,8 @@
 copyright:
 
   years: 2014, 2016
+  
+lastupdated: "2016-10-19"
 
  
 
@@ -15,8 +17,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} security
 {: #security}
-Last updated: 19 October 2016
-{: .last-updated}
 
 Designed with secure engineering practices, the {{site.data.keyword.Bluemix}} platform has layered security controls across network and infrastructure. {{site.data.keyword.Bluemix_notm}} provides a group of security services that can be used by application developers to secure their mobile and web apps. These elements combine to make {{site.data.keyword.Bluemix_notm}} a platform with clear choices for secure application development.
 {:shortdesc}
@@ -50,7 +50,7 @@ With {{site.data.keyword.Bluemix_notm}} Local, you host {{site.data.keyword.Blue
 
 Figure 2. {{site.data.keyword.Bluemix_notm}} Local platform security overview
 
-IBM installs, remotely monitors, and manages {{site.data.keyword.Bluemix_notm}} Local in your data center through Relay, a delivery capability included with {{site.data.keyword.Bluemix_notm}} Local. Relay connects securely with certificates specific to each {{site.data.keyword.Bluemix_notm}} Local instance. For more information about {{site.data.keyword.Bluemix_notm}} Local and Relay, see [Bluemix Local](../local/index.html).
+IBM installs, remotely monitors, and manages {{site.data.keyword.Bluemix_notm}} Local in your data center through Relay, a delivery capability included with {{site.data.keyword.Bluemix_notm}} Local. Relay connects securely with certificates specific to each {{site.data.keyword.Bluemix_notm}} Local instance. For more information about {{site.data.keyword.Bluemix_notm}} Local and Relay, see [Bluemix Local](/docs/local/index.html).
 
 ### Functional security
 
@@ -141,7 +141,7 @@ The following HTTP methods are allowed:
 <dt>User access management</dt>
 <dd>Within {{site.data.keyword.Bluemix_notm}}, Separation of Duties guidelines are followed to assign granular access privileges to users, and to ensure that users have only the access that is required to perform their jobs according to the principle of least privilege.
 
-Within {{site.data.keyword.Bluemix_notm}} Dedicated and Local environments, assigned administrators can manage roles and permissions for {{site.data.keyword.Bluemix_notm}} users in their organization by using the Admin Console. See [Managing {{site.data.keyword.Bluemix_notm}}](../admin/adminpublic.html#mng) for details.
+Within {{site.data.keyword.Bluemix_notm}} Dedicated and Local environments, assigned administrators can manage roles and permissions for {{site.data.keyword.Bluemix_notm}} users in their organization by using the Admin Console. See [Managing {{site.data.keyword.Bluemix_notm}}](/docs/admin/adminpublic.html#mng) for details.
 </dd>
 </dl>
 
@@ -203,11 +203,11 @@ The Single Sign On service supports several identity sources where your users' c
 <dd> The user registries that are maintained by Google, Facebook, and LinkedIn.</dd>
 </dl>
 
-For more information, see [Getting started with Single Sign On](../services/SingleSignOn/index.html).
+For more information, see [Getting started with Single Sign On](/docs/services/SingleSignOn/index.html).
 
 ### Application Security on Cloud
 
-This service provides a security analysis of mobile and web apps, and it allows you to scan source code for security vulnerabilities. For more information, see  [Getting started with Application Security on Cloud](../services/ApplicationSecurityonCloud/index.html).
+This service provides a security analysis of mobile and web apps, and it allows you to scan source code for security vulnerabilities. For more information, see  [Getting started with Application Security on Cloud](/docs/services/ApplicationSecurityonCloud/index.html).
 
 ### IBM UrbanCode plug-in for application security testing
 
@@ -219,13 +219,13 @@ For more information, go to [IBM Application Security Testing for Bluemix](https
 
 The dashDB service uses an embedded LDAP server for user authentication. The connection between applications and the database is protected by SSL certificates. This service uses the DB2® native encryption capability to automatically encrypt your deployed database and database backups. Master key rotation is automatic and happens every 90 days.
 
-For more information, see [Getting started with dashDB](../services/dashDB/index.html).
+For more information, see [Getting started with dashDB](/docs/services/dashDB/index.html).
 
 ### Secure Gateway
 
 The Secure Gateway service enables you to securely connect {{site.data.keyword.Bluemix_notm}} apps to remote locations, either on premises or in the cloud. It provides secure connectivity and establishes a tunnel between your {{site.data.keyword.Bluemix_notm}} organization and the remote location that you want to connect to. You can configure and create a secure gateway by using the {{site.data.keyword.Bluemix_notm}} user interface or an API package.
 
-For more information, see [Getting started with Secure Gateway](../services/SecureGateway/secure_gateway.html).
+For more information, see [Getting started with Secure Gateway](/docs/services/SecureGateway/secure_gateway.html).
 
 ### Security information and event management
 
@@ -356,4 +356,4 @@ The following table displays which services in {{site.data.keyword.Bluemix_notm}
 {: #general}
 
 * [IBM SaaS security](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
-* [Getting started with Single Sign On](../services/SingleSignOn/index.html)
+* [Getting started with Single Sign On](/docs/services/SingleSignOn/index.html)

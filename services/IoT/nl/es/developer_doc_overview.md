@@ -56,5 +56,5 @@ Puede crear y gestionar dispositivos en {{site.data.keyword.iot_short}} utilizan
 
 ## Desarrollo de pasarelas
 {: #gateway-dev}
-Si los dispositivos no se pueden conectar directamente a Internet, utilice la información proporcionada para crear un dispositivo de pasarela para recuperar y enviar datos a las aplicaciones de la organización de {{site.data.keyword.iot_short}}.
+Si los dispositivos no se pueden conectar directamente a Internet, utilice la información proporcionada para crear un dispositivo de pasarela para recuperar y enviar datos a las aplicaciones de la organización de {{site.data.keyword.iot_short}}. 
 El protocolo de mensajería MQTT está soportado para el desarrollo de pasarelas en {{site.data.keyword.iot_short}}.

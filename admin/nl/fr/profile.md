@@ -17,10 +17,11 @@ copyright:
 
 # Paramètres de profil
 {: #usersettings}
-Dernière mise à jour : 16 août 2016
+Dernière mise à jour : 20 octobre 2016
 {: .last-updated}
 
-Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; **Profil** pour mettre à jour vos paramètres de profil.
+Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Icône Avatar](../icons/i-avatar-icon.svg)
+&gt; **Profil utilisateur** pour mettre à jour vos paramètres de profil.
 {:shortdesc}
 
  Dans la page **Profil**, vous pouvez définir ou mettre à jour les informations suivantes :
@@ -32,21 +33,30 @@ Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/
 ## Modification de la photo de votre profil
 {: #photo}
 
-1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; **Profil**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Icône Avatar](../icons/i-avatar-icon.svg)
+&gt; **Profil utilisateur**.
 
-* Cliquez sur **Changer de photo** pour télécharger une nouvelle photo.
+
+* Cliquez sur **Télécharger une photo** pour télécharger une photo. 
+* Cliquez sur **Changer de photo** pour télécharger une nouvelle photo. 
 * Cliquez sur **Supprimer la photo** pour retirer votre photo.
 
 ## Edition de vos informations IBMid
 {: #ibmid}
 
-Si vous devez changer les informations de votre compte IBMid, comme votre nom, votre adresse électronique, votre numéro de téléphone, votre mot
+Un IBMid est un ID unique que vous utilisez pour vous connecter à votre compte {{site.data.keyword.Bluemix_notm}} afin de vous servir des
+fonctions d'infrastructure, de services et d'application. Il est identique à l'ID que vous pouvez utiliser pour accéder à d'autres applications IBM.
+ 
+
+Vous ne pouvez pas changer votre IBMid, mais vous pouvez éditer vos informations de profil qui lui sont associées. Si vous devez changer les informations de votre compte IBMid, comme votre nom, votre adresse électronique, votre numéro de téléphone, votre mot
 de passe ou le nom de votre société, procédez comme suit :
 
-1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; **Profil**.
-2. Cliquez sur le bouton d'**édition de l'IBMid**.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Icône Avatar](../icons/i-avatar-icon.svg)
+&gt; **Profil utilisateur**.
+
+2. Cliquez sur l'option permettant d'**éditer votre IBMid**.
 3. Editez vos informations utilisateur.
-4. Cliquez sur **Soumettre**.
+4. Cliquez sur **Sauvegarder**.
 
 ## Paramètre Suivi pour analyse
 {: #tracking}
@@ -59,5 +69,7 @@ dans {{site.data.keyword.Bluemix_notm}}, telles que la communication par message
 
 Afin de désactiver le suivi pour analyse, procédez comme suit :
 
-1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Compte** &gt; **Profil**.
-2. Définissez la valeur **Off** pour le suivi pour analyse.
+1. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Icône Avatar](../icons/i-avatar-icon.svg)
+&gt; **Profil utilisateur**.
+
+2. Désactivez le suivi pour analyse en spécifiant **off**.

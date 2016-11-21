@@ -17,7 +17,7 @@ copyright:
 上次更新时间：2016 年 7 月 29 日
 {: .last-updated}
 
-您可以使用 Python 来构建和开发设备代码，以用于与 {{site.data.keyword.iot_full}} 上的组织进行交互。{{site.data.keyword.iot_short_notm}} 的 Python 客户机提供了 API，通过剥离底层协议（例如，MQTT 和 HTTP）来帮助与 {{site.data.keyword.iot_short_notm}} 功能进行简单交互。
+您可以使用 Python 来构建和开发设备代码，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。{{site.data.keyword.iot_short_notm}} 的 Python 客户机提供了 API，通过剥离底层协议（例如，MQTT 和 HTTP）来帮助与 {{site.data.keyword.iot_short_notm}} 功能进行简单交互。
 {:shortdesc}
 
 使用提供的信息和示例通过 Python 开始开发设备。
@@ -35,12 +35,12 @@ copyright:
 |定义|描述 |
 |:---|:---|
 |`orgId`|组织标识。|
-|`type`|设备类型。通常，deviceType 是一组执行特定任务的设备，例如“weatherballoon”。|
+|`type`|设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
 |`id`|设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
 |`auth-method`|要使用的认证方法。当前支持的唯一值是 `token`。|
 |`auth-token`|用于将设备安全连接到 Watson IoT Platform 的认证令牌。|
 
-如果未提供选项字典，那么客户机将作为未注册的设备连接到 Watson IoT 平台 Quickstart 服务。
+如果未提供选项字典，那么客户机将作为未注册的设备连接到 Watson IoT Platform Quickstart 服务。
 
 ```python
 
@@ -104,7 +104,7 @@ client.publishEvent("status", "json", myData)
 
 ### 提高事件的 QoS 级别
 
-可以提高已发布事件的[服务质量 (QoS) 级别](../../reference/mqtt/index.html#qos-levels)。QoS 级别大于 `0` 的事件可能所用发布时间更长，因为包含额外的接收确认信息。
+可以提高已发布事件的[服务质量 (QoS) 级别](../../reference/mqtt/index.html#qos-levels)。QoS 级别大于 `0` 的事件发布所用时间可能更长，因为包含额外的接收确认信息。
 
 **注：**Quickstart 流方式仅支持 QoS 级别 `0`。
 
@@ -117,7 +117,7 @@ client.publishEvent("status", "json", myData, myQosLevel)
 ## 处理命令
 {: #handling_commands}
 
-设备客户机连接时，会自动预订为此设备指定的任何命令。要处理特定命令，需要注册命令回调方法。消息将作为 Command 类的实例返回，此类包含以下参数：
+设备客户机进行连接时，会自动预订为此设备指定的任何命令。要处理特定命令，需要注册命令回调方法。消息将作为 Command 类的实例返回，此类包含以下属性：
 
 |属性|数据类型|描述|
 |:---|:---|
@@ -150,7 +150,7 @@ client.commandCallback = myCommandCallback
 ## 定制消息格式支持
 {: #custom_message_format}
 
-缺省情况下，消息格式设置为 `json`，这意味着库支持对 JSON 格式的 Python 字典对象进行编码和解码。消息格式设置为 `json-iotf` 时，会根据 {{site.data.keyword.iot_short_notm}} JSON 有效内容规范对消息编码。要添加对自己定制消息格式的支持，请参阅 GitHub 中的 [Custom Message Format sample](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat)。
+缺省情况下，消息格式设置为 `json`，这意味着库支持对 JSON 格式的 Python 字典对象进行编码和解码。消息格式设置为 `json-iotf` 时，会根据 {{site.data.keyword.iot_short_notm}} JSON 有效内容规范对消息编码。要添加对自己的定制消息格式的支持，请参阅 GitHub 中的 [Custom Message Format sample](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat)。
 
 创建定制编码器模块后，必须在设备客户机中注册该模块，如以下示例中所概述：
 
@@ -161,4 +161,4 @@ import myCustomCodec
 client.setMessageEncoderModule("custom", myCustomCodec)
 client.publishEvent("status", "custom", myData)
 ```
-如果事件以未知格式发送，或者设备无法识别该格式，那么设备库会返回 `MissingMessageDecoderException` 条件。
+如果事件以未知格式发送，或者设备无法识别其格式，那么设备库会返回 `MissingMessageDecoderException` 条件。

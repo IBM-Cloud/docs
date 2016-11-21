@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
 
 # Configuring {{site.data.keyword.amashort}} client SDK for iOS (Objective-C)
@@ -15,13 +16,20 @@ Configure your iOS application that is using custom authentication to use the {{
 
 ## Before you begin
 {: #before-you-begin}
-You must have a resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider.  Your mobile app also must be instrumented with the {{site.data.keyword.amashort}} client SDK.  For more information, see the following information:
+You must have:
+
+* A resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
+* Your **Realm** name. This is the value you you specificed in the **Realm Name** field of the **Custom** section in the **Management** tab of the {{site.data.keyword.amashort}} dashboard (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
+* The URL of your back-end application (**App Route**). You will need this values for sending requests to the protected endpoints of your back-end application.
+* Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`, `United Kingdom`, or `Sydney`, and correspond to the SDK values required in the WebView Javascript code: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`, or `BMSClient.REGION_SYDNEY`. You will need this value for initializing the {{site.data.keyword.amashort}} client.
+
+For more information, see the following information:
  * [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Setting up the iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)
  * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
-
 
 
 ## Installing the client SDK with CocoaPods
@@ -43,14 +51,12 @@ CocoaPods installs added dependencies. The progress and which components were ad
 
 1. Run `open {your-project-name}.xcworkspace` from command line to open your iOS project workspace.
 
-
-
 ### Initializing the client SDK
 {: #custom-ios-sdk-initialize}
 
-Initialize the SDK by passing the application route (`applicationRoute`) and GUID (`applicationGUID`) parameters. A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate
+Initialize the SDK by passing the **App Route** (`applicationRoute`) and **TenantID** (`tenantID`) parameters. 
 
-1. Get your application parameter values. Open your app in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options** to see the values for **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`).
+A common, though not mandatory, place to put the initialization code is in the `application:didFinishLaunchingWithOptions` method of your application delegate
 
 1. Import the `IMFCore` framework in the class that you want to use client SDK.
 
@@ -72,25 +78,25 @@ Initialize the SDK by passing the application route (`applicationRoute`) and GUI
 	* Set the value to location of your `BridgingHeader.h` file, for example: `$(SRCROOT)/MyApp/BridgingHeader.h`
 	* Verify that your bridging header is being picked up by Xcode by building your project.
 
-1. Initialize the client SDK. Replace the applicationRoute and applicationGUID with the values for **Route** (`applicationRoute`) and **App GUID** (`applicationGUID`) that you obtained from **Mobile Options**.
+1. Initialize the client SDK. Replace the  **App Route** (`applicationRoute`) and **TenantID** (`tenantID`) with values. For more information on obtaining these values, see [Before you begin](##before-you-begin).
 
 	Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
-			backendGUID:@"applicationGUID"];
+			backendGUID:@"tenantID"];
 	```
 
 	Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
-	 							backendGUID: "applicationGUID")
+	 							backendGUID: "tenantID")
 	```
 
 ## Initializing the AuthorizationManager
-Initialize the AuthorizationManager by passing the {{site.data.keyword.amashort}} service `tenantId` parameter. You can find this value by clicking the **Show Credentials** button on the {{site.data.keyword.amashort}} service tile.
+Initialize the AuthorizationManager by passing the {{site.data.keyword.amashort}} service `tenantId` parameter. 
 
 
 ### Objective-C:
@@ -271,8 +277,6 @@ Swift applications:
 IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDelegate(),
 									forRealm: realmName)
 ```
-
-
 
 
 ## Testing the authentication

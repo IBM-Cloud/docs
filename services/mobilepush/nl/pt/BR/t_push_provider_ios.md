@@ -9,23 +9,23 @@ copyright:
 {:new_window: target="_blank"}
 # Configurando credenciais para o APNs
 {: #create-push-credentials-apns}
-Última atualização: 16 de agosto de 2016
+Última atualização: 17 de outubro de 2016
 {: .last-updated}
 
 O Apple Push Notification Service (APNs) permite que os desenvolvedores de aplicativos enviem notificações remotas da instância do serviço {{site.data.keyword.mobilepushshort}} no Bluemix (o provedor) para dispositivos e aplicativos do iOS. Mensagens são enviadas para um aplicativo de
-destino no dispositivo. Obtenha e configure suas credenciais APNs. Os certificados do APNs são gerenciados com segurança pelo serviço {{site.data.keyword.mobilepushshort}} e usados para se conectar ao servidor APNs como um provedor.
+destino no dispositivo. 
 
-1. Obtenha uma conta do [Apple Developers](https://developer.apple.com/).
-2. [Registre
-um ID de app](#create-push-credentials-apns-register)
-3. [Crie um certificado SSL de APNs de desenvolvimento e distribuição](#create-push-credentials-apns-ssl)
-4. [Crie um
-perfil de fornecimento de desenvolvimento](#create-push-credentials-dev-profile)
-5. [Crie um perfil de
-fornecimento de distribuição de armazenamento](#create-push-credentials-apns-distribute_profile)
-6. [Criando um arquivo de certificado push .p12 para o push Bluemix](#create-p12-push-certificate-file-for-Bluemix-push)
-7. [Configure APNs no painel Push](#create-push-credentials-apns-dashboard)
+Obtenha e configure suas credenciais APNs. Os certificados do APNs são gerenciados com segurança pelo serviço {{site.data.keyword.mobilepushshort}} e usados para se conectar ao servidor APNs como um provedor.
 
+<!-- 1. Obtain an [Apple Developers](https://developer.apple.com/) account.-->
+
+<!--2. [Register an App ID](#create-push-credentials-apns-register)
+3. [Create a development and distribution APNs SSL certificate](#create-push-credentials-apns-ssl)
+4. [Create a development provisioning profile](#create-push-credentials-dev-profile)
+5. [Create a store distribution provisioning profile](#create-push-credentials-apns-distribute_profile)
+6. [Creating .p12 push certificate file for Bluemix push](#create-p12-push-certificate-file-for-Bluemix-push)
+7. [Set up APNs on the Push Dashboard](#create-push-credentials-apns-dashboard)
+-->
 
 
 ##Registrando um ID de app
@@ -34,51 +34,41 @@ fornecimento de distribuição de armazenamento](#create-push-credentials-apns-d
 
 O ID de app (o identificador de pacote configurável) é um identificador exclusivo que identifica um aplicativo específico. Cada aplicativo requer um ID de app. Serviços, como o serviço {{site.data.keyword.mobilepushshort}}, são configurados para o ID do app.
 
-
-
-
-1. Acesse o portal [Apple
+1. Certifique-se de ter uma conta do [Apple Developers](https://developer.apple.com/).
+2. Acesse o portal [Apple
 Developer](https://developer.apple.com), clique em Centro de membros e selecione
 **Certificados, identificadores & perfis**.
-2. Acesse a seção **Registrando IDs de app** na
+3. Acesse a seção **Registrando IDs de app** na
 [Apple
 Developer Library](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991) e siga as instruções para registrar o ID do app.
 
-	**Nota**: Ao registrar um ID de app, selecione as opções a seguir:
-	* Notificações push
+Ao registrar um ID do App, selecione as opções a seguir:
 
-	![Serviços de app](images/appID_appservices_enablepush.jpg)
-
-	* Sufixo de ID explícito
-
-	![ID explícito](images/appID_bundleID.jpg)
-3. Próximas etapas. Crie um certificado SSL de APNs de desenvolvimento e
+* Notificações push ![Serviços de app](images/appID_appservices_enablepush.jpg)
+* Sufixo de ID explícito
+![ID explícito](images/appID_bundleID.jpg)
+4. Crie um certificado SSL de APNs de desenvolvimento e
 distribuição.
 
 ##Crie um certificado SSL de APNs de desenvolvimento e distribuição
 {: #create-push-credentials-apns-ssl}
 
-Antes de poder obter um certificado APNs, é necessário
-gerar primeiro uma solicitação de assinatira de certificado (CSR)
+Antes de poder obter um certificado APNs, deve-se
+gerar primeiro uma solicitação de assinatura de certificado (CSR)
 e enviá-la para Apple, a autoridade de certificação
 (CA). A CSR contém informações que identificam sua empresa e sua chave pública e privada usadas para assinar suas notificações push da Apple. Depois, gere o certificado SSL no
             portal de Desenvolvedor de iOS. O certificado, junto com
 seu público e chave privada, é armazenado no Keychain Access.
 
-###Antes de Começar
-{: before-you-begin-certificate}
+<!-- ###Before you begin -->
+<!-- {: before-you-begin-certificate} -->
 
-[Registre
-um ID de app](#create-push-credentials-apns-register)
+<!--[Register an App ID](#create-push-credentials-apns-register)-->
 
-APNs podem ser usadas de dois modos:
-ambiente de simulação e produção.
+É possível usar APNs de dois modos: 
 
-* O modo de ambiente de simulação é usado durante
-desenvolvimento e teste.
-* O modo de produção é usado ao distribuir aplicativos
-usando Armazenamento de app (ou outros mecanismos de distribuição
-corporativos).
+* Modo de ambiente de simulação para desenvolvimento e teste.
+* Modo de produção ao distribuir aplicativos por meio da App Store (ou outros mecanismos de distribuição da empresa).
 
 É necessário obter certificados separados para
 seus ambientes de desenvolvimento e distribuição. Os certificados são
@@ -87,85 +77,72 @@ notificações remotas. Para produção, é possível criar até dois
 certificados. O Bluemix usa os certificados para estabelecer uma
 conexão SSL com APNs.
 
-Crie um certificado SSL de desenvolvimento e distribuição.
+<!-- Create a development and distribution SSL certificate. -->
 
-
-1. Acesse [Apple
+1. Acesse o website do [Apple
 Developer](https://developer.apple.com), clique em Centro de membros e selecione
-**Certificados, identificadores & perfis**.
+**Certificados, identificadores e perfis**.
 2. Na área **Identificadores**, clique em
 **IDs de app**.
-3. Na lista de IDs de app, selecione seu ID de app recentemente
-criado e selecione **Configurações**.
+3. A partir da sua lista de IDs do app, selecione o seu <!--newly created--> ID do app e, em seguida, selecione
+**Configurações**.
 4. Na área **Serviço Push
 Notifications**, crie um
 certificado SSL de desenvolvimento e depois um certificado SSL de
 produção.
 
-![Certificados SSL de notificação push](images/certificate_createssl.jpg)
+	![Certificados SSL de notificação push](images/certificate_createssl.jpg)
 
-A tela Sobre a criação de uma solicitação de assinatura de certificado (CSR) é exibida.
-
-![Criando uma solicitação de assinatura de certificado](images/request.jpg)
-
-5. Em seu Mac, inicie o aplicativo **Keychain
-Access** para criar uma solicitação de assinatura
-de certificado (CSR).
-6. Selecione **Keychain Access > Assistente de certificado > Solicitar
-um certificado de uma autoridade de certificação…**
-![Keychain Access](images/keychain_request_certificate.jpg)
-7. Em **Informações de certificado**, insira
-seu endereço de e-mail que está associado à conta do Desenvolvedor
-de app e um nome comum. Forneça um nome significativo que o
-ajude a identificar se ele é um certificado para desenvolvimento,
-(ambiente de simulação)
-ou distribuição (produção); por exemplo,**
-sandbox_apns_certificate** ou
-                            **production_apns_certificate**.
-8. Selecione **Salvo no disco** para fazer o
-download do arquivo **.certSigningRequest**
-para sua área de trabalho, depois clique em
+5. Quando a **tela Sobre a criação de uma solicitação de assinatura
+de certificado (CSR)** for exibida, inicie o aplicativo
+**Keychain Access** em seu Mac para criar uma solicitação de
+assinatura de certificado (CSR).
+6. No menu, selecione **Keychain Access > Assistente de certificado > Solicitar um certificado de uma autoridade de certificação…** 
+7. Em **Informações de certificado**, insira o endereço de
+e-mail associado à sua conta de Desenvolvedor de app e um nome comum. Forneça um nome
+significativo que ajude a identificar se é um certificado para desenvolvimento (ambiente
+de simulação) ou distribuição (produção); por exemplo,
+*sandbox-apns-certificate* ou *production-apns-certificate*.
+8. Selecione **Salvar no disco** para fazer download do arquivo
+`.certSigningRequest` para sua área de trabalho e, em seguida, clique em
 **Continuar**.
-9. Em **Salvar como**, nomeie o arquivo
-
-**.certSigningRequest**; por exemplo
-
-**sandbox.certSigningRequest**, depois clique em
-                            **Salvar**.
+9. Na opção de menu **Salvar como**, nomeie o arquivo
+`.certSigningRequest` e clique em **Salvar**.
 10. Clique em **Pronto**. Agora você tem uma
 CSR.
-11. Em **Sobre como criar uma solicitação de assinatura de certificado
-(CSR)**, clique em **Continuar**. 12. ![Solicitação de assinatura de certificado](images/request.jpg)
+11. Retorne para a janela **Sobre como criar uma solicitação de
+assinatura de certificado (CSR)** e clique em **Continuar**. 
 12. Na tela **Gerar**, clique em
 **Escolher arquivo ... **e selecione o arquivo CSR
 salvo em sua área de trabalho. Em seguida, clique em **Gerar**.
-![Gerar certificado
+	![Gerar certificado
 ](images/generate_certificate.jpg)
 13. Quando seu certificado estiver pronto, clique em
 **Concluído**.
 14. Na tela **Notificações push**, clique em
 **Fazer download** para fazer download do seu certificado e depois
 clique em **Concluído**. 
-![Fazer download de certificado](images/certificate_download.jpg)
+	![Fazer download de certificado](images/certificate_download.jpg)
 15. No Mac, acesse **Keychain Access > Meus certificados** e
 localize seu certificado recém-instalado. Dê um clique duplo no certificado
 para instalá-lo no Keychain Access.
-16. Selecione certificado e chave privada e depois selecione
+16. Selecione o certificado e a chave privada; em seguida, selecione
 **Exportar** para converter o certificado no formato de troca de
-informações pessoais (formato .p12).
-![Exportar certificado e chaves](images/keychain_export_key.jpg)
-17. No campo **Salvar como**, dê um nome significativo para o certificado. Por exemplo, **sandbox_apns.p12_certifcate** ou **production_apns.p12** e, em seguida, clique em **Salvar**.
-![Exportar certificado e
+informações pessoais (formato `.p12`).
+	![Exportar certificado e chaves](images/keychain_export_key.jpg)
+17. No campo **Salvar como**, dê um nome significativo para o certificado. Por
+exemplo, `sandbox_apns.p12_certifcate` ou
+`production_apns.p12`; em seguida, clique em **Salvar**.
+	![Exportar certificado e
 chaves](images/certificate_p12v2.jpg)
 18. No campo **Inserir uma senha**, insira
-uma senha para proteger os itens exportados e clique em **OK**. É possível usar essa senha para configurar as definições do APNs no painel Push.
-![Exportar certificado e chaves](images/export_p12.jpg)
+uma senha para proteger os itens exportados e clique em **OK**. É possível usar essa senha para configurar as definições do APNs no painel Push.{: #step18}
+	![Exportar certificado e chaves](images/export_p12.jpg)
 19. O **Key Access.app** solicita que
-você exporte sua chave da tela **Keychain**. Insira
-sua senha administrativa para o seu Mac para permitir que seu sistema
-exporte esses itens e selecione a opção **Sempre
-permitir**. Um certificado .p12
-é gerado em sua área de trabalho.
+você exporte sua chave da tela **Keychain**. Insira sua senha
+administrativa para seu Mac para permitir que o sistema exporte esses itens; em seguida,
+selecione a opção **Sempre permitir**. Um certificado
+`.p12` é gerado em sua área de trabalho.
 
 
 ##Criando um perfil de fornecimento de desenvolvimento
@@ -179,7 +156,7 @@ distribuição. Xcode usa o perfil de fornecimento de desenvolvimento
 para determinar quais desenvolvedores podem criar o aplicativo e
 quais dispositivos podem ser testados no aplicativo.
 
-###Antes de Começar
+###Antes de começar
 {: before-you-begin-provisioning-file}
 
 Certifique-se de registrar um ID
@@ -187,15 +164,16 @@ de app, de ativá-lo para Push Notification Service e de configurá-lo
 para
 usar um certificado APNs SSL de desenvolvimento e produção.
 
-Crie um perfil de
-fornecimento de desenvolvimento.
+Crie um perfil de fornecimento de desenvolvimento, da seguinte forma:
 
 1. Acesse o portal [Apple
 Developer](https://developer.apple.com), clique em Centro de membros e selecione
 **Certificados, identificadores & perfis**.
-2. Acesse a [Mac
-Developer Library ](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site), role para a seção Criando perfis de fornecimento de
-desenvolvimento** e siga as instruções para criar um perfil de desenvolvimento.
+2. Acesse
+[Mac
+Developer Library ](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site), role para a seção Criando perfis de
+fornecimento de desenvolvimento** e siga as instruções para criar um
+perfil de desenvolvimento.
 **Nota**: Ao configurar um perfil de provisão de
 desenvolvimento, selecione as opções a seguir:
 	* **iOS App Development**
@@ -216,22 +194,6 @@ Developer](https://developer.apple.com), clique em Centro de membros e selecione
 2. Dê um clique duplo no perfil de fornecimento
 transferido por download para instalá-lo em Xcode.
 
-##Criando o arquivo de certificado push .p12 para push Bluemix
-{: #create-p12-push-certificate-file-for-Bluemix-push}
-
-Para criar um arquivo de certificado push .p12 válido, é necessário usar o certificado .p12 do APNs junto ao certificado de perfil de desenvolvimento/distribuição. Conclua as etapas.
-
-```
-//You can choose to pick up either the development or distribution
-certificate 	developer_identity.cer - Development profile downloaded
-from Apple 	apns.p12 - APNS .p12 exported from the keychain 	openssl
-x509 -in developer_identity.cer -inform DER -out
-	developer_identity.pem -outform PEM 	openssl pkcs12 -nocerts -in
-apns.p12 -out apns.pem 	openssl pkcs12 -export -inkey apns.pem -in
-developer_identity.pem -out bluemixPush_dev.p12
-```
-É necessário armazenar o arquivo `bluemixPush_dev.p12` em sua área de trabalho.
-
 ##Configurando o APNs no Painel {{site.data.keyword.mobilepushshort}}
 {: #create-push-credentials-apns-dashboard}
 
@@ -239,40 +201,45 @@ Para usar o serviço {{site.data.keyword.mobilepushshort}} para enviar notifica�
 usada para fazer upload de um certificado APNs.
 
 
-###Antes de Começar
+###Antes de começar
 {: before-you-begin-dashboard}
 
 
-Obtenha seu certificado SSL de desenvolvimento e produção do APNs e a senha associada a cada tipo de certificado. Para obter informações, consulte Criando e configurando credenciais push para o APNs.
+<!-- Get your development and production APNs SSL certificate and the password associated with each type of certificate. For information, see Creating and configuring push credentials for APNs.-->
 
-Os certificados necessários para o APNs são certificados .p12, que contêm a
-chave privada e os certificados SSL necessários para construir e publicar o
-aplicativo. Deve-se gerar os certificados a partir do Member Center do
+Os certificados necessários para APNs são certificados `.p12`, que contêm a chave
+privada e os certificados SSL necessários para construir e publicar o aplicativo. Deve-se gerar os certificados a partir do Member Center do
 website do Apple Developer (para o qual é necessária uma conta válida do Apple Developer). São necessários certificados separados para o
 ambiente de desenvolvimento (ambiente de
 simulação) e para o ambiente de produção (distribuição).
 
-**Nota**: Depois que .**cer ** estiver em seu
-acesso da cadeia de chaves, exporte-o para seu computador para criar um certificado .p12.
+**Nota**: depois que o arquivo `.cer` estiver
+em seu acesso de cadeia de chaves, exporte-o para seu computador para criar um
+certificado `.p12`.
 
 Para obter mais informações sobre como usar o APNs, consulte o [iOS Developer Library: Local and Push
 Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4).
 
-Configure APNs no painel Push
+Configure APNs no painel Push, conforme a seguir:
 
 1. Abra o aplicativo backend no painel do Bluemix e, em seguida,
 clique no serviço **IBM Push Notifications** para abrir o painel
 Push.
-![IBM Push Notifications](images/bluemixdashboard_push.jpg)
-O painel Push é exibido.
-![Configurar notificações push](images/wizard.jpg)
-2. Na guia **Configuração**, acesse a seção **Certificado push Apple**, selecione
-**Ambiente de simulação** (desenvolvimento) ou **Produção** (distribuição) e, em seguida, faça upload
-do certificado p.12 que você criou usando a [etapa](#create-p12-push-certificate-file-for-Bluemix-push) anterior.
-![Definir notificações push](images/credential_screen.jpg)
+
+	O painel Push é exibido:
+	![painel Configurar notificações push](images/wizard.jpg)
+2. Na guia **Configuração**, acesse a seção
+**Certificado push Apple**, selecione **Ambiente
+de simulação** (desenvolvimento) ou **Produção**
+(distribuição) e, em seguida, faça upload do certificado `p.12` que você
+criou usando a
+[etapa](#step18) anterior.
+	![Guia
+Configurar notificações push](images/credential_screen.jpg)
 3. No campo **Senha**, insira a senha que está
-associada ao arquivo de certificado **.p12**; em seguida, clique em
+associada ao arquivo de certificado `.p12`; em seguida, clique em
 **Salvar**.
+
 Após o
 upload bem-sucedido dos certificados com uma senha válida, é possível iniciar
 o envio de notificações.
