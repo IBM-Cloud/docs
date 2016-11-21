@@ -105,4 +105,4 @@ To get started, select the **Virtual Private Network** service instance tile on 
 
 ## general  
 {: #general}  
-* [IBM VPN Command line Interface](../../cli/plugins/vpn/index.html){: new_window}
+* [IBM VPN Command line Interface](/docs/cli/plugins/vpn/index.html){: new_window}
