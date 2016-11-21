@@ -7,7 +7,7 @@ copyright:
 
 # Managing tags
 {: #manage_tags}
-Last updated: 17 October 2016
+Last updated: 21 November 2016
 {: .last-updated}
 
 Use the {{site.data.keyword.mobilepushshort}} dashboard to create and delete tags for your application and then initiate tag-based notifications. The tag-based notification is received on devices that are subscribed to tags.
@@ -97,21 +97,21 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 
 Copy the following code snippets to your mobile application to get a list of tags to which the device is subscribed and to a list of available tags.
 
-Retrieve an array of tags that are available to subscribe to.
+Retrieve an array of tags that are available for subscription.
 
 ```
 //Get a list of available tags to which the device can subscribe
-MFPPush.retrieveAvailableTags(function(tags) {
+BMSPush.retrieveAvailableTags(function(tags) {
   alert(tags);
-}, null);
+}, failure); 
 ```
 	{: codeblock}
 
 ```
 //Get a list of available tags to which the device is subscribed.
-MFPPush.getSubscriptionStatus(function(tags) {
-  alert(tags);
-}, null);
+BMSPush.retrieveSubscriptions(function(tags) {
+   alert(tags); 
+}, failure); 
 ```
 	{: codeblock}
 
@@ -313,8 +313,8 @@ Copy and paste this code snippet to your Cordova mobile application.
 
 ```
 var tag = "YourTag";
-MFPPush.subscribe(tag, success, failure);
-MFPPush.unsubscribe(tag, success, failure);
+BMSPush.subscribe(tag, success, failure);
+BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
