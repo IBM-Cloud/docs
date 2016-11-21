@@ -89,7 +89,6 @@ bms-push <version> “BMSPush"
 
 	**Note**: Before opening your project in Android Studio, build your Cordova application through the Cordova CLI. This will help avoid build errors.
 
-
 ## Initializing the Cordova plug-in
 {: #cordova_initialize}
 
