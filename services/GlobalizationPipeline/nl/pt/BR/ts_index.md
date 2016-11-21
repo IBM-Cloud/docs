@@ -11,13 +11,13 @@ copyright:
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Resolução de problemas do {{site.data.keyword.GlobalizationPipeline_full}}
+# Resolução de problemas do {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipelinets}
 
-*Última atualização: 27 de junho de 2016*
+*Última atualização: 30 de agosto de 2016*
 {: .last-updated}
 
-Aqui estão algumas respostas a perguntas comuns sobre o uso do {{site.data.keyword.GlobalizationPipeline_full}}.
+Aqui estão algumas respostas a perguntas comuns sobre o uso do {{site.data.keyword.GlobalizationPipeline_short}}. 
 {:shortdesc}
 
 
@@ -47,7 +47,7 @@ O arquivo de recursos que eu estou tentando fazer upload não é aceito.
 Ao incluir um arquivo de recursos em um novo pacote configurável de tradução ou atualizar um arquivo de recursos existente a ser traduzido, eu recebo um erro.
 {: tsSymptoms}
 
-O {{site.data.keyword.GlobalizationPipeline_full}} só aceita arquivos de recursos destes tipos: Java™ .properties, JSON e AMD I18N.
+O {{site.data.keyword.GlobalizationPipeline_short}} só aceita arquivos de recursos destes tipos: Java™ .properties, JSON e AMD I18N.
 {: tsCauses}
 
 Assegure-se de que o arquivo de recursos que está sendo transferido por upload seja de um desses tipos.
@@ -67,7 +67,7 @@ O arquivo de recursos que eu estou tentando fazer upload não é aceito.
 Ao incluir ou atualizar um arquivo de recursos para um projeto de tradução, um erro está ocorrendo porque uma parte do arquivo é muito grande.
 {: tsSymptoms}
 
-O {{site.data.keyword.GlobalizationPipeline_full}} só pode aceitar arquivos de recursos que atendam a determinados requisitos de tamanho.
+O {{site.data.keyword.GlobalizationPipeline_short}} só pode aceitar arquivos de recursos que atendam a determinados requisitos de tamanho.
 {: tsCauses}
 
 Assegure-se de que o arquivo de recursos esteja em conformidade com as diretrizes a seguir:
@@ -77,22 +77,6 @@ Assegure-se de que o arquivo de recursos esteja em conformidade com as diretrize
 * Cada projeto de tradução pode ter no máximo 500 pares de chave/valor.
 * Um arquivo de recursos não pode ter mais de 2 MB.
 
-
-
-## Um arquivo de recursos não em inglês não está sendo traduzido corretamente para outros idiomas
-{: #problem4}
-
-Um arquivo de recurso de origem não em inglês não está sendo traduzido corretamente.
-{:shortdesc}
-
-Quando um arquivo de recursos cuja origem não é em inglês é transferido por upload para um pacote configurável de tradução, as traduções geradas não ficam corretas.
-{: tsSymptoms}
-
-O {{site.data.keyword.GlobalizationPipeline_full}} atualmente suporta apenas o inglês como idioma de origem.
-{: tsCauses}
-
-A tradução de arquivos de recursos não em inglês não é suportada ainda.
-{: tsResolve}
 
 
 
@@ -108,5 +92,5 @@ O espaçamento usado em volta das variáveis contidas nas sequências nem sempre
 Os mecanismos de tradução de máquina são projetados para funcionar com língua natural e nem sempre poderão reconhecer ou saber como tratar sintaxe específica usada pelas linguagens de programação. Como resultado, o tratamento de sintaxe combinada com texto simples pode variar.
 {: tsCauses}
 
-O {{site.data.keyword.GlobalizationPipeline_full}} atualmente reconhece o padrão "{}" comumente usado para representar variáveis e preservará o formato original do conteúdo.
+O {{site.data.keyword.GlobalizationPipeline_short}} atualmente reconhece o padrão "{}" comumente usado para representar variáveis e preservará o formato original do conteúdo.
 {: tsResolve}

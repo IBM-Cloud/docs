@@ -14,7 +14,7 @@ copyright:
 # Suggerimenti sulla machine translation
 {: #globalizationpipeline_tips}
 
-*Ultimo aggiornamento: 27 marzo 2016*
+*Ultimo aggiornamento: 12 luglio 2016*
 {: .last-updated}
 
 La machine translation può essere valida fornendo un'approssimazione di un significato del testo di origine. Tuttavia, la qualità e l'utilità della machine translation varia significativamente a seconda della lingua di destinazione e dal motore della machine translation che utilizzi. Uno dei fattori chiave nella qualità della machine translation è la qualità dell'origine stessa. Il testo di origine che viene caricato con espressioni colloquiali, frasi incomplete, punteggiatura non corretta e parole o frasi ambigue può non venire tradotte correttamente.
@@ -90,3 +90,4 @@ In aggiunta, chiedi a dei madrelingua di controllare e modificare la machine tra
 
 * **Evita il testo nei grafici.**
 * **Evita di utilizzare la formattazione con enfasi.**
+

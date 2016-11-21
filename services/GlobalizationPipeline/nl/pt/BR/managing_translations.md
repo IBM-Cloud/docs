@@ -13,7 +13,7 @@ copyright:
 # Gerenciando traduções
 {: #globalizationpipeline_managingtranslations}
 
-*Última atualização: 6 de julho de 2016*
+*Última atualização: 14 de outubro de 2016*
 {: .last-updated}
 
 Uma vez criados os pacotes configuráveis e iniciada a geração de traduções para seu aplicativo, o conteúdo gerado pela máquina poderá ser usado como está ou modificado posteriormente. Você também tem a opção de usar uma tradução de máquina diferente do padrão. Esta seção descreve como mudar o mecanismo de tradução de máquina que executa as traduções de seus pacotes configuráveis, como executar edição humana pós-tradução e também como designar funções de usuário e restrições de acesso às pessoas que precisarão acessar as traduções.
@@ -22,15 +22,16 @@ Uma vez criados os pacotes configuráveis e iniciada a geração de traduções 
 ## Configuração da tradução de máquina
 {: #globalizationpipeline_service_to_service}
 
-O {{site.data.keyword.GlobalizationPipeline_full}} suporta a capacidade de integrar serviços de tradução de máquina alternativos para executar a tradução de máquina de seus pacotes configuráveis. A inclusão de um serviço alternativo poderá ser benéfica se o mecanismo padrão utilizado pelo {{site.data.keyword.GlobalizationPipeline_full}} não oferecer um idioma específico que você precisa ou se você preferir as traduções de máquina que são geradas por um mecanismo diferente. O uso ou os encargos de serviços alternativos são cobertos sob os termos desses serviços.
+O {{site.data.keyword.GlobalizationPipeline_full}} suporta a capacidade de integrar serviços de tradução de máquina alternativos para executar a tradução de máquina de seus pacotes configuráveis. A inclusão de um serviço alternativo poderá ser benéfica se o mecanismo padrão utilizado pelo {{site.data.keyword.GlobalizationPipeline_short}} não oferecer um idioma específico que você precisa ou se você preferir as traduções de máquina que são geradas por um mecanismo diferente. O uso ou os encargos de serviços alternativos são cobertos sob os termos desses serviços.
 
-Para incluir e configurar um serviço de tradução de máquina alternativo para o {{site.data.keyword.GlobalizationPipeline_full}}, selecione a guia **Configuração de tradução de máquina** no painel do {{site.data.keyword.GlobalizationPipeline_full}}.
+Para incluir e configurar um serviço de tradução de máquina alternativo para o {{site.data.keyword.GlobalizationPipeline_short}}, selecione a guia **Configuração de tradução de máquina** no painel do {{site.data.keyword.GlobalizationPipeline_short}}.
 
-* Para incluir um serviço de tradução de máquina que esteja no catálogo do {{site.data.keyword.Bluemix_notm}}, (**Watson Language Translation**), o serviço deve primeiro ser incluído no espaço do {{site.data.keyword.Bluemix_notm}}.
+* Para incluir um serviço de tradução de máquina que esteja no catálogo do {{site.data.keyword.Bluemix_notm}}, (**Watson Language Translator**), o serviço deve
+primeiro ser incluído em seu espaço do {{site.data.keyword.Bluemix_notm}}.
 
 * Para incluir um serviço de terceiros, selecione o botão desse serviço na guia **Configuração de tradução de máquina** e forneça as credenciais de usuário requeridas para acessar o serviço.
 
-Após um serviço de tradução de máquina ter sido incluído no {{site.data.keyword.GlobalizationPipeline_full}}, conclua as etapas restantes para concluir a integração desse serviço.
+Após um serviço de tradução de máquina ter sido incluído no {{site.data.keyword.GlobalizationPipeline_short}}, conclua as etapas restantes para concluir a integração desse serviço.
 
 1. Clique em **Ativar** para ativar a integração com esse serviço.
 
@@ -40,7 +41,7 @@ Após um serviço de tradução de máquina ter sido incluído no {{site.data.ke
 
 4. Clique em **Salvar** para retornar à guia **Configuração de tradução de máquina**.
 
-Depois que um serviço alternativo tiver sido configurado com o {{site.data.keyword.GlobalizationPipeline_full}}, todos os idiomas de destino que tiverem sido designados a esse mecanismo começarão a ser gerados usando esse mecanismo. 
+Depois que um serviço alternativo tiver sido configurado com o {{site.data.keyword.GlobalizationPipeline_short}}, todos os idiomas de destino que tiverem sido designados a esse mecanismo começarão a ser gerados usando esse mecanismo. 
 
 Para parar de usar um mecanismo de tradução de máquina alternativo:
 
@@ -54,7 +55,7 @@ Depois que um serviço de tradução de máquina alternativo for desativado, tod
 ## Visualizando e editando traduções
 {: #globalizationpipeline_translations}
 
-O serviço {{site.data.keyword.GlobalizationPipeline_full}} fornece recursos
+O serviço {{site.data.keyword.GlobalizationPipeline_short}} fornece recursos
 de edição humana pós-tradução. Um tradutor profissional ou alguém conhecedor de qualquer
 um dos idiomas de destino pode fazer edições nas traduções geradas. É possível editar
 para melhorar a qualidade ou a consistência da tradução ou substituir palavras
@@ -92,9 +93,9 @@ Para visualizar e editar as traduções de um idioma de destino:
 Se você criar mais usuários da API, será possível restringir o acesso deles a um ou mais pacotes configuráveis específicos, ou conceder a eles acesso a todos os pacotes configuráveis disponíveis.
 
 Para conceder a um usuário da API acesso a pacotes configuráveis em uma instância
-de serviço do {{site.data.keyword.GlobalizationPipeline_full}}:
+de serviço do {{site.data.keyword.GlobalizationPipeline_short}}:
 
-1. No painel do {{site.data.keyword.GlobalizationPipeline_full}}, clique na guia **Usuários da API**.
+1. No painel do {{site.data.keyword.GlobalizationPipeline_short}}, clique na guia **Usuários da API**.
 2. Clique em **Novo usuário da API**.
 3. Digite um **nome de exibição** e **comentário** para descrever o novo usuário da API.
 4. Escolha um **tipo** para o novo usuário da API.
@@ -107,7 +108,7 @@ Um ID e uma senha do usuário da API são gerados e exibidos. Copie e salve essa
 
 Para reconfigurar a senha de usuário da API:
 
-1. No painel do {{site.data.keyword.GlobalizationPipeline_full}}, clique na guia **Usuários da API**.
+1. No painel do {{site.data.keyword.GlobalizationPipeline_short}}, clique na guia **Usuários da API**.
 2. Clique no ícone **Reconfigurar senha** ![Selecione este ícone para reconfigurar a senha dos usuários da API](images/resetPW.png) para reconfigurar a senha de um ID de usuário específico. 
 3. Clique
 em **Sim**. 

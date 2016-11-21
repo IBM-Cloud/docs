@@ -14,7 +14,7 @@ copyright:
 # Gestione dei bundle
 {: #globalizationpipeline_workingwithbundles}
 
-*Ultimo aggiornamento: 6 luglio 2016*
+*Ultimo aggiornamento: 30 agosto 2016*
 {: .last-updated}
 
 Ogni bundle che hai creato contiene la coppia di valore chiave dal tuo file di risorsa e la serie completa di traduzioni che sono state generate.
@@ -102,7 +102,7 @@ Dopo aver caricato un file di risorsa, puoi tradurne il contenuto in ognuna dell
 </thead>
 <tbody>
 <tr>
-<td>Cinese (semplificato) </td>
+<td>Cinese (semplificato)</td>
 </tr>
 <tr>
 <td>Cinese (tradizionale)</td>
@@ -126,12 +126,12 @@ Dopo aver caricato un file di risorsa, puoi tradurne il contenuto in ognuna dell
 <td>Portoghese (brasiliano)</td>
 </tr>
 <tr>
-<td>Spagnolo </td>
+<td>Spagnolo</td>
 </tr>
 </tbody>
 </table>
 
-**Nota:** l'inglese è al momento l'unica lingua di origine supportata. Man mano che il servizio {{site.data.keyword.GlobalizationPipeline_full}} si evolve, saranno aggiunte ulteriori lingue di destinazione e di origine.
+**Nota:** il motore della machine translation predefinito di {{site.data.keyword.GlobalizationPipeline_short}} fornisce supporto solo per l'inglese come lingua di origine. Tuttavia, i motori della machine translation alternativi disponibili per la configurazione in {{site.data.keyword.GlobalizationPipeline_short}} supportano la traduzione di altre coppie di lingue di origine non in inglese/lingua.
 
 Come hai creato i bundle, saranno aggiunti alla scheda **Bundles** per renderli più facilmente accessibili. Da qui, possono essere eseguite ulteriori attività sulle tue traduzioni.
 
@@ -157,10 +157,10 @@ Quando apri un bundle puoi visualizzarne tutti i dettagli. Sono elencate tutte l
 
 Lo stato di ogni lingua nel bundle può essere In corso, Non riuscito o Tradotto:
 
-| Stato  | Descrizione  |
+| Stato | Descrizione |
 |--------|-------------|
 | In corso | La machine translation è ancora in corso. |
-| Non riuscito  | Si è verificato un errore durante la traduzione del file di risorsa nella lingua di destinazione. |
+| Non riuscito | Si è verificato un errore durante la traduzione del file di risorsa nella lingua di destinazione. |
 | Tradotto | La traduzione della lingua di destinazione è completa. |
 
 Puoi aggiornare il file di risorsa che utilizza il bundle, aggiungere una lingua di destinazione al bundle, eliminare una lingua di destinazione da un bundle e scaricare le traduzioni generate per una lingua di destinazione.
@@ -190,7 +190,7 @@ Quando elimini una lingua di destinazione da un bundle, rimuovi la lingua di des
 
 ### Scaricamento delle traduzioni generate per una lingua di destinazione.
 
-{{site.data.keyword.GlobalizationPipeline_full}} fornisce varie opzioni per incorporare la traduzione di una una lingua di destinazione nella tua applicazione. Puoi scaricare la traduzione come un file di risorsa e includerlo nella creazione della tua applicazione. Puoi anche fare riferimento alla traduzione dinamica dalla {{site.data.keyword.GlobalizationPipeline_full}} utilizzando uno degli [SDK](https://github.com/IBM-Bluemix/gp-common) open source. 
+{{site.data.keyword.GlobalizationPipeline_short}} fornisce varie opzioni per incorporare la traduzione di una una lingua di destinazione nella tua applicazione. Puoi scaricare la traduzione come un file di risorsa e includerlo nella creazione della tua applicazione. Puoi anche fare riferimento alla traduzione dinamica dalla {{site.data.keyword.GlobalizationPipeline_short}} utilizzando uno degli [SDK](https://github.com/IBM-Bluemix/gp-common) open source. 
 
 <!-- For information on {{site.data.keyword.GlobalizationPipeline_full}} SDKs, see <link>. -->
 

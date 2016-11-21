@@ -11,13 +11,13 @@ copyright:
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.GlobalizationPipeline_full}} 故障诊断
+# {{site.data.keyword.GlobalizationPipeline_short}} 故障诊断
 {: #globalizationpipelinets}
 
-*上次更新时间：2016 年 6 月 27 日*
+*上次更新时间：2016 年 8 月 30 日*
 {: .last-updated}
 
-以下是有关使用 {{site.data.keyword.GlobalizationPipeline_full}} 常见问题的一些解答。
+以下是有关使用 {{site.data.keyword.GlobalizationPipeline_short}} 常见问题的一些解答。
 {:shortdesc}
 
 
@@ -47,7 +47,7 @@ copyright:
 当向新翻译束中添加资源文件或更新要翻译的现有资源文件时，接收到错误。
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}} 仅接受以下类型的资源文件：Java™ .properties、JSON 和 AMD I18N。
+{{site.data.keyword.GlobalizationPipeline_short}} 仅接受以下类型的资源文件：Java™ .properties、JSON 和 AMD I18N。
 {: tsCauses}
 
 请确保要上传的资源文件是以下其中一种类型。
@@ -67,7 +67,7 @@ copyright:
 当向翻译项目添加或更新资源文件时，由于文件的一部分太大而发生错误。
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}} 仅接受满足特定大小需求的资源文件。
+{{site.data.keyword.GlobalizationPipeline_short}} 仅接受满足特定大小需求的资源文件。
 {: tsCauses}
 
 请确保资源文件符合以下准则：
@@ -77,22 +77,6 @@ copyright:
 * 每个翻译项目最多可包含 500 个键值对。
 * 资源文件不能超过 2 MB。
 
-
-
-## 非英文资源文件未正确地翻译为其他语言
-{: #problem4}
-
-非英文的源资源文件未正确地翻译。
-{:shortdesc}
-
-当非英文的源资源文件上传到翻译束时，所生成的翻译不正确。
-{: tsSymptoms}
-
-{{site.data.keyword.GlobalizationPipeline_full}} 目前仅支持英文作为源语言。
-{: tsCauses}
-
-不支持非英文资源文件的翻译。
-{: tsResolve}
 
 
 
@@ -108,5 +92,5 @@ copyright:
 机器翻译引擎设计用来使用自然语言，可能无法始终识别或了解如何处理编程语言所使用的特定语法。因此，处理与纯文本混合在一起的语法可能会有所不同。
 {: tsCauses}
 
-{{site.data.keyword.GlobalizationPipeline_full}} 目前识别常用于代表变量的“{}”模式，将会保留其中所包含的原始内容格式。
+{{site.data.keyword.GlobalizationPipeline_short}} 目前识别常用于代表变量的“{}”模式，将会保留其中所包含的原始内容格式。
 {: tsResolve}

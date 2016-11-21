@@ -14,7 +14,7 @@ copyright:
 # バンドルの操作
 {: #globalizationpipeline_workingwithbundles}
 
-*最終更新日: 2016 年 7 月 6 日*
+*最終更新日: 2016 年 8 月 30 日*
 {: .last-updated}
 
 作成した各バンドルには、リソース・ファイルから取得されたキー/値ペアと、生成されたすべての翻訳セットが含まれています。
@@ -92,7 +92,7 @@ define({
 
 アップロードしたリソース・ファイルのみが翻訳されます。[バンドルを作成する](index.html#globalizationpipeline_creatingbundles)ときや、[バンドルの詳細を変更する](bundles.html#globalizationpipeline_modifyingbundles)ときに、リソース・ファイルをアップロードできます。
 
-リソース・ファイルをアップロードした後、その内容を、デフォルトの機械翻訳エンジンが提供している言語に翻訳できます。オプションで、[機械翻訳の構成](managing_translations.html#globalizationpipeline_service_to_service)のセクションの説明に従って、別の機械翻訳エンジンを選択することもできます。デフォルトのエンジンでは、ターゲット言語として以下がサポートされています。
+リソース・ファイルをアップロードした後、その内容を、デフォルトの機械翻訳エンジンが提供しているどの言語にも翻訳できます。オプションで、[機械翻訳の構成](managing_translations.html#globalizationpipeline_service_to_service)のセクションの説明に従って、別の機械翻訳エンジンを選択することもできます。デフォルトのエンジンでは、以下のターゲット言語がサポートされています。
 
 <table>
 <thead>
@@ -131,7 +131,7 @@ define({
 </tbody>
 </table>
 
-**注:** 現在のところ、ソース言語としてサポートされているのは英語のみです。{{site.data.keyword.GlobalizationPipeline_full}}のサービスの充実化に伴い、今後、ソース言語とターゲット言語が追加される予定です。
+**注:** {{site.data.keyword.GlobalizationPipeline_short}}のデフォルトの機械翻訳エンジンは、ソース言語として英語のサポートのみを提供します。ただし、{{site.data.keyword.GlobalizationPipeline_short}}内の構成で利用可能な別の機械翻訳エンジンは、英語以外の他のソース言語/言語ペアの翻訳をサポートします。
 
 作成したバンドルは、**「バンドル」**タブに追加され、簡単にアクセスできるようになります。そこから、翻訳に対して追加の作業を実行できます。
 
@@ -191,12 +191,12 @@ define({
 
 ### ターゲット言語用に生成された翻訳をダウンロードする
 
-{{site.data.keyword.GlobalizationPipeline_full}}には、ターゲット言語用の翻訳をアプリケーションに取り込む手段がいくつか用意されています。翻訳をリソース・ファイルとしてダウンロードし、アプリケーション・ビルドに含めることができます。また、オープン・ソースの [SDK](https://github.com/IBM-Bluemix/gp-common) のいずれかを使用して、{{site.data.keyword.GlobalizationPipeline_full}}から動的に翻訳を参照することもできます。 
+{{site.data.keyword.GlobalizationPipeline_short}}には、ターゲット言語用の翻訳をアプリケーションに取り込む手段がいくつか用意されています。翻訳をリソース・ファイルとしてダウンロードし、アプリケーション・ビルドに含めることができます。また、オープン・ソースの [SDK](https://github.com/IBM-Bluemix/gp-common) のいずれかを使用して、{{site.data.keyword.GlobalizationPipeline_short}}から動的に翻訳を参照することもできます。 
 
 <!-- For information on {{site.data.keyword.GlobalizationPipeline_full}} SDKs, see <link>. -->
 
 翻訳をリソース・ファイルとしてダウンロードするには、次のようにします。 
 
-1. ダウンロードするターゲット言語またはソース言語の**「アクション」**列にある**「翻訳のダウンロード (Download the translations) 」**アイコン ![ターゲット言語用のソース・キーまたは翻訳をダウンロードする場合に、このダウンロード・アイコンを選択します](images/downloadIcon.png) をクリックします。
+1. ダウンロードするターゲット言語またはソース言語の**「アクション」**列にある**「翻訳のダウンロード (Download the translations)」**アイコン ![ターゲット言語用のソース・キーまたは翻訳をダウンロードする場合に、このダウンロード・アイコンを選択します](images/downloadIcon.png) をクリックします。
 2. ファイル・フォーマットを選択します。
 3. **「ダウンロード」**をクリックします。

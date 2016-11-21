@@ -13,7 +13,7 @@ copyright:
 # Gestione delle traduzioni
 {: #globalizationpipeline_managingtranslations}
 
-*Ultimo aggiornamento: 6 luglio 2016*
+*Ultimo aggiornamento: 14 ottobre 2016*
 {: .last-updated}
 
 Dopo aver creato i bundle e avviato la generazione delle traduzioni per la tua applicazione, il contenuto generato della machine può essere utilizzato così come è oppure modificato ulteriormente. Puoi inoltre scegliere di utilizzare una machine translation differente dalla predefinita. Questa sezione descrive come modificare il motore della machine translation che esegue le traduzioni per i bundle, come eseguire una modifica post traduzione umana e anche come puoi assegnare i ruoli utente e le restrizioni di accesso alle persone che avranno bisogno di accedere alle tue traduzioni.
@@ -22,15 +22,15 @@ Dopo aver creato i bundle e avviato la generazione delle traduzioni per la tua a
 ## Configurazione della machine translation
 {: #globalizationpipeline_service_to_service}
 
-{{site.data.keyword.GlobalizationPipeline_full}} supporta la capacità di integrare servizi machine translation alternativi per eseguire la machine translation dei tuoi bundle. L'aggiunta di un servizio alternativo può essere utile se il motore predefinito utilizzato dalla {{site.data.keyword.GlobalizationPipeline_full}} non offre una lingua specifica di cui hai bisogno o se preferisci le machine translation generate da un motore differente. L'utilizzo e gli addebiti dei servizi alternativi sono inclusi nei termini di tali servizi.
+{{site.data.keyword.GlobalizationPipeline_full}} supporta la capacità di integrare servizi machine translation alternativi per eseguire la machine translation dei tuoi bundle. L'aggiunta di un servizio alternativo può essere utile se il motore predefinito utilizzato dalla {{site.data.keyword.GlobalizationPipeline_short}} non offre una lingua specifica di cui hai bisogno o se preferisci le machine translation generate da un motore differente. L'utilizzo e gli addebiti dei servizi alternativi sono inclusi nei termini di tali servizi.
 
-Per aggiungere e configurare un servizio machine translation alternativo per {{site.data.keyword.GlobalizationPipeline_full}}, seleziona la scheda **Machine Translation Configuration** dal dashboard {{site.data.keyword.GlobalizationPipeline_full}}.
+Per aggiungere e configurare un servizio machine translation alternativo per {{site.data.keyword.GlobalizationPipeline_short}}, seleziona la scheda **Machine Translation Configuration** dal dashboard {{site.data.keyword.GlobalizationPipeline_short}}.
 
-* Per aggiungere un servizio machine translation nel catalogo {{site.data.keyword.Bluemix_notm}}, (**Watson Language Translation**), il servizio deve prima essere aggiunto nello spazio {{site.data.keyword.Bluemix_notm}}.
+* Per aggiungere un servizio machine translation nel catalogo {{site.data.keyword.Bluemix_notm}}, (**Watson Language Translator**), il servizio deve prima essere aggiunto nello spazio {{site.data.keyword.Bluemix_notm}}.
 
 * Per aggiungere un servizio di terze parti, seleziona il pulsante per tale servizio nella scheda **Machine Translation Configuration** e fornisci le credenziali utente necessarie per accedere al servizio.
 
-Dopo aver aggiunto un servizio machine translation a {{site.data.keyword.GlobalizationPipeline_full}}, segui i rimanenti passi per completare l'integrazione di tale servizio.
+Dopo aver aggiunto un servizio machine translation a {{site.data.keyword.GlobalizationPipeline_short}}, segui i rimanenti passi per completare l'integrazione di tale servizio.
 
 1. Fai clic su **Enable** per abilitare l'integrazione con tale servizio.
 
@@ -40,7 +40,7 @@ Dopo aver aggiunto un servizio machine translation a {{site.data.keyword.Globali
 
 4. Fai clic su **Save** per ritornare alla scheda **Machine Translation Configuration**.
 
-Dopo aver configurato un servizio alternativo con {{site.data.keyword.GlobalizationPipeline_full}}, tutte le lingue che sono state assegnate a tale motore inizieranno ad essere generate utilizzando quel motore. 
+Dopo aver configurato un servizio alternativo con {{site.data.keyword.GlobalizationPipeline_short}}, tutte le lingue che sono state assegnate a tale motore inizieranno ad essere generate utilizzando quel motore. 
 
 Per arrestare l'utilizzo di un motore della machine translation alternativo:
 
@@ -53,7 +53,7 @@ Quando un servizio machine translation alternativo è disabilitato, tutte le tra
 ## Visualizzazione e modifica delle traduzioni
 {: #globalizationpipeline_translations}
 
-Il servizio {{site.data.keyword.GlobalizationPipeline_full}} fornisce le funzionalità di modifica di post traduzione umana. Un traduttore professionista o qualcuno esperto nelle lingue di destinazione può apportare modifiche alle traduzioni generate. Puoi eseguire modifiche per migliorare la qualità o la consistenza della traduzione o per sostituire una formulazione preferita. Ad esempio, potresti desiderare di sovrascrivere la traduzione di un nome prodotto.
+Il servizio {{site.data.keyword.GlobalizationPipeline_short}} fornisce le funzionalità di modifica di post traduzione umana. Un traduttore professionista o qualcuno esperto nelle lingue di destinazione può apportare modifiche alle traduzioni generate. Puoi eseguire modifiche per migliorare la qualità o la consistenza della traduzione o per sostituire una formulazione preferita. Ad esempio, potresti desiderare di sovrascrivere la traduzione di un nome prodotto.
 
 Per visualizzare e modificare le traduzioni per la lingua di destinazione:
 
@@ -85,9 +85,9 @@ Così come gestisci le tue traduzioni, potresti desiderare di fornire l'accesso 
 
 Se crei più utenti API, puoi limitare il loro accessi a uno o più bundle o fornire loro l'accesso a tutti i bundle disponibili.
 
-Per fornire l'accesso a un utente API a un bundle in un'istanza del servizio {{site.data.keyword.GlobalizationPipeline_full}}:
+Per fornire l'accesso a un utente API a un bundle in un'istanza del servizio {{site.data.keyword.GlobalizationPipeline_short}}:
 
-1. Nel dashboard {{site.data.keyword.GlobalizationPipeline_full}}, fai clic sulla scheda ** API Users**.
+1. Nel dashboard {{site.data.keyword.GlobalizationPipeline_short}}, fai clic sulla scheda ** API Users**.
 2. Fai clic su **New API User**.
 3. Immetti un **nome di visualizzazione** e un **commento** per descrivere il nuovo utente API.
 4. Scegli un **tipo** per il nuovo utente API.
@@ -100,6 +100,6 @@ Vengono generati e visualizzati un ID utente e una password. Copia e salva quest
 
 Per reimpostare la password dell'utente API:
 
-1. Nel dashboard {{site.data.keyword.GlobalizationPipeline_full}}, fai clic sulla scheda ** API Users**.
+1. Nel dashboard {{site.data.keyword.GlobalizationPipeline_short}}, fai clic sulla scheda ** API Users**.
 2. Fai clic sull'icona **Reset Password** ![Seleziona questa icona per reimpostare la password degli utenti API](images/resetPW.png) per reimpostare la password per un ID utente specifico. 
 3. Fai clic su **Yes**. 

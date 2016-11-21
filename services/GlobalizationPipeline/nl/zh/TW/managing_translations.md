@@ -13,7 +13,7 @@ copyright:
 # 管理翻譯
 {: #globalizationpipeline_managingtranslations}
 
-*前次更新：2016 年 7 月 6 日*
+*前次更新：2016 年 10 月 14 日*
 {: .last-updated}
 
 在您建立軟體組並開始產生應用程式的翻譯之後，即可依現狀使用或進一步修改機器產生的內容。您也可以選擇使用預設值以外的機器翻譯。本節說明如何變更執行軟體組翻譯的機器翻譯引擎、如何執行人工翻譯後處理編輯，以及如何將使用者角色和存取限制指派給需要存取翻譯的人員。
@@ -22,15 +22,15 @@ copyright:
 ## 機器翻譯配置
 {: #globalizationpipeline_service_to_service}
 
-{{site.data.keyword.GlobalizationPipeline_full}} 支援整合替代機器翻譯服務來執行軟體組之機器翻譯的能力。如果 {{site.data.keyword.GlobalizationPipeline_full}} 所使用的預設引擎未提供您所需的特定語言，或者您偏好不同引擎所產生的機器翻譯，則新增替代服務可能十分有幫助。替代服務條款涵蓋這些服務的使用和費用。
+{{site.data.keyword.GlobalizationPipeline_full}} 支援整合替代機器翻譯服務來執行軟體組之機器翻譯的能力。如果 {{site.data.keyword.GlobalizationPipeline_short}} 所使用的預設引擎未提供您所需的特定語言，或者您偏好不同引擎所產生的機器翻譯，則新增替代服務可能十分有幫助。替代服務條款涵蓋這些服務的使用和費用。
 
-若要新增和配置 {{site.data.keyword.GlobalizationPipeline_full}} 的替代機器翻譯服務，請從 {{site.data.keyword.GlobalizationPipeline_full}} 儀表板中選取**機器翻譯配置**標籤。
+若要新增和配置 {{site.data.keyword.GlobalizationPipeline_short}} 的替代機器翻譯服務，請從 {{site.data.keyword.GlobalizationPipeline_short}} 儀表板中選取**機器翻譯配置**標籤。
 
-* 若要新增 {{site.data.keyword.Bluemix_notm}} 型錄中的機器翻譯服務（**Watson 語言翻譯**），則必須先將該服務新增至 {{site.data.keyword.Bluemix_notm}} 空間。
+* 若要新增 {{site.data.keyword.Bluemix_notm}} 型錄中的機器翻譯服務（**Watson 語言翻譯程式**），則必須先將該服務新增至 {{site.data.keyword.Bluemix_notm}} 空間。
 
 * 若要新增協力廠商服務，請在**機器翻譯配置**標籤上選取該服務的按鈕，並提供存取服務所需的使用者認證。
 
-已將機器翻譯服務新增至 {{site.data.keyword.GlobalizationPipeline_full}} 之後，請完成其餘步驟來完成該服務的整合。
+已將機器翻譯服務新增至 {{site.data.keyword.GlobalizationPipeline_short}} 之後，請完成其餘步驟來完成該服務的整合。
 
 1. 按一下**啟用**，以開啟與該服務的整合。
 
@@ -40,7 +40,7 @@ copyright:
 
 4. 按一下**儲存**，以回到**機器翻譯配置**標籤。
 
-使用 {{site.data.keyword.GlobalizationPipeline_full}} 配置替代服務之後，將使用該引擎開始產生已指派給該引擎的所有目標語言。 
+使用 {{site.data.keyword.GlobalizationPipeline_short}} 配置替代服務之後，將使用該引擎開始產生已指派給該引擎的所有目標語言。 
 
 若要停止使用替代機器翻譯引擎，請執行下列動作：
 
@@ -53,7 +53,7 @@ copyright:
 ## 檢視和編輯翻譯
 {: #globalizationpipeline_translations}
 
-{{site.data.keyword.GlobalizationPipeline_full}} 服務提供人工翻譯後處理編輯功能。專業翻譯人員或瞭解任何目標語言的人員都可以編輯產生的翻譯。您可以編輯以改善翻譯的品質或一致性，或替換偏好的用語。例如，您可能要改寫產品名稱的翻譯。
+{{site.data.keyword.GlobalizationPipeline_short}} 服務提供人工翻譯後處理編輯功能。專業翻譯人員或瞭解任何目標語言的人員都可以編輯產生的翻譯。您可以編輯以改善翻譯的品質或一致性，或替換偏好的用語。例如，您可能要改寫產品名稱的翻譯。
 
 若要檢視和編輯目標語言的翻譯，請執行下列動作：
 
@@ -85,9 +85,9 @@ copyright:
 
 如果您建立多位 API 使用者，則可以限制他們對一個以上特定軟體組的存取權，或授與他們所有可用軟體組的存取權。
 
-若要授與 API 使用者 {{site.data.keyword.GlobalizationPipeline_full}} 服務實例中的軟體組存取權，請執行下列動作：
+若要授與 API 使用者 {{site.data.keyword.GlobalizationPipeline_short}} 服務實例中的軟體組存取權，請執行下列動作：
 
-1. 在 {{site.data.keyword.GlobalizationPipeline_full}} 儀表板上，按一下 **API 使用者**標籤。
+1. 在 {{site.data.keyword.GlobalizationPipeline_short}} 儀表板上，按一下 **API 使用者**標籤。
 2. 按一下**新建 API 使用**。
 3. 鍵入**顯示名稱**和**註解**，以說明新的 API 使用者。
 4. 選擇新 API 使用者的**類型**。
@@ -100,6 +100,6 @@ copyright:
 
 若要重設 API 使用者密碼，請執行下列動作：
 
-1. 在 {{site.data.keyword.GlobalizationPipeline_full}} 儀表板上，按一下 **API 使用者**標籤。
+1. 在 {{site.data.keyword.GlobalizationPipeline_short}} 儀表板上，按一下 **API 使用者**標籤。
 2. 按一下**重設密碼**圖示 ![選取此圖示以重設 API 使用者密碼](images/resetPW.png)，以重設特定使用者 ID 的密碼。 
 3. 按一下**是**。 

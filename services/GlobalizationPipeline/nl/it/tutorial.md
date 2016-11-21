@@ -10,11 +10,11 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Esercitazione di Globalization Pipeline
+# Esercitazione di {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline_tutorial}
 
-*Ultimo aggiornamento: 5 luglio 2016*
+*Ultimo aggiornamento: 13 luglio 2016*
 {: .last-updated}
 
-Per l'esercitazione video di {{site.data.keyword.GlobalizationPipeline_full}}, consulta [Esercitazione di {{site.data.keyword.GlobalizationPipeline_full}}](https://www.youtube.com/watch?v=r_w7IvPNtH0){: new_window}.
+Per l'esercitazione video di {{site.data.keyword.GlobalizationPipeline_short}}, vedi [Esercitazione di {{site.data.keyword.GlobalizationPipeline_short}}](https://www.youtube.com/watch?v=r_w7IvPNtH0){: new_window}.
 

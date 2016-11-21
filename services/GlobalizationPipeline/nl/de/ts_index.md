@@ -11,13 +11,13 @@ copyright:
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.GlobalizationPipeline_full}} - Fehlerbehebung
+# {{site.data.keyword.GlobalizationPipeline_short}} - Fehlerbehebung
 {: #globalizationpipelinets}
 
-*Letzte Aktualisierung: 27 Juni 2016*
+*Letzte Aktualisierung: 30. August 2016*
 {: .last-updated}
 
-Hier finden Sie einige Antworten auf häufig gestellte Fragen zur Verwendung von {{site.data.keyword.GlobalizationPipeline_full}}.
+Hier finden Sie einige Antworten auf häufig gestellte Fragen zur Verwendung von {{site.data.keyword.GlobalizationPipeline_short}}. 
 {:shortdesc}
 
 
@@ -47,7 +47,7 @@ Die Ressourcendatei, die ich hochladen möchte, wird nicht akzeptiert.
 Beim Hinzufügen einer Ressourcendatei zu einem neuen Übersetzungsbundle oder beim Aktualisieren einer vorhandenen Ressourcendatei, die übersetzt werden soll, erhalte ich einen Fehler.
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}} akzeptiert nur Ressourcendateien der folgenden Typen: Java™ .properties, JSON und AMD I18N.
+{{site.data.keyword.GlobalizationPipeline_short}} akzeptiert nur Ressourcendateien der folgenden Typen: Java™ .properties, JSON und AMD I18N.
 {: tsCauses}
 
 Stellen Sie sicher, dass die hochgeladene Ressourcendatei einen dieser Typen aufweist.
@@ -67,32 +67,16 @@ Die Ressourcendatei, die ich hochladen möchte, wird nicht akzeptiert.
 Beim Hinzufügen oder Aktualisieren einer Ressourcendatei zu einem Übersetzungsprojekt tritt ein Fehler auf, weil ein Teil der Datei zu groß ist.
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}} kann nur die Ressourcendateien akzeptieren, die bestimmte Größenanforderungen erfüllen.
+{{site.data.keyword.GlobalizationPipeline_short}} kann nur die Ressourcendateien akzeptieren, die bestimmte Größenanforderungen erfüllen.
 {: tsCauses}
 
 Stellen Sie sicher, dass die Ressourcendatei mit den folgenden Richtlinien übereinstimmt:
 {: tsResolve}
-* Jeder Schlüssel kann maximal 256 Zeichen lang sein. 
-* Jeder Wert kann maximal 2048 Zeichen enthalten. 
-* Jedes Übersetzungsprojekt kann maximal 500 Schlüssel-/Wertepaare enthalten. 
+* Jeder Schlüssel kann maximal 256 Zeichen lang sein.
+* Jeder Wert kann maximal 2048 Zeichen enthalten.
+* Jedes Übersetzungsprojekt kann maximal 500 Schlüssel-/Wertepaare enthalten.
 * Eine Ressourcendatei kann nicht größer als 2 MB sein.
 
-
-
-## Eine nicht englischsprachige Ressourcendatei wird nicht korrekt in andere Sprachen übersetzt
-{: #problem4}
-
-Eine Ressourcendatei mit einer anderen Ausgangssprache als Englisch wird nicht korrekt übersetzt.
-{:shortdesc}
-
-Wenn eine Ressourcendatei eine andere Sprache als Englisch als Ausgangssprache hat, wird sie in ein Übersetzungsbundle hochgeladen. Die generierten Übersetzungen sind nicht korrekt.
-{: tsSymptoms}
-
-{{site.data.keyword.GlobalizationPipeline_full}} unterstützt momentan nur Englisch als Ausgangssprache.
-{: tsCauses}
-
-Die Übersetzung von Ressourcendateien mit einer anderen Ausgangssprache als Englisch wird nicht unterstützt.
-{: tsResolve}
 
 
 
@@ -108,5 +92,5 @@ Der Abstand, der um Variablen herum verwendet wird, die in Zeichenfolgen enthalt
 Automatische Übersetzungssysteme sind für natürliche Sprache konzipiert und erkennen nicht immer bzw. wissen nicht immer, wie eine bestimmte Syntax, die von Programmiersprachen verwendet wird, zu handhaben ist. Die Übersetzung von Syntax, die mit einfachem Text gemischt ist, ist daher möglicherweise vom Original verschieden.
 {: tsCauses}
 
-{{site.data.keyword.GlobalizationPipeline_full}} erkennt aktuell das Muster "{}", das häufig für die Darstellung von Variablen verwendet wird, und behält das Originalformat des darin enthaltenen Inhalts bei.
+{{site.data.keyword.GlobalizationPipeline_short}} erkennt aktuell das Muster "{}", das häufig für die Darstellung von Variablen verwendet wird, und behält das Originalformat des darin enthaltenen Inhalts bei.
 {: tsResolve}

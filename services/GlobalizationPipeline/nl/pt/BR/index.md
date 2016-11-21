@@ -12,49 +12,79 @@ copyright:
 
 
 # Introdução do
-{{site.data.keyword.GlobalizationPipeline_full}}
+{{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline}
 
-*Última atualização: 6 de julho de 2016*
+*Última atualização: 9 de setembro de 2016*
 {: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}} é um serviço que fornece tradução de máquina e recursos de edição para traduzir rapidamente IUs da web ou móveis. Com seu painel, API RESTful e integração com o pipeline de entrega de seu app, é possível liberar para clientes globais sem ter de reconstruir ou reimplementar seu app.
 {:shortdesc}
 
-É possível usar o serviço {{site.data.keyword.GlobalizationPipeline_full}} com qualquer app no {{site.data.keyword.Bluemix}}, ou desvinculado, sozinho. É possível criar, manter e revisar traduções rapidamente, com esforço mínimo e sem precisar sair de seu ambiente DevOps.
+É possível usar o serviço {{site.data.keyword.GlobalizationPipeline_short}} com qualquer app no {{site.data.keyword.Bluemix}}, ou desvinculado, sozinho. É possível criar, manter e revisar traduções rapidamente, com esforço mínimo e sem precisar sair de seu ambiente DevOps.
 
-Na interface do {{site.data.keyword.GlobalizationPipeline_full}}, é possível traduzir rapidamente seus apps {{site.data.keyword.Bluemix_notm}}. Para obter informações sobre como traduzir seus apps usando a API RESTful, consulte [Referência de API](https://gp-rest.ng.bluemix.net/translate/swagger/index.html){: new_window}. 
+Na interface do {{site.data.keyword.GlobalizationPipeline_short}}, é possível traduzir rapidamente seus apps {{site.data.keyword.Bluemix_notm}}. Para obter informações sobre como traduzir seus apps usando a API RESTful, consulte [Referência de API](https://gp-rest.ng.bluemix.net/translate/swagger/index.html){: new_window}. 
 
 
 ## Criando um pacote configurável
 {: #globalizationpipeline_creatingbundles}
 
-Com o serviço {{site.data.keyword.GlobalizationPipeline_full}}, é possível
+Com o serviço {{site.data.keyword.GlobalizationPipeline_short}}, é possível
 criar pacotes configuráveis, que incluem os arquivos de recursos de seus apps que serão
 traduzidos. Os arquivos de recursos podem ser de propriedades Java, AMD I18N ou JSON e
 devem ter conteúdo na forma de pares de chave/valor que representem as sequências da IU
-do seu app. Para obter mais detalhes e exemplos de tipos de arquivos suportados, consulte
+do seu app.  Para obter mais detalhes e exemplos de tipos de arquivos suportados, consulte
 [Trabalhando com pacotes configuráveis](./bundles.html){: new_window}.
 
 Para criar um pacote configurável, conclua as etapas a seguir:
 
-1\. Na guia **Visão geral**, clique em **Novo pacote configurável**.
+<ol>
+<li>Na guia <strong>Visão geral</strong>, clique em <strong>Novo pacote configurável</strong>.</li>
 
-2\. Forneça as informações sobre o pacote configurável:
+<li>Forneça as informações sobre o pacote configurável:</li>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Obrigatória</th>
+<th>Descri‡Æo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ID do pacote
+</strong></td>
+<td>Sim</td>
+<td>Um nome exclusivo para identificar o pacote configurável.</td>
+</tr>
+<tr>
+<td><strong>Idioma de origem
+</strong></td>
+<td>Sim</td>
+<td>O idioma nativo do arquivo de origem.</td>
+</tr>
+<tr>
+<td><strong>Arquivo de Recursos</strong></td>
+<td>NÃO</td>
+<td>Um <a href=https://new-console.ng.bluemix.net/docs/services/GlobalizationPipeline/bundles.html>arquivo de recursos</a> a ser traduzido. O tamanho máximo do arquivo é limitado a 2MB. Os arquivos de recursos especificados serão transferidos por upload.</td>
+</tr>
+<tr>
+<td><strong>Formato de arquivo </strong></td>
+<td>NÃO</td>
+<td>O tipo de arquivo que está sendo transferido por upload.</td>
+</tr>
+<tr>
+<td><strong>Idioma de destino</strong></td>
+<td>NÃO</td>
+<td>Os idiomas para os quais você deseja traduções.</td>
+</tr>
+</tbody>
+</table>
 
-| Campo | Obrigatória| Descri‡Æo|
-|-------|---------|------------|
-| **ID do pacote
-** | Sim | Um nome exclusivo para identificar o pacote configurável. |
-| **Idioma de origem
-** | Sim | O idioma nativo do arquivo de origem. |
-| **Arquivo de Recursos** | NÃO | Um [arquivo de recursos](bundles.html#globalizationpipeline_workingwithbundles) a ser traduzido. O tamanho máximo do arquivo é limitado a 2MB. Os arquivos de recursos especificados serão transferidos por upload.  |
-| **Formato de arquivo ** | NÃO | O tipo de arquivo que está sendo transferido por upload. |
-| **Idioma de destino** | NÃO | Os idiomas para os quais você deseja traduções. |
+<p><strong>Nota:</strong> para mudar o serviço de idioma que fornece tradução de máquina para seus pacotes configuráveis, clique na guia <a href=https://new-console.ng.bluemix.net/docs/services/GlobalizationPipeline/managing_translations.html#globalizationpipeline_service_to_service>Configuração de MT</a> para visualizar outros mecanismos de tradução de máquina suportados.</p>
 
-**Nota:** para mudar o serviço de idioma que fornece tradução de máquina para seus pacotes configuráveis, clique na guia [**Configuração de MT**](./managing_translations.html#globalizationpipeline_service_to_service) para visualizar outros mecanismos de tradução de máquina suportados.
+<li>Clique em <strong>salvar</strong></li></ol>
 
-3\. Clique em**Salvar**
 
 Após o pacote configurável ser criado, o arquivo de recursos transferido por
 upload é traduzido em todos os idiomas de destino especificados. O novo pacote
@@ -64,17 +94,17 @@ configurável é incluído na guia Pacotes configuráveis, na qual é possível:
 * Editar as traduções geradas
 * Atualizar o arquivo de origem usado no pacote configurável e gerar novamente as traduções
 
-## Importando pacotes configuráveis traduzidos para o serviço
+## Importando pacotes configuráveis traduzidos
 {: #globalizationpipeline_importtranslatedbundlesintoservice}
 
-Como alternativa, se você já tiver arquivos de recursos traduzidos, será possível importá-los para o novo pacote configurável. Para obter mais informações, consulte [Ferramentas do cliente Java para o {{site.data.keyword.GlobalizationPipeline_full}}](https://github.com/IBM-Bluemix/gp-java-tools).
+Como alternativa, se você já tiver arquivos de recursos traduzidos, será possível importá-los para o novo pacote configurável. Para obter mais informações, consulte [Ferramentas do cliente Java para o {{site.data.keyword.GlobalizationPipeline_short}}](https://github.com/IBM-Bluemix/gp-java-tools).
 
 **Nota:** se o arquivo de origem original for atualizado, as chaves e valores definidos no arquivo serão sincronizados com a versão mais recente do arquivo de origem para que somente as chaves e valores mudados sejam traduzidos.
 
-## Estimando o uso de dados do {{site.data.keyword.GlobalizationPipeline_full}}
+## Estimando o uso de dados do {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline_documentpricing}
 
-O {{site.data.keyword.GlobalizationPipeline_full}} armazena suas traduções em um banco de dados de backend. Para estimar o tamanho de dados ativos, é possível consultar a fórmula a seguir:
+O {{site.data.keyword.GlobalizationPipeline_short}} armazena suas traduções em um banco de dados de backend. Para estimar o tamanho dos dados ativos, é possível consultar a fórmula de estimação de armazenamento de dados:
 
 `<tamanho esperado do armazenamento de dados de recurso em MB> ˜= 0.0005 * <número de pares de chave/valor no recurso de origem> * <número de idiomas incluindo o idioma de origem>`
 

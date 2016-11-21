@@ -10,11 +10,11 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Globalization Pipeline - Tutoriel
+# Tutoriel {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline_tutorial}
 
-*Dernière mise à jour : 5 juillet 2016*
+*Dernière mise à jour : 13 juillet 2016*
 {: .last-updated}
 
-Pour suivre le tutoriel vidéo de {{site.data.keyword.GlobalizationPipeline_full}}, accédez au site du [tutoriel de {{site.data.keyword.GlobalizationPipeline_full}}](https://www.youtube.com/watch?v=r_w7IvPNtH0){: new_window}.
+Pour suivre le tutoriel vidéo de {{site.data.keyword.GlobalizationPipeline_short}}, voir [le tutoriel {{site.data.keyword.GlobalizationPipeline_short}}](https://www.youtube.com/watch?v=r_w7IvPNtH0){: new_window}.
 

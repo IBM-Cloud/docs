@@ -14,7 +14,7 @@ copyright:
 # Dicas de tradução de máquina
 {: #globalizationpipeline_tips}
 
-*Última atualização: 27 de março de 2016*
+*Última atualização: 12 de julho de 2016*
 {: .last-updated}
 
 A tradução de máquina pode ser eficaz em fornecer uma aproximação do significado do texto de origem. Entretanto, a qualidade e utilidade da tradução de máquina varia muito dependendo do idioma de destino e do mecanismo de tradução de máquina que você usa. Um dos principais fatores na qualidade da tradução de máquina é a qualidade da origem em si. Um texto de origem carregado de coloquialismos, sentenças incompletas, pontuação incorreta e palavras e frases ambíguas pode não ser traduzido com precisão.
@@ -57,7 +57,7 @@ verbos:** assegure-se de que sujeitos no plural tenham verbos no plural e sujeit
 * **Assegure-se de que os pronomes concordem com seus antecedentes:** por exemplo, "A user should first determine their tasks" deveria ser reescrito como "Users should first determine their tasks"..
 * **Evite modificadores soltos:** coloque os modificadores na posição apropriada para que eles modifiquem o substantivo desejado. Por exemplo, "While typing in commands, the program does not send any messages to you" pode ser reescrito como "While typing in commands, you do not receive any messages from the program".
 * **Evite negativos duplos:** por exemplo,
-"Do not omit the date" pode ser substituído por "Include the date." 
+"Do not omit the date" pode ser substituído por "Include the date."
 * **Evite as formas de verbos no infinitivo
 (escrever), gerúndio (escrevendo) e particípio passado (escreveu) no início de sentenças:** essas formas verbais geralmente são ambíguas e difíceis de traduzir.
 * **Evite sequências de substantivos:** limite frases com substantivos compostos, como "special filter factor estimate considerations", a não mais que três palavras.
@@ -103,3 +103,4 @@ lista:** por exemplo, "Select your company, location, and profession".
 
 * **Evite texto em gráficos.**
 * **Evite usar formatação para enfatizar.**
+
