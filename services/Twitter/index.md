@@ -1,12 +1,17 @@
+---
+
+copyright:
+  years: 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
 # Getting started with Insights for Twitter {: #insights_twitter_overview}
-
-*Last updated: 21 Nov 2016*
-{: .last-updated}
 
 Use {{site.data.keyword.twitterfull}} to incorporate Twitter content from the Twitter [Decahose](http://support.gnip.com/gnip2.0/){: new_window} or [PowerTrack](http://support.gnip.com/apis/powertrack2.0/){: new_window} streams into your {{site.data.keyword.Bluemix}} applications.
 {:shortdesc}
