@@ -8,7 +8,7 @@ copyright:
 
 # Registering a device with userId
 {: #register_device_with_userId}
-Last updated: 17 October 2016
+Last updated: 21 November 2016
 {: .last-updated}
 
 To register for userId-based notification, complete the following steps:
@@ -57,6 +57,21 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 Pass the unique userId value for registering for {{site.data.keyword.mobilepushshort}}.
 
 **Note:** To enable {{site.data.keyword.mobilepushshort}} targeted by UserId, ensure that you register the device with a userId and also pass the 'clientSecret' that is allocated when the {{site.data.keyword.mobilepushshort}} services are provisioned. Device registration will fail without a valid clientSecret.
+
+## Cordova
+{: cordova}
+
+Use the following APIs to register for UserId based {{site.data.keyword.mobilepushshort}}.
+
+```
+// Register device for push notification with UserId
+var options = {"userId": "Your User Id value"};
+BMSPush.registerDevice(options,success, failure); 
+```
+####userId
+{: cordova-user-id}
+
+Pass the unique userId value for registering for {{site.data.keyword.mobilepushshort}}.
 
 
 ## Objective-C
@@ -185,7 +200,7 @@ var params = {
 ```
 	{: codeblock}
   
-After successfully initialized register the web application with userId.
+After the successfull initialisation, you need to register the web application with the userId.
 
 ```
 bmsPush.registerWithUserId("UserId", function(response) {
