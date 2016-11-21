@@ -1,12 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
 # Decahose and PowerTrack streams {: #decahose_powertrack}
-
-*Last updated: 13 May 2016*
-{: .last-updated}
 
 {{site.data.keyword.twittershort}} provides access to Twitter Decahose and PowerTrack streams, based on {{site.data.keyword.Bluemix_notm}} plan enrollment. 
 Both streams deliver real-time feeds and different characteristics to suit your needs.
