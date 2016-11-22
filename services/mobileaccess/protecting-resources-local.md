@@ -165,33 +165,31 @@ IMFResourceRequest *request =  [IMFResourceRequest
 
 ```Swift
 
-let baseRequestUrl = "http://localhost:3000"
-let bluemixAppRoute = "http://myapp.mybluemix.net"
-let tenantId = "your-MCA-service-tenantID"
-let regionName = BMSClient.Region.usSouth
-// set your MCA application region here. Currently these can be BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, BMSClient.Region.sydney
-
-BMSClient.sharedInstance.initialize(bluemixAppRoute: bluemixAppRoute, bluemixAppGUID: tenantId, bluemixRegion: regionName)
-
-BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
-
-let requestPath = baseRequestUrl + "/resource/path"               
-let request = Request(url: requestPath, method: HttpMethod.GET)
-
-request.send { (response, error) in
-	if let error = error {
-    			print("Connection failure")
-     		print("Error :: \(error)");
-     		print("Status :: \(response?.statusCode)");
-    	} else {
-           print("Connection success")
-           print("Response :: \(response?.responseText)")
-    }                
-}
-
-
+ let baseRequestUrl = "http://localhost:3000";
+ let tenantId = "<serviceTenantID>"
+ let regionName = <applicationBluemixRegion>
+ //possible values: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney
+ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+ mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+ BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+        
+        
+ let requestPath = baseRequestUrl + "/protectedResource"
+ let request = Request(url: requestPath, method: HttpMethod.GET)
+        
+    request.send { (response, error) in
+        if let error = error {
+            print("Connection failure")
+            print("Error :: \(error)");
+            print("Status :: \(response?.statusCode)");
+        } else {
+            print("Connection success")
+            print("Response :: \(response?.responseText)")
+        }
+    }
 
 ```
+
 
 
 ### Cordova
