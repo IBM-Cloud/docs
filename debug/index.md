@@ -129,7 +129,7 @@ The `stdout.log` and `stderr.log` files were previously accessible, by default, 
   * For Liberty for Java applications, output directed to stdout and stderr is already contained in the `messages.log` file in the logs directory. Look for entries prefixed with SystemOut and SystemErr respectively.
   * For Node.js applications, you can override the console.log function to explicitly write to a file in the logs directory.
   * For PHP applications, you can use the error_log function write to a file in the logs directory.
-  * For Python applications, you can have the logger write to a file in the logs directory: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * For Python applications, you can have the logger write to a file in the logs directory: logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)
   * For Ruby applications, you can have the logger write to a file in the logs directory.
 
 
