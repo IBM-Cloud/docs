@@ -11,42 +11,72 @@ copyright:
 {:codeblock:.codeblock}
 
 
-# Iniciación a {{site.data.keyword.GlobalizationPipeline_full}}
+# Iniciación a {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline}
 
-*Última actualización: 6 de julio de 2016*
+*Última actualización: 9 de septiembre de 2016*
 {: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}} es un servicio que proporciona la traducción automática y posibilidades de edición para traducir rápidamente interfaces de usuario web o móviles. Con su panel de control, la API RESTful y la integración con el conducto de entrega de la app, puede entregar a los clientes globales sin tener que volver a crear o desplegar la app.
 {:shortdesc}
 
-Puede utilizar el servicio {{site.data.keyword.GlobalizationPipeline_full}} con cualquier app en {{site.data.keyword.Bluemix}}, o no enlazado, por sí mismo. Puede crear, mantener y revisar traducciones rápidamente, con un esfuerzo mínimo y sin tener que salir de su entorno DevOps.
+Puede utilizar el servicio {{site.data.keyword.GlobalizationPipeline_short}} con cualquier app en {{site.data.keyword.Bluemix}}, o no enlazado, por sí mismo. Puede crear, mantener y revisar traducciones rápidamente, con un esfuerzo mínimo y sin tener que salir de su entorno DevOps.
 
-En la interfaz de {{site.data.keyword.GlobalizationPipeline_full}}, puede traducir rápidamente las app de {{site.data.keyword.Bluemix_notm}}. Para obtener información sobre la traducción de las apps utilizando la API RESTful, consulte [Referencia de API](https://gp-rest.ng.bluemix.net/translate/swagger/index.html){: new_window}. 
+En la interfaz de {{site.data.keyword.GlobalizationPipeline_short}}, puede traducir rápidamente las apps de {{site.data.keyword.Bluemix_notm}}. Para obtener información sobre la traducción de las apps utilizando la API RESTful, consulte [Referencia de API](https://gp-rest.ng.bluemix.net/translate/swagger/index.html){: new_window}. 
 
 
 ## Creación de un paquete
 {: #globalizationpipeline_creatingbundles}
 
-Con el servicio de {{site.data.keyword.GlobalizationPipeline_full}}, puede crear paquetes, que incluyen los archivos de recursos de las apps que se van a traducir. Los archivos de recursos pueden ser archivos Properties de Java, AMD I18N o JSON y deben tener contenido en la forma de pares clave/valor que representen las series de interfaz de usuario de la app. Para obtener más detalles y ejemplos de tipos de archivos soportados, consulte [Cómo trabajar con paquetes](./bundles.html){: new_window}.
+Con el servicio de {{site.data.keyword.GlobalizationPipeline_short}}, puede crear paquetes, que incluyen los archivos de recursos de las apps que se van a traducir. Los archivos de recursos pueden ser archivos Properties de Java, AMD I18N o JSON y deben tener contenido en la forma de pares clave/valor que representen las series de interfaz de usuario de la app.  Para obtener más detalles y ejemplos de tipos de archivos soportados, consulte [Cómo trabajar con paquetes](./bundles.html){: new_window}.
 
 Para crear un paquete, siga estos pasos:
 
-1\. En el separador **Visión general**, pulse **Nuevo paquete**.
+<ol>
+<li>En el separador <strong>Visión general</strong>, pulse <strong>Nuevo paquete</strong>.</li>
 
-2\. Proporcione información sobre el paquete:
+<li>Proporcione información sobre el paquete:</li>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Obligatorio</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ID del paquete</strong></td>
+<td>Sí</td>
+<td>Un nombre exclusivo para identificar el paquete.</td>
+</tr>
+<tr>
+<td><strong>Idioma de origen</strong></td>
+<td>Sí</td>
+<td>El idioma nativo del archivo de origen.</td>
+</tr>
+<tr>
+<td><strong>Archivo de recursos</strong></td>
+<td>No</td>
+<td>Un <a href=https://new-console.ng.bluemix.net/docs/services/GlobalizationPipeline/bundles.html>archivo de recursos</a> que se traducirá. El tamaño de archivo máximo está limitado a 2 MB. Los archivos de recursos especificados se subirán.</td>
+</tr>
+<tr>
+<td><strong>Formato de archivo</strong></td>
+<td>No</td>
+<td>El tipo de archivo que se está cargando.</td>
+</tr>
+<tr>
+<td><strong>Idioma de destino</strong></td>
+<td>No</td>
+<td>Los idiomas para los que desea traducciones.</td>
+</tr>
+</tbody>
+</table>
 
-| Campo | Obligatorio| Descripción|
-|-------|---------|------------|
-| **ID del paquete** | Sí | Un nombre exclusivo para identificar el paquete. |
-| **Idioma de origen** | Sí | El idioma nativo del archivo de origen. |
-| **Archivo de recursos** | No | Un [archivo de recursos](bundles.html#globalizationpipeline_workingwithbundles) que se traducirá. El tamaño de archivo máximo está limitado a 2 MB. Los archivos de recursos especificados se subirán.  |
-| **Formato de archivo** | No | El tipo de archivo que se está cargando. |
-| **Idioma de destino** | No | Los idiomas para los que desea traducciones. |
+<p><strong>Nota:</strong> Para cambiar el servicio de idiomas que proporciona la traducción automática para los paquetes, pulse el separador <a href=https://new-console.ng.bluemix.net/docs/services/GlobalizationPipeline/managing_translations.html#globalizationpipeline_service_to_service>Configuración de MT</a> para ver otros motores de traducción automática soportados.</p>
 
-**Nota:** Para cambiar el servicio de idiomas que proporciona la traducción automática para los paquetes, pulse el separador [**Configuración de MT**](./managing_translations.html#globalizationpipeline_service_to_service) para ver otros motores de traducción automática soportados.
+<li>Pulse <strong>guardar</strong></li></ol>
 
-3\. Pulse **Guardar**
 
 Una vez que se haya creado el paquete, el archivo de recursos subido se traducirá a todos los idiomas de destino que haya especificado. El paquete nuevo se añade al separador Paquetes, donde puede:
 
@@ -54,17 +84,17 @@ Una vez que se haya creado el paquete, el archivo de recursos subido se traducir
 * Editar las traducciones generadas
 * Actualizar el archivo de origen utilizado en el paquete y volver a generar las traducciones
 
-## Importación de paquetes traducidos en el servicio
+## Importación de paquetes traducidos
 {: #globalizationpipeline_importtranslatedbundlesintoservice}
 
-Como alternativa, si ya ha traducido archivos de recursos, puede importarlos a un paquete nuevo. Para obtener más información, consulte [Java Client Tools for {{site.data.keyword.GlobalizationPipeline_full}}](https://github.com/IBM-Bluemix/gp-java-tools).
+Como alternativa, si ya ha traducido archivos de recursos, puede importarlos a un paquete nuevo. Para obtener más información, consulte [Java Client Tools for {{site.data.keyword.GlobalizationPipeline_short}}](https://github.com/IBM-Bluemix/gp-java-tools).
 
 **Nota:** si se actualiza el archivo de origen original, las claves y los valores definidos en el archivo se sincronizan con la versión más reciente del archivo de origen, de modo que solo se traducen los valores y las claves modificados.
 
-## Estimación de uso de datos de {{site.data.keyword.GlobalizationPipeline_full}}
+## Estimación de uso de datos de {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline_documentpricing}
 
-{{site.data.keyword.GlobalizationPipeline_full}} almacena sus traducciones en una base de datos de fondo. Para calcular el tamaño de datos activo, puede hacer referencia a la fórmula siguiente:
+{{site.data.keyword.GlobalizationPipeline_short}} almacena sus traducciones en una base de datos de fondo. Para calcular el tamaño de datos activo, puede utilizar la fórmula de estimación de almacenamiento de datos:
 
 `<expected resource data storage size in MB> ˜= 0.0005 * <number of key/value pairs in the source resource> * <number of languages including the source language>`
 
