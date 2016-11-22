@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-11-22"
 
 ---
 {:shortdesc: .shortdesc}
@@ -17,7 +17,7 @@ To use Facebook as an identity provider in your {{site.data.keyword.amafull}} iO
 **Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for {{site.data.keyword.Bluemix}} Mobile Services, there are plans for discontinuing it later this year in favor of the new Swift SDK (see [Setting up the iOS Swift SDK](facebook-auth-ios-swift-sdk.html)).
 
 ## Before you begin
-{: #facebook-auth-ios-before}
+{: #before-you-begin}
 
 You must have:
 * An iOS project that is set up to work with CocoaPods.  For more information, see **Install CocoaPods** in  [Setting up the iOS  SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
@@ -182,7 +182,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 		1. Set the value to location of your `BridgingHeader.h` file, for example: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 		1. Make sure your bridging header is being picked up by Xcode by building your project. You should see no failure messages.
 
-2. Initialize the client SDK.	For information on obtaining `applicationRoute` and `applicationGUID`  see [Before you begin](#before-you-begin)).
+2. Initialize the client SDK.	For information on obtaining `applicationRoute` and `applicationGUID`  see [Before you begin](#before-you-begin).
 
 	####Objective-C
 	{: #approute-objc}
@@ -201,8 +201,7 @@ A common, though not mandatory, place to put the initialization code is in the `
                                backendGUID: "applicationGUID")
 	```
 
-1. Initialize the `AuthorizationManager` by passing the {{site.data.keyword.amashort}} service `tenantId` parameter. See [Before you begin].
-(#before-you-begin)).
+1. Initialize the `AuthorizationManager` by passing the {{site.data.keyword.amashort}} service `tenantId` parameter. See [Before you begin](#before-you-begin).
 
 	####Objective-C
 	{: #authman-objc}
