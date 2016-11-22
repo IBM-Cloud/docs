@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -85,7 +85,7 @@ authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
 
 authenticationContext.submitAuthenticationFailure(info);
 ```
-The following code demonstrates how a customer authorization listener can collect credentials, deal with challenges, and provide authentication responses.
+The following code demonstrates how a customer authentication listener can collect credentials, deal with challenges, and provide authentication responses.
 
 ## Sample implementation of a custom authentication listener workflow
 {: #custom-cordova-authlisten-sample}
