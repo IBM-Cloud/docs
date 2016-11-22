@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-11-22"
 
 ---
 {:screen: .screen}
@@ -213,14 +213,12 @@ A common, though not mandatory, place to put the initialization code is in the `
 1. Add the following code to your app delegate.
 
  ```Swift
-
-	func application(_ application: UIApplication, open url: URL,
-                     sourceApplication: String?, annotation: Any) -> Bool {
-
-        return FacebookAuthenticationManager.sharedInstance.onOpenURL(application: application,
-		url: url, sourceApplication: sourceApplication, annotation: annotation)
-
-    }
+ 
+    func application(_ app: UIApplication,
+                open url: URL,
+                options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool{
+      return FacebookAuthenticationManager.sharedInstance.onOpenURL(app, open: url, options: options)
+       }
  ```
 
 ## Testing the authentication
