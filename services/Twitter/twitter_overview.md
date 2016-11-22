@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-21"
 
 ---
 
@@ -13,13 +14,10 @@ copyright:
 # About {{site.data.keyword.twittershort}}
 {: #about_twitter}
 
-*Last updated: 13 May 2016*
-{: .last-updated}
-
-Use {{site.data.keyword.twitterfull}} to incorporate Twitter content from the Twitter [Decahose](http://support.gnip.com/apis/firehose/overview.html){: new_window} or [PowerTrack](http://support.gnip.com/apis/powertrack/overview.html){: new_window} streams into your {{site.data.keyword.Bluemix}} applications.
+Use {{site.data.keyword.twitterfull}} to incorporate Twitter content from the Twitter [Decahose](http://support.gnip.com/gnip2.0/){: new_window} or [PowerTrack](http://support.gnip.com/apis/powertrack2.0/){: new_window} streams into your {{site.data.keyword.Bluemix}} applications.
 {:shortdesc}
 
-The content store is refreshed and indexed in real-time, making searches dynamic and fast. The service enriches Tweets with sentiment and other insights for multiple languages, based on deep natural language processing algorithms from [IBM Social Media Analytics](http://www.ibm.com/software/products/en/social-media-analytics/){: new_window}. Real-time processing of Twitter data streams is fully supported and configurable through a rich set of query parameters and keywords. {{site.data.keyword.twittershort}} includes RESTful APIs that allow you to customize your searches and returns Tweets and enrichments in JSON format. Returned Tweets adhere to the [Gnip Activity Stream](http://support.gnip.com/sources/twitter/data_format.html){: new_window} format for Twitter data.
+The content store is refreshed and indexed in real-time, making searches dynamic and fast. The service enriches Tweets with sentiment and other insights for multiple languages, based on deep natural language processing algorithms from [IBM Social Media Analytics](http://www.ibm.com/software/products/en/social-media-analytics/){: new_window}. Real-time processing of Twitter data streams is fully supported and configurable through a rich set of query parameters and keywords. {{site.data.keyword.twittershort}} includes RESTful APIs that allow you to customize your searches and returns Tweets and enrichments in JSON format. Returned Tweets adhere to the [Gnip Activity Stream](http://support.gnip.com/){: new_window} format for Twitter data.
 
 The {{site.data.keyword.twittershort}} service analyzes the Twitter Decahose and PowerTrack streams in real-time to provide the following enrichments for each Tweet's author:
 * Gender
