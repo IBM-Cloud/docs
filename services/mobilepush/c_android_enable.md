@@ -8,7 +8,7 @@ copyright:
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 16 November 2016
+Last updated: 23 November 2016
 {: .last-updated}
 
 You can enable Android applications to receive push notifications to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.
@@ -29,11 +29,6 @@ After creating and opening your mobile application, complete the following steps
 	```
     {: codeblock}
 	
-	- Add the following dependency only at the end of the file.
-	```
-	'com.google.gms.google-services'
-	```
-    {: codeblock}
 	- Add the following dependencies to import statements that are required for code snippets.
 	```
 	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
