@@ -7,7 +7,7 @@ copyright:
 
 # Enabling Cordova applications to receive push notifications
 {: #cordova_enable}
-Last updated: 21 November 2016
+Last updated: 23 November 2016
 {: .last-updated}
 
 Cordova is a platform for building hybrid applications with JavaScript, CSS, and HTML. The {{site.data.keyword.mobilepushshort}} service supports development of Cordova-based iOS and Android applications.
@@ -70,15 +70,15 @@ cordova platform add android
 
 1. From your Cordova application root directory, enter the following command to install the Cordova push plug-in: **cordova plugin add bms-push**. Depending on the platforms that you added, you might see:
 ```
-Installing “bms-push" for android
-Installing “bms-push" for ios
+Installing "bms-push" for android
+Installing "bms-push" for ios
 ```
 	{: codeblock}
 
 1. From your-app-root-folder, verify that the Cordova core and push plug-in were installed successfully by using the following command: **cordova plugin list**. Depending on the platforms that you added, you might see:
 ```
-bms-core <version> “BMSCore"
-bms-push <version> “BMSPush" 
+bms-core <version> "BMSCore"
+bms-push <version> "BMSPush" 
 ```
 	{: codeblock}
 
@@ -99,7 +99,7 @@ Before you can use the {{site.data.keyword.mobilepushshort}} service Cordova plu
 ```
 onDeviceReady: function() {
 app.receivedEvent('deviceready');
-BMSClient.initialize(“YOUR APP REGION”);
+BMSClient.initialize("YOUR APP REGION");
     } 
 ```
 	{: codeblock}
@@ -141,7 +141,7 @@ Within the **onDeviceReady: function()**.
 ```
 onDeviceReady: function() {
 app.receivedEvent('deviceready');
-BMSClient.initialize(“YOUR APP REGION”);
+BMSClient.initialize("YOUR APP REGION");
 var success = function(message) { console.log("Success: " + message); };
 var failure = function(message) { console.log("Error: " + message); };
 BMSPush.registerDevice({}, success, failure); 
@@ -150,25 +150,22 @@ BMSPush.registerDevice({}, success, failure);
  alert(JSON.stringify(notif));
  };
 BMSPush.registerNotificationsCallback(showNotification); 
-
 ```
 	{: codeblock}
 
 ### Objective-C
 {: #cordova_register_objective}
-Add the following Objective-C code snippet to your application delegate class
+Add the following Objective-C code snippet to your application delegate class.
 
 ```
 // Register the device token with Bluemix Push Notification Service
 	- (void)application:(UIApplication *)application
      didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-
        [[CDVBMSPush sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 } 
 // Handle error when failed to register device token with APNs
 	- (void)application:(UIApplication*)application
      didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-
       [[CDVBMSPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
 } 
 ```
@@ -176,19 +173,18 @@ Add the following Objective-C code snippet to your application delegate class
 
 ###Swift
 {: #cordova_register_swift}
+
 Add the following Swift code snippet to your application delegate class.
 
 ```
 // Register the device token with Bluemix Push Notification Service
 func application(application: UIApplication,
-    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-
-    CDVBMSPush.sharedInstance().didRegisterForRemoteNotificationsWithDeviceToken(deviceToken)
+  didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+   CDVBMSPush.sharedInstance().didRegisterForRemoteNotificationsWithDeviceToken(deviceToken)
 } 
 // Handle error when failed to register device token with APNs
 func application(application: UIApplication,
     didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer) {
-
     CDVBMSPush.sharedInstance().didReceiveRemoteNotificationWithNotification(error)
 } 
 ```
@@ -246,42 +242,41 @@ var showNotification = function(notif) {
 
 The following section lists the Android notification properties:
 
-* message - Push notification message
-* payload - JSON object containing a notification payload
+* **message** - Push notification message
+* **payload** - JSON object containing a notification payload
 
 
 ###iOS notification properties
 
 The following section lists the iOS notification properties:
 
-* message - Push notification message
-* payload - JSON object that contains a notification payload
+* **message** - Push notification message
+* **payload** - JSON object that contains a notification payload
 action-loc-key - The string is used as a key to get a localized string in the current localization, to use for the appropriate button title, instead of `View`.
-* badge - The number to display as the badge of the app icon. If this property is absent, the badge is not changed. To remove the badge, set the value of this property to 0.
-* sound - The name of a sound file in the app bundle or in the Library/Sounds folder of the app data container.
+* **badge** - The number to display as the badge of the app icon. If this property is absent, the badge is not changed. To remove the badge, set the value of this property to 0.
+* **sound** - The name of a sound file in the app bundle or in the Library/Sounds folder of the app data container.
 
 ###Objective-C
 
 Add the following Objective-C code snippets to your application delegate class.
 
 ```
-// Handle receiving a remote notification
- -(void)application:(UIApplication *)application
-    didReceiveRemoteNotification:(NSDictionary *)userInfo
-    fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-
-    [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationWithNotification:userInfo];
+//Handle receiving a remote notification
+-(void)application:(UIApplication *)application
+  didReceiveRemoteNotification:(NSDictionary *)userInfo
+  fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationWithNotification:userInfo];
 } 
 ```
 	{: codeblock}
 
 
-```
-// Handle receiving a remote notification on launch
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
 
+```
+//Handle receiving a remote notification on launch
+- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
   if (launchOptions != nil) {
-         [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationOnLaunchWithLaunchOptions:launchOptions];
+   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationOnLaunchWithLaunchOptions:launchOptions];
      }
  }
 ```
@@ -293,9 +288,8 @@ Add the following Swift code snippets to your application delegate class.
 ```
 // Handle receiving a remote notification
 func application(application: UIApplication,
-    didReceiveRemoteNotification userInfo: [NSObject : AnyObject],  fetchCompletionHandler completionHandler: ) {
-
-    CDVBMSPush.sharedInstance().didReceiveRemoteNotificationWithNotification(userInfo)
+   didReceiveRemoteNotification userInfo: [NSObject : AnyObject],  fetchCompletionHandler completionHandler: ) {
+   CDVBMSPush.sharedInstance().didReceiveRemoteNotificationWithNotification(userInfo)
 }
 ```
 	{: codeblock}
@@ -304,7 +298,6 @@ func application(application: UIApplication,
 // Handle receiving a remote notification on launch
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
   let remoteNotif = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary
-
   if remoteNotif != nil {
     CDVBMSPush.sharedInstance().didReceiveRemoteNotificationOnLaunchWithLaunchOptions(launchOptions)
   }
