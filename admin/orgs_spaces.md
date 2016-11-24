@@ -149,14 +149,14 @@ Complete the following steps to list the members for a specific space:
 
 As an account owner or organization manager, you can view the allocated and used quota for your organization. The quota represents the resource limits for the org which is assigned when the org is created. Any application or service in a space of the organization contributes to the usage of the quota.
 
-To view the quota for your org, complete the following steps:
+To view the quota for your organization, complete the following steps:
 
 1. Click **Account** &gt; **Manage Organizations** page.
 2. Identify the organization that you want to view the quota for, and click **View Details**.
 3. Click **Edit Org**.
 4. Select the **QUOTA** tab.
 
-To update the quota for your organization, you must open a support ticket. For more information about openeing a support ticket, see [Getting customer support](/docs/support/index.html#contacting-support). For more information about quota for containers, see [Quota](/docs/containers/container_planning_org_ov.html##container_planning_quota) in the Containers documentation.
+To update the quota for your organization, you must open a support ticket. For more information about opening a support ticket, see [Getting customer support](/docs/support/index.html#contacting-support). For more information about quota for containers, see [Quota](/docs/containers/container_planning_org_ov.html##container_planning_quota) in the Containers documentation.
 
 ## Managing domains
 {: #managedomains}
