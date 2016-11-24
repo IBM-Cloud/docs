@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-11-24"
 
 ---
 {:shortdesc: .shortdesc}
@@ -32,7 +32,6 @@ You must have:
 From the Facebook for Developers website:
 
 1. Log in to your account on the Facebook for Developers website (https://developers.facebook.com). 
-	For information on creating a new app, see [Creating an application on the Facebook for Developers website](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
 1. From the **Products List**, choose **Facebook Login**.
 1. Add or configure the Android platform. 
 1. Specify the package name of your Android application in the Google Play Package Name prompt. To find the package name of your Android application look for `<manifest ..... package="{your-package-name}">` in  the `AndroidManifest.xml` file in Android Studio project.

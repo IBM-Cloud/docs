@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-22"
+lastupdated: "2016-11-03"
 
 ---
 {:shortdesc: .shortdesc}
@@ -24,13 +24,13 @@ You must have:
    **Note:** You do not need to install the core {{site.data.keyword.amashort}}  client SDK before proceeding.
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by the {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end, see [Getting started](index.html).
 * Your **AppGUID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The  `appGUID` (also known as `tenantId`) value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
-* A Facebook Application ID. For more information, see [Creating an application on the Facebook for Developers website](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* A Facebook application and Application ID. For more information, see [Creating an application on the Facebook for Developers website](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Configuring your Facebook Application for the iOS Platform
 {: #facebook-auth-ios-config}
 On the Facebook for Developers site:
 
-1. Log in to your account on  [Facebook for Developers](https://developers.facebook.com). For information on creating a new app, see https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Log in to your account on  [Facebook for Developers](https://developers.facebook.com). 
 
 1. Ensure that the iOS platform has been added to your app. When you add or configure the iOS platform  you need to supply the **bundleId** of your iOS application. To find the **bundleId** of your iOS application, look for the **Bundle Identifier** in either the `info.plist` file or Xcode project **General** tab.
 

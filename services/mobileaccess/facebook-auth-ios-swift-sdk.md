@@ -34,7 +34,7 @@ You must have
 {: #facebook-auth-ios-config}
 On the Facebook for Developers site:
 
-1. Log in to your account on  [Facebook for Developers](https://developers.facebook.com). For information on creating a new app, see [Creating an application on the Facebook for Developers website](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Log in to your account on  [Facebook for Developers](https://developers.facebook.com). 
 
 1. Ensure that the iOS platform has been added to your app. When you add or configure the iOS platform  you need to supply the **bundleId** of your iOS application. To find the **bundleId** of your iOS application, look for the **Bundle Identifier** in either the `info.plist` file or Xcode project **General** tab.
 
