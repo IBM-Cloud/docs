@@ -32,6 +32,12 @@ For more information, see the following information:
  * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
+### Enable Keychain Sharing for iOS
+{: #enable_keychain}
+
+Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain Sharing` to `On` in your Xcode project.
+
+
 ### Initializing the client SDK
 {: #custom-ios-sdk-initialize}
 
