@@ -37,11 +37,11 @@ For stable operations of your deployments on {{site.data.keyword.Bluemix_notm}} 
 ###Monitoring apps running on Cloud Foundry
 {: #monitoring_bluemix_apps}
 
-When you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}, you'll want to keep up with performance information such as health status, resource usage, and traffic metrics. With this performance information, you can then make decisions or take actions accordingly.
+When you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}, you'll want to keep up with application availability and performance of your application, whether it is a web based application viewed from a browser, or a set of APIs that mobile applications connect to.  Use [Bluemix Availability Monitoring](https://console.ng.bluemix.net/catalog/services/availability-monitoring){:new_window} to monitor your application from fifteen different geographical locations around the globe.
 
-To monitor {{site.data.keyword.Bluemix_notm}} apps, use one of the following methods:
+To monitor resource usage metrics for your {{site.data.keyword.Bluemix_notm}} apps, use one of the following methods:
 
-* {{site.data.keyword.Bluemix_notm}} services. Monitoring and Analytics offers a service that you can use to monitor your application performance. In addition, this service also provides analytic features such as log analysis. For more information, see [Monitoring and Analytics](/docs/services/monana/index.html).
+* Bluemix Monitoring and Analytics offers a service that you can use to monitor resources and get diagnostics from your Node, Liberty, or Ruby based application. For more information, see [Monitoring and Analytics](/docs/services/monana/index.html).
 * Third-party options. For example, [New Relic](http://newrelic.com/){:new_window}.
 
 ###Logging for apps running on Cloud Foundry
