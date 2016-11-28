@@ -142,15 +142,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0182338"
-     inkscape:cx="310.12169"
-     inkscape:cy="-78.451035"
+     inkscape:zoom="2.0364676"
+     inkscape:cx="360.92064"
+     inkscape:cy="128.32937"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:window-width="1920"
-     inkscape:window-height="1028"
+     inkscape:window-height="1027"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -271,7 +271,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Arrow Layer"
-     style="display:inline"
+     style="display:none"
      transform="translate(-20.740796,-36.728567)">
     <path
        inkscape:connector-curvature="0"
@@ -539,12 +539,17 @@
          id="tspan19274"
          x="129.79729"
          y="-30.455944"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75000095px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start">IBM® IoT for Insurance</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75000095px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start">Flusso del processo OAuth</tspan><tspan
          sodipodi:role="line"
          x="129.79729"
          y="-13.268443"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75000095px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start"
-         id="tspan19276">OAuth process flow</tspan></text>
+         id="tspan3459">IBM® IoT for Insurance</tspan><tspan
+         sodipodi:role="line"
+         x="129.79729"
+         y="3.9190583"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75000095px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start"
+         id="tspan19276" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -555,7 +560,7 @@
          sodipodi:role="line"
          id="tspan6796"
          x="301.8107"
-         y="42.594177">1. Request access</tspan></text>
+         y="42.594177">1. Richiede l'accesso</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -566,11 +571,11 @@
          sodipodi:role="line"
          id="tspan6796-8"
          x="536.94897"
-         y="98.095581">2. Access </tspan><tspan
+         y="98.095581">2. Reindirizza</tspan><tspan
          sodipodi:role="line"
          x="536.94897"
          y="112.15808"
-         id="tspan14966">URL redirect</tspan></text>
+         id="tspan14966">l'URL di accesso</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -581,15 +586,15 @@
          sodipodi:role="line"
          id="tspan6796-5"
          x="240.16074"
-         y="221.47647">3. Request user ID </tspan><tspan
+         y="221.47647">3. Richiede l'ID utente</tspan><tspan
          sodipodi:role="line"
          x="240.16074"
          y="235.53897"
-         id="tspan16218">and password</tspan><tspan
+         id="tspan16218">e la password</tspan><tspan
          sodipodi:role="line"
          x="240.16074"
          y="249.60147"
-         id="tspan10521">with HTML form</tspan></text>
+         id="tspan10521">con il formato HTML</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -600,15 +605,15 @@
          sodipodi:role="line"
          id="tspan6796-5-7"
          x="164.44957"
-         y="104.6075">4. Return user ID </tspan><tspan
+         y="104.6075">4. Restituisce l'ID utente</tspan><tspan
          sodipodi:role="line"
          x="164.44957"
          y="118.67"
-         id="tspan16216">and password</tspan><tspan
+         id="tspan16216">e la password</tspan><tspan
          sodipodi:role="line"
          x="164.44957"
          y="132.7325"
-         id="tspan10523">in HTML form</tspan></text>
+         id="tspan10523">nel formato HTML</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -619,15 +624,15 @@
          sodipodi:role="line"
          id="tspan6796-8-9"
          x="402.39352"
-         y="139.92384">5. Grant access, </tspan><tspan
+         y="139.92384">5. Concede l'accesso,</tspan><tspan
          sodipodi:role="line"
          x="402.39352"
          y="153.98634"
-         id="tspan11748">send authorization</tspan><tspan
+         id="tspan3461">invia il codice di</tspan><tspan
          sodipodi:role="line"
          x="402.39352"
          y="168.04884"
-         id="tspan11750">code</tspan></text>
+         id="tspan11750">autorizzazione</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -638,7 +643,7 @@
          sodipodi:role="line"
          x="303.03754"
          y="61.272812"
-         id="tspan10523-0">6. Grant access</tspan></text>
+         id="tspan10523-0">6. Concede l'accesso</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -649,15 +654,15 @@
          sodipodi:role="line"
          x="598.91986"
          y="50.519333"
-         id="tspan14966-9">7. Send authorization </tspan><tspan
+         id="tspan14966-9">7. Invia il codice di </tspan><tspan
          sodipodi:role="line"
          x="598.91986"
          y="64.581833"
-         id="tspan16214">code to access provider </tspan><tspan
+         id="tspan16214">autorizzazione per accedere </tspan><tspan
          sodipodi:role="line"
          x="598.91986"
          y="78.644333"
-         id="tspan16230">on behalf of IoT4I </tspan></text>
+         id="tspan16230">al provider al posto di IoT4I </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -668,11 +673,11 @@
          sodipodi:role="line"
          x="602.39093"
          y="221.30182"
-         id="tspan16230-7">8. Accept authorization</tspan><tspan
+         id="tspan16230-7">8. Accetta l'autorizzazione e</tspan><tspan
          sodipodi:role="line"
          x="602.39093"
          y="235.36432"
-         id="tspan18799">and return OAuth token</tspan></text>
+         id="tspan18799">restituisce il token OAuth</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -683,7 +688,7 @@
          sodipodi:role="line"
          x="484.96115"
          y="44.748413"
-         id="tspan18193">OAuth Client</tspan></text>
+         id="tspan18193">Client OAuth</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-1-4"
@@ -706,11 +711,11 @@
          sodipodi:role="line"
          x="488.99695"
          y="207.00861"
-         id="tspan18193-9">OAuth Provider</tspan><tspan
+         id="tspan18193-9">Provider OAuth</tspan><tspan
          sodipodi:role="line"
          x="488.99695"
          y="220.75861"
-         id="tspan6899">such as Facebook</tspan></text>
+         id="tspan6899">come Facebook</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot18912"

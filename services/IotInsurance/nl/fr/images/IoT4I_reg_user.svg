@@ -16,7 +16,7 @@
    id="svg5645"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="IoT4I_reg_user.svg"
+   sodipodi:docname="iot4i_reg_user.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
@@ -186,13 +186,13 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.0182338"
      inkscape:cx="261.68943"
-     inkscape:cy="230.92458"
+     inkscape:cy="270.20829"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1028"
+     inkscape:window-width="1440"
+     inkscape:window-height="848"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -248,9 +248,9 @@
     <rect
        ry="0"
        rx="0"
-       y="256.45148"
+       y="250.55891"
        x="-242.94707"
-       height="29.166687"
+       height="39.969707"
        width="115.62555"
        id="rect79371-1-6-6-9-8-7-3-5-2-2-9-1-9-6-3-1-0-8"
        style="display:inline;fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
@@ -344,7 +344,7 @@
            y="699.45929"
            x="-91.946014"
            id="tspan7308-5"
-           sodipodi:role="line"> </tspan></text>
+           sodipodi:role="line" /></text>
       <rect
          id="rect5708-2"
          height="24.672125"
@@ -444,9 +444,9 @@
     <rect
        ry="0"
        rx="0"
-       y="436.54593"
+       y="429.67126"
        x="62.411186"
-       height="32.638908"
+       height="43.441929"
        width="109.37553"
        id="rect79371-1-6-6-9-8-7-3-5-2-2-9-1-9-6-3-1-06-1"
        style="display:inline;fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
@@ -646,14 +646,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-97.056808"
+       x="-95.056808"
        y="377.45514"
        id="text6794-8-4-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="-97.056808"
+         x="-95.056808"
          y="377.45514"
-         id="tspan43907-3">3. Return certificate</tspan></text>
+         id="tspan43907-3">3. Renvoyer le </tspan><tspan
+         sodipodi:role="line"
+         x="-95.056808"
+         y="391.51764"
+         id="tspan3549">    certificat</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4-4-0-5-1-8-46-7"
@@ -762,11 +766,11 @@
          sodipodi:role="line"
          x="114.48692"
          y="191.33319"
-         id="tspan6702-6">Mobile Client Access </tspan><tspan
+         id="tspan6702-6">Service Mobile Client </tspan><tspan
          sodipodi:role="line"
          x="114.48692"
          y="205.08319"
-         id="tspan4579">Service</tspan></text>
+         id="tspan4579">Access</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-4-1"
@@ -822,38 +826,50 @@
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-1-55-6"
-       y="376.82391"
-       x="-179.87296"
+       y="362.82391"
+       x="-143.27505"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
-         y="376.82391"
-         x="-179.87296"
+         y="362.82391"
+         x="-143.27505"
          sodipodi:role="line"
-         id="tspan7488-9-0">Smart home</tspan><tspan
-         y="390.57391"
-         x="-179.87296"
+         id="tspan7488-9-0"
+         style="text-align:center;text-anchor:middle">Cloud du</tspan><tspan
+         y="376.57391"
+         x="-143.27505"
          sodipodi:role="line"
-         id="tspan11838">vendor's cloud</tspan><tspan
-         y="404.32391"
-         x="-179.87296"
+         id="tspan11838"
+         style="text-align:center;text-anchor:middle">fournisseur de</tspan><tspan
+         y="390.32391"
+         x="-143.27505"
+         sodipodi:role="line"
+         id="tspan3555"
+         style="text-align:center;text-anchor:middle">domiciles</tspan><tspan
+         y="404.07391"
+         x="-143.27505"
+         sodipodi:role="line"
+         id="tspan3557"
+         style="text-align:center;text-anchor:middle">intelligents</tspan><tspan
+         y="417.82391"
+         x="-143.27505"
          sodipodi:role="line"
          id="tspan11840" /></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-1-55-9"
        y="285.15494"
-       x="-163.20262"
+       x="-167.04179"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.46083069px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"
-       transform="scale(1.0418937,0.95979085)"><tspan
+       transform="scale(1.0418937,0.95979082)"><tspan
          y="285.15494"
-         x="-163.20262"
+         x="-167.04179"
          sodipodi:role="line"
-         id="tspan7488-9-2">Customer's data</tspan><tspan
+         id="tspan7488-9-2">Données et systèmes</tspan><tspan
          y="299.48099"
-         x="-163.20262"
+         x="-167.04179"
          sodipodi:role="line"
-         id="tspan11872">and support systems</tspan></text>
+         id="tspan11872">de support du client</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect16242-2-5"
@@ -871,7 +887,7 @@
          sodipodi:role="line"
          id="tspan6796-7"
          x="134.91867"
-         y="293.35577">4. Create user</tspan></text>
+         y="293.35577">4. Créer un utilisateur</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect16242-2-1-5-6-4"
@@ -900,15 +916,15 @@
            y="268.66165"
            x="-14.767778"
            sodipodi:role="line"
-           id="tspan22860-7">7. Create user</tspan><tspan
+           id="tspan22860-7">7. Créer un utilisateur</tspan><tspan
            y="282.72415"
            x="-14.767778"
            sodipodi:role="line"
-           id="tspan28220">and store API key </tspan><tspan
+           id="tspan28220">    et stocker une clé et</tspan><tspan
            y="296.78665"
            x="-14.767778"
            sodipodi:role="line"
-           id="tspan28222">and token</tspan></text>
+           id="tspan28222">    un jeton d'API</tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -928,27 +944,31 @@
     <text
        sodipodi:linespacing="125%"
        id="text44235"
-       y="390.30252"
+       y="383.97586"
        x="131.84277"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.59894085px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"
        transform="scale(1.0544492,0.94836243)"><tspan
          id="tspan44239"
-         y="390.30252"
+         y="383.97586"
          x="131.84277"
-         sodipodi:role="line">API Registration</tspan><tspan
-         y="404.80121"
+         sodipodi:role="line">Service </tspan><tspan
+         y="398.47455"
          x="131.84277"
          sodipodi:role="line"
-         id="tspan11533">service</tspan></text>
+         id="tspan3519">d'enregistrement</tspan><tspan
+         y="412.97321"
+         x="131.84277"
+         sodipodi:role="line"
+         id="tspan11533">d'API</tspan></text>
     <rect
-       transform="translate(68.912029,-77.428437)"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect16242-2"
        width="101.15556"
        height="48.122551"
        x="-108.98685"
-       y="230.51364" />
+       y="230.51364"
+       transform="translate(68.912029,-77.428437)" />
     <rect
        transform="translate(68.912029,-77.428437)"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
@@ -960,14 +980,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-31.47691"
+       x="-41.47691"
        y="193.66296"
        id="text6794"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6796"
-         x="-31.47691"
-         y="193.66296">1. Request access</tspan></text>
+         x="-41.47691"
+         y="193.66296">1. Demander l'accès</tspan></text>
     <text
        transform="translate(68.912028,-77.428442)"
        xml:space="preserve"
@@ -985,23 +1005,26 @@
          x="-346.70932"
          y="198.20302"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75000095px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start"
-         id="tspan19276">User Registration Process</tspan></text>
+         id="tspan19276">Processus d'enregistrement d'utilisateur</tspan></text>
     <text
-       transform="translate(68.912028,-77.428442)"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       x="-239.57494"
-       y="267.0824"
+       x="-168.6629"
+       y="183.65396"
        id="text44241-8"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="-239.57494"
-         y="267.0824"
-         id="tspan6702-7">IoT for Insurance</tspan><tspan
+         x="-168.6629"
+         y="183.65396"
+         id="tspan6702-7">Application mobile </tspan><tspan
          sodipodi:role="line"
-         x="-239.57494"
-         y="280.8324"
-         id="tspan28137">custom mobile app</tspan></text>
+         x="-168.6629"
+         y="197.40396"
+         id="tspan28137">personnalisée IoT </tspan><tspan
+         sodipodi:role="line"
+         x="-168.6629"
+         y="211.15396"
+         id="tspan3537">for Insurance</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect16242-2-1-0"
@@ -1013,17 +1036,21 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-29.333654"
-       y="263.28409"
+       y="253.28409"
        id="text6794-8-4"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6796-8-9"
          x="-29.333654"
-         y="263.28409">2. Provide Identity,</tspan><tspan
+         y="253.28409">2. Fournir une </tspan><tspan
          sodipodi:role="line"
          x="-29.333654"
-         y="277.34659"
-         id="tspan43907">OpenID redirect</tspan></text>
+         y="267.34659"
+         id="tspan43907">    redirection </tspan><tspan
+         sodipodi:role="line"
+         x="-29.333654"
+         y="281.40909"
+         id="tspan3543">    OpenID d'identité</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect16242-2-5-5"
@@ -1041,7 +1068,11 @@
          sodipodi:role="line"
          id="tspan6796-7-2"
          x="-47.710743"
-         y="362.28137">5. OAuth redirect</tspan></text>
+         y="362.28137">5. Redirection</tspan><tspan
+         sodipodi:role="line"
+         x="-47.710743"
+         y="376.34387"
+         id="tspan3525">    OAuth</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect16242-2-0"
@@ -1063,28 +1094,32 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       x="-67.033989"
+       x="-73.033989"
        y="622.03082"
        id="text44241-25-1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="-67.033989"
+         x="-73.033989"
          y="622.03082"
-         id="tspan5792-1">Watson IoT Platform</tspan><tspan
+         id="tspan5792-1">Couche de connexion</tspan><tspan
          sodipodi:role="line"
-         x="-67.033989"
+         x="-73.033989"
          y="635.78082"
-         id="tspan9810-4">Connect Layer</tspan></text>
+         id="tspan9810-4">Watson IoT Platform</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-76.819466"
+       x="-64.819466"
        y="398.86954"
        id="text6794-9"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6796-1"
-         x="-76.819466"
-         y="398.86954">6. Return authorization code</tspan></text>
+         x="-64.819466"
+         y="398.86954">6. Renvoyer le code</tspan><tspan
+         sodipodi:role="line"
+         x="-64.819466"
+         y="412.93204"
+         id="tspan3527">    d'autorisation</tspan></text>
   </g>
 </svg>
