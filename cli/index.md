@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2016
 
-lastupdated: "2016-10-24"
+lastupdated: "2016-11-28"
 
 
 ---
@@ -59,9 +59,13 @@ bluemix plugin install plugin_name -r bluemix-bx
 {: codeblock}
 
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
+| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Containers*  |
 |-----|-----|-----|
-| Plug-in name: active-deploy <br> [View Docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [View Docs](./plugins/auto-scaling/index.html) |  Plug-in name: nsg <br> [View Docs](./plugins/networksecuritygroups/index.html)  |
+| Plug-in name: active-deploy <br> [View Docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [View Docs](/docs/plugins/auto-scaling/index.html) |  Plug-in name: IBM-Containers  <br> [View Docs](/docs/plugins/containers/index.html) |
+
+| *Network Security Groups* |  *Private network peering* | *VPN*  |  
+|-----|-----|-----|
+| Plug-in name: network-security-groups <br> [View Docs](/docs/plugins/networksecuritygroups/index.html) | Plug-in name: private-network-peering  <br> [View Docs](/docs/plugins/pnp/index.html) |Plug-in name: VPN  <br> [View Docs](/docs/plugins/bx_vpn/index.html) |
 
 
 ### Extend your Cloud Foundry command line interface: cf
