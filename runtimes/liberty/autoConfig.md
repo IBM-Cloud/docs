@@ -94,7 +94,7 @@ More formally, the grammar of the String follows.
 {: codeblock}
 
 **Important**: The service type that you specify must match the services label as it appears in the VCAP_SERVICES environment variable. White space is not allowed.
-**Important**: No white space is allowed within a <service_type_specification>. The only allowed usage of white space is to separate multiple <service_type_specification> instances.
+**Important**: No white space is allowed within a ```<service_type_specification>```. The only allowed usage of white space is to separate multiple ```<service_type_specification>``` instances.
 
 Use the "all" option to opt out of all automatic configuration actions for a service, as in the Mongo scenario above. Use the "config" option to opt out of only the configuration update actions as in the SQLDB scenario above.
 
