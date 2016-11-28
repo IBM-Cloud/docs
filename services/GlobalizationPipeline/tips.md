@@ -66,7 +66,7 @@ In addition, ask native language speakers to review and edit the machine transla
 * **Use terminology consistently:** Avoid using multiple terms to refer to the same thing. Avoid using a single term to refer to more than one thing.
 * **Include explanations for any specialized terms.**
 * **Avoid terms that have different meanings in other environments and contexts:** These terms include "billion," "domestic," and "foreign."
-* **Use consistent and standardized capitalization, hyphenation, and word formation:** For example, write "fix pack" instead of "fix pack".
+* **Use consistent and standardized capitalization, hyphenation, and word formation:** For example, write "fix pack" instead of "Fix Pack".
 * **Use lower-case unless the term is a proper noun.**
 * **Avoid special symbols:** If you need to use the # symbol, do not refer to it as the pound sign. Instead, call it the number symbol (#).
 * **Avoid abbreviations:** Machine-translation engines might recognize common abbreviations, such as IBM and DB2, but they do not recognize all abbreviations. Avoid abbreviations when possible. Do not use Latin abbreviations, such as "i.e.," and "etc."
