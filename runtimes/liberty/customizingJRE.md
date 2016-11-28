@@ -183,7 +183,7 @@ To view the jvm.options file for WAR, EAR and server directory, run the command:
 ```
 {: codeblock}
 
-To view the jvm.options file for a packaged server, replace <serverName> with the name of your server and run the command:
+To view the jvm.options file for a packaged server, replace ```<serverName>``` with the name of your server and run the command:
 ```
     $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
 ```
