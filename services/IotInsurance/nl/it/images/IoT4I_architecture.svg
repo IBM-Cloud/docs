@@ -2366,15 +2366,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0182338"
-     inkscape:cx="456.67135"
-     inkscape:cy="295.3783"
+     inkscape:zoom="1.44"
+     inkscape:cx="404.60752"
+     inkscape:cy="221.27704"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:window-width="1920"
-     inkscape:window-height="1028"
+     inkscape:window-height="1027"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -2781,7 +2781,7 @@
          sodipodi:role="line"
          id="tspan7308"
          x="575.04333"
-         y="231.90544"> </tspan></text>
+         y="231.90544" /></text>
     <rect
        transform="translate(-68.91203,77.428427)"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:1.00000012;stroke-miterlimit:4;stroke-dasharray:none"
@@ -3304,15 +3304,16 @@
            y="-62.752552" /></flowRegion><flowPara
          id="flowPara5808" /></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="152.57745"
-       y="396.01978"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33487701px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="179.78838"
+       y="336.07236"
        id="text44241"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       transform="scale(0.84862519,1.1783765)"><tspan
          sodipodi:role="line"
-         x="152.57745"
-         y="396.01978"
-         id="tspan6702">Sample mobile app</tspan></text>
+         x="179.78838"
+         y="336.07236"
+         id="tspan6702">Applicazione mobile di esempio</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -3323,11 +3324,11 @@
          sodipodi:role="line"
          x="141.48183"
          y="295.11343"
-         id="tspan6702-6">Mobile Client Access </tspan><tspan
+         id="tspan6702-6">Servizio di accesso </tspan><tspan
          sodipodi:role="line"
          x="141.48183"
          y="308.86343"
-         id="tspan4579">Service</tspan></text>
+         id="tspan4579">client mobile</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
@@ -3336,13 +3337,13 @@
        id="text44241-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="190.8436"
+         x="189.31821"
          y="522.17621"
-         id="tspan6702-1">Policy </tspan><tspan
+         id="tspan6702-1">Possessore della</tspan><tspan
          id="tspan4740"
          sodipodi:role="line"
          x="189.31821"
-         y="535.92621">Holder</tspan></text>
+         y="535.92621">polizza</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44235-7-3-6-4-0-2-7-0"
@@ -3354,24 +3355,12 @@
          x="551.91132"
          sodipodi:role="line"
          style="font-size:11.25000095px;text-align:center;text-anchor:middle"
-         id="tspan7345-7-3-0">Insurance company</tspan><tspan
-         id="tspan22328"
+         id="tspan7345-7-3-0">Operatore della</tspan><tspan
          y="-10.520802"
          x="551.91132"
          sodipodi:role="line"
-         style="font-size:11.25000095px;text-align:center;text-anchor:middle">operator</tspan><tspan
-         y="3.5416989"
-         x="551.91132"
-         sodipodi:role="line"
-         id="tspan7318-8-6-0" /><tspan
-         y="17.6042"
-         x="551.91132"
-         sodipodi:role="line"
-         id="tspan7312-8-7-6" /><tspan
-         y="31.6667"
-         x="551.91132"
-         sodipodi:role="line"
-         id="tspan6445-3-9-6-2-1-1-7-0" /></text>
+         id="tspan6445-3-9-6-2-1-1-7-0"
+         style="font-size:11.25000095px;text-align:center;text-anchor:middle">società assicurativa</tspan></text>
     <text
        sodipodi:linespacing="125%"
        y="22.053659"
@@ -3389,11 +3378,11 @@
          y="86.924225"
          x="578.42261"
          sodipodi:role="line"
-         id="tspan4890-1">IoT for Insurance</tspan><tspan
+         id="tspan4890-1">Dashboard</tspan><tspan
          y="100.67422"
          x="578.42261"
          sodipodi:role="line"
-         id="tspan7488">Dashboard</tspan></text>
+         id="tspan7488">IoT for Insurance</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-4-1"
@@ -3434,11 +3423,11 @@
          y="280.03586"
          x="368.0589"
          sodipodi:role="line"
-         id="tspan4890-1-9">IoT for Insurance</tspan><tspan
+         id="tspan4890-1-9">Motore delle azioni</tspan><tspan
          y="293.78586"
          x="368.0589"
          sodipodi:role="line"
-         id="tspan7488-1">Action Engine</tspan></text>
+         id="tspan7488-1">IoT for Insurance</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-1-9"
@@ -3449,11 +3438,15 @@
          y="187.65816"
          x="785.0509"
          sodipodi:role="line"
-         id="tspan4890-1-2">IoT for Insurance</tspan><tspan
+         id="tspan4890-1-2">Aggregatore</tspan><tspan
          y="201.40816"
          x="785.0509"
          sodipodi:role="line"
-         id="tspan7488-14">Aggregator</tspan></text>
+         id="tspan3947">IoT for Insurance</tspan><tspan
+         y="215.15816"
+         x="785.0509"
+         sodipodi:role="line"
+         id="tspan7488-14" /></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-1-2"
@@ -3464,11 +3457,15 @@
          y="294.11221"
          x="785.98218"
          sodipodi:role="line"
-         id="tspan4890-1-96">IoT for Insurance</tspan><tspan
+         id="tspan4890-1-96">Motore dello scudo</tspan><tspan
          y="307.86221"
          x="785.98218"
          sodipodi:role="line"
-         id="tspan7488-4">Shield Engine</tspan></text>
+         id="tspan3949">IoT for Insurance</tspan><tspan
+         y="321.61221"
+         x="785.98218"
+         sodipodi:role="line"
+         id="tspan7488-4" /></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-1-5"
@@ -3479,11 +3476,15 @@
          y="391.38382"
          x="578.42255"
          sodipodi:role="line"
-         id="tspan4890-1-0">IoT for Insurance</tspan><tspan
+         id="tspan4890-1-0">Trasformatore</tspan><tspan
          y="405.13382"
          x="578.42255"
          sodipodi:role="line"
-         id="tspan7488-45">Transformer</tspan></text>
+         id="tspan3945">IoT for Insurance</tspan><tspan
+         y="418.88382"
+         x="578.42255"
+         sodipodi:role="line"
+         id="tspan7488-45" /></text>
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-1-55"
@@ -3494,11 +3495,11 @@
          y="187.04129"
          x="160.17218"
          sodipodi:role="line"
-         id="tspan4890-1-4">IoT for Insurance</tspan><tspan
+         id="tspan4890-1-4">API</tspan><tspan
          y="200.79129"
          x="160.17218"
          sodipodi:role="line"
-         id="tspan7488-9">APIs</tspan></text>
+         id="tspan7488-9">IoT for Insurance</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -3543,24 +3544,17 @@
          style="font-size:11.25000095px;text-align:center;text-anchor:middle"
          sodipodi:role="line"
          x="667.75934"
-         y="-24.583292">Insurance company </tspan><tspan
-         style="font-size:11.25000095px;text-align:center;text-anchor:middle"
-         sodipodi:role="line"
-         x="666.19928"
-         y="-10.520791"
-         id="tspan10857">automated systems</tspan><tspan
-         id="tspan7318-8-6-0-4"
-         sodipodi:role="line"
-         x="666.19928"
-         y="3.5417104" /><tspan
-         id="tspan7312-8-7-6-3"
-         sodipodi:role="line"
-         x="666.19928"
-         y="17.604212" /><tspan
+         y="-24.583292">Sistemi automatizati </tspan><tspan
          id="tspan6445-3-9-6-2-1-1-7-0-3"
          sodipodi:role="line"
+         x="667.75934"
+         y="-10.520791"
+         style="font-size:11.25000095px;text-align:center;text-anchor:middle">della societa </tspan><tspan
+         sodipodi:role="line"
          x="666.19928"
-         y="31.666712" /></text>
+         y="3.5417104"
+         style="font-size:11.25000095px;text-align:center;text-anchor:middle"
+         id="tspan3913">assicurativa</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -3569,30 +3563,31 @@
        id="text44241-2-0"
        sodipodi:linespacing="125%"><tspan
          style="text-align:center;text-anchor:middle"
-         sodipodi:role="line"
-         x="608.23999"
-         y="522.17621"
-         id="tspan6702-1-0">Smart home</tspan><tspan
-         style="text-align:center;text-anchor:middle"
          id="tspan12969"
          sodipodi:role="line"
+         x="609.76538"
+         y="522.17621">Casa intelligente </tspan><tspan
+         style="text-align:center;text-anchor:middle"
+         sodipodi:role="line"
          x="608.23999"
-         y="535.92621">connected through</tspan><tspan
+         y="535.92621"
+         id="tspan3933">collegata tramite</tspan><tspan
          style="text-align:center;text-anchor:middle"
          id="tspan12971"
          sodipodi:role="line"
          x="608.23999"
          y="549.67621">Wink</tspan></text>
     <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.30144882px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
        id="text44191"
        font-size="11"
-       x="567.22955"
-       y="192.3235"
-       sodipodi:linespacing="125%">
+       x="605.80139"
+       y="180.11008"
+       sodipodi:linespacing="125%"
+       transform="scale(0.93649538,1.0678109)">
       <tspan
-         style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.00000012;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-         id="tspan10749">Watson™ IoT Platform</tspan>
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.53557396px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.00000012;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         id="tspan10749">Piattaforma Watson™ IoT</tspan>
     </text>
     <text
        sodipodi:linespacing="125%"
@@ -3604,29 +3599,26 @@
          id="tspan44239-7"
          y="282.87927"
          x="575.98706"
-         sodipodi:role="line">Rest &amp; </tspan><tspan
+         sodipodi:role="line">API Rest &amp; </tspan><tspan
          y="296.62927"
          x="575.98706"
          sodipodi:role="line"
-         id="tspan7973">Real-time APIs</tspan><tspan
-         y="310.37927"
-         x="575.98706"
-         sodipodi:role="line"
-         id="tspan6445-3" /></text>
+         id="tspan6445-3">in tempo reale</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="575.04333"
-       y="231.90544"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.36444473px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="610.32141"
+       y="218.50647"
        id="text44241-25"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       transform="scale(0.94222226,1.0613207)"><tspan
          sodipodi:role="line"
-         x="575.04333"
-         y="231.90544"
-         id="tspan5792">Watson IoT Platform</tspan><tspan
+         x="610.32141"
+         y="218.50647"
+         id="tspan5792">Dashboard piattaforma</tspan><tspan
          sodipodi:role="line"
-         x="575.04333"
-         y="245.65544"
-         id="tspan9810">Dashboard</tspan></text>
+         x="610.32141"
+         y="232.25647"
+         id="tspan9810">Watson IoT Platform</tspan></text>
   </g>
 </svg>
