@@ -149,7 +149,7 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
 <dd class="pd">The permission assigned to the user. For example, superuser, basic, catalog, user, and reports. For more information about assigned user permissions, see [Permissions](/docs/admin/index.html#permissions). You cannot use this parameter with the organization parameter in the same query. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
-<dd class="pd">The organization name that the user belongs to. You cannot use this parameter with the organization parameter in the same query.</dd>
+<dd class="pd">The organization name that the user belongs to. You cannot use this parameter with the permission parameter in the same query.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
 <dd class="pd">The organization role assigned to the user. For example, manager, billing manager, or auditor for the organization. You must specify the organization with this parameter. For more information about roles, see [User roles](/docs/admin/users_roles.html#userrolesinfo).</dd>
 
