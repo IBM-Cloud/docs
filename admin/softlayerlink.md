@@ -134,7 +134,7 @@ For example, have you ever wanted to add cognitive capabilities from Watson to y
 
 You can gain *Insights and Cognitive* knowledge by calling Watson APIs from your apps in SoftLayer to make them more personalized. Or, use *Data and Analytics* services to tap into high performance analytics for your apps. Or, choose database-as-a-service where you can leave the management to {{site.data.keyword.Bluemix_notm}}.
 
-Modernize your application development by using containers with services like {{site.data.keyword.activedeployshort}} and {{site.data.keyword.deliverypipeline}}. You can then use the {{site.data.keyword.vpn_short}} service to tunnel back to SoftLayer to connect your container in a private network to the SoftLayer private network. All of the usage charges of the compute resources and services are reflected in your {{site.data.keyword.Bluemix_notm}} bill. 
+Modernize your application development by using containers with services like {{site.data.keyword.activedeployshort}} and {{site.data.keyword.deliverypipeline}}. You can then use the {{site.data.keyword.vpn_short}} service to communicate with SoftLayer to connect your container in a private network to the SoftLayer private network. All of the usage charges of the compute resources and services are reflected in your {{site.data.keyword.Bluemix_notm}} bill. 
 
 ### API-based {{site.data.keyword.Bluemix_notm}} services
 Not all {{site.data.keyword.Bluemix_notm}} services can be used with SoftLayer. The following services can be set up to run with your application code:
