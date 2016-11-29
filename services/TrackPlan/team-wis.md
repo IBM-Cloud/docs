@@ -1,10 +1,9 @@
 ---
 
- 
-
 copyright:
+  years: 2016
+lastupdated: "2016-04-28"
 
-  years: 2015, 2016
 
  
 
@@ -16,9 +15,6 @@ copyright:
 {:codeblock: .codeblock}
 
 #Planning your team's work {: #tp-teamwork}  
-
-*Last Updated: 28 April 2016*
-{: .last-updated}
 
 You can manage your team's project with an agile approach by using the {{site.data.keyword.trackplan}} service. The {{site.data.keyword.trackplan}} tools simplify project planning and speed your workflow. 
 {: shortdesc}
@@ -44,6 +40,9 @@ You can also review these statistics:
 - Work items completed versus total work items
 - Story points achieved versus total story points estimated
 
+To review all of the work items by state, see the All Work view.
+
+For more information about planning work, [see Managing a project with Quick Planner](http://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.1/com.ibm.team.concert.tutorial.doc/topics/tut_quick_planner_lesson.html).
 To review all of the work items by state, see the All Work view.
 
 For more information about planning work, [see Managing a project with Quick Planner](http://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.1/com.ibm.team.concert.tutorial.doc/topics/tut_quick_planner_lesson.html).
