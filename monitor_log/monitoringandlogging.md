@@ -49,17 +49,15 @@ To monitor resource usage metrics for your {{site.data.keyword.Bluemix_notm}} ap
 
 Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. When you encounter errors in any stage from deployment to runtime, you can check the logs for clues that might help solve your issue.
 
-###Log Retention
-{: #log_retention}
-
-In {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry apps, log data is stored for 7 days by default.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
 
 
-###Log format
+###Log format and retention
 {: #log_format}
+
+In {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry apps, log data is stored for 7 days by default.
 
 Logs for {{site.data.keyword.Bluemix_notm}} applications are displayed in a fixed format, similar to the following pattern:
 
@@ -129,9 +127,9 @@ Every log entry contains four fields. Refer to the following list for the brief 
 
 You can view the logs for your Cloud Foundry apps in three places:
 
-  * [The {{site.data.keyword.Bluemix_notm}} Dashboard](#viewing_logs_UI){:new_window}
-  * [The command line interface](#viewing_logs_cli){:new_window}
-  * [External log hosts](#thirdparty_logging){:new_window}
+  * The {{site.data.keyword.Bluemix_notm}} Dashboard
+  * The command line interface
+  * External log hosts
 
 #### Viewing logs from the {{site.data.keyword.Bluemix_notm}} Dashboard
 {: #viewing_logs_UI}
@@ -198,7 +196,13 @@ staging task. You can use this log to troubleshoot staging problems.</p>
 
 **Note:** For information about how to enable application logging, see [Debugging runtime errors](/docs/debug/index.html#debugging-runtime-errors).
 
+#### Viewing logs from external hosts
+{: #viewing_logs_external}
 
+	 
+When logs are generated, after a short delay you can view messages in your external log host that are similar to the messages that you view from the {{site.data.keyword.Bluemix_notm}} user interface or from the cf command line interface.  If you have multiple instances of your app, the logs are aggregated and you can see all the logs for your app. In addition, the logs are persisted between app crashes and deployments.
+
+**Note:** Logs that you view in the command line interface are not in the syslog format, and might not exactly match the messages that are displayed in your external log host. 
 
 
 ###Filtering logs
@@ -290,13 +294,6 @@ To stream logs from your app and the system to an external log host, complete th
   4. Restage the app. 
      Type `cf restage appname` for the changes to take effect. 
 
-#### Viewing logs from external hosts
-{: #viewing_logs_external}
-
-	 
-When logs are generated, after a short delay you can view messages in your external log host that are similar to the messages that you view from the {{site.data.keyword.Bluemix_notm}} user interface or from the cf command line interface.  If you have multiple instances of your app, the logs are aggregated and you can see all the logs for your app. In addition, the logs are persisted between app crashes and deployments.
-
-**Note:** Logs that you view in the command line interface are not in the syslog format, and might not exactly match the messages that are displayed in your external log host. 
 
 ### Example: Streaming Cloud Foundry application logs to Splunk 
 {: #splunk}
