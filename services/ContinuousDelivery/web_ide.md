@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-10-26"
 ---
 
 {:new_window: target="_blank"}
@@ -14,9 +14,6 @@ copyright:
 # Editing code with the Eclipse Orion {{site.data.keyword.webide}}
 {: #web_ide}
 
-Last updated: 26 October 2016
-{: .last-updated}
-
 The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development environment where you can develop for the web. You can develop in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. The {{site.data.keyword.webide}} works with nearly any language and offers syntax highlighting for most [file types (Link opens in a new window)](https://hub.jazz.net/docs/overview/#dev_support){: new_window}. Source control is built in through Git or Jazz SCM, and you can deploy code locally to test and debug your apps.
 {:shortdesc}
 
@@ -25,19 +22,22 @@ Best of all, the {{site.data.keyword.webide}} is powered by the web. You have no
 ## Setting up the editor
 {: #editorsetup}
 
-The {{site.data.keyword.webide}} is customizable so that you can choose the color schemes, technical tools, and settings that meet your development needs. To view and modify the settings, from the menu on the left, click the **Settings** icon <img class="inline" src="./images/webide_settings_icon_light.png"  alt="The settings icon">.
+The {{site.data.keyword.webide}} is customizable so that you can choose the color schemes, technical tools, and settings that meet your development needs. To view and modify the settings, from the menu on the left, click the **Settings** icon <img class="inline" src="images/webide_settings_icon_light.png"  alt="The settings icon">.
 
-If you often need to change certain settings while you edit, you can access those settings quickly from the **Local Editor Settings** icon <img class="inline" src="./images/webide_local_settings_icon_light.png"  alt="Local Editor Settings icon"> in the upper-right corner of the editor
+If you often need to change certain settings while you edit, you can access those settings quickly from the **Local Editor Settings** icon <img class="inline" src="images/webide_local_settings_icon_light.png"  alt="Local Editor Settings icon"> in the upper-right corner of the editor
 
 ![Local Editor Settings](images/webide_local_editor_settings_light.png)
 
 By default, the settings for the editor style and font size are always shown. To include other editor settings in the menu, follow these steps:
 
-1. Click the **Local Editor Settings** icon <img class="inline" src="./images/webide_local_settings_icon_light.png"  alt="Local Editor Settings icon">.
+1. Click the **Local Editor Settings** icon <img class="inline" src="images/webide_local_settings_icon_light.png"  alt="Local Editor Settings icon">.
 
 2. Click **Editor Settings**.
 
 3. To include or exclude a setting from the **Local Editor Settings** menu, click the circle that is next to the setting.
+
+![Editor Settings toggle](images/webide_editor_settings_toggle_light.png)
+
 
 ![Editor Settings toggle](images/webide_editor_settings_toggle_light.png)
 
