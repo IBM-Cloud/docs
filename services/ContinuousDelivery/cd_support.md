@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2016
+lastupdated: "2016-11-23"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # Getting help and support for {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
-
-Last updated: 18 November 2016
-{: .last-updated}
 
 If you have problems or questions when you use {{site.data.keyword.contdelivery_full}}, you can get help by searching for information or by asking questions in a forum. You can also [open a support ticket (Link opens in a new window)](https://www.{DomainName}/docs/support/index.html#open-ticket).    
 {:shortdesc}
