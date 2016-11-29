@@ -3,10 +3,8 @@
 
 
 copyright:
-
   years: 2015，2016
-
-
+lastupdated: "2016-10-19"
 
 ---
 
@@ -15,11 +13,10 @@ copyright:
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
+#{{site.data.keyword.Bluemix_notm}} Live Sync
+{: #live-sync}
 
-*Last Updated: 24 June 2016*
-{: .last-updated}  
-
+ 
 If you are building a Node.js application, you can use {{site.data.keyword.Bluemix}} Live Sync to quickly update the application instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on the desktop without redeploying.   
 {: shortdesc}
 
@@ -40,10 +37,10 @@ You can use Desktop Sync to keep your desktop workspace in sync with the cloud-b
 
 The Bluemix Live Sync process is illustrated in the following diagram.
 
-*Figure 1. The Bluemix Live Sync process*
+Figure 1. The Bluemix Live Sync process
 ![Image of the Bluemix Live Sync process](images/bluemix-live-sync.png)
 
-If you are developing a Java application that is running on Liberty, you can debug remotely by using the [Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html#eclipsetools).
+If you are developing a Java application that is running on Liberty, you can debug remotely by using the [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools).
 
 ##Desktop Sync {: #desktop-sync}
 
@@ -73,7 +70,7 @@ For more details on the commands, see [Bluemix Live Sync (bl) commands](bluemixl
 <li>On a command line, log in using the following command. You will be prompted for your user ID and password.  
 <pre class="codeblock">bl login</pre>
 
-<strong>Note:</strong> Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> What's federated authentication and how does it affect me?</a> 
+<strong>Note:</strong> Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> What's federated authentication and how does it affect me?</a>
 </li>
 
 <li>See the list of projects that are available for {{site.data.keyword.Bluemix_notm}} Live Sync synchronization by entering the following command:
@@ -175,7 +172,7 @@ After the {{site.data.keyword.Bluemix_notm}} Live Debug is installed, you can us
 
 Push the app and then browse to `https://app-host.mybluemix.net/bluemix-debug/manage` to access the {{site.data.keyword.Bluemix_notm}} debug user interface. When you are prompted to authenticate, enter your user ID and personal access token or IBMid password.    
 
-   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBM id and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 ###Restoring app configurations and disabling Bluemix Live Debug {: #restore_live_debug}
 
@@ -198,7 +195,7 @@ You can use **bl** command line interface commands to complete the following tas
 * See the list of projects available for synchronization.
 * See the status of running applications.
 
-For more information on downloading and using the bl command, see [Bluemix Live Sync](../develop/bluemixlive.html).
+For more information on downloading and using the bl command, see [Bluemix Live Sync](/docs/develop/bluemixlive.html).
 
 ## bl commands
 {: #bl_commands}
@@ -298,7 +295,7 @@ Use this command to log in to {{site.data.keyword.Bluemix_notm}}. The log in nee
 
 -s *server*: The server name or IP address of the {{site.data.keyword.jazzhub_short}} server.    
 
-   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBM id and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 **Examples**
 
