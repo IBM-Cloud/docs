@@ -70,7 +70,7 @@ You must create several environment properties in each pipeline stage that conta
 
 To get started, retrieve the setup information from a test job.
 
-1. On the stage that contains a test job, click the **Stage Configuration** icon ![Pipeline stage configuration icon](images/pipeline-stage-configuration-icon.png). Click **Configure Stage**.
+1. On the stage that contains a test job, click the **Stage Configuration** icon ![Pipeline stage configuration icon](/docs/services/DevOpsInsights/images/pipeline-stage-configuration-icon.png). Click **Configure Stage**.
 2. Create a job. For the job type, select **Test**.
 3. Select a test job that uses the Simple tester type and copy the information that is in the **Test Command** and **Working Directory** fields to an editor. You need that information later.
 4. From the same Simple test job, change the tester type by selecting **Advanced Tester**.
@@ -107,7 +107,7 @@ The values for the **Type of Metric** and **Result File Location** fields must m
 
 *Figure 1* shows a test job that is configured to run unit tests, upload the results in Mocha format, and upload the code coverage results in Istanbul format.
 
-![Deployment Risk Analytics upload job](images/DRA_upload_job.png)
+![Deployment Risk Analytics upload job](/docs/services/DevOpsInsights/images/DRA_upload_job.png)
 *Figure 1. Upload results to DevOps Analytics*
 
 ## Defining {{site.data.keyword.DRA_short}} gates in the pipeline
@@ -115,7 +115,7 @@ The values for the **Type of Metric** and **Result File Location** fields must m
 
 {{site.data.keyword.DRA_short}} gates check whether your test results comply with the defined policy. If the policy is not met, the {{site.data.keyword.DRA_short}} gate fails. Usually, gates are placed at the end of each stage of your pipeline. This location is ideal to check the quality of the build against your policy to ensure that it is safe to promote from one environment to another. However, you can put gates anywhere in the pipeline where you want a specific criterion to be checked.
 
-1. On a stage, click the **Stage Configuration** icon ![Pipeline stage configuration icon](images/pipeline-stage-configuration-icon.png) and click **Configure Stage**.
+1. On a stage, click the **Stage Configuration** icon ![Pipeline stage configuration icon](/docs/services/DevOpsInsights/images/pipeline-stage-configuration-icon.png) and click **Configure Stage**.
 2. Click **Add Job**. For the job type, select **Test**.
 3. Enter a name for the new job, such as *Gate (Unit Test)*.
 4. For tester type, select **{{site.data.keyword.DRA_short}} Gate**.
@@ -131,4 +131,4 @@ The values for the **Type of Metric** and **Result File Location** fields must m
 ![Deployment Risk Analytics Mocha job](images/DRA_gate_job.png)
 *Figure 2. DevOps Analytics gate*
 
-After your pipeline is configured, start to use {{site.data.keyword.DRA_short}}. For instructions, see [Running the Delivery Pipeline](./pipeline_decision_reports.html#toolchain_reports).
+After your pipeline is configured, start to use {{site.data.keyword.DRA_short}}. For instructions, see [Running the Delivery Pipeline](/docs/services/DevOpsInsights/pipeline_decision_reports.html#toolchain_reports).

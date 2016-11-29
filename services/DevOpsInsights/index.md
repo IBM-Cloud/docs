@@ -35,9 +35,9 @@ To access the {{site.data.keyword.DRA_short}} UI, complete the following steps f
 
 5. Complete your setup with the remaining tasks:
 
-	1. [Configure your {{site.data.keyword.deliverypipeline}} integration](./pipeline_integration.html).
-	2. Run the pipeline and [review the {{site.data.keyword.deliverypipeline}} dashboards](./pipeline_decision_reports.html).
-	3. [Define policies](./create_criteria.html) for {{site.data.keyword.DRA_short}} to manage.
+	1. [Configure your {{site.data.keyword.deliverypipeline}} integration](/docs/services/DevOpsInsights/pipeline_integration.html).
+	2. Run the pipeline and [review the {{site.data.keyword.deliverypipeline}} dashboards](/docs/services/DevOpsInsights/pipeline_decision_reports.html).
+	3. [Define policies](/docs/services/DevOpsInsights/create_criteria.html) for {{site.data.keyword.DRA_short}} to manage.
 	4. Run the pipeline again to verify that your project passes your policies.
 
 
