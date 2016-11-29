@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
-  years: 2015, 2016
-
- 
+  years: 2016
+lastupdated: "2016-04-29"
 
 ---
 
@@ -16,9 +12,6 @@ copyright:
 {:codeblock: .codeblock}
 
 #Creating and displaying work items {: #tp-creatingwis}  
-
-*Last Updated: 29 April 2016*
-{: .last-updated}
 
 You can create and display work items in several ways, depending on your context. 
 {: shortdesc}
@@ -44,6 +37,13 @@ You can display your work items in several ways.
 When you view work items in a list, each work item spans the width of the list. You can see more information about a work item by expanding it. Attributes are shown as icons.
 
 ![List display](images/list_view.png)
+
+###Table  
+When you view work items in a table, each work item is in a condensed format. Some attributes are shown as icons and text and are arranged into columns.
+
+![Table display](images/table_view.png)
+
+###Lanes
 
 ###Table  
 When you view work items in a table, each work item is in a condensed format. Some attributes are shown as icons and text and are arranged into columns.
