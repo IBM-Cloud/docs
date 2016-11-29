@@ -1,10 +1,8 @@
 ---
 
- 
-
 copyright:
-
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-04-27"
 
  
 
@@ -16,9 +14,6 @@ copyright:
 {:codeblock: .codeblock}
 
 #Getting started with {{site.data.keyword.trackplan}} {: #track-plan}  
-
-*Last Updated: 27 April 2016*
-{: .last-updated}
 
 To view, edit, and plan tasks, use {{site.data.keyword.trackplanlong}}. You can track your work and your team's work, create defects, see what's incoming, maintain your backlog, and plan work for future sprints.
 {: shortdesc}
@@ -41,6 +36,9 @@ On the {{site.data.keyword.Bluemix_notm}} Dashboard, you can see your {{site.dat
 <ul>
 <li><img src="./sout.gif" alt=""><a href="https://developer.ibm.com/bluemix/support/#prereqs" rel="external" title="(Opens in a new tab or window)">{{site.data.keyword.Bluemix_notm}} Prerequisites</a></li>
 </ul>
+</div>
+
+<div class="linklist" id="samples">
 </div>
 
 <div class="linklist" id="samples">
