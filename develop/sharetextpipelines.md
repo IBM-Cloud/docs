@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -16,8 +12,6 @@ copyright:
 {:codeblock: .codeblock}
 
 #Sharing text-based pipelines in {{site.data.keyword.jazzhub_short}} sample projects {: #share-pipeline}
-
-*Last Updated: 7 December 2015* 
 
 For sample projects that are deployed to {{site.data.keyword.Bluemix_notm}} through the Deploy to {{site.data.keyword.Bluemix_notm}} button, you can define {{site.data.keyword.jazzhub_short}} pipeline configurations as YAML files. Pipelines that are defined as text can be shared so that the people who fork your project don't have to configure their own pipelines. This feature is under development: the YAML format and implementation might change at any time. Currently, this feature is available only for projects with Git and GitHub repositories that target {{site.data.keyword.Bluemix_notm}}. 
 {: shortdesc} 
@@ -220,4 +214,3 @@ Generate the file from an existing pipeline with a URL in this format:
 This call does not require an accept header. You can use this call from a browser. 
 
 **Note:** For safety reasons, secure-stage environment property values are omitted from generated pipeline YAML files. 
-
