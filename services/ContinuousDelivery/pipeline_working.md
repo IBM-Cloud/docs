@@ -1,12 +1,8 @@
 ---
 
-
-
 copyright:
-
   years: 2015, 2016
-
-
+lastupdated: "2016-11-18"
 
 ---
 
@@ -17,9 +13,6 @@ copyright:
 {:shortdesc: .shortdesc}
 
 # Working with {{site.data.keyword.deliverypipeline}} {: #pipeline-working}  
-
-Last Updated: 18 November 2016
-{: .last-updated}
 
 To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
@@ -40,6 +33,9 @@ Complete these steps to set up a {{site.data.keyword.deliverypipeline}} for an e
 1. From the hamburger menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **Services**, and then click **DevOps**.
 1. Click **Pipelines**, and then click **Create a Pipeline**.
 
+To [create a pipeline (Link opens in a new window)](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:    
+
+1. Click **Cloud Foundry**.  
 To [create a pipeline (Link opens in a new window)](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:    
 
 1. Click **Cloud Foundry**.  
