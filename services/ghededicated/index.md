@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-26"
 
 ---
  
@@ -9,14 +10,11 @@ copyright:
 {:new_window: target="_blank"}
 
 # Getting started with {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}
-{: #gheded_getting_started}
-
-Last updated: 26 August 2016
-{: .last-updated}  
+{: #gheded_getting_started} 
 
 <!-- 8/10/2016: GHE Dedicated is moving -- in the interim, this topic MUST be kept in sync with the GHE Dedicated section in toolchains_integrations.md -->
 
-{{site.data.keyword.ghe_long}} is the IBM Cloud-hosted and fully managed version of {{site.data.keyword.ghe_short}}, available for Dedicated {{site.data.keyword.Bluemix_notm}} environments. GitHub provides the social coding experience that developers love. [{{site.data.keyword.Bluemix_notm}} Dedicated](../../dedicated/index.html#dedicated){: new_window} provides a cloud computing environment on physically isolated hardware that is integrated into your network.
+{{site.data.keyword.ghe_long}} is the IBM Cloud-hosted and fully managed version of {{site.data.keyword.ghe_short}}, available for Dedicated {{site.data.keyword.Bluemix_notm}} environments. GitHub provides the social coding experience that developers love. [{{site.data.keyword.Bluemix_notm}} Dedicated](dedicated/index.html#dedicated){: new_window} provides a cloud computing environment on physically isolated hardware that is integrated into your network.
 
 Dedicated {{site.data.keyword.ghe_short}} is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only.
 
@@ -37,6 +35,7 @@ To receive notifications, you must add your email address to your {{site.data.ke
 To add your email address to your Dedicated {{site.data.keyword.ghe_short}} account, follow these steps:    
 1. In the upper-right corner of any GitHub page, click your profile icon and then click **Settings**.    
 2. On the sidebar, click **Emails**.    
+3. Add your email address and click **Add**.     
 3. Add your email address and click **Add**.     
 
 {: #ghe_auth}
