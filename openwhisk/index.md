@@ -20,6 +20,16 @@ lastupdated: "2016-09-09"
 
 For more details about how {{site.data.keyword.openwhisk_short}} works, see [About {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
+You can use the Browser or the CLI to develop your {{site.data.keyword.openwhisk_short}} applications.
+Both have similar capabilities for developing applications; the CLI provides more control over your deployment and operations.
+
+
+## Develop in your Browser
+{: #openwhisk_start_editor}
+
+Try out {{site.data.keyword.openwhisk_short}} in your [Browser](https://console.{DomainName}/openwhisk/editor){: new_window} to create actions, automate actions using triggers, and explore public packages. 
+Visit the [learn more](https://console.{DomainName}/openwhisk/learn){: new_window} page for a quick tour of the OpenWhisk User Interface.
+
 ## Setting up the {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_configure_cli}
 
@@ -27,11 +37,11 @@ You can use the {{site.data.keyword.openwhisk_short}} command line interface (CL
 Go to [Configure CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} and follow the instructions to install it.
 
 ### Configure the CLI to use an HTTPS proxy
+{: #openwhisk_configure_https_proxy_cli}
 
 The CLI can be setup to use an HTTPS proxy. To setup an HTTPS proxy, an environment variable called `HTTPS_PROXY` must
  be created. The variable must be set to the address of the HTTPS proxy, and its port using the following format:
 `{PROXY IP}:{PROXY PORT}`.
-
 
 After {{site.data.keyword.openwhisk_short}} is set up with the CLI, you can begin using it from the command line.
 
