@@ -402,6 +402,7 @@ This example invokes a Yahoo Weather service to get the current conditions at a 
   {: screen}
 
 ### Packaging an action as a Node.js module
+{: #openwhisk_js_packaged_action}
 
 As an alternative to writing all your action code in a single JavaScript source file, you can write an action as a `npm` package. Consider as an example a directory with the following files:
 
