@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2016
 
-lastupdated: "2016-11-28"
+lastupdated: "2016-11-29"
 
 
 ---
@@ -34,7 +34,7 @@ Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI t
 
 | *{{site.data.keyword.Bluemix_notm}}: bx* | *Cloud Foundry: cf* |
 |---------------------|---------------|
-| [Download CLI](http://clis.ng.bluemix.net/) <br> [View Docs](./reference/bluemix_cli/index.html)|  [Download CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [View Docs](./reference/cfcommands/index.html) |
+| [Download CLI](http://clis.ng.bluemix.net/) <br> [View Docs](/docs/cli/reference/bluemix_cli/index.html)|  [Download CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [View Docs](/docs/cli/reference/cfcommands/index.html) |
 
 
 ## ![](./images/CLI_Plugin.svg) Command line interface plug-ins
@@ -61,11 +61,11 @@ bluemix plugin install plugin_name -r bluemix-bx
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Containers*  |
 |-----|-----|-----|
-| Plug-in name: active-deploy <br> [View Docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [View Docs](/docs/plugins/auto-scaling/index.html) |  Plug-in name: IBM-Containers  <br> [View Docs](/docs/plugins/containers/index.html) |
+| Plug-in name: active-deploy <br> [View Docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [View Docs](/docs/cli/plugins/auto-scaling/index.html) |  Plug-in name: IBM-Containers  <br> [View Docs](/docs/cli/plugins/containers/index.html) |
 
 | *Network Security Groups* |  *Private network peering* | *VPN*  |  
 |-----|-----|-----|
-| Plug-in name: network-security-groups <br> [View Docs](/docs/plugins/networksecuritygroups/index.html) | Plug-in name: private-network-peering  <br> [View Docs](/docs/plugins/pnp/index.html) |Plug-in name: VPN  <br> [View Docs](/docs/plugins/bx_vpn/index.html) |
+| Plug-in name: network-security-groups <br> [View Docs](/docs/cli/plugins/networksecuritygroups/index.html) | Plug-in name: private-network-peering  <br> [View Docs](/docs/cli/plugins/pnp/index.html) |Plug-in name: VPN  <br> [View Docs](/docs/cli/plugins/bx_vpn/index.html) |
 
 
 ### Extend your Cloud Foundry command line interface: cf
@@ -92,7 +92,7 @@ cf install-plugin plugin_name -r bluemix-cf
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
-| Plug-in name: ibm-containers <br> [View Docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Plug-in name: VPN <br> [View Docs](./plugins/vpn/index.html) |
+| Plug-in name: ibm-containers <br> [View Docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Plug-in name: VPN <br> [View Docs](/docs/cli/plugins/vpn/index.html) |
 
 
 ## ![](./images/Integrated_Dev_Tools.svg) Integrated development tools
