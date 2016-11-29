@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-18"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,6 @@ copyright:
 
 # About {{site.data.keyword.deliverypipeline}}
 {: #deliverypipeline_about}
-Last updated: 18 November 2016
-{: .last-updated}
 
 The IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service, also known as pipeline, automates the continuous deployment of your Bluemix projects. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
 {:shortdesc}
@@ -34,12 +32,13 @@ By default in a stage, builds and deployments are triggered automatically every 
 
 You might want tighter control of a specific stage. If you do not want a stage to run every time that a change occurs at its input, you can disable the capability. On the **INPUT** tab, in the Stage Trigger section, click **Run jobs only when this stage is run manually**.
 
-![The INPUT tab](./images/input_tab_only_execute.png)
+![The INPUT tab](images/input_tab_only_execute.png)
 
 ## Jobs
 {: #deliverypipeline_jobs}
 
 A job is an execution unit within a stage. A stage can contain multiple jobs, and the jobs in a stage run sequentially. By default, if a job fails, subsequent jobs in the stage do not run.
+
 
 ![Build and test jobs within a stage](./images/jobs.png)
 
