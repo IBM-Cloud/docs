@@ -249,45 +249,6 @@ You can use an action to fetch a document from a Cloudant database called `testd
   {: screen}
 
 
-## Using the Alarm package
-{: #openwhisk_catalog_alarm}
-
-The `/whisk.system/alarms` package can be used to fire a trigger at a specified frequency. This is useful for setting up recurring jobs or tasks, such as invoking a system backup action every hour.
-
-The package includes the following feed.
-
-| Entity | Type | Parameters | Description |
-| --- | --- | --- | --- |
-| `/whisk.system/alarms` | package | - | Alarms and periodic utility |
-| `/whisk.system/alarms/alarm` | feed | cron, trigger_payload, maxTriggers | Fire trigger event periodically |
-
-
-### Firing a trigger event periodically
-{: #openwhisk_catalog_alarm_fire}
-
-The `/whisk.system/alarms/alarm` feed configures the Alarm service to fire a trigger event at a specified frequency. The parameters are as follows:
-
-- `cron`: A string, based on the UNIX crontab syntax, that indicates when to fire the trigger in Coordinated Universal Time (UTC). The string is a sequence of six fields that are separated by spaces: `X X X X X X `. For more details about using cron syntax, see: https://github.com/ncb000gt/node-cron. Following are some examples of the frequency that is indicated by the string:
-
-  - `* * * * * *`: every second.
-  - `0 * * * * *`: top of every minute.
-  - `* 0 * * * *`: top of every hour.
-  - `0 0 9 8 * *`: at 9:00:00AM (UTC) on the eighth day of every month
-
-- `trigger_payload`: The value of this parameter becomes the content of the trigger every time the trigger is fired.
-
-- `maxTriggers`: Stop firing triggers when this limit is reached. Defaults to 1000. You can set it to maximum 10,000. If you try to set more than 10,000, the request is rejected.
-
-The following is an example of creating a trigger that will be fired once every 20 seconds with `name` and `place` values in the trigger event.
-
-  ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
-  ```
-  {: pre}
-
-Each generated event will include as parameters the properties specified in the `trigger_payload` value. In this case, each trigger event will have parameters `name=Odin` and `place=Asgard`.
-
-
 ## Using the Weather package
 {: #openwhisk_catalog_weather}
 
@@ -521,7 +482,46 @@ The following is an example of creating a package binding and converting speech 
   ```
   {: screen}
   
- 
+
+## Using the Alarm package
+{: #openwhisk_catalog_alarm}
+
+The `/whisk.system/alarms` package can be used to fire a trigger at a specified frequency. This is useful for setting up recurring jobs or tasks, such as invoking a system backup action every hour.
+
+The package includes the following feed.
+
+| Entity | Type | Parameters | Description |
+| --- | --- | --- | --- |
+| `/whisk.system/alarms` | package | - | Alarms and periodic utility |
+| `/whisk.system/alarms/alarm` | feed | cron, trigger_payload, maxTriggers | Fire trigger event periodically |
+
+
+### Firing a trigger event periodically
+{: #openwhisk_catalog_alarm_fire}
+
+The `/whisk.system/alarms/alarm` feed configures the Alarm service to fire a trigger event at a specified frequency. The parameters are as follows:
+
+- `cron`: A string, based on the UNIX crontab syntax, that indicates when to fire the trigger in Coordinated Universal Time (UTC). The string is a sequence of six fields that are separated by spaces: `X X X X X X `. For more details about using cron syntax, see: https://github.com/ncb000gt/node-cron. Following are some examples of the frequency that is indicated by the string:
+
+  - `* * * * * *`: every second.
+  - `0 * * * * *`: top of every minute.
+  - `* 0 * * * *`: top of every hour.
+  - `0 0 9 8 * *`: at 9:00:00AM (UTC) on the eighth day of every month
+
+- `trigger_payload`: The value of this parameter becomes the content of the trigger every time the trigger is fired.
+
+- `maxTriggers`: Stop firing triggers when this limit is reached. Defaults to 1000. You can set it to maximum 10,000. If you try to set more than 10,000, the request is rejected.
+
+The following is an example of creating a trigger that will be fired once every 20 seconds with `name` and `place` values in the trigger event.
+
+  ```
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
+  ```
+  {: pre}
+
+Each generated event will include as parameters the properties specified in the `trigger_payload` value. In this case, each trigger event will have parameters `name=Odin` and `place=Asgard`.
+
+
 ## Using the Slack package
 {: #openwhisk_catalog_slack}
 
