@@ -1,10 +1,8 @@
 ---
 
- 
-
 copyright:
-
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-04-29"
 
  
 
@@ -16,9 +14,6 @@ copyright:
 {:codeblock: .codeblock}
 
 #Organizing and filtering work items {: #tp-organize}  
-
-*Last Updated: 29 April 2016*
-{: .last-updated}
 
 The {{site.data.keyword.trackplan}} service includes several options for sorting and organizing your work items.
 {: shortdesc}
@@ -46,6 +41,11 @@ If you type a word, the work item summaries that contain that word are shown. Yo
 |$Priority|`$High`|
 |!Severity|`!Major`|       
    
+
+You can create queries that use any work item attribute by typing the attribute name. For example, if you type `Created by`, the query options and the syntax are shown. You can use operators, such as "and," "or," and "not" in your filter criteria. You can also include complex operations that nest multiple operators by using parentheses. To see examples, click the **Help** icon. 
+![Filter help icon](images/filter_helpicon.png)
+
+When you click the **Filter work items by keyword** field, the operators and filters that you can use to create queries are shown.
 
 You can create queries that use any work item attribute by typing the attribute name. For example, if you type `Created by`, the query options and the syntax are shown. You can use operators, such as "and," "or," and "not" in your filter criteria. You can also include complex operations that nest multiple operators by using parentheses. To see examples, click the **Help** icon. 
 ![Filter help icon](images/filter_helpicon.png)
