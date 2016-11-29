@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,8 +18,7 @@ copyright:
 
 # Managing pipelines
 {: #deliverypipeline_managing}
-Last updated: 17 November 2016
-{: .last-updated}
+
 
 You can administer, configure, and extend IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} integrations.
 {:shortdesc}
@@ -29,7 +28,7 @@ Complete the following tasks to administer, configure, and extend a pipeline.
 ## Environment properties and resources
 {: #deliverypipeline_envprop}
 
-You can use environment properties and pre-installed resources to interact with the {{site.data.keyword.deliverypipeline}} service. For example, you might incorporate them into a job script or test command. For more information, see [Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](./deploy_var.html).
+You can use environment properties and pre-installed resources to interact with the {{site.data.keyword.deliverypipeline}} service. For example, you might incorporate them into a job script or test command. For more information, see [Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](deploy_var.html).
 
 You can add your own environment properties to a stage from its **ENVIRONMENT PROPERTIES** tab. Environment properties are available to every job in a stage.
 
@@ -44,5 +43,6 @@ You can add four types of properties from the Environment Properties tab:
 
 You can extend the capabilities of your pipeline by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.
 
+For more information on extending pipeline capabilities, see [Extending the {{site.data.keyword.deliverypipeline}} service's capabilities](deliverypipeline_extension.html).
 For more information on extending pipeline capabilities, see [Extending the {{site.data.keyword.deliverypipeline}} service's capabilities](./deliverypipeline_extension.html).
 
