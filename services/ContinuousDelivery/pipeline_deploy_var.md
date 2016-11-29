@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,8 +18,6 @@ copyright:
 
 # Environment properties and resources
 {: #deliverypipeline_environment}
-Last updated: 17 November 2016
-{: .last-updated}
 
 You can use environment properties and pre-installed resources to interact with the IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service. For example, you might use them in a job script or test command.
 {:shortdesc}
@@ -46,6 +44,8 @@ The following properties and resources are available by default in pipeline envi
 | BUILD_ID | The unique ID for the current job execution.  |
 | BUILD_DISPLAY_NAME | The BUILD_ID value, prefixed with "#". |
 | BUILD_NUMBER | The incremental stage ID that is shown in the pipeline UI.  |
+| GIT_BRANCH | The Git branch that the job uses as input. This property is only available in jobs that use a Git repository as input. |
+| GIT_COMMIT | The Git commit that the job uses as input. This property is only available in jobs that use a Git repository as input. |
 | GIT_BRANCH | The Git branch that the job uses as input. This property is only available in jobs that use a Git repository as input. |
 | GIT_COMMIT | The Git commit that the job uses as input. This property is only available in jobs that use a Git repository as input. |
 | GIT_PREVIOUS_COMMIT | The Git commit value of the job's last successful run. This property is only available only in jobs that use a Git repository as input. |
