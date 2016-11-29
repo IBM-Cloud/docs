@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-09-16"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,8 +18,6 @@ copyright:
 
 # Plans
 {: #deliverypipeline_plans}
-Last updated: 16 September 2016
-{: .last-updated}
 {: #free_deprecation}
 
 {{site.data.keyword.deliverypipeline}} and {{site.data.keyword.deliverypipeline}} Next use a free plan. This plan includes unlimited use of pipelines.
