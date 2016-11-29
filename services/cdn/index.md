@@ -4,18 +4,22 @@ copyright:
 
   years: 2016
 
+lastupdated: "2016-11-29"
+
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:note: .deprecated}
 
 # Getting started with {{site.data.keyword.cdn_short}} (Beta)
 {: #cdn}  
-*Last updated: 02 August 2016*
-{: .last-updated}  
 
 Use {{site.data.keyword.cdn_full}} (CDN) to reduce content load time, enhance user experience, and lower bandwidth usage in your Bluemix&reg; or virtual server applications. The service supports only HTTP applications. HTTPS applications are not supported. 
 {:shortdesc}
+
+**This service is deprecated:** Existing service instances can be used until 01 January 2017. 
+{: deprecated}
 
 Before you begin, create a Bluemix application from the Bluemix user interface. Then, get started by adding a custom domain name for your Bluemix application and configuring the IBM CDN service for your app.
 
