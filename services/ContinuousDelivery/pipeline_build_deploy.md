@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-18"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,8 +18,6 @@ copyright:
 
 # Building and deploying
 {: #deliverypipeline_build_deploy}
-Last updated: 17 November 2016
-{: .last-updated}
 
 The IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service allows you to implement a repeatable continuous integration and continuous delivery process.
 {:shortdesc}
@@ -44,8 +42,10 @@ Complete the following tasks to create and configure a pipeline.
 4. Configure the job.
 5. Click **SAVE**.
 
-![Adding a job to a stage](./images/AddJob2.png)
+![Adding a job to a stage](images/AddJob2.png)
 
+## Running a stage
+{: #deliverypipeline_run_stage}
 ## Running a stage
 {: #deliverypipeline_run_stage}
 
