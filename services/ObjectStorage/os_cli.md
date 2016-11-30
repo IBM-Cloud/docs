@@ -157,7 +157,7 @@ To generate service credentials using the Swift CLI, you can use the following s
   ```
   {: pre}
 
-**Note**: If you get an error message, confirm that you have installed [the prerequisite software](../ObjectStorage/os_cli.html##install-swift-client).
+**Note**: If you get an error message, confirm that you have installed [the prerequisite software](../ObjectStorage/os_cli.html#install-swift-client).
 
 3. (Optional:) To verify that your container was created, run the following command to list your containers.
   ```
