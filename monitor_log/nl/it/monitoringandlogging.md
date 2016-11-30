@@ -11,10 +11,10 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Monitoraggio e registrazione
+#Monitoraggio e registrazione con Cloud Foundry
 {: #monitoringandlogging}
 
-Ultimo aggiornamento: 2 settembre 2016
+Ultimo aggiornamento: 28 ottobre 2016
 {: .last-updated}
 
 Mediante il monitoraggio delle tue applicazioni e la revisione dei log, puoi seguire l'esecuzione dell'applicazione e il flusso di dati per comprendere al meglio la tua distribuzione. Inoltre, puoi ridurre il tempo e lo sforzo necessari per individuare e correggere eventuali problemi.
@@ -53,7 +53,7 @@ I file di log vengono creati automaticamente quando utilizzi l'infrastruttura Cl
 ###Conservazione dei log
 {: #log_retention}
 
-* Nelle applicazioni Bluemix Cloud Foundry, i dati dei log vengono memorizzati per 30 giorni per impostazione predefinita.
+Nelle applicazioni {{site.data.keyword.Bluemix_notm}} Cloud Foundry pubbliche, i dati dei log vengono memorizzati per 7 giorni per impostazione predefinita.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -138,7 +138,7 @@ Puoi visualizzare i log delle tue applicazioni Cloud Foundry in tre punti:
 {: #viewing_logs_UI}
 
 Per visualizzare i log di distribuzione o di runtime, completa la seguente procedura:
-1. Accedi a {{site.data.keyword.Bluemix_notm}}, quindi fai clic sul tile della tua applicazione sul Dashboard. Viene visualizzata la pagina dei dettagli dell'applicazione.
+1. Accedi a {{site.data.keyword.Bluemix_notm}}, quindi fai clic sul tile della tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
 2. Nella barra di navigazione, fai clic su **Log**.
 
 Nella console **Log**, puoi visualizzare in tempo reale i log recenti riguardanti la tua applicazione o le parti finali dei log. Inoltre, puoi filtrare i log in base al canale e al tipo di log.
@@ -395,7 +395,7 @@ Jane testa l'applicazione, quindi digita la seguente stringa di query nell'inter
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-Jane visualizza un flusso di log nella propria interfaccia Web Splunk. Sebbene la versione di Splunk installata da Jane sia la Splunk Light, può comunque conservare 500 MB di registri al giorno. 
+Jane visualizza un flusso di log nella propria interfaccia Web Splunk. Sebbene la versione di Splunk installata da Jane sia la Splunk Light, può comunque conservare 500 MB di registri al giorno.  
 
 
 

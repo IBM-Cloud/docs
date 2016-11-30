@@ -11,10 +11,10 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#モニターとロギング
+#Cloud Foundry でのモニターとロギング
 {: #monitoringandlogging}
 
-最終更新日: 2016 年 9 月 2 日
+最終更新日: 2016 年 10 月 28 日
 {: .last-updated}
 
 アプリをモニターし、ログを確認することで、アプリケーション実行
@@ -58,7 +58,7 @@ Cloud Foundry インフラストラクチャーを使用して {{site.data.keywo
 ###ログ保持期間
 {: #log_retention}
 
-* Bluemix Cloud Foundry アプリでは、ログ・データはデフォルトで 30 日間保管されます。
+{{site.data.keyword.Bluemix_notm}} Public Cloud Foundry アプリでは、ログ・データはデフォルトで 7 日間保管されます。
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -142,7 +142,7 @@ Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
 {: #viewing_logs_UI}
 
 デプロイメントまたはランタイムのログを表示するには、以下の手順を実行します。
-1. {{site.data.keyword.Bluemix_notm}} にログインし、ダッシュボードでアプリのタイルをクリックします。アプリの詳細ページが表示されます。
+1. {{site.data.keyword.Bluemix_notm}} にログインし、アプリのタイルをクリックします。アプリの詳細ページが表示されます。
 2. ナビゲーション・バーで、**「ログ」**をクリックします。
 
 **「ログ」**コンソールでは、アプリの最近のログを表示したり、最新のログ (ログ・ファイルの末尾) をリアルタイムで確認することができます。また、ログのタイプとチャネルでログをフィルターに掛けることもできます。
@@ -422,7 +422,7 @@ source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
 Splunk Web インターフェースでログのストリームを確認します。Jane がインストール
-する Splunk は Splunk Light ですが、1 日に 500 MB のログを保存することが可能です。 
+する Splunk は Splunk Light ですが、1 日に 500 MB のログを保存することが可能です。  
 
 
 

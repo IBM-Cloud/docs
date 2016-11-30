@@ -11,10 +11,10 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Monitoramento e criação de log
+#Monitorando e criando logs com o Cloud Foundry
 {: #monitoringandlogging}
 
-Última atualização: 2 de setembro de 2016
+Última atualização: 28 de outubro de 2016
 {: .last-updated}
 
 Ao monitorar seus apps e revisar logs, é possível seguir a execução do aplicativo e o fluxo de dados para obter um melhor entendimento de sua implementação. Além disso, é possível reduzir o tempo e o esforço necessários para localizar problemas e repará-los.
@@ -55,7 +55,7 @@ Os arquivos de log são criados automaticamente quando se está usando a infraes
 ###Retenção de log
 {: #log_retention}
 
-* Em aplicativos Cloud Foundry do Bluemix, dados do log são armazenados por 30 dias por padrão.
+Em apps {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry, os dados do log são armazenados por 7 dias, por padrão.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -143,7 +143,7 @@ Toda entrada de log contém quatro campos. Consulte a lista a seguir para obter 
 {: #viewing_logs_UI}
 
 Para ver os logs de implementação ou de tempo de execução, conclua as etapas a seguir:
-1. Efetue login no {{site.data.keyword.Bluemix_notm}} e, em seguida, clique no quadro de seu app no Painel. A página de detalhes do app é exibida.
+1. Efetue login no {{site.data.keyword.Bluemix_notm}} e, em seguida, clique no quadrado de seu app. A página de detalhes do app é exibida.
 2. Na barra de navegação, clique em **Logs**.
 
 No console de **Logs**, é possível visualizar os logs recentes para seu app ou acompanhar logs em tempo real. Além disso, é possível filtrar logs por tipo de log e canal.
@@ -410,7 +410,7 @@ A Jane testa o seu aplicativo e, em seguida, digita a sequência de consultas a 
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-A Jane vê um fluxo de logs em sua interface da web do Splunk. Embora o Splunk que a Jane instala seja o Splunk Light, ela ainda pode reter 500 MB de logs por dia. 
+A Jane vê um fluxo de logs em sua interface da web do Splunk. Embora o Splunk que a Jane instala seja o Splunk Light, ela ainda pode reter 500 MB de logs por dia.  
 
 
 

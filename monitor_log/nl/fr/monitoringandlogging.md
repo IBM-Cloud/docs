@@ -11,10 +11,10 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Surveillance et journalisation
+#Surveillance et journalisation avec Cloud Foundry
 {: #monitoringandlogging}
 
-Dernière mise à jour : 2 septembre 2016
+Dernière mise à jour : 28 octobre 2016
 {: .last-updated}
 
 En surveillant vos applications et en consultant les journaux, vous pouvez suivre l'exécution des applications et le flux de données afin de mieux
@@ -65,10 +65,11 @@ Des fichiers journaux sont créés automatiquement lorsque vous utilisez l'infra
 Foundry pour exécuter vos applications dans {{site.data.keyword.Bluemix_notm}}. Si vous rencontrez des erreurs au cours d'une étape entre le
 déploiement et l'exécution, vous pouvez consulter les journaux pour déterminer comment résoudre le problème.
 
-###Conservation dans le journal 
+###Conservation dans le journal
 {: #log_retention}
 
-* Dans les applications Bluemix Cloud Foundry, les données de journal sont stockées par défaut pendant 30 jours.
+Dans les applications Cloud Foundry de l'environnement {{site.data.keyword.Bluemix_notm}} public, les données de journal sont stockées par
+défaut pendant 7 jours.
 
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
@@ -156,7 +157,7 @@ Vous pouvez afficher les journaux pour vos applications Cloud Foundry à trois e
 {: #viewing_logs_UI}
 
 Pour afficher les journaux de déploiement ou d'exécution, procédez comme suit :
-1. Connectez-vous à {{site.data.keyword.Bluemix_notm}}, puis cliquez sur la vignette de votre application dans le tableau de bord. La page des détails de l'application s'ouvre.
+1. Connectez-vous à {{site.data.keyword.Bluemix_notm}}, puis cliquez sur la vignette de votre application. La page des détails de l'application s'ouvre.
 2. Dans la barre de navigation, cliquez sur **Journaux**.
 
 Dans la console **Journaux**, vous pouvez afficher les journaux récents pour votre application ou afficher les dernières lignes des
@@ -238,7 +239,7 @@ cf logs nom_app --recent | cut -c 29-40,46-
 
 Pour plus d'informations sur l'option **grep**, entrez cut --help.
 * Pour afficher les entrées de journal qui contiennent certains mots clés, utilisez l'option **grep**. Par exemple, pour afficher
-les entrées de journal contenant le mot clé `[APP`, utilisez la commande suivante : 
+les entrées de journal contenant le mot clé `[APP`, utilisez la commande suivante :
 
 ```
 cf logs nom_app --recent | grep '\[App'
@@ -266,8 +267,7 @@ HTTPS POST. Les méthodes d'obtention de noeuds finaux de journalisation varient
   2. Créez une instance de service fournie par l'utilisateur.
      
 	 Utilisez la commande `cf create-user-provided-service` (ou sa version courte `cups`) pour créer une instance de
-service fournie par l'utilisateur :
- 
+service fournie par l'utilisateur : 
 	 ```
 	 cf create-user-provided-service <nom_service> -l <noeud_final_journalisation>
 	 ```
@@ -324,7 +324,7 @@ pour Papertrail.</td>
 	 Nom de l'instance de service fournie par l'utilisateur.
 	 
   4. Reconstituez l'application. 
-     Entrez `cf restage nom_app` pour que les modifications soient appliquées.  
+     Entrez `cf restage nom_app` pour que les modifications soient appliquées. 
 
 #### Affichage des journaux à partir d'hôtes externes
 {: #viewing_logs_external}
@@ -449,7 +449,7 @@ source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
 Jeanne observe un flux de journaux dans son interface Web Splunk. Bien qu'elle ait installé la version Splunk Light, Jeanne dispose toujours d'une capacité
-de 500 Mo par jour pour ses journaux. 
+de 500 Mo par jour pour ses journaux.  
 
 
 

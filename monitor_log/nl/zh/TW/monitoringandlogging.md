@@ -11,10 +11,10 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#監視及記載
+#使用 Cloud Foundry 監視及記載
 {: #monitoringandlogging}
 
-前次更新：2016 年 9 月 2 日
+前次更新：2016 年 10 月 28 日
 {: .last-updated}
 
 監視應用程式以及檢閱日誌，即可遵循應用程式執行及資料流程，以深入瞭解部署。此外，您還可以減少找到任何問題並進行修復所需的時間及工作量。
@@ -53,7 +53,7 @@ copyright:
 ###日誌保留
 {: #log_retention}
 
-* 在 Bluemix Cloud Foundry 應用程式中，日誌資料預設會儲存 30 天。
+在「{{site.data.keyword.Bluemix_notm}} 公用」Cloud Foundry 應用程式中，日誌資料預設會儲存 7 天。
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -138,7 +138,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 {: #viewing_logs_UI}
 
 若要查看部署或運行環境日誌，請完成下列步驟：
-1. 登入 {{site.data.keyword.Bluemix_notm}}，然後在「儀表板」按一下您的應用程式磚。即會顯示「應用程式詳細資料」頁面。
+1. 登入 {{site.data.keyword.Bluemix_notm}}，然後按一下您的應用程式磚。即會顯示「應用程式詳細資料」頁面。
 2. 在導覽列中，按一下**日誌**。
 
 在**日誌**主控台中，您可以檢視應用程式的最新日誌，或即時讀取日誌尾端的內容。此外，您還可以依日誌類型及通道來過濾日誌。
@@ -387,7 +387,7 @@ Jane 試用她的應用程式，然後在 Splunk Web 介面中鍵入下列查詢
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-Jane 在她的 Splunk Web 介面中看到一連串的日誌。雖然 Jane 安裝的 Splunk 是 Splunk Light，但她一天還是可以保留 500MB 的日誌。 
+Jane 在她的 Splunk Web 介面中看到一連串的日誌。雖然 Jane 安裝的 Splunk 是 Splunk Light，但她一天還是可以保留 500MB 的日誌。  
 
 
 

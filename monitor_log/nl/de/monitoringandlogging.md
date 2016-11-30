@@ -11,10 +11,10 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Überwachung und Protokollierung
+#Überwachung und Protokollierung mit Cloud Foundry
 {: #monitoringandlogging}
 
-Letzte Aktualisierung: 2. September 2016
+Letzte Aktualisierung: 28. Oktober 2016
 {: .last-updated}
 
 Indem Sie Ihre Apps überwachen und Protokolle überprüfen, können Sie die Anwendungsausführung und den Datenfluss verfolgen, um Ihre Bereitstellung besser zu verstehen. Darüber hinaus können Sie die Zeit und den Aufwand für das Auffinden und Beheben von Problemen reduzieren.
@@ -53,7 +53,7 @@ Protokolldateien werden automatisch erstellt, wenn Sie die Cloud Foundry-Infrast
 ###Protokollspeicherung
 {: #log_retention}
 
-* In den Bluemix Cloud Foundry-Apps werden die Protokolldaten standardmäßig 30 Tage lang gespeichert.
+In den {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry-Apps werden die Protokolldaten standardmäßig 7 Tage lang gespeichert.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -138,7 +138,7 @@ Sie können die Protokolle für Ihre Cloud Foundry-Apps an drei Positionen anzei
 {: #viewing_logs_UI}
 
 Führen Sie die folgenden Schritte aus, um die Bereitstellungs- oder Laufzeitprotokolle anzuzeigen:
-1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und klicken Sie dann auf die Kachel für Ihre App auf dem Dashboard. Die Seite mit den Anwendungsdetails wird angezeigt.
+1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und klicken Sie dann auf die Kachel für Ihre App. Die Seite mit den Anwendungsdetails wird angezeigt.
 2. Klicken Sie in der Navigationsleiste auf **Protokolle**.
 
 In der Konsole für **Protokolle** können Sie die kürzlich generierten Protokolle für Ihre App oder Protokollendabschnitte in Echtzeit anzeigen. Darüber hinaus können Sie Protokolle nach Protokolltyp und Kanal filtern.
@@ -388,7 +388,7 @@ Jane testet die App und gibt dann die folgende Abfragezeichenfolge in die Splunk
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-In der Splunk-Webschnittstelle wird ein Protokolldatenstrom angezeigt. Obwohl nur Splunk Light installiert wurde, kann eine Protokollmenge von 500 MB pro Tag gespeichert werden. 
+In der Splunk-Webschnittstelle wird ein Protokolldatenstrom angezeigt. Obwohl nur Splunk Light installiert wurde, kann eine Protokollmenge von 500 MB pro Tag gespeichert werden.  
 
 
 

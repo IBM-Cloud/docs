@@ -11,10 +11,10 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#모니터링 및 로깅
+#Cloud Foundry로 모니터링 및 로깅
 {: #monitoringandlogging}
 
-마지막 업데이트 날짜: 2016년 9월 2일
+마지막 업데이트 날짜: 2016년 10월 28일
 {: .last-updated}
 
 앱을 모니터링하고 로그를 검토하면서 애플리케이션 실행을 따라 가면 배치에 대해 더 잘 이해할 수 있습니다. 또한 문제를 찾아 이를 해결하는 데 드는 시간과 노력을 줄일 수 있습니다.
@@ -53,7 +53,7 @@ Cloud Foundry 인프라를 사용하여 {{site.data.keyword.Bluemix_notm}}에서
 ###로그 보유
 {: #log_retention}
 
-* Bluemix Cloud Foundry 앱에서 로그 데이터는 기본적으로 30일 동안 저장됩니다. 
+{{site.data.keyword.Bluemix_notm}} Public Cloud Foundry 앱에서 로그 데이터는 기본적으로 7일 동안 저장됩니다. 
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -138,7 +138,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 {: #viewing_logs_UI}
 
 배치 또는 런타임 로그를 보려면 다음 단계를 완료하십시오.
-1. {{site.data.keyword.Bluemix_notm}}에 로그인한 다음 대시보드에서 사용자의 앱에 대한 타일을 클릭하십시오. 앱 세부사항 페이지가 표시됩니다.
+1. {{site.data.keyword.Bluemix_notm}}에 로그인한 다음 사용자의 앱에 대한 타일을 클릭하십시오. 앱 세부사항 페이지가 표시됩니다.
 2. 탐색줄에서 **로그**를 클릭하십시오.
 
 **로그** 콘솔에서 앱에 대한 최신 로그 또는 실시간 비상 로그를 볼 수 있습니다. 또한 로그 유형 및 채널별로 로그를 필터링할 수 있습니다.
@@ -390,7 +390,7 @@ Jane은 자신의 앱을 사용해 본 후에 Splunk 웹 인터페이스에서 �
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-Jane은 Splunk 웹 인터페이스에서 로그의 스트림을 봅니다. 설치하는 Splunk가 Splunk Light이지만, Jane은 매일 500MB 로그를 계속 보유할 수 있습니다.  
+Jane은 Splunk 웹 인터페이스에서 로그의 스트림을 봅니다. 설치하는 Splunk가 Splunk Light이지만, Jane은 매일 500MB 로그를 계속 보유할 수 있습니다.   
 
 
 

@@ -11,10 +11,10 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#监视和日志记录
+#通过 Cloud Foundry 进行监视和日志记录
 {: #monitoringandlogging}
 
-上次更新时间：2016 年 9 月 2 日
+上次更新时间：2016 年 10 月 28 日
 {: .last-updated}
 
 通过监视应用程序和复查日志，您可以跟进应用程序的执行和数据流，从而更好地了解部署情况。此外，还可以减少找到任何问题并进行修复所需的时间和精力。
@@ -22,7 +22,7 @@ copyright:
 
 {{site.data.keyword.Bluemix}} 应用程序可以是广泛分布的多实例应用程序，并且应用程序的执行及其数据可以在许多服务中共享。在这种复杂的环境中，监视应用程序和复查日志对您管理应用程序非常重要。
 
-##监视和记录 Cloud Foundry 应用程序
+##对 Cloud Foundry 应用程序进行监视和日志记录
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}} 具有内置日志记录机制，可在应用程序运行时为应用程序生成日志文件。在日志中，可以查看为应用程序生成的错误、警告和参考消息。此外，还可以配置应用程序，以便将日志消息写入日志文件中。有关日志格式和如何查看日志的更多信息，请参阅[为 Cloud Foundry 上运行的应用程序进行日志记录](#logging_for_bluemix_apps)。
@@ -53,7 +53,7 @@ copyright:
 ###日志保留时间
 {: #log_retention}
 
-* 在 Bluemix Cloud Foundry 应用程序中，缺省情况下日志数据存储 30 天。
+在 {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry 应用程序中，缺省情况下日志数据存储 7 天。
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
@@ -138,7 +138,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 {: #viewing_logs_UI}
 
 要查看部署或运行时日志，请完成以下步骤：
-1. 登录到 {{site.data.keyword.Bluemix_notm}}，然后在“仪表板”上单击应用程序的磁贴。这将显示应用程序详细信息页面。
+1. 登录到 {{site.data.keyword.Bluemix_notm}}，然后单击应用程序的磁贴。这将显示应用程序详细信息页面。
 2. 在导航栏中，单击**日志**。
 
 在**日志**控制台中，可以查看应用程序最近的日志或实时查看尾部日志。此外，可以按日志类型和通道来过滤日志。
@@ -387,7 +387,7 @@ Jane 尝试使用该应用程序，然后在 Splunk Web 界面输入以下查询
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-Jane 在其 Splunk Web 界面中看到日志流。虽然 Jane 安装的 Splunk 是 Splunk Light，但是她仍可以每天保留 500MB 日志。 
+Jane 在其 Splunk Web 界面中看到日志流。虽然 Jane 安装的 Splunk 是 Splunk Light，但是她仍可以每天保留 500MB 日志。  
 
 
 
