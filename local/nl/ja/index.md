@@ -1,116 +1,126 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-28"
+
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-#{{site.data.keyword.Bluemix_notm}} Local
+# {{site.data.keyword.Bluemix_local_notm}}
 {: #local}
-*最終更新日: 2016 年 9 月 15 日*
-{: .last-updated}
 
-ユーザーのデータ・センターは、{{site.data.keyword.Bluemix}} Local を使用することにより、{{site.data.keyword.Bluemix_notm}} クラウド・ベースのプラットフォームが持つ能力と俊敏性を得ることができます。{{site.data.keyword.Bluemix_notm}} Local を使用すれば、{{site.data.keyword.Bluemix_notm}} Public にセキュアに接続して同期をとり続けながら、同時に、自社のファイアウォールの内側にある最高機密のワークロードを保護することができます。
-{:shortdesc}
 
-IBM® はクラウド操作をサービスとして使用してお客様の環境のモニターと保守を行います。そのため、お客様は、自分の環境上で稼動するアプリやサービスのビルドに注力できます。また、IBM はプラットフォームの更新にも対応するので、お客様はビジネスに専念できます。
+ユーザーのデータ・センターは、{{site.data.keyword.Bluemix_local}} を使用することにより、{{site.data.keyword.Bluemix_notm}} クラウド・ベースのプラットフォームが持つ能力と俊敏性を得ることができます。{{site.data.keyword.Bluemix_local_notm}} を使用すれば、{{site.data.keyword.Bluemix_notm}} Public にセキュアに接続して同期をとり続けながら、同時に、自社のファイアウォールの内側にある最高機密のワークロードを保護することができます。{:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} Local 環境のセキュリティー標準は、運用上のセキュリティーの観点では、Public  {{site.data.keyword.Bluemix_notm}} と同じです。お客様はハードウェアとインフラストラクチャーを用意します。これにより、インフラストラクチャーと物理的セキュリティーを制御できるようになります。ローカルの {{site.data.keyword.Bluemix_notm}} に対する開発者のアクセスは、LDAP ポリシーによって制御されます。このポリシーは、環境のセットアップ時に {{site.data.keyword.Bluemix_notm}} チームが構成することができます。ローカル環境内では、管理ページを使用してユーザーの役割と許可を管理できます。
+IBM® はクラウド操作をサービスとして使用してお客様の環境のモニターと保守を行います。そのため、お客様は、自分の環境上で稼動するアプリやサービスのビルドに注力できます。また、{{site.data.keyword.IBM_notm}} はプラットフォームの更新にも対応するので、お客様はビジネスに専念できます。
 
-{{site.data.keyword.Bluemix_notm}} Local には、付属しているすべての {{site.data.keyword.Bluemix_notm}} ランタイムおよび 64 GB の計算メモリーが搭載されています。
+{{site.data.keyword.Bluemix_local_notm}} 環境のセキュリティー標準は、運用上のセキュリティーの観点では、Public  {{site.data.keyword.Bluemix_notm}} と同じです。お客様はハードウェアとインフラストラクチャーを用意します。これにより、インフラストラクチャーと物理的[セキュリティー](/docs/security/index.html#localplatformsecurity)を制御できるようになります。ローカルの {{site.data.keyword.Bluemix_notm}} 環境に対する開発者のアクセスは、LDAP ポリシーによって制御されます。このポリシーは、環境のセットアップ時に {{site.data.keyword.Bluemix_notm}} チームが構成することができます。ローカル環境内では、管理ページを使用して[ユーザーと許可を管理](/docs/admin/index.html#oc_useradmin)できます。
 
-さらに、{{site.data.keyword.Bluemix_notm}} Local のサービスとして使用可能な一連のサービスがあります。以下の表で、組み込みのもの、オプションで購入可能なものを確認してください。
+{{site.data.keyword.Bluemix_local_notm}} には、付属しているすべての {{site.data.keyword.Bluemix_notm}} ランタイムおよび 64 GB の計算メモリーが搭載されています。
 
-*表 1. Local のサービスとランタイム*
+さらに、{{site.data.keyword.Bluemix_local_notm}} サービスとして使用可能な一連のサービスがあります。以下の表で、組み込みのもの、オプションで購入可能なものを確認してください。
+
+表 1. Local のサービスとランタイム
+{: #table01}
 
 | **タイプ ** | **名前** | **説明** |
 |----------|----------|-----------------|
-|組み込み | [{{site.data.keyword.Bluemix_notm}} ランタイム](../cfapps/runtimes.html) | ランタイムはアプリを素早く立ち上げて実行するために使用します。マシンとオペレーティング・システムのセットアップと管理は不要です。すべての {{site.data.keyword.Bluemix_notm}} ランタイムが、{{site.data.keyword.Bluemix_notm}} Local インスタンスで使用可能です。|
-|組み込み | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | ポリシーに基づいて、アプリケーションのリソース容量を動的に増減します。このサービスを使用することで、{{site.data.keyword.Bluemix}} Local 環境で使用量が無制限になります。|
-|オプション | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} は、{{site.data.keyword.APIM}} と IBM StrongLoop を単一のオファリングに統合し、API とマイクロサービスを作成、実行、管理、および強化する包括的な解決策を提供します。 |
-|オプション | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。詳しくは、ローカル環境に関する詳細な[資料](http://docs.cloudant.com/BluemixLocal.html){: new_window}と[ハードウェア要件](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window}を参照してください。 |
-|オプション | [{{site.data.keyword.containershort}}](../containers/container_index.html)  | {{site.data.keyword.Bluemix_notm}} Local で Docker コンテナーを実行します。コンテナーは、アプリが実行のために必要とするすべてのエレメントを含む仮想ソフトウェア・オブジェクトです。コンテナーには、リソースの分離と割り振りの利点がありますが、例えば仮想マシンなどよりも、移植可能性と効率性が高まっています。ハードウェア要件については、『[{{site.data.keyword.Bluemix_notm}} Dedicated および Bluemix Local における IBM {{site.data.keyword.containershort}}](../containers/container_dl.html)』を参照してください。 |
-|オプション | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
-|オプション | [{{site.data.keyword.mobilepush}}](../services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} は、通知を iOS および Android デバイスに送信するために使用することができるサービスです。通知は、すべてのアプリケーション・ユーザー、またはタグを使用して特定のユーザーとデバイスのセットを対象にすることができます。デバイス、タグ、およびサブスクリプションを管理することができます。SDK (Software Development Kit) および　Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用して、さらにクライアント・アプリケーションを開発することも可能です。 |
-|オプション | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | 冗長性を高めるために、{{site.data.keyword.sescashort}} は、キャッシュに保管されたセッションのレプリカを提供します。これにより、ブラウンアウトまたは障害が発生した場合、クライアント・アプリケーションはキャッシュ内のセッションへのアクセスを維持できます。サービスでは、Web アプリケーションとモバイル・アプリケーションのセッション・キャッシュ・シナリオがサポートされます。 |
-|オプション | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | このサービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイが収集したデータと通信して、それらのデータを取り込むことができます。Local の基本オファリングには、初期環境が含まれます。初期環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 1.6 TB のデータ交換の容量を備えたローカル環境内で {{site.data.keyword.iot_full}} の専用バージョンを実行できます。 |
+|組み込み | [{{site.data.keyword.Bluemix_notm}} ランタイム](/docs/cfapps/runtimes.html) | ランタイムはアプリを素早く立ち上げて実行するために使用します。マシンとオペレーティング・システムのセットアップと管理は不要です。すべての {{site.data.keyword.Bluemix_notm}} ランタイムが、{{site.data.keyword.Bluemix_notm}} Local インスタンスで使用可能です。|
+|組み込み | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| ポリシーに基づいて、アプリケーションの計算能力を動的に増減します。このサービスを使用することで、{{site.data.keyword.Bluemix}} Local 環境で使用量が無制限になります。|
+|オプション | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} は、{{site.data.keyword.APIM}} と IBM StrongLoop を単一のオファリングに統合し、API とマイクロサービスを作成、実行、管理、および強化する包括的な解決策を提供します。 |
+|オプション | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。詳しくは、ローカル環境に関する詳細な[資料](http://docs.cloudant.com/BluemixLocal.html){: new_window}と[ハードウェア要件](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window}を参照してください。 |
+|オプション | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_notm}} Local で Docker コンテナーを実行します。コンテナーは、アプリが実行のために必要とするすべてのエレメントを含む仮想ソフトウェア・オブジェクトです。コンテナーには、リソースの分離と割り振りの利点がありますが、例えば仮想マシンなどよりも、移植可能性と効率性が高まっています。ハードウェア要件については、『[{{site.data.keyword.Bluemix_notm}} Dedicated および Bluemix Local における IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)』を参照してください。 |
+|オプション | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
+| オプション (ベータ版) | [ロギング](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースで Cloud Foundry アプリのログおよび Kibana で検索可能なログとダッシュボードを提供します。 |
+|オプション | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} は、通知を iOS および Android デバイスに送信するために使用することができるサービスです。通知は、すべてのアプリケーション・ユーザー、またはタグを使用して特定のユーザーとデバイスのセットを対象にすることができます。デバイス、タグ、およびサブスクリプションを管理することができます。SDK (Software Development Kit) および　Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用して、さらにクライアント・アプリケーションを開発することも可能です。 |
+|オプション | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 冗長性を高めるために、{{site.data.keyword.sescashort}} は、キャッシュに保管されたセッションのレプリカを提供します。これにより、ブラウンアウトまたは障害が発生した場合、クライアント・アプリケーションはキャッシュ内のセッションへのアクセスを維持できます。サービスでは、Web アプリケーションとモバイル・アプリケーションのセッション・キャッシュ・シナリオがサポートされます。 |
+|オプション | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | このサービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイが収集したデータと通信して、それらのデータを取り込むことができます。Local の基本オファリングには、初期環境が含まれます。初期環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 1.6 TB のデータ交換の容量を備えたローカル環境内で {{site.data.keyword.iot_short}} の専用バージョンを実行できます。 |
 
 
 リソースおよびサービスの容量を拡大および拡張するために購入できる、オプションのコンポーネントが用意されています。販売チームに連絡して、これらのコンポーネントを購入できます。営業担当員への連絡について詳しくは、[「お問い合わせ」](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)にアクセスしてください。サービスのプランを増やすには、カタログのサービス・タイルからプランを選択します。
 
-*表 2. 購入用のオプション・コンポーネント*
+*表 2. 購入用のオプション・コンポーネント: サービス・アドオン*
+{: #table02}
 
 | **名前** | **説明** |
 |----------|-----------------|
-|{{site.data.keyword.Bluemix_notm}} Local アクセスの 1 回限りのセットアップ | ローカル環境をデプロイして構成するための 1 回限りのセットアップ料金。 |
-|{{site.data.keyword.Bluemix_notm}} Local 計算リソースの 16 GB の容量増加 | メモリー容量を 16 GB 分追加する、IBM {{site.data.keyword.Bluemix_notm}} Local 計算リソースの拡張。 |
-|{{site.data.keyword.Bluemix_notm}} データ & セッション・キャッシュの 50 GB の容量増加 | 最大 50 GB の累積容量まで「データ・キャッシュ」および「セッション・キャッシュ」のインスタンスをデプロイして実行できる環境。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 500 万回の API 呼び出し | 部門別の API プロジェクトを対象にした、1 月当たり 500 万回の API 呼び出し容量を持つ {{site.data.keyword.apiconnect_short}} の専用バージョンを実行できる環境。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 10 万回の API 呼び出し容量の増加| 1 月当たり 10 万回の API 呼び出し容量を追加する {{site.data.keyword.apiconnect_short}} Professional 環境の拡張。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 2500 万回の API 呼び出し | 企業全体の API プロジェクトを対象にした、1 月当たり 2500 万回の API  呼び出し容量を持つ {{site.data.keyword.apiconnect_short}} の専用バージョンを実行できる環境。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 10 万回の API 呼び出し容量の増加 | 1 月当たり 10 万回の API 呼び出し容量を追加する {{site.data.keyword.apiconnect_short}} Enterprise 環境の拡張。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} クラスター | {{site.data.keyword.cloudant}} サービスの 3 ノード・クラスターをデプロイできる環境。ノードのデータ容量は、ローカル環境用に提供されるインフラストラクチャーによって決まります。 |
-|{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local の増分式の拡張 | {{site.data.keyword.iot_full}} Local 基本サービス・オファリングに追加される環境。この追加環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 0.5 TB のデータ交換の容量を備えたローカル環境内で {{site.data.keyword.iot_full}} の専用バージョンを実行できます。 |
-|IBM {{site.data.keyword.mobilepush}} Local | {{site.data.keyword.mobilepush}} インスタンスをデプロイして実行できる環境であり、1 秒当たり 300 個の要求を受け入れる能力を持つ。 |
-|IBM {{site.data.keyword.mobilepush}} Local アドオン・インスタンス | {{site.data.keyword.mobilepush}} インスタンスをデプロイして実行できる環境であり、1 秒当たりさらに 300 個の要求を受け入れる能力を持つ。 |
+|{{site.data.keyword.Bluemix_notm}} データ & セッション・キャッシュの 50 GB の容量増加 | 最大 50 GB の累積容量まで「データ・キャッシュ」および「セッション・キャッシュ」のインスタンスをデプロイして実行できる環境。 |
+|{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local の増分式の拡張 | {{site.data.keyword.iot_short}} Local 基本サービス・オファリングに追加される環境。この追加環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 0.5 TB のデータ交換の容量を備えたローカル環境内で {{site.data.keyword.iot_short}} の専用バージョンを実行できます。 |
+|{{site.data.keyword.IBM_notm}} {{site.data.keyword.mobilepush}} Local アドオン・インスタンス | {{site.data.keyword.mobilepush}} インスタンスをデプロイして実行できる環境であり、1 秒当たりさらに 300 個の要求を受け入れる能力を持つ。 |
 
+*表 3. 購入用のオプション・コンポーネント: プラットフォーム・アドオン*
+{: #table03}
+
+| **名前** | **説明** |
+|----------|-----------------|
+|Local Cloud Foundry ランタイム 64 GB キャパシティー  | 64 GB のランタイム・キャパシティーを備えた Cloud Foundry ランタイム環境。 |
+|Local Cloud Foundry ランタイム 16 GB キャパシティー追加  | 追加の 16 GB のランタイム・キャパシティーを備えた Cloud Foundry ランタイム環境の拡張。 |
+|Local {{site.data.keyword.containerlong}} 16 GB キャパシティー追加  | 追加の 16 GB のキャパシティーを備えた {{site.data.keyword.containerlong}} 環境の拡張。 |
+|Local {{site.data.keyword.containerlong}} 64 GB キャパシティー  | 64 GB のキャパシティーを備えた {{site.data.keyword.containerlong}} 環境。 |
 
 **注**: {{site.data.keyword.Bluemix_notm}} Local のコンポーネントは、構成された特定の容量 (ギガバイト数や、1 秒当たりのトランザクション数など) で示される場合があります。どんな構成でも、クラウド・サービスで実際に使用される容量は、さまざまな要因によって異なるため、実際に使用される容量は、構成された容量より増減する可能性があります。
 
 ### シンジケートされたカタログ
+{: #cataloglocal}
 
-{{site.data.keyword.Bluemix_notm}} Local には、自分だけが使用できるローカル・サービスを表示する、プライベートのシンジケートされたカタログが含まれています。また、{{site.data.keyword.Bluemix_notm}} Public から使用できる追加サービスも含まれています。
+{{site.data.keyword.Bluemix_local_notm}} には、パブリック・デプロイメントおよびローカル・デプロイメントすべてにわたって承認済みサービスを集めたプライベート・カタログが含まれています。{{site.data.keyword.Bluemix_notm}} カタログを通して、お客様独自のサービスを公開したり、それらのサービスへのアクセスを管理したりすることもできます。データ・プライバシーとセキュリティー基準に基づいて、ビジネスの要件に合致したパブリック・サービスを決定できます。
 
-シンジケートされたカタログは、パブリック・サービスとプライベート・サービスから成るハイブリッド・アプリケーションを作成する機能を提供します。データ・プライバシーとセキュリティー基準に基づいて、ビジネスの要件に合致したパブリック・サービスを決定できます。
-ローカル環境用のサービスのプライベート・インスタンスの場合、カタログ内のサービス・タイルに「ローカル」タグが表示されます。同様に、
-カスタム・サービスの場合は、サービス・タイルに「カスタム」と表示されます。 
+ローカル環境用に {{site.data.keyword.Bluemix_notm}} サービスのプライベート・インスタンスを保有している場合、カタログ管理ビュー内でサービス名と共に「ローカル」というタグが示されます。同様に、カスタム・サービスである場合 (つまり、サービス・ブローカーを使用して作成した場合)、サービス名と共に「カスタム」と表示されます。「ローカル」というタグも「カスタム」というタグも付いていない、リスト中の他のサービスはすべて、{{site.data.keyword.Bluemix_notm}} Public からシンジケーションを使用して利用可能です。シンジケートされたサービスは、パブリック・サービスとプライベート・サービスからなるハイブリッド・アプリケーションを作成する機能を提供します。
 
-*表 3. {{site.data.keyword.Bluemix_notm}} Public (地域別)* からのシンジケーションに利用可能なサービス
+*表 4. {{site.data.keyword.Bluemix_notm}} Public (地域別)* からのシンジケーションに利用可能なサービス
+{: #table04}
 
 |サービス	|米国南部地域で利用可能	|ヨーロッパ英国地域で利用可能 |オーストラリア、シドニー地域で利用可能|
 |:----------|:------------------------------|:------------------|:------------------|
 |{{site.data.keyword.alchemyapishort}} 		|はい	   	|はい  		|はい|
-|{{site.data.keyword.alertnotificationshort}}		|はい		|はい			|はい		|
+|{{site.data.keyword.alertnotificationshort}}	|はい		|はい		|はい	|
+|{{site.data.keyword.apiconnect_short}}         |はい            |はい            |はい  |
 |{{site.data.keyword.appseccloudshort}}		|はい		|はい		|はい |
-|{{site.data.keyword.hadoopst}}			|はい		|いいえ		|いいえ |
+|{{site.data.keyword.apiconnect_short}} 	|はい   	 	|はい  	 	|はい   |
+|Automated Accessibility Checker |はい       |はい    |はい   |
 |{{site.data.keyword.rules_short}}		|はい		|はい		|はい |
 |{{site.data.keyword.cloudant}}			|はい		|はい		|はい |
-|{{site.data.keyword.conceptexpansionshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.conceptinsightsshort}}	|はい		|はい		|はい |
+|{{site.data.keyword.iotmapinsights_short}}    |はい  |はい  |はい  |
+|{{site.data.keyword.conversationshort}}  |はい  |はい  |はい  |
 |{{site.data.keyword.dashdbshort}}		|はい		|はい		|はい |
 |{{site.data.keyword.dataworks_short}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.DB2OnCloud_short}}		|はい		|はい		|はい |
-|{{site.data.keyword.dialogshort}}		|はい		|はい		|はい|
+|Digital Content Checker |はい  |はい  |はい  |
 |{{site.data.keyword.documentconversionshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.game}}			|いいえ		|いいえ		|はい |
+|{{site.data.keyword.iotdriverinsights_short}}  |はい |はい  |はい  |
 |{{site.data.keyword.geospatialshort_Geospatial}}	|はい	|はい		|はい |
 |{{site.data.keyword.GlobalizationPipeline_short}}	|はい		| はい		| はい |
 |{{site.data.keyword.identitymixershort}}		|はい		|はい		|はい|
+|{{site.data.keyword.iot4auto_short}} |はい   |はい  |はい  |
+|{{site.data.keyword.iotelectronics}}  |はい  |はい  |いいえ |
+|{{site.data.keyword.iotinsurance_short}} |いいえ   |いいえ   |はい  |
 |{{site.data.keyword.twittershort}}		|はい		|はい		|はい|
-|{{site.data.keyword.weather_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.languagetranslationshort}}	|はい		|はい		|はい |
+|{{site.data.keyword.languagetranslatorshort}} |はい  |はい  |はい  |
+|{{site.data.keyword.dwl_short}}  |はい  |はい  |いいえ  |
 |{{site.data.keyword.eventhubshort}}		|はい		|いいえ		|いいえ|
 |{{site.data.keyword.messagehub}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.macm_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.manda}}			|はい		|はい		|はい |
 |{{site.data.keyword.amashort}}			|はい		|はい		|はい |
 |{{site.data.keyword.mqa}}			|はい		|はい		|はい |
-|{{site.data.keyword.mql}}			|はい		|はい		|はい |
+|{{site.data.keyword.mql}}			|いいえ		|いいえ		|はい |
 |{{site.data.keyword.nlclassifierlshort}} 	|はい 		|はい 		|はい|
 |{{site.data.keyword.personalityinsightsshort}}	|はい		|はい		|はい|
 |{{site.data.keyword.pm_short}}			|はい		|はい		|いいえ |
-|{{site.data.keyword.presenceinsightsshort}}	|はい		|はい		|はい|
 |{{site.data.keyword.mobilepush}}		|はい		|はい		|はい |
-|{{site.data.keyword.questionandanswershort}}	|はい		|はい		|はい|
-|{{site.data.keyword.relationshipextractionshort}}	|はい	|はい		|はい|
 |{{site.data.keyword.retrieveandrankshort}}	|はい 		|はい 		|はい|
 |{{site.data.keyword.runbook_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.SecureGateway}}		|はい		|はい		|はい |
@@ -120,11 +130,12 @@ IBM® はクラウド操作をサービスとして使用してお客様の環�
 |{{site.data.keyword.texttospeechshort}} 	|はい 		|はい	 	|はい|
 |{{site.data.keyword.toneanalyzershort}} 	|はい 		|はい 		|はい|
 |{{site.data.keyword.tradeoffanalyticsshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.visualinsightsshort}}	|はい		|はい		|はい|
 |{{site.data.keyword.visualrecognitionshort}}	|はい 		|はい	 	|はい|
 |{{site.data.keyword.iot_short}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.workflow}}			|はい		|はい		|はい |
+|{{site.data.keyword.weather_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.workloadscheduler}}	|はい		|はい		|はい |
+
+**注**: サード・パーティー・サービスは表に含まれていません。サード・パーティー・サービス・オプションについては、カタログを確認してください。
 
 ## {{site.data.keyword.Bluemix_notm}} Local アーキテクチャー
 {: #localarch}
@@ -141,18 +152,18 @@ IBM® はクラウド操作をサービスとして使用してお客様の環�
 <dt>**モニターとロギング**</dt>
 <dd>モニターとロギングのフィーチャーは、リレーを介してお客様のデータ・センターにデプロイされ、データはお客様のデータ・センターに残ります。定義されたアラート基準に基づいて、アラートが IBM 運用センターに返送されます。IBM に返送されるアラートには機密情報は含まれません。</dd>
 <dt>**ネットワーク**</dt>
-<dd>リレーは、{{site.data.keyword.Bluemix_notm}} Local に同梱されている配信ネットワークです。リレーにより、IBM は、すべてのローカル・デプロイメントに最新の更新を自動的かつ整合性を保って配信することが可能になるため、お客様は、最新でセキュアなシステムを維持することができます。このトンネルのトラフィックは、プラットフォーム、計算リソース、およびユーザー・インスタンス向けのサービスを提供し保守するための、自動化されたアクティビティーです。このトラフィックには、IBM 運用チームがお客様のローカル・インスタンスの問題判別を行うために使用するモニター機能が含まれます。リレーについて詳しくは、『[リレー](index.html#localrelay)』を参照してください。</dd>
+<dd>リレーは、{{site.data.keyword.Bluemix_notm}} Local に同梱されている配信ネットワークです。リレーにより、IBM は、すべてのローカル・デプロイメントに最新の更新を自動的かつ整合性を保って配信することが可能になるため、お客様は、最新でセキュアなシステムを維持することができます。このトンネルのトラフィックは、プラットフォーム、計算リソース、およびユーザー・インスタンス向けのサービスを提供し保守するための、自動化されたアクティビティーです。このトラフィックには、IBM 運用チームがお客様のローカル・インスタンスの問題判別を行うために使用するモニター機能が含まれます。リレーについて詳しくは、『<a href="index.html#localrelay">リレー</a>』を参照してください。</dd>
 <dt>**計算**</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} Local は、Cloud Foundry をベースとするアプリ中心のランタイム環境を使用します。</dd>
 <dt>**セキュリティー・インテリジェンス**</dt>
-<dd><p>IBM は、QRadar Security Intelligence Platform を使用して、いくつかの主要コンポーネントを統合するための統一アーキテクチャーを提供します。これらのコンポーネントには、セキュリティー情報とイベント管理、ログ管理、異常検出、インシデント・フォレンジック、および構成と脆弱性の管理があります。また、Bluemix は、IBM QRadar セキュリティー情報とイベント管理 (SIEM) を使用して、特権ユーザーのアクションと、アプリケーション開発者のログイン試行の成功および失敗をモニターします。QRadar レポートの管理ページの「レポートおよびログ」セクションによって、お客様はイベント・データを表示できます。セキュリティー・レポートについて詳しくは、『[レポートの表示](../admin/index.html#oc_report)』を参照してください。</p>
-<p>IBM BigFix は、オペレーティング・システムのフィックスが適切な頻度で確実に適用されるようにします。パッチ適用処理は自動化され、スケジュールはお客様と IBM との間で同意されます。保守およびアップグレードについて詳しくは、『[ローカル・インスタンスの保守](index.html#maintainlocal)』を参照してください。</p>
+<dd><p>IBM は、QRadar Security Intelligence Platform を使用して、いくつかの主要コンポーネントを統合するための統一アーキテクチャーを提供します。これらのコンポーネントには、セキュリティー情報とイベント管理、ログ管理、異常検出、インシデント・フォレンジック、および構成と脆弱性の管理があります。また、Bluemix は、IBM QRadar セキュリティー情報とイベント管理 (SIEM) を使用して、特権ユーザーのアクションと、アプリケーション開発者のログイン試行の成功および失敗をモニターします。QRadar レポートの管理ページの「レポートおよびログ」セクションによって、お客様はイベント・データを表示できます。セキュリティー・レポートについて詳しくは、『<a href="/docs/admin/index.html#oc_report">レポートの表示</a>』を参照してください。</p>
+<p>IBM BigFix は、オペレーティング・システムのフィックスが適切な頻度で確実に適用されるようにします。パッチ適用処理は自動化され、スケジュールはお客様と IBM との間で同意されます。保守およびアップグレードについて詳しくは、『<a href="index.html#maintainlocal">ローカル・インスタンスの保守</a>』を参照してください。</p>
 </dd>
 </dl>
 
 アプリは、Cloud Foundry 仮想マシンで稼働している仮想コンテナー内にデプロイされます。{{site.data.keyword.Bluemix_notm}} がセットアップされるときに、すべての Cloud Foundry コンポーネント (クラウド・コントローラー、ヘルス・マネージャー、ルーター、Droplet Execution Agent (DEA) など) がデプロイされます。さまざまな {{site.data.keyword.Bluemix_notm}} 管理コンポーネントも {{site.data.keyword.Bluemix_notm}} デプロイメントに組み込まれます。
 
-DataPower アプライアンスは、{{site.data.keyword.Bluemix_notm}} アプリケーション・ドメインへのアクセスを提供します。これらのアプライアンスは、ユーザーのイントラネットからアクセス可能なネットワークに接続します。アプリおよびサービスをデプロイするユーザーは、ユーザーのイントラネットからアクセス可能なネットワークからアクセスします。ユーザーは、アウトバウンド・インターネット・アクセスが可能な、7 つの IP アドレスを提供する必要があります。DataPower アプライアンスは、これらの顧客の IP アドレスから、分離された {{site.data.keyword.Bluemix_notm}} デプロイメントに経路指定します。ネットワークの仕様およびインフラストラクチャーの要件について詳しくは、『[{{site.data.keyword.Bluemix_notm}} Local のインフラストラクチャー要件](../local/index.html#localinfra)』を参照してください。
+DataPower アプライアンスは、{{site.data.keyword.Bluemix_notm}} アプリケーション・ドメインへのアクセスを提供します。これらのアプライアンスは、ユーザーのイントラネットからアクセス可能なネットワークに接続します。アプリおよびサービスをデプロイするユーザーは、ユーザーのイントラネットからアクセス可能なネットワークからアクセスします。ユーザーは、アウトバウンド・インターネット・アクセスが可能な、7 つの IP アドレスを提供する必要があります。DataPower アプライアンスは、これらの顧客の IP アドレスから、分離された {{site.data.keyword.Bluemix_notm}} デプロイメントに経路指定します。ネットワークの仕様およびインフラストラクチャーの要件について詳しくは、『[{{site.data.keyword.Bluemix_notm}} Local のインフラストラクチャー要件](/docs/local/index.html#localinfra)』を参照してください。
 
 ### リレー
 {: #localrelay}
@@ -161,10 +172,9 @@ DataPower アプライアンスは、{{site.data.keyword.Bluemix_notm}} アプ�
 
 このトンネルのトラフィックは、プラットフォーム、計算リソース、およびユーザー・インスタンス向けのサービスを提供し保守するための、自動化されたアクティビティーです。このトラフィックには、IBM 運用チームがお客様のローカル・インスタンスの問題判別を行うために使用するモニター機能が含まれます。この接続には、アウトバウンド Web ポート 443 が使用されます。IBM はリレー機能を使用して、一貫したテストおよび検証を介してプラットフォーム更新を提供します。このプロセスにより、ローカル環境にプッシュされるすべてのデプロイメントが確実に安定してセキュアになります。
 
-お客様のローカル環境でお客様と協力して作業している IBM チームのみが、お客様の {{site.data.keyword.Bluemix_notm}} インスタンスにセキュアにアクセスできます。お客様のローカル環境へのアクセスは、接続処理の複数のステップで 2 要素認証によって保護されます。IBM はお客様の環境にアクセスできる承認済みユーザーおよび ID のリストを提示し、お客様は自分の環境へのすべてのアクセスを監査できます。セキュリティー・レポートを生成することによって、誰がいつ、どのような理由で環境にアクセスしたのかを確認できます。セキュリティー・レポートの生成方法について詳しくは、『[セキュリティー・レポート](../security/index.html#reports)』を参照してください。
+お客様のローカル環境でお客様と協力して作業している IBM チームのみが、お客様の {{site.data.keyword.Bluemix_notm}} インスタンスにセキュアにアクセスできます。お客様のローカル環境へのアクセスは、接続処理の複数のステップで 2 要素認証によって保護されます。IBM はお客様の環境にアクセスできる承認済みユーザーおよび ID のリストを提示し、お客様は自分の環境へのすべてのアクセスを監査できます。セキュリティー・レポートを生成することによって、誰がいつ、どのような理由で環境にアクセスしたのかを確認できます。セキュリティー・レポートの生成方法について詳しくは、『[セキュリティー・レポート](/docs/security/index.html#reports)』を参照してください。
 
-管理者には環境は完全に可視であり、インシデント、問題、変更、容量、およびセキュリティー管理について把握できます。管理ページを使用して、環境についての情報にアクセスできます。リレー・テクノロジーにより、管理ページには常に最新データが表示されます。ユーザー・アクセス、セキュリティー・ログ、シンジケートされたカタログ
-・コントロール、および更新と問題修復の通信について詳しくは、『[{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated の管理](../admin/index.html#mng)』を参照してください。
+管理者には環境は完全に可視であり、インシデント、問題、変更、容量、およびセキュリティー管理について把握できます。管理ページを使用して、環境についての情報にアクセスできます。リレー・テクノロジーにより、管理ページには常に最新データが表示されます。ユーザー・アクセス、セキュリティー・ログ、シンジケートされたカタログ・コントロール、および更新と問題修復の通信について詳しくは、『[{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated の管理](/docs/admin/index.html#mng)』を参照してください。
 
 ##{{site.data.keyword.Bluemix_notm}} Local インスタンスのセットアップ
 {: #setuplocal}
@@ -180,7 +190,7 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 <li>IBM 指定のアカウント担当者に連絡するか、<a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a>に連絡して、開始します。</li>
 <li>IBM と、納品日のマイルストーンが含まれている {{site.data.keyword.Bluemix_notm}} Local 契約を結びます。
 	<ol type="a">
-	<li>{{site.data.keyword.Bluemix_notm}} Local インスタンスの料金について IBM と連携して決定します。毎月繰り返し発生する料金は、使用するローカル・サービスと、すべての {{site.data.keyword.Bluemix_notm}} Public サービスのサブスクリプションに基づきます。さらに、当該サブスクリプション契約を超えて使用したサービスに対する請求書を受け取ります。</li>
+	<li>{{site.data.keyword.Bluemix_notm}} Local インスタンスの一回限りのセットアップ料金および毎月繰り返し発生する料金について IBM と連携して決定します。毎月繰り返し発生する料金は、使用するローカル・サービスと、すべての {{site.data.keyword.Bluemix_notm}} Public サービスのサブスクリプションに基づきます。さらに、当該サブスクリプション契約を超えて使用したサービスに対する請求書を受け取ります。</li>
 	<li>{{site.data.keyword.Bluemix_notm}} Local インスタンスをセットアップする各フェーズの期限を特定します。</li>
 	</ol>
 	</li>
@@ -195,10 +205,10 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 </li>
 </ol>
 
-ご使用の環境の初期デプロイメントおよび構成は、以下にリストするプロセスのようになると考えられます。各タスクを誰が担当するかについて詳しくは、『[役割および責任](../local/index.html#rolesresponsibilities)』を参照してください。
+ご使用の環境の初期デプロイメントおよび構成は、以下にリストするプロセスのようになると考えられます。各タスクを誰が担当するかについて詳しくは、『[役割および責任](/docs/local/index.html#rolesresponsibilities)』を参照してください。
 
 <ol>
-<li>計算リソース、ネットワーキング、およびストレージの仕様を満たす VMware 構成を指定します。インフラストラクチャーの要件について詳しくは、『<a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local のインフラストラクチャー要件</a>』を参照してください。</li>
+<li>計算リソース、ネットワーキング、およびストレージの仕様を満たす VMware 構成を指定します。インフラストラクチャーの要件について詳しくは、『<a href="/docs/local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local のインフラストラクチャー要件</a>』を参照してください。</li>
 <li>開始仮想マシンによって使用される、vCenter クラスターの資格情報を指定します。以下の情報を指定する必要があります。
 <ul>
 <li>VMware クラスターの名前</li>
@@ -212,10 +222,10 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 <li>ユーザーは、ネットワーク上の 7 つの IP アドレスを提供します。内部の {{site.data.keyword.Bluemix_notm}} コンポーネント用にインターネットへのアウトバウンド・アクセスを可能にするための、保護された Web プロキシーがある場合は、それに接続するための資格情報を提供する必要があります。
 <p>**注**: Web プロキシーがセキュアでない場合は、資格情報を提供する必要はありません。また、すべての {{site.data.keyword.Bluemix_notm}} Local のお客様が Web プロキシーを使用するわけではないことに注意してください。</p></li>
 <li>IBM は、デプロイメントを開始する前に、ユーザーの Web プロキシーの通過が許可される必要のある URL のホワイトリストを提供しています。<br />
-<p>**注**: 必要なリソースに既存または新規のアプリケーションがアクセスできるようにするために、ビルドパックでリソースをバンドルしたり、セキュリティー・チームと連携してアプリケーション実行に必要な URL をホワイトリスト登録したりする追加の手順が必要な場合があります。node.js および Liberty for Java ビルドパックの作業について詳しくは、<a href="../runtimes/nodejs/offlineMode.html">node.js のオフライン・モード</a>および <a href="../runtimes/liberty/offlineMode.html">Liberty for Java のオフライン・モード</a>を参照してください。</p>
+<p>**注**: 必要なリソースに既存または新規のアプリケーションがアクセスできるようにするために、ビルドパックでリソースをバンドルしたり、セキュリティー・チームと連携してアプリケーション実行に必要な URL をホワイトリスト登録したりする追加の手順が必要な場合があります。node.js および Liberty for Java ビルドパックの作業について詳しくは、<a href="/docs/runtimes/nodejs/offlineMode.html">node.js のオフライン・モード</a>および <a href="/docs/runtimes/liberty/offlineMode.html">Liberty for Java のオフライン・モード</a>を参照してください。</p>
 </li>
 <li>ユーザーは、デプロイメント用のドメイン・ネームと、使用する ID を指定します。ローカル・インスタンスをセットアップする時に、部分的に定義された 2 つのドメインが提供されます。ユーザーは、それら 2 つのドメインの接頭部を選択します。例えば、<code>*mycompany*.bluemix.net</code> と <code>*mycompany*.mybluemix.net</code> の接頭部を選択します。また、フル・ドメインを選択してカスタム・ドメインを作成することもできます。
-<p>カスタム・ドメインは必要な数だけ選択できます。ただし、それらのカスタム・ドメインの証明書はユーザーの責任になります。カスタム・ドメインの作成について詳しくは、『<a href="../manageapps/updapps.html#domain">カスタム・ドメインの作成と使用</a>』を参照してください。</p></li>
+<p>カスタム・ドメインは必要な数だけ選択できます。ただし、それらのカスタム・ドメインの証明書はユーザーの責任になります。カスタム・ドメインの作成について詳しくは、『<a href="/docs/manageapps/updapps.html#domain">カスタム・ドメインの作成と使用</a>』を参照してください。</p></li>
 <li>ユーザーは、もとの IBM 運用センターに接続するようリレーを構成するために、IPSec トンネルまたは OpenVPN トンネルのいずれのテクノロジーを使用するか選択します。</li>
 <li>IBM は、{{site.data.keyword.Bluemix_notm}} クラスター内に開始仮想マシンをインストールし、始動します。ユーザーが独自の VMware を提供する場合、IBM 担当員は、ユーザーの顧客担当者がこのタスクを完了するのを支援します。</li>
 <li>IBM は、もとの IBM 運用センターと通信するようにリレーを構成します。</li>
@@ -228,10 +238,8 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 <li>ローカル・インスタンスの使用を開始できます。このインスタンスは、アラートに対応できるように IBM 運用チームによってモニターされています。</li>
 </ol>
 
-{{site.data.keyword.Bluemix_notm}} インスタンスがセットアップされた後は、「管理」ページを使用して {{site.data.keyword.Bluemix_notm}} インスタンスをモニターおよび管理することができます。
-詳しくは、
-[{{site.data.keyword.Bluemix_notm}}
-『Local および Dedicated の管理』](../admin/index.html#mng)を参照してください。アップグレードおよび保守については、『[ローカル・インスタンスの保守](index.html#maintainlocal)』を参照してください。
+{{site.data.keyword.Bluemix_notm}} インスタンスがセットアップされた後は、「管理」ページを使用して {{site.data.keyword.Bluemix_notm}} インスタンスをモニターおよび管理することができます。詳しくは、[
+『{{site.data.keyword.Bluemix_notm}} Local および Dedicated の管理』](/docs/admin/index.html#mng)を参照してください。アップグレードおよび保守については、『[ローカル・インスタンスの保守](index.html#maintainlocal)』を参照してください。
 
 ##役割および責任
 {: #rolesresponsibilities}
@@ -252,13 +260,13 @@ IBM は、お客様がパスワードで保護されたログインを使用し�
 <dt>**DevOps フォーカル**</dt>
 <dd>IBM 担当員と連携して、{{site.data.keyword.Bluemix_notm}} のプラットフォーム、サービス、およびランタイムに必要な保守更新を計画して適用します。また、この役割に割り当てられたユーザーは IBM 担当員と連携して、{{site.data.keyword.Bluemix_notm}} Local インスタンスの構成も行います。</dd>
 <dt>**IaaS 専門家**</dt>
-<dd>VMware のデプロイメント計画について IBM 担当員と連携します。通常、これは、データ・センターの VMware 管理者であるユーザーです。この役割に割り当てられたユーザーは、<a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local のインフラストラクチャー要件</a>をレビューし、実装計画について IBM と連携します。デプロイメントが終わると、この役割に割り当てられたユーザーは、IaaS レイヤーにおいてデプロイメントが企業標準に準拠していることを承認します。</dd>
+<dd>VMware のデプロイメント計画について IBM 担当員と連携します。通常、これは、データ・センターの VMware 管理者であるユーザーです。この役割に割り当てられたユーザーは、<a href="/docs/local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local のインフラストラクチャー要件</a>をレビューし、実装計画について IBM と連携します。デプロイメントが終わると、この役割に割り当てられたユーザーは、IaaS レイヤーにおいてデプロイメントが企業標準に準拠していることを承認します。</dd>
 </dl>
 
 お客様の担当者は IBM の専門家と連携して、必要なサポートが常に得られるようにします。プレミアム・サポー
 ト層にアップグレードし、アカウントの専用 Client
 Success Manager (CSM) と連携できます。異なるサポート層について詳しく
-は、[『サポートへのお問い合わせ』](../support/index.html#contacting-support)を参照してください。CSM
+は、[『サポートへのお問い合わせ』](/docs/support/index.html#contacting-support)を参照してください。CSM
 は次のタイプのタスクを完了します。
 
 <ul>
@@ -279,7 +287,7 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 
 環境のセットアップから継続的保守に至るまで、さまざまなタスクをお客様と IBM の両方で行う必要があります。以下の表に、開始フェーズ、進行フェーズ、および完了フェーズにわたって必要なタスクおよびタスクを完了する責任を持つ側の概要を示します。
 
-方向付けフェーズを使用して、{{site.data.keyword.Bluemix_notm}} Local 環境を設定します。この時点で、お客様は [Local のインフラストラクチャー要件](../local/index.html#localinfra)を既にレビュー済みです。このフェーズの主な目標には、以下のものがあります。
+方向付けフェーズを使用して、{{site.data.keyword.Bluemix_notm}} Local 環境を設定します。この時点で、お客様は [Local のインフラストラクチャー要件](/docs/local/index.html#localinfra)を既にレビュー済みです。このフェーズの主な目標には、以下のものがあります。
 
 - 金融契約を審査し、配信までのマイルストーン日付を設定します。
 - {{site.data.keyword.Bluemix_notm}} プラットフォームを作成し、ランタイムおよびサービスにアクセスできるようにします。
@@ -301,7 +309,7 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 |イベント検出および問題判別用ツールの特定 | {{site.data.keyword.Bluemix_notm}} プラットフォーム・レベルでイベント検出および問題判別に使用する IBM およびサード・パーティーのツールを特定します。 | IBM |
 |エスカレーション計画の定義 | モニター・コンポーネントで検出されたイベントをトリアージおよび解決するためのエスカレーション計画を定義します。 | IBM |
 |インフラストラクチャー、プラットフォーム、およびサポートに関する合意の承認 | 環境の金銭的条件など、サブスクリプションに関する合意を承認します。サポート・サブスクリプションを承認します。 | お客様 |
-|環境の調達 | 計算リソース、ネットワーク、およびストレージを調達します。環境のインフラストラクチャーの要件について詳しくは、『[ Local のインフラストラクチャー要件](../local/index.html#localinfra)』を参照してください。 | お客様 |
+|環境の調達 | 計算リソース、ネットワーク、およびストレージを調達します。環境のインフラストラクチャーの要件について詳しくは、『[ Local のインフラストラクチャー要件](/docs/local/index.html#localinfra)』を参照してください。 | お客様 |
 |VPN ソリューションのインストール | 双方向の VPN ソリューションをインストールします。 | IBM |
 |プラットフォーム、アプリケーション、モニター、および管理の各コンポーネントのインストール | プラットフォーム・コンポーネント (BOSH Director、クラウド・コントローラー、正常性マネージャー、メッセージング、ルーター、DEA、サービス・プロバイダーなど) およびエスカレーションや問題検出の計画で定義されているモニター・コンポーネントをインストール、構成、および検証します。 | IBM |
 |セキュリティー・コンポーネントのインストールと構成 | IBM QRadar、資格情報ボールト、侵入防止システム、IBM BigFix、IBM Security Privileged Identity Management など、モニターおよびエスカレーション計画に関連したセキュリティー・コンポーネントをインストールして構成します。 | IBM |
@@ -499,7 +507,7 @@ IBM は、お客様が選択した日付の期間またはその近辺で更新�
 <p>**「管理」>「システム情報 (SYSTEM INFORMATION)」
 **へ移動してスケジュールされた保留中の保守更新を表示します。
 事前承認された期間の設定、利用不可の日付、および保守更新の表示と承認
-について詳しくは、<a href="../admin/index.html#oc_schedulemaintenance">『保守の更新
+について詳しくは、<a href="/docs/admin/index.html#oc_schedulemaintenance">『保守の更新
 (Maintenance updates)』</a>を参照してください。</p>.</dd>
 </dl>
 
@@ -519,7 +527,7 @@ ESXi ハイパーバイザー上にデプロイされ、vCenter アプリケー�
 よびパッチをすべて含む ESXi および vCenter の最新バージョン 3 つをサポート
 します。サポートされる最新バージョンは、
 [『Local のインフラストラ
-クチャー条件 (Local infrastracture requirements)』](../local/index.html#localinfra)資
+クチャー条件 (Local infrastracture requirements)』](/docs/local/index.html#localinfra)資
 料でいつでも検索することができます。
 
 **重要**: ESXi ハイパーバイザー上にデプロイ
@@ -544,28 +552,28 @@ ESXi または vCenter ソフトウェアの更新が必要です。
 および vCenter バージョンとの互換性を維持するようにあ
 らゆる取り組みをします。ただし、最新の ESXi および vCenter バージョンがサポートさ
 れない短い期間が発生する可能性があります。更新を適用する前に、最新の互換バージョンについて、
-[『Local のインフラストラクチャー要件』](../local/index.html#localinfra)資料を参照してください。
+[『Local のインフラストラクチャー要件』](/docs/local/index.html#localinfra)資料を参照してください。
 
 ## {{site.data.keyword.Bluemix_notm}} Local のインシデント対応およびサポート
 {: #incidentresponse}
 
 ### お客様が検出した問題
 
-IBM サポートおよび運用チームに知らせる必要のある問題を見つけた場合、サポートに連絡する方法はいくつかあります。サポートへの連絡方法について詳しくは、[サポートへのお問い合わせ](../support/index.html#contacting-bluemix-support-local)を参照してください。問題に応じて、お客様または IBM が問題を修正するか、または協力して問題を修正します。
+IBM サポートおよび運用チームに知らせる必要のある問題を見つけた場合、サポートに連絡する方法はいくつかあります。サポートへの連絡方法について詳しくは、[サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support-local)を参照してください。問題に応じて、お客様または IBM が問題を修正するか、または協力して問題を修正します。
 
 ### IBM が検出した重大インシデント
 
-重大インシデントは、緊急で予期しないサービス障害であり、お客様の環境またはユーザーに影響する安定性の問題です。IBM がお客様の環境内で重大インシデントを検出した場合、それを通知するためにお客様の「**状況**」ページに通知が表示されます。「状況」ページでは、プラットフォームまたはサービスに関して既知の問題があるかどうかも確認できます。「状況」ページについて詳しくは、『[状況の表示](../admin/index.html#oc_status)』を参照してください。 
+重大インシデントは、緊急で予期しないサービス障害であり、お客様の環境またはユーザーに影響する安定性の問題です。IBM がお客様の環境内で重大インシデントを検出した場合、それを通知するためにお客様の「**状況**」ページに通知が表示されます。「状況」ページでは、プラットフォームまたはサービスに関して既知の問題があるかどうかも確認できます。「状況」ページについて詳しくは、『[状況の表示](/docs/admin/index.html#oc_status)』を参照してください。 
 
-通知を、Web フックをサポートする Web サービスと統合したい場合は、[通知およびイベント・サブスクリプション](../admin/index.html#oc_eventsubscription)で、通知機能の拡張方法についての説明を参照してください。
+通知を、Web フックをサポートする Web サービスと統合したい場合は、[通知およびイベント・サブスクリプション](/docs/admin/index.html#oc_eventsubscription)で、通知機能の拡張方法についての説明を参照してください。
 
 ![インシデント対応プロセス](images/incidentresponseprocess.png "インシデント対応プロセス")
 
 *図 2. インシデント対応プロセス*
 
-問題に応じて、お客様または IBM が問題を修正するか、または協力して問題を修正します。インシデントに関する質問がある場合、または、問題を解決するために IBM 担当員の支援を必要とする場合、サポート・チケットをオープンすることができます。サポートへの連絡方法について詳しくは、[サポートへのお問い合わせ](../support/index.html#contacting-bluemix-support-local)を参照してください。
+問題に応じて、お客様または IBM が問題を修正するか、または協力して問題を修正します。インシデントに関する質問がある場合、または、問題を解決するために IBM 担当員の支援を必要とする場合、サポート・チケットをオープンすることができます。サポートへの連絡方法について詳しくは、[サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support-local)を参照してください。
 
-**注**: 重大度 1 のサポート・チケットは、1 日 24 時間、週に 7 日間モニターされます。その他のチケットは、日曜 10:00 pm GMT から土曜 12:00 am GMT まで処理されます。サポート・チケットの重大度とサポートとの協力について詳しくは、<a href="../support/index.html#contacting-bluemix-support-local">サポートへのお問い合わせ</a>を参照してください。
+**注**: 重大度 1 のサポート・チケットは、1 日 24 時間、週に 7 日間モニターされます。その他のチケットは、日曜 10:00 pm GMT から土曜 12:00 am GMT まで処理されます。サポート・チケットの重大度とサポートとの協力について詳しくは、<a href="/docs/support/index.html#contacting-bluemix-support-local">サポートへのお問い合わせ</a>を参照してください。
 
 ## {{site.data.keyword.Bluemix_notm}} Local の災害復旧
 {: #dr}
@@ -595,9 +603,9 @@ Public は、組織、スペース、およびアプリが常に使用可能で�
 
 2 つ目の場所または複数の場所にデプロイするには、以下のように、1 次地理的場所を使用可能にする際に実行したのと同じようなプロセスに従う必要があります。
 
-1. アプリケーションの追加インスタンスをホストする新規ローカル環境を使用可能にします。新規環境を作成するには、このプロセスを開始するために IBM 営業チームに連絡してください。ローカル・インスタンスのセットアップについて詳しくは、『[{{site.data.keyword.Bluemix_notm}} Local のセットアップ](../local/index.html#setuplocal)』を参照してください。各環境にアクセスするには、別個にログインする必要があります。ホストされている環境の各物理的場所は、可用性を確保するために、元の場所から最小でも 200 km 離れている必要があります。
+1. アプリケーションの追加インスタンスをホストする新規ローカル環境を使用可能にします。新規環境を作成するには、このプロセスを開始するために IBM 営業チームに連絡してください。ローカル・インスタンスのセットアップについて詳しくは、『[{{site.data.keyword.Bluemix_notm}} Local のセットアップ](/docs/local/index.html#setuplocal)』を参照してください。各環境にアクセスするには、別個にログインする必要があります。ホストされている環境の各物理的場所は、可用性を確保するために、元の場所から最小でも 200 km 離れている必要があります。
 2. 新たにデプロイされたアプリがホストされる固有のドメイン・ネームを入手します。例えば、元のドメインが *mycompany.east.bluemix.net* の場合、*mycompany.west.bluemix.net* などの新規ドメインで新規ローカル環境を作成し、新規ドメインにデプロイできます。
-3. 元のアプリをデプロイするごとに、新規場所にデプロイします。デプロイについて詳しくは、『[アプリのアップロード](../starters/upload_app.html)』を参照してください。
+3. 元のアプリをデプロイするごとに、新規場所にデプロイします。デプロイについて詳しくは、『[アプリのアップロード](/docs/starters/upload_app.html)』を参照してください。
 
 
 #### {{site.data.keyword.Bluemix_notm}} Local のグローバル・ロード・バランサーの使用可能化
@@ -658,7 +666,7 @@ Akamai や Dyn などのグローバル・ロード・バランサーを選択�
 # 関連リンク
 ## 一般
 * [詳細: {{site.data.keyword.Bluemix_notm}} Local](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
-* [{{site.data.keyword.Bluemix_notm}} の新機能](../whatsnew/index.html)
-* [{{site.data.keyword.Bluemix_notm}} 用語集](../overview/glossary/index.html)
-* [{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated の管理](../admin/index.html#mng)
-* [サポートへのお問い合わせ](../support/index.html#getting-customer-support)
+* [{{site.data.keyword.Bluemix_notm}} の新機能](/docs/whatsnew/index.html)
+* [{{site.data.keyword.Bluemix_notm}} 用語集](/docs/overview/glossary/index.html)
+* [{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated の管理](/docs/admin/index.html#mng)
+* [サポートへのお問い合わせ](/docs/support/index.html#getting-customer-support)

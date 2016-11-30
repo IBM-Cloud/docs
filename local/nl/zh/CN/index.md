@@ -1,114 +1,127 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-28"
+
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-#{{site.data.keyword.Bluemix_notm}} Local
+# {{site.data.keyword.Bluemix_local_notm}}
 {: #local}
-*上次更新时间：2016 年 9 月 15 日*
-{: .last-updated}
 
-{{site.data.keyword.Bluemix}} Local 将为您的数据中心带来 {{site.data.keyword.Bluemix_notm}} 基于云的平台的能力和敏捷性。通过 {{site.data.keyword.Bluemix_notm}} Local，在与 {{site.data.keyword.Bluemix_notm}} Public 保持安全连接并与之同步的同时，可以在公司防火墙后保护您最敏感的工作负载。
+
+{{site.data.keyword.Bluemix_local}} 将为您的数据中心带来 {{site.data.keyword.Bluemix_notm}} 基于云的平台的能力和敏捷性。通过 {{site.data.keyword.Bluemix_local_notm}}，在与 {{site.data.keyword.Bluemix_notm}} Public 保持安全连接并与之同步的同时，可以在公司防火墙后保护您最敏感的工作负载。
 {:shortdesc}
 
-IBM® 使用云操作即服务来监视和维护您的环境，让您可以专注于构建基于该环境运行的应用程序和服务。IBM 还可以处理平台更新，让您可以专注于业务。
+IBM® 使用云操作即服务来监视和维护您的环境，让您可以专注于构建基于该环境运行的应用程序和服务。{{site.data.keyword.IBM_notm}} 还可以处理平台更新，让您可以专注于业务。
 
-{{site.data.keyword.Bluemix_notm}} Local 环境在操作安全方面所采用的安全标准与公共 {{site.data.keyword.Bluemix_notm}} 相同。您需要提供硬件和基础架构，这样就能对基础架构和物理安全进行控制。开发者对本地 {{site.data.keyword.Bluemix_notm}} 的访问由 LDAP 策略进行控制，这些策略可以由 {{site.data.keyword.Bluemix_notm}} 团队在设置您的环境时进行配置。在本地环境中，您可以使用“管理”页面来管理用户角色和许可权。
+{{site.data.keyword.Bluemix_local_notm}} 环境在操作安全方面所采用的安全标准与公共 {{site.data.keyword.Bluemix_notm}} 相同。您需要提供硬件和基础架构，这样就能对基础架构和物理[安全](/docs/security/index.html#localplatformsecurity)进行控制。开发者对本地 {{site.data.keyword.Bluemix_notm}} 环境的访问由 LDAP 策略进行控制，这些策略可以由 {{site.data.keyword.Bluemix_notm}} 团队在设置您的环境时进行配置。在本地环境中，您可以使用“管理”页面来[管理用户和许可权](/docs/admin/index.html#oc_useradmin)。
 
-{{site.data.keyword.Bluemix_notm}} Local 随附所有内含的 {{site.data.keyword.Bluemix_notm}} 运行时和 64 GB 计算内存。
+{{site.data.keyword.Bluemix_local_notm}} 随附所有内含的 {{site.data.keyword.Bluemix_notm}} 运行时和 64 GB 计算内存。
 
-此外，还有一组可作为 {{site.data.keyword.Bluemix_notm}} Local 服务使用的服务。请查看下表以了解哪些已包含在内，哪些可供您购买。
+此外，还有一组可作为 {{site.data.keyword.Bluemix_local_notm}} 服务使用的服务。请查看下表以了解哪些已包含在内，哪些可供您购买。
 
-*表 1. Local 服务和运行时*
+表 1. Local 服务和运行时
+{: #table01}
 
 | **类型** | **名称** | **描述** |
 |----------|----------|-----------------|
-|内含 | [{{site.data.keyword.Bluemix_notm}} 运行时](../cfapps/runtimes.html) | 使用运行时可快速启动并运行应用程序，无需设置和管理计算机与操作系统。所有 {{site.data.keyword.Bluemix_notm}} 运行时都可供您在 {{site.data.keyword.Bluemix_notm}} Local 实例中使用。|
-|内含 | [{{site.data.keyword.autoscaling}}](../services/Auto-Scaling/index.html) | 根据策略，动态增大或减小应用程序的计算资源容量。通过此服务，您在 {{site.data.keyword.Bluemix}} Local 环境中的使用不受限制。|
-|可选 | [{{site.data.keyword.apiconnect_short}}](../services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} 将 {{site.data.keyword.APIM}} 和 IBM StrongLoop 集成到单个产品中，以提供一个综合解决方案来创建、运行、管理和强制执行 API 与微型服务。 |
-|可选 | [{{site.data.keyword.cloudant}}](../services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} 提供了对始终启用的完全受管 NoSQL JSON 数据层的访问。此服务兼容 CouchDB，并且可通过易用的 HTTP 接口供移动和 Web 应用程序模型访问。有关更多信息，请参阅本地环境的完整[文档](http://docs.cloudant.com/BluemixLocal.html){: new_window}和[硬件需求](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window}。 |
-|可选 | [{{site.data.keyword.containershort}}](../containers/container_index.html)  | 在 {{site.data.keyword.Bluemix_notm}} Local 上运行 Docker 容器。容器是包含应用程序运行所需的所有元素的虚拟软件对象。容器不仅具有资源隔离和分配的好处，而且还比虚拟机器（举例来说）的可移植性更好，且更有效率。有关硬件需求的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} Dedicated 和 Bluemix Local 中的 IBM {{site.data.keyword.containershort}}](../containers/container_dl.html)。 |
-|可选 | [{{site.data.keyword.datacshort}}](../services/DataCache/index.html#data_cache) | 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
-|可选 | [{{site.data.keyword.mobilepush}}](../services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} 是可用于向 iOS 和 Android 设备发送通知的服务。通知可以针对所有应用程序用户发送，也可以针对一组使用标记的特定用户和设备发送。您可以管理设备、标记和预订。还可以使用 SDK（软件开发包）和具象状态传输 (REST) 应用程序编程接口 (API) 来进一步开发您的客户机应用程序。 |
-|可选 | [{{site.data.keyword.sescashort}}](../services/SessionCache/index.html#session_cache) | 为了提高冗余度，{{site.data.keyword.sescashort}} 提供了高速缓存中存储的会话的副本。因此，万一发生掉线或中断，客户机应用程序会保持对高速缓存中的会话的访问。此服务支持 Web 和移动应用程序的会话高速缓存场景。 |
-|可选 | [{{site.data.keyword.iot_short}}](../services/IoT/index.html) | 此服务允许应用程序与连接的设备、传感器和网关进行通信，以及使用这些设备、传感器和网关收集的数据。本地基本产品包括初始环境，允许在本地环境中运行 IBM {{site.data.keyword.iot_full}} 的专用版本，容量为 100,000 个并行连接设备或应用程序，数据交换量为 1.6 TB。 |
+|内含 | [{{site.data.keyword.Bluemix_notm}} 运行时](/docs/cfapps/runtimes.html) | 使用运行时可快速启动并运行应用程序，无需设置和管理计算机与操作系统。所有 {{site.data.keyword.Bluemix_notm}} 运行时都可供您在 {{site.data.keyword.Bluemix_notm}} Local 实例中使用。|
+|内含 | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| 根据策略，动态增大或减小应用程序的计算容量。通过此服务，您在 {{site.data.keyword.Bluemix}} Local 环境中的使用不受限制。|
+|可选 | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} 将 {{site.data.keyword.APIM}} 和 IBM StrongLoop 集成到单个产品中，以提供一个综合解决方案来创建、运行、管理和强制执行 API 与微型服务。 |
+|可选 | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} 提供了对始终启用的完全受管 NoSQL JSON 数据层的访问。此服务兼容 CouchDB，并且可通过易用的 HTTP 接口供移动和 Web 应用程序模型访问。有关更多信息，请参阅本地环境的完整[文档](http://docs.cloudant.com/BluemixLocal.html){: new_window}和[硬件需求](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window}。 |
+|可选 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | 在 {{site.data.keyword.Bluemix_notm}} Local 上运行 Docker 容器。容器是包含应用程序运行所需的所有元素的虚拟软件对象。容器不仅具有资源隔离和分配的好处，而且还比虚拟机器（举例来说）的可移植性更好，且更有效率。有关硬件需求的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} Dedicated 和 Bluemix Local 中的 IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)。 |
+|可选 | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | 此服务提供内存中数据网格，支持应用程序使用分布式高速缓存方案。包含 50 GB 内存中高速缓存。 |
+| 可选 (Beta) | [日志记录](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | 为 {{site.data.keyword.Bluemix_notm}} 用户界面中的 Cloud Foundry 应用程序和 Kibana 中的可搜索日志和仪表板提供日志。 |
+|可选 | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} 是可用于向 iOS 和 Android 设备发送通知的服务。通知可以针对所有应用程序用户发送，也可以针对一组使用标记的特定用户和设备发送。您可以管理设备、标记和预订。还可以使用 SDK（软件开发包）和具象状态传输 (REST) 应用程序编程接口 (API) 来进一步开发您的客户机应用程序。 |
+|可选 | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 为了提高冗余度，{{site.data.keyword.sescashort}} 提供了高速缓存中存储的会话的副本。因此，万一发生掉线或中断，客户机应用程序会保持对高速缓存中的会话的访问。此服务支持 Web 和移动应用程序的会话高速缓存场景。 |
+|可选 | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | 此服务允许应用程序与连接的设备、传感器和网关进行通信，以及使用这些设备、传感器和网关收集的数据。本地基本产品包括初始环境，允许在本地环境中运行 IBM {{site.data.keyword.iot_short}} 的专用版本，容量为 100,000 个并行连接设备或应用程序，数据交换量为 1.6 TB。 |
 
 
 有一些可选组件可供您购买，用于扩展资源和服务的容量。可以通过联系销售团队来购买其中任何组件；请转至[联系我们](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)，以获取有关联系销售代表的信息。要增加服务的套餐，可以从目录的服务磁贴中选择套餐。
 
-*表 2. 可购买的可选组件*
+*表 2. 可购买的可选组件：服务附加组件*
+{: #table02}
 
 | **名称** | **描述** |
 |----------|-----------------|
-|{{site.data.keyword.Bluemix_notm}} Local 访问权一次性设置 | 用于部署和配置本地环境的一次性设置费用。 |
-|{{site.data.keyword.Bluemix_notm}} Local 计算资源增加 16 GB 容量 | 扩展 IBM {{site.data.keyword.Bluemix_notm}} Local 计算资源，以额外提供 16 GB 内存容量。 |
-|{{site.data.keyword.Bluemix_notm}} Data & Session Cache 增加 50 GB 容量 | 此环境允许部署和运行 Data Cache 和 Session Cache 实例，最高累计容量为 50 GB。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 500 万个 API 调用 | 此环境允许运行 {{site.data.keyword.apiconnect_short}} 的专用版本，容量为每月 500 万个 API 调用，目标为部门 API 项目。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Professional 增加 10 万个 API 调用| {{site.data.keyword.apiconnect_short}} Professional 环境的扩展，用于每月提供额外 10 万个 API 调用容量。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 2500 万个 API 调用 | 此环境允许运行 {{site.data.keyword.apiconnect_short}} 的专用版本，容量为每月 2500 万个 API 调用，目标为企业范围 API 项目。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.apiconnect_short}} Enterprise 增加 10 万个 API 调用 | {{site.data.keyword.apiconnect_short}} Enterprise 环境的扩展，用于每月提供额外 10 万个 API 调用容量。 |
 |{{site.data.keyword.Bluemix_notm}} Local {{site.data.keyword.cloudant}} 集群 | 此环境允许部署 3 节点的 {{site.data.keyword.cloudant}} 服务集群。节点的数据容量由您为本地环境提供的基础架构确定。 |
-|{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local 递增增加 | 除允许在本地环境中运行 {{site.data.keyword.iot_full}} 专用版本的 {{site.data.keyword.iot_full}} Local 基本服务产品以外的环境，容量为 100,000 个并行连接设备或应用程序，数据交换量为 0.5 TB。 |
-|IBM {{site.data.keyword.mobilepush}} Local | 此环境允许部署和运行 {{site.data.keyword.mobilepush}} 实例，每秒能接受 300 个请求。 |
-|IBM {{site.data.keyword.mobilepush}} Local 附加组件实例 | 此环境允许部署和运行 {{site.data.keyword.mobilepush}} 实例，每秒能额外接受 300 个请求。 |
+|{{site.data.keyword.Bluemix_notm}} Data & Session Cache 增加 50 GB 容量 | 此环境允许部署和运行 Data Cache 和 Session Cache 实例，最高累计容量为 50 GB。 |
+|{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} Local 递增增加 | 除允许在本地环境中运行 {{site.data.keyword.iot_short}} 专用版本的 {{site.data.keyword.iot_short}} Local 基本服务产品以外的环境，容量为 100,000 个并行连接设备或应用程序，数据交换量为 0.5 TB。 |
+|{{site.data.keyword.IBM_notm}} {{site.data.keyword.mobilepush}} Local 附加组件实例 | 此环境允许部署和运行 {{site.data.keyword.mobilepush}} 实例，每秒能额外接受 300 个请求。 |
 
+*表 3. 可购买的可选组件：平台附加组件*
+{: #table03}
+
+| **名称** | **描述** |
+|----------|-----------------|
+|本地 Cloud Foundry 运行时 64 GB 容量  | Cloud Foundry 运行时环境，具有 64 GB 运行时容量。 |
+|本地 Cloud Foundry 运行时增加 16 GB 容量  | 扩展 Cloud Foundry 运行时环境，以额外提供 16 GB 运行时容量。 |
+|本地 {{site.data.keyword.containerlong}} 增加 16 GB 容量  | 扩展 {{site.data.keyword.containerlong}} 环境，以额外提供 16 GB 容量。 |
+|本地 {{site.data.keyword.containerlong}} 64 GB 容量  | {{site.data.keyword.containerlong}} 环境，具有 64 GB 容量。 |
 
 **注**：{{site.data.keyword.Bluemix_notm}} Local 组件可能指示特定配置的容量，例如千兆字节或每秒事务数。由于实践中云服务的任何配置的实际容量根据多种因素而变化，因此实践中的实际容量可能大于或小于配置的容量。
 
 ### 联合目录
+{: #cataloglocal}
 
-{{site.data.keyword.Bluemix_notm}} Local 包含专用的联合目录，其中显示只供您使用的本地服务。此外，还包含可通过 {{site.data.keyword.Bluemix_notm}} Public 供您使用的其他服务。
+{{site.data.keyword.Bluemix_local_notm}} 包含一个私有目录，用于将公共部署和本地部署中已批准的服务集中在一起。您甚至可以通过 {{site.data.keyword.Bluemix_notm}} 目录来发布您自己的服务并管理对这些服务的访问权。您可以选择根据自己的数据隐私和安全标准来确定哪些公共服务满足您的业务需求。
 
-联合目录提供了用于创建混合应用程序的功能，混合应用程序由公共服务和私有服务组成。您可以选择根据自己的数据隐私和安全标准来确定哪些公共服务满足您的业务需求。如果这是适合本地环境的服务私有实例，那么您将看到目录中的服务磁贴带有“本地”标记。与此类似，如果这是定制服务，那么您将看到服务磁贴列有“定制”。 
+如果您的本地环境有私有的 {{site.data.keyword.Bluemix_notm}} 服务实例，那么您将在目录管理视图中看到服务名称带有“本地”标记。与此类似，如果这是定制服务（即您使用的是服务代理程序创建的服务），那么您将看到列出服务名称时有“定制”字样。通过从 {{site.data.keyword.Bluemix_notm}} Public 使用联合，即可使用列出的不带“本地”或“定制”标记的其他所有服务。联合服务提供了用于创建混合应用程序的功能，混合应用程序由公共服务和私有服务组成。
 
-*表 3. 可用于从 {{site.data.keyword.Bluemix_notm}} Public 按区域联合的服务*
+*表 4. 可用于从 {{site.data.keyword.Bluemix_notm}} Public 按区域联合的服务*
+{: #table04}
 
 |服务	|在美国南部区域中可用	|在欧洲英国区域中可用 |在澳洲悉尼区域中可用|
 |:----------|:------------------------------|:------------------|:------------------|
 |{{site.data.keyword.alchemyapishort}} 		|是	   	|是  		|是|
-|{{site.data.keyword.alertnotificationshort}}		|是		|是			|是		|
+|{{site.data.keyword.alertnotificationshort}}	|是		|是		|是	|
+|{{site.data.keyword.apiconnect_short}}         |是            |是            |是  |
 |{{site.data.keyword.appseccloudshort}}		|是		|是		|是 |
-|{{site.data.keyword.hadoopst}}			|是		|否		|否 |
+|{{site.data.keyword.apiconnect_short}} 	|是   	 	|是  	 	|是   |
+|Automated Accessibility Checker |是       |是    |是   |
 |{{site.data.keyword.rules_short}}		|是		|是		|是 |
 |{{site.data.keyword.cloudant}}			|是		|是		|是 |
-|{{site.data.keyword.conceptexpansionshort}}	|是		|是		|是|
-|{{site.data.keyword.conceptinsightsshort}}	|是		|是		|是 |
+|{{site.data.keyword.iotmapinsights_short}}    |是  |是  |是  |
+|{{site.data.keyword.conversationshort}}  |是  |是  |是  |
 |{{site.data.keyword.dashdbshort}}		|是		|是		|是 |
 |{{site.data.keyword.dataworks_short}}		|是		|是		|否|
 |{{site.data.keyword.DB2OnCloud_short}}		|是		|是		|是 |
-|{{site.data.keyword.dialogshort}}		|是		|是		|是|
+|Digital Content Checker |是  |是  |是  |
 |{{site.data.keyword.documentconversionshort}}	|是		|是		|是|
-|{{site.data.keyword.game}}			|否		|否		|是 |
+|{{site.data.keyword.iotdriverinsights_short}}  |是 |是  |是  |
 |{{site.data.keyword.geospatialshort_Geospatial}}	|是	|是		|是 |
 |{{site.data.keyword.GlobalizationPipeline_short}}	|是		| 是		| 是 |
 |{{site.data.keyword.identitymixershort}}		|是		|是		|是|
+|{{site.data.keyword.iot4auto_short}} |是   |是  |是  |
+|{{site.data.keyword.iotelectronics}}  |是  |是  |否 |
+|{{site.data.keyword.iotinsurance_short}} |否   |否   |是  |
 |{{site.data.keyword.twittershort}}		|是		|是		|是|
-|{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.languagetranslationshort}}	|是		|是		|是 |
+|{{site.data.keyword.languagetranslatorshort}} |是  |是  |是  |
+|{{site.data.keyword.dwl_short}}  |是  |是  |否  |
 |{{site.data.keyword.eventhubshort}}		|是		|否		|否|
 |{{site.data.keyword.messagehub}}		|是		|是		|否|
-|{{site.data.keyword.macm_short}}		|是		|是		|是|
 |{{site.data.keyword.manda}}			|是		|是		|是 |
 |{{site.data.keyword.amashort}}			|是		|是		|是 |
 |{{site.data.keyword.mqa}}			|是		|是		|是 |
-|{{site.data.keyword.mql}}			|是		|是		|是 |
+|{{site.data.keyword.mql}}			|否		|否		|是 |
 |{{site.data.keyword.nlclassifierlshort}} 	|是 		|是 		|是|
 |{{site.data.keyword.personalityinsightsshort}}	|是		|是		|是|
 |{{site.data.keyword.pm_short}}			|是		|是		|否 |
-|{{site.data.keyword.presenceinsightsshort}}	|是		|是		|是|
 |{{site.data.keyword.mobilepush}}		|是		|是		|是 |
-|{{site.data.keyword.questionandanswershort}}	|是		|是		|是|
-|{{site.data.keyword.relationshipextractionshort}}	|是	|是		|是|
 |{{site.data.keyword.retrieveandrankshort}}	|是 		|是 		|是|
 |{{site.data.keyword.runbook_short}}		|是		|是		|是|
 |{{site.data.keyword.SecureGateway}}		|是		|是		|是 |
@@ -118,11 +131,12 @@ IBM® 使用云操作即服务来监视和维护您的环境，让您可以专�
 |{{site.data.keyword.texttospeechshort}} 	|是 		|是	 	|是|
 |{{site.data.keyword.toneanalyzershort}} 	|是 		|是 		|是|
 |{{site.data.keyword.tradeoffanalyticsshort}}	|是		|是		|是|
-|{{site.data.keyword.visualinsightsshort}}	|是		|是		|是|
 |{{site.data.keyword.visualrecognitionshort}}	|是 		|是	 	|是|
 |{{site.data.keyword.iot_short}}		|是		|是		|否|
-|{{site.data.keyword.workflow}}			|是		|是		|是 |
+|{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.workloadscheduler}}	|是		|是		|是 |
+
+**注**：此表中未包含第三方服务。请检查目录以获取第三方服务选项。
 
 ## {{site.data.keyword.Bluemix_notm}} Local 体系结构
 {: #localarch}
@@ -139,18 +153,18 @@ IBM® 使用云操作即服务来监视和维护您的环境，让您可以专�
 <dt>**监视和日志记录**</dt>
 <dd>监视和日志记录功能通过中继部署在您的数据中心内，并且数据保留在数据中心内。警报会根据定义的警报条件发回 IBM 操作人员。发回 IBM 的警报中不会包含任何敏感信息。</dd>
 <dt>**网络**</dt>
-<dd>中继是 {{site.data.keyword.Bluemix_notm}} Local 随附的交付网络。中继使 IBM 能够以一致的方式自动向所有本地部署交付最新更新，以便您始终都能有一个安全的最新系统。此隧道上的流量是自动执行的活动，用于处理和维护您实例的平台、计算资源和服务。流量包括 IBM 操作人员用于完成您本地实例的问题确定的监视能力。有关中继的更多信息，请参阅[中继](index.html#localrelay)。</dd>
+<dd>中继是 {{site.data.keyword.Bluemix_notm}} Local 随附的交付网络。中继使 IBM 能够以一致的方式自动向所有本地部署交付最新更新，以便您始终都能有一个安全的最新系统。此隧道上的流量是自动执行的活动，用于处理和维护您实例的平台、计算资源和服务。流量包括 IBM 操作人员用于完成您本地实例的问题确定的监视能力。有关中继的更多信息，请参阅<a href="index.html#localrelay">中继</a>。</dd>
 <dt>**计算**</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} Local 使用基于 Cloud Foundry 的以应用程序为中心的运行时环境。</dd>
 <dt>**安全情报**</dt>
-<dd><p>IBM 使用 QRadar 安全情报平台提供了用于集成多个关键组件的统一体系结构。这些组件包括安全信息和事件管理、日志管理、异常检测、事件取证以及配置和漏洞管理。Bluemix 还使用 IBM QRadar 安全信息和事件管理 (SIEM) 来监视特权用户操作以及应用程序开发者的成功和不成功登录尝试。QRadar 报告通过“管理”页面的“报告和日志”部分，让客户了解这些事件数据。有关安全报告的信息，请参阅[查看报告](../admin/index.html#oc_report)。</p>
-<p>IBM BigFix 会确保以适当的频率应用操作系统的修订。打补丁进程会自动执行，并遵循您与 IBM 约定的日程安排。有关维护和升级的信息，请参阅[维护本地实例](index.html#maintainlocal)。</p>
+<dd><p>IBM 使用 QRadar 安全情报平台提供了用于集成多个关键组件的统一体系结构。这些组件包括安全信息和事件管理、日志管理、异常检测、事件取证以及配置和漏洞管理。Bluemix 还使用 IBM QRadar 安全信息和事件管理 (SIEM) 来监视特权用户操作以及应用程序开发者的成功和不成功登录尝试。QRadar 报告通过“管理”页面的“报告和日志”部分，让客户了解这些事件数据。有关安全报告的信息，请参阅<a href="/docs/admin/index.html#oc_report">查看报告</a>。</p>
+<p>IBM BigFix 会确保以适当的频率应用操作系统的修订。打补丁进程会自动执行，并遵循您与 IBM 约定的日程安排。有关维护和升级的信息，请参阅<a href="index.html#maintainlocal">维护本地实例</a>。</p>
 </dd>
 </dl>
 
 您的应用程序会部署到在 Cloud Foundry 虚拟机上运行的虚拟容器内部。安装 {{site.data.keyword.Bluemix_notm}} 时，将部署所有 Cloud Foundry 组件，例如云控制器、运行状况管理器、路由器和 Droplet Execution Agent (DEA)。此外，在 {{site.data.keyword.Bluemix_notm}} 部署中还将包含各种 {{site.data.keyword.Bluemix_notm}} 管理组件。
 
-DataPower 设备提供对 {{site.data.keyword.Bluemix_notm}} 应用程序域的访问。这些设备所连接到的网络从您的内部网即可进行访问。要部署应用程序和服务的用户通过可从内部网进行访问的网络中获取相应访问权。您必须提供 7 个 IP 地址，以用于出站因特网访问。DataPower 设备会从这些客户 IP 地址路由到独立的 {{site.data.keyword.Bluemix_notm}} 部署。有关网络规范和基础架构需求的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} Local 基础架构需求](../local/index.html#localinfra)。
+DataPower 设备提供对 {{site.data.keyword.Bluemix_notm}} 应用程序域的访问。这些设备所连接到的网络从您的内部网即可进行访问。要部署应用程序和服务的用户通过可从内部网进行访问的网络中获取相应访问权。您必须提供 7 个 IP 地址，以用于出站因特网访问。DataPower 设备会从这些客户 IP 地址路由到独立的 {{site.data.keyword.Bluemix_notm}} 部署。有关网络规范和基础架构需求的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} Local 基础架构需求](/docs/local/index.html#localinfra)。
 
 ### 中继
 {: #localrelay}
@@ -159,9 +173,9 @@ DataPower 设备提供对 {{site.data.keyword.Bluemix_notm}} 应用程序域的�
 
 此隧道上的流量是自动执行的活动，用于处理和维护您实例的平台、计算资源和服务。流量包括 IBM 操作人员用于完成您本地实例的问题确定的监视能力。此连接使用出站 Web 端口 443。IBM 使用中继功能通过一致的测试和验证过程来交付平台更新。此过程将确保推送到本地环境的所有部署均稳定、安全。
 
-只有在您本地环境上与您协作的 IBM 团队才能安全地访问您的 {{site.data.keyword.Bluemix_notm}} 实例。在执行连接过程的多个步骤期间，使用双重认证对本地环境的访问进行了保护。IBM 提供了已批准访问您环境的用户和标识的列表，随后您可以审计对您环境的任何访问。通过生成安全报告，您能够了解谁访问过您的环境，何时以及为什么进行访问。有关生成安全报告的信息，请参阅[安全报告](../security/index.html#reports)。
+只有在您本地环境上与您协作的 IBM 团队才能安全地访问您的 {{site.data.keyword.Bluemix_notm}} 实例。在执行连接过程的多个步骤期间，使用双重认证对本地环境的访问进行了保护。IBM 提供了已批准访问您环境的用户和标识的列表，随后您可以审计对您环境的任何访问。通过生成安全报告，您能够了解谁访问过您的环境，何时以及为什么进行访问。有关生成安全报告的信息，请参阅[安全报告](/docs/security/index.html#reports)。
 
-作为管理员，您可以全面了解环境中的事件、问题、变更、容量和安全管理。您可以使用“管理”页面来访问有关环境的信息。中继技术可确保“管理”页面中的数据是最新的。有关用户访问权、安全日志、联合目录控制以及更新与问题修复沟通的更多信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)。
+作为管理员，您可以全面了解环境中的事件、问题、变更、容量和安全管理。您可以使用“管理”页面来访问有关环境的信息。中继技术可确保“管理”页面中的数据是最新的。有关用户访问权、安全日志、联合目录控制以及更新与问题修复沟通的更多信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated](/docs/admin/index.html#mng)。
 
 ##设置 {{site.data.keyword.Bluemix_notm}} Local 实例
 {: #setuplocal}
@@ -177,7 +191,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 <li>首先联系 IBM 指定的客户代表或联系 <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a>。</li>
 <li>与 IBM 达成 {{site.data.keyword.Bluemix_notm}} Local 协议，其中包含交付的里程碑日期。
 	<ol type="a">
-	<li>与 IBM 合作来设置您的 {{site.data.keyword.Bluemix_notm}} Local 实例，费用由您支付。每月的经常性费用基于要使用的本地服务以及对所有 {{site.data.keyword.Bluemix_notm}} 公共服务的预订。对于超出预订协议范围的任何费用，您会收到相应发票。</li>
+	<li>与 IBM 合作来配置 {{site.data.keyword.Bluemix_notm}} Local 实例的一次性设置和每月经常性费用。每月的经常性费用基于要使用的本地服务以及对所有 {{site.data.keyword.Bluemix_notm}} 公共服务的预订。对于超出预订协议范围的任何费用，您会收到相应发票。</li>
 	<li>为设置 {{site.data.keyword.Bluemix_notm}} Local 实例的每个阶段确定截止期限。</li>
 	</ol>
 	</li>
@@ -192,10 +206,10 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 </li>
 </ol>
 
-对您的环境进行初始部署和配置的过程应类似于以下列表。有关每个任务负责人员的详细信息，请参阅[角色和责任](../local/index.html#rolesresponsibilities)。
+对您的环境进行初始部署和配置的过程应类似于以下列表。有关每个任务负责人员的详细信息，请参阅[角色和责任](/docs/local/index.html#rolesresponsibilities)。
 
 <ol>
-<li>您提供与计算资源、联网和存储规范相符的 VMware 配置。有关基础架构需求的更多信息，请参阅 <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local 基础架构需求</a>。</li>
+<li>您提供与计算资源、联网和存储规范相符的 VMware 配置。有关基础架构需求的更多信息，请参阅 <a href="/docs/local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local 基础架构需求</a>。</li>
 <li>您提供 vCenter 集群凭证，以供先启虚拟机使用。您必须提供以下信息：<ul>
 <li>VMware 集群的名称</li>
 <li>vCenter 集群凭证（包括用户标识和密码）</li>
@@ -207,9 +221,9 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 <li>您与 IBM 一起来验证您在前一任务中提供的凭证。</li>
 <li>您提供自己网络上的 7 个 IP 地址。如果您有安全 Web 代理支持内部 {{site.data.keyword.Bluemix_notm}} 组件对因特网进行出站访问，那么必须提供用于连接到该代理的凭证。<p>**注**：如果您的 Web 代理不是安全代理，那么无需提供凭证。另请注意，并非所有 {{site.data.keyword.Bluemix_notm}} Local 客户都使用 Web 代理。</p></li>
 <li>IBM 提供了一个 URL 白名单，在开始部署之前，您必须允许这些 URL 通过您的 Web 代理。<br />
-<p>**注**：为了确保您现有的或新的应用程序可以访问必要的资源，您可能必须采取额外的步骤，将资源与 buildpack 捆绑在一起，或者与安全团队一起工作，以制作运行应用程序所需的 URL 白名单。有关使用 node.js 和 Liberty for Java buildpack 的更多信息，请参阅 <a href="../runtimes/nodejs/offlineMode.html">node.js 的脱机方式</a>和 <a href="../runtimes/liberty/offlineMode.html">Liberty for Java 的脱机方式</a>。</p>
+<p>**注**：为了确保您现有的或新的应用程序可以访问必要的资源，您可能必须采取额外的步骤，将资源与 buildpack 捆绑在一起，或者与安全团队一起工作，以制作运行应用程序所需的 URL 白名单。有关使用 node.js 和 Liberty for Java buildpack 的更多信息，请参阅 <a href="/docs/runtimes/nodejs/offlineMode.html">node.js 的脱机方式</a>和 <a href="/docs/runtimes/liberty/offlineMode.html">Liberty for Java 的脱机方式</a>。</p>
 </li>
-<li>您为部署指定域名，以及要使用的标识。设置本地实例时，您会得到两个部分定义的域，请选取这两个域的前缀。例如，选取 <code>*mycompany*.bluemix.net</code> 和 <code>*mycompany*.mybluemix.net</code> 的前缀。然后，还可以选择完整域来创建定制域。<p>您可以根据自己的需要选择任意数量的定制域。不过，您应负责获取定制域的证书。有关创建定制域的信息，请参阅<a href="../manageapps/updapps.html#domain">创建和使用定制域</a>。</p></li>
+<li>您为部署指定域名，以及要使用的标识。设置本地实例时，您会得到两个部分定义的域，请选取这两个域的前缀。例如，选取 <code>*mycompany*.bluemix.net</code> 和 <code>*mycompany*.mybluemix.net</code> 的前缀。然后，还可以选择完整域来创建定制域。<p>您可以根据自己的需要选择任意数量的定制域。不过，您应负责获取定制域的证书。有关创建定制域的信息，请参阅<a href="/docs/manageapps/updapps.html#domain">创建和使用定制域</a>。</p></li>
 <li>选择要使用何种技术（IPSec 或 OpenVPN 隧道）来配置中继，以便连回 IBM 操作中心。</li>
 <li>IBM 在 {{site.data.keyword.Bluemix_notm}} 集群中安装并启动先启虚拟机。如果您提供自己的 VMware，那么 IBM 代表会帮助您的客户代表来完成此任务。</li>
 <li>IBM 配置中继，以便连回 IBM 操作中心与之进行通信。</li>
@@ -222,7 +236,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 <li>您可以开始使用您的本地实例来响应警报，该实例由 IBM 操作团队进行监视。</li>
 </ol>
 
-{{site.data.keyword.Bluemix_notm}} 实例设置完成后，您可以使用“管理”页面来监视和管理 {{site.data.keyword.Bluemix_notm}} 实例。有关更多信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 Dedicated](../admin/index.html#mng)。有关升级和维护的信息，请参阅[维护本地实例](index.html#maintainlocal)。
+{{site.data.keyword.Bluemix_notm}} 实例设置完成后，您可以使用“管理”页面来监视和管理 {{site.data.keyword.Bluemix_notm}} 实例。有关更多信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 和 Dedicated](/docs/admin/index.html#mng)。有关升级和维护的信息，请参阅[维护本地实例](index.html#maintainlocal)。
 
 ##角色和责任
 {: #rolesresponsibilities}
@@ -243,10 +257,10 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 <dt>**DevOps 联系人**</dt>
 <dd>与 IBM 代表一起规划和应用 {{site.data.keyword.Bluemix_notm}} 平台、服务和运行时所需的维护更新。分配有此角色的人员还可与 IBM 代表一起配置 {{site.data.keyword.Bluemix_notm}} Local 实例。</dd>
 <dt>**IaaS 专家**</dt>
-<dd>与 IBM 代表一起制定 VMware 部署计划。通常，此人为数据中心的 VMware 管理员。分配有此角色的人员负责审查 <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local 基础架构需求</a>，并与 IBM 一起制定实施计划。部署结束后，分配有此角色的人员可对部署是否符合 IaaS 层的公司标准进行审批。</dd>
+<dd>与 IBM 代表一起制定 VMware 部署计划。通常，此人为数据中心的 VMware 管理员。分配有此角色的人员负责审查 <a href="/docs/local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local 基础架构需求</a>，并与 IBM 一起制定实施计划。部署结束后，分配有此角色的人员可对部署是否符合 IaaS 层的公司标准进行审批。</dd>
 </dl>
 
-您的客户代表会与 IBM 专家进行合作，共同来确保您始终拥有所需的支持。对于您的帐户，您可以升级到“高级”支持层，以便与专用客户成功经理 (CSM) 进行合作。有关不同支持层的更多信息，请参阅[联系支持](../support/index.html#contacting-support)。CSM 会完成以下类型的任务：
+您的客户代表会与 IBM 专家进行合作，共同来确保您始终拥有所需的支持。对于您的帐户，您可以升级到“高级”支持层，以便与专用客户成功经理 (CSM) 进行合作。有关不同支持层的更多信息，请参阅[联系支持](/docs/support/index.html#contacting-support)。CSM 会完成以下类型的任务：
 
 <ul>
 <li>在您与 IBM 之间进行技术协调。</li>
@@ -266,7 +280,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 
 从设置环境到持续维护的过程中，您和 IBM 都必须完成各种任务。以下各表列出了在先启、进展和完成各阶段所需的任务以及完成任务的所有者。
 
-先启阶段用于建立 {{site.data.keyword.Bluemix_notm}} Local 环境。此时，您已审查[本地基础架构需求](../local/index.html#localinfra)。此阶段的主要目标包含以下内容：
+先启阶段用于建立 {{site.data.keyword.Bluemix_notm}} Local 环境。此时，您已审查[本地基础架构需求](/docs/local/index.html#localinfra)。此阶段的主要目标包含以下内容：
 
 - 复查财务协议，并确定交付的里程碑日期。
 - 创建 {{site.data.keyword.Bluemix_notm}} 平台，并提供对运行时和服务的访问权。
@@ -288,7 +302,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 |确定用于事件检测和问题确定的工具 | 确定用于在 {{site.data.keyword.Bluemix_notm}} 平台级别进行事件检测和问题确定的 IBM 和第三方工具。 | IBM |
 |定义上报计划 | 定义上报计划以分类和解决从监视组件检测到的事件。 | IBM |
 |签署基础架构、平台和支持协议 | 签署预订协议，包括环境的财务条款和条件。签署支持预订。 | 客户 |
-|采购环境 | 采购计算资源、网络和存储。有关环境基础架构需求的更多信息，请参阅 [Local 基础架构需求](../local/index.html#localinfra)。 | 客户 |
+|采购环境 | 采购计算资源、网络和存储。有关环境基础架构需求的更多信息，请参阅 [Local 基础架构需求](/docs/local/index.html#localinfra)。 | 客户 |
 |安装 VPN 解决方案 | 安装双向 VPN 解决方案。 | IBM |
 |安装平台、应用程序以及监视和管理组件 | 安装、配置和验证平台组件（例如，BOSH Director、云控制器、运行状况管理器、消息传递、路由器、DEA 和服务提供者），以及在上报和问题检测计划中定义的监视组件。 | IBM |
 |安装和配置安全组件 | 安装和配置与监视和上报计划绑定的安全组件，包括 IBM QRadar、凭证保险库、入侵防御系统、IBM BigFix 和 IBM Security Privileged Identity Management。 | IBM |
@@ -471,7 +485,7 @@ IBM 会发送广播报文，详细描述在“状态”页面上针对每个维�
 
 <dt>**{{site.data.keyword.Bluemix_notm}} 平台标准维护**</dt>
 <dd>将根据您与 IBM 的协商在 21 天时段中应用维护更新。您为 IBM 提供了预先批准的维护时段以及可能不适用于您的特定日期或时间，IBM 会尽量将更新安排在您选择的日期内或相邻日期执行。<br />
-<p>转至**管理 > 系统信息**以查看安排的和暂挂的维护更新。有关设置预先批准的时段、不可用的日期以及查看或批准维护更新的更多信息，请参阅<a href="../admin/index.html#oc_schedulemaintenance">维护更新</a></p>。</dd>
+<p>转至**管理 > 系统信息**以查看安排的和暂挂的维护更新。有关设置预先批准的时段、不可用的日期以及查看或批准维护更新的更多信息，请参阅<a href="/docs/admin/index.html#oc_schedulemaintenance">维护更新</a></p>。</dd>
 </dl>
 
 **重要信息**：IBM 保留在必要时中断服务来实施紧急维护的权利。IBM 可能会更改所安排的维护时间，但会通知您任何此类更改以及任何紧急维护信息。
@@ -481,34 +495,34 @@ IBM 会发送广播报文，详细描述在“状态”页面上针对每个维�
 ### 客户基础架构维护
 {: #inframaintenance}
 
-{{site.data.keyword.Bluemix_notm}} Local 部署到 ESXi 管理程序，vCenter 应用程序用于集中管理虚拟机和 ESXi 主机。{{site.data.keyword.Bluemix_notm}} 支持 ESXi 和 vCenter 最新的三个版本，包括所有中间更新和补丁。您始终可以在 [Local 基础架构需求](../local/index.html#localinfra)文档中查找最新的受支持版本。
+{{site.data.keyword.Bluemix_notm}} Local 部署到 ESXi 管理程序，vCenter 应用程序用于集中管理虚拟机和 ESXi 主机。{{site.data.keyword.Bluemix_notm}} 支持 ESXi 和 vCenter 最新的三个版本，包括所有中间更新和补丁。您始终可以在 [Local 基础架构需求](/docs/local/index.html#localinfra)文档中查找最新的受支持版本。
 
 **重要信息**：当 {{site.data.keyword.Bluemix_notm}} Local 部署到 ESXi 管理程序时，ESXi 的升级和修补可能会中断本地环境的可用性，包括在该环境中运行的所有应用程序和服务。您必须使用支持凭单通知 {{site.data.keyword.Bluemix_notm}}，然后才能完成升级和修补，以确保中断不会错误地向操作团队发出警报。如果您具有已分配的客户成功经理 (CSM)，那么您可以与该 CSM 一起工作，就升级安排进行沟通。
 
 为了确保您的本地实例与最新的受支持版本兼容，{{site.data.keyword.Bluemix_notm}} 运营团队会监视环境是否存在与最新 {{site.data.keyword.Bluemix_notm}} Local 环境更新不匹配的不受支持版本。一些 {{site.data.keyword.Bluemix_notm}} 更新（如 Cloud Foundry 版本更新）需要您更新 ESXi 或 vCenter 软件。{{site.data.keyword.Bluemix_notm}} 支持将就必须更新的内容和更新截止时间向您发出警报。您将收到完成此更新的时间范围。
 
-{{site.data.keyword.Bluemix_notm}} 会尽一切努力让本地环境与最新的 ESXi 和 vCenter 版本兼容。但是，可能会有一小段时期无法支持最新的 ESXi 和 vCenter 版本。请参阅 [Local 基础架构需求](../local/index.html#localinfra)文档，以获取最新的兼容版本，然后再应用任何更新。
+{{site.data.keyword.Bluemix_notm}} 会尽一切努力让本地环境与最新的 ESXi 和 vCenter 版本兼容。但是，可能会有一小段时期无法支持最新的 ESXi 和 vCenter 版本。请参阅 [Local 基础架构需求](/docs/local/index.html#localinfra)文档，以获取最新的兼容版本，然后再应用任何更新。
 
 ## {{site.data.keyword.Bluemix_notm}} Local 的事件响应和支持
 {: #incidentresponse}
 
 ### 客户检测到的问题
 
-如果识别到需要 IBM 支持和操作人员关注的问题，您可以使用多种不同的方法来联系支持人员。有关如何联系支持人员的信息，请参阅[联系支持人员](../support/index.html#contacting-bluemix-support-local)。根据问题情况，您和/或 IBM 可合作解决问题。
+如果识别到需要 IBM 支持和操作人员关注的问题，您可以使用多种不同的方法来联系支持人员。有关如何联系支持人员的信息，请参阅[联系支持人员](/docs/support/index.html#contacting-bluemix-support-local)。根据问题情况，您和/或 IBM 可合作解决问题。
 
 ### IBM 检测到的严重事件
 
-严重事件是指紧迫的意外服务中断以及影响您的环境或用户的稳定性问题。如果 IBM 检测到您的环境内有严重事件，那么会在**状态**页面上借助通知来告知您。您还可以检查“状态”页面来获取平台或服务的任何已知问题。有关“状态”页面的更多信息，请参阅[查看状态](../admin/index.html#oc_status)。 
+严重事件是指紧迫的意外服务中断以及影响您的环境或用户的稳定性问题。如果 IBM 检测到您的环境内有严重事件，那么会在**状态**页面上借助通知来告知您。您还可以检查“状态”页面来获取平台或服务的任何已知问题。有关“状态”页面的更多信息，请参阅[查看状态](/docs/admin/index.html#oc_status)。 
 
-如果要将通知与支持 Web Hook 的 Web Service 集成在一起，请参阅[通知和事件预订](../admin/index.html#oc_eventsubscription)，以获取有关如何扩展通知功能的信息。
+如果要将通知与支持 Web Hook 的 Web Service 集成在一起，请参阅[通知和事件预订](/docs/admin/index.html#oc_eventsubscription)，以获取有关如何扩展通知功能的信息。
 
 ![事件响应过程](images/incidentresponseprocess.png "事件响应过程")
 
 *图 2. 事件响应过程*
 
-根据问题情况，您和/或 IBM 可合作解决问题。如果您有与事件相关的疑问，或者需要 IBM 代表帮助您解决问题，那么可以开具支持凭单。有关如何联系支持人员的信息，请参阅[联系支持人员](../support/index.html#contacting-bluemix-support-local)。
+根据问题情况，您和/或 IBM 可合作解决问题。如果您有与事件相关的疑问，或者需要 IBM 代表帮助您解决问题，那么可以开具支持凭单。有关如何联系支持人员的信息，请参阅[联系支持人员](/docs/support/index.html#contacting-bluemix-support-local)。
 
-**注**：将全天候监视严重性为 1 的支持凭单。其他凭单的处理时间是周日晚上 10:00 GMT 到周六凌晨 12:00 GMT。有关支持凭单严重性和使用支持的更多信息，请参阅<a href="../support/index.html#contacting-bluemix-support-local">联系支持人员</a>。
+**注**：将全天候监视严重性为 1 的支持凭单。其他凭单的处理时间是周日晚上 10:00 GMT 到周六凌晨 12:00 GMT。有关支持凭单严重性和使用支持的更多信息，请参阅<a href="/docs/support/index.html#contacting-bluemix-support-local">联系支持人员</a>。
 
 ## {{site.data.keyword.Bluemix_notm}} Local 的灾难恢复
 {: #dr}
@@ -533,9 +547,9 @@ IBM 会发送广播报文，详细描述在“状态”页面上针对每个维�
 
 要部署到第二个位置或多个位置，必须采用与启用主地理位置类似的过程：
 
-1. 启用新的本地环境来托管应用程序的其他实例。要创建新环境，请联系 IBM 销售团队来开始这一过程。有关设置本地实例的更多信息，请参阅[设置 {{site.data.keyword.Bluemix_notm}} Local](../local/index.html#setuplocal)。要访问每个环境，必须分别登录。托管环境的每个物理位置都应该至少距离原始位置 200 公里，才可确保可用性。
+1. 启用新的本地环境来托管应用程序的其他实例。要创建新环境，请联系 IBM 销售团队来开始这一过程。有关设置本地实例的更多信息，请参阅[设置 {{site.data.keyword.Bluemix_notm}} Local](/docs/local/index.html#setuplocal)。要访问每个环境，必须分别登录。托管环境的每个物理位置都应该至少距离原始位置 200 公里，才可确保可用性。
 2. 获取要在其中托管新部署应用程序的域的唯一域名。例如，如果原始域为 *mycompany.east.bluemix.net*，那么可以使用新域（例如，*mycompany.west.bluemix.net*）来创建新的本地环境，并部署到新域。
-3. 每次部署原始应用程序时，都会部署到新位置。有关部署的更多信息，请参阅[上传应用程序](../starters/upload_app.html)。
+3. 每次部署原始应用程序时，都会部署到新位置。有关部署的更多信息，请参阅[上传应用程序](/docs/starters/upload_app.html)。
 
 
 #### 为 {{site.data.keyword.Bluemix_notm}} Local 启用全球负载均衡器
@@ -595,7 +609,7 @@ IBM 会发送广播报文，详细描述在“状态”页面上针对每个维�
 # 相关链接
 ## 常规
 * [Discover: {{site.data.keyword.Bluemix_notm}} Local](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
-* [{{site.data.keyword.Bluemix_notm}} 中的新增功能](../whatsnew/index.html)
-* [{{site.data.keyword.Bluemix_notm}} 词汇表](../overview/glossary/index.html)
-* [管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)
-* [联系支持人员](../support/index.html#getting-customer-support)
+* [{{site.data.keyword.Bluemix_notm}} 中的新增功能](/docs/whatsnew/index.html)
+* [{{site.data.keyword.Bluemix_notm}} 词汇表](/docs/overview/glossary/index.html)
+* [管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated](/docs/admin/index.html#mng)
+* [联系支持人员](/docs/support/index.html#getting-customer-support)
