@@ -158,7 +158,7 @@ If you have a private instance of the service for your dedicated environment, yo
 
 ![{{site.data.keyword.Bluemix_notm}} Dedicated](images/dedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
 
-*Figure 1. Detailed {{site.data.keyword.Bluemix_notm}} Dedicated diagram*
+Figure 1. Detailed {{site.data.keyword.Bluemix_notm}} Dedicated diagram
 
 {{site.data.keyword.Bluemix_notm}} Dedicated environments have the same security standards as the public {{site.data.keyword.Bluemix_notm}} in terms of infrastructure, operational, and physical security. However, developer access to the dedicated {{site.data.keyword.Bluemix_notm}} is controlled by your LDAP policies, which can be configured by the {{site.data.keyword.Bluemix_notm}} team when they set up your environment. Within the dedicated environment, you can manage user roles and permissions. See [Managing users and permissions](/docs/admin/index.html#oc_useradmin) for details.
 
@@ -368,7 +368,7 @@ If you want to integrate your notifications with a web service that supports web
 
 ![Incident response process](/docs/local/images/incidentresponseprocess.png "Incident response process")
 
-*Figure 2. Incident response process*
+Figure 2. Incident response process
 
 Depending on the issue, you, IBM, or both of you work together to fix the issue. If you have a question regarding the incident, or if you need an IBM representative to help you resolve the issue, then you can open a support ticket. For information about how to contact support, see [Contacting support](/docs/support/index.html#contacting-bluemix-support-local).
 
