@@ -50,7 +50,7 @@ Table 1: Authentication variables and descriptions
 
 ####  Adding service credentials in the UI
 1. In the **Service Credentials** tab on your service instance dashboard, click **New Credential** and give it a name.
-2. (*Optional*) In the **Add Inline Configuration Parameters** text field, input the credential information for the role you want to create. The information must be formatted as a JSON payload. For more information about {{site.data.keyword.objectstorageshort}} user roles, see [Types of access](../os_security.html#access-types).
+2. (*Optional*) In the **Add Inline Configuration Parameters** text field, input the credential information for the role you want to create. The information must be formatted as a JSON payload. For more information about {{site.data.keyword.objectstorageshort}} user roles, see [Types of access](/docs/services/ObjectStorage/os_security.html#access-types).
     - To create an administrative user: `{"role":"admin"}`
     - To create a non-administrative user: `{"role":"member"}`
 3. Click **Add**.
@@ -125,7 +125,7 @@ Table 3: Read access permissions by option
 
 
 
-1. Authenticate your credentials. You can use either the credentials that are found in the service credentials tab of the UI or you can generate new credentials. For more information about generating new credentials, see [Generating service credentials](insert link here). You receive your {{site.data.keyword.objectstorageshort}} URL and authentication token as an output.
+1. Authenticate your credentials. You can use either the credentials that are found in the service credentials tab of the UI or you can generate new credentials. For more information about generating new credentials, see [Generating service credentials](/docs/services/ObjectStorage/os_cli.html#generating-cli). You receive your {{site.data.keyword.objectstorageshort}} URL and authentication token as an output.
     Swift command:
 
     ```
