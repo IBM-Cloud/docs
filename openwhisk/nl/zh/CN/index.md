@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-09"
 
 ---
 
@@ -17,8 +13,7 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}} (Beta) 入门
-上次更新时间：2016 年 9 月 9 日
-{: .last-updated}
+
 
 {{site.data.keyword.openwhisk}} 是一种分布式事件驱动型计算服务，也称为无服务器计算或功能即服务 (FaaS)。{{site.data.keyword.openwhisk_short}} 从 Web 或移动应用程序通过 HTTP 运行应用程序逻辑来响应事件或直接调用。事件可以通过 Bluemix 服务（如 Cloudant）提供，也可以从外部源提供。开发者可以专注于编写应用程序逻辑，以及创建按需执行的操作。执行操作的速率始终与事件速率相匹配，从而产生固有的扩展和弹性以及最佳利用率。您只需为您使用的内容付费，而且不必管理服务器。您也可以获取[源代码](https://github.com/openwhisk/openwhisk)，然后自行运行系统。
 {: shortdesc}
@@ -28,7 +23,7 @@ copyright:
 ## 设置 {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_configure_cli}
 
-可以使用 {{site.data.keyword.openwhisk_short}} 命令行界面 (CLI) 来设置名称空间和授权密钥。转至[配置 CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window}，然后遵循指示信息来进行安装。 
+可以使用 {{site.data.keyword.openwhisk_short}} 命令行界面 (CLI) 来设置名称空间和授权密钥。转至[配置 CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window}，然后遵循指示信息来进行安装。
 
 ### 配置 CLI 以使用 HTTPS 代理
 

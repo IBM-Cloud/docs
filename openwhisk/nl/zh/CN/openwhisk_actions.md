@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-27"
  
 
 ---
@@ -19,8 +19,6 @@ copyright:
 # 创建并调用 {{site.data.keyword.openwhisk_short}} 操作
 {: #openwhisk_actions}
 
-上次更新时间：2016 年 9 月 9 日
-{: .last-updated}
 
 操作是在 {{site.data.keyword.openwhisk}} 平台上运行的无状态代码片段。操作可以是 JavaScript 函数、Swift 函数或封装在 Docker 容器中的定制可执行程序。例如，操作可用于检测映像中的构面、聚集一组 API 调用或发布推文。
 {:shortdesc}
@@ -75,7 +73,7 @@ actions
 
   您可以看到刚才创建的 `hello` 操作。
 
-4. 创建操作后，可以使用“invoke”命令在 OpenWhisk 的云中运行该操作。可以通过在命令中指定标记以使用*阻塞*调用（即，请求/响应样式）或*非阻塞*调用来调用操作。阻塞调用请求将*等待*激活结果可用。等待时间段为 60 秒或为操作的已配置[时间限制](./reference.md#per-action-timeout-ms-default-60s)（两者取较短的时间）。如果激活结果在等待时间段内可用，那么会返回激活结果。否则，激活会继续在系统中处理，并返回激活标识，以便可以稍后检查结果，这与非阻塞请求一样（请参阅[此处](#watching-action-output)，以获取有关监视激活的提示）。
+4. 创建操作后，可以使用“invoke”命令在 OpenWhisk 的云中运行该操作。可以通过在命令中指定标记以使用*阻塞*调用（即，请求/响应样式）或*非阻塞*调用来调用操作。阻塞调用请求将*等待*激活结果可用。等待时间段为 60 秒或为操作的已配置[时间限制](./openwhisk_reference.html#openwhisk_syslimits_timeout)（两者取较短的时间）。如果激活结果在等待时间段内可用，那么会返回激活结果。否则，激活会继续在系统中处理，并返回激活标识，以便可以稍后检查结果，这与非阻塞请求一样（请参阅[此处](#watching-action-output)，以获取有关监视激活的提示）。
 
   此示例使用的是阻塞参数 `--blocking`：
 
@@ -158,7 +156,7 @@ wsk action update hello hello.js
   ```
   {: pre}
   ```
-wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+  wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
   ```
@@ -180,14 +178,14 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
 1. 使用 `--param` 选项更新操作以绑定参数值。
 
   ```
-wsk action update hello --param place 'Vermont'
+  wsk action update hello --param place Vermont
   ```
   {: pre}
 
 2. 调用操作，但这次只传递 `name` 参数。
 
   ```
-wsk action invoke --blocking --result hello --param name 'Bernie'
+  wsk action invoke --blocking --result hello --param name Bernie
   ```
   {: pre}
   ```
@@ -202,7 +200,7 @@ wsk action invoke --blocking --result hello --param name 'Bernie'
 3. 调用操作，并同时传递 `name` 和 `place` 值。后者将覆盖绑定到操作的值。
 
   ```
-wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+  wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
   ```
@@ -319,7 +317,7 @@ var request = require('request');function main(params) {
   ```
   {: codeblock}
   
-  请注意，示例中的操作使用 JavaScript `request` 库向 Yahoo Weather API 发起 HTTP 请求，然后从 JSON 结果中抽取字段。[参考](./reference.md#javascript-runtime-environments)详细描述了可以在操作中使用的 Node.js 包。
+  请注意，示例中的操作使用 JavaScript `request` 库向 Yahoo Weather API 发起 HTTP 请求，然后从 JSON 结果中抽取字段。[参考](./openwhisk_reference.html#openwhisk_ref_javascript_environments)详细描述了可以在操作中使用的 Node.js 包。
   
   此示例还显示了需要异步操作。此操作返回 Promise，指示函数返回时此操作的结果尚不可用。相反，结果会在 HTTP 调用完成后在 `request` 回调中提供，并且会作为自变量传递给 `resolve()` 函数。
   
@@ -330,7 +328,7 @@ wsk action create weather weather.js
   ```
   {: pre}
   ```
-wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+  wsk action invoke --blocking --result weather --param location "Brooklyn, NY"
   ```
   {: pre}
   ```
@@ -339,13 +337,90 @@ wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
   }
   ```
   {: screen}
-  
+
+### 将操作包装为 Node.js 模块
+
+作为在单个 JavaScript 源文件中编写所有操作码的替代方法，可以将操作编写为 `npm` 包。例如，假设一个目录包含以下文件：
+
+首先是 `package.json`：
+
+```
+{
+  "name": "my-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies" : {
+    "left-pad" : "1.1.3"
+  }
+}
+```
+{: codeblock}
+
+接着是 `index.js`：
+
+```
+function myAction(args) {
+    const leftPad = require("left-pad")
+    const lines = args.lines || [];
+    return { padded: lines.map(l => leftPad(l, 30, ".")) }
+}
+
+exports.main = myAction;
+```
+{: codeblock}
+
+请注意，操作将通过 `exports.main` 公开；操作处理程序本身可以具有任何名称，只要名称符合接受对象和返回对象（或对象的 `Promise`）的通常特征符即可。
+
+要通过此包创建 OpenWhisk 操作，请执行以下操作：
+
+1. 首先在本地安装所有依赖关系
+
+  ```
+  npm install
+  ```
+  {: pre}
+
+2. 创建包含所有文件（包括所有依赖关系）的 `.zip` 归档：
+
+  ```
+  zip -r action.zip *
+  ```
+  {: pre}
+
+3. 创建操作：
+
+  ```
+  wsk action create packageAction --kind nodejs:6 action.zip
+  ```
+  {: pre}
+
+  请注意，使用 CLI 工具从 `.zip` 归档创建操作时，必须为 `--kind` 标志显式提供值。
+
+4. 可以像调用其他任何操作一样来调用此操作：
+
+  ```
+  wsk action invoke --blocking --result packageAction --param lines "[\"and now\", \"for something completely\", \"different\" ]"
+  ```
+  {: pre}
+  ```
+  {
+      "padded": [
+          ".......................and now",
+          "......for something completely",
+          ".....................different"
+      ]
+  }
+  ```
+  {: screen}
+
+最后，请注意，虽然大部分 `npm` 包会在执行 `npm install` 时安装 JavaScript 源代码，但还有些 npm 包会安装并编译二进制工件。目前，归档文件上传不支持二进制依赖关系，而只支持 JavaScript 依赖关系。如果归档包含二进制依赖关系，那么操作调用可能会失败。
+    
 ### 创建操作序列
 {: #openwhisk_create_action_sequence}
 
 可以创建用于将一序列操作链接在一起的操作。
 
-在名为 `/whisk.system/utils` 的包中提供了多个实用程序操作，可用于创建第一个序列。您可以在[包](./packages.md)部分中了解有关包的更多信息。
+在名为 `/whisk.system/utils` 的包中提供了多个实用程序操作，可用于创建第一个序列。您可以在[包](./openwhisk_packages.html)部分中了解有关包的更多信息。
 
 1. 显示 `/whisk.system/utils` 包中的操作。
   
@@ -363,9 +438,9 @@ wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
    action /whisk.system/utils/cat：将输入连接成一个字符串
   ```
   {: screen}
-
+  
   您将使用此示例中的 `split` 和 `sort` 操作。
-
+  
 2. 创建操作序列，使一个操作的结果作为自变量传递给下一个操作。
   
   ```
@@ -395,7 +470,7 @@ wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
   
   在结果中，您会看到这些行已排序。
 
-**注**：在序列中的操作之间传递的参数为显式参数，但缺省参数除外。因此，传递到操作序列的参数只可用于序列中的第一个操作。序列中第一个操作的结果成为序列中第二个操作的输入 JSON 对象（依此类推）。此对象不包含初始传递到序列的任何参数，除非第一个操作在其结果中显式包含这些参数。操作的输入参数会与操作的缺省参数合并，并且操作的输入参数优先于并覆盖任何匹配的缺省参数。有关使用多个指定参数来调用操作序列的更多信息，请参阅[设置缺省参数](./actions.md#setting-default-parameters)。
+**注**：在序列中的操作之间传递的参数为显式参数，但缺省参数除外。因此，传递到操作序列的参数只可用于序列中的第一个操作。序列中第一个操作的结果成为序列中第二个操作的输入 JSON 对象（依此类推）。此对象不包含初始传递到序列的任何参数，除非第一个操作在其结果中显式包含这些参数。操作的输入参数会与操作的缺省参数合并，并且操作的输入参数优先于并覆盖任何匹配的缺省参数。有关使用多个指定参数来调用操作序列的更多信息，请参阅[设置缺省参数](./openwhisk_actions.html#openwhisk_binding_actions)。
 
 ## 创建 Python 操作
 {: #openwhisk_actions_python}
@@ -590,8 +665,8 @@ wsk action invoke --blocking --result example --param payload Rey
   ```
   {: screen}
   
-  要更新 Docker 操作，请运行 buildAndPush.sh 以刷新 Docker Hub 上的映像，这将允许下次系统拉取 Docker 映像来运行操作的新代码。如果没有暖容器，那么任何新调用都将使用新的 Docker 映像。请考虑以下情况：如果存在使用先前版本的 Docker 映像的暖容器，那么除非运行 wsk 操作更新，否则任何新调用都将继续使用此映像，这将指示系统对于任何新调用，强制执行 docekr pull 会对新 Docker 映像执行拉取操作。
-  
+  要更新 Docker 操作，请运行 buildAndPush.sh 以将最新的映像上传到 Docker Hub。这将允许系统在下次运行操作的代码时，拉取新的 Docker 映像。如果没有暖容器，那么任何新调用都将使用新的 Docker 映像。但是，如果存在使用先前版本的 Docker 映像的暖容器，那么除非运行 wsk 操作更新，否则任何新调用都将继续使用该映像。这将指示系统对于任何新调用，都应该执行 docekr pull 来获取新的 Docker 映像。
+ 
   ```
 ./buildAndPush.sh janesmith/blackboxdemo
   ```

@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-02-22"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # Création de déclencheurs et de règles
 {: #openwhisk_triggers}
-Dernière mise à jour : 22 février 2016
-{: .last-updated}
+
 
 Les déclencheurs et les règles {{site.data.keyword.openwhisk}} apportent des capacités gérées par des événements sur la
 plateforme. Les événements provenant de sources d'événements externes et internes sont canalisés via un déclencheur, et des règles autorisent vos actions
@@ -68,7 +63,7 @@ la même action :
 - La règle `imageUpload -> thumbnailImage`
 
 Les trois règles établissent le comportement suivant : les images dans les tweets et les images téléchargées sont classées, les images téléchargées
-sont classées, et une version miniature est générée. 
+sont classées, et une version miniature est générée.
 
 ## Création et exécution de déclencheurs
 {: #openwhisk_triggers_fire}
@@ -78,12 +73,12 @@ Des déclencheurs peuvent être exécutés lorsque certains événements survien
 Par exemple, créez un déclencheur pour envoyer les mises à jour de l'emplacement d'utilisateur, et exécutez manuellement le déclencheur.
 
 1. Entrez la commande suivante pour créer le déclencheur :
- 
+
   ```
   wsk trigger create locationUpdate
   ```
   {: pre}
- 
+
   ```
   ok: created trigger locationUpdate
   ```
@@ -95,7 +90,7 @@ Par exemple, créez un déclencheur pour envoyer les mises à jour de l'emplacem
   wsk trigger list
   ```
   {: pre}
- 
+
   ```
   triggers
   /un_espace_nom/locationUpdate                            private
@@ -107,7 +102,7 @@ Par exemple, créez un déclencheur pour envoyer les mises à jour de l'emplacem
 3. Ensuite, exécutez un événement déclencheur en spécifiant le nom du déclencheur et des paramètres :
 
   ```
-  wsk trigger fire locationUpdate --param name "Daniel" --param place "Marseille"
+  wsk trigger fire locationUpdate --param name Daniel --param place "Marseille"
   ```
   {: pre}
 
@@ -125,7 +120,7 @@ Les déclencheurs ne peuvent pas être créés au sein d'un package ; ils doiven
 Des règles sont utilisées pour associer un déclencheur à une action. A chaque fois qu'un événement déclencheur est exécuté, l'action est appelée
 avec les paramètres d'événement.
 
-Par exemple, créez une règle qui appelle l'action hello à chaque fois qu'une mise à jour d'emplacement est publiée. 
+Par exemple, créez une règle qui appelle l'action hello à chaque fois qu'une mise à jour d'emplacement est publiée.
 
 1. Créez un fichier 'hello.js' avec le code d'action à utiliser :
   ```
@@ -140,7 +135,7 @@ Par exemple, créez une règle qui appelle l'action hello à chaque fois qu'une 
   wsk trigger update locationUpdate
   ```
   {: pre}
-  
+
   ```
   wsk action update hello hello.js
   ```
@@ -156,16 +151,16 @@ de votre déclencheur. Les trois paramètres sont le nom de la règle, le décle
   A tout moment, vous pouvez choisir de désactiver une règle.
   ```
   wsk rule disable maRègle
-```
+  ```
   {: pre}
 
 4. Exécutez le déclencheur locationUpdate. A chaque fois que vous déclenchez un événement, l'action hello est appelée avec les paramètres
 d'événement.
   ```
-  wsk trigger fire locationUpdate --param name "Daniel" --param place "Marseille"
+  wsk trigger fire locationUpdate --param name Daniel --param place "Marseille"
   ```
   {: pre}
-  
+
   ```
   ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
@@ -176,13 +171,13 @@ d'événement.
   wsk activation list --limit 1 hello
   ```
   {: pre}
-  
+
   ```
   activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
   {: screen}
-  
+
   ```
   wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```

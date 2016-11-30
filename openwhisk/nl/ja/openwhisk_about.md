@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-08-02"
  
 
 ---
@@ -17,9 +17,6 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}} の概要
-
-最終更新日: 2016 年 8 月 2 日
-{: .last-updated}
 
 以下のセクションでは、{{site.data.keyword.openwhisk}} について詳しく説明します。
 {: shortdesc}

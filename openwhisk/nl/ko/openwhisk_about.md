@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-08-02"
  
 
 ---
@@ -17,9 +17,6 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}} 정보
-
-마지막 업데이트 날짜: 2016년 8월 2일
-{: .last-updated}
 
 다음 절에서는 {{site.data.keyword.openwhisk}}에 대한 세부사항을 제공합니다.
 {: shortdesc}

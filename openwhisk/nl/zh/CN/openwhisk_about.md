@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-08-02"
  
 
 ---
@@ -17,9 +17,6 @@ copyright:
 {:pre: .pre}
 
 # 关于 {{site.data.keyword.openwhisk_short}}
-
-上次更新时间：2016 年 8 月 2 日
-{: .last-updated}
 
 以下各部分提供了有关 {{site.data.keyword.openwhisk}} 的详细信息。
 {: shortdesc}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -13,39 +14,51 @@ copyright:
 
 # 使用 {{site.data.keyword.openwhisk_short}} 移动 SDK
 {: #openwhisk_mobile_sdk}
-上次更新时间：2016 年 8 月 26 日
-{: .last-updated}
 
-{{site.data.keyword.openwhisk}} 提供了用于 iOS 和 watchOS 2 设备的移动 SDK，支持移动应用程序轻松触发远程触发器以及调用远程操作。Android 版本当前不可用；Android 开发者可直接使用 {{site.data.keyword.openwhisk}} REST API。
-{: shortdesc}
+{{site.data.keyword.openwhisk}} 提供了用于 iOS 和 watchOS 设备的移动 SDK，以支持移动应用程序轻松触发远程触发器以及调用远程操作。Android 版本当前不可用；Android 开发者可直接使用 {{site.data.keyword.openwhisk}} REST API。
 
-移动 SDK 是用 Swift 2.2 编写的，支持 iOS 9 及更高发行版。
+
+移动 SDK 是用 Swift 3.0 编写的，支持 iOS 10 及更高发行版。可以使用 Xcode 8.0 来构建移动 SDK。SDK 的旧 Swift 2.2/Xcode 7 版本的最高可用版本为 0.1.7，但现在不推荐使用此版本。
 
 ## 向应用程序添加 SDK
 {: #openwhisk_add_sdk}
 
 可以使用 CocoaPods、Carthage 或从源代码目录安装移动 SDK。
 
-### 使用 CocoaPods 安装 
+### 使用 CocoaPods 安装
 {: #openwhisk_add_sdk_cocoapods}
 
-{{site.data.keyword.openwhisk_short}} 移动 SDK 可通过 CocoaPods 进行公共分发。假定 CocoaPods 已安装，请将以下行放到入门模板应用程序项目目录中名为“Podfile”的文件中。 
+{{site.data.keyword.openwhisk_short}} 移动 SDK 可通过 CocoaPods 进行公共分发。假定 CocoaPods 已安装，请将以下行放到入门模板应用程序项目目录中名为“Podfile”的文件中。
 
 ```
 install! 'cocoapods', :deterministic_uuids => false
 use_frameworks!
 
 target 'MyApp' do
-     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 
-target 'MyApp WatchKit Extension' do 
-     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
+target 'MyApp WatchKit Extension' do
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 ```
 {: codeblock}
 
-在命令行中，输入 `pod install`。此命令会安装用于具有 watchOS 2 扩展的 iOS 应用程序的 SDK。使用 CocoaPods 为应用程序创建的工作空间文件在 Xcode 中打开项目。
+在命令行中，输入 `pod install`。此命令会安装用于具有 watchOS 扩展的 iOS 应用程序的 SDK。使用 CocoaPods 为应用程序创建的工作空间文件在 Xcode 中打开项目。
+
+安装后，打开项目工作空间。构建时，您可能会收到以下警告：`必须为使用 Swift 的目标正确配置“使用旧 Swift 语言版本”(SWIFT_VERSION)。请使用 [编辑 > 转换 > 至当前 Swift 语法...] 菜单来选择 Swift 版本，或使用“构建设置”编辑器直接配置构建设置。`
+导致此警告的原因是 Cocoapods 未更新 Pods 项目中的 Swift 版本。要解决此问题，请选择 Pods 项目和 {{site.data.keyword.openwhisk_short}} 目标。转至“构建设置”，并将`使用旧 Swift 语言版本`设置更改为`否`。或者，可以在 Podfile 末尾添加以下安装后指令：
+
+```
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
+```
+{: codeblock}
 
 ### 使用 Carthage 安装
 {: #openwhisk_add_sdk_carthage}
@@ -53,13 +66,13 @@ end
 在应用程序的项目目录中创建文件并命名为“Cartfile”。在文件中添加以下行：
 
 ```
-github "openwhisk/openwhisk-client-swift.git" ~> 0.1.7 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.2.2 # Or latest version
 ```
 {: codeblock}
 
-在命令行中，输入 `carthage update --platform ios`。Carthage 会下载并构建 SDK，在应用程序的项目目录中创建名为 Carthage 的目录，然后将 OpenWhisk.framework 文件放入 Carthage/build/iOS 中。
+在命令行中，输入 `carthage update --platform ios`。Carthage 会下载并构建 SDK，在应用程序的项目目录中创建名为 Carthage 的目录，然后将 {{site.data.keyword.openwhisk_short}}.framework 文件放入 Carthage/build/iOS 中。
 
-然后，您必须将 OpenWhisk.framework 添加到 Xcode 项目中的嵌入框架。
+然后，您必须将 {{site.data.keyword.openwhisk_short}}.framework 添加到 Xcode 项目中的嵌入框架。
 
 ### 通过源代码安装
 {: #openwhisk_add_sdk_source}
@@ -80,21 +93,21 @@ wsk sdk install iOS
 ```
 {: pre}
 
-此命令会下载包含入门模板应用程序的压缩文件。在项目目录中有一个 podfile。 
+此命令会下载包含入门模板应用程序的压缩文件。在项目目录中有一个 podfile。
 
 要安装 SDK，请输入以下命令：
 
 ```
 pod install
 ```
-{: pre} 
+{: pre}
 
 ## SDK 入门
 {: #openwhisk_sdk_getstart}
 
 要快速入门和熟悉运用，请使用 {{site.data.keyword.openwhisk_short}} API 凭证创建 WhiskCredentials 对象，然后通过该对象创建 {{site.data.keyword.openwhisk_short}} 实例。
 
-例如，在 Swift 2.1 中，使用以下示例代码来创建凭证对象：
+例如，使用以下示例代码来创建凭证对象：
 
 ```
 let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")let whisk = Whisk(credentials: credentialsConfiguration!)
@@ -123,7 +136,7 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 例如：
 
 ```
-// In this example, we are invoking an action to print a message to the OpenWhisk Console
+// In this example, we are invoking an action to print a message to the {{site.data.keyword.openwhisk_short}} Console
 var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
 

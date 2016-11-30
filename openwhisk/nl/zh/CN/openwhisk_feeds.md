@@ -1,12 +1,10 @@
 ---
 
- 
+
 
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-09"
 
 ---
 
@@ -18,8 +16,7 @@ copyright:
 
 # 实现订阅源
 {: #openwhisk_feeds}
-上次更新时间：2016 年 9 月 9 日
-{: .last-updated}
+
 
 OpenWhisk 支持开放 API，通过此 API，任何用户都可以将事件发起者服务公开为**包**中的**订阅源**。此部分描述了用于提供您自己订阅源的体系结构和实现选项。
 

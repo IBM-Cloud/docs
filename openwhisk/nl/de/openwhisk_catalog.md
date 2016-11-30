@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-09"
  
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}}-Services für {{site.data.keyword.openwhisk_short}} verwenden
 {: #openwhisk_ecosystem}
-Letzte Aktualisierung: 9. September 2016
-{: .last-updated}
 
 In {{site.data.keyword.openwhisk}} stellt ein Katalog von Paketen eine einfache Methode bereit, um Ihre App mit nützlichen Funktionen zu erweitern und um auf externe Services im direkten Geschäftsumfeld ('Ökosystem') zuzugreifen. Zu den externen Services, die für {{site.data.keyword.openwhisk_short}} eingerichtet sind, gehören zum Beispiel Cloudant, The Weather Company, Slack und GitHub.
 {: shortdesc}
@@ -118,7 +116,7 @@ Wenn Sie {{site.data.keyword.openwhisk_short}} in {{site.data.keyword.Bluemix_no
 1. Erstellen Sie eine Paketbindung, die für Ihr Cloudant-Konto konfiguriert ist.
 
   ```
-  wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+  wsk package bind /whisk.system/cloudant myCloudant -p username MYUSERNAME -p password MYPASSWORD -p host MYCLOUDANTACCOUNT.cloudant.com
   ```
   {: pre}
 
@@ -212,7 +210,7 @@ Sie können eine Aktion verwenden, um ein Dokument in einer Cloudant-Datenbank m
 1. Speichern Sie ein Dokument mit der Aktion `write` in der Paketbindung, die Sie zuvor erstellt haben. Stellen Sie sicher, dass Sie `/myNamespace/myCloudant` durch Ihren Paketnamen ersetzen.
 
   ```
-  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc "{\"_id\":\"heisenberg\",\"name\":\"Walter White\"}"
   ```
   {: pre}
   ```
@@ -283,7 +281,7 @@ Der Feed `/whisk.system/alarms/alarm` konfiguriert den Alarm-Service so, dass er
 Das folgende Beispiel zeigt, wie ein Auslöser erstellt wird, der einmal alle 20 Sekunden aktiviert wird, wobei das Auslöserereignis die Werte für `name` und `place` enthält.
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
   {: pre}
 
@@ -321,14 +319,14 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und den anschließ
 1. Erstellen Sie eine Paketbindung mit Ihrem API-Schlüssel.
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
+  wsk package bind /whisk.system/weather myWeather --param username MY_USERNAME --param password MY_PASSWORD
   ```
   {: pre}
 
 2. Rufen Sie die Aktion `forecast` in Ihrer Paketbindung auf, um die Wettervorhersage abzurufen.
 
   ```
-  wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+  wsk action invoke myWeather/forecast --blocking --result --param latitude 43.7 --param longitude -79.4
   ```
   {: pre}
 
@@ -390,14 +388,14 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Übersetzu
 1. Erstellen Sie eine Paketbindung mit Ihren Watson-Berechtigungsnachweisen.
 
   ```
-  wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson --param username MY_WATSON_USERNAME --param password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. Rufen Sie die Aktion `translate` in Ihrer Paketbindung auf, um einen Text aus dem Englischen ins Französische zu übersetzen.
 
   ```
-  wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+  wsk action invoke myWatson/translate --blocking --result --param payload "Blue skies ahead" --param translateParam payload --param translateFrom en --param translateTo fr
   ```
   {: pre}
 
@@ -423,14 +421,14 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Ermittlung
 1. Erstellen Sie eine Paketbindung mit Ihren Watson-Berechtigungsnachweisen.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. Rufen Sie die Aktion `languageId` in Ihrer Paketbindung auf, um die Sprache zu ermitteln.
 
   ```
-  wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+  wsk action invoke myWatson/languageId --blocking --result --param payload "Ciel bleu a venir"
   ```
   {: pre}
   ```
@@ -460,14 +458,14 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Umsetzung 
 1. Erstellen Sie eine Paketbindung mit Ihren Watson-Berechtigungsnachweisen.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. Rufen Sie die Aktion `textToSpeech` in Ihrer Paketbindung auf, um den Text umzusetzen.
 
   ```
-  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload Hey. --param voice en-US_MichaelVoice --param accept audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -506,14 +504,14 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Umsetzung 
 1. Erstellen Sie eine Paketbindung mit Ihren Watson-Berechtigungsnachweisen.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. Rufen Sie die Aktion `speechToText` in Ihrer Paketbindung auf, um die codierten Sprachdaten umzusetzen.
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -558,14 +556,14 @@ Das folgende Beispiel zeigt die Konfiguration von Slack, die Erstellung einer Pa
 2. Erstellen Sie eine Paketbindung mit Ihren Slack-Berechtigungsnachweisen, mit dem Kanal, an den gesendet werden soll, sowie mit dem Benutzernamen, unter dem gesendet werden soll.
 
   ```
-  wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+  wsk package bind /whisk.system/slack mySlack --param url "https://hooks.slack.com/services/..." --param username Bob --param channel "#MySlackChannel"
   ```
   {: pre}
 
 3. Rufen Sie die Aktion `post` in Ihrer Paketbindung auf, um eine Nachricht an Ihren Slack-Kanal zu senden.
 
   ```
-  wsk action invoke mySlack/post --blocking --result --param text 'Hallo von OpenWhisk!'
+  wsk action invoke mySlack/post --blocking --result --param text "Hello from OpenWhisk!"
   ```
   {: pre}
 
@@ -659,7 +657,7 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung.
 4. Erstellen Sie eine Paketbindung mit den `/whisk.system/pushnotifications`.
 
   ```
-  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  wsk package bind /whisk.system/pushnotifications myPush -p appId myAppID -p appSecret myAppSecret
   ```
   {: pre}
 
@@ -682,7 +680,10 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung.
 Von der Aktion `/whisk.system/pushnotifications/sendMessage` werden Push-Benachrichtigungen an registrierte Geräte gesendet. Die folgenden Parameter sind verfügbar:
 - `text`: Die Benachrichtigung, die dem Benutzer angezeigt wird. Beispiel: `-p text "Hallo, OpenWhisk sendet eine Benachrichtigung"`.
 - `url`: Eine optionale URL, die zusammen mit einem Alert gesendet werden kann. Beispiel: `-p url "https:\\www.w3.ibm.com"`.
-- `gcmPayload`: Angepasste JSON-Nutzdaten, die als Bestandteil einer Benachrichtigung gesendet werden. Beispiel: `-p gcmPayload "{"hi":"hallo"}"`
+- `deviceIds` Die Liste der angegebenen Geräte. Beispiel: `-p deviceIds "[\"deviceID1\"]"`.
+- `platforms` Zum Senden einer Benachrichtigung an die Geräte der angegebenen Plattformen. 'A' für Apple- (iOS) Geräte und 'G' für Google- (Android) Geräte. Beispiel: `-p platforms "[\"A\"]"`.
+- `tagNames` Zum Senden einer Benachrichtigung an die Geräte, die einen dieser Tags subskribiert haben. Beispiel: `-p tagNames "[\"tag1\"]" `.
+- `gcmPayload`: Angepasste JSON-Nutzdaten, die als Bestandteil einer Benachrichtigung gesendet werden. Beispiel: `-p gcmPayload "{\"hi\":\"hello\"}"`
 - `gcmSound`: Die Audiodatei (auf einem Gerät), die abgespielt werden soll, wenn die Benachrichtigung vom Gerät empfangen wird.
 - `gcmCollapseKey`: Dieser Parameter gibt eine Gruppe aus Nachrichten an.
 - `gcmDelayWhileIdle`: Wenn für diesen Parameter der Wert 'true' festgelegt wird, gibt dies an, dass die Nachricht erst gesendet werden darf, wenn das Gerät aktiv wird.
@@ -700,7 +701,7 @@ Nachfolgend ein Beispiel für das Senden einer Push-Benachrichtigung von einem P
 1. Senden Sie die Push-Benachrichtigung mithilfe der Aktion `sendMessage` in der Paketbindung ab, die Sie zuvor erstellt haben. Stellen Sie sicher, dass Sie `/myNamespace/myPush` durch Ihren Paketnamen ersetzen.
 
   ```
-  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds "[\"T1\",\"T2\"]"
   ```
   {: pre}
 

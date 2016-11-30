@@ -1,12 +1,11 @@
 ---
 
- 
+
 
 copyright:
-
   anni: 2016
+ultimo aggiornamento: "02-08-2016"
 
- 
 
 ---
 
@@ -18,8 +17,7 @@ copyright:
 
 # Utilizzo e creazione di pacchetti {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
-Ultimo aggiornamento: 2 agosto 2016
-{: .last-updated}
+
 
 In {{site.data.keyword.openwhisk}}, puoi utilizzare i pacchetti per raggruppare una serie di azioni correlate e condividerle con altri.
 
@@ -245,7 +243,7 @@ I feed possono essere opportunamente utilizzati per configurare un'origine event
 2. Crea un trigger che si attiva ogni 8 secondi.
 
   ```
-  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron '*/8 * * * * *' -p trigger_payload '{"name":"Mork", "place":"Ork"}'
+  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron "*/8 * * * * *" -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"
   ```
   {: pre}
   ```
@@ -385,12 +383,13 @@ Puoi impostare parametri predefiniti per tutte le entità di un pacchetto. Per f
 2. Visualizza i parametri del pacchetto e dell'azione e osserva in che modo l'azione `identity` del pacchetto eredita parametri dal pacchetto.
 
   ```
-  wsk package get custom parameters
+  wsk package get custom
   ```
   {: pre}
   ```
-  ok: got package custom, projecting parameters
-  [
+  ok: got package custom
+  ...
+  "parameters": [
       {
           "key": "city",
           "value": "Austin"
@@ -400,16 +399,18 @@ Puoi impostare parametri predefiniti per tutte le entità di un pacchetto. Per f
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
   ```
-  wsk action get custom/identity parameters
+  wsk action get custom/identity
   ```
   {: pre}
   ```
-  ok: got action custom/identity, projecting parameters
-  [
+  ok: got action custom/identity
+  ...
+  "parameters": [
       {
           "key": "city",
           "value": "Austin"
@@ -419,6 +420,7 @@ Puoi impostare parametri predefiniti per tutte le entità di un pacchetto. Per f
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
@@ -471,12 +473,14 @@ Una volta eseguiti i test e il debug delle azioni e dei feed compresi in un pacc
 2. Visualizza la proprietà `publish` del pacchetto per verificare che ora sia true.
 
   ```
-  wsk package get custom publish
+  wsk package get custom
   ```
   {: pre}
   ```
-  ok: got package custom, projecting publish
-  true
+  ok: got package custom
+  ...
+  "publish": true,
+  ...
   ```
   {: screen}
 

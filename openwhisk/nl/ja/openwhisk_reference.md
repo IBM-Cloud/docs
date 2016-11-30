@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-27"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} システムの詳細
 {: #openwhisk_reference}
-最終更新日: 2016 年 9 月 9 日
-{: .last-updated}
+
 
 以下のセクションでは、{{site.data.keyword.openwhisk}} システムについて詳しく説明します。
 {: shortdesc}
@@ -206,7 +201,7 @@ function main(args) {
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
-        reject({ done: true });
+            reject({ done: true });
        }, 100);
     })
  }
@@ -438,14 +433,14 @@ Docker スケルトンは、OpenWhisk 互換の Docker イメージをビルド�
 
 以下のコレクション・エンドポイントがあります。
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
 
-`openwhisk.{DomainName}` は、OpenWhisk API ホスト名 (例えば、openwhisk.ng.bluemix.net、172.17.0.1 など) です。
+`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span> は、OpenWhisk API ホスト名 (例えば、openwhisk.ng.bluemix.net、172.17.0.1 など) です。
 
 `{namespace}` には、文字 `_` を使用して、ユーザーの *default namespace* (すなわち、E メール・アドレス) を指定できます。
 
@@ -454,19 +449,20 @@ Docker スケルトンは、OpenWhisk 互換の Docker イメージをビルド�
 エンティティーのタイプごとに以下のエンティティー・エンドポイン
 トがあります。
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
+
 
 名前空間とアクティベーション・エンドポイントのみが GET 要求をサポートします。アクション、トリガー、ルール、およびパッケージのエンドポイントは、GET、PUT、および DELETE 要求をサポートします。アクション、トリガー、およびルールのエンドポイントも POST 要求をサポートします。これは、アクションとトリガーを起動し、ルールを使用可能または使用不可にするために使用されます。詳しくは、
 [
 『API 資料』](https://new-console.{DomainName}/apidocs/98)を参照してください。
 
 すべての API は、HTTP 基本認証で保護さ
-れています。基本認証の資格情報は `~/.wskprops` ファイルの `AUTH` プロパティーにあり、コロンで区切られています。この資格情報は、[CLI 構成手順](../README.md#setup-cli)でも
+れています。基本認証の資格情報は `~/.wskprops` ファイルの `AUTH` プロパティーにあり、コロンで区切られています。この資格情報は、[CLI 構成手順](./index.html#openwhisk_start_configure_cli)でも
 取り出すことができます。
 
 以下は、cURL コマンドを使用して `whisk.system` 名前空間のすべてのパッケージのリストを取得する例を示しています。
@@ -510,9 +506,8 @@ OpenWhisk API は、Web クライアントからの要求/応答呼び出しを�
 | timeout | N ミリ秒を超えてコンテナーを実行することはできません。 | アクション当たり |  ミリ秒 | 60000 |
 | memory | N MB を超えるメモリーをコンテナーに割り振ることはできません。 | アクション当たり | MB | 256 |
 | logs | コンテナーは、N MB を超えて stdout に書き込むことはできません。 | アクション当たり | MB | 10 |
-| concurrent | 名前空間当たり N 件を超える同時アクティベーションは許可されません。 | 名前空間当たり | 数 | 100 |
-| minuteRate | 1 分当たりにこの数を超えるアクションをユーザーが呼び出すことはできません。 | ユーザー当たり | 数 | 120 |
-| hourRate | 1 時間当たりにこの数を超えるアクションをユーザーが呼び出すことはできません。 | ユーザー当たり | 数 | 3600 |
+| concurrent | 名前空間当たりに許可される、実行中または実行用にキューに入れられているアクティベーションは N 個までです。 | 名前空間当たり | 数 | 1000 |
+| minuteRate | 1 分当たりにこの数を超えるアクションをユーザーが呼び出すことはできません。 | ユーザー当たり | 数 | 5000 |
 | codeSize | アクション・コードの最大サイズ | 構成することはできません。アクション当たりの限度です。 | MB | 48 |
 | parameters | 付加できるパラメーターの最大サイズです。 | 構成することはできません。アクション/パッケージ/トリガー当たりの限度です。 | MB | 1 |
 
@@ -543,15 +538,15 @@ OpenWhisk API は、Web クライアントからの要求/応答呼び出しを�
 {: #openwhisk_syslimits_activationsize}
 * 最大 POST コンテンツ・サイズに、アクション呼び出しまたはトリガー発生用の付随するパラメーターを加えたものが 1 MB です。
 
-### 名前空間当たりの同時呼び出し (デフォルト: 100)
+### 名前空間当たりの同時呼び出し (デフォルト: 1000)
 {: #openwhisk_syslimits_concur}
-* 名前空間で同時に処理されるアクティベーションの数が 100 を超えることはできません。
+* 1 つの名前空間で実行中または実行用にキューに入れられているアクティベーションの数が 1000 を超えることはできません。
 * デフォルト限度は、consul kvstore で whisk によって静的に構成可能です。
 * ユーザーは現在この限度を変更できません。
 
-### 分/時間当たりの呼び出し数 (固定: 120/3600)
+### 分当たりの呼び出し数 (固定: 5000)
 {: #openwhisk_syslimits_invocations}
-* レート限度の N は 120/3600 に設定され、1 分/1 時間の枠内のアクション呼び出し数を制限します。
+* レート限度の N は 5000 に設定され、1 分の枠内のアクション呼び出し数を制限します。
 * ユーザーがアクションの作成時にこの限度を変更することはできません。
 * この限度を超える CLI または API 呼び出しは、HTTP 状況コード `429: TOO MANY REQUESTS` に対応するエラー・コードを受け取ります。
 
@@ -579,11 +574,10 @@ OpenWhisk API は、Web クライアントからの要求/応答呼び出しを�
 
 | 限度 | 説明 | 構成対象 | 単位 | デフォルト |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | 1 分当たりにこの数を超えるトリガーをユーザーが発生させることはできません。 | ユーザー当たり | 数 | 60 |
-| hourRate | 1 時間当たりにこの数を超えるトリガーをユーザーが発生させることはできません。 | ユーザー当たり | 数 | 720 |
+| minuteRate | 1 分当たりにこの数を超えるトリガーをユーザーが発生させることはできません。 | ユーザー当たり | 数 | 5000 |
 
-### 分/時間当たりのトリガー数 (固定: 60/720)
+### 分当たりのトリガー数 (固定: 5000)
 {: #openwhisk_syslimits_triggerratelimit}
-* 発生頻度の限度 N は 60/720 に設定され、1 分/1 時間の枠内のトリガー発生数を制限します。
+* 発生頻度の限度 N は 5000 に設定され、1 分の枠内のトリガー発生数を制限します。
 * ユーザーがトリガーの作成時にこの限度を変更することはできません。
 * この限度を超える CLI または API 呼び出しは、HTTP 状況コード `429: TOO MANY REQUESTS` に対応するエラー・コードを受け取ります。

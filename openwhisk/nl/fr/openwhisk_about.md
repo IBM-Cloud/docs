@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-08-02"
  
 
 ---
@@ -18,17 +18,14 @@ copyright:
 
 # A propos de {{site.data.keyword.openwhisk_short}}
 
-Dernière mise à jour : 2 août 2016
-{: .last-updated}
-
 Les sections ci-après présentent {{site.data.keyword.openwhisk}} en détail.
 {: shortdesc}
 
 ## Fonctionnement d'{{site.data.keyword.openwhisk_short}}
 {: #openwhisk_how}
 
-{{site.data.keyword.openwhisk_short}} est une plateforme de calcul gérée par des événements également appelée calcul sans serveur ou Function
-as a Service (FaaS) qui exécute un code en réponse à des événements ou des appels directs. 
+{{site.data.keyword.openwhisk_short}} est une plateforme de traitement gérée par des événements également appelée traitement sans serveur ou Function
+as a Service (FaaS) qui exécute un code en réponse à des événements ou des appels directs.
 
 La figure ci-dessous présente l'architecture générale d'{{site.data.keyword.openwhisk_short}}.
 

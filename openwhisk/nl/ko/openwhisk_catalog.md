@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-09"
  
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}}를 사용하도록 설정된 {{site.data.keyword.Bluemix_notm}} 서비스 사용
 {: #openwhisk_ecosystem}
-마지막 업데이트 날짜: 2016년 9월 9일
-{: .last-updated}
 
 {{site.data.keyword.openwhisk}}에서 패키지 카탈로그는 유용한 기능으로 앱을 강화하고 에코시스템 내에서 외부 서비스에 액세스할 수 있는 쉬운 방법을 제공합니다. {{site.data.keyword.openwhisk_short}} 사용 가능 외부 서비스의 예로는 Cloudant, The Weather Company, Slack 및 GitHub 등이 있습니다.
 {: shortdesc}
@@ -118,7 +116,7 @@ wsk package list
 1. Cloudant 계정에 대해 구성된 패키지 바인딩을 작성하십시오. 
 
   ```
-wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+  wsk package bind /whisk.system/cloudant myCloudant -p username MYUSERNAME -p password MYPASSWORD -p host MYCLOUDANTACCOUNT.cloudant.com
   ```
   {: pre}
 
@@ -212,7 +210,7 @@ wsk activation poll
 1. 앞에서 작성한 패키지 바인딩 내의 `write` 조치를 사용하여 문서를 저장하십시오. `/myNamespace/myCloudant`를 사용자의 패키지 이름으로 대체하십시오.
 
   ```
-  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc "{\"_id\":\"heisenberg\",\"name\":\"Walter White\"}"
   ```
   {: pre}
   ```
@@ -283,7 +281,7 @@ wsk activation poll
 다음은 트리거 이벤트에서 `name` 값과 `place` 값을 사용하여 20초마다 한 번 실행할 트리거를 작성하는 예입니다. 
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
   {: pre}
 
@@ -321,14 +319,14 @@ wsk activation poll
 1. 사용자의 API 키를 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
+  wsk package bind /whisk.system/weather myWeather --param username MY_USERNAME --param password MY_PASSWORD
   ```
   {: pre}
 
 2. 패키지 바인딩에서 `forecast` 조치를 호출하여 날씨 예보를 가져오십시오.
 
   ```
-wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+  wsk action invoke myWeather/forecast --blocking --result --param latitude 43.7 --param longitude -79.4
   ```
   {: pre}
 
@@ -390,14 +388,14 @@ wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7'
 1. Watson 신임 정보를 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson --param username MY_WATSON_USERNAME --param password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. 패키지 바인딩에서 `translate` 조치를 호출하여 일부 텍스트를 영어에서 프랑스어로 변환하십시오.
 
   ```
-wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+  wsk action invoke myWatson/translate --blocking --result --param payload "Blue skies ahead" --param translateParam payload --param translateFrom en --param translateTo fr
   ```
   {: pre}
 
@@ -423,14 +421,14 @@ wsk action invoke myWatson/translate --blocking --result --param payload 'Blue s
 1. Watson 신임 정보를 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. 패키지 바인딩에서 `languageId` 조치를 호출하여 언어를 식별하십시오.
 
   ```
-wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+  wsk action invoke myWatson/languageId --blocking --result --param payload "Ciel bleu a venir"
   ```
   {: pre}
   ```
@@ -460,14 +458,14 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
 1. Watson 신임 정보를 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. 패키지 바인딩에서 `textToSpeech` 조치를 호출하여 텍스트를 변환하십시오. 
 
   ```
-wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload Hey. --param voice en-US_MichaelVoice --param accept audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -506,14 +504,14 @@ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey
 1. Watson 신임 정보를 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. 패키지 바인딩에서 `speechToText` 조치를 호출하여 인코딩된 오디오를 변환하십시오. 
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -558,14 +556,14 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 2. Slack 신임 정보, 게시할 채널 및 게시할 때 사용할 사용자 이름을 사용하여 패키지 바인딩을 작성하십시오.
 
   ```
-wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+  wsk package bind /whisk.system/slack mySlack --param url "https://hooks.slack.com/services/..." --param username Bob --param channel "#MySlackChannel"
   ```
   {: pre}
 
 3. 패키지 바인딩에서 `post` 조치를 호출하여 사용자의 Slack 채널에 메시지를 게시하십시오.
 
   ```
-wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
+  wsk action invoke mySlack/post --blocking --result --param text "Hello from OpenWhisk!"
   ```
   {: pre}
 
@@ -623,7 +621,7 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 페이로드 컨텐츠에 대한 자세한 정보는 [GitHub 이벤트 및 페이로드](https://developer.github.com/v3/activity/events/types/) API 문서를 참조하십시오. 
 
 
-## Push 패키지 사용
+## 푸시 패키지 사용
 {: #openwhisk_catalog_pushnotifications}
 
 `/whisk.system/pushnotifications` 패키지를 사용하면 푸시 서비스로 작업할 수 있습니다. 
@@ -640,7 +638,7 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 ### 푸시 패키지 바인딩 작성
 {: #openwhisk_catalog_pushnotifications_create}
 
-푸시 알림 패키지 바인딩을 작성하는 동안 다음 매개변수를 지정해야 합니다. 
+Push Notifications 패키지 바인딩을 작성하는 동안 다음 매개변수를 지정해야 합니다. 
 
 -  `appId`: Bluemix 앱 GUID입니다.
 -  `appSecret`: Bluemix 푸시 알림 서비스 appSecret입니다.
@@ -649,9 +647,9 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 
 1. [Bluemix 대시보드](http://console.ng.bluemix.net)에서 Bluemix 애플리케이션을 작성하십시오.
 
-2. 푸시 알림 서비스를 초기화하고 서비스를 Bluemix 애플리케이션에 바인드하십시오.
+2. Push Notifications 서비스를 초기화하고 서비스를 Bluemix 애플리케이션에 바인드하십시오.
 
-3. [푸시 알림 애플리케이션](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)을 구성하십시오. 
+3. [Push Notifications 애플리케이션](https://console.ng.bluemix.net/docs/services/mobilepush/index.html)을 구성하십시오. 
 
   작성한 Bluemix 앱의 `App GUID` 및 `App Secret`을 기억해야 합니다.
 
@@ -659,7 +657,7 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 4. `/whisk.system/pushnotifications`로 패키지 바인딩을 작성하십시오.
 
   ```
-  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  wsk package bind /whisk.system/pushnotifications myPush -p appId myAppID -p appSecret myAppSecret
   ```
   {: pre}
 
@@ -682,7 +680,10 @@ wsk package list
 `/whisk.system/pushnotifications/sendMessage` 조치는 등록된 디바이스에 푸시 알림을 발송합니다. 매개변수는 다음과 같습니다.
 - `text`: 사용자에게 표시할 알림 메시지입니다. 예: `-p text "Hi ,OpenWhisk send a notification"`.
 - `url`: 경보와 함께 전송할 수 있는 선택적 URL입니다. 예: `-p url "https:\\www.w3.ibm.com"`.
-- `gcmPayload`: 알림 메시지의 일부로 전송할 사용자 정의 JSON 페이로드입니다. 예: `-p gcmPayload "{"hi":"hello"}"`
+- `deviceIds` 지정된 디바이스의 목록입니다. 예: `-p deviceIds "[\"deviceID1\"]"`.
+- `platforms` 지정된 플랫폼의 디바이스에 알림을 전송합니다. Apple(iOS)의 'A' 디바이스 및 Google(Android)의 'G' 디바이스가 해당됩니다. 예: `-p platforms "[\"A\"]"`.
+- `tagNames` 이 태그 중 하나로 등록한 디바이스에 알림을 전송합니다. 예: `-p tagNames "[\"tag1\"]" `.
+- `gcmPayload`: 알림 메시지의 일부로 전송할 사용자 정의 JSON 페이로드입니다. 예: `-p gcmPayload "{\"hi\":\"hello\"}"`
 - `gcmSound`: 알림이 디바이스에 도달하면 재생될 사운드 파일(디바이스에서 재생)입니다. 
 - `gcmCollapseKey`: 이 매개변수는 메시지의 그룹을 식별합니다. 
 - `gcmDelayWhileIdle`: 이 매개변수가 true로 설정된 경우 이는 디바이스가 활성이 될 때까\지 메시지를 보내지 않음을 표시합니다. 
@@ -700,7 +701,7 @@ wsk package list
 1. 이전에 작성한 패키지 바인딩에서 `sendMessage` 조치를 사용하여 푸시 알림을 전송하십시오. `/myNamespace/myPush`를 패키지 이름으로 바꿔야 합니다.
 
   ```
-  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds "[\"T1\",\"T2\"]"
   ```
   {: pre}
 
@@ -726,16 +727,16 @@ wsk package list
 - `appSecret:` Bluemix 푸시 알림 서비스 appSecret입니다. 
 - `events:` 지원되는 이벤트는 `onDeviceRegister`, `onDeviceUnregister`, `onDeviceUpdate`, `onSubscribe`, `onUnsubscribe`입니다. 모든 이벤트에 대해 알림을 받으려면 와일드카드 문자 `*`를 사용하십시오.
 
-다음은 푸시 알림 서비스 애플리케이션에 새 디바이스가 등록될 때마다 실행할 트리거를 작성하는 예입니다. 
+다음은 Push Notifications 서비스 애플리케이션에 새 디바이스가 등록될 때마다 실행할 트리거를 작성하는 예입니다. 
 
-1. appId와 appSecret을 사용하여 푸시 알림 서비스에 사용하도록 구성된 패키지 바인딩을 작성하십시오. 
+1. appId와 appSecret을 사용하여 Push Notifications 서비스에 사용하도록 구성된 패키지 바인딩을 작성하십시오. 
 
   ```
   wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
   ```
   {: pre}
 
-2. `myPush/webhook` 피드를 사용하여 푸시 알림 서비스 `onDeviceRegister` 이벤트 유형의 트리거를 작성하십시오. 
+2. `myPush/webhook` 피드를 사용하여 Push Notifications 서비스 `onDeviceRegister` 이벤트 유형의 트리거를 작성하십시오. 
 
   ```
   wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister

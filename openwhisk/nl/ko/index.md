@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-09"
 
 ---
 
@@ -17,10 +13,9 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}}(베타) 시작하기
-마지막 업데이트 날짜: 2016년 9월 9일
-{: .last-updated}
 
-{{site.data.keyword.openwhisk}}는 이벤트로 구동되는 분산형 계산 서비스이며 Serverless 컴퓨팅 또는 FaaS(Function as a Service)라고도 합니다. {{site.data.keyword.openwhisk_short}}는 HTTP를 통한 웹 또는 모바일 앱에서의 직접 호출이나 이벤트에 응답하여 애플리케이션 로직을 실행합니다. Cloudant 같은 Bluemix 서비스와 외부 소스에서 이벤트를 제공할 수 있습니다. 개발자는 애플리케이션 로직 작성 및 On-Demand 실행이 수행되는 조치 작성에 집중할 수 있습니다. 조치 실행 비율은 항상 이벤트 비율과 일치하므로 스케일링, 복원성, 최적 활용도가 상속됩니다. 사용한 부분만 요금을 지불하며 서버를 관리할 필요가 없습니다. 또한 [소스 코드](https://github.com/openwhisk/openwhisk)를 얻어서 스스로 시스템을 실행할 수 있습니다.
+
+{{site.data.keyword.openwhisk}}는 이벤트로 구동되는 분산형 컴퓨팅 서비스이며 Serverless 컴퓨팅 또는 FaaS(Function as a Service)라고도 합니다. {{site.data.keyword.openwhisk_short}}는 HTTP를 통한 웹 또는 모바일 앱에서의 직접 호출이나 이벤트에 응답하여 애플리케이션 로직을 실행합니다. Cloudant 같은 Bluemix 서비스와 외부 소스에서 이벤트를 제공할 수 있습니다. 개발자는 애플리케이션 로직 작성 및 On-Demand 실행이 수행되는 조치 작성에 집중할 수 있습니다. 조치 실행 비율은 항상 이벤트 비율과 일치하므로 스케일링, 복원성, 최적 활용도가 상속됩니다. 사용한 부분만 요금을 지불하며 서버를 관리할 필요가 없습니다. 또한 [소스 코드](https://github.com/openwhisk/openwhisk)를 얻어서 스스로 시스템을 실행할 수 있습니다.
 {: shortdesc}
 
 {{site.data.keyword.openwhisk_short}} 작동 방법에 대한 세부사항은 [{{site.data.keyword.openwhisk_short}} 정보](./openwhisk_about.html)를 참조하십시오.
@@ -29,7 +24,7 @@ copyright:
 {: #openwhisk_start_configure_cli}
 
 {{site.data.keyword.openwhisk_short}} 명령행 인터페이스(CLI)를 사용하여 네임스페이스 및 권한 키를 설정할 수 있습니다. [CLI 구성](https://new-console.{DomainName}/openwhisk/cli){: new_window}으로 이동하고 지시사항에 따라 이를 설치하십시오.
- 
+
 
 ### HTTPS 프록시를 사용하도록 CLI 구성
 

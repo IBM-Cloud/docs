@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-02-22"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # Creación de desencadenantes y reglas
 {: #openwhisk_triggers}
-Última actualización: 22 de febrero de 2016
-{: .last-updated}
+
 
 Los desencadenantes y reglas de {{site.data.keyword.openwhisk}} aportan prestaciones dirigidas por sucesos a la plataforma. Los sucesos de orígenes de sucesos externos e internos se ponen en el canal por medio de un desencadenante, y las reglas permiten sus acciones de respuesta para dichos sucesos.
 {: shortdesc}
@@ -66,7 +61,7 @@ invoquen la misma acción:
 - Regla `imageUpload -> thumbnailImage`.
 
 Las tres reglas establecen el comportamiento siguiente: las imágenes en ambos tweets y las imágenes subidas se clasifican, las imágenes
-subidas se clasifican y se genera una versión de miniatura. 
+subidas se clasifican y se genera una versión de miniatura.
 
 ## Creación y activación de desencadenante
 {: #openwhisk_triggers_fire}
@@ -76,12 +71,12 @@ Los desencadenantes se pueden activar cuando se producen determinados sucesos, o
 Como ejemplo, cree un desencadenante para enviar actualizaciones de ubicación de usuario y activar manualmente el desencadenante.
 
 1. Especifique el mandato siguiente para crear el desencadenante:
- 
+
   ```
   wsk trigger create locationUpdate
   ```
   {: pre}
- 
+
   ```
   ok: created trigger locationUpdate
   ```
@@ -93,7 +88,7 @@ Como ejemplo, cree un desencadenante para enviar actualizaciones de ubicación d
   wsk trigger list
   ```
   {: pre}
- 
+
   ```
   triggers
   /someNamespace/locationUpdate                            private
@@ -105,7 +100,7 @@ Como ejemplo, cree un desencadenante para enviar actualizaciones de ubicación d
 3. A continuación, active el suceso desencadenante especificando el nombre de desencadenante y los parámetros:
 
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
 
@@ -123,7 +118,7 @@ Los desencadenantes no se pueden crear dentro de un paquete; deben crearse direc
 Las reglas se utilizan para asociar un desencadenante con una acción. Cada vez que se activa un suceso desencadenante, la acción
 se invoca con parámetros de suceso.
 
-Como ejemplo, cree una regla que invoque la acción hello siempre que se publique una actualización de ubicación. 
+Como ejemplo, cree una regla que invoque la acción hello siempre que se publique una actualización de ubicación.
 
 1. Cree el archivo 'hello.js' con el código de acción que usaremos:
   ```
@@ -138,7 +133,7 @@ Como ejemplo, cree una regla que invoque la acción hello siempre que se publiqu
   wsk trigger update locationUpdate
   ```
   {: pre}
-  
+
   ```
   wsk action update hello hello.js
   ```
@@ -158,10 +153,10 @@ Como ejemplo, cree una regla que invoque la acción hello siempre que se publiqu
 
 4. Activar el desencadenante locationUpdate. Cada vez que activa un suceso, la acción hello se invoca con los parámetros de suceso.
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-  
+
   ```
   ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
@@ -172,13 +167,13 @@ Como ejemplo, cree una regla que invoque la acción hello siempre que se publiqu
   wsk activation list --limit 1 hello
   ```
   {: pre}
-  
+
   ```
   activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
   {: screen}
-  
+
   ```
   wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```

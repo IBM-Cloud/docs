@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   anni: 2016
-
- 
+ultimo aggiornamento: "09-09-2016"
 
 ---
 
@@ -17,8 +13,7 @@ copyright:
 {:pre: .pre}
 
 # Introduzione a {{site.data.keyword.openwhisk_short}} (Beta)
-Ultimo aggiornamento: 09 settembre 2016
-{: .last-updated}
+
 
 {{site.data.keyword.openwhisk}} è un servizio di calcolo distribuito guidato dagli eventi, indicato anche come Serverless computing o FaaS (Function as a Service); {{site.data.keyword.openwhisk_short}} esegue la logica dell'applicazione in risposta a eventi o chiamate dirette provenienti da applicazioni Web o mobili su HTTP. Gli eventi possono essere forniti da servizi Bluemix come Cloudant e da fonti esterne. Gli sviluppatori possono concentrarsi sulla scrittura della logica dell'applicazione e sulla creazione di azioni eseguite su richiesta. La frequenza di esecuzione delle azioni corrisponde sempre alla frequenza degli eventi, con conseguente resilienza e ridimensionamento intrinseci e utilizzo ottimale. Paghi solo per ciò che usi e non devi gestire alcun server. Puoi anche ottenere il [codice sorgente](https://github.com/openwhisk/openwhisk) ed eseguire il sistema autonomamente.
 {: shortdesc}
@@ -28,8 +23,8 @@ Per ulteriori dettagli sul funzionamento di {{site.data.keyword.openwhisk_short}
 ## Configurazione della CLI {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_configure_cli}
 
-Puoi utilizzare l'interfaccia di riga comando (CLI) {{site.data.keyword.openwhisk_short}} per configurare il tuo spazio dei nomi e la tua chiave di autorizzazione. 
-Passa a [Configura CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e segui le istruzioni per installarla. 
+Puoi utilizzare l'interfaccia di riga comando (CLI) {{site.data.keyword.openwhisk_short}} per configurare il tuo spazio dei nomi e la tua chiave di autorizzazione.
+Passa a [Configura CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e segui le istruzioni per installarla.
 
 ### Configura la CLI per utilizzare un proxy HTTPS
 

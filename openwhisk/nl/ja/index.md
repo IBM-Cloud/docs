@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-09"
 
 ---
 
@@ -17,8 +13,7 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}} 概説 (ベータ)
-最終更新日: 2016 年 9 月 9 日
-{: .last-updated}
+
 
 {{site.data.keyword.openwhisk}} は、サーバーレス・コンピューティングまたは Function as a Service (FaaS) とも呼ばれる分散イベント・ドリブン計算サービスです。{{site.data.keyword.openwhisk_short}} は、イベントに応えて、または、Web アプリやモバイル・アプリからの HTTP を介した直接起動に応えて、アプリケーション・ロジックを実行します。イベントは、Bluemix サービス (Cloudant など) および外部ソースから提供できます。開発者は、アプリケーション・ロジックの開発と、オンデマンドで実行されるアクションの作成に専念できます。アクションの実行率は常にイベント率に一致するため、本来の拡張性と回復力に応じたものになり、最適な使用効率をもたらします。使用した分のみ支払えばよく、サーバーを管理する必要はありません。[ソース・コード](https://github.com/openwhisk/openwhisk)を入手し、システムを自身で実行することもできます。
 {: shortdesc}
@@ -28,7 +23,7 @@ copyright:
 ## {{site.data.keyword.openwhisk_short}} CLI のセットアップ
 {: #openwhisk_start_configure_cli}
 
-{{site.data.keyword.openwhisk_short}} コマンド・ライン・インターフェース (CLI) を使用して、名前空間および許可鍵をセットアップできます。[「CLI の構成」](https://new-console.{DomainName}/openwhisk/cli){: new_window}に移動し、手順に従ってインストールしてください。 
+{{site.data.keyword.openwhisk_short}} コマンド・ライン・インターフェース (CLI) を使用して、名前空間および許可鍵をセットアップできます。[「CLI の構成」](https://new-console.{DomainName}/openwhisk/cli){: new_window}に移動し、手順に従ってインストールしてください。
 
 ### HTTPS プロキシーを使用するための CLI の構成
 

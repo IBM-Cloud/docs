@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-02-22"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # トリガーとルールの作成
 {: #openwhisk_triggers}
-最終更新日: 2016 年 2 月 22 日
-{: .last-updated}
+
 
 {{site.data.keyword.openwhisk}} のトリガーとルールにより、プラットフォームにイベント・ドリブン機能がもたらされます。外部および内部のイベント・ソースからのイベントは、トリガーを通じてチャネル設定され、ルールによって許可されたアクションがこれらのイベントに対応します。
 {: shortdesc}
@@ -61,7 +56,7 @@ copyright:
 - `imageUpload -> classifyImage` ルール。
 - `imageUpload -> thumbnailImage` ルール。
 
-この 3 つのルールでは、ツイートとアップロードされたイメージの両方のイメージを分類する、アップロードされたイメージを分類する、サムネール・バージョンを生成する、という動作を設定します。 
+この 3 つのルールでは、ツイートとアップロードされたイメージの両方のイメージを分類する、アップロードされたイメージを分類する、サムネール・バージョンを生成する、という動作を設定します。
 
 ## トリガーの作成と発生
 {: #openwhisk_triggers_fire}
@@ -71,12 +66,12 @@ copyright:
 例として、ユーザー・ロケーションの更新を送信するトリガーを作成し、そのトリガーを手動で発生させます。
 
 1. 以下のコマンドを入力してトリガーを作成します。
- 
+
   ```
 wsk trigger create locationUpdate
   ```
   {: pre}
- 
+
   ```
 ok: created trigger locationUpdate
   ```
@@ -88,7 +83,7 @@ ok: created trigger locationUpdate
 wsk trigger list
   ```
   {: pre}
- 
+
   ```
 triggers
   /someNamespace/locationUpdate                            private
@@ -100,7 +95,7 @@ triggers
 3. 次に、トリガー名とパラメーターを指定して、トリガー・イベントを発生させます。
 
   ```
-wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
 
@@ -117,7 +112,7 @@ ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
 
 トリガーをアクションに関連付けるために、ルールが使用されます。トリガー・イベントが発生するたびに、イベントのパラメーターを使用してアクションが起動されます。
 
-例として、ロケーションの更新がポストされるたびに hello アクションを呼び出すルールを作成します。 
+例として、ロケーションの更新がポストされるたびに hello アクションを呼び出すルールを作成します。
 
 1. 使用するアクション・コードを含む 'hello.js' ファイルを作成します。
 
@@ -134,7 +129,7 @@ function main(params) {
 wsk trigger update locationUpdate
   ```
   {: pre}
-  
+
   ```
 wsk action update hello hello.js
   ```
@@ -155,10 +150,10 @@ wsk action update hello hello.js
 
 4. locationUpdate トリガーを発生させます。イベントを発生させるたびに、イベントのパラメーターを使用して hello アクションが呼び出されます。
   ```
-wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-  
+
   ```
 ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
@@ -170,13 +165,13 @@ ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
 wsk activation list --limit 1 hello
   ```
   {: pre}
-  
+
   ```
 activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
   {: screen}
-  
+
   ```
 wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-09"
  
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # Utilización de servicios de {{site.data.keyword.Bluemix_notm}} habilitados para {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_ecosystem}
-Última actualización: 9 de septiembre de 2016
-{: .last-updated}
 
 En {{site.data.keyword.openwhisk}}, un catálogo de paquetes le ofrece una forma rápida de mejorar sus apps con prestaciones útiles, y para acceder a servicios externos en el ecosistema. Algunos de los servicios externos que están habilitados para {{site.data.keyword.openwhisk_short}} son Cloudant, The Weather Company, Slack y GitHub.
 {: shortdesc}
@@ -129,7 +127,7 @@ para su cuenta Cloudant. Necesita el nombre de host, nombre de usuario y contras
 1. Crear un enlace de paquete configurado para su cuenta Cloudant.
 
   ```
-  wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+  wsk package bind /whisk.system/cloudant myCloudant -p username MYUSERNAME -p password MYPASSWORD -p host MYCLOUDANTACCOUNT.cloudant.com
   ```
   {: pre}
 
@@ -233,7 +231,7 @@ esta base de datos exista en su cuenta Cloudant.
 `/myNamespace/myCloudant` por el nombre de paquete.
 
   ```
-  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc "{\"_id\":\"heisenberg\",\"name\":\"Walter White\"}"
   ```
   {: pre}
   ```
@@ -311,7 +309,7 @@ A continuación se muestra un ejemplo de la creación de un desencadenante que s
 los valores `name` y `place` en el suceso desencadenante.
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
   {: pre}
 
@@ -340,7 +338,7 @@ La acción `/whisk.system/weather/forecast` devuelve una previsión meteorológi
 invocando la API de The Weather Company. Los parámetros son según se indica a continuación:
 
 - `username`: nombre de usuario de The Weather Company Data para IBM Bluemix que tiene autorización para invocar la API de previsión meteorológica.
-- `password`: contraseña de The Weather Company Data para IBM Bluemix que tiene autorización para invocar la API de previsión meteorológica. 
+- `password`: contraseña de The Weather Company Data para IBM Bluemix que tiene autorización para invocar la API de previsión meteorológica.
 - `latitude`: la coordenada de latitud de la ubicación.
 - `longitude`: la coordenada de longitud de la ubicación.
 - `timeperiod`: periodo de tiempo de la previsión. Las opciones válidas son '10day' - (predeterminada) Devuelve una previsión diaria para 10 días, '48hour' - Devuelve una previsión cada hora para 2 días, 'current' - Devuelve las condiciones meteorológicas actuales, 'timeseries' - Devuelve ambas observaciones actuales y observaciones pasadas para un máximo de 24 horas a partir de la fecha y hora actuales.
@@ -351,14 +349,14 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete y 
 1. Crear un enlace de paquete con su clave de API.
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
+  wsk package bind /whisk.system/weather myWeather --param username MY_USERNAME --param password MY_PASSWORD
   ```
   {: pre}
 
 2. Invocar la acción `forecast` en su enlace de paquete para obtener la previsión meteorológica.
 
   ```
-  wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+  wsk action invoke myWeather/forecast --blocking --result --param latitude 43.7 --param longitude -79.4
   ```
   {: pre}
 
@@ -399,7 +397,7 @@ El paquete incluye las acciones siguientes.
 | `/whisk.system/watson` | paquete | usuario, contraseña | Acciones para las API de analíticas de Watson |
 | `/whisk.system/watson/translate` | acción | translateFrom, translateTo, translateParam, username, password | Traducir texto |
 | `/whisk.system/watson/languageId` | acción | payload, username, password | Identificar idioma |
-| `/whisk.system/watson/speechToText` | acción | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertir audi en texto |
+| `/whisk.system/watson/speechToText` | acción | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertir audio en texto |
 | `/whisk.system/watson/textToSpeech` | acción | payload, voice, accept, encoding, username, password | Convertir texto en audio |
 
 Se recomienda la creación de un enlace de paquete con los valores de `username` and `password`. Así, no necesita especificar estas credenciales cada vez que invoque las acciones del paquete.
@@ -420,14 +418,14 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete y 
 1. Crear un enlace de paquete con sus credenciales de Watson.
 
   ```
-  wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson --param username MY_WATSON_USERNAME --param password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. Invocar la acción `translate` en su enlace de paquete para traducir algún texto de inglés a español.
 
   ```
-  wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'es'
+  wsk action invoke myWatson/translate --blocking --result --param payload "Blue skies ahead" --param translateParam payload --param translateFrom en --param translateTo fr
   ```
   {: pre}
 
@@ -453,14 +451,14 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete y 
 1. Crear un enlace de paquete con sus credenciales de Watson.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. Invocar la acción `languageId` en su enlace de paquete para identificar el idioma.
 
   ```
-  wsk action invoke myWatson/languageId --blocking --result --param payload 'Se esperan cielos despejados'
+  wsk action invoke myWatson/languageId --blocking --result --param payload "Ciel bleu a venir"
   ```
   {: pre}
   ```
@@ -490,14 +488,14 @@ A continuación se muestra un ejemplo de cómo crear un enlace de paquete y conv
 1. Crear un enlace de paquete con sus credenciales de Watson.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. Invoque la acción `textToSpeech` en el enlace del paquete para convertir el texto.
 
   ```
-  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload Hey. --param voice en-US_MichaelVoice --param accept audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -527,7 +525,7 @@ La acción `/whisk.system/watson/speechToText` convierte el audio en texto. Los 
 - `model`: identificador del modelo que debe utilizarse para la solicitud de reconocimiento.
 - `timestamps`: indica si se devuelve la alineación de tiempo para cada palabra.
 - `watson-token`: proporciona un elemento de autenticación para el servicio como alternativa para proporcionar credenciales del servicio.
-- `word_alternatives_threshold`: valor de confianza que se encuentra en el límite inferior para identificar una hipótesis cmo posible alternativa de palabra.
+- `word_alternatives_threshold`: valor de confianza que se encuentra en el límite inferior para identificar una hipótesis como posible alternativa de palabra.
 - `word_confidence`: indica si se devuelve para cada palabra una medida de confianza entre 0 y 1.
 - `X-Watson-Learning-Opt-Out`: indica si se debe renunciar a la recopilación de datos para la llamada.
  
@@ -536,14 +534,14 @@ A continuación se muestra un ejemplo de cómo crear un enlace de paquete y conv
 1. Crear un enlace de paquete con sus credenciales de Watson.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. Invoque la acción `speechToText` en el enlace de paquete para convertir el audio codificado.
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -589,14 +587,14 @@ A continuación se muestra un ejemplo sobre la configuración de Slack, creació
 2. Crear un enlace de paquete con sus credenciales de Slack, el canal en el que quiera publicar y el nombre de usuario con el que publicar.
 
   ```
-  wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+  wsk package bind /whisk.system/slack mySlack --param url "https://hooks.slack.com/services/..." --param username Bob --param channel "#MySlackChannel"
   ```
   {: pre}
 
 3. Invocar la acción `post` en su enlace de paquete para publicar un mensaje en su canal Slack.
 
   ```
-  wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
+  wsk action invoke mySlack/post --blocking --result --param text "Hello from OpenWhisk!"
   ```
   {: pre}
 
@@ -694,7 +692,7 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete.
 4. Crear un enlace de paquete con `/whisk.system/pushnotifications`.
 
   ```
-  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  wsk package bind /whisk.system/pushnotifications myPush -p appId myAppID -p appSecret myAppSecret
   ```
   {: pre}
 
@@ -717,7 +715,10 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete.
 La acción `/whisk.system/pushnotifications/sendMessage` envía notificaciones push a los dispositivos registrados. Los parámetros son según se indica a continuación:
 - `text`: el mensaje de notificación a mostrar al usuario. Por ejemplo: `-p text "Hi ,OpenWhisk send a notification"`.
 - `url`: un URL opcional que se puede enviar junto con la alerta. Por ejemplo: `-p url "https:\\www.w3.ibm.com"`.
-- `gcmPayload`: carga útil JSON personalizada que se enviará como parte del mensaje de notificación. Por ejemplo: `-p gcmPayload "{"hi":"hello"}"`
+- `deviceIds` La lista de dispositivos especificados. Por ejemplo: `-p deviceIds "[\"deviceID1\"]"`.
+- `plataformas` Enviar una notificación a los dispositivos de las plataformas especificadas. 'A' para dispositivos Apple (iOS) y 'G' para dispositivos Google (Android). Por ejemplo `-p platforms "[\"A\"]"`.
+- `tagNames` Enviar una notificación a los dispositivos que se han suscrito a cualquiera de estas etiquetas. Por ejemplo `-p tagNames "[\"tag1\"]" `.
+- `gcmPayload`: carga útil JSON personalizada que se enviará como parte del mensaje de notificación. Por ejemplo: `-p gcmPayload "{\"hi\":\"hello\"}"`
 - `gcmSound`: archivo de sonido (en el dispositivo) que se intentará reproducir cuando la notificación llegue al dispositivo.
 - `gcmCollapseKey`: este parámetro identifica un grupo de mensajes
 - `gcmDelayWhileIdle`: cuando este parámetro se establece en true, indica que el mensaje no se enviará hasta que el dispositivo esté activo.
@@ -735,7 +736,7 @@ A continuación se muestra un ejemplo de envío de una notificación push desde 
 1. Enviar una notificación push utilizando la acción `sendMessage` del enlace de paquete que ha creado anteriormente. Asegúrese de sustituir `/myNamespace/myPush` por su nombre de paquete.
 
   ```
-  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds "[\"T1\",\"T2\"]"
   ```
   {: pre}
 

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-08-02"
  
 
 ---
@@ -18,16 +18,13 @@ copyright:
 
 # Acerca de {{site.data.keyword.openwhisk_short}}
 
-Última actualización: 2 de agosto de 2016
-{: .last-updated}
-
 En las secciones siguientes se proporcionan detalles sobre {{site.data.keyword.openwhisk}}.
 {: shortdesc}
 
 ## Funcionamiento de {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_how}
 
-{{site.data.keyword.openwhisk_short}} es una plataforma de cálculo dirigida por sucesos, también conocida como Computación sin servidor o Function as a Service (FaaS), que ejecuta código en respuesta a sucesos o invocaciones directas. 
+{{site.data.keyword.openwhisk_short}} es una plataforma de cálculo dirigida por sucesos, también conocida como Computación sin servidor o Function as a Service (FaaS), que ejecuta código en respuesta a sucesos o invocaciones directas.
 
 La figura siguiente muestra la arquitectura de {{site.data.keyword.openwhisk_short}} de alto nivel.
 

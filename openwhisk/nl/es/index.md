@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-09"
 
 ---
 
@@ -17,8 +13,7 @@ copyright:
 {:pre: .pre}
 
 # Iniciación a {{site.data.keyword.openwhisk_short}} (Beta)
-Última actualización: 9 de septiembre de 2016
-{: .last-updated}
+
 
 {{site.data.keyword.openwhisk}} es un servicio de computación dirigido por sucesos, también conocido como Computación sin servidor o Function as a Service (FaaS), {{site.data.keyword.openwhisk_short}} ejecuta lógica de aplicación en respuesta a sucesos o invocaciones directas desde aplicaciones web o móvil a través de HTTP. Los sucesos se pueden
 proporcionar desde servicios de Bluemix como Cloudant, así como desde orígenes externos. Los desarrolladores se pueden centrar en escribir
@@ -33,14 +28,13 @@ Para obtener más detalles sobre como funciona {{site.data.keyword.openwhisk_sho
 ## Configuración de la CLI de {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_configure_cli}
 
-Puede utilizar la interfaz de línea de mandatos (CLI) de {{site.data.keyword.openwhisk_short}} para configurar su espacio de nombres y clave de autorización. 
+Puede utilizar la interfaz de línea de mandatos (CLI) de {{site.data.keyword.openwhisk_short}} para configurar su espacio de nombres y clave de autorización.
 Acceda a [Configurar CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} y
-siga las instrucciones para instalarlo. 
+siga las instrucciones para instalarlo.
 
 ### Configure la CLI para utilizar un proxy HTTPS
 
-The CLI can be setup to use an HTTPS proxy. Para configurar un proxy HTTPS, se debe crear una variable de entorno llamada `HTTPS_PROXY`.
-La variable se debe establecer en la dirección del proxy HTTPS y el puerto correspondiente utilizando el siguiente formato:
+The CLI can be setup to use an HTTPS proxy. Para configurar un proxy HTTPS, se debe crear una variable de entorno llamada `HTTPS_PROXY`. La variable se debe establecer en la dirección del proxy HTTPS y el puerto correspondiente utilizando el siguiente formato:
 `{PROXY IP}:{PROXY PORT}`.
 
 

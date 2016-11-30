@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-09"
  
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # 使用針對 {{site.data.keyword.openwhisk_short}} 啟用的 {{site.data.keyword.Bluemix_notm}} 服務
 {: #openwhisk_ecosystem}
-前次更新：2016 年 9 月 9 日
-{: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，套件的型錄可讓您輕鬆地使用有用的功能來加強應用程式，以及在生態系統中存取外部服務。已啟用 {{site.data.keyword.openwhisk_short}} 功能的外部服務範例包括 Cloudant、The Weather Company、Slack 及 GitHub。
 {: shortdesc}
@@ -30,7 +28,7 @@ copyright:
 
 ## 使用 Cloudant 套件
 {: #openwhisk_catalog_cloudant}
-`/whisk.system/cloudant` 套件可讓您使用 Cloudant 資料庫。它包含下列動作及資訊來源。
+`/whisk.system/cloudant` 套件可讓您使用 Cloudant 資料庫。它包括下列動作及資訊來源。
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
@@ -118,7 +116,7 @@ wsk package list
 1. 建立針對 Cloudant 帳戶所配置的套件連結。
 
   ```
-wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+  wsk package bind /whisk.system/cloudant myCloudant -p username MYUSERNAME -p password MYPASSWORD -p host MYCLOUDANTACCOUNT.cloudant.com
   ```
   {: pre}
 
@@ -212,7 +210,7 @@ wsk activation poll
 1. 使用您先前建立的套件連結中的 `write` 動作，來儲存文件。請務必將 `/myNamespace/myCloudant` 取代為套件名稱。
 
   ```
-  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc "{\"_id\":\"heisenberg\",\"name\":\"Walter White\"}"
   ```
   {: pre}
   ```
@@ -283,7 +281,7 @@ wsk activation poll
 下列範例說明如何使用觸發程式事件中的 `name` 及 `place` 值來建立每 20 秒發動一次的觸發程式。
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
   {: pre}
 
@@ -321,14 +319,14 @@ wsk activation poll
 1. 使用 API 金鑰建立套件連結。
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
+  wsk package bind /whisk.system/weather myWeather --param username MY_USERNAME --param password MY_PASSWORD
   ```
   {: pre}
 
 2. 在套件連結中呼叫 `forecast` 動作，以取得天氣預報。
 
   ```
-wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+  wsk action invoke myWeather/forecast --blocking --result --param latitude 43.7 --param longitude -79.4
   ```
   {: pre}
 
@@ -390,14 +388,14 @@ wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7'
 1. 使用 Watson 認證建立套件連結。
 
   ```
-wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson --param username MY_WATSON_USERNAME --param password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. 在套件連結中呼叫 `translate` 動作，以將某串文字從英文翻譯成法文。
 
   ```
-wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+  wsk action invoke myWatson/translate --blocking --result --param payload "Blue skies ahead" --param translateParam payload --param translateFrom en --param translateTo fr
   ```
   {: pre}
 
@@ -423,14 +421,14 @@ wsk action invoke myWatson/translate --blocking --result --param payload 'Blue s
 1. 使用 Watson 認證建立套件連結。
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. 在套件連結中呼叫 `languageId` 動作，以識別語言。
 
   ```
-wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+  wsk action invoke myWatson/languageId --blocking --result --param payload "Ciel bleu a venir"
   ```
   {: pre}
   ```
@@ -460,14 +458,14 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
 1. 使用 Watson 認證建立套件連結。
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. 在套件連結中呼叫 `textToSpeech` 動作，以轉換文字。
 
   ```
-wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload Hey. --param voice en-US_MichaelVoice --param accept audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -506,14 +504,14 @@ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey
 1. 使用 Watson 認證建立套件連結。
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. 在套件連結中呼叫 `speechToText` 動作，以轉換已編碼的音訊。
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -558,14 +556,14 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 2. 使用 Slack 認證、要張貼至其中的通道，以及用來進行張貼的使用者名稱，來建立套件連結。
 
   ```
-wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+  wsk package bind /whisk.system/slack mySlack --param url "https://hooks.slack.com/services/..." --param username Bob --param channel "#MySlackChannel"
   ```
   {: pre}
 
 3. 在套件連結中呼叫 `post` 動作，以將訊息張貼至 Slack 通道。
 
   ```
-wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
+  wsk action invoke mySlack/post --blocking --result --param text "Hello from OpenWhisk!"
   ```
   {: pre}
 
@@ -659,7 +657,7 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 4. 建立與 `/whisk.system/pushnotifications` 連結的套件。
 
   ```
-  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  wsk package bind /whisk.system/pushnotifications myPush -p appId myAppID -p appSecret myAppSecret
   ```
   {: pre}
 
@@ -682,7 +680,10 @@ wsk package list
 `/whisk.system/pushnotifications/sendMessage` 動作會將推送通知傳送至已登錄的裝置。參數如下所示：
 - `text`：要對使用者顯示的通知訊息。例如：`-p text "Hi ,OpenWhisk send a notification"`。
 - `url` - 可隨著警示一起傳送的選用性 URL。例如：`-p url "https:\\www.w3.ibm.com"`。
-- `gcmPayload`：會放在通知訊息中一起傳送的自訂 JSON 有效負載。例如：`-p gcmPayload "{"hi":"hello"}"`
+- `deviceIds` 所指定裝置的清單。例如：`-p deviceIds "[\"deviceID1\"]"`。
+- `platforms` 將通知傳送至指定平台的裝置。'A' 表示 Apple (iOS) 裝置，而 'G' 表示 google (Android) 裝置。例如 `-p platforms "[\"A\"]"`。
+- `tagNames` 將通知傳送至已訂閱其中任何標籤的裝置。例如 `-p tagNames "[\"tag1\"]" `。
+- `gcmPayload`：會放在通知訊息中一起傳送的自訂 JSON 有效負載。例如：`-p gcmPayload "{\"hi\":\"hello\"}"`
 - `gcmSound`：當通知到達裝置時，將會嘗試播放的音效檔（在裝置上）。
 - `gcmCollapseKey`：此參數可識別訊息的群組。
 - `gcmDelayWhileIdle`：當此參數設為 true 時，表示要等到裝置變成作用中時才會傳送訊息。
@@ -700,7 +701,7 @@ wsk package list
 1. 使用您先前建立之套件連結中的 `sendMessage` 動作來傳送推送通知。請務必將 `/myNamespace/myPush` 取代成您的套件名稱。
 
   ```
-  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds "[\"T1\",\"T2\"]"
   ```
   {: pre}
 

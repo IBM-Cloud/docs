@@ -1,12 +1,11 @@
 ---
 
- 
+
 
 copyright:
-
   years: 2016
+lastupdated: "2016-08-02"
 
- 
 
 ---
 
@@ -18,8 +17,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} パッケージの使用と作成
 {: #openwhisk_packages}
-最終更新日: 2016 年 8 月 2 日
-{: .last-updated}
+
 
 {{site.data.keyword.openwhisk}} では、パッケージを使用して関連するアクションのセットを 1 つにまとめ、それらのパッケージを他のユーザーと共有することができます。
 
@@ -261,7 +259,7 @@ copyright:
 
 
   ```
-  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron '*/8 * * * * *' -p trigger_payload '{"name":"Mork", "place":"Ork"}'
+  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron "*/8 * * * * *" -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"
   ```
   {: pre}
   ```
@@ -404,12 +402,13 @@ copyright:
 パッケージ内の `identity` アクションが、パッケージからパラメーターを継承していることを確認します。
 
   ```
-  wsk package get custom parameters
+  wsk package get custom
   ```
   {: pre}
   ```
-  ok: got package custom, projecting parameters
-  [
+  ok: got package custom
+  ...
+  "parameters": [
       {
           "key": "city",
           "value": "Austin"
@@ -419,16 +418,18 @@ copyright:
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
   ```
-  wsk action get custom/identity parameters
+  wsk action get custom/identity
   ```
   {: pre}
   ```
-  ok: got action custom/identity, projecting parameters
-  [
+  ok: got action custom/identity
+  ...
+  "parameters": [
       {
           "key": "city",
           "value": "Austin"
@@ -438,6 +439,7 @@ copyright:
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
@@ -493,12 +495,14 @@ copyright:
 2. パッケージの `publish` プロパティーを表示して、このプロパティーが現在 true かどうかを確認します。
 
   ```
-  wsk package get custom publish
+  wsk package get custom
   ```
   {: pre}
   ```
-  ok: got package custom, projecting publish
-  true
+  ok: got package custom
+  ...
+  "publish": true,
+  ...
   ```
   {: screen}
 

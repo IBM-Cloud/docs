@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-09"
 
 ---
 
@@ -17,8 +13,7 @@ copyright:
 {:pre: .pre}
 
 # Introdução ao {{site.data.keyword.openwhisk_short}} (Beta)
-Última atualização: 9 de setembro de 2016
-{: .last-updated}
+
 
 O {{site.data.keyword.openwhisk}} é um serviço de cálculo distribuído, orientado para eventos também referido como Cálculo sem servidor ou como Função como um serviço (FaaS), o
 {{site.data.keyword.openwhisk_short}} executa uma lógica de aplicativo em resposta a eventos ou chamadas diretas a partir de aplicativos da web ou móveis sobre HTTP. Os eventos
@@ -33,8 +28,8 @@ Para obter mais detalhes sobre como o {{site.data.keyword.openwhisk_short}} func
 ## Configurando a CLI do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_configure_cli}
 
-É possível usar a interface da linha de comandos (CLI) do {{site.data.keyword.openwhisk_short}} para configurar o namespace e a chave de autorização. 
-Acesse [Configurar CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e siga as instruções para instalá-la. 
+É possível usar a interface da linha de comandos (CLI) do {{site.data.keyword.openwhisk_short}} para configurar o namespace e a chave de autorização.
+Acesse [Configurar CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e siga as instruções para instalá-la.
 
 ### Configure a CLI para usar um proxy HTTPS
 

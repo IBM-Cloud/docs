@@ -1,12 +1,11 @@
 ---
 
- 
+
 
 copyright:
-
   years: 2016
+lastupdated: "2016-08-02"
 
- 
 
 ---
 
@@ -18,8 +17,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 패키지 사용 및 작성
 {: #openwhisk_packages}
-마지막 업데이트 날짜: 2016년 8월 2일
-{: .last-updated}
+
 
 {{site.data.keyword.openwhisk}}에서 패키지를 사용하여 일련의 연관된 조치를 번들화하고 이를 다른 사용자와 공유할 수 있습니다.
 
@@ -245,7 +243,7 @@ wsk action get --summary /whisk.system/alarms/alarm
 2. 매 8초마다 실행되는 트리거를 작성하십시오.
 
   ```
-  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron '*/8 * * * * *' -p trigger_payload '{"name":"Mork", "place":"Ork"}'
+  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron "*/8 * * * * *" -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"
   ```
   {: pre}
   ```
@@ -385,12 +383,14 @@ ok: updated package custom
 2. 패키지 및 조치에 매개변수를 표시하고 패키지 내의 `identity` 조치가 패키지에서 매개변수를 상속하는 방법을 보십시오.
 
   ```
-wsk package get custom parameters
+  wsk package get custom
   ```
   {: pre}
   ```
-ok: got package custom, projecting parameters
-  [{
+  ok: got package custom
+  ...
+  "parameters": [
+      {
           "key": "city",
           "value": "Austin"
       },
@@ -399,16 +399,19 @@ ok: got package custom, projecting parameters
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
   ```
-wsk action get custom/identity parameters
+  wsk action get custom/identity
   ```
   {: pre}
   ```
-ok: got action custom/identity, projecting parameters
-  [{
+  ok: got action custom/identity
+  ...
+  "parameters": [
+      {
           "key": "city",
           "value": "Austin"
       },
@@ -417,6 +420,7 @@ ok: got action custom/identity, projecting parameters
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
@@ -469,12 +473,14 @@ ok: updated package custom
 2. 패키지의 `publish` 특성을 표시하여 true인지 확인하십시오.
 
   ```
-wsk package get custom publish
+  wsk package get custom
   ```
   {: pre}
   ```
-ok: got package custom, projecting publish
-  true
+  ok: got package custom
+  ...
+  "publish": true,
+  ...
   ```
   {: screen}
 

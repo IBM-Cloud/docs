@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  2016
+  years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -13,58 +14,78 @@ copyright:
 
 # Utilisation du logiciel SDK pour applications mobiles {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_mobile_sdk}
-Dernière mise à jour : 26 août 2016
-{: .last-updated}
 
-{{site.data.keyword.openwhisk}} met à disposition un logiciel SDK pour périphériques iOS et watchOS 2 qui permet aux applications mobiles
+{{site.data.keyword.openwhisk}} met à disposition un logiciel SDK pour périphériques iOS et watchOS qui permet aux applications mobiles
 d'exécuter des déclencheurs distants et d'appeler des actions distantes facilement. Actuellement, il n'existe pas de version pour Android, mais les
 développeurs Android peuvent utiliser l'API REST {{site.data.keyword.openwhisk}} directement.
-{: shortdesc}
 
-Le logiciel SDK pour applications mobiles est écrit en langage Swift 2.2 et prend en charge iOS 9 et les éditions ultérieures.
+Le logiciel SDK pour applications mobiles est écrit en langage Swift 3.0 et prend en charge iOS 10 et les éditions ultérieures. Vous pouvez
+générer le logiciel SDK pour applications mobiles avec Xcode 8.0. Les versions Legacy Swift 2.2/Xcode 7 du logiciel SDK sont disponibles jusqu'à
+la version 0.1.7, bien que celle-ci soit désormais dépréciée.
+
 
 ## Ajout du logiciel SDK à votre application
 {: #openwhisk_add_sdk}
 
 Vous pouvez installer le logiciel SDK pour applications mobiles à l'aide de CocoaPods, Carthage, ou depuis le répertoire source.
 
-### Installation à l'aide de CocoaPods 
+### Installation à l'aide de CocoaPods
 {: #openwhisk_add_sdk_cocoapods}
 
 Le logiciel SDK {{site.data.keyword.openwhisk_short}} pour les applications mobiles est disponible pour sa distribution publique via
 CocoaPods. En supposant que CocoaPods est installé, insérez les lignes suivantes dans un fichier nommé 'Podfile'
-sous le répertoire des projets d'applications de démarrage. 
+sous le répertoire des projets d'applications de démarrage.
 
 ```
 install! 'cocoapods', :deterministic_uuids => false
 use_frameworks!
 
-target 'MonApp' do
-     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
+target 'MyApp' do
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 
-target 'MonApp WatchKit Extension' do
-     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
+target 'MyApp WatchKit Extension' do
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 ```
 {: codeblock}
 
-Depuis la ligne de commande, entrez `pod install`. Cette commande installe le logiciel SDK pour une application iOS avec une extension watchOS 2.  Utilisez
+Depuis la ligne de commande, entrez `pod install`. Cette commande installe le logiciel SDK pour une application iOS avec une
+extension watchOS. Utilisez
 le fichier d'espace de travail que CocoaPods a créé pour votre application afin d'ouvrir le projet dans Xcode.
+
+Après l'installation, ouvrez l'espace de travail de votre projet. L'avertissement suivant peut s'afficher lors de la génération : `Use
+Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
+Ce message apparaît si Cocoapods ne met pas à jour la version de Swift dans le projet Pods. Pour résoudre le problème, sélectionnez le projet Pods et la
+cible {{site.data.keyword.openwhisk_short}}. Accédez aux paramètres de génération et associez le paramètre `Use Legacy Swift Language
+Version` à la valeur `no`. Vous pouvez aussi ajouter les instructions de postinstallation suivantes à la fin de votre
+fichier Pod :
+
+
+```
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
+```
+{: codeblock}
 
 ### Installation à l'aide de Carthage
 {: #openwhisk_add_sdk_carthage}
 
 Créez un fichier dans le répertoire de projet de votre application et appelez-le 'Cartfile'. Insérez la ligne suivante dans le fichier :
 ```
-github "openwhisk/openwhisk-client-swift.git" ~> 0.1.7 # Ou version ultérieure
+github "openwhisk/openwhisk-client-swift.git" ~> 0.2.2 # Ou version la plus récente
 ```
 {: codeblock}
 
-Depuis la ligne de commande, entrez `carthage update --platform ios`. Carthage télécharge et génère le logiciel SDK, crée un répertoire appelé Carthage
-dans le répertoire de projet de votre application, et place un fichier OpenWhisk.framework dans Carthage/build/iOS.
+Depuis la ligne de commande, entrez `carthage update --platform ios`. Carthage télécharge et génère le logiciel SDK, crée un
+répertoire appelé Carthage dans le répertoire de projet de votre application, et place un fichier {{site.data.keyword.openwhisk_short}}.framework dans Carthage/build/iOS.
 
-Vous devez ensuite ajouter l'élément OpenWhisk.framework aux structures intégrées dans votre projet Xcode.
+Vous devez ensuite ajouter l'élément {{site.data.keyword.openwhisk_short}}.framework aux structures intégrées dans votre projet Xcode.
 
 ### Installation depuis le code source
 {: #openwhisk_add_sdk_source}
@@ -88,13 +109,13 @@ wsk sdk install iOS
 ```
 {: pre}
 
-Cette commande télécharge un fichier compressé contenant l'application de démarrage. Le répertoire de projet contient un fichier Pod. 
+Cette commande télécharge un fichier compressé contenant l'application de démarrage. Le répertoire de projet contient un fichier Pod.
 
 Pour installer le logiciel SDK, entrez la commande suivante :
 ```
 pod install
 ```
-{: pre} 
+{: pre}
 
 ## Initiation au logiciel SDK
 {: #openwhisk_sdk_getstart}
@@ -102,7 +123,7 @@ pod install
 Pour être opérationnel rapidement, créez un objet WhiskCredentials avec vos données d'identification pour l'API
 {{site.data.keyword.openwhisk_short}}, puis créez une instance {{site.data.keyword.openwhisk_short}} à partir de l'objet.
 
-Par exemple, en langage Swift 2.1, utilisez l'exemple de code suivant pour créer un objet de données d'identification :
+Par exemple, utilisez l'exemple de code suivant pour créer un objet de données d'identification :
 
 ```
 let credentialsConfiguration = WhiskCredentials(accessKey: "maClé", accessToken: "monJeton")
@@ -136,11 +157,8 @@ l'action, en fonction des besoins.
 Par exemple :
 
 ```
-// Dans cet exemple, nous appelons une action imprimant un message dans la console OpenWhisk
-var params = Dictionary<String, String>()
-params["payload"] = "Hi from mobile"
-
-do {
+// Dans cet exemple, nous appelons une action imprimant un message dans la console {{site.data.keyword.openwhisk_short}} var params =
+Dictionary<String, String>()  params["payload"] = "Hi from mobile" do {
     try whisk.invokeAction(name: "helloConsole", package: "monpackage", namespace: "monEspaceNom", parameters: params, hasResult: false, callback: {(reply, error) -> Void in
         if let error = error {
             //Opération

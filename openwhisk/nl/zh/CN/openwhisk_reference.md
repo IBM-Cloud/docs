@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-27"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 系统详细信息
 {: #openwhisk_reference}
-上次更新时间：2016 年 9 月 9 日
-{: .last-updated}
+
 
 以下各部分提供了有关 {{site.data.keyword.openwhisk}} 系统的更多详细信息。
 {: shortdesc}
@@ -428,14 +423,14 @@ Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二�
 
 以下是集合端点：
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
 
-`openwhisk.{DomainName}` 是 OpenWhisk API 主机名（例如，openwhisk.ng.bluemix.net、172.17.0.1 等）。
+`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span> 是 OpenWhisk API 主机名（例如，openwhisk.ng.bluemix.net、172.17.0.1 等）。
 
 对于 `{namespace}`，可以使用字符 `_` 来指定用户的 *缺省名称空间*（即电子邮件地址）。
 
@@ -443,16 +438,17 @@ Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二�
 
 每一个实体类型都具有实体端点：
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
+
 
 名称空间和激活端点仅支持 GET 请求。操作、触发器、规则和包端点支持 GET、PUT 和 DELETE 请求。操作、触发器和规则的端点还支持 POST 请求，其用于调用操作和触发器，以及启用或禁用规则。有关详细信息，请参阅 [API参考](https://new-console.{DomainName}/apidocs/98)。
 
-所有 API 都通过 HTTP 基本认证进行保护。基本认证凭证位于 `~/.wskprops` 文件的 `AUTH` 属性中，以冒号分隔。您还可以在 [CLI 配置步骤](../README.md#setup-cli)中，对这些凭证进行检索。
+所有 API 都通过 HTTP 基本认证进行保护。基本认证凭证位于 `~/.wskprops` 文件的 `AUTH` 属性中，以冒号分隔。您还可以在 [CLI 配置步骤](./index.html#openwhisk_start_configure_cli)中，对这些凭证进行检索。
 
 以下示例使用 cURL 命令，获取 `whisk.system` 名称空间中所有包的列表：
 
@@ -495,9 +491,8 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 | timeout | 不允许容器运行时间超过 N 毫秒 | 每个操作 |  毫秒 | 60000 |
 | memory | 不允许容器分配的内存超过 N MB | 每个操作 | MB | 256 |
 | logs | 不允许容器向标准输出写入超过 N MB | 每个操作 | MB | 10 |
-| concurrent | 不允许每个名称空间的并行激活数超过 N 个 | 每个名称空间 | 个 | 100 |
-| minuteRate | 用户每分钟调用的操作数不能超过此值 | 每个用户 | 个 | 120 |
-| hourRate | 用户每小时调用的操作数不能超过此值 | 每个用户 | 个 | 3600 |
+| concurrent | 每个名称空间中允许的正在执行或排队等待执行的激活数不超过 N | 每个名称空间 | 个 | 1000 |
+| minuteRate | 用户每分钟调用的操作数不能超过此值 | 每个用户 | 个 | 5000 |
 | codeSize | 操作码的最大大小 | 无法配置，每个操作的限制 | MB | 48 |
 | parameters | 可以附加的参数的最大大小 | 无法配置，每个操作/包/触发器的限制 | MB | 1 |
 
@@ -528,15 +523,15 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 {: #openwhisk_syslimits_activationsize}
 * 最大 POST 内容大小加上用于操作调用或触发的任何加工参数等于 1 MB。
 
-### 每个名称空间的并行调用数（缺省值：100）
+### 每个名称空间的并行调用数（缺省值：1000）
 {: #openwhisk_syslimits_concur}
-* 当前为一个名称空间处理的激活数不能超过 100。
+* 为一个名称空间正在执行或排队等待执行的激活数不能超过 1000。
 * 缺省限制可以通过静态方式由 whisk 在 consul kvstore 中进行配置。
 * 用户当前不能更改限制。
 
-### 每分钟/小时的调用数（固定值：120/3600）
+### 每分钟的调用数（固定值：5000）
 {: #openwhisk_syslimits_invocations}
-* 速率限制 N 设置为 120/3600，用于限制 1 分钟/小时时段中的操作调用数。
+* 速率限制 N 设置为 5000，用于限制 1 分钟时段中的操作调用数。
 * 用户在创建操作时不能更改此限制。
 * 超过此限制的 CLI 或 API 调用将收到与 HTTP 状态码“`429：请求过多`”对应的错误代码。
 
@@ -564,11 +559,10 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 
 | 限制 | 描述 | 可配置 | 单位 | 缺省值 |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | 用户每分钟触发的触发器数不能超过此值 | 每个用户 | 个 | 60 |
-| hourRate | 用户每小时触发的触发器数不能超过此值 | 每个用户 | 个 | 720 |
+| minuteRate | 用户每分钟触发的触发器数不能超过此值 | 每个用户 | 个 | 5000 |
 
-### 每分钟/小时的触发器数（固定值：60/720）
+### 每分钟的触发数（固定值：5000）
 {: #openwhisk_syslimits_triggerratelimit}
-* 速率限制 N 设置为 60/720，用于限制 1 分钟/小时时段中可能触发的触发器数。
+* 速率限制 N 设置为 5000，用于限制 1 分钟时段中可能触发的触发器数。
 * 用户在创建触发器时不能更改此限制。
 * 超过此限制的 CLI 或 API 调用将收到与 HTTP 状态码“`429：请求过多`”对应的错误代码。

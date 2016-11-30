@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-27"
  
 
 ---
@@ -19,8 +19,6 @@ copyright:
 # Criando e chamando ações do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_actions}
 
-Última atualização: 9 de setembro de 2016
-{: .last-updated}
 
 Ações são fragmentos de código stateless executados na plataforma {{site.data.keyword.openwhisk}}. Uma ação pode ser uma função JavaScript, uma função Swift ou um programa executável customizado empacotado em um contêiner do Docker. Por exemplo, uma ação pode ser usada para detectar as faces em uma imagem, agregar um conjunto de chamadas de API ou postar um Tweet.
 {:shortdesc}
@@ -82,7 +80,7 @@ Revise as etapas e os exemplos a seguir para criar sua primeira ação JavaScrip
 
 4. Após você criar a sua ação, será possível executá-la na nuvem no OpenWhisk com o comando 'invoke'. É possível chamar ações com uma chamada de *bloqueio* (ou seja, estilo de
 solicitação/resposta) ou uma chamada de *não bloqueio* especificando uma sinalização no comando. Uma solicitação de chamada de bloqueio irá *esperar* que o resultado de ativação
-fique disponível. O período de espera é o menor dentre 60 segundos ou o [limite de tempo](./reference.md#per-action-timeout-ms-default-60s) configurado da ação. O resultado da ativação será
+fique disponível. O período de espera é o menor dentre 60 segundos ou o [limite de tempo](./openwhisk_reference.html#openwhisk_syslimits_timeout) configurado da ação. O resultado da ativação será
 retornado se ele estiver disponível dentro do período de espera. Caso contrário, a ativação continuará o processamento no sistema e um ID de ativação será retornado para seja possível verificar o resultado
 posteriormente, como com solicitações de não bloqueio (consulte [aqui](#watching-action-output) para obter dicas sobre ativações de monitoramento).
 
@@ -168,7 +166,7 @@ Os parâmetros podem ser passados para a ação quando for chamada.
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+  wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
   ```
@@ -190,14 +188,14 @@ Em vez de passar todos os parâmetros para uma ação toda vez, é possível faz
 1. Atualize a ação usando a opção `--param` para ligar os valores de parâmetro.
 
   ```
-  wsk action update hello --param place 'Vermont'
+  wsk action update hello --param place Vermont
   ```
   {: pre}
 
 2. Chame a ação, passando somente o parâmetro `name` desta vez.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie'
+  wsk action invoke --blocking --result hello --param name Bernie
   ```
   {: pre}
   ```
@@ -214,7 +212,7 @@ ação. Os parâmetros ligados ainda podem ser substituídos especificando o val
 último sobrescreve o valor que está ligado à ação.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+  wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
   ```
@@ -339,7 +337,7 @@ Este exemplo chama um serviço Yahoo Weather para obter as condições atuais em
   ```
   {: codeblock}
   
-  Observe que a ação no exemplo usa a biblioteca JavaScript `request` para fazer uma solicitação de HTTP à API do Yahoo Weather e extrai campos do resultado JSON. As [Referências](./reference.md#javascript-runtime-environments) detalham os pacotes
+  Observe que a ação no exemplo usa a biblioteca JavaScript `request` para fazer uma solicitação de HTTP à API do Yahoo Weather e extrai campos do resultado JSON. As [Referências](./openwhisk_reference.html#openwhisk_ref_javascript_environments) detalham os pacotes
 do Node.js que podem ser usados em suas ações.
   
   Este exemplo também mostra a necessidade de ações assíncronas. A ação retorna uma
@@ -355,7 +353,7 @@ argumento para a função `resolve()`.
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+  wsk action invoke --blocking --result weather --param location "Brooklyn, NY"
   ```
   {: pre}
   ```
@@ -364,13 +362,90 @@ argumento para a função `resolve()`.
   }
   ```
   {: screen}
-  
+
+### Empacotamento de uma ação como um módulo Node.js
+
+Como uma alternativa para gravar todo o seu código de ação em um único arquivo de origem JavaScript, é possível gravar uma ação como um pacote `npm`. Considere como um exemplo um diretório com os seguintes arquivos:
+
+Primeiro, `package.json`:
+
+```
+{
+  "name": "my-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies" : {
+    "left-pad" : "1.1.3"
+  }
+}
+```
+{: codeblock}
+
+Então, `index.js`:
+
+```
+function myAction(args) {
+    const leftPad = require("left-pad")
+    const lines = args.lines || [];
+    return { padded: lines.map(l => leftPad(l, 30, ".")) }
+}
+
+exports.main = myAction;
+```
+{: codeblock}
+
+Observe que a ação é exposta por meio de `exports.main`; o próprio manipulador de ações pode ter qualquer nome, contanto que se adeque à assinatura usual de aceitação e retorno de um objeto (ou uma `Promessa` de objeto).
+
+Para criar uma ação do OpenWhisk a partir deste pacote:
+
+1. Instale primeiro todas as dependências localmente
+
+  ```
+  npm install
+  ```
+  {: pre}
+
+2. Crie um archive `.zip` contendo todos os arquivos (incluindo todas as dependências):
+
+  ```
+  zip -r action.zip *
+  ```
+  {: pre}
+
+3. Crie a ação:
+
+  ```
+  wsk action create packageAction --kind nodejs:6 action.zip
+  ```
+  {: pre}
+
+  Observe que ao criar uma ação a partir de um archive `.zip` usando a ferramenta CLI, deve-se fornecer explicitamente um valor para o sinalizador `--kind`.
+
+4. É possível chamar a ação como qualquer outra:
+
+  ```
+  wsk action invoke --blocking --result packageAction --param lines "[\"and now\", \"for something completely\", \"different\" ]"
+  ```
+  {: pre}
+  ```
+  {
+      "padded": [
+          ".......................and now",
+          "......for something completely",
+          ".....................different"
+      ]
+  }
+  ```
+  {: screen}
+
+Finalmente, observe que enquanto a maioria dos pacotes `npm` instala fontes JavaScript em `npm install`, alguns também instalam e compilam os artefatos binários. O upload do archive atualmente não suporta dependências binárias, mas apenas as dependências JavaScript. As chamadas de ação poderão falhar se o archive incluir dependências binárias.
+    
 ### Criando sequências de ações
 {: #openwhisk_create_action_sequence}
 
 É possível criar uma ação que encadeia uma sequência de ações juntas.
 
-Várias ações do utilitário são fornecidas em um pacote chamado `/whisk.system/utils` que pode ser usado para criar a sua primeira sequência. É possível aprender mais sobre pacotes na seção [Pacotes](./packages.md).
+Várias ações do utilitário são fornecidas em um pacote chamado `/whisk.system/utils` que pode ser usado para criar a sua primeira sequência. É possível aprender mais sobre pacotes na seção [Pacotes](./openwhisk_packages.html).
 
 1. Exiba as ações no pacote `/whisk.system/utils`.
   
@@ -388,9 +463,9 @@ Várias ações do utilitário são fornecidas em um pacote chamado `/whisk.syst
    action /whisk.system/utils/cat: concatena a entrada em uma sequência
   ```
   {: screen}
-
+  
   Você estará usando as ações `split` e `sort` neste exemplo.
-
+  
 2. Crie uma sequência de ações de modo que o resultado de uma ação seja passado como um argumento para a próxima ação.
   
   ```
@@ -426,7 +501,7 @@ O resultado da primeira ação na sequência torna-se o objeto JSON de entrada p
 Esse objeto não inclui nenhum dos parâmetros originalmente transmitidos para a sequência, a menos que a primeira ação os inclua explicitamente em seu resultado.
 Os parâmetros de entrada para uma ação são mesclados com os parâmetros padrão da ação, com o antigo tendo precedência e substituindo qualquer parâmetro padrão correspondente.
 Para obter mais informações sobre como chamar sequências de ações com múltiplos parâmetros nomeados, consulte [Configurando parâmetros
-padrão](./actions.md#setting-default-parameters).
+padrão](./openwhisk_actions.html#openwhisk_binding_actions).
 
 ## Criando ações Python
 {: #openwhisk_actions_python}
@@ -641,12 +716,10 @@ máquina.
   ```
   {: screen}
   
-  Para atualizar a ação do Docker, execute buildAndPush.sh para atualizar a imagem no Docker Hub; isso permitirá que da próxima vez o sistema puxe a sua imagem do Docker para executar o novo código
-para a sua ação.
+  Para atualizar a ação do Docker, execute buildAndPush.sh para fazer upload da imagem mais recente do Docker Hub. Isso permitirá que o sistema extraia a sua nova imagem do Docker da próxima vez que ele executar o código para sua ação.
   Se não houver nenhum contêiner quente, qualquer chamada nova usará a nova imagem do Docker.
-  Leve em conta que se houver um contêiner quente usando uma versão anterior de sua imagem do Docker, qualquer chamada nova continuará a usar essa imagem a menos que você execute wsk action update; isso
-indicará ao sistema que qualquer chamada nova que forçar um docker pull irá resultar em um pull de sua nova imagem do Docker.
-  
+  No entanto, se houver um contêiner quente usando uma versão anterior de sua imagem do Docker, qualquer chamada nova continuará usando essa imagem, a menos que você execute wsk action update. Isso indicará ao sistema que, para novas chamadas, ele deve executar um docker pull para obter sua nova imagem do Docker.
+ 
   ```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```

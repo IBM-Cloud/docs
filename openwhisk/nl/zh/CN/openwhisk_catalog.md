@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-09"
  
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # 使用针对 {{site.data.keyword.openwhisk_short}} 启用的 {{site.data.keyword.Bluemix_notm}} 服务
 {: #openwhisk_ecosystem}
-上次更新时间：2016 年 9 月 9 日
-{: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，通过包的目录，您能够轻松地借助多个有用的功能增强应用程序，以及访问生态系统中的外部服务。启用了 {{site.data.keyword.openwhisk_short}} 的外部服务的示例包括 Cloudant、The Weather Company、Slack 和 GitHub。
 {: shortdesc}
@@ -118,7 +116,7 @@ wsk package refresh
 1. 创建为您的 Cloudant 帐户配置的包绑定。
 
   ```
-wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+  wsk package bind /whisk.system/cloudant myCloudant -p username MYUSERNAME -p password MYPASSWORD -p host MYCLOUDANTACCOUNT.cloudant.com
   ```
   {: pre}
 
@@ -212,7 +210,7 @@ wsk activation poll
 1. 使用先前创建的包绑定中的 `write` 操作来存储文档。确保将 `/myNamespace/myCloudant` 替换为您的包名。
 
   ```
-  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc "{\"_id\":\"heisenberg\",\"name\":\"Walter White\"}"
   ```
   {: pre}
   ```
@@ -283,7 +281,7 @@ wsk activation poll
 以下是通过触发器事件中的 `name` 和 `place` 值创建每 20 秒将触发一次的触发器的示例。
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
   {: pre}
 
@@ -321,14 +319,14 @@ wsk activation poll
 1. 使用 API 密钥创建包绑定。
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
+  wsk package bind /whisk.system/weather myWeather --param username MY_USERNAME --param password MY_PASSWORD
   ```
   {: pre}
 
 2. 调用包绑定中的 `forecast` 操作来获取天气预报。
 
   ```
-wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+  wsk action invoke myWeather/forecast --blocking --result --param latitude 43.7 --param longitude -79.4
   ```
   {: pre}
 
@@ -392,14 +390,14 @@ wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7'
 1. 使用 Watson 凭证创建包绑定。
 
   ```
-wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson --param username MY_WATSON_USERNAME --param password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. 调用包绑定中的 `translate` 操作，以将某些文本从英语翻译为法语。
 
   ```
-wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+  wsk action invoke myWatson/translate --blocking --result --param payload "Blue skies ahead" --param translateParam payload --param translateFrom en --param translateTo fr
   ```
   {: pre}
 
@@ -425,14 +423,14 @@ wsk action invoke myWatson/translate --blocking --result --param payload 'Blue s
 1. 使用 Watson 凭证创建包绑定。
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. 调用包绑定中的 `languageId` 操作来识别语言。
 
   ```
-wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+  wsk action invoke myWatson/languageId --blocking --result --param payload "Ciel bleu a venir"
   ```
   {: pre}
   ```
@@ -462,14 +460,14 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
 1. 使用 Watson 凭证创建包绑定。
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. 调用包绑定中的 `textToSpeech` 操作来转换文本。
 
   ```
-wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload Hey. --param voice en-US_MichaelVoice --param accept audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -508,14 +506,14 @@ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey
 1. 使用 Watson 凭证创建包绑定。
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. 调用包绑定中的 `speechToText` 操作来转换已编码的音频。
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -560,14 +558,14 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 2. 使用 Slack 凭证、要发布到的通道和执行发布的用户名来创建包绑定。
 
   ```
-wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+  wsk package bind /whisk.system/slack mySlack --param url "https://hooks.slack.com/services/..." --param username Bob --param channel "#MySlackChannel"
   ```
   {: pre}
 
 3. 调用包绑定中的 `post` 操作，以将消息发布到 Slack 通道。
 
   ```
-wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
+  wsk action invoke mySlack/post --blocking --result --param text "Hello from OpenWhisk!"
   ```
   {: pre}
 
@@ -661,7 +659,7 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 4. 创建与 `/whisk.system/pushnotifications` 的包绑定。
 
   ```
-  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  wsk package bind /whisk.system/pushnotifications myPush -p appId myAppID -p appSecret myAppSecret
   ```
   {: pre}
 
@@ -684,7 +682,10 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 `/whisk.system/pushnotifications/sendMessage` 操作会将推送通知发送到已注册的设备。参数如下所示：
 - `text`：要向用户显示的通知消息。例如：`-p text "Hi ,OpenWhisk send a notification"`。
 - `url`：可与警报一起发送的可选 URL。例如：`-p url "https:\\www.w3.ibm.com"`。
-- `gcmPayload`：作为通知消息一部分发送的定制 JSON 有效内容。例如：`-p gcmPayload "{"hi":"hello"}"`
+- `deviceIds`：指定设备的列表。例如：`-p deviceIds "[\"deviceID1\"]"`。
+- `platforms`：向指定平台的设备发送通知。“A”表示 apple (iOS) 设备，“G”表示 google (Android) 设备。例如，`-p platforms "[\"A\"]"`。
+- `tagNames`：向已预订其中任何标记的设备发送通知。例如，`-p tagNames "[\"tag1\"]"`。
+- `gcmPayload`：作为通知消息一部分发送的定制 JSON 有效内容。例如：`-p gcmPayload "{\"hi\":\"hello\"}"`
 - `gcmSound`：通知到达设备时，要尝试播放的声音文件（在设备上）。
 - `gcmCollapseKey`：此参数可识别一组消息
 - `gcmDelayWhileIdle`：当此参数设置为 true 时，表示在设备变为活动之前，不会发送消息。
@@ -702,7 +703,7 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 1. 使用先前创建的包绑定中的 `sendMessage` 操作来发送推送通知。确保将 `/myNamespace/myPush` 替换为您的包名。
 
   ```
-  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds "[\"T1\",\"T2\"]"
   ```
   {: pre}
 

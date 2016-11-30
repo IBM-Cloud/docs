@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -13,52 +14,65 @@ copyright:
 
 # 使用 {{site.data.keyword.openwhisk_short}} 行動 SDK
 {: #openwhisk_mobile_sdk}
-前次更新：2016 年 8 月 26 日
-{: .last-updated}
 
-{{site.data.keyword.openwhisk}} 提供適用於 iOS 及 watchOS 2 裝置的行動 SDK，讓行動應用程式輕鬆地發動遠端觸發程式以及呼叫遠端動作。目前沒有適用於 Android 的版本；Android 開發人員可以直接使用 {{site.data.keyword.openwhisk}} REST API。
-{: shortdesc}
+{{site.data.keyword.openwhisk}} 提供適用於 iOS 及 watchOS 裝置的行動 SDK，讓行動應用程式輕鬆地發動遠端觸發程式以及呼叫遠端動作。目前沒有適用於 Android 的版本；Android 開發人員可以直接使用 {{site.data.keyword.openwhisk}} REST API。
 
-行動 SDK 是以 Swift 2.2 撰寫，並且支援 iOS 9 及更新版次。
+
+行動 SDK 是以 Swift 3.0 撰寫，並且支援 iOS 10 及更新版次。您可以使用 Xcode 8.0 來建置行動 SDK。SDK 的舊式 Swift 2.2/Xcode 第 7 版最多可到 0.1.7，但是現在已淘汰。
 
 ## 將 SDK 新增至應用程式
 {: #openwhisk_add_sdk}
 
 您可以使用 CocoaPods 或 Carthage 或者從來源目錄中安裝行動 SDK。
 
-### 使用 CocoaPods 安裝 
+### 使用 CocoaPods 安裝
 {: #openwhisk_add_sdk_cocoapods}
 
-適用於行動的 {{site.data.keyword.openwhisk_short}} SDK 可用於透過 CocoaPods 進行的公用配送。假設已安裝 CocoaPods，請將下列幾行放入入門範本應用程式專案目錄內名為 'Podfile' 的檔案中。 
+適用於行動的 {{site.data.keyword.openwhisk_short}} SDK 可用於透過 CocoaPods 進行的公用配送。假設已安裝 CocoaPods，請將下列幾行放入入門範本應用程式專案目錄內名為 'Podfile' 的檔案中。
 
 ```
 install! 'cocoapods', :deterministic_uuids => false
 use_frameworks!
 
 target 'MyApp' do
-     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 
-target 'MyApp WatchKit Extension' do 
-     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
+target 'MyApp WatchKit Extension' do
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 ```
 {: codeblock}
 
-從指令行鍵入 `pod install`。此指令會安裝適用於具有 watchOS 2 延伸的 iOS 應用程式的 SDK。使用 CocoaPods 為您的應用程式所建立的工作區檔案，在 Xcode 中開啟專案。
+從指令行鍵入 `pod install`。此指令會安裝適用於具有 watchOS 延伸的 iOS 應用程式的 SDK。使用 CocoaPods 為您的應用程式所建立的工作區檔案，在 Xcode 中開啟專案。
+
+安裝之後，請開啟專案工作區。您可能會在建置時收到下列警告：
+`Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
+如果 Cocoapods 未在 Pods 專案中更新 Swift 版本，則會導致此情況。若要修正，請選取 Pods 專案及 {{site.data.keyword.openwhisk_short}} 目標。移至「建置設定」，並將`使用舊式 Swift 語言版本`設定變更為 `no`。或者，您也可以在 Podfile 尾端新增下列後置安裝指示：
+
+```
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
+```
+{: codeblock}
 
 ### 使用 Carthage 安裝
 {: #openwhisk_add_sdk_carthage}
 
 在應用程式的專案目錄中建立檔案，並將它命名為 'Cartfile'。請在檔案中放入下一行：
 ```
-github "openwhisk/openwhisk-client-swift.git" ~> 0.1.7 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.2.2 # Or latest version
 ```
 {: codeblock}
 
-從指令行鍵入 `carthage update --platform ios`。Carthage 會下載並建置 SDK，並在應用程式的專案目錄中建立稱為 Carthage 的目錄，然後將 OpenWhisk.framework 檔案放入 Carthage/build/iOS 中。
+從指令行鍵入 `carthage update --platform ios`。Carthage 會下載並建置 SDK，並在應用程式的專案目錄中建立稱為 Carthage 的目錄，然後將 {{site.data.keyword.openwhisk_short}}.framework 檔案放入 Carthage/build/iOS 中。
 
-然後，您必須將 OpenWhisk.framework 新增至 Xcode 專案中的內嵌架構
+然後，您必須將 {{site.data.keyword.openwhisk_short}}.framework 新增至 Xcode 專案中的內嵌架構
 
 ### 從原始碼安裝
 {: #openwhisk_add_sdk_source}
@@ -79,21 +93,21 @@ wsk sdk install iOS
 ```
 {: pre}
 
-此指令會下載包含入門範本應用程式的壓縮檔。專案目錄中會有 podfile。 
+此指令會下載包含入門範本應用程式的壓縮檔。專案目錄中會有 podfile。
 
 若要安裝 SDK，請輸入下列指令：
 
 ```
 pod install
 ```
-{: pre} 
+{: pre}
 
 ## 開始使用 SDK
 {: #openwhisk_sdk_getstart}
 
 若要快速啟動並執行，請使用 {{site.data.keyword.openwhisk_short}} API 認證來建立 WhiskCredentials 物件，以及透過該物件來建立 {{site.data.keyword.openwhisk_short}} 實例。
 
-例如，在 Swift 2.1 中，使用下列範例程式碼來建立 credentials 物件：
+例如，使用下列範例程式碼來建立認證物件：
 
 ```
 let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")let whisk = Whisk(credentials: credentialsConfiguration!)
@@ -122,7 +136,7 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 例如：
 
 ```
-// In this example, we are invoking an action to print a message to the OpenWhisk Console
+// In this example, we are invoking an action to print a message to the {{site.data.keyword.openwhisk_short}} Console
 var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
 
@@ -235,7 +249,7 @@ whisk.urlSession = session
 ### SDK 按鈕
 {: #openwhisk_sdk_configure_button}
 
-為方便起見，SDK 包含 `WhiskButton`，以擴充 `UIButton` 容許它呼叫動作。若要使用 `WhiskButton`，請遵循此範例：
+為方便起見，SDK 包括 `WhiskButton`，以擴充 `UIButton` 容許它呼叫動作。若要使用 `WhiskButton`，請遵循此範例：
 
 ```
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))

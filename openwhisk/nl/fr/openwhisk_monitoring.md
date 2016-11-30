@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-08-02"
 
 ---
 
@@ -17,11 +13,9 @@ copyright:
 {:pre: .pre}
 
 # Surveillance de votre activité {{site.data.keyword.openwhisk_short}} dans le tableau de bord {{site.data.keyword.openwhisk_short}}
-Dernière mise à jour : 2 août 2016
-{: .last-updated}
 
 Le [tableau de bord {{site.data.keyword.openwhisk}}](https://{DomainName}/whisk/dashboard/) propose un récapitulatif
-graphique de votre activité. Utilisez-le pour déterminer les performances et la santé de vos actions {{site.data.keyword.openwhisk_short}}. 
+graphique de votre activité. Utilisez-le pour déterminer les performances et la santé de vos actions {{site.data.keyword.openwhisk_short}}.
 {:shortdesc}
 
 Cliquez sur **Rechargement**  tout moment pour mettre à jour le tableau de bord avec les données de journal d'activation les plus
@@ -38,7 +32,7 @@ nombre de fois qu'elles ont été appelées.
 * Déterminer le taux d'échec global pour toutes les actions. Si vous détectez une erreur, vous pouvez déterminer quels sont les services ou
 quelles sont les actions qui présentent des erreurs en affichant la vue de l'**histogramme de l'activité**. Isolez les erreurs elles-mêmes en
 affichant le **journal d'activité**.
-* Déterminer si vos actions s'exécutent correctement en affichant le temps d'exécution moyen associé à chaque action. 
+* Déterminer si vos actions s'exécutent correctement en affichant le temps d'exécution moyen associé à chaque action.
 
 <!-- For tips on improving performance, see troubleshooting? -->
 
@@ -61,18 +55,18 @@ détails sur les erreurs.
 {: #log}
 
 Cette vue affiche une version formatée du journal d'activation. Elle affiche les détails de chaque activation et recherche les nouvelles activations
-toutes les minutes. Cliquez sur une action pour afficher un journal détaillé. 
+toutes les minutes. Cliquez sur une action pour afficher un journal détaillé.
 **Remarque** : pour obtenir la sortie affichée dans le
-journal d'activité via l'interface de ligne de commande, utilisez la commande suivante : 
+journal d'activité via l'interface de ligne de commande, utilisez la commande suivante :
 
   ```
   wsk activation poll
   ```
-  {: pre} 
+  {: pre}
 
 ## Options de filtrage
 {: #filtering}
 
-Sélectionnez le journal des actions à afficher et la période de l'activité journalisée. 
+Sélectionnez le journal des actions à afficher et la période de l'activité journalisée.
 
 **Remarque** : ces filtres sont appliqués à toutes les vues du tableau de bord.

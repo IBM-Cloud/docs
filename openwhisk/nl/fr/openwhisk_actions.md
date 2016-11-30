@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-27"
  
 
 ---
@@ -19,8 +19,6 @@ copyright:
 # Création et appel d'actions {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_actions}
 
-Dernière mise à jour : 9 septembre 2016
-{: .last-updated}
 
 Les actions sont des fragments de code sans état qui s'exécutent sur la plateforme {{site.data.keyword.openwhisk}}. Il peut s'agir d'une
 fonction JavaScript, d'une fonction Swift ou d'un programme exécutable personnalisé conditionné dans un conteneur Docker. Par exemple, une action peut
@@ -84,10 +82,10 @@ exister pour fournir le point d'entrée de l'action.
 4. Une fois l'action créée, vous pouvez l'exécuter dans le cloud dans OpenWhisk avec la commande 'invoke'. Vous pouvez appeler des actions avec un
 appel *bloquant* (style demande/réponse) ou *non bloquant* en spécifiant un indicateur dans la commande. Une demande d'appel
 bloquante *attend* que le résultat de l'activation soit disponible. Le délai d'attente est inférieur à 60 secondes ou à la
-[limite de temps](./reference.md#per-action-timeout-ms-default-60s) configurée de l'action. Le résultat de l'activation est renvoyé s'il
+[limite de temps](./openwhisk_reference.html#openwhisk_syslimits_timeout) configurée de l'action. Le résultat de l'activation est renvoyé s'il
 est disponible avant la fin du délai d'attente. Sinon, le traitement de l'activation continue dans le système et un ID d'activation est renvoyé de sorte
 que les résultats puissent être consultés ultérieurement, comme dans le cas des demandes non bloquantes (voir
-[ici](#watching-action-output) pour des astuces sur les activations de la surveillance). 
+[ici](#watching-action-output) pour des astuces sur les activations de la surveillance).
 
   Cet exemple utilise le paramètre de blocage, `--blocking`:
 
@@ -110,7 +108,6 @@ que les résultats puissent être consultés ultérieurement, comme dans le cas 
   La commande génère deux informations importantes :
   * L'ID d'activation (`44794bd6aab74415b4e42a308d880e5b`)
   * Le résultat de l'appel s'il est disponible avant la fin du délai d'attente
-
 
   Dans ce cas, le résultat est la chaîne `Hello world` renvoyée par la fonction JavaScript. L'ID d'activation peut être utilisé pour
 extraire les journaux ou le résultat de l'appel ultérieurement.  
@@ -177,7 +174,7 @@ paramètres `name` et `place` sont extraits de l'objet `params` dans cet exemple
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result hello --param name 'Bertrand' --param place 'Paris'
+  wsk action invoke --blocking --result hello --param name Bertrand --param place Paris
   ```
   {: pre}
   ```
@@ -202,15 +199,16 @@ Plutôt que de transmettre tous les paramètres à une action à chaque fois, vo
 1. Mettez à jour l'action avec l'option `--param` pour lier des valeurs de paramètre.
 
   ```
-  wsk action update hello --param place 'Paris'
+  wsk action update hello --param place Paris
   ```
   {: pre}
 
 2. Appelez l'action en ne transmettant cette fois que le paramètre `name`.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bertrand'
-  ```
+  wsk action invoke --blocking --result hello --param name Bertrand
+
+```
   {: pre}
   ```
   {
@@ -226,7 +224,7 @@ paramètres liés en spécifiant la valeur de paramètre au moment de l'appel.
 l'action.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bertrand' --param place 'Marseille'
+  wsk action invoke --blocking --result hello --param name Bertrand --param place "Marseille"
   ```
   {: pre}
   ```
@@ -312,7 +310,6 @@ retour de la fonction `main`. Pour cela, vous pouvez renvoyer une promesse (obje
 constatez que cette activation a pris un peu plus de deux secondes pour s'exécuter.
 
 
-
 ### Utilisation d'actions pour appeler une API externe
 {: #openwhisk_apicall_action}
 
@@ -348,7 +345,7 @@ Cet exemple appelle un service météorologique Yahoo afin de prendre connaissan
   {: codeblock}
   
   Notez que l'action dans l'exemple utilise la bibliothèque JavaScript `request` pour envoyer une demande HTTP à l'API Yahoo
-Weather, et extrait des zones du résultat JSON. La section [Références](./reference.md#javascript-runtime-environments)
+Weather, et extrait des zones du résultat JSON. La section [Références](./openwhisk_reference.html#openwhisk_ref_javascript_environments)
 présente en détail les packages Node.js que vous pouvez utiliser dans vos actions.
   
   Cet exemple illustre également la nécessité d'actions asynchrones. L'action renvoie une promesse (objet Promise) pour indiquer que le résultat
@@ -362,7 +359,7 @@ fois l'appel HTTP terminé, et est transmis sous forme d'argument à la fonction
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result weather --param location 'New York'
+  wsk action invoke --blocking --result weather --param location "New York"
   ```
   {: pre}
   ```
@@ -371,14 +368,99 @@ fois l'appel HTTP terminé, et est transmis sous forme d'argument à la fonction
   }
   ```
   {: screen}
-  
+
+### Conditionnement d'une action dans un module Node.js 
+
+Comme alternative à l'écriture de l'ensemble du code de votre action dans un seul fichier source JavaScript, vous pouvez écrire une action en tant
+que package `npm`. Prenez par exemple un répertoire contenant les fichiers suivants :
+
+
+D'abord, `package.json` :
+
+```
+{
+  "name": "mon-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies" : {
+    "left-pad" : "1.1.3"
+  }
+}
+```
+{: codeblock}
+
+Ensuite, `index.js` :
+
+```
+function myAction(args) {
+    const leftPad = require("left-pad")
+    const lines = args.lines || [];
+    return { padded: lines.map(l => leftPad(l, 30, ".")) }
+}
+
+exports.main = myAction;
+```
+{: codeblock}
+
+Notez que l'action est exposée via `exports.main` ; le gestionnaire d'action lui-même peut avoir n'importe quel nom, tant que
+celui-ci est conforme à la signature habituelle pour l'acceptation et le renvoi d'un objet (ou d'une promesse d'objet (`Promise`)). 
+
+Pour créer une action OpenWhisk depuis ce package : 
+
+1. Installez d'abord toutes les dépendances localement : 
+
+  ```
+  npm install
+  ```
+  {: pre}
+
+2. Créez une archive `.zip` contenant tous les fichiers (notamment toutes les dépendances) : 
+
+  ```
+  zip -r action.zip *
+  ```
+  {: pre}
+
+3. Créez l'action : 
+
+  ```
+  wsk action create packageAction --kind nodejs:6 action.zip
+  ```
+  {: pre}
+
+  Notez que lorsque vous créez une action depuis une archive `.zip` via l'outil d'interface de ligne de commande, vous devez fournir
+explicitement une valeur pour l'indicateur `--kind`. 
+
+4. Vous pouvez appeler l'action à l'instar de n'importe quelle autre action : 
+
+  ```
+  wsk action invoke --blocking --result packageAction --param lines "[\"et maintenant\", \"quelque chose de complètement\", \"différent\" ]"
+  ```
+  {: pre}
+  ```
+  {
+      "padded": [
+          ".......................et maintenant",
+          "......quelque chose de complètement",
+          ".....................différent"
+      ]
+  }
+  ```
+  {: screen}
+
+Enfin, notez qu'alors que la plupart des packages `npm` installent des sources JavaScript avec la commande `npm
+install`, certains installent et compilent également des artefacts binaires.
+Actuellement, le téléchargement de fichier archive ne prend pas en charge les dépendances binaires et n'admet que les dépendances JavaScript.
+Par conséquent, il se peut que des appels d'action échouent si l'archive inclut des dépendances binaires.
+
+    
 ### Création de séquences d'actions
 {: #openwhisk_create_action_sequence}
 
 Vous pouvez créer une action qui assemble des actions dans une séquence.
 
 Plusieurs actions d'utilitaire sont fournies dans un package appelé `/whisk.system/utils`, que vous pouvez utiliser pour créer votre
-première séquence. Pour en savoir plus sur les packages, voir la section [Packages](./packages.md).
+première séquence. Pour en savoir plus sur les packages, voir la section [Packages](./openwhisk_packages.html).
 
 1. Affichez les actions du package `/whisk.system/utils`.
   
@@ -396,9 +478,9 @@ première séquence. Pour en savoir plus sur les packages, voir la section [Pack
    action /whisk.system/utils/cat: Concatenates input into a string
   ```
   {: screen}
-
+  
   Vous utiliserez dans cet exemple les actions `split` et `sort`.
-
+  
 2. Créez une séquence d'actions pour que le résultat d'une action soit transmis sous forme d'argument à l'action suivante.
   
   ```
@@ -412,13 +494,13 @@ première séquence. Pour en savoir plus sur les packages, voir la section [Pack
   
   ```
   wsk action invoke --blocking --result sequenceAction --param payload "Sushis périmés,\nLe maître\nest plein de regrets."
-```
+  ```
   {: pre}
   ```
   {
       "length": 3,
       "lines": [
-          "Est plein de regrets. ,
+          "Est plein de regrets.,
           "Sushis périmés,",
           "Le maître"
       ]
@@ -428,13 +510,17 @@ première séquence. Pour en savoir plus sur les packages, voir la section [Pack
   
   Vous constatez que les lignes sont triées dans le résultat.
 
-**Remarque** : les paramètres transmis entre les actions dans la séquence sont explicites, sauf les paramètres par défaut. Par
-conséquent, les paramètres qui sont transmis à la séquence d'actions sont disponibles pour la première action de la séquence seulement. Le résultat de la première
-action dans la séquence devient l'objet JSON d'entrée de la deuxième action de la séquence (et ainsi de suite). Cet objet ne comporte pas les paramètres
+**Remarque** : les paramètres transmis entre les actions dans la séquence sont explicites, sauf les paramètres par défaut.
+Par
+conséquent, les paramètres qui sont transmis à la séquence d'actions sont disponibles pour la première action de la séquence seulement.
+Le résultat de la première
+action dans la séquence devient l'objet JSON d'entrée de la deuxième action de la séquence (et ainsi de suite).
+Cet objet ne comporte pas les paramètres
 transmis initialement à la séquence sauf si la première action les inclut explicitement dans son résultat.
 Les paramètres d'entrée d'une action sont fusionnés avec ses paramètres par défaut, les premiers étant prioritaires et remplaçant tout paramètre par
-défaut correspondant. Pour plus d'informations sur l'appel de séquences d'actions avec plusieurs paramètres nommés, voir
-[Définition de paramètres par défaut](./actions.md#setting-default-parameters).
+défaut correspondant.
+Pour plus d'informations sur l'appel de séquences d'actions avec plusieurs paramètres nommés, voir
+[Définition de paramètres par défaut](./openwhisk_actions.html#openwhisk_binding_actions).
 
 ## Création d'actions Python
 {: #openwhisk_actions_python}
@@ -469,7 +555,6 @@ Lorsque vous utilisez la ligne de commande et un fichier source `.py`, il n'est 
 Python (et non une action JavaScript) ; l'outil le détermine à partir de l'extension de fichier.
 
 L'appel d'action est identique pour les actions Python et pour les actions JavaScript :
-
 
 ```
 wsk action invoke --blocking --result helloPython --param name World
@@ -551,7 +636,7 @@ Votre code est compilé dans un fichier binaire exécutable et imbriqué dans un
 Au préalable, vous devez disposer d'un compte Docker Hub.  Pour configurer un ID et un compte Docker gratuits, visitez [Docker Hub](https://hub.docker.com){: new_window}.
 
 Dans les instructions qui suivent, l'ID utilisateur Docker est `jeannedupont` et le mot de passe est
-`jeanne_motdepasse`. Si l'on part du principe que l'interface de ligne de commande est déjà configurée, trois étapes doivent être
+`jeanne_motdepasse`.  Si l'on part du principe que l'interface de ligne de commande est déjà configurée, trois étapes doivent être
 effectuées pour configurer un fichier binaire personnalisé pouvant être utilisé par {{site.data.keyword.openwhisk_short}}. Ensuite, l'image Docker téléchargée peut être utilisée en tant qu'action.
 
 1. Téléchargez le squelette Docker. Vous pouvez le télécharger via l'interface de ligne de commande comme suit :
@@ -593,14 +678,16 @@ effectuées pour configurer un fichier binaire personnalisé pouvant être utili
   ```
   {: codeblock}
 
-  Vous pouvez modifier ce fichier en fonction de vos besoins ou ajouter un code et des dépendances supplémentaires à l'image Docker. Afin d'ajouter
+  Vous pouvez modifier ce fichier en fonction de vos besoins ou ajouter un code et des dépendances supplémentaires à l'image Docker.
+  Afin d'ajouter
 un code et des dépendances supplémentaires, il peut être nécessaire de personnaliser le document `Dockerfile` pour la génération de
 votre fichier exécutable.
-Le fichier binaire doit se trouver dans le conteneur dans le répertoire `/action/exec`.
+  Le fichier binaire doit se trouver dans le conteneur dans le répertoire `/action/exec`.
 
   Le fichier exécutable reçoit un argument simple depuis la ligne de commande. Il s'agit d'une sérialisation de chaîne de l'objet JSON représentant
-les arguments de l'action. Le programme peut effectuer la journalisation dans `stdout` ou `stderr`. Par convention, la
-dernière ligne de la sortie *doit* être un objet JSON transformé en chaîne qui représente le résultat de l'action. 
+les arguments de l'action. Le programme peut effectuer la journalisation dans `stdout` ou `stderr`.
+  Par convention, la
+dernière ligne de la sortie *doit* être un objet JSON transformé en chaîne qui représente le résultat de l'action.
 
 3. Générez l'image Docker et téléchargez-la à l'aide d'un script fourni. Vous devez d'abord exécuter `docker
 login` pour l'authentification, puis exécuter le script avec le nom d'image de votre choix.
@@ -626,9 +713,8 @@ login` pour l'authentification, puis exécuter le script avec le nom d'image de 
 nécessaire que C soit compilé sur votre machine.
   En fait, sauf si vous le compilez sur une machine hôte compatible, il se peut que le fichier binaire ne puisse pas s'exécuter dans le conteneur car les
 formats ne concorderont pas.
-
   
-  Votre conteneur Docker ne peut pas être utilisé comme action {{site.data.keyword.openwhisk_short}}. 
+  Votre conteneur Docker ne peut pas être utilisé comme action {{site.data.keyword.openwhisk_short}}.
   
   
   ```
@@ -638,8 +724,7 @@ formats ne concorderont pas.
   
   Remarquez l'utilisation de `--docker` pour la création d'une action. Actuellement, on suppose que toutes les images
 Docker sont hébergées dans Docker Hub.
-L'action peut être appelée comme n'importe quelle autre action {{site.data.keyword.openwhisk_short}}.
-
+  L'action peut être appelée comme n'importe quelle autre action {{site.data.keyword.openwhisk_short}}.
   
   ```
   wsk action invoke --blocking --result example --param payload Rey
@@ -655,13 +740,14 @@ L'action peut être appelée comme n'importe quelle autre action {{site.data.key
   ```
   {: screen}
   
-  Pour mettre à jour l'action Docker, exécutez buildAndPush.sh afin d'actualiser l'image dans Docker Hub ; ainsi, la prochaine fois que le
-système procédera à l'extraction de votre image Docker, le nouveau code pour votre action sera exécuté.
-Si aucun conteneur n'est en cours d'exécution, les nouveaux appels utilisent la nouvelle image Docker.
-Prenez en compte le fait que s'il existe un conteneur en cours d'exécution utilisant une version précédente de votre image Docker, les nouveaux appels
-continuent d'utiliser cette image sauf si vous exécutez wsk action upddate afin d'indiquer au système que pour les nouveaux appels, il doit forcer l'extraction Docker (commande docker pull) afin d'extraire votre nouvelle image Docker.
+  Pour mettre à jour l'action Docker, exécutez buildAndPush.sh afin de télécharger l'image la plus récente dans le dockerhub. Ainsi, le système
+pourra extraire votre nouvelle image Docker à la prochaine exécution du code pour votre action. Si aucun conteneur n'est en cours d'exécution, les nouveaux appels utilisent la nouvelle image Docker.
+  Toutefois, s'il existe un conteneur en cours d'exécution utilisant une version précédente de votre image Docker, les nouveaux
+appels
+continuent d'utiliser cette image sauf si vous exécutez wsk action upddate. Cette commande indique au système que pour les nouveaux appels, il doit
+exécuter une commande docker pull afin d'obtenir votre nouvelle image Docker.
 
-  
+ 
   ```
   ./buildAndPush.sh jeannedupont/blackboxdemo
   ```

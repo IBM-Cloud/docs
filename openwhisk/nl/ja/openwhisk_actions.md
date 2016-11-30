@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-27"
  
 
 ---
@@ -19,8 +19,6 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} アクションの作成と起動
 {: #openwhisk_actions}
 
-最終更新日: 2016 年 9 月 9 日
-{: .last-updated}
 
 アクションとは、{{site.data.keyword.openwhisk}} プラットフォームで実行されるステートレスなコード・スニペットです。JavaScript 関数、Swift 関数、または、Docker コンテナーにパッケージした実行可能なカスタム・プログラムをアクションにできます。例えば、アクションを使用して、イメージ内の顔を検出したり、一連の API 呼び出しを集約したり、ツイートを投稿したりできます。
 {:shortdesc}
@@ -76,7 +74,7 @@ copyright:
 
   作成したばかりの `hello` アクションが表示されているのを確認できます。
 
-4. アクションを作成した後、invoke コマンドを使用して、そのアクションを OpenWhisk においてクラウド内で実行できます。コマンドにフラグを指定することによって、*ブロッキング* 起動 (つまり、要求/応答スタイル) または*非ブロッキング* 起動のいずれかでアクションを起動できます。ブロッキング起動要求は、アクティベーション結果が使用可能になるのを*待機* します。待機時間は、60 秒と、アクションに構成された[制限時間](./reference.md#per-action-timeout-ms-default-60s)のいずれか小さいほうです。アクティベーションの結果が待機時間内に使用可能になった場合、その結果が返されます。使用可能にならない場合、非ブロッキング要求の場合と同様に、アクティベーション処理はシステムで続行され、結果を後でチェックできるようにアクティベーション ID が返されます (アクティベーションのモニターに関するヒントについては、[ここ](#watching-action-output)を参照してください)。
+4. アクションを作成した後、invoke コマンドを使用して、そのアクションを OpenWhisk においてクラウド内で実行できます。コマンドにフラグを指定することによって、*ブロッキング* 起動 (つまり、要求/応答スタイル) または*非ブロッキング* 起動のいずれかでアクションを起動できます。ブロッキング起動要求は、アクティベーション結果が使用可能になるのを*待機* します。待機時間は、60 秒と、アクションに構成された[制限時間](./openwhisk_reference.html#openwhisk_syslimits_timeout)のいずれか小さいほうです。アクティベーションの結果が待機時間内に使用可能になった場合、その結果が返されます。使用可能にならない場合、非ブロッキング要求の場合と同様に、アクティベーション処理はシステムで続行され、結果を後でチェックできるようにアクティベーション ID が返されます (アクティベーションのモニターに関するヒントについては、[ここ](#watching-action-output)を参照してください)。
 
   
 次の例では、ブロッキングを示す `--blocking` パラメーターが使用されています。
@@ -146,7 +144,7 @@ copyright:
 1. アクションでパラメーターを使用します。例えば、「hello.js」ファイルを更新して、次のような内容にします。
   
   ```
-  function main(params) {
+function main(params) {
       return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
@@ -161,7 +159,7 @@ copyright:
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+  wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
   ```
@@ -183,14 +181,14 @@ copyright:
 1. アクションを更新し、`--param` オプションを使用してパラメーター値をバインドします。
 
   ```
-  wsk action update hello --param place 'Vermont'
+  wsk action update hello --param place Vermont
   ```
   {: pre}
 
 2. 今回は `name` パラメーターのみを渡してアクションを起動します。
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie'
+  wsk action invoke --blocking --result hello --param name Bernie
   ```
   {: pre}
   ```
@@ -205,7 +203,7 @@ copyright:
 3. `name` 値と `place` 値の両方を渡してアクションを起動します。後者は、アクションにバインドされた値を上書きします。
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+  wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
   ```
@@ -324,7 +322,7 @@ copyright:
   ```
   {: codeblock}
   
-  この例では、アクションは JavaScript `request` ライブラリーを使用して Yahoo Weather API への HTTP 要求を行い、JSON 結果からフィールドを抽出することに注意してください。[リファレンス](./reference.md#javascript-runtime-environments)に、アクションで使用できる Node.js パッケージについての詳しい説明が記載されています。
+  この例では、アクションは JavaScript `request` ライブラリーを使用して Yahoo Weather API への HTTP 要求を行い、JSON 結果からフィールドを抽出することに注意してください。[リファレンス](./openwhisk_reference.html#openwhisk_ref_javascript_environments)に、アクションで使用できる Node.js パッケージについての詳しい説明が記載されています。
   
   この例は、非同期アクションの必要性も示しています。アクションは Promise を戻して、関数が戻ったときにこのアクションの結果はまだ使用可能になっていないことを示します。代わりに、結果は、HTTP 呼び出しが完了した後に `request` コールバックで使用可能になり、引数として `resolve()` 関数に渡されます。
   
@@ -335,7 +333,7 @@ copyright:
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+  wsk action invoke --blocking --result weather --param location "Brooklyn, NY"
   ```
   {: pre}
   ```
@@ -344,13 +342,90 @@ copyright:
   }
   ```
   {: screen}
-  
+
+### Node.js モジュールとしてのアクションのパッケージ化
+
+単一の JavaScript ソース・ファイル内にすべてのアクション・コードを作成する代わりに、`npm` パッケージとしてアクションを作成できます。例として、以下のファイルが含まれたディレクトリーについて考えます。
+
+まず、`package.json`:
+
+```
+{
+  "name": "my-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies" : {
+    "left-pad" : "1.1.3"
+  }
+}
+```
+{: codeblock}
+
+次に、`index.js`:
+
+```
+function myAction(args) {
+    const leftPad = require("left-pad")
+    const lines = args.lines || [];
+    return { padded: lines.map(l => leftPad(l, 30, ".")) }
+}
+
+exports.main = myAction;
+```
+{: codeblock}
+
+なお、アクションは `exports.main` を介して公開されます。アクション・ハンドラー自体の名前は、オブジェクトを受け入れ、オブジェクトを返す通常のシグニチャー (オブジェクトの `Promise`) に準拠している限り、任意のものにすることができます。
+
+このパッケージから OpenWhisk アクションを作成するには、以下のようにします。
+
+1. まず、すべての依存関係をローカルでインストールします。
+
+  ```
+  npm install
+  ```
+  {: pre}
+
+2. 以下のように、すべてのファイル (すべての依存関係を含む) が入った `.zip` アーカイブを作成します。
+
+  ```
+  zip -r action.zip *
+  ```
+  {: pre}
+
+3. 以下のように、アクションを作成します。
+
+  ```
+  wsk action create packageAction --kind nodejs:6 action.zip
+  ```
+  {: pre}
+
+  なお、CLI ツールを使用して `.zip` アーカイブからアクションを作成する場合、`--kind` フラグの値を明示的に指定する必要があります。
+
+4. 以下のように、アクションの起動は、他と同様に行うことができます。
+
+  ```
+  wsk action invoke --blocking --result packageAction --param lines "[\"and now\", \"for something completely\", \"different\" ]"
+  ```
+  {: pre}
+  ```
+  {
+      "padded": [
+          ".......................and now",
+          "......for something completely",
+          ".....................different"
+      ]
+  }
+  ```
+  {: screen}
+
+最後に、ほとんどの `npm` パッケージは `npm install` で JavaScript ソースをインストールしますが、一部のパッケージはバイナリー成果物をインストールおよびコンパイルすることにも注意してください。現在、アーカイブ・ファイルのアップロードでは、バイナリー依存関係はサポートされず、JavaScript 依存関係のみがサポートされます。アーカイブにバイナリーの依存関係が含まれている場合、アクションの起動が失敗することがあります。
+    
 ### アクション・シーケンスの作成
 {: #openwhisk_create_action_sequence}
 
 一連のアクションをチェーニングする 1 つのアクションを作成できます。
 
-いくつかのユーティリティー・アクションが `/whisk.system/utils` という名前のパッケージに入って提供されており、初めてのシーケンスを作成するためにこれを使用できます。パッケージについて詳しくは、『[パッケージ](./packages.md)』セクションを参照してください。
+いくつかのユーティリティー・アクションが `/whisk.system/utils` という名前のパッケージに入って提供されており、初めてのシーケンスを作成するためにこれを使用できます。パッケージについて詳しくは、『[パッケージ](./openwhisk_packages.html)』セクションを参照してください。
 
 1. `/whisk.system/utils` パッケージ内のアクションを表示します。
   
@@ -368,9 +443,9 @@ copyright:
    action /whisk.system/utils/cat: Concatenates input into a string
   ```
   {: screen}
-
+  
   この例では、`split` アクションと `sort` アクションを使用します。
-
+  
 2. アクション・シーケンスを作成して、1 つのアクションの結果が次のアクションに引数として渡されるようにします。
   
   ```
@@ -405,7 +480,7 @@ copyright:
 シーケンス中の先頭アクションの結果が、シーケンス中の 2 番目のアクションへの入力 JSON オブジェクトになります (以下同様)。
 このオブジェクトには、最初にシーケンスに渡されたパラメーターはどれも含まれません (ただし、先頭アクションがその結果にそれらのパラメーターを明示的に組み込んだ場合は除きます)。
 あるアクションへの入力パラメーターは、そのアクションのデフォルト・パラメーターとマージされます。その際、入力パラメーターが優先され、一致するデフォルト・パラメーターはオーバーライドされます。
-複数の名前付きパラメーターを指定したアクション・シーケンス呼び出しについて詳しくは、『[デフォルト・パラメーターの設定](./actions.md#setting-default-parameters)』を参照してください。
+複数の名前付きパラメーターを指定したアクション・シーケンス呼び出しについて詳しくは、『[デフォルト・パラメーターの設定](./openwhisk_actions.html#openwhisk_binding_actions)』を参照してください。
 
 ## Creating Python actions
 {: #openwhisk_actions_python}
@@ -607,10 +682,9 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
   ```
   {: screen}
   
-  Docker アクションを更新するには、buildAndPush.sh を実行して Docker Hub 上のイメージをリフレッシュします。これにより、次回システムが Docker イメージをプルすると、アクションの新しいコードが実行されるようになります。
-  ウォーム・コンテナーがない場合、すべての新しい起動は新規 Docker イメージを使用します。
-  前のバージョンの Docker イメージを使用しているウォーム・コンテナーがある場合は、wsk action update を実行しない限り、新しい起動はこのイメージを使用し続けるということを考慮してください。wsk action update の実行は、新しい起動には Docker プルを強制することをシステムに指示し、結果的に新規 Docker イメージがプルされることになります。
-  
+  Docker アクションを更新するには、buildAndPush.sh を実行して、最新イメージを Docker Hub にアップロードします。これにより、システムは、アクション用のコードの次回実行時に新規 Docker イメージをプルできるようになります。ウォーム・コンテナーがない場合、すべての新しい起動は新規 Docker イメージを使用します。
+  ただし、前のバージョンの Docker イメージを使用しているウォーム・コンテナーがある場合は、wsk action update を実行しない限り、新しい起動はそのイメージを使用し続けます。これは、新しい起動には Docker プルを実行して新規 Docker イメージを取得する必要があることをシステムに指示します。
+ 
   ```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```

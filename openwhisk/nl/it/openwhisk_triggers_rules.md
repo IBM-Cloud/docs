@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   anni: 2016
-
- 
+ultimo aggiornamento: "22-02-2016"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # Creazione di trigger e regole
 {: #openwhisk_triggers}
-Ultimo aggiornamento: 22 febbraio 2016
-{: .last-updated}
+
 
 I trigger e le regole {{site.data.keyword.openwhisk}} forniscono alla piattaforma funzionalità guidate dagli eventi. Gli eventi provenienti da origini eventi interne ed esterne vengono incanalati attraverso un trigger e le regole consentono alle tue azioni di reagire a tali eventi.
 {: shortdesc}
@@ -62,7 +57,7 @@ Puoi impostare le regole in modo che un unico evento trigger richiami più azion
 - Regola `imageUpload -> classifyImage`.
 - Regola `imageUpload -> thumbnailImage`.
 
-Queste tre regole stabiliscono il seguente funzionamento: vengono classificate le immagini di entrambi i tweet e le immagini caricate, vengono classificate le immagini caricate e viene generata una versione in miniatura. 
+Queste tre regole stabiliscono il seguente funzionamento: vengono classificate le immagini di entrambi i tweet e le immagini caricate, vengono classificate le immagini caricate e viene generata una versione in miniatura.
 
 ## Creazione e attivazione di trigger
 {: #openwhisk_triggers_fire}
@@ -72,12 +67,12 @@ I trigger possono essere attivati al verificarsi di determinati eventi o manualm
 Ad esempio, crea un trigger per l'invio di aggiornamenti sull'ubicazione dell'utente e attivalo manualmente.
 
 1. Immetti il seguente comando per creare il trigger:
- 
+
   ```
   wsk trigger create locationUpdate
   ```
   {: pre}
- 
+
   ```
   ok: created trigger locationUpdate
   ```
@@ -89,7 +84,7 @@ Ad esempio, crea un trigger per l'invio di aggiornamenti sull'ubicazione dell'ut
   wsk trigger list
   ```
   {: pre}
- 
+
   ```
   triggers
   /someNamespace/locationUpdate                            private
@@ -101,7 +96,7 @@ Ad esempio, crea un trigger per l'invio di aggiornamenti sull'ubicazione dell'ut
 3. Successivamente, attiverai un evento trigger specificandone il nome e i parametri:
 
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
 
@@ -118,7 +113,7 @@ I trigger non possono essere creati in un pacchetto, devono essere creati dirett
 
 Le regole vengono utilizzate per associare un trigger a un'azione. Ogni volta che un evento trigger viene attivato, l'azione viene richiamata con i parametri dell'evento.
 
-Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene pubblicato un aggiornamento sull'ubicazione. 
+Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene pubblicato un aggiornamento sull'ubicazione.
 
 1. Crea un file "hello.js" con il codice azione che useremo:
   ```
@@ -133,7 +128,7 @@ Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene p
   wsk trigger update locationUpdate
   ```
   {: pre}
-  
+
   ```
   wsk action update hello hello.js
   ```
@@ -153,10 +148,10 @@ Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene p
 
 4. Attiva il trigger locationUpdate. Ogni volta attivi un evento, l'azione "hello" viene richiamata con i parametri dell'evento.
   ```
-  wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-  
+
   ```
   ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
@@ -167,13 +162,13 @@ Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene p
   wsk activation list --limit 1 hello
   ```
   {: pre}
-  
+
   ```
   activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
   {: screen}
-  
+
   ```
   wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```

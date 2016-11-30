@@ -5,7 +5,7 @@
 copyright:
 
   anni: 2016
-
+ultimo aggiornamento: "09-09-2016"
  
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # Utilizzo dei servizi {{site.data.keyword.Bluemix_notm}} abilitati per {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_ecosystem}
-Ultimo aggiornamento: 09 settembre 2016
-{: .last-updated}
 
 In {{site.data.keyword.openwhisk}}, un catalogo di pacchetti mette a tua disposizione un modo facile per migliorare la tua applicazione con delle utili funzionalità e di accedere ai servizi interni nell'ecosistema. Sono esempi di servizi esterni con attivazione {{site.data.keyword.openwhisk_short}}: Cloudant, The Weather Company, Slack e GitHub.
 {: shortdesc}
@@ -118,7 +116,7 @@ Se non stai utilizzando {{site.data.keyword.openwhisk_short}} in {{site.data.key
 1. Crea un bind di pacchetto configurato per il tuo account Cloudant.
 
   ```
-  wsk package bind /whisk.system/cloudant myCloudant -p username 'MIONOMEUTENTE' -p password 'MIAPASSWORD' -p host 'MIOACCOUNTCLOUDANT.cloudant.com'
+  wsk package bind /whisk.system/cloudant myCloudant -p username MYUSERNAME -p password MYPASSWORD -p host MYCLOUDANTACCOUNT.cloudant.com
   ```
   {: pre}
 
@@ -212,7 +210,7 @@ Puoi utilizzare un'azione per memorizzare un documento in un database Cloudant d
 1. Memorizza un documento utilizzando l'azione `write` nel bind di pacchetto che hai creato precedentemente. Accertati di sostituire `/myNamespace/myCloudant` con il tuo nome pacchetto.
 
   ```
-  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc "{\"_id\":\"heisenberg\",\"name\":\"Walter White\"}"
   ```
   {: pre}
   ```
@@ -283,7 +281,7 @@ Il feed `/whisk.system/alarms/alarm` configura il servizio Alarm per attivare un
 Di seguito viene riportato un esempio di creazione di un trigger che verrà attivato una volta ogni 20 secondi con i valori `name` e `place` nell'evento di trigger.
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
   {: pre}
 
@@ -321,14 +319,14 @@ Di seguito viene riportato un esempio di creazione di un bind di pacchetto e suc
 1. Crea un bind di pacchetto con la tua chiave API.
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
+  wsk package bind /whisk.system/weather myWeather --param username MY_USERNAME --param password MY_PASSWORD
   ```
   {: pre}
 
 2. Richiama l'azione `forecast` nel tuo bind di pacchetto per ottenere la previsione meteo.
 
   ```
-  wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+  wsk action invoke myWeather/forecast --blocking --result --param latitude 43.7 --param longitude -79.4
   ```
   {: pre}
 
@@ -390,14 +388,14 @@ Il seguente è un esempio di creazione di un bind di pacchetto e di traduzione d
 1. Crea un bind di pacchetto con le tue credenziali Watson.
 
   ```
-  wsk package bind /whisk.system/watson myWatson --param username 'MIO_NOMEUTENTE_WATSON' --param password 'MIA_PASSWORD_WATSON'
+  wsk package bind /whisk.system/watson myWatson --param username MY_WATSON_USERNAME --param password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. Richiama l'azione `translate` nel tuo bind di pacchetto per tradurre del testo dall'inglese al francese.
 
   ```
-  wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+  wsk action invoke myWatson/translate --blocking --result --param payload "Blue skies ahead" --param translateParam payload --param translateFrom en --param translateTo fr
   ```
   {: pre}
 
@@ -423,14 +421,14 @@ Di seguito viene riportato un esempio di creazione di un bind di pacchetto e ide
 1. Crea un bind di pacchetto con le tue credenziali Watson.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MIO_NOMEUTENTE_WATSON' -p password 'MIA_PASSWORD_WATSON'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. Richiama l'azione `languageId` nel tuo bind di pacchetto per identificare la lingua.
 
   ```
-  wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+  wsk action invoke myWatson/languageId --blocking --result --param payload "Ciel bleu a venir"
   ```
   {: pre}
   ```
@@ -460,14 +458,14 @@ Di seguito viene riportato un esempio di creazione di un bind di pacchetto e con
 1. Crea un bind di pacchetto con le tue credenziali Watson.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MIO_NOMEUTENTE_WATSON' -p password 'MIA_PASSWORD_WATSON'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. Richiama l'azione `textToSpeech` nel tuo bind di pacchetto per convertire il testo.
 
   ```
-  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload Hey. --param voice en-US_MichaelVoice --param accept audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -506,14 +504,14 @@ Di seguito viene riportato un esempio di creazione di un bind di pacchetto e con
 1. Crea un bind di pacchetto con le tue credenziali Watson.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MIO_NOMEUTENTE_WATSON' -p password 'MIA_PASSWORD_WATSON'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. Richiama l'azione `speechToText` nel tuo bind di pacchetto per convertire l'audio codificato.
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -558,14 +556,14 @@ Il seguente è un esempio di configurazione di Slack, creazione di un bind di pa
 2. Crea un bind di pacchetto con le tue credenziali Slack, il canale in cui vuoi pubblicare il messaggio e il nome utente con il quale vuoi farlo.
 
   ```
-  wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+  wsk package bind /whisk.system/slack mySlack --param url "https://hooks.slack.com/services/..." --param username Bob --param channel "#MySlackChannel"
   ```
   {: pre}
 
 3. Richiama l'azione `post` nel tuo bind di pacchetto per pubblicare un messaggio nel canale Slack.
 
   ```
-  wsk action invoke mySlack/post --blocking --result --param text 'Salve da OpenWhisk!'
+  wsk action invoke mySlack/post --blocking --result --param text "Hello from OpenWhisk!"
   ```
   {: pre}
 
@@ -659,7 +657,7 @@ Il seguente è un esempio di creazione di un bind di pacchetto.
 4. Crea un bind al pacchetto con `/whisk.system/pushnotifications`.
 
   ```
-  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  wsk package bind /whisk.system/pushnotifications myPush -p appId myAppID -p appSecret myAppSecret
   ```
   {: pre}
 
@@ -682,7 +680,10 @@ Il seguente è un esempio di creazione di un bind di pacchetto.
 L'azione `/whisk.system/pushnotifications/sendMessage` invia notifiche push ai dispositivi registrati. I parametri sono i seguenti:
 - `text`: il messaggio della notifica visualizzato dall'utente. Ad esempio: `-p text "Hi ,OpenWhisk send a notification"`.
 - `url`: un URL facoltativo che può essere inviato con l'avviso. Ad esempio: `-p url "https:\\www.w3.ibm.com"`.
-- `gcmPayload`: payload JSON personalizzato che verrà inviato come parte del messaggio di notifica. Ad esempio: `-p gcmPayload "{"hi":"hello"}"`
+- `deviceIds`: l'elenco di dispositivi specificati. Ad esempio: `-p deviceIds "[\"deviceID1\"]"`.
+- `platforms`: invia notifiche ai dispositivi delle piattaforme specificate. 'A' per i dispositivi Apple (iOS) e 'G' per i dispositivi Google (Android). Ad esempio `-p platforms "[\"A\"]"`.
+- `tagNames`:  invia notifiche ai dispositivi sottoscritti a una di queste tag. Ad esempio `-p tagNames "[\"tag1\"]" `.
+- `gcmPayload`: payload JSON personalizzato che verrà inviato come parte del messaggio di notifica. Ad esempio: `-p gcmPayload "{\"hi\":\"hello\"}"`
 - `gcmSound`: il file audio (sul dispositivo) che tenterà di essere eseguito quando la notifica arriva al dispositivo.
 - `gcmCollapseKey`: questo parametro identifica un gruppo di messaggi.
 - `gcmDelayWhileIdle`: quando questo parametro è impostato su true, indica che il messaggio non verrà inviato finché il dispositivo non diventa attivo.
@@ -700,7 +701,7 @@ Questo è un esempio di invio di una notifica push dal pacchetto pushnotificatio
 1. Invia la notifica push utilizzando l'azione `sendMessage` nel bind di pacchetto che hai precedentemente creato. Accertati di sostituire `/myNamespace/myPush` con il tuo nome pacchetto.
 
   ```
-  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds "[\"T1\",\"T2\"]"
   ```
   {: pre}
 

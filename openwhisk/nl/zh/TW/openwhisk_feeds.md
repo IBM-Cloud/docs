@@ -1,12 +1,10 @@
 ---
 
- 
+
 
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-09"
 
 ---
 
@@ -18,8 +16,7 @@ copyright:
 
 # 實作資訊來源
 {: #openwhisk_feeds}
-前次更新：2016 年 9 月 9 日
-{: .last-updated}
+
 
 OpenWhisk 支援開放式 API，任何使用者都可以在其中將事件生產者服務公開為**套件**中的**資訊來源**。本節說明用於提供專屬資訊來源的架構及實作選項。
 

@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-09"
 
 ---
 
@@ -17,10 +13,9 @@ copyright:
 {:pre: .pre}
 
 # Einführung in {{site.data.keyword.openwhisk_short}} (Beta)
-Letzte Aktualisierung: 9. September 2016
-{: .last-updated}
 
-{{site.data.keyword.openwhisk}} ist ein verteilter, ereignisgesteuerter Berechnungsservice (auch serverunabhängiges Computing oder Function as a Service (FaaS)), der Code in Reaktion auf Ereignisse oder direkte Aufrufe über das Web oder mobile Apps über HTTP ausführt.Ereignisse können von Bluemix-Services wie Cloudant und von externen Quellen bereitgestellt werden. Entwickler können sich auf das Schreiben von Anwendungslogik sowie auf das Erstellen von Aktionen, die auf Anforderung ausgeführt werden, konzentrieren. Die Rate der Ausführung von Aktionen entspricht immer der Ereignisrate, sodass sich eine inhärente Skalierung und Ausfallsicherheit sowie eine optimale Auslastung ergeben. Sie bezahlen nur für das, was Sie nutzen, und Sie brauchen keinen Server zu verwalten. Sie können darüber hinaus den [Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen.
+
+{{site.data.keyword.openwhisk}} ist ein verteilter, ereignisgesteuerter Berechnungsservice (auch serverunabhängiges Computing oder Function as a Service (FaaS)), der Code in Reaktion auf Ereignisse oder direkte Aufrufe über das Web oder mobile Apps über HTTP ausführt. Ereignisse können von Bluemix-Services wie Cloudant und von externen Quellen bereitgestellt werden. Entwickler können sich auf das Schreiben von Anwendungslogik sowie auf das Erstellen von Aktionen, die auf Anforderung ausgeführt werden, konzentrieren. Die Rate der Ausführung von Aktionen entspricht immer der Ereignisrate, sodass sich eine inhärente Skalierung und Ausfallsicherheit sowie eine optimale Auslastung ergeben. Sie bezahlen nur für das, was Sie nutzen, und Sie brauchen keinen Server zu verwalten. Sie können darüber hinaus den [Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen.
 {: shortdesc}
 
 Weitere Einzelheiten zur Funktionsweise von {{site.data.keyword.openwhisk_short}} finden Sie unter [Informationen zu {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
@@ -28,8 +23,8 @@ Weitere Einzelheiten zur Funktionsweise von {{site.data.keyword.openwhisk_short}
 ## {{site.data.keyword.openwhisk_short}}-CLI einrichten
 {: #openwhisk_start_configure_cli}
 
-Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) einrichten. 
-Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk/cli){: new_window} und gehen Sie gemäß den Anweisungen für die Installation vor. 
+Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) einrichten.
+Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk/cli){: new_window} und gehen Sie gemäß den Anweisungen für die Installation vor.
 
 ### CLI für die Verwendung eines HTTPS-Proxy konfigurieren
 

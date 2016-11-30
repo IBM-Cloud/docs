@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-27"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}}-Systemdetails
 {: #openwhisk_reference}
-Letzte Aktualisierung: 9. September 2016
-{: .last-updated}
+
 
 Die folgenden Abschnitte enthalten weitere Details zum {{site.data.keyword.openwhisk}}-System.
 {: shortdesc}
@@ -109,7 +104,7 @@ Das Ergebnis wird im Feld `status` des Aktivierungsdatensatzes wie im folgenden 
 
 Jeder Aufruf, der erfolgreich empfangen wurde und der dem Benutzer möglicherweise in Rechnung gestellt wird, erhält schließlich einen Aktivierungsdatensatz.
 
-Beachten Sie, dass bei einem *Entwicklerfehler der Aktion* die Aktion teilweise ausgeführt wurde und extern sichtbare Nebeneffekte generiert hat. Es liegt in der Verantwortung des Benutzers, zu prüfen, ob solche Nebeneffekte auftreten, und bei Bedarf eine Retry-Logik auszugeben. Bestimmte *interne Bearbeitungsfehler* zeigen an, dass die Ausführung einer Aktion begonnen wurde, aber das System fehlgeschlagen ist, bevor der Aktionsabschluss registriert wurde.
+Beachten Sie, dass bei einem *Entwicklerfehler der Aktion* die Aktion teilweise ausgeführt wurde und extern sichtbare Nebeneffekte generiert hat.   Es liegt in der Verantwortung des Benutzers, zu prüfen, ob solche Nebeneffekte auftreten, und bei Bedarf eine Retry-Logik auszugeben.   Bestimmte *interne Bearbeitungsfehler* zeigen an, dass die Ausführung einer Aktion begonnen wurde, aber das System fehlgeschlagen ist, bevor der Aktionsabschluss registriert wurde.
 
 ## Aktivierungsdatensatz
 {: #openwhisk_ref_activation}
@@ -275,7 +270,7 @@ Die Funktion `whisk.trigger()` aktiviert einen Auslöser und gibt für die resul
 - *apiKey*: Der Berechtigungsschlüssel, mit dem der Auslöser aktiviert wird. Standardwert: `whisk.getAuthKey()`.
 
 `whisk.trigger()` gibt einen Promise zurück. Wenn das OpenWhisk-System auf den Abschluss des Auslösers warten soll, sollten Sie diesen Promise von der Funktion `main` Ihrer Aktion zurückgeben.
-- Wenn der Auslöser fehlschlägt, wird der Promise mit einem Objekt abgelehnt, das den Fehler beschreibt. 
+- Wenn der Auslöser fehlschlägt, wird der Promise mit einem Objekt abgelehnt, das den Fehler beschreibt.
 - Wenn der Auslöser erfolgreich ist, wird der Promise mit einem Wörterbuch mit dem Feld `activationId`, das die Aktivierungs-ID enthält, aufgelöst.
 
 Die Funktion `whisk.getAuthKey()` gibt den Berechtigungsschlüssel zurück, unter dem die Aktion ausgeführt wird. In der Regel müssen Sie diese Funktion nicht direkt aufrufen, weil sie implizit von den Funktionen `whisk.invoke()` und `whisk.trigger()` aufgerufen wird.
@@ -430,14 +425,14 @@ Alle Funktionen im System stehen über eine REST-API zur Verfügung. Es gibt Sam
 
 Die Sammlungsendpunkte lauten wie folgt:
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
 
-The `openwhisk.{DomainName}` ist der OpenWhisk-API-Hostname (z. B. openwhisk.ng.bluemix.net, 172.17.0.1 usw.).
+``openwhisk.``<span class="keyword" data-hd-keyref="DomainName">DomainName</span>` ist der OpenWhisk-API-Hostname (z. B. openwhisk.ng.bluemix.net, 172.17.0.1 usw.).
 
 Für `{namespace}` kann das Zeichen `_` zum Angeben des *Standardnamensbereichs* (d.h. einer E-Mail-Adresse) verwendet werden.
 
@@ -445,16 +440,17 @@ Sie können eine GET-Anforderung für die Sammlungsendpunkte ausführen, um eine
 
 Für jeden Entitätstyp gibt es Entitätsendpunkte:
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
+
 
 Die Endpunkte für Namensbereiche und Aktivierungen unterstützen nur GET-Anforderungen. Die Endpunkte für Aktionen, Auslöser, Regeln und Pakete unterstützen GET-, PUT- und DELETE-Anforderungen. Die Endpunkte für Aktionen, Auslöser und Regeln unterstützen auch POST-Anforderungen, die zum Aufrufen von Aktionen und Auslösern sowie zum Aktivieren und Inaktivieren von Regeln verwendet werden. Weitere Details hierzu finden Sie in der [API-Referenz](https://new-console.{DomainName}/apidocs/98).
 
-Alle APIs sind mit der HTTP-Basisauthentifizierung geschützt. Die durch einen Doppelpunkt voneinander getrennten Basic-Berechtigungsnachweise zur Authentifizierung befinden sich in der Eigenschaft `AUTH` in der `~/.wskprops`-Datei. Sie finden diese Berechtigungsnachweise auch in den [Konfigurationsschritten der Befehlszeilenschnittstelle (CLI)](../README.md#setup-cli).
+Alle APIs sind mit der HTTP-Basisauthentifizierung geschützt. Die durch einen Doppelpunkt voneinander getrennten Basic-Berechtigungsnachweise zur Authentifizierung befinden sich in der Eigenschaft `AUTH` in der `~/.wskprops`-Datei. Sie finden diese Berechtigungsnachweise auch in den [Konfigurationsschritten der Befehlszeilenschnittstelle (CLI)](./index.html#openwhisk_start_configure_cli).
 
 Das folgende Beispiel zeigt, wie Sie mit dem Befehl 'cURL' eine Liste aller Pakete im Namensbereich `whisk.system` abrufen können:
 
@@ -497,11 +493,10 @@ Von der OpenWhisk-API werden Anforderung/Antwort-Aufrufe von Web-Clients unterst
 | Zeitlimit | Ein Container darf nicht länger als N Millisekunden aktiv sein. | pro Aktion |  Millisekunden | 60000 |
 | Speicher | Ein Container darf nicht mehr als N MB Speicher zuordnen. | pro Aktion | MB | 256 |
 | Protokolle | Ein Container darf nicht mehr als N MB in die Standardausgabe schreiben. | pro Aktion | MB | 10 |
-| Gleichzeitig | Pro Namensbereich sind nicht mehr als N gleichzeitige Aufrufe zulässig. | pro Namensbereich | Anzahl | 100 |
-| Minutenrate | Ein Benutzer kann nicht mehr als diese Anzahl Aktionen pro Minute aufrufen. | pro Benutzer | Anzahl | 120 |
-| Stundenrate | Ein Benutzer kann nicht mehr als diese Anzahl Aktionen pro Stunde aufrufen. | pro Benutzer | Anzahl | 3600 |
+| Gleichzeitig | Pro Namensbereich sind nicht mehr als N aktuell ausgeführte oder in die Warteschlange für die Ausführung gestellte Aktivierungen zulässig. | pro Namensbereich | Anzahl | 1000 |
+| Minutenrate | Ein Benutzer kann nicht mehr als diese Anzahl Aktionen pro Minute aufrufen. | pro Benutzer | Anzahl | 5000 |
 | Codegröße | Die maximale Größe des Aktionscodes. | nicht konfigurierbar, Limit pro Aktion | MB | 48 |
-| Parameter | Die maximale Größe der Parameter, die zugeordnet werden können. | nicht konfigurierbar, Limit pro Aktion/Paket/Auslöser | MB | 1 |
+| Parameter | Die maximale Größe der Parameter, die angehängt werden können. | nicht konfigurierbar, Limit pro Aktion/Paket/Auslöser | MB | 1 |
 
 ### Zeitlimit pro Aktion (ms) (Standardwert: 60s)
 {: #openwhisk_syslimits_timeout}
@@ -530,15 +525,15 @@ Von der OpenWhisk-API werden Anforderung/Antwort-Aufrufe von Web-Clients unterst
 {: #openwhisk_syslimits_activationsize}
 * Die maximale POST-Inhaltsgröße plus alle umgewandelten Parameter für einen Aktionsaufruf oder eine Auslöseraktivierung ist 1 MB.
 
-### Gleichzeitige Aufrufe pro Namensbereich (Standardwert: 100)
+### Gleichzeitige Aufrufe pro Namensbereich (Standardwert: 1000)
 {: #openwhisk_syslimits_concur}
-* Die Anzahl der Aktivierungen, die für einen Namensbereich gleichzeitig verarbeitet werden, kann 100 nicht überschreiten.
+* Die Anzahl der Aktivierungen, die für einen Namensbereich entweder ausgeführt oder in die Warteschlange für die Ausführung gestellt werden, kann 1000 nicht überschreiten.
 * Die Standardbegrenzung kann von Whisk in Consul-KV-Store statisch konfiguriert werden.
 * Ein Benutzer hat gegenwärtig keine Möglichkeit, die Begrenzungen zu ändern.
 
-### Aufrufe pro Minute/Stunde (Festgelegt: 120/3600)
+### Aufrufe pro Minute (Festgelegt: 5000)
 {: #openwhisk_syslimits_invocations}
-* Die Begrenzung N der Rate ist auf 120/3600 festgelegt und begrenzt die Anzahl von Aktionsaufrufen in Fenstern von 1 Minute bzw. 1 Stunde.
+* Die Begrenzung N der Rate ist auf 5000 festgelegt und begrenzt die Anzahl von Aktionsaufrufen in Fenstern von 1 Minute.
 * Ein Benutzer kann diese Begrenzung beim Erstellen der Aktion nicht ändern.
 * Ein CLI- oder API-Aufruf, der diese Begrenzung überschreitet, empfängt einen Fehlercode, der dem HTTP-Statuscode `429: TOO MANY REQUESTS` entspricht.
 
@@ -566,11 +561,10 @@ Auslöser unterliegen einer Auslöserate pro Minute und pro Stunde (wie in der f
 
 | Begrenzung | Beschreibung | Konfigurierbar | Einheit | Standardwert |
 | ----- | ----------- | ------------ | -----| ------- |
-| Minutenrate | Ein Benutzer kann nicht mehr als diese Anzahl Auslöser pro Minute abrufen. | pro Benutzer | Anzahl | 60 |
-| Stundenrate | Ein Benutzer kann nicht mehr als diese Anzahl Auslöser pro Stunde abrufen. | pro Benutzer | Anzahl | 720 |
+| Minutenrate | Ein Benutzer kann nicht mehr als diese Anzahl Auslöser pro Minute abrufen. | pro Benutzer | Anzahl | 5000 |
 
-### Auslöser pro Minute/Stunde (Festgelegt: 60/720)
+### Auslöser pro Minute (Festgelegt: 5000)
 {: #openwhisk_syslimits_triggerratelimit}
-* Die Begrenzung N der Rate ist auf 60/720 festgelegt und begrenzt die Anzahl von Auslösern in Fenstern von 1 Minute bzw. 1 Stunde.
+* Die Begrenzung N der Rate ist auf 5000 festgelegt und begrenzt die Anzahl von Auslösern in Fenstern von 1 Minute.
 * Ein Benutzer kann diese Begrenzung beim Erstellen des Auslösers nicht ändern.
 * Ein CLI- oder API-Aufruf, der diese Begrenzung überschreitet, empfängt einen Fehlercode, der dem HTTP-Statuscode `429: TOO MANY REQUESTS` entspricht.

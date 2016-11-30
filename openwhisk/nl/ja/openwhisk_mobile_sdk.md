@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -13,60 +14,71 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} モバイル SDK の使用
 {: #openwhisk_mobile_sdk}
-最終更新日: 2016 年 8 月 26 日
-{: .last-updated}
 
-{{site.data.keyword.openwhisk}} は、モバイル・アプリが簡単にリモート・トリガーを発生させてリモート・アクションを起動できるようにする、iOS デバイスおよび watchOS 2 デバイス用のモバイル SDK を提供します。
-Android 用のバージョンは、現時点では使用できません。Android 開発者は、直接、{{site.data.keyword.openwhisk}} REST API を使用することができます。
-{: shortdesc}
+{{site.data.keyword.openwhisk}} は、モバイル・アプリが簡単にリモート・トリガーを発生させてリモート・アクションを起動できるようにする、iOS デバイスおよび watchOS デバイス用のモバイル SDK を提供します。Android 用のバージョンは、現時点では使用できません。Android 開発者は、直接、{{site.data.keyword.openwhisk}} REST API を使用することができます。
 
-モバイル SDK は、Swift 2.2 で作成されており、iOS 9 以降のリリースをサポートしています。
+
+モバイル SDK は、Swift 3.0 で作成されており、iOS 10 以降のリリースをサポートしています。Xcode 8.0 を使用してモバイル SDK をビルドできます。レガシー Swift 2.2/Xcode 7 バージョンの SDK は、 0.1.7 まで使用可能です (これは非推奨になっています)。
 
 ## アプリへの SDK の追加
 {: #openwhisk_add_sdk}
 
 モバイル SDK は、CocoaPods または Carthage を使用するか、あるいはソース・ディレクトリーから、インストールすることができます。
 
-### CocoaPods を使用したインストール 
+### CocoaPods を使用したインストール
 {: #openwhisk_add_sdk_cocoapods}
 
 モバイル用 {{site.data.keyword.openwhisk_short}} SDK は、
 CocoaPods を通して公開配布で入手できます。CocoaPods がインストールされていることを前
 提として、スターター・アプリのプロジェクト・ディレクトリー内部の
-「Podfile」というファイルに以下の行を追加します。 
+「Podfile」というファイルに以下の行を追加します。
 
 ```
 install! 'cocoapods', :deterministic_uuids => false
 use_frameworks!
 
 target 'MyApp' do
-     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
-target 'MyApp WatchKit Extension' do 
-     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
+target 'MyApp WatchKit Extension' do
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 ```
 {: codeblock}
 
 コマンド・ラインから、`「pod
-install」`と入力します。このコマンドにより、watchOS 2 拡張機能が付いた iOS アプリ用の SDK がインストールされます。
+install」`と入力します。このコマンドにより、watchOS 拡張機能が付いた iOS アプリ用の SDK がインストールされます。
 プロジェクトを Xcode で開くために CocoaPods によってアプリ用に作成さ
 れたワークスペース・ファイルを使用します。
+
+インストール後に、プロジェクト・ワークスペースを開きます。ビルド時に以下の警告を受け取ることがあります。`Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
+これは、Cocoapods が Pods プロジェクトで Swift バージョンを更新しなかった場合に発生します。修正するには、Pods プロジェクトおよび {{site.data.keyword.openwhisk_short}} ターゲットを選択します。「Build Settings」に移動し、設定`「Use Legacy Swift Language Version」`を`「no」`に変更します。あるいは、Podfile の末尾に以下のインストール後の指示を追加できます。
+
+```
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
+```
+{: codeblock}
 
 ### Carthage を使用したインストール
 {: #openwhisk_add_sdk_carthage}
 
 アプリのプロジェクト・ディレクトリーにファイルを作成して「Cartfile」という名前を付けます。ファイルに次の行を追加します。
 ```
-github "openwhisk/openwhisk-client-swift.git" ~> 0.1.7 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.2.2 # Or latest version
 ```
 {: codeblock}
 
 コマンド・ラインから、`「carthage update
 --platform ios」`と入力します。Carthage は、SDK をダウンロードおよびビルドして、アプリのプロジェクト・ディレクトリーに「Carthage」というディレクトリーを作成し、
-Carthage/build/iOS 内部に OpenWhisk.framework ファイルを置きます。
+Carthage/build/iOS 内部に {{site.data.keyword.openwhisk_short}}.framework ファイルを置きます。
 
-次に、Xcode プロジェクトの組み込みフレームワークに OpenWhisk.framework を追加する必要があります。
+次に、Xcode プロジェクトの組み込みフレームワークに {{site.data.keyword.openwhisk_short}}.framework を追加する必要があります。
 
 ### ソース・コードからのインストール
 {: #openwhisk_add_sdk_source}
@@ -88,20 +100,20 @@ wsk sdk install iOS
 ```
 {: pre}
 
-このコマンドにより、スターター・アプリが入った圧縮ファイルがダウンロードされます。プロジェクト・ディレクトリー内に podfile があります。 
+このコマンドにより、スターター・アプリが入った圧縮ファイルがダウンロードされます。プロジェクト・ディレクトリー内に podfile があります。
 
 SDK をインストールするには、次のコマンドを入力します。
 ```
 pod install
 ```
-{: pre} 
+{: pre}
 
 ## SDK 概説
 {: #openwhisk_sdk_getstart}
 
 迅速に立ち上げて稼動させるためには、{{site.data.keyword.openwhisk_short}} API 資格情報を使用して WhiskCredentials オブジェクトを作成し、オブジェクトから {{site.data.keyword.openwhisk_short}} インスタンスを作成します。
 
-例えば Swift 2.1 では、次のサンプル・コードを使用して資格情報オブジェクトを作成します。
+例えば、次のサンプル・コードを使用して資格情報オブジェクトを作成します。
 
 ```
 let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")
@@ -132,7 +144,7 @@ whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:ttttttttttttttttttttttttt
 例えば次のようにします。
 
 ```
-// In this example, we are invoking an action to print a message to the OpenWhisk Console
+// In this example, we are invoking an action to print a message to the {{site.data.keyword.openwhisk_short}} Console
 var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
 

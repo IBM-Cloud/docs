@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-09"
  
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 対応の {{site.data.keyword.Bluemix_notm}} サービスの使用
 {: #openwhisk_ecosystem}
-最終更新日: 2016 年 9 月 9 日
-{: .last-updated}
 
 {{site.data.keyword.openwhisk}} で、パッケージ・カタログは、便利な機能でアプリを強化して、エコシステム内の外部サービスにアクセスするための簡単な方法を提供します。{{site.data.keyword.openwhisk_short}} 対応の外部サービスの例として、Cloudant、The Weather Company、Slack、GitHub などがあります。
 {: shortdesc}
@@ -121,7 +119,7 @@ Cloudant のアカウント・ホスト名、ユーザー名、パスワード�
 1. Cloudant アカウント用に構成されるパッケージ・バインディングを作成します。
 
   ```
-wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+  wsk package bind /whisk.system/cloudant myCloudant -p username MYUSERNAME -p password MYPASSWORD -p host MYCLOUDANTACCOUNT.cloudant.com
   ```
   {: pre}
 
@@ -217,7 +215,7 @@ wsk activation poll
 `/myNamespace/myCloudant` を、ご使用のパッケージ名に置き換えてください。
 
   ```
-  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc "{\"_id\":\"heisenberg\",\"name\":\"Walter White\"}"
   ```
   {: pre}
   ```
@@ -293,7 +291,7 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 以下は、トリガー・イベントに `name` と `place` の値を指定して、20 秒ごとに 1 回発生するトリガーを作成する例です。
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
   {: pre}
 
@@ -334,14 +332,14 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 1. API キーを使用してパッケージ・バインディングを作成します。
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
+  wsk package bind /whisk.system/weather myWeather --param username MY_USERNAME --param password MY_PASSWORD
   ```
   {: pre}
 
 2. パッケージ・バインディングの `forecast` アクションを起動して、天気予報を取得します。
 
   ```
-wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+  wsk action invoke myWeather/forecast --blocking --result --param latitude 43.7 --param longitude -79.4
   ```
   {: pre}
 
@@ -404,14 +402,14 @@ wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7'
 1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
 
   ```
-wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson --param username MY_WATSON_USERNAME --param password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. パッケージ・バインディングの `translate` アクションを起動して、テキストを英語からフランス語に変換します。
 
   ```
-wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+  wsk action invoke myWatson/translate --blocking --result --param payload "Blue skies ahead" --param translateParam payload --param translateFrom en --param translateTo fr
   ```
   {: pre}
 
@@ -438,14 +436,14 @@ wsk action invoke myWatson/translate --blocking --result --param payload 'Blue s
 1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
 2. パッケージ・バインディングの `languageId` アクションを起動して、言語を識別します。
 
   ```
-wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+  wsk action invoke myWatson/languageId --blocking --result --param payload "Ciel bleu a venir"
   ```
   {: pre}
   ```
@@ -478,7 +476,7 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
 1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
@@ -487,7 +485,7 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 します。
 
   ```
-wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/textToSpeech --blocking --result --param payload Hey. --param voice en-US_MichaelVoice --param accept audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -530,7 +528,7 @@ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey
 1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
+  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
   ```
   {: pre}
 
@@ -539,7 +537,7 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 た音声を変換します。
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type audio/wav --param encoding base64
   ```
   {: pre}
   ```
@@ -587,14 +585,14 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 2. Slack の資格情報、ポスト先のチャネル、およびポストするユーザー名を指定して、パッケージ・バインディングを作成します。
 
   ```
-wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+  wsk package bind /whisk.system/slack mySlack --param url "https://hooks.slack.com/services/..." --param username Bob --param channel "#MySlackChannel"
   ```
   {: pre}
 
 3. パッケージ・バインディングの `post` アクションを起動し、ご使用の Slack チャネルにメッセージをポストします。
 
   ```
-wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
+  wsk action invoke mySlack/post --blocking --result --param text "Hello from OpenWhisk!"
   ```
   {: pre}
 
@@ -690,7 +688,7 @@ Push Notifications パッケージ・バインディングを作成する際に�
 4. `/whisk.system/pushnotifications` を使用してパッケージ・バインディングを作成します。
 
   ```
-  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  wsk package bind /whisk.system/pushnotifications myPush -p appId myAppID -p appSecret myAppSecret
   ```
   {: pre}
 
@@ -714,7 +712,10 @@ wsk package list
 
 - `text`: ユーザーに表示する通知メッセージ。例えば、`-p text "Hi ,OpenWhisk send a notification"` などです。
 - `url`: アラートと一緒に送信できるオプションの URL。例えば、`-p url "https:\\www.w3.ibm.com"` などです。
-- `gcmPayload`: 通知メッセージの一部として送信されるカスタム JSON ペイロード。例えば、`-p gcmPayload "{"hi":"hello"}"` などです。
+- `deviceIds` 指定デバイスのリスト。例: `-p deviceIds "[\"deviceID1\"]"`
+- `platforms` 通知を指定プラットフォームのデバイスに送信します。「A」は Apple (iOS) デバイス、「G」は Google (Android) デバイスです。例: `-p platforms "[\"A\"]"`
+- `tagNames` 該当するタグのいずれかを購読しているデバイスに通知を送信します。例: `-p tagNames "[\"tag1\"]" `
+- `gcmPayload`: 通知メッセージの一部として送信されるカスタム JSON ペイロード。例: `-p gcmPayload "{\"hi\":\"hello\"}"`
 - `gcmSound`: 通知がデバイスに到着したときに再生が試行される (デバイス上の) 音声ファイル。
 - `gcmCollapseKey`: このパラメーターは、メッセージのグループを識別します。
 - `gcmDelayWhileIdle`: このパラメーターが true に設定されている場合、デバイスがアクティブになるまでメッセージが送信されないことを示します。
@@ -732,7 +733,7 @@ pushnotification パッケージからプッシュ通知を送信する例を以
 1. 前に作成したパッケージ・バインディング内の `sendMessage` アクションを使用して、プッシュ通知を送信します。`/myNamespace/myPush` を、ご使用のパッケージ名に置き換えてください。
 
   ```
-  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds "[\"T1\",\"T2\"]"
   ```
   {: pre}
 

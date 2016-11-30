@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   anni: 2016
-
- 
+ultimo aggiornamento: "27-09-2016"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # Dettagli del sistema {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_reference}
-Ultimo aggiornamento: 09 settembre 2016
-{: .last-updated}
+
 
 Le seguenti sezioni forniscono ulteriori dettagli sul sistema {{site.data.keyword.openwhisk}}.
 {: shortdesc}
@@ -437,14 +432,14 @@ Tutte le capacità nel sistema sono disponibili mediante un'API REST. Sono prese
 
 Gli endpoint di raccolta sono:
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
 
-`openwhisk.{DomainName}` è il nome host dell'API OpenWhisk (ad esempio, openwhisk.ng.bluemix.net, 172.17.0.1 e così via).
+``openwhisk.``<span class="keyword" data-hd-keyref="DomainName">DomainName</span>` è il nome host dell'API OpenWhisk (ad esempio, openwhisk.ng.bluemix.net, 172.17.0.1 e così via).
 
 Per `{namespace}`, il carattere `_` può essere utilizzato per specificare lo *spazio dei nomi
 predefinito* dell'utente (ovvero, l'indirizzo di posta elettronica).
@@ -453,16 +448,17 @@ Puoi effettuare una richiesta GET sugli endpoint di raccolta per richiamare un e
 
 Sono presenti endpoint per ciascun tipo di entità:
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
+
 
 Gli endpoint di spazio dei nomi e attivazione supportano solo le richieste GET. Gli endpoint di azioni, trigger, regole e pacchetti supportano le richieste GET, PUT e DELETE. Gli endpoint di azioni, trigger e regole supportano inoltre le richieste POST, che vengono utilizzate per richiamare azioni e trigger e per abilitare o disabilitare le regole. Per informazioni dettagliate, consulta la [Guida di riferimento API](https://new-console.{DomainName}/apidocs/98).
 
-Tutte le API sono protette tramite autenticazione base HTTP. Le credenziali per l'autenticazione di base si trovano nella proprietà `AUTH` all'interno del file `~/.wskprops`, delimitate da due punti. Puoi richiamarle anche nella [procedura di configurazione della CLI](../README.md#setup-cli).
+Tutte le API sono protette tramite autenticazione base HTTP. Le credenziali per l'autenticazione di base si trovano nella proprietà `AUTH` all'interno del file `~/.wskprops`, delimitate da due punti. Puoi richiamarle anche nella [procedura di configurazione della CLI](./index.html#openwhisk_start_configure_cli).
 
 Di seguito viene riportato un esempio che utilizza il comando cURL per richiamare l'elenco di tutti i pacchetti nello spazio dei nomi `whisk.system`:
 
@@ -505,9 +501,8 @@ L'API OpenWhisk supporta chiamate di richiesta-risposta dai client web. OpenWhis
 | timeout | un contenitore non può essere eseguito per più di N millisecondi | per azione |  millisecondi | 60000 |
 | memory | a un contenitore non possono essere assegnati più di N MB di memoria | per azione | MB | 256 |
 | logs | un contenitore non può scrivere più di N MB in stdout | per azione | MB | 10 |
-| concurrent | non sono consentite più di N attivazioni simultanee per spazio dei nomi | per spazio dei nomi | numero | 100 |
-| minuteRate | un utente non può richiamare un numero di azioni al minuto superiore a questo | per utente | numero | 120 |
-| hourRate | un utente non può richiamare un numero di azioni all'ora superiore a questo | per utente | numero | 3600 |
+| concurrent | non sono consentite più di N attivazioni per ogni spazio dei nomi in esecuzione o in coda per l'esecuziome | per spazio dei nomi | numero | 1000 |
+| minuteRate | un utente non può richiamare un numero di azioni al minuto superiore a questo | per utente | numero | 5000 |
 | codeSize | la dimensiona massima del codice azione | non configurabile, limite per azione | MB | 48 |
 | parameters | la dimensione massima dei parametri che possono essere collegati | non configurabile, limite per azione/pacchetto/trigger | MB | 1 |
 
@@ -538,15 +533,15 @@ L'API OpenWhisk supporta chiamate di richiesta-risposta dai client web. OpenWhis
 {: #openwhisk_syslimits_activationsize}
 * La dimensione massima del contenuto POST più qualsiasi parametro sottoposto a currying per una chiamata dell'azione o attivazione del trigger è di 1 MB.
 
-### Chiamata simultanea per lo spazio dei nomi (valore predefinito: 100)
+### Chiamata simultanea per lo spazio dei nomi (valore predefinito: 1000)
 {: #openwhisk_syslimits_concur}
-* Il numero di attivazioni attualmente elaborate per uno spazio dei nomi non essere maggiore di 100.
+* Il numero di attivazioni che sono in esecuzione o in coda per l'esecuzione per uno spazio dei nomi non può essere maggiore di 1000.
 * Il limite predefinito può essere configurato statisticamente da Whisk in consul kvstore.
 * L'utente non può attualmente modificare questi limiti.
 
-### Chiamate al minuto/all'ora (valore fisso: 120/3600)
+### Chiamate al minuto (valore fisso: 5000)
 {: #openwhisk_syslimits_invocations}
-* Il limite di frequenza N è impostato su 120/3600 e limita il numero di chiamate di azioni possibili in un'unica finestra temporale espressa in minuti/ore.
+* Il limite di frequenza N è impostato su 5000 e limita il numero di chiamate di azioni possibili in finestre temporali di un minuto.
 * L'utente non può modificare questo limite durante la creazione dell'azione.
 * Una chiamata CLI o API che superi questo limite riceverà un codice di errore corrispondente al codice di stato HTTP `429: TOO MANY REQUESTS`.
 
@@ -574,11 +569,10 @@ I trigger sono soggetti a una frequenza di attivazione al minuto e all'ora come 
 
 | limite | descrizione | configurabile | unità | valore predefinito |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | un utente non può attivare un numero di trigger al minuto superiore a questo | per utente | numero | 60 |
-| hourRate | un utente non può attivare un numero di trigger all'ora superiore a questo | per utente | numero | 720 |
+| minuteRate | un utente non può attivare un numero di trigger al minuto superiore a questo | per utente | numero | 5000 |
 
-### Trigger al minuto/all'ora (valore fisso: 60/720)
+### Trigger al minuto (valore fisso: 5000)
 {: #openwhisk_syslimits_triggerratelimit}
-* Il limite di frequenza N è impostato su 60/720 e limita il numero di trigger che possono essere attivati in finestre temporali di un minuto/un'ora.
+* Il limite di frequenza N è impostato su 5000 e limita il numero di trigger che possono essere attivati in finestre temporali di un minuto.
 * L'utente non può modificare questo limite durante la creazione del trigger.
 * Una chiamata CLI o API che superi questo limite riceverà un codice di errore corrispondente al codice di stato HTTP `429: TOO MANY REQUESTS`.
