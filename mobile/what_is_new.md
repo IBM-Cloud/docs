@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -10,7 +10,13 @@ lastupdated: "2016-10-21"
 # What's new in the Mobile dashboard
 {: #what_is_new}
 
-The October update of the {{site.data.keyword.Bluemix}} Mobile dashboard introduced the following changes:
+The November update of the {{site.data.keyword.Bluemix}} Mobile dashboard introduced the following changes:
+
+   * You can now generate SDK artifacts for your projects from the **Code** page.
+   * Cordova is now supported for the Basic Code Starter.
+   * You can now [report network events](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window} and [monitor network requests](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window} in the **Network Requests** page of the {{site.data.keyword.mobileanalytics_short}} Console.
+
+The October update of the {{site.data.keyword.Bluemix_notm}} Mobile dashboard introduced the following changes:
 
    * You can now add Push Notifications and Analytics capabilities to your project directly from the dashboard.
    * [Code Starters](starters.html#Code_Starter) are now available.
