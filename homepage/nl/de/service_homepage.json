@@ -1,6 +1,6 @@
 {
   "id": "docs_homepage_services",
-  "title": "Vorgehensweise zur Verwendung der Bluemix-Services",
+  "title": "Verwendung der Bluemix-Services",
   "subtitle": "Informationen zu Servicetypen und Verfügbarkeit",
   "subtitleHref": "services/index.html",
   "items": [{
@@ -33,22 +33,22 @@
     "category_id": "Compute"
   }, {
     "type": "extra",
-    "title": "Arbeit mit Daten versuchen",
+    "title": "Arbeit mit Daten ausprobieren",
     "href": "services/WorkWithData/index.html",
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "Toolchains versuchen",
+    "title": "Toolchains ausprobieren",
     "href": "toolchains/toolchains_overview.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Dedicated GitHub Enterprise versuchen",
+    "title": "Dedicated GitHub Enterprise ausprobieren",
     "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Mobiles Bluemix-Dashboard versuchen",
+    "title": "Mobiles Bluemix-Dashboard ausprobieren",
     "href": "mobile/index.html",
     "category_id": "mobile"
   }]

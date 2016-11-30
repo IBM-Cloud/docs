@@ -10,7 +10,7 @@
 			"img": "homepage/images/compute.svg",
 			"href": "compute/index.html",
 			"links": [{
-				"name": "Cloud Foundry-Anwendungen",
+				"name": "Cloud Foundry-Apps",
 				"href": "cfapps/index.html"
 			}, {
 				"name": "IBM Bluemix OpenWhisk",
