@@ -53,7 +53,7 @@ When a stand-alone application is deployed, a default Liberty configuration is p
 * servlet-3.1
 * websocket-1.1
 * icap:managementConnector-1.0
-* appstate-1.0
+* appstate-2.0
 
 These features correspond to the Java EE 7 Web Profile features. You can specify a different set of Liberty features by setting the JBP_CONFIG_LIBERTY environment variable. For example, to enable jsp-2.3 and websocket-1.1 features only, run the command and restage the application:
 
@@ -97,7 +97,7 @@ The entire default Liberty server.xml configuration file is as follows:
           <feature>servlet-3.1</feature>
           <feature>websocket-1.1</feature>
           <feature>icap:managementConnector-1.0</feature>
-          <feature>appstate-1.0</feature>
+          <feature>appstate-2.0</feature>
        </featureManager>
 
        <application name='myapp' location='myapp.war' type='war' context-root='/'/>
@@ -109,7 +109,7 @@ The entire default Liberty server.xml configuration file is as follows:
        <applicationMonitor dropinsEnabled='false' updateTrigger='mbean'/>
        <config updateTrigger='mbean'/>
        <cdi12 enableImplicitBeanArchives='false'/>
-       <appstate appName='myapp' markerPath='${home}/../.liberty.state'/>
+       <appstate2 appName='myapp'/>
     </server>
 ```
 {: codeblock}
