@@ -12,7 +12,9 @@ copyright:
 
 #Services
 {: #services}
-*Letzte Aktualisierung: 10. August 2016*
+
+*Letzte Aktualisierung: 21. Oktober 2016*
+{: .last-updated} 
 
 Verfügbare Services finden Sie im **Katalog** unter **Services** in der
 {{site.data.keyword.Bluemix}}-Benutzerschnittstelle.
@@ -158,7 +160,7 @@ Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region verfügbar. In
 
 # Service zur Anwendung hinzufügen
 {: #add_service}
-*Letzte Aktualisierung: 8 March 2016*
+
 
 {{site.data.keyword.Bluemix}} bietet eine Liste von Services an, die im Auftrag des Entwicklers verwaltet werden. Um einen Service hinzuzufügen, den Ihre Anwendung verwenden kann, müssen Sie eine Instanz dieses Service anfordern und die Anwendung für die Interaktion mit dem Service konfigurieren.
 
@@ -326,7 +328,7 @@ Wenn Sie über eine Serviceinstanz verfügen, die erstellt und an Apps in einer 
       2. Rufen Sie die Berechtigungsnachweise und Verbindungsparameter aus der Umgebungsvariablen VCAP_SERVICES der Serviceinstanz in der Region ab, in der sich der Service befindet. Führen Sie die folgenden Schritte aus:
 
 	       1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf die Anwendungskachel. Die Übersichtsseite wird angezeigt.
-	       2. Klicken Sie im Navigationsbereich auf **Umgebungsvariablen**. Die Details zur Umgebungsvariablen *VCAP_SERVICES* werden im rechten Fensterbereich angezeigt. Dokumentieren Sie den JSON-Inhalt für die Serviceinstanz.
+	       2. Klicken Sie im Navigationsbereich auf **Umgebungsvariablen**. Die Details zur Umgebungsvariablen *VCAP_SERVICES* werden angezeigt. Dokumentieren Sie den JSON-Inhalt für die Serviceinstanz.
 
       3. Wechseln Sie zu der Region, in der Sie die Serviceinstanz verwenden möchten. Erweitern Sie in der Menüleiste von {{site.data.keyword.Bluemix_notm}} die Option **Region** oder klicken Sie auf das Symbol für **Region** und wählen Sie anschließend die Region aus, in der Sie die Serviceinstanz verwenden möchten.
 

@@ -12,7 +12,9 @@ copyright:
 
 #服務
 {: #services}
-*前次更新：2016 年 8 月 10 日*
+
+*前次更新：2016 年 10 月 21 日*
+{: .last-updated} 
 
 您可以在 {{site.data.keyword.Bluemix}} 使用者介面的**型錄**中，在**服務**下找到可用的服務。
 {:shortdesc}
@@ -144,7 +146,7 @@ copyright:
 
 # 將服務新增至您的應用程式
 {: #add_service}
-*前次更新：2016 年 3 月 8 日*
+
 
 {{site.data.keyword.Bluemix}} 有一份服務清單，並代表開發人員管理它們。若要新增服務以供應用程式使用，您必須要求此服務的實例，並配置應用程式以與服務互動。
 
@@ -315,9 +317,8 @@ cf uups testups2 -l syslog://example2.com
 
       2. 在服務存在的地區中，從服務實例的 VCAP_SERVICES 環境變數擷取認證及連線參數。請完成下列步驟：
 
-
 	       1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」中，按一下您的應用程式磚。即會顯示「概觀」頁面。
-	       2. 在導覽窗格中，按一下**環境變數**。右窗格會顯示 *VCAP_SERVICES* 環境變數詳細資料。請記錄服務實例的 JSON 內容。
+	       2. 在導覽窗格中，按一下**環境變數**。即會顯示 *VCAP_SERVICES* 環境變數詳細資料。請記錄服務實例的 JSON 內容。
 
       3. 切換至您從想要使用服務實例的地區。在 {{site.data.keyword.Bluemix_notm}} 功能表列中，展開**地區**，或按一下**地區**圖示，然後選取您要使用服務實例的地區。
 
@@ -327,7 +328,7 @@ cf uups testups2 -l syslog://example2.com
 
 	     ```
 	     cf bind-service myapp user-provided_service_instance
-	```
+	     ```
 
 
 

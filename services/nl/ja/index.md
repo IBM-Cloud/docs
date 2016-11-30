@@ -12,7 +12,8 @@ copyright:
 
 #サービス
 {: #services}
-*最終更新日: 2016 年 8 月 10 日*
+*最終更新日: 2016 年 10 月 23 日
+*
 
 {{site.data.keyword.Bluemix_notm}} によって、サービスとアプリの実装、ホスト、および拡大を簡単に行うことができます。それにより、
 アプリケーション・ロジックとアプリケーション設計に集中することができます。
@@ -34,93 +35,108 @@ copyright:
 ##試験的サービス
 {: #experimental_services}
 
-{{site.data.keyword.Bluemix_notm}} には、試すことができる試験的サービスもあります。使用可能な試験的サービス、ボイラープレート、およびランタイムをすべて表示するには、{{site.data.keyword.Bluemix_notm}} にログインした後、「カタログ」の下部にスクロールし、**「{{site.data.keyword.Bluemix_notm}} Experimental Services」**をクリックします。
+{{site.data.keyword.Bluemix_notm}} には、試すことができる試験的サービスもあります。使用可能な試験的サービス、ボイラープレート、およびランタイムをすべて表示するには、{{site.data.keyword.Bluemix_notm}} コンソールにログインした後、**「カタログ」**をクリックし、カタログの下部にスクロールし、**「{{site.data.keyword.Bluemix_notm}} Experimental Services」**をクリックします。
 
 試験的サービスは安定していない可能性があり、前のバージョンとは互換性のない方向で変更される場合があります。これらのサービスを実稼働環境で使用することは推奨されません。試験的サービスに対するサポートは、{{site.data.keyword.Bluemix_notm}} Developers Community を通じて提供されます。IBM が問題を調査し、その問題が試験的サービスの欠陥であると判定された場合、IBM は修正を提供する義務を負いません。
 
 ##地域別のサービス
 {: #services_region}
 
-各 {{site.data.keyword.Bluemix_notm}} 地域ですべてのサービスが利用できるわけではありません。
-以下の表は、IBM が提供するサービスを示しています。
+各 {{site.data.keyword.Bluemix_notm}} 地域ですべてのサービスが購入できるわけではありません。また、当該地域でサービスが購入可能な場合でも、サービスは別の場所でホストされていることがあります。以下の表は、IBM が提供するサービスを示しています。
 
 
-
-|サービス	|米国南部地域で利用可能	|ヨーロッパ英国地域で利用可能 |オーストラリア、シドニー地域で利用可能|
+|サービス	|米国ダラスで購入可能	|英国ロンドンで購入可能 |オーストラリアのシドニーで購入可能|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}			|はい		|いいえ		|いいえ|
-|{{site.data.keyword.activedeployshort}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.alchemyapishort}} 		|はい	   	|はい  		|はい|
-|{{site.data.keyword.alertnotificationshort}}		|はい		|はい			|はい		|
-|{{site.data.keyword.appsecshort}}		|はい		|いいえ		|いいえ|
-|{{site.data.keyword.appseccloudshort}}  |はい  |はい  |はい  |
-|{{site.data.keyword.APS_DA}}			|はい		|いいえ		|いいえ|
-|{{site.data.keyword.APS_MA}}			|はい		|いいえ		|いいえ|
-|{{site.data.keyword.amashort}}			|はい		|はい		|はい|
-|{{site.data.keyword.hadoopst}}			|はい		|いいえ		|いいえ|
-|{{site.data.keyword.APIM}}			|はい		|はい		|はい|
-|{{site.data.keyword.autoscaling}}		|はい		|はい		|はい|
-|{{site.data.keyword.bigicloudst}}		|はい		|いいえ		|いいえ|
-|{{site.data.keyword.blockstorageshort}}  |いいえ  |はい  |いいえ|
-|{{site.data.keyword.rules_short}}		|はい		|はい		|はい|
-|{{site.data.keyword.cloudint}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.cloudant}}			|はい		|はい		|はい|
-|{{site.data.keyword.conceptexpansionshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.conceptinsightsshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.dashdbshort}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.datacshort}}		|はい		|はい		|はい|
-|{{site.data.keyword.DB2OnCloud_short}}		|はい		|はい		|はい|
-|{{site.data.keyword.deliverypipeline}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.dialogshort}}		|はい		|はい		|はい|
-|{{site.data.keyword.documentconversionshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.creshort}}			|はい		|いいえ		|いいえ|
-|{{site.data.keyword.game}}			|はい		|はい		|はい|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|はい	|はい		|はい|
-|{{site.data.keyword.GlobalizationPipeline_short}}	|はい		|はい		|はい|
-|{{site.data.keyword.dataworks_short}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.twittershort}}		|はい		|はい		|はい|
-|{{site.data.keyword.weather_short}}		|はい		|はい		|はい|
-|{{site.data.keyword.IntegrationTestingshort}}	|はい		|はい		|いいえ|
-|{{site.data.keyword.iot_short}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.keymanagementserviceshort}}	|はい		|はい		|いいえ|
-|{{site.data.keyword.languagetranslationshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.messagehub}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.messageresonanceshort}}	|はい		|はい		|いいえ|
-|{{site.data.keyword.APS_MAiOS}} 		|はい		|いいえ		|いいえ|
-|{{site.data.keyword.macm_short}}		|はい		|はい		|はい|
-|{{site.data.keyword.mobilemam}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.mobiledata}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.manda}}			|はい		|はい		|はい|
-|{{site.data.keyword.mqa}}			|はい		|はい		|はい|
-|{{site.data.keyword.mql}}			|はい		|はい		|はい|
-|{{site.data.keyword.nlclassifierlshort}} 	|はい 		|はい 		|はい|
-|{{site.data.keyword.objectstorageshort}}	|はい		|はい		|いいえ|
-|{{site.data.keyword.personalityinsightsshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.mobilepush}}		|はい		|はい		|はい|
-|{{site.data.keyword.mobilepushshort}}				|はい		|はい		|はい|
-|{{site.data.keyword.questionandanswershort}}	|はい		|はい		|はい|
-|{{site.data.keyword.rapidApps}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.relationshipextractionshort}}	|はい	|はい		|はい|
-|{{site.data.keyword.retrieveandrankshort}}	|はい 		|はい 		|はい|
-|{{site.data.keyword.SecureGateway}}		|はい		|はい		|はい|
-|{{site.data.keyword.servicediscoveryshort}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.serviceproxyshort}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.sescashort}}		|はい		|はい		|はい|
-|{{site.data.keyword.ssofull}}			|はい		|いいえ		|いいえ|
-|{{site.data.keyword.speechtotextshort}}	|はい 		|はい	 	|はい|
-|{{site.data.keyword.sqldb}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.staticanalyzershort}}	|はい		|はい		|いいえ|
-|{{site.data.keyword.streaminganalyticsshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.texttospeechshort}} 	|はい 		|はい	 	|はい|
-|{{site.data.keyword.times}}			|はい		|はい		|いいえ|
-|{{site.data.keyword.toneanalyzershort}} 	|はい 		|はい 		|はい|
-|{{site.data.keyword.trackplan}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.visualinsightsshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.visualizationrenderingshort}} |はい		|はい		|いいえ|
-|{{site.data.keyword.workflow}}			|はい		|はい		|はい|
-|{{site.data.keyword.workloadscheduler}}	|はい		|はい		|はい|
-|{{site.data.keyword.xpagesservice_short}}	|はい		|はい		|いいえ|
+|{{site.data.keyword.cloudaccesstrailshort}}			|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
+|{{site.data.keyword.activedeployshort}}			|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可 |
+|{{site.data.keyword.alchemyapishort}} 		|米国ダラスでホスト	   	|米国ダラスでホスト  		|米国ダラスでホスト |
+|{{site.data.keyword.alertnotificationshort}}		|米国ダラスでホスト		|英国ロンドンでホスト			|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.appseccloudshort}}  |米国ダラスでホスト  |米国ダラスでホスト  |米国ダラスでホスト  |
+|Apache Spark			|米国ダラスでホスト		|地域で使用不可		|地域で使用不可|
+|{{site.data.keyword.apiconnect_short}}			|米国南部でホスト		|英国でホスト		|シドニーでホスト |
+|{{site.data.keyword.APIHarmony}}			|米国南部でホスト		|英国でホスト		|シドニーでホスト |
+|Automated Accessibility Tester			|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.autoscaling}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.prf_hubshort}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.bigicloudst}}		|米国ダラスでホスト		|地域で使用不可		|地域で使用不可 |
+|{{site.data.keyword.blockchain}}  |米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.rules_short}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|CDN			|米国ダラスでホスト		|地域で使用不可		|地域で使用不可 |
+|{{site.data.keyword.conversationshort}}		|米国ダラスでホスト		|米国ダラスでホスト		|米国ダラスでホスト |
+|{{site.data.keyword.iotmapinsights_short}}			|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|Cloud Foundry Runtimes		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.cloudant}}			|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.composeForEtcd}}	|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.composeForMongoDB}}			|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.composeForPostgreSQL}}			|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.composeForRethinkDB}}	|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.composeForRabbitMQ}}	|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.composeForRedis}}	|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.conceptinsightsshort}}	|米国ダラスでホスト		|米国ダラスでホスト		|米国ダラスでホスト |
+|{{site.data.keyword.dashdbshort}}		|米国ダラスでホスト		|英国ロンドンでホスト		|シドニーでホスト |
+|{{site.data.keyword.datacshort}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.DB2OnCloud_short}}		|米国ダラスでホスト		|米国ダラスでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.deliverypipeline}}		|米国ダラスでホスト		|米国ダラスでホスト		|米国ダラスでホスト |
+|Deployment Risk Analytics		|米国ダラスでホスト		|地域で使用不可		|地域で使用不可 |
+|Digital Content Checker		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.documentconversionshort}}	|米国ヒューストンでホスト		|米国ヒューストンでホスト		|米国ヒューストンでホスト |
+|{{site.data.keyword.docgen_short}}		|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可 |
+|Elasticsearch by Compose	|米国ダラスおよび米国ノーザン・バージニアでホスト	|英国ロンドンおよびアイルランドでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.geospatialshort_Geospatial}}	|米国ダラスでホスト	|英国ロンドンでホスト		|英国ロンドンでホスト |
+|{{site.data.keyword.GlobalizationPipeline_short}}	|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.dataworks_short}}		|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可 |
+|{{site.data.keyword.openwhisk}}		|米国ダラスでホスト		|地域で使用不可		|地域で使用不可 |
+|{{site.data.keyword.containerlong}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.datastagefull}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.graphshort}}       |米国ダラスでホスト		|米国ダラスでホスト		|地域で使用不可 |
+|{{site.data.keyword.mdmcloudfull}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|Identity Mixer		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.IOCloud_short}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.twittershort}}		|米国ダラスでホスト		|米国ダラスでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.IntegrationTestingshort}}	|米国サンノゼでホスト		|地域で使用不可		|地域で使用不可|
+|{{site.data.keyword.iot4auto_short}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト|
+|{{site.data.keyword.iotelectronics}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト|
+|{{site.data.keyword.iotinsurance_short}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト|
+|{{site.data.keyword.iot_short}}		|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
+|{{site.data.keyword.iotrtinsights_short}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト|
+|IoT Workbench		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト|
+|{{site.data.keyword.keymanagementserviceshort}}	|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
+|{{site.data.keyword.languagetranslationshort}}	|米国ダラスでホスト		|米国ダラスでホスト		|米国ダラスでホスト |
+|{{site.data.keyword.pm_short}}   |米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
+|{{site.data.keyword.eventhubshort}}		|米国ダラスでホスト		|地域で使用不可		|地域で使用不可|
+|{{site.data.keyword.messagehub}}		|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
+|{{site.data.keyword.incubator}}		|米国ダラスでホスト		|地域で使用不可		|地域で使用不可|
+|{{site.data.keyword.mobileanalytics_short}}		|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
+|{{site.data.keyword.amashort}}			|米国ダラスでホスト		|英国ロンドンでホスト			|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.macm_short}}		|米国ダラスでホスト		|英国ロンドンでホスト			|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.mobilefoundation_short}}			|米国ダラスでホスト		|英国ロンドンでホスト			|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.mqa}}			|米国ダラスでホスト		|英国ロンドンでホスト			|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.manda}}			|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.mql}}			|地域で使用不可		|地域で使用不可		|オーストラリアのシドニーでホスト |
+|Network Security Groups for VMs 	|地域で使用不可		|米国ダラスでホスト		|地域で使用不可 |
+|{{site.data.keyword.nlclassifierlshort}} 	|米国ダラスでホスト		|米国ダラスでホスト		|米国ダラスでホスト |
+|{{site.data.keyword.objectstorageshort}}	|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
+|Open Toolchain			|米国ダラスでホスト		|地域で使用不可		|地域で使用不可|
+|{{site.data.keyword.personalityinsightsshort}}	|米国ヒューストンでホスト		|米国ヒューストンでホスト		|米国ヒューストンでホスト |
+|{{site.data.keyword.mobilepushshort}}				|米国ダラスでホスト		|英国ロンドンでホスト			|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.runbook_short}}				|米国ダラスでホスト		|英国ロンドンでホスト			|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.SecureGateway}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.sescashort}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.servicediscoveryshort}}		|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
+|{{site.data.keyword.serviceproxyshort}}		|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
+|{{site.data.keyword.ssofull}}			|米国ワシントンでホスト		|地域で使用不可		|地域で使用不可|
+|{{site.data.keyword.speechtotextshort}}	|米国ダラスでホスト		|米国ダラスでホスト		|米国ダラスでホスト |
+|{{site.data.keyword.streaminganalyticsshort}}	|米国ダラスでホスト		|英国ロンドンでホスト		|英国ロンドンでホスト|
+|{{site.data.keyword.texttospeechshort}} 	|米国ダラスでホスト		|米国ダラスでホスト		|米国ダラスでホスト |
+|{{site.data.keyword.toneanalyzershort}} 	|米国ダラスでホスト		|米国ダラスでホスト		|米国ダラスでホスト |
+|{{site.data.keyword.trackplan}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.tradeoffanalyticsshort}}	|米国ダラスでホスト		|米国ダラスでホスト		|米国ダラスでホスト |
+|Visual Recognition	|米国ダラスでホスト		|米国ダラスでホスト		|米国ダラスでホスト |
+|VPN			|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
+|{{site.data.keyword.weather_short}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.appserver_short}}	|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
+|{{site.data.keyword.workloadscheduler}}	|米国ダラスおよび米国ワシントンでホスト		|オランダのアムステルダムおよびイタリアのミラノでホスト		|オーストラリアのメルボルンでホスト |
+|{{site.data.keyword.xpagesservice_short}}	|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
 *表 2. サービスの利用可能性*
 
 

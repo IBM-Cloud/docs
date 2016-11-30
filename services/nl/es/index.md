@@ -12,7 +12,7 @@ copyright:
 
 #Servicios
 {: #services}
-*Última actualización: 10 de agosto de 2016*
+*Última actualización: 23 de octubre de 2016*
 
 {{site.data.keyword.Bluemix_notm}} le permite fácilmente implementar, alojar y escalar servicios y aplicaciones. Puede centrarse en la lógica de la aplicación y en el diseño de la aplicación.
 {:shortdesc}
@@ -30,93 +30,110 @@ Se proporcionan varios niveles de soporte para los servicios de {{site.data.keyw
 ##Servicios experimentales
 {: #experimental_services}
 
-{{site.data.keyword.Bluemix_notm}} también dispone de servicios experimentales que puede probar. Para ver todos los servicios experimentales, contenedores modelo y tiempos de ejecución disponibles, inicie una sesión en {{site.data.keyword.Bluemix_notm}}, desplácese hasta el final del catálogo y pulse **{{site.data.keyword.Bluemix_notm}} Servicios experimentales**.
+{{site.data.keyword.Bluemix_notm}} también dispone de servicios experimentales que puede probar. Para ver todos los servicios experimentales, contenedores modelo y tiempos de ejecución disponibles, inicie una sesión en la consola de {{site.data.keyword.Bluemix_notm}}, pulse **Catálogo**, desplácese hasta el final del catálogo y pulse **{{site.data.keyword.Bluemix_notm}} Servicios experimentales**.
 
 Los servicios experimentales pueden no ser estables y es posible que cambien de modo que no sean compatibles con versiones anteriores. No se recomienda utilizar estos servicios en entornos de producción. El soporte para servicios experimentales se proporciona a través de la Comunidad de desarrolladores de {{site.data.keyword.Bluemix_notm}}. Si IBM investiga un problema y se determina que el problema es un defecto de servicio experimental, IBM no está obligado a proporcionar un arreglo.
 
 ##Servicios por región
 {: #services_region}
 
-No todos los servicios están disponibles en cada región de {{site.data.keyword.Bluemix_notm}}. La siguiente tabla muestra los servicios proporcionados por IBM.
+No todos los servicios están disponibles para su adquisición en cada región de {{site.data.keyword.Bluemix_notm}}. E, incluso si el servicio está disponible para su adquisición en dicha región, el servicio puede estar alojado en una ubicación diferente. La siguiente tabla muestra los servicios proporcionados por IBM.
 
 
-
-|Servicio	|Disponible en la región EE.UU. sur	|Disponible en la región Europa Reino Unido |Disponible en la región Australiana Sídney|
+|Servicio	|Disponible para su adquisición en Dallas, Estados Unidos	|Disponible para su adquisición en Londres, Reino Unido |Disponible para su adquisición en Sídney, Australia|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}			|Sí		|No		|No|
-|{{site.data.keyword.activedeployshort}}			|Sí		|Sí		|No|
-|{{site.data.keyword.alchemyapishort}} 		|Sí	   	|Sí  		|Sí|
-|{{site.data.keyword.alertnotificationshort}}		|Sí		|Sí			|Sí		|
-|{{site.data.keyword.appsecshort}}		|Sí		|No		|No|
-|{{site.data.keyword.appseccloudshort}}  |Sí  |Sí  |Sí  |
-|{{site.data.keyword.APS_DA}}			|Sí		|No		|No|
-|{{site.data.keyword.APS_MA}}			|Sí		|No		|No|
-|{{site.data.keyword.amashort}}			|Sí		|Sí		|Sí|
-|{{site.data.keyword.hadoopst}}			|Sí		|No		|No|
-|{{site.data.keyword.APIM}}			|Sí		|Sí		|Sí|
-|{{site.data.keyword.autoscaling}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.bigicloudst}}		|Sí		|No		|No|
-|{{site.data.keyword.blockstorageshort}}  |No  |Sí  |No|
-|{{site.data.keyword.rules_short}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.cloudint}}			|Sí		|Sí		|No|
-|{{site.data.keyword.cloudant}}			|Sí		|Sí		|Sí|
-|{{site.data.keyword.conceptexpansionshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.conceptinsightsshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.dashdbshort}}		|Sí		|Sí		|No|
-|{{site.data.keyword.datacshort}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.DB2OnCloud_short}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.deliverypipeline}}		|Sí		|Sí		|No|
-|{{site.data.keyword.dialogshort}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.documentconversionshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.creshort}}			|Sí		|No		|No|
-|{{site.data.keyword.game}}			|Sí		|Sí		|Sí|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|Sí	|Sí		|Sí|
-|{{site.data.keyword.GlobalizationPipeline_short}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.dataworks_short}}		|Sí		|Sí		|No|
-|{{site.data.keyword.twittershort}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.weather_short}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.IntegrationTestingshort}}	|Sí		|Sí		|No|
-|{{site.data.keyword.iot_short}}		|Sí		|Sí		|No|
-|{{site.data.keyword.keymanagementserviceshort}}	|Sí		|Sí		|No|
-|{{site.data.keyword.languagetranslationshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.messagehub}}		|Sí		|Sí		|No|
-|{{site.data.keyword.messageresonanceshort}}	|Sí		|Sí		|No|
-|{{site.data.keyword.APS_MAiOS}} 		|Sí		|No		|No|
-|{{site.data.keyword.macm_short}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.mobilemam}}		|Sí		|Sí		|No|
-|{{site.data.keyword.mobiledata}}		|Sí		|Sí		|No|
-|{{site.data.keyword.manda}}			|Sí		|Sí		|Sí|
-|{{site.data.keyword.mqa}}			|Sí		|Sí		|Sí|
-|{{site.data.keyword.mql}}			|Sí		|Sí		|Sí|
-|{{site.data.keyword.nlclassifierlshort}} 	|Sí 		|Sí 		|Sí|
-|{{site.data.keyword.objectstorageshort}}	|Sí		|Sí		|No|
-|{{site.data.keyword.personalityinsightsshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.mobilepush}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.mobilepushshort}}				|Sí		|Sí		|Sí|
-|{{site.data.keyword.questionandanswershort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.rapidApps}}		|Sí		|Sí		|No|
-|{{site.data.keyword.relationshipextractionshort}}	|Sí	|Sí		|Sí|
-|{{site.data.keyword.retrieveandrankshort}}	|Sí 		|Sí 		|Sí|
-|{{site.data.keyword.SecureGateway}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.servicediscoveryshort}}		|Sí		|Sí		|No|
-|{{site.data.keyword.serviceproxyshort}}		|Sí		|Sí		|No|
-|{{site.data.keyword.sescashort}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.ssofull}}			|Sí		|No		|No|
-|{{site.data.keyword.speechtotextshort}}	|Sí 		|Sí	 	|Sí|
-|{{site.data.keyword.sqldb}}			|Sí		|Sí		|No|
-|{{site.data.keyword.staticanalyzershort}}	|Sí		|Sí		|No|
-|{{site.data.keyword.streaminganalyticsshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.texttospeechshort}} 	|Sí 		|Sí	 	|Sí|
-|{{site.data.keyword.times}}			|Sí		|Sí		|No|
-|{{site.data.keyword.toneanalyzershort}} 	|Sí 		|Sí 		|Sí|
-|{{site.data.keyword.trackplan}}		|Sí		|Sí		|No|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.visualinsightsshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.visualizationrenderingshort}} |Sí		|Sí		|No|
-|{{site.data.keyword.workflow}}			|Sí		|Sí		|Sí|
-|{{site.data.keyword.workloadscheduler}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.xpagesservice_short}}	|Sí		|Sí		|No|
+|{{site.data.keyword.cloudaccesstrailshort}}			|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
+|{{site.data.keyword.activedeployshort}}			|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región |
+|{{site.data.keyword.alchemyapishort}} 		|Alojado en Dallas,US	   	|Alojado en Dallas,US  		|Alojado en Dallas,US |
+|{{site.data.keyword.alertnotificationshort}}		|Alojado en Dallas,US		|Alojado en Londres,UK			|Alojado en Sídney,AU |
+|{{site.data.keyword.appseccloudshort}}  |Alojado en Dallas,US  |Alojado en Dallas,US  |Alojado en Dallas,US  |
+|Apache Spark			|Alojado en Dallas,US		|No disponible en la región		|No disponible en la región|
+|{{site.data.keyword.apiconnect_short}}			|Alojado en EE.UU. sur		|Alojado en Reino Unido		|Alojado en Sídney |
+|{{site.data.keyword.APIHarmony}}			|Alojado en EE.UU. sur		|Alojado en Reino Unido		|Alojado en Sídney |
+|Probador de accesibilidad automatizado			|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.autoscaling}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.prf_hubshort}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.bigicloudst}}		|Alojado en Dallas,US		|No disponible en la región		|No disponible en la región |
+|{{site.data.keyword.blockchain}}  |Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.rules_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|CDN			|Alojado en Dallas,US		|No disponible en la región		|No disponible en la región |
+|{{site.data.keyword.conversationshort}}		|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Dallas,US |
+|{{site.data.keyword.iotmapinsights_short}}			|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|Tiempos de ejecución de Cloud Foundry		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.cloudant}}			|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.composeForEtcd}}	|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.composeForMongoDB}}			|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.composeForPostgreSQL}}			|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.composeForRethinkDB}}	|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.composeForRabbitMQ}}	|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.composeForRedis}}	|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.conceptinsightsshort}}	|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Dallas,US |
+|{{site.data.keyword.dashdbshort}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney |
+|{{site.data.keyword.datacshort}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.DB2OnCloud_short}}		|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Sídney,AU |
+|{{site.data.keyword.deliverypipeline}}		|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Dallas,US |
+|Deployment Risk Analytics		|Alojado en Dallas,US		|No disponible en la región		|No disponible en la región |
+|Comprobador de contenido digital		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.documentconversionshort}}	|Alojado en Houston,US		|Alojado en Houston,US		|Alojado en Houston,US |
+|{{site.data.keyword.docgen_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región |
+|Elasticsearch by Compose	|Alojado en Dallas,US y norte de Virginia,US	|Alojado en Londres,UK e Irlanda		|Alojado en Sídney,AU |
+|{{site.data.keyword.geospatialshort_Geospatial}}	|Alojado en Dallas,US	|Alojado en Londres,UK		|Alojado en Londres,UK |
+|{{site.data.keyword.GlobalizationPipeline_short}}	|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.dataworks_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región |
+|{{site.data.keyword.openwhisk}}		|Alojado en Dallas,US		|No disponible en la región		|No disponible en la región |
+|{{site.data.keyword.containerlong}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.datastagefull}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.graphshort}}       |Alojado en Dallas,US		|Alojado en Dallas,US		|No disponible en la región |
+|{{site.data.keyword.mdmcloudfull}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|Identity Mixer		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.IOCloud_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.twittershort}}		|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Sídney,AU |
+|{{site.data.keyword.IntegrationTestingshort}}	|Alojado en San José,US		|No disponible en la región		|No disponible en la región|
+|{{site.data.keyword.iot4auto_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU|
+|{{site.data.keyword.iotelectronics}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU|
+|{{site.data.keyword.iotinsurance_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU|
+|{{site.data.keyword.iot_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
+|{{site.data.keyword.iotrtinsights_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU|
+|Entorno de trabajo de IoT		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU|
+|{{site.data.keyword.keymanagementserviceshort}}	|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
+|{{site.data.keyword.languagetranslationshort}}	|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Dallas,US |
+|{{site.data.keyword.pm_short}}   |Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
+|{{site.data.keyword.eventhubshort}}		|Alojado en Dallas,US		|No disponible en la región		|No disponible en la región|
+|{{site.data.keyword.messagehub}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
+|{{site.data.keyword.incubator}}		|Alojado en Dallas,US		|No disponible en la región		|No disponible en la región|
+|{{site.data.keyword.mobileanalytics_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
+|{{site.data.keyword.amashort}}			|Alojado en Dallas,US		|Alojado en Londres,UK			|Alojado en Sídney,AU |
+|{{site.data.keyword.macm_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK			|Alojado en Sídney,AU |
+|{{site.data.keyword.mobilefoundation_short}}			|Alojado en Dallas,US		|Alojado en Londres,UK			|Alojado en Sídney,AU |
+|{{site.data.keyword.mqa}}			|Alojado en Dallas,US		|Alojado en Londres,UK			|Alojado en Sídney,AU |
+|{{site.data.keyword.manda}}			|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.mql}}			|No disponible en la región		|No disponible en la región		|Alojado en Sídney,AU |
+|Grupos de seguridad de red para máquinas virtuales 	|No disponible en la región		|Alojado en Dallas,US		|No disponible en la región |
+|{{site.data.keyword.nlclassifierlshort}} 	|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Dallas,US |
+|{{site.data.keyword.objectstorageshort}}	|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
+|Cadena de herramientas abierta			|Alojado en Dallas,US		|No disponible en la región		|No disponible en la región|
+|{{site.data.keyword.personalityinsightsshort}}	|Alojado en Houston,US		|Alojado en Houston,US		|Alojado en Houston,US |
+|{{site.data.keyword.mobilepushshort}}				|Alojado en Dallas,US		|Alojado en Londres,UK			|Alojado en Sídney,AU |
+|{{site.data.keyword.runbook_short}}				|Alojado en Dallas,US		|Alojado en Londres,UK			|Alojado en Sídney,AU |
+|{{site.data.keyword.SecureGateway}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.sescashort}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.servicediscoveryshort}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
+|{{site.data.keyword.serviceproxyshort}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
+|{{site.data.keyword.ssofull}}			|Alojado en Washington,US		|No disponible en la región		|No disponible en la región|
+|{{site.data.keyword.speechtotextshort}}	|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Dallas,US |
+|{{site.data.keyword.streaminganalyticsshort}}	|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Londres,UK|
+|{{site.data.keyword.texttospeechshort}} 	|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Dallas,US |
+|{{site.data.keyword.toneanalyzershort}} 	|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Dallas,US |
+|{{site.data.keyword.trackplan}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.tradeoffanalyticsshort}}	|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Dallas,US |
+|Visual Recognition	|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Dallas,US |
+|VPN			|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
+|{{site.data.keyword.weather_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.appserver_short}}	|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
+|{{site.data.keyword.workloadscheduler}}	|Alojado en Dallas, US y Washington,US		|Alojado en Ámsterdam,NL y Milán,IT		|Alojado en Melbourne,AU |
+|{{site.data.keyword.xpagesservice_short}}	|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
 *Tabla 2. Disponibilidad del servicio*
+
 
 ## Disponibilidad continuada para servicios
 {: #services_availability}

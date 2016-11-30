@@ -12,6 +12,7 @@ copyright:
 {: #app_services}
 
 *Letzte Aktualisierung: 28. Januar 2016*
+{: .last-updated}
 
 Mit diesen Services können Sie Funktionen rasch hinzufügen oder entfernen, während Sie Webanwendungen in der Cloud entwickeln. Außerdem können Sie Management-Tasks vereinfachen sowie Ihre Geschäftsprozesse und -regeln verwalten. 
 {:shortdesc}

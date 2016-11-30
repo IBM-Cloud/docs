@@ -12,7 +12,7 @@ copyright:
 
 #服務
 {: #services}
-*前次更新：2016 年 8 月 10 日*
+*前次更新：2016 年 10 月 23 日*
 
 {{site.data.keyword.Bluemix_notm}} 讓您能輕鬆地實作、管理及擴充服務和應用程式。您可以將焦點放在應用程式邏輯和應用程式設計。
 {:shortdesc}
@@ -30,92 +30,108 @@ copyright:
 ##實驗性服務
 {: #experimental_services}
 
-{{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及運行環境，請登入 {{site.data.keyword.Bluemix_notm}}，捲動至型錄底端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗性服務**。
+{{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及運行環境，請登入 {{site.data.keyword.Bluemix_notm}} 主控台，按一下**型錄**，捲動至型錄底端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗性服務**。
 
 實驗性服務可能不穩定，而且可能會變更，而與較舊版不相容。這些服務不建議用於正式作業環境。實驗性服務支援是透過「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為實驗性服務中的錯誤，則 IBM 不負責提供修正程式。
 
 ##各地區的服務
 {: #services_region}
 
-並非所有服務都能在每個 {{site.data.keyword.Bluemix_notm}} 地區使用。下表顯示 IBM 所提供的服務。
+並非每個 {{site.data.keyword.Bluemix_notm}} 地區都可購買到所有服務。而且，即使可在該地區購買到此服務，此服務也可能是在不同位置進行管理。下表顯示 IBM 所提供的服務。
 
 
-
-|服務	|可在美國南部地區使用	|可在歐洲英國地區使用 |可在澳洲雪梨地區使用|
+|服務	|可在美國達拉斯購買	|可在英國倫敦購買 |可在澳洲雪梨購買|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}			|是		|否		|否|
-|{{site.data.keyword.activedeployshort}}			|是		|是		|否|
-|{{site.data.keyword.alchemyapishort}} 		|是	   	|是  		|是|
-|{{site.data.keyword.alertnotificationshort}}		|是		|是			|是		|
-|{{site.data.keyword.appsecshort}}		|是		|否		|否|
-|{{site.data.keyword.appseccloudshort}}  |是  |是  |是  |
-|{{site.data.keyword.APS_DA}}			|是		|否		|否|
-|{{site.data.keyword.APS_MA}}			|是		|否		|否|
-|{{site.data.keyword.amashort}}			|是		|是		|是|
-|{{site.data.keyword.hadoopst}}			|是		|否		|否|
-|{{site.data.keyword.APIM}}			|是		|是		|是|
-|{{site.data.keyword.autoscaling}}		|是		|是		|是|
-|{{site.data.keyword.bigicloudst}}		|是		|否		|否|
-|{{site.data.keyword.blockstorageshort}}  |否  |是  |否|
-|{{site.data.keyword.rules_short}}		|是		|是		|是|
-|{{site.data.keyword.cloudint}}			|是		|是		|否|
-|{{site.data.keyword.cloudant}}			|是		|是		|是|
-|{{site.data.keyword.conceptexpansionshort}}	|是		|是		|是|
-|{{site.data.keyword.conceptinsightsshort}}	|是		|是		|是|
-|{{site.data.keyword.dashdbshort}}		|是		|是		|否|
-|{{site.data.keyword.datacshort}}		|是		|是		|是|
-|{{site.data.keyword.DB2OnCloud_short}}		|是		|是		|是|
-|{{site.data.keyword.deliverypipeline}}		|是		|是		|否|
-|{{site.data.keyword.dialogshort}}		|是		|是		|是|
-|{{site.data.keyword.documentconversionshort}}	|是		|是		|是|
-|{{site.data.keyword.creshort}}			|是		|否		|否|
-|{{site.data.keyword.game}}			|是		|是		|是|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|是	|是		|是|
-|{{site.data.keyword.GlobalizationPipeline_short}}	|是		|是		|是|
-|{{site.data.keyword.dataworks_short}}		|是		|是		|否|
-|{{site.data.keyword.twittershort}}		|是		|是		|是|
-|{{site.data.keyword.weather_short}}		|是		|是		|是|
-|{{site.data.keyword.IntegrationTestingshort}}	|是		|是		|否|
-|{{site.data.keyword.iot_short}}		|是		|是		|否|
-|{{site.data.keyword.keymanagementserviceshort}}	|是		|是		|否|
-|{{site.data.keyword.languagetranslationshort}}	|是		|是		|是|
-|{{site.data.keyword.messagehub}}		|是		|是		|否|
-|{{site.data.keyword.messageresonanceshort}}	|是		|是		|否|
-|{{site.data.keyword.APS_MAiOS}} 		|是		|否		|否|
-|{{site.data.keyword.macm_short}}		|是		|是		|是|
-|{{site.data.keyword.mobilemam}}		|是		|是		|否|
-|{{site.data.keyword.mobiledata}}		|是		|是		|否|
-|{{site.data.keyword.manda}}			|是		|是		|是|
-|{{site.data.keyword.mqa}}			|是		|是		|是|
-|{{site.data.keyword.mql}}			|是		|是		|是|
-|{{site.data.keyword.nlclassifierlshort}} 	|是 		|是 		|是|
-|{{site.data.keyword.objectstorageshort}}	|是		|是		|否|
-|{{site.data.keyword.personalityinsightsshort}}	|是		|是		|是|
-|{{site.data.keyword.mobilepush}}		|是		|是		|是|
-|{{site.data.keyword.mobilepushshort}}				|是		|是		|是|
-|{{site.data.keyword.questionandanswershort}}	|是		|是		|是|
-|{{site.data.keyword.rapidApps}}		|是		|是		|否|
-|{{site.data.keyword.relationshipextractionshort}}	|是	|是		|是|
-|{{site.data.keyword.retrieveandrankshort}}	|是 		|是 		|是|
-|{{site.data.keyword.SecureGateway}}		|是		|是		|是|
-|{{site.data.keyword.servicediscoveryshort}}		|是		|是		|否|
-|{{site.data.keyword.serviceproxyshort}}		|是		|是		|否|
-|{{site.data.keyword.sescashort}}		|是		|是		|是|
-|{{site.data.keyword.ssofull}}			|是		|否		|否|
-|{{site.data.keyword.speechtotextshort}}	|是 		|是	 	|是|
-|{{site.data.keyword.sqldb}}			|是		|是		|否|
-|{{site.data.keyword.staticanalyzershort}}	|是		|是		|否|
-|{{site.data.keyword.streaminganalyticsshort}}	|是		|是		|是|
-|{{site.data.keyword.texttospeechshort}} 	|是 		|是	 	|是|
-|{{site.data.keyword.times}}			|是		|是		|否|
-|{{site.data.keyword.toneanalyzershort}} 	|是 		|是 		|是|
-|{{site.data.keyword.trackplan}}		|是		|是		|否|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|是		|是		|是|
-|{{site.data.keyword.visualinsightsshort}}	|是		|是		|是|
-|{{site.data.keyword.visualizationrenderingshort}} |是		|是		|否|
-|{{site.data.keyword.workflow}}			|是		|是		|是|
-|{{site.data.keyword.workloadscheduler}}	|是		|是		|是|
-|{{site.data.keyword.xpagesservice_short}}	|是		|是		|否|
+|{{site.data.keyword.cloudaccesstrailshort}}			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
+|{{site.data.keyword.activedeployshort}}			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用 |
+|{{site.data.keyword.alchemyapishort}} 		|在美國達拉斯進行管理	   	|在美國達拉斯進行管理  		|在美國達拉斯進行管理 |
+|{{site.data.keyword.alertnotificationshort}}		|在美國達拉斯進行管理		|在英國倫敦進行管理			|在澳洲雪梨進行管理 |
+|{{site.data.keyword.appseccloudshort}}  |在美國達拉斯進行管理  |在美國達拉斯進行管理  |在美國達拉斯進行管理  |
+|Apache Spark			|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用|
+|{{site.data.keyword.apiconnect_short}}			|在美國南部進行管理		|在英國進行管理		|在雪梨進行管理 |
+|{{site.data.keyword.APIHarmony}}			|在美國南部進行管理		|在英國進行管理		|在雪梨進行管理 |
+|自動化可存取性測試程式			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.autoscaling}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.prf_hubshort}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.bigicloudst}}		|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用 |
+|{{site.data.keyword.blockchain}}  |在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.rules_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|CDN			|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用 |
+|{{site.data.keyword.conversationshort}}		|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
+|{{site.data.keyword.iotmapinsights_short}}			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|Cloud Foundry 運行環境		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.cloudant}}			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.composeForEtcd}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.composeForMongoDB}}			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.composeForPostgreSQL}}			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.composeForRethinkDB}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.composeForRabbitMQ}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.composeForRedis}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.conceptinsightsshort}}	|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
+|{{site.data.keyword.dashdbshort}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在雪梨進行管理 |
+|{{site.data.keyword.datacshort}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.DB2OnCloud_short}}		|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.deliverypipeline}}		|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
+|部署風險分析		|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用 |
+|數位內容檢查程式		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.documentconversionshort}}	|在美國休斯頓進行管理		|在美國休斯頓進行管理		|在美國休斯頓進行管理 |
+|{{site.data.keyword.docgen_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用 |
+|Elasticsearch by Compose	|在美國達拉斯及美國北維吉尼亞州進行管理	|在英國倫敦及愛爾蘭進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.geospatialshort_Geospatial}}	|在美國達拉斯進行管理	|在英國倫敦進行管理		|在英國倫敦進行管理 |
+|{{site.data.keyword.GlobalizationPipeline_short}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.dataworks_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用 |
+|{{site.data.keyword.openwhisk}}		|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用 |
+|{{site.data.keyword.containerlong}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.datastagefull}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.graphshort}}       |在美國達拉斯進行管理		|在美國達拉斯進行管理		|在此地區無法使用 |
+|{{site.data.keyword.mdmcloudfull}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|身分混合器		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.IOCloud_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.twittershort}}		|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.IntegrationTestingshort}}	|在美國聖荷西進行管理		|在此地區無法使用		|在此地區無法使用|
+|{{site.data.keyword.iot4auto_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理|
+|{{site.data.keyword.iotelectronics}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理|
+|{{site.data.keyword.iotinsurance_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理|
+|{{site.data.keyword.iot_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
+|{{site.data.keyword.iotrtinsights_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理|
+|IoT Workbench		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理|
+|{{site.data.keyword.keymanagementserviceshort}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
+|{{site.data.keyword.languagetranslationshort}}	|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
+|{{site.data.keyword.pm_short}}   |在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
+|{{site.data.keyword.eventhubshort}}		|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用|
+|{{site.data.keyword.messagehub}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
+|{{site.data.keyword.incubator}}		|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用|
+|{{site.data.keyword.mobileanalytics_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
+|{{site.data.keyword.amashort}}			|在美國達拉斯進行管理		|在英國倫敦進行管理			|在澳洲雪梨進行管理 |
+|{{site.data.keyword.macm_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理			|在澳洲雪梨進行管理 |
+|{{site.data.keyword.mobilefoundation_short}}			|在美國達拉斯進行管理		|在英國倫敦進行管理			|在澳洲雪梨進行管理 |
+|{{site.data.keyword.mqa}}			|在美國達拉斯進行管理		|在英國倫敦進行管理			|在澳洲雪梨進行管理 |
+|{{site.data.keyword.manda}}			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.mql}}			|在此地區無法使用		|在此地區無法使用		|在澳洲雪梨進行管理 |
+|Network Security Groups for VMs 	|在此地區無法使用		|在美國達拉斯進行管理		|在此地區無法使用 |
+|{{site.data.keyword.nlclassifierlshort}} 	|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
+|{{site.data.keyword.objectstorageshort}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
+|Open Toolchain			|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用|
+|{{site.data.keyword.personalityinsightsshort}}	|在美國休斯頓進行管理		|在美國休斯頓進行管理		|在美國休斯頓進行管理 |
+|{{site.data.keyword.mobilepushshort}}				|在美國達拉斯進行管理		|在英國倫敦進行管理			|在澳洲雪梨進行管理 |
+|{{site.data.keyword.runbook_short}}				|在美國達拉斯進行管理		|在英國倫敦進行管理			|在澳洲雪梨進行管理 |
+|{{site.data.keyword.SecureGateway}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.sescashort}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.servicediscoveryshort}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
+|{{site.data.keyword.serviceproxyshort}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
+|{{site.data.keyword.ssofull}}			|在美國華盛頓州進行管理		|在此地區無法使用		|在此地區無法使用|
+|{{site.data.keyword.speechtotextshort}}	|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
+|{{site.data.keyword.streaminganalyticsshort}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在英國倫敦進行管理|
+|{{site.data.keyword.texttospeechshort}} 	|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
+|{{site.data.keyword.toneanalyzershort}} 	|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
+|{{site.data.keyword.trackplan}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.tradeoffanalyticsshort}}	|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
+|Visual Recognition	|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
+|VPN			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
+|{{site.data.keyword.weather_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.appserver_short}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|{{site.data.keyword.workloadscheduler}}	|在美國達拉斯及美國華盛頓州進行管理		|在荷蘭阿姆斯特丹及義大利米蘭進行管理		|在澳洲墨爾本進行管理 |
+|{{site.data.keyword.xpagesservice_short}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 *表 2. 服務可用性*
 
 

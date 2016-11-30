@@ -12,6 +12,7 @@ copyright:
 {: #app_services}
 
 *Dernière mise à jour : 28 janvier 2016*
+{: .last-updated}
 
 Utilisez ces services pour ajouter ou retirer des fonctions rapidement alors que vous développez des applications Web dans le cloud. Vous pouvez également simplifier les tâches
 de gestion et organiser vos règles et processus métier. 

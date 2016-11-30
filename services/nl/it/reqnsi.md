@@ -12,7 +12,9 @@ copyright:
 
 #Servizi
 {: #services}
-*Ultimo aggiornamento: 10 agosto 2016*
+
+*Ultimo aggiornamento: 21 ottobre 2016*
+{: .last-updated} 
 
 I servizi disponibili sono elencati nel **catalogo** sotto **Servizi**
 nell'interfaccia utente
@@ -168,7 +170,7 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 
 # Aggiunta di un servizio alla tua applicazione
 {: #add_service}
-*Ultimo aggiornamento: 8 marzo 2016*
+
 
 {{site.data.keyword.Bluemix}} ha un elenco di servizi e
 li gestisce per conto degli sviluppatori. Per aggiungere un servizio a
@@ -376,8 +378,7 @@ in un'altra regione, completa la seguente procedura:
 procedura:
 
 	       1. Nel Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul tile dell'applicazione. Viene visualizzata la pagina Panoramica.
-	       2. Nel riquadro di navigazione, fai clic su **Variabili di ambiente**. I dettagli della variabile di ambiente *VCAP_SERVICES*
-vengono visualizzati nel riquadro a destra. Registra il contenuto JSON per l'istanza
+	       2. Nel riquadro di navigazione, fai clic su **Variabili di ambiente**. Vengono visualizzati i dettagli della variabile di ambiente *VCAP_SERVICES*. Registra il contenuto JSON per l'istanza
 del servizio.
 
       3. Passa alla regione in cui desideri utilizzare l'istanza del

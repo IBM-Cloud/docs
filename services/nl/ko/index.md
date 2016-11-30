@@ -12,7 +12,7 @@ copyright:
 
 #서비스
 {: #services}
-*마지막 업데이트 날짜: 2016년 8월 10일*
+*마지막 업데이트 날짜: 2016년 10월 23일*
 
 {{site.data.keyword.Bluemix_notm}}에서는 서비스 및 앱을 손쉽게 구현, 호스팅 및 스케일링할 수 있습니다. 애플리케이션 로직 및 애플리케이션 디자인에 집중할 수 있습니다.
 {:shortdesc}
@@ -30,92 +30,108 @@ copyright:
 ##시범 서비스
 {: #experimental_services}
 
-{{site.data.keyword.Bluemix_notm}}에 사용해 볼 수 있는 시범 서비스도 포함되어 있습니다. 사용 가능한 모든 시범 서비스, 표준 유형 및 런타임을 보려면, {{site.data.keyword.Bluemix_notm}}에 로그인하고 카탈로그의 맨 아래로 스크롤한 후에 **{{site.data.keyword.Bluemix_notm}} 시범 서비스**를 클릭하십시오.
+{{site.data.keyword.Bluemix_notm}}에 사용해 볼 수 있는 시범 서비스도 포함되어 있습니다. 사용 가능한 모든 시범 서비스, 표준 유형 및 런타임을 보려면, {{site.data.keyword.Bluemix_notm}} 콘솔에 로그인하고 **카탈로그**를 클릭하고 카탈로그의 맨 아래로 스크롤한 후에 **{{site.data.keyword.Bluemix_notm}} 시범 서비스**를 클릭하십시오.
 
 시범 서비스는 안정적이지 않을 수 있으며 이전 버전과 호환 가능하지 않은 방식으로 변경될 수 있습니다. 프로덕션 환경에서는 이러한 서비스를 사용하지 않는 것이 좋습니다. 시범 서비스에 대한 지원은 {{site.data.keyword.Bluemix_notm}} 개발자 커뮤니티를 통해 제공됩니다. IBM에서 문제점을 조사한 결과 시범 서비스의 결함으로 판별될 경우 IBM이 수정사항을 제공할 의무는 없습니다.
 
 ##지역별 서비스
 {: #services_region}
 
-모든 {{site.data.keyword.Bluemix_notm}} 지역에서 모든 서비스를 사용할 수 있는 것은 아닙니다. 다음 표는 IBM에서 제공하는 서비스를 보여줍니다. 
+모든 {{site.data.keyword.Bluemix_notm}} 지역에서 모든 서비스를 구매할 수 있는 것은 아닙니다. 해당 지역에서 서비스를 구매할 수 있는 경우에도 서비스는 다른 위치에서 호스팅될 수 있습니다. 다음 표는 IBM에서 제공하는 서비스를 보여줍니다. 
 
 
-
-|서비스	|미국 남부 지역에서 사용 가능	|유럽 영국 지역에서 사용 가능 |오스트레일리아 시드니 지역에서 사용 가능|
+|서비스	|댈러스, 미국에서 구매 가능	|런던, 영국에서 구매 가능 |시드니, 호주에서 구매 가능|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}			|예		|아니오		|아니오|
-|{{site.data.keyword.activedeployshort}}			|예		|예		|아니오|
-|{{site.data.keyword.alchemyapishort}} 		|예	   	|예  		|예|
-|{{site.data.keyword.alertnotificationshort}}		|예		|예			|예		|
-|{{site.data.keyword.appsecshort}}		|예		|아니오		|아니오|
-|{{site.data.keyword.appseccloudshort}}  |예  |예  |예  |
-|{{site.data.keyword.APS_DA}}			|예		|아니오		|아니오|
-|{{site.data.keyword.APS_MA}}			|예		|아니오		|아니오|
-|{{site.data.keyword.amashort}}			|예		|예		|예|
-|{{site.data.keyword.hadoopst}}			|예		|아니오		|아니오|
-|{{site.data.keyword.APIM}}			|예		|예		|예|
-|{{site.data.keyword.autoscaling}}		|예		|예		|예|
-|{{site.data.keyword.bigicloudst}}		|예		|아니오		|아니오|
-|{{site.data.keyword.blockstorageshort}}  |아니오  |예  |아니오|
-|{{site.data.keyword.rules_short}}		|예		|예		|예|
-|{{site.data.keyword.cloudint}}			|예		|예		|아니오|
-|{{site.data.keyword.cloudant}}			|예		|예		|예|
-|{{site.data.keyword.conceptexpansionshort}}	|예		|예		|예|
-|{{site.data.keyword.conceptinsightsshort}}	|예		|예		|예|
-|{{site.data.keyword.dashdbshort}}		|예		|예		|아니오|
-|{{site.data.keyword.datacshort}}		|예		|예		|예|
-|{{site.data.keyword.DB2OnCloud_short}}		|예		|예		|예|
-|{{site.data.keyword.deliverypipeline}}		|예		|예		|아니오|
-|{{site.data.keyword.dialogshort}}		|예		|예		|예|
-|{{site.data.keyword.documentconversionshort}}	|예		|예		|예|
-|{{site.data.keyword.creshort}}			|예		|아니오		|아니오|
-|{{site.data.keyword.game}}			|예		|예		|예|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|예	|예		|예|
-|{{site.data.keyword.GlobalizationPipeline_short}}	|예		|예		|예|
-|{{site.data.keyword.dataworks_short}}		|예		|예		|아니오|
-|{{site.data.keyword.twittershort}}		|예		|예		|예|
-|{{site.data.keyword.weather_short}}		|예		|예		|예|
-|{{site.data.keyword.IntegrationTestingshort}}	|예		|예		|아니오|
-|{{site.data.keyword.iot_short}}		|예		|예		|아니오|
-|{{site.data.keyword.keymanagementserviceshort}}	|예		|예		|아니오|
-|{{site.data.keyword.languagetranslationshort}}	|예		|예		|예|
-|{{site.data.keyword.messagehub}}		|예		|예		|아니오|
-|{{site.data.keyword.messageresonanceshort}}	|예		|예		|아니오|
-|{{site.data.keyword.APS_MAiOS}} 		|예		|아니오		|아니오|
-|{{site.data.keyword.macm_short}}		|예		|예		|예|
-|{{site.data.keyword.mobilemam}}		|예		|예		|아니오|
-|{{site.data.keyword.mobiledata}}		|예		|예		|아니오|
-|{{site.data.keyword.manda}}			|예		|예		|예|
-|{{site.data.keyword.mqa}}			|예		|예		|예|
-|{{site.data.keyword.mql}}			|예		|예		|예|
-|{{site.data.keyword.nlclassifierlshort}} 	|예 		|예 		|예|
-|{{site.data.keyword.objectstorageshort}}	|예		|예		|아니오|
-|{{site.data.keyword.personalityinsightsshort}}	|예		|예		|예|
-|{{site.data.keyword.mobilepush}}		|예		|예		|예|
-|{{site.data.keyword.mobilepushshort}}				|예		|예		|예|
-|{{site.data.keyword.questionandanswershort}}	|예		|예		|예|
-|{{site.data.keyword.rapidApps}}		|예		|예		|아니오|
-|{{site.data.keyword.relationshipextractionshort}}	|예	|예		|예|
-|{{site.data.keyword.retrieveandrankshort}}	|예 		|예 		|예|
-|{{site.data.keyword.SecureGateway}}		|예		|예		|예|
-|{{site.data.keyword.servicediscoveryshort}}		|예		|예		|아니오|
-|{{site.data.keyword.serviceproxyshort}}		|예		|예		|아니오|
-|{{site.data.keyword.sescashort}}		|예		|예		|예|
-|{{site.data.keyword.ssofull}}			|예		|아니오		|아니오|
-|{{site.data.keyword.speechtotextshort}}	|예 		|예	 	|예|
-|{{site.data.keyword.sqldb}}			|예		|예		|아니오|
-|{{site.data.keyword.staticanalyzershort}}	|예		|예		|아니오|
-|{{site.data.keyword.streaminganalyticsshort}}	|예		|예		|예|
-|{{site.data.keyword.texttospeechshort}} 	|예 		|예	 	|예|
-|{{site.data.keyword.times}}			|예		|예		|아니오|
-|{{site.data.keyword.toneanalyzershort}} 	|예 		|예 		|예|
-|{{site.data.keyword.trackplan}}		|예		|예		|아니오|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|예		|예		|예|
-|{{site.data.keyword.visualinsightsshort}}	|예		|예		|예|
-|{{site.data.keyword.visualizationrenderingshort}} |예		|예		|아니오|
-|{{site.data.keyword.workflow}}			|예		|예		|예|
-|{{site.data.keyword.workloadscheduler}}	|예		|예		|예|
-|{{site.data.keyword.xpagesservice_short}}	|예		|예		|아니오|
+|{{site.data.keyword.cloudaccesstrailshort}}			|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음|
+|{{site.data.keyword.activedeployshort}}			|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음 |
+|{{site.data.keyword.alchemyapishort}} 		|댈러스, 미국에서 호스팅됨	   	|댈러스, 미국에서 호스팅됨  		|댈러스, 미국에서 호스팅됨 |
+|{{site.data.keyword.alertnotificationshort}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨			|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.appseccloudshort}}  |댈러스, 미국에서 호스팅됨  |댈러스, 미국에서 호스팅됨  |댈러스, 미국에서 호스팅됨  |
+|Apache Spark			|댈러스, 미국에서 호스팅됨		|지역에서 사용할 수 없음		|지역에서 사용할 수 없음|
+|{{site.data.keyword.apiconnect_short}}			|미국 남부에서 호스팅됨		|영국에서 호스팅됨		|시드니에서 호스팅됨 |
+|{{site.data.keyword.APIHarmony}}			|미국 남부에서 호스팅됨		|영국에서 호스팅됨		|시드니에서 호스팅됨 |
+|Automated Accessibility Tester			|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.autoscaling}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.prf_hubshort}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.bigicloudst}}		|댈러스, 미국에서 호스팅됨		|지역에서 사용할 수 없음		|지역에서 사용할 수 없음 |
+|{{site.data.keyword.blockchain}}  |댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.rules_short}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|CDN			|댈러스, 미국에서 호스팅됨		|지역에서 사용할 수 없음		|지역에서 사용할 수 없음 |
+|{{site.data.keyword.conversationshort}}		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨 |
+|{{site.data.keyword.iotmapinsights_short}}			|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|Cloud Foundry Runtimes		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.cloudant}}			|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.composeForEtcd}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.composeForMongoDB}}			|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.composeForPostgreSQL}}			|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.composeForRethinkDB}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.composeForRabbitMQ}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.composeForRedis}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.conceptinsightsshort}}	|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨 |
+|{{site.data.keyword.dashdbshort}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니에서 호스팅됨 |
+|{{site.data.keyword.datacshort}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.DB2OnCloud_short}}		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.deliverypipeline}}		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨 |
+|Deployment Risk Analytics		|댈러스, 미국에서 호스팅됨		|지역에서 사용할 수 없음		|지역에서 사용할 수 없음 |
+|Digital Content Checker		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.documentconversionshort}}	|휴스턴, 미국에서 호스팅됨		|휴스턴, 미국에서 호스팅됨		|휴스턴, 미국에서 호스팅됨 |
+|{{site.data.keyword.docgen_short}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음 |
+|Elasticsearch by Compose	|댈러스, 미국 및 북부 버지니아, 미국에서 호스팅됨	|런던, 영국 및 아일랜드에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.geospatialshort_Geospatial}}	|댈러스, 미국에서 호스팅됨	|런던, 영국에서 호스팅됨		|런던, 영국에서 호스팅됨 |
+|{{site.data.keyword.GlobalizationPipeline_short}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.dataworks_short}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음 |
+|{{site.data.keyword.openwhisk}}		|댈러스, 미국에서 호스팅됨		|지역에서 사용할 수 없음		|지역에서 사용할 수 없음 |
+|{{site.data.keyword.containerlong}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.datastagefull}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.graphshort}}       |댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|지역에서 사용할 수 없음 |
+|{{site.data.keyword.mdmcloudfull}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|Identity Mixer		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.IOCloud_short}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.twittershort}}		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.IntegrationTestingshort}}	|산호세, 미국에서 호스팅됨		|지역에서 사용할 수 없음		|지역에서 사용할 수 없음|
+|{{site.data.keyword.iot4auto_short}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨|
+|{{site.data.keyword.iotelectronics}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨|
+|{{site.data.keyword.iotinsurance_short}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨|
+|{{site.data.keyword.iot_short}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음|
+|{{site.data.keyword.iotrtinsights_short}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨|
+|IoT Workbench		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨|
+|{{site.data.keyword.keymanagementserviceshort}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음|
+|{{site.data.keyword.languagetranslationshort}}	|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨 |
+|{{site.data.keyword.pm_short}}   |댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음|
+|{{site.data.keyword.eventhubshort}}		|댈러스, 미국에서 호스팅됨		|지역에서 사용할 수 없음		|지역에서 사용할 수 없음|
+|{{site.data.keyword.messagehub}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음|
+|{{site.data.keyword.incubator}}		|댈러스, 미국에서 호스팅됨		|지역에서 사용할 수 없음		|지역에서 사용할 수 없음|
+|{{site.data.keyword.mobileanalytics_short}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음|
+|{{site.data.keyword.amashort}}			|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨			|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.macm_short}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨			|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.mobilefoundation_short}}			|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨			|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.mqa}}			|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨			|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.manda}}			|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.mql}}			|지역에서 사용할 수 없음		|지역에서 사용할 수 없음		|시드니, 호주에서 호스팅됨 |
+|Network Security Groups for VMs 	|지역에서 사용할 수 없음		|댈러스, 미국에서 호스팅됨		|지역에서 사용할 수 없음 |
+|{{site.data.keyword.nlclassifierlshort}} 	|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨 |
+|{{site.data.keyword.objectstorageshort}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음|
+|Open Toolchain			|댈러스, 미국에서 호스팅됨		|지역에서 사용할 수 없음		|지역에서 사용할 수 없음|
+|{{site.data.keyword.personalityinsightsshort}}	|휴스턴, 미국에서 호스팅됨		|휴스턴, 미국에서 호스팅됨		|휴스턴, 미국에서 호스팅됨 |
+|{{site.data.keyword.mobilepushshort}}				|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨			|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.runbook_short}}				|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨			|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.SecureGateway}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.sescashort}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.servicediscoveryshort}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음|
+|{{site.data.keyword.serviceproxyshort}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음|
+|{{site.data.keyword.ssofull}}			|워싱턴, 미국에서 호스팅됨		|지역에서 사용할 수 없음		|지역에서 사용할 수 없음|
+|{{site.data.keyword.speechtotextshort}}	|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨 |
+|{{site.data.keyword.streaminganalyticsshort}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|런던, 영국에서 호스팅됨|
+|{{site.data.keyword.texttospeechshort}} 	|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨 |
+|{{site.data.keyword.toneanalyzershort}} 	|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨 |
+|{{site.data.keyword.trackplan}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.tradeoffanalyticsshort}}	|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨 |
+|Visual Recognition	|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨 |
+|VPN			|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음|
+|{{site.data.keyword.weather_short}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.appserver_short}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.workloadscheduler}}	|댈러스, 미국 및 워싱턴, 미국에서 호스팅됨		|암스테르담, 네덜란드 및 밀라노, 이탈리아에서 호스팅됨		|멜버른 호주에서 호스팅됨 |
+|{{site.data.keyword.xpagesservice_short}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
 *표 2. 서비스 공급 여부*
 
 

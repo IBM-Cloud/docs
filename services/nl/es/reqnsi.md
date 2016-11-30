@@ -12,7 +12,9 @@ copyright:
 
 #Servicios
 {: #services}
-*Última actualización: 10 de agosto de 2016*
+
+*Última actualización: 21 de octubre de 2016*
+{: .last-updated} 
 
 Puede encontrar servicios disponibles en el **Catálogo** en **Servicios** en la interfaz de usuario de {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -143,7 +145,7 @@ No todos los servicios están disponibles en cada región de {{site.data.keyword
 
 # Cómo añadir un servicio a la aplicación
 {: #add_service}
-*Última actualización: 8 de marzo de 2016*
+
 
 {{site.data.keyword.Bluemix}} tiene una lista de servicios y los gestiona en nombre de los desarrolladores. Para añadir un servicio a la aplicación para utilizar, debe solicitar una instancia de dicho servicio y configurar la aplicación para que actúe con el servicio.
 
@@ -226,7 +228,7 @@ Para habilitar una app externa o una herramienta de terceros para que utilice un
 
 1. Solicite una instancia del servicio.
     1. En el Panel de control de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, pulse **Utilizar servicios o API**. Se visualiza el Catálogo.
-    2. En el Catálogo, seleccione el servicio que desee pulsando el título del servicio. Se abre la página de detalles del servicio.
+    2. En el Catálogo, seleccione el servicio que desee pulsando el mosaico del servicio. Se abre la página de detalles del servicio.
     3. En la ventana Añadir servicio, mantenga la selección de la lista **App**: como **Dejar sin enlazar**. Esta selección significa que el servicio no se conectará a una app de {{site.data.keyword.Bluemix_notm}}.
     4. Realice las selecciones que necesite. A continuación, pulse **CREAR**. Se creará una instancia de servicio y se mostrará el Panel de control del servicio.
 2. En el panel de navegación del Panel de control del servicio, puede seleccionar **Credenciales de servicio** para visualizar o añadir credenciales en formato JSON. Utilice la clave API que se muestra como credenciales para conectarse a la instancia del servicio.
@@ -309,8 +311,8 @@ Si tiene una instancia de servicio creada y enlazada a apps en una región, pued
 
       2. Recupere las credenciales y los parámetros de conexión de la variable de entorno VCAP_SERVICES de la instancia de servicio de la región en la que existe el servicio. Siga estos pasos:
 
-	       1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el icono de la aplicación. Se muestra la página Visión general.
-	       2. En el panel de navegación, pulse **Variables de entorno**. Se muestran los detalles de la variable de entorno *VCAP_SERVICES* en el panel derecho. Registre el contenido JSON correspondiente a la instancia de servicio.
+	       1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el mosaico de la aplicación. Se muestra la página Visión general.
+	       2. En el panel de navegación, pulse **Variables de entorno**. Se muestran los detalles de la variable de entorno *VCAP_SERVICES*. Registre el contenido JSON correspondiente a la instancia de servicio.
 
       3. Vaya a la región en la que desea utilizar la instancia de servicio. En la barra de menús de {{site.data.keyword.Bluemix_notm}}, expanda **Región** o pulse el icono **Región** y seleccione la región en la que desea utilizar la instancia de servicio.
 

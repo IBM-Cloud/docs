@@ -12,6 +12,7 @@ copyright:
 {: #app_services}
 
 *Ultimo aggiornamento: 28 gennaio 2016*
+{: .last-updated}
 
 Utilizza questi
 servizi per aggiungere o rimuovere funzioni rapidamente mentre sviluppi

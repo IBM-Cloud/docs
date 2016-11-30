@@ -12,7 +12,9 @@ copyright:
 
 #服务
 {: #services}
-*上次更新时间：2016 年 8 月 10 日*
+
+*上次更新时间：2016 年 10 月 21 日*
+{: .last-updated} 
 
 在 {{site.data.keyword.Bluemix}} 用户界面中，可以在**目录**的**服务**下找到可用的服务。
 {:shortdesc}
@@ -141,7 +143,7 @@ copyright:
 
 # 将服务添加到应用程序
 {: #add_service}
-*上次更新时间：2016 年 3 月 8 日*
+
 
 {{site.data.keyword.Bluemix}} 具有服务列表并为开发人员管理这些服务。要添加服务以供您的应用程序使用，必须请求此服务的实例，并将该应用程序配置为与此服务进行交互。
 
@@ -297,7 +299,7 @@ cf uups testups2 -l syslog://example2.com
       2. 在服务所在的区域中从服务实例的 VCAP_SERVICES 环境变量检索凭证和连接参数。请完成以下步骤：
 
 	       1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击应用程序磁贴。这将显示“概述”页面。
-	       2. 在导航窗格中，单击**环境变量**。*VCAP_SERVICES* 环境变量详细信息会显示在右侧窗格中。记录服务实例的 JSON 内容。
+	       2. 在导航窗格中，单击**环境变量**。这将显示 *VCAP_SERVICES* 环境变量详细信息。记录服务实例的 JSON 内容。
 
       3. 切换到您要在其中使用服务实例的区域。在 {{site.data.keyword.Bluemix_notm}} 菜单栏中，展开**区域**或单击**区域**图标，然后选择要在其中使用服务实例的区域。
 

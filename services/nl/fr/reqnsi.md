@@ -12,7 +12,9 @@ copyright:
 
 #Services
 {: #services}
-*Dernière mise à jour : 10 août 2016*
+
+*Dernière mise à jour : 21 octobre 2016*
+{: .last-updated} 
 
 Vous trouverez les services disponibles dans le **catalogue** sous **Services**, dans l'interface utilisateur
 {{site.data.keyword.Bluemix}}.
@@ -164,7 +166,7 @@ services qui sont fournis par IBM.
 
 # Ajout d'un service à votre application
 {: #add_service}
-*Dernière mise à jour : 8 mars 2016*
+
 
 {{site.data.keyword.Bluemix}} dispose d'une liste de services qu'il gère pour les développeurs. Pour
 ajouter un service que votre application pourra utiliser, vous devez demander une instance de ce service et configurer l'application afin qu'elle
@@ -378,7 +380,8 @@ dans la région dans laquelle le service existe. Procédez comme suit :
 
 	       1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette de votre application. La page Présentation
 s'affiche.
-	       2. Dans le panneau de navigation, cliquez sur **Variables d'environnement**. Les détails de la variable d'environnement *VCAP_SERVICES* sont affichés dans le panneau de droite. Enregistrez le contenu JSON pour
+	       2. Dans le panneau de navigation, cliquez sur **Variables d'environnement**. Les détails de la variable d'environnement
+*VCAP_SERVICES* sont affichés. Enregistrez le contenu JSON pour
 l'instance de service.
 
       3. Passez dans la région dans laquelle vous voulez utiliser l'instance de service. Dans la barre de menu {{site.data.keyword.Bluemix_notm}}, développez **Région** ou cliquez sur l'icône **Région**, puis sélectionnez la région dans laquelle

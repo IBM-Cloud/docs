@@ -12,7 +12,9 @@ copyright:
 
 #Serviços
 {: #services}
-*Última atualização: 10 de agosto de 2016*
+
+*Última atualização: 21 de outubro de 2016*
+{: .last-updated} 
 
 É possível localizar serviços disponíveis no **Catálogo** em **Serviços** na interface com o usuário do {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -167,7 +169,7 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 
 # Incluindo um serviço em seu aplicativo
 {: #add_service}
-*Última atualização: 8 de março de 2016*
+
 
 O {{site.data.keyword.Bluemix}} possui
 uma lista de serviços e gerencia-os em nome dos desenvolvedores. Para incluir um serviço para o
@@ -385,8 +387,7 @@ as etapas a seguir:
 
 	       1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no tile do aplicativo. A página Visão geral é exibida.
 	       2. Na área de janela de navegação, clique em **Variáveis de
-ambiente**. Os detalhes da variável de ambiente *VCAP_SERVICES*
-são exibidos na área de janela direita. Registre o conteúdo JSON para a
+ambiente**. Os detalhes da variável de ambiente *VCAP_SERVICES* são exibidos. Registre o conteúdo JSON para a
 instância de serviço.
 
       3. Alterne para a região em que você deseja usar a instância de
@@ -433,7 +434,7 @@ ligação de serviço.
 # rellinks
 {: #rellinks}
 
-## general
+## gerais
 {: #general}
 
 * [Ligando um serviço usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}](../cfapps/ee.html#ee_bindui)
