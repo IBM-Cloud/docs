@@ -596,7 +596,7 @@ If you want to integrate your notifications with a web service that supports web
 
 ![Incident response process](images/incidentresponseprocess.png "Incident response process")
 
-*Figure 2. Incident response process*
+Figure 2. Incident response process
 
 Depending on the issue, you, IBM, or both of you work together to fix the issue. If you have a question regarding the incident, or if you need an {{site.data.keyword.IBM_notm}} representative to help you resolve the issue, then you can open a support ticket. For information about how to contact support, see [Contacting support](/docs/support/index.html#contacting-bluemix-support-local).
 
