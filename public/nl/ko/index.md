@@ -1,11 +1,9 @@
 ---
-
  
 
 copyright:
-
   years: 2016
-
+lastupdated: "2016-08-08"
  
 
 ---
@@ -15,8 +13,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 퍼블릭
 {: #public}
-마지막 업데이트 날짜: 2016년 8월 8일
-{: .last-updated}
 
 
 {{site.data.keyword.Bluemix_notm}}는 클라우드 기반 앱을 호스팅하고 관리하는 것과 연관된 대부분의 복잡성을 추상화하고 숨깁니다. 애플리케이션 개발자는 애플리케이션을 호스팅하는 데 필요한 인프라를 관리할 필요 없이 앱을 개발하는 데 집중할 수 있습니다.
@@ -62,37 +58,23 @@ copyright:
 {{site.data.keyword.Bluemix_notm}}는 또한 앱에서 사용할 미들웨어 서비스를 제공합니다. {{site.data.keyword.Bluemix_notm}}가 새 서비스 인스턴스를 프로비저닝한 다음 해당 서비스를 앱에 바인딩할 때 앱 대신 작동합니다. 앱이 실제 작업을 수행하고
 서비스 관리는 인프라에서 처리하게 됩니다. 
 
-## {{site.data.keyword.Bluemix_notm}} 공용 아키텍처
+## {{site.data.keyword.Bluemix_notm}} 퍼블릭 아키텍처
 {: #publicarch}
 
 
-일반적으로 {{site.data.keyword.Bluemix_notm}}에서 앱을 실행할 때 운영 체제 및 인프라 계층에 대해서는 우려할 필요가 없습니다. 사용자가 자신의 애플리케이션 코드에
-집중할 수 있도록
-루트 파일 시스템
-및 미들웨어 컴포넌트 등의 계층은 추상화됩니다. 단,
-앱이 실행되는 특정 계층에 대한 지식이 필요한 경우에는 해당 계층에 대해 자세히 볼 수 있습니다. 세부사항은 [{{site.data.keyword.Bluemix_notm}} 인프라 계층 보기](../cli/vcapsvc.html#viewinfra)를 참조하십시오.
+일반적으로 {{site.data.keyword.Bluemix_notm}}에서 앱을 실행할 때 운영 체제 및 인프라 계층에 대해서는 우려할 필요가 없습니다. 사용자가 자신의 애플리케이션 코드에 집중할 수 있도록 루트 파일 시스템 및 미들웨어 컴포넌트 등의 계층은 추상화됩니다. 단, 앱이 실행되는 특정 계층에 대한 지식이 필요한 경우에는 해당 계층에 대해 자세히 볼 수 있습니다. 세부사항은 [{{site.data.keyword.Bluemix_notm}} 인프라 계층 보기](../cli/vcapsvc.html#viewinfra)를 참조하십시오.
 
-개발자는 브라우저 기반 사용자 인터페이스를 사용하여
-{{site.data.keyword.Bluemix_notm}} 인프라와 상호 작용할 수 있습니다.
-또한 cf라는 Cloud Foundry 명령행 인터페이스를 사용하여 웹 앱을
-배치할 수도 있습니다. 
+개발자는 브라우저 기반 사용자 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}} 인프라와 상호 작용할 수 있습니다. 또한 cf라는 Cloud Foundry 명령행 인터페이스를 사용하여 웹 앱을 배치할 수도 있습니다. 
 
-모바일 앱, 외부에서 실행되는 앱, {{site.data.keyword.Bluemix_notm}}에서 빌드된 앱 또는 브라우저를 사용하는 개발자일 수 있는 클라이언트는 {{site.data.keyword.Bluemix_notm}}에서 호스팅되는 앱과 상호 작용합니다. 클라이언트는 REST 또는 HTTP API를 사용하여
-{{site.data.keyword.Bluemix_notm}}를 통해
-앱 인스턴스 또는 복합 서비스 중 하나로 요청을
-라우팅합니다.
+모바일 앱, 외부에서 실행되는 앱, {{site.data.keyword.Bluemix_notm}}에서 빌드된 앱 또는 브라우저를 사용하는 개발자일 수 있는 클라이언트는 {{site.data.keyword.Bluemix_notm}}에서 호스팅되는 앱과 상호 작용합니다. 클라이언트는 REST 또는 HTTP API를 사용하여 {{site.data.keyword.Bluemix_notm}}를 통해 앱 인스턴스 또는 복합 서비스 중 하나로 요청을 라우팅합니다.
 
-다음 그림에서는
-상위 레벨 {{site.data.keyword.Bluemix_notm}} 아키텍처를 보여줍니다.
-
+다음 그림에서는 상위 레벨 {{site.data.keyword.Bluemix_notm}} 아키텍처를 보여줍니다. 
 
 ![{{site.data.keyword.Bluemix_notm}} 아키텍처](images/arch.png)
 
 *그림 1. {{site.data.keyword.Bluemix_notm}} 아키텍처*
 
-대기 시간이나 보안을 고려하여 앱을 다른 {{site.data.keyword.Bluemix_notm}}
-지역에 배치할 수 있습니다. 한 지역에 배치하거나 여러 지역에 걸쳐 배치할지
-선택할 수 있습니다. 자세한 정보는 [지역](index.html#ov_intro_reg)을 참조하십시오.
+대기 시간이나 보안을 고려하여 앱을 다른 {{site.data.keyword.Bluemix_notm}} 지역에 배치할 수 있습니다. 한 지역에 배치하거나 여러 지역에 걸쳐 배치할지 선택할 수 있습니다. 자세한 정보는 [지역](index.html#ov_intro_reg)을 참조하십시오.
 
 
 ![다중 지역 애플리케이션 배치](images/multi-region.png)
@@ -102,23 +84,12 @@ copyright:
 ### {{site.data.keyword.Bluemix_notm}}의 작동 방식
 {: #howwork}
 
-앱을
-{{site.data.keyword.Bluemix_notm}}에 배치할 때
-앱을 지원하는 데 충분한 정보로 {{site.data.keyword.Bluemix_notm}}를
-구성해야 합니다. 
+앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 때 앱을 지원하는 데 충분한 정보로 {{site.data.keyword.Bluemix_notm}}를 구성해야 합니다. 
 
-* 모바일 앱의 경우 {{site.data.keyword.Bluemix_notm}}에는
-모바일 앱의 백엔드(예: 모바일 앱이 서버와 통신하는 데 사용하는 서비스)를 나타내는
-아티팩트가 포함됩니다. 
-* 웹 앱의 경우 적절한 런타임 및 프레임워크 관련 정보가
-{{site.data.keyword.Bluemix_notm}}에 전달되는지 확인하여
-앱을 실행하기 위한 적절한 실행 환경을 설정할 수 있도록
-해야 합니다. 
+* 모바일 앱의 경우 {{site.data.keyword.Bluemix_notm}}에는 모바일 앱의 백엔드(예: 모바일 앱이 서버와 통신하는 데 사용하는 서비스)를 나타내는 아티팩트가 포함됩니다. 
+* 웹 앱의 경우 적절한 런타임 및 프레임워크 관련 정보가 {{site.data.keyword.Bluemix_notm}}에 전달되는지 확인하여 앱을 실행하기 위한 적절한 실행 환경을 설정할 수 있도록 해야 합니다. 
 
-모바일 및 웹 모두를 포함하여, 각 실행 환경은
-다른 앱의 실행 환경에서 격리됩니다. 이러한 실행 환경은 앱이 동일한 물리적 시스템에
-있더라도 격리됩니다. 다음 그림에서는 {{site.data.keyword.Bluemix_notm}}가
-앱의 배치를 관리하는 방법에 대한 기본 플로우를 보여줍니다. 
+모바일 및 웹 모두를 포함하여, 각 실행 환경은 다른 앱의 실행 환경에서 격리됩니다. 이러한 실행 환경은 앱이 동일한 물리적 시스템에 있더라도 격리됩니다. 다음 그림에서는 {{site.data.keyword.Bluemix_notm}}가 앱의 배치를 관리하는 방법에 대한 기본 플로우를 보여줍니다. 
 
 ![앱 배치](images/deploy.png)
 

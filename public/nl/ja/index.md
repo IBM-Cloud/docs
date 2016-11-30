@@ -1,11 +1,9 @@
 ---
-
  
 
 copyright:
-
   years: 2016
-
+lastupdated: "2016-08-08"
  
 
 ---
@@ -15,8 +13,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Public
 {: #public}
-最終更新日: 2016 年 8 月 8 日
-{: .last-updated}
 
 
 {{site.data.keyword.Bluemix_notm}} は、クラウド・ベースのアプリのホスティングや管理に関連する複雑さの大部分を抽象化し、見えなくします。アプリケーション開発者は、アプリをホストするのに必要なインフラストラクチャーを管理せずに済み、アプリの開発に集中することができます。
