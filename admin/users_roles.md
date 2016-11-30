@@ -135,7 +135,7 @@ Space managers can edit roles for the team members in their space on the **Manag
 Account owners and organization managers can remove team members from an account by using the **Team Directory** page. To remove a team member, complete the following steps:
 
 1. Click **Account** &gt; **Team Directory**.
-3. Locate the user that you want to remove from the account and click the **Remove** icon ![Remove icon](/docs/icons/icon_remove_teamuser.svg).
+3. Locate the user that you want to remove from the account and click the **Remove** icon ![Remove icon](../icons/icon_remove_teamuser.svg).
 4. In the **Remove User** window, click **Remove** to confirm that you want to remove the specified user from the account.
 
 The user is removed from the displayed list of team members for the account.
