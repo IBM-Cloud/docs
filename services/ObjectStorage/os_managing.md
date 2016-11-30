@@ -23,7 +23,7 @@ For the US-South {{site.data.keyword.Bluemix_notm}} region, the Dallas storage r
 
 ### Multi-region access
 
-To use the {{site.data.keyword.objectstorageshort}} service, you must [authenticate to OpenStack Keystone](../ObjectStorage/os_security.html#keystone-authentication){: new_window}. After you have successfully authenticated, an `X-Subject-Token` and the {{site.data.keyword.objectstorageshort}} endpoints will be available in the response. Each storage region has a different [access point](../ObjectStorage/os_api.html#access-points).
+To use the {{site.data.keyword.objectstorageshort}} service, you must [authenticate to OpenStack Keystone](../ObjectStorage/os_api.html#keystone-authentication){: new_window}. After you have successfully authenticated, an `X-Subject-Token` and the {{site.data.keyword.objectstorageshort}} endpoints will be available in the response. Each storage region has a different [access point](../ObjectStorage/os_api.html#access-points).
 
 
 For example, to create a container that is named `my_container` in the Dallas storage region, specify a Dallas access point in the curl command as follows:
