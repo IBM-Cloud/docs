@@ -2,9 +2,14 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-17"
+lastupdated: "2016-11-30"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Making a network request
 {: #sdk-network-request}
 
@@ -12,8 +17,6 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 
 ## Android
 {: #request-android}
-
-For Android, you can use the `Request` class to make network requests.
 
 1. Make sure you have [imported the Client SDK and initialized it](/docs/mobile/sdk_BMSClient.html#init-BMSClient-android) in your Android application. 
 	
@@ -28,7 +31,7 @@ For Android, you can use the `Request` class to make network requests.
 					Request request = new Request("http://httpbin.org/get", "GET");
 					request.send(null, null);
 				} catch (Exception e) {
-					// Handle Failure here.
+					// Handle failure here.
 				}
 			}
 		});
@@ -40,58 +43,79 @@ For Android, you can use the `Request` class to make network requests.
 ## iOS
 {: #bmsurl-ios}
 
-For iOS, you can use `BMSURLSession` to make network requests by creating data tasks and upload tasks to send and receive data. Follow these steps to create and send a data task by using a completion handler to parse the response.
-
-For more information about update tasks, see the `BMSCore` SDK [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core).
-
 1. Make sure you have [imported the Client SDK and initialized it](/docs/mobile/sdk_BMSClient.html#init-BMSClient-ios) in your iOS application.
 
-2. Create a data task by using a completion handler to parse the response.
+2. Create a network request.
 
-#### Swift 3.0
-{: ios-swift3-network-requests}
+	#### Swift 3.0
+	{: ios-swift3-network-requests}
+	
+	```Swift
+	 	// Make a network request
+		let customResourceURL = "<your resource URL>"
+		let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	
+		let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
+	   	if error == nil {
+	       	    print ("response:\(response?.responseText), no error")
+	    	  } else {
+	       	    print ("error: \(error)")
+	    	}
+		}
+		request.send(completionHandler: callBack)
+	```
+	{: codeblock}
+ 
+	#### Swift 2.2
+	{: ios-swift23-network-requests}
+	
+	```Swift
+	 	// Make a network request
+		let customResourceURL = "<your resource URL>"
+		let request = Request(url: customResourceURL, method: HttpMethod.GET)
+	
+		let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
+	   	if error == nil {
+	       	    print ("response:\(response?.responseText), no error")
+	    	  } else {
+	       	    print ("error: \(error)")
+	    	}
+		}
+		request.send(completionHandler: callBack)
+	```
+	{: codeblock}
 
-```
-var request = URLRequest(url: URL(string: "http://httpbin.org/get")!)
-request.httpMethod = "GET"
-request.setValue("value", forHTTPHeaderField: "key")
+The `Request` class is a simple way to make an HTTP request and get the response after the request is completed. If you want more flexibility and control than what you can get from the `Request` class, you can use the `BMSURLSession` class. Some features of the `BMSURLSession` class include monitoring progress of uploads, and pausing or canceling requests. To get the responses, you have the option to choose either completion handlers or delegates.
 
-let urlSession = BMSURLSession(configuration: .default, delegate: nil, delegateQueue: nil)
-urlSession.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+The `BMSURLSession` class is available for iOS only. For more information about `BMSURLSession`, see the `BMSCore` SDK [README](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core).
 
-    if let httpResponse = response as? HTTPURLResponse {
-        print("Status code: \(httpResponse.statusCode)")
-    }
-    if data != nil, let responseString = String(data: data!, encoding: .utf8) {
-        print("Response data: \(responseString)")
-    }
-    if let error = error {
-        print("Error: \(error)")
-    }
-}.resume()
-```
-{: codeblock}
 
-#### Swift 2.2
-{: ios-swift23-network-requests}
+## Cordova
+{: #bmsurl-cordova}
 
-```
-let request = NSMutableURLRequest(URL: NSURL(string: "http://httpbin.org/get")!)
-request.HTTPMethod = "GET"
-request.setValue("value", forHTTPHeaderField: "key")
+1. Make sure you have [imported the Client SDK and initialized it](/docs/mobile/sdk_BMSClient.html#init-BMSClient-cordova) in your Cordova application.
 
-let urlSession = BMSURLSession(configuration: .defaultSessionConfiguration(), delegate: nil, delegateQueue: nil)
-urlSession.dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) in
+2. Create a network request.
 
-    if let httpResponse = response as? NSHTTPURLResponse {
-        print("Status code: \(httpResponse.statusCode)")
-    }
-    if data != nil, let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding) {
-        print("Response data: \(responseString)")
-    }
-    if let error = error {
-        print("Error: \(error)")
-    }
-}.resume()
-```
-{: codeblock}
+	```
+	var success = function(data) {
+		console.log("success", data);
+	}
+	var failure = function(error)
+		{console.log("failure", error);
+	}
+	var request = new BMSRequest("<your application route>", BMSRequest.GET);
+	request.send(success, failure);
+	```
+	{: codeblock}
+
+
+# Related Links
+{: #rellinks}
+
+## Related Links
+{: #general}
+
+* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [BMSCore Cordova Plugin](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
