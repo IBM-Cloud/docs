@@ -21,7 +21,7 @@ copyright:
 *Última atualização: 2 de março de 2016*
 {: .last-updated} 
 
-O botão Implementar no {{site.data.keyword.Bluemix}} é uma maneira eficiente de compartilhar seu app público de origem Git para que outras pessoas possam experimentar com o código e implementá-lo no IBM {{site.data.keyword.Bluemix_notm}}. O botão requer configuração mínima e é possível inseri-lo em qualquer lugar que suporte marcação. Qualquer pessoa que clicar no botão cria uma cópia clonada do código em um novo repositório Git de modo que seu app original permaneça não afetado.
+O botão Implementar no {{site.data.keyword.Bluemix}} é uma maneira eficiente de compartilhar seu app público de origem Git para que outras pessoas possam experimentar com o código e implementá-lo no IBM {{site.data.keyword.Bluemix_notm}}. O botão requer configuração mínima e é possível inseri-lo em qualquer lugar que suporte marcação. Qualquer pessoa que clicar no botão cria uma cópia clonada do código em um novo repositório Git de modo que seu app original permaneça não afetado. 
 {: shortdesc} 
 
 **Dica:** se a marca da empresa for importante, será possível [integrar um fluxo Implementar no iFrame do {{site.data.keyword.Bluemix_notm}}](../develop/deploy_button_embed.html) a seu conteúdo, em vez de inserir um botão. Quando as pessoas criam uma cópia clonada de seu app público de origem Git, elas permanecem em seu conteúdo em vez de serem redirecionadas ao website bluemix.net. 
@@ -92,12 +92,12 @@ Ramificação Git especificada:
 Ramificação principal padrão:
 </p>
 <pre class="codeblock">
-[![Implementar no Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required])
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
 </pre>
 <p>Ramificação Git especificada:
 </p>
 <pre class="codeblock">
-[![Implementar no Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required])
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
 </pre>
 </li>
 </ul>
@@ -171,7 +171,8 @@ Com o arquivo manifest, é possível especificar:
 	Construtores suportados: 
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, que constrói a saída para a pasta <code>./output/</code> </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>, que constrói a saída para a pasta <code>.</code> </li>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>,
+que constrói a saída para a pasta <code>.</code> </li>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code>, que constrói a saída para a pasta <code>.</code> </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>, que constrói a saída para a pasta <code>./target/</code></li>
 	   </ul>
@@ -187,7 +188,7 @@ Com o arquivo manifest, é possível especificar:
 <li>Faça upload do arquivo <code>pipeline.yml</code> para o repositório <code>.bluemix</code>.</li>
 </ol> </li>
 	<li>Se você estiver implementando um aplicativo em um contêiner usando o <strong>IBM Containers</strong>, deverá incluir o Dockerfile no diretório-raiz do repositório e, em um diretório
-<code>.bluemix</code>, incluir um arquivo <code>pipeline.yml</code>.
+<code>.bluemix</code>, incluir um arquivo <code>pipeline.yml</code>. 
 	<ul>
 	    <li> Para aprender mais sobre a criação de Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">consulte a documentação do Docker</a>. </li>
 	    <li>É possível criar um arquivo <code>pipeline.yml</code> manualmente ou gerar um a partir de um projeto existente do DevOps Services. Para criar um <code>pipeline.yml</code> manualmente especificamente para contêineres, <a href="https://github.com/Puquios/" target="_blank">consulte os exemplos em GitHub</a>. </li>

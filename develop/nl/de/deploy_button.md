@@ -92,12 +92,12 @@ Angegebener Git-Zweig:
 Standard-Master-Zweig:
 </p>
 <pre class="codeblock">
-[![In Bluemix bereitstellen](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
 </pre>
 <p>Angegebener Git-Zweig:
 </p>
 <pre class="codeblock">
-[![In Bluemix bereitstellen](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
 </pre>
 </li>
 </ul>
@@ -186,7 +186,7 @@ Mit der Manifestdatei können Sie Folgendes angeben:
 <li>Erstellen Sie im Stammverzeichnis Ihres Projekts ein Verzeichnis <code>.bluemix</code>.</li>
 <li>Laden Sie die Datei <code>pipeline.yml</code> in das Repository <code>.bluemix</code> hoch.</li>
 </ol> </li>
-	<li>Wenn Sie mithilfe von <strong>IBM Containers</strong> eine App in einem Container bereitstellen, müssen Sie im Stammverzeichnis des Repositorys eine Dockerfile und in einem Verzeichnis <code>.bluemix</code> eine Datei <code>pipeline.yml</code> aufnehmen.
+	<li>Wenn Sie mithilfe von <strong>IBM Containers</strong> eine App in einem Container bereitstellen, müssen Sie im Stammverzeichnis des Repositorys eine Dockerfile und in einem Verzeichnis <code>.bluemix</code> eine Datei <code>pipeline.yml</code> aufnehmen. 
 	<ul>
 	    <li> Weitere Informationen zur Erstellung von Dockerfiles finden Sie in der <a href="https://docs.docker.com/reference/builder/" target="_blank">Docker-Dokumentation</a>. </li>
 	    <li>Sie können eine Datei mit der Bezeichnung <code>pipeline.yml</code> manuell erstellen oder sie auf der Grundlage eines vorhandenen DevOps Services-Projekts generieren. Informationen zum manuellen Erstellen einer Datei <code>pipeline.yml</code>, die speziell für Container vorgesehen ist, finden Sie in den <a href="https://github.com/Puquios/" target="_blank">Beispielen in GitHub</a>. </li>

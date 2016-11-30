@@ -201,7 +201,7 @@ de inicio que incluya un mandato start para la app.
 Una vez instalado {{site.data.keyword.Bluemix_notm}} Live
 Debug, puede utilizar las herramientas de depuración.
 
-Envíe la app y luego vaya a `https://app-host.mybluemix.net/bluemix-debug/manage` para acceder a la interfaz de usuario de depuración de {{site.data.keyword.Bluemix_notm}}. Cuando se le solicite que se autentique, especifique su ID y su señal de acceso personal o su ID de IBM y contraseña.     
+Envíe la app y luego vaya a `https://app-host.mybluemix.net/bluemix-debug/manage` para acceder a la interfaz de usuario de depuración de {{site.data.keyword.Bluemix_notm}}. Cuando se le solicite que se autentique, especifique su ID y su señal de acceso personal o su ID de IBM y contraseña.    
 
    **Nota**: su ID de usuario para DevOps Services puede ser un ID de IBM o un ID federado (ID corporativo). Si utiliza la autenticación federada para iniciar sesión en su cliente de línea de mandatos Bluemix Live Sync, debe utilizar una señal de acceso personal en lugar de una contraseña. Si no utiliza autenticación federada, el ID de IBM y la contraseña funcionarán con todos los clientes. Para obtener más información sobre la creación de una señal de acceso personal, consulte [¿Qué es la autenticación federada y cómo me afecta?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
@@ -326,7 +326,7 @@ Utilice este mandato para iniciar una sesión en {{site.data.keyword.Bluemix_not
 
 -u *nombre_usuario*: su ID de usuario para iniciar sesión en {{site.data.keyword.Bluemix_notm}}.
 
--p *contraseña*: su señal de acceso personal o contraseña de ID de IBM. 
+-p *contraseña*: su señal de acceso personal o contraseña de ID de IBM.
 
 -s *servidor*: el nombre del servidor o la dirección IP del servidor de
 {{site.data.keyword.jazzhub_short}}.    
@@ -536,7 +536,7 @@ bl start | st nombreProyecto [ -l víaAccesoConfiguraciónLanzamiento ] -m víaA
 **Finalidad**
 
 Utilice este mandato para iniciar la instancia de aplicación que se describe en el archivo de manifiesto o lanzamiento. De forma predeterminada, la aplicación se inicia en la modalidad de edición en directo, si el paquete de compilación de la aplicación admite la edición en directo. Una
-vez iniciado, se muestran las URL para la aplicación, las herramienta de depuración y el panel de control de
+vez iniciado, se muestran las URL para la aplicación, las herramientas de depuración y el panel de control de
 {{site.data.keyword.Bluemix_notm}}.
 
 **Argumento**

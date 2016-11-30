@@ -86,8 +86,7 @@ Pour plus de détails sur les commandes, voir [Commandes Bluemix Live Sync (bl)]
 <li>Sur une ligne de commande, connectez-vous avec la commande ci-après. Vous serez invité à entrer vos ID et mot de passe utilisateur.  
 <pre class="codeblock">bl login</pre>
 
-<strong>Remarque :</strong> votre ID utilisateur pour DevOps Services peut être un IBMid ou un ID fédéré (ID d'entreprise). Si vous utilisez l'authentification fédérée, pour vous connecter au client de ligne de commande Bluemix Live Sync, vous devez utiliser un jeton d'accès personnalisé au lieu d'un mot de passe. 
-Si vous n'utilisez pas l'authentification fédérée, votre IBMid et votre mot de passe fonctionnent avec tous les clients. Pour plus d'informations sur la création d'un jeton d'accès personnel, voir <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a> 
+<strong>Remarque :</strong> votre ID utilisateur pour DevOps Services peut être un IBMid ou un ID fédéré (ID d'entreprise). Si vous utilisez l'authentification fédérée, pour vous connecter au client de ligne de commande Bluemix Live Sync, vous devez utiliser un jeton d'accès personnalisé au lieu d'un mot de passe. Si vous n'utilisez pas l'authentification fédérée, votre IBMid et votre mot de passe fonctionnent avec tous les clients. Pour plus d'informations sur la création d'un jeton d'accès personnel, voir <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a> 
 </li>
 
 <li>Affichez la liste des projets disponibles pour la synchronisation {{site.data.keyword.Bluemix_notm}} Live Sync en entrant la commande suivante
@@ -213,8 +212,7 @@ le pack de construction et ne doit pas être définie dans le fichier `manifest.
 Une fois {{site.data.keyword.Bluemix_notm}} Live
 Debug installé, vous pouvez utiliser les outils de débogage.
 
-Déployez l'application, puis ouvrez `https://app-host.mybluemix.net/bluemix-debug/manage` pour accéder à l'interface utilisateur de débogage {{site.data.keyword.Bluemix_notm}}. 
-Lorsque vous êtes invité à vous authentifier, entrez votre ID utilisateur et votre jeton d'accès personnel ou votre mot de passe IBMid.     
+Déployez l'application, puis ouvrez `https://app-host.mybluemix.net/bluemix-debug/manage` pour accéder à l'interface utilisateur de débogage {{site.data.keyword.Bluemix_notm}}. Lorsque vous êtes invité à vous authentifier, entrez votre ID utilisateur et votre jeton d'accès personnel ou votre mot de passe IBMid.    
 
    **Remarque** : votre ID utilisateur pour DevOps Services peut être un IBMid ou un ID fédéré (ID d'entreprise). Si vous utilisez l'authentification fédérée, pour vous connecter au client de ligne de commande Bluemix Live Sync, vous devez utiliser un jeton d'accès personnalisé au lieu d'un mot de passe. Si vous n'utilisez pas l'authentification fédérée, vos ID et mot de passe IBM fonctionnent avec tous les clients. Pour plus d'informations sur la création d'un jeton d'accès personnel, voir [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
@@ -340,7 +338,7 @@ Utilisez cette commande pour vous connecter à {{site.data.keyword.Bluemix_notm}
 
 -u *nom_utilisateur* : ID utilisateur vous permettant de vous connecter à {{site.data.keyword.Bluemix_notm}}.
 
--p *mot_de_passe* : Jeton d'accès personnel ou mot de passe IBMid. 
+-p *mot_de_passe* : Jeton d'accès personnel ou mot de passe IBMid.
 
 -s *serveur* : Nom ou adresse IP du serveur {{site.data.keyword.jazzhub_short}}.    
 

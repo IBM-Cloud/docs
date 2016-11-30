@@ -76,13 +76,13 @@ copyright:
 預設主要分支：
 </p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署至 Bluemix"&gt;&lt;/a&gt;
 </pre>
 <p>
 指定的 Git 分支：
 </p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署至 Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
 <li>Markdown：
@@ -90,12 +90,12 @@ copyright:
 預設主要分支：
 </p>
 <pre class="codeblock">
-[![部署至 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required])
+[&excl;[部署至 Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
 </pre>
 <p>指定的 Git 分支：
 </p>
 <pre class="codeblock">
-[![部署至 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required])
+[&excl;[部署至 Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
 </pre>
 </li>
 </ul>
@@ -166,7 +166,7 @@ copyright:
 	
 支援的建置器：<ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant：</a>/<code>build.xml</code>，會將輸出建置到 <code>./output/</code> 資料夾</li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle：</a><code>/build.gradle</code>，會將輸出建置到 <code>. </code> 資料夾</li>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle：</a><code>/build.gradle</code>，會將輸出建置到 <code>.</code> 資料夾</li>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt：</a><code>/Gruntfile.js</code>，會將輸出建置到 <code>.</code> 資料夾</li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven：</a><code>/pom.xml</code>，會將輸出建置到 <code>./target/</code> 資料夾</li>
 	   </ul>

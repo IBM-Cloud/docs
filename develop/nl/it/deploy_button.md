@@ -99,12 +99,12 @@ Ramo Git specificato:
 Ramo master predefinito:
 </p>
 <pre class="codeblock">
-[![Distribuisci a Bluemix](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
 </pre>
 <p>Ramo Git specificato:
 </p>
 <pre class="codeblock">
-[![Distribuisci a Bluemix](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
 </pre>
 </li>
 </ul>
@@ -204,7 +204,7 @@ crea l'output nella cartella <code>./target/</code></li>
 <li>Nella directory root del tuo progetto, crea una directory <code>.bluemix</code>.</li>
 <li>Carica il file <code>pipeline.yml</code> nel repository <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Se stai distribuendo un'applicazione in un contenitore tramite <strong>IBM Containers</strong>, devi includere Dockerfile nella directory root del repository e un file <code>pipeline.yml</code>  in una directory <code>.bluemix</code>.
+	<li>Se stai distribuendo un'applicazione in un contenitore tramite <strong>IBM Containers</strong>, devi includere Dockerfile nella directory root del repository e un file <code>pipeline.yml</code>  in una directory <code>.bluemix</code>. 
 	<ul>
 	    <li> Per saperne di più sulla creazione dei Dockerfile, <a href="https://docs.docker.com/reference/builder/" target="_blank">vedi la documentazione di Docker</a>. </li>
 	    <li>Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare manualmente un file <code>pipeline.yml</code> specifico per i contenitori, <a href="https://github.com/Puquios/" target="_blank">vedi gli esempi in GitHub</a>. </li>

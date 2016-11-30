@@ -216,7 +216,7 @@ CF_APP	| 应用程序名称
 
 可以从管道生成 YAML 文件。 
 
-从现有管道生成带有以下格式 URL 的文件：
+使用以下格式的 URL 从现有管道生成文件： 
 
 ```
 <DevOps Services domain>/pipeline/user/project/yaml

@@ -173,7 +173,7 @@ Die App muss das IBM SDK for Node.js-Buildpack verwenden. Angepasste Buildpacks 
 
 Nach der Installation von {{site.data.keyword.Bluemix_notm}} Live Debug können Sie die Debug-Tools verwenden.
 
-Stellen Sie die App per Push-Operation bereit und rufen Sie dann `https://app-host.mybluemix.net/bluemix-debug/manage` auf, um auf die Benutzerschnittstelle des {{site.data.keyword.Bluemix_notm}}-Debug-Features zuzugreifen. Wenn Sie aufgefordert werden, sich zu authentifizieren, geben Sie Ihre Benutzer-ID und das persönliche Zugriffstoken oder das Kennwort zur IBM ID ein.     
+Stellen Sie die App per Push-Operation bereit und rufen Sie dann `https://app-host.mybluemix.net/bluemix-debug/manage` auf, um auf die Benutzerschnittstelle des {{site.data.keyword.Bluemix_notm}}-Debug-Features zuzugreifen. Wenn Sie aufgefordert werden, sich zu authentifizieren, geben Sie Ihre Benutzer-ID und das persönliche Zugriffstoken oder das Kennwort zur IBM ID ein.    
 
    **Hinweis**: Ihre Benutzer-ID für DevOps Services kann entweder eine IBM ID oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBM ID und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/).
 
@@ -294,7 +294,7 @@ Verwenden Sie diesen Befehl für die Anmeldung bei {{site.data.keyword.Bluemix_n
 
 -u *benutzername*: Die Benutzer-ID zum Anmelden an {{site.data.keyword.Bluemix_notm}}.
 
--p *kennwort*: Das persönliche Zugriffstoken oder das Kennwort zur IBM ID. 
+-p *kennwort*: Das persönliche Zugriffstoken oder das Kennwort zur IBM ID.
 
 -s *server*: Der Servername oder die IP-Adresse des {{site.data.keyword.jazzhub_short}}-Servers.    
 

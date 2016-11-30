@@ -20,7 +20,7 @@ copyright:
 *마지막 업데이트 날짜: 2016년 6월 24일*
 {: .last-updated}  
 
-Node.js 애플리케이션을 빌드하고 있는 경우, {{site.data.keyword.Bluemix}} Live Sync를 사용하여 재배치 없이 데스크탑에서처럼 {{site.data.keyword.Bluemix_notm}} 에서 애플리케이션 인스턴스를 신속하게 업데이트하고 개발할 수 있습니다.   
+Node.js 애플리케이션을 빌드하고 있는 경우, {{site.data.keyword.Bluemix}} Live Sync를 사용하여 재배치 없이 데스크탑에서처럼 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션 인스턴스를 신속하게 업데이트하고 개발할 수 있습니다.   
 {: shortdesc}
 
 변경할 경우 실행 중인 {{site.data.keyword.Bluemix_notm}} 애플리케이션에서 변경사항을 즉시 확인할 수 있습니다. {{site.data.keyword.Bluemix_notm}} Live Sync는 명령행과 Web IDE에서 모두 작동합니다. {{site.data.keyword.Bluemix_notm}} Live Sync를 사용하여 Node.js로 작성된 애플리케이션을 디버그할 수 있습니다.  
@@ -73,7 +73,7 @@ Desktop Sync를 사용할 경우 다음 사항을 고려하십시오.
 <li>명령행에서 다음 명령을 사용하여 로그인하십시오. 사용자 ID 및 비밀번호를 입력하도록 프롬프트가 표시됩니다.  
 <pre class="codeblock">bl login</pre>
 
-<strong>참고:</strong> DevOps 서비스의 사용자 ID는 IBM ID 또는 연합된 ID(회사 ID)일 수 있습니다. 연합된 인증을 사용하는 경우 Bluemix Live Sync 명령행 클라이언트에 로그인하려면 비밀번호 대신 개인 액세스 토큰을 사용해야 합니다. 연합된 인증을 사용하지 않으면 IBM ID 및 비밀번호가 모든 클라이언트에 대해 작동합니다. 개인 액세스 토큰 작성에 대한 자세한 정보는 <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> 연합된 인증 항목 및 영향</a>을 참조하십시오. 
+<strong>참고:</strong> DevOps 서비스의 사용자 ID는 IBM ID 또는 연합된 ID(회사 ID)일 수 있습니다. 연합된 인증을 사용하는 경우 Bluemix Live Sync 명령행 클라이언트에 로그인하려면 비밀번호 대신 개인 액세스 토큰을 사용해야 합니다. 연합된 인증을 사용하지 않으면 IBM ID 및 비밀번호가 모든 클라이언트에 대해 작동합니다. 개인 액세스 토큰 작성에 대한 자세한 정보는 <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a>를 참조하십시오. 
 </li>
 
 <li>다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}} Live Sync 동기화에 사용할 수 있는 프로젝트 목록을 표시하십시오. 
@@ -105,7 +105,7 @@ Web IDE의 실행 표시줄에서 **Live Edit**를 클릭하십시오.
 
 Live Edit를 사용하면 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 Node.js 애플리케이션에 대한 변경사항을 신속하게 미리 볼 수 있습니다. Live Edit를 켠 상태에서 코드를 업데이트할 경우 웹 애플리케이션의 브라우저 창을 새로 고치면 변경한 지 몇 초 만에 변경사항이 적용되어 표시됩니다.
 
-{{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능 사용에 대한 튜토리얼은 [Bluemix Live Sync로 Node.js 앱 테스트 및 디버그](https://hub.jazz.net/tutorials/livesync) 튜토리얼을 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} Live Sync의 Live Edit 기능 사용에 대한 튜토리얼은 [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync) 튜토리얼을 참조하십시오.
 
 Web IDE에서 변경한 파일은 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 애플리케이션에 자동으로 재배치됩니다. 노드 애플리케이션을 다시 시작해야 하는 경우 실행 표시줄에 있는 **다시 시작** 단추를 사용하면 됩니다.
 
@@ -176,7 +176,7 @@ Debug에는 다음과 같은 기능이 포함되어 있습니다.
 
 앱을 푸시한 다음 `https://app-host.mybluemix.net/bluemix-debug/manage`로 이동하여 {{site.data.keyword.Bluemix_notm}} 디버그 사용자 인터페이스에 액세스하십시오. 인증을 요구하는 프롬프트가 표시되면 사용자 ID 및 개인 액세스 토큰 또는 IBM ID 비밀번호를 입력하십시오.    
 
-   **참고**: DevOps 서비스의 사용자 ID는 IBM ID 또는 연합된 ID(회사 ID)일 수 있습니다. 연합된 인증을 사용하는 경우 Bluemix Live Sync 명령행 클라이언트에 로그인하려면 비밀번호 대신 개인 액세스 토큰을 사용해야 합니다. 연합된 인증을 사용하지 않으면 IBM ID 및 비밀번호가 모든 클라이언트에 대해 작동합니다. 개인 액세스 토큰 작성에 대한 자세한 정보는 [연합된 인증 항목 및 영향](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)을 참조하십시오.
+   **참고**: DevOps 서비스의 사용자 ID는 IBM ID 또는 연합된 ID(회사 ID)일 수 있습니다. 연합된 인증을 사용하는 경우 Bluemix Live Sync 명령행 클라이언트에 로그인하려면 비밀번호 대신 개인 액세스 토큰을 사용해야 합니다. 연합된 인증을 사용하지 않으면 IBM ID 및 비밀번호가 모든 클라이언트에 대해 작동합니다. 개인 액세스 토큰 작성에 대한 자세한 정보는 [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)를 참조하십시오.
 
 ###앱 구성 복원 및 Bluemix Live Debug 사용 안함 {: #restore_live_debug}
 
@@ -299,7 +299,7 @@ bl login | l [ -u username ] [-p password ][ -s server ]
 
 -s *server*: {{site.data.keyword.jazzhub_short}} 서버의 서버 이름 또는 IP 주소입니다.    
 
-   **참고**: DevOps 서비스의 사용자 ID는 IBM ID 또는 연합된 ID(회사 ID)일 수 있습니다. 연합된 인증을 사용하는 경우 Bluemix Live Sync 명령행 클라이언트에 로그인하려면 비밀번호 대신 개인 액세스 토큰을 사용해야 합니다. 연합된 인증을 사용하지 않으면 IBM ID 및 비밀번호가 모든 클라이언트에 대해 작동합니다. 개인 액세스 토큰 작성에 대한 자세한 정보는 [연합된 인증 항목 및 영향](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)을 참조하십시오.
+   **참고**: DevOps 서비스의 사용자 ID는 IBM ID 또는 연합된 ID(회사 ID)일 수 있습니다. 연합된 인증을 사용하는 경우 Bluemix Live Sync 명령행 클라이언트에 로그인하려면 비밀번호 대신 개인 액세스 토큰을 사용해야 합니다. 연합된 인증을 사용하지 않으면 IBM ID 및 비밀번호가 모든 클라이언트에 대해 작동합니다. 개인 액세스 토큰 작성에 대한 자세한 정보는 [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)를 참조하십시오.
 
 **예**
 
@@ -598,10 +598,10 @@ bl stop –l “launchConfigurations/mylaunchconfig.launch”
 
 ># 관련 링크 {:class="linklist"}
 >## 튜토리얼 및 샘플 {:id="samples"}
->* [Bluemix Live Sync로 Node.js 앱 테스트 및 디버그](https://hub.jazz.net/tutorials/livesync)
+>* [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
 >
 ># 관련 링크 {:class="linklist"}
 >## 관련 링크 {:id="general"}
->* [Bluemix용 Eclipse 도구](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html)   
+>* [Eclipse tools for Bluemix](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html)   
 >
 >{:elementKind="article" id="rellinks"}

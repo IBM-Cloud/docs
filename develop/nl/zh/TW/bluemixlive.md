@@ -459,7 +459,7 @@ bl create -n myNewProject --public
 ```
 {: pre}
 
-## 狀態
+## Status
 {: bl_status}
 
 ```
@@ -518,7 +518,7 @@ bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit
 
 -l *launchConfiguration*：啟動配置名稱（例如，`mylaunchconfig`）、檔名（例如，`mylaunchconfig.launch`）或啟動配置檔的專案相對路徑（例如，`launchConfigurations/mylaunchconf.launch`）。
 
--m *manifestPath*：資訊清單檔的專案相對路徑（例如，`manifest.yml`）。
+-m *manifestPath*：資訊清單檔（例如，`manifest.yml`）的專案相對路徑。
 
 *--liveedit*：以即時編輯模式啟動關聯的應用程式，或者，如果建置套件不支援即時編輯模式，則會結束，並發生錯誤。
 
@@ -526,7 +526,7 @@ bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit
 
 *--view*：開啟執行中應用程式的瀏覽器。
 
-*--restart*：重新啟動已經以即時編輯模式執行的應用程式，而不是重新進行部署。
+*--restart*：重新啟動已經以即時編輯模式執行的應用程式，而無需重新進行部署。
 
 **範例**
 
@@ -551,7 +551,7 @@ bl start –m "mymanifest.yml"
 ```
 {: pre}
 
-這個指令會啟動專案的應用程式實例，而專案是與現行目錄（含資訊清單檔 `manifest.yml`）相關聯且相當於 `bl start –m manifest.yml`。
+這個指令會啟動與現行目錄（含資訊清單檔 `manifest.yml`）相關聯之專案的應用程式實例，相當於 `bl start –m manifest.yml`。
 
 ```
 bl start

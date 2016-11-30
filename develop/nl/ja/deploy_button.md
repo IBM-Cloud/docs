@@ -92,12 +92,12 @@ copyright:
 デフォルト・マスター・ブランチ:
 </p>
 <pre class="codeblock">
-[![Bluemix にデプロイ](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
 </pre>
 <p>指定された Git ブランチ:
 </p>
 <pre class="codeblock">
-[![Bluemix にデプロイ](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
 </pre>
 </li>
 </ul>

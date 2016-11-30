@@ -80,17 +80,15 @@ copyright:
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [必需]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署到 Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
-<li>Markdown：
-<p>
-缺省主分支：
-</p>
+<li>Markdown：<p>
+缺省主分支：</p>
 <pre class="codeblock">
-[![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required])
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
 </pre>
 <p>指定的 Git 分支：
 </p>
 <pre class="codeblock">
-[![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required])
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
 </pre>
 </li>
 </ul>
@@ -136,7 +134,7 @@ copyright:
       label: &lt;`actual_service_name`&gt; # [必需] 市场上的实际服务名称
       plan: Shared # [可选] 如果提供，用于访存声明的服务。否则，缺省值为“Free”或“free”。
 applications:
-  - 服务
+  - services
     - &lt;`arbitrary_service_instance_name`&gt;
     name: &lt;`appname`&gt;
     host: &lt;`apphostname`&gt;
@@ -151,7 +149,7 @@ applications:
         label: cloudantNoSQLDB
         plan: Shared
   applications:
-  - 服务
+  - services
     - sample-java-cloudant-cloudantNoSQLDB
     name: My app
     host: myapp

@@ -37,11 +37,9 @@ Lorsqu'un utilisateur clique sur votre bouton, les actions suivantes se produise
 
 4. Si l'application requiert un fichier de génération, le fichier de génération est détecté automatiquement et l'application est générée. 
 
-5. Si un pipeline est configuré pour le processus de génération et de déploiement, un fichier `pipeline.yml` est utilisé pour
-déployer l'application.
+5. Si un pipeline est configuré pour le processus de génération et de déploiement, un fichier `pipeline.yml` est utilisé pour déployer l'application.
 
-6. Si l'application requiert un conteneur, un fichier `pipeline.yml` définissant le service **IBM Containers**
-et un document Dockerfile définissant une image sont utilisés pour déployer l'application dans un conteneur {{site.data.keyword.Bluemix_notm}}. 
+6. Si l'application requiert un conteneur, un fichier `pipeline.yml` définissant le service **IBM Containers** et un document Dockerfile définissant une image sont utilisés pour déployer l'application dans un conteneur {{site.data.keyword.Bluemix_notm}}. 
 
 7. L'application est déployée dans l'organisation {{site.data.keyword.Bluemix_notm}} de la personne. 
 
@@ -95,12 +93,12 @@ Branche Git indiquée :
 Branche principale par défaut :
 </p>
 <pre class="codeblock">
-[![Déployer dans Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required])
+[&excl;[Déployer dans Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;URL_référentiel_git> # [required]&rpar;
 </pre>
 <p>Branche Git indiquée :
 </p>
 <pre class="codeblock">
-[![Déployer dans Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required])
+[&excl;[Déployer dans Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;URL_référentiel_git> &branch=&lt;branche_git&gt; # [required]&rpar;
 </pre>
 </li>
 </ul>
@@ -134,7 +132,7 @@ Le fichier manifeste vous permet d'indiquer :
     <ul>
     <li>Un nom d'application unique.</li>  
     <li>Des services déclarés : une extension de manifeste, qui crée ou recherche les services requis ou facultatifs devant être configurés avant le déploiement de l'application, comme un service de cache de données. Vous pouvez afficher la liste des services, des libellés et des plans {{site.data.keyword.Bluemix_notm}} éligibles à l'aide de l'<a href="https://github.com/cloudfoundry/cli/releases">interface de ligne de commande CF</a>, en exécutant la commande <code>cf marketplace</code> ou en parcourant le <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">catalogue {{site.data.keyword.Bluemix_notm}}</a>. 
-    
+
     <strong>Remarque :</strong> les services déclarés constituent une extension IBM du format de manifeste Cloud Foundry standard. Cette extension est susceptible d'être révisée dans une édition ultérieure, parallèlement à l'évolution et à l'amélioration de la fonction.
 	
 	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank">Apprenez à créer un fichier <code>manifest.yml</code>.</a>  
@@ -193,7 +191,8 @@ génère la sortie dans le dossier <code>. </code> </li>
 <li>Téléchargez le fichier <code>pipeline.yml</code> dans le référentiel <code>.bluemix</code>.</li>
 </ol> </li>
 	<li>Si vous déployez une application dans un conteneur en utilisant <strong>IBM Containers</strong>, vous devez inclure le document Dockerfile dans
-le répertoire racine du référentiel et inclure un fichier <code>pipeline.yml</code> dans un répertoire <code>.bluemix</code>.	<ul>
+le répertoire racine du référentiel et inclure un fichier <code>pipeline.yml</code> dans un répertoire <code>.bluemix</code>. 
+	<ul>
 	    <li> Pour en savoir plus sur la création de documents Dockerfile, <a href="https://docs.docker.com/reference/builder/" target="_blank">voir la documentation Docker</a>. </li>
 	    <li>Vous pouvez créer un fichier <code>pipeline.yml</code> manuellement ou en générer un à partir d'un projet DevOps Services existant. Pour créer manuellement un fichier <code>pipeline.yml</code> propre à des conteneurs, <a href="https://github.com/Puquios/" target="_blank">consultez les exemples dans GitHub</a>. </li>
         </ul>
