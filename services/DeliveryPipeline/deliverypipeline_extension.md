@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-29"
 
 ---
 
@@ -19,8 +20,6 @@ copyright:
 
 # Extending the {{site.data.keyword.deliverypipeline}} service
 {: #deliverypipeline_extending}
-Last updated: 29 August 2016
-{: .last-updated}
 
 You can extend the capabilities of the {{site.data.keyword.deliverypipeline}} service by configuring your jobs to use supported services. For example, test jobs can run static code scans and build jobs can globalize strings.
 {:shortdesc}
@@ -45,6 +44,7 @@ A pipeline that uses the Static Analyzer service typically includes these stages
 
 
 ### Creating a static code scan
+
 
 Before you begin, [review the Terms of Use for the service](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01).
 
