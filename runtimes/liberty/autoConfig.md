@@ -55,7 +55,7 @@ See the documentation for the bound service type for more details.
 ## Generating or updating server.xml configuration stanzas
 {: #generating_or_updating_serverxml}
 
-When you push a standalone application, the Liberty buildpack generates the server.xml stanza as described in [Options for Pushing Liberty Applications](optionsForPushing.html#options_for_pushing) to Bluemix. When you push a standalone application and bind to container managed services, the Liberty buildpack generates the necessary server.xml stanzas for the bound services.
+When you push a standalone application, the Liberty buildpack generates the server.xml stanza, as described in [Options for Pushing Liberty Applications](optionsForPushing.html#options_for_pushing), to Bluemix. When you push a standalone application and bind to container managed services, the Liberty buildpack generates the necessary server.xml stanzas for the bound services.
 
 When you provide a server.xml file and bind to container managed services the Liberty buildpack:
 
