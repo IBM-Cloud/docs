@@ -2,15 +2,15 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-22"
+lastupdated: "2016-10-21"
 
 ---
 {:new_window: target="_blank"}
 
-# End-to-end tutorial of the Basic Code Starter
-{: #tutorial}
+# End-to-end tutorial of the {{site.data.keyword.visualrecognitionshort}} Code Starter
+{: #tutorial_vr}
 
-The following end-to-end tutorial walks through the steps to create a project from the Basic Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
+The following end-to-end tutorial walks through the steps to create a project from the {{site.data.keyword.visualrecognitionshort}} Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
 
 
 ### Installing developer tools
@@ -19,7 +19,7 @@ The following end-to-end tutorial walks through the steps to create a project fr
 Ensure that you have installed the [prerequisite developer tools](get_code.html#prereq-dev-tools){: new_window}.
 
 
-### Creating a project from the Basic Code Starter
+### Creating a project from the {{site.data.keyword.visualrecognitionshort}} Code Starter
 {: #create_project}
 
 1. Create a Mobile dashboard project in {{site.data.keyword.Bluemix}}.
@@ -30,9 +30,9 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
    2. Click **Code Starters**.
 
-   3. Select **Basic** and click **Create Project**.
+   3. Select **Visual Recognition** and click **Create Project**.
 
-   4. Enter your project name. For this tutorial, use `BasicProject`.
+   4. Enter your project name. For this tutorial, use `VisualRecognitionProject`.
    
    5. Click **Create**.
 
@@ -80,25 +80,23 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
       You can alternatively click on the **Code** page.
       
-   2. For Objective-C, click **iOS Obj-C**.
-
-   3. For Swift, click **iOS Swift**.
+   2. For iOS, click **iOS Swift**.
    
-   4. For Cordova, click **Cordova**.
-
-   5. For Android, click **Android**.
+   3. For Android, click **Android**.
    
-   6. When the project code is finished generating, click **Download Code** to download your project archive.
+   4. When the project code is finished generating, click **Download Code** to download your project archive.
 
 
-### Running your Objective-C project in Xcode
-{: #run_obj-c}
+### Running your project in Xcode
+{: #run_xcode}
 
-1. Extract the `BasicProject-ObjC.zip` file.
+1. Extract the `VisualRecognitionProject-Swift.zip` file.
 
 2. Open the `README.md` file in a Markdown viewer to review the steps to configure your project.
 
-   1. Open your Terminal and navigate to your project folder.
+   1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
+   
+   2. Open your Terminal and navigate to your project folder.
    
       1. Run `pod setup` if you need to set up your CocoaPods repository.
       
@@ -106,63 +104,37 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
       
       3. Run `pod install` to install the pods that are required for your project.
       
-   2. Open your `BasicProject.xcworkspace` Xcode workspace.
+      4. Run `carthage update --platform iOS` to build the dependencies and frameworks to use the {{site.data.keyword.ibmwatson}} Developer Cloud iOS SDK.
       
-3. Run your app.
-
-
-### Running your Swift project in Xcode
-{: #run_swift}
-
-1. Extract the `BasicProject-Swift.zip` file.
-
-2. Open the `README.md` file in a Markdown viewer to review the steps to configure your project.
-
-   1. Open your Terminal and navigate to your project folder.
+   3. Open your `VisualRecognitionProject.xcworkspace` Xcode workspace.
    
-      1. Run `pod setup` if you need to set up your CocoaPods repository.
+   4. Add your {{site.data.keyword.visualrecognitionshort}} service credentials.
+   
+      1. Copy your `api_key` from  your {{site.data.keyword.visualrecognition}} service credentials.
       
-      2. Run `pod update` if you need to update you update your existing pods.
-      
-      3. Run `pod install` to install the pods that are required for your project.
-      
-   3. Open your `BasicProject.xcworkspace` Xcode workspace.
+      2. Paste your `api_key` into the `VisualRecognitionAPIKey` key into the `WatsonCredentials.plist` file.
       
 3. Run your app.
 
 
-### Running your Cordova project in Xcode
-{: #run_cordova_xcode}
+### Running your project in Android Studio
+{: #run_studio}
 
-1. Extract the `BasicProject-Cordova.zip` file.
+1. Extract the `VisualRecognitionProject-Android.zip` file.
 
 2. Open the `README.md` file in a Markdown viewer to configure your project.
 
-   1. Open your `platforms/ios` project in Xcode.
+   1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
+   
+      Skip this step if you already have a {{site.data.keyword.visualrecognitionshort}} service instance.
+   
+   2. Open your `VisualRecognitionProject-Android` project in Android Studio.
+   
+   4. Add your {{site.data.keyword.visualrecognitionshort}} service credentials.
+   
+      1. Copy your `api_key` from  your {{site.data.keyword.visualrecognition}} service credentials.
       
-3. Run your app.
-
-
-### Running your Cordova project in Android Studio
-{: #run_cordova_studio}
-
-1. Extract the `BasicProject-Cordova.zip` file.
-
-2. Open the `README.md` file in a Markdown viewer to configure your project.
-
-   1. Open your `platforms/android` project in Android Studio.
-      
-3. Run your app.
-
-
-### Running your Android project in Android Studio
-{: #run_android}
-
-1. Extract the `BasicProject-Android.zip` file.
-
-2. Open the `README.md` file in a Markdown viewer to configure your project.
-
-   1. Open your `BasicProject-Android` project in Android Studio.
+      2. Paste your `api_key` into the `watson_visual_recognition_api_key` key into the `res/values/watson_credentials.xml` file.
       
 3. Run your app.
 
@@ -182,6 +154,5 @@ View other tutorials.
 ### Code Starter tutorials
 {: #tutorials_Code}
 
-* [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)
 * [Tutorial - Weather](tutorial_weather.html)
