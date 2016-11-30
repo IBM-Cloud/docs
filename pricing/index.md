@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-11-30"
  
 
 ---
@@ -433,9 +433,9 @@ If you select a specific organization for the **Organization**, you can see the 
 ##Viewing credits
 {: #credits}
 
-As an account owner or a billing manager, you can use the **Usage Dashboard** page to see any credits for your account. You might have credits if, for example, you linked a SoftLayer account with a {{site.data.keyword.Bluemix_notm}} account.
+As an account owner or a billing manager, you can use the **Usage Dashboard** page to see any credits for your account. 
 
-To open the **Usage Dashboard** page, click **Account** > **Usage Dashboard**. On the page, you can see any credits, if they exist, and when they expire.
+To open the **Usage Dashboard** page, click **Account** &gt; **Usage Dashboard**. The dashboard displays any credits, if they exist, and when they expire.
 
 ##Notifications
 {: #notifications}
