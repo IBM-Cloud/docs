@@ -949,7 +949,7 @@ Siehe [Platform as a Service](#x2029786).
 ### paralleles Gateway
 {: #x4118340}
 
-Ein Gateway, das parallel Pfade erstellt, ohne die Bedingungen zu prüfen. 
+Ein Gateway, das parallel Pfade erstellt, ohne die Bedingungen zu prüfen.
 
 ### Übergeordnetes Image
 {: #x8439210}
@@ -1428,7 +1428,7 @@ Ein Arbeitselement in der Entwicklung, das nach einem fehlgeschlagenen Build erf
 
 Ein Mechanismus, der Aktionen auslösen kann. Auslöser können explizit durch einen Benutzer oder für einen Benutzer durch eine externe Ereignisquelle aktiviert werden.
 
-### </a>Trust-Association-Interceptor (TAI)
+### Trust-Association-Interceptor (TAI)
 {: #x2239009}
 
 Der Mechanismus, durch den die Anerkennung in der Produktumgebung für jede Anforderung validiert wird, die der Proxy-Server empfängt. Proxy-Server und Interceptor stimmen der Validierungsmethode zu.

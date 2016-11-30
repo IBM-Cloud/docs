@@ -82,8 +82,7 @@ Tipo de salida de informe que proporciona un informe gestionado altamente intera
 ### actividad
 {: #x2013072}
 
-Elemento de un proceso, por ejemplo una tarea, un subproceso, un bucle o una decisión.
-Las actividades se representan como nodos en los diagramas de proceso.
+Elemento de un proceso, por ejemplo una tarea, un subproceso, un bucle o una decisión. Las actividades se representan como nodos en los diagramas de proceso.
 
 ### secuencia de actividad
 {: #x6842200}
@@ -724,7 +723,7 @@ Certificado subordinado emitido por la entidad emisora de certificados (CA) raí
 
 Red de objetos interconectados que simulan una "internet" de dispositivos conectables.
 
-### invocar 
+### invocar
 {: #x2057232}
 
 Para activar una acción. Véase también [acción](#x2012974).
@@ -962,7 +961,7 @@ En desarrollo de software y de sistemas, rango asignado a requisitos o elementos
 ### nube privada
 {: #x4585362}
 
-Entorno de cloud computing en el que el acceso está limitado a miembros de una empresa
+Entorno de computación en la nube en el que el acceso está limitado a miembros de una empresa
 y redes de asociados. Véase también [nube pública](#x4585370).
 
 ### repositorio de imagen privada
@@ -990,12 +989,12 @@ Descripción de un proceso empresarial que incluye información sobre las activi
 {: #x2220858}
 
 Un diagrama que representa el flujo de trabajo para un proceso. Los objetos de un diagrama de proceso incluyen tareas, procesos, conexiones, elementos
-de negocio, recursos y decisiones. 
+de negocio, recursos y decisiones.
 
 ### modelo de proceso
 {: #x2264460}
 
-Representación de un proceso de negocio en tiempo real. Un modelo de proceso de negocio consta de los pasos o actividades individuales que componen el proceso, contiene las condiciones que dictan cuándo se producirán los pasos o actividades e identifica los recursos necesarios para ejecutar el proceso de negocio. 
+Representación de un proceso de negocio en tiempo real. Un modelo de proceso de negocio consta de los pasos o actividades individuales que componen el proceso, contiene las condiciones que dictan cuándo se producirán los pasos o actividades e identifica los recursos necesarios para ejecutar el proceso de negocio.
 
 ### biblioteca de producción
 {: #x2034919}

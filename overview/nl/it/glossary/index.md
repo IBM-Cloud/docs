@@ -79,7 +79,7 @@ Un tipo di output di report che fornisce un report gestito altamente interattivo
 ### attività
 {: #x2013072}
 
-Un elemento di un processo, come un'attività, un sottoprocesso, un loop o una decisione.  Le attività sono rappresentate come nodi in diagrammi di processo.
+Un elemento di un processo, come un'attività, un sottoprocesso, un loop o una decisione. Le attività sono rappresentate come nodi in diagrammi di processo.
 
 ### flusso di attività
 {: #x6842200}
@@ -557,7 +557,7 @@ Un pezzo di codice che configura un'origine eventi esterna per l'attivazione di 
 ### condivisione file
 {: #x2022902}
 
-Nell'ambiente cloud IBM, un sistema di archiviazione permanente in cui gli utenti archiviano e condividono i file. In IBM Containers, gli utenti possono montare i volumi Docker sulle condivisioni file. 
+Nell'ambiente cloud IBM, un sistema di archiviazione permanente in cui gli utenti archiviano e condividono i file. In IBM Containers, gli utenti possono montare i volumi Docker sulle condivisioni file.
 
 ### attiva
 {: #x2239904}
@@ -990,7 +990,7 @@ Un servizio visibile solo ai membri di una specifica organizzazione Bluemix.
 ### blueprint del processo
 {: #x8677871}
 
-Descrizione di un processo di business che include i dettagli sulle attività del processo, come ad esempio le persone che effettuano o conoscono le attività e gli eventi cardine in cui vengono eseguite le attività. 
+Descrizione di un processo di business che include i dettagli sulle attività del processo, come ad esempio le persone che effettuano o conoscono le attività e gli eventi cardine in cui vengono eseguite le attività.
 
 ### diagramma del processo
 {: #x2220858}
