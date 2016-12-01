@@ -12,26 +12,58 @@ copyright:
 # Support client
 {: #getting-customer-support}
 
-Dernière mise à jour : 4 août 2016
+Dernière mise à jour : 22 octobre 2016
 {: .last-updated}
 
 
 Si vous rencontrez des problèmes avec {{site.data.keyword.Bluemix}}, plusieurs options d'assistance s'offrent à vous : vous pouvez par exemple obtenir de l'aide via un forum ou ouvrir un ticket de demande de service.
 {:shortdesc}
 
+
 ## Comment obtenir de l'aide
 {: #getting-help}
-Pour ouvrir un ticket de demande de service ou rechercher d'autres options d'aide, vous pouvez utiliser le widget Compte et support. Vous pouvez aussi accéder
-directement aux forums Stack Overflow ou developerWorks (dW) Answers afin de rechercher des informations ou de poser des questions.
+Pour ouvrir un ticket de demande de service ou rechercher d'autres options d'aide, vous pouvez utiliser le widget Support. Vous pouvez aussi accéder
+directement aux forums Stack Overflow ou developerWorks (dW) Answers afin de rechercher des informations ou de poser des questions. Si vous utilisez un
+compte lié pour {{site.data.keyword.Bluemix_notm}} et {{site.data.keyword.BluSoftlayer}}, voir
+[Utilisation du widget Support pour les comptes liés](#using-avatar-linked) et [Ouverture d'un ticket
+de demande de service pour les comptes liés](#open-ticket-linked).
+
 {:shortdesc}
 
-### Utilisation du widget Compte et support
+
+### Utilisation du widget Support 
 {: #using-avatar}
-Le widget Compte et support est une fonction vous permet de consulter des informations de compte, d'afficher le statut, de rester informé grâce aux notifications, de sélectionner votre région, de sélectionner et de gérer des organisations et de vous déconnecter. Vous pouvez également obtenir de l'aide et fournir des commentaires en retour.
+Le widget Support vous permet d'obtenir de l'aide et de nous faire part de vos commentaires. 
 
-Pour ouvrir le widget Compte et support, connectez-vous à l'interface utilisateur {{site.data.keyword.Bluemix_notm}} et cliquez sur l'icône {{site.data.keyword.avatar}} ![icône Avatar](images/account_support.svg) dans la barre de menu.
+Pour ouvrir le widget Support, connectez-vous à la console {{site.data.keyword.Bluemix_notm}}. Depuis la barre de menu, cliquez sur
+**Support** &gt; **Obtenir de l'aide** pour trouver les réponses à vos questions. Sur la page qui s'affiche, entrez votre question dans la zone de recherche. Les réponses provenant de la documentation {{site.data.keyword.Bluemix_notm}} et de Stack Overflow sont affichées. La page fournit également des options permettant de publier votre question dans Stack Overflow ou d'ouvrir un ticket de demande de service en cliquant sur **Obtenir de l'aide**.
 
-Cliquez sur **Obtenir de l'aide** pour trouver les réponses à vos questions. Sur la page qui s'affiche, entrez votre question dans la zone de recherche. Les réponses provenant de la documentation {{site.data.keyword.Bluemix_notm}} et de Stack Overflow sont affichées. La page fournit également des options permettant de publier votre question dans Stack Overflow ou d'ouvrir un ticket de demande de service en cliquant sur **Obtenir de l'aide**.
+### Utilisation du widget Support pour les comptes liés 
+{: #using-avatar-linked}
+
+Si vous utilisez un compte lié pour {{site.data.keyword.Bluemix_notm}} et {{site.data.keyword.BluSoftlayer}}, le widget Support est
+légèrement différent. Connectez-vous à la console Bluemix et cliquez sur le lien **Support** dans la barre de menu pour ouvrir le widget
+Support, puis sélectionnez **Ajouter un ticket** &gt; **Trouver des réponses**. Vous disposez des options suivantes :
+
+* Vous pouvez effectuer une recherche dans la documentation Bluemix, le forum Stack Overflow et le forum DW Answers en définissant un
+filtre afin de changer les résultats de recherche pour qu'ils n'incluent que les éléments sélectionnés.
+
+* Vous pouvez accéder directement au forum Stack Overflow **#IBMBluemix** ou au forum DW Answers pour rechercher un
+article. 
+* Vous pouvez soumettre une idée via IBM User Voice.
+* Vous pouvez prendre contact avec le service commercial en appelant ou en localisant un ingénieur commercial, ou par le biais du formulaire de
+recherche d'un ingénieur commercial.
+
+* Vous pouvez vous connecter à **@IBMBluemixHelp** sur Twitter afin d'améliorer votre expérience de Bluemix.
+
+
+
+
+### Utilisation des éléments de menu Compte 
+{: #using-accountmenu}
+
+Utilisez les éléments de menu Compte pour consulter des informations de compte, afficher le
+statut, rester informé par le biais de notifications, sélectionner votre région, sélectionner et gérer des organisations et vous déconnecter. 
 
 
 ### Poser une question
@@ -44,11 +76,10 @@ des recherches. Si vous ne trouvez pas de réponse, posez une nouvelle question.
 relative au développement d'applications avec la plateforme et les services Bluemix.
   * Accédez à [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} pour toute question
 relative à l'offre {{site.data.keyword.Bluemix_notm}} et pour des instructions de mise en route.
-  * En Chine, accédez au site [IBM developerWorks China Developer
-Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} pour poser des questions.
 
-Vous pouvez aussi poser une question sur Stack Overflow directement depuis le widget Compte et support en procédant comme suit :
-  1. Depuis le widget Compte et support, cliquez sur **Obtenir de l'aide**. 
+
+Vous pouvez aussi poser une question sur le forum Stack Overflow directement depuis le widget Support en procédant comme suit :
+  1. Depuis le widget Support, cliquez sur **Obtenir de l'aide**.  
   2. Sur la page qui s'affiche, entrez votre question dans la zone de recherche pour trouver des réponses. 
   3. Si vous ne trouvez pas de réponse appropriée, cliquez sur **Publier dans Stack Overflow** pour poser votre question.
 
@@ -76,7 +107,8 @@ Les informations suivantes sont disponibles sur la page Statut :
 
 Vous pouvez afficher la page Statut en choisissant l'une des options suivantes :
 
-  * Connectez-vous à l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône {{site.data.keyword.avatar}}![icône Avatar](./images/account_support.svg) dans la barre de menu, puis cliquez sur **Statut**. Recherchez dans les ressources répertoriées l'icône signalant ![des problèmes](images/some_issues.svg). Celle-ci peut indiquer une indisponibilité.
+  * Connectez vous à la console {{site.data.keyword.Bluemix_notm}}. Dans la barre de menu, cliquez sur **Support**, puis
+sur **Statut**. Recherchez dans les ressources répertoriées l'icône signalant ![des problèmes](images/some_issues.svg). Celle-ci peut indiquer une indisponibilité.
   * Accédez directement à la page à l'adresse [IBM {{site.data.keyword.Bluemix_notm}} - System Status](http://ibm.biz/bluemixstatus){: new_window}.
 
 
@@ -94,15 +126,13 @@ Pour vous abonner, procédez comme suit :
 
 	Pour plus d'informations, consultez la section **Aide** de votre lecteur. 	   
 
-D'autres méthodes de lecture de flux RSS sont disponibles via des plug-ins de navigateur Web, tels que les suivants :
-  * [Lecteur de flux RSS](http://feeder.co/){: new_window} pour Chrome 
+D'autres méthodes de lecture de flux RSS sont disponibles via des plug-in de navigateur Web, tels que les suivants : 
+  * [Lecteur de flux RSS](http://feeder.co/){: new_window} pour Chrome
   * [Module complémentaire Brief ](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} pour Firefox
 
-
 Des sources Nouveautés telles que les suivantes fournissent également des méthodes de lecture de flux RSS :
-
   * [Feedly](http://www.feedly.com/){: new_window} 
-  * [G2reader](http://www.g2reader.com/en/){: new_window} 
+  * [G2reader](http://www.g2reader.com/en/){: new_window}
 
 Vous pouvez également utiliser un service de tiers pour envoyer un courrier électronique automatiquement à chaque mise à jour RSS. La liste suivante répertorie des exemples de service de tiers :
 
@@ -115,10 +145,16 @@ Vous pouvez également utiliser un service de tiers pour envoyer un courrier él
 
 Généralement, {{site.data.keyword.Bluemix_notm}} présente environ 50 mises à jour par mois.
 
+
+
 ### Définition des notifications d'incident et de maintenance par courrier électronique
 {: #setting-up-notifications}
 
-Pour l'environnement {{site.data.keyword.Bluemix_notm}} public, vous pouvez vous inscrire pour recevoir des notifications de plateforme. Les notifications de plateforme sont des alertes par courrier électronique facultatives relatives à des événements d'incident et de maintenance pour la plateforme {{site.data.keyword.Bluemix_notm}}. Vous pouvez choisir de recevoir ces notifications par courrier électronique en cliquant sur l'icône {{site.data.keyword.avatar}} ![icône Avatar](../admin/images/account_support.svg) &gt; **Notifications** &gt; **Plateforme**. Pour plus d'informations sur la définition de notifications de compte, accédez à [Définition de notifications](../admin/account.html#notifications).
+Pour l'environnement {{site.data.keyword.Bluemix_notm}} public, vous pouvez vous inscrire pour recevoir des notifications de plateforme. Les notifications de plateforme sont des alertes par courrier électronique facultatives relatives à des événements d'incident et de maintenance pour la plateforme {{site.data.keyword.Bluemix_notm}}. Vous
+pouvez choisir de recevoir ces notifications par courrier électronique en cliquant sur les options **Compte** &gt;
+**Notifications** &gt; **Plateforme**. Pour plus d'informations sur la définition de notifications de compte, accédez à [Définition de notifications](../admin/account.html#notifications).
+
+
 ### Meilleures pratiques pour la surveillance du statut
 {: #best-practices}
 
@@ -132,7 +168,9 @@ Pour l'environnement {{site.data.keyword.Bluemix_notm}} public, vous pouvez vous
 
 	Si vous trouvez que {{site.data.keyword.Bluemix_notm}} ne
 fonctionne pas comme prévu, recherchez des fenêtres de maintenance ou un
-incident en cours sur la page Statut. Pour signaler un incident non encore répertorié sur cette page, ouvrez un ticket de demande de service via l'icône {{site.data.keyword.avatar}} ![icône Avatar](images/account_support.svg) dans la barre de menu ou la page d'aide [IBM Bluemix Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window}.
+incident en cours sur la page Statut. Pour signaler un incident qui n'est pas déjà répertorié sur cette page, ouvrez un ticket de demande de service en
+cliquant sur l'élément de menu **Support** dans la barre de menu ou dans la page d'aide
+[IBM Bluemix Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window}. 
 
   * Bénéfice lié à plusieurs régions {{site.data.keyword.Bluemix_notm}}
 
@@ -161,11 +199,9 @@ instances de chaque application.
 ## Contacter le service de support
 {: #contacting-support}
 
-Vous pouvez ouvrir des tickets de demande de service si vous disposez d'un compte
-{{site.data.keyword.Bluemix_notm}}
-valide. 
+Vous pouvez ouvrir des tickets de demande de service si vous disposez d'un compte {{site.data.keyword.Bluemix_notm}} valide de plusieurs façons. [Ouverture d'un ticket de demande de service](#open-ticket). 
 
-Si vous disposez d'un compte {{site.data.keyword.Bluemix_notm}} qui est lié à un compte SoftLayer, vous pouvez ouvrir des tickets de demande de service pour {{site.data.keyword.Bluemix_notm}} à partir du portail client SoftLayer ou de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
+Si vous disposez d'un compte {{site.data.keyword.Bluemix_notm}} qui est lié à un compte {{site.data.keyword.BluSoftlayer_full}}, vous pouvez ouvrir des tickets de demande de service pour {{site.data.keyword.Bluemix_notm}} à partir du portail client {{site.data.keyword.BluSoftlayer}} ou de la console {{site.data.keyword.Bluemix_notm}} par le biais du widget Support. Voir [Ouverture d'un ticket de demande de service pour les comptes liés](#open-ticket-linked).
 
 ### Contacter le support pour l'environnement {{site.data.keyword.Bluemix_notm}} public
 {: #contacting-bluemix-support}
@@ -187,46 +223,59 @@ Prise en charge de langues | Anglais | Anglais | Anglais | Anglais
 Responsable Client Success (CSM) affecté | Non inclus | Non inclus | Non inclus | Inclus avec<br> 8 heures par semaine
 *Tableau 1. Niveaux de support*
 
-#### Ouverture d'un ticket de support
+### Ouverture d'un ticket de demande de service
 {: #open-ticket}
 
 Si vous ne parvenez pas à résoudre votre problème technique à l'aide des options de résolution des incidents et de l'aide,
 vous pouvez demander une assistance. Toutefois, avant de prendre contact avec le support pour un problème technique, assurez-vous que le problème n'est pas
 dû à une indisponibilité en vérifiant le statut de {{site.data.keyword.Bluemix_notm}}.
 
-Si le problème n'est pas dû à une indisponibilité, et que vous êtes client dans un pays autre que la Chine, ouvrez un ticket de support à l'aide d'une des
-options suivantes :
 
-  * Depuis le widget Compte et support, cliquez sur **Obtenir de l'aide**. Sur la page qui s'affiche, cliquez sur
+
+Si le problème n'est pas dû à une indisponibilité, ouvrez un ticket de demande de service par le biais de l'une des options suivantes :
+
+  * Depuis le widget Support, cliquez sur **Obtenir de l'aide**. Sur la page qui s'affiche, cliquez sur
 **Prendre contact**. Remplissez le formulaire pour indiquer pour quelle raison vous avez besoin d'une assistance technique.
   * Utilisez la page d'aide [IBM {{site.data.keyword.Bluemix_notm}}
 Support](http://ibm.biz/bluemixsupport){: new_window}. Vous pouvez soumettre des tickets pour des problèmes liés aux ventes, à la facturation, aux IBMid et à la connexion, ainsi que
-pour des problèmes techniques. Pour les problèmes techniques, vous pouvez sélectionner un groupe technique après avoir cliqué sur la vignette **Technical
-Support**. Par exemple, si vous avez besoin d'aide pour des applications Cloud Foundry, OpenWhisk, Containers, Virtual Servers ou des serveurs
+pour des problèmes techniques. Pour les problèmes techniques, vous pouvez sélectionner un groupe technique après avoir cliqué sur
+**Support technique**. Par exemple, si vous avez besoin d'aide pour des applications Cloud Foundry, OpenWhisk, Containers, Virtual Servers ou des serveurs
 Bare Metal, choisissez **Services d'application**. Si vous avez besoin d'aide pour un service spécifique, sélectionnez la catégorie de
 service correspondante. Pour identifier la catégorie à laquelle votre service appartient, reportez-vous aux catégories sous
 [Services](../services/index.html){: new_window} dans le panneau de navigation.  
   * Depuis le [portail IBM Client Success](https://support.ibmcloud.com){: new_window}. Après vous être connecté au portail,
 cliquez sur **Open Ticket** et renseignez le formulaire de support. 
   
-
-
 Lorsque vous ouvrez un ticket de demande de service, veillez à indiquer une gravité appropriée. Elle détermine la façon dont votre ticket sera
-traité. Voir [Gravité et temps de réponse du ticket de support](index.html#support-ticket-severity){: new_window} pour plus d'informations sur
+traité. Voir [Gravité et temps de réponse du ticket de demande de service](index.html#support-ticket-severity){: new_window} pour plus d'informations sur
 les différentes gravités. Si votre demande est urgente, mais que vous ne bénéficiez que du support gratuit ou de base,
 vous pouvez mettre à niveau votre compte pour soumettre des tickets de haute gravité (niveau 1, 2, et 3). Pour mettre à niveau votre compte vers un niveau de support
 plus élevé, contactez votre ingénieur commercial IBM par e-mail à l'adresse sales@bluemix.net.
 
-Si l'utilisateur est implanté en Chine, le support payant pour votre compte est accessible sur le site
-[UNISYS Service
-Management IBM Bluemix](https://chinabluemix.itsm.unisysedge.cn){: new_window}.
+### Ouverture d'un ticket de demande de service pour les comptes liés 
+{: #open-ticket-linked}
 
-#### Vérification du statut du ticket de support
+Si vous utilisez un compte lié pour {{site.data.keyword.Bluemix_notm}} et {{site.data.keyword.BluSoftlayer}}, vous pouvez ouvrir un
+ticket de demande de service depuis la console {{site.data.keyword.Bluemix_notm}} par le biais du widget Support.  
+
+Afin d'ouvrir un ticket de demande de service {{site.data.keyword.Bluemix_notm}} pour un compte lié, cliquez sur
+**Support**
+dans la barre de menu pour ouvrir le widget Support et sélectionnez **Ajouter un ticket**. Dans le formulaire de ticket, sélectionnez
+**Technical** comme type de ticket et remplissez le formulaire en indiquant la raison pour laquelle vous avez besoin d'aide. Si vous
+bénéficiez du niveau de support premium, choisissez le niveau de gravité de votre problème. Vous recevrez une notification par courrier électronique
+concernant le ticket quelques minutes après. Suivez les instructions figurant dans le courrier électronique pour toute communication supplémentaire
+relative au problème. 
+
+
+### Vérification du statut du ticket de demande de service
 {: #check-ticket-status}
 
-A chaque ticket de support est associé un numéro de référence unique. Dans les pays autres que la Chine, vous pouvez utiliser le numéro du ticket
-pour examiner sa progression et mettre à jour votre ticket sur le site [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Les mises à jour et les réponses vous sont envoyées par courrier électronique et enregistrées dans les
-notes sur le ticket. 
+A chaque ticket de demande de service est associé un numéro de référence unique. Vous pouvez utiliser le numéro du ticket
+pour suivre sa progression et mettre à jour votre ticket sur le site [IBM Client Success
+Portal](https://support.ibmcloud.com){: new_window}. Les mises à jour et les réponses vous sont envoyées par courrier électronique et enregistrées dans les
+notes sur le ticket.  
+
+
 
 
 ### Contacter le support pour l'environnement {{site.data.keyword.Bluemix_notm}} dédié
@@ -234,7 +283,8 @@ notes sur le ticket.
 
 <!-- Michelle links to this anchor  -->
 
-Si vous êtes un client {{site.data.keyword.Bluemix_notm}} dédié dans un pays ou une région autre que la Chine, le support est assuré par l'équipe de support IBM {{site.data.keyword.Bluemix_notm}}. Vous pouvez effectuer votre choix parmi différentes options pour obtenir de l'aide, selon que vous possédez ou non un IBMid.
+Si vous êtes un client de l'environnement {{site.data.keyword.Bluemix_notm}} dédié, le support est assuré par l'équipe de support IBM
+{{site.data.keyword.Bluemix_notm}}. Vous pouvez effectuer votre choix parmi différentes options pour obtenir de l'aide, selon que vous possédez ou non un IBMid.
 
 <ul>
 <li>Prenez contact avec le support en ouvrant un nouveau ticket dans la page d'aide <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM
@@ -242,26 +292,22 @@ Si vous êtes un client {{site.data.keyword.Bluemix_notm}} dédié dans un pays 
 l'option **{{site.data.keyword.Bluemix_notm}} Dédié** pour la zone Région.
 <p>Les soumissions de formulaires sont surveillées du dimanche 22h00 au vendredi 23h59 (Temps Universel Coordonné).</p>
 </li>
-<li>Si vous possédez un IBMid et avez accès à l'environnement {{site.data.keyword.Bluemix_notm}} Public, cliquez sur l'icône {{site.data.keyword.avatar}}
-rt** <img src="images/account_support.svg" alt="icône Avatar" /> dans la barre de menu, puis sur **Obtenir de
+<li>Si vous possédez un IBMid et avez accès à l'environnement {{site.data.keyword.Bluemix_notm}} public, cliquez sur l'icône
+{{site.data.keyword.avatar}} ** <img src="images/account_support.svg" alt="Icône Avatar" /> dans la barre de menu, puis sur **Obtenir de
 l'aide**. Sur la page qui s'affiche, cliquez sur
 **Prendre contact**.</li>
 <li>Si vous ne possédez pas d'IBMid, vous pouvez prendre contact avec une personne de votre organisation qui en
 possède un ou collaborer avec votre interlocuteur IBM habituel.
-<p>**Remarque** : Si vous en faites la demande, une liste d'utilisateurs de votre organisation pouvant servir de contacts pour les tickets de demande de service peut s'afficher sur la page **Support** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}} de votre environnement dédié.</p></li>
+<p>**Remarque** : si vous en faites la demande, la liste des utilisateurs de votre organisation pouvant servir de contacts pour les
+tickets de demande de service peut s'afficher dans la page **Support** dans la console {{site.data.keyword.Bluemix_notm}} de votre environnement dédié.</p></li>
 </ul>
-
-Si vous êtes client {{site.data.keyword.Bluemix_notm}} Dedicated en Chine, vous pouvez demander une assistance depuis le site
-[UNISYS Service Management IBM Bluemix](https://chinabluemix.itsm.unisysedge.cn){: new_window}. Par
-ailleurs, les clients situés en Chine peuvent bénéficier d'un support gratuit sur les sites [IBM developerWorks China Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window}.
-
 
 ### Contacter le support pour l'environnement {{site.data.keyword.Bluemix_notm}} local
 {: #contacting-bluemix-support-local}
 
 <!-- Michelle links to this anchor  -->
 
-Si vous êtes un client {{site.data.keyword.Bluemix_notm}} local, le support est assuré par l'équipe de support IBM
+Si vous êtes un client de l'environnement {{site.data.keyword.Bluemix_notm}} local, le support est assuré par l'équipe de support IBM
 {{site.data.keyword.Bluemix_notm}}. Toutefois, comme vous ne disposez peut-être pas d'un IBMid, vous pouvez obtenir de l'aide de plusieurs façons.
 
 <ul>
@@ -270,19 +316,17 @@ Si vous êtes un client {{site.data.keyword.Bluemix_notm}} local, le support est
 l'option **{{site.data.keyword.Bluemix_notm}} Local** pour la zone Région.
 <p>Les soumissions de formulaires sont surveillées du dimanche 22h00 au vendredi 23h59 (Temps Universel Coordonné).</p>
 </li>
-<li>Si vous possédez un IBMid et avez accès à l'environnement {{site.data.keyword.Bluemix_notm}} Public, cliquez sur l'icône {{site.data.keyword.avatar}}
-rt** <img src="images/account_support.svg" alt="icône Avatar" /> dans la barre de menu, puis sur **Obtenir de
-l'aide**. Sur la page qui s'affiche, cliquez sur
+<li>Si vous possédez un IBMid et avez accès à l'environnement {{site.data.keyword.Bluemix_notm}} public, cliquez sur l'élément de barre de menu
+**Support**, puis sur **Obtenir de l'aide**. Sur la page qui s'affiche, cliquez sur
 **Prendre contact**.</li>
 <li>Si vous ne possédez pas d'IBMid, vous pouvez prendre contact avec une personne de votre organisation qui en
 possède un ou collaborer avec votre interlocuteur IBM habituel.
-<p>**Remarque** : Si vous en faites la demande, une liste d'utilisateurs de votre organisation pouvant servir de contacts pour les tickets de demande de service peut s'afficher sur la page **Support** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}} de votre environnement local.</p></li>
+<p>**Remarque** : si vous en faites la demande, la liste des utilisateurs de votre organisation pouvant servir de contacts pour les
+tickets de demande de service peut s'afficher dans la page **Support** dans la console {{site.data.keyword.Bluemix_notm}} de
+votre environnement local. </p></li>
 </ul>
 
-
-
-
-### Gravité et temps de réponse du ticket de support
+### Gravité et temps de réponse du ticket de demande de service
 {: #support-ticket-severity}
 
 Lorsque vous prenez contact avec le support, vous pouvez demander un niveau de gravité spécifique, selon le type et l'urgence du problème. Le niveau de
@@ -321,34 +365,32 @@ Heures de service </li><li><strong>De base :</strong> Heures de service </li><li
 ### Signalement d'une vulnérabilité de sécurité potentielle
 {: #report-security-vulnerability}
 
-Si vous pensez qu'une vulnérabilité de sécurité est présente, signalez-la à Bluemix en ouvrant un ticket de support. 
+Si vous pensez qu'une vulnérabilité de sécurité est présente, signalez-la à Bluemix en ouvrant un ticket de demande de service. 
 
 Pour signaler une vulnérabilité de sécurité potentielle, procédez comme suit :
   1. Ouvrez un ticket de gravité 1 ou avec la gravité la plus haute d'après votre niveau de support. Pour plus d'informations sur l'ouverture d'un
-ticket, voir [Ouverture d'un ticket de support](#open-ticket){: new_window}. 
+ticket, voir [Ouverture d'un ticket de demande de service](#open-ticket){: new_window}. 
   2. Décrivez clairement dans le résumé du ticket qu'il porte sur une vulnérabilité de sécurité potentielle.
   2. Fournissez des détails sur la vulnérabilité de sécurité potentielle en incluant l'un des éléments suivants :
        * Un numéro de téléphone où vous pouvez être joint pour discuter du problème.
 	   * Les détails du problème. Vous pouvez les chiffrer dans un bloc de texte dans le corps du
-ticket et indiquer comment le support IBM peut vous contacter pour obtenir des instructions de déchiffrement sécurisées.
-	   
+ticket et indiquer comment le support IBM peut vous contacter pour obtenir des instructions de déchiffrement sécurisées. 
 	   
 	   
 
 ### Escalade d'un ticket de demande de service
 {: #escalation}
 
-Si vous bénéficiez d'un support au niveau standard ou premium ailleurs qu'en Chine et n'avez pas reçu de réponse en temps opportun à un ticket de support, ou
-si vous pensez qu'un ticket de support n'a pas été traité convenablement, vous pouvez demander son escalade. Dans le cadre du processus d'escalade d'un ticket de demande de service, les responsables IBM prennent connaissance de vos préoccupations et collaborent avec
+Si vous bénéficiez du niveau de support standard ou premium et n'avez pas reçu de réponse en temps opportun à un ticket de
+demande de service, ou si vous pensez qu'un ticket de demande de service n'a pas été traité convenablement, vous pouvez demander son escalade. Dans le cadre du processus d'escalade d'un ticket de demande de service, les responsables IBM prennent connaissance de vos préoccupations et collaborent avec
 vous afin d'améliorer votre expérience en matière d'assistance.
 
 Pour soumettre une demande d'escalade, procédez comme suit :
-  1. Ouvrez un nouveau ticket de support avec comme récapitulatif **Demande d'escalade**.
+  1. Ouvrez un nouveau ticket de demande de service avec comme récapitulatif **Demande d'escalade**.
   2. Pour que votre demande d'escalade puisse être mise en corrélation avec le ticket de demande de support d'origine, incluez les informations
 suivantes dans le corps du ticket :
        * Le numéro du ticket de demande de service ouvert nécessitant une escalade.
 	   * Un bref récapitulatif des raisons de l'escalade.
-
 
 
 
