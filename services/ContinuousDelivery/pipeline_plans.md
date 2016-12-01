@@ -20,4 +20,4 @@ lastupdated: "2016-09-16"
 {: #deliverypipeline_plans}
 {: #free_deprecation}
 
-{{site.data.keyword.deliverypipeline}} and {{site.data.keyword.deliverypipeline}} Next use a free plan. This plan includes unlimited use of pipelines.
+{{site.data.keyword.deliverypipeline}} uses a free plan. This plan includes unlimited use of pipelines.
