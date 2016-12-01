@@ -15,7 +15,7 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} セキュリティー
 {: #security}
-最終更新日: 2016 年 7 月 22 日
+最終更新日: 2016 年 10 月 19 日
 {: .last-updated}
 
 {{site.data.keyword.Bluemix}} プラットフォームはセキュア・エンジニアリング・プラクティスを使用して設計されており、ネットワークおよびインフラストラクチャー全体における階層化セキュリティー管理機能を備えています。{{site.data.keyword.Bluemix_notm}} は、アプリケーション開発者がモバイル・アプリおよび Web アプリを保護するために使用できる一連のセキュリティー・サービスを備えています。これらのエレメントを組み合わせることで、{{site.data.keyword.Bluemix_notm}} は、セキュアなアプリケーション開発に対して明確な選択を提供するプラットフォームになっています。
@@ -23,14 +23,14 @@ copyright:
 
 {{site.data.keyword.Bluemix_notm}} は、システム、ネットワーキング、およびセキュア・エンジニアリングに関する IBM のベスト・プラクティスに基づいたセキュリティー・ポリシーに準拠することで、セキュリティーが確保されている状態にします。これらのポリシーには、ソース・コード・スキャン、動的スキャン、脅威のモデル化、侵入テストなどのプラクティスが含まれます。{{site.data.keyword.Bluemix_notm}} は、セキュリティー・インシデントの管理について、IBM Product Security Incident Response Team (PSIRT) プロセスに従います。詳しくは、[IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} のサイトを参照してください。
 
-{{site.data.keyword.Bluemix_notm}} Public および Dedicated では、IBM SoftLayer Infrastructure-as-a-Service (IaaS) クラウド・サービスを使用し、そのセキュリティー・アーキテクチャーを最大限に活用します。SoftLayer IaaS は、ご使用のアプリケーションとデータに対して何重にも重ねた層の保護を提供します。{{site.data.keyword.Bluemix_notm}} Local の場合、企業ファイアウォールの背後にあるお客様自身のデータ・センターに {{site.data.keyword.Bluemix_notm}} Local をホストすることで、お客様が物理的セキュリティーを所有し、インフラストラクチャーを提供します。さらに、{{site.data.keyword.Bluemix_notm}} は、Platform as a Service 層で各種カテゴリー (プラットフォーム、データ、およびアプリケーション) のセキュリティー機能を追加します。
+{{site.data.keyword.Bluemix_notm}} Public および Dedicated では、{{site.data.keyword.BluSoftlayer}} Infrastructure-as-a-Service (IaaS) クラウド・サービスを使用し、そのセキュリティー・アーキテクチャーを最大限に活用します。{{site.data.keyword.BluSoftlayer}} IaaS は、ご使用のアプリケーションとデータに対して何重にも重ねた層の保護を提供します。{{site.data.keyword.Bluemix_notm}} Local の場合、企業ファイアウォールの背後にあるお客様自身のデータ・センターに {{site.data.keyword.Bluemix_notm}} Local をホストすることで、お客様が物理的セキュリティーを所有し、インフラストラクチャーを提供します。さらに、{{site.data.keyword.Bluemix_notm}} は、Platform as a Service 層で各種カテゴリー (プラットフォーム、データ、およびアプリケーション) のセキュリティー機能を追加します。
 
 ## {{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー
 {: #platform-security}
 
-{{site.data.keyword.Bluemix_notm}} は、(IBM SoftLayer を介して) コア・プラットフォームに対して機能、インフラストラクチャー、運用、および物理的なセキュリティーを提供します。ただし、{{site.data.keyword.Bluemix_notm}} Local は、お客様がインフラストラクチャーとデータ・センターを提供し、物理的セキュリティーを所有するという点で独自です。
+{{site.data.keyword.Bluemix_notm}} は、({{site.data.keyword.BluSoftlayer}} を介して) コア・プラットフォームに対して機能、インフラストラクチャー、運用、および物理的なセキュリティーを提供します。ただし、{{site.data.keyword.Bluemix_notm}} Local は、お客様がインフラストラクチャーとデータ・センターを提供し、物理的セキュリティーを所有するという点で独自です。
 
-SoftLayer の {{site.data.keyword.Bluemix_notm}} 環境は、ほとんどの制約的な IBM 情報技術 (IT) セキュリティー標準 (業界標準に適合しているか業界標準を上回る) に準拠しています。これらの標準には、
+{{site.data.keyword.BluSoftlayer}} の {{site.data.keyword.Bluemix_notm}} 環境は、ほとんどの制約的な IBM 情報技術 (IT) セキュリティー標準 (業界標準に適合しているか業界標準を上回る) に準拠しています。これらの標準には、
 ネットワーク、データ暗号化、アクセス制御が含まれています。
  * アプリケーション ACL、アクセス権、侵入テスト
  * 識別、認証、許可
@@ -42,13 +42,13 @@ SoftLayer の {{site.data.keyword.Bluemix_notm}} 環境は、ほとんどの制�
 
 ![Bluemix プラットフォーム・セキュリティーの概要](images/platform_sec.svg)
 
-*図 1. {{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー概要*
+図 1. {{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー概要
 
 {{site.data.keyword.Bluemix_notm}} Local では、企業ファイアウォールの背後で、データセンター内に {{site.data.keyword.Bluemix_notm}} をホストします。そのため、特定のセキュリティーの側面についてはお客様の責任となります。下図は、セキュリティーのうち、どの部分をお客様が担い、どの部分を IBM が管理、保守するかについての詳細です。
 
 ![Bluemix Local プラットフォームのセキュリティー概要](images/security_local_platform.svg)
 
-*図 2. {{site.data.keyword.Bluemix_notm}} Local プラットフォームのセキュリティー概要*
+図 2. {{site.data.keyword.Bluemix_notm}} Local プラットフォームのセキュリティー概要
 
 IBM は、リレー ({{site.data.keyword.Bluemix_notm}} Local に付属のデリバリー機能) を使用して、お客様のデータ・センターに対して {{site.data.keyword.Bluemix_notm}} Local のインストール、リモート・モニター、および管理を行います。リレーは、各 {{site.data.keyword.Bluemix_notm}} Local インスタンスに固有の証明書にセキュアに接続します。{{site.data.keyword.Bluemix_notm}} Local およびリレーについて詳しくは、[Bluemix Local](../local/index.html) を参照してください。
 
@@ -82,8 +82,7 @@ IBM は、リレー ({{site.data.keyword.Bluemix_notm}} Local に付属のデリ
 <li>TRACE</li>
 </ul>
 HTTP の非活動タイムアウトは 2 分です。</dd>
-<dd>
-以下のヘッダーには DataPower によりデータが取り込まれます。<dl>
+<dd>以下のヘッダーには DataPower によりデータが取り込まれます。<dl>
 <dt>$wsis</dt>
 <dd>クライアント・サイドの接続がセキュア (HTTPS) である場合は true に、その他の場合は false に設定されます。</dd>
 <dt>$wssc</dt>
@@ -109,10 +108,10 @@ HTTP の非活動タイムアウトは 2 分です。</dd>
 
 <dl>
 <dt>環境の分離</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} Public では、開発環境と実稼働環境を互いから分離して、アプリケーションの安定性とセキュリティーを向上させています。</dd>
+<dd> {{site.data.keyword.Bluemix_notm}} Public では、開発環境と実稼働環境を互いから分離して、アプリケーションの安定性とセキュリティーを向上させています。</dd>
 
 <dt>ファイアウォール</dt>
-<dd>ファイアウォールを配備して、{{site.data.keyword.Bluemix_notm}} ネットワークへのアクセスを制限します。{{site.data.keyword.Bluemix_notm}} Local では、企業ファイアウォールにより、{{site.data.keyword.Bluemix_notm}} インスタンスからネットワークの残りの部分を分離します。</dd>
+<dd> ファイアウォールを配備して、{{site.data.keyword.Bluemix_notm}} ネットワークへのアクセスを制限します。{{site.data.keyword.Bluemix_notm}} Local では、企業ファイアウォールにより、{{site.data.keyword.Bluemix_notm}} インスタンスからネットワークの残りの部分を分離します。</dd>
 
 <dt>侵入防止</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} Public および Dedicated では、脅威への対処を可能にするため、不正侵入に対する防御によって脅威が検出できるようになっています。侵入防止ポリシーは、ファイアウォールで有効になります。</dd>
@@ -141,17 +140,17 @@ HTTP の非活動タイムアウトは 2 分です。</dd>
 <dt>ユーザー・アクセス管理</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} 内では職務分離ガイドラインに従い、ユーザーに細かいアクセス特権を割り当てて、ユーザーが持っているのは、最小特権の原則に基づいた、ジョブの実行に必要なアクセス権限のみであることを保証します。
 
-{{site.data.keyword.Bluemix_notm}} Dedicated および Local 環境内では、割り当てられた管理者が、管理コンソールを使用して、組織内の {{site.data.keyword.Bluemix_notm}} ユーザーの役割および許可を管理できます。詳しくは、『[{{site.data.keyword.Bluemix_notm}} Local および Dedicated の管理](../admin/index.html#mng)』を参照してください。
+{{site.data.keyword.Bluemix_notm}} Dedicated および Local 環境内では、割り当てられた管理者が、管理コンソールを使用して、組織内の {{site.data.keyword.Bluemix_notm}} ユーザーの役割および許可を管理できます。詳しくは、『[{{site.data.keyword.Bluemix_notm}} の管理](../admin/adminpublic.html#mng)』を参照してください。
 </dd>
 </dl>
 
 ### 物理的セキュリティー
 
-{{site.data.keyword.Bluemix_notm}} Public および Dedicated は、物理的なネットワーク・セキュリティーに関し、SoftLayer のネットワーク内ネットワーク・トポロジーに依存しています。このネットワーク内ネットワーク・アーキテクチャーは、許可された職員のみがシステムに完全にアクセスできるようにします。{{site.data.keyword.Bluemix_notm}} Local の場合、お客様がローカル・インスタンスの物理的セキュリティーを所有します。お客様のデータ・センターは、お客様の企業ファイアウォールの背後で保護されます。
+{{site.data.keyword.Bluemix_notm}} Public および Dedicated は、物理的なネットワーク・セキュリティーに関し、{{site.data.keyword.BluSoftlayer}} のネットワーク内ネットワーク・トポロジーに依存しています。このネットワーク内ネットワーク・アーキテクチャーは、許可された職員のみがシステムに完全にアクセスできるようにします。{{site.data.keyword.Bluemix_notm}} Local の場合、お客様がローカル・インスタンスの物理的セキュリティーを所有します。お客様のデータ・センターは、お客様の企業ファイアウォールの背後で保護されます。
 
-SoftLayer のネットワーク内ネットワークでは、パブリック・ネットワーク層 で、ホストされている Web サイトやオンライン・リソースへの公衆トラフィックを処理します。プライベート・ネットワーク層 では、SSL、PPTP、または IPSec VPN ゲートウェイを介して別個の独立したサード・パーティー通信会社を通じた真のアウト・オブ・バンド管理が可能です。データ・センターからデータ・センターへのネットワーク層 は、別々の SoftLayer 設備に収納されているサーバー間に、無料でセキュアな接続を提供します。
+{{site.data.keyword.BluSoftlayer}} のネットワーク内ネットワークでは、パブリック・ネットワーク層 で、ホストされている Web サイトやオンライン・リソースへの公衆トラフィックを処理します。プライベート・ネットワーク層 では、SSL、PPTP、または IPSec VPN ゲートウェイを介して別個の独立したサード・パーティー通信会社を通じた真のアウト・オブ・バンド管理が可能です。データ・センターからデータ・センターへのネットワーク層 は、別々の {{site.data.keyword.BluSoftlayer}} 設備に収納されているサーバー間に、無料でセキュアな接続を提供します。
 
-各 SoftLayer データ・センターは、SSAE 16 および 業界で認められた要件を例外なく満たす制御により、完全に保護されています。詳細については、SoftLayer の Security にある Compliance のページを参照してください。
+各 {{site.data.keyword.BluSoftlayer}} データ・センターは、SSAE 16 および 業界で認められた要件を例外なく満たす制御により、完全に保護されています。
 
 ## データ・セキュリティー
 {: #data-security}
@@ -184,7 +183,7 @@ SoftLayer のネットワーク内ネットワークでは、パブリック・�
 
 いくつかの {{site.data.keyword.Bluemix_notm}} サービスによって提供されるセキュリティー機能を使用して、アプリケーションを保護することができます。IBM によって作成されたすべての {{site.data.keyword.Bluemix_notm}} サービスは、IBM セキュア・エンジニアリング開発プラクティスに従っています。
 
-**注:** ここで説明されている一部のサービスは、{{site.data.keyword.Bluemix_notm}} Dedicated と Local のいずれのインスタンスにも適用されない場合があります。
+**注:** ここで説明されているサービスの一部は、{{site.data.keyword.Bluemix_notm}} Dedicated と Local のいずれのインスタンスにも適用されない場合があります。
 
 ### SSO サービス
 
@@ -240,7 +239,7 @@ SIEM (Security Information and Event Management) ツールを使用して、ア�
 
 ![Bluemix セキュリティー・デプロイメント・アーキテクチャー](images/sec_deployment.svg)
 
-*図 3. Bluemix セキュリティー・デプロイメント・アーキテクチャー*
+図 3. Bluemix セキュリティー・デプロイメント・アーキテクチャー
 
 {{site.data.keyword.Bluemix_notm}} *アプリ・ユーザー* の場合、**アプリ・ユーザーのフロー** は次のとおりです。
  1. 侵入防止およびネットワーク・セキュリティーが配備されているファイアウォールを介します。
@@ -282,42 +281,76 @@ SIEM (Security Information and Event Management) ツールを使用して、ア�
 
 ![EU のデータ保護モデル契約条項](images/icon_eumc.png)  **EU モデル契約条項**は、EU または欧州経済地域 (EEA) から第三国に転送される個人データを保護する取り決めです。EU モデル契約条項は、EU または EEA にデータ・エクスポーターとして位置するクライアントと、第三国にデータ・インポーターとして位置する IBM データ・プロセッサーとの間で署名されました。[IBM SaaS EU モデル契約条項](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window}には、データ・エクスポーターとデータ・インポーターの権利と義務、およびデータ・サブジェクトの権利が記載されています。IBM SaaS EU モデル契約条項は、第三国で個人データの処理が行われる際に、その個人データに対して EU または EEA 内で使用可能な保護に似た保護を実行することを保証します。
 
-![金融情報システム](images/FISC.gif)  日本国内の銀行業界および関連する金融業界の場合、コンピューター・システムは、金融情報システムセンター (FISC) の安全対策基準に基づいた安全対策手順を実施する必要があります。**FISC** 安全対策基準は、金融庁 (FSA)、日本銀行 (BOJ)、および FISC によって実施されています。
+欧州経済地域 (EEA) から発信するデータを EEA 以外の国に転送するお客様の場合、{{site.data.keyword.Bluemix}} は、EU モデル契約条項を、欧州委員会と欧州連合 (EU) のデータ保護機関に承認された形式で提供します。EU モデル契約条項は、{{site.data.keyword.Bluemix_notm}} が世界中のすべての場所で必要なデータ・プライバシー保護をサポートすることを、ヨーロッパのお客様に保障します。
 
-FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己評価文書 (日本語版) は、[IBM Bluemix リスク調査結果](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}から入手できます。 
+![金融情報システム](images/FISC.gif)  日本国内の銀行業界および関連する金融業界の場合、コンピューター・システムは、金融情報システムセンター (FISC) の安全対策基準に基づいた安全対策手順を実施する必要があります。FISC 安全対策基準は、金融庁 (FSA)、日本銀行 (BOJ)、および FISC によって実施されています。
 
-![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} は、機密保護管理プロセスでのベスト・プラクティスを定義する、**国際標準化機構 (ISO) 27001 および 27002 の規格**によって認定されています。ISO 27001 規格は、情報セキュリティー・マネジメント・システム (ISMS) を確立、実装、および文書化するための条件、および個々の組織のニーズに応じてセキュリティー管理を実装するための条件を指定しています。ISO 27002 規格は、ISO 27001 の各セキュリティー管理について詳細に説明しています。ISO 27000 規格群は、書面による情報、口頭による情報、および電子情報の機密性、保全性、および可用性の保護を目的として、アセットのリスクおよび評価の基準化プロセスを具体化したものです。
+FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己評価文書 (日本語版) は、[IBM Bluemix リスク調査結果](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}から入手できます。  
+
+![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} は、機密保護管理プロセスでのベスト・プラクティスを定義する、**国際標準化機構 (ISO) 27001 および 27002 の規格**によって認定されています。ISO 27001 は、情報セキュリティー管理システムの要件の概要を示した、広く採用されているグローバル・セキュリティー標準です。定期的なリスク・アセスメントに基づいて企業および顧客の情報を管理する体系的アプローチを提供します。最新の規格である ISO/IEC 27001:2013 は 2013 年 9 月 25 日に**国際標準化機構 (ISO) と国際電気標準会議 (IEC)** により、ISO と IEC が設置する合同の分化委員会で発行されました。ISO 27001 規格は、情報セキュリティー・マネジメント・システム (ISMS) を確立、実装、および文書化するための条件、および個々の組織のニーズに応じてセキュリティー管理を実装するための条件を指定しています。ISO 27002 規格は、ISO 27001 の各セキュリティー管理について詳細に説明しています。ISO 27000 規格群は、書面による情報、口頭による情報、および電子情報の機密性、保全性、および可用性の保護を目的として、アセットのリスクおよび評価の基準化プロセスを具体化したものです。
+
+企業が ISO 27001:2013 認証を取得するためには、企業とカスタマー情報の機密性、完全性、可用性に影響する情報セキュリティー・リスクを管理するための体系的で継続的な方法を使用していることを示す必要があります。この規格は、組織の情報セキュリティー・マネジメント・システム (ISMS) がどの程度適切に機能しているかについての測定と評価を重視し、システムと他の要件を基準にした情報セキュリティー関連の管理も含まれます。
 
 {{site.data.keyword.Bluemix_notm}} は、サード・パーティーのセキュリティー会社によって監査されており、ISO 27001 のすべての条件 ([Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}) を満たしています。
+
+![PCI DSS](images/icon_pci.png) **Payment Card Industry (PCI) Data Security Standards (DSS)** は、クレジット・カード・データを保護するために設計された情報セキュリティー標準です。PCI DSS は、マーチャント、プロセッサー、発行者、サービス・プロバイダーなど、ペイメント・カード処理に関与するすべてのエンティティーに適用されます。また、カード所有者のデータまたは機密認証データを保管、処理、または送信する他のすべてのエンティティーにも適用されます。
+
+クレジット・カード・データを保管もしくは処理する場合のビジネス上の第一の懸念事項は、Payment Card Industry (PCI) コンプライアンスとネットワーク・セキュリティーです。マーチャントのために一貫した標準を確保するべく、 PCI SSC (Payment Card Industry Security Standards Council) は PCI DSS (Payment Card Industry Data Security Standards) を策定しました。
+これらの基準には、カード所有者のデータを保護するためのベスト・プラク
+ティスが取り込まれており、第三者の認定サービス評価機関 (QSA: Qualified Service Assessor) による検証を必要とする場合が多々あります。IBM は、独立した QSA からの「Attestation on Compliance」を提供することで、お客様が各自の PCI コンプライアンスのニーズに対応できるようお手伝いをしています。「Attestation on Compliance」を弊社の SOC 2 レポートおよび ISO 27001 認証と併せて使用すると、インフラストラクチャーが PCI 規制に対応していることを示すことができます。
+
+{{site.data.keyword.Bluemix}} は、承認された認定セキュリティー評価機関 (QSA) によって、1 年に 1 回 PCI DSS アセスメントを完了しています。{{site.data.keyword.Bluemix_notm}} は、[Bluemix PCI DSS AOC](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/IBM_Bluemix_PCI){: new_window} で概要を示しているように、Service Provider Level 1 において PCI DSS バージョン 3.1 の下に準拠して審査されています。ご使用の {{site.data.keyword.Bluemix_notm}} 環境における PCI DSS への準拠に関する情報および支援については、『[お問い合わせ](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs){: new_window}』から営業担当にお問い合わせください。
 
 ![SSAE16 SOC1/2/3](images/icon_aicpa.png) **Service Organization Controls (SOC)** レポートは、サービス組織でのセキュリティー、可用性、処理の完全性、機密性、およびプライバシーに関連した、主要な内部制御実施の評価を定義しています。米国公認会計士協会 (AICPA) ガイドを使用して生成されたこれらのレポートには、以下の項目が含まれています。 
   * 組織の監督
   * ベンダー管理プログラム
   * 社内のコーポレート・ガバナンスおよびリスク管理プロセス
   * 規制の監督
+ 
+{{site.data.keyword.Bluemix_notm}} は、SOC 1、SOC 2、SOC 3 のレポートを提供します。追加情報については、[{{site.data.keyword.Bluemix_notm}} の営業担当](mailto:bmxcert1@us.ibm.com){:new_window} チームまでお問い合わせください。 
 
-{{site.data.keyword.Bluemix_notm}} は、IBM SoftLayer Infrastructure as a Service (IaaS) クラウド・サービスを使用し、そのセキュリティー・アーキテクチャーを最大限に活用します。追加情報については、[{{site.data.keyword.Bluemix_notm}} の営業担当](mailto:bmxcert1@us.ibm.com){:new_window} チームまでお問い合わせください。
+
+![HIPAA](images/icon_hipaa.png) 医療保険の積算と責任に関する法律 (HIPAA) は、1996 年に米国連邦議会で施行され、失業後の従業員の医療保険補償を保護します。HIPAA は、米国の公民権局および保健社会福祉省によって規定および施行されています。HIPAA は、1996 年の法律の規制、および 2009 年の経済的および臨床的健全性のための医療情報技術に関する法律 (HITECH) のプライバシー要件を含んでいます。{{site.data.keyword.Bluemix_notm}} は、データ・センターまたはサービス・プロバイダー側において、HIPAA のすべての要件を満たしています。
+
+ご使用の Bluemix 環境における HIPAA コンプライアンスの達成、認証、および保守に関する詳細または支援については、{{site.data.keyword.Bluemix_notm}} [営業担当](mailto:cloudplatform_compliance@us.ibm.com){:new_window}チームにお問い合わせください。
+
+
+![ISO 27017](images/icon_ISO27017.png) ISO/IEC 27017:2015 は、クラウド・サービスのプロビジョニングおよび使用に適用される情報セキュリティー管理のガイドラインを提供します。また、クラウド・サービス・プロバイダーとクラウド・サービスの顧客の両方に対する実装ガイドラインを提供します。ISO 27017 は、ISO/IEC 27002 で指定される関連制御の実装ガイダンスを提供します。また、特にクラウド・サービスに関連する追加の制御とガイダンスも提供します。
+
+{{site.data.keyword.Bluemix_notm}} は ISO 27017:2015 に準拠しており、これは、IBM が高度なクラウド固有の管理システムを備えていることを示しています。また、米国内および世界中で、IaaS において最善を尽くしていることを示しています。
+
+
+![ISO 27018](images/icon_ISO27018.png) ISO 27018:2014 は、個人情報 (PII) を保護する手段を実装するための、一般的に受け入れられている制御目標、制御、およびガイドラインを規定しています。これらの手段は、パブリック・クラウド・コンピューティング環境における ISO 29100 のプライバシー原則に準拠しています。
+
+特に、ISO 27018:2014 は、ISO 27002 に基づいたガイドラインを規定しています。このガイドラインは、パブリック・クラウド・サービスのプロバイダーの情報セキュリティー・リスク環境のコンテキストで適用される可能性がある PII の保護に関する規制要件について考慮しています。
+
+
+![クラウド・セキュリティー・アライアンス – STAR 登録者](images/icon_CSA.png) クラウド・セキュリティー・アライアンスは、クラウド・コンピューティング内のセキュリティーを保証するためにベスト・プラクティスの使用を推進することを使命とする非営利法人です。クラウド・セキュリティー・アライアンスがその使命のために使用しているメカニズムの 1 つは、Security, Trust, and Assurance Registry (STAR) です。STAR は、各種クラウド・コンピューティング・オファリングによって提供されているセキュリティー管理について文書化した、無料の公開レジストリーです。
+
+
+![CJIS 標準](images/icon_CJIS.png) Criminal Justice Information Systems (CJIS) Division は、アメリカ合衆国司法省連邦捜査局の 1 部門です。CJIS Division は、セキュリティー・ポリシー (CJISD-ITS-DOC-08140-5.4) を作成して公開しました。このセキュリティー・ポリシーには、刑事司法情報 (CJI) のソース、送信、保管、および生成を保護するための、法執行機関および刑事司法機関の姿勢を反映した最小の情報セキュリティー要件、ガイドライン、および合意が含まれています。
+
+
 
 ### プラットフォームとサービスの準拠
 以下の表は、{{site.data.keyword.Bluemix_notm}} 内のどのサービスが各標準に準拠しているかを示しています。
 
-|{{site.data.keyword.Bluemix_notm}} コンポーネント		|FISC		|ISO 27001	|SOC 2 タイプ 1		|
-|:----------------------|:---------:|:---------:|:---------:|
-|{{site.data.keyword.Bluemix_notm}} プラットフォーム		|Y			|Y	|Y	|
-|{{site.data.keyword.APIM}}			|Y	|Y |			|
-|{{site.data.keyword.autoscaling}}			|Y	|Y |			|
-|{{site.data.keyword.bigicloudst}}			|Y |Y |Y |
-|{{site.data.keyword.cloudant}}				|Y |Y |Y	|
-|{{site.data.keyword.dashdbshort}}			|Y	|Y	|Y	|
-|{{site.data.keyword.datacshort}}			|Y	|Y	|			|
-|{{site.data.keyword.jazzhub_short}}					|Y	|Y	|			|
-|{{site.data.keyword.containerlong}}			|Y		|Y	|			|
-|{{site.data.keyword.mql}}				|Y	|Y	|	 		|
-|{{site.data.keyword.SecureGateway}}			|Y	|Y |	 		|
-|{{site.data.keyword.sescashort}}     |Y |Y | |
+|{{site.data.keyword.Bluemix_notm}} コンポーネント		|FISC		|ISO 27001	|PCI |SOC 2 タイプ 1		|
+|:----------------------|:---------:|:---------:|:---------:|:---------:|
+|{{site.data.keyword.Bluemix_notm}} プラットフォーム		|Y			|Y	|Y	|Y	|
+|{{site.data.keyword.APIM}}			|Y	|Y |Y	|			|
+|{{site.data.keyword.autoscaling}}			|Y	|Y |Y	|			|
+|{{site.data.keyword.bigicloudst}}			|Y |Y |	|Y |
+|{{site.data.keyword.cloudant}}				|Y |Y |	|Y	|
+|{{site.data.keyword.dashdbshort}}			|Y	|Y	|	|Y	|
+|{{site.data.keyword.datacshort}}			|Y	|Y	|Y	|			|
+|{{site.data.keyword.jazzhub_short}}					|Y	|Y	|	|			|
+|{{site.data.keyword.containerlong}}			|Y		|Y	|	|			|
+|{{site.data.keyword.mql}}				|Y	|Y	|Y	|	 		|
+|{{site.data.keyword.SecureGateway}}			|Y	|Y |	|	 		|
+|{{site.data.keyword.sescashort}}     |Y |Y |Y	|  |
 
 *表 1. プラットフォームとサービスの準拠*
-
 
 # 関連リンク
 {: #rellinks}
@@ -325,5 +358,5 @@ FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己
 ## 関連リンク
 {: #general}
 
-* [SoftLayer Security Compliance](http://www.softlayer.com/security)
+* [IBM SaaS のセキュリティー](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
 * [Single Sign On 概説 (Getting started with Single Sign On)](../services/SingleSignOn/index.html)
