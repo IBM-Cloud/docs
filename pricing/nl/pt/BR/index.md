@@ -51,7 +51,7 @@ copyright:
 # Venda
 {: #pricing}
 
-*Última atualização: 13 de setembro de 2016*
+Última atualização: 20 de outubro de 2016
 {: .last-updated}
 
 É possível executar aplicativos no {{site.data.keyword.Bluemix}} e
@@ -136,8 +136,8 @@ no ícone **Configurações de perfil** e depois clique em
 
 Se você encontrar algum problema com o {{site.data.keyword.Bluemix_notm}} quando estiver usando uma conta de Pagamento por uso ou de Assinatura, veja [Obtendo ajuda on-line](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) para obter mais informações.
 
-**Nota:** se você vincular a sua conta de cobrança do {{site.data.keyword.Bluemix_notm}} com uma conta do SoftLayer, começando no primeiro do próximo mês, os seus encargos do
-{{site.data.keyword.Bluemix_notm}} estarão em sua fatura do SoftLayer. Para obter detalhes adicionais, consulte [Visualizando créditos](../admin//softlayerlink.html#bill_usage).
+**Observação:** se você vincular a sua conta de cobrança do {{site.data.keyword.Bluemix_notm}} com uma conta SoftLayer, começando no primeiro dia do próximo mês, seu {{site.data.keyword.Bluemix_notm}} e
+os encargos da SoftLayer estarão em sua fatura do {{site.data.keyword.Bluemix_notm}}. Para obter mais detalhes, consulte [Visualizando créditos](/docs/admin//softlayerlink.html#bill_usage).
 
 ###Conta de Pagamento por uso
 {: #pay-as-you-go}
@@ -232,8 +232,7 @@ pelo tempo em que seus aplicativos foram executados e pela memória usada, calcu
 *GB/horas*. GB/horas é o cálculo do número de instâncias do aplicativo,
 multiplicado pela memória por instância, multiplicado pelas horas de execução das
 instâncias. É possível customizar o número de instâncias e a quantia de memória por
-instância com base em suas necessidades. Também é possível incluir memória ou instâncias
-para escalar mais usuários. O encargo final é por GB/hora: as instâncias do aplicativo,
+instância com base em suas necessidades. Também é possível incluir memória ou instâncias para escalar mais usuários. O encargo final é por GB/hora: as instâncias do aplicativo,
 multiplicado pela memória por instância, multiplicado pelas horas em execução.
 
 Por exemplo, considere um
@@ -375,7 +374,8 @@ Os itens a seguir são os abonos grátis para as {{site.data.keyword.virtualmach
 É possível usar diferentes métodos para saber quanto você
 precisa pagar para usar o {{site.data.keyword.Bluemix_notm}} para construir e hospedar seu app.
 
-* Os estimadores de custo na página Precificação do {{site.data.keyword.Bluemix_notm}} fornecem uma estimativa aproximada do custo com base no tamanho do seu app.
+* Os estimadores de custo na página {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}} fornecem uma
+estimação aproximada do custo, baseada no tamanho de seu app.
 * A calculadora de custo na página Precificação do {{site.data.keyword.Bluemix_notm}} fornece preços de apps precisos com base em sua entrada de usos de tempo de execução e de serviço.
 * Também é possível calcular seu custo manualmente.
 
@@ -384,7 +384,7 @@ precisa pagar para usar o {{site.data.keyword.Bluemix_notm}} para construir e ho
 
 É possível precificar rapidamente seu app usando os calculadores de custo que são fornecidos pelo {{site.data.keyword.Bluemix_notm}}.
 
-1. Acesse a [página de precificação](https://console.{DomainName}/pricing/) do {{site.data.keyword.Bluemix_notm}}. 
+1. Acesse o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}}. 
 2. Use um dos widgets **Estimar seus custos** ou clique em **Abrir calculadora** para usar a **Calculadora de preços até o último centavo**.
 
 Para usar a calculadora, digite seu uso mensal projetado
@@ -436,7 +436,7 @@ neste exemplo é em moeda dos EUA.
 |Serviço |	Recursos |	Preço |
 |--------|-----------|--------|
 |SDK for Node.js |	375 GB/horas grátis por mês (compartilhados entre todos os tempos de execução) |	$0,07 USD/GB/hora|
-|Auto-Scaling |	Plano de serviço grátis para o serviço de ajuste automático de escala |	Grátis|
+|Ajuste automático de escala |	Plano de serviço grátis para o serviço de ajuste automático de escala |	Grátis|
 |Data Cache - Iniciador |	1 GB de espaço em cache e uma réplica |	$55,00 USD/instância |
 |Data Cache - Padrão |	5 GB de espaço em cache e uma réplica |	$155,00 USD/instância |
 |Data Cache - Premium |	25 GB de espaço em cache e uma réplica |	$505,00 USD/instância|
@@ -511,36 +511,30 @@ moedas que são suportadas.
 |SEK |	  Coroa sueca|
 |vermelho cereja |    Dólar americano|
 |ZAR |	  Rand sul-africano|
-*Tabela 8. Moedas suportadas*
+*Tabela 8. Moedas suportadas* 
+
+**Observação:** se você vinculou suas contas {{site.data.keyword.Bluemix_notm}} e SoftLayer, a fatura única que você recebe será somente em dólares dos Estados Unidos (USD).  
 
 ##Painel de uso
 {: #usage}
 
-Como um proprietário da conta ou um gerente de faturamento, é possível usar a visualização Painel de uso para ver os encargos em tempo real para os tempos de execução e serviços que são usados por mês
-em suas organizações. É possível ver o consumo de serviço e de GB/horas do tempo de execução em todas as regiões ou é possível selecionar para ver uma região e um espaço específicos, nos últimos 12 meses.
+Como um proprietário da conta ou um gerente de faturamento, é possível usar a página Painel de uso para ver os encargos em tempo real dos tempos de execução e serviços que são usados por mês em suas organizações. É possível ver o consumo de serviço e de GB/horas do tempo de execução em todas as regiões ou é possível selecionar para ver uma região e um espaço específicos, nos últimos 12 meses.
 
-Para abrir a visualização Painel de uso, clique no ícone
-**{{site.data.keyword.avatar}}**
-![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
-**Conta** &gt; *your_account_name* &gt; **Painel
-de uso**. Na visualização, é possível ver um resumo do tempo de execução e do uso do serviço para a conta. Os gerentes de faturamento podem ver os detalhes somente das organizações nas quais eles são gerentes de faturamento.
+Para abrir a página **Painel de uso**, clique em **Conta** &gt; *your_account_name* &gt; **Painel de uso**. Na página, é possível ver um resumo do tempo de execução e do uso de serviço da conta. Os gerentes de faturamento podem ver os detalhes somente das organizações nas quais eles são gerentes de faturamento.
 
 O proprietário da conta é cobrado pelo uso total que é incorrido entre todas as organizações no término de cada ciclo de faturamento. Cada ciclo de faturamento dura um mês.
 
-Proprietários de conta podem filtrar o resumo de uso por região e organização. Se você for um proprietário da conta, configure **Organização** como **Todas as organizações** para ver o uso da conta inteira para um período de 12 meses. Clique em um determinado mês para ver o uso para aquele mês. Os encargos mostrados representam a quantia pela qual você, como proprietário da conta, é faturado para aquele mês.
+Proprietários de conta podem filtrar o resumo de uso por região e organização. Os encargos mostrados representam a quantia que você, como o proprietário da conta, é faturado para aquele mês.
 
 Se você selecionar uma organização específica para a **Organização**, é possível ver o uso total para essa organização, incluindo qualquer uso como parte de uma camada grátis. Os encargos mostrados para a organização não são os encargos pelos quais você é faturado. O uso da camada grátis é mostrado como grátis no nível de conta, mas não no nível organizacional. Portanto, ao visualizar o uso organizacional, você verá o uso real para essa organização, incluindo uso grátis e cobrado. Todo uso organizacional é acumulado para o uso da conta depois que a camada grátis é removida.
 
 ##Visualizando créditos
 {: #credits}
 
-Como um proprietário da conta ou um gerente de faturamento, é possível usar a visualização Painel de Uso para ver qualquer crédito para a sua conta. Você pode ter créditos se, por exemplo, você
+Como um proprietário da conta ou um gerente de faturamento, é possível usar a página **Painel de uso** para ver os créditos da sua conta. Você pode ter créditos se, por exemplo, você
 vinculou uma conta do SoftLayer com uma conta do {{site.data.keyword.Bluemix_notm}}.
 
-Para abrir a visualização Painel de Uso, clique no ícone
-**{{site.data.keyword.avatar}}**
-![ícone Avatar](../icons/i-avatar-icon.svg) e selecione
-**Conta**. Na página exibida, clique em **Painel de Uso**. Na visualização, é possível ver quaisquer créditos, se existirem, e quando eles expiram.
+Para abrir a página **Painel de uso**, clique em **Conta**. Na página exibida, clique em **Painel de Uso**. Na página, é possível ver quaisquer créditos, se existirem, e quando eles expiram.
 
 ##Notificações
 {: #notifications}
@@ -549,11 +543,7 @@ Como gerente de contas de uma conta Pagamento por uso, é possível configurar a
 notificações ao atingir 80%, 90% e 100 dos limites de gastos
 especificados.
 
-Para abrir a visualização **Notificações**, clique no ícone
-**{{site.data.keyword.avatar}}**
-![ícone Avatar](../icons/i-avatar-icon.svg) &gt;
-**Conta** &gt; *your_account_name* &gt;
-**Notificações de gastos**. Insira um valor numérico para configurar o limite de gastos para acionar uma notificação para cada tipo de notificação de gastos, conforme necessário. Também é possível incluir e
+Para abrir a visualização **Notificações**, clique em **Conta** &gt; *your_account_name* &gt; **Notificações de gastos**. Insira um valor numérico para configurar o limite de gastos para acionar uma notificação para cada tipo de notificação de gastos, conforme necessário. Também é possível incluir e
 excluir notificações para serviços individuais.
 
 ##Como mudar seu plano
@@ -586,7 +576,7 @@ Para atualizar o plano de serviço, insira o comando a seguir:
 cf update-service <nome_do_serviço> [-p <novo_plano>]
 ```
 # rellinks
-## general 
+## gerais 
 * [{{site.data.keyword.Bluemix_notm}} Folha de precificação](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} Fórum do Developers Community](https://developer.ibm.com/bluemix/)
 * [Obtendo ajuda on-line](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)

@@ -51,7 +51,7 @@ copyright:
 # Preisstruktur
 {: #pricing}
 
-*Letzte Aktualisierung: 13. September 2016*
+Letzte Aktualisierung: 20. Oktober 2016
 {: .last-updated}
 
 Sie können kostenfrei Anwendungen in {{site.data.keyword.Bluemix}} ausführen und {{site.data.keyword.Bluemix_notm}}-Services testen. Sie können sich für einen kostenfreien 30-Tage-Test anmelden, bei dem Sie zusätzliche Leistungen, einschließlich kostenloser Unterstützung, erhalten. Nach 30 Tagen können Sie einen Kontotyp auswählen und nur für das bezahlen, was Sie über die kostenfreien Leistungen hinaus nutzen. Bluemix stellt Ihnen eine Berechnungsfunktion zur Verfügung, sodass Sie die Kosten im Voraus einschätzen können, sowie die Ansicht 'Nutzungsdashboard', in der Sie die tatsächlichen Kosten nach dem Erstellen Ihrer Apps überprüfen können.
@@ -135,7 +135,7 @@ Nach der Erstellung eines belastbaren Kontos können Sie die von Ihnen angegeben
 
 Falls während der Verwendung eines Kontos vom Typ Nutzungsabhängige Zahlung oder Abonnement Probleme mit {{site.data.keyword.Bluemix_notm}} auftreten, finden Sie weitere Informationen unter [Onlinehilfe abrufen](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help).
 
-**Hinweis:** Wenn Sie das {{site.data.keyword.Bluemix_notm}}-Abrechnungskonto mit einem SoftLayer-Konto verknüpfen, werden Ihre {{site.data.keyword.Bluemix_notm}}-Gebühren ab dem ersten des nächsten Monats über die SoftLayer-Rechnung abgerechnet. Weitere Details hierzu finden Sie unter [Guthaben anzeigen](../admin//softlayerlink.html#bill_usage).
+**Hinweis:** Wenn Sie Ihr {{site.data.keyword.Bluemix_notm}}-Abrechnungskonto mit einem SoftLayer-Konto verknüpfen, werden Ihre {{site.data.keyword.Bluemix_notm}}- und SoftLayer-Gebühren ab dem Ersten des folgenden Monats über die {{site.data.keyword.Bluemix_notm}}-Rechnung abgerechnet. Weitere Details hierzu finden Sie unter [Guthaben anzeigen](/docs/admin//softlayerlink.html#bill_usage).
 
 ###Nutzungsabhängiges Konto
 {: #pay-as-you-go}
@@ -356,7 +356,7 @@ Es gibt unterschiedliche Methoden
 zur Ermittlung der Kosten für die Nutzung von {{site.data.keyword.Bluemix_notm}},
 um Ihre App zu erstellen und zu hosten.
 
-* Von den Kostenschätzern auf der Seite für die Preisstruktur von {{site.data.keyword.Bluemix_notm}} wird eine grobe Einschätzung der Kosten auf der Grundlage der Größe Ihrer App bereitgestellt.
+* Von den Kostenschätzern auf der {{site.data.keyword.pricing_sheet}} von {{site.data.keyword.Bluemix_notm}} wird eine grobe Einschätzung der Kosten auf Grundlage der Größe Ihrer App bereitgestellt.
 * Mit dem Kostenrechner auf der Seite für die Preisstruktur von {{site.data.keyword.Bluemix_notm}} werden auf der Grundlage Ihrer Eingabe zu Laufzeit und Servicenutzung genaue App-Preise ermittelt.
 * Sie können Ihre Kosten auch manuell berechnen.
 
@@ -365,7 +365,7 @@ um Ihre App zu erstellen und zu hosten.
 
 Sie können den Preis für Ihre App mithilfe der von {{site.data.keyword.Bluemix_notm}} bereitgestellten Kostenrechner rasch ermitteln.
 
-1. Rufen Sie die {{site.data.keyword.Bluemix_notm}}-[Seite für die Preisstruktur](https://console.{DomainName}/pricing/) auf. 
+1. Wechseln Sie zur {{site.data.keyword.pricing_sheet}} von {{site.data.keyword.Bluemix_notm}}. 
 2. Verwenden Sie eines der Widgets **Schätzen Sie Ihre Kosten ein** oder klicken Sie auf **Rechner öffnen**, um den **centgenauen Preisrechner** zu verwenden.
 
 Zur Verwendung der Berechnungsfunktion geben Sie Ihre projizierte monatliche Nutzung der aufgelisteten
@@ -485,34 +485,36 @@ Obwohl in den Preisbeispielen US-Dollar (USD) verwendet werden, werden in {{site
 |SEK |	  Schwedische Krone|
 |USD |    US-Dollar|
 |ZAR |	  Südafrikanischer Rand|
-*Tabelle 8: Unterstützte Währungen*
+*Tabelle 8: Unterstützte Währungen* 
+
+**Hinweis:** Wenn Sie Ihre {{site.data.keyword.Bluemix_notm}}- und SoftLayer-Konten verknüpft haben, ist die einzige Rechnung, die Sie erhalten, nur in USD ausgestellt.  
 
 ##Nutzungsdashboard
 {: #usage}
 
-Als Kontoeigner oder Abrechnungsmanager können Sie die Ansicht 'Nutzungsdashboard' verwenden, um die Gebühren für die Laufzeiten und Services, die monatlich in Ihrer Organisation genutzt werden, anzuzeigen. Sie können die GB-Stunden für Laufzeiten und die Servicenutzung in allen Regionen anzeigen oder eine bestimmte Region und einen bestimmten Bereich für die Anzeige der vergangenen 12 Stunden auswählen.
+Als Kontoeigner oder Abrechnungsmanager können Sie die Ansicht 'Nutzungsdashboard' verwenden, um die Gebühren für die Laufzeiten und Services, die monatlich in Ihrer Organisation genutzt werden, in Echtzeit anzuzeigen. Sie können die GB-Stunden für Laufzeiten und die Servicenutzung in allen Regionen anzeigen oder eine bestimmte Region und einen bestimmten Bereich für die Anzeige der vergangenen 12 Stunden auswählen.
 
-Um die Ansicht 'Nutzungsdashboard' zu öffnen, klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Nutzungsdashboard**. In dieser Ansicht finden Sie eine Zusammenfassung der Laufzeit- und Servicenutzung für das Konto. Abrechnungsmanager können nur die Details für die Organisationen anzeigen, in denen ihnen die Rolle des Abrechnungsmanagers zugewiesen ist.
+Um die Ansicht **Nutzungsdashboard** zu öffnen, klicken Sie auf **Konto** &gt; *eigener_kontoname* &gt; **Nutzungsdashboard**. Auf dieser Seite finden Sie eine Zusammenfassung der Laufzeit- und Servicenutzung für das Konto. Abrechnungsmanager können nur die Details für die Organisationen anzeigen, in denen ihnen die Rolle des Abrechnungsmanagers zugewiesen ist.
 
 Dem Kontoeigner werden die Gebühren für die Gesamtnutzung, die für alle Organisationen anfallen, am Ende jedes Abrechnungszyklus in Rechnung gestellt. Jeder Abrechnungszyklus dauert einen Monat.
 
-Kontoeigner können die Nutzungszusammenfassung nach Region und Organisation filtern. Wenn Sie ein Kontoeigner sind, legen Sie unter **Organisation** die Auswahl **Alle Organisationen** fest, um die Nutzung für das gesamte Konto für einen zwölfmonatigen Zeitraum anzuzeigen. Klicken Sie auf einen bestimmten Monat, um die Nutzung für diesen Monat anzuzeigen. Die angezeigten Gebühren stellen den Betrag dar, der Ihnen als Kontoeigner für diesen Monat in Rechnung gestellt wird.
+Kontoeigner können die Nutzungszusammenfassung nach Region und Organisation filtern. Die angezeigten Gebühren stellen den Betrag dar, der Ihnen als Kontoeigner für diesen Monat in Rechnung gestellt wird.
 
 Wenn Sie unter **Organisation** eine bestimmte Organisation auswählen, können Sie die gesamte Nutzung für diese Organisation, einschließlich der Nutzung als Teil eines gebührenfreien Nutzungskontingents anzeigen. Die für die Organisation angezeigten Gebühren sind nicht die Gebühren, die Ihnen in Rechnung gestellt werden. Die Nutzung des gebührenfreien Nutzungskontingents wird auf Kontoebene als kostenlos angezeigt, aber nicht auf Organisationsebene. Aus diesem Grund wird beim Anzeigen der Nutzung der Organisation die tatsächliche Nutzung für diese Organisation einschließlich der kostenlosen und der gebührenpflichtigen Nutzung angezeigt. Beim Anzeigen der Nutzung aller Organisationen wird die Nutzung für das Konto aufsummiert, nachdem das gebührenfreie Nutzungskontingent entfernt wurde.
 
 ##Guthaben anzeigen
 {: #credits}
 
-Als Kontoeigner oder Abrechnungsmanager können Sie in der Ansicht 'Nutzungsdashboard' Guthaben für Ihr Konto anzeigen. Sie könnten beispielsweise über Guthaben verfügen, wenn Sie ein SoftLayer-Konto mit einem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft haben.
+Als Kontoeigner oder Abrechnungsmanager können Sie auf der Seite **Nutzungsdashboard** vorhandenes Guthaben für Ihr Konto anzeigen. Sie könnten beispielsweise über Guthaben verfügen, wenn Sie ein SoftLayer-Konto mit einem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft haben.
 
-Klicken Sie zum Öffnen der Ansicht 'Nutzungsdashboard' auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) und wählen Sie **Konto** aus. Klicken Sie auf der angezeigten Seite auf **Nutzungsdashboard**. In dieser Ansicht werden gegebenenfalls die bestehenden Guthaben und die entsprechenden Ablaufdaten angezeigt.
+Um die Seite **Nutzungsdashboard** zu öffnen, klicken Sie auf **Konto**. Klicken Sie auf der angezeigten Seite auf **Nutzungsdashboard**. Auf dieser Seite werden gegebenenfalls die bestehenden Guthaben und die entsprechenden Ablaufdaten angezeigt.
 
 ##Benachrichtigungen
 {: #notifications}
 
 Als Manager eines Kontos vom Typ Nutzungsabhängige Zahlung können Sie Benachrichtigungen über Ausgaben für die Gesamtkosten Ihres Kontos, für Laufzeit, Services und für individuelle Services einrichten, mit Ausnahme von Services anderer Anbieter. Sie erhalten Benachrichtigungen, wenn Sie 80 %, 90 % und 100 % des angegebenen Schwellenwerts für die Ausgaben erreicht haben.
 
-Um die Ansicht **Benachrichtigungen** zu öffnen, klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Konto** &gt; *ihr_kontoname* &gt; **Benachrichtigungen über Ausgaben**. Geben Sie einen numerischen Wert ein, um bei Bedarf das Ausgabelimit für das Auslösen einer Benachrichtigung für jeden Typ der Benachrichtigung über Ausgaben festzulegen. Sie können auch Benachrichtigungen
+Um die Ansicht **Benachrichtigungen** zu öffnen, klicken Sie auf **Konto** &gt; *eigener_kontoname* &gt; **Benachrichtigungen über Ausgaben**. Geben Sie einen numerischen Wert ein, um bei Bedarf das Ausgabelimit für das Auslösen einer Benachrichtigung für jeden Typ der Benachrichtigung über Ausgaben festzulegen. Sie können auch Benachrichtigungen
 für einzelne Services hinzufügen und löschen.
 
 ##Vorgehensweise zum Ändern des Plans

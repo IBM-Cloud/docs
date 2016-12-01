@@ -51,7 +51,7 @@ copyright:
 # Prezzi
 {: #pricing}
 
-*Ultimo aggiornamento: 13 settembre 2016*
+Ultimo aggiornamento: 20 ottobre 2016
 {: .last-updated}
 
 Puoi eseguire le applicazioni in {{site.data.keyword.Bluemix}}
@@ -135,7 +135,7 @@ Dopo che hai creato un account fatturabile, puoi modificare le informazioni da t
 
 Se riscontri qualche problema con {{site.data.keyword.Bluemix_notm}} quando utilizzi un account Pagamento a consumo o Sottoscrizione, vedi [Come ottenere aiuto online](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) per ulteriori informazioni.
 
-**Nota:** se colleghi il tuo account di fatturazione {{site.data.keyword.Bluemix_notm}} a un account SoftLayer, dal primo giorno del mese successivo gli addebiti per {{site.data.keyword.Bluemix_notm}} saranno effettuati sulla fattura SoftLayer. Per ulteriori dettagli, vedi [Visualizzazione dei crediti](../admin//softlayerlink.html#bill_usage).
+**Nota:** se colleghi il tuo account di fatturazione {{site.data.keyword.Bluemix_notm}} a un account SoftLayer, dal primo giorno del mese successivo, gli addebiti per {{site.data.keyword.Bluemix_notm}} e SoftLayer saranno effettuati sulla fattura {{site.data.keyword.Bluemix_notm}}. Per ulteriori dettagli, vedi [Visualizzazione dei crediti](/docs/admin//softlayerlink.html#bill_usage).
 
 ###Account Pagamento a consumo
 {: #pay-as-you-go}
@@ -368,7 +368,8 @@ Per il beta {{site.data.keyword.virtualmachineslong}}, le franchigie consistono 
 Puoi utilizzare diversi metodi per sapere quanto devi pagare per utilizzare {{site.data.keyword.Bluemix_notm}}
 per creare e ospitare la tua applicazione.
 
-* Lo stimatore del costo nella pagina Prezzi di {{site.data.keyword.Bluemix_notm}} fornisce una stima approssimativa del costo basata sulla dimensione della tua applicazione.
+* Lo stimatore del costo nel {{site.data.keyword.pricing_sheet}} {{site.data.keyword.Bluemix_notm}}
+fornisce una stima approssimativa del costo basata sulla dimensione della tua applicazione.
 * Il calcolatore del costo nella pagina Prezzi di {{site.data.keyword.Bluemix_notm}} fornisce dei prezzi delle applicazioni accurati basati sul tuo input relativo agli utilizzi di runtime e servizi.
 * Puoi anche calcolare il costo in modo manuale.
 
@@ -377,7 +378,7 @@ per creare e ospitare la tua applicazione.
 
 Puoi stabilire rapidamente il prezzo della tua applicazione utilizzando i calcolatori forniti da {{site.data.keyword.Bluemix_notm}}.
 
-1. Vai alla pagina dei costi {{site.data.keyword.Bluemix_notm}} [](https://console.{DomainName}/pricing/). 
+1. Vai al {{site.data.keyword.pricing_sheet}} {{site.data.keyword.Bluemix_notm}}. 
 2. Utilizza uno dei widget **Stima i costi** o fai clic su **Apri calcolatore** per utilizzare il **Calcolatore dei costi ridotti al penny**.
 
 Per utilizzare il calcolatore, digita il tuo utilizzo mensile previsto delle
@@ -496,31 +497,32 @@ Sebbene negli esempi dei prezzi vanga utilizzato il dollaro americano (USD), in 
 |SEK |	  Corona svedese|
 |USD |    Dollaro americano|
 |ZAR |	  Rand sudafricano|
-*Tabella 8. Valute supportate*
+*Tabella 8. Valute supportate* 
+
+**Nota:** se hai collegato i tuoi account {{site.data.keyword.Bluemix_notm}} e SoftLayer, ricevi un'unica fattura in dollari americani (USD).  
 
 ##Dashboard di utilizzo
 {: #usage}
 
-In qualità di proprietario dell'account o gestore della fatturazione, puoi utilizzare la vista Dashboard di utilizzo per visualizzare gli addebiti in
-tempo reale per i runtime e i servizi utilizzati al mese nelle tue organizzazioni. Puoi
+In qualità di proprietario dell'account o gestore della fatturazione, puoi utilizzare la pagina Dashboard di utilizzo per visualizzare gli addebiti in tempo reale per i runtime e i servizi utilizzati ogni mese nelle tue organizzazioni. Puoi
 vedere i GB-ora di runtime e il consumo dei servizi in tutte le regioni oppure puoi
 selezionare la visualizzazione di una regione e di uno spazio specifici per gli ultimi
 12 mesi.
 
-Per aprire la vista Dashboard di utilizzo, fai clic sull'icona **{{site.data.keyword.avatar}}** ![icona Avatar ](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Dashboard di utilizzo**. Nella vista, puoi vedere un riepilogo dell'utilizzo di runtime e servizi per l'account. I gestori della fatturazione possono visualizzare i dettagli solo per le organizzazioni in cui ricoprono tale ruolo.
+Per aprire la pagina **Dashboard di utilizzo**, fai clic su **Account** &gt; *nome_del_tuo_account* &gt; **Dashboard di utilizzo**. Nella pagina, puoi vedere un riepilogo dell'utilizzo di runtime e servizi per l'account. I gestori della fatturazione possono visualizzare i dettagli solo per le organizzazioni in cui ricoprono tale ruolo.
 
 Al proprietario dell'account viene addebitato l'utilizzo totale sostenuto su tutte le organizzazioni alla fine di ciascun ciclo di fatturazione. Ogni ciclo di fatturazione dura un mese.
 
-I proprietari dell'account possono filtrare il riepilogo dell'utilizzo in base a regione e organizzazione. Se sei un proprietario di account, imposta **Organizzazione** come **Tutte le organizzazioni** per visualizzare l'utilizzo per l'intero account per un periodo di 12 mesi. Fai clic su uno specifico mese per visualizzare il relativo utilizzo. Gli addebiti visualizzati rappresentano l'importo che ti viene addebitato per quel mese in quanto proprietario dell'account.
+I proprietari dell'account possono filtrare il riepilogo dell'utilizzo in base a regione e organizzazione. Gli addebiti visualizzati rappresentano l'importo che ti viene addebitato per quel mese in qualità di proprietario dell'account.
 
 Se selezioni una specifica organizzazione per l'**Organizzazione**, puoi vedere l'utilizzo totale per tale organizzazione, compresi gli eventuali utilizzi come parte di un periodo di prova gratuito. Gli addebiti visualizzati per l'organizzazione non sono gli addebiti che ti verranno fatturati. L'utilizzo del periodo di prova gratuito viene visualizzato come gratuito, a livello dell'account, ma non a livello dell'organizzazione. Pertanto, quando visualizzi l'utilizzo dell'organizzazione, vedi l'utilizzo reale per tale organizzazione, compresi sia l'utilizzo a titolo gratuito che quello che viene invece addebitato. Tutto l'utilizzo dell'organizzazione viene sommato all'utilizzo dell'account dopo la rimozione del periodo di prova gratuito.
 
 ##Visualizzazione dei crediti
 {: #credits}
 
-In qualità di proprietario dell'account o gestore della fatturazione, puoi utilizzare la vista Dashboard di utilizzo per visualizzare tutti i crediti del tuo account. Potresti avere crediti se, ad esempio, hai associato un account SoftLayer a un account {{site.data.keyword.Bluemix_notm}}.
+In qualità di proprietario dell'account o gestore della fatturazione, puoi utilizzare la pagina **Dashboard di utilizzo** per visualizzare tutti i crediti del tuo account. Potresti avere crediti se, ad esempio, hai associato un account SoftLayer a un account {{site.data.keyword.Bluemix_notm}}.
 
-Per aprire la vista Dashboard di utilizzo, fai clic sull'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) e seleziona **Account**. Nella pagina così visualizzata, fai clic su **Dashboard di utilizzo**. Nella vista vengono mostrati gli eventuali crediti e la rispettiva data di scadenza.
+Per aprire la pagina **Dashboard di utilizzo**, fai clic su **Account**. Nella pagina così visualizzata, fai clic su **Dashboard di utilizzo**. Nella pagina vengono mostrati gli eventuali crediti e la rispettiva data di scadenza.
 
 ##Notifiche
 {: #notifications}
@@ -528,7 +530,7 @@ Per aprire la vista Dashboard di utilizzo, fai clic sull'icona **{{site.data.key
 In quanto gestore dell'account di un account Pagamento a consumo, puoi impostare le notifiche di spesa rispetto al costo totale del tuo account per il tuo
 runtime, i tuoi servizi e per i singoli servizi, esclusi quelli di terze parti. Ricevi le notifiche quando raggiungi l'80%, il 90% e il 100% delle soglie di spesa da te specificate.
 
-Per aprire la vista **Notifiche**, fai clic sull'icona **{{site.data.keyword.avatar}}** ![icona Avatar](../icons/i-avatar-icon.svg) &gt; **Account** &gt; *nome_del_tuo_account* &gt; **Notifiche di spesa**. Immetti un valore numerico per impostare la soglia di spesa per l'attivazione di una notifica per ciascun tipo di notifica di spesa, come necessario. Puoi anche aggiungere ed eliminare notifiche per singoli servizi.
+Per aprire la vista **Notifiche**, fai clic su **Account** &gt; *nome_del_tuo_account* &gt; **Notifiche di spesa**. Immetti un valore numerico per impostare la soglia di spesa per l'attivazione di una notifica per ciascun tipo di notifica di spesa, come necessario. Puoi anche aggiungere ed eliminare notifiche per singoli servizi.
 
 ##Come modificare il tuo piano
 {: #changing}

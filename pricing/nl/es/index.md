@@ -51,7 +51,7 @@ copyright:
 # Tarifas
 {: #pricing}
 
-*Última actualización: 13 de septiembre de 2016*
+Última actualización: 20 de octubre de 2016
 {: .last-updated}
 
 Puede ejecutar apps en {{site.data.keyword.Bluemix}} y probar los servicios de {{site.data.keyword.Bluemix_notm}} de forma gratuita. Puede realizar una prueba gratuita de 30 días que le otorga concesiones adicionales, incluido soporte gratuito. Transcurridos 30 días, puede elegir un tipo de cuenta y pagar sólo según uso superadas las concesiones gratuitas. Bluemix proporciona una calculadora de costes para estimar con anticipación los costes y una vista Panel de control de uso para comprobar el coste real después de crear las apps.
@@ -121,7 +121,7 @@ Tras crear una cuenta facturable, puede editar la información que ha proporcion
 
 Si surgen problemas con {{site.data.keyword.Bluemix_notm}} cuando vaya a utilizar una cuenta de Pago según uso o una Suscripción, consulte [Obtención de ayuda en línea](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) para obtener más información.
 
-**Nota:** Si enlaza su cuenta de facturación de {{site.data.keyword.Bluemix_notm}} con una cuenta de SoftLayer, a partir del día 1 del próximo mes, los cargos de {{site.data.keyword.Bluemix_notm}} aparecerán en su factura de SoftLayer. Para obtener más detalles, consulte [Visualización de créditos](../admin//softlayerlink.html#bill_usage).
+**Nota:** Si enlaza su cuenta de facturación de {{site.data.keyword.Bluemix_notm}} con una cuenta de SoftLayer, a partir del día 1 del próximo mes, los cargos de {{site.data.keyword.Bluemix_notm}} y SoftLayer aparecerán en su factura de {{site.data.keyword.Bluemix_notm}}. Para obtener más detalles, consulte [Visualización de créditos](/docs/admin//softlayerlink.html#bill_usage).
 
 ###Cuenta Pago según uso
 {: #pay-as-you-go}
@@ -171,7 +171,7 @@ Con {{site.data.keyword.Bluemix_notm}} local, debe registrarse para un plazo mí
 ##Cómo se le carga
 {: #charges}
 
-Con una cuenta facturable de {{site.data.keyword.Bluemix_notm}}, se le facturará por el cálculo, los contenedores y los servicios que se utilicen en su organización. Es posible que otros usuarios de {{site.data.keyword.Bluemix_notm}} le inviten a participar en organizaciones en una cuenta diferente. Si crea apps o utiliza servicios en las organizaciones las que está invitado, el uso que se produce se factura a la cuenta que contenga dichas organizaciones. Puede ver más información sobre unos cargos específicos en una página de detalles de recurso en el Catálogo de {{site.data.keyword.Bluemix_notm}}, o en la calculadora de precios en la página {{site.data.keyword.Bluemix_notm}} Precios.
+Con una cuenta facturable de {{site.data.keyword.Bluemix_notm}}, se le facturará por el cálculo, los contenedores y los servicios que se utilicen en su organización. Es posible que otros usuarios de {{site.data.keyword.Bluemix_notm}} le inviten a participar en organizaciones en una cuenta diferente. Si crea apps o utiliza servicios en las organizaciones las que está invitado, el uso que se produce se factura a la cuenta que contenga dichas organizaciones. Puede ver más información sobre unos cargos específicos en una página de detalles de recurso en el Catálogo de {{site.data.keyword.Bluemix_notm}}, o en la calculadora de precios en la página {{site.data.keyword.Bluemix_notm}} Precios.
 
 Se aplicarán distintos tipos de cargos en función de las características de {{site.data.keyword.Bluemix_notm}} que utilice. En la tabla siguiente se proporciona una visión general de alto nivel:
 
@@ -205,7 +205,7 @@ Muchos servicios incluyen concesiones gratuitas mensuales. El uso de servicios q
     <dd>Paga en función del consumo de tiempo de ejecución y de servicio. Por ejemplo, con el servicio Push, cualquier uso que supere la concesión mensual gratuita se factura.</dd>
 <dt>Cargos reservados</dt>
     <dd><p>Como propietario de la cuenta de una cuenta de Pago según uso o una cuenta de Suscripción, puede reservar una instancia de servicio, con un compromiso a largo plazo, para obtener un precio con descuento. Por ejemplo, puede reservar la oferta de DB2 on Cloud grande estándar para 12 meses.</p> 
-    <p>Algunos servicios de {{site.data.keyword.Bluemix_notm}} ofrecen planes reservados. Puede solicitar un plan reservado desde el {{site.data.keyword.Bluemix_notm}} <strong>Catálogo</strong> pulsando el icono del servicio. A continuación, seleccione el plan de servicio que se ajuste mejor a sus necesidades. Si hay disponible un plan reservado, pulse <strong>Solicitud</strong>, y siga las instrucciones para enviar la solicitud. Recibirá un correo electrónico que contiene la información del precio del plan reservado. Un representante de ventas de {{site.data.keyword.Bluemix_notm}} también se pondrá en contacto con usted pronto para finalizar la compra.</p></dd>
+    <p>Algunos servicios de {{site.data.keyword.Bluemix_notm}} ofrecen planes reservados. Puede solicitar un plan reservado desde el {{site.data.keyword.Bluemix_notm}} <strong>Catálogo</strong> pulsando el mosaico del servicio. A continuación, seleccione el plan de servicio que se ajuste mejor a sus necesidades. Si hay disponible un plan reservado, pulse <strong>Solicitud</strong>, y siga las instrucciones para enviar la solicitud. Recibirá un correo electrónico que contiene la información del precio del plan reservado. Un representante de ventas de {{site.data.keyword.Bluemix_notm}} también se pondrá en contacto con usted pronto para finalizar la compra.</p></dd>
 <dt>Cargos escalonados</dt>
     <dd>De forma similar a los cargos con medición, pagará en función del consumo de servicios y de tiempo de ejecución. Sin embargo, los cargos por capas añaden capas de precios adicionales, ofreciendo a menudo cargos descontados en capas con un consumo más grande. El precio por niveles se ofrece de forma simple, graduada o de bloque.</dd>
 </dl>
@@ -320,7 +320,8 @@ para {{site.data.keyword.virtualmachineslong}} beta:
 
 Puede utilizar distintos métodos para saber lo que debe pagar por utilizar {{site.data.keyword.Bluemix_notm}} para crear y alojar su app.
 
-* Los estimadores de costes de la página de Precios de {{site.data.keyword.Bluemix_notm}} ofrecen una estimación aproximada del coste en función del tamaño de la app.
+* Los estimadores de costes de la {{site.data.keyword.pricing_sheet}} de {{site.data.keyword.Bluemix_notm}}
+ofrecen una estimación aproximada del coste en función del tamaño de la app.
 * La calculadora de costes de la página {{site.data.keyword.Bluemix_notm}} Precios contiene precios precisos de la app en función de la entrada del tiempo de ejecución y del uso de los servicios.
 * También puede calcular el coste manualmente.
 
@@ -329,7 +330,7 @@ Puede utilizar distintos métodos para saber lo que debe pagar por utilizar {{si
 
 Puede calcular rápidamente el precio de la app utilizando las calculadoras de costes que se proporcionan en la página {{site.data.keyword.Bluemix_notm}}.
 
-1. Vaya a la {{site.data.keyword.Bluemix_notm}} [página de precios](https://console.{DomainName}/pricing/). 
+1. Vaya a la {{site.data.keyword.pricing_sheet}} de {{site.data.keyword.Bluemix_notm}}. 
 2. Utilice uno de los widgets **Estime los costes** o pulse **Abrir calculadora** para utilizar la **Calculadora de tarifas de gran precisión**.
 
 Para utilizar la calculadora, escriba el uso mensual proyectado de los recursos listados; por ejemplo, el número de instancias o notificaciones por push. Pulse dentro el campo **Uso mensual** para obtener sugerencias sobre las unidades que están previstas en el campo. La calculadora muestra inmediatamente el precio de la entrada. También puede ajustar la calculadora para que muestre costes anuales en lugar de costes mensuales.
@@ -424,37 +425,36 @@ Aunque el dólar estadounidense (USD) se utiliza en los ejemplos de precios, tam
 |SEK |	  Corona sueca|
 |USD |    Dólar estadounidense|
 |ZAR |	  Rand sudafricano|
-*Tabla 8. Monedas admitidas*
+*Tabla 8. Monedas admitidas* 
+
+**Nota:** Si ha enlazado las cuentas de {{site.data.keyword.Bluemix_notm}} y SoftLayer, la única factura que recibirá estará en dólares de Estados Unidos (USD).  
 
 ##Panel de control de uso
 {: #usage}
 
-Como propietario de cuenta o gestor de facturación, puede utilizar la vista Panel de control de uso para ver los cargos en tiempo real del tiempo de ejecución y servicios utilizados cada mes en sus organizaciones. Puede ver el consumo de GB por hora y de servicio de tiempo de ejecución en todas las regiones o seleccionar para ver una región y espacio determinados durante los últimos 12 meses.
+Como propietario de cuenta o gestor de facturación, puede utilizar la página Panel de control de uso para ver los cargos en tiempo real del tiempo de ejecución y servicios utilizados cada mes en sus organizaciones. Puede ver el consumo de GB por hora y de servicio de tiempo de ejecución en todas las regiones o seleccionar para ver una región y espacio determinados durante los últimos 12 meses.
 
-Para abrir la vista Panel de control de uso, pulse el icono **{{site.data.keyword.avatar}}**
-![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Panel de control de uso**. En esta vista, puede ver un resumen del tiempo de ejecución y del uso del servicio para la cuenta. Los gestores de facturación pueden ver los detalles sólo para las organizaciones en las que hay gestores de facturación.
+Para abrir la página **Panel de control de uso**, pulse **Cuenta** &gt; *nombre_cuenta* &gt; **Panel de control de uso**. En esta página, puede ver un resumen del tiempo de ejecución y del uso del servicio para la cuenta. Los gestores de facturación pueden ver los detalles sólo para las organizaciones en las que hay gestores de facturación.
 
 La cuenta se factura al propietario por el uso total en el que han incurrido todas las organizaciones al final de cada ciclo de facturación. Cada ciclo de factura dura un mes.
 
-Los propietarios de las cuentas pueden filtrar el resumen de uso por región y organización. Si usted es el propietario de una cuenta, establezca **Organización** como **Todas las organizaciones** para ver el uso en toda la cuenta para un período de 12 meses. Pulse un mes concreto para ver el uso para ese mes. Los cargos mostrados representan la cantidad que se le factura a usted, como propietario de cuenta, para dicho mes.
+Los propietarios de las cuentas pueden filtrar el resumen de uso por región y organización. Los cargos mostrados representan la cantidad que se le factura a usted, como propietario de cuenta, para dicho mes.
 
 Si selecciona una organización específica para la **Organización**, puede ver la utilización total para esa organización, incluido cualquier uso como parte de un nivel libre. Los cargos que se muestran para la organización no son los cargos que se le facturan. El uso de la capa libre se muestra como gratuita en el nivel de cuenta, pero no a nivel organizativo. Por lo tanto, cuando se ve el uso de la organización, verá el uso real para esa organización incluido el uso gratuito y de pago. Todo el uso organizativo se despliega en el uso de la cuenta una vez que se haya eliminado la capa libre.
 
 ##Visualización de créditos
 {: #credits}
 
-Como propietario de una cuenta o gestor de facturación, puede utilizar la vista Panel de control de uso para ver los créditos de su cuenta. Es posible que tenga créditos, por ejemplo, si ha vinculado una cuenta de SoftLayer con una cuenta de {{site.data.keyword.Bluemix_notm}}.
+Como propietario de una cuenta o gestor de facturación, puede utilizar la página **Panel de control de uso** para ver los créditos de su cuenta. Es posible que tenga créditos, por ejemplo, si ha vinculado una cuenta de SoftLayer con una cuenta de {{site.data.keyword.Bluemix_notm}}.
 
-Para abrir la vista Panel de control de uso, pulse el icono **{{site.data.keyword.avatar}}**
-![Icono Avatar](../icons/i-avatar-icon.svg) y, a continuación, seleccione **Cuenta**. En la página que se muestra, pulse **Panel de control de uso**. En la vista puede ver los créditos, si existen, y la fecha de vencimiento.
+Para abrir la página **Panel de control de uso**, pulse **Cuenta**. En la página que se muestra, pulse **Panel de control de uso**. En la página, puede ver los créditos, si existen, y la fecha de vencimiento.
 
 ##Notificaciones
 {: #notifications}
 
 Como gestor de cuentas de una cuenta Pago según uso, puede establecer notificaciones de gasto relativas al coste total de su cuenta, para su tiempo de ejecución, servicios y para los servicios individuales, excluidos los servicios de terceros. Recibe notificaciones al alcanzar el 80%, 90%, y 100% de los umbrales de gasto que especifique.
 
-Para abrir la vista **Notificaciones**, pulse el icono **{{site.data.keyword.avatar}}**
-![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Cuenta** &gt; *nombre_cuenta* &gt; **Notificaciones de gastos**. Entre un valor numérico para establecer el umbral de gasto para desencadenar una notificación para cada tipo de notificación de gasto según sea necesario. También puede añadir y suprimir notificaciones para servicios individuales.
+Para abrir la vista **Notificaciones**, pulse **Cuenta** &gt; *nombre_cuenta* &gt; **Notificaciones de gastos**. Entre un valor numérico para establecer el umbral de gasto para desencadenar una notificación para cada tipo de notificación de gasto según sea necesario. También puede añadir y suprimir notificaciones para servicios individuales.
 
 ##Cómo cambiar el plan
 {: #changing}
