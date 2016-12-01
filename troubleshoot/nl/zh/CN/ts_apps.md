@@ -19,7 +19,7 @@ copyright:
 # 有关管理应用程序的故障诊断
 {: #managingapps}
 
-上次更新时间：2016 年 8 月 18 日
+上次更新时间：2016 年 10 月 11 日
 {: .last-updated} 
 
 有关管理应用程序的一般性问题可能包括：无法更新应用程序；未显示双字节字符。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。
@@ -149,7 +149,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 尝试在 Bluemix 中创建应用程序时，您会看到以下错误消息：
 {: tsSymptoms}
 
-`BXNUI0515E：尝试在组织中检索空间失败，因为发生了网络连接问题。`
+`BXNUI0515E: 未检索到组织中的空间。发生了网络连接问题，或者当前组织没有与其相关联的空间。`
 
 通常当您第一次尝试在未创建空间的情况下通过目录创建应用程序或服务时，会发生此错误。
 {: tsCauses}
@@ -157,7 +157,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 请确保在当前组织中已创建空间。要创建空间，请使用以下某种方法： 
 {: tsResolve}
 
-  * 单击 {{site.data.keyword.avatar}} 图标 ![Avatar 图标](images/account_support.svg)，以打开“帐户和支持”窗口小部件，选择要在其中创建空间的组织，然后单击**创建空间**。
+  * 在菜单栏中，单击**帐户** &gt; **管理组织**。选择要在其中创建空间的组织，然后单击**创建空间**。
   * 在 cf 命令行界面中，键入 `cf create-space <space_name> -o <organization_name>`。
 
 请重试。如果再次看到此消息，请转至 [Bluemix 状态](http://ibm.biz/bluemixstatus){: new_window}页面，查看服务或组件是否存在问题。
@@ -339,10 +339,10 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 删除不需要的任何服务实例，或者除去您可拥有的服务实例数的限制。
 {: tsResolve}
  
-  * 要删除服务实例，可以使用 {{site.data.keyword.Bluemix_notm}} 用户界面或者命令行界面。
-    要使用 {{site.data.keyword.Bluemix_notm}} 用户界面删除服务实例，请完成以下步骤：
-	  1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，单击要删除的服务。这将显示服务磁贴。
-	  2. 在服务磁贴上，单击**菜单**图标。
+  * 要删除服务实例，可以使用 {{site.data.keyword.Bluemix_notm}} 控制台或者命令行界面。
+    要使用 {{site.data.keyword.Bluemix_notm}} 控制台删除服务实例，请完成以下步骤：
+	  1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，单击要删除的服务。这将显示服务卡。
+	  2. 在服务卡上，单击**菜单**图标。
 	  3. 单击**删除服务**。在删除服务实例之后，会提示您重新编译打包绑定该服务实例的应用程序。 
     要使用命令行界面删除服务实例，请完成以下步骤：
 	  1. 取消服务实例与应用程序的绑定，方法是输入 `cf unbind-service <appname> <service_instance_name>`。
@@ -404,8 +404,8 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 {: tsResolve} 
 
   * 要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅 [付费帐户](../pricing/index.html#pay-accounts){: new_window}。 
-  * 要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 用户界面或 cf 命令行界面。
-    如果使用 {{site.data.keyword.Bluemix_notm}} 用户界面，请完成以下步骤：
+  * 要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 控制台或 cf 命令行界面。
+    如果使用 {{site.data.keyword.Bluemix_notm}} 控制台，请完成以下步骤：
 	  1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，选择应用程序。这将打开应用程序详细信息页面。
 	  2. 在运行时窗格中，可以减少应用程序的最大内存限制和/或应用程序实例数。 
 	 
@@ -550,7 +550,7 @@ cf push appname -p app_path
   
  
 
-您可以成功登录到 {{site.data.keyword.Bluemix_notm}} 用户界面，但不能使用 cf 命令行界面或 Eclipse 插件来推送应用程序。
+您可以成功登录到 {{site.data.keyword.Bluemix_notm}} 控制台，但不能使用 cf 命令行界面或 Eclipse 插件来推送应用程序。
 {: tsSymptoms}
 
 尝试使用 cf 命令行界面将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 时，您会看到以下某个错误消息（消息中指定了组织名称）： 
@@ -1105,19 +1105,19 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 <!-- begin STAGING ONLY --> 
 	
 	
-## 管理员无法使用 {{site.data.keyword.Bluemix_notm}} 用户界面查看所有组织
+## 管理员无法使用 {{site.data.keyword.Bluemix_notm}} 控制台查看所有组织
 {: #ts_ui_org}
 
-作为管理员，使用 {{site.data.keyword.Bluemix_notm}} 用户界面时，无法显示要管理的每一个组织。您仅可以显示和管理您所属的那些组织。
+作为管理员，您在使用 {{site.data.keyword.Bluemix_notm}} 控制台时，无法显示要管理的每一个组织。您仅可以显示和管理您所属的那些组织。
 
  
 
-作为管理员，您无法使用 {{site.data.keyword.Bluemix_notm}} 用户界面查看所有组织。
+作为管理员，您无法使用 {{site.data.keyword.Bluemix_notm}} 控制台查看所有组织。
 {: tsSymptoms}
 
  
 
-这是 {{site.data.keyword.Bluemix_notm}} 用户界面的限制。
+这是 {{site.data.keyword.Bluemix_notm}} 控制台的限制。
 {: tsCauses}
 
  

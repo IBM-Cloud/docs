@@ -19,7 +19,7 @@ copyright:
 # Fehlerbehebung für die Verwaltung von Anwendungen
 {: #managingapps}
 
-Letzte Aktualisierung: 18. August 2016
+Letzte Aktualisierung: 11. Oktober 2016
 {: .last-updated} 
 
 Allgemeine Probleme im Zusammenhang mit der Verwaltung von Anwendungen können sein, dass Anwendungen nicht aktualisiert werden können
@@ -150,7 +150,7 @@ Sie können eine App oder einen Service nicht erstellen, wenn der derzeitigen Or
 Bei dem Versuch, in Bluemix eine Anwendung zu erstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms}
 
-`BXNUI0515E: Die Bereiche in der Organisation wurden aufgrund eines Netzverbindungsproblems nicht abgerufen.`
+`BXNUI0515E: Die Bereiche in der Organisation wurden nicht abgerufen. Es ist entweder ein Netzverbindungsproblem aufgetreten oder Ihrer aktuellen Organisation ist kein Bereich zugeordnet.`
 
 Dieser Fehler tritt oft auf, wenn Sie zum ersten Mal versuchen, im Katalog eine App oder einen Service zu erstellen, wenn noch kein Bereich erstellt wurde. 
 {: tsCauses}
@@ -159,7 +159,7 @@ Stellen Sie sicher, dass Sie in der derzeitigen Organisation einen Bereich erste
 um einen Bereich zu erstellen:
 {: tsResolve}
 
-  * Klicken Sie auf das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg), um das Widget 'Konto und Unterstützung' zu öffnen. Wählen Sie die Organisation aus, in der Sie den Bereich erstellen möchten, und klicken Sie anschließend auf **Bereich erstellen**.
+  * Klicken Sie in der Menüleiste auf **Konto** &gt; **Organisationen verwalten**. Wählen Sie die Organisation aus, in der der Bereich erstellt werden soll, und klicken Sie anschließend auf **Bereich erstellen**.
   * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: `cf create-space <Name des Bereichs> -o <Name der Organisation>`.
 
 Wiederholen Sie den Vorgang. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt.
@@ -387,10 +387,10 @@ Dieser Fehler tritt auf, wenn Sie den Grenzwert für die Anzahl der Serviceinsta
 Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Grenzwert für die Anzahl der Serviceinstanzen, die für Sie bestehen können.
 {: tsResolve}
  
-  * Zum Löschen einer Serviceinstanz können Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die Befehlszeilenschnittstelle verwenden.
-    Führen Sie folgende Schritte aus, wenn Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle zum Löschen einer Serviceinstanz verwenden:
-	  1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf den Service, den Sie löschen möchten.  Daraufhin wird die Kachel für den Service angezeigt.
-	  2. Klicken Sie auf der Servicekachel auf das Symbol **Menü**.
+  * Zum Löschen einer Serviceinstanz können Sie die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle verwenden.
+    Führen Sie die folgenden Schritte aus, um die {{site.data.keyword.Bluemix_notm}}-Konsole zum Löschen einer Serviceinstanz zu verwenden:
+	  1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf den Service, den Sie löschen möchten.  Die Servicekarte wird angezeigt.
+	  2. Klicken Sie in der Servicekarte auf das Symbol **Menü**.
 	  3. Klicken Sie auf **Service löschen**. Nach dem Löschen der Serviceinstanz werden Sie aufgefordert, die Anwendung erneut bereitzustellen, an die die Serviceinstanz gebunden war. 
     Führen Sie folgende Schritte aus, wenn Sie die Befehlszeilenschnittstelle zum Löschen einer Serviceinstanz verwenden:
 	  1. Heben Sie die Bindung zwischen der Serviceinstanz und der Anwendung auf, indem Sie Folgendes eingeben: `cf unbind-service <appname> <service_instance_name>`.
@@ -452,8 +452,8 @@ Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von
 {: tsResolve} 
 
   * Zum Erhöhen des Speicherkontingents für Ihr Konto wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie in [Zahlungskonten](../pricing/index.html#pay-accounts){: new_window}. 
-  * Zum Verringern des von Ihren Anwendungen verwendeten Speicherplatzes verwenden Sie entweder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die cf-Befehlszeilenschnittstelle.
-    Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle verwenden, führen Sie die folgenden Schritte durch:
+  * Zum Verringern des Speicherplatzes, den Ihre Apps belegen, verwenden Sie entweder die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle 'cf'.
+    Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole verwenden, führen Sie die folgenden Schritte durch:
 	  1. Wählen Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard Ihre Anwendung aus. Die Seite mit den Anwendungsdetails wird geöffnet.
 	  2. Im Teilfenster für die Laufzeit können Sie die maximale Hauptspeicherkapazität für Ihre Anwendung, die Anzahl der Anwendungsinstanzen oder beides reduzieren. 
 	  
@@ -597,7 +597,7 @@ Es kann vorkommen, dass Sie Ihre Organisation in {{site.data.keyword.Bluemix_not
   
  
 
-Sie können sich zwar erfolgreich an der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle anmelden, jedoch nicht Anwendungen mithilfe der cf-Befehlszeilenschnittstelle oder des Eclipse-Plug-ins per Push-Operation übertragen.
+Sie können sich zwar erfolgreich an der {{site.data.keyword.Bluemix_notm}}-Konsole anmelden, jedoch keine Apps mithilfe der Befehlszeilenschnittstelle 'cf' oder des Eclipse-Plug-ins per Push-Operation übertragen.
 {: tsSymptoms}
 
 Wenn Sie versuchen, mithilfe der Befehlszeilenschnittstelle 'cf' eine Anwendung per Push-Operation an
@@ -1164,19 +1164,19 @@ Hierbei handelt es sich um ein unterstütztes Verhalten von {{site.data.keyword.
 <!-- begin STAGING ONLY --> 
 	
 	
-## Administratoren können über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle nicht alle Organisationen anzeigen
+## Administratoren können über die {{site.data.keyword.Bluemix_notm}}-Konsole nicht alle Organisationen anzeigen
 {: #ts_ui_org}
 
-Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle als Administrator verwenden, können Sie nicht alle Organisationen zu Verwaltungszwecken anzeigen. Sie können nur die Organisationen anzeigen und verwalten, zu denen Sie gehören.
+Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole als Administrator verwenden, können Sie nicht alle Organisationen zu Verwaltungszwecken anzeigen. Sie können nur die Organisationen anzeigen und verwalten, zu denen Sie gehören.
 
  
 
-Als Administrator können Sie nicht alle Organisationen über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle anzeigen.
+Als Administrator können Sie nicht alle Organisationen über die {{site.data.keyword.Bluemix_notm}}-Konsole anzeigen.
 {: tsSymptoms}
 
  
 
-Dies ist eine Einschränkung der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle.
+Dies ist eine Einschränkung der {{site.data.keyword.Bluemix_notm}}-Konsole.
 {: tsCauses}
 
  

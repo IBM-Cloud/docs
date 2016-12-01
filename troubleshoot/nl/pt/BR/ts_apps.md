@@ -19,7 +19,7 @@ copyright:
 # Resolução de problemas para gerenciar aplicativos
 {: #managingapps}
 
-Última atualização: 18 de agosto de 2016
+Última atualização: 11 de outubro de 2016
 {: .last-updated} 
 
 Problemas gerais com o gerenciamento de aplicativos podem incluir
@@ -153,7 +153,7 @@ Não será possível criar um aplicativo ou um serviço se a sua organização a
 Ao tentar criar um aplicativo no Bluemix, você vê a mensagem de erro a seguir:
 {: tsSymptoms}
 
-`BXNUI0515E: A tentativa de recuperar os espaços na organização falhou devido a um problema de conexão de rede.`
+`BXNUI0515E: os espaços na organização não foram recuperados. Ou ocorreu um problema de conexão de rede ou sua organização atual não possui um espaço associado a ela.`
 
 Esse erro geralmente é recebido na primeira vez em que você tenta criar um aplicativo ou um serviço a partir do Catálogo quando um espaço ainda não estiver criado. 
 {: tsCauses}
@@ -161,10 +161,7 @@ Esse erro geralmente é recebido na primeira vez em que você tenta criar um apl
 Certifique-se de que você criou um espaço em sua organização atual.  Para criar um espaço, use um dos métodos a seguir:
 {: tsResolve}
 
-  * Clique no ícone {{site.data.keyword.avatar}}
-![ícone Avatar](images/account_support.svg) para abrir o widget Conta
-e Suporte, selecione a organização na qual você deseja criar o espaço e, em seguida,
-clique em **Criar um espaço**.
+  * Na barra de menus, clique em **Conta** &gt; **Gerenciar organizações.** Selecione a organização na qual deseja criar o espaço e, em seguida, clique em **Criar um espaço**.
   * Na interface de linha de comandos cf, digite `cf create-space <space_name> -o <organization_name>`.
 
 Tente novamente. Se você vir essa mensagem novamente, acesse a página de [status do Bluemix](http://ibm.biz/bluemixstatus){: new_window} para verificar se um serviço ou componente tem um problema.
@@ -350,10 +347,10 @@ Esse erro ocorre quando você excede o limite no número de instâncias de servi
 Exclua todas as instâncias de serviços que não são necessárias, ou remova o limite no número de instâncias de serviços que você pode ter.
 {: tsResolve}
  
-  * Para excluir a instância de serviços, é possível usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface com o usuário.
-    Para usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} para excluir uma instância de serviço, conclua as etapas a seguir:
-	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no serviço que você deseja acessar.  O quadro do serviço é exibido.
-	  2. No quadro do serviço, clique no ícone **Menu**.
+  * Para excluir uma instância de serviços, é possível usar o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos.
+    Para usar o console do {{site.data.keyword.Bluemix_notm}} para excluir uma instância de serviço, conclua as etapas a seguir:
+	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no serviço que você deseja acessar.  O cartão de serviços é exibido.
+	  2. No cartão de serviços, clique no ícone **Menu**.
 	  3. Clique em **Excluir serviço**. Depois de excluir a instância de serviço, você será solicitado a refazer o estágio no aplicativo ao qual a instância de serviço foi vinculada. 
     Para usar a interface de linha de comandos para excluir uma instância de serviço, conclua as etapas a seguir:
 	  1. Desvincule a instância de serviço de um aplicativo digitando `cf unbind-service <appname> <service_instance_name>`.
@@ -415,8 +412,8 @@ Esse erro ocorre quando a quantia de memória restante para a sua organização 
 {: tsResolve} 
 
   * Para aumentar a cota de memória de sua conta, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua de avaliação em uma conta paga, consulte [Contas pagas](../pricing/index.html#pay-accounts){: new_window}. 
-  * Para reduzir a memória que seus apps usam, use a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface de linha de comandos cf.
-    Se você usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
+  * Para reduzir a memória que seus apps usam, use o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos cf.
+    Se você usar o console do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, selecione seu aplicativo. A página de detalhes do app é aberta.
 	  2. Na área de janela de tempo de execução, é possível reduzir o limite máximo de memória ou os números de instâncias do app, ou ambos, para seu app. 
 	  
@@ -571,7 +568,7 @@ Talvez você não consiga localizar sua organização no {{site.data.keyword.Blu
   
  
 
-É possível efetuar login na interface com o usuário do {{site.data.keyword.Bluemix_notm}} com êxito, mas não é possível enviar por push apps usando a interface de linha de comandos cf ou o plug-in do Eclipse.
+É possível efetuar login com sucesso no console do {{site.data.keyword.Bluemix_notm}}, mas não é possível enviar os apps por push usando a interface da linha de comandos cf ou o plug-in do Eclipse.
 {: tsSymptoms}
 
 Ao tentar enviar por push um aplicativo
@@ -761,13 +758,11 @@ ao problema:
 {: tsResolve} 
 
   * Especifique o comando inicial por um dos métodos a seguir: 
-      * Use a interface de linha de comandos cf. Por
-exemplo: 
+      * Use a interface de linha de comandos cf. Por exemplo: 
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por
-exemplo:
+	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por exemplo:
 	    ```
 		{
       ...
@@ -776,8 +771,7 @@ exemplo:
  	   }
 	}
 	    ```
-	  * Use o arquivo `manifest.yml`. Por
-exemplo: 
+	  * Use o arquivo `manifest.yml`. Por exemplo: 
 	    ```
 		applications:
   name: MyUniqueNodejs01
@@ -907,15 +901,13 @@ Esse problema ocorre porque nenhum buildpack integrado é fornecido para apps Me
 Para usar um buildpack customizado para apps Meteor, use um dos métodos a seguir:
 {: tsResolve}
 
-  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por
-exemplo:
+  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por exemplo:
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
   * Se você implementar seu aplicativo a partir do prompt de comandos, use o comando `cf
 push` e especifique seu buildpack customizado usando
-a opção **-b**. Por
-exemplo:
+a opção **-b**. Por exemplo:
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
@@ -1202,21 +1194,19 @@ aplicativo. Para obter mais informações, veja Implementações azul-verde.
 <!-- begin STAGING ONLY --> 
 	
 	
-## Os administradores não podem visualizar todas as organizações usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}
+## Os administradores não podem visualizar todas as organizações usando o console do {{site.data.keyword.Bluemix_notm}}
 {: #ts_ui_org}
 
-Como administrador, quando você utiliza a interface com o usuário do
-{{site.data.keyword.Bluemix_notm}}, não é possível exibir cada organização para
-administrá-las. Você pode exibir e administrar apenas as organizações às quais pertence.
+Como um administrador, quando você usa o console do {{site.data.keyword.Bluemix_notm}}, não é possível exibir todas as organizações para administrá-las. Você pode exibir e administrar apenas as organizações às quais pertence.
 
  
 
-Como administrador, não é possível ver todas as organizações utilizando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
+Como um administrador, não é possível ver todas as organizações usando o console do {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms}
 
  
 
-Essa é uma limitação da interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
+Esta é uma limitação do console do {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
  

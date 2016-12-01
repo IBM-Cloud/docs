@@ -19,7 +19,7 @@ copyright:
 # 管理應用程式疑難排解
 {: #managingapps}
 
-前次更新：2016 年 8 月 18 日
+前次更新：2016 年 10 月 11 日
 {: .last-updated} 
 
 管理應用程式的一般問題可能包括無法更新應用程式、未顯示雙位元組字元等問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
@@ -149,7 +149,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 當您嘗試在 Bluemix 中建立應用程式時，會看到下列錯誤訊息：
 {: tsSymptoms}
 
-`BXNUI0515E：由於網路連線問題，嘗試擷取組織中的空間失敗。`
+`BXNUI0515E: The spaces in the org weren't retrieved. Either a network connection problem occurred, or your current organization does not have a space associated with it.`
 
 通常在您第一次嘗試從「型錄」建立應用程式或服務，但尚未建立空間時，會發生此錯誤。
 {: tsCauses}
@@ -157,7 +157,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 確定已在現行組織中建立空間。若要建立空間，請使用下列其中一種方法：
 {: tsResolve}
 
-  * 按一下{{site.data.keyword.avatar}}圖示 ![「虛擬人像」圖示](images/account_support.svg) 來開啟「帳戶及支援」小組件，選取您要在其中建立空間的組織，然後按一下**建立空間**。
+  * 從功能表列中，按一下**帳戶** &gt; **管理組織**。選取要在其中建立空間的組織，然後按一下**建立空間**。
   * 在 cf 指令行介面中，鍵入 `cf create-space <space_name> -o <organization_name>`。
 
 請重試。如果再次看到此訊息，請移至 [Bluemix 狀態](http://ibm.biz/bluemixstatus){: new_window}頁面，以檢查服務或元件是否有問題。
@@ -343,9 +343,10 @@ IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GC
 請刪除不需要的任何服務實例，或移除您可以擁有之服務實例數目的限制。
 {: tsResolve}
  
-  * 若要刪除服務實例，您可以使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或指令行介面。若要使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來刪除服務實例，請完成下列步驟：
-	  1. 在「{{site.data.keyword.Bluemix_notm}} 儀表板」上，按一下您要刪除的服務。即會顯示服務磚。
-	  2. 在服務磚上，按一下**功能表**圖示。
+  * 若要刪除服務實例，您可以使用 {{site.data.keyword.Bluemix_notm}} 主控台或指令行介面。
+    若要使用 {{site.data.keyword.Bluemix_notm}} 主控台來刪除服務實例，請完成下列步驟：
+	  1. 在「{{site.data.keyword.Bluemix_notm}} 儀表板」上，按一下您要刪除的服務。即會顯示服務卡片。
+	  2. 在服務卡片上，按一下**功能表**圖示。
 	  3. 按一下**刪除服務**。刪除服務實例之後，系統會提示您重新編譯打包服務實例所連結的應用程式。若要使用指令行介面來刪除服務實例，請完成下列步驟：
 	  1. 鍵入 `cf unbind-service <appname> <service_instance_name>`，將服務實例與應用程式取消連結。
 	  2. 鍵入 `cf delete-service <service_instance_name>`，以刪除服務實例。
@@ -397,7 +398,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 
  
 
-當組織剩餘的記憶體數量少於您想要部署之應用程式所需的記憶體數量時，就會發生這個錯誤。試用帳戶的記憶體配額上限為 2 GB。
+當組織剩餘的記憶體量少於您想要部署之應用程式所需的記憶體量時，就會發生這個錯誤。試用帳戶的記憶體配額上限為 2 GB。
 {: tsCauses}
 
 
@@ -406,7 +407,8 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 {: tsResolve} 
 
   * 若要增加帳戶的記憶體配額，請將試用帳戶轉換成付費帳戶。如需如何將試用帳戶轉換成付費帳戶的相關資訊，請參閱[付費帳戶](../pricing/index.html#pay-accounts){: new_window}。 
-  * 若要減少應用程式所使用的記憶體，請使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 cf 指令行介面。如果您使用 {{site.data.keyword.Bluemix_notm}} 使用者介面，請完成下列步驟：
+  * 若要減少應用程式所使用的記憶體，請使用 {{site.data.keyword.Bluemix_notm}} 主控台或 cf 指令行介面。
+    如果您使用 {{site.data.keyword.Bluemix_notm}} 主控台，請完成下列步驟：
 	  1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」上，選取您的應用程式。即會開啟應用程式詳細資料頁面。
 	  2. 在「運行環境」窗格中，您可以針對您的應用程式減少記憶體上限及（或）應用程式實例的數目。 
 	  
@@ -417,7 +419,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 	  cf apps
 ```
 	     cf apps 指令會列出您在現行空間中部署的所有應用程式。也會顯示每個一應用程式的狀態。
-      2. 若要減少應用程式所使用的記憶體數量，請減少應用程式實例的數目及（或）記憶體上限：
+      2. 若要減少應用程式所使用的記憶體量，請減少應用程式實例的數目及（或）記憶體上限：
 	  ```
 	  cf push appname -p app_path -i instance_number -m memory_limit
       ```
@@ -549,7 +551,7 @@ path: path_to_application
   
  
 
-您可以順利登入 {{site.data.keyword.Bluemix_notm}} 使用者介面，但無法利用 cf 指令行介面或 Eclipse 外掛程式推送應用程式。
+您可以順利登入 {{site.data.keyword.Bluemix_notm}} 主控台，但無法利用 cf 指令行介面或 Eclipse 外掛程式推送應用程式。
 {: tsSymptoms}
 
 嘗試使用 cf 指令行介面將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時，您看到下列其中一則錯誤訊息，且訊息中指定了組織名稱： 
@@ -1105,19 +1107,19 @@ git clone <git_repository_URL>
 <!-- begin STAGING ONLY --> 
 	
 	
-## 管理者無法使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來檢視所有組織
+## 管理者無法使用 {{site.data.keyword.Bluemix_notm}} 主控台來檢視所有組織
 {: #ts_ui_org}
 
-身為管理者，當您使用 {{site.data.keyword.Bluemix_notm}} 使用者介面時，無法顯示每個組織來進行管理。您只能顯示及管理您所屬的那些組織。
+身為管理者，當您使用 {{site.data.keyword.Bluemix_notm}} 主控台時，無法顯示每個組織來進行管理。您只能顯示及管理您所屬的那些組織。
 
  
 
-身為管理者，您無法使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來查看所有組織。
+身為管理者，您無法使用 {{site.data.keyword.Bluemix_notm}} 主控台來查看所有組織。
 {: tsSymptoms}
 
  
 
-這是 {{site.data.keyword.Bluemix_notm}} 使用者介面的限制。
+這是 {{site.data.keyword.Bluemix_notm}} 主控台的限制。
 {: tsCauses}
 
  

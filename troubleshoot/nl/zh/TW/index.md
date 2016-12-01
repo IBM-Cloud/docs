@@ -643,7 +643,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 
  
 
-當組織剩餘的記憶體數量少於您想要部署之應用程式所需的記憶體數量時，就會發生這個錯誤。試用帳戶的記憶體配額上限為 2 GB。
+當組織剩餘的記憶體量少於您想要部署之應用程式所需的記憶體量時，就會發生這個錯誤。試用帳戶的記憶體配額上限為 2 GB。
 {: tsCauses}
 
 
@@ -660,7 +660,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 	  cf apps
 ```
 	     cf apps 指令會列出您在現行空間中部署的所有應用程式。也會顯示每個一應用程式的狀態。
-      2. 若要減少應用程式所使用的記憶體數量，請減少應用程式實例的數目及（或）記憶體上限：
+      2. 若要減少應用程式所使用的記憶體量，請減少應用程式實例的數目及（或）記憶體上限：
 	  ```
 	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
 ```

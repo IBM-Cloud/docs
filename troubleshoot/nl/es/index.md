@@ -325,7 +325,7 @@ Si la JVM del entorno de trabajos de IBM es IBM JVM 7 u 8, o una versión anteri
 ## No se pueden reutilizar los nombres de apps suprimidas
 {: #ts_reuse_appname}
   
-Tras suprimir una app, puede reutilizar el nombre de la app solo después de suprimir la ruta de la app.  
+Tras suprimir una app, puede reutilizar el nombre de la app solo después de suprimir la ruta de la app. 
 
 Al intentar reutilizar el nombre de la app, recibirá el mensaje siguiente:
 {: tsSymptoms}

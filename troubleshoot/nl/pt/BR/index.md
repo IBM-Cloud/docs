@@ -166,11 +166,10 @@ No
 {{site.data.keyword.Bluemix_notm}}, é possível ser um membro ou um colaborador de uma organização:
 
 <dl><dt>Colaborador</dt>
-<dd>Você é um colaborador de uma organização, se já tiver uma conta
-{{site.data.keyword.Bluemix_notm}} e alguém
+<dd>Você é um colaborador de uma organização, se já tiver uma conta do {{site.data.keyword.Bluemix_notm}} e alguém
 convidá-lo para a organização.</dd>
 <dt>Membro</dt>
-<dd>Você é um membro de uma organização, se não tiver uma conta {{site.data.keyword.Bluemix_notm}}, mas então
+<dd>Você é um membro de uma organização, se não tiver uma conta do {{site.data.keyword.Bluemix_notm}}, mas então
 alguém convidá-lo para a organização e você se inscrever para {{site.data.keyword.Bluemix_notm}} a partir do convite.</dd>
 </dl>
 

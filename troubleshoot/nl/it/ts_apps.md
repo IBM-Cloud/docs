@@ -19,7 +19,7 @@ copyright:
 # Risoluzione dei problemi relativi alla gestione delle applicazioni
 {: #managingapps}
 
-Ultimo aggiornamento: 18 agosto 2016
+Ultimo aggiornamento: 11 ottobre 2016
 {: .last-updated} 
 
 I problemi generali con la gestione delle applicazioni potrebbero includere
@@ -151,7 +151,7 @@ Non puoi creare un'applicazione o un servizio se la tua organizzazione corrente 
 Quando tenti di creare un'applicazione in Bluemix, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
-`BXNUI0515E: il tentativo di richiamare gli spazi nell'organizzazione non è riuscito a causa di un problema nella connessione di rete.`
+`BXNUI0515E: Gli spazi nell'organizzazione non sono stati recuperati. Si è verificato un problema di rete oppure la tua organizzazione corrente non dispone di uno spazio associato ad essa.`
 
 Questo errore spesso viene ricevuto la prima volta che si tenta di creare un'applicazione o un servizio dal catalogo quando ancora non è stato creato uno spazio. 
 {: tsCauses}
@@ -159,7 +159,7 @@ Questo errore spesso viene ricevuto la prima volta che si tenta di creare un'app
 Assicurati di aver creato uno spazio nella tua organizzazione corrente.  Per creare uno spazio, utilizza uno dei seguenti metodi:
 {: tsResolve}
 
-  * Fai clic sull'icona {{site.data.keyword.avatar}} ![icona Avatar](images/account_support.svg) per aprire il widget Account e supporto, seleziona l'organizzazione in cui vuoi creare lo spazio e fai clic su **Crea uno spazio**.
+  * Dalla barra dei menu, fai clic su **Account** &gt; **Gestisci organizzazioni.** Seleziona l'organizzazione in cui vuoi creare lo spazio e fai clic su **Crea uno spazio**.
   * Nell'interfaccia riga di comando cf, immetti `cf create-space <nome_spazio>
 -o <nome_organizzazione>`.
 
@@ -390,12 +390,10 @@ Elimina tutte le istanze dei servizi che non sono necessarie o rimuovi
 il limite per il numero di istanze del servizio che puoi avere.
 {: tsResolve}
  
-  * Per eliminare un'istanza dei servizi, puoi utilizzare l'interfaccia utente di {{site.data.keyword.Bluemix_notm}}
-o l'interfaccia riga di comando.
-    Per utilizzare l'interfaccia utente di {{site.data.keyword.Bluemix_notm}}
-per eliminare un'istanza del servizio, completa la seguente procedura:
-	  1. Nel Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul servizio che vuoi eliminare.  Viene visualizzato il tile del servizio.
-	  2. Sul tile del servizio, fai clic sull'icona **Menu**.
+  * Per eliminare un'istanza dei servizi, puoi utilizzare la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando.
+    Per utilizzare la console {{site.data.keyword.Bluemix_notm}} per eliminare un'istanza del servizio, completa la seguente procedura:
+	  1. Nel Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul servizio che vuoi eliminare.  Viene visualizzata la scheda del servizio.
+	  2. Nella scheda del servizio, fai clic sull'icona **Menu**.
 	  3. Fai clic su **Elimina servizio**. Dopo aver eliminato
 l'istanza del servizio, ti verrà richiesto di preparare nuovamente l'applicazione
 a cui era associata l'istanza del servizio. 
@@ -481,8 +479,8 @@ Puoi aumentare la quota di memoria del tuo account o ridurre la memoria utilizza
 converti il tuo account di prova in un account a pagamento. Per informazioni
 su come convertire il tuo account di prova in un account a pagamento, vedi [Pay
 accounts](../pricing/index.html#pay-accounts){: new_window}. 
-  * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza l'interfaccia utente{{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando cf.
-    Se utilizzi l'interfaccia utente {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
+  * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando cf.
+    Se utilizzi la console {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
 	  1. Sul Dashboard {{site.data.keyword.Bluemix_notm}}, seleziona la tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
 	  2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione. 
 	  
@@ -640,7 +638,7 @@ lavori su una regione {{site.data.keyword.Bluemix_notm}}.
   
  
 
-Riesci ad accedere correttamente all'interfaccia utente {{site.data.keyword.Bluemix_notm}} ma non puoi distribuire le applicazioni utilizzando l'interfaccia riga di comando cf o il plug-in Eclipse.
+Riesci ad accedere correttamente alla console {{site.data.keyword.Bluemix_notm}}, ma non puoi distribuire le applicazioni utilizzando l'interfaccia riga di comando cf o il plug-in Eclipse.
 {: tsSymptoms}
 
 Quando tenti di distribuire un'applicazione
@@ -1262,19 +1260,19 @@ per l'aggiornamento della tua applicazione. Per ulteriori informazioni, vedi Dis
 <!-- begin STAGING ONLY --> 
 	
 	
-## Gli amministratori non possono visualizzare tutte le organizzazioni utilizzando l'interfaccia utente {{site.data.keyword.Bluemix_notm}}
+## Gli amministratori non possono visualizzare tutte le organizzazioni utilizzando la console {{site.data.keyword.Bluemix_notm}}
 {: #ts_ui_org}
 
-In qualità di amministratore, quando utilizzi l'interfaccia utente {{site.data.keyword.Bluemix_notm}}, non riesci a visualizzare tutte le organizzazioni per gestirle. Puoi visualizzare e gestire solo le organizzazioni alle quali appartieni.
+In qualità di amministratore, quando utilizzi la console {{site.data.keyword.Bluemix_notm}}, non riesci a visualizzare tutte le organizzazioni per gestirle. Puoi visualizzare e gestire solo le organizzazioni alle quali appartieni.
 
  
 
-In qualità di amministratore, non puoi visualizzare tutte le organizzazioni utilizzando l'interfaccia utente {{site.data.keyword.Bluemix_notm}}.
+In qualità di amministratore, non puoi visualizzare tutte le organizzazioni utilizzando la console {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms}
 
  
 
-Questa è una limitazione dell'interfaccia utente {{site.data.keyword.Bluemix_notm}}.
+Questa è una limitazione della console {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
  

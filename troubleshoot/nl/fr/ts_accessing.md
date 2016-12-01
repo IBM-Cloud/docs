@@ -17,7 +17,7 @@ copyright:
 # Traitement des incidents liés à l'accès à {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Dernière mise à jour : 18 août 2016
+Dernière mise à jour : 23 octobre 2016
 {: .last-updated} 
 
 Des problèmes d'ordre général liés à {{site.data.keyword.Bluemix}} peuvent survenir
@@ -27,59 +27,89 @@ un compte est bloqué à l'état en attente, etc. Toutefois, dans de nombreux ca
 {:shortdesc}
 
 ## Connexion à {{site.data.keyword.Bluemix_notm}} impossible
+{: #ts_unabletologin}
+
+Vous devez disposer d'un compte {{site.data.keyword.Bluemix_notm}} valide pour pouvoir vous connecter. 
+
+
+Lorsque vous essayez de vous connecter à {{site.data.keyword.Bluemix_notm}}, l'un des messages d'erreur suivants s'affiche :
+{: tsSymptoms} 
+
+ * Depuis le portail client 
+  
+   `Vous accédez à cette page car votre authentification a abouti. Toutefois, cet IBMid n'est associé à aucun compte Bluemix. Si vous pensez
+que ce message ne s'affiche pas à bon escient, prenez contact avec votre propriétaire de compte ou votre utilisateur principal.`
+
+ * Depuis la console {{site.data.keyword.Bluemix_notm}} 
+  
+  `Vous accédez à cette page car votre authentification a abouti. Toutefois, cet IBMid n'est associé à aucun compte {{site.data.keyword.Bluemix_notm}}.`
+
+
+Le plus souvent, vous recevez ce message car vous n'avez pas encore créé de compte {{site.data.keyword.Bluemix_notm}} ou car vous devez
+passer à l'authentification par IBMid.
+{: tsCauses} 
+ 
+
+Suivez le processus d'inscription pour créer un compte {{site.data.keyword.Bluemix_notm}} ou prenez contact avec votre utilisateur principal ou votre
+administrateur de compte pour passer à l'authentification par IBMid.
+{: tsResolve}
+
+Selon la configuration de votre compte, certaines des options de connexion suivantes peuvent s'appliquer à votre cas :
+ 
+ * Les utilisateurs SoftLayer associés à un ID SoftLayer doivent se connecter via le [portail client](https://control.softlayer.com).
+ * Les utilisateurs SoftLayer associés à un IBMid et avec ou sans compte Bluemix lié peuvent se connecter via le
+[portail client](https://control.softlayer.com) afin d'ouvrir le portail client SoftLayer ou via la
+[console Bluemix](https://console.{DomainName}) afin d'ouvrir le tableau de bord Infrastructure.  
+ * Les utilisateurs Bluemix sans compte SoftLayer lié doivent se connecter via la console Bluemix.
+
+ * Les utilisateurs Bluemix avec un compte SoftLayer lié peuvent se connecter via la [console
+Bluemix](https://console.{DomainName}) ou le [portail client](https://control.softlayer.com).
+ 
+
+## Mot de passe non valide 
 {: #ts_logintobm}
 
-Vous devez disposer d'un IBMid et d'un mot de passe valides pour vous connecter à {{site.data.keyword.Bluemix_notm}}.
+Vous devez disposer d'un IBMid valide pour pouvoir vous connecter à la console {{site.data.keyword.Bluemix_notm}}.
 
 
-Lorsque vous tentez de vous connecter à {{site.data.keyword.Bluemix_notm}}, le message d'erreur suivant s'affiche : 
+Lorsque vous essayez de vous connecter à {{site.data.keyword.Bluemix_notm}}, le message d'erreur suivant s'affiche :
 {: tsSymptoms} 
 
 `Le mot de passe que vous avez entré est incorrect.`
 
-
-L'IBMid et le mot de passe que vous utilisez pour vous connecter à {{site.data.keyword.Bluemix_notm}} ne sont pas valides.
+L'IBMid et le mot de passe que vous utilisez pour vous connecter à {{site.data.keyword.Bluemix_notm}} n'est pas valide.
 {: tsCauses} 
  
-
 Pour obtenir un IBMid et un mot de passe valides, accédez à la page My IBM profile et procédez comme suit :
 {: tsResolve}
-  * Si vous disposez déjà d'un IBMid et que vous voulez vérifier si l'ID et le mot de passe sont valides, cliquez sur **Sign in** et entrez votre IBMid et votre mot de passe sur la page Sign in. Si vous avez oublié votre mot de passe, cliquez sur **Forgot your password** sur la page Sign in pour le réinitialiser. Si vous avez oublié votre IBMid ou que les problèmes avec votre mot de passe persistent, prenez contact avec le service Worldwide IBM
+  * Si vous disposez déjà d'un IBMid et que vous voulez vérifier si l'ID et le mot de passe sont valides, cliquez sur **Log in**
+et entrez votre IBMid et votre mot de passe sur la page Log in. Si vous avez oublié votre mot de passe, cliquez sur **Forgot your
+password** sur la page Log in pour le réinitialiser. Si vous avez oublié votre IBMid ou que les problèmes avec votre mot de passe persistent, prenez contact avec le service Worldwide IBM
 Registration Helpdesk pour obtenir de l'aide. 
   * Si vous ne disposez pas d'un IBMid, cliquez sur **Register** pour enregistrer un IBMid et un mot de passe. 
-  
-**Remarque :** pour les employés IBM, l'IBMid peut être différent de l'ID de connexion à l'intranet. 
 
 
 
-<!-- begin STAGING ONLY --> 
+## Connexion impossible avec un nom d'utilisateur SoftLayer 
+{: #ts_softlayer_username}
 
-## Problème d'accès à un site Web externe
-{: #ts_bmlinkid}
-
-Vous ne pouvez pas vous connecter à {{site.data.keyword.Bluemix_notm}} à l'aide de votre ID intranet IBM sauf si vous liez celui-ci à votre IBMid.
+Vous devez disposer d'un IBMid et d'un mot de passe valides pour pouvoir vous connecter à {{site.data.keyword.Bluemix_notm}}.
 
 
-Après que vous avez sélectionné **Sign in with your intranet ID** sur la page Sign in de {{site.data.keyword.Bluemix_notm}}, il se peut que le message d'erreur suivant s'affiche :
+Lorsque vous essayez de vous connecter à la console {{site.data.keyword.Bluemix_notm}} avec votre nom d'utilisateur SoftLayer, vous recevez
+le message suivant :
 {: tsSymptoms} 
 
-`Problem Accessing External Website`
+`Nous ne reconnaissons pas cet IBMid ou cet e-mail. `
 
+Vous devez disposer d'un IBMid pour pouvoir vous connecter au tableau de bord Infrastructure dans la console Bluemix.
+{: tsCauses} 
+ 
+Si vous êtes un utilisateur SoftLayer utilisant un ID SoftLayer, vous devez passer à l'authentification par IBMid dans le portail client dans
+chaque compte auquel vous avez accès pour pouvoir vous connecter via l'authentification par IBMid.  
 
-
-Ce problème survient lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}} à l'aide d'un ID intranet IBM qui n'est pas lié à un IBMid. Votre IBMid est l'ID que vous utilisez pour vous connecter à www.ibm.com.
-{: tsCauses}
-
-
-En tant qu'employé IBM, avant de pouvoir vous connecter à {{site.data.keyword.Bluemix_notm}} à l'aide de votre ID intranet IBM, vous devez lier celui-ci à votre IBMid externe. Pour lier les deux ID, procédez comme suit :
-{: tsResolve} 
-
-  1. Sur la page [Central Sign-on](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window}, cliquez sur **My Sign-ons**.
-  2. Sur la page My Sign-ons, cliquez sur **Link IDs** et entrez votre IBMid et votre mot de passe sur la page Sign in de {{site.data.keyword.Bluemix_notm}}. Après cela, votre ID intranet et votre IBMid sont automatiquement liés.
-  
-
-<!-- end STAGING ONLY -->
-
+Prenez contact avec votre utilisateur principal ou votre compte administrateur pour passer à l'IBMid.
+{: tsResolve}
 
 
 
@@ -103,10 +133,7 @@ Lorsque vous survolez avec la souris les zones **INSTANCES** ou **QUOTA DE MEMOI
 Fermez la fenêtre de message, puis cliquez sur le bouton **REINITIALISER** de votre contexte d'exécution. 
 {: tsResolve} 
 
-
-
-
-    
+  
     
 ## Le basculement automatique entre les régions {{site.data.keyword.Bluemix_notm}} n'est pas disponible
 {: #ts_failover}
@@ -208,7 +235,8 @@ Si vous ne pouvez pas inviter d'utilisateurs dans votre organisation et que vous
 avec le responsable de l'organisation afin qu'il change votre rôle. Pour identifier le responsable de votre organisation, procédez comme suit :
 {: tsResolve}
 
-  1. Accédez au tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône {{site.data.keyword.avatar}} ![icône Avatar](images/account_support.svg) dans la barre de menu, puis sélectionnez **Gérer les organisations**.
+  1. Accédez au tableau de bord {{site.data.keyword.Bluemix_notm}}. Depuis la barre de menu, cliquez sur l'élément de menu
+**Support**, puis sur **Gérer les organisations**.
   2. Sélectionnez votre organisation et affichez les informations relatives au responsable dans l'onglet **Utilisateurs**.  
   
 Si
@@ -250,7 +278,7 @@ Pour enregistrer plusieurs utilisateurs pour
 utilisateur :
 {: tsResolve}
 
-  1. Cliquez sur **S'INSCRIRE** dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
+  1. Cliquez sur **Inscription** dans la console {{site.data.keyword.Bluemix_notm}}. 
   2. Suivez les étapes de l'assistant.
 
     
@@ -258,11 +286,11 @@ utilisateur :
 ## La page {{site.data.keyword.Bluemix_notm}} ne peut pas être chargée
 {: #ts_err}
 
-Lorsque vous utilisez l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, il est possible que vous ne puissiez pas charger une page
+Lorsque vous utilisez la console {{site.data.keyword.Bluemix_notm}}, il est possible que vous ne puissiez pas charger une page
 {{site.data.keyword.Bluemix_notm}}. A la place, un message d'erreur BXNUI0001E ou BXNUI0016E peut s'afficher.
  
 
-Dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, un des messages d'erreur suivants peut s'afficher :
+L'un des messages d'erreur suivants peut s'afficher lorsque vous utilisez la console {{site.data.keyword.Bluemix_notm}} :
 {: tsSymptoms}
 
 `BXNUI0001E: La page n'a pas été chargée car Bluemix n'a pas détecté s'il existait une session.`
@@ -271,7 +299,6 @@ Dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, un des messages
 `BXNUI0016E: Les applications et les services n'ont pas été extraits car une page Bluemix n'a pas été chargée.`
 
  
-
 Pour remédier au problème, effectuez une ou plusieurs des actions suivantes :
 {: tsResolve}
 

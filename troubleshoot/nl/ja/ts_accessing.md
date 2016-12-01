@@ -17,65 +17,82 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} へのアクセスに関するトラブルシューティング 
 {: #accessing}
 
-最終更新日: 2016 年 8 月 18 日
+最終更新日: 2016 年 10 月 23 日
 {: .last-updated} 
 
 {{site.data.keyword.Bluemix}} へのアクセスに関する一般的な問題には、{{site.data.keyword.Bluemix_notm}} へのログインができないユーザー、保留状態で使用できないアカウントなどが含まれます。しかし多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {:shortdesc}
 
 ## {{site.data.keyword.Bluemix_notm}} にログインできない
+{: #ts_unabletologin}
+
+ログインするには、有効な {{site.data.keyword.Bluemix_notm}} アカウントが必要です。
+
+
+{{site.data.keyword.Bluemix_notm}} にログインしようとすると、以下のいずれかのエラー・メッセージが表示されます。
+{: tsSymptoms} 
+
+ * カスタマー・ポータルから
+  
+   `このページは、認証が正常に行われたために表示されています。ただし、この IBM ID は IBM クラウド・アカウントに関連付けられていません。(You have reached this page because your authentication was successful, however, this IBMid is not associated with any IBM Cloud accounts.) これがエラーと思われる場合は、アカウント所有者またはマスター・ユーザーにお問い合わせください。(If you believe this to be in error, contact your Account Owner or Master User.)`
+
+ * {{site.data.keyword.Bluemix_notm}} コンソールから
+  
+  `このページは、認証が正常に行われたために表示されています。ただし、この IBM ID は {{site.data.keyword.Bluemix_notm}} アカウントに関連付けられていません。(You have reached this page because your authentication was successful, however, this IBMid is not associated with any {{site.data.keyword.Bluemix_notm}} accounts.)`
+
+
+このエラー・メッセージを受け取る最も可能性が高い理由の 1 つは、{{site.data.keyword.Bluemix_notm}} アカウントがまだ作成されていないこと、または IBM ID 認証に切り替える必要があることです。
+{: tsCauses} 
+ 
+
+登録プロセスに従って {{site.data.keyword.Bluemix_notm}} アカウントを作成するか、マスター・ユーザーまたはアカウント管理者に連絡して、IBM ID への切り替えを依頼してください。
+{: tsResolve}
+
+アカウントのセットアップに応じて、以下の一部のログイン・オプションが適用されることがあります。 
+ * SoftLayer ID を使用する SoftLayer ユーザーは、[カスタマー・ポータル](https://control.softlayer.com)を介してログインする必要があります。
+ * IBM ID を使用する SoftLayer ユーザーは、リンクされている Bluemix アカウントの有無を問わず、[カスタマー・ポータル](https://control.softlayer.com)を介してログインして SoftLayer カスタマー・ポータルを開くか、[Bluemix コンソール](https://console.{DomainName})を介して「インフラストラクチャー」ダッシュボードを開くことができます。 
+ * リンクされた SoftLayer アカウントを持たない Bluemix ユーザーは、Bluemix コンソールを介してログインする必要があります。
+ * リンクされた SoftLayer アカウントを持つ Bluemix ユーザーは、[Bluemix コンソール](https://console.{DomainName})または[カスタマー・ポータル](https://control.softlayer.com)を介してログインできます。
+ 
+
+## パスワードが無効
 {: #ts_logintobm}
 
-{{site.data.keyword.Bluemix_notm}} にログインするには、有効な IBMid とパスワードが必要です。
+{{site.data.keyword.Bluemix_notm}} コンソールにログインするには、有効な IBM ID が必要です。
 
-
-{{site.data.keyword.Bluemix_notm}} にサインインしようとすると、以下のエラー・メッセージが表示されます。
+{{site.data.keyword.Bluemix_notm}} にログインしようとすると、以下のエラー・メッセージが表示されます。
 {: tsSymptoms} 
 
 `入力したパスワードは正しくありません。`
 
-
-{{site.data.keyword.Bluemix_notm}} へのサインインに使用した IBMid およびパスワードが無効です。
+{{site.data.keyword.Bluemix_notm}} へのログインに使用した IBMid およびパスワードが無効です。
 {: tsCauses} 
  
-
 有効な IBMid とパスワードを取得するには、「マイ IBM プロファイル (My IBM profile)」ページに移動し、以下のいずれかのステップを実行します。
 {: tsResolve}
-  * IBM ID を登録済みであり、自分の ID とパスワードが有効であるかどうかを確認したい場合は、**「サインイン」**をクリックし、「サインイン」ページで IBM ID とパスワードを入力します。パスワードを忘れた場合は、「サインイン」ページにある**「パスワードを忘れた場合 (Forgot your password)」**をクリックして、パスワードをリセットします。IBMid を忘れた場合、あるいはパスワードに関する問題が続く場合は、Worldwide IBM Registration Help Desk にご相談ください。 
+  * IBM ID について登録済みであり、自分の ID とパスワードが有効であるかどうかを確認したい場合は、**「ログイン」**をクリックし、「ログイン」ページで IBM ID とパスワードを入力します。パスワードを忘れた場合は、「ログイン」ページにある**「パスワードを忘れた場合 (Forgot your password)」**をクリックして、パスワードをリセットします。IBMid を忘れた場合、あるいはパスワードに関する問題が続く場合は、Worldwide IBM Registration Help Desk にご相談ください。 
   * IBM ID をお持ちでない場合は、**「登録」**をクリックして IBM ID とパスワードを登録してください。 
-  
-**注:** IBM の従業員の場合、IBM ID はイントラネット・ログイン ID とは異なる可能性があります。 
 
 
 
-<!-- begin STAGING ONLY --> 
+## Softlayer ユーザー名を使用してログインできない
+{: #ts_softlayer_username}
 
-## 外部 Web サイトへのアクセスでの問題
-{: #ts_bmlinkid}
-
-イントラネット ID と IBM ID をリンクしていない場合、IBM イントラネット ID を使用して {{site.data.keyword.Bluemix_notm}} にログインすることはできません。
+{{site.data.keyword.Bluemix_notm}} にログインするには、有効な IBMid とパスワードが必要です。
 
 
-{{site.data.keyword.Bluemix_notm}} のサインイン・ページで**「イントラネット ID でサインインする (Sign in with your intranet ID)」**を選択した後、以下のエラー・メッセージが表示されることがあります。
+Softlayer ユーザー名を使用して {{site.data.keyword.Bluemix_notm}} コンソールにログインしようとすると、以下のメッセージを受け取ります。
 {: tsSymptoms} 
 
-`外部 Web サイトへのアクセスでの問題 (Problem Accessing External Website)`
+`この IBM ID または E メールを認識できません。(We didn't recognize this IBMid or email.)`
 
+ログインして Bluemix コンソールの「インフラストラクチャー」ダッシュボードを使用するには、IBM ID が必要です。
+{: tsCauses} 
+ 
+SoftLayer ID を使用している SoftLayer ユーザーは、IBM ID 認証を使用してログインするには、アクセスできる各アカウント内のカスタマー・ポータルで IBM ID 認証に切り替える必要があります。 
 
-
-この問題は、IBM ID にリンクされていない IBM イントラネット ID を使用して {{site.data.keyword.Bluemix_notm}} にログインしたときに発生します。IBM ID は、www.ibm.com へのログインに使用する ID です。
-{: tsCauses}
-
-
-IBM 従業員が IBM イントラネット ID を使用して {{site.data.keyword.Bluemix_notm}} にログインするには、事前にイントラネット ID を外部 IBM ID にリンクする必要があります。この 2 つの ID をリンクするには、以下の手順を実行します。
-{: tsResolve} 
-
-  1. [「Central Sign-on」](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window}ページで**「My Sign-ons」**をクリックします。
-  2. 「My Sign-ons」ページで、**「Link IDs」**をクリックし、{{site.data.keyword.Bluemix_notm}} のサインイン・ページで IBM ID とパスワードを入力します。その後、イントラネット ID と IBM ID が自動的にリンクされます。
-  
-
-<!-- end STAGING ONLY -->
-
+マスター・ユーザーまたはアカウント管理者に連絡して、IBM ID への切り替えを依頼してください。
+{: tsResolve}
 
 
 
@@ -99,10 +116,7 @@ IBM 従業員が IBM イントラネット ID を使用して {{site.data.keywor
 メッセージ・ウィンドウを閉じ、「ランタイム」ペイン内の**「リセット」**ボタンをクリックします。
 {: tsResolve} 
 
-
-
-
-    
+  
     
 ## {{site.data.keyword.Bluemix_notm}} 領域間の自動フェイルオーバーを使用できない
 {: #ts_failover}
@@ -182,7 +196,7 @@ nslookup stage1.mybluemix.net
 組織にユーザーを招待することができず、招待するために別の役割を必要とする場合は、組織管理者に連絡して、役割の変更を依頼してください。組織の管理者を特定するには、以下のステップを実行します。
 {: tsResolve}
 
-  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードに移動し、メニュー・バーの「{{site.data.keyword.avatar}}」アイコン ![「アバター」アイコン](images/account_support.svg) をクリックし、**「組織の管理」**を選択します。
+  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードにアクセスします。メニュー・バーで**「サポート」**メニュー項目をクリックし、**「組織の管理」**をクリックします。
   2. 所属する組織にアクセスすると、組織の管理者の情報が**「ユーザー」**タブに表示されます。  
   
 自分がコラボレーターでありメンバーではないためにユーザーを招待できない場合、古い {{site.data.keyword.Bluemix_notm}} アカウントを削除してから、招待を受けて組織のメンバーとしてアカウントに参加する必要があります。古いアカウントを削除してメンバーとしてアカウントに参加するには、以下のステップを実行してください。 
@@ -210,7 +224,7 @@ nslookup stage1.mybluemix.net
  {{site.data.keyword.Bluemix_notm}} 用に複数のユーザーを登録するには、ユーザーごとに以下の手順を実行しなければなりません。
 {: tsResolve}
 
-  1. {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースにある**「登録 (SIGN UP)」**をクリックします。
+  1. {{site.data.keyword.Bluemix_notm}} コンソールにある**「登録 (SIGN UP)」**をクリックします。
   2. ウィザードに従って手順を実行します。
 
     
@@ -218,10 +232,10 @@ nslookup stage1.mybluemix.net
 ## {{site.data.keyword.Bluemix_notm}} ページをロードできない
 {: #ts_err}
 
-{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用する際、{{site.data.keyword.Bluemix_notm}} ページをロードできない場合があります。代わりに、エラー・メッセージ BXNUI0001E または BXNUI0016E が表示されることがあります。
+{{site.data.keyword.Bluemix_notm}} コンソールを使用する際、{{site.data.keyword.Bluemix_notm}} ページをロードできない場合があります。代わりに、エラー・メッセージ BXNUI0001E または BXNUI0016E が表示されることがあります。
  
 
-{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用する際、次のいずれかのエラー・メッセージが表示される可能性があります。
+{{site.data.keyword.Bluemix_notm}} コンソールを使用する際、次のいずれかのエラー・メッセージが表示される可能性があります。
 {: tsSymptoms}
 
 `BXNUI0001E: セッションが存在しているかどうかを Bluemix が検出しなかったため、ページはロードされませんでした。`
@@ -230,7 +244,6 @@ nslookup stage1.mybluemix.net
 `BXNUI0016E: Bluemix ページがロードされなかったため、アプリおよびサービスは取得されませんでした。`
 
  
-
 必要に応じて次のアクションを 1 つ以上実行することができます。
 {: tsResolve}
 

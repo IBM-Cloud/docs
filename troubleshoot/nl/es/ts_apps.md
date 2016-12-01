@@ -19,7 +19,7 @@ copyright:
 # Resolución de problemas de gestión de apps
 {: #managingapps}
 
-Última actualización: 18 de agosto de 2016
+Última actualización: 11 de octubre de 2016
 {: .last-updated} 
 
 Entre los problemas generales relacionados con la gestión de apps se pueden incluir
@@ -150,7 +150,7 @@ No puede crear una app o un servicio si la organización actual no tiene un espa
 Cuando intenta crear una app en Bluemix, ve el siguiente mensaje de error:
 {: tsSymptoms}
 
-`BXNUI0515E: El intento de recuperar los espacios de la organización ha fallado porque se ha producido un problema de conexión de red. `
+`BXNUI0515E: Los espacios de la organización no se han recuperado. Se ha producido un problema de conexión de red, o la organización actual no tiene un espacio asociado al mismo.`
 
 Este error se recibe con frecuencia la primera vez que intenta crear una app o un servicio desde el catálogo cuando aún no se ha creado un espacio. 
 {: tsCauses}
@@ -158,7 +158,7 @@ Este error se recibe con frecuencia la primera vez que intenta crear una app o u
 Asegúrese de haber creado un espacio en la organización actual.  Para crear un espacio, utilice uno de estos métodos:
 {: tsResolve}
 
-  * Pulse el icono {{site.data.keyword.avatar}} ![Icono Avatar](images/account_support.svg) para abrir el widget Cuenta y Soporte, seleccione la organización en la que desee crear el espacio y, a continuación, pulse **Crear un espacio**.
+  * En la barra de menús, pulse **Cuenta** &gt; **Gestionar organizaciones.** Seleccione la organización en la que desea crear el espacio y, a continuación, pulse **Crear un espacio**.
   * En la interfaz de línea de mandatos cf, escriba `cf create-space <nombre_espacio> -o <nombre_organización>`.
 
 Inténtelo de nuevo. Si vuelve a ver este mensaje, vaya a la página [Estado de
@@ -312,7 +312,7 @@ Utilice uno de estos métodos para especificar la cuota de disco. La cuota de di
 	```
 
 
-## Las app de Android no pueden recibir {{site.data.keyword.mobilepushshort}}
+## Las apps de Android no pueden recibir {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
 En determinadas regiones en las que no se puede acceder a Google, las apps de Android no pueden recibir notificaciones enviadas a través del servicio IBM {{site.data.keyword.mobilepushshort}}. En estos casos, se pueden utilizar servicios de terceros como método alternativo.
@@ -351,10 +351,10 @@ Este error se produce cuando se excede el límite de número de instancias del s
 Suprima las instancias del servicio que no sean necesarias, o elimine el límite de número de instancias del servicio que tiene.
 {: tsResolve}
  
-  * Para suprimir una instancia del servicio, puede utilizar la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de la línea de mandatos.
-    Para utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} para suprimir una instancia de servicio, siga los siguientes pasos:
-	  1. En el panel de control de {{site.data.keyword.Bluemix_notm}}, pulse sobre el servicio que desee suprimir.  Aparecerá el mosaico del servicio.
-	  2. En el mosaico del servicio, pulse el icono **Menú**.
+  * Para suprimir una instancia del servicio, puede utilizar la consola de {{site.data.keyword.Bluemix_notm}} o la interfaz de la línea de mandatos.
+    Para utilizar la consola de {{site.data.keyword.Bluemix_notm}} para suprimir una instancia de servicio, siga estos pasos:
+	  1. En el panel de control de {{site.data.keyword.Bluemix_notm}}, pulse sobre el servicio que desee suprimir. Aparecerá la tarjeta de servicio.
+	  2. En la tarjeta de servicio, pulse el icono **Menú**.
 	  3. Pulse **Suprimir servicio**. Después de suprimir la instancia de servicio, se le solicitará que vuelva a transferir app a la cual estaba enlazada la instancia de servicio. 
     Para utilizar la interfaz de línea de mandatos para suprimir una instancia de servicio, siga los pasos siguientes:
 	  1. Desenlace la instancia de servicio de la app escribiendo `cf
@@ -419,8 +419,8 @@ Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utiliza
 {: tsResolve} 
 
   * Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](../pricing/index.html#pay-accounts){: new_window}. 
-  * Para reducir la memoria que utilizan las apps, utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
-    Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
+  * Para reducir la memoria que utilizan las apps, utilice la consola de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
+    Si utiliza la consola de {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
 	  1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, seleccione la app. Se abre la página de detalles de la app.
 	  2. En el panel tiempo de ejecución, puede reducir el límite máximo de memoria o el número de instancias de la app, o ambos, para la app que desee. 
 	  
@@ -554,7 +554,7 @@ La característica Debug no se puede habilitar en estas situaciones:
 Utilice una de las opciones siguientes para resolver el problema: 
 {: tsResolve}
 
-  * El método recomendado es utilizar el paquete de compilación Node.js de IBM para iniciar la app. Para obtener más información, consulte la sección de mandatos de arranque (Startup) del tema [Despliegue de una aplicación Node.js en {{site.data.keyword.Bluemix_notm}}](../runtimes/nodejs/index.html#nodejs_runtime){: new_window}.  
+  * El método recomendado es utilizar el paquete de compilación Node.js de IBM para iniciar la app. Para obtener más información, consulte la sección de mandatos de arranque (Startup) del tema [Despliegue de una aplicación Node.js en {{site.data.keyword.Bluemix_notm}}](../runtimes/nodejs/index.html#nodejs_runtime){: new_window}. 
   * Inhabilite el mandato para su app existente cambiando el atributo de mandato en el archivo `manifest.yml` a command: null o editando el mandato push para incluir `-c null`. 
   * Elimine el atributo **command** de `manifest.yml`. A continuación, suprima la app actual de {{site.data.keyword.Bluemix_notm}} y vuelva a enviar la app.
   
@@ -571,7 +571,7 @@ Es posible que no encuentre su organización en {{site.data.keyword.Bluemix_notm
   
  
 
-Puede iniciar sesión correctamente en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, pero no puede enviar por push apps utilizando la interfaz de línea de mandatos cf o el plug-in de Eclipse.
+Puede iniciar sesión correctamente en la consola de {{site.data.keyword.Bluemix_notm}}, pero no puede enviar por push apps utilizando la interfaz de línea de mandatos cf o el plug-in de Eclipse.
 {: tsSymptoms}
 
 Al intentar enviar por push una app a {{site.data.keyword.Bluemix_notm}} utilizando la interfaz de línea de mandatos cf, ve uno de los siguientes mensajes de error con el nombre de la organización especificado en el mensaje: 
@@ -1140,21 +1140,19 @@ Este es el comportamiento soportado de {{site.data.keyword.Bluemix_notm}} y pued
 <!-- begin STAGING ONLY --> 
 	
 	
-## Los administradores no pueden ver todas las organizaciones utilizando la interfaz de usuario de
-{{site.data.keyword.Bluemix_notm}}
+## Los administradores no pueden ver todas las organizaciones utilizando la consola de {{site.data.keyword.Bluemix_notm}}
 {: #ts_ui_org}
 
-Como administrador, al utilizar la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, no puede visualizar todas las organizaciones para administrarlas. Puede visualizar y administrar únicamente aquellas organizaciones a las que pertenezca.
+Como administrador, al utilizar la consola de {{site.data.keyword.Bluemix_notm}}, no puede visualizar todas las organizaciones para administrarlas. Puede visualizar y administrar únicamente aquellas organizaciones a las que pertenezca.
 
  
 
-Como administrador, no puede ver todas las organizaciones utilizando la interfaz de usuario de
-{{site.data.keyword.Bluemix_notm}}.
+Como administrador, no puede ver todas las organizaciones utilizando la consola de {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms}
 
  
 
-Se trata de una limitación de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
+Se trata de una limitación de la consola de {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
  

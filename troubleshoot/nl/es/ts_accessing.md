@@ -17,68 +17,83 @@ copyright:
 # Resolución de problemas de acceso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Última actualización: 18 de agosto de 2016
+Última actualización: 23 de octubre de 2016
 {: .last-updated} 
 
 Algunos de los problemas generales de acceso a {{site.data.keyword.Bluemix}} pueden ser que un usuario no pueda iniciar una sesión en {{site.data.keyword.Bluemix_notm}}, que una cuenta se haya bloqueado en estado pendiente, etc. Sin embargo, en muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos. 
 {:shortdesc}
 
 ## No se puede iniciar la sesión en {{site.data.keyword.Bluemix_notm}}
+{: #ts_unabletologin}
+
+Debe tener una cuenta válida de {{site.data.keyword.Bluemix_notm}} para iniciar sesión.
+
+
+Cuando intente iniciar sesión en {{site.data.keyword.Bluemix_notm}}, verá uno de los siguientes mensajes de error:
+{: tsSymptoms} 
+
+ * Desde el Portal de cliente
+  
+   `Ha llegado a esta página porque la autenticación ha sido satisfactoria; sin embargo, este ID de IBM no está asociado con ninguna cuenta de IBM Cloud. Si cree que esto es un error, póngase en contacto con el Propietario de la cuenta o el Usuario maestro.`
+
+ * Desde la consola de {{site.data.keyword.Bluemix_notm}}
+  
+  `Ha llegado a esta página porque la autenticación ha sido satisfactoria; sin embargo, este ID de IBM no está asociado a ninguna cuenta de {{site.data.keyword.Bluemix_notm}}.`
+
+
+Uno de los motivos más probables por los que ha obtenido este mensaje de error es que aún no tiene creada ninguna cuenta de {{site.data.keyword.Bluemix_notm}} o tiene que conmutar a la autenticación del ID de IBM.
+{: tsCauses} 
+ 
+
+Siga el proceso de registro para crear una cuenta de {{site.data.keyword.Bluemix_notm}} o póngase en contacto con el usuario maestro o con el administrador de la cuenta para cambiar al ID de IBM.
+{: tsResolve}
+
+En función de cómo se haya configurado su cuenta, se podrán aplicar algunas de estas opciones de inicio de sesión: 
+ * Los usuarios de SoftLayer con ID de SoftLayer deben iniciar sesión a través del [Portal de cliente](https://control.softlayer.com).
+ * Los usuarios de SoftLayer con un ID de IBM y con o sin una cuenta de Bluemix enlazada pueden iniciar sesión mediante el [Portal de cliente](https://control.softlayer.com) para abrir el Portal de cliente de SoftLayer o mediante la [consola de Bluemix](https://console.{DomainName}) para abrir el panel de control Infraestructura. 
+ * Los usuarios de Bluemix sin una cuenta de SoftLayer enlazada deben iniciar sesión mediante la consola de Bluemix.
+ * Los usuarios de Bluemix con una cuenta de SoftLayer enlazada pueden iniciar sesión mediante la [consola de Bluemix](https://console.{DomainName}) o el [Portal de cliente](https://control.softlayer.com).
+ 
+
+## La contraseña no es válida
 {: #ts_logintobm}
 
-Debe tener un ID de IBM y contraseña válidos para poder iniciar una sesión en {{site.data.keyword.Bluemix_notm}}.
+Debe tener un ID de IBM válido para poder iniciar sesión en la consola de {{site.data.keyword.Bluemix_notm}}.
 
-
-Cuando intenta iniciar una sesión en {{site.data.keyword.Bluemix_notm}}, ve el siguiente mensaje de error: 
+Cuando intente iniciar sesión en {{site.data.keyword.Bluemix_notm}}, verá el siguiente mensaje de error:
 {: tsSymptoms} 
 
 `La contraseña introducida no es correcta.
 `
 
-
-El ID de IBM y la contraseña que utiliza para iniciar una sesión en {{site.data.keyword.Bluemix_notm}} no son válidos.
+El ID de IBM y la contraseña que utiliza para iniciar sesión en {{site.data.keyword.Bluemix_notm}} no son válidos.
 {: tsCauses} 
  
-
 Para obtener un ID de IBM y una contraseña válidos, vaya a la página Mi perfil de IBM y siga los pasos siguientes:
 {: tsResolve}
-  * Si ya ha registrado un ID de IBM y desea comprobar si el ID y la contraseña son válidos, pulse **Iniciar sesión** y especifique la contraseña y el ID de IBM en la página Iniciar sesión. Si ha olvidado su contraseña, pulse **¿Ha olvidado su contraseña?** en la página Iniciar sesión para restablecer la contraseña. Si ha olvidado el ID de IBM o sigue teniendo problemas con su contraseña, póngase en contacto con el centro de atención al cliente de registro de IBM a nivel mundial para obtener ayuda. 
-  * Si no tiene un ID de IBM, pulse **Registrar** para registrar un ID de IBM y una contraseña. 
-  
-**Nota:** para los empleados de IBM es posible que el ID de IBM no coincida con el ID de inicio de sesión en la intranet. 
+  * Si ya se ha registrado para un ID de IBM y desea comprobar si el ID y la contraseña son válidos, pulse **Iniciar sesión** y especifique el ID de IBM y la contraseña en la página Iniciar sesión. Si ha olvidado su contraseña, pulse **¿Ha olvidado su contraseña?** en la página Iniciar sesión para restablecer la contraseña. Si ha olvidado el ID de IBM o sigue teniendo problemas con su contraseña, póngase en contacto con el centro de atención al cliente de registro de IBM a nivel mundial para obtener ayuda. 
+  * Si no tiene un ID de IBM, pulse **Registrar** para registrarse para un ID de IBM y una contraseña. 
 
 
 
-<!-- begin STAGING ONLY --> 
+## No se puede iniciar sesión con un nombre de usuario de Softlayer
+{: #ts_softlayer_username}
 
-## Problema al acceder al sitio web externo
-{: #ts_bmlinkid}
-
-No puede iniciar sesión en {{site.data.keyword.Bluemix_notm}} utilizando el ID de la intranet de IBM a menos que enlace el ID de la intranet con el ID de IBM.
+Debe tener un ID de IBM y contraseña válidos para poder iniciar una sesión en {{site.data.keyword.Bluemix_notm}}.
 
 
-Tras seleccionar **Iniciar sesión con el ID de la intranet** en la página Inicio de sesión de
-{{site.data.keyword.Bluemix_notm}}, es posible que aparezca el mensaje de error siguiente:
+Al intentar iniciar sesión en la consola de {{site.data.keyword.Bluemix_notm}} con el nombre de usuario de Softlayer, recibirá el mensaje siguiente:
 {: tsSymptoms} 
 
-`Problema al acceder al sitio web externo`
+`No hemos reconocido este ID de IBM o correo electrónico.`
 
+Debe tener un ID de IBM para iniciar sesión para utilizar el panel de control Infraestructura de la consola de Bluemix.
+{: tsCauses} 
+ 
+Si es un usuario de SoftLayer que está utilizando un ID de SoftLayer, debe conmutar a la autenticación del ID de IBM en el Portal de cliente de cada cuenta que tiene acceso antes de poder iniciar sesión utilizando la autenticación del ID de IBM. 
 
-
-Este problema se produce al iniciar sesión en {{site.data.keyword.Bluemix_notm}} utilizando un ID de intranet de IBM que no está enlazado con un ID de IBM. El ID de IBM es el ID que utiliza para iniciar sesión en www.ibm.com.
-{: tsCauses}
-
-
-Como empleado de IBM, antes de que pueda iniciar sesión en {{site.data.keyword.Bluemix_notm}} utilizando el ID de intranet de IBM, debe enlazar su ID de intranet con su ID de IBM externo. Para enlazar los dos ID, realice los pasos siguientes:
-{: tsResolve} 
-
-  1. En la página [Inicio de sesión central](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window}, pulse
-**Mis inicios de sesión**.
-  2. En la página Mis inicios de sesión, pulse **Enlazar ID** y especifique el ID de IBM y la contraseña en la página Inicio de sesión de {{site.data.keyword.Bluemix_notm}}. Tras esto, el ID de intranet y el ID de IBM se enlazarán automáticamente.
-  
-
-<!-- end STAGING ONLY -->
-
+Póngase en contacto con el usuario maestro o con el administrador de la cuenta para cambiar al ID de IBM.
+{: tsResolve}
 
 
 
@@ -102,10 +117,7 @@ Cuando desplace el ratón sobre el campo **INSTANCES** o **MEMORY QUOTA** del pa
 Cierre la ventana de mensajes y, a continuación, pulse el botón **RESET** en el panel de tiempo de ejecución. 
 {: tsResolve} 
 
-
-
-
-    
+  
     
 ## La migración tras error automática entre regiones de {{site.data.keyword.Bluemix_notm}} no está disponible
 {: #ts_failover}
@@ -196,7 +208,7 @@ y necesita otro rol para hacerlo, póngase en contacto con el gestor de la organ
 para cambiar el rol. Para identificar el gestor de la organización, siga estos pasos:
 {: tsResolve}
 
-  1. Vaya al Panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el icono {{site.data.keyword.avatar}} ![Icono Avatar](images/account_support.svg) de la barra de menús y seleccione **Gestionar organizaciones**.
+  1. Vaya al panel de control de {{site.data.keyword.Bluemix_notm}}. Desde la barra de menús, pulse el elemento de menú **Soporte** y pulse **Gestionar organizaciones**.
   2. Vaya a la organización y consulte la información sobre el gestor de la organización en el separador **USUARIOS**.  
   
 Si no puede invitar usuarios porque es colaborador y no un miembro, debe suprimir la cuenta anterior de {{site.data.keyword.Bluemix_notm}} y luego se le debe invitar como un miembro de la organización. Para suprimir la cuenta anterior y unirse como miembro, complete los siguientes pasos: 
@@ -226,7 +238,7 @@ Para registrar varios usuarios para {{site.data.keyword.Bluemix_notm}},
 debe completar los pasos siguientes para cada usuario:
 {: tsResolve}
 
-  1. Pulse **REGISTRARSE** en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.
+  1. Pulse **REGISTRARSE** en la consola de {{site.data.keyword.Bluemix_notm}}.
   2. Complete los pasos siguiendo el asistente.
 
     
@@ -234,10 +246,10 @@ debe completar los pasos siguientes para cada usuario:
 ## La página {{site.data.keyword.Bluemix_notm}} no se puede cargar
 {: #ts_err}
 
-Cuando utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, es posible que no pueda cargar una página de {{site.data.keyword.Bluemix_notm}}. En su lugar verá los mensajes de error BXNUI0001E o BXNUI0016E.
+Cuando utilice la consola de {{site.data.keyword.Bluemix_notm}}, es posible que no pueda cargar una página de {{site.data.keyword.Bluemix_notm}}. En su lugar verá los mensajes de error BXNUI0001E o BXNUI0016E.
  
 
-Es posible que vea uno de los siguientes mensajes de error cuando utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}:
+Es posible que vea uno de los siguientes mensajes de error cuando utilice la consola de {{site.data.keyword.Bluemix_notm}}:
 {: tsSymptoms}
 
 `BXNUI0001E: La página no se ha cargado porque Bluemix no ha detectado si existe una sesión.`
@@ -246,7 +258,6 @@ Es posible que vea uno de los siguientes mensajes de error cuando utilice la int
 `BXNUI0016E: Las apps y servicios no se han recuperado porque no se ha cargado una página de Bluemix.`
 
  
-
 Puede llevar a cabo una o varias de estas acciones si es necesario:
 {: tsResolve}
 

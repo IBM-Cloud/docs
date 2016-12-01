@@ -19,7 +19,7 @@ copyright:
 # Traitement des incidents liés à la gestion des applications
 {: #managingapps}
 
-Dernière mise à jour : 18 août 2016
+Dernière mise à jour : 11 octobre 2016
 {: .last-updated} 
 
 Des problèmes d'ordre général liés à la gestion des applications peuvent survenir : par exemple, les applications ne peuvent pas être mises à jour, les caractères codés sur deux octets ne sont pas affichés. Toutefois, dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
@@ -149,7 +149,7 @@ Vous ne pouvez pas créer une application ou un service si aucun espace n'est as
 Lorsque vous tentez de créer une application dans Bluemix, le message d'erreur suivant s'affiche :
 {: tsSymptoms}
 
-`BXNUI0515E: La tentative d'extraction des espaces dans l'organisation a échoué en raison d'un problème de connexion réseau. `
+`BXNUI0515E: Les espaces dans l'organisation n'ont pas été extraits. Un problème de connexion réseau est survenu ou aucun espace n'est associé à l'organisation en cours.`
 
 Cette erreur se produit souvent la première fois que vous tentez de créer une application ou un service à partir du catalogue lorsqu'un espace n'a pas encore été créé. 
 {: tsCauses}
@@ -157,7 +157,8 @@ Cette erreur se produit souvent la première fois que vous tentez de créer une 
 Vérifiez que vous avez créé un espace dans votre organisation.  Pour créer un espace, appliquez l'une des méthodes suivantes :
 {: tsResolve}
 
-  * Cliquez sur l'icône {{site.data.keyword.avatar}} ![icône Avatar](images/account_support.svg) pour ouvrir le widget Compte et support, sélectionnez l'organisation dans laquelle vous souhaitez créer l'espace, puis cliquez sur **Créer un espace**.
+  * Dans la barre de menu, cliquez sur **Compte** &gt; **Gérer les organisations**. Sélectionnez
+l'organisation dans laquelle créer l'espace, puis cliquez sur **Créer un espace**.
   * Dans l'interface de ligne de commande cf, tapez `cf create-space <nom_espace> -o <nom_organisation>`.
 
 Essayez à nouveau. Si ce message réapparaît, ouvrez la page de [statut Bluemix](http://ibm.biz/bluemixstatus){: new_window} pour déterminer si un service ou un composant présente un problème.
@@ -373,10 +374,12 @@ Cette erreur survient lorsque vous avez atteint le nombre maximal d'instances de
 Supprimez les instances de service dont vous n'avez pas besoin ou supprimez la limite relative au nombre d'instances de service dont vous pouvez disposer.
 {: tsResolve}
  
-  * Pour supprimer une instance de service, vous pouvez utiliser l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande.
-    Pour utiliser l'interface utilisateur {{site.data.keyword.Bluemix_notm}} afin de supprimer une instance de service, procédez comme suit :
-	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur le service que vous souhaitez supprimer.  La vignette du service s'affiche.
-	  2. Sur la vignette du service, cliquez sur l'icône **Menu**.
+  * Pour supprimer une instance de service, vous pouvez utiliser la console {{site.data.keyword.Bluemix_notm}} ou l'interface
+de ligne de commande. Pour utiliser la console {{site.data.keyword.Bluemix_notm}} afin de supprimer une instance de service, procédez
+comme suit :
+	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur le service que vous souhaitez supprimer. La carte du
+service s'affiche.
+	  2. Sur la carte du service, cliquez sur l'icône **Menu**.
 	  3. Cliquez sur **Supprimer le service**. Une fois l'instance de service supprimée, vous êtes invité à reconstituer l'application à laquelle l'instance de service était liée. 
     Pour utiliser l'interface de ligne de commande afin de supprimer une instance de service, procédez comme suit :
 	  1. Supprimez la liaison de l'instance de service à une application en entrant `cf
@@ -455,9 +458,8 @@ Vous pouvez augmenter le quota de mémoire de votre compte ou réduire la mémoi
 
   * Pour augmenter le quota de mémoire de votre compte, convertissez votre compte d'essai en compte payant. Pour des informations sur la conversion
 de votre compte d'essai en compte payant, voir [Comptes payants](../pricing/index.html#pay-accounts){: new_window}. 
-  * Pour réduire la quantité de mémoire que vos applications utilisent, servez-vous de l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou
-de l'interface de ligne de commande cf.
-    Si vous employez l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
+  * Pour réduire la quantité de mémoire que vos applications utilisent, servez-vous de la console {{site.data.keyword.Bluemix_notm}} ou de l'interface de ligne de commande cf. 
+Si vous utilisez la console {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
 	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, sélectionnez votre application. La page des détails de l'application
 s'ouvre.
 	  2. Dans le panneau Contexte d'exécution, vous pouvez réduire la limite de mémoire maximal ou le nombre d'instances d'application, ou les deux,
@@ -621,8 +623,8 @@ Il se peut que vous ne parveniez pas à localiser votre organisation dans
   
  
 
-Vous pouvez vous connecter à l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, mais vous ne parvenez pas à envoyer vos applications par commande push à l'aide de
-l'interface de ligne de commande cf ou du plug-in Eclipse.
+Vous pouvez vous connecter à la console {{site.data.keyword.Bluemix_notm}}, mais vous ne parvenez pas à envoyer vos applications
+par commande push à l'aide de l'interface de ligne de commande cf ou du plug-in Eclipse.
 {: tsSymptoms}
 
 Lorsque vous essayez d'envoyer une application par commande push
@@ -1237,19 +1239,20 @@ pour la mise à niveau de votre application. Pour plus d'informations, voir Dép
 <!-- begin STAGING ONLY --> 
 	
 	
-## Les administrateurs ne peuvent pas visualiser toutes les organisations à l'aide de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}
+## Les administrateurs ne peuvent pas visualiser toutes les organisations à l'aide de la console {{site.data.keyword.Bluemix_notm}}
 {: #ts_ui_org}
 
-En tant qu'administrateur, lorsque vous utilisez l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, vous ne pouvez pas afficher chaque organisation à des fins d'administration. Vous pouvez afficher et administrer uniquement les organisations auxquelles vous appartenez.
+En tant qu'administrateur, lorsque vous utilisez la console {{site.data.keyword.Bluemix_notm}}, vous ne pouvez pas afficher
+chaque organisation à des fins d'administration. Vous pouvez afficher et administrer uniquement les organisations auxquelles vous appartenez.
 
  
 
-En tant qu'administrateur, vous ne pouvez pas afficher toutes les organisations à l'aide de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
+En tant qu'administrateur, vous ne pouvez pas afficher toutes les organisations à l'aide de la console {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms}
 
  
 
-Il s'agit d'une limitation de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
+Il s'agit d'une limitation de la console {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
  
@@ -1630,7 +1633,7 @@ L'option **Apply trace setting to all instances of the application** est désél
 
 
 
-Lorsque vous modifiez les niveaux des objets de consignateur Bunyan, l'option **Apply trace setting to all instances of the application** est désélectionnée et désactivée dans la fenêtre en inscrustation Node.js Trace.
+Lorsque vous modifiez les niveaux des objets de consignateur Bunyan, l'option **Apply trace setting to all instances of the application** est désélectionnée et désactivée dans la fenêtre en incrustation Node.js Trace.
 {: tsSymptoms} 
 
  
