@@ -14,7 +14,7 @@ lastupdated: "2016-08-26"
 
 <!-- 8/10/2016: GHE Dedicated is moving -- in the interim, this topic MUST be kept in sync with the GHE Dedicated section in toolchains_integrations.md -->
 
-{{site.data.keyword.ghe_long}} is the IBM Cloud-hosted and fully managed version of {{site.data.keyword.ghe_short}}, available for Dedicated {{site.data.keyword.Bluemix_notm}} environments. GitHub provides the social coding experience that developers love. [{{site.data.keyword.Bluemix_notm}} Dedicated](dedicated/index.html#dedicated){: new_window} provides a cloud computing environment on physically isolated hardware that is integrated into your network.
+{{site.data.keyword.ghe_long}} is the IBM Cloud-hosted and fully managed version of {{site.data.keyword.ghe_short}}, available for Dedicated {{site.data.keyword.Bluemix_notm}} environments. GitHub provides the social coding experience that developers love. [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} provides a cloud computing environment on physically isolated hardware that is integrated into your network.
 
 Dedicated {{site.data.keyword.ghe_short}} is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only.
 
@@ -95,7 +95,7 @@ Set up your team's project by completing these tasks:
 
    1. [Create an organization (org)](https://help.github.com/enterprise/2.6/user/articles/creating-a-new-organization-account/){: new_window}.
    2. [Create a repo for your org](https://help.github.com/enterprise/2.6/user/articles/create-a-repo/){: new_window}.
-   3. [Invite users to join your org](https://help.github.com/enterprise/2.6/user/articles/inviting-users-to-join-your-organization/){: new_window}.
+   3. [Invite users to join your org](https://help.github.com/articles/inviting-users-to-join-your-organization/){: new_window}.
 
   **Note:** Before you invite users to your org, they must log in to {{site.data.keyword.ghe_short}} at least once or their {{site.data.keyword.ghe_short}} accounts will not be available to invite.
    
