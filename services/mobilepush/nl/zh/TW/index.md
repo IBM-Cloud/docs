@@ -12,23 +12,18 @@ copyright:
 
 # 開始使用 {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 11 月 02 日
 {: .last-updated}
 
 {:shortdesc}
 
-{{site.data.keyword.mobilepushshort}} Service 提供統一的平台，來傳送及管理以 iOS、Android 行動平台、Google Chrome、Mozilla Firefox Web 瀏覽器及 Google Chrome Apps and Extensions 為目標的行動和 Web Push 通知。{{site.data.keyword.mobilepushshort}} Service 可管理應用程式使用者與其裝置、裝置平台、Web 瀏覽器的對映，並且處理將推送通知分派給他們的作業。使用此服務，您可以將當成推送通知的播送、單點播送（根據 deviceID）以及標籤（或主題）傳送給您的行動及 Web 瀏覽器應用程式使用者。也可以使用 SDK 及 [REST API](https://mobile.{DomainName}/imfpush/) 來進一步開發用戶端應用程式。
+{{site.data.keyword.mobilepushshort}} Service 提供統一的平台，來傳送及管理以 iOS、Android 行動平台、Google Chrome、Mozilla Firefox Web 瀏覽器及 Google Chrome Apps and Extensions 為目標的行動和 Web Push 通知。{{site.data.keyword.mobilepushshort}} Service 可管理應用程式使用者與其裝置、裝置平台、Web 瀏覽器的對映，並且處理將推送通知分派給他們的作業。使用此服務，您可以將當作推送通知的播送、單點播送（根據 deviceID 及 userID）以及標籤（或主題）傳送給您的行動及 Web 瀏覽器應用程式使用者。也可以使用 SDK 及 [REST API](https://mobile.{DomainName}/imfpush/) 來進一步開發用戶端應用程式。
 
-本節說明如何設定基本推送通知。當您使用基本通知時，通知會是播送，而不是使用標籤來送達一組特定使用者。
-
-1. [配置通知提供者的認證](t__main_push_config_provider.html)
-2. [讓行動應用程式可接收通知](c_enable_push.html)
-3. [傳送基本通知](t_send_push_notifications.html)
 
 # 相關鏈結
 {: #rellinks}
 
-* [概觀](c_overview_push.md){: new_window}
+* [概觀](c_overview_push.html){: new_window}
 
 ## 指導教學及範例 {:id="samples"}
 {: #samples}

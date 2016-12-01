@@ -66,22 +66,22 @@ cordova create your_app_name
 1. Cordova コマンド・ライン・インターフェース (CLI) から、以下のコマンドを使用して、プラットフォーム (iOS、Android、またはその両方) を追加します。
 ```
 cordova platform add ios
-	cordova platform add android
-	```
+cordova platform add android
+```
 	{: codeblock}
 
 1. Cordova アプリケーションのルート・ディレクトリーで、コマンド **cordova plugin add ibm-mfp-push** を入力して Cordova の Push プラグインをインストールします。追加したプラットフォームに応じて、以下のような内容が表示されます。
 ```
 Installing "ibm-mfp-push" for android
-	Installing "ibm-mfp-push" for ios
-	```
+Installing "ibm-mfp-push" for ios
+```
 	{: codeblock}
 
 1. *your-app-root-folder* から、コマンド **cordova plugin list** を使用して、Cordova の Core および Push のプラグインが正常にインストールされたことを確認します。追加したプラットフォームに応じて、以下のような内容が表示されます。
 ```
 ibm-mfp-core 1.0.0 "MFPCore"
-	ibm-mfp-push 1.0.0 “MFPPush"
-	```
+ibm-mfp-push 1.0.0 “MFPPush"
+```
 	{: codeblock}
 
 1. (iOS のみ) - iOS 開発環境を構成します。

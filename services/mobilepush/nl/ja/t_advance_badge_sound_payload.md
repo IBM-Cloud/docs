@@ -49,9 +49,7 @@ Android アプリケーションの `res/raw` ディレクトリーに音声フ�
 ``` 
 	{: codeblock}
 		
-**追加のペイロード** - このペイロードは、任意のキーと値のペアにすることができますが、{{site.data.keyword.mobilepushshort}}で送信する JSON オブジェクトでなければなりません。
-
-
+**追加のペイロード** - このペイロードは、任意のキーと値のペアにすることができますが、{{site.data.keyword.mobilepushshort}}で送信する JSON オブジェクトでなければなりません。 
 
 ```
 {"key":"value", "key2":"value2"}

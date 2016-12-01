@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # APNs の資格情報の構成
 {: #create-push-credentials-apns}
-最終更新日: 2016 年 10 月 17 日
+最終更新日: 2016 年 11 月 10 日
 {: .last-updated}
 
 Apple Push Notification Service (APNs) を使用して、アプリケーション開発者は、Bluemix (プロバイダー) 上の{{site.data.keyword.mobilepushshort}}サービス・インスタンスから iOS のデバイスおよびアプリケーションにリモート通知を送信することができます。メッセージは、デバイス上のターゲット・アプリケーションに送信されます。 
@@ -143,14 +143,11 @@ APNs に必要な証明書は、`.p12` 証明書です。この証明書には�
 
 APNs の使用法について詳しくは、[iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4) を参照してください。
 
-以下のように、Push ダッシュボードで APNs をセットアップします。
+「Push Notification」サービス・ダッシュボードで APNs をセットアップするには、以下の手順を実行します。
 
-1. Bluemix ダッシュボードでバックエンド・アプリケーションを開いてから、**「IBM Push Notifications」**サービスをクリックして Push ダッシュボードを開きます。
-
-	Push ダッシュボードが表示されます。
-	![プッシュ通知設定ダッシュボード](images/wizard.jpg)
-2. **「構成」**タブで、**「Apple のプッシュ証明書 (Apple Push Certificate)」**セクションに移動し、**「サンドボックス」** (開発) または**「実動」** (配布) を選択してから、前の[ステップ](#step18)で作成した `p.12` 証明書をアップロードします。
-	![プッシュ通知を設定する「構成」タブ](images/credential_screen.jpg)
+1. 「Push Notification」サービス・ダッシュボードで**「Configure (構成)」**を選択します。
+2. **「Mobile (モバイル)」**オプションを選択し、**「APNs Push Credentials (APNs プッシュ資格情報)」**フォームの情報を更新します。
+3. **「Sandbox (サンドボックス)」** (開発) または**「Production (実動)」** (配布) の該当する方を選択し、前の[ステップ](#step18)を使用して作成した `p.12` 証明書をアップロードします。![「プッシュ通知の設定」ダッシュボード](images/wizard.jpg)
 3. **「パスワード」**フィールドに、`.p12` 証明書ファイルに関連付けられているパスワードを入力し、次に**「保存」**をクリックします。
 
 有効なパスワードを使用して証明書のアップロードに成功したら、通知の送信を開始できます。

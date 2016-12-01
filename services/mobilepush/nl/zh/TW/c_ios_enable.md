@@ -90,8 +90,8 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 
 ```
 	//Objective-C
-#import <IMFCore/IMFCore.h>
-#import <IMFPush/IMFPush.h>
+	#import <IMFCore/IMFCore.h>
+	#import <IMFPush/IMFPush.h>
 ```
 	{: codeblock}
 
@@ -329,8 +329,9 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 
 若要傳送基本推送通知，請完成下列步驟：
 
-1. 選取**傳送通知**，然後選擇**傳送至**選項來編寫訊息。支援的選項是**依標籤的裝置**、**裝置 ID**、**使用者 ID**、**Android 裝置**、**iOS 裝置**、**Web 通知**及**所有裝置**。
-**附註**：當您選取**所有裝置**選項時，所有已訂閱 {{site.data.keyword.mobilepushshort}} 的裝置都會接收到通知。![通知畫面](images/tag_notification.jpg)
+1. 選取**傳送通知**，然後選擇**傳送至**選項來編寫訊息。支援的選項是**依標籤的裝置**、**裝置 ID**、**使用者 ID**、**Android 裝置**、**iOS 裝置**、**Web 通知**及**所有裝置**。  
+**附註**：當您選取**所有裝置**選項時，所有已訂閱 {{site.data.keyword.mobilepushshort}} 的裝置都會接收到通知。
+![通知畫面](images/tag_notification.jpg)
 
 2. 在**訊息**欄位中，編寫訊息。視需要選擇配置選用設定。
 3. 按一下**傳送**。
@@ -356,6 +357,4 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 
 順利設定基本通知之後，您就可以配置標籤型通知及進階選項。
 
-將這些 Push Notifications Service 特性新增至您的應用程式。
-若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。
-若要使用進階通知選項，請參閱[啟用進階推送通知](t_advance_badge_sound_payload.html)。
+將這些 Push Notifications Service 特性新增至您的應用程式。若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。若要使用進階通知選項，請參閱[啟用進階推送通知](t_advance_badge_sound_payload.html)。

@@ -394,6 +394,4 @@ La capture d'écran suivante présente une boîte de dialogue d'alerte qui trait
 Une fois que vous avez configuré les notifications de base, vous pouvez configurer des notifications basées sur des balises et des options
 avancées.
 
-Ajoutez les fonctions du service {{site.data.keyword.mobilepushshort}} à votre application.
-Pour utiliser des notifications basées sur les balises, voir [Notifications basées sur les balises](c_tag_basednotifications.html).
-Pour utiliser des options de notification avancées, voir [Activation des notifications push avancées](t_advance_badge_sound_payload.html).
+Ajoutez les fonctions du service {{site.data.keyword.mobilepushshort}} à votre application. Pour utiliser des notifications basées sur les balises, voir [Notifications basées sur les balises](c_tag_basednotifications.html).Pour utiliser des options de notification avancées, voir [Activation des notifications push avancées](t_advance_badge_sound_payload.html).

@@ -24,7 +24,7 @@ Para obtener el URL base de la API REST, siga estos pasos:
 
 1. Cree una aplicación back-end en el catálogo Bluemix® de la sección de contenedores modelo eligiendo MobileFirst Services Starter. De esta manera se enlaza el servicio {{site.data.keyword.mobilepushshort}} con la aplicación. También puede crear una instancia de servicio de push y dejarla desenlazada. 
 1. En la página principal del panel de control de Bluemix, vaya al área **Aplicaciones** y seleccione la app.
-3. Pulse **OPCIONES MÓVILES**. Se mostrarán la ruta y los valores GUID de la app en la parte superior de la página de detalles de la app. En la pantalla Mostrar credenciales se muestra información sobre el AppSecret. Puede obtener el secreto de la aplicación en Opciones móviles, así como el secreto de cliente de algunas de las API.
+3. Pulse **OPCIONES MÓVILES**. Se mostrarán la ruta y los valores GUID de la app en la parte superior de la página de detalles de la app. La pantalla Mostrar credenciales muestra información sobre AppSecret.  Puede obtener el secreto de la aplicación en Opciones móviles, así como el secreto de cliente de algunas de las API.
 
 También puede utilizar la línea de mandatos para obtener las credenciales del servicio:
 

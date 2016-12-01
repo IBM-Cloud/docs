@@ -117,7 +117,9 @@ import BMSCore
 import BMSPush
 ```
 	{: codeblock}
-Para ver el archivo readme Push de Swift, vaya a [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master).##Crear configuración
+Para ver el archivo readme Push de Swift, vaya a [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master).
+
+##Crear configuración
 {: build-settings}
 
 Vaya a **Xcode > Crear configuración > Opciones de creación y Establecer la habilitación de Bitcode** en **No**.
@@ -146,7 +148,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 ```
 // Inicialice el SDK principal para Swift con la GUID, la ruta y la región de IBM Bluemix
 let myBMSClient = BMSClient.sharedInstance
-myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
+myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.") 
 myBMSClient.defaultRequestTimeout = 10.0 // Tiempo de espera en segundos
 ```
 	{: codeblock}
@@ -356,6 +358,4 @@ Puede personalizar aún más los valores de {{site.data.keyword.mobilepushshort}
 
 Una vez que haya configurado correctamente las notificaciones básicas, puede configurar las notificaciones basadas en código y las opciones avanzadas.
 
-Añada estas características de Servicio de notificaciones push a la aplicación.
-Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
-Para utilizar opciones de notificaciones avanzadas, consulte [Habilitación de notificaciones push avanzadas](t_advance_badge_sound_payload.html).
+Añada estas características de servicio de notificaciones push a la app. Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).Para utilizar opciones de notificaciones avanzadas, consulte [Habilitación de notificaciones push avanzadas](t_advance_badge_sound_payload.html).

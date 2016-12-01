@@ -181,10 +181,11 @@ o SDK com `app GUID`, `app Region` e
 `Client Secret`.
 
 ```
-var bmsPush = new BMSPush(); var params = {
+var bmsPush = new BMSPush();
+var params = {
     "appGUID":"push app GUID",
     "appRegion":"App Region",
-    "clientSecret":"Push Client Secret"
+    "clientSecret":"Push Client Secret" 
     }
   bmsPush.initialize(params, function(response){
           alert(response.response)

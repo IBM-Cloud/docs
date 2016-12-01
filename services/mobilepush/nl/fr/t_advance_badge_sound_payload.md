@@ -21,8 +21,7 @@ Configurez un badge, un son et un contenu JSON supplémentaire iOS.
 
 1. Dans le tableau de bord {{site.data.keyword.mobilepushshort}}, accédez à l'onglet **Notifications**.
 2. Accédez à la section des zones facultatives pour configurer les fonctions {{site.data.keyword.mobilepushshort}}. 
-	- **Fichier son** - Entrez une chaîne pour pointer vers le fichier son dans votre application mobile. Dans le contenu, spécifiez le nom de
-chaîne du fichier son à utiliser.
+	- **Fichier son** - Entrez une chaîne pour pointer vers le fichier son dans votre application mobile. Dans le contenu, spécifiez le nom de chaîne du fichier son à utiliser. 
 	- **Badge iOS** - Pour les appareils iOS, numéro à afficher comme badge de l'icône d'application. Si cette propriété manque, le badge n'est pas changé. Pour supprimer le badge, associez cette propriété à la valeur 0.
 	
 ###Android
@@ -119,9 +118,7 @@ Procédez comme suit pour activer les notifications de type {{site.data.keyword.
 ```
 	{: codeblock}
 
-2. Créez une catégorie de notification et définissez une action. **UIUserNotificationActionContextDefault** ou
-**UIUserNotificationActionContextMinimal** sont des contextes
-valides.
+2. Créez une catégorie de notification et définissez une action. **UIUserNotificationActionContextDefault** ou **UIUserNotificationActionContextMinimal** sont des contextes valides.
 
 Objective-C
 
@@ -161,8 +158,7 @@ Swift
 ```
 	{: codeblock}
 
-1. Créez la notification locale ou éloignée et affectez-lui l'identité de la
-catégorie.
+1. Créez la notification locale ou éloignée et affectez-lui l'identité de la catégorie.
 
 Objective-C
 
@@ -186,8 +182,7 @@ Swift
 ## Traitement des notifications iOS interactives  
 {: #actionable-notifications}
 
-Lors de la réception d'une notification interactive, le contrôle est
-transmis à la méthode suivante en fonction de l'identificateur choisi.
+Lors de la réception d'une notification interactive, le contrôle est transmis à la méthode suivante en fonction de l'identificateur choisi.
 
 ###Objective-C
 

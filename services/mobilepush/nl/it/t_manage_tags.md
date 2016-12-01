@@ -130,7 +130,8 @@ Utilizza la seguente API **retrieveAvailableTags** per ottenere un elenco delle 
 ^(IMFResponse *response, NSError *error){
  if(error){
    [self updateMessage:error.description];
- } else {
+ } else 
+	{
    [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
  availableTags = [response tags];
@@ -233,7 +234,7 @@ var bmsPush = new BMSPush();
 ```
 	{: codeblock}
 
-## Estensioni e applicazioni Google Chrome 
+## Estensioni e applicazioni Google Chrome
 {: web-get-tags}
 
 Per ottenere l'elenco delle tag disponibili, a cui possono sottoscriversi i clienti, utilizza il seguente codice.
@@ -392,7 +393,8 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
      print( "Response during unsubscribed tags : \(response?.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
-  else {
+  else 
+	{
     print( "Error during  unsubscribed tags \(error) ")
     print( "Error during unsubscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
   }

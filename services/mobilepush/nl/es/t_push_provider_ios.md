@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # Configuración de credenciales para APNs
 {: #create-push-credentials-apns}
-Última actualización: 17 de octubre de 2016
+Última actualización: 10 de noviembre de 2016
 {: .last-updated}
 
 El servicio de notificaciones push de Apple (APNs) permite a los desarrolladores de aplicaciones enviar
@@ -140,14 +140,12 @@ Los certificados que son necesarios para APNs son certificados `.p12`, que conti
 
 Para obtener más información sobre la utilización de APN, consulte [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4).
 
-Configure APNs en el panel de control Push, de la forma siguiente:
+Para configurar APN en el panel de control de servicios de notificación push, siga estos pasos: 
 
-1. Abra la aplicación de fondo en el panel de control de Bluemix y, a continuación, pulse el servicio **Notificaciones Push de IBM** para abrir el panel de control de Push.
-
-	Se muestra el panel de control Push:
-	![Panel de control Establecer notificaciones push](images/wizard.jpg)
-2. En el separador **Configuración**, vaya a la sección **Certificado push de Apple **, seleccione **Pruebas** (desarrollo) o **Producción** (distribución) y, a continuación, cargue el certificado `p.12` que ha creado utilizando el [paso](#step18) anterior.
-	![Separador de configuración Establecer notificaciones push](images/credential_screen.jpg)
+1. Seleccione **Configurar** en el panel de control de servicios de notificación push. 
+2. Elija la opción **Móvil** para actualizar la información del formulario **Credenciales push de APN**. 
+3. Seleccione **Recinto de seguridad** (desarrollo) o **Producción** (distribución) según convenga y cargue los certificados `p.12` que ha creado en el [paso](#step18) anterior.
+  ![Panel de control Establecer notificaciones push](images/wizard.jpg)
 3. En el campo **Contraseña**, especifique la contraseña asociada con el archivo de certificado `.p12` y, a continuación, pulse **Guardar**.
 
 Después de subir los certificados satisfactoriamente con una contraseña válida, inicie el envío de notificaciones.

@@ -5,7 +5,8 @@ copyright:
 
 ---
 
-# Ativando notificações push
+# Ativando
+notificações push
 {: #c_enable_push-notifications}
 Última atualização: 17 de outubro de 2016
 {: .last-updated}

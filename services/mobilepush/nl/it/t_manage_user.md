@@ -167,7 +167,7 @@ bmsPush.registerWithUserId("UserId", function(response) {
 ```
 	{: codeblock}
 
-## Estensioni e applicazioni Google Chrome 
+## Estensioni e applicazioni Google Chrome
 {: web-register-new}
 
 Utilizza le seguenti API per registrare le notifiche basate sull'ID utente. Inizializza l'SDK con `app GUID`, `app Region` e `Client Secret`.

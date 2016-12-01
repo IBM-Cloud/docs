@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # Configurazione delle credenziali per APNs
 {: #create-push-credentials-apns}
-Ultimo aggiornamento: 17 ottobre 2016
+Ultimo aggiornamento: 10 novembre 2016
 {: .last-updated}
 
 Il servizio APNS (Apple Push Notification Service) consente agli sviluppatori dell'applicazione di inviare notifiche remote dall'istanza del servizio {{site.data.keyword.mobilepushshort}} su Bluemix (il provider) alle applicazioni e ai dispositivi iOS. I messaggi sono inviati a un'applicazione di destinazione sul dispositivo. 
@@ -163,15 +163,12 @@ I certificati necessari per APNs sono i certificati `.p12`, che contengono la ch
 Per ulteriori informazioni sull'utilizzo di APNS, vedi [iOS Developer Library: Local and Push
                     Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4).
 
-Configura APNS sul dashboard Push nel seguente modo:
+Per configurare APNS sul dashboard dei servizi Push Notification, completa la procedura:
 
-1. Apri la tua applicazione di backend nel dashboard Bluemix e fai quindi clic sul servizio **IBM Push Notifications**
-                        per aprire il dashboard Push.
-
-	Viene visualizzato il dashboard Push:
-	![Configura il dashboard di push notifications](images/wizard.jpg)
-2. Nella scheda **Configuration**, vai alla sezione **Apple Push Certificate**, seleziona **Sandbox** (sviluppo) o **Production** (sviluppo) e quindi carica il certificato `p.12` che hai creato utilizzando il precedente [passo](#step18).
-	![Scheda di configurazione delle notifiche push](images/credential_screen.jpg)
+1. Seleziona **Configure** nel dashboard dei servizi Push Notification.
+2. Scegli l'opzione **Mobile** per aggiornare le informazioni nel formato **APNs Push Credentials**.
+3. Seleziona **Sandbox** (sviluppo) o **Production** (distribuzione) come appropriato e e quindi carica il certificato `p.12` che hai creato utilizzando il precedente [passo](#step18).
+  ![Imposta dashboard push notifications](images/wizard.jpg)
 3. Nel campo **Password**, immetti la password associata al file di certificato `.p12` e quindi fai clic su **Save**.
 
 Dopo che i certificati sono

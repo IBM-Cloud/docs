@@ -21,7 +21,7 @@ Configure un identificador y un sonido de iOS, y carga útil adicional de JSON.
 
 1. En el panel de control {{site.data.keyword.mobilepushshort}}, vaya al separador **Notificaciones**.
 2. Vaya a la sección **Campos opcionales** para configurar las características de {{site.data.keyword.mobilepushshort}}. 
-	- **Archivo de sonido**: Escriba una serie que apunte al archivo de sonido de la app móvil. En la carga útil, especifique el nombre de serie del archivo de sonido a utilizar.
+	- **Archivo de sonido**: Escriba una serie que apunte al archivo de sonido de la app móvil. En la carga útil, especifique el nombre de serie del archivo de sonido a utilizar. 
 	- **Identificador iOS**: Para dispositivos iOS, el número que se mostrará como el identificador del icono de app. Si falta esta propiedad, el identificador no se modificará. Para eliminar el identificador, establezca el valor de esta propiedad en 0.
 	
 ###Android

@@ -113,7 +113,9 @@ import BMSCore
 import BMSPush
 ```
 	{: codeblock}
-Die Push-Readme-Datei für Swift finden Sie in [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master).##Buildeinstellungen
+Die Push-Readme-Datei für Swift finden Sie in [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master).
+
+##Buildeinstellungen
 {: build-settings}
 
 Rufen Sie **Xcode > Build Settings > Build Options** auf und setzen Sie **Enable Bitcode** auf **No**.
@@ -142,7 +144,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 ```
 // Core-SDK für Swift mit IBM Bluemix-GUID, Route und Region initialisieren
 let myBMSClient = BMSClient.sharedInstance
-myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
+myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.") 
 myBMSClient.defaultRequestTimeout = 10.0 // Zeitlimitüberschreitung in Sekunden
 ```
 	{: codeblock}

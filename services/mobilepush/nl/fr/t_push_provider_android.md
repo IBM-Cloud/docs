@@ -9,10 +9,10 @@ copyright:
 {:new_window: target="_blank"}
 # Configuration des données d'identification pour le service FCM
 {: #create-push-enable-gcm}
-Dernière mise à jour : 17 octobre 2016
+Dernière mise à jour : 15 novembre 2016
 {: .last-updated}
 
-La passerelle FCM (Firebase Cloud Messaging) est la passerelle utilisée pour distribuer des notifications push aux appareils Android ainsi qu'aux navigateurs Web Google Chrome and Mozilla Firefox. FCM a remplacé GCM (Google Cloud Messaging). Vous devez obtenir vos données d'identification FCM puis vous configurez le service {{site.data.keyword.mobilepushshort}} sur le tableau de bord. Prenez soin d'utiliser les configurations FCM pour les nouvelles applications. Les applications existantes peuvent continuer à fonctionner avec les configurations GCM.
+La passerelle FCM (Firebase Cloud Messaging) est la passerelle utilisée pour distribuer des notifications push aux appareils Android ainsi qu'aux navigateurs Web Google Chrome and Mozilla Firefox. FCM a remplacé GCM (Google Cloud Messaging). Vous devez obtenir vos données d'identification FCM puis vous configurez le service {{site.data.keyword.mobilepushshort}} sur le tableau de bord. Prenez soin d'utiliser les configurations FCM pour les nouvelles applications. Les appli existantes continueraient à fonctionner avec les configurations GCM.
 
 ##Obtention de votre ID d'émetteur et de la clé d'API
 {: #android-senderid-apikey}

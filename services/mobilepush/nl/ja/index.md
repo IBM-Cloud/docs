@@ -12,24 +12,18 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}} 概説
 {: #gettingstartedtemplate}
-最終更新日: 2016 年 10 月 17 日
+最終更新日: 2016 年 11 月 02 日
 {: .last-updated}
 
 {:shortdesc}
 
-{{site.data.keyword.mobilepushshort}} サービスは、iOS と Android のモバイル・プラットフォーム、Google Chrome と Mozilla Firefox の Web ブラウザー、および Google Chrome アプリケーションおよびエクステンションをターゲットとする、モバイルと Web のプッシュ通知を送信および管理するための統一プラットフォームを提供します。{{site.data.keyword.mobilepushshort}}サービスは、デバイス、デバイス・プラットフォーム、および Web ブラウザーへのアプリケーション・ユーザーのマッピングを管理し、それらへのプッシュ通知のディスパッチを処理します。このサービスを使用して、モバイル・アプリケーション・ユーザーと Web ブラウザー・アプリケーション・ユーザーにブロードキャスト、ユニキャスト (deviceID に基づく) に加え、タグ (またはトピック) をプッシュ通知として送信できます。また、クライアント・アプリケーションをさらに開発するために SDK および [REST API](https://mobile.{DomainName}/imfpush/) を使用することもできます。
+{{site.data.keyword.mobilepushshort}} サービスは、iOS と Android のモバイル・プラットフォーム、Google Chrome と Mozilla Firefox の Web ブラウザー、および Google Chrome アプリケーションおよびエクステンションをターゲットとする、モバイルと Web のプッシュ通知を送信および管理するための統一プラットフォームを提供します。{{site.data.keyword.mobilepushshort}}サービスは、デバイス、デバイス・プラットフォーム、および Web ブラウザーへのアプリケーション・ユーザーのマッピングを管理し、それらへのプッシュ通知のディスパッチを処理します。このサービスを使用して、モバイル・アプリケーション・ユーザーと Web ブラウザー・アプリケーション・ユーザーにブロードキャスト、ユニキャスト (deviceID および userID に基づく) に加え、タグ (またはトピック) をプッシュ通知として送信できます。また、クライアント・アプリケーションをさらに開発するために SDK および [REST API](https://mobile.{DomainName}/imfpush/) を使用することもできます。
 
-このセクションでは、基本のプッシュ通知のセットアップ方法を説明します。基本通知を使用すると、通知は、タグを使用して特定のユーザー集合に届くのではなく、ブロードキャストされます。
-
-
-1. [通知プロバイダーの資格情報の構成](t__main_push_config_provider.html)を行います。
-2. [モバイル・アプリによる通知受け取りの可能化](c_enable_push.html)を行います。
-3. [基本通知の送信](t_send_push_notifications.html)を行います。
 
 # 関連リンク
 {: #rellinks}
 
-* [概要](c_overview_push.md){: new_window}
+* [概要](c_overview_push.html){: new_window}
 
 ## チュートリアルおよびサンプル{:id="samples"}
 {: #samples}

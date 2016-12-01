@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # 为 APNs 配置凭证
 {: #create-push-credentials-apns}
-上次更新时间：2016 年 10 月 17 日
+上次更新时间：2016 年 11 月 10 日
 {: .last-updated}
 
 通过 Apple 推送通知服务 (APNs)，应用程序开发者可以将远程通知从 Bluemix 上的 {{site.data.keyword.mobilepushshort}} 服务实例（提供者）发送到 iOS 设备和应用程序。消息会发送到设备上的目标应用程序。 
@@ -140,14 +140,11 @@ APNs 所需的证书为 `.p12` 证书，其中包含构建和发布应用程序�
 
 有关使用 APNs 的更多信息，请参阅 [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4)。
 
-在“推送”仪表板上设置 APNs，如下所示：
+要在“推送通知”服务仪表板上设置 APNs，请完成以下步骤：
 
-1. 在 Bluemix“仪表板”中打开后端应用程序，然后单击 **IBM Push Notifications** 服务，以打开“推送”仪表板。
-
-	这将显示“推送”仪表板：
-![设置推送通知仪表板](images/wizard.jpg)
-2. 在**配置**选项卡上，转至 **Apple 推送证书**部分，选择**沙箱**（开发）或**生产**（分发），然后上传在先前[步骤](#step18)中创建的 `p.12` 证书。
-![设置推送通知配置选项卡](images/credential_screen.jpg)
+1. 在“推送通知”服务仪表板上选择**配置**。
+2. 选择**移动**选项，以更新 **APNs 推送凭证**表单上的信息。
+3. 根据需要选择**沙箱**（开发）或**生产**（分发），然后上传在先前[步骤](#step18)中创建的 `p.12` 证书。![设置推送通知仪表板](images/wizard.jpg)
 3. 在**密码**字段中，输入与 `.p12` 证书文件相关联的密码，然后单击**保存**。 
 
 使用有效的密码成功上传证书后，即可开始发送通知。
