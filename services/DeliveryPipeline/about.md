@@ -50,7 +50,7 @@ After a job runs, the container that was created for it is discarded. The result
 
 **Note**: Jobs can run for up to 60 minutes. When jobs exceed that limit, they fail. If a job is exceeding the limit, break it into multiple jobs. For example, if a job performs three tasks, you might break it into three jobs: one for each task.
 
-To learn how to add a job to a stage, [see Adding a job to a stage](/build_deploy.html#deliverypipeline_add_job).
+To learn how to add a job to a stage, [see Adding a job to a stage](/docs/services/DeliveryPipeline/build_deploy.html#deliverypipeline_add_job).
 
 ### Build jobs
 
@@ -61,7 +61,7 @@ Jobs that take input from build jobs must reference build artifacts in the same 
 **Note**: If you select the **Simple** builder type for a build job, you skip the build process. In that case, your code is not compiled, but is sent to the deployment stage as is. To both build and deploy, select a builder type other than **Simple**.
 
 #### Environment properties for build scripts
-You can include environment properties within a build job's build shell commands. The properties provide access to information about the job's execution environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/deploy_var.html).
+You can include environment properties within a build job's build shell commands. The properties provide access to information about the job's execution environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/DeliveryPipeline/deploy_var.html).
 
 ### Deploy jobs
 
@@ -73,7 +73,7 @@ You can deploy to one or many regions and services. For example, you can set up 
 
 #### Environment properties for deployment scripts
 
-You can include environment properties within a deploy job's deployment script. These properties provide access to information about the job's execution environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/deploy_var.html).
+You can include environment properties within a deploy job's deployment script. These properties provide access to information about the job's execution environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/DeliveryPipeline/deploy_var.html).
 
 ### Test jobs
 If you want to require that conditions are met, include test jobs before or after your build and deploy jobs. You can customize test jobs to be as simple or complex as you need. For example, you might issue a cURL command and expect a particular response. You might also run a suite of unit tests or trigger functional tests with third-party test services, such as Sauce Labs.
@@ -82,7 +82,7 @@ If your tests produce result files in JUnit XML format, a report that is based o
 
 #### Environment properties for test scripts
 
-You can include environment properties in the script of a test job. The properties provide access to information about the job's run environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/deploy_var.html).
+You can include environment properties in the script of a test job. The properties provide access to information about the job's run environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/DeliveryPipeline/deploy_var.html).
 
 ## Manifest files
 {: #deliverypipeline_manifest}
@@ -114,7 +114,7 @@ Stages take their input from repositories and build jobs, and jobs within a stag
 
 
 
-![Build and test jobs within a stage](./images/jobs.png)
+![Build and test jobs within a stage](images/jobs.png)
 
 Jobs run in discrete working directories within Docker containers that are created for each pipeline run. Before a job is run, its working directory is populated with input that is defined at the stage level. For example, you might have a stage that contains a test job and a deploy job. If you install dependencies on one job, they are not available to the other job. However, if you make the dependencies available in the stage's input, they are available to both jobs.
 
@@ -124,7 +124,7 @@ After a job runs, the container that was created for it is discarded. The result
 
 **Note**: Jobs can run for up to 60 minutes. When jobs exceed that limit, they fail. If a job is exceeding the limit, break it into multiple jobs. For example, if a job performs three tasks, you might break it into three jobs: one for each task.
 
-To learn how to add a job to a stage, [see Adding a job to a stage](./build_deploy.html#deliverypipeline_add_job).
+To learn how to add a job to a stage, [see Adding a job to a stage](/docs/services/DeliveryPipeline/build_deploy.html#deliverypipeline_add_job).
 
 ### Build jobs
 
@@ -135,7 +135,7 @@ Jobs that take input from build jobs must reference build artifacts in the same 
 **Note**: If you select the **Simple** builder type for a build job, you skip the build process. In that case, your code is not compiled, but is sent to the deployment stage as is. To both build and deploy, select a builder type other than **Simple**.
 
 #### Environment properties for build scripts
-You can include environment properties within a build job's build shell commands. The properties provide access to information about the job's execution environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](./deploy_var.html).
+You can include environment properties within a build job's build shell commands. The properties provide access to information about the job's execution environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/DeliveryPipeline/deploy_var.html).
 
 ### Deploy jobs
 
@@ -143,11 +143,11 @@ Deploy jobs upload your project to Bluemix as an app and are accessible from a U
 
 Deploy jobs can deploy new apps or update existing apps. Even if you first deployed an app by using another method, such as the Cloud Foundry command line interface or the run bar in the Web IDE, you can update the app by using a deploy job. To update an app, in the deploy job, use that app's name.
 
-You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} service so that development artifacts use IBM Containers, are tested in one region, and are deployed to production in multiple regions. For more information, see [Regions](../../overview/index.html#ov_intro__reg).
+You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} service so that development artifacts use IBM Containers, are tested in one region, and are deployed to production in multiple regions. For more information, see [Regions](/docs/overview/index.html#ov_intro__reg).
 
 #### Environment properties for deployment scripts
 
-You can include environment properties within a deploy job's deployment script. These properties provide access to information about the job's execution environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](./deploy_var.html).
+You can include environment properties within a deploy job's deployment script. These properties provide access to information about the job's execution environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/DeliveryPipeline/deploy_var.html).
 
 ### Test jobs
 If you want to require that conditions are met, include test jobs before or after your build and deploy jobs. You can customize test jobs to be as simple or complex as you need. For example, you might issue a cURL command and expect a particular response. You might also run a suite of unit tests or trigger functional tests with third-party test services, such as Sauce Labs.
@@ -156,7 +156,7 @@ If your tests produce result files in JUnit XML format, a report that is based o
 
 #### Environment properties for test scripts
 
-You can include environment properties in the script of a test job. The properties provide access to information about the job's run environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](./deploy_var.html).
+You can include environment properties in the script of a test job. The properties provide access to information about the job's run environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/DeliveryPipeline/deploy_var.html).
 
 ## Manifest files
 {: #deliverypipeline_manifest}
@@ -180,7 +180,7 @@ A simple pipeline might contain three stages:
 
 This pipeline is shown in the following conceptual diagram:
 
-![A conceptual diagram of stages and jobs in a pipeline](./images/diagram.jpg)
+![A conceptual diagram of stages and jobs in a pipeline](images/diagram.jpg)
 
 *A conceptual model of a three-stage pipeline*
 
