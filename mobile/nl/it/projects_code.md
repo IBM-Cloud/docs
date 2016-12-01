@@ -10,20 +10,17 @@ lastupdated: "2016-10-13"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Creazione di un progetto con uno starter codice
+# Utilizzo di uno starter codice per creare un progetto 
 {: #projects_code}
 
-Ultimo aggiornamento: 13 ottobre 2016
-{: .last-updated}
-
-Puoi utilizzare uno starter codice nel dashboard {{site.data.keyword.Bluemix}} Mobile per creare un progetto nell'ambiente {{site.data.keyword.Bluemix_notm}}. Questa procedura non si applica ai progetti che utilizzano gli starter IU. Consulta [Creazione di un progetto con uno starter IU](projects_ui.html) per istruzioni sugli starter IU.
+Puoi utilizzare uno [Starter codice](starters.html#Code_Starter) nel dashboard {{site.data.keyword.Bluemix}} Mobile per creare un progetto nell'ambiente {{site.data.keyword.Bluemix_notm}}. Questa procedura non si applica ai progetti che utilizzano gli starter IU. Consulta [Creazione di un progetto con uno starter IU](projects_ui.html) per istruzioni sugli starter IU. 
 {:shortdesc}
 
 Completa i seguenti passi per creare un progetto con uno starter codice:
 
 1. Crea un nuovo progetto dashboard Mobile in {{site.data.keyword.Bluemix_notm}}.
 
- Inizia con la scheda *Introduzione* dopo aver selezionato il catalogo Mobile. Esistono le descrizioni degli starter selezionati che puoi utilizzare e diversi modi per creare un progetto in base a quanta assistenza ti serve. Se desideri iniziare con un aiuto minimo, seleziona **Crea progetto**.
+ Inizia con la scheda *Introduzione* dopo aver selezionato il catalogo Mobile. Esistono le descrizioni degli starter selezionati che puoi utilizzare e diversi modi per creare un progetto in base a quanta assistenza ti serve. Se desideri soltanto iniziare, seleziona **Crea progetto**. 
 
  Se già disponi di progetti, puoi anche iniziare con la scheda *Progetti* selezionata. Dal dashboard {{site.data.keyword.Bluemix_notm}} Mobile, vista **Progetti**, puoi selezionare un progetto con cui lavorare, utilizza le *Azioni* di un progetto per eliminarlo o per scaricarne il codice o crea un nuovo progetto.
 
@@ -39,9 +36,9 @@ Completa i seguenti passi per creare un progetto con uno starter codice:
 	
 	5. Immetti un nome per il tuo progetto e seleziona **Crea**.
 	
-2. Effettua le tue selezioni nella schermata **Panoramica progetto**.  La schermata **Panoramica progetto** visualizza le informazioni sul tuo progetto e sui servizi facoltativi che puoi aggiungere al tuo progetto come Push Notifications.  
+2. Effettua le tue selezioni nella schermata **Panoramica progetto**.  La schermata **Panoramica progetto** visualizza le informazioni sul tuo progetto e sui servizi facoltativi che puoi aggiungere al tuo progetto come Push Notifications e Authentication.  
 
-	1. Facoltativo: seleziona **Aggiungi** per aggiungere uno dei servizi elencati al tuo progetto. Quando aggiungi i servizi al tuo progetto, ti colleghi alla console {{site.data.keyword.Bluemix_notm}} principale. Seleziona la categoria *Mobile* nella console {{site.data.keyword.Bluemix_notm}} per visualizzare i servizi Mobile.  Seleziona *Push Notifications* o un altro servizio per configurarlo. Configura il servizio seguendo le istruzioni per il servizio.
+	1. Facoltativo: seleziona **Aggiungi** per aggiungere uno dei servizi elencati al tuo progetto. Modifica il **Nome servizio** per il tuo servizio e fai clic su **Crea**. Quando aggiungi i servizi al tuo progetto, ti colleghi alla pagina {{site.data.keyword.Bluemix_notm}} per tale servizio. Configura il servizio fornendo le informazioni obbligatorie per esso.
 	
 	2. Facoltativo: ripeti il passo *a* per ogni ulteriore funzionalità che desideri aggiungere al tuo progetto. 
 

@@ -2,16 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-21"
 
 ---
 {:new_window: target="_blank"}
 
 # 튜토리얼 - Store Catalog UI 스타터
 {: #tutorial_store_catalog}
-
-마지막 업데이트 날짜: 2016년 10월 13일
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} Store Catalog UI 스타터는 사용자 정의할 수 있는 기본 판매 앱 구조와 각 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 통합 지점을 제공합니다. 
 
@@ -39,7 +36,7 @@ Store Catalog UI 스타터를 빨리 시작하고 실행하려면 다음 단계�
 
    4. 프로젝트 이름을 입력하고 **작성**을 클릭하십시오. 
 
-2. 선택사항: Push Notifications를 추가하십시오. 
+2. 선택사항: Push Notifications 기능을 추가하십시오. 
 
    1. **프로젝트 개요** 페이지에서 **Push Notifications**에 대해 **추가**를 클릭하십시오. 
 
@@ -47,21 +44,23 @@ Store Catalog UI 스타터를 빨리 시작하고 실행하려면 다음 단계�
 
    2. 서비스 이름을 입력하고 **작성**을 클릭하십시오. 
 
-   3. iOS의 경우 [Apple Push Notification Service 구성](../services/mobilepush/t_push_provider_ios.html){: new_window}을 수행하십시오. 
+   3. iOS의 경우 [Apple Push Notification Service 구성](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}을 수행하십시오. 
 
-   4. Android의 경우 [GCM(Google Cloud Messaging) 구성](../services/mobilepush/t_push_provider_android.html){: new_window}을 수행하십시오. 
+   4. Android의 경우 [GCM(Google Cloud Messaging) 구성](/docs/services/mobilepush/t_push_provider_android.html){: new_window}을 수행하십시오. 
 
-3. 선택사항: 기타 서비스를 추가하십시오. 
+3. 선택사항: 기타 기능을 추가하십시오. 
 
-   1. **프로젝트 개요** 페이지에서 서비스에 대해 **추가**를 클릭하십시오. 
+   1. **프로젝트 개요** 페이지에서 해당 기능에 대해 **추가**를 클릭하십시오. 
 
    2. 서비스 이름을 입력하고 **작성**을 클릭하십시오. 
 
-   3. 서비스의 지시사항에 따라 서비스를 설정하십시오. 
+   3. 서비스에서 제공하는 지시사항에 따라 서비스를 설정하십시오. 
 
 4. 앱을 디자인하십시오. 
 
    1. 탐색 메뉴에서 **UI 빌더**를 선택하여 앱의 디자인을 사용자 정의하십시오. 
+   
+		**팁:** UI 빌더의 빠른 개요를 보려면 UI 빌더를 선택한 후 탐색에서 **작동 방법 보기**를 선택하십시오. 
 
    2. 탐색에서 **디자인** 탭을 선택하십시오. 
 
@@ -126,30 +125,4 @@ Store Catalog UI 스타터를 빨리 시작하고 실행하려면 다음 단계�
 ## 다음에 수행할 작업
 {: #tutorial_next}
 
-[사용해 보기](http://new-console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
-
-
-# 관련 링크
-{: #rellinks}
-
-<!-- links to internal services don't work
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
-
-## 블로그 게시물
-{: #general}
-* [블로그 게시물: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [블로그 게시물: Introducing the next generation of the Bluemix Mobile dashboard](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
-* [블로그 게시물: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [블로그 게시물: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [블로그 게시물: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
-## 튜토리얼 및 샘플
-{: #samples}
-* [Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+[사용해 보기](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}

@@ -1,8 +1,7 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016 lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
@@ -10,27 +9,23 @@ lastupdated: "2016-10-13"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Criando um projeto com um iniciador de UI (interface com o usuário)
+# Usando um Iniciador de UI para criar um projeto
 {: #projects_ui}
 
-Última atualização: 13 de outubro de 2016
-{: .last-updated}
-
-É possível usar um iniciador de UI (interface com o usuário) no painel do
-{{site.data.keyword.Bluemix}} Mobile para criar um projeto no ambiente do
-{{site.data.keyword.Bluemix_notm}}. Esse procedimento não se aplica a projetos
+É possível usar um
+[Iniciador de UI](starters.html#UI_Starter) no
+painel Móvel do {{site.data.keyword.Bluemix}} para criar
+um projeto no ambiente do {{site.data.keyword.Bluemix_notm}}. Esse procedimento não se aplica a projetos
 que usam os iniciadores de código. Consulte [Criando um
 projeto com um iniciador de código](projects_code.html) para obter instruções sobre iniciadores de
-código.{:shortdesc}
+código.
+{:shortdesc}
 
 Conclua as etapas a seguir para criar um projeto com um iniciador de UI (interface com o usuário):
 
 1. Crie um novo projeto do painel Móvel no {{site.data.keyword.Bluemix_notm}}.
 
- Você inicia com a guia *Introdução* depois de selecionar o catálogo
-Móvel. Há descrições de iniciadores selecionados que podem ser usados e diferentes
-maneiras de criar um projeto que dependem do quanto de ajuda você precisa. Se você
-desejar apenas começar com ajuda mínima, selecione **Criar projeto**.
+ Você inicia com a guia *Introdução* depois de selecionar o catálogo Móvel. Há descrições de iniciadores selecionados que podem ser usados e diferentes maneiras de criar um projeto que dependem do quanto de ajuda você precisa. Se você desejar apenas começar com ajuda mínima, selecione **Criar projeto**.
 
  Se você já tiver projetos, será possível selecionar a guia *Projetos* enquanto
 você está na guia *Introdução*. Na visualização
@@ -40,41 +35,41 @@ Mobile, é possível selecionar um projeto com o qual trabalhar, usar as
 ou criar um novo projeto. Se o projeto começou a partir de um iniciador de UI (interface com o usuário), você
 também poderá abrir o projeto no Construtor de UI (interface com o usuário) diretamente no *Ações*. 
 
-	1. No Console do {{site.data.keyword.Bluemix_notm}}, selecione
-**Móvel** depois de expandir o menu com as três linhas ao lado do
-logotipo do {{site.data.keyword.Bluemix_notm}}. 
+	1. No Console do {{site.data.keyword.Bluemix_notm}}, selecione **Móvel** depois de expandir o menu com as três linhas ao lado do logotipo do {{site.data.keyword.Bluemix_notm}}. 
 	
 	2. Selecione **Criar projeto**. 
 
-	  Como alternativa, é possível selecionar a guia **Projetos**
-para visualizar os projetos que já estão em seu ambiente móvel e criar um novo projeto
-clicando em **Criar projeto**. 
+	  Como alternativa, é possível selecionar a guia **Projetos** para visualizar os projetos que já estão em seu ambiente móvel e criar um novo projeto clicando em **Criar projeto**. 
 
-	3. Selecione o iniciador que melhor corresponda ao tipo de app que você deseja
-criar e selecione **Criar projeto**. Existem **Iniciadores de
-UI (interface com o usuário)** e **Iniciadores de código**. Consulte
-[Iniciadores](starters.html) para obter mais informações sobre
-iniciadores e como usá-los. 
+	3. Selecione o iniciador que melhor corresponda ao tipo de app que você deseja criar e selecione **Criar projeto**. Existem **Iniciadores de UI (interface com o usuário)** e **Iniciadores de código**. Consulte [Iniciadores](starters.html) para obter mais informações sobre iniciadores e como usá-los. 
 	
 	4. Insira um nome para seu projeto e selecione **Criar**.
 	
-2. Faça suas seleções na tela **Visão geral do projeto**. A
+2. Faça suas seleções na tela **Visão geral do projeto**.  A
 tela **Visão geral do projeto** exibe informações sobre seu projeto e
-os recursos opcionais que podem ser incluídos em seu projeto, como Notificações push.   
+os recursos opcionais que podem ser incluídos em seu projeto, como Notificações push.  
 
 	1. Opcional: selecione **Incluir** para incluir um dos
 recursos listados em seu projeto. Edite o **Nome do serviço** para seu
-serviço e clique em **Criar**.
+serviço e clique em **Criar**. Ao incluir serviços
+em seu projeto, você é vinculado à página do
+{{site.data.keyword.Bluemix_notm}} para tal serviço. Configure
+o serviço fornecendo as informações que são requeridas para o
+serviço.
 	
-	2. Opcional: repita a etapa *a* para qualquer recurso adicional que
-você queira incluir em seu projeto. 
+	2. Opcional: repita a etapa *a* para qualquer recurso adicional que você queira incluir em seu projeto. 
 
 3. Projete sua interface com o usuário usando o Construtor de UI (interface com o usuário).
 
    Nota: Como os Iniciadores de código não têm uma interface com o usuário customizável, a guia *Design* não está disponível.
 
     1. Selecione **Construtor de UI (interface com o usuário)** no menu de navegação para
-customizar o design de seu app.<!--Most of the design screens have sections that begin with a navigation on the left of the screen, and the sections more specific as it moves to the right side preview of your app. Note: Not all design screens in the starters have the same sections.--> 
+customizar o design de seu app. 
+	
+		**Dica:** para visualizar uma visão
+geral rápida do Construtor de UI, selecione **Mostre-me
+como funciona** na navegação após selecionar o Construtor
+de UI. 
 	
 	2. Customize o layout do seu app na guia **Telas**.
 	

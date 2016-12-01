@@ -8,10 +8,7 @@ lastupdated: "2016-10-14"
 # 샘플
 {: #sdk}
 
-마지막 업데이트 날짜: 2016년 10월 14일
-{: .last-updated}
-
-다음 샘플은 {{site.data.keyword.mobilepushfull}} 서비스, {{site.data.keyword.amafull}} 서비스, {{site.data.keyword.mobileanalytics_full}} 서비스 사용 방법을 보여줍니다. 
+다음 샘플은 {{site.data.keyword.mobilepushfull}} 서비스, {{site.data.keyword.amafull}} 서비스, {{site.data.keyword.mobileanalytics_full}} 서비스의 사용 방법을 보여줍니다. 
 
 <table id="samples"><tbody><th><img src="images/Droid_SDK_icon.png" alt="android"></th><th><img src="images/iOS_SDK_icon.png" alt="ios"></th><th><img src="images/cordova_logo_white.png" alt="cordova"></th><tr><td>
 

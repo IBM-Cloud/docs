@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
@@ -10,15 +10,10 @@ lastupdated: "2016-10-13"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Création d'un projet avec un module de démarrage pour l'interface utilisateur
+# Utilisation d'un module de démarrage d'interface utilisateur pour créer un projet
 {: #projects_ui}
 
-Dernière mise à jour : 13 octobre 2016
-{: .last-updated}
-
-Vous pouvez utiliser un module de démarrage pour l'interface
-utilisateur dans le tableau de bord {{site.data.keyword.Bluemix}}
-Mobile afin de créer un projet dans l'environnement {{site.data.keyword.Bluemix_notm}}. Cette
+Vous pouvez utiliser un [module de démarrage pour l'interface utilisateur](starters.html#UI_Starter) dans le tableau de bord {{site.data.keyword.Bluemix}} Mobile afin de créer un projet dans l'environnement {{site.data.keyword.Bluemix_notm}}. Cette
 procédure ne s'applique pas aux projets qui utilisent les modules de démarrage
 pour le code. Pour obtenir les instructions relatives aux modules de démarrage
 pour le code, voir [Création d'un projet avec
@@ -61,21 +56,21 @@ d'application que vous souhaitez créer, puis sélectionnez **Créer un projet**
 existe des **Modules de démarrage pour l'interface
 utilisateur** et des **Modules de démarrage pour le code**. Pour
 plus d'informations sur les modules de démarrage et leur utilisation, voir
-[Modules de démarrage](starters.html).  
+[Modules de démarrage](starters.html). 
 	
 	4. Entrez le nom de votre projet et sélectionnez
 **Créer**.
 	
-2. Effectuez vos sélections dans l'écran **Présentation du projet**. Cet
+2. Effectuez vos sélections dans l'écran **Présentation du projet**.  Cet
 écran affiche des informations sur votre projet, ainsi que les fonctions
 facultatives que vous pouvez y ajouter, comme Notifications push.  
 
 	1. Facultatif : sélectionnez **Ajouter** pour
 ajouter une des fonctions répertoriées à votre projet. Editez le **Nom
-du service** et cliquez sur **Créer**.
+du service** et cliquez sur **Créer**. Lorsque vous ajoutez des services au projet, vous établissez une connexion avec la page {{site.data.keyword.Bluemix_notm}} pour ce service. Configurez le service en fournissant les informations requises pour le service.
 	
 	2. Facultatif : répétez l'étape *a* pour toute autre
-fonction supplémentaire que vous souhaitez ajouter au projet.  
+fonction supplémentaire que vous souhaitez ajouter au projet. 
 
 3. Concevez votre interface utilisateur à l'aide du Générateur
 d'interface graphique.
@@ -86,14 +81,14 @@ conception n'est pas disponible.
 
     1. Sélectionnez **Générateur
 d'interface graphique** dans le menu de navigation pour personnaliser
-la conception de votre application. <!--Most of the design screens have sections that begin with a navigation on the left of the screen, and the sections more specific as it moves to the right side preview of your app. Note: Not all design screens in the starters have the same sections.--> 
+la conception de votre application. 
+	
+		**Astuce :** Pour afficher un aperçu rapide du Générateur d'interface graphique, sélectionnez **Me montrer comment cela fonctionne** dans la navigation après avoir sélectionné le Générateur d'interface graphique. 
 	
 	2. Personnalisez la présentation de votre application dans
 l'onglet **Ecrans**.
 	
-	3. Ajoutez de nouveaux écrans en sélectionnant **Ajouter des écrans**. Indiquez
-le nom des nouveaux écrans pour y faire référence plus facilement dans votre
-application. Vous pouvez sélectionnez les types d'écran suivants :  
+	3. Ajoutez de nouveaux écrans en sélectionnant **Ajouter des écrans**. Indiquez le nom des nouveaux écrans pour y faire référence plus facilement dans votre application. Vous pouvez sélectionnez les types d'écran suivants :  
 	    * Menu
 		* Liste
 		* Carte
@@ -120,12 +115,9 @@ remplacés par le contenu des Sources de données identifiées dans la vue
 		
 		Un élément identifié dans l'arborescence comme un
 *Formulaire* est indépendant et ne peut pas être modifié en ligne. Il
-ne fait référence à aucune information issue d'une source de données. 
+ne fait référence à aucune information issue d'une source de données.
 	
-	5. Sélectionnez **Données** dans la navigation pour
-afficher les données utilisées par l'application. Il existe des
-informations par défaut dans le modèle ; vous avez cependant la possibilité de
-modifier la source des données en sélectionnant **Création**. Vous
+	5. Sélectionnez **Données** dans la navigation pour afficher les données utilisées par l'application. Il existe des informations par défaut dans le modèle ; vous avez cependant la possibilité de modifier la source des données en sélectionnant **Création**. Vous
 pouvez faire référence à plusieurs sources de données, il convient donc
 d'indiquer un nom pour chacune d'entre elles. Vous pouvez sélectionner les
 sources de données suivantes :
@@ -142,14 +134,14 @@ tableau en le sélectionnant et en utilisant les différents boutons.
 		 Remarque : Si vous importez des données qui ne correspondent pas à
 la structure des données par défaut, activez le curseur de
 remplacement de schéma. Par exemple, dans le cas d'un fichier .csv qui
-comporte moins de colonnes que les données fournies avec le module de démarrage. 
+comporte moins de colonnes que les données fournies avec le module de démarrage.
 		 
 	6. Sélectionnez **Accès utilisateur** dans la
 navigation afin de modifier les droits d'accès pour votre projet. Vous
 pouvez activer et désactiver l'accès utilisateur à l'aide de l'interrupteur. Lorsque
 l'accès utilisateur est activé, vous pouvez définir un délai d'expiration pour
 les utilisateurs inactifs et les données d'identification des utilisateurs qui
-peuvent accéder à l'application. 
+peuvent accéder à l'application.
 	
 	7. Sélectionnez **Paramètres** dans le menu de
 navigation pour modifier les informations générales relatives aux couleurs de
@@ -159,7 +151,7 @@ aussi d'ajouter votre identificateur de bundle unique enregistré dans l'Apple
 Store ou le Google Play Store.
 	
 		Si vous voulez ajouter le kit de développement de logiciels (SDK) IBM
-MobileFirst Foundation au projet, placez l'interrupteur en position active. 
+MobileFirst Foundation au projet, placez l'interrupteur en position active.
 		
 	8. Si vous avez positionné l'interrupteur de manière à ajouter IBM MobileFirst Platform
 Foundation à votre projet dans l'écran *Paramètres*, l'élément
@@ -167,10 +159,7 @@ Foundation à votre projet dans l'écran *Paramètres*, l'élément
 **Foundation** et indiquez les informations requises
 spécifiques à IBM MobileFirst Platform Foundation.
 	
-	9. Sélectionnez **Publier** dans le menu de
-navigation afin d'entrer les informations finales permettant de créer votre
-application mobile. Vous pouvez indiquer votre Identificateur de bundle pour
-iOS et l'Identificateur d'application pour Android.
+	9. Sélectionnez **Publier** dans le menu de navigation afin d'entrer les informations finales permettant de créer votre application mobile. Vous pouvez entrer votre Identificateur du bundle pour iOS et l'identifiant d'application pour Android. 
 	
 	Si vous créez une application iOS, vous devez vous procurer votre
 Identificateur de bundle, votre certificat de distribution sous forme de
@@ -179,7 +168,7 @@ sous forme de fichier *.mobileprovision* auprès du portail de mise
 à disposition Apple. Ces trois éléments doivent être créés en même temps et avec
 le même ordinateur que celui que vous projetez d'utiliser pour publier votre
 application mobile dans l'Apple Store. Le certificat de distribution et le
-profil de mise à disposition doivent être basés sur l'identificateur de bundle.  	
+profil de mise à disposition doivent être basés sur l'identificateur de bundle. 	
 
 4.  Revenez à l'écran *Présentation du projet* pour
 extraire le code de votre application et l'essayer ! Vous pouvez télécharger

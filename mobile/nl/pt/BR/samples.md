@@ -8,12 +8,9 @@ lastupdated: "2016-10-14"
 # Amostras
 {: #sdk}
 
-Última atualização: 14 de outubro de 2016
-{: .last-updated}
-
 As amostras a seguir demonstram como usar os serviços
 {{site.data.keyword.mobilepushfull}}, {{site.data.keyword.amafull}} e
-{{site.data.keyword.mobileanalytics_full}}. 
+{{site.data.keyword.mobileanalytics_full}}.
 
 <table id="samples"><tbody><th><img src="images/Droid_SDK_icon.png" alt="android"></th><th><img src="images/iOS_SDK_icon.png" alt="ios"></th><th><img src="images/cordova_logo_white.png" alt="cordova"></th><tr><td>
 

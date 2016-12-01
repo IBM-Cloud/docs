@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
@@ -10,13 +10,10 @@ lastupdated: "2016-10-13"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Creación de un proyecto con un Iniciador de IU
+# Utilización de un iniciador de IU para crear un proyecto
 {: #projects_ui}
 
-Última actualización: 13 de octubre de 2016
-{: .last-updated}
-
-Puede utilizar un Iniciador de IU en el panel de control de {{site.data.keyword.Bluemix}} Mobile para crear un proyecto en el entorno de {{site.data.keyword.Bluemix_notm}}. Este procedimiento no se aplica a los proyectos que utilizan los Iniciadores de código. Consulte [Creación de un proyecto con un Iniciador de código](projects_code.html) para obtener instrucciones para los Iniciadores de código.
+Puede utilizar un [iniciador de IU](starters.html#UI_Starter) en el panel de control de {{site.data.keyword.Bluemix}} Mobile para crear un proyecto en el entorno de {{site.data.keyword.Bluemix_notm}}. Este procedimiento no se aplica a los proyectos que utilizan los Iniciadores de código. Consulte [Creación de un proyecto con un Iniciador de código](projects_code.html) para obtener instrucciones para los Iniciadores de código.
 {:shortdesc}
 
 Complete los pasos siguientes para crear un proyecto con un Iniciador de IU:
@@ -37,9 +34,9 @@ Complete los pasos siguientes para crear un proyecto con un Iniciador de IU:
 	
 	4. Especifique un nombre para el proyecto y seleccione **Crear**.
 	
-2. Realice las selecciones en la pantalla **Visión general del proyecto**. La pantalla **Visión general del proyecto** muestra información sobre el proyecto y las prestaciones opcionales que puede añadir al mismo, como por ejemplo Notificaciones push.  
+2. Realice las selecciones en la pantalla **Visión general del proyecto**.  La pantalla **Visión general del proyecto** muestra información sobre el proyecto y las prestaciones opcionales que puede añadir al mismo, como por ejemplo Notificaciones push.  
 
-	1. Opcional: Seleccione **Añadir** para añadir una de las prestaciones listadas al proyecto. Edite el **Nombre de servicio** para el servicio y pulse **Crear**.
+	1. Opcional: Seleccione **Añadir** para añadir una de las prestaciones listadas al proyecto. Edite el **Nombre de servicio** para el servicio y pulse **Crear**. Cuando añade un servicio al proyecto, enlaza con la página de {{site.data.keyword.Bluemix_notm}} correspondiente a dicho servicio. Configure el servicio especificando la información necesaria para el mismo. 
 	
 	2. Opcional: Repita el paso *a* para cualquier prestación adicional que desee añadir al proyecto. 
 
@@ -47,11 +44,13 @@ Complete los pasos siguientes para crear un proyecto con un Iniciador de IU:
 
    Nota: Dado que los Iniciadores de código no tienen una interfaz de usuario personalizable, el separador *Diseño* no está disponible.
 
-    1. Seleccione **Creador de IU** en el menú de navegación para personalizar el diseño de la aplicación.<!--Most of the design screens have sections that begin with a navigation on the left of the screen, and the sections more specific as it moves to the right side preview of your app. Note: Not all design screens in the starters have the same sections.--> 
+    1. Seleccione **Creador de IU** en el menú de navegación para personalizar el diseño de la aplicación. 
+	
+		**Consejo:** para ver una breve visión general del creador de IU, seleccione **Mostrar cómo funciona** en el panel de navegación después de seleccionar el creador de IU.  
 	
 	2. Personalice el diseño de la aplicación desde el separador **Pantallas**.
 	
-	3. Añada pantallas nuevas seleccionando **Crear pantalla**. Ponga un nombre a la pantalla nueva para que sea más fácil su consulta en la aplicación. Puede seleccionar desde los siguientes tipos de pantallas: 
+	3. Añada pantallas nuevas seleccionando **Crear pantalla**. Asigne un nombre a la pantalla nueva para que sea más fácil su consulta en la aplicación. Puede seleccionar entre los siguientes tipos de pantallas:  
 	    * Menú
 		* Lista
 		* Correlación
@@ -84,7 +83,7 @@ Complete los pasos siguientes para crear un proyecto con un Iniciador de IU:
 		
 	8. Si ha alternado el conmutador para añadir IBM MobileFirst Platform Foundation a su proyecto en la pantalla *Valores*, se mostrará una selección **Foundation** en la navegación. Seleccione **Foundation** y complete la información necesaria específica para IBM MobileFirst Platform Foundation.
 	
-	9. Seleccione **Publicar** en el menú de navegación para especificar la información final para crear la aplicación móvil. Puede especificar el identificador de paquetes para iOS y el identificador de aplicaciones para Android.
+	9. Seleccione **Publicar** en el menú de navegación para especificar la información final para crear la aplicación móvil. Puede especificar el identificador de paquetes para iOS y el identificador de aplicaciones para Android. 
 	
 	Si está creando una aplicación de iOS, debe obtener el Identificador de paquetes, el Certificado de distribución como un archivo *.p12* y el Perfil de suministro como un archivo *.mobileprovision* desde el portal de suministro de Apple. El árbol debería crearse al mismo tiempo y con el mismo sistema con el que piensa utilizarlo al publicar la aplicación en la Apple Store. El Certificado de distribución y el Perfil de suministro deben basarse en el Identificador de paquetes. 	
 

@@ -2,16 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-21"
 
 ---
 {:new_window: target="_blank"}
 
 # 指導教學 - Store Catalog 使用者介面入門範本
 {: #tutorial_store_catalog}
-
-前次更新：2016 年 10 月 13 日
-{: .last-updated}
 
 「{{site.data.keyword.Bluemix}} Store Catalog 使用者介面入門範本」提供您可自訂的基本銷售應用程式結構，並提供每一個 {{site.data.keyword.Bluemix_notm}} Mobile 服務的整合點。
 
@@ -39,7 +36,7 @@ lastupdated: "2016-10-13"
 
    4. 輸入專案名稱，然後按一下**建立**。
 
-2. 選用項目：新增 Push Notifications。
+2. 選用項目：新增 Push Notifications 功能。
 
    1. 在**專案概觀**頁面上，針對 **Push Notifications** 按一下**新增**。
 
@@ -47,21 +44,23 @@ lastupdated: "2016-10-13"
 
    2. 輸入服務名稱，然後按一下**建立**。
 
-   3. 若為 iOS，[配置 Apple Push Notification Service](../services/mobilepush/t_push_provider_ios.html){: new_window}。
+   3. 若為 iOS，[配置 Apple Push Notification Service](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}。
 
-   4. 若為 Android，[配置 Google Cloud Messaging](../services/mobilepush/t_push_provider_android.html){: new_window}。
+   4. 若為 Android，[配置 Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}。
 
-3. 選用項目：新增其他服務。
+3. 選用項目：新增其他功能。
 
-   1. 在**專案概觀**頁面上，針對服務按一下**新增**。
+   1. 在**專案概觀**頁面上，針對功能按一下**新增**。
 
    2. 輸入服務名稱，然後按一下**建立**。
 
-   3. 遵循服務的指示來進行設定。
+   3. 遵循服務提供的指示來進行設定。
 
 4. 設計應用程式。
 
    1. 選取導覽功能表中的**使用者介面建置器**，以自訂應用程式的設計。
+   
+		**提示：**若要檢視「使用者介面建置器」的快速概觀，請在選取「使用者介面建置器」之後，選取導覽中的**顯示其運作方式**。
 
    2. 選取導覽中的**設計**標籤。
 
@@ -126,30 +125,4 @@ lastupdated: "2016-10-13"
 ## 下一步
 {: #tutorial_next}
 
-[試用看看吧！](http://new-console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
-
-
-# 相關鏈結
-{: #rellinks}
-
-<!-- links to internal services don't work
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
-
-## 部落格文章
-{: #general}
-* [部落格文章：Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [部落格文章：Introducing the next generation of the Bluemix Mobile dashboard](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
-* [部落格文章：Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [部落格文章：Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [部落格文章：Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
-## 指導教學與範例
-{: #samples}
-* [Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+[試用看看吧！](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}

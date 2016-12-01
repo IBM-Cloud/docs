@@ -8,9 +8,6 @@ lastupdated: "2016-10-14"
 # SDK
 {: #sdk}
 
-Última actualización: 14 de octubre de 2016
-{: .last-updated}
-
 Para añadir SDK de {{site.data.keyword.Bluemix}} Mobile Services a su app, elija los SDK que desee utilizar y, a continuación, configure el gestor de dependencia para extraer los SDK en la app.
 
 
@@ -24,9 +21,8 @@ Puede utilizar los siguientes SDK en la aplicación móvil para optimizar las pr
 {: #android_sdk}
 
 - [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core) 
-- [SDK de API de Analytics](https://github.com/ibm-bluemix-mobile-services/mfp-clientsdk-android-analyticsspec) 
-- [SDK de Analytics](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics) 
-- [SDK de Push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push) 
+- [{{site.data.keyword.mobileanalytics_short}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics) 
+- [{{site.data.keyword.mobilepushshort}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push) 
 - [SDK de autenticación de Facebook](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication) 
 - [SDK de autenticación de Google](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication) 
 
@@ -35,19 +31,18 @@ Puede utilizar los siguientes SDK en la aplicación móvil para optimizar las pr
 {: #ios_sdk}
 
 - [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
-- [SDK de API de Analytics](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics-api) 
-- [SDK de Analytics](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics) 
-- [SDK de Push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push) 
+- [{{site.data.keyword.mobileanalytics_short}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics) 
+- [{{site.data.keyword.mobilepushshort}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push) 
 - [SDK de autenticación de Facebook](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
 - [SDK de autenticación de Google](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication) 
-- [SDK de seguridad](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security) 
+- [{{site.data.keyword.amashort}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security) 
 
 
 ### Plugins de Cordova
 {: #cordova_plugin}
 
 - [Plugin de Core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
-- [Plugin de Push](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+- [Plugin de {{site.data.keyword.mobilepushshort}}](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
 
 
 ## SDK de servidor
@@ -56,17 +51,17 @@ Puede utilizar los siguientes SDK en la aplicación móvil para optimizar las pr
 Si tiene una aplicación de servidor de Java, NodeJS o Swift, puede utilizar los siguientes SDK para comunicarse con los servicios respectivos.
 
 
-### SDK del servidor Push
+### {{site.data.keyword.mobilepushshort}} SDK de servidor
 {: #push_sdk}
 
-- [SDK del servidor Java Push](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java) 
-- [SDK del servidor Swift Push](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift) 
-- [SDK del servidor NodeJS Push](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
+- [SDK del servidor Java de {{site.data.keyword.mobilepushshort}}](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java) 
+- [SDK del servidor Swift de {{site.data.keyword.mobilepushshort}}](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift) 
+- [SDK del servidor NodeJS de {{site.data.keyword.mobilepushshort}}](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
 
 
-### SDK del servidor MCA
+### SDK del servidor {{site.data.keyword.amashort}}
 {: #mca_sdk}
 
-- [SDK del servidor Swift MCA](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift)
+- [SDK del servidor Swift de {{site.data.keyword.amashort}}](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift)
 
 

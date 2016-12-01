@@ -13,9 +13,6 @@ lastupdated: "2016-10-18"
 # 服務
 {: #services}
 
-前次更新：2016 年 10 月 18 日
-{: .last-updated}
-
 從 {{site.data.keyword.Bluemix}} Mobile 儀表板的**服務**視圖中，您可以檢視現有服務，或建立新服務。Mobile 儀表板提供單一位置，來檢視專案所管理的所有 Bluemix 服務。  
 
 如果您從**服務**視圖中刪除服務，則會中斷服務與相關聯專案的連線。如果您要將服務重新連接至專案，請建立新的服務實例。
@@ -32,29 +29,29 @@ lastupdated: "2016-10-18"
 <tr>
 <td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}圖示"><br/>{{site.data.keyword.mobileanalytics_short}}（測試版）</td>
 <td valign="top">使用 {{site.data.keyword.mobileanalytics_full}} 服務來瞭解行動應用程式的執行方式及其使用方式。<br/><br/>
-深入閱讀 <a href="../services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 文件鏈結">{{site.data.keyword.mobileanalytics_short}} 文件</a>中的操作此服務。
+深入閱讀 <a href="/docs/services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 文件鏈結">{{site.data.keyword.mobileanalytics_short}} 文件</a>中的操作此服務。
 </td>
 </tr>
 <tr>
 <td><img src="images/authentication_icon
 .png" alt="{{site.data.keyword.amashort}} 服務圖示"><br/>{{site.data.keyword.amashort}}</td>
 <td valign="top">請使用 {{site.data.keyword.amafull}} 服務，將安全功能新增至行動應用程式。您可以配置用戶端鑑別及身分提供者，讓使用者可以利用其現有的 Google 或 Facebook 帳戶登入應用程式。<br/><br/>
-深入閱讀<a href="../services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} 文件鏈結">{{site.data.keyword.amashort}}文件</a>中的操作此服務。</td>
+深入閱讀<a href="/docs/services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} 文件鏈結">{{site.data.keyword.amashort}}文件</a>中的操作此服務。</td>
 </tr>
 <tr>
 <td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}} 服務圖示"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
 <td valign="top">請使用 {{site.data.keyword.mobilefoundation_long}} 服務來加快設定 {{site.data.keyword.mfp_full}} 環境，您可以從中開發、測試及操作企業行動應用程式。<br/><br/>
-深入閱讀 <a href="../services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} 文件鏈結">{{site.data.keyword.mobilefoundation_short}}文件</a>中的操作此服務。</td>
+深入閱讀 <a href="/docs/services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} 文件鏈結">{{site.data.keyword.mobilefoundation_short}}文件</a>中的操作此服務。</td>
 </tr>
 <tr>
 <td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}} 服務圖示"><br/>{{site.data.keyword.mqa}}</td>
 <td valign="top">請使用 {{site.data.keyword.mqafull}} 服務，來探索並設定應用程式的行動品質服務。您可以檢視行動應用程式的高階品質度量值，快速瞭解您正在處理的應用程式的問題。這些度量值包括當機、錯誤、使用者意見及使用者觀感等資訊。透過檢視這個應用程式資訊，您可以判定是否要進一步調查特定問題。<br/><br/>
-深入閱讀 <a href="../services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 文件鏈結">{{site.data.keyword.mqa}}文件</a>中的操作此服務。</td>
+深入閱讀 <a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 文件鏈結">{{site.data.keyword.mqa}}文件</a>中的操作此服務。</td>
 </tr>
 <tr>
 <td><img src="images/push_icon.png" alt="「推送通知」服務圖示"><br/>{{site.data.keyword.mobilepushshort}}</td>
 <td valign="top">請使用 {{site.data.keyword.mobilepushfull}} 服務，來傳送及管理目標設為 iOS 及 Android 平台的行動推送通知。此服務可管理應用程式使用者與其裝置、裝置平台的對映，並處理如何將推送通知分派給裝置。使用此服務，您可以將播送、單點播送（根據 userID、deviceID）以及根據推送通知的標籤（或主題）傳送至行動應用程式使用者。<br/><br/>
-深入閱讀 <a href="../services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 文件鏈結">{{site.data.keyword.mobilepushshort}}文件</a>中的操作此服務。</td>
+深入閱讀 <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 文件鏈結">{{site.data.keyword.mobilepushshort}}文件</a>中的操作此服務。</td>
 </table>
 
 ## 整合行動服務

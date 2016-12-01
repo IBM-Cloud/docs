@@ -2,16 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-21"
 
 ---
 {:new_window: target="_blank"}
 
 # Guía de aprendizaje: Iniciador de IU del Catálogo de almacenamiento
 {: #tutorial_store_catalog}
-
-Última actualización: 13 de octubre de 2016
-{: .last-updated}
 
 El Iniciador de IU del Catálogo de almacenamiento de {{site.data.keyword.Bluemix}} proporciona una estructura de aplicaciones de ventas básica que puede personalizar, y le proporciona puntos de integración para cada servicio de {{site.data.keyword.Bluemix_notm}} Mobile.
 
@@ -39,7 +36,7 @@ Para comenzar a utilizar rápidamente el Iniciador de IU del Catálogo de almace
 
    4. Especifique el nombre de proyecto y pulse **Crear**.
 
-2. Opcional: Añada Notificaciones Push.
+2. Opcional: Añada capacidad de notificaciones Push.
 
    1. Pulse **Añadir** para **Notificaciones Push** en la página **Visión general del proyecto**.
 
@@ -47,21 +44,23 @@ Para comenzar a utilizar rápidamente el Iniciador de IU del Catálogo de almace
 
    2. Especifique el nombre del servicio y pulse **Crear**.
 
-   3. Para iOS, [configure el Servicio de notificaciones Push de Apple](../services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Para iOS, [configure el Servicio de notificaciones Push de Apple](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
-   4. Para Android, [configure Google Cloud Messaging](../services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Para Android, [configure Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
 
-3. Opcional: Añada otros servicios.
+3. Opcional: Añada otras funciones.
 
-   1. Pulse **Añadir** para el servicio en la página **Visión general del proyecto**.
+   1. Pulse **Añadir** para la función en la página **Visión general del proyecto**.
 
    2. Especifique el nombre del servicio y pulse **Crear**.
 
-   3. Siga las instrucciones del servicio para configurarlo.
+   3. Siga las instrucciones suministradas con el servicio para configurarlo.
 
 4. Diseñe la aplicación.
 
    1. Seleccione **Creador de IU** en el menú de navegación para personalizar el diseño de la aplicación.
+   
+		**Consejo:** para ver una breve visión general del creador de IU, seleccione **Mostrar cómo funciona** en el panel de navegación después de seleccionar el creador de IU. 
 
    2. Seleccione el separador **Diseño** en la navegación.
 
@@ -100,7 +99,7 @@ Para comenzar a utilizar rápidamente el Iniciador de IU del Catálogo de almace
 
    8. Si ha alternado el conmutador para añadir IBM MobileFirst Platform Foundation a su proyecto en la pantalla *Valores*, se mostrará una selección **Foundation** en la navegación. Seleccione **Foundation** y complete la información necesaria específica para IBM MobileFirst Platform Foundation.
 
-   9. Seleccione **Publicar** en el menú de navegación para especificar la información final requerida para crear la aplicación móvil. Puede especificar el identificador de paquetes para iOS y el identificador de aplicaciones para Android.
+   9. Seleccione **Publicar** en el menú de navegación para especificar la información final necesaria para crear la aplicación móvil. Puede especificar el identificador de paquetes para iOS y el identificador de aplicaciones para Android. 
 
        Si está creando una aplicación de iOS, debe obtener el Identificador de paquetes, el Certificado de distribución como un archivo *.p12* y el Perfil de suministro como un archivo *.mobileprovision* desde el portal de suministro de Apple. El árbol debería crearse al mismo tiempo y con el mismo sistema con el que piensa utilizarlo al publicar la aplicación en la Apple Store. El Certificado de distribución y el Perfil de suministro deben basarse en el Identificador de paquetes. 	
 
@@ -126,30 +125,4 @@ Para comenzar a utilizar rápidamente el Iniciador de IU del Catálogo de almace
 ## Qué hacer a continuación
 {: #tutorial_next}
 
-[Pruébelo.](http://new-console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
-
-
-# Enlaces relacionados
-{: #rellinks}
-
-<!-- links to internal services don't work
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
-
-## Publicaciones del blog
-{: #general}
-* [Publicación del blog: Introducción del panel de control de Bluemix Mobile](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Publicación del blog: Introducción de la siguiente generación del panel de control de Bluemix Mobile](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
-* [Publicación del blog: Introducción de Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [Publicación del blog: Bluemix Mobile, Parte 1: Creación de una aplicación Store Catalog](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [Publicación del blog: Bluemix Mobile, Parte 2: Integración de programa de fondo de Bluemix personalizado en la app Store Catalog](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
-## Guías de aprendizaje y ejemplos
-{: #samples}
-* [Backend móvil para Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+[Pruébelo.](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}

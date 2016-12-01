@@ -13,9 +13,9 @@ lastupdated: "2016-10-13"
 # Obter código
 {: #Get_Code}
 
-Quando você tiver concluído a configuração e a instalação do seu projeto móvel com
-recursos de Push, Analítica e Autenticação, será possível fazer download do código que
-permite executar o código no Xcode ou no Android Studio. Seu projeto transferido por
+Ao concluir a configuração e a instalação do seu projeto móvel
+com os seus recursos selecionados, é possível fazer o download do
+código que permite executar o código no Xcode ou no Android Studio. Seu projeto transferido por
 download é pré-configurado com as dependências e credenciais do SDK necessárias para
 cada recurso que você configurou.
 
@@ -25,7 +25,7 @@ iniciador contém instruções. Visualize o arquivo `README.md` em um
 visualizador de Redução de preço para concluir a configuração.
 
 ### Ferramentas do desenvolvedor de pré-requisito
-{: prereq-dev-tools}
+{: #prereq-dev-tools}
 
 As ferramentas do desenvolvedor a seguir são necessárias quando você está
 trabalhando com código gerado a partir do painel do
@@ -36,7 +36,8 @@ trabalhando com código gerado a partir do painel do
 	* Instale o tempo de execução mais recente do [Android 7.0](https://www.android.com/versions/nougat-7-0/).
 
 #### iOS
-* Xcode 8,0 (recomendado)
+* [Xcode
+8.0](https://developer.apple.com/xcode/) (recomendado)
 	* Instale o tempo de execução mais recente do [iOS 10](http://www.apple.com/ios/ios-10/).
 * [Homebrew](http://brew.sh/)
 	* Ferramenta de linha de comandos para ajudar na instalação de outras ferramentas

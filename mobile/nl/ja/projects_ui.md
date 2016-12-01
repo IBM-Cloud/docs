@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
@@ -13,10 +13,7 @@ lastupdated: "2016-10-13"
 # UI スターターを使用したプロジェクトの作成
 {: #projects_ui}
 
-最終更新日: 2016 年 10 月 13 日
-{: .last-updated}
-
-{{site.data.keyword.Bluemix}} 「モバイル」ダッシュボードで UI スターターを使用して、{{site.data.keyword.Bluemix_notm}} 環境内でプロジェクトを作成できます。この手順は、コード・スターターを使用するプロジェクトには適用されません。コード・スターターを使用する場合の手順については、[コード・スターターを使用したプロジェクトの作成](projects_code.html)を参照してください。
+{{site.data.keyword.Bluemix}}「モバイル」ダッシュボードで [UI スターター](starters.html#UI_Starter)を使用して、{{site.data.keyword.Bluemix_notm}} 環境内でプロジェクトを作成できます。この手順は、コード・スターターを使用するプロジェクトには適用されません。コード・スターターを使用する場合の手順については、[コード・スターターを使用したプロジェクトの作成](projects_code.html)を参照してください。
 {:shortdesc}
 
 UI スターターを使用してプロジェクトを作成するには、以下のステップを実行します。
@@ -39,7 +36,7 @@ UI スターターを使用してプロジェクトを作成するには、以�
 	
 2. **「プロジェクト概要 (Project Overview)」**画面で選択を行います。**「プロジェクト概要 (Project Overview)」**画面には、プロジェクトについての情報と、プロジェクトに追加できるオプション機能 (Push Notifications (プッシュ通知) など) が表示されます。  
 
-	1. オプション: **「追加」**をクリックして、リストされた機能のいずれかをプロジェクトに追加します。サービスの**「サービス名」**を編集し、**「作成」**をクリックします。
+	1. オプション: **「追加」**をクリックして、リストされた機能のいずれかをプロジェクトに追加します。サービスの**「サービス名」**を編集し、**「作成」**をクリックします。サービスをプロジェクトに追加するときは、そのサービスの {{site.data.keyword.Bluemix_notm}} ページにリンクします。そのサービスに必要な情報を入力して、サービスを構成します。
 	
 	2. オプション: プロジェクトに追加したいその他の機能について、ステップ *a* を繰り返します。 
 
@@ -47,7 +44,9 @@ UI スターターを使用してプロジェクトを作成するには、以�
 
    注意: コード・スターターにはカスタマイズ可能なユーザー・インターフェースはないため、*「設計」*タブは使用可能ではありません。
 
-    1. アプリの設計をカスタマイズするため、ナビゲーション・メニューで**「UI ビルダー (UI Builder)」**を選択します。<!--Most of the design screens have sections that begin with a navigation on the left of the screen, and the sections more specific as it moves to the right side preview of your app. Note: Not all design screens in the starters have the same sections.--> 
+    1. アプリの設計をカスタマイズするため、ナビゲーション・メニューで**「UI ビルダー (UI Builder)」**を選択します。 
+	
+		**ヒント:** UI ビルダーの概要を表示するには、UI ビルダーを選択した後、ナビゲーションで**「動作の仕組みの表示 (Show me how it works)」**を選択します。 
 	
 	2. **「画面 (Screens)」**タブから、アプリのレイアウトをカスタマイズします。
 	

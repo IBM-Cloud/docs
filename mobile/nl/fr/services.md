@@ -13,9 +13,6 @@ lastupdated: "2016-10-18"
 # Services
 {: #services}
 
-Dernière mise à jour : 18 octobre 2016
-{: .last-updated}
-
 La vue **Services** du tableau de bord {{site.data.keyword.Bluemix}} Mobile vous permet de visualiser vos services existants ou de créer de nouveaux services. Le tableau de bord Mobile est un emplacement unique qui permet d'afficher tous les services Bluemix gérés par les projets.  
 
 Si vous supprimez des services de la vue **Services**, ces derniers sont déconnectés du projet qui leur est associé. Vous devez alors créer une nouvelle instance de service si vous voulez reconnecter le service au projet.
@@ -31,29 +28,29 @@ Le tableau suivant décrit les services {{site.data.keyword.Bluemix_notm}} Mobil
 <th>Description</th>
 <tr>
 <td> <img src="images/mobile_analytics_icon.png" alt="icône {{site.data.keyword.mobileanalytics_short}}"><br/>{{site.data.keyword.mobileanalytics_short}} (Bêta)</td>
-<td valign="top">Le service {{site.data.keyword.mobileanalytics_full}} permet d'obtenir plus de détails sur les performances et l'utilisation de vos applications mobiles.<br/><br/> Découvrez plus en détails le fonctionnement de ce service dans la <a href="../services/mobileanalytics/index.html" alt="lien vers la documentation {{site.data.keyword.mobileanalytics_short}}">documentation {{site.data.keyword.mobileanalytics_short}}</a>.
+<td valign="top">Le service {{site.data.keyword.mobileanalytics_full}} permet d'obtenir plus de détails sur les performances et l'utilisation de vos applications mobiles.<br/><br/> Découvrez plus en détails le fonctionnement de ce service dans la <a href="/docs/services/mobileanalytics/index.html" alt="lien vers la documentation {{site.data.keyword.mobileanalytics_short}}">documentation {{site.data.keyword.mobileanalytics_short}}</a>.
 </td>
 </tr>
 <tr>
 <td><img src="images/authentication_icon
 .png" alt="icône du service {{site.data.keyword.amashort}}"><br/>{{site.data.keyword.amashort}}</td>
-<td valign="top">Utilisez le service {{site.data.keyword.amafull}} pour ajouter une fonctionnalité de sécurité à votre application mobile. Vous pouvez configurer l'authentification et les fournisseurs d'identité pour que les utilisateurs puissent se connecter dans l'application avec leurs comptes Google ou Facebook existants.<br/><br/>
-Découvrez plus en détails le fonctionnement de ce service dans la <a href="../services/mobileaccess/index.html" alt="lien vers la documentation {{site.data.keyword.amashort}}">documentation {{site.data.keyword.amashort}}</a>.</td>
+<td valign="top">Utilisez le service {{site.data.keyword.amafull}}  pour ajouter des fonctionnalités de sécurité à votre application mobile. Vous pouvez configurer l'authentification et les fournisseurs d'identité pour que les utilisateurs puissent se connecter dans l'application avec leurs comptes Google ou Facebook existants.<br/><br/>
+Découvrez plus en détails le fonctionnement de ce service dans la <a href="/docs/services/mobileaccess/index.html" alt="lien vers la documentation {{site.data.keyword.amashort}}">documentation {{site.data.keyword.amashort}}</a>.</td>
 </tr>
 <tr>
 <td><img src="images/MFPFoundation_icon.png" alt="icône du service {{site.data.keyword.mobilefoundation_short}}"><br/>{{site.data.keyword.mobilefoundation_short}}</td>
 <td valign="top">Utilisez le service {{site.data.keyword.mobilefoundation_long}} pour accélérer la configuration d'un environnement {{site.data.keyword.mfp_full}} depuis lequel vous pouvez développer, tester et utiliser des applications mobiles d'entreprises.<br/><br/>
-Découvrez plus en détails le fonctionnement de ce service dans la <a href="../services/mobilefoundation/index.html" alt="lien vers la documentation {{site.data.keyword.mobilefoundation_short}}">documentation {{site.data.keyword.mobilefoundation_short}} </a>.</td>
+Découvrez plus en détails le fonctionnement de ce service dans la <a href="/docs/services/mobilefoundation/index.html" alt="lien vers la documentation {{site.data.keyword.mobilefoundation_short}}">documentation {{site.data.keyword.mobilefoundation_short}}</a>.</td>
 </tr>
 <tr>
 <td><img src="images/mqa_icon.png" alt="icône du service {{site.data.keyword.mqa}}"><br/>{{site.data.keyword.mqa}}</td>
 <td valign="top">Utilisez le service {{site.data.keyword.mqafull}} pour découvrir et configurer des services de qualité mobile pour vos applications. Vous pouvez afficher des mesures de qualité de haut niveau pour vos applications mobiles afin de pouvoir comprendre rapidement les problèmes des applications sur lesquelles vous travaillez. Ces mesures incluent des informations sur les pannes, les bogues, les commentaires des utilisateurs et leur sentiment. En prenant connaissance de ces informations, vous pouvez déterminer s'il est nécessaire d'analyser de façon plus approfondie certains problèmes spécifiques.<br/><br/>
-Découvrez plus en détails le fonctionnement de ce service dans la <a href="../services/MobileQualityAssurance/index.html" alt="lien vers la documentation {{site.data.keyword.mqa}}">documentation {{site.data.keyword.mqa}}</a>.</td>
+Découvrez plus en détails le fonctionnement de ce service dans la <a href="/docs/services/MobileQualityAssurance/index.html" alt="lien vers la documentation {{site.data.keyword.mqa}}">documentation {{site.data.keyword.mqa}}</a>.</td>
 </tr>
 <tr>
 <td><img src="images/push_icon.png" alt="Icône Push Notifications"><br/>{{site.data.keyword.mobilepushshort}}</td>
 <td valign="top">Utilisez le service {{site.data.keyword.mobilepushfull}} pour envoyer et gérer des notifications push mobiles ciblant les plateformes iOS et Android. Il gère le mappage des utilisateurs de votre application à leurs périphériques ainsi que la plateforme des périphériques, et traite la distribution des notifications push aux périphériques. Avec ce service, vous pouvez envoyer des diffusions, des monodiffusions (en fonction de l'ID utilisateur ou de l'ID de périphérique) et des étiquettes (ou rubriques) en fonction de notifications push aux utilisateurs de votre application mobile.<br/><br/>
-Découvrez plus en détails le fonctionnement de ce service dans la <a href="../services/mobilepush/index.html" alt="lien vers la documentation {{site.data.keyword.mobilepushshort}}">documentation {{site.data.keyword.mobilepushshort}}</a>.</td>
+Découvrez plus en détails le fonctionnement de ce service dans la <a href="/docs/services/mobilepush/index.html" alt="lien vers la documentation {{site.data.keyword.mobilepushshort}}">documentation {{site.data.keyword.mobilepushshort}}</a>.</td>
 </table>
 
 ## Intégration des services mobiles

@@ -12,7 +12,7 @@ copyright:
 Última actualización: 27 de mayo de 2016
 {: .last-updated}
 
-Si desea empezar a trabajar con una aplicación para Cordova nueva, puede utilizar la app HelloWorld. Esta app muestra cómo conectar con el backend móvil en {{site.data.keyword.Bluemix}} desde una app móvil sin autenticación. La app la tiene instalado el SDK. Cuando esté listo, puede obtener las bibliotecas específicas que desee utilizar en la app.
+Si desea empezar a trabajar con una nueva aplicación Cordova nueva, puede utilizar la app HelloWorld. Esta app muestra cómo conectar con el programa de fondo en {{site.data.keyword.Bluemix}} desde una app para móvil sin autenticación. La app ya tiene instalado el SDK. Cuando esté listo, puede obtener las bibliotecas específicas que desee utilizar en la app.
 
 1. Cree el programa de fondo móvil en {{site.data.keyword.Bluemix_notm}}.
 

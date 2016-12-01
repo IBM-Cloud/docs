@@ -13,9 +13,6 @@ lastupdated: "2016-10-18"
 # 서비스
 {: #services}
 
-마지막 업데이트 날짜: 2016년 10월 18일
-{: .last-updated}
-
 {{site.data.keyword.Bluemix}} 모바일 대시보드 **서비스** 보기에서 기존 서비스를 보거나 새 서비스를 작성할 수 있습니다. 모바일 대시보드는 프로젝트에서 관리 중인 모든 Bluemix 서비스를 볼 수 있는 단일 위치를 제공합니다.   
 
 **서비스** 보기에서 서비스를 삭제하는 경우 서비스와 연관된 프로젝트에서 서비스 연결을 끊습니다. 프로젝트에 서비스를 다시 연결하려면 새 서비스 인스턴스를 작성하십시오. 
@@ -32,29 +29,29 @@ lastupdated: "2016-10-18"
 <tr>
 <td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} 아이콘"><br/>{{site.data.keyword.mobileanalytics_short}}(베타)</td>
 <td valign="top">{{site.data.keyword.mobileanalytics_full}} 서비스를 사용하여 모바일 앱의 성능과 사용 방법에 대한 통찰을 얻을 수 있습니다.<br/><br/>
-이 서비스 운영에 대한 자세한 정보는 <a href="../services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 문서 링크">{{site.data.keyword.mobileanalytics_short}} 문서</a>를 살펴보십시오.
+이 서비스 운영에 대한 자세한 정보는 <a href="/docs/services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 문서 링크">{{site.data.keyword.mobileanalytics_short}} 문서</a>를 살펴보십시오.
 </td>
 </tr>
 <tr>
 <td><img src="images/authentication_icon
 .png" alt="{{site.data.keyword.amashort}} 서비스 아이콘"><br/>{{site.data.keyword.amashort}}</td>
 <td valign="top">{{site.data.keyword.amafull}} 서비스를 사용하여 모바일 앱에 보안 기능을 추가할 수 있습니다. 기존의 Google 또는 Facebook 계정을 사용하여 앱에 로그인할 수 있도록 클라이언트 인증 및 ID 제공자를 구성할 수 있습니다.<br/><br/>
-이 서비스 운영에 대한 자세한 정보는 <a href="../services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} 문서 링크">{{site.data.keyword.amashort}} 문서</a>를 살펴보십시오.</td>
+이 서비스 운영에 대한 자세한 정보는 <a href="/docs/services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} 문서 링크">{{site.data.keyword.amashort}} 문서</a>를 살펴보십시오.</td>
 </tr>
 <tr>
 <td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}} 서비스 아이콘"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
 <td valign="top">{{site.data.keyword.mobilefoundation_long}} 서비스를 사용하여 엔터프라이즈 모바일 앱을 개발하고, 테스트하고, 운영할 수 있는 {{site.data.keyword.mfp_full}} 환경을 신속하게 설정할 수 있습니다.<br/><br/>
-이 서비스 운영에 대한 자세한 정보는 <a href="../services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} 문서 링크">{{site.data.keyword.mobilefoundation_short}} 문서</a>를 살펴보십시오.</td>
+이 서비스 운영에 대한 자세한 정보는 <a href="/docs/services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} 문서 링크">{{site.data.keyword.mobilefoundation_short}} 문서</a>를 살펴보십시오.</td>
 </tr>
 <tr>
 <td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}} 서비스 아이콘"><br/>{{site.data.keyword.mqa}}</td>
 <td valign="top">{{site.data.keyword.mqafull}} 서비스를 사용하여 앱에 대한 모바일 품질 서비스를 검색 및 설정할 수 있습니다. 모바일 앱에 대한 상위 레벨의 품질 메트릭을 보고 작업 중인 앱의 문제를 신속하게 파악할 수 있습니다. 이러한 메트릭에는 충돌, 버그, 사용자 피드백 및 사용자 감성에 대한 정보가 포함됩니다. 앱에 대한 이 정보를 보고 특정 문제를 더 자세히 조사할지 여부를 결정할 수 있습니다.<br/><br/>
-이 서비스 운영에 대한 자세한 정보는 <a href="../services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 문서 링크">{{site.data.keyword.mqa}} 문서</a>를 살펴보십시오. </td>
+이 서비스 운영에 대한 자세한 정보는 <a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 문서 링크">{{site.data.keyword.mqa}} 문서</a>를 살펴보십시오. </td>
 </tr>
 <tr>
 <td><img src="images/push_icon.png" alt="Push Notifications 서비스 아이콘"><br/>{{site.data.keyword.mobilepushshort}}</td>
 <td valign="top">{{site.data.keyword.mobilepushfull}} 서비스를 사용하여 iOS 및 Android 플랫폼을 대상으로 하는 모바일 푸시 알림을 전송 및 관리할 수 있습니다. 이 서비스에서는 디바이스 및 디바이스 플랫폼에 대한 애플리케이션 사용자의 맵핑을 관리하고 디바이스에 푸시 알림을 디스패치하는 작업을 처리합니다. 이 서비스를 사용하면 푸시 알림을 기반으로 모바일 애플리케이션 사용자에게 브로드캐스트, 유니캐스트(사용자 ID, 디바이스 ID 기반) 및 태그(또는 주제)를 보낼 수 있습니다.<br/><br/>
-이 서비스 운영에 대한 자세한 정보는 <a href="../services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 문서 링크">{{site.data.keyword.mobilepushshort}} 문서</a>를 살펴보십시오.</td>
+이 서비스 운영에 대한 자세한 정보는 <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 문서 링크">{{site.data.keyword.mobilepushshort}} 문서</a>를 살펴보십시오.</td>
 </table>
 
 ## 모바일 서비스 통합
