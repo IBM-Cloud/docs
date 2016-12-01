@@ -13,12 +13,12 @@ lastupdated: "2016-10-13"
 # Richiama codice
 {: #Get_Code}
 
-Dopo aver completato la configurazione del tuo progetto mobile con le funzionalità Push, Analytics e Authentication, puoi scaricare il codice che ti abilita ad eseguire il codice in Xcode o Android Studio. Il progetto scaricato è preconfigurato con le credenziali e le dipendenze SDK richieste per ogni funzionalità che hai configurato.
+Dopo aver completato la configurazione del tuo progetto mobile con le funzionalità selezionate puoi scaricare il codice che ti abilita ad eseguire il codice in Xcode o Android Studio. Il progetto scaricato è preconfigurato con le credenziali e le dipendenze SDK richieste per ogni funzionalità che hai configurato.
 
 Avrai bisogno di completare le credenziali per i servizi che non sono configurabili nel tuo progetto scaricato. Il file `README.md` per il progetto starter contiene le istruzioni. Visualizza il file `README.md` in un visualizzatore Markdown per completare la configurazione.
 
 ### Strumenti per sviluppatori prerequisiti
-{: prereq-dev-tools}
+{: #prereq-dev-tools}
 
 I seguenti strumenti per sviluppatori sono necessari quando stai lavorando con il codice generato dal dashboard {{site.data.keyword.Bluemix_notm}} Mobile:
 
@@ -27,7 +27,7 @@ I seguenti strumenti per sviluppatori sono necessari quando stai lavorando con i
 	* Installa l'ultimo runtime [Android 7.0](https://www.android.com/versions/nougat-7-0/).
 
 #### iOS
-* Xcode 8.0 (raccomandato)
+* [Xcode 8.0](https://developer.apple.com/xcode/) (raccomandato)
 	* Installa l'ultimo runtime [iOS 10](http://www.apple.com/ios/ios-10/).
 * [Homebrew](http://brew.sh/)
 	* Uno strumento di riga di comando per assisterti durante l'installazione di altri runtime e strumenti, come CocoaPods e Carthage, per gli sviluppatori Apple.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
@@ -10,13 +10,10 @@ lastupdated: "2016-10-13"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Projekt mit einem Benutzerschnittstellenstarter erstellen
+# Benutzerschnittstellenstarter zur Erstellung eines Projekts verwenden
 {: #projects_ui}
 
-Letzte Aktualisierung: 13. Oktober 2016
-{: .last-updated}
-
-Sie können einen Benutzerschnittstellenstarter in einem {{site.data.keyword.Bluemix}} Mobile-Dashboard verwenden, um ein Projekt in der {{site.data.keyword.Bluemix_notm}}-Umgebung zu erstellen. Dieses Verfahren ist nicht auf Projekte anwendbar, die Code-Starter verwenden. Anweisungen zu Code-Startern finden Sie unter [Projekt mit einem Code-Starter erstellen](projects_code.html).
+Sie können einen [Benutzerschnittstellenstarter](starters.html#UI_Starter) in einem {{site.data.keyword.Bluemix}} Mobile-Dashboard verwenden, um ein Projekt in der {{site.data.keyword.Bluemix_notm}}-Umgebung zu erstellen. Dieses Verfahren ist nicht auf Projekte anwendbar, die Code-Starter verwenden. Anweisungen zu Code-Startern finden Sie unter [Projekt mit einem Code-Starter erstellen](projects_code.html).
 {:shortdesc}
 
 Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnittstellenstarter zu erstellen:
@@ -37,9 +34,9 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnitt
 	
 	4. Geben Sie einen Namen für Ihr Projekt ein und wählen Sie **Erstellen** aus.
 	
-2. Treffen Sie Ihre Auswahlen in der Anzeige **Projektübersicht**. In der Anzeige **Projektübersicht** werden Informationen zu Ihrem Projekt und den optionalen Leistungsmerkmalen angezeigt, die Sie Ihrem Projekt hinzufügen können, z. B. Push Notifications.  
+2. Treffen Sie Ihre Auswahlen in der Anzeige **Projektübersicht**.  In der Anzeige **Projektübersicht** werden Informationen zu Ihrem Projekt und den optionalen Leistungsmerkmalen angezeigt, die Sie Ihrem Projekt hinzufügen können, z. B. Push Notifications.  
 
-	1. Optional: Wählen Sie **Hinzufügen** aus, um Ihrem Projekt eins der aufgelisteten Leistungsmerkmale hinzuzufügen. Bearbeiten Sie **Servicename** für Ihren Service und klicken Sie auf **Erstellen**.
+	1. Optional: Wählen Sie **Hinzufügen** aus, um Ihrem Projekt eins der aufgelisteten Leistungsmerkmale hinzuzufügen. Bearbeiten Sie **Servicename** für Ihren Service und klicken Sie auf **Erstellen**. Wenn Sie Ihrem Projekt Services hinzufügen, erstellen Sie eine Verknüpfung mit der {{site.data.keyword.Bluemix_notm}}-Seite für diesen Service. Konfigurieren Sie den Service durch Bereitstellen der Informationen, die für den Service erforderlich sind.
 	
 	2. Optional: Wiederholen Sie Schritt *a* für alle zusätzlichen Leistungsmerkmale, die Sie Ihrem Projekt hinzufügen möchten. 
 
@@ -47,7 +44,9 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnitt
 
    Hinweis: Da die Code-Starter nicht über eine anpassbare Benutzerschnittstelle verfügen, steht die Registerkarte *Design* nicht zur Verfügung.
 
-    1. Wählen Sie im Navigationsmenü die Option **Benutzerschnittstellenbuilder** aus, um das Design Ihrer App anzupassen.<!--Most of the design screens have sections that begin with a navigation on the left of the screen, and the sections more specific as it moves to the right side preview of your app. Note: Not all design screens in the starters have the same sections.--> 
+    1. Wählen Sie im Navigationsmenü die Option **Benutzerschnittstellenbuilder** aus, um das Design Ihrer App anzupassen. 
+	
+		**Tipp:** Für eine Schnellansicht des Benutzerschnittstellenbuilders müssen Sie nach der Auswahl des Benutzerschnittstellenbuilders in der Navigation die Option zum Anzeigen der Funktion auswählen. 
 	
 	2. Passen Sie das Layout Ihrer App über die Registerkarte **Anzeigen** an.
 	

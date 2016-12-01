@@ -2,17 +2,15 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-11-08"
 
 ---
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.Bluemix}} 모바일 대시보드
 {: #mobile}
-마지막 업데이트 날짜: 2016년 10월 13일
-{: .last-updated}
 
-{{site.data.keyword.Bluemix}} 모바일 대시보드에서는 {{site.data.keyword.Bluemix_notm}} 모바일 애플리케이션을 작성하고 관리하는 데 필요한 {{site.data.keyword.Bluemix_notm}} 기능을 관리하는 단일 위치를 제공합니다. 모바일 대시보드에서는 모바일 개발자에게 필요한 가장 공통적인 서비스를 모바일 개발자에게 최적화된 하나의 연결된 경험으로 제공합니다. 
+{{site.data.keyword.Bluemix}} 모바일 대시보드에서는 {{site.data.keyword.Bluemix_notm}} 모바일 애플리케이션을 작성하고 관리하는 데 필요한 {{site.data.keyword.Bluemix_notm}} 기능을 관리하는 단일 위치를 제공합니다. [프로젝트](projects.html) 개념을 통해 모바일 앱을 관리할 수 있습니다. 모바일 대시보드에서는 모바일 개발자에게 필요한 가장 공통적인 서비스를 모바일 개발자에게 최적화된 하나의 연결된 경험으로 제공합니다. 
 
 모바일 개발자는 모바일 대시보드에서 다양한 스타터를 사용해 프로젝트를 작성하고 주요 {{site.data.keyword.Bluemix_notm}} 최적화 서비스를 작성하여 프로젝트에 연결하며 SDK를 사용해 작업 코드를 빨리 다운로드할 수 있습니다. SDK는 몇 분 내에 디바이스에서 실행할 수 있는 기능 신임 정보와 완전히 통합됩니다. 애플리케이션이 실행 중이며 푸시, 분석 및/또는 모바일 인증 기능을 설정하고 구성한 경우 프로젝트로 돌아가 애플리케이션 사용자와의 관계를 모니터하고 관리할 수 있습니다. 
 
@@ -31,9 +29,9 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 ## 시작하기
 {: getting-started-mobiledashboard}
 
-대시보드에서 프로젝트 개념을 통해 모바일 앱을 관리할 수 있습니다. **프로젝트 작성**을 클릭하여 **시작하기** 페이지에서 프로젝트를 작성하십시오. 앱 작성을 빠르게 시작할 수 있는 [스타터](starters.html) 옵션이 제공됩니다. 
+**프로젝트 작성**을 클릭하여 **시작하기** 페이지에서 프로젝트를 작성하십시오. 앱 작성을 빠르게 시작할 수 있는 [스타터](starters.html) 옵션이 제공됩니다. 
 
-[프로젝트](projects.html) 보기를 통해 한 곳에서 모든 프로젝트를 관리할 수 있습니다. 프로젝트에는 모바일 앱에 필요한 모든 기능 정보가 보유되어 있습니다. 프로젝트에서 푸시, 분석, 인증 모바일 서비스를 간편하게 통합하고 관리할 수 있으며 추후에 추가 기능이 제공됩니다. 
+프로젝트 페이지를 선택하여 한 곳에서 모든 프로젝트를 보고 관리할 수 있습니다. 프로젝트에는 모바일 앱과 통합되는 (그리고 통합 가능한) 모든 기능에 대한 정보가 포함됩니다. 사용 가능한 경우, 프로젝트에서 푸시, 분석, 인증 모바일 서비스를 간편하게 통합하고 관리할 수 있으며 추후에 추가 기능이 제공됩니다. 
 
 [서비스](services.html) 보기는 기존 모바일 서비스 인스턴스의 운영 뷰를 표시합니다. 모바일 대시보드는 모바일 개발자와 모바일 앱 관리 사용자를 지원합니다. 
 
@@ -41,32 +39,26 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 <!--You can also discover the {{site.data.keyword.Bluemix_notm}} Mobile offerings, link to the Mobile documentation and get answers from our {{site.data.keyword.Bluemix_notm}} Mobile services community on Stack Overflow.-->
 
 
-자주 방문하여 추가되는 새 기능을 확인하십시오. 
-
-
 # 관련 링크
 {: #rellinks}
 
-<!-- links to internal services don't work
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
+## 튜토리얼 및 샘플
+{: #samples}
 
-<!--## Blog Posts
-{: #general}
--->
+* [샘플: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
 * [블로그 게시물: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [블로그 게시물: Introducing the next generation of the Bluemix Mobile dashboard](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
+* [블로그 게시물: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
 * [블로그 게시물: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [블로그 게시물: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [블로그 게시물: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
+* [developerWorks 레시피: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
+* [동영상 튜토리얼](https://www.youtube.com/channel/UCRW4t4Hzm9gzuiq5naERkCw){: new_window}
 
-<!--## Tutorials and Samples
-{: #samples}
--->
-* [샘플: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+## 관련 링크
+{: #general}
+
+* [Mobile Analytics(베타)](/docs/services/mobileanalytics/index.html){: new_window}
+* [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
+* [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
+* [Mobile Quality Assurance](/docs/services/MobileQualityAssurance/index.html){: new_window}
+* [Push Notifications](/docs/services/mobilepush/index.html){: new_window}

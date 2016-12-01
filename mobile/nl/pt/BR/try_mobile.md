@@ -9,9 +9,6 @@ lastupdated: "2016-10-19"
 # Criando aplicativos móveis a partir do modelo {{site.data.keyword.mobilefirstbp}} Starter
 {: #try_mobile}
 
-Última atualização: 19 de outubro de 2016
-{: .last-updated}
-
 É possível usar cada um dos Serviços móveis do {{site.data.keyword.Bluemix}} de forma independente. Também é possível usá-los
 juntos, com o modelo do {{site.data.keyword.mobilefirstbp}} Starter, para se beneficiar ao máximo.
 
@@ -54,12 +51,13 @@ ID do app é usado pela plataforma como contexto para funções comuns, como med
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}} ícone de serviço"> <b>{{site.data.keyword.amashort}}</b><br/>Use o serviço {{site.data.keyword.amafull}} para proteger aplicativos Node.js e Java for Liberty hospedados no {{site.data.keyword.Bluemix_notm}}. Ao
-instrumentar seu aplicativo móvel com o {{site.data.keyword.amashort}} SDK, é possível exigir que os usuários efetue login para acessar o Node.js ou serviços móveis do {{site.data.keyword.Bluemix_notm}}. Além das capacidades de segurança, o {{site.data.keyword.amashort}} também coleta dados de analítica, de modo que é possível monitorar o desempenho do aplicativo móvel e coletar logs do cliente e estatísticas de uso. </td>
-<td valign="top"><b>Provedores de identidade do usuário</b> <br/>É possível usar os provedores de identidade a seguir: <ul><li>Facebook</li><li>Google</li></ul></td>
+<td><img src="images/authentication_icon.png" alt="{{site.data.keyword.amashort}} ícone de serviço"> <b>{{site.data.keyword.amashort}}</b><br/>Use o serviço {{site.data.keyword.amafull}} para proteger aplicativos Node.js e Java for Liberty hospedados no {{site.data.keyword.Bluemix_notm}}. Ao
+instrumentar o seu aplicativo móvel com o SDK do {{site.data.keyword.amashort}}, será possível requerer que os usuários efetuem login para acessar o Node.js ou os serviços móveis do {{site.data.keyword.Bluemix_notm}}.
+<!-- In addition to security capabilities, {{site.data.keyword.amashort}} also gathers analytics data, so that you can monitor your mobile application performance and collect client logs and usage statistics.--> </td>
+<td valign="top"><b>Provedores de identidade do usuário</b> <br/>É possível usar os provedores de identidade a seguir: <ul><li>Facebook</li><li>Google</li><li> Customizado </li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Ícone do serviço de notificações push">
+<td><img src="images/push_icon.png" alt="Ícone do serviço de notificações push">
 <b>{{site.data.keyword.mobilepushshort}}</b><br/>O serviço
 {{site.data.keyword.mobilepushfull}} fornece uma plataforma unificada para enviar
 e gerenciar notificações push destinadas a plataformas móveis (iOS & Android) e

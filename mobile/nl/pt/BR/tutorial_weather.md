@@ -2,16 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-21"
 
 ---
 {:new_window: target="_blank"}
 
 # Tutorial - Iniciador de código de clima
 {: #tutorial_weather}
-
-Última atualização: 13 de outubro de 2016
-{: .last-updated}
 
 O Iniciador de código do {{site.data.keyword.Bluemix}} Mobile para clima
 exibe um projeto de andaime para começar a trabalhar com clima, usando Swift, e inclui
@@ -35,8 +32,7 @@ Para colocar em funcionamento rapidamente o Iniciador de código de clima, siga 
 
 1. Crie um projeto do painel Móvel no {{site.data.keyword.Bluemix_notm}}.
 
-   1. Na página **Introdução** no painel Móvel, clique em
-**Criar projeto**.
+   1. Na página **Introdução** no painel Móvel, clique em **Criar projeto**.
 
       Como alternativa, clique em **Novo projeto** na página **Projetos**.
 
@@ -46,34 +42,45 @@ Para colocar em funcionamento rapidamente o Iniciador de código de clima, siga 
 
    4. Insira o nome do projeto e clique em **Criar**.
 
-2. Opcional: Inclua notificações push.
+2. Opcional: inclua o recurso Notificações push.
 
-   1. Clique em **Incluir** para **Notificações
-push** na página **Visão geral do projeto**.
+   1. Clique em **Incluir** para **Notificações push** na página **Visão geral do projeto**.
 
-      Como alternativa, clique em **Criar** na página
-**Notificações push**.
+      Como alternativa, clique em **Criar** na página **Notificações push**.
 
    2. Insira o nome do serviço e clique em **Criar**.
 
-   3. Para iOS,
-[configure o Serviço de
-notificação push da Apple](../services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Para iOS, [configure o Serviço de notificação push da Apple](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
    4. Para Android,
 [configure o Sistema de
-mensagens em nuvem do Google](../services/mobilepush/t_push_provider_android.html){: new_window}.
+mensagens em nuvem do Google](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   
+3. Opcional: inclua o recurso de Analítica.
 
-3. Opcional: Inclua outros serviços.
+   1. Clique em **Incluir** para **Analítica** na página **Visão geral do projeto**.
 
-   1. Clique em **Incluir** para o serviço na página
-**Visão geral do projeto**.
+      Como alternativa, é possível clicar em **Criar** a partir da página **Analítica**.
 
    2. Insira o nome do serviço e clique em **Criar**.
+   
+   3. Desligue o **Modo demo** para ver os seus lados de analítica após executar o seu aplicativo.
 
-   3. Siga as instruções do serviço para configurá-lo.
+4. Opcional: inclua o recurso Autenticação.
 
-4. Faça download do seu projeto.
+   1. Clique em **Incluir** para **Autenticação** na página **Visão geral do projeto**.
+
+      Como alternativa, é possível selecionar **Criar** na página **Autenticação**.
+
+   2. Insira o nome do serviço e clique em **Criar**.
+   
+   3. Alterne em **Autenticação**.
+   
+   4. Selecione seu provedor de identidade e insira as informações requeridas para configurá-lo. É possível ativar apenas um provedor de identidade.
+
+   5. Consulte [Introdução ao Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window} para obter mais informações sobre a configuração da autenticação.
+
+5. Faça download do seu projeto.
 
    1. Clique em **Código** e selecione seu idioma preferencial.
 
@@ -85,33 +92,4 @@ mensagens em nuvem do Google](../services/mobilepush/t_push_provider_android.htm
 ## O que Fazer a Seguir
 {: #tutorial_next}
 
-[Teste-o!](http://new-console.{DomainName}/mobile/create-project?starter=fad1d49e-f7b6-3aff-9b53-14673fca4399){: new_window}
-
-
-# Links relacionados
-{: #rellinks}
-
-<!-- links to internal services don't work
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
-
-## Postagens do blog
-{: #general}
-* [Postagem do blog: Introducing the Bluemix Mobile
-dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Postagem do blog: Introducing the next generation of the Bluemix Mobile dashboard](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
-* [Postagem do blog: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [Postagem do blog: Bluemix
-Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [Postagem do blog: Bluemix
-Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
-## Tutoriais e amostras
-{: #samples}
-* [Backend móvel para Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+[Teste-o!](http://console.{DomainName}/mobile/create-project?starter=fad1d49e-f7b6-3aff-9b53-14673fca4399){: new_window}

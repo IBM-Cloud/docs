@@ -130,7 +130,7 @@ copyright:
 
 ## 後續步驟：
 {: #next}
-如需如何取得 SDK 並整合到您的行動式應用程式的相關資訊，請參閱：
+如需如何取得 SDK 並整合到您的行動應用程式的相關資訊，請參閱：
 * [Mobile Client Access：設定 Cordova 外掛程式](../../services/mobileaccess/getting-started-cordova.html)
 * [Push Notifications：設定 Cordova 外掛程式](../../services/mobilepush/enablepush_cordova.html#setup_sdk_cordova)
 

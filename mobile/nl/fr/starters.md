@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-21"
 
 ---
 {:new_window: target="_blank"}
@@ -13,16 +13,13 @@ lastupdated: "2016-10-13"
 # Modules de démarrage
 {: #starters}
 
-Dernière mise à jour : 13 octobre 2016
-{: .last-updated}
-
 Le tableau de bord {{site.data.keyword.Bluemix}} Mobile vous
 permet de créer votre projet à l'aide d'un module de démarrage pour l'interface
-utilisateur ou un module de démarrage pour le code. 
+utilisateur ou un module de démarrage pour le code.
+
 
 ## Module de démarrage pour l'interface utilisateur
 {: #UI_Starter}
-
 
 Les développeurs d'applications
 mobiles {{site.data.keyword.Bluemix_notm}} peuvent utiliser des modules
@@ -43,6 +40,8 @@ générer une idée à partir de zéro. Chaque module de démarrage pour
 l'interface utilisateur est configuré
 pour être activé avec les fonctions Notifications push et Analyse, si vous
 décidez de les configurer pour votre projet mobile.
+
+Si vous utilisez un module de démarrage pour l'interface utilisateur, continuez avec [Utilisation d'un module de démarrage de l'interface utilisateur pour créer un projet](projects_ui.html).
 
 <!-- If you choose to create your project with a UI Starter, you have the option to design your app from within the UI Builder.-->
 
@@ -67,17 +66,18 @@ démarrage prêt pour la production présentant une intégration
 l'intégration des logiciels SDK de ce service dans le code. Dans certains cas,
 les modules de démarrage pour le code proposent une simple expérience
 utilisateur qui met en évidence l'intégration des données du service ou les
-interactions avec l'utilisateur. Chaque module de démarrage pour le code est
-configuré pour être activé avec les fonctions Notifications push, Analyse et Authentification,
-si vous décidez de les configurer pour votre projet mobile.
+interactions avec l'utilisateur. Chaque module de démarrage de code est configuré pour être activé avec Push, Authentification et éventuellement d'autres fonctionnalités, si vous décidez de les configurer pour votre projet mobile.
 
 Si vous choisissez de créer votre projet avec un module de démarrage pour
 le code, vous ne pouvez pas concevoir l'application dans le Générateur
-d'interface graphique. 
+d'interface graphique.
 
+Si vous utilisez un module de démarrage de code, continuez avec [Utilisation d'un module de démarrage de code pour créer un projet](projects_code.html).
 
 ## Tutoriels
 {: #tutorials}
+
+Pour plus d'instructions détaillées sur la façon de créer des applications avec des modules de démarrage, vous pouvez utiliser les tutoriels de bout en bout. 
 
 ### Tutoriels du module de démarrage pour l'interface utilisateur
 {: #tutorials_UI}
@@ -87,5 +87,6 @@ d'interface graphique.
 ### Tutoriels du module de démarrage pour le code
 {: #tutorials_Code}
 
+* [Tutoriel de bout en bout du Module de démarrage pour le code {{site.data.keyword.visualrecognitionshort}} ](tutorial.html)
 * [Tutoriel - Watson Language](tutorial_watson_language.html)
 * [Tutoriel - Weather](tutorial_weather.html)

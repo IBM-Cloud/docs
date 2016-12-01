@@ -13,12 +13,12 @@ lastupdated: "2016-10-13"
 # コードの取得
 {: #Get_Code}
 
-Push (プッシュ)、Analytics (分析)、および Authentication (認証) の機能を備えたモバイル・プロジェクトの構成とセットアップを完了した後、コードをダウンロードして、Xcode または Android Studio でコードを実行できます。ダウンロードしたプロジェクトは、構成した各機能に必要な SDK 依存関係と資格情報で事前構成済みです。
+選択された機能を備えたモバイル・プロジェクトの構成とセットアップを完了した後、コードをダウンロードし、Xcode または Android Studio でコードを実行できます。ダウンロードしたプロジェクトは、構成した各機能に必要な SDK 依存関係と資格情報で事前構成済みです。
 
 ダウンロードしたプロジェクト内で構成可能ではないサービスについては、資格情報の入力が必要になります。スターター・プロジェクトの `README.md` ファイルに指示が含まれています。`README.md` ファイルを Markdown ビューアーで表示して確認し、セットアップを完了してください。
 
 ### 前提条件開発者ツール
-{: prereq-dev-tools}
+{: #prereq-dev-tools}
 
 生成されたコードについての作業を {{site.data.keyword.Bluemix_notm}} 「モバイル」ダッシュボードから行うときには、以下の開発者ツールが必要です。
 
@@ -27,7 +27,7 @@ Push (プッシュ)、Analytics (分析)、および Authentication (認証) の
 	* 最新の [Android 7.0](https://www.android.com/versions/nougat-7-0/) ランタイムをインストールしてください。
 
 #### iOS
-* Xcode 8.0 (推奨)
+* [Xcode 8.0](https://developer.apple.com/xcode/) (推奨)
 	* 最新の [iOS 10](http://www.apple.com/ios/ios-10/) ランタイムをインストールしてください。
 * [Homebrew](http://brew.sh/)
 	* 他のツールおよびランタイム (CocoaPods や Carthage など) のインストールを支援する、Apple 開発者向けのコマンド・ライン・ツール。

@@ -8,9 +8,6 @@ lastupdated: "2016-10-14"
 # Exemples
 {: #sdk}
 
-Dernière mise à jour : 14 octobre 2016
-{: .last-updated}
-
 Les exemples suivants expliquent comment utiliser les services
 {{site.data.keyword.mobilepushfull}},
 {{site.data.keyword.amafull}} et {{site.data.keyword.mobileanalytics_full}}.

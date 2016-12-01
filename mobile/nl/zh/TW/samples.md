@@ -8,9 +8,6 @@ lastupdated: "2016-10-14"
 # 範例
 {: #sdk}
 
-前次更新：2016 年 10 月 14 日
-{: .last-updated}
-
 下列範例示範如何使用 {{site.data.keyword.mobilepushfull}}、{{site.data.keyword.amafull}} 及 {{site.data.keyword.mobileanalytics_full}} 服務。
 
 <table id="samples"><tbody><th><img src="images/Droid_SDK_icon.png" alt="android"></th><th><img src="images/iOS_SDK_icon.png" alt="ios"></th><th><img src="images/cordova_logo_white.png" alt="cordova"></th><tr><td>

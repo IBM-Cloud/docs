@@ -9,9 +9,6 @@ lastupdated: "2016-10-19"
 # 从 {{site.data.keyword.mobilefirstbp}} Starter 样板创建移动应用程序
 {: #try_mobile}
 
-上次更新时间：2016 年 10 月 19 日
-{: .last-updated}
-
 您可以单独使用每个 {{site.data.keyword.Bluemix}} Mobile Services。也可以通过 {{site.data.keyword.mobilefirstbp}} Starter 样板一起使用这些服务，从而获取最大好处。
 
 要开始操作，请使用 {{site.data.keyword.mobilefirstbp}} Starter 来创建您的应用程序。该样板支持完成以下操作：
@@ -32,7 +29,7 @@ lastupdated: "2016-10-19"
 
 ![{{site.data.keyword.Bluemix_notm}} Mobile Services 体系结构](images/bms_architecture.jpg)
 
-<table summary="此表描述了 {{site.data.keyword.Bluemix_notm}} Mobile services">
+<table summary="此表描述了 {{site.data.keyword.Bluemix_notm}} Mobile Services">
 <caption>表 1. {{site.data.keyword.Bluemix_notm}} 和企业系统</caption>
 <th>{{site.data.keyword.Bluemix_notm}}</th>
 <th>企业系统</th>
@@ -46,11 +43,11 @@ lastupdated: "2016-10-19"
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}}服务图标"> <b>{{site.data.keyword.amashort}}</b><br/>使用 {{site.data.keyword.amafull}} 服务可保护 {{site.data.keyword.Bluemix_notm}} 上托管的 Node.js 和 Java for Liberty 应用程序。为您的移动应用程序配备 {{site.data.keyword.amashort}} SDK 后，就可以要求用户必须登录才能访问 Node.js 或 {{site.data.keyword.Bluemix_notm}} Mobile Services。除安全功能外，{{site.data.keyword.amashort}} 还会收集分析数据，便于您监视移动应用程序性能以及收集客户机日志和使用情况统计信息。</td>
-<td valign="top"><b>用户身份提供者</b> <br/>您可以使用以下身份提供者：<ul><li>Facebook</li><li>Google</li></ul></td>
+<td><img src="images/authentication_icon.png" alt="{{site.data.keyword.amashort}}服务图标"> <b>{{site.data.keyword.amashort}}</b><br/>使用 {{site.data.keyword.amafull}} 服务可保护 {{site.data.keyword.Bluemix_notm}} 上托管的 Node.js 和 Java for Liberty 应用程序。为您的移动应用程序配备 {{site.data.keyword.amashort}} SDK 后，就可以要求用户必须登录才能访问 Node.js 或 {{site.data.keyword.Bluemix_notm}} Mobile Services。<!-- In addition to security capabilities, {{site.data.keyword.amashort}} also gathers analytics data, so that you can monitor your mobile application performance and collect client logs and usage statistics.--></td>
+<td valign="top"><b>用户身份提供者</b> <br/>您可以使用以下身份提供者：<ul><li>Facebook</li><li>Google</li><li> 定制</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Push Notifications 服务图标"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} 服务提供一个统一平台来发送和管理针对移动（iOS 和 Android）平台和 Web 浏览器应用程序的推送通知。此服务会管理您的应用程序用户与其设备、设备平台和浏览器之间的映射，还会处理将推送通知派送给订户。使用此服务，可以基于推送通知，向客户发送广播、单点广播（基于用户标识、设备标识）和标记（或主题）。</td>
+<td><img src="images/push_icon.png" alt="Push Notifications 服务图标"> "> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} 服务提供一个统一平台来发送和管理针对移动（iOS 和 Android）平台和 Web 浏览器应用程序的推送通知。此服务会管理您的应用程序用户与其设备、设备平台和浏览器之间的映射，还会处理将推送通知派送给订户。使用此服务，可以基于推送通知，向客户发送广播、单点广播（基于用户标识、设备标识）和标记（或主题）。</td>
 <td valign="top"><b>推送服务提供者</b><ul><li>Apple 推送通知服务</li><li>Firebase 云消息传递</li></ul></td>
 </tr>
 <tr>
