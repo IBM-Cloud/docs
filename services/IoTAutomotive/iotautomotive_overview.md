@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-25"
+lastupdated: "2016-11-29"
 
 ---
 
@@ -12,24 +12,34 @@ lastupdated: "2016-10-25"
 # About {{site.data.keyword.iot4auto_short}} (Experimental)
 {: #iotautomotive_overview}
 
-{{site.data.keyword.iot4auto_full}} is a service on {{site.data.keyword.Bluemix_notm}} that you can use to view and analyze big data from vehicles.
+{{site.data.keyword.iot4auto_full}} is a {{site.data.keyword.Bluemix_notm}} service that links drivers and vehicles to the surrounding environment to improve the mobility experience.
 
-By using the {{site.data.keyword.iot4auto_short}} service, you can collect and process large volumes of data from vehicles. The analytics of {{site.data.keyword.iot4auto_short}} provide powerful and actionable insights into driver behavior, vehicle location, and other automotive-related activities and events of interest.
+By using the {{site.data.keyword.iot4auto_short}} service, you can retrieve, manage, and analyze car probe data from connected vehicles and use the data to build smart automotive solutions that optimize fleet operations.
+
+The analytics of {{site.data.keyword.iot4auto_short}} provide powerful and actionable insights into driver behavior, vehicle location, and other automotive-related activities and events of interest.
 {:shortdesc}
 
 ## Architecture
 {: #architecture}
 {{site.data.keyword.iot4auto_short}} is a foundational real-time infrastructure platform for automotive applications and connected vehicle devices. The service is also designed to support the emerging autonomous driving capabilities of the future.
 
-![{{site.data.keyword.iot4auto_full}} architecture](images/architecture_iotautomotive.png "{{site.data.keyword.iot4auto_full}} architecture")
+![{{site.data.keyword.iot4auto_short}} architecture](images/architecture_iotautomotive.png "{{site.data.keyword.iot4auto_full}} architecture")
 
-The {{site.data.keyword.iot4auto_short}} service includes the following {{site.data.keyword.Bluemix_notm}} services, which are also separately available in the {{site.data.keyword.Bluemix_notm}} catalog:
+## Components and services
+{: #components}
+
+{{site.data.keyword.iot4auto_short}} provides the Vehicle Data Hub component and the following automotive services, which are also separately available for you to deploy in the {{site.data.keyword.Bluemix_notm}} catalog:
 
 |Service|Description|
 |:---|:---|
 |[Driver Behavior](../IotDriverInsights/index.html)| A service that can analyze the driver behavior and identify trajectory patterns of a journey from the car probe and context data that is retrieved from a connected vehicle.
 |[Context Mapping](../IotMapInsights/index.html)| A service that provides geospatial functions, such as map matching and shortest path search for road networks.
 *Table 1. {{site.data.keyword.iot4auto_short}} services*
+
+## Vehicle Data Hub
+{: #hub}
+
+The Vehicle Data Hub (VDH) component collects and manages large volumes of data from connected vehicles and automotive devices by using a range of protocols and formats. The VDH retrieves, processes, and stores car probe data for use with other analytical services and data flows, for example, Context Mapping and Driver Behavior.
 
 ## Features
 {: #features}
@@ -42,6 +52,13 @@ The {{site.data.keyword.iot4auto_short}} service includes the following {{site.d
    - TPEG
    - ITS
    - ISO automotive standards
+
+- Supports the following message formats:
+   - MQTT
+   - HTTPS
+   - UDP
+   - TCP
+
 - Supports other non-vehicle devices and sensors
 
 ### Data normalization and storage
@@ -81,27 +98,7 @@ The {{site.data.keyword.iot4auto_short}} service includes the following {{site.d
 
 - Vehicle asset management systems
 
-## REST API
+## REST APIs
 {: #api}
 
-The [{{site.data.keyword.iot4auto_short}} API](http://ibm.biz/IoT4Automotive_APIdoc) provides commands to help you to develop {{site.data.keyword.iot4auto_short}} further to meet your requirements.
-
-By using the available REST API commands, you can customize your {{site.data.keyword.iot4auto_short}} service instance:
-
-- Inject specific events into the system
-- Store the normalized car probe data from a vehicle in the preferred analytics data store
-- Retrieve the events of interest in real time together with the geographic location of the vehicle
-
-### REST API commands
-
-|Goal |API command |Description |
-|:---|:---|:---|
-|Inject event|`sendEvent`|Sends the traffic or other events to the platform.|
-|Send car probe data|`sendCarProbe`|Sends the position-based sensor data from the vehicle and retrieves the affected events for the vehicle by the result of real-time analysis.|
-|Create vehicle data|`createVehicle`|Create a record of the vehicle as an asset. This information is used for authentication, inventory, and other uses.|
-|Map APIs|Not applicable|For more information, see the [Contextual Map service APIs](http://ibm.biz/IoTContextMapping_APIdoc).|
-|Analysis APIs|Not applicable|For more information, see the [Driver Behavior service APIs]( http://ibm.biz/IoTDriverBehavior_APIdoc).|
-|Get car probe data|`getCarProbe`|Gets the latest car probe data of the vehicle that was sent by the `sendCarProbe` API command.|
-|Get map events|`getEvent` |Gets the events on the map that were sent by the `sendEvent`  API command.|
-|Get vehicle asset data|`getVehicle`| Gets the vehicle data as an asset from the `createVehicle` API command.|
-*Table 2. {{site.data.keyword.iot4auto_short}} REST API commands*
+Several APIs are available for connecting your vehicle and device data to {{site.data.keyword.iot4auto_full}} and developing features and capabilities to build a powerful automotive solution that meets your requirements. For more information, see [APIs](iotautomotive_apis.html).

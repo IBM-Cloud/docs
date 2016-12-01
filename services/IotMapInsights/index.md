@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-25"
+lastupdated: "2016-11-25"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,6 +19,7 @@ lastupdated: "2016-10-25"
 {:shortdesc}
 
 ## Features
+{: #features}
 
 The following features are available by using the {{site.data.keyword.iotmapinsights_short}} REST API:
 
@@ -93,6 +94,7 @@ Search for traffic events that are within a specific rectangular area and option
 5. Optional: Retrieve an area on the road that is affected by a traffic event by using the `getAffectedLinksInformation` API command.
 
 ## Starter experience
+{: #starter_exp}
 Experience the capabilities of {{site.data.keyword.iotmapinsights_short}} and other {{site.data.keyword.iot4auto_short}} services. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use several {{site.data.keyword.iot4auto_short}} services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
 
 
@@ -102,6 +104,7 @@ Experience the capabilities of {{site.data.keyword.iotmapinsights_short}} and ot
 ## Related Links
 {: #general}
 
+* [Getting started with {{site.data.keyword.iot4auto_short}} ](../IoTAutomotive/index.html){:new_window}
 * [Getting started with {{site.data.keyword.iotdriverinsights_short}}](../IotDriverInsights/index.html){:new_window}
 * [Getting started with {{site.data.keyword.iot_full}}](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
 * [dW Answers on IBM developerWorks](https://developer.ibm.com/answers/topics/iot-context-mapping){:new_window}
@@ -122,5 +125,7 @@ Experience the capabilities of {{site.data.keyword.iotmapinsights_short}} and ot
 
 ## API Reference
 {: #api}
-
-* [API docs](http://ibm.biz/IoTContextMapping_APIdoc){:new_window}
+* [{{site.data.keyword.iot4auto_short}} API docs: Vehicle Data Hub](http://ibm.biz/IoT4Auto_VDH_APIdoc){:new_window}
+* [{{site.data.keyword.iot4auto_short}} API docs: Asset](http://ibm.biz/IoT4Auto_Asset_APIdoc){:new_window}
+* [Contextual Map service APIs](http://ibm.biz/IoTContextMapping_APIdoc){:new_window}
+* [Driver Behavior service APIs]( http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window}
