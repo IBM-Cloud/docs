@@ -2710,7 +2710,7 @@ Re-create the IBM Containers service in the Bluemix space that you are logged in
 <strong>Important</strong>: When you run this command, none of your single containers and groups in this space will be migrated to the re-provisioned space and they will be removed during the migration process.
 
 ```
-bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
+bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ```
 <strong>Command options</strong>:
 
