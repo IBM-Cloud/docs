@@ -2,10 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-11-28"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # About {{site.data.keyword.mobileanalytics_short}}  
 {: aboutmobileanalytics}
@@ -33,9 +36,9 @@ With the {{site.data.keyword.mobileanalytics_short}} service you can:
 		<dd>See performance and usage metrics in real time.</dd>
 	<dt>Implement in minutes</dt>
 		<dd>Create a service instance in {{site.data.keyword.Bluemix}}, add the SDK to your project, paste two lines of code into your application and you are ready to collect dozens of pre-defined metrics.</dd>
-	<!--<dt>Collect any data you want</dt>-->
-		<!--<dd>Instrument apps with custom events, discover how users are interacting with your app, track purchases, and monitor app activity.  
-</dd>-->
+	<dt>Collect any data you want</dt>
+		<dd>Instrument apps with custom events, discover how users are interacting with your app, track purchases, and monitor app activity.  
+</dd>
 <dt>See metrics for all of your applications at-a-glance</dt>
 	<dd>The {{site.data.keyword.mobileanalytics_short}} console offers <!-- both --> ready-made <!--and custom--> charts, without the need to write queries.</dd>
 <dt>Focus on what is important to you</dt>
@@ -57,32 +60,29 @@ With **pre-defined metrics** you can answer questions like:
 * How frequently are people using my application? 
 * What time of day are people using my application?  
 * What device models do my users prefer? 
-* When should I deprecate support for legacy operation systems? 
+* When should I deprecate support for legacy operating systems? 
 * Which applications are experiencing performance issues?  
 
-<!--By adding your own **custom events** you can answer questions like:--> 
+By adding your own **custom events** you can answer questions like: 
 
-<!--* What features are used most and least?-->  
-<!--* Where are users entering and leaving my app?-->  
-<!--* What activities are users viewing most? --> 
-<!--* Are users completing workflows in the app (for example, conversion funnels)? -->  
+* What features are used most and least?  
+* Where are users entering and leaving my app?  
+* What activities are users viewing most?  
+* Are users completing workflows in the app (for example, conversion funnels)?   
 
-<!--Client-side logs and usage data are gathered automatically and sent to the Mobile Analytics -->
-<!-- service on demand. Developers and -->
-<!-- administrators can use the {{site.data.keyword.mobileanalytics_short}} service dashboard to view data that -->
-<!-- is gathered by the client SDK. -->
+Client-side logs and usage data are gathered automatically and sent to the Mobile Analytics service on demand. Developers and administrators can use the {{site.data.keyword.mobileanalytics_short}} service dashboard to view data that is gathered by the client SDK.
 
-<!--## Data visualization
+## Data visualization
 {: data-visualization}
 
-All data that is collected by the analytics service can be visualized through the {{site.data.keyword.mobileanalytics_short}} dashboard which is accessible from your {{site.data.keyword.Bluemix_notm}} dashboard by clicking your IBM {{site.data.keyword.mobileanalytics_short}} service tile instance. You can also create custom charts, based on data that is collected by the analytics service in the dashboard. In addition to an at-a-glance view of your mobile analytics, the analytics feature includes the capability to perform a raw search against client logs, captured client crash data, and any extra data that you explicitly provide through client API function calls that feed into the {{site.data.keyword.mobileanalytics_short}} service. -->
+All data that is collected by the analytics service can be visualized through the {{site.data.keyword.mobileanalytics_short}} dashboard which is accessible from your {{site.data.keyword.Bluemix_notm}} dashboard by clicking your IBM {{site.data.keyword.mobileanalytics_short}} service tile instance. <!--You can also create custom charts, based on data that is collected by the analytics service in the dashboard.--> In addition to an at-a-glance view of your mobile analytics, the analytics feature includes the capability to perform a raw search against client logs, captured client crash data, and any extra data that you explicitly provide through client API function calls that feed into the {{site.data.keyword.mobileanalytics_short}} service. 
 
 ## {{site.data.keyword.mobileanalytics_short}} frequently asked questions 
 {: #faq}
 
 <dl>
 	<dt>What is {{site.data.keyword.mobileanalytics_full}}?</dt>
-		<dd>{{site.data.keyword.mobileanalytics_full}} is a service that provides real time and historical insight into how your mobile applicaitons are performing and being used. Using {{site.data.keyword.mobileanalytics_short}}, application developers and application owners can make data driven decisions by monitoring trends in active users, sessions, mobile platforms, and application crashes. You can also set alerts on selected metrics that, once triggered, sends messages to any REST endpoint,  including a push service or your internal messaging services.</dd>
+		<dd>{{site.data.keyword.mobileanalytics_full}} is a service that provides real time and historical insight into how your mobile applicaitons are performing and being used. Using {{site.data.keyword.mobileanalytics_short}}, application developers and application owners can make data driven decisions by monitoring trends in active users, sessions, mobile platforms, and application crashes. You can also set alerts on selected metrics that, once triggered, sends messages to any REST endpoint, including a push service or your internal messaging services.</dd>
 	<dt>What can I do with {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}}?</dt>
 		<dd>As a Mobile Application Product Manager, you can see how many people use your application (user metrics) and when they are using it (session metrics). This information is presented as a time series and updated in real time so you can see the effect of changes you make to your application. You can filter to see specific application versions or operating systems to make deprecation and prioritization decisions. </dd>
 		<dd>As a Mobile Application Marketer, you can use user and session metrics to monitor engagement, manage churn, and evaluate the effectiveness of mobile application marketing efforts by observing changes over time and correlating to your event dates.</dd>
