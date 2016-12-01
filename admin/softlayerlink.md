@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-11-30"
+lastupdated: "2016-12-01"
  
 
 ---
@@ -21,6 +21,8 @@ lastupdated: "2016-11-30"
 If you have a {{site.data.keyword.Bluemix_notm}} trial account and you want to access the Infrastructure dashboard, you must upgrade to a {{site.data.keyword.Bluemix_notm}} Pay-As-You-Go account. You also must upgrade if you want to use other chargeable resources that are not available within a trial account, or your trial account finishes. 
 
 You can unify your existing {{site.data.keyword.Bluemix_notm}} and SoftLayer billing accounts by linking the accounts. When you link your accounts, you are billed through {{site.data.keyword.Bluemix_notm}} for both {{site.data.keyword.Bluemix_notm}} and SoftLayer resources.
+
+**Attention:** A {{site.data.keyword.Bluemix_notm}} subscription account cannot be linked with a SoftLayer account. To access the Infrastructure dashboard you must create a Pay-As-You-Go account, a second account, which is automatically linked with a SoftLayer account. You will then receive two invoices, one for each {{site.data.keyword.Bluemix_notm}} account. Although your infrastructure resources will be invoiced in a separate Pay-As-You-Go account, they can be used together with apps and services. For example, if you activate a Watson service in your subscription account, you can copy the service credentials and then add the credentials to your bare metal application that is sourced from your Pay-As-You-Go account. 
 {:shortdesc}
 
 ## Upgrading to a {{site.data.keyword.Bluemix_notm}} Pay-As-You-Go account
