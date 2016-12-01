@@ -14,8 +14,8 @@ copyright:
 #Anwendungen bereitstellen
 {: #deployingapps}
 
-*Letzte Aktualisierung: 28. Juli 2016*
-{: .last-updated}
+-*Letzte Aktualisierung: 28. Juli 2016*
+-{: .last-updated}
 
 Sie können Anwendungen anhand verschiedener Methoden für {{site.data.keyword.Bluemix}} bereitstellen, beispielsweise über die Befehlszeilenschnittstelle oder über integrierte Entwicklungsumgebungen (IDEs). Darüber hinaus können Anwendungen mithilfe von Anwendungsmanifesten bereitgestellt werden. Bei Verwendung eines Anwendungsmanifests wird die Anzahl der Bereitstellungsdetails reduziert, die Sie jedes Mal angeben müssen, wenn Sie die Anwendung in {{site.data.keyword.Bluemix_notm}} bereitstellen.
 {:shortdesc}
@@ -29,7 +29,7 @@ Anwendung.
 
 ###Staging einer Anwendung
 
-Während der Staging-Phase werden die Informationen, die Sie in der Befehlszeilenschnittstelle 'cf' oder in der Datei `manifest.yml` angeben, von einem Droplet Execution Agent (DEA) verwendet, um zu entscheiden, was für das Staging der Anwendung erstellt werden muss. Der DEA wählt ein geeignetes Buildpack für das Staging Ihrer Anwendung aus, und das Ergebnis des Staging-Prozesses ist ein Droplet. Weitere Informationen zur Bereitstellung einer Anwendung in {{site.data.keyword.Bluemix_notm}} finden Sie unter [{{site.data.keyword.Bluemix_notm}}-Architektur, Funktionsweise von {{site.data.keyword.Bluemix_notm}}](../public/index.html#publicarch).
+Während der Staging-Phase werden die Informationen, die Sie in der Befehlszeilenschnittstelle 'cf' oder in der Datei `manifest.yml` angeben, von einem Droplet Execution Agent (DEA) verwendet, um zu entscheiden, was für das Staging der Anwendung erstellt werden muss. Der DEA wählt ein geeignetes Buildpack für das Staging Ihrer Anwendung aus, und das Ergebnis des Staging-Prozesses ist ein Droplet. Weitere Informationen zur Bereitstellung einer Anwendung in {{site.data.keyword.Bluemix_notm}} finden Sie unter [Funktionsweise von {{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html#howwork).
 
 Während des Staging-Prozesses überprüft der DEA, ob das Buildpack mit der Anwendung übereinstimmt, d. h. für diese geeignet ist. Beispiel: eine Liberty-Laufzeit für eine .war-Datei oder eine Node.js-Laufzeit für .js-Dateien. Anschließend erstellt der DEA einen isolierten Container, der das Buildpack und den Anwendungscode enthält. Der Container wird von der Komponente 'Warden'
 verwaltet. Weitere Informationen finden Sie unter [How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.

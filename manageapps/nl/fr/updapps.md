@@ -49,7 +49,7 @@ cliquez sur **Sauvegarder**.
 	
 	**Remarque** : par exemple, vous pouvez utiliser `mon_entreprise.com` pour associer la route
 `www.mon_entreprise.com` à votre application. Vous pouvez aussi utiliser `exemple.mon_entreprise.com` pour associer la route
-`www.exemple.mon_entreprise.com` à votre application. 
+`www.exemple.mon_entreprise.com` à votre application.
 
   2. Ajoutez la route avec le domaine personnalisé à une application.
 
@@ -77,18 +77,18 @@ laquelle ajouter la route. La page **Vue d'ensemble** s'affiche.
 
         Nom de domaine personnalisé que vous désirez utiliser.
 
-  2. Ajoutez la route avec le domaine personnalisé à une application. Pour les applications CF, entrez la commande suivante : 
+  2. Ajoutez la route avec le domaine personnalisé à une application. Pour les applications CF, entrez la commande suivante :
 
     ```
     cf map-route mon_app mon_domaine -n nom_hôte
     ```
-Pour les groupes de conteneurs, entrez la commande suivante :
-```
+    Pour les groupes de conteneurs, entrez la commande suivante :	
+     ```
      cf ic route map -n nom_hôte -d mon_domaine mon_groupe_de_conteneurs
      ```
     *mon_app*
 
-    	Pour les applications CF, nom de votre application. 
+    	Pour les applications CF, nom de votre application.
 
     *mon_domaine*
 
@@ -100,7 +100,7 @@ Pour les groupes de conteneurs, entrez la commande suivante :
         
     *mon_groupe_de_conteneurs*
     
-        Pour les groupes de conteneurs, nom du groupe de conteneurs.   
+        Pour les groupes de conteneurs, nom du groupe de conteneurs.  
 
 
 Une fois le domaine personnalisé configuré dans {{site.data.keyword.Bluemix_notm}}, vous devez le mapper au domaine de système

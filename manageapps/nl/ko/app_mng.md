@@ -41,7 +41,7 @@ http://<yourappname>.mybluemix.net/bluemix-debug/manage
 	
   3. *hc*: Health Center 클라이언트가 사용자 애플리케이션을 모니터링할 수 있도록 하는 Health Center 에이전트입니다. 
 
-    Health Center는 IBM 모니터링 및 진단 도구를 사용하여 Liberty 및 Node.js 애플리케이션의 성능을 분석할 수 있도록 지원합니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에서 Liberty Java 또는 Node.js 애플리케이션의 성능 분석 방법](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}을 참조하십시오. </p></li>
+    Health Center는 IBM 모니터링 및 진단 도구를 사용하여 Liberty 및 Node.js 애플리케이션의 성능을 분석할 수 있도록 지원합니다. 자세한 정보는 [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}를 참조하십시오. </p></li>
 	
   4. *shell*: devconsole 유틸리티를 통해서나 다음 URL에 액세스하여 액세스할 수 있는 웹 기반 쉘을 사용할 수 있도록 합니다.
     
@@ -63,7 +63,7 @@ http://<yourappname>.mybluemix.net/bluemix-debug/shell
    
   2. *jmx*: 원격 JMX 클라이언트가 {{site.data.keyword.Bluemix_notm}} 사용자 신임 정보를 사용하여 애플리케이션을 관리할 수 있도록 JMX REST Connector를 사용 가능하게 설정합니다. 
   
-  JMX 커넥터 구성에 대한 자세한 정보는 [Liberty 프로파일에 대한 보안 JMX 연결 구성](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}을 참조하십시오. 
+  JMX 커넥터 구성에 대한 자세한 정보는 [Configuring secure JMX connection to the Liberty profile](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}을 참조하십시오. 
   
   *jmx* 유틸리티는 프록시를 시작하지 않습니다.
 
@@ -71,7 +71,7 @@ http://<yourappname>.mybluemix.net/bluemix-debug/shell
 
   1. *inspector*: *devconsole* 유틸리티를 통해서 또는 *https://myApp.mybluemix.net/bluemix-debug/inspector*에서 액세스 가능한 노드 검사기 디버거 인터페이스를 사용할 수 있도록 합니다. 
   
-  검사기 프로세스는 애플리케이션 컨테이너에서 실행됩니다. 사용자 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에서 실행되는 동안 CPU 사용량 프로파일을 작성하고 중단점을 추가하며 코드를 디버그하려면 이 유틸리티를 사용하십시오. 노드 검사기 모듈에 대한 자세한 정보는 odule, see [GitHub의 노드 검사기](https://github.com/node-inspector/node-inspector){:new_window}를 참조하십시오. 
+  검사기 프로세스는 애플리케이션 컨테이너에서 실행됩니다. 사용자 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에서 실행되는 동안 CPU 사용량 프로파일을 작성하고 중단점을 추가하며 코드를 디버그하려면 이 유틸리티를 사용하십시오. 노드 검사기 모듈에 대한 자세한 정보는 [node-inspector on GitHub](https://github.com/node-inspector/node-inspector){:new_window}를 참조하십시오. 
   
   또한 *inspector* 유틸리티는 *프록시*를 시작하지 않습니다.
 	

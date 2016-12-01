@@ -16,7 +16,7 @@ copyright:
 {: .last-updated}
 
 Em alguns ambientes como [Bluemix
-Dedicado](../../dedicated/index.html#dedicated) e [Bluemix Local](../../local/index.html#local), um proxy
+Dedicated](../../dedicated/index.html#dedicated) e [Bluemix Local](../../local/index.html#local), um proxy
 pode ser configurado que afeta o comportamento de seu aplicativo durante preparação e
 tempo de execução.
 

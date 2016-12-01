@@ -116,7 +116,7 @@ cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
 cf restage myApp
 ```
 
-##Restrictions
+##Restrições
 {: #restrictions}
 
 * O App Management suporta apenas aplicativos de instância única.

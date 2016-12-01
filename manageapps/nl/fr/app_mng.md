@@ -103,7 +103,7 @@ ou *bunyan*.
   Accédez à la page Détails de l'instance dans la console Web de {{site.data.keyword.Bluemix_notm}} et sélectionnez
 **Actions** pour afficher l'interface utilisateur.
 
-  L'utilitaire *trace* n'est pas disponible si l'application a été démarrée avec l'option "-b buildpack". 
+  L'utilitaire *trace* n'est pas disponible si l'application a été démarrée avec l'option "-b buildpack".
 
   L'utilitaire *trace* ne démarre pas *proxy*.
 

@@ -14,10 +14,10 @@ copyright:
 
 *Última actualización: 17 de marzo de 2015*
 
-Puede utilizar el panel de control de la interfaz de usuario de {{site.data.keyword.Bluemix}} para ver y gestionar sus app y servicios y para supervisar el uso de recursos mediante los indicadores de cuota.
+Puede utilizar el panel de control de la interfaz de usuario de {{site.data.keyword.Bluemix}} para ver y gestionar sus apps y servicios y para supervisar el uso de recursos mediante los indicadores de cuota.
 {:shortdesc}
 
-La sección de la aplicación del panel de control proporciona información resumida de las app que ha creado. La información resumida incluye nombre, icono, URL, tiempo de ejecución y estado de ejecución de la aplicación y de las instancias de servicio que están enlazadas a la aplicación. Se utilizan distintos colores para indicar el estado de ejecución cada aplicación.
+La sección de la aplicación del panel de control proporciona información resumida de las apps que ha creado. La información resumida incluye nombre, icono, URL, tiempo de ejecución y estado de ejecución de la aplicación y de las instancias de servicio que están enlazadas a la aplicación. Se utilizan distintos colores para indicar el estado de ejecución cada aplicación.
 
 **Detenido o Desconocido (gris)**
 
@@ -43,7 +43,7 @@ Para ver más información sobre una aplicación, pulse el mosaico para abrir la
 pulsando el icono **CAMBIAR ORGANIZACIÓN** que hay junto
 a la organización actual visualizada en la cabecera del panel de control.
 
-Cuando se despliega una aplicación, puede iniciar, detener, reiniciar o (en el caso de las app web) modificar el número de instancias y la cantidad de memoria que utiliza la aplicación. En este momento, para app web, {{site.data.keyword.Bluemix_notm}} no escala automáticamente la aplicación en función de su carga, por lo que deberá gestionar este aspecto usted mismo.
+Cuando se despliega una aplicación, puede iniciar, detener, reiniciar o (en el caso de las apps web) modificar el número de instancias y la cantidad de memoria que utiliza la aplicación. En este momento, para app web, {{site.data.keyword.Bluemix_notm}} no escala automáticamente la aplicación en función de su carga, por lo que deberá gestionar este aspecto usted mismo.
 
 Las aplicaciones se pueden volver a desplegar si se realiza una actualización. El mecanismo por el que se actualiza la aplicación es el mismo que se utiliza cuando se despliega originalmente. {{site.data.keyword.Bluemix_notm}} detiene
 todas las instancias en ejecución y las reemplaza por instancias nuevas de forma automática.

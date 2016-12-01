@@ -27,7 +27,7 @@ copyright:
 
 ###应用程序编译打包
 
-在编译打包阶段，Droplet Execution Agent (DEA) 会使用在 cf 命令行界面或 `manifest.yml` 文件中提供的信息来确定要为应用程序编译打包创建的内容。DEA 会选择相应的 buildpack 来编译打包应用程序，并且编译打包过程的结果为 Droplet。有关将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 体系结构，{{site.data.keyword.Bluemix_notm}} 的工作方式](../public/index.html#publicarch)。
+在编译打包阶段，Droplet Execution Agent (DEA) 会使用在 cf 命令行界面或 `manifest.yml` 文件中提供的信息来确定要为应用程序编译打包创建的内容。DEA 会选择相应的 buildpack 来编译打包应用程序，并且编译打包过程的结果为 Droplet。有关将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 的工作方式](/docs/overview/whatisbluemix.html#howwork)。
 
 在编译打包过程中，DEA 会检查 buildpack 是否与应用程序相匹配。例如，Liberty 运行时用于 .war 文件，或者 Node.js 运行时用于 .js 文件。然后，DEA 会创建包含 buildpack 和应用程序代码的独立容器。容器由 Warden 组件进行管理。有关更多信息，请参阅 [How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}。
 
@@ -35,7 +35,7 @@ copyright:
 
 启动应用程序时，将创建 Warden 容器的一个或多个实例。可以使用 **cf files** 命令来查看存储在 Warden 容器的文件系统中的文件，例如日志。如果应用程序无法启动，那么 DEA 将停止该应用程序，并除去 Warden 容器的整个内容。因此，如果应用程序停止，或者如果应用程序的编译打包过程失败，那么不会有日志文件可供您使用。
 
-如果应用程序的日志不再可用，并因此导致 **cf files** 命令无法再用于查看编译打包错误的原因，那么可以改用 **cf logs** 命令。**cf logs** 使用 Cloud Foundry 日志聚集器来收集应用程序日志和系统日志的详细信息，并且可以查看在日志聚集器中缓冲的内容。有关日志聚集器的更多信息，请参阅[在 Cloud Foundry 中进行日志记录](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}。
+如果应用程序的日志不再可用，并因此导致 **cf files** 命令无法再用于查看编译打包错误的原因，那么可以改用 **cf logs** 命令。**cf logs** 使用 Cloud Foundry 日志聚集器来收集应用程序日志和系统日志的详细信息，并且可以查看在日志聚集器中缓冲的内容。有关日志聚集器的更多信息，请参阅 [Logging in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}。
 
 **注：**缓冲区大小是有限制的。如果应用程序运行了很长时间且未重新启动，那么输入 `cf logs appname --recent` 后可能不会显示日志，原因是日志缓冲区可能已清除。因此，要调试大型应用程序的编译打包错误，可以在部署应用程序时，在 cf 命令行界面的单独命令行中输入 `cf logs appname` 来跟踪日志。
 

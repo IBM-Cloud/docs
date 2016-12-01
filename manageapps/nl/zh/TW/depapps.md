@@ -27,7 +27,7 @@ copyright:
 
 ###編譯打包應用程式
 
-在編譯打包階段期間，Droplet Execution Agent (DEA) 會使用您在 cf 指令行介面或 `manifest.yml` 檔案中提供的資訊，決定應用程式編譯打包所要建立的項目。DEA 會選取適當的建置套件來編譯打包應用程式，而編譯打包處理程序的結果則為 Droplet。如需將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 架構：{{site.data.keyword.Bluemix_notm}} 的運作方式](../public/index.html#publicarch)。
+在編譯打包階段期間，Droplet Execution Agent (DEA) 會使用您在 cf 指令行介面或 `manifest.yml` 檔案中提供的資訊，決定應用程式編譯打包所要建立的項目。DEA 會選取適當的建置套件來編譯打包應用程式，而編譯打包處理程序的結果則為 Droplet。如需將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 的運作方式](/docs/overview/whatisbluemix.html#howwork)。
 
 在編譯打包處理程序期間，DEA 會檢查建置套件是否符合應用程式。例如，.war 檔的 Liberty 運行環境，或 .js 檔的 Node.js 運行環境。然後，DEA 會建立隔離的容器，其中包含建置套件及應用程式碼。容器是由 Warden 元件管理。如需相關資訊，請參閱[應用程式編譯打包方式](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}。
 
@@ -130,7 +130,7 @@ cf push appname
 
 應用程式資訊清單包含套用於 **cf push** 指令的選項。您可以使用應用程式資訊清單來減少每次將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時，必須指定的部署詳細資料數量。
 
-在應用程式資訊清單中，您可以指定一些選項，例如要建立的應用程式實例數、要配置給應用程式的記憶體數量和磁碟限額，以及應用程式的其他環境變數。您還可以使用應用程式資訊清單，將應用程式部署自動化。資訊清單檔的預設名稱是 `manifest.yml`。
+在應用程式資訊清單中，您可以指定一些選項，例如要建立的應用程式實例數、要配置給應用程式的記憶體量和磁碟限額，以及應用程式的其他環境變數。您還可以使用應用程式資訊清單，將應用程式部署自動化。資訊清單檔的預設名稱是 `manifest.yml`。
 
 ###資訊清單檔支援的選項
 
@@ -152,7 +152,7 @@ cf push -f appManifest.yml
 |**name**	|{{site.data.keyword.Bluemix_notm}} 中的應用程式名稱。此值必須是 {{site.data.keyword.Bluemix_notm}} 環境中的唯一值。	|`name: ` *appname*|
 |**path**	|應用程式的位置。此值可以是相對路徑或絕對路徑。	|`path: ` *path_to_application*|
 |**command**	|應用程式的自訂啟動指令，或執行 Script 檔的指令。	|`command:` *custom_command* `command:` *bash ./run.sh*|
-|**memory**	|要配置給應用程式的記憶體數量。預設值為 1G。	|`memory: 512M`|
+|**memory**	|要配置給應用程式的記憶體量。預設值為 1G。	|`memory: 512M`|
 |**instances**	|要為應用程式建立的實例數。	|`instances: 2`|
 |**timeout**	|用來啟動應用程式的時間量上限（秒）。預設值為 60 秒。	|`timeout: 80`|
 |**no-route**	|布林值，避免在應用程式只是在背景中執行時指派路徑給該應用程式。預設值為 **false**。	|`no-route: true`|
@@ -247,7 +247,7 @@ cf push -f appManifest.yml
   <dt><strong>HOME</strong></dt>
   <dd>已部署應用程式的根目錄。</dd>
   <dt><strong>MEMORY_LIMIT</strong></dt>
-  <dd>每一個應用程式實例可使用的記憶體數量上限。您可以在應用程式 <span class="ph filepath">manifest.yml</span> 檔案中指定值，或在推送應用程式時在指令行中指定值。</dd>
+  <dd>每一個應用程式實例可使用的記憶體量上限。您可以在應用程式 <span class="ph filepath">manifest.yml</span> 檔案中指定值，或在推送應用程式時在指令行中指定值。</dd>
   <dt><strong>PORT</strong></dt>
   <dd>DEA 上與應用程式通訊所使用的埠。DEA 會在編譯打包時配置埠給應用程式。</dd>
   <dt><strong>PWD</strong></dt>

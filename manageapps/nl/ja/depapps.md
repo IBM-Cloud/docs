@@ -14,8 +14,8 @@ copyright:
 #アプリのデプロイ
 {: #deployingapps}
 
-*最終更新日: 2016 年 7 月 28 日*
-{: .last-updated}
+-*最終更新日: 2016 年 7 月 28 日*
+-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} へのアプリケーションのデプロイは、コマンド・ライン・インターフェースや統合開発環境 (IDE) など、さまざまな方法で行うことができます。また、アプリケーション・マニフェストを使用してアプリケーションをデプロイすることも可能です。アプリケーション・マニフェストを使用することで、アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイする度に指定しなければならないデプロイメント詳細の数を減らします。
 {:shortdesc}
@@ -27,7 +27,7 @@ copyright:
 
 ###アプリケーションのステージング
 
-ステージングの段階では、Droplet Execution Agent (DEA) が cf コマンド・ライン・インターフェースまたは `manifest.yml` ファイルでユーザーが指定した情報を使用して、アプリケーションのステージング用に何を作成するかを決定します。DEA は、アプリケーションのステージングのために適切なビルドパックを選択します。このステージング・プロセスの結果が Droplet です。{{site.data.keyword.Bluemix_notm}} へのアプリケーションのデプロイについて詳しくは、[{{site.data.keyword.Bluemix_notm}} アーキテクチャー、{{site.data.keyword.Bluemix_notm}} の動作](../public/index.html#publicarch)を参照してください。
+ステージングの段階では、Droplet Execution Agent (DEA) が cf コマンド・ライン・インターフェースまたは `manifest.yml` ファイルでユーザーが指定した情報を使用して、アプリケーションのステージング用に何を作成するかを決定します。DEA は、アプリケーションのステージングのために適切なビルドパックを選択します。このステージング・プロセスの結果が Droplet です。{{site.data.keyword.Bluemix_notm}} へのアプリケーションのデプロイについて詳しくは、『[{{site.data.keyword.Bluemix_notm}} の動作](/docs/overview/whatisbluemix.html#howwork)』を参照してください。
 
 ステージングのプロセス中、DEA はビルドパックがアプリケーションと一致するかどうかをチェックします。例えば、.war ファイルに対する Liberty ランタイム、または .js ファイルに対する Node.js ランタイムなどです。DEA はその後、ビルドパックおよびアプリケーション・コードが含まれる独立したコンテナーを作成します。このコンテナーは Warden コンポーネントによって管理されます。詳しくは、「[How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}」を参照してください。
 

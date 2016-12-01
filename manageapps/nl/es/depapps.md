@@ -14,8 +14,8 @@ copyright:
 #Despliegue de apps
 {: #deployingapps}
 
-*Última actualización: 28 de julio de 2016*
-{: .last-updated}
+-*Última actualización: 28 de julio de 2016*
+-{: .last-updated}
 
 Puede desplegar apps en {{site.data.keyword.Bluemix}} utilizando varios métodos, como por ejemplo la interfaz de línea de mandatos y los entornos de desarrollo integrado (IDE). También puede utilizar manifiestos de app para desplegar apps. Si utiliza un manifiesto de app debe reducir el número de detalles de despliegue que debe especificar cada vez que despliega una app en {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -27,7 +27,7 @@ El despliegue de una app en {{site.data.keyword.Bluemix_notm}} incluye dos fases
 
 ###Transferencia de una app
 
-Durante la fase de transferencia, un agente de ejecución de gotas (DEA) utiliza la información que especifica el usuario en la interfaz de la línea de mandatos cf o en el archivo `manifest.yml` para decidir qué se debe crear para la fase de transferencia. El DEA selecciona un paquete de compilación adecuado para transferir la app y el resultado del proceso de transferencia es una gota. Para obtener más información sobre cómo desplegar una app en {{site.data.keyword.Bluemix_notm}}, consulte Arquitectura de [{{site.data.keyword.Bluemix_notm}}, Cómo funciona {{site.data.keyword.Bluemix_notm}}](../public/index.html#publicarch).
+Durante la fase de transferencia, un agente de ejecución de gotas (DEA) utiliza la información que especifica el usuario en la interfaz de la línea de mandatos cf o en el archivo `manifest.yml` para decidir qué se debe crear para la fase de transferencia. El DEA selecciona un paquete de compilación adecuado para transferir la app y el resultado del proceso de transferencia es una gota. Para obtener más información sobre cómo desplegar una app en {{site.data.keyword.Bluemix_notm}}, consulte [Cómo funciona {{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html#howwork).
 
 Durante el proceso de transferencia, el DEA comprueba si el paquete de compilación coincide con la app. Por ejemplo, un tiempo de ejecución de Liberty para un archivo .war o un tiempo de ejecución Node.js para archivos .js. El DEA crea a continuación un contenedor aislado que contiene el paquete de compilación y el código de app. El componente
 Warden es el encargado de gestionar el contenedor. Para obtener más información, consulte [Cómo se transfieren las apps](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
@@ -405,7 +405,7 @@ app Node.js, puede especificar el mandato de inicio **node app.js** en el parám
 Las variables de entorno definidas por el usuario son específicas para una aplicación. Tiene las siguientes opciones para añadir una variable de entorno definida por el usuario a una app en ejecución:
 
   * Utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}. Siga estos pasos:
-    1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el icono de la app. Se mostrará la página de detalles de la App.
+    1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, pulse el mosaico de la app. Se mostrará la página de detalles de la App.
 	2. Pulse **Variables de entorno**.
 	3. Pulse **USER-DEFINED** y, a continuación, pulse **ADD**.
 	4. Rellene los campos obligatorios y, a continuación, pulse **SAVE**.

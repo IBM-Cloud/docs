@@ -14,8 +14,8 @@ copyright:
 #Déploiement d'applications
 {: #deployingapps}
 
-*Dernière mise à jour : 28 juillet 2016*
-{: .last-updated}
+-*Dernière mise à jour : 28 juillet 2016*
+-{: .last-updated}
 
 Vous pouvez déployer des applications dans {{site.data.keyword.Bluemix}} via diverses méthodes, notamment en utilisant l'interface de ligne de commande et des environnements de développement intégré (IDE). Vous pouvez également utiliser des manifestes d'application afin de déployer des applications. L'utilisation d'un manifeste d'application vous permet de réduire le nombre d'informations de déploiement que vous devez spécifier à chaque fois que vous déployez une application dans {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
@@ -27,7 +27,9 @@ Le déploiement d'une application dans {{site.data.keyword.Bluemix_notm}} compor
 
 ###Constitution d'une application
 
-Lors de la phase de constitution, un agent DEA (Droplet Execution Agent) utilise les informations que vous avez soumises dans l'interface de ligne de commande cf ou le fichier `manifest.yml` pour déterminer ce qu'il doit créer pour la constitution de l'application. L'agent DEA sélectionne un pack de construction approprié pour la constitution de votre application et le processus de constitution génère un droplet. Pour plus d'informations sur le déploiement d'une application dans {{site.data.keyword.Bluemix_notm}}, voir [Architecture {{site.data.keyword.Bluemix_notm}}, Fonctionnement de {{site.data.keyword.Bluemix_notm}}](../public/index.html#publicarch).
+Lors de la phase de constitution, un agent DEA (Droplet Execution Agent) utilise les informations que vous avez soumises dans l'interface de ligne de commande cf ou le fichier `manifest.yml` pour déterminer ce qu'il doit créer pour la constitution de l'application. L'agent DEA sélectionne un pack de construction approprié pour la constitution de votre application et le processus de constitution génère un droplet. Pour
+plus d'informations sur le déploiement d'une application dans {{site.data.keyword.Bluemix_notm}}, voir
+[Fonctionnement de {{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html#howwork).
 
 Lors du processus de constitution, l'agent DEA vérifie si le pack de construction correspond à l'application, par exemple un contexte d'exécution Liberty pour un fichier .war, ou un contexte d'exécution Node.js pour des fichiers js. L'agent DEA crée ensuite un conteneur isolé, qui contient le pack de construction et le code de l'application. Le conteneur est géré par le composant Warden. Pour plus d'informations, voir [How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
 

@@ -14,8 +14,8 @@ copyright:
 #Distribuzione delle applicazioni
 {: #deployingapps}
 
-*Ultimo aggiornamento: 28 luglio 2016*
-{: .last-updated}
+-*Ultimo aggiornamento: 28 luglio 2016*
+-{: .last-updated}
 
 Puoi distribuire applicazioni in {{site.data.keyword.Bluemix}}
 utilizzando vari metodi, quali ad esempio l'interfaccia riga di comando e gli ambienti di
@@ -38,7 +38,7 @@ di preparazione, un Droplet Execution Agent    (DEA) utilizza le informazioni
 che tu fornisci nell'interfaccia riga di comando cf o nel file `manifest.yml`
 per stabilire che cosa creare per la preparazione dell'applicazione. Il DEA seleziona
 un pacchetto di build appropriato per preparare la tua applicazione; il risultato del
-processo di preparazione è un droplet. Per ulteriori informazioni sulla distribuzione di un'applicazione in {{site.data.keyword.Bluemix_notm}}, vedi [Architettura {{site.data.keyword.Bluemix_notm}}, come funziona {{site.data.keyword.Bluemix_notm}}](../public/index.html#publicarch).
+processo di preparazione è un droplet. Per ulteriori informazioni sulla distribuzione di un'applicazione a {{site.data.keyword.Bluemix_notm}}, vedi [Modalità di funzionamento di {{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html#howwork).
 
 Durante
 il processo di preparazione, il DEA verifica se il pacchetto di build

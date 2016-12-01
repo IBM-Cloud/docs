@@ -14,8 +14,8 @@ copyright:
 #앱 배치
 {: #deployingapps}
 
-*마지막 업데이트 날짜: 2016년 7월 28일*
-{: .last-updated}
+-*마지막 업데이트 날짜: 2016년 7월 28일*
+-{: .last-updated}
 
 명령행 인터페이스 및 IDE(Integrated Development Environment) 등의 다양한 방법을
 사용하여 {{site.data.keyword.Bluemix}}에
@@ -35,7 +35,7 @@ copyright:
 스테이징 단계 중 DEA(Droplet Execution Agent)에서는
 cf 명령행 인터페이스 또는 `manifest.yml` 파일에 제공된 정보를 사용하여
 애플리케이션 스테이징을 위해 작성할 항목을 결정합니다. DEA는 애플리케이션 스테이징에
-적합한 빌드팩을 선택하며, 스테이징 프로세스의 결과가 드롭릿(droplet)입니다. {{site.data.keyword.Bluemix_notm}}에 배치하는 방법에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 아키텍처, {{site.data.keyword.Bluemix_notm}} 작동 방식](../public/index.html#publicarch)을 참조하십시오.
+적합한 빌드팩을 선택하며, 스테이징 프로세스의 결과가 드롭릿(droplet)입니다. {{site.data.keyword.Bluemix_notm}}에 애플리케이션을 배치하는 방법에 대한 자세한 정보는 [ {{site.data.keyword.Bluemix_notm}} 작동 방식](/docs/overview/whatisbluemix.html#howwork)을 참조하십시오.
 
 스테이징 프로세스 중 DEA에서 빌드팩이 애플리케이션과 일치하는지
 확인합니다. 예를 들어 .war 파일의 경우 Liberty 런타임이고, .js 파일의 경우

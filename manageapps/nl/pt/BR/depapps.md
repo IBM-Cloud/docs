@@ -14,8 +14,8 @@ copyright:
 #Implementando apps
 {: #deployingapps}
 
-*Última atualização: 28 de julho de 2016*
-{: .last-updated}
+-*Última atualização: 28 de julho de 2016*
+-{: .last-updated}
 
 É possível implementar aplicativos no
 {{site.data.keyword.Bluemix}}
@@ -36,7 +36,7 @@ Durante a fase de preparação, um
 Droplet Execution Agent (DEA) usa as informações que você fornece na interface de linha
 de comandos cf ou o arquivo `manifest.yml` para
 decidir o que criar para preparação do aplicativo. O DEA seleciona um buildpack
-apropriado para preparar o aplicativo e o resultado do processo de preparação é um droplet. Para obter mais informações sobre a implementação de um aplicativo no {{site.data.keyword.Bluemix_notm}}, consulte Arquitetura do [{{site.data.keyword.Bluemix_notm}}, Como o {{site.data.keyword.Bluemix_notm}} funciona](../public/index.html#publicarch).
+apropriado para preparar o aplicativo e o resultado do processo de preparação é um droplet. Para obter mais informações sobre a implementação de um aplicativo no {{site.data.keyword.Bluemix_notm}}, consulte [Como o {{site.data.keyword.Bluemix_notm}} funciona](/docs/overview/whatisbluemix.html#howwork).
 
 Durante
 o processo de preparação, o DEA verifica se o buildpack corresponde ao aplicativo. Por
