@@ -7,7 +7,7 @@ copyright:
 
 # Resolución de problemas
 {: #errors}
-Última actualización: 29 de agosto de 2016
+Última actualización: 08 de noviembre de 2016
 {: .last-updated}
 
 Utilice esta sección como guía para la resolución de problemas comunes de {{site.data.keyword.mobilepushshort}}.
@@ -24,4 +24,13 @@ Utilice esta sección como guía para la resolución de problemas comunes de {{s
 **Acción**: Para resolver este problema, suprima la instancia push y cree una nueva.
 
 **Nota**: Cuando suprima la instancia de push, sus etiquetas no se conservarán.
+
+
+### UnauthorizedRegistration
+
+####Explicación
+
+**Explicación**: Chrome Web Push no funciona con claves de Firebase Cloud Messaging (FCM). Si no puede recibir notificaciones push web en Chrome después de pasar de FCM a GCM, se debe a que el sitio web estaba configurado anteriormente para trabajar con el proyecto GCM y el nuevo proyecto se ha creado en FCM. El navegador Chrome coloca en la memoria caché las señales generadas que identifican el navegador. 
+
+**Acción**: Para solucionar este problema, elimine las cookies y restablezca los permisos del navegador. Este solicitará permisos para habilitar las notificaciones push.  
 

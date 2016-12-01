@@ -7,14 +7,14 @@ copyright:
 
 # 關於 {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 11 月 11 日
 {: .last-updated}
 
 IBM {{site.data.keyword.mobilepushshort}} 是一項服務，可用來將通知傳送給 iOS 和 Android 行動裝置、Google Chrome 和 Mozilla Firefox Web 瀏覽器以及 Google Chrome Apps and Extensions。通知可以使用標籤，以所有應用程式使用者或一組特定使用者及裝置為目標。您可以管理裝置、標籤及訂閱。您也可以使用 SDK（軟體開發套件）及「具象狀態傳輸 (REST)」應用程式介面 (API) 來進一步開發用戶端應用程式。 
 
-{{site.data.keyword.mobilepushshort}} 也可以當作「Bluemix 專用」服務使用。如需將 {{site.data.keyword.mobilepushshort}} 當作專用服務的相關資訊，請參閱[專用服務](../../dedicated/index.html)。請注意，{{site.data.keyword.mobilepushshort}} 監視標籤不會顯示分析資料。
+{{site.data.keyword.mobilepushshort}} 也可以當作「Bluemix 專用」服務使用。如需將 {{site.data.keyword.mobilepushshort}} 當作專用服務的相關資訊，請參閱[專用服務](/docs/dedicated/index.html)。請注意，{{site.data.keyword.mobilepushshort}} 監視標籤不會顯示分析資料。
 
-{{site.data.keyword.mobilepushshort}} Service 現在已啟用 OpenWhisk。如需相關資訊，請參閱 [OpenWhisk](../../openwhisk/index.html)。
+{{site.data.keyword.mobilepushshort}} Service 現在已啟用 OpenWhisk。如需相關資訊，請參閱 [OpenWhisk](/docs/openwhisk/index.html)。
 
 
 ## {{site.data.keyword.mobilepushshort}} Service 程序
@@ -82,7 +82,7 @@ IBM {{site.data.keyword.mobilepushshort}} Service 使用平台專用 Push Notifi
 
 不過，以使用者為目標的單點播送通知需要在登錄用戶端行動裝置或 Web 瀏覽器或 Chrome Apps and Extensions for {{site.data.keyword.mobilepushshort}} 時，關聯使用者 ID 與裝置。   
 
-一般而言，用戶端應用程式會先執行鑑別週期，在此鑑別週期，會針對鑑別服務（例如 [Mobile Client Access](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html)）鑑別行動應用程式使用者。鑑別成功時，接著會將已鑑別使用者 ID 傳遞至「推送裝置登錄 API」。
+一般而言，用戶端應用程式會先執行鑑別週期，在此鑑別週期，會針對鑑別服務（例如 [Mobile Client Access](docs/services/mobileaccess/index.html)）鑑別行動應用程式使用者。鑑別成功時，接著會將已鑑別使用者 ID 傳遞至「推送裝置登錄 API」。
 若要透過 REST API 傳送單點播送通知，請確定在公佈至訊息資源時已提供 deviceId 或 userId。
 
 ###平台型通知
@@ -105,7 +105,7 @@ IBM {{site.data.keyword.mobilepushshort}} Service 使用平台專用 Push Notifi
 
 若為 iOS 8 以及更新版本，接受的大小上限為 2 KB。Apple Push Notification Service 不會傳送超過此限制的通知。
 
-###Android、Chrome 及 Firefox 瀏覽器
+###Android、Firefox 瀏覽器、Chrome 瀏覽器及 Chrome Apps & Extensions
 {: android-message-size}
 
-容許的訊息大小上限有 4 KB 的限制。  
+容許的訊息有效負載大小上限為 4 KB。  

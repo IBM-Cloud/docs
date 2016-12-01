@@ -9,10 +9,10 @@ copyright:
 {:new_window: target="_blank"}
 # Berechtigungsnachweise für FCM generieren
 {: #create-push-enable-gcm}
-Letzte Aktualisierung: 17. Oktober 2016
+Letzte Aktualisierung: 15. November 2016
 {: .last-updated}
 
-Firebase Cloud Messaging (FCM) ist das Gateway, das für die Übermittlung von Push-Benachrichtigungen an Android-Geräte sowie an Google Chrome- und Mozilla-Web-Browser verwendet wird. FCM hat Google Cloud Messaging (GCM) ersetzt. Sie müssen Ihre FCM-Berechtigungsnachweise abrufen und anschließend den {{site.data.keyword.mobilepushshort}}-Service im Dashboard einrichten. Achten Sie darauf, für neue Apps FCM-Konfigurationen zu verwenden. Vorhandene Apps können mit der GCM-Konfiguration weiterhin betrieben werden.
+Firebase Cloud Messaging (FCM) ist das Gateway, das für die Übermittlung von Push-Benachrichtigungen an Android-Geräte sowie an Google Chrome- und Mozilla-Web-Browser verwendet wird. FCM hat Google Cloud Messaging (GCM) ersetzt. Sie müssen Ihre FCM-Berechtigungsnachweise abrufen und anschließend den {{site.data.keyword.mobilepushshort}}-Service im Dashboard einrichten. Achten Sie darauf, für neue Apps FCM-Konfigurationen zu verwenden. Vorhandene Apps können mit GCM-Konfigurationen weiterhin betrieben werden.
 
 ##Absender-ID und API-Schlüssel abrufen
 {: #android-senderid-apikey}

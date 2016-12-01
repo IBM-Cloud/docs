@@ -363,7 +363,7 @@ funcapplication(application: UIApplication, didReceiveRemoteNotification userInf
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
   {
   CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
- }
+}
 ```
 	{: codeblock}
 

@@ -8,10 +8,10 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}}을 수신하도록 Android 애플리케이션 설정
 {: #tag_based_notifications}
-마지막 업데이트 날짜: 2016년 10월 19일
+마지막 업데이트 날짜: 2016년 11월 16일
 {: .last-updated}
 
-디바이스에 {{site.data.keyword.mobilepushshort}}을 수신하도록 Android 애플리케이션을 설정할 수 있습니다. Android Studio는 필수 소프트웨어이며 이를 사용하여 Android 프로젝트를 빌드하는 것이 좋습니다. Android Studio에 대한 기본 지식이 반드시 있어야 합니다. 
+Android 애플리케이션에서 사용자 디바이스에 푸시 알림을 수신하도록 설정할 수 있습니다. Android Studio는 필수 소프트웨어이며 이를 사용하여 Android 프로젝트를 빌드하는 것이 좋습니다. Android Studio에 대한 기본 지식이 반드시 있어야 합니다. 
 
 ## Gradle을 사용하여 클라이언트 푸시 SDK 설치
 {: #android_install}
@@ -20,16 +20,23 @@ copyright:
 
 Gradle을 사용하여 Bluemix® 모바일 서비스 푸시 SDK를 추가할 수 있습니다. Gradle은 저장소에서 아티팩트를 자동으로 다운로드하여 Android 애플리케이션에 제공합니다. Android Studio 및 Android Studio SDK를 올바로 설정해야 합니다. 시스템 설정 방법에 대한 자세한 정보는 [Android Studio 개요](https://developer.android.com/tools/studio/index.html)를 참조하십시오. Gradle에 대한 자세한 정보는 [Gradle 빌드 구성](http://developer.android.com/tools/building/configuring-gradle.html)을 참조하십시오.
 
-1. Android Studio에서 모바일 애플리케이션을 작성하고 연 다음에 애플리케이션 **build.gradle** 파일을 여십시오. 
-2. 다음 종속 항목을 모바일 애플리케이션에 추가하십시오. 다음 행에서 Bluemix™ 모바일 서비스 푸시 클라이언트 SDK와 Google 플레이 서비스 SDK를 사용자의 컴파일 범위 종속 항목에 추가합니다. 
-```
-com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
+모바일 애플리케이션을 작성하고 연 후 Android Studio를 사용하여 다음 단계를 완료하십시오. 
+
+1. 모듈 레벨 **build.gradle** 파일에 종속 항목을 추가하십시오.  
+	- 다음 종속 항목을 추가하여 Bluemix™ 모바일 서비스 푸시 클라이언트 SDK 및 Google 플레이 서비스 SDK를 사용자의 컴파일 범위 종속 항목에 추가하십시오. 
+	```
+	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
 ```
     {: codeblock}
-2. 종속 항목이 해결되도록 프로젝트를 빌드하십시오. 
-3. 다음 종속 항목을 모바일 애플리케이션에 추가하십시오. 이러한 import 문은 코드 스니펫에 필요합니다. 
-```
-import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
+	
+	- 파일의 끝에는 다음 종속 항목을 추가하십시오. 
+	```
+	'com.google.gms.google-services'
+	```
+    {: codeblock}
+	- 코드 스니펫에 필요한 import 문에 다음 종속 항목을 추가하십시오. 
+	```
+	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushException;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushResponseListener;
@@ -37,13 +44,17 @@ import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 	```
     {: codeblock}
-
-2. **AndroidManifest.xml** 파일에서 다음 권한을 추가하십시오. 샘플 Manifest를 보려면 [Android helloPush 샘플 애플리케이션](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)을 참조하십시오. 샘플 Gradle 파일을 보려면 [샘플 빌드 Gradle 파일](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle)을 참조하십시오.
+3. 프로젝트 레벨 **build.gradle** 파일에 다음 종속 항목을 추가하십시오. 
+```
+dependencies {
+classpath 'com.android.tools.build:gradle:2.2.0'
+    classpath 'com.google.gms:google-services:3.0.0'
+}
+``` 
+    {: codeblock}
+5. **AndroidManifest.xml** 파일에서 다음 권한을 추가하십시오. 샘플 Manifest를 보려면 [Android helloPush 샘플 애플리케이션](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)을 참조하십시오. 샘플 Gradle 파일을 보려면 [샘플 빌드 Gradle 파일](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle)을 참조하십시오.
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="com.ibm.clientsdk.android.app.permission.C2D_MESSAGE" />
-<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-<uses-permission android:name="android.permission.WAKE_LOCK" />
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -62,22 +73,22 @@ import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 	{: codeblock}
 **참고**: 위의 조치에서 *Your_Android_Package_Name*을 사용자 애플리케이션에서 사용되는 애플리케이션 패키지 이름으로 대체하십시오.
 
-5. FCM(Firebase Cloud Messaging) 또는 GCM(Google Cloud Messaging) 의도 서비스와 RECEIVE 이벤트 알림의 의도 필터를 추가하십시오. 
+5. RECEIVE 및 REGISTRATION 이벤트 통지용으로 FCM(Firebase Cloud Messaging) 또는 GCM(Google Cloud Messaging) 의도 서비스 및 의도 필터를 추가하십시오. 
 ```
-<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" />
-<receiver
-android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.internal.MFPPushBroadcastReceiver"
-   android:permission="com.google.android.c2dm.permission.SEND">
-   <intent-filter>
-       <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-       <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
-    </intent-filter>
+<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
+    android:exported="true" >
     <intent-filter>
-	        <action android:name="android.intent.action.BOOT_COMPLETED" />
-	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
-	    </intent-filter>
-</receiver>
-	```
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+    </intent-filter>
+</service>
+<service
+    android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush"
+    android:exported="true" >
+    <intent-filter>
+        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+    </intent-filter>
+</service>
+```
     {: codeblock}
 
 6. {{site.data.keyword.mobilepushshort}} 서비스는 알림 트레이에서 개별 알림을 검색하도록 지원합니다. 알림 트레이에서 액세스하는 알림의 경우 클릭하는 알림에 대한 핸들만 사용자에게 제공됩니다. 애플리케이션이 정상적으로 열리면 모든 알림이 표시됩니다. 이 기능을 사용하려면 다음 스니펫으로 **AndroidManifest.xml** 파일을 업데이트하십시오. 
@@ -87,6 +98,32 @@ android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.internal.MFPPus
 com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
 android:theme="@android:style/Theme.NoDisplay"/>
 ```
+    {: codeblock}
+
+FCM 프로젝트를 설정하고 신임 정보를 얻으려면 [발신인 ID 및 API 키 가져오기](t_push_provider_android.html)를 참조하십시오. FCM(Firebase Cloud Messaging) 콘솔을 사용하여 다음 단계를 완료하십시오. 
+
+1. Firebase 콘솔에서 **프로젝트 설정** 아이콘을 클릭하십시오.
+	![Firebase 프로젝트 설정](images/FCM_4.jpg)
+
+3. 앱 분할창의 일반 탭에서 **앱 추가** 또는 **Android 앱에 Firebase 추가 아이콘**을 선택하십시오. 
+
+	![Android에 Firebase 추가](images/FCM_5.jpg)
+
+4. Android 앱에 Firebase 추가 창에서 패키지 이름으로 **com.ibm.mobilefirstplatform.clientsdk.android.push**를 추가하십시오. 또한 2단계를 반복하여 애플리케이션의 패키지 이름을 추가하십시오. 
+
+	![Android에 Firebase 추가 창](images/FCM_1.jpg)
+
+5. **계속**을 클릭하여 구성 파일을 복사하십시오.  
+6. **완료**를 클릭하여 **build.gradle** 파일을 추가하십시오. 
+7. 생성된 **google-services.json** 파일을 다운로드하십시오. 
+
+	![google-services.json 파일](images/FCM_3.jpg)
+
+8. **google-services.json** 파일을 애플리케이션의 루트 디렉토리에 추가하십시오. 
+
+	![애플리케이션의 루트 디렉토리에 json 파일 추가](images/FCM_7.jpg)
+
+애플리케이션을 빌드하고 실행하십시오. 
 
 ## Android 앱을 위한 푸시 SDK 초기화
 {: #android_initialize}
@@ -115,7 +152,7 @@ android:theme="@android:style/Theme.NoDisplay"/>
 ```
 //Initialize client Push SDK for Java
 MFPPush push = MFPPush.getInstance();
-push.initialize(getApplicationContext(), "AppGUID");
+push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ```
 	{: codeblock}
 
@@ -163,7 +200,9 @@ push.initialize(getApplicationContext(), "AppGUID");
 
 notificationListener 오브젝트를 푸시에 등록하려면 **MFPPush.listen()** 메소드를 호출하십시오. 푸시 알림을 처리하는 활동의 **onResume()** 메소드에서 일반적으로 이 메소드가 호출됩니다. 
 
-1. notificationListener 오브젝트를 푸시에 등록하려면 **listen()** 메소드를 호출하십시오. 푸시 알림을 처리하는 활동의 **onResume()** 메소드에서 일반적으로 이 메소드가 호출됩니다. 
+1. notificationListener 오브젝트를 푸시에 등록하려면 **listen()** 메소드를 호출하십시오. 이 메소드는 일반적으로 푸시 알림을 처리하는 활동의 **onResume()** 및 **onPause** 메소드에서 호출됩니다. 
+
+
 ```
 @Override
 	protected void onResume(){
@@ -172,6 +211,19 @@ notificationListener 오브젝트를 푸시에 등록하려면 **MFPPush.listen(
 	       push.listen(notificationListener);
 	   }
 	}
+```
+	{: codeblock}
+
+
+
+```
+@Override
+protected void onPause() {
+super.onPause();
+    if (push != null) {
+                push.hold();
+    }
+}
 ```
 	{: codeblock}
 

@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # FCM の資格情報の構成
 {: #create-push-enable-gcm}
-最終更新日: 2016 年 10 月 17 日
+最終更新日: 2016 年 11 月 15 日
 {: .last-updated}
 
 Firebase Cloud Messaging (FCM) は、プッシュ通知を Android デバイス、Google Chrome、および Mozilla の各 Web ブラウザーに配信するために使用されるゲートウェイです。Google Cloud Messaging (GCM) が FCM に置き換えられました。FCM 資格情報を取得してから、ダッシュボード上で {{site.data.keyword.mobilepushshort}} サービスをセットアップする必要があります。新規アプリケーションには必ず FCM 構成を使用してください。既存のアプリケーションは、引き続き GCM 構成で機能します。

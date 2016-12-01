@@ -8,47 +8,72 @@ copyright:
 
 # Ativando aplicativos Android para receber {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Última atualização: 19 de outubro de 2016
+Última atualização: 16 de novembro de 2016
 {: .last-updated}
 
-É possível ativar os aplicativos Android para receber o {{site.data.keyword.mobilepushshort}} para os seus dispositivos. O Android Studio é um
+É possível ativar os aplicativos do Android para receber
+notificações push para os seus dispositivos. O Android Studio é um
 pré-requisito e é o método recomendado para construir projetos Android. Um conhecimento de configuração básica de Android Studio é essencial.
 
 ## Instalando o Client Push SDK com Gradle
 {: #android_install}
 
-Esta seção descreve como instalar e usar o Client Push SDK para desenvolver ainda mais os aplicativos Android.
+Esta seção descreve como instalar e usar o Client Push SDK para desenvolver ainda mais
+os aplicativos Android.
 
-O Bluemix® Mobile Services Push SDK pode ser incluído usando o Gradle. O Gradle faz download automaticamente dos artefatos de repositórios e os disponibiliza para seu aplicativo Android. Assegure-se
+O Bluemix® Mobile Services Push SDK pode ser incluído usando o Gradle. O Gradle
+faz download automaticamente dos artefatos de repositórios e os disponibiliza para seu
+aplicativo Android. Assegure-se
 de configurar corretamente o Android Studio e o Android Studio SDK. Para obter mais informações sobre como configurar o sistema, consulte [Visão geral do Android Studio](https://developer.android.com/tools/studio/index.html). Para
-obter informações sobre o Gradle, consulte [Configurando construções do Gradle](http://developer.android.com/tools/building/configuring-gradle.html).
+obter informações sobre o Gradle, consulte
+[Configurando
+compilações do Gradle](http://developer.android.com/tools/building/configuring-gradle.html).
 
-1. No Android Studio, depois de criar e abrir seu aplicativo móvel, abra o arquivo
-**build.gradle** do aplicativo.
-2. Inclua as seguintes dependências em seu aplicativo móvel. As linhas a seguir incluem o Push client SDK do Bluemix™ Mobile Services e o SDK de serviços do Google Play nas dependências do escopo de compilação.
-```
-com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
-```
+Após a criação e a abertura do seu aplicativo móvel,
+conclua as etapas a seguir usando o Android Studio.
+
+1. Inclua dependências em seu arquivo de nível Módulo **build.gradle**. 
+	- Inclua a dependência a seguir para incluir o SDK
+do cliente Push dos serviços do Bluemix™ Mobile e o SDK dos
+serviços do Google Play em suas dependências do escopo de compilação.
+	```
+	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
+	```
     {: codeblock}
-2. Construa o projeto para assegurar que as dependências estão resolvidas.
-3. Inclua as seguintes dependências em seu aplicativo móvel. Estas instruções de importação são necessárias para os fragmentos de código:
-```
-import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
+	
+	- Inclua a dependência a seguir somente no final do arquivo.
+	```
+	'com.google.gms.google-services'
+	```
+    {: codeblock}
+	- Inclua as dependências a seguir para importar instruções
+que são requeridas para os fragmentos de código.
+	```
+	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushException;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushResponseListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
-```
+	```
     {: codeblock}
-
-2. No arquivo **AndroidManifest.xml**, inclua as permissões a seguir. Para visualizar um manifest de amostra, consulte [Aplicativo de amostra Android helloPush](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). Para visualizar um arquivo Gradle de amostra, consulte
-[Arquivo de amostra Build Gradle](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
+3. Inclua as dependências a seguir para o seu arquivo de
+nível Projeto **build.gradle**.
+```
+dependencies {
+    classpath 'com.android.tools.build:gradle:2.2.0'
+    classpath 'com.google.gms:google-services:3.0.0'
+}
+``` 
+    {: codeblock}
+5. No arquivo **AndroidManifest.xml**, inclua as
+permissões a seguir. Para visualizar um manifest de amostra, consulte
+[Aplicativo
+de amostra Android helloPush](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). Para visualizar um arquivo Gradle de amostra, consulte
+[Arquivo
+de amostra Build Gradle](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="com.ibm.clientsdk.android.app.permission.C2D_MESSAGE" />
-<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-<uses-permission android:name="android.permission.WAKE_LOCK" />
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -57,7 +82,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 	{: codeblock}
  Leia mais sobre as [Permissões do Android](http://developer.android.com/guide/topics/security/permissions.html) aqui.
 
-4. Inclua as configurações de intento de notificação da atividade. Essa configuração inicia o aplicativo quando o usuário clica na notificação recebida da área de notificação.
+4. Inclua as configurações de intento de notificação da atividade. Essa configuração inicia o
+aplicativo quando o usuário clica na notificação recebida da área de notificação.
 ```
 <intent-filter>
 	<action android:name="Your_Android_Package_Name.IBMPushNotification"/>
@@ -67,22 +93,23 @@ import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 	{: codeblock}
 **Nota**: substitua *Your_Android_Package_Name* na ação anterior pelo nome do pacote de aplicativos usado em seu aplicativo.
 
-5. Inclua o serviço de intenção e os filtros de intenção do Firebase Cloud Messaging (FCM) ou do Google Cloud Messaging (GCM) para as notificações de eventos
-RECEIVE.
+5. Inclua o serviço de intenção e os filtros de intenção do
+Firebase Cloud Messaging (FCM) ou do Google Cloud Messaging (GCM)
+para as notificações de eventos RECEIVE e REGISTRATION.
 ```
-<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" />
-<receiver
-android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.internal.MFPPushBroadcastReceiver"
-   android:permission="com.google.android.c2dm.permission.SEND">
-   <intent-filter>
-       <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-       <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
-    </intent-filter>
+<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
+    android:exported="true" >
     <intent-filter>
-	        <action android:name="android.intent.action.BOOT_COMPLETED" />
-	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
     </intent-filter>
-</receiver>
+</service>
+<service
+    android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush"
+    android:exported="true" >
+    <intent-filter>
+        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+    </intent-filter>
+</service>
 ```
     {: codeblock}
 
@@ -95,6 +122,45 @@ são exibidas quando o aplicativo é aberto normalmente. Para usar essa funciona
 com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
 android:theme="@android:style/Theme.NoDisplay"/>
 ```
+    {: codeblock}
+
+Para configurar o projeto FCM e obter as suas
+credenciais, veja
+[Obtendo o seu ID de
+emissor e chave API](t_push_provider_android.html). Conclua as etapas a seguir usando o
+console do Firebase Cloud Messaging (FCM).
+
+1. No console do Firebase, clique no ícone
+**Configurações de projeto**.
+	![Configurações de projeto do Firebase](images/FCM_4.jpg)
+
+3. Selecione **INCLUIR APP** ou
+**Incluir Firebase em seu ícone de app
+Android** a partir da guia Geral no painel Seus apps.
+
+	![Incluindo Firebase no Android](images/FCM_5.jpg)
+
+4. Em Incluir Firebase na janela do seu app do Android, inclua
+**com.ibm.mobilefirstplatform.clientsdk.android.push** como o nome do pacote. 
+Além disso, inclua o nome do pacote de seu aplicativo, repetindo a etapa 2.
+
+	![Incluindo o Firebase em sua janela do Android](images/FCM_1.jpg)
+
+5. Clique em **Continuar** para copiar o arquivo de configuração. 
+6. Clique em **Concluir** para incluir o
+arquivo **build.gradle**.
+7. Faça download do arquivo **google-services.json** gerado.
+
+	![O arquivo google-services.json](images/FCM_3.jpg)
+
+8. Inclua o arquivo
+**google-services.json** no diretório-raiz do seu
+aplicativo.
+
+	![Incluindo o arquivo json no
+diretório-raiz do seu aplicativo](images/FCM_7.jpg)
+
+Construa e execute o seu aplicativo.
 
 ## Inicializando os apps Push SDK for Android
 {: #android_initialize}
@@ -124,7 +190,7 @@ Especifica o local em que o app está hospedado. É possível usar um destes tr�
 ```
 //Initialize client Push SDK for Java
 MFPPush push = MFPPush.getInstance();
-push.initialize(getApplicationContext(), "AppGUID");
+push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ```
 	{: codeblock}
 
@@ -174,9 +240,16 @@ Copie os fragmentos de código a seguir para seu aplicativo móvel Android.
 ## Recebendo notificações push em dispositivos Android
 {: #android_receive}
 
-Para registrar o objeto notificationListener com push, chame o método **MFPPush.listen()**. Esse método é chamado geralmente a partir do método** onResume() **da atividade que está manipulando as notificações push.
+Para registrar o objeto notificationListener com push, chame o método **MFPPush.listen()**. Esse método é chamado geralmente a partir do
+método** onResume() **da atividade que está
+manipulando as notificações push.
 
-1. Para registrar o objeto notificationListener com push, chame o método **listen()**. Esse método é chamado geralmente a partir do método** onResume() **da atividade que está manipulando as notificações push.
+1. Para registrar o objeto notificationListener com push, chame o método **listen()**. Este
+método é geralmente chamado a partir dos métodos
+**onResume()** e **onPause** da
+atividade que está manipulando as notificações push.
+
+
 ```
 @Override
 	protected void onResume(){
@@ -188,9 +261,24 @@ Para registrar o objeto notificationListener com push, chame o método **MFPPush
 ```
 	{: codeblock}
 
+
+
+```
+@Override
+protected void onPause() {
+    super.onPause();
+    if (push != null) {
+        push.hold();
+    }
+}
+```
+	{: codeblock}
+
 2. Compile o projeto e execute-o no dispositivo ou simulador. Quando o método onSuccess() para o listener de resposta no método register() for chamado, ele confirmará que o dispositivo foi registrado com sucesso com o serviço {{site.data.keyword.mobilepushshort}}. Nesse momento, é
 possível enviar uma mensagem conforme descrito em Enviando notificações push básicas.
-3. Verifique se seus dispositivos receberam sua notificação. Se o aplicativo estiver em execução no primeiro plano, a notificação será manipulada por **MFPPushNotificationListener**. Se o aplicativo estiver em segundo plano, uma mensagem será exibida na barra de notificações.
+3. Verifique se seus dispositivos receberam sua notificação. Se o
+aplicativo estiver em execução no primeiro plano, a notificação será
+manipulada por **MFPPushNotificationListener**. Se o aplicativo estiver em segundo plano, uma mensagem será exibida na barra de notificações.
 
 
 ## Enviando {{site.data.keyword.mobilepushshort}} básicas

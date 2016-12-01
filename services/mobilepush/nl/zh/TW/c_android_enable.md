@@ -8,10 +8,10 @@ copyright:
 
 # 啟用 Android 應用程式來接收 {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-前次更新：2016 年 10 月 19 日
+前次更新：2016 年 11 月 16 日
 {: .last-updated}
 
-您可以啟用 Android 應用程式來接收傳送至您裝置的 {{site.data.keyword.mobilepushshort}}。Android Studio 是必備項目，而且是建置 Android 專案的建議方法。對 Android Studio 的基本瞭解十分重要。
+您可以啟用 Android 應用程式來接收傳送至您裝置的推送通知。Android Studio 是必備項目，而且是建置 Android 專案的建議方法。對 Android Studio 的基本瞭解十分重要。
 
 ## 使用 Gradle 安裝 Client Push SDK
 {: #android_install}
@@ -20,16 +20,23 @@ copyright:
 
 Bluemix® Mobile Services Push SDK 可以使用 Gradle 進行新增。Gradle 會從儲存庫中自動下載構件，並讓它們可供 Android 應用程式使用。請確定您已正確設定 Android Studio 及 Android Studio SDK。如需如何設定系統的相關資訊，請參閱 [Android Studio 概觀](https://developer.android.com/tools/studio/index.html)。如需 Gradle 的相關資訊，請參閱[配置 Gradle 建置](http://developer.android.com/tools/building/configuring-gradle.html)。
 
-1. 在 Android Studio 中，建立並開啟行動應用程式之後，開啟應用程式 **build.gradle** 檔案。
-2. 將下列相依關係新增至行動應用程式。下列這幾行會將 Bluemix™ Mobile Services Push Client SDK 及 Google Play Services SDK 新增至您的編譯範圍相依關係。
-```
-com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
-```
+在建立並開啟行動應用程式之後，請使用 Android Studio 來完成下列步驟。
+
+1. 將相依關係新增至「模組」層次 **build.gradle** 檔案。 
+	- 新增下列相依關係，以將 Bluemix™ Mobile Services Push Client SDK 及 Google Play Services SDK 包含在您的編譯範圍相依關係。
+	```
+	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
+	```
     {: codeblock}
-2. 建置專案，以確保已解析相依關係。
-3. 將下列相依關係新增至行動應用程式。程式碼 Snippet 需要這些 import 陳述式：
-```
-import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
+	
+	- 僅在檔案尾端加上下列相依關係。
+	```
+	'com.google.gms.google-services'
+	```
+    {: codeblock}
+	- 將下列相依關係新增至 import 陳述式，程式碼 Snippet 需要這些 import 陳述式。
+	```
+	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushException;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushResponseListener;
@@ -37,13 +44,17 @@ import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 	```
     {: codeblock}
-
-2. 在 **AndroidManifest.xml** 檔案中，新增下列許可權。若要檢視範例資訊清單，請參閱 [Android helloPush 範例應用程式](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)。若要檢視範例 Gradle 檔案，請參閱[範例建置 Gradle 檔案](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle)。
+3. 將下列相依關係新增至「專案」層次 **build.gradle** 檔案。
+```
+dependencies {
+    classpath 'com.android.tools.build:gradle:2.2.0'
+    classpath 'com.google.gms:google-services:3.0.0'
+}
+``` 
+    {: codeblock}
+5. 在 **AndroidManifest.xml** 檔案中，新增下列許可權。若要檢視範例資訊清單，請參閱 [Android helloPush 範例應用程式](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)。若要檢視範例 Gradle 檔案，請參閱[範例建置 Gradle 檔案](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle)。
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="com.ibm.clientsdk.android.app.permission.C2D_MESSAGE" />
-<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-<uses-permission android:name="android.permission.WAKE_LOCK" />
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -62,22 +73,22 @@ import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 	{: codeblock}
 **附註**：將先前動作中的 *Your_Android_Package_Name* 取代為您應用程式中所使用的應用程式套件名稱。
 
-5. 針對 RECEIVE 事件通知，新增 Firebase Cloud Messaging (FCM) 或 Google Cloud Messaging (GCM) 目的服務及目的過濾器。
+5. 針對 RECEIVE 及 REGISTRATION 事件通知，新增 Firebase Cloud Messaging (FCM) 或 Google Cloud Messaging (GCM) 目的服務及目的過濾器。
 ```
-<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" />
-<receiver
-android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.internal.MFPPushBroadcastReceiver"
-   android:permission="com.google.android.c2dm.permission.SEND">
-   <intent-filter>
-       <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-       <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
-    </intent-filter>
+<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
+    android:exported="true" >
     <intent-filter>
-	        <action android:name="android.intent.action.BOOT_COMPLETED" />
-	        <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
-	    </intent-filter>
-</receiver>
-	```
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+    </intent-filter>
+</service>
+<service
+    android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush"
+    android:exported="true" >
+    <intent-filter>
+        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+    </intent-filter>
+</service>
+```
     {: codeblock}
 
 6. {{site.data.keyword.mobilepushshort}} Service 支援從通知匣擷取個別通知。對於從通知匣存取的通知，只會提供給您所點選之通知的控點。正常開啟應用程式時，會顯示所有通知。請使用下列 Snippet 來更新 **AndroidManifest.xml** 檔案，以使用此功能：
@@ -87,6 +98,32 @@ android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.internal.MFPPus
 com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
 android:theme="@android:style/Theme.NoDisplay"/>
 ```
+    {: codeblock}
+
+若要設定 FCM 專案並取得您的認證，請參閱[取得傳送端 ID 及 API 金鑰](t_push_provider_android.html)。請使用 Firebase Cloud Messaging (FCM) 主控台來完成下列步驟。
+
+1. 在 Firebase 主控台中，按一下**專案設定**圖示。
+	![Firebase 專案設定](images/FCM_4.jpg)
+
+3. 從應用程式窗格的「一般」標籤中，選取**新增應用程式**或**將 Firebase 新增至 Android 應用程式**圖示。
+
+	![將 Firebase 新增至 Android](images/FCM_5.jpg)
+
+4. 在「將 Firebase 新增至 Android 應用程式」視窗中，新增 **com.ibm.mobilefirstplatform.clientsdk.android.push** 作為套件名稱。同時，重複步驟 2 來新增應用程式的套件名稱。
+
+	![「將 Firebase 新增至 Android」視窗](images/FCM_1.jpg)
+
+5. 按一下**繼續**，以複製配置檔。 
+6. 按一下**完成**，以新增 **build.gradle** 檔案。
+7. 下載產生的 **google-services.json** 檔案。
+
+	![google-services.json 檔案](images/FCM_3.jpg)
+
+8. 將 **google-services.json** 檔案新增至應用程式的根目錄。
+
+	![將 json 檔案新增至應用程式的根目錄](images/FCM_7.jpg)
+
+建置並執行應用程式。
 
 ## 起始設定 Push SDK for Android 應用程式
 {: #android_initialize}
@@ -115,7 +152,7 @@ android:theme="@android:style/Theme.NoDisplay"/>
 ```
 //Initialize client Push SDK for Java
 MFPPush push = MFPPush.getInstance();
-push.initialize(getApplicationContext(), "AppGUID");
+push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 ```
 	{: codeblock}
 
@@ -163,7 +200,9 @@ push.initialize(getApplicationContext(), "AppGUID");
 
 若要向 Push 登錄 notificationListener 物件，請呼叫 **MFPPush.listen()** 方法。此方法一般是透過處理推送通知之活動的 **onResume()** 方法所呼叫。
 
-1. 若要向 Push 登錄 notificationListener 物件，請呼叫 **listen()** 方法。此方法一般是透過處理推送通知之活動的 **onResume()** 方法所呼叫。
+1. 若要向 Push 登錄 notificationListener 物件，請呼叫 **listen()** 方法。此方法一般是透過處理推送通知之活動的 **onResume()** 及 **onPause** 方法所呼叫。
+
+
 ```
 @Override
 	protected void onResume(){
@@ -172,6 +211,19 @@ push.initialize(getApplicationContext(), "AppGUID");
 	       push.listen(notificationListener);
 	   }
 	}
+```
+	{: codeblock}
+
+
+
+```
+@Override
+protected void onPause() {
+    super.onPause();
+    if (push != null) {
+        push.hold();
+    }
+}
 ```
 	{: codeblock}
 
@@ -226,6 +278,4 @@ push.initialize(getApplicationContext(), "AppGUID");
 
 順利設定基本通知之後，您就可以配置標籤型通知及進階選項。
 
-將這些 Push Notifications Service 特性新增至您的應用程式。
-若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。
-若要使用進階通知選項，請參閱[啟用進階推送通知](t_advance_badge_sound_payload.html)。
+將這些 Push Notifications Service 特性新增至您的應用程式。若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。若要使用進階通知選項，請參閱[啟用進階推送通知](t_advance_badge_sound_payload.html)。

@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # Berechtigungsnachweise für APNs generieren
 {: #create-push-credentials-apns}
-Letzte Aktualisierung: 17. Oktober 2016
+Letzte Aktualisierung: 10. November 2016
 {: .last-updated}
 
 Apple Push Notification Service (APNs) ermöglicht Anwendungsentwicklern das Senden ferner Benachrichtigungen aus der Bluemix-Instanz des {{site.data.keyword.mobilepushshort}}-Service (d. h. dem Provider) an iOS-Geräte und -Anwendungen. Die Nachrichten werden an eine Zielanwendung auf dem Gerät gesendet. 
@@ -142,14 +142,12 @@ Die Zertifikate, die für APNs erforderlich sind, sind `.p12`-Zertifikate, die d
 
 Weitere Informationen zur Verwendung von APNs finden Sie in der Veröffentlichung [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4).
 
-Set up APNs on the Push dashboard, as follows:
+Führen Sie die folgenden Schritte aus, um APNs im Push Notification-Services-Dashboard einzurichten:
 
-1. Öffnen Sie Ihre Back-End-Anwendung im Bluemix-Dashboard und klicken Sie anschließend auf den **IBM Push Notifications**-Service, um das Push-Dashboard zu öffnen.
-
-	Das Push-Dashboard zeigt Folgendes an:
-	![Dashboard 'Push-Benachrichtigungen konfigurieren'](images/wizard.jpg)
-2. Navigieren Sie auf der Registerkarte **Konfiguration** zum Abschnitt **Apple-Push-Zertifikat** und wählen Sie **Sandbox** (Entwicklung) oder **Produktion** (Verteilung) aus und laden Sie dann das `p.12`-Zertifikat hoch, das Sie im vorherigen [Schritt](#step18) erstellt haben.
-	![Registerkarte für die Konfiguration von Push-Benachrichtigungen festlegen](images/credential_screen.jpg)
+1. Wählen Sie im Push Notification-Services-Dashboard die Option **Konfigurieren** aus.
+2. Wählen Sie die Option **Mobile** aus, um die Informationen im Formular mit den APNs-Push-Berechtigungsnachweisen zu aktualisieren.
+3. Wählen Sie je nach Bedarf **Sandbox** (Entwicklung) oder **Produktion** (Verteilung) aus und laden Sie dann das `p.12`-Zertifikat hoch, das Sie im vorherigen [Schritt](#step18) erstellt haben.
+	![Dashboard zum Festlegen von Push-Benachrichtigungen](images/wizard.jpg)
 3. Geben Sie in das Feld **Kennwort** das zugehörige Kennwort für die `.p12`-Zertifikatsdatei ein und klicken Sie anschließend auf **Speichern**.
 
 Nachdem die Zertifikate erfolgreich mit einem gültigen Kennwort hochgeladen wurden, können Sie mit dem Senden von Benachrichtigungen beginnen.

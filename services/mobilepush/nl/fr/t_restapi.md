@@ -30,7 +30,8 @@ Il vous est aussi possible d'utiliser la ligne de commande pour obtenir les donn
 
 ```
     cf create-service-key {push_instance_name} {key_name}
-    cf service-key {push_instance_name} {key_name}
+
+ cf service-key {push_instance_name} {key_name}
 ```
 	{: codeblock}
 
@@ -55,7 +56,7 @@ L'écran **Afficher les données d'identification** affiche des informations sur
 ```
 	{
     "imfpush_Dev": [
-    {
+   {
      "name": "testapp1",
      "label": "imfpush_Dev",
      "plan": "Basic",
@@ -93,7 +94,7 @@ Si vous utilisez plusieurs filtres, vous pouvez les combiner avec la logique AND
 - Pour la logique AND et OR : une requête simple peut comporter les deux logiques, AND et OR. Chaque filtre est évalué individuellement avant que les filtres ne soient combinés dans une expression AND.
 
 Pour l'API GET d'appareil, les combinaisons suivantes sont prises en charge :
-- Le nom est la zone de plateforme.
+-Le nom est la zone de plateforme.
 - Sauf pour platform, l'opérateur peut être == ou =@
 - Pour platform, l'opérateur doit être ==. Si l'opérateur =@ est utilisé, la valeur peut être une sous-chaîne.
 - Si l'opérateur == est utilisé, la valeur doit être une chaîne qui correspond exactement.
@@ -104,8 +105,7 @@ Pour l'API GET d'abonnement, les combinaisons suivantes sont prises en charge :
 - Sauf pour platform, l'opérateur peut être == ou =@
 - Pour platform, l'opérateur doit être ==
 - Si l'opérateur =@ est utilisé, la valeur peut être une sous-chaîne. Si l'opérateur == est utilisé, la valeur doit être une chaîne qui correspond exactement.
-
-Pour l'API GET de balise, les combinaisons suivantes sont prises en charge :
+- Pour l'API GET d'étiquette, les combinaisons suivantes sont prises en charge :
 - Le nom peut être l'une des zones suivantes : “name” ou “description”
 - Si l'opérateur =@ est utilisé, la valeur peut être une sous-chaîne.
 - Si l'opérateur == est utilisé, la valeur doit être une chaîne qui correspond exactement.

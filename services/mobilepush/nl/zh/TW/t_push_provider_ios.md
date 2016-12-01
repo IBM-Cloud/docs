@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # 配置 APNs 的認證
 {: #create-push-credentials-apns}
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 11 月 10 日
 {: .last-updated}
 
 Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端通知從 Bluemix（提供者）上的 {{site.data.keyword.mobilepushshort}} Service 實例傳送給 iOS 裝置及應用程式。訊息會傳送至裝置上的目標應用程式。 
@@ -138,14 +138,12 @@ APNs 所需的憑證是 `.p12` 憑證，其中包含私密金鑰以及建置和�
 
 如需使用 APNs 的相關資訊，請參閱 [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4)。
 
-在 Push 儀表板上設定 APNs，如下所示：
+若要在 Push Notification Service 儀表板上設定 APNs，請完成以下步驟：
 
-1. 在 Bluemix 儀表板中開啟後端應用程式，然後按一下 **IBM Push Notifications** 服務來開啟 Push 儀表板。
-
-	Push 儀表板會顯示：
+1. 在 Push Notification Service 儀表板上，選取**配置**。
+2. 選擇 **Mobile** 選項，以更新 **APNs Push 認證**表單中的資訊。
+3. 適當地選取**沙盤推演**（開發）或**正式作業**（配送），然後上傳您使用前一個[步驟](#step18)所建立的 `p.12` 憑證。
 ![設定 Push Notifications 儀表板](images/wizard.jpg)
-2. 在**配置**標籤上，移至 **Apple Push 憑證**區段，並選取**沙盤推演**（開發）或**正式作業**（配送），然後上傳您使用前一個[步驟](#step18)所建立的 `p.12` 憑證。
-![設定 Push Notifications 配置標籤](images/credential_screen.jpg)
 3. 在**密碼**欄位中，輸入與 `.p12` 憑證檔案相關聯的密碼，然後按一下**儲存**。
 
 

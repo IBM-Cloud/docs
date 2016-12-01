@@ -9,10 +9,10 @@ copyright:
 {:new_window: target="_blank"}
 # 配置 FCM 的認證
 {: #create-push-enable-gcm}
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 11 月 15 日
 {: .last-updated}
 
-Firebase Cloud Messaging (FCM) 是用來將推送通知遞送至 Android 裝置、Google Chrome 及 Mozilla Web 瀏覽器的閘道。FCM 已取代 Google Cloud Messaging (GCM)。您需要取得 FCM 認證，然後在儀表板上設定 {{site.data.keyword.mobilepushshort}} Service。請確定將 FCM 配置用於新的應用程式。現有應用程式可以繼續使用 GCM 配置運作。
+Firebase Cloud Messaging (FCM) 是用來將推送通知遞送至 Android 裝置、Google Chrome 及 Mozilla Web 瀏覽器的閘道。FCM 已取代 Google Cloud Messaging (GCM)。您需要取得 FCM 認證，然後在儀表板上設定 {{site.data.keyword.mobilepushshort}} Service。請確定將 FCM 配置用於新的應用程式。現有應用程式將繼續使用 GCM 配置運作。
 
 ##取得傳送端 ID 及 API 金鑰
 {: #android-senderid-apikey}

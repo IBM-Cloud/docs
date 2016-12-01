@@ -7,14 +7,14 @@ copyright:
 
 # 关于 {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-上次更新时间：2016 年 10 月 17 日
+上次更新时间：2016 年 11 月 11 日
 {: .last-updated}
 
 IBM {{site.data.keyword.mobilepushshort}} 是可用于将通知发送至 iOS 和 Android 移动设备、Google Chrome 和 Mozilla Firefox Web 浏览器，以及 Google Chrome Apps and Extensions 的服务。通知可以针对所有应用程序用户，也可以针对一组使用标记的特定用户和设备。您可以管理设备、标记和预订。还可以使用 SDK（软件开发包）和具象状态传输 (REST) 应用程序编程接口 (API) 来进一步开发您的客户机应用程序。 
 
-此外，{{site.data.keyword.mobilepushshort}} 还作为一种 Bluemix Dedicated 服务提供。有关 {{site.data.keyword.mobilepushshort}} 专用服务的信息，请参阅[专用服务](../../dedicated/index.html)。请注意，{{site.data.keyword.mobilepushshort}} 监视选项卡并不显示分析数据。
+此外，{{site.data.keyword.mobilepushshort}} 还作为一种 Bluemix Dedicated 服务提供。有关 {{site.data.keyword.mobilepushshort}} 专用服务的信息，请参阅[专用服务](/docs/dedicated/index.html)。请注意，{{site.data.keyword.mobilepushshort}} 监视选项卡并不显示分析数据。
 
-{{site.data.keyword.mobilepushshort}} 服务现在支持 OpenWhisk。有关更多信息，请参阅 [OpenWhisk](../../openwhisk/index.html)。
+{{site.data.keyword.mobilepushshort}} 服务现在支持 OpenWhisk。有关更多信息，请参阅 [OpenWhisk](/docs/openwhisk/index.html)。
 
 
 ## {{site.data.keyword.mobilepushshort}} 服务流程
@@ -84,7 +84,7 @@ IBM {{site.data.keyword.mobilepushshort}} 是可用于将通知发送至 iOS 和
 
 但是，面向用户的单点广播通知要求在向 {{site.data.keyword.mobilepushshort}} 注册客户机移动设备或 Web 浏览器或 Chrome Apps and Extensions 时将用户标识与设备关联。   
 
-通常，客户机应用程序首先会运行认证周期，在这期间会针对认证服务（如 [Mobile Client Access](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html)）认证移动应用程序用户。在成功认证之后，已认证的用户标识会传递至推送设备注册 API。要通过 REST API 发送单点广播通知，请确保发布到消息资源时提供了 deviceId 或 userId。
+通常，客户机应用程序首先会运行认证周期，在这期间会针对认证服务（如 [Mobile Client Access](docs/services/mobileaccess/index.html)）认证移动应用程序用户。在成功认证之后，已认证的用户标识会传递至推送设备注册 API。要通过 REST API 发送单点广播通知，请确保发布到消息资源时提供了 deviceId 或 userId。
 
 ###基于平台的通知
 {: platform-based-notifications}
@@ -106,7 +106,7 @@ IBM {{site.data.keyword.mobilepushshort}} 是可用于将通知发送至 iOS 和
 
 对于 iOS 8 和更高版本，所允许的最大大小为 2 KB。Apple 推送通知服务不会发送超过此限制的通知。
 
-###Android、Chrome 和 Firefox 浏览器
+###Android、Firefox 浏览器、Chrome 浏览器以及 Chrome Apps & Extensions 
 {: android-message-size}
 
-允许的消息最大大小限制为 4 KB。  
+允许的消息有效内容最大大小限制为 4 KB。  

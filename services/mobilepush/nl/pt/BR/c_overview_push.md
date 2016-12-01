@@ -7,7 +7,7 @@ copyright:
 
 # Sobre {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Última atualização: 17 de outubro de 2016
+Última atualização: 11 de novembro de 2016
 {: .last-updated}
 
 O IBM {{site.data.keyword.mobilepushshort}} é um serviço que pode ser usado para enviar notificações a dispositivos móveis iOS e Android, bem como aos
@@ -17,9 +17,9 @@ possível também usar um SDK (kit de desenvolvimento de software) e interfaces 
 programação de aplicativo (APIs) Representational State Transfer (REST) para
 desenvolver ainda mais seus aplicativos cliente. 
 
-O {{site.data.keyword.mobilepushshort}} também está disponível como um serviço Bluemix Dedicated. Para obter informações sobre o {{site.data.keyword.mobilepushshort}} como um serviço dedicado, consulte [Serviços dedicados](../../dedicated/index.html). Observe que a guia de monitoramento {{site.data.keyword.mobilepushshort}} não mostra dados de analítica.
+O {{site.data.keyword.mobilepushshort}} também está disponível como um serviço Bluemix Dedicated. Para obter informações sobre o {{site.data.keyword.mobilepushshort}} como um serviço dedicado, consulte [Serviços dedicados](/docs/dedicated/index.html). Observe que a guia de monitoramento {{site.data.keyword.mobilepushshort}} não mostra dados de analítica.
 
-O serviço {{site.data.keyword.mobilepushshort}} agora está ativado para OpenWhisk. Para obter mais informações, consulte [OpenWhisk](../../openwhisk/index.html).
+O serviço {{site.data.keyword.mobilepushshort}} agora está ativado para OpenWhisk. Para obter mais informações, consulte [OpenWhisk](/docs/openwhisk/index.html).
 
 
 ## Processo do serviço {{site.data.keyword.mobilepushshort}}
@@ -87,8 +87,7 @@ Nota: aplicativos anteriores precisavam passar o clientSecret somente ao registr
 as outras APIs chamadas por clientes móveis e do navegador não requerem o clientSecret. Esses aplicativos antigos podem continuar a usar o clientSecret opcionalmente
 para registros de dispositivo ou chamadas de atualização. Entretanto, é
 expressamente recomendado que a verificação do clientSecret seja imposta para todas as
-chamadas de API do cliente. Para impingir isso em aplicativos existentes, há uma nova API 'verifyClientSecret' que está publicada.
-Para novos aplicativos, a verificação do clientSecret será impingida em todas as chamadas de API do cliente e esse comportamento não poderá ser mudado mesmo com a API
+chamadas de API do cliente. Para impingir isso em aplicativos existentes, há uma nova API 'verifyClientSecret' que está publicada.  Para novos aplicativos, a verificação do clientSecret será impingida em todas as chamadas de API do cliente e esse comportamento não poderá ser mudado mesmo com a API
 'verfiyClientSecret'.
 
 Por padrão, a verificação do segredo do cliente é impingida apenas em novos apps. Os apps existentes e novos têm permissão para ativar ou desativar a verificação do segredo do cliente
@@ -131,7 +130,7 @@ No entanto, as notificações Unicast destinadas para usuários requerem a assoc
 móvel, do navegador da web ou de Apps Chrome e Extensões do cliente para {{site.data.keyword.mobilepushshort}}.   
 
 Geralmente, um aplicativo cliente executará, primeiramente, um ciclo de autenticação no qual o usuário do app móvel é autenticado em um serviço como
-[Mobile Client Access](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html). Na
+[Mobile Client Access](docs/services/mobileaccess/index.html). Na
 autenticação bem-sucedida, o ID de usuário autenticado então é passado para a API de
 registro de dispositivo push. 
 Para enviar notificações Unicast por meio da API REST, assegure-se de que os deviceIds ou userIds sejam fornecidos ao postar em um recurso de mensagem.
@@ -164,7 +163,9 @@ pelas plataformas do cliente.
 Para o iOS 8 e posterior, o tamanho máximo permitido é 2 kilobytes. O serviço de Notificação push Apple não envia notificações que excedem
 esse limite.
 
-###Navegadores Android, Chrome e Firefox
+###Android, navegador Firefox, navegador Chrome e Apps e
+extensões Chrome
 {: android-message-size}
 
-Há uma limitação de 4 kilobyes como tamanho máximo permitido de mensagem.  
+Há uma limitação de 4 kilobytes como o tamanho da carga útil de
+mensagem máximo permitido.  

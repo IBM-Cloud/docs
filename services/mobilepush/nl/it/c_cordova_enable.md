@@ -12,7 +12,7 @@ Ultimo aggiornamento: 17 ottobre 2016
 
 Cordova è una piattaforma per creare applicazioni ibride con JavaScript, CSS e HTML. Il {{site.data.keyword.mobilepushshort}} supporta lo sviluppo di applicazioni Android e iOS basate su Cordova.
 
-Puoi abilitare le applicazioni Cordova a ricevere le notifiche di push ai tuoi dispositivi. 
+Puoi abilitare le applicazioni Cordova a ricevere le notifiche di push ai tuoi dispositivi.
 
 ## Installazione del plugin push Cordova
 {: #cordova_install}
@@ -43,7 +43,7 @@ Assicurati di specificare l'ID bundle corretto. Il seguente messaggio di errore 
 1. Aggiungi la API supportata minima o la dichiarazione di destinazione della distribuzione al file config.xml per la tua applicazione Cordova. Il valore minSdkVersion deve essere maggiore di 15. Il valore targetSdkVersion deve sempre riflettere l'SDK Android più recente disponibile da Google.
 	
 	* Android - Con il tuo editor, apri il file config.xml e aggiorna l'elemento
-`<platform name="android">` con le versioni SDK minima e di destinazione: 
+`<platform name="android">` con le versioni SDK minima e di destinazione:
 
 ```
 < !-- add deployment target declaration --> 
@@ -69,14 +69,14 @@ cordova platform add ios
 ```
 	{: codeblock}
 
-1. Dalla directory root della tua applicazione Cordova, immetti il seguente comando per installare il plugin Cordova push: **cordova plugin add ibm-mfp-push**. A seconda delle piattaforme da te aggiunte, potresti visualizzare: 
+1. Dalla directory root della tua applicazione Cordova, immetti il seguente comando per installare il plugin Cordova push: **cordova plugin add ibm-mfp-push**. A seconda delle piattaforme da te aggiunte, potresti visualizzare:
 ```
 Installing "ibm-mfp-push" for android
 	Installing "ibm-mfp-push" for ios
 ```
 	{: codeblock}
 
-1. Da *your-app-root-folder*, verifica che i plugin Cordova core e push siano stati installati correttamente utilizzando questo comando: **cordova plugin list**. A seconda delle piattaforme da te aggiunte, potresti visualizzare: 
+1. Da *your-app-root-folder*, verifica che i plugin Cordova core e push siano stati installati correttamente utilizzando questo comando: **cordova plugin list**. A seconda delle piattaforme da te aggiunte, potresti visualizzare:
 ```
 ibm-mfp-core 1.0.0 "MFPCore"
 	ibm-mfp-push 1.0.0 “MFPPush"

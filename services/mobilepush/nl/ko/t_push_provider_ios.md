@@ -9,7 +9,7 @@ copyright:
 {:new_window: target="_blank"}
 # APNs의 신임 정보 구성
 {: #create-push-credentials-apns}
-마지막 업데이트 날짜: 2016년 10월 17일
+마지막 업데이트 날짜: 2016년 11월 10일
 {: .last-updated}
 
 애플리케이션 개발자는 APNs(Apple Push Notification Service)를 이용하여 Bluemix의 {{site.data.keyword.mobilepushshort}} 서비스 인스턴스(제공자)에서 iOS 디바이스와 애플리케이션으로 원격 알림을 전송할 수 있습니다. 디바이스의 대상 애플리케이션으로 메시지가 전송됩니다.  
@@ -139,14 +139,12 @@ APNs에 필요한 인증서는 `.p12` 인증서이며 이 인증서에는 애플
 
 APNs 사용에 대한 자세한 정보는 [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4)를 참조하십시오. 
 
-푸시 대시보드에서 APNs를 다음과 같이 설정하십시오. 
+푸시 알림 서비스 대시보드에서 APNs를 설정하려면 다음을 수행하십시오. 
 
-1. Bluemix 대시보드에서 백엔드 애플리케이션을 열고 **IBM 푸시 알림** 서비스를 클릭하여 푸시 대시보드를 여십시오.
-
-	푸시 대시보드가 표시됩니다.
-	![푸시 알림 설정 대시보드](images/wizard.jpg)
-2. **구성** 탭에서 **Apple 푸시 인증서** 섹션으로 이동하여 **샌드박스**(개발) 또는 **프로덕션**(배포)를 선택한 후 이전 [단계](#step18)에서 작성한 `p.12` 인증서를 업로드하십시오.
- ![푸시 알림 설정 구성 탭](images/credential_screen.jpg)
+1. 푸시 알림 서비스 대시보드에서 **구성**을 선택하십시오.
+2. **모바일** 옵션을 선택하여 **APNs 알림 신임 정보** 양식의 정보를 업데이트하십시오. 
+3. **샌드박스**(개발) 또는 **프로덕션**(배포)을 선택한 후 이전 [단계](#step18)에서 작성한 `p.12` 인증서를 업로드하십시오.
+  ![푸시 알림 설정 대시보드](images/wizard.jpg)
 3. **비밀번호** 필드에서 `.p12` 인증서 파일과 연관된 비밀번호를 입력하고 **저장**을 클릭하십시오.
 
 올바른 비밀번호를 사용하여 인증서를 업로드한 후 알림 전송을 시작할 수 있습니다. 

@@ -59,7 +59,7 @@ pod 'BMSCore'
 
 3. Dal terminale, vai alla cartella del progetto e installa le dipendenze con il comando `pod update`.
 
-Il comando installa le tue dipendenze e crea un nuovo spazio di lavoro Xcode.   
+Il comando installa le tue dipendenze e crea un nuovo spazio di lavoro Xcode.  
 **Nota**: assicurati di aprire sempre il nuovo spazio di lavoro Xcode invece del file di progetto Xcode originale:
 ```
 $ open App.xcworkspace
@@ -85,7 +85,7 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 ##Utilizzo dei framework importati e delle cartelle di origine
 {: using-imported-frameworks}
 
-Fai riferimento all'SDK nel tuo codice. Utilizza uno dei seguenti metodi, in base alla tua preferenza. 
+Fai riferimento all'SDK nel tuo codice. Utilizza uno dei seguenti metodi, in base alla tua preferenza.
 
 **Objective-C**
 
@@ -105,7 +105,7 @@ pertinenti, ad esempio:
 
 	**
 
-Assicurati che siano implementati i seguenti prerequisiti: 
+Assicurati che siano implementati i seguenti prerequisiti:
 
 - iOS 8.0 o successiva
 - Xcode 7
@@ -152,7 +152,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 ```
 // Inizializza l'SDK Core for Swift con l'area, la rotta e la GUID IBM Bluemix
 let myBMSClient = BMSClient.sharedInstance
-myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
+myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.") 
 myBMSClient.defaultRequestTimeout = 10.0 // Timeout in secondi
 ```
 	{: codeblock}
@@ -215,9 +215,9 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 
 Un'applicazione deve essere registrata con il servizio APNS per ricevere le notifiche remote, dopo l'installazione su un dispositivo. Una volta che il token del dispositivo generato da APNS viene ricevuto dall'applicazione, questo deve essere trasmesso nuovamente al servizio {{site.data.keyword.mobilepushshort}}.
 
-Per registrare le applicazioni e dispositivi iOS, devi: 
+Per registrare le applicazioni e dispositivi iOS, devi:
 
-1. Creare un'applicazione di backend. 
+1. Creare un'applicazione di backend.
 2. Inviare il token a {{site.data.keyword.mobilepushshort}}.
 
 

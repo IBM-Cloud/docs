@@ -267,7 +267,7 @@ APNs에서 토큰이 수신되면 `registerWithDeviceToken` 메소드의 일부�
   {
     NSLog(@"%@",response.responseJson.description);
   }
- }];
+}];
  }
 ```
 	{: codeblock}
@@ -308,7 +308,7 @@ iOS 디바이스에서 푸시 알림을 수신하려면 애플리케이션의 �
 // For Objective-C
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
 //userInfo dictionary will contain data sent from server.
- }
+}
 ```
 	{: codeblock}
 
