@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # Python
 {: #python_runtime}
-Letzte Aktualisierung: 06. Juli 2016
-{: .last-updated}
 
 Die Laufzeit von Python in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'python_buildpack'.
 Das Buildpack 'python_buildpack' bietet eine vollständige Laufzeitumgebung für die Python-Apps 2 und 3.
@@ -23,7 +22,7 @@ Das Buildpack 'python_buildpack' wird verwendet, wenn das Stammverzeichnis Ihrer
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine Python-Starteranwendung bereit.  Die Python-Starteranwendung ist eine einfache Python-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix}} stellt eine Python-Starteranwendung bereit.  Die Python-Starteranwendung ist eine einfache Python-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}

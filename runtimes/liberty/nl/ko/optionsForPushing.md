@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Liberty 앱 푸시 옵션
 {: #options_for_pushing}
-
-마지막 업데이트 날짜: 2016년 6월 10일
-{: .last-updated}
 
 Bluemix에서 Liberty 서버의 동작은 Liberty 빌드팩을 통해 제어됩니다. 빌드팩은 애플리케이션의 특정 클래스에 맞는 완전한 런타임 환경을 제공할 수 있습니다. 클라우드 이식성을 높이고 개방형 클라우드 아키텍처를 향상시키는 데 있어 핵심 요소입니다. Liberty 빌드팩은 Java EE 7 및 OSGi 애플리케이션의 실행이 가능한 WebSphere Liberty 컨테이너를 제공합니다. 이는 Spring과 같은 유명한 프레임워크를 지원하며 IBM JRE를 포함합니다. WebSphere Liberty를 통해 클라우드에 적합한 애플리케이션을 신속하게 개발할 수 있습니다. Liberty 빌드팩은 하나의 Liberty 서버에 배치되는 여러 개의 애플리케이션을 지원합니다. Liberty 빌드팩이 Bluemix에 통합되는 과정에서 서비스 바인딩을 위한 환경 변수가 Liberty 서버에서 구성 변수로 표시되는지 확인합니다. 
 
@@ -81,7 +79,6 @@ http://<yourappname>.mybluemix.net/acme/
 {: codeblock}
 
 전체 기본 Liberty server.xml 구성 파일은 다음과 같습니다.
-
 ```
     <server>
        <featureManager>
@@ -124,14 +121,14 @@ http://<yourappname>.mybluemix.net/acme/
 예: 
 
 ```
-$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 중요: 환경 변수 변경사항을 적용하려면 다음과 같이 애플리케이션을 다시 스테이징해야 합니다.
 
 ```
-$ cf restage myapp
+    $ cf restage myapp
 ```
 {: codeblock}
 
@@ -144,7 +141,7 @@ Liberty 프로파일을 워크스테이션에 설치했으며 이미 애플리�
 예를 들어, Liberty 서버의 이름이 defaultServer이면 다음 명령을 실행하십시오.
 
 ```
-$ cf push <yourappname> -p wlp/usr/servers/defaultServer
+    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -173,14 +170,14 @@ Liberty 프로파일이 워크스테이션에 설치되어 있지 않으면 다�
 서버 디렉토리가 준비되면, Bluemix에 배치할 수 있습니다. 
 
 ```
-$ cf push <yourappname> -p defaultServer
+    $ cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
 참고: 서버 디렉토리의 일부로 배치되는 웹 애플리케이션은 [Liberty 프로파일에서 판별되는 컨텍스트 루트](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6)에서 액세스할 수 있습니다. 예: 
 
 ```
-http://<yourappname>.mybluemix.net/acme/
+    http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
@@ -193,17 +190,17 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/se
 예를 들어, Liberty 서버가 defaultServer이면 다음 명령을 실행하십시오.
 
 ```
-$ wlp/bin/server package defaultServer --include=usr
+    $ wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
-이 명령은 서버 디렉토리에 serverName.zip 파일을 생성합니다. 다른 아카이브 파일을 지정하는 데 ``--archive`` 옵션을 사용한 경우 ``.jar` 대신 ``.zip` 확장자가 있는지 확인하십시오. **빌드팩은 `.jar` 확장자로 작성된 패키지된 서버 파일을 지원하지 않습니다**.
+이 명령은 서버 디렉토리에 serverName.zip 파일을 생성합니다. 다른 아카이브 파일을 지정하는 데 `--archive` 옵션을 사용한 경우 `.zip` 확장자가 `.jar` 대신 있는지 확인하십시오. **빌드팩은 `.jar` 확장자로 작성된 패키지된 서버 파일을 지원하지 않습니다**.
 
 그러면 사용자가 생성된 `.zip` 파일을 Bluemix에 `cf push` 명령으로 푸시할 수 있습니다.
 예: 
 
 ```
-$ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 
@@ -222,37 +219,35 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ### 참조 가능한 변수
 {: #referenceable_variables}
 
-다음 변수는 runtime-vars.xml 파일에 정의되어 있고, 푸시된 server.xml 파일에서 참조됩니다. 모든 변수는 대소문자를 구분합니다. 
+다음 변수는 `runtime-vars.xml` 파일에 정의되어 있고 푸시된 `server.xml` 파일에서 참조됩니다. 모든 변수는 대소문자를 구분합니다. 
 
 * ${port}: Liberty 서버가 수신 대기하고 있는 HTTP 포트입니다.
-* ${vcap_console_port}: vcap 콘솔이 실행되고 있는 포트입니다(대개 ${port}와 같음).
-* ${vcap_app_port}: app 서버가 수신 대기하는 포트입니다(대개 ${port}와 같음).
-* ${vcap_console_ip}: vcap 콘솔의 IP 주소입니다(대개 Liberty 서버가 수신 대기하는 IP 주소임).
+* ${vcap_app_port}: ${port}와 같습니다. Diego에서 실행되는 경우에는 설정되지 않습니다.
 * ${application_name}: cf push 명령에 옵션을 사용하여 정의하는 애플리케이션의 이름입니다.
-* ${application_version}: 이 애플리케이션 인스턴스의 버전이며, b687ea75-49f0-456e-b69d-e36e8a854caa와 같은 UUID 형식을 사용합니다. 새로운 코드 또는 변경된 애플리케이션 아티팩트가 포함된 애플리케이션을 연속으로 푸시될 때마다 이 변수가 변경됩니다.
-* ${host}: 애플리케이션을 실행하고 있는 DEA의 IP 주소입니다(대개 ${vcap_console_ip}와 같음).
+* ${application_version}: 이 애플리케이션 인스턴스의 버전이며 `b687ea75-49f0-456e-b69d-e36e8a854caa`와 같은 UUID 양식을 사용합니다. 새로운 코드 또는 변경된 애플리케이션 아티팩트가 포함된 애플리케이션을 연속으로 푸시될 때마다 이 변수가 변경됩니다.
+* ${host}: 애플리케이션 인스턴스의 IP 주소입니다.
 * ${application_uris}: 이 애플리케이션에 액세스하는 데 사용하는 JSON 스타일의 엔드포인트 배열입니다. 예: myapp.mydomain.com
-* ${start}: 애플리케이션을 시작한 날짜 및 시간이며, 2013-08-22 10:10:18 -0400와 비슷한 형식을 사용합니다.
+* ${start}: 애플리케이션을 시작한 날짜 및 시간이며 `2013-08-22 10:10:18 -0400`과 비슷한 양식을 사용합니다. Diego에서 실행되는 경우에는 설정되지 않습니다.
 
 ### 바인드된 서비스 정보 액세스
 {: #accessing_info_of_bound_services}
 
-서비스를 애플리케이션에 바인드하려는 경우, Cloud Foundry가 애플리케이션에 대해 설정하는 [VCAP_SERVICES 환경 변수](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)에 연결 신임 정보와 같은 서비스 관련 정보가 포함됩니다. [자동으로 구성되는 서비스](autoConfig.html)의 경우, Liberty 빌드팩이 server.xml 파일에 서비스 바인딩 항목을 생성하거나 업데이트합니다. 서비스 바인딩 항목의 컨텐츠는 다음 형식 중 하나입니다.
+서비스를 애플리케이션에 바인드하려는 경우, Cloud Foundry가 애플리케이션에 대해 설정하는 [VCAP_SERVICES 환경 변수](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)에 연결 신임 정보와 같은 서비스 관련 정보가 포함됩니다. [자동으로 구성되는 서비스](autoConfig.html)의 경우, Liberty 빌드팩이 server.xml 파일에 서비스 바인딩 항목을 생성하거나 업데이트합니다. 서비스 바인딩 항목의 컨텐츠는 다음 형식 중 하나입니다.
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt; 서비스의 이름, 유형, 플랜과 같은 정보를 설명합니다. 
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt; 서비스의 연결 정보를 설명합니다.
 
 일반적인 정보 세트는 다음과 같습니다.
-* name: 서비스의 이름입니다. 예: mysql-e3abd.
-label: 작성된 서비스의 유형입니다. 예: mysql-5.5. 
-* plan: 서비스 플랜이며, 해당 플랜의 고유 ID로 표시됩니다. 예: 100.
-connection.name: 연결의 고유 ID이며, UUID 형식을 사용합니다. 예: d01af3a5fabeb4d45bb321fe114d652ee.
-* connection.hostname: 서비스를 실행하는 서버의 호스트 이름입니다. 예: mysql-server.mydomain.com.
-* connection.host: 서비스를 실행하고 있는 서버의 IP 주소입니다. 예: 9.37.193.2.
-* connection.port: 서비스가 들어오는 연결을 수신 대기하는 포트입니다. 예: 3306,3307. 
-* connection.user: 이 애플리케이션을 서비스에 인증하는 데 사용되는 사용자 이름입니다. 사용자 이름은 Cloud Foundry에서 자동 생성됩니다. 예: unHwANpjAG5wT.
+* name: 서비스의 이름입니다(예: mysql-e3abd).
+* label: 작성된 서비스의 유형입니다(예: mysql-5.5).
+* plan: 서비스 플랜이며 해당 플랜의 고유 ID로 표시됩니다(예: 100).
+* connection.name: 연결의 고유 ID이며 UUID 양식을 사용합니다(예: d01af3a5fabeb4d45bb321fe114d652ee).
+* connection.hostname: 서비스를 실행 중인 서버의 호스트 이름입니다(예: mysql-server.mydomain.com).
+* connection.host: 서비스를 실행 중인 서버의 IP 주소입니다(예: 9.37.193.2).
+* connection.port: 서비스가 수신 연결을 청취 중인 포트입니다(예: 3306,3307).
+* connection.user: 이 애플리케이션을 서비스에 인증하는 데 사용되는 사용자 이름입니다. Cloud Foundry에서 사용자 이름을 자동 생성합니다(예: unHwANpjAG5wT).
 * connection.username: connection.user에 대한 별명입니다.
-* connection.password: 이 애플리케이션을 서비스에 인증하는 데 사용되는 비밀번호입니다. 비밀번호는 Cloud Foundry에서 자동 생성됩니다. 예: pvyCY0YzX9pu5.
+* connection.password: 이 애플리케이션을 서비스에 인증하는 데 사용되는 비밀번호입니다. Cloud Foundry에서 비밀번호를 자동 생성합니다(예: pvyCY0YzX9pu5).
 
 Liberty 빌드팩을 통해 자동으로 구성되지 않는 바인드된 서비스의 경우, 애플리케이션에서 자체적으로 백엔드 리소스의 액세스를 관리해야 합니다.
 

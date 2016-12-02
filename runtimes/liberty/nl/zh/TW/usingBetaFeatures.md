@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # 使用測試版特性
 {: #using_beta_features}
-
-前次更新：2016 年 6 月 10 日
-{: .last-updated}
 
 Liberty 測試版特性可讓您提早存取未來 Liberty 版本中可能包含的新功能及程式設計模型。大部分的測試版特性也可以用於已部署至 Bluemix 的應用程式。
 

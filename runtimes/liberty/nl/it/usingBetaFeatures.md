@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Utilizzo delle funzioni beta
 {: #using_beta_features}
-
-Ultimo aggiornamento: 10 giugno 2016
-{: .last-updated}
 
 Le funzioni beta Liberty forniscono un accesso anticipato ai nuovi modelli di funzionalità e
 programmazione che potrebbero essere inclusi in una futura release di Liberty. La maggior parte delle funzioni beta può essere utilizzata anche nelle applicazioni distribuite a Bluemix.

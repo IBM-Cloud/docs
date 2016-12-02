@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -13,24 +14,35 @@ copyright:
 
 ## Liberty buildpack 中最新更新的列表。
 
-上次更新时间：2016 年 9 月 13 日
-{: .last-updated}
+### 2016 年 11 月 1 日：更新了 Liberty buildpack V3.4.1-20161030-2241
+* 该 buildpack 包含启动特定类型应用程序时所发生问题的修订。具体来说，是使用 `dropins` 目录中的应用程序文件，将应用程序部署为服务器目录或打包服务器。
+
+### 2016 年 10 月 21 日：更新了 Liberty buildpack V3.4-20161018-2004
+* 已更新缺省 Liberty 运行时版本 `16.0.0.3`，以包括 [PI68805](http://www-01.ibm.com/support/docview.wss?uid=swg1PI68805) 和 [PI69141](http://www-01.ibm.com/support/docview.wss?uid=swg1PI69141) iFix。 
+* 每月 Liberty 运行时版本已更新为 [2016.9.0.1](https://developer.ibm.com/wasdev/blog/2016/09/23/beta-websphere-liberty-and-tools-october-2016/) 发行版。 
+* 该 buildpack 中还包含更新版本的 IBM JRE 8.0：SR3 FP12。
+* 现在已配置 IBM JRE 8.0 和 7.1，以[在调用 `SSLContext.getContext("TLS")` 时启用所有 TLS 协议](https://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/matchsslcontext_tls.html)，以匹配 Oracle 的 JRE 行为。同时也配置了 IBM JRE 7.1，以[在调用 `SSLContext.getDefault()` 时启用所有 TLS 协议](https://www.ibm.com/support/knowledgecenter/SSYKE2_7.1.0/com.ibm.java.security.component.71.doc/security-component/jsse2Docs/overrideSSLprotocol.html)，以匹配 IBM 的 JRE 8.0 行为。
+* 该 buildpack 提供了用于 [Monitoring and Analytics 服务](/docs/services/monana/index.html#monana_oview)的更新版本的数据收集器。
+* 该 buildpack 已更改为在对 MySQL 服务类型执行[自动配置](autoConfig.html)时，下载最新的 1.5.x [MariaDB Connector/J JDBC 驱动程序](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)。
+* 该 buildpack 通过 `LBP_SERVICE_CONFIG_<serviceType>` 环境变量引入了定制服务自动配置行为的支持。例如，它可用于更改 JDBC 驱动程序的位置或版本，以针对 MySQL 服务进行下载。有关更多信息，请参阅[支持自动配置的服务](autoConfig.html)文档。 
+* 该 buildpack 还包含若干与应用程序运行状况检查和[应用程序管理](/docs/manageapps/app_mng.html)功能相关的 [Diego](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) 改进。
 
 ### 2016 年 9 月 16 日：更新了 Liberty buildpack V3.3-20160912-1729
 * 缺省 Liberty 运行时版本已更新为 [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) 发行版。每月 Liberty 运行时版本已更新为 [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) 发行版。通过这些更新，先前作为 Beta 功能提供的 `cloudant-1.0` 和 `passwordUtilities-1.0` Liberty 功能现在都作为可用于生产的功能提供。
+* 同时包括 Liberty 运行时的[安全修订](http://www-01.ibm.com/support/docview.wss?uid=swg21990527)。
 * 该 buildpack 中还包含更新版本的 IBM JRE 8.0：SR3 FP11。
 * 该 buildpack 已更新为执行 [MySQL 服务类型自动配置](autoConfig.html)时，下载最新的 1.4.x [MariaDB Connector/J JDBC 驱动程序](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)。
 
 ### 2016 年 8 月 26 日：更新了 Liberty buildpack V3.2-20160822-2200
 * 该 buildpack 包含更新版本的 IBM JRE：8 SR3 FP10 和 7.1 SR3 FP50。
 * 每月 Liberty 运行时版本已更新为 [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/) 发行版。
-* 更新了用于为 [SQL 数据库](../../services/SQLDB/index.html#SQLDB)服务提供[自动配置支持](autoConfig.html)的服务插件，以在通过 TLS 连接到该服务时，始终使用 JVM 的可信证书。
+* 更新了用于为 [SQL 数据库](/docs/services/SQLDB/index.html#SQLDB)服务提供[自动配置支持](autoConfig.html)的服务插件，以在通过 TLS 连接到该服务时，始终使用 JVM 的可信证书。
 
 ### 2016 年 7 月 22 日：更新了 Liberty buildpack V3.1-20160717-2254
-* [应用程序管理](../../manageapps/app_mng.html)功能已更新为支持联合认证。此外，`devconsole` 和 `shell` 实用程序使用的 Node.js 运行时已更新到最新的 `0.12.15` 版本。 
+* [应用程序管理](/docs/manageapps/app_mng.html)功能已更新为支持联合认证。此外，`devconsole` 和 `shell` 实用程序使用的 Node.js 运行时已更新到最新的 `0.12.15` 版本。 
 * 该 buildpack 添加了对 [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/) 应用程序监视代理程序的支持。
-* 该 buildpack 提供了用于 [Monitoring and Analytics 服务](../../services/monana/index.html#monana_oview)的更新版本的数据收集器。
-* 该 buildpack 还提供了用于 [Auto-Scaling 服务](../../services/Auto-Scaling/index.html)的更新版本的代理程序。 
+* 该 buildpack 提供了用于 [Monitoring and Analytics 服务](/docs/services/monana/index.html#monana_oview)的更新版本的数据收集器。
+* 该 buildpack 还提供了用于 [Auto-Scaling 服务](/docs/services/Auto-Scaling/index.html)的更新版本的代理程序。 
 * 每月 Liberty 运行时版本已更新为 [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/) 发行版。
 
 ### 2016 年 6 月 17 日：更新了 Liberty buildpack V3.0-20160608-1450
@@ -45,16 +57,16 @@ copyright:
 * 该 buildpack 还包含更新版本的 IBM JRE：8 SR3 和 7.1 SR3 FP40。 
 * 该 buildpack 添加了对 [AppDynamics](https://www.appdynamics.com/) 应用程序监视代理程序的初始支持。
 * 改进了 [Dynatrace](dynatrace.html) 支持，以简化代理程序的安装。
-* 该 buildpack 提供了用于 [Monitoring and Analytics 服务](../../services/monana/index.html#monana_oview)的更新版本的数据收集器。其中包含对收集最大堆数据时所出现问题的修订。
-* [devconsole 和 shell 应用程序管理实用程序](../../manageapps/app_mng.html#app_management)使用的 Node.js 运行时已更新到最新的 0.12.13 版本。
+* 该 buildpack 提供了用于 [Monitoring and Analytics 服务](/docs/services/monana/index.html#monana_oview)的更新版本的数据收集器。其中包含对收集最大堆数据时所出现问题的修订。
+* [devconsole 和 shell 应用程序管理实用程序](/docs/manageapps/app_mng.html#app_management)使用的 Node.js 运行时已更新到最新的 0.12.13 版本。
 
 ### 2016 年 3 月 25 日：更新了 Liberty buildpack V2.7-20160321-1358
 * 该 buildpack 包含更新版本的 WebSphere Liberty（基于[三月 Beta](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/)）。更新版本的 Liberty 使 cloudant-1.0 Beta 功能在 Bluemix 中可用。
 * 该 buildpack 还包含更新版本的 IBM JRE：8 SR2 FP12 和 7.1 SR3 FP32。 
-* 该 buildpack 提供了用于 [Auto-Scaling 服务](../../services/Auto-Scaling/index.html)的更新版本的代理程序。 
-* 该 buildpack 现在随附用于 [Monitoring and Analytics 服务](../../services/monana/index.html#monana_oview)的新数据收集器。新收集器支持配置监视阈值，并包含大量错误修订。
+* 该 buildpack 提供了用于 [Auto-Scaling 服务](/docs/services/Auto-Scaling/index.html)的更新版本的代理程序。 
+* 该 buildpack 现在随附用于 [Monitoring and Analytics 服务](/docs/services/monana/index.html#monana_oview)的新数据收集器。新收集器支持配置监视阈值，并包含大量错误修订。
 * 该 buildpack 提供了更新的 DB2® JDBC V4.19.49 驱动程序。 
-* [devconsole 和 shell 应用程序管理实用程序](../../manageapps/app_mng.html#app_management)使用的 Node.js 运行时已更新到最新的 0.12.12 版本。
+* [devconsole 和 shell 应用程序管理实用程序](/docs/manageapps/app_mng.html#app_management)使用的 Node.js 运行时已更新到最新的 0.12.12 版本。
 
 ### 2016 年 3 月 7 日：更新了 Liberty buildpack V2.6-20160225-1649
 * 该 buildpack 添加了对 Dynatrace 应用程序监视的支持。请参阅[使用 Dynatrace](dynatrace.html)，以获取详细信息。
@@ -76,7 +88,7 @@ copyright:
 ### 2015 年 11 月 23 日：更新了 Liberty buildpack V2.2-20151119-1720
 * 该 buildpack 包含更新版本的 Liberty 概要文件运行时和 WebSphere eXtreme Scale Client，带有针对 [Apache Commons Collection 漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21971426)的安全修订。
 * 该 buildpack 还包含更新版本的 [Java MongoDB Driver](https://docs.mongodb.org/ecosystem/drivers/java/) V2.13.3。新的驱动程序与 MongoDB V2.4、2.6 和 3.0 兼容。
-* 该 buildpack 还提供了用于 [Monitoring and Analytics 服务](../../services/monana/index.html)的更新版本的数据收集器。更新的数据收集器改进了方法跟踪功能。
+* 该 buildpack 还提供了用于 [Monitoring and Analytics 服务](/docs/services/monana/index.html)的更新版本的数据收集器。更新的数据收集器改进了方法跟踪功能。
 
 ### 2015 年 10 月 16 日：更新了 Liberty buildpack V2.1-20151006-0912
 * 该 buildpack 包含更新版本的 Liberty 概要文件（基于[十月 Beta](https://developer.ibm.com/wasdev/blog/2015/09/25/beta-was-liberty-beta-with-tools-october-2015/)）。通过此更新，先前作为 Beta 功能提供的 bells-1.0、rtcomm-1.0、rtcommGateway-1.0、samlWeb-2.0 和 sipServlet-1.1 Liberty 功能现在都作为可用于生产的功能提供。
@@ -84,7 +96,7 @@ copyright:
 * 该 buildpack 还提供许多性能改进和优化：
   * 缺省情况下，部署 WAR 或 EAR 文件时，会禁用 [CDI 1.2](optionsForPushing.html)
 隐式 Bean 归档扫描功能。
-  * 要降低 Droplet 的大小，[应用程序管理](../../manageapps/app_mng.html)实用程序 devconsole 和 shell 需要执行重新编译打包操作而不是重新启动操作。
+  * 要降低 Droplet 的大小，[应用程序管理](/docs/manageapps/app_mng.html)实用程序 devconsole 和 shell 需要执行重新编译打包操作而不是重新启动操作。
   * 因为 Bluemix 环境中未复用 IBM JRE 的共享类高速缓存，因此已将其禁用。
 
 ### 2015 年 9 月 18 日：更新了 Liberty buildpack V2.0-20150914-1535
@@ -102,20 +114,20 @@ copyright:
 
 ### 2015 年 7 月 31 日：更新了 Liberty buildpack V1.20.1-20150729-1255
 * 该 buildpack 包含更新版本的 IBM JRE：7.1 SR1 FP10 和 8 SR1 FP10。更新的 JRE 包含[最新的安全修订](http://www-01.ibm.com/support/docview.wss?uid=swg21964161)和其他改进。
-* 更新了用于为 [Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant) 服务提供[自动配置支持](autoConfig.html)的服务插件，以确保通过安全通道建立与该服务的连接。
+* 更新了用于为 [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant) 服务提供[自动配置支持](autoConfig.html)的服务插件，以确保通过安全通道建立与该服务的连接。
 
 ### 2015 年 7 月 21 日：更新了 Liberty buildpack V1.20-20150713-1450
 * 该 buildpack 包含更新版本的 Liberty 概要文件（基于 [8.5.5.6 发行版](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/)）。通过此发行版，先前作为 Beta 功能提供的所有 Java EE 7 Liberty 功能现在都作为可用于生产环境的功能提供。由于 Bluemix 中的端口和其他限制，某些功能（例如，远程 EJB）在该平台中未得到完全支持。
 * 该 buildpack 识别并运行以 [distZip 样式](https://docs.gradle.org/current/userguide/application_plugin.html)打包的应用程序。
-* 该 buildpack 包含更新的数据收集器，用于支持新 Liberty 运行时版本的 [Monitoring and Analytics 服务](../../services/monana/index.html)和 WebSphere eXtreme Scale Client。
+* 该 buildpack 包含更新的数据收集器，用于支持新 Liberty 运行时版本的 [Monitoring and Analytics 服务](/docs/services/monana/index.html)和 WebSphere eXtreme Scale Client。
 
 ### 2015 年 6 月 30 日：更新了 Liberty buildpack V1.19.1-20150622-1509
 * 此版本的 buildpack 包含更新的 IBM JRE，其中包含针对 [LogJam 漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21961390)的安全修订。
 * [New Relic](newRelic.html) 代理程序已更新为 V3.17。新版本改进了与 Liberty 概要文件运行时的集成。
 
 ### 2015 年 6 月 14 日：更新了 Liberty buildpack V1.19-20150608-1717
-* 该 buildpack 包含多个应用程序管理增强功能，其中包括对开发控制台和基于 Web 的 shell 访问的支持。请参阅[应用程序管理文档](../../manageapps/app_mng.html)以获取详细信息。
-* 该 buildpack 还包含一个修订，该修订解决了找不到用于 [Monitoring and Analytics 服务](../../services/monana/index.html)的 Liberty 功能的问题。
+* 该 buildpack 包含多个应用程序管理增强功能，其中包括对开发控制台和基于 Web 的 shell 访问的支持。请参阅[应用程序管理文档](/docs/manageapps/app_mng.html)以获取详细信息。
+* 该 buildpack 还包含一个修订，该修订解决了找不到用于 [Monitoring and Analytics 服务](/docs/services/monana/index.html)的 Liberty 功能的问题。
 
 ### 2015 年 5 月 27 日：更新了 Liberty buildpack V1.18-20150519-1642
 * 该 buildpack 包含更新版本的 Liberty 概要文件（基于[五月 Beta](https://developer.ibm.com/wasdev/blog/2015/05/08/beta-liberty-and-tools-may-2015/)）。
@@ -124,7 +136,7 @@ copyright:
 * 该 buildpack 包含更新版本的 Liberty 概要文件（基于[四月 Beta](https://developer.ibm.com/wasdev/blog/2015/04/10/announcing-liberty-beta-with-tools-aprilmay-2015/)）。通过此更新，先前作为 Beta 功能提供的 jsp-2.3、el-3.0 和 jdbc-4.1 Liberty 功能现在都作为可用于生产的功能提供。此外，其他 Java EE 7 功能（例如，jsf-2.2、javaMail-1.5、webProfile-7.0 和 javaee-7.0）现在都作为 [Beta 功能](usingBetaFeatures.html)提供。
 * 该 buildpack 还提供了对 Java 8 的初始支持。IBM JRE 7.1 仍是缺省 JRE，但通过设置 JBP_CONFIG_IBMJDK 环境变量，可以对应用程序启用 IBM JRE 8。此外，还支持配置 OpenJDK 版本。请参阅[定制 JRE](customizingJRE.html) 以获取所有详细信息。
 * 该 buildpack 提供了新的 JBP_CONFIG_LIBERTY 环境变量，可用于覆盖在部署 WAR 或 EAR 文件时为应用程序启用的缺省 Liberty 功能集。请参阅[独立应用程序](optionsForPushing.html#stand_alone_apps)以获取更多信息。
-* [Monitoring and Analytics 服务](../../services/monana/index.html)的服务插件已更新，从而减小为该服务生成的日志大小。
+* [Monitoring and Analytics 服务](/docs/services/monana/index.html)的服务插件已更新，从而减小为该服务生成的日志大小。
 * 通过此版本的 buildpack，更改了应用程序文件在 Droplet 中的布局方式。文件结构的更改使维护符号链接变得简单，并且对应用程序应该没有任何影响。
 
 ### 2015 年 4 月 15 日：更新了 Liberty buildpack V1.16-20150407-1737
@@ -133,7 +145,7 @@ copyright:
 
 ### 2015 年 4 月 3 日：更新了 Liberty buildpack V1.15-20150402-1422
 * 该 buildpack 包含更新版本的 Liberty 概要文件（基于[三月 Beta](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-tools-march-2015/)）。更新版本的 Liberty 概要文件使 jsf-2.2 Beta 功能在 Bluemix 中可用。
-* 该 buildpack 还包含用于 [Monitoring and Analytics 服务](../../services/monana/index.html)的更新版本的数据收集器。
+* 该 buildpack 还包含用于 [Monitoring and Analytics 服务](/docs/services/monana/index.html)的更新版本的数据收集器。
 
 ### 2015 年 3 月 20 日：更新了 Liberty buildpack V1.14-20150319-1159
 * 此版本的 buildpack 包含更新的 IBM JRE 7.1.2.11，其中有针对 [FREAK 漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21699864)的安全修订。
@@ -149,7 +161,7 @@ copyright:
 
 ### 2015 年 2 月 6 日：更新了 Liberty buildpack V1.12-20150130-1016
 * 该 buildpack 包含更新版本的 Liberty 概要文件（基于[一月 Beta](https://developer.ibm.com/wasdev/blog/2015/01/16/announcing-liberty-beta-tools-january-2015/)）。
-* 该 buildpack 包含用于 [Monitoring and Analytics 服务](../../services/monana/index.html#gettingstartedtemplate)的修剪版本的数据收集器。
+* 该 buildpack 包含用于 [Monitoring and Analytics 服务](/docs/services/monana/index.html#gettingstartedtemplate)的修剪版本的数据收集器。
 
 ### 2015 年 1 月 23 日：更新了 Liberty buildpack V1.11-20150119-1511
 * 该 buildpack 包含更新的 IBM JRE V7.1 SR2 FP1。
@@ -186,7 +198,7 @@ copyright:
 * 还提供一个修订，其解决了阻止使用包含 Unicode 字符的服务器配置部署应用程序的问题。
 
 ### 2014 年 10 月 23 日：更新了 Liberty buildpack V1.6-20141013-1628
-* 该 buildpack 现在随附用于 [Monitoring and Analytics](../../services/monana/index.html) 的新数据收集器。这个新的数据收集器会收集具体到特定代码行的诊断信息，这些信息可帮助该服务诊断计划的用户诊断其应用程序的问题。
+* 该 buildpack 现在随附用于 [Monitoring and Analytics](/docs/services/monana/index.html) 的新数据收集器。这个新的数据收集器会收集具体到特定代码行的诊断信息，这些信息可帮助该服务诊断计划的用户诊断其应用程序的问题。
 * 该 buildpack 包含管理和自动调节代理程序的更新版本（包括错误修订和少量改进）。它还包括更新版本的 [Liberty 概要文件](https://developer.ibm.com/wasdev/)和 [Java MongoDB Driver](https://docs.mongodb.org/ecosystem/drivers/java/) V2.12.3。
 * 在 cloudAutowiring 功能中，导致某些应用程序中资源注入错误的错误已修订。
 

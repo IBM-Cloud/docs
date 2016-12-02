@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,12 +12,19 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-前次更新：2016 年 5 月 30 日
 
 {{site.data.keyword.Bluemix}} 上的 ASP.NET Core 運行環境是採用 ASP.NET Core 建置套件的技術。ASP.NET Core 是模組化開放程式碼架構，用於建置 .NET Web 應用程式。
 .Net Core 是 ASP.NET Core 應用程式可以設為目標的小型跨平台運行環境。
 它們會合併，以啟用現代化雲端型 Web 應用程式。
 {: shortdesc}
+
+# 支援的版本
+{: #supported_versions}
+此建置套件支援下列版本，未來的建置套件版本將移除標示為已淘汰的版本：
+
+1. .NET Core 1.0.0-rc2-final（測試版）（已淘汰）
+2. .NET Core 1.0.0
+3. .NET Core 1.0.1
 
 ## 偵測
 {: #detection}
@@ -26,7 +33,7 @@ copyright:
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供 ASP.NET Core 入門範本應用程式。ASP.NET Core 入門範本應用程式是簡單的應用程式，提供可以讓您使用的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 Bluemix 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../../cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供 ASP.NET Core 入門範本應用程式。ASP.NET Core 入門範本應用程式是簡單的應用程式，提供可以讓您使用的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 Bluemix 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](/docs/cfapps/starter_app_usage.html)。
 
 ## 運行環境版本
 {: #runtime_versions}
@@ -44,7 +51,7 @@ copyright:
 ```
 {: codeblock}
 
-如果未指定，則會使用最新的穩定「候選版本」。
+如需所支援 CLI 版本的清單，請參閱 [ASP.NET Core 建置套件的最新更新項目](/docs/runtimes/dotnet/updates.html)。如果未指定，則會使用最新的穩定「候選版本」。
 
 ### 自訂 NuGet 套件來源
 
@@ -67,9 +74,10 @@ copyright:
 
 Yeoman 工具可以用來產生新的專案範本（如[使用 Yeoman 建置專案](http://docs.asp.net/en/latest/client-side/yeoman.html)中所述）。
 
-如需使用 Visual Studio 進行本端開發的相關資訊，請參閱[使用 Visual Studio 開發](../../starters/deploy_vs.html){: new_window}。
+如需使用 Visual Studio 進行本端開發的相關資訊，請參閱[使用 Visual Studio 開發](/docs/starters/deploy_vs.html){: new_window}。
 
 ## 推送已發佈的應用程式
+{: #pushing_published_app}
 
 如果您要應用程式包含其所有必要的二進位檔，讓建置套件不需要下載任何外部二進位檔，則可以推送已發佈的*自行包含* 應用程式。如需自行包含應用程式的相關資訊，請參閱 [.NET 核心應用程式類型](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}。
 
@@ -89,6 +97,7 @@ dotnet publish -r ubuntu.14.04-x64
 也請注意，如果您是在應用程式中使用 manifest.yml 檔案，則可以在 manifest.yml 中指定發佈輸出資料夾的路徑。因此，推送應用程式時，就不需要位在該資料夾中。
 
 ## 部署包含多個專案的應用程式
+{: #developing_apps_with_multiple_projects}
 
 若要部署包含多個專案的應用程式，則需要指定您要建置套件將哪個專案執行為主要專案。作法是在解決方案的根資料夾中建立可設定主要專案路徑的 .deployment 檔案。主要專案的路徑可以指定為專案資料夾或專案檔（.xproj 或 .csproj）。
 
@@ -106,6 +115,7 @@ project = src/MyApp.Web/MyApp.Web.xproj
 {: codeblock}
 
 ## 配置要在適當埠接聽的應用程式
+{: #configuring_listen_proper_port}
 
 建置套件將使用 *dotnet run* 指令來執行您的應用程式，以及傳遞下列指令行引數：
 ```
@@ -173,6 +183,13 @@ using Microsoft.Extensions.Configuration;
 {: codeblock}
 
 這些變更應該容許 .NET CLI 尋找應用程式的 `Views`，因為當 `dotnet run` 指令執行時，它們將立即複製至建置輸出。如果您的應用程式具有運行環境需要的任何其他檔案（例如 json 配置檔），您也應該將那些檔案新增至 project.json 檔案中 `copyToOutput` 的 `include` 區段。
+
+## 疑難排解常見問題 (FAQ)
+{: #troubleshooting_faq}
+
+**問**：我的應用程式無法部署，訊息為：`API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, ...}`。這表示什麼？
+
+**答**：如果您在推送應用程式時接收到類似訊息，最可能是因為應用程式超出記憶體或磁碟限額限制。增加應用程式的配額，即可解決此問題。
 
 # 相關鏈結
 {: #rellinks}

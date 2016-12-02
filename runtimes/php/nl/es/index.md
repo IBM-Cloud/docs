@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # PHP
 {: #php_runtime}
-Última actualización: 06 de julio de 2016
-{: .last-updated}
 
 El tiempo de ejecución de PHP en {{site.data.keyword.Bluemix}} está basado en el php_buildpack.
 El php_buildpack proporciona un entorno de ejecución completo para aplicaciones PHP.
@@ -26,7 +25,7 @@ El php_buildpack se utiliza en las condiciones siguientes:
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio PHP.  La aplicación de inicio PHP es una aplicación PHP sencilla que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la aplicación de inicio, y realizar y enviar por push los cambios al entorno {site.data.keyword.Bluemix}}.  Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix}} proporciona una app de inicio PHP. La aplicación de inicio PHP es una sencilla app PHP que proporciona una plantilla que puede utilizar para su app. Puede experimentar con la app de inicio y realizar y transferir cambios al entorno {site.data.keyword.Bluemix}}. Consulte [Utilización de las aplicaciones de inicio](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-06"
 
 ---
 
@@ -11,14 +12,18 @@ copyright:
 # Neueste Aktualisierungen für das Buildpack 'ASP.NET Core'
 {: #latest_updates}
 
-Letzte Aktualisierung: 26. August 2016
 
 Eine Liste mit den neuesten Aktualisierungen im aspnet-Buildpack.
 
-## Aug 31, 2016: Updated ASP.NET Core buildpack v1.0-20160826-1345
+## 10. Oktober 2016: Buildpack 'ASP.NET Core' v1.0.1-20161005-1225 aktualisiert.
 
-* Fügen Sie Unterstützung für die Ausführung von Prä- und Postkompilierscripts unter Verwendung von NPM und Bower hinzu, um Front-End-JavaScript- und CSS-Bibliotheken zu installieren. 
-* Versetzen Sie das Buildpack von der Betaversion in den GA-Status
+* Unterstützung für .NET Core 1.0.1 hinzufügen
+* Sporadisch auftretender Fehler, der beim Caching von NuGet-Packages zum Fehlschlagen der Bereitstellung führt 
+
+## 31. August 2016: Buildpack 'ASP.NET Core' v1.0-20160826-1345 aktualisiert.
+
+* Unterstützung für die Ausführung von Prä- und Postkompilierscripts unter Verwendung von NPM und Bower hinzufügen, um Front-End-JavaScript- und CSS-Bibliotheken zu installieren.
+* Buildpack von der Betaversion in den GA-Status versetzen
 
 ## 11. Juli 2016: Buildpack 'ASP.NET Core' v0.9-20160706-1603 aktualisiert
 
@@ -36,7 +41,7 @@ Diese Version des Buildpacks enthält die folgenden Änderungen:
 * Die Buildpackversionsnummer ist in der Ausgabe des Erkennungsscripts enthalten.
 * Diese Version des Buildpacks entfernt die Unterstützung von DNX-basierten Anwendungen, die CoreCLR RC1 und niedriger verwenden.
 * Diese Version des Buildpacks unterstützt .NET CLI und .NET Core RC2.
-* Das Buildpack erkennt Projekte mit einer Datei project.json oder Dateien *.runtimeconfig.json in der Veröffentlichungsausgabe (publish).
+* Das Buildpack erkennt Projekte mit einer Datei 'project.json' oder Dateien '*.runtimeconfig.json' in der Veröffentlichungsausgabe (publish).
 
 ## 22. Oktober 2015: Buildpack 'ASP.NET 5' v0.7-20151022-1257 aktualisiert
 

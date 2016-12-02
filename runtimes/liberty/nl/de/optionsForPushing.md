@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Optionen zur Durchführung von Push-Operationen für Liberty-Apps
 {: #options_for_pushing}
-
-Letzte Aktualisierung: 10. Juni 2016
-{: .last-updated}
 
 Das Verhalten des Liberty-Servers in Bluemix wird durch das Liberty-Buildpack gesteuert. Buildpacks können eine vollständige Laufzeitumgebung für bestimmte Anwendungsklassen bereitstellen. Sie sind der Schlüssel für die Portierbarkeit in Clouds und die Bereitstellung einer offenen Cloudarchitektur. Mit dem Liberty-Buildpack wird ein WebSphere Liberty-Container bereitgestellt, mit dem Java EE 7- und OSGi-Anwendungen ausgeführt werden können. Es unterstützt gängige Frameworks wie Spring und umfasst die IBM JRE. WebSphere Liberty ermöglicht eine zeiteffiziente, an die Cloud angepasste Anwendungsentwicklung. Das Liberty-Buildpack unterstützt mehrere Anwendungen, die in einem einzigen Liberty-Server implementiert werden. Im Rahmen der Integration des Liberty-Buildpacks in Bluemix stellt das Buildpack sicher, dass die Umgebungsvariablen zum Binden von Services im Liberty-Server als Konfigurationsvariablen dargestellt werden.
 
@@ -229,24 +227,22 @@ Bei der Übertragung eines paketierten Servers oder eines Liberty-Serververzeich
 ### Referenzierbare Variablen
 {: #referenceable_variables}
 
-Die folgenden Variablen sind in der Datei 'runtime-vars.xml' definiert und werden von einer mit einer Push-Operation übertragenen server.xml-Datei referenziert. Bei allen Variablen muss die Groß-/Kleinschreibung beachtet werden.
+Die folgenden Variablen sind in der Datei `runtime-vars.xml` definiert und werden von der mit einer Push-Operation übertragenen Datei `server.xml` referenziert. Bei allen Variablen muss die Groß-/Kleinschreibung beachtet werden.
 
 * ${port}: Der HTTP-Port, an dem der Liberty-Server empfangsbereit ist.
-* ${vcap_console_port}: Der Port, an dem die Konsole von VCAP aktiv ist (entspricht in der Regel ${port}).
-* ${vcap_app_port}: Der Port, an dem der App-Server empfangsbereit ist (entspricht in der Regel ${port}).
-* ${vcap_console_ip}: Die IP-Adresse der Konsole von VCAP (entspricht in der Regel der IP-Adresse, für die der Liberty-Server empfangsbereit ist).
+* ${vcap_app_port}: Identisch mit ${port}. Wird bei der Ausführung unter Diego nicht definiert. 
 * ${application_name}: Der Name der Anwendung wie mithilfe der Optionen im Befehl 'cf push' definiert.
-* ${application_version}: Die Version dieser Anwendungsinstanz in Form einer UUID wie beispielsweise 'b687ea75-49f0-456e-b69d-e36e8a854caa'. Diese Variable ändert sich bei jeder weiteren Push-Operation für die Anwendung, die neuen Code oder Änderungen an den Anwendungsartefakten enthält.
-* ${host}: Die IP-Adresse von Droplet Execution Agent (DEA), der die Anwendung ausführt (entspricht in der Regel ${vcap_console_ip}).
+* ${application_version}: Die Version dieser Anwendungsinstanz in Form einer UUID wie beispielsweise `b687ea75-49f0-456e-b69d-e36e8a854caa`. Diese Variable ändert sich bei jeder weiteren Push-Operation für die Anwendung, die neuen Code oder Änderungen an den Anwendungsartefakten enthält.
+* ${host}: Die IP-Adresse der Anwendungsinstanz. 
 * ${application_uris}: Ein JSON-Array der Endpunkte, die für den Zugriff auf diese Anwendung verwendet werden können, zum Beispiel: 'myapp.mydomain.com'.
-* ${start}: Der Zeitpunkt (Datum und Uhrzeit), an dem die Anwendung gestartet wurde, in einem Format ähnlich dem folgenden: 2013-08-22 10:10:18 -0400.
+* ${start}: Der Zeitpunkt (Uhrzeit und Datum), an dem die Anwendung gestartet wurde, in einem Format ähnlich wie `2013-08-22 10:10:18 -0400`. Wird bei der Ausführung unter Diego nicht definiert. 
 
 ### Auf Informationen gebundener Services zugreifen
 {: #accessing_info_of_bound_services}
 
 Wenn Sie einen Service an Ihre Anwendung binden möchten, werden
 Informationen zu diesem Service, wie beispielsweise Verbindungsberechtigungsnachweise, in die
-[Umgebungsvariable VCAP_SERVICES](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)
+[Umgebungsvariable VCAP_SERVICES](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)
 eingefügt, die Cloud Foundry für die Anwendung festlegt. Für [automatisch konfigurierte
 Services](autoConfig.html) werden Servicebindungseinträge in der Datei 'server.xml' vom Liberty-Buildpack
 generiert oder aktualisiert. Der Inhalt der Servicebindungseinträge kann in einem der folgenden Formate vorliegen:
@@ -255,16 +251,16 @@ generiert oder aktualisiert. Der Inhalt der Servicebindungseinträge kann in ein
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt; - Gibt die Verbindungsinformationen für den Service an.
 
 Die typischen Informationen lauten wie folgt:
-* name: Der Name des Service. Beispiel: 'mysql-e3abd'.
-label: Der Typ des erstellten Service. Beispiel: 'mysql-5.5'.
-* plan: Der Serviceplan gemäß der eindeutigen ID für diesen Plan. Beispiel: '100'.
-connection.name: Eine eindeutige ID für die Verbindung in Form einer UUID. Beispiel: 'd01af3a5fabeb4d45bb321fe114d652ee'.
-* connection.hostname: Der Hostname des Servers, der den Service ausführt. Beispiel: 'mysql-server.mydomain.com'.
-* connection.host: Die IP-Adresse des Servers, der den Service ausführt. Beispiel: 9.37.193.2.
-* connection.port: Der Port, an dem der Service für eingehende Verbindungen empfangsbereit ist. Beispiel: 3306,3307.
-* connection.user: Der Benutzername zur Authentifizierung dieser Anwendung für den Service. Der Benutzername wird von Cloud Foundry automatisch generiert. Beispiel: 'unHwANpjAG5wT'.
+* name: Der Name des Service; zum Beispiel 'mysql-e3abd'.
+* label: Der Typ des erstellten Service; zum Beispiel 'mysql-5.5'.
+* plan: Der Serviceplan gemäß der eindeutigen ID für diesen Plan; zum Beispiel 100.
+* connection.name: Eine eindeutige Kennung für die Verbindung in Form einer UUID; zum Beispiel d01af3a5fabeb4d45bb321fe114d652ee.
+* connection.hostname: Der Hostname des Servers, der den Service ausführt; zum Beispiel mysql-server.mydomain.com.
+* connection.host: Die IP-Adresse des Servers, der den Service ausführt; zum Beispiel 9.37.193.2.
+* connection.port: Der Port, auf dem der Service für eingehende Verbindungen empfangsbereit ist; zum Beispiel 3306,3307.
+* connection.user: Der Benutzername zur Authentifizierung dieser Anwendung für den Service. Der Benutzername wird automatisch von Cloud Foundry generiert; zum Beispiel unHwANpjAG5wT.
 * connection.username: Ein Aliasname für 'connection.user'.
-* connection.password: Das Kennwort zur Authentifizierung dieser Anwendung für den Service. Das Kennwort wird von Cloud Foundry automatisch generiert. Beispiel: 'pvyCY0YzX9pu5'.
+* connection.password: Das Kennwort zur Authentifizierung dieser Anwendung für den Service. Das Kennwort wird automatisch von Cloud Foundry generiert; zum Beispiel pvyCY0YzX9pu5.
 
 Bei gebundenen Services, die nicht automatisch vom Liberty-Buildpack konfiguriert werden, muss die Anwendung den Zugriff der Back-End-Ressource selbst verwalten.
 

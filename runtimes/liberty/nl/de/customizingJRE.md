@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-15"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # JRE anpassen
 {: #customizing_jre}
-
-Letzte Aktualisierung: 15. August 2016
-{: .last-updated}
 
 Anwendungen werden in einer vom Liberty-Buildpack bereitgestellten und konfigurierten
 JRE (Java Runtime Environment) ausgeführt. Ferner bietet das Liberty-Buildpack die Möglichkeit, die JRE-Version bzw. den JRE-Typ zu konfigurieren, die
@@ -126,7 +124,7 @@ aus der JRE-Dokumentation, da die Optionen je nach JRE variieren.
 <td> OpenJDK </td>
 <td>Basiert auf der HotSpot-Laufzeit; Schreibweise: -X für Nicht-Standardoptionen, -XX für Entwickleroptionen
 und boolesche Flags zum Aktivieren oder Inaktivieren von Optionen. </td>
-<td>[HotSpot Runtime Overview](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html) </td>
+<td>[HotSpot Runtime Overview](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 

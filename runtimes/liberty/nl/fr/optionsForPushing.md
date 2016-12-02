@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Options pour l'envoi par commande push d'applications Liberty
 {: #options_for_pushing}
-
-Dernière mise à jour : 10 juin 2016
-{: .last-updated}
 
 Le comportement du serveur Liberty dans Bluemix est contrôlé par le pack de construction Liberty. Les packs de construction peuvent fournir un environnement d'exécution complet pour une classe d'applications spécifique. Ils sont cruciaux pour assurer la portabilité entre les clouds et une contribution à une architecture de cloud ouverte. Le
 pack de construction Liberty fournit un conteneur WebSphere Liberty capable d'exécuter des applications Java EE 7 et OSGi. Il prend en charge les
@@ -250,17 +248,16 @@ pack de construction remplace également l'attribut host.
 ### Variables référençables
 {: #referenceable_variables}
 
-Les variables suivantes sont définies dans le fichier runtime-vars.xml et référencées depuis un fichier server.xml envoyé par commande push. Toutes les variables sont sensibles à la casse.
+Les variables suivantes sont définies dans le fichier `runtime-vars.xml` et référencées
+depuis un fichier `server.xml` envoyé par commande push. Toutes les variables sont sensibles à la casse.
 
 * ${port} : port HTTP sur lequel le serveur Liberty est à l'écoute.
-* ${vcap_console_port} : port sur lequel la console vcap s'exécute (généralement identique à ${port}).
-* ${vcap_app_port} : port sur lequel le serveur app est à l'écoute (généralement identique à ${port}).
-* ${vcap_console_ip} : adresse IP de la console vcap (généralement, adresse IP sur laquelle le serveur Liberty est à l'écoute).
+* ${vcap_app_port} : identique à ${port}. Non définie lors de l'exécution sur Diego.
 * ${application_name} : nom de l'application, tel que défini via les options de la commande cf push.
-* ${application_version} : version de cette instance de l'application, représentée par un UUID (identificateur unique universel), tel que b687ea75-49f0-456e-b69d-e36e8a854caa. Cette variable est actualisée avec chaque envoi par commande push successif de l'application contenant du nouveau code ou des modifications des artefacts de l'application.
-* ${host} : adresse IP de l'agent DEA qui exécute l'application (généralement, identique à ${vcap_console_ip}).
-* ${application_uris}: matrice JSON des noeuds finaux pouvant être utilisés pour accéder à cette application, par exemple : myapp.mydomain.com.
-* ${start} : date et heure de démarrage de l'application, sous un format similaire à 2013-08-22 10:10:18 -0400.
+* ${application_version} : version de cette instance de l'application, représentée par un identificateur unique universel (UUID), tel que `b687ea75-49f0-456e-b69d-e36e8a854caa`. Cette variable est actualisée avec chaque envoi par commande push successif de l'application contenant du nouveau code ou des modifications des artefacts de l'application.
+* ${host} : adresse IP de l'instance de l'application. 
+* ${application_uris} : matrice JSON des noeuds finaux pouvant être utilisés pour accéder à cette application, par exemple : myapp.mydomain.com.
+* ${start} : date et heure de démarrage de l'application, dans un format similaire à `2013-08-22 10:10:18 -0400`. Non définie lors de l'exécution sur Diego.
 
 ### Accès aux informations des services liés
 {: #accessing_info_of_bound_services}
@@ -268,7 +265,7 @@ Les variables suivantes sont définies dans le fichier runtime-vars.xml et réf�
 Si vous voulez lier un service à votre application, des informations sur le service, notamment les données d'identification de connexion,
 sont incluses dans
 la [variable
-d'environnement VCAP_SERVICES](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que Cloud Foundry définit pour l'application. Pour les [services configurés
+d'environnement VCAP_SERVICES](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que Cloud Foundry définit pour l'application. Pour les [services configurés
 automatiquement](autoConfig.html), le pack de construction Liberty génère ou met à jour des entrées de liaison de service dans le fichier server.xml. Le contenu des
 entrées de liaison de service peuvent être dans l'un des formats suivants :
 
@@ -276,16 +273,16 @@ entrées de liaison de service peuvent être dans l'un des formats suivants :
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, qui décrit les informations de connexion du service.
 
 L'ensemble d'informations habituel est le suivant :
-* name : Nom du service. Par exemple, mysql-e3abd.
-label: Type de service créé. Par exemple, mysql-5.5.
-* plan : Plan de service, tel qu'indiqué par l'identificateur unique de ce plan. Par exemple, 100.
-connection.name : Identificateur unique de la connexion, prend la forme d'un identificateur unique universel (UUID). Par exemple, d01af3a5fabeb4d45bb321fe114d652ee.
-* connection.hostname : Nom d'hôte du serveur qui exécute le service. Par exemple, mysql-server.mydomain.com.
-* connection.host : Adresse IP du serveur qui exécute le service. Par exemple, 9.37.193.2.
-* connection.port : Port sur lequel le service est à l'écoute de connexions entrantes. Par exemple, 3306,3307.
-* connection.user : Nom d'utilisateur employé pour authentifier cette application auprès du service. Le nom d'utilisateur est généré automatiquement par Cloud Foundry. Par exemple :unHwANpjAG5wT.
-* connection.username : Alias de connection.user.
-* connection.password : Mot de passe utilisé pour authentification de cette application auprès du service. Le mot de passe est généré automatiquement par Cloud Foundry. Par exemple :pvyCY0YzX9pu5.
+* name : nom du service, par exemple, mysql-e3abd.
+* label : type de service créé, par exemple, mysql-5.5.
+* plan : plan de service, tel qu'indiqué par l'identificateur unique de ce plan, par exemple, 100.
+* connection.name : identificateur unique de la connexion, prend la forme d'un identificateur unique universel (UUID), par exemple, d01af3a5fabeb4d45bb321fe114d652ee.
+* connection.hostname : nom d'hôte du serveur qui exécute le service, par exemple, mysql-server.mydomain.com.
+* connection.host : adresse IP du serveur qui exécute le service, par exemple, 9.37.193.2.
+* connection.port : port sur lequel le service est à l'écoute de connexions entrantes, par exemple, 3306,3307.
+* connection.user : nom d'utilisateur employé pour authentifier cette application auprès du service. Le nom d'utilisateur est généré automatiquement par Cloud Foundry, par exemple, unHwANpjAG5wT.
+* connection.username : alias de connection.user.
+* connection.password : mot de passe utilisé pour authentification de cette application auprès du service. Le mot de passe est généré automatiquement par Cloud Foundry, par exemple, pvyCY0YzX9pu5.
 
 Pour les services liés qui ne sont pas configurés automatiquement par le pack de construction
 Liberty, l'application doit gérer elle-même l'accès à la ressource back end.

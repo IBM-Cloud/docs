@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # 建置套件預設值
 {: #buildpack_defauts}
-
-前次更新：2016 年 6 月 10 日
-{: .last-updated}
 
 Liberty 建置套件在 Bluemix 中經常更新。
 每個版本都可能包含安全修正程式或特性加強功能。

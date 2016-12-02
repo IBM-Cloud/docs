@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Configurazione automatica dei servizi di cui è stato eseguito il bind
 {: #auto_config}
-
-Ultimo aggiornamento: 10 giugno 2016
-{: .last-updated}
 
 Puoi eseguire il bind di diversi servizi alla tua applicazione Liberty. I servizi possono essere gestiti dal contenitore, gestiti dall'applicazione o entrambe le cose, a seconda delle scelte
 dello sviluppatore.
@@ -34,20 +32,20 @@ informazioni sui servizi di cui è stato eseguito il bind. Per ogni servizio ges
 Questo processo viene indicato come configurazione automatica,
 Il pacchetto di build Liberty fornisce la configurazione automatica per i seguenti tipi di servizio:
 
-* [SQL Database](../../services/SQLDB/index.html#SQLDB)
+* [ SQL Database](/docs/services/SQLDB/index.html#SQLDB)
 * ClearDB MySQL Database
-* [MySQL](../../services/MySQL/index.html#MySQL)
+* [ MySQL](/docs/services/MySQL/index.html#MySQL)
 * ElephantSQL
-* [PostgreSQL](../../services/PostgreSQL/index.html#PostgreSQL)
-* [Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant)
+* [ PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
+* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
 * MongoLab
-* [dashDB](../../services/dashDB/index.html#dashDB)
-* [Data Cache](../../services/DataCache/index.html#data_cache)
-* [Session Cache](../../services/SessionCache/index.html#session_cache)
-* [MQ Light](../../services/MQLight/index.html#mqlight010)
-* [Monitoring and Analytics](../..//services/monana/index.html#gettingstartedtemplate)
-* [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
-* [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
+* [dashDB](/docs/services/dashDB/index.html#dashDB)
+* [ Data Cache](/docs/services/DataCache/index.html#data_cache)
+* [ Session Cache](/docs/services/SessionCache/index.html#session_cache)
+* [ MQ Light](/docs/services/MQLight/index.html#mqlight010)
+* [ Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)
+* [ Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
+* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
 
@@ -147,6 +145,39 @@ myapp utilizzando l'interfaccia riga di comando.
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
 {: codeblock}
+
+## Sovrascrittura configurazione del servizio 
+{: #override_service_config}
+
+In alcuni casi può essere opportuno sovrascrivere la configurazione predefinita per un servizio generato dalla configurazione automatica.
+Questo può essere fatto utilizzando la variabile di ambiente **LBP_SERVICE_CONFIG_xxxx**, dove "xxxx" è il nome del servizio
+con caratteri maiuscoli.  Ad esempio, per sovrascrivere la versione predefinita del servizio *mysql* ed impostare la versione 1.4.+ immetti un comando simile a:
+
+```
+    $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
+```
+{: codeblock}
+
+La seguente tabella mostra la sintassi per la sovrascrittura di alcune opzioni di configurazione del servizio:
+
+<table>
+<tr>
+<th align="left">Nome variabile di ambiente</th>
+<th align="left">Sintassi di configurazione </th>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_MYSQL</td>
+<td>"{driver: { version: x.y.z }, connection_pool_size: 15}"</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
+<td>"{driver: { version: x.y.z }}"</td>
+</tr>
+</table>
+
+
 
 # rellinks
 {: #rellinks}

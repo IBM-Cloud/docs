@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,12 +13,10 @@ copyright:
 
 # Modo off-line para o Liberty
 {: #offline_mode}
-Última atualização: 20 de julho de 2016
-{: .last-updated}
 
 Quando um aplicativo Liberty é enviado por push para o {{site.data.keyword.Bluemix}}, o buildpack do Liberty pode acessar sites externos ao Bluemix
-para adquirir os artefatos requeridos pelo aplicativo.  Veja a seguir os sites externos que o buildpack do Liberty pode acessar.  Nos ambientes [Bluemix Dedicado](../../dedicated/index.html#dedicated) e
-[Bluemix Local](../../local/index.html#local), estes sites podem precisar ser *incluídos na lista de desbloqueio*.
+para adquirir os artefatos requeridos pelo aplicativo.  Veja a seguir os sites externos que o buildpack do Liberty pode acessar.  Nos ambientes [Bluemix Dedicado](/docs/dedicated/index.html#dedicated) e
+[Bluemix Local](/docs/local/index.html#local), estes sites podem precisar ser *incluídos na lista de desbloqueio*.
 
 * https://download.run.pivotal.io e https://java-buildpack.cloudfoundry.org são usados para acessar componentes para:
   * [Agente AppDynamics](https://www.appdynamics.com/)
@@ -32,9 +31,9 @@ para adquirir os artefatos requeridos pelo aplicativo.  Veja a seguir os sites e
 ## Trabalhando com um proxy
 {: #working_with_proxy}
 
-Em alguns ambientes, como [Bluemix Dedicado](../../dedicated/index.html#dedicated) e
-[Bluemix Local](../../local/index.html#local), um proxy pode ser configurado. Consulte
-[Trabalhando com um proxy](../../manageapps/workingWithProxy.html) para obter mais detalhes.
+Em alguns ambientes, como [Bluemix Dedicado](/docs/dedicated/index.html#dedicated) e
+[Bluemix Local](/docs/local/index.html#local), um proxy pode ser configurado. Consulte
+[Trabalhando com um proxy](/docs/manageapps/workingWithProxy.html) para obter mais detalhes.
 
 # rellinks
 {: #rellinks}

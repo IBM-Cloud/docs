@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,12 +13,10 @@ copyright:
 
 # node.js のオフライン・モード
 {: #offline_mode}
-最終更新日: 2016 年 7 月 20 日
-{: .last-updated}
 
-node.js アプリケーションが {{site.data.keyword.Bluemix}} にプッシュされると、SDK for Node.js ビルドパックは通常、NPM からのノード・モジュールなど、外部リソースから成果物をダウンロードします。[Bluemix Dedicated](../../dedicated/index.html#dedicated) および [Bluemix Local](../../local/index.html#local) を使用するなど一部の環境では、Bluemix の外部のサイトへのアクセスに依存しないこと、あるいは外部サイトへのアクセスをより明示的に制御することが必要な場合があります。  
+node.js アプリケーションが {{site.data.keyword.Bluemix}} にプッシュされると、SDK for Node.js ビルドパックは通常、NPM からのノード・モジュールなど、外部リソースから成果物をダウンロードします。[Bluemix Dedicated](/docs/dedicated/index.html#dedicated) および [Bluemix Local](/docs/local/index.html#local) を使用するなど一部の環境では、Bluemix の外部のサイトへのアクセスに依存しないこと、あるいは外部サイトへのアクセスをより明示的に制御することが必要な場合があります。  
 
-node.js ビルドパックによるアクセスが可能な外部サイトを以下に示します。[Bluemix Dedicated](../../dedicated/index.html#dedicated) および [Bluemix Local](../../local/index.html#local) の Bluemix 環境では、これらのサイトは*ホワイトリスト*に登録されていることが必要な場合があります。
+node.js ビルドパックによるアクセスが可能な外部サイトを以下に示します。[Bluemix Dedicated](/docs/dedicated/index.html#dedicated) および [Bluemix Local](/docs/local/index.html#local) の Bluemix 環境では、これらのサイトは*ホワイトリスト*に登録されていることが必要な場合があります。
 
 * http://nodejs.org/ は、使用可能なノード・エンジン・バージョンを確認するために使用できます。
 * https://s3pository.heroku.com は、ビルドパックに含まれていないノード・エンジン・バージョンを取得するために使用します。
@@ -46,11 +45,11 @@ https://registry.npmjs.org にアクセスする必要がないようにする�
 ## プロキシーの処理
 {: #working_with_proxy}
 
-[Bluemix Dedicated](../../dedicated/index.html#dedicated) および [Bluemix Local](../../local/index.html#local) などの一部の環境では、プロキシーの構成が可能です。詳しくは、[『プロキシーの処理』](../../manageapps/workingWithProxy.html)を参照してください。
+[Bluemix Dedicated](/docs/dedicated/index.html#dedicated) および [Bluemix Local](/docs/local/index.html#local) などの一部の環境では、プロキシーの構成が可能です。詳しくは、[『プロキシーの処理』](/docs/manageapps/workingWithProxy.html)を参照してください。
 
 # 関連リンク
 {: #rellinks}
 ## 一般
 {: #general}
-* [Node.js ビルドパックに対する最新の更新](../../runtimes/nodejs/updates.html)
+* [Node.js ビルドパックに対する最新の更新](/docs/runtimes/nodejs/updates.html)
 * [Node.js](https://nodejs.org)

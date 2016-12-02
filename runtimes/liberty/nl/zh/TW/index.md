@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Liberty for Java
 {: #liberty_runtime}
-
-前次更新：2016 年 6 月 10 日
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Liberty for Java 應用程式採用 liberty-for-java 建置套件的技術。除了 Liberty 設定檔之外，liberty-for-java 建置套件還提供一個完整的運行環境來執行 Java EE 7 和 OSGi 應用程式。它支援例如 Spring 的熱門架構，且包含了 IBM JRE。WebSphere Liberty 讓您能進行極適合雲端的快速應用程式開發。
 {: shortdesc}
@@ -30,14 +28,14 @@ copyright:
 
 ## 入門範本應用程式
 {: #starter_application}
-{{site.data.keyword.Bluemix}} 提供數個 Liberty 入門範本應用程式。Liberty 入門範本應用程式是簡單的 Liberty 應用程式，提供可以讓您使用的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 Bluemix 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../../cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供數個 Liberty 入門範本應用程式。Liberty 入門範本應用程式是簡單的 Liberty 應用程式，提供可以讓您使用的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 Bluemix 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](/docs/cfapps/starter_app_usage.html)。
 
 # 相關鏈結
 {: #rellinks}
 ## 一般
 {: #general}
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
-* [管理 Liberty 應用程式](../../manageapps/app_mng.html#Utilities)
-* [使用 IBM Eclipse Tools for Bluemix 部署應用程式](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
-* [開始使用 IBM Monitoring and Analytics for Bluemix 服務](../../services/monana/index.html#monana_oview)
+* [管理 Liberty 應用程式](/docs/manageapps/app_mng.html#Utilities)
+* [使用 IBM Eclipse Tools for Bluemix 部署應用程式](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+* [開始使用 IBM Monitoring and Analytics for Bluemix 服務](/docs/services/monana/index.html#monana_oview)
 

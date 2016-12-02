@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # PHP
 {: #php_runtime}
-最終更新日: 2016 年 7 月 6 日
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} の PHP ランタイムには php_buildpack が採用されています。
 php_buildpack は、PHP アプリケーションのための完全なランタイム環境を提供します。
@@ -26,7 +25,7 @@ php_buildpack は、以下のいずれかの条件下で使用されます。
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} には、PHP スターター・アプリケーションが用意されています。PHP スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな PHP アプリケーションです。スターター・アプリケーションを試し、 {site.data.keyword.Bluemix}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../../cfapps/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix}} には、PHP スターター・アプリケーションが用意されています。PHP スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな PHP アプリケーションです。スターター・アプリケーションを試し、 {site.data.keyword.Bluemix}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
 
 ## ランタイム・バージョン
 {: #runtime_versions}

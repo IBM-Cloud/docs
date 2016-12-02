@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-最終更新日: 2016 年 8 月 29 日
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Node.js ランタイムには sdk-for-nodejs ビルドパックが採用されています。
 sdk-for-nodejs ビルドパックは、Node.js アプリケーションのための完全なランタイム環境を提供します。
@@ -24,7 +23,7 @@ sdk-for-nodejs ビルドパックは、アプリケーションのルート・�
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} には、Node.js スターター・アプリケーションが用意されています。Node.js スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな Node.js アプリケーションです。スターター・アプリケーションを試し、Bluemix 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../../cfapps/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix}} には、Node.js スターター・アプリケーションが用意されています。Node.js スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな Node.js アプリケーションです。スターター・アプリケーションを試し、Bluemix 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
 
 ## 開始コマンド
 {: #starup_commmand}
@@ -69,12 +68,11 @@ web: npm start
 次の例は、**js** ファイルのソースの一部を示しています。
 
 ```
-var port = (process.env.VCAP_APP_PORT || 3000);
-var host = (process.env.VCAP_APP_HOST || 'localhost');
+var port = (process.env.PORT || 3000);
 ```
 {: codeblock}
 
-このコードでは、アプリケーションが Bluemix 上で実行される場合、VCAP_APP_HOST および VCAP_APP_PORT の環境変数には、Bluemix に対して内部であり、アプリケーションが着信接続を listen するホスト値およびポート値が含まれます。アプリケーションがローカルに実行される場合、VCAP_APP_HOST および VCAP_APP_PORT は定義されないため、**localhost** がホストとして、また **3000** がポート番号として使用されます。このような方法でコードを書くと、アプリケーションをテスト目的でローカルに実行でき、またさらに変更を行うことなく Bluemix 上で実行できます。
+このコードでは、アプリケーションが Bluemix 上で実行される場合、PORT 環境変数には、アプリケーションが着信接続を listen する Bluemix 内部のポート値が入ります。アプリケーションがローカルに実行される場合、PORT は定義されないため、ポート番号として **3000** が使用されます。このような方法でコードを書くと、アプリケーションをテスト目的でローカルに実行でき、またさらに変更を行うことなく Bluemix 上で実行できます。
 
 ## オフライン モード
 {: #offline_mode}
@@ -82,14 +80,14 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 ビルドパックの外部サイトへのアクセスの制御については、[『オフライン・モード』](offlineMode.html)を参照してください。 
 
 ## アプリケーション管理
-{{site.data.keyword.Bluemix}} には、Node.js アプリケーションを管理およびデバッグするために数多くのユーティリティーが用意されています。詳しくは、[『アプリケーション管理』](../../manageapps/app_mng.html)を参照してください。
+{{site.data.keyword.Bluemix}} には、Node.js アプリケーションを管理およびデバッグするために数多くのユーティリティーが用意されています。詳しくは、[『アプリケーション管理』](/docs/manageapps/app_mng.html)を参照してください。
 
 ## 使用可能なバージョン
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} は、[現在使用可能な Node.js ランタイム](http://nodejs.org/dist/)のすべてを提供します。これらのうち、IBM では機能拡張およびバグ修正を含むバージョンを提供しています。詳しくは、[『Node.js ビルドパックに対する最新の更新』](../../runtimes/nodejs/updates.html)を参照してください。
+{{site.data.keyword.Bluemix}} は、[現在使用可能な Node.js ランタイム](http://nodejs.org/dist/)のすべてを提供します。これらのうち、IBM では機能拡張およびバグ修正を含むバージョンを提供しています。詳しくは、[『Node.js ビルドパックに対する最新の更新』](/docs/runtimes/nodejs/updates.html)を参照してください。
 
-IBM Node.js ビルドパックは、すべてのバージョンの IBM ランタイムをキャッシュに入れます。そのため、IBM SDK for Node.js ランタイムをアプリケーションで使用している場合は、アプリケーションを Bluemix にプッシュすると、アプリケーションのパフォーマンスが向上します。
+IBM Node.js ビルドパックは、IBM ランタイム・バージョンをキャッシュに入れます。そのため、IBM SDK for Node.js ランタイムをアプリケーションで使用している場合は、アプリケーションを Bluemix にプッシュすると、アプリケーションのパフォーマンスが向上します。
 
 実行したい Node.js ランタイムのバージョンを指定するには、**package.json** ファイルの **engines** セクションで **node** パラメーターを使用します。
 
@@ -158,7 +156,7 @@ FIPS_MODE が true の場合、一部のノード・モジュールが機能し�
     app.set('etag', false);
 ```
 {: codeblock}
-詳しくは、[stackoverflow の投稿](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)を参照してください。**注:** [アプリケーション管理](../../manageapps/app_mng.html)と FIPS_MODE は、同時にはサポートされ*ません*。BLUEMIX_APP_MGMT_ENABLE 環境変数が設定され、かつ FIPS_MODE 環境変数が true に設定されると、アプリケーションはステージングに失敗します。
+詳しくは、[stackoverflow の投稿](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)を参照してください。**注:** [アプリケーション管理](/docs/manageapps/app_mng.html)と FIPS_MODE は、同時にはサポートされ*ません*。BLUEMIX_APP_MGMT_ENABLE 環境変数が設定され、かつ FIPS_MODE 環境変数が true に設定されると、アプリケーションはステージングに失敗します。
 
 FIPS_MODE の状態を確認するには、以下のようにさまざまな方法があります。
 <ul>
@@ -275,7 +273,7 @@ Bluemix は、複数バージョンの Node.js ビルドパックを提供しま
 {: #rellinks}
 ## 一般
 {: #general}
-* [Node.js ビルドパックに対する最新の更新](../../runtimes/nodejs/updates.html)
-* [アプリケーション管理](../../manageapps/app_mng.html)
+* [Node.js ビルドパックに対する最新の更新](/docs/runtimes/nodejs/updates.html)
+* [アプリケーション管理](/docs/manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [IBM API Connect](https://strongloop.com/)

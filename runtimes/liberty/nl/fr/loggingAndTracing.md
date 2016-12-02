@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-09"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Journalisation et traçage
 {: #logging_tracing}
-
-Dernière mise à jour : 21 juin 2016
-{: .last-updated}
 
 ## Fichiers journaux
 {: #log_files}
@@ -37,10 +35,54 @@ Liberty : trace et journalisation](http://www.ibm.com/support/knowledgecenter/SS
 L'interface utilisateur d'IBM Bluemix dispose de fonctions de trace et de vidage.
 * Utilisez la fonction Trace pour examiner et mettre à jour la spécification
 traceSpecification de journalisation Liberty sur les instances d'application en cours d'exécution.
-* Utilisez la fonction Vidage pour créer et manipuler les clichés d'unité d'exécution et de pile sur les instances d'application en cours d'exécution.
+* Utilisez la fonction Vidage pour créer les clichés d'unité d'exécution et de pile sur les instances d'application en exécution.
 
 Pour
 ce faire, sélectionnez une application Liberty dans l'interface utilisateur. Dans la catégorie Exécution du panneau de navigation, vous pouvez ouvrir les détails de l'instance. Sélectionnez une ou plusieurs instances. Dans le menu Actions, vous pouvez choisir TRACE ou DUMP.
+
+## Téléchargement des fichiers de vidage
+{: #download_dumps}
+
+<strong>Prérequis :</strong>
+* [Installez l'interface de ligne de commande CF](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
+* [Installez le plug-in Diego-Enabler](https://github.com/cloudfoundry-incubator/Diego-Enabler) si votre application s'exécute dans Diego
+
+<strong>Si votre application s'exécute dans DEA, procédez comme suit :</strong>
+  
+1. Obtenez app_guid
+```
+$ cf app <app_name> --guid
+```
+
+2. Téléchargez le fichier de vidage
+```
+$ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
+```
+
+<strong>Si votre application s'exécute dans Diego, procédez comme suit :</strong>
+  
+1. Obtenez app_guid
+```
+$ cf app <app_name> --guid
+```
+
+2. Obtenez app_ssh_endpoint(host and port) et app_ssh_host_key_fingerprint
+```
+$ cf curl /v2/info
+```
+
+3. Obtenez ssh-code pour la commande scp
+```
+$ cf ssh-code
+```
+
+4. Lancez la commande scp sur le fichier de vidage distant vers l'environnement local et utilisez ssh-code lorsque vous êtes invité à indiquer un mot de passe
+```
+$ scp -P <app_ssh_endpoint_port> -o User=cf:<app_guid>/<instance_id> <app_ssh_endpoint_host>:/home/vcap/dumps/<dump_file_name> <local_dump_file_name>
+```
+
+Pour plus de détails, voir [Accessing Apps with SSH](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html).
+
 
 # rellinks
 {: #rellinks}
@@ -48,3 +90,4 @@ ce faire, sélectionnez une application Liberty dans l'interface utilisateur. Da
 {: #general}
 * [Environnement d'exécution Liberty](index.html)
 * [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+

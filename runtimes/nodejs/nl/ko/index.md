@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-마지막 업데이트 날짜: 2016년 8월 29일
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}}의 Node.js 런타임은 sdk-for-nodejs 빌드팩을 통해 제공됩니다. sdk-for-nodejs 빌드팩은 Node.js 앱을 위한 완전한 런타임 환경을 제공합니다.
 {: shortdesc}
@@ -23,7 +22,7 @@ sdk-for-nodejs 빌드팩은 애플리케이션의 루트 디렉토리에 **packa
 ## 스타터 애플리케이션
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}}는 Node.js 스타터 애플리케이션을 제공합니다. Node.js 스타터 애플리케이션은 앱에 사용할 수 있는 템플리트를 제공하는 단순한 Node.js 앱입니다. 스타터 앱을 사용하여 시험해 볼 수 있으며 Bluemix 환경을 변경하고 변경사항을 푸시할 수 있습니다. 스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](../../cfapps/starter_app_usage.html)을 참조하십시오. 
+{{site.data.keyword.Bluemix}}는 Node.js 스타터 애플리케이션을 제공합니다. Node.js 스타터 애플리케이션은 앱에 사용할 수 있는 템플리트를 제공하는 단순한 Node.js 앱입니다. 스타터 앱을 사용하여 시험해 볼 수 있으며 Bluemix 환경을 변경하고 변경사항을 푸시할 수 있습니다. 스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](/docs/cfapps/starter_app_usage.html)을 참조하십시오. 
 
 ## 시작 명령
 {: #starup_commmand}
@@ -68,12 +67,11 @@ web: npm start
 다음 예에서는 **js** 파일의 소스 파트를 보여줍니다.
 
 ```
-var port = (process.env.VCAP_APP_PORT || 3000);
-var host = (process.env.VCAP_APP_HOST || 'localhost');
+var port = (process.env.PORT || 3000);
 ```
 {: codeblock}
 
-애플리케이션이 Bluemix에서 실행되는 경우 이 코드를 사용하여 VCAP_APP_HOST 및 VCAP_APP_PORT 환경 변수에 Bluemix 내부에 있고 앱이 수신 연결을 위해 청취하는 호스트와 포트 값을 포함시키십시오. 애플리케이션이 로컬에서 실행되는 경우 VCAP_APP_HOST 및 VCAP_APP_PORT가 정의되지 않으므로 **localhost**가 호스트로 사용되고 **3000**이 포트 번호로 사용됩니다. 이런 방식으로 작성하면 애플리케이션을 테스트 목적으로 로컬에서 실행하고 Bluemix에서는 추가 변경 없이 실행할 수 있습니다. 
+애플리케이션이 Bluemix에서 실행 중인 경우 이 코드를 사용하여 PORT 환경 변수에 Bluemix 내부에서 사용되고 앱이 수신 연결을 청취하는 포트 값을 포함합니다. 애플리케이션이 로컬로 실행 중인 경우에는 PORT가 정의되지 않으므로 **3000**을 포트 번호로 사용합니다. 이런 방식으로 작성하면 애플리케이션을 테스트 목적으로 로컬에서 실행하고 Bluemix에서는 추가 변경 없이 실행할 수 있습니다. 
 
 ## 오프라인 모드
 {: #offline_mode}
@@ -81,14 +79,14 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 외부 사이트에 대한 빌드팩의 액세스를 제어하는 데 대한 정보는 [오프라인 모드](offlineMode.html)를 참조하십시오. 
 
 ## 앱 관리
-{{site.data.keyword.Bluemix}}는 Node.js 앱을 관리하고 디버깅하는 몇 가지 유틸리티를 제공합니다. 전체 세부사항은 [앱 관리](../../manageapps/app_mng.html)를 참조하십시오. 
+{{site.data.keyword.Bluemix}}는 Node.js 앱을 관리하고 디버깅하는 몇 가지 유틸리티를 제공합니다. 전체 세부사항은 [앱 관리](/docs/manageapps/app_mng.html)를 참조하십시오. 
 
 ## 사용 가능한 버전
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}}는 모든 [현재 사용 가능한 Node.js 런타임](http://nodejs.org/dist/)을 제공합니다. 이 중에서 IBM은 개선사항과 버그 수정사항이 포함된 버전을 제공합니다. 자세한 정보는 [Node.js 빌드팩의 최신 업데이트](../../runtimes/nodejs/updates.html)를 참조하십시오. 
+{{site.data.keyword.Bluemix}}는 모든 [현재 사용 가능한 Node.js 런타임](http://nodejs.org/dist/)을 제공합니다. 이 중에서 IBM은 개선사항과 버그 수정사항이 포함된 버전을 제공합니다. 자세한 정보는 [Node.js 빌드팩의 최신 업데이트](/docs/runtimes/nodejs/updates.html)를 참조하십시오. 
 
-IBM Node.js 빌드팩은 모든 IBM 런타임 버전을 캐싱합니다. 애플리케이션에서 IBM SDK for Node.js 런타임을 사용하는 경우 애플리케이션을 Bluemix에 푸싱할 때 애플리케이션 성능이 더 빨라집니다. 
+IBM Node.js 빌드팩은 IBM 런타임 버전을 캐시합니다. 애플리케이션에서 IBM SDK for Node.js 런타임을 사용하는 경우 애플리케이션을 Bluemix에 푸싱할 때 애플리케이션 성능이 더 빨라집니다. 
 
 **package.json** 파일의 **engines** 섹션에서 **node** 매개변수를 사용하여 실행하려는 Node.js 런타임 버전을 지정하십시오. 
 
@@ -160,7 +158,7 @@ app.set('etag', false);
 자세한 정보는 이 [스택오버플로우 포스트](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)를
 참조하십시오.
 
-**참고** [앱 관리](../../manageapps/app_mng.html) 및 FIPS_MODE는 동시에 지원되지 *않습니다*.  BLUEMIX_APP_MGMT_ENABLE 환경 변수가 설정되고 FIPS_MODE 환경 변수가 true로 설정되면 앱이 스테이징에 실패합니다.
+**참고** [앱 관리](/docs/manageapps/app_mng.html) 및 FIPS_MODE는 동시에 지원되지 *않습니다*.  BLUEMIX_APP_MGMT_ENABLE 환경 변수가 설정되고 FIPS_MODE 환경 변수가 true로 설정되면 앱이 스테이징에 실패합니다.
 
 FIPS_MODE의 상태를 확인하는 여러 방법이 있습니다. 
 <ul>
@@ -263,20 +261,22 @@ Bluemix는 여러 버전의 Node.js 빌드팩을 제공합니다.
 
 일반적으로 현재 **sdk-for-nodejs** 빌드팩과 이전 레벨 버전이 사용 가능합니다. 사용 가능한 모든 빌드팩을 보려면 **cf buildpacks** 명령을 사용하십시오. 예: 
 <pre>
-cf buildpacks
+      cf buildpacks
       Getting buildpacks...
+
       buildpack                                 position   enabled   locked   filename   
 
-sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
+      sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
       nodejs_buildpack                          5          true      false    nodejs_buildpack-cached-v1.5.0.zip   
-      sdk-for-nodejs_v2_7-20151118-1003         17         true      false    buildpack_sdk-for-nodejs_v2.7-20151118-1003.zip</pre>
+      sdk-for-nodejs_v2_7-20151118-1003         17         true      false    buildpack_sdk-for-nodejs_v2.7-20151118-1003.zip
+</pre>
 {: codeblock}
 
 # 관련 링크
 {: #rellinks}
 ## 일반
 {: #general}
-* [Node.js 빌드팩의 최신 업데이트](../../runtimes/nodejs/updates.html)
-* [앱 관리](../../manageapps/app_mng.html)
+* [Node.js 빌드팩의 최신 업데이트](/docs/runtimes/nodejs/updates.html)
+* [앱 관리](/docs/manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [IBM API Connect](https://strongloop.com/)

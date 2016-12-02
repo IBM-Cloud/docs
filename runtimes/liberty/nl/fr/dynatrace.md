@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,14 +12,11 @@ copyright:
 # Utilisation de Dynatrace
 {: #using_dynatrace}
 
-Dernière mise à jour : 10 juin 2016
-{: .last-updated}
-
 Dynatrace est un service tiers qui offre une fonction de surveillance pour votre appli.
 
 Pour plus d'informations sur les fonctions offertes par le service Dynatrace, voir [Dynatrace Application Monitoring](http://www.dynatrace.com/en/products/application-monitoring.html).
 
-Si votre application est configurée pour utiliser Dynatrace, par défaut, l'environnement d'exécution Liberty acquiert un fichier JAR d'agent Dynatrace à partir d'un site Dynatrace et exécute l'agent Dynatrace avec votre application.  Avec ce comportement par défaut, la configuration minimale nécessaire pour utiliser Dynatrace consiste à créer un service fourni par l'utilisateur qui pointe vers votre collecteur Dynatrace.
+Si votre application est configurée pour utiliser Dynatrace, par défaut, l'environnement d'exécution Liberty acquiert un fichier JAR d'agent Dynatrace à partir d'un site Dynatrace et exécute l'agent Dynatrace avec votre application. Avec ce comportement par défaut, la configuration minimale nécessaire pour utiliser Dynatrace consiste à créer un service fourni par l'utilisateur qui pointe vers votre collecteur Dynatrace. 
 
 ## Création d'un service fourni par l'utilisateur qui pointe vers votre collecteur Dynatrace
 
@@ -40,7 +38,8 @@ Tout d'abord, vous devez configurez un collecteur Dynatrace.  Ensuite, vous deve
   </pre>
   {: codeblock}
 
-Dans cet exemple, my-dynatrace-collector est le nom donné au service, DynatraceCollectorIPaddress est l'adresse IP du collecteur Dynatrace que vous avez configuré et le paramètre profile fait référence au nom de profil Dynatrace facultatif associé à cette application surveillée. La valeur de profil par défaut est Monitoring. Vous pouvez définir des paramètres facultatifs tels que ceux illustrés dans l'exemple suivant :
+Dans cet exemple, my-dynatrace-collector est le nom donné au service, DynatraceCollectorIPaddress est l'adresse IP du collecteur Dynatrace que vous avez configuré et le paramètre profile fait référence au nom de profil Dynatrace facultatif associé à cette application surveillée.
+La valeur par défaut de profile est Monitoring. Vous pouvez définir des paramètres facultatifs tels que ceux illustrés dans l'exemple suivant :
 
   <pre>
   $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
@@ -51,8 +50,7 @@ Dans cet exemple, my-dynatrace-collector est le nom donné au service, Dynatrace
 
 Pour plus d'informations sur les options disponibles, voir [Agent Setting section of Agent Configuration](https://community.dynatrace.com/community/display/DOCDT62/Agent+Configuration) sur le site Web de la communauté Dynatrace. Par exemple, vous pouvez utiliser l'option exclude pour exclure des classes de la surveillance par Dynatrace. Pour plus d'informations sur la configuration du service fourni par l'utilisateur, voir [DynaTrace Agent Framework](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/framework-dynatrace-agent.md).
 </li>
-<li>Après avoir envoyé par commande push votre appli à Bluemix, associez le service fourni par l'utilisateur que vous avez créé à cette appli. Par exemple, utilisez la commande suivante :
-
+<li>Après avoir envoyé par commande push votre appli à Bluemix, associez le service fourni par l'utilisateur que vous avez créé à cette appli. Utilisez par exemple la commande suivante :
   <pre>
   $ cf bs myApp my-dynatrace-collector
   </pre>  

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # Python
 {: #python_runtime}
-Dernière mise à jour : 06 juillet 2016
-{: .last-updated}
 
 L'environnement d'exécution Python dans {{site.data.keyword.Bluemix}} repose sur le pack python_buildpack.
 Le pack python_buildpack fournit un environnement d'exécution complet pour les applications Python 2 et Python 3.
@@ -23,7 +22,7 @@ Le pack python_buildpack sera utilisé si le répertoire racine de votre appli c
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} propose une application de démarrage Python.  L'application de démarrage Python est une appli Python simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}.  Voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix}} propose une application de démarrage Python.  L'application de démarrage Python est une appli Python simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications, puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}. Voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide.
 
 ## Versions d'environnement d'exécution
 {: #runtime_versions}

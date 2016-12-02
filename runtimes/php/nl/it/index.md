@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # PHP
 {: #php_runtime}
-Ultimo aggiornamento: 06 luglio 2016
-{: .last-updated}
 
 Il runtime PHP su {{site.data.keyword.Bluemix}} si avvale del php_buildpack.
 Il php_buildpack fornisce un ambiente di runtime completo per le applicazioni PHP.
@@ -26,8 +25,8 @@ Il php_buildpack viene utilizzato nelle seguenti condizioni:
 ## Applicazione starter
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} fornisce un'applicazione starter PHP.  L'applicazione starter PHP è una semplice applicazione PHP che fornisce un template che puoi utilizzare per la tua applicazione. Puoi fare delle prove con l'applicazione starter, apportare modifiche ed eseguirne il push all'ambiente
-{site.data.keyword.Bluemix}}.  Consulta il documento relativo all'[utilizzo delle applicazioni starter](../../cfapps/starter_app_usage.html) per assistenza nell'utilizzo dell'applicazione starter.
+{{site.data.keyword.Bluemix}} fornisce un'applicazione starter PHP. L'applicazione starter PHP è una semplice applicazione PHP che fornisce un template che puoi utilizzare per la tua applicazione.
+Puoi fare delle prove con l'applicazione starter, apportare modifiche ed eseguirne il push all'ambiente {site.data.keyword.Bluemix}}.  Consulta il documento relativo all'[utilizzo delle applicazioni starter](/docs/cfapps/starter_app_usage.html) per assistenza nell'utilizzo dell'applicazione starter.
 
 ## Versioni di runtime
 {: #runtime_versions}

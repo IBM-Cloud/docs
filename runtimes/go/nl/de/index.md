@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 # Go
 {: #go_runtime}
-Letzte Aktualisierung: 06. Juli 2016
 
 Die Laufzeit von Go in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'go_buildpack'.
 Das Buildpack 'go_buildpack' bietet eine vollständige Laufzeitumgebung für Go-Apps.
@@ -23,7 +23,7 @@ Das Buildpack 'go_buildpack' wird verwendet, wenn Ihre Anwendung eine Datei mit 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine Go-Starteranwendung bereit.  Die Go-Starteranwendung ist eine einfache Go-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starterapp experimentieren, Änderungen an der Bluemix-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Lesen Sie als Hilfe für die Verwendung von Starteranwendungen [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix}} stellt eine Go-Starteranwendung bereit.  Die Go-Starteranwendung ist eine einfache Go-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der Bluemix-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Lesen Sie als Hilfe für die Verwendung von Starteranwendungen [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}

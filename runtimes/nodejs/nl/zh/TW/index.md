@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,10 +13,9 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-前次更新：2016 年 8 月 29 日
-{: .last-updated}
 
-{{site.data.keyword.Bluemix}} 上的 Node.js 運行環境是採用 sdk-for-nodejs 建置套件的技術。sdk-for-nodejs 建置套件為 Node.js 應用程式提供完整的運行環境。
+{{site.data.keyword.Bluemix}} 上的 Node.js 運行環境是採用 sdk-for-nodejs 建置套件的技術。
+sdk-for-nodejs 建置套件為 Node.js 應用程式提供完整的運行環境。
 {: shortdesc}
 
 當應用程式的根目錄包含 **package.json** 檔案時，會使用 sdk-for-nodejs 建置套件。
@@ -23,7 +23,7 @@ copyright:
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供 Node.js 入門範本應用程式。Node.js 入門範本應用程式是簡單的 Node.js 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 Bluemix 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../../cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供 Node.js 入門範本應用程式。Node.js 入門範本應用程式是簡單的 Node.js 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 Bluemix 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](/docs/cfapps/starter_app_usage.html)。
 
 ## Startup 指令
 {: #starup_commmand}
@@ -68,12 +68,11 @@ web: node app.js
 下列範例顯示 **js** 檔案的部分原始碼：
 
 ```
-var port = (process.env.VCAP_APP_PORT || 3000);
-var host = (process.env.VCAP_APP_HOST || 'localhost');
+var port = (process.env.PORT || 3000);
 ```
 {: codeblock}
 
-使用此程式碼，當應用程式在 Bluemix 上執行時，VCAP_APP_HOST 及 VCAP_APP_PORT 環境變數包含的主機和埠值是 Bluemix 的內部值，應用程式即藉此來接聽送入的連線。當應用程式在本端執行時，不會定義 VCAP_APP_HOST 及 VCAP_APP_PORT，因此會使用 **localhost** 作為主機並使用 **3000** 作為埠號。透過此撰寫方式，您可以在本端（若是進行測試）以及在 Bluemix 上執行應用程式，而不必做進一步的變更。
+使用此程式碼，當應用程式在 Bluemix 上執行時，PORT 環境變數包含的埠值是 Bluemix 的內部值，應用程式藉此來接聽送入的連線。當應用程式在本端執行時，不會定義 PORT，因此會使用 **3000** 作為埠號。透過此撰寫方式，您可以在本端（若是進行測試）以及在 Bluemix 上執行應用程式，而不必做進一步的變更。
 
 ## 離線模式
 {: #offline_mode}
@@ -81,14 +80,14 @@ var host = (process.env.VCAP_APP_HOST || 'localhost');
 請參閱[離線模式](offlineMode.html)，以瞭解如何控制建置套件對外部網站的存取。 
 
 ## 應用程式管理
-{{site.data.keyword.Bluemix}} 提供若干公用程式來管理 Node.js 應用程式及進行除錯。如需完整的詳細資料，請參閱[應用程式管理](../../manageapps/app_mng.html)。
+{{site.data.keyword.Bluemix}} 提供若干公用程式來管理 Node.js 應用程式及進行除錯。如需完整的詳細資料，請參閱[應用程式管理](/docs/manageapps/app_mng.html)。
 
 ## 可用的版本
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} 提供所有[目前可用的 Node.js 運行環境](http://nodejs.org/dist/)。IBM 在其中一些提供了包含加強功能和錯誤修正程式的版本。如需相關資訊，請參閱 [Node.js 建置套件的最新更新項目](../../runtimes/nodejs/updates.html)。
+{{site.data.keyword.Bluemix}} 提供所有[目前可用的 Node.js 運行環境](http://nodejs.org/dist/)。IBM 在其中一些提供了包含加強功能和錯誤修正程式的版本。如需相關資訊，請參閱 [Node.js 建置套件的最新更新項目](/docs/runtimes/nodejs/updates.html)。
 
-IBM Node.js 建置套件會快取所有 IBM 運行環境版本。因此，如果您在應用程式中使用 IBM SDK for Node.js 運行環境，當應用程式推送至 Bluemix 時，即可提升應用程式效能。
+IBM Node.js 建置套件會快取 IBM 運行環境版本。因此，如果您在應用程式中使用 IBM SDK for Node.js 運行環境，當應用程式推送至 Bluemix 時，即可提升應用程式效能。
 
 請在 **package.json** 檔案的 **engines** 區段中使用 **node** 參數，指定您要執行的 Node.js 運行環境版本。
 
@@ -158,7 +157,7 @@ Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS](https:
     app.set('etag', false);
 ```
 {: codeblock}
-如需相關資訊，請參閱這則 [Stack Overflow 貼文](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)。**附註**：*未* 同時支援[應用程式管理](../../manageapps/app_mng.html) 和 FIPS_MODE。如果設定 BLUEMIX_APP_MGMT_ENABLE 環境變數，而且 FIPS_MODE 環境變數設為 true，將無法編譯打包應用程式。
+如需相關資訊，請參閱這則 [Stack Overflow 貼文](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)。**附註**：*未* 同時支援[應用程式管理](/docs/manageapps/app_mng.html)及 FIPS_MODE。如果設定 BLUEMIX_APP_MGMT_ENABLE 環境變數，而且 FIPS_MODE 環境變數設為 true，將無法編譯打包應用程式。
 
 有各種方法可檢查 FIPS_MODE 的狀態：
 <ul>
@@ -278,7 +277,7 @@ Bluemix 提供多個版本的 Node.js 建置套件。
 {: #rellinks}
 ## 一般
 {: #general}
-* [Node.js 建置套件的最新更新項目](../../runtimes/nodejs/updates.html)
-* [應用程式管理](../../manageapps/app_mng.html)
+* [Node.js 建置套件的最新更新項目](/docs/runtimes/nodejs/updates.html)
+* [應用程式管理](/docs/manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [IBM API Connect](https://strongloop.com/)

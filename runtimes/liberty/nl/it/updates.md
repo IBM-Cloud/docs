@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -13,24 +14,35 @@ copyright:
 
 ## Un elenco degli aggiornamenti più recenti nel pacchetto di build Liberty.
 
-Ultimo aggiornamento: 13 settembre 2016
-{: .last-updated}
+### 1 novembre 2016: pacchetto di build Liberty aggiornato v3.4.1-20161030-2241
+* Il pacchetto di build contiene una correzione a un problema di avvio di alcuni tipi di applicazioni. Nello specifico, le applicazioni distribuite come una directory del server o come un server compresso con i file dell'applicazione nella directory `dropins`.
+
+### 21 ottobre 2016: pacchetto di build Liberty aggiornato v3.4-20161018-2004
+* La versione del runtime Liberty predefinita `16.0.0.3` è stata aggiornata per includere le iFixe [PI68805](http://www-01.ibm.com/support/docview.wss?uid=swg1PI68805) e [PI69141](http://www-01.ibm.com/support/docview.wss?uid=swg1PI69141). 
+* La versione del runtime Liberty è stata aggiornata alla release [2016.9.0.1](https://developer.ibm.com/wasdev/blog/2016/09/23/beta-websphere-liberty-and-tools-october-2016/). 
+* Il pacchetto di build contiene anche una versione aggiornata di IBM JRE 8.0: SR3 FP12.
+* La IBM JRE 8.0 e 7.1 sono ora configurate per abilitare [tutti i protocolli TLS quando viene richiamato `SSLContext.getContext("TLS")`](https://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/matchsslcontext_tls.html) a corrispondere al funzionamento JRE di Oracle. IBM JRE 7.1 è anche configurata per abilitare [tutti i protocolli TLS quando viene richiamato `SSLContext.getDefault()`](https://www.ibm.com/support/knowledgecenter/SSYKE2_7.1.0/com.ibm.java.security.component.71.doc/security-component/jsse2Docs/overrideSSLprotocol.html) a corrispondere al funzionamento JRE 8.0 di IBM.
+* Il pacchetto di build fornisce un raccoglitore di dati aggiornato per il [servizio Monitoring and Analytics](/docs/services/monana/index.html#monana_oview).
+* Il pacchetto di build è stato nuovamente modificato per scaricare l'ultimo 1.5.x [MariaDB Connector/J JDBC driver](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) quando di esegue la [configurazione automatica per il tipo MySQL dei servizi](autoConfig.html).
+* Il pacchetto di build introduce il supporto alla personalizzazione del funzionamento di configurazione automatica del servizio tramite la variabile di ambiente `LBP_SERVICE_CONFIG_<serviceType>`. Ad esempio, può essere utilizzato per modificare l'ubicazione o la versione di un driver JDBC in modo da scaricare il servizio MySQL. Consulta la documentazione dei [servizi che supportano la configurazione automatica](autoConfig.html) per ulteriori informazioni. 
+* Il pacchetto di build include anche una serie di miglioramenti di [Diego](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) correlati al controllo di integrità dell'applicazione e la funzionalità [Gestione applicazione](/docs/manageapps/app_mng.html).
 
 ### 16 settembre, 2016: pacchetto di build Liberty aggiornato v3.3-20160912-1729
-* La versione del runtime Liberty predefinita è stata aggiornata alla release [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661). La versione del runtime Liberty è stata aggiornata alla release [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/).Con questi aggiornamenti, le funzioni Liberty `cloudant-1.0` e `passwordUtilities-1.0`, precedentemente disponibili come funzioni beta, sono ora disponibili come funzioni pronte per la produzione.
+* La versione del runtime Liberty predefinita è stata aggiornata alla release [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661). La versione del runtime Liberty è stata aggiornata alla release [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/). Con questi aggiornamenti, le funzioni Liberty `cloudant-1.0` e `passwordUtilities-1.0`, precedentemente disponibili come funzioni beta, sono ora disponibili come funzioni pronte per la produzione.
+* Sono state incluse [correzioni per la protezione](http://www-01.ibm.com/support/docview.wss?uid=swg21990527) per il runtime di Liberty.
 * Il pacchetto di build contiene anche una versione aggiornata di IBM JRE 8.0: SR3 FP11.
 * Il pacchetto di build è stato modificato per scaricare l'ultimo 1.4.x [MariaDB Connector/J JDBC driver](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) quando di esegue la [configurazione automatica per il tipo MySQL dei servizi](autoConfig.html) a causa di un problema con l'ultimo 1.5.x driver.
 
 ### 26 agosto, 2016: pacchetto di build Liberty aggiornato v3.2-20160822-2200
 * Il pacchetto di build contiene le versioni aggiornate di IBM JRE: 8 SR3 FP10 e 7.1 SR3 FP50.
 * La versione del runtime Liberty è stata aggiornata alla release [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/).
-* Il plug-in del servizio che fornisce il [supporto di configurazione automatica](autoConfig.html) per il servizio [SQL Database](../../services/SQLDB/index.html#SQLDB) è stato aggiornato per utilizzare sempre i certificati firmati JVM durante la connessione al servizio tramite TLS.
+* Il plug-in del servizio che fornisce il [supporto di configurazione automatica](autoConfig.html) per il servizio [SQL Database](/docs/services/SQLDB/index.html#SQLDB) è stato aggiornato per utilizzare sempre i certificati firmati JVM durante la connessione al servizio tramite TLS.
 
 ### 22 luglio 2016: pacchetto di build Liberty aggiornato v3.1-20160717-2254
-* La funzionalità [Gestione applicazione](../../manageapps/app_mng.html) è stata aggiornata per supportare l'autenticazione federata. Inoltre, il runtime Node.js utilizzato dai programmi di utilità `devconsole` e `shell` è stato aggiornato alla versione `0.12.15` più recente. 
+* La funzionalità [Gestione applicazione](/docs/manageapps/app_mng.html) è stata aggiornata per supportare l'autenticazione federata. Inoltre, il runtime Node.js utilizzato dai programmi di utilità `devconsole` e `shell` è stato aggiornato alla versione `0.12.15` più recente. 
 * Il pacchetto di build aggiunge il supporto per l'agent di monitoraggio dell'applicazione[Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/).
-* Il pacchetto di build fornisce un raccoglitore di dati aggiornato per il [servizio Monitoring and Analytics](../../services/monana/index.html#monana_oview).
-* Il pacchetto di build fornisce inoltre una versione aggiornata dell'agent per il [servizio Auto-Scaling](../../services/Auto-Scaling/index.html). 
+* Il pacchetto di build fornisce un raccoglitore di dati aggiornato per il [servizio Monitoring and Analytics](/docs/services/monana/index.html#monana_oview).
+* Il pacchetto di build fornisce inoltre una versione aggiornata dell'agent per il [servizio Auto-Scaling](/docs/services/Auto-Scaling/index.html). 
 * La versione del runtime Liberty è stata aggiornata alla release [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/).
 
 ### 17 giugno 2016: pacchetto di build Liberty aggiornato v3.0-20160608-1450
@@ -45,16 +57,16 @@ Ultimo aggiornamento: 13 settembre 2016
 * Il pacchetto di build contiene anche le versioni aggiornate di IBM JRE: 8 SR3 e 7.1 SR3 FP40. 
 * Il pacchetto di build aggiunge il supporto per l'agent di monitoraggio dell'applicazione [AppDynamics](https://www.appdynamics.com/).
 * Il supporto [Dynatrace](dynatrace.html) è stato migliorato per semplificare l'installazione dell'agent.
-* Il pacchetto di build fornisce un raccoglitore di dati aggiornato per il [servizio Monitoring and Analytics](../../services/monana/index.html#monana_oview). Contiene una correzione per un problema con il raccoglitore dei dati di heap massimi.
-* Il runtime Node.js utilizzato dai [programmi di utilità devconsole e shell di Gestione applicazioni](../../manageapps/app_mng.html#app_management) è stato aggiornato alla versione 0.12.13 più recente.
+* Il pacchetto di build fornisce un raccoglitore di dati aggiornato per il [servizio Monitoring and Analytics](/docs/services/monana/index.html#monana_oview). Contiene una correzione per un problema con il raccoglitore dei dati di heap massimi.
+* Il runtime Node.js utilizzato dai [programmi di utilità devconsole e shell di Gestione applicazioni](/docs/manageapps/app_mng.html#app_management) è stato aggiornato alla versione 0.12.13 più recente.
 
 ### 25 marzo 2016: pacchetto di build Liberty aggiornato v2.7-20160321-1358
 * Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di marzo](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). La versione aggiornata di Liberty rende disponibile la funzione beta cloudant-1.0 in Bluemix.
 * Il pacchetto di build contiene anche le versioni aggiornate di IBM JRE: 8 SR2 FP12 e 7.1 SR3 FP32. 
-* Il pacchetto di build fornisce una versione aggiornata dell'agent per il [servizio Auto-Scaling](../../services/Auto-Scaling/index.html). 
-* Il pacchetto di build viene ora fornito con un nuovo raccoglitore di dati per il [servizio Monitoring and Analytics](../../services/monana/index.html#monana_oview). Il nuovo raccoglitore abilita la configurazione delle soglie di monitoraggio e contiene delle correzioni di bug.
+* Il pacchetto di build fornisce una versione aggiornata dell'agent per il [servizio Auto-Scaling](/docs/services/Auto-Scaling/index.html). 
+* Il pacchetto di build viene ora fornito con un nuovo raccoglitore di dati per il [servizio Monitoring and Analytics](/docs/services/monana/index.html#monana_oview). Il nuovo raccoglitore abilita la configurazione delle soglie di monitoraggio e contiene delle correzioni di bug.
 * Il pacchetto di build fornisce una versione driver DB2® JDBC 4.19.49 aggiornata. 
-* Il runtime Node.js utilizzato dai [programmi di utilità devconsole e shell di Gestione applicazioni](../../manageapps/app_mng.html#app_management) è stato aggiornato alla versione 0.12.12 più recente.
+* Il runtime Node.js utilizzato dai [programmi di utilità devconsole e shell di Gestione applicazioni](/docs/manageapps/app_mng.html#app_management) è stato aggiornato alla versione 0.12.12 più recente.
 
 ### 7 marzo 2016: pacchetto di build Liberty aggiornato v2.6-20160225-1649
 * Il pacchetto di build aggiunge il supporto per l'applicazione di monitoraggio Dynatrace. Consulta [Utilizzo di Dynatrace](dynatrace.html) per i dettagli.
@@ -77,7 +89,7 @@ Ultimo aggiornamento: 13 settembre 2016
 * Il pacchetto di build contiene una versione aggiornata del runtime di profilo Liberty e WebSphere eXtreme
 Scale Client con le correzioni per la protezione per la [vulnerabilità di Apache Commons Collection](http://www-01.ibm.com/support/docview.wss?uid=swg21971426).
 * Il pacchetto di build contiene anche una versione aggiornata del [Java MongoDB Driver](https://docs.mongodb.org/ecosystem/drivers/java/), v2.13.3. Il nuovo driver è compatibile con MongoDB versione 2.4, 2.6 e 3.0.
-* Il pacchetto di build fornisce anche una versione aggiornata del raccoglitore di dati per il [servizio Monitoring and Analytics](../../services/monana/index.html). Il raccoglitore di dati aggiornato offre delle funzionalità di traccia di metodo migliorate.
+* Il pacchetto di build fornisce anche una versione aggiornata del raccoglitore di dati per il [servizio Monitoring and Analytics](/docs/services/monana/index.html). Il raccoglitore di dati aggiornato offre delle funzionalità di traccia di metodo migliorate.
 
 ### 16 ottobre 2015: pacchetto di build Liberty aggiornato v2.1-20151006-0912
 * Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di ottobre](https://developer.ibm.com/wasdev/blog/2015/09/25/beta-was-liberty-beta-with-tools-october-2015/). Con questo aggiornamento, le funzioni Liberty bells-1.0, rtcomm-1.0, rtcommGateway-1.0, samlWeb-2.0, sipServlet-1.1 , precedentemente disponibili come beta, sono ora disponibili come funzioni pronte per la produzione.
@@ -85,7 +97,7 @@ Scale Client con le correzioni per la protezione per la [vulnerabilità di Apach
 * Il pacchetto di build fornisce anche diversi miglioramenti e ottimizzazioni delle prestazioni:
   * La funzione di scansione degli archivi di bean impliciti [CDI 1.2](optionsForPushing.html)
 è disabilitata per impostazione predefinita quando si distribuiscono file WAR o EAR.
-  * Per ridurre la dimensione del droplet, i [programmi di utilità di gestione applicazioni](../../manageapps/app_mng.html) evconsole e shell richiedono un'operazione di ripreparazione, invece di un riavvio.
+  * Per ridurre la dimensione del droplet, i [programmi di utilità di gestione applicazioni](/docs/manageapps/app_mng.html) evconsole e shell richiedono un'operazione di ripreparazione, invece di un riavvio.
   * La cache di classe condivisa di IBM JRE è disabilitata poiché non veniva riutilizzata nell'ambiente Bluemix.
 
 ### 18 settembre 2015: pacchetto di build Liberty aggiornato v2.0-20150914-1535
@@ -107,14 +119,14 @@ HTTPS_PROXY](environmentVariables.html). Se impostate, il pacchetto di build uti
 * Il pacchetto di build contiene versioni aggiornate dei JRE IBM: 7.1 SR1 FP10 r 8 SR1 FP10.
 I JRE aggiornati
 contengono le [ultime correzioni di sicurezza](http://www-01.ibm.com/support/docview.wss?uid=swg21964161) e altri miglioramenti.
-* Il plug-in del servizio che fornisce il [supporto di configurazione automatica](autoConfig.html) per il servizio [Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant) è stato aggiornato per garantire che le connessioni al servizio vengano stabilite su un canale sicuro.
+* Il plug-in del servizio che fornisce il [supporto di configurazione automatica](autoConfig.html) per il servizio [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant) è stato aggiornato per garantire che le connessioni al servizio vengano stabilite su un canale sicuro.
 
 ### 21 luglio 2015: pacchetto di build Liberty aggiornato v1.20-20150713-1450
 * Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sulla [release 8.5.5.6](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/). Con questa release, tutte le funzioni Liberty Java EE 7 precedentemente disponibili come funzioni beta sono ora disponibili come funzioni pronte per la produzione. A causa di limitazioni relative
 alle porte e anche di altra natura esistenti in Bluemix, alcune funzioni come ad esempio gli EJB remoti non sono
 pienamente supportati nella piattaforma.
 * Il pacchetto di build riconosce ed esegue le applicazioni fornite in [distZip-style](https://docs.gradle.org/current/userguide/application_plugin.html).
-* Il pacchetto di build contiene un raccoglitore di dati aggiornato per il servizio [Monitoring and Analytics](../../services/monana/index.html) e WebSphere eXtreme Scale Client che supporta la nuova versione di runtime di Liberty.
+* Il pacchetto di build contiene un raccoglitore di dati aggiornato per il servizio [Monitoring and Analytics](/docs/services/monana/index.html) e WebSphere eXtreme Scale Client che supporta la nuova versione di runtime di Liberty.
 
 ### 30 giugno 2015: pacchetto di build Liberty aggiornato v1.19.1-20150622-1509
 * Questa versione del pacchetto di build contiene un IBM JRE aggiornato con una correzione per la protezione per la [vulnerabilità LogJam](http://www-01.ibm.com/support/docview.wss?uid=swg21961390).
@@ -122,9 +134,9 @@ pienamente supportati nella piattaforma.
 
 ### 14 giugno 2015: pacchetto di build Liberty aggiornato v1.19-20150608-1717
 * Il pacchetto di build contiene diversi miglioramenti alla gestione delle applicazioni che includono il supporto per la console di
-sviluppo e un accesso shell basato sul web. Per i dettagli, consulta [la documentazione Gestione applicazioni](../../manageapps/app_mng.html).
+sviluppo e un accesso shell basato sul web. Per i dettagli, consulta [la documentazione Gestione applicazioni](/docs/manageapps/app_mng.html).
 * Il pacchetto di build contiene anche una correzione per un problema a causa del quale non era possibile
-trovare la funzione Liberty per il [servizio Monitoring and Analytics](../../services/monana/index.html).
+trovare la funzione Liberty per il [servizio Monitoring and Analytics](/docs/services/monana/index.html).
 
 ### 27 maggio 2015: pacchetto di build Liberty aggiornato v1.18-20150519-1642
 * Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di maggio](https://developer.ibm.com/wasdev/blog/2015/05/08/beta-liberty-and-tools-may-2015/).
@@ -136,7 +148,7 @@ la configurazione della versione di OpenJDK. Per tutti i dettagli, consulta [Per
 * Il pacchetto di build fornisce una nuova variabile di ambiente JBP_CONFIG_LIBERTY che può essere utilizzata per
 sovrascrivere l'insieme predefinito di funzioni Liberty abilitato per un'applicazione quando distribuisce un
 file WAR o EAR. Per ulteriori informazioni, consulta [Applicazioni autonome](optionsForPushing.html#stand_alone_apps).
-* Il plug-in di servizio per il [servizio Monitoring and Analytics](../../services/monana/index.html) è stato aggiornato per ridurre la dimensione dei log generati per il servizio.
+* Il plug-in di servizio per il [servizio Monitoring and Analytics](/docs/services/monana/index.html) è stato aggiornato per ridurre la dimensione dei log generati per il servizio.
 * Con questa versione del pacchetto di build, la modalità di disposizione dei file applicazione nel droplet è cambiata. La modifica nella struttura dei file ha eliminato la complessità correlata a mantenere i link simbolici e non dovrebbe aver alcun impatto sulle applicazioni.
 
 ### 15 aprile 2015: pacchetto di build Liberty aggiornato v1.16-20150407-1737
@@ -150,7 +162,7 @@ contesto diverso sulla base delle impostazioni contenute nel file **ibm-web-ext.
 
 ### 3 aprile 2015: pacchetto di build Liberty aggiornato v1.15-20150402-1422
 * Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di marzo](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-tools-march-2015/). La versione aggiornata dei profili Liberty rende disponibile la funzione beta jsf-2.2 in Bluemix.
-* Il pacchetto di build contiene anche una versione aggiornata del raccoglitore di dati per il [servizio Monitoring and Analytics](../../services/monana/index.html).
+* Il pacchetto di build contiene anche una versione aggiornata del raccoglitore di dati per il [servizio Monitoring and Analytics](/docs/services/monana/index.html).
 
 ### 20 marzo 2015: pacchetto di build Liberty aggiornato v1.14-20150319-1159
 * Questa versione del pacchetto di build contiene un IBM JRE 7.1.2.11 aggiornato con una correzione per la protezione per la [vulnerabilità FREAK](http://www-01.ibm.com/support/docview.wss?uid=swg21699864).
@@ -171,7 +183,7 @@ di MongoDB che, in alcuni casi, generava una configurazione **server.xml** non v
 
 ### 6 febbraio 2015: pacchetto di build Liberty aggiornato v1.12-20150130-1016
 * Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di gennaio](https://developer.ibm.com/wasdev/blog/2015/01/16/announcing-liberty-beta-tools-january-2015/).
-* Il pacchetto di build contiene una versione snellita del raccoglitore di dati per [servizio Monitoring and Analytics](../../services/monana/index.html#gettingstartedtemplate).
+* Il pacchetto di build contiene una versione snellita del raccoglitore di dati per [servizio Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
 
 ### 23 gennaio 2015: pacchetto di build Liberty aggiornato v1.11-20150119-1511
 * Il pacchetto di build contiene un IBM JRE versione 7.1 SR2 FP1 aggiornato.
@@ -216,7 +228,7 @@ dump generati. Ulteriori dettagli sono forniti nell'[articolo Custom Configurati
 con una configurazione server che conteneva caratteri Unicode.
 
 ### 23 ottobre 2014: pacchetto di build Liberty aggiornato v1.6-20141013-1628
-* Il pacchetto di build viene ora fornito con un nuovo raccoglitore di dati per [Monitoring and Analytics](../../services/monana/index.html). Il nuovo raccoglitore di dati raccoglie le informazioni approfondite di diagnostica,
+* Il pacchetto di build viene ora fornito con un nuovo raccoglitore di dati per [Monitoring and Analytics](/docs/services/monana/index.html). Il nuovo raccoglitore di dati raccoglie le informazioni approfondite di diagnostica,
 che abilitano gli utenti del piano di diagnostica del servizio a diagnosticare
 i problemi relativi alle loro applicazioni, con una precisione fino alla specifica riga di codice.
 * Il pacchetto di build contiene delle versioni aggiornate degli agent di gestione e di

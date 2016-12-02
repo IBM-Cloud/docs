@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Limites mémoire et pack de construction Liberty
 {: #memory_limits}
-
-Dernière mise à jour : 10 juin 2016
-{: .last-updated}
 
 Une limite mémoire doit être spécifiée lorsque vous déployez une application à l'aide du pack de construction
 Liberty.

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Bluemix 中支援的 Liberty 特性
 {: #liberty_features}
-
-前次更新：2016 年 7 月 28 日
-{: .last-updated}
 
 Liberty for Java 即時運行環境包括「Liberty 設定檔」功能的子集。「Liberty 設定檔」提供的部分功能無法在 Liberty for Java 即時運行環境中使用，因為它們不適用於雲端環境。
 
@@ -210,7 +208,7 @@ Liberty for Java 即時運行環境包括「Liberty 設定檔」功能的子集�
 
 當部署 WAR 或 EAR 檔案時，依預設會啟用可用功能的子集。如需詳細資料，請參閱[獨立式應用程式](optionsForPushing.html#stand_alone_apps)。
 
-Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用。那些功能未列示在表格中，但可在<a href="https://new-console.ng.bluemix.net/docs/runtimes/liberty/usingBetaFeatures.html">使用測試版功能</a>中找到。
+Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用。那些功能未列示在表格中，但可在[使用測試版功能](/docs/runtimes/liberty/usingBetaFeatures.html)中找到。
 
 請記住，伺服器無法載入不相容的功能，因此務必將它配置為僅啟用相容的功能。請參閱
     <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">支援的 Java EE 6 及 7 功能組合</a>。

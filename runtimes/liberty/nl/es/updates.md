@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -13,25 +14,36 @@ copyright:
 
 ## Una lista de las últimas actualizaciones del paquete de compilación de Liberty.
 
-Última actualización: 13 de septiembre de 2016
-{: .last-updated}
+### 1 de noviembre de 2016: se ha actualizado el paquete de compilación de Liberty v3.4.1-20161030-2241
+* El paquete de compilación contiene un arreglo para un problema al iniciar determinados tipos de aplicaciones. En concreto, las aplicaciones que se despliegan
+como directorio de servidor o como un servidor empaquetado con los archivos de aplicación en el directorio `dropins`. 
+
+### 21 de octubre de 2016: se ha actualizado el paquete de compilación de Liberty v3.4-20161018-2004
+* La versión `16.0.0.3` del tiempo de ejecución de Liberty predeterminado se ha actualizado para incluir los iFixes [PI68805](http://www-01.ibm.com/support/docview.wss?uid=swg1PI68805) y [PI69141](http://www-01.ibm.com/support/docview.wss?uid=swg1PI69141).  
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2016.9.0.1](https://developer.ibm.com/wasdev/blog/2016/09/23/beta-websphere-liberty-and-tools-october-2016/).  
+* El paquete de compilación también contiene una versión actualizada de IBM JRE 8.0: SR3 FP12.
+* IBM JRE 8.0 y 7.1 se han configurado para habilitar [todos los protocolos TLS cuando se llama a `SSLContext.getContext("TLS")`](https://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/matchsslcontext_tls.html) para comparar el comportamiento de JRE de Oracle. IBM JRE 7.1 también se ha configurado para habilitar [todos los protocolos TLS cuando se llama a `SSLContext.getDefault()`](https://www.ibm.com/support/knowledgecenter/SSYKE2_7.1.0/com.ibm.java.security.component.71.doc/security-component/jsse2Docs/overrideSSLprotocol.html) para comparar el comportamiento de IBM JRE 8.0. 
+* El paquete de compilación proporciona un recopilador de datos actualizado para el [servicio Monitoring and Analytics](/docs/services/monana/index.html#monana_oview).
+* El paquete de compilación se ha vuelto a cambiar para descargar el [conector MariaDB/controlador J JDBC](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) 1.5.x más reciente al realizar la [configuración automática para el tipo de servicios MySQL](autoConfig.html).
+* El paquete de compilación incorpora soporte para personalizar el comportamiento del configurador automático del servicio mediante la variable de entorno `LBP_SERVICE_CONFIG_<serviceType>`. Por ejemplo, se puede utilizar para cambiar la ubicación o la versión de un controlador JDBC a descargar el servicio MySQL. Consulte la documentación de los [servicios que dan soporte a la configuración automática](autoConfig.html) para obtener más información.  
+* El paquete de compilación también contiene varias mejoras de [Diego](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) relacionadas con la comprobación del estado de la aplicación y con la función de [gestión de la app](/docs/manageapps/app_mng.html). 
 
 ### 16 de septiembre de 2016: se ha actualizado el paquete de compilación de Liberty v3.3-20160912-1729
-* La versión de tiempo de ejecución predeterminada de Liberty se ha actualizado al release [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661). La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/).
-Con estas actualizaciones, las características `cloudant-1.0` y `passwordUtilities-1.0` de Liberty, anteriormente disponibles como versiones beta, pasan a estar disponibles como características disponibles en producción. 
+* La versión de tiempo de ejecución predeterminada de Liberty se ha actualizado al release [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661). La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/). Con estas actualizaciones, las características `cloudant-1.0` y `passwordUtilities-1.0` de Liberty, anteriormente disponibles como versiones beta, pasan a estar disponibles como características disponibles en producción.
+* Se incluyen [arreglos de seguridad](http://www-01.ibm.com/support/docview.wss?uid=swg21990527) para el tiempo de ejecución de Liberty. 
 * El paquete de compilación también contiene una versión actualizada de IBM JRE 8.0: SR3 FP11.
-* El paquete de compilación se ha ajustado para descargar el [conector MariaDB/controlador J JDBC](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) 1.4.x al realizar la [configuración automática para el tipo de servicios MySQL](autoConfig.html) debido a un problema con el último controlador 1.5.x. 
+* El paquete de compilación se ha ajustado para descargar el [conector MariaDB/controlador J JDBC](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) 1.4.x al realizar la [configuración automática para el tipo de servicios MySQL](autoConfig.html) debido a un problema con el último controlador 1.5.x.
 
 ### 26 de agosto de 2016: se ha actualizado el paquete de compilación de Liberty v3.2-20160822-2200
 * El paquete de compilación contiene versiones actualizadas de IBM JRE: 8 SR3 FP10 y 7.1 SR3 FP50.
-* La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/). 
-* El plugin de servicio que proporciona [soporte de configuración automática](autoConfig.html) para el servicio [SQL Database](../../services/SQLDB/index.html#SQLDB) se ha actualizado para utilizar siempre los certificados de confianza de la JVM al conectarse al servicio a través de TLS.
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/).
+* El plugin de servicio que proporciona [soporte de configuración automática](autoConfig.html) para el servicio [SQL Database](/docs/services/SQLDB/index.html#SQLDB) se ha actualizado para utilizar siempre los certificados de confianza de la JVM al conectarse al servicio a través de TLS.
 
 ### 22 de julio de 2016: Se ha actualizado el paquete de compilación de Liberty v3.1-20160717-2254
-* La funcionalidad [App Management](../../manageapps/app_mng.html) se ha actualizado para dar soporte a la autenticación federada. Igualmente, el tiempo de ejecución de Node.js utilizado por los programas de utilidad `devconsole` y `shell` se ha actualizado a la versión `0.12.15` más reciente. 
+* La funcionalidad [App Management](/docs/manageapps/app_mng.html) se ha actualizado para dar soporte a la autenticación federada. Igualmente, el tiempo de ejecución de Node.js utilizado por los programas de utilidad `devconsole` y `shell` se ha actualizado a la versión `0.12.15` más reciente. 
 * El paquete de compilación añade soporte para el agente de supervisión de aplicación de [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/).
-* El paquete de compilación proporciona un recopilador de datos actualizado para el [servicio Monitoring and Analytics](../../services/monana/index.html#monana_oview).
-* El paquete de compilación también proporciona una versión actualizada del agente para el [Servicio de escalado automático](../../services/Auto-Scaling/index.html). 
+* El paquete de compilación proporciona un recopilador de datos actualizado para el [servicio Monitoring and Analytics](/docs/services/monana/index.html#monana_oview).
+* El paquete de compilación también proporciona una versión actualizada del agente para el [Servicio de escalado automático](/docs/services/Auto-Scaling/index.html). 
 * La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/).
 
 ### 17 de junio de 2016: Paquete de compilación de Liberty actualizado v3.0-20160608-1450
@@ -45,17 +57,18 @@ Con estas actualizaciones, las características `cloudant-1.0` y `passwordUtilit
 * El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de abril](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/). La versión actualizada de Liberty hace que la función GA *logstashCollector-1.0* y la función beta de *logmetCollector-1.0* esté disponible en Bluemix.
 * El paquete de compilación también contiene versiones de IBM JRE: 8 SR3 y 7.1 SR3 FP40. 
 * El paquete de compilación añade soporte inicial para el agente de supervisión de aplicación de [AppDynamics](https://www.appdynamics.com/).
-* Se ha mejorado el soporte de [Dynatrace](dynatrace.html) para simplificar la instalación del agente.
-* El paquete de compilación proporciona un recopilador de datos actualizado para el [servicio Monitoring and Analytics](../../services/monana/index.html#monana_oview). Contiene un arreglo para un problema con recopilación de los datos de almacenamiento dinámico máximo.
-* El tiempo de ejecución de Node.js utilizado por los [programas de utilidad devconsole y shell App Management](../../manageapps/app_mng.html#app_management) se ha actualizado a la última versión 0.12.13.
+
+* Se ha mejorado el soporte de [Dynatrace](dynatrace.html) para simplificar la instalación del agente. 
+* El paquete de compilación proporciona un recopilador de datos actualizado para el [servicio Monitoring and Analytics](/docs/services/monana/index.html#monana_oview). Contiene un arreglo para un problema con recopilación de los datos de almacenamiento dinámico máximo. 
+* El tiempo de ejecución de Node.js utilizado por los [programas de utilidad devconsole y shell App Management](/docs/manageapps/app_mng.html#app_management) se ha actualizado a la última versión 0.12.13.
 
 ### 25 de marzo de 2016: se ha actualizado el paquete de compilación de Liberty v2.7-20160321-1358
 * El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de marzo](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). La versión actualizada de Liberty hace que la función beta cloudant-1.0 esté disponible en Bluemix.
 * El paquete de compilación también contiene versiones actualizadas de IBM JRE: 8 SR2 FP12 y 7.1 SR3 FP32. 
-* El paquete de compilación proporciona una versión actualizada del agente para el [servicio de Auto-Scaling](../../services/Auto-Scaling/index.html). 
-* Ahora el paquete de compilación se suministra con un nuevo recopilador de datos para el [servicio de Monitoring and Analytics](../../services/monana/index.html#monana_oview). El nuevo recopilador permite la configuración de umbrales de supervisión y contiene un número de correcciones de errores.
+* El paquete de compilación proporciona una versión actualizada del agente para el [servicio de Auto-Scaling](/docs/services/Auto-Scaling/index.html). 
+* Ahora el paquete de compilación se suministra con un nuevo recopilador de datos para el [servicio de Monitoring and Analytics](/docs/services/monana/index.html#monana_oview). El nuevo recopilador permite la configuración de umbrales de supervisión y contiene un número de correcciones de errores.
 * El paquete de compilación proporciona un controlador DB2® JDBC actualizado versión 4.19.49. 
-* El tiempo de ejecución de Node.js utilizado por los [programas de utilidad devconsole y shell de App Management](../../manageapps/app_mng.html#app_management) se ha actualizado a la versión 0.12.12 más reciente.
+* El tiempo de ejecución de Node.js utilizado por los [programas de utilidad devconsole y shell de App Management](/docs/manageapps/app_mng.html#app_management) se ha actualizado a la versión 0.12.12 más reciente.
 
 ### 7 de marzo de 2016: se ha actualizado el paquete de compilación de Liberty v2.6-20160225-1649
 * El paquete de compilación añade soporte para la supervisión de la aplicación Dynatrace. Consulte [Utilización de Dynatrace](dynatrace.html) para obtener más detalles.
@@ -77,14 +90,14 @@ Con estas actualizaciones, las características `cloudant-1.0` y `passwordUtilit
 ### 23 de noviembre de 2015: se ha actualizado el paquete de compilación de Liberty v2.2-20151119-1720
 * El paquete de compilación contiene una versión actualizada del tiempo de ejecución del perfil de Liberty y WebSphere eXtreme Scale Client con arreglos de seguridad para la [vulnerabilidad de Apache Commons Collection](http://www-01.ibm.com/support/docview.wss?uid=swg21971426).
 * El paquete de compilación también contiene una versión actualizada del [controlador Java MongoDB](https://docs.mongodb.org/ecosystem/drivers/java/), v2.13.3. El nuevo controlador es compatible con MongoDB versión 2.4, 2.6 y 3.0.
-* El paquete de compilación también proporciona una versión actualizada del recopilador de datos para el [servicio Monitoring and Analytics](../../services/monana/index.html). El recopilador de datos actualizado ha mejorado las prestaciones de rastreo de método.
+* El paquete de compilación también proporciona una versión actualizada del recopilador de datos para el [servicio Monitoring and Analytics](/docs/services/monana/index.html). El recopilador de datos actualizado ha mejorado las prestaciones de rastreo de método.
 
 ### 16 de octubre de 2015: se ha actualizado el paquete de compilación de Liberty v2.1-20151006-0912
 * El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [beta de octubre](https://developer.ibm.com/wasdev/blog/2015/09/25/beta-was-liberty-beta-with-tools-october-2015/). Con esta actualización, las características de Liberty bells-1.0, rtcomm-1.0, rtcommGateway-1.0, samlWeb-2.0, sipServlet-1.1, anteriormente disponibles como versiones beta, pasan a estar disponibles como características disponibles en producción.
 * El paquete de compilación también contiene una versión actualizada de IBM JRE 8 SR1 FP11.
 * El paquete de compilación también proporciona un número de mejoras y optimizaciones del rendimiento:
   * La característica de exploración del archivador de beans implícito de [CDI 1.2](optionsForPushing.html) está inhabilitada de forma predeterminada al desplegar archivos WAR o EAR.
-  * Para reducir el tamaño de gotas, los [Programas de utilidad de gestión de apps](../../manageapps/app_mng.html) devconsole y shell, requieren una operación de volver a transferir en lugar de un reinicio.
+  * Para reducir el tamaño de gotas, los [Programas de utilidad de gestión de apps](/docs/manageapps/app_mng.html) devconsole y shell, requieren una operación de volver a transferir en lugar de un reinicio.
   * La memoria caché de clases compartidas de IBM JRE está inhabilitada ya que no se estaba reutilizando en el entorno de Bluemix.
 
 ### 18 de septiembre de 2015: se ha actualizado el paquete de compilación de Liberty v2.0-20150914-1535
@@ -108,7 +121,7 @@ HTTPS_PROXY](environmentVariables.html). Si se establece, el paquete de compilac
 * El paquete de compilación contiene versiones actualizadas de IBM JRE: 7.1 SR1 FP10 y 8 SR1 FP10.
 Los JRE actualizados
 contienen [mejoras de seguridad más recientes](http://www-01.ibm.com/support/docview.wss?uid=swg21964161) y otras mejoras.
-* El plugin de servicio que proporciona [soporte de configuración automática](autoConfig.html) para el servicio [Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant) se ha actualizado para asegurarse de que se establezcan las conexiones al servicio en un canal seguro.
+* El plugin de servicio que proporciona [soporte de configuración automática](autoConfig.html) para el servicio [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant) se ha actualizado para asegurarse de que se establezcan las conexiones al servicio en un canal seguro.
 
 ### 21 de julio de 2015: se ha actualizado el paquete de compilación de Liberty v1.20-20150713-1450
 * El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [release 8.5.5.6](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/). Con
@@ -117,7 +130,7 @@ estar disponibles como características disponibles en producción. Debido a las
 algunas características como por ejemplo los EJB remotos no se admiten totalmente en esta plataforma.
 * El paquete de compilación reconoce y ejecuta aplicaciones empaquetadas en el [distZip-style](https://docs.gradle.org/current/userguide/application_plugin.html).
 * El paquete de compilación contiene un recopilador de datos actualizado para el servicio
-[Monitoring and Analytics Service](../../services/monana/index.html) (Servicio de supervisión y análisis) y el cliente WebSphere eXtreme Scale que tiene soporte para la nueva versión
+[Monitoring and Analytics Service](/docs/services/monana/index.html) (Servicio de supervisión y análisis) y el cliente WebSphere eXtreme Scale que tiene soporte para la nueva versión
 ejecutable de Liberty.
 
 ### 30 de junio de 2015: se ha actualizado el paquete de compilación de Liberty v1.19.1-20150622-1509
@@ -128,9 +141,9 @@ con el tiempo de ejecución del perfil de Liberty.
 
 ### 14 de junio de 2015: se ha actualizado el paquete de compilación de Liberty v1.19-20150608-1717
 * El paquete de compilación contiene una serie de mejoras de gestión de aplicaciones incluyendo soporte
-para la consola de desarrollo y el acceso de shell basado en web. Para obtener detalles, consulte la [documentación de app management](../../manageapps/app_mng.html).
+para la consola de desarrollo y el acceso de shell basado en web. Para obtener detalles, consulte la [documentación de app management](/docs/manageapps/app_mng.html).
 * El paquete de compilación también contiene un arreglo para un problema por el que la característica de Liberty para
-[Monitoring and Analytics Service](../../services/monana/index.html) no se puede encontrar.
+[Monitoring and Analytics Service](/docs/services/monana/index.html) no se puede encontrar.
 
 ### 27 de mayo de 2015: se ha actualizado el paquete de compilación de Liberty v1.18-20150519-1642
 * El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [beta de mayo](https://developer.ibm.com/wasdev/blog/2015/05/08/beta-liberty-and-tools-may-2015/).
@@ -147,7 +160,7 @@ consulte [Personalización del JRE](customizingJRE.html).
 * El paquete de compilación proporciona una nueva variable de entorno JBP_CONFIG_LIBERTY que se puede utilizar
 para alterar temporalmente el conjunto predeterminado de características de Liberty habilitado para una aplicación
 cuando se despliega el archivo WAR o EAR. Para obtener más información, consulte [Aplicaciones autónomas](optionsForPushing.html#stand_alone_apps).
-* El plugin de servicio para [Monitoring and Analytics Service](../../services/monana/index.html) se ha actualizado para reducir el tamaño de los registros generados para el servicio.
+* El plugin de servicio para [Monitoring and Analytics Service](/docs/services/monana/index.html) se ha actualizado para reducir el tamaño de los registros generados para el servicio.
 * Con esta versión del paquete de compilación, la forma en que se distribuyen los archivos de aplicación
 en el droplet ha cambiado. El cambio en la estructura de archivos ha eliminado la complejidad relacionada
 con el mantenimiento de enlaces simbólicos y no debería afectar a las aplicaciones.
@@ -163,7 +176,7 @@ se podrá desplegar bajo un contexto distinto, en base al archivo **ibm-web-ext.
 ### 3 de abril de 2015: se ha actualizado el paquete de compilación de Liberty v1.15-20150402-1422
 * El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [beta de marzo](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-tools-march-2015/). La versión actualizada de los perfiles de Liberty hace que la función beta jsf-2.2 esté disponible en Bluemix.
 * El paquete de compilación también contiene una versión actualizada del recopilador de datos para el servicio
-[Monitoring and Analytics service](../../services/monana/index.html).
+[Monitoring and Analytics service](/docs/services/monana/index.html).
 
 ### 20 de marzo de 2015: se ha actualizado el paquete de compilación de Liberty v1.14-20150319-1159
 * Esta versión del paquete de compilación contiene un IBM JRE 7.1.2.11 actualizado con un arreglo de seguridad para la [vulnerabilidad de FREAK](http://www-01.ibm.com/support/docview.wss?uid=swg21699864).
@@ -187,11 +200,11 @@ y realiza actualizaciones de aplicación sin volver a desplegar o transferir la 
 
 ### 6 de febrero de 2015: se ha actualizado el paquete de compilación de Liberty v1.12-20150130-1016
 * El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [beta de enero](https://developer.ibm.com/wasdev/blog/2015/01/16/announcing-liberty-beta-tools-january-2015/).
-* El paquete de compilación contiene una versión recortada del recopilador de datos para el [servicio Monitoring and Analytics](../../services/monana/index.html#gettingstartedtemplate).
+* El paquete de compilación contiene una versión recortada del recopilador de datos para el [servicio Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
 
 ### 23 de enero de 2015: se ha actualizado el paquete de compilación de Liberty v1.11-20150119-1511
 * El paquete de compilación contiene una versión actualizada de IBM JRE
-7.1 SR2 FP1.
+7.1 SR2 FP1. 
 * También contiene una versión actualizada de WebSphere eXterme
 Scale Client v8.6.0.6 y el agente actualizado para el servicio Auto-Scaling.
 * El soporte del servicio de [New Relic](newRelic.html) se ha mejorado para dar soporte a los servicios definidos por el usuario.
@@ -230,7 +243,7 @@ Analytics.
 
 ### 23 de octubre de 2014: se ha actualizado el paquete de compilación de Liberty
 v1.6-20141013-1628
-* Ahora el paquete de compilación se suministra con un nuevo recopilador de datos para [Monitoring and Analytics](../../services/monana/index.html). El nuevo recopilador de datos recopila información de diagnóstico muy detallada, que permite a los usuarios del plan de diagnósticos del servicio diagnosticar problemas con sus aplicaciones hasta la línea de código específica.
+* Ahora el paquete de compilación se suministra con un nuevo recopilador de datos para [Monitoring and Analytics](/docs/services/monana/index.html). El nuevo recopilador de datos recopila información de diagnóstico muy detallada, que permite a los usuarios del plan de diagnósticos del servicio diagnosticar problemas con sus aplicaciones hasta la línea de código específica.
 * El paquete de compilación contiene versiones actualizadas de los agentes de gestión y escalado automático que incluyen arreglos a problemas y pequeñas mejoras. También incluye una versión actualizada del [perfil de Liberty](https://developer.ibm.com/wasdev/) y del [controlador Java MongoDB](https://docs.mongodb.org/ecosystem/drivers/java/), v2.12.3.
 * En la característica cloudAutowiring, se ha solucionado un error que generaba anomalías en la inyección de recursos en algunas aplicaciones.
 

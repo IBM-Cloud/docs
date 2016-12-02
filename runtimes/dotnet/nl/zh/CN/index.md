@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,10 +12,17 @@ copyright:
 
 # ASP.NET 核心 
 {: #dotnet_core}
-上次更新时间：2016 年 5 月 30 日
 
 {{site.data.keyword.Bluemix}} 上的“ASP.NET 核心”运行时采用“ASP.NET 核心”buildpack 技术。“ASP.NET 核心”是用于构建 .NET Web 应用程序的模块化开放式源代码框架。“.Net 核心”是跨平台的小型运行时，可由“ASP.NET 核心”应用程序实现。将它们相结合可实现基于云的先进 Web 应用程序。
 {: shortdesc}
+
+# 受支持的版本
+{: #supported_versions}
+此 buildpack 支持以下版本，那些标记为不推荐的版本将在未来 buildpack 发行版中除去：
+
+1. .NET Core 1.0.0-rc2-final (beta)（不推荐）
+2. .NET Core 1.0.0
+3. .NET Core 1.0.1
 
 ## 检测
 {: #detection}
@@ -24,7 +31,7 @@ copyright:
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供了“ASP.NET 核心”入门模板应用程序。“ASP.NET 核心”入门模板应用程序是一个简单的应用程序，它提供了一个可供您使用的模板。您可以体验该入门模板应用程序，对其进行更改并将更改推送到 Bluemix 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../../cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供了“ASP.NET 核心”入门模板应用程序。“ASP.NET 核心”入门模板应用程序是一个简单的应用程序，它提供了一个可供您使用的模板。您可以体验该入门模板应用程序，对其进行更改并将更改推送到 Bluemix 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](/docs/cfapps/starter_app_usage.html)。
 
 ## 运行时版本
 {: #runtime_versions}
@@ -42,7 +49,7 @@ copyright:
 ```
 {: codeblock}
 
-如果未指定，将使用稳定的最新候选发布版本。
+有关受支持 CLI 版本的列表，请参阅 [ASP.NET 核心 Buildpack 的最新更新](/docs/runtimes/dotnet/updates.html)。如果未指定，将使用稳定的最新候选发布版本。
 
 ### 定制 NuGet 数据包源
 
@@ -64,9 +71,10 @@ copyright:
 
 使用 Yeoman 工具可生成新的项目模板，如 [Building Projects with Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html) 中所述。
 
-有关使用 Visual Studio 进行本地开发的信息，请参阅[使用 Visual Studio 进行开发](../../starters/deploy_vs.html){: new_window}。
+有关使用 Visual Studio 进行本地开发的信息，请参阅[使用 Visual Studio 进行开发](/docs/starters/deploy_vs.html){: new_window}。
 
 ## 推送发布的应用程序
+{: #pushing_published_app}
 
 如果想要在应用程序中包含其需要的所有二进制文件，以使 buildpack 无需下载任何外部二进制文件，您可以推送发布的*自包含*应用程序。请参阅 [.NET Core App Types](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}，以获取有关自包含应用程序的更多信息。
 
@@ -86,6 +94,7 @@ dotnet publish -r ubuntu.14.04-x64
 另请注意，如果在应用程序中使用 manifest.yml 文件，您可以在 manifest.ymle 中指定发布输出文件夹的路径。之后在推送应用程序时，您无需位于该文件夹中。
 
 ## 部署包含多个项目的应用程序
+{: #developing_apps_with_multiple_projects}
 
 要部署包含多个项目的应用程序，您需要指定希望 buildpack 将哪个项目作为主要项目运行。在解决方案的根文件夹中创建 .deployment 文件来设置主要项目的路径即可完成此操作。您可以将主要项目的路径指定为项目文件夹或项目文件（.xproj 或 .csproj）。
 
@@ -103,6 +112,7 @@ project = src/MyApp.Web/MyApp.Web.xproj
 {: codeblock}
 
 ## 配置应用程序以侦听正确的端口
+{: #configuring_listen_proper_port}
 
 buildpack 将使用 *dotnet run* 命令运行您的应用程序，并传递以下内容之后的命令行自变量
 ```
@@ -170,6 +180,13 @@ using Microsoft.Extensions.Configuration;
 {: codeblock}
 
 这些更改应该可以让 .NET CLI 找到应用程序的 `Views`，因为执行 `dotnet run` 命令之后，这些 Views 将复制到构建输出中。如果应用程序具有其他任何运行时需要使用的文件（例如 json 配置文件），那么您也应该将这些文件添加到 project.json 文件中 `copyToOutput` 的 `include` 部分。
+
+## 故障诊断 FAQ
+{: #troubleshooting_faq}
+
+**问**：我的应用程序无法部署，消息为：`API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, ...}`。这意味着什么？
+
+**答**：如果在推送应用程序时您收到类似消息，那么很可能是因为应用程序超过内存或磁盘限额限制导致的。通过增加应用程序的配额可以解决此问题。
 
 # 相关链接
 {: #rellinks}

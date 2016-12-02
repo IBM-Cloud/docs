@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,18 +12,20 @@ copyright:
 # Aggiornamenti più recenti al pacchetto di build sdk-for-nodejs
 {: #latest_updates}
 
-Ultimo aggiornamento: 26 agosto 2016
-{: .last-updated}
-
 Un elenco degli aggiornamenti più recenti nel pacchetto di build sdk-for-nodejs.
+## 7 ottobre 2016: pacchetto di build Node.js aggiornato v3.8-20161006-1211
+Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.46, 0.10.47, 0.12.15, 0.12.16, 4.5.0, 4.6.0, 6.6.0 e 6.7.0. La versione predefinita è ora la 4.6.0.
+
+In aggiunta ai nuovi runtime, questa release contiene correzioni di bug del pacchetto di build. Inclusa una correzione a un problema noto quando utilizzi Node.js 6.x e la modalità di sviluppo che era stata menzionata negli aggiornamenti della release v3.7-20160826-1101. È inoltre sincronizzata con il [pacchetto di build Node.js Cloud Foundry v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20). 
+
 ## 26 agosto, 2016: pacchetto di build Node.js aggiornato v3.7-20160826-1101
-Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2 e 6.4.0. La versione predefinita è ora la 4.5.0. 
+Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2 e 6.4.0. La versione predefinita è ora la 4.5.0.
 
 Questa release supporta le correzioni ai bug, inclusi quelli dal [Cloud Foundry’s Node.js buildpack 1.5.18](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18).
 
 La release rimuove il supporto per il gestore Gestione applicazioni strongpm come annunciato in [Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
 
-Nota che è presente un problema noto quando utilizzi Node.js 6.x e la [Modalità di sviluppo](../../manageapps/app_mng.html#devmode). Per aggirare questo problema dovrai ripreparare la tua applicazione dopo l'abilitazione della modalità di sviluppo prima di poter iniziare ad utilizzarla.
+Nota che è presente un problema noto quando utilizzi Node.js 6.x e la [Modalità di sviluppo](/docs/manageapps/app_mng.html#devmode). Per aggirare questo problema dovrai ripreparare la tua applicazione dopo l'abilitazione della modalità di sviluppo prima di poter iniziare ad utilizzarla.
 
 ## 22 luglio 2016: pacchetto di build Node.js aggiornato v3.6-20160715-0749
 Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 e 6.2.2. La versione predefinita è ora la 4.4.7.
@@ -143,7 +146,7 @@ Questa release del pacchetto di build Node.js offre l'integrazione di [StrongLoo
 ## 15 giugno 2015: pacchetto di build Node.js aggiornato v2.0-20150608-1503
 
 In questa release, è stata eseguita la sincronizzazione tra il pacchetto di build Node.js e [il pacchetto di build Node.js della community CF](https://github.com/cloudfoundry/nodejs-buildpack) più recente, fornito dalla community con numerose nuove funzioni.
-Inoltre, è stata rinnovata la funzione Gestione applicazioni nel pacchetto di build Node.js, che abilita programmi di utilità quali shell, node-inspector, Bluemix Live Sync e altro ancora. Per i dettagli vedi [Gestione applicazioni](../../manageapps/app_mng.html).
+Inoltre, è stata rinnovata la funzione Gestione applicazioni nel pacchetto di build Node.js, che abilita programmi di utilità quali shell, node-inspector, Bluemix Live Sync e altro ancora. Per i dettagli vedi [Gestione applicazioni](/docs/manageapps/app_mng.html).
 
 ## 5 maggio 2015: pacchetto di build Node.js aggiornato v1.17-20150429-1033
 
@@ -171,7 +174,7 @@ Inoltre, è stata rinnovata la funzione Gestione applicazioni nel pacchetto di b
   * Desktop Sync: sincronizza qualsiasi struttura desktop (Windows) con lo spazio di lavoro del progetto basato su cloud
   * Live Edit: ti consente di apportare modifiche a un'applicazione Node.js in esecuzione in Bluemix e verificarla nel tuo browser immediatamente.
   * Debug: accedi tramite shell nel tuo ambiente ed esegui il debug! Puoi modificare il codice in modo dinamico, inserire dei punti di interruzione, analizzare in dettaglio il codice, riavviare il runtime e altro ancora, utilizzando il programma di debug Node Inspector
-  * Per ulteriori informazioni vedi [Gestione applicazioni](../../manageapps/app_mng.html#Utilities).
+  * Per ulteriori informazioni vedi [Gestione applicazioni](/docs/manageapps/app_mng.html#Utilities).
 * Abbiamo estratto le ultime modifiche dal [pacchetto di build Node.js di Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Questa modifica viene fornita con diverse correzioni di bug e miglioramenti apportati dalla community.
 * Il pacchetto di build Node.js viene ora fornito con [IBM SDK for Node.js v1.1.0.13](https://developer.ibm.com/node/sdk/).
 

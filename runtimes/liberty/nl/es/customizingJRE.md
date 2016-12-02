@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-15"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Personalización del JRE
 {: #customizing_jre}
-
-Última actualización: 15 de agosto de 2016
-{: .last-updated}
 
 Las aplicaciones se ejecutan en entorno de tiempo de ejecución Java (JRE), proporcionado y configurado por el paquete de compilación de Liberty. El paquete de compilación de Liberty también permite configurar la versión o el tipo de JRE, personalizar las opciones de JVM o solapar las funciones de JRE.
 
@@ -110,7 +108,7 @@ Las aplicaciones pueden personalizar las opciones de JVM con las especificacione
 <tr>
 <td> OpenJDK </td>
 <td>se basa en el tiempo de ejecución de HotSpot que tiene la notación de -X para no estándar, -XX para las opciones de desarrollador y los distintivos booleanos para habilitar o inhabilitar la opción </td>
-<td>[Visión general del tiempo de ejecución de HotSpot](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html) </td>
+<td>[Visión general del tiempo de ejecución de HotSpot](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -179,7 +177,7 @@ Las opciones JVM para la aplicación Java autónoma se mantienen como opciones d
 ```
 {: codeblock}
 
-Las opciones para despliegue de WAR, EAR, directorio de servidor y servidor empaquetado se mantienen en un archivo jvm.options.
+Las opciones de JVM para el despliegue de WAR, EAR, directorio de servidor y servidor empaquetado se mantienen en un archivo jvm.options. 
 
 Para ver el archivo jvm.options para WAR, EAR y directorio de servidor, ejecute el mandato:
 ```
@@ -214,6 +212,7 @@ Despliegue de una aplicación con las opciones personalizadas de JVM para habili
 
 * Para actualizar la opción de JVM de IBM JRE de una aplicación desplegada para desencadenar un heap, snap y javacore en una condición OutOfMemory, establezca la variable de entorno de la aplicación con la opción JVM y reinicie la aplicación:
 
+
   <pre>
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
@@ -239,7 +238,7 @@ Despliegue de una aplicación con las opciones personalizadas de JVM para habili
 
 En algunos casos es necesario empaquetar los archivos con el JRE para disponer de su funcionalidad. El desarrollador de aplicaciones puede suministrar archivos JRE para su personalización.
 
-Los archivos que se deben solapar se pueden empaquetar con el archivo WAR, EAR o JAR de la aplicación en una carpeta de recursos en la raíz del archivo. En el caso de un servidor (archivo comprimido o directorio del servidor), los archivos se pueden empaquetar en una carpeta de recursos en el directorio del servidor, con el archivo server.xml.
+Los archivos que se deben solapar se pueden empaquetar con el archivo WAR, EAR o JAR de la aplicación en una carpeta de recursos en la raíz del archivo. En el caso de un servidor (archivo comprimido o directorio del servidor), los archivos se pueden empaquetar en una carpeta de recursos en el directorio del servidor, con el archivo server.xml. 
 
 * archivo WAR
   * WEB-INF

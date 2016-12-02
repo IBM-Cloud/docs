@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Argomenti Liberty
 {: #topics}
-
-Ultimo aggiornamento: 10 giugno 2016
-{: .last-updated}
 
 * [Runtime Liberty](index.html)
 * [Rilevamento](index.html#detection)

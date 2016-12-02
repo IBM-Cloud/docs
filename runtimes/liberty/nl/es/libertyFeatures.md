@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -11,11 +12,7 @@ copyright:
 # Características de Liberty que reciben soporte en Bluemix
 {: #liberty_features}
 
-Última actualización: 28 de julio de 2016
-{: .last-updated}
-
-El tiempo de ejecución instantáneo de Liberty for Java incluye un subconjunto de características de Liberty Profile. Algunas características que proporciona Liberty Profile no están disponibles en el tiempo de ejecución instantáneo de Liberty for Java porque no son aplicables en el entorno de nube.
-
+El tiempo de ejecución instantáneo de Liberty for Java incluye un subconjunto de características de Liberty Profile.  Algunas características que proporciona Liberty Profile no están disponibles en el tiempo de ejecución instantáneo de Liberty for Java porque no son aplicables en el entorno de nube.
 
 Se incluyen las siguientes características que son específicas para Bluemix:
 * appState-1.0
@@ -209,9 +206,9 @@ La tabla siguiente muestra las funciones de Liberty soportadas en Bluemix
 </tr>
 </table>
 
-Un subconjunto de características disponibles está habilitado de forma predeterminada al desplegar archivos WAR o EAR. Consulte [Apps autónomas](optionsForPushing.html#stand_alone_apps) para obtener más detalles.
+Un subconjunto de características disponibles está habilitado de forma predeterminada al desplegar archivos WAR o EAR.  Consulte [Apps autónomas](optionsForPushing.html#stand_alone_apps) para obtener más detalles.
 
-El tiempo de ejecución de Liberty for Java también hace que algunas características beta de Liberty estén disponibles. Estas características no se listan en la tabla pero pueden encontrase en <a href="https://new-console.ng.bluemix.net/docs/runtimes/liberty/usingBetaFeatures.html">Utilización de las características beta</a>.
+El tiempo de ejecución de Liberty for Java también hace que algunas características beta de Liberty estén disponibles. Estas características no se listan en la tabla pero pueden encontrase en [Utilización de las características beta](/docs/runtimes/liberty/usingBetaFeatures.html).
 
 Tenga en cuenta que un servidor no puede cargar características incompatibles, por lo que debe asegurarse de que se configura para habilitar únicamente características que son compatibles. Consulte
     <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Combinaciones de características de Java EE 6 y 7 soportadas</a>.

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-06"
 
 ---
 
@@ -11,9 +12,13 @@ copyright:
 # ASP.NET Core 빌드팩의 최신 업데이트
 {: #latest_updates}
 
-마지막 업데이트 날짜: 2016년 8월 26일
 
 aspnet 빌드팩의 최신 업데이트 목록
+
+## 2016년 10월 10일: 업데이트된 ASP.NET Core 빌드팩 v1.0.1-20161005-1225
+
+* .NET Core 1.0.1 지원 추가
+* NuGet 패키지를 캐시할 때 때때로 배치에 실패하는 문제 수정
 
 ## 2016년 8월 31일: 업데이트된 ASP.NET Core 빌드팩 v1.0-20160826-1345
 
@@ -36,7 +41,7 @@ aspnet 빌드팩의 최신 업데이트 목록
 * 빌드팩 버전 번호가 발견 스크립트 출력에 포함됩니다. 
 * 이 버전의 빌드팩은 CoreCLR RC1 이하를 사용하는 DNX 기반 애플리케이션에 대한 지원이 제거되었습니다.
 * 이 버전의 빌드팩은 .NET CLI 및 .NET Core RC2를 지원합니다.
-* 빌드팩은 공개된 출력에서 project.json 파일 또는 *.runtimeconfig.json 파일로 프로젝트를 발견합니다. 
+* 빌드팩은 공개 출력에서 project.json 파일 또는 *.runtimeconfig.json 파일로 프로젝트를 발견합니다. 
 
 ## 2015년 10월 22일: 업데이트된 ASP.NET 5 빌드팩 v0.7-20151022-1257
 
@@ -47,7 +52,7 @@ aspnet 빌드팩의 최신 업데이트 목록
 * 이 버전의 빌드팩은 Beta 7 DNX 변경을 지원하며, 다음 사용자 정의 시작 명령으로 오래된 베타 릴리스에 종속되는 애플리케이션을 실행할 수 있습니다. 
 
 ```
-dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
+   dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
 ```
 {: codeblock}
 

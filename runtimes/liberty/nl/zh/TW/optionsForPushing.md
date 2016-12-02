@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # 推送 Liberty 應用程式的選項
 {: #options_for_pushing}
-
-前次更新：2016 年 6 月 10 日
-{: .last-updated}
 
 Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建置套件可以為特定的應用程式類別提供完整的運行環境。
 它們對於在雲端之間提供可攜性以及對開放式雲端架構的貢獻而言很關鍵。Liberty 建置套件提供 WebSphere Liberty 容器，可以執行 Java EE 7 及 OSGi 應用程式。
@@ -220,37 +218,36 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ### 可參照的變數
 {: #referenceable_variables}
 
-下列變數定義在 runtime-vars.xml 檔案中，並從推送的 server.xml 檔案進行參照。所有變數都區分大小寫。
+下列變數定義在 `runtime-vars.xml` 檔案中，並從推送的
+`server.xml` 檔案參照。所有變數都區分大小寫。
 
 * ${port}：Liberty 伺服器接聽所在的 HTTP 埠。
-* ${vcap_console_port}：vcap 主控台執行所在的埠（通常與 ${port} 相同）。
-* ${vcap_app_port}：應用程式伺服器接聽所在的埠（通常與 ${port} 相同）。
-* ${vcap_console_ip}：vcap 主控台的 IP 位址（通常是 Liberty 伺服器接聽所在的 IP 位址）。
+* ${vcap_app_port}：與 ${port} 相同。在 Diego 上執行時未設定。
 * ${application_name}：應用程式的名稱，如同使用 cf push 指令中的選項所定義。
-* ${application_version}：此應用程式實例的版本，其格式為 UUID，例如 b687ea75-49f0-456e-b69d-e36e8a854caa。這個變數會隨著每次後續推送包含新程式碼或應用程式構件變更的應用程式而變更。
-* ${host}：執行應用程式之 DEA 的 IP 位址（通常與 ${vcap_console_ip} 相同）。
+* ${application_version}：此應用程式實例的版本，其格式為 UUID，例如 `b687ea75-49f0-456e-b69d-e36e8a854caa`。這個變數會隨著每次後續推送包含新程式碼或應用程式構件變更的應用程式而變更。
+* ${host}：應用程式實例的 IP 位址。
 * ${application_uris}：可以用來存取這個應用程式之端點 JSON 樣式陣列，例如：myapp.mydomain.com。
-* ${start}：應用程式啟動的時間和日期，採用的格式類似 2013-08-22 10:10:18 -0400。
+* ${start}：應用程式啟動的時間和日期，其格式類似於 `2013-08-22 10:10:18 -0400`。在 Diego 上執行時未設定。
 
 ### 存取已連結服務的資訊
 {: #accessing_info_of_bound_services}
 
-當您想要將服務連結至應用程式時，在 Cloud Foundry 為應用程式設定的 [VCAP_SERVICES 環境變數](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)中會包含服務的相關資訊，例如連線認證。對於[自動配置的服務](autoConfig.html)，Liberty 建置套件會在 server.xml 檔案中產生或更新服務連結項目。服務連結項目的內容可能為下列其中一種格式：
+當您想要將服務連結至應用程式時，在 Cloud Foundry 為應用程式設定的 [VCAP_SERVICES 環境變數](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)中會包含服務的相關資訊，例如連線認證。對於[自動配置的服務](autoConfig.html)，Liberty 建置套件會在 server.xml 檔案中產生或更新服務連結項目。服務連結項目的內容可能為下列其中一種格式：
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt;，其說明服務的資訊，例如名稱、類型及方案。
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;，其說明服務的連線資訊。
 
 一般的資訊集如下所示：
-* name：服務的名稱。例如，mysql-e3abd。
-* label：所建立服務的類型。例如，mysql-5.5。
-* plan：服務方案，如該方案的唯一 ID 所指示。例如，100。
-* connection.name：連線的唯一 ID，其採用 UUID 的格式。例如，d01af3a5fabeb4d45bb321fe114d652ee。
-* connection.hostname：執行服務之伺服器的主機名稱。例如，mysql-server.mydomain.com。
-* connection.host：執行服務之伺服器的 IP 位址。例如，9.37.193.2。
-* connection.port：服務接聽送入連線的埠。例如 3306、3307。
-* connection.user：用來向服務鑑別此應用程式的使用者名稱。使用者名稱是由 Cloud Foundry 自動產生。例如：unHwANpjAG5wT。
+* name：服務的名稱（例如，mysql-e3abd）。
+* label：所建立服務的類型（例如，mysql-5.5）。
+* plan：服務方案，如該方案的唯一 ID 所指示（例如，100）。
+* connection.name：連線的唯一 ID，其採用 UUID 的格式（例如，d01af3a5fabeb4d45bb321fe114d652ee）。
+* connection.hostname：執行服務之伺服器的主機名稱（例如，mysql-server.mydomain.com）。
+* connection.host：執行服務之伺服器的 IP 位址（例如，9.37.193.2）。
+* connection.port：服務接聽送入連線的埠（例如，3306,3307）。
+* connection.user：用來向服務鑑別此應用程式的使用者名稱。使用者名稱是由 Cloud Foundry 自動產生（例如，unHwANpjAG5wT）。
 * connection.username：connection.user 的別名。
-* connection.password：用來向服務鑑別此應用程式的密碼。密碼是由 Cloud Foundry 自動產生。例如：pvyCY0YzX9pu5。
+* connection.password：用來向服務鑑別此應用程式的密碼。密碼是由 Cloud Foundry 自動產生（例如，pvyCY0YzX9pu5）。
 
 對於 Liberty 建置套件未自動配置的連結服務，應用程式需要自行管理後端資源的存取。
 

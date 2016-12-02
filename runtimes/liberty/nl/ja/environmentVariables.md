@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 # 環境変数
 {: #environment_variables}
 
-最終更新日: 2016 年 6 月 10 日
-{: .last-updated}
-
 Liberty for Java によってサポートされる環境変数。
 
 <table>
@@ -26,12 +24,12 @@ Liberty for Java によってサポートされる環境変数。
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>[アプリケーション管理ユーティリティー](../../manageapps/app_mng.html)を使用可能にします</td>
+<td>[アプリケーション管理ユーティリティー](/docs/manageapps/app_mng.html)を使用可能にします</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>[アプリケーション管理ユーティリティー](../../manageapps/app_mng.html)をインストールします</td>
+<td>[アプリケーション管理ユーティリティー](/docs/manageapps/app_mng.html)をインストールします</td>
 </tr>
 
 <tr>
@@ -81,6 +79,11 @@ Liberty for Java によってサポートされる環境変数。
 <tr>
 <td>JVM_ARGS</td>
 <td>[JVM 引数](customizingJRE.html)を設定します</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_xxxx</td>
+<td>[サービス構成のオーバーライド](autoConfig.html#override_service_config)</td>
 </tr>
 
 <tr>

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Valores predeterminados de paquete de compilación
 {: #buildpack_defauts}
-
-Última actualización: 10 de junio de 2016
-{: .last-updated}
 
 El paquete de compilación Liberty se actualiza con frecuencia en Bluemix. Cada release podría incluir arreglos de seguridad o mejoras de características.
 

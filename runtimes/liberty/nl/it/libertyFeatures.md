@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Funzioni Liberty supportate in Bluemix
 {: #liberty_features}
-
-Ultimo aggiornamento: 28 luglio 2016
-{: .last-updated}
 
 Il runtime istantaneo Liberty for Java include una sottoserie di funzioni Liberty Profile.  Alcune funzioni che fornisce Liberty Profile non sono disponibili nel runtime istantaneo Liberty for Java perché non sono applicabili nell'ambiente cloud.
 
@@ -210,7 +208,7 @@ La seguente tabella mostra le funzioni Liberty supportate in Bluemix
 
 Una sottoserie di funzioni disponibili vengono abilitate per impostazione predefinita quando si distribuiscono file WAR o EAR.  Consulta [Applicazioni autonome](optionsForPushing.html#stand_alone_apps) per i dettagli.
 
-Il runtime Liberty for Java rende inoltre disponibili alcune funzioni beta di Liberty. Queste funzioni non sono elencate nella tabella ma possono essere trovate all'indirizzo <a href="https://new-console.ng.bluemix.net/docs/runtimes/liberty/usingBetaFeatures.html">Utilizzo delle funzioni beta</a>.
+Il runtime Liberty for Java rende inoltre disponibili alcune funzioni beta di Liberty. Queste funzioni non sono elencate nella tabella ma possono essere trovate all'indirizzo [Utilizzo delle funzioni beta](/docs/runtimes/liberty/usingBetaFeatures.html).
 
 Tieni presente che un server non può caricare funzioni non compatibili, assicurati che sia configurato per abilitare solo le funzioni che sono compatibili. Consulta
     <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Supported Java EE 6 and 7 feature combinations</a>.

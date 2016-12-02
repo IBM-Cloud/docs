@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Limiti di memoria e pacchetto di build Liberty
 {: #memory_limits}
-
-Ultimo aggiornamento: 10 giugno 2016
-{: .last-updated}
 
 Quando distribuisci un'applicazione con il pacchetto di build Liberty, è necessario specificare
 un limite di memoria.

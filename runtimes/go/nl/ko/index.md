@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 # Go
 {: #go_runtime}
-마지막 업데이트 날짜: 2016년 7월 6일 
 
 {{site.data.keyword.Bluemix}}의 Go 런타임은 go_buildpack을 통해 제공됩니다.
 go_buildpack은 Go 앱을 위한 완전한 런타임 환경을 제공합니다.
@@ -23,7 +23,7 @@ go_buildpack은 애플리케이션에 *.go 파일이 포함된 경우에 사용�
 ## 스타터 애플리케이션
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}}는 Go 스타터 애플리케이션을 제공합니다. Go 스타터 애플리케이션은 앱에 사용할 수 있는 템플리트를 제공하는 단순한 Go 앱입니다. 스타터 앱을 사용하여 시험해 볼 수 있으며 Bluemix 환경을 변경하고 변경사항을 푸시할 수 있습니다. 스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](../../cfapps/starter_app_usage.html)을 참조하십시오. 
+{{site.data.keyword.Bluemix}}는 Go 스타터 애플리케이션을 제공합니다. Go 스타터 애플리케이션은 앱에 사용할 수 있는 템플리트를 제공하는 단순한 Go 앱입니다. 스타터 앱을 사용하여 시험해 볼 수 있으며 Bluemix 환경을 변경하고 변경사항을 푸시할 수 있습니다. 스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](/docs/cfapps/starter_app_usage.html)을 참조하십시오. 
 
 ## 런타임 버전
 {: #runtime_versions}
