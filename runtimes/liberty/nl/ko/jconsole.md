@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Bluemix에서 JConsole을 사용하여 Liberty 모니터링
 {: #jconsole}
-
-마지막 업데이트 날짜: 2016년 6월 10일
-{: .last-updated}
 
 ## JConsole을 사용하여 Bluemix Liberty 런타임을 모니터하는 단계는 다음과 같습니다. 
 {: #steps_to_monitor}

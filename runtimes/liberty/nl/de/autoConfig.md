@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Automatische Konfiguration gebundener Services
 {: #auto_config}
-
-Letzte Aktualisierung: 10. Juni 2016
-{: .last-updated}
 
 An die Liberty-Anwendung können verschiedene Services gebunden werden. Abhängig von den Vorgaben des Entwicklers können Services containerverwaltet und/oder anwendungsverwaltet sein.
 
@@ -28,20 +26,20 @@ Ein containerverwalteter Service ist ein Service, der von der Liberty-Laufzeit v
 Dieser Prozess wird als automatische Konfiguration bezeichnet.
 Das Liberty-Buildpack bietet automatische Konfiguration für die folgenden Servicetypen:
 
-* [SQL Database](../../services/SQLDB/index.html#SQLDB)
+* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
 * ClearDB MySQL Database
-* [MySQL](../../services/MySQL/index.html#MySQL)
+* [MySQL](/docs/services/MySQL/index.html#MySQL)
 * ElephantSQL
-* [PostgreSQL](../../services/PostgreSQL/index.html#PostgreSQL)
-* [Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant)
+* [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
+* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
 * MongoLab
-* [dashDB](../../services/dashDB/index.html#dashDB)
-* [Data Cache](../../services/DataCache/index.html#data_cache)
-* [Session Cache](../../services/SessionCache/index.html#session_cache)
-* [MQ Light](../../services/MQLight/index.html#mqlight010)
-* [Monitoring and Analytics](../..//services/monana/index.html#gettingstartedtemplate)
-* [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
-* [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
+* [dashDB](/docs/services/dashDB/index.html#dashDB)
+* [Data Cache](/docs/services/DataCache/index.html#data_cache)
+* [Session Cache](/docs/services/SessionCache/index.html#session_cache)
+* [MQ Light](/docs/services/MQLight/index.html#mqlight010)
+* [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)
+* [Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
+* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
 
@@ -121,6 +119,38 @@ Beispiele für die Konfiguration der Umgebungsvariablen 'services_autoconfig_exc
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
 {: codeblock}
+
+## Servicekonfiguration überschreiben
+{: #override_service_config}
+
+In einigen Fällen ist es möglicherweise wünschenswert, die Standardkonfiguration für einen Service, die von der automatischen Konfiguration erstellt wurde, zu überschreiben.
+Dies kann mithilfe der Umgebungsvariablen **LBP_SERVICE_CONFIG_xxxx** erfolgen, wobei "xxxx" der Name des Service in Großbuchstaben ist. Um beispielsweise die Standardversion des Service *mysql* zu überschreiben und diesen auf Version 1.4.+ festzulegen, geben Sie einen Befehl wie den folgenden aus: 
+
+```
+    $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
+```
+{: codeblock}
+
+Die folgende Tabelle zeigt die Syntax für das Überschreiben einiger Servicekonfigurationsoptionen: 
+
+<table>
+<tr>
+<th align="left">Umgebungsvariablenname</th>
+<th align="left">Konfigurationssyntax</th>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_MYSQL</td>
+<td>"{driver: { version: x.y.z }, connection_pool_size: 15}"</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
+<td>"{driver: { version: x.y.z }}"</td>
+</tr>
+</table>
+
+
 
 # Zugehörige Links
 {: #rellinks}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 # Configuração automática de serviços ligados
 {: #auto_config}
 
-Última atualização: 10 de junho de 2016
-{: .last-updated}
-
 É possível ligar vários serviços ao seu aplicativo Liberty. Os serviços podem ser gerenciados por contêiner, por aplicativo ou por ambos, dependendo do que o desenvolvedor
 deseja.
 
@@ -23,7 +21,7 @@ sem qualquer assistência do Liberty. O aplicativo geralmente lê VCAP_SERVICES 
 e acessa o serviço diretamente. O aplicativo fornece todo o código necessário de acesso ao cliente. Não há nenhuma dependência dos recursos do Liberty ou da configuração do arquivo server.xml. A configuração automática do buildpack
 do Liberty não se aplica aos serviços deste tipo.
 
-Um serviço gerenciado por contêiner é um serviço que é gerenciado pelo tempo de execução do Liberty. Em alguns casos, o aplicativo pode consultar o serviço ligado em JNDI, enquanto em outros o serviço é usado diretamente pelo próprio Liberty. O buildpack do Liberty lerá VCAP_SERVICES para obter informações sobre os serviços ligados. Para cada serviço gerenciado por contêiner, o buildpack executa três funções.
+Um serviço gerenciado por contêiner é um serviço que é gerenciado pelo tempo de execução do Liberty. Em alguns casos, o aplicativo pode consultar o serviço ligado em JNDI, enquanto em outros o serviço é usado diretamente pelo próprio  Liberty. O buildpack do Liberty lerá VCAP_SERVICES para obter informações sobre os serviços ligados. Para cada serviço gerenciado por contêiner, o buildpack executa três funções.
 
 * Gera [variáveis de nuvem](optionsForPushing.html#accessing_info_of_bound_services) para o serviço limite.
 * Instala os recursos do Liberty e o código de acesso ao cliente necessário para
@@ -33,20 +31,20 @@ acessar o serviço ligado.
 Este processo é referido como uma configuração automática.
 O buildpack Liberty fornece configuração automática para os tipos de serviço a seguir:
 
-* [ SQL Database](../../services/SQLDB/index.html#SQLDB)
+* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
 * ClearDB MySQL Database
-* [ MySQL](../../services/MySQL/index.html#MySQL)
+* [MySQL](/docs/services/MySQL/index.html#MySQL)
 * ElephantSQL
-* [ PostgreSQL](../../services/PostgreSQL/index.html#PostgreSQL)
-* [Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant)
+* [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
+* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
 * MongoLab
-* [dashDB](../../services/dashDB/index.html#dashDB)
-* [ Data Cache](../../services/DataCache/index.html#data_cache)
-* [ Session Cache](../../services/SessionCache/index.html#session_cache)
-* [ MQ Light](../../services/MQLight/index.html#mqlight010)
-* [Monitoring and Analytics](../..//services/monana/index.html#gettingstartedtemplate)
-* [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
-* [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
+* [dashDB](/docs/services/dashDB/index.html#dashDB)
+* [Data Cache](/docs/services/DataCache/index.html#data_cache)
+* [Session Cache](/docs/services/SessionCache/index.html#session_cache)
+* [MQ Light](/docs/services/MQLight/index.html#mqlight010)
+* [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)
+* [Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
+* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
 
@@ -57,7 +55,7 @@ contêiner e os configura automaticamente. Se desejar que o aplicativo gerencie 
 ## Instalação do código de acesso do cliente e dos recursos do Liberty
 {: #installation_of_liberty_features}
 
-Ao ligar a um serviço gerenciado por contêiner, o serviço pode requerer que os recursos do Liberty sejam configurados na sub-rotina featureManager no arquivo server.xml. O buildpack do Liberty atualiza a sub-rotina featureManager e instala os binários de apoio necessários. Se o serviço precisar de jars do driver cliente, os jars serão transferidos por download para um local bem conhecido
+Ao ligar a um serviço gerenciado por contêiner, o serviço pode requerer que os recursos do Liberty sejam configurados na sub-rotina featureManager no arquivo server.xml. O buildpack do  Liberty atualiza a sub-rotina featureManager e instala os binários de apoio necessários. Se o serviço precisar de jars do driver cliente, os jars serão transferidos por download para um local bem conhecido
 na instalação do Liberty.
 
 Consulte a documentação para o tipo de serviço ligado para obter
@@ -83,7 +81,7 @@ Em alguns
 casos, talvez você não queira que o buildpack do Liberty configure automaticamente os serviços que foram
 ligados. Considere os cenários a seguir:
 
-* Meu aplicativo usa MongoDB, mas desejo que o aplicativo gerencie diretamente a conexão ao banco de dados. O aplicativo contém o jar do driver cliente necessário. Eu não deseja que o buildpack do Liberty configure
+* Meu aplicativo usa MongoDB, mas desejo que o aplicativo gerencie diretamente a conexão ao banco de dados. O  aplicativo contém o jar do driver cliente necessário. Eu não deseja que o buildpack do Liberty configure
 automaticamente o serviço Mongo.
 * Estou fornecendo um arquivo server.xml e forneci as sub-rotinas de configuração para a instância SQLDB porque preciso de uma configuração de origem de dados não padrão. Eu não desejo que o buildpack do Liberty atualize meu arquivo server.xml, mas ainda preciso que o buildpack do Liberty assegure que o software de apoio apropriado esteja instalado.
 
@@ -140,6 +138,41 @@ configurar a variável de ambiente services_autoconfig_excludes para o aplicativ
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
 {: codeblock}
+
+## Substituindo a configuração de serviço
+{: #override_service_config}
+
+Em alguns casos, pode ser desejável substituir a configuração padrão para um serviço gerado pela
+configuração automática. Isso pode ser feito usando a variável de ambiente
+**LBP_SERVICE_CONFIG_xxxx**, em que "xxxx" é o nome do serviço em letras maiúsculas.
+Por exemplo, para substituir a versão padrão do serviço *mysql* e configurá-la como
+a versão 1.4.+, emita um comando semelhante a:
+
+```
+    $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
+```
+{: codeblock}
+
+A tabela a seguir mostra a sintaxe para substituir algumas opções de configuração de serviço:
+
+<table>
+<tr>
+<th align="left">Nome da Variável de Ambiente</th>
+<th align="left">Sintaxe de configuração</th>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_MYSQL</td>
+<td>"{driver: { version: x.y.z }, connection_pool_size: 15}"</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
+<td>"{driver: { version: x.y.z }}"</td>
+</tr>
+</table>
+
+
 
 # rellinks
 {: #rellinks}

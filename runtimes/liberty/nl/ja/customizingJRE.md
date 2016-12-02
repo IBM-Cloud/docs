@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-15"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # JRE のカスタマイズ
 {: #customizing_jre}
-
-最終更新日: 2016 年 8 月 15 日
-{: .last-updated}
 
 アプリケーションは、Liberty ビルドパックによって提供および構成される Java ランタイム環境 (JRE) で実行されます。Liberty ビルドパックにより、JRE のバージョンまたはタイプの構成、JVM オプションのカスタマイズ、JRE 機能のオーバーレイも可能になります。
 
@@ -23,7 +21,7 @@ copyright:
 
 デフォルトでは IBM JRE バージョン 8 が使用されます。別のバージョンの IBM JRE を指定するには、JBP_CONFIG_IBMJDK 環境変数を使用します。例えば、最新の IBM JRE 7.1 を使用するには、以下の環境変数を設定します。
 ```
-$ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -110,7 +108,7 @@ Liberty ビルドパックにより、以下を考慮して、デフォルト JV
 <tr>
 <td> OpenJDK</td>
 <td>HotSpot ランタイムに基づきます。このランタイムの表記には、非標準の -X、開発者オプションの -XX、およびオプションを有効または無効にするブール・フラグがあります</td>
-<td>[HotSpot ランタイムの概要](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html)</td>
+<td>[HotSpot ランタイムの概要](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html)</td>
 </tr>
 </table>
 

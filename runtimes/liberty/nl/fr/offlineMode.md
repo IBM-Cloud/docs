@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,11 +13,9 @@ copyright:
 
 # Mode Hors ligne pour Liberty
 {: #offline_mode}
-Dernière mise à jour : 20 juillet 2016
-{: .last-updated}
 
-Quand une application Liberty est envoyée par push vers {{site.data.keyword.Bluemix}}, le pack de construction Liberty peut accéder à des sites externes à Bluemix pour acquérir les artefacts requis par l'application.  Les sites externes accessibles au pack de construction Liberty sont répertoriés ci-dessous.  Dans les environnements [Bluemix dédié](../../dedicated/index.html#dedicated) et
-[Bluemix local](../../local/index.html#local), ces sites peuvent avoir besoin d'être mis en *liste blanche*.
+Quand une application Liberty est envoyée par push vers {{site.data.keyword.Bluemix}}, le pack de construction Liberty peut accéder à des sites externes à Bluemix pour acquérir les artefacts requis par l'application.  Les sites externes accessibles au pack de construction Liberty sont répertoriés ci-dessous.  Dans les environnements [Bluemix dédié](/docs/dedicated/index.html#dedicated) et
+[Bluemix local](/docs/local/index.html#local), ces sites peuvent avoir besoin d'être mis en *liste blanche*.
 
 * https://download.run.pivotal.io et https://java-buildpack.cloudfoundry.org sont utilisés pour accéder aux composants pour :
   * [l'agent AppDynamics](https://www.appdynamics.com/)
@@ -31,8 +30,8 @@ Quand une application Liberty est envoyée par push vers {{site.data.keyword.Blu
 ## Utilisation d'un proxy
 {: #working_with_proxy}
 
-Dans certains environnements, comme [Bluemix dédié](../../dedicated/index.html#dedicated) et
-[Bluemix local](../../local/index.html#local), un proxy peut être configuré. Voir [Utilisation d'un proxy](../../manageapps/workingWithProxy.html) pour plus de détails.
+Dans certains environnements, comme [Bluemix dédié](/docs/dedicated/index.html#dedicated) et
+[Bluemix local](/docs/local/index.html#local), un proxy peut être configuré. Voir [Utilisation d'un proxy](/docs/manageapps/workingWithProxy.html) pour plus de détails.
 
 # rellinks
 {: #rellinks}

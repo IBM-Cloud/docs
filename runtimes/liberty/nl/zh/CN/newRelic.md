@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # 使用 New Relic
 {: #new_relic}
-
-上次更新时间：2016 年 6 月 10 日
-{: .last-updated}
 
 New Relic 是第三方服务，其提供应用程序的监视度量值。有关 New Relic 服务提供哪些内容的更多信息，请参阅 [New Relic](http://newrelic.com/java)。
 

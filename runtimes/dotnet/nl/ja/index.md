@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,12 +12,19 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-最終更新日: 2016 年 5 月 30 日
 
 {{site.data.keyword.Bluemix}} の ASP.NET Core ランタイムには ASP.NET Core ビルドパックが採用されています。ASP.NET Core は、.NET Web アプリケーションをビルドするためのオープン・ソースのモジュラー・フレームワークです。
 .Net Core は、ASP.NET Core アプリケーションのターゲットにできる小規模なクロスプラットフォーム・ランタイムです。
 この組み合わせによって、最新のクラウド・ベース Web アプリケーションが使用可能になります。
 {: shortdesc}
+
+# サポート対象のバージョン
+{: #supported_versions}
+このビルドパックでは、以下のバージョンがサポートされます。非推奨としてマークされているバージョンは、将来のビルドパックのリリースで削除されます。
+
+1. .NET Core 1.0.0-rc2-final (ベータ) (非推奨)
+2. .NET Core 1.0.0
+3. .NET Core 1.0.1
 
 ## 検出
 {: #detection}
@@ -26,7 +33,7 @@ copyright:
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} には、ASP.NET Core スターター・アプリケーションが用意されています。ASP.NET Core スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルなアプリケーションです。スターター・アプリケーションを試し、Bluemix 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../../cfapps/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix}} には、ASP.NET Core スターター・アプリケーションが用意されています。ASP.NET Core スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルなアプリケーションです。スターター・アプリケーションを試し、Bluemix 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
 
 ## ランタイム・バージョン
 {: #runtime_versions}
@@ -44,7 +51,7 @@ copyright:
 ```
 {: codeblock}
 
-指定されていない場合、最新の安定したリリース候補が使用されます。
+サポート対象の CLI バージョンのリストについては、[ASP.NET Core ビルドパックに対する最新の更新](/docs/runtimes/dotnet/updates.html)を参照してください。指定されていない場合、最新の安定したリリース候補が使用されます。
 
 ### NuGet パッケージ・ソースのカスタマイズ
 
@@ -66,15 +73,16 @@ copyright:
 
 [『Building Projects with Yeoman』](http://docs.asp.net/en/latest/client-side/yeoman.html)に説明されているように、Yeoman ツールを使用して新規プロジェクトのテンプレートを生成できます。
 
-Visual Studio を使用したローカルでの開発については、[『Visual Studio を使用した開発』](../../starters/deploy_vs.html){: new_window}を参照してください。
+Visual Studio を使用したローカルでの開発については、[『Visual Studio を使用した開発』](/docs/starters/deploy_vs.html){: new_window}を参照してください。
 
 ## パブリッシュされたアプリケーションのプッシュ
+{: #pushing_published_app}
 
 ビルドパックが外部のバイナリーをダウンロードしないように、アプリケーションに必要なバイナリーをすべて組み込む場合、パブリッシュされた*自己完結型*アプリケーションをプッシュすることができます。自己完結型アプリケーションについて詳しくは、[『.NET Core App Types』](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}を参照してください。
 
 アプリケーションをパブリッシュするには、次のようなコマンドを発行します。
 ```
-dotnet publish -r ubuntu.14.04-x64
+  dotnet publish -r ubuntu.14.04-x64
 ```
 {: codeblock}
   
@@ -87,27 +95,29 @@ dotnet publish -r ubuntu.14.04-x64
 また、アプリケーションで manifest.yml ファイルを使用している場合は、manifest.yml でパブリッシュ出力フォルダーへのパスを指定できます。これにより、アプリケーションをプッシュする際に、そのフォルダーに入る必要がなくなります。
 
 ## 複数のプロジェクトを含むアプリケーションのデプロイ
+{: #developing_apps_with_multiple_projects}
 
 複数のプロジェクトを含むアプリケーションをデプロイする場合、どのプロジェクトをビルドパックでメイン・プロジェクトとして実行するかを指定する必要があります。これを行うには、ソリューションのルート・フォルダー内に、メイン・プロジェクトへのパスを設定する .deployment ファイルを作成します。メイン・プロジェクトへのパスは、プロジェクト・フォルダーまたはプロジェクト・ファイル (.xproj または .csproj) として指定できます。
 
 例えば、あるソリューションの *src* フォルダー内に 3 つのプロジェクト *MyApp.DAL*、*MyApp.Services*、および *MyApp.Web* が含まれており、*MyApp.Web* がメイン・プロジェクトである場合、.deployment ファイルのフォーマットは、次のようになります。
 ```
-[config]
+  [config]
   project = src/MyApp.Web
 ```
 {: codeblock}
 
 この例では、*MyApp.DAL* プロジェクトと *MyApp.Services* プロジェクトが *MyApp.Web* の project.json ファイルに依存関係としてリストされている場合、ビルドパックはこれらのプロジェクトを自動的にコンパイルします。しかし、dotnet run -p src/MyApp.Web コマンドを使用した場合は、ビルドパックはメイン・プロジェクトである *MyApp.Web* の実行のみを試みます。*MyApp.Web* へのパスは、このプロジェクトが xproj プロジェクトであると想定して、以下のように指定することもできます。 
 ```
-project = src/MyApp.Web/MyApp.Web.xproj
+  project = src/MyApp.Web/MyApp.Web.xproj
 ```
 {: codeblock}
 
 ## 正しいポートで listen するようにアプリケーションを構成
+{: #configuring_listen_proper_port}
 
 ビルドパックは、*dotnet run* コマンドを使用してアプリケーションを実行し、後続のコマンド・ライン引数を渡します。
 ```
---server.urls http://0.0.0.0:${PORT}
+  --server.urls http://0.0.0.0:${PORT}
 ```
 {: codeblock}
 
@@ -154,7 +164,7 @@ kestrel が正しいポートで listen するようにするために、アプ�
 
 main メソッドを含むファイルに、*using* ステートメントを追加します。 
 ```
-using Microsoft.Extensions.Configuration;
+  using Microsoft.Extensions.Configuration;
 ```
 {: codeblock}
 
@@ -171,6 +181,13 @@ Program.cs の `Main` メソッドで、次の行を削除します。
 {: codeblock}
 
 これらの変更により、.NET CLI がアプリケーションの `Views` を見つけることができます。これは、`dotnet run` コマンドの実行時にビルド出力にコピーされるようになるためです。JSON 構成ファイルなど、実行時に必要な他のファイルがアプリケーションにある場合、これらのファイルも project.json ファイルの `copyToOutput` の `include` セクションに追加する必要があります。
+
+## トラブルシューティングに関するよくある質問
+{: #troubleshooting_faq}
+
+**Q**: アプリケーションがデプロイに失敗し、メッセージ `API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, ...}` が出されます。これは何を意味するのでしょうか。
+
+**A**: アプリケーションのプッシュ時にも同様のメッセージを受け取っている場合、最も考えられる原因は、ご使用のアプリケーションがメモリーまたはディスクの割り当て量制限を超えていることです。これは、アプリケーションに対する割り当て量を増やすことで解決できます。
 
 # 関連リンク
 {: #rellinks}

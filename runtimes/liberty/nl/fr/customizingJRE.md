@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-15"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Personnalisation de l'environnement d'exécution Java (JRE)
 {: #customizing_jre}
-
-Dernière mise à jour : 15 août 2016
-{: .last-updated}
 
 Les applications sont exécutées dans un environnement d'exécution Java (JRE) fourni et configuré par le
 pack de construction Liberty. Ce dernier permet la configuration de la version ou du type d'environnement d'exécution Java (JRE), la personnalisation des options JVM ou la surimposition
@@ -126,7 +124,7 @@ utilisation car les options varient en fonction de l'environnement d'exécution 
 <td> OpenJDK </td>
 <td>repose sur l'exécution HotSpot avec le préfixe -X pour les options non standard, -XX pour les options de développement et des indicateurs booléen
 pour activer ou désactiver une option </td>
-<td>[Présentation de l'exécution HotSpot](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html) </td>
+<td>[Présentation de l'exécution HotSpot](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # buildpack 缺省值
 {: #buildpack_defauts}
-
-上次更新时间：2016 年 6 月 10 日
-{: .last-updated}
 
 Liberty buildpack 在 Bluemix 中会频繁更新。每个发行版都可能包含安全修订或增强功能。
 

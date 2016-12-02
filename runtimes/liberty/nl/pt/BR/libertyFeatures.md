@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -11,11 +12,8 @@ copyright:
 # Recursos do Liberty suportados no Bluemix
 {: #liberty_features}
 
-Última atualização: 28 de julho de 2016
-{: .last-updated}
-
 O tempo de execução instantâneo do Liberty for Java inclui um subconjunto dos
-recursos do perfil Liberty. Alguns recursos que o perfil Liberty fornece não estão
+recursos do perfil Liberty.  Alguns recursos que o perfil Liberty fornece não estão
 disponíveis no tempo de execução instantâneo do Liberty for Java porque não são
 aplicáveis no ambiente de nuvem.
 
@@ -212,19 +210,20 @@ A tabela a seguir mostra os recursos do Liberty suportados no Bluemix
 </table>
 
 Um subconjunto dos recursos disponíveis é ativado por padrão ao implementar
-arquivos WAR ou EAR. Consulte
+arquivos WAR ou EAR.  Consulte
 [Apps independentes](optionsForPushing.html#stand_alone_apps) para obter
 detalhes.
 
 O tempo de execução do Liberty for Java também torna alguns recursos beta do Liberty
 disponíveis. Esses recursos não são listados na tabela, mas podem ser localizados em
-<a href="https://new-console.ng.bluemix.net/docs/runtimes/liberty/usingBetaFeatures.html">Usando
-os recursos beta</a>.
+[Usando
+os recursos beta](/docs/runtimes/liberty/usingBetaFeatures.html).
 
 Lembre-se de que um servidor não pode carregar recursos incompatíveis; por isso,
 certifique-se de que ele esteja configurado para permitir somente recursos compatíveis. Consulte
     <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Combinações
 de recursos Java EE 6 e 7 suportados</a>.
+
 Para ver uma lista completa dos recursos disponíveis no Liberty com as versões do
 Java EE e outras informações, consulte
 [Recursos

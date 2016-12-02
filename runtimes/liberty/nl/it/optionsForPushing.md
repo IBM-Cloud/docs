@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Opzioni per eseguire il push di applicazioni Liberty
 {: #options_for_pushing}
-
-Ultimo aggiornamento: 10 giugno 2016
-{: .last-updated}
 
 La modalità di funzionamento del server Liberty in Bluemix è controllata dal pacchetto di build Liberty. I pacchetti di build possono fornire un ambiente di runtime completo per
 una specifica classe di applicazioni. Sono fondamentali per fornire la portabilità tra i cloud e contribuire a
@@ -233,24 +231,24 @@ Quando viene eseguito il push di un server in pacchetto o di una directory serve
 ### Variabili a cui è possibile fare riferimento
 {: #referenceable_variables}
 
-Le seguenti variabili sono definite nel file runtime-vars.xml e si fa riferimento a esse da un file server.xml di cui è stato eseguito il push. Tutte le variabili
+Le seguenti variabili sono
+definite nel file `runtime-vars.xml` e si fa riferimento a esse da
+un file `server.xml` di cui è stato eseguito il push. Tutte le variabili
 sono sensibili al maiuscolo/minuscolo.
 
 * ${port}: la porta HTTP su cui è in ascolto il server Liberty.
-* ${vcap_console_port}: la porta dove è in esecuzione la console vcap (in genere uguale a ${port}).
-* ${vcap_app_port}: la porta dove è in ascolto il server app (in genere uguale a ${port}).
-* ${vcap_console_ip}: l'indirizzo IP della console vcap (di norma l'indirizzo IP su cui è in ascolto il server Liberty).
+* ${vcap_app_port}: come ${port}. Non impostato se in esecuzione in Diego.
 * ${application_name}: il nome dell'applicazione, come definito utilizzando le opzioni nel comando cf push.
-* ${application_version}: la versione di questa istanza dell'applicazione, che assume la forma di un UUID, come b687ea75-49f0-456e-b69d-e36e8a854caa. Questa variabile cambia a ogni successivo push dell'applicazione che contiene del nuovo codice o delle modifiche alle risorse dell'applicazione.
-* ${host}: l'indirizzo IP del DEA che sta eseguendo l'applicazione (di norma uguale a ${vcap_console_ip}).
+* ${application_version}: la versione di questa istanza dell'applicazione, che assume la forma di un UUID, come `b687ea75-49f0-456e-b69d-e36e8a854caa`. Questa variabile cambia a ogni successivo push dell'applicazione che contiene del nuovo codice o delle modifiche alle risorse dell'applicazione.
+* ${host}: l'indirizzo IP dell'istanza dell'applicazione.
 * ${application_uris}: un array in stile JSON degli endpoint che è possibile utilizzare per accedere a questa applicazione, ad esempio: myapp.mydomain.com.
-* ${start}: la data e l'ora in cui è stata avviata l'applicazione; assume una forma simile a 2013-08-22 10:10:18 -0400.
+* ${start}: la data e l'ora in cui è stata avviata l'applicazione; assume una forma simile a `2013-08-22 10:10:18 -0400`. Non impostato se in esecuzione in Diego.
 
 ### Accesso alle informazioni dei servizi di cui è stato eseguito il bind
 {: #accessing_info_of_bound_services}
 
 Quando desideri eseguire il bind di un servizio alla tua applicazione, le informazioni sul servizio,
-				come le credenziali di connessione, sono incluse nella [variabile di ambiente VCAP_SERVICES](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) che
+				come le credenziali di connessione, sono incluse nella [variabile di ambiente VCAP_SERVICES](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) che
 				Cloud Foundry imposta per l'applicazione. Per i [servizi configurati automaticamente](autoConfig.html), il pacchetto di build Liberty genera o
 				aggiorna le voci di bind di servizio nel file  server.xml. Il contenuto delle voci di bind di
 				servizio può essere in uno dei seguenti formati:
@@ -259,16 +257,16 @@ Quando desideri eseguire il bind di un servizio alla tua applicazione, le inform
 * cloud.services.&lt;nome-servizio&gt;.connection.&lt;proprietà&gt;, che descrive le informazioni di connessione per il servizio.
 
 L'insieme di informazioni tipico è il seguente:
-* name: il nome del servizio. Ad esempio, mysql-e3abd.
-label: il tipo del servizio creato. Ad esempio, mysql-5.5.
-* plan: il piano di servizio, come indicato dall'identificativo univoco per tale piano. Ad esempio, 100.
-connection.name: un identificativo univoco per la connessione, che assume la forma di un UUID. Ad esempio, d01af3a5fabeb4d45bb321fe114d652ee.
-* connection.hostname: il nome host del server che sta eseguendo il servizio. Ad esempio, mysql-server.mydomain.com.
-* connection.host: l'indirizzo IP del server che sta eseguendo il servizio. Ad esempio, 9.37.193.2.
-* connection.port: la porta su cui il servizio è in ascolto per le connessioni in entrata. Ad esempio, 3306,3307.
-* connection.user: il nome utente utilizzato per autenticare questa applicazione presso il servizio. Il nome utente viene generato automaticamente da Cloud Foundry. Ad esempio: unHwANpjAG5wT.
+* name: il nome del servizio, ad esempio, mysql-e3abd.
+* label: il tipo di servizio creato, ad esempio, mysql-5.5.
+* plan: il piano di servizio, come indicato dall'identificativo univoco per tale piano, ad esempio, 100.
+* connection.name: un identificativo univoco per la connessione, che assume la forma di un UUID, ad esempio, d01af3a5fabeb4d45bb321fe114d652ee.
+* connection.hostname: il nome host del server che sta eseguendo il servizio, ad esempio, mysql-server.mydomain.com.
+* connection.host: l'indirizzo IP del server che sta eseguendo il servizio, ad esempio, 9.37.193.2.
+* connection.port: la porta su cui il servizio è in ascolto per le connessioni in entrata, ad esempio, 3306,3307.
+* connection.user: il nome utente utilizzato per autenticare questa applicazione presso il servizio. Il nome utente viene generato automaticamente da Cloud Foundry, ad esempio, unHwANpjAG5wT.
 * connection.username: un alias per connection.user.
-* connection.password: la password utilizzata per autenticare questa applicazione presso il servizio. La password viene generata automaticamente da Cloud Foundry. Ad esempio: pvyCY0YzX9pu5.
+* connection.password: la password utilizzata per autenticare questa applicazione presso il servizio. La password viene generata automaticamente da Cloud Foundry, ad esempio, pvyCY0YzX9pu5.
 
 Per i servizi di cui è stato eseguito il bind che non sono configurati automaticamente dal pacchetto di build Liberty, l'applicazione deve gestire direttamente l'accesso della risorsa di backend.
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 # Bluemix에서 지원되는 Liberty 기능
 {: #liberty_features}
 
-마지막 업데이트 날짜: 2016년 7월 28일
-{: .last-updated}
-
 Liberty for Java 인스턴트 런타임에는 Liberty 프로파일 기능 서브세트가 포함됩니다. Liberty 프로파일에서 제공하는 일부 기능은 클라우드 환경에서 적용할 수 없기 때문에 Liberty for Java 인스턴트 런타임에서 사용할 수 없습니다. 
 
 Bluemix에 특정한 다음 기능이 포함됩니다. 
@@ -21,7 +19,7 @@ Bluemix에 특정한 다음 기능이 포함됩니다.
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-다음 표는 Bluemmix에서 지원되는 Liberty 기능을 표시합니다. 
+다음 표는 Bluemix에서 지원되는 Liberty 기능을 표시합니다. 
 
 <table>
 
@@ -210,7 +208,7 @@ Bluemix에 특정한 다음 기능이 포함됩니다.
 
 WAR 또는 EAR 파일을 배치하면 사용 가능한 기능 서브세트가 기본적으로 사용됩니다. 세부사항은 [독립형 앱](optionsForPushing.html#stand_alone_apps)을 참조하십시오. 
 
-Liberty for Java 런타임에서는 일부 Liberty 베타 기능도 사용 가능합니다. 이러한 기능은 표에는 나열되어 있지 않지만 <a href="https://new-console.ng.bluemix.net/docs/runtimes/liberty/usingBetaFeatures.html">베타 기능 사용</a>에서 찾을 수 있습니다.
+Liberty for Java 런타임에서는 일부 Liberty 베타 기능도 사용 가능합니다. 이러한 기능은 표에는 나열되어 있지 않지만 [베타 기능 사용](/docs/runtimes/liberty/usingBetaFeatures.html)에서 찾을 수 있습니다.
 
 서버는 호환 불가능한 기능은 로드할 수 없으므로 호환 가능한 기능만 사용하도록 구성해야 합니다. 
     <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">지원되는 Java EE 6 및 7 기능 조합</a>을 참조하십시오.
@@ -219,8 +217,8 @@ Java EE 버전 및 기타 정보와 함께 Liberty에서 사용 가능한 전체
 [Liberty 기능](https://www.ibm.com/support/knowledgecenter/SSCKBL_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)을
 참조하십시오. 
 
-원격 EJB를 사용하는 애플리케이션은 Bluemmix에 배치될 수 있습니다.
-그러나 원격 EJB는 Bluemmix 환경의 포트 제한사항 때문에
+원격 EJB를 사용하는 애플리케이션은 Bluemix에 배치될 수 있습니다.
+그러나 원격 EJB는 Bluemix 환경의 포트 제한사항 때문에
 CORBA/IIOP 프로토콜을 사용하여 원격 액세스할 수 없습니다. 
 
 # 관련 링크

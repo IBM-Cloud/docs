@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,10 +12,12 @@ copyright:
 # sdk-for-nodejs ビルドパックに対する最新の更新
 {: #latest_updates}
 
-最終更新日: 2016 年 8 月 26 日
-{: .last-updated}
-
 sdk-for-nodejs ビルドパックの最新更新のリスト。
+## 2016 年 10 月 7 日: Node.js ビルドパック v3.8-20161006-1211 の更新
+このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.46、0.10.47、0.12.15、0.12.16、4.5.0、4.6.0、6.6.0、および 6.7.0 をサポートします。現在のデフォルトは 4.6.0 です。
+
+新規ランタイムに加えて、このリリースにはビルドパックのバグ修正も含まれています。v3.7-20160826-1101 リリース更新で言及された Node.js 6.x と開発モードの使用時の既知の問題の修正がその 1 つです。このリリースは、[Cloud Foundry Node.js ビルドパック v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20) とも同期しています。 
+
 ## 2016 年 8 月 26 日: 更新された Node.js ビルドパック v3.7-20160826-1101
 このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.45、0.10.46、0.12.14、0.12.15、4.4.7、4.5.0、6.2.2、および 6.4.0 をサポートします。現在のデフォルトは 4.5.0 です。
 
@@ -22,7 +25,7 @@ sdk-for-nodejs ビルドパックの最新更新のリスト。
 
 このリリースは、[Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/) で発表されたように、strongpm アプリケーション管理ハンドラーのサポートを削除します。
 
-Node.js 6.x および[開発モード](../../manageapps/app_mng.html#devmode)の使用時には既知の問題があることに注意してください。回避策として、開発モードを有効にした後で、使用を開始する前にアプリケーションを再ステージする必要があります。
+Node.js 6.x および[開発モード](/docs/manageapps/app_mng.html#devmode)の使用時には既知の問題があることに注意してください。回避策として、開発モードを有効にした後で、使用を開始する前にアプリケーションを再ステージする必要があります。
 
 ## 2016 年 7 月 22 日: 更新された Node.js ビルドパック v3.6-20160715-0749
 このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.45、0.10.46、0.12.14、0.12.15、4.4.6、4.4.7、6.2.1、および 6.2.2 をサポートします。現在のデフォルトは 4.4.7 です。
@@ -113,14 +116,14 @@ v3.0beta でアプリケーションをプッシュするには、以下を行�
 * 「cf push」コマンドで「-b」オプションを使用します。
 
 ```
-cf push -b sdk-for-nodejs-v3beta
+        cf push -b sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
 * あるいは、manifest.yml ファイルで「buildpack」オプションを使用します。
 
 ```
-buildpack: sdk-for-nodejs-v3beta
+        buildpack: sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
@@ -141,7 +144,7 @@ Node.js v2.6.1 では、[StrongPM アプリケーション管理ハンドラー]
 ## 2015 年 6 月 15 日: 更新された Node.js ビルドパック v2.0-20150608-1503
 
 このリリースでは、Node.js ビルドパックが、コミュニティーからの数多くの新しいフィーチャーが付属する最新の [CF コミュニティー Node.js ビルドパック](https://github.com/cloudfoundry/nodejs-buildpack)と同期化されています。
-さらに、Node.js ビルドパックでアプリケーション管理フィーチャーが改訂されました。これにより、shell、node-inspector、Bluemix Live Sync などのユーティリティーが使用可能になります。詳しくは、[『アプリケーション管理』](../../manageapps/app_mng.html)を参照してください。
+さらに、Node.js ビルドパックでアプリケーション管理フィーチャーが改訂されました。これにより、shell、node-inspector、Bluemix Live Sync などのユーティリティーが使用可能になります。詳しくは、[『アプリケーション管理』](/docs/manageapps/app_mng.html)を参照してください。
 
 ## 2015 年 5 月 5 日: 更新された Node.js ビルドパック v1.17-20150429-1033
 
@@ -149,7 +152,7 @@ Node.js v2.6.1 では、[StrongPM アプリケーション管理ハンドラー]
 * アプリケーションの package.json ファイルでランタイムを指定していない場合、アプリケーションは v0.10.x の代わりに v0.12.1 を使用して開始されるようになります。前のバージョンを使用する必要がある場合は、以下に示すように package.json で v0.10.x を指定してください。
 
 ```
-"engines": {
+        "engines": {
             "node": "0.10.x"
         }
 ```
@@ -169,7 +172,7 @@ Node.js v2.6.1 では、[StrongPM アプリケーション管理ハンドラー]
   * デスクトップ同期: 任意の (Windows) デスクトップ・ツリーをクラウド・ベースのプロジェクト・ワークスペースと同期化します。
   * ライブ編集: ご使用のブラウザーで、Bluemix で実行される Node.js アプリケーションを変更して、直ちにテストできます。
   * デバッグ: 環境を準備してデバッグを行います。Node Inspector デバッガーを使用して、コードの動的編集、ブレークポイントの挿入、コードのステップスルー、ランタイムの再始動などを行うことができます。
-  * 詳しくは、[『アプリケーション管理』](../../manageapps/app_mng.html#Utilities)を参照してください。
+  * 詳しくは、[『アプリケーション管理』](/docs/manageapps/app_mng.html#Utilities)を参照してください。
 * 最新の変更が [Cloud Foundry の Node.js ビルドパック](https://github.com/cloudfoundry/nodejs-buildpack)から導入されました。この変更には、コミュニティーによって行われたいくつかのバグ修正および改善が付随しています。
 * この Node.js ビルドパックには [IBM SDK for Node.js v1.1.0.13](https://developer.ibm.com/node/sdk/) が付属するようになりました。
 

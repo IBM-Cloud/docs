@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-15"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Customizando o JRE
 {: #customizing_jre}
-
-Última atualização: 15 de agosto de 2016
-{: .last-updated}
 
 Os aplicativos são executados em um Java Runtime
 Environment (JRE) fornecido e configurado pelo buildpack Liberty. O buildpack Liberty também
@@ -136,7 +134,7 @@ que as opções variam de acordo com o JRE.
 <td>é baseado no tempo de execução do HotSpot que possui a notação de
 -X para não padrão, -XX para opções do desenvolvedor e sinalizações Booleanas
 para ativar ou desativar a opção </td>
-<td>[Visão tempo de execução de execução do HotSpot](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html) </td>
+<td>[Visão tempo de execução de execução do HotSpot](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 

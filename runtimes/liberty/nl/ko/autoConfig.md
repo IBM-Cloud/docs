@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # 바인드된 서비스의 자동 구성
 {: #auto_config}
-
-마지막 업데이트 날짜: 2016년 6월 10일
-{: .last-updated}
 
 다양한 서비스를 Liberty 애플리케이션에 바인드할 수 있습니다. 개발자에게 필요한 기능에 따라 서비스는 컨테이너 관리형, 애플리케이션 관리형 또는 두 형태 모두로 제공됩니다.
 
@@ -28,20 +26,20 @@ copyright:
 이 프로세스를 자동 구성이라고 합니다.
 Liberty 빌드팩은 다음 서비스 유형에 대해 자동 구성을 제공합니다. 
 
-* [SQL Database](../../services/SQLDB/index.html#SQLDB)
+* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
 * ClearDB MySQL Database
-* [MySQL](../../services/MySQL/index.html#MySQL)
+* [MySQL](/docs/services/MySQL/index.html#MySQL)
 * ElephantSQL
-* [PostgreSQL](../../services/PostgreSQL/index.html#PostgreSQL)
-* [Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant)
+* [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
+* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
 * MongoLab 
-* [dashDB](../../services/dashDB/index.html#dashDB)
-* [Data Cache](../../services/DataCache/index.html#data_cache)
-* [Session Cache](../../services/SessionCache/index.html#session_cache)
-* [MQ Light](../../services/MQLight/index.html#mqlight010)
-* [Monitoring and Analytics](../..//services/monana/index.html#gettingstartedtemplate)
-* [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
-* [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
+* [dashDB](/docs/services/dashDB/index.html#dashDB)
+* [Data Cache](/docs/services/DataCache/index.html#data_cache)
+* [Session Cache](/docs/services/SessionCache/index.html#session_cache)
+* [MQ Light](/docs/services/MQLight/index.html#mqlight010)
+* [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)
+* [Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
+* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
 
@@ -117,6 +115,39 @@ $ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
 {: codeblock}
+
+## 서비스 구성 대체
+{: #override_service_config}
+
+자동 구성으로 생성된 서비스의 기본 구성을 대체해야 하는 경우가 있습니다.
+**LBP_SERVICE_CONFIG_xxxx** 환경 변수를 사용하여 구성을 대체할 수 있습니다. 여기서 "xxxx"는 서비스의 이름이며
+모두 대문자입니다. 예를 들어, *mysql* 서비스의 기본 버전을 대체하여 버전 1.4.+으로 설정하려면 다음과 비슷한 명령을 실행하십시오. 
+
+```
+    $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
+```
+{: codeblock}
+
+다음 표에 몇몇 서비스 구성 대체 옵션의 구문이 표시되어 있습니다. 
+
+<table>
+<tr>
+<th align="left">환경 변수 이름</th>
+<th align="left">구성 구문</th>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_MYSQL</td>
+<td>"{driver: { version: x.y.z }, connection_pool_size: 15}"</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
+<td>"{driver: { version: x.y.z }}"</td>
+</tr>
+</table>
+
+
 
 # 관련 링크
 {: #rellinks}

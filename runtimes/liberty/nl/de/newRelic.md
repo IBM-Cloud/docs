@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # New Relic verwenden
 {: #new_relic}
-
-Letzte Aktualisierung: 10. Juni 2016
-{: .last-updated}
 
 Bei New Relic handelt es sich um einen Service eines anderen Anbieters, der Überwachungsmetriken für Ihre Anwendung
 bereitstellt. Weitere Informationen zu den vom New Relic-Service bereitgestellten Funktionen finden Sie in [New Relic](http://newrelic.com/java).

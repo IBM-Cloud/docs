@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 # 環境變數
 {: #environment_variables}
 
-前次更新：2016 年 6 月 10 日
-{: .last-updated}
-
 Liberty for Java 支援的環境變數。
 
 <table>
@@ -26,12 +24,12 @@ Liberty for Java 支援的環境變數。
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>啟用[應用程式管理公用程式](../../manageapps/app_mng.html)</td>
+<td>啟用[應用程式管理公用程式](/docs/manageapps/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>安裝[應用程式管理公用程式](../../manageapps/app_mng.html)</td>
+<td>安裝[應用程式管理公用程式](/docs/manageapps/app_mng.html)</td>
 </tr>
 
 <tr>
@@ -82,6 +80,11 @@ Liberty for Java 支援的環境變數。
 <tr>
 <td>JVM_ARGS</td>
 <td>設定 [JVM 引數](customizingJRE.html)</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_xxxx</td>
+<td>[置換服務配置](autoConfig.html#override_service_config)</td>
 </tr>
 
 <tr>

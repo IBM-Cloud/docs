@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,13 +13,11 @@ copyright:
 
 # Mode Hors ligne pour node.js
 {: #offline_mode}
-Dernière mise à jour : 20 juillet 2016
-{: .last-updated}
 
-Quand une application node.js est envoyée par push vers {{site.data.keyword.Bluemix}}, le kit SDK pour le pack de construction Node.js télécharge des artefacts depuis des ressources externes (modules de noeuds depuis NPM, par exemple).  Dans certaines situations, comme avec [Bluemix dédié](../../dedicated/index.html#dedicated) et [Bluemix local](../../local/index.html#local), vous pouvez vouloir ne pas accéder à des sites externes à Bluemix, ou préférer avoir un contrôle plus explicite sur ces derniers.  
+Quand une application node.js est envoyée par push vers {{site.data.keyword.Bluemix}}, le kit SDK pour le pack de construction Node.js télécharge des artefacts depuis des ressources externes (modules de noeuds depuis NPM, par exemple).  Dans certaines situations, comme avec [Bluemix dédié](/docs/dedicated/index.html#dedicated) et [Bluemix local](/docs/local/index.html#local), vous pouvez vouloir ne pas accéder à des sites externes à Bluemix, ou préférer avoir un contrôle plus explicite sur ces derniers.  
 
-Les sites externes accessibles au pack de construction node.js sont répertoriés ci-dessous.  Dans les environnements [Bluemix dédié](../../dedicated/index.html#dedicated) et
-[Bluemix local](../../local/index.html#local), ces sites peuvent avoir besoin d'être mis en *liste blanche*.
+Les sites externes accessibles au pack de construction node.js sont répertoriés ci-dessous.  Dans les environnements [Bluemix dédié](/docs/dedicated/index.html#dedicated) et
+[Bluemix local](/docs/local/index.html#local), ces sites peuvent avoir besoin d'être mis en *liste blanche*.
 
 * http://nodejs.org/ peut être utilisé pour déterminer les versions du moteur de noeud disponibles.
 * https://s3pository.heroku.com sert à extraire les versions du moteur de noeud non incluses dans le pack de construction.
@@ -47,12 +46,12 @@ Dès que vous effectuez un changement dans les dépendances du fichier *package.
 ## Utilisation d'un proxy
 {: #working_with_proxy}
 
-Dans certains environnements, comme [Bluemix dédié](../../dedicated/index.html#dedicated) et
-[Bluemix local](../../local/index.html#local), un proxy peut être configuré. Voir [Utilisation d'un proxy](../../manageapps/workingWithProxy.html) pour plus de détails.
+Dans certains environnements, comme [Bluemix dédié](/docs/dedicated/index.html#dedicated) et
+[Bluemix local](/docs/local/index.html#local), un proxy peut être configuré. Voir [Utilisation d'un proxy](/docs/manageapps/workingWithProxy.html) pour plus de détails.
 
 # rellinks
 {: #rellinks}
 ## general
 {: #general}
-* [Mises à jour les plus récentes du pack de construction Node.js](../../runtimes/nodejs/updates.html)
+* [Mises à jour les plus récentes du pack de construction Node.js](/docs/runtimes/nodejs/updates.html)
 * [Node.js](https://nodejs.org)

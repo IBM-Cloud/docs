@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,12 +13,10 @@ copyright:
 
 # node.js 的脱机方式
 {: #offline_mode}
-上次更新时间：2016 年 7 月 20 日
-{: .last-updated}
 
-将 node.js 应用程序推送到 {{site.data.keyword.Bluemix}} 时，SDK for Node.js buildpack 通常会从外部资源下载工件，例如从 NPM 下载节点模块。在某些情况下（例如，在 [Bluemix Dedicated](../../dedicated/index.html#dedicated) 和 [Bluemix Local](../../local/index.html#local) 中），您可能并不想对访问 Bluemix 外部站点有任何依赖，或者您希望能够对访问这些外部站点有更明确的控制。  
+将 node.js 应用程序推送到 {{site.data.keyword.Bluemix}} 时，SDK for Node.js buildpack 通常会从外部资源下载工件，例如从 NPM 下载节点模块。在某些情况下（例如，在 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) 和 [Bluemix Local](/docs/local/index.html#local) 中），您可能并不想对访问 Bluemix 外部站点有任何依赖，或者您希望能够对访问这些外部站点有更明确的控制。  
 
-下面是 node.js buildpack 可以访问的外部站点。在 [Bluemix Dedicated](../../dedicated/index.html#dedicated) 和 [Bluemix Local](../../local/index.html#local) 等 Bluemix 环境中，可能需要将这些站点*列入白名单*。
+下面是 node.js buildpack 可以访问的外部站点。在 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) 和 [Bluemix Local](/docs/local/index.html#local) 等 Bluemix 环境中，可能需要将这些站点*列入白名单*。
 
 * http://nodejs.org/，可用于查明可用的节点引擎版本。
 * https://s3pository.heroku.com，用于检索该 buildpack 中未包含的节点引擎版本。
@@ -45,11 +44,11 @@ copyright:
 ## 使用代理
 {: #working_with_proxy}
 
-在某些环境（如 [Bluemix Dedicated](../../dedicated/index.html#dedicated) 和 [Bluemix Local](../../local/index.html#local)）中，可以配置代理。有关更多详细信息，请参阅[使用代理](../../manageapps/workingWithProxy.html)。
+在某些环境（如 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) 和 [Bluemix Local](/docs/local/index.html#local)）中，可以配置代理。有关更多详细信息，请参阅[使用代理](/docs/manageapps/workingWithProxy.html)。
 
 # 相关链接
 {: #rellinks}
 ## 常规
 {: #general}
-* [Node.js buildpack 的最新更新](../../runtimes/nodejs/updates.html)
+* [Node.js buildpack 的最新更新](/docs/runtimes/nodejs/updates.html)
 * [Node.js](https://nodejs.org)

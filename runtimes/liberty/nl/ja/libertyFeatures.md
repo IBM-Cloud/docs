@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Bluemix でサポートされる Liberty フィーチャー
 {: #liberty_features}
-
-最終更新日: 2016 年 7 月 28 日
-{: .last-updated}
 
 Liberty for Java インスタント・ランタイムには、Liberty プロファイル・フィーチャーのサブセットが含まれています。Liberty プロファイルが提供するフィーチャーの中には、クラウド環境で適用されないために Liberty for Java インスタント・ランタイムでは使用できないものがあります。
 
@@ -210,7 +208,7 @@ Bluemix に固有の以下のフィーチャーが含まれています。
 
 使用可能なフィーチャーのサブセットは、WAR ファイルまたは EAR ファイルのデプロイ時にデフォルトで有効にされます。詳細については、[『スタンドアロン・アプリケーション』](optionsForPushing.html#stand_alone_apps)を参照してください。
 
-Liberty for Java ランタイムは、一部の Liberty ベータ・フィーチャーも使用可能にします。これらのフィーチャーは表にはリストされていませんが、<a href="https://new-console.ng.bluemix.net/docs/runtimes/liberty/usingBetaFeatures.html">『ベータ・フィーチャーの使用』</a>に記載されています。
+Liberty for Java ランタイムは、一部の Liberty ベータ・フィーチャーも使用可能にします。これらのフィーチャーは表にはリストされていませんが、[『ベータ・フィーチャーの使用』](/docs/runtimes/liberty/usingBetaFeatures.html)に記載されています。
 
 サーバーは互換性のないフィーチャーをロードできないことに注意してください。そのため、互換性のあるフィーチャーのみを有効にするようにサーバーを構成してください。
     <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">『Supported Java EE 6 and 7 feature combinations』</a>を参照してください。

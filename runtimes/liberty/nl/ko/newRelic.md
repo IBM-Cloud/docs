@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # New Relic 사용
 {: #new_relic}
-
-마지막 업데이트 날짜: 2016년 6월 10일
-{: .last-updated}
 
 New Relic은 애플리케이션에 모니터링 메트릭을 제공하는 써드파티 서비스입니다. New Relic 서비스의 혜택에 대한 자세한 정보는 [New Relic](http://newrelic.com/java)을 참조하십시오.
 
@@ -26,7 +24,7 @@ New Relic은 애플리케이션에 모니터링 메트릭을 제공하는 써드
 애플리케이션용 Liberty 빌드팩에서 생성되는 샘플 구성을 참조하십시오.
 
 ```
--javaagent:/home/vcap/app/.new_relic_agent/new_relic_agent-3.12.0.jar
+    -javaagent:/home/vcap/app/.new_relic_agent/new_relic_agent-3.12.0.jar
     -Dnewrelic.home=/home/vcap/app/.new_relic_agent
     -Dnewrelic.config.license_key=123456
     -Dnewrelic.config.app_name=myapp
@@ -41,7 +39,7 @@ IBM Bluemix에서 New Relic을 통해 기존 Java 애플리케이션을 모니�
 1. IBM Bluemix에서 New Relic 서비스 인스턴스를 작성하십시오. 
 
   <pre>
-$ cf create-service newrelic standard mynewrelic
+    $ cf create-service newrelic standard mynewrelic
   </pre>
   {: codeblock}
 
@@ -72,7 +70,7 @@ New Relic 계정과 라이센스 키가 이미 있으면 "사용자 제공 서�
 1. 기존의 라이센스 키를 사용하여 사용자 제공 서비스 인스턴스를 작성하십시오. 예를 들어, 기존의 라이센스 키가 1234567이면 CF CLI를 사용하여 "사용자 제공 서비스를 작성"하고 다음과 같이 프롬프트되면 라이센스 키 1234567을 제공합니다.
 
   ```
-$ cf create-user-provided-service mynewrelic -p "licenseKey"
+    $ cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
   ```
   {: codeblock}

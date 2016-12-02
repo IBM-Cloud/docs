@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,17 +13,15 @@ copyright:
 
 # Modalità offline per node.js
 {: #offline_mode}
-Ultimo aggiornamento: 20 luglio 2016
-{: .last-updated}
 
 Quando un'applicazione node.js viene trasmessa a {{site.data.keyword.Bluemix}} il pacchetto di build SDK for Node.js
 normalmente scarica le risorse utente dalle risorse esterne come i moduli del nodo da NPM.  In alcune situazioni
-come con [Bluemix Dedicato](../../dedicated/index.html#dedicated) e
-[Bluemix Locale](../../local/index.html#local),  puoi desiderare di non affidarti ai siti esterni a Bluemix oppure
+come con [Bluemix Dedicato](/docs/dedicated/index.html#dedicated) e
+[Bluemix Locale](/docs/local/index.html#local),  puoi desiderare di non affidarti ai siti esterni a Bluemix oppure
 di disporre di un controllo più esplicito su essi.  
 
-I seguenti sono dei siti esterni a cui può accedere il pacchetto di build node.js.  Negli ambienti Bluemix [Bluemix dedicato](../../dedicated/index.html#dedicated) e
-[Bluemix locale](../../local/index.html#local) è necessario che questi siti siano *consentiti*.
+I seguenti sono dei siti esterni a cui può accedere il pacchetto di build node.js.  Negli ambienti Bluemix [Bluemix dedicato](/docs/dedicated/index.html#dedicated) e
+[Bluemix locale](/docs/local/index.html#local) è necessario che questi siti siano *consentiti*.
 
 * http://nodejs.org/ può essere utilizzato per verificare le versioni del motore del nodo disponibili.
 * https://s3pository.heroku.com è utilizzato per richiamare le versioni del motore del nodo non incluse nel pacchetto di build.
@@ -53,13 +52,13 @@ Ogni volta che effettui una modifica alle dipendenze nel file *package.json*, ri
 ## Gestione di un proxy
 {: #working_with_proxy}
 
-In alcuni ambienti come [Bluemix dedicato](../../dedicated/index.html#dedicated) e
-[Bluemix locale](../../local/index.html#local) può essere configurato un proxy. Consulta
-[Gestione di un proxy](../../manageapps/workingWithProxy.html) per ulteriori dettagli.
+In alcuni ambienti come [Bluemix dedicato](/docs/dedicated/index.html#dedicated) e
+[Bluemix locale](/docs/local/index.html#local) può essere configurato un proxy. Consulta
+[Gestione di un proxy](/docs/manageapps/workingWithProxy.html) per ulteriori dettagli.
 
 # rellinks
 {: #rellinks}
 ## general
 {: #general}
-* [Aggiornamenti più recenti al pacchetto di build Node.js](../../runtimes/nodejs/updates.html)
+* [Aggiornamenti più recenti al pacchetto di build Node.js](/docs/runtimes/nodejs/updates.html)
 * [Node.js](https://nodejs.org)

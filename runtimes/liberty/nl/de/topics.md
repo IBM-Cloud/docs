@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Liberty-Themen
 {: #topics}
-
-Letzte Aktualisierung: 10. Juni 2016
-{: .last-updated}
 
 * [Liberty-Laufzeit](index.html)
 * [Erkennung](index.html#detection)

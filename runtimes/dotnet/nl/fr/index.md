@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,12 +12,21 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-Dernière mise à jour : 30 mai 2016
 
 L'environnement d'exécution ASP.NET Core sur {{site.data.keyword.Bluemix}} utilise la technologie du pack de construction ASP.NET Core. ASP.NET Core est une infrastructure open source modulaire permettant de créer des applications Web .NET.
 .Net Core est un petit environnement d'exécution multiplateforme qui peut être ciblé par des applications ASP.NET Core. 
 Elles sont combinées pour activer des applications Web modernes basées sur le cloud.
 {: shortdesc}
+
+# versions prises en charge
+{: #supported_versions}
+Ce pack de construction prend en charge les versions suivantes (les versions
+indiquées comme obsolètes seront supprimées dans une édition ultérieure du pack
+de construction) :
+
+1. .NET Core 1.0.0-rc2-final (bêta) (obsolète)
+2. .NET Core 1.0.0
+3. .NET Core 1.0.1
 
 ## Détection
 {: #detection}
@@ -26,7 +35,7 @@ Le pack de construction Bluemix ASP.NET Core est utilisé si l'application compo
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} fournit une application de démarrage ASP.NET Core.  L'application de démarrage ASP.NET Core est une application simple qui fournit un modèle que vous pouvez utiliser. Vous pouvez expérimenter cette application de démarrage et effectuer des modifications puis les envoyer par commande push vers l'environnement Bluemix.  Voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix}} fournit une application de démarrage ASP.NET Core.  L'application de démarrage ASP.NET Core est une application simple qui fournit un modèle que vous pouvez utiliser. Vous pouvez expérimenter cette application de démarrage et effectuer des modifications puis les envoyer par commande push vers l'environnement Bluemix.  Voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide.
 
 ## Versions d'environnement d'exécution
 {: #runtime_versions}
@@ -44,7 +53,7 @@ Contrôlez la version .NET CLI à l'aide d'un fichier global.json facultatif con
 ```
 {: codeblock}
 
-Si aucune valeur n'est spécifiée, le candidat de l'édition stable est utilisé.
+Pour obtenir la liste des versions de l'interface de ligne de commande prises en charge, voir [Dernières mises à jour apportées au pack de construction ASP.NET Core](/docs/runtimes/dotnet/updates.html). Si aucune valeur n'est spécifiée, le candidat de l'édition stable est utilisé.
 
 ### Personnalisation des sources de package NuGet
 
@@ -67,9 +76,10 @@ Pour coller le plus possible au mode d'exécution de l'application dans Bluemix,
 
 L'outil Yeoman peut être utilisé pour générer de nouveaux modèles de projet, comme indiqué dans [Building Projects with Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html).
 
-Pour plus d'informations sur un développement local via Visual Studio, voir [Developing with Visual Studio](../../starters/deploy_vs.html){: new_window}.
+Pour plus d'informations sur un développement local via Visual Studio, voir [Developing with Visual Studio](/docs/starters/deploy_vs.html){: new_window}.
 
 ## Envoi par commande push d'une application publiée
+{: #pushing_published_app}
 
 Si votre application doit contenir tous ses fichiers binaires requis et éviter ainsi que le pack de construction ne télécharge des fichiers binaires externes, vous pouvez envoyer par commande push une application *autonome* publiée.  Voir [.NET Core App Types](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window} pour plus d'informations sur les applications autonomes,
 
@@ -89,6 +99,7 @@ L'application peut ensuite être envoyée par commande push envoyé à partir du
 En outre, si vous utilisez un fichier manifest.yml dans votre application, vous pouvez spécifier le chemin d'accès au dossier de sortie de la publication dans votre fichier manifest.yml.  Ensuite, il n'est pas nécessaire de se placer dans ce dossier lors de l'envoi par commande push de l'application.
 
 ## Déploiement d'applications comportant plusieurs projets
+{: #developing_apps_with_multiple_projects}
 
 Pour déployer une application qui contient plusieurs projets, vous devez spécifier le projet que le pack de construction doit exécuter comme projet principal. Pour ce faire, créez un fichier .deployment dans le dossier racine de la solution qui définit le chemin d'accès vers le projet principal. Le chemin d'accès au projet principal peut être spécifié comme dossier de projet ou comme fichier de projet (.xproj ou .csproj).
 
@@ -106,6 +117,7 @@ Dans cet exemple, le pack de construction compile automatiquement les projets *M
 {: codeblock}
 
 ## Configuration de votre application pour écouter sur le port adéquat
+{: #configuring_listen_proper_port}
 
 Le pack de construction va exécuter votre application avec la commande *dotnet run* et transmettre l'argument de ligne de commande qui suit :
 ```
@@ -142,7 +154,7 @@ Ajoutez la dépendance suivante à project.json :
 ```
 {: codeblock}
 
-Ajoutez la propriété suivante dans la section `buildOptions` du fichier project.json 
+Ajoutez la propriété suivante dans la section `buildOptions` du fichier project.json
 ```
   "copyToOutput": {
     "include": [
@@ -173,7 +185,14 @@ Dans la méthode `Main` de Program.cs, retirez la ligne suivante :
 ```
 {: codeblock}
 
-Ces changements doivent permettre à .NET CLI de trouver les éléments `Vues` de votre application car ils sont copiés dans le résultat de la génération quand la commande `dotnet run` s'exécute. Si votre application dispose d'autres fichiers, comme des fichiers de configuration json, qui sont requis au moment de l'exécution, vous devez les ajouter à la section `include` de `copyToOutput` dans le fichier project.json.
+Ces changements doivent permettre à .NET CLI de trouver les éléments `Vues` de votre application car ils sont copiés dans le résultat de la génération quand la commande `dotnet run` s'exécute.  Si votre application dispose d'autres fichiers, comme des fichiers de configuration json, qui sont requis au moment de l'exécution, vous devez les ajouter à la section `include` de `copyToOutput` dans le fichier project.json.
+
+## Foire aux questions liée au traitement des incidents
+{: #troubleshooting_faq}
+
+**Q** : Le déploiement de mon application échoue avec le message : `API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, ...}`.  Qu'est-ce que cela signifie ?
+
+**R** : Si vous recevez un message similaire lors de l'envoi de votre application par commande push, il est fort probable que l'application dépasse les limites de quota de mémoire ou de disque. Vous pouvez résoudre ce problème en augmentant les quotas pour votre application.
 
 # rellinks
 {: #rellinks}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Tópicos do Liberty
 {: #topics}
-
-Última atualização: 10 de junho de 2016
-{: .last-updated}
 
 * [Tempo de execução do Liberty](index.html)
 * [Obstrução de Papel

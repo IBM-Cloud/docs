@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # Python
 {: #python_runtime}
-最終更新日: 2016 年 7 月 6 日
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} の Python ランタイムには python_buildpack が採用されています。
 python_buildpack は、Python 2 と Python 3 の両方のアプリケーションのための完全なランタイム環境を提供します。
@@ -23,7 +22,7 @@ python_buildpack は、アプリケーションのルート・ディレクトリ
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} には、Python スターター・アプリケーションが用意されています。Python スターター・アプリケーションは、アプリケーションに使用できるテンプレートを提供する、シンプルな Python アプリケーションです。スターター・アプリケーションを試し、{{site.data.keyword.Bluemix}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../../cfapps/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix}} には、Python スターター・アプリケーションが用意されています。Python スターター・アプリケーションは、アプリケーションに使用できるテンプレートを提供する、シンプルな Python アプリケーションです。スターター・アプリケーションを試し、{{site.data.keyword.Bluemix}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
 
 ## ランタイム・バージョン
 {: #runtime_versions}
