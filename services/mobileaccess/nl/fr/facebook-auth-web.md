@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-11-07"
 
 ---
 {:screen: .screen}
@@ -19,40 +19,38 @@ Utilisez Facebook pour authentifier les utilisateurs sur votre application Web {
 {: #facebook-auth-android-before}
 Vous devez disposer des éléments suivants :
 
-* Une application Web. 
-* Une instance d'une application {{site.data.keyword.Bluemix_notm}} protégée par le service
-{{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
+* Une appli Web. 
+* Un service {{site.data.keyword.amashort}}. Pour plus d'informations, voir [Initiation](index.html).
 * L'URI de redirection finale (au terme du processus d'autorisation).
 
 
-## Configuration d'une application Facebook pour votre site Web
+## Configuration d'une application sur le site Facebook for Developers
 {: #facebook-auth-config}
 
 Pour utiliser Facebook comme fournisseur d'identité dans votre site Web, vous devez ajouter et configurer la plateforme de site Web sur votre application 
 Facebook.
 
-1. Connectez-vous au site Web [Facebook for Developers](https://developers.facebook.com).
-2. Ouvrez ou créez votre application.
-3. Notez les valeurs des zones **ID application** et **Valeur confidentielle de l'application**. Vous en aurez besoin pour configurer votre projet Web
-pour authentification Facebook dans le tableau de bord {{site.data.keyword.amashort}}.
-4. Ajoutez la plateforme **Site Web**, si elle n'existe pas.
-5. Ajoutez ou ouvrez la connexion Facebook dans la liste **Produits**.
+1. Connectez-vous à votre compte sur le site [Facebook for Developers](https://developers.facebook.com). Pour plus d'informations sur la création d'une nouvelle appli, voir [Création d'une application sur le site Web Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Notez les valeurs des zones **ID application** et **Valeur confidentielle de l'application**. Vous en aurez besoin pour configurer votre projet Web
+pour l'authentification Facebook dans le tableau de bord de Mobile Client Access.
+1. Dans **Products List**, sélectionnez **Facebook Login**.
+4. Ajoutez la plateforme **Web**, si elle n'existe pas.
 6. Entrez l'URI de noeud final de rappel du serveur d'autorisation dans la zone **URI de redirection OAuth
-valides**. Vous pouvez identifier cet URI de redirection d'autorisation dans la procédure de configuration du tableau de bord {{site.data.keyword.amashort}} qui suit.
+valides**. Vous pouvez ajouter cette valeur après avoir configuré votre service {{site.data.keyword.amashort}} dans les étapes suivantes.
 7. Enregistrez les changements.
 
 
 ## Configuration de {{site.data.keyword.amashort}} pour l'authentification Facebook
 {: #facebook-auth-config-ama}
 
-Une fois que vous disposez de votre ID d'application et de la valeur confidentielle Facebook et que votre application Facebook a été configurée pour servir les clients Web, vous pouvez activer l'authentification Facebook dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
+Une fois que vous disposez de votre ID d'application et de la valeur confidentielle Facebook et que votre application Facebook for Developers a été configurée pour servir les clients Web, vous pouvez activer l'authentification Facebook dans le tableau de bord {{site.data.keyword.amashort}}.
 
-1. Ouvrez le tableau de bord {{site.data.keyword.Bluemix_notm}}.
-2. Cliquez sur la vignette de l'application pertinente pour charger l'application.
-3. Cliquez sur la vignette du service {{site.data.keyword.amashort}}.
-4. Cliquez sur le bouton **Configurer** dans le panneau **Facebook**.
-5. Notez la valeur de la zone de texte **Mobile Client Access Redirect URI for Facebook Developer Console**. Vous devez ajouter cette valeur à la zone relative aux URI de redirection OAuth valides dans la connexion Facebook du portail des développeurs Facebook à l'étape six de la procédure Configuration d'une application Facebook pour votre site Web.
-6. Entrez l'**ID d'application** et la **Valeur confidentielle de l'application** Facebook.
+1. Ouvrez le tableau de bord de service {{site.data.keyword.amashort}}.
+1. Dans l'onglet **Gérer**, activez **Autorisation**.
+1. Développez la section **Facebook**. 
+1. Sélectionnez **Ajouter Facebook à une application Web**. 
+5. Notez la valeur de la zone de texte **URI de redirection Mobile Client Access pour Facebook for Developers**. Vous devez ajouter cette valeur à la zone relative aux **URI de redirection OAuth valides** dans la **connexion Facebook** du portail des développeurs Facebook.
+6. Entrez l'**ID application** et la **Valeur confidentielle de l'application** obtenus sur le site Web Facebook for Developers.
 7. Entrez l'URI de redirection dans **URI de redirection de votre application Web**. Cette valeur est celle de l'URI de redirection à laquelle accéder
 à l'aboutissement du processus d'autorisation et est déterminée par le développeur.
 8. Cliquez sur **Sauvegarder**.
@@ -62,7 +60,7 @@ Une fois que vous disposez de votre ID d'application et de la valeur confidentie
 {: #facebook-auth-flow}
 
 La variable d'environnement `VCAP_SERVICES` est créée automatiquement pour chaque instance de service {{site.data.keyword.amashort}}
-et contient les propriétés requises pour le processus d'autorisation. Elle est constituée d'un objet JSON et peut être affichée en cliquant sur **Variables d'environnement** dans votre application.
+et contient les propriétés requises pour le processus d'autorisation. Elle se compose d'un objet JSON et vous pouvez la visualiser dans l'onglet **Données d'identification pour le service** du tableau de bord de service de {{site.data.keyword.amashort}}.
 
 Pour démarrer le processus d'autorisation :
 
@@ -70,7 +68,9 @@ Pour démarrer le processus d'autorisation :
 (`clientId`) depuis les données d'identification du service stockées dans la variable
 d'environnement `VCAP_SERVICES`. 
 
-	**Remarque :** si vous avez ajouté le service {{site.data.keyword.amashort}} dans votre application avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. A la place, utilisez les URL suivantes, selon votre région {{site.data.keyword.Bluemix_notm}} : 
+	`var cfEnv = require("cfenv");` 
+
+	**Remarque :** si vous avez ajouté le service {{site.data.keyword.amashort}} dans votre application avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final de jeton dans les **Données d'identification pour le service**. A la place, utilisez les URL suivantes, selon votre région {{site.data.keyword.Bluemix_notm}} : 
  
 	Sud des Etats-Unis : 
 
@@ -106,12 +106,12 @@ d'environnement `VCAP_SERVICES`.
 		if (req.session.userIdentity){   
 			next()
      } else {   
-  // If not - redirect to authorization server   
-        var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
-        var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
-        var clientId = mcaCredentials.clientId;   
-        var redirectUri = "http://some-server/oauth/callback"; 
-         // Your web application redirect URI   
+			// If not - redirect to authorization server   
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
+			var clientId = mcaCredentials.clientId;   
+			var redirectUri = "http://some-server/oauth/callback"; 
+			// Your Web application redirect URI   
 
 			var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;

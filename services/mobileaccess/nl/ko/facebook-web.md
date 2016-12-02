@@ -2,13 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-06-15"
 
 ---
 
 # 웹 앱에서 Facebook 인증 사용
-
-마지막 업데이트 날짜: 2016년 6월 15일
-{: .last-updated}
+{: #facebook_web}
 
 Facebook을 사용하여 웹 앱에서 사용자를 인증하십시오.
 
@@ -86,5 +85,3 @@ grant_type='authorization_code'
 ## 인증 테스트
 이제 보호 리소스 요청을 시작할 수 있습니다.
 보호 리소스의 모든 요청은 권한 요청 헤더 필드에 있는 `access_token`을 포함해야 합니다.
-
-

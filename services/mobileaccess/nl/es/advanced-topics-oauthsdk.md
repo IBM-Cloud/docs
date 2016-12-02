@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-02"
+
 ---
 
 # Comunicación entre servicios y aplicaciones de fondo
@@ -41,7 +42,7 @@ var options = {
 	// Como alternativa, puede obtener los valores de estas propiedades pulsando Mostrar credenciales
 	// en el icono del servicio {{site.data.keyword.amashort}} del panel de control de la aplicación de {{site.data.keyword.Bluemix_notm}}
 
-	appId: "appId",				// Bleumix applicationGUID, a.k.a tenantId
+	appId: "tenantID",				// a.k.a. Bluemix applicationGUID
 	clientId: "clientId",			
 	secret: "secret",
 	serverUrl: "serverUrl"

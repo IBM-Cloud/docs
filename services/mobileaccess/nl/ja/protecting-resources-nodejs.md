@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-27"
+
 ---
 
 # {{site.data.keyword.amashort}} を使用した Node.js リソースの保護

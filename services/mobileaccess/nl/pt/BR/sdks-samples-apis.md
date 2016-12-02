@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016 lastupdated: "2016-10-02"
+  years: 2015, 2016 lastupdated: "2016-10-30"
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,7 +11,9 @@ copyright:
 # {{site.data.keyword.amashort}} SDKs, amostras e referência de API
 
 
-Para incluir {{site.data.keyword.amafull}} SDKs em seu aplicativo, escolha os SDKs que desejar usar. Em seguida, configure seu
+Para incluir {{site.data.keyword.amafull}} SDKs
+para seu cliente aplicativo, escolha os SDKs que você deseja
+usar. Em seguida, configure seu
 gerenciador de dependência para puxar os SDKs em seu aplicativo.
 {:shortdesc}
 
@@ -19,7 +22,8 @@ gerenciador de dependência para puxar os SDKs em seu aplicativo.
 ## Core SDK
 {: #coresdk}
 
-O Core SDK inclui as APIs para ativar a autenticação customizada, a criação de log e o monitoramento do seu aplicativo da web.
+O Core SDK inclui APIs para ativar a autenticação
+customizada e criação de log.
 
 ### Android
 {: #coresdk-android}
@@ -85,7 +89,7 @@ pod 'IMFCore'
 
 Instale o plug-in do Mobile Client Access Cordova:
 ```Bash
-cordova plugin add ibm-mfp-core
+cordova plugin add bms-core
 ```
 {: codeblock}
 

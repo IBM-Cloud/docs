@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -11,8 +12,6 @@ lastupdated: "2016-10-02"
 
 # 使用 Facebook 凭证认证用户
 {: #facebook-auth-overview}
-
-
 
 您可以将 {{site.data.keyword.amafull}} 服务配置为通过将 Facebook 用作身份提供者来保护资源。您的移动或 Web 应用程序用户可以使用自己的 Facebook 凭证进行认证。
 
@@ -53,13 +52,13 @@ Facebook 集成进
 {{site.data.keyword.amashort}} Web 应用程序请求流类似于移动客户端流。但是，{{site.data.keyword.amashort}} 保护 Web 应用程序而非 {{site.data.keyword.Bluemix_notm}} 后端资源。
 
   * Web 应用程序会发送初始请求（例如，通过登录表单）。
-  * 最终重定向会指向 Web 应用程序本身的受保护区域，而非后端受保护资源。 
+  * 最终重定向会指向 Web 应用程序本身的受保护区域，而非后端受保护资源。
 
 
-## 从 Facebook for Developers Web 站点获取 Facebook 应用程序标识
+## 在 Facebook for Developers Web 站点上创建应用程序。
 {: #facebook-appID}
 
-要开始将 Facebook 用作身份提供者，必须在 Facebook for Developers Web 站点上创建应用程序。在此过程中，将创建 Facebook 应用程序标识。这是供 Facebook 用于确定哪个应用程序正在尝试进行连接的唯一标识。 
+要开始将 Facebook 用作身份提供者，必须在 Facebook for Developers Web 站点上创建应用程序。在此过程中，将创建 Facebook 应用程序标识。这是供 Facebook 用于确定哪个应用程序正在尝试进行连接的唯一标识。
 
 为移动应用程序或 Web 应用程序配置 Facebook 认证时需要此值。
 
@@ -73,7 +72,7 @@ Facebook 集成进
 
 1. 可能会显示安全性检查。执行请求的操作。
 
-1. 这将显示**产品设置**页面。复制显示的**应用程序标识**。 
+1. 这将显示**产品设置**页面。复制显示的**应用程序标识**。
 
 ## 后续步骤
 {: #next-steps}

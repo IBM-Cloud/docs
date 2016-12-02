@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-02"
+
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-
 
 # 设置 iOS Swift SDK
 {: #getting-started-ios}
@@ -16,15 +16,17 @@ lastupdated: "2016-10-10"
 
 {:shortdesc}
 
-**注：**Objective-C SDK 会将监视数据报告给 {{site.data.keyword.amashort}} 服务的监视控制台。如果您依赖于 {{site.data.keyword.amashort}} 服务的监视功能，那么您需要继续使用 Objective-C SDK。
-
-虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用 Objective-C SDK，以支持此新的 Swift SDK。 
+虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用 Objective-C SDK，以支持此新的 Swift SDK。
 
 
 ## 开始之前
 {: #before-you-begin}
 您必须具有：
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
+* {{site.data.keyword.Bluemix_notm}} 应用程序的实例。
+* {{site.data.keyword.amafull}} 服务的实例。
+* **TenantID**。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化 {{site.data.keyword.amashort}} 授权管理器。
+* **应用程序路径**。这是后端应用程序的 URL。您将需要此值来向其受保护端点发送请求。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`美国南部`、`英国`或`悉尼`，并对应于代码中需要的 SDK 值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。您将需要此值来初始化 {{site.data.keyword.amashort}} SDK。
 * Xcode 项目。有关如何设置 iOS 开发环境的更多信息，请参阅 [Apple Developer Web 站点](https://developer.apple.com/support/xcode/)。
 
 
@@ -74,13 +76,15 @@ use_frameworks!
 
 	`open {your-project-name}.xcworkspace`
 
+### 启用 iOS 的密钥链共享
+{: #enable_keychain}
+
+启用`密钥链共享`。转至`功能`选项卡，然后在 Xcode 项目中将`密钥链共享`切换为`开启`。
+
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #init-mca-sdk-ios}
 
- 通过传递 `applicationGUID` 参数来初始化 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
- 
-
-1. 获取服务参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开服务。单击**移动选项**。`applicationRoute` 和 `tenantId`（也称为 `appGUID`）值会显示在**路由**和**应用程序 GUID/TenantId** 字段中。您将需要这些值来初始化 SDK，并将请求发送到后端应用程序。
+ 通过传递 `tenantId` 参数来初始化 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
 
 1. 将所需框架导入要使用 {{site.data.keyword.amashort}} 客户端 SDK 的类中。
 
@@ -105,22 +109,24 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 	}
  ```
 
-* 将 `tenantId` 值替换为从**移动选项**获取的值。请参阅**步骤 1**。
-* 将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。显示的区域值应为以下某个值：**美国南部**、**英国**或**悉尼**，并对应于代码中需要的常量值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
+* 将 `tenantId` 值替换为从**移动选项**获取的值。 
+* 将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。 
 
-   
+有关这些值的信息，请参阅[开始之前](#before-you-begin)。 
+
+
 ## 对移动后端应用程序发起请求
 {: #request}
 
 初始化 {{site.data.keyword.amashort}} 客户端 SDK 后，可以开始对移动后端应用程序发起请求。
 
 1. 尝试在浏览器中对移动后端应用程序上的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`，将 `{applicationRoute}` 替换为从**移动选项**中检索到的 **applicationRoute** 值（请参阅[初始化 Mobile Client Access 客户端 SDK](#init-mca-sdk-ios)）。例如：
- 
+
 
 	`http://my-mobile-backend.mybluemix.net/protected
 	`
 
-	使用 MobileFirst Services Starter 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会在浏览器中返回 `Unauthorized` 消息。
+	由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会在浏览器中返回 `Unauthorized` 消息。
 
 
 
@@ -147,7 +153,7 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
  response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
  ```
 {: screen}
- 
+
 ## 后续步骤
 {: #next-steps}
 连接到受保护端点时，无需任何凭证。如果需要用户登录到您的应用程序，那么必须配置 Facebook、Google 或定制认证。

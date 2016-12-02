@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -11,8 +12,6 @@ lastupdated: "2016-10-02"
 
 # Authentification des utilisateurs à l'aide des données d'identification Facebook
 {: #facebook-auth-overview}
-
-
 
 Vous pouvez configurer le service {{site.data.keyword.amafull}} pour protéger des ressources en utilisant
 Facebook comme fournisseur d'identité. Les utilisateurs de votre application mobile ou Web peuvent utiliser leurs données d'identification Facebook
@@ -40,26 +39,26 @@ Le diagramme suivant représente l'intégration entre {{site.data.keyword.amasho
 * Le SDK client de {{site.data.keyword.amashort}} utilise le SDK Facebook pour lancer le processus d'authentification. Lorsque l'authentification aboutit, le SDK Facebook renvoie un jeton d'accès Facebook.
 * Le jeton d'accès Facebook est considéré comme une réponse à la demande d'authentification. Il est envoyé au service {{site.data.keyword.amashort}}.
 * Le service valide la réponse à la demande d'authentification auprès des serveurs Facebook.
-* Si la validation aboutit, le service {{site.data.keyword.amashort}} génère un en-tête d'autorisation et le renvoie au SDK client de {{site.data.keyword.amashort}}. L'en-tête d'autorisation contient deux jetons : un jeton qui contient des informations sur les droits d'accès, et un autre jeton qui contient des informations sur l'utilisateur, le périphérique et l'application.
+* Si la validation aboutit, le service {{site.data.keyword.amashort}} génère un en-tête d'autorisation et le renvoie au SDK client de {{site.data.keyword.amashort}}. L'en-tête d'autorisation contient deux jetons : un jeton qui contient des informations sur les droits d'accès, et un autre jeton qui contient des informations sur l'utilisateur, l'appareil et l'application.
 * A partir de ce moment, toutes les demandes faites avec le SDK client de {{site.data.keyword.amashort}} contiennent un nouvel en-tête d'autorisation.
 * Le SDK client de {{site.data.keyword.amashort}} renvoie automatiquement la demande d'origine qui avait déclenché le flux d'autorisation.
 * Le SDK serveur {{site.data.keyword.amashort}} extrait l'en-tête d'autorisation de la requête, la valide auprès du service
 {{site.data.keyword.amashort}} et octroie l'accès à une ressource de back end.
 
-### Flux de requête d'une application Web {{site.data.keyword.amashort}}
+### Flux de demande d'une application Web {{site.data.keyword.amashort}}
 {: #mca-facebook-web-sequence}
 
-Le flux de requête d'une application Web {{site.data.keyword.amashort}} est similaire à celui d'un client d'une application mobile. Toutefois,
+Le flux de demande d'une application Web {{site.data.keyword.amashort}} est similaire à celui d'un client d'une application mobile. Toutefois,
 {{site.data.keyword.amashort}} protège l'application et non pas une ressource de back end {{site.data.keyword.Bluemix_notm}}.
 
   * La requête initiale est envoyée par l'application Web (depuis un formulaire de connexion, par exemple).
-  * La redirection finale vise la zone protégée de l'application Web elle-même et non pas une ressource de back end protégée. 
+  * La redirection finale vise la zone protégée de l'application Web elle-même et non pas une ressource de back end protégée.
 
 
-## Acquisition d'un ID d'application Facebook sur le site Web Facebook for Developers
+## Création d'une application sur le site Web Facebook for Developers
 {: #facebook-appID}
 
-Pour commencer à utiliser Facebook en tant que fournisseur d'identité, créez une application sur le site Web Facebook for Developers. Durant ce processus, un ID d'application Facebook est créé. Il s'agit d'un identificateur unique utilisé par Facebook pour savoir quelle application tente de se connecter.  
+Pour commencer à utiliser Facebook en tant que fournisseur d'identité, créez une application sur le site Web Facebook for Developers. Durant ce processus, un ID d'application Facebook est créé. Il s'agit d'un identificateur unique utilisé par Facebook pour savoir quelle application tente de se connecter.
 
 Vous aurez besoin de cette valeur pour
 configurer l'authentification Facebook
@@ -75,7 +74,7 @@ pour votre application mobile ou Web.
 
 1. Un contrôle de sécurité peut apparaître. Effectuez l'action requise.
 
-1. La page relative à la configuration du produit s'affiche. Copiez l'**ID d'appli** qui s'affiche. 
+1. La page relative à la configuration du produit s'affiche. Copiez l'**ID d'appli** qui s'affiche.
 
 ## Etapes suivantes
 {: #next-steps}

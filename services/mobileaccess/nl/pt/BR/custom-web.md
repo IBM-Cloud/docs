@@ -1,15 +1,12 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016 lastupdated: "2016-06-16"
 
 ---
 
 # Autenticação customizada do app da web
 {: #custom-web}
-
-Última atualização: 16 de junho de 2016
-{: .last-updated}
 
 Inclua a autenticação customizada em seu app da web
 
@@ -46,7 +43,7 @@ Para iniciar o processo de autorização:
 1. Redirecione de seu app da web para o terminal do servidor de autorizações a seguir:
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
-  
+
   usando os parâmetros de consulta a seguir:
    ```
    response_type=’authorization_code’
@@ -75,8 +72,8 @@ A resposta retornada após uma autenticação bem-sucedida contém o código de 
  redirect_uri = <redirect_uri>
  code = <authorization code>
  ```
-  O parâmetro `redirect_uri` deve corresponder ao `redirect_uri` da etapa 1. O código de autorização foi retornado pela solicitação na etapa 2. 
-  
+  O parâmetro `redirect_uri` deve corresponder ao `redirect_uri` da etapa 1. O código de autorização foi retornado pela solicitação na etapa 2.
+
   Certifique-se de enviar esta solicitação `POST` no período de 10 min, uma vez que o código de concessão é válido por 10 min, no máximo.
 
 O corpo de resposta `POST` contém o *access_token* e o
@@ -88,5 +85,3 @@ O corpo de resposta `POST` contém o *access_token* e o
 Agora é possível começar a fazer solicitações para seus recursos protegidos.
 Todas as solicitações para recursos protegidos devem conter o `access_token`.
 Envie o token de acesso no campo de cabeçalho `the-Authorization-request`.
-
-

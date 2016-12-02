@@ -2,31 +2,32 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-06"
+
 ---
 
 # Informationen zu {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 
-Der {{site.data.keyword.amafull}}-Service stellt Authentifizierungs- und Überwachungsservices für mobile Anwendungen und Webanwendungen bereit, die auf Cloudressourcen zugreifen, die per Hosting in {{site.data.keyword.Bluemix_notm}} zur Verfügung gestellt werden.
+Der {{site.data.keyword.amafull}}-Service stellt Authentifizierungsservices für mobile Anwendungen und Webanwendungen bereit, die auf Cloudressourcen zugreifen, die per Hosting in {{site.data.keyword.Bluemix_notm}} zur Verfügung gestellt werden.
 
-Sie können den {{site.data.keyword.amashort}}-Service verwenden, um Node.js- und Liberty for Java&trade;-Anwendungen, die in {{site.data.keyword.Bluemix_notm}} gehostet werden, durch verschiedene Authentifizierungstypen zu schützen. Durch die Instrumentierung Ihrer mobilen Anwendungen mit dem {{site.data.keyword.amashort}}-SDK haben Sie die Möglichkeit, Authentifizierungsfunktionen zu nutzen, die durch den {{site.data.keyword.amashort}}-Service bereitgestellt werden. Clientseitige Protokolldaten werden automatisch erfasst und auf Anforderung an den {{site.data.keyword.amashort}}-Service gesendet. Über das {{site.data.keyword.amashort}}-Dashboard können Sie die verschiedenen Authentifizierungstypen konfigurieren und die Daten anzeigen, die durch das clientseitige SDK erfasst und gesendet werden.
+Sie können den {{site.data.keyword.amashort}}-Service verwenden, um Node.js- und Liberty for Java&trade;-Anwendungen, die in {{site.data.keyword.Bluemix_notm}} gehostet werden, durch verschiedene Authentifizierungstypen zu schützen. Durch die Instrumentierung Ihrer mobilen Anwendungen mit dem {{site.data.keyword.amashort}}-SDK haben Sie die Möglichkeit, Authentifizierungsfunktionen zu nutzen, die durch den {{site.data.keyword.amashort}}-Service bereitgestellt werden. Über das {{site.data.keyword.amashort}}-Dashboard können Sie die verschiedenen Authentifizierungstypen konfigurieren und die Daten anzeigen, die durch das clientseitige SDK erfasst und gesendet werden.
 
 **Anmerkung**: Der {{site.data.keyword.amashort}}-Service wurde früher als Advanced Mobile Access bezeichnet.
 
 ## Komponenten
 {: #components}
 
-* **{{site.data.keyword.amashort}}-Dashboard**: Dient zur Konfiguration verschiedener Authentifizierungstypen und zur Überwachung der Leistung mobiler Anwendungen sowie von Analysedaten, Nutzungsstatistiken und Einheitenprotokollen.
-* **{{site.data.keyword.amashort}}-Client-SDK**: Instrumentiert mobile Anwendungen zur Verwendung der {{site.data.keyword.amashort}}-Funktionalität. Unterstützte Plattformen: iOS 8+, Android 4+ und Cordova.
+* **{{site.data.keyword.amashort}}-Dashboard**: Konfiguriert verschiedene Authentifizierungstypen
+* **{{site.data.keyword.amashort}}-Client-SDK**: Instrumentiert mobile Anwendungen zur Verwendung der {{site.data.keyword.amashort}}-Funktionalität. Unterstützte Plattformen: iOS 8+, Android 4+, Cordova und Webanwendungen.
 * **{{site.data.keyword.amashort}}-Server-SDK**: Schützt Ressourcen, die in {{site.data.keyword.Bluemix_notm}} gehostet werden. Gegenwärtig unterstützte Laufzeiten sind Node.js und Liberty for Java&trade;.
 
 ## Authentifizierungstypen
 {: #authtypes}
 Sie können die folgenden Typen von Authentifizierung in Ihrer mobilen App verwenden:
-* **Facebook**: Facebook als Identitätsprovider verwenden. Ihre Benutzer melden sich bei der mobilen App mit ihren Facebook-Berechtigungsnachweisen an.
-* **Google**: Google als Identitätsprovider verwenden. Ihre Benutzer melden sich bei der mobilen App mit ihren Google+-Berechtigungsnachweisen an.
+* **Facebook**: Facebook als Identitätsprovider verwenden. Ihre Benutzer melden sich bei der mobilen oder Web-App mit ihren Facebook-Berechtigungsnachweisen an.
+* **Google**: Google als Identitätsprovider verwenden. Ihre Benutzer melden sich bei der mobilen oder Web-App mit ihren Google+-Berechtigungsnachweisen an.
 * **Angepasst**: Eigenen Identitätsprovider erstellen. Sie können vollständig steuern, welche Arten von Informationen erfasst und validiert werden.
 
 ## Architekturübersicht

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-27"
+
 ---
 
 {:shortdesc: .shortdesc} {:codeblock:.codeblock}
@@ -10,11 +11,8 @@ lastupdated: "2016-10-02"
 # Protezione delle risorse di back-end con il servizio {{site.data.keyword.amashort}}
 {: #protecting-resources}
 
-Ultimo aggiornamento: 22 agosto 2016
-{: .last-updated}
 
-
-Con il servizio {{site.data.keyword.amafull}}, puoi proteggere le tue applicazioni di back-end basate su Java e Node.js in esecuzione su {{site.data.keyword.Bluemix_notm}} con monitoraggio e sicurezza OAth abilitati ai dispositivi mobili. 
+Con il servizio {{site.data.keyword.amafull}}, puoi proteggere le tue applicazioni di back-end basate su Java e Node.js in esecuzione su {{site.data.keyword.Bluemix_notm}} con monitoraggio e sicurezza OAth abilitati ai dispositivi mobili.
 {:shortdesc}
 
 ## Prima di cominciare

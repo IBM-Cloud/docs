@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02" 
+lastupdated: "2016-11-07"
+
 ---
 
 # 配置 {{site.data.keyword.amashort}} 进行定制认证
@@ -13,23 +14,18 @@ lastupdated: "2016-10-02"
 
 ## 开始之前
 {: #custom-dash-begin}
-* 请阅读[入门](index.html)。
-* 使用 {{site.data.keyword.amashort}} 服务器 SDK 保护后端应用程序。有关更多信息，请参阅[保护资源](protecting-resources.html)。
-* 让定制身份提供者应用程序开始运行。
+您必须具有：
+* {{site.data.keyword.amafull}} 服务的实例。
+* 定制身份提供者应用程序。
 
-## 在 {{site.data.keyword.Bluemix}}“仪表板”中配置定制认证
+## 在 {{site.data.keyword.amafull}}“仪表板”中配置定制认证
 {: #custom-dash-config}
-使用 {{site.data.keyword.Bluemix}}“仪表板”可配置定制认证。
+使用 {{site.data.keyword.amafull}}“仪表板”可配置定制认证。
 
-1. 在 {{site.data.keyword.Bluemix}}“仪表板”中打开应用程序。
-
-1. 单击**移动选项**，然后记录**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`)。您需要这些值才能初始化 SDK。
-
-1. 单击 {{site.data.keyword.amashort}} 磁贴。这将装入 {{site.data.keyword.amashort}}“仪表板”。
-
-1. 单击**定制**磁贴。
-
-1. 输入定制身份提供者的**域名**和**基本 URL**，然后保存更改。
+1. 在 {{site.data.keyword.amafull}}“仪表板”中打开服务。
+1. 在**管理**选项卡中，将**授权**切换为“开启”。
+1. 展开**定制**部分。
+1. 输入**域名**和**定制身份提供者 URL**。仅 Web 应用程序需要 **Web 应用程序重定向 URI** 值。
 
 ## 后续步骤
 {: #next-steps}

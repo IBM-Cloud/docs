@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
 
 # Création d'un fournisseur d'identité personnalisé
@@ -18,7 +19,7 @@ dans le tableau de bord {{site.data.keyword.amashort}}.
 * `tenant_id` : Identificateur unique du titulaire. Lorsque {{site.data.keyword.amashort}} appelle cette API, il fournit toujours
 l'identificateur global unique de l'application {{site.data.keyword.Bluemix}} (`applicationGUID`).
 * `realm_name` : Nom de domaine personnalisé défini dans le tableau de bord {{site.data.keyword.amashort}}.
-* `request_type` : Un type parmi :
+* `request_type` : Spécifie l'une de ces options :
 	* `startAuthorization` : Première étape du processus d'authentification. Le fournisseur d'identité personnalisé doit répondre par le statut "challenge", "success" ou "failure".
 	* `handleChallengeAnswer` : Gère la réponse à une demande d'authentification d'un client mobile.
 
@@ -40,8 +41,7 @@ Pour garantir la souplesse maximale du processus d'authentification, un fourniss
 }
 ```
 
-Le fournisseur d'identité personnalisé peut répondre par une demande d'authentification, ou
-par un succès ou un échec immédiat. Le statut de la réponse HTTP doit être `HTTP 200`, et son JSON doit contenir les propriétés suivantes :
+Le fournisseur d'identité personnalisé peut répondre par une demande d'authentification, ou par un succès ou un échec immédiat. Le statut de la réponse HTTP doit être `HTTP 200`, et son JSON doit contenir les propriétés suivantes :
 
 * `status` : Statut de la demande : `success`(succès), `challenge` (demande) ou `failure` (échec).
 * `stateId` (facultatif) : Identificateur de type chaîne généré de façon aléatoire pour identifier la session auprès du client mobile. Cet attribut peut être omis si le fournisseur d'identité personnalisé ne stocke pas les états.
@@ -115,16 +115,13 @@ L'objet identité de l'utilisateur est utilisé par le service {{site.data.keywo
 {: #custom-security}
 
 Chaque demande du service {{site.data.keyword.amashort}} à un fournisseur d'identité personnalisé contient un en-tête d'autorisation lui permettant de vérifier que la demande provient d'une source autorisée. Même si cette opération n'est pas obligatoire, il est recommandé de valider l'en-tête d'autorisation en instrumentant le fournisseur d'identité personnalisé avec un SDK serveur de {{site.data.keyword.amashort}}. Pour
-utiliser ce SDK, votre fournisseur d'identité personnalisé doit être implémenté avec Node.js ou Liberty
-for Java&trade; et s'exécuter sur {{site.data.keyword.Bluemix_notm}}.
+utiliser ce SDK, votre fournisseur d'identité personnalisé doit être implémenté avec Node.js ou Liberty for Java&trade; et s'exécuter sur {{site.data.keyword.Bluemix_notm}}.
 
 L'en-tête d'autorisation contient des informations sur le client mobile et l'appli mobile qui a déclenché le processus d'authentification. Vous pouvez utiliser le contexte de sécurité pour récupérer ces données. Pour plus d'informations, voir [Protection des ressources](protecting-resources.html).
 
 ## Exemple d'implémentation d'un fournisseur d'identité personnalisé
 {: #custom-sample}
-Vous pouvez utiliser comme référence l'un des exemples d'implémentation Node.js suivants de fournisseur d'identité personnalisé lorsque vous
-développez votre
-fournisseur d'identité personnalisé. Téléchargez le code d'application complet depuis les référentiels GitHub.
+Vous pouvez utiliser comme référence l'un des exemples d'implémentation Node.js suivants de fournisseur d'identité personnalisé lorsque vous développez votre fournisseur d'identité personnalisé. Téléchargez le code d'application complet depuis les référentiels GitHub.
 
 * [Exemple simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
 * [Exemple avancé](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)

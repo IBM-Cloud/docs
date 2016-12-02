@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-09"
+lastupdated: "2016-10-27"
+
 ---
 
 # Configurazione dell'autenticazione personalizzata per la tua applicazione iOS (Swift SDK) {{site.data.keyword.amashort}}
@@ -15,7 +16,15 @@ Configura la tua applicazione iOS che sta utilizzando l'autenticazione personali
 ## Prima di cominciare
 {: #before-you-begin}
 
-Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.data.keyword.amashort}} configurato per utilizzare un provider di identità personalizzato.  La tua applicazione mobile deve anche essere strumentata con l'SDK client {{site.data.keyword.amashort}}.  Per ulteriori informazioni, consulta:
+Prima di iniziare devi disporre di:
+
+* Una risorsa che sia protetta da un'istanza del servizio {{site.data.keyword.amashort}} configurata per utilizzare un provider di identità personalizzato (consulta [Configurazione dell'autenticazione personalizzata](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Il tuo valore **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}. Fai clic sul pulsante **Opzioni per dispositivi mobili**. Il valore `tenantId` (noto anche come `appGUID`)  viene visualizzato nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione.
+* Il tuo nome **Realm**. Questo è il valore che hai specificato nel campo **Nome realm** della sezione **Personalizzato** nella scheda **Gestione** del dashboard {{site.data.keyword.amashort}}.
+* L'URL della tua applicazione di back-end (**Rotta applicazione**). Avrai bisogno di questo valore per inviare le richieste agli endpoint protetti della tua applicazione di back-end.
+* La tua **Regione** {{site.data.keyword.Bluemix_notm}}. Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione visualizzato deve essere uno dei seguenti: **Stati Uniti Sud**, **Regno Unito** o **Sydney**, e corrisponde alla costante richiesta nel codice:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`.
+
+Per ulteriori informazioni, consulta:
  * [Introduzione a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
  * [Configurazione dell'SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
  * [Utilizzo di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -23,30 +32,10 @@ Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.
  * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
-## Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata
- {: #custom-auth-ios-configmca}
-
- 1. Apri il tuo dashboard del servizio. 
- 
- 1. Fai clic su **Opzioni mobili** e annota i valori per **Rotta** (*applicationRoute*) e **GUID applicazione / TenantId** (*serviceTenantID*). Questi valori ti servono quando inizializzi l'SDK e invii le richieste all'applicazione di backend. 
-
- 1. Fai clic sul tile {{site.data.keyword.amashort}}. Il dashboard {{site.data.keyword.amashort}} viene caricato.
-
- 1. Fai clic sul tile **Custom**.
-
- 1. In **Realm name**, specifica la tua area di autenticazione personalizzata.
-
- 1. In **URL**, specifica la tua applicationRoute.
-
- 1. Fai clic su **Save**.
-
-
-
-
 ### Inizializzazione dell'SDK client
 {: #custom-ios-sdk-initialize}
 
-Inizializza l'SDK passando il parametro `applicationGUID` (tenantId). Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione
+Inizializza l'SDK passando il parametro `applicationGUID` (**TenantId**). Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione.
 
 1. Importa i framework richiesti nella classe dove vuoi utilizzare l'SDK client {{site.data.keyword.amashort}}.
 
@@ -101,13 +90,9 @@ Inizializza l'SDK passando il parametro `applicationGUID` (tenantId). Un punto c
 ```
 
 Nel codice:
-
+* Sostituisci `MCAServiceTenantId` con il valore **TenantId** e `<applicationBluemixRegion>` con la tua **Regione** {{site.data.keyword.amashort}} (consulta [Prima di cominciare](##before-you-begin)). 
+* Utilizza il `realmName` che hai specifico nel dashboard {{site.data.keyword.amashort}} (consulta [Configurazione dell'autenticazione personalizzata](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
 * Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona Avatar ![icona Avatar](images/face.jpg "icona Avatar")  nella barra del menu per aprire il widget **Account e supporto**.  Il valore della regione visualizzato deve essere uno dei seguenti: **Stati Uniti Sud**, **Regno Unito** o **Sydney**, e corrisponde alla costante richiesta nel codice:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`.
-* Sostituisci `"<yourProtectedRealm>"` con il valore **Realm name** definito nel tile **Custom** del dashboard {{site.data.keyword.amashort}}. 
-* Sostituisci `"<serviceTenantID>"` con il valore **tenantId** richiamato da **Opzioni mobili**. Consulta [Configurazione di Mobile Client Access per l'autenticazione personalizzata](#custom-auth-ios-configmca).
-
-### Inizializzazione dell'SDK client
-{: #custom-ios-sdk-initialize}
    
   
 ## Verifica dell'autenticazione

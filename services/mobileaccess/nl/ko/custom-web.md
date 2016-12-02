@@ -2,14 +2,12 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-16"
 
 ---
 
 # 웹 앱 사용자 정의 인증
 {: #custom-web}
-
-마지막 업데이트 날짜: 2016년 6월 16일
-{: .last-updated}
 
 웹 앱에 사용자 정의 인증 추가
 
@@ -47,7 +45,7 @@ copyright:
 경로를 재지정하십시오.
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
-  
+
     다음 조회 매개변수를 사용합니다. 
    ```
 response_type=’authorization_code’
@@ -78,7 +76,7 @@ grant_type = 'authorization_code'
  code = <authorization code>
  ```
 `redirect_uri` 매개변수는 1단계의 `redirect_uri`와 일치해야 합니다. 권한 코드는 2단계의 요청을 통해 리턴됩니다.
-  
+
     권한 부여 코드는 최대 10분 동안 유효하므로 이 `POST` 요청을 10분 내에 보내도록 하십시오.
 
 `POST` 응답 본문에 base64로 인코딩된 *access_token* 및
@@ -90,5 +88,3 @@ grant_type = 'authorization_code'
 이제 보호 리소스 요청을 시작할 수 있습니다.
 모든 보호 리소스 요청에는 `access_token`이 포함되어야 합니다.
 `the-Authorization-request` 헤더 필드로 액세스 토큰을 보내십시오. 
-
-

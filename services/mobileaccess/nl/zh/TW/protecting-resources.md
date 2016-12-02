@@ -2,16 +2,14 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-27"
+
 ---
 
-{:shortdesc: .shortdesc} {:codeblock:.codeblock}
+  
 
 # 使用 {{site.data.keyword.amashort}} 服務保護後端資源
 {: #protecting-resources}
-
-前次更新：2016 年 8 月 22 日
-{: .last-updated}
 
 
 有了 {{site.data.keyword.amafull}} 服務，您可以利用已啟用行動功能的 OAuth 安全及監視來保護 {{site.data.keyword.Bluemix_notm}} 上執行的 Node.js 及 Java 型後端應用程式。

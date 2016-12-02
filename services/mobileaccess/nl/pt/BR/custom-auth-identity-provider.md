@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016 lastupdated: "2016-10-02"
+  years: 2015, 2016 lastupdated: "2016-11-07"
+
 ---
 
 # Criando um provedor de identidade customizado
@@ -17,7 +18,7 @@ Para criar um provedor de identidade customizado, desenvolva um aplicativo da we
 o {{site.data.keyword.amashort}} chama essa API, ele sempre fornece o GUID
 do app {{site.data.keyword.Bluemix}} (`applicationGUID`).
 * `realm_name`: especifica o nome do domínio customizado definido no painel do {{site.data.keyword.amashort}}.
-* `request_type`: especifica um de:
+* `request_type`: especifica um destes:
 	* `startAuthorization`: especifica uma primeira etapa do processo de autenticação. O provedor de identidade customizado deve responder com um status "desafio", "sucesso" ou "falha".
 	* `handleChallengeAnswer`: manipula uma resposta do desafio de autenticação do cliente móvel.
 
@@ -44,7 +45,7 @@ Um provedor de identidade customizado pode responder com um desafio de autentica
 * `status`: especifica `success`, `challenge` ou `failure` da solicitação.
 * `stateId` (opcional): especifica um identificador de sequência gerado aleatoriamente para identificar a sessão de autenticação com o cliente móvel. Esse atributo poderá ser omitido se o provedor de identidade customizado não armazenar nenhum estado.
 * `challenge`: especifica um objeto JSON que representa um desafio de autenticação a ser enviado de volta para o cliente móvel. Esse atributo só será enviado para o cliente se o status estiver configurado como `challenge`.
-* `userIdentity`: especifica um objeto JSON que representa uma identidade do usuário.  A identidade do usuário consiste em propriedades, como `userName`, `displayName` e atributos.  Para obter mais informações, veja [Objeto de identidade do usuário](#custom-user-identity). Esta propriedade só será enviada para o cliente móvel se o status estiver configurado como `success`.
+* `userIdentity`: especifica um objeto JSON que representa uma identidade do usuário.  A identidade do usuário consiste em propriedades, como `userName`, `displayName` e atributos.  Para obter mais informações, consulte [Objeto de identidade do usuário](#custom-user-identity). Esta propriedade só será enviada para o cliente móvel se o status estiver configurado como `success`.
 
 Por exemplo:
 
@@ -116,7 +117,7 @@ Cada solicitação do serviço {{site.data.keyword.amashort}} para um provedor d
 implementado com o Node.js ou o Liberty for Java&trade; e executado no
 {{site.data.keyword.Bluemix_notm}}.
 
-O cabeçalho de autorização contém informações sobre o cliente móvel e o app móvel que acionou o processo de autenticação. É possível usar o contexto de segurança para recuperar esses dados. Para obter mais informações, veja [Protegendo recursos](protecting-resources.html).
+O cabeçalho de autorização contém informações sobre o cliente móvel e o app móvel que acionou o processo de autenticação. É possível usar o contexto de segurança para recuperar esses dados. Para obter mais informações, consulte [Protegendo recursos](protecting-resources.html).
 
 ## Implementação de amostra do provedor de identidade customizado
 {: #custom-sample}

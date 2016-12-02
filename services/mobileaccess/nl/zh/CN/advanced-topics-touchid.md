@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-27" 
+
 ---
 
 # 通过 Touch 标识授予访问权

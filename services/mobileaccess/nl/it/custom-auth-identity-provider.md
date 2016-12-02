@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
 
 # Creazione di un provider di identità personalizzato
@@ -18,7 +19,7 @@ dashboard {{site.data.keyword.amashort}}.
 * `id_tenant` : specifica l'identificativo univoco del tenant. Quando {{site.data.keyword.amashort}} richiama questa API, fornisce
 sempre il GUID dell'applicazione {{site.data.keyword.Bluemix}} (`applicationGUID`).
 * `nome_area_di_autenticazione` : specifica il nome dell'area di autenticazione personalizzata definita nel dashboard {{site.data.keyword.amashort}}.
-* `tipo_di_richiesta` : specifica uno dei seguenti:
+* `request_type` : specifica uno dei seguenti:
 	* `startAuthorization`: specifica un primo passo del processo di autenticazione. Il provider di identità personalizzato deve
 rispondere con uno stato di "challenge", "success" o "failure".
 	* `handleChallengeAnswer`: gestisce una risposta alla richiesta di verifica dell'autenticazione dal client mobile.

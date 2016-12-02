@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-2"
+
 ---
 
 # 사용자 정의 ID 제공자로 사용자 인증
@@ -41,10 +42,7 @@ lastupdated: "2016-10-02"
 {{site.data.keyword.amashort}} 웹 애플리케이션 요청 플로우는 모바일 클라이언트 플로우와 유사합니다. 그러나 {{site.data.keyword.amashort}}는 {{site.data.keyword.Bluemix_notm}} 백엔드 리소스 대신 웹 애플리케이션을 보호합니다. 
 
   * 초기 요청은 웹 애플리케이션에서 전송합니다(예: 로그인 양식에서).
-  * 최종 경로는 백엔드 보호 리소스보다 웹 애플리케이션 자체의 보호 영역으로 재지정됩니다. 
-
-
-
+  * 최종 경로는 백엔드 보호 리소스가 아니라 웹 애플리케이션 자체의 보호 영역으로 재지정됩니다. 
 
 ## 사용자 정의 ID 제공자 이해
 {: #custom-id-about}

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-09"
+lastupdated: "2016-11-02"
+
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -17,17 +18,26 @@ lastupdated: "2016-10-09"
 
 ## 开始之前
 {: #before-you-begin}
-您必须具有受配置为使用定制身份提供者的 {{site.data.keyword.amashort}} 服务实例保护的资源。您的移动应用程序还必须安装 {{site.data.keyword.amashort}} 客户端 SDK。有关更多信息，请参阅以下信息：
+开始之前，您必须具有：
+
+* 资源，该资源受 {{site.data.keyword.amashort}} 服务的实例保护，而该服务已配置为使用定制的身份提供者（请参阅[配置定制认证](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。  
+* **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
+* **域名**。这是在 {{site.data.keyword.amashort}}“仪表板”的**管理**选项卡中**定制**部分的**域名**字段中指定的值。
+* 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`美国南部`、`英国`或`悉尼`，并对应于 WebView Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
+
+有关更多信息，请参阅以下信息：
  * [{{site.data.keyword.amashort}} 入门](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [设置 Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
  * [使用定制身份提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [创建定制身份提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [配置 {{site.data.keyword.amashort}} 进行定制认证](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
-记录服务参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开服务。单击**移动选项**。`applicationRoute` 和 `tenantId`（也称为 `appGUID`）值会显示在**路由**和**应用程序 GUID/TenantId** 字段中。您将需要这些值来初始化 SDK，并将请求发送到后端应用程序。
+
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #custom-android-initialize}
+如果您的 Android 应用程序已经安装了 {{site.data.keyword.amashort}} Android SDK，那么可以跳过这部分。
 1. 在 Android Studio 中的 Android 项目中，打开应用程序模块的 `build.gradle` 文件（非项目的 `build.gradle`）。
 
 1. 在 `build.gradle` 文件中，找到 `dependencies` 部分，然后检查是否存在以下依赖关系：
@@ -60,10 +70,7 @@ lastupdated: "2016-10-09"
 
 	```
 
-将 `BMSClient.REGION_UK` 替换为相应的区域。
-	
-
-要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。区域值应该为以下其中一个值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。				
+将 `BMSClient.REGION_UK` 替换为 {{site.data.keyword.amashort}} 区域。有关获取这些值的更多信息，请参阅[开始之前](#before-you-begin)。
 	
 
 ## AuthenticationListener 接口
@@ -181,8 +188,8 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 
 在代码中：
-* 将 `MCAServiceTenantId` 替换为 `tenantId` 值（请参阅[开始之前](##before-you-begin)）。 
-* 使用在 {{site.data.keyword.amashort}}“仪表板”中指定的 `realmName`。
+* 将 `MCAServiceTenantId` 替换为 **TenantId** 值（请参阅[开始之前](##before-you-begin)）。 
+* 使用在 {{site.data.keyword.amashort}}“仪表板”中指定的 `realmName`（请参阅[配置定制认证](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。
 
 
 ## 测试认证
@@ -191,7 +198,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ### 测试之前
 {: #custom-android-testing-before}
-您必须具有使用 {{site.data.keyword.mobilefirstbp}} 样板创建的应用程序，并且在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。
+您必须有一个应用程序，并且该应用程序所具有的资源在 `/protected` 端点受 {{site.data.keyword.amashort}} 保护。
 
 
 1. 通过浏览器向移动后端应用程序的受保护端点 (`{applicationRoute}/protected`) 发送请求，例如 `http://my-mobile-backend.mybluemix.net/protected`。有关获取 `{applicationRoute}` 值的信息，请参阅[开始之前](#before-you-begin)。 
@@ -220,7 +227,6 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 		}
 	});
 ```
-
 	
 1. 	请求成功后，将在 LogCat 工具中显示以下输出：
 

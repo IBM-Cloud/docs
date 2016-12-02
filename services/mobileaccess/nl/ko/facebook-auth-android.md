@@ -2,35 +2,39 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-01"
+
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 
-
 # Android 앱에서 Facebook 인증 사용
 {: #facebook-auth-android}
 
-
-{{site.data.keyword.amafull}} Android 애플리케이션에서 Facebook을 ID 제공자로 사용하려면, 개발자용 Facebook 사이트에서 Facebook 애플리케이션용으로 Android 플랫폼을 추가하고 구성하십시오.
+{{site.data.keyword.amafull}} Android 클라이언트 애플리케이션에서 Facebook을 ID 제공자로 사용하려면, 개발자용 Facebook 사이트에서 Android 클라이언트를 추가하여 Facebook 애플리케이션에 액세스하도록 구성하십시오.
 {:shortdesc}
 
 ## 시작하기 전에
 {: #before-you-begin}
+
 다음이 있어야 합니다.
+* {{site.data.keyword.Bluemix_notm}} 애플리케이션 및 {{site.data.keyword.amafull}} 서비스의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
+* 백엔드 애플리케이션의 URL(**앱 라우트**). 이 값은 백엔드 애플리케이션의 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
+* **테넌트 ID** 값. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
+* {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`, `United Kingdom` 및 `Sydney` 중 하나여야 하며 WebView Javascript 코드 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` 또는 `BMSClient.REGION_UK`에 필요한 SDK 값에 해당해야 합니다. 이 값은 {{site.data.keyword.amashort}} 클라이언트를 초기화하는 데 필요합니다. 
 * Gradle과 작동하도록 구성된 Android 프로젝트. 이 프로젝트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되지 않아도 됩니다.  
-* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
-* 서비스 매개변수 값. {{site.data.keyword.Bluemix_notm}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 값과 `tenantId`(`appGUID`라고도 함) 값이 **라우트** 필드와 **앱 GUID/TenantId** 필드에 표시됩니다. 이들 값은 SDK를 초기화하고 백엔드 애플리케이션에 요청을 보내는 데 필요합니다. 
 * 개발자용 Facebook 사이트(https://developers.facebook.com)에서 Android 플랫폼이 설치된 Facebook 앱.
 
 **중요:** Facebook SDK(`com.facebook.FacebookSdk`)를 별도로 설치하지 않아도 됩니다. {{site.data.keyword.amashort}} Facebook 클라이언트 SDK를 추가하면 Gradle에서 자동으로 Facebook SDK를 설치합니다. 개발자용 Facebook 사이트에서 Android 플랫폼을 추가하는 경우 이 단계를 건너뛸 수 있습니다. 
 
-## Android 플랫폼에 대해 Facebook 애플리케이션 구성
+## 개발자용 Facebook 사이트에서 애플리케이션 구성
 {: #facebook-auth-android-config}
-개발자용 Facebook 사이트(https://developers.facebook.com)에서:
+개발자용 Facebook 웹 사이트에서 다음을 수행하십시오. 
 
-1. 개발자용 Facebook 사이트의 사용자 계정에 로그인하십시오. 
-2. Android 플랫폼을 추가하거나 구성하십시오. 다음 단계에 대해 세부사항이 제공됩니다. 
+1. 개발자용 Facebook 웹 사이트(https://developers.facebook.com)에서 사용자 계정에 로그인하십시오.
+	새 앱 작성에 대한 정보는 [개발자용 Facebook 웹 사이트에서 애플리케이션 작성](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)을 참조하십시오.  
+1. **제품 목록**에서 **Facebook 로그인**을 선택하십시오. 
+1. Android 플랫폼을 추가하거나 구성하십시오.  
 1. Google Play 패키지 이름 프롬프트에서 Android 애플리케이션의 패키지 이름을 지정하십시오. Android 애플리케이션의 패키지 이름을 찾으려면, Android Studio 프로젝트의 `AndroidManifest.xml` 파일에서 `<manifest ..... package="{your-package-name}">`을 검색하십시오. 
 
 1. **클래스 이름** 프롬프트에서 기본 활동의 클래스 이름을 지정하십시오. 클래스 이름은 활동 격납장치의 `android:name` 특성 값입니다. `AndroidManifest.xml` 파일에 하나 이상의 활동이 있는 경우 `<intent-filter>`를 포함하는 활동을 검색하십시오. 
@@ -66,19 +70,17 @@ lastupdated: "2016-10-10"
 
 1. **설정 저장**을 클릭하십시오. 
 
-## Facebook 인증용 {{site.data.keyword.amashort}} 구성
+## Facebook 인증용 {{site.data.keyword.amashort}} 서비스 구성
 {: #facebook-auth-android-mca}
 Facebook 애플리케이션 ID가 있으며 Android 클라이언트를 제공하도록 Facebook 애플리케이션을 구성한 후에는 {{site.data.keyword.amashort}} 대시보드를 사용하여 Facebook 인증을 사용으로 설정할 수 있습니다. 
 
-1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. 
+1. 대시보드에서 {{site.data.keyword.amashort}} 서비스를 여십시오. 
+1. **관리** 탭에서 **권한**을 토글하여 켜십시오. 
+1. **Facebook** 섹션을 펼치십시오. 
+1. **Facebook 애플리케이션 ID**를 추가하십시오. 
+1. **저장**을 클릭하십시오.
 
-1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드가 로드됩니다. 
-
-1. **Facebook** 패널의 **구성** 단추를 클릭하십시오. 
-
-1. Facebook 애플리케이션 ID를 지정하고 **저장**을 클릭하십시오. 
-
-## Android용 {{site.data.keyword.amashort}} 클라이언트 SDK 구성
+## Facebook 인증용 {{site.data.keyword.amashort}} 클라이언트 Android SDK 구성
 {: #facebook-auth-android-sdk}
 Android용 클라이언트 SDK를 구성하려면 Android Studio에서 Gradle 종속성 관리자를 사용하십시오. 
 
@@ -102,7 +104,7 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 
 	업데이트를 저장하고 나면 `facebookauthentication` 모듈에서 필요한 모든 SDK를 다운로드하여 Android 프로젝트에 설치합니다.
 
-1. 프로젝트를 Gradle과 동기화하십시오. **도구 > Android > Gradle 파일과 프로젝트 동기화**를 클릭하십시오.
+1. **도구 > Android > Gradle 파일과 프로젝트 동기화**를 클릭하여 프로젝트를 Gradle과 동기화하십시오.
 
 1. `res/values/strings.xml` 파일을 열고 Facebook 애플리케이션 ID를 포함하는 `facebook_app_id` 문자열을 추가하십시오. 
 
@@ -149,9 +151,9 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 	</application>
 ```
 
-1. 클라이언트 SDK를 초기화하고 Facebook 인증 관리자를 등록하십시오. **컨텍스트**와 **지역**을 전달하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. <br/>
+1. 클라이언트 SDK를 초기화하고 인증 관리자를 등록하십시오. **컨텍스트**와 **지역**을 전달하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. <br/>
 초기화 코드를 넣는 일반적인 위치(필수는 아님)는 Android 애플리케이션에서 기본 활동의 `onCreate` 메소드입니다. <br/>
- 
+
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
@@ -161,13 +163,13 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 	FacebookAuthenticationManager.getInstance().register(this);
 ```
 
-   * `BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
-지역 값은 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` 또는 `BMSClient.REGION_UK`이어야 합니다. 
+   * `BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오.  
+   * `<MCAServiceTenantId>`를 `tenantId` 값으로 대체하십시오. 
    
-   * `<MCAServiceTenantId>`를 `tenantId` 값으로 바꾸십시오([시작하기 전에](#before-you-begin) 참조).  
-   
-  **참고:** Android 애플리케이션이 Android 버전 6.0(API 레벨 23) 이상을 대상으로 하는 경우, `register`를 호출하기 전에 애플리케이션에 `android.permission.GET_ACCOUNTS` 호출이 있는지 확인해야 합니다. 자세한 정보는 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}을 참조하십시오.
-	
+ 	이러한 값을 얻는 방법에 대한 자세한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.
+
+	**참고:** Android 애플리케이션이 Android 버전 6.0(API 레벨 23) 이상을 대상으로 하는 경우, `register`를 호출하기 전에 애플리케이션에 `android.permission.GET_ACCOUNTS` 호출이 있는지 확인해야 합니다. 자세한 정보는 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}을 참조하십시오.
+
 1. 활동에 다음 코드를 추가하십시오. 
 
 	```Java
@@ -183,17 +185,13 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 ## 인증 테스트
 클라이언트 SDK가 초기화되고 Facebook 인증 관리자가 등록되면 모바일 백엔드 요청을 시작할 수 있습니다.
 
-
-
 ### 테스트를 시작하기 전에
 {: #facebook-auth-android-testing-before}
 {{site.data.keyword.mobilefirstbp}} 표준 유형을 사용 중 이어야 하며 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}에서 보호하는 리소스가 이미 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우 [리소스 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
 
-1. 브라우저에서 새로 작성된 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송해 보십시오. URL `{applicationRoute}/protected`를 여십시오. 예를 들면, `http://my-mobile-backend.mybluemix.net/protected`입니다. `{applicationRoute}` 값을 얻는 방법에 대한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.  
+1. 브라우저에서 새로 작성된 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송해 보십시오. URL `{applicationRoute}/protected`를 여십시오. 예를 들면, `http://my-mobile-backend.mybluemix.net/protected`입니다.   
 
 	MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. `Unauthorized` 메시지가 브라우저에 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스될 수 있으므로 이 메시지가 리턴됩니다.
-
-
 
 1. Android 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화한 후 다음 코드를 추가하고 `FacebookAuthenticationManager`를 등록하십시오.
 
@@ -217,8 +215,6 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 		}
 	});
 ```
-
-	`{applicationRoute}`를 {{site.data.keyword.Bluemix}} 대시보드에서 앱의 모바일 옵션을 클릭하면 얻을 수 있는 *라우트* 값으로 바꾸십시오. 
 	
 1. 애플리케이션을 실행하십시오. Facebook 로그인 화면이 표시됩니다. 
 
@@ -233,7 +229,7 @@ Android 프로젝트에는 프로젝트 및 애플리케이션 모듈에 대한 
 
 	다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
 
-	`FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);`
+`FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);`
 
 	Facebook에서 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 Facebook에서 로그아웃됩니다. 다시 로그인을 시도하는 경우, 사용자에게는 자체 Facebook 신임 정보에 대한 프롬프트가 제시됩니다. 
 

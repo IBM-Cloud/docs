@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
 
 # 사용자 정의 ID 제공자 작성
@@ -16,7 +17,7 @@ lastupdated: "2016-10-02"
 * `base_url`: 사용자 정의 ID 제공자 웹 애플리케이션의 기본 URL입니다. 기본 URL은 {{site.data.keyword.amashort}} 대시보드에 등록할 URL입니다. 
 * `tenant_id`: 테넌트의 고유 ID입니다. {{site.data.keyword.amashort}}는 이 API를 호출할 때 항상 {{site.data.keyword.Bluemix}} 앱 GUID(`applicationGUID`)를 제공합니다.
 * `realm_name`: {{site.data.keyword.amashort}} 대시보드에 정의된 사용자 정의 영역 이름을 지정합니다. 
-* `request_type`: 다음 중 하나를 지정합니다. 
+* `request_type` : 다음 중 하나를 지정합니다. 
 	* `startAuthorization`: 인증 프로세스의 첫 번째 단계를 지정합니다. 사용자 정의 ID 제공자는 "challenge", "success" 또는 "failure" 상태로 응답해야 합니다. 
 	* `handleChallengeAnswer`: 모바일 클라이언트에서 인증 확인 응답을 처리합니다. 
 

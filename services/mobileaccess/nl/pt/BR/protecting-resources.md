@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016 lastupdated: "2016-10-02"
+  years: 2015, 2016 lastupdated: "2016-10-27"
+
 ---
 
 {:shortdesc: .shortdesc} {:codeblock:.codeblock}
@@ -9,11 +10,8 @@ copyright:
 # Protegendo recursos de backend com o serviço {{site.data.keyword.amashort}}
 {: #protecting-resources}
 
-Última atualização: 22 de agosto de 2016
-{: .last-updated}
 
-
-Com o serviço {{site.data.keyword.amafull}}, é possível proteger seus aplicativos backend Node.js e baseados em Java que estão em execução no {{site.data.keyword.Bluemix_notm}} com a segurança e o monitoramento de OAuth ativados pelo dispositivo móvel. 
+Com o serviço {{site.data.keyword.amafull}}, é possível proteger seus aplicativos backend Node.js e baseados em Java que estão em execução no {{site.data.keyword.Bluemix_notm}} com a segurança e o monitoramento de OAuth ativados pelo dispositivo móvel.
 {:shortdesc}
 
 ## Antes de iniciar

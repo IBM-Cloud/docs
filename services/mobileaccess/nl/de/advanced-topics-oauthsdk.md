@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-02"
+
 ---
 
 # Kommunikation zwischen Back-End-Anwendungen und -Services
@@ -43,7 +44,7 @@ var options = {
 	// Alternativ können Sie diese Eigenschaftswerte ermitteln, indem Sie auf
 	// 'Berechtigungsnachweise anzeigen' auf der Kachel für den {{site.data.keyword.amashort}}-Service in Ihrem {{site.data.keyword.Bluemix_notm}}-Anwendungsdashboard klicken.
 
-	appId: "appId",				// Bluemix applicationGUID, auch: tenantId
+	appId: "tenantID",				// a.k.a. Bluemix applicationGUID
 	clientId: "clientId",			
 	secret: "secret",
 	serverUrl: "serverUrl"

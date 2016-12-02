@@ -2,14 +2,12 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-16"
 
 ---
 
 # Angepasste Authentifizierung für Web-App
 {: #custom-web}
-
-Letzte Aktualisierung: 16. Juni 2016
-{: .last-updated}
 
 Sie können Ihrer Web-App eine angepasste Authentifizierung hinzufügen.
 
@@ -45,7 +43,7 @@ Gehen Sie wie folgt vor, um den Autorisierungsprozess zu starten:
 1. Leiten Sie von Ihrer Web-App zum folgenden Endpunkt des Autorisierungsservers weiter:
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
-  
+
   Verwenden Sie dabei die folgenden Abfrageparameter:
    ```
    response_type=’authorization_code’
@@ -74,8 +72,8 @@ Die nach erfolgreicher Authentifizierung zurückgegebene Antwort enthält den Au
  redirect_uri = <redirect_uri>
  code = <authorization code>
  ```
-  Der Parameter `redirect_uri` muss mit dem `redirect_uri` aus Schritt 1 übereinstimmen. Der Autorisierungscode wurde von der Anforderung in Schritt 2 zurückgegeben. 
-  
+  Der Parameter `redirect_uri` muss mit dem `redirect_uri` aus Schritt 1 übereinstimmen. Der Autorisierungscode wurde von der Anforderung in Schritt 2 zurückgegeben.
+
   Sie müssen diese `POST`-Anforderung innerhalb von 10 Minuten senden, da der Autorisierungscode maximal 10 Minuten gültig ist.
 
 Der Antwortteil von `POST` enthält das *access_token* und das
@@ -87,5 +85,3 @@ Der Antwortteil von `POST` enthält das *access_token* und das
 Nun können Sie mit dem Senden von Anforderungen an Ihre geschützten Ressourcen beginnen.
 Alle Anforderungen an geschützte Ressourcen sollten das `access_token` enthalten.
 Senden Sie das Zugriffstoken im Headerfeld für die `Autorisierungsanforderung`.
-
-

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-09"
+lastupdated: "2016-10-27"
+
 ---
 
 # {{site.data.keyword.amashort}} iOS(Swift SDK) 앱용 사용자 정의 인증 구성
@@ -15,7 +16,15 @@ lastupdated: "2016-10-09"
 ## 시작하기 전에
 {: #before-you-begin}
 
-사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스의 보호를 받는 리소스가 있어야 합니다. 또한 모바일 앱이 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되어야 합니다. 자세한 정보는 다음 내용을 참조하십시오. 
+시작하기 전에 다음이 있어야 합니다. 
+
+* 사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스에 의해 보호되는 리소스([사용자 정의 인증 구성 참조](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* **테넌트 ID** 값. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
+* **영역** 이름. 이 값은 {{site.data.keyword.amashort}} 대시보드의 **관리** 탭에서 **사용자 정의** 섹션의 **영역 이름** 필드에 지정한 값입니다. 
+* 백엔드 애플리케이션의 URL(**앱 라우트**). 이 값은 백엔드 애플리케이션의 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
+* {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 **미국 남부**, **영국** 또는 **시드니** 중 하나여야 하며 코드 `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`에 필요한 상수에 해당해야 합니다. 
+
+자세한 정보는 다음 내용을 참조하십시오. 
  * [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/index.html)
  * [iOS Swift SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
  * [사용자 정의 ID 제공자 사용](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
@@ -23,30 +32,10 @@ lastupdated: "2016-10-09"
  * [사용자 정의 인증용 {{site.data.keyword.amashort}} 구성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
-## 사용자 정의 인증용 {{site.data.keyword.amashort}} 구성
- {: #custom-auth-ios-configmca}
-
- 1. 서비스 대시보드를 여십시오. 
- 
- 1. **모바일 옵션**을 클릭하고 **라우트**(*applicationRoute*)와 **앱 GUID/TenantId**(*serviceTenantID*)를 기록해 두십시오. SDK를 초기화하는 경우와 백엔드 애플리케이션에 요청을 보내는 경우 이들 값이 필요합니다. 
-
- 1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드가 로드됩니다. 
-
- 1. **사용자 정의** 타일을 클릭하십시오.
-
- 1. **영역 이름**에 사용자 정의 인증 영역을 지정하십시오.
-
- 1. **URL**에 applicationRoute를 지정하십시오.
-
- 1. **저장**을 클릭하십시오.
-
-
-
-
 ### 클라이언트 SDK 초기화
 {: #custom-ios-sdk-initialize}
 
-`applicationGUID`(tenantId) 매개변수를 전달하여 SDK를 초기화하십시오. 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드입니다. 
+`applicationGUID`(**TenantId**) 매개변수를 전달하여 SDK를 초기화하십시오. 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드입니다. 
 
 1. {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 필수 프레임워크를 가져오십시오.
 
@@ -95,17 +84,15 @@ lastupdated: "2016-10-09"
 	     mcaAuthManager.registerAuthenticationDelegate(delegate, realm: customRealm)
 
 	     return true
- }   
- ```
+ }
+
+
+```
 
 코드에서: 
-
+* `MCAServiceTenantId`를 **TenantId** 값으로 대체하고 `<applicationBluemixRegion>`을 해당 {{site.data.keyword.amashort}} **지역**으로 대체하십시오([시작하기 전에](##before-you-begin) 참조). 
+* {{site.data.keyword.amashort}} 대시보드에 지정한 `realmName`을 사용하십시오([사용자 정의 인증 구성](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html) 참조).
 *  {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 아바타 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오. 표시되는 지역 값은 **미국 남부**, **영국** 또는 **시드니** 중 하나여야 하며 코드 `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`에 필요한 상수에 해당해야 합니다. 
-* `"<yourProtectedRealm>"`을 {{site.data.keyword.amashort}} 대시보드의 **사용자 정의** 타일에 정의한 **지역 이름** 값으로 바꾸십시오.  
-* `"<serviceTenantID>"`를 **모바일 옵션**에서 검색한 **tenantId** 값으로 바꾸십시오. [사용자 정의 인증에 사용할 Mobile Client Access 구성](#custom-auth-ios-configmca)을 참조하십시오. 
-
-### 클라이언트 SDK 초기화
-{: #custom-ios-sdk-initialize}
    
   
 ## 인증 테스트
@@ -124,19 +111,17 @@ lastupdated: "2016-10-09"
 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화한 후 다음 코드를 추가하고 사용자 정의 인증 위임을 등록하십시오.
 
-
-
 	```Swift
 
 	let protectedResourceURL = "<your protected resource absolute path>"
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
-  if error == nil {
-      print ("response:\(response?.responseText), no error")
-  } else {
-      print ("error: \(error)")
-  }
+    if error == nil {
+        print ("response:\(response?.responseText), no error")
+     } else {
+        print ("error: \(error)")
+     }
  }
 
 	request.send(completionHandler: callBack)
@@ -146,15 +131,15 @@ lastupdated: "2016-10-09"
 
 	 ```
 	 onAuthenticationSuccess info = Optional({
-     attributes =     {
-     };
-     deviceId = don;
-     displayName = "Don+Lon";
-     isUserAuthenticated = 1;
-     userId = don;
- })
- response:Optional("Hello Don Lon"), no error
- ```
+      attributes =     {
+      };
+      deviceId = don;
+      displayName = "Don+Lon";
+      isUserAuthenticated = 1;
+      userId = don;
+  })
+  response:Optional("Hello Don Lon"), no error
+  ```
 
 1. 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
 

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
 
 # 针对 iOS (Objective-C) 配置 {{site.data.keyword.amashort}} 客户端 SDK
@@ -15,13 +16,20 @@ lastupdated: "2016-10-02"
 
 ## 开始之前
 {: #before-you-begin}
-您必须具有受配置为使用定制身份提供者的 {{site.data.keyword.amashort}} 服务实例保护的资源。您的移动应用程序还必须安装 {{site.data.keyword.amashort}} 客户端 SDK。有关更多信息，请参阅以下信息：
+您必须具有：
+
+* 资源，该资源受 {{site.data.keyword.amashort}} 服务的实例保护，而该服务已配置为使用定制的身份提供者（请参阅[配置定制认证](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。  
+* **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
+* **域名**。这是在 {{site.data.keyword.amashort}}“仪表板”的**管理**选项卡中**定制**部分的**域名**字段中指定的值（请参阅[配置定制认证](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。
+* 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`美国南部`、`英国`或`悉尼`，并对应于 WebView Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
+
+有关更多信息，请参阅以下信息：
  * [{{site.data.keyword.amashort}} 入门](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [设置 iOS Objective-C SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)
  * [使用定制身份提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [创建定制身份提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [配置 {{site.data.keyword.amashort}} 进行定制认证](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
-
 
 
 ## 使用 CocoaPods 安装客户端 SDK
@@ -43,14 +51,12 @@ CocoaPods 会安装添加的依赖关系。这将显示进度和添加的组件�
 
 1. 在命令行中运行 `open {your-project-name}.xcworkspace` 以打开 iOS 项目工作空间。
 
-
-
 ### 初始化客户端 SDK
 {: #custom-ios-sdk-initialize}
 
-传递应用程序路径 (`applicationRoute`) 和 GUID (`applicationGUID`) 参数，以初始化 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
+通过传递**应用程序路径** (`applicationRoute`) 和 **TenantID** (`tenantID`) 参数来初始化 SDK。 
 
-1. 获取应用程序参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。单击**移动选项**，以查看**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`) 的值。
+通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
 
 1. 将 `IMFCore` 框架导入要使用客户端 SDK 的类中。
 
@@ -72,25 +78,25 @@ CocoaPods 会安装添加的依赖关系。这将显示进度和添加的组件�
 	* 将值设置为您的 `BridgingHeader.h` 文件的位置，例如：`$(SRCROOT)/MyApp/BridgingHeader.h`
 	* 通过构建项目来验证 Xcode 是否选取了您的桥接头。
 
-1. 初始化客户端 SDK。将 applicationRoute 和 applicationGUID 替换为从**移动选项**获取的**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`) 值。
+1. 初始化客户端 SDK。将**应用程序路径** (`applicationRoute`) 和 **TenantID** (`tenantID`) 替换为相应值。有关获取这些值的更多信息，请参阅[开始之前](##before-you-begin)。
 
 	Objective-C：
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
-			backendGUID:@"applicationGUID"];
+			backendGUID:@"tenantID"];
 	```
 
 	Swift：
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
-	 							backendGUID: "applicationGUID")
+	 							backendGUID: "tenantID")
 	```
 
 ## 初始化 AuthorizationManager
-通过传递 {{site.data.keyword.amashort}} 服务 `tenantId` 参数来初始化 AuthorizationManager。您可以通过单击 {{site.data.keyword.amashort}} 服务磁贴上的**显示凭证**按钮找到此值。
+通过传递 {{site.data.keyword.amashort}} 服务 `tenantId` 参数来初始化 AuthorizationManager。 
 
 
 ### Objective-C：
@@ -266,8 +272,6 @@ Swift 应用程序：
 IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDelegate(),
 									forRealm: realmName)
 ```
-
-
 
 
 ## 测试认证

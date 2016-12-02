@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-02"
+
 ---
 
 # Protezione delle risorse Liberty for Java con {{site.data.keyword.amashort}}
 {: #protecting-liberty}
-
-
 
 L'SDK server {{site.data.keyword.amashort}} fornisce un modulo `OAuthTAI` per le applicazioni Liberty for Java&trade; distribuite su {{site.data.keyword.Bluemix}}. Devi strumentare il tuo server Liberty con il modulo `OAuthTAI` per proteggerlo dall'accesso non autorizzato e per raccogliere le informazioni di monitoraggio..
 

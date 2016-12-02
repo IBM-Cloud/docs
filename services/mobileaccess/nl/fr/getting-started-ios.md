@@ -3,13 +3,12 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:shortdesc: .shortdesc}
 
 # Configuration du SDK iOS Objective-C
 {: #getting-started-ios}
-
-
 
 Instrumentez votre application iOS avec le SDK {{site.data.keyword.amafull}}, initialisez le SDK et envoyez des requêtes à des ressources protégées et
 non protégées.
@@ -24,6 +23,8 @@ non protégées.
 Vous devez disposer des éléments suivants :
 * Une instance d'une application {{site.data.keyword.Bluemix_notm}} protégée par le service
 {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
+* Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur **Options pour application mobile**. Les valeurs `tenantId` (qui portent également le nom d'`appGUID`) sont affichées dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations {{site.data.keyword.amashort}}.
+* Votre **Application Route**. Il s'agit de l'URL de votre application back end. Vous avez besoin de cette valeur pour envoyer des demandes à ses noeuds finaux protégés.
 * Un projet Xcode.  
 
 
@@ -56,9 +57,8 @@ CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définire
 
 1. Editez le fichier `Podfile` en lui ajoutant la ligne suivante vers les cibles requises et exécutez :
 
-	```
-	pod 'IMFCore'
-	```
+
+	`pod 'IMFCore'`
 
 1. Enregistrez le fichier `Podfile` et lancez `pod install` depuis la ligne de commande. <br/>Cocoapods installe les
 dépendances ajoutées et affiche les composants ajoutés.<br/>
@@ -70,34 +70,29 @@ dépendances ajoutées et affiche les composants ajoutés.<br/>
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #init-mca-sdk-ios}
 
-Pour pouvoir utiliser le SDK client de {{site.data.keyword.amashort}}, vous devez l'initialiser en transmettant les paramètres **Route** (`applicationRoute`) et **App GUID** (`applicationGUID`).
-
-1. Dans la page principale du tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur votre appli. Cliquez sur **Options pour application mobile**. Vous
-aurez besoin des valeurs de **Route** et de **Identificateur global unique de l'application** pour initialiser le SDK.
-
 1. Importez l'infrastructure `IMFCore` dans la classe qui doit utiliser le SDK client de {{site.data.keyword.amashort}} en ajoutant l'en-tête suivant :
 
 	####Objective-C
 	{: #imfcore-objc}
-	
+
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
 	```
 
 	####Swift
 	{: #sdk-swift}
-	
+
 	Le SDK client de {{site.data.keyword.amashort}} est implémenté avec Objective-C. Il peut être nécessaire d'ajouter un en-tête de pontage à votre projet Swift :
-	1. Cliquez avec le bouton droit sur votre projet dans Xcode et sélectionnez **New File** (Nouveau fichier).
+	1. Cliquez avec le bouton droit sur votre projet dans Xcode et sélectionnez **New File**.
 	1. Dans la catégorie **iOS Source (Source iOS)**, cliquez sur **Header file (Fichier d'en-tête)**. Nommez le fichier `BridgingHeader.h`.
-	1. Ajoutez la ligne suivante à votre en-tête de pontage : `#import <IMFCore/IMFCore.h>`
+	1. Ajoutez la ligne suivante à votre en-tête de pontage : `#import <IMFCore/IMFCore.h>`. 
 	1. Cliquez sur votre projet dans Xcode et sélectionnez l'onglet **Build Settings (Paramètres de génération)**.
 	1. Recherchez `Objective-C Bridging Header`.
 	1. Définissez la valeur sur l'emplacement de votre fichier `BridgingHeader.h`, par exemple : `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Vérifiez que l'en-tête de pontage est prélevé par Xcode lors de la génération de votre projet. Vous ne devez voir aucun message d'erreur.
-	
+
 1. Utilisez le code suivant pour initialiser le SDK client de {{site.data.keyword.amashort}}.  En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire. <br/>
-Remplacez `applicationRoute` et vapplicationGUID par les valeurs de la section **Options pour application mobile** du tableau de bord {{site.data.keyword.Bluemix_notm}}.
+Pour plus d'informations sur l'obtention des valeurs `applicationRoute` et `applicationGUID`, voir [Avant de commencer](#before-you-begin). 
 
 	####Objective-C
 	{: #sharedinstance-objc}
@@ -115,20 +110,21 @@ Remplacez `applicationRoute` et vapplicationGUID par les valeurs de la section *
 	```
 
 ## Initialisation du gestionnaire AuthorizationManager
-Initialisez le gestionnaire `AuthorizationManager` en passant le paramètre `tenantId` du service {{site.data.keyword.amashort}}. Cette valeur peut être obtenue en cliquant sur le bouton **Afficher les données d'identification** sur la vignette du service {{site.data.keyword.amashort}}.
+Initialisez le gestionnaire `AuthorizationManager` en transmettant le paramètre `tenantId` du service {{site.data.keyword.amashort}}. Pour des informations sur l'obtention de ces valeurs, voir [Avant de commencer](#before-you-begin). 
 
 ####Objective-C
-	
+
 ```Objective-C
-     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+[[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"<tenantId>"];
 ```
 
 ####Swift
 
 ```Swift
-  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+IMFAuthorizationManager.sharedInstance().initializeWithTenantId("<tenantId>")
 ```
 
+	
 ## Envoi d'une demande à votre application back end mobile
 {: #request}
 

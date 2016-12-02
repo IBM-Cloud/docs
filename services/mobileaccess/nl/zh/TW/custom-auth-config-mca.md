@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02" 
+lastupdated: "2016-11-07"
+
 ---
 
 # 配置 {{site.data.keyword.amashort}} 進行自訂鑑別
@@ -13,23 +14,18 @@ lastupdated: "2016-10-02"
 
 ## 開始之前
 {: #custom-dash-begin}
-* 閱讀[開始使用](index.html)。
-* 使用 {{site.data.keyword.amashort}} 伺服器 SDK 保護後端應用程式。如需相關資訊，請參閱[保護資源](protecting-resources.html)。
-* 讓自訂身分提供者應用程式執行。
+您必須具有：
+* {{site.data.keyword.amafull}} 服務的實例。
+* 自訂身分提供者應用程式。
 
-## 在 {{site.data.keyword.Bluemix}} 儀表板中配置自訂鑑別
+## 在 {{site.data.keyword.amafull}} 儀表板中配置自訂鑑別
 {: #custom-dash-config}
-使用 {{site.data.keyword.Bluemix}} 儀表板來配置自訂鑑別。
+使用 {{site.data.keyword.amafull}} 儀表板來配置自訂鑑別。
 
-1. 在 {{site.data.keyword.Bluemix}} 儀表板中開啟應用程式。
-
-1. 按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及**應用程式 GUID** (`applicationGUID`)。您需要這些值來起始設定 SDK。
-
-1. 按一下 {{site.data.keyword.amashort}} 磚。即會載入 {{site.data.keyword.amashort}} 儀表板。
-
-1. 按一下**自訂**磚。
-
-1. 輸入自訂身分提供者的**領域名稱**及**基本 URL**，並儲存變更。
+1. 在 {{site.data.keyword.amafull}} 儀表板中，開啟服務。
+1. 在**管理**標籤中，將**授權**切換為開啟。
+1. 展開**自訂**區段。
+1. 輸入**領域名稱**、**自訂身分提供者 URL**。只有 Web 應用程式需要**您的 Web 應用程式重新導向 URI** 值。
 
 ## 後續步驟
 {: #next-steps}

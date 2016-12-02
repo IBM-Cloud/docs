@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
 
 # iOS용 {{site.data.keyword.amashort}} 클라이언트 SDK(Objective-C) 구성
@@ -15,13 +16,20 @@ lastupdated: "2016-10-02"
 
 ## 시작하기 전에
 {: #before-you-begin}
-사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스의 보호를 받는 리소스가 있어야 합니다. 또한 모바일 앱이 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되어야 합니다. 자세한 정보는 다음 내용을 참조하십시오. 
+다음이 있어야 합니다.
+
+* 사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스에 의해 보호되는 리소스([사용자 정의 인증 구성 참조](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* **테넌트 ID** 값. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
+* **영역** 이름. 이 값은 {{site.data.keyword.amashort}} 대시보드의 **관리** 탭에서 **사용자 정의** 섹션의 **영역 이름** 필드에 지정한 값입니다([사용자 정의 인증 구성](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html) 참조). 
+* 백엔드 애플리케이션의 URL(**앱 라우트**). 이 값은 백엔드 애플리케이션의 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
+* {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`, `United Kingdom` 및 `Sydney` 중 하나여야 하며 WebView Javascript 코드 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`에 필요한 SDK 값에 해당해야 합니다. 이 값은 {{site.data.keyword.amashort}} 클라이언트를 초기화하는 데 필요합니다. 
+
+자세한 정보는 다음 내용을 참조하십시오. 
  * [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [iOS Objective-C SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)
  * [사용자 정의 ID 제공자 사용](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [사용자 정의 ID 제공자 작성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [사용자 정의 인증용 {{site.data.keyword.amashort}} 구성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
-
 
 
 ## CocoaPods를 사용하여 클라이언트 SDK 설치
@@ -43,14 +51,12 @@ CocoaPods가 추가된 종속 항목을 설치합니다. 진행상태 및 추가
 
 1. 명령행에서 `open {your-project-name}.xcworkspace`를 실행하여 iOS 프로젝트 작업공간을 여십시오. 
 
-
-
 ### 클라이언트 SDK 초기화
 {: #custom-ios-sdk-initialize}
 
-애플리케이션 라우트(`applicationRoute`) 및 GUID(`applicationGUID`) 매개변수를 전달하여 SDK를 초기화하십시오. 초기화 코드를 삽입하는 일반 위치(필수는 아님)는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 있습니다. 
+**앱 라우트**(`applicationRoute`) 및 **테넌트 ID**(`tenantID`) 매개변수를 전달하여 SDK를 초기화하십시오.  
 
-1. 애플리케이션 매개변수 값을 가져오십시오. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. **모바일 옵션**을 클릭하여 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)의 값을 확인하십시오.
+초기화 코드를 삽입하는 일반 위치(필수는 아님)는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 있습니다. 
 
 1. 클라이언트 SDK를 사용하려는 클래스에 `IMFCore` 프레임워크를 가져오십시오.
 
@@ -72,25 +78,25 @@ CocoaPods가 추가된 종속 항목을 설치합니다. 진행상태 및 추가
 	* 값을 `BridgingHeader.h` 파일의 위치로 설정하십시오(예: `$(SRCROOT)/MyApp/BridgingHeader.h`). 
 	* 프로젝트를 빌드하여 Xcode에서 브리징 헤더를 선택했는지 확인하십시오. 
 
-1. 클라이언트 SDK를 초기화하십시오. applicationRoute 및 applicationGUID를 **모바일 옵션**에서 얻은 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)의 값으로 바꾸십시오.
+1. 클라이언트 SDK를 초기화하십시오. **앱 라우트**(`applicationRoute`) 및 **테넌트 ID**(`tenantID`)를 값으로 대체하십시오. 이러한 값을 얻는 방법에 대한 자세한 정보는 [시작하기 전에](##before-you-begin)를 참조하십시오. 
 
 	Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
-			backendGUID:@"applicationGUID"];
+			backendGUID:@"tenantID"];
 	```
 
 	Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
-	 							backendGUID: "applicationGUID")
+	 							backendGUID: "tenantID")
 	```
 
 ## AuthorizationManager 초기화
-{{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 전달하여 AuthorizationManager를 초기화하십시오. {{site.data.keyword.amashort}} 서비스 타일의 **신임 정보 표시** 단추를 클릭하여 이 값을 찾을 수 있습니다. 
+{{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 전달하여 AuthorizationManager를 초기화하십시오.  
 
 
 ### Objective-C:
@@ -271,8 +277,6 @@ Swift 애플리케이션:
 IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDelegate(),
 									forRealm: realmName)
 ```
-
-
 
 
 ## 인증 테스트

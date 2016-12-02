@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -11,8 +12,6 @@ lastupdated: "2016-10-02"
 
 # Autenticación de usuarios con las credenciales de Facebook
 {: #facebook-auth-overview}
-
-
 
 Puede configurar el servicio de {{site.data.keyword.amafull}} para proteger los recursos utilizando Facebook como proveedor de identidad. Los usuarios de la aplicación móvil o web podrán autenticarse con las credenciales de Facebook.
 
@@ -48,13 +47,13 @@ Consulte el siguiente diagrama en el que se explica cómo {{site.data.keyword.am
 El flujo de solicitud de aplicación web de {{site.data.keyword.amashort}} es similar al flujo del cliente móvil. Sin embargo, {{site.data.keyword.amashort}} protege la aplicación web, en lugar de un recurso de fondo de {{site.data.keyword.Bluemix_notm}}.
 
   * La solicitud inicial la envía la aplicación web (desde un formulario de inicio de sesión, por ejemplo).
-  * El redireccionamiento final es en el área protegida de la propia aplicación web, en lugar de en el recurso protegido de fondo. 
+  * El redireccionamiento final es en el área protegida de la propia aplicación web, en lugar de en el recurso protegido de fondo.
 
 
-## Cómo obtener un ID de aplicación de Facebook desde el sitio web Facebook for Developers
+## Creación de una aplicación en el sitio web de Facebook for Developers
 {: #facebook-appID}
 
-Para empezar a utilizar Facebook como proveedor de identidad, cree una aplicación en el sitio web Facebook for Developer. Durante este proceso, se creará un ID de app de Facebook. Este es un identificador exclusivo utilizado por Facebook para saber qué aplicación está intentando conectarse. 
+Para empezar a utilizar Facebook como proveedor de identidad, cree una aplicación en el sitio web Facebook for Developers. Durante este proceso, se creará un ID de app de Facebook. Este es un identificador exclusivo utilizado por Facebook para saber qué aplicación está intentando conectarse.
 
 Necesita este valor para configurar la autenticación de Facebook para la aplicación móvil o web.
 
@@ -68,7 +67,7 @@ Necesita este valor para configurar la autenticación de Facebook para la aplica
 
 1. Puede aparecer una comprobación de seguridad. Realice la acción solicitada.
 
-1. Aparecerá la página **Configuración del producto**. Copie el **ID de app** que se muestra. 
+1. Aparecerá la página **Configuración del producto**. Copie el **ID de app** que se muestra.
 
 ## Pasos siguientes
 {: #next-steps}

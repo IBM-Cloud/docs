@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -11,8 +12,6 @@ lastupdated: "2016-10-02"
 
 # 使用 Facebook 認證鑑別使用者
 {: #facebook-auth-overview}
-
-
 
 您可以配置 {{site.data.keyword.amafull}} 服務，以使用 Facebook 作為身分提供者來保護資源。您的行動或 Web 應用程式使用者都可以使用其 Facebook 認證進行鑑別。
 
@@ -46,16 +45,16 @@ lastupdated: "2016-10-02"
 ### {{site.data.keyword.amashort}} Web 應用程式要求流程
 {: #mca-facebook-web-sequence}
 
-{{site.data.keyword.amashort}} Web 應用程式要求流程類似於行動用戶端流程。不過，{{site.data.keyword.amashort}} 會保護 Web 應用程式，而不是 {{site.data.keyword.Bluemix_notm}} 後端資源。
+{{site.data.keyword.amashort}} Web 應用程式要求流程類似行動用戶端流程。不過，{{site.data.keyword.amashort}} 會保護 Web 應用程式，而不是 {{site.data.keyword.Bluemix_notm}} 後端資源。
 
   * 起始要求是由 Web 應用程式傳送（例如，從登入表單中）。
-  * 最終重新導向是重新導向至 Web 應用程式本身的受保護區域，而不是後端的受保護資源。 
+  * 最終重新導向是重新導向至 Web 應用程式本身的受保護區域，而不是後端的受保護資源。
 
 
-## 從 Facebook for Developers 網站取得 Facebook 應用程式 ID
+## 在 Facebook for Developers 網站上建立應用程式
 {: #facebook-appID}
 
-若要開始使用 Facebook 作為身分提供者，請在 Facebook for Developer 網站上建立應用程式。在此處理程序期間，會建立「Facebook 應用程式 ID」。Facebook 使用這個唯一 ID 來知道哪一個應用程式正在嘗試連接。 
+若要開始使用 Facebook 作為身分提供者，請在 Facebook for Developers 網站上建立應用程式。在此處理程序期間，會建立「Facebook 應用程式 ID」。Facebook 使用這個唯一 ID 來知道哪一個應用程式正在嘗試連接。
 
 您需要這個值來配置行動或 Web 應用程式的 Facebook 鑑別。
 
@@ -69,7 +68,7 @@ lastupdated: "2016-10-02"
 
 1. 可能會出現安全檢查。請執行所要求的動作。
 
-1. 即會出現**產品設定**頁面。複製顯示的**應用程式 ID**。 
+1. 即會出現**產品設定**頁面。複製顯示的**應用程式 ID**。
 
 ## 後續步驟
 {: #next-steps}

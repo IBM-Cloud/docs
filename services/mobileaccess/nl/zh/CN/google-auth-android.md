@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-03"
+
 ---
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -10,15 +11,16 @@ lastupdated: "2016-10-10"
 # 启用 Android 应用程序的 Google 认证
 {: #google-auth-android}
 
-使用 Google 在 {{site.data.keyword.amafull}} Android 应用程序上认证用户。添加 {{site.data.keyword.amashort}} 安全功能。 
+使用 Google 在 {{site.data.keyword.amafull}} Android 应用程序上认证用户。添加 {{site.data.keyword.amashort}} 安全功能。
 
 ## 开始之前
 {: #before-you-begin}
 您必须具有：
-
-* 在 Android Studio 中配置为使用 Gradle 的 Android 项目。它不需要安装 {{site.data.keyword.amashort}} 客户端 SDK。  
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
-* 服务参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开服务。单击**移动选项**。`applicationRoute` 和 `tenantId`（也称为 `appGUID`）值会显示在**路由**和**应用程序 GUID/TenantId** 字段中。您将需要这些值来初始化 SDK，并将请求发送到后端应用程序。
+* {{site.data.keyword.amafull}} 服务和 {{site.data.keyword.Bluemix_notm}} 应用程序的实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
+* 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
+* **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`美国南部`、`英国`或`悉尼`，并对应于 WebView Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
+* 配置为使用 Gradle 的 Android 项目。该项目不需要安装 {{site.data.keyword.amashort}} 客户端 SDK。  
 
 设置 {{site.data.keyword.amashort}} Android 应用程序的 Google 认证需要对以下各项进行进一步配置：
 * {{site.data.keyword.Bluemix_notm}} 应用程序
@@ -27,14 +29,14 @@ lastupdated: "2016-10-10"
 ## 在 Google 开发者控制台上创建项目
 {: #create-google-project}
 
-要开始将 Google 用作身份提供者，请在 [Google 开发者控制台](https://console.developers.google.com)中创建项目。创建项目的步骤之一是获取 Google 客户端标识。Google 客户端标识是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.Bluemix_notm}} 应用程序时需要该标识。
+要开始将 Google 用作身份提供者，请在 [Google 开发者控制台](https://console.developers.google.com)中创建项目。创建项目的步骤之一是获取 Google 客户端标识。Google 客户端标识是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.amashort}} 服务时需要该标识。
 
 从控制台中：
 
 1. 使用 **Google+** API 创建项目。
 2. 添加 **OAuth** 用户访问权。
 3. 添加凭证之前，您必须选择平台 (Android)。
-4. 添加凭证。 
+4. 添加凭证。
 
 要完成凭证的创建，您需要添加**签署证书指纹**。
 
@@ -59,10 +61,10 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 
 ###软件包名称
 
-1. 在“凭证”对话框中，输入 Android 应用程序的软件包名称。 
+1. 在“凭证”对话框中，输入 Android 应用程序的软件包名称。
 
-  要找到 Android 应用程序的软件包名称，请在 Android Studio 中打开 `AndroidManifest.xml` 文件，然后查找： 
-  	
+  要找到 Android 应用程序的软件包名称，请在 Android Studio 中打开 `AndroidManifest.xml` 文件，然后查找：
+
   	`<manifest package="{your-package-name}">`
 
 1. 完成后，单击**创建**。这将完成凭证创建。
@@ -77,18 +79,15 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 
 现在，您已经具有 Android 的 Google 客户端标识，可以在 {{site.data.keyword.amashort}}“仪表板”中启用 Google 认证。
 
-1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。
-
-1. 单击 {{site.data.keyword.amashort}} 磁贴。这将装入 {{site.data.keyword.amashort}}“仪表板”。
-
-1. 单击 **Google** 面板上的**配置**按钮。
-
-1. 在 **Android 的应用程序标识**中，指定 Android 的 Google 客户端标识，然后单击**保存**。
+1. 在 {{site.data.keyword.amashort}}“仪表板”中打开服务。
+1. 在**管理**选项卡中，将**授权**切换为“开启”。
+1. 展开 **Google** 部分。
+1. 在 **Android 的客户端标识**中，指定 Android 的 Google 客户端标识，然后单击**保存**。
 
 ## 针对 Android 配置 {{site.data.keyword.amashort}} 客户端 SDK
 {: #google-auth-android-sdk}
 
-1. 返回到 Android Studio。
+从 Android Studio 项目中。
 
 1. 打开应用程序模块的 `build.gradle` 文件。
 
@@ -131,12 +130,14 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 
 	BMSClient.getInstance().setAuthorizationManager(
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
-						
+
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
 
-  * 将 `BMSClient.REGION_UK` 替换为相应的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。区域值应该为以下其中一个值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。
-  * 将 `<MCAServiceTenantId>` 替换为 `tenantId` 值（请参阅[开始之前](##before-you-begin)）。 
+  * 将 `BMSClient.REGION_UK` 替换为 {{site.data.keyword.Bluemix_notm}} **区域**。
+  * 将 `<MCAServiceTenantId>` 替换为 **TenantId** 值。
+
+	有关获取这些值的更多信息，请参阅[开始之前](##before-you-begin)。
 
    **注：**如果您的 Android 应用程序是针对 Android V6.0（API 级别 23
 ）或更高版本的，那么必须确保该应用程序具有 `android.permission.GET_ACCOUNTS`
@@ -155,14 +156,13 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 
 ## 测试认证
 {: #google-auth-android-test}
-初始化客户端 SDK 并注册 Google 认证管理器后，可以开始对移动后端应用程序发起请求。
-
+初始化客户端 SDK 并注册 Google 认证管理器后，可以开始对后端应用程序发起请求。
 
 开始测试之前，您必须具有使用 **MobileFirst Services Starter** 样板创
 建的移动后端应用程序，并且必须已经具有受
 {{site.data.keyword.amashort}} `/protected` 端点保护的资源。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
-1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。有关获取 `{applicationRoute}` 值的信息，请参阅[开始之前](#before-you-begin)。 
+1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。有关获取 `{applicationRoute}` 值的信息，请参阅[开始之前](#before-you-begin)。
 
 	使用 MobileFirst Services 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。所以此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
 

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-02"
+
 ---
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -10,21 +11,24 @@ lastupdated: "2016-10-10"
 # iOS アプリ用の Facebook 認証の使用可能化 (Swift SDK)
 {: #facebook-auth-ios}
 
-
 {{site.data.keyword.amafull}} iOS アプリケーションで Facebook を ID プロバイダーとして使用するには、iOS プラットフォームを追加して Facebook アプリケーション用に構成します。
 {:shortdesc}
 
 ## 開始する前に
-{: #facebook-auth-ios-before}
+{: #before-you-begin}
+
 以下が必要です。
+* {{site.data.keyword.amafull}} サービスのインスタンスおよび {{site.data.keyword.Bluemix_notm}} アプリケーション。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
+
+
+
+
+* バックエンド・アプリケーションの URL (**「アプリの経路 (App Route)」**)。バックエンド・アプリケーションの保護されたエンドポイントに要求を送信するためにこの値が必要になります。
+* **TenantID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
+* {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域の値は、`「米国南部」`、`「英国」`、または`「シドニー」`のいずれかでなければならず、また Swift SDK に必要な SDK 値 (`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom`、または `BMSClient.Region.sydney`) に対応している必要があります。{{site.data.keyword.amashort}} クライアントを初期化するためにこの値が必要になります。
 * CocoaPods と連動して機能するようにセットアップされた iOS プロジェクト。詳しくは、[iOS Swift SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)の **CocoaPods のインストール**を参照してください。
    **注:** 先に進む前にコア {{site.data.keyword.amashort}} Client SDK をインストールする必要はありません。
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
-
-
-
-
-* [Facebook for Developers](https://developers.facebook.com) サイト上の Facebook アプリケーション。 
+* [Facebook for Developers](https://developers.facebook.com) サイト上の Facebook アプリケーション。
 
 
 **重要:** Facebook SDK (`com.facebook.FacebookSdk`) を別個にインストールする必要はありません。Facebook SDK は {{site.data.keyword.amashort}} `BMSFacebookAuthentication` ポッドで自動的にインストールされます。Facebook for Developers の Web サイトでアプリを追加または構成する場合は、**Xcode プロジェクトへの Facebook SDK の追加**のステップをスキップできます。
@@ -34,11 +38,9 @@ lastupdated: "2016-10-10"
 {: #facebook-auth-ios-config}
 Facebook for Developers サイトで以下を行います。
 
-1. [Facebook for Developers](https://developers.facebook.com) で自分のアカウントにログインします。
+1. [Facebook for Developers](https://developers.facebook.com) で自分のアカウントにログインします。新規アプリケーションの作成については、[Facebook for Developers Web サイトでのアプリケーションの作成](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。 
 
-1. iOS プラットフォームがアプリに追加済みであることを確認します。iOS プラットフォームを追加または構成する場合、以下のステップについて詳細が提供されます。
-
-1. iOS アプリケーションの *bundleId* を指定します。ご使用の iOS アプリケーションの *bundleId* を調べるには、`info.plist` ファイル内または Xcode プロジェクトの**「一般 (General)」**タブ内で**「バンドル ID (Bundle Identifier)」**を探します。
+1. iOS プラットフォームがアプリに追加済みであることを確認します。iOS プラットフォームを追加または構成する場合、iOS アプリケーションの **bundleId** を提供する必要があります。ご使用の iOS アプリケーションの **bundleId** を調べるには、`info.plist` ファイル内または Xcode プロジェクトの**「一般 (General)」**タブ内で**「バンドル ID (Bundle Identifier)」**を探します。
 
   **ヒント**: これらの機能を使用する予定がある場合は、URL スキーム・サフィックスまたはシングル・サインオンを使用可能にすることを検討してください。
 
@@ -47,17 +49,12 @@ Facebook for Developers サイトで以下を行います。
 ## Facebook 認証用の {{site.data.keyword.amashort}} の構成
 {: #facebook-auth-ios-configmca}
 
-Facebook App ID および Facebook アプリケーションを iOS クライアントに対して機能するよう構成したら、{{site.data.keyword.amashort}} で Facebook 認証を使用可能にすることができます。
+Facebook App ID および Facebook アプリケーションを iOS クライアントに対して機能するよう構成したら、{{site.data.keyword.amashort}} サービスで Facebook 認証を使用可能にすることができます。
 
-1. {{site.data.keyword.Bluemix}} ダッシュボードでサービスを開きます。
-
-1. **「モバイル・オプション」**をクリックし、**「経路」** (*applicationRoute*) と **「アプリ GUID」/「TenantId」** (*tenantId*) の値のメモを取ります。SDK を初期化する際、および要求をバックエンド・アプリケーションに送信する際に、これらの値が必要になります。
-
-1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードがロードされます。
-
-1. **「Facebook」**パネルで**「構成」**ボタンをクリックします。
-
-1. Facebook App ID を指定して**「保存」**をクリックします。
+1. {{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。
+1. **「管理」**タブで、**「許可」**をオンに切り替えます。
+1. **「Facebook」**セクションを展開します。
+1. **Facebook Application ID** を追加して**「保存」**をクリックします。
 
 ## iOS 用の {{site.data.keyword.amashort}} Client SDK の構成
 {: #facebook-auth-ios-sdk}
@@ -93,6 +90,13 @@ pod 'BMSFacebookAuthentication'
  **重要**: この時点で、CocoaPods によって生成された `xcworkspace` ファイルを使用してプロジェクトを開く必要があります。通常、名前は `{your-project-name}.xcworkspace` です。  
 
 1. コマンド・ラインから `open {your-project-name}.xcworkspace` を実行して、iOS プロジェクトのワークスペースを開きます。
+
+### iOS のキーチェーン共有 (Keychain Sharing) の使用可能化
+{: #enable_keychain}
+
+`「キーチェーン共有 (Keychain Sharing)」`を使用可能にします。Xcode プロジェクトで、`「Capabilities」`タブに移動し、`「Keychain Sharing」`を`「On」`に切り替えます。
+
+
 
 ### Facebook 認証用の iOS プロジェクトの構成
 {: #facebook-auth-ios-configproject}
@@ -192,11 +196,13 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 	}
 
  ```
- 
+
  コードの中で次のようにします。
+
+ * `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。
+ * `tenantId` を**「TenantId」/「アプリ GUID」**値に置き換えます。
  
- * `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。自分の {{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーの**アバター**・アイコン ![アバター・アイコン ](images/face.jpg "アバター・アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。表示される地域の値は、**「米国南部」**、**「英国」 **、または**「シドニー」**のいずれかでなければならず、またコードで必要な値 (`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom`、または `BMSClient.Region.sydney`) に対応している必要があります。
- * `tenantId` を、**「モバイル・オプション」**から保存した**「アプリ GUID」/「TenantId」**の値 (『[Facebook 認証用の Mobile Client Access の構成](#facebook-auth-ios-configmca)』を参照) に置き換えます。
+ これらの値について詳しくは、[開始する前に](#before-you-begin)を参照してください。
 
 1. アプリ代行の `application:didFinishLaunchingWithOptions` メソッドに以下のコードを追加することによって、Facebook SDK にアプリのアクティベーションについて通知し、Facebook Authentication Handler を登録します。BMSClient インスタンスの初期化の後にこのコードを追加し、Facebook を認証マネージャーとして登録します。
 
@@ -209,13 +215,13 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 1. アプリ代行に以下のコードを追加します。
 
  ```Swift
-  
+
 	func application(_ application: UIApplication, open url: URL,
                      sourceApplication: String?, annotation: Any) -> Bool {
         
-        return FacebookAuthenticationManager.sharedInstance.onOpenURL(application: application, 
+        return FacebookAuthenticationManager.sharedInstance.onOpenURL(application: application,
 		url: url, sourceApplication: sourceApplication, annotation: annotation)
-        
+
     }
  ```
 
@@ -246,13 +252,11 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
      print ("error: \(error)")
   }
   }
-            
 	request.send(completionHandler: callBack)
-
  ```
 
 1. アプリケーションを実行します。Facebook のログイン画面が表示されます。
- 
+
    ![image](images/ios-facebook-login.png)
 
    この画面は、現在 Facebook にログインしていない場合、若干異なって見える可能性があります。

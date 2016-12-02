@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
 
 # Configuración del SDK del cliente de {{site.data.keyword.amashort}} para iOS (Objective-C)
@@ -15,13 +16,20 @@ Configure su aplicación de iOS con autenticación personalizada para que utilic
 
 ## Antes de empezar
 {: #before-you-begin}
-Debe tener un recurso que esté protegido por una instancia del servicio de {{site.data.keyword.amashort}} que esté configurado para utilizar un proveedor de identidad personalizado.  Su app para móvil debe instrumentarse con el SDK del cliente de {{site.data.keyword.amashort}}.  Para obtener más información, consulte la siguiente información:
+Debe tener lo siguiente:
+
+* Un recurso protegido mediante una instancia del servicio {{site.data.keyword.amashort}} configurado para que utilice un proveedor de identidad personalizado (consulte [Configuración de la autenticación personalizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* El valor de **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse el botón **Opciones móviles**. El valor `tenantId` (también conocido como `appGUID`) se muestra en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización. 
+* Su nombre de **Dominio**. Es el valor que ha especificado en el campo **Nombre de dominio** de la sección **Personalizado** del separador **Gestión** del panel de control de {{site.data.keyword.amashort}} (consulte [Configuración de la autenticación personalizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)). 
+* El URL de la aplicación de programa de fondo (**Ruta de app**). Necesitará estos valores para enviar solicitudes a los puntos finales protegidos de la aplicación de programa de fondo. 
+* Su {{site.data.keyword.Bluemix_notm}} **Región**. Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de región que aparece debe ser uno de los siguientes: `EE.UU. Sur`, `Reino Unido` o `Sidney` y debe corresponder con los valores de SDK necesarios en el código Javascript de WebView: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` o `BMSClient.REGION_SYDNEY`. Necesitará este valor para inicializar el cliente {{site.data.keyword.amashort}}. 
+
+Para obtener más información, consulte la siguiente información:
  * [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Configuración del SDK de Objective-C de iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)
  * [Utilización de un proveedor de identidad personalizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Creación de un proveedor de identidad personalizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
-
 
 
 ## Instalación del SDK del cliente con CocoaPods
@@ -43,14 +51,12 @@ CocoaPods instala las dependencias añadidas. Se mostrarán el progreso y los co
 
 1. Ejecute `open {nombre-proyecto}.xcworkspace` desde una línea de mandatos para abrir su espacio de trabajo de iOS.
 
-
-
 ### Inicialización del SDK del cliente
 {: #custom-ios-sdk-initialize}
 
-Para inicializar el SDK, especifique los parámetros de ruta de la aplicación (`applicationRoute`) y GUID (`applicationGUID`). Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `application:didFinishLaunchingWithOptions` del delegado de la aplicación.
+Inicialice el SDK pasando los parámetros **Ruta de app** (`applicationRoute`) y **TenantID** (`tenantID`) parameters. 
 
-1. Obtenga los valores de los parámetros de la aplicación. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles** para ver los valores correspondientes a **Ruta** (`applicationRoute`) y a **Identificador exclusivo global de la app** (`applicationGUID`).
+Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `application:didFinishLaunchingWithOptions` del delegado de la aplicación.
 
 1. Importe la infraestructura `IMFCore` a la clase en la que desea utilizar el SDK del cliente.
 
@@ -72,25 +78,25 @@ Para inicializar el SDK, especifique los parámetros de ruta de la aplicación (
 	* Defina el valor en la ubicación del archivo `BridgingHeader.h`, por ejemplo: `$(SRCROOT)/MyApp/BridgingHeader.h`
 	* Verifique que la cabecera puente se selecciona en Xcode al crear el proyecto.
 
-1. Inicialice el SDK del cliente. Sustituya applicationRoute y applicationGUID por los valores correspondientes a **Ruta** (`applicationRoute`) e **Identificador exclusivo global de la app** (`applicationGUID`) que ha obtenido de **Opciones móviles**.
+1. Inicialice el SDK del cliente. Sustituya los valores **Ruta de app** (`applicationRoute`) y **TenantID** (`tenantID`) por otros valores. Para obtener más información sobre cómo obtener estos valores, consulte [Antes de empezar](##before-you-begin).
 
 	Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
-			backendGUID:@"applicationGUID"];
+			backendGUID:@"tenantID"];
 	```
 
 	Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
-	 							backendGUID: "applicationGUID")
+	 							backendGUID: "tenantID")
 	```
 
 ## Inicialización de AuthorizationManager
-Inicialice AuthorizationManager pasando el parámetro `tenantId` del servicio {{site.data.keyword.amashort}}. Puede encontrar este valor pulsando el botón **Mostrar credenciales** en el icono del servicio {{site.data.keyword.amashort}}.
+Inicialice AuthorizationManager pasando el parámetro `tenantId` del servicio {{site.data.keyword.amashort}}. 
 
 
 ### Objective-C:
@@ -269,8 +275,6 @@ Aplicaciones Swift:
 IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDelegate(),
 									forRealm: realmName)
 ```
-
-
 
 
 ## Prueba de autenticación

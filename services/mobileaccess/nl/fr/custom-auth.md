@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-2"
+
 ---
 
 # Authentification d'utilisateurs à l'aide d'un fournisseur d'identité personnalisé
@@ -32,7 +33,7 @@ accessible depuis l'Internet public afin de pouvoir communiquer avec le service 
 * Le SDK client de {{site.data.keyword.amashort}} délègue l'authentification à une classe personnalisée que vous avez créée. Vous devez collecter les données d'identification et les fournir au SDK client de {{site.data.keyword.amashort}}.
 * Les données d'identification fournies au SDK {{site.data.keyword.amashort}} par le développeur sont envoyées au service {{site.data.keyword.amashort}} en tant que réponse à la demande d'authentification.
 * Le service {{site.data.keyword.amashort}} valide la réponse à la demande d'authentification auprès du fournisseur d'identité.
-* Si la validation aboutit, le service {{site.data.keyword.amashort}} génère un en-tête d'autorisation et le renvoie au SDK client de {{site.data.keyword.amashort}}. L'en-tête d'autorisation contient deux jetons : un jeton qui contient des informations sur les droits d'accès, et un autre jeton qui contient des informations sur l'utilisateur, le périphérique et l'application actuels.
+* Si la validation aboutit, le service {{site.data.keyword.amashort}} génère un en-tête d'autorisation et le renvoie au SDK client de {{site.data.keyword.amashort}}. L'en-tête d'autorisation contient deux jetons : un jeton qui contient des informations sur les droits d'accès, et un autre jeton qui contient des informations sur l'utilisateur, l'appareil et l'application actuels.
 * A partir de ce moment, toutes les demandes faites avec le SDK client de {{site.data.keyword.amashort}} contiennent un nouvel en-tête d'autorisation.
 * Le SDK client de {{site.data.keyword.amashort}} renvoie automatiquement la demande d'origine qui avait déclenché le flux d'autorisation.
 * Le SDK serveur de {{site.data.keyword.amashort}} extrait l'en-tête d'autorisation de la demande, la valide auprès du service {{site.data.keyword.amashort}}, et donne l'accès à la ressource de back end.
@@ -45,9 +46,6 @@ Le flux de demande d'une application Web {{site.data.keyword.amashort}} est simi
 
   * La requête initiale est envoyée par l'application Web (depuis un formulaire de connexion, par exemple).
   * La redirection finale vise la zone protégée de l'application Web elle-même et non pas une ressource de back end protégée. 
-
-
-
 
 ## Présentation des fournisseurs d'identité personnalisés
 {: #custom-id-about}

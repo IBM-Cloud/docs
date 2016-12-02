@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-11-03"
 
 ---
 
@@ -20,10 +20,13 @@ lastupdated: "2016-10-03"
 
 开始之前，必须具有：
 
-* Web 应用程序。 
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅 [{{site.data.keyword.amashort}} 入门](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)。
-
-* 最终重定向的 URI（授权流程完成后）。
+* Web 应用程序。
+* 资源，该资源受 {{site.data.keyword.amashort}} 服务的实例保护，而该服务已配置为使用定制的身份提供者（请参阅[配置定制认证](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。  
+* **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
+* **域名**。这是在 {{site.data.keyword.amashort}}“仪表板”的**管理**选项卡中**定制**部分的**域名**字段中指定的值。
+* 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`美国南部`、`英国`或`悉尼`，并对应于 Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
+* 最终重定向的 URI（授权流程完成后）。这是在**管理**选项卡的**定制**部分中输入的 **Web 应用程序重定向 URI** 值。
 
 有关更多信息，请参阅：
 
@@ -105,25 +108,28 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 配置定制身份提供者后，可以在 {{site.data.keyword.amashort}} 仪表板中启用定制认证。 
 
-1. 打开 {{site.data.keyword.Bluemix_notm}} 仪表板。 
-2. 单击相关 {{site.data.keyword.amashort}} 应用程序磁贴。这时将装入应用程序仪表板。 
-3. 单击“定制”磁贴上的**配置**按钮。 
-4. 在**域名**文本框中，输入在定制身份提供者处理程序端点中配置的域名。
-5. 输入定制身份提供者 URL。 
-6. 认证成功后，输入要由 {{site.data.keyword.amashort}} 仪表板使用的 Web 应用程序重定向 URI。 
-7. 保存。 
+1. 在 {{site.data.keyword.amashort}}“仪表板”中打开服务。
+1. 在**管理**选项卡中，将**授权**切换为“开启”。
+1. 展开**定制**部分。
+1. 输入**域名**和**定制身份提供者 URL**。 
+1. 输入 **Web 应用程序重定向 URI** 值。这是成功授权后最终重定向的 URI。
+1. 单击**保存**。
 
 
 ##使用定制身份提供者实施 {{site.data.keyword.amashort}} 授权流程
 {: #custom-auth-flow}
 
 针对每一个 {{site.data.keyword.amashort}} 服务实例会自动创建
-`VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，通过单击应用程序左侧
-导航栏上的**环境变量**，可以查看该对象。
+`VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，通过单击 {{site.data.keyword.amashort}}“仪表板”中的**服务凭证**选项卡，可以查看该对象。
 
 要请求用户授权，请将浏览器重定向到授权服务器端点。要这样做： 
 
 1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中，检索授权端点 (`authorizationEndpoint`) 和客户端标识 (`clientId`)。 
+
+	`var cfEnv = require("cfenv");` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+
 
 	**注：**如果在添加 Web 支持之前，您已向应用程序添加了
 {{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
@@ -176,7 +182,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 	```
 	{: codeblock}
  
-	请注意，`redirect_uri` 参数代表 Web 应用程序重定向 URI，必须等于 {{site.data.keyword.amashort}} 仪表板中定义的 URI。  
+	请注意，`redirect_uri` 参数代表 Web 应用程序重定向 URI，因此必须与 {{site.data.keyword.amashort}} 仪表板中定义的 URI 一致。  
 
 	`state` 参数可以随请求一起传递。此参数将会传播到定制身份提供者 POST 方法，可以从请求主体 (`req.body.stateId`) 进行访问。  
 
@@ -191,8 +197,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中检索 `authorizationEndpoint`、`clientId` 和 `secret`。 
 
-	**注：**如果在添加 Web 支持之前，您已向应用程序添加了
-{{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
+	**注：**如果在添加 Web 支持之前，您已向应用程序添加了 {{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
 
 	美国南部： 
   
@@ -225,7 +230,7 @@ app.get("/oauth/callback", function(req, res, next){
     var formData = { 
       grant_type: "authorization_code", 
 			client_id: mcaCredentials.clientId, 
-			redirect_uri: "http://some-server/oauth/callback",   // Your web application redirect uri 
+			redirect_uri: "http://some-server/oauth/callback",   // Your Web application redirect uri 
 			code: req.query.code 
 		} 
 
@@ -254,7 +259,7 @@ code 数值应该是在授权请求结束时响应中收到的授权代码。授
 
 	响应主体将包含 `access_token` 和 `id_token`，格式为 JWT (https://jwt.io/)。
 
-	在您收到访问令牌和身份令牌之后，您可以将 Web 会话标记为已认证，并可选择性地持久存储这些令牌
+	在您收到访问令牌和身份令牌之后，您可以将 Web 会话标记为已认证，并且可以选择持久存储这些令牌
 
 
 ##使用获取的访问和身份令牌

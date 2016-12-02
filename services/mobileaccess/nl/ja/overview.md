@@ -2,31 +2,32 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-06"
+
 ---
 
 # {{site.data.keyword.amashort}} の概要
 {: #mca-overview}
 
 
-{{site.data.keyword.amafull}} サービスは、{{site.data.keyword.Bluemix_notm}} 上でホストされているクラウド・リソースにアクセスするモバイル・アプリケーションおよび Web アプリケーションの認証サービスおよびモニタリング・サービスを提供します。
+{{site.data.keyword.amafull}} サービスは、{{site.data.keyword.Bluemix_notm}} 上でホストされているクラウド・リソースにアクセスするモバイル・アプリケーションおよび Web アプリケーションに対する認証を提供します。
 
-{{site.data.keyword.amashort}} サービスを使用すると、{{site.data.keyword.Bluemix_notm}} 上でホストされている Node.js アプリケーションおよび Liberty for Java&trade; アプリケーションをさまざまな認証タイプによって保護できます。モバイル・アプリケーションに {{site.data.keyword.amashort}} SDK を装備することにより、{{site.data.keyword.amashort}} サービスによって提供されている認証機能を使用することができます。クライアント・サイド・ログは自動的に収集され、オンデマンドで {{site.data.keyword.amashort}} サービスに送信されます。{{site.data.keyword.amashort}} ダッシュボードを使用して、さまざまな認証タイプを構成し、クライアント・サイド SDK によって収集および送信されるデータを表示します。
+{{site.data.keyword.amashort}} サービスを使用すると、{{site.data.keyword.Bluemix_notm}} 上でホストされている Node.js アプリケーションおよび Liberty for Java&trade; アプリケーションをさまざまな認証タイプによって保護できます。モバイル・アプリケーションに {{site.data.keyword.amashort}} SDK を装備することにより、{{site.data.keyword.amashort}} サービスによって提供されている認証機能を使用することができます。{{site.data.keyword.amashort}} ダッシュボードを使用して、さまざまな認証タイプを構成し、クライアント・サイド SDK によって収集および送信されるデータを表示します。
 
 **注**: {{site.data.keyword.amashort}} サービスの以前の名称は Advanced Mobile Access でした。
 
 ## コンポーネント
 {: #components}
 
-* **{{site.data.keyword.amashort}} ダッシュボード**: さまざまな認証タイプを構成し、モバイル・アプリケーションのパフォーマンス、分析、使用量統計、およびデバイス・ログをモニターします。
-* **{{site.data.keyword.amashort}} Client SDK**: {{site.data.keyword.amashort}} の機能を使用するようにモバイル・アプリケーションを装備します。サポートされるプラットフォームは、iOS 8+、Android 4+、および Cordova です。
+* **{{site.data.keyword.amashort}} ダッシュボード**: さまざまな認証タイプを構成します
+* **{{site.data.keyword.amashort}} Client SDK**: {{site.data.keyword.amashort}} の機能を使用するようにモバイル・アプリケーションを装備します。サポートされるプラットフォームは、iOS 8+、Android 4+、Cordova、および Web アプリケーションです。
 * **{{site.data.keyword.amashort}} Server SDK**: {{site.data.keyword.Bluemix_notm}} 上でホストされているリソースを保護します。現在サポートされているランタイムは、Node.js と Liberty for Java&trade; です。
 
 ## 認証タイプ
 {: #authtypes}
 モバイル・アプリでは以下の認証タイプを使用できます。
-* **Facebook**: Facebook を ID プロバイダーとして使用します。ユーザーは、Facebook の資格情報を使用してモバイル・アプリにログインします。
-* **Google**: Google を ID プロバイダーとして使用します。ユーザーは、Google+ の資格情報を使用してモバイル・アプリにログインします。
+* **Facebook**: Facebook を ID プロバイダーとして使用します。ユーザーは、Facebook の資格情報を使用してモバイルまたは Web アプリにログインします。
+* **Google**: Google を ID プロバイダーとして使用します。ユーザーは、Google+ の資格情報を使用してモバイルまたは Web アプリにログインします。
 * **カスタム**: 独自の ID プロバイダーを作成します。ユーザーが、どのような種類の情報を収集し、検証するかを完全に制御します。
 
 ## アーキテクチャーの概要

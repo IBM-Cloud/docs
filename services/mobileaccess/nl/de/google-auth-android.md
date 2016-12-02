@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-03"
+
 ---
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -10,15 +11,16 @@ lastupdated: "2016-10-10"
 # Google-Authentifizierung für Android-Apps aktivieren
 {: #google-auth-android}
 
-Sie können Benutzer über Google für Ihre {{site.data.keyword.amafull}}-Android-Anwendung authentifizieren. Fügen Sie die Sicherheitsfunktionalität von {{site.data.keyword.amashort}} hinzu. 
+Sie können Benutzer über Google für Ihre {{site.data.keyword.amafull}}-Android-Anwendung authentifizieren. Fügen Sie die Sicherheitsfunktionalität von {{site.data.keyword.amashort}} hinzu.
 
 ## Vorbereitungen
 {: #before-you-begin}
 Voraussetzungen:
-
-* Android-Projekt in Android Studio, das für das Arbeiten mit Gradle konfiguriert ist. Das Projekt muss nicht mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
-* Die Parameterwerte Ihres Service. Öffnen Sie den Service im {{site.data.keyword.Bluemix_notm}}-Dashboard. Klicken Sie auf **Mobile Systemerweiterungen**. In den Feldern **Route** und **App-GUID/TenantId** werden die Werte `applicationRoute` und `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Diese Werte benötigen Sie für die Initialisierung des SDK und zum Senden von Anforderungen an die Back-End-Anwendung.
+* Eine Instanz einer {{site.data.keyword.amafull}} service and {{site.data.keyword.Bluemix_notm}}-Anwendung. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
+* Die URL der Back-End-Anwendung (**App-Route**). Sie benötigen diese Werte zum Senden von Anforderungen an die geschützten Endpunkte der Back-End-Anwendung.
+* Der Wert für die **Tenant-ID**. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
+* Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im WebView-JavaScript-Code erforderlichen SDK-Werten entsprechen: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`. Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-Clients.
+* Android-Projekt, das für das Arbeiten mit Gradle konfiguriert ist. Das Projekt muss nicht mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  
 
 Das Einrichten der Google-Authentifizierung für Ihre {{site.data.keyword.amashort}}-Android-App erfordert außerdem die Konfiguration der folgenden Komponenten:
 * {{site.data.keyword.Bluemix_notm}}-Anwendung
@@ -27,15 +29,15 @@ Das Einrichten der Google-Authentifizierung für Ihre {{site.data.keyword.amasho
 ## Projekt in Google Developer Console erstellen
 {: #create-google-project}
 
-Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in der Entwicklerkonsole von Google '[Google Developer Console](https://console.developers.google.com)'. 
-Zur Erstellung eines Projekts gehört das Anfordern einer Google-Client-ID.  Die Google-Client-ID ist eine eindeutige Kennung für Ihre Anwendung, die von der Google-Authentifizierung verwendet wird und zum Einrichten der {{site.data.keyword.Bluemix_notm}}-Anwendung erforderlich ist.
+Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in der Entwicklerkonsole von Google '[Google Developer Console](https://console.developers.google.com)'.
+Zur Erstellung eines Projekts gehört das Anfordern einer Google-Client-ID.  Die Google-Client-ID ist eine eindeutige Kennung für Ihre Anwendung, die von der Google-Authentifizierung verwendet wird und zum Einrichten des {{site.data.keyword.amashort}}-Service erforderlich ist.
 
 Führen Sie die folgenden Schritte von der Konsole aus:
 
 1. Erstellen Sie ein Projekt mithilfe der **Google+**-API.
 2. Fügen Sie den Benutzerzugriff **OAuth** hinzu.
 3. Vor dem Hinzufügen der Berechtigungsnachweise müssen Sie die Plattform auswählen (Android).
-4. Fügen Sie die Berechtigungsnachweise hinzu. 
+4. Fügen Sie die Berechtigungsnachweise hinzu.
 
 Zum Abschließen der Erstellung der Berechtigungsnachweise müssen Sie den **Fingerabdruck für das Signaturzertifikat** hinzufügen.
 
@@ -60,10 +62,10 @@ Ein Keystore (Schlüsselspeicher), der ein Zertifikat für Entwicklungsumgebunge
 
 ###Paketname
 
-1. Geben Sie im Dialog 'Credentials' den Paketnamen Ihrer Android-Anwendung ein. 
+1. Geben Sie im Dialog 'Credentials' den Paketnamen Ihrer Android-Anwendung ein.
 
-  Zur Ermittlung des Paketnamens Ihrer Android-Anwendung öffnen Sie die Datei `AndroidManifest.xml` in Android Studio und suchen nach: 
-  	
+  Zur Ermittlung des Paketnamens Ihrer Android-Anwendung öffnen Sie die Datei `AndroidManifest.xml` in Android Studio und suchen nach:
+
   	`<manifest package="{your-package-name}">`
 
 1. Wenn Sie dies erledigt haben, klicken Sie auf **Create**. Damit ist die Erstellung der Berechtigungsnachweise abgeschlossen.
@@ -78,18 +80,15 @@ Wenn die Berechtigungsnachweise erfolgreich erstellt wurden, wird auf der Seite 
 
 Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-Authentifizierung im {{site.data.keyword.amashort}}-Dashboard aktivieren.
 
-1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard.
-
-1. Klicken Sie auf die Kachel für {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
-
-1. Klicken Sie auf die Schaltfläche **Konfigurieren** in der Anzeige **Google**.
-
-1. Geben Sie bei **Anwendungs-ID für Android** Ihre Google-Client-ID für Android an und klicken Sie auf **Speichern**.
+1. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard.
+1. Aktivieren Sie auf der Registerkarte **Verwalten** die Option **Berechtigung**.
+1. Erweitern Sie den Abschnitt **Google**.
+1. Geben Sie in **Client-ID für Android** Ihre Google-Client-ID für Android an und klicken Sie auf **Speichern**.
 
 ## {{site.data.keyword.amashort}}-Client-SDK für Android konfigurieren
 {: #google-auth-android-sdk}
 
-1. Kehren Sie zu Android Studio zurück.
+Über das Android Studio-Projekt.
 
 1. Öffnen Sie die Datei `build.gradle` Ihres App-Moduls.
 
@@ -132,12 +131,14 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
 
 	BMSClient.getInstance().setAuthorizationManager(
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
-						
+
 	GoogleAuthenticationManager.getInstance().register(this);
 	```
 
-  * Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region.  Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen.  Der Regionswert muss einer der folgenden sein: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`.
-  * Ersetzen Sie `<MCAServiceTenantId>` durch den Wert `tenantId` (siehe [Vorbereitungen](##before-you-begin)). 
+  * Ersetzen Sie `BMSClient.REGION_UK` durch Ihre {{site.data.keyword.Bluemix_notm}}-**Region**.
+  * Ersetzen Sie `<MCAServiceTenantId>` durch den Wert der **Tenant-ID**. 
+
+	Informationen zum Abrufen dieser Werte finden Sie unter [Vorbereitungen](##before-you-begin).
 
    **Hinweis:** Wenn Ihre Android-Anwendung als Ziel Android Version 6.0 (API-Stufe 23) oder höher ausgewählt hat, müssen Sie sicherstellen, dass die Anwendung über einen `android.permission.GET_ACCOUNTS`-Aufruf verfügt, bevor `register` aufgerufen wird. Weitere Informationen finden Sie unter [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
@@ -154,12 +155,11 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
 
 ## Authentifizierung testen
 {: #google-auth-android-test}
-Nach der Initialisierung des Client-SDK und der Registrierung des Google-Authentifizierungsmanagers können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen.
-
+Nach der Initialisierung des Client-SDK und der Registrierung des Google-Authentifizierungsmanagers können Sie mit dem Senden von Anforderungen an Ihre Back-End-Anwendung beginnen.
 
 Bevor Sie mit dem Test beginnen, müssen Sie über eine mobile Back-End-Anwendung verfügen, die mit der **MobileFirst Services Starter**-Boilerplate erstellt wurde. Außerdem müssen Sie bereits eine Ressource haben, die durch den Endpunkt `/protected` von {{site.data.keyword.amashort}} geschützt wird. Weitere Informationen finden Sie in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).  Informationen zum Abrufen des Wertes für `{applicationRoute}` finden Sie unter [Vorbereitungen](#before-you-begin). 
+1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).  Informationen zum Abrufen des Wertes für `{applicationRoute}` finden Sie unter [Vorbereitungen](#before-you-begin).
 
 	Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der Boilerplate 'MobileFirst Services' erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Daher können nur mobile Anwendungen auf den Endpunkt zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
 
