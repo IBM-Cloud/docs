@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-19"
+lastupdated: "2016-10-31"
 
 ---
 {:new_window: target="_blank"}
@@ -10,12 +10,9 @@ lastupdated: "2016-10-19"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 開始使用 {{site.data.keyword.mobileanalytics_short}}
+# 開始使用 {{site.data.keyword.mobileanalytics_short}}（測試版）
+
 {: #gettingstartedtemplate}
-
-
-前次更新：2016 年 10 月 19 日
-{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} 可提供開發人員、IT 管理者及商業利害關係人，對其行動應用程式的效能及其使用情形的見解。請從桌面或平板電腦監視所有應用程式的效能及使用情形。可快速識別趨勢和異常、往下探查以解決這些問題，以及在重要度量值超過重大臨界值時觸發警示。
 {: shortdesc}
@@ -26,12 +23,13 @@ lastupdated: "2016-10-19"
 
  {{site.data.keyword.mobileanalytics_short}} 服務在啟動時已啟用**展示模式**。展示模式會在**應用程式資料**及**警示**頁面上移入圖表，讓您可以查看資料的顯示方式。當您有自己的資料時，即可關閉展示模式。處於展示模式時，{{site.data.keyword.mobileanalytics_short}} 主控台是唯讀的，因此您無法建立新的警示定義。
 
-2. 安裝 {{site.data.keyword.mobileanalytics_short}} [Client SDK](install-client-sdk.html)。您可以選擇性地使用 {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}。
+2. 安裝 {{site.data.keyword.mobileanalytics_short}} [Client SDK](/docs/services/mobileanalytics/install-client-sdk.html)。您可以選擇性地使用 {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}。
 
-3. 匯入 Client SDK，並使用下列程式碼 Snippet 起始設定它們，以記錄用法分析。
+3. 匯入 Client SDK，並使用下列程式碼 Snippet 起始設定它們，以記錄用量分析。
 
 	#### Android
 	{: #android-initialize}
+	
 	1. 匯入 Client SDK：
 
 		```
@@ -39,51 +37,63 @@ lastupdated: "2016-10-19"
 		import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
 		```
 		{: codeblock}
-		
-	2. 使用 [API 金鑰](sdk.html#analytics-clientkey)值，以在應用程式碼內起始設定 Client SDK，來記錄用法分析及應用程式階段作業。
+	
+	2. 使用 [API 金鑰](/docs/services/mobileanalytics/sdk.html#analytics-clientkey)值，以在應用程式碼內起始設定 Client SDK，來記錄用量分析及應用程式階段作業。
 
 		```Java
-			BMSClient.getInstance().initialize(this.getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
+		BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
 			
-			Analytics.init(getApplication(), "your_app_name_here", "your_api_key_here", hasUserContext, Analytics.DeviceEvent.LIFECYCLE);
+		Analytics.init(getApplication(), "your_app_name_here", "your_api_key_here", hasUserContext, Analytics.DeviceEvent.ALL);
 		```
 		{: codeblock}
 		
-    您為應用程式所選取的名稱 (`your_app_name_here`) 會在 {{site.data.keyword.mobileanalytics_short}} 主控台中顯示為應用程式名稱。應用程式名稱是用來作為過濾器，以在儀表板中搜尋應用程式日誌。當您跨平台（例如，Android 及 iOS）使用相同的應用程式名稱時，不論是從哪個平台傳送日誌，都可以看到同名應用程式的所有日誌。
+    	您為應用程式所選取的名稱 (`your_app_name_here`) 會在 {{site.data.keyword.mobileanalytics_short}} 主控台中顯示為應用程式名稱。應用程式名稱是用來作為過濾器，以在儀表板中搜尋應用程式日誌。當您跨平台（例如，Android 及 iOS）使用相同的應用程式名稱時，不論是從哪個平台傳送日誌，都可以看到同名應用程式的所有日誌。
     
-    **bluemixRegion** 參數指定您所使用的 {{site.data.keyword.Bluemix_notm}} 部署（例如，`BMSClient.REGION_US_SOUTH` 及 `BMSClient.REGION_UK`）。 
-    <!-- , or `BMSClient.REGION_SYDNEY`.-->
+    	**bluemixRegion** 參數指定您所使用的 {{site.data.keyword.Bluemix_notm}} 部署（例如，`BMSClient.REGION_US_SOUTH` 及 `BMSClient.REGION_UK`）。 
+    <!-- , or `BMSClient.Region.Sydney`.-->
     
-    **附註：**請將 `hasUserContext` 的值設為 **true** 或 **false**。如果是 false（預設值），每一個裝置即視為作用中使用者。當 `hasUserContext` 為 false 時，[`Analytics.setUserIdentity("username");`](sdk.html#android-tracking-users) 方法無法運作。如果是 true，則每次使用 [`Analytics.setUserIdentity("username");`](sdk.html#android-tracking-users) 時都會視為作用中使用者。當 `hasUserContext` 為 true 時，沒有預設的使用者身分，因此必須設為移入作用中使用者圖表。
+    	**附註：**請將 `hasUserContext` 的值設為 **true** 或 **false**。如果是 false（預設值），每一個裝置即視為作用中使用者。當 `hasUserContext` 為 false 時，[`Analytics.setUserIdentity("username");`](/docs/services/mobileanalytics/sdk.html#android-tracking-users) 方法無法運作。如果是 true，則每次使用 [`Analytics.setUserIdentity("username");`](/docs/services/mobileanalytics/sdk.html#android-tracking-users) 時都會視為作用中使用者。當 `hasUserContext` 為 true 時，沒有預設的使用者身分，因此必須設為移入作用中使用者圖表。
 
-  #### iOS
-  {: #ios-initialize}
+	#### iOS
+	{: #ios-initialize}
   
-  1. 匯入 `BMSCore` 及 `BMSAnalytics` 架構：
-	```
-	    import BMSCore
-    import BMSAnalytics
-    ```
-	{: codeblock}
+	1. 匯入 `BMSCore` 及 `BMSAnalytics` 架構：
+	
+		```
+		import BMSCore
+		import BMSAnalytics
+		```
+		{: codeblock}
     
-  2. 使用 [API 金鑰](sdk.html#analytics-clientkey)值，以在應用程式碼內起始設定 Client SDK，來記錄用法分析及應用程式階段作業。
- 
-	Swift：
+	2. 使用 [API 金鑰](/docs/services/mobileanalytics/sdk.html#analytics-clientkey)值，以在應用程式碼內起始設定 Client SDK，來記錄用量分析及應用程式階段作業。
 	
-	```Swift
-	BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // You can change the region
-	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: DeviceEvent.lifecycle)	
-	```
-	{: codeblock}
+		```Swift
+		BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // You can change the region
+		Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: deviceEvents: .lifecycle, .network)
+		```
+		{: codeblock}
 		
-	您為應用程式所選取的名稱 (`your_app_name_here`) 會在 {{site.data.keyword.mobileanalytics_short}} 主控台中顯示為應用程式名稱。應用程式名稱是用來作為過濾器，以在儀表板中搜尋應用程式日誌。當您跨平台（例如，Android 及 iOS）使用相同的應用程式名稱時，不論是從哪個平台傳送日誌，都可以看到同名應用程式的所有日誌。
+		您為應用程式所選取的名稱 (`your_app_name_here`) 會在 {{site.data.keyword.mobileanalytics_short}} 主控台中顯示為應用程式名稱。應用程式名稱是用來作為過濾器，以在儀表板中搜尋應用程式日誌。當您跨平台（例如，Android 及 iOS）使用相同的應用程式名稱時，不論是從哪個平台傳送日誌，都可以看到同名應用程式的所有日誌。
 	
-	**bluemixRegion** 參數指定您所使用的 Bluemix 部署（例如，`BMSClient.REGION_US_SOUTH` 及 `BMSClient.REGION_UK`）。
+		**bluemixRegion** 參數指定您所使用的 Bluemix 部署（例如，`BMSClient.Region.usSouth` 或 `BMSClient.Region.unitedKingdom`）。
 	<!-- , or `BMSClient.REGION_SYDNEY`. -->
 	
-	**附註：**請將 `hasUserContext` 的值設為 **true** 或 **false**。如果是 false（預設值），每一個裝置即視為作用中使用者。當 `hasUserContext` 為 false 時，[`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) 方法無法運作。如果是 true，則每次使用 [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) 時都會視為作用中使用者。當 `hasUserContext` 為 true 時，沒有預設的使用者身分，因此必須設為移入作用中使用者圖表。
+		**附註：**請將 `hasUserContext` 的值設為 **true** 或 **false**。如果是 false（預設值），每一個裝置即視為作用中使用者。當 `hasUserContext` 為 false 時，[`Analytics.userIdentity = "username"`](/docs/services/mobileanalytics/sdk.html#ios-tracking-users) 方法無法運作。如果是 true，則每次使用 [`Analytics.userIdentity = "username"`](/docs/services/mobileanalytics/sdk.html#ios-tracking-users) 時都會視為作用中使用者。當 `hasUserContext` 為 true 時，沒有預設的使用者身分，因此必須設為移入作用中使用者圖表。
+	
+	#### Cordova
+	{: #cordova-initialize}
+	
+	使用 [API 金鑰](/docs/services/mobileanalytics/sdk.html#analytics-clientkey)值，以在應用程式碼內起始設定 Client SDK，來記錄用量分析及應用程式階段作業。
+	
+		```Javascript
+		var appName = "your_app_name_here";
+		var apiKey = "your_api_key_here";
+		
+		BMSClient.initialize(BMSClient.REGION_US_SOUTH);
+		BMSAnalytics.initialize(appName, apiKey, false, [BMSAnalytics.ALL])
+		```
 
-4. 將記錄的用法分析傳送至「Mobile Analytics 服務」。簡單的測試分析方式是在應用程式啟動時執行下列程式碼：
+4. 將記錄的用量分析傳送至「Mobile Analytics 服務」。簡單的測試分析方式是在應用程式啟動時執行下列程式碼：
 
 	#### Android
 	{: #android-send}
@@ -106,11 +116,22 @@ lastupdated: "2016-10-19"
 	Analytics.send()
 	```
 	{: codeblock}
-
-	請閱讀[檢測應用程式](sdk.html)主題，以瞭解其他 {{site.data.keyword.mobileanalytics_short}} 功能。
+	
+	#### Cordova
+	{: #cordova-send}
+	
+	使用 `BMSAnalytics.send` 方法，將分析資料傳送至伺服器。將 `BMSAnalytics.send` 方法放在最適合您專案的位置中。
+	
+	```
+	BMSAnalytics.send
+	```
+	{: codeblock}
+	
+	閱讀[檢測應用程式](/docs/services/mobileanalytics/sdk.html)主題，以瞭解其他 {{site.data.keyword.mobileanalytics_short}} 功能（例如[記載](/docs/services/mobileanalytics/sdk.html#app-monitoring-logger)、[網路要求](/docs/services/mobileanalytics/sdk.html#network-requests)及[損毀分析](/docs/services/mobileanalytics/sdk.html#report-crash-analytics)）。
+	
 5. 在模擬器或裝置上編譯並執行應用程式。
 
-6. 移至 {{site.data.keyword.mobileanalytics_short}} **主控台**，以查看您應用程式的用法分析。您也可以<!--[creating custom charts](app-monitoring.html#custom-charts),-->[設定警示](app-monitoring.html#alerts)及[監視應用程式損毀](app-monitoring.html#monitor-app-crash)來監視應用程式。
+6. 移至「{{site.data.keyword.mobileanalytics_short}} 主控台」，以查看應用程式的用量分析。您也可以<!--[creating custom charts](app-monitoring.html#custom-charts),-->[設定警示](/docs/services/mobileanalytics/app-monitoring.html#alerts)及[監視應用程式損毀](/docs/services/mobileanalytics/app-monitoring.html#monitor-app-crash)來監視應用程式。
 
 
 # 相關鏈結
@@ -118,6 +139,7 @@ lastupdated: "2016-10-19"
 ## SDK
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+* [Cordova 外掛程式核心 SDK](https://www.npmjs.com/package/bms-core){: new_window}
 
 ## API 參考資料
 {: #api}

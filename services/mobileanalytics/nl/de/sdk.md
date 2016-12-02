@@ -2,15 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-18"
+lastupdated: "2016-11-10"
 
 ---
 
 # Anwendung zur Verwendung der Client-SDKs von {{site.data.keyword.mobileanalytics_short}} instrumentieren
 {: #mobileanalytics_sdk}
-
-Letzte Aktualisierung: 19. Oktober 2016
-{: .last-updated}
 
 Mit den {{site.data.keyword.mobileanalytics_full}}-SDKs können Sie die mobile Anwendung instrumentieren.
 {: shortdesc}
@@ -23,7 +20,7 @@ Mit den {{site.data.keyword.mobileanalytics_full}}-SDKs können Sie die mobile A
 
 <!--2. Custom events - This category includes data that you define yourself and that is specific to your app. This data represents events that occur within your app, such as page views, button taps, or in-app purchases. In addition to initializing the {{site.data.keyword.mobileanalytics_short}} SDK in your app, you must add a line of code for each custom event that you want to track. -->
 
-Derzeit sind SDKs für Android, iOS und WatchOS verfügbar.
+Derzeit sind SDKs für Android, iOS, WatchOS und Cordova verfügbar.
 
 ## API-Schlüsselwert für Serviceberechtigungsnachweise angeben
 {: #analytics-clientkey}
@@ -31,102 +28,123 @@ Derzeit sind SDKs für Android, iOS und WatchOS verfügbar.
 Geben Sie Ihren **API-Schlüsselwert** an, bevor Sie das Client-SDK konfigurieren. Der API-Schlüssel ist für die Initialisierung des Client-SDKs erforderlich.
 
 1. Öffnen Sie das Dashboard für den {{site.data.keyword.mobileanalytics_short}}-Service.
-2. Klicken Sie auf die Registerkarte **Serviceberechtigungsnachweise**.
-3. Erweitern Sie **Berechtigungsnachweise anzeigen**, um Ihren API-Schlüsselwert sichtbar zu machen. Den API-Schlüsselwert benötigen Sie für die Initialisierung des {{site.data.keyword.mobileanalytics_short}}-Client-SDK.
+2. Erweitern Sie **Berechtigungsnachweise anzeigen**, um Ihren API-Schlüsselwert sichtbar zu machen. Den API-Schlüsselwert benötigen Sie für die Initialisierung des {{site.data.keyword.mobileanalytics_short}}-Client-SDK.
 
 
-## Android-Anwendung zum Erfassen von Analysedaten initialisieren
-{: #initalize-ma-sdk-android}
+## Anwendung zum Erfassen von Analysedaten initialisieren
+{: #initalize-ma-sdk}
 
 Initialisieren Sie die Anwendung, damit Protokolle an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden können.
 
-1. Importieren Sie das Client-SDK durch Hinzufügen der folgenden `import`-Anweisung am Anfang der Projektdatei:
+1. Importieren Sie das Client-SDK.
 
-  ```
-  import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
+	### Android
+	{: #android-import}
+
+	Fügen Sie die folgenden `import`-Anweisungen am Anfang Ihrer Projektdatei ein:
+	
+  	```
+  	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
 import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
 import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
-  ```
-  {: codeblock}
-
-2. Initialisieren Sie das {{site.data.keyword.mobileanalytics_short}}-Client-SDK in der Android-Anwendung durch Hinzufügen des Initialisierungscodes in der Methode `onCreate` der Hauptaktivität in der Android-Anwendung oder an einer Position, die sich für das Projekt am besten eignet.
-
-	```Java
-	BMSClient.getInstance().initialize(this.getApplicationContext(), BMSClient.REGION_US_SOUTH); // Sicherstellen, dass auf eigene Region verwiesen wird
-	```
-  {: codeblock}
-
-  Zum Verwenden des {{site.data.keyword.mobileanalytics_short}}-Client-SDKs müssen Sie `BMSClient` mit dem Parameter **bluemixRegion** initialisieren. Im Initialisierungsoperator gibt der Wert für **bluemixRegion** an, welche {{site.data.keyword.Bluemix_notm}}-Bereitstellung Sie verwenden, z. B. `BMSClient.REGION_US_SOUTH` und `BMSClient.REGION_UK`.
-    <!-- , or `BMSClient.REGION_SYDNEY`.-->  <!-- Set this value with a `BMSClient.REGION` static property. -->
-
-  <!--You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
-
-3. Initialisieren Sie Analytics mithilfe des Android-Anwendungsobjekts und legen Sie dafür den Namen der Anwendung fest. Außerdem benötigen Sie den Wert für den [**API-Schlüssel**](#analytics-clientkey).
+  	```
+  	{: codeblock}
+  
+	### iOS
+	{: #ios-import}
 	
-	```Java
-	// In diesem Codebeispiel ist Analytics für die Aufzeichnung von Lebenszyklusereignissen konfiguriert.
-	Analytics.init(getApplication(), "your_app_name_here", apiKey, hasUserContext, Analytics.DeviceEvent.LIFECYCLE);
-	```
-  {: codeblock}
+	**Hinweis:** Das Swift-SDK ist für iOS und WatchOS verfügbar.
 	
-	Der Name, den Sie für Ihre Anwendung auswählen (`your_app_name_here`), wird in der {{site.data.keyword.mobileanalytics_short}}-Konsole als Anwendungsname angezeigt. Der Anwendungsname wird als Filter für die Suche nach Anwendungsprotokollen im Dashboard verwendet. Wenn Sie plattformübergreifend (zum Beispiel für Android und iOS) denselben Anwendungsnamen verwenden, können Sie unter einem Namen unabhängig von der Plattform, von der die Protokolle stammen, alle Protokolle zu dieser Anwendung anzeigen.
-	
-	**Hinweis:** Setzen Sie den Wert für `hasUserContext` auf **true** oder **false**. Bei 'false' (Standardwert) wird jedes Gerät als aktiver Benutzer gezählt. Die Methode [`Analytics.setUserIdentity("username")`](sdk.html#android-tracking-users), mit der Sie die Anzahl der Benutzer pro Gerät verfolgen können, die Ihre Anwendung aktiv nutzen, funktioniert nicht, wenn der Wert für `hasUserContext` 'false' ist. Bei 'true' wird jede Verwendung von  [`Analytics.setUserIdentity("username")`](sdk.html#android-tracking-users) als ein aktiver Benutzer gezählt. Wenn `hasUserContext` auf 'true' gesetzt ist, gibt es keine Standardbenutzer-ID. Daher muss diese festgelegt werden, damit die Diagramme für aktive Benutzer gefüllt werden.
-	
-4. [Senden Sie Analysedaten](sdk.html#app-monitoring-gathering-analytics) an den Service (sdk.html#app-monitoring-gathering-analytics).
+	Importieren Sie die Frameworks `BMSCore` und `BMSAnalytics` durch Hinzufügen der folgenden `import`-Anweisungen am Anfang der Projektdatei `AppDelegate.swift`:
 
-## iOS-Anwendung zum Erfassen von Analysedaten initialisieren
-{: #init-ma-sdk-ios}
-
-Initialisieren Sie die Anwendung, damit Protokolle an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden können. Das Swift-SDK ist für iOS und WatchOS verfügbar.
-
-1. Importieren Sie die Frameworks `BMSCore` und `BMSAnalytics` durch Hinzufügen der folgenden `import`-Anweisungen am Anfang der Projektdatei `AppDelegate.swift`:
-
-  ```Swift
+   ```Swift
   import BMSCore
   import BMSAnalytics
-  ```
-  {: codeblock}
+   ```
+   {: codeblock}  
 
-2. Wenn Sie das {{site.data.keyword.mobileanalytics_short}}-Client-SDK verwenden möchten, müssen Sie zuerst die Klasse `BMSClient` mit dem folgenden Code initialisieren.
+2. Initialisieren Sie das {{site.data.keyword.mobileanalytics_short}}-Client-SDK in Ihrer Anwendung. 
 
-  Versetzen Sie den Initialisierungscode in die Methode `application(_:didFinishLaunchingWithOptions:)` des Anwendungsdelegierten oder an eine Position, die sich für das Projekt am besten eignet.
+	### Android
+	{: #android-init}
+	
+	Initialisieren Sie das {{site.data.keyword.mobileanalytics_short}}-Client-SDK in der Android-Anwendung durch Hinzufügen des Initialisierungscodes in der Methode `onCreate` der Hauptaktivität in der Android-Anwendung oder an einer Position, die sich für das Projekt am besten eignet.
+
+	```Java
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Sicherstellen, dass auf eigene Region verwiesen wird
+	```
+	{: codeblock}
+
+  Sie müssen `BMSClient` mit dem Parameter **bluemixRegion** initialisieren. Im Initialisierungsoperator gibt der Wert für **bluemixRegion** an, welche {{site.data.keyword.Bluemix_notm}}-Bereitstellung Sie verwenden, z. B. `BMSClient.REGION_US_SOUTH` und `BMSClient.REGION_UK`.
+     
+    <!-- , or `BMSClient.REGION_SYDNEY`.--> 
+    
+    ### iOS
+    {: #ios-init}
+    
+    Initialisieren Sie zuerst mithilfe des nachfolgenden Codes die Klasse `BMSClient`. Versetzen Sie den Initialisierungscode in die Methode `application(_:didFinishLaunchingWithOptions:)` des Anwendungsdelegierten oder an eine Position, die sich für das Projekt am besten eignet.
 	
     ```Swift
     BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Sicherstellen, dass auf eigene Region verwiesen wird
     ```
-    {: codeblock}
+   {: codeblock}
 
-    Zum Verwenden des {{site.data.keyword.mobileanalytics_short}}-Client-SDKs müssen Sie `BMSClient` mit dem Parameter **bluemixRegion** initialisieren. Im Initialisierungsoperator gibt der Wert für **bluemixRegion** an, welche {{site.data.keyword.Bluemix_notm}}-Bereitstellung verwendet wird, zum Beispiel `BMSClient.REGION_US_SOUTH` oder `BMSClient.REGION_UK`.
-    <!-- , or `BMSClient.REGION_SYDNEY`. -->
-   
-   <!-- Set this value with a `BMSClient.REGION` static property. -->
+    Sie müssen `BMSClient` mit dem Parameter **bluemixRegion** initialisieren. Im Initialisierungsoperator gibt der Wert für **bluemixRegion** an, welche {{site.data.keyword.Bluemix_notm}}-Bereitstellung verwendet wird, zum Beispiel `BMSClient.Region.usSouth` oder `BMSClient.Region.unitedKingdom`.
+    <!-- , or `BMSClient.Region.Sydney`. -->
+    
+    ### Cordova
+    {: #cordova-init}
+    
+    Initialisieren Sie **BMSClient** und **BMSAnalytics**. Sie benötigen den Wert für den [**API-Schlüssel**](#analytics-clientkey).
 
-   <!-- You can optionally pass the **applicationGUID** and **applicationRoute** values if you are using another {{site.data.keyword.Bluemix_notm}} service that requires these values, otherwise you can pass empty strings.-->
+  ```Javascript
+  var applicationName = "HelloWorld";
+  var apiKey =  "your_api_key_here";
+  var hasUserContext = true;
+  var deviceEvents = [BMSAnalytics.ALL];
 
-3. Initialisieren Sie Analytics durch Festlegen des Namens der mobilen Anwendung. Außerdem benötigen Sie den Wert für den [**API-Schlüssel**](#analytics-clientkey).
-
- Der Anwendungsname wird als Filter für die Suche nach Anwendungsprotokollen in Ihrem {{site.data.keyword.mobileanalytics_short}}-Dashboard verwendet. Wenn Sie plattformübergreifend (zum Beispiel für Android und iOS) denselben Anwendungsnamen verwenden, können Sie unter einem Namen unabhängig von der Plattform, von der die Protokolle stammen, alle Protokolle zu dieser Anwendung anzeigen.
-
-  Mit dem optionalen Parameter `deviceEvents` können automatisch Analysedaten für gerätespezifische Ereignisse erfasst werden.
-
- ### iOS
- {: #ios-initialize-analytics}
-	
- ```Swift
- Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: DeviceEvent.lifecycle)
- ```
- {: codeblock}
-  
- ### WatchOS
- {: #watchos-initialize-analytics}
-	
- ```Swift
- Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false)
+  BMSClient.initialize(BMSClient.REGION_US_SOUTH); //Sicherstellen, dass auf eigene Region verwiesen wird	
+  BMSAnalytics.initialize(applicationName, apiKey, hasUserContext, deviceEvents)
   ```
- {: codeblock}
+  {:codeblock}
+
+ Zum Verwenden des {{site.data.keyword.mobileanalytics_short}}-Client-SDKs müssen Sie `BMSClient` mit dem Parameter **bluemixRegion** initialisieren. Im Initialisierungsoperator gibt der Wert für **bluemixRegion** an, welche {{site.data.keyword.Bluemix_notm}}-Bereitstellung verwendet wird, zum Beispiel `BMSClient.REGION_US_SOUTH` oder `BMSClient.REGION_UK`.
+    <!-- , or `BMSClient.REGION_SYDNEY`. -->
+    
+3. Initialisieren Sie Analytics mithilfe des Anwendungsobjekts und legen Sie dafür den Namen der Anwendung fest. 
+
+	Der Name, den Sie für Ihre Anwendung auswählen (`your_app_name_here`), wird in der {{site.data.keyword.mobileanalytics_short}}-Konsole als Anwendungsname angezeigt. Der Anwendungsname wird als Filter für die Suche nach Anwendungsprotokollen im Dashboard verwendet. Wenn Sie plattformübergreifend (zum Beispiel für Android und iOS) denselben Anwendungsnamen verwenden, können Sie unter einem Namen unabhängig von der Plattform, von der die Protokolle stammen, alle Protokolle zu dieser Anwendung anzeigen.
+
+	Außerdem benötigen Sie den Wert für den [**API-Schlüssel**](#analytics-clientkey).
+
+	### Android
+	{: #android-init-analytics}
 	
- Der Name, den Sie für Ihre Anwendung auswählen (`your_app_name_here`), wird in der {{site.data.keyword.mobileanalytics_short}}-Konsole als Anwendungsname angezeigt. Der Anwendungsname wird als Filter für die Suche nach Anwendungsprotokollen im Dashboard verwendet. Wenn Sie plattformübergreifend (zum Beispiel für Android und iOS) denselben Anwendungsnamen verwenden, können Sie unter einem Namen unabhängig von der Plattform, von der die Protokolle stammen, alle Protokolle zu dieser Anwendung anzeigen.
+	```Java
+	// In diesem Codebeispiel ist Analytics für die Aufzeichnung von Lebenszyklusereignissen konfiguriert.
+	Analytics.init(getApplication(), "your_app_name_here", apiKey, hasUserContext, Analytics.DeviceEvent.ALL);
+	```
+	{: codeblock}
+	
+	**Hinweis:** Setzen Sie den Wert für `hasUserContext` auf **true** oder **false**. Bei 'false' (Standardwert) wird jedes Gerät als aktiver Benutzer gezählt. Die Methode [`Analytics.setUserIdentity("username")`](sdk.html#android-tracking-users), mit der Sie die Anzahl der Benutzer pro Gerät verfolgen können, die Ihre Anwendung aktiv nutzen, funktioniert nicht, wenn der Wert für `hasUserContext` 'false' ist. Bei 'true' wird jede Verwendung von  [`Analytics.setUserIdentity("username")`](sdk.html#android-tracking-users) als ein aktiver Benutzer gezählt. Wenn `hasUserContext` auf 'true' gesetzt ist, gibt es keine Standardbenutzer-ID. Daher muss diese festgelegt werden, damit die Diagramme für aktive Benutzer gefüllt werden.
+	
+	### iOS
+	{: #ios-initialize-analytics}
+	
+ 	```Swift 
+	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: .lifecycle, .network)
+ 	```
+ 	{: codeblock}
+ 	
+ #### WatchOS
+ {: #watchos-initialize-analytics}
+	 	
+ 	```Swift
+ 	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", deviceEvents: .network)
+ 	```
+ 	{: codeblock}
+ 	
+ 	Mit dem optionalen Parameter `deviceEvents` können automatisch Analysedaten für gerätespezifische Ereignisse erfasst werden.
 	
  **Hinweis:** Setzen Sie den Wert für `hasUserContext` auf **true** oder **false**. Bei 'false' (Standardwert) wird jedes Gerät als aktiver Benutzer gezählt. Die Methode [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users), mit der Sie die Anzahl der Benutzer pro Gerät verfolgen können, die Ihre Anwendung aktiv nutzen, funktioniert nicht, wenn `hasUserContext` auf 'false' gesetzt ist. Wenn `hasUserContext` auf 'true' gesetzt ist, zählt jede Verwendung von [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) als ein aktiver Benutzer. Wenn `hasUserContext` auf 'true' gesetzt ist, gibt es keine Standardbenutzer-ID. Daher muss diese festgelegt werden, damit die Diagramme für aktive Benutzer gefüllt werden.
 
@@ -137,15 +155,16 @@ Initialisieren Sie die Anwendung, damit Protokolle an den {{site.data.keyword.mo
 	```
 	Analytics.recordApplicationDidBecomeActive()
 	```
-  {: codeblock}
+   {: codeblock}
 
  Fügen Sie die folgende Zeile zur Methode 'applicationWillResignActive()' der Klasse 'ExtensionDelegate' hinzu:
 	```
 	Analytics.recordApplicationWillResignActive()
 	```
-  {: codeblock}
-  
-4. [Senden Sie Analysedaten](sdk.html#app-monitoring-gathering-analytics) an den {{site.data.keyword.mobileanalytics_short}}-Service.
+	{: codeblock}	
+		
+4. Sie haben die Anwendung nun für die Erfassung von Analysedaten initialisiert. Als Nächstes können Sie die Schritte zum [Senden von Analysedaten](sdk.html#app-monitoring-gathering-analytics) an den {{site.data.keyword.mobileanalytics_short}}-Service durchführen.
+
 
 ## Nutzungsanalysedaten zusammenstellen
 {: #app-monitoring-gathering-analytics}
@@ -233,18 +252,22 @@ Analytics.log(eventObject)
 
 -->
 
-  <!--Removing Cordova for experimental-->
-  <!--### Cordova-->
-  <!--{: #usage-analytics-cordova}-->
+#### Cordova
+{: #usage-analytics-cordova}
 
-  <!--```JavaScript-->
-  <!--// Enable usage analytics recording-->
-  <!--Analytics.enable();-->
+  ```JavaScript
+  // Aufzeichnung von Nutzungsanalysedaten aktivieren
+  BMSAnalytics.enable();
 
-  <!--// Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service-->
-  <!--Analytics.send();-->
-  <!--```-->
-  <!--**Note:** When you are developing Cordova applications, use the native API to enable application lifecycle event recording.-->
+  // Aufzeichnung von Nutzungsanalysedaten deaktivieren
+  BMSAnalytics.disable();
+
+  // Aufgezeichnete Nutzungsanalysedaten an {{site.data.keyword.mobileanalytics_short}}-Service senden
+  BMSAnalytics.send();
+  ```
+  {: codeblock}
+  
+  **Hinweis:** Verwenden Sie bei der Entwicklung von Cordova-Anwendungen die native API zum Aktivieren der Aufzeichnung von Anwendungslebenszyklusereignissen.
   
 ## Protokollfunktion aktivieren, konfigurieren und verwenden
 {: #app-monitoring-logger}
@@ -268,22 +291,9 @@ Analytics.log(eventObject)
 
     Wenn für die Protokollfunktion die Ebene `FATAL` konfiguriert ist, werden von der Protokollfunktion nicht abgefangene Ausnahmebedingungen erfasst, aber nicht Protokolle, die Aufschluss über den Vorlauf vor dem Absturzereignis liefern. Sie können eine ausführlichere Protokollebene festlegen, um sicherzustellen, dass auch Protokolle erfasst werden, die zum Eintrag `FATAL` der Protokollfunktion führen, zum Beispiel `WARN` oder `ERROR`.
 
+    Wenn die Protokollierungsstufe auf `DEBUG` gesetzt ist, erhalten Sie zudem Protokolle des Mobile Analytics-Client-SDK, die im Sendeumfang der Protokolle enthalten sind.
+
   <!--**Note:** Find full Logger API references for each platform at [SDKs, samples, API reference](sdks-samples-apis.html). The Logger API is part of the--> <!--{{site.data.keyword.mobileanalytics_short}} Client SDK Core.-->
-
-  <!--### Cordova-->
-
-
-  <!--```JavaScript-->
-
-  <!--var logger = MFPLogger.getInstance("myLogger");-->
-
-  <!--logger.debug("debug info");-->
-  <!--logger.info("info message");-->
-  <!--logger.warn("warning message");-->
-  <!--logger.fatal("fatal message");-->
-
-  <!--```-->
-
 
 ### Beispiel für Verwendung der Protokollfunktion
 {: #sample-logger-usage}
@@ -291,7 +301,6 @@ Analytics.log(eventObject)
 **Hinweis:** Stellen Sie sicher, dass Sie die Anwendung zur Verwendung des {{site.data.keyword.mobileanalytics_short}}-Client-SDKs instrumentiert haben, bevor Sie das Protokollierungsframework verwenden.
  
   An den folgenden Codeausschnitten wird die Verwendung der Beispielprotokollfunktion veranschaulicht:
-
 #### Android
 {: #android-logger-sample}
 
@@ -336,8 +345,9 @@ logger2.info("info message");
 {: #ios-logger-sample-swift2}
 
 ```
-// Protokollfunktion zum Speichern der Protokolle auf dem Gerät konfigurieren, sodass sie später an den
-// Mobile Analytics-Service gesendet werden können. Standardmäßig inaktiviert; zum Aktivieren auf true setzen
+// Protokollfunktion zum Speichern der Protokolle auf dem Gerät konfigurieren, sodass sie
+// später an den Mobile Analytics-Service gesendet werden können.
+// Standardmäßig inaktiviert; zum Aktivieren auf true setzen
 Logger.isLogStorageEnabled = true
 
 // Mindestprotokollierungsebene ändern (optional)
@@ -351,7 +361,8 @@ let logger2 = Logger.logger(name: "feature2Logger")
 
 // Protokollnachrichten mit unterschiedlichen Ebenen
 logger1.debug(message: "debug message for feature 1") 
-// Die Nachricht logger1.debug wird nicht protokolliert, weil für logLevelFilter der Wert info eingestellt ist
+// Die Nachricht logger1.debug wird nicht protokolliert, weil für
+// logLevelFilter der Wert info eingestellt ist
 logger2.info(message: "info message for feature 2")
 
 // Protokolle an den Mobile Analytics-Service senden
@@ -371,24 +382,29 @@ Logger.send(completionHandler: { (response: Response?, error: Error?) in
 **Tipp:** Aus Datenschutzgründen können Sie die Ausgabe der Protokollfunktion für Anwendungen inaktivieren, die im Releasemodus erstellt werden. Von der Protokollfunktionsklasse werden Protokolle standardmäßig in der Xcode-Konsole gedruckt. Fügen Sie in den Erstellungseinstellungen für das Ziel das Flag `-D RELEASE_BUILD` zum Abschnitt mit den weiteren Swift-Flags der Buildkonfiguration des Release hinzu.
     
 
-  <!-- ### Cordova-->
-  <!--{: #enable-logger-sample-cordova}-->
+#### Cordova
+{: #enable-logger-sample-cordova}
 
-  <!--// Enable persisting logs-->
-  <!--MFPLogger.setCapture(true);-->
+  ```
+  // Speicherung von Protokollen aktivieren
+  BMSLogger.storeLogs(true);
 
-  <!--// Set the minimum log level to be printed and persisted-->
-  <!--MFPLogger.setLevel(MFPLogger.INFO);-->
+  // Auszugebende und zu speichernde Mindestprotokollstufe festlegen
+  BMSLogger.setLogLevel(BMSLogger.INFO);
 
-  <!--var logger1 = MFPLogger.getInstance("logger1");-->
-  <!--var logger2 = MFPLogger.getInstance("logger2");   -->
+  var logger1 = BMSLogger.getInstance("logger1");
+  var logger2 = BMSLogger.getInstance("logger2");   
 
-  <!--// Log messages with different levels-->
-  <!--logger1.debug ("debug message");-->
-  <!--logger2.info ("info message");-->
+  // Protokollnachrichten mit unterschiedlichen Ebenen
+  logger1.debug ("debug message");
+  logger2.info ("info message");
 
-  <!--// Send persisted logs to the {{site.data.keyword.mobileanalytics_short}} Service-->
-  <!--```-->
+  // Gespeicherte Protokolle an den {{site.data.keyword.mobileanalytics_short}}-Service senden
+  BMSLogger.send();
+  BMSAnalytics.send();
+  ```
+  {: codeblock}
+
 
 <!--## Enabling the {{site.data.keyword.mobileanalytics_short}} Client SDK internal logs
 {: #enable-logger-sdklogs}
@@ -412,6 +428,97 @@ Logger.sdkDebugLoggingEnabled = true
 ```
 {: codeblock}
 -->
+
+## Berichtserstellung über Netzanforderungen
+{: #network-requests}
+
+Sie können das {{site.data.keyword.mobileanalytics_short}}-Client-SDK zum Aufzeichnen von Netzanforderungen konfigurieren. Stellen Sie sicher, dass Sie `BMSClient` und `BMSAnalytics` bereits initialisiert haben.
+#### Android
+{: #android-network-requests}
+
+**Hinweis:** Bei diesem Code-Snippet wird angenommen, dass Sie [die Client-SDKs importiert haben](#android-import).
+
+```
+public void makeGetCall(){
+    Thread thread = new Thread(new Runnable() {
+        @Override
+        public void run() {
+            try  {
+                Request request = new Request("http://httpbin.org/get", "GET");
+                    request.send(null, null);
+            } catch (Exception e) {
+                // Fehler hier bearbeiten.
+            }
+        }
+    });
+    thread.start();
+}
+```
+{: codeblock}
+
+#### Swift 3.0
+{: #ios-network-requests}
+
+```
+// Netzanforderung absetzen
+let urlSession = BMSURLSession(configuration: .default, delegate: nil, delegateQueue: nil)
+var request = URLRequest(url: URL(string: "http://httpbin.org/get")!)
+request.httpMethod = "GET"
+request.allHTTPHeaderFields = ["foo":"bar"]
+
+urlSession.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+    if let httpResponse = response as? HTTPURLResponse {
+        logger.info(message: "Status code: \(httpResponse.statusCode)")
+    }
+    if data != nil, let responseString = String(data: data!, encoding: .utf8) {
+        logger.info(message: "Response data: \(responseString)")
+    }
+    if let error = error {
+        logger.error(message: "Error: \(error)")
+    }
+}.resume()
+```
+{: codeblock}
+
+#### Swift 2.2
+{: ios-swift23-network-requests}
+
+```
+// Netzanforderung absetzen
+let urlSession = BMSURLSession(configuration: .defaultSessionConfiguration(), delegate: nil, delegateQueue: nil)
+let request = NSMutableURLRequest(URL: NSURL(string: "http://httpbin.org/get")!)
+request.HTTPMethod = "GET"
+request.allHTTPHeaderFields = ["foo":"bar"]
+
+urlSession.dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) in
+    if let httpResponse = response as? NSHTTPURLResponse {
+        logger.info(message: "Status code: \(httpResponse.statusCode)")
+    }
+    if data != nil, let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding) {
+        logger.info(message: "Response data: \(responseString)")
+    }
+    if let error = error {
+        logger.error(message: "Error: \(error)")
+    }
+}.resume()
+```
+{: codeblock}
+
+
+#### Cordova
+{: #cordova-network-requests}
+
+```
+var success = function(data){
+     console.log("success", data);
+ }
+ var failure = function(error)
+     {console.log("failure", error);
+ }
+ var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
+ request.send(success, failure);
+```
+{: codeblock}
 
 ## Berichterstellung über Ausfallanalysen
 {: #report-crash-analytics}
@@ -438,13 +545,21 @@ Siehe [Beispiel für die Verwendung einer Protokollfunktion](sdk.html#android-lo
 
 Siehe [Beispiel für die Verwendung einer Protokollfunktion](sdk.html##ios-logger-sample-swift2).
 
+#### Cordova
+{: #cordova-crash-statement}
+
+* `BMSLogger.storeLogs(true);`
+<!-- * `Logger.logLevelFilter = LogLevel.Fatal // or greater` -->
+
+Siehe [Beispiel für die Verwendung einer Protokollfunktion](sdk.html##ios-logger-sample-swift2).
+
+
 ## Aktive Benutzer verfolgen
 {: #trackingusers}
 
 Wenn Ihre Anwendung eindeutige Benutzer für ein Gerät erkennen kann, können Sie optional verfolgen, wie viele Benutzer die Anwendung aktiv nutzen, indem Sie den Benutzernamen des aktiven Benutzers an {{site.data.keyword.mobileanalytics_short}} übergeben. 
 
 Aktivieren Sie die Benutzerverfolgung, indem Sie {{site.data.keyword.mobileanalytics_short}} mit `hasUserContext=true` initialisieren. Andernfalls erfasst {{site.data.keyword.mobileanalytics_short}} nur einen Benutzer pro Gerät. 
-
 #### Android
 {: #android-tracking-users}
 
@@ -481,6 +596,17 @@ Analytics.userIdentity = nil
 ```
 {: codeblock}
 -->
+
+#### Cordova
+{: #cordova-tracking-users}
+
+Fügen Sie den folgenden Code hinzu, um zu verfolgen, wann sich der Benutzer anmeldet:
+
+```
+BMSAnalytics.setUserIdentity("username");
+```
+{: codeblock}
+
 
 <!--## Configuring MobileFirst Platform Foundation servers to use the {{site.data.keyword.mobileanalytics_short}} service (optional)
 {: #configmfp}
@@ -597,7 +723,7 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 ## Nächste Schritte
 {: #what-to-do-next}
 
-Wechseln Sie jetzt zur {{site.data.keyword.mobileanalytics_short}} **Konsole**, um die Nutzungsanalysedaten, z. B. neue Geräte und die Gesamtzahl der Geräte, die Ihre Anwendung nutzen, anzuzeigen. Sie können Ihre Anwendung auch überwachen, indem Sie <!--[creating custom charts](app-monitoring.html#custom-charts),-->[Alerts festlegen](app-monitoring.html#alerts) und [App-Abstürze überwachen](app-monitoring.html#monitor-app-crash).
+Wechseln Sie jetzt zur {{site.data.keyword.mobileanalytics_short}}-Konsole, um die Nutzungsanalysedaten, z. B. neue Geräte und die Gesamtzahl der Geräte, die Ihre Anwendung nutzen, anzuzeigen. Sie können Ihre Anwendung auch überwachen, indem Sie <!--[creating custom charts](app-monitoring.html#custom-charts),-->[Alerts festlegen](app-monitoring.html#alerts) und [App-Abstürze überwachen](app-monitoring.html#monitor-app-crash).
 
 # Zugehörige Links
 

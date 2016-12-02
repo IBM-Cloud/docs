@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-10-31"
 
 ---
 # {{site.data.keyword.mobileanalytics_short}} によるアプリケーションのモニター
 {: #monitoringapps}
-
-最終更新日: 2016 年 9 月 27 日
-{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} には、モバイル・アプリケーションのモニタリングや分析を行う機能が備えられています。{{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用して、アプリケーション・ログを記録したりデータをモニターしたりできます。開発者は、このデータを {{site.data.keyword.mobileanalytics_short}} サービスに送信するタイミングを制御できます。データが {{site.data.keyword.mobileanalytics_short}} に送信されたら、{{site.data.keyword.mobileanalytics_short}} ダッシュボードを使用して、モバイル・アプリケーション、デバイス、アプリケーション・ログに関する分析の洞察を得ることができます。
 {: shortdesc}
@@ -92,7 +89,6 @@ You can also export and import custom chart definitions programmatically by usin
 
 {{site.data.keyword.mobileanalytics_short}} コンソールでアラート定義にしきい値を設定すると、アクティビティーのモニターに役立ちます。
 
-
 しきい値を超過した場合にアラートをトリガーして {{site.data.keyword.mobileanalytics_short}} コンソール・モニターに通知するように、しきい値を構成することができます。トリガーされたアラートは、コンソールで視覚化したり、カスタム Webhook で処理したりできます。<!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.-->この機能は、アプリケーション・ログ・エラー、アプリケーションの異常終了、サーバー・ログ・エラーを検出するプロアクティブな手段になります。リアクティブのしきい値やアラートにより、データをふるいにかけたり、しきい値を細分して設定したりする必要がなくなります。
 
 ### アプリケーション・ログのアラート定義の作成
@@ -116,7 +112,6 @@ You can also export and import custom chart definitions programmatically by usin
 
 					**注**: 「アプリケーションの平均」オプションを選択すると、アプリ・ログ数が、デバイス数で平均化された数になります。例えば、デバイスが 2 つあり、一方のデバイスがアプリ・ログを 6 つ送信し、もう一方のデバイスがアプリ・ログを 3 つ送信した場合、アプリ・ログの平均は 4.5 になります。
 				* 演算子: 3 以上
-
 	<!-- insert alert definition tab image? -->
 
 4. **「次へ」**をクリックして、次の値を入力します。
@@ -199,7 +194,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 **「異常終了」**表で、アプリケーションの異常終了に関する情報を即座に確認できます。<!--In the **Overview** page of the **Dashboard** section,-->**「異常終了 (Crashes)」**棒グラフにより、経時的な異常終了のヒストグラムが示されます。
 
-データの表示方法は 2 とおりあります。
+クラッシュ・データの表示方法は 2 とおりあります。
 
 1. 異常終了率の表示: 時間別の異常終了率
 2. 合計異常終了回数の表示: 時間別の合計異常終了回数
@@ -207,7 +202,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### アプリ異常終了のトラブルシューティング
 {: #app-crash-troubleshooting}
 
-<!-- **Applications** section of the -->{{site.data.keyword.mobileanalytics_short}} コンソールの**「トラブルシューティング」**ページを参照すると、アプリの管理に役立ちます。
+<!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} コンソールの**「トラブルシューティング」**ページには、アプリ・クラッシュの詳細が表示されます。
 
 **「異常終了の要約 (Crash Summary)」**表はソート可能であり、次のデータ列が含まれています。
 
@@ -231,4 +226,23 @@ You can also export and import custom chart definitions programmatically by usin
 
 **注**: **「異常終了の要約 (Crash Summary)」**表のデータは、重大レベルのアプリ・ログの照会によって取り込まれます。アプリケーションで重大なアプリケーション・ログを収集していない場合、データはありません。
 
+## ネットワーク要求のモニタリング
+{: #monitor-network-requests}
+
+
+{{site.data.keyword.mobileanalytics_short}} コンソールで、アプリケーションのネットワーク要求データを表示します。 
+
+以下の測定値のデータを確認できます。
+	
+* 往復時間 - アプリがネットワーク要求をするのにかかる時間の長さを、ms 単位で定義します。
+* 要求カウント - 1 つのアプリによるネットワーク要求の頻度を表示します。データは平均値としても表示されます。
+
+<!--
+## Exporting data to dashDB
+{: #dashdb}
+
+The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+
+Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
+-->
 

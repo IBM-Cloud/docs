@@ -2,17 +2,15 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-18"
+lastupdated: "2016-11-14"
 
 ---
 
 # Installation des logiciels SDK du client {{site.data.keyword.mobileanalytics_short}}
 {: #mobileanalytics_sdk}
 
-Dernière mise à jour : 18 octobre 2016
-{: .last-updated}
-
-Actuellement, les logiciels SDK du client {{site.data.keyword.mobileanalytics_short}} sont disponibles pour Android, iOS et WatchOS.
+Actuellement, les logiciels SDK du client
+{{site.data.keyword.mobileanalytics_short}} sont disponibles pour Android, iOS, WatchOS et Cordova.
 {: #shortdesc}
 
 ## Installation du logiciel SDK du client Android
@@ -26,7 +24,7 @@ Le logiciel SDK du client {{site.data.keyword.mobileanalytics_short}} est distri
 
 2. Ouvrez le fichier `build.gradle` qui se trouve dans votre **module d'application**.
 
-  **Astuce** : votre projet Android peut comporter deux fichiers `build.gradle`, l'un est destiné au projet et l'autre au module d'application. Prenez soin d'utiliser le fichier destiné au **module d'application**. 
+  **Astuce** : votre projet Android peut comporter deux fichiers `build.gradle`, l'un est destiné au projet et l'autre au module d'application. Prenez soin d'utiliser le fichier destiné au **module d'application**.
 
 3. Localisez la section `Dependencies` dans le fichier `build.gradle` et ajoutez une dépendance de compilation pour le logiciel SDK du client {{site.data.keyword.mobileanalytics_short}}. Votre instruction de référentiels doit se présenter comme suit :
 
@@ -46,7 +44,7 @@ Le logiciel SDK du client {{site.data.keyword.mobileanalytics_short}} est distri
 	 <uses-permission android:name="android.permission.INTERNET" />
    ```
    {: codeblock}
-6. Vous avez installé le logiciel SDK client Android. A présent, [importez et initialisez ](sdk.html#initalize-ma-sdk-android) le logiciel SDK client d'analyse.    
+6. Vous avez installé le logiciel SDK client Android. A présent, [importez et initialisez](sdk.html#initalize-ma-sdk) le logiciel SDK client d'analyse.    
 
 ## Installation du logiciel SDK du client Swift
 {: #installing-sdk-ios}
@@ -60,45 +58,78 @@ Le logiciel SDK de {{site.data.keyword.mobileanalytics_full}} vous permet d'inst
 
 Vérifiez que Xcode est correctement configuré. Pour savoir comment configurer votre environnement de développement iOS, voir le [site Web Apple Developer](https://developer.apple.com/support/xcode/). Lisez la documentation relative aux [exigences Xcode](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements) pour Client SDK Swift Analytics.
 
-Le logiciel SDK {{site.data.keyword.mobileanalytics_short}} est distribué avec [CocoaPods](https://cocoapods.org/) et  [Carthage](https://github.com/Carthage/Carthage#getting-started), lesquels sont des gestionnaires de dépendance pour des projets Cocoa. CocoaPods et Carthage téléchargent automatiquement des artefacts depuis des référentiels et les met à la disposition de votre application.
+Le logiciel SDK {{site.data.keyword.mobileanalytics_short}} est distribué avec [CocoaPods](https://cocoapods.org/) et  [Carthage](https://github.com/Carthage/Carthage#getting-started), lesquels sont des gestionnaires de dépendance pour des projets Cocoa. CocoaPods et Carthage téléchargent automatiquement des artefacts depuis des référentiels et les met à la disposition de votre application. Sélectionnez CocoaPods ou Carthage :
 
 #### CocoaPods
 {: #cocoapods}
 
-1. Si CocoaPods n'est pas installé, exécutez la commande suivante :
-
-    ```
-    sudo gem install cocoapods
-    ```
-    {: codeblock}
-    
-    Pour Xcode 8 : `sudo gem install cocoapods --pre`
-    
-   Vérifiez que vous disposez de la dernière version de `BMSAnalytics` en mettant à jour votre référentiel CocoaPods local, comme suit :
-   
-    ```
-    pod repo update master
-    ```
-    {: codeblock}
-
-2. Appliquez les [{{site.data.keyword.Bluemix_notm}}instructions relatives à Mobile Services Swift SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods) contenues sur GitHub.
+1. Appliquez les [{{site.data.keyword.Bluemix_notm}}instructions relatives à Mobile Services Swift SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods) contenues sur GitHub pour installer `BMSAnalytics` en utilisant Cocoapods et l'ajouter à votre Podfile. 
 	
-3. Après avoir installé le logiciel SDK client iOS, [importez et initialisez](sdk.html#init-ma-sdk-ios) le logiciel SDK client d'analyse.    
+2. Après avoir installé le logiciel SDK client iOS, [importez et initialisez](sdk.html#initalize-ma-sdk) le logiciel SDK client d'analyse.    
 
 #### Carthage
 {: #carthage}
 
-Ajoutez des infrastructures à votre projet à l'aide de [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos).
+Si vous n'utilisez pas CocoaPods, vous pouvez ajouter des infrastructures à votre projet en utilisant [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos).
 
-1. Suivez les [instructions d'installation de Carthage](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage) contenues sur GitHub.
+1. Suivez les [instructions d'installation de Carthage](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage) contenues sur GitHub pour installer `BMSAnalytics`.
 
-2. Après avoir installé le logiciel SDK client iOS, [importez et initialisez](sdk.html#init-ma-sdk-ios) le logiciel SDK client d'analyse. 
+2. Après avoir installé le logiciel SDK client iOS, [importez et initialisez](sdk.html#initalize-ma-sdk) le logiciel SDK client d'analyse. 
+
+## Installation du plug-in Cordova
+{: #installing-sdk-cordova}
+
+Le plug-in Cordova de {{site.data.keyword.mobileanalytics_full}}<!--SDK-->vous permet d'instrumenter votre application mobile.  
+
+1. Ajoutez les plateformes Android et iOS à votre application Cordova. Exécutez l'une des commandes suivantes ou les deux à partir de la ligne de commande :
+
+	```Bash
+	cordova platform add android
+	```
+	
+	```Bash
+	cordova platform add ios
+	```
+	
+2. Si vous avez ajouté la plateforme Android, vous devez ajouter le niveau d'API minimal pris en charge au fichier `config.xml` de votre application Cordova. Ouvrez le fichier `config.xml` et ajoutez la ligne suivante à l'élément `<platform name="android">` :
+
+	```XML
+	<platform name="android">  
+  	<preference name="android-minSdkVersion" value="15"/>
+  	<preference name="android-targetSdkVersion" value="23"/>
+  	<!-- add minimum and target Android API level declaration -->
+  </platform>
+```
+La valeur de *minSdkVersion* doit être supérieure à `15`. Reportez-vous à [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) pour rester informé sur la version *targetSdkVersion* prise en charge pour le SDK Android.
+
+3. Si vous avez ajouté le système d'exploitation iOS, déclarez une cible dans l'élément `<platform name="ios">` :
+
+	```XML
+	<platform name="ios">
+    <preference name="deployment-target" value="8.0"/>
+     <!-- add deployment target declaration -->
+  </platform>
+```
+
+4. Installez le plug-in Cordova de {{site.data.keyword.mobileanalytics_short}} :
+
+ 	```Bash
+	cordova plugin add bms-core
+	```
+
+5. Vérifiez que le plug-in a été installé correctement à l'aide de la commande suivante :
+	```Bash
+	cordova plugin list
+	```
+	
+6. Vous avez installé le plug-in Cordova. A présent, [importez et initialisez](sdk.html#initalize-ma-sdk) le logiciel SDK client d'analyse. 
 
 # rellinks
 
 ## SDK
 * [Logiciel SDK Android](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [Logiciel SDK iOS](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+* [Logiciel SDK de base du plug-in Cordova](https://www.npmjs.com/package/bms-core){: new_window}
 
 ## Référence d'API
 {: #api}
