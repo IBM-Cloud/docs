@@ -46,7 +46,7 @@ A pipeline that uses the Static Analyzer service typically includes these stages
 ### Creating a static code scan
 
 
-Before you begin, [review the Terms of Use for the service](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01).
+Before you begin, review the [Terms of Use for the service](http://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01).
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -107,7 +107,7 @@ Console output examples:
 **Pending scan**
 ![Example pending scan](images/analyzer_pending.png)
 
-For more information about using the Static Analyzer service, [see the Static Analyzer service docs](https://console.ng.bluemix.net/docs/services/ApplicationSecurityonCloud/index.html).
+For more information about using the Static Analyzer service, see [the Static Analyzer service docs](https://console.ng.bluemix.net/docs/services/ApplicationSecurityonCloud/index.html).
 
 <!--
 
@@ -171,7 +171,7 @@ The machine translated files are placed in the same directory as the source `.pr
 
 After the stage is completed, you can review the translated files from the console output. You can also direct translators to the files so that they can review the machine-translation output and provide revisions to improve quality. The revisions are stored in a Cloudant™ database and take precedence over any future machine translations of the same strings.
 
-For more information about using the Globalization Pipeline service from the Bluemix Dashboard, [see the Globalization Pipeline service documentation](https://www.ng.bluemix.net/docs/services/GlobalizationPipeline/index.html).
+For more information about using the Globalization Pipeline service from the Bluemix Dashboard, see the [Globalization Pipeline service documentation](https://www.ng.bluemix.net/docs/services/GlobalizationPipeline/index.html).
 
 -->
 
@@ -187,7 +187,7 @@ Before you begin, create or copy a Slack WebHook URL:
 3. Select a channel and click **Add Incoming WebHooks Integration**.
 4. Add a **WebHook URL** or copy an existing one.
 
-For more information, [see Incoming WebHooks in the Slack documentation](https://api.slack.com/incoming-webhooks).
+For more information, see [Incoming WebHooks in the Slack documentation](https://api.slack.com/incoming-webhooks).
 
 To create Slack notifications:
 
@@ -327,7 +327,7 @@ To create HipChat notifications:
 ## Using Active Deploy for zero downtime deployment in the pipeline
 {: #deliverypipeline_activedeploy}
 
-You can automate the continuous deployment of your apps or container groups by using the IBM® Active Deploy service in the Bluemix® DevOps Services Delivery Pipeline. For more information about getting started, [see the Active Deploy documentation](https://new-console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
+You can automate the continuous deployment of your apps or container groups by using the IBM® Active Deploy service in the Bluemix® DevOps Services Delivery Pipeline. For more information about getting started, see the [Active Deploy documentation](https://new-console.ng.bluemix.net/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
 
 ## Building and deploying container images with the pipeline
 {: #deliverypipeline_containers}
@@ -336,4 +336,4 @@ You can automate your app builds and container deployments to Bluemix® by using
   - Building Docker images
   - Deploying images in containers to Bluemix
 
-For more information about getting started, see [the Delivery Pipeline and containers overview](https://new-console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
+For more information about getting started, see the [Delivery Pipeline and containers overview](https://new-console.ng.bluemix.net/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
