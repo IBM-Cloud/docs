@@ -2,20 +2,30 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-27"
 
 ---
 {:shortdesc: .shortdesc}
 
 # Sobre {{site.data.keyword.mobileanalytics_short}}  
 {: aboutmobileanalytics}
-Última atualização: 29 de agosto de 2016
-{: .last-updated}
 
 {: shortdesc}
-O serviço {{site.data.keyword.mobileanalytics_full}} fornece insights chave de uso e desempenho de aplicativo para desenvolvedores de aplicativo móvel e proprietários de aplicativo. Usando o {{site.data.keyword.mobileanalytics_short}}, os proprietários e desenvolvedores de app podem entender o que está acontecendo no lado do usuário e podem usar este insight para construir apps melhores que sejam extremamente relevantes para os usuários e que se destaquem no verdadeiro mundo de apps móveis. 
+O serviço {{site.data.keyword.mobileanalytics_full}}
+fornece insights do uso do aplicativo-chave e de desempenho para desenvolvedores
+de aplicativos móveis e proprietários do aplicativo. Ao usar o
+{{site.data.keyword.mobileanalytics_short}},
+proprietários e desenvolvedores do aplicativo podem entender o que está
+acontecendo no lado do usuário e podem usar este insight para melhor construir
+aplicativos que são extremamente relevantes para os usuários e que se
+destaquem na verdadeira imensidão de dispositivos móveis. 
 
 {: #overview}  
-O serviço inclui o {{site.data.keyword.mobileanalytics_short}} Console no qual os desenvolvedores e proprietários de aplicativo podem monitorar o desempenho do aplicativo móvel, ver estatísticas de uso e procurar logs do dispositivo.  O {{site.data.keyword.mobileanalytics_short}} fornece SDKs do cliente para iOS 8+ (somente Swift) e Android 4+.
+O serviço inclui o
+{{site.data.keyword.mobileanalytics_short}} Console no qual
+os desenvolvedores e proprietários de aplicativo podem monitorar o
+desempenho do aplicativo móvel, ver estatísticas de uso e
+procurar logs do dispositivo. O {{site.data.keyword.mobileanalytics_short}} fornece SDKs do cliente para iOS 8+ (somente Swift) e Android 4+.
 
 <!-- Mobile Analytics Server SDKs - set of server SDKs to protect resources that are-->
 <!--hosted on {{site.data.keyword.Bluemix_notm}}. Currently supported runtimes are-->
@@ -33,18 +43,22 @@ Com o serviço {{site.data.keyword.mobileanalytics_short}}, é possível:
 	<dt>Obter insight imediato</dt>
 		<dd>Veja as métricas de desempenho e uso em tempo real.</dd>
 	<dt>Implementar em minutos</dt>
-		<dd>Crie uma instância de serviço no {{site.data.keyword.Bluemix}}, inclua o SDK em seu projeto, cole duas linhas de código no aplicativo e prepare-se para coletar dezenas de métricas predefinidas.</dd>
+		<dd>Crie uma instância de serviço no
+{{site.data.keyword.Bluemix}}, inclua o SDK em seu projeto, cole duas linhas de código em seu aplicativo e prepare-se para
+coletar dezenas de métricas predefinidas.</dd>
 	<!--<dt>Collect any data you want</dt>-->
 		<!--<dd>Instrument apps with custom events, discover how users are interacting with your app, track purchases, and monitor app activity.  
 </dd>-->
 <dt>Ver métricas para todos os aplicativos em uma visão rápida</dt>
 	<dd>O console do {{site.data.keyword.mobileanalytics_short}} oferece gráficos <!-- both -->prontos<!--and custom-->, sem a necessidade de gravar consultas.</dd>
 <dt>Concentrar-se no que é importante para você</dt>
-	<dd>Filtre as métricas por horário, adaptador, aplicativo, versão do aplicativo, S.O., versão do S.O ou modelo de dispositivo.</dd>
+	<dd>Filtre as métricas por horário, adaptador, aplicativo, versão do aplicativo, sistema operacional,
+versão do sistema operacional ou modelo de dispositivo.</dd>
 <dt>Descobrir problemas rapidamente</dt>
 	<dd>Monitore o status de travamento. Configure acionadores de alerta sobre métricas críticas e roteie alertas para qualquer terminal REST. </dd>
 <dt>Solucionar problemas na causa raiz</dt>
-	<dd>Use a criação de log customizada em seu app, faça upload dos logs automaticamente e procure-os a partir do console. Realize drill down em eventos de travamento para ver os rastreios de pilha. </dd>
+	<dd>Use a criação de log customizada em seu aplicativo e faça upload
+dos logs automaticamente e procure-os a partir do console. Realize drill down em eventos de travamento para ver os rastreios de pilha. </dd>
 </dl>
  
 
@@ -54,12 +68,12 @@ Com o serviço {{site.data.keyword.mobileanalytics_short}}, é possível:
 Com as **métricas predefinidas**, é possível responder perguntas como:
 
 * Quantos novos usuários eu tenho?  
-* Quantas pessoas estão usando ativamente meu app?  
-* Com que frequência as pessoas estão usando meu app? 
-* Em que horário do dia as pessoas estão usando meu app?  
+* Quantas pessoas estão usando ativamente meu aplicativo?  
+* Com que frequência as pessoas estão usando meu aplicativo? 
+* Que hora do dia as pessoas estão usando meu aplicativo?  
 * Quais modelos de dispositivo meus usuários preferem? 
 * Quando eu devo descontinuar o suporte para sistemas operacionais anteriores? 
-* Quais apps estão tendo problemas de desempenho?  
+* Quais aplicativos estão tendo problemas de desempenho?  
 
 <!--By adding your own **custom events** you can answer questions like:--> 
 
@@ -83,31 +97,103 @@ All data that is collected by the analytics service can be visualized through t
 
 <dl>
 	<dt>O que é o {{site.data.keyword.mobileanalytics_full}}?</dt>
-		<dd>{{site.data.keyword.mobileanalytics_full}} é um serviço que fornece insight em tempo real e histórico sobre como seus apps móveis são executados e estão sendo usados.  Usando o {{site.data.keyword.mobileanalytics_short}}, desenvolvedores e proprietários de apps podem tomar decisões orientadas a dados, monitorando tendências em usuários ativos, sessões, plataformas móveis e travamentos de apps. Também é possível configurar alertas em métricas selecionadas que, uma vez acionadas, enviam mensagens para qualquer terminal REST, incluindo um serviço de push ou seus serviços de sistema de mensagens internas.</dd>
-	<dt>O que posso fazer com o {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}} beta?</dt>
-		<dd>Como um Gerente de produto de app móvel, é possível ver quantas pessoas usam seu app (métricas do usuário) e quando elas estão usando (métricas de sessão).  Essas informações são apresentadas como uma série temporal e são atualizadas em tempo real para que você possa ver o efeito de mudanças feitas em seu app.  É possível filtrar para ver versões específicas do app ou sistemas operacionais para tomar decisões de descontinuação e priorização. </dd>
-		<dd>Como um Comerciante de app móvel, é possível usar métricas de usuário e de sessão para monitorar participação, gerenciar a rotatividade e avaliar a eficácia dos esforços de marketing do app móvel, observando mudanças ao longo do tempo e correlacionando com suas datas de eventos.</dd>
-		<dd>Como um Desenvolvedor de app móvel, é possível usar métricas de travamento para descobrir e resolver problemas de desempenho do app móvel antes que eles frustrem os usuários e prejudiquem a reputação do app. É possível monitorar a contagem de travamentos e a taxa de travamento do console de analítica, além de priorizar travamentos que estão afetando a maioria dos usuários. É possível configurar alertas para enviar notificações ou executar ações automatizadas quando os travamentos excedem um determinado limite e solucionar problemas realizando drill down em instâncias de travamento, para ver logs de dispositivo e rastreios de pilha do app.</dd>
+		<dd>O {{site.data.keyword.mobileanalytics_full}} é um
+serviço
+que fornece insight em tempo real e histórico sobre como seus
+aplicativos móveis são executados e estão sendo usados. Ao usar o
+{{site.data.keyword.mobileanalytics_short}}, os
+desenvolvedores de aplicativos e proprietários de aplicativos podem
+tomar decisões orientadas a dados monitorando tendências em usuários
+ativos, sessões, plataformas móveis e travamentos de aplicativos. Também é possível configurar alertas em métricas selecionadas que, uma vez acionadas, enviam mensagens para qualquer terminal REST, incluindo um serviço de push ou seus serviços de sistema de mensagens internas.</dd>
+	<dt>O que posso fazer com o
+{{site.data.keyword.mobileanalytics_short}} for
+{{site.data.keyword.Bluemix_notm}}?</dt>
+		<dd>Como um Gerente de produto de aplicativos móveis, é possível ver
+quantas pessoas usam seu aplicativo (métricas do usuário) e quando elas
+o estão usando (métricas de sessão). Essas informações são
+apresentadas como uma série temporal e atualizadas em tempo real para
+que você possa ver o efeito das mudanças feitas em seu aplicativo. É
+possível filtrar para ver versões específicas do aplicativo ou
+sistemas operacionais para tomar decisões de descontinuação e
+priorização.</dd>
+		<dd>Como um Comerciante de aplicativo móvel, você pode usar métricas
+de usuário e de sessão para monitorar participação, gerenciar a
+rotatividade e avaliar a efetividade dos esforços de marketing do
+aplicativo móvel, observando mudanças ao longo do tempo e
+correlacionando com as suas datas de evento.</dd>
+		<dd>Como um Desenvolvedor de aplicativos móveis, é possível usar
+métricas de travamento para descobrir e resolver problemas de
+desempenho do aplicativo móvel antes que eles frustrem os usuários e
+prejudiquem a reputação do aplicativo. É possível monitorar a contagem de travamentos e a taxa de travamento do console de analítica, além de priorizar travamentos que estão afetando a maioria dos usuários. 
+É possível configurar alertas para enviar notificações ou executar ações automatizadas quando os
+travamentos excedem um determinado limite e é possível solucionar problemas realizando drill down
+em instâncias de travamento para ver logs de dispositivo e rastreios de pilha de aplicativos.</dd>
 	<dt>Preciso de habilidades de analista de dados para usar o Mobile Analytics?</dt>
-		<dd>Não, o {{site.data.keyword.mobileanalytics_short}} oferece um console de analítica pronto para usar para partes interessadas nos negócios e para desenvolvedores de app. Não são necessárias qualificações de consulta.</dd>
+		<dd>Não, o {{site.data.keyword.mobileanalytics_short}}
+oferece um console de analítica pronto para uso para partes
+interessadas nos negócios e para desenvolvedores de aplicativos. Não são necessárias qualificações de consulta.</dd>
 	<dt>Posso executar consultas customizadas em meus dados de analítica?</dt>
-		<dd>O {{site.data.keyword.mobileanalytics_short}} beta não permite consultas customizadas, mas há consideração para este recurso no futuro.</dd>
-	<dt>Como conecto meu app ao {{site.data.keyword.mobileanalytics_short}}?</dt>
-		<dd>[Faça download de nosso software livre SDK for iOS ou Android](install-client-sdk.html) ou use a [API REST](https://mobile-analytics-dashboard.stage1.ng.bluemix.net/analytics-service/) do {{site.data.keyword.mobileanalytics_short}} para outras plataformas. </dd>
+		<dd>O {{site.data.keyword.mobileanalytics_short}} não permite
+consultas customizadas, mas há consideração para este recurso no
+futuro.</dd>
+	<dt>Como conecto meu aplicativo ao
+{{site.data.keyword.mobileanalytics_short}}?</dt>
+		<dd>[Faça download de nosso SDK de software livre para iOS ou Android](install-client-sdk.html) ou use
+a [API de REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/)
+do {{site.data.keyword.mobileanalytics_short}} para outras plataformas. </dd>
 	<dt>Em quais regiões do Bluemix o {{site.data.keyword.mobileanalytics_short}} está disponível?</dt>
-		<dd>No momento dessa composição, o Mobile Analytics está disponível no sul dos EUA e no Reino Unido. A disponibilidade em outras regiões está planejada, mas o período ainda não foi determinado.</dd>
+		<dd>Atualmente, o Mobile Analytics está disponível nos Estados
+Unidos - Sul e no Reino Unido. A disponibilidade em outras regiões está
+planejada, mas o período ainda não foi determinado.</dd>
 	<dt>Quanto custa esse serviço?</dt>
-		<dd>O serviço é gratuito para beta.</dd>
+		<dd>Os primeiros 100 milhões de eventos que são coletados a cada mês
+são grátis e depois, os eventos custarão US$ 1 por milhão de eventos.</dd>
+	<dt>O que é um evento?</dt>
+		<dd>Atualmente eventos relatados incluem o início de sessão do
+aplicativo, término de sessão do aplicativo (incluindo travamento do
+aplicativo), notificações de alerta e entradas de log.</dd>
+	<dt>Como posso estimar quanto o serviço vai custar por mês?</dt>
+		<dd>Como a precificação depende do número de eventos que são
+enviados para o serviço por conta do cliente, a estimativa de
+precificação significa estimar eventos.  
+<p>
+O preço que é cobrado é a soma de eventos de todos os aplicativos que
+você conectou ao
+{{site.data.keyword.mobileanalytics_short}}. Para um
+determinado aplicativo, o número de eventos depende do grau de
+instrumentação do que você implementou no aplicativo, do número de
+usuários e de quão ativos os usuários são.   
+</p>
+<p>
+Use esta fórmula para estimar o uso: eventos por mês por app =
+(usuários por dia) (sessões por usuário por dia) (dias por mês)
+(eventos por sessão)</p>
+<p>
+Eventos por sessão pode variar amplamente de 2 a várias centenas,
+dependendo
+de quais chamadas de rede, analítica customizada, captura de log e
+definições de alerta o desenvolvedor configurou no aplicativo.</p>
 	<dt>Quanto tempo meus dados de analítica são mantidos?</dt>
-		<dd>Para beta, os dados são mantidos por pelo menos 30 dias.</dd>
+		<dd>Os dados são mantidos por pelo menos 30 dias.</dd>
 	<dt>Quanto tempo leva para que os dados sejam exibidos no console do {{site.data.keyword.mobileanalytics_short}}?</dt>
 		<dd>Os dados no console do {{site.data.keyword.mobileanalytics_short}} são quase em tempo real, o que significa que são exibidos com diferença de segundos dos eventos reais.</dd>
 	<dt>Qual é a diferença entre o {{site.data.keyword.mobileanalytics_full}} e a analítica móvel localizada no MobileFirst Platform Foundation?</dt>
-		<dd>Usuário e sessão são muito semelhantes nesses dois consoles, mas a analítica que vem com o MobileFirst Platform Foundation contém métricas adicionais e configurações que permitem que os clientes gerenciem seus próprios clusters de analítica no local. Além disso, o console de analítica do MobileFirst Platform Foundation divide as métricas para adaptadores e procedimentos do adaptador, enquanto que no serviço {{site.data.keyword.mobileanalytics_short}}, estamos planejando integrar essas métricas em gráficos e tabelas de solicitação de rede no serviço {{site.data.keyword.mobileanalytics_short}} (pós-beta).</dd>
+		<dd>Usuário e sessão são muito semelhantes nesses dois consoles, mas a analítica que vem com o MobileFirst Platform Foundation contém métricas adicionais e configurações que permitem que os clientes gerenciem seus próprios clusters de analítica no local. 
+Além disso, o console de analítica do MobileFirst Platform Foundation
+divide as métricas para adaptadores e procedimentos do adaptador,
+enquanto que no
+serviço do {{site.data.keyword.mobileanalytics_short}}, essas
+métricas são integradas em gráficos e tabelas de solicitação
+de rede.</dd>
 	<dt>Estou usando o MobileFirst Platform Foundation no local para desenvolver meus apps, mas não quero hospedar meu próprio cluster de analítica. Posso usar o {{site.data.keyword.mobileanalytics_full}} no lugar?</dt>
-		<dd>Sim. Você tem duas opções aqui: se estiver usando o MobileFirst Platform Foundation 7.x ou 8.0 e seus apps forem instrumentados com os SDKs do MobileFirst Platform, será possível configurar seu servidor MobileFirst para relatar dados de analítica para o {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}}. Leia a postagem do blog [Configurando os serviços Mobile Analytics e Mobile Foundation do Bluemix](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/) para obter detalhes. Como alternativa, é possível instrumentar seus apps usando o {{site.data.keyword.mobileanalytics_short}} SDK do {{site.data.keyword.Bluemix_notm}} e relatar diretamente para o serviço {{site.data.keyword.mobileanalytics_short}}.</dd>
-	<dt>Estou tentando usar o {{site.data.keyword.mobileanalytics_short}} e vejo um espaço em branco onde meus gráficos deveriam estar. O que está havendo?</dt>
-		<dd>Provavelmente você está usando a interface de visualização Clássica do {{site.data.keyword.Bluemix_notm}}. A visualização Clássica foi descontinuada, portanto o {{site.data.keyword.mobileanalytics_short}} beta é executado na nova interface do {{site.data.keyword.Bluemix_notm}}. Se estiver na visualização Clássica, você verá um link no cabeçalho do {{site.data.keyword.Bluemix_notm}} dizendo "Tente o novo {{site.data.keyword.Bluemix_notm}}!". Clique nesse link para usar a nova interface.</dd>
+		<dd>Sim. Você tem duas opções: se estiver usando o MobileFirst
+Platform Foundation 7.x ou 8.0 e seus apps forem instrumentados
+com os SDKs do MobileFirst Platform,
+poderá configurar seu servidor MobileFirst para relatar dados de
+analítica para o {{site.data.keyword.mobileanalytics_short}} for
+{{site.data.keyword.Bluemix_notm}}. Leia a postagem do blog [Configurando os serviços Mobile Analytics e Mobile Foundation do Bluemix](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/) para obter detalhes. Como alternativa, é possível instrumentar seus apps usando o {{site.data.keyword.mobileanalytics_short}} SDK do {{site.data.keyword.Bluemix_notm}} e relatar diretamente para o serviço {{site.data.keyword.mobileanalytics_short}}.</dd>
+	<!-- <dt>My instance of  {{site.data.keyword.mobileanalytics_short}} does not look like the screen shots in the catalog. What's going on?</dt> -->
+		<!-- <dd>Most likely you are using the Classic view interface for {{site.data.keyword.Bluemix_notm}}. Classic view is deprecated, so {{site.data.keyword.mobileanalytics_short}} runs best in the new {{site.data.keyword.Bluemix_notm}} interface. If you are in Classic view, you will see a link in the {{site.data.keyword.Bluemix_notm}} header that says <strong>Try the new {{site.data.keyword.Bluemix_notm}}</strong>. Click that link to use the new interface.</dd> -->
 </dl>
 
 

@@ -2,16 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-10-31"
 
 ---
 # Supervisión de aplicaciones con {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
 
-Última actualización: 27 de septiembre de 2016
-{: .last-updated}
-
-{{site.data.keyword.mobileanalytics_full}} proporciona funciones de supervisión y analíticas para sus aplicaciones móviles. Puede grabar registros de aplicaciones y supervisar datos con el SDK de cliente de {{site.data.keyword.mobileanalytics_short}}. Los desarrolladores pueden elegir cuándo desean enviar estos datos al servicio de {{site.data.keyword.mobileanalytics_short}}. Al entregar los datos a {{site.data.keyword.mobileanalytics_short}}, puede utilizar el panel de control de {{site.data.keyword.mobileanalytics_short}} para obtener información analítica sobre las aplicaciones móviles, los dispositivos y los registros de la aplicación.
+{{site.data.keyword.mobileanalytics_full}} proporciona funciones de supervisión y analíticas para sus aplicaciones móviles. Puede grabar registros de aplicaciones y supervisar datos con el SDK de cliente de {{site.data.keyword.mobileanalytics_short}}. Los desarrolladores pueden elegir cuándo desean enviar estos datos al servicio de {{site.data.keyword.mobileanalytics_short}}. Al entregar los datos a {{site.data.keyword.mobileanalytics_short}}, puede utilizar el panel de control de {{site.data.keyword.mobileanalytics_short}} para obtener información analítica sobre las aplicaciones para móviles, los dispositivos y los registros de la aplicación.
 {: shortdesc}
 
 <!--
@@ -197,7 +194,7 @@ En la tabla **Visión general de bloqueos** se muestran las siguientes columnas 
 
 Puede consultar rápidamente la información relacionada con los bloqueos de aplicaciones en la tabla **Bloqueos**. <!--In the **Overview** page of the **Dashboard** section,--> El gráfico de barras **Bloqueos** muestra un histograma de bloqueos a lo largo del tiempo.
 
-Puede visualizar los datos de dos formas:
+Puede visualizar los datos de bloqueos de dos formas:
 
 1. Visualizar frecuencia de bloqueos: frecuencia de bloqueos con el tiempo
 2. Visualizar bloqueos totales: bloqueos totales con el tiempo
@@ -205,7 +202,7 @@ Puede visualizar los datos de dos formas:
 ### Resolución de problemas de bloqueos de apps
 {: #app-crash-troubleshooting}
 
-Puede ver la página **Resolución de problemas** en la consola de <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} para administrar sus aplicaciones de forma más eficaz.
+La página **Resolución de problemas** de la consola de <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} ofrece una vista granular de los bloqueos de app. 
 
 La tabla **Resumen de bloqueos** se puede ordenar e incluye las siguientes columnas de datos:
 
@@ -229,4 +226,23 @@ Expanda cualquier entrada de la tabla **Detalles de bloqueo** para obtener infor
 
 **Nota**: Los datos de la tabla **Resumen de bloqueos** se rellenan consultando los registros de app de nivel muy grave. Si su aplicación no recopila dichos registros, no habrá datos disponibles.
 
+## Supervisión de solicitudes de red
+{: #monitor-network-requests}
+
+
+Consulte los datos de las solicitudes de red correspondientes a las aplicaciones en la consola de {{site.data.keyword.mobileanalytics_short}}.  
+
+Dispone de datos para las siguientes medidas: 
+	
+* Tiempo de ida y vuelta - define el periodo de tiempo, en ms, que tarda la app en realizar solicitudes de red. 
+* Recuento de solicitudes - muestra la frecuencia con la que la app realiza solicitudes. Los datos también se muestran como promedio. 
+
+<!--
+## Exporting data to dashDB
+{: #dashdb}
+
+The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+
+Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
+-->
 

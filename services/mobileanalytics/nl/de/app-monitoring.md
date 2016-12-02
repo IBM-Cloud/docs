@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-10-31"
 
 ---
 # Anwendungen mit {{site.data.keyword.mobileanalytics_short}} überwachen
 {: #monitoringapps}
-
-Letzte Aktualisierung: 27. September 2016
-{: .last-updated}
 
 Von {{site.data.keyword.mobileanalytics_full}} werden Überwachungs- und Analysefunktionen für mobile Anwendungen bereitgestellt. Mit dem {{site.data.keyword.mobileanalytics_short}}-Client-SDK können Sie Anwendungsprotokolle aufzeichnen und Daten überwachen. Entwickler können steuern, wann diese Daten an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden sollen. Wenn die Daten an {{site.data.keyword.mobileanalytics_short}} übergeben werden, können Sie über das {{site.data.keyword.mobileanalytics_short}}-Dashboard Erkenntnisse aus Analysen zu mobilen Anwendungen, Geräten und Anwendungsprotokollen erhalten.
 {: shortdesc}
@@ -197,7 +194,7 @@ In der Tabelle mit der Absturzübersicht werden die folgenden Datenspalten angez
 
 In der Tabelle für Abstürze werden umgehend Informationen zu Ihren Anwendungsabstürzen angezeigt.<!--In the **Overview** page of the **Dashboard** section,--> Das Balkendiagramm für Abstürze zeigt ein Histogramm der Abstürze im zeitlichen Verlauf an.
 
-Sie können die Daten auf zwei Arten anzeigen:
+Sie können Absturzdaten auf zwei Arten anzeigen:
 
 1. Absturzrate anzeigen: Die Absturzrate im zeitlichen Verlauf
 2. Gesamtsumme der Abstürze anzeigen: Gesamte Abstürze im zeitlichen Verlauf
@@ -205,7 +202,7 @@ Sie können die Daten auf zwei Arten anzeigen:
 ### Fehlerbehebung für App-Abstürze
 {: #app-crash-troubleshooting}
 
-Sie können die Seite **Fehlerbehebung** in der <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}}-Konsole anzeigen, um die Apps besser verwalten zu können.
+Die Seite **Troubleshooting** in der <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}}-Konsole bietet eine differenzierte Ansicht der App-Abstürze.
 
 Die Tabelle für die Absturzzusammenfassung kann sortiert werden und besteht aus den folgenden Datenspalten:
 
@@ -229,4 +226,23 @@ Sie können einen Eintrag in der Tabelle für Absturzdetails erweitern, um weite
 
 **Hinweis:** Die Daten für die Tabelle mit der Absturzzusammenfassung werden durch Abfragen der App-Protokolle mit schwerwiegenden Fehlern gefüllt. Wenn Ihre Anwendung keine Anwendungsprotokolle mit schwerwiegenden Fehlern erfasst, sind keine Daten verfügbar.
 
+## Netzanforderungen überwachen
+{: #monitor-network-requests}
+
+
+Zeigen Sie in der {{site.data.keyword.mobileanalytics_short}}-Konsole Netzanforderungsdaten für Ihre Anwendungen an. 
+
+Es stehen Daten für die folgenden Messungen zur Verfügung:
+	
+* Umlaufzeit: Definiert die Zeitdauer (in Millisekunden) an, die Ihre App für Netzanforderungen benötigt.
+* Anzahl der Anforderungen: Zeigt an, wie häufig eine App Netzanforderungen absetzt. Daten werden auch als Durchschnitt angezeigt.
+
+<!--
+## Exporting data to dashDB
+{: #dashdb}
+
+The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+
+Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
+-->
 

@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-10-31"
 
 ---
 # 使用 {{site.data.keyword.mobileanalytics_short}} 監視應用程式
 {: #monitoringapps}
-
-前次更新：2016 年 9 月 27 日
-{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} 提供行動應用程式的監視及分析。您可以記錄應用程式日誌，以及使用 {{site.data.keyword.mobileanalytics_short}} Client SDK 來監視資料。開發人員可以控制何時將這項資料傳送至 {{site.data.keyword.mobileanalytics_short}} 服務。將資料遞送給 {{site.data.keyword.mobileanalytics_short}} 時，您可以使用 {{site.data.keyword.mobileanalytics_short}} 儀表板來深入分析行動應用程式、裝置及應用程式日誌。
 {: shortdesc}
@@ -92,7 +89,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 您可以在「{{site.data.keyword.mobileanalytics_short}} 主控台」中設定警示定義的臨界值，以更適當地監視您的活動。
 
-您可以配置臨界值，以在超出時，觸發警示來通知「{{site.data.keyword.mobileanalytics_short}} 主控台」監視器。觸發的警示可以在主控台上進行視覺化，或者自訂 Webhook 可以處理警示。<!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.-->此特性提供主動的方法來偵測應用程式日誌錯誤和應用程式損毀的伺服器日誌錯誤。反應臨界值及警示讓您不需要篩選資料，並且用更廣的精度來設定臨界值。
+您可以配置臨界值，以在超出時，觸發警示來通知「{{site.data.keyword.mobileanalytics_short}} 主控台」監視器。觸發的警示可以在主控台上進行視覺化，或是可以用自訂 Webhook 來處理警示。<!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.-->此特性提供主動的方法來偵測應用程式日誌錯誤和應用程式損毀的伺服器日誌錯誤。反應臨界值及警示讓您不需要篩選資料，並且用更廣的精度來設定臨界值。
 
 ### 建立應用程式日誌的警示定義
 {: #alert-def-client-logs}
@@ -197,7 +194,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 您可以在**損毀**表格中快速查看應用程式損毀的相關資訊。<!--In the **Overview** page of the **Dashboard** section,--> **損毀**長條圖會顯示一段時間內損毀的直方圖。
 
-您可以使用兩種方式來顯示資料：
+您可以使用兩種方式來顯示損毀資料：
 
 1. 顯示損毀比率：一段時間的損毀比率
 2. 顯示損毀總計：一段時間的損毀總計
@@ -205,7 +202,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### 應用程式損毀疑難排解
 {: #app-crash-troubleshooting}
 
-您可以在「<!-- **Applications** section of the -->{{site.data.keyword.mobileanalytics_short}} 主控台」中檢視**疑難排解**頁面，以更適當地管理應用程式。
+「<!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} 主控台」中的**疑難排解**頁面提供應用程式損毀的細微視圖。
 
 **損毀摘要**表格可進行排序，而且包括下列資料直欄：
 
@@ -229,4 +226,23 @@ You can also export and import custom chart definitions programmatically by usin
 
 **附註**：**損毀摘要**表格的資料是透過查詢嚴重層次應用程式日誌來移入。如果您的應用程式未收集嚴重應用程式日誌，則沒有可用的資料。
 
+## 監視網路要求
+{: #monitor-network-requests}
+
+
+在「{{site.data.keyword.mobileanalytics_short}} 主控台」中，針對您的應用程式檢視網路要求資料。 
+
+資料可供下列測量使用：
+	
+* 往返時間 - 定義應用程式提出網路要求所需的時間長度（以毫秒為測量單位）。
+* 要求計數 - 顯示應用程式提出網路要求的頻率。資料也顯示為平均值。
+
+<!--
+## Exporting data to dashDB
+{: #dashdb}
+
+The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+
+Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
+-->
 

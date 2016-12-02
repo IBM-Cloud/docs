@@ -2,17 +2,14 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-18"
+lastupdated: "2016-11-14"
 
 ---
 
 # 安装 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK
 {: #mobileanalytics_sdk}
 
-上次更新时间：2016 年 10 月 18 日
-{: .last-updated}
-
-目前，Android、iOS 和 WatchOS 可以使用 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK。
+目前，Android、iOS、WatchOS 和 Cordova 可以使用 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK。
 {: #shortdesc}
 
 ## 安装 Android 客户端 SDK
@@ -46,7 +43,7 @@ lastupdated: "2016-10-18"
 	 <uses-permission android:name="android.permission.INTERNET" />
    ```
    {: codeblock}
-6. 您现在已安装 Android 客户端 SDK。接下来，[导入并初始化](sdk.html#initalize-ma-sdk-android) Analytics 客户端 SDK。   
+6. 您现在已安装 Android 客户端 SDK。接下来，[导入并初始化](sdk.html#initalize-ma-sdk) Analytics 客户端 SDK。   
 
 ## 安装 Swift SDK
 {: #installing-sdk-ios}
@@ -60,45 +57,77 @@ lastupdated: "2016-10-18"
 
 确保正确设置 Xcode。要了解如何设置 iOS 开发环境，请参阅 [Apple 开发人员 Web 站点](https://developer.apple.com/support/xcode/)。阅读客户端 SDK Swift Analytics 的 [Xcode 需求](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements)。
 
-{{site.data.keyword.mobileanalytics_short}} SDK 通过 [CocoaPods](https://cocoapods.org/) 和 [Carthage](https://github.com/Carthage/Carthage#getting-started) 进行分发，它们是用于 Cocoa 项目的依赖关系管理器。CocoaPods 和 Carthage 会自动从存储库下载工件，并将其提供给您的应用程序。
+{{site.data.keyword.mobileanalytics_short}} SDK 通过 [CocoaPods](https://cocoapods.org/) 和 [Carthage](https://github.com/Carthage/Carthage#getting-started) 进行分发，它们是用于 Cocoa 项目的依赖关系管理器。CocoaPods 和 Carthage 会自动从存储库下载工件，并将其提供给您的应用程序。选择 CocoaPods 或 Carthage：
 
 #### CocoaPods
 {: #cocoapods}
 
-1. 如果未安装 CocoaPods，请运行：
-
-    ```
-sudo gem install cocoapods
-    ```
-    {: codeblock}
-    
-    对于 Xcode 8：`sudo gem install cocoapods --pre`
-    
-   确保通过更新 CocoaPods 存储库具有最新版本的 `BMSAnalytics`，如下所示：
-   
-    ```
-    pod repo update master
-    ```
-    {: codeblock}
-
-2. 遵循 GitHub 上的 [{{site.data.keyword.Bluemix_notm}} Mobile Services Swift SDK 指示信息](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods)。
+1. 遵循 GitHub 上的 [{{site.data.keyword.Bluemix_notm}} Mobile Services Swift SDK 指示信息](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods)以使用 Cocoapod 安装 `BMSAnalytics` 并将其添加到您的 Podfile。 
 	
-3. 在已安装 iOS 客户端 SDK 之后，[导入并初始化](sdk.html#init-ma-sdk-ios) Analytics 客户端 SDK。   
+2. 在已安装 iOS 客户端 SDK 之后，[导入并初始化](sdk.html#initalize-ma-sdk) Analytics 客户端 SDK。   
 
 #### Carthage
 {: #carthage}
 
-使用 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)，将框架添加到项目。
+如果您没有使用 CocoaPods，您可以使用 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 将框架添加到项目。
 
-1. 遵循 GitHub 上的 [Carthage 安装指示信息](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage)。
+1. 遵循 GitHub 上的 [Carthage 安装指示信息](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage)以安装 `BMSAnalytics`。
 
-2. 在已安装 iOS 客户端 SDK 之后，[导入并初始化](sdk.html#init-ma-sdk-ios) Analytics 客户端 SDK。
+2. 在已安装 iOS 客户端 SDK 之后，[导入并初始化](sdk.html#initalize-ma-sdk) Analytics 客户端 SDK。
+
+## 安装 Cordova 插件
+{: #installing-sdk-cordova}
+
+使用 {{site.data.keyword.mobileanalytics_full}}Cordova 插件<!--SDK-->，您可以检测移动应用程序。 
+
+1. 将 Android 和 iOS 平台添加到您的 Cordova 应用程序。从命令行运行以下一个或全部两个命令：
+
+	```Bash
+	cordova platform add android
+	```
+	
+	```Bash
+	cordova platform add ios
+	```
+	
+2. 如果您已添加了 Android 平台，您必须向 Cordova 应用程序的 `config.xml` 文件添加支持的最低 API 级别。打开 `config.xml` 文件，并将以下行添加到 `<platform name="android">` 元素：
+
+	```XML
+	<platform name="android">  
+  	<preference name="android-minSdkVersion" value="15"/>
+  	<preference name="android-targetSdkVersion" value="23"/>
+  	<!-- add minimum and target Android API level declaration -->
+  </platform>
+```
+*minSdkVersion* 值必须高于 `15`。请参阅 [Android 平台指南](https://cordova.apache.org/docs/en/latest/guide/platforms/android/)以了解 Android SDK 的最新受支持 *targetSdkVersion* 。
+3. 如果已添加了 iOS 操作系统，使用目标声明更新 `<platform name="ios">` 元素：
+
+	```XML
+	<platform name="ios">
+    <preference name="deployment-target" value="8.0"/>
+     <!-- add deployment target declaration -->
+  </platform>
+```
+
+4. 安装 {{site.data.keyword.mobileanalytics_short}} Cordova 插件：
+
+ 	```Bash
+	cordova plugin add bms-core
+	```
+
+5. 通过运行以下命令验证插件是否安装成功：
+	```Bash
+	cordova plugin list
+	```
+	
+6. 您现在已安装 Cordova 插件。接下来，[导入并初始化](sdk.html#initalize-ma-sdk) Analytics 客户端 SDK。
 
 # 相关链接
 
 ## SDK
 * [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+* [Cordova 插件核心 SDK](https://www.npmjs.com/package/bms-core){: new_window}
 
 ## API 参考
 {: #api}

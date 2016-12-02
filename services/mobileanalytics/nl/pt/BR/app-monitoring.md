@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-10-31"
 
 ---
 # Monitoramento de aplicativos com o {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
-
-Última atualização: 27 de setembro de 2016
-{: .last-updated}
 
 O {{site.data.keyword.mobileanalytics_full}} fornece monitoramento e análise para seus aplicativos móveis. É
 possível registrar logs do aplicativo e monitorar dados com o SDK do cliente {{site.data.keyword.mobileanalytics_short}}. Os desenvolvedores podem controlar quando enviar esses dados para o serviço {{site.data.keyword.mobileanalytics_short}}. Quando
@@ -95,7 +92,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 Você pode configurar limites em definições de alerta no {{site.data.keyword.mobileanalytics_short}} Console para monitorar melhor suas atividades.
 
-É possível configurar limites que, se excedidos, acionarão alertas para notificar o monitor do {{site.data.keyword.mobileanalytics_short}} Console. Os alertas acionados podem ser visualizados no console ou os alertas podem ser manipulados por um webhook customizado. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> Esse
+É possível configurar limites que, se excedidos, acionarão alertas para notificar o monitor do Console do {{site.data.keyword.mobileanalytics_short}}. Os alertas acionados podem ser visualizados no console ou os alertas podem ser manipulados por um webhook customizado. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> Esse
 recurso fornece um meio proativo de detectar erros de log do aplicativo e erros de log do servidor de travamentos de aplicativo. Limites e alertas reativos evitam que você filtre seus dados e configure limites em um amplo espectro de granularidade.
 
 ### Criando uma definição de alerta para logs do aplicativo
@@ -207,7 +204,7 @@ A tabela **Visão geral de travamento** mostra as colunas de dados a seguir:
 É possível ver rapidamente as informações sobre os travamentos de seu aplicativo na tabela **Travamentos**.
 <!--In the **Overview** page of the **Dashboard** section,--> O gráfico de barras **Travamentos** mostra um histograma de travamentos ao longo do tempo.
 
-É possível exibir dados de duas maneiras:
+É possível exibir dados de travamento de duas maneiras:
 
 1. Exibir taxa de travamento: taxa de travamento ao longo do tempo
 2. Exibir total de travamentos: total de travamentos ao longo do tempo
@@ -215,8 +212,10 @@ A tabela **Visão geral de travamento** mostra as colunas de dados a seguir:
 ### Resolução de problemas de travamento de aplicativo
 {: #app-crash-troubleshooting}
 
-É possível visualizar a página **Resolução de problemas** no Console do <!-- **Applications** section of the -->
-{{site.data.keyword.mobileanalytics_short}} para administrar melhor os seus aplicativos.
+A página **Resolução de problemas** no
+<!-- **Applications** section of the -->
+{{site.data.keyword.mobileanalytics_short}} Console oferece
+uma visualização granular dos travamentos do seu app.
 
 A tabela **Resumo de travamento** é classificável e inclui as colunas de dados a seguir:
 
@@ -227,7 +226,10 @@ A tabela **Resumo de travamento** é classificável e inclui as colunas de dados
 * OS
 * Message
 
-Clique no ícone + próximo a qualquer entrada para exibir a tabela **Detalhes do travamento**, que inclui as colunas a seguir:
+Clique no ícone + próximo a qualquer entrada para exibir a
+tabela
+**Detalhes do travamento**, que inclui as
+colunas a seguir:
 
 * Horário do travamento
 * Versão de Aplicativo
@@ -241,4 +243,26 @@ Expanda qualquer entrada na tabela **Detalhes do travamento** para obter mais de
 **Nota**: os dados da tabela **Resumo de travamento** são preenchidos consultando os logs de app de nível fatal. Se o seu
 aplicativo não coletar logs do aplicativo fatais, nenhum dado estará disponível.
 
+## Monitorando solicitações de rede
+{: #monitor-network-requests}
+
+
+Visualize dados da solicitação de rede para seus aplicativos
+no {{site.data.keyword.mobileanalytics_short}} Console. 
+
+Os dados estão disponíveis para as medidas a seguir:
+	
+* Tempo de roundtrip - define o período de tempo, medido em ms,
+que é necessário para o seu app para fazer solicitações de rede.
+* Contagem de solicitações - exibe com que frequência um
+app faz solicitações de rede. Os dados também são exibidos como uma média.
+
+<!--
+## Exporting data to dashDB
+{: #dashdb}
+
+The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+
+Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
+-->
 

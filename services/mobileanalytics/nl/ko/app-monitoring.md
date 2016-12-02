@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-10-31"
 
 ---
 # {{site.data.keyword.mobileanalytics_short}}를 사용하여 애플리케이션 모니터링
 {: #monitoringapps}
-
-마지막 업데이트 날짜: 2016년 9월 27일
-{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}}는 모바일 애플리케이션에 대한 모니터링 및 분석을 제공합니다. {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 사용하여 애플리케이션 로그와 모니터 데이터를 기록할 수 있습니다. 개발자는 이 데이터를 {{site.data.keyword.mobileanalytics_short}} 서비스에 전송할 시기를 제어할 수 있습니다. 데이터가 {{site.data.keyword.mobileanalytics_short}}에 전달될 때 {{site.data.keyword.mobileanalytics_short}} 대시보드를 사용하여 모바일 애플리케이션, 디바이스, 애플리케이션 로그에 대한 분석 통찰을 얻을 수 있습니다.
 {: shortdesc}
@@ -90,8 +87,7 @@ You can also export and import custom chart definitions programmatically by usin
 ## 경보 설정
 {: #alerts}
 
-활동을 보다 잘 모니터하기 위해 {{site.data.keyword.mobileanalytics_short}} 콘솔에서 경보 정의에 임계값을 설정할 수 있습니다.
-
+활동을 보다 잘 모니터하기 위해 {{site.data.keyword.mobileanalytics_short}} 콘솔에서 경보 정의에 임계값을 설정할 수 있습니다. 
 
 임계값이 초과되는 경우 {{site.data.keyword.mobileanalytics_short}} 콘솔 모니터에 알리도록 경보를 트리거하는 임계값을 구성할 수 있습니다. 트리거되는 경보가 콘솔에서 시각화되거나 경보가 사용자 정의 Webhook에 의해 처리될 수 있습니다. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.-->이 기능은 애플리케이션 로그 오류와 애플리케이션 충돌 서버 로그 오류를 발견하는 사전 예방 수단을 제공합니다. 반응성 임계값 및 경보를 사용하면 사용자가 데이터를 이동하고 넓은 범위의 세분성 임계값을 설정할 필요가 없습니다.
 
@@ -116,7 +112,6 @@ You can also export and import custom chart definitions programmatically by usin
 
 					**참고**: 애플리케이션의 평균 옵션을 선택하면 디바이스 수에 따라 앱 로그의 평균을 구합니다. 예를 들어, 두 개의 디바이스가 있으며 한 디바이스가 여섯 개의 앱 로그를 전송하고 다른 디바이스가 세 개의 앱 로그를 전송하는 경우, 평균은 4.5 앱 로그입니다.
 				* 연산자: 3 이상
-
 	<!-- insert alert definition tab image? -->
 
 4. **다음**을 클릭하고 다음 값을 제공하십시오.
@@ -199,7 +194,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 **충돌** 표에서 애플리케이션 충돌에 대한 정보를 빨리 볼 수 있습니다. <!--In the **Overview** page of the **Dashboard** section,--> **충돌** 막대 그래프에 시간 경과에 따른 충돌 히스토그램이 표시됩니다. 
 
-두 가지 방법으로 데이터를 표시할 수 있습니다.
+다음 두 가지 방법으로 충돌 데이터를 표시할 수 있습니다.
 
 1. 충돌 비율 표시: 시간 경과에 따른 충돌 비율 표시
 2. 충돌 총계 표시: 시간 경과에 따른 충돌 총계
@@ -207,7 +202,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### 앱 충돌 문제점 해결
 {: #app-crash-troubleshooting}
 
-<!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} 콘솔의 **문제점 해결** 페이지를 보며 앱을 보다 잘 관리할 수 있습니다. 
+**문제점 해결** 페이지(<!-- **Applications** section of the -->{{site.data.keyword.mobileanalytics_short}} 콘솔)에서는 앱 충돌에 대한 세부 단위의 보기를 제공합니다.
 
 **충돌 요약** 표는 정렬 가능하며 다음 데이터 열을 포함합니다.
 
@@ -218,7 +213,7 @@ You can also export and import custom chart definitions programmatically by usin
 * OS
 * 메시지
 
-항목 옆에 있는 + 아이콘을 클릭하여 다음 열을 포함하는 **충돌 세부사항** 표를 표시하십시오. 
+항목 옆에 있는 + 아이콘을 클릭하여 다음 열을 포함하는 **충돌 세부사항** 표를 표시하십시오.
 
 * 충돌한 시간
 * 애플리케이션 버전
@@ -227,8 +222,27 @@ You can also export and import custom chart definitions programmatically by usin
 * 디바이스 ID
 * 다운로드: 충돌을 발생시킨 로그를 다운로드하기 위한 링크
 
-**충돌 세부사항** 표에서 항목을 펼쳐 스택 추적을 포함한 추가 세부사항을 가져오십시오. 
+**충돌 세부사항** 표에서 항목을 펼쳐 스택 추적을 포함한 추가 세부사항을 가져오십시오.
 
 **참고**: **충돌 요약** 표에 대한 데이터는 심각한 레벨 앱 로그를 조회하여 채워집니다. 애플리케이션이 심각한 애플리케이션 로그를 수집하지 않은 경우에는 사용할 수 있는 데이터가 없습니다. 
 
+## 네트워크 요청 모니터링
+{: #monitor-network-requests}
+
+
+{{site.data.keyword.mobileanalytics_short}} 콘솔에서 애플리케이션의 네트워크 요청 데이터를 표시하십시오. 
+
+다음과 같은 측정에 데이터를 사용할 수 있습니다.
+	
+* 라운드트립 시간 - 앱에서 네트워크 요청을 수행하는 데 소요되는 시간(ms)을 정의합니다.
+* 요청 개수 - 앱에서 네트워크 요청을 수행하는 빈도를 표시합니다. 데이터는 평균으로도 표시됩니다.
+
+<!--
+## Exporting data to dashDB
+{: #dashdb}
+
+The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+
+Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
+-->
 

@@ -2,14 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-10-31"
 
 ---
 # 使用 {{site.data.keyword.mobileanalytics_short}} 监视应用程序
 {: #monitoringapps}
-
-上次更新时间：2016 年 9 月 27 日
-{: .last-updated}
 
 {{site.data.keyword.mobileanalytics_full}} 可监视和分析移动应用程序。您可以使用 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK 来记录应用程序日志并监视数据。开发者可以控制何时将这些数据发送到 {{site.data.keyword.mobileanalytics_short}} 服务。数据传递到 {{site.data.keyword.mobileanalytics_short}} 后，可以使用 {{site.data.keyword.mobileanalytics_short}} 仪表板，来获取有关移动应用程序、设备和应用程序日志的分析洞察。
 {: shortdesc}
@@ -201,7 +198,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 您可以快速查看应用程序使**崩溃**表崩溃的相关信息。<!--In the **Overview** page of the **Dashboard** section,-->**崩溃**条形图显示崩溃次数随时间变化的直方图。
 
-您可以使用两种方式来显示数据：
+您可以使用两种方式来显示崩溃数据：
 
 1. 显示崩溃率：随时间变化的崩溃率
 2. 显示总崩溃次数：随时间变化的总崩溃次数
@@ -209,7 +206,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### 应用程序崩溃故障诊断
 {: #app-crash-troubleshooting}
 
-您可以在 {{site.data.keyword.mobileanalytics_short}} Console 中查看**故障诊断**页面<!-- **Applications** section of the -->以更好地管理应用程序。
+您可以在 {{site.data.keyword.mobileanalytics_short}} Console 中查看**故障诊断**页面<!-- **Applications** section of the -->以提供应用程序崩溃的详细视图。
 
 **崩溃摘要**表可进行排序，且包含下列数据列：
 
@@ -233,4 +230,23 @@ You can also export and import custom chart definitions programmatically by usin
 
 **注**：通过查询致命级别应用程序日志，可以填充**崩溃摘要**表的数据。如果您的应用程序未收集致命应用程序日志，那么没有可用的数据。
 
+## 监视网络请求
+{: #monitor-network-requests}
+
+
+在 {{site.data.keyword.mobileanalytics_short}} Console 中查看应用程序的网络请求数据。 
+
+数据可用于以下度量：
+	
+* 往返时间 - 定义应用程序发出网络请求花费的时间长度，以毫秒为单位。
+* 请求计数 - 显示应用程序发出网络请求的频率。数据还作为平均值显示。
+
+<!--
+## Exporting data to dashDB
+{: #dashdb}
+
+The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+
+Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
+-->
 
