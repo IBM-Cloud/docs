@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-14"
+lastupdated: "2016-12-01"
 
 ---
 
@@ -13,6 +13,13 @@ lastupdated: "2016-11-14"
 {: #latest_updates}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+## November 17, 2016: Updated Node.js buildpack v3.9
+This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.47, 0.10.48, 0.12.16, 0.12.17, 4.6.1, 4.6.2, 6.7.0, and 6.9.1. The default is now 4.6.2. 
+
+Note that Node.js v6 was promoted to LTS status on October 18, 2016 and will soon become the buildpack's default runtime. Node.js v0.10 reached end of life on October 31, 2016 and will soon no longer be included in the buildpack. See [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) for more details.
+
+Bugs affecting the trace and inspector App Management handlers, when used in conjunction with Node.js v6, have been addressed in this release. See [Managing Liberty and Node.js apps](/docs/manageapps/app_mng.html#inspector) for more information about how the inspector handler is changing now that Node.js v6 has integrated the inspector capability.
+
 ## October 7, 2016: Updated Node.js buildpack v3.8-20161006-1211
 This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.46, 0.10.47, 0.12.15, 0.12.16, 4.5.0, 4.6.0, 6.6.0, and 6.7.0. The default is now 4.6.0.
 
