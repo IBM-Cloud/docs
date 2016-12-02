@@ -21,7 +21,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 
 1. After you create an instance <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)-->of the {{site.data.keyword.mobileanalytics_short}} service, you can access the {{site.data.keyword.mobileanalytics_short}} Console by clicking your tile in the **Services** section of the {{site.data.keyword.Bluemix}} Dashboard.
 
- The {{site.data.keyword.mobileanalytics_short}} service initially launches with **demo mode** enabled. Demo mode populates charts on the **APP DATA** and **ALERTS** pages, so you can see how your data will display. You can toggle demo mode off when you have your own data. The {{site.data.keyword.mobileanalytics_short}} console is read-only when in demo mode, therefore you will not be able to create new alert definitions.
+ The {{site.data.keyword.mobileanalytics_short}} service launches with **demo mode** enabled. Demo mode populates charts on the **APP DATA** and **ALERTS** pages, so you can see how your data will display. You can toggle demo mode off when you have your own data. The {{site.data.keyword.mobileanalytics_short}} console is read-only when in demo mode, therefore you will not be able to create new alert definitions.
 
 2. Install the {{site.data.keyword.mobileanalytics_short}} [Client SDKs](/docs/services/mobileanalytics/install-client-sdk.html). You can optionally use the {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}.
 
@@ -69,10 +69,9 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 
   ```
   BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
-			
   Analytics.init(getApplication(), "your_app_name_here", "your_api_key_here", hasUserContext, Analytics.DeviceEvent.ALL);
-	```
-	{: codeblock}
+  ```
+  {: codeblock}
     
  The **bluemixRegion** parameter specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH` and `BMSClient.REGION_UK`. 
     <!-- , or `BMSClient.Region.Sydney`.-->
@@ -108,7 +107,6 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
   The **bluemixRegion** parameter specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH` and `BMSClient.REGION_UK`.
   
  **Note:** The name that you select for your application (`your_app_name_here`) displays in the {{site.data.keyword.mobileanalytics_short}} console as the application name. The application name is used as a filter to search for application logs in the dashboard. When you use the same application name across platforms (for example, Android and iOS), you can see all logs from that application under the same name, regardless of which platform the logs were sent from.
-
 
 5. Send recorded usage analytics to the Mobile Analytics Service. A simple way to test your analytics is to run the following code when your application starts:
 
@@ -146,9 +144,9 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 	
 	Read the [Instrumenting your application](/docs/services/mobileanalytics/sdk.html) topic to learn about additional {{site.data.keyword.mobileanalytics_short}} capabilities, such as [logging](/docs/services/mobileanalytics/sdk.html#app-monitoring-logger), [network requests](/docs/services/mobileanalytics/sdk.html#network-requests), and [crash analytics](/docs/services/mobileanalytics/sdk.html#report-crash-analytics).
 	
-5. Compile and run the application on your emulator or device.
+6. Compile and run the application on your emulator or device.
 
-6. Go to the {{site.data.keyword.mobileanalytics_short}} Console to see usage analytics for your application. You can also monitor your application by <!--[creating custom charts](app-monitoring.html#custom-charts),-->[setting alerts](/docs/services/mobileanalytics/app-monitoring.html#alerts) and [monitoring app crashes](/docs/services/mobileanalytics/app-monitoring.html#monitor-app-crash).
+7. Go to the {{site.data.keyword.mobileanalytics_short}} Console to see usage analytics for your application. You can also monitor your application by <!--[creating custom charts](app-monitoring.html#custom-charts),-->[setting alerts](/docs/services/mobileanalytics/app-monitoring.html#alerts) and [monitoring app crashes](/docs/services/mobileanalytics/app-monitoring.html#monitor-app-crash).
 
 
 # rellinks
