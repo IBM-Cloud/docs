@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-14"
+lastupdated: "2016-12-01"
 
 ---
 
@@ -158,8 +158,7 @@ for more information.
 
 There are various methods of checking the state of FIPS_MODE:
 <ul>
-<li> You can check the staging_task.log for your application for
-a message similar to the following:    
+<li> You can check the logs for your application for a message similar to the following:    
 
   <pre>
   Installing FIPS-enabled IBM SDK for Node.js (4.4.3) from cache
@@ -202,11 +201,11 @@ The following table explains the behavior of node.js v4 with FIPS:
 
 * success (1)
   * FIPS is in use.
-  * The staging_task.log will include the message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * The logs will include the message *Installing FIPS-enabled IBM SDK for Node.js*.
   * The value returned by process.versions.openssl will contain "fips".
 * success (2)
   * FIPS is *NOT* in use.
-  * The staging_task.log will *NOT* include the message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * The logs will *NOT* include the message *Installing FIPS-enabled IBM SDK for Node.js*.
   * The value returned by process.versions.openssl will *NOT* contain "fips".
 
 #### Nodejs v6
@@ -233,21 +232,21 @@ The following table explains the behavior of node.js v6 with FIPS.
 
 * success (1)
   * FIPS is in use.
-  * The staging_task.log will include the message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * The logs will include the message *Installing FIPS-enabled IBM SDK for Node.js*.
   * The value returned by process.versions.openssl will contain "fips"
   * crypto.fips will return 1, indicating FIPS is in use
 * success (2)
   * FIPS is *NOT* in use.
-  * The staging_task.log will include the message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * The logs will include the message *Installing FIPS-enabled IBM SDK for Node.js*.
   * The value returned by process.versions.openssl will contain "fips"
   * crypto.fips will return 0, indicating FIPS is *NOT* in use
 * failure (3)
   * FIPS is *NOT* in use.
-  * The staging_task.log will *NOT* include the message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * The logs will *NOT* include the message *Installing FIPS-enabled IBM SDK for Node.js*.
   * staging will fail with msg "ERR node: bad option: --enable-fips"
 * success (4)
   * FIPS is *NOT* in use.
-  * The staging_task.log will *NOT* include the message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * The logs will *NOT* include the message *Installing FIPS-enabled IBM SDK for Node.js*.
   * The value returned by process.versions.openssl will *NOT* contain "fips"
   * crypto.fips will return 0, indicating FIPS is *NOT* in use
 
