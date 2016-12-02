@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-17"
+lastupdated: "2016-12-01"
 
 ---
 {:new_window: target="_blank"}
@@ -91,11 +91,11 @@ The {{site.data.keyword.mobileanalytics_full}} Cordova plugin enables you to ins
 	cordova platform add android
 	```
 	{: codeblock}
-	
+		
 	```
 	cordova platform add ios
 	```
-	{: codeblock}
+   {: codeblock}
 	
 2. If you added the Android platform, you must add the minimum supported API level to the `config.xml` file of your Cordova application. Open the `config.xml` file and add the following line to the `<platform name="android">` element:
 
@@ -106,9 +106,9 @@ The {{site.data.keyword.mobileanalytics_full}} Cordova plugin enables you to ins
   	<!-- add minimum and target Android API level declaration -->
   	</platform>
 	```
-{: codeblock}
+   {: codeblock}
 
-The *minSdkVersion* value must be higher than `15`. Refer to the [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) to stay current with the supported *targetSdkVersion* for the Android SDK.
+ The *minSdkVersion* value must be higher than `15`. Refer to the [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) to stay current with the supported *targetSdkVersion* for the Android SDK.
 
 3. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
 
