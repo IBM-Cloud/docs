@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-2"
+
 ---
 
 # Benutzer mit angepasstem Identitätsprovider authentifizieren
@@ -43,9 +44,6 @@ Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist
   * Die ursprüngliche Anforderung wird von der Webanwendung (zum Beispiel von einem Anmeldeformular) gesendet.
   * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource. 
 
-
-
-
 ## Informationen zu angepassten Identitätsprovidern
 {: #custom-id-about}
 
@@ -53,7 +51,7 @@ Mit einem angepassten Identitätsprovider können Sie angepasste Authentifizieru
 
 Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglichkeiten:
 
-1. Sie können eine Authentifizierungsanforderung (Challenge) anpassen, die vom {{site.data.keyword.amashort}}-Service an die mobile Anwendung oder an die Web-Clientanwendung gesendet werden soll. Eine Authentifizierungsanforderung ist ein JSON-Objekt, das angepasste Daten enthält. Der Client kann mithilfe dieser angepassten Daten Authentifizierungsabläufe anpassen.
+1. Sie können eine Authentifizierungsanforderung (Challenge) anpassen, die vom {{site.data.keyword.amashort}}-Service an die mobile Anwendung oder an die Web-Client-Anwendung gesendet werden soll. Eine Authentifizierungsanforderung ist ein JSON-Objekt, das angepasste Daten enthält. Der Client kann mithilfe dieser angepassten Daten Authentifizierungsabläufe anpassen.
 
   Beispiel für eine angepasste Authentifizierungsanforderung:
 

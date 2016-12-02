@@ -2,14 +2,15 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-30"
+
 ---
 
 {:shortdesc: .shortdesc}
 
 
 # {{site.data.keyword.amashort}} SDK、样本和 API 参考
-要将 {{site.data.keyword.amafull}} SDK 添加到应用程序，请选择要使用的 SDK。然后，配置依赖关系管理器，以将 SDK 拉入到应用程序中。
+要将 {{site.data.keyword.amafull}} SDK 添加到客户端应用程序，请选择要使用的 SDK。然后，配置依赖关系管理器，以将 SDK 拉入到应用程序中。
 {:shortdesc}
 
 **注：**后续部分提供有关安装 SDK 的其他信息。
@@ -17,7 +18,7 @@ lastupdated: "2016-10-02"
 ## 核心 SDK
 {: #coresdk}
 
-核心 SDK 包含用于启用定制认证、记录和监视移动应用程序的 API。
+核心 SDK 包含用于启用定制认证和日志记录的 API。
 
 ### Android
 {: #coresdk-android}
@@ -79,7 +80,7 @@ pod 'IMFCore'
 
 安装 Mobile Client Access Cordova 插件：
 ```Bash
-cordova plugin add ibm-mfp-core
+cordova plugin add bms-core
 ```
 {: codeblock}
 

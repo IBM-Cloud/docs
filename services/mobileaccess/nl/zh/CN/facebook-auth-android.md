@@ -2,35 +2,39 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-01"
+
 ---
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 
-
 # 启用 Android 应用程序的 Facebook 认证
 {: #facebook-auth-android}
 
-
-要在 {{site.data.keyword.amafull}} Android 应用程序中将 Facebook 用作身份提供者，请在 Facebook for Developers 站点上，为 Facebook 应用程序添加并配置 Android 平台。
+要在 {{site.data.keyword.amafull}} Android 客户端应用程序中将 Facebook 用作身份提供者，请添加并配置 Android 客户端以访问 Facebook for Developers 站点上的 Facebook 应用程序。
 {:shortdesc}
 
 ## 开始之前
 {: #before-you-begin}
+
 您必须具有：
+* {{site.data.keyword.amafull}} 服务和 {{site.data.keyword.Bluemix_notm}} 应用程序的实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
+* 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
+* **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`美国南部`、`英国`或`悉尼`，并对应于 WebView Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
 * 配置为使用 Gradle 的 Android 项目。该项目不需要安装 {{site.data.keyword.amashort}} 客户端 SDK。  
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
-* 服务参数值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开服务。单击**移动选项**。`applicationRoute` 和 `tenantId`（也称为 `appGUID`）值会显示在**路由**和**应用程序 GUID/TenantId** 字段中。您将需要这些值来初始化 SDK，并将请求发送到后端应用程序。
 * Facebook for Developers 站点 (https://developers.facebook.com) 上具有 Android 平台的 Facebook 应用程序。
 
 **重要信息**：您无需单独安装 Facebook SDK (`com.facebook.FacebookSdk`)。添加 {{site.data.keyword.amashort}} Facebook 客户端 SDK 时，Gradle 会自动安装 Facebook SDK。在 Facebook for Developers 站点中添加 Android 平台时，可以跳过此步骤。
 
-## 针对 Android 平台配置 Facebook 应用程序
+## 在 Facebook for Developers 站点上配置应用程序
 {: #facebook-auth-android-config}
-从 Facebook for Developers 站点 (https://developers.facebook.com) 上：
+在 Facebook for Developers Web 站点中：
 
-1. 在 Facebook for Developers 站点上登录到您的帐户。
-2. 添加或配置 Android 平台。那里会提供以下步骤的更多详细信息。
+1. 在 Facebook for Developers Web 站点 (https://developers.facebook.com) 上登录到您的帐户。
+	有关创建新应用程序的信息，请参阅[在 Facebook for Developers Web 站点上创建应用程序](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。 
+1. 从**产品列表**中，选择 **Facebook 登录**。
+1. 添加或配置 Android 平台。 
 1. 在“Google Play 软件包名称”提示中，指定 Android 应用程序的软件包名称。要找到 Android 应用程序的软件包名称，请在 Android Studio 项目的 `AndroidManifest.xml` 文件中，查找 `<manifest ..... package="{your-package-name}">`。
 
 1. 在**类名**提示中，指定主 Activity 的类名。类名是活动箱中 `android:name` 属性的值。如果在 `AndroidManifest.xml` 文件中存在多个活动，请查找包含 `<intent-filter>` 的活动：
@@ -66,19 +70,17 @@ lastupdated: "2016-10-10"
 
 1. 单击**保存设置**。
 
-## 配置 {{site.data.keyword.amashort}} 进行 Facebook 认证
+## 配置 {{site.data.keyword.amashort}} 服务进行 Facebook 认证
 {: #facebook-auth-android-mca}
 已拥有 Facebook 应用程序标识并且将 Facebook 应用程序配置为向 Android 客户端提供服务后，可以在 {{site.data.keyword.amashort}} 仪表板中启用 Facebook 认证。
 
-1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。
+1. 在仪表板中打开 {{site.data.keyword.amashort}} 服务。
+1. 在**管理**选项卡中，将**授权**切换为“开启”。
+1. 展开 **Facebook** 部分。
+1. 添加 **Facebook 应用程序标识**。
+1. 单击**保存**。
 
-1. 单击 {{site.data.keyword.amashort}} 磁贴。这将装入 {{site.data.keyword.amashort}}“仪表板”。
-
-1. 单击 **Facebook** 面板上的**配置**按钮。
-
-1. 指定 Facebook 应用程序标识，然后单击**保存**。
-
-## 针对 Android 配置 {{site.data.keyword.amashort}} 客户端 SDK
+## 配置 {{site.data.keyword.amashort}} 客户端 Android SDK 进行 Facebook 认证
 {: #facebook-auth-android-sdk}
 要针对 Android 配置客户端 SDK，请在 Android Studio 中使用 Gradle 依赖关系管理器。
 
@@ -102,7 +104,7 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 
 	保存更新后，`facebookauthentication` 模块会在 Android 项目中下载并安装所有必要的 SDK。
 
-1. 使用 Gradle 同步项目。单击**工具 > Android > 使用 Gradle 文件同步项目**。
+1. 通过单击**工具 > Android > 使用 Gradle 文件同步项目**来使用 Gradle 同步项目。
 
 1. 打开 `res/values/strings.xml` 文件，然后添加包含您的 Facebook 应用程序标识的 `facebook_app_id` 字符串：
 
@@ -148,8 +150,8 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 	</application>
 ```
 
-1. 初始化客户端 SDK，然后注册 Facebook 认证管理器。通过传递 **context** 和 **region** 来初始化 {{site.data.keyword.amashort}} 客户端 SDK。<br/>通常会将初始化代码放置在 Android 应用程序主活动的 `onCreate` 方法中，但这不是强制性的。<br/>
- 
+1. 初始化客户端 SDK，然后注册认证管理器。通过传递 **context** 和 **region** 来初始化 {{site.data.keyword.amashort}} 客户端 SDK。<br/>通常会将初始化代码放置在 Android 应用程序主活动的 `onCreate` 方法中，但这不是强制性的。<br/>
+
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
@@ -159,17 +161,16 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 	FacebookAuthenticationManager.getInstance().register(this);
 ```
 
-   * 将 `BMSClient.REGION_UK` 替换为相应的区域。要查看
-{{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
-区域值应该为以下其中一个值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、`BMSClient.REGION_UK`。
+   * 将 `BMSClient.REGION_UK` 替换为相应的区域。 
+   * 将 `<MCAServiceTenantId>` 替换为 `tenantId` 值。 
    
-   * 将 `<MCAServiceTenantId>` 替换为 `tenantId` 值（请参阅[开始之前](#before-you-begin)）。 
-   
-  **注：**如果您的 Android 应用程序是针对 Android V6.0（API 级别 23
+ 	有关获取这些值的更多信息，请参阅[开始之前](#before-you-begin)。
+
+	**注：**如果您的 Android 应用程序是针对 Android V6.0（API 级别 23
 ）或更高版本的，那么必须确保该应用程序具有 `android.permission.GET_ACCOUNTS`
 调用，然后才能调用 `register`。有关更多信息，请参阅
 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}。
-	
+
 1. 将以下代码添加到您的 Activity：
 
 	```Java
@@ -189,7 +190,7 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 {: #facebook-auth-android-testing-before}
 您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
-1. 尝试在浏览器中对新创建的移动后端应用程序的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`。有关获取 `{applicationRoute}` 值的信息，请参阅[开始之前](#before-you-begin)。 
+1. 尝试在浏览器中对新创建的移动后端应用程序的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`。  
 
 	使用 MobileFirst Services Starter 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护。浏览器中将返回 `Unauthorized` 消息。由于此端点只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问，因此会返回此消息。
 
@@ -217,8 +218,6 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 		}
 	});
 ```
-
-	将 `{applicationRoute}` 替换为您在 {{site.data.keyword.Bluemix}}“仪表板”中单击应用程序中的“移动选项”时所获取的 *route* 值。
 	
 1. 运行应用程序。这将显示 Facebook 登录屏幕。
 
@@ -233,7 +232,7 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 
 	通过添加以下代码，您还可以添加注销功能：
 
-	`FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+`FacebookAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
  `
 
 	如果您在用户登录 Facebook 之后调用此代码，那么用户将从 Facebook 注销。当用户尝试重新登录时，系统将提示他们输入 Facebook 凭证。

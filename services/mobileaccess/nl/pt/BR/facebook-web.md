@@ -1,14 +1,12 @@
 ---
 
 copyright:
-  year: 2016
+  year: 2016 lastupdated: "2016-06-15"
 
 ---
 
 # Ativando a autenticação do Facebook para apps da web
-
-Última atualização: 15 de junho de 2016
-{: .last-updated}
+{: #facebook_web}
 
 Use o Facebook para autenticar usuários em seu app da web.
 
@@ -17,7 +15,7 @@ Use o Facebook para autenticar usuários em seu app da web.
 Você deve ter:
 * Um app da web.  
 * Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
-* Um ID de aplicativo e um segredo de app do Facebook. Para obter mais informações, veja [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* Um ID de aplicativo e um segredo de app do Facebook. Para obter mais informações, consulte [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
 ## Configurando um aplicativo Facebook para seu website
@@ -86,5 +84,3 @@ Certifique-se de enviar esta solicitação `POST` no período de 10 min, uma vez
 ## Testando a Autenticação
 Agora é possível começar a fazer solicitações para seus recursos protegidos.
 Toda solicitação para recursos protegidos deve conter o `access_token` no campo de cabeçalho da solicitação de autorização.
-
-

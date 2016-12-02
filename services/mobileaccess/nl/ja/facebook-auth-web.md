@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-11-07"
 
 ---
 {:screen: .screen}
@@ -20,39 +20,34 @@ Facebook を使用して、{{site.data.keyword.amafull}} Web アプリケーシ�
 以下が必要です。
 
 * Web アプリ。 
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
-
-
-
-
+* {{site.data.keyword.amashort}} サービス。詳しくは、[始めに (Getting started) ](index.html)を参照してください。
 * (許可プロセス完了後の) 最終リダイレクトのための URI。
 
 
-## Web サイト用の Facebook アプリケーションの構成
+## Facebook for Developers Web サイトでのアプリケーションの構成
 {: #facebook-auth-config}
 
 Web サイトで Facebook を ID プロバイダーとして使用するには、Facebook アプリケーションで Web サイトのプラットフォームを追加して構成する必要があります。
 
-1. [Facebook for Developers](https://developers.facebook.com) Web サイトにログインします。
-2. アプリを開くか、または作成します。
-3. **「App ID」**および**「App Secret」**をメモします。{{site.data.keyword.amashort}} ダッシュボードで Facebook 認証用に Web プロジェクトを構成するときに、これらの値が必要になります。
-4. **Website** プラットフォームが存在しない場合は、追加します。
-5. **「Products」**リストで**「Facebook Login」**を追加するか開きます。
-6. **「有効な OAuth リダイレクト URI (Valid OAuth redirect URIs)」**ボックスに、許可サーバーのコールバック・エンドポイント URI を入力します。この許可リダイレクト URI は、以降の {{site.data.keyword.amashort}} ダッシュボード構成のステップで見つけることができます。
+1. [Facebook for Developers](https://developers.facebook.com) サイトで自分のアカウントにログインします。新規アプリケーションの作成については、[Facebook for Developers Web サイトでのアプリケーションの作成](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。 
+1. **「App ID」**および**「App Secret」**をメモします。Mobile Client Access ダッシュボードで Facebook 認証用に Web プロジェクトを構成するときに、これらの値が必要になります。
+1. **「製品リスト (Products List)」**から、**「Facebook ログイン (Facebook Login)」**を選択します。
+4. **Web** プラットフォームが存在しない場合は、追加します。
+6. **「有効な OAuth リダイレクト URI (Valid OAuth redirect URIs)」**ボックスに、許可サーバーのコールバック・エンドポイント URI を入力します。以下のステップで {{site.data.keyword.amashort}} サービスを構成した後で、この値を追加できます。
 7. 変更を保存します。
 
 
 ## Facebook 認証用の {{site.data.keyword.amashort}} の構成
 {: #facebook-auth-config-ama}
 
-Facebook App ID および App Secret を取得し、Web クライアントに対して機能するよう Facebook アプリケーションを構成した後、{{site.data.keyword.Bluemix_notm}} ダッシュボードで Facebook 認証を使用可能にすることができます。
+Facebook App ID および App Secret を取得し、Web クライアントに対して機能するように Facebook for Developers アプリケーションを構成した後、{{site.data.keyword.amashort}} ダッシュボードで Facebook 認証を使用可能にすることができます。
 
-1. {{site.data.keyword.Bluemix_notm}}ダッシュボードを開きます。
-2. 関連するアプリのタイルをクリックして、アプリをロードします。
-3. {{site.data.keyword.amashort}} サービスのタイルをクリックします。
-4. **「Facebook」**パネルの**「構成」**ボタンをクリックします。
-5. **「Facebook Developer Console の Mobile Client Access リダイレクト URI (Mobile Client Access Redirect URI for Facebook Developer Console)」**テキスト・ボックス内の値をメモします。この値は、Web サイトの Facebook アプリケーション構成のステップ 6 で Facebook Developers ポータルの**「Facebook Login」**の**「有効な OAuth リダイレクト URI (Valid OAuth redirect URIs)」**ボックスに追加する必要があります。
-6. Facebook **Application ID** および **App Secret** を入力します。
+1. {{site.data.keyword.amashort}} サービス・ダッシュボードを開きます。
+1. **「管理」**タブで、**「許可」**をオンに切り替えます。
+1. **「Facebook」**セクションを展開します。
+1. **「Web アプリへの Facebook の追加 (Add Facebook to a Web App)」**を選択します。
+5. **「Facebook for Developers の Mobile Client Access リダイレクト URI (Mobile Client Access Redirect URI for Facebook for Developers)」**テキスト・ボックス内の値をメモします。この値は、Facebook Developers ポータルの**「Facebook ログイン (Facebook Login)」**の**「有効な OAuth リダイレクト URI (Valid OAuth redirect URIs)」**ボックスに追加する必要があります。
+6. Facebook for Developers Web サイトから取得した Facebook **「App ID」**および**「App Secret」**を入力します。
 7. リダイレクト URI を**「Web アプリケーションのリダイレクト URI (Your Web Application Redirect URIs)」**に入力します。この値は、許可プロセス完了後にアクセスされるリダイレクト URI であり、開発者によって決定されます。
 8. **「保存」**をクリックします。
 
@@ -60,13 +55,15 @@ Facebook App ID および App Secret を取得し、Web クライアントに対
 ## ID プロバイダーとして Facebook を使用した {{site.data.keyword.amashort}} 許可フローの実装
 {: #facebook-auth-flow}
 
-`VCAP_SERVICES` 環境変数が {{site.data.keyword.amashort}} サービス・インスタンスごとに自動的に作成され、許可プロセスに必要なプロパティーが含まれます。この環境変数は 1 つの JSON オブジェクトから成り、アプリケーションの**「環境変数」**をクリックすることによって表示できます。
+`VCAP_SERVICES` 環境変数が {{site.data.keyword.amashort}} サービス・インスタンスごとに自動的に作成され、許可プロセスに必要なプロパティーが含まれます。この環境変数は 1 つの JSON オブジェクトから成り、{{site.data.keyword.amashort}} サービス・ダッシュボードの **「サービス資格情報」**タブに表示できます。
 
 許可プロセスを開始するには、以下のようにします。
 
 1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) とクライアント ID (`clientId`) を取り出します。 
 
-	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
+	`var cfEnv = require("cfenv");` 
+
+	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、**「サービス資格情報」**にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
  
 	米国南部: 
 
@@ -97,17 +94,17 @@ Facebook App ID および App Secret を取得し、Web クライアントに対
 	function checkAuthentication(req, res, next){
   // ユーザーが認証されているかどうかを検査
 
-		if (req.session.userIdentity){   
-       next()  
-     } else {   
-  // If not - redirect to authorization server   
-        var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
-        var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
-        var clientId = mcaCredentials.clientId;   
-        var redirectUri = "http://some-server/oauth/callback"; 
-         // Your web application redirect URI   
+		if (req.session.userIdentity) {   
+			next()  
+		} else {   
+			// If not - redirect to authorization server   
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
+			var clientId = mcaCredentials.clientId;   
+			var redirectUri = "http://some-server/oauth/callback"; 
+			// Your Web application redirect URI   
 
-        var redirectUrl = authorizationEndpoint + "?response_type=code";
+			var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;   
         redirectUrl += "&redirect_uri=" + redirectUri;   
   

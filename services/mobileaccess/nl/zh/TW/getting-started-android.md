@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-03"
+
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-
 
 # 設定 Android SDK
 {: #getting-started-android}
@@ -18,12 +18,11 @@ lastupdated: "2016-10-10"
 ## 開始之前
 {: #before-you-begin}
 您必須具有：
-* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
-
-
-
-
-* 您的服務參數值。在 {{site.data.keyword.Bluemix_notm}} 儀表板中，開啟服務。按一下**行動選項**。`applicationRoute` 及 `tenantId`（也稱為 `appGUID`）值會顯示在**路徑**及**應用程式 GUID/TenantId** 欄位中。當您起始設定 SDK 以及將要求傳送給後端應用程式時，需要這些值。
+* {{site.data.keyword.Bluemix_notm}} 應用程式的實例。
+* {{site.data.keyword.amafull}} 服務的實例。
+* **租戶 ID**。在 {{site.data.keyword.amafull}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
+* **應用程式路徑**。這是後端應用程式的 URL。在傳送要求至其受保護端點時，將需要此值。
+* {{site.data.keyword.Bluemix_notm}} **地區**。您可以在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 旁邊的標頭中，找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區。出現的地區值應該是下列其中一項：`US South`、`Sydney` 或 `United Kingdom`，並對應至程式碼中所需的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
 * 設定成使用 Gradle 的 Android Studio 專案。如需如何設定 Android 開發環境的相關資訊，請參閱 [Google 開發人員工具](http://developer.android.com/sdk/index.html)。
 
 ## 安裝 {{site.data.keyword.amashort}} 用戶端 SDK
@@ -65,24 +64,21 @@ lastupdated: "2016-10-10"
   BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 					
   BMSClient.getInstance().setAuthorizationManager(
-                 MCAAuthorizationManager.createInstance(this, "MCAServiceTenantId"));
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
+						
+	```
 
-```
-
-   * 將 `BMSClient.REGION_UK` 取代為適當的地區。	
-
-若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
-
-地區值應該是下列其中一個：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。
-   * 將 "MCAServiceTenantId" 取代為 **tenantId** 值（請參閱[開始之前](#before-you-begin)）。 
+* 將 `<applicationBluemixRegion>` 取代為管理 {{site.data.keyword.Bluemix_notm}} 服務的地區。
+* 將 `<MCAServiceTenantId>` 取代為 **tenantId**。
+如需這些值的相關資訊，請參閱[開始之前](#before-you-begin)。
 
 ## 對行動後端應用程式提出要求
 {: #request}
 
 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK 之後，即可開始對行動後端應用程式提出要求。
 
-1. 嘗試將要求傳送給新的行動後端應用程式的受保護端點。在瀏覽器中，開啟下列 URL：`{applicationRoute}/protected`（例如 `http://my-mobile-backend.mybluemix.net/protected`）。如需取得 `{applicationRoute}` 值的相關資訊，請參閱[開始之前](#before-you-begin)。 
-	
+1. 嘗試傳送要求至行動後端應用程式的受保護端點。在瀏覽器中，開啟下列 URL：`{applicationRoute}/protected`（例如 `http://my-mobile-backend.mybluemix.net/protected`）。   
+
 	使用 MobileFirst Services Starter 樣板所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。在瀏覽器中會傳回 `Unauthorized` 訊息，因為只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。
 
 
@@ -90,7 +86,7 @@ lastupdated: "2016-10-10"
 1. 使用 Android 應用程式以對相同的端點提出要求。起始設定 `BMSClient` 之後，請新增下列程式碼：
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("http://my-mobile-backend.mybluemix.net/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {

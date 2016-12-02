@@ -3,13 +3,12 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:shortdesc: .shortdesc}
 
 # iOS Objective-C SDK のセットアップ
 {: #getting-started-ios}
-
-
 
 iOS アプリケーションに {{site.data.keyword.amafull}} SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
 
@@ -26,6 +25,8 @@ iOS アプリケーションに {{site.data.keyword.amafull}} SDK を装備し�
 
 
 
+* **「TenantID」**。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**をクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。{{site.data.keyword.amashort}} 許可マネージャーを初期化するためにこの値が必要になります。
+* **「アプリケーションの経路 (Application Route)」**。これは、バックエンド・アプリケーションの URL です。保護されているエンドポイントに要求を送信するためにこの値が必要になります。
 * Xcode プロジェクト。  
 
 
@@ -56,9 +57,8 @@ sudo gem install cocoapods
 
 1. `Podfile` ファイルを編集し、必要なターゲットに以下の行を追加します。
 
-	```
-	pod 'IMFCore'
-	```
+
+	`pod 'IMFCore'`
 
 1. `Podfile` ファイルを保存し、コマンド・ラインから `pod install` を実行します。<br/>Cocoapods が追加の依存関係をインストールし、追加されたコンポーネントを表示します。<br/>
 
@@ -69,15 +69,11 @@ sudo gem install cocoapods
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #init-mca-sdk-ios}
 
-{{site.data.keyword.amashort}} Client SDK を使用するには、**「経路」** (`applicationRoute`) および **「アプリ GUID」** (`applicationGUID`) のパラメーターを渡すことによって、SDK を初期化する必要があります。
-
-1. {{site.data.keyword.Bluemix_notm}} ダッシュボードのメインページからアプリをクリックします。**「モバイル・オプション」**をクリックします。SDK を初期化するには、**「経路」**および**「アプリ GUID」**の値が必要です。
-
 1. 以下のヘッダーを追加することで、{{site.data.keyword.amashort}} Client SDK を使用するクラスに `IMFCore` フレームワークをインポートします。
 
 	####Objective-C
 	{: #imfcore-objc}
-	
+
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
 	
@@ -85,18 +81,18 @@ sudo gem install cocoapods
 
 	####Swift
 	{: #sdk-swift}
-	
+
 	{{site.data.keyword.amashort}} Client SDK は Objective-C によって実装されます。以下の手順に従って、Swift プロジェクトにブリッジング・ヘッダーを追加する必要がある場合があります。
-	1. Xcode 内のプロジェクトを右クリックし、「**New File..**」を選択します。
+	1. Xcode でプロジェクトを右クリックし、**「新規ファイル (New File)」**を選択します。
 	1. 「**iOS Source**」カテゴリーから「**Header file**」をクリックします。このファイルに `BridgingHeader.h` という名前を付けます。
-	1. 次の行をブリッジング・ヘッダーに追加します。`#import <IMFCore/IMFCore.h>`
+	1. ブリッジング・ヘッダーに次の行を追加します。`#import <IMFCore/IMFCore.h>`。
 	1. Xcode でプロジェクトをクリックし、**「ビルド設定 (Build Settings)」**タブを選択します。
 	1. `Objective-C Bridging Header` を探します。
 	1. 値を、`BridgingHeader.h` ファイルのロケーション (例えば、`$(SRCROOT)/MyApp/BridgingHeader.h`) に設定します。
 	1. プロジェクトをビルドすることで、Xcode によってご使用のブリッジング・ヘッダーが選択されることを確認してください。失敗メッセージは表示されないはずです。
-	
+
 1. 以下のコードを使用して、{{site.data.keyword.amashort}} Client SDK を初期化します。初期化コードを入れる場所は一般的に (必須ではありませんが)、アプリケーション代行の `application:didFinishLaunchingWithOptions` メソッドの中です。<br/>
-`applicationRoute` および vapplicationGUID を、{{site.data.keyword.Bluemix_notm}} ダッシュボード内の**「モバイル・オプション」**からの値に置き換えます。
+`applicationRoute` および `applicationGUID` の取得については、[開始する前に](#before-you-begin)を参照してください。 
 
 	####Objective-C
 	{: #sharedinstance-objc}
@@ -114,20 +110,21 @@ sudo gem install cocoapods
 	```
 
 ## AuthorizationManager の初期化
-{{site.data.keyword.amashort}} サービスの `tenantId` パラメーターを渡すことによって、`AuthorizationManager` を初期化します。この値は、{{site.data.keyword.amashort}} サービス・タイルの**「資格情報の表示」**ボタンをクリックして見つけます。
+{{site.data.keyword.amashort}} サービスの `tenantId` パラメーターを渡すことによって、`AuthorizationManager` を初期化します。これらの値の取得については、[開始する前に](#before-you-begin)を参照してください。 
 
 ####Objective-C
-	
+
 ```Objective-C
-  	   [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+[[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"<tenantId>"];
 ```
 
 ####Swift
 
 ```Swift
-	   IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+IMFAuthorizationManager.sharedInstance().initializeWithTenantId("<tenantId>")
 ```
 
+	
 ## モバイル・バックエンド・アプリケーションへの要求の実行
 {: #request}
 

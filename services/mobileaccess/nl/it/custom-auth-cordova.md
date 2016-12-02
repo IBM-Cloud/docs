@@ -2,49 +2,41 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-03"
+
 ---
 
 # Configurazione dell'autenticazione personalizzata per la tua applicazione Cordova {{site.data.keyword.amashort}}
 {: #custom-cordova}
 
-Configura la tua applicazione Cordova che sta utilizzando l'autenticazione personalizzata per utilizzare l'SDK client {{site.data.keyword.amafull}} e connettere la tua applicazione a {{site.data.keyword.Bluemix}}.
-
+Strumentazione della tua applicazione Cordova per utilizzare l'autenticazione personalizzata e l'SDK client {{site.data.keyword.amafull}} per accedere alla tua applicazione protetta.
 
 ## Prima di cominciare
 {: #before-you-begin}
-Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.data.keyword.amashort}} configurato per utilizzare un provider di identità personalizzato.  La tua applicazione mobile deve anche essere strumentata con l'SDK client {{site.data.keyword.amashort}}.  Per ulteriori informazioni, consulta:
- * [Introduzione a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
- * [Configurazione dell'SDK Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)
- * [Utilizzo di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [Creazione di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+* Una risorsa che sia protetta da un'istanza del servizio {{site.data.keyword.amashort}} configurata per utilizzare un provider di identità personalizzato (consulta [Configurazione dell'autenticazione personalizzata](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Il tuo valore **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}. Fai clic sul pulsante **Opzioni per dispositivi mobili**. Il valore `tenantId` (noto anche come `appGUID`)  viene visualizzato nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione.
+* Il tuo nome **Realm**. Questo è il valore che hai specificato nel campo **Nome realm** della sezione **Personalizzato** nella scheda **Gestione** del dashboard {{site.data.keyword.amashort}}.
+* La tua **Regione** {{site.data.keyword.Bluemix_notm}}. Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore che viene visualizzato della regione deve essere uno dei seguenti: `US South`, `United Kingdom` o `Sydney`. La sintassi esatta delle costanti SDK corrispondenti viene fornita negli esempi di codice.
 
-## Inizializzazione dell'SDK client {{site.data.keyword.amashort}}
+Per ulteriori informazioni, consulta:
+ * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html). Viene illustrato come configurare il servizio {{site.data.keyword.amashort}} per l'autenticazione personalizzata. Qui definisci il valore **Realm**.
+ * [Configurazione dell'SDK Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html). Informazioni sulla configurazione dell'applicazione client Cordova. 
+ * [Utilizzo di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html). Come autenticare gli utenti a un provider di identità personalizzato.
+ * [Creazione di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html). Alcuni esempi di come funziona un provider di identità personalizzato.  
+
+## Configura il tuo codice Cordova WebView 
+### Inizializzazione dell'SDK client {{site.data.keyword.amashort}} in Cordova WebView
 {: #custom-cordova-sdk}
-Inizializza l'SDK passando i parametri applicationGUID e applicationRoute.
-
-1. Ottieni i valori di parametro della tua applicazione. Apri la tua applicazione nel dashboard {{site.data.keyword.Bluemix_notm}}. Fai clic su **Opzioni mobili**. Vengono visualizzati i valori di **Rotta** (`applicationRoute`) e **GUID applicazione** (`applicationGUID`).
-1. Inizializza l'SDK client.
-
-	```JavaScript
-BMSClient.initialize("applicationRoute", "applicationGUID");
-
-	```
- * Sostituisci `applicationRoute` e `applicationGUID` con i valori **Route** e **AppGuid**. Questi valori possono essere trovati facendo clic sul pulsante **Opzioni mobili** nella tua applicazione {{site.data.keyword.Bluemix_notm}} nel dashboard {{site.data.keyword.Bluemix_notm}}.
-	
- 
- 
-## Inizializzazione di AuthorizationManager {{site.data.keyword.amashort}}
- {: #custom-cordova-MCAAM}
-Inizializza `MCAAuthorizationManager` trasmettendo al servizio  {{site.data.keyword.amashort}} il parametro `tenantId`. Puoi trovare questo valore facendo clic sul pulsante **Visualizza credenziali** nel tile del servizio {{site.data.keyword.amashort}}.
+Inizializza l'SDK passando il parametro `<applicationBluemixRegion>` nel file `index.js`.
 
 ```JavaScript
-  MFPAuthorizationManager.initialize("tenantId");
-        
+BMSClient.initialize("<applicationBluemixRegion>");
 ```
 
-## Interfaccia listener di autenticazione
+Sostituisci `<applicationBluemixRegion>` con la tua regione (consulta [Prima di cominciare](#before-you-begin)). 
+ 
+
+### Interfaccia listener di autenticazione
 {: #custom-cordva-auth}
 
 L'SDK client {{site.data.keyword.amashort}} fornisce un'interfaccia listener di autenticazione per implementare un flusso di autenticazione personalizzato. Devi aggiungere i seguenti metodi che vengono richiamati in fasi diverse di un processo di autenticazione.
@@ -66,8 +58,6 @@ Questo metodo viene richiamato quando viene ricevuta una richiesta di verifica d
 onAuthenticationChallengeReceived: function(authenticationContext, challenge) {...}
 ```
 
-#### Argomenti
-{: #onAuthenticationChallengeReceived-args}
 * `authenticationContext`: fornito dall'SDK client {{site.data.keyword.amashort}} per consentire allo sviluppatore di notificare a sua volta le risposte alle richieste di verifica dell'autenticazione oppure un errore durante la raccolta di credenziali, come ad esempio l'utente che annulla la richiesta di autenticazione.
 * `challenge`: un oggetto JSON che contiene una richiesta di verifica dell'autenticazione personalizzata, come restituita da un provider di identità personalizzato.
 
@@ -85,7 +75,7 @@ onAuthenticationFailure: function(info){...}
 
 Questo metodo viene richiamato dopo un esito negativo dell'autenticazione. Gli argomenti includono un oggetto JSON facoltativo che contiene informazioni estese sull'esito negativo dell'autenticazione.
 
-## authenticationContext
+### authenticationContext
 {: #custom-cordova-authcontext}
 
 Il valore `authenticationContext` viene fornito come un argomento al metodo `onAuthenticationChallengeReceived` di
@@ -96,8 +86,9 @@ authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
 
 authenticationContext.submitAuthenticationFailure(info);
 ```
+Il seguente codice dimostra come un listener di autorizzazione del cliente può raccogliere le credenziali, gestire le difficoltà e fornire le risposte di autenticazione.
 
-## Implementazione di esempio di un listener di autenticazione personalizzato
+## Implementazione di esempio di un flusso di lavoro del listener di autorizzazione personalizzato.
 {: #custom-cordova-authlisten-sample}
 
 Questo esempio di listener di autenticazione è progettato per funzionare con un provider di identità personalizzato. Puoi scaricare il provider di
@@ -137,21 +128,57 @@ var customAuthenticationListener = {
 }
 ```
 
-## Registrazione di un listener di autenticazione personalizzato
+## Registrazione di un listener di autenticazione personalizzato in Cordova WebView
 {: #custom-cordova-authreg}
 
-Dopo che hai creato un listener di autenticazione personalizzato, eseguine la registrazione presso `BMSClient` prima di poter iniziare a utilizzarlo. Aggiungi il seguente codice alla tua applicazione.  Richiama questo codice prima di
+Dopo che hai creato un listener di autenticazione personalizzato, devi eseguirne la registrazione presso `BMSClient` prima di poter iniziare a utilizzarlo. Aggiungi il seguente codice alla tua applicazione.  Richiama questo codice prima di
 inviare richieste alle tue risorse protette.
 
 ```Java
-BMSClient.registerAuthenticationListener(realmName, customAuthenticationListener);
+BMSClient.registerAuthenticationListener(<realmName>, customAuthenticationListener);
 ```
- Utilizza il *realmName* che hai specifico nel dashboard {{site.data.keyword.amashort}}.
+ Utilizza il `realmName` che hai specifico nel dashboard {{site.data.keyword.amashort}}.
+
+## Configura il gestore autorizzazione nel codice nativo
+
+Il gestore autorizzazione {{site.data.keyword.amashort}} deve essere registrato nel tuo codice della piattaforma nativo.
+
+**Android** (aggiungi a `onCreate` nell'attività principale)
+
+```
+String tenantId = "<tenantId>";
+MCAAuthorizationManager.createInstance(this.getApplicationContext(),tenantId);
+BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
+```
+
+**iOS Objective-C** (aggiungi a `AppDelegate.m`)
+
+Registra il tuo gestore autorizzazione in base alla tua versione di Xcode.
+
+```
+#import "<your_module_name>-Swift.h"
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+
+{  
+	
+    //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
+ }
+```
+
+Nota: sostituisci ``your_module_name`` con il nome modulo del tuo progetto, ad esempio, se il tuo nome module è``Cordova` dovrebbe essere ``#import "Cordova-Swift.h"`. Per trovare il nome modulo vai a **Build Settings > Packagin` > Product Module Name**.
+
+**Nota:** sostituisci il tuo `tenantId` con l'ID tenant trovato nel pulsante **Opzioni mobili** nel dashboard del servizio {{site.data.keyword.amashort}}.
+
+
+## Abilitare Keychain Sharing per iOS
+
+Abilita `Keychain Sharing` andando alla scheda `Funzionalità` e passa `Keychain Sharing` su `Attivo` nel tuo progetto Xcode. 
 
 
 ## Verifica dell'autenticazione
 {: #custom-cordova-test}
-Dopo che l'SDK client è stato inizializzato e che un AuthenticationListener personalizzato è stato registrato, puoi iniziare a effettuare richieste alla tua applicazione di back-end mobile.
+Dopo che l'SDK client è stato inizializzato e che un `AuthenticationListener` personalizzato è stato registrato, puoi iniziare a effettuare richieste alla tua applicazione di back-end mobile.
 
 ### Prima di cominciare
 {: #custom-cordova-testing-before}
@@ -170,11 +197,13 @@ Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyw
 	var failure = function(error)
     	{console.log("failure", error);
     }
-	var request = new MFPRequest("/protected", MFPRequest.GET);
+	var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	
+	Sostituisci `<your-application-route>` con il tuo URL dell'applicazione di back-end (consulta [Prima di cominciare](#before-you-begin)). 
 
-1. 	Quando la tua richiesta ha esito positivo, nella console LogCat o Xcode è presente il seguente output:
+1. 	Quando la tua richiesta ha esito positivo, nella console `LogCat` o Xcode è presente il seguente output:
 
 	![immagine](images/android-custom-login-success.png)
 

@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-11-07"
 
 ---
 {:screen: .screen}
@@ -10,7 +10,7 @@ lastupdated: "2016-10-03"
 {:codeblock: .codeblock}
 
 
-# 啟用 Web 應用程式的 Facebook 鑑別
+# 為 Web 應用程式啟用 Facebook 鑑別
 {: #facebook-auth-web}
 
 在 {{site.data.keyword.amafull}} Web 應用程式上使用 Facebook 來鑑別使用者。新增 {{site.data.keyword.amashort}} 安全功能。 
@@ -20,35 +20,34 @@ lastupdated: "2016-10-03"
 您必須具有：
 
 * Web 應用程式。 
-* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
+* {{site.data.keyword.amashort}} 服務。如需相關資訊，請參閱[開始使用](index.html)。
 * 最終重新導向的 URI（在授權處理程序完成之後）。
 
 
-## 配置網站的 Facebook 應用程式
+## 在 Facebook for Developers 網站上配置應用程式
 {: #facebook-auth-config}
 
 若要使用 Facebook 作為網站上的身分提供者，您必須在 Facebook 應用程式上新增及配置網站平台。
 
-1. 登入 [Facebook for Developers](https://developers.facebook.com) 網站。
-2. 開啟或建立您的應用程式。
-3. 記下**應用程式 ID** 及**應用程式密碼**。當您在 {{site.data.keyword.amashort}} 儀表板中配置 Web 專案進行 Facebook 鑑別時，需要這些值。
-4. 如果**網站**平台不存在，請予以新增。
-5. 從**產品**清單中新增或開啟 **Facebook 登入**。
-6. 在**有效 OAuth 重新導向 URI** 方框中，輸入授權伺服器回呼端點 URI。在下面的 {{site.data.keyword.amashort}} 儀表板配置步驟中尋找此授權重新導向 URI。
+1. 在 [Facebook for Developers](https://developers.facebook.com) 網站上登入您的帳戶。如需建立新應用程式的相關資訊，請參閱[在 Facebook for Developers 網站上建立應用程式](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。 
+1. 記下**應用程式 ID** 及**應用程式密碼**。當您在 Mobile Client Access 儀表板中配置 Web 專案來進行 Facebook 鑑別時，會需要這些值。
+1. 從**產品清單**中，選擇 **Facebook 登入**。
+4. 新增 **Web** 平台（如果不存在）。
+6. 在**有效 OAuth 重新導向 URI** 方框中，輸入授權伺服器回呼端點 URI。您可以在後續步驟中配置 {{site.data.keyword.amashort}} 服務之後，再新增此值。
 7. 儲存變更。
 
 
 ## 配置 {{site.data.keyword.amashort}} 進行 Facebook 鑑別
 {: #facebook-auth-config-ama}
 
-具有「Facebook 應用程式 ID」及「應用程式密碼」並配置「Facebook 應用程式」來服務 Web 用戶端之後，即可在 {{site.data.keyword.Bluemix_notm}} 儀表板中啟用 Facebook 鑑別。
+在您有了「Facebook 應用程式 ID」和「應用程式密碼」，並已配置 Facebook for Developers 應用程式來服務 Web 用戶端之後，即可在 {{site.data.keyword.amashort}} 儀表板中啟用 Facebook 鑑別。
 
-1. 開啟 {{site.data.keyword.Bluemix_notm}} 儀表板。
-2. 按一下相關的應用程式磚來載入應用程式。
-3. 按一下 {{site.data.keyword.amashort}} 服務磚。
-4. 按一下 **Facebook** 畫面中的**配置**按鈕。
-5. 記下 **Facebook 開發人員主控台的 Mobile Client Access 重新導向 URI** 文字框中的值。您需要此值以新增至**有效 OAuth 重新導向 URI** 方框，此方框位於「配置網站的 Facebook 應用程式」步驟 6 中「Facebook 開發人員入口網站」的 **Facebook 登入**中。
-6. 輸入 Facebook **應用程式 ID** 及**應用程式密碼**。
+1. 開啟 {{site.data.keyword.amashort}} 服務儀表板。
+1. 在**管理**標籤中，將**授權**切換為開啟。
+1. 展開 **Facebook** 區段。
+1. 選取**新增 Facebook 至 Web 應用程式**。
+5. 記下 **Facebook for Developers 的 Mobile Client Access 重新導向 URI** 文字框中的值。您需要在「Facebook 開發人員入口網站」的 **Facebook 登入**中，將此值新增至**有效 OAuth 重新導向 URI** 方框。
+6. 輸入從 Facebook for Developers 網站取得的 Facebook **應用程式 ID** 和**應用程式密碼**。
 7. 在**您的 Web 應用程式重新導向 URI** 中輸入重新導向 URI。此值適用於要在授權處理程序完成之後存取的重新導向 URI，並由開發人員決定。
 8. 按一下**儲存**。
 
@@ -56,13 +55,15 @@ lastupdated: "2016-10-03"
 ## 使用 Facebook 作為身分提供者來實作 {{site.data.keyword.amashort}} 授權流程
 {: #facebook-auth-flow}
 
-`VCAP_SERVICES` 環境變數是針對每一個 {{site.data.keyword.amashort}} 服務實例自動建立的，並且包含授權處理程序所需的內容。其由 JSON 物件組成，而且可以按一下應用程式中的**環境變數**來進行檢視。
+`VCAP_SERVICES` 環境變數是針對每一個 {{site.data.keyword.amashort}} 服務實例自動建立的，並且包含授權處理程序所需的內容。其由 JSON 物件組成，並可在 {{site.data.keyword.amashort}} 服務儀表板中的**服務認證**標籤中進行檢視。
 
 若要啟動授權處理程序，請執行下列動作：
 
 1. 從 `VCAP_SERVICES` 環境變數中儲存的服務認證，擷取授權端點 (`authorizationEndpoint`) 及用戶端 ID (`clientId`)。 
 
-	**附註：**如果您已在新增 Web 支援之前將 {{site.data.keyword.amashort}} 服務新增至應用程式，則在服務認證中可能沒有記號端點。請改用下列 URL（視 {{site.data.keyword.Bluemix_notm}} 地區而定）： 
+	`var cfEnv = require("cfenv");` 
+
+	**附註：**如果您在新增 Web 支援之前，已將 {{site.data.keyword.amashort}} 服務新增至應用程式，則在**服務認證**中可能沒有記號端點。請改用下列 URL（視 {{site.data.keyword.Bluemix_notm}} 地區而定）： 
  
 	美國南部： 
 
@@ -83,7 +84,7 @@ lastupdated: "2016-10-03"
 
 2. 使用 `response_type("code")`、`client_id` 及 `redirect_uri` 作為查詢參數，來建置授權伺服器 URI。 
 
-3. 從您的 Web 應用程式重新導向至產生的 URI。
+3. 從您的 Web 應用程式重新導向至所產生的 URI。
 
 	下列範例會擷取 `VCAP_SERVICES` 變數中的參數，並建置 URL，然後傳送重新導向要求。
 
@@ -101,14 +102,14 @@ lastupdated: "2016-10-03"
 		if (req.session.userIdentity){
        next()  
      } else {   
-  // If not - redirect to authorization server   
-        var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
-        var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
-        var clientId = mcaCredentials.clientId;   
-        var redirectUri = "http://some-server/oauth/callback"; 
-         // Your web application redirect URI   
+			// If not - redirect to authorization server   
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
+			var clientId = mcaCredentials.clientId;   
+			var redirectUri = "http://some-server/oauth/callback"; 
+			// Your Web application redirect URI   
 
-        var redirectUrl = authorizationEndpoint + "?response_type=code";
+			var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;   
         redirectUrl += "&redirect_uri=" + redirectUri;   
   
@@ -201,7 +202,7 @@ lastupdated: "2016-10-03"
 
 身分記號包含使用者身分的相關資訊。若為 Facebook 鑑別，記號將包含使用者同意共用的所有資訊，例如完整名稱、年齡群組、人員資訊照片的 URL 等。  
 
-存取記號可啟用與受到 {{site.data.keyword.amashort}} 授權過濾器保護的資源進行通訊，請參閱[保護資源](protecting-resources.html)。
+存取記號可容許與受到 {{site.data.keyword.amashort}} 授權過濾器保護的資源進行通訊，請參閱[保護資源](protecting-resources.html)。
 
 若要對受保護的資源提出要求，請將結構如下的授權標頭新增至要求： 
 

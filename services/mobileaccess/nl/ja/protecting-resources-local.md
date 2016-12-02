@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-07"
+
 ---
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # ローカル開発環境での {{site.data.keyword.amashort}} の使用
 {: #protecting-local}
@@ -13,12 +14,12 @@ lastupdated: "2016-10-10"
 
 ## 開始する前に
 {: #before-you-begin}
-以下が必要です。
 
+以下が必要です。
 * {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
-* サービス・パラメーター値。{{site.data.keyword.Bluemix_notm}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**をクリックします。`applicationRoute` および `appGUID` (`tenantId` とも呼ばれる) の値が、**「経路」**および**「アプリ GUID」/「TenantId」**フィールドに表示されます。これらの値は、SDK を初期化するため、および要求をバックエンド・アプリケーションに送信するために必要になります。
+* サービス・パラメーター値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**をクリックします。`applicationRoute` および `appGUID` (`tenantId` とも呼ばれる) の値が、**「経路」**および**「アプリ GUID」/「TenantId」**フィールドに表示されます。これらの値は、SDK を初期化するため、および要求をバックエンド・アプリケーションに送信するために必要になります。
 *  {{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域を見つけます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
-地域値は、**「米国南部」**、**「シドニー」**、または**「英国」**のいずれかでなければなりません。これらの名前に対応する正確な SDK の定数値は、コードの例に示しています。 
+地域値は、**「米国南部」**、**「シドニー」**、または**「英国」**のいずれかでなければなりません。これらの名前に対応する正確な SDK の定数値は、コードの例に示しています。
 
 ## Server SDK のセットアップ
 {: #serversetup}
@@ -39,7 +40,7 @@ lastupdated: "2016-10-10"
 }
 ```
 
-*appGUID* 値を、[「開始する前に」](#before-you-begin)で取得した `appGUID` 値に置き換えます。 
+*appGUID* 値を、[「開始する前に」](#before-you-begin)で取得した `appGUID` 値に置き換えます。
 
 1. {{site.data.keyword.Bluemix_notm}} ダッシュボード上の、モバイル・バックエンド・アプリケーションの {{site.data.keyword.amashort}} サービス・タイルで**「資格情報の表示」**をクリックします。{{site.data.keyword.amashort}} がモバイル・バックエンド・アプリケーションに提供するアクセス権限の資格情報とともに JSON オブジェクトが表示されます。
 
@@ -79,7 +80,7 @@ var MCABackendStrategy =
 // Rest of your code
 ```
 
-*appGUID* 値を、[「開始する前に」](#before-you-begin)で取得した `appGUID` 値に置き換えます。 
+*appGUID* 値を `appGUID` 値 ([開始する前に](#before-you-begin)を参照) に置き換えます。
 
 
 ## ローカル開発サーバーで作業するための {{site.data.keyword.amashort}} アプリケーションの構成
@@ -89,7 +90,7 @@ var MCABackendStrategy =
 
 地域は該当する地域に置き換えます。
 
-*appGUID* および *bluemixAppRoute* の値は、[『開始する前に』](#before-you-begin)で取得した値に置き換えます。 
+*appGUID* および *bluemixAppRoute* の値は、[『開始する前に』](#before-you-begin)で取得した値に置き換えます。
 
 以下の例で、`localhost` を、開発サーバーの実際の IP アドレスに変更する必要がある場合があります。
 
@@ -217,4 +218,3 @@ var request = new MFPRequest(baseRequestUrl + "/resource/path", MFPRequest.GET);
 
 request.send(success, failure);
 ```
-

@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-02"
+
 ---
 
 # {{site.data.keyword.amashort}} を使用した Liberty for Java リソースの保護
 {: #protecting-liberty}
-
-
 
 {{site.data.keyword.amashort}} Server SDK は、{{site.data.keyword.Bluemix}} にデプロイされる Liberty for Java&trade; アプリケーション用の `OAuthTAI` モジュールを提供します。Liberty サーバーを無許可アクセスから保護し、モニタリング情報を収集するには、`OAuthTAI` モジュールをサーバーに装備する必要があります。
 

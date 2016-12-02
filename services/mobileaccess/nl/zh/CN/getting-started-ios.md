@@ -3,13 +3,12 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:shortdesc: .shortdesc}
 
 # 设置 iOS Objective-C SDK
 {: #getting-started-ios}
-
-
 
 在 iOS 应用程序中安装 {{site.data.keyword.amafull}} SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
 
@@ -22,6 +21,8 @@ lastupdated: "2016-10-02"
 {: #before-you-begin}
 您必须具有：
 * 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
+* **TenantID**。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化 {{site.data.keyword.amashort}} 授权管理器。
+* **应用程序路径**。这是后端应用程序的 URL。您将需要此值来向其受保护端点发送请求。
 * Xcode 项目。  
 
 
@@ -55,9 +56,8 @@ sudo gem install cocoapods
 
 1. 编辑 `Podfile` 文件，并将以下行添加到所需目标：
 
-	```
-	pod 'IMFCore'
-	```
+
+	`pod 'IMFCore'`
 
 1. 保存 `Podfile` 文件，然后在命令行中运行 `pod install`。<br/>Cocoapods 将安装添加的依赖关系并显示添加的组件。<br/>
 
@@ -68,15 +68,11 @@ sudo gem install cocoapods
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #init-mca-sdk-ios}
 
-要使用 {{site.data.keyword.amashort}} 客户端 SDK，您必须通过传递**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`) 参数来初始化 SDK。
-
-1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”的主页中，单击您的应用程序。单击**移动选项**。您需要**路径**和**应用程序 GUID** 值来初始化 SDK。
-
 1. 通过添加以下头，将 `IMFCore` 框架导入要使用 {{site.data.keyword.amashort}} 客户端 SDK 的类中：
 
 	####Objective-C
 	{: #imfcore-objc}
-	
+
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
 	
@@ -84,18 +80,18 @@ sudo gem install cocoapods
 
 	####Swift
 	{: #sdk-swift}
-	
+
 	{{site.data.keyword.amashort}} 客户端 SDK 将通过 Objective-C 实现。您可能需要将桥接头添加到 Swift 项目：
-	1. 在 Xcode 中右键单击项目，并选择**新建文件...**。
+	1. 在 Xcode 中右键单击项目，并选择**新建文件**。
 	1. 在 **iOS 源**类别中，单击**头文件**。将文件命名为 `BridgingHeader.h`。
-	1. 将以下行添加到桥接头：`#import <IMFCore/IMFCore.h>`
+	1. 将这行添加到桥接头中：`#import <IMFCore/IMFCore.h>`。
 	1. 在 Xcode 中单击项目，然后选择**构建设置**选项卡。
 	1. 搜索 `Objective-C Bridging Header`。
 	1. 将值设置为您的 `BridgingHeader.h` 文件的位置，例如 `$(SRCROOT)/MyApp/BridgingHeader.h`。
 	1. 通过构建项目来确保 Xcode 选取了您的桥接头。您应该不会看到任何失败消息。
-	
+
 1. 使用以下代码来初始化 {{site.data.keyword.amashort}} 客户端 SDK。通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。<br/>
-将 `applicationRoute` 和“applicationGUID”替换为 {{site.data.keyword.Bluemix_notm}} 仪表板中**移动选项**的值。
+有关获取 `applicationRoute` 和 `applicationGUID` 的信息，请参阅[开始之前](#before-you-begin)。 
 
 	####Objective-C
 	{: #sharedinstance-objc}
@@ -113,20 +109,21 @@ sudo gem install cocoapods
 	```
 
 ## 初始化 AuthorizationManager
-通过传递 {{site.data.keyword.amashort}} 服务 `tenantId` 参数来初始化 `AuthorizationManager`。您可以通过单击 {{site.data.keyword.amashort}} 服务磁贴上的**显示凭证**按钮找到此值。
+通过传递 {{site.data.keyword.amashort}} 服务 `tenantId` 参数来初始化 `AuthorizationManager`。有关获取这些值的信息，请参阅[开始之前](#before-you-begin)。 
 
 ####Objective-C
-	
+
 ```Objective-C
-     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
-  ```
+[[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"<tenantId>"];
+```
 
 ####Swift
 
 ```Swift
-  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
- ```
+IMFAuthorizationManager.sharedInstance().initializeWithTenantId("<tenantId>")
+```
 
+	
 ## 对移动后端应用程序发起请求
 {: #request}
 

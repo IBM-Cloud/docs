@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-02"
+
 ---
 
 # {{site.data.keyword.amashort}}로 Liberty for Java 리소스 보호
 {: #protecting-liberty}
-
-
 
 {{site.data.keyword.amashort}} 서버 SDK는 {{site.data.keyword.Bluemix}}에 배치된 Liberty for Java&trade; 애플리케이션에 대해 `OAuthTAI` 모듈을 제공합니다. 권한이 없는 액세스에서 Liberty 서버를 보호하고 모니터링 정보를 가져오기 위해 `OAuthTAI` 모듈을 사용하여 Liberty 서버를 인스트루먼트해야 합니다. 
 
@@ -49,7 +48,8 @@ lastupdated: "2016-10-02"
 	</usr_OAuthTAI>
 
 	<basicRegistry id="basic" realm="BasicRealm"/>
-<application type="war" id="myapp" name="myapp"
+
+ <application type="war" id="myapp" name="myapp"
 					location="${server.config.dir}/apps/myapp.war">
 		<application-bnd>
 			<security-role name="TAIUserRole">
@@ -121,7 +121,9 @@ WSCredential callerCredential =
 {: #WLCredential}
 `WLCredential` 인터페이스는 사용자, 디바이스 및 애플리케이션에 대한 세부사항을 가져오기 위한 API를 제공합니다. 
 
-```JavaWLCredential callerWLCredential =
+```Java
+
+WLCredential callerWLCredential =
 				callerSubject.getPublicCredentials(WLCredential.class).iterator().next();
 
 JSONObject securityContext = callerWLCredential.getSecurityContext();

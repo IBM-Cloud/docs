@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
 
 # 创建定制身份提供者
@@ -16,7 +17,7 @@ lastupdated: "2016-10-02"
 * `base_path`：指定定制身份提供者 Web 应用程序的基本 URL。基本 URL 是要在 {{site.data.keyword.amashort}}“仪表板”中注册的 URL。
 * `tenant_id`：指定租户的唯一标识。{{site.data.keyword.amashort}} 调用此 API 时，会始终提供{{site.data.keyword.Bluemix}}应用程序 GUID (`applicationGUID`)。
 * `realm_name`：指定在 {{site.data.keyword.amashort}}“仪表板”中定义的定制域名。
-* `request_type`：指定下列其中一项：
+* `request_type`：指定以下某个值：
 	* `startAuthorization`：指定认证过程的第一步。定制身份提供者必须使用“challenge”、“success”或“failure”状态进行响应。
 	* `handleChallengeAnswer`：处理来自移动客户端的认证质询响应。
 

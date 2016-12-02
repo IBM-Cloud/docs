@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-11-01"
 
 ---
 
@@ -31,9 +31,9 @@ Voraussetzungen:
 Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in der [Google Developer Console](https://console.developers.google.com). Zum Erstellen eines Projekts gehört das Anfordern einer **Google-Client-ID** und eines **geheimen Schlüssels**. Die Google-Client-ID und der geheime Schlüssel sind die eindeutigen Kennungen für Ihre Anwendung, die von der Google-Authentifizierung verwendet werden und zum Einrichten des {{site.data.keyword.amashort}}-Dashboards erforderlich sind.
 
 1. Öffnen Sie Ihre Google-Anwendung in der Google Developer Console. 
-3. Fügen Sie die Google+-API hinzu. 
+3. Fügen Sie die **Google+**-API hinzu. 
 3. Erstellen Sie Berechtigungsnachweise unter Verwendung von 'OAuth'. Wählen Sie Webanwendungen als Anwendungstyp aus. Geben Sie den {{site.data.keyword.amashort}}-Weiterleitungs-URI in das Feld 'Authorized redirect URIs' ein. Fordern Sie den autorisierten {{site.data.keyword.amashort}}-Weiterleitungs-URI über die Google-Konfigurationsanzeige des {{site.data.keyword.amashort}}-Dashboards an (siehe nachfolgende Schritte). 
-4. Speichern Sie die Änderungen. Notieren Sie die Google-Client-ID und den geheimen Anwendungsschlüssel.
+4. Speichern Sie die Änderungen. Notieren Sie die **Google-Client-ID** und den **geheimen Schlüssel der Anwendung**.
 
 
 ## {{site.data.keyword.amashort}} für die Google-Authentifizierung konfigurieren
@@ -41,12 +41,13 @@ Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in d
 
 Wenn Sie eine Google-Anwendungs-ID und einen geheimen Schlüssel besitzen, können Sie die Google-Authentifizierung im {{site.data.keyword.amashort}}-Dashboard aktivieren.
 
-1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard.
-2. Klicken Sie auf die Kachel für {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
-3. Klicken Sie auf die Schaltfläche in der Google-Anzeige.
+1. Öffnen Sie das {{site.data.keyword.amashort}}-Service-Dashboard.
+1. Aktivieren Sie auf der Registerkarte **Verwalten** die Option **Berechtigung**.
+1. Erweitern Sie den Abschnitt **Google**.
+1. Aktivieren Sie die Option zum Hinzufügen von Google zu einer Web-App.
 4. Gehen Sie im Abschnitt **Für Web konfigurieren** wie folgt vor:   
-    * Notieren Sie den Wert im Textfeld **Mobile Client Access-Weiterleitungs-URI für Google Developer Console**. Dies ist der Wert, den Sie in das Feld **Authorized redirect URIs** unter **Restrictions in the Client ID for Web application** des **Google-Entwicklerportals** in Schritt 3 eingeben müssen.
-    * Geben Sie die **Google-Client-ID** und den **geheimen Schlüssel des Clients** ein.
+    * Notieren Sie den Wert im Textfeld **Mobile Client Access-Weiterleitungs-URI für Google Developer Console**. Dies ist der Wert, den Sie in das Feld **Authorized redirect URIs** unter **Restrictions in the Client ID for Web application** des **Google-Entwicklerportals** eingeben müssen.
+    * Geben Sie die **Client-ID** und den **geheimen Schlüssel des Clients** ein.
     * Geben Sie den Weiterleitungs-URI in das Feld **Weiterleitungs-URIs Ihrer Webanwendung** ein. Dies ist der Wert für den Weiterleitungs-URI, auf den nach Beendigung des Berechtigungsprozesses zugegriffen wird. Er wird vom Entwickler festgelegt.
 5. Klicken Sie auf **Speichern**.
 
@@ -54,11 +55,13 @@ Wenn Sie eine Google-Anwendungs-ID und einen geheimen Schlüssel besitzen, könn
 ## {{site.data.keyword.amashort}}-Berechtigungsablauf mit Google als Identitätsprovider implementieren
 {: #google-auth-flow}
 
-Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann durch Klicken auf **Umgebungsvariablen** im Navigator auf der linken Seite Ihrer Anwendung angezeigt werden.
+Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann durch Klicken auf die Registerkarte **Service Credentials** im {{site.data.keyword.amashort}}-Service-Dashboard angezeigt werden.
 
 Gehen Sie wie folgt vor, um den Berechtigungsprozess zu starten:
 
 1. Rufen Sie den Berechtigungsendpunkt (`authorizationEndpoint`) und die Client-ID (`clientId`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind. 
+	`var cfEnv = require("cfenv");` 
+	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service vor der Webunterstützung zur Ihrer Anwendung hinzugefügt haben, ist möglicherweise kein Tokenendpunkt in den Serviceberechtigungsnachweisen enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer {{site.data.keyword.Bluemix_notm}}-Region: 
  
@@ -94,16 +97,16 @@ app.get("/protected", checkAuthentication, function(req, res, next){
  	if (req.session.userIdentity){ 
 				next() 
 			} else { 
-				// Falls nicht - Weiterleitung an Berechtigungsserver
-		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-		var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
-		var clientId = mcaCredentials.clientId;
-		var redirectUri = "http://some-server/oauth/callback"; // Weiterleitungs-URI Ihrer Webanwendung
-		var redirectUrl = authorizationEndpoint + "?response_type=code";
-		redirectUrl += "&client_id=" + clientId;
-		redirectUrl += "&redirect_uri=" + redirectUri;
-		res.redirect(redirectUrl);
-	} 
+				// If not - redirect to authorization server 
+				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
+				var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
+				var clientId = mcaCredentials.clientId; 
+				var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI 
+				var redirectUrl = authorizationEndpoint + "?response_type=code";
+				redirectUrl += "&client_id=" + clientId; 
+				redirectUrl += "&redirect_uri=" + redirectUri; 
+				res.redirect(redirectUrl); 
+			} 
 		} 
 	}
 	```
@@ -150,13 +153,13 @@ Im nächsten Schritt werden Zugriffstoken und Identitätstokens mithilfe des zuv
 		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
 	var tokenEndpoint = mcaCredentials.tokenEndpoint; 
 	var formData = { 
-			grant_type: "authorization_code",
-		client_id: mcaCredentials.clientId,
-		redirect_uri: "http://some-server/oauth/callback",// Weiterleitungs-URI Ihrer Webanwendung
-		code: req.query.code
-	}
+			grant_type: "authorization_code", 
+			client_id: mcaCredentials.clientId, 
+			redirect_uri: "http://some-server/oauth/callback",// Your Web application redirect uri 
+			code: req.query.code 
+		} 
 
-	request.post({ 
+		request.post({ 
 			url: tokenEndpoint, 
     formData: formData 
     }, function (err, response, body){ 

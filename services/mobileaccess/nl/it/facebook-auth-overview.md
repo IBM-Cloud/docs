@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -11,8 +12,6 @@ lastupdated: "2016-10-02"
 
 # Autenticazione degli utenti con le credenziali Facebook
 {: #facebook-auth-overview}
-
-
 
 Puoi configurare il servizio {{site.data.keyword.amafull}} per proteggere le risorse utilizzando Facebook come provider di identità. I tuoi utenti dell'applicazione mobile o web possono utilizzare le loro credenziali Facebook per l'autenticazione.
 
@@ -42,21 +41,21 @@ Consulta il seguente diagramma per comprendere in che modo {{site.data.keyword.a
 * L'SDK client {{site.data.keyword.amashort}} reinvia automaticamente la richiesta originale che ha attivato il flusso di autorizzazione.
 * L'SDK server {{site.data.keyword.amashort}} estrae l'intestazione di autorizzazione dalla richiesta, la convalida presso il servizio {{site.data.keyword.amashort}} e concede l'accesso a una risorsa di back-end.
 
-### Flusso della richiesta dell'applicazione web {{site.data.keyword.amashort}}
+### Flusso della richiesta dell'applicazione Web {{site.data.keyword.amashort}}
 {: #mca-facebook-web-sequence}
 
-Il flusso della richiesta dell'applicazione web {{site.data.keyword.amashort}} è simile al flusso del client mobile. Tuttavia, {{site.data.keyword.amashort}} protegge l'applicazione web, invece della risorsa di back-end {{site.data.keyword.Bluemix_notm}}.
+Il flusso della richiesta dell'applicazione Web {{site.data.keyword.amashort}} è simile al flusso del client mobile. Tuttavia, {{site.data.keyword.amashort}} protegge l'applicazione web, invece della risorsa di back-end {{site.data.keyword.Bluemix_notm}}.
 
   * La richiesta iniziale viene inviata dall'applicazione web (da un modulo di accesso, ad esempio).
-  * Il reindirizzamento finale è all'area protetta dell'applicazione stessa, invece che alla risorsa protetta di backend. 
+  * Il reindirizzamento finale è all'area protetta dell'applicazione stessa, invece che alla risorsa protetta di backend.
 
 
-## Ottenimento di un ID applicazione Facebook dal sito web per gli sviluppatori 
+## Creazione di un'applicazione sul sito web Facebook for Developers
 {: #facebook-appID}
 
-Per iniziare a utilizzare Facebook come provider di identità, crea un'applicazione nel sito web Facebook for Developer. Durante questo processo, viene creato un ID dell'applicazione Facebook. Questo è un identificativo univoco utilizzato da Facebook per riconoscere l'applicazione che sta tentando di connettersi. 
+Per iniziare a utilizzare Facebook come provider di identità, crea un'applicazione nel sito web Facebook for Developers. Durante questo processo, viene creato un ID dell'applicazione Facebook. Questo è un identificativo univoco utilizzato da Facebook per riconoscere l'applicazione che sta tentando di connettersi.
 
-Questo valore ti serve per configurare l'autenticazione Facebook per la tua applicazione mobile o web. 
+Questo valore ti serve per configurare l'autenticazione Facebook per la tua applicazione mobile o web.
 
 1. Accedi al sito [Facebook for Developers](https://developers.facebook.com).
 
@@ -68,7 +67,7 @@ Questo valore ti serve per configurare l'autenticazione Facebook per la tua appl
 
 1. Potrebbe essere visualizzato un controllo di sicurezza. Esegui l'azione richiesta.
 
-1. Viene visualizzata la pagina **Product Setup**. Copia l'ID applicazione (**App ID**) visualizzato. 
+1. Viene visualizzata la pagina **Product Setup**. Copia l'ID applicazione (**App ID**) visualizzato.
 
 ## Fasi successive
 {: #next-steps}

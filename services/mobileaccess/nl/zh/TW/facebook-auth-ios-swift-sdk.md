@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-02"
+
 ---
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -10,16 +11,19 @@ lastupdated: "2016-10-10"
 # 啟用 iOS 應用程式的 Facebook 鑑別 (Swift SDK)
 {: #facebook-auth-ios}
 
-
-若要使用 Facebook 作為 {{site.data.keyword.amafull}} iOS 應用程式中的身分提供者，請針對 Facebook 應用程式新增及配置 iOS 平台。
+若要在 {{site.data.keyword.amafull}} iOS 應用程式中，使用 Facebook 作為身分提供者，請針對 Facebook 應用程式新增並配置「iOS 平台」。
 {:shortdesc}
 
 ## 開始之前
-{: #facebook-auth-ios-before}
+{: #before-you-begin}
+
 您必須具有：
+* {{site.data.keyword.amafull}} 服務實例和 {{site.data.keyword.Bluemix_notm}} 應用程式。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
+* 後端應用程式的 URL（**應用程式路徑**）。在傳送要求至後端應用程式的受保護端點時，將需要此值。
+* **租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
+* {{site.data.keyword.Bluemix_notm}} **地區**。您可以在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 旁邊的標頭中，找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區。出現的地區值應該是下列其中一項：`US South`、`United Kingdom` 或 `Sydney`，並對應至 Swift SDK 所需的 SDK 值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
 * 設定成使用 CocoaPods 的 iOS 專案。如需相關資訊，請參閱[設定 iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html) 中的**安裝 CocoaPods**。**附註：**您不需要安裝核心 {{site.data.keyword.amashort}} 用戶端 SDK，即可繼續進行。
-* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
-* [Facebook for Developers](https://developers.facebook.com) 網站上的 Facebook 應用程式。 
+* [Facebook for Developers](https://developers.facebook.com) 網站上的 Facebook 應用程式。
 
 
 **重要事項：**您不需要個別安裝 Facebook SDK (`com.facebook.FacebookSdk`)。{{site.data.keyword.amashort}} `BMSFacebookAuthentication` Pod 會自動安裝 Facebook SDK。在 Facebook for Developers 網站上新增或配置應用程式時，可跳過**將 Facebook SDK 新增至 Xcode 專案**步驟。
@@ -29,11 +33,9 @@ lastupdated: "2016-10-10"
 {: #facebook-auth-ios-config}
 在 Facebook for Developers 網站上，執行下列動作：
 
-1. 在 [Facebook for Developers](https://developers.facebook.com) 上，登入您的帳戶。
+1. 在 [Facebook for Developers](https://developers.facebook.com) 上，登入您的帳戶。如需建立新應用程式的相關資訊，請參閱[在 Facebook for Developers 網站上建立應用程式](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。 
 
-1. 確保 iOS 平台已新增至您的應用程式。新增或配置 iOS 平台時，會提供下列步驟的其他詳細資料。
-
-1. 指定 iOS 應用程式的 *bundleId*。若要尋找 iOS 應用程式的 *bundleId*，請在 `info.plist` 檔案或 Xcode 專案**一般**標籤中尋找**軟體組 ID**。
+1. 確保 iOS 平台已新增至您的應用程式。在新增或配置 iOS 平台時，您需要提供 iOS 應用程式的 **bundleId**。若要尋找 iOS 應用程式的 **bundleId**，請在 `info.plist` 檔案或 Xcode 專案**一般**標籤中尋找**軟體組 ID**。
 
   **提示**：如果您計劃使用「URL 架構字尾」或「單一登入」，則請考慮啟用這些特性。
 
@@ -42,17 +44,12 @@ lastupdated: "2016-10-10"
 ## 配置 {{site.data.keyword.amashort}} 進行 Facebook 鑑別
 {: #facebook-auth-ios-configmca}
 
-配置「Facebook 應用程式 ID」及「Facebook 應用程式」來服務 iOS 用戶端之後，即可在 {{site.data.keyword.amashort}} 中啟用 Facebook 鑑別。
+配置「Facebook 應用程式 ID」和「Facebook 應用程式」來服務 iOS 用戶端之後，即可在 {{site.data.keyword.amashort}} 服務中啟用 Facebook 鑑別。
 
-1. 在 {{site.data.keyword.Bluemix}} 儀表板中，開啟服務。
-
-1. 按一下**行動選項**，並記下**路徑** (*applicationRoute*) 及**應用程式 GUID/TenantId** (*tenantId*) 值。當您起始設定 SDK 以及將要求傳送給後端應用程式時，需要這些值。
-
-1. 按一下 {{site.data.keyword.amashort}} 磚。即會載入 {{site.data.keyword.amashort}} 儀表板。
-
-1. 按一下 **Facebook** 畫面上的**配置**按鈕。
-
-1. 指定「Facebook 應用程式 ID」，然後按一下**儲存**。
+1. 在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。
+1. 在**管理**標籤中，將**授權**切換為開啟。
+1. 展開 **Facebook** 區段。
+1. 新增 **Facebook 應用程式 ID**，然後按一下**儲存**。
 
 ## 配置適用於 iOS 的 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #facebook-auth-ios-sdk}
@@ -82,13 +79,20 @@ use_frameworks!
 pod 'BMSFacebookAuthentication'
 
 	```
-   **附註：**如果您在 Podfile 中有 `pod 'BMSSecurity'` 這一行，則必須先移除它。`BMSFacebookAuthentication` Pod 會安裝所有必要的架構。   **提示：**您可以將 `use_frameworks!` 新增至 Xcode 目標，而不是將它置於 Podfile。
+   **附註：**如果您在 Pod 檔案中有 `pod 'BMSSecurity'` 這一行，則必須先移除它。`BMSFacebookAuthentication` Pod 會安裝所有必要的架構。   **提示：**您可以將 `use_frameworks!` 新增至 Xcode 目標，而不是將它置於 Podfile。
 
 1. 儲存 `Podfile`，並從指令行執行 `pod install` 指令。CocoaPods 將安裝相依關係。即會顯示進度及新增的元件。
 
  **重要事項**：您現在必須使用 CocoaPods 所產生的 `xcworkspace` 檔案來開啟專案。名稱通常為 `{your-project-name}.xcworkspace`。  
 
 1. 從指令行執行 `open {your-project-name}.xcworkspace`，以開啟您的 iOS 專案工作區。
+
+### 針對 iOS 啟用金鑰鏈共用
+{: #enable_keychain}
+
+啟用 `Keychain Sharing`。移至 `Capabilities` 標籤，並將 Xcode 專案中的 `Keychain Sharing` 切換為 `On`。
+
+
 
 ### 配置 iOS 專案進行 Facebook 鑑別
 {: #facebook-auth-ios-configproject}
@@ -189,11 +193,13 @@ pod 'BMSFacebookAuthentication'
 	}
 
  ```
- 
+
  在程式碼中：
+
+ * 將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。
+ * 將 `tenantId` 取代為**租戶 ID/應用程式 GUID** 值。
  
- * 將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶和支援**小組件。出現的地區值應該是下列其中一項：**美國南部**、**英國**或**雪梨**，並對應至程式碼中所需的值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
- * 將 `tenantId` 取代為從**行動選項**中儲存的**應用程式 GUID/TenantId** 值（請參閱[配置 Mobile Client Access 進行 Facebook 鑑別](#facebook-auth-ios-configmca)）。
+ 如需這些值的相關資訊，請參閱[開始之前](#before-you-begin)。
 
 1. 將下列程式碼新增至應用程式委派中的 `application:didFinishLaunchingWithOptions` 方法，以通知 Facebook SDK 有關應用程式啟動的資訊，並登錄「Facebook 鑑別處理程式」。在起始設定 BMSClient 實例之後新增此程式碼，並將 Facebook 登錄為鑑別管理程式。
 
@@ -206,13 +212,13 @@ pod 'BMSFacebookAuthentication'
 1. 將下列程式碼新增至應用程式委派。
 
  ```Swift
-  
+
 	func application(_ application: UIApplication, open url: URL,
                      sourceApplication: String?, annotation: Any) -> Bool {
         
-        return FacebookAuthenticationManager.sharedInstance.onOpenURL(application: application, 
+        return FacebookAuthenticationManager.sharedInstance.onOpenURL(application: application,
 		url: url, sourceApplication: sourceApplication, annotation: annotation)
-        
+
     }
  ```
 
@@ -243,13 +249,11 @@ pod 'BMSFacebookAuthentication'
     print ("error: \(error)")
   }
   }
-            
 	request.send(completionHandler: callBack)
-
  ```
 
 1. 執行您的應用程式。即會蹦現 Facebook 登入畫面。
- 
+
    ![影像](images/ios-facebook-login.png)
 
    如果您目前並未登入 Facebook，則此畫面可能會稍微不同。

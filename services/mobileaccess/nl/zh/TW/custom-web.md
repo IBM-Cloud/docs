@@ -2,14 +2,12 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-16"
 
 ---
 
 # Web 應用程式自訂鑑別
 {: #custom-web}
-
-前次更新：2016 年 6 月 16 日
-{: .last-updated}
 
 將自訂鑑別新增至 Web 應用程式
 
@@ -47,7 +45,7 @@ copyright:
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
 
-  
+
   使用下列查詢參數：
    ```
 response_type='authorization_code'
@@ -80,7 +78,6 @@ response_type='authorization_code'
  code = <authorization code>
  ```
 `redirect_uri` 參數必須符合步驟 1 中的 `redirect_uri`。授權碼是由步驟 2 中的要求所傳回。
-  
   因為授權碼的有效時間最多為 10 分鐘，所以請一定要在 10 分鐘內傳送此 `POST` 要求。
 
 
@@ -94,8 +91,6 @@ response_type='authorization_code'
 
 現在，您可以開始對受保護資源提出要求。所有對受保護資源的要求都應該包含 `access_token`。
 請在 `the-Authorization-request` 標頭欄位中傳送存取記號。
-
-
 
 
 

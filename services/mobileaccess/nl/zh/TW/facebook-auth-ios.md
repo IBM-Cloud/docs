@@ -2,16 +2,15 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-03"
+
 ---
-
 {:shortdesc: .shortdesc}
-
 
 # 啟用 iOS 應用程式的 Facebook 鑑別 (Objective-C SDK)
 {: #facebook-auth-ios}
 
-若要使用 Facebook 作為 {{site.data.keyword.amafull}} iOS 應用程式中的身分提供者，請針對 Facebook 應用程式新增及配置「iOS 平台」。
+若要在 {{site.data.keyword.amafull}} iOS 應用程式中，使用 Facebook 做為身分提供者，請針對 Facebook 應用程式新增並配置 iOS 平台。
 
 {:shortdesc}
 
@@ -19,20 +18,25 @@ lastupdated: "2016-10-02"
 
 ## 開始之前
 {: #facebook-auth-ios-before}
+
 您必須具有：
 * 設定成使用 CocoaPods 的 iOS 專案。如需相關資訊，請參閱[設定 iOS SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html) 中的**安裝 CocoaPods**。
    **附註：**您不需要安裝核心 {{site.data.keyword.amashort}} 用戶端 SDK，即可繼續進行。
 * {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端的相關資訊，請參閱[開始使用](index.html)。
-* Facebook 應用程式 ID。如需相關資訊，請參閱[從 Facebook 開發人員入口網站取得 Facebook 應用程式 ID](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
+* **AppGUID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`appGUID`（也稱為 `tenantId`）值會顯示在**應用程式 GUID/租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
+* Facebook 應用程式 ID。如需相關資訊，請參閱[在 Facebook for Developers 網站上建立應用程式](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
 
 ## 針對 iOS 平台配置 Facebook 應用程式
 {: #facebook-auth-ios-config}
+在 Facebook for Developers 網站上，執行下列動作：
 
+1. 在 [Facebook for Developers](https://developers.facebook.com) 上，登入您的帳戶。如需建立新應用程式的相關資訊，請參閱 https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID) 
 
-1. 在「Facebook 開發人員入口網站」的「Facebook 應用程式」中，按一下**設定 > 新增平台 > iOS**。
+1. 確保 iOS 平台已新增至您的應用程式。在新增或配置 iOS 平台時，您需要提供 iOS 應用程式的 **bundleId**。若要尋找 iOS 應用程式的 **bundleId**，請在 `info.plist` 檔案或 Xcode 專案**一般**標籤中尋找**軟體組 ID**。
 
-1. 指定 iOS 應用程式的 *bundleId*。若要尋找 iOS 應用程式的 *bundleId*，請在 `info.plist` 檔案或 Xcode 專案**一般**標籤中尋找**軟體組 ID**。
-**提示**：如果您計劃使用「URL 架構字尾」或「單一登入」，則請考慮啟用這些特性。
+1. 按一下**儲存設定**。
+
+	**提示**：如果您計劃使用「URL 架構字尾」或「單一登入」，則請考慮啟用這些特性。
 
 1. 按一下**儲存設定**。
 
@@ -41,17 +45,12 @@ lastupdated: "2016-10-02"
 
 配置「Facebook 應用程式 ID」及「Facebook 應用程式」來服務 iOS 用戶端之後，即可在 {{site.data.keyword.amashort}} 中啟用 Facebook 鑑別。
 
-1. 在 {{site.data.keyword.Bluemix}} 儀表板中開啟應用程式。
+1. 在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。
+1. 在**管理**標籤中，將**授權**切換為開啟。
+	1. 展開 **Facebook** 區段。
+	1. 新增 **Facebook 應用程式 ID**，然後按一下**儲存**。
 
-1. 按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及**應用程式 GUID** (`applicationGUID`)。起始設定 SDK 時，您需要這些值。
-
-1. 按一下 {{site.data.keyword.amashort}} 磚。即會載入 {{site.data.keyword.amashort}} 儀表板。
-
-1. 按一下 **Facebook** 畫面中的**配置**按鈕。
-
-1. 指定「Facebook 應用程式 ID」，然後按一下**儲存**。
-
-## 配置適用於 iOS 的 {{site.data.keyword.amashort}} 用戶端 SDK
+## 配置適用於 iOS 的 {{site.data.keyword.amashort}} Facebook 用戶端 SDK
 {: #facebook-auth-ios-sdk}
 
 ### 安裝 CocoaPods
@@ -63,7 +62,7 @@ lastupdated: "2016-10-02"
 
 1. 執行 `sudo gem install cocoapods`，以安裝 CocoaPods。如果需要其他指引，請參閱 [CocoaPods 網站](https://cocoapods.org/)。
 
-### 使用 CocoaPods 安裝 {{site.data.keyword.amashort}} 用戶端 SDK
+### 使用 CocoaPods 安裝 {{site.data.keyword.amashort}} Facebook 用戶端 SDK
 {: #facebook-auth-install-cocoapods}
 
 1. 在 iOS 專案中，編輯 `Podfile` 及下行：
@@ -87,62 +86,61 @@ lastupdated: "2016-10-02"
 
 	![影像](images/ios-facebook-infoplist-settings.png)
 
-	使用「Facebook 應用程式 ID」更新 URL 架構及 FacebookappID 內容
-
 您也可以在檔案上按一下滑鼠右鍵，並選取**開啟為 > 原始碼**，然後新增下列 XML，以更新 `info.plist` 檔案：
 
- ```XML
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb{your-facebook-application-id}</string>
-			</array>
-		</dict>
-	</array>
-	<key>FacebookAppID</key>
-	<string>{your-facebook-application-id}</string>
-	<key>FacebookDisplayName</key>
-	<string>MyApp</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fbauth</string>
-		<string>fbauth2</string>
-	</array>
-	<key>NSAppTransportSecurity</key>
+```XML
+<key>CFBundleURLTypes</key>
+<array>
 	<dict>
-	    <key>NSExceptionDomains</key>
-	    <dict>
-	        <key>facebook.com</key>
-	        <dict>
-	            <key>NSIncludesSubdomains</key>
-	            <true/>                
-	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	            <false/>
-	        </dict>
-	        <key>fbcdn.net</key>
-	        <dict>
-	            <key>NSIncludesSubdomains</key>
-	            <true/>
-	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	            <false/>
-	        </dict>
-	        <key>akamaihd.net</key>
-	        <dict>
-	            <key>NSIncludesSubdomains</key>
-	            <true/>
-	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	            <false/>
-	        </dict>
-	    </dict>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<string>fb{your-facebook-application-id}</string>
+		</array>
 	</dict>
+</array>
+<key>FacebookAppID</key>
+<string>{your-facebook-application-id}</string>
+<key>FacebookDisplayName</key>
+<string>MyApp</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+	<string>fbauth</string>
+	<string>fbauth2</string>
+</array>
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSExceptionDomains</key>
+    <dict>
+        <key>facebook.com</key>
+        <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+            <false/>
+        </dict>
+        <key>fbcdn.net</key>
+        <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+            <false/>
+        </dict>
+        <key>akamaihd.net</key>
+        <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+            <false/>
+        </dict>
+    </dict>
+</dict>
 ```
 {: codeblock}
 
-   使用「Facebook 應用程式 ID」更新 URL 架構及 FacebookappID 內容。
+使用 **Facebook 應用程式 ID** 來更新 URL 架構和 `FacebookappID` 內容。
 
  **重要事項**：請確定您未置換 `info.plist` 檔案中的任何現有內容。如果您具有重疊的內容，則必須手動進行合併。如需相關資訊，請參閱[配置 Xcode 專案](https://developers.facebook.com/docs/ios/getting-started/)及[準備 iOS9 的應用程式](https://developers.facebook.com/docs/ios/ios9)。
+
 
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #facebook-auth-ios-initalize}
@@ -151,7 +149,6 @@ lastupdated: "2016-10-02"
 
 放置起始設定碼的一般（但非強制）位置是在應用程式委派的 `application:didFinishLaunchingWithOptions` 方法。
 
-1. 開啟 {{site.data.keyword.Bluemix_notm}} 儀表板的主頁面，然後按一下應用程式。按一下**行動選項**，並記下您的**路徑** (`applicationRoute`) 及 **應用程式 GUID** (`applicationGUID`)。
 
 1. 新增下列標頭，在您要使用 {{site.data.keyword.amashort}} 用戶端 SDK 的類別中匯入必要架構：
 
@@ -162,8 +159,7 @@ lastupdated: "2016-10-02"
 	#import <IMFCore/IMFCore.h>
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
-```
-{: codeblock}
+```	
 
 	####Swift
 	{: #bridgingheader-swift}
@@ -171,23 +167,22 @@ lastupdated: "2016-10-02"
 	{{site.data.keyword.amashort}} 用戶端 SDK 是使用 Objective-C 進行實作，因此您可能需要將橋接標頭新增至 Swift 專案。
 
 	1. 在 Xcode 中的專案上按一下滑鼠右鍵，然後選取**新建檔案...**。
-	* 在 **iOS 來源**種類中，挑選`標頭檔`。
-	* 將它命名為 `BridgingHeader.h`。
-	* 將匯入項目新增至橋接標頭：
+		1. 在 **iOS 來源**種類中，挑選`標頭檔`。
+		1. 將它命名為 `BridgingHeader.h`。
+		1. 將匯入項目新增至橋接標頭：
 
-	```Objective-C
-	#import <IMFCore/IMFCore.h>
-	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
-	#import <FacebookSDK/FacebookSDK.h>
-```
-{: codeblock}
+			```Objective-C
+			#import <IMFCore/IMFCore.h>
+			#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
+			#import <FacebookSDK/FacebookSDK.h>
+			```
 
-	* 在 Xcode 中按一下您的專案，然後選取**建置設定**標籤。
-	* 搜尋 **Objective-C Bridging Header**。
-	* 將值設為 `BridgingHeader.h` 檔案的位置（例如：`$(SRCROOT)/MyApp/BridgingHeader.h`）。
-	* 建置專案，以確定 Xcode 取得橋接標頭。您應該不會看到任何失敗訊息。
+	1. 在 Xcode 中按一下您的專案，然後選取**建置設定**標籤。
+		1. 搜尋 **Objective-C Bridging Header**。
+		1. 將值設為 `BridgingHeader.h` 檔案的位置（例如：`$(SRCROOT)/MyApp/BridgingHeader.h`）。
+		1. 建置專案，以確定 Xcode 取得橋接標頭。您應該不會看到任何失敗訊息。
 
-3. 起始設定用戶端 SDK。將 `applicationRoute` 及 `applicationGUID` 取代為您取自 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的**路徑**及**應用程式 GUID** 值。
+2. 起始設定用戶端 SDK。如需取得 `applicationRoute` 和 `applicationGUID` 的相關資訊，請參閱[開始之前](#before-you-begin)。
 
 	####Objective-C
 	{: #approute-objc}
@@ -197,7 +192,6 @@ lastupdated: "2016-10-02"
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-{: codeblock}
 
 	####Swift
 	{: #approute-swift}
@@ -206,16 +200,16 @@ lastupdated: "2016-10-02"
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
-{: codeblock}
 
-1. 藉由傳遞 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，起始設定 `AuthorizationManager`。您可以按一下 {{site.data.keyword.amashort}} 服務磚上的**顯示認證**按鈕，來尋找此值。
+1. 傳遞 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，以起始設定 `AuthorizationManager`。請參閱 [開始之前]。
+(#before-you-begin)。
+
 	####Objective-C
 	{: #authman-objc}
 
 	```Objective-C
      [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
   ```
-{: codeblock}
 
 	####Swift
 	{: #authman-swift}
@@ -223,7 +217,6 @@ lastupdated: "2016-10-02"
 	```Swift
   IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
  ```
-{: codeblock}
 
 1. 將下列程式碼新增至應用程式委派中的 `application:didFinishLaunchingWithOptions` 方法，以通知 Facebook SDK 有關應用程式啟動的資訊，並登錄「Facebook 鑑別處理程式」。起始設定 IMFClient 實例之後，請新增此程式碼。
 
@@ -234,7 +227,6 @@ lastupdated: "2016-10-02"
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
 ```
-{: codeblock}
 
 	####Swift
 	{: #activate-swift}
@@ -243,7 +235,6 @@ lastupdated: "2016-10-02"
 		FBAppEvents.activateApp()
 		IMFFacebookAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
 ```
-{: codeblock}
 
 1. 將下列程式碼新增至應用程式委派。
 
@@ -255,10 +246,8 @@ lastupdated: "2016-10-02"
 			sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 
 		return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
-
 	}
-```
-{: codeblock}
+	```
 
 	####Swift
 	{: #appdelegate-swift}
@@ -269,6 +258,7 @@ lastupdated: "2016-10-02"
 
 		return FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)}
 ```
+
 
 ## 測試鑑別
 {: #facebook-auth-ios-testing}
@@ -303,7 +293,6 @@ lastupdated: "2016-10-02"
 		}
 	}];
 	```
-{: codeblock}
 
 	####Swift
 	{: #requestpath-swift}
@@ -321,7 +310,6 @@ lastupdated: "2016-10-02"
 		}
 	};
  ```
- {: codeblock}
 
 1. 執行您的應用程式。即會蹦現 Facebook 登入畫面。
 

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-2"
+
 ---
 
 # 使用自訂身分提供者鑑別使用者
@@ -38,13 +39,10 @@ lastupdated: "2016-10-02"
 ### {{site.data.keyword.amashort}} Web 應用程式要求流程
 {: #mca-custom-web-sequence}
 
-{{site.data.keyword.amashort}} Web 應用程式要求流程類似於行動用戶端流程。不過，{{site.data.keyword.amashort}} 會保護 Web 應用程式，而不是 {{site.data.keyword.Bluemix_notm}} 後端資源。
+{{site.data.keyword.amashort}} Web 應用程式要求流程類似行動用戶端流程。不過，{{site.data.keyword.amashort}} 會保護 Web 應用程式，而不是 {{site.data.keyword.Bluemix_notm}} 後端資源。
 
-  * 起始要求是由 Web 應用程式傳送（例如，從登入表單中）。
+  * 起始要求是由 Web 應用程式傳送（例如，從登入表單）。
   * 最終重新導向是重新導向至 Web 應用程式本身的受保護區域，而不是後端的受保護資源。 
-
-
-
 
 ## 瞭解自訂身分提供者
 {: #custom-id-about}

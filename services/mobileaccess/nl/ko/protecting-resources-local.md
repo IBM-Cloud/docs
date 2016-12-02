@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-07"
+
 ---
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # 로컬 개발 환경에서 {{site.data.keyword.amashort}} 사용
 {: #protecting-local}
@@ -13,17 +14,11 @@ lastupdated: "2016-10-10"
 
 ## 시작하기 전에
 {: #before-you-begin}
+
 다음이 있어야 합니다.
-
 * {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
-
-
-
-
-* 서비스 매개변수 값. {{site.data.keyword.Bluemix_notm}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 값과 `appGUID`(`tenantId`라고도 함) 값이 **라우트** 필드와 **앱 GUID/TenantId** 필드에 표시됩니다. 이들 값은 SDK를 초기화하고 백엔드 애플리케이션에 요청을 보내는 데 필요합니다. 
-*  {{site.data.keyword.Bluemix_notm}} 애플리케이션이 호스팅되는 지역을 찾으십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
-
-지역 값은 **미국 남부**, **시드니** 또는 **영국** 중 하나여야 합니다. 이들 이름에 해당하는 정확한 SDK 상수 값은 코드 예제에 표시되어 있습니다.  
+* 서비스 매개변수 값. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 값과 `appGUID`(`tenantId`라고도 함) 값이 **라우트** 필드와 **앱 GUID/TenantId** 필드에 표시됩니다. 이들 값은 SDK를 초기화하고 백엔드 애플리케이션에 요청을 보내는 데 필요합니다. 
+*  {{site.data.keyword.Bluemix_notm}} 애플리케이션이 호스팅되는 지역을 찾으십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오. 지역 값은 **미국 남부**, **시드니** 또는 **영국** 중 하나여야 합니다. 이들 이름에 해당하는 정확한 SDK 상수 값은 코드 예제에 표시되어 있습니다. 
 
 ## 서버 SDK 설정
 {: #serversetup}
@@ -44,7 +39,7 @@ lastupdated: "2016-10-10"
 }
 ```
 
-*appGUID* 값을 [시작하기 전에](#before-you-begin)에서 얻은 `appGUID` 값으로 바꾸십시오.  
+*appGUID* 값을 [시작하기 전에](#before-you-begin)에서 얻은 `appGUID` 값으로 바꾸십시오. 
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 모바일 백엔드 애플리케이션의 {{site.data.keyword.amashort}} 서비스 타일에 있는 **신임 정보 표시**를 클릭하십시오. JSON 오브젝트는 {{site.data.keyword.amashort}}에서 모바일 백엔드 애플리케이션에 제공하는 액세스 신임 정보와 함께 표시됩니다. 
 
@@ -84,7 +79,7 @@ var MCABackendStrategy =
 // 코드의 나머지 부분
 ```
 
-*appGUID* 값을 [시작하기 전에](#before-you-begin)에서 얻은 `appGUID` 값으로 바꾸십시오.  
+*appGUID* 값을 `appGUID` 값으로 대체하십시오([시작하기 전에](#before-you-begin) 참조).
 
 
 ## 로컬 개발 서버에 대해 작업할 수 있도록 {{site.data.keyword.amashort}} 애플리케이션 구성
@@ -94,7 +89,7 @@ var MCABackendStrategy =
 
 지역을 해당 지역으로 바꾸십시오. 
 
-*appGUID* 값과 *bluemixAppRoute* 값을 [시작하기 전에](#before-you-begin)에서 얻은 값으로 바꾸십시오.  
+*appGUID* 값과 *bluemixAppRoute* 값을 [시작하기 전에](#before-you-begin)에서 얻은 값으로 바꾸십시오. 
 
 다음 예제에서 `localhost`를 개발 서버의 실제 IP 주소로 변경해야 할 수 있습니다. 
 
@@ -111,8 +106,7 @@ BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID, BMSClient.RE
 BMSClient.getInstance().setAuthorizationManager(
                  MCAAuthorizationManager.createInstance(this, tenantId));
 
-Request request =
-			new Request(baseRequestUrl + "/resource/path", Request.GET);
+Request request = new Request(baseRequestUrl + "/resource/path", Request.GET);
 
 request.send(this, new ResponseListener() {
 	@Override
@@ -143,8 +137,7 @@ NSString *bluemixAppRoute = @"http://myapp.mybluemix.net";
 NSString *bluemixAppGUID = @"your-bluemix-app-guid";
 NSString *tenantId = "your-MCA-service-tenantID";
 
-[[IMFClient sharedInstance]
-			initializeWithBackendRoute:bluemixAppRoute
+[[IMFClient sharedInstance] initializeWithBackendRoute:bluemixAppRoute
 			backendGUID:bluemixAppGUID];
 
 [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: tenantId];
@@ -170,7 +163,9 @@ IMFResourceRequest *request =  [IMFResourceRequest
 ### iOS - Swift
 {: #swift}
 
-```Swiftlet baseRequestUrl = "http://localhost:3000"
+```Swift
+
+let baseRequestUrl = "http://localhost:3000"
 let bluemixAppRoute = "http://myapp.mybluemix.net"
 let tenantId = "your-MCA-service-tenantID"
 let regionName = BMSClient.Region.usSouth
@@ -218,9 +213,7 @@ var failure = function(error){
 	console.log("failure", error);
 }
 
-var request = new MFPRequest(baseRequestUrl +
-							"/resource/path", MFPRequest.GET);
+var request = new MFPRequest(baseRequestUrl + "/resource/path", MFPRequest.GET);
 
 request.send(success, failure);
 ```
-

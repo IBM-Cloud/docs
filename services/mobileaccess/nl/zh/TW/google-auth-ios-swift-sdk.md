@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-09"
+lastupdated: "2016-11-01"
+
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -17,36 +18,40 @@ lastupdated: "2016-10-09"
 
 
 ## 開始之前
-{: #google-auth-ios-before}
+{: #before-you-begin}
 您必須具有：
 
+* {{site.data.keyword.amafull}} 服務實例和 {{site.data.keyword.Bluemix_notm}} 應用程式。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
+
+
+
+
+* 後端應用程式的 URL（**應用程式路徑**）。在傳送要求至後端應用程式的受保護端點時，將需要此值。
+* **租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
+* {{site.data.keyword.Bluemix_notm}} **地區**。您可以在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 旁邊的標頭中，找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區。出現的地區值應該是下列其中一項：**美國南部**、**英國**或**雪梨**，並對應至程式碼中所需的值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
 * Xcode 中的 iOS 專案。它不需要使用 {{site.data.keyword.amashort}} 用戶端 SDK 進行檢測。  
-* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
-
-
-
 
 
 
 ## 準備您的應用程式進行 Google 登入
 {: #google-sign-in-ios}
 
-遵循 Google 在 [Google Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start-integrating) 中所提供的指示，來準備您的應用程式進行 Google 登入。 
+遵循 Google 在 [Google Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start-integrating) 中所提供的指示，來準備您的應用程式進行 Google 登入。
 
 此處理程序：
-* 在 Google Developers 網站中準備新的專案。 
+* 在 Google Developers 網站中準備新的專案。
 * 建立 `GoogleService-Info.plist` 檔案及 `REVERSE_CLIENT_ID` 值以新增至您的 Xcode 專案，以及
 * 建立 **Google 用戶端 ID** 以新增至 {{site.data.keyword.Bluemix_notm}} 後端應用程式。
 
-下列步驟概述準備應用程式所需的作業。 
+下列步驟概述準備應用程式所需的作業。
 
 **附註：**不需要新增 Google Sign-In CocoaPod。必要的 SDK 是透過 `BMSGoogleAuthentication` CocoaPod 所新增。
 
 1. 從主要目標之**一般**標籤的**身分**區段中，記下 Xcode 專案中的**軟體組 ID**。您需要它才能建立「Google 登入」專案。
 
-1. 在 https://developers.google.com/mobile/add?platform=ios 上，於 Google Developers 上針對 Google Sign-In for iOS 建立專案。 
+1. 在 https://developers.google.com/mobile/add?platform=ios 上，於 Google Developers 上針對 Google Sign-In for iOS 建立專案。
 
-2. 將「Google 登入」服務新增至專案。
+2. 將「Google 登入 API」新增至專案。
 
 3. 擷取 `GoogleService-Info.plist`。
 
@@ -56,27 +61,25 @@ lastupdated: "2016-10-09"
 
 1. 利用 `REVERSE_CLIENT_ID` 及軟體組 ID 更新 Xcode 專案中的「URL 架構」。如需相關資訊，請參閱[新增 URL 架構至專案](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project)。
 
-1. 利用下列程式碼更新應用程式的 project-Bridging-Header.h 檔案：
+1. 以下列程式碼來更新應用程式的 `project-Bridging-Header.h` 檔案：
 
  ```
  #import <Google/SignIn.h>
  ```
  {: codeblock}
 
- 如需更新橋接標頭檔的相關資訊，請參閱[啟用登入](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in)中的步驟 1。
+ 如需更新橋接標頭檔的相關資訊，請參閱[啟用登入](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in)。
 
 ## 配置 {{site.data.keyword.amashort}} 進行 Google 鑑別
 {: #google-auth-ios-config}
 
-現在，您有 iOS 用戶端 ID，可以在 {{site.data.keyword.Bluemix}} 儀表板中啟用 Google 鑑別。
+現在您已經有 iOS 用戶端 ID，可以在 {{site.data.keyword.amashort}} 服務中啟用 Google 鑑別。
 
 1. 在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。
-
-1. 按一下**行動選項**，並記下**路徑** (*applicationRoute*) 及**應用程式 GUID/TenantId** (*tenantId*)。當您起始設定 SDK 以及將要求傳送給後端應用程式時，需要這些值。
-
-1. 按一下 **Google** 畫面上的**配置**按鈕。
-
-1. 在 **iOS 的應用程式 ID** 中，從您先前取得的 `GoogleService-Info.plist` 檔案中指定 `CLIENT_ID` 值，然後按一下**儲存**。
+1. 在**管理**標籤中，將**授權**切換為開啟。
+1. 展開 **Google** 區段。
+1. 在**適用於 iOS 的應用程式 ID** 中，指定您從 `GoogleService-Info.plist` 檔案取得的 `CLIENT_ID` 值。
+1. 按一下**儲存**。
 
 ## 配置適用於 iOS 的 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #google-auth-ios-sdk}
@@ -107,9 +110,9 @@ use_frameworks!
  pod 'BMSGoogleAuthentication'
  ```
  {: codeblock}
- 
+
  **附註：**如果您已安裝 {{site.data.keyword.amashort}} 核心 SDK，則可以移除此行：`pod 'BMSSecurity'`。`BMSGoogleAuthentication` Pod 會安裝所有必要的架構。
-	
+
  **提示：**您可以將 `use_frameworks!` 新增至 Xcode 目標，而不是將它置於 Podfile。
 
 1. 儲存 `Podfile`，然後從指令行執行 `pod install`。CocoaPods 將安裝相依關係。您會看到進度及新增的元件。
@@ -120,10 +123,16 @@ use_frameworks!
 
 1. 將 `GoogleAuthenticationManager.swift` 檔案從 `BMSGoogleAuthentication` pod 原始檔複製到您的專案目錄。
 
+### 針對 iOS 啟用金鑰鏈共用
+{: #enable_keychain}
+
+啟用 `Keychain Sharing`。移至 `Capabilities` 標籤，並將 Xcode 專案中的 `Keychain Sharing` 切換為 `On`。
+
+
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 Swift SDK
 {: #google-auth-ios-initialize}
 
-若要使用 {{site.data.keyword.amashort}} 用戶端 SDK，請傳遞 `applicationGUID` (`tenantID`) 參數來起始設定 SDK。
+若要使用 {{site.data.keyword.amashort}} 用戶端 SDK，請傳遞 `tenantID` 參數來進行起始設定。
 
 放置起始設定碼的一般（但非強制）位置是在應用程式委派的 `application:didFinishLaunchingWithOptions` 方法。
 
@@ -156,11 +165,10 @@ use_frameworks!
  ```
 
  在程式碼中：
- 	* 將 `<serviceTenantID>` 取代為從**行動選項**中擷取的值（請參閱[配置 Mobile Client Access 進行 Google 鑑別](#google-auth-ios-config)）。 
-	* 將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
-
-出現的地區值應該是下列其中一項：**美國南部**、**英國**或**雪梨**，並對應至程式碼中所需的值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
+ 	* 將 `<serviceTenantID>` 取代為您從**行動選項**擷取的值。
+	* 將 `<applicationBluemixRegion>` 取代為您的 {{site.data.keyword.Bluemix_notm}} **地區**。 
 	
+	如需取得這些值的相關資訊，請參閱[開始之前](#before-you-begin)。
 
 
 ## 測試鑑別
@@ -174,7 +182,7 @@ use_frameworks!
 您必須使用 {{site.data.keyword.mobilefirstbp}} 樣板，並且在 `/protected` 端點已具有 {{site.data.keyword.amashort}} 所保護的資源。如果您需要設定 `/protected` 端點，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 
-1. 開啟 `{applicationRoute}/protected`，嘗試在桌面瀏覽器中將要求傳送給行動後端應用程式的受保護端點。將 `{applicationRoute}` 取代為從**行動選項**中擷取的值（請參閱[配置 Mobile Client Access 進行 Google 鑑別](#google-auth-ios-config)）。例如 `http://my-mobile-backend.mybluemix.net/protected`。
+1. 開啟 `{applicationRoute}/protected`，嘗試在桌面瀏覽器中將要求傳送給行動後端應用程式的受保護端點。例如 `http://my-mobile-backend.mybluemix.net/protected`。
 
 1. 使用「MobileFirst Services 樣板」所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護，所以只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取它。因此，您會在桌面瀏覽器中看到 `Unauthorized`。
 

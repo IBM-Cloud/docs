@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-01"
+
 ---
 
 {:screen: .screen}
@@ -18,10 +19,11 @@ Google 로그인을 사용하여 {{site.data.keyword.amafull}} iOS 앱에서 사
 **참고:** Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만 새로운 Swift SDK를 위해 올해 말해 중단될 계획입니다. 새 애플리케이션에는 Swift SDK를 사용하는 것이 좋습니다. 이 페이지의 지시사항은 {{site.data.keyword.amashort}} 클라이언트 Objective-C SDK에 적용됩니다. Swift SDK 사용에 대한 지시사항은 [iOS 앱(Swift SDK)에서 Google 인증 사용](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)을 참조하십시오.
 
 ## 시작하기 전에
-{: #google-auth-ios-before}
+{: #before-you-begin}
 다음이 있어야 합니다.
-* Xcode의 iOS 프로젝트. {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되지 않아도 됩니다.
-* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.  
+* {{site.data.keyword.Bluemix_notm}} 애플리케이션 및 {{site.data.keyword.amafull}} 서비스의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
+* 백엔드 애플리케이션의 URL(**앱 라우트**). 이 값은 백엔드 애플리케이션의 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
+* **테넌트 ID** 값. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
 
 ## iOS 플랫폼에 대한 Google 프로젝트 구성
 {: #google-auth-ios-project}
@@ -31,7 +33,7 @@ ID 제공자로 Google 사용을 시작하려면 Google 클라이언트 ID를 �
 
 1. **소셜 API** 목록에서 **Google+ API**를 선택하고 **사용**을 클릭하십시오. 
 
-1. **신임 정보** 목록에서 **신임 정보 작성** 단추를 클릭하고 *OAuth 클라이언트 ID*를 선택하십시오. 
+1. **신임 정보** 목록에서 **신임 정보 작성** 단추를 클릭하고 **OAuth 클라이언트 ID**를 선택하십시오. 
 
 1. 이 시점에 애플리케이션 유형 선택사항이 표시됩니다. **iOS**를 선택하십시오. 
 
@@ -47,15 +49,11 @@ ID 제공자로 Google 사용을 시작하려면 Google 클라이언트 ID를 �
 
 Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}} 대시보드에서 Google 인증을 사용하도록 설정할 수 있습니다.
 
-1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 앱을 여십시오. 
-
-1. **모바일 옵션**을 클릭하고 **라우트**(`applicationRoute`) 및 **앱 GUID**(`applicationGUID`)를 기록해 두십시오. SDK를 초기화하는 경우 해당 값이 필요합니다. 
-
-1. {{site.data.keyword.amashort}} 타일을 클릭하십시오. {{site.data.keyword.amashort}} 대시보드가 로드됩니다. 
-
-1. **Google** 타일을 클릭하십시오.
-
-1. **iOS용 애플리케이션 ID**에서 iOS용 Google 클라이언트 ID를 지정하고 **저장**을 클릭하십시오.
+1. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. 
+1. **관리** 탭에서 **권한**을 토글하여 켜십시오. 
+1. **Google** 섹션을 펼치십시오. 
+1. **iOS용 애플리케이션 ID**에서 iOS용 Google 클라이언트 ID를 지정하십시오. 
+1. **저장**을 클릭하십시오.
 
 
 ## iOS용 {{site.data.keyword.amashort}} Google 클라이언트 SDK 구성
@@ -123,11 +121,9 @@ Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}}
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
 {: #google-auth-ios-initialize}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려면 applicationGUID 및 applicationRoute 매개변수를 전달하여 해당 클라이언트 SDK를 초기화하십시오.
+{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려면 테넌트 ID 및 앱 라우트 매개변수를 전달하여 해당 클라이언트 SDK를 초기화하십시오.
 
 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 애플리케이션 위임자의 `application:didFinishLaunchingWithOptions` 메소드입니다. 
-
-1. applicationGUID 및 applicationRoute 값을 가져오십시오. {{site.data.keyword.Bluemix_notm}} 대시보드에서 사용자 앱을 클릭하십시오. **모바일 옵션**을 클릭하십시오. 애플리케이션 라우트 및 애플리케이션 GUID 값이 표시됩니다.
 
 1. {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 필수 프레임워크를 가져오십시오. 다음 헤더를 추가하십시오.
 
@@ -150,12 +146,11 @@ Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}}
 	3. `BridgingHeader.h`로 이름을 지정하십시오. 
 
 	4. 다음 가져오기를 브리징 헤더에 추가하십시오.
-
-	```Swift
-	#import <IMFCore/IMFCore.h>
-	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
-	```
-
+		
+	   `#import <IMFCore/IMFCore.h>`
+		
+	   `#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>`
+	
 	5. Xcode에서 프로젝트를 클릭하고 **빌드 설정** 탭을 선택하십시오.
 
 	6. `Objective-C Bridging Header`를 검색하십시오. 
@@ -164,31 +159,31 @@ Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}}
 
 	8. 프로젝트를 빌드하여 Xcode가 브리징 헤더를 선택 중인지 확인하십시오. 
 
-3. 다음 코드를 사용하여 클라이언트 SDK를 초기화하십시오. `applicationRoute` 및 `applicationGUID`를 **모바일 옵션**에서 얻은 **라우트** 및 **앱 GUID** 값으로 바꾸십시오.
+3. 다음 코드를 사용하여 클라이언트 SDK를 초기화하십시오. `<applicationRoute>` 및 `<TenantID>`를 사용하는 **라우트** 및 **테넌트 ID**로 대체하십시오. 
 
 	#### Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
-			initializeWithBackendRoute:@"applicationRoute"
-			backendGUID:@"applicationGUID"];
+			initializeWithBackendRoute:@"<applicationRoute>"
+			backendGUID:@"<TenantID>"];
 	```
 {: codeblock}
 
 	#### Swift:
 
 	```Swift
-	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
-	 							backendGUID: "applicationGUID")
+	IMFClient.sharedInstance().initializeWithBackendRoute("<applicationRoute>",
+	 							backendGUID: "<TenantID>")
 	```
 {: codeblock}
 
-1. {{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 전달하여 `AuthorizationManager`를 초기화하십시오. {{site.data.keyword.amashort}} 서비스 타일의 **신임 정보 표시** 단추를 클릭하여 이 값을 찾을 수 있습니다. 
-
+1. {{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 전달하여 `AuthorizationManager`를 초기화하십시오.  
   ####Objective-C
 	
   ```Objective-C
-     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+
+      [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
   ```
  {: codeblock}
 
@@ -256,8 +251,6 @@ Google iOS 클라이언트 ID가 있으므로 {{site.data.keyword.Bluemix_notm}}
 ## 인증 테스트
 {: #google-auth-ios-testing}
 클라이언트 SDK가 초기화되면 모바일 백엔드 요청을 시작할 수 있습니다.
-
-
 
 ### 시작하기 전에
 {: #google-auth-ios-testing-before}

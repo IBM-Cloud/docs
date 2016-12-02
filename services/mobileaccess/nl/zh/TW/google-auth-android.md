@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-03"
+
 ---
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -10,15 +11,16 @@ lastupdated: "2016-10-10"
 # 啟用 Android 應用程式的 Google 鑑別
 {: #google-auth-android}
 
-在 {{site.data.keyword.amafull}} Android 應用程式上使用 Google 來鑑別使用者。新增 {{site.data.keyword.amashort}} 安全功能。 
+在 {{site.data.keyword.amafull}} Android 應用程式上使用 Google 來鑑別使用者。新增 {{site.data.keyword.amashort}} 安全功能。
 
 ## 開始之前
 {: #before-you-begin}
 您必須具有：
-
-* Android Studio 中配置成使用 Gradle 的 Android 專案。它不需要使用 {{site.data.keyword.amashort}} 用戶端 SDK 進行檢測。  
-* {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
-* 您的服務參數值。在 {{site.data.keyword.Bluemix_notm}} 儀表板中，開啟服務。按一下**行動選項**。`applicationRoute` 及 `tenantId`（也稱為 `appGUID`）值會顯示在**路徑**及**應用程式 GUID/TenantId** 欄位中。當您起始設定 SDK 以及將要求傳送給後端應用程式時，需要這些值。
+* {{site.data.keyword.amafull}} 服務實例和 {{site.data.keyword.Bluemix_notm}} 應用程式。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
+* 後端應用程式的 URL（**應用程式路徑**）。在傳送要求至後端應用程式的受保護端點時，將需要此值。
+* **租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
+* {{site.data.keyword.Bluemix_notm}} **地區**。您可以在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 旁邊的標頭中，找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區。出現的地區值應該是下列其中一項：`US South`、`United Kingdom` 或 `Sydney`，並對應至 WebView Javascript 程式碼中所需的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
+* 配置成使用 Gradle 的 Android 專案。專案不需要使用 {{site.data.keyword.amashort}} 用戶端 SDK 進行檢測。  
 
 設定 {{site.data.keyword.amashort}} Android 應用程式的 Google 鑑別將需要進一步配置：
 * {{site.data.keyword.Bluemix_notm}} 應用程式
@@ -28,14 +30,14 @@ lastupdated: "2016-10-10"
 {: #create-google-project}
 
 若要開始使用 Google 作為身分提供者，請在 [Google Developer Console](https://console.developers.google.com) 中建立專案。
-建立專案的一部分是取得「Google 用戶端 ID」。「Google 用戶端 ID」是 Google 鑑別所使用之您的應用程式的唯一 ID，並且是設定 {{site.data.keyword.Bluemix_notm}} 應用程式的必要項目。
+建立專案的一部分是取得「Google 用戶端 ID」。「Google 用戶端 ID」是 Google 鑑別所使用之您的應用程式的唯一 ID，並且是設定 {{site.data.keyword.amashort}} 服務的必要項目。
 
 從主控台中：
 
 1. 使用 **Google+** API 建立專案。
 2. 新增 **OAuth** 使用者存取權。
 3. 在您新增認證之前，必須選擇平台 (Android)。
-4. 新增認證。 
+4. 新增認證。
 
 若要完成認證建立作業，您需要新增**簽署憑證指紋**。
 
@@ -60,10 +62,10 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 
 ###套件名稱
 
-1. 在「認證」對話框上，輸入 Android 應用程式的套件名稱。 
+1. 在「認證」對話框上，輸入 Android 應用程式的套件名稱。
 
-  若要尋找 Android 應用程式的套件名稱，請在 Android Studio 中開啟 `AndroidManifest.xml` 檔案，並尋找： 
-  	
+  若要尋找 Android 應用程式的套件名稱，請在 Android Studio 中開啟 `AndroidManifest.xml` 檔案，並尋找：
+
   	`<manifest package="{your-package-name}">`
 
 1. 完成時，請按一下**建立**。這會完成認證建立作業。
@@ -78,18 +80,15 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 
 現在，您有適用於 Android 的「Google 用戶端 ID」，可以在 {{site.data.keyword.amashort}} 儀表板中啟用 Google 鑑別。
 
-1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板中開啟應用程式。
-
-1. 按一下 {{site.data.keyword.amashort}} 磚。即會載入 {{site.data.keyword.amashort}} 儀表板。
-
-1. 按一下 **Google** 畫面上的**配置**按鈕。
-
-1. 在**適用於 Android 的應用程式 ID** 中，指定適用於 Android 的「Google 用戶端 ID」，然後按一下**儲存**。
+1. 在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。
+1. 在**管理**標籤中，將**授權**切換為開啟。
+1. 展開 **Google** 區段。
+1. 在**適用於 Android 的用戶端 ID** 中，指定適用於 Android 的「Google 用戶端 ID」，然後按一下**儲存**。
 
 ## 配置適用於 Android 的 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #google-auth-android-sdk}
 
-1. 回到 Android Studio。
+從 Android Studio 專案。
 
 1. 開啟應用程式模組的 `build.gradle` 檔案。
 
@@ -132,14 +131,14 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 
 	BMSClient.getInstance().setAuthorizationManager(
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
-						
+
 	GoogleAuthenticationManager.getInstance().register(this);
 	```
 
-  * 將 `BMSClient.REGION_UK` 取代為適當的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
+  * 將 `BMSClient.REGION_UK` 取代為您的 {{site.data.keyword.Bluemix_notm}} **地區**。
+  * 將 `<MCAServiceTenantId>` 取代為**租戶 ID** 值。
 
-地區值應該是下列其中一個：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。
-  * 將 `<MCAServiceTenantId>` 取代為 `tenantId` 值（請參閱[開始之前](##before-you-begin)）。 
+	如需取得這些值的相關資訊，請參閱[開始之前](##before-you-begin)。
 
    **附註：**如果您的 Android 應用程式是以 Android 6.0 版（API 層次 23）或以上版本為目標，則必須確定應用程式先進行 `android.permission.GET_ACCOUNTS` 呼叫，再呼叫 `register`。如需相關資訊，請參閱 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}。
 
@@ -156,13 +155,12 @@ Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所
 
 ## 測試鑑別
 {: #google-auth-android-test}
-起始設定用戶端 SDK 並登錄「Google 鑑別管理程式」之後，即可開始對行動後端應用程式提出要求。
-
+起始設定用戶端 SDK 並登錄「Google 鑑別管理程式」之後，即可開始對後端應用程式提出要求。
 
 開始測試之前，您必須具有使用 **MobileFirst Services Starter** 樣板所建立的行動後端應用程式，並且已具有 {{site.data.keyword.amashort}} `/protected` 端點所保護的資源。如需相關資訊，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
 1. 開啟 `{applicationRoute}/protected`（例如：`http://my-mobile-backend.mybluemix.net/protected`），嘗試在桌面瀏覽器中將要求傳送給行動後端應用程式的受保護端點。
- 如需取得 `{applicationRoute}` 值的相關資訊，請參閱[開始之前](#before-you-begin)。 
+ 如需取得 `{applicationRoute}` 值的相關資訊，請參閱[開始之前](#before-you-begin)。
 
 	使用「MobileFirst Services 樣板」所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。因此，只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取它。因此，您會在桌面瀏覽器中看到 `Unauthorized`。
 

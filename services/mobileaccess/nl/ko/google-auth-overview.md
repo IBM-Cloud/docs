@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-03"
+
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -10,7 +11,6 @@ lastupdated: "2016-10-02"
 
 # Google 신임 정보로 사용자 인증
 {: #google-auth}
-
 
 ID 제공자로 Google을 사용하여 리소스를 보호하도록 {{site.data.keyword.amafull}} 서비스를 구성할 수 있습니다. 그러면 모바일 또는 웹 애플리케이션 사용자가 인증을 위해 Google 신임 정보를 사용할 수 있습니다.
 {:shortdesc}
@@ -45,7 +45,7 @@ ID 제공자로 Google을 사용하여 리소스를 보호하도록 {{site.data.
 {{site.data.keyword.amashort}} 웹 애플리케이션 요청 플로우는 모바일 클라이언트 플로우와 유사합니다. 그러나 {{site.data.keyword.amashort}}는 {{site.data.keyword.Bluemix_notm}} 백엔드 리소스 대신 웹 애플리케이션을 보호합니다. 
 
   * 초기 요청은 웹 애플리케이션에서 전송합니다(예: 로그인 양식에서).
-  * 최종 경로는 백엔드 보호 리소스보다 웹 애플리케이션 자체의 보호 영역으로 재지정됩니다. 
+  * 최종 경로는 백엔드 보호 리소스보다 웹 애플리케이션 자체의 보호 영역으로 재지정됩니다.
 
 
 
@@ -56,4 +56,3 @@ ID 제공자로 Google을 사용하여 리소스를 보호하도록 {{site.data.
 * [iOS 앱에서 Google 인증 사용(Swift SDK)](google-auth-ios-swift-sdk.html)
 * [iOS 앱에서 Google 인증 사용(Objective-C SDK)](google-auth-ios.html)
 * [Cordova 앱에서 Google 인증 사용](google-auth-cordova.html)
-

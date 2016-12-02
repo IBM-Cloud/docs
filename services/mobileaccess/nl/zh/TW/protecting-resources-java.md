@@ -2,13 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-02"
+
 ---
 
 # 使用 {{site.data.keyword.amashort}} 保護 Liberty for Java 資源
 {: #protecting-liberty}
-
-
 
 {{site.data.keyword.amashort}} 伺服器 SDK 提供 {{site.data.keyword.Bluemix}} 上所部署之 Liberty for Java&trade; 應用程式的 `OAuthTAI` 模組。您必須使用 `OAuthTAI` 模組來檢測 Liberty 伺服器，以保護它免於遭受未獲授權的存取，以及收集監視資訊。
 

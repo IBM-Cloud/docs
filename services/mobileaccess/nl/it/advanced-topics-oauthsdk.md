@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-02"
+
 ---
 
 # Comunicazione tra le applicazioni e i servizi di backend
@@ -42,7 +43,7 @@ var options = {
 	// In alternativa, puoi ottenere i valori di questa proprietà facendo clic su Visualizza credenziali
 	// sul tile del servizio {{site.data.keyword.amashort}} nel tuo dashboard dell'applicazione {{site.data.keyword.Bluemix_notm}}
 
-	appId: "appId",				// applicationGUID Bleumix, noto anche come tenantId
+	appId: "tenantID",				// a.k.a. Bluemix applicationGUID
 	clientId: "clientId",			
 	secret: "secret",
 	serverUrl: "serverUrl"

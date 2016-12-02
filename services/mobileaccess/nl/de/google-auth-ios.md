@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-01"
+
 ---
 
 {:screen: .screen}
@@ -18,10 +19,11 @@ Verwenden Sie die Google-Anmeldung, um Benutzer für Ihre {{site.data.keyword.am
 **Hinweis:** Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, die Verwendung und Unterstützung dieses SDK sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden. Für neue Anwendungen wird dringend die Verwendung des Swift-SDK empfohlen. Die Anweisungen auf dieser Seite gelten für das {{site.data.keyword.amashort}}-Client-Objective-C-SDK. Anweisungen für die Verwendung des Swift-SDK finden Sie in [Google-Authentifizierung in iOS-Apps aktivieren (Swift-SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html).
 
 ## Vorbereitungen
-{: #google-auth-ios-before}
+{: #before-you-begin}
 Voraussetzungen:
-* iOS-Projekt in Xcode. Das Projekt muss nicht mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
+* Eine Instanz einer {{site.data.keyword.amafull}} service and {{site.data.keyword.Bluemix_notm}}-Anwendung. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
+* Die URL der Back-End-Anwendung (**App-Route**). Sie benötigen diese Werte zum Senden von Anforderungen an die geschützten Endpunkte der Back-End-Anwendung.
+* Der Wert für die Tenant-ID. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
 
 ## Google-Projekt für die iOS-Plattform konfigurieren
 {: #google-auth-ios-project}
@@ -31,7 +33,7 @@ Zur Verwendung von Google als Identitätsprovider erstellen Sie ein Projekt in G
 
 1. Wählen Sie in der Liste **Social APIs** die Option **Google+-API** aus und klicken Sie auf **Aktivieren**.
 
-1. Klicken Sie in der Liste **Berechtigungsnachweise** auf die Schaltfläche **Berechtigungsnachweise erstellen** und wählen Sie *OAuth-Client-ID* aus.
+1. Klicken Sie in der Liste **Berechtigungsnachweise** auf die Schaltfläche **Berechtigungsnachweise erstellen** und wählen Sie **OAuth-Client-ID** aus.
 
 1. An diesem Punkt wird eine Auswahl für den Anwendungstyp angezeigt. Wählen Sie **iOS** aus.
 
@@ -47,15 +49,11 @@ Zur Verwendung von Google als Identitätsprovider erstellen Sie ein Projekt in G
 
 Jetzt, da Sie eine Google-Client-ID für iOS besitzen, können Sie die Google-Authentifizierung im {{site.data.keyword.Bluemix_notm}}-Dashboard aktivieren.
 
-1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard.
-
-1. Klicken Sie auf **Mobile Systemerweiterungen** und notieren Sie die Werte für **Route** (`applicationRoute`) und **App-GUID** (`applicationGUID`). Sie benötigen diese Werte, wenn Sie das SDK initialisieren.
-
-1. Klicken Sie auf die Kachel für {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
-
-1. Klicken Sie auf die Kachel für **Google**.
-
-1. Geben Sie bei **Application ID for iOS** Ihre Google-Client-ID für iOS an und klicken Sie auf **Save**.
+1. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard.
+1. Aktivieren Sie auf der Registerkarte **Verwalten** die Option **Berechtigung**.
+1. Erweitern Sie den Abschnitt **Google**.
+1. Geben Sie in **Application ID for iOS** Ihre Google-Client-ID für iOS an.
+1. Klicken Sie auf **Speichern**.
 
 
 ## {{site.data.keyword.amashort}}-Google-Client-SDK für iOS konfigurieren
@@ -123,11 +121,9 @@ Konfigurieren Sie die Google-Integration, indem Sie die Datei `info.plist` aktua
 ## {{site.data.keyword.amashort}}-Client-SDK initialisieren
 {: #google-auth-ios-initialize}
 
-Zur Verwendung des {{site.data.keyword.amashort}}-Client-SDK müssen Sie das SDK initialisieren, indem Sie die Parameter 'applicationGUID' und 'applicationRoute' übergeben.
+Zur Verwendung des {{site.data.keyword.amashort}}-Client-SDK müssen Sie das SDK initialisieren, indem Sie die Parameter für die Tenant-ID und die App-Route übergeben.
 
 Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `application:didFinishLaunchingWithOptions` Ihres Anwendungsdelegats.
-
-1. Ermitteln Sie die Werte für 'applicationGUID' und 'applicationRoute'. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf Ihre App. Klicken Sie auf **Mobile Systemerweiterungen**. Die Werte für die Anwendungsroute und die GUID der Anwendung werden angezeigt.
 
 1. Importieren Sie die erforderlichen Frameworks in die Klasse, in der Sie das {{site.data.keyword.amashort}}-Client-SDK verwenden möchten. Fügen Sie die folgenden Header hinzu:
 
@@ -150,12 +146,11 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 	3. Geben Sie der Datei den Namen `BridgingHeader.h`.
 
 	4. Fügen Sie die folgenden Importe zu Ihrem Überbrückungsheader hinzu:
-
-	```Swift
-	#import <IMFCore/IMFCore.h>
-	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
-	```
-
+		
+	   `#import <IMFCore/IMFCore.h>`
+		
+	   `#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>`
+	
 	5. Klicken Sie auf Ihr Projekt in Xcode und wählen Sie die Registerkarte **Build Settings** (Buildeinstellungen) aus.
 
 	6. Suchen Sie nach `Objective-C Bridging Header`.
@@ -164,27 +159,26 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 
 	8. Stellen Sie sicher, dass Ihr Überbrückungsheader von Xcode aufgenommen wird, indem Sie Ihr Projekt erstellen (Build).
 
-3. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren.  Ersetzen Sie `applicationRoute` und `applicationGUID` durch die Werte für **Route** und **App-GUID**, die Sie im Abschnitt **Mobile Systemerweiterungen** ermittelt haben.
+3. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren. Ersetzen `<applicationRoute>` und `<TenantID>` durch Ihre **Route** und **Tenant-ID**.
 
 	#### Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
-			initializeWithBackendRoute:@"applicationRoute"
-			backendGUID:@"applicationGUID"];
+			initializeWithBackendRoute:@"<applicationRoute>"
+			backendGUID:@"<TenantID>"];
 	```
 {: codeblock}
 
 	#### Swift:
 
 	```Swift
-	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
-	 							backendGUID: "applicationGUID")
+	IMFClient.sharedInstance().initializeWithBackendRoute("<applicationRoute>",
+	 							backendGUID: "<TenantID>")
 	```
 {: codeblock}
 
-1. Initialisieren Sie den `AuthorizationManager` durch Übergeben des Parameters `tenantId` des {{site.data.keyword.amashort}}-Service. Diesen Wert erhalten Sie, wenn Sie auf die Schaltfläche **Berechtigungsnachweise anzeigen** der Kachel für den {{site.data.keyword.amashort}}-Service klicken.
-
+1. Initialisieren Sie den `AuthorizationManager` durch Übergeben des Parameters `tenantId` des {{site.data.keyword.amashort}}-Service. 
   ####Objective-C
 	
   ```Objective-C

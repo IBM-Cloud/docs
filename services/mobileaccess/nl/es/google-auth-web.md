@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-11-01"
 
 ---
 
@@ -31,9 +31,9 @@ Debe tener lo siguiente:
 Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en [Google Developer Console](https://console.developers.google.com). Parte de la creación de un proyecto consiste en obtener un **ID de cliente de Google** y **Secreto**. El ID de cliente de Google y Secreto son los únicos identificadores para la aplicación utilizados por la autenticación de Google y se necesitan para configurar el panel de control de {{site.data.keyword.amashort}}.
 
 1. Abra la aplicación de Google en la consola del desarrollador de Google. 
-3. Añada la API de Google+. 
+3. Añada la API de **Google+**.  
 3. Cree credenciales mediante OAuth. Seleccione la Aplicación web en el tipo de aplicación. Especifique el URI de redireccionamiento de {{site.data.keyword.amashort}} en el recuadro URI de redirección autorizados. Obtenga el URI de autorización de redireccionamiento de {{site.data.keyword.amashort}} desde la pantalla de configuración de Google del panel de control de {{site.data.keyword.amashort}} (consulte los pasos siguientes). 
-4. Guarde los cambios realizados. Tome nota del ID de cliente de Google y secreto de aplicación.
+4. Guarde los cambios realizados. Anote el **ID de cliente de Google** y el **Secreto de la aplicación**.
 
 
 ## Configuración de {{site.data.keyword.amashort}} para la autenticación de Google
@@ -41,12 +41,13 @@ Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en 
 
 Una vez que ya tenga el ID de aplicación y el secreto de Google puede habilitar la autenticación de Google en el panel de control de {{site.data.keyword.amashort}}.
 
-1. Abra la app en el panel de control de {{site.data.keyword.Bluemix_notm}}.
-2. Pulse el icono de {{site.data.keyword.amashort}}. Se cargará el panel de control de {{site.data.keyword.amashort}}.
-3. Pulse el botón en el panel Google.
+1. Abra el panel de control del servicio de {{site.data.keyword.amashort}}.
+1. En el separador **Gestionar**, active **Autorización**.
+1. Abra la sección **Google**. 
+1. Marque **Añadir Google a la app web**
 4. En la sección **Configurar para web**:   
-    * Anote el valor en el recuadro de texto de **URI de redireccionamiento de Mobile Client Access para la consola de Google Developer**. Este es el valor que tiene que añadir al recuadro **URI de redirección autorizados** en **Restricciones en el ID de cliente para la aplicación web** del **Portal de Google Developers** en el paso 3.
-    * Especifique el **ID de cliente de Google** y **Secreto de cliente**.
+    * Anote el valor en el recuadro de texto de **URI de redireccionamiento de Mobile Client Access para la consola de Google Developer**. Este es el valor que tiene que añadir al recuadro **URI de redirección autorizados** en **Restricciones en el ID de cliente para la aplicación web** del **Portal de Google Developers**. 
+    * Especifique el **ID de cliente** y el **Secreto de cliente**.
     * Especifique el URI de redireccionamiento en las **URI de redireccionamiento de la aplicación web**. Este valor es para que se acceda a la URI de redireccionamiento una vez que se haya completado el proceso de autorización, y que lo determine el desarrollador.
 5. Pulse **Guardar**.
 
@@ -54,13 +55,15 @@ Una vez que ya tenga el ID de aplicación y el secreto de Google puede habilitar
 ## Implementación del flujo de autorización de {{site.data.keyword.amashort}} utilizando Google como proveedor de identidad
 {: #google-auth-flow}
 
-La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instancia de servicio de {{site.data.keyword.amashort}} y contiene propiedades necesarias para el proceso de autorización. Consta de un objeto JSON y se puede ver si se pulsa **Variables de entorno** en el navegador de la izquierda de la aplicación.
+La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instancia de servicio de {{site.data.keyword.amashort}} y contiene propiedades necesarias para el proceso de autorización. Consta de un objeto JSON y se puede ver pulsando en el separador **Credenciales de servicio** del panel de control del servicio de {{site.data.keyword.amashort}}. 
 
 Para iniciar el proceso de autorización:
 
 1. Recupere el punto final de autorización (`authorizationEndpoint`) y el clientId (`clientId`) de las credenciales de servicio almacenadas en la variable de entorno `VCAP_SERVICES`. 
+	`var cfEnv = require("cfenv");`
+	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
-	**Nota:** En el caso de que haya añadido el servicio de {{site.data.keyword.amashort}} a la aplicación antes de que se añadiera el soporte web, es posible que no tenga el punto final de la señal en las credenciales del servicio. En este caso, utilice las URL siguientes, en función de la región de {{site.data.keyword.Bluemix_notm}}: 
+	**Nota:** En el caso de que haya añadido el servicio de {{site.data.keyword.amashort}} a la aplicación antes de que se añadiera el soporte Web, es posible que no tenga el punto final de la señal en las credenciales del servicio. En este caso, utilice las URL siguientes, en función de la región de {{site.data.keyword.Bluemix_notm}}: 
  
 	EE.UU. sur: 
 
@@ -97,22 +100,22 @@ app.get("/protected", checkAuthentication, function(req, res, next){
   if (req.session.userIdentity){ 
 				next() 
 			} else { 
-				// Si no - redireccione al servidor de autorización
-		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-		var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
-		var clientId = mcaCredentials.clientId;
-		var redirectUri = "http://some-server/oauth/callback"; // El URI de redireccionamiento de la aplicación web
-		var redirectUrl = authorizationEndpoint + "?response_type=code";
-		redirectUrl += "&client_id=" + clientId;
-		redirectUrl += "&redirect_uri=" + redirectUri;
-		res.redirect(redirectUrl);
-	} 
+				// If not - redirect to authorization server
+				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+				var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
+				var clientId = mcaCredentials.clientId;
+				var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
+				var redirectUrl = authorizationEndpoint + "?response_type=code";
+				redirectUrl += "&client_id=" + clientId;
+				redirectUrl += "&redirect_uri=" + redirectUri;
+				res.redirect(redirectUrl);
+			}
 		} 
 	}
 	```
 	{: codeblock}
 
-	Tenga en cuenta que el parámetro `redirect_uri` representa su URI de redirección de aplicación web y debe ser igual a la definida en el panel de control de {{site.data.keyword.amashort}}.
+	Tenga en cuenta que el parámetro `redirect_uri` representa su URI de redirección de aplicación Web y debe ser igual a la definida en el panel de control de {{site.data.keyword.amashort}}.
 
 	Una vez que haya redirigido al punto final de autorización, el usuario obtendrá un formulario de inicio de sesión de Google. Después de que el usuario otorgue permisos para iniciar la sesión utilizando su identidad de Google, el servicio de {{site.data.keyword.amashort}} invocará el URI de redireccionamiento de la aplicación web, suministrando el código de concesión como un parámetro de consulta.
 
@@ -154,12 +157,12 @@ El siguiente paso consiste en obtener la señal de acceso y las señales de iden
 	var tokenEndpoint = mcaCredentials.tokenEndpoint; 
 	var formData = { 
 			grant_type: "authorization_code",
-      client_id: mcaCredentials.clientId,
-      redirect_uri: "http://some-server/oauth/callback",   // El URI de redirección de la aplicación web
-      code: req.query.code
-    }
+			client_id: mcaCredentials.clientId,
+			redirect_uri: "http://some-server/oauth/callback",// Your Web application redirect uri
+			code: req.query.code
+		}
 
-  request.post({ 
+		request.post({
 			url: tokenEndpoint, 
     formData: formData 
     }, function (err, response, body){ 

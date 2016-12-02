@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-27"
+
 ---
 
 {:shortdesc: .shortdesc} {:codeblock:.codeblock}
@@ -10,11 +11,8 @@ lastupdated: "2016-10-02"
 # Protección de recursos de fondo con el servicio {{site.data.keyword.amashort}}
 {: #protecting-resources}
 
-Última actualización: 22 de agosto de 2016
-{: .last-updated}
 
-
-Con el servicio de {{site.data.keyword.amafull}}, puede proteger las aplicaciones de fondo basadas en Java y Node.js que se estén ejecutando en {{site.data.keyword.Bluemix_notm}} con la supervisión y la seguridad OAuth habilitada para móviles. 
+Con el servicio de {{site.data.keyword.amafull}}, puede proteger las aplicaciones de fondo basadas en Java y Node.js que se estén ejecutando en {{site.data.keyword.Bluemix_notm}} con la supervisión y la seguridad OAuth habilitada para móviles.
 {:shortdesc}
 
 ## Antes de empezar

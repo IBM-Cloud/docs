@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-07"
+
 ---
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # 搭配使用 {{site.data.keyword.amashort}} 與本端開發環境
 {: #protecting-local}
@@ -13,13 +14,13 @@ lastupdated: "2016-10-10"
 
 ## 開始之前
 {: #before-you-begin}
-您必須具有：
 
+您必須具有：
 * {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
-* 您的服務參數值。在 {{site.data.keyword.Bluemix_notm}} 儀表板中，開啟服務。按一下**行動選項**。`applicationRoute` 及 `appGUID`（也稱為 `tenantId`）值會顯示在**路徑**及**應用程式 GUID/TenantId** 欄位中。當您起始設定 SDK 以及將要求傳送給後端應用程式時，需要這些值。
+* 您的服務參數值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**。`applicationRoute` 及 `appGUID`（也稱為 `tenantId`）值會顯示在**路徑**及**應用程式 GUID/租戶 ID** 欄位中。當您起始設定 SDK 以及將要求傳送給後端應用程式時，需要這些值。
 *  尋找管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。若要檢視您的 {{site.data.keyword.Bluemix_notm}} 地區，請按一下功能表列中的**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示")，以開啟**帳戶及支援**小組件。
 
-地區值應該是下列其中一項：**美國南部**、**雪梨**或**英國**。程式碼範例中會指出對應至這些名稱的確切 SDK 常數值。 
+地區值應該是下列其中一項：**美國南部**、**雪梨**或**英國**。程式碼範例中會指出對應至這些名稱的確切 SDK 常數值。
 
 ## 設定伺服器 SDK
 {: #serversetup}
@@ -40,7 +41,7 @@ lastupdated: "2016-10-10"
 }
 ```
 
-將 *appGUID* 值取代為[開始之前](#before-you-begin)中所取得的 `appGUID` 值。 
+將 *appGUID* 值取代為[開始之前](#before-you-begin)中所取得的 `appGUID` 值。
 
 1. 在 {{site.data.keyword.Bluemix_notm}} 儀表板的行動後端應用程式中，按一下 {{site.data.keyword.amashort}} 服務磚上的**顯示認證**。即會顯示 JSON 物件與 {{site.data.keyword.amashort}} 提供給行動後端應用程式的存取認證。
 
@@ -80,7 +81,7 @@ var MCABackendStrategy =
 // Rest of your code
 ```
 
-將 *appGUID* 值取代為[開始之前](#before-you-begin)中所取得的 `appGUID` 值。 
+將 *appGUID* 值取代為 `appGUID` 值（請參閱[開始之前](#before-you-begin)）。
 
 
 ## 配置 {{site.data.keyword.amashort}} 應用程式以使用本端開發伺服器
@@ -90,7 +91,7 @@ var MCABackendStrategy =
 
 將地區取代為適當的地區。
 
-將 *appGUID* 及 *bluemixAppRoute* 值取代為[開始之前](#before-you-begin)中所取得的值。 
+將 *appGUID* 及 *bluemixAppRoute* 值取代為[開始之前](#before-you-begin)中所取得的值。
 
 您可能需要將 `localhost` 變更為下列範例中開發伺服器的實際 IP 位址。
 
@@ -177,10 +178,10 @@ let regionName = BMSClient.Region.usSouth
 BMSClient.sharedInstance.initialize(bluemixAppRoute: bluemixAppRoute, bluemixAppGUID: tenantId, bluemixRegion: regionName)
 
 BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
-           
-let requestPath = baseRequestUrl + "/resource/path"               
+
+ let requestPath = baseRequestUrl + "/resource/path"               
 let request = Request(url: requestPath, method: HttpMethod.GET)
-            
+
 request.send { (response, error) in
 	if let error = error {
     			print("Connection failure")
@@ -221,4 +222,3 @@ var request = new MFPRequest(baseRequestUrl +
 
 request.send(success, failure);
 ```
-

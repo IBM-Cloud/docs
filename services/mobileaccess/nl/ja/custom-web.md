@@ -2,14 +2,12 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-16"
 
 ---
 
 # Web アプリのカスタム認証
 {: #custom-web}
-
-最終更新日: 2016 年 6 月 16 日
-{: .last-updated}
 
 Web アプリにカスタム認証を追加します。
 
@@ -46,7 +44,7 @@ Web アプリにカスタム認証を追加します。
 1. Web アプリから、許可サーバーの以下のエンドポイントにリダイレクトします。
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
-  
+
   以下の照会パラメーターを使用します。
    ```
    response_type=’authorization_code’
@@ -75,7 +73,6 @@ Web アプリにカスタム認証を追加します。
  code = <authorization code>
  ```
 `redirect_uri` パラメーターは、ステップ 1 の `redirect_uri` と一致している必要があります。許可コードはステップ 2 の要求で返されました。
-  
     認可コードは最大で 10 分間有効であるため、この `POST` 要求を 10 分以内に送信するように注意してください。
 
 `POST` 応答本体には、base64 でエンコードされた *access_token* および
@@ -87,5 +84,3 @@ Web アプリにカスタム認証を追加します。
 これで、保護リソースに要求を出すことができるようになりました。
 保護リソースへのすべての要求には `access_token` が含まれている必要があります。
 アクセス・トークンは `the-Authorization-request` ヘッダー・フィールドに入れて送信します。
-
-

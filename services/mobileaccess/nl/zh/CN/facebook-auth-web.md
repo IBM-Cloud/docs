@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-11-07"
 
 ---
 {:screen: .screen}
@@ -20,38 +20,34 @@ lastupdated: "2016-10-03"
 您必须具有：
 
 * Web 应用程序。 
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
-
+* {{site.data.keyword.amashort}} 服务。有关更多信息，请参阅[入门](index.html)。
 * 最终重定向的 URI（授权流程完成后）。
 
 
-## 针对 Web 站点配置 Facebook 应用程序
+## 在 Facebook for Developers 站点上配置应用程序
 {: #facebook-auth-config}
 
 要在 Web 站点上将 Facebook 用作身份提供者，必须在 Facebook 应用程序上添加并配置 Web 站点平台。
 
-1. 登录到 [Facebook for Developers](https://developers.facebook.com) Web 站点。
-2. 打开或创建应用程序。
-3. 记录**应用程序标识**和**应用程序私钥**。在 {{site.data.keyword.amashort}} 仪表板中配置 Web 项目以进行 Facebook 认证时需要这些值。
-4. 如果不存在该 **Web 站点**平台，请进行添加。
-5. 从**产品**列表中，添加或打开 **Facebook 登录**。
-6. 在**有效的 OAuth 重定向 URI** 框中输入授权服务器回调端点 URI。在随后的
-{{site.data.keyword.amashort}} 仪表板配置步骤中，查找此授权重定向 URI。
+1. 在 [Facebook for Developers](https://developers.facebook.com) 站点上登录到您的帐户。有关创建新应用程序的信息，请参阅[在 Facebook for Developers Web 站点上创建应用程序](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。 
+1. 记录**应用程序标识**和**应用程序私钥**。在 Mobile Client Access 仪表板中配置 Web 项目进行 Facebook 认证时，将需要这些值。
+1. 从**产品列表**中，选择 **Facebook 登录**。
+4. 如果不存在该 **Web** 平台，请进行添加。
+6. 在**有效的 OAuth 重定向 URI** 框中输入授权服务器回调端点 URI。可以在配置 {{site.data.keyword.amashort}} 服务后，在随后的步骤中添加此值。
 7. 保存更改。
 
 
 ## 配置 {{site.data.keyword.amashort}} 进行 Facebook 认证
 {: #facebook-auth-config-ama}
 
-已拥有 Facebook 应用程序标识和应用程序私钥并且将 Facebook 应用程序配置为向 Web 客户端提供服务后，可以在 {{site.data.keyword.Bluemix_notm}}“仪表板”中启用 Facebook 认证。
+已拥有 Facebook 应用程序标识和应用程序私钥并且将 Facebook for Developers 应用程序配置为向 Web 客户端提供服务后，可以在 {{site.data.keyword.amashort}} 仪表板中启用 Facebook 认证。
 
-1. 打开 {{site.data.keyword.Bluemix_notm}} 仪表板。
-2. 单击相关应用程序磁贴以装入应用程序。
-3. 单击 {{site.data.keyword.amashort}} 服务的磁贴。
-4. 单击 **Facebook** 面板中的**配置**按钮。
-5. 记录 **Facebook 开发者控制台的 Mobile Client Access 重定向 URI** 文本框中的值。在步骤 6 中，您需要将此值添加到 Facebook 开发人员门户网站的 **Facebook 登录
-**中的**有效的 OAuth 重定向 URI** 框中。
-6. 输入 Facebook **应用程序标识**和**应用程序私钥**。
+1. 打开 {{site.data.keyword.amashort}} 服务仪表板。
+1. 在**管理**选项卡中，将**授权**切换为“开启”。
+1. 展开 **Facebook** 部分。
+1. 选中**向 Web 应用程序添加 Facebook**。
+5. 记录 **Facebook for Developers 的 Mobile Client Access 重定向 URI** 文本框中的值。您需要将此值添加到 Facebook 开发人员门户网站的 **Facebook 登录**中的**有效的 OAuth 重定向 URI** 框中。
+6. 输入从 Facebook for Developers Web 站点中获取的 Facebook **应用程序标识**和**应用程序私钥**。
 7. 在 **Web 应用程序重定向 URI**中输入重定向 URI。
 此值用于在完成授权流程之后可访问重定向 URI，由开发者确定。
 8. 单击**保存**。
@@ -60,14 +56,15 @@ lastupdated: "2016-10-03"
 ## 使用 Facebook 作为身份提供者实施 {{site.data.keyword.amashort}} 授权流程
 {: #facebook-auth-flow}
 
-针对每一个 {{site.data.keyword.amashort}} 服务实例会自动创建 `VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，通过单击应用程序中的**环境变量**，可以查看该对象。
+针对每一个 {{site.data.keyword.amashort}} 服务实例会自动创建 `VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，可以在 {{site.data.keyword.amashort}} 服务仪表板中的**服务凭证**选项卡中查看该对象。
 
 要启动授权过程：
 
 1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中，检索授权端点 (`authorizationEndpoint`) 和客户端标识 (`clientId`)。 
 
-	**注：**如果在添加 Web 支持之前，您已向应用程序添加了
-{{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
+	`var cfEnv = require("cfenv");` 
+
+	**注：**如果在添加 Web 支持之前，您已向应用程序添加了 {{site.data.keyword.amashort}} 服务，那么可能在**服务凭证**中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
  
 	美国南部： 
 
@@ -104,14 +101,14 @@ lastupdated: "2016-10-03"
 		if (req.session.userIdentity){   
        next()  
      } else {   
-  // If not - redirect to authorization server   
-        var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
-        var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
-        var clientId = mcaCredentials.clientId;   
-        var redirectUri = "http://some-server/oauth/callback"; 
-         // Your web application redirect URI   
+			// If not - redirect to authorization server   
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
+			var clientId = mcaCredentials.clientId;   
+			var redirectUri = "http://some-server/oauth/callback"; 
+			// Your Web application redirect URI   
 
-        var redirectUrl = authorizationEndpoint + "?response_type=code";
+			var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;   
         redirectUrl += "&redirect_uri=" + redirectUri;   
   

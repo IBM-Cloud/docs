@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-09"
+lastupdated: "2016-11-02"
+
 ---
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -17,17 +18,26 @@ Configura la tua applicazione Android con l'autenticazione personalizzata per ut
 
 ## Prima di cominciare
 {: #before-you-begin}
-Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.data.keyword.amashort}} configurato per utilizzare un provider di identità personalizzato.  La tua applicazione mobile deve anche essere strumentata con l'SDK client {{site.data.keyword.amashort}}.  Per ulteriori informazioni, consulta:
+Prima di iniziare devi disporre di: 
+
+* Una risorsa che sia protetta da un'istanza del servizio {{site.data.keyword.amashort}} configurata per utilizzare un provider di identità personalizzato (consulta [Configurazione dell'autenticazione personalizzata](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Il tuo valore **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}. Fai clic sul pulsante **Opzioni per dispositivi mobili**. Il valore `tenantId` (noto anche come `appGUID`)  viene visualizzato nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione.
+* Il tuo nome **Realm**. Questo è il valore che hai specificato nel campo **Nome realm** della sezione **Personalizzato** nella scheda **Gestione** del dashboard {{site.data.keyword.amashort}}.
+* L'URL della tua applicazione di back-end (**Rotta applicazione**). Avrai bisogno di questo valore per inviare le richieste agli endpoint protetti della tua applicazione di back-end.
+* La tua **Regione** {{site.data.keyword.Bluemix_notm}}. Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione visualizzato deve essere uno dei seguenti: `Stati Uniti Sud`, `Regno Unito` o `Sydney` e corrisponde ai valori delle SDK richiesti nel codice WebView Javascript: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`. Avrai bisogno di questo valore per inizializzare il client {{site.data.keyword.amashort}}.
+
+Per ulteriori informazioni, consulta:
  * [Introduzione a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Configurazione dell'SDK Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
  * [Utilizzo di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Creazione di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
-Annota i valori del tuo parametro del servizio. Apri il tuo servizio nel dashboard {{site.data.keyword.Bluemix_notm}}. Fai clic su **Opzioni mobili**. I valori `applicationRoute` e `tenantId` (conosciuti anche come `appGUID`)  sono visualizzati nei campi **Rotta** and **GUID applicazione / TenantId**. Avrai bisogno di questi valori per inizializzare l'SDK e per inviare le richieste all'applicazione di backend.
+
 
 ## Inizializzazione dell'SDK client {{site.data.keyword.amashort}}
 {: #custom-android-initialize}
+Se disponi di un'applicazione Android strumentata con l'SDK Android {{site.data.keyword.amashort}} puoi saltare questa sezione.
 1. Nel tuo progetto Android in Android Studio, apri il file `build.gradle` del tuo modulo applicazione (non il progetto `build.gradle`).
 
 1. Nel file `build.gradle`, trova la sezione `dependencies` e controlla che esista la seguente dipendenza:
@@ -59,7 +69,7 @@ Aggiungi l'autorizzazione di accesso a internet sotto l'elemento `<manifest>`:
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 ```
 
-Sostituisci `BMSClient.REGION_UK` con la regione appropriata.	 Per visualizzare la tua regione {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona **Avatar** ![icona Avatar](images/face.jpg "icona Avatar")  nella barra del menu per aprire il widget **Account e supporto**.  Il valore della regione deve essere uno dei seguenti: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`.				
+Sostituisci `BMSClient.REGION_UK` con la regione {{site.data.keyword.amashort}}. Per ulteriori informazioni su come ottenere questi valori consulta [Prima di cominciare](#before-you-begin)).
 	
 
 ## Interfaccia AuthenticationListener
@@ -189,8 +199,8 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 
 Nel codice:
-* Sostituisci `MCAServiceTenantId` con il valore `tenantId` (consulta [Prima di cominciare](##before-you-begin)). 
-* Utilizza il nome di area di autenticazione (`realmName`) che hai specificato nel dashboard {{site.data.keyword.amashort}}.
+* Sostituisci `MCAServiceTenantId` con il valore **TenantId** (consulta [Prima di cominciare](##before-you-begin)). 
+* Utilizza il `realmName` che hai specifico nel dashboard {{site.data.keyword.amashort}} (consulta [Configurazione dell'autenticazione personalizzata](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
 
 
 ## Verifica dell'autenticazione
@@ -199,7 +209,7 @@ Dopo che l'SDK client è stato inizializzato e che un AuthenticationListener per
 
 ### Prima del tuo test
 {: #custom-android-testing-before}
-Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyword.mobilefirstbp}} e di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`.
+Devi disporre di un'applicazione con una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`.
 
 
 1. Invia una richiesta all'endpoint protetto (`{applicationRoute}/protected`) dell'applicazione di backend mobile dal tuo browser, ad esempio `http://my-mobile-backend.mybluemix.net/protected`. Per informazioni su come ottenere il valore `{applicationRoute}`, consulta   [Prima di cominciare](#before-you-begin). 
@@ -228,7 +238,6 @@ Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyw
 		}
 	});
 ```
-
 	
 1. 	Quando la tua richiesta ha esito positivo, nello strumento LogCat è presente il seguente output:
 

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-30"
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,7 +12,7 @@ lastupdated: "2016-10-02"
 # {{site.data.keyword.amashort}} SDK、範例及 API 參考資料
 
 
-若要將 {{site.data.keyword.amafull}} SDK 新增至應用程式，請選擇您要使用的 SDK。然後，配置相依關係管理程式將 SDK 取回至應用程式。
+若要將 {{site.data.keyword.amafull}} SDK 新增至用戶端應用程式，請選擇您要使用的 SDK。然後，配置相依關係管理程式將 SDK 取回至應用程式。
 {:shortdesc}
 
 **附註：**後續的小節會提供安裝 SDK 的相關資訊。
@@ -19,7 +20,7 @@ lastupdated: "2016-10-02"
 ## 核心 SDK
 {: #coresdk}
 
-「核心 SDK」包括用於啟用自訂鑑別、記載及監視行動應用程式的 API。
+「核心 SDK」包括用於啟用自訂鑑別和記載的 API。
 
 ### Android
 {: #coresdk-android}
@@ -81,7 +82,7 @@ pod 'IMFCore'
 
 安裝 Mobile Client Access Cordova 外掛程式：
 ```Bash
-cordova plugin add ibm-mfp-core
+cordova plugin add bms-core
 ```
 {: codeblock}
 

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-27"
+
 ---
 
 {:shortdesc: .shortdesc} {:codeblock:.codeblock}
@@ -10,11 +11,8 @@ lastupdated: "2016-10-02"
 # Back-End-Ressourcen mit dem {{site.data.keyword.amashort}}-Service schützen
 {: #protecting-resources}
 
-Letzte Aktualisierung: 22. August 2016
-{: .last-updated}
 
-
-Mit dem {{site.data.keyword.amafull}}-Service können Sie Ihre Node.js- und Java-basierten Back-End-Anwendungen, die in {{site.data.keyword.Bluemix_notm}} ausgeführt werden, mit mobilgerätefähiger OAuth-Sicherheit und Überwachungsfunktionen schützen. 
+Mit dem {{site.data.keyword.amafull}}-Service können Sie Ihre Node.js- und Java-basierten Back-End-Anwendungen, die in {{site.data.keyword.Bluemix_notm}} ausgeführt werden, mit mobilgerätefähiger OAuth-Sicherheit und Überwachungsfunktionen schützen.
 {:shortdesc}
 
 ## Vorbereitungen

@@ -2,28 +2,26 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-11-13"
+
 ---
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Cordova 플러그인 설정
 {: #getting-started-cordova}
 
-
-{{site.data.keyword.amafull}} 클라이언트 SDK를 사용하여 Cordova 애플리케이션을 인스트루먼트하고, SDK를 초기화하며 보호 및 비보호 리소스에 대한 요청을 작성하십시오.
-
+{{site.data.keyword.amafull}} 클라이언트 SDK로 Cordova 클라이언트 애플리케이션을 인스트루먼트하십시오. Android(Java) 또는 iOS(Objective C) 코드에서 권한 관리자를 초기화하십시오. 클라이언트를 초기화하고 WebView에서 보호 및 비보호 리소스에 대한 요청을 작성하십시오. 
 
 {:shortdesc}
 
 ## 시작하기 전에
 {: #before-you-begin}
 다음이 있어야 합니다.
-* {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
-
-
-
-
-
+* {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
+* {{site.data.keyword.amafull}} 서비스의 인스턴스
+* 백엔드 애플리케이션의 URL(**앱 라우트**). 이 값은 백엔드 애플리케이션의 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
+* **테넌트 ID** 값. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
+* {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`, `United Kingdom` 및 `Sydney` 중 하나여야 하며 WebView Javascript 코드 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` 또는 `BMSClient.REGION_UK`에 필요한 SDK 값에 해당해야 합니다. 이 값은 {{site.data.keyword.amashort}} 클라이언트를 초기화하는 데 필요합니다. 
 * Cordova 애플리케이션 또는 기존 프로젝트. Cordova 애플리케이션을 설정하는 방법에 대한 자세한 정보는 [Cordova 웹 사이트](https://cordova.apache.org/)를 참조하십시오. 
 
 ## {{site.data.keyword.amashort}} Cordova 플러그인 설치
@@ -31,15 +29,15 @@ lastupdated: "2016-10-02"
 
 Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.data.keyword.amashort}} 클라이언트 SDK를 랩핑하는 Cordova 플러그인입니다. Cordova CLI(Command Line Interface) 및 `npmjs`, Cordova 프로젝트에 대한 플러그인 저장소를 사용하여 분배됩니다. Cordova CLI는 저장소에서 자동으로 플러그인을 다운로드하고 Cordova 애플리케이션에서 플러그인을 사용할 수 있게 합니다. 
 
-1. Android 및 iOS 플랫폼을 Cordova 애플리케이션에 추가하십시오. 명령행에서 다음 명령 중 하나 또는 둘 다 실행하십시오. 
-   	
+1. Android 및/또는 iOS 플랫폼을 Cordova 애플리케이션에 추가하십시오. 명령행에서 다음 명령 중 하나 또는 둘 다 실행하십시오. 
+
 	###Android
 	{: #install-cordova-android}
 
 	```
 	cordova platform add android
 	```
-	
+
 	###iOS
 	{: #install-cordova-ios}
 
@@ -56,9 +54,9 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
-	
-	*minSdkVersion* 값은 `15` 이상이어야 합니다. *targetSdkVersion* 값은 Google에서 사용 가능한 최신 Android SDK여야 합니다.  
 
+	*minSdkVersion* 값은 `15` 이상이어야 합니다. *targetSdkVersion* 값은 `23`이어야 합니다. 현재 Cordova에서는 **Android-23** 이후 버전을 지원하지 않습니다. 
+	
 3. iOS 운영 체제를 추가한 경우 `<platform name="ios">` 요소를 대상 선언으로 업데이트하십시오. 
 
 	```XML
@@ -71,7 +69,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 4. {{site.data.keyword.amashort}} Cordova 플러그인을 설치하십시오. 
 
  	```Bash
-	cordova plugin add ibm-mfp-core
+	cordova plugin add bms-core
 	```
 
 5. Android, iOS 또는 둘 다에 대해 플랫폼을 구성하십시오. 
@@ -80,69 +78,83 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 	{: #cordova-android}
 
 	Android Studio에서 프로젝트를 열기 전에 빌드 오류를 방지하기 위해 명령행 인터페이스(CLI)를 통해 Cordova 애플리케이션을 빌드하십시오.
-	
+
 	```Bash
 	cordova build android
 	```
-	
+
 	####iOS
 	{: #cordova-ios}
 
-	다음과 같이 Xcode 프로젝트를 구성하여 빌드 오류를 방지하십시오.
+	다음과 같이 Xcode 프로젝트를 구성하십시오. 
 
 	1. 최신 Xcode 버전을 사용하여 `<app_name>/platforms/ios` 디렉토리에서 `xcode.proj` 파일을 여십시오. 
 
-		**중요:** 최신 Swift 구문으로 변환하라는 메시지가 수신되면 **취소**를 클릭하십시오.
+		**중요:** 최신 Swift 구문으로 변환하라는 메시지를 수신하는 경우 **취소**를 클릭하십시오. 
 
-	2. **빌드 설정 > Swift 컴파일러 - 코드 생성 > Objective-C 브리징 헤더**로 이동하여 다음 경로를 추가하십시오. 
+	2. Xcode로 애플리케이션을 빌드하고 실행하십시오.
 
-		`<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h`
+	**참고**: `cordova build ios`를 실행할 때 다음 오류가 수신될 수 있습니다. [문제 12](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12)에서 추적되는 종속성 플러그인의 버그로 인해 이러한 문제가 발생합니다. 시뮬레이터 또는 디바이스를 통해 XCode에서 iOS 프로젝트를 계속 실행할 수 있습니다. 
 
-	3. **빌드 설정 > 링크 > Runpath 검색 경로**로 이동하여 다음 프레임워크 매개변수를 추가하십시오. 
+	```
+	xcodebuild: error: Unable to find a destination matching the provided destination specifier:
+			{ platform:iOS Simulator }
 
-		`@executable_path/Frameworks
-			`
-
-	4. Xcode로 애플리케이션을 빌드하고 실행하십시오.
-
+		Missing required device specifier option.
+		The device type “iOS Simulator” requires that either “name” or “id” be specified.
+		Please supply either “name” or “id”.
+	```
+	
 6. 다음 명령을 실행하여 플러그인이 설치되었는지 확인하십시오. 
 
 	```Bash
 	cordova plugin list
 	```
+	
+7. **기능** 탭에서 **키 체인 공유**를 `On`으로 전환하여 iOS에 대해 키 체인 공유를 사용 가능하게 설정하십시오. 
+  
+8. **빌드 설정** > **패키징** 탭에서 **모듈 정의**를 `YES`로 전환하여 iOS에 대해 **모듈 정의**를 사용 가능하게 설정하십시오. 
 
-## {{site.data.keyword.amashort}} 클라이언트 플러그인 초기화
+
+## Cordova WebView(Javascript)에서 {{site.data.keyword.amashort}} 클라이언트 초기화
 {: #getting-started-cordova-initialize}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려면 *applicationGUID* 및 *applicationRoute* 매개변수를 전달하여 SDK를 초기화해야 합니다.
+{{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려면 `applicationBluemixRegion`을 전달하여 SDK를 초기화해야 합니다. 
 
-1. {{site.data.keyword.Bluemix_notm}} 대시보드의 기본 페이지에서 라우트 및 앱 GUID 값을 찾으십시오. SDK를 초기화하려면 앱 이름을 클릭한 다음 **애플리케이션 라우트** 및 **애플리케이션 GUID** 값을 표시하도록 **모바일 옵션**을 클릭하십시오. 
-
-3. 다음 호출을 `index.js` 파일에 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오.  
-
-	```JavaScript
-	BMSClient.initialize("applicationRoute", "applicationGUID");
-	```
-
-  * `applicationRoute` 및 `applicationGUID`를 {{site.data.keyword.Bluemix_notm}} 대시보드의 **모바일 옵션** 값으로 바꾸십시오.
-
-##{{site.data.keyword.amashort}} AuthorizationManager 초기화
-{: #initializing-auth-manager}
-
-Cordova 애플리케이션에서 다음 JavaScript 코드를 사용하여 {{site.data.keyword.amashort}} AuthorizationManager를 초기화하십시오.
+다음 호출을 `index.js` 파일에 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. 
 
 ```JavaScript
-  MFPAuthorizationManager.initialize("tenantId");
-  ```
+BMSClient.initialize(<applicationBluemixRegion>);
+```
 
-`tenantId` 값을 {{site.data.keyword.amashort}} 서비스 `tenantId`로 바꾸십시오. {{site.data.keyword.amashort}} 서비스 타일의 **신임 정보 표시** 단추를 클릭하여 이 값을 찾을 수 있습니다. 
+**NB:** `<applicationBluemixRegion>`을 {{site.data.keyword.Bluemix_notm}} 서비스가 호스트되는 지역으로 대체하십시오([시작하기 전에](#before-you-begin) 참조).
 
-## 모바일 백엔드 애플리케이션에 대한 요청 작성
+##원시 코드에서 {{site.data.keyword.amashort}} 권한 관리자 초기화
+{: #initializing-auth-manager}
+
+`BMSAuthorizationManager`를 사용하려면 다음 코드 스니펫을 추가해야 합니다. 다음 원시 코드는 `BMSAuthorizationManager`를 {{site.data.keyword.amashort}} 서비스 `tenantId`로 초기화합니다([시작하기 전에](#before-you-begin) 참조).
+
+### Android(Java)
+
+`MainActivity.java` 파일의 `OnCreate` 메소드에서 `loadUrl` 앞에 코드를 추가하십시오.
+```Java
+MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<tenantId>");
+BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
+```
+### iOS(Objective C)
+사용하는 Xcode의 버전에 따라 `AppDelegate.m`에서 권한 관리자 초기화를 추가하십시오. 
+
+```Objective-C
+  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
+```
+
+
+## 모바일 백엔드 서비스에 대한 요청 작성
 {: #getting-started-request}
 
-{{site.data.keyword.amashort}} 클라이언트 SDK가 설치되고 나면 모바일 백엔드 애플리케이션에 대한 요청 작성을 시작할 수 있습니다. 
+{{site.data.keyword.amashort}} 클라이언트 SDK가 초기화되면 모바일 백엔드 서비스에 대한 요청을 작성할 수 있습니다. 
 
-1. 요청을 새 모바일 백엔드의 보호 엔드포인트로 전송하십시오. 브라우저에서 URL `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 여십시오.
+1. 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송하십시오. 브라우저에서 URL `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 여십시오.
 
 	MobileFirst Services Starter 표준 유형으로 작성된 모바일 백엔드의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 브라우저에 `Unauthorized` 메시지가 리턴됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스되므로 이 메시지가 리턴됩니다.
 
@@ -150,16 +162,16 @@ Cordova 애플리케이션에서 다음 JavaScript 코드를 사용하여 {{site
 
 	```Javascript
 	var success = function(data){
-	console.log("success", data);
-	}
+	 console.log("success", data);
+	 }
 
-	var failure = function(error){
-	console.log("failure", error);
-	}
+	 var failure = function(error){
+	 console.log("failure", error);
+	 }
 
-	var request = new MFPRequest("/protected", MFPRequest.GET);
+	 var request = new BMSRequest("<your route>/protected", BMSRequest.GET);
 
-	request.send(success, failure);
+	 request.send(success, failure);
 	```
 
 3. 요청에 성공하는 경우 LogCat 또는 Xcode 콘솔에 다음 출력이 표시됩니다(사용 중인 플랫폼에 따라 다름). 

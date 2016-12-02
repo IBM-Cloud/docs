@@ -2,31 +2,32 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-06"
+
 ---
 
 # 關於 {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 
-{{site.data.keyword.amafull}} 服務針對存取 {{site.data.keyword.Bluemix_notm}} 上所管理雲端資源的行動及 Web 應用程式，提供鑑別及監視服務。
+{{site.data.keyword.amafull}} 服務會針對存取 {{site.data.keyword.Bluemix_notm}} 所管理之雲端資源的行動和 Web 應用程式提供鑑別。
 
-您可以使用 {{site.data.keyword.amashort}} 服務，透過各種鑑別類型保護 {{site.data.keyword.Bluemix_notm}} 上所管理的 Node.js 及 Liberty for Java&trade; 應用程式。您可以使用 {{site.data.keyword.amashort}} SDK 檢測行動應用程式，以使用 {{site.data.keyword.amashort}} 服務所提供的鑑別功能。會自動收集用戶端日誌，並視需求將其傳送至 {{site.data.keyword.amashort}} 服務。請使用 {{site.data.keyword.amashort}} 儀表板來配置各種鑑別類型，以及查看用戶端 SDK 所收集及傳送的資料。
+您可以使用 {{site.data.keyword.amashort}} 服務，透過各種鑑別類型保護 {{site.data.keyword.Bluemix_notm}} 上所管理的 Node.js 及 Liberty for Java&trade; 應用程式。您可以使用 {{site.data.keyword.amashort}} SDK 檢測行動應用程式，以使用 {{site.data.keyword.amashort}} 服務所提供的鑑別功能。請使用 {{site.data.keyword.amashort}} 儀表板來配置各種鑑別類型，以及查看用戶端 SDK 所收集及傳送的資料。
 
 **附註**：{{site.data.keyword.amashort}} 服務先前稱為 Advanced Mobile Access。
 
 ## 元件
 {: #components}
 
-* **{{site.data.keyword.amashort}} 儀表板**：配置各種鑑別類型，以及監視行動應用程式效能、分析、使用情形統計資料及裝置日誌。
-* **{{site.data.keyword.amashort}} 用戶端 SDK**：檢測行動應用程式以使用 {{site.data.keyword.amashort}} 功能。支援的平台如下：iOS 8+、Android 4+ 及 Cordova。
+* **{{site.data.keyword.amashort}} 儀表板**：配置各種鑑別類型
+* **{{site.data.keyword.amashort}} 用戶端 SDK**：檢測行動應用程式以使用 {{site.data.keyword.amashort}} 功能。支援的平台如下：iOS 8+、Android 4+、Cordova 及 Web 應用程式。
 * **{{site.data.keyword.amashort}} 伺服器 SDK**：保護 {{site.data.keyword.Bluemix_notm}} 上所管理的資源。目前支援的運行環境為 Node.js 及 Liberty for Java&trade;。
 
 ## 鑑別類型
 {: #authtypes}
 您可以在行動應用程式中使用下列類型的鑑別：
-* **Facebook**：使用 Facebook 作為身分提供者。您的使用者利用 Facebook 認證來登入行動應用程式。
-* **Google**：使用 Google 作為身分提供者。您的使用者利用 Google+ 認證來登入行動應用程式。
+* **Facebook**：使用 Facebook 作為身分提供者。您的使用者利用其 Facebook 認證來登入行動或 Web 應用程式。
+* **Google**：使用 Google 作為身分提供者。您的使用者利用其 Google+ 認證來登入行動 Web 應用程式。
 * **自訂**：建立專屬身分提供者。您可完全控制收集及驗證的資訊類型。
 
 ## 架構概觀

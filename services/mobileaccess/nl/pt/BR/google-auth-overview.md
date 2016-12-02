@@ -1,7 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016 lastupdated: "2016-10-02"
+  years: 2015, 2016
+lastupdated: "2016-11-03"
+
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -10,10 +12,9 @@ copyright:
 # Autenticando usuários com as credenciais do Google
 {: #google-auth}
 
-
-É possível configurar o serviço {{site.data.keyword.amafull}} para proteger recursos usando o Google como provedor de identidade. Seus
-usuários de aplicativo móvel ou da web podem usar suas credenciais do Google para autenticação.
-{:shortdesc}
+É possível configurar o serviço {{site.data.keyword.amafull}} para proteger recursos usando o Google como provedor de identidade. 
+Os usuários do seu aplicativo móvel ou da Web podem usar suas
+credenciais do Google para autenticação.{:shortdesc}
 
 **Importante**: não é necessário instalar separadamente o client SDK fornecido pelo Google. O Google SDK é instalado automaticamente por gerenciadores de dependência quando você configura o {{site.data.keyword.amashort}} client SDK.
 
@@ -46,7 +47,7 @@ um cabeçalho de autorização.
 O fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}} é semelhante ao fluxo do cliente móvel. Entretanto, o {{site.data.keyword.amashort}} protege o aplicativo da web, em vez de um recurso de backend do {{site.data.keyword.Bluemix_notm}}.
 
   * A solicitação inicial é enviada pelo aplicativo da web (a partir de um formulário de login, por exemplo).
-  * O redirecionamento final é para a área protegida do próprio aplicativo da web, em vez do recurso protegido de backend. 
+  * O redirecionamento final é para a área protegida do próprio aplicativo da web, em vez do recurso protegido de backend.
 
 
 
@@ -57,4 +58,3 @@ O fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}} é 
 * [Ativando a autenticação do Google para apps iOS (Swift SDK)](google-auth-ios-swift-sdk.html)
 * [Ativando a autenticação do Google para apps iOS (Objective-C SDK)](google-auth-ios.html)
 * [Ativando a autenticação do Google para apps Cordova](google-auth-cordova.html)
-

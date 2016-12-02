@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-09"
+lastupdated: "2016-10-27"
+
 ---
 
 # Configurando a autenticação customizada para seu aplicativo {{site.data.keyword.amashort}} iOS (Swift SDK)
@@ -19,7 +20,36 @@ Objective-C SDK existente.
 ## Antes de iniciar
 {: #before-you-begin}
 
-Deve-se ter um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que seja configurada para usar um provedor de identidade customizado.  Seu app móvel também deve ser instrumentado com o {{site.data.keyword.amashort}} client SDK.  Para obter informações adicionais, consulte as seguintes informações:
+Antes de começar, deve-se ter:
+
+* Um recurso que seja protegido por uma instância do
+serviço {{site.data.keyword.amashort}} que está
+configurado para usar um provedor de identidade customizado
+(consulte
+[Configurando autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).   
+* Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. 
+Clique no botão **Opções móveis**. O valor
+`tenantId` (também conhecido como
+`appGUID`) é exibido no campo **App
+GUID / TenantId**. Você precisará desse valor para
+inicializar o Gerenciador de Autorização.
+* Seu nome de **Domínio**. Este é o
+valor que você especificou no campo **Nome do
+domínio** da seção **Customizado**
+no guia **Gerenciamento** do
+painel {{site.data.keyword.amashort}}.
+* A URL do seu aplicativo backend (**Rota de App**). Você precisará desse valor para enviar
+solicitações para os terminais protegido do seu aplicativo
+backend.
+* A {{site.data.keyword.Bluemix_notm}}
+**Região**. É possível encontrar a sua região
+{{site.data.keyword.Bluemix_notm}} atual no cabeçalho,
+próximo ao ícone **Avatar**
+![ícone de avatar](images/face.jpg "ícone de avatar"). O valor da região que aparece deve ser um dos seguintes: **US South**, **United Kingdom** ou
+**Sydney** e corresponde às constantes requeridas no código: `BMSClient.Region.usSouth`,
+`BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.
+
+Para obter informações adicionais, consulte as seguintes informações:
  * [Introdução
 ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
  * [Configurando o iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
@@ -28,33 +58,12 @@ ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mo
  * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
 
-## Configurando o {{site.data.keyword.amashort}} para autenticação customizada
- {: #custom-auth-ios-configmca}
-
- 1. Abra o seu painel de serviço.
- 
- 1. Clique em **Opções de dispositivo móvel** e tome nota da **Rota**
-(*applicationRoute*) e do **GUID / TenantId do aplicativo** (*serviceTenantID*). Você precisará desses valores ao
-inicializar o SDK e enviar solicitações para o aplicativo backend.
-
- 1. Clique no ladrilho {{site.data.keyword.amashort}}. O painel do {{site.data.keyword.amashort}} é carregado.
-
- 1. Clique no ladrilho **Customizado**.
-
- 1. Em **Nome da região**, especifique sua região de
-autenticação customizada.
-
- 1. Em **URL**, especifique a applicationRoute.
-
- 1. Clique em **Salvar**.
-
-
-
-
 ### Inicializando o client SDK
 {: #custom-ios-sdk-initialize}
 
-Inicialize o SDK passando o parâmetro `applicationGUID` (tenantId). Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo
+Inicialize o SDK passando o parâmetro
+`applicationGUID`
+(**TenantId**). Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo.
 
 1. Importe as estruturas necessárias na classe em que deseja usar o {{site.data.keyword.amashort}} client SDK.
 
@@ -111,17 +120,18 @@ defina e registre uma delegação de autenticação.
 ```
 
 No código:
-
-* Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar a região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de Avatar ![ícone de Avatar](images/face.jpg "Avatar icon") na barra de menus para abrir o widget **Conta e suporte**.  O valor da região que aparece deve ser um dos seguintes: **US South**, **United Kingdom** ou
+* Substitua `MCAServiceTenantId` pelo valor
+**TenantId** e `<
+applicationBluemixRegion>` pela sua
+{{site.data.keyword.amashort}}
+**Região** (consulte
+[Antes de iniciar](##before-you-begin)). 
+* Use o `realmName` que você especificou
+no painel {{site.data.keyword.amashort}} (consulte
+[Configurando a autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
+* Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar a região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de Avatar ![ícone de Avatar](images/face.jpg "ícone de avatar") na barra de menus para abrir o widget **Conta e suporte**.  O valor da região que aparece deve ser um dos seguintes: **US South**, **United Kingdom** ou
 **Sydney** e corresponde às constantes requeridas no código: `BMSClient.Region.usSouth`,
 `BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.
-* Substitua `"<yourProtectedRealm>"` pelo valor **Realm name** que você
-definiu no quadro **Customizado** do painel do {{site.data.keyword.amashort}}. 
-* Substitua `"<serviceTenantID>"` pelo valor **tenantId** recuperado a partir de **Opções
-de dispositivo móvel**. Veja [Configurando o Mobile Client Access para autenticação customizada](#custom-auth-ios-configmca).
-
-### Inicializando o client SDK
-{: #custom-ios-sdk-initialize}
    
   
 ## Testando a Autenticação
@@ -152,11 +162,11 @@ delegação de autenticação customizada:
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
- if error == nil {
+	   if error == nil {
 	       print ("response:\(response?.responseText), no error")
- } else {
+	    } else {
 	       print ("error: \(error)")
- }
+	    }
 	}
 
 	request.send(completionHandler: callBack)

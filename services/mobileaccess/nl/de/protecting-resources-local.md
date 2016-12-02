@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-07"
+
 ---
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # {{site.data.keyword.amashort}} mit einer lokalen Entwicklungsumgebung verwenden
 {: #protecting-local}
@@ -13,11 +14,11 @@ Sie können Ihre lokale Entwicklungsumgebung so konfigurieren, dass sie den {{si
 
 ## Vorbereitungen
 {: #before-you-begin}
-Voraussetzungen:
 
+Voraussetzungen:
 * Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
-* Die Parameterwerte Ihres Service. Öffnen Sie den Service im {{site.data.keyword.Bluemix_notm}}-Dashboard. Klicken Sie auf **Mobile Systemerweiterungen**. In den Feldern **Route** und **App-GUID/TenantId** werden die Werte `applicationRoute` und `appGUID` (auch als `tenantId` bezeichnet) angezeigt. Diese Werte benötigen Sie für die Initialisierung des SDK und zum Senden von Anforderungen an die Back-End-Anwendung.
-*  Suchen Sie die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung gehostet wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen. Der Regionswert muss einer der folgenden sein: **USA (Süden)**, **Sydney** oder **Vereinigtes Königreich**. Die genauen konstanten Werte des SDK, die diesen Namen entsprechen, sind in den Codebeispielen angegeben. 
+* Die Parameterwerte Ihres Service. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf **Mobile Systemerweiterungen**. In den Feldern **Route** und **App-GUID/TenantId** werden die Werte `applicationRoute` und `appGUID` (auch als `tenantId` bezeichnet) angezeigt. Diese Werte benötigen Sie für die Initialisierung des SDK und zum Senden von Anforderungen an die Back-End-Anwendung.
+*  Suchen Sie die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung gehostet wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen. Der Regionswert muss einer der folgenden sein: **USA (Süden)**, **Sydney** oder **Vereinigtes Königreich**. Die genauen konstanten Werte des SDK, die diesen Namen entsprechen, sind in den Codebeispielen angegeben.
 
 ## Server-SDK einrichten
 {: #serversetup}
@@ -38,7 +39,7 @@ Zur Verwendung von {{site.data.keyword.amashort}} mit einem lokalen Entwicklungs
 }
 ```
 
-Ersetzen Sie den Wert *appGUID* durch den Wert `appGUID`, den Sie im Schritt [Vorbereitungen](#before-you-begin) abgerufen haben. 
+Ersetzen Sie den Wert *appGUID* durch den Wert `appGUID`, den Sie im Schritt [Vorbereitungen](#before-you-begin) abgerufen haben.
 
 1. Klicken Sie auf **Berechtigungsnachweise anzeigen** auf der Kachel für den {{site.data.keyword.amashort}}-Service in Ihrer mobilen Back-End-Anwendung im {{site.data.keyword.Bluemix_notm}}-Dashboard. Es wird ein JSON-Objekt mit Zugriffsberechtigungsnachweisen angezeigt, die {{site.data.keyword.amashort}} für Ihre mobile Back-End-Anwendung bereitstellt.
 
@@ -78,7 +79,7 @@ var MCABackendStrategy =
 // Restlicher Code
 ```
 
-Ersetzen Sie den Wert *appGUID* durch den Wert `appGUID`, den Sie im Schritt [Vorbereitungen](#before-you-begin) abgerufen haben. 
+Ersetzen Sie den Wert *appGUID* mit dem Wert `appGUID` (siehe [Vorbereitungen](#before-you-begin)).
 
 
 ## {{site.data.keyword.amashort}}-Anwendungen zur Arbeit mit einem lokalen Entwicklungsserver konfigurieren
@@ -88,7 +89,7 @@ Initialisieren Sie die {{site.data.keyword.amashort}}-Client-SDKs mit der realen
 
 Ersetzen Sie die Region durch die richtige Region.
 
-Ersetzen Sie die Werte *appGUID* und *bluemixAppRoute* durch die Werte, die Sie im Schritt [Vorbereitungen](#before-you-begin) abgerufen haben. 
+Ersetzen Sie die Werte *appGUID* und *bluemixAppRoute* durch die Werte, die Sie im Schritt [Vorbereitungen](#before-you-begin) abgerufen haben.
 
 Es ist möglich, dass Sie `localhost` in den folgenden Beispielen in die tatsächliche IP-Adresse Ihres Entwicklungsservers ändern müssen.
 
@@ -105,8 +106,7 @@ BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID, BMSClient.RE
 BMSClient.getInstance().setAuthorizationManager(
                  MCAAuthorizationManager.createInstance(this, tenantId));
 
-Request request =
-			new Request(baseRequestUrl + "/resource/path", Request.GET);
+Request request = new Request(baseRequestUrl + "/resource/path", Request.GET);
 
 request.send(this, new ResponseListener() {
 	@Override
@@ -140,7 +140,7 @@ NSString *tenantId = "your-MCA-service-tenantID";
 [[IMFClient sharedInstance]
 			initializeWithBackendRoute:bluemixAppRoute
 			backendGUID:bluemixAppGUID];
-			
+
 [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: tenantId];
 
 
@@ -177,7 +177,7 @@ BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedIn
            
 let requestPath = baseRequestUrl + "/resource/path"               
 let request = Request(url: requestPath, method: HttpMethod.GET)
-            
+
 request.send { (response, error) in
 	if let error = error {
     			print("Connection failure")
@@ -218,4 +218,3 @@ var request = new MFPRequest(baseRequestUrl +
 
 request.send(success, failure);
 ```
-

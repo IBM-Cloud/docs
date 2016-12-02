@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-03"
+
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -10,7 +11,6 @@ lastupdated: "2016-10-02"
 
 # 使用 Google 凭证认证用户
 {: #google-auth}
-
 
 您可以将 {{site.data.keyword.amafull}} 服务配置为将 Google 用作身份提供者来保护资源。然后，您的移动或 Web 应用程序用户可以使用自己的 Google 凭证进行认证。
 {:shortdesc}
@@ -47,7 +47,7 @@ lastupdated: "2016-10-02"
 {{site.data.keyword.amashort}} Web 应用程序请求流类似于移动客户端流。但是，{{site.data.keyword.amashort}} 保护 Web 应用程序而非 {{site.data.keyword.Bluemix_notm}} 后端资源。
 
   * Web 应用程序会发送初始请求（例如，通过登录表单）。
-  * 最终重定向会指向 Web 应用程序本身的受保护区域，而非后端受保护资源。 
+  * 最终重定向会指向 Web 应用程序本身的受保护区域，而非后端受保护资源。
 
 
 
@@ -58,4 +58,3 @@ lastupdated: "2016-10-02"
 * [启用 iOS 应用程序 (Swift SDK) 的 Google 认证](google-auth-ios-swift-sdk.html)
 * [启用 iOS 应用程序 (Objective-C SDK) 的 Google 认证](google-auth-ios.html)
 * [启用 Cordova 应用程序的 Google 认证](google-auth-cordova.html)
-

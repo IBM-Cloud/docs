@@ -1,18 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016 lastupdated: "2016-10-02"
+  years: 2015, 2016
+lastupdated: "2016-11-03"
+
 ---
-
 {:shortdesc: .shortdesc}
-
 
 # Ativando a autenticação do Facebook para seus aplicativos iOS (Objective-C SDK)
 {: #facebook-auth-ios}
 
-Para usar o Facebook como provedor de identidade em seus aplicativos
-{{site.data.keyword.amafull}} iOS, inclua e configure a Plataforma iOS para seu
-aplicativo Facebook.
+Para usar o Facebook como um provedor de identidade em seus aplicativos {{site.data.keyword.amafull}} iOS, inclua e configure a Plataforma iOS para seu aplicativo Facebook.
 
 {:shortdesc}
 
@@ -23,21 +21,44 @@ Swift iOS](facebook-auth-ios-swift-sdk.html)).
 
 ## Antes de Começar
 {: #facebook-auth-ios-before}
+
 Você deve ter:
 * Um projeto do iOS configurado para trabalhar com CocoaPods.  Para obter mais informações, veja **Instalar o
-CocoaPods** em [Configurando o SDK iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).
+CocoaPods** em [Configurando o SDK iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
    **Nota:** não é necessário instalar o {{site.data.keyword.amashort}} client SDK principal antes de continuar.
-* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
-* Um ID de aplicativo do Facebook. Para obter mais informações, veja [Obtendo um ID do aplicativo Facebook do Portal do Desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que é protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
+* Seu valor **AppGUID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. 
+Clique no botão **Opções móveis**. O valor
+`appGUID` (também conhecido como
+`tenantId`) é exibido no campo **App
+GUID / TenantId**. Você precisará desse valor para
+inicializar o Gerenciador de Autorização.
+* Um ID de aplicativo do Facebook. Para obter mais
+informações, consulte
+[Criando um aplicativo no website Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Configurando seu aplicativo Facebook para a plataforma iOS
 {: #facebook-auth-ios-config}
+No site Facebook for Developers:
+
+1. Efetue login em sua conta em [Facebook for Developers](https://developers.facebook.com). 
+Para obter informações sobre como criar um novo aplicativo,
+consulte https://console.{
+DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+
+1. Assegure-se de que a plataforma iOS tenha sido incluída em seu aplicativo. 
+Ao incluir ou configurar a plataforma iOS, é necessário fornecer
+o **bundleId** de seu aplicativo iOS. Para
+localizar o **bundleId** de seu aplicativo
+iOS, procure o **Identificador de pacote
+configurável** no arquivo
+`info.plist` ou na guia
+**Geral** do projeto Xcode.
 
 
-1. Em seu aplicativo Facebook no Portal do Desenvolvedor do Facebook, clique em **Configurações > Incluir plataforma > iOS**.
+1. Clique em **Salvar Configurações**.
 
-1. Especifique o *bundleId* de seu aplicativo iOS. Para localizar o *bundleId* de seu aplicativo iOS, procure o **Identificador de pacote configurável** no arquivo `info.plist` ou na guia **Geral** do projeto do Xcode.
-**Dica**: considere a ativação do sufixo de esquema URL ou a Conexão única se estiver planejamento usar esses recursos.
+	**Dica**: considere a ativação do sufixo de esquema URL ou a Conexão única se estiver planejamento usar esses recursos.
 
 1. Clique em **Salvar Configurações**.
 
@@ -46,19 +67,14 @@ CocoaPods** em [Configurando o SDK iOS](https://console.{DomainName}/docs/servic
 
 Depois de configurado o ID do aplicativo Facebook e seu aplicativo Facebook para atender clientes iOS, é possível ativar a autenticação do Facebook no {{site.data.keyword.amashort}}.
 
-1. Abra seu app no painel do {{site.data.keyword.Bluemix}}.
+1. Abra o seu serviço no painel do {{site.data.keyword.amashort}}.
+1. Na guia **Gerenciar**, acione
+**Autorização**.
+	1. Expanda a seção **Facebook**.
+	1. Inclua o **ID do aplicativo Facebook** e clique em **Salvar**.
 
-1. Clique em **Opções móveis** e anote a
-**Rota** (`applicationRoute`) e o **GUID do
-app** (`applicationGUID`). Eles serão necessários ao inicializar o SDK.
-
-1. Clique no ladrilho {{site.data.keyword.amashort}}. O painel do {{site.data.keyword.amashort}} é carregado.
-
-1. Clique no botão **Configurar** no painel **Facebook**.
-
-1. Especifique o ID do aplicativo Facebook e clique em **Salvar**.
-
-## Configurando o {{site.data.keyword.amashort}} client SDK para iOS
+## Configurando o {{site.data.keyword.amashort}}
+SDK do client Facebook para iOS
 {: #facebook-auth-ios-sdk}
 
 ### Instalando o CocoaPods
@@ -68,12 +84,13 @@ O {{site.data.keyword.amashort}} client SDK é distribuído com o CocoaPods, um 
 
 1. Abra o Terminal e execute o comando `pod --version`. Se você já tiver o CocoaPods instalado, o número da versão será exibido. É possível pular para a próxima seção deste tutorial.
 
-1. Instale o CocoaPods executando `sudo gem install cocoapods`. Veja o [website CocoaPods](https://cocoapods.org/) se precisar de orientação adicional.
+1. Instale o CocoaPods executando `sudo gem install cocoapods`. Consulte o [website do CocoaPods](https://cocoapods.org/) se precisar de orientação adicional.
 
-### Instalando o {{site.data.keyword.amashort}} client SDK com o CocoaPods
+### Instalando o {{site.data.keyword.amashort}}
+SDK do client Facebook com o CocoaPods
 {: #facebook-auth-install-cocoapods}
 
-1. Em seu projeto do iOS, edite o `Podfile` e a linha a seguir:
+1. Em seu projeto iOS, edite o `Podfile` e a linha a seguir:
 
 	```
 	pod 'IMFFacebookAuthentication'
@@ -89,68 +106,69 @@ O {{site.data.keyword.amashort}} client SDK é distribuído com o CocoaPods, um 
 ### Configurando seu projeto do iOS para autenticação do Facebook
 {: #facebook-auth-ios-configproject}
 
-1. Localize o arquivo `info.plist`, normalmente localizado na pasta `Arquivos de apoio` em seu projeto do Xcode.
+1. Localize o arquivo `info.plist`, normalmente localizado na pasta `Arquivos de apoio` em seu projeto Xcode.
 
 1. Configure a integração do Facebook incluindo as propriedades a seguir em seu arquivo `info.plist`:
 
 	![image](images/ios-facebook-infoplist-settings.png)
 
-	Atualize o esquema URL e as propriedades FacebookappID com seu ID do aplicativo Facebook
-
 Também é possível atualizar o arquivo `info.plist` clicando com o botão direito no arquivo, selecionando **Abrir como > Código-fonte** e incluindo o XML a seguir:
 
- ```XML
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb{your-facebook-application-id}</string>
-			</array>
-		</dict>
-	</array>
-	<key>FacebookAppID</key>
-	<string>{your-facebook-application-id}</string>
-	<key>FacebookDisplayName</key>
-	<string>MyApp</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fbauth</string>
-		<string>fbauth2</string>
-	</array>
-	<key>NSAppTransportSecurity</key>
+```XML
+<key>CFBundleURLTypes</key>
+<array>
 	<dict>
-	    <key>NSExceptionDomains</key>
-	    <dict>
-	        <key>facebook.com</key>
-	        <dict>
-	            <key>NSIncludesSubdomains</key>
-	            <true/>                
-	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	            <false/>
-	        </dict>
-	        <key>fbcdn.net</key>
-	        <dict>
-	            <key>NSIncludesSubdomains</key>
-	            <true/>
-	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	            <false/>
-	        </dict>
-	        <key>akamaihd.net</key>
-	        <dict>
-	            <key>NSIncludesSubdomains</key>
-	            <true/>
-	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	            <false/>
-	        </dict>
-	    </dict>
+		<key>CFBundleURLSchemes</key>
+		<array>
+			<string>fb{your-facebook-application-id}</string>
+		</array>
 	</dict>
+</array>
+<key>FacebookAppID</key>
+<string>{your-facebook-application-id}</string>
+<key>FacebookDisplayName</key>
+<string>MyApp</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+	<string>fbauth</string>
+	<string>fbauth2</string>
+</array>
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSExceptionDomains</key>
+    <dict>
+        <key>facebook.com</key>
+        <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+            <false/>
+        </dict>
+        <key>fbcdn.net</key>
+        <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+            <false/>
+        </dict>
+        <key>akamaihd.net</key>
+        <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+            <false/>
+        </dict>
+    </dict>
+</dict>
 ```
 {: codeblock}
 
-Atualize o esquema URL e as propriedades FacebookappID com seu ID do aplicativo Facebook.
+Atualize o esquema URL e as propriedades
+`FacebookappID`
+com o **ID do aplicativo Facebook**.
 
- **Importante**: assegure-se de não substituir quaisquer propriedades existentes no arquivo `info.plist`. Se você tiver propriedades de sobreposição, deverá mesclá-las manualmente. Para obter mais informações, veja [Configurar o projeto Xcode](https://developers.facebook.com/docs/ios/getting-started/) e [Preparando seus apps para iOS9](https://developers.facebook.com/docs/ios/ios9).
+ **Importante**: assegure-se de não substituir quaisquer propriedades existentes no arquivo `info.plist`. Se você tiver propriedades de sobreposição, deverá mesclá-las manualmente. Para obter mais informações, consulte [Configurar o projeto Xcode](https://developers.facebook.com/docs/ios/getting-started/) e [Preparando seus apps para iOS9](https://developers.facebook.com/docs/ios/ios9).
+
 
 ## Inicializando o {{site.data.keyword.amashort}} client SDK
 {: #facebook-auth-ios-initalize}
@@ -159,9 +177,6 @@ Inicialize o client SDK passando a rota do app (`applicationRoute`) e o GUID do 
 
 Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo.
 
-1. Abra a página principal do painel do {{site.data.keyword.Bluemix_notm}} e clique em seu app. Clique em **Opções móveis** e anote a **Rota**
-(`applicationRoute`) e o **GUID do app**
-(`applicationGUID`).
 
 1. Importe a estrutura necessária na classe em que deseja usar o {{site.data.keyword.amashort}} client SDK incluindo os cabeçalhos a seguir:
 
@@ -172,8 +187,7 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 	#import <IMFCore/IMFCore.h>
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
-```
-{: codeblock}
+	```	
 
 	####Swift
 	{: #bridgingheader-swift}
@@ -181,26 +195,25 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 	O {{site.data.keyword.amashort}} client SDK é implementado usando Objective-C; portanto, pode ser necessário incluir um cabeçalho ponte em seu projeto swift.
 
 	1. Clique com o botão direito no projeto em Xcode e selecione **Novo arquivo...**
-	* Na categoria **Origem iOS**, selecione `Arquivo de cabeçalho`.
-	* Denomine-o `BridgingHeader.h`.
-	* Inclua importações ao seu cabeçalho de ponte:
+		1. Na categoria **Origem iOS**, selecione `Arquivo de cabeçalho`.
+		1. Denomine-o `BridgingHeader.h`.
+		1. Inclua importações ao seu cabeçalho de ponte:
 
-	```Objective-C
-	#import <IMFCore/IMFCore.h>
-	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
-	#import <FacebookSDK/FacebookSDK.h>
-```
-{: codeblock}
+			```Objective-C
+			#import <IMFCore/IMFCore.h>
+			#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
+			#import <FacebookSDK/FacebookSDK.h>
+			```
 
-	* Clique em seu projeto em Xcode e selecione a guia **Configurações de compilação**.
-	* Procure por **Cabeçalho de ponte do Objective-C**.
-	* Configure o valor para o local do seu arquivo `BridgingHeader.h`, por exemplo: `$(SRCROOT)/MyApp/BridgingHeader.h`.
-	* Assegure-se de que seu cabeçalho de ponte esteja sendo selecionado pelo Xcode, compilando o seu projeto. Nenhuma mensagem de falha deve ser vista.
+	1. Clique em seu projeto em Xcode e selecione a guia **Configurações de compilação**.
+		1. Procure por **Cabeçalho de ponte do Objective-C**.
+		1. Configure o valor para o local do seu arquivo `BridgingHeader.h`, por exemplo: `$(SRCROOT)/MyApp/BridgingHeader.h`.
+		1. Assegure-se de que seu cabeçalho de ponte esteja sendo selecionado pelo Xcode, compilando o seu projeto. Nenhuma mensagem de falha deve ser vista.
 
-3. Inicialize o client SDK.	Substitua `applicationRoute` e
-`applicationGUID` pelos valores **Route** e
-**App GUID** obtidos em **Opções móveis** no painel
-{{site.data.keyword.Bluemix_notm}}.
+2. Inicialize o client SDK.	Para informações sobre
+como obter o `applicationRoute` e o
+`applicationGUID`, consulte
+[Antes de iniciar](#before-you-begin)).
 
 	####Objective-C
 	{: #approute-objc}
@@ -210,7 +223,6 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 			initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
-{: codeblock}
 
 	####Swift
 	{: #approute-swift}
@@ -219,17 +231,17 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
 	 							backendGUID: "applicationGUID")
 	```
-{: codeblock}
 
 1. Inicialize o `AuthorizationManager` passando o parâmetro
-`tenantId` do serviço {{site.data.keyword.amashort}}. É possível localizar esse valor clicando no botão **Mostrar credenciais** no quadro do serviço {{site.data.keyword.amashort}}.
+`tenantId` do serviço {{site.data.keyword.amashort}}. 
+Consulte [Antes de começar].(#before-you-begin)).
+
 	####Objective-C
 	{: #authman-objc}
 
 	```Objective-C
      [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
 	```
-{: codeblock}
 
 	####Swift
 	{: #authman-swift}
@@ -237,7 +249,6 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 	```Swift
   IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
 	```
-{: codeblock}
 
 1. Notifique o Facebook SDK sobre a ativação do app e registre o Manipulador de
 autenticação do Facebook incluindo o código a seguir no método
@@ -249,8 +260,7 @@ autenticação do Facebook incluindo o código a seguir no método
 	```Objective-C
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
-```
-{: codeblock}
+	```
 
 	####Swift
 	{: #activate-swift}
@@ -258,8 +268,7 @@ autenticação do Facebook incluindo o código a seguir no método
 	```Swift
 		FBAppEvents.activateApp()
 		IMFFacebookAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
-```
-{: codeblock}
+	```
 
 1. Inclua o código a seguir no delegado do app.
 
@@ -271,10 +280,8 @@ autenticação do Facebook incluindo o código a seguir no método
 			sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
 
 		return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
-
 	}
-```
-{: codeblock}
+	```
 
 	####Swift
 	{: #appdelegate-swift}
@@ -288,6 +295,7 @@ autenticação do Facebook incluindo o código a seguir no método
 	}
 ```
 
+
 ## Testando a Autenticação
 {: #facebook-auth-ios-testing}
 Após a inicialização do client SDK e o registro do Gerenciador de autenticação do Facebook, será possível começar a fazer solicitações para seu backend móvel.
@@ -296,9 +304,9 @@ Após a inicialização do client SDK e o registro do Gerenciador de autenticaç
 {: #facebook-auth-ios-testing-before}
 Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido por {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel recém-criado no navegador. Abra a URL a seguir: `{applicationRoute}/protected`.
+1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel recém-criado em seu navegador. Abra a URL a seguir: `{applicationRoute}/protected`.
 Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
-<br/>O terminal `/protected` de um backend móvel que foi criado com o modelo do MobileFirst Services Starter está protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
+<br/>O terminal `/protected` de um backend móvel criado com o modelo do MobileFirst Services Starter é protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada no navegador. Essa mensagem é retornada porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o {{site.data.keyword.amashort}} client SDK.
 
 1. Use seu aplicativo iOS para fazer uma solicitação ao mesmo terminal.
 
@@ -321,7 +329,6 @@ Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
 		}
 	}];
 	```
-{: codeblock}
 
 	####Swift
 	{: #requestpath-swift}
@@ -339,7 +346,6 @@ Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`
 		}
 	};
  ```
- {: codeblock}
 
 1. Execute o aplicativo. Uma tela de login do Facebook é exibida.
 

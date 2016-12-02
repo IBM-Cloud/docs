@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-11-03"
+
 ---
 {:screen: .screen}
 {:shortdesc: .shortdesc}
@@ -10,15 +11,16 @@ lastupdated: "2016-10-10"
 # Android アプリ用の Google 認証の使用可能化
 {: #google-auth-android}
 
-Google を使用して、{{site.data.keyword.amafull}} Android アプリケーションのユーザーを認証します。{{site.data.keyword.amashort}} セキュリティー機能を追加します。 
+Google を使用して、{{site.data.keyword.amafull}} Android アプリケーションのユーザーを認証します。{{site.data.keyword.amashort}} セキュリティー機能を追加します。
 
 ## 開始する前に
 {: #before-you-begin}
 以下が必要です。
-
-* Gradle と連動して機能するように構成された、Android Studio 内の Android プロジェクト。{{site.data.keyword.amashort}} Client SDK が装備されている必要はありません。  
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
-* サービス・パラメーター値。{{site.data.keyword.Bluemix_notm}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**をクリックします。`applicationRoute` および `tenantId` (`appGUID` とも呼ばれる) の値が、**「経路」**および**「アプリ GUID」/「TenantId」**フィールドに表示されます。これらの値は、SDK を初期化するため、および要求をバックエンド・アプリケーションに送信するために必要になります。
+* {{site.data.keyword.amafull}} サービスのインスタンスおよび {{site.data.keyword.Bluemix_notm}} アプリケーション。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
+* バックエンド・アプリケーションの URL (**「アプリの経路 (App Route)」**)。バックエンド・アプリケーションの保護されたエンドポイントに要求を送信するためにこの値が必要になります。
+* **TenantID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
+* {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域の値は、`「米国南部」`、`「英国」`、または`「シドニー」`のいずれかでなければならず、また WebView Javascript コードで必要な SDK 値 (`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、または `BMSClient.REGION_UK`) に対応している必要があります。{{site.data.keyword.amashort}} クライアントを初期化するためにこの値が必要になります。
+* Gradle と連動して機能するように構成された Android プロジェクト。このプロジェクトに {{site.data.keyword.amashort}} Client SDK が装備される必要はありません。  
 
 {{site.data.keyword.amashort}} Android アプリ用に Google 認証をセットアップするには、以下をさらに構成する必要があります。
 * {{site.data.keyword.Bluemix_notm}} アプリケーション
@@ -28,14 +30,14 @@ Google を使用して、{{site.data.keyword.amafull}} Android アプリケー�
 {: #create-google-project}
 
 Google を ID プロバイダーとして使用し始めるには、[Google Developer Console](https://console.developers.google.com) にプロジェクトを作成します。
-プロジェクト作成の一環として、Google Client ID を取得します。Google Client ID は、Google 認証によって使用される、アプリケーション用の固有 ID であり、{{site.data.keyword.Bluemix_notm}} アプリケーションのセットアップに必要です。
+プロジェクト作成の一環として、Google Client ID を取得します。Google Client ID は、Google 認証によって使用される、アプリケーション用の固有 ID であり、{{site.data.keyword.amashort}} サービスのセットアップに必要です。
 
 コンソールから以下を実行します。
 
 1. **Google+** API を使用してプロジェクトを作成します。
 2. **OAuth** ユーザー・アクセス権限を追加します。
 3. 資格情報を追加する前に、プラットフォーム (Android) を選択する必要があります。
-4. 資格情報を追加します。 
+4. 資格情報を追加します。
 
 資格情報の作成を完了するには、**署名証明書のフィンガープリント**を追加する必要があります。
 
@@ -60,10 +62,10 @@ Android OS では、Android デバイスにインストールされたすべて�
 
 ###パッケージ名
 
-1. 「Credentials」ダイアログで、Android アプリケーションのパッケージ名を入力します。 
+1. 「Credentials」ダイアログで、Android アプリケーションのパッケージ名を入力します。
 
-  Android アプリケーションのパッケージ名を見つけるには、Android Studio で `AndroidManifest.xml` ファイルを開き、次を探してください。 
-  	
+  Android アプリケーションのパッケージ名を見つけるには、Android Studio で `AndroidManifest.xml` ファイルを開き、次を探してください。
+
   	`<manifest package="{your-package-name}">`
 
 1. 完了したら、**「Create (作成)」**をクリックします。これで資格情報の作成は完了します。
@@ -78,18 +80,15 @@ Android OS では、Android デバイスにインストールされたすべて�
 
 これで Android 用の Google Client ID を取得したので、{{site.data.keyword.amashort}} ダッシュボードで Google 認証を使用可能にすることができます。
 
-1. {{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。
-
-1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードがロードされます。
-
-1. **「Google」**パネルで**「構成」**ボタンをクリックします。
-
-1. **「Android のアプリケーション ID (Application ID for Android)」**で、Android の Google Client ID を指定し、**「保存」**をクリックします。
+1. {{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。
+1. **「管理」**タブで、**「許可」**をオンに切り替えます。
+1. **「Google」**セクションを展開します。
+1. **「Android のクライアント ID (Client ID for Android)」**で、Android の Google Client ID を指定し、**「保存」**をクリックします。
 
 ## Android 用の {{site.data.keyword.amashort}} Client SDK の構成
 {: #google-auth-android-sdk}
 
-1. Android Studio に戻ります。
+Android Studio プロジェクトから、以下を行います。
 
 1. アプリケーション・モジュールの `build.gradle` ファイルを開きます。
 
@@ -130,13 +129,14 @@ Android OS では、Android デバイスにインストールされたすべて�
 
 	BMSClient.getInstance().setAuthorizationManager(
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
-						
+
 	GoogleAuthenticationManager.getInstance().register(this);
 ```
 
-  * `BMSClient.REGION_UK` は適切な地域に置き換えてください。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
-地域値は、`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、または `BMSClient.REGION_UK` のうちいずれかのはずです。
-  * `<MCAServiceTenantId>` を `tenantId` 値 (『[開始する前に](##before-you-begin)』を参照) に置き換えます。 
+  * `BMSClient.REGION_UK` をご使用の {{site.data.keyword.Bluemix_notm}} **「地域」**に置き換えます。
+  * `<MCAServiceTenantId>` を **TenantId** 値に置き換えます。
+
+	これらの値の取得について詳しくは、[開始する前に](##before-you-begin)を参照してください。
 
    **注:** Android アプリケーションの対象が Android バージョン 6.0 (API レベル 23) 以降の場合、そのアプリケーションに、`register` の呼び出しの前に `android.permission.GET_ACCOUNTS` 呼び出しがあるようにする必要があります。詳しくは、[https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window} を参照してください。
 
@@ -153,13 +153,12 @@ Android OS では、Android デバイスにインストールされたすべて�
 
 ## 認証のテスト
 {: #google-auth-android-test}
-Client SDK が初期化され、Google 認証マネージャーの登録が完了すると、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
-
+Client SDK が初期化され、Google 認証マネージャーの登録が完了すると、バックエンド・アプリケーションに要求を出すことができるようになります。
 
 テストを開始する前に、**MobileFirst Services Starter** ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションがなければならず、また、{{site.data.keyword.amashort}} `/protected` エンドポイントによって保護されているリソースが既に存在している必要があります。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
 
 1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` (例えば `http://my-mobile-backend.mybluemix.net/protected`) を開くことによって、モバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。
- `{applicationRoute}` 値の取得については、『[開始する前に](#before-you-begin)』を参照してください。 
+ `{applicationRoute}` 値の取得については、『[開始する前に](#before-you-begin)』を参照してください。
 
 	MobileFirst Services ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。したがって、このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみになります。結果的に、デスクトップ・ブラウザーに `Unauthorized` が表示されます。
 

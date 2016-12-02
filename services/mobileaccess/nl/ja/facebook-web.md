@@ -2,13 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-06-15"
 
 ---
 
 # Web アプリ用の Facebook 認証の使用可能化
-
-最終更新日: 2016 年 6 月 15 日
-{: .last-updated}
+{: #facebook_web}
 
 Facebook を使用して、Web アプリのユーザーを認証します。
 
@@ -83,5 +82,3 @@ grant_type='authorization_code'
 ## 認証のテスト
 これで、保護リソースに要求を出すことができるようになりました。
 保護リソースへのすべての要求には、許可要求ヘッダー・フィールド内に `access_token` が含まれている必要があります。
-
-

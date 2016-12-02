@@ -2,14 +2,15 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-30"
+
 ---
 
 {:shortdesc: .shortdesc}
 
 
 # {{site.data.keyword.amashort}} SDK、サンプル、および API リファレンス
-{{site.data.keyword.amafull}} SDK をアプリに追加するには、使用する SDK を選択します。次に、それらの SDK をアプリにプルするように依存関係マネージャーを構成します。
+{{site.data.keyword.amafull}} SDK をクライアント・アプリに追加するには、使用する SDK を選択します。次に、それらの SDK をアプリにプルするように依存関係マネージャーを構成します。
 {:shortdesc}
 
 **注:** 以降のセクションに、SDK のインストールについての追加情報があります。
@@ -17,7 +18,7 @@ lastupdated: "2016-10-02"
 ## Core SDK
 {: #coresdk}
 
-Core SDK には、モバイル・アプリのカスタム認証、ロギング、およびモニタリングを使用可能にするための API が含まれています。
+Core SDK には、カスタム認証およびロギングを使用可能にするための API が含まれています。
 
 ### Android
 {: #coresdk-android}
@@ -81,7 +82,7 @@ pod 'IMFCore'
 
 Mobile Client Access Cordova プラグインをインストールします。
 ```Bash
-cordova plugin add ibm-mfp-core
+cordova plugin add bms-core
 ```
 {: codeblock}
 

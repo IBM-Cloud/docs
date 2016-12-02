@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-2"
+
 ---
 
 # Autenticación de usuarios con un proveedor de identidades personalizadas
@@ -42,9 +43,6 @@ El flujo de solicitud de aplicación web de {{site.data.keyword.amashort}} es si
 
   * La solicitud inicial la envía la aplicación web (desde un formulario de inicio de sesión, por ejemplo).
   * El redireccionamiento final es en el área protegida de la propia aplicación web, en lugar de en el recurso protegido de fondo. 
-
-
-
 
 ## Proveedores de identidad personalizados
 {: #custom-id-about}

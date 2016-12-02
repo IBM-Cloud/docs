@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-11-01"
 
 ---
 
@@ -31,10 +31,10 @@ lastupdated: "2016-10-03"
 要开始将 Google 用作身份提供者，请在 [Google 开发者控制台](https://console.developers.google.com)中创建项目。创建项目的步骤之一是获取 **Google 客户端标识**和**私钥**。Google 客户端标识和私钥是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.amashort}} 仪表板时需要这些标识。
 
 1. 在 Google 开发者控制台中打开 Google 应用程序。 
-3. 添加 Google+ API。 
+3. 添加 **Google+** API。 
 3. 使用 OAuth 创建凭证。在应用程序类型中选择 Web 应用程序。在“授权重定向 URI”框中，输入 {{site.data.keyword.amashort}} 重定向 URI。
 从 {{site.data.keyword.amashort}} 仪表板的 Google 配置屏幕中获取 {{site.data.keyword.amashort}} 重定向授权 URI（请参阅以下步骤）。 
-4. 保存更改。记录 Google 客户端标识和应用程序私钥。
+4. 保存更改。记录 **Google 客户端标识**和**应用程序私钥**。
 
 
 ## 配置 {{site.data.keyword.amashort}} 进行 Google 认证
@@ -42,14 +42,13 @@ lastupdated: "2016-10-03"
 
 在您已经有 Google 应用程序标识和私钥之后，可以在 {{site.data.keyword.amashort}} 仪表板中启用 Google 认证。
 
-1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。
-2. 单击 {{site.data.keyword.amashort}} 磁贴。这将装入 {{site.data.keyword.amashort}}“仪表板”。
-3. 单击 Google 面板上的按钮。
+1. 打开 {{site.data.keyword.amashort}} 服务仪表板。
+1. 在**管理**选项卡中，将**授权**切换为“开启”。
+1. 打开 **Google** 部分。
+1. 选中**向 Web 应用程序添加 Google**。
 4. 在**针对 Web 配置**部分中：   
-    * 记录 **Google 开发者控制台的 Mobile Client Access 重定向 URI** 文本框中的值。在
-步骤 3 中，您需要将此值添加到 **Google 开发人员门户网站**的 **
-客户端标识中 Web 应用程序的限制**下的**授权重定向 URI** 框中。
-    * 输入 **Google 客户端标识**和**客户端私钥**。
+    * 记录 **Google 开发者控制台的 Mobile Client Access 重定向 URI** 文本框中的值。您需要将此值添加到 **Google 开发人员门户网站**的 **Web 应用程序客户端标识的限制**下的**授权重定向 URI** 框中。
+    * 输入**客户端标识**和**客户端私钥**。
     * 在 **Web 应用程序重定向 URI**中输入重定向 URI。
 此值用于在完成授权流程之后可访问重定向 URI，由开发者确定。
 5. 单击**保存**。
@@ -58,14 +57,14 @@ lastupdated: "2016-10-03"
 ## 使用 Google 作为身份提供者实施 {{site.data.keyword.amashort}} 授权流程
 {: #google-auth-flow}
 
-针对每一个 {{site.data.keyword.amashort}} 服务实例会自动创建 `VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，通过单击应用程序左侧导航器的**环境变量**，可以查看该环境变量。
+针对每一个 {{site.data.keyword.amashort}} 服务实例会自动创建 `VCAP_SERVICES` 环境变量，该环境变量包含授权流程所需的属性。它包含 JSON 对象，通过单击 {{site.data.keyword.amashort}} 服务仪表板中的**服务凭证**选项卡，可以查看该对象。
 
 要启动授权过程：
 
-1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中，检索授权端点 (`authorizationEndpoint`) 和客户端标识 (`clientId`)。 
+1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中，检索授权端点 (`authorizationEndpoint`) 和客户端标识 (`clientId`)。`var cfEnv = require("cfenv");` 
+	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
-	**注：**如果在添加 Web 支持之前，您已向应用程序添加了
-{{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
+	**注：**如果在添加 Web 支持之前，您已向应用程序添加了 {{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
  
 	美国南部： 
 
@@ -103,26 +102,23 @@ lastupdated: "2016-10-03"
 		next() 
 	} else { 
 		// If not - redirect to authorization server 
-		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-		var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
-		var clientId = mcaCredentials.clientId; 
-		var redirectUri = "http://some-server/oauth/callback"; // Your web application redirect URI 
-		var redirectUrl = authorizationEndpoint + "?response_type=code";
-		redirectUrl += "&client_id=" + clientId; 
-		redirectUrl += "&redirect_uri=" + redirectUri; 
-		res.redirect(redirectUrl); 
-	} 
-} 
+				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
+				var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
+				var clientId = mcaCredentials.clientId; 
+				var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI 
+				var redirectUrl = authorizationEndpoint + "?response_type=code";
+				redirectUrl += "&client_id=" + clientId; 
+				redirectUrl += "&redirect_uri=" + redirectUri; 
+				res.redirect(redirectUrl); 
+			} 
+		} 
 	}
 	```
 	{: codeblock}
 
-	请注意，`redirect_uri` 参数代表 Web 应用程序重定向 URI，必须等于 {{site.data.keyword.amashort}} 仪表板中定义的 URI。
+	请注意，`redirect_uri` 参数代表 Web 应用程序重定向 URI，因此必须与 {{site.data.keyword.amashort}} 仪表板中定义的 URI 一致。
 
-	重定向到授权端点之后，用户将从 Google 获取登录表单。
-在用户授予使用 Google 身份登录的许可权之后，{{site.data.keyword.amashort}} 服务将会通
-过提供授权代码作为查询参数来调
-用 Web 应用程序重定向 URI。
+	重定向到授权端点之后，用户将从 Google 获取登录表单。在用户授予使用 Google 身份登录的许可权之后，{{site.data.keyword.amashort}} 服务将会通过提供授权代码作为查询参数来调用 Web 应用程序重定向 URI。
 
 ## 获取令牌
 {: #google-auth-tokens}
@@ -167,7 +163,7 @@ lastupdated: "2016-10-03"
 	var formData = { 
 		grant_type: "authorization_code", 
 			client_id: mcaCredentials.clientId, 
-			redirect_uri: "http://some-server/oauth/callback",// Your web application redirect uri 
+			redirect_uri: "http://some-server/oauth/callback",// Your Web application redirect uri 
 			code: req.query.code 
 		} 
 
@@ -197,8 +193,7 @@ lastupdated: "2016-10-03"
 	POST 响应主体将包含以 Base64 编码的 `access_token` 和
 `id_token`。
 
-	在您收到访问令牌和身份令牌之后，您可以将 Web 会话标记为已认证，并可选择性地持久存储这些
-令牌。  
+	在您收到访问令牌和身份令牌之后，您可以将 Web 会话标记为已认证，并且可以选择持久存储这些令牌。  
 
 
 ##使用获取的访问和身份令牌

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-27"
+
 ---
 
 # {{site.data.keyword.amashort}}를 사용하여 Node.js 리소스 보호

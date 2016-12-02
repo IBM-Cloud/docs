@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
 
 # Configurazione dell'SDK client {{site.data.keyword.amashort}} per iOS (Objective-C)
@@ -15,13 +16,20 @@ Configura la tua applicazione iOS che sta utilizzando l'autenticazione personali
 
 ## Prima di cominciare
 {: #before-you-begin}
-Devi disporre di una risorsa che sia protetta da un'istanza del servizio {{site.data.keyword.amashort}} configurato per utilizzare un provider di identità personalizzato.  La tua applicazione mobile deve anche essere strumentata con l'SDK client {{site.data.keyword.amashort}}.  Per ulteriori informazioni, consulta:
+È necessario disporre di:
+
+* Una risorsa che sia protetta da un'istanza del servizio {{site.data.keyword.amashort}} configurata per utilizzare un provider di identità personalizzato (consulta [Configurazione dell'autenticazione personalizzata](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Il tuo valore **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}. Fai clic sul pulsante **Opzioni per dispositivi mobili**. Il valore `tenantId` (noto anche come `appGUID`)  viene visualizzato nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione.
+* Il tuo nome **Realm**. Questo è il valore che hai specificato nel campo **Nome realm** della sezione **Personalizzato** nella scheda **Gestione** del dashboard {{site.data.keyword.amashort}} (consulta [Configurazione dell'autenticazione personalizzata](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
+* L'URL della tua applicazione di back-end (**Rotta applicazione**). Avrai bisogno di questo valore per inviare le richieste agli endpoint protetti della tua applicazione di back-end.
+* La tua **Regione** {{site.data.keyword.Bluemix_notm}}. Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione visualizzato deve essere uno dei seguenti: `Stati Uniti Sud`, `Regno Unito` o `Sydney` e corrisponde ai valori delle SDK richiesti nel codice WebView Javascript: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` o `BMSClient.REGION_SYDNEY`. Avrai bisogno di questo valore per inizializzare il client {{site.data.keyword.amashort}}.
+
+Per ulteriori informazioni, consulta:
  * [Introduzione a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Configurazione dell'SDK Objective-C iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)
  * [Utilizzo di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Creazione di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
-
 
 
 ## Installazione dell'SDK client con CocoaPods
@@ -44,14 +52,12 @@ nome è `{il-tuo-nome-progetto}.xcworkspace`.
 
 1. Esegui `open {il-tuo-nome-progetto}.xcworkspace` dalla riga di comando per aprire il tuo spazio di lavoro del progetto iOS.
 
-
-
 ### Inizializzazione dell'SDK client
 {: #custom-ios-sdk-initialize}
 
-Inizializza l'SDK passando i parametri di rotta (`applicationRoute`) e GUID (`applicationGUID`) dell'applicazione. Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione
+Inizializza l'SDK passando i parametri **Rotta applicazione** (`applicationRoute`) e **TenantID** (`tenantID`). 
 
-1. Ottieni i valori di parametro della tua applicazione. Apri la tua applicazione nel dashboard {{site.data.keyword.Bluemix_notm}}. Fai clic su **Opzioni mobili** per visualizzare i valori per **Rotta** (`applicationRoute`) e **GUID applicazione** (`applicationGUID`).
+Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione
 
 1. Importa il framework `IMFCore` nella classe che desideri utilizzi l'SDK client.
 
@@ -73,25 +79,25 @@ Inizializza l'SDK passando i parametri di rotta (`applicationRoute`) e GUID (`ap
 	* Imposta il valore sull'ubicazione del tuo file `BridgingHeader.h`, ad esempio: `$(SRCROOT)/MyApp/BridgingHeader.h`
 	* Verifica che la tua intestazione di collegamento venga rilevata da Xcode compilando il tuo progetto.
 
-1. Inizializza l'SDK client. Sostituisci applicationRoute e applicationGUID con i valori per **Rotta** (`applicationRoute`) e **GUID applicazione** (`applicationGUID`) che hai ottenuto da **Opzioni mobili**.
+1. Inizializza l'SDK client. Sostituisci **Rotta applicaizone** (`applicationRoute`) e **TenantID** (`tenantID`) con i valori. Per ulteriori informazioni su come ottenere questi valori, consulta [Prima di cominciare](##before-you-begin).
 
 	Objective-C:
 
 	```Objective-C
 	[[IMFClient sharedInstance]
 			initializeWithBackendRoute:@"applicationRoute"
-			backendGUID:@"applicationGUID"];
+			backendGUID:@"tenantID"];
 	```
 
 	Swift:
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
-	 							backendGUID: "applicationGUID")
+	 							backendGUID: "tenantID")
 	```
 
 ## Inizializzazione di AuthorizationManager
-Inizializza AuthorizationManager passando il parametro `tenantId` del servizio {{site.data.keyword.amashort}}. Puoi trovare questo valore facendo clic sul pulsante **Visualizza credenziali** nel tile del servizio {{site.data.keyword.amashort}}.
+Inizializza AuthorizationManager passando il parametro `tenantId` del servizio {{site.data.keyword.amashort}}. 
 
 
 ### Objective-C:
@@ -275,8 +281,6 @@ IMFClient.sharedInstance().registerAuthenticationDelegate(CustomAuthenticationDe
 ```
 
 
-
-
 ## Verifica dell'autenticazione
 {: #custom-ios-testing}
 Dopo che hai inizializzato l'SDK client e registrato un `IMFAuthenticationDelegate` personalizzato, puoi iniziare a effettuare richieste alla tua applicazione di back-end mobile.
@@ -295,8 +299,9 @@ Dopo che hai inizializzato l'SDK client e registrato un `IMFAuthenticationDelega
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
 								[[IMFClient sharedInstance] backendRoute]];
 
-	IMFResourceRequest *request =  [IMFResourceRequest requestWithPath:requestPath
-																method:@"GET"];
+	IMFResourceRequest *request =  [IMFResourceRequest
+				requestWithPath:requestPath
+				method:@"GET"];
 
 	[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
 		if (error){

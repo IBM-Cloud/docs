@@ -2,13 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-06-15"
 
 ---
 
-# 啟用 Web 應用程式的 Facebook 鑑別
-
-前次更新：2016 年 6 月 15 日
-{: .last-updated}
+# 為 Web 應用程式啟用 Facebook 鑑別
+{: #facebook_web}
 
 在 Web 應用程式上使用 Facebook 來鑑別使用者。
 
@@ -83,5 +82,3 @@ grant_type='authorization_code'
 
 ## 測試鑑別
 現在，您可以開始對受保護資源提出要求。所有對受保護資源的要求都應該在「授權要求」標頭欄位中包含 `access_token`。
-
-
