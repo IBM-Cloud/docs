@@ -1,3 +1,26 @@
+---
+
+copyright:
+  years: 2016
+lastupdated: "2016-11-18"
+---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
+
+# About {{site.data.keyword.deliverypipeline}}
+{: #deliverypipeline_about}
+
+The IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service, also known as pipeline, automates the continuous deployment of your Bluemix projects. In a pipeline, sequences of stages retrieve input and run jobs, such as builds, tests, and deployments.
+{:shortdesc}
+
+The following sections describe the conceptual details behind pipelines.
+
+## Stages
+{: #deliverypipeline_stages}
 
 Stages organize input and jobs as your code is built, deployed, and tested. Stages accept input from either source control repositories (SCM repositories) or build jobs (build artifacts) in other stages. When you create your first stage, the default settings are set for you on the **INPUT** tab.
 
@@ -53,3 +76,38 @@ You can include environment properties within a deploy job's deployment script. 
 
 ### Test jobs
 If you want to require that conditions are met, include test jobs before or after your build and deploy jobs. You can customize test jobs to be as simple or complex as you need. For example, you might issue a cURL command and expect a particular response. You might also run a suite of unit tests or trigger functional tests with third-party test services, such as Sauce Labs.
+
+If your tests produce result files in JUnit XML format, a report that is based on the result files is shown on the **Tests** tab of every test result page. If a test fails, the job also fails.
+
+#### Environment properties for test scripts
+
+You can include environment properties in the script of a test job. The properties provide access to information about the job's run environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/ContinuousDelivery/deploy_var.html).
+
+## Manifest files
+{: #deliverypipeline_manifest}
+
+Manifest files, which are named `manifest.yml` and stored in a project's root directory, control how your project is deployed to Bluemix. For information about creating manifest files for a project, [see the Bluemix documentation about application manifests](/docs/manageapps/deployingapps.html#appmanifest). To integrate with Bluemix, your project must have a manifest file in its root directory. However, you are not required to deploy based on the information in the file.
+
+In the pipeline, you can specify everything that a manifest file can by using `cf push` command arguments. The `cf push` command arguments are helpful in projects that have multiple deployment targets. If multiple deploy jobs all try to use the route that is specified in the project manifest file, a conflict occurs.
+
+To avoid conflicts, you can specify a route by using `cf push` followed by the host name argument, `-n`, and a route name. By modifying the deployment script for individual stages, you can avoid route conflicts when you deploy to multiple targets.
+
+To use the `cf push` command arguments, open the configuration settings for a deploy job and modify the **Deploy Script** field. For more information, [see the Cloud Foundry Push documentation](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push).
+
+## An example pipeline
+{: #deliverypipeline_example}
+
+A simple pipeline might contain three stages:
+
+1. A Build stage that compiles and runs build processes on an app.
+2. A Test stage that deploys a instance of the app and then runs tests on it.
+3. A Prod stage that deploys a production instance of the tested app.
+
+This pipeline is shown in the following conceptual diagram:
+
+![A conceptual diagram of stages and jobs in a pipeline](images/diagram.jpg)
+
+*A conceptual model of a three-stage pipeline*
+
+Stages take their input from repositories and build jobs, and jobs within a stage run sequentially and independently of each other. In the example pipeline, the stages will run sequentially, even though the Test and Prod stages both take the Build stage's output as their input.
+
