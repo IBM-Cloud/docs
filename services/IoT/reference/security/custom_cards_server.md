@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-11-29"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-10-13"
 {:pre: .pre}
 
 # Securing your custom cards server
-{: #securing_custom_cards
+{: #securing_custom_cards}
 
 Custom cards servers are standard web servers that host the custom cards javascript code. To ensure the integrity of your {{site.data.keyword.iot_short_notm}} environment you should secure your custom cards server by taking steps to secure the card source as discussed in this topic.
 {:shortdesc}

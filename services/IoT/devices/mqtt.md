@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-21"
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -69,6 +69,9 @@ Where
 
 **Important:** The message payload is limited to a maximum of 131072 bytes. Messages larger than this limit are rejected.
 
+### Retained messages
+{{site.data.keyword.iot_short_notm}} organizations are not authorized to publish retained MQTT messages. If a device sends a retained message, the {{site.data.keyword.iot_short_notm}} service overrides the retained message flag when it is set to true and processes the message as if the retained message flag is set to false.
+
 
 ## Subscribing to commands
 {: #subscribing_to_commands}
@@ -91,7 +94,7 @@ Support for device lifecycle management is optional. The Device Management Proto
 
 ### Quality of service levels and clean session
 
-Managed devices can publish messages that have a quality of service (QoS) level of 0 or 1. Messages from the device must not be retained messages.
+Managed devices can publish messages that have a quality of service (QoS) level of 0 or 1.
 
 Messages with QoS=0 can be discarded and do not persist after the messaging server is restarted. Messages with QoS=1 can be queued and do persist after the messaging server is restarted. The durability of the subscription determines whether a request is queued. The ``cleansession`` parameter of the connection that made the subscription determines the durability of the subscription.  
 

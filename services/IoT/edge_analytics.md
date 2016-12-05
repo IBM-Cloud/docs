@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -208,7 +208,7 @@ To see information about the state of the gateway:
  `MsgRateReduce` | The percentage difference between incoming and outgoing message rate. </br>The following formula is used for the calculation: `(msgInRate - msgOutRate) / msgInRate`
  `BytesRateReduce` | The percentage difference between incoming and outgoing messages bytes. </br>The following formula is used for the calculation: `(bytesInRate - bytesOutRate) / bytesInRate`
  `SystemLoad` | The current system load for the on the system where the EAA is running. **Note:** The CPU rate will be sent only if the `mpstat` command is available on the system where the EAA is running. Otherwise, the system load average for the last minute is sent. </br>“The system load average is the sum of the number of runnable entities queued to the available processors and the number of runnable entities running on the available processors averaged over a period of time. The way in which the load average is calculated is operating system specific but is typically a damped time-dependent average. If the load average is not available, a negative value is returned. ” - javadoc for _ManagementFactory.getOperatingSystemMXBean_.
- `FreeMemory` | The number of bytes of free memory for the Java Virtual Machine (JVM) where EAA is running.
+ `FreeMemory` | The number of bytes of free memory for the Java™ Virtual Machine (JVM) where EAA is running.
  `MemoryUsed` | The number of bytes of JVM memory that is used by EAA.
  `InQueueSize` | The number of messages that are queued for EAA processing.
  `RuleNumber` | The number of defined rules in the rule engine core.

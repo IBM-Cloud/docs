@@ -15,7 +15,7 @@ lastupdated: "2016-10-18"
 # Java for device developers
 {: #java}
 
-You can build and customize devices that interact with your organization on {{site.data.keyword.iot_full}} by using Java. A Java client library for {{site.data.keyword.iot_short_notm}}, documentation, and examples are provided to help you get started with device development.
+You can build and customize devices that interact with your organization on {{site.data.keyword.iot_full}} by using Java™. A Java client library for {{site.data.keyword.iot_short_notm}}, documentation, and examples are provided to help you get started with device development.
 {:shortdesc}
 
 ## Downloading the Java client and resources
@@ -405,4 +405,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## Samples
 {: #samples}
 
-For a list of device and device management samples that are developed by using the {{site.data.keyword.iot_short_notm}} Java Client library, see the [iot-device-samples GitHub repository](https://github.com/ibm-messaging/iot-device-samples/tree/master/java).
+For a list of device and device management samples that are developed by using the {{site.data.keyword.iot_short_notm}} Java client library, see the [iot-device-samples GitHub repository](https://github.com/ibm-messaging/iot-device-samples/tree/master/java).

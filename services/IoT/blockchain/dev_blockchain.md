@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-08-30"
+lastupdated: "2016-12-04"
 
 ---
 
@@ -129,19 +129,49 @@ Before you can begin deploying and testing smart contracts, you must set up your
      8. Select the space in which you deployed {{site.data.keyword.iot_short_notm}}.
      9. Click the **{{site.data.keyword.iot_short_notm}}** tile.
      10. Click **Launch** to open the {{site.data.keyword.iot_short_notm}} dashboard.
-     11. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Settings > Connections** by clicking ![Settings.](images/platform_settings.png "Settings") in the menu side bar.
-     12. In the Extensions section, under Blockchain, click **Add Fabric Connection**.   
-    Fabric connection fields are automatically displayed on the page, which replaces the table.  
+     11. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions** in the menu side bar.
+     12. In the **Extensions** page, in the Blockchain tile, click **Setup**.
+     13. In the Configure blockchain section, click **Add Fabric** and then enter the fabric information.
     **Note:** Blockchain integration must be enabled to add fabrics. For information, see [Blockchain](../../reference/extensions/index.html#blockchain) in the External service integrations topic.
-     14. Enter the following information to connect to the fabric:
-      - Fabric Name - Enter a name to identify the fabric in {{site.data.keyword.iot_short_notm}}.
-      - Peer Address - Enter the `api_host` address.
-      - Port Number - Enter the `api_port` number or the `api_port_tls` number. Use port 80 if your implementation does not use TLS. Use port 443 if your implementation uses TLS.
-      - Use TLS - Use Transport Layer Security to encrypt the communication between {{site.data.keyword.iot_short_notm}} and the contract in the fabric. The default port numbers are set by the deployed {{site.data.keyword.iot_short_notm}} instance that you are connecting to.
-      - User ID - Enter the `username` string.
-      - User Secret - Enter the `secret` string.
-     15. Click **Confirm all changes**  
-  The fabric table is populated with the new fabric connection.  
+    1. In the **Fabric** tab, enter a name to identify the fabric in {{site.data.keyword.iot_short_notm}}, then click **Next**.   
+    2. In the **Peer** tab, enter the peer information:  
+   <table>
+   <thead>
+   <tr>
+   <th>Parameter</th>
+   <th>Value</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Name</td>
+   <td>Enter a name to identify the peer in {{site.data.keyword.iot_short_notm}}.</td>
+   </tr>
+   <tr>
+   <td>Host</td>
+   <td>The `api_host` address for the Validating Peer 1 server</td>
+   </tr>
+   <tr>
+   <td>Port</td>
+   <td>The `api_port` number<ul><li>Use port 80 if your implementation does not use TLS.</li><li>Use port 443 if your implementation uses TLS.</li></ul></td>
+   </tr>
+   <tr>
+   <td>User ID</td>
+   <td>The `username` string for the user that was used to register the smart contract with the blockchain. You also use this user ID when you later configure the Simple UI.</td>
+   </tr>
+   <tr>
+   <td>Secret Key</td>
+   <td>The `secret` string for the user</td>
+   </tr>
+   <tr>
+   <td>Use TLS</td>
+   <td>On or Off</br>Use Transport Layer Security to encrypt the communication between {{site.data.keyword.iot_short_notm}} and the contract in the fabric. The default port numbers are set by the deployed {{site.data.keyword.iot_short_notm}} instance that you are connecting to.</td>
+   </tr></tbody>
+   </table>  
+    3. Click **Finish**.
+     3. In the Configure blockchain section, click **Done** to save the fabric information.    
+
+The fabric table is populated with the new fabric connection.  
 
 ## Create, test, and deploy your smart contracts
 {: #test_contracts}

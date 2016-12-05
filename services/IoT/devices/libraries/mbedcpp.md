@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-08-02"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -19,7 +19,6 @@ lastupdated: "2016-08-02"
 Use the [mBed C++ client library](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/) to easily connect [mBed devices](https://www.mbed.com/en/), such as [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) or [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/), to the {{site.data.keyword.iot_full}} service.
 {:shortdesc}
 
-
 For more information, see [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/) on [developer.mbed.org](https://developer.mbed.org/).
 
 Although the library uses C++, it still avoids dynamic memory allocations and the use of STL functions, because the mBed devices sometimes have idiosyncratic memory models that make porting difficult. In any case, the library allows you to make memory use as predictable as possible.
@@ -29,7 +28,7 @@ Although the library uses C++, it still avoids dynamic memory allocations and th
 
 |Dependency |Description|
 |:---|:---|
-|[Eclipse Paho MQTT library](https://developer.mbed.org/teams/mqtt/code/MQTT/)|Provides an MQTT client library for mBed devices. For more information, see  [Embedded MQTT C/C++ Client Libraries](http://www.eclipse.org/paho/clients/c/embedded/)|
+|[Eclipse Paho MQTT library](https://developer.mbed.org/teams/mqtt/code/MQTT/)|Provides an MQTT client library for mBed devices. For more information, see  [Embedded MQTT C/C++ client libraries](http://www.eclipse.org/paho/clients/c/embedded/)|
 |[EthernetInterface library](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/)|An mBed IP library over Ethernet.|
 
 ## How to use the library
@@ -39,7 +38,7 @@ Use the [mBed compiler](https://developer.mbed.org/compiler/) to create your app
 
 **Note:** You don't have to install or set up anything to get running with mBed.
 
-For information on how to connect an ARM mBed NXP LPC 1768 microcontroller to the {{site.data.keyword.iot_short_notm}}, see the [mBed C++ Client Library for IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/) recipe.
+For information on how to connect an ARM mBed NXP LPC 1768 microcontroller to the {{site.data.keyword.iot_short_notm}}, see the [mBed C++ client library for IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/) recipe.
 
 ## Constructor
 {: #constructor}
