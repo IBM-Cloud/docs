@@ -202,14 +202,9 @@ The default connection from {{site.data.keyword.Bluemix_dedicated_notm}} to your
 <br>
 In the default architecture for {{site.data.keyword.Bluemix_dedicated_notm}} as shown in [figure 1]{#figure01}, there is no inbound network traffic directly from the Internet. If your enterprise wishes to allow Internet access to applications hosted on {{site.data.keyword.Bluemix_dedicated_notm}}, the access must be configured through your Enterprise network.<br>
 <br>
-If required, {{site.data.keyword.Bluemix_dedicated_notm}} can be architected to allow inbound network traffic directly from the Internet. This architecture is shown in [figure 2](#figure02).
+If required, {{site.data.keyword.Bluemix_dedicated_notm}} can be architected to allow inbound network traffic directly from the Internet. 
 </dd>
 </dl>
-
-![{{site.data.keyword.Bluemix_dedicated_notm}} with inbound Internet](images/bm_dedicatedarch_added_connectivity.png "{{site.data.keyword.Bluemix_dedicated_notm}} with inbound Internet")
-
-Figure 2. Detailed {{site.data.keyword.Bluemix_dedicated_notm}} diagram with inbound Internet
-{: #figure02}
 
 ##Setting up {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #setupdedicated}
