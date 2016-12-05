@@ -165,7 +165,7 @@ A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} p
 | United Kingdom region | London, England | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Sydney region | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 
-*Table 1. {{site.data.keyword.Bluemix_notm}} region list*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 
 ### {{site.data.keyword.Bluemix_notm}} resilience
