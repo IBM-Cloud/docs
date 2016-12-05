@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2016 lastupdated: "2016-10-20"
+  years: 2016
+lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
