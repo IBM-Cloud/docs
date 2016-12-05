@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated:  "2016-08-31"
+lastupdated:  "2016-11-16"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated:  "2016-08-31"
 
 # 開始使用 {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
-
-<!--Last updated: 31 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_long}} 可加速設定 {{site.data.keyword.mfp_full}} 環境，您可以從該環境中開發、測試及操作企業行動應用程式。
 {{site.data.keyword.mobilefoundation_short}} 在兩個不同的服務方案中提供：Developer 和 Professional 1 Application。
@@ -61,6 +59,10 @@ lastupdated:  "2016-08-31"
     * 若要使用拓蹼、安全及其他伺服器配置的進階配置來建立 {{site.data.keyword.mobilefirst_notm}} 伺服器實例，請按一下**使用進階配置啟動伺服器**。如需相關資訊，請參閱[設定進階配置](c_using_mfs_p2.html#using_mfs_advanced_p2)。
 
 移至[使用 Mobile Foundation 服務設定 MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/)，以進一步瞭解如何開始使用 {{site.data.keyword.mobilefoundation_short}}。
+
+##  已知限制
+
+* {{site.data.keyword.mobilefoundation_short}} 服務使用者介面不會以使用者選取的語言環境特有型樣來顯示數字。
 
 
 # 相關鏈結

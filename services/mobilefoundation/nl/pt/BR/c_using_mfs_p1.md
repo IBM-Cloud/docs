@@ -2,13 +2,11 @@
 
 copyright:
   years: 2016 lastupdated:  "2016-09-12"
+
 ---
 
 #	Usando o plano Developer
 {: #using_mobilefoundation_p1}
-
-<!--Last updated: 12 September 2016
-{: .last-updated}-->
 
 Após criar a instância de serviço {{site.data.keyword.mobilefoundation_short}}: Desenvolvedor, em alguns segundos, será possível acessar a página `Visão geral`
 no {{site.data.keyword.Bluemix_notm}}, que fornece tutoriais e vídeos para ajudá-lo a

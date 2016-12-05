@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-09-12"
+
 ---
 
 #	Utilisation du plan Professional 1 Application
 {: #using_mobilefoundation_p2}
-
-<!--Last updated: 12 September 2016
-{: .last-updated}-->
 
 Les utilisateurs du plan Professional 1 Application peuvent créer une application mobile avec plusieurs systèmes d'exploitation mobiles.
 Une fois que vous avez créé l'instance de service {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, lisez la procédure ci-après pour commencer à l'utiliser.
@@ -86,7 +84,7 @@ L'implantation de votre serveur débute. Ce processus prend environ 10 minutes e
 
  Les utilisateurs peuvent aussi connecter des volumes aux conteneurs pour conserver les données. Le volume une fois sélectionné ne peut être changé. L'espace de partage de fichiers par défaut disponible pour l'utilisateur est de 20 Go. Si l'utilisateur a besoin d'un espace de stockage supplémentaire pour conserver des données d'analyse, il est invité à acheter un partage de fichiers supplémentaire et à créer un volume en utilisant ce partage de fichier. Il peut ensuite sélectionner ce nouveau volume lors du déploiement du serveur d'analyse.
 
- Pour plus d'informations sur l'ajout de volumes dans {{site.data.keyword.containerlong}}, voir [Stockage de données persistantes dans un volume à l'aide du tableau de bord {{site.data.keyword.Bluemix_notm}} ](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ Pour plus d'informations sur l'ajout de volumes dans {{site.data.keyword.containerlong}}, voir [Stockage de données persistantes dans un volume à l'aide du tableau de bord {{site.data.keyword.Bluemix_notm}} ](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Cliquez sur commande d'ajout d'analyse pour ajouter le serveur Mobile Analytics à l'instance de service {{site.data.keyword.mobilefoundation_short}}.
 

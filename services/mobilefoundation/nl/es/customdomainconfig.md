@@ -3,6 +3,7 @@
 copyright:
   years: 2016
 lastupdated:  "2016-08-08"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated:  "2016-08-08"
 
 # Configuración de un dominio personalizado para el servidor {{site.data.keyword.mobilefoundation_short}}
 {: #configcustomdomain}
-
-<!--Last updated: 08 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} ofrece un {{site.data.keyword.mfserver_short_notm}}, que es<!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to--> es accesible mediante un URL que tiene los nombres de dominios basados en la **Región** de {{site.data.keyword.Bluemix_notm}}. También puede configurar su propio dominio personalizado.
 {:shortdesc}

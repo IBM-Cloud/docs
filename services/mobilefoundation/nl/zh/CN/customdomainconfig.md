@@ -3,6 +3,7 @@
 copyright:
   years: 2016
 lastupdated:  "2016-08-08"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated:  "2016-08-08"
 
 # 为 {{site.data.keyword.mobilefoundation_short}} 服务器配置定制域
 {: #configcustomdomain}
-
-<!--Last updated: 08 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} 供应 {{site.data.keyword.mfserver_short_notm}}，其可通过域名基于<!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to--> {{site.data.keyword.Bluemix_notm}}**区域**的 URL 进行访问。您还可以配置自己的定制域。
 {:shortdesc}

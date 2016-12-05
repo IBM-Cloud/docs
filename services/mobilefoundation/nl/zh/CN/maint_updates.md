@@ -3,6 +3,7 @@
 copyright:
   years: 2016
 lastupdated:  "2016-08-03"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated:  "2016-08-03"
 
 # 维护和更新
 {: #maintupdates_mf}
-
-<!--Last updated: 03 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} 会供应 {{site.data.keyword.mfserver_short_notm}}<!--on {{site.data.keyword.containerlong}} as a container group-->。当 {{site.data.keyword.mobilefoundation_short}} 服务器有更新时，用户会收到相应的通知。您可以选择在您方便的时间来更新 {{site.data.keyword.mobilefoundation_short}} 服务器。
 {:shortdesc}

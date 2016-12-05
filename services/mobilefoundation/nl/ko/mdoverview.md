@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated: "2016-08-03"
+
 ---
 
 #	{{site.data.keyword.mobilefoundation_short}} 정보
 {: #overview_mobilefoundation}
-
-<!--Last updated: 03 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} 서비스는 {{site.data.keyword.Bluemix}}에서 {{site.data.keyword.mobilefirst}} 서버 환경을 빠르게 설정하는 방법을 제공합니다. 그런 다음 이 클라우드 환경에서 모바일 앱을 개발하고 테스트하며 관리할 수 있습니다. 
 
@@ -41,7 +39,7 @@ lastupdated: "2016-08-03"
 
 <!--{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.-->
 
-## {{site.data.keyword.mobilefoundation_short}}에 대한 도움말 및 지원 받기
+## {{site.data.keyword.mobilefoundation_short}}에 대한 도움 및 지원 받기
 {: #getting_help_mobilefoundation}
 
 {{site.data.keyword.mobilefoundation_short}} 사용 중에 문제점이 발생하거나 질문이 있는 경우 정보를 검색하거나 포럼에서 질문을 작성하여 도움말 지원을 받을 수 있습니다. 또한 지원 티켓을 열 수도 있습니다. 
@@ -54,4 +52,4 @@ lastupdated: "2016-08-03"
 
 포럼 사용에 대한 세부사항은 [도움 받기](https://www.{DomainName}/docs/support/index.html#getting-help)를 참조하십시오. 
 
-IBM 지원 센터 티켓 개설 또는 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 센터에 문의](https://www.{DomainName}/docs/support/index.html#contacting-support)를 참조하십시오. 
+IBM 지원 티켓 개설 방법이나 지원 레벨 및 티켓 심각도 정보는 [지원 문의](https://www.{DomainName}/docs/support/index.html#contacting-support)를 참조하십시오. 

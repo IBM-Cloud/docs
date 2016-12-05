@@ -3,6 +3,7 @@
 copyright:
   years: 2016
 lastupdated: "2016-08-08"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated: "2016-08-08"
 
 # {{site.data.keyword.mobilefoundation_short}} 서버에 대한 사용자 정의 도메인 구성
 {: #configcustomdomain}
-
-<!--Last updated: 08 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}}에서는 {{site.data.keyword.Bluemix_notm}} **지역**을 기반으로 하는 도메인 이름이 있는 URL을 사용하여 <!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to--> 액세스 가능한 {{site.data.keyword.mfserver_short_notm}}를 프로비저닝합니다. 사용자 자신의 사용자 정의 도메인을 구성할 수도 있습니다.
 {:shortdesc}

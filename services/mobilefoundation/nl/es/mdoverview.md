@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-08-03"
+
 ---
 
 #	Acerca de {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
-
-<!--Last updated: 03 August 2016
-{: .last-updated}-->
 
 El servicio {{site.data.keyword.mobilefoundation_short}} ofrece un modo de configurar rápidamente un entorno de servidor de
 {{site.data.keyword.mobilefirst}} en {{site.data.keyword.Bluemix}}. Puede desarrollar, probar y gestionar apps móviles desde este entorno de nube.

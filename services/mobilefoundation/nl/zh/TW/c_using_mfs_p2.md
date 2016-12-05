@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-09-12"
+
 ---
 
 #	使用 Professional 1 Application 方案
 {: #using_mobilefoundation_p2}
-
-<!--Last updated: 12 September 2016
-{: .last-updated}-->
 
 使用 Professional 1 Application 方案，使用者可以建立 1 個含有多個行動作業系統的行動應用程式。
 建立 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 服務實例之後，請閱讀下列程序，以開始使用該服務。
@@ -89,7 +87,7 @@ lastupdated:  "2016-09-12"
 
  使用者也可以附加容器的磁區來持續保存資料。一旦磁區選定後就無法變更。20 GB 是使用者可用的預設檔案共用空間。如果使用者需要額外的儲存空間來持續保存分析資料，則需要購買額外的檔案共用，並且使用該檔案共用來建立磁區。然後，在部署分析伺服器時，便可以選取這個新的磁區。
 
- 如需將磁區新增至 {{site.data.keyword.containerlong}} 的相關資訊，請參閱[使用 {{site.data.keyword.Bluemix_notm}} 儀表板將持續資料儲存在磁區中](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}。
+ 如需將磁區新增至 {{site.data.keyword.containerlong}} 的相關資訊，請參閱[使用 {{site.data.keyword.Bluemix_notm}} 儀表板將持續資料儲存在磁區中](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}。
 
 * 按一下**新增分析**將 Mobile Analytics 伺服器新增至 {{site.data.keyword.mobilefoundation_short}} 服務實例。
 

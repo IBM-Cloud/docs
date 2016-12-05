@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-08-03"
+
 ---
 
 #	關於 {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
-
-<!--Last updated: 03 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} 服務提供一種方式，可在 {{site.data.keyword.Bluemix}} 上快速設定 {{site.data.keyword.mobilefirst}} 伺服器環境。然後，您可以從這個雲端環境中開發、測試及管理行動應用程式。
 
