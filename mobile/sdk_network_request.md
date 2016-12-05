@@ -48,7 +48,7 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 2. Create a network request.
 
 	#### Swift 3.0
-	{: ios-swift3}
+	{: #ios-swift3}
 	
 	```Swift
 	 	// Make a network request
@@ -67,7 +67,7 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 	{: codeblock}
  
 	#### Swift 2.2
-	{: ios-swift22}
+	{: #ios-swift22}
 	
 	```Swift
 	 	// Make a network request
