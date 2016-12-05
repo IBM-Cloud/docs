@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-10-20"  
+lastupdated: "2016-12-05"  
 
 
 ---
@@ -147,16 +147,28 @@ Complete the following steps to list the members for a specific space:
 ## Managing quota
 {: #managequota}
 
-As an account owner or organization manager, you can view the allocated and used quota for your organization. The quota represents the resource limits for the org which is assigned when the org is created. Any application or service in a space of the organization contributes to the usage of the quota.
+As a {{site.data.keyword.Bluemix_notm}} account owner or organization manager, you can view the used and allocated quota for an  organization. The quota represents the resource limits for the organization, which is assigned when the organization is created. Depending on whether you have a trial account or a billable account, the resources that are available to an organization vary. Any application or service in a space within the organization contributes to the usage of the allocated quota.
 
-To view the quota for your organization, complete the following steps:
+To view the used and allocated quota for an organization, complete the following steps:
 
 1. Click **Account** &gt; **Manage Organizations** page.
 2. Identify the organization that you want to view the quota for, and click **View Details**.
 3. Click **Edit Org**.
-4. Select the **QUOTA** tab.
+4. If you have spaces defined in more than one region, select the specific region that you want to view.
+5. Click **QUOTA**. 
+6. By default, the **Cloud Foundry** quota page opens. You can view the quota details for the following resources:
+ * MEMORY
+ * SERVICES
+ * PLAN
+ * PRICE
+7. Click **Containers** to view the used and available container quota allocation. The container allocation varies depening on your pricing plan. You can view the quota details for the following resources:
+ * MEMORY
+ * PUBLIC IP
 
-To update the quota for your organization, you must open a support ticket. For more information about opening a support ticket, see [Getting customer support](/docs/support/index.html#contacting-support). For more information about quota for containers, see [Quota](/docs/containers/container_planning_org_ov.html##container_planning_quota) in the Containers documentation.
+**Note:** Containers are not available in the {{site.data.keyword.Bluemix_notm}} Sydney region. 
+
+For more information about containers, see [Quota](/docs/containers/container_planning_org_ov.html#container_planning_quota) in the Containers documentation.
+To change the quota that is allocated to an organization, you must open a support ticket. For more information about opening a support ticket, see [Getting customer support](/docs/support/index.html#contacting-support). 
 
 ## Managing domains
 {: #managedomains}
