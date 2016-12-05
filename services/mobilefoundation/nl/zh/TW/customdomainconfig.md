@@ -3,6 +3,7 @@
 copyright:
   years: 2016
 lastupdated:  "2016-08-08"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated:  "2016-08-08"
 
 # 配置 {{site.data.keyword.mobilefoundation_short}} 伺服器的自訂網域
 {: #configcustomdomain}
-
-<!--Last updated: 08 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} 佈建一個 {{site.data.keyword.mfserver_short_notm}}，可以<!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to-->使用 URL 進行存取，該 URL 具有根據 {{site.data.keyword.Bluemix_notm}} **Region** 的網域名稱。您也可以自行配置自訂網域。
 {:shortdesc}

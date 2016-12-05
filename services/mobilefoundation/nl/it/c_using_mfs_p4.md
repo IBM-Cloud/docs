@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-10-14"
+
 ---
 
 #	Utilizzo del piano Professional Per Capacity
 {: #using_mobilefoundation_p4}
-
-<!--Last updated: 12 September 2016
-{: .last-updated} -->
 
 Con il piano Professional Per Capacity gli utenti possono creare qualsiasi numero di applicazioni mobili con più sistemi operativi mobili.
 Dopo che hai creato l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity, leggi la seguente procedura introduttiva al servizio.
@@ -60,7 +58,7 @@ Dopo che l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Pr
 * Per avviare {{site.data.keyword.mfserver_short_notm}}, con le impostazioni predefinite, fai clic su **Avvia server di base**.
 
 * Questa selezione fornisce un {{site.data.keyword.mfserver_long_notm}} con le seguenti impostazioni:
-    -  2 nodi con 1 GB di memoria ognuno. Questa dimensione è buona per lo sviluppo, per delle attività moderate di test e i carichi di lavoro di produzione su piccola scala. 
+    -  2 nodi con 1 GB di memoria ognuno. Questa dimensione è buona per lo sviluppo, per delle attività moderate di test e i carichi di lavoro di produzione su piccola scala.
 
     -	Il `nome utente` e la `password` ti vengono generati automaticamente. Disporrai dell'accesso ad essi quando il server è avviato e in esecuzione.
 
@@ -77,18 +75,18 @@ dove puoi vedere:
 *	Fai clic su **Avvia console** per aprire {{site.data.keyword.mfp_oc_short_notm}}.
 
 
-<!--This console runs inside the container.--> Con la console, puoi gestire le tue applicazioni mobili, gli adattatori e i tuoi dispositivi mobili, utilizzare il tuo server come un backend mobile, inviare notifiche di push e altro ancora. 
+<!--This console runs inside the container.--> Con la console, puoi gestire le tue applicazioni mobili, gli adattatori e i tuoi dispositivi mobili, utilizzare il tuo server come un backend mobile, inviare notifiche di push e altro ancora.
 
 ##  Aggiunta del server Mobile Analytics
 {: #adding_analytics_server_p4}
 
  Puoi ora monitorare la tua applicazione mobile nel server {{site.data.keyword.mobilefirst}} aggiungendo un server  Mobile Analytics all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
 
- Il piano Professional crea il server Mobile Analytics in un gruppo di contenitori, l'utente può personalizzare la configurazione selezionando il numero di nodi del contenitore nel gruppo di contenitori. 
+ Il piano Professional crea il server Mobile Analytics in un gruppo di contenitori, l'utente può personalizzare la configurazione selezionando il numero di nodi del contenitore nel gruppo di contenitori.
 
  Gli utenti possono anche allegare i volumi ai contenitore per conservare i dati. Il volume selezionato non può essere modificato. 20 GB è lo spazio di condivisione file predefinito disponibile all'utente. Se l'utente necessita di ulteriore spazio di archiviazione per conservare i dati di analisi, deve acquistare ulteriore condivisione file e creare un volume utilizzando questa condivisione file. Può quindi selezionare questo nuovo volume mentre distribuisce il server di analisi.
 
- Per ulteriori informazioni sull'aggiunta di volumi a {{site.data.keyword.containerlong}}, fai riferimento a [Memorizzazione dei dati persistenti in un volume utilizzando il dashboard {{site.data.keyword.Bluemix_notm}}  ](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ Per ulteriori informazioni sull'aggiunta di volumi a {{site.data.keyword.containerlong}}, fai riferimento a [Memorizzazione dei dati persistenti in un volume utilizzando il dashboard {{site.data.keyword.Bluemix_notm}}  ](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Fai clic su **Aggiungi Analytics** per aggiungere il server Mobile Analytics all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
 

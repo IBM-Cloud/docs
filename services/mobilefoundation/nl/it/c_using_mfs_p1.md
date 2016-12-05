@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-09-12"
+
 ---
 
 #	Utilizzo del piano Developer
 {: #using_mobilefoundation_p1}
-
-<!--Last updated: 12 September 2016
-{: .last-updated}-->
 
 Dopo aver creato {{site.data.keyword.mobilefoundation_short}}: istanza del servizio dello sviluppatore, in pochi secondi, puoi accedere alla pagina `Panoramica` in {{site.data.keyword.Bluemix_notm}}, la quale ti fornisce le esercitazioni e i video di aiuto per iniziare ad utilizzare il servizio  {{site.data.keyword.mobilefoundation_short}}.
 

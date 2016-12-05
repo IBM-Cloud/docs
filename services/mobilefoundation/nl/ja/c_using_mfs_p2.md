@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-09-12"
+
 ---
 
 #	「プロフェッショナル 1 アプリケーション」プランの使用
 {: #using_mobilefoundation_p2}
-
-<!--Last updated: 12 September 2016
-{: .last-updated}-->
 
 「プロフェッショナル 1 アプリケーション」プランでは、ユーザーは、複数のモバイル・オペレーティング・システムを備えた 1 つのモバイル・アプリケーションを作成できます。
 「{{site.data.keyword.mobilefoundation_short}}: プロフェッショナル 1 アプリケーション」サービス・インスタンスの作成後、以下の手順を読んでサービスを開始してください。
@@ -89,7 +87,7 @@ lastupdated:  "2016-09-12"
  ユーザーはまた、ボリュームをコンテナーに接続して、データを永続化できます。一度選択されたボリュームは変更できません。20 GB は、ユーザーに使用可能なデフォルトのファイル共有スペースです。分析データを保持するためにユーザーが追加のストレージ・スペースを必要とする場合、
 ユーザーは、追加ファイル共有を購入し、このファイル共有を使用してボリュームを作成する必要があります。これでユーザーは、分析サーバーをデプロイ中に、この新規ボリュームを選択できます。
 
- {{site.data.keyword.containerlong}} にボリュームを追加することについて詳しくは、[{{site.data.keyword.Bluemix_notm}} ダッシュボードを使用してボリュームに永続データを保管する](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}を参照してください。
+ {{site.data.keyword.containerlong}} にボリュームを追加することについて詳しくは、[{{site.data.keyword.Bluemix_notm}} ダッシュボードを使用してボリュームに永続データを保管する](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}を参照してください。
 
 * **「Analytics の追加 (Add Analytics)」**をクリックして、Mobile Analytics サーバーを {{site.data.keyword.mobilefoundation_short}} サービス・インスタンスに追加します。
 

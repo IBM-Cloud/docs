@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-10-14"
+
 ---
 
 #	Professional Per Capacity-Plan verwenden
 {: #using_mobilefoundation_p4}
-
-<!--Last updated: 12 September 2016
-{: .last-updated} -->
 
 Mit dem Professional Per Capacity-Plan können Benutzer eine beliebige Anzahl von mobilen Anwendungen mit mehreren mobilen Betriebssystemen erstellen.
 Nach der Erstellung der Serviceinstanz von {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity lesen Sie die folgende Prozedur, um die Arbeit mit dem Service zu beginnen.
@@ -88,7 +86,7 @@ Informationen angezeigt:
 
  Benutzer können auch Datenträger an die Container anhängen, um Daten dauerhaft zu speichern. Wird ein Datenträger einmal ausgewählt, kann er nicht mehr geändert werden. 20 GB Speicherplatz für die Dateifreigabe stehen dem Benutzer standardmäßig zur Verfügung. Benötigt der Benutzer zusätzlichen Speicherplatz, um die Analysedaten dauerhaft zu speichern, muss er weiteren Speicherplatz für die Dateifreigabe erwerben und mit dieser Dateifreigabe einen Datenträger erstellen. Anschließend kann er diesen neuen Datenträger auswählen und den Analyseserver bereitstellen.
 
- Weitere Informationen zum Hinzufügen von Datenträgern zu {{site.data.keyword.containerlong}} finden Sie im Abschnitt zum [Persistenten Speichern von Daten auf einem Datenträger über das {{site.data.keyword.Bluemix_notm}}-Dashboard](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ Weitere Informationen zum Hinzufügen von Datenträgern zu {{site.data.keyword.containerlong}} finden Sie im Abschnitt zum [Persistenten Speichern von Daten auf einem Datenträger über das {{site.data.keyword.Bluemix_notm}}-Dashboard](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Klicken Sie auf die Option zum Hinzufügen der Analyse, um den Mobile Analytics-Server zur Instanz des {{site.data.keyword.mobilefoundation_short}}-Service hinzuzufügen.
 

@@ -2,13 +2,11 @@
 
 copyright:
   years: 2016 lastupdated:  "2016-10-14"
+
 ---
 
 #	Usando o plano Developer Pro
 {: #using_mobilefoundation_p3}
-
-<!--Last updated: 14 October 2016
-{: .last-updated}-->
 
 O {{site.data.keyword.mobilefoundation_short}}: Developer Pro é adequado para desenvolvimento e teste baseados em equipe. Esse plano não é adequado para produção.
 
@@ -99,9 +97,9 @@ no ícone **Mostrar senha** para visualizá-lo.
 usuário. Se o usuário precisar de espaço de armazenamento adicional para persistir dados de analítica, ele precisará comprar compartilhamento de arquivo adicional e criar um volume usando esse
 compartilhamento de arquivo. Ele poderá, então, selecionar esse novo volume enquanto implementa o servidor analítico.
 
- Para obter mais informações sobre a inclusão de volumes no {{site.data.keyword.containerlong}}, consulte
-[Armazenando
-dados persistentes em um volume usando o Painel do {{site.data.keyword.Bluemix_notm}} ](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ Para obter mais informações sobre incluir volumes no {{site.data.keyword.containerlong}}, consulte
+[Armazenando dados persistentes em um volume usando o {{site.data.keyword.Bluemix_notm}}
+Dashboard](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Clique em **Incluir Analytics** para incluir o servidor Mobile Analytics na instância de serviço do {{site.data.keyword.mobilefoundation_short}}.
 

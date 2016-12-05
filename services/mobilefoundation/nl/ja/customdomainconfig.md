@@ -3,6 +3,7 @@
 copyright:
   years: 2016
 lastupdated:  "2016-08-08"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated:  "2016-08-08"
 
 # {{site.data.keyword.mobilefoundation_short}} サーバーのカスタム・ドメインの構成
 {: #configcustomdomain}
-
-<!--Last updated: 08 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} は、{{site.data.keyword.Bluemix_notm}} **地域**に基づいたドメイン名を含む URL を使用してアクセス可能な、{{site.data.keyword.mfserver_short_notm}} をプロビジョンします。<!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to-->独自のカスタム・ドメインを構成することも可能です。
 {:shortdesc}

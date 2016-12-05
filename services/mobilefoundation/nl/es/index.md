@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated:  "2016-08-31"
+lastupdated:  "2016-11-16"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated:  "2016-08-31"
 
 # Iniciación a {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
-
-<!--Last updated: 31 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_long}} acelera la configuración de un entorno de {{site.data.keyword.mfp_full}} desde el cual puede desarrollar, probar y operar aplicaciones móviles de empresa. {{site.data.keyword.mobilefoundation_short}} está disponible bajo dos de servicio distintos: Developer y Professional 1 Application.
 {:shortdesc}
@@ -58,6 +56,10 @@ Después de crear una instancia del servicio {{site.data.keyword.mobilefoundatio
     * Para crear una instancia de servidor de {{site.data.keyword.mobilefirst_notm}} con configuración avanzada para la topología, seguridad y otros tipos de configuración del servidor, pulse **Iniciar servidor con configuración avanzada**. Consulte [Ajuste de la configuración avanzada](c_using_mfs_p2.html#using_mfs_advanced_p2), para obtener más información.
 
 Vaya a [Utilización del servicio Mobile Foundation para configurar el servidor de MobileFirst<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/) para obtener más información sobre la iniciación a {{site.data.keyword.mobilefoundation_short}}.
+
+##  Limitaciones conocidas
+
+* La IU del servicio {{site.data.keyword.mobilefoundation_short}} no utiliza el patrón específico del entorno local seleccionado por el usuario para mostrar números.
 
 
 # Enlaces relacionados

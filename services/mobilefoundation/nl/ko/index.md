@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-08-31"
+lastupdated:  "2016-11-16"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated: "2016-08-31"
 
 # {{site.data.keyword.mobilefoundation_short}} 시작하기
 {: #gettingstartedtemplate}
-
-<!--Last updated: 31 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_long}}는 엔터프라이즈 모바일 앱을 개발, 테스트 및 작동할 수 있는 {{site.data.keyword.mfp_full}} 환경 설정을 신속히 처리합니다.
 {{site.data.keyword.mobilefoundation_short}}은 두 개의 다른 서비스 플랜 즉, Developer 및 Professional 1 Application 하에서 사용 가능합니다.
@@ -59,6 +57,10 @@ lastupdated: "2016-08-31"
     * 토폴로지, 보안 및 기타 서버 구성에 대해 고급 구성으로 {{site.data.keyword.mobilefirst_notm}} 서버 인스턴스를 작성하려면 **고급 구성으로 서버 시작**을 클릭하십시오. 자세한 정보는 [고급 구성 설정](c_using_mfs_p2.html#using_mfs_advanced_p2)을 참조하십시오. 
 
 {{site.data.keyword.mobilefoundation_short}} 시작 방법에 대한 자세한 정보는 [Mobile Foundation 서비스를 사용하여 MobileFirst Server 설정<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/)으로 이동하십시오.
+
+##  알려진 제한사항
+
+* {{site.data.keyword.mobilefoundation_short}} 서비스 UI가 사용자 선택된 로케일 특정 패턴을 숫자를 표시하는 데 사용하지 않습니다. 
 
 
 # 관련 링크

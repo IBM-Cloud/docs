@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated:  "2016-08-31"
+lastupdated:  "2016-11-16"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated:  "2016-08-31"
 
 # {{site.data.keyword.mobilefoundation_short}} 入门
 {: #gettingstartedtemplate}
-
-<!--Last updated: 31 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_long}} 加快设置 {{site.data.keyword.mfp_full}} 环境，您可在此环境中开发、测试和操作企业移动应用程序。{{site.data.keyword.mobilefoundation_short}} 提供了两种不同服务套餐：Developer 和 Professional 1 Application。
 {:shortdesc}
@@ -59,6 +57,10 @@ Developer 套餐<!-- does not support {{site.data.keyword.mobilefoundation_short
     * 要使用拓扑、安全性和其他服务器配置的高级配置来创建 {{site.data.keyword.mobilefirst_notm}} 服务器实例，请单击**使用高级配置启动服务器**。请参阅[设置高级配置](c_using_mfs_p2.html#using_mfs_advanced_p2)，以获取更多信息。
 
 转至 [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/)，以了解有关如何开始使用 {{site.data.keyword.mobilefoundation_short}} 的更多信息。
+
+##  已知限制
+
+* {{site.data.keyword.mobilefoundation_short}} 服务 UI 不会使用用户所选语言环境特定的模式来显示数字。
 
 
 # 相关链接

@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-09-12"
+
 ---
 
 #	使用 Developer 方案
 {: #using_mobilefoundation_p1}
-
-<!--Last updated: 12 September 2016
-{: .last-updated}-->
 
 建立 {{site.data.keyword.mobilefoundation_short}}: Developer 服務實例之後，只要幾秒鐘，您就可以存取 {{site.data.keyword.Bluemix_notm}} 上的 `Overview` 頁面，而此頁面提供指導教學及視訊，協助您開始使用 {{site.data.keyword.mobilefoundation_short}} 服務。
 

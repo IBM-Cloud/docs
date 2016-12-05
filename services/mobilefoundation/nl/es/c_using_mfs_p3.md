@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-10-14"
+
 ---
 
 #	Utilización del plan Developer Pro
 {: #using_mobilefoundation_p3}
-
-<!--Last updated: 14 October 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}}: Developer Pro es adecuado para el desarrollo en equipo y pruebas; este plan no es adecuado para producción.
 
@@ -87,7 +85,7 @@ Se inicia el proceso de suministro del servidor. Este proceso dura unos 10 minut
 
  Los usuarios también pueden adjuntar volúmenes a los contenedores para persistir datos. El volumen seleccionado no se puede cambiar. 20 GB es el espacio de compartición de archivos predeterminado disponible para el usuario. Si el usuario necesita espacio de almacenamiento adicional para persistir datos analíticos, necesitará adquirir compartición de archivos adicional y crear un volumen utilizando esta compartición de archivos. Puede seleccionar este nuevo volumen al desplegar el servidor de análisis.
 
- Para obtener más información sobre cómo añadir volúmenes a {{site.data.keyword.containerlong}}, consulte [Almacenamiento de un volumen utilizando el Panel de control de {{site.data.keyword.Bluemix_notm}} ](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ Para obtener más información sobre cómo añadir volúmenes a {{site.data.keyword.containerlong}}, consulte [Almacenamiento de un volumen utilizando el Panel de control de {{site.data.keyword.Bluemix_notm}} ](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Pulse **Añadir analíticas** para añadir el servidor de Mobile Analytics a la instancia de servicio de {{site.data.keyword.mobilefoundation_short}}.
 
