@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -23,7 +24,7 @@ Il servizio {{site.data.keyword.objectstorageshort}} offre due opzioni di piano,
 <table>
   <tr>
     <th> Piano gratuito </th>
-    <th> Piano standard</th>
+    <th> Piano standard </th>
   </tr>
   <tr>
     <td> Consente solo una istanza del servizio in un'organizzazione {{site.data.keyword.Bluemix_notm}} alla volta </td>
@@ -43,7 +44,7 @@ Il servizio {{site.data.keyword.objectstorageshort}} offre due opzioni di piano,
   </tr>
 </table>
 
-*Tabella 1: Confronto tra i piani Gratuito e Standard*
+Tabella 1: Confronto tra i piani Gratuito e Standard 
 
 **Attenzione**: gli utenti che utilizzano un account di prova {{site.data.keyword.Bluemix_notm}} possono utilizzare il piano Gratuito. Dopo la scadenza della versione di prova, l'istanza del servizio {{site.data.keyword.objectstorageshort}} associata sarà disabilitata, il che significa che non sarai più in grado di accedere all'account di archiviazione. Dopo 30 giorni, il tuo account {{site.data.keyword.Bluemix_notm}} sarà eliminato e tutti i dati vengono eliminati. Per evitare perdite di dati, esegui l'aggiornamento a un [account {{site.data.keyword.Bluemix_notm}} a pagamento](https://new-console.ng.bluemix.net/docs/admin/account.html) quanto prima.
 
@@ -58,7 +59,7 @@ Puoi anche [modificare il piano di pagamento](../../pricing/index.html#changing)
 
 ## In che modo mi verrà addebitato e fatturato l'utilizzo di {{site.data.keyword.objectstorageshort}}? {: #charge-bill}
 
-L'addebito del servizio {{site.data.keyword.objectstorageshort}} comprende solo ciò che si utilizza.  Non sono previsti costi di installazione od obblighi di spesa per iniziare a utilizzare il servizio. Non sono previsti addebiti per le richieste API o il traffico di rete dei dati in entrata. 
+L'addebito del servizio {{site.data.keyword.objectstorageshort}} comprende solo ciò che si utilizza.  Non sono previsti costi di installazione od obblighi di spesa per iniziare a utilizzare il servizio. Non sono previsti addebiti per le richieste API o il traffico di rete dei dati in entrata.
 
 {{site.data.keyword.objectstorageshort}} viene fatturato sulla base del tuo utilizzo dell'archiviazione nel ciclo di fatturazione. Sono inclusi tutti i dati oggetti dei contenitori che hai creato nella tua organizzazione {{site.data.keyword.Bluemix_notm}}.
 

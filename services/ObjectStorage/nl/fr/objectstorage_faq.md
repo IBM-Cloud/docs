@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -18,15 +19,15 @@ Cette foire aux questions fournit des réponses aux questions courantes sur le s
 
 ## Quels comptes et plans de paiement puis-je utiliser pour {{site.data.keyword.objectstorageshort}} ? {: #account-payment}
 
-Le service {{site.data.keyword.objectstorageshort}} offre deux options de plan, Gratuit et Standard. La [tarification](https://console.ng.bluemix.net/pricing/) est fonction du plan choisi. 
+Le service {{site.data.keyword.objectstorageshort}} offre deux options de plan, Gratuit et Standard. La [tarification](https://console.ng.bluemix.net/pricing/) est fonction du plan choisi.
 
 <table>
   <tr>
     <th> Plan gratuit </th>
-    <th> Plan standard</th>
+    <th> Plan standard </th>
   </tr>
   <tr>
-    <td> N'autorise l'existence que d'une seule instance de service à la fois dans une organisation {{site.data.keyword.Bluemix_notm}}</td>
+    <td> N'autorise l'existence que d'une seule instance de service à la fois dans une organisation {{site.data.keyword.Bluemix_notm}} </td>
     <td> Nombre illimité d'instances de service </td>
   </tr>
   <tr>
@@ -35,15 +36,15 @@ Le service {{site.data.keyword.objectstorageshort}} offre deux options de plan, 
   </tr>
   <tr>
     <td> Gratuit </td>
-    <td> Paiement à la carte ou sur abonnement</td>
+    <td> Paiement à la carte ou sur abonnement </td>
   </tr>
   <tr>
     <td> Inclut une limite d'utilisation de stockage préalable de 5 Go </td>
-    <td> Stockage illimité</td>
+    <td> Stockage illimité </td>
   </tr>
 </table>
 
-*Tableau 1 : comparaison entre le plan gratuit et le plan standard*
+Tableau 1 : comparaison entre le plan gratuit et le plan standard
 
 **Attention** : les utilisateurs d'un compte d'essai {{site.data.keyword.Bluemix_notm}} peuvent se servir du plan gratuit. Une fois expiré la période d'essai, l'instance de service {{site.data.keyword.objectstorageshort}} associée est désactivée, ce qui signifie qu'il n'est plus possible d'accéder au compte de stockage. Après 30 jours, votre compte {{site.data.keyword.Bluemix_notm}} est purgé et toutes les données sont supprimées. Pour éviter de perdre des données, procédez à une mise à niveau vers un compte [payant {{site.data.keyword.Bluemix_notm}} ](https://new-console.ng.bluemix.net/docs/admin/account.html) dès que possible.
 

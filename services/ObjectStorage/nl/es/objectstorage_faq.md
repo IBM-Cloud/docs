@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -22,28 +23,28 @@ El servicio de {{site.data.keyword.objectstorageshort}} ofrece dos opciones de p
 
 <table>
   <tr>
-    <th> Plan gratuito</th>
-    <th> Plan estándar</th>
+    <th> Plan gratuito </th>
+    <th> Plan estándar </th>
   </tr>
   <tr>
-    <td> Sólo permite que exista una instancia de servicio en una organización {{site.data.keyword.Bluemix_notm}} a la vez</td>
-    <td> Instancias de servicio ilimitadas</td>
+    <td> Sólo permite que exista una instancia de servicio en una organización {{site.data.keyword.Bluemix_notm}} a la vez </td>
+    <td> Instancias de servicio ilimitadas </td>
   </tr>
   <tr>
-    <td> Disponible para todo el mundo</td>
-    <td> Disponible sólo para las cuentas de pago de {{site.data.keyword.Bluemix_notm}} y los usuarios internos de IBM</td>
+    <td> Disponible para todo el mundo </td>
+    <td> Disponible sólo para las cuentas de pago de {{site.data.keyword.Bluemix_notm}} y los usuarios internos de IBM </td>
   </tr>
   <tr>
-    <td> Gratuito</td>
-    <td> Pago según uso o suscripción a planes de pago</td>
+    <td> Gratuito </td>
+    <td> Pago según uso o suscripción a planes de pago </td>
   </tr>
   <tr>
-    <td> Incluye un límite de uso de almacenamiento introductorio de 5 GB</td>
-    <td> Almacenamiento ilimitado</td>
+    <td> Incluye un límite de uso de almacenamiento introductorio de 5 GB </td>
+    <td> Almacenamiento ilimitado </td>
   </tr>
 </table>
 
-*Tabla 1: Comparación de planes Gratuito y Estándar*
+Tabla 1: Comparación de planes Gratuito y Estándar
 
 **Atención**: Los usuarios que trabajan con una cuenta de prueba de {{site.data.keyword.Bluemix_notm}} pueden utilizar el plan Gratuito. Una vez que caduque el tiempo de la versión de prueba, la instancia de servicio asociada de {{site.data.keyword.objectstorageshort}} se inhabilitará, lo que significa que no podrá acceder a la cuenta de almacenamiento. Tras un periodo de 30 días, se depurará la cuenta de {{site.data.keyword.Bluemix_notm}} y se suprimirán todos los datos. Para evitar la pérdida de datos, actualice a una [Cuenta de pago de {{site.data.keyword.Bluemix_notm}}](https://new-console.ng.bluemix.net/docs/admin/account.html) lo antes posible.
 
@@ -58,7 +59,7 @@ También puede [modificar el plan de pago](../../pricing/index.html#changing) me
 
 ## ¿Cómo se me cobrará y facturará por mi uso de {{site.data.keyword.objectstorageshort}}? {: #charge-bill}
 
-El servicio {{site.data.keyword.objectstorageshort}} sólo le cobrará por lo que utilice. No existen cargos de configuración ni compromisos para empezar a utilizar el servicio. No se le cargará por las solicitudes de API ni por tráfico de red de datos entrante.
+El servicio {{site.data.keyword.objectstorageshort}} sólo le cobrará por lo que utilice.  No existen cargos de configuración ni compromisos para empezar a utilizar el servicio. No se le cargará por las solicitudes de API ni por tráfico de red de datos entrante.
 
 {{site.data.keyword.objectstorageshort}} se factura en función del uso de almacenamiento durante el ciclo de facturación. Esto incluye todos los datos de objetos en contenedores que haya creado dentro de su organización de {{site.data.keyword.Bluemix_notm}}.
 

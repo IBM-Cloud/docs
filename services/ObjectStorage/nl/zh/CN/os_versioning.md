@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -30,33 +31,35 @@ copyright:
     swift post <container_name> -H "X-Versions-Location:<backup_container_name>"
     ```
     {: pre}
-    
+
 * 如果您使用 cURL，那么您可以对其进行如下设置：
 
     ```
     curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:<backup_container_name>" https://<object-storage_url>/<container_name>
     ```
     {: pre}
-    
-**注**：备份容器中的对象将会自动以下列格式命名：`<Length><Object_name>/<Timestamp>`。
+
+备份容器中的对象将会自动以下列格式命名：`<Length><Object_name>/<Timestamp>`。
 <table>
   <tr>
     <th> 属性</th>
     <th> 描述</th>
   </tr>
   <tr>
-    <td> `Length`</td>
+    <td> <code>Length</code></td>
     <td> 对象名称的长度。这是 3 字符零填充十六进制数字。</td>
   </tr>
   <tr>
-    <td> `Object_name`</td>
+    <td> <code>Object_name</code></td>
     <td> 对象的名称。</td>
   </tr>
   <tr>
-    <td> `Timestamp`</td>
+    <td> <code>Timestamp</code></td>
     <td> 最初上传此版本对象的时间戳记。</td>
   </tr>
 </table>
+
+表 1：描述的属性
 
 ### 禁用对象版本控制 {: #disabling-versioning}
 
@@ -68,7 +71,7 @@ copyright:
     swift post <container_name> -H "X-Remove-Versions-Location:"
     ```
     {: pre}
-    
+
 * 运行以下 cURL 命令禁用版本控制：
 
     ```
@@ -88,56 +91,56 @@ copyright:
     swift post container_one
     ```
     {: pre}
-    
+
 3. 创建名为 `container_two` 的第二个容器。
 
     ```
     swift post container_two
     ```
     {: pre}
-    
+
 2. 设置版本控制。
 
     ```
 swift post container_one -H "X-Versions-Location:container_two"
 ```
     {: pre}
-    
+
 4. 首次将对象上传到主容器。
 
     ```
     swift upload container_one object
     ```
     {: pre}
-    
+
 7. 将新版本的对象上传到 container_one。上传新版本的文件时，先前的版本会自动移入设置版本控制时指定的备份容器。
 
     ```
     swift upload container_one object
     ```
     {: pre}
-    
+
 8. 要查看容器中新版本的文件，请列出 container_one 中的对象。
 
     ```
     swift list container_one
     ```
     {: pre}
-    
+
 9. 列出 container_two 中的对象。您将看到上一个版本的文件将存储在此容器中。
 
     ```
     swift list container_two
     ```
     {: pre}
-    
+
 10. 删除 container_one 中的对象。删除对象时，备份容器中的上一个版本将自动移入主容器中。
 
     ```
     swift delete container_one object
     ```
     {: pre}
-    
+
 11. 列出这两个容器。您将看到 `container_one` 和 `container_two` 中的原始文件将为空。
 
     ```

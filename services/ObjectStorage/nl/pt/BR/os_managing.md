@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -10,9 +11,8 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# Gerenciando {{site.data.keyword.objectstorageshort}} em regiões{: #multi-regions}
-*Última atualização: 19 de outubro de 2016*
-{: .last-updated}
+# Gerenciando {{site.data.keyword.objectstorageshort}} em regiões {: #multi-regions}
+
 
 O serviço {{site.data.keyword.objectstorageshort}} suporta as regiões de
 armazenamento Dallas e Londres. Essas regiões de armazenamento são independentes da região do {{site.data.keyword.Bluemix_notm}}, como sul do EUA e Reino Unido, na qual a instância de serviço {{site.data.keyword.objectstorageshort}} foi criada. Se

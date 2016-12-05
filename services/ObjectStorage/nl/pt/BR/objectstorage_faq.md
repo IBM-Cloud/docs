@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +28,7 @@ O serviço {{site.data.keyword.objectstorageshort}} oferece duas opções de pla
   </tr>
   <tr>
     <td> Permite que exista somente uma instância de serviço por vez em uma organização do {{site.data.keyword.Bluemix_notm}} </td>
-    <td> Instâncias de serviço ilimitadas</td>
+    <td> Instâncias de serviço ilimitadas </td>
   </tr>
   <tr>
     <td> Disponível para todos </td>
@@ -43,7 +44,7 @@ O serviço {{site.data.keyword.objectstorageshort}} oferece duas opções de pla
   </tr>
 </table>
 
-*Tabela 1: Comparação dos planos Free e Standard*
+Tabela 1: Comparação dos planos Grátis e Padrão 
 
 **Atenção**: os usuários que trabalham com uma conta para teste
 do {{site.data.keyword.Bluemix_notm}} podem usar o plano Free. Depois que o

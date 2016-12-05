@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -10,9 +11,8 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# Gestion d'{{site.data.keyword.objectstorageshort}} dans les différentes régions{: #multi-regions}
-*Dernière mise à jour : 19 octobre 2016*
-{: .last-updated}
+# Gestion d'{{site.data.keyword.objectstorageshort}} dans les différentes régions {: #multi-regions}
+
 
 Le service {{site.data.keyword.objectstorageshort}} prend en charge les régions de stockage Dallas et Londres. Ces régions de stockage sont indépendantes de la région {{site.data.keyword.Bluemix_notm}} (Sud des Etats-Unis ou Royaume-Uni, par exemple) dans laquelle l'instance de service {{site.data.keyword.objectstorageshort}} est créée. Si vous créez une instance dans la région {{site.data.keyword.Bluemix_notm}} Sud des Etats-Unis, vous pouvez lire et écrire des données dans l'une des deux régions de stockage, Dallas ou Londres.
 {: shortdesc}

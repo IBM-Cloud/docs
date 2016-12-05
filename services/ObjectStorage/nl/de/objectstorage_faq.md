@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -22,28 +23,28 @@ Der {{site.data.keyword.objectstorageshort}}-Service bietet zwei Planoptionen: K
 
 <table>
   <tr>
-    <th> Kostenloser Plan</th>
-    <th> Standardplan</th>
+    <th> Kostenloser Plan </th>
+    <th> Standardplan </th>
   </tr>
   <tr>
-    <td> Nur eine Serviceinstanz in einer {{site.data.keyword.Bluemix_notm}}-Organisation zu einer bestimmten Zeit zulässig</td>
-    <td> Unbegrenzte Anzahl von Serviceinstanzen</td>
+    <td> Nur eine Serviceinstanz in einer {{site.data.keyword.Bluemix_notm}}-Organisation zu einer bestimmten Zeit zulässig </td>
+    <td> Unbegrenzte Anzahl von Serviceinstanzen </td>
   </tr>
   <tr>
-    <td> Für jeden verfügbar</td>
-    <td> Verfügbar nur für kostenpflichtige {{site.data.keyword.Bluemix_notm}}-Konten und interne IBM Benutzer</td>
+    <td> Für jeden verfügbar </td>
+    <td> Verfügbar nur für kostenpflichtige {{site.data.keyword.Bluemix_notm}}-Konten und interne IBM Benutzer </td>
   </tr>
   <tr>
-    <td> Kostenlos</td>
-    <td> Nutzungsabhängige oder Subskriptions-Zahlungspläne</td>
+    <td> Kostenlos </td>
+    <td> Nutzungsabhängige oder Subskriptions-Zahlungspläne </td>
   </tr>
   <tr>
-    <td> Enthält eine Speichernutzungsbegrenzung von 5 GB für den Einstieg</td>
-    <td> Unbegrenzter Speicherplatz</td>
+    <td> Enthält eine Speichernutzungsbegrenzung von 5 GB für den Einstieg </td>
+    <td> Unbegrenzter Speicherplatz </td>
   </tr>
 </table>
 
-*Tabelle 1: Vergleich des kostenlosen und des Standardplans*
+Tabelle 1: Vergleich des gebührenfreien Plans und des Standardplans
 
 **Achtung**: Benutzer, die mit einem {{site.data.keyword.Bluemix_notm}}-Testkonto arbeiten, können den kostenlosen Plan nutzen. Wenn der Zeitraum für den Test abläuft, wird die zugeordnete {{site.data.keyword.objectstorageshort}}-Serviceinstanz inaktiviert, d. h. Sie können nicht auf das Speicherkonto zugreifen. Nach 30 Tagen wird Ihr {{site.data.keyword.Bluemix_notm}}-Konto bereinigt und alle Daten werden gelöscht. Zur Vermeidung von Datenverlust aktualisieren Sie das [gebührenpflichtige {{site.data.keyword.Bluemix_notm}}-Konto ](https://new-console.ng.bluemix.net/docs/admin/account.html) so bald wie möglich.
 

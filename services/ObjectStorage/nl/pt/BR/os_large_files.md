@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -12,8 +13,7 @@ copyright:
 
 
 # Trabalhando com arquivos grandes {: #large-files}
-*Última atualização: 19 de outubro de 2016*
-{: .last-updated}
+
 
 O upload de objetos é limitado a um tamanho máximo de 5 GB em um único upload. No
 entanto, ainda será possível fazer upload de objetos maiores que 5 GB se segmentá-los em
@@ -57,7 +57,7 @@ grandes concluindo as etapas a seguir.
 1. Classifique os segmentos por nome na ordem em que eles deverão ser concatenados para formar o objeto original.
 2. Faça upload de seus segmentos em um contêiner que seja separado do contêiner
 que contém o arquivo manifest. O regulador para uploads inicia após o décimo segmento ter
-sido transferido por upload e aumenta o tempo de upload consideravelmente. Por esse
+sido transferido por upload e aumenta o tempo de upload consideravelmente.  Por esse
 motivo, é recomendado que o tamanho do segmento não seja menor que o tamanho do arquivo
 dividido por 10.
 
@@ -66,7 +66,7 @@ dividido por 10.
     curl -i -X PUT --data-binary @segment2 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_name>/<object_name>/000002
     ```
     {: pre}
-    
+
 3. Faça upload de um arquivo manifest vazio com o cabeçalho
 `X-Object-Manifest` configurado com o valor correspondente
 `<container>/prefix>`.
@@ -75,7 +75,7 @@ dividido por 10.
     curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Object-Manifest: <container_name>/<object_name>/" https://<object-storage_url>/<manifest_container_name>/<object_name>
     ```
     {: pre}
-    
+
     **Nota**: o arquivo manifest deve ficar vazio. Se não estiver, o
 conteúdo do arquivo será considerado como um dos segmentos e cairá na ordem de concatenação que é
 ditada pelos nomes classificados.
@@ -115,7 +115,7 @@ por upload.
   </tr>
   <tr>
     <td> etag </td>
-    <td> Fornecido pela solicitação PUT quando o objeto é transferido por upload. É possível também localizá-lo executando um HEAD para o objeto.</td>
+    <td> Fornecido pela solicitação PUT quando o objeto é transferido por upload. É possível também localizá-lo executando um HEAD para o objeto. </td>
   </tr>
   <tr>
     <td> size_bytes </td>
@@ -127,10 +127,10 @@ por upload.
 
 É possível fazer upload de arquivos grandes concluindo as etapas a seguir:
 
-1. Execute o comando a seguir para fazer upload dos segmentos. O regulador para
-uploads inicia após o décimo segmento ter sido transferido por upload e aumenta o tempo
-de upload consideravelmente. Por esse motivo, é recomendado que o tamanho do segmento não
-seja menor que o tamanho do arquivo dividido por 10.
+1. Execute o comando a seguir para fazer upload dos segmentos. O regulador para uploads inicia após o décimo segmento ter
+sido transferido por upload e aumenta o tempo de upload consideravelmente.  Por esse
+motivo, é recomendado que o tamanho do segmento não seja menor que o tamanho do arquivo
+dividido por 10.
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_one>/<segment>
@@ -138,7 +138,7 @@ seja menor que o tamanho do arquivo dividido por 10.
     curl -i -X PUT --data-binary @segment3 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_one>/<segment>
     ```
     {: pre}
-    
+
 2. Construa o manifest:
 
     ```
@@ -161,7 +161,7 @@ seja menor que o tamanho do arquivo dividido por 10.
     ]
     ```
     {: pre}
-    
+
 3. Faça upload do manifest. Para fazer isso, deve-se incluir a consulta
 `multipart-manifest=put` no nome do manifest executando o comando a
 seguir:
@@ -170,14 +170,14 @@ seguir:
     curl -i -X PUT --data-binary @object_name -H "X-Auth-Token: <token>" https://<object-storage_url>/container_two/<object_name>?multipart-manifest=put
     ```
     {: pre}
-    
-4. Faça download do objeto. 
+
+4. Faça download do objeto.
 
     ```
     curl -O -X GET -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
-    
+
 Aqui estão alguns comandos que podem ser necessários ao trabalhar com Objetos grandes estáticos.
 
 * Para fazer download do conteúdo do arquivo manifest, deve-se incluir a
@@ -188,14 +188,14 @@ recebe não será idêntico ao conteúdo transferido por upload.
     curl -O -X GET -H "X-Auth-Token:<token>" https://<object-storage_url>/<container_two>/<object_name>?multipart-manifest=get
     ```
     {: pre}
-    
+
 * Para excluir o manifest, execute o comando a seguir:
 
     ```
     curl -i -X DELETE -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
-    
+
 * Para excluir o manifest e todos os segmentos, inclua a consulta `multipart-manifest=delete` após o nome do manifest:
 
     ```

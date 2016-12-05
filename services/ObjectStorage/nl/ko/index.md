@@ -2,15 +2,16 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-14"
+
 ---
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+
 
 
 # {{site.data.keyword.objectstorageshort}} 시작하기 {: #getting-started-with-object-storage}
 
-*마지막 업데이트 날짜: 2016년 10월 19일*
-{: .last-updated}
 
 {{site.data.keyword.objectstoragefull}}에서는 구조화되지 않은 클라우드 데이터 스토리지를 제공합니다. 대화식으로 앱과 서비스를 작성하고 앱과 서비스에 연결할 수 있을 뿐만 아니라 컨텐츠를 저장하고 컨텐츠에 액세스할 수 있습니다.
 {: shortdesc}
@@ -23,15 +24,14 @@ copyright:
 * 중앙 저장소 역할 수행
 
 
-
 {{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}}에서는 데이터를 관리할 전체 프로비저닝된 Swift {{site.data.keyword.objectstorageshort}} 계정에 대한 액세스를 제공합니다. 제공자 측 암호화는 제공되지 않습니다. 
 
 
 1.	{{site.data.keyword.Bluemix_notm}} 카탈로그에서 서비스 인스턴스를 프로비저닝하십시오. 인스턴스를 구성하고 **작성**을 클릭하십시오. 초기에 **앱** 필드에 대해 **바인딩되지 않은 상태로 두기** 옵션을 선택하는 경우 나중에 서비스 인스턴스를 {{site.data.keyword.Bluemix_notm}} 앱에 바인딩할 수 있습니다. 
 2. 서비스 인스턴스 대시보드에서 컨테이너를 작성하여 오브젝트 저장을 시작하십시오. 
-3. **조치** 드롭 다운 메뉴에서 컨테이너 또는 버킷에 파일을 추가하십시오. 
+3. **조치** 드롭 다운 메뉴에서 컨테이너에 파일을 추가하십시오. 
 4. 오브젝트에 대한 액세스를 테스트하려면 **다운로드**를 클릭하고 파일을 검토하십시오. 
-5. 인스턴스를 애플리케이션에 연결할 준비가 되면 서비스 신임 정보를 설정하고 [서비스 바인드](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service)를 수행하십시오. 
+5. 인스턴스를 애플리케이션에 연결할 준비가 되면 서비스 신임 정보를 설정하고 [서비스 바인드](/docs/services/reqnsi.html#add_service)를 수행하십시오. 
 
 
 
@@ -56,7 +56,7 @@ copyright:
 ## 호환 가능 런타임 
 {: #buildpacks}
 * [Liberty for Java](https://www.ng.bluemix.net/docs/runtimes/liberty/index.html){: new_window}
-* [Node.js용 SDK](https://www.ng.bluemix.net/docs/runtimes/nodejs/index.html){: new_window}
+* [SDK for Node.js](https://www.ng.bluemix.net/docs/runtimes/nodejs/index.html){: new_window}
 * [Go](https://www.ng.bluemix.net/docs/runtimes/go/index.html){: new_window}
 * [PHP](https://www.ng.bluemix.net/docs/runtimes/php/index.html){: new_window}
 * [Python](https://www.ng.bluemix.net/docs/runtimes/python/index.html){: new_window}

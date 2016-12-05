@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -12,8 +13,7 @@ copyright:
 
 
 # ラージ・ファイルの操作 {: #large-files}
-*最終更新日: 2016 年 10 月 19 日*
-{: .last-updated}
+
 
 オブジェクトのアップロードは、単一のアップロードで最大サイズ 5 GB に制限されています。ただし、5 GB より大きいオブジェクトでも、小さいオブジェクトにセグメント化すれば、アップロード可能です。セグメント化されたオブジェクトがアップロードされたら、それらのセグメントを連結して元のオブジェクトにするためにマニフェスト・ファイルも必要です。これを行う方法には、動的ラージ・オブジェクト (DLO) と静的ラージ・オブジェクト (SLO) の 2 つの方法があります。
 {: shortdesc}
@@ -42,22 +42,21 @@ Swift クライアントは、`-segment-size` パラメーターを使用して�
 5 GB 以下になるようにオブジェクトを自分でセグメント化し、Swift API でそれらをアップロードすることができます。アップロードの際には、マニフェストをアップロードする前に、すべてのセグメントをまずアップロードすることが重要です。すべてのセグメントのアップロードを完了する前にオブジェクトがダウンロードされると、ダウンロードされたオブジェクトは不整合になります。ラージ・ファイルをアップロードするには、以下の手順を行います。
 
 1. 元のオブジェクトを形成するために連結する必要がある名前順で、セグメントをソートします。
-2. マニフェスト・ファイルが入ったコンテナーとは別のコンテナーに、セグメントをアップロードします。10 個目のセグメントをアップロードした後、アップロードの減速が始まり
-、アップロード時間が著しく増大します。このため、セグメント・サイズは、ファイル・サイズを 10 で割った値以上にするようお勧めします。
+2. マニフェスト・ファイルが入ったコンテナーとは別のコンテナーに、セグメントをアップロードします。10 個目のセグメントをアップロードした後、アップロードの減速が始まり、アップロード時間が著しく増大します。このため、セグメント・サイズは、ファイル・サイズを 10 で割った値以上にするようお勧めします。
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_name>/<object_name>/000001
     curl -i -X PUT --data-binary @segment2 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_name>/<object_name>/000002
     ```
     {: pre}
-    
+
 3. ヘッダー `X-Object-Manifest` に対応する `<container>/prefix>` 値を設定して、空のマニフェスト・ファイルをアップロードします。
 
     ```
     curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Object-Manifest: <container_name>/<object_name>/" https://<object-storage_url>/<manifest_container_name>/<object_name>
     ```
     {: pre}
-    
+
     **注**: マニフェスト・ファイルは空である必要があります。そうでないと、ファイルの内容がセグメントの 1 つと見なされ、ソート名で指示された連結順序に入ります。
 4. オブジェクトをダウンロードします。結果としてオブジェクト全体を受け取ります。セグメントを追加または削除する場合、マニフェスト・ファイルを更新する必要はありません。
 正しい接頭部を持つセグメントは、そのままオブジェクトの一部として残ります。マニフェストを削除しても、セグメントは削除されません。
@@ -108,7 +107,7 @@ Swift クライアントは、`-segment-size` パラメーターを使用して�
     curl -i -X PUT --data-binary @segment3 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_one>/<segment>
     ```
     {: pre}
-    
+
 2. マニフェストを作成します。
 
     ```
@@ -131,21 +130,21 @@ Swift クライアントは、`-segment-size` パラメーターを使用して�
     ]
     ```
     {: pre}
-    
+
 3. マニフェストをアップロードします。これを行うには、以下のコマンドを実行して、マニフェストの名前に照会 `multipart-manifest=put` を追加する必要があります。
 
     ```
     curl -i -X PUT --data-binary @object_name -H "X-Auth-Token: <token>" https://<object-storage_url>/container_two/<object_name>?multipart-manifest=put
     ```
     {: pre}
-    
+
 4. オブジェクトをダウンロードします。
 
     ```
     curl -O -X GET -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
-    
+
 静的ラージ・オブジェクトを処理する際に必要となる可能性があるコマンドをいくつか以下に示します。
 
 * マニフェスト・ファイルの内容をダウンロードするには、コマンドに照会 `multipart-manifest=get` を追加する必要があります。受け取る内容は、アップロードした内容と同じにはなりません。
@@ -154,14 +153,14 @@ Swift クライアントは、`-segment-size` パラメーターを使用して�
     curl -O -X GET -H "X-Auth-Token:<token>" https://<object-storage_url>/<container_two>/<object_name>?multipart-manifest=get
     ```
     {: pre}
-    
+
 * マニフェストを削除するには、以下のコマンドを実行します。
 
     ```
     curl -i -X DELETE -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
-    
+
 * マニフェストとすべてのセグメントを削除するには、マニフェストの名前の後に照会 `multipart-manifest=delete` を追加します。
 
     ```

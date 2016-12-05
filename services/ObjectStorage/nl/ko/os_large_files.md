@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -12,8 +13,7 @@ copyright:
 
 
 # 대형 파일에 대한 작업 {: #large-files}
-*마지막 업데이트 날짜: 2016년 10월 19일*
-{: .last-updated}
+
 
 오브젝트 업로드는 한 번의 업로드에서 최대 크기 5GB로 제한됩니다. 그러나 오브젝트를 작은 오브젝트로 세그먼트화하면 5GB보다 큰 오브젝트를 업로드할 수 있습니다. 세그먼트화된 오브젝트가 업로드되면 원래 오브젝트에 세그먼트를 병합하는 데 Manifest 파일도 필요합니다. 이를 수행하는 방법은 DLO(Dynamic Large Objects)와 SLO(Static Large Objects) 두 가지입니다.
 {: shortdesc}
@@ -47,14 +47,14 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     curl -i -X PUT --data-binary @segment2 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_name>/<object_name>/000002
     ```
     {: pre}
-    
+
 3. 헤더 `X-Object-Manifest`를 해당 `<container>/prefix>` 값으로 설정하여 비어 있는 Manifest 파일을 업로드하십시오. 
 
     ```
     curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Object-Manifest: <container_name>/<object_name>/" https://<object-storage_url>/<manifest_container_name>/<object_name>
     ```
     {: pre}
-    
+
     **참고**: Manifest 파일은 비어 있어야 합니다. 그렇지 않으면 파일의 컨텐츠를 세그먼트 중 하나로 간주하며 정렬된 이름의 제어를 받는 병합 순서로 정렬합니다.
 4. 오브젝트를 다운로드하십시오. 다운로드 결과 전체 오브젝트를 받습니다. Manifest 파일을 업데이트하지 않아도 세그먼트를 추가하거나 제거할 수 있습니다. 올바른 접두부가 있는 세그먼트는 오브젝트의 일부로 남습니다. Manifest를 삭제해도 세그먼트는 삭제되지 않습니다. 
 
@@ -102,7 +102,7 @@ Manifest 파일은 세그먼트의 세부사항을 제공하는 JSON 문서이�
     curl -i -X PUT --data-binary @segment3 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_one>/<segment>
     ```
     {: pre}
-    
+
 2. 다음과 같이 Manifest를 빌드하십시오. 
 
     ```
@@ -125,21 +125,21 @@ Manifest 파일은 세그먼트의 세부사항을 제공하는 JSON 문서이�
     ]
     ```
     {: pre}
-    
+
 3. Manifest를 업로드하십시오. 이를 수행하려면 다음 명령을 실행하여 조회 `multipart-manifest=put`을 Manifest 이름에 추가해야 합니다. 
 
     ```
     curl -i -X PUT --data-binary @object_name -H "X-Auth-Token: <token>" https://<object-storage_url>/container_two/<object_name>?multipart-manifest=put
     ```
     {: pre}
-    
+
 4. 오브젝트를 다운로드하십시오. 
 
     ```
     curl -O -X GET -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
-    
+
 다음은 SLO(Static Large Objects)에 대한 작업 수행 시 필요한 몇몇 명령입니다. 
 
 * Manifest 파일의 컨텐츠를 다운로드하려면 조회 `multipart-manifest=get`을 명령에 추가해야 합니다. 사용자가 받는 컨텐츠는 업로드한 컨텐츠와 동일하지 않습니다. 
@@ -148,14 +148,14 @@ Manifest 파일은 세그먼트의 세부사항을 제공하는 JSON 문서이�
     curl -O -X GET -H "X-Auth-Token:<token>" https://<object-storage_url>/<container_two>/<object_name>?multipart-manifest=get
     ```
     {: pre}
-    
+
 * Manifest를 삭제하려면 다음 명령을 실행하십시오. 
 
     ```
     curl -i -X DELETE -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
-    
+
 * Manifest와 모든 세그먼트를 삭제하려면 조회 `multipart-manifest=delete`를 Manifest 이름 뒤에 추가하십시오. 
 
     ```

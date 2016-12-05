@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -14,8 +15,6 @@ copyright:
 # Risoluzione dei problemi di {{site.data.keyword.objectstorageshort}}
 {: #troubleshooting}
 
-*Ultimo aggiornamento: 19 ottobre 2016*
-{: .last-updated}
 
 Queste sono le risposte alle domande sulla risoluzione dei problemi comuni riguardanti l'utilizzo di {{site.data.keyword.objectstoragefull}}.
 {: shortdesc}
@@ -24,7 +23,7 @@ Queste sono le risposte alle domande sulla risoluzione dei problemi comuni rigua
 {: #unrecognized_token}
 
 
-È possibile che si verifichi la seguente traccia di stack quando utilizzi openstack4j con il profilo Liberty: 
+È possibile che si verifichi la seguente traccia di stack quando utilizzi openstack4j con il profilo Liberty:
 ```
 Exception thrown by application class 'org.openstack4j.connectors.okhttp.HttpResponseImpl.readEntity:124'
 org.openstack4j.api.exceptions.ClientResponseException: Unrecognized token 'contentpack': was expecting ('true', 'false' or 'null') at [Source: contentpack ; line: 1, column: 12]
@@ -50,8 +49,8 @@ Questo problema è causato da un errore di caricamento della classe, dove la lib
 
 Puoi risolvere questo problema nei seguenti modi:
 {: tsResolve}
-  * Utilizzando il caricamento della classe inverso (parentLast). 
-  * Escludendo jaxrs dalle funzioni abilitate. 
+  * Utilizzando il caricamento della classe inverso (parentLast).
+  * Escludendo jaxrs dalle funzioni abilitate.
 
 
 ## Come ottenere aiuto e supporto per {{site.data.keyword.objectstorageshort}}

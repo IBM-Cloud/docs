@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -10,9 +11,8 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# {{site.data.keyword.objectstorageshort}} regionenübergreifend verwalten{: #multi-regions}
-*Letzte Aktualisierung: 19. Oktober 2016*
-{: .last-updated}
+# {{site.data.keyword.objectstorageshort}} regionenübergreifend verwalten {: #multi-regions}
+
 
 Der {{site.data.keyword.objectstorageshort}}-Service unterstützt die Speicherregionen Dallas und London. Diese Speicherregionen sind unabhängig von der {{site.data.keyword.Bluemix_notm}}-Region, wie zum Beispiel 'US-South' und 'United Kingdom', in der die {{site.data.keyword.objectstorageshort}}-Serviceinstanz erstellt wurde. Wenn Sie eine Instanz in der {{site.data.keyword.Bluemix_notm}}-Region 'USA-Süden' erstellen, haben Sie Lese- und Schreibzugriff auf Daten in der Speicherregion Dallas oder in der Speicherregion London.
 {: shortdesc}

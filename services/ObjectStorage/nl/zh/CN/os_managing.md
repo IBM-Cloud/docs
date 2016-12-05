@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -11,8 +12,7 @@ copyright:
 {:pre: .pre}
 
 # 跨区域管理 {{site.data.keyword.objectstorageshort}} {: #multi-regions}
-*上次更新时间：2016 年 10 月 19 日*
-{: .last-updated}
+
 
 {{site.data.keyword.objectstorageshort}} 服务支持达拉斯和伦敦存储区域。这两个存储区域独立于 {{site.data.keyword.Bluemix_notm}} 区域（例如，美国南部区域和英国），而 {{site.data.keyword.objectstorageshort}} 服务实例创建于该区域。如果在美国南部的 {{site.data.keyword.Bluemix_notm}} 区域中创建实例，那么可以读写达拉斯或伦敦存储区域的数据。
 {: shortdesc}

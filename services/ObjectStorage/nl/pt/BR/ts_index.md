@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -14,8 +15,6 @@ copyright:
 # Resolução de problemas do {{site.data.keyword.objectstorageshort}}
 {: #troubleshooting}
 
-*Última atualização: 19 de outubro de 2016*
-{: .last-updated}
 
 Aqui estão as respostas para perguntas comuns de resolução de problemas sobre como usar o {{site.data.keyword.objectstoragefull}}.
 {: shortdesc}

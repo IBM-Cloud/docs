@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -14,8 +15,6 @@ copyright:
 # {{site.data.keyword.objectstorageshort}} 疑難排解
 {: #troubleshooting}
 
-*前次更新：2016 年 10 月 19 日*
-{: .last-updated}
 
 以下是關於使用 {{site.data.keyword.objectstoragefull}} 的一般疑難排解問題的回答。
 {: shortdesc}

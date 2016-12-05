@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -11,8 +12,7 @@ copyright:
 {:pre: .pre}
 
 # Gestión de {{site.data.keyword.objectstorageshort}} entre regiones {: #multi-regions}
-*Última actualización: 19 de octubre de 2016*
-{: .last-updated}
+
 
 El servicio de {{site.data.keyword.objectstorageshort}} da soporte a las regiones de almacenamiento Dallas y Londres. Estas regiones de almacenamiento son independientes de la región {{site.data.keyword.Bluemix_notm}}, como por ejemplo EE.UU.-Sur y Reino Unido, en la que se crea la instancia de servicio de {{site.data.keyword.objectstorageshort}}. Si crea una instancia en la región de {{site.data.keyword.Bluemix_notm}} EE.UU.-Sur, puede leer y grabar datos en cualquier región de almacenamiento Dallas o Londres.
 {: shortdesc}

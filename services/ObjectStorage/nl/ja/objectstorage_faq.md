@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -43,7 +44,7 @@ copyright:
   </tr>
 </table>
 
-*表 1: 無料プランと標準プランの比較*
+表 1: 無料プランと標準プランの比較
 
 **注意**: {{site.data.keyword.Bluemix_notm}} トライアル・アカウントで作業するユーザーは無料プランを使用できます。トライアル期間の満了後、関連付けられている {{site.data.keyword.objectstorageshort}} サービス・インスタンスは無効になります。つまり、ストレージ・アカウントにアクセスできなくなります。30 日後、ご使用の {{site.data.keyword.Bluemix_notm}} アカウントはパージされ、すべてのデータが削除されます。データが失われないようにするために、可能な限り早急に[有料 {{site.data.keyword.Bluemix_notm}} アカウント](https://new-console.ng.bluemix.net/docs/admin/account.html)にアップグレードしてください。
 

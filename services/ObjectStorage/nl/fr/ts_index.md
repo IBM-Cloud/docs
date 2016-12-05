@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -14,8 +15,6 @@ copyright:
 # Traitement des incidents liés à {{site.data.keyword.objectstorageshort}}
 {: #troubleshooting}
 
-*Dernière mise à jour : 19 octobre 2016*
-{: .last-updated}
 
 Cette rubrique fournit les réponses aux questions courantes relatives au traitement des incidents d'utilisation d'{{site.data.keyword.objectstoragefull}}.
 {: shortdesc}

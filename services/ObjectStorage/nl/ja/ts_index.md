@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -14,8 +15,6 @@ copyright:
 # {{site.data.keyword.objectstorageshort}} のトラブルシューティング
 {: #troubleshooting}
 
-*最終更新日: 2016 年 10 月 19 日*
-{: .last-updated}
 
 {{site.data.keyword.objectstoragefull}} の使用時のトラブルシューティングに関する一般的な質問について、以下に回答を示します。
 {: shortdesc}

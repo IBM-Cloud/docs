@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -11,8 +12,7 @@ copyright:
 {:pre: .pre}
 
 # 지역에서 {{site.data.keyword.objectstorageshort}} 관리 {: #multi-regions}
-*마지막 업데이트 날짜: 2016년 10월 19일*
-{: .last-updated}
+
 
 {{site.data.keyword.objectstorageshort}} 서비스에서는 댈러스 스토리지 지역과 런던 스토리지 지역을 지원합니다. 해당 스토리지 지역은 {{site.data.keyword.objectstorageshort}} 서비스 인스턴스가 작성되는 {{site.data.keyword.Bluemix_notm}} 지역(예: 미국 남부와 영국)에 독립적입니다. 미국 남부 {{site.data.keyword.Bluemix_notm}} 지역에서 인스턴스를 작성하는 경우 댈러스 또는 런던 스토리지 지역에서 데이터를 읽고 쓸 수 있습니다.
 {: shortdesc}

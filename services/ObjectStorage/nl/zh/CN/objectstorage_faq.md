@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -43,7 +44,7 @@ copyright:
   </tr>
 </table>
 
-*表 1：免费套餐与标准套餐的比较*
+表 1：免费套餐与标准套餐的比较
 
 **注意**：使用 {{site.data.keyword.Bluemix_notm}} 试用帐户的用户可以使用免费套餐。在试用时间到期后，将禁用关联的 {{site.data.keyword.objectstorageshort}} 服务实例，就是说您将无法访问存储帐户。30 天后，将清除 {{site.data.keyword.Bluemix_notm}} 帐户，并且删除所有数据。要避免数据丢失，请尽快升级到[付费 {{site.data.keyword.Bluemix_notm}} 帐户](https://new-console.ng.bluemix.net/docs/admin/account.html)。
 

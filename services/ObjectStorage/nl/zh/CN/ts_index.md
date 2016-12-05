@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -14,8 +15,6 @@ copyright:
 # {{site.data.keyword.objectstorageshort}} 故障诊断
 {: #troubleshooting}
 
-*上次更新时间：2016 年 10 月 19 日*
-{: .last-updated}
 
 下面是有关使用 {{site.data.keyword.objectstoragefull}} 的常见故障诊断问题的答案。
 {: shortdesc}

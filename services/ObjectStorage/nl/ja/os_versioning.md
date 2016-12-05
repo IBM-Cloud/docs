@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -30,33 +31,35 @@ copyright:
     swift post <container_name> -H "X-Versions-Location:<backup_container_name>"
     ```
     {: pre}
-    
+
 * cURL を使用する場合は、次のようにセットアップします。
 
     ```
     curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:<backup_container_name>" https://<object-storage_url>/<container_name>
     ```
     {: pre}
-    
-**注**: バックアップ・コンテナー内のオブジェクトには、`<Length><Object_name>/<Timestamp>` というフォーマットで自動的に名前が付けられます。
+
+バックアップ・コンテナー内のオブジェクトには、形式 `<Length><Object_name>/<Timestamp>` で自動的に名前が付けられます。
 <table>
   <tr>
     <th> 属性 </th>
     <th> 説明 </th>
   </tr>
   <tr>
-    <td> `Length` </td>
+    <td> <code>Length</code> </td>
     <td> オブジェクトの名前の長さ。これは、3 文字のゼロ埋め込み 16 進数です。</td>
   </tr>
   <tr>
-    <td> `Object_name` </td>
+    <td> <code>Object_name</code> </td>
     <td> オブジェクトの名前。</td>
   </tr>
   <tr>
-    <td> `Timestamp` </td>
+    <td> <code>Timestamp</code> </td>
     <td> オブジェクトの該当バージョンが最初にアップロードされたときのタイム・スタンプ。</td>
   </tr>
 </table>
+
+表 1: 属性の説明
 
 ### オブジェクト・バージョン管理の無効化 {: #disabling-versioning}
 
@@ -68,7 +71,7 @@ copyright:
     swift post <container_name> -H "X-Remove-Versions-Location:"
     ```
     {: pre}
-    
+
 * 以下の cURL コマンドを実行して、バージョン管理を無効にします。
 
     ```
@@ -88,56 +91,56 @@ copyright:
     swift post container_one
     ```
     {: pre}
-    
+
 3. `container_two` という名前で 2 つ目のコンテナーを作成します。
 
     ```
     swift post container_two
     ```
     {: pre}
-    
+
 2. バージョン管理をセットアップします。
 
     ```
 swift post container_one -H "X-Versions-Location:container_two"
 ```
     {: pre}
-    
+
 4. 初めてメイン・コンテナーにオブジェクトをアップロードします。
 
     ```
     swift upload container_one object
     ```
     {: pre}
-    
+
 7. オブジェクトの新しいバージョンを container_one にアップロードします。ファイルの新しいバージョンをアップロードすると、バージョン管理のセットアップで指定したバックアップ・コンテナーに、前のバージョンが自動的に移動されます。
 
     ```
     swift upload container_one object
     ```
     {: pre}
-    
+
 8. コンテナー内のファイルの新しいバージョンを確認するために、container_one 内のオブジェクトをリストします。
 
     ```
     swift list container_one
     ```
     {: pre}
-    
+
 9. container_two 内のオブジェクトをリストします。ファイルの以前のバージョンがこのコンテナーに保管されることが分かります。
 
     ```
     swift list container_two
     ```
     {: pre}
-    
+
 10. container_one 内のオブジェクトを削除します。オブジェクトを削除すると、バックアップ・コンテナー内の前のバージョンが、メイン・コンテナーに自動的に移動されます。
 
     ```
     swift delete container_one object
     ```
     {: pre}
-    
+
 11. 両方のコンテナーをリストします。元のファイルが `container_one` にあり、`container_two` は空になります。
 
     ```

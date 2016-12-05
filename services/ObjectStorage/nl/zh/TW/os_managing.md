@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -11,8 +12,7 @@ copyright:
 {:pre: .pre}
 
 # 跨地區管理 {{site.data.keyword.objectstorageshort}} {: #multi-regions}
-*前次更新：2016 年 10 月 19 日*
-{: .last-updated}
+
 
 {{site.data.keyword.objectstorageshort}} 服務支援達拉斯及倫敦儲存空間地區。這些儲存空間地區與在其中建立 {{site.data.keyword.objectstorageshort}} 服務實例的 {{site.data.keyword.Bluemix_notm}} 地區（例如美國南部及英國）無關。如果您在美國南部的 {{site.data.keyword.Bluemix_notm}} 地區建立實例，則可以在達拉斯或倫敦儲存空間地區讀取及寫入資料。
 {: shortdesc}

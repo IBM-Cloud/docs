@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -31,35 +32,37 @@ Vous pouvez configurer la fonctionnalité de gestion des versions d'objets via l
     swift post <nom_conteneur> -H "X-Versions-Location:<nom_conteneur_sauvegarde>"
     ```
     {: pre}
-    
+
 * Si vous utilisez cURL, vous pouvez le configurer ainsi :
 
     ```
     curl -i -X PUT -H "X-Auth-Token: <jeton>" -H "X-Versions-Location:<nom_conteneur_sauvegarde>" https://<url-stockage-objet>/<nom_conteneur>
     ```
     {: pre}
-    
-**Remarque** : les objets de votre conteneur de sauvegarde sont nommés automatiquement selon le format suivant : `<Longueur><Nom_objet>/<Nom_objet>`.
+
+Les objets de votre conteneur de sauvegarde sont nommés automatiquement selon le format suivant : `<Longueur><Nom_objet>/<Horodatage>`.
 <table>
   <tr>
     <th> Attribut </th>
     <th> Description </th>
   </tr>
   <tr>
-    <td> `Longueur` </td>
+    <td> <code>Longueur</code> </td>
     <td> Longueur du nom de votre objet. Il s'agit d'un nombre hexadécimal de trois caractères remplis avec des zéros. </td>
   </tr>
   <tr>
-    <td> `Nom_objet` </td>
+    <td> <code>Nom_objet</code> </td>
     <td> Nom de votre objet. </td>
   </tr>
   <tr>
-    <td> `Horodatage` </td>
+    <td> <code>Horodatage</code> </td>
     <td> Horodatage du téléchargement initial de cette version particulière de l'objet. </td>
   </tr>
 </table>
 
-### Désactivation de la gestion des versions d'objets{: #disabling-versioning}
+Tableau 1 : description des attributs
+
+### Désactivation de la gestion des versions d'objets {: #disabling-versioning}
 
 Vous pouvez désactiver la gestion des versions via le client Swift ou en utilisant les commandes cURL.
 
@@ -69,7 +72,7 @@ Vous pouvez désactiver la gestion des versions via le client Swift ou en utilis
     swift post <nom_conteneur> -H "X-Remove-Versions-Location:"
     ```
     {: pre}
-    
+
 * Exécutez la commande cURL suivante pour désactiver la gestion des versions :
 
     ```
@@ -78,7 +81,7 @@ Vous pouvez désactiver la gestion des versions via le client Swift ou en utilis
     {: pre}
 
 
-### Tutoriel relatif à la gestion des versions d'objets{: #versioning-tutorial}
+### Tutoriel relatif à la gestion des versions d'objets {: #versioning-tutorial}
 <!--- SHAWNA: This needs more background information. What are they doing? Why are they doing it? What is the outcome? --->
 
 Vous pouvez utiliser le tutoriel suivant pour comprendre comment se déroule le cycle de vie complet de la gestion des versions d'objets.
@@ -89,56 +92,56 @@ Vous pouvez utiliser le tutoriel suivant pour comprendre comment se déroule le 
     swift post conteneur_un
     ```
     {: pre}
-    
+
 3. Créez un second conteneur, intitulé `conteneur_deux`.
 
     ```
     swift post conteneur_deux
     ```
     {: pre}
-    
+
 2. Configurez la gestion des versions.
 
     ```
     swift post conteneur_un -H "X-Versions-Location:conteneur_deux"
     ```
     {: pre}
-    
+
 4. Téléchargez un objet dans votre conteneur principal, pour la première fois.
 
     ```
     swift upload conteneur_un object
     ```
     {: pre}
-    
+
 7. Téléchargez une nouvelle version de l'objet dans conteneur_un. Quand vous téléchargez une nouvelle version de votre fichier, la version précédente est automatiquement déplacée dans le conteneur de sauvegarde que vous avez spécifié quand vous avez configuré la gestion des versions.
 
     ```
     swift upload conteneur_un object
     ```
     {: pre}
-    
+
 8. Pour définir la nouvelle version de votre fichier dans le conteneur, répertoriez les objets de conteneur_un.
 
     ```
     swift list conteneur_un
     ```
     {: pre}
-    
+
 9. Répertoriez les objets de conteneur_deux. La version précédente de votre fichier sera stockée dans ce conteneur.
 
     ```
     swift list conteneur_deux
     ```
     {: pre}
-    
+
 10. Supprimez l'objet dans conteneur_un. Quand vous supprimez l'objet, la version précédente qui se trouve dans le conteneur de sauvegarde sera automatiquement déplacée dans votre conteneur principal.
 
     ```
     swift delete conteneur_un object
     ```
     {: pre}
-    
+
 11. Répertoriez le contenu des deux conteneurs. `conteneur_un` comporte votre fichier d'origine et `conteneur_deux` est vide.
 
     ```

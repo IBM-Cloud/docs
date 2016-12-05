@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -30,37 +31,39 @@ Puoi configurare le versioni dell'oggetto tramite il client Swift o utilizzando 
     swift post <container_name> -H "X-Versions-Location:<backup_container_name>"
     ```
     {: pre}
-    
+
 * Se stai utilizzando cURL, puoi configuralo in questo modo:
 
     ```
     curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:<backup_container_name>" https://<object-storage_url>/<container_name>
     ```
     {: pre}
-    
-**Nota**: gli oggetti nel tuo contenitore di backup saranno automaticamente denominati con il  seguente formato: `<Length><Object_name>/<Timestamp>`.
+
+Gli oggetti nel tuo contenitore di backup saranno automaticamente denominati con il seguente formato: `<Length><Object_name>/<Timestamp>`.
 <table>
   <tr>
-    <th> Attributo</th>
-    <th> Descrizione</th>
+    <th> Attributo </th>
+    <th> Descrizione </th>
   </tr>
   <tr>
-    <td> `Length` </td>
+    <td> <code>Length</code> </td>
     <td> La lunghezza del nome del tuo oggetto. Questo è un numero esadecimale a 3 caratteri senza zeri. </td>
   </tr>
   <tr>
-    <td> `Object_name` </td>
+    <td> <code>Object_name</code> </td>
     <td> Il nome del tuo oggetto. </td>
   </tr>
   <tr>
-    <td> `Timestamp` </td>
+    <td> <code>Timestamp</code> </td>
     <td> La data/ora in cui questa versione dell'oggetto è stata caricata originalmente. </td>
   </tr>
 </table>
 
+Tabella 1: Attributi descritti
+
 ### Disabilitazione delle versioni dell'oggetto. {: #disabling-versioning}
 
-Puoi disabilitare le versioni dell'oggetto tramite il client Swift o utilizzando i comandi cURL. 
+Puoi disabilitare le versioni dell'oggetto tramite il client Swift o utilizzando i comandi cURL.
 
 * Per utilizzare il client Swift esegui il seguente comando:
 
@@ -68,7 +71,7 @@ Puoi disabilitare le versioni dell'oggetto tramite il client Swift o utilizzando
     swift post <container_name> -H "X-Remove-Versions-Location:"
     ```
     {: pre}
-    
+
 * Esegui il seguente comando cURL per disabilitare le versioni:
 
     ```
@@ -88,56 +91,56 @@ Puoi utilizzare la seguente esercitazione per ottenere una descrizione del ciclo
     swift post container_one
     ```
     {: pre}
-    
+
 3. Crea un secondo contenitore con il nome `container_two`.
 
     ```
     swift post container_two
     ```
     {: pre}
-    
+
 2. Configura le versioni.
 
     ```
     swift post container_one -H "X-Versions-Location:container_two"
     ```
     {: pre}
-    
+
 4. Carica un oggetto nel tuo contenitore principale per la prima volta.
 
     ```
     swift upload container_one object
     ```
     {: pre}
-    
+
 7. Carica una nuova versione dell'oggetto in container_one. Quando carichi una nuova versione del tuo file, la versione precedente viene automaticamente spostata nel contenitore di backup che hai specificato quando hai configurato le versioni.
 
     ```
     swift upload container_one object
     ```
     {: pre}
-    
+
 8. Per visualizzare la nuova versione del tuo file nel contenitore, elenca gli oggetti in container_one.
 
     ```
     swift list container_one
     ```
     {: pre}
-    
+
 9. Elenca gli oggetti in container_two. La versione precedente del tuo file sarà archiviata in questo contenitore.
 
     ```
     swift list container_two
     ```
     {: pre}
-    
+
 10. Elimina l'oggetto in container_one. Quando elimini l'oggetto, la versione precedente nel tuo contenitore di backup sarà automaticamente spostata nel tuo contenitore principale.
 
     ```
     swift delete container_one object
     ```
     {: pre}
-    
+
 11. Elenca entrambi i contenitori. Il tuo file originale in `container_one` e `container_two` sarà vuoto.
 
     ```

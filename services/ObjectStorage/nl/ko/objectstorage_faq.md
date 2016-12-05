@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -43,7 +44,7 @@ copyright:
   </tr>
 </table>
 
-*표 1: 무료 사용제와 표준 플랜 비교*
+표 1: 무료 사용제와 표준 플랜 비교
 
 **주의**: {{site.data.keyword.Bluemix_notm}} 평가판 계정을 사용하여 작업하는 사용자는 무료 사용제를 사용할 수 있습니다. 평가판 만료 후에는 연관된 {{site.data.keyword.objectstorageshort}} 서비스 인스턴스를 사용할 수 없습니다. 이는 스토리지 계정에 액세스할 수 없음을 의미합니다. 30일 후 {{site.data.keyword.Bluemix_notm}} 계정이 영구 제거되고 모든 데이터는 삭제됩니다. 데이터가 손실되지 않게 하려면 가능한 한 빨리 [유료 {{site.data.keyword.Bluemix_notm}} 계정](https://new-console.ng.bluemix.net/docs/admin/account.html)으로 업그레이드하십시오. 
 

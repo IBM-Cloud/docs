@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -12,8 +13,7 @@ copyright:
 
 
 # 使用大型文件 {: #large-files}
-*上次更新时间：2016 年 10 月 19 日*
-{: .last-updated}
+
 
 在单个上传中，上传对象的最大大小限制为 5 GB。但是，如果将大于 5 GB 的对象分段为较小的对象，那么仍可以上传。一旦上传了分段对象，那么还需要清单文件来将这些分段合并成原始对象。这可通过两种方式实现：动态大对象 (DLO) 和静态大对象 (SLO)。
 {: shortdesc}
@@ -47,14 +47,14 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     curl -i -X PUT --data-binary @segment2 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_name>/<object_name>/000002
     ```
     {: pre}
-    
+
 3. 上传空清单文件，文件头 `X-Object-Manifest` 设置为相应的 `<container>/prefix>` 值。
 
     ```
     curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Object-Manifest: <container_name>/<object_name>/" https://<object-storage_url>/<manifest_container_name>/<object_name>
     ```
     {: pre}
-    
+
     **注**：清单文件必须为空。如果不为空，该文件的内容将被视为其中一个分段，并且将按已排序名称所指示的合并顺序排列。
 4. 下载对象。结果您将收到整个对象。您可以添加或除去分段，而不必更新清单文件。分段只要前缀正确，就将一直是对象的组成部分。删除清单不会删除这些分段。
 
@@ -102,7 +102,7 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     curl -i -X PUT --data-binary @segment3 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_one>/<segment>
     ```
     {: pre}
-    
+
 2. 构建清单：
 
     ```
@@ -125,21 +125,21 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     ]
     ```
     {: pre}
-    
+
 3. 上传清单。为此，必须通过运行以下命令，将查询 `multipart-manifest=put` 添加到清单的名称：
 
     ```
     curl -i -X PUT --data-binary @object_name -H "X-Auth-Token: <token>" https://<object-storage_url>/container_two/<object_name>?multipart-manifest=put
     ```
     {: pre}
-    
+
 4. 下载对象。
 
     ```
     curl -O -X GET -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
-    
+
 下面是使用静态大对象时可能会需要的一些命令。
 
 * 要下载清单文件的内容，必须将查询 `multipart-manifest=get` 添加到命令。收到的内容不会与上传的内容相同。
@@ -148,14 +148,14 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     curl -O -X GET -H "X-Auth-Token:<token>" https://<object-storage_url>/<container_two>/<object_name>?multipart-manifest=get
     ```
     {: pre}
-    
+
 * 要删除清单，请运行以下命令：
 
     ```
     curl -i -X DELETE -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
-    
+
 * 要删除清单及所有分段，请将查询 `multipart-manifest=delete` 添加到清单名称之后：
 
     ```

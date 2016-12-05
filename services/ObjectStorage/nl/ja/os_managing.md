@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -11,8 +12,7 @@ copyright:
 {:pre: .pre}
 
 # 複数地域にわたる {{site.data.keyword.objectstorageshort}} の管理 {: #multi-regions}
-*最終更新日: 2016 年 10 月 19 日*
-{: .last-updated}
+
 
 {{site.data.keyword.objectstorageshort}} サービスは、ダラスとロンドンのストレージ地域をサポートします。これらのストレージ地域は、{{site.data.keyword.objectstorageshort}} サービス・インスタンスが作成される {{site.data.keyword.Bluemix_notm}} 地域 (「米国南部」や「英国」など) から独立しています。米国南部 {{site.data.keyword.Bluemix_notm}} 地域にインスタンスを作成した場合、「ダラス」または「ロンドン」のいずれかのストレージ地域に対してデータの読み取り/書き込みを行えます。
 {: shortdesc}

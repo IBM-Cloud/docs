@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -12,8 +13,7 @@ copyright:
 
 
 # 使用大型檔案 {: #large-files}
-*前次更新：2016 年 10 月 19 日*
-{: .last-updated}
+
 
 上傳物件時受限於 5 GB 的單一上傳大小上限。不過，如果將大於 5 GB 的物件分段成較小的物件，還是可以上傳它們。上傳分段的物件之後，也需要有資訊清單檔，才能將區段連結成原始物件。有兩種方法可以達成：「動態大型物件 (DLO)」及「靜態大型物件 (SLO)」。
 {: shortdesc}
@@ -47,14 +47,14 @@ Swift 用戶端使用 `-segment-size` 參數，將您的物件細分成較小的
     curl -i -X PUT --data-binary @segment2 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_name>/<object_name>/000002
     ```
     {: pre}
-    
+
 3. 上傳 `X-Object-Manifest` 標頭設為對應之 `<container>/prefix>` 值的空資訊清單檔。
 
     ```
     curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Object-Manifest: <container_name>/<object_name>/" https://<object-storage_url>/<manifest_container_name>/<object_name>
     ```
     {: pre}
-    
+
     **附註**：資訊清單檔必須是空的。否則，會將檔案的內容視為一個區段，並破壞依排序名稱指出的連結順序。
 4. 下載物件。因此，您會接收到整個物件。您可以新增或移除區段，而不需要更新資訊清單檔。具有正確字首的區段會保持為物件的一部分。刪除資訊清單並不會刪除區段。
 
@@ -102,7 +102,7 @@ Swift 用戶端使用 `-segment-size` 參數，將您的物件細分成較小的
     curl -i -X PUT --data-binary @segment3 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_one>/<segment>
     ```
     {: pre}
-    
+
 2. 建置資訊清單：
 
     ```
@@ -125,21 +125,21 @@ Swift 用戶端使用 `-segment-size` 參數，將您的物件細分成較小的
     ]
     ```
     {: pre}
-    
+
 3. 上傳資訊清單。若要這麼做，您必須執行下列指令，以將查詢 `multipart-manifest=put` 新增至資訊清單名稱：
 
     ```
     curl -i -X PUT --data-binary @object_name -H "X-Auth-Token: <token>" https://<object-storage_url>/container_two/<object_name>?multipart-manifest=put
     ```
     {: pre}
-    
+
 4. 下載物件。
 
     ```
     curl -O -X GET -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
-    
+
 以下是使用「靜態大型物件」時可能需要的一些指令。
 
 * 若要下載資訊清單檔的內容，您必須將查詢 `multipart-manifest=get` 新增至指令。您接收的內容不會與上傳的內容相同。
@@ -148,14 +148,14 @@ Swift 用戶端使用 `-segment-size` 參數，將您的物件細分成較小的
     curl -O -X GET -H "X-Auth-Token:<token>" https://<object-storage_url>/<container_two>/<object_name>?multipart-manifest=get
     ```
     {: pre}
-    
+
 * 若要刪除資訊清單，請執行下列指令：
 
     ```
     curl -i -X DELETE -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
-    
+
 * 若要刪除資訊清單及所有區段，請在資訊清單名稱後面加上查詢 `multipart-manifest=delete`：
 
     ```

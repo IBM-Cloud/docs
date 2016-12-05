@@ -2,15 +2,16 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-14"
+
 ---
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+
 
 
 # Initiation à {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage}
 
-*Dernière mise à jour : 19 octobre 2016*
-{: .last-updated}
 
 {{site.data.keyword.objectstoragefull}} fournit un stockage de données en cloud non structuré. Vous pouvez stocker du contenu et y accéder mais aussi composer interactivement des applications et des services et vous y connecter.
 {: shortdesc}
@@ -23,16 +24,15 @@ Certains cas d'utilisation courants pour le service {{site.data.keyword.objectst
 * Rôle de référentiel central
 
 
-
 {{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} permet d'accéder à un compte Swift {{site.data.keyword.objectstorageshort}} complet pour gérer vos données. Aucun chiffrement côté fournisseur n'est fourni.
 
 
 1.	Mettez à disposition votre instance depuis le catalogue {{site.data.keyword.Bluemix_notm}}. Configurez votre instance et cliquez sur **Créer**. Si vous avez choisi initialement l'option **Laisser non lié** pour la zone **Application**, vous
 pourrez toujours lier l'instance de service à votre application {{site.data.keyword.Bluemix_notm}} ultérieurement.
 2. Dans votre tableau de bord d'instance de service, créez un conteneur pour commencer à stocker des objets.
-3. Ajoutez un fichier dans votre conteneur ou compartiment depuis le menu déroulant **Actions**.
+3. Ajoutez un fichier dans votre conteneur depuis le menu déroulant **Actions**.
 4. Pour tester l'accès à vos objets, cliquez sur **Télécharger** et révisez le fichier.
-5. Quand vous êtes prêt à connecter votre instance à une application, configurez vos données d'identification de service et [liez le service](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service).
+5. Quand vous êtes prêt à connecter votre instance à une application, configurez vos données d'identification de service et [liez le service](/docs/services/reqnsi.html#add_service).
 
 
 

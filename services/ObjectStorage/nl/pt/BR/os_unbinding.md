@@ -2,15 +2,17 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:pre: .pre}
 
-# Desvinculando e desprovisionando sua instância do {{site.data.keyword.objectstorageshort}}{: #deprovisioning-object-storage}
+# Desvinculando e desprovisionando sua instância do {{site.data.keyword.objectstorageshort}} {: #deprovisioning-object-storage}
 
-*Última atualização: 19 de outubro de 2016*
-{: .last-updated}
 
 
 ### Desvinculando sua instância
@@ -21,12 +23,13 @@ manter seus dados salvos, poderá desvincular sua instância do serviço de seu 
 **Atenção**: se você desvincular uma instância do
 {{site.data.keyword.objectstorageshort}} de um aplicativo
 {{site.data.keyword.Bluemix_notm}} ou excluir a chave de serviço, todas as suas
-credenciais para essa instância serão excluídas e não poderão ser restauradas. 
+credenciais para essa instância serão excluídas e não poderão ser restauradas. A conta do {{site.data.keyword.objectstorageshort}} não será excluída até que a instância do {{site.data.keyword.objectstorageshort}} seja desprovida. É possível gerar novas credenciais de nuvem religando ou criando uma nova chave de serviço.
 
-1. Abra os detalhes do seu app no console do {{site.data.keyword.Bluemix_notm}}.
-2. Selecione a instância do {{site.data.keyword.objectstorageshort}} e clique em **Desvincular serviço**.
-3. Clique em **REMOVER**.
-4. Clique em **REMONTAR**.
+1. Para ver os serviços vinculados ao seu app, clique na guia Conexões no aplicativo Cloud Foundry.
+2. Localize o serviço que deseja desvincular e clique no botão do menu no tile do serviço.
+3. Selecione **Desvincular serviço**.
+4. Desmarque **Excluir instância de serviço** e clique em **OK**.
+5. Clique em **Remontar** para que sua mudança entre em vigor.
 
 
 
@@ -34,11 +37,12 @@ credenciais para essa instância serão excluídas e não poderão ser restaurad
 
 Se você tiver uma instância desvinculada do {{site.data.keyword.objectstorageshort}} que não é mais necessária, poderá excluir a instância.
 
-**Atenção**: quando você desprover uma instância do
-{{site.data.keyword.objectstorageshort}}, o projeto em nuvem será excluído. Todos
+**Atenção**: ao desprover uma instância do {{site.data.keyword.objectstorageshort}}, o projeto em nuvem e a conta Swift serão excluídos. Todos
 os contêineres e objetos na instância desprovisionada serão excluídos e não
 poderão ser restaurados.
 
-1. Abra os detalhes do seu app no console do {{site.data.keyword.Bluemix_notm}}.
-2. Selecione a instância do {{site.data.keyword.objectstorageshort}} e clique em **Excluir**.
-3. Clique em **REMONTAR**.
+1. Para ver os serviços vinculados ao seu app, clique na guia Conexões no aplicativo Cloud Foundry.
+2. Localize o serviço que deseja desvincular e clique no botão do menu no tile do serviço.
+3. Selecione **Excluir serviço**.
+4. Clique em **Excluir** para confirmar.
+5. Clique em **Remontar** para que sua mudança entre em vigor.

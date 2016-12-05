@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-04"
 
 ---
 {:new_window: target="_blank"}
@@ -43,7 +44,7 @@ copyright:
   </tr>
 </table>
 
-*表 1：免費與標準方案的比較*
+表 1：免費與標準方案的比較
 
 **注意**：使用 {{site.data.keyword.Bluemix_notm}} 試用帳戶的使用者可以使用「免費」方案。試用時間到期之後，將會停用關聯的 {{site.data.keyword.objectstorageshort}} 服務實例，這表示您將無法存取儲存空間帳戶。在 30 天之後，將會清除您的 {{site.data.keyword.Bluemix_notm}} 帳戶，並刪除所有資料。為了避免資料流失，請儘快升級為[付費 {{site.data.keyword.Bluemix_notm}} 帳戶](https://new-console.ng.bluemix.net/docs/admin/account.html)。
 
