@@ -41,14 +41,14 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 	{: codeblock}
 
 ## iOS
-{: #bmsurl-ios}
+{: #request-ios}
 
 1. Make sure you have [imported the Client SDK and initialized it](/docs/mobile/sdk_BMSClient.html#init-BMSClient-ios) in your iOS application.
 
 2. Create a network request.
 
 	#### Swift 3.0
-	{: ios-swift3-network-requests}
+	{: ios-swift3}
 	
 	```Swift
 	 	// Make a network request
@@ -67,7 +67,7 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 	{: codeblock}
  
 	#### Swift 2.2
-	{: ios-swift23-network-requests}
+	{: ios-swift22}
 	
 	```Swift
 	 	// Make a network request
@@ -91,7 +91,7 @@ The `BMSURLSession` class is available for iOS only. For more information about 
 
 
 ## Cordova
-{: #bmsurl-cordova}
+{: #request-cordova}
 
 1. Make sure you have [imported the Client SDK and initialized it](/docs/mobile/sdk_BMSClient.html#init-BMSClient-cordova) in your Cordova application.
 
