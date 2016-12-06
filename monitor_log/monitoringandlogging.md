@@ -403,14 +403,13 @@ Cloud Foundry apps use Cloud Foundry loggregator to monitor and forward logs fro
 
 ### Hardware requirements
 
-*Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}*
-{: #table01}
 
 | **Requirement** |    **1 node**     | **3 nodes for high availability** |
 |-----------------|-------------------|-------------------|
 | vCPU | 19 | 57 |
 | Memory | 80 GB | 240 GB |
 | Local storage | 2.98 TB | 8.94 TB |
+{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
 
 ### Setup
 
