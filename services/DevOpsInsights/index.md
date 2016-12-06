@@ -31,7 +31,7 @@ To access the {{site.data.keyword.DRA_short}} UI, complete the following steps f
 
 3. Click **Create Integration**.
 
-4. Click the **{{site.data.keyword.DRA_short}}** tile.
+4. Click **{{site.data.keyword.DRA_short}}**.
 
 5. Complete your setup with the remaining tasks:
 
