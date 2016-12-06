@@ -36,9 +36,6 @@ Complete these steps to set up a {{site.data.keyword.deliverypipeline}} for an e
 To [create a pipeline (Link opens in a new window)](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:    
 
 1. Click **Cloud Foundry**.  
-To [create a pipeline (Link opens in a new window)](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:    
-
-1. Click **Cloud Foundry**.  
 1. If you want to use a different name for the pipeline, change its default name. 
 1. If you want to use a different name for the application, change its default name. This name is the application that the pipeline deploys to. 
 1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services.
@@ -59,7 +56,7 @@ To [create a pipeline (Link opens in a new window)](https://console.ng.bluemix.n
    * If you want to fork a GitHub repo so that you can contribute changes through pull requests, select **Fork**. Search for the location of the repo or select the repo from the list of available repos.
  
 1. Click **Create**. The pipeline is created, configured, and displayed on the toolchain's Overview page. 
- ![Pipeline tile](images/cd_pipeline.png)
+ ![Pipeline card](images/cd_pipeline.png)
 
 To create an [empty pipeline (Link opens in a new window)](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
 
@@ -67,9 +64,9 @@ To create an [empty pipeline (Link opens in a new window)](https://console.ng.bl
 1. If you want to use a different name for the pipeline, change its default name. 
 1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services.
 1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
-1. Click **Create**. An empty pipeline is created and represented as a tile on the toolchain's Overview page.
+1. Click **Create**. An empty pipeline is created and represented as a card on the toolchain's Overview page.
 
-From your {{site.data.keyword.deliverypipeline}} tile, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.  
+From your {{site.data.keyword.deliverypipeline}}, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.  
 
 <article class="topic reference nested1" aria-labelledby="d68e338" lang="en-us" id="rellinks" role="article">
 <h2 class="topictitle2" id="d68e338">Related links</h2>
