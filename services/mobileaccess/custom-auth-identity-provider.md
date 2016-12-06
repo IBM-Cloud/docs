@@ -6,6 +6,8 @@ lastupdated: "2016-11-07"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Creating a custom identity provider
 {: #custom-create}
 
@@ -25,6 +27,7 @@ To create a custom identity provider, develop a web application that exposes a R
 {: #custom-startauthorization}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/startAuthorization`
+{: codeblock}
 
 The `startAuthorization` API is used as a first step of authentication process. A custom identity provider must respond with either "challenge", "success", or "failure" status.
 
@@ -38,6 +41,7 @@ To allow for a maximum flexibility of the authentication process, a custom ident
     }
 }
 ```
+{: codeblock}
 
 A custom identity provider might respond with an authentication challenge, or immediate success or failure. The response HTTP status must be `HTTP 200`, and the response JSON must contain following properties:
 
@@ -58,11 +62,13 @@ For example:
 	}
 }
 ```
+{: codeblock}
 
 ## `handleChallengeAnswer` API
 {: #custom-handleChallengeAnswer}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/handleChallengeAnswer`
+{: codeblock}
 
 The `handleChallengeAnswer` API handles an authentication challenge response from the mobile client. Like the `startAuthorization` API, the `handleChallengeAnswer` API respond with either `challenge`, `success`, or `failure` status.
 
@@ -83,6 +89,7 @@ Similarly to `startAuthorization` request, the custom identity provider has acce
  	}
 }
 ```
+{: codeblock}
 
 The response from a `handleChallengeAnswer` API must have the same structure as the response of the `startAuthorization` API.
 
@@ -106,6 +113,7 @@ A response to a successful authentication request must include a user identity o
     }
 }
 ```
+{: codeblock}
 
 The user identity object is used by the {{site.data.keyword.amashort}} service to generate an ID token that is sent to the mobile client as a part of authorization header. After successful authentication, the mobile client has full access to the user identity object.
 

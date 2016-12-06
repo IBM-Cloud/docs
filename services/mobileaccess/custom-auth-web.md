@@ -2,16 +2,17 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 #Configuring custom authentication for {{site.data.keyword.amashort}} Web applications
 {: #custom-web}
-
 
 Add custom authentication and {{site.data.keyword.amafull}} security functionality to your Web app.
 
@@ -122,15 +123,14 @@ The `VCAP_SERVICES` environment variable is created automatically for each {{sit
 
 To request user authorization, redirect the browser to the authorization server endpoint. In order to do so: 
 
-1. Retrieve the authorization endpoint (`authorizationEndpoint`) and clientId (`clientId`) from the service credentials stored in `VCAP_SERVICES` environment variable. 
+1. Retrieve the authorization endpoint (`authorizationEndpoint`) and client ID (`clientId`) from the service credentials stored in `VCAP_SERVICES` environment variable. 
 
 	`var cfEnv = require("cfenv");` 
-	
+
 	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
-
 	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
-  
+
 	US South: 
 
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
@@ -147,7 +147,7 @@ To request user authorization, redirect the browser to the authorization server 
 
 3. Redirect from your Web app to the generated URI. 
 
-	The following example retrieves the parameters from the `VCAP_SERVICES` variable, builds the URL, and sends the redirect request.
+   The following example retrieves the parameters from the `VCAP_SERVICES` variable, builds the URL, and sends the redirect request.
 
 	```Java
 	var cfEnv = require("cfenv"); 
@@ -193,15 +193,15 @@ The next step is to obtain the access token and identity token using the previou
 	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding Web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
 
 	US South: 
-  
+
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
- 
+
 	London: 
- 
+	
 	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
  
 	Sydney: 
- 
+
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
  
 2. Send a POST request to the token server URI with `grant_type`, `client_id`, `redirect_uri`, and `code` as form parameters and `clientId` and `secret` as Basic HTTP authentication credentials.
@@ -262,7 +262,4 @@ The access token allows communication with resources protected by {{site.data.ke
 
 * The `<accessToken>` and the `<idToken>` must be separated with a white space.
 
-* The identity token is optional. If you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user. 
-
-
-
+* The identity token is optional. If you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user.

@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -60,8 +60,10 @@ The `VCAP_SERVICES` environment variable is created automatically for each {{sit
 To start the process of authorization:
 
 1. Retrieve the authorization endpoint (`authorizationEndpoint`) and clientId (`clientId`) from the service credentials stored in the `VCAP_SERVICES` environment variable. 
+
 	`var cfEnv = require("cfenv");` 
-	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding Web support, you might not have token endpoint in service credentials. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
  
@@ -106,9 +108,10 @@ To start the process of authorization:
 				redirectUrl += "&client_id=" + clientId; 
 				redirectUrl += "&redirect_uri=" + redirectUri; 
 				res.redirect(redirectUrl); 
-			} 
-		} 
-	}
+				} 
+		 	} 
+	   	}
+       }
 	```
 	{: codeblock}
 
@@ -174,7 +177,7 @@ The next step is to obtain access token and identity tokens using the previously
 	```
 	{: codeblock}
 
-	The `redirect_uri` parameter is the URI for redirecting, after the successful or failed authentication with Google+, and must match the `redirect_uri` from step 1.  
+	The `redirect_uri` parameter is the URI for redirecting, after the successful or failed authentication with Google+, and must match the `redirect_uri` defined in the {{site.data.keyword.amashort}} dashboard.  
    
 	Make sure to send this POST request within 10 minutes after which the grant code expires. After 10 minutes, a new code is required.
 

@@ -2,11 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
+{:codeblock:.codeblock}
 
 # Setting up the iOS Swift SDK
 {: #getting-started-ios}
@@ -44,6 +46,7 @@ The {{site.data.keyword.amashort}} SDK is distributed with CocoaPods, a dependen
 ```
 sudo gem install cocoapods
 ```
+{: codeblock}
 
 For more information, see the [CocoaPods website](https://cocoapods.org/).
 
@@ -61,6 +64,7 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
   use_frameworks!
   pod 'BMSSecurity'
 	```
+	{: codeblock}
 
   **Tip:** You can add `use_frameworks!` to your Xcode target instead of having it in the Podfile.
 
@@ -105,6 +109,7 @@ Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain
 	return true
 	}
  ```
+ {: codeblock}
 
 * Replace the `tenantId` with value you obtained from **Mobile options**. 
 * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. 

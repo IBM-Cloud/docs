@@ -5,6 +5,7 @@ copyright:
 lastupdated: "2016-11-24"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -58,6 +59,7 @@ The {{site.data.keyword.amashort}} Facebook client SDK must be added by Gradle w
 			// other dependencies  
 	}
 	```
+	{: codeblock}
 
 2. Click **Tools > Android > Sync Project with Gradle Files** to synchronize your project with Gradle.
 
@@ -71,6 +73,7 @@ The {{site.data.keyword.amashort}} Facebook client SDK must be added by Gradle w
 		<string name="facebook_app_id">"<facebook_app_id>"</string>
 	</resources>
 	```
+	{: codeblock}
 
 4. In the `AndroidManifest.xml` file of your Android project (`android/manifests/AndroidManifest.xml`):
 
@@ -86,6 +89,7 @@ The {{site.data.keyword.amashort}} Facebook client SDK must be added by Gradle w
     <activity ...../>
     </application>
     ```
+    {: codeblock}
 
    * Add a Facebook Activity element under your existing activities:
 
@@ -101,6 +105,7 @@ The {{site.data.keyword.amashort}} Facebook client SDK must be added by Gradle w
         />
     </application>
     ```
+    {: codeblock}
 
 5. Add the following to your Activity Java code.
 
@@ -112,6 +117,7 @@ The {{site.data.keyword.amashort}} Facebook client SDK must be added by Gradle w
 	      .onActivityResultCalled(requestCode, resultCode, data);
 	}
 	```
+	{: codeblock}
 
 ### Initialize the Authorization Manager in your native Android code
 {: #initialize_android}
@@ -124,6 +130,7 @@ MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.create
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListener(this);
 ```
+{: codeblock}
 
 
 ## Configuring the iOS platform
@@ -177,6 +184,7 @@ The Authorization Manager must be initialized in the native Objective-C code in 
 	}
 
 ```
+{: codeblock}
 
 **Note:** The imported header file name is composed of your module name concatenated to the string `-Swift.h`, for example, if your module name is `Cordova` then the import line would be `#import "Cordova-Swift.h"` To find the module name go to
 `Build Settings` > `Packaging` > `Product Module Name`.
@@ -192,6 +200,7 @@ For all platforms, use the following JavaScript code in your Cordova Javascript 
 ```javascript
 BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
 Replace `<applicationBluemixRegion>` with your region (see [Before you begin](#facebook-auth-before)).
 
@@ -222,6 +231,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 	var request = new BMSRequest("<applicationRoute}/protected>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 
 1. Run your application. A Facebook login screen pops up:
 

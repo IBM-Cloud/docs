@@ -6,6 +6,8 @@ lastupdated: "2016-11-2"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Authenticating users with a custom identity provider
 {: #custom-id}
 
@@ -65,6 +67,7 @@ When you create a custom identity provider, you might:
 		}
 	}
 	```
+	{: codeblock}
 
 1. Implement any custom credentials collection flow on the client, including multi-step and multi-form authentication. Similarly to the custom authentication challenge, you must design the structure of a custom authentication challenge answer.
 
@@ -77,6 +80,8 @@ When you create a custom identity provider, you might:
 		pincode:"1234"
 	}
 	```
+	{: codeblock}
+	
 1. Implement custom logic of validating supplied authentication challenge answer.
 
 1. Define a custom user identity object that contains any required custom properties. here is an example of a custom user identity object that is obtained by client after successful authentication:
@@ -92,6 +97,7 @@ When you create a custom identity provider, you might:
 		}
 	}
 	```
+	{: codeblock}
 
 ### Sample implementation of custom identity provider
 {: #custom-sample}
