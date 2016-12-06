@@ -15,7 +15,7 @@ lastupdated: "2016-11-23"
 Adopt a DevOps approach by using {{site.data.keyword.contdelivery_full}}, which includes toolchains that automate the building and deployment of applications. You can get started by creating a simple deployment toolchain that supports development, deployment, and operations tasks. 
 {: shortdesc}
 
-After you create an instance of {{site.data.keyword.contdelivery_short}} by selecting its service tile from the {{site.data.keyword.Bluemix_notm}} catalog, you can choose how you want to get started with the service.
+After you create an instance of {{site.data.keyword.contdelivery_short}} by selecting it from the {{site.data.keyword.Bluemix_notm}} catalog, you can choose how you want to get started with the service.
  ![Continuous Delivery welcome page](images/cd_landing_page.png)
 
  * To get started quickly and deploy your application by using an automated pipeline, in the "Starting with a pipeline" section, click **[Start here](#starting_with_a_pipeline)**. You can add more tools later. 
@@ -50,7 +50,7 @@ To [create a pipeline (Link opens in a new window)](https://console.ng.bluemix.n
    * If you want to fork a GitHub repo so that you can contribute changes through pull requests, select **Fork**. Search for the location of the repo or select the repo from the list of available repos.
  
 1. Click **Create**. The pipeline is created, configured, and displayed on the toolchain's Overview page. 
- ![Pipeline tile](images/cd_pipeline.png)
+ ![Pipeline card](images/cd_pipeline.png)
  
 To create an [empty pipeline (Link opens in a new window)](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
 
@@ -58,7 +58,7 @@ To create an [empty pipeline (Link opens in a new window)](https://console.ng.bl
 1. If you want to use a different name for the pipeline, change its default name. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}. 
 1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. Pipelines are managed by toolchains. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services.
 1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
-1. Click **Create**. An empty pipeline is created and represented as a tile on the toolchain's Overview page.
+1. Click **Create**. An empty pipeline is created and represented as a card on the toolchain's Overview page.
 
 ##Starting from a toolchain template
 {: #starting_from_a_toolchain_template}
