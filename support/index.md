@@ -179,7 +179,7 @@ Description | Support for all trial customers of Bluemix.  |  Support for non-pr
 High severity support |  N/A | N/A | Included | Included 
 Support language | English | English | English | English
 Assigned client success manager (CSM) | Not included | Not included | Not included | Included at<br> 8 hours per week
-*Table 1. Support levels*
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### Opening a support ticket
 {: #open-ticket}
@@ -262,7 +262,7 @@ Severity 1 | <strong>Critical business impact or service is down.</strong> <br> 
 Severity 2 | <strong>Significant business impact.</strong> <br> A service feature or function is severely restricted in its use or you are in danger of missing business deadlines. | <ul><li><strong>Free:</strong> N/A</li><li><strong>Basic:</strong> N/A </li><li><strong>Standard:</strong> Within 2 hours</li><li><strong>Premium:</strong> Within 90 minutes </li></ul> | <ul><li><strong>Free:</strong> N/A</li><li><strong>Basic:</strong> N/A </li><li><strong>Standard:</strong> Hours of operation </li><li><strong>Premium:</strong> Hours of operation </li></ul>
 Severity 3 | <strong>Minor business impact.</strong> <br> A service feature or function is usable, but has some problems that affect its use. No critical impact on operations is caused. | <ul><li><strong>Free:</strong> N/A</li><li><strong>Basic:</strong> N/A </li><li><strong>Standard:</strong> Within 4 hours</li><li><strong>Premium:</strong> Within 2 hours</li></ul> | <ul><li><strong>Free:</strong> N/A</li><li><strong>Basic:</strong> N/A </li><li><strong>Standard:</strong> Hours of operation </li><li><strong>Premium:</strong> Hours of operation </li></ul>
 Severity 4 | <strong>Minimal business impact.</strong> <br> An inquiry or non-technical request. | <ul><li><strong>Free:</strong> Best effort </li><li><strong>Basic:</strong> Best effort</li><li><strong>Standard:</strong> Within 8 hours</li><li><strong>Premium:</strong> Within 4 hours</li></ul> | <ul><li><strong>Free:</strong> Hours of operation </li><li><strong>Basic:</strong> Hours of operation </li><li><strong>Standard:</strong> Hours of operation </li><li><strong>Premium:</strong> Hours of operation </li></ul>
-*Table 2. Severity definition and response time*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### Reporting a potential security vulnerability
@@ -338,8 +338,7 @@ The following table lists the supported national languages and language codes fo
 | Spanish | es |
 | Simplified Chinese | zh_CN |
 | Traditional Chinese | zh_TW |
-
-*Table 3. Supported national languages and language codes*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## Satisfaction surveys for {{site.data.keyword.Bluemix_notm}} support  
