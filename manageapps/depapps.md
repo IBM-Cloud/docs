@@ -216,7 +216,7 @@ cf push -f appManifest.yml
 |**random-route**	|A Boolean value to assign a random route to the application. The default value is **false**.	|`random-route: true`|
 |**services**	|The services to bind to the application.	|`services: - mysql_maptest`|
 |**env**	|The custom environment variables for the application.|`env: DEV_ENV: production`|
-*Table 1. Supported options in the manifest.yml file*
+{: caption="Table 1. Supported options in the manifest.yml file" caption-side="top"}
 
 ###A sample `manifest.yml` file
 
