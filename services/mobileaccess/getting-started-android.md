@@ -2,22 +2,26 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Setting up the Android SDK
 {: #getting-started-android}
 
 Instrument your Android application with the {{site.data.keyword.amafull}} client SDK, initialize the SDK, and make requests to protected and unprotected resources.
-
-{:shortdesc}
+{: shortdesc}
 
 ## Before you begin
 {: #before-you-begin}
+
 You must have:
+
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application.
 * An instance of a {{site.data.keyword.amafull}} service.
 * Your **TenantID**. Open your service in the  {{site.data.keyword.amafull}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  values are displayed in the  **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
@@ -39,13 +43,14 @@ The {{site.data.keyword.amashort}} client SDK is distributed with Gradle, a depe
 	```Gradle
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
-        name:'core',
-        version: '2.+',
-        ext: 'aar',
-        transitive: true
-    	// other dependencies  
-}
-```
+		name:'core',
+		version: '2.+',
+		ext: 'aar',
+		transitive: true
+		// other dependencies  
+	}
+	```
+	{: codeblock}
 
 1. Synchronize your project with Gradle. Click **Tools &gt; Android &gt; Sync Project with Gradle Files**.
 
@@ -53,7 +58,8 @@ The {{site.data.keyword.amashort}} client SDK is distributed with Gradle, a depe
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
-```
+	```
+	{: codeblock}
 
 ## Initializing the {{site.data.keyword.amashort}} client SDK
 {: #initalize-mca-sdk}
@@ -61,15 +67,16 @@ The {{site.data.keyword.amashort}} client SDK is distributed with Gradle, a depe
 Initialize the client SDK  by passing the **context** and **region** parameters to the `initialize` method. A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
 
 ```Java
-  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
-  BMSClient.getInstance().setAuthorizationManager(
-                 MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
-
+BMSClient.getInstance().setAuthorizationManager(
+	MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 ```
+{: codeblock}
 
 * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} service is hosted.
 * Replace `<MCAServiceTenantId>` with the **tenantId** 
+
 For more information on these values, see [Before you begin](#before-you-begin).
 
 ## Making a request to your mobile back-end application
@@ -102,6 +109,7 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 		}
 	});
 	```
+	{: codeblock}
 
 1. When your request succeeds, you will see the following output in the LogCat utility:
 
@@ -111,6 +119,7 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 {: #next-steps}
 
 When you connected to the protected endpoint, no credentials were required. To require your users to log in to your application, you must configure Facebook, Google, or custom authentication.
+
 * [Facebook](facebook-auth-android.html)
 * [Google](google-auth-android.html)
 * [Custom](custom-auth-android.html)
