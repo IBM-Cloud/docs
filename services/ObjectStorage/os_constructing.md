@@ -12,11 +12,13 @@ lastupdated: "2016-12-06"
 {:pre: .pre}
 
 
-# Constructing your {{site.data.keyword.objectstorageshort}} URL to issue cURL commands
+# Constructing your {{site.data.keyword.objectstorageshort}} URL to use the Swift REST API
 
-To interact with the service by using cURL commands, attach the name space of your container and object to the {{site.data.keyword.objectstorageshort}} URL.
+You can use the Swift REST API with a command-line client interface, such as cURL, or call the API from your application.
 {: shortdesc}
 
+
+For a comprehensive list of the {{site.data.keyword.objectstorageshort}} REST API options and examples, see the [OpenStack Swift API complete reference](http://developer.openstack.org/api-ref-objectstorage-v1.html).
 
 When you authenticated your service instance with Keystone, you took note of the catalog response. It should look similar to the following example.
 
@@ -36,5 +38,3 @@ Add the namespace of your container and object to the end of your {{site.data.ke
 
   ![{{site.data.keyword.objectstorageshort}} URL pieces shown in an example image](images/swift_URL.png)
   Figure 1: {{site.data.keyword.objectstorageshort}} URL example
-
-For a comprehensive list of the {{site.data.keyword.objectstorageshort}} REST API options and examples, see the [OpenStack Swift API complete reference](http://developer.openstack.org/api-ref-objectstorage-v1.html).
