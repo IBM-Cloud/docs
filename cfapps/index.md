@@ -61,5 +61,3 @@ Use the following tips while developing your web apps:
 <tr><td>Number of routes</td> <td>500</td>
 </table>
 </dd></dl>
-
-*Table 1. {{site.data.keyword.Bluemix_notm}} resource limits for a trial account*
