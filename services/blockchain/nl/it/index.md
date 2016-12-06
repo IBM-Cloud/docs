@@ -13,7 +13,7 @@ copyright:
 
 # Introduzione a IBM {{site.data.keyword.blockchain}}
 {: #gettingstartedtemplate}
-Ultimo aggiornamento: 13 ottobre 2016
+Ultimo aggiornamento: 10 novembre 2016
 {: .last-updated}
 
 **ATTENZIONE:** prima di utilizzare il piano Starter Developer (Beta) o il piano High Security Business Network (GA), leggi le informazioni tecniche e di supporto in [Cosa devi sapere](needtoknow.html).
@@ -21,12 +21,12 @@ Ultimo aggiornamento: 13 ottobre 2016
 
 ## Stato dei piani dell'offerta
 
-Il piano Starter Developer è una release Beta e fornisce un ambiente di sviluppo a più tenant. Il piano High Security Business Network è diventato generalmente disponibile (release GA ) il 20 ottobre 2016. Il piano High Security Business Network fornisce un ambiente LinuxONE su z ad elevata protezione e a singolo tenant, con l'isolamento del codice mediante [IBM Secure Service Container](etn_ssc.html).
+Il piano Starter Developer è una release Beta e fornisce un ambiente di sviluppo a più tenant. Il piano High Security Business Network è una release GA. Il piano High Security Business Network fornisce un ambiente LinuxONE su z ad elevata protezione e a singolo tenant, con l'isolamento del codice mediante [IBM Secure Service Container](etn_ssc.html).
 <br><br>
 
 ## IBM Blockchain su Bluemix
 
-Il servizio {{site.data.keyword.blockchainfull}} su Bluemix&reg; ti offre una rete blockchain di test e di sviluppo a quattro nodi, con un semplice clic su un pulsante. Invece di creare una rete blockchain da zero, gli sviluppatori possono iniziare immediatamente a scrivere applicazioni e distribuire chaincode. Il servizio IBM Blockchain su Bluemix è una rete con autorizzazioni peer-to-peer, sviluppato sul codice  [Hyperledger Fabric v0.5](https://github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview) dal progetto HyperLedger della Linux Foundation.
+Il servizio  {{site.data.keyword.blockchainfull}} su Bluemix&reg; fornisce una scelta tra due reti blockchain diverifica e sviluppo a quattro nodi, con un semplice clic su un pulsante. Invece di creare una rete blockchain da zero, gli sviluppatori possono iniziare immediatamente a scrivere applicazioni e distribuire chaincode. Il servizio IBM Blockchain su Bluemix è una rete con autorizzazioni peer-to-peer, sviluppata sul codice [Hyperledger Fabric v0.6.1](https://github.com/hyperledger/fabric/tree/v0.6) del progetto HyperLedger della Linux Foundation.
 {:shortdesc}
 
 Le reti blockchain sono utilizzate per scambiare e tracciare in modo protetto ed efficiente le risorse digitali e per registrare permanentemente tutte le transazioni sul registro condiviso. Per i dettagli sul blockchain, consulta l'argomento [Informazioni sul blockchain](ibmblockchain_overview.html).
@@ -86,14 +86,14 @@ della rete; fai clic su **AVVIA** per utilizzare il tuo monitor blockchain.
 ## Guida di riferimento alle API
 {: #api}
 * [IU Swagger](https://obc-service-broker-staging.stage1.mybluemix.net/swagger)
-* [API Hyperledger fabric (GitHub)](https://github.com/hyperledger/fabric/tree/master/docs/API)
-* [HFC SDK per Node.js](https://github.com/hyperledger/fabric/tree/master/sdk/node)
+* [API Hyperledger fabric (GitHub)](https://github.com/hyperledger/fabric/tree/v0.6/docs/API)
+* [HFC SDK per Node.js](https://github.com/hyperledger/fabric/tree/v0.6/sdk/node)
 
 ## Link correlati
 {: #general}
 * [Codice Fabric](https://github.com/hyperledger/fabric)
 * [Whitepaper](https://github.com/hyperledger/hyperledger/wiki/Whitepaper-WG)
-* [Specifica del protocollo e documenti correlati](https://github.com/hyperledger/fabric/tree/master/docs)
+* [Protocol Spec & Related Docs](https://github.com/hyperledger/fabric/tree/v0.6/docs)
 * [StackOverflow](http://stackoverflow.com/questions/tagged/hyperledger)
 * [Linux Foundation](https://www.hyperledger.org/)
 * [Novità nei servizi Bluemix](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}

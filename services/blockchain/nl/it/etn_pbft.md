@@ -21,7 +21,6 @@ Ultimo aggiornamento: 13 ottobre 2016
 Sia il piano Starter Developer che il piano High Security Business Network ti consentono di testare il protocollo di consenso PBFT (Practical Byzantine Fault Tolerance) su una rete blockchain a quattro nodi. I seguenti argomenti forniscono i dettagli sul consenso in generale e PBFT in particolare. Quando sei pronto a iniziare il test, ti verranno forniti gli scenari di test PBFT.  
 {:shortdesc}  
 
-<br>
 ## Cos'è il consenso?
 
 Il consenso è un metodo per convalidare l'ordine delle richieste, o delle transazioni (distribuzione e richiamo) su una rete blockchain. L'ordine corretto delle transazioni è critico perché molte transazioni hanno una dipendenza da una o più transazioni precedenti (gli addebiti in conto spesso hanno una dipendenza su accrediti precedenti, ad esempio).
@@ -30,12 +29,12 @@ Su una rete blockchain, non c'è alcuna autorità centralizzata che determina l'
 
 * Tale garanzia dipende da variabili quali lo specifico protocollo di consenso implementato e il numero di nodi nella rete blockchain. Entrambi i piani Blockchain su Bluemix implementano il protocollo di consenso PBFT.  
 
-<br><br>
+<br>
 ## Cos'è PBFT?
 
 PBFT (Practical Byzantine Fault Tolerance) è un tipo di protocollo di consenso. La funzione di un protocollo di consenso è quella di mantenere l'ordine delle transazioni su una rete blockchain, nonostante le minacce a tale ordine. Una minaccia possibile, ad esempio, è il malfunzionamento simultaneo e arbitrario (un tipo di errore Byzantine) di più nodi di rete. Utilizzando PBFT, una rete blockchain di (N) nodi può sopportare (f) numero di nodi Byzantine, dove f = (N-1)/3. In altre parole, PBFT garantisce che un minimo di 2\*f + 1 nodi raggiunga il consenso sull'ordine di transazioni prima di accodarle al registro condiviso. Derivare l'una o l'altra formula rivela la regola che una rete PBFT garantisce la congruenza e l'integrità dei dati nonostante gli errori Byzantine su meno di un terzo di tutti i nodi della rete.  
 
-<br><br>
+<br>
 ## PBFT e la tua rete blockchain
 
 La regola PBFT 2\*f + 1 ha le seguenti implicazioni sia per il piano Starter Developer che per il piano High Security Business Network:
@@ -63,5 +62,5 @@ Attenzione: esamina le seguenti note prima di iniziare il test del consenso:
 ![](images/stopstartpeer.png "Arresta e avvia i peer")
 *Figura 1. Arresta e avvia i peer*
 
-- Gli scenari di test utilizzano **chaincode_example02**, per impostazione predefinita, da:  https://github.com/hyperledger/fabric/blob/master/examples/chaincode/go/chaincode_example02/chaincode_example02.go. Puoi tuttavia utilizzare un tuo chaincode, o uno qualsiasi degli esempi di chaincode in:  https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go.
+- Gli scenari di test utilizzano **chaincode_example02**, per impostazione predefinita, da: https://github.com/hyperledger/fabric/tree/v0.6/examples/chaincode/go/chaincode_example02. Puoi tuttavia utilizzare un tuo chaincode, o uno qualsiasi degli esempi di chaincode in: https://github.com/hyperledger/fabric/tree/v0.6/examples/chaincode/go.
 - Le richieste vengono organizzate in batch in una singola transazione per l'elaborazione. Puoi tuttavia garantire un'immediata elaborazione facendo affidamento sul valore di timeout del batch; attendere almeno due secondi prima di inoltrare la richiesta successiva determinerà un'elaborazione immediata della transazione.

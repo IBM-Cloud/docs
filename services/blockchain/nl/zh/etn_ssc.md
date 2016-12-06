@@ -15,54 +15,53 @@ years: 2016
 # IBM Secure Service Container
 {: #etn_ssc}
 
-前次更新：2016 年 10 月 13 日
+上次更新时间：2016 年 10 月 13 日
 {: .last-updated}
 
-IBM Blockchain「高安全性商業網路」是以應用裝置形式部署至 IBM Secure Service Container，後者提供管理區塊鏈服務用的基本基礎架構。應用裝置會結合作業系統、Docker 容器、中介軟體，以及獨立運作的軟體元件，並且提供具有最佳化安全的核心服務和基礎架構。
+IBM Blockchain“高安全性业务网络”作为设备部署到 IBM Secure Service Container 中，后者将为托管区块链服务提供基本的基础架构。该设备将自主工作的操作系统、Docker 容器、中间件和软件组件组合在一起，并提供安全性经过优化的核心服务和基础架构。
 {:shortdesc}
 
-IBM Secure Service Container 為區塊鏈服務帶來 z Systems LinuxONE 平台的進階加密法、安全及可靠性，可以處理機密資料和受法規管理的資料。區塊鏈是透過 IBM Secure Service Container 的一系列特性進行保護：封裝的作業系統、加密的應用裝置磁碟、竄改保護、受保護的記憶體，以及可配置成符合 EAL5+ 憑證的強 LPAR 隔離。
+IBM Secure Service Container 为区块链服务带来了 z Systems LinuxONE 平台的高级加密、安全性和可靠性，用于处理敏感和受监管数据。区块链通过 IBM Secure Service Container 中的一系列功能进行保护：封装的操作系统、加密的设备磁盘、防篡改功能、受保护的内存以及可以配置为与 EAL5+ 认证相匹配的强大 LPAR 隔离。
 
-下列架構圖說明 IBM Secure Service Container 及區塊鏈應用裝置的組織方式：
+以下体系结构图说明了 IBM Secure Service Container 和区块链设备是如何进行组织的：
 
-![架構圖](images/Architecture_HSBN_SSC.png "IBM Secure Service Container 及區塊鏈應用裝置")
-*圖 1. IBM Secure Service Container 及區塊鏈應用裝置的概觀*
+![体系结构图](images/Architecture_HSBN_SSC.png "IBM Secure Service Container 和区块链设备")
+*图 1. IBM Secure Service Container 和区块链设备概览图*
 <br><br>
-## 主要安全特性
-IBM Secure Service Container 提供區塊鏈服務的下列最佳化安全功能：  
+## 关键安全功能
+IBM Secure Service Container 为区块链服务提供了以下优化的安全功能：  
 
-### 保護資料免受系統管理者存取
->即使是平台或系統管理者也無法存取應用裝置程式碼。資料存取是透過應用裝置進行控制，因此，已停用未獲授權的存取。這是透過結合簽署與加密所有進行中及靜止資料來支援。也會一併移除對記憶體的所有存取。韌體透過安全啟動架構予以支援。
+### 限制系统管理员访问
+>即便是平台或系统管理员，也无法访问设备代码。数据访问由设备进行控制，因此禁用了未经授权的访问。这是通过组合使用对所有动态和静态数据进行签名和加密的功能来予以支持的。所有对内存的访问权也已除去。固件通过安全引导体系结构支持此功能。
 
->由 IBM Secure Service Container 保護區塊鏈安全時，系統管理者具有下列限制：
->* 無法存取節點
->* 無法檢視區塊鏈網路
+>区块链由 IBM Secure Service Container 进行保护时，系统管理员存在以下限制：
+>* 无法访问节点
+>* 无法查看区块链网络
 
-### 竄改保護  
->IBM Secure Service Container 會停用所有提供 LPAR 記憶體存取的外部介面。已簽署映像檔啟動載入器，確保它無法被竄改，也無法交換成不同的映像檔啟動載入器。
-
-### 加密的應用裝置磁碟
->磁碟上儲存的所有程式碼及資料，會使用 Linux 加密層隨時加密：  
-- 封裝的作業系統
-- 受保護的 IP
-- 內嵌的監視及自我修復  
+### 防篡改  
+>IBM Secure Service Container 禁用了所有提供 LPAR 内存访问的外部接口。对映像引导装入程序进行了签名，以确保无法通过其他装入程序对其进行篡改或交换。
+### 已加密设备磁盘
+>存储在磁盘上的所有代码和数据始终使用 Linux 加密层进行加密：  
+- 封装的操作系统
+- 受保护 IP
+- 嵌入式监视和自我复原功能  
 <br>
 
-## 透過 REST API 管理應用裝置
-預先配置軟體應用裝置，供您在可靠、安全及可擴充的 z Systems 平台上使用。您可以透過 REST API 管理這些應用裝置，而不需要進行任何配置。
+## 通过 REST API 管理设备
+软件设备已进行预配置，供您在可靠、安全和可扩展的 z Systems 平台上使用。您可以通过 REST API 来管理这些设备，无需任何配置。
 
-若要透過 REST API 管理區塊鏈資產，您可以在 Bluemix 的 Blockchain 儀表板上使用 Swagger 使用者介面，或使用 REST 指令工具（例如 `curl` 或 `Postman`）。
+要通过 REST API 来管理区块链资产，可以使用 Bluemix 上的 Swagger UI on Blockchain 仪表板或使用 REST 命令工具，例如 `curl` 或 `Postman`。
 
-例如，若要取得網路中所有對等節點的相關資訊，請使用 `curl` 來發出下列指令：
+例如，要获取有关网络中所有同级的信息，请使用 `curl` 发出以下命令：
 ```
 curl -u <username>:<password> https://<peer_ip>:<port>/network/peers
 ```
-請參閱下列範例 curl 指令及傳回的結果：
-* 指令：
+请参阅以下样本 curl 命令和返回的结果：
+* 命令：
 ```
 curl -u dashboarduser_type0_2ef27***:89317***https://ad3130e8-4a1a-4ce6-a084-689a345a3308_vp1-api.blockchain.ibm.com:443/network/peers
 ```
-* 網路中所有對等節點的傳回資訊：
+* 返回的有关网络中所有同级的信息：
 ```
 {
 	"peers": [{
@@ -83,4 +82,4 @@ curl -u dashboarduser_type0_2ef27***:89317***https://ad3130e8-4a1a-4ce6-a084-689
 	}]
 }
 ```
-若要進一步瞭解如何透過 REST API 與區塊鏈互動，請參閱[儀表格監視器](https://new-console.ng.bluemix.net/docs/services/blockchain/ibmblockchainmonitor.html)及[範例及指導教學](https://new-console.ng.bluemix.net/docs/services/blockchain/ibmblockchain_tutorials.html)。
+要了解有关如何通过 REST API 与区块链进行交互的更多信息，请参阅[仪表板监视器](https://new-console.ng.bluemix.net/docs/services/blockchain/ibmblockchainmonitor.html)以及[样本和教程](https://new-console.ng.bluemix.net/docs/services/blockchain/ibmblockchain_tutorials.html)。

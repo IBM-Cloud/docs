@@ -14,7 +14,7 @@ copyright:
 
 # Informazioni su blockchain
 {: #ibmblockchain_overview}
-Ultimo aggiornamento: 23 settembre 2016
+Ultimo aggiornamento: 03 novembre 2016
 {: .last-updated}
 
 ## Cos'è blockchain?
@@ -47,7 +47,6 @@ I seguenti termini sono strumentali per ottenere una comprensione olistica dei c
 
 **Rete con autorizzazioni**: una rete blockchain dove a ciascun nodo è richiesto di mantenere un'identità di membro sulla rete e ciascun nodo ha accesso solo alle transazioni consentite dalle sue autorizzazioni.  
 
-<br>
 ## Concetti chiave
 {: #keyconcepts}
 
@@ -75,6 +74,7 @@ La figura 1 mostra i tipici partecipanti alla rete in un mercato di azioni ordin
 2. Le transazioni possono essere attivate da qualsiasi nodo di rete ma sono sempre inoltrate al nodo di convalida primario (principale), che ordina le transazioni. Il nodo primario trasmette le transazioni ordinate a tutti i peer di convalida per il consenso, o l'accordo, sull'ordine proposto.
 3. In caso di accordo sull'ordine delle transazioni, queste ultime vengono eseguite e accodate al registro su ciascun nodo di convalida. Il registro viene quindi replicato a tutti i nodi di rete.  
 
+<br>
 ## Architettura di rete e applicazioni
 {: #architecture}
 
@@ -107,4 +107,4 @@ Un blockchain con autorizzazioni richiede che le entità eseguano la registrazio
 
 **Chaincode Services**: Chaincode Services fornisce un metodo leggero e protetto di circoscrivere l'esecuzione del chaincode sui nodi di convalida. L'ambiente è un contenitore “isolato” e protetto, insieme a una serie di immagini di base firmate che contengono i livelli di sistema operativo protetto, linguaggio del chaincode, runtime ed SDK per Go, Java e Node.js. Se necessario è possibile abilitare degli ulteriori linguaggi.
 
-Fai riferimento alla [specifica del protocollo](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md#fabric) per Hyperledger Fabric 0.5 per ulteriori informazioni sull'implementazione IBM di blockchain.
+Fai riferimento alla [specifica del protocollo](https://github.com/hyperledger/fabric/blob/v0.6/docs/protocol-spec.md#fabric) per Hyperledger Fabric 0.5 per ulteriori informazioni sull'implementazione IBM di blockchain.

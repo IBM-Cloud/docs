@@ -14,7 +14,7 @@ years: 2016
 
 # HFC SDK per Node.js
 {: #etn_sdk}
-Ultimo aggiornamento: 07 ottobre 2016
+Ultimo aggiornamento: 09 novembre 2016
 {: .last-updated}
 
 L'HFC (Hyperledger Fabric Client) SDK consente agli sviluppatori di applicazioni di mettere a punto delle applicazioni Node.js che interagiscono con
@@ -31,7 +31,7 @@ L'HFC SDK fornisce delle API tramite le quali le applicazioni interagiscono con 
 2. Un servizio membri collegabile, che viene utilizzato per registrare e completare la registrazione di membri. Il metodo `chain.setMemberServices()` sovrascrive l'implementazione predefinita in `MemberServices`. Member Services implementa Hyperledger Fabric come una rete blockchain con autorizzazioni, che fornisce anonimato, non collegabilità delle transazioni e confidenzialità.
 
 Puoi includere l'HFC SDK nella tua applicazione Node.js utilizzando il metodo offline oppure il metodo npm:
-*  Metodo offline: copia prima i file dalla struttura ad albero di origine Hyperledger Fabric (https://github.com/hyperledger/fabric/tree/master/sdk/node/lib) nella tua applicazione Node.js `/lib` directory. Includi quindi l'HFC SDK nella tua applicazione aggiungendo il seguente frammento di codice:
+*  Metodo offline: copia prima i file dalla struttura ad albero di origine Hyperledger Fabric (https://github.com/hyperledger/fabric/tree/v0.6/sdk/node/lib) nella tua applicazione Node.js `/lib` directory. Includi quindi l'HFC SDK nella tua applicazione aggiungendo il seguente frammento di codice:
 
 ```js
 var hfc = require("./lib/hfc");
@@ -40,7 +40,7 @@ var hfc = require("./lib/hfc");
 * Metodo npm: dalla riga comandi, installa prima l'HFC SDK da npm con il seguente frammento:
 
 ```
-npm install hfc@0.5.3
+npm install hfc@0.6.5
 ```
 
 Includi quindi l'HFC SDK nella tua applicazione con il seguente frammento di codice:
@@ -52,7 +52,7 @@ var hfc = require('hfc');
 ## Oggetti HFC
 {: #objects}
 
-I seguenti oggetti HFC (classi e interface) sono descritti a un alto livello per guidarti meglio nella gerarchia degli oggetti:
+I seguenti oggetti HFC (classi e interfacce) sono descritti a un alto livello per guidarti meglio nella gerarchia degli oggetti:
 
 * La classe di livello superiore è `Chain`, che è la rappresentazione client di una rete blockchain. HFC ti consente di interagire con più reti e di condividere un singolo oggetto `KeyValStore` e `MemberServices` con più oggetti `Chain`, come necessario. Per ciascuna rete blockchain,
 aggiungerai uno o più oggetti `Peer`, che rappresentano gli endpoint a cui si connette l'HFC per inoltrare le transazioni.
@@ -63,81 +63,56 @@ aggiungerai uno o più oggetti `Peer`, che rappresentano gli endpoint a cui si c
 oggetto `TransactionContext` direttamente da un oggetto Member ed emetti più operazioni di distribuzione, richiamo e query. Tuttavia, l'utilizzo di un singolo tCert per più transazioni collega le transazioni in modo che siano identificabili come implicanti lo stesso utente anonimo. Per evitare il collegamento delle transazioni, richiama distribuzione, richiamo e query sull'oggetto `User` o `Member`.  
 
 <br>
+
 ## Applicazione Node.js di esempio
 {: #nodesample}
 
 La seguente applicazione Node.js di esempio si avvale delle API dell'HFC SDK per interagire con una rete blockchain Bluemix. Il programma funziona con entrambi i piani di rete blockchain (starter e HSBN), e con qualsiasi sistema operativo lato client.
 
-L'obiettivo è quello di utilizzare un'applicazione JavaScript--[helloblockchain.js](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/helloblockchain.js)--per eseguire con esito positivo la distribuzione del chaincode--[chaincode_example02](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/chaincode_example02.go)--alla tua rete Bluemix, seguita da un richiamo e una query.  
+L'obiettivo è quello di utilizzare un'applicazione JavaScript--[helloblockchain.js](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/helloblockchain.js)--per eseguire con esito positivo la distribuzione di una parte del chaincode--[chaincode_example02](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/src/chaincode/chaincode_example02.go)--alla tua rete Bluemix, seguita da un richiamo e una query.  
 
 1. Questo programma richiede sia Node.js che il gestore pacchetto JavaScript npm.  L'installazione della versione più recente di [Node.js](https://nodejs.org/en/) includerà automaticamente npm.  
 
-1. Apri un terminale e crea una directory (spazio di lavoro) dove metterai i moduli di nodo e il codice sorgente helloblockchain.js. Ad esempio:
+1. Apri un terminale e crea una directory (spazio di lavoro) dove desideri posizionare il codice di origine per questa demo. Ad esempio:
 
     ```
     mkdir -p $HOME/workspace
     ```
 
-1. Vai alla cartella dello spazio di lavoro appena creata e installa HFC v0.5.3 con il seguente comando:
+1. Vai nella directory appena creata e clona il repository [SDK-Demo](https://github.com/IBM-Blockchain/SDK-Demo).  Assicurati di disporre della versione corretta di [Git](https://git-scm.com/downloads) per il tuo SO installata prima di eseguire il comando `git clone`:
 
      ```
      cd $HOME/workspace
-     npm install hfc@0.5.3
+     git clone https://github.com/IBM-Blockchain/SDK-Demo.git
+     ```
+ Se nella tua rete è in esecuzione Hyperledger Fabric v0.5, controlla il ramo v0.5 dopo la clonazione:
+
+     ```
+     cd $HOME/workspace/SDK-Demo
+     git checkout v0.5
      ```
 
-1. Copia il programma [helloblockchain.js](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/helloblockchain.js) e salvalo nella tua cartella dello spazio di lavoro.  
-   La tua directory dello spazio di lavoro (`/workspace`) dovrebbe essere simile al seguente screenshot:
+1. Ora devi utilizzare le credenziali del servizio da un'istanza blockchain.
 
-   ![Spazio di lavoro dei nodi](images/nodeworkspace.PNG "Spazio di lavoro dei nodi")
+1. Se non lo hai ancora fatto, accedi al tile [Blockchain](https://console.ng.bluemix.net/catalog/services/blockchain/) in Bluemix e crea un'istanza del servizio. Seleziona il piano **Starter Developer** oppure il piano **High Security Business Network**. Fai clic sul pulsante **CREA** dopo aver curato la tua rete.  Si aprirà nel tuo dashboard del servizio.  Fai clic sulla scheda **Credenziali del servizio** nella parte superiore della pagina per accedere al peer e ai dati di registrazione dell'utente per la tua rete.  **Nota**: per le reti HSBN le credenziali del servizio potrebbe non venire generate automaticamente.  Fai semplicemente clic sul pulsante **Nuova credenziale**, che aprirà una nuova finestra.  Quindi fai clic su **Aggiungi** in fondo alla finestra.  Questo popolerà un payload JSON contenente le tue credenziali del servizio.
 
-1. Se non lo hai ancora fatto, accedi al tile [Blockchain](https://console.ng.bluemix.net/catalog/services/blockchain/) in Bluemix e crea un'istanza del servizio. Seleziona il piano **Starter Developer** oppure il piano **High Security Business Network** (![](images/green_dot.png) se approvato). Fai clic sul pulsante **CREA** e ottieni le **Credenziali di servizio** copiando e incollando il file JSON; salvalo come ServiceCredentials.json nella tua directory '/workspace' locale. Assicurati di copiare l'intero payload JSON; dovrebbe essere 202 righe in un editor standard.  **Nota**: quando esegui un'istanza blockchain sul formato della [nuova console](https://new-console.ng.bluemix.net/#overview) Bluemix, noterai una differenza nell'output delle
-tue **Credenziali di servizio**.  Specificamente, la riga "credentials" viene rimossa dall'oggetto.  Per correggere ciò, aggiungi il seguente frammento di codice alla riga 2 del tuo file ServiceCredentials.json:
+1. Aggiorna il tuo file ServiceCredentials.json, che hai ricevuto dopo la clonazione del repository SDK-Demo, con le tue nuove credenziali.
 
-	```
-	"credentials": {
-	```
+1. Quando il programma viene eseguito, l'HFC SDK crea la directory `keyValStore-<network-id>` in $HOME/workspace/SDK-Demo.  Questa directory `keyValStore-<network-id>` contiene le chiavi crittografiche per ciascun utente con la registrazione completa.  Non devi eliminare la directory `keyValStore` quando ti connetti alle nuove reti Bluemix; verranno piuttosto create delle directory `keyValStore-<network-id>` univoche per ciascuna istanza Bluemix.  **NON** eliminare questo materiale di crittografia finché la tua rete non viene eliminata o reimpostata.  Senza questi dati, il tuo client non può comunicare con il server CA Bluemix e la registrazione avrà esito negativo.
 
-1. Aggiungi quindi una `}` di chiusura alla riga 202 per chiudere l'oggetto.  Il layout del tuo ServiceCredentials.json dovrebbe riflettere quello del [ServiceCredentials.json](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/ServiceCredentials.json) di esempio, lasciandoti con un payload di 202 righe. Se ottieni le tue credenziali da un'istanza blockchain derivata dal formato della [console classica](https://console.ng.bluemix.net/) Bluemix, non dovrai preoccuparti di questa discrepanza.  Gli screenshot di seguito illustrano le differenze nei due layout, con quello iniziale che mostra la *nuova console* e quello successivo che mostra quella *classica*:
-
-     ![Nuova console di credenziali di servizio](images/servicecreds1.png "Nuova console di credenziali di servizio")
-
-     ![Credenziali di servizio](images/servicecreds.png "Credenziali di servizio")
-
-1. Dopo l'aggiunta di ServiceCredentials.json, la tua directory `/workspace` dovrebbe essere simile al seguente screenshot:
-
-     ![Spazio di lavoro dei nodi 2](images/nodeworkspace2.PNG "Spazio di lavoro dei nodi 2")
-
-1. Quando il programma viene eseguito, l'HFC SDK crea la directory `keyValStore` in $HOME/workspace.  Questa directory `keyValStore`
-contiene le chiavi crittografiche per ciascun utente con la registrazione completa.  Non devi eliminare la directory `keyValStore` quando ti connetti alle
-nuove reti Bluemix; verranno piuttosto create delle directory `keyValStore` univoche per ciascuna istanza Bluemix.  
-
-1. Crea una directory chaincode nel tuo $GOPATH, come mostrato di seguito. Se non hai ancora impostato un $GOPATH sulla tua macchina, attieniti alle istruzioni [qui](https://github.com/golang/go/wiki/GOPGATH).
+1. Dalla tua cartella SDK-Demo, esegui il programma di nodo:
 
 	```
-	mkdir -p $GOPATH/src/chaincode_example02
-	```
-
-1. Copia [chaincode_example02.go](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/chaincode_example02.go) in questa nuova directory - `$GOPATH/src/chaincode_example02`.  Questa è la parte effettiva del chaincode che verrà distribuita alla rete Bluemix dopo che esegui il programma.  
-
-1. Richiama [vendor.zip](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/vendor.zip) e salvalo nella stessa directory - `$GOPATH/src/chaincode_example02`. Il pacchetto vendor.zip contiene le librerie e le dipendenze dalla base di codice Hyperledger Fabric v0.5. L'estrazione di Windows predefinita crea un percorso simile a: **C:\GOPATH\src\chaincode_example02\vendor**. Prima dell'estrazione, devi eliminare la directory `\vendor` da questo percorso altrimenti la distribuzione del chaincode non riuscirà. Un percorso corretto su Windows sarà simile al seguente:  **C:\GOPATH\src\chaincode_example02\vendor\github.com\hyperledger\fabric**. (Nota: una directory `\vendor` è corretta).  L'irregolarità di una seconda directory `\vendor` non si verifica su Linux o OS X.
-
-1. Dovresti avere ora una directory nel tuo $GOPATH che è simile al seguente esempio:
-
-    ![$GOPATH del nodo](images/nodegopath.PNG "$GOPATH del nodo")
-
-1. Dalla tua directory '/workspace' locale, esegui il programma di nodo:
-
-	```
-	node helloblockchain.js -c chaincode_example02
+	node helloblockchain.js
 	```
 	Abilita i log di debug:
 	```
-	DEBUG=hfc node helloblockchain.js -c chaincode_example02
+	DEBUG=hfc node helloblockchain.js
 	```
 
 	Abilita le tracce gRPC:
 	```
-	GRPC_TRACE=all DEBUG=hfc node helloblockchain.js -c chaincode_example02
+	GRPC_TRACE=all DEBUG=hfc node helloblockchain.js
 	```
 
 Se le transazioni di distribuzione (`deploy`), richiamo (`invoke`) e `query` vengono eseguite correttamente, vederai i seguenti messaggi nel tuo terminale:
@@ -152,17 +127,22 @@ Successfully completed chaincode invoke transaction: request={"chaincodeID":"9be
 Successfully queried  chaincode function: request={"chaincodeID":"9be0a0ed3f1788e8728c8911c747d2f6d0e205fa63422dc598d498fe709b9b8d","fcn":"query","args":["a"]}, value=99
 ```
 
-Tieni presente che, in caso di esecuzione su una rete Starter Developer, possono a volte volerci fino a 10 minuti perché il tuo contenitore chaincode venga avviato.  Tuttavia, una volta avviato, le distribuzioni e le chiamate successive verranno eseguite immediatamente, perché i file prerequisiti sono stati memorizzati sulla macchina host per l'istanza blockchain.  
+**Nota**: il codice di origine chaincode viene conservato nella cartella **src/chaincode** nel tuo repository SDK-Demo.  Questa cartella contiene **ANCHE** una cartella **/vendor** che contiene le librerie e le dipendenze dalla base di codice Hyperledger Fabric.  Se sostituisci il file chaincode corrente -- chaincode_example02.go -- con il tuo proprio chaincode, assicurati di mantenere la cartella **/vendor**.  Queste dipendenze sono obbligatorie perché il peer compili correttamente il tuo chaincode e per creare il contenitore. Inoltre, se disponi di librerie dipendenti, assicurati di averle aggiunte nella cartella **/vendor**.
+
+Tieni presente che, in caso di esecuzione su una rete Starter Developer, alcune volte può essere necessario un periodo di tempo prolungato per la riuscita della distribuzione e per l'avvio del contenitore chaincode. Tuttavia, una volta avviato, le distribuzioni e le chiamate successive verranno eseguite immediatamente, perché i file prerequisiti sono stati memorizzati sulla macchina host per l'istanza blockchain.  
 
 Passa alla scheda **Blockchain** dalla tua **Console di rete**. Questa vista mostra i blocchi che vengono accodati al registro blockchain man mano che il programma helloblockchain.js emette transazioni di distribuzione e richiamo. Il seguente screenshot mostra i risultati dell'esecuzione di helloblockchain.js di due volte, con gli argomenti predefiniti per "a" e "b":
 
    ![Spazio di lavoro dei nodi 3](images/nodeworkspace3.PNG "Spazio di lavoro dei nodi 3")  
 
 <br>
+
 ## Risoluzione dei problemi
-Accertati che stai eseguendo **hfc@0.5.3** emettendo o l'uno o l'altro dei seguenti comandi dalla tua directory **/workspace**:
+Accertati che stai eseguendo **hfc@0.5.4** o **hfc@0.6.5** emettendo o l'uno o l'altro dei seguenti comandi dalla tua directory **/workspace**:
   * npm list | grep hfc
   * npm list -g | grep hfc  (se installato utilizzando l'indicatore `-g` globale)
+
+Le reti che utilizzano il ramo v0.5 avranno bisogno della versione hfc precedente - 0.5.4
 
 Utilizza la seguente procedura se ricevi un messaggio di query:
 
@@ -182,15 +162,17 @@ Se ricevi un errore di handshake, prova una versione di `grpc` differente. Puoi 
     - `npm list | grep grpc`
     - `npm list -g | grep grpc`  
 
+
+
 <br>
 ## Chiavi pubbliche e private
 {: #keys}
 
 Hyperledger Fabric utilizza le autorità di certificazione, e le loro chiavi pubbliche e private sottostanti, per soddisfare i requisiti di sicurezza delle attività di business che operano su un blockchain condiviso. La gestione dell'identità dei membri, la gestione dei ruoli e la privacy transazionale possono essere tutte controllate tramite l'HFC SDK.
 
-La privacy degli utenti e quella transazionale su un blockchain condiviso sono gestite tramite l'implementazione di un framework PKI (Public Key Infrastructure). La PKI, tramite le autorità di certificazione, gestisce la generazione, la distribuzione e la revoca di chiavi e certificati digitali. Le specifiche tecniche complete per PKI e Membership Services sono descritte nella sezione relativa alla sicurezza di Hyperledger Fabric v0.5 [protocol specification](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md). I principi di base della PKI di Hyperledger Fabric sono spiegati qui di seguito:
+La privacy degli utenti e quella transazionale su un blockchain condiviso sono gestite tramite l'implementazione di un framework PKI (Public Key Infrastructure). La PKI, tramite le autorità di certificazione, gestisce la generazione, la distribuzione e la revoca di chiavi e certificati digitali. Le specifiche tecniche complete per PKI e Membership Services sono descritte nella sezione relativa alla sicurezza della [specifica del protocollo](http://hyperledger-fabric.readthedocs.io/en/v0.6/protocol-spec/) di Hyperledger Fabric v0.6. I principi di base della PKI di Hyperledger Fabric sono spiegati qui di seguito:
 
-1. L'Autorità di registrazione (o RA, Registration Authority) convalida l'identità di un utente che sta richiedendo l'accesso alla rete blockchain.  Tale operazione può essere eseguita dinamicamente da un utente con l'autorizzazione `registrar` oppure manualmente modificando il file membersrvc.yaml. Il processo di registrazione si verifica fuori banda e viene eseguito tramite la funzione `RegisterUser`. RA assegna le credenziali di registrazione `<enrollID>` e `<enrollPWD>` all'utentethe user.
+1. L'Autorità di registrazione (o RA, Registration Authority) convalida l'identità di un utente che sta richiedendo l'accesso alla rete blockchain.  Tale operazione può essere eseguita dinamicamente da un utente con l'autorizzazione `registrar` oppure manualmente modificando il file membersrvc.yaml. Il processo di registrazione si verifica fuori banda e viene eseguito tramite la funzione `RegisterUser`. RA assegna le credenziali di registrazione `<enrollID>` e `<enrollPWD>` all'utente.
 
 2. L'utente invia quindi una richiesta di registrazione completa all'Autorità di certificazione di registrazione completa (o ECA, Enrollment Certificate Authority) utilizzando la funzione `CreateCertificatePair`. Questo payload contiene la `<enrollPWD>` a singolo utilizzo dell'utente, la chiave di verifica della firma pubblica e la chiave di crittografia pubblica, ed è firmato con la chiave di verifica della firma privata dell'utente. <br><br>Quando riceve la richiesta di registrazione completa, l'ECA emette una richiesta di verifica crittografata all'utente che può essere decrittografata solo con la chiave di crittografia privata dell'utente. Dopo la decrittografia della richiesta di verifica, l'utente invia nuovamente la richiesta di certificato. L'ECA, subordinatamente a una risposta decrittografata accuratamente, restituisce una coppia di certificati autenticati firmata con la sua firma digitale. <br><br>La firma digitale viene prodotta eseguendo crittograficamente l'hashing della richiesta di certificato (messaggio) utilizzando l'algoritmo SHA-2 per produrre un "digest". Questo "digest del messaggio" viene quindi crittografato con la chiave di firma privata dell'ECA. I membri della rete possono quindi autenticare la firma digitale decrittografandola con la chiave di firma pubblica dell'ECA. La coppia di certificati di registrazione completa restituita contiene un certificato per la firma dei dati (privato) e uno per la decrittografia dei dati (pubblico). Questa coppia di eCert è statica e a lungo termine e può essere visibile o invisibile alle transazioni.
 

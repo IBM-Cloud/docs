@@ -13,7 +13,7 @@ copyright:
 
 # Cómo empezar con IBM {{site.data.keyword.blockchain}}
 {: #gettingstartedtemplate}
-Última actualización: 13 de octubre de 2016
+Última actualización: 10 de noviembre de 2016
 {: .last-updated}
 
 **ATENCIÓN:** Antes de utilizar el plan Desarrollador inicial (Beta) o el plan Red empresarial de alta seguridad (GA), debe leer la información técnica y de soporte en [Información que necesita saber](needtoknow.html).
@@ -21,12 +21,12 @@ copyright:
 
 ## Oferta de estado de planes
 
-El plan Desarrollador inicial es un release Beta, y proporciona un entorno de desarrollo multiarrendatario. El plan Red empresarial de alta seguridad se hizo generalmente disponible (release GA) el 20 de octubre de 2016. El plan Red empresarial de alta seguridad proporciona un entorno de LinuxONE en z de un solo arrendatario altamente seguro, con el aislamiento de código utilizando [IBM Secure Service Container](etn_ssc.html).
+El plan Desarrollador inicial es un release Beta, y proporciona un entorno de desarrollo multiarrendatario. El plan Red empresarial de alta seguridad es una release GA. El plan Red empresarial de alta seguridad proporciona un entorno de LinuxONE en z de un solo arrendatario altamente seguro, con el aislamiento de código utilizando [IBM Secure Service Container](etn_ssc.html).
 <br><br>
 
-## IBM Blockchain on Bluemix
+## IBM Blockchain en Bluemix
 
-El servicio {{site.data.keyword.blockchainfull}} en Bluemix&reg; le proporciona una red de blockchain de prueba y desarrollo de cuatro nodos en una pulsación del botón. En lugar de crear una red de blockchain a partir de cero, los desarrolladores puede empezar inmediatamente a escribir aplicaciones y desplegar código de encadenamiento. El servicio de IBM Blockchain en Bluemix es una red autorizada de igual a igual, que se crea encima del código [Hyperledger Fabric v0.5](https://github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview) desde Hyperledger Project de Linux Foundation.
+El servicio {{site.data.keyword.blockchainfull}} en Bluemix&reg; ofrece una opción entre dos redes blockchain de desarrollo y prueba de cuatro nodos, con la pulsación de un botón. En lugar de crear una red de blockchain a partir de cero, los desarrolladores puede empezar inmediatamente a escribir aplicaciones y desplegar código de encadenamiento. El servicio de IBM Blockchain en Bluemix es una red autorizada de igual a igual, que se crea encima del código [Hyperledger Fabric v0.6.1](https://github.com/hyperledger/fabric/tree/v0.6) desde Hyperledger Project de Linux Foundation.
 {:shortdesc}
 
 Las redes de blockchain se utilizan para intercambiar y realizar el seguimiento de forma segura y eficiente de los activos digitales, y registrar permanentemente todas las transacciones en el libro mayor compartido. Para obtener más información sobre blockchain, consulte el tema [Acerca de blockchain](ibmblockchain_overview.html).
@@ -84,14 +84,14 @@ Siga estos pasos para crear y desarrollar una instancia de servicio desenlazado 
 ## Referencia de la API
 {: #api}
 * [Interfaz de usuario de Swagger](https://obc-service-broker-staging.stage1.mybluemix.net/swagger)
-* [API de Hyperledger Fabric (GitHub)](https://github.com/hyperledger/fabric/tree/master/docs/API)
-* [SDK para Node.js de HFC](https://github.com/hyperledger/fabric/tree/master/sdk/node)
+* [API de Hyperledger Fabric (GitHub)](https://github.com/hyperledger/fabric/tree/v0.6/docs/API)
+* [SDK para Node.js de HFC](https://github.com/hyperledger/fabric/tree/v0.6/sdk/node)
 
 ## Enlaces relacionados
 {: #general}
 * [Código de Fabric](https://github.com/hyperledger/fabric)
 * [Libro blanco](https://github.com/hyperledger/hyperledger/wiki/Whitepaper-WG)
-* [Especificación de protocolo y documentos relacionados](https://github.com/hyperledger/fabric/tree/master/docs)
+* [Especificación de protocolo y documentos relacionados](https://github.com/hyperledger/fabric/tree/v0.6/docs)
 * [StackOverflow](http://stackoverflow.com/questions/tagged/hyperledger)
 * [Linux Foundation](https://www.hyperledger.org/)
 * [Novedades de Servicios de Bluemix](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}

@@ -14,16 +14,16 @@ years: 2016
 
 # Scenario di rete
 {: #etn_overview}
-Ultimo aggiornamento: 13 ottobre 2016
+Ultimo aggiornamento: 03 novembre 2016
 {: .last-updated}
 
-I piani Starter Developer e High Security Business Network di IBM Blockchain su Bluemix si avvalgono delle più recenti iterazioni di Hyperledger Fabric v0.5, del protocollo di consenso PBFT (Practical Byzantine Fault Tolerance) e dell'HFC (Hyperledger Fabric Client) SDK per Node.js. Entrambi i piani sono costituiti da quattro nodi di rete e da un'Autorità di certificazione. L'Autorità di certificazione controlla "Membership Services", che gestisce identità, autorizzazioni di rete e transazioni confidenziali mediante l'emissione di certificati digitali.
+I piani Starter Developer e High Security Business Network di IBM Blockchain su Bluemix si avvalgono delle più recenti iterazioni di Hyperledger Fabric v0.6, del protocollo di consenso PBFT (Practical Byzantine Fault Tolerance) e dell'HFC (Hyperledger Fabric Client) SDK per Node.js. Entrambi i piani sono costituiti da quattro nodi di rete e da un'Autorità di certificazione. L'Autorità di certificazione controlla "Membership Services", che gestisce identità, autorizzazioni di rete e transazioni confidenziali mediante l'emissione di certificati digitali.
 {:shortdesc}
 
 Le seguenti funzionalità blockchain sono disponibili in entrambi i piani:
 
 * Il protocollo di consenso PBFT gestisce l'ordinamento di tutte le transazioni scritte nel registro condiviso. Una rete blockchain PBFT di quattro nodi è in grado di raggiungere il consenso nonostante un nodo Byzantine (malfunzionante). Per i dettagli sull'esecuzione di test di consenso PBFT, vedi [Esecuzione di test di consenso e disponibilità](etn_pbft.html).
-* L'HFC SDK per Node.js consente alle applicazioni Node.js lato client di interagire con la rete blockchain. Le applicazioni lato client possono completare la registrazione in modo sicuro degli utenti tramite Membership Services, emettere transazioni e scambiare in modo crittografico delle risorse servendosi di tCert. Per ulteriori informazioni su Membership Services e la privacy degli utenti, consulta la sezione [HFC SDK per Node.js](etn_sdk.html) e la [specifica del protocollo](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md) Hyperledger Fabric.
+* L'HFC SDK per Node.js consente alle applicazioni Node.js lato client di interagire con la rete blockchain. Le applicazioni lato client possono completare la registrazione in modo sicuro degli utenti tramite Membership Services, emettere transazioni e scambiare in modo crittografico delle risorse servendosi di tCert. Per ulteriori informazioni su Membership Services e la privacy degli utenti, consulta la sezione [HFC SDK per Node.js](etn_sdk.html) e la [specifica del protocollo](https://github.com/hyperledger/fabric/blob/v0.6/docs/protocol-spec.md) Hyperledger Fabric.
 * Ora puoi accedere ai dettagli sull'ambiente di rete blockchain tramite il [dashboard monitor Bluemix](ibmblockchainmonitor.html).  
 
 <br>

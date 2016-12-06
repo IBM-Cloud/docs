@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
 years: 2016
@@ -14,7 +14,7 @@ years: 2016
 
 # ブロックチェーン・ネットワークのテスト
 {: #etn_txn}
-最終更新日: 2016 年 10 月 07 日
+最終更新日: 2016 年 11 月 3 日
 {: .last-updated}
 
 IBM Blockchain ネットワーク・セキュリティーと可用性を確認するには、次の役割とトランザクションのテストを使用します。テストはすべて、Starter Developer プランまたは High Security Business Network プランを使用して実行できます。
@@ -23,7 +23,7 @@ IBM Blockchain ネットワーク・セキュリティーと可用性を確認�
 ## 役割とトランザクションのテスト
 {: #sdk}
 
-Node.js 用の Hyperledger Fabric v0.5 HFC SDK には、プライバシーや機密性、非連結性などのセキュリティー機能をハイライトする単体テストが含まれています。これらの単体テストは https://github.com/hyperledger/fabric/tree/master/sdk/node/test/unit で探すことができます。ここには、ユーザー役割やユーザー属性を使用してユーザーを登録およびエンロールしたり、資産を移譲したり、資産を管理したりするコード・サンプルがあります。入手可能な単体テストは、次のとおりです。
+Node.js 用の Hyperledger Fabric v0.6 HFC SDK には、プライバシーや機密性、非連結性などのセキュリティー機能をハイライトする単体テストが含まれています。これらの単体テストは https://github.com/hyperledger/fabric/tree/v0.6/sdk/node/test/unit で探すことができます。ここには、ユーザー役割やユーザー属性を使用してユーザーの登録とエンロールを行ったり、資産を移譲したり、資産を管理したりするコード・サンプルがあります。入手可能な単体テストは、次のとおりです。
 
 ### registrar.js
 registrar.js テストは、"admin" ユーザーをエンロールし、そのユーザーをブロックチェーン・ネットワーク `registrar` として指定します。このテストは、追加のユーザー "webAdmin" や "webUser" も登録およびエンロールします。"webAdmin" の ID には、追加メンバーに 'client' の役割を登録する権限が付与されています。"webUser" の ID には、追加メンバーを登録する権限が付与されていません。"webAdmin" がユーザーに "auditor" や "validator" の役割を登録およびエンロールしようとしたり、"webUser" が "webUser2" を登録およびエンロールしようとしたりすると、その試行は失敗します。
@@ -201,11 +201,10 @@ Alice は、Bob を資産の所有者として割り当てようとします。A
             }
 ```
 
-<!-- comment this one out until Hl v0.6 GAs
 ### asset-mgmt-with-dynamic-roles
-The asset-mgmt-with-dynamic-roles.js test is a variation of `asset-mgmt-with-roles.js`.  The prior test shows the users Alice, Bob, and assigner being enrolled to the network.  However, these users were previously registered with attributes hardcoded in the membersrvc.yaml.  In other words, the `chain.enroll` function logged these users into the network with their corresponding attributes, affiliations, and roles from the membersrvc.yaml; the registration portion had already occurred.  
+asset-mgmt-with-dynamic-roles.js テストは、`asset-mgmt-with-roles.js` の変化形の 1 つです。前のテストでは、ユーザー Alice、Bob、および割り当て者がネットワークにエンロールされていました。しかし、これらのユーザーには membersrvc.yaml でハードコーディングされた属性が登録されていました。言い換えると、`chain.enroll` 関数は、これらのユーザーが membersrvc.yaml にあるその対応する属性、所属、役割でネットワークにログインするようにします。登録の部分は既に行われています。  
 
-In this test we see the registration and enrollment of unique users (i.e. users not already present in the membersrvc.yaml). The dynamic registration and enrollment is done through a callback of the `registerAndEnroll` function, as seen at the end of this test:
+このテストでは、固有のユーザーの登録とエンロールが示されています (つまり、ユーザーは membersrvc.yaml にはまだ存在していません)。このテストの最後にあるように、動的な登録とエンロールが `registerAndEnroll` 関数のコールバックによって行われます。
 
 ```js
 function registerAndEnroll(name, attrs, cb) {
@@ -220,7 +219,7 @@ function registerAndEnroll(name, attrs, cb) {
 }
 ```
 
-For example, we see alice2 being registered and enrolled with two unique attributes: a 'role' with the value of 'client' and an 'account' with the value of 'aliceAccount'.
+例えば、ここでは alice2 が 2 つの固有の属性 ('role' は 'client' という値、'account' は 'aliceAccount' という値) で登録およびエンロールされています。
 
 ```js
 console.log("enrolling alice2 ...");
@@ -229,6 +228,4 @@ console.log("enrolling alice2 ...");
             alice = user;
 ```
 
-The remainder of the test is the same as `asset-mgmt-with-roles.js`, with Alice failing to assign Bob as the owner of the asset.
-
--->
+テストの残りは `asset-mgmt-with-roles.js` と同じですが、Alice は Bob を資産の所有者として割り当てることができません。

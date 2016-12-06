@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
 years: 2016
@@ -14,16 +14,16 @@ years: 2016
 
 # ネットワーク・ランドスケープ
 {: #etn_overview}
-最終更新日: 2016 年 10 月 13 日
+最終更新日: 2016 年 11 月 3 日
 {: .last-updated}
 
-IBM Blockchain on Bluemix Starter Developer プランと High Security Business Network プランは、Hyperledger Fabric v0.5、Practical Byzantine Fault Tolerance (PBFT) コンセンサス・プロトコル、および Hyperledger Fabric Client (HFC) SDK for Node.js の最新の反復を利用します。どちらのプランも、4 つのネットワーク・ノードと認証局によって構成されます。認証局は「メンバーシップ・サービス」を統括します。これは、ID、ネットワーク・アクセス権、機密トランザクションをデジタル証明書の発行によって管理します。
+IBM Blockchain on Bluemix の Starter Developer プランと High Security Business Network プランでは、Hyperledger Fabric v0.6、Practical Byzantine Fault Tolerance (PBFT) コンセンサス・プロトコル、Hyperledger Fabric Client (HFC) SDK for Node.js の最新のイテレーションを利用します。どちらのプランも、4 つのネットワーク・ノードと認証局によって構成されます。認証局は「メンバーシップ・サービス」を統括します。これは、ID、ネットワーク・アクセス権、機密トランザクションをデジタル証明書の発行によって管理します。
 {:shortdesc}
 
 どちらのプランでも、以下のブロックチェーン機能を使用できます。
 
 * PBFT コンセンサス・プロトコルは、共有台帳に書き込まれるすべてのトランザクションの順序付けを管理します。4 つのノードの PBFT ブロックチェーン・ネットワークは、1 つのビザンチン (欠陥のある) ノードにかかわりなく、コンセンサスに到達できます。PBFT コンセンサス・テストの詳細については、[コンセンサスと可用性のテスト](etn_pbft.html)を参照してください。
-* HFC SDK for Node.js により、クライアント・サイドの Node.js アプリケーションは、ブロックチェーン・ネットワークと対話できるようになります。クライアント・サイドのアプリは、メンバーシップ・サービスによってユーザーを安全に登録し、トランザクションを発行し、tCerts の使用によって資産を暗号化して交換することができます。メンバーシップ・サービスとユーザー・プライバシーについて詳しくは、[HFC SDK for Node.js](etn_sdk.html) セクションと Hyperledger Fabric [プロトコル仕様](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md)を参照してください。
+* HFC SDK for Node.js により、クライアント・サイドの Node.js アプリケーションは、ブロックチェーン・ネットワークと対話できるようになります。クライアント・サイドのアプリは、メンバーシップ・サービスによってユーザーを安全に登録し、トランザクションを発行し、tCerts の使用によって資産を暗号化して交換することができます。メンバーシップ・サービスとユーザー・プライバシーについて詳しくは、[HFC SDK for Node.js](etn_sdk.html) セクションと Hyperledger Fabric [プロトコル仕様](https://github.com/hyperledger/fabric/blob/v0.6/docs/protocol-spec.md)を参照してください。
 * [Bluemix モニター・ダッシュボード](ibmblockchainmonitor.html)から、ブロックチェーン・ネットワーク環境に関する詳細にアクセスすることができます。  
 
 <br>
