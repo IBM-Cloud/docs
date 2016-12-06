@@ -161,7 +161,7 @@ To view the used and allocated quota for an organization, complete the following
  * SERVICES
  * PLAN
  * PRICE
-7. Click **Containers** to view the used and available container quota allocation. The container allocation varies depening on your pricing plan. You can view the quota details for the following resources:
+7. Click **Containers** to view the used and available container quota allocation. The container allocation varies depending on your pricing plan. You can view the quota details for the following resources:
  * MEMORY
  * PUBLIC IP
 
