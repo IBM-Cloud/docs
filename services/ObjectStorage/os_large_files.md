@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-11-04"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -12,13 +12,14 @@ lastupdated: "2016-11-04"
 {:pre: .pre}
 
 
-# Working with large files {: #large-files}
+# Storing large objects {: #large-files}
 
-
-Uploading objects is limited to a maximum size of 5 GB in a single upload. However, you can still upload objects larger than 5GB if segment them into smaller objects. Once the segmented objects have been uploaded, a manifest file is also needed to concatenate the segments into the original object. There are two ways to do this: Dynamic Large Objects (DLO) and Static Large Objects (SLO).
+Uploads are limited to a maximum size of 5 GB for a single upload. However, you can segment larger objects into smaller pieces and use a manifest file to concatenate the segments. As long as each segment is 5 GB or smaller during the upload process, there is no maximum size for your object after it is concatenated.
 {: shortdesc}
 
-### Dynamic Large Objects: {: #dynamic}
+There are two ways to do to upload large objects: Dynamic Large Objects (DLO) and Static Large Objects (SLO).
+
+## Dynamic Large Objects: {: #dynamic}
 
 There are two ways to handle DLO:
   * Have the Swift client handle everything automatically
@@ -29,7 +30,6 @@ There are two ways to handle DLO:
 The Swift client uses the `-segment-size` parameter to break down your object into smaller pieces. The client creates a new container with the name of the container you want to upload the files to and adds a suffix with the segment number (`<container_name>_segments`). Segments are uploaded in parallel. After all of the segments are uploaded, they are downloaded as one concatenated object to a manifest file with the original file name.
 
 1. After you've logged in to {{site.data.keyword.Bluemix_notm}} and you're ready to upload, run the following command to segment your file.
-
     ```
     swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     ```
@@ -37,7 +37,7 @@ The Swift client uses the `-segment-size` parameter to break down your object in
 
 #### Using the Swift API to handle Dynamic Large Objects
 
-You can segment the objects so that they are 5GB or less yourself, and then upload them through the Swift API. It is important when uploading, that you first upload all of the segments before uploading the manifest. If the object is downloaded before all of the segments have finished uploaded the downloaded object will be inconsistent. You can upload large files by completing the following steps.
+You can segment the objects so that they are 5 GB or less yourself, and then upload them through the Swift API. It is important when uploading, that you first upload all of the segments before uploading the manifest. If the object is downloaded before all of the segments have finished uploaded the downloaded object will be inconsistent. You can upload large files by completing the following steps.
 
 1. Sort the segments by name in the order in which they should be concatenated to form the original object.
 2. Upload your segments into one container that is separate from the container that holds the manifest file. Throttling for uploads starts after the 10th segment has been uploaded, and increases the upload time considerably.  For this reason, it is recommended that your segment size is no smaller than the size of the file divided by 10.
@@ -64,12 +64,12 @@ You can segment the objects so that they are 5GB or less yourself, and then uplo
     {: pre}
 
 
-### Static Large Objects {: #static}
+## Static Large Objects {: #static}
 
 Static Large Objects make use of segments and a manifest file, but allow you more control. With SLO, segments don't have to be in the same container; each each segment can be stored in any container and given any name. However, segments must be at least 1 MB. You are not required to set a header for the manifest file, although the header “X-Static-Large-Object” is automatically added and set to true after a correct manifest has been uploaded.
 {: shortdesc}
 
-The manifest file is a JSON document that provides details of the segments and must be uploaded after all the segments have been uploaded. The data provided for each segment in the manifest is compared to the metadata of the actual segments. If something doesn’t match, the manifest will not be uploaded.
+The manifest file is a JSON document that provides details of the segments and must be uploaded after all the segments have been uploaded. The data provided for each segment in the manifest are compared to the metadata of the actual segments. If something doesn’t match, the manifest will not be uploaded.
 
 <table>
   <tr>
@@ -77,22 +77,22 @@ The manifest file is a JSON document that provides details of the segments and m
     <th> Description </th>
   </tr>
   <tr>
-    <td> path </td>
+    <td> <i> path </i> </td>
     <td> The location and name of the segment. Specified as container_name/object_name. </td>
   </tr>
   <tr>
-    <td> etag </td>
+    <td> <i> etag </i> </td>
     <td> Provided by the PUT request when the object is uploaded. You can also find it by doing a HEAD to the object. </td>
   </tr>
   <tr>
-    <td> size_bytes </td>
+    <td> <i> size_bytes </i> </td>
     <td> The size of the object in bytes. </td>
   </tr>
 </table>
 
 *Table 1: JSON attributes in the manifest file in the order of concatenation*
 
-You can upload large files by completing the following steps:
+#### To upload large files
 
 1. Run the following command to upload the segments. Throttling for uploads starts after the 10th segment has been uploaded, and increases the upload time considerably.  For this reason, it is recommended that your segment size is no smaller than the size of the file divided by 10.
 
@@ -139,6 +139,8 @@ You can upload large files by completing the following steps:
     curl -O -X GET -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
+
+
 
 Here are some commands that you might need when working with Static Large Objects.
 
