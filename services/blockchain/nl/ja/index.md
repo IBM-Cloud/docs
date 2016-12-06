@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2016
@@ -13,7 +13,7 @@ copyright:
 
 # IBM {{site.data.keyword.blockchain}} の使用開始にあたって
 {: #gettingstartedtemplate}
-最終更新日: 2016 年 10 月 13 日
+最終更新日: 2016 年 11 月 10 日
 {: .last-updated}
 
 **重要:** Starter Developer プラン (ベータ版) または High Security Business Network プラン (GA) のいずれかを使用する前に、[理解している必要のあること](needtoknow.html)で技術情報およびサポート情報を読む必要があります。
@@ -21,12 +21,12 @@ copyright:
 
 ## オファリング・プランの状況
 
-Starter Developer プランはベータ版で、マルチテナント開発環境を提供します。High Security Business Network プランは、2016 年 10 月 20 日に正式版 (GA リリース) になりました。High Security Business Network プランは、[IBM Secure Service Container](etn_ssc.html) を使用したコード分離機能を備えた、高度にセキュアな単一テナントの LinuxONE on z 環境を提供します。
+Starter Developer プランはベータ版で、マルチテナント開発環境を提供します。High Security Business Network プランは GA リリースです。High Security Business Network プランは、[IBM Secure Service Container](etn_ssc.html) を使用したコード分離機能を備えた、高度にセキュアな単一テナントの LinuxONE on z 環境を提供します。
 <br><br>
 
 ## IBM Blockchain on Bluemix
 
-Bluemix&reg; の {{site.data.keyword.blockchainfull}} サービスでは、1 つのボタンをクリックするだけで、4 ノードの開発およびテスト用のブロックチェーン・ネットワークを配信できます。開発者は、ブロックチェーン・ネットワークを初めから作成しなくても、すぐにアプリケーションを作成して、チェーンコードをデプロイすることができます。IBM Blockchain on Bluemix サービスは、ピアツーピアの許可されたネットワークであり、Linux Foundation Hyperledger Project の [Hyperledger Fabric v0.5](https://github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview) コードの上に作成されています。{:shortdesc}
+Bluemix&reg; の {{site.data.keyword.blockchainfull}} サービスでは、ボタンを 1 つクリックするだけで、4 ノードの開発用ブロックチェーン・ネットワークとテスト用ブロックチェーン・ネットワークの 2 つのうち、どちらを使用するかを選択できます。開発者は、ブロックチェーン・ネットワークを初めから作成しなくても、すぐにアプリケーションを作成して、チェーンコードをデプロイすることができます。IBM Blockchain on Bluemix サービスは、許可されたピアツーピアのネットワークであり、Linux Foundation Hyperledger Project の [Hyperledger Fabric v0.6.1](https://github.com/hyperledger/fabric/tree/v0.6) コードを基に作成されています。{:shortdesc}
 
 ブロックチェーン・ネットワークは、デジタル資産をセキュアかつ効率的に交換および追跡し、すべてのトランザクションを共有台帳に永続的に記録するために使用されます。ブロックチェーンについて詳しくは、『[ブロックチェーンについて](ibmblockchain_overview.html)』のトピックを参照してください。
 <br><br>
@@ -82,14 +82,14 @@ Bluemix&reg; の {{site.data.keyword.blockchainfull}} サービスでは、1 つ
 ## API リファレンス
 {: #api}
 * [Swagger UI](https://obc-service-broker-staging.stage1.mybluemix.net/swagger)
-* [Hyperledger fabric API (GitHub)](https://github.com/hyperledger/fabric/tree/master/docs/API)
-* [HFC SDK for Node.js](https://github.com/hyperledger/fabric/tree/master/sdk/node)
+* [Hyperledger fabric API (GitHub)](https://github.com/hyperledger/fabric/tree/v0.6/docs/API)
+* [HFC SDK for Node.js](https://github.com/hyperledger/fabric/tree/v0.6/sdk/node)
 
 ## 関連リンク
 {: #general}
 * [Fabric Code](https://github.com/hyperledger/fabric)
 * [ホワイト・ペーパー](https://github.com/hyperledger/hyperledger/wiki/Whitepaper-WG)
-* [プロトコル仕様 & 関連資料](https://github.com/hyperledger/fabric/tree/master/docs)
+* [プロトコル仕様 & 関連資料](https://github.com/hyperledger/fabric/tree/v0.6/docs)
 * [StackOverflow](http://stackoverflow.com/questions/tagged/hyperledger)
 * [Linux Foundation](https://www.hyperledger.org/)
 * [Bluemix サービスの新機能](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}

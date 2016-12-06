@@ -46,4 +46,4 @@ Questo test è stato eseguito per garantire la stabilità e la resilienza di PBF
 - Arresto di 2 nodi; la rete si arresta per una mancanza di consenso.
 - Riavvio di uno dei nodi arrestati nel test precedente.  La rete riprende e il nodo che è stato riavviato esegue la sincronizzazione con gli altri peer di convalida. Per una procedura dettagliata dell'esecuzione di test PBFT, consulta l'argomento [Esecuzione di test di consenso e disponibilità](etn_pbft.html).
 
-Continua all'argomento [Esecuzione di ulteriori test](etn_next.html) per dei test aggiuntivi e per la funzionalità verificata.  
+Continua all'argomento [Esecuzione di test aggiuntivi](etn_next.html) per dei test aggiuntivi e per la funzionalità verificata.   

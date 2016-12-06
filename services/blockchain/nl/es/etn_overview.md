@@ -14,16 +14,16 @@ years: 2016
 
 # Entorno de red
 {: #etn_overview}
-Última actualización: 13 de octubre de 2016
+Última actualización: 03 de noviembre de 2016
 {: .last-updated}
 
-El plan de IBM Blockchain en el Desarrollador inicial de Bluemix y el plan de Red empresarial de alta seguridad aprovechan las últimas iteraciones de Hyperledger Fabric v0.5, el protocolo de consenso PBFT (Practical Byzantine Fault Tolerance) y el SDK for Node.js de Hyperledger Fabric Client (HFC). Los dos planes constan de cuatro nodos de red y de una entidad emisora de certificados. La entidad emisora de certificados controla los "Servicios de pertenencia", que gestiona identidades, permisos de red y transacciones confidenciales mediante la emisión de certificados digitales.
+El plan de IBM Blockchain en el Desarrollador inicial de Bluemix y el plan de Red empresarial de alta seguridad aprovechan las últimas iteraciones de Hyperledger Fabric v0.6, el protocolo de consenso PBFT (Practical Byzantine Fault Tolerance) y el SDK for Node.js de Hyperledger Fabric Client (HFC). Los dos planes constan de cuatro nodos de red y de una entidad emisora de certificados. La entidad emisora de certificados controla los "Servicios de pertenencia", que gestiona identidades, permisos de red y transacciones confidenciales mediante la emisión de certificados digitales.
 {:shortdesc}
 
 Las siguientes prestaciones de blockchain están disponibles en los dos planes:
 
 * El protocolo de consenso PBFT gestiona la solicitud de todas las transacciones escritas al libro mayor compartido. Una red de blockchain de PBFT de cuatro nodos puede alcanzar un consenso a pesar de un nodo bizantino (defectuoso). Para obtener detalles sobre las pruebas de consenso PBFT, consulte [Realización de pruebas de consenso y disponibilidad](etn_pbft.html).
-* El SDK de HFC para Node.js permite que las aplicaciones Node.js de lado de cliente interactúen con la red de blockchain. Las apps del lado del cliente pueden inscribir de forma segura usuarios a través de Servicios de pertenencia, emitir transacciones e intercambiar criptográficamente activos mediante el uso de tCerts. Para más información sobre Servicios de pertenencia y la privacidad de usuario, consulte la sección [SDK para Node.js de HFC](etn_sdk.html) y la [Especificación de protocolo](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md) de Hyperledger Fabric.
+* El SDK de HFC para Node.js permite que las aplicaciones Node.js de lado de cliente interactúen con la red de blockchain. Las apps del lado del cliente pueden inscribir de forma segura usuarios a través de Servicios de pertenencia, emitir transacciones e intercambiar criptográficamente activos mediante el uso de tCerts. Para más información sobre Servicios de pertenencia y la privacidad de usuario, consulte la sección [SDK para Node.js de HFC](etn_sdk.html) y la [Especificación de protocolo](https://github.com/hyperledger/fabric/blob/v0.6/docs/protocol-spec.md) de Hyperledger Fabric.
 * Puede acceder a detalles sobre el entorno de red de blockchain a través del [Panel de control del supervisor de Bluemix](ibmblockchainmonitor.html).  
 
 <br>
@@ -39,7 +39,7 @@ La siguiente terminología, junto con el subsiguiente diagrama, contextualiza lo
 <br>
 ## Arquitectura de red
 
-En la figura 1, y en su descripción subsiguiente, se ilustra la arquitectura de red de IBM Blockchain y los flujos de datos para servicios de miembros, transacciones, consenso y adición al libro mayor: 
+En la figura 1, y en su descripción subsiguiente, se ilustra la arquitectura de red de IBM Blockchain y los flujos de datos para servicios de miembros, transacciones, consenso y adición al libro mayor:
 
 ![Red dedicada](images/Architecture_BMX_dedicated.png "Arquitectura de red de IBM Blockchain")
 Figura 1.

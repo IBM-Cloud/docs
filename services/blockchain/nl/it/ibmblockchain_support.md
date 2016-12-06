@@ -27,10 +27,11 @@ Sono disponibili diversi meccanismi per ottenere supporto e risolvere i problemi
 ![](images/IBC_BMX_Monitor_Support.png "Scheda Supporto")
 *Figura 1. Scheda Supporto*
 
-* Utilizza la pagina [Stato del servizio](https://bluemix-service-status.blockchain.ibm.com) per analizzare i problemi noti con le reti e il servizio. I team di garanzia dello sviluppo e della qualità aggiornano attivamente queste pagine per segnalare eventuali anomalie correnti all'interno del servizio.  Questa pagina contiene anche le note di release per i nuovi commit del codice Hyperledger Fabric.
+* Utilizza la pagina [Stato del servizio](https://bluemix-service-status.blockchain.ibm.com) per analizzare i problemi noti con le reti e il servizio.  I team di garanzia dello sviluppo e della qualità aggiornano attivamente queste pagine per segnalare eventuali anomalie correnti all'interno del servizio.  Questa pagina contiene anche le note di release per i nuovi commit del codice Hyperledger Fabric.
 * Utilizza [dW Answers](https://developer.ibm.com/answers/smartspace/blockchain/) per cercare le risposte dalle domande pubblicate in precedenza o per inoltrare una nuova domanda.  Assicurati di includere **blockchain** nella domanda.
 * Utilizza [GitHub Issues](https://github.com/IBM-Blockchain/ibm-blockchain-issues/issues) per raggiungere il team di sviluppo blockchain.  Condividi dettagli e frammenti di codice dalla tua istanza specifica Bluemix.  
 * Utilizza il canale [Hyperledger slack](https://hyperledgerproject.slack.com/messages/general/) per porre domande relative al codice Hyperledger Fabric.  
+
 
 ## Problemi relativi a difetti software
 
@@ -38,7 +39,7 @@ Per difetti software o se non è possibile risolvere il problema utilizzando uno
 
 * Nell'angolo superiore destro della **Barra dei menu** (Figura 1), fai clic sull'icona **Account e supporto** (Figura 2).
 
-![](images/menubar.PNG "Barra dei menu")  
+![](images/menubar.PNG "Barra dei menu")
 *Figura 1. Barra dei menu*
 
 ![](images/avatar.PNG "Account e supporto")  

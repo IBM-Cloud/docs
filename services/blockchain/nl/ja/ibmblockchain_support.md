@@ -32,13 +32,14 @@ Bluemix にはブロックチェーン・インスタンスに関するサポー
 * [GitHub issues](https://github.com/IBM-Blockchain/ibm-blockchain-issues/issues) を使用して、ブロックチェーン開発チームに問い合わせます。利用している特定の Bluemix インスタンスの詳細およびコード・スニペットを提供してください。  
 * [Hyperledger slack](https://hyperledgerproject.slack.com/messages/general/) チャネルを使用して、Hyperledger Fabric コードに関する質問をします。  
 
+
 ## ソフトウェア障害問題
 
 ソフトウェア障害に関しては、または上記の方法で問題が解決できない場合は、以下の手順に従ってヘルプ・チケットを送信してください。
 
 * **メニュー・バー** (図 1) の右上隅で、**「アカウントとサポート」** アイコン (図 2) をクリックします。
 
-![](images/menubar.PNG "メニュー・バー")  
+![](images/menubar.PNG "メニュー・バー")
 *図 1. メニュー・バー*
 
 ![](images/avatar.PNG "アカウントとサポート")  
