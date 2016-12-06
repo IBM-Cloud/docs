@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-12-05" 
+lastupdated: "2016-12-06" 
 
 ---
 
@@ -59,6 +59,8 @@ There are optional components that are available for you to purchase to scale an
 |Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 25 Million API Calls | An environment that permits running a private version of {{site.data.keyword.apiconnect_short}} within the dedicated environment with a capacity of 25 million API Calls a month targeted towards enterprise wide API projects. |
 |Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 100 thousand API Calls increase | An extension of the {{site.data.keyword.apiconnect_short}} Enterprise environment to provide additional capacity of 100 thousand API Calls a month. |
 |Dedicated {{site.data.keyword.cloudant}}  1.6 TB capacity increase | Includes running a private version of the {{site.data.keyword.cloudantfull}} within the dedicated environment with a design capacity of 1.6 terabytes.  |
+|{{site.data.keyword.contdelivery_short}} Dedicated Instance | A private version of {{site.data.keyword.contdelivery_short}} running within a dedicated environment. The capacity is determined by {{site.data.keyword.contdelivery_short}} Dedicated Authorized User entitlements. |
+|{{site.data.keyword.contdelivery_short}} Dedicated Authorized User | Grants an Authorized User access to and for the use of a designated {{site.data.keyword.contdelivery_short}} Dedicated environment. Every user belonging to a {{site.data.keyword.Bluemix_notm}} Organization containing a {{site.data.keyword.contdelivery_short}} service instance must be authorized. |
 |Dedicated {{site.data.keyword.datacshort}} and {{site.data.keyword.sescashort}} 50 GB capacity increase | An environment that permits deploying and running {{site.data.keyword.datacshort}} and {{site.data.keyword.sescashort}} instances up to a cumulative capacity of 50 GB. |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 64.1 | One database per service instance on a dedicated server with 64 GB RAM, 16 vCPUs. Recommended for up to 1 TB of pre-load data, based on typical compression.  |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.4 | One database per service instance on a dedicated bare metal server with 256 GB RAM, 32 cores. Recommended for up to 4 TB of pre-load data, based on typical compression. |
