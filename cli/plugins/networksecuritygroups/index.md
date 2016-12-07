@@ -93,23 +93,24 @@ bluemix login -a https://api.eu-gb.bluemix.net
 
 See [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html) for details.
 
-## List of IBM Network Security Groups Service Commands  
+## List of IBM Network Security Groups Service Commands
 
-| 			Command 			| | |			Description 				|  
-| :----------------------------	| | |:------------------------------------	|  
-| [security-group-create](index.html#sgcreate) 		| | |Creates a security group 			|  
-| [security-group-update](index.html#sgupdate) 		| | |Updates an existing security group 	|
-| [security-group-delete](index.html#sgdelete) 		| | |Deletes an existing security group and all its rules |
-| [security-group-list](index.html#sglist)        | | |Lists all or assigned security groups for a virtual server or virtual server group|
-| [security-group-show](index.html#sgshow)        | | |Shows details of an existing security group and its rules|
-| [security-group-rule-create](index.html#sgrulecreate) | | |Creates a security group rule |
-| [security-group-rule-delete](index.html#sgruledelete) | | |Deletes an existing security group rule |
-| [security-group-rule-list](index.html#sgrulelist)   | | |Lists all security group rules |
-| [security-group-rule-show](index.html#sgruleshow)   | | |Shows details of an existing security group rule |
-| [instance-list](index.html#inslist)              | | |Lists all virtual servers or virtual servers assigned to a security group|
-| [instance-group-list](index.html#grplist)        | | |Lists all virtual server groups or virtual server groups assigned to a security group|
-| [security-group-assign](index.html#sggrpassign)      | | |Assigns a security group to a virtual server or virtual server group |
-| [security-group-unassign](index.html#sggrpunassign)    | | |Removes a security group from a virtual server or virtual server group|
+|  Command                              |     Description                            |
+| :----------------------------- | :------------------------------ |
+| [security-group-create](index.html#sgcreate) 		| Creates a security group 			|  
+| [security-group-update](index.html#sgupdate) 		| Updates an existing security group 	|
+| [security-group-delete](index.html#sgdelete) 		| Deletes an existing security group and all its rules |
+| [security-group-list](index.html#sglist)        | Lists all or assigned security groups for a virtual server or virtual server group|
+| [security-group-show](index.html#sgshow)        | Shows details of an existing security group and its rules|
+| [security-group-rule-create](index.html#sgrulecreate) | Creates a security group rule |
+| [security-group-rule-delete](index.html#sgruledelete) | Deletes an existing security group rule |
+| [security-group-rule-list](index.html#sgrulelist)   | Lists all security group rules |
+| [security-group-rule-show](index.html#sgruleshow)   | Shows details of an existing security group rule |
+| [instance-list](index.html#inslist)              | Lists all virtual servers or virtual servers assigned to a security group|
+| [instance-group-list](index.html#grplist)        | Lists all virtual server groups or virtual server groups assigned to a security group|
+| [security-group-assign](index.html#sggrpassign)      | Assigns a security group to a virtual server or virtual server group |
+| [security-group-unassign](index.html#sggrpunassign)    | Removes a security group from a virtual server or virtual server group|
+{: caption="Table 1. IBM Network Security Groups Service Commands" caption-side="top"}
 
 ### Command Usage
 
