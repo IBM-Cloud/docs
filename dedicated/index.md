@@ -74,7 +74,7 @@ There are optional components that are available for you to purchase to scale an
 |IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | An environment that provides publish and subscribe messaging of up to 10 GB per partition. Messages are retained and available for consumption for a maximum of 24 hours. |
 |IBM Bluemix Dedicated {{site.data.keyword.mobilepushshort}} | An environment that permits deployment and execution of {{site.data.keyword.mobilepushshort}} instances with ability to accept 300 requests per second. |
 |{{site.data.keyword.iot_short}} Dedicated incremental increase | An environment increase that permits running a private version of the {{site.data.keyword.iot_short}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 0.5 TB of data exchange. |
-{: caption="Table 2. Optional components for purchase: Services" caption-side="top"}
+{: caption="Table 2. Optional services components for purchase" caption-side="top"}
 {: #table02}
 
 
@@ -85,7 +85,7 @@ There are optional components that are available for you to purchase to scale an
 |Dedicated Direct Link 1 Gbps capacity | A dedicated network link that connects directly to the appropriate {{site.data.keyword.BluSoftlayer}} network point of presence designed for data transfers of up to 1 Gbps. |
 |Dedicated Direct Link 10 Gbps capacity | A dedicated network link that connects directly to the appropriate {{site.data.keyword.BluSoftlayer}} network point of presence designed for data transfers of up to 10 Gbps. |
 |IBM Bluemix Dedicated Hardware Firewall - High Availability | A redundant 1 Gbps hardware firewall configured for protection for single, multiple, or all servers on same VLAN within the Dedicated environment. |
-{: caption="Table 3. Optional components for purchase: Platform add-ons" caption-side="top"}
+{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
 {: #table03}
 
 **Note**: {{site.data.keyword.Bluemix_dedicated_notm}} components might indicate a specific configured capacity, such as gigabytes or transactions per second. Because actual capacity in practice for any configuration of the cloud service varies depending on many factors, the actual capacity in practice might be more or less than the configured capacity.
@@ -300,8 +300,6 @@ The inception phase is used to establish the {{site.data.keyword.Bluemix_notm}} 
 - Define and establish network connectivity between your corporate network and {{site.data.keyword.Bluemix_notm}} operations.
 - Identify and assign roles for your administrative team.
 
-*Table 5. Inception phase tasks*
-
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
 |Set compliance standards | Identify government, industry, and proprietary corporate standards that are required for the environment. | Customer |
@@ -328,6 +326,8 @@ The inception phase is used to establish the {{site.data.keyword.Bluemix_notm}} 
 |Review physical infrastructure | Review physical premises that host the solution components for threats and review of security controls to protect the data center. | Customer |
 |Inspect monitoring software | Inspect monitoring and management components as defined in the escalation and problem determination plan. | Customer |
 |Inspect OS | Inspect to ensure that the operating system image meets compliance standards. IBM provides access to the OS image. | IBM and customer share responsibility |
+{: caption="Table 5. Inception phase tasks" caption-side="top"}
+
 
 Next is the progression phase. The progression phase describes the on-going, collaborative relationship between you and IBM Cloud. The primary goals for this phase include the following:
 
@@ -335,7 +335,6 @@ Next is the progression phase. The progression phase describes the on-going, col
 - Review maintenance and platform improvements.
 - Coordinate the activities for problem resolution and root cause analysis.
 
-*Table 6. Progression phase tasks*
 
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
@@ -353,6 +352,7 @@ Next is the progression phase. The progression phase describes the on-going, col
 |Status reporting, audit coordination, and compliance meetings  | Complete status reporting, external audit coordination, and representation at compliance review status meetings. | IBM |
 |Employment and business need verification | Complete quarterly employment verification and verification of continued business need for IBM representatives that have access to the customer environment. | IBM |
 |Resolution of security vulnerabilities | Resolve reported security vulnerabilities in the platform. | IBM |
+{: caption="Table 6. Progression phase tasks" caption-side="top"}
 
 The final stage of completion represents the end of the relationship between you and IBM {{site.data.keyword.Bluemix_notm}}. The primary tasks for this phase include the following:
 
@@ -360,14 +360,14 @@ The final stage of completion represents the end of the relationship between you
 * Removing all network connections
 * Recycling infrastructure
 
-*Table 7. Completion phase tasks*
-
 | **Task** | **Task details** | **Responsible party** |
 |----------|------------------|-----------------------|
 |End financial agreement | Discuss and agree to an end to the financial agreement contract. | IBM and customer share responsibility |
 |Decommission environment | Shut down access to and credentials for the environment. | IBM and customer share responsibility |
 |Remove customer network connections | Remove network connections between IBM and the customer environment. | IBM and customer share responsibility |
 |Recycle infrastructure | Your environment is recycled based on the {{site.data.keyword.BluSoftlayer}}-defined processes. | IBM |
+{: caption="Table 7. Completion phase tasks" caption-side="top"}
+
 
 ##Maintaining your dedicated instance
 {: #maintaindedicated}
