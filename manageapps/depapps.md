@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-18"
+lastupdated: "2016-12-06"
 ---
 
 
@@ -196,8 +196,6 @@ The following table shows the supported options that you can use in an applicati
 ```
 cf push -f appManifest.yml
 ```
-
-<p>  </p>
 
 
 |Options	|Description	|Usage or example|
