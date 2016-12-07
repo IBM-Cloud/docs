@@ -94,7 +94,7 @@ Use the index in the following table to refer to the frequently used dev_mode CL
  </tr>
   </tbody>
  </table>
-*Table 1. dev_mode commands*
+{: caption="Table 1. dev_mode commands" caption-side="top"}
 
 
 
