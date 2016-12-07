@@ -434,6 +434,6 @@ To view your app logs, follow these steps.
 2. Click **Logs**. In the **Logs** view, you can view logs from your running app..
 4. Click the **Advanced View** button. **Advanced View** shows a more detailed view of the logs by using Kibana, a visualization tool that uses logs and time-stamped data to create custom visualizations. For more information about using the advanced view, see the [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) documentation.
 
-Next, you can customize a Kibana dashboard. See [Customizing log display in Kibana dashboard](/docs/manageapps/containers/container_ml_logs.html#container_ml_dash_logs_custom) for more information.
+Next, you can customize a Kibana dashboard. See [Customizing log display in Kibana dashboard](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom) for more information.
 
 
