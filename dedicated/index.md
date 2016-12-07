@@ -407,7 +407,7 @@ Critical incidents are urgent, unexpected service outages, and stability issues 
 
 If you want to integrate your notifications with a web service that supports web hooks, see [Notifications and event subscriptions](/docs/admin/index.html#oc_eventsubscription) for information about how to extend your notification capabilities.
 
-![Incident response process](/docs/local/images/incidentresponseprocess.png "Incident response process")
+![Incident response process](images/incidentresponseprocess.png "Incident response process")
 
 Figure 2. Incident response process
 
