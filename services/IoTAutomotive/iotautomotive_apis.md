@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-29"
+lastupdated: "2016-12-06"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2016-11-29"
 
 Several APIs are available for connecting your vehicle and device data to {{site.data.keyword.iot4auto_full}} and for developing features and capabilities to build a powerful automotive solution that meets your requirements.
 
-By using the available REST API commands, you can customize your {{site.data.keyword.iot4auto_short}} service instance:
+By using the available REST API commands, you can customize your {{site.data.keyword.iot4auto_short}} service instance in the following ways:
 
 - Inject specific events into the system
 - Store the normalized car probe data from a vehicle in the preferred analytics data store
@@ -33,7 +33,7 @@ Use the [{{site.data.keyword.iot4auto_short}} API docs: Vehicle Data Hub](http:/
 ## Asset API
 {: #asset_api}
 
-Use the [{{site.data.keyword.iot4auto_short}} API docs: Asset](http://ibm.biz/IoT4Auto_Asset_APIdoc){:new_window} to create and manage static data assets, for example, system data relating to vehicles, rules, drivers, vendors, and event types.
+Use the [{{site.data.keyword.iot4auto_short}} API docs: Asset](http://ibm.biz/IoT4Auto_Asset_APIdoc){:new_window} to create and manage master asset data, for example, system data that relates to vehicles, rules, drivers, vendors, and event types.
 
 ## Contextual Map service API
 {: #context_map_api}
@@ -43,7 +43,7 @@ Use the [Contextual Map service API](http://ibm.biz/IoTContextMapping_APIdoc){:n
 ## Driver Behavior service API
 {: #driver_behavior_api}
 
-Use the [Driver Behavior service API]( http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window} to analyze the driver and vehicle data and produce insights and patterns about driving behavior. You can also use the Driver Behavior APIs to to analyze the geographical movement and route patterns of driving trips and produce trajectory patterns.
+Use the [Driver Behavior service API]( http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window} to analyze the driver and vehicle data and produce insights and patterns about driving behavior. You can also use the Driver Behavior APIs to analyze the geographical movement and route patterns of driving trips and produce trajectory patterns.
 
 ## REST API commands
 {: #rest_api_commands}
@@ -54,10 +54,9 @@ Use the [Driver Behavior service API]( http://ibm.biz/IoTDriverBehavior_APIdoc){
 |Send car probe data|`sendCarProbe`|Sends the position-based sensor data from the vehicle and retrieves the affected events for the vehicle by the result of real-time analysis.|
 |Create vehicle data|`createVehicle`|Create a record of the vehicle as an asset. This information is used for authentication, inventory, and other uses.|
 |Get car probe data|`getCarProbe`|Gets the latest car probe data of the vehicle that was sent by the `sendCarProbe` API command.|
-|Get map events|`getEvent` |Gets the events on the map that were sent by the `sendEvent`  API command.|
+|Get map events|`getEvent` |Gets the events on the map that were sent by the `sendEvent` API command.|
 |Get vehicle asset data|`getVehicle`| Gets the vehicle data as an asset from the `createVehicle` API command.|
-|Get map context and geographical mapping|Not applicable|For more information, see the [Contextual Map service APIs](http://ibm.biz/IoTContextMapping_APIdoc).|
-|Analyze driving behavior|Not applicable|For more information, see the [Driver Behavior service APIs]( http://ibm.biz/IoTDriverBehavior_APIdoc).|
+
 *Table 1. {{site.data.keyword.iot4auto_short}} REST API commands*
 
 More information about the available API commands is available from each of the API location links.

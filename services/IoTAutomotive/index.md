@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-30"  
+lastupdated: "2016-12-06"  
 
 ---
 
@@ -55,7 +55,7 @@ Before you begin to integrate your automotive devices and applications with the 
 
 {{site.data.keyword.iot4auto_short}} provides automotive domain specialized application development enablers for data acquisition, storage, real-time processing, and business rules support. Use the available APIs to retrieve map context, movement, driver behavior, health of vehicles, and analytic insights data.
 
-You can integrate your automotive devices and applications with this service by using {{site.data.keyword.iot4auto_short}} REST API commands.
+You can integrate your automotive devices and applications with this service by using REST API commands from the available  {{site.data.keyword.iot4auto_short}} APIs. For more detailed information, see [APIs](iotautomotive_apis.html).
 
 To get up and running quickly, complete the following steps:
 
