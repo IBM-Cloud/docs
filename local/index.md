@@ -383,7 +383,7 @@ The inception phase is used to establish the {{site.data.keyword.Bluemix_local_n
 |Review physical infrastructure | Review physical premises that host the solution components for threats and review of security controls to protect the data center. | Customer |
 |Inspect monitoring software | Inspect monitoring and management components as defined in the escalation and problem determination plan. | Customer |
 |Inspect OS | Inspect to ensure that the operating system image meets compliance standards. {{site.data.keyword.IBM_notm}} provides access to the OS image. | {{site.data.keyword.IBM_notm}} and customer share responsibility |
-{: caption="Table 4. Inception phase tasks" caption-side="top"}
+{: caption="Table 5. Inception phase tasks" caption-side="top"}
 
 Next is the progression phase. The progression phase describes the on-going, collaborative relationship between you and IBM. The primary goals for this phase include the following:
 
@@ -406,7 +406,7 @@ Next is the progression phase. The progression phase describes the on-going, col
 |Status reporting, audit coordination, and compliance meetings  | Complete status reporting, external audit coordination, and representation at compliance review status meetings. | {{site.data.keyword.IBM_notm}} |
 |Employment and business need verification | Complete quarterly employment verification and verification of continued business need for {{site.data.keyword.IBM_notm}} representatives that have access to the customer environment. | {{site.data.keyword.IBM_notm}} |
 |Resolution of security vulnerabilities | Resolve reported security vulnerabilities in the platform. | {{site.data.keyword.IBM_notm}} |
-{: caption="Table 5. Progression phase tasks" caption-side="top"}
+{: caption="Table 6. Progression phase tasks" caption-side="top"}
 
 The final stage of completion represents the end of the relationship between you and {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}. The primary tasks for this phase include the following:
 
@@ -420,7 +420,7 @@ The final stage of completion represents the end of the relationship between you
 |Decommission environment | Shut down access to and credentials for the environment. | {{site.data.keyword.IBM_notm}} and customer share responsibility |
 |Shut down Relay | Terminate the Relay connection. | {{site.data.keyword.IBM_notm}} |
 |Recycle infrastructure | Recycle your infrastructure according to company guidelines. | Customer |
-{: caption="Table 6. Completion phase tasks" caption-side="top"}
+{: caption="Table 7. Completion phase tasks" caption-side="top"}
 
 
 ## {{site.data.keyword.Bluemix_local_notm}} infrastructure requirements
