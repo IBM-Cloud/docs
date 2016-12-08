@@ -1,11 +1,8 @@
 ---
 
-
-
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-25"
-
+lastupdated: "2016-12-07"
 
 ---
 
@@ -23,18 +20,19 @@ lastupdated: "2016-10-25"
 If you have administrator access for {{site.data.keyword.Bluemix}} Local or {{site.data.keyword.Bluemix_notm}} Dedicated, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](/docs/admin/index.html#oc_useradmin); see [Managing your organizations](/docs/admin/orgs_spaces.html).
 {:shortdesc}
 
-*Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance*
+{: #ld_table1}
 
 | What can I do? | Details |    
 |----------------|---------|
 |Monitor system usage | Click **ADMINISTRATION &gt; USAGE**. View your system information, monitor CPU usage, and plan usage to make the best decisions for your business. See [Viewing usage information](/docs/admin/index.html#oc_resource).|
 |Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT** to manage which services are visible to your users and orgs. See [Managing your catalog](/docs/admin/index.html#oc_catalog).|
 |Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** to create organizations, monitor quotas for organizations, and make needs-based decisions quickly. See [Administering organizations](/docs/admin/index.html#oc_organizations).|
-|Create spaces and assign user roles | Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), then select **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](/docs/admin/orgs_spaces.html). |
+|Create spaces and assign user roles | Click **Account** &gt; **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](/docs/admin/orgs_spaces.html). |
 |Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](/docs/admin/index.html#oc_useradmin). |
 |Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](/docs/admin/index.html#oc_report). |
 |View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending maintenance updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. See [Viewing system information](/docs/admin/index.html#oc_system). |
 |Extend notifications and set up notification subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending**. You can use webhooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and notification subscriptions](/docs/admin/index.html#oc_eventsubscription). |
+{: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
@@ -53,14 +51,15 @@ You can always know the status of your environment by checking the Status page. 
 
 You can view notifications for your local or dedicated environment to monitor the status of your environment. Review the following table for information about the different types of notifications and where each notification type is posted.
 
-*Table 2. Event types and notifications methods*
+{: #ld_table2}
 
 | **Event Type** | **Notification method** |       
 |-----------------|-------------------|
-| Maintenance updates | You are alerted about upcoming maintenance updates in the Notifications area on the Administration page. Go to the **Administration** page, then select the **Notifications** icon ![Notifications](images/icon_announcement.svg). To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **pending**. You are also alerted about scheduled disruptive maintenance update events on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up a subscription that sends an email to recipients of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.|
-| Critical incidents | You are alerted about critical incidents on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**. You can extend the notification capability by setting up a notification subscription that sends an email to a recipient of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  |  
+| Maintenance updates | To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **pending**. You are also alerted about scheduled disruptive maintenance update events on the Status page. Click **Support** &gt; **Status**. You can extend the notification capability by setting up a subscription that sends an email to recipients of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.|
+| Critical incidents | You are alerted about critical incidents on the Status page. Click **Support** &gt; **Status**. You can extend the notification capability by setting up a notification subscription that sends an email to a recipient of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  |  
 | Threshold events | You can set up a notification subscription that sends an email to a recipient of your choice when resource thresholds for physical disk, physical memory, reserved disk, or reserved memory are reached in your environment. Or, you can set up a subscription that uses webhooks to integrate the notifications with a web service of your choice.  |  
-| {{site.data.keyword.Bluemix_notm}} Status | You can always view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance on the Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**.  |
+| {{site.data.keyword.Bluemix_notm}} Status | You can always view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance on the Status page. Click **Support** &gt; **Status**.  |
+{: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
 ### Setting up notification subscriptions
 {: #seteventsub}
@@ -88,7 +87,6 @@ To create an email or webhook subscription from the **Notification Subscriptions
   * Click **Save and Test** to save and test the notification.
   * Click **Save and Close** to save the subscription to your notification subscription list, and return to the previous page.
 
-*Table 3. Fields for email notification subscriptions about maintenance updates or incidents*
 {: #emailnotmaintinc}
 
 | **Field** | **Description** |
@@ -101,8 +99,9 @@ To create an email or webhook subscription from the **Notification Subscriptions
 | Body | Enter the message body text to be sent in the email. You can use the IBM payload values to populate the email notification with pertinent information. See the [Maintenance and incident payload section values](index.html#payload) table to identify which values you can use. Use basic HTML tags to structure your email. This is a required field. |
 | To | Enter the email address or addresses using a comma-separated list for the recipients of the email notification. Expand the "cc" or "bcc" options to copy others on the email. This is a required field. |
 | Description | Add a unique description for the subscription that you are creating. |
+{: caption="Table 3. Fields for email notification subscriptions about thresholds" caption-side="top"}
 
-*Table 4. Fields for email notification subscriptions about thresholds*
+
 {: #emailnottrhesh}
 
 | **Field** | **Description** |
@@ -118,12 +117,13 @@ To create an email or webhook subscription from the **Notification Subscriptions
 | Subject | Enter the subject line for the email. This is a required field.  |
 | Message Body | Enter the message body text to be sent in the email. You can use the IBM payload values to populate the email notification with pertinent information. See the [Threshold payload section values](index.html#threshpayload) table to identify which values you can use. Use basic HTML tags to structure your email. This is a required field. |
 | To | Enter the email address or addresses using a comma-separated list for the recipients of the email notification. Expand the "cc" or "bcc" options to copy others on the email. This is a required field. |
+{: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
 
 Threshold data is collected once every 6 hours. A notification is sent only once when the value crosses the threshold value you set. A new notification is not sent unless the value drops below the threshold, if you chose ascending, and then increases above the threshold again. Likewise, if you chose descending, you are only notified again if the value rises above the threshold you set and then drops below the threshold again. 
 
 If you don't want to wait 6 hours for the notification to be sent when the threshold is met, after you complete the fields on the form, you can click **Save and Test** to save and test the notification with sample data.
 
-*Table 5. Form fields for a webhook notification subscription about maintenance or incidents*
+
 {: #webhooknotsub}
 
 | **Field** | **Description** |
@@ -146,8 +146,9 @@ If you don't want to wait 6 hours for the notification to be sent when the thres
 | URL | Enter the URL to connect to your web service. |
 | Payload | If you selected the POST or PUT method, enter the properties that are specific to the web service that you are using paired with the payload values used for the IBM notification. See the [Maintenance and incident payload section values](index.html#payload) table to identify which values you can use. If you do not enter information in this section, you receive a notification that does not have any more information. |
 | Combine notifications | Select the option to combine the incident notifications for all regions into a single notification. This option is available for incidents only. |
+{: caption="Table 5. Form fields for a webhook notification subscription about maintenance or incidents" caption-side="top"}
 
-*Table 6. Form fields for a webhook notification subscription about thresholds*
+
 {: #webhooknotthresh}
 
 | **Field** | **Description** |
@@ -165,8 +166,9 @@ If you don't want to wait 6 hours for the notification to be sent when the thres
 | Password | If you chose basic authorization, enter the password for your web service. |
 | Method | Select **GET**, **POST**, or **PUT**. |
 | URL | Enter the URL to connect to your web service. |
+{: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
 
-*Table 7. Maintenance and incident payload section values*
+
 {: #payload}
 
 | **IBM value** | **Description** | **Event type** |
@@ -182,8 +184,9 @@ If you don't want to wait 6 hours for the notification to be sent when the thres
 | {{region}} | Affected region | Maintenance update and incident |
 | {{status}} | Status of the update | Maintenance update |
 | {{type}} | Update or incident | Maintenance update and incident |
+{: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
 
-*Table 8. Threshold payload section values*
+
 {: #threshpayload}
 
 | **IBM value** | **Description** | **Event type** |
@@ -192,6 +195,7 @@ If you don't want to wait 6 hours for the notification to be sent when the thres
 | {{content.physical_memory}} | Physical memory threshold | Threshold |  
 | {{content.reserved_disk}} | Reserved disk threshold | Threshold |
 | {{content.reserved_memory}} | Reserved memory threshold | Threshold |
+{: caption="Table 8. Threshold payload section values" caption-side="top"}
 
 When your notification subscription is saved, you receive notifications through the method that you set up. Notifications still post in the following locations:  
  * On the Status page for incidents
@@ -203,7 +207,7 @@ You can select any saved notification subscription, view the recent activity, or
 ## Maintenance updates
 {: #oc_schedulemaintenance}
 
-You can view scheduled and pending maintenance updates, if you have the superuser permission (`ops.admin`), by clicking **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending** to access the **System Updates** page.  All users of your environment can view the scheduled disruptive maintenance update events by clicking the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg) and then selecting **Status**.
+You can view scheduled and pending maintenance updates, if you have the superuser permission (`ops.admin`), by clicking **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending** to access the **System Updates** page.  All users of your environment can view the scheduled disruptive maintenance update events by clicking **Support** &gt; **Status**.
 
 **Note**: See the following section for [Setting preapproved maintenance windows](index.html#preapprovedmaintenance) to get you started. These windows must be set in order for IBM to schedule maintenance for your environment.
 
@@ -367,12 +371,12 @@ To see more detailed information about your physical and reserved memory or disk
 ### Account usage
 {: #accountusage}
 
-You can view the monthly usage for your account for your dedicated or local environment. You can use this data to identify how much to charge specific orgs based on their usage. All admin console users that are assigned the **Users** permission with **Read** access can view the account usage data. In addition, organization billing managers can view the account usage data for their organizations, even if the billing manager does not have the admin console **Users** permission assigned. As an admin console administrator (superuser permission), you can assign the billing manager role for organizations by clicking the  **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg) &gt; **Manage organizations**.
+You can view the monthly usage for your account for your dedicated or local environment. You can use this data to identify how much to charge specific orgs based on their usage. All admin console users that are assigned the **Users** permission with **Read** access can view the account usage data. In addition, organization billing managers can view the account usage data for their organizations, even if the billing manager does not have the admin console **Users** permission assigned. As an admin console administrator (superuser permission), you can assign the billing manager role for organizations by clicking **Account** &gt; **Manage organizations**.
 
 To view account usage data, complete these steps:
 
 <ol>
-<li>Click the <strong>{{site.data.keyword.avatar}}</strong> icon ![Avatar](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Usage details</strong>.</li>
+<li>Click <strong>Account</strong> &gt; <strong>Usage Dashboard</strong>.</li>
 <li>Select the org that you want to see data for.</li>
 <li>You can see usage details for the following categories:
 <ul>
@@ -388,7 +392,7 @@ To view account usage data, complete these steps:
 You can also view the monthly usage and associated charges at the account level for your runtimes, apps, and services that are syndicated from {{site.data.keyword.Bluemix_notm}} Public. You can use this data to identify how much to charge specific orgs based on their usage.
 
 <ol>
-<li>Click the <strong>{{site.data.keyword.avatar}}</strong> icon ![Avatar](../support/images/account_support.svg) &gt; <strong>Account</strong> &gt; <strong>Usage details</strong>.</li>
+<li>Click <strong>Account</strong> &gt; <strong>Usage Dashboard</strong>.</li>
 <li>Click <strong>Public</strong>.</li>
 <li>Select the org that you want to see data for.</li>
 <li>You can see usage details for the following categories:
@@ -435,7 +439,8 @@ icon to download the report.
 
 The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated. Most reports are generated on a daily basis. However, the encryption and key management events reports are generated monthly. All reports are retained for 90 days in the administration console for your retrieval. After that 90 days, the reports are available offline per request from {{site.data.keyword.Bluemix_notm}} for 9 months. In total, reports are available for retrieval for up to 1 year.
 
-*Table 9. Security report list*
+
+{: #ld_table9}
 
 | **Category** | **Report** | **Description** |      
 |-----------------|-------------------|---------------------|
@@ -456,6 +461,7 @@ The following table shows the list of security reports that are generated for {{
 | Anti-virus | Anti-virus scan report | Anti-virus software that is in place. |
 | Software fix management | Patch application report | Software fixes that were applied. |
 | Security incident management | Security incident remediation report | Evidence of security incidents for security incident management. |
+{: caption="Table 9. Security report list" caption-side="top"}
 
 ## Viewing status
 {: #oc_status}
@@ -464,7 +470,7 @@ You can view status for the {{site.data.keyword.Bluemix_notm}} environment and f
 
 ### {{site.data.keyword.Bluemix_notm}} environment status
 
-You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance by using the {{site.data.keyword.Bluemix_notm}} Status page. Click the **{{site.data.keyword.avatar}}** icon ![Avatar](../support/images/account_support.svg), and then select **Status**.
+You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance by using the {{site.data.keyword.Bluemix_notm}} Status page. Click **Support** &gt; **Status**.
 
 The Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and major services in {{site.data.keyword.Bluemix_notm}}. You can subscribe to an RSS feed for notifications so that you don't have to check for them. For more information about the Status page and setting up the RSS feed, see [Viewing {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
@@ -612,7 +618,8 @@ When you are implementing the service broker, in the JSON response of <code>GET 
 
 The following tables can help you fill in the JSON file.
 
-*Table 10. JSON fields*
+
+{: #ld_table10}
 
 | **JSON fields** | **Description** |
 |-----------------|-----------------|
@@ -622,8 +629,9 @@ The following tables can help you fill in the JSON file.
 |id  | The ID of the service. This ID must be unique in {{site.data.keyword.Bluemix_notm}} and must be a GUID (Globally Unique Identifier). You cannot change the ID of the service after you register the service with {{site.data.keyword.Bluemix_notm}}. |
 |metadata | The service plan metadata that is displayed in the {{site.data.keyword.Bluemix_notm}} catalog and in the pricing sheet. The metadata field is an optional field. You can specify more fields for the metadata. See the following table for [Metadata fields](index.html#metadatafields) for more information. |
 |plans | An array of service plan definitions. See the following table for [Plan fields](index.html#planfields) for more information. |
+{: caption="Table 10. JSON fields" caption-side="top"}
 
-*Table 11. Metadata fields*
+
 {: #metadatafields}
 
 | **Metadata values** | **Description** |
@@ -650,6 +658,8 @@ The following tables can help you fill in the JSON file.
 |sdkDownloadUrl (optional) | The URL of the web page that is opened when you click the Download SDK button. The Download SDK button is on the service tile of the application overview page in the Dashboard. The web page is opened in a new browser tab. |
 |serviceMonitorApi    | The URL to an API that returns the JSON data, as shown in the following example, that reports the service health. You must have serviceMonitorApi or serviceMonitorApp in your service metadata. See the following code sample for an example. |
 |serviceMonitorApp    | The URL to an application that can be deployed to {{site.data.keyword.Bluemix_notm}} and bound to a service to provide the service status specific output. The application must return the same JSON data format as the serviceMonitorApi. You must have serviceMonitorApi or serviceMonitorApp in your service metadata. See the following code sample for an example. |
+{: caption="Table 11. Metadata fields" caption-side="top"}
+
 
 ```
 {
@@ -679,7 +689,7 @@ The following example shows how the JSON response of GET /v2/catalog is mapped t
 
 ![Service details in the catalog.](images/metadata.png "Bluemix Catalog service details view")
 
-*Table 12. Plan fields*
+
 {: #planfields}
 
 | **Plan values** | **Description** |
@@ -689,8 +699,9 @@ The following example shows how the JSON response of GET /v2/catalog is mapped t
 |free      | A Boolean value that indicates whether the service plan is free. The default value is true. |
 |id       | The ID of the service plan. The ID must be unique within {: new_window}, and it must be a GUID.  |
 |metadata (optional)    | The service plan metadata that is displayed in the {{site.data.keyword.Bluemix_notm}} catalog and in the pricing sheet. The metadata field is an optional field. You can specify the following fields within the metadata field: displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber), and paidOnly. See the following table for [Plan metadata fields](index.html#planmetadata) for more information. |
+{: caption="Table 12. Plan fields" caption-side="top"}
 
-*Table 13. Plan metadata fields*
+
 {: #planmetadata}
 
 | **Plan metadata values** | **Description** |
@@ -700,6 +711,7 @@ The following example shows how the JSON response of GET /v2/catalog is mapped t
 |bullets                 | A description of the resources that can be used with the plan. The description is displayed in the **Features** column on the service details page of the catalog and on the pricing sheet. |
 |costs                   | The cost information about the service that is displayed in the Price column on the service details page of the catalog and on the pricing.  sheet. Each array entry contains the following fields: unitId (The ID of the unit. Use the plural form and capitalize all letters. For free plans, this field is optional.), unit (The metric that is used for calculating the charges of the service. The value of this field is used in the {{site.data.keyword.Bluemix_notm}} user interface to represent the charge metric.), and partNumber (The `part_number` identifier that is used by the billing system. For free plans, this field is optional.).   |
 |paidOnly (optional)     | A Boolean value that indicates whether this service plan is available for {{site.data.keyword.Bluemix_notm}} pay accounts only. A value of **true** means that the service plan is for pay accounts only and cannot be added to trial accounts. A value of **false** means that the service plan can be added to both pay accounts and trial accounts. The default value is **false**.	  |
+{: caption="Table 13. Plan metadata fields" caption-side="top"}
 
 The following example shows how the JSON response of GET /v2/catalog is mapped to the service details page in the {{site.data.keyword.Bluemix_notm}} catalog. Specifically, the how the plan metadata fields described in the previous table map to the user interface:
 
@@ -756,12 +768,11 @@ create the org.
 
 You can create spaces in your organization; for example, a *dev* space as a development environment, a *test* space as a testing environment, and a *production* space as a production environment. Then, you can associate your apps with spaces. Complete the following steps to create a space:
 
-1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../admin/images/account_support.svg) &gt; **Manage Organizations** page.
+1. From the menu bar, click **Account** &gt; **Manage Organizations**.
 2. Select the org that you want to add a space to.
 3. Click **Create a Space**.
 4. Enter a space name.
 5. Click **Create**.
-
 
 ### Quota monitoring
 
@@ -799,23 +810,47 @@ The following types of memory usage are displayed in the chart.
 	<dd>Use this option to identify organizations that have a total memory quota which is larger than needed. Sort by excess memory usage to identify organizations that are using the lowest amount of memory for the quota that has been allocated for the org. </dd>
 	</dl>
 
-### Adjusting quota plans
+### Managing quotas
+{: #manageorgquota}
 
-To change the quota plan for an organization, complete the following steps:
+A quota represents the resource limits for the organizations in your environment, which is assigned when the organization is created. Any application or service in a space within the organization contributes to the usage of the allocated quota. Complete the following steps to manage the quota for an organization:
 
 <ol>
-<li>Click the bar in the chart for the
-organization that you want to edit in the Organization memory usage section, or select the name of
-the org from the Organization List section.</li>
-<li>On the Manage Organization page, you can change the quota plan, change the name of the org, and add or
-remove managers.<br />
-<p><strong>Note</strong>: If you select a quota plan that is not sufficient for the current usage for the
-organization, you receive a message.</p>
+<li>Click the bar in the chart for the organization that you want to edit in the Organization memory usage section, or select the name of the org from the Organization List section. From the Organization Information page, you can rename the organization and add or remove managers.
+<p><strong>Note</strong>: If you select a quota plan that is not sufficient for the current usage for the organization, you receive a message.</p></li>
+<li>Click <strong>Cloud Foundry</strong> or <strong>Containers</strong>.  By default, the Cloud Foundry quota page opens. 
+<ul>
+<li>From the Cloud Foundry page, you can select a plan and view the quota details for the following resources:
+<ul>
+<li>Services</li>
+<li>Routes</li>
+<li>Memory quota</li>
+<li>Application allocation</li>
+</ul>
 </li>
+<li>From the <strong>Containers</strong> page, you can assign values, which must be integers, for the following fields:
+<dl class="parml">
+<dt class="pt dlterm">Image Limit</dt>
+<dd class="pd">The maximum number of container images that you can have in your private registry. A container image is the basis for every container that you create. An image is created from a Dockerfile which is a read-only file that holds the operating system, the app and all of its dependencies, and describes how a container is configured. Images are shared across all members of an organization.</dd>
+<dt class="pt dlterm">Memory Allocation Default</dt>
+<dd>The amount of container memory that is automatically allocated when a new space is created. When creating a container, you must choose a container size. The size determines the amount of memory that the container can use on the compute host and counts toward your container memory limit. </dd>
+<dt class="pt dlterm">Memory Allocation Maximum</dt>
+<dd>The maximum amount of container memory that can be allocated across all spaces of an organization.</dd>
+<dt class="pt dlterm">Floating IPs Default</dt>
+<dd>The number of public IP addresses that is automatically allocated when a new space is created. You can bind public IP addresses to single containers and container groups to make them accessible from the internet.</dd>
+<dt class="pt dlterm">Floating IPs Maximum</dt>
+<dd>The maximum number of public IP addresses that you cal allocate across all spaces of an organization.</dd>
+</dl>
+<strong>Note</strong>: If you do not yet have containers in your environment or if you do not yet have the containers in your environment set up, you get an error message.
+<p>For more information about containers, see [About IBM containers](https://console.ng.bluemix.net/docs/containers/container_ov.html). For more information about container quotas, see [Quota and Bluemix accounts]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<strong>Note:</strong> Containers are not available in the {{site.data.keyword.Bluemix_notm}} Sydney region.</li>
+</ul>
 <li>To save any changes that you made on the Manage Organization page, click <strong>SAVE</strong>.</li>
 </ol>
 
+
 ### Managing your orgs from the organization list
+{: #manageorgfrolis}
 
 In the Organization List section, you can view all organizations in the
 {{site.data.keyword.Bluemix_notm}} environment, and you can take actions for individual orgs by clicking on the org name.
@@ -832,6 +867,7 @@ In the Organization List section, you can view all organizations in the
 
 - To edit the name of the org and add or remove managers, click the name for the organization in
 	the list and follow the prompts on the screen.
+- To view information about a specific user of the organization you are viewing, click the user name to display User Information. You can then click the organization name to return to view Organization Information. 
 
 ## Managing users and permissions
 {: #oc_useradmin}
@@ -842,6 +878,7 @@ The User Administration page displays all users for the local or dedicated insta
 The **Superuser** and **Basic Access** permissions can be set to **On** or **Off**, while the remaining permissions are enabled or disabled with specific access types, including **Read** or **Write** access for that permission, as represented by icons. See [Permissions](#permissions) for descriptions of each type and explanation of the icons.
 
 ### Working with users
+{: #workwithusers}
 
 Depending on your **Read** or **Write** access for the users' permissions, you can search for existing users, remove users, and add users individually or by a group. If you have the **Superuser** permission, you have full access to complete any tasks for user management in the environment. Review the following user management tasks and the level of access needed to complete each task:
 
@@ -908,13 +945,16 @@ Depending on your **Read** or **Write** access for the users' permissions, you c
 
     1. To add a user to an org, select the user name from the table to access the **Edit User** page. Then, use the search field to locate an org, select the org from the list, and click **Save**.
     2. To remove a user from an org, select the user name from the table to access the **Edit User** page. Then, click ![Remove](images/icon_remove.svg) for the org from which you want to remove the user, and click **Save**.
+    
+* To view information about the organization the user is assigned to, click the organization name to display Organization Information. You can then click the user name to return to view User Information. 
 
 ### Permissions
 {: #permissions}
 
 Users can be assigned the following permissions with specific access levels (read or write) that enable the user to complete specific tasks within the admin console.
 
-*Table 14. Permissions*
+
+{: #ld_table14}
 
 | **User permission** | **Description** |       
 |-----------------|-------------------|
@@ -923,7 +963,7 @@ Users can be assigned the following permissions with specific access levels (rea
 | Catalog | Users with **Catalog** permission can be assigned the access to **Read** or **Write** (modify) which services are available in the local or dedicated instance. Read access allows the user to access the Catalog Management tile to view available services. Write access allows the user to access the [Catalog Management](#oc_catalog) tile to view services, edit the visibility of services, register custom services, and control the buildpack priority list. |  
 | Reports | Users with **Reports** permission can be assigned the access to **Read** or **Write** (modify) security reports. Read access allows the user to access the Reports and Logs tile to download reports. Write access allows the user to view the [Reports and Logs](#oc_report) tile as well as use the CLI to upload new reports and create new categories for users to access. |
 | Users | Users with **Users** permission can be assigned the access to **Read** (view) the list of users or **Write** (add or remove) users. This permission doesn't allow you to set permissions for other users. Write access allows the user to add new users to the environment, delete users from the environment, and add existing users to organizations that already exist within the environment. In addition, **Write** access allows the user to add new organizations, delete organizations, and edit the users within the organizations. |
-
+{: caption="Table 14. Permissions" caption-side="top"}
 
 ## Managing users with the Admin REST API
 {: #usingadminapi}
@@ -934,7 +974,7 @@ The `Admin` REST API endpoints and JSON responses are provided on an experimenta
 basis to enable basic operations from a command line. The endpoints and URLs in the examples in this
 information might change or might be discontinued at short notice.
 
-The following tools are prerequisites for using the examples that follow. You can choose to
+Though you can choose to use other tools, the following tools are prerequisites for using the examples that follow:
 use other tools as well.
 * cURL, to enter REST API requests as commands. cURL is a free utility that you can use to send
 HTTP requests to a server and receive the server responses through a command-line interface. You can
@@ -957,9 +997,8 @@ session. You use that cookie for all operations with the Admin Console.
 
 To log in to the Admin Console, run the following command:
 
-```
-curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool
-```
+
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
@@ -979,7 +1018,6 @@ curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/
 
 The following example shows output from this
 command:
-
 ```
 {
     "message": "Logged in",
@@ -999,9 +1037,7 @@ When you add a user, you must specify an organization. You can use the
 **Users** permission with **Read** access to list
 organizations.To list all organizations, run the following command:
 
-```
-curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool
-```
+`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
@@ -1046,9 +1082,7 @@ using the `Admin` REST API to list registered users. You must have
 **Users** permission with **Read** access to list registered
 users.To list all users, run the following command:
 
-```
-curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
-```
+`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
@@ -1117,6 +1151,8 @@ The following example shows output from this command:
 ```
 {: screen}
 
+
+
 ### Adding a user
 
 You can use the `Admin` REST API to add users to the
@@ -1140,9 +1176,7 @@ add a user, you must provide the following information:
 
 You provide the information in a JSON file.
 
-```
-curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
-```
+`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
@@ -1184,26 +1218,16 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 </ol>
 
 <dl class="parml">
-
 <dt class="pt dlterm">-v </dt>
 <dd class="pd">Specifies verbose output.</dd>
-
-
 <dt class="pt dlterm">-X POST</dt>
 <dd class="pd">Specifies a POST request, overriding the default GET request.</dd>
-
-
 <dt class="pt dlterm">-H "Content-Type: application/json"</dt>
 <dd class="pd">Specifies the content-type header, which in this case is JSON.</dd>
-
-
 <dt class="pt dlterm">-d *data*</dt>
 <dd class="pd">Specifies the data, in this case the file `user.json`, to be sent in POST
 request to the HTTP server.</dd>
-
 </dl>
-
-
 
 The following example shows output from this
 command:
@@ -1238,9 +1262,7 @@ have **Users** permission with **Write** access to remove users.
 
 To remove a user, you must provide the user ID of the user. Run the following command:
 
-```
-curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>
-```
+`curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>`
 {: codeblock}
 
 <dl class="parml">
@@ -1275,7 +1297,13 @@ command:
 ## API for metrics (experimental)
 {: #envappmetricsapi}
 
-You can use two experimental APIs to gather metrics about your environment or applications. Both APIs return an array of data points for the metrics that you requested over the time that you specified.
+You can use two experimental APIs to gather metrics about your environment or applications. These APIs return an array of data points for the metrics that you requested over the time that you specified.
+
+The Metrics APIs that are described in the following sections can be accessed from the region-specific endpoint, for example: 
+
+ ```
+https://console.<region>.bluemix.net.
+ ```
 
 **Notes**:
 
@@ -1546,6 +1574,7 @@ You can use the following endpoints to invoke this API command:
 * /api/v1/app/disk/physical
 * /api/v1/app/disk/reserved
 
+
 ### Applications query parameters
  
 Use the following query parameters to gather metrics for your applications:
@@ -1601,6 +1630,8 @@ POST /codi/v1/serviceBrokers
 ### Request
 {: #registerrequest}
 
+{: #ld_table15}
+
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. |
@@ -1608,8 +1639,7 @@ POST /codi/v1/serviceBrokers
 | auth_password | Password used to connect with the service broker. |
 | broker_url | URL used to connect to the service broker. |
 | owningOrganization | Initial organization to whitelist the service with. |
-
-*Table 15. Fields*
+{: caption="Table 15. Fields" caption-side="top"}
 
 #### Body
 {: #registerbody}
@@ -1669,15 +1699,13 @@ Use the following API and code examples to update a service.
 ### Route
 {: #updateroute}
 
-```
-PUT /codi/v1/serviceBrokers
-```
+`PUT /codi/v1/serviceBrokers`
 {: screen}
 
 ### Request
 {: #updaterequest}
 
-*Table 16. Fields*
+{: #ld_table16}
 
 | **Name** | **Description** |
 |-----------------|-------------------|
@@ -1686,6 +1714,7 @@ PUT /codi/v1/serviceBrokers
 | auth_password | Password used to connect with the service broker. |
 | broker_url | URL used to connect to the service broker. |
 | owningOrganization | Initial organization to whitelist the service with. |
+{: caption="Table 16. Requests" caption-side="top"}
 
 #### Body
 {: #updatebody}
@@ -1741,11 +1770,13 @@ Content-Type: application/json
 
 Use the following API and code examples to delete a service.
 
-*Table 17. Parameter*
+
+{: #ld_table17}
 
 | **Name** | **Description** |
 |-----------------|-------------------|
 | name | Name of the service broker. This name cannot be changed from the name that the service was created with. |
+{: caption="Table 17. Parameter" caption-side="top"}
 
 ### Route
 
@@ -1791,7 +1822,8 @@ Before you begin, install the cf command line interface. The
 {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
 requires cf version 6.11.2 or later. [Download Cloud Foundry command line interface](https://github.com/cloudfoundry/cli/releases){: new_window}
 
-**Restriction:** The Cloud Foundry command line interface is not supported by Cygwin. Use the Cloud Foundry command line interface in a command line window other than the Cygwin
+**Restriction:** The Cloud Foundry command line interface is not supported by
+Cygwin. Use the Cloud Foundry command line interface in a command line window other than the Cygwin
 command line window.
 
 ### Adding the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
