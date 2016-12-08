@@ -63,7 +63,7 @@ To stage a new application on Diego you must deploy the application in the comma
 
 For more details on the **cf push** command, see [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
 
-#### Changing an existing app to Diego
+#### Migrating an existing app to Diego
 You can transition an existing app to Diego by deploying the application with the Diego flag. The application will immediately start running on Diego and will eventually stop running on the DEAs. If you want to ensure uptime, we recommend performing a blue-green deploy by deploying a copy of your application to Diego, and then swapping routes and scaling down the DEA application.
 
   To set the Diego flag and change your app to running on Diego:
