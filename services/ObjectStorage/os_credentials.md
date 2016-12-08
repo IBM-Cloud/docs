@@ -98,7 +98,7 @@ Service credentials are used to provide authentication and security for the serv
       <th> Explanation </th>
     </tr>
     <tr>
-      <td> https://api.ng.bluemix.net/v2/service_keys </td>
+    <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
       <td> The service key endpoint.  </td>
     </tr>
     <tr>
