@@ -22,7 +22,7 @@ Provisioning a new {{site.data.keyword.objectstorageshort}} instance creates an 
 
 For more information about using OpenStack Swift and Keystone, view the [OpenStack documentation site](http://docs.openstack.org).
 
-1. The recommended v3 token request is a POST request to https://identity.open.softlayer.com/v1/auth/tokens as shown in the following cURL command:
+1. The recommended v3 token request is a POST request to `https://identity.open.softlayer.com/v3/auth/tokens` as shown in the following cURL command:
   ```
   	curl -i \
   	  -H "Content-Type: application/json" \
