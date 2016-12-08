@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-17"
+  
+lastupdated: "2016-11-16"
 
 ---
 
@@ -12,7 +13,7 @@ lastupdated: "2016-11-17"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Monitoring and logging with Cloud Foundry
+# Monitoring and logging with Cloud Foundry
 {: #monitoringandlogging}
 
 
@@ -21,7 +22,7 @@ By monitoring your apps and reviewing logs, you can follow application execution
 
 {{site.data.keyword.Bluemix}} applications can be widely distributed, multi-instance applications, and the execution of your application and its data can be shared across many services. In this complex environment, monitoring your apps and reviewing logs is important for you to manage your apps.
 
-##Monitoring and logging Cloud Foundry apps
+## Monitoring and logging Cloud Foundry apps
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}} has a built-in logging mechanism to produce log files for your apps as they are running. In the logs, you can view the errors, warnings, and informational messages that are produced for your app. In addition, you can also configure your app to write log messages to the log file. For more information about log formats and how to view logs, see [Logging for apps running on Cloud Foundry](#logging_for_bluemix_apps).
@@ -34,32 +35,30 @@ Monitoring your app enables you to see and control your app deployment. With mon
 
 For stable operations of your deployments on {{site.data.keyword.Bluemix_notm}} platform, you want to detect problems promptly and determine causes efficiently. To accomplish this objective, keep troubleshooting in mind when you design your apps, and use services or tools for monitoring and logging when your app is deployed to {{site.data.keyword.Bluemix_notm}}.
 
-###Monitoring apps running on Cloud Foundry
+### Monitoring apps running on Cloud Foundry
 {: #monitoring_bluemix_apps}
 
 When you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}, you'll want to keep up with performance information such as health status, resource usage, and traffic metrics. With this performance information, you can then make decisions or take actions accordingly.
 
 To monitor {{site.data.keyword.Bluemix_notm}} apps, use one of the following methods:
 
-* {{site.data.keyword.Bluemix_notm}} services. Monitoring and Analytics offers a service that you can use to monitor your application performance. In addition, this service also provides analytic features such as log analysis. For more information, see [Monitoring and Analytics](/docs/services/monana/index.html).
+* {{site.data.keyword.Bluemix_notm}} services. Monitoring and Analytics offers a service that you can use to monitor your application performance. In addition, this service also provides analytic features such as log analysis. For more information, see [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
 * Third-party options. For example, [New Relic](http://newrelic.com/){:new_window}.
 
-###Logging for apps running on Cloud Foundry
+### Logging for apps running on Cloud Foundry
 {: #logging_for_bluemix_apps}
 
 Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. When you encounter errors in any stage from deployment to runtime, you can check the logs for clues that might help solve your issue.
 
-###Log Retention
-{: #log_retention}
-
-In {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry apps, log data is stored for 7 days by default.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
 
 
-###Log format
+### Log format and retention
 {: #log_format}
+
+In {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry apps, log data is stored for 7 days by default.
 
 Logs for {{site.data.keyword.Bluemix_notm}} applications are displayed in a fixed format, similar to the following pattern:
 
@@ -124,14 +123,15 @@ Every log entry contains four fields. Refer to the following list for the brief 
 
 </dl>
 
-###Viewing logs
+### Viewing logs
 {: #viewing_logs}
 
-You can view the logs for your Cloud Foundry apps in three places:
+You can view the logs for your Cloud Foundry apps in four places:
 
-  * [The {{site.data.keyword.Bluemix_notm}} Dashboard](#viewing_logs_UI){:new_window}
-  * [The command line interface](#viewing_logs_cli){:new_window}
-  * [External log hosts](#thirdparty_logging){:new_window}
+  * The {{site.data.keyword.Bluemix_notm}} Dashboard
+  * The Kibana dashboard
+  * The command line interface
+  * External log hosts
 
 #### Viewing logs from the {{site.data.keyword.Bluemix_notm}} Dashboard
 {: #viewing_logs_UI}
@@ -142,8 +142,23 @@ To see the deployment or runtime logs, complete the following steps:
 
 In the **Logs** console, you can view the recent logs for your app or tail logs in real time. In addition, you can filter logs by log type and channel.
 
-**Notes:** Logs are not persisted between app crashes and deployments.
+**Note:** Logs are not persisted between app crashes and deployments.
 
+
+#### Viewing logs from the Kibana Dashboard
+{: #viewing_logs_Kibana}
+
+Create a custom dashboard to display, in a simple or creative manner, the logs for the apps that run in a space.
+
+1. Open [https://logmet.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>](https://logmet.{DomainName}) to log in to the Kibana user interface.
+2. Select the **Kibana 4** tab.
+3. If you don't see any logs, adjust the time picker in the header.
+4. Save the dashboard as a new dashboard.
+  1. In the toolbar, click the **Save** icon.
+  2. Enter a name for the dashboard.
+  3. Next to the name field, click the **Save** icon.
+
+For more information about customizing a Kibana dashboard, see [this blog post](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) or the [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) documentation.
 
 
 #### Viewing logs from the command line interface
@@ -153,7 +168,7 @@ Choose from the following options to view logs from the command line interface:
 
 <ul>
 <li>Tailing logs when you deploy apps.
-<p>Use the **cf logs** command to display logs from your app and from the system components that interact with your app when you deploy apps to {{site.data.keyword.Bluemix_notm}}. You can type the following commands in the cf command line interface. For more information about cf logs, see <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Log Types and Their Messages in Cloud Foundry</a> </p>
+<p>Use the **cf logs** command to display logs from your app and from the system components that interact with your app when you deploy apps to {{site.data.keyword.Bluemix_notm}}. You can type the following commands in the cf command line interface. For more information about cf logs, see <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target=" _blank">Log Types and Their Messages in Cloud Foundry</a> </p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>Display logs from the recent past.</dd>
@@ -198,10 +213,18 @@ staging task. You can use this log to troubleshoot staging problems.</p>
 
 **Note:** For information about how to enable application logging, see [Debugging runtime errors](/docs/debug/index.html#debugging-runtime-errors).
 
+#### Viewing logs from external hosts
+{: #viewing_logs_external}
+
+	 
+When logs are generated, after a short delay you can view messages in your external log host that are similar to the messages that you view from the {{site.data.keyword.Bluemix_notm}} user interface or from the cf command line interface.  If you have multiple instances of your app, the logs are aggregated and you can see all the logs for your app. In addition, the logs are persisted between app crashes and deployments.
+
+**Note:** Logs that you view in the command line interface are not in the syslog format, and might not exactly match the messages that are displayed in your external log host.
 
 
 
-###Filtering logs
+
+### Filtering logs
 {: #filtering_logs}
 
 To view logs that you are interested in or exclude the content that you don't want to view, you can use the **cf logs** command with filtering options such as **cut** and **grep** in the cf command line interface.
@@ -290,13 +313,6 @@ To stream logs from your app and the system to an external log host, complete th
   4. Restage the app. 
      Type `cf restage appname` for the changes to take effect. 
 
-#### Viewing logs from external hosts
-{: #viewing_logs_external}
-
-	 
-When logs are generated, after a short delay you can view messages in your external log host that are similar to the messages that you view from the {{site.data.keyword.Bluemix_notm}} user interface or from the cf command line interface.  If you have multiple instances of your app, the logs are aggregated and you can see all the logs for your app. In addition, the logs are persisted between app crashes and deployments.
-
-**Note:** Logs that you view in the command line interface are not in the syslog format, and might not exactly match the messages that are displayed in your external log host. 
 
 ### Example: Streaming Cloud Foundry application logs to Splunk 
 {: #splunk}
@@ -393,7 +409,7 @@ Jane tries out her app, and then she types the following query string in the Spl
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-Jane sees a stream of logs in her Splunk web interface. Though the Splunk that Jane installs is Splunk Light, she can still retain 500MB logs a day.  
+Jane sees a stream of logs in her Splunk web interface. Though the Splunk that Jane installs is Splunk Light, she can still retain 500MB logs a day. 
 
 ## Logging for Cloud Foundry apps in {{site.data.keyword.Bluemix_dedicated_notm}} and {{site.data.keyword.Bluemix_local_notm}}
 {: #hybrid_apps_logs_ov}
@@ -406,14 +422,13 @@ Cloud Foundry apps use Cloud Foundry loggregator to monitor and forward logs fro
 
 ### Hardware requirements
 
-*Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}*
-{: #table01}
 
 | **Requirement** |    **1 node**     | **3 nodes for high availability** |
 |-----------------|-------------------|-------------------|
 | vCPU | 19 | 57 |
 | Memory | 80 GB | 240 GB |
 | Local storage | 2.98 TB | 8.94 TB |
+{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
 
 ### Setup
 
@@ -438,6 +453,7 @@ To view your app logs, follow these steps.
 2. Click **Logs**. In the **Logs** view, you can view logs from your running app..
 4. Click the **Advanced View** button. **Advanced View** shows a more detailed view of the logs by using Kibana, a visualization tool that uses logs and time-stamped data to create custom visualizations. For more information about using the advanced view, see the [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) documentation.
 
-Next, you can customize a Kibana dashboard. See [Customizing log display in Kibana dashboard](/docs/manageapps/containers/container_ml_logs.html#container_ml_dash_logs_custom) for more information.
+Next, you can customize a Kibana dashboard. See [Customizing log display in Kibana dashboard](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom) for more information.
+
 
 
