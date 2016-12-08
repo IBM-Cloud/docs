@@ -37,4 +37,5 @@ When you authenticated your service instance with Keystone, you took note of the
 Add the namespace of your container and object to the end of your {{site.data.keyword.objectstorageshort}} URL as shown in the following image.
 
   ![{{site.data.keyword.objectstorageshort}} URL pieces shown in an example image](images/swift_URL.png)
+  
   Figure 1: {{site.data.keyword.objectstorageshort}} URL example
