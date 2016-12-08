@@ -55,6 +55,7 @@ Use the following tips while developing your web apps:
 <dt>Resource limits</dt>
 <dd>Be aware of limits on the quantities of resources that a trial account can use. The limits are as follows:
 <table style="width:100%">
+<caption>Table 1. {{site.data.keyword.Bluemix_notm}} resource limits for a trial account</caption>
   <th>Resource type</th>	<th>Quantity limit</th>
 <tr><td>Number of services that are used across all apps</td> <td>10</td>
 <tr><td>Memory used across all apps</td> <td>	2 G</td>
