@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-23"
+lastupdated: "2016-12-9"
 
 ---
 
@@ -31,7 +31,7 @@ The {{site.data.keyword.Bluemix_notm}} development and support teams actively mo
 
 * If you have technical questions about developing or deploying an app with toolchains, post your question on [Stack Overflow (Link opens in new window)](http://stackoverflow.com/search?q=ibm-bluemix+continuous-delivery){:new_window} and tag your question with "ibm-bluemix" and "continuous-delivery".
 
-* If you have questions about toolchains, use the [IBM developerWorks dW Answers (Link opens in a new window)](https://developer.ibm.com/answers/topics/bluemix-continuous-delivery/?smartspace=bluemix){:new_window} forum. Include the "bluemix-continuous-delivery" tag.
+* If you have questions about toolchains, use the [IBM developerWorks dW Answers (Link opens in a new window)](https://developer.ibm.com/answers/topics/continuous-delivery/?smartspace=bluemix){:new_window} forum. Include the "continuous-delivery" tag.
 
 For more details about using the forums, see [Getting help (Link opens in a new window)](https://www.{DomainName}/docs/support/index.html#getting-help).
 
