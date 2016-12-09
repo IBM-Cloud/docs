@@ -73,7 +73,6 @@ From your {{site.data.keyword.deliverypipeline}}, change your configuration; che
 <aside role="complementary" aria-labelledby="related_links">
 <div class="linklist" id="general"><h3 class="linklistlabel" id="related_links">Related Links</h3>
 <ul>
-<li><img src="./sout.gif" alt=""><a href="https://developer.ibm.com/bluemix/support/#prereqs" rel="external" title="(Opens in a new tab or window)">{{site.data.keyword.Bluemix_notm}} Prerequisites</a></li>
 <li><img src="./sout.gif" alt=""><a href="https://www.ibm.com/devops/method/content/deliver/practice_delivery_pipeline/" rel="external" title="(Opens in a new tab or window)">IBM Bluemix Garage Method: Delivery pipeline</a></li>
 </ul>
 </div>
