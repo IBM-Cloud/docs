@@ -31,7 +31,7 @@ To open a support ticket or find other help options, you can use the Support wid
 {: #using-avatar}
 The Support widget enables you to get help and provide feedback.
 
-To open the Support widget, log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click the **Support** &gt; **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**.
+To open the Support widget, log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click the **Support** &gt; **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**. Although the support widget is the preferred method for obtaining support, if you cannot log in to Bluemix, you can use the [Get Help](https://support.ng.bluemix.net/gethelp/) page to submit a ticket as well.
 
 ### Using the Support widget for linked accounts
 {: #using-avatar-linked}
@@ -43,6 +43,7 @@ If you are using an account that is linked between {{site.data.keyword.Bluemix_n
 * You can submit an idea to IBM User Voice.
 * You can contact sales by either calling or finding a sales representative, or by linking to the Find a Sales Representative form.
 * You can connect with **@IBMBluemixHelp** on Twitter to enhance your Bluemix experience.
+* Although the support widget is the preferred method for obtaining support, if you cannot log in to Bluemix, you can use the [Get Help](https://support.ng.bluemix.net/gethelp/) page to submit a ticket as well.
 
 
 
