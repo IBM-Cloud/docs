@@ -234,7 +234,7 @@ You can use an action to fetch a document from a Cloudant database called `testd
   ```
   {: screen}
 
-### Using an action sequence to process a document on a change event from a Cloudant database
+### Using an action sequence and a change trigger to process a document from a Cloudant database
 
 You can use an action sequence in a rule to fetch and process the document associated with a Cloudant change event.
 
@@ -246,40 +246,37 @@ function main(doc){
 }
 ```
 {: codeblock}
+
+Create the action to process the document from Cloudant:
 ```
 wsk action create myAction myAction.js
 ```
 {: pre}
-To read the document from the database, you can use the `read` action in the cloudant package, this action can be included with your action `myAction` in an action sequence.
-Create an action sequence using the `read` action, then calls your action `myAction` that expects a document as input.
+
+To read a document from the database, you can use the `read` action from the Cloudant package.
+The `read` action may be composed with `myAction` to create an action sequence.
 ```
 wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
 ```
 {: pre}
 
-Now create a rule that associates your trigger with the new action `sequenceAction`
+The action `sequenceAction` may be used in a rule that activates the action on new Cloudant trigger events.
 ```
 wsk rule create myRule myCloudantTrigger sequenceAction
 ```
 {: pre}
 
-The action sequence will need to know the database name to fetch the document from.
-Set a parameter on the trigger for `dbname`
-```
-wsk trigger update myCloudantTrigger --param dbname testdb
-```
-{: pre}
 
-**Note** The Cloudant change trigger used to support the parameter `includeDoc`, this is not longer supported.
-  You will need to recreate triggers previously created with `includeDoc`:
-  Recreate the trigger without the `includeDoc` parameter
+
+**Note** The Cloudant `changes` trigger used to support the parameter `includeDoc` which is not longer supported.
+  You will need to recreate triggers previously created with `includeDoc`. Follow these steps to recreate the trigger:
   ```
   wsk trigger delete myCloudantTrigger
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
-  You can follow the steps above to create an action sequence to get the document and call your existing action.
-  Then update your rule to use the new action sequence.
+  The example illustrated above may be used to create an action sequence to read the changed document and call your existing actions.
+  Remember to disable any rules that may no longer be valid and create new ones using the action sequence pattern.
 
 
 ## Using the Alarm package
