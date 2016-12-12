@@ -62,7 +62,6 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
-{: caption="Table 1. General bluemix commands" caption-side="top"}
 
 
 
@@ -101,9 +100,7 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
  </tbody>
  </table>
- {: caption="Table 2. Commands for managing orgs, spaces, and users" caption-side="top"} 
-
-
+ 
 
 <table summary="bluemix commands that you can use to manage Cloud Foundry apps.">
  <thead>
@@ -140,7 +137,6 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
-{: caption="Table 3. Commands for managing cf apps" caption-side="top"}
 
 
 <table summary="bluemix commands that you can use to manage Bluemix services.">
@@ -171,7 +167,6 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
-{: caption="Table 4. Commands for managing Bluemix services" caption-side="top"}
 
 
 <table summary="bluemix commands that you can use to manage Bluemix catalog, plug-ins, billing, and security settings.">
@@ -207,8 +202,6 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
-{: caption="Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings" caption-side="top"}
-
 
 
 <table summary="bluemix commands that you can use to manage network settings.">
@@ -239,7 +232,6 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
-{: caption="Table 6. Commands for managing network settings" caption-side="top"}
 
 
 
@@ -327,7 +319,6 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
-{: caption="Table 7. Commands for managing containers on Bluemix" caption-side="top"}
 
 
 
