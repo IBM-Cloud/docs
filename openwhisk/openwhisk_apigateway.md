@@ -28,6 +28,11 @@ This experimental feature will allow you to invoke an action with HTTP methods o
 
 Use the CLI to expose your OpenWhisk actions through the OpenWhisk API Gateway. 
 
+## OpenWhisk CLI configuration for api-experimental command
+This experimental feature only works with the new OpenWhisk authentication model in which each namespace now has a unique authentication key associated with it.
+Go to [Configure CLI](https://console.ng.bluemix.net/openwhisk/cli) for instructions on how to set the authentication key for your specific namespace.
+
+
 ## Expose an OpenWhisk action
 
 Let's expose a simple action that is already pre-installed with OpenWhisk
