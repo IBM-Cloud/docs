@@ -31,6 +31,7 @@ The Cloud Foundry (cf) command line interface (CLI) provides a set of commands f
 Use the index in the following table to refer to the frequently used Cloud Foundry commands:
 
 <table summary="Alphabetically ordered general Cloud Foundry commands that have links that bring you to more info for the command">
+<caption>Table 1. General Cloud Foundry commands</caption>
  <thead>
  <th colspan="6">General Cloud Foundry commands</th>
  </thead>
@@ -48,6 +49,7 @@ Use the index in the following table to refer to the frequently used Cloud Found
 
 
 <table summary="Alphabetically ordered commands for managing apps, spaces, and services. Each command has a link that brings you to more info for the command.">
+<caption>Table 2. Commands for managing apps, spaces, and services</caption>
  <thead>
  <th colspan="5">Commands for managing apps, spaces, and services</th>
  </thead>
