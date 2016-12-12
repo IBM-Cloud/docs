@@ -24,7 +24,7 @@ You can deploy applications to {{site.data.keyword.Bluemix}} by using various me
 
 Deploying an application to {{site.data.keyword.Bluemix_notm}} includes two phases, staging the application and starting the application.
 
-Cloud Foundry now supports Diego, a new runtime architecture. Diego provides support for several container technologies, including Garden, Docker, and Windows containers. Future enhancements and fixes for Cloud Foundry will go directly to Diego, and will not be supported in DEA. The updated Cloud Foundry Diego architecture affects all {{site.data.keyword.Bluemix_notm}} Public regions.
+Cloud Foundry now supports Diego, a new runtime architecture. Diego provides support for several container technologies, including Garden, Docker, and Windows containers. Future enhancements and fixes for Cloud Foundry will go directly to Diego, and will not be supported in DEA. The updated Cloud Foundry Diego architecture affects all {{site.data.keyword.Bluemix_notm}} Public regions. {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Local environments will be updated at a later date.
 
 ### Staging an application with Diego
 All Diego components are designed to be clustered which means you can easily create different availability zones. Secure communication between all Diego components uses TLS.
@@ -36,12 +36,14 @@ To validate the app health, Diego supports the same PORT-based checks that are u
 To stage apps in Diego, you must first install both the cf CLI and the [Diego-Enabler CLI Plugin](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}. This is required during the migration period only.
 
 #### Known issues
- There are the following known issues with using Diego:
+Most users will not experience any issues during the migration to Diego. However, there are a few known issues, some of which are not related to Diego, but are instead related to deprecated code such as user or environment variables. 
+
   * Worker applications deployed with the `--no-route` option do not report as healthy. To prevent this, disable the port-based health check with the `cf set-health-check APP_NAME none` command.
   * Diego does not use the VCAP_APP_HOST environment variable. If your code references this variable, replace it with 0.0.0.0.
   * Diego does not use the VCAP_APP_PORT environment variable. If your code references this variable, replace it with PORT, which is set to 8080 by default.
   * The **cf files** command is no longer supported. The replacement is the **cf ssh** command. For more details on teh **cf ssh** command, see [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Some apps might use a high number of file descriptors (inodes). If you encounter this issue, you must increase disk quota for your app with the `cf scale APP_NAME [-k DISK]` command.
+ 
 
 #### Staging a new app on Diego
 To stage a new application on Diego you must deploy the application in the command line with a flag to indicate Diego as the backend.
@@ -66,7 +68,7 @@ To stage a new application on Diego you must deploy the application in the comma
 For more details on the **cf push** command, see [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
 
 #### Migrating an existing app to Diego
-You can transition an existing app to Diego by deploying the application with the Diego flag. The application will immediately start running on Diego and will eventually stop running on the DEAs. At this time, you cannot enable apps in a specific org and space to only run on Diego. However, you can choose which apps you want to push to Diego by using the following step to set the Diego flag.
+You can transition an existing app to Diego by deploying the application with the Diego flag. The application will immediately start running on Diego and will eventually stop running on the DEAs. At this time, you cannot enable apps in a specific org and space to only run on Diego. However, you can choose which apps you want to push to Diego by using the following step to set the Diego flag. If you have both {{site.data.keyword.Bluemix_notm}} Public and {{site.data.keyword.Bluemix_notm}} Dedicated or {{site.data.keyword.Bluemix_notm}} Local apps, you only need to migrate the public apps at this time.
 
 If you want to ensure uptime, we recommend performing a blue-green deploy by deploying a copy of your application to Diego, and then swapping routes and scaling down the DEA application.
 
