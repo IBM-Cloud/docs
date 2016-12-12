@@ -29,11 +29,13 @@ This experimental feature will allow you to invoke an action with HTTP methods o
 Use the CLI to expose your OpenWhisk actions through the OpenWhisk API Gateway. 
 
 ## OpenWhisk CLI configuration
+{: #openwhisk_apigateway_cli}
 This experimental feature only works with the new OpenWhisk authentication model in which each namespace now has a unique authentication key associated with it.
 Go to [Configure CLI](https://console.ng.bluemix.net/openwhisk/cli) for instructions on how to set the authentication key for your specific namespace.
 
 
 ## Expose an OpenWhisk action
+{: #openwhisk_apigateway_hello}
 
 Let's expose a simple action that is already pre-installed with OpenWhisk
 
@@ -64,6 +66,7 @@ This will invoke the `echo` action, returning back a JSON string with the parame
 You can pass parameters to the action via simple query parameters, or via request body.
 
 ### Exposing multiple actions
+{: #openwhisk_apigateway_actions}
 
 Let's say you want to expose a set of actions for a book club for your friends.
 You have a series of actions to implement your backend for the book club:
