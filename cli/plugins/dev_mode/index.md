@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2016
 
-lastupdated: "2016-05-12"
+lastupdated: "2016-12-12"
 
 
 
@@ -76,6 +76,7 @@ cf plugins
 Use the index in the following table to refer to the frequently used dev_mode CLI commands:
 
 <table summary="dev_mode commands index">
+<caption>Table 1. dev_mode commands</caption>
  <thead>
  <th colspan="4">dev_mode commands</th>
  </thead>
