@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2016
   
-lastupdated: "2016-10-22"
+lastupdated: "2016-12-12"
 
 ---
 
@@ -177,7 +177,7 @@ All customers of {{site.data.keyword.Bluemix_notm}} are provided with free techn
 Levels | Free |  Basic | Standard | Premium
 --- | --- | --- | --- | --- |
 Description | Support for all trial customers of Bluemix.  |  Support for non-production environments or workloads where traditional severities and response times are not needed. | Support for environments with a limited number of business-critical applications. {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Local customers receive standard support. | Support for mission-critical environments that have a strategic dependence on {{site.data.keyword.Bluemix_notm}}. 
-High severity support |  N/A | N/A | Included | Included 
+Severity 1-4 support |  N/A | N/A | Included | Included 
 Support language | English | English | English | English
 Assigned client success manager (CSM) | Not included | Not included | Not included | Included at<br> 8 hours per week
 {: caption="Table 1. Support levels" caption-side="top"}
