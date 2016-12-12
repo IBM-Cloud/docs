@@ -786,7 +786,7 @@ If you're not using OpenWhisk in Bluemix or if you want to set up your Message H
   {: pre}
 
 ### Listening for messages to a Message Hub instance
-{: #openwhisk_catalog_message_hub_trigger}
+{: #openwhisk_catalog_message_hub_listen}
 After creating a trigger, the system will monitor the specified topic in your messaging service. When new messages are posted, the trigger will be fired.
 
 The payload of that trigger will contain a `messages` field which is an array of messages that have been posted since the last time your trigger fired. Each message object in the array will contain the following fields:
