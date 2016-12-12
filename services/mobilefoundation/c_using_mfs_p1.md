@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated:  "2016-09-12"
+lastupdated:  "2016-12-09"
 
 ---
 
@@ -48,6 +48,16 @@ The process of provisioning starts. This process takes about 10 minutes, and a m
 For more information on MobileFirst Analytics you can refer to [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
 
 **Note:** The Mobile Analytics server is removed when you delete the {{site.data.keyword.mobilefoundation_short}} service instance or when you attempt to re-create the {{site.data.keyword.mfserver_short_notm}}.
+
+##  Deleting Mobile Analytics server
+{: #deleting_analytics_server_dev}
+
+You can now delete the Mobile Analytics server that was added to the {{site.data.keyword.mobilefoundation_short}} service instance, from the {{site.data.keyword.mobilefoundation_short}} service dashboard.
+
+* Click **Delete Analytics** to delete the  Mobile Analytics server that was added to the {{site.data.keyword.mobilefoundation_short}} service instance.
+
+ This will delete the analytics container group. The process of deleting analytics containers takes about 10 minutes. You can refresh the screen to view the updated status. Once the analytics containers are deleted, the **Add Analytics** button is re-enabled, you can use this to add the Mobile Analytics server again if you choose to.
+
 
 ## Re-creating the {{site.data.keyword.mobilefirst}} server
 {: #recreate_mobilefoundation_p1}
