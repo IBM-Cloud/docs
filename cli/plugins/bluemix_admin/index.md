@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-26"
+lastupdated: "2016-12-12"
 
 ---
 
@@ -101,7 +101,10 @@ cf login
 </li>
 </ol>
 
-## Adding a user
+## Administering users
+{: #admin_users}
+
+### Adding a user
 {: #admin_add_user}
 
 To add a user to your {{site.data.keyword.Bluemix_notm}} environment from the
@@ -126,7 +129,7 @@ cf ba add-user <user_name> <organization>
 
 <!-- staging-only commands start. Live for interconnect -->
 
-## Searching for a user
+### Searching for a user
 {: #admin_search_user}
 
 To search for a user, use the following command in conjunction with the optional search filter parameters
@@ -153,7 +156,7 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 **Tip:** You can also use **ba su** as an alias for the longer
 **ba search-users** command name.
 
-## Setting permissions for a user
+### Setting permissions for a user
 {: #admin_setperm_user}
 
 To set permissions for a specified user, use the following command:
@@ -179,7 +182,7 @@ cf ba set-permissions <user_name> <permission> <access>
 
 <!-- staging-only commands end -->
 
-## Removing a user
+### Removing a user
 {: #admin_remov_user}
 
 To remove a user from your {{site.data.keyword.Bluemix_notm}} environment, use the following command:
@@ -199,7 +202,7 @@ cf ba remove-user <user_name>
 **Tip:** You can also use **ba ru** as an alias for the longer
 **ba remove-user** command name.
 
-## Enabling managers to add users
+### Enabling managers to add users
 {: #clius_emau}
 
 If you have the **Superuser** permission in your {{site.data.keyword.Bluemix_notm}} environment, you can enable organization managers to add users to the organizations they manage. To enable managers to add users, use the following command:
@@ -212,7 +215,7 @@ cf ba enable-managers-add-users
 **Tip:** You can also use **ba emau** as an alias for the longer
 **ba enable-managers-add-users** command name.
 
-## Disabling managers from adding users
+### Disabling managers from adding users
 {: #clius_dmau}
 
 If organization managers have been enabled to add users to the organizations they manage in your {{site.data.keyword.Bluemix_notm}} environment with the **enable-managers-add-users** command, and if you have the **Superuser** permission, you can remove this setting.  To disable managers from adding users, use the following  command:
@@ -225,7 +228,10 @@ cf ba disable-managers-add-users
 **Tip:** You can also use **ba dmau** as an alias for the longer
 **ba disable-managers-add-users** command name.
 
-## Adding an organization
+## Administering organizations
+{: #admin_orgs}
+
+### Adding an organization
 {: #admin_add_org}
 
 To add an organization, use the following command:
@@ -245,7 +251,7 @@ cf ba create-organization <organization> <manager>
 **Tip:** You can also use **ba co** as an alias for the longer
 **ba create-organization** command name.
 
-## Deleting an organization
+### Deleting an organization
 {: #admin_delete_org}
 
 To delete an organization, use the following command:
@@ -263,7 +269,7 @@ cf ba delete-organization <organization>
 **Tip:** You can also use **ba do** as an alias for the longer
 **ba delete-organization** command name.
 
-## Assigning a user to an organization
+### Assigning a user to an organization
 {: #admin_ass_user_org}
 
 To assign a user in your {{site.data.keyword.Bluemix_notm}} environment to a
@@ -288,7 +294,7 @@ descriptions.</dd>
 **Tip:** You can also use **ba so** as an alias for the longer
 **ba set-org** command name.
 
-## Unassigning a user from an organization
+### Unassigning a user from an organization
 {: #admin_unass_user_org}
 
 To unassign a user in your {{site.data.keyword.Bluemix_notm}} environment from a
@@ -313,7 +319,7 @@ descriptions.</dd>
 **Tip:** You can also use **ba uo** as an alias for the longer
 **ba unset-org** command name.
 
-### Assigning roles
+#### Assigning roles
 
 <dl class="parml">
 <dt class="pt dlterm">OrgManager</dt>
@@ -332,7 +338,7 @@ organization.</dd>
 space.</dd>
 </dl>
 
-## Setting a quota for an organization
+### Setting a quota for an organization
 {: #admin_set_org_quota}
 
 To set the usage quota for a particular organization, use the following command:
@@ -353,7 +359,7 @@ cf ba set-quota <organization> <plan>
 **ba set-quota** command name.
 
 
-## Finding container quotas for an organization
+### Finding container quotas for an organization
 {: #admin_find_containquotas}
 
 To find the quota for containers for an organization, use the following command:
@@ -371,7 +377,7 @@ cf bluemix-admin containers-quota <organization>
 **Tip:** You can also use **ba cq** as an alias for the longer
 **bluemix-admin containers-quota** command name.
 
-## Setting container quotas for an organization
+### Setting container quotas for an organization
 {: #admin_set_containquotas}
 
 To set the quota for containers in an organization, use the following command with at least one of the options included:
@@ -436,7 +442,7 @@ The JSON file should have the format shown in the following example:
 **Tip:** You can also use **ba scq** as an alias for the longer
 **bluemix-admin set-containers-quota** command name.
 
-## Enabling services for all organizations
+### Enabling services for all organizations
 {: #admin_ena_service_org}
 
 To enable a service to be displayed in the
@@ -456,7 +462,7 @@ cf ba enable-service-plan <plan_identifier>
 **Tip:** You can also use **ba esp** as an alias for the longer
 **ba enable-service-plan** command name.
 
-## Disabling services for all organizations
+### Disabling services for all organizations
 {: #admin_dis_service_org}
 
 To disable a service from being visible in the {{site.data.keyword.Bluemix_notm}} Catalog for all
@@ -475,7 +481,7 @@ cf ba disable-service-plan <plan_identifier>
 **Tip:** You can also use **ba dsp** as an alias for the longer
 **ba disable-service-plan** command name.
 
-## Adding service visibility for organizations
+### Adding service visibility for organizations
 {: #admin_addvis_service_org}
 
 You can add an organization from the list of organizations that can see a specific service in the {{site.data.keyword.Bluemix_notm}} Catalog. To allow an organization to view a specific service in the
@@ -496,7 +502,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 **Tip:** You can also use **ba aspv** as an alias for the longer
 **ba add-service-plan-visibility** command name.
 
-## Removing service visibility for organizations
+### Removing service visibility for organizations
 {: #admin_remvis_service_org}
 
 You can remove an organization from the list of organizations that can see a
@@ -519,7 +525,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 **Tip:** You can also use **ba rspv** as an alias for the longer
 **ba remove-service-plan-visibility** command name.
 
-## Editing service visibility for organizations
+### Editing service visibility for organizations
 {: #admin_editvis_service_org}
 
 You can edit and replace the list of services that specific
@@ -544,7 +550,10 @@ one organization by entering additional organization names or GUIDs in the comma
 **Tip:** You can also use **ba espv** as an alias for the longer
 **ba edit-service-plan-visibility** command name.
 
-## Adding reports
+## Administering reports
+{: #admin_add_report}
+
+### Adding reports
 {: #admin_add_report}
 
 To add a security report, use the following command:
@@ -572,7 +581,7 @@ you included a path to the report PDF. The RTF version is used for indexing and 
 **Tip:** You can also use **ba ar** as an alias for the longer
 **ba add-report** command name.
 
-## Deleting reports
+### Deleting reports
 {: #admin_del_report}
 
 To delete a security report, use the following command:
@@ -595,7 +604,7 @@ name.</dd>
 **Tip:** You can also use **ba dr** as an alias for the longer
 **ba delete-report** command name.
 
-## Retrieving reports
+### Retrieving reports
 {: #admin_retr_report}
 
 To retrieve a security report, use the following command:
@@ -617,7 +626,6 @@ name.</dd>
 
 **Tip:** You can also use **ba rr** as an alias for the longer **ba retrieve-report** command name.
 
-
 ## Viewing resource metric information
 {: #cliresourceusage}
 
@@ -638,7 +646,11 @@ cf ba resource-metrics <monthly> <weekly>
 **Tip:** You can also use **ba rsm** as an alias for the longer
 **ba resource-metrics** command name.
 
-## Listing service brokers
+
+## Administering service brokers
+{: #admin_servbro}
+
+### Listing service brokers
 {: #clilistservbro}
 
 To list service all brokers, use the following command:
@@ -658,7 +670,7 @@ cf ba service-brokers <broker_name>
 **Tip:** You can also use **ba sb** as an alias for the longer
 **ba service-brokers** command name.
 
-## Adding a service broker
+### Adding a service broker
 {: #cliaddservbro}
 
 To add a service broker, so that you can add a custom service to your
@@ -683,7 +695,7 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 **Tip:** You can also use **ba asb** as an alias for the longer
 **ba add-service-broker** command name.
 
-## Deleting a service broker
+### Deleting a service broker
 {: #clidelservbro}
 
 To delete a service broker, to remove the custom service from your
@@ -702,7 +714,7 @@ cf ba delete-service-broker <service_broker>
 **Tip:** You can also use **ba dsb** as an alias for the longer
 **ba delete-service-broker** command name.
 
-## Updating a service broker
+### Updating a service broker
 {: #cliupdservbro}
 
 To update a service broker use the following command:
@@ -727,7 +739,8 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 **ba update-service-broker** command name.
 
 
-## Working with application security groups
+## Administering application security groups
+{: #admin_secgro}
 
 To work with application security groups (ASGs), you must be a full access administrator for the local or dedicated environment. All users of the environment can list the available ASGs for the organization that is being targeted with the command. However, to create, update, or bind ASGs, you must be an administrator for the {{site.data.keyword.Bluemix_notm}} environment.
 
@@ -737,7 +750,7 @@ ASGs function as virtual firewalls that control outbound traffic from the applic
 
 **Note**: The following commands that enable you to work with security groups are based on the Cloud Foundry 1.6 version. For more information, including required and optional fields, see the Cloud Foundry information about [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
-## Listing security groups
+### Listing security groups
 {: #clilissecgro}
 
 * To list all security groups, use the following command:
@@ -766,7 +779,7 @@ cf ba security-groups <security-group>
 **ba security-groups** command name with the `security-group` parameter.
 
 
-## Creating a security group
+### Creating a security group
 {: #clicreasecgro}
 
 For more information about creating security groups and the rules that define outgoing traffic, see [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
@@ -790,7 +803,7 @@ Each security group that you create has the prefix `adminconsole_` added to the 
 **Tip:** You can also use **ba csg** as an alias for the longer
 **ba create-security-group** command name.
 
-## Updating a security group
+### Updating a security group
 {: #cliupdsecgro}
 
 To update a security group, use the following command:
@@ -810,7 +823,7 @@ cf ba update-security-group <security-group> <path-to-rules-file>
 **Tip:** You can also use **ba usg** as an alias for the longer
 **ba update-security-group** command name.
 
-## Deleting a security group
+### Deleting a security group
 {: #clidelsecgro}
 
 To delete a security group, use the following command:
@@ -829,7 +842,7 @@ cf ba delete-security-group <security-group>
 **ba delete-security-group** command name.
 
 
-## Binding security groups
+### Binding security groups
 {: #clibindsecgro}
 
 For more information about binding security groups, see [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
@@ -883,7 +896,7 @@ cf ba bind-security-group <security-group> <org> <space>
 **Tip:** You can also use **ba bsg** as an alias for the longer
 **ba bind-security-group** command name.
 
-## Unbinding security groups
+### Unbinding security groups
 {: #cliunbindsecgro}
 
 For more information about unbinding security groups, see [Unbinding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
@@ -937,7 +950,10 @@ cf ba unbind-security-group <security-group> <org> <space>
 **Tip:** You can also use **ba usg** as an alias for the longer
 **ba unbind-staging-security-group** command name.
 
-## Listing buildpacks
+## Administering buildpacks
+{: #admin_buildpack}
+
+### Listing buildpacks
 {: #clilistbuildpack}
 
 If you have the apps catalog write permissions, you can list buildpacks. To list all buildpacks or view a specific buildpack, use the following command:
@@ -955,7 +971,7 @@ cf ba buildpacks <buildpack_name>
 **Tip:** You can also use **ba lb** as an alias for the longer
 **ba buildpacks** command name.
 
-## Creating and uploading a buildpack
+### Creating and uploading a buildpack
 {: #clicreupbuildpack}
 
 If you have the apps catalog write permissions, you can create and upload a buildpack. You can upload any compressed file that has a .zip file type. To upload a buildpack, use the following command:
@@ -977,7 +993,7 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 **Tip:** You can also use **ba cb** as an alias for the longer
 **ba create-buildpack** command name.
 
-## Updating a buildpack
+### Updating a buildpack
 {: #cliupdabuildpack}
 
 If you have the apps catalog write permissions, you can update an existing buildpack.  To update a buildpack, use the following command:
@@ -1001,7 +1017,7 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 **Tip:** You can also use **ba ub** as an alias for the longer
 **ba update-buildpack** command name.
 
-## Deleting a buildpack
+### Deleting a buildpack
 {: #clidelbuildpack}
 
 If you have the apps catalog write permissions, you can delete an existing buildpack.  To delete a buildpack, use the following command:
