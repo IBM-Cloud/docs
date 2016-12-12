@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-12-07"
+lastupdated: "2016-12-12"
 ---
 
 
@@ -14,6 +14,8 @@ lastupdated: "2016-12-07"
 # Deploying apps
 {: #deployingapps}
 
+<!-- staging only content throughout as we add in FAQ content from slack MEK 12/12/16-->
+
 You can deploy applications to {{site.data.keyword.Bluemix}} by using various methods, such as the command line interface and integrated development environments (IDEs). You can also use application manifests to deploy applications. By using an application manifest, you reduce the number of deployment details that you must specify every time that you deploy an application to {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
@@ -22,7 +24,7 @@ You can deploy applications to {{site.data.keyword.Bluemix}} by using various me
 
 Deploying an application to {{site.data.keyword.Bluemix_notm}} includes two phases, staging the application and starting the application.
 
-Cloud Foundry now supports Diego, a new runtime architecture. Diego provides support for several container technologies, including Garden, Docker, and Windows containers. Future enhancements and fixes for Cloud Foundry will go directly to Diego, and will not be supported in DEA.
+Cloud Foundry now supports Diego, a new runtime architecture. Diego provides support for several container technologies, including Garden, Docker, and Windows containers. Future enhancements and fixes for Cloud Foundry will go directly to Diego, and will not be supported in DEA. The updated Cloud Foundry Diego architecture affects all {{site.data.keyword.Bluemix_notm}} Public regions.
 
 ### Staging an application with Diego
 All Diego components are designed to be clustered which means you can easily create different availability zones. Secure communication between all Diego components uses TLS.
@@ -64,7 +66,9 @@ To stage a new application on Diego you must deploy the application in the comma
 For more details on the **cf push** command, see [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
 
 #### Migrating an existing app to Diego
-You can transition an existing app to Diego by deploying the application with the Diego flag. The application will immediately start running on Diego and will eventually stop running on the DEAs. If you want to ensure uptime, we recommend performing a blue-green deploy by deploying a copy of your application to Diego, and then swapping routes and scaling down the DEA application.
+You can transition an existing app to Diego by deploying the application with the Diego flag. The application will immediately start running on Diego and will eventually stop running on the DEAs. At this time, you cannot enable apps in a specific org and space to only run on Diego. However, you can choose which apps you want to push to Diego by using the following step to set the Diego flag.
+
+If you want to ensure uptime, we recommend performing a blue-green deploy by deploying a copy of your application to Diego, and then swapping routes and scaling down the DEA application.
 
   To set the Diego flag and change your app to running on Diego:
   ```
