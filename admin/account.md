@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-12-05"  
+lastupdated: "2016-12-12"  
 
 
 ---
@@ -76,7 +76,7 @@ As an account owner or a billing manager for an org, you can use the Usage Dashb
 
 To open the Usage Dashboard view, click **Account** &gt; *your_account_name* &gt; **Usage Dashboard**. Billing managers can see the details for only the organizations in which they are billing managers.
 
-The account owner is charged for the total usage that is incurred across all organizations at the end of each billing cycle. As an account owner, you can filter the usage summary by region and organization. You can also click a particular month to see the usage for that month.
+The account owner is charged for the total usage that is incurred across all organizations at the end of each billing cycle. As an account owner, you can filter the usage summary by region and organization. You can also click a particular month to see the usage for that month. Select **All Organizations** from the **Organization** list to see the usage for all organizations in the account.
 
 ## Updating billing information
 {: #account_billing}
