@@ -119,8 +119,6 @@ IBM Containers CLI is a {{site.data.keyword.Bluemix_notm}} CLI plug-in to manage
  </tr>
   </tbody>
  </table>
-{: caption="Table 1. Commands for managing containers on Bluemix" caption-side="top"}
-
 
 
 ## bluemix ic attach
