@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-27"
+lastupdated: "2016-12-12"
 
 
 ---
@@ -36,6 +36,7 @@ IBM Containers CLI is a {{site.data.keyword.Bluemix_notm}} CLI plug-in to manage
 </dl>
 
 <table summary="bluemix commands that you can use to manage containers on Bluemix.">
+<caption>Table 1. Commands for managing containers on Bluemix</caption>
  <thead>
  <th colspan="5">Commands for managing containers on Bluemix</th>
  </thead>
@@ -301,7 +302,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
 | CCS_BIND_APP=*&lt;appname&gt;*       | Bind a service to a container. Use the `CCS_BIND_APP` environment variable to bind an app to the container. The app is bound to the target service and acts as a bridge that allows {{site.data.keyword.Bluemix_notm}} to bring your bridge app’s `VCAP_SERVICES` information to the running container instance. For more information about creating a bridge app, see [Binding a service to a container](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | To bind a Bluemix service directly to a container without using a bridge app, use CCS_BIND_SRV. This binding allows Bluemix to inject the VCAP_SERVICES information into the running container instance. To list multiple Bluemix services, include them as part of the same environment variable. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Add a log file to be monitored in the container. Include the `LOG_LOCATIONS` environment variable with a path to the log file. |
-{: caption="Table 8. Commonly used environment variables" caption-side="top"}
+{: caption="Table 2. Commonly used environment variables" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (optional)</dt>
@@ -1119,7 +1120,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 | CCS_BIND_APP=*&lt;appname&gt;*       | Bind a service to a container. Use the `CCS_BIND_APP` environment variable to bind an app to the container. The app is bound to the target service and acts as a bridge that allows {{site.data.keyword.Bluemix_notm}} to bring your bridge app’s `VCAP_SERVICES` information into the running container instance. For more information about creating a bridge app, see [Binding a service to a container](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | To bind a Bluemix service directly to a container without using a bridge app, use CCS_BIND_SRV. This binding allows Bluemix to inject the VCAP_SERVICES information into the running container instance. To list multiple Bluemix services, include them as part of the same environment variable. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Add a log file to be monitored in the container. Include the `LOG_LOCATIONS` environment variable with a path to the log file. |
-{: caption="Table 9. Commonly used environment variables" caption-side="top"}
+{: caption="Table 3. Commonly used environment variables" caption-side="top"}
 
 
    <dl>
