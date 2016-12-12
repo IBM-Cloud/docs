@@ -45,7 +45,6 @@ Use the index in the following table to refer to the frequently used Cloud Found
  </tr>
    </tbody>
  </table>
-{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="Alphabetically ordered commands for managing apps, spaces, and services. Each command has a link that brings you to more info for the command.">
@@ -76,7 +75,6 @@ Use the index in the following table to refer to the frequently used Cloud Found
  </tr>
  </tbody>
  </table>
-{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api
