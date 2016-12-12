@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-28"
+lastupdated: "2016-12-12"
 
 ---
 
@@ -28,17 +28,13 @@ Before you begin, you must deploy an instance of the {{site.data.keyword.iotelec
 
 2. Copy the URL of the {{site.data.keyword.iotelectronics}} web app by right-clicking **View App** and selecting **Copy Link Location**.
 
-  ![View App button](images/IoT4E_view_app_rt_clk.png "View App button")
+3. On the **Connections** tab, click the {{site.data.keyword.amashort}} service to open it.
 
-2. On the **Connections** tab, click the {{site.data.keyword.amashort}} service to open it.
+4. On the {{site.data.keyword.amashort}} Authentication page, enable authentication by clicking **On**.
 
-  ![How to find {{site.data.keyword.amashort}}.](images/IoT4E_Connections.png "{{site.data.keyword.iotelectronics}} connections")
+5. In the **Custom** section, enter the following authentication credentials:
 
-3. On the {{site.data.keyword.amashort}} Authentication page, enable authentication by clicking **On**.
-
-4. In the **Custom** section, enter the following authentication credentials:
-
-    - **Realm name**: `MyRealm`
+    - **Realm name**: `myRealm`
 
     - **Custom Identity Provider Url**: Paste the URL of the API application that you copied in the first step in the following format:   **https://<*myIoT4eStarterApp*>.mybluemix.net**.  
 
