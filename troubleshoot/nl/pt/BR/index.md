@@ -3,6 +3,8 @@
 copyright:
   years: 2015, 2016
   
+lastupdated: "2016-08-11"
+  
 
 ---
 
@@ -16,8 +18,6 @@ copyright:
 # Resolução de problemas para acessar o {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Última atualização: 11 de agosto de 2016
-{: .last-updated}
 
 
 Problemas gerais com o acesso ao {{site.data.keyword.Bluemix}}
@@ -166,10 +166,11 @@ No
 {{site.data.keyword.Bluemix_notm}}, é possível ser um membro ou um colaborador de uma organização:
 
 <dl><dt>Colaborador</dt>
-<dd>Você é um colaborador de uma organização, se já tiver uma conta do {{site.data.keyword.Bluemix_notm}} e alguém
+<dd>Você é um colaborador de uma organização, se já tiver uma conta
+{{site.data.keyword.Bluemix_notm}} e alguém
 convidá-lo para a organização.</dd>
 <dt>Membro</dt>
-<dd>Você é um membro de uma organização, se não tiver uma conta do {{site.data.keyword.Bluemix_notm}}, mas então
+<dd>Você é um membro de uma organização, se não tiver uma conta {{site.data.keyword.Bluemix_notm}}, mas então
 alguém convidá-lo para a organização e você se inscrever para {{site.data.keyword.Bluemix_notm}} a partir do convite.</dd>
 </dl>
 
@@ -455,8 +456,7 @@ Você não possui o nível apropriado de autoridade necessário para executar as
 Para obter o nível de autoridade apropriado, use um dos métodos a seguir: 
 {: tsResolve}
  * Selecione outra organização e outro espaço para os quais tenha a função de desenvolvedor. 
- * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Consulte
-[Gerenciando organizações e espaços](../admin/orgs_spaces.html){: new_window} para obter detalhes.
+ * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Veja [Gerenciando organizações e espaços](/docs/admin/orgs_spaces.html){: new_window} para obter detalhes.
  
 
  
@@ -546,7 +546,7 @@ os dropouts do provedor de serviços da Internet (ISP), configurações de firew
 
 Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, primeiro verifique a página [Status do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução
 alternativa. As informações detalhadas estão disponíveis em
-[Usando serviços em outra região](../services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal,
+[Usando serviços em outra região](/docs/services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal,
 tente as etapas a seguir para resolver o problema: 
 {: tsResolve}
 
@@ -558,7 +558,7 @@ funcionar, limpe os cookies e o cache do seu navegador e, em seguida, recarregue
 que conduzem ao erro 502. 
   * Aguardar e tentar novamente mais tarde. Em algumas instâncias, os problemas temporários podem ocorrer com seu provedor
 de serviços da Internet ou serviços do {{site.data.keyword.Bluemix_notm}}. É possível aguardar até que os problemas temporários sejam resolvidos.
-  * Se o problema ainda existir, entre em contato com o suporte do {{site.data.keyword.Bluemix_notm}}. Veja [Entrando em contato com o Suporte do {{site.data.keyword.Bluemix_notm}}](../support/index.html#contacting-bluemix-support){: new_window} para obter mais informações. 
+  * Se o problema ainda existir, entre em contato com o suporte do {{site.data.keyword.Bluemix_notm}}. Veja [Entrando em contato com o Suporte do {{site.data.keyword.Bluemix_notm}}](/docs/support/index.html#contacting-bluemix-support){: new_window} para obter mais informações. 
 
 
 
@@ -585,7 +585,7 @@ A cota padrão do disco que é alocada para um app é de 1 GB. Se você precisar
  
 Use um dos métodos a seguir para
 especificar sua cota do disco. A cota máxima de disco que você pode especificar é de 2 GB. Se 2 GB ainda não forem suficientes, tente um serviço externo como
-[Armazenamento de objetos](../services/ObjectStorage/index.html){: new_window}.
+[Armazenamento de objetos](/docs/services/ObjectStorage/index.html){: new_window}.
 {: tsResolve}
 
   * No arquivo manifest.yml, inclua o item a seguir:
@@ -713,7 +713,7 @@ unbind-service <appname> <service_instance_name>`.
 	  2. Exclua a instância de serviço digitando `cf delete-service <service_instance_name>`.
 	  3. Depois de excluir a instância de serviço, você pode desejar remontar o aplicativo ao qual a instância de serviço foi vinculada digitando `cf restage <appname>`.
   * Para remover o limite no número de instâncias de serviços que você pode
-ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste em uma conta paga, consulte [Como mudar seu plano](../pricing/index.html#changing){: new_window}.
+ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Como mudar seu plano](/docs/pricing/index.html#changing){: new_window}.
 
   
   
@@ -781,8 +781,7 @@ de memória para uma conta de avaliação é 2 GB.
 {: tsResolve} 
 
   * Para aumentar a cota de memória de sua conta,
-converta sua conta de avaliação em uma conta paga. Para obter informações sobre
-como converter sua de avaliação em uma conta paga, consulte [Contas pagas](../pricing/index.html#pay-accounts){: new_window}. 
+converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Contas pagas](/docs/pricing/index.html#pay-accounts){: new_window}. 
   * Para reduzir a memória que seus apps usam, use a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface de linha de comandos cf.
     Se você usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, selecione seu aplicativo. A página de detalhes do app é aberta.
@@ -946,7 +945,7 @@ Se
 você estiver enviando por push seu aplicativo para {{site.data.keyword.Bluemix_notm}}, usando as ferramentas
 Eclipse, primeiro deve criar um servidor {{site.data.keyword.Bluemix_notm}} e especificar o terminal da
 API da região {{site.data.keyword.Bluemix_notm}} em que foi criada a sua organização. Para obter informações adicionais
-sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.  
+sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.  
   
   
 
@@ -1097,13 +1096,11 @@ ao problema:
 {: tsResolve} 
 
   * Especifique o comando inicial por um dos métodos a seguir: 
-      * Use a interface de linha de comandos cf. Por
-exemplo: 
+      * Use a interface de linha de comandos cf. Por exemplo: 
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por
-exemplo:
+	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por exemplo:
 	    ```
 		{
       ...
@@ -1112,8 +1109,7 @@ exemplo:
  	   }
 	}
 	    ```
-	  * Use o arquivo `manifest.yml`. Por
-exemplo: 
+	  * Use o arquivo `manifest.yml`. Por exemplo: 
 	    ```
 		applications:
   name: MyUniqueNodejs01
@@ -1167,7 +1163,7 @@ O buildpack do Liberty usa o arquivo `server.xml` para configurar o app e gera u
 
  
 
-É possível resolver esse problema removendo o arquivo server.xml do projeto. O buildpack cria o arquivo `server.xml` dinamicamente quando você envia por push o app como um app WAR. Para obter mais informações, consulte [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
+É possível resolver esse problema removendo o arquivo server.xml do projeto. O buildpack cria o arquivo `server.xml` dinamicamente quando você envia por push o app como um app WAR. Para obter mais informações, veja [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -1213,9 +1209,9 @@ Esse problema pode ocorrer porque o DevOps Services requer um arquivo `manifest.
 
  
 
-Para resolver esse problema, você deve criar um arquivo `manifest.yml`. Para obter mais informações sobre como criar um arquivo `manifest.yml`,
+Para resolver esse problema, você deve criar um arquivo `manifest.yml`. Para obter informações adicionais sobre como criar um arquivo `manifest.yml`,
 consulte [Manifest do
-aplicativo](../manageapps/depapps.html#appmanifest){: new_window}.
+aplicativo](/docs/manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -1243,15 +1239,13 @@ Esse problema ocorre porque nenhum buildpack integrado é fornecido para apps Me
 Para usar um buildpack customizado para apps Meteor, use um dos métodos a seguir:
 {: tsResolve}
 
-  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por
-exemplo:
+  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por exemplo:
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
   * Se você implementar seu aplicativo a partir do prompt de comandos, use o comando `cf
 push` e especifique seu buildpack customizado usando
-a opção **-b**. Por
-exemplo:
+a opção **-b**. Por exemplo:
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```

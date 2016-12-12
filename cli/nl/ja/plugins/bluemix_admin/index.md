@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-
+lastupdated: "2016-11-08"
 
 ---
 
@@ -18,11 +18,8 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-最終更新日: 2016 年 9 月 1 日
-{: .last-updated}
 
-
-Cloud Foundry コマンド・ライン・インターフェースを {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインと共に使用することにより、{{site.data.keyword.Bluemix_notm}} Local 環境または {{site.data.keyword.Bluemix_notm}} Dedicated 環境のユーザーを管理できます。例えば、LDAP レジストリーからユーザーを追加できます。{{site.data.keyword.Bluemix_notm}} パブリック・アカウントの管理に関する情報を探している場合は、『[管理](../../../admin/adminpublic.html#administer)』を参照してください。
+Cloud Foundry コマンド・ライン・インターフェースを {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインと共に使用することにより、{{site.data.keyword.Bluemix_notm}} Local 環境または {{site.data.keyword.Bluemix_notm}} Dedicated 環境のユーザーを管理できます。例えば、LDAP レジストリーからユーザーを追加できます。{{site.data.keyword.Bluemix_notm}} パブリック・アカウントの管理に関する情報を探している場合は、『[管理](/docs/admin/adminpublic.html#administer)』を参照してください。
 
 最初に、CF コマンド・ライン・インターフェースをインストールします。{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用する場合、CF バージョン 6.11.2 以降が必要です。[Cloud Foundry コマンド・ライン・インターフェースのダウンロード](https://github.com/cloudfoundry/cli/releases){: new_window}
 
@@ -56,14 +53,14 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 
 プラグインをアンインストールする必要がある場合は、以下のコマンドを使用できます。その後、更新されたリポジトリーを追加して、最新のプラグインをインストールできます。
 
-* プラグインのアンインストール: `cf uninstall-plugin-repo BluemixAdminCLI`
+* プラグインのアンインストール: `cf uninstall-plugin BluemixAdminCLI`
 * プラグイン・リポジトリーの削除: `cf remove-plugin-repo BluemixAdmin`
 
 
 ## {{site.data.keyword.Bluemix_notm}} 管理
 CLI プラグインの使用
 
-{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用すると、ユーザーの追加と削除、組織へのユーザーの割り当てと割り当て解除、といった管理タスクを実行できます。 
+{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用すると、ユーザーの追加と削除、組織へのユーザーの割り当てと割り当て解除、といった管理タスクを実行できます。
 
 コマンドのリストを表示するには、次のコマンドを実行します。
 
@@ -134,11 +131,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 内のユーザーの名前。</dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">ユーザーに割り当てられた許可。例えば、superuser、basic、catalog、user、および reports です。割り当てられたユーザー許可について詳しくは、『[許可](../../../admin/index.html#permissions)』を参照してください。同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。</dd>
+<dd class="pd">ユーザーに割り当てられた許可。例えば、superuser、basic、catalog、user、および reports です。割り当てられたユーザー許可について詳しくは、『[許可](/docs/admin/index.html#permissions)』を参照してください。同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。</dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">ユーザーが所属する組織の名前。同じ照会内でこのパラメーターを organization パラメーターと一緒に使用することはできません。</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">ユーザーに割り当てられた、組織の役割。例えば、組織の管理者、請求管理者、または監査員です。このパラメーターと一緒に組織を指定する必要があります。役割について詳しくは、『[ユーザー役割](../../../admin/users_roles.html#userrolesinfo)』を参照してください。</dd>
+<dd class="pd">ユーザーに割り当てられた、組織の役割。例えば、組織の管理者、請求管理者、または監査員です。このパラメーターと一緒に組織を指定する必要があります。役割について詳しくは、『[ユーザー役割](/docs/admin/users_roles.html#userrolesinfo)』を参照してください。</dd>
 
 </dl>
 
@@ -263,7 +260,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">ユーザーの割り当て先となる {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](../../../admin/users_roles.html)を参照してください。
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](/docs/admin/users_roles.html)を参照してください。
 </dd>
 </dl>
 
@@ -285,7 +282,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">ユーザーの割り当て先となる {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](../../../admin/users_roles.html)を参照してください。
+<dd class="pd">{{site.data.keyword.Bluemix_notm}} ユーザーの役割とそれぞれの説明については、[役割](/docs/admin/users_roles.html)を参照してください。
 </dd>
 </dl>
 
@@ -326,6 +323,86 @@ cf ba set-quota <organization> <plan>
 </dl>
 
 **ヒント:** **ba set-quota** という長いコマンド名の別名として **ba sq** を使用することもできます。
+
+
+### 組織のコンテナー割り当て量の判別と設定
+{: #containquotas}
+
+組織のコンテナーの割り当て量を判別および設定することができます。
+
+組織のコンテナーの割り当て量を判別するには、以下のコマンドを入力します。
+
+```
+cf bluemix-admin containers-quota <organization>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Bluemix 内の組織の名前または ID。このパラメーターは必須です。</dd>
+</dl>
+
+**ヒント:** **bluemix-admin containers-quota** という長いコマンド名の別名として **ba cq** を使用することもできます。
+
+組織のコンテナーの割り当て量を設定するには、少なくとも 1 つのオプションを含めて以下のコマンドを入力します。
+
+```
+cf bluemix-admin set-containers-quota <organization> <options>
+```
+{: codeblock}
+
+**注**: 複数のオプションを含められますが、少なくとも 1 つは含める必要があります。
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Bluemix 内の組織の名前または ID。このパラメーターは必須です。</dd>
+<dt class="pt dlterm">&lt;options&gt;</dt>
+<dd class="pd">以下のオプションを 1 つ以上含めます。値は整数でなければなりません。
+<ul>
+<li>floating-ips-max &lt;value&gt;</li>
+<li>floating-ips-space-default &lt;value&gt;</li>
+<li>memory-max &lt;value&gt;</li>
+<li>memory-space-default &lt;value&gt;</li>
+<li>image-limit &lt;value&gt;</li>
+</ul>
+</dd>
+</dl>
+
+**ヒント:** 長いオプション名の別名として、以下の短い名前を使用することも可能です。
+<dl class="parml">
+<dt class="pt dlterm">floating-ips-max &lt;value&gt;</dt>
+<dd class="pd"><strong>fim</strong></dd>
+<dt class="pt dlterm">floating-ips-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>fisd</strong></dd>
+<dt class="pt dlterm">memory-max &lt;value&gt;</dt>
+<dd class="pd"><strong>mm</strong></dd>
+<dt class="pt dlterm">memory-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>msd</strong></dd>
+<dt class="pt dlterm">image-limit &lt;value&gt;</dt>
+<dd class="pd"><strong>il</strong></dd>
+</dl>
+
+オプションで、有効な JSON オブジェクトに固有の構成パラメーターを含むファイルを指定できます。**-file** オプションを使用すると、それが優先され、他のオプションは無視されます。オプションを設定する代わりにファイルを指定する場合は、以下のコマンドを入力します。
+
+```
+cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+```
+{: codeblock}
+
+JSON ファイルには、以下の例に示したフォーマットが含まれる必要があります。
+
+```
+{
+  "floating_ips_max": 10,
+  "floating_ips_space_default": 0,
+  "ram_max": 4096,
+  "ram_space_default": 0,
+  "image_limit": 10
+}  
+```
+{: codeblock}
+
+**ヒント:** **bluemix-admin set-containers-quota** という長いコマンド名の別名として **ba scq** を使用することもできます。
 
 ### レポートの追加、削除、および取得
 
@@ -474,13 +551,13 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 **ヒント:** **ba edit-service-plan-visibility** という長いコマンド名の別名として **ba espv** を使用することもできます。
 
-### リソース使用情報の表示
+### リソース・メトリック情報の表示
 {: #cliresourceusage}
 
-メモリー、ディスク、CPU 使用量など、リソース使用情報を表示できます。使用可能な物理リソースと予約済みリソース、および物理リソースと予約済みリソースの使用量の要約を確認できます。Droplet Execution Agent (DEA) の使用データおよび履歴のメモリーとディスク使用量を確認することもできます。デフォルトでは、メモリーおよびディスク使用量の履歴データは、週次で降順に表示されます。リソース使用情報を表示するには、以下のコマンドを使用します。
+メモリー、ディスク、CPU 使用量など、リソース・メトリック情報を表示できます。使用可能な物理リソースと予約済みリソース、および物理リソースと予約済みリソースの使用量の要約を確認できます。Droplet Execution Agent (DEA) の使用データおよび履歴のメモリーとディスク使用量を確認することもできます。デフォルトでは、メモリーおよびディスク使用量の履歴データは、週次で降順に表示されます。リソース・メトリック情報を表示するには、以下のコマンドを使用します。
 
 ```
-cf ba resource-usage <monthly> <weekly> 
+cf ba resource-metrics <monthly> <weekly>
 ```
 {: codeblock}
 
@@ -491,7 +568,7 @@ cf ba resource-usage <monthly> <weekly>
 <dd class="pd">一度に 1 週間分ずつ、メモリーおよびディスク・スペースの履歴データを表示します。これはデフォルト値です。</dd>
 </dl>
 
-**ヒント:** **ba resource-usage** という長いコマンド名の別名として **ba rsu**を使用することもできます。
+**ヒント:** **ba resource-metrics** という長いコマンド名の別名として **ba rsm** を使用することもできます。
 
 ### サービス・ブローカーの操作
 
@@ -549,7 +626,9 @@ cf ba delete-service-broker <service_broker>
 
 * サービス・ブローカーを更新するには、次のコマンドを入力します。
 
-`cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>`
+```
+cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
+```
 {: codeblock}
 
 <dl class="parml">

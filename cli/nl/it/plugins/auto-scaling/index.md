@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   anni: 2015，2016
 
- 
+lastupdated: "2016-02-24"
+
 
 ---
 
@@ -42,7 +43,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## Collegamento di una politica di ridimensionamento automatico
 
-Puoi collegare una politica di ridimensionamento automatico a una specifica applicazione. Immetti il seguente comando:
+Puoi collegare una politica di ridimensionamento automatico a una specifica applicazione. Eseguendo il seguente comando: 
 
 ```
 bx as policy-attach <APP_NAME> -p <policy_file>
@@ -86,7 +87,7 @@ bx as policy-show <APP_NAME> [--json]
 
 ## Scollegamento di una politica di ridimensionamento automatico
 
-Puoi rimuovere una politica di ridimensionamento automatico da un'applicazione. Immetti il seguente comando:
+Puoi rimuovere una politica di ridimensionamento automatico da un'applicazione. Eseguendo il seguente comando:
 
 ```
 bx as policy-detach <APP_NAME>
@@ -101,7 +102,7 @@ bx as policy-detach <APP_NAME>
 
 ## Abilitazione o disabilitazione di una politica di ridimensionamento automatico
 
-Puoi abilitare o disabilitare la politica di ridimensionamento automatico di una specifica applicazione. Immetti il seguente comando:
+Puoi abilitare o disabilitare la politica di ridimensionamento automatico di una specifica applicazione. Eseguendo il seguente comando:
 
 ```
 bx as policy-enable|policy-disable <APP_NAME>
@@ -140,8 +141,6 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 {: rellinks}
 ## generale
 {: general}
-* [{{site.data.keyword.autoscaling}}servizio](../../../services/Auto-Scaling/index.html)
+* [{{site.data.keyword.autoscaling}}servizio](/docs/services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}
-
-

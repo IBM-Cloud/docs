@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # 有关运行时的故障诊断
 {: #runtimes}
 
-上次更新时间：2016 年 8 月 18 日
-{: .last-updated}
 
 
 使用 IBM® Bluemix™ 运行时的时候，可能会遇到问题。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。

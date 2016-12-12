@@ -1,19 +1,18 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Móvil
 {: #mobile}
 
-*Última actualización: 9 de diciembre de 2015*
-
-Utilice los servicios móviles para crear app multiplataforma, nativas o híbridas, de Android y de iOS. 
+Utilice los servicios móviles para crear app multiplataforma, nativas o híbridas, de Android y de iOS.
 {:shortdesc}
 
 

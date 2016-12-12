@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-24"
+
 ---
 
 
@@ -15,9 +16,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} (bx) コマンド
 {: #bluemix_cli}
-
-最終更新日: 2016 年 10 月 25 日
-{: .last-updated}
 
 バージョン: 0.4.1
 
@@ -305,8 +303,8 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
  <tr>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic stop](index.html#ic_stop)</td>
@@ -316,7 +314,7 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  <td>[bluemix ic unpause](index.html#unpause)</td>
  <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
@@ -2761,7 +2759,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 ログインしている Bluemix スペースで IBM Containers サービスを再作成します。スペースの元の割り当て量は維持されます。
 
-<strong>重要</strong>: このコマンドを実行した場合、このスペース内の単一コンテナーおよびグループはどれも、再プロビジョンされたスペースにマイグレーションされず、マイグレーション・プロセス中に削除されます。 
+<strong>重要</strong>: このコマンドを実行した場合、このスペース内の単一コンテナーおよびグループはどれも、再プロビジョンされたスペースにマイグレーションされず、マイグレーション・プロセス中に削除されます。
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]

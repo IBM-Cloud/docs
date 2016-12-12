@@ -46,8 +46,10 @@ de la ligne de commande.
 ## Utilisation de l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_using_cli}
 
-Une fois que vous avez configuré votre environnement, vous pouvez commencer à utiliser l'interface de ligne de commande
-d'{{site.data.keyword.openwhisk_short}} pour effectuer les opérations suivantes :
+Une fois que vous avez
+[configuré votre
+environnement](https://new-console.{DomainName}/openwhisk/cli){: new_window}, vous pouvez commencer à utiliser
+l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}} pour effectuer les opérations suivantes :
 
 * Exécuter vos fragments de code, ou vos actions, dans {{site.data.keyword.openwhisk_short}}. Voir
 [Création et appel d'actions](./openwhisk_actions.html).

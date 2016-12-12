@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-17"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 #Monitorando e criando logs com o Cloud Foundry
 {: #monitoringandlogging}
 
-Última atualização: 28 de outubro de 2016
-{: .last-updated}
 
 Ao monitorar seus apps e revisar logs, é possível seguir a execução do aplicativo e o fluxo de dados para obter um melhor entendimento de sua implementação. Além disso, é possível reduzir o tempo e o esforço necessários para localizar problemas e repará-los.
 {:shortdesc}
@@ -43,8 +42,8 @@ Quando você estiver usando a infraestrutura do Cloud Foundry para executar seus
 
 Para monitorar apps {{site.data.keyword.Bluemix_notm}}, use um dos métodos a seguir:
 
-* Serviços {{site.data.keyword.Bluemix_notm}}. O Monitoring and Analytics oferece um serviço que pode ser usado para monitorar o desempenho do aplicativo. Além disso, esse serviço também fornece recursos analíticos, como análise de log. Para obter mais informações, consulte [Monitoring and
-Analytics](../services/monana/index.html).
+* Serviços {{site.data.keyword.Bluemix_notm}}. O Monitoring and Analytics oferece um serviço que pode ser usado para monitorar o desempenho do aplicativo. Além disso, esse serviço também fornece recursos analíticos, como análise de log. Para obter informações adicionais, consulte [Monitoring and
+Analytics](/docs/services/monana/index.html).
 * Opções de terceiros. Por exemplo, [New Relic](http://newrelic.com/){:new_window}.
 
 ###Criação de log para apps em execução no Cloud Foundry
@@ -202,7 +201,7 @@ tarefa de preparação. É possível usar esse log para solucionar problemas de 
 </li></ul>
 
 
-**Nota:** para obter informações sobre como ativar a criação de log do aplicativo, consulte [Depurando erros de tempo de execução](../debug/index.html#debugging-runtime-errors).
+**Nota:** para obter informações sobre como ativar a criação de log do aplicativo, consulte [Depurando erros de tempo de execução](/docs/debug/index.html#debugging-runtime-errors).
 
 
 
@@ -412,6 +411,50 @@ source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 
 A Jane vê um fluxo de logs em sua interface da web do Splunk. Embora o Splunk que a Jane instala seja o Splunk Light, ela ainda pode reter 500 MB de logs por dia.  
 
+## Criação de log para apps do Cloud Foundry no {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}
+{: #hybrid_apps_logs_ov}
 
+
+No {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}, os apps do Cloud Foundry são fornecidos com a criação de log integrada. É possível revisar os dados que são coletados de seus apps no console do {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
+
+Os apps do Cloud Foundry usam o loggregator do Cloud Foundry para monitorar e encaminhar logs de fora do app. Não é necessário instalar os agentes dentro do app.
+
+### requisitos
+de hardware
+
+*Tabela 1. Registrando os requisitos de hardware para o {{site.data.keyword.Bluemix_local_notm}}*
+{: #table01}
+
+| **Requisitos** |    **1 nó**     | **3 nós para alta disponibilidade** |
+|-----------------|-------------------|-------------------|
+| vCPU | 19 | 57 |
+| Memória | 80 GB | 240 GB |
+| Armazenamento local | 2,98 TB | 8,94 TB |
+
+### Configuração
+
+No {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}, os logs estão ativos para todos os apps por padrão. Para visualizar informações sobre leitura de logs padrão, veja [Criação de log para apps em execução no Cloud Foundry](#logging_for_bluemix_apps). Além disso, a criação de log avançada pode ser ativada nos ambientes do {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}.
+
+* Para confirmar se a criação de log avançada está ativada nos ambientes do {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}, siga as etapas em [Visualizando logs](#hybrid_apps_logs_dash). Se você não tiver o botão **Visualização avançada**, esse recurso não será ativado.
+
+* Para incluir a criação de log avançada em seu ambiente, siga a etapas na documentação do [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) ou [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local). 
+
+### Retenção de log
+
+Nos apps do Cloud Foundry {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}, os dados do log são armazenados por 30 por padrão.
+
+## Visualizando logs para apps do Cloud Foundry no {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}
+{: #hybrid_apps_logs_dash}
+
+É possível revisar os logs para os apps que você está executando no {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}.
+{:shortdesc}
+
+Para visualizar os logs de app, siga estas etapas.
+1. Selecione um app em execução.
+2. Clique em **Logs**. Na visualização **Logs**, é possível visualizar os logs de seu app em execução.
+4. Clique no botão **Visualização avançada**. **Visualização avançada** mostra uma visualização mais detalhada dos logs usando o Kibana, uma ferramenta de visualização que usa logs e dados com registro de data e hora para criar visualizações customizadas. Para obter informações adicionais sobre o uso da visualização avançada, consulte a documentação do [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+
+Em seguida, é possível customizar um painel do Kibana. Veja [Customizando a exibição de log no painel do Kibana](/docs/manageapps/containers/container_ml_logs.html#container_ml_dash_logs_custom) para obter mais informações.
 
 

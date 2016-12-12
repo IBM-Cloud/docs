@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 #服务
 {: #services}
-*上次更新时间：2016 年 10 月 23 日*
 
 通过 {{site.data.keyword.Bluemix_notm}}，您可以轻松地实施、托管和扩展服务和应用程序。您可以关注应用程序逻辑和应用程序设计。
 {:shortdesc}
@@ -21,10 +21,10 @@ copyright:
 
 |类型	|描述	|支持详细信息|
 |:------|:--------------|:--------------|
-|IBM	|IBM 提供且普遍可用的服务。	|如果问题确定为 IBM 提供且普遍可用的服务中的缺陷，那么将受支持。将基于您设置的严重性提供支持。有关凭单严重性的更多信息，请参阅[联系支持人员](../support/index.html#contacting-bluemix-support){: new_window}。|
+|IBM	|IBM 提供且普遍可用的服务。	|如果问题确定为 IBM 提供且普遍可用的服务中的缺陷，那么将受支持。将基于您设置的严重性提供支持。有关凭单严重性的更多信息，请参阅[联系支持人员](/docs/support/index.html#contacting-bluemix-support){: new_window}。|
 |第三方	|非 IBM 公司提供的服务。	|对第三方服务的支持由服务提供者提供。如果 IBM 调查的某个问题确定为第三方服务中的缺陷，那么 IBM 没有义务提供修订。如果需要，IBM 将与第三方服务提供者共享分析。|
 |社区	|开放式源代码社区提供的服务。	|对社区服务的支持由 {{site.data.keyword.Bluemix_notm}} 开发者社区提供。如果 IBM 调查的某个问题确定为社区服务中的缺陷，那么 IBM 没有义务提供修订。|
-|Beta	|尚不可用于生产、目前处于开发试用阶段的服务。Beta 服务可帮助开发和市场营销团队先评估服务价值，再使服务普遍可用。	|如果问题确定为 IBM 提供的 beta 服务中的缺陷，那么将受支持，但 IBM 没有义务提供修订。此外，将在适当的情况下为问题凭单分配严重性 3 或 4。有关凭单严重性的信息，请参阅[联系支持人员](../support/index.html#contacting-bluemix-support){: new_window}。|
+|Beta	|尚不可用于生产、目前处于开发试用阶段的服务。Beta 服务可帮助开发和市场营销团队先评估服务价值，再使服务普遍可用。	|如果问题确定为 IBM 提供的 beta 服务中的缺陷，那么将受支持，但 IBM 没有义务提供修订。此外，将在适当的情况下为问题凭单分配严重性 3 或 4。有关凭单严重性的信息，请参阅[联系支持人员](/docs/support/index.html#contacting-bluemix-support){: new_window}。|
 *表 1. {{site.data.keyword.Bluemix_notm}} 服务支持信息*
 
 
@@ -84,7 +84,7 @@ copyright:
 |{{site.data.keyword.GlobalizationPipeline_short}}	|在美国达拉斯托管		|在英国伦敦托管		|在澳大利亚悉尼托管 |
 |{{site.data.keyword.dataworks_short}}		|在美国达拉斯托管		|在英国伦敦托管		|在区域中不可用 |
 |{{site.data.keyword.openwhisk}}		|在美国达拉斯托管		|在区域中不可用		|在区域中不可用 |
-|{{site.data.keyword.containerlong}}		|在美国达拉斯托管		|在英国伦敦托管		|在澳大利亚悉尼托管 |
+|{{site.data.keyword.containerlong}}		|在美国达拉斯托管		|在英国伦敦托管		|在区域中不可用 |
 |{{site.data.keyword.datastagefull}}		|在美国达拉斯托管		|在英国伦敦托管		|在澳大利亚悉尼托管 |
 |{{site.data.keyword.graphshort}}       |在美国达拉斯托管		|在美国达拉斯托管		|在区域中不可用 |
 |{{site.data.keyword.mdmcloudfull}}		|在美国达拉斯托管		|在英国伦敦托管		|在澳大利亚悉尼托管 |
@@ -140,7 +140,7 @@ copyright:
 
 ## 服务持续可用性
 {: #services_availability}
-{{site.data.keyword.Bluemix_notm}} 已将一组服务确定为第 1 层。IBM 在未提供等效功能的情况下，不会撤销任何第 1 层服务，或者撤销前至少提前五年通知。 
+{{site.data.keyword.Bluemix_notm}} 已将一组服务确定为第 1 层。IBM 在未提供等效功能的情况下，不会撤销任何第 1 层服务，或者撤销前至少提前五年通知。
 
 以下服务分类为第 1 层：
   * {{site.data.keyword.apiconnect_short}}
@@ -154,9 +154,9 @@ copyright:
   * PostgresSQL by Compose
   * {{site.data.keyword.ssofull}}
 
-要阅读有关服务使用条款的更多信息，请参阅：[{{site.data.keyword.Bluemix_notm}} 条款](../navigation/notices.html#terms)。
+要阅读有关服务使用条款的更多信息，请参阅：[{{site.data.keyword.Bluemix_notm}} 条款](/docs/navigation/notices.html#terms)。
 
 ## 服务废弃
 {: #service_deprecation}
 
-在中断或替换一般可用服务之前，IBM 将就其意图提供至少 30 天的通知。如果不提供等效替换，那么从该通知的日期起至少 12 个月内，IBM 将使用在商业上合理的方式来继续操作和支持先前部署的服务实例。 
+在中断或替换一般可用服务之前，IBM 将就其意图提供至少 30 天的通知。如果不提供等效替换，那么从该通知的日期起至少 12 个月内，IBM 将使用在商业上合理的方式来继续操作和支持先前部署的服务实例。

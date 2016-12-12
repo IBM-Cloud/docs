@@ -6,7 +6,7 @@ copyright:
 
   years: 2016
 
-
+lastupdated: "2016-11-14"
 
 ---
 
@@ -18,9 +18,6 @@ copyright:
 
 # Comandos do Cloud Foundry (cf)
 {: #cf}
-
-Última atualização: 20 de outubro de 2016
-{: .last-updated}
 
 A interface da linha de comandos (CLI) do Cloud Foundry (cf) fornece um conjunto de comandos para gerenciar seus apps. As informações a seguir listam os comandos cf usados mais comumente para gerenciar apps e inclui seus nomes, opções, uso, pré-requisitos, descrições e exemplos. Para listar todos os comandos cf e informações de ajuda associadas, use `cf help`. Use `cf command_name -h` para visualizar informações detalhadas da ajuda para um comando específico.
 {: shortdesc}
@@ -52,6 +49,7 @@ Use o índice na tabela a seguir para se referir aos comandos do Cloud Foundry u
  </table>
 *Tabela 1. Comandos gerais do Cloud Foundry*
 
+
 <table summary="Comandos ordenados alfabeticamente para gerenciar apps, espaços e serviços. Cada comando tem um link que leva a mais informações sobre ele.">
  <thead>
  <th colspan="5">Comandos para gerenciar aplicativos, espaços e serviços</th>
@@ -74,14 +72,17 @@ Use o índice na tabela a seguir para se referir aos comandos do Cloud Foundry u
  <td>[push](index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[escalar](index.html#cf_scale)</td>
+ <td>[scale](index.html#cf_scale)</td>
  <td>[Serviços](index.html#cf_services)
  <td>[set-env](index.html#cf_set-env)</td>
+ <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
 *Tabela 2. Comandos para gerenciar apps, espaços e serviços*
+
+
 ## cf api
 {: #cf_api}
 
@@ -633,6 +634,7 @@ atual.
 cf services
 ```
 <strong>Pré-requisitos</strong>: `cf api`, `cf login`, `cf target`
+
 <strong>Opções de comando</strong>: nenhuma.
 
 <strong>Exemplos</strong>:
@@ -674,6 +676,42 @@ cf set-env my_app variable_a 123
 {: codeblock}
 
 
+## cf ssh
+{: #cf_ssh}
+
+Efetua seu login com segurança em um contêiner de aplicativo. Por padrão, o SSH acessa o contêiner que executa a primeira instância do aplicativo, que é a instância com índice 0.
+
+```
+cf ssh
+```
+<strong>Pré-requisitos</strong>: `cf api`, `cf login`, `cf target`
+
+Deve-se também configurar a implementação do Cloud Foundry para permitir o acesso SSH a instâncias do aplicativo. Para obter detalhes, veja [Configurando o acesso SSH para Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}
+
+<strong>Opções de comando</strong>:
+
+<dl>
+<dt>appname</dt>
+<dd>O nome do aplicativo. Se o SSH for permitido, será possível usar essa opção para iniciar uma sessão SSH interativa com uma VM hospedando o aplicativo.</dd>
+<dt>-i</dt>
+<dd>Destina uma instância específica de um aplicativo.</dd>
+<dt>-L</dt>
+<dd>Ativa o encaminhamento de porta local, que liga uma porta de saída em sua máquina a uma porta de entrada na VM do aplicativo.</dd>
+<dt>-N</dt>
+<dd>Não executar um comando remoto.</dd>
+<dt>-t, -tt ou -T</dt>
+<dd>Permite executar uma sessão SSH no modo pseudo-tty em vez de gerar a saída de linha de terminal.<dd>
+</dl>
+
+<strong>Exemplos</strong>:
+
+Inicie uma sessão SSH interativa com uma VM hospedando um aplicativo nomeado `my_app`.
+```
+$ cf ssh my_app
+```
+{: codeblock}
+
+
 ## cf stacks
 {: #cf_stacks}
 
@@ -685,6 +723,7 @@ sistema operacional que pode executar apps.
 cf stacks
 ```
 <strong>Pré-requisitos</strong>: `cf api`, `cf login`
+
 <strong>Opções de comando</strong>: nenhuma.
 
 <strong>Exemplos</strong>:
@@ -705,6 +744,7 @@ Para um aplicativo
 cf stop appname
 ```
 <strong>Pré-requisitos</strong>: `cf api`, `cf login`, `cf target`
+
 <strong>Opções de comando</strong>:
 
 <dl>
@@ -730,6 +770,7 @@ Configura ou visualiza a organização ou espaço de destino
 cf target [-o org_name] [-s space_name]
 ```
 <strong>Pré-requisitos</strong>: `cf api`, `cf login`
+
 <strong>Opções de comando</strong>:
 
 <dl>
@@ -757,6 +798,7 @@ Exibe a versão da interface da linha de comandos do cf.
 cf -v
 ```
 <strong>Pré-requisitos</strong>: nenhum.
+
 <strong>Opções de comando</strong>: nenhuma.
 
 <strong>Exemplos</strong>:

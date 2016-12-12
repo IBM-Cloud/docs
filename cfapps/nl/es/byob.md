@@ -8,6 +8,8 @@ copyright:
 
 lastupdated: "2016-03-15" 
 
+
+
 ---
 
 {:new_window: target="_blank"}
@@ -101,7 +103,7 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 Utilice el mandato <strong>cf set-env</strong>. Por ejemplo, especifique el mandato siguiente para establecer la versión de Java a 1.7.0:
 <pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &apos;{jre: { version: 1.7.0_+ }}&apos;</code></pre>
 <p>A continuación,
-vuelva a transferir la app para que el cambio sea efectivo: </p>
+vuelva a transferir la app para que el cambio sea efectivo:</p>
 <pre class="pre"><code>cf restage nombre_app</code></pre>
 </li>
 <li>

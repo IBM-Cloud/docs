@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
- 
+lastupdated: "2015-12-07"
+
 
 ---
 
@@ -14,9 +15,6 @@ copyright:
 
 # Inizia a codificare
 
-*Ultimo aggiornamento:  7 dicembre 2015*
 
 In {{site.data.keyword.Bluemix_notm}} puoi iniziare a codificare rapidamente attenendoti alla procedura fornita dopo la creazione di un'applicazione.
 {:shortdesc}
-
-

@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # 비즈니스 분석
 {: #businessanalytics}
-
-*마지막 업데이트 날짜: 2015년 12월 9일*
 
 이러한 서비스를 사용하면 비즈니스 인텔리전스를 애플리케이션에 임베드하여 모든 유형의 데이터로부터 더 빠르고 쉽게 통찰을 발견해 낼 수 있습니다.
 {:shortdesc}

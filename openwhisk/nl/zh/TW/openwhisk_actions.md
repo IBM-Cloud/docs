@@ -155,10 +155,31 @@ function main(params) {
 wsk action update hello hello.js
   ```
   {: pre}
+
+3.  可在指令行上明確地提供參數，或提供包含所需參數的檔案來提供參數
+
+  若要透過指令行直接傳遞參數，請提供一對索引鍵/值給 `--param` 旗標：
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
+
+  若要使用包含參數內容的檔案，請以 JSON 格式建立包含參數的檔案。然後，必須將檔名傳遞至 `param-file` 旗標：
+
+  稱為 parameters.json 的範例參數檔案：
+  ```
+  {
+      "name": "Bernie",
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {
       "payload": "Hello, Bernie from Vermont"
@@ -166,7 +187,7 @@ wsk action update hello hello.js
   ```
   {: screen}
 
-  請注意，`--param` 選項用來指定參數名稱及值，而 `--result` 選項用來只顯示呼叫結果。
+  請注意，使用 `--result` 選項，只會顯示呼叫結果。
 
 ### 設定預設參數
 {: #openwhisk_binding_actions}
@@ -175,10 +196,28 @@ wsk action update hello hello.js
 
 您可以連結特定參數，而非每次都將所有參數傳遞給動作。下列範例會連結 *place* 參數，以將動作預設為 "Vermont" 這個位置：
  
-1. 使用 `--param` 選項來連結參數值，以更新動作。
+1. 更新動作，方法為使用 `--param` 選項來連結參數值，或將包含參數的檔案傳遞至 `--param-file`
+
+  若要在指令行上明確地指定預設參數，請將一對索引鍵/值提供給 `param` 旗標：
 
   ```
   wsk action update hello --param place Vermont
+  ```
+  {: pre}
+
+  從檔案傳遞參數需要以 JSON 格式建立一個包含所需內容的檔案。
+然後，必須將檔名傳遞至 `-param-file` 旗標：
+
+  稱為 parameters.json 的範例參數檔案：
+  ```
+  {
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action update hello --param-file parameters.json
   ```
   {: pre}
 
@@ -199,10 +238,30 @@ wsk action update hello hello.js
 
 3. 呼叫動作，並傳遞 `name` 及 `place` 值。後者會改寫連結至動作的值。
 
+  使用 `--param` 旗標：
+
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
+  使用 `--param-file` 旗標：
+
+  檔案 parameters.json：
+  ```
+  {
+    "name": "Bernie",
+    "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -230,7 +289,7 @@ wsk action update hello hello.js
 
   請注意，`main` 函數會傳回 Promise，這表示啟動尚未完成，但預期未來可完成。
 
-  在此情況下，`setTimeout()` JavaScript 函數會先等待 20 秒，再呼叫回呼函數。這會呈現非同步程式碼，並進入 Promise 的回呼函數內。
+  在此情況下，`setTimeout()` JavaScript 函數會等待兩秒，再呼叫回呼函數。這會呈現非同步程式碼，並進入 Promise 的回呼函數內。
 
   Promise 的回呼接受兩個引數（resolve 及 reject），這兩個都是函數。`resolve()` 呼叫可滿足 Promise，並指出啟動正常完成。
 
@@ -414,8 +473,8 @@ exports.main = myAction;
   {: screen}
 
 最後，請注意，雖然大部分 `npm` 套件都會在 `npm install` 上安裝 JavaScript 原始檔，但是有一部分也會安裝及編譯二進位構件。保存檔上傳目前不支援二進位相依關係，而只支援 JavaScript 相依關係。如果保存檔包括二進位相依關係，則動作呼叫可能會失敗。
-    
-### 建立動作序列
+
+## 建立動作序列
 {: #openwhisk_create_action_sequence}
 
 您可以建立一個動作，以將一連串的動作鏈結在一起。
@@ -570,6 +629,73 @@ wsk action invoke --blocking --result helloSwift --param name World
 {: screen}
 
 **注意：**Swift 動作是在 Linux 環境中執行。Swift on Linux 仍在開發中，而且 {{site.data.keyword.openwhisk_short}} 通常會使用最新的可用版本，但此版本不一定是穩定的。此外，與 {{site.data.keyword.openwhisk_short}} 搭配使用的 Swift 版本，可能與 MacOS 上穩定 XCode 版本的 Swift 版本不一致。
+
+## 建立 Java 動作
+{: #openwhisk_actions_java}
+
+建立 Java 動作的程序，與建立 JavaScript 及 Swift 動作的程序類似。下列各節會引導您建立及呼叫單一 Java 動作，以及將參數新增至該動作。
+
+若要編譯、測試及保存 Java 檔案，您必須已在本端安裝 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。
+
+### 建立及呼叫動作
+{: #openwhisk_actions_java_invoke}
+
+Java 動作是一種 Java 程式，搭配稱為 `main` 的方法，其具有確切的簽章，如下所示：
+```
+public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
+```
+{: codeblock}
+
+例如，使用下列內容建立稱為 `Hello.java` 的 Java 檔案：
+
+```
+import com.google.gson.JsonObject;
+public class Hello {
+    public static JsonObject main(JsonObject args) {
+        String name = "stranger";
+        if (args.has("name"))
+            name = args.getAsJsonPrimitive("name").getAsString();
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+    }
+}
+```
+{: codeblock}
+
+然後，將 `Hello.java` 編譯成 JAR 檔 `hello.jar`，如下所示：
+```
+javac Hello.java
+jar cvf hello.jar Hello.class
+```
+{: pre}
+
+**附註：**當編譯 Java 檔案時，[google-gson](https://github.com/google/gson) 必須存在於您的 Java CLASSPATH 中。
+
+您可以從這個 JAR 檔建立稱為 `helloJava` 的 OpenWhisk 動作，如下所示：
+
+```
+wsk action create helloJava hello.jar
+```
+{: pre}
+
+當使用指令行及 `.jar` 原始檔時，您不需要指定您是建立 Java 動作；工具會根據副檔名判定。
+
+對於 Java 動作，動作呼叫是相同的，因為其適用於 Swift 及 JavaScript 動作：
+
+```
+wsk action invoke --blocking --result helloJava --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
+
+**附註：**如果 JAR 檔具有多個類別，其 main 方法符合必要簽章，則 CLI 工具會使用 `jar -tf` 所報告的第一個類別。
 
 
 ## 建立 Docker 動作

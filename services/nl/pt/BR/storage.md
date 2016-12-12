@@ -1,20 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Storage
 {: #storage}
 
-*Última atualização: 9 de dezembro de 2015*
-
 Com estes serviços de armazenamento, obtenha acesso a um armazenamento de dados em nuvem confiável e com custo reduzido.
 {: shortdesc}
-
-
-

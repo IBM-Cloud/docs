@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-
+lastupdated: "2016-11-08"
 
 ---
 
@@ -18,16 +18,13 @@ copyright:
 # CLI de admin de {{site.data.keyword.Bluemix_notm}}
 {: #bluemixadmincli}
 
-Última actualización: 1 de septiembre de 2016
-{: .last-updated}
-
 
 Puede gestionar usuarios del entorno Local o Dedicado de
 {{site.data.keyword.Bluemix_notm}} o {{site.data.keyword.Bluemix_notm}} mediante
 la interfaz de línea de mandatos de Cloud Foundry con el plug-in CLI de administración de
 {{site.data.keyword.Bluemix_notm}}. Por ejemplo, puede añadir usuarios de un registro
 de LDAP. Si busca información sobre la gestión de su cuenta {{site.data.keyword.Bluemix_notm}} pública, consulte
-[Administración](../../../admin/adminpublic.html#administer).
+[Administración](/docs/admin/adminpublic.html#administer).
 
 Antes de empezar, instale la interfaz de línea de mandatos cf. El plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} necesita
 cf versión 6.11.2 o posterior. [Descargue la interfaz de línea de mandatos
@@ -63,13 +60,13 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 
 Si necesita desinstalar el plug-in, puede utilizar los mandatos siguientes y, a continuación, puede añadir el repositorio actualizado e instalar el plug-in más reciente:
 
-* Desinstale el plug-in: `cf uninstall-plugin-repo BluemixAdminCLI`
+* Desinstale el plug-in: `cf uninstall-plugin BluemixAdminCLI`
 * Elimine el repositorio de plug-ins: `cf remove-plugin-repo BluemixAdmin`
 
 
 ## Utilización del plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}
 
-Puede utilizar el plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} para añadir o eliminar usuarios, asignar o desasignar usuarios de organizaciones y para realizar otras tareas de gestión. 
+Puede utilizar el plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} para añadir o eliminar usuarios, asignar o desasignar usuarios de organizaciones y para realizar otras tareas de gestión.
 
 Para ver una lista de mandatos, ejecute el mandato siguiente:
 
@@ -113,7 +110,7 @@ cf ba add-user <nombre_usuario> <organización>
 ```
 {: codeblock}
 
-**Nota**: para añadir un usuario a una organización específica, debe ser un **Administrador** con el permiso **users.write** (o **Superusuario**). Si es un gestor de organización, también se le puede proporcionar la posibilidad de añadir usuarios a su organización mediante un Superusuario que ejecute el mandato **enable-managers-add-users**. Consulte [Permitir a los gestores agregar usuarios](index.html#clius_emau) para obtener más información.
+**Nota**: para añadir un usuario a una organización específica, debe ser un **Administrador** con el permiso **users.write** (o **Superusuario**). Si es un gestor de organización, también se le puede proporcionar la posibilidad de añadir usuarios a su organización mediante un Superusuario que ejecute el mandato **enable-managers-add-users**.  Consulte [Permitir a los gestores agregar usuarios](index.html#clius_emau) para obtener más información.
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nombre_usuario&gt;</dt>
@@ -141,11 +138,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">El nombre del usuario en {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">El permiso asignado al usuario. Por ejemplo, superusuario, básico, catálogo, usuario e informes. Para obtener más información sobre los permisos de usuario asignados, consulte [Permisos](../../../admin/index.html#permissions). No se puede utilizar este parámetro con el parámetro de organización en la misma consulta. </dd>
+<dd class="pd">El permiso asignado al usuario. Por ejemplo, superusuario, básico, catálogo, usuario e informes. Para obtener más información sobre los permisos de usuario asignados, consulte [Permisos](/docs/admin/index.html#permissions). No se puede utilizar este parámetro con el parámetro de organización en la misma consulta. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">El nombre de la organización a la que pertenece el usuario. No se puede utilizar este parámetro con el parámetro de organización en la misma consulta.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">El rol de organización asignado al usuario. Por ejemplo, gestor, gestor de facturación o auditor de la organización. Especifique la organización con este parámetro. Para obtener más información acerca de los roles, consulte [Roles de usuario](../../../admin/users_roles.html#userrolesinfo).</dd>
+<dd class="pd">El rol de organización asignado al usuario. Por ejemplo, gestor, gestor de facturación o auditor de la organización. Especifique la organización con este parámetro. Para obtener más información acerca de los roles, consulte [Roles de usuario](/docs/admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 
@@ -215,7 +212,7 @@ cf ba enable-managers-add-users
 ### No permitir a los gestores agregar usuarios
 {: #clius_dmau}
 
-Si a los gestores de la organización se les permite agregar usuarios a las organizaciones que gestionan en el entorno de {{site.data.keyword.Bluemix_notm}} con el mandato **enable-managers-add-users**, y si tiene el permiso **Superusuario**, puede eliminar este valor. Escriba este mandato:
+Si a los gestores de la organización se les permite agregar usuarios a las organizaciones que gestionan en el entorno de {{site.data.keyword.Bluemix_notm}} con el mandato **enable-managers-add-users**, y si tiene el permiso **Superusuario**, puede eliminar este valor.  Escriba este mandato:
 
 ```
 cf ba disable-managers-add-users
@@ -278,7 +275,7 @@ cf ba set-org <nombre_usuario> <organización> [<rol>]
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o GUID de la organización {{site.data.keyword.Bluemix_notm}} a la que se va a asignar el usuario.</dd>
 <dt class="pt dlterm">&lt;rol&gt;</dt>
-<dd class="pd">Consulte [Roles](../../../admin/users_roles.html) para ver los roles de usuario de {{site.data.keyword.Bluemix_notm}} y sus descripciones.</dd>
+<dd class="pd">Consulte [Roles](/docs/admin/users_roles.html) para ver los roles de usuario de {{site.data.keyword.Bluemix_notm}} y sus descripciones.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba so** como alias para el nombre de mandato
@@ -301,7 +298,7 @@ cf ba unset-org <nombre_usuario> <organización> [<rol>]
 <dt class="pt dlterm">&lt;organización&gt;</dt>
 <dd class="pd">El nombre o GUID de la organización {{site.data.keyword.Bluemix_notm}} a la que se va a asignar el usuario.</dd>
 <dt class="pt dlterm">&lt;rol&gt;</dt>
-<dd class="pd">Consulte [Roles](../../../admin/users_roles.html) para ver los roles de usuario de {{site.data.keyword.Bluemix_notm}} y sus descripciones.</dd>
+<dd class="pd">Consulte [Roles](/docs/admin/users_roles.html) para ver los roles de usuario de {{site.data.keyword.Bluemix_notm}} y sus descripciones.</dd>
 </dl>
 
 **Sugerencia:** También puede usar **ba uo** como alias para un nombre de mandato
@@ -342,6 +339,91 @@ cf ba set-quota <organización> <plan>
 
 **Sugerencia:** También puede usar **ba sq** como alias para el nombre de mandato
 **ba set-quota** más largo.
+
+
+### Búsqueda y definición de cuotas de contenedor para una organización
+{: #containquotas}
+
+Puede buscar y definir cuotas para los contenedores de una organización.
+
+Para buscar la cuota de contenedores para una organización, ejecute el siguiente mandato:
+
+```
+cf bluemix-admin containers-quota <organization>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organización&gt;</dt>
+<dd class="pd">Nombre o ID de la organización en Bluemix. Este
+parámetro es obligatorio.</dd>
+</dl>
+
+**Sugerencia:** también puede usar **ba cq** como alias para el nombre de mandato
+**bluemix-admin containers-quota** más largo.
+
+Para definir la cuota de contenedores para una organización, ejecute el siguiente mandato con al menos una de las opciones que se incluyen:
+
+```
+cf bluemix-admin set-containers-quota <organization> <options>
+```
+{: codeblock}
+
+**Nota**: puede incluir varias opciones, pero debe incluir al menos una.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organización&gt;</dt>
+<dd class="pd">Nombre o ID de la organización en Bluemix. Este
+parámetro es obligatorio.</dd>
+<dt class="pt dlterm">&lt;options&gt;</dt>
+<dd class="pd">Incluya una o varias de las opciones siguientes en las que el valor debe ser un entero:
+<ul>
+<li>floating-ips-max &lt;value&gt;</li>
+<li>floating-ips-space-default &lt;value&gt;</li>
+<li>memory-max &lt;value&gt;</li>
+<li>memory-space-default &lt;value&gt;</li>
+<li>image-limit &lt;value&gt;</li>
+</ul>
+</dd>
+</dl>
+
+**Consejo:** También puede utilizar los siguientes nombres abreviados como alias de nombres de opciones más largos:
+
+<dl class="parml">
+<dt class="pt dlterm">floating-ips-max &lt;value&gt;</dt>
+<dd class="pd"><strong>fim</strong></dd>
+<dt class="pt dlterm">floating-ips-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>fisd</strong></dd>
+<dt class="pt dlterm">memory-max &lt;value&gt;</dt>
+<dd class="pd"><strong>mm</strong></dd>
+<dt class="pt dlterm">memory-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>msd</strong></dd>
+<dt class="pt dlterm">image-limit &lt;value&gt;</dt>
+<dd class="pd"><strong>il</strong></dd>
+</dl>
+
+Si lo desea, puede especificar un archivo que contenga parámetros de configuración específicos en un objeto JSON válido. Si utiliza la opción **-file**, esta prevalece y las otras opciones se pasan por alto. Para proporcionar un archivo en lugar de definir las opciones, especifique el siguiente mandato:
+
+```
+cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+```
+{: codeblock}
+
+El archivo JSON debe tener el formato que se muestra en el ejemplo siguiente:
+
+```
+{
+  "floating_ips_max": 10,
+  "floating_ips_space_default": 0,
+  "ram_max": 4096,
+  "ram_space_default": 0,
+  "image_limit": 10
+}  
+```
+{: codeblock}
+
+**Sugerencia:** también puede usar **ba scq** como alias para el nombre de mandato
+**bluemix-admin set-containers-quota** más largo.
 
 ### Adición, supresión y recuperación de informes
 
@@ -500,13 +582,13 @@ cf ba edit-service-plan-visibilities <identificador_plan> <organización_1> <org
 **Sugerencia:** También puede usar **ba espv** como alias para el nombre de mandato
 **ba edit-service-plan-visibility** más largo.
 
-### Visualización de la información del uso de recursos
+### Visualización de información de métricas de recursos
 {: #cliresourceusage}
 
-Puede ver información del uso de recursos, incluidos el uso de memoria, de disco y de CPU. Puede ver un resumen de los recursos reservados y físicos disponibles, así como el uso de los recursos reservados y físicos. También puede ver los datos de uso de DEA (Droplet Execution Agent) y el uso del disco y de la memoria histórica. Se mostrarán los datos históricos para el uso de la memoria y del disco, de forma predeterminada, de forma semanal y en orden descendente. Para ver la información de uso de recursos, utilice el mandato siguiente:
+Puede ver información sobre métricas de recursos, incluidos el uso de memoria, de disco y de CPU. Puede ver un resumen de los recursos reservados y físicos disponibles, así como el uso de los recursos reservados y físicos. También puede ver los datos de uso de DEA (Droplet Execution Agent) y el uso del disco y de la memoria histórica. Se mostrarán los datos históricos para el uso de la memoria y del disco, de forma predeterminada, de forma semanal y en orden descendente. Para ver la información de métricas de recursos, utilice el mandato siguiente:
 
 ```
-cf ba resource-usage <mensualmente> <semanalmente>
+cf ba resource-metrics <monthly> <weekly>
 ```
 {: codeblock}
 
@@ -517,8 +599,8 @@ cf ba resource-usage <mensualmente> <semanalmente>
 <dd class="pd">Ver los datos históricos para el espacio de disco y de memoria a la semana a la vez. Este es el valor predeterminado.</dd>
 </dl>
 
-**Sugerencia:** también puede usar **ba rsu** como alias para el nombre de mandato
-**ba resource-usage** más largo.
+**Sugerencia:** también puede usar **ba rsm** como alias para el nombre de mandato
+**ba resource-metrics** más largo.
 
 ### Trabajar con intermediarios de servicio
 
@@ -584,7 +666,9 @@ de **ba delete-service-broker** más largo.
 
 * Puede actualizar un intermediario de servicio especificando el mandato siguiente:
 
-`cf ba update-service-broker <nombre_intermediario> <nombre_usuario> <contraseña> <url_intermediario>`
+```
+cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -823,7 +907,7 @@ cf ba buildpacks <nombre_paquete_compilación>
 
 #### Crear y cargar un paquete de compilación
 
-Puede crear y cargar un paquete de compilación. Puede cargar cualquier archivo comprimido que tenga un tipo de archivo .zip. Utilice el mandato siguiente para cargar un paquete de compilación:
+Puede crear y cargar un paquete de compilación. Puede cargar cualquier archivo comprimido que tenga un tipo de archivo .zip.  Utilice el mandato siguiente para cargar un paquete de compilación:
 
 ```
 cf ba create-buildpack <nombre_paquete_compilación> <vía_acceso_archivo> <posición>

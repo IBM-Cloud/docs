@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # 모바일
 {: #mobile}
-
-*마지막 업데이트 날짜: 2015년 12월 9일*
 
 모바일 서비스는 멀티플랫폼, 기본 또는 하이브리드, Android 및 iOS 애플리케이션을 빌드하는 데 사용합니다.
 {:shortdesc}

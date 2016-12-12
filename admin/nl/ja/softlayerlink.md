@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-03"
  
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2016-10-27"
 # {{site.data.keyword.Bluemix_notm}} および SoftLayer 請求アカウントのアップグレードおよび一元化
 {: #softlayerlink}
 
-{{site.data.keyword.Bluemix_notm}} トライアル・アカウントを使用していて、「インフラストラクチャー」ダッシュボードにアクセスする場合、{{site.data.keyword.Bluemix_notm}} 従量課金 (PAYG) アカウントにアップグレードする必要があります。
+{{site.data.keyword.Bluemix_notm}} トライアル・アカウントを使用していて、「インフラストラクチャー」ダッシュボードにアクセスする場合、{{site.data.keyword.Bluemix_notm}} 従量課金 (PAYG) アカウントにアップグレードする必要があります。また、トライアル・アカウントでは使用できない、他の課金対象リソースを使用する場合や、トライアル・アカウントが終了した場合にも、アップグレードが必要です。 
 
 既存の {{site.data.keyword.Bluemix_notm}} 請求アカウントと SoftLayer 請求アカウントをリンクして一元化できます。アカウントをリンクすると、{{site.data.keyword.Bluemix_notm}} と SoftLayer の両方のリソースについて {{site.data.keyword.Bluemix_notm}} から請求されるようになります。
 {:shortdesc}
@@ -63,6 +63,8 @@ SoftLayer アカウントがあり、SoftLayer アカウントと {{site.data.ke
 アカウントをリンクするには、SoftLayer アカウントのマスター・ユーザーでなければなりません。
 
 アカウントをリンクすると、SoftLayer グローバル・ヘッダーで**「{{site.data.keyword.Bluemix_notm}} に進む」**リンクが使用可能になります。このリンクをクリックすると、{{site.data.keyword.Bluemix_notm}} ログイン・ページに移動します。また、{{site.data.keyword.Bluemix_notm}} ヘッダーで**「SoftLayer」**リンクが使用可能になっています。このリンクをクリックすると、新規ウィンドウで {{site.data.keyword.slportal}} のホーム・ページに移動します。
+
+{{site.data.keyword.Bluemix_notm}} インフラストラクチャー・オファリングは、3 層のネットワークに接続され、パブリック・トラフィック、プライベート・トラフィック、および管理トラフィックがセグメント化されます。お客様の {{site.data.keyword.Bluemix_notm}} アカウントのインフラストラクチャー・オファリングは、無料で、プライベート・ネットワークを介して相互にデータを転送できます。ベアメタル・サーバー、仮想サーバー、およびクラウド・ストレージなどのインフラストラクチャー・オファリングは、パブリック・ネットワークを介して、{{site.data.keyword.Bluemix_notm}} カタログ内の他のアプリケーションおよびサービス (Watson サービス、コンテナー、ランタイムなど) に接続します。そのような 2 つのタイプのオファリング間で転送されるデータは、計測され、標準パブリック・ネットワーク帯域幅レートで課金されます。
 
 ## アカウントがリンクされている場合の {{site.data.keyword.Bluemix_notm}} 使用量に対するクレジット
 {: #slcredit}

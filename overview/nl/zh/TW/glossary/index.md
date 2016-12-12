@@ -3,8 +3,8 @@
  
 
 copyright:
-
-  years: 2014, 2016
+  years: 2016
+lastupdated: "2016-10-31"
 
  
 
@@ -15,9 +15,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 的名詞解釋 
 {: #glossary}
-
-前次更新：2016 年 9 月 2 日
-{: .last-updated}
 
 本名詞解釋提供 {{site.data.keyword.Bluemix}} 的術語和定義。
 {:shortdesc}
@@ -691,7 +688,7 @@ IT 服務對抗所有作業中斷，並依據一些預先定義的服務層次�
 ### 整合 (integration)
 {: #x2267187}
 
-軟體開發活動，用來將不同的軟體元件合併為一整個執行檔。
+軟體開發活動，用來將不同的軟體元件結合為一整個執行檔。
 
 ### 中繼憑證 (intermediate certificate)
 {: #x3753781}
@@ -1100,7 +1097,7 @@ Rule Execution Server 的部署及管理單位，可以包含一個以上的規�
 ### 執行書籍 (runbook)
 {: #x2830619}
 
-系統管理者或操作員用作電腦系統或網路執行和維護參照的程序和作業的編譯。
+系統管理者或操作員用來作為電腦系統或網路執行和維護參照的程序和作業的編譯。
 
 ### 運行環境 (runtime)
 {: #x2391929}

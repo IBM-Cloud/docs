@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-03"
  
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2016-10-27"
 # Fazendo upgrade e unificando as contas de cobrança do {{site.data.keyword.Bluemix_notm}} e do SoftLayer
 {: #softlayerlink}
 
-Se você tem uma conta para teste do {{site.data.keyword.Bluemix_notm}} e deseja acessar o painel Infraestrutura, deve-se fazer upgrade para uma conta pay-as-you-go do {{site.data.keyword.Bluemix_notm}}.
+Se você tem uma conta para teste do {{site.data.keyword.Bluemix_notm}} e deseja acessar o painel Infraestrutura, deve-se fazer upgrade para uma conta pay-as-you-go do {{site.data.keyword.Bluemix_notm}}. Você também deverá fazer upgrade se usar outros recursos debitáveis que não estão disponíveis em uma conta para teste, ou sua conta para teste será concluída. 
 
 É possível unificar suas contas de cobrança {{site.data.keyword.Bluemix_notm}} e SoftLayer existentes, vinculando as contas. Ao vincular as suas contas, você será faturado pelo {{site.data.keyword.Bluemix_notm}} pelos recursos do {{site.data.keyword.Bluemix_notm}} e do SoftLayer.
 {:shortdesc}
@@ -70,6 +70,9 @@ Após ter vinculado as suas contas, o link **Acesse o {{site.data.keyword.Bluemi
 página de login do {{site.data.keyword.Bluemix_notm}}. Além disso, o link **SoftLayer** agora está disponível no cabeçalho do {{site.data.keyword.Bluemix_notm}}. Clicar no link
 conduz você para a página inicial do {{site.data.keyword.slportal}} em uma nova janela.
 
+As ofertas de infraestrutura do {{site.data.keyword.Bluemix_notm}} estão conectadas a uma rede de três camadas, segmentando o tráfego público, privado e de gerenciamento. As ofertas de infraestrutura em uma conta do {{site.data.keyword.Bluemix_notm}} do cliente podem transferir dados entre si através da rede privada, sem nenhum custo. As ofertas de infraestrutura, como servidores bare metal, servidores virtuais e armazenamento em nuvem, conectam-se a outros aplicativos e serviços no catálogo do {{site.data.keyword.Bluemix_notm}}, como serviços, contêineres ou tempos de execução do Watson, através
+da rede pública. A transferência de dados entre esses dois tipos de ofertas é medida e cobrada em taxas padrão de largura da banda da rede pública.
+
 ## Créditos para uso do {{site.data.keyword.Bluemix_notm}} quando as contas estão vinculadas
 {: #slcredit}
 
@@ -104,7 +107,7 @@ Para obter mais informações sobre convidar membros da equipe por meio da inter
 ## Alternando para o IBMid
 {: #ibmid_switch}
 
-A autenticação no SoftLayer agora usa o IBMid para fornecer um login único para o {{site.data.keyword.Bluemix_notm}}. Se você tiver uma conta existente do SoftLayer, será possível alternar para um IBMid. Um assistente de migração o guiará através desse comutador.
+A autenticação no SoftLayer agora usa o IBMid para fornecer um login único para o {{site.data.keyword.Bluemix_notm}}. Se você tiver uma conta existente do SoftLayer, será possível alternar para um IBMid. Um assistente de migração o guiará através desse comutador. 
 {:shortdesc}
 
 Após iniciar a alternância para o IBMid, contanto que você não conclua o processo, será possível cancelá-lo. Mas, você ainda será solicitado a alternar para o IBMid da próxima vez que efetuar login.
@@ -113,8 +116,7 @@ Para iniciar a alternância do seu nome de usuário existente do SoftLayer para 
 
  1. No {{site.data.keyword.slportal}}, acesse a página Editar perfil do usuário e clique em **Alternar para IBMid**.
  2. Siga os prompts do assistente de migração para criar seu IBMid. Após criar seu IBMid, não será possível mudar o ID, que é um endereço de e-mail. É possível atualizar o e-mail associado a seu perfil, mas, por padrão, esse valor é configurado como o valor que você definiu para o seu IBMid. Após concluir o assistente, um e-mail é enviado para você.
- 3. Ao receber o e-mail, siga o link ou copie e cole a URL em um navegador e insira o seu código de registro. O código é válido por 7 dias e pode ser usado apenas uma vez.
-Após usá-lo, ele não poderá ser usado novamente.
+ 3. Ao receber o e-mail, siga o link ou copie e cole a URL em um navegador e insira o seu código de registro. O código é válido por 7 dias e pode ser usado apenas uma vez.  Após usá-lo, ele não poderá ser usado novamente.
  Após configurar o IBMid para o link de usuário do SoftLayer, é possível efetuar login em sua conta apenas com o IBMid.  No diálogo de login, deve-se usar o botão **Efetuar login com IBMid** em vez de inserir seu nome de usuário e senha do SoftLayer.
  
 Se você for um novo cliente, ao efetuar check-out de sua ordem, você será solicitado a fornecer um endereço de e-mail para a sua conta do IBMid existente ou a criar uma nova conta de IBMid. 
@@ -201,7 +203,8 @@ entanto, será possível usar qualquer plano para qualquer um desses serviços s
 ## Faturamento para uso do {{site.data.keyword.Bluemix_notm}} quando as contas estão vinculadas
 {: #bill_usage}
 
-Após ter vinculado suas contas de cobrança do {{site.data.keyword.Bluemix_notm}} e do SoftLayer, o próximo ciclo de faturamento será cobrado em uma única fatura do {{site.data.keyword.Bluemix_notm}}. {:shortdesc}
+Após ter vinculado suas contas de cobrança do {{site.data.keyword.Bluemix_notm}} e do SoftLayer, o próximo ciclo de faturamento será cobrado em uma única fatura do {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
 
 O seu ciclo de uso do {{site.data.keyword.Bluemix_notm}} está em uma base por mês de calendário; portanto, a sua conta será faturada todo mês no dia de faturamento que foi estabelecido para
 a sua concordância com os encargos. Com o SoftLayer, o seu ciclo de uso

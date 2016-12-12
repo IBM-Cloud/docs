@@ -1,18 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 
 # 安全
 {: #security}
-
-*前次更新：2015 年 12 月 9 日*
 
 使用這些安全服務，您可以保護應用程式及工作負載的存取，以及掃描應用程式的漏洞。您也可以將安全控制項內嵌到資料管理及海量資料服務。
 {:shortdesc}

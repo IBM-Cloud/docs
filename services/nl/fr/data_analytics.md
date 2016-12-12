@@ -1,16 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Données & analyse
 {: #data_analytics}
-
-*Dernière mise à jour : 9 mars 2016*
 
 Allez plus loin avec des bases de données de cloud et des services d'analyse riches et intégrés. En plus d'explorer des
 services, vous pouvez utiliser la console Utilisation des données pour obtenir des données dans vos services, générer des applications

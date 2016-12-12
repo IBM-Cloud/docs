@@ -54,7 +54,7 @@ Diese Dienstprogramme unterstützen nur Liberty.
 
   1. *debug*: Schaltet die Liberty-Anwendung in den Debugmodus und ermöglicht Clients wie IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, eine ferne Debugsitzung mit der Anwendung zu erstellen.
   
-   Weitere Informationen finden Sie im Abschnitt zum [fernen Debugging](../manageapps/eclipsetools/eclipsetools.html#remotedebug).
+   Weitere Informationen finden Sie im Abschnitt zum [fernen Debugging](/docs/manageapps/eclipsetools/eclipsetools.html#remotedebug).
    
    Das Dienstprogramm *debug* startet auch *proxy*.
    
@@ -126,7 +126,7 @@ cf restage myApp
 ##Entwicklungsmodus für Eclipse Tools
 {: #devmode}
 
-Der Entwicklungsmodus ist ein Feature von [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools), das
+Der Entwicklungsmodus ist ein Feature von [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools), das
 es Entwicklern ermöglicht,
 mit ihren Anwendungen zu arbeiten, während diese in der Cloud ausgeführt werden.
 

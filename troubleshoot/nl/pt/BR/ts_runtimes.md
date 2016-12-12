@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Resolução de problemas para tempos de execução
 {: #runtimes}
 
-Última atualização: 18 de agosto de 2016
-{: .last-updated}
 
 
 Talvez você tenha problemas ao usar os tempos de execução do IBM® Bluemix™. No entanto, em vários casos, é possível recuperar-se desses

@@ -35,7 +35,7 @@ HTTPS プロキシーを使用するように CLI をセットアップできま
 ## {{site.data.keyword.openwhisk_short}} CLI の使用 
 {: #openwhisk_start_using_cli}
 
-環境を構成した後、{{site.data.keyword.openwhisk_short}} CLI の使用を開始して以下を実行できます。
+[環境を構成](https://new-console.{DomainName}/openwhisk/cli){: new_window}した後、{{site.data.keyword.openwhisk_short}} CLI の使用を開始して以下を実行することができます。
 
 * 自身のコード・スニペット (アクション) を {{site.data.keyword.openwhisk_short}} で実行します。『[アクションの作成と起動](./openwhisk_actions.html)』を参照してください。
 * トリガーおよびルールを使用して、アクションがイベントに対応できるようにします。『[トリガーおよびルールの作成](./openwhisk_triggers_rules.html)』を参照してください。

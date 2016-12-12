@@ -1,16 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # データ & 分析
 {: #data_analytics}
-
-*最終更新日: 2016 年 3 月 9 日*
 
 豊富な機能を持ち、統合されたクラウド・データベースと分析サービスを使用して、より多くのことを実行しましょう。サービスの探索に加え、Work with Data コンソールの使用により、サービスへのデータの取り込み、データ駆動型アプリの作成、データの分析を、すべて 1 つの中心地から実行することができます。単に、{{site.data.keyword.Bluemix_notm}} ダッシュボード上の `Data & Analytics` タイル内の [WORK WITH DATA](https://console.ng.bluemix.net/data/services/) をクリックしてください。
 {:shortdesc}

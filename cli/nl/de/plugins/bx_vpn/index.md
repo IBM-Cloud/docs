@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，20166
 
- 
+lastupdated: "2016-06-20"
+
 
 ---
 
@@ -15,9 +16,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.vpn_short}}-Plug-in für {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle
-
-*Letzte Aktualisierung: 20. Juni 2016*
-{: .last-updated}
 
 *Version:* 1.4.0
 

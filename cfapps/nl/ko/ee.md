@@ -59,8 +59,7 @@ lastupdated: "2016-10-18"
 
 이제 앱이 {{site.data.keyword.cloudant}} 서비스에 바인딩되었습니다. VCAP_SERVICES 환경 변수의 서비스 인스턴스와 통신하기 위한 애플리케이션의 모든 필수 데이터를 찾을 수 있습니다. 예를 들어, {{site.data.keyword.Bluemix_notm}}는 동일한 가상 머신에서 여러 애플리케이션을 호스팅하므로 애플리케이션이 동일한 HTTP 포트 번호를 사용하여 수신 요청을 받을 수 없습니다. 충돌을 피하기 위해 각 애플리케이션에 고유 포트 번호가 지정됩니다. 이 포트 번호는 VCAP_APP_PORT 변수 하에서 사용 가능합니다.
 
-자세한 정보를 보려면 앱 개요 페이지의 **환경 변수**를 클릭하여 VCAP_SERVICES의 전체 목록을 참조하십시오.
-
+자세한 정보를 보려면 앱 개요 페이지의 **환경 변수**를 클릭하여 VCAP_SERVICES의 전체 목록을 참조하십시오. 
 ```
 {
    "cloudantNoSQLDB": [
@@ -89,8 +88,7 @@ lastupdated: "2016-10-18"
 
   1. 우선 앱의 코드를 다운로드하고 개발하십시오. 
 
-    1. 앱의 코딩 시작 페이지로 이동하십시오. 
-**스타터 코드 다운로드** 단추를 클릭하여 앱 코드를 다운로드하십시오. 
+    1. 앱의 코딩 시작 페이지로 이동하십시오. **스타터 코드 다운로드** 단추를 클릭하여 앱 코드를 다운로드하십시오. 
     2. 다운로드한 파일을 디렉토리(예: `C:\test`)로 추출하십시오. 
     3. 로컬 통합 개발 환경에서 코드를 개발하십시오. 
 
@@ -105,20 +103,14 @@ lastupdated: "2016-10-18"
 	```
 
     **요구사항:** 항상 cf 명령행 도구의 최신 버전을 사용해야 합니다.
-  3. **cf** 명령행 인터페이스를 설치한 후에는 **cf api** 명령을
-사용하여 작업할 {{site.data.keyword.Bluemix_notm}} 지역을
-지정해야 합니다.
-**cf** 명령행 인터페이스는 *https://api.Bluemix_URL*을 사용합니다. 여기서, *Bluemix_URL*은
-지역의 URL입니다. 미국 남부 지역의 URL은 stage1.ng.bluemix.net입니다. 다음 명령을 입력하여
-{{site.data.keyword.Bluemix_notm}}에 연결하십시오.
+  3. **cf** 명령행 인터페이스를 설치한 후에는 **cf api** 명령을 사용하여 작업할 {{site.data.keyword.Bluemix_notm}} 지역을 지정해야 합니다. **cf** 명령행 인터페이스는 *https://api.Bluemix_URL*을 사용합니다. 여기서, *Bluemix_URL*은 지역의 URL입니다. 미국 남부 지역의 URL은 stage1.ng.bluemix.net입니다. 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}}에 연결하십시오.
 
   ```
   cf api https://api.ng.bluemix.net
   ```
 
   기타 {{site.data.keyword.Bluemix_notm}} 지역에 연결하는 방법에 대한 자세한 정보는
-{{site.data.keyword.Bluemix_notm}} 지역을 참조하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 지정한 후에
-사용자가 지정한 위치 정보가 저장됩니다.
+{{site.data.keyword.Bluemix_notm}} 지역을 참조하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 지정한 후에 사용자가 지정한 위치 정보가 저장됩니다.
 
   4. 그런 다음, cf login 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 있습니다.
 

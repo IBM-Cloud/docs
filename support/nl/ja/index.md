@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-22"
 
 ---
 
@@ -12,8 +14,6 @@ copyright:
 # お客様サポートの利用
 {: #getting-customer-support}
 
-最終更新日: 2016 年 10 月 22 日
-{: .last-updated}
 
 
 {{site.data.keyword.Bluemix}} で問題が発生している場合、フォーラムからヘルプを取得したり、サポート・チケットをオープンしたりするなど、いくつかのサポート・オプションがあります。
@@ -154,7 +154,7 @@ RSS フィードを読み取るには他に、以下のような Web ブラウ�
 ### インシデントおよび保守の E メール通知のセットアップ
 {: #setting-up-notifications}
 
-{{site.data.keyword.Bluemix_notm}} Public の場合、プラットフォーム通知を登録できます。プラットフォーム通知は、{{site.data.keyword.Bluemix_notm}} プラットフォームのインシデントおよび保守のイベントに関するオプションの E メール・アラートです。これらの E メール通知を受信するようにするには、**「アカウント」**メニュー項目&gt;**「通知」**&gt;**「プラットフォーム」**のオプションをクリックします。アカウント通知の設定について詳しくは、[「通知の設定」](../admin/account.html#notifications)を参照してください。
+{{site.data.keyword.Bluemix_notm}} Public の場合、プラットフォーム通知を登録できます。プラットフォーム通知は、{{site.data.keyword.Bluemix_notm}} プラットフォームのインシデントおよび保守のイベントに関するオプションの E メール・アラートです。これらの E メール通知を受信するようにするには、**「アカウント」**メニュー項目&gt;**「通知」**&gt;**「プラットフォーム」**のオプションをクリックします。アカウント通知の設定について詳しくは、[「通知の設定」](/docs/admin/account.html#notifications)を参照してください。
 
 
 ### 状況をモニターするためのベスト・プラクティス
@@ -224,7 +224,7 @@ CSM (client success manager) 割り当て | 含まれない | 含まれない | 
 問題が障害によるものではない場合は、以下のいずれかのオプションを使用してサポート・チケットをオープンします。
 
   * 「サポート」ウィジェットから、**「ヘルプの利用」**をクリックします。表示されたページで**「連絡を取る (GET IN TOUCH)」**をクリックします。フォームに記入して、テクニカル・サポートが必要な理由を示します。
-  * [IBM {{site.data.keyword.Bluemix_notm}} サポート](http://ibm.biz/bluemixsupport){: new_window}のヘルプ・ページを使用します。販売、請求、IBMid とログイン、および技術サポートの問題についてチケットを実行することができます。技術サポートの問題については、さらに、**「テクニカル・サポート」**をクリックして技術グループを選択できます。例えば、Cloud Foundry アプリ、OpenWhisk、コンテナー、仮想サーバー、またはベア・メタル・サーバーに関する支援が必要な場合は、**「アプリケーション・サービス」**を選択できます。特定サービスに関する支援が必要な場合は、該当するサービス・カテゴリーを選択してください。サービスが属するカテゴリーを判別するには、ナビゲーション・ペインにある[「サービス」](../services/index.html){: new_window}でカテゴリーを探してください。  
+  * [IBM {{site.data.keyword.Bluemix_notm}} サポート](http://ibm.biz/bluemixsupport){: new_window}のヘルプ・ページを使用します。販売、請求、IBMid とログイン、および技術サポートの問題についてチケットを実行することができます。技術サポートの問題については、さらに、**「テクニカル・サポート」**をクリックして技術グループを選択できます。例えば、Cloud Foundry アプリ、OpenWhisk、コンテナー、仮想サーバー、またはベア・メタル・サーバーに関する支援が必要な場合は、**「アプリケーション・サービス」**を選択できます。特定サービスに関する支援が必要な場合は、該当するサービス・カテゴリーを選択してください。サービスが属するカテゴリーを判別するには、ナビゲーション・ペインにある[「サービス」](/docs/services/index.html){: new_window}でカテゴリーを探してください。  
   * [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} から。ポータルにサインインした後、**「チケットのオープン (Open Ticket)」**をクリックして、サポート・フォームに記入します。 
   
 サポート・チケットをオープンするときは、チケットの適切な重大度を必ず指定してください。重大度によってチケットの処理方法が決まります。各種の重大度については、『[サポート・チケットの重大度および回答時間](index.html#support-ticket-severity){: new_window}』を参照してください。緊急の要求があるが、無料または基本のサポートしか持っていない場合は、アカウントをアップグレードして、高い重大度 (レベル 1、2、および 3) のチケットを送信できます。アカウントをより高いサポート・レベルにアップグレードする場合は、IBM 営業担当員に E メール (sales@bluemix.net) でご連絡ください。
@@ -327,7 +327,7 @@ CSM (client success manager) 割り当て | 含まれない | 含まれない | 
 
 診断情報を収集する前に、以下のステップを実行します。
 
-  1. 最新の cf コマンド・ライン・インターフェースがインストール済みであることを確認してください。詳細については、[cf コマンド・ライン・インターフェースのインストール (Installing the cf command line interface) ](../starters/install_cli.html){: new_window}を参照してください。
+  1. 最新の cf コマンド・ライン・インターフェースがインストール済みであることを確認してください。詳細については、[cf コマンド・ライン・インターフェースのインストール (Installing the cf command line interface) ](/docs/starters/install_cli.html){: new_window}を参照してください。
 
      **注:** 最新の cf コマンド・ライン・インターフェースがインストールされていない場合、cf コマンド・ラインが {{site.data.keyword.Bluemix_notm}} に接続された後も、`cf logs` コマンドが出力を返さない可能性があります。
 
@@ -384,7 +384,7 @@ IBM は、お客様サポートでの最近の体験に関するフィードバ�
 
   * [Bluemix サポート・ポータル](https://support.ibmcloud.com){: new_window} 
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
-  * [cf コマンド・ツールのインストール](../starters/install_cli.html){: new_window} 
+  * [cf コマンド・ツールのインストール](/docs/starters/install_cli.html){: new_window} 
   * [SaaS サポート・ハンドブック](http://www-01.ibm.com/software/support/handbook.html){: new_window}
   * [スタック・オーバーフロー](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

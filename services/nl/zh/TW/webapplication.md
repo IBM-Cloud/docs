@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Web 及應用程式
 {: #webapplication}
-
-*前次更新：2015 年 12 月 9 日*
 
 使用這些服務，可在雲端中開發 Web 應用程式時快速新增或移除特性。您也可以簡化管理作業，以及組織您的商業程序及規則。
 {:shortdesc}

@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-05-12"
+
+
 
 ---
 
@@ -17,14 +19,11 @@ copyright:
 # (非推奨) 開発モード CLI
 {: #devmodecli}
 
-*最終更新日: 2016 年 6 月 23 日*
-{: .last-updated}
-
 **この CLI は非推奨になっています:** 開発モード (dev_mode) CLI を使用する代わりに、IBM Eclipse Tools for Bluemix または DevOps Web IDE を使用してください。dev_mode CLI は、2016 年 6 月 30 日まで引き続き使用できます。
 
 Bluemix 開発モード・コマンド・ライン・インターフェース (dev_mode CLI) を使用すると、クラウドでアプリを実行中にそのアプリを更新できます。dev_mode CLI は cf CLI プラグインとしてビルドされており、Liberty のアプリと IBM Node.js のアプリを両方サポートしています。
 {: shortdesc}
- 
+
 
 開発モード CLI では以下のタスクを実行できます。
 - アプリを開発モードと通常モードの間で切り替える。
@@ -32,33 +31,33 @@ Bluemix 開発モード・コマンド・ライン・インターフェース (d
 - 既存コンテナー内のアプリの開始、停止、または再始動を行う。
 
 ## dev_mode プラグインのインストール
-**前提条件:** 始める前に Cloud Foundry CLI をインストールしてください。詳しくは、 [『Start coding with Cloud Foundry command line interface』](https://github.com/cloudfoundry/cli)を参照してください。 
+**前提条件:** 始める前に Cloud Foundry CLI をインストールしてください。詳しくは、 [『Start coding with Cloud Foundry command line interface』](https://github.com/cloudfoundry/cli)を参照してください。
 
 
 dev_mode コマンド・ライン・ツールのインストールには、以下の方法のいずれかを使用します。
 - ローカルでインストールする。
   1. [IBM Bluemix CLI Plugin Repository](http://plugins.ng.bluemix.net)から、ご使用のプラットフォームに合った dev_mode プラグインをダウンロードします。
-  2. dev_mode プラグインが保存されているフォルダーに移動し、cf install-plugin コマンドを使用して dev_mode プラグインをインストールします。例えば次のようにします。 
-  
+  2. dev_mode プラグインが保存されているフォルダーに移動し、cf install-plugin コマンドを使用して dev_mode プラグインをインストールします。例えば次のようにします。
+
         ```
 cf install-plugin dev_mode-linux64
         ```
 
 - Bluemix CLI リポジトリーからインストールする。
   1. 以下のコマンドを使用して、Cloud Foundry CLI リポジトリー群に bluemix-repo リポジトリーを追加します。
-  
+
         ```
 cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
   2. cf repo-plugins を入力します。bluemix-repo リポジトリーに dev_mode プラグインが表示されます。
-		
+
 		```
 cf repo-plugins
         ```
-  
+
   3. 以下のコマンドを使用して、Cloud Foundry CLI プラグイン群に dev_mode プラグインをインストールします。
-  
+
         ```
 cf install-plugin dev_mode -r bluemix-repo
         ```
@@ -80,21 +79,21 @@ cf plugins
  <thead>
  <th colspan="4">dev_mode のコマンド</th>
  </thead>
- <tbody> 
- <tr> 
- <td>[help](#help)</td> 
- <td>[mode](#mode)</td> 
+ <tbody>
+ <tr>
+ <td>[help](#help)</td>
+ <td>[mode](#mode)</td>
  <td>[status](#status)</td>
  <td>[update-file](#update_file)</td>
- </tr> 
- <tr> 
+ </tr>
+ <tr>
  <td>[delete-file](#delete_file)</td>
  <td>[start-inplace](#start_inplace)</td>
  <td>[stop-inplace](#stop_inplace)</td>
  <td>[restart-inplace](#restart_inplace)</td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *表 1. dev_mode コマンド*
 
 
@@ -155,7 +154,7 @@ cf update-file <remotePath> <localPath> [command_options]
    </dl>
 
 
-  
+
 ## delete-file
 {: #delete_file}
 
@@ -211,5 +210,3 @@ cf restart-inplace <appName>
 {: #general}
 * [開発モード CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
 * [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
-
-

@@ -55,7 +55,7 @@ Esses utilitários suportam apenas o Liberty.
 
   1. *debug*: alterna o aplicativo Liberty para o modo de depuração e permite que clientes, como o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, estabeleça uma sessão de depuração remota com o aplicativo.
   
-   Para obter mais informações, consulte [Depuração remota](../manageapps/eclipsetools/eclipsetools.html#remotedebug).
+   Para obter mais informações, consulte [Depuração remota](/docs/manageapps/eclipsetools/eclipsetools.html#remotedebug).
    
    O utilitário *debug* também inicia o *proxy*.
    
@@ -128,7 +128,7 @@ devido ao desempenho.
 ##Modo de desenvolvimento para Eclipse Tools
 {: #devmode}
 
-Modo de desenvolvimento é um recurso do [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) que fornece aos desenvolvedores a capacidade de trabalhar com seus aplicativos enquanto eles estão em execução na nuvem.
+Modo de desenvolvimento é um recurso do [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools) que fornece aos desenvolvedores a capacidade de trabalhar com seus aplicativos enquanto eles estão em execução na nuvem.
 
 Ao trabalhar com seus aplicativos no {{site.data.keyword.Bluemix_notm}}, os desenvolvedores podem achar que não podem
 executar atividades normais de desenvolvimento como eles o fazem em um ambiente local. Para resolver esse problema,

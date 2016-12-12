@@ -17,7 +17,7 @@ copyright:
 *Última actualización: 9 de mayo de 2016*
 {: .last-updated}
 
-Puede proteger las apps subiendo certificados SSL y limitando el acceso a las app.
+Puede proteger las apps subiendo certificados SSL y limitando el acceso a las apps.
 {:shortdesc}
 
 ##Creación de solicitudes de firma de certificado

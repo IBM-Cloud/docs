@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,10 +17,9 @@ copyright:
 
 # Gestion de votre compte {{site.data.keyword.Bluemix_notm}}
 {: #mngacct}
-*Dernière mise à jour : 20 octobre 2016*
-{: .last-updated}
 
-Cliquez sur le lien **Compte** pour définir des notifications, afficher l'utilisation de votre compte ou consulter votre facture. {:shortdesc}
+Cliquez sur le lien **Compte** pour définir des notifications, afficher l'utilisation de votre compte ou consulter votre facture.
+{:shortdesc}
 
 ## Inscription à {{site.data.keyword.Bluemix_notm}}
 {: #signup}
@@ -29,7 +28,8 @@ Vous pouvez vous inscrire à un compte {{site.data.keyword.Bluemix_notm}} en uti
 
 Un ID fédéré peut être utilisé pour s'inscrire à {{site.data.keyword.Bluemix_notm}} uniquement si votre société a déjà travaillé avec IBM.  L'enregistrement du domaine d'une société auprès d'IBM permet aux utilisateurs de se connecter pour recevoir des produits et des services IBM en utilisant leurs données d'identification d'utilisateur de société existantes. L'authentification est alors gérée par le fournisseur d'identité de votre société. Lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}} avec un ID fédéré, vous êtes invité à le faire via la page de connexion de votre société. Pour savoir comment demander à enregistrer le domaine de votre société ou de votre organisation auprès d'IBM ou pour obtenir plus d'informations sur cette opération, voir [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Un sponsor IBM, tel qu'un représentant du client ou un service de conseil, est requis lorsque vous demandez à enregistrer des ID fédérés.
 
-*Tableau 1. Méthodes d'inscription*
+Tableau 1. Méthodes d'inscription
+{: #account_table1}
 
 | Méthodes d'inscription | Détails |    
 |-----------------|---------|
@@ -48,8 +48,7 @@ Vous pouvez définir des notifications par courrier électronique de plateforme 
 ### Définition de notifications de plateforme
 
 Cliquez sur **Compte** &gt; **Notifications** &gt; **Plateforme** pour définir des
-notifications par courrier électronique relatives aux incidents {{site.data.keyword.Bluemix_notm}} et à la maintenance planifiée.
-Vous pouvez sélectionner ou désélectionner chaque option pour activer ou désactiver la notification par courrier électronique.
+notifications par courrier électronique relatives aux incidents {{site.data.keyword.Bluemix_notm}} et à la maintenance planifiée. Vous pouvez sélectionner ou désélectionner chaque option pour activer ou désactiver la notification par courrier électronique.
 
 ### Définition des notifications relatives aux dépenses
 {: #spendingnotifications}

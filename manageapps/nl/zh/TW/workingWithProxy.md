@@ -15,7 +15,7 @@ copyright:
 前次更新：2016 年 7 月 20 日
 {: .last-updated}
 
-在部分環境（例如 [Bluemix 專用](../../dedicated/index.html#dedicated)及 [Bluemix 本端](../../local/index.html#local)）中，配置的 Proxy 可能會影響應用程式在編譯打包期間及執行時的行為。
+在部分環境（例如 [Bluemix 專用](/docs/dedicated/index.html#dedicated)及 [Bluemix 本端](/docs/local/index.html#local)）中，配置的 Proxy 可能會影響應用程式在編譯打包期間及執行時的行為。
 
 您可以配置應用程式使用下列環境變數來使用 Proxy：
   * [http_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)
@@ -31,7 +31,7 @@ copyright:
 ## Java 應用程式
 {: #java_apps}
 
-若為 [Liberty for Java](../runtimes/liberty/index.html) 及 [java_buildpack](../runtimes/tomcat/index.html) 應用程式，可以透過 **JAVA_OPTS** 環境變數將 Proxy 設定傳遞給運行環境。例如，您可以發出指令： 
+若為 [Liberty for Java](/docs/runtimes/liberty/index.html) 及 [java_buildpack](/docs/runtimes/tomcat/index.html) 應用程式，可以透過 **JAVA_OPTS** 環境變數將 Proxy 設定傳遞給運行環境。例如，您可以發出指令： 
 ```
    $ cf se myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
@@ -43,5 +43,5 @@ copyright:
 {: #rellinks}
 ## 一般
 {: #general}
-* [Liberty for Java](../runtimes/liberty/index.html)
-* [SDK for Nodejs](../runtimes/nodejs/index.html)
+* [Liberty for Java](/docs/runtimes/liberty/index.html)
+* [SDK for Nodejs](/docs/runtimes/nodejs/index.html)

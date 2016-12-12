@@ -4,6 +4,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-25"
 
 
 ---
@@ -18,47 +19,48 @@ copyright:
 # 管理 {{site.data.keyword.Bluemix_notm}} 本端及 {{site.data.keyword.Bluemix_notm}} 專用
 {: #mng}
 
-*前次更新：2016 年 10 月 20 日*
-{: .last-updated}
 
-如果您具有「{{site.data.keyword.Bluemix}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」的管理者存取權，請移至**管理**頁面來管理資源、監視配額用量、管理使用者許可權、排定升級通知，以及檢視安全報告和日誌等。您可以透過建立空間並設定[使用者角色和許可權](index.html#oc_useradmin)來管理組織；請參閱[管理組織](../admin/orgs_spaces.html)。
+如果您具有「{{site.data.keyword.Bluemix}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」的管理者存取權，請移至**管理**頁面來管理資源、監視配額用量、管理使用者許可權、排定升級通知，以及檢視安全報告和日誌等。您可以透過建立空間並設定[使用者角色和許可權](/docs/admin/index.html#oc_useradmin)來管理組織；請參閱[管理組織](/docs/admin/orgs_spaces.html)。
 {:shortdesc}
 
 *表 1. 用於管理 {{site.data.keyword.Bluemix_notm}} 本端或專用實例的管理作業*
-{: #caption}
 
 | 我能執行哪些操作？ | 詳細資料 |    
 |----------------|---------|
-|監視系統用量 | 按一下**管理 &gt; 用量**。檢視系統資訊、監視 CPU 使用率，以及計劃用量，以便做出對貴公司最好的決策。請參閱[檢視使用資訊](index.html#oc_resource)。|
-|管理型錄 | 按一下**管理 &gt; 型錄管理**，以管理您的使用者及組織可以看見哪些服務。請參閱[管理型錄](index.html#oc_catalog)。|
-|管理組織 | 按一下**管理 &gt; 組織管理**，以建立組織、監視組織配額，以及快速做出基於需求的決策。請參閱[管理組織](index.html#oc_organizations)。|
-|建立空間和指派使用者角色 | 按一下**{{site.data.keyword.avatar}}**圖示 ![虛擬人像](../support/images/account_support.svg)，然後選取**管理組織**，以在組織內建立空間。新增使用者並將組織和空間角色指派給使用者。請參閱[管理組織](../admin/orgs_spaces.html)。 |
-|對管理使用者許可權進行管理 | 按一下**管理 &gt; 使用者管理**，以新增使用者、移除使用者以及調整使用者許可權。請參閱[管理使用者及許可權](index.html#oc_useradmin)。 |
-|檢視報告和日誌 | 按一下**管理 &gt; 報告和日誌**，以檢視您實例的安全報告及審核日誌。請參閱[檢視報告](index.html#oc_report)。 |
-|檢視系統資訊 | 按一下**管理 &gt; 系統資訊**，以檢視系統資訊，例如擱置維護更新、實例的名稱和版本、地區、API URL、CLI URL、LDAP 配置詳細資料、群組和使用者對映、統計資料以及共用網域。請參閱[檢視系統資訊](index.html#oc_system)。 |
-|擴充通知以及設定通知訂閱 | 按一下**管理 &gt; 系統資訊 &gt; *數字* 個擱置**。您可以使用 Webhook 與您選擇的 Web 服務整合，以設定更新或偶發事件的事件通知訂閱。請參閱[通知及通知訂閱](index.html#oc_eventsubscription)。 |
+|監視系統用量 | 按一下**管理 &gt; 用量**。檢視系統資訊、監視 CPU 使用率，以及計劃用量，以便做出對貴公司最好的決策。請參閱[檢視用量資訊](/docs/admin/index.html#oc_resource)。|
+|管理型錄 | 按一下**管理 &gt; 型錄管理**，以管理您的使用者及組織可以看見哪些服務。請參閱[管理型錄](/docs/admin/index.html#oc_catalog)。|
+|管理組織 | 按一下**管理 &gt; 組織管理**，以建立組織、監視組織配額，以及快速做出基於需求的決策。請參閱[管理組織](/docs/admin/index.html#oc_organizations)。|
+|建立空間和指派使用者角色 | 按一下**{{site.data.keyword.avatar}}**圖示 ![虛擬人像](../support/images/account_support.svg)，然後選取**管理組織**，以在組織內建立空間。新增使用者並將組織和空間角色指派給使用者。請參閱[管理組織](/docs/admin/orgs_spaces.html)。 |
+|對管理使用者許可權進行管理 | 按一下**管理 &gt; 使用者管理**，以新增使用者、移除使用者以及調整使用者許可權。請參閱[管理使用者及許可權](/docs/admin/index.html#oc_useradmin)。 |
+|檢視報告和日誌 | 按一下**管理 &gt; 報告和日誌**，以檢視您實例的安全報告及審核日誌。請參閱[檢視報告](/docs/admin/index.html#oc_report)。 |
+|檢視系統資訊 | 按一下**管理 &gt; 系統資訊**，以檢視系統資訊，例如擱置維護更新、實例的名稱和版本、地區、API URL、CLI URL、LDAP 配置詳細資料、群組和使用者對映、統計資料以及共用網域。請參閱[檢視系統資訊](/docs/admin/index.html#oc_system)。 |
+|擴充通知以及設定通知訂閱 | 按一下**管理 &gt; 系統資訊 &gt; *數字* 個擱置**。您可以使用 Webhook 與您選擇的 Web 服務整合，以設定更新或突發事件的事件通知訂閱。請參閱[通知及通知訂閱](/docs/admin/index.html#oc_eventsubscription)。 |
+
+<!-- staging only for WoW start -->
 
 **提示**：在「{{site.data.keyword.Bluemix_notm}} 公用」環境中，只有鏈結的帳戶，才可使用 {{site.data.keyword.Bluemix_notm}} 主控台中的「基礎架構」儀表板。
+
+
+<!-- staging only for WoW end -->
 
 
 ## 通知及通知訂閱
 {: #oc_eventsubscription}
 
-透過檢查「狀態」頁面，您隨時都可以知道環境的狀態。偶發事件及已排定的干擾性維護更新事件在發生時會報告在「狀態」頁面上。{{site.data.keyword.Bluemix_notm}} 也會針對已排定或擱置中的維護更新等事件，將通知傳送至「管理」頁面的「通知」區域。
+透過檢查「狀態」頁面，您隨時都可以知道環境的狀態。突發事件及已排定的干擾性維護更新事件在發生時會報告在「狀態」頁面上。{{site.data.keyword.Bluemix_notm}} 也會針對已排定或擱置中的維護更新等事件，將通知傳送至「管理」頁面的「通知」區域。
 
 ### 通知
 
 您可以檢視有關本端或專用環境的通知，以監視環境的狀態。如需不同通知類型以及各個通知類型張貼位置的相關資訊，請檢閱下表。
 
 *表 2. 事件類型及通知方法*
-{: #caption}
 
 | **事件類型** | **通知方法** |       
 |-----------------|-------------------|
 | 維護更新 | 您可以在「管理」頁面的「通知」區域中，收到有關即將進行之維護更新的警示。移至**管理**頁面，然後選取**通知**圖示 ![通知](images/icon_announcement.svg)。若要查看擱置及完成通知的完整清單及歷程，請按一下**管理 &gt; 系統資訊** &gt; *數字* **個擱置**。|
 |  | 您也會在「狀態」頁面上收到有關已排定之干擾性維護更新事件的警示。按一下**{{site.data.keyword.avatar}}**圖示 ![虛擬人像](../support/images/account_support.svg)，然後選取**狀態**。|
 |  | 若要擴充通知功能，您可以設定訂閱來傳送電子郵件給您選擇的收件者。或者，您可以將訂閱設定為使用 Webhook，將「管理」頁面的通知與您選擇的 Web 服務整合。|
-| 重要偶發事件 | 您可以在「狀態」頁面上收到有關重要偶發事件的警示。按一下**{{site.data.keyword.avatar}}**圖示 ![虛擬人像](../support/images/account_support.svg)，然後選取**狀態**。擴充通知功能的方式是設定通知訂閱，以將電子郵件傳送給您選擇的收件者。或者，您可以將訂閱設定為使用 Webhook，將「管理」頁面的通知與您選擇的 Web 服務整合。  |  
+| 重要突發事件 | 您可以在「狀態」頁面上收到有關重要突發事件的警示。按一下**{{site.data.keyword.avatar}}**圖示 ![虛擬人像](../support/images/account_support.svg)，然後選取**狀態**。擴充通知功能的方式是設定通知訂閱，以將電子郵件傳送給您選擇的收件者。或者，您可以將訂閱設定為使用 Webhook，將「管理」頁面的通知與您選擇的 Web 服務整合。  |  
 | 臨界事件 | 您可以設定通知訂閱，在您的環境達到實體磁碟、實體記憶體、保留磁碟或保留記憶體的資源臨界值時，將電子郵件傳送給您選擇的收件者。或者，您可以設定訂閱，使用 Webhook 將通知與您選擇的 Web 服務整合。  |  
 | {{site.data.keyword.Bluemix_notm}} 狀態 | 您可以隨時在「狀態」頁面上檢視平台、服務及 {{site.data.keyword.Bluemix_notm}} 實例的最新狀態。按一下**{{site.data.keyword.avatar}}**圖示 ![虛擬人像](../support/images/account_support.svg)，然後選取**狀態**。  |
 
@@ -77,10 +79,10 @@ copyright:
 2. 按一下**新增訂閱**。
 3. 完成通知訂閱表單。
 
-  * 若要建立維護更新或突發事件的電子郵件通知訂閱，請參閱[表 3](index.html#emailnotmaintinc) 中的資訊。
-  * 若要建立臨界值的電子郵件通知訂閱，請參閱[表 4](index.html#emailnottrhesh) 中的資訊。
-  * 若要建立維護更新或突發事件的 Webhook 通知訂閱，請參閱[表 5](index.html#webhooknotsub) 中的資訊。
-  * 若要建立有關臨界值的 Webhook 通知訂閱，請參閱[表 6](index.html#webhooknotthresh) 中的資訊。
+  * 若要建立關於維護更新或突發事件的電子郵件通知訂閱，請參閱[表 3](index.html#emailnotmaintinc) 中的資訊。
+  * 若要建立關於臨界值的電子郵件通知訂閱，請參閱[表 4](index.html#emailnottrhesh) 中的資訊。
+  * 若要建立關於維護更新或突發事件的 Webhook 通知訂閱，請參閱[表 5](index.html#webhooknotsub) 中的資訊。
+  * 若要建立關於臨界值的 Webhook 通知訂閱，請參閱[表 6](index.html#webhooknotthresh) 中的資訊。
 
 4. 完成表單後，您可以選擇下列選項：
 
@@ -89,22 +91,20 @@ copyright:
   * 按一下**儲存並關閉**，可將訂閱儲存至您的通知訂閱清單，並回到上一頁。
 
 *表 3. 有關維護更新或突發事件的電子郵件通知訂閱的欄位*
-{: #caption}
 {: #emailnotmaintinc}
 
 | **欄位** | **說明** |
 |-----------------|-------------------|
 | 已啟用 | 選取此選項以啟用電子郵件通知。清除此選項以停用電子郵件通知。依預設會啟用訂閱。 |
 | 類型 | 選取**電子郵件**。 |
-| 事件 | 選擇訂閱**維護**或**偶發事件**事件的通知。 |
-| 合併通知 | 選取此選項，以將所有地區的偶發事件通知合併成單一通知。此選項僅適用於偶發事件。 |
+| 事件 | 選擇訂閱**維護**或**突發事件**事件的通知。 |
+| 結合通知 | 選取此選項，以將所有地區的突發事件通知結合成單一通知。此選項僅適用於突發事件。 |
 | 主旨 | 輸入電子郵件的主旨行。這是必要欄位。  |
 | 內文 | 輸入要在電子郵件中傳送的訊息內文。您可以使用 IBM 有效負載值，將相關資訊移入電子郵件通知。請參閱[維護及突發事件有效負載區段值](index.html#payload)表格來識別您可以使用的值。使用基本 HTML 標籤可建構您的電子郵件。這是必要欄位。 |
 | 收件者 | 使用以逗點區隔的清單來輸入電子郵件通知接收者的電子郵件位址。展開「副本」或「密件副本」選項，可將電子郵件副本傳送給其他人。這是必要欄位。 |
 | 說明 | 新增您要建立之訂閱的唯一說明。 |
 
 *表 4. 有關臨界值的電子郵件通知訂閱的欄位*
-{: #caption}
 {: #emailnottrhesh}
 
 | **欄位** | **說明** |
@@ -113,27 +113,26 @@ copyright:
 | 類型 | 選取**電子郵件**。 |
 | 事件 | 選取**臨界值**。 |
 | 臨界值 | 選取您想要收到通知的臨界值類型：「實體磁碟」、「實體記憶體」、「保留磁碟」或「保留記憶體」。 |
-| 臨界值方向 | 選取在與您所設定的「在與值交叉時通知」交叉時，要移動資料的方向（「遞增」或「遞減」）。例如，如果「在與值交叉時通知」是 50%，而且方向是遞減，則只有在使用百分比從 50% 或以上降到低於 50% 時，您才會收到通知。如果您將方向設為遞增，則會在使用百分比從低於 50% 到高於 50% 時收到通知。 |
-| 在高於 (%) 時通知 | 輸入您要收到通知的臨界值百分比。如果您在「臨界值方向」欄位中選擇「遞增」內容，則會在臨界值高於此百分比時傳送電子郵件通知。 |
-| 在低於 (%) 時通知 | 輸入您要收到通知的臨界值百分比。如果您在「臨界值方向」欄位中選擇「遞減」內容，則會在臨界值低於此百分比時傳送電子郵件通知。 |
+| 臨界值方向 | 選取在資料越過您所設定的「高於（低於）時通知」的值時，要讓資料移動的方向（「遞增」或「遞減」）。例如，如果「高於（低於）時通知」的值是 50%，而且方向是遞減，則只有在用量百分比從 50% 以上降到低於 50% 時，您才會收到通知。如果您將方向設為遞增，則會在用量百分比從低於 50% 變成高於 50% 時收到通知。 |
+| 高於 (%) 時通知 | 輸入您要收到通知的臨界值百分比。如果您在「臨界值方向」欄位中選擇「遞增」內容，則會在臨界值升高超過此百分比時傳送電子郵件通知。 |
+| 低於 (%) 時通知 | 輸入您要收到通知的臨界值百分比。如果您在「臨界值方向」欄位中選擇「遞減」內容，則會在臨界值降到低於此百分比時傳送電子郵件通知。 |
 | 說明 | 新增您要建立之訂閱的唯一說明。 |
 | 主旨 | 輸入電子郵件的主旨行。這是必要欄位。  |
 | 訊息內文 | 輸入要在電子郵件中傳送的訊息內文。您可以使用 IBM 有效負載值，將相關資訊移入電子郵件通知。請參閱[臨界值有效負載區段值](index.html#threshpayload)表格來識別您可以使用的值。使用基本 HTML 標籤可建構您的電子郵件。這是必要欄位。 |
 | 收件者 | 使用以逗點區隔的清單來輸入電子郵件通知接收者的電子郵件位址。展開「副本」或「密件副本」選項，可將電子郵件副本傳送給其他人。這是必要欄位。 |
 
-臨界值資料是每 6 小時收集一次。通知只會在值與您設定的臨界值交叉時傳送一次。如果您選擇遞增，則除非值低於臨界值，然後再次高於臨界值，否則不會傳送新的通知。同樣地，如果您選擇遞減，則只有在值高於所設定的臨界值，然後再次低於臨界值時，您才會再次收到通知。 
+臨界值資料是每 6 小時收集一次。通知只會在值越過您設定的臨界值時傳送一次。如果您選擇遞增，則除非值降到低於臨界值，然後再次高於臨界值，否則不會傳送新的通知。同樣地，如果您選擇遞減，則只有在值升高超過所設定的臨界值，然後再次降到低於臨界值時，您才會再次收到通知。 
 
-如果您不想等待 6 小時，才在符合臨界值時傳送通知，則在完成表單上的欄位之後，您可以按一下**儲存並測試**，以儲存通知，並使用範例資料測試通知。
+如果您不想在符合臨界值時等待 6 小時才傳送通知，則在完成表單上的欄位之後，您可以按一下**儲存並測試**，以儲存通知，並使用範例資料測試通知。
 
 *表 5. 有關維護或突發事件的 Webhook 通知訂閱的表單欄位*
-{: #caption}
 {: #webhooknotsub}
 
 | **欄位** | **說明** |
 |-----------------|-------------------|
 | 已啟用 | 選取此選項以啟用通知。清除此選項以停用通知。依預設會啟用訂閱。 |
 | 類型 | 選取 **Webhook** |
-| 事件 | 選擇訂閱**維護**或**偶發事件**事件的通知。 |
+| 事件 | 選擇訂閱**維護**或**突發事件**事件的通知。 |
 | 授權 | 選取是否啟用授權。選項包含：**基本**或**無**。 |
 | 使用者名稱 | 如果您選擇**基本**授權，請輸入您 Web 服務的使用者名稱。如果您不想使用個人認證，則可以設定一個正常運作的 ID，以專門與 {{site.data.keyword.Bluemix_notm}} 搭配使用。 |
 | 密碼 | 如果您選擇**基本**授權，請輸入您 Web 服務的密碼。 |
@@ -141,17 +140,16 @@ copyright:
 | 新事件 | 選取此選項，以啟用新維護或突發事件的通知。清除此選項以停用通知。 |
 | 方法 | 選取 **GET**、**POST** 或 **PUT**。 |
 | URL | 輸入要連接至 Web 服務的 URL。 |
-| 回應內容 | 此選用欄位是內容名稱，用於在傳送 POST 或 PUT 要求時識別 Web 服務所建立的資源。如果您提供新事件的回應內容，並選擇建立事件變更的訂閱，則必須同時將它提供給「事件變更」訂閱。根據使用的 Web 服務，您可以將它指定為 URL 的一部分或有效負載值。  |
+| 回應內容 | 此選用欄位是內容名稱，用於在傳送 POST 或 PUT 要求時識別 Web 服務所建立的資源。如果您提供新事件的回應內容，並選擇建立事件變更的訂閱，則必須同時將它提供給「事件變更」訂閱。根據使用的 Web 服務，您可以將它指定為 URL 的一部分，或指定為有效負載值。  |
 | 有效負載 | 如果您已選取 POST 或 PUT 方法，請輸入您所使用之 Web 服務特有的內容（與用於 IBM 通知的有效負載值成對）。請參閱[維護及突發事件有效負載區段值](index.html#payload)表格來識別您可以使用的值。如果您未在此區段中輸入資訊，則會收到沒有任何其他資訊的通知。 |
-| 事件變更 | 選取此選項，以建立您已建立訂閱之維護或突發事件變更的通知訂閱。清除此選項以停用通知。 |
-| 使用新事件的值及有效負載 | 使用「新事件」區段中「方法」、URL 及「有效負載」欄位的內容。請注意，如果勾選此選項，未來就無法在「事件變更」區段中編輯這些欄位。 |
+| 事件變更 | 選取此選項，以建立關於您已建立訂閱之維護或突發事件變更的通知訂閱。清除此選項以停用通知。 |
+| 使用新事件的值及有效負載 | 使用「新事件」區段中「方法」、URL 及「有效負載」欄位的內容。請注意，如果勾選此選項，就無法在「事件變更」區段中進一步編輯這些欄位。 |
 | 方法 | 選取 **GET**、**POST** 或 **PUT**。 |
 | URL | 輸入要連接至 Web 服務的 URL。 |
 | 有效負載 | 如果您已選取 POST 或 PUT 方法，請輸入您所使用之 Web 服務特有的內容（與用於 IBM 通知的有效負載值成對）。請參閱[維護及突發事件有效負載區段值](index.html#payload)表格來識別您可以使用的值。如果您未在此區段中輸入資訊，則會收到沒有任何其他資訊的通知。 |
-| 合併通知 | 選取此選項，以將所有地區的偶發事件通知合併成單一通知。此選項僅適用於偶發事件。 |
+| 結合通知 | 選取此選項，以將所有地區的突發事件通知結合成單一通知。此選項僅適用於突發事件。 |
 
 *表 6. 有關臨界值的 Webhook 通知訂閱的表單欄位*
-{: #caption}
 {: #webhooknotthresh}
 
 | **欄位** | **說明** |
@@ -161,8 +159,8 @@ copyright:
 | 事件 | 選取**臨界值**。 |
 | 臨界值 | 選取您想要收到通知的臨界值類型：「實體磁碟」、「實體記憶體」、「保留磁碟」或「保留記憶體」。 |
 | 臨界值方向 | 選取您要以「遞增」順序還是「遞減」順序來查看臨界值資料。  |
-| 在低於 (%) 時通知 | 如果您已選取**遞減****臨界值方向**，請輸入您要收到通知的臨界值百分比。臨界值低於此百分比時，會傳送 Webhook 通知。 |
-| 在高於 (%) 時通知 | 如果您已選取**遞增****臨界值方向**，請輸入您要收到通知的臨界值百分比。臨界值高於此百分比時，會傳送 Webhook 通知。 |
+| 低於 (%) 時通知 | 如果您已選取**遞減**的**臨界值方向**，請輸入您要收到通知的臨界值百分比。臨界值降到低於此百分比時，會傳送 Webhook 通知。 |
+| 高於 (%) 時通知 | 如果您已選取**遞增**的**臨界值方向**，請輸入您要收到通知的臨界值百分比。臨界值升高超過此百分比時，會傳送 Webhook 通知。 |
 | 說明 | 新增您要建立之訂閱的唯一說明。 |
 | 授權 | 選取是否啟用授權。選項包含：**基本**或**無**。 |
 | 使用者名稱 | 如果您選擇「基本」授權，請輸入您 Web 服務的使用者名稱。如果您不想使用個人認證，則可以設定一個正常運作的 ID，以專門與 {{site.data.keyword.Bluemix_notm}} 搭配使用。 |
@@ -171,25 +169,23 @@ copyright:
 | URL | 輸入要連接至 Web 服務的 URL。 |
 
 *表 7. 維護及突發事件有效負載區段值*
-{: #caption}
 {: #payload}
 
 | **IBM 值** | **說明** | **事件類型** |
 |----------------|----------------|------------------------|
-| {{content.category}} | 受影響的服務 | 偶發事件 |
+| {{content.category}} | 受影響的服務 | 突發事件 |
 | {{content.disruption}} | 受影響的元件 | 維護更新 |
-| {{content.message}} | 訊息說明 |   維護更新及偶發事件 |
+| {{content.message}} | 訊息說明 |   維護更新及突發事件 |
 | {{content.scheduleWindow.start}} | 排定的更新開始日期 | 維護更新 |
 | {{content.scheduleWindow.end}} | 排定的更新結束時間 | 維護更新 |
-| {{content.severity}} | 嚴重性評分 | 偶發事件 |
-| {{content.subCategoryName}} | 受影響的元件 | 偶發事件 |
-| {{content.title}} | 訊息標題 | 維護更新及偶發事件 |
-| {{region}} | 受影響的地區 | 維護更新及偶發事件 |
+| {{content.severity}} | 嚴重性評分 | 突發事件 |
+| {{content.subCategoryName}} | 受影響的元件 | 突發事件 |
+| {{content.title}} | 訊息標題 | 維護更新及突發事件 |
+| {{region}} | 受影響的地區 | 維護更新及突發事件 |
 | {{status}} | 更新的狀態 | 維護更新 |
-| {{type}} | 更新或偶發事件 | 維護更新及偶發事件 |
+| {{type}} | 更新或突發事件 | 維護更新及突發事件 |
 
 *表 8. 臨界值有效負載區段值*
-{: #caption}
 {: #threshpayload}
 
 | **IBM 值** | **說明** | **事件類型** |
@@ -200,7 +196,7 @@ copyright:
 | {{content.reserved_memory}} | 保留記憶體臨界值 | 臨界值 |
 
 儲存通知訂閱時，您會透過所設定的方法來接收通知。通知仍然會張貼到下列位置：  
- * 在偶發事件的「狀態」頁面上
+ * 在突發事件的「狀態」頁面上
  * 在已排定干擾性維護更新事件的「狀態」頁面上
  * 在維護更新之「管理」頁面的「通知」區域中
 
@@ -224,11 +220,11 @@ copyright:
 ### 設定預先核准的維護時間範圍
 {: #preapprovedmaintenance}
 
-非干擾性維護更新是排定在預先核准的時間範圍期間執行。預設會為您的系統建立兩週可用更新時間範圍。這些時間範圍一般是設為在每個星期六及星期日晚上重複發生。您可以使用下列其中一種方式來變更預設值：
+非干擾性維護更新是排定在預先核准的時間範圍期間執行。預設會為您的系統建立兩個每週可用更新時間範圍。這些時間範圍一般是設為在每個星期六及星期日晚上重複發生。您可以使用下列其中一種方式來變更預設值：
  * 選擇不同日期及（或）不同開始時間，以編輯預設更新時間範圍
  * 建立更新時間範圍，然後刪除預設更新時間範圍
 
-若要儲存您的變更，您仍然必須符合每週所需的時間下限。
+若要儲存您的變更，您仍然必須符合每週必要的時間下限。
 
 您必須設定一週內最少 12 小時可用，或每週至少兩天。例如，您可以設定在不同的兩天各 6 小時的時間範圍，也可以設定在不同的三天各 4 小時的時間範圍。為確保時間範圍提供足夠的時間來套用更新，每一個時間範圍的持續時間必須最少為 4 小時。  
 
@@ -245,9 +241,9 @@ copyright:
 ### 設定無法使用的維護時間範圍
 {: #blockpreapprovedmaintenance}
 
-您可以選擇設定環境無法進行非干擾性維護更新的特定無法進行更新的時間範圍。例如，您可能會選擇在高資料流量的週末或假日時不套用任何維護，以確保使用者可以使用您的應用程式。
+您可以選擇設定無法進行更新的特定時間範圍，在這些時間範圍內，環境無法進行非干擾性的維護更新。例如，您可能會選擇在高資料流量的週末或假日時不套用任何維護，以確保使用者可以使用您的應用程式。
 
-您必須設定一週內最少 12 小時可用，或每週至少兩天。如果您試圖建立無法進行更新的時間範圍，則在這個新的時間範圍讓系統低於每週所需下限時，可能會無法儲存變更。在此情況下，您必須先移除一些現有無法進行更新的時間範圍，或新增更多可進行更新的時間範圍，才能儲存新的無法進行更新的時間範圍。如需相關資訊，請參閱[設定預先核准的維護時間範圍](index.html#preapprovedmaintenance)。
+您必須設定一週內最少 12 小時可用，或每週至少兩天。如果您試圖建立無法進行更新的時間範圍，則在這個新的時間範圍讓系統低於每週必要下限時，可能會無法儲存變更。在此情況下，您必須先移除一些現有無法進行更新的時間範圍，或新增更多可進行更新的時間範圍，才能儲存新的無法進行更新的時間範圍。如需相關資訊，請參閱[設定預先核准的維護時間範圍](index.html#preapprovedmaintenance)。
 
 1. 移至**管理 &gt; 系統資訊 &gt; *數字* 個擱置 &gt; 管理可用性**。
 2. 展開**管理無法進行更新的時間範圍**區段。
@@ -290,7 +286,7 @@ copyright:
 
 ### 擱置系統更新
 
-在「更新」區段中，您可以查看需要您採取動作的擱置更新通知數目。您可能會看到兩種類型的維護更新：
+在「更新」區段中，您可以查看需要您採取動作的擱置更新通知數目。有兩種您可能看到的類型：
 
 <dl>
 <dt>非干擾性更新</dt>
@@ -317,9 +313,9 @@ copyright:
 ## 檢視用量和報告
 {: #oc_resource}
 
-您可以針對本端或專用實例和 {{site.data.keyword.Bluemix_notm}} 帳戶，檢視不同類型的使用資訊。您也可以下載及檢視 {{site.data.keyword.Bluemix_notm}} 實例的安全報告和日誌。
+您可以針對本端或專用實例和 {{site.data.keyword.Bluemix_notm}} 帳戶，檢視不同類型的用量資訊。您也可以下載及檢視 {{site.data.keyword.Bluemix_notm}} 實例的安全報告和日誌。
 
-- 資源資訊，包括磁碟空間、CPU 使用率、網路用量及平均回應時間。請參閱[資源用量](index.html#resourceusage)。
+- 資源資訊，包括磁碟空間、CPU 用量、網路用量及平均回應時間。請參閱[資源用量](index.html#resourceusage)。
 - 每個組織的帳戶用量，包括含用量的運行環境應用程式數目、運行環境 GB-小時總數，以及含用量的服務實例數目。請參閱[帳戶用量](index.html#accountusage)。
 - 組織記憶體配額用量、根據已用記憶體配額總計配置的應用程式記憶體，以及特定組織的每個應用程式的 GB-小時用量視圖。您也可以在「組織管理」頁面的**配額監視**區段中，檢視所有組織的配額用量。請參閱[組織管理](../admin/index.html#orgusage)。
 
@@ -331,7 +327,7 @@ copyright:
 
 在**資源用量**區段中，您可以檢視下列資訊：
 
-- 資源用量資訊，例如可以保留的記憶體和磁碟空間量與其實際可用量，以及實際保留的記憶體和磁碟空間量與其實際使用量。您也可以查看跨所有 Droplet Execution Agent (DEA) 的平均 CPU 使用率的相關資訊。如需有關記憶體、磁碟及 CPU 使用率的詳細資訊，請參閱[記憶體、磁碟及 CPU 詳細資料](index.html#resourceusagedetails)。
+- 資源用量資訊，例如可以保留的記憶體和磁碟空間量與其實際可用量，以及實際保留的記憶體和磁碟空間量與其實際用量。您也可以查看跨所有 Droplet Execution Agent (DEA) 的平均 CPU 用量的相關資訊。如需有關記憶體、磁碟及 CPU 用量的詳細資訊，請參閱[記憶體、磁碟及 CPU 詳細資料](index.html#resourceusagedetails)。
 - 過去六小時或一天進出頻寬的網路用量資訊。顯示的資料是根據公開及私密網路的輸入及輸出資料流量的總和。
 - {{site.data.keyword.Bluemix_notm}} 在過去十分鐘、一小時及一天的平均回應時間。
 - {{site.data.keyword.Bluemix_notm}} 在過去十分鐘、一小時及一天的每秒平均交易數。
@@ -410,7 +406,7 @@ copyright:
 ### 組織用量
 {: #orgusage}
 
-若要檢視每個組織的用量，請按一下**管理 &gt; 組織管理**，然後從**組織清單**中選取組織。在所選取組織的**管理組織**頁面上，您可以檢視下列使用資訊：
+若要檢視每個組織的用量，請按一下**管理 &gt; 組織管理**，然後從**組織清單**中選取組織。在所選取組織的**管理組織**頁面上，您可以檢視下列用量資訊：
 
 - 目前使用中的服務數目。
 - 目前使用中的路徑數目。
@@ -435,8 +431,6 @@ copyright:
 下表顯示針對「{{site.data.keyword.Bluemix_notm}} 本端」及「{{site.data.keyword.Bluemix_notm}} 專用」所產生的安全報告清單。大部分的報告都是每日產生。不過，加密及金鑰管理事件報告是每月產生。所有報告都會在管理主控台中保留 90 天，供您進行擷取。在這 90 天之後，{{site.data.keyword.Bluemix_notm}} 的每個要求都可以離線使用報告 9 個月。總共可擷取報告長達 1 年。
 
 *表 9. 安全報告清單*
-{: #caption}
-
 | **種類** | **報告** | **說明** |      
 |-----------------|-------------------|---------------------|
 | 防火牆 | 防火牆登入 | 與 Vyatta 防火牆裝置的管理者登入有關的事件。 |
@@ -455,7 +449,7 @@ copyright:
 | 加密 | data-in-transit 加密 | 已配置的 data-in-transit 加密。 |
 | 防毒 | 防毒掃描報告 | 現有的防毒軟體。 |
 | 軟體修正程式管理 | 修補程式應用程式報告 | 已套用的軟體修正程式。 |
-| 資安事件管理 | 資安事件補救報告 | 進行資安事件管理的資安事件證明。 |
+| 資安突發事件管理 | 資安突發事件補救報告 | 進行資安突發事件管理的資安突發事件證明。 |
 
 ## 檢視狀態
 {: #oc_status}
@@ -609,8 +603,6 @@ copyright:
 下列各表可以協助您填寫 JSON 檔案。
 
 *表 10. JSON 欄位*
-{: #caption}
-
 | **JSON 欄位** | **說明** |
 |-----------------|-----------------|
 |bindable   | 布林值，指出服務實例是否可以連結至應用程式。  |
@@ -621,7 +613,6 @@ copyright:
 |plans | 服務方案定義的陣列。如需相關資訊，請參閱下列[方案欄位](index.html#planfields)表格。 |
 
 *表 11. meta 資料欄位*
-{: #caption}
 {: #metadatafields}
 
 | **meta 資料值** | **說明** |
@@ -630,7 +621,7 @@ copyright:
 |providerDisplayName | 服務提供者的名稱 |
 |longDescription | 服務的詳細說明。請考慮至少使用兩個句子來作為詳細說明。 |
 |plans                | 服務方案定義的陣列。plans 欄位的每一個陣列項目都會包含下列欄位：name、description、free、id 及 metadata。如需相關資訊，請參閱下列[方案欄位](index.html#planfields)表格。 |
-|bullets | 針對服務所顯示的字串陣列。除了詳細說明之外，您還可以使用項目符號來提供資訊。bullets 欄位必須包含至少兩個 bullet 元素。每一個 bullet 都會包括 title 及 description 欄位。 |
+|bullets | 針對服務所顯示的字串陣列。除了詳細說明之外，您還可以使用項目符號來提供資訊。bullets 欄位必須包含至少兩個 bullet 元素。每一個 bullet 都會包含 title 及 description 欄位。 |
 |imageUrl | 大型 PNG 影像（50 x 50 像素）的 URL。 |
 |smallImageUrl | 小型 PNG 影像（24 x 24 像素）的 URL。 |
 |mediumImageUrl | 中型 PNG 影像（32 x 32 像素）的 URL。 |
@@ -640,7 +631,7 @@ copyright:
 |media（選用） | 要顯示在 {{site.data.keyword.Bluemix_notm}} 使用者介面中介紹服務的視訊及畫面擷取的元素陣列。media 元素可以包含下列欄位：type（image、youtube、video）、thumbnailUrl（media 元素之預覽影像的 URL）、url（畫面擷取或 YouTube 視訊的 URL）、source（未在 YouTube 上管理的視訊來源。HTML5 必須支援視訊來源的 "type"。video 包括 "type" 及 "url"）及 caption（media 元素的標題。標題有助於協助殘障人士瞭解您的 media 元素。）。 |
 |serviceKeysSupported | 布林值，指出是否支援服務金鑰 API。服務金鑰 API 是用於允許在 {{site.data.keyword.Bluemix_notm}} 外部使用服務。預設值為 false。 |
 |plan_updateable | 布林值，指出服務是否支援方案變更。預設值為 false。 |
-|embeddableDashboard（選用） | 指出如何在 {{site.data.keyword.Bluemix_notm}} 使用者介面中顯示服務儀表板的欄位。如果您未指定此欄位，則會內嵌儀表板，但將最小寬度限制為 960 px，而且儀表板在 iframe 周圍有其他水平填補。您可以使用 true、false、drilldown 或 launch。您可以針對此值使用下列欄位：true、false、drilldown 及 launch。  |
+|embeddableDashboard（選用） | 指出如何在 {{site.data.keyword.Bluemix_notm}} 使用者介面中顯示服務儀表板的欄位。如果您未指定此欄位，則會內嵌儀表板，但限制在最小寬度 960 px，而且儀表板在 iframe 周圍會有更多的水平填補。您可以使用 true、false、drilldown 或 launch。您可以針對此值使用下列欄位：true、false、drilldown 及 launch。  |
 |notCreatable（選用） | 布林值，指出是否可以從 {{site.data.keyword.Bluemix_notm}} 使用者介面以及從 cf 指令行介面建立服務實例。值 true 表示無法從 {{site.data.keyword.Bluemix_notm}} 使用者介面或 cf 指令行介面建立服務實例。預設值為 false。 |
 |notCreatableMessage（選用） | 無法建立服務實例時，會在 {{site.data.keyword.Bluemix_notm}} 使用者介面中顯示的訊息。如果您未指定此欄位，將會顯示下列預設訊息：若要在它可用時收到通知，請確認您的電子郵件位址，或輸入不同的電子郵件位址。 |
 |notCreatableRobotMessage（選用） | {{site.data.keyword.Bluemix_notm}} 使用者介面內服務詳細資料頁面的語音泡泡中所顯示的訊息。此訊息是用來指出服務可能發生問題，或是有導致它無法使用的其他原因。您可以指定可說明原因的訊息。如果您未指定此欄位，將會顯示下列預設訊息：此服務目前無法使用。 |
@@ -678,7 +669,6 @@ copyright:
 ![型錄中的服務詳細資料。](images/metadata.png "「Bluemix 型錄」服務詳細資料視圖")
 
 *表 12. 方案欄位*
-{: #caption}
 {: #planfields}
 
 | **方案值** | **說明** |
@@ -690,13 +680,12 @@ copyright:
 |metadata（選用）    | {{site.data.keyword.Bluemix_notm}} 型錄及定價單中顯示的服務方案 meta 資料。metadata 欄位是選用欄位。您可以在 metadata 欄位內指定下列欄位：displayName、type（subscription、reservable、planDetails）、bullets、costs（unitId、unit、partNumber）及 paidOnly。如需相關資訊，請參閱下列[方案 meta 資料欄位](index.html#planmetadata)表格。 |
 
 *表 13. 方案 meta 資料欄位*
-{: #caption}
 {: #planmetadata}
 
 | **方案 meta 資料值** | **說明** |
 |------------------------|-----------------|
 |displayName             | {{site.data.keyword.Bluemix_notm}} 使用者介面中所顯示方案的名稱。此名稱會顯示在型錄的服務詳細資料頁面上以及定價單上。   |
-|type                    | 方案的類型。您可以將下列值用於此欄位：subscription（訂閱方案。預設值為 false）、reservable（可保留方案。只有在方案是訂閱方案（即 plan.metadata.subscription 的值為 true）時，才使用此值。預設值為 false。）、planDetails（可與方案搭配使用的資源的詳細數量及說明。只有在方案是可保留方案（即 plan.metadata.reserveable 的值為 true）時，才使用此值。） |
+|type                    | 方案的類型。您可以對此欄位使用下列值：subscription（訂閱方案。預設值為 false。）、reservable（可保留方案。只有在方案是訂閱方案（即 plan.metadata.subscription 的值為 true）時，才使用此值。預設值為 false。）、planDetails（可與方案搭配使用的資源的詳細數量及說明。只有在方案是可保留方案（即 plan.metadata.reserveable 的值為 true）時，才使用此值。） |
 |bullets                 | 可與方案搭配使用的資源的說明。說明會顯示在型錄的服務詳細資料頁面以及定價單的**特性**直欄中。 |
 |costs                   | 在型錄的服務詳細資料頁面以及定價單的「價格」直欄中顯示的服務的成本資訊。每一個陣列項目都會包含下列欄位：unitId（單元的 ID。使用複數形式，並將所有字母都大寫。對於免費方案，此欄位是選用項目。）、unit（用於計算服務費用的度量。在 {{site.data.keyword.Bluemix_notm}} 使用者介面中，使用此欄位的值來代表費用度量。） 及 partNumber（計費系統所使用的 `part_number` ID。對於免費方案，此欄位是選用項目。）.   |
 |paidOnly（選用）     | 布林值，指出此服務方案是否僅適用於 {{site.data.keyword.Bluemix_notm}} 付費帳戶。值 **true** 表示服務方案僅適用於付費帳戶，因此不能新增至試用帳戶。值 **false** 表示服務方案可以新增至付費帳戶及試用帳戶。預設值為 **false**。	  |
@@ -813,7 +802,7 @@ copyright:
 在「組織清單」區段中，您可以檢視 {{site.data.keyword.Bluemix_notm}} 環境中的所有組織，而且按一下組織名稱即可針對個別組織採取動作。
 
 - 若要刪除組織，請按一下「動作」直欄中的**刪除**圖示 ![刪除](images/icon_trash.svg)。
-- 若要檢視組織的配額方案及用量，請按一下清單中的組織名稱。在所選取組織的**管理組織**頁面上，您可以檢視下列使用資訊：
+- 若要檢視組織的配額方案及用量，請按一下清單中的組織名稱。在所選取組織的**管理組織**頁面上，您可以檢視下列用量資訊：
 
   - 目前使用中的服務數目。
   - 目前使用中的路徑數目。
@@ -903,11 +892,9 @@ copyright:
 使用者可獲指派下列許可權，這些許可權具有可讓使用者在管理主控台內完成特定作業的特定存取層次（讀取或寫入）。
 
 *表 14. 許可權*
-{: #caption}
-
 | **使用者許可權** | **說明** |       
 |-----------------|-------------------|
-| 超級使用者 | **超級使用者**許可權設為**開啟**的使用者，可以編輯其他使用者的許可權。如果這個許可權設為開啟，即會自動啟用對所有其他許可權的完整存取權。除了此表格中針對各項許可權所描述的作業之外，它們還可以設定通知訂閱來直接取得維護或突發事件的警示、排定維護、對主控台元件執行驗證檢查，以及為該環境建立組織和空間。此許可權相當於管理主控台的管理者 (admin) 角色。  |
+| 超級使用者 | **超級使用者**許可權設為**開啟**的使用者，可以編輯其他使用者的許可權。如果這個許可權設為開啟，即會自動啟用對所有其他許可權的完整存取權。除了此表格中針對各項許可權所描述的作業之外，他們還可以設定通知訂閱來直接取得維護或突發事件的警示、排定維護、對主控台元件執行驗證檢查，以及為環境建立組織和空間。此許可權相當於管理主控台的管理者 (admin) 角色。  |
 | 基本存取 | **基本存取**許可權設為**開啟**的使用者，可以看到 {{site.data.keyword.Bluemix_notm}} 使用者介面中的「管理」頁面選項。啟用該許可權的使用者，可以存取[系統資訊](#oc_system)和[資源用量](#oc_resource)磚。如果沒有此許可權，使用者就無法查看或存取「管理」功能表選項。此許可權相當於管理主控台的管理者 (admin) 角色。此許可權相當於管理主控台的先前使用登入許可權。 |
 | 型錄 | 具有**型錄**許可權的使用者，可獲指派對本端或專用實例中之可用服務進行**讀取**或**寫入**（修改）的存取權。讀取存取權可讓使用者存取「型錄管理」磚來檢視可用的服務。寫入存取權可讓使用者存取[型錄管理](#oc_catalog)磚來檢視服務、編輯服務的可見性、登錄自訂服務，以及控制建置套件優先順序清單。 |  
 | 報告 | 具有**報告**許可權的使用者，可獲指派對安全報告進行**讀取**或**寫入**（修改）的存取權。讀取存取權可讓使用者存取「報告和日誌」磚來下載報告。寫入存取權可讓使用者檢視[報告和日誌](#oc_report)磚，也可以使用 CLI 來上傳新的報告，以及建立新的種類，以供使用者存取。 |
@@ -933,7 +920,9 @@ copyright:
 
 若要登入「管理主控台」，請執行下列指令：
 
-`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool`
+```
+curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -952,6 +941,7 @@ copyright:
 </dl>
 
 下列範例顯示此指令的輸出：
+
 ```
 {
     "message": "Logged in",
@@ -968,7 +958,9 @@ copyright:
 
 新增使用者時，您必須指定組織。您可以使用 `Admin` REST API 來列出所有組織。您必須擁有具**讀取**存取權的**使用者**許可權，才能列出組織。若要列出所有組織，請執行下列指令：
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1008,7 +1000,9 @@ copyright:
 
 您可以利用 `Admin` REST API 列出已登錄使用者，以判斷使用者是否已新增至您的 {{site.data.keyword.Bluemix_notm}} 環境。您必須擁有具**讀取**存取權的**使用者**許可權，才能列出已登錄使用者。若要列出所有使用者，請執行下列指令：
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1093,7 +1087,9 @@ PUT console.<subdomain>.bluemix.net/codi/env_config/allow_managers?flag=<TRUE or
 
 您可以在 JSON 檔案中提供資訊。
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1182,7 +1178,9 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 
 若要移除使用者，您必須提供使用者的使用者 ID。請執行下列指令：
 
-`curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>`
+```
+curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1212,6 +1210,307 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
  <
  ```
 {: screen}
+
+## 度量值的 API（實驗性）
+{: #envappmetricsapi}
+
+您可以使用兩個實驗性 API，收集環境或應用程式的相關度量值。這兩個 API 會對您在指定的時間所要求的度量值傳回一連串資料點。
+
+**附註**：
+
+1. 一個使用者可在一小時內最多提出 200 個 API 要求來取得度量值。
+2. 每一個 API 要求可傳回每個要求最多 200 個資料點。如果有其他資料可用，則會在回應中提供一個 URL，用於載入下一組資料。
+
+## 收集環境的相關度量值 
+
+您可以使用實驗性環境 API，在您指定的時段收集高階環境資訊。系統會傳回在您指定的時間內可用的資料點。大約每一小時記錄一次資料。比方說，如果您已對環境要求六小時的 CPU 資料，則回應將包括所要求的六個小時的每一小時的 CPU 資料。
+
+### 環境度量值查詢參數
+
+使用下列查詢參數，您可以收集 CPU、磁碟、記憶體、網路及應用程式的度量值：
+
+<dl class="parml">
+<dt class="pt dlterm">metric</dt>
+<dd class="pd">下列一個以上的值，以逗點區隔：'memory'、'disk'、'cpu'、'network' 及 'apps'。</dd>
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">從中傳回資料的最早時間點。如果未指定 startTime，則會包括最早的可用資料點。例如，若要收集 2 PM 與 5 PM 之間的資料，請將 startTime 指定為 2 PM。</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">從中傳回資料的最後時間點。如果未指定 endTime，則會使用最新的資料點。例如，若要收集 2 PM 與 5 PM 之間的資料，請將 endTime 指定為 5 PM。</dd>
+<dt class="pt dlterm">sort</dt>
+<dd class="pd">傳回資料時所依據的順序。有效值為 'asc'（遞增）及 'desc'（遞減）。預設值為遞減，並先傳回最新資料。</dd>
+</dl>
+
+### 環境度量值資料格式
+
+下列各節提供資料格式。
+
+ * 若要收集有關記憶體用量的資料記錄，請使用下列資料格式：
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "memory": {
+    "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
+    "memory_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "47"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "51"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "45"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "43"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * 若要收集有關磁碟用量的資料記錄，請使用下列資料格式：
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "disk": {
+    "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
+    "disk_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "14"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "12"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * 若要收集有關 CPU 使用率的資料記錄，請使用下列資料格式：
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "cpu": {
+    "average_percent_cpu_used": 27.288461538461544,
+    "cpu_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "sys_percent": "8.4",
+        "user_percent": "2.7",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "sys_percent": "7.4",
+        "user_percent": "2.4",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "sys_percent": "5.3",
+        "user_percent": "1.9",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "sys_percent": "8.2",
+        "user_percent": "22.6",
+        "wait_percent": "0.0"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * 若要收集有關網路的資料記錄，請使用下列資料格式：
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "network": {
+    "datapower": {
+    "response_times": [
+      {
+        "proxy": "custom_certificates",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "90",
+        "one_minute_ms": "89",
+        "ten_minutes_ms": "83",
+        "one_hour_ms": "85",
+        "one_day_ms": "95"
+      }
+      ],
+        "transactions": [
+      {
+        "proxy": "custom_domains",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "697",
+        "one_minute_ms": "747",
+        "ten_minutes_ms": "802",
+        "one_hour_ms": "794",
+        "one_day_ms": "730"
+      }
+      ],
+        "bandwidth": {
+        "in_mbps": 10855,
+        "out_mbps": 38090
+      }
+  }
+}
+```
+{: screen}
+
+* 若要收集有關應用程式的資料記錄，請使用下列資料格式：
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "apps": {
+    "count": 1406,
+    "allocation": {
+      "memory_gb": 571.8,
+      "disk_gb": 1204
+    }
+  }
+}
+```
+{: screen}
+
+### 環境度量值回應格式
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+## 收集應用程式的相關度量值
+
+大約每一小時記錄一次所有應用程式的資料。要求特定度量值時，會傳回每一個資料範例中所有應用程式在您指定之時段的資訊，其會依所要求度量值以遞減方式排序。例如，在具有 200 個應用程式的環境中，要求 6 小時時段所有依 CPU 排列的應用程式，會傳回 1200 筆記錄，一次 200 筆。
+
+若要減少在所要求的時段對每一個資料範例傳回的資訊數量，您可以指定計數選項。使用前一個範例並新增計數選項 5，即會對每一個資料範例傳回 30 筆記錄，代表前 5 個依 CPU 排列的應用程式。
+
+### 應用程式端點 
+
+您可以使用下列端點來呼叫此 API 指令：
+* /api/v1/app/cpu/physical 
+* /api/v1/app/memory/physical
+* /api/v1/app/memory/reserved
+* /api/v1/app/disk/physical
+* /api/v1/app/disk/reserved
+
+### 應用程式查詢參數
+ 
+請使用下列查詢參數來收集應用程式的度量值：
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">從中傳回資料的最早時間點。如果未指定 startTime，則會包括最早的可用資料點。例如，若要收集 2 PM 與 5 PM 之間的資料，請將 startTime 指定為 2 PM。</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">從中傳回資料的最後時間點。如果未指定 endTime，則會使用最新的資料點。例如，若要收集 2 PM 與 5 PM 之間的資料，請將 endTime 指定為 5 PM。</dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">要在每一個資料範例內傳回的記錄數目。
+</dd>
+</dl>
+
+### 應用程式回應格式
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+每一個傳回的文件代表每一個資料範例中應用程式在要求時間點的所要求度量值。
+
 
 ## 自訂服務 API
 {: #servicebrokerapi}
@@ -1290,19 +1589,14 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {"name": "Service broker's name",
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
+    "name": "Service broker's name",
     "broker_url": "https://provision-broker.comp.bluemix.net/bmx/provisioning/brokers/2063580064-8f23230c-7f36-4ce5-a298-2ab4108f1120",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "49f3adcc-ecc2-46fa-83c1-03322f04b3b1",
-    "created_at": "2015-12-07T19:51:50Z",
-    "updated_at": null,
-    "url": "/v2/service_brokers/49f3adcc-ecc2-46fa-83c1-03322f04b3b1"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
+
 ```
 {: screen}
 
@@ -1313,14 +1607,15 @@ Content-Type: application/json
 ### 路徑
 {: #updateroute}
 
-`PUT /codi/v1/serviceBrokers`
+```
+PUT /codi/v1/serviceBrokers
+```
 {: screen}
 
 ### 要求
 {: #updaterequest}
 
 *表 16. 欄位*
-{: #caption}
 
 | **名稱** | **說明** |
 |-----------------|-------------------|
@@ -1370,18 +1665,12 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {"name": "Service Broker's name",
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
+    "name": "Service Broker's name",
     "broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-d11bdd84-7556-469f-858d-2098b531f7f2",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "2cbdb812-d37f-443b-894a-a96de31e5c38",
-    "created_at": "2015-12-07T20:11:08Z",
-    "updated_at": "2015-12-07T20:11:19Z",
-    "url": "/v2/service_brokers/2cbdb812-d37f-443b-894a-a96de31e5c38"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
 ```
 {: screen}
@@ -1391,7 +1680,6 @@ Content-Type: application/json
 請使用下列 API 和程式碼範例來刪除服務。
 
 *表 17. 參數*
-{: #caption}
 
 | **名稱** | **說明** |
 |-----------------|-------------------|
@@ -1466,7 +1754,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 若要查看指令清單，請執行下列指令：
 
 
-`cf plugins`
+```
+cf plugins
+```
 {: codeblock}
 
 如需指令的其他說明，請使用 `-help` 選項。

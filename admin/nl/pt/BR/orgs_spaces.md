@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # Gerenciando organizações e espaços
 {: #orgsspacesusers}
-Última atualização: 20 de outubro de 2016
-{: .last-updated}
 
 Como um proprietário da conta, é possível gerenciar suas organizações acessando a página **Gerenciar organizações**. Gerenciadores de organização também podem usar a página Gerenciar Organizações,
 para gerenciar quaisquer organizações na qual eles estão configurados como o gerente.
@@ -79,7 +77,7 @@ Local, então, deverá especificar um novo nome. Depois de criar a organização
 Deve-se entrar em contato com o [{{site.data.keyword.Bluemix_notm}} Suporte](http://ibm.biz/bluemixsupport){: new_window}, para excluir uma organização. Ao solicitar que
 a equipe de suporte exclua uma organização, todos os espaços, aplicativos e serviços dentro da organização são excluídos.
 
-As [funções de usuário](users_roles.html#userrolesinfo) a seguir podem ser designadas para membros da equipe em uma organização:
+As [funções de usuário](/docs/admin/users_roles.html#userrolesinfo) a seguir podem ser designadas para membros da equipe em uma organização:
 
 <ul>
 <li>Gerente da organização</li>
@@ -96,7 +94,7 @@ Dentro de uma organização, é possível usar espaços para agrupar um conjunto
 {{site.data.keyword.Bluemix_notm}}.
 
 Após incluir membros da equipe em uma organização, é possível conceder a eles permissões para os espaços. Semelhantes às organizações, os espaços também têm um conjunto de
-[funções de usuário](users_roles.html#userrolesinfo) com permissões específicas que são designadas a membros da equipe:
+[funções de usuário](/docs/admin/users_roles.html#userrolesinfo) com permissões específicas que são designadas a membros da equipe:
 
 <ul>
 <li>Gerente de espaço</li>
@@ -189,9 +187,9 @@ Para visualizar a cota para a sua organização, conclua as etapas a seguir:
 4. Selecione a guia **COTA**.
 
 Para atualizar a cota para sua organização, deve-se abrir um chamado de suporte. Para obter mais informações sobre a abertura de um chamado de suporte, consulte
-[Obtendo suporte ao cliente](../support/index.html#contacting-support).
+[Obtendo suporte ao cliente](/docs/support/index.html#contacting-support).
 Para obter mais informações sobre a cota para contêineres, consulte
-[Cota](../containers/container_planning_org_ov.html##container_planning_quota)
+[Cota](/docs/containers/container_planning_org_ov.html##container_planning_quota)
 na documentação Contêineres.
 
 ## Gerenciando Domínios

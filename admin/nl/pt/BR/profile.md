@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,10 +17,8 @@ copyright:
 
 # Configurações de perfil
 {: #usersettings}
-Última atualização: 20 de outubro de 2016
-{: .last-updated}
 
-Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../icons/i-avatar-icon.svg) &gt; **Perfil do usuário** para atualizar suas configurações de perfil.
+Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](/docs/icons/i-avatar-icon.svg) &gt; **Perfil do usuário** para atualizar suas configurações de perfil.
 {:shortdesc}
 
  Na página **Perfil**, é possível configurar ou atualizar as informações a seguir:
@@ -32,7 +30,7 @@ Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../icons/i-ava
 ## Mudando a sua foto do perfil
 {: #photo}
 
-1. Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../icons/i-avatar-icon.svg) &gt; **Perfil do usuário**.
+1. Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](/docs/icons/i-avatar-icon.svg) &gt; **Perfil do usuário**.
 
 * Clique em **FAZER UPLOAD DE UMA FOTO** para fazer upload de uma foto.
 * Clique em **MUDAR FOTO** para fazer upload de uma nova foto.
@@ -46,7 +44,7 @@ Um IBMid é um ID único usado para efetuar login na conta do {{site.data.keywor
 Não é possível mudar o seu IBMid, mas é possível editar as informações do seu perfil associadas a ele. Se você precisar mudar suas informações de conta do ID IBM, como seu nome,
 e-mail, telefone, senha ou nome da empresa, conclua as etapas a seguir:
 
-1. Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../icons/i-avatar-icon.svg) &gt; **Perfil do usuário**.
+1. Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](/docs/icons/i-avatar-icon.svg) &gt; **Perfil do usuário**.
 2. Clique em **Editar seu IBMid**.
 3. Edite as informações sobre o usuário.
 4. Clique **Salvar.**
@@ -61,5 +59,5 @@ Se você optar por desativar o rastreamento, então, poderá não ser capaz de u
 
 Para desativar o rastreamento de analítica, conclua as etapas a seguir:
 
-1. Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../icons/i-avatar-icon.svg) &gt; **Perfil do usuário**.
+1. Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](/docs/icons/i-avatar-icon.svg) &gt; **Perfil do usuário**.
 2. Configure o rastreamento de analítica como **desligado**.

@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # 行動
 {: #mobile}
-
-*前次更新：2015 年 12 月 9 日*
 
 使用行動服務建置多平台、原生或混合式、Android 及 iOS 應用程式。
 {:shortdesc}

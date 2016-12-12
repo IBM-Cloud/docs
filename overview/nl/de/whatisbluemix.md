@@ -42,16 +42,19 @@ Das App-Dashboard bietet alles, was Sie brauchen, um Ihre Apps betriebsbereit zu
 
 {{site.data.keyword.openwhisk}} können Sie für eine verteilte ereignisgesteuerte Datenverarbeitung verwenden. {{site.data.keyword.openwhisk_short}} führt Anwendungslogik als Reaktion auf Ereignisse oder direkte Aufrufe über das Web oder mobile Apps über HTTP aus.
  
-Sie können mobile {{site.data.keyword.Bluemix_notm}}-Services für die Integration vordefinierter, verwalteter und skalierbarer Cloud-Services in Ihre mobilen Apps verwenden. 
+Sie können {{site.data.keyword.Bluemix_notm}} Mobile-Services für die Integration vordefinierter, verwalteter und skalierbarer Cloud-Services in Ihre mobilen Apps verwenden. 
 
 ### Services
 {: #bluemixoverviewservices}
 
 Das Service-Dashboard bietet Zugriff auf die {{site.data.keyword.Bluemix_notm}}-Services, die über {{site.data.keyword.IBM}} und Drittanbieter zur Verfügung stehen. Dazu gehören Services von Watson, IoT, Analytics, Mobile und DevOps:
 
-* Schnellere, kostengünstigere Bereitstellung neuer innovativer Anwendungen mit genau den richtigen Funktionen unter Verwendung von {{site.data.keyword.IBM_notm}} DevOps-Services und der {{site.data.keyword.Bluemix_notm}} Garage Method. Wenn Sie DevOps-Verfahren übernehmen und eine Kultur der Innovation und Agilität erzeugen, können Sie durch Iterieren und Pivotieren auf den Markt reagieren.
+* Schnellere, kostengünstigere Bereitstellung neuer innovativer Anwendungen mit genau den richtigen Funktionen unter Verwendung von {{site.data.keyword.IBM_notm}} DevOps-Services und der {{site.data.keyword.Bluemix_notm}} Garage Method. 
+Wenn Sie DevOps-Verfahren übernehmen und eine Kultur der Innovation und
+Agilität erzeugen, können Sie mit iterativen Verfahren und Richtungsänderungen
+auf den Markt reagieren.
 * Blockchain ist eine verteilte Peer-to-Peer-Hauptbuch-Technologie für eine neue Generation von Transaktionsanwendungen, die Vertrauen, Verantwortlichkeit und Transparenz vermittelt und gleichzeitig die Geschäftsprozesse optimiert.  
-* Watson verleiht Ihren Apps das Potenzial für kognitive Datenverarbeitung mit einer vollständigen Suite von Sprach-Apps, visuellen und Daten-APIs. Lösen Sie Ihre komplexesten Geschäftsprobleme, indem Sie über Watson-Services eine kognitive Plattform bereitstellen.
+* Watson verleiht Ihren Apps das Potenzial für kognitive Datenverarbeitung mit einer vollständigen Suite von Sprach-Apps, visuellen und Daten-APIs.  Lösen Sie Ihre komplexesten Geschäftsprobleme, indem Sie über Watson-Services eine kognitive Plattform bereitstellen.
 * {{site.data.keyword.IBM_notm}} gibt Ihnen die Möglichkeit, mit umfangreichen integrierten Clouddatenbanken und Daten- und Analyseservices mehr zu erreichen. 
 * Der {{site.data.keyword.IBM_notm}} IoT-Service ermöglicht Ihren Apps die Kommunikation mit und Nutzung von Daten, die von Ihren verbundenen Geräten, Sensoren und Gateways erfasst werden. Mit unseren Anleitungen können Sie Geräte ganz einfach mit unserer IoT-Cloud verbinden. Ihre Apps können dann anhand unserer Echtzeitdaten und REST-APIs mit Ihren Geräten kommunizieren und die Daten verarbeiten, zu deren Erfassung sie eingerichtet wurden. 
 * {{site.data.keyword.IBM_notm}} bietet eine mobile Back-End-Infrastruktur, in der Sie plattformübergreifende, native oder hybride Apps erstellen und auch überwachen und testen können. Sie können Ihre App auch mit Analysen, Sicherheitsfunktionen, Benutzerdaten und Continuous Delivery verbessern. 
@@ -64,11 +67,18 @@ Darüber hinaus stellt {{site.data.keyword.Bluemix_notm}} experimentelle Service
 
 Das Infrastruktur-Dashboard bietet für Ihren Bedarf an einer Cloudinfrastruktur verschiedene Services an.
 
-Die {{site.data.keyword.Bluemix_notm}}-Infrastruktur bietet eine der leistungsfähigsten Cloudinfrastrukturen überhaupt. Die {{site.data.keyword.Bluemix_notm}}-Infrastruktur ist eine einzige Plattform, die Rechenzentren in der ganzen Welt mit dem größtmöglichen Spektrum an Cloud-Computing-Optionen nutzt, diese Optionen einbindet und automatisiert. {{site.data.keyword.CloudDataCents_notm}} bieten eine riesige Menge an erstklassiger Ausrüstung für Datenverarbeitung, Speicherung und Vernetzung. Jeder Standort wird auf gleiche Weise erbaut, ausgestattet und betrieben, sodass Sie immer exakt dieselben Funktionen und Verfügbarkeiten erwarten können. Die Standorte sind über das fortgeschrittenste Network-within-a-Network der Branche miteinander verbunden, das eigenständige öffentliche, private und interne Managementnetze zur Senkung der Gesamtnetzkosten, für besseren Zugriff und höhere Geschwindigkeiten integriert. Zudem teilen die Rechenzentren und das Netz ein proprietäres Managementsystem. Über nur ein Verwaltungstool können Sie alles steuern, jeden Bare-Metal-Server, virtuellen Server und jede Speichereinheit, die alle über API-, Portal- und mobile Anwendungen zugänglich sind.
+Die {{site.data.keyword.Bluemix_notm}}-Infrastruktur bietet eine der leistungsfähigsten Cloudinfrastrukturen überhaupt. Die {{site.data.keyword.Bluemix_notm}}-Infrastruktur ist eine einzige Plattform, die Rechenzentren in der ganzen Welt mit dem größtmöglichen Spektrum an Cloud-Computing-Optionen nutzt, diese Optionen einbindet und automatisiert. {{site.data.keyword.CloudDataCents_notm}} bieten eine riesige Menge an erstklassiger Ausrüstung für Datenverarbeitung, Speicherung und Vernetzung. 
+Jeder Standort wird auf gleiche Weise erbaut, ausgestattet und betrieben,
+sodass Sie immer exakt dieselben Funktionen und Verfügbarkeiten erwarten
+können. Die Standorte sind über das fortgeschrittenste Network-within-a-Network der Branche miteinander verbunden, das eigenständige öffentliche, private und interne Managementnetze zur Senkung der Gesamtnetzkosten, für besseren Zugriff und höhere Geschwindigkeiten integriert. Zudem teilen die Rechenzentren und das Netz ein proprietäres Managementsystem. Über nur ein Verwaltungstool können Sie alles steuern, jeden Bare-Metal-Server, virtuellen Server und jede Speichereinheit, die alle über API-, Portal- und mobile Anwendungen zugänglich sind.
 
 Die {{site.data.keyword.Bluemix_notm}}-Infrastruktur bietet leistungsfähige Bare-Metal-Server und flexible virtuelle Server in einer einzigen übergangslosen Plattform. Alle werden bedarfsgerecht bereitgestellt und monats- bzw. stundenweise berechnet. Bare-Metal-Server bieten die reine Leistung für Ihre prozessorintensiven und Platten-E/A-intensiven Workloads und können nach Ihren genauen Spezifikationen konfiguriert werden. Virtuelle Server ermöglichen eine hohe Geschwindigkeit bei der Bereitstellung, eine flexible Skalierbarkeit und nutzungsabhängige Rechnungsstellung. Um eine hoch leistungsfähige Datenverarbeitung zu erhalten, werten Sie Ihre Cloud mit GPU-Servern auf (GPU - Grafik-Verarbeitungseinheit), die stunden- oder monatsweise zur Verfügung gestellt werden. 
 
-Die Angebote der {{site.data.keyword.Bluemix_notm}}-Infrastruktur sind mit einem dreischichtigen Netz verbunden, das den Datenverkehr in öffentlichen, privaten und Managementdatenverkehr segmentiert. Mit der Infrastruktur auf dem {{site.data.keyword.Bluemix_notm}}-Konto eines Kunden könnten Daten kostenlos über das private Netz übertragen werden. Infrastrukturangebote, z. B. Bare-Metal-Server, virtuelle Server und Cloudspeicherung, stellen Verbindungen zu anderen Anwendungen und Services im {{site.data.keyword.Bluemix_notm}}-Katalog her, z. B. Watson-Services, Container oder Laufzeiten im ganzen öffentlichen Netz. Die Datenübertragung zwischen diesen zwei Angebotstypen wird gemessen und zu Standardpreisen für die öffentliche Netzbandbreite berechnet.
+Die Angebote der {{site.data.keyword.Bluemix_notm}}-Infrastruktur sind mit einem dreischichtigen Netz verbunden, das den Datenverkehr in öffentlichen, privaten und Managementdatenverkehr segmentiert. 
+Mit der Infrastruktur auf dem {{site.data.keyword.Bluemix_notm}}-Konto
+eines Kunden könnten Daten in einer solchen Infrastruktur kostenlos über das
+private Netz übertragen
+werden. Infrastrukturangebote, z. B. Bare-Metal-Server, virtuelle Server und Cloudspeicherung, stellen Verbindungen zu anderen Anwendungen und Services im {{site.data.keyword.Bluemix_notm}}-Katalog her, z. B. Watson-Services, Container oder Laufzeiten im ganzen öffentlichen Netz. Die Datenübertragung zwischen diesen zwei Angebotstypen wird gemessen und zu Standardpreisen für die öffentliche Netzbandbreite berechnet.
 
 ## Verwendung der {{site.data.keyword.Bluemix_notm}}-Konsole
 {: #bluemixoverviewui}

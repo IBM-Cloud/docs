@@ -23,7 +23,6 @@ Le logiciel SDK pour applications mobiles est écrit en langage Swift 3.0 et pre
 générer le logiciel SDK pour applications mobiles avec Xcode 8.0. Les versions Legacy Swift 2.2/Xcode 7 du logiciel SDK sont disponibles jusqu'à
 la version 0.1.7, bien que celle-ci soit désormais dépréciée.
 
-
 ## Ajout du logiciel SDK à votre application
 {: #openwhisk_add_sdk}
 
@@ -51,16 +50,15 @@ end
 {: codeblock}
 
 Depuis la ligne de commande, entrez `pod install`. Cette commande installe le logiciel SDK pour une application iOS avec une
-extension watchOS. Utilisez
+extension watchOS.  Utilisez
 le fichier d'espace de travail que CocoaPods a créé pour votre application afin d'ouvrir le projet dans Xcode.
 
-Après l'installation, ouvrez l'espace de travail de votre projet. L'avertissement suivant peut s'afficher lors de la génération : `Use
+Après l'installation, ouvrez l'espace de travail de votre projet.  L'avertissement suivant peut s'afficher lors de la génération : `Use
 Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
-Ce message apparaît si Cocoapods ne met pas à jour la version de Swift dans le projet Pods. Pour résoudre le problème, sélectionnez le projet Pods et la
-cible {{site.data.keyword.openwhisk_short}}. Accédez aux paramètres de génération et associez le paramètre `Use Legacy Swift Language
+Ce message apparaît si Cocoapods ne met pas à jour la version de Swift dans le projet Pods.  Pour résoudre le problème, sélectionnez le projet Pods et la
+cible {{site.data.keyword.openwhisk_short}}.  Accédez aux paramètres de génération et associez le paramètre `Use Legacy Swift Language
 Version` à la valeur `no`. Vous pouvez aussi ajouter les instructions de postinstallation suivantes à la fin de votre
 fichier Pod :
-
 
 ```
 post_install do |installer|

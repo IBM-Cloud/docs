@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -17,8 +19,6 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} へのアクセスに関するトラブルシューティング 
 {: #accessing}
 
-最終更新日: 2016 年 10 月 23 日
-{: .last-updated} 
 
 {{site.data.keyword.Bluemix}} へのアクセスに関する一般的な問題には、{{site.data.keyword.Bluemix_notm}} へのログインができないユーザー、保留状態で使用できないアカウントなどが含まれます。しかし多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {:shortdesc}

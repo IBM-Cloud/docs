@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Resolución de problemas de tiempos de ejecución
 {: #runtimes}
 
-Última actualización: 18 de agosto de 2016
-{: .last-updated}
 
 
 Puede tener problemas al utilizar los tiempos de ejecución de IBM® Bluemix™. Sin embargo, en muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
@@ -134,8 +134,7 @@ Este problema se produce cuando falta la información de configuración de la ap
 Para solucionar el problema, añada un archivo `requirements.txt` y un archivo `Procfile` al directorio raíz de la app Python. La información siguiente da por supuesto que está importando una biblioteca web.py:
 {: tsResolve}
 
-  1. Añada un archivo `requirements.txt` al directorio raíz de la app Python.
-     El archivo `requirements.txt` especifica los paquetes de la biblioteca que la app Python requiere y la versión de los paquetes. El ejemplo siguiente muestra el contenido del archivo `requirements.txt`, donde `web.py==0.37` indica que la versión de la biblioteca `web.py` que se descargará es la 0.37, y `wsgiref==0.1.2` indica que la versión de la interfaz de la pasarela del servidor web que la biblioteca web.py requiere es la 0.1.2.
+  1. Añada un archivo `requirements.txt` al directorio raíz de la app Python. El archivo `requirements.txt` especifica los paquetes de la biblioteca que la app Python requiere y la versión de los paquetes. El ejemplo siguiente muestra el contenido del archivo `requirements.txt`, donde `web.py==0.37` indica que la versión de la biblioteca `web.py` que se descargará es la 0.37, y `wsgiref==0.1.2` indica que la versión de la interfaz de la pasarela del servidor web que la biblioteca web.py requiere es la 0.1.2.
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2

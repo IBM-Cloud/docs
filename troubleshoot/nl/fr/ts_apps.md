@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-11"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Traitement des incidents liés à la gestion des applications
 {: #managingapps}
 
-Dernière mise à jour : 11 octobre 2016
-{: .last-updated} 
 
 Des problèmes d'ordre général liés à la gestion des applications peuvent survenir : par exemple, les applications ne peuvent pas être mises à jour, les caractères codés sur deux octets ne sont pas affichés. Toutefois, dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
 {:shortdesc}
@@ -190,7 +190,7 @@ Vous ne disposez pas du niveau de droits approprié requis pour effectuer les ac
 Pour obtenir le niveau de droits approprié, appliquez l'une des méthodes suivantes : 
 {: tsResolve}
  * Sélectionnez une autre organisation et un autre espace pour laquelle ou lequel vous disposez du rôle Développeur. 
- * Demandez au responsable de l'organisation de vous attribuer le rôle Développeur ou de créer un espace, puis de vous attribuer le rôle Développeur. Pour plus d'informations, voir [Gestion des organisations et des espaces](../admin/orgs_spaces.html){: new_window}.
+ * Demandez au responsable de l'organisation de vous attribuer le rôle Développeur ou de créer un espace, puis de vous attribuer le rôle Développeur. Pour plus d'informations, voir [Gestion des organisations et des espaces](/docs/admin/orgs_spaces.html){: new_window}.
  
 
 
@@ -286,7 +286,7 @@ cache du navigateur.
 
  
 
-Si vous suspectez l'arrêt d'un service {{site.data.keyword.Bluemix_notm}}, consultez d'abord la page de [statut de {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Vous pouvez souhaiter utiliser le service en tant que solution palliative dans une autre région {{site.data.keyword.Bluemix_notm}}. Des informations détaillées sont disponibles à la section [Utilisation des services dans une autre région](../services/reqnsi.html#cross_region_service){: new_window}. Si le statut du service est normal, essayez la procédure suivante pour résoudre le problème : 
+Si vous suspectez l'arrêt d'un service {{site.data.keyword.Bluemix_notm}}, consultez d'abord la page de [statut de {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Vous pouvez souhaiter utiliser le service en tant que solution palliative dans une autre région {{site.data.keyword.Bluemix_notm}}. Des informations détaillées sont disponibles à la section [Utilisation des services dans une autre région](/docs/services/reqnsi.html#cross_region_service){: new_window}. Si le statut du service est normal, essayez la procédure suivante pour résoudre le problème : 
 {: tsResolve}
 
   * Exécutez à nouveau l'action :
@@ -296,7 +296,7 @@ Si vous suspectez l'arrêt d'un service {{site.data.keyword.Bluemix_notm}}, cons
 unités peut éliminer diverses erreurs à l'origine de l'erreur 502. 
   * Attendez et recommencez ultérieurement. Dans certaines instances, des problèmes temporaires peuvent se produire
 avec votre fournisseur d'accès Internet ou les services {{site.data.keyword.Bluemix_notm}}. Vous pouvez attendre jusqu'à ce que les problèmes temporaires soient résolus.
-  * Si le problème existe toujours, contactez le support {{site.data.keyword.Bluemix_notm}}. Voir [Contacter le support {{site.data.keyword.Bluemix_notm}}](../support/index.html#contacting-bluemix-support){: new_window} pour plus d'informations. 
+  * Si le problème existe toujours, contactez le support {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Contacter le support {{site.data.keyword.Bluemix_notm}}](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
 
 
 
@@ -322,7 +322,7 @@ Le quota de disque par défaut alloué à une application est de  1 Go. Si vous 
 
  
 Utilisez l'une des méthodes suivantes pour spécifier votre quota de disque. Le quota de disque maximal que vous pouvez spécifier est de 2 Go. Si les 2 Go ne sont toujours pas suffisants, essayez un service externe
-tel que [Object Store](../services/ObjectStorage/index.html){: new_window}.
+tel que [Object Store](/docs/services/ObjectStorage/index.html){: new_window}.
 {: tsResolve}
 
   * Dans le fichier manifest.yml, ajoutez l'élément suivant :
@@ -375,9 +375,10 @@ Supprimez les instances de service dont vous n'avez pas besoin ou supprimez la l
 {: tsResolve}
  
   * Pour supprimer une instance de service, vous pouvez utiliser la console {{site.data.keyword.Bluemix_notm}} ou l'interface
-de ligne de commande. Pour utiliser la console {{site.data.keyword.Bluemix_notm}} afin de supprimer une instance de service, procédez
+de ligne de commande.
+    Pour utiliser la console {{site.data.keyword.Bluemix_notm}} afin de supprimer une instance de service, procédez
 comme suit :
-	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur le service que vous souhaitez supprimer. La carte du
+	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur le service que vous souhaitez supprimer.  La carte du
 service s'affiche.
 	  2. Sur la carte du service, cliquez sur l'icône **Menu**.
 	  3. Cliquez sur **Supprimer le service**. Une fois l'instance de service supprimée, vous êtes invité à reconstituer l'application à laquelle l'instance de service était liée. 
@@ -390,7 +391,7 @@ unbind-service <nom_app> <nom_instance_service>`.
 `cf restage <nom_app>`.
   * Pour supprimer la limite relative au nombre d'instances de service dont vous pouvez disposer, convertissez votre compte d'essai en compte
 payant. Pour des informations sur la conversion de votre compte d'essai en compte payant, voir [Comment
-changer votre plan ?](../pricing/index.html#changing){: new_window}.
+changer votre plan ?](/docs/pricing/index.html#changing){: new_window}.
 
   
   
@@ -457,9 +458,9 @@ Vous pouvez augmenter le quota de mémoire de votre compte ou réduire la mémoi
 {: tsResolve} 
 
   * Pour augmenter le quota de mémoire de votre compte, convertissez votre compte d'essai en compte payant. Pour des informations sur la conversion
-de votre compte d'essai en compte payant, voir [Comptes payants](../pricing/index.html#pay-accounts){: new_window}. 
-  * Pour réduire la quantité de mémoire que vos applications utilisent, servez-vous de la console {{site.data.keyword.Bluemix_notm}} ou de l'interface de ligne de commande cf. 
-Si vous utilisez la console {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
+de votre compte d'essai en compte payant, voir [Comptes payants](/docs/pricing/index.html#pay-accounts){: new_window}. 
+  * Pour réduire la quantité de mémoire que vos applications utilisent, servez-vous de la console {{site.data.keyword.Bluemix_notm}} ou de l'interface de ligne de commande cf.
+    Si vous utilisez la console {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
 	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, sélectionnez votre application. La page des détails de l'application
 s'ouvre.
 	  2. Dans le panneau Contexte d'exécution, vous pouvez réduire la limite de mémoire maximal ou le nombre d'instances d'application, ou les deux,
@@ -492,9 +493,7 @@ Une application n'est pas redémarrée automatiquement lorsqu'un service que vou
 	  
  
 
-Lorsqu'un service que vous liez à une application tombe en panne, des problèmes tels que des indisponibilités, des exceptions et des échecs de
-connexion peuvent survenir sur l'application. {{site.data.keyword.Bluemix_notm}} ne redémarre pas automatiquement l'application pour assurer la
-reprise suite à ces problèmes.
+Lorsqu'un service que vous liez à une application tombe en panne, des problèmes tels que des indisponibilités, des exceptions et des échecs de connexion peuvent survenir sur l'application. {{site.data.keyword.Bluemix_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise suite à ces problèmes.
 {: tsSymptoms}
 
 
@@ -604,7 +603,7 @@ La fonction de débogage ne peut pas activée dans les cas suivants :
 Utilisez l'une des options suivantes pour résoudre le problème : 
 {: tsResolve}
 
-  * La pratique recommandée consiste à utiliser le pack de construction IBM Node.js pour démarrer l'application. Pour plus d'informations, voir la section sur la commande de démarrage dans la rubrique [Déploiemenr d'une application Node.js sur {{site.data.keyword.Bluemix_notm}}](../runtimes/nodejs/index.html#nodejs_runtime){: new_window}. 
+  * La pratique recommandée consiste à utiliser le pack de construction IBM Node.js pour démarrer l'application. Pour plus d'informations, voir la section sur la commande de démarrage dans la rubrique [Déploiement d'une application Node.js sur {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime){: new_window}. 
   * Désactivez la commande pour votre application existante en modifiant l'attribut command dans le fichier `manifest.yml` par command: null ou en éditant votre commande push en y ajoutant `-c null`. 
   * Retirez l'attribut **command** du fichier `manifest.yml`. Supprimez ensuite l'application en cours de {{site.data.keyword.Bluemix_notm}} et insérez de nouveau l'application.
   
@@ -663,7 +662,7 @@ Si vous envoyez votre application par commande push à
 {{site.data.keyword.Bluemix_notm}} et spécifier le noeud final d'API de la région
 {{site.data.keyword.Bluemix_notm}} dans laquelle votre organisation a été créée. Pour plus d'informations sur l'utilisation des outils Eclipse, voir
 [Déploiement d'applications avec IBM Eclipse Tools for
-Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.
+Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.
   
   
 
@@ -831,8 +830,8 @@ Effectuez les opérations suivantes en fonction de l'origine du problème :
         ```
 
   * Vérifiez qu'un fichier `package.json` existe dans votre application Node.js pour que le pack de construction Node.js puisse reconnaître
-l'application. De plus, vous devez placer ce fichier dans le répertoire racine de votre application.	
-    L'exemple suivant représente un fichier `package.json` simple :  
+l'application. Placez également ce fichier dans le répertoire racine de votre application.	
+L'exemple suivant représente un fichier `package.json` simple :  
 	```
 	{
         "name": "MyUniqueNodejs01",
@@ -880,8 +879,7 @@ vous importez l'application dans Eclipse, le fichier `runtime-vars.xml` n'existe
 
  
 
-Pou résoudre ce problème, supprimez le fichier server.xml du projet. Le pack de construction crée le fichier `server.xml` de manière
-dynamique lorsque vous envoyez par commande push l'application sous forme d'application WAR. Pour plus d'informations, voir [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
+Pou résoudre ce problème, supprimez le fichier server.xml du projet. Le pack de construction crée le fichier `server.xml` de manière dynamique lorsque vous envoyez par commande push l'application sous forme d'application WAR. Pour plus d'informations, voir [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -930,7 +928,7 @@ Ce problème peut survenir car DevOps Services requiert un fichier `manifest.yml
 
  
 
-Pour remédier à ce problème, vous devez créer un fichier `manifest.yml`. Pour plus d'informations sur la création du fichier `manifest.yml`, voir [Manifeste d'application](../manageapps/depapps.html#appmanifest){: new_window}.
+Pour remédier à ce problème, vous devez créer un fichier `manifest.yml`. Pour plus d'informations sur la création du fichier `manifest.yml`, voir [Manifeste d'application](/docs/manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -1307,10 +1305,7 @@ Vous pouvez rencontrer des problèmes lorsque vous utilisez les contextes d'exé
 {: #ts_loading_bp}
 
 
-Il est possible que vous ne puissiez pas utiliser les derniers composants du pack de construction
-lorsque vous envoyez une application par commande push. Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés
-pour empêcher le chargement de composants obsolètes ou supprimer le contenu du répertoire cache de votre application avant
-de l'envoyer par commande push ou de la reconstituer. 
+Il est possible que vous ne puissiez pas utiliser les derniers composants du pack de construction lorsque vous envoyez une application par commande push. Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés pour empêcher le chargement de composants obsolètes ou supprimer le contenu du répertoire cache de votre application avant de l'envoyer par commande push ou de la reconstituer. 
 
  
 
@@ -1416,13 +1411,13 @@ l'application Python manquent.
 
  
 
-Pour résoudre le problème, ajoutez un fichier `requirements.txt` et un fichier `Procfile` dans le répertoire racine
+Pour résoudre le problème, ajoutez un fichier
+`requirements.txt` et un fichier `Procfile` dans le répertoire racine
 de votre application Python. Les informations suivantes supposent que vous importez la bibliothèque web.py :
 {: tsResolve}
 
   1. Ajoutez un fichier `requirements.txt` dans le répertoire racine de votre application Python.
-     Le fichier
-`requirements.txt` spécifie les packages de bibliothèque requis pour votre application Python ainsi que la version des packages. L'exemple
+Le fichier `requirements.txt` spécifie les packages de bibliothèque requis pour votre application Python ainsi que la version des packages. L'exemple
 ci-après illustre le contenu du fichier `requirements.txt`, où `web.py==0.37` indique que la version de la bibliothèque
 `web.py` qui sera téléchargée est la version 0.37 et `wsgiref==0.1.2` indique que la version de l'interface Web de
 Secure Gateway requise par la bibliothèque web.py est la version 0.1.2.
@@ -1436,7 +1431,7 @@ Secure Gateway requise par la bibliothèque web.py est la version 0.1.2.
 	Le fichier `Procfile`
 contient la commande de démarrage de votre application Python. Dans la commande ci-dessous, *nom_de_votre_app* est le nom de votre application
 Python et *PORT* est le numéro de port que votre application Python doit utiliser pour recevoir les demandes des utilisateurs de
-l'application. *$PORT* est facultatif. Si vous ne spécifiez pas PORT dans la commande de démarrage, le numéro de port qui figure dans la
+l'application. *$PORT*  est facultatif. Si vous ne spécifiez pas PORT dans la commande de démarrage, le numéro de port qui figure dans la
 variable d'environnement `VCAP_APP_PORT` dans l'application est utilisé à la place. 
 	```
 	web: python <nom_de_votre_app>.py $PORT

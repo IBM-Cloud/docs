@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-20"
 
 
 ---
@@ -14,8 +16,6 @@ copyright:
 # Resolución de problemas
 {: #troubleshooting}
 
-Última actualización: 20 de octubre de 2016
-{: .last-updated}
 
 Si tiene problemas con {{site.data.keyword.Bluemix}}, puede llevar a cabo las tareas de resolución de problemas para determinar la acción de corrección que debe emprender.
 

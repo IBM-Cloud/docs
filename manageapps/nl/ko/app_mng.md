@@ -57,7 +57,7 @@ http://<yourappname>.mybluemix.net/bluemix-debug/shell
 
   1. *debug*: Liberty 애플리케이션을 디버그 모드로 작동시키고, {{site.data.keyword.Bluemix_notm}}가 애플리케이션에 원격 디버깅 세션을 설정할 수 있도록 IBM Eclipse Tools와 같은 클라이언트를 사용 가능하게 합니다. 
   
-   자세한 정보는 [원격 디버그](../manageapps/eclipsetools/eclipsetools.html#remotedebug)를 참조하십시오.
+   자세한 정보는 [원격 디버그](/docs/manageapps/eclipsetools/eclipsetools.html#remotedebug)를 참조하십시오.
    
    또한 *debug* 유틸리티는 *프록시*를 시작하지 않습니다.
    
@@ -127,7 +127,7 @@ cf restage myApp
 ##Eclipse 도구의 개발 모드
 {: #devmode}
 
-개발 모드는 애플리케이션이 클라우드에서 실행되는 동안 개발자가 애플리케이션에서 작업할 수 있도록 해주는 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools)의 기능입니다.
+개발 모드는 애플리케이션이 클라우드에서 실행되는 동안 개발자가 애플리케이션에서 작업할 수 있도록 해주는 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)의 기능입니다.
 
 개발자가 {{site.data.keyword.Bluemix_notm}}에서
 애플리케이션 작업을 수행하는 경우 작업이 로컬 환경에서 이루어지므로 일반적인

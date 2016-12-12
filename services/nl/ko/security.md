@@ -1,18 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 
 # 보안
 {: #security}
-
-*마지막 업데이트 날짜: 2015년 12월 9일*
 
 이러한 보안 서비스를 사용하면 애플리케이션 및 워크로드에 대한 액세스를 보호하고 애플리케이션에서 취약점을 검사할 수 있습니다. 보안 제어 기능을 데이터 관리 및 빅데이터 서비스에 임베드할 수도 있습니다.
 {:shortdesc}

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-23"
 
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # 设置帐户
 {: #account}
-上次更新时间：2016 年 10 月 23 日
-{: .last-updated}
 
 现在，您已注册 {{site.data.keyword.Bluemix_notm}}，接下来需要设置帐户，以便可以快速开始供应基础架构或构建应用程序。
 {:shortdesc}

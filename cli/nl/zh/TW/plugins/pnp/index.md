@@ -11,20 +11,20 @@ lastupdated: "2016-10-14"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Bluemix CLI 的專用網路同層級外掛程式
+# Bluemix CLI 的專用網路對等作業外掛程式
 {: #private_network_cli}
 
-使用專用網路同層級指令行介面 (CLI)，以配置及管理兩個 {{site.data.keyword.Bluemix}} 空間之間的專用網路同層級。IBM Containers（Docker 容器）支援專用網路同層級。Bluemix 空間可以位在相同地區的不同可用性區域中，也可以位在不同地區中。專用網路同層級 CLI 外掛程式可以與 Bluemix CLI 外掛程式搭配使用。
+使用專用網路對等作業指令行介面 (CLI)，以配置及管理兩個 {{site.data.keyword.Bluemix}} 空間之間的專用網路對等作業。IBM Containers（Docker 容器）支援專用網路對等作業。Bluemix 空間可以位在相同地區的不同可用性區域中，也可以位在不同地區中。專用網路對等作業 CLI 外掛程式可以與 Bluemix CLI 外掛程式搭配使用。
 
-專用網路同層級 CLI 外掛程式適用於 Windows、MAC 及 Linux 作業系統。請確定您是使用適用的外掛程式。
+專用網路對等作業 CLI 外掛程式適用於 Windows、MAC 及 Linux 作業系統。請確定您是使用適用的外掛程式。
 
 開始之前，請建立 Bluemix 空間。請確定空間中的每一個容器都有不同網路的 IP 位址。如需詳細資料，請參閱[使用您自己的專用 IP 位址](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip)
 
-**附註：**在您使用具有 Bluemix 空間的專用網路同層級之後，如果需要刪除該空間，請先刪除該空間中的專用網路同層級連線。
+**附註：**在您對 Bluemix 空間使用專用網路對等作業之後，如果需要刪除該空間，請先刪除該空間中的專用網路對等作業連線。
 
 若要開始使用，請安裝 IBM Bluemix CLI。如需詳細資料，請參閱 [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)。
 
-## 安裝專用網路同層級 CLI 外掛程式
+## 安裝專用網路對等作業 CLI 外掛程式
 
 **附註**：如果您有舊版的已安裝外掛程式，則需要將它解除安裝。使用下列指令，以解除安裝外掛程式：
 
@@ -32,9 +32,9 @@ lastupdated: "2016-10-14"
 bluemix plugin uninstall private-network-peering
 ```
 ### 在本端安裝
-從 [IBM Bluemix CLI 外掛程式儲存庫](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins)，下載您平台的專用網路同層級外掛程式。
+從 [IBM Bluemix CLI 外掛程式儲存庫](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins)，下載您平台的專用網路對等作業外掛程式。
 
-使用下列指令，以安裝專用網路同層級外掛程式：
+使用下列指令，以安裝專用網路對等作業外掛程式：
 
 **附註**：請切換至外掛程式的位置，或指定外掛程式位置的路徑。
 
@@ -77,20 +77,20 @@ chmod a+x ./private-network-peering-linux-amd64
 	bluemix plugin install private-network-peering -r bluemix-bx
 	```  
 
-## 專用網路同層級指令清單
+## 專用網路對等作業指令清單
 支援下列四個指令。使用 `bluemix network` 指令，以查看可用的指令清單：
 
 | 指令     | 說明                                    |
 |-------------|------------------------------------------------|
-| pnp-routers | 列出同層級的所有可用路由器        |
-| pnp-create  | 建立專用網路同層級連線   |
-| pnp-delete  | 刪除專用網路同層級連線   |
-| pnp-show    | 列出所有專用網路同層級連線  |
+| pnp-routers | 列出對等作業的所有可用路由器        |
+| pnp-create  | 建立專用網路對等作業連線   |
+| pnp-delete  | 刪除專用網路對等作業連線   |
+| pnp-show    | 列出所有專用網路對等作業連線  |
 
 ### 指令用法
 若要檢視指令的說明資訊，請執行：`bluemix network [command] -h`。
 
-#### 列出同層級的所有可用路由器
+#### 列出對等作業的所有可用路由器
 ```
 bluemix network pnp-routers [--verbose (or -v)]
 ```
@@ -145,7 +145,7 @@ bluemix network pnp-routers [--verbose (or -v)]
 	...
 
 
-#### 使用 IP 位址建立專用網路同層級連線
+#### 使用 IP 位址建立專用網路對等作業連線
 ```
 bluemix network pnp-create <router_ip> <router_ip> <name>
 ```
@@ -153,8 +153,8 @@ bluemix network pnp-create <router_ip> <router_ip> <name>
 #####參數
 {: #p1}
 
-* **router_ip**：您要連接的兩個路由器的 IP 位址。您可以使用下列指令來尋找 IP 位址：`bluemix network pnp-routers`
-* **name**：專用網路同層級連線的名稱。
+* **router_ip**：您要連接的兩個路由器的 IP 位址。您可以使用下列指令來找出 IP 位址：`bluemix network pnp-routers`
+* **name**：專用網路對等作業連線的名稱。
 
 ######指令範例
 {: #ex2}
@@ -167,7 +167,7 @@ bluemix network pnp-create <router_ip> <router_ip> <name>
 	Private network peering connection 'demo' created.
 
 
-####使用連線名稱建立專用網路同層級連線
+####使用連線名稱建立專用網路對等作業連線
 
 ```
 bluemix network pnp-create -i <name>
@@ -177,7 +177,7 @@ bluemix network pnp-create -i <name>
 {: #p2}
 
 * **--interactive (-i)**（旗標）：互動模式以選取路由器。
-* **name**：專用網路同層級連線的名稱。
+* **name**：專用網路對等作業連線的名稱。
 
 ######指令範例
 {: #ex3}
@@ -200,7 +200,7 @@ bluemix network pnp-create -i <name>
 	Private network peering connection 'demo' created.
 
 
-#### 列出所有專用網路同層級連線
+#### 列出所有專用網路對等作業連線
 ```
 bluemix network pnp-show [--verbose (or -v)]
 ```
@@ -240,7 +240,7 @@ bluemix network pnp-show [--verbose (or -v)]
 	Router2 Networks   172.25.0.0/16
 
 
-#### 刪除專用網路同層級連線
+#### 刪除專用網路對等作業連線
 ```
 bluemix network pnp-delete [--force (or -f)] <connection_id>
 ```

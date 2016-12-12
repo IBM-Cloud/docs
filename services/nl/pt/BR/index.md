@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 #Serviços
 {: #services}
-*Última atualização: 23 de outubro de 2016*
 
 O {{site.data.keyword.Bluemix_notm}} facilita a implementação, a hospedagem e os serviços de escala e apps. O foco pode ser a lógica e o
 design do aplicativo.
@@ -23,17 +23,18 @@ Vários níveis de suporte são fornecidos para serviço {{site.data.keyword.Blu
 |Tipo	|Descrição	|Detalhes do suporte|
 |:------|:--------------|:--------------|
 |IBM	|Um serviço que é fornecido pela IBM e que está geralmente disponível.	|Problemas determinados como um defeito
-em um serviço fornecido pela IBM que geralmente está disponível são suportados. O suporte será fornecido com base na severidade configurada. Para obter mais informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](../support/index.html#contacting-bluemix-support){: new_window}.|
+em um serviço fornecido pela IBM que geralmente está disponível são suportados. O suporte será fornecido com base na severidade configurada. Para obter mais informações sobre a severidade do chamado, veja [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 |Terceiro	|Um serviço fornecido por uma empresa que não seja a IBM.	|O suporte para serviços de terceiros é fornecido
 perlo provedor de serviços. Se um problema for investigado pela IBM e ficar determinado ser um defeito em um serviço de terceiro, a IBM não será obrigada a fornecer uma correção. A IBM compartilhará a análise com o provedor de serviços de terceiro, se necessário.|
 |Comunidade	|Um serviço que é fornecido por uma comunidade de software
 livre.	|O suporte para serviços de comunidade é fornecido pela Comunidade de desenvolvedores do {{site.data.keyword.Bluemix_notm}}. Se um problema for investigado pela IBM e ficar determinado ser um defeito em serviço de comunidade, a IBM não será obrigada a fornecer uma correção.|
-|Beta	|Um serviço que não está pronto para produção e está em um estágio de avaliação de desenvolvimento. Um serviço Beta pode ajudar as equipes de desenvolvimento
+|Beta	|Um serviço que não está pronto para produção e está
+em um estágio de avaliação de desenvolvimento. Um serviço Beta pode ajudar as equipes de desenvolvimento
 e marketing a avaliar o valor dos serviços antes de tornarem o
 serviço geralmente disponível.	|Problemas que são determinados como sendo um defeito
 em um serviço beta fornecido pela IBM são suportados mas a IBM não é obrigada a
 fornecer uma correção. Além disso,
-o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Para obter informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](../support/index.html#contacting-bluemix-support){: new_window}.|
+o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Para obter informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 *Tabela 1. Informações de suporte de serviços do {{site.data.keyword.Bluemix_notm}}*
 
 ##Serviços experimentais
@@ -93,7 +94,7 @@ Nem todos os serviços estão disponíveis para compra em cada região do {{site
 |{{site.data.keyword.GlobalizationPipeline_short}}	|Hospedado em Dallas, EUA		|Hospedado em Londres, Reino Unido		|Hospedado em Sydney, Austrália |
 |{{site.data.keyword.dataworks_short}}		|Hospedado em Dallas, EUA		|Hospedado em Londres, Reino Unido		|Não disponível na região |
 |{{site.data.keyword.openwhisk}}		|Hospedado em Dallas, EUA		|Não disponível na região		|Não disponível na região |
-|{{site.data.keyword.containerlong}}		|Hospedado em Dallas, EUA		|Hospedado em Londres, Reino Unido		|Hospedado em Sydney, Austrália |
+|{{site.data.keyword.containerlong}}		|Hospedado em Dallas, EUA		|Hospedado em Londres, Reino Unido		|Não disponível na região |
 |{{site.data.keyword.datastagefull}}		|Hospedado em Dallas, EUA		|Hospedado em Londres, Reino Unido		|Hospedado em Sydney, Austrália |
 |{{site.data.keyword.graphshort}}       |Hospedado em Dallas, EUA		|Hospedado em Dallas, EUA		|Não disponível na região |
 |{{site.data.keyword.mdmcloudfull}}		|Hospedado em Dallas, EUA		|Hospedado em Londres, Reino Unido		|Hospedado em Sydney, Austrália |
@@ -150,7 +151,7 @@ Nem todos os serviços estão disponíveis para compra em cada região do {{site
 ## Disponibilidade contínua para serviços
 {: #services_availability}
 O {{site.data.keyword.Bluemix_notm}} identificou um conjunto de serviços como Camada 1. A IBM não irá retirar nenhum serviço da Camada 1 sem disponibilizar um equivalente funcional ou
-fornecer aviso de, pelo menos, cinco anos da retirada. 
+fornecer aviso de, pelo menos, cinco anos da retirada.
 
 Os serviços a seguir são classificados como Camada 1:
   * {{site.data.keyword.apiconnect_short}}
@@ -164,9 +165,9 @@ Os serviços a seguir são classificados como Camada 1:
   * PostgresSQL por Compose
   * {{site.data.keyword.ssofull}}
 
-Para ler mais sobre termos de uso para serviços, consulte: termos do [{{site.data.keyword.Bluemix_notm}}](../navigation/notices.html#terms).
+Para ler mais sobre os termos de uso para serviços, veja: [Termos do {{site.data.keyword.Bluemix_notm}}](/docs/navigation/notices.html#terms).
 
 ## Descontinuação de serviço
 {: #service_deprecation}
 
-A IBM fornecerá um aviso de pelo menos 30 dias da sua intenção de descontinuar ou substituir um serviço geralmente disponível. Se uma substituição equivalente não for fornecida, por pelo menos 12 meses a partir da data desse núncio, a IBM usará meios comercialmente razoáveis para continuar a operação e o suporte de instâncias do serviço implementadas anteriormente. 
+A IBM fornecerá um aviso de pelo menos 30 dias da sua intenção de descontinuar ou substituir um serviço geralmente disponível. Se uma substituição equivalente não for fornecida, por pelo menos 12 meses a partir da data desse núncio, a IBM usará meios comercialmente razoáveis para continuar a operação e o suporte de instâncias do serviço implementadas anteriormente.

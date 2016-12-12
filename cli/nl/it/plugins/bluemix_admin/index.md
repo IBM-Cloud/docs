@@ -6,7 +6,7 @@ copyright:
 
   anni: 2015, 2016
 
-
+lastupdated: "2016-11-08"
 
 ---
 
@@ -18,15 +18,12 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} Admin CLI
 {: #bluemixadmincli}
 
-Ultimo aggiornamento: 1 settembre 2016
-{: .last-updated}
-
 
 Puoi gestire gli utenti per il tuo ambiente
 {{site.data.keyword.Bluemix_notm}} locale o {{site.data.keyword.Bluemix_notm}} dedicato
 utilizzando l'interfaccia riga di comando Cloud Foundry insieme al plug-in
 {{site.data.keyword.Bluemix_notm}} Admin CLI. Ad
-esempio, puoi aggiungere utenti da un registro LDAP. Se stai cercando informazioni sulla gestione del tuo account {{site.data.keyword.Bluemix_notm}} pubblico, vedi [Amministrazione](../../../admin/adminpublic.html#administer).
+esempio, puoi aggiungere utenti da un registro LDAP. Se stai cercando informazioni sulla gestione del tuo account {{site.data.keyword.Bluemix_notm}} pubblico, vedi [Amministrazione](/docs/admin/adminpublic.html#administer).
 
 Prima di iniziare, installa l'interfaccia riga di comando cf. Il plug-in {{site.data.keyword.Bluemix_notm}} Admin
 CLI richiede cf versione 6.11.2 o successive. [Scarica
@@ -68,7 +65,7 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 
 Se devi disinstallare il plug-in, puoi utilizzare i seguenti comandi e quindi aggiungere il repository aggiornato e installare l'ultimo plug-in:
 
-* Disinstalla il plug-in: `cf uninstall-plugin-repo BluemixAdminCLI`
+* Disinstalla il plug-in: `cf uninstall-plugin BluemixAdminCLI`
 * Rimuovi il repository di plug-in: `cf remove-plugin-repo BluemixAdmin`
 
 
@@ -76,7 +73,7 @@ Se devi disinstallare il plug-in, puoi utilizzare i seguenti comandi e quindi ag
 CLI
 
 Puoi utilizzare il plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI per aggiungere o rimuovere utenti, assegnare o annullare l'assegnazione degli utenti dalle organizzazioni ed
-effettuare altre attività di gestione. 
+effettuare altre attività di gestione.
 
 Per visualizzare un elenco di comandi, immetti il seguente
 comando:
@@ -152,11 +149,11 @@ cf ba search-users -name=<valore_nome_utente> -permission=<valore_autorizzazione
 <dt class="pt dlterm">&lt;valore_nome_utente&gt;</dt>
 <dd class="pd">Il nome dell'utente in {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;valore_autorizzazione&gt;</dt>
-<dd class="pd">L'autorizzazione assegnata all'utente. Ad esempio, superuser, di base, catalogo, utente e report. Per ulteriori informazioni sulle autorizzazioni da assegnare all'utente, vedi [Autorizzazioni](../../../admin/index.html#permissions). Non puoi utilizzare questo parametro insieme al parametro organizzazione nella stessa query. </dd>
+<dd class="pd">L'autorizzazione assegnata all'utente. Ad esempio, superuser, di base, catalogo, utente e report. Per ulteriori informazioni sulle autorizzazioni da assegnare all'utente, vedi [Autorizzazioni](/docs/admin/index.html#permissions). Non puoi utilizzare questo parametro insieme al parametro organizzazione nella stessa query. </dd>
 <dt class="pt dlterm">&lt;valore_organizzazione&gt;</dt>
 <dd class="pd">Il nome dell'organizzazione a cui appartiene l'utente. Non puoi utilizzare questo parametro insieme al parametro organizzazione nella stessa query.</dd>
 <dt class="pt dlterm">&lt;valore_ruolo&gt;</dt>
-<dd class="pd">Il ruolo dell'organizzazione assegnato all'utente. Ad esempio, gestore, gestore fatturazione o revisore dell'organizzazione. Con questo parametro devi specificare l'organizzazione. Per ulteriori informazioni sui ruoli, vedi [Ruoli utente](../../../admin/users_roles.html#userrolesinfo).</dd>
+<dd class="pd">Il ruolo dell'organizzazione assegnato all'utente. Ad esempio, gestore, gestore fatturazione o revisore dell'organizzazione. Con questo parametro devi specificare l'organizzazione. Per ulteriori informazioni sui ruoli, vedi [Ruoli utente](/docs/admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 
@@ -286,7 +283,7 @@ cf ba set-org <nome_utente> <organizzazione> [<ruolo>]
 <dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} a cui assegnare l'utente.</dd>
 <dt class="pt dlterm">&lt;ruolo&gt;</dt>
-<dd class="pd">Vedi [Ruoli](../../../admin/users_roles.html) per i ruoli utente di {{site.data.keyword.Bluemix_notm}} e le relative
+<dd class="pd">Vedi [Ruoli](/docs/admin/users_roles.html) per i ruoli utente di {{site.data.keyword.Bluemix_notm}} e le relative
 descrizioni.</dd>
 </dl>
 
@@ -309,7 +306,7 @@ cf ba unset-org <nome_utente> <organizzazione> [<ruolo>]
 <dt class="pt dlterm">&lt;organizzazione&gt;</dt>
 <dd class="pd">Il nome o GUID dell'organizzazione {{site.data.keyword.Bluemix_notm}} a cui assegnare l'utente.</dd>
 <dt class="pt dlterm">&lt;ruolo&gt;</dt>
-<dd class="pd">Vedi [Ruoli](../../../admin/users_roles.html) per i ruoli utente di {{site.data.keyword.Bluemix_notm}} e le relative
+<dd class="pd">Vedi [Ruoli](/docs/admin/users_roles.html) per i ruoli utente di {{site.data.keyword.Bluemix_notm}} e le relative
 descrizioni.</dd>
 </dl>
 
@@ -353,6 +350,89 @@ cf ba set-quota <organizzazione> <piano>
 
 **Suggerimento: ** puoi anche utilizzare **ba sq** come alias per
 il più lungo nome comando **ba set-quota**.
+
+
+### Ricerca e impostazione delle quote del contenitore per un'organizzazione.
+{: #containquotas}
+
+Puoi trovare e impostare le quote per i contenitore in un'organizzazione.
+
+Per trovare la quota per i contenitori in un'organizzazione, immetti il seguente comando:
+
+```
+cf bluemix-admin containers-quota <organization>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dd class="pd">Il nome o l'ID dell'organizzazione in Bluemix. Questo parametro è obbligatorio.</dd>
+</dl>
+
+**Suggerimento:** puoi anche utilizzare **ba cq** come alias per il più lungo
+nome comando **bluemix-admin containers-quota**.
+
+Per impostare la quota per i contenitori in un'organizzazione, immetti il seguente comando con inclusa almeno una delle opzioni:
+
+```
+cf bluemix-admin set-containers-quota <organization> <options>
+```
+{: codeblock}
+
+**Nota**: puoi includere più opzioni, ma ne devi includere almeno una.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organizzazione&gt;</dt>
+<dd class="pd">Il nome o l'ID dell'organizzaizone in Bluemix. Questo parametro è obbligatorio.</dd>
+<dt class="pt dlterm">&lt;opzioni&gt;</dt>
+<dd class="pd">Includi una o più delle seguenti opzioni in cui il valore deve essere un numero intero:
+<ul>
+<li>floating-ips-max &lt;value&gt;</li>
+<li>floating-ips-space-default &lt;value&gt;</li>
+<li>memory-max &lt;value&gt;</li>
+<li>memory-space-default &lt;value&gt;</li>
+<li>image-limit &lt;value&gt;</li>
+</ul>
+</dd>
+</dl>
+
+**Suggerimento:** puoi anche utilizzare i seguenti nomi brevi come un alias per i nomi delle opzioni più
+lunghi: 
+<dl class="parml">
+<dt class="pt dlterm">floating-ips-max &lt;value&gt;</dt>
+<dd class="pd"><strong>fim</strong></dd>
+<dt class="pt dlterm">floating-ips-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>fisd</strong></dd>
+<dt class="pt dlterm">memory-max &lt;value&gt;</dt>
+<dd class="pd"><strong>mm</strong></dd>
+<dt class="pt dlterm">memory-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>msd</strong></dd>
+<dt class="pt dlterm">image-limit &lt;value&gt;</dt>
+<dd class="pd"><strong>il</strong></dd>
+</dl>
+
+Facoltativamente, puoi fornire un file che contiene i parametri di configurazione specifici in un oggetto JSON valido. Se utilizzi l'opzione **-file**, ha la precedenza e le altre opzioni vengono ignorate. Per fornire un file invece di impostare le opzioni, immetti il seguente comando:
+
+```
+cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+```
+{: codeblock}
+
+Il file JSON deve avere il formato mostrato nel seguente esempio:
+
+```
+{
+  "floating_ips_max": 10,
+  "floating_ips_space_default": 0,
+  "ram_max": 4096,
+  "ram_space_default": 0,
+  "image_limit": 10
+}  
+```
+{: codeblock}
+
+**Suggerimento:** puoi anche utilizzare **ba scq** come alias per il più lungo
+nome comando **bluemix-admin set-containers-quota**.
 
 ### Aggiunta, eliminazione e recupero dei report
 
@@ -513,13 +593,13 @@ cf ba edit-service-plan-visibilities <identificativo_piano> <organizzazione_1> <
 **Suggerimento:** puoi anche utilizzare **ba espv** come alias per il più lungo
 nome comando **ba edit-service-plan-visibility**.
 
-### Visualizzazione di informazioni sull'utilizzo delle risorse
+### Visualizzazione delle informazioni sulle metriche della risorsa 
 {: #cliresourceusage}
 
-Puoi visualizzare le informazioni sull'utilizzo delle risorse, tra cui l'utilizzo di memoria, disco e CPU. Oltre all'utilizzo di tali risorse, puoi vedere un riepilogo delle risorse fisiche e riservate disponibili. Inoltre, puoi vedere i dati di utilizzo dei DEA (Droplet Execution Agent) e i dati cronologici per l'utilizzo di memoria e disco. Per impostazione predefinita, i dati cronologici per l'utilizzo di memoria e disco vengono visualizzati settimanalmente e in ordine decrescente. Per visualizzare le informazioni sull'utilizzo delle risorse, utilizza il seguente comando:
+Puoi visualizzare le informazioni sulle metriche della risorsa, tra cui l'utilizzo di memoria, disco e CPU.  Oltre all'utilizzo di tali risorse, puoi vedere un riepilogo delle risorse fisiche e riservate disponibili. Inoltre, puoi vedere i dati di utilizzo dei DEA (Droplet Execution Agent) e i dati cronologici per l'utilizzo di memoria e disco. Per impostazione predefinita, i dati cronologici per l'utilizzo di memoria e disco vengono visualizzati settimanalmente e in ordine decrescente. Per visualizzare le informazioni sulle metriche della risorsa, utilizza il seguente comando: 
 
 ```
-cf ba resource-usage <mensile> <settimanale>
+cf ba resource-metrics <monthly> <weekly>
 ```
 {: codeblock}
 
@@ -530,8 +610,8 @@ cf ba resource-usage <mensile> <settimanale>
 <dd class="pd">Visualizzare i dati cronologici per la memoria e lo spazio su disco una settimana alla volta. Questo è il valore predefinito.</dd>
 </dl>
 
-**Suggerimento:** puoi anche utilizzare **ba rsu** come alias per il più lungo
-nome comando **ba resource-usage**.
+**Suggerimento:** puoi anche utilizzare **ba rsm** come alias per il più lungo
+nome comando **ba resource-metrics**.
 
 ### Utilizzo dei broker dei servizi
 
@@ -598,7 +678,9 @@ lungo nome comando **ba delete-service-broker**.
 * Puoi aggiornare un broker dei servizi
 immettendo il seguente comando:
 
-`cf ba update-service-broker <nome_broker> <nome_utente> <password> <url_broker>`
+```
+cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -842,7 +924,7 @@ nome comando **ba buildpacks**.
 
 #### Crea e carica un pacchetto di build
 
-Puoi creare e caricare un pacchetto di build. Puoi caricare qualsiasi file compresso che presenta un tipo di file .zip. Utilizza il seguente comando per caricare un pacchetto di build:
+Puoi creare e caricare un pacchetto di build. Puoi caricare qualsiasi file compresso che presenta un tipo di file .zip.  Utilizza il seguente comando per caricare un pacchetto di build:
 
 ```
 cf ba create-buildpack <nome_pacchettodibuild> <percorso_file> <posizione>

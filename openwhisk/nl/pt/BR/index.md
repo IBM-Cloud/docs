@@ -44,7 +44,7 @@ será possível iniciá-lo a partir da linha de comandos.
 ## Usando o CLI do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_using_cli}
 
-Após ter configurado seu ambiente, será possível iniciar o uso da CLI do {{site.data.keyword.openwhisk_short}} para executar o seguinte:
+Depois de ter [configurado seu ambiente](https://new-console.{DomainName}/openwhisk/cli){: new_window}, é possível começar a usar a CLI do {{site.data.keyword.openwhisk_short}} para executar o seguinte:
 
 * Executar os fragmentos de código ou ações no {{site.data.keyword.openwhisk_short}}. Consulte [Criando e chamando ações](./openwhisk_actions.html).
 * Usar acionadores e regras para ativar suas ações para responder a eventos. Consulte [Criando acionadores e regras](./openwhisk_triggers_rules.html).

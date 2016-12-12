@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-26" 
+lastupdated: "2016-11-18" 
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2016-10-26"
 {:shortdesc}
 
 
-모든 {{site.data.keyword.Bluemix_notm}} 데디케이티드 배치에는 추가 비용 없이 VPN, 사설 VLAN(Virtual 로컬 Area Network), 방화벽, LDAP를 통한 연결, 기존 사내 구축형 데이터베이스 및 앱을 활용하는 능력, 연중 무휴 온사이트 보안, 데디케이티드 하드웨어, 표준 지원 등 여러 혜택과 기능이 포함됩니다.
+모든 {{site.data.keyword.Bluemix_notm}} 데디케이티드 배치에는 추가 비용 없이 VPN, 사설 VLAN(Virtual 로컬 Area Network), 방화벽, LDAP을 통한 연결, 기존 온프레미스 데이터베이스 및 앱을 활용하는 능력, 연중 무휴 온사이트 보안, 데디케이티드 하드웨어, 표준 지원 등 여러 혜택과 기능이 포함됩니다.
 
 기본적으로 개인용 {{site.data.keyword.Bluemix_notm}} 인스턴스는 회사 네트워크에서만 액세스할 수 있습니다. 예를 들어, 인터넷 또는 모바일 디바이스에서 직접 {{site.data.keyword.Bluemix_notm}} 환경에 액세스할 수 있도록 해야 하는 경우 추가 네트워크 보안 컴포넌트가 필요하며 이를 위해서는 추가 비용이 발생합니다.
 
@@ -37,16 +37,15 @@ lastupdated: "2016-10-26"
 |선택사항 | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}}는 {{site.data.keyword.APIM}}와 IBM StrongLoop를 API 및 마이크로서비스를 작성, 실행, 관리 및 적용하기 위한 포괄적 솔루션을 제공하는 단일 오퍼링으로 통합합니다. |
 |선택사항 | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}}에서는 항상 작동 상태인 완전히 관리되는 NoSQL JSON 데이터 계층에 대한 액세스를 제공합니다. 이 서비스는 CouchDB와 호환 가능하며, 모바일 및 웹 애플리케이션 모델을 위한 사용이 간편한 HTTP 인터페이스를 통해 액세스할 수 있습니다. |
 |선택사항 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_notm}} 데디케이티드에서 Docker 컨테이너를 실행합니다. 컨테이너는 앱에서 실행해야 하는 모든 요소를 포함하는 가상 소프트웨어 오브젝트입니다. 컨테이너는 리소스 격리와 할당의 이점이 있으며 가상 머신 등보다 휴대가 간편하고 효율적입니다. 하드웨어 요구사항에 대한 정보는 [{{site.data.keyword.Bluemix_notm}} 데디케이티드 및 Bluemix 로컬의 IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)를 참조하십시오.|
+| 선택사항 | [{{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) | {{site.data.keyword.contdelivery_short}} 데디케이티드를 사용하여 빌드, 단위 테스트, 배치 등을 자동화합니다. 풍부한 웹 기반 IDE을 통해 코드를 편집하고 푸시하십시오. 개발, 배치 및 오퍼레이션 태스크를 지원하는 도구 통합을 가능하게 하는 도구 체인을 작성합니다. |
 |선택사항 | [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/dashDB.html) | dashDB는 지리공간 데이터와 같은 특수 유형을 포함한 관계형 데이터를 저장하는 데 사용합니다. 그런 다음 SQL이나 예측 분석 및 데이터 마이닝 같은 고급 기본 제공 분석, R을 이용한 분석, 지리공간 분석을 사용하여 이 데이터를 분석합니다. |
 |선택사항 | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | 이 서비스는 앱에 대한 분산 캐싱 시나리오를 지원하는 인메모리 데이터 그리드를 제공합니다. 50GB의 인메모리 캐시가 포함됩니다. |
 | 선택사항 | [Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html) | {{site.data.keyword.ghe_long}}는 IBM 클라우드에 호스팅되고 완전하게 관리되는 GitHub Enterprise 버전이며 개발자가 선호하는 소셜 경험을 제공합니다. 이 서비스는 현재 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경에서만 사용할 수 있습니다.  |
-| 선택사항 | [{{site.data.keyword.deliverypipeline}}(베타)](/docs/services/DeliveryPipeline/index.html) | IBM {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} 서비스는 {{site.data.keyword.Bluemix_notm}} 프로젝트의 지속적인 배치를 자동화합니다. |
-| 선택사항(베타) | [로깅](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Kibana의 검색 가능한 로그 및 대시보드와 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 Cloud Foundry 앱에 대한 로그를 제공합니다. |
-|선택사항 | [{{site.data.keyword.messagehub}}](/docs/services/MessageHub/index.html#messagehub) | {{site.data.keyword.messagehub}}는 사내 구축 환경 기술과 사외 구축 환경 기술을 통합하는 확장 가능하고 처리량이 많은 분산 메시지 버스입니다. {{site.data.keyword.messagehub}}는 빠르고 확장 가능하고 내구성 강한 실시간 메시징 엔진인 Apache Kafka를 기반으로 합니다. |
+| 선택사항(베타) | [Logging](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Kibana의 검색 가능한 로그 및 대시보드와 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 Cloud Foundry 앱에 대한 로그를 제공합니다. |
+|선택사항 | [{{site.data.keyword.messagehub}}](/docs/services/MessageHub/index.html#messagehub) | {{site.data.keyword.messagehub}}는 온프레미스와 오프프레미스 기술을 통합하는 확장 가능하고 처리량이 많은 분산 메시지 버스입니다. {{site.data.keyword.messagehub}}는 빠르고 확장 가능하고 내구성 강한 실시간 메시징 엔진인 Apache Kafka를 기반으로 합니다. |
 |선택사항 | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}}는 iOS 및 Android 디바이스에 알림을 보내는 데 사용할 수 있는 서비스입니다. 알림은 모든 애플리케이션 사용자와 태그를 사용하는 특정 디바이스 및 사용자 세트를 대상으로 할 수 있습니다. 디바이스, 태그 및 구독을 관리할 수 있습니다. SDK(Software Development Kit) 및 REST(Representational State Transfer) API(Application Program Interface)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다. |
-|선택사항 | [{{site.data.keyword.SecureGateway}}](/docs/services/SecureGateway/secure_gateway.html) | {{site.data.keyword.SecureGateway}} 서비스는 사내 구축형 또는 클라우드를 통해 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 원격 위치에 연결하는 안전한 방법을 제공합니다.  |
+|선택사항 | [{{site.data.keyword.SecureGateway}}](/docs/services/SecureGateway/secure_gateway.html) | {{site.data.keyword.SecureGateway}} 서비스는 온프레미스 또는 클라우드를 통해 {{site.data.keyword.Bluemix_notm}} 애플리케이션을 원격 위치에 연결하는 안전한 방법을 제공합니다.  |
 |선택사항 | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 증가된 중복성을 위해 {{site.data.keyword.sescashort}}에서는 캐시에 저장된 세션의 복제본을 제공합니다. 따라서 등화 관제 또는 가동 중단의 상황에서도 클라이언트 애플리케이션은 캐시의 세션에 계속 액세스할 수 있습니다. 이 서비스는 웹 및 모바일 애플리케이션에 대한 세션 캐싱 시나리오를 지원합니다. |
-| 포함 | [도구 체인(베타)](/docs/toolchains/toolchains_overview.html) | 도구 체인은 개발, 배치 및 오퍼레이션 태스크를 지원하는 도구 통합 세트입니다. 도구 체인은 데디케이티드 환경에 사용 가능하지만 사용 가능한 도구 통합은 사용자의 특정 환경에 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}}가 설정되는 방법에 따라 달라집니다. |
 |선택사항 | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | 이 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. 기본 오퍼링은 1.6TB의 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 데디케이티드 환경 내에서 {{site.data.keyword.iot_full}}의 개인용 버전 실행을 허용합니다. |
 
 리소스 및 서비스의 용량을 스케일링하고 확장하기 위해 구입할 수 있는 선택적 컴포넌트가 있습니다. 영업 팀에 문의하면 이 컴포넌트를 구입할 수 있습니다. 영업 담당자의 연락처 정보를 보려면 [담당자](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)로 이동하십시오. 서비스에 대한 플랜을 늘리기 위해 카탈로그의 서비스 타일에서 플랜을 선택할 수 있습니다.
@@ -69,11 +68,10 @@ lastupdated: "2016-10-26"
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 2.8.500 | 8GB RAM과 데이터 및 로그를 위한 500GB의 영역으로 OLTP(Online Transaction Processing) 워크로드를 지원하는 데디케이티드 인스턴스이며 여기에는 고가용성을 위한 추가 대기 서버가 포함됩니다. |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | 128GB RAM과 데이터 및 로그를 위한 1.4TB SSD 스토리지로 OLTP(Online Transaction Processing) 워크로드를 지원하는 데디케이티드 인스턴스이며 여기에는 고가용성을 위한 추가 대기 서버가 포함됩니다. |
 |{{site.data.keyword.Bluemix_notm}} 데디케이티드 커뮤니티 서비스  | 각 커뮤니티 서비스마다 총 50개 인스턴스까지 커뮤니티 서비스의 배치 및 실행을 허용하는 환경입니다.  |
-|{{site.data.keyword.Bluemix_notm}} 데디케이티드 {{site.data.keyword.cloudant}} 클러스터 인스턴스 | 이 선택적 컴포넌트에는 사용자가 인프라 제공을 담당하는 하는 3노드 클러스터가 포함되며 스토리지 및 컴퓨팅 용량은 사용자의 특정 요구에 맞게 결정될 수 있습니다. {{site.data.keyword.cloudant}}에서는 항상 작동 상태인 완전히 관리되는 NoSQL JSON 데이터 계층에 대한 액세스를 제공합니다. 이 서비스는 CouchDB와 호환 가능하며, 모바일 및 웹 애플리케이션 모델을 위한 사용이 간편한 HTTP 인터페이스를 통해 액세스할 수 있습니다. |
+|{{site.data.keyword.Bluemix_notm}} 데디케이티드 {{site.data.keyword.cloudant}} 클러스터 인스턴스 | 이 선택적 컴포넌트에는 사용자가 인프라 제공을 담당하는 3노드 클러스터가 포함되며 스토리지 및 컴퓨팅 용량은 사용자의 특정 요구에 맞게 결정될 수 있습니다. {{site.data.keyword.cloudant}}에서는 항상 작동 상태인 완전히 관리되는 NoSQL JSON 데이터 계층에 대한 액세스를 제공합니다. 이 서비스는 CouchDB와 호환 가능하며, 모바일 및 웹 애플리케이션 모델을 위한 사용이 간편한 HTTP 인터페이스를 통해 액세스할 수 있습니다. |
 |IBM {{site.data.keyword.Bluemix_notm}} 데디케이티드 {{site.data.keyword.messagehub}} | 파티션당 최대 10GB의 공개 및 구독 메시징을 제공하는 환경입니다. 메시지는 최대 24시간 동안 보관되어 이용할 수 있습니다. |
 |IBM Bluemix 데디케이티드 {{site.data.keyword.mobilepushshort}} | 초당 300개의 요청을 승인하는 기능으로 {{site.data.keyword.mobilepushshort}} 인스턴스의 배치 및 실행을 허용하는 환경입니다. |
 |{{site.data.keyword.iot_short}} 데디케이티드 증분 증가 | 0.5TB의 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 데디케이티드 환경 내에서 {{site.data.keyword.iot_short}}의 개인용 버전 실행을 허용하는 환경 증가입니다. |
-|IBM {{site.data.keyword.Bluemix_notm}} 데디케이티드 {{site.data.keyword.deliverypipeline}} | IBM {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} 서비스는 {{site.data.keyword.Bluemix_notm}} 프로젝트의 지속적인 배치를 자동화합니다. |
 
 *표 3. 구입할 선택적 컴포넌트: 플랫폼 추가 기능*
 
@@ -93,7 +91,7 @@ lastupdated: "2016-10-26"
 
 {{site.data.keyword.Bluemix_notm}} 데디케이티드에는 퍼블릭, 데디케이티드 및 로컬 배치의 승인된 서비스를 한데 모으는 개인용 카탈로그가 있습니다. 이 {{site.data.keyword.Bluemix_notm}} 카탈로그를 통해 사용자 소유의 서비스를 공개하고 서비스에 대한 액세스를 관리할 수도 있습니다. 데이터에 대한 개인정보 보호정책 및 보안 기준에 따라 사용자 비즈니스의 요구사항을 충족해야 하는 공용 서비스를 결정하는 옵션이 있습니다. 
 
-데디케이티드 환경에 대한 서비스의 개인용 인스턴스가 있으면 카탈로그에 서비스 이름과 연관된 "데디케이티드" 태그가 표시됩니다. 마찬가지로, 사용자 정의 서비스인 경우(즉, 서비스 브로커를 사용하여 작성한 경우)에는 서비스 이름과 함께 "사용자 정의"가 나열됩니다. "데디케이티드" 또는 "사용자 정의" 태그 없이 나열된 기타 모든 서비스는 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 신디케이션을 사용하여 사용할 수 있습니다. 신디케이트된 카탈로그는 공용 및 개인 서비스로 구성되는 하이브리드 애플리케이션을 작성하는 기능을 제공합니다.  
+데디케이티드 환경에 대한 서비스의 개인용 인스턴스가 있으면 카탈로그에 서비스 이름과 연관된 "데디케이티드" 태그가 표시됩니다. 마찬가지로, 사용자 정의 서비스인 경우(즉, 서비스 브로커를 사용하여 작성한 경우)에는 서비스 이름과 함께 "사용자 정의"가 나열됩니다. "데디케이티드" 또는 "사용자 정의" 태그 없이 나열된 기타 모든 서비스는 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 신디케이션을 사용하여 사용할 수 있습니다. 신디케이트된(각 클라우드 형태 간 동일하게 연동된) 카탈로그는 공용 및 개인 서비스로 구성되는 하이브리드 애플리케이션을 작성하는 기능을 제공합니다.  
 
 *표 4. 지역별로 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 신디케이션에 사용 가능한 서비스*
 
@@ -154,7 +152,7 @@ lastupdated: "2016-10-26"
 ## {{site.data.keyword.Bluemix_notm}} 데디케이티드 아키텍처
 {: #dedicatedarch}
 
-{{site.data.keyword.Bluemix_notm}} 데디케이티드는 {{site.data.keyword.BluSoftlayer}}에서 빌드되었으므로 최고 성능의 클라우드 인프라를 사용할 수 있습니다. 각 데이터 센터에서는 일주일 내내 24시간 보안 및 엄격한 제어를 수행합니다. 사용자 및 IBM은 VPN 터널 및 사설 VLAN을 통해 {{site.data.keyword.Bluemix_notm}} 데디케이티드 인스턴스에 액세스합니다.
+{{site.data.keyword.Bluemix_notm}} 데디케이티드는 {{site.data.keyword.BluSoftlayer}}에서 빌드되었으므로 최고 성능의 클라우드 인프라를 사용할 수 있습니다. 각 데이터 센터에서는 연중 무휴 하루 24시간 보안 및 엄격한 제어를 수행합니다. 사용자 및 IBM은 VPN 터널 및 사설 VLAN을 통해 {{site.data.keyword.Bluemix_notm}} 데디케이티드 인스턴스에 액세스합니다.
 
 {{site.data.keyword.Bluemix_notm}} 데디케이티드는 VPN 또는 직접 네트워크 연결을 통해 네트워크에 설치됩니다. 단일 테넌트 하드웨어는 전세계의 어느 [{{site.data.keyword.BluSoftlayer}} 데이터 센터](http://www.softlayer.com/data-centers){: new_window}에서나 설정할 수 있습니다. {{site.data.keyword.IBM_notm}}은 데디케이티드 플랫폼 및 데디케이티드 서비스를 관리하여 사용자가 사용자 정의 앱을 빌드하는 데 전념할 수 있도록 합니다. 또한 {{site.data.keyword.IBM_notm}}은 사용자가 선택한 유지보수 기간 동안 데디케이티드 인스턴스에 대해 모든 유지보수를 수행합니다.
 
@@ -190,7 +188,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 </li>
 <li>환경에서 관리 팀의 역할을 식별하고 지정하십시오.
 	<ol type="a">
-	<li>IBM은 제공된 내용을 기반으로 네트워크 액세스 및 LDAP를 구성합니다. 관리 액세스 권한이 지정된 담당자에게 부여됩니다. 지원 및 청구에 대한 담당자도 지정해야 합니다.</li>
+	<li>IBM은 제공된 내용을 기반으로 네트워크 액세스 및 LDAP을 구성합니다. 관리 액세스 권한이 지정된 담당자에게 부여됩니다. 지원 및 청구에 대한 담당자도 지정해야 합니다.</li>
 	<li>IBM은 데디케이티드 서비스를 표시하기 위해 데디케이티드 환경에 신디케이트된(각 클라우드 형태 간 동일하게 연동된) 카탈로그를 설정합니다. 신디케이트된(각 클라우드 형태 간 동일하게 연동된) 카탈로그에는 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 사용 가능하며 여기에서 신디케이트된 추가 서비스도 포함됩니다. 데이터에 대한 개인정보 보호정책 및 보안 기준에 따라 사용자 비즈니스의 요구사항을 충족해야 하는 공용 서비스를 결정하는 옵션이 있습니다.</li>
 	<li>네트워크 및 방화벽 구성과 LDAP 엔드포인트 및 액세스를 유효성 검증하십시오.</li>
 	</ol>
@@ -231,7 +229,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 <dt>**규제 준수 담당자**</dt>
 <dd>IBM 담당자와 함께 작업하여 보안 요구사항을 충족하는 토폴로지 및 배치 옵션을 선택합니다. 이 역할에 지정된 사용자는 규제 준수를 달성하는 배치 패턴을 결정하기 위해 IBM 규제 준수 컨설턴트와 함께 작업합니다.</dd>
 <dt>**네트워크 전문가**</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 배치의 네트워크 플랜에 관해 IBM 담당자와 함께 작업합니다. 이 역할에 지정된 사용자는 IBM에서 요구하는 필수 네트워킹 스펙을 검토하고 구현 플랜에 따라 IBM과 함께 작업합니다. 설치 및 검증 단계의 끝에서 이 역할에 지정된 사용자는 네트워크 구성이 기업 표준 규제를 준수함을 승인합니다.</dd>
+<dd>{{site.data.keyword.Bluemix_notm}} 배치의 네트워크 플랜에 관해 IBM 담당자와 함께 작업합니다. 이 역할에 지정된 사용자는 IBM에서 요구하는 필수 네트워킹 스펙을 검토하고 IBM과 함께 구현 플랜에 대한 작업을 수행합니다. 설치 및 검증 단계의 끝에서 이 역할에 지정된 사용자는 네트워크 구성이 기업 표준 규제를 준수함을 승인합니다.</dd>
 <dt>**DevOps 담당자**</dt>
 <dd>IBM 담당자와 함께 작업하여 {{site.data.keyword.Bluemix_notm}} 플랫폼, 서비스 및 런타임에 필요한 유지보수 업데이트를 계획하고 적용합니다. 이 역할에 지정된 사용자는 {{site.data.keyword.Bluemix_notm}} 데디케이티드 인스턴스의 구성과 관련해서도 IBM 담당자와 함께 작업합니다.</dd>
 </dl>
@@ -375,7 +373,7 @@ IBM 지원 센터 및 운영 센터의 주의가 필요한 문제를 식별하�
 
 문제에 따라 사용자 본인이나 IBM이 또는 사용자와 IBM이 협력하여 문제를 수정합니다. 인시던트에 관한 질문이 있거나 문제를 해결하는 데 IBM 담당자의 도움이 필요한 경우 지원 티켓을 열 수 있습니다. 지원 센터에 문의하는 방법에 대한 정보는 [지원 센터에 문의](/docs/support/index.html#contacting-bluemix-support-local)를 참조하십시오. 
 
-**참고**: 심각도 1 지원 티켓은 일주일에 7일 하루 24시간 동안 모니터링됩니다. 기타 티켓은 일요일 GMT 오후 10:00부터 토요일 GMT 오전 12:00까지 처리됩니다. 지원 티켓의 심각도와 지원 관련 작업에 대한 자세한 정보는 <a href="/docs/support/index.html#contacting-bluemix-support-local">지원 센터에 문의</a>를 참조하십시오.
+**참고**: 심각도 1 지원 티켓은 연중 무휴로 모니터링됩니다. 기타 티켓은 일요일 GMT 오후 10:00부터 토요일 GMT 오전 12:00까지 처리됩니다. 지원 티켓의 심각도와 지원 관련 작업에 대한 자세한 정보는 <a href="/docs/support/index.html#contacting-bluemix-support-local">지원 센터에 문의</a>를 참조하십시오.
 
 
 ## {{site.data.keyword.Bluemix_notm}} 데디케이티드의 재해 복구
@@ -418,7 +416,7 @@ IBM 지원 센터 및 운영 센터의 주의가 필요한 문제를 식별하�
 * 애플리케이션 상태 점검을 토대로 사이트 장애 복구를 제공합니다.
 * 엔드포인트 사이에서 가중 라우팅을 사용합니다.
 
-Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습니다. Akamai를 글로벌 로드 밸런서로 사용하기 위한 자세한 정보는 [Global traffic management](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}를 참조하십시오. Dyn을 글로벌 로드 밸런서로 사용하기 위한 자세한 정보는 [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}를 참조하십시오.
+Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습니다. Akamai를 글로벌 로드 밸런서로 사용하기 위한 자세한 정보는 [Global Traffic Management](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}를 참조하십시오. Dyn을 글로벌 로드 밸런서로 사용하기 위한 자세한 정보는 [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}를 참조하십시오.
 
 ### 고가용성
 {: #ha}
@@ -454,7 +452,7 @@ Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습�
 <li>백업 및 수정사항 관리 운영 간의 스케줄링 충돌 관리</li>
 </ul>
 
-개인 데이터 보호가 중요하므로 파일이 데이터 센터 외부로 노출되지 않도록 백업 파일 관리를 처리할 때 여러분의 협력을 필요로 합니다. 특히, 다음 태스크를 완료해 주시기 바랍니다.
+개인 데이터 보호가 중요하므로 파일이 데이터 센터 외부로 노출되지 않도록 백업 파일 관리를 처리할 때 여러분의 협력이 필요합니다. 특히, 다음 태스크를 완료해 주시기 바랍니다.
 
 <ul>
 <li>관리하는 다른 백업 데이터에 하듯이 암호화된 백업 데이터 사본을 오프사이트로 이동합니다.</li>

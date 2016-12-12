@@ -6,14 +6,14 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-26" 
+lastupdated: "2016-11-18" 
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-#{{site.data.keyword.Bluemix_notm}} Dedicated
+#{{site.data.keyword.Bluemix_notm}} Dedicado
 {: #dedicated}
 
 {{site.data.keyword.Bluemix}} é
@@ -44,13 +44,13 @@ Dedicated. |
 |Opcional | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | ]O {{site.data.keyword.apiconnect_long}} integra o {{site.data.keyword.APIM}} e o IBM StrongLoop em uma única oferta que fornece uma solução abrangente para criar, executar, gerenciar e impingir APIs e microsserviços. |
 |Opcional | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | O {{site.data.keyword.cloudant}} fornece acesso a uma camada de dados do JSON NoSQL totalmente gerenciada que sempre está ativa. Esse serviço é compatível com o CouchDB e acessível por meio de uma interface HTTP simples de usar para modelos de aplicativos móveis e da web. |
 |Opcional | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Execute os contêineres do Docker no {{site.data.keyword.Bluemix_notm}} Dedicated. Contêineres são objetos de software virtuais que incluem todos os elementos que um aplicativo precisa executar. Um contêiner tem os benefícios do isolamento e da alocação de recursos, mas é mais móvel e eficiente do que, por exemplo, uma máquina virtual. Para obter informações sobre requisitos de hardware, consulte [IBM {{site.data.keyword.containershort}} em {{site.data.keyword.Bluemix_notm}} Dedicated e Bluemix Local](/docs/containers/container_dl.html).|
+| Opcional | [{{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) | Use {{site.data.keyword.contdelivery_short}} Dedicated para automatizar construções, testes de unidade, implementações, etc. Edite e envie o código por push por meio do IDE avançado baseado na web. Crie cadeias de ferramentas para ativar integrações de ferramenta que suportam as tarefas de desenvolvimento, implementação e operações.  |
 |Opcional | [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/dashDB.html) | Use dashDB para armazenar dados relacionais, incluindo tipos especiais como dados geoespaciais. Depois, analise esses dados com SQL ou análise integrada avançada como análise preditiva e mineração de dados, análise com R e análise geo-espacial. |
 |Opcional | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | Esse serviço fornece uma grade de dados da memória que suporta cenários de armazenamento em cache distribuído para seus apps. Inclui
 50 GB de cache da memória. |
 | Opcional | [Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html) | {{site.data.keyword.ghe_long}} é a versão hospedada em Nuvem IBM e completamente
 gerenciada do GitHub Enterprise que fornece a experiência social que os desenvolvedores amam. Esse serviço está disponível atualmente exclusivamente para ambientes do {{site.data.keyword.Bluemix_notm}}
 Dedicated. |
-| Opcional | [{{site.data.keyword.deliverypipeline}} (beta)](/docs/services/DeliveryPipeline/index.html) | O serviço {{site.data.keyword.deliverypipeline}} do IBM {{site.data.keyword.Bluemix_notm}} automatiza a implementação contínua de seus projetos {{site.data.keyword.Bluemix_notm}}. |
 | Opcional (Beta) | [Registro de log](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Fornece logs para os aplicativos Cloud Foundry em sua interface com o usuário do {{site.data.keyword.Bluemix_notm}} e logs pesquisáveis e painéis em Kibana. |
 |Opcional | [{{site.data.keyword.messagehub}}](/docs/services/MessageHub/index.html#messagehub) | O {{site.data.keyword.messagehub}} é um barramento de mensagem escalável, distribuído, de alto rendimento, para unificar as suas tecnologias no
 local e remotas. O {{site.data.keyword.messagehub}} é baseado no Apache Kafka, que é um mecanismo do sistema de mensagens em tempo real rápido, escalável e durável. |
@@ -61,7 +61,6 @@ programação de aplicativo (APIs) Representational State Transfer (REST) para
 desenvolver ainda mais seus aplicativos cliente. |
 |Opcional | [{{site.data.keyword.SecureGateway}}](/docs/services/SecureGateway/secure_gateway.html) | O serviço {{site.data.keyword.SecureGateway}} fornece uma maneira segura de conectar aplicativos {{site.data.keyword.Bluemix_notm}} a locais remotos no local ou na nuvem.  |
 |Opcional | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | Para maior redundância, o {{site.data.keyword.sescashort}} fornece uma réplica de uma sessão armazenada no cache. Portanto, no caso de uma indisponibilidade de energia, seu aplicativo cliente manterá acesso à sessão no cache. O serviço suporta cenários de armazenamento em cache de sessão para aplicativos móveis e da web. |
-| Incluído | [ Cadeias de ferramentas (beta)](/docs/toolchains/toolchains_overview.html) | Uma cadeia de ferramentas é um conjunto de integrações de ferramenta que suporta as tarefas de desenvolvimento, implementação e operações. As cadeias de ferramentas estão disponíveis em ambientes dedicados, mas as integrações de ferramenta que estão disponíveis para você dependem de como o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} foi configurado em seu ambiente específico. |
 |Opcional | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | Esse serviço permite que os apps se comuniquem e consumam dados coletados por seus dispositivos conectados, sensores e gateways. A oferta de base permite executar uma versão privada do {{site.data.keyword.iot_full}} no ambiente dedicado com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 1,6 TB de troca de dados. |
 
 Há componentes opcionais que estão disponíveis para você comprar para escalar e ampliar a capacidade de seus recursos e serviços. É possível comprar qualquer um desses componentes entrando em contato com a equipe de vendas; acesse [Contate-nos](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) para obter informações sobre como contatar um representante de vendas. Para aumentar seu plano para um serviço, é possível selecionar o plano a partir do ladrilho do serviço em seu catálogo.
@@ -98,7 +97,6 @@ mensagens são retidas e disponíveis para consumo por um máximo de 24 horas. |
 |IBM Bluemix Dedicated {{site.data.keyword.mobilepushshort}} | Um ambiente que permite a implementação e execução de instâncias do
 {{site.data.keyword.mobilepushshort}} com capacidade para aceitar 300 pedidos por segundo. |
 |Aumento incremental do {{site.data.keyword.iot_short}} Dedicated | Um aumento de ambiente que permite a execução de uma versão privada do {{site.data.keyword.iot_short}} no ambiente dedicado com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 0,5 TB de troca de dados. |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.deliverypipeline}} | O serviço {{site.data.keyword.deliverypipeline}} do IBM {{site.data.keyword.Bluemix_notm}} automatiza a implementação contínua de seus projetos {{site.data.keyword.Bluemix_notm}}. |
 
 *Tabela 3. Componentes opcionais para compra: complementos da plataforma*
 
@@ -543,7 +541,7 @@ Como a proteção de dados privados é crítica, a IBM precisa da sua colaboraç
 </ul>
 
 # rellinks
-## gerais
+## general
 * [Descobrir: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [O que há de novo no {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} glossário](/docs/overview/glossary/index.html)

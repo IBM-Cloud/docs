@@ -413,7 +413,7 @@ Docker 架構是建置 OpenWhisk 相容 Docker 映像檔的一種簡便方式。
 
 主要二進位程式必須位在容器的 `/action/exec` 中。執行檔會透過 `stdin` 接收到輸入引數，而且必須透過 `stdout` 來傳回結果。
 
-透過修改 `dockerSkeleton` 中所含的 `Dockerfile`，即可包括任何編譯步驟或相依關係。
+透過修改 `dockerSkeleton` 中所含的 `Dockerfile`，即可包含任何編譯步驟或相依關係。
 
 ## REST API
 {: #openwhisk_ref_restapi}

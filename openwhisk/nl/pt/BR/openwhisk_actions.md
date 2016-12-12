@@ -165,10 +165,32 @@ Os parâmetros podem ser passados para a ação quando for chamada.
   wsk action update hello hello.js
   ```
   {: pre}
+
+3.  Os parâmetros podem ser fornecidos explicitamente na linha de comandos ou fornecendo um arquivo contendo os parâmetros desejados
+
+  Para passar os parâmetros diretamente pela linha de comandos, forneça um par de chave/valor para a sinalização `--param`:
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
+
+  Para usar um arquivo contendo o conteúdo de parâmetro, crie um arquivo contendo os parâmetros no formato JSON. O
+  nome do arquivo deve então ser passado para a sinalização `param-file`:
+
+  Exemplo de arquivo de parâmetro chamado parameters.json:
+  ```
+  {
+      "name": "Bernie",
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {
       "payload": "Hello, Bernie from Vermont"
@@ -176,7 +198,7 @@ Os parâmetros podem ser passados para a ação quando for chamada.
   ```
   {: screen}
 
-  Observe o uso da opção `--param` para especificar um nome e um valor de parâmetro e a opção `--result` para exibir somente o resultado da chamada.
+  Observe o uso da opção `--result` para exibir somente o resultado da chamada.
 
 ### Configurando parâmetros padrão
 {: #openwhisk_binding_actions}
@@ -185,10 +207,28 @@ Ações podem ser chamadas com vários parâmetros denominados. Lembre-se de que
 
 Em vez de passar todos os parâmetros para uma ação toda vez, é possível fazer a ligação de determinados parâmetros. O exemplo a seguir liga o parâmetro *place* para que a ação use como padrão o local "Vermont":
  
-1. Atualize a ação usando a opção `--param` para ligar os valores de parâmetro.
+1. Atualize a ação usando a opção `--param` para ligar os valores de parâmetros ou passando um arquivo que contenha os parâmetros para `--param-file`
+
+  Para especificar os parâmetros padrão explicitamente na linha de comandos, forneça um par de chave/valor para a sinalização `param`:
 
   ```
   wsk action update hello --param place Vermont
+  ```
+  {: pre}
+
+  Passar os parâmetros a partir de um arquivo requer a criação de um arquivo contendo o conteúdo desejado no formato JSON.
+  O nome do arquivo deve então ser passado para a sinalização `-param-file`:
+
+  Exemplo de arquivo de parâmetro chamado parameters.json:
+  ```
+  {
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action update hello --param-file parameters.json
   ```
   {: pre}
 
@@ -211,10 +251,30 @@ ação. Os parâmetros ligados ainda podem ser substituídos especificando o val
 3. Chame a ação, passando os valores `name` e `place`. O
 último sobrescreve o valor que está ligado à ação.
 
+  Usando a sinalização `--param`:
+
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
+  Usando a sinalização `--param-file`:
+
+  Arquivo parameters.json:
+  ```
+  {
+    "name": "Bernie",
+    "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -244,8 +304,7 @@ possível fazer isso retornando uma Promessa em sua ação.
 
   Observe que a função `main` retorna uma Promessa, que indica que a ativação não foi concluída ainda, mas espera-se que seja no futuro.
 
-  A função JavaScript `setTimeout()` nesse caso aguarda vinte
-segundos antes de chamar a função de retorno de chamada.  Isso representa o código
+  A função JavaScript `setTimeout()` nesse caso aguarda dois segundos antes de chamar a função de retorno de chamada. Isso representa o código
 assíncrono e vai dentro da função de retorno de chamada da Promessa.
 
   O retorno de chamada da Promessa aceita dois argumentos, resolver e rejeitar, que
@@ -439,8 +498,8 @@ Para criar uma ação do OpenWhisk a partir deste pacote:
   {: screen}
 
 Finalmente, observe que enquanto a maioria dos pacotes `npm` instala fontes JavaScript em `npm install`, alguns também instalam e compilam os artefatos binários. O upload do archive atualmente não suporta dependências binárias, mas apenas as dependências JavaScript. As chamadas de ação poderão falhar se o archive incluir dependências binárias.
-    
-### Criando sequências de ações
+
+## Criando sequências de ações
 {: #openwhisk_create_action_sequence}
 
 É possível criar uma ação que encadeia uma sequência de ações juntas.
@@ -606,6 +665,76 @@ wsk action invoke --blocking --result helloSwift --param name World
 {: screen}
 
 **Atenção:** as ações Swift são executadas em um ambiente Linux. Swift no Linux ainda está em desenvolvimento e o {{site.data.keyword.openwhisk_short}} geralmente usa a liberação mais recente disponível, que não está necessariamente estável. Além disso, a versão do Swift usada com o {{site.data.keyword.openwhisk_short}} pode estar inconsistente com versões do Swift de liberações estáveis do XCode no MacOS.
+
+## Criando ações Java
+{: #openwhisk_actions_java}
+
+O processo de criação de ações Java é semelhante ao de ações JavaScript e Swift. As seções a seguir orientam você na criação e chamada de uma única ação Java e na inclusão de parâmetros nessa ação.
+
+Para compilar, testar e arquivar os arquivos Java, deve-se ter um [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) instalado localmente.
+
+### Criando e chamando uma ação
+{: #openwhisk_actions_java_invoke}
+
+Uma ação Java é um programa Java com um método chamado `main` que tem a assinatura exata conforme a seguir:
+```
+public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
+```
+{: codeblock}
+
+Por exemplo, crie um arquivo Java chamado `Hello.java` com o conteúdo a seguir:
+
+```
+import com.google.gson.JsonObject;
+public class Hello {
+    public static JsonObject main(JsonObject args) {
+        String name = "stranger";
+        if (args.has("name"))
+            name = args.getAsJsonPrimitive("name").getAsString();
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+    }
+}
+```
+{: codeblock}
+
+Em seguida, compile `Hello.java` em um arquivo JAR `hello.jar` conforme a seguir:
+```
+javac Hello.java
+jar cvf hello.jar Hello.class
+```
+{: pre}
+
+**Nota:** [google-gson](https://github.com/google/gson) deve existir em seu CLASSPATH Java ao compilar o arquivo Java.
+
+É possível criar uma ação OpenWhisk chamada `helloJava` a partir desse arquivo JAR conforme
+a seguir:
+
+```
+wsk action create helloJava hello.jar
+```
+{: pre}
+
+Ao usar a linha de comandos e um arquivo de origem `.jar`, não é necessário
+especificar que você está criando uma ação Java;
+a ferramenta determina isso a partir da extensão do arquivo.
+
+A chamada de ação para as ações Java é a mesma que para as ações Swift e JavaScript:
+
+```
+wsk action invoke --blocking --result helloJava --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
+
+**Nota:** se o arquivo JAR tiver mais de uma classe com um método principal correspondendo à assinatura necessária, a ferramenta CLI usará a primeira relatada por `jar -tf`.
 
 
 ## Criando ações Docker

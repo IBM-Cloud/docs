@@ -1,13 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # DevOps サービス
 {: #devops_services}
-
-*最終更新日: 2016 年 4 月 7 日*

@@ -5,6 +5,8 @@
 copyright:
 
   years: 2014, 2016
+  
+lastupdated: "2016-10-19"
 
  
 
@@ -15,13 +17,11 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-前次更新：2016 年 10 月 19 日
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 提供一組安全服務，可讓應用程式開發人員用來保護其行動及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} 堅守由 IBM 在系統、網路及安全工程方面的最佳作法所驅動的安全原則，進而確保安全無虞。這些原則包括原始碼掃描、動態掃描、威脅建模以及滲透測試等作法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM Product Security Incident Response Team (PSIRT) 處理程序，來進行資安事件管理。如需詳細資料，請參閱 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 網站。
+{{site.data.keyword.Bluemix_notm}} 堅守由 IBM 在系統、網路及安全工程方面的最佳作法所驅動的安全原則，進而確保安全無虞。這些原則包括原始碼掃描、動態掃描、威脅建模以及滲透測試等作法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM Product Security Incident Response Team (PSIRT) 處理程序，來進行資安突發事件管理。如需詳細資料，請參閱 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 網站。
 
 「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」使用「{{site.data.keyword.BluSoftlayer}} 基礎架構即服務 (IaaS)」雲端服務，並充分運用其安全架構。{{site.data.keyword.BluSoftlayer}} IaaS 為您的應用程式及資料提供層層重疊的多個保護層級。若為「{{site.data.keyword.Bluemix_notm}} 本端」，您藉由在公司防火牆後、自己的資料中心內管理「{{site.data.keyword.Bluemix_notm}} 本端」，而掌控實體安全並提供基礎架構。此外，{{site.data.keyword.Bluemix_notm}} 也在「平台即服務」層新增不同種類（平台、資料及應用程式）的安全功能。
 
@@ -37,7 +37,7 @@ copyright:
  * 服務完整性和可用性
  * 漏洞及修正程式管理
  * 拒絕服務及系統攻擊偵測
- * 資安事件回應
+ * 資安突發事件回應
 
 ![Bluemix 平台安全概觀](images/platform_sec.svg)
 
@@ -49,7 +49,7 @@ copyright:
 
 圖 2.「{{site.data.keyword.Bluemix_notm}} 本端」平台安全概觀
 
-IBM 透過「轉遞」來安裝、遠端監視及管理資料中心中的「{{site.data.keyword.Bluemix_notm}} 本端」，而「轉遞」是「{{site.data.keyword.Bluemix_notm}} 本端」內含的一種交付功能。「轉遞」會使用每一個「{{site.data.keyword.Bluemix_notm}} 本端」實例特有的憑證安全地進行連接。如需「{{site.data.keyword.Bluemix_notm}} 本端」及「轉遞」的相關資訊，請參閱 [Bluemix 本端](../local/index.html)。
+IBM 透過「轉遞」來安裝、遠端監視及管理資料中心中的「{{site.data.keyword.Bluemix_notm}} 本端」，而「轉遞」是「{{site.data.keyword.Bluemix_notm}} 本端」內含的一種交付功能。「轉遞」會使用每一個「{{site.data.keyword.Bluemix_notm}} 本端」實例特有的憑證安全地進行連接。如需「{{site.data.keyword.Bluemix_notm}} 本端」及「轉遞」的相關資訊，請參閱 [Bluemix 本端](/docs/local/index.html)。
 
 ### 功能安全
 
@@ -134,7 +134,7 @@ HTTP 閒置逾時為 2 分鐘。</dd>
 <dd>{{site.data.keyword.Bluemix_notm}} 使用 IBMSecurity QRadar® 工具來合併 Linux 日誌，以監視 Linux 系統上的特許存取。{{site.data.keyword.Bluemix_notm}} 也會使用 IBM QRadar 安全資訊及事件管理 (SIEM)，來監視應用程式開發人員的成功和不成功的登入嘗試。</dd>
 
 <dt>使用者存取管理</dt>
-<dd>在 {{site.data.keyword.Bluemix_notm}} 內，會遵循「權責區分」準則，指派精細的存取權給使用者，並確保根據最低專用權原則，使用者僅具備執行其工作所需的存取權。在「{{site.data.keyword.Bluemix_notm}} 專用」及「Bluemix 本端」環境內，已指派的管理者可以利用「管理主控台」來管理 {{site.data.keyword.Bluemix_notm}} 使用者在其組織中的角色及許可權。如需詳細資料，請參閱[管理 {{site.data.keyword.Bluemix_notm}}](../admin/adminpublic.html#mng)。
+<dd>在 {{site.data.keyword.Bluemix_notm}} 內，會遵循「權責區分」準則，指派精細的存取權給使用者，並確保根據最低專用權原則，使用者僅具備執行其工作所需的存取權。在「{{site.data.keyword.Bluemix_notm}} 專用」及「Bluemix 本端」環境內，已指派的管理者可以利用「管理主控台」來管理 {{site.data.keyword.Bluemix_notm}} 使用者在其組織中的角色及許可權。如需詳細資料，請參閱[管理 {{site.data.keyword.Bluemix_notm}}](/docs/admin/adminpublic.html#mng)。
 </dd>
 </dl>
 
@@ -196,11 +196,11 @@ Single Sign On 服務支援數個儲存使用者認證的身分來源：
 <dd> 由 Google、Facebook 及 LinkedIn 所維護的使用者登錄。</dd>
 </dl>
 
-如需相關資訊，請參閱[開始使用 Single Sign On](../services/SingleSignOn/index.html)。
+如需相關資訊，請參閱[開始使用 Single Sign On](/docs/services/SingleSignOn/index.html)。
 
 ### Application Security on Cloud
 
-此服務提供行動及 Web 應用程式的安全分析，並可讓您掃描原始碼是否有安全漏洞。如需相關資訊，請參閱[開始使用 Application Security on Cloud](../services/ApplicationSecurityonCloud/index.html)。
+此服務提供行動及 Web 應用程式的安全分析，並可讓您掃描原始碼是否有安全漏洞。如需相關資訊，請參閱[開始使用 Application Security on Cloud](/docs/services/ApplicationSecurityonCloud/index.html)。
 
 ### 用於應用程式安全測試的 IBM UrbanCode 外掛程式
 
@@ -212,13 +212,13 @@ IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 外掛�
 
 dashDB 服務使用內嵌式 LDAP 伺服器進行使用者鑑別。應用程式與資料庫之間的連線受到 SSL 憑證保護。此服務使用 DB2® 原生加密功能自動加密您的已部署資料庫及資料庫備份。每隔 90 天會自動執行一次主要金鑰輪替。
 
-如需相關資訊，請參閱[開始使用 dashDB](../services/dashDB/index.html)。
+如需相關資訊，請參閱[開始使用 dashDB](/docs/services/dashDB/index.html)。
 
 ### Secure Gateway
 
 Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程式安全地連接至遠端位置（內部部署或雲端）。它提供安全連線功能，並在您的 {{site.data.keyword.Bluemix_notm}} 組織與您要連接的遠端位置之間建立通道。您可以利用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 API 套件，來配置及建立安全閘道。
 
-如需相關資訊，請參閱[開始使用 Secure Gateway](../services/SecureGateway/secure_gateway.html)。
+如需相關資訊，請參閱[開始使用 Secure Gateway](/docs/services/SecureGateway/secure_gateway.html)。
 
 ### 安全資訊及事件管理
 
@@ -273,7 +273,7 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
 
 ![歐盟 (EU) 資料保護示範條款](images/icon_eumc.png) **歐盟 (EU) 示範條款**是一種協議，用於保護從歐盟 (EU) 或歐洲經濟區 (EEA) 傳輸到第三方國家或地區的個人資料。「歐盟 (EU) 示範條款」是由位於 EU 或 EEA 的用戶（資料匯出方）與位於第三方國家或地區的 IBM 資料處理方（資料匯入方）之間所簽訂。[IBM SaaS 歐盟 (EU) 示範條款](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window}包含資料匯出方和資料匯入方的權利和責任，以及資料主體的權利。「IBM SaaS 歐盟示範條款」可確保個人資料在第三方國家或地區處理時仍能受到像在 EU 或 EEA 中一樣的保護。
 
-針對要將源自歐洲經濟區的資料傳送到 EEA 以外國家的客戶，{{site.data.keyword.Bluemix}} 以歐洲委員會及歐盟資料保護權限所核准的表單提供「歐洲示範條款」。「歐洲示範條款」向歐洲客戶保證，{{site.data.keyword.Bluemix_notm}} 支援全球每個位置的必要資料隱私保護。
+針對要將源自歐洲經濟區的資料傳送到 EEA 以外國家或地區的客戶，{{site.data.keyword.Bluemix}} 以歐洲委員會及歐盟資料保護權限所核准的表單提供「歐洲示範條款」。「歐洲示範條款」向歐洲客戶保證，{{site.data.keyword.Bluemix_notm}} 支援全球每個位置的必要資料隱私保護。
 
 ![金融行業資訊系統](images/FISC.gif) 對於日本的銀行和相關金融機構，電腦系統必須具有適當的安全程序，這些程序應根據「金融行業資訊系統中心 (FISC)」安全準則。FISC 安全準則由「日本金融廳 (FSA)」、「日本央行 (BOJ)」和 FISC 貫徹實施。
 
@@ -349,4 +349,4 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
 {: #general}
 
 * [IBM SaaS 安全](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
-* [開始使用 Single Sign On](../services/SingleSignOn/index.html)
+* [開始使用 Single Sign On](/docs/services/SingleSignOn/index.html)

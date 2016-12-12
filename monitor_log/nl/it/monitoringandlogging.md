@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  anni: 2015, 2016
+  years: 2015, 2016
+lastupdated: "2016-11-17"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 #Monitoraggio e registrazione con Cloud Foundry
 {: #monitoringandlogging}
 
-Ultimo aggiornamento: 28 ottobre 2016
-{: .last-updated}
 
 Mediante il monitoraggio delle tue applicazioni e la revisione dei log, puoi seguire l'esecuzione dell'applicazione e il flusso di dati per comprendere al meglio la tua distribuzione. Inoltre, puoi ridurre il tempo e lo sforzo necessari per individuare e correggere eventuali problemi.
 {:shortdesc}
@@ -42,7 +41,7 @@ Se utilizzi l'infrastruttura Cloud Foundry per eseguire le tue applicazioni su {
 
 Per monitorare le applicazioni {{site.data.keyword.Bluemix_notm}}, utilizza uno dei seguenti metodi:
 
-* Servizi {{site.data.keyword.Bluemix_notm}}. Monitoring and Analytics offre un servizio che ti permette di monitorare le prestazioni della tua applicazione. Inoltre, questo servizio fornisce anche delle funzioni analitiche come l'analisi dei log. Per ulteriori informazioni, vedi [Monitoring and Analytics](../services/monana/index.html).
+* Servizi {{site.data.keyword.Bluemix_notm}}. Monitoring and Analytics offre un servizio che ti permette di monitorare le prestazioni della tua applicazione. Inoltre, questo servizio fornisce anche delle funzioni analitiche come l'analisi dei log. Per ulteriori informazioni, vedi [Monitoring and Analytics](/docs/services/monana/index.html).
 * Opzioni di terze parti. Ad esempio, [New Relic](http://newrelic.com/){:new_window}.
 
 ###Registrazione per le applicazioni in esecuzione su Cloud Foundry
@@ -138,7 +137,7 @@ Puoi visualizzare i log delle tue applicazioni Cloud Foundry in tre punti:
 {: #viewing_logs_UI}
 
 Per visualizzare i log di distribuzione o di runtime, completa la seguente procedura:
-1. Accedi a {{site.data.keyword.Bluemix_notm}}, quindi fai clic sul tile della tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
+1. Accedi a {{site.data.keyword.Bluemix_notm}}, quindi fai clic sul tile della tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione. .
 2. Nella barra di navigazione, fai clic su **Log**.
 
 Nella console **Log**, puoi visualizzare in tempo reale i log recenti riguardanti la tua applicazione o le parti finali dei log. Inoltre, puoi filtrare i log in base al canale e al tipo di log.
@@ -198,7 +197,7 @@ preparazione.</p>
 </li></ul>
 
 
-**Nota:** per informazioni su come abilitare la registrazione dell'applicazione, vedi [Debug degli errori di runtime](../debug/index.html#debugging-runtime-errors).
+**Nota:** per informazioni su come abilitare la registrazione dell'applicazione, vedi [Debug degli errori di runtime](/docs/debug/index.html#debugging-runtime-errors).
 
 
 
@@ -289,7 +288,7 @@ Per trasmettere i log dalla tua applicazione e dal sistema a un host log esterno
 	 
 	 Il nome dell'istanza di servizio fornita dall'utente.
 	 
-  4. Riprepara l'applicazione. 
+  4. Riprepara l'applicazione.
      Immetti `cf restage appname` per rendere effettive le modifiche. 
 
 #### Visualizzazione dei log dagli host esterni
@@ -397,6 +396,49 @@ source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 
 Jane visualizza un flusso di log nella propria interfaccia Web Splunk. Sebbene la versione di Splunk installata da Jane sia la Splunk Light, può comunque conservare 500 MB di registri al giorno.  
 
+## Registrazione per le applicazioni Cloud Foundry in {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}
+{: #hybrid_apps_logs_ov}
 
+
+In {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}, le applicazioni Cloud Foundry sono fornite con la registrazione integrata. Puoi rivedere i dati raccolti dalle tue applicazioni nella console {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
+
+Le applicazioni Cloud Foundry utilizzano il  Loggregator per monitorare e inoltrare i log dall'esterno dell'applicazione. Non devi installare gli agent nell'applicazione.
+
+### Requisiti hardware
+
+*Tabella 1. Requisiti hardware per la registrazione per {{site.data.keyword.Bluemix_local_notm}}*
+{: #table01}
+
+| **Requisito** |    **1 nodo**     | **3 nodi per l'alta disponibilità** |
+|-----------------|-------------------|-------------------|
+| vCPU | 19 | 57 |
+| Memoria | 80 GB | 240 GB |
+| Memoria locale | 2.98 TB | 8.94 TB |
+
+### Configurazione
+
+In {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}, i log sono attivi per tutte le applicazioni per impostazione predefinita. Per visualizzare le informazioni sulla lettura dei log standard, consulta [Registrazione per le applicazioni in esecuzione su Cloud Foundry](#logging_for_bluemix_apps). In aggiunta, può essere abilitata la registrazione avanzata negli ambienti {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}.
+
+* Per confermare che la registrazione avanzata è abilitata nei tuoi ambienti {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}, segui le istruzioni in [Visualizzazione dei log](#hybrid_apps_logs_dash). Se non visualizzi il pulsante **Vista avanzata**, questa funzione non è abilitata.
+
+* Per aggiungere la registrazione avanzata al tuo ambiente, segui le istruzioni nella documentazione [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) o [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local). 
+
+### Conservazione log
+
+Nelle applicazioni Cloud Foundry {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}, i dati dei log vengono memorizzati per 30 giorni per impostazione predefinita.
+
+## Visualizzazione dei log per le applicazioni Cloud Foundry in {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}
+{: #hybrid_apps_logs_dash}
+
+Puoi rivedere i log per le applicazioni che stai eseguendo in {{site.data.keyword.Bluemix_dedicated_notm}} e {{site.data.keyword.Bluemix_local_notm}}.
+{:shortdesc}
+
+Per visualizzare i tuoi log delle applicazioni, segui queste istruzioni.
+1. Seleziona un'applicazione in esecuzione.
+2. Fai clic su **Log**. Nella vista **Log**, puoi visualizzare i log dalla tua applicazione in esecuzione.
+4. Fai clic sul pulsante **Vista avanzata**. **Vista avanzata** mostra una vista più dettagliata dei log utilizzando Kibana, uno strumento di visualizzazione che utilizza i log e i dati con data/ora per creare le visualizzazioni personalizzate. Per ulteriori informazioni sull'utilizzo della vista avanzata, consulta la documentazione di [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+
+Successivamente, puoi personalizzare un dashboard Kibana. Per ulteriori informazioni, consulta [Personalizzazione della visualizzazione del log nel dashboard Kibana](/docs/manageapps/containers/container_ml_logs.html#container_ml_dash_logs_custom).
 
 

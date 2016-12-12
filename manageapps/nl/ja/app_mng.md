@@ -57,7 +57,7 @@ http://<yourappname>.mybluemix.net/bluemix-debug/shell
 
   1. *debug*: Liberty アプリケーションをデバッグ・モードにし、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} などのクライアントがアプリケーションとのリモート・デバッグ・セッションを確立できるようにします。
   
-   詳しくは、『[リモート・デバッグ](../manageapps/eclipsetools/eclipsetools.html#remotedebug)』を参照してください。
+   詳しくは、『[リモート・デバッグ](/docs/manageapps/eclipsetools/eclipsetools.html#remotedebug)』を参照してください。
    
    *debug* ユーティリティーは *proxy* も開始します。
    
@@ -127,7 +127,7 @@ cf restage myApp
 ##Eclipse Tools の開発モード
 {: #devmode}
 
-開発モードは、アプリケーションがクラウドで実行されているときに開発者がアプリケーションを操作できるようにする、[Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) のフィーチャーです。
+開発モードは、アプリケーションがクラウドで実行されているときに開発者がアプリケーションを操作できるようにする、[Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools) のフィーチャーです。
 
 {{site.data.keyword.Bluemix_notm}} でアプリケーションを操作している間、開発者は、ローカル環境で実行しているような通常の開発アクティビティーを実行できないと感じる可能性があります。この問題に対処するため、Eclipse Tools を使用した開発モードでは、セキュアな一時ワークスペース内にいながら、クラウドで作業する手段を提供します。
 

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-03"
  
 
 ---
@@ -15,61 +15,55 @@ lastupdated: "2016-10-27"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Mise à niveau et unification des comptes de facturation {{site.data.keyword.Bluemix_notm}} et SoftLayer 
+# Mise à niveau et unification des comptes de facturation {{site.data.keyword.Bluemix_notm}} et SoftLayer
 {: #softlayerlink}
 
 Si vous disposez d'un compte d'essai {{site.data.keyword.Bluemix_notm}} et voulez accéder au tableau de bord Infrastructure, vous devez
-procéder à la mise à niveau vers un compte {{site.data.keyword.Bluemix_notm}} Paiement à la carte. 
+procéder à la mise à niveau vers un compte {{site.data.keyword.Bluemix_notm}} Paiement à la carte. Vous devez également effectuer une mise à niveau si vous voulez utiliser d'autres ressources payantes qui ne sont pas disponible dans un compte d'essai ou une fois votre compte d'essai arrivé à expiration. 
 
 Vous pouvez unifier vos comptes de facturation {{site.data.keyword.Bluemix_notm}} et SoftLayer en les liant. Lorsque vous liez vos
 comptes, vous êtes facturé via {{site.data.keyword.Bluemix_notm}} pour l'utilisation de ressources {{site.data.keyword.Bluemix_notm}} et
-SoftLayer. {:shortdesc}
+SoftLayer.
+{:shortdesc}
 
-## Mise à niveau vers un compte {{site.data.keyword.Bluemix_notm}} Paiement à la carte 
+## Mise à niveau vers un compte {{site.data.keyword.Bluemix_notm}} Paiement à la carte
 {: #upgradetopayg}
 
 Lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}} avec un compte d'essai, vous ne parvenez pas à accéder au tableau de bord
 Infrastructure {{site.data.keyword.Bluemix_notm}}. Si vous voulez que vos applications utilisent les ressources d'infrastructure, vous devez
 procéder à la mise à niveau vers un compte Paiement à la carte.
 
-
 Pour mettre à niveau votre compte d'essai vers un compte {{site.data.keyword.Bluemix_notm}} Paiement à la carte, procédez comme suit :
-
 
  1. Cliquez sur **Compte** &gt; **Facturation**.
  2. Ensuite, cliquez sur **Ajouter une carte de crédit**.
- 3. Entrez les détails de facturation requis.  
- 4. Lisez et acceptez les dispositions relatives au compte Paiement à la carte.  
+ 3. Entrez les détails de facturation requis. 
+ 4. Lisez et acceptez les dispositions relatives au compte Paiement à la carte. 
  5. Une fois que vous avez terminé, cliquez sur **Mise à niveau**. 
  
 Une fois la mise à niveau vers un compte Paiement à la carte effectuée, les options **Infrastructure** sont
 répertoriées dans le **catalogue** {{site.data.keyword.Bluemix_notm}}. Si vous utilisez plus que la franchise, vous recevrez
-une facture {{site.data.keyword.Bluemix_notm}} mensuelle. Celle-ci est en dollars américains (USD) et détaille le prix des ressources.
- 
+une facture {{site.data.keyword.Bluemix_notm}} mensuelle. Celle-ci est en dollars américains (USD) et détaille le prix des ressources. 
 
-## Unification de vos comptes {{site.data.keyword.Bluemix_notm}} et SoftLayer 
+## Unification de vos comptes {{site.data.keyword.Bluemix_notm}} et SoftLayer
 {: #unifyingaccounts}
 
 Vous pouvez unifier vos comptes {{site.data.keyword.Bluemix_notm}} et SoftLayer afin d'utiliser les ressources combinées. Si vous liez
-vos comptes {{site.data.keyword.Bluemix_notm}} et Softlayer, vous ne recevrez qu'une seule facture {{site.data.keyword.Bluemix_notm}}.
-Si vous possédez un compte {{site.data.keyword.Bluemix_notm}}, la facturation via {{site.data.keyword.Bluemix_notm}} pour des ressources
+vos comptes {{site.data.keyword.Bluemix_notm}} et Softlayer, vous ne recevrez qu'une seule facture {{site.data.keyword.Bluemix_notm}}. Si vous possédez un compte {{site.data.keyword.Bluemix_notm}}, la facturation via {{site.data.keyword.Bluemix_notm}} pour des ressources
 SoftLayer est appliquée lors du nouveau cycle de facturation qui démarre après la liaison des comptes.
-
 
 **Important :** tous les comptes liés dans {{site.data.keyword.Bluemix_notm}} doivent être du type Paiement à la carte. Vous pouvez
 en créer un nouveau ou utiliser un compte Paiement à la carte existant. Vous pouvez aussi lier un compte d'essai existant, mais celui-ci sera transformé en
-compte Paiement à la carte. Les comptes d'abonnement {{site.data.keyword.Bluemix_notm}} ne peuvent pas être liés.   
+compte Paiement à la carte. Les comptes d'abonnement {{site.data.keyword.Bluemix_notm}} ne peuvent pas être liés.  
 
-Une fois vos comptes liés : 
+Une fois vos comptes liés :
 
 * Vous devez utiliser vos données d'identification IBMid pour accéder à votre compte SoftLayer et à votre compte
-{{site.data.keyword.Bluemix_notm}}. 
-* Les remises SoftLayer existantes sont appliquées à tous les prix {{site.data.keyword.Bluemix_notm}}.
- 
-* Vous recevez une facture en dollars américains (USD). 
-* Vous pouvez surveiller l'utilisation de vos ressources {{site.data.keyword.BluSoftlayer}} dans l'interface utilisateur
 {{site.data.keyword.Bluemix_notm}}.
- 
+* Les remises SoftLayer existantes sont appliquées à tous les prix {{site.data.keyword.Bluemix_notm}}. 
+* Vous recevez une facture en dollars américains (USD).
+* Vous pouvez surveiller l'utilisation de vos ressources {{site.data.keyword.BluSoftlayer}} dans l'interface utilisateur
+{{site.data.keyword.Bluemix_notm}}. 
 
 **Attention :** la liaison des comptes est irréversible. 
 
@@ -87,6 +81,13 @@ Après avoir lié vos comptes, le lien **Accéder à {{site.data.keyword.Bluemix
 global SoftLayer. En cliquant sur ce lien, vous accédez à la page de connexion de {{site.data.keyword.Bluemix_notm}}. De plus, le lien
 **SoftLayer** est désormais disponible dans l'en-tête {{site.data.keyword.Bluemix_notm}}. En cliquant sur ce lien, vous accédez à la
 page d'accueil du {{site.data.keyword.slportal}} dans une nouvelle fenêtre.
+
+Les offres d'infrastructure {{site.data.keyword.Bluemix_notm}} sont connectées à un réseau à trois niveaux qui segmente le trafic public,
+privé et de gestion. Les offres d'infrastructure sur un compte {{site.data.keyword.Bluemix_notm}} de client peuvent transférer les données dans une infrastructure de ce type sur le réseau privé gratuitement. Les offres d'infrastructure, telles que les serveurs Bare Metal, les serveurs virtuels et le stockage en cloud se connectent à d'autres
+applications et services figurant dans le catalogue {{site.data.keyword.Bluemix_notm}}, comme des services Watson, des conteneurs ou des contextes
+d'exécution, sur le réseau public. Le transfert de données entre ces deux types d'offre est mesuré et facturé en fonction des tarifs de bande
+passante de réseau public
+standard.
 
 ## Crédits pour l'utilisation de {{site.data.keyword.Bluemix_notm}} lorsque des comptes sont liés
 {: #slcredit}
@@ -118,7 +119,7 @@ Pour inviter des membres d'équipe dans {{site.data.keyword.Bluemix_notm}}, proc
 
  1. Cliquez sur **Compte** &gt; **Inviter des membres d'équipe**.
  2. Cliquez sur **Ajouter** pour vous authentifier dans votre compte SoftLayer et afficher la liste des membres d'équipe de votre
-compte {{site.data.keyword.BluSoftlayer}}. 
+compte {{site.data.keyword.BluSoftlayer}}.
  3. Sélectionnez les membres de l'équipe à ajouter et cliquez sur **Envoyer**.
  
 Le membre de l'équipe reçoit un courrier électronique incluant un lien **Join the organization**. Si le membre d'équipe ne dispose
@@ -129,51 +130,44 @@ IBMid, il est redirigé vers une page d'enregistrement. Il peut alors soumettre 
 Pour plus d'informations sur l'invitation de membres d'équipe via l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}, voir
 [Invitation de membres d'équipe](https://console.ng.bluemix.net/docs/admin/users_roles.html#inviteteammembers).
 
-## Passage à l'IBMid 
+## Passage à l'IBMid
 {: #ibmid_switch}
 
 Désormais, l'authentification dans SoftLayer utilise l'IBMid afin de fournir une connexion unique pour {{site.data.keyword.Bluemix_notm}}. Si
-vous possédez un compte SoftLayer, vous pouvez passez à un IBMid. Un assistant de migration vous guidera tout au long de cette opération.
+vous possédez un compte SoftLayer, vous pouvez passez à un IBMid. Un assistant de migration vous guidera tout au long de cette opération. 
 {:shortdesc}
 
-Si vous avez commencé le passage à l'IBMid, vous pouvez l'annuler tant que vous ne l'avez pas terminé.
-Toutefois, vous serez à nouveau invité à passer à l'IBMid à votre prochaine connexion.
-
+Si vous avez commencé le passage à l'IBMid, vous pouvez l'annuler tant que vous ne l'avez pas terminé. Toutefois, vous serez à nouveau invité à passer à l'IBMid à votre prochaine connexion.
 
 Pour passer de votre nom d'utilisateur SoftLayer existant à un IBMid, procédez comme suit :
-
 
  1. Dans le {{site.data.keyword.slportal}}, accédez à la page Edit User Profile et cliquez sur **Switch to
 IBMid**.
  2. Suivez les invites de l'assistant de migration afin de créer votre IBMid. Une fois l'IBMid créé, vous ne pouvez pas changer l'ID, qui est
 une adresse électronique. Vous pouvez mettre à jour l'adresse électronique associée à votre profil, mais par défaut, cette valeur est la même que celle
 que vous avez définie pour votre IBMid. Une fois l'assistant terminé, un courrier électronique vous est envoyé.
-
  3. Lorsque vous recevez le courrier électronique, suivez le lien ou copiez l'adresse URL dans un navigateur et entrez votre code
-d'enregistrement. Le code est valable pendant sept jours et ne peut être utilisé qu'une fois. Vous ne pouvez pas le réutiliser. Après avoir configuré le
-lien utilisateur IBMid vers SoftLayer, vous ne pouvez vous connecter à votre compte qu'avec l'IBMid. Dans la boîte de dialogue de connexion, vous devez
-cliquer sur le bouton **Log in with IBMid** au lieu d'entrer votre nom d'utilisateur et votre mot de passe SoftLayer. 
+d'enregistrement. Le code est valable pendant sept jours et ne peut être utilisé qu'une fois.  Vous ne pouvez pas le réutiliser.
+ Après avoir configuré le
+lien utilisateur IBMid vers SoftLayer, vous ne pouvez vous connecter à votre compte qu'avec l'IBMid.  Dans la boîte de dialogue de connexion, vous devez
+cliquer sur le bouton **Log in with IBMid** au lieu d'entrer votre nom d'utilisateur et votre mot de passe SoftLayer.
  
 Si vous êtes un nouveau client, vous êtes invité à entrer une adresse électronique pour votre compte IBMid existant, ou à créer un compte IBMid,
-lorsque vous passez au paiement de votre commande.
- 
+lorsque vous passez au paiement de votre commande. 
 
-### Mappage de plusieurs comptes SoftLayer à un IBMid 
+### Mappage de plusieurs comptes SoftLayer à un IBMid
 {: #map_multiple_accounts}
 
 Vous pouvez associer un IBMid à plusieurs comptes SoftLayer en utilisant une adresse électronique IBMid existante lorsque vous configurez le
 compte. Vous ne pouvez mapper qu'un seul utilisateur SoftLayer pour chaque compte à l'IBMid unique. L'IBMid doit être unique dans chaque compte SoftLayer. Toutefois,
 un utilisateur disposant de l'accès à plusieurs comptes SoftLayer peut utiliser un IBMid afin d'accéder à plusieurs comptes SoftLayer.
 
-
 Par exemple, un IBMid peut être mappé à un utilisateur principal dans les comptes A et B, et à un utilisateur supplémentaire dans les comptes C et D.
-L'un des comptes mappés à cet IBMid est le compte par défaut. En général, le compte par défaut est celui qui a été mappé en premier à l'IBMid. Toutefois,
+L'un des comptes mappés à cet IBMid est le compte par défaut.  En général, le compte par défaut est celui qui a été mappé en premier à l'IBMid. Toutefois,
 vous pouvez changer le compte par défaut à l'aide d'une fonction de changement de compte dans le portail client.
-
 
 Pour un utilisateur disposant d'un accès IBMid à plusieurs comptes pour lesquels l'authentification à deux facteurs est activée, un code de
 vérification pour l'authentification à deux facteurs approprié par compte est requis lors de la connexion de compte et du changement de compte.
-
 
 ## Utilisation de services {{site.data.keyword.Bluemix_notm}} avec des actifs SoftLayer
 {: #bluemix_services}
@@ -201,7 +195,7 @@ Modernisez votre développement d'applications en utilisant des conteneurs avec 
 {{site.data.keyword.activedeployshort}} et {{site.data.keyword.deliverypipeline}}. Vous pourrez ensuite utiliser le service
 {{site.data.keyword.vpn_short}} pour regagner SoftLayer et connecter votre conteneur dans un réseau privé au réseau privé
 SoftLayer. Tous les frais d'utilisation des ressources de traitement et des services sont reflétés dans votre facture
-{{site.data.keyword.Bluemix_notm}}.  
+{{site.data.keyword.Bluemix_notm}}. 
 
 ### Services {{site.data.keyword.Bluemix_notm}} reposant sur des API
 Certains services {{site.data.keyword.Bluemix_notm}} ne peuvent pas être utilisés avec SoftLayer. Les services suivants peuvent être configurés pour
@@ -264,17 +258,16 @@ même jour où vous avez ouvert votre compte SoftLayer.
 Lorsque vos comptes sont liés, votre utilisation de {{site.data.keyword.Bluemix_notm}} continue d'être mesurée pour le cycle du mois en
 cours et vous
 serez facturé pour cette utilisation sur une facture {{site.data.keyword.Bluemix_notm}}. A compter du premier jour du mois suivant, vos frais
-{{site.data.keyword.Bluemix_notm}} et SoftLayer seront combinés sur votre facture {{site.data.keyword.Bluemix_notm}}. 
+{{site.data.keyword.Bluemix_notm}} et SoftLayer seront combinés sur votre facture {{site.data.keyword.Bluemix_notm}}.
 
 Par exemple, si vous avez lié vos comptes le 16 avril, vous recevrez une facture Bluemix pour votre consommation en avril. Selon la date à
 laquelle vous avez lié vos comptes, vous pouvez recevoir une facture distincte pour votre utilisation de SoftLayer. Votre utilisation en mai pour SoftLayer
-et {{site.data.keyword.Bluemix_notm}} sera facturée via votre compte {{site.data.keyword.Bluemix_notm}}. 
+et {{site.data.keyword.Bluemix_notm}} sera facturée via votre compte {{site.data.keyword.Bluemix_notm}}.
 
 ![Récapitulatif de la liaison de comptes Bluemix et SoftLayer](images/BluemixSoftLayerBill.svg)
 
 Une fois vos factures liées, votre facture {{site.data.keyword.Bluemix_notm}} répertorie les prix de chaque ressource que vous avez
 utilisée sous les en-têtes suivants :
-
 
 * **Bare Metal Servers and Attached Services**
 * **Virtual Servers and Attached Services**

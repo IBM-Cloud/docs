@@ -88,8 +88,7 @@ dell'iFrame. Questo valore è facoltativo.</dd>
 <dd class="pd">L'ID della regione di destinazione predefinita. Ad esempio: <code>ibm:yp:us-south</code>. Questo valore è facoltativo.</dd>
 	
 <dt class="pt dlterm">organization_guid</dt>
-<dd class="pd">Il guid dell'organizzazione di destinazione predefinita. Per trovare questo valore, fai clic su <strong>Gestisci organizzazioni</strong> > <i>nome_organizzazione</i>. L'URL per l'organizzazione
-contiene il guid per tale organizzazione. Questo valore è facoltativo.</dd>
+<dd class="pd">Il guid dell'organizzazione di destinazione predefinita. Per trovare questo valore, fai clic su <strong>Gestisci organizzazioni</strong> > <i>nome_organizzazione</i>. L'URL per l'organizzazione contiene il guid per tale organizzazione. Questo valore è facoltativo.</dd>
 	
 <dt class="pt dlterm">space_guid</dt>
 <dd class="pd">Il guid dello spazio di destinazione predefinito. Per trovare questo valore, fai clic su <strong>Gestisci organizzazioni</strong> > <i>nome_spazio</i>. L'URL per lo spazio

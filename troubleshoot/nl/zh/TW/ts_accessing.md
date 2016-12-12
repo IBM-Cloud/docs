@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -17,8 +19,6 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 存取疑難排解 
 {: #accessing}
 
-前次更新：2016 年 10 月 23 日
-{: .last-updated} 
 
 一般在存取 {{site.data.keyword.Bluemix}} 時發生的問題，可能包括使用者無法登入 {{site.data.keyword.Bluemix_notm}}、帳戶陷入擱置狀態，等等。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}

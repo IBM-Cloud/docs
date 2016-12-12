@@ -1,23 +1,21 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Servizi dell'applicazione
 {: #app_services}
 
-*Ultimo aggiornamento: 28 gennaio 2016*
-{: .last-updated}
-
 Utilizza questi
 servizi per aggiungere o rimuovere funzioni rapidamente mentre sviluppi
 applicazioni web nel cloud. Puoi anche semplificare le attività di gestione
-e organizzare i tuoi processi e le tue regole di business. 
+e organizzare i tuoi processi e le tue regole di business.
 {:shortdesc}
 
 

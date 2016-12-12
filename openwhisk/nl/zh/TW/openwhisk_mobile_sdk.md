@@ -249,7 +249,7 @@ whisk.urlSession = session
 ### SDK 按鈕
 {: #openwhisk_sdk_configure_button}
 
-為方便起見，SDK 包括 `WhiskButton`，以擴充 `UIButton` 容許它呼叫動作。若要使用 `WhiskButton`，請遵循此範例：
+為方便起見，SDK 包含 `WhiskButton`，以擴充 `UIButton` 容許它呼叫動作。若要使用 `WhiskButton`，請遵循此範例：
 
 ```
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))

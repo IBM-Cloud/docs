@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,10 +17,8 @@ copyright:
 
 # Teammitglieder und Rollen verwalten
 {: #userroles}
-Letzte Aktualisierung: 20. Oktober 2016
-{: .last-updated}
 
-Auf der Seite **Teamverzeichnis** für Ihr Konto können Sie vorhanden Teammitglieder und deren Rollen in Ihrer Organisation und in Bereichen verwalten sowie neue Teammitglieder einladen. Um auf das Teamverzeichnis für Ihr Konto zuzugreifen, klicken Sie auf das Symbol **Konto** &gt; **Teamverzeichnis**.
+Auf der Seite **Teamverzeichnis** für Ihr Konto können Sie vorhanden Teammitglieder und deren Rollen in Ihrer Organisation und in Bereichen verwalten sowie neue Teammitglieder einladen. Um auf das Teamverzeichnis für Ihr Konto zuzugreifen, klicken Sie auf das Symbol **Konto** &gt; **Teamverzeichnis**. 
 {:shortdesc}
 
 Kontoeigner führen alle Operationen für Organisationen und Bereiche einschließlich der Verwaltung der Teammitglieder und der ihnen zugeordneten Rollen aus. Organisationsmanager können Teammitglieder einladen und Rollen verwalten. Bereichsmanager können die Seite **Organisationen verwalten** verwenden, um vorhandene Kontomitglieder zum Bereich hinzuzufügen und deren Rollen anzupassen. Lesen Sie die folgenden Informationen, um mehr über Rollen zu erfahren.
@@ -30,7 +28,8 @@ Kontoeigner führen alle Operationen für Organisationen und Bereiche einschlie�
 
 Auf Kontoebene gibt es zwei Rollen, die den Zugriff auf andere Kontoverwaltungsfunktionen ermöglichen:
 
-*Tabelle 1. Kontorollen und Berechtigungen*
+Tabelle 1. Kontorollen und Berechtigungen
+{: #ur_table1}
 
 | Kontorolle | Berechtigungen |    
 |----------------|---------|
@@ -41,7 +40,8 @@ Auf Kontoebene gibt es zwei Rollen, die den Zugriff auf andere Kontoverwaltungsf
 
 Die folgenden Rollen können auf Organisationsebene hinzugefügt werden:
 
-*Tabelle 2. Organisationsrollen und Berechtigungen*
+Tabelle 2. Organisationsrollen und Berechtigungen
+{: #ur_table2}
 
 | Organisationsrolle | Berechtigungen |    
 |-------------------|-------------|
@@ -51,7 +51,8 @@ Die folgenden Rollen können auf Organisationsebene hinzugefügt werden:
 
 Die folgenden Rollen können auf Bereichsebene zugeordnet werden:
 
-*Tabelle 3. Bereichsrollen und Berechtigungen*
+Tabelle 3. Bereichsrollen und Berechtigungen
+{: #ur_table3}
 
 | Bereichsrolle | Berechtigungen |    
 |------------|-------------|
@@ -134,7 +135,7 @@ Bereichsmanager können Rollen für die Teammitglieder in ihren Bereichen auf de
 Kontoeigner und Organisationsmanager können Teammitglieder über die Seite **Teamverzeichnis** aus einem Konto entfernen. Führen Sie die folgenden Schritte aus, um ein Teammitglied zu entfernen:
 
 1. Klicken Sie auf **Konto** &gt; **Teamverzeichnis**.
-3. Suchen Sie den Benutzer, der aus dem Konto entfernt werden soll, und klicken Sie auf das Symbol **Entfernen** ![Symbol 'Entfernen'](../icons/icon_remove_teamuser.svg).
+3. Suchen Sie den Benutzer, der aus dem Konto entfernt werden soll, und klicken Sie auf das Symbol **Entfernen** ![Symbol 'Entfernen'](/docs/icons/icon_remove_teamuser.svg).
 4. Klicken Sie im Fenster **Benutzer entfernen** auf **Entfernen**, um die Entfernung des angegebenen Benutzers aus dem Konto zu bestätigen.
 
 Der Benutzer wird aus der angezeigten Liste der Teammitglieder für dieses Konto entfernt.

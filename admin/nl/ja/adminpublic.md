@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-23"
 
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # アカウントのセットアップ
 {: #account}
-最終更新日: 2016 年 10 月 23 日
-{: .last-updated}
 
 {{site.data.keyword.Bluemix_notm}} の登録が終わったので、次は、インフラストラクチャーのプロビジョニングやアプリケーションの作成に速やかに進めるように、アカウントをセットアップする必要があります。
 {:shortdesc}

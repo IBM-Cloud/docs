@@ -54,7 +54,7 @@ http://<yourappname>.mybluemix.net/bluemix-debug/shell
 
   1. *debug*：将 Liberty 应用程序转换为调试方式，并启用客户机（例如，IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}）来建立与应用程序的远程调试会话。
   
-   有关更多信息，请参阅[远程调试](../manageapps/eclipsetools/eclipsetools.html#remotedebug)。
+   有关更多信息，请参阅[远程调试](/docs/manageapps/eclipsetools/eclipsetools.html#remotedebug)。
    
    *debug* 实用程序还会启动 *proxy*。
    
@@ -122,8 +122,8 @@ cf restage myApp
 ##Eclipse Tools 的开发方式
 {: #devmode}
 
-开发方式是 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) 的一种功能，该功能使开发者能够在应用程序在云中运行的同时处理应用程序。
+开发方式是 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools) 的一种功能，该功能使开发者能够在应用程序在云中运行的同时处理应用程序。
 
-在 {{site.data.keyword.Bluemix_notm}} 上处理应用程序时，开发人员可能会觉得，他们不能像在本地环境中那样正常执行开发活动。为了解决此问题，通过 Eclipse Tools 的开发方式提供了一种在云中工作的方法，即在一个临时的安全工作空间中工作。
+在 {{site.data.keyword.Bluemix_notm}} 上处理应用程序时，开发者可能会觉得，他们不能像在本地环境中那样正常执行开发活动。为了解决此问题，通过 Eclipse Tools 的开发方式提供了一种在云中工作的方法，即在一个临时的安全工作空间中工作。
 
 Liberty 和 Node.js 应用程序都支持开发方式。Liberty 或 Node.js 应用程序启用开发方式后，您可以通过递增方式更新应用程序文件，不需要推送应用程序。您还可以使用应用程序建立调试会话。Liberty 应用程序的开发方式相当于启用了调试和 jmx 应用程序管理实用程序。Node.js 应用程序的开发方式相当于启用了 *devconsole*、*inspector* 和 *shell* 实用程序。

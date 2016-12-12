@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Fehlerbehebung für die Verwaltung von Konten
 {: #managingaccounts}
 
-Letzte Aktualisierung: 18. August 2016
-{: .last-updated}
 
 Es können Probleme bei der Verwaltung Ihres Kontos auftreten; so kann es zum Beispiel vorkommen, dass unterschiedliche Anwendungen gemeinsam denselben Domänennamen nutzen oder Administratoren nicht alle Organisationen anzeigen können. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben.
 {:shortdesc}

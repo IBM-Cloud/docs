@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,10 +17,8 @@ copyright:
 
 # Gestión de roles y miembros del equipo
 {: #userroles}
-Última actualización: 20 de octubre de 2016
-{: .last-updated}
 
-En la página **Directorio del equipo** para la cuenta, puede gestionar los miembros del equipo existentes y sus roles en la organización y espacios, así como invitar a nuevos miembros del equipo. Para acceder al directorio de equipo para su cuenta, pulse **Cuenta** &gt; **Directorio del equipo**.
+En la página **Directorio del equipo** para la cuenta, puede gestionar los miembros del equipo existentes y sus roles en la organización y espacios, así como invitar a nuevos miembros del equipo. Para acceder al directorio de equipo para su cuenta, pulse **Cuenta** &gt; **Directorio del equipo**. 
 {:shortdesc}
 
 Los propietarios de cuentas llevan a cabo todas las operaciones en las organizaciones y los espacios incluida la gestión de miembros del equipo y sus roles asignados. Los gestores de organización tienen acceso a invitar a miembros del equipo y gestionar roles. Los gestores de espacio pueden utilizar la página **Gestionar organizaciones** para añadir miembros de cuentas existentes al espacio y ajustar sus roles. Consulte la siguiente información para aprender más sobre roles.
@@ -30,7 +28,8 @@ Los propietarios de cuentas llevan a cabo todas las operaciones en las organizac
 
 En el nivel de cuenta, hay dos roles que permiten acceder a distintas características de gestiones de cuentas:
 
-*Tabla 1. Roles de cuentas y permisos*
+Tabla 1. Roles de cuentas y permisos
+{: #ur_table1}
 
 | Rol de cuenta | Permisos |    
 |----------------|---------|
@@ -41,7 +40,8 @@ En el nivel de cuenta, hay dos roles que permiten acceder a distintas caracterí
 
 Los siguientes roles se pueden asignar a nivel de organización:
 
-*Tabla 2. Roles de organización y permisos*
+Tabla 2. Roles de organización y permisos
+{: #ur_table2}
 
 | Rol de organización | Permisos |    
 |-------------------|-------------|
@@ -51,7 +51,8 @@ Los siguientes roles se pueden asignar a nivel de organización:
 
 Los siguientes roles se pueden asignar a nivel de espacio:
 
-*Tabla 3. Roles de espacio y permisos*
+Tabla 3. Roles de espacio y permisos
+{: #ur_table3}
 
 | Rol de espacio | Permisos |    
 |------------|-------------|
@@ -98,7 +99,7 @@ Pulse **Ver pendiente** para comprobar si hay invitaciones pendientes o aceptada
 ### Adición de los miembros del equipo de SoftLayer
 Si tiene una cuenta de SoftLayer vinculada a su cuenta de {{site.data.keyword.Bluemix_notm}}, puede añadir los miembros de su equipo de SoftLayer.
  1. Vaya a **Cuenta** > **Invitar a miembros del equipo**. 
- 2. Pulse **Añadir** en la sección **Añadir miembros del equipo SoftLayer** para autenticarse en su cuenta de SoftLayer y ver la lista de miembros del equipo de su cuenta de SoftLayer.  
+ 2. Pulse **Añadir** en la sección **Añadir miembros del equipo SoftLayer** para autenticarse en su cuenta de SoftLayer y ver la lista de miembros del equipo de su cuenta de SoftLayer. 
  
 La adición de los miembros del equipo a la cuenta de {{site.data.keyword.Bluemix_notm}} no les otorga acceso a la Infraestructura de {{site.data.keyword.Bluemix_notm}}. Para dar acceso a los usuarios al panel de control Infraestructura, vaya a **Infraestructura** > **Cuenta** > **Usuarios** y pulse el enlace **Agregar usuario**. Debe tener permiso para agregar usuarios.
  
@@ -134,7 +135,7 @@ Los gestores de espacio pueden editar roles para los miembros del equipo en su e
 Los propietarios de cuentas y gestores de organizaciones pueden eliminar miembros del equipo de una cuenta utilizando la página **Directorio del equipo**. Para eliminar a un miembro del equipo, realice estos pasos:
 
 1. Pulse **Cuenta** &gt; **Directorio del equipo**.
-3. Localice el usuario que desea eliminar de la cuenta y pulse el icono **Eliminar** ![Eliminar icono](../icons/icon_remove_teamuser.svg).
+3. Localice el usuario que desea eliminar de la cuenta y pulse el icono **Eliminar** ![Eliminar icono](/docs/icons/icon_remove_teamuser.svg).
 4. En la ventana **Eliminar usuario**, pulse **Eliminar** para confirmar que desea eliminar el usuario especificado de la cuenta.
 
 El usuario se elimina de la lista que aparece de los miembros del equipo para la cuenta.

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-23"
 
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # Configurando sua conta
 {: #account}
-Última atualização: 23 de outubro de 2016
-{: .last-updated}
 
 Agora que você já se inscreveu no {{site.data.keyword.Bluemix_notm}}, é necessário configurar sua conta para que seja possível mover rapidamente para aplicativos de infraestrutura ou construção de fornecimento.
 {:shortdesc}
@@ -35,7 +33,7 @@ Você também pode querer se inscrever para receber notificações, conferir sua
 
 - **Notificações** 
   
-  Inscreva-se para ser notificado de atualizações de manutenção para as regiões públicas da plataforma {{site.data.keyword.Bluemix_notm}} e serviços associados, bem como incidentes, notificações de segurança e outros anúncios. É possível apontar seu leitor de feed RSS no link do RSS na [página de status do Bluemix](http://ibm.biz/Bluemixstatus) para se manter atualizado sobre mudanças no {{site.data.keyword.Bluemix_notm}} Public. Para obter mais detalhes sobre notificações de configuração, consulte [Visualizando o status do Bluemix](/docs/support/index.html#viewing-bluemix-status).
+  Inscreva-se para ser notificado de atualizações de manutenção para as regiões públicas da plataforma {{site.data.keyword.Bluemix_notm}} e serviços associados, bem como incidentes, notificações de segurança e outros anúncios. É possível apontar seu leitor de feed RSS no link do RSS na [página de status do Bluemix](http://ibm.biz/Bluemixstatus) para se manter atualizado sobre mudanças no {{site.data.keyword.Bluemix_notm}} Public.  Para obter mais detalhes sobre notificações de configuração, consulte [Visualizando o status do Bluemix](/docs/support/index.html#viewing-bluemix-status).
 
 - **Opções de suporte** 
   

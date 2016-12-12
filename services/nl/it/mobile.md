@@ -1,20 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Mobile
 {: #mobile}
 
-*Ultimo aggiornamento: 9 dicembre 2015*
-
 Utilizza i servizi Mobile per creare applicazioni Android e iOS
-multipiattaforma, native o ibride. 
+multipiattaforma, native o ibride.
 {:shortdesc}
 
 

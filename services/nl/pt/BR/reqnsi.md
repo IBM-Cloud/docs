@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 #Serviços
 {: #services}
-
-*Última atualização: 21 de outubro de 2016*
-{: .last-updated} 
 
 É possível localizar serviços disponíveis no **Catálogo** em **Serviços** na interface com o usuário do {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -51,7 +49,7 @@ e, em seguida, pelos serviços de comunidade.</dd>
 |Tipo	|Descrição	|Detalhes do suporte|
 |:------|:--------------|:--------------|
 |IBM	|Um serviço que é fornecido pela IBM e que está geralmente disponível.	|Problemas determinados como um defeito
-em um serviço fornecido pela IBM que geralmente está disponível são suportados. O suporte será fornecido com base na severidade configurada. Para obter mais informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](../support/index.html#contacting-bluemix-support){: new_window}.|
+em um serviço fornecido pela IBM que geralmente está disponível são suportados. O suporte será fornecido com base na severidade configurada. Para obter mais informações sobre a severidade do chamado, veja [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 |Terceiros	|Um serviço que é fornecido por uma empresa que não seja a IBM.	|O suporte para serviços de terceiros é fornecido
 perlo provedor de serviços. Se um problema for investigado pela IBM e ficar determinado ser um defeito em um serviço de terceiro, a IBM não será obrigada a fornecer uma correção. A IBM compartilhará a análise com o provedor de serviços de terceiro, se necessário.|
 |Comunidade	|Um serviço que é fornecido por uma comunidade de software
@@ -61,7 +59,7 @@ e marketing a avaliar o valor dos serviços antes de tornarem o
 serviço geralmente disponível.	|Problemas que são determinados como sendo um defeito
 em um serviço beta fornecido pela IBM são suportados mas a IBM não é obrigada a
 fornecer uma correção. Além disso,
-o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Para obter informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](../support/index.html#contacting-bluemix-support){: new_window}.|
+o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Para obter informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 *Tabela 1. Informações de suporte de serviços do {{site.data.keyword.Bluemix_notm}}*
 
 
@@ -241,7 +239,7 @@ que você requer.
 É possível ligar uma instância de serviço a apenas às instâncias do app que estão no mesmo espaço ou organização. No entanto, é possível usar instâncias de serviço de outros espaços ou organizações da mesma maneira que um app externo. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações sobre como apps externos usam serviços do {{site.data.keyword.Bluemix_notm}}, consulte [Permitindo que apps externos usem serviços do {{site.data.keyword.Bluemix_notm}}](#accser_external){: new_window}.
 
 
-## Configurando seu aplicativo para interagir com um serviço 
+## Configurando seu aplicativo para interagir com um serviço
 {: #config}
 
 Depois de ligar uma instância de serviço ao aplicativo, deve-se
@@ -273,7 +271,7 @@ o que deve-se esperar e como interpretar cada parte de informação.
 
 Se um serviço ligado a um aplicativo ficar paralisado, o aplicativo pode ter parado de executar ou conter erros. O {{site.data.keyword.Bluemix_notm}}
 não reinicia automaticamente o aplicativo para recuperar desses problemas. Considere codificar o aplicativo para identificar e recuperar de indisponibilidades,
-exceções e falhas de conexão. Consulte o tópico de resolução de problemas [Os apps não serão reiniciados automaticamente](../troubleshoot/index.html#ts_topmenubar) para obter informações adicionais.
+exceções e falhas de conexão. Veja o tópico de resolução de problemas [Os apps não serão reiniciados automaticamente](/docs/troubleshoot/index.html#ts_topmenubar) para obter mais informações.
 
 ## Permitindo que apps externos usem serviços do {{site.data.keyword.Bluemix_notm}}
 {: #accser_external}
@@ -372,7 +370,7 @@ Se você tiver uma instância de serviço criada e ligada a apps em uma região,
 
   * Use as credenciais de serviço para configurar sua instância do app diretamente. Consulte [Ativando apps externos para usarem serviço do {{site.data.keyword.Bluemix_notm}}](#accser_external){: new_window} para obter detalhes.
   * Crie um serviço fornecido pelo usuário como uma ponte.
-    
+
 	Suponha que você esteja iniciando na região em que
 deseja usar a instância de serviço. Para usar uma instância de serviço existente
 em uma outra região, conclua as etapas a seguir:
@@ -429,15 +427,13 @@ de serviço usando o console da instância de serviço.
 3. Se você desejar negar o acesso de outros serviços à instância de serviço,
 clique em **Autorização de acesso de serviço** na área de janela de
 navegação e, em seguida, use **Revogar** para remover a
-ligação de serviço. 
+ligação de serviço.
 
 # rellinks
 {: #rellinks}
 
-## gerais
+## general
 {: #general}
 
-* [Ligando um serviço usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}](../cfapps/ee.html#ee_bindui)
-* [Recuperando VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
-
-
+* [Ligando um serviço usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}](/docs/cfapps/ee.html#ee_bindui)
+* [Recuperando VCAP_SERVICES](/docs/cli/vcapsvc.html#retrieving)

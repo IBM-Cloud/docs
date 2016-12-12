@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -21,7 +23,7 @@ copyright:
 
 ログは、ジョブが正常に実行されているか失敗しているかなどの情報を提供します。また、問題の原因のデバッグおよび判別に使用できる関連情報も提供します。
 
-ログは固定フォーマットで提供されます。詳細ログの場合、ログをフィルターに掛けたり、外部ロギング・ホストを使用してログを保管および処理したりできます。ログのフォーマット、ログの表示とフィルター処理、および外部ロギングの構成について詳しくは、『[Cloud Foundry で実行されているアプリのロギング](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}』を参照してください。
+ログは固定フォーマットで提供されます。詳細ログの場合、ログをフィルターに掛けたり、外部ロギング・ホストを使用してログを保管および処理したりできます。ログのフォーマット、ログの表示とフィルター処理、および外部ロギングの構成について詳しくは、『[Cloud Foundry で実行されているアプリのロギング](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}』を参照してください。
 
 
 ## ステージング・エラーのデバッグ
@@ -32,22 +34,22 @@ copyright:
 を究明し、問題から復旧することができます。Bluemix アプリケーションのログの表示方法につい
 て詳しくは、
 [『ロ
-グの表示』](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}を参照してください。
+グの表示』](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}を参照してください。
 
 {{site.data.keyword.Bluemix_notm}} 上でアプリが失敗する
 場合の原因を理解するには、アプリがどのように
 {{site.data.keyword.Bluemix_notm}} にデプロイされ、実行される
 かを把握する必要があります。詳細については、[「アプリケーション・デプロイメント (Application
-deployment)」](../manageapps/depapps.html#appdeploy){: new_window}を参照してください。
+deployment)」](/docs/manageapps/depapps.html#appdeploy){: new_window}を参照してください。
 
 
 以下の手順は、`cf
-logs` コマンドを使用してステージング・エラーをデバッグする方法を示しています。以下のステップを実行する前に、cf コマンド・ライン・インターフェースがインストール済みであることを確認してください。cf コマンド・ライン・インターフェースのインストールについて詳しくは、[「cf コマンド・ライン・インターフェースのインストール」](../starters/install_cli.html){: new_window}を参照してください。
+logs` コマンドを使用してステージング・エラーをデバッグする方法を示しています。以下のステップを実行する前に、cf コマンド・ライン・インターフェースがインストール済みであることを確認してください。cf コマンド・ライン・インターフェースのインストールについて詳しくは、[「cf コマンド・ライン・インターフェースのインストール」](/docs/starters/install_cli.html){: new_window}を参照してください。
 
   1. cf コマンド・ライン・インターフェースに次のコードを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
      ```
-	 cf api https://api.stage1.ng.bluemix.net
-  ```
+	 cf api https://api.ng.bluemix.net
+	 ```
 
   2. `cf login` を入力して {{site.data.keyword.Bluemix_notm}} にログインします。
 

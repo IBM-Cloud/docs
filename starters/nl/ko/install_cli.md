@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-10-05"
+
+
 
 ---
 
@@ -28,7 +30,7 @@ copyright:
 {:user_ID: data-hd-keyref="user_ID"}
 
 # 명령행 인터페이스로 앱 배치
-마지막 업데이트 날짜: 2016년 9월 15일
+마지막 업데이트 날짜: 2016년 10월 5일
 {: .last-updated}
 
 명령행 인터페이스를 사용하여 애플리케이션 및 서비스 인스턴스를 배치하고 수정할 수 있습니다.
@@ -47,28 +49,32 @@ copyright:
 명령행 인터페이스가 설치된 후 시작할 수 있습니다.
 
   1. {: download} 스타터 코드를 다운로드하고 패키지를 새 디렉토리로 추출하여 개발 환경을 설정하십시오.
-      
+
     <a class="xref" href="http://bluemix.net" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_starter-code.svg" alt="스타터 코드 다운로드" /> </a>
 
-  
+
   2. 코드가 있는 디렉토리로 변경하십시오. 
-  
+
   <pre class="pre">cd <var class="keyword varname">your_new_directory</var></pre>
-  
+
   3.  앱 코드를 적절히 변경하십시오. 앱을 {{site.data.keyword.Bluemix}}에 다시 배치하기 전에 로컬로 실행되는지 확인하도록 제안합니다.<br><br>`manifest.yml` 파일에 주의하십시오. 앱을 다시 {{site.data.keyword.Bluemix}}에 배치할 때 이 파일이 애플리케이션의 URL, 메모리 할당, 인스턴스 수 및 기타 중요한 매개변수 판별에 사용됩니다. Cloud Foundry 문서에서 [Manifest 파일에 대한 세부사항을 읽을 수 있습니다](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window}.
-  
+
   4. {{site.data.keyword.Bluemix}}에 연결하십시오.
-  
+
   <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
-  
+
   5. {{site.data.keyword.Bluemix_notm}}에 로그인하십시오.
- 
-  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">org_name</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">space_name</var>"</pre>
-  
+
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
+
+  연합된 ID를 사용 중인 경우 -sso 옵션을 사용하십시오.
+
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">org_name</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">space_name</var>" -sso</pre>
+
   6. 앱을 {{site.data.keyword.Bluemix_notm}}에 배치하십시오. cf push 명령에 대한 자세한 정보는 [애플리케이션 업로드](/docs/starters/upload_app.html)를 참조하십시오.
-  
+
   <pre class="pre">cf push "<var class="keyword varname" data-hd-keyref="app_name">app_name</var>"</pre>
-  
+
   7. 브라우저에 다음 URL을 입력하여 앱에 액세스하십시오. 
-  
+
   <pre class="codeblock"><code><var class="keyword varname" data-hd-keyref="host">host</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span></code></pre>

@@ -45,11 +45,11 @@ end
 ```
 {: codeblock}
 
-En la línea de mandatos, escriba `pod install`. Este mandato instala el SDK para una app de iOS con una extensión watchOS. Utilice el archivo de espacio de trabajo que crea CocoaPods para su app para abrir el proyecto en Xcode.
+En la línea de mandatos, escriba `pod install`. Este mandato instala el SDK para una app de iOS con una extensión watchOS.  Utilice el archivo de espacio de trabajo que crea CocoaPods para su app para abrir el proyecto en Xcode.
 
-Después de la instalación, abra el espacio de trabajo del proyecto. Es posible que obtenga el siguiente aviso al construir:
+Después de la instalación, abra el espacio de trabajo del proyecto.  Es posible que obtenga el siguiente aviso al construir:
 `Use Legacy Swift Language Version” (SWIFT_VERSION) es necesario que esté configurado correctamente para destinos que utilizan Swift. Utilice el menú [Editar > Convertir > A Current Swift Syntax…] para elegir una versión de Swift o utilizar el editor de Crear configuración para configurar los valores de compilación directamente.`
-Esto se produce si Cocoapods no actualiza la versión de Swift en el proyecto de Pods. Para solucionar, seleccione el proyecto de Pods y el destino de {{site.data.keyword.openwhisk_short}}. Vaya a Crear configuración y cambie el valor `Use Legacy Swift Language Version` a `no`. Como alternativa, puede añadir las siguientes instrucciones posteriores a la instalación al final del Podfile:
+Esto se produce si Cocoapods no actualiza la versión de Swift en el proyecto de Pods.  Para solucionar, seleccione el proyecto de Pods y el destino de {{site.data.keyword.openwhisk_short}}.  Vaya a Crear configuración y cambie el valor `Use Legacy Swift Language Version` a `no`. Como alternativa, puede añadir las siguientes instrucciones posteriores a la instalación al final del Podfile:
 
 ```
 post_install do |installer|
@@ -97,7 +97,7 @@ wsk sdk install iOS
 ```
 {: pre}
 
-Este mandato descarga un archivo comprimido que contiene la app de iniciador. Dentro del directorio de proyecto hay un podfile.
+Este mandato descarga un archivo comprimido que contiene la app de iniciador. Dentro del directorio del proyecto está el podfile. 
 
 Para instalar el SDK, especifique el mandato siguiente:
 ```

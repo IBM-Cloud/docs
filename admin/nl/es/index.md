@@ -4,6 +4,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-25"
 
 
 ---
@@ -18,31 +19,34 @@ copyright:
 # Gestión de {{site.data.keyword.Bluemix_notm}} Local y {{site.data.keyword.Bluemix_notm}} Dedicado
 {: #mng}
 
-*Última actualización: 20 de octubre de 2016*
-{: .last-updated}
 
-Si tiene acceso de administrador para {{site.data.keyword.Bluemix}} Local o {{site.data.keyword.Bluemix_notm}} Dedicado, vaya a la página **Administración** para gestionar recursos, supervisar el uso de cuota, administrar permisos de usuarios, planificar las notificaciones de actualización, ver informes y registros de seguridad, etc. Puede gestionar sus organizaciones mediante la creación de espacios y la configuración de [roles y permisos de usuarios](index.html#oc_useradmin); consulte [Gestión de las organizaciones](../admin/orgs_spaces.html).
+Si tiene acceso de administrador para {{site.data.keyword.Bluemix}} Local o {{site.data.keyword.Bluemix_notm}} Dedicado, vaya a la página **Administración** para gestionar recursos, supervisar el uso de cuota, administrar permisos de usuarios, planificar las notificaciones de actualización, ver informes y registros de seguridad, etc. Puede gestionar sus organizaciones mediante la creación de espacios y la configuración de [roles y permisos de usuarios](/docs/admin/index.html#oc_useradmin); consulte [Gestión de las organizaciones](/docs/admin/orgs_spaces.html).
 {:shortdesc}
 
 *Tabla 1. Tareas administrativas para gestionar la instancia local o dedicada de {{site.data.keyword.Bluemix_notm}}*
-{: #caption}
+
 
 | ¿Qué puedo hacer? | Detalles |    
 |----------------|---------|
-|Supervisar el uso del sistema | Pulse **ADMINISTRACIÓN &gt; USO**. Visualice la información del sistema, supervise el uso de la CPU y planifique el uso para tomar las mejores decisiones para su empresa. Consulte [Visualización de información de uso](index.html#oc_resource).|
+|Supervisar el uso del sistema | Pulse **ADMINISTRACIÓN &gt; USO**. Visualice la información del sistema, supervise el uso de la CPU y planifique el uso para tomar las mejores decisiones para su empresa. Consulte [Visualización de información de uso](/docs/admin/index.html#oc_resource).|
 |Gestionar el catálogo | Pulse **ADMINISTRACIÓN &gt; GESTIÓN DE CATÁLOGO** para gestionar qué servicios están visibles a sus
-usuarios y organizaciones. Consulte [Gestión de su catálogo](index.html#oc_catalog).|
-|Administrar organizaciones | Pulse **ADMINISTRACIÓN &gt; ADMINISTRACIÓN DE ORGANIZACIÓN ** para crear organizaciones, supervisar cuotas para organizaciones y realizar rápidamente las decisiones basadas en necesidades. Consulte [Administración de organizaciones](index.html#oc_organizations).|
+usuarios y organizaciones. Consulte [Gestión de su catálogo](/docs/admin/index.html#oc_catalog).|
+|Administrar organizaciones | Pulse **ADMINISTRACIÓN &gt; ADMINISTRACIÓN DE ORGANIZACIÓN ** para crear organizaciones, supervisar cuotas para organizaciones y realizar rápidamente las decisiones basadas en necesidades. Consulte [Administración de organizaciones](/docs/admin/index.html#oc_organizations).|
 |Crear espacios y asignar roles de usuario | Pulse el icono **{{site.data.keyword.avatar}}**
-![Avatar](../support/images/account_support.svg) y, a continuación, seleccione **Gestionar organizaciones** para crear espacios dentro de sus organizaciones. Añada usuarios y asigne roles de organización y de espacio a los usuarios. Consultar [Gestión de sus organizaciones](../admin/orgs_spaces.html). |
+![Avatar](../support/images/account_support.svg) y, a continuación, seleccione **Gestionar organizaciones** para crear espacios dentro de sus organizaciones. Añada usuarios y asigne roles de organización y de espacio a los usuarios. Consultar [Gestión de sus organizaciones](/docs/admin/orgs_spaces.html). |
 |Gestionar permisos de usuarios administrativos | Pulse **ADMINISTRACIÓN &gt; ADMINISTRACIÓN DE USUARIOS** para añadir usuarios,
-eliminar usuarios y ajustar permisos de usuario. Consultar [Gestión de usuarios y permisos](index.html#oc_useradmin). |
+eliminar usuarios y ajustar permisos de usuario. Consultar [Gestión de usuarios y permisos](/docs/admin/index.html#oc_useradmin). |
 |Revisar informes y registros | Pulse **ADMINISTRACIÓN &gt; INFORMES Y REGISTROS** para ver informes de seguridad y
-registros de auditoría para su instancia. Ver [Visualización de informes](index.html#oc_report). |
-|Ver información del sistema | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** para ver información del sistema como actualizaciones de mantenimiento pendientes, el nombre y la versión de la instancia, la región, el URL de API, el URL de CLI, los detalles de configuración de LDAP, las correlaciones de usuario y de grupo, las estadísticas y los dominios compartidos. Consulte [Visualización de información del sistema](index.html#oc_system). |
-|Ampliar notificaciones y configurar suscripciones de notificaciones | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Number* pendientes**. Puede usar webhooks para integrar con el servicio web que quiera para configurar la suscripción a notificación de sucesos para una actualización o incidencia. Consulte [Suscripción de notificaciones](index.html#oc_eventsubscription). |
+registros de auditoría para su instancia. Ver [Visualización de informes](/docs/admin/index.html#oc_report). |
+|Ver información del sistema | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** para ver información del sistema como actualizaciones de mantenimiento pendientes, el nombre y la versión de la instancia, la región, el URL de API, el URL de CLI, los detalles de configuración de LDAP, las correlaciones de usuario y de grupo, las estadísticas y los dominios compartidos. Consulte [Visualización de información del sistema](/docs/admin/index.html#oc_system). |
+|Ampliar notificaciones y configurar suscripciones de notificaciones | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Number* pendientes**. Puede usar webhooks para integrar con el servicio web que quiera para configurar la suscripción a notificación de sucesos para una actualización o incidencia. Consulte [Suscripción de notificaciones](/docs/admin/index.html#oc_eventsubscription). |
+
+<!-- staging only for WoW start -->
 
 **Consejo**: El panel de control Infraestructura de la consola {{site.data.keyword.Bluemix_notm}} sólo está disponible en cuentas enlazadas en entornos de {{site.data.keyword.Bluemix_notm}} Público.
+
+
+<!-- staging only for WoW end -->
 
 
 ## Suscripción de notificaciones
@@ -57,7 +61,6 @@ Puede ver notificaciones para el entorno local o dedicado para supervisar el est
 tabla siguiente para obtener información sobre los distintos tipos de notificaciones y dónde se publica cada tipo de notificación.
 
 *Tabla 2. Tipos de sucesos y métodos de notificación*
-{: #caption}
 
 | **Tipo de suceso** | **Método de notificación** |       
 |-----------------|-------------------|
@@ -85,7 +88,7 @@ suscripciones de notificaciones. Utilice las suscripciones de la notificación p
 
 Para crear una suscripción de correo electrónico o webhook desde la página **Suscripciones de notificaciones**, siga estos pasos:
 
-1. Vaya a la página **Suscripciones de notificaciones**. Vaya a **INFORMACIÓN DEL SISTEMA &gt; Entorno &gt; Suscripciones**.
+1. Vaya a la página **Suscripciones de notificaciones**.  Vaya a **INFORMACIÓN DEL SISTEMA &gt; Entorno &gt; Suscripciones**.
 2. Pulse **Añadir suscripción**.
 3. Rellene el formulario de suscripción de notificaciones.
 
@@ -101,7 +104,6 @@ Para crear una suscripción de correo electrónico o webhook desde la página **
   * Pulse **Guardar y cerrar** para guardar la suscripción en su lista de suscripciones a notificaciones y regresar a la página anterior.
 
 *Tabla 3. Campos para suscripciones a notificaciones por correo electrónico sobre las actualizaciones o los incidentes de mantenimiento*
-{: #caption}
 {: #emailnotmaintinc}
 
 | **Campo** | **Descripción** |
@@ -116,7 +118,6 @@ Para crear una suscripción de correo electrónico o webhook desde la página **
 | Descripción | Añada una descripción única para la suscripción que está creando. |
 
 *Tabla 4. Campos para suscripciones a notificaciones por correo electrónico sobre los umbrales*
-{: #caption}
 {: #emailnottrhesh}
 
 | **Campo** | **Descripción** |
@@ -138,7 +139,6 @@ Los datos del umbral se recopilan una vez cada 6 horas. Solamente se enviará un
 Si no desea esperar 6 horas para que se envíe la notificación cuando se alcanza el umbral, una vez que complete los campos del formulario, puede pulsar **Guardar y probar** para guardar y probar la notificación con datos de ejemplo.
 
 *Tabla 5. Campos de formulario para una suscripción a notificaciones de webhook sobre el mantenimiento o los incidentes*
-{: #caption}
 {: #webhooknotsub}
 
 | **Campo** | **Descripción** |
@@ -146,7 +146,7 @@ Si no desea esperar 6 horas para que se envíe la notificación cuando se alcanz
 | Habilitado | Seleccione la opción para habilitar la notificación. Anule la selección para inhabilitar la notificación. Las suscripciones están habilitadas de forma predeterminada. |
 | Tipo | Seleccione **Webhook** |
 | Suceso | Seleccionar la suscripción a notificaciones para un suceso de **Mantenimiento** o **Incidencia**. |
-| Autorización | Seleccione si desea habilitar la autorización. Las opciones son: **Básica** o **Ninguna**. |
+| Autorización | Seleccione si desea habilitar la autorización.  Las opciones son: **Básica** o **Ninguna**. |
 | Nombre de usuario | Si elige la autorización **Básica**, especifique el nombre de usuario para el servicio web. Si no quiere usar sus credenciales personales, puede configurar
 un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. |
 | Contraseña | Si elige la autorización **Básica**, especifique la contraseña para el servicio web. |
@@ -154,7 +154,7 @@ un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. 
 | Nuevo suceso | Seleccione esta opción para habilitar la notificación para nuevos sucesos de mantenimiento o de incidencia. Anule la selección para inhabilitar la notificación. |
 | Método | Seleccione **GET**, **POST** o **PUT**. |
 | URL | Especificar el URL al que conectar su servicio web. |
-| Propiedad de respuesta | Este campo opcional es el nombre de propiedad que identifica el recurso que crea el servicio web cuando se envía una solicitud POST o PUT. Si proporciona una propiedad de respuesta para un nuevo suceso y decide crear una suscripción para un cambio a un suceso, también debe proporcionarla para la suscripción Cambiar a suceso. En función del servicio web que esté utilizando, puede especificarlo como parte del URL o como un valor de carga útil.   |
+| Propiedad de respuesta | Este campo opcional es el nombre de propiedad que identifica el recurso que crea el servicio web cuando se envía una solicitud POST o PUT. Si proporciona una propiedad de respuesta para un nuevo suceso y decide crear una suscripción para un cambio a un suceso, también debe proporcionarla para la suscripción Cambiar a suceso. En función del servicio web que esté utilizando, puede especificarlo como parte del URL o como un valor de carga útil.  |
 | Carga útil | Si ha seleccionado el método POST o PUT, especifique las propiedades específicas del servicio web que usa, junto con los valores de carga útil utilizados para la notificación a IBM. Consulte la tabla [Valores de la sección de carga útil de mantenimiento e incidentes](index.html#payload) para identificar qué valores puede utilizar. Si no especifica información en esta sección, recibirá una notificación que no tiene información adicional. |
 | Cambiar a suceso | Seleccione esta opción para crear suscripciones de notificación acerca de los cambios realizados en los sucesos de mantenimiento o incidencia para los que ha creado suscripciones. Anule la selección para inhabilitar la notificación. |
 | Utilizar valores y carga útil desde Nuevo suceso | Utiliza el contenido de los campos Método, URL y Carga útil desde la sección Nuevo suceso. Tenga en cuenta que si esta opción está seleccionada, estos campos no estarán disponibles para su posterior edición en la sección Cambiar a suceso. |
@@ -164,7 +164,6 @@ un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. 
 | Combinar notificaciones | Seleccione la opción para combinar las notificaciones de incidencias de todas las regiones en una única notificación. Esta opción solo está disponible para incidencias. |
 
 *Tabla 6. Campos de formulario para una suscripción a notificaciones de webhook sobre umbrales*
-{: #caption}
 {: #webhooknotthresh}
 
 | **Campo** | **Descripción** |
@@ -173,11 +172,11 @@ un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. 
 | Tipo | Seleccione **Webhook**. |
 | Suceso | Seleccione **Umbral**. |
 | Umbral | Seleccione el tipo de umbral sobre el que desea que se le notifique: Disco físico, Memoria física, Disco reservado o Memoria reservada. |
-| Dirección de umbral | Seleccione si desea ver los datos del umbral en orden Ascendente o Descendente.   |
+| Dirección de umbral | Seleccione si desea ver los datos del umbral en orden Ascendente o Descendente.  |
 | Notificar al bajar por debajo de (%) | Si ha seleccionado la **Dirección de umbral** **Descendente**, especifique el porcentaje de umbral en el que desea que se le notifique. Cuando el umbral cae por debajo de este porcentaje, se enviará la notificación de webhook. |
-| Notificar al aumentar por encima de (%) | Si ha seleccionado la **Dirección de umbral** **Ascendente**, especifique el porcentaje de umbral en el que desea que se le notifique. Cuando el umbral está por encima de este porcentaje, se enviará la notificación de webhook.  |
+| Notificar al aumentar por encima de (%) | Si ha seleccionado la **Dirección de umbral** **Ascendente**, especifique el porcentaje de umbral en el que desea que se le notifique. Cuando el umbral está por encima de este porcentaje, se enviará la notificación de webhook. |
 | Descripción | Añada una descripción única para la suscripción que está creando. |
-| Autorización | Seleccione si desea habilitar la autorización. Las opciones son: **Básica** o **Ninguna**. |
+| Autorización | Seleccione si desea habilitar la autorización.  Las opciones son: **Básica** o **Ninguna**. |
 | Nombre de usuario | Si elige la autorización básica, especifique el nombre de usuario para el servicio web. Si no quiere usar sus credenciales personales, puede configurar
 un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. |
 | Contraseña | Si elige la autorización básica, especifique la contraseña para el servicio web. |
@@ -185,7 +184,6 @@ un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. 
 | URL | Especificar el URL al que conectar su servicio web. |
 
 *Tabla 7. Valores de la sección de carga útil de incidencia y de mantenimiento*
-{: #caption}
 {: #payload}
 
 | **Valor de IBM** | **Descripción** | **Tipo de suceso** |
@@ -203,7 +201,6 @@ un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. 
 | {{type}} | Actualización o incidencia | Actualización de mantenimiento e incidencia |
 
 *Tabla 8. Valores de la sección de carga útil del umbral*
-{: #caption}
 {: #threshpayload}
 
 | **Valor de IBM** | **Descripción** | **Tipo de suceso** |
@@ -306,7 +303,7 @@ los detalles de configuración de LDAP.
 ### Actualizaciones del sistema pendientes
 
 En la sección Actualizaciones, puede ver el número de notificaciones de actualizaciones pendientes
-que requieren acción por su parte. Hay dos tipos de actualizaciones de mantenimiento que se pueden ver:
+que requieren acción por su parte. Hay dos tipos que se pueden ver:
 
 <dl>
 <dt>Actualizaciones no disruptivas</dt>
@@ -376,7 +373,7 @@ Para ver información más detallada sobre el uso de memoria física y reservada
 	<dd>El límite reservado, que se muestra como una línea de puntos horizontal, es la cantidad total de memoria o de espacio de disco que se puede reservar colectivamente para todas las aplicaciones que se ejecutan en el entorno.</dd>
 	<dt><strong>Reservado</strong></dt>
 	<dd>El área reservada muestra la memoria o el espacio de disco reservado colectivamente en estos momentos para todas las aplicaciones que se ejecutan en el entorno.
-<p>Para ver las organizaciones que han reservado la mayor parte de la memoria en un momento determinado, pase el puntero del ratón sobre el punto del área reservada asociado con el momento en cuestión. A continuación, puede pulsar una organización en el gráfico circular mostrado para ver más información sobre la organización en cuestión.</p></dd>
+	<p>Para ver las organizaciones que han reservado la mayor parte de la memoria en un momento determinado, pase el puntero del ratón sobre el punto del área reservada asociado con el momento en cuestión. A continuación, puede pulsar una organización en el gráfico circular mostrado para ver más información sobre la organización en cuestión.</p></dd>
 	<dt><strong>Límite físico</strong></dt>
 	<dd>El límite físico, que se muestra como una línea de puntos horizontal, muestra la cantidad de memoria física o de espacio de disco adquirido para su entorno.</dd>
 	<dt><strong>Físico</strong></dt>
@@ -443,7 +440,7 @@ organización que ha seleccionado, puede ver la información de uso siguiente:
 - Gráfico de asignación de aplicaciones que muestra qué aplicaciones se incluyen en la cuota de memoria utilizada.
 - Gráfico de uso de aplicaciones medidas que muestra un informe de tres meses de los GB-horas usados por app desplegada. Puede
 seleccionar la **Vista de lista** para ver los datos de todas las aplicaciones, incluyendo la asignación de memoria por app y
-el uso de GB-hora medido para los últimos tres meses.
+el uso de GB-hora medido para los últimos tres meses. 
 
 Para obtener más información sobre la visualización del uso por organización, el ajuste de planes de cuota y la gestión de sus
 organizaciones, consulte [Administración de organizaciones](../admin/index.html#oc_organizations).
@@ -467,7 +464,6 @@ para descargar el informe.
 La tabla siguiente muestra la lista de los informes de seguridad generados para {{site.data.keyword.Bluemix_notm}} local y {{site.data.keyword.Bluemix_notm}} dedicado. La mayoría de los informes se generan a diario. Sin embargo, los informes de cifrado y sucesos de gestión de eventos se generan mensualmente. Todos los informes se conservan 90 días en la consola administrativa para su recuperación. Transcurridos 90 días, los informes están disponibles fuera de línea desde {{site.data.keyword.Bluemix_notm}} durante 9 meses. En total, los informes están disponibles para su recuperación un máximo de un año.
 
 *Tabla 9. Lista de informes de seguridad*
-{: #caption}
 
 | **Categoría** | **Informe** | **Descripción** |      
 |-----------------|-------------------|---------------------|
@@ -649,7 +645,6 @@ el JSON de ejemplo siguiente de la respuesta del catálogo (GET):
 Las siguientes tablas pueden ayudarle a rellenar el archivo JSON.
 
 *Tabla 10. Campos JSON*
-{: #caption}
 
 | **Campos JSON** | **Descripción** |
 |-----------------|-----------------|
@@ -661,7 +656,6 @@ Las siguientes tablas pueden ayudarle a rellenar el archivo JSON.
 |plans | Una matriz de definiciones del plan de servicio. Consulte la tabla [Campos de plan](index.html#planfields) para obtener más información. |
 
 *Tabla 11. Campos de metadatos*
-{: #caption}
 {: #metadatafields}
 
 | **Valores de metadatos** | **Descripción** |
@@ -718,7 +712,6 @@ El siguiente ejemplo muestra cómo la respuesta JSON de GET /v2/catalog está co
 ![Detalles de servicio en el catálogo.](images/metadata.png "Vista de detalles del servicio de catálogo de Bluemix")
 
 *Tabla 12. Campos del plan*
-{: #caption}
 {: #planfields}
 
 | **Valores del plan** | **Descripción** |
@@ -730,7 +723,6 @@ El siguiente ejemplo muestra cómo la respuesta JSON de GET /v2/catalog está co
 |metadatos (opcional)    | Los metadatos del plan del servicio que se muestran en el catálogo de {{site.data.keyword.Bluemix_notm}} y en la hoja de precios. El campo Metadatos es un campo opcional. Puede especificar los siguientes campos en el campo de metadatos: displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber) y paidOnly. Consulte la tabla [Campos de metadatos de plan](index.html#planmetadata) para obtener más información. |
 
 *Tabla 13. Campos de metadatos de plan*
-{: #caption}
 {: #planmetadata}
 
 | **Valores de metadatos de plan** | **Descripción** |
@@ -750,7 +742,7 @@ El siguiente ejemplo muestra cómo la respuesta JSON de GET /v2/catalog está co
 
 <ol>
 <li>Tras implementar la API del intermediario de servicio, acceda a <strong>ADMINISTRACIÓN</strong> &gt; <strong>GESTIÓN DEL CATÁLOGO</strong>.</li>
-<li>pULSE <strong>REGISTRAR UN INTERMEDIARIO DE SERVICIO</strong>.</li>
+<li>Pulse <strong>REGISTRAR UN INTERMEDIARIO DE SERVICIO</strong>.</li>
 <li>Complete el formulario especificando los valores en los campos siguientes:
 <ul>
 <li>Nombre de intermediario de servicio</li>
@@ -865,7 +857,7 @@ organización que ha seleccionado, puede ver la información de uso siguiente:
   - Gráfico de asignación de aplicaciones que muestra qué aplicaciones se incluyen en la cuota de memoria utilizada.
   - Gráfico de uso de aplicaciones medidas que muestra un informe de tres meses de los GB-horas usados por app desplegada. Puede
 seleccionar la **Vista de lista** para ver los datos de todas las aplicaciones, incluyendo la asignación de memoria por app y
-el uso de GB-hora medido para los últimos tres meses.
+el uso de GB-hora medido para los últimos tres meses. 
 
 - Para editar el nombre de la organización y añadir o eliminar gestores, pulse el nombre de la organización en la lista y siga las indicaciones en pantalla.
 
@@ -958,7 +950,6 @@ acceso **Escritura** (editar o añadir y eliminar) para dicho permiso.
 Es posible asignar a los usuarios los permisos siguientes con niveles de acceso específicos (lectura o escritura) que permiten al usuario realizar tareas específicas en la consola de administración.
 
 *Tabla 14. Permisos*
-{: #caption}
 
 | **Permiso de usuario** | **Descripción** |       
 |-----------------|-------------------|
@@ -993,7 +984,9 @@ Para iniciar la sesión en la Consola de administración, puede utilizar la aute
 
 Para iniciar una sesión en la consola de administración, ejecute el mandato siguiente:
 
-`curl --user <id_usuario>:<contraseña> -c ./cookies.txt --header "Accept: application/json" https://<su_host>.ibm.com/login | python -m json.tool`
+```
+curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1012,6 +1005,7 @@ Para iniciar una sesión en la consola de administración, ejecute el mandato si
 </dl>
 
 El siguiente ejemplo muestra la salida de este mandato:
+
 ```
 {
     "message": "Logged in",
@@ -1030,7 +1024,9 @@ Cuando añada un usuario, debe especificar una organización. Puede utilizar la 
 **Users** con acceso **Lectura** para poder listar
 organizaciones. Para listar todas las organizaciones, ejecute el mandato siguiente:
 
-`curl -b ./cookies.txt https://<su_host>.ibm.com/codi/v1/organizations | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1074,7 +1070,9 @@ la API REST de `Admin` para obtener una lista de los usuarios registrados. Debe 
 el permiso **Users** con acceso **Lectura** para poder listar usuarios registrados.
 Para listar todos los usuarios, ejecute el mandato siguiente:
 
-`curl -b ./cookies.txt https://<su_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1164,7 +1162,9 @@ organización, o a varias organizaciones. Para añadir un usuario, debe proporci
 
 Debe proporcionar la información en un archivo JSON.
 
-`curl -b ./cookies.txt https://<su_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1255,7 +1255,9 @@ Puede utilizar la API REST `Admin` para eliminar usuarios de la instancia de
 
 Para eliminar un usuario, debe especificar el ID del usuario. Ejecute el mandato siguiente:
 
-`curl -v -b ./cookies.txt -X DELETE https://<su_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>`
+```
+curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1285,6 +1287,308 @@ El siguiente ejemplo muestra la salida de este mandato:
  <
  ```
 {: screen}
+
+## API para métricas (experimental)
+{: #envappmetricsapi}
+
+Puede utilizar dos API experimentales para obtener métricas sobre el entorno o las aplicaciones. Ambas API devuelven una matriz de puntos de datos correspondientes a las métricas que ha solicitado durante el periodo de tiempo especificado. 
+
+**Notas**:
+
+1. Un usuario puede realizar un máximo de 200 solicitudes de API para métricas por hora. 
+2. Cada solicitud de API devuelve un máximo de 200 puntos de datos por solicitud. Si hay más datos disponibles, se proporciona un URL en la respuesta para cargar el siguiente conjunto de datos. 
+
+## Obtención de métricas sobre el entorno 
+
+Puede utilizar la API de entorno experimental para obtener información sobre el entorno durante el periodo de tiempo que especifique. Se devuelven los puntos de datos disponibles dentro del periodo de tiempo que especifique. Se registran datos cada hora aproximadamente. Si, por ejemplo, ha solicitado seis horas de datos de CPI para el entorno, la respuesta incluirá datos de CPU correspondientes a cada una de las seis horas solicitadas. 
+
+### Parámetros de consulta de métricas del entorno
+
+Con los siguientes parámetros de consulta puede obtener métricas correspondientes a CPU, disco, memoria, red y apps:
+
+<dl class="parml">
+<dt class="pt dlterm">métrica</dt>
+<dd class="pd">Uno o varios de los siguientes valores, separados por comas: 'memory', 'disk', 'cpu', 'network' y 'apps.'</dd>
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">El primer punto en el tiempo a partir del que se devuelven datos. Si no se especifica startTime, se incluye el punto de datos más antiguo disponible. Por ejemplo, para obtener datos entre las 2 PM y las 5 PM, especifique para startTime el valor 2 PM.</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">El último punto en el tiempo a partir del que se devuelven datos. Si no se especifica endTime, se utiliza el punto de datos más reciente. Por ejemplo, para obtener datos entre las 2 PM y las 5 PM, especifique para endTime el valor 5 PM.</dd>
+<dt class="pt dlterm">sort</dt>
+<dd class="pd">El orden en el que se devuelven los datos. Los valores válidos son 'asc' (ascendente) y 'desc' (descendente). El valor predeterminado es descendente, que devuelve en primer lugar los datos más recientes. </dd>
+</dl>
+
+### Formato de los datos de las métricas del entorno
+
+En las secciones siguientes se proporciona al formato de los datos.
+
+
+ * Para obtener registros de datos sobre el uso de memoria, utilice el siguiente formato de datos:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "memory": {
+    "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
+    "memory_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "47"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "51"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "45"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "43"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * Para obtener registros de datos sobre el uso de disco, utilice el siguiente formato de datos:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "disk": {
+    "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
+    "disk_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "14"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "12"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * Para obtener registros de datos sobre el uso de CPU, utilice el siguiente formato de datos:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "cpu": {
+    "average_percent_cpu_used": 27.288461538461544,
+    "cpu_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "sys_percent": "8.4",
+        "user_percent": "2.7",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "sys_percent": "7.4",
+        "user_percent": "2.4",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "sys_percent": "5.3",
+        "user_percent": "1.9",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "sys_percent": "8.2",
+        "user_percent": "22.6",
+        "wait_percent": "0.0"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * Para obtener registros de datos sobre la red, utilice el siguiente formato de datos:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "network": {
+    "datapower": {
+    "response_times": [
+      {
+        "proxy": "custom_certificates",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "90",
+        "one_minute_ms": "89",
+        "ten_minutes_ms": "83",
+        "one_hour_ms": "85",
+        "one_day_ms": "95"
+      }
+      ],
+        "transactions": [
+      {
+        "proxy": "custom_domains",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "697",
+        "one_minute_ms": "747",
+        "ten_minutes_ms": "802",
+        "one_hour_ms": "794",
+        "one_day_ms": "730"
+      }
+      ],
+        "bandwidth": {
+        "in_mbps": 10855,
+        "out_mbps": 38090
+      }
+  }
+}
+```
+{: screen}
+
+* Para obtener registros de datos sobre las aplicaciones, utilice el siguiente formato de datos:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "apps": {
+    "count": 1406,
+    "allocation": {
+      "memory_gb": 571.8,
+      "disk_gb": 1204
+    }
+  }
+}
+```
+{: screen}
+
+### Formato de respuesta de las métricas del entorno
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+## Obtención de métricas sobre las aplicaciones
+
+Se registran datos para todas las aplicaciones aproximadamente cada hora. Una solicitud de una métrica en particular devuelve información correspondiente a todas las apps en cada muestra de datos del periodo de tiempo que especifique, que se guarda en orden descendente por orden de métrica solicitada. Por ejemplo, si se solicitan todas las apps por CPU durante un periodo de tiempo de 6 horas y hay 200 apps, se devuelven 1200 registros, en grupos de 200. 
+
+Para reducir la cantidad de información que se devuelve para cada muestra de datos en el periodo de tiempo solicitado, puede especificar una opción de recuento. Siguiendo con el ejemplo anterior, si añadimos una opción de recuento de 5 se devuelven 30 registros que representan las 5 primeras aplicaciones por CPU para cada muestra de datos. 
+
+### Puntos finales de las aplicaciones 
+
+Puede utilizar los siguientes puntos finales para invocar este mandato de API:
+* /api/v1/app/cpu/physical 
+* /api/v1/app/memory/physical
+* /api/v1/app/memory/reserved
+* /api/v1/app/disk/physical
+* /api/v1/app/disk/reserved
+
+### Parámetros de consulta de aplicaciones
+ 
+Utilice los siguientes parámetros de consulta para obtener métricas correspondientes a las aplicaciones:
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">El primer punto en el tiempo a partir del que se devuelven datos. Si no se especifica startTime, se incluye el punto de datos más antiguo disponible. Por ejemplo, para obtener datos entre las 2 PM y las 5 PM, especifique para startTime el valor 2 PM.</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">El último punto en el tiempo a partir del que se devuelven datos. Si no se especifica endTime, se utiliza el punto de datos más reciente. Por ejemplo, para obtener datos entre las 2 PM y las 5 PM, especifique para endTime el valor 5 PM.</dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">El número de registros que se devolverán para cada muestra de datos.
+</dd>
+</dl>
+
+### Formato de respuesta de aplicaciones
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+Cada documento que se devuelve representa las métricas solicitadas para una aplicación en cada muestra de datos, en el momento de realizar la solicitud. 
+
 
 ## API de servicio personalizado
 {: #servicebrokerapi}
@@ -1364,20 +1668,14 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "name": "Service broker's name",
     "broker_url": "https://provision-broker.comp.bluemix.net/bmx/provisioning/brokers/2063580064-8f23230c-7f36-4ce5-a298-2ab4108f1120",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "49f3adcc-ecc2-46fa-83c1-03322f04b3b1",
-    "created_at": "2015-12-07T19:51:50Z",
-    "updated_at": null,
-    "url": "/v2/service_brokers/49f3adcc-ecc2-46fa-83c1-03322f04b3b1"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
+
 ```
 {: screen}
 
@@ -1388,14 +1686,15 @@ Utilice la siguiente API y ejemplos de código para actualizar un servicio.
 ### Ruta
 {: #updateroute}
 
-`PUT /codi/v1/serviceBrokers`
+```
+PUT /codi/v1/serviceBrokers
+```
 {: screen}
 
 ### Solicitud
 {: #updaterequest}
 
 *Tabla 16. Campos*
-{: #caption}
 
 | **Nombre** | **Descripción** |
 |-----------------|-------------------|
@@ -1445,19 +1744,12 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "name": "Service Broker's name",
     "broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-d11bdd84-7556-469f-858d-2098b531f7f2",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "2cbdb812-d37f-443b-894a-a96de31e5c38",
-    "created_at": "2015-12-07T20:11:08Z",
-    "updated_at": "2015-12-07T20:11:19Z",
-    "url": "/v2/service_brokers/2cbdb812-d37f-443b-894a-a96de31e5c38"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
 ```
 {: screen}
@@ -1467,7 +1759,6 @@ Content-Type: application/json
 Utilice la siguiente API y ejemplos de código para suprimir un servicio.
 
 *Tabla 17. Parámetro*
-{: #caption}
 
 | **Nombre** | **Descripción** |
 |-----------------|-------------------|
@@ -1546,7 +1837,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 
 Para ver una lista de mandatos, ejecute el mandato siguiente:
 
-`cf plugins`
+```
+cf plugins
+```
 {: codeblock}
 
 Para obtener más ayuda sobre un mandato, utilice la opción `-help`.

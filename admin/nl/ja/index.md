@@ -4,6 +4,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-25"
 
 
 ---
@@ -18,27 +19,28 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated の管理
 {: #mng}
 
-*最終更新日: 2016 年 10 月 20 日*
-{: .last-updated}
 
-{{site.data.keyword.Bluemix}} Local または {{site.data.keyword.Bluemix_notm}} Dedicated の管理者権限がある場合は、**「管理」**ページに移動して、リソースの管理、割り当て量の使用状況のモニター、ユーザー許可の管理、アップグレード通知のスケジュール設定、セキュリティー・レポートおよびログの表示などを行います。組織の管理は、スペースを作成し、[ユーザーの役割と権限](index.html#oc_useradmin)を設定することによって行うことができます。『[組織の管理](../admin/orgs_spaces.html)』を参照してください。
+{{site.data.keyword.Bluemix}} Local または {{site.data.keyword.Bluemix_notm}} Dedicated の管理者権限がある場合は、**「管理」**ページに移動して、リソースの管理、割り当て量の使用状況のモニター、ユーザー許可の管理、アップグレード通知のスケジュール設定、セキュリティー・レポートおよびログの表示などを行います。組織の管理は、スペースを作成し、[ユーザーの役割と権限](/docs/admin/index.html#oc_useradmin)を設定することによって行うことができます。『[組織の管理](/docs/admin/orgs_spaces.html)』を参照してください。
 {:shortdesc}
 
 *表 1. {{site.data.keyword.Bluemix_notm}} Local または Dedicated のインスタンスを管理するための管理用タスク*
-{: #caption}
-
 | 選択可能な操作 | 詳細 |    
 |----------------|---------|
-|システム使用状況のモニター | **「管理」&gt;「使用量」**をクリックします。システム情報を表示し、CPU 使用量をモニターし、使用量の計画を立てて、ビジネスにとって最良の決定を行ってください。『[使用量情報の表示](index.html#oc_resource)』を参照してください。|
-|カタログの管理 | どのサービスをユーザーおよび組織が表示できるようにするかを管理するには、**「管理」&gt;「カタログ管理」**をクリックします。『[カタログの管理](index.html#oc_catalog)』を参照してください。|
-|組織の管理 | 組織を作成し、組織の割り当て量をモニターし、ニーズに沿った決定を素早く行うには、**「管理」&gt;「組織管理」**をクリックします。『[組織の管理](index.html#oc_organizations)』を参照してください。|
-|スペースの作成とユーザーの役割の割り当て | 組織内のスペースを作成するには、**「{{site.data.keyword.avatar}}」**アイコン ![「アバター」](../support/images/account_support.svg) をクリックして、**「組織の管理」**を選択します。ユーザーを追加し、組織およびスペースの役割をユーザーに割り当てます。『[組織の管理](../admin/orgs_spaces.html)』を参照してください。 |
-|管理ユーザーの権限の管理 | ユーザーの追加、ユーザーの削除、およびユーザーの許可の調整を行うには、**「管理」&gt;「ユーザー管理」**をクリックします。『[ユーザーおよび許可の管理](index.html#oc_useradmin)』を参照してください。 |
-|レポートおよびログのレビュー | ユーザーのインスタンスのセキュリティー・レポートおよび監査ログを表示するには、**「管理」&gt;「レポートおよびログ」**をクリックします。『[レポートの表示](index.html#oc_report)』を参照してください。 |
-|システム情報の表示 | 保留中の保守更新、インスタンスの名前とバージョン、地域、API URL、CLI URL、LDAP 構成の詳細、グループとユーザーのマッピング、統計、および共有ドメインなどのシステム情報を表示するには、**「管理」&gt;「システム情報」**をクリックします。『[システム情報の表示](index.html#oc_system)』を参照してください。 |
-|通知の拡張および通知サブスクリプションのセットアップ | **「管理」&gt;「システム情報」&gt;「*数値* 件保留中 (*Number* pending)」**をクリックします。Web フックを使用して、選択した Web サービスと統合し、更新またはインシデントに関するイベント通知サブスクリプションをセットアップできます。『[通知および通知サブスクリプション](index.html#oc_eventsubscription)』を参照してください。 |
+|システム使用状況のモニター | **「管理」&gt;「使用量」**をクリックします。システム情報を表示し、CPU 使用量をモニターし、使用量の計画を立てて、ビジネスにとって最良の決定を行ってください。『[使用量情報の表示](/docs/admin/index.html#oc_resource)』を参照してください。|
+|カタログの管理 | どのサービスをユーザーおよび組織が表示できるようにするかを管理するには、**「管理」&gt;「カタログ管理」**をクリックします。『[カタログの管理](/docs/admin/index.html#oc_catalog)』を参照してください。|
+|組織の管理 | 組織を作成し、組織の割り当て量をモニターし、ニーズに沿った決定を素早く行うには、**「管理」&gt;「組織管理」**をクリックします。『[組織の管理](/docs/admin/index.html#oc_organizations)』を参照してください。|
+|スペースの作成とユーザーの役割の割り当て | 組織内のスペースを作成するには、**「{{site.data.keyword.avatar}}」**アイコン ![「アバター」](../support/images/account_support.svg) をクリックして、**「組織の管理」**を選択します。ユーザーを追加し、組織およびスペースの役割をユーザーに割り当てます。『[組織の管理](/docs/admin/orgs_spaces.html)』を参照してください。 |
+|管理ユーザーの権限の管理 | ユーザーの追加、ユーザーの削除、およびユーザーの許可の調整を行うには、**「管理」&gt;「ユーザー管理」**をクリックします。『[ユーザーおよび許可の管理](/docs/admin/index.html#oc_useradmin)』を参照してください。 |
+|レポートおよびログのレビュー | ユーザーのインスタンスのセキュリティー・レポートおよび監査ログを表示するには、**「管理」&gt;「レポートおよびログ」**をクリックします。『[レポートの表示](/docs/admin/index.html#oc_report)』を参照してください。 |
+|システム情報の表示 | 保留中の保守更新、インスタンスの名前とバージョン、地域、API URL、CLI URL、LDAP 構成の詳細、グループとユーザーのマッピング、統計、および共有ドメインなどのシステム情報を表示するには、**「管理」&gt;「システム情報」**をクリックします。『[システム情報の表示](/docs/admin/index.html#oc_system)』を参照してください。 |
+|通知の拡張および通知サブスクリプションのセットアップ | **「管理」&gt;「システム情報」&gt;「*数値* 件保留中 (*Number* pending)」**をクリックします。Web フックを使用して、選択した Web サービスと統合し、更新またはインシデントに関するイベント通知サブスクリプションをセットアップできます。『[通知および通知サブスクリプション](/docs/admin/index.html#oc_eventsubscription)』を参照してください。 |
+
+<!-- staging only for WoW start -->
 
 **ヒント**: {{site.data.keyword.Bluemix_notm}} コンソール内の「インフラストラクチャー」ダッシュボードは、{{site.data.keyword.Bluemix_notm}} Public 環境内でリンクされているアカウントでのみ使用可能です。
+
+
+<!-- staging only for WoW end -->
 
 
 ## 通知および通知サブスクリプション
@@ -51,8 +53,6 @@ copyright:
 お客様はローカル環境または専用環境についての通知を表示し、環境の状況をモニターすることができます。次の表で、各種のタイプの通知および各通知タイプが表示される場所に関する情報を確認してください。
 
 *表 2. イベント・タイプと通知方法*
-{: #caption}
-
 | **イベント・タイプ** | **通知方法** |       
 |-----------------|-------------------|
 | 保守の更新情報 | 近く予定されている保守の更新に関するアラートは「管理」ページの「通知」領域で受け取ります。**「管理」**ページに移動して、**「通知」**アイコン ![通知](images/icon_announcement.svg) を選択します。保留中および完了した通知の全リストおよび履歴を確認するには、**「管理」&gt;「システム情報」** &gt;「*Number* 件の**保留中 **」をクリックします。|
@@ -90,7 +90,6 @@ copyright:
   * **「保存して閉じる」**をクリックして、サブスクリプションを通知サブスクリプション・リストに保存し、前のページに戻る。
 
 *表 3. 保守更新またはインシデントに関する E メール通知サブスクリプション用のフィールド*
-{: #caption}
 {: #emailnotmaintinc}
 
 | **フィールド** | **説明** |
@@ -105,7 +104,6 @@ copyright:
 | 説明 | 作成するサブスクリプションの固有の説明を追加します。 |
 
 *表 4. しきい値に関する E メール通知サブスクリプション用のフィールド*
-{: #caption}
 {: #emailnottrhesh}
 
 | **フィールド** | **説明** |
@@ -127,7 +125,6 @@ copyright:
 しきい値が満たされたときに通知が送信されるまで 6 時間待機しない場合、フォームのフィールドに入力した後に、**「保存してテスト」**をクリックすることで、通知を保存し、サンプル・データを使用して通知をテストできます。
 
 *表 5. 保守またはインシデントに関する Web フック通知サブスクリプション用のフォーム・フィールド*
-{: #caption}
 {: #webhooknotsub}
 
 | **フィールド** | **説明** |
@@ -152,7 +149,6 @@ copyright:
 | 通知の結合 | すべての地域のインシデント通知を 1 つの通知に結合するオプションを選択します。このオプションは、インシデントだけに使用可能です。 |
 
 *表 6. しきい値に関する Web フック通知サブスクリプション用のフォーム・フィールド*
-{: #caption}
 {: #webhooknotthresh}
 
 | **フィールド** | **説明** |
@@ -172,7 +168,6 @@ copyright:
 | URL | Web サービスに接続するための URL を入力します。 |
 
 *表 7. 保守およびインシデントのペイロード・セクションの値*
-{: #caption}
 {: #payload}
 
 | **IBM 値** | **説明** | **イベント・タイプ** |
@@ -190,7 +185,6 @@ copyright:
 | {{type}} | 更新またはインシデント | 保守更新およびインシデント |
 
 *表 8. しきい値のペイロード・セクションの値*
-{: #caption}
 {: #threshpayload}
 
 | **IBM 値** | **説明** | **イベント・タイプ** |
@@ -293,7 +287,7 @@ Superuser 許可 (`ops.admin`) を持っている場合、**「管理」&gt;「�
 
 ### 保留中のシステム更新
 
-「更新」セクションでは、お客様の側でのアクションが必要な保留中の更新の通知数を確認できます。確認できる保守更新には、以下の 2 つのタイプがあります。
+「更新」セクションでは、お客様の側でのアクションが必要な保留中の更新の通知数を確認できます。表示されるものには、以下の 2 つの種類があります。
 
 <dl>
 <dt>停止を伴わない更新</dt>
@@ -437,8 +431,6 @@ DEA 別のメモリー、ディスク、CPU の使用量を表示するには、
 以下の表では、{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated 用に生成されるセキュリティー・レポートのリストを示します。ほとんどのレポートは日次ベースで生成されます。ただし、暗号化および鍵管理のイベントについてのレポートは、月次で生成されます。すべてのレポートは管理コンソールで 90 日間保持され、検索することができます。90 日が経過した後は、9 カ月の間、{{site.data.keyword.Bluemix_notm}} からの要求があればオフラインで使用可能です。合計すると、レポートは 1 年までは検索に使用可能です。
 
 *表 9. セキュリティー・レポートのリスト*
-{: #caption}
-
 | **カテゴリー** | **レポート** | **説明** |      
 |-----------------|-------------------|---------------------|
 | ファイアウォール | ファイアウォールのログイン | Vyatta ファイアウォール・デバイスへの管理者のログインに関するイベント。 |
@@ -611,8 +603,6 @@ DEA 別のメモリー、ディスク、CPU の使用量を表示するには、
 JSON ファイルを埋めるのに役立つ表を以下に示します。
 
 *表 10. JSON フィールド*
-{: #caption}
-
 | **JSON フィールド** | **説明** |
 |-----------------|-----------------|
 |bindable   | サービス・インスタンスをアプリケーションにバインドできるかどうかを示すブール値。  |
@@ -623,7 +613,6 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 |plans | 一連のサービス・プラン定義。詳しくは、『[プランのフィールド](index.html#planfields)』表を参照してください。 |
 
 *表 11. メタデータ・フィールド*
-{: #caption}
 {: #metadatafields}
 
 | **メタデータ値** | **説明** |
@@ -680,7 +669,6 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 ![カタログ内のサービス詳細。](images/metadata.png "Bluemix カタログのサービス詳細ビュー")
 
 *表 12. プランのフィールド*
-{: #caption}
 {: #planfields}
 
 | **プラン値** | **説明** |
@@ -692,7 +680,6 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 |metadata (オプション)    | {{site.data.keyword.Bluemix_notm}} カタログおよび価格設定シートに表示される、サービス・プランのメタデータ。metadata フィールドはオプションです。metadata フィールドの内部には、displayName、type (subscription、reservable、planDetails)、bullets、costs (unitId、unit、partNumber)、および paidOnly の各フィールドを指定できます。詳しくは、次の『[プランのメタデータのフィールド](index.html#planmetadata)』表を参照してください。 |
 
 *表 13. プランのメタデータ・フィールド*
-{: #caption}
 {: #planmetadata}
 
 | **プランのメタデータ値** | **説明** |
@@ -904,8 +891,6 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 ユーザーには、ユーザーが管理コンソール内で特定のタスクを実行することを可能にする特定のアクセス・レベル (読み取りまたは書き込み) と共に以下の許可を割り当てることができます。
 
 *表 14. 許可*
-{: #caption}
-
 | **ユーザー許可** | **説明** |       
 |-----------------|-------------------|
 | Superuser | **Superuser** 許可が**「オン (On)」**に設定されているユーザーは、他のユーザーの許可を編集できます。この許可をオンに設定すると、自動的に他のすべての許可に対する全アクセス権限が有効になります。この表の各許可に概説されているタスクに加えて、保守またはインシデントに関するアラートを直接受信するための通知サブスクリプションのセットアップ、保守のスケジュール、コンソール・コンポーネント上での検証チェックの実行、および環境用の組織やスペースの作成も行えます。この許可は、管理コンソールの管理者 (admin) 役割と等価です。  |
@@ -935,7 +920,9 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 
 管理コンソールにログインするには、次のコマンドを実行します。
 
-`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool`
+```
+curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -955,6 +942,7 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 
 このコマンドの出力例を以下に示します。
 
+
 ```
 {
     "message": "Logged in",
@@ -971,7 +959,9 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 
 ユーザーを追加する場合は、組織を指定する必要があります。`Admin` REST API を使用して、すべての組織をリストすることができます。組織をリストするには、**Read** アクセス権限のある **Users** 許可を持っている必要があります。組織をすべてリストするには、以下のコマンドを実行します。
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1013,7 +1003,9 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 `Admin` REST API を使用して、登録済みのユーザーをリストすることで、目的のユーザーが既に {{site.data.keyword.Bluemix_notm}} 環境に追加されているかどうかを確認できます。
 登録済みのユーザーをリストするには、**Read** アクセス権限のある **Users** 許可を持っている必要があります。ユーザーを全員リストするには、以下のコマンドを実行します。
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1101,7 +1093,9 @@ PUT console.<subdomain>.bluemix.net/codi/env_config/allow_managers?flag=<TRUE or
 
 情報は、JSON ファイルで提供します。
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1191,7 +1185,9 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 
 ユーザーを削除するには、そのユーザーのユーザー ID を指定する必要があります。次のコマンドを実行します。
 
-`curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>`
+```
+curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1222,6 +1218,308 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
  <
  ```
 {: screen}
+
+## メトリックの API (試験的)
+{: #envappmetricsapi}
+
+2 つの試験的 API を使用して、環境またはアプリケーションに関するメトリックを収集できます。どちらの API も、指定した時間における要求したメトリックのデータ・ポイントの配列を返します。
+
+**注**:
+
+1. ユーザーは、1 時間に最大 200 個の、メトリックの API 要求を行うことができます。
+2. 各 API 要求は、要求当たり最大 200 個のデータ・ポイントを返します。それよりも多くのデータがある場合は、次の一連のデータをロードするための URL が応答に提供されます。
+
+## 環境に関するメトリックの収集 
+
+試験的環境 API を使用して、指定した期間における高度な環境情報を収集できます。指定した時間内の有効なデータ・ポイントが返されます。データは、ほぼ 1 時間ごとに記録されます。例えば、環境での 6 時間の CPU データを要求すると、要求された 6 時間の 1 時間ごとの CPU データが応答に含まれます。
+
+### 環境メトリックの照会パラメーター
+
+次の照会パラメーターを使用して、CPU、ディスク、メモリー、ネットワーク、およびアプリに関するメトリックを収集できます。
+
+<dl class="parml">
+<dt class="pt dlterm">metric</dt>
+<dd class="pd">「memory」、「disk」、「cpu」、「network」、「apps」の 1 つ以上の値をコンマで区切ったもの。</dd>
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">データを返す最初の時点。startTime が指定されないと、入手可能な最初のデータ・ポイントが含められます。例えば、2 PM から 5 PM までのデータを収集するには、startTime に 2 PM を指定します。</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">データを返す最後の時点。endTime が指定されないと、最新のデータ・ポイントが使用されます。例えば、2 PM から 5 PM までのデータを収集するには、endTime に 5 PM を指定します。</dd>
+<dt class="pt dlterm">sort</dt>
+<dd class="pd">データを返す順序。有効な値は 'asc' (昇順) と 'desc' (降順) です。デフォルトは降順で、最新のデータを最初に返します。</dd>
+</dl>
+
+### 環境メトリックのデータ・フォーマット
+
+以下のセクションでは、データ・フォーマットについて詳しく説明します。
+
+ * メモリー使用に関するデータ・レコードを収集するには、以下のデータ・フォーマットを使用します。
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "memory": {
+    "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
+    "memory_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "47"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "51"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "45"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "43"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * ディスク使用に関するデータ・レコードを収集するには、以下のデータ・フォーマットを使用します。
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "disk": {
+    "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
+    "disk_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "14"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "12"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * CPU 使用に関するデータ・レコードを収集するには、以下のデータ・フォーマットを使用します。
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "cpu": {
+    "average_percent_cpu_used": 27.288461538461544,
+    "cpu_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "sys_percent": "8.4",
+        "user_percent": "2.7",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "sys_percent": "7.4",
+        "user_percent": "2.4",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "sys_percent": "5.3",
+        "user_percent": "1.9",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "sys_percent": "8.2",
+        "user_percent": "22.6",
+        "wait_percent": "0.0"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * ネットワークに関するデータ・レコードを収集するには、以下のデータ・フォーマットを使用します。
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "network": {
+    "datapower": {
+    "response_times": [
+      {
+        "proxy": "custom_certificates",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "90",
+        "one_minute_ms": "89",
+        "ten_minutes_ms": "83",
+        "one_hour_ms": "85",
+        "one_day_ms": "95"
+      }
+      ],
+        "transactions": [
+      {
+        "proxy": "custom_domains",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "697",
+        "one_minute_ms": "747",
+        "ten_minutes_ms": "802",
+        "one_hour_ms": "794",
+        "one_day_ms": "730"
+      }
+      ],
+        "bandwidth": {
+        "in_mbps": 10855,
+        "out_mbps": 38090
+      }
+  }
+}
+```
+{: screen}
+
+* アプリケーションに関するデータ・レコードを収集するには、以下のデータ・フォーマットを使用します。
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "apps": {
+    "count": 1406,
+    "allocation": {
+      "memory_gb": 571.8,
+      "disk_gb": 1204
+    }
+  }
+}
+```
+{: screen}
+
+### 環境メトリックの応答フォーマット
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+## アプリケーションに関するメトリックの収集
+
+すべてのアプリケーションについて、ほぼ 1 時間ごとにデータが記録されます。特定メトリックの要求では、指定した期間内の各データ・サンプル内のすべてのアプリの情報が、要求されたメトリックで降順にソートされて返されます。例えば、200 個のアプリがある環境で、6 時間の CPU 使用に関してすべてのアプリについて要求すると、一度の 200 件ずつ、1200 件のレコードが返されます。
+
+要求された期間に各データ・サンプルについて返される情報量を削減するには、count オプションを指定します。
+前の例で count オプションを 5 に指定して追加すると、各データ・サンプルについて、CPU 使用で上位 5 個のアプリケーションを表す 30 件のレコードが返されます。
+
+### アプリケーションのエンドポイント 
+
+以下のエンドポイントを使用して、この API コマンドを起動できます。
+* /api/v1/app/cpu/physical 
+* /api/v1/app/memory/physical
+* /api/v1/app/memory/reserved
+* /api/v1/app/disk/physical
+* /api/v1/app/disk/reserved
+
+### アプリケーションの照会パラメーター
+ 
+以下の照会パラメーターを使用して、アプリケーションのメトリックを収集します。
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">データを返す最初の時点。startTime が指定されないと、入手可能な最初のデータ・ポイントが含められます。例えば、2 PM から 5 PM までのデータを収集するには、startTime に 2 PM を指定します。</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">データを返す最後の時点。endTime が指定されないと、最新のデータ・ポイントが使用されます。例えば、2 PM から 5 PM までのデータを収集するには、endTime に 5 PM を指定します。</dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">各データ・サンプルで返すレコード数。
+</dd>
+</dl>
+
+### アプリケーションの応答フォーマット
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+返される各文書は、要求時点における各データ・サンプル内のアプリケーションの要求されたメトリックを表します。
+
 
 ## カスタム・サービス API
 {: #servicebrokerapi}
@@ -1300,19 +1598,14 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {"name": "Service broker's name",
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
+    "name": "Service broker's name",
     "broker_url": "https://provision-broker.comp.bluemix.net/bmx/provisioning/brokers/2063580064-8f23230c-7f36-4ce5-a298-2ab4108f1120",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "49f3adcc-ecc2-46fa-83c1-03322f04b3b1",
-    "created_at": "2015-12-07T19:51:50Z",
-    "updated_at": null,
-    "url": "/v2/service_brokers/49f3adcc-ecc2-46fa-83c1-03322f04b3b1"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
+
 ```
 {: screen}
 
@@ -1323,14 +1616,15 @@ Content-Type: application/json
 ### 経路
 {: #updateroute}
 
-`PUT /codi/v1/serviceBrokers`
+```
+PUT /codi/v1/serviceBrokers
+```
 {: screen}
 
 ### 要求
 {: #updaterequest}
 
 *表 16. フィールド*
-{: #caption}
 
 | **名前** | **説明** |
 |-----------------|-------------------|
@@ -1380,18 +1674,12 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {"name": "Service Broker's name",
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
+    "name": "Service Broker's name",
     "broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-d11bdd84-7556-469f-858d-2098b531f7f2",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "2cbdb812-d37f-443b-894a-a96de31e5c38",
-    "created_at": "2015-12-07T20:11:08Z",
-    "updated_at": "2015-12-07T20:11:19Z",
-    "url": "/v2/service_brokers/2cbdb812-d37f-443b-894a-a96de31e5c38"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
 ```
 {: screen}
@@ -1401,8 +1689,6 @@ Content-Type: application/json
 サービスを削除するには、以下の API とコード・サンプルを使用してください。
 
 *表 17. パラメーター*
-{: #caption}
-
 | **名前** | **説明** |
 |-----------------|-------------------|
 | name | サービス・ブローカーの名前。 この名前は、サービスを作成するために使用した名前から変更できません。 |
@@ -1474,7 +1760,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 コマンドのリストを表示するには、次のコマンドを実行します。
 
 
-`cf plugins`
+```
+cf plugins
+```
 {: codeblock}
 
 追加でコマンドのヘルプを表示するには、`-help` オプションを使用します。

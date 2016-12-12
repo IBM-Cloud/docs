@@ -3,8 +3,8 @@
  
 
 copyright:
-
-  anni: 2014，2016
+  years: 2016
+lastupdated: "2016-10-31"
 
  
 
@@ -15,9 +15,6 @@ copyright:
 
 # Termini del glossario per {{site.data.keyword.Bluemix_notm}} 
 {: #glossary}
-
-Ultimo aggiornamento: 02 settembre 2016
-{: .last-updated}
 
 Questo glossario fornisce termini e definizioni per {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -119,7 +116,7 @@ Un nome breve univoco e visibile pubblicamente che viene utilizzato in client de
 ### anti-affinità
 {: #x8888040}
 
-Due o più istanze del gruppo di contenitori che vengono eseguite su diversi nodi di rete per garantire una maggiore disponibilità per un'applicazione. Vedi anche [affinità](#x2149238).
+Due o più istanze del gruppo di contenitori che vengono eseguite su diversi nodi di rete per garantire una maggiore disponibilità per un'applicazione. Consulta anche [affinità](#x2149238).
 
 ### API
 {: #x2008805}
@@ -1245,7 +1242,7 @@ coinvolge la gestione delle modifiche alle raccolte di file.
 ### spazio
 {: #x2039442}
 
-- Un sottogruppo all'interno di un'organizzazione Bluemix. Agli utenti membri di una org viene dato accesso a uno o più dei suoi spazi, con le autorizzazioni associate a uno specifico ruolo (come sviluppatore, responsabile o revisore). Qualsiasi membro dello spazio può visualizzare le applicazioni ma solo i membri con il ruolo di sviluppatore possono creare applicazioni e aggiungere istanze di servizio allo spazio. Le applicazioni e le istanze di servizio sono associate agli spazi. Vedere anche [organizzazione](#x2032585).
+- Un sottogruppo all'interno di un'organizzazione Bluemix. Agli utenti membri di un'organizzazione viene dato accesso a uno o più dei suoi spazi, con le autorizzazioni associate a uno specifico ruolo (come sviluppatore, responsabile o revisore). Qualsiasi membro dello spazio può visualizzare le applicazioni ma solo i membri con il ruolo di sviluppatore possono creare applicazioni e aggiungere istanze di servizio allo spazio. Le applicazioni e le istanze di servizio sono associate agli spazi. Vedere anche [organizzazione](#x2032585).
 - Un'unità organizzativa che contiene applicazioni e servizi nell'infrastruttura Cloud Foundry e può essere utilizzata per memorizzare e tenere traccia delle risorse di applicazione.
 - Un'area con controllo dell'accesso all'interno di un account in cui è possibile creare e organizzare le risorse Blueworks Live.
 

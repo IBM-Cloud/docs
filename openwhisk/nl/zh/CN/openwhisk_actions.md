@@ -155,10 +155,31 @@ activations
 wsk action update hello hello.js
   ```
   {: pre}
+
+3.  参数可以在命令行上显式提供，也可以通过提供包含所需参数的文件来提供。
+
+  要直接通过命令行来传递参数，请向 `--param` 标志提供键/值对：
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
+
+  为了使用包含参数内容的文件，请创建 JSON 格式的包含参数的文件。然后，必须将文件名传递到 `param-file` 标志：
+
+  名为 parameters.json 的示例参数文件：
+  ```
+  {
+      "name": "Bernie",
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {
       "payload": "Hello, Bernie from Vermont"
@@ -166,7 +187,7 @@ wsk action update hello hello.js
   ```
   {: screen}
 
-  请注意，使用 `--param` 选项可指定参数名称和值，使用 `--result` 选项将仅显示调用结果。
+  请注意，使用 `--result` 选项将仅显示调用结果。
 
 ### 设置缺省参数
 {: #openwhisk_binding_actions}
@@ -175,10 +196,27 @@ wsk action update hello hello.js
 
 您可以绑定特定参数，而不用每次将所有参数传递给操作。以下示例绑定 *place* 参数，以便操作的缺省位置为“Vermont”：
  
-1. 使用 `--param` 选项更新操作以绑定参数值。
+1. 更新该操作，方法是使用 `--param` 选项来绑定参数值，或者将包含参数的文件传递到 `--param-file`。
+
+  要在命令行上显式指定缺省参数，请向 `param` 标志提供键/值对：
 
   ```
   wsk action update hello --param place Vermont
+  ```
+  {: pre}
+
+  从文件传递参数需要创建包含所需内容的 JSON 格式的文件。然后，必须将文件名传递到 `-param-file` 标志：
+
+  名为 parameters.json 的示例参数文件：
+  ```
+  {
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action update hello --param-file parameters.json
   ```
   {: pre}
 
@@ -199,10 +237,30 @@ wsk action update hello hello.js
 
 3. 调用操作，并同时传递 `name` 和 `place` 值。后者将覆盖绑定到操作的值。
 
+  使用 `--param` 标志：
+
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
+  使用 `--param-file` 标志：
+
+  文件 parameters.json：
+  ```
+  {
+    "name": "Bernie",
+    "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -230,7 +288,7 @@ wsk action update hello hello.js
 
   请注意，`main` 函数会返回 Promise，其指示激活尚未完成，但是预期在未来完成。
 
-  在本例中，`setTimeout()` JavaScript 函数会等待 20 秒再调用回调函数。这代表异步代码，并进入 Promise 的回调函数。
+  在本例中，`setTimeout()` JavaScript 函数会等待 2 秒再调用回调函数。这代表异步代码，并进入 Promise 的回调函数。
 
   Promise 的回调函数采用两个自变量 resolve 和 reject，这两个自变量都是函数。`resolve()` 的调用会履行 Promise 并指示激活已正常完成。
 
@@ -414,8 +472,8 @@ exports.main = myAction;
   {: screen}
 
 最后，请注意，虽然大部分 `npm` 包会在执行 `npm install` 时安装 JavaScript 源代码，但还有些 npm 包会安装并编译二进制工件。目前，归档文件上传不支持二进制依赖关系，而只支持 JavaScript 依赖关系。如果归档包含二进制依赖关系，那么操作调用可能会失败。
-    
-### 创建操作序列
+
+## 创建操作序列
 {: #openwhisk_create_action_sequence}
 
 可以创建用于将一序列操作链接在一起的操作。
@@ -565,6 +623,73 @@ wsk action invoke --blocking --result helloSwift --param name World
 {: screen}
 
 **注意：**Swift 操作在 Linux 环境中运行。Swift on Linux 仍在开发中；{{site.data.keyword.openwhisk_short}} 通常会使用最新可用发行版，但此版本不一定稳定。此外，用于 {{site.data.keyword.openwhisk_short}} 的 Swift 版本可能与 Mac OS 上 Xcode 的稳定发行版中的 Swift 版本不一致。
+
+## 创建 Java 操作
+{: #openwhisk_actions_java}
+
+创建 Java 操作的过程与创建 JavaScript 和 Swift 操作的过程类似。以下各部分将指导您创建并调用单个 Java 操作，然后向该操作添加参数。
+
+为了编译、测试和归档 Java 文件，您必须在本地安装 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。
+
+### 创建并调用操作
+{: #openwhisk_actions_java_invoke}
+
+Java 操作是包含名为 `main` 的方法的 Java 程序，该方法的特征符与以下内容完全一样：
+```
+public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
+```
+{: codeblock}
+
+例如，创建名为 `Hello.java` 的 Java 文件并包含以下内容：
+
+```
+import com.google.gson.JsonObject;
+public class Hello {
+    public static JsonObject main(JsonObject args) {
+        String name = "stranger";
+        if (args.has("name"))
+            name = args.getAsJsonPrimitive("name").getAsString();
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+    }
+}
+```
+{: codeblock}
+
+然后，将 `Hello.java` 编译成 JAR 文件 `hello.jar`，如下所示：
+```
+javac Hello.java
+jar cvf hello.jar Hello.class
+```
+{: pre}
+
+**注：**编译 Java 文件时，[google-gson](https://github.com/google/gson) 必须存在于 Java CLASSPATH 中。
+
+可以按如下所示从此 JAR 文件创建名为 `helloJava` 的 OpenWhisk 操作：
+
+```
+wsk action create helloJava hello.jar
+```
+{: pre}
+
+使用命令行和 `.jar` 源文件时，无需指定您要创建 Java 操作；该工具会根据文件扩展名来进行确定。
+
+Java 操作的操作调用与 Swift 和 JavaScript 操作的操作调用相同：
+
+```
+wsk action invoke --blocking --result helloJava --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
+
+**注：**如果 JAR 文件具有多个类并且 main 方法与必需的特征符相匹配，那么 CLI 工具会使用 `jar -tf` 报告的第一个类。
 
 
 ## 创建 Docker 操作

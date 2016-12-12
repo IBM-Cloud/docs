@@ -56,7 +56,7 @@ http://<yourappname>.mybluemix.net/bluemix-debug/shell
 
   1. *debug*：讓 Liberty 應用程式轉換為除錯模式，並讓用戶端（例如 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}）建立與應用程式的遠端除錯階段作業。
   
-   如需相關資訊，請參閱[遠端除錯](../manageapps/eclipsetools/eclipsetools.html#remotedebug)。
+   如需相關資訊，請參閱[遠端除錯](/docs/manageapps/eclipsetools/eclipsetools.html#remotedebug)。
    
    *debug* 公用程式也會啟動 *proxy*。
    
@@ -70,7 +70,7 @@ http://<yourappname>.mybluemix.net/bluemix-debug/shell
 
   1. *inspector*：啟用可從 *devconsole* 公用程式或 *https://myApp.mybluemix.net/bluemix-debug/inspector* 存取的 Node Inspector 除錯器介面。
   
-  inspector 處理程序是在應用程式容器中執行。使用此公用程式，可建立 CPU 使用率設定檔、新增岔斷點，以及對程式碼進行除錯，而這些作業都是應用程式在 {{site.data.keyword.Bluemix_notm}} 上執行時進行。如需 Node Inspector 模組的相關資訊，請參閱 [GitHub 上的 node-inspector](https://github.com/node-inspector/node-inspector){:new_window}。
+  inspector 處理程序是在應用程式容器中執行。使用此公用程式，可建立 CPU 用量設定檔、新增岔斷點，以及對程式碼進行除錯，而這些作業都是應用程式在 {{site.data.keyword.Bluemix_notm}} 上執行時進行。如需 Node Inspector 模組的相關資訊，請參閱 [GitHub 上的 node-inspector](https://github.com/node-inspector/node-inspector){:new_window}。
   
   *inspector* 公用程式也會啟動 *proxy*。
 	
@@ -124,7 +124,7 @@ cf restage myApp
 ##Eclipse Tools 的開發模式
 {: #devmode}
 
-開發模式是 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) 的一項特性，它讓開發人員能夠在他們的應用程式於雲端執行的同時，處理這些應用程式。
+開發模式是 [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools) 的一項特性，它讓開發人員能夠在他們的應用程式於雲端執行的同時，處理這些應用程式。
 
 在 {{site.data.keyword.Bluemix_notm}} 上處理應用程式時，開發人員可能感覺他們無法像在本端環境中那樣地執行正常的開發活動。為了處理此問題，Eclipse Tools
 的開發模式讓您能夠在暫時性的安全工作區裡，在雲端工作。

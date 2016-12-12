@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-26" 
+lastupdated: "2016-11-18" 
 
 ---
 
@@ -36,16 +36,15 @@ lastupdated: "2016-10-26"
 |オプション | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} は、{{site.data.keyword.APIM}} と IBM StrongLoop を単一のオファリングに統合し、API とマイクロサービスを作成、実行、管理、および強化する包括的な解決策を提供します。 |
 |オプション | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。 |
 |オプション | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_notm}} Dedicated で Docker コンテナーを実行します。コンテナーは、アプリが実行のために必要とするすべてのエレメントを含む仮想ソフトウェア・オブジェクトです。コンテナーには、リソースの分離と割り振りの利点がありますが、例えば仮想マシンなどよりも、移植可能性と効率性が高まっています。ハードウェア要件については、『[{{site.data.keyword.Bluemix_notm}} Dedicated および Bluemix Local における IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)』を参照してください。|
+| オプション | [{{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) | {{site.data.keyword.contdelivery_short}} Dedicated を使用して、ビルド、単体テスト、デプロイメントなどを自動化します。機能豊富な Web ベース IDE により、コードの編集およびプッシュを行います。開発、デプロイメント、および運用の作業をサポートするツール統合を実現するツールチェーンを作成します。 |
 |オプション | [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/dashDB.html) | dashDB を使用して、地理空間情報などの特殊タイプを含む、リレーショナル・データを保管します。次に、そのデータを SQL、または予測分析とデータ・マイニング、R による分析、および Geospatial Analytics などの拡張組み込み分析を使用して分析します。 |
 |オプション | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
 | オプション | [Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html) | {{site.data.keyword.ghe_long}} は、IBM Cloud でホストされて完全に管理されるバージョンの GitHub Enterprise であり、開発者が愛好するソーシャル・エクスペリエンスを提供します。このサービスは、現在は {{site.data.keyword.Bluemix_notm}} Dedicated 環境でのみ使用可能です。 |
-| オプション | [{{site.data.keyword.deliverypipeline}} (ベータ)](/docs/services/DeliveryPipeline/index.html) | IBM {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} サービスは、{{site.data.keyword.Bluemix_notm}} プロジェクトの継続的デプロイメントを自動化します。 |
 | オプション (ベータ版) | [ロギング](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースで Cloud Foundry アプリのログおよび Kibana で検索可能なログとダッシュボードを提供します。 |
 |オプション | [{{site.data.keyword.messagehub}}](/docs/services/MessageHub/index.html#messagehub) | {{site.data.keyword.messagehub}} は、配布されたスケーラブルで高スループットのメッセージ・バスであり、オンプレミス・テクノロジーとオフプレミス・テクノロジーを統合します。{{site.data.keyword.messagehub}} は、Apache Kafka に基づいています。これは、高速かつスケーラブルで永続的なリアルタイムのメッセージング・エンジンです。 |
 |オプション | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} は、通知を iOS および Android デバイスに送信するために使用することができるサービスです。通知は、すべてのアプリケーション・ユーザー、またはタグを使用して特定のユーザーとデバイスのセットを対象にすることができます。デバイス、タグ、およびサブスクリプションを管理することができます。SDK (Software Development Kit) および　Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用して、さらにクライアント・アプリケーションを開発することも可能です。 |
 |オプション | [{{site.data.keyword.SecureGateway}}](/docs/services/SecureGateway/secure_gateway.html) | {{site.data.keyword.SecureGateway}} サービスは、{{site.data.keyword.Bluemix_notm}} アプリケーションをオンプレミスまたはクラウド内のリモート・ロケーションに接続するための安全な方法を提供します。  |
 |オプション | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 冗長性を高めるために、{{site.data.keyword.sescashort}} は、キャッシュに保管されたセッションのレプリカを提供します。これにより、ブラウンアウトまたは障害が発生した場合、クライアント・アプリケーションはキャッシュ内のセッションへのアクセスを維持できます。サービスでは、Web アプリケーションとモバイル・アプリケーションのセッション・キャッシュ・シナリオがサポートされます。 |
-| 組み込み | [ツールチェーン (ベータ)](/docs/toolchains/toolchains_overview.html) | ツールチェーンは、開発、デプロイメント、および運用の作業をサポートするツール統合の集合です。ツールチェーンは Dedicated 環境で使用可能ですが、使用可能なツール統合は、ご使用の特定の環境で {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} がどのようにセットアップされたかによって異なります。 |
 |オプション | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | このサービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイが収集したデータと通信して、それらのデータを取り込むことができます。基本オファリングでは、100,000 個の同時接続されたデバイスまたはアプリケーションと 1.6 TB のデータ交換の容量を備えた専用環境内で {{site.data.keyword.iot_full}} の専用バージョンを実行することができます。 |
 
 リソースおよびサービスの容量を拡大および拡張するために購入できる、オプションのコンポーネントが用意されています。販売チームに連絡して、これらのコンポーネントを購入できます。営業担当員への連絡について詳しくは、[「お問い合わせ」](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)にアクセスしてください。サービスのプランを増やすには、カタログのサービス・タイルからプランを選択します。
@@ -72,7 +71,6 @@ lastupdated: "2016-10-26"
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.messagehub}} | 1 区画当たり最大 10 GB のパブリッシュおよびサブスクライブ・メッセージングを提供する環境。メッセージは最大 24 時間保持され、消費用に使用可能です。 |
 |IBM Bluemix Dedicated {{site.data.keyword.mobilepushshort}} | 1 秒当たり 300 個の要求を受け入れる能力を持つ {{site.data.keyword.mobilepushshort}} インスタンスをデプロイして実行できる環境。 |
 |{{site.data.keyword.iot_short}} Dedicated の増分式の拡張 | 環境の拡張。拡張される環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 0.5 TB のデータ交換の容量を備えた専用環境内で {{site.data.keyword.iot_short}} の専用バージョンを実行できます。 |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.deliverypipeline}} | IBM {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} サービスは、{{site.data.keyword.Bluemix_notm}} プロジェクトの継続的デプロイメントを自動化します。 |
 
 *表 3. 購入用のオプション・コンポーネント: プラットフォーム・アドオン*
 

@@ -35,7 +35,7 @@ CLI 可以設定成使用 HTTPS Proxy。若要設定 HTTPS Proxy，必須建立�
 ## 使用 {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_using_cli}
 
-完成您環境的配置之後，就可以開始使用 {{site.data.keyword.openwhisk_short}} CLI 來執行下列動作：
+在您[已配置環境](https://new-console.{DomainName}/openwhisk/cli){: new_window}之後，可以開始使用 {{site.data.keyword.openwhisk_short}} CLI 來執行下列動作：
 
 * 在 {{site.data.keyword.openwhisk_short}} 上，執行您的程式碼 Snippet 或動作。請參閱[建立及呼叫動作](./openwhisk_actions.html)。
 * 使用觸發程式及規則，讓動作回應事件。請參閱[建立觸發程式及規則](./openwhisk_triggers_rules.html)。

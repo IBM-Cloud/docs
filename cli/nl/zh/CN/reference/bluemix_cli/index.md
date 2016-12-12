@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-24"
+
 ---
 
 
@@ -15,9 +16,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} (bx) 命令
 {: #bluemix_cli}
-
-上次更新时间：2016 年 10 月 25 日
-{: .last-updated}
 
 版本：0.4.1
 
@@ -300,8 +298,8 @@ copyright:
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
  <tr>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic stop](index.html#ic_stop)</td>
@@ -311,7 +309,7 @@ copyright:
  <td>[bluemix ic unpause](index.html#unpause)</td>
  <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
@@ -2722,7 +2720,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 在登录的 Bluemix 空间中重新创建 IBM Containers 服务。空间的原始配额会保留。
 
-<strong>重要事项</strong>：运行此命令时，此空间内的所有单个容器和组都不会迁移到重新供应的空间，且在迁移过程中将会除去。 
+<strong>重要事项</strong>：运行此命令时，此空间内的所有单个容器和组都不会迁移到重新供应的空间，且在迁移过程中将会除去。
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]

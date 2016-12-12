@@ -130,8 +130,7 @@ Revise estas considerações para o repositório do projeto que você usará no 
 Com o arquivo manifest, é possível especificar: 
     <ul>
     <li>Um nome de app exclusivo.</li>  
-    <li>Serviços declarados: Uma extensão manifest, que cria ou procura por serviços obrigatórios ou opcionais que devem ser configurados antes que o app seja implementado, como um serviço de cache de dados. É possível localizar uma lista de serviços, rótulos e planos elegíveis do     {{site.data.keyword.Bluemix_notm}}, usando a <a href="https://github.com/cloudfoundry/cli/releases">Interface da linha de comandos CF</a> para executar o comando <code>cf marketplace</code> ou procurando no <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">catálogo do {{site.data.keyword.Bluemix_notm}}</a>. 
-    
+    <li>Serviços declarados: Uma extensão manifest, que cria ou procura por serviços obrigatórios ou opcionais que devem ser configurados antes que o app seja implementado, como um serviço de cache de dados. É possível localizar uma lista de serviços, rótulos e planos elegíveis do     {{site.data.keyword.Bluemix_notm}}, usando a <a href="https://github.com/cloudfoundry/cli/releases">Interface da linha de comandos CF</a> para executar o comando <code>cf marketplace</code> ou procurando no <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">catálogo do {{site.data.keyword.Bluemix_notm}}</a>.      
     <strong>Nota:</strong> serviços declarados são uma extensão IBM do formato de manifest padrão do Cloud Foundry. Essa extensão pode ser revisada em uma liberação futura conforme o recurso evolui e melhora.
 	
 	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank">Aprenda a criar um arquivo <code>manifest.yml</code>.</a>  

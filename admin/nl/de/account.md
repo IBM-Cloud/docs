@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,10 +17,9 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}}-Konto verwalten
 {: #mngacct}
-*Letzte Aktualisierung: 20. Oktober 2016*
-{: .last-updated}
 
-Klicken Sie auf den Link **Konto**, um Einstellungen für Benachrichtigungen festzulegen, Ihre Kontonutzung oder Ihre Rechnung anzuzeigen.{:shortdesc}
+Klicken Sie auf den Link **Konto**, um Einstellungen für Benachrichtigungen festzulegen, Ihre Kontonutzung oder Ihre Rechnung anzuzeigen.
+{:shortdesc}
 
 ## {{site.data.keyword.Bluemix_notm}}-Anmeldung
 {: #signup}
@@ -29,7 +28,8 @@ Sie können sich unter Verwendung einer vorhandenen IBMid, durch Erstellung eine
 
 Die Anmeldung an {{site.data.keyword.Bluemix_notm}} mit einer eingebundenen ID ist nur dann möglich, wenn Ihr Unternehmen bereits bei IBM registriert wurde.  Nach der Registrierung der Unternehmensdomäne bei IBM können sich die Benutzer unter Verwendung der bestehenden Benutzerberechtigungsnachweise des Unternehmens bei IBM Produkten und Services anmelden. Die Authentifizierung erfolgt über den Identitätsprovider Ihres Unternehmens. Bei der Anmeldung an {{site.data.keyword.Bluemix_notm}} mit einer eingebundenen ID werden Sie zur Anmeldung über die Anmeldeseite Ihres Unternehmens aufgefordert. Weitere Informationen zur Registrierung der Domäne Ihres Unternehmens oder Ihrer Organisation bei IBM und zu den hierfür erforderlichen Schritten finden Sie in der Veröffentlichung [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Für die Registrierung eingebundener IDs muss ein IBM Sponsor, wie beispielsweise ein Angebotsmanager oder Kundenansprechpartner, kontaktiert werden.
 
-*Tabelle 1. Anmeldemethoden*
+Tabelle 1. Anmeldemethoden
+{: #account_table1}
 
 | Anmeldemethoden | Details |    
 |-----------------|---------|

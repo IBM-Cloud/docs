@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # 管理您的 {{site.data.keyword.Bluemix_notm}} 帐户
 {: #mngacct}
-*上次更新时间：2016 年 10 月 20 日*
-{: .last-updated}
 
 转至**帐户**链接以设置通知、查看您帐户的使用情况或查看您的帐单。
 {:shortdesc}
@@ -30,7 +28,8 @@ copyright:
 
 仅当您的公司已经和 IBM 合作进行注册时，联合标识才可用于注册 {{site.data.keyword.Bluemix_notm}}。通过向 IBM 注册公司域，用户可以使用现有公司用户凭证，登录到 IBM 产品和服务。公司的身份提供者随后会处理认证。当您使用联合标识登录到 {{site.data.keyword.Bluemix_notm}} 时，系统会提示您通过您公司的登录页面进行登录。有关向 IBM 请求注册公司或组织域的更多信息，或者相关流程的更多信息，请参阅 [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}。当您请求注册联合标识时，需要 IBM 产品负责人（如产品支持者或客户支持者）。
 
-*表 1. 注册方法*
+表 1. 注册方法
+{: #account_table1}
 
 | 注册方法 | 详细信息 |    
 |-----------------|---------|

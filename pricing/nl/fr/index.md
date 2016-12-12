@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-11-02"
  
 
 ---
@@ -51,9 +51,6 @@ copyright:
 # Tarification
 {: #pricing}
 
-Dernière mise à jour : 20 octobre 2016
-{: .last-updated}
-
 Vous pouvez exécuter des applications dans {{site.data.keyword.Bluemix}} et essayer des services
 {{site.data.keyword.Bluemix_notm}} gratuitement. Vous pouvez vous inscrire pour bénéficier d'un essai gratuit de
 30 jours offrant des franchises supplémentaires, notamment un support gratuit. Au bout de 30 jours, vous pouvez choisir un type de compte et ne payer que ce que vous utilisez au-delà des franchises. Bluemix met à disposition une calculatrice des coûts pour que vous puissiez estimer le coût à l'avance, ainsi que la vue Tableau de bord de l'utilisation pour que
@@ -85,7 +82,8 @@ le processus général de gestion des comptes {{site.data.keyword.Bluemix_notm}}
 
 ![Organigramme du processus de gestion des comptes {{site.data.keyword.Bluemix_notm}}](acctmgmt600.png)
 
-*Figure 1. Organigramme du processus de gestion des comptes {{site.data.keyword.Bluemix_notm}}*
+Figure 1. Organigramme du processus de gestion des comptes {{site.data.keyword.Bluemix_notm}}
+{: #pricing_figure1}
 
 
 Si vous convertissez votre compte au cours de votre essai gratuit, les franchises sont celles normalement proposées par chaque service. Elles
@@ -297,7 +295,8 @@ Dans le modèle à tranches simples, le prix unitaire est déterminé par la tra
 | Tranche 4 : 3001 à 4000           |      0,60 $                    |
 |Tranche 5 : &gt; 4000 | 0,40 $ | 
 
-*Tableau 1. Tableau de la tarification différenciée par tranches simples*
+Tableau 1. Tableau de la tarification différenciée par tranches simples
+{: #pricing_table1}
 
 Le tableau suivant indique le montant que vous payez avec un plan qui s'appuie
 sur un modèle de tarification à tranches simples :
@@ -309,7 +308,8 @@ sur un modèle de tarification à tranches simples :
 |2500 |	2500 × 0,75 = 1875 |	1875 $|
 |... |	... |	...|
 |5200 |	5200 × 0,40 = 2080 |2080 $|
-*Tableau 2. Calcul du prix avec le modèle de tarification à tranches simples*
+Tableau 2. Calcul du prix avec le modèle de tarification à tranches simples
+{: #pricing_table2}
 
 ####Tranche graduée
 {: #graduated_tier}
@@ -324,7 +324,8 @@ correspond aux frais cumulés pour chaque niveau d'utilisation, c'est-à-dire la
 |    Tranche 3 : 2001 à 3000 |	0,75 $ |
 |    Tranche 4 : 3001 à 4000 |	0,60 $ |
 |    Tranche 5 : &gt; 4000 |	0,40 $ |
-*Tableau 3. Tableau de tarification par tranches graduées*
+Tableau 3. Tableau de tarification par tranches graduées
+{: #pricing_table3}
 
 Le tableau suivant indique le montant que vous payez avec un plan qui s'appuie
 sur un modèle de tarification à tranches graduées :
@@ -336,7 +337,8 @@ sur un modèle de tarification à tranches graduées :
 |2500 |	(1000 × 1 (prix unitaire pour la tranche 1)) + (1000 × 0.90 (prix unitaire pour la tranche 2)) + (500 × 0.75 (prix unitaire pour la tranche 3)) = 2275 |	2275 $ |
 |... |	... |	...|
 |5200 |	(1000 × 1 (prix unitaire pour la tranche 1)) + (1000 × 0.90 (prix unitaire pour la tranche 2)) + (1000 × 0.75 (prix unitaire pour la tranche 3)) + (1000 × 0.60 (prix unitaire pour la tranche 4)) + (1200 × 0.40 (prix unitaire pour la tranche 5)) = 3730 |	3730 $|
-*Tableau 4. Calcul du prix avec le modèle de tarification à tranches graduées*
+Tableau 4. Calcul du prix avec le modèle de tarification à tranches graduées
+{: #pricing_table4}
 
 ####Tranche fixe
 {: #block_tier}
@@ -351,7 +353,8 @@ correspond aux frais pour votre niveau d'utilisation, quelle que soit votre util
 | Tranche 3 : &lt;= 3000 |	2800 $|
 | Tranche 4 : &lt;= 4000 |	3500 $|
 | Tranche 5 : &lt;= 10000 |	5000 $|
-*Tableau 5. Tableau de tarification par tranches fixes*
+Tableau 5. Tableau de tarification par tranches fixes
+{: #pricing_table5}
 
 Le tableau suivant indique le montant que vous payez avec un plan qui s'appuie
 sur un modèle de tarification à tranches fixes :
@@ -362,7 +365,8 @@ sur un modèle de tarification à tranches fixes :
 |1500 |	Le nombre d'éléments correspond à la tranche 2 ; par conséquent, le prix total est 1900 $. |	1900 $|
 |... |	... |	...|
 |5200 |	Le nombre d'éléments correspond à la tranche 5 ; par conséquent, le prix total est 5000 $. |	5000 $|
-*Tableau 6. Calcul du prix avec le modèle de tarification à tranches fixes*
+Tableau 6. Calcul du prix avec le modèle de tarification à tranches fixes
+{: #pricing_table6}
 
 ### Franchises pour les serveurs virtuels
 {: #vms}
@@ -442,7 +446,8 @@ temps, par exemple sur un mois. La tarification dans cet exemple est en dollar.
 |Data Cache - Standard |	5 Go d'espace en cache et une réplique |	155,00 $/instance |
 |Data Cache - Premium |	25 Go d'espace en cache et une réplique |	505,00 $/instance|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 Go de stockage de données gratuits<br/>50 000 appels d'API légers gratuits par mois<br/>10 000 appels d'API lourds gratuits par mois | 1,00 $/Go<br/>0,03 $/1000 appels d'API légers<br/>0,15 $/1000 appels d'API lourds |
-*Tableau 7. Fiche des prix*
+Tableau 7. Fiche des prix
+{: #pricing_table7}
 
 ###Calcul du prix de l'application
 
@@ -514,11 +519,11 @@ tableau ci-dessous répertorie les devises prises en charge.
 |SEK |	  Couronne suédoise|
 |USD |    Dollar américain|
 |ZAR |	  Rand sud-africain|
-*Tableau 8. Devises prises en charge* 
+Tableau 8. Devises prises en charge
+{: #pricing_table8}
 
 **Remarque :** si vous avez lié vos comptes {{site.data.keyword.Bluemix_notm}} et SoftLayer, la facture unique que vous
-recevez est en dollars américains (USD) seulement.
-  
+recevez est en dollars américains (USD) seulement.  
 
 ##Tableau de bord de l'utilisation
 {: #usage}
@@ -554,8 +559,7 @@ les crédits éventuels dont bénéficie votre compte. Vous pouvez disposer de c
 compte
 SoftLayer avec un compte {{site.data.keyword.Bluemix_notm}}.
 
-Pour ouvrir la page **Tableau de bord de l'utilisation**, cliquez sur **Compte**. Sur la page qui s'affiche,
-cliquez sur **Tableau de bord de l'utilisation**. La page présente vos crédits éventuels, ainsi que leur date d'expiration.
+Pour ouvrir la page **Tableau de bord de l'utilisation**, cliquez sur **Compte** > **Tableau de bord de l'utilisation**. La page présente vos crédits éventuels, ainsi que leur date d'expiration.
 
 ##Notifications
 {: #notifications}
@@ -589,7 +593,8 @@ exécuter.
 |Service |	Information|
 |--------|-------------|
 |Presence Insights 	|Si vous avez choisi un plan léger et que vous dépassez les franchises, un message 403 s'affiche ou est consigné afin d'indiquer que vous ne disposez plus des autorisations, et votre instance de service est désactivée. De plus, les appels d'API REST POST sont rejetés avec une réponse 403.<br/><br/>Si votre service est désactivé car vous avez dépassé les franchises, vous pouvez procéder à la mise à niveau du plan léger vers un plan payant. Votre service est réactivé dans les deux heures.<br/><br/>Si vous disposez d'un plan payant, vous pouvez passer à un plan inférieur, c'est-à-dire au plan léger, tant que votre utilisation ne dépasse pas la franchise du plan léger pour les événements et l'espace de stockage total.<br/><br/>Lorsque vous mettez un plan à niveau ou passez à un plan inférieur, il n'est pas nécessaire de reconstituer ou de redémarrer vos applications.|
-*Tableau 9. Etapes à effectuer pour changer de plan*
+Tableau 9. Etapes à effectuer pour changer de plan
+{: #pricing_table9}
 
 ###Changement de plan via l'interface de ligne de commande
 

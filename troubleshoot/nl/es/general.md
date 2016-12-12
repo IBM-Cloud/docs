@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2015
+  
+lastupdated: "2016-08-12"
 
 
 ---
@@ -17,8 +19,6 @@ copyright:
 # Problemas de servicios generales
 {: #general}
 
-*Última actualización: 12 de agosto de 2016*
-{: .last-updated}
 
 Entre los problemas de los servicios de {{site.data.keyword.Bluemix}}
 se pueden incluir los errores de tiempo de espera agotado de pasarela que se producen al suprimir

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # Organisationen und Bereiche verwalten
 {: #orgsspacesusers}
-Letzte Aktualisierung: 20. Oktober 2016
-{: .last-updated}
 
 Als Kontoeigner können Sie Ihre Organisationen verwalten, indem Sie auf die Seite **Organisationen verwalten** wechseln. Organisationsmanager können ferner die Seite 'Organisationen verwalten' verwenden, um beliebige Organisationen, für die Sie als Manager festgelegt sind, zu verwalten.
 {:shortdesc}
@@ -60,7 +58,7 @@ Wenn Sie eine Organisation erstellen, muss der Organisationsname in {{site.data.
 
 Sie müssen sich an die [Unterstützung für {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} wenden, um eine Organisation zu löschen. Wenn Sie das Unterstützungsteam auffordern, eine Organisation zu löschen, werden alle Bereiche, Anwendungen und Services innerhalb der Organisation gelöscht.
 
-Die folgenden [Benutzerrollen](users_roles.html#userrolesinfo) können Teammitgliedern in der Organisation zugeordnet werden:
+Die folgenden [Benutzerrollen](/docs/admin/users_roles.html#userrolesinfo) können Teammitgliedern in der Organisation zugeordnet werden:
 
 <ul>
 <li>Organisationsmanager</li>
@@ -75,7 +73,7 @@ Die folgenden [Benutzerrollen](users_roles.html#userrolesinfo) können Teammitgl
 
 Innerhalb einer Organisation können Sie Bereiche verwenden, um eine Reihe von Anwendungen, Services und Teammitgliedern zu gruppieren. Bereiche sind an eine bestimmte Region in {{site.data.keyword.Bluemix_notm}} gebunden.
 
-Nachdem Sie Teammitglieder zu einer Organisation hinzugefügt haben, können Sie ihnen Berechtigungen für die Bereich erteilen. Ähnlich wie Organisationen verfügen Bereiche über eine Reihe von [Benutzerrollen](users_roles.html#userrolesinfo) mit bestimmten Berechtigungen, die Teammitgliedern zugeordnet sind:
+Nachdem Sie Teammitglieder zu einer Organisation hinzugefügt haben, können Sie ihnen Berechtigungen für die Bereich erteilen. Ähnlich wie Organisationen verfügen Bereiche über eine Reihe von [Benutzerrollen](/docs/admin/users_roles.html#userrolesinfo) mit bestimmten Berechtigungen, die Teammitgliedern zugeordnet sind:
 
 <ul>
 <li>Bereichsmanager</li>
@@ -158,7 +156,7 @@ Führen Sie folgende Schritte aus, um das Kontingent für Ihre Organisation anzu
 3. Klicken Sie auf **Organisation bearbeiten**.
 4. Wählen Sie die Registerkarte **Kontingent** aus.
 
-Um das Kontingent für Ihre Organisation zu aktualisieren, müssen Sie ein Support-Ticket öffnen. Weitere Informationen zum Öffnen eines Support-Tickets finden Sie unter dem Thema [Kundenunterstützung abrufen](../support/index.html#contacting-support). Weitere Informationen zum Kontingent für Container finden Sie unter dem Thema[Kontingent](../containers/container_planning_org_ov.html##container_planning_quota) in der Dokumentation zu Containern.
+Um das Kontingent für Ihre Organisation zu aktualisieren, müssen Sie ein Support-Ticket öffnen. Weitere Informationen zum Öffnen eines Support-Tickets finden Sie unter dem Thema [Kundenunterstützung abrufen](/docs/support/index.html#contacting-support). Weitere Informationen zum Kontingent für Container finden Sie unter dem Thema[Kontingent](/docs/containers/container_planning_org_ov.html##container_planning_quota) in der Dokumentation zu Containern.
 
 ## Domänen verwalten
 {: #managedomains}

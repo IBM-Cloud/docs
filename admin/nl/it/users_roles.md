@@ -4,8 +4,8 @@
 
 copyright:
 
-  anni: 2015, 2016
-
+  years: 2015, 2016
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,10 +17,8 @@ copyright:
 
 # Gestione dei membri dei team e dei ruoli
 {: #userroles}
-Ultimo aggiornamento: 20 ottobre 2016
-{: .last-updated}
 
-Dalla pagina **Directory team** per il tuo account, puoi gestire i membri dei team esistenti e i loro ruoli nella tua organizzazione e nei tuoi spazi, oltre che invitare nuovi membri del team. Per accedere alla directory del team per il tuo account, fai clic su **Account** &gt; **Directory team**.
+Dalla pagina **Directory team** per il tuo account, puoi gestire i membri dei team esistenti e i loro ruoli nella tua organizzazione e nei tuoi spazi, oltre che invitare nuovi membri del team. Per accedere alla directory del team per il tuo account, fai clic su **Account** &gt; **Directory team**. 
 {:shortdesc}
 
 I proprietari degli account eseguono tutte le operazioni sulle organizzazioni e sugli spazi, compresa la gestione dei membri dei team e dei loro ruoli assegnati. I gestori dell'organizzazione dispongono di un accesso che consente loro di invitare membri del team e gestire i ruoli. I gestori dello spazio possono utilizzare la pagina
@@ -32,7 +30,8 @@ consulta le seguenti informazioni.
 
 A livello di account, esistono due ruoli che abilitano l'accesso a funzioni di gestione dell'account differenti:
 
-*Tabella 1. Ruoli dell'account e autorizzazioni*
+Tabella 1. Ruoli dell'account e autorizzazioni
+{: #ur_table1}
 
 | Ruolo dell'account | Autorizzazioni |    
 |----------------|---------|
@@ -43,7 +42,8 @@ A livello di account, esistono due ruoli che abilitano l'accesso a funzioni di g
 
 I seguenti ruoli possono essere assegnati a livello dell'organizzazione:
 
-*Tabella 2. Ruoli organizzazione e autorizzazioni*
+Tabella 2. Ruoli organizzazione e autorizzazioni
+{: #ur_table2}
 
 | Ruolo organizzazione | Autorizzazioni |    
 |-------------------|-------------|
@@ -54,7 +54,8 @@ del team nell'organizzazione e i ruoli ad essi assegnati, nonché la quota per l
 
 I seguenti ruoli possono essere assegnati a livello dello spazio:
 
-*Tabella 3. Ruoli spazio e autorizzazioni*
+Tabella 3. Ruoli spazio e autorizzazioni
+{: #ur_table3}
 
 | Ruolo spazio | Autorizzazioni |    
 |------------|-------------|
@@ -137,7 +138,7 @@ I gestori spazio possono modificare i ruoli per i membri del team nel loro spazi
 I proprietari dell'account e i gestori dell'organizzazione possono rimuovere membri del team da un account utilizzando la pagina **Directory team**. Per rimuovere un membro del team, completa la seguente procedura:
 
 1. Fai clic su **Account** &gt; **Directory team**.
-3. Individua l'utente che desideri rimuovere dall'account e fai clic sull'icona **Rimuovi** ![Icona Rimuovi](../icons/icon_remove_teamuser.svg).
+3. Individua l'utente che desideri rimuovere dall'account e fai clic sull'icona **Rimuovi** ![Icona Rimuovi](/docs/icons/icon_remove_teamuser.svg).
 4. Nella finestra **Rimuovi utente**, fai clic su **Rimuovi** per confermare di voler rimuovere l'utente specificato dall'account.
 
 L'utente viene rimosso dall'elenco di membri del team visualizzato per l'account.

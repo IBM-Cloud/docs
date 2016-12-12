@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
- 
+lastupdated: "2016-10-24"
+
 
 ---
 
@@ -18,16 +19,13 @@ copyright:
 # CLI 和开发工具
 {: #cli}
 
-*上次更新时间：2016 年 10 月 25 日*
-{: .last-updated}
-
 通过 {{site.data.keyword.Bluemix_short}}，您可以访问各种功能强大的工具，例如统一命令行界面和 CLI 插件。其中每个 CLI 下载都可用于支持您的 {{site.data.keyword.Bluemix_notm}} 体验。
 {:shortdesc}
 
 ## ![](./images/CLI.svg) 命令行界面
 {: #downloads}
 
-下载并安装命令行界面以便为您的 {{site.data.keyword.Bluemix_notm}} 体验提供支持。 
+下载并安装命令行界面以便为您的 {{site.data.keyword.Bluemix_notm}} 体验提供支持。
 
 Cloud Foundry cf 命令行工具是所有 {{site.data.keyword.Bluemix_notm}} CLI 工具的必备软件。{{site.data.keyword.Bluemix_notm}} 命令行工具提供了管理 {{site.data.keyword.Bluemix_notm}} 环境以及 Cloud Foundry 应用程序的延伸体验。
 
@@ -64,7 +62,7 @@ bluemix plugin install plugin_name -r bluemix-bx
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
 |-----|-----|-----|
-| 插件名称：active-deploy<br> [查看文档](../services/ActiveDeploy/cli.html#cli) | 插件名称：auto-scaling<br> [查看文档](./plugins/auto-scaling/index.html) |  插件名称：nsg<br> [查看文档](./plugins/networksecuritygroups/index.html)  |
+| 插件名称：active-deploy<br> [查看文档](/docs/services/ActiveDeploy/cli.html#cli) | 插件名称：auto-scaling<br> [查看文档](./plugins/auto-scaling/index.html) |  插件名称：nsg<br> [查看文档](./plugins/networksecuritygroups/index.html)  |
 
 
 ### 扩展 Cloud Foundry 命令行界面：cf
@@ -85,9 +83,9 @@ cf install-plugin plugin_name -r bluemix-cf
 {: codeblock}
 
 
-| *Active Deploy* | *管理控制台* | 
+| *Active Deploy* | *管理控制台* |
 |-----------------|-----------------|
-| 插件名称：active-deploy<br>  [查看文档](../services/ActiveDeploy/cli.html#cli) |  插件名称：bluemix-admin<br> [查看文档](../cli/plugins/bluemix_admin/index.html) | 
+| 插件名称：active-deploy<br>  [查看文档](/docs/services/ActiveDeploy/cli.html#cli) |  插件名称：bluemix-admin<br> [查看文档](/docs/cli/plugins/bluemix_admin/index.html) |
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
@@ -100,4 +98,4 @@ cf install-plugin plugin_name -r bluemix-cf
 
 | *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* |
 |-------------|----------|----------|----------|
-| [Egit Eclipse 插件](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window}<br> [RTC Eclipse 插件](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse 插件](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 插件](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 插件](../services/rules/index.html#rulov002) |
+| [Egit Eclipse 插件](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window}<br> [RTC Eclipse 插件](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse 插件](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 插件](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 插件](/docs/services/rules/index.html#rulov002) |

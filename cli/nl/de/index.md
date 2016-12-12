@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，20166
 
- 
+lastupdated: "2016-10-24"
+
 
 ---
 
@@ -18,16 +19,13 @@ copyright:
 # CLI- und Dev-Tools
 {: #cli}
 
-*Letzte Aktualisierung: 25. Oktober 2016*
-{: .last-updated}
-
 Mit {{site.data.keyword.Bluemix_short}} haben Sie Zugriff auf leistungsfähige Tools wie zum Beispiel eine einheitliche Befehlszeilenschnittstelle und CLI-Plug-ins. Alle diese CLI-Downloads werden zur Unterstützung Ihrer Arbeit mit {{site.data.keyword.Bluemix_notm}} zur Verfügung gestellt.
 {:shortdesc}
 
 ## ![](./images/CLI.svg) Befehlszeilenschnittstellen
 {: #downloads}
 
-Sie können Befehlszeilenschnittstellen herunterladen und installieren, die Sie beim Arbeiten mit {{site.data.keyword.Bluemix_notm}} unterstützen. 
+Sie können Befehlszeilenschnittstellen herunterladen und installieren, die Sie beim Arbeiten mit {{site.data.keyword.Bluemix_notm}} unterstützen.
 
 Das Cloud Foundry-Befehlszeilentool 'cf' ist eine Voraussetzung für alle anderen CLI-Tools von {{site.data.keyword.Bluemix_notm}}. Das {{site.data.keyword.Bluemix_notm}}-Befehlszeilentool stellt neben Cloud Foundry-Anwendungen umfassende Erfahrung zur Verwaltung Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung bereit.
 
@@ -63,7 +61,7 @@ bluemix plugin install plugin_name -r bluemix-bx
 
 | *{{site.data.keyword.activedeployshort}}-CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
 |-----|-----|-----|
-| Plug-in-Name: active-deploy <br> [Dokumentation anzeigen](../services/ActiveDeploy/cli.html#cli) | Plug-in-Name: auto-scaling <br> [Dokumentation anzeigen](./plugins/auto-scaling/index.html) |  Plug-in-Name: nsg <br> [Dokumentation anzeigen](./plugins/networksecuritygroups/index.html)  |
+| Plug-in-Name: active-deploy <br> [Dokumentation anzeigen](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in-Name: auto-scaling <br> [Dokumentation anzeigen](./plugins/auto-scaling/index.html) |  Plug-in-Name: nsg <br> [Dokumentation anzeigen](./plugins/networksecuritygroups/index.html)  |
 
 
 ### Erweitern Sie die Cloud Foundry-Befehlszeilenschnittstelle: cf
@@ -84,9 +82,9 @@ cf install-plugin plugin_name -r bluemix-cf
 {: codeblock}
 
 
-| *Active Deploy* | *Admin Console* | 
+| *Active Deploy* | *Admin Console* |
 |-----------------|-----------------|
-| Plug-in-Name: active-deploy <br>  [Dokumentation anzeigen](../services/ActiveDeploy/cli.html#cli) |  Plug-in-Name: bluemix-admin <br> [Dokumentation anzeigen](../cli/plugins/bluemix_admin/index.html) | 
+| Plug-in-Name: active-deploy <br>  [Dokumentation anzeigen](/docs/services/ActiveDeploy/cli.html#cli) |  Plug-in-Name: bluemix-admin <br> [Dokumentation anzeigen](/docs/cli/plugins/bluemix_admin/index.html) |
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
@@ -99,4 +97,4 @@ Sie können Plug-ins herunterladen und installieren, um Ihre bevorzugten {{site.
 
 | *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* |
 |-------------|----------|----------|----------|
-| [Egit Eclipse-Plug-in](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [RTC Eclipse-Plug-in](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse-Plug-in](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse-Plug-in](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse-Plug-in](../services/rules/index.html#rulov002) |
+| [Egit Eclipse-Plug-in](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [RTC Eclipse-Plug-in](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse-Plug-in](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse-Plug-in](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse-Plug-in](/docs/services/rules/index.html#rulov002) |

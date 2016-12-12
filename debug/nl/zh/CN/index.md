@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -21,21 +23,21 @@ copyright:
 
 日志提供了相关信息，例如，作业运行成功还是失败。另外，还提供了可用于调试和确定问题原因的相关信息。
 
-日志为固定格式。对于详细日志，可过滤这些日志或使用外部日志记录主机来存储和处理这些日志。有关日志格式、查看和过滤日志以及配置外部日志记录的更多信息，请参阅[为 Cloud Foundry 上运行的应用程序进行日志记录](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}。
+日志为固定格式。对于详细日志，可过滤这些日志或使用外部日志记录主机来存储和处理这些日志。有关日志格式、查看和过滤日志以及配置外部日志记录的更多信息，请参阅[为 Cloud Foundry 上运行的应用程序进行日志记录](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}。
 
 
 ## 调试编译打包错误
 {: #debugging-staging-errors}
-当您在 {{site.data.keyword.Bluemix_notm}} 上编译打包应用程序时，可能会遇到问题。如果应用程序未能编译打包，那么可以搜索及复查编译打包 (STG) 日志，以确定在应用程序部署期间发生的事项，并从问题进行恢复。有关查看 Bluemix 应用程序日志方法的更多信息，请参阅[查看日志](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}。  
+当您在 {{site.data.keyword.Bluemix_notm}} 上编译打包应用程序时，可能会遇到问题。如果应用程序未能编译打包，那么可以搜索及复查编译打包 (STG) 日志，以确定在应用程序部署期间发生的事项，并从问题进行恢复。有关查看 Bluemix 应用程序日志方法的更多信息，请参阅[查看日志](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}。  
 
-要了解您的应用程序可能在 {{site.data.keyword.Bluemix_notm}} 上失败的原因，需要知道应用程序如何在 {{site.data.keyword.Bluemix_notm}} 上部署和运行。有关详细信息，请参阅[应用程序部署](../manageapps/depapps.html#appdeploy){: new_window}。
+要了解您的应用程序可能在 {{site.data.keyword.Bluemix_notm}} 上失败的原因，需要知道应用程序如何在 {{site.data.keyword.Bluemix_notm}} 上部署和运行。有关详细信息，请参阅[应用程序部署](/docs/manageapps/depapps.html#appdeploy){: new_window}。
 
 
-以下过程显示您可以如何使用 `cf logs` 命令来调试编译打包错误。在执行以下步骤之前，确保您已安装 cf 命令行界面。有关安装命令行界面的更多信息，请参阅[安装 cf 命令行界面](../starters/install_cli.html){: new_window}。
+以下过程显示您可以如何使用 `cf logs` 命令来调试编译打包错误。在执行以下步骤之前，确保您已安装 cf 命令行界面。有关安装命令行界面的更多信息，请参阅[安装 cf 命令行界面](/docs/starters/install_cli.html){: new_window}。
 
   1. 通过在 cf 命令行界面中输入以下代码，连接 {{site.data.keyword.Bluemix_notm}}：
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	 cf api https://api.ng.bluemix.net
 	 ```
 
   2. 通过输入 `cf login`，登录 {{site.data.keyword.Bluemix_notm}}。

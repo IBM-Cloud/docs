@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # 管理組織和空間
 {: #orgsspacesusers}
-前次更新：2016 年 10 月 20 日
-{: .last-updated}
 
 身為帳戶擁有者，您可以管理組織，方法是移至**管理組織**頁面。組織管理員也可以使用「管理組織」頁面來管理將他們設為管理員的任何組織。
 {:shortdesc}
@@ -61,7 +59,7 @@ copyright:
 
 您必須聯絡 [{{site.data.keyword.Bluemix_notm}} 支援中心](http://ibm.biz/bluemixsupport){: new_window}，以刪除組織。當您要求支援團隊刪除組織時，會刪除組織內的所有空間、應用程式及服務。
 
-可以將下列[使用者角色](users_roles.html#userrolesinfo)指派給組織中的團隊成員：
+可以將下列[使用者角色](/docs/admin/users_roles.html#userrolesinfo)指派給組織中的團隊成員：
 
 <ul>
 <li>組織管理員</li>
@@ -76,7 +74,7 @@ copyright:
 
 在組織內，您可以使用空間來群組一組應用程式、服務及團隊成員。在 {{site.data.keyword.Bluemix_notm}} 中，空間關聯於特定地區。
 
-將團隊成員新增至組織之後，即可將空間的許可權授與他們。與組織類似，空間也會有一組[使用者角色](users_roles.html#userrolesinfo)，其具有指派給團隊成員的特定許可權：
+將團隊成員新增至組織之後，即可將空間的許可權授與他們。與組織類似，空間也會有一組[使用者角色](/docs/admin/users_roles.html#userrolesinfo)，其具有指派給團隊成員的特定許可權：
 
 <ul>
 <li>空間管理員</li>
@@ -162,7 +160,7 @@ copyright:
 3. 按一下**編輯組織**。
 4. 選取**配額**標籤。
 
-若要更新您組織的配額，您必須開啟支援問題單。如需開啟支援問題單的相關資訊，請參閱[取得客戶支援](../support/index.html#contacting-support)。如需容器配額的相關資訊，請參閱「容器」文件中的[配額](../containers/container_planning_org_ov.html##container_planning_quota)。
+若要更新您組織的配額，您必須開啟支援問題單。如需開啟支援問題單的相關資訊，請參閱[取得客戶支援](/docs/support/index.html#contacting-support)。如需容器配額的相關資訊，請參閱「容器」文件中的[配額](/docs/containers/container_planning_org_ov.html##container_planning_quota)。
 
 ## 管理網域
 {: #managedomains}

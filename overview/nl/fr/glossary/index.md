@@ -3,8 +3,8 @@
  
 
 copyright:
-
-  2014，2016
+  years: 2016
+lastupdated: "2016-10-31"
 
  
 
@@ -15,9 +15,6 @@ copyright:
 
 # Termes du glossaire de {{site.data.keyword.Bluemix_notm}} 
 {: #glossary}
-
-Dernière mise à jour : 02 septembre 2016
-{: .last-updated}
 
 Ce glossaire comporte des termes et des définitions pour {{site.data.keyword.Bluemix}}.
 {:shortdesc}

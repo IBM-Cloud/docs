@@ -5,6 +5,8 @@
 copyright:
 
   years: 2014, 2016
+  
+lastupdated: "2016-10-19"
 
  
 
@@ -15,8 +17,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} セキュリティー
 {: #security}
-最終更新日: 2016 年 10 月 19 日
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} プラットフォームはセキュア・エンジニアリング・プラクティスを使用して設計されており、ネットワークおよびインフラストラクチャー全体における階層化セキュリティー管理機能を備えています。{{site.data.keyword.Bluemix_notm}} は、アプリケーション開発者がモバイル・アプリおよび Web アプリを保護するために使用できる一連のセキュリティー・サービスを備えています。これらのエレメントを組み合わせることで、{{site.data.keyword.Bluemix_notm}} は、セキュアなアプリケーション開発に対して明確な選択を提供するプラットフォームになっています。
 {:shortdesc}
@@ -50,7 +50,7 @@ copyright:
 
 図 2. {{site.data.keyword.Bluemix_notm}} Local プラットフォームのセキュリティー概要
 
-IBM は、リレー ({{site.data.keyword.Bluemix_notm}} Local に付属のデリバリー機能) を使用して、お客様のデータ・センターに対して {{site.data.keyword.Bluemix_notm}} Local のインストール、リモート・モニター、および管理を行います。リレーは、各 {{site.data.keyword.Bluemix_notm}} Local インスタンスに固有の証明書にセキュアに接続します。{{site.data.keyword.Bluemix_notm}} Local およびリレーについて詳しくは、[Bluemix Local](../local/index.html) を参照してください。
+IBM は、リレー ({{site.data.keyword.Bluemix_notm}} Local に付属のデリバリー機能) を使用して、お客様のデータ・センターに対して {{site.data.keyword.Bluemix_notm}} Local のインストール、リモート・モニター、および管理を行います。リレーは、各 {{site.data.keyword.Bluemix_notm}} Local インスタンスに固有の証明書にセキュアに接続します。{{site.data.keyword.Bluemix_notm}} Local およびリレーについて詳しくは、[Bluemix Local](/docs/local/index.html) を参照してください。
 
 ### 機能セキュリティー
 
@@ -140,7 +140,7 @@ HTTP の非活動タイムアウトは 2 分です。</dd>
 <dt>ユーザー・アクセス管理</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} 内では職務分離ガイドラインに従い、ユーザーに細かいアクセス特権を割り当てて、ユーザーが持っているのは、最小特権の原則に基づいた、ジョブの実行に必要なアクセス権限のみであることを保証します。
 
-{{site.data.keyword.Bluemix_notm}} Dedicated および Local 環境内では、割り当てられた管理者が、管理コンソールを使用して、組織内の {{site.data.keyword.Bluemix_notm}} ユーザーの役割および許可を管理できます。詳しくは、『[{{site.data.keyword.Bluemix_notm}} の管理](../admin/adminpublic.html#mng)』を参照してください。
+{{site.data.keyword.Bluemix_notm}} Dedicated および Local 環境内では、割り当てられた管理者が、管理コンソールを使用して、組織内の {{site.data.keyword.Bluemix_notm}} ユーザーの役割および許可を管理できます。詳しくは、『[{{site.data.keyword.Bluemix_notm}} の管理](/docs/admin/adminpublic.html#mng)』を参照してください。
 </dd>
 </dl>
 
@@ -202,11 +202,11 @@ Single Sign On サービスでは、以下に示すように、ユーザーの�
 <dd> Google、Facebook、および LinkedIn によって保守されているユーザー・レジストリー。</dd>
 </dl>
 
-詳しくは、『[Single Sign On 概説 (Getting started with Single Sign On)](../services/SingleSignOn/index.html)』を参照してください。
+詳しくは、『[Single Sign On 概説 (Getting started with Single Sign On)](/docs/services/SingleSignOn/index.html)』を参照してください。
 
 ### Application Security on Cloud
 
-このサービスは、モバイル・アプリおよび Web アプリのセキュリティー分析を提供します。このサービスを使用して、ソース・コードのセキュリティー脆弱性をスキャンできます。詳しくは、『[Application Security on Cloud の概要 (Getting started with Application Security on Cloud)](../services/ApplicationSecurityonCloud/index.html)』を参照してください。
+このサービスは、モバイル・アプリおよび Web アプリのセキュリティー分析を提供します。このサービスを使用して、ソース・コードのセキュリティー脆弱性をスキャンできます。詳しくは、『[Application Security on Cloud の概要 (Getting started with Application Security on Cloud)](/docs/services/ApplicationSecurityonCloud/index.html)』を参照してください。
 
 ### アプリケーション・セキュリティー・テスト用の IBM UrbanCode プラグイン
 
@@ -218,13 +218,13 @@ IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} プラ�
 
 dashDB サービスは、ユーザー認証に組み込み LDAP サーバーを使用します。アプリケーションとデータベースの間の接続は、SSL 証明書によって保護されます。このサービスでは、DB2® 固有の暗号化機能を使用して、デプロイ済みのデータベースおよびデータベース・バックアップを自動的に暗号化します。マスター鍵のローテーションは、90 日ごとに自動で実施されます。
 
-詳しくは、『[dashDB 概説 (Getting started with dashDB)](../services/dashDB/index.html)』を参照してください。
+詳しくは、『[dashDB 概説 (Getting started with dashDB)](/docs/services/dashDB/index.html)』を参照してください。
 
 ### Secure Gateway
 
 Secure Gateway サービスを使用すれば、{{site.data.keyword.Bluemix_notm}} アプリをオンプレミスまたはクラウドにあるリモート・ロケーションにセキュアに接続できるようになります。これにより、セキュア接続が実現し、{{site.data.keyword.Bluemix_notm}} 組織と接続先リモート・ロケーションとの間にトンネルが確立されます。{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは API パッケージを使用して、セキュア・ゲートウェイを構成および作成できます。
 
-詳しくは、『[Secure Gateway 概説 (Getting started with Secure Gateway)](../services/SecureGateway/secure_gateway.html)』を参照してください。
+詳しくは、『[Secure Gateway 概説 (Getting started with Secure Gateway)](/docs/services/SecureGateway/secure_gateway.html)』を参照してください。
 
 ### SIEM (Security Information and Event Management)
 
@@ -359,4 +359,4 @@ FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己
 {: #general}
 
 * [IBM SaaS のセキュリティー](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
-* [Single Sign On 概説 (Getting started with Single Sign On)](../services/SingleSignOn/index.html)
+* [Single Sign On 概説 (Getting started with Single Sign On)](/docs/services/SingleSignOn/index.html)

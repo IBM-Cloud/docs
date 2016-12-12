@@ -35,7 +35,7 @@ CLI 可以设置为使用 HTTPS 代理。要设置 HTTPS 代理，必须创建�
 ## 使用 {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_using_cli}
 
-配置您的环境后，可以开始使用 {{site.data.keyword.openwhisk_short}} CLI 来执行以下操作：
+[配置环境](https://new-console.{DomainName}/openwhisk/cli){: new_window}后，可以开始使用 {{site.data.keyword.openwhisk_short}} CLI 来执行以下操作：
 
 * 在 {{site.data.keyword.openwhisk_short}} 上运行代码片段或操作。请参阅[创建和调用操作](./openwhisk_actions.html)。
 * 使用触发器和规则以支持操作对事件进行响应。请参阅[创建触发器和规则](./openwhisk_triggers_rules.html)。

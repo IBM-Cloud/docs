@@ -1,21 +1,19 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-03-15"
+
 
 ---
 
 {:shortdesc: .shortdesc}
 
 # VCAP サービス
-
-*最終更新日: 2016 年 3 月 15 日*
-{: .last-updated}
 
 
 VCAP_SERVICES 環境変数は、{{site.data.keyword.Bluemix_notm}} でサービス・インスタンスと対話するために使用できる情報が格納された JSON オブジェクトです。

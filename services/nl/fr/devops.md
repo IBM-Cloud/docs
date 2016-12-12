@@ -1,14 +1,13 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 # DevOps
 {: #devops}
-
-*Dernière mise à jour : 9 décembre 2015*
 
 Accélération de la distribution des applications | Choix du codage | Déploiement en toute confiance
 ---- | ---- | ----

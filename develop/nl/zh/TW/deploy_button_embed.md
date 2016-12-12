@@ -70,10 +70,10 @@ iFrame 流程適用於您維持公司品牌之時。當有人按一下您的內�
 <dl class="parml">
 
 <dt class="pt dlterm">repository</dt>
-<dd class="pd">Git 儲存庫，用作複製及部署的來源。這是必要值。</dd>
+<dd class="pd">Git 儲存庫，用來作為複製及部署的來源。這是必要值。</dd>
 	
 <dt class="pt dlterm">app_name</dt>
-<dd class="pd">預設應用程式名稱，用作 iFrame 內 <strong>app_name</strong> 欄位中的指定值。這是選用值。</dd>
+<dd class="pd">預設應用程式名稱，用來作為 iFrame 內 <strong>app_name</strong> 欄位中的指定值。這是選用值。</dd>
 	
     
 <dt class="pt dlterm">region_id</dt>

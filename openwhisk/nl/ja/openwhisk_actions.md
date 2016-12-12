@@ -158,10 +158,31 @@ function main(params) {
   wsk action update hello hello.js
   ```
   {: pre}
+
+3.  パラメーターは、明示的にコマンド・ラインに指定するか、必要なパラメーターが含むファイルを指定することによって指定できます。
+
+  コマンド・ラインを使用して直接パラメーターを渡すには、以下に示すように、`--param` フラグにキー/値のペアを指定します。
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
+
+  パラメーターの内容を含むファイルを使用するには、JSON フォーマットでそれらのパラメーターを含むファイルを作成します。次に、以下に示すように、ファイル名を `param-file` フラグに渡す必要があります。
+
+  parameters.json という名前のサンプル・パラメーター・ファイル
+  ```
+  {
+      "name": "Bernie",
+    "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {
       "payload": "Hello, Bernie from Vermont"
@@ -169,7 +190,7 @@ function main(params) {
   ```
   {: screen}
 
-  パラメーターの名前と値を指定する `--param` オプションと、起動結果のみを表示する `--result` オプションの使用に注意してください。
+  呼び出しの結果のみを表示する `--result` オプションの使用に注意してください。
 
 ### デフォルト・パラメーターの設定
 {: #openwhisk_binding_actions}
@@ -178,10 +199,27 @@ function main(params) {
 
 アクションに毎回すべてのパラメーターを渡すのではなく、特定のパラメーターをバインドすることができます。次の例は、*place* パラメーターをバインドして、アクションがデフォルトで場所「Vermont」を設定するようにします。
  
-1. アクションを更新し、`--param` オプションを使用してパラメーター値をバインドします。
+1. `--param` オプションを使用してパラメーター値をバインドするか、パラメーターを含むファイルを `--param-file` に渡してアクションを更新します。
+
+  デフォルト・パラメーターを明示的にコマンド・ラインに指定するには、以下に示すように、`param` フラグにキー/値のペアを指定してください。
 
   ```
   wsk action update hello --param place Vermont
+  ```
+  {: pre}
+
+  ファイルからパラメーターを渡すには、必要な内容を JSON フォーマットで含むファイルを作成する必要があります。次に、以下に示すように、ファイル名を `-param-file` フラグに渡します。
+
+  parameters.json という名前のサンプル・パラメーター・ファイル
+  ```
+  {
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action update hello --param-file parameters.json
   ```
   {: pre}
 
@@ -202,10 +240,30 @@ function main(params) {
 
 3. `name` 値と `place` 値の両方を渡してアクションを起動します。後者は、アクションにバインドされた値を上書きします。
 
+  `--param` フラグを使用した場合
+
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
+  `--param-file` フラグを使用した場合
+
+  parameters.json ファイルを使用した場合
+  ```
+  {
+    "name": "Bernie",
+    "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -233,7 +291,7 @@ function main(params) {
 
   `main` 関数は Promise を戻し、アクティベーションがまだ完了していないが、今後完了すると見込まれていることを示しています。
 
-  この例では、`setTimeout()` JavaScript 関数は 20 秒待ってからコールバック関数を呼び出します。これは、非同期コードを表し、Promise のコールバック関数の中に入っていきます。
+  この場合、`setTimeout()` JavaScript 関数は、コールバック関数を呼び出す前に 2 秒間待機します。これは、非同期コードを表し、Promise のコールバック関数の中に入っていきます。
 
   Promise のコールバックは、resolve と reject という 2 つの引数を使用します。これらはどちらも関数です。`resolve()` の呼び出しは、Promise を完了し、アクティベーションが正常に実行されたことを示します。
 
@@ -419,8 +477,8 @@ exports.main = myAction;
   {: screen}
 
 最後に、ほとんどの `npm` パッケージは `npm install` で JavaScript ソースをインストールしますが、一部のパッケージはバイナリー成果物をインストールおよびコンパイルすることにも注意してください。現在、アーカイブ・ファイルのアップロードでは、バイナリー依存関係はサポートされず、JavaScript 依存関係のみがサポートされます。アーカイブにバイナリーの依存関係が含まれている場合、アクションの起動が失敗することがあります。
-    
-### アクション・シーケンスの作成
+
+## アクション・シーケンスの作成
 {: #openwhisk_create_action_sequence}
 
 一連のアクションをチェーニングする 1 つのアクションを作成できます。
@@ -577,6 +635,73 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **重要:** Swift アクションは Linux 環境で実行されます。Linux 上の Swift はまだ発展途上であり、
 {{site.data.keyword.openwhisk_short}} は通常は使用可能な最新リリースを使用しますが、それは必ずしも安定しているとは限りません。それに加えて、{{site.data.keyword.openwhisk_short}} で使用される Swift のバージョンは、安定したリリースの MacOS 用 XCode からの Swift のバージョンと不整合である可能性があります。
+
+## Java アクションの作成
+{: #openwhisk_actions_java}
+
+Java アクションの作成プロセスは、JavaScript アクションおよび Swift アクションの作成と似ています。以下のセクションでは、単一 Java アクションの作成と起動、および、そのアクションへのパラメーターの追加について説明します。
+
+Java ファイルをコンパイル、テスト、およびアーカイブするには、[JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) がローカルにインストールされている必要があります。
+
+### アクションの作成と起動
+{: #openwhisk_actions_java_invoke}
+
+Java アクションは、以下とまったく同じシグニチャーを持つ `main` と呼ばれるメソッドを持つ Java プログラムです。
+```
+public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
+```
+{: codeblock}
+
+例えば、以下の内容で `Hello.java` という Java ファイルを作成します。
+
+```
+import com.google.gson.JsonObject;
+public class Hello {
+    public static JsonObject main(JsonObject args) {
+        String name = "stranger";
+        if (args.has("name"))
+            name = args.getAsJsonPrimitive("name").getAsString();
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+    }
+}
+```
+{: codeblock}
+
+次に、以下のように、`Hello.java` をコンパイルして JAR ファイル `hello.jar` を作成します。
+```
+javac Hello.java
+jar cvf hello.jar Hello.class
+```
+{: pre}
+
+**注:** Java ファイルをコンパイルする場合、[google-gson](https://github.com/google/gson) を Java CLASSPATH に指定する必要があります。
+
+以下に示すように、この JAR ファイルから `helloJava` という OpenWhisk アクションを作成できます。
+
+```
+wsk action create helloJava hello.jar
+```
+{: pre}
+
+コマンド・ラインと `.jar` ソース・ファイルを使用する場合、Java アクションを作成していることを指定する必要はありません。ツールは、ファイル拡張子からそのことを判別します。
+
+Java アクションのアクション呼び出しは、Swift アクションおよび JavaScript アクションの場合と同じです。
+
+```
+wsk action invoke --blocking --result helloJava --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
+
+**注:** JAR ファイルに、必要なシグニチャーに一致する main メソッドを持つクラスが複数ある場合、CLI ツールは、`jar -tf` によって報告された最初のクラスを使用します。
 
 
 ## Docker アクションの作成

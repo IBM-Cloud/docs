@@ -6,7 +6,7 @@ copyright:
 
   years: 2016
 
-
+lastupdated: "2016-11-14"
 
 ---
 
@@ -18,9 +18,6 @@ copyright:
 
 # Cloud Foundry-Befehle (cf-Befehle)
 {: #cf}
-
-Letzte Aktualisierung: 20. Oktober 2016
-{: .last-updated}
 
 Die Befehlszeilenschnittstelle (CLI) von Cloud Foundry (cf) stellt Befehle bereit, mit denen Sie Ihre Apps verwalten können. In der nachfolgenden Liste sind die für die App-Verwaltung am häufigsten verwendeten cf-Befehle mit Namen, Optionen, Nutzungen, Voraussetzungen, Beschreibungen und Beispielen aufgeführt. Um alle cf-Befehle und die zugehörigen Hilfeinformationen aufzulisten, verwenden Sie `cf help`. Mit dem Befehl `cf command_name -h` können Sie detaillierte Hilfeinformationen zu einem bestimmten Befehl anzeigen.
 {: shortdesc}
@@ -75,6 +72,7 @@ Verwenden Sie den Index in der folgenden Tabelle als Referenz für die häufig v
  <td>[Skalieren](index.html#cf_scale)</td>
  <td>[services](index.html#cf_services)
  <td>[set-env](index.html#cf_set-env)</td>
+ <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](index.html#cf_stop)</td>
  </tr>
  </tbody>
@@ -657,6 +655,42 @@ cf set-env appname var_name var_value
 Festlegen einer Umgebungsvariablen mit dem Namen `variable_a` und dem Wert `123` für die Anwendung mit dem Namen `my_app`.
 ```
 cf set-env my_app variable_a 123
+```
+{: codeblock}
+
+
+## cf ssh
+{: #cf_ssh}
+
+Meldet Sie sicher bei einem Anwendungscontainer an. SSH greift standardmäßig auf den Container zu, in dem die erste Instanz der Anwendung ausgeführt wird, also die Instanz mit dem Index 0. 
+
+```
+cf ssh
+```
+<strong>Voraussetzungen</strong>: `cf api`, `cf login`, `cf target`
+
+Außerdem müssen Sie Ihre Cloud Foundry-Bereitstellung so konfigurieren, dass der SSH-Zugriff auf Anwendungsinstanzen zulässig ist. Details können Sie auf der Seite [Configuring SSH Access for Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window} nachlesen. 
+
+<strong>Befehlsoptionen</strong>:
+
+<dl>
+<dt>appname</dt>
+<dd>Der Name der Anwendung. Falls SSH zulässig ist, können Sie diese Option verwenden, um eine interaktive SSH-Sitzung mit einer VM zu starten, die als Host der Anwendung dient. </dd>
+<dt>-i</dt>
+<dd>Gibt eine bestimmte Instanz einer Anwendung als Ziel an. </dd>
+<dt>-L</dt>
+<dd>Aktiviert die Weiterleitung für den lokalen Port, die einen Ausgabeport auf Ihrer Maschine an einen Eingabeport auf der Anwendungs-VM bindet. </dd>
+<dt>-N</dt>
+<dd>Gibt an, dass kein ferner Befehl ausgeführt werden soll. </dd>
+<dt>-t, -tt oder -T</dt>
+<dd>Ermöglicht Ihnen die Ausführung einer SSH-Sitzung im Pseudo-TTY-Modus, statt eine Zeilenausgabe am Terminal zu generieren. <dd>
+</dl>
+
+<strong>Beispiele</strong>:
+
+Bei diesem Beispiel wird eine interaktive SSH-Sitzung mit einer VM gestartet, die als Host für eine Anwendung namens `my_app` dient.
+```
+$ cf ssh my_app
 ```
 {: codeblock}
 

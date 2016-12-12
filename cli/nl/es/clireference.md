@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015 2016
 
- 
+lastupdated: "2016-02-17"
+
+
 
 ---
 
@@ -16,10 +18,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # Referencia de la Interfaz de línea de mandatos
-
-
-*Última actualización: 17 de febrero de 2016*
-{: .last-updated}
 
 {{site.data.keyword.IBM}} {{site.data.keyword.Bluemix_short}} utiliza la interfaz de línea de mandatos de
 Cloud Foundry, cf, para modificar apps, instancias de servicio y enlaces de servicio. También puede utilizar la

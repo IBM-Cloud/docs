@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-24"
+
 ---
 
 
@@ -15,9 +16,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}}(bx) 명령
 {: #bluemix_cli}
-
-마지막 업데이트 날짜: 2016년 10월 25일
-{: .last-updated}
 
 버전: 0.4.1
 
@@ -300,8 +298,8 @@ copyright:
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
  <tr>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic stop](index.html#ic_stop)</td>
@@ -311,7 +309,7 @@ copyright:
  <td>[bluemix ic unpause](index.html#unpause)</td>
  <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
@@ -2720,7 +2718,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 로그인한 Bluemix 영역에서 IBM Containers 서비스를 다시 작성합니다. 영역의 원래 할당량은 유지보수됩니다. 
 
-<strong>중요</strong>: 이 명령을 실행할 때 이 영역에 있는 단일 컨테이너와 그룹은 다시 프로비저닝된 영역으로 마이그레이션되지 않고 마이그레이션 프로세스 중에 제거됩니다.  
+<strong>중요</strong>: 이 명령을 실행할 때 이 영역에 있는 단일 컨테이너와 그룹은 다시 프로비저닝된 영역으로 마이그레이션되지 않고 마이그레이션 프로세스 중에 제거됩니다. 
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]

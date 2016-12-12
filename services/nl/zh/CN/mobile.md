@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # 移动
 {: #mobile}
-
-*上次更新时间：2015 年 12 月 9 日*
 
 使用移动服务可构建多平台、本机或混合、Android 和 iOS 应用程序。
 {:shortdesc}

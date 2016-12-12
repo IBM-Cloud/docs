@@ -2,13 +2,13 @@
 	"id": "docs_homepage_platform",
 	"title": "Comment utiliser la plateforme Bluemix",
 	"items": [{
-		"title": "Qu'est-ce que Bluemix ? ",
-		"description": "Une nouvelle façon d'expérimenter le cloud en combinant une infrastructure, des applications et des services. ",
+		"title": "Qu'est-ce que Bluemix ?",
+		"description": "Une nouvelle façon d'expérimenter le cloud en combinant une infrastructure, des applications et des services.",
 		"img": "homepage/images/WhatIsBluemix-icon.svg",
 		"href": "overview/whatisbluemix.html"
 	}, {
 		"title": "Configuration de votre compte",
-		"description": "Mettez à jour votre profil, définissez des notifications relatives à votre compte et à vos dépenses, invitez des membres d'équipe ou gérez des organisations et des espaces. ",
+		"description": "Mettez à jour votre profil, définissez des notifications relatives à votre compte et à vos dépenses, invitez des membres d'équipe ou gérez des organisations et des espaces.",
 		"img": "homepage/images/admin.svg",
 		"href": "admin/adminpublic.html"
 	}, {

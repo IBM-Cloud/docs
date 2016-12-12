@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2015-03-17"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 #管理應用程式
 {: #manageapps}
-
-*前次更新：2015 年 3 月 17 日*
 
 您可以使用 {{site.data.keyword.Bluemix}} 使用者介面中的「儀表板」來檢視及管理應用程式與服務，以及使用配額量規來監視資源用量。
 {:shortdesc}

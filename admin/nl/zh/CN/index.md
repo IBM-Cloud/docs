@@ -4,6 +4,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-25"
 
 
 ---
@@ -18,27 +19,29 @@ copyright:
 # 管理 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
 
-*上次更新时间：2016 年 10 月 20 日*
-{: .last-updated}
 
-如果您具有 {{site.data.keyword.Bluemix}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 的管理员访问权，请转至**管理**页面来管理资源、监视配额使用情况、管理用户许可权、安排升级通知，以及查看安全报告和日志等。您可以通过创建空间并设置[用户角色和许可权](index.html#oc_useradmin)来管理组织；请参阅[管理组织](../admin/orgs_spaces.html)。
+如果您具有 {{site.data.keyword.Bluemix}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 的管理员访问权，请转至**管理**页面来管理资源、监视配额使用情况、管理用户许可权、安排升级通知，以及查看安全报告和日志等。您可以通过创建空间并设置[用户角色和许可权](/docs/admin/index.html#oc_useradmin)来管理组织；请参阅[管理组织](/docs/admin/orgs_spaces.html)。
 {:shortdesc}
 
 *表 1. 用于管理 {{site.data.keyword.Bluemix_notm}} Local 或 Dedicated 实例的管理任务*
-{: #caption}
 
 | 我能执行哪些操作？ | 详细信息 |    
 |----------------|---------|
-|监视系统使用情况 | 单击**管理 &gt; 使用情况**。查看系统信息、监视 CPU 使用情况以及计划使用情况，以便做出最佳业务决策。请参阅[查看使用情况信息](index.html#oc_resource)。|
-|管理目录 | 单击**管理 &gt; 目录管理**可管理哪些服务对用户和组织可视。请参阅[管理目录](index.html#oc_catalog)。|
-|管理组织 | 单击**管理 &gt; 组织管理**可创建组织、监视组织配额以及基于需求快速做出决策。请参阅[管理组织](index.html#oc_organizations)。|
-|创建空间和分配用户角色 | 单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar](../support/images/account_support.svg)，然后选择**管理组织**可在您的组织内创建空间。添加用户并为用户分配组织和空间角色。请参阅[管理组织](../admin/orgs_spaces.html)。 |
-|对管理用户许可权进行管理 | 单击**管理 &gt; 用户管理**可添加用户、除去用户和调整用户许可权。请参阅[管理用户和许可权](index.html#oc_useradmin)。 |
-|查看报告和日志 | 单击**管理 &gt; 报告和日志**可查看针对您实例的安全报告和审计日志。请参阅[查看报告](index.html#oc_report)。 |
-|查看系统信息 | 单击**管理 &gt; 系统信息**可查看系统信息，例如暂挂维护更新数、实例的名称和版本、区域、API URL、CLI URL、LDAP 配置详细信息、组和用户映射、统计信息以及共享域。请参阅[查看系统信息](index.html#oc_system)。 |
-|扩展通知和设置通知预订 | 单击**管理 &gt; 系统信息 &gt; *Number* 个暂挂**。可以使用 Webhook 来与所选 Web 服务集成，以设置某个更新或事件的事件通知预订。请参阅[通知和通知预订](index.html#oc_eventsubscription)。 |
+|监视系统使用情况 | 单击**管理 &gt; 使用情况**。查看系统信息、监视 CPU 使用情况以及计划使用情况，以便做出最佳业务决策。请参阅[查看使用情况信息](/docs/admin/index.html#oc_resource)。|
+|管理目录 | 单击**管理 &gt; 目录管理**可管理哪些服务对用户和组织可视。请参阅[管理目录](/docs/admin/index.html#oc_catalog)。|
+|管理组织 | 单击**管理 &gt; 组织管理**可创建组织、监视组织配额以及基于需求快速做出决策。请参阅[管理组织](/docs/admin/index.html#oc_organizations)。|
+|创建空间和分配用户角色 | 单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar](../support/images/account_support.svg)，然后选择**管理组织**可在您的组织内创建空间。添加用户并为用户分配组织和空间角色。请参阅[管理组织](/docs/admin/orgs_spaces.html)。 |
+|对管理用户许可权进行管理 | 单击**管理 &gt; 用户管理**可添加用户、除去用户和调整用户许可权。请参阅[管理用户和许可权](/docs/admin/index.html#oc_useradmin)。 |
+|查看报告和日志 | 单击**管理 &gt; 报告和日志**可查看针对您实例的安全报告和审计日志。请参阅[查看报告](/docs/admin/index.html#oc_report)。 |
+|查看系统信息 | 单击**管理 &gt; 系统信息**可查看系统信息，例如暂挂维护更新数、实例的名称和版本、区域、API URL、CLI URL、LDAP 配置详细信息、组和用户映射、统计信息以及共享域。请参阅[查看系统信息](/docs/admin/index.html#oc_system)。 |
+|扩展通知和设置通知预订 | 单击**管理 &gt; 系统信息 &gt; *Number* 个暂挂**。可以使用 Webhook 来与所选 Web 服务集成，以设置某个更新或事件的事件通知预订。请参阅[通知和通知预订](/docs/admin/index.html#oc_eventsubscription)。 |
+
+<!-- staging only for WoW start -->
 
 **提示**：{{site.data.keyword.Bluemix_notm}} 控制台中的“基础架构”仪表板仅在 {{site.data.keyword.Bluemix_notm}} Public 环境中的链接帐户中可用。
+
+
+<!-- staging only for WoW end -->
 
 
 ## 通知和通知预订
@@ -51,7 +54,6 @@ copyright:
 您可以查看有关您本地或专用环境的通知，以监视您环境的状态。复查下表以获取有关不同类型通知的信息以及每一个通知类型的发布位置。
 
 *表 2. 事件类型和通知方法*
-{: #caption}
 
 | **事件类型** | **通知方法** |       
 |-----------------|-------------------|
@@ -89,7 +91,6 @@ copyright:
   * 单击**保存并关闭**，以将预订保存到通知预订列表，然后返回上一页。
 
 *表 3. 用于有关维护更新或事件的电子邮件通知预订的字段*
-{: #caption}
 {: #emailnotmaintinc}
 
 | **字段** | **描述** |
@@ -105,7 +106,6 @@ copyright:
 | 描述 | 添加要创建的预订的唯一描述。 |
 
 *表 4. 用于有关阈值的电子邮件通知预订的字段*
-{: #caption}
 {: #emailnottrhesh}
 
 | **字段** | **描述** |
@@ -127,7 +127,6 @@ copyright:
 如果在达到阈值时不想等 6 小时再发送通知，在填完表单上的字段后，可以单击**保存并测试**以保存通知并使用样本数据来测试通知。
 
 *表 5. 用于有关维护或事件的 Webhook 通知预订的表单字段*
-{: #caption}
 {: #webhooknotsub}
 
 | **字段** | **描述** |
@@ -153,7 +152,6 @@ copyright:
  |
 
 *表 6. 用于有关阈值的 Webhook 通知预订的表单字段*
-{: #caption}
 {: #webhooknotthresh}
 
 | **字段** | **描述** |
@@ -173,7 +171,6 @@ copyright:
 | URL | 输入要连接到 Web Service 的 URL。 |
 
 *表 7. 维护和事件有效内容部分值*
-{: #caption}
 {: #payload}
 
 | **IBM 值** | **描述** | **事件类型** |
@@ -191,7 +188,6 @@ copyright:
 | {{type}} | 更新或事件 | 维护更新和事件 |
 
 *表 8. 阈值有效内容部分值*
-{: #caption}
 {: #threshpayload}
 
 | **IBM 值** | **描述** | **事件类型** |
@@ -292,7 +288,7 @@ copyright:
 
 ### 暂挂系统更新
 
-在“更新”部分中，可以查看需要您执行操作的暂挂更新通知数。可能会看到两种类型的维护更新：
+在“更新”部分中，可以查看需要您执行操作的暂挂更新通知数。可能会看到两种类型的暂挂更新：
 
 <dl>
 <dt>非中断性更新</dt>
@@ -434,8 +430,6 @@ copyright:
 下表显示了为 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated 生成的安全报告的列表。大多数报告会每天生成。但是，加密和密钥管理事件报告是每月生成一次。所有报告都会在管理控制台中保留 90 天，以供您检索。在 90 天后，报告在 {{site.data.keyword.Bluemix_notm}} 中可根据请求脱机提供，这一时间为 9 个月。报告总计可供检索的时间最长为 1 年。
 
 *表 9. 安全报告列表*
-{: #caption}
-
 | **类别** | **报告** | **描述** |      
 |-----------------|-------------------|---------------------|
 | 防火墙 | 防火墙登录 | 与管理员登录到 Vyatta 防火墙设备相关的事件。 |
@@ -608,7 +602,6 @@ copyright:
 以下各表可以帮助您填写 JSON 文件。
 
 *表 10. JSON 字段*
-{: #caption}
 
 | **JSON 字段** | **描述** |
 |-----------------|-----------------|
@@ -620,7 +613,6 @@ copyright:
 |plans | 服务套餐定义的数组。请参阅下表 [Plan 字段](index.html#planfields)，以获取更多信息。 |
 
 *表 11. Metadata 字段*
-{: #caption}
 {: #metadatafields}
 
 | **Metadata 值** | **描述** |
@@ -677,7 +669,6 @@ copyright:
 ![“目录”中的服务详细信息。](images/metadata.png "Bluemix“目录”的服务详细信息视图")
 
 *表 12. Plan 字段*
-{: #caption}
 {: #planfields}
 
 | **Plan 值** | **描述** |
@@ -689,7 +680,6 @@ copyright:
 |metadata（可选）    | 服务套餐元数据，在 {{site.data.keyword.Bluemix_notm}}“目录”和价格表中显示。metadata 字段是可选字段。可以在 metadata 字段内指定以下字段：displayName, type（subscription、reservable 或 planDetails）、bullets、costs（unitId、unit 或 partNumber）和 paidOnly。请参阅下表 [Plan metadata 字段](index.html#planmetadata)，以获取更多信息。 |
 
 *表 13. Plan metadata 字段*
-{: #caption}
 {: #planmetadata}
 
 | **Plan metadata 值** | **描述** |
@@ -899,8 +889,6 @@ copyright:
 可以为用户分配以下具有特定访问级别（读或写）的许可权，使用户可以在管理控制台中完成特定任务：
 
 *表 14. 许可权*
-{: #caption}
-
 | **用户许可权** | **描述** |       
 |-----------------|-------------------|
 | Superuser | **Superuser** 许可权设置为**打开**的用户可以编辑其他用户的许可权。如果您打开该许可权，那么它会自动对所有其他许可权启用完全访问权。除了针对此表中每个许可权所概括的任务之外，它们还可以设置通知预订，以直接获取有关维护或事件的警报、安排维护、对控制台组件运行验证检查，以及为环境创建组织和空间。此许可权等同于管理控制台的管理员 (admin) 角色。  |
@@ -929,7 +917,9 @@ copyright:
 
 要登录到管理控制台，请运行以下命令：
 
-`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool`
+```
+curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -948,6 +938,7 @@ copyright:
 </dl>
 
 以下示例显示了此命令的输出：
+
 ```
 {
     "message": "Logged in",
@@ -964,7 +955,9 @@ copyright:
 
 添加用户时，必须指定组织。可以使用 `Admin` REST API 来列出所有组织。您必须拥有具有 **Read** 访问权的 **Users** 许可权，才能列出组织。要列出所有组织，请运行以下命令：
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1004,7 +997,9 @@ copyright:
 
 您可以使用 `Admin` REST API 来列出已注册的用户，以确定用户是否已添加到 {{site.data.keyword.Bluemix_notm}} 环境。您必须拥有具有 **Read** 访问权的 **Users** 许可权，才能列出已注册的用户。要列出所有用户，请运行以下命令：
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1089,7 +1084,9 @@ PUT console.<subdomain>.bluemix.net/codi/env_config/allow_managers?flag=<TRUE or
 
 您需要使用 JSON 文件来提供信息。
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1177,7 +1174,9 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 
 要除去用户，必须提供用户的用户标识。运行以下命令：
 
-`curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>`
+```
+curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1207,6 +1206,307 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
  <
  ```
 {: screen}
+
+## 用于度量值的 API（试验性）
+{: #envappmetricsapi}
+
+您可以使用两个试验性 API 来收集有关环境或应用程序的度量值。这两个 API 都会返回在指定的时间内所请求度量值的数据点数组。
+
+**注**：
+
+1. 用户每小时最多可以对度量值发起 200 个 API 请求。
+2. 每个 API 请求最多可返回 200 个数据点。如果有更多数据可用，将在响应中提供 URL，以用于装入下一组数据。
+
+## 收集有关环境的度量值 
+
+您可以使用试验性环境 API 来收集指定时间段内的高级别环境信息。这将返回指定时间内的可用数据点。数据大约每小时记录一次。例如，如果请求 6 个小时的环境 CPU 数据，那么响应将包含请求 6 个小时内每个小时的 CPU 数据。
+
+### 环境度量值查询参数
+
+使用以下查询参数可以收集 CPU、磁盘、内存、网络和应用程序的度量值：
+
+<dl class="parml">
+<dt class="pt dlterm">metric</dt>
+<dd class="pd">以下一个或多个值，各值之间用逗号分隔：“memory”、“disk”、“cpu”、“network”和“apps”。</dd>
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">开始返回数据的最早时间点。如果未指定 startTime，那么将包含最早的可用数据点。例如，要收集下午 2 点到 5 点的数据，请将 startTime 指定为 2 PM。</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">结束返回数据的最晚时间点。如果未指定 endTime，那么将使用最新的数据点。例如，要收集下午 2 点到 5 点的数据，请将 endTime 指定为 5 PM。</dd>
+<dt class="pt dlterm">sort</dt>
+<dd class="pd">数据的返回顺序。有效值为“asc”（升序）和“desc”（降序）。缺省值为降序，即首先返回最新的数据。</dd>
+</dl>
+
+### 环境度量值数据格式
+
+以下各部分提供了数据格式。
+
+ * 要收集有关内存使用情况的数据记录，请使用以下数据格式：
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "memory": {
+    "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
+    "memory_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "47"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "51"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "45"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "43"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * 要收集有关磁盘使用情况的数据记录，请使用以下数据格式：
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "disk": {
+    "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
+    "disk_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "14"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "12"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * 要收集有关 CPU 使用情况的数据记录，请使用以下数据格式：
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "cpu": {
+    "average_percent_cpu_used": 27.288461538461544,
+    "cpu_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "sys_percent": "8.4",
+        "user_percent": "2.7",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "sys_percent": "7.4",
+        "user_percent": "2.4",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "sys_percent": "5.3",
+        "user_percent": "1.9",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "sys_percent": "8.2",
+        "user_percent": "22.6",
+        "wait_percent": "0.0"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * 要收集有关网络的数据记录，请使用以下数据格式：
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "network": {
+    "datapower": {
+    "response_times": [
+      {
+        "proxy": "custom_certificates",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "90",
+        "one_minute_ms": "89",
+        "ten_minutes_ms": "83",
+        "one_hour_ms": "85",
+        "one_day_ms": "95"
+      }
+      ],
+        "transactions": [
+      {
+        "proxy": "custom_domains",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "697",
+        "one_minute_ms": "747",
+        "ten_minutes_ms": "802",
+        "one_hour_ms": "794",
+        "one_day_ms": "730"
+      }
+      ],
+        "bandwidth": {
+        "in_mbps": 10855,
+        "out_mbps": 38090
+      }
+  }
+}
+```
+{: screen}
+
+* 要收集有关应用程序的数据记录，请使用以下数据格式：
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "apps": {
+    "count": 1406,
+    "allocation": {
+      "memory_gb": 571.8,
+      "disk_gb": 1204
+    }
+  }
+}
+```
+{: screen}
+
+### 环境度量值响应格式
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+## 收集有关应用程序的度量值
+
+所有应用程序的数据大约每小时记录一次。对特定度量值的请求会返回指定时间段内每次数据采样中的所有应用程序的信息，信息按请求的度量值降序排列。例如，在具有 200 个应用程序的环境中，请求 6 小时时间段内按 CPU 列出的所有应用程序，这样将返回 1200 个记录，每次返回 200 个。
+
+要减少在请求的时间段内每次数据采样返回的信息量，可以指定 count 选项。使用上面的示例，并添加值为 5 的 count 选项时，将返回 30 个记录，这表示每次数据采样中按 CPU 列出的排名前 5 位的应用程序。
+
+### 应用程序端点 
+
+您可以使用以下端点来调用此 API 命令：
+* /api/v1/app/cpu/physical 
+* /api/v1/app/memory/physical
+* /api/v1/app/memory/reserved
+* /api/v1/app/disk/physical
+* /api/v1/app/disk/reserved
+
+### 应用程序查询参数
+ 
+使用以下查询参数可收集应用程序的度量值：
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">开始返回数据的最早时间点。如果未指定 startTime，那么将包含最早的可用数据点。例如，要收集下午 2 点到 5 点的数据，请将 startTime 指定为 2 PM。</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">结束返回数据的最晚时间点。如果未指定 endTime，那么将使用最新的数据点。例如，要收集下午 2 点到 5 点的数据，请将 endTime 指定为 5 PM。</dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">每次数据采样中返回的记录数。
+</dd>
+</dl>
+
+### 应用程序响应格式
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+返回的每个文档都表示在每次数据采样中，在请求的时间点，所请求的应用程序的度量值。
+
 
 ## 定制服务 API
 {: #servicebrokerapi}
@@ -1285,19 +1585,14 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {"name": "Service broker's name",
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
+    "name": "Service broker's name",
     "broker_url": "https://provision-broker.comp.bluemix.net/bmx/provisioning/brokers/2063580064-8f23230c-7f36-4ce5-a298-2ab4108f1120",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "49f3adcc-ecc2-46fa-83c1-03322f04b3b1",
-    "created_at": "2015-12-07T19:51:50Z",
-    "updated_at": null,
-    "url": "/v2/service_brokers/49f3adcc-ecc2-46fa-83c1-03322f04b3b1"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
+
 ```
 {: screen}
 
@@ -1308,14 +1603,15 @@ Content-Type: application/json
 ### 路径
 {: #updateroute}
 
-`PUT /codi/v1/serviceBrokers`
+```
+PUT /codi/v1/serviceBrokers
+```
 {: screen}
 
 ### 请求
 {: #updaterequest}
 
 *表 16. 字段*
-{: #caption}
 
 | **名称** | **描述** |
 |-----------------|-------------------|
@@ -1365,18 +1661,12 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {"name": "Service Broker's name",
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
+    "name": "Service Broker's name",
     "broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-d11bdd84-7556-469f-858d-2098b531f7f2",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "2cbdb812-d37f-443b-894a-a96de31e5c38",
-    "created_at": "2015-12-07T20:11:08Z",
-    "updated_at": "2015-12-07T20:11:19Z",
-    "url": "/v2/service_brokers/2cbdb812-d37f-443b-894a-a96de31e5c38"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
 ```
 {: screen}
@@ -1386,7 +1676,6 @@ Content-Type: application/json
 要删除服务，请使用以下 API 和代码示例。
 
 *表 17. 参数*
-{: #caption}
 
 | **名称** | **描述** |
 |-----------------|-------------------|
@@ -1459,7 +1748,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 
 要查看命令的列表，请运行以下命令：
 
-`cf plugins`
+```
+cf plugins
+```
 {: codeblock}
 
 有关命令的更多帮助，请使用 `-help` 选项。

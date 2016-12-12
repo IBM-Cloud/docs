@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
- 
+lastupdated: "2016-10-24"
+
 
 ---
 
@@ -18,9 +19,6 @@ copyright:
 # Interface de ligne de commande et outils de développement
 {: #cli}
 
-*Dernière mise à jour : 25 octobre 2016*
-{: .last-updated}
-
 Avec {{site.data.keyword.Bluemix_short}}, vous avez accès à des outils puissants, tels qu'une interface de ligne de commande (CLI) unifiée et des plug-in CLI. Chacun de ces téléchargements d'interface de ligne de commande est accessible afin d'optimiser votre expérience avec {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
@@ -28,7 +26,7 @@ Avec {{site.data.keyword.Bluemix_short}}, vous avez accès à des outils puissan
 {: #downloads}
 
 Téléchargez et installez des interfaces de ligne de commande pour votre expérience
-{{site.data.keyword.Bluemix_notm}}. 
+{{site.data.keyword.Bluemix_notm}}.
 
 L'outil de ligne de commande cf Cloud Foundry est un élément prérequis pour tous les outils d'interface de ligne de commande
 {{site.data.keyword.Bluemix_notm}}. L'outil de ligne de commande
@@ -73,7 +71,7 @@ bluemix plugin install nom_plug-in -r bluemix-bx
 
 | *{{site.data.keyword.activedeployshort}} interface de ligne de commande* | *{{site.data.keyword.autoscaling}} interface de ligne de commande* | *Network Security Groups* |
 |-----|-----|-----|
-| Nom du plug-in : active-deploy <br> [Afficher la documentation](../services/ActiveDeploy/cli.html#cli) | Nom du plug-in : auto-scaling <br> [Afficher la documentation](./plugins/auto-scaling/index.html) |  Nom du plug-in : nsg <br> [Afficher la documentation](./plugins/networksecuritygroups/index.html)  |
+| Nom du plug-in : active-deploy <br> [Afficher la documentation](/docs/services/ActiveDeploy/cli.html#cli) | Nom du plug-in : auto-scaling <br> [Afficher la documentation](./plugins/auto-scaling/index.html) |  Nom du plug-in : nsg <br> [Afficher la documentation](./plugins/networksecuritygroups/index.html)  |
 
 
 ### Etendez votre interface de ligne de commande Cloud Foundry : cf
@@ -96,9 +94,9 @@ cf install-plugin nom_plug-in -r bluemix-cf
 {: codeblock}
 
 
-| *Active Deploy* | *Console d'administration* | 
+| *Active Deploy* | *Console d'administration* |
 |-----------------|-----------------|
-| Nom du plug-in : active-deploy <br>  [Afficher la documentation](../services/ActiveDeploy/cli.html#cli) |  Nom du plug-in : bluemix-admin <br> [Afficher la documentation](../cli/plugins/bluemix_admin/index.html) | 
+| Nom du plug-in : active-deploy <br>  [Afficher la documentation](/docs/services/ActiveDeploy/cli.html#cli) |  Nom du plug-in : bluemix-admin <br> [Afficher la documentation](/docs/cli/plugins/bluemix_admin/index.html) |
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *réseau privé virtuel (VPN)* |
 |-----------------|-----------------|
@@ -112,4 +110,4 @@ vous préférez.
 
 | *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* |
 |-------------|----------|----------|----------|
-| [Plug-in Egit Eclipse](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [Plug-in RTC Eclipse](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Plug-in Liberty Eclipse](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plug-in Eclipse](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plug-in Rules Designer Eclipse](../services/rules/index.html#rulov002) |
+| [Plug-in Egit Eclipse](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [Plug-in RTC Eclipse](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Plug-in Liberty Eclipse](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plug-in Eclipse](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plug-in Rules Designer Eclipse](/docs/services/rules/index.html#rulov002) |

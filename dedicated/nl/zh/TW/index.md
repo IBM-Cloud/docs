@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-26" 
+lastupdated: "2016-11-18" 
 
 ---
 
@@ -37,16 +37,15 @@ lastupdated: "2016-10-26"
 |選用 | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} 將 {{site.data.keyword.APIM}} 及 IBM StrongLoop 整合成單一供應項目，提供綜合性解決方案來建立、執行、管理及強制執行 API 和微服務。 |
 |選用 | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} 提供對於始終處於開啟狀態之完整受管理 NoSQL JSON 資料層的存取。此服務與 CouchDB 相容，而且可透過方便使用的 HTTP 介面來存取，可用於行動及 Web 應用程式模型。 |
 |選用 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | 在「{{site.data.keyword.Bluemix_notm}} 專用」上執行 Docker 容器。容器是虛擬軟體物件，其中包含應用程式執行所需的所有元素。容器具有資源隔離及配置的優點，而且比虛擬機器（舉例來說）更容易攜帶且更具效率。如需硬體需求的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 專用及 Bluemix 本端中的 IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)。|
+| 選用 | [{{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) | 使用「{{site.data.keyword.contdelivery_short}} 專用」來自動進行建置、單元測試、部署及其他作業。透過豐富的 Web 型 IDE 編輯及推送程式碼。建立工具鏈來啟用工具整合，以支援開發、部署及操作作業。 |
 |選用 | [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/dashDB.html) | 使用 dashDB 來儲存關聯式資料，包括地理空間資料之類的特殊類型。然後，使用 SQL 或進階內建分析（例如預測分析及資料採礦、使用 R 的分析和地理空間分析）分析該資料。 |
 |選用 | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | 此服務提供記憶體內的資料網格，它支援應用程式的分散式快取情境。包含 50 GB 的記憶體內快取。 |
 | 選用 | [專用 GitHub Enterprise](/docs/services/ghededicated/index.html) | {{site.data.keyword.ghe_long}} 是 GitHub Enterprise 的 IBM Cloud 管理之完整受管理版本，可提供開發人員所喜歡的社交經驗。此服務目前專用於「{{site.data.keyword.Bluemix_notm}} 專用」環境。 |
-| 選用 | [{{site.data.keyword.deliverypipeline}}（測試版）](/docs/services/DeliveryPipeline/index.html) | IBM {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} 服務會自動化 {{site.data.keyword.Bluemix_notm}} 專案的持續部署。 |
 | 選用（測試版） | [記載](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | 在 {{site.data.keyword.Bluemix_notm}} 使用者介面中提供 Cloud Foundry 應用程式的日誌，並在 Kibana 中提供可搜尋的日誌和儀表板。 |
 |選用 | [{{site.data.keyword.messagehub}}](/docs/services/MessageHub/index.html#messagehub) | {{site.data.keyword.messagehub}} 是一個可擴充、分散式、高傳輸量訊息匯流排，以聯合您的內部部署與外部部署技術。{{site.data.keyword.messagehub}} 是以 Apache Kafka 為基礎，後者是一個快速、可擴充及可延續的即時傳訊引擎。 |
 |選用 | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} 是一種服務，可用來將通知傳送至 iOS 及 Android 裝置。可以將通知目標設為所有應用程式使用者或一組使用標籤的特定使用者和裝置。您可以管理裝置、標籤及訂閱。您也可以使用 SDK（軟體開發套件）及「具象狀態傳輸 (REST)」應用程式介面 (API) 來進一步開發用戶端應用程式。 |
 |選用 | [{{site.data.keyword.SecureGateway}}](/docs/services/SecureGateway/secure_gateway.html) | {{site.data.keyword.SecureGateway}} 服務使您能夠以安全的方式將 {{site.data.keyword.Bluemix_notm}} 應用程式連接至內部部署或雲端中的遠端位置。  |
 |選用 | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 為了提高備援，{{site.data.keyword.sescashort}} 會提供快取中所儲存階段作業的抄本。因此，電壓過低或作業中斷時，用戶端應用程式仍然保有快取中階段作業的存取權。此服務支援 Web 及行動應用程式的階段作業快取情境。 |
-| 內含 | [工具鏈（測試版）](/docs/toolchains/toolchains_overview.html) | 工具鏈是一組支援開發、部署及操作作業的工具整合。「專用」環境中提供工具鏈，但您可用的工具整合取決於如何在特定環境上設定 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}}。 |
 |選用 | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | 此服務可讓您的應用程式與已連接的裝置、感應器及閘道進行通訊，並且耗用這些項目所收集的資料。基本供應項目允許在專用環境內執行專用版本的 {{site.data.keyword.iot_full}}，其容量為 100,000 台同時連接的裝置或應用程式，以及 1.6 TB 的資料交換。 |
 
 您可以選購一些元件來擴充及延伸您的資源和服務容量。聯絡銷售團隊，即可購買所有這些元件；如需聯絡業務代表的相關資訊，請移至[與我們聯絡](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)。若要增加服務的方案，您可以從型錄的服務磚選取方案。
@@ -69,11 +68,10 @@ lastupdated: "2016-10-26"
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 2.8.500 | 支援「線上交易處理 (OLTP)」工作負載的專用實例，具有 8GB RAM 及 500 GB 空間來放置資料及日誌，並且包括一部額外的「待命」伺服器來取得高可用性。 |
 |IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | 支援「線上交易處理 (OLTP)」工作負載的專用實例，具有 128GB RAM 及 1.4 TB SSD 儲存空間來放置資料及日誌，並且包括一部額外的「待命」伺服器來取得高可用性。 |
 |{{site.data.keyword.Bluemix_notm}} 專用社群服務  | 此環境允許部署及執行社群服務，每一個社群服務最多有 50 個實例。  |
-|{{site.data.keyword.Bluemix_notm}} 專用 {{site.data.keyword.cloudant}} 叢集實例 | 此選用元件包括您負責提供基礎架構的 3 節點叢集，以及根據特定需求來決定儲存空間及運算容量。{{site.data.keyword.cloudant}} 提供對於始終處於開啟狀態之完整受管理 NoSQL JSON 資料層的存取。此服務與 CouchDB 相容，而且可透過方便使用的 HTTP 介面來存取，可用於行動及 Web 應用程式模型。 |
+|{{site.data.keyword.Bluemix_notm}} 專用 {{site.data.keyword.cloudant}} 叢集實例 | 此選用元件包括您負責提供基礎架構的 3 節點叢集，以及儲存空間及運算容量（您可以根據您的特定需要來決定）。{{site.data.keyword.cloudant}} 提供對於始終處於開啟狀態之完整受管理 NoSQL JSON 資料層的存取。此服務與 CouchDB 相容，而且可透過方便使用的 HTTP 介面來存取，可用於行動及 Web 應用程式模型。 |
 |IBM {{site.data.keyword.Bluemix_notm}} 專用 {{site.data.keyword.messagehub}} | 提供發佈和訂閱傳訊的環境，每個分割區可提供高達 10 GB 的傳訊。訊息會保留以供使用最多 24 小時。 |
 |IBM Bluemix 專用 {{site.data.keyword.mobilepushshort}} | 此環境允許部署及執行每秒可接受 300 個要求的 {{site.data.keyword.mobilepushshort}} 實例。 |
 |{{site.data.keyword.iot_short}} 專用漸進式增加 | 此環境增加允許在專用環境內執行專用版本的 {{site.data.keyword.iot_short}}，其容量為 100,000 台同時連接的裝置或應用程式，以及 0.5 TB 的資料交換。 |
-|IBM {{site.data.keyword.Bluemix_notm}} 專用 {{site.data.keyword.deliverypipeline}} | IBM {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} 服務會自動化 {{site.data.keyword.Bluemix_notm}} 專案的持續部署。 |
 
 *表 3. 選購元件：平台附加程式*
 
@@ -214,7 +212,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 <li>您可以開始使用您的專用實例來回應警示，該實例由 IBM 作業中心的團隊進行監視。</li>
 </ol>
 
-在設定 {{site.data.keyword.Bluemix_notm}} 實例之後，您可以使用「管理」頁面來監視和管理 {{site.data.keyword.Bluemix_notm}} 實例。如需相關資訊，請參閱[管理 {{site.data.keyword.Bluemix_notm}} 本端和專用](/docs/admin/index.html#mng)。如需升級和維護的相關資訊，請參閱[維護專用實例](index.html#maintaindedicated)。
+在設定 {{site.data.keyword.Bluemix_notm}} 實例之後，您可以使用「管理」頁面來監視和管理 {{site.data.keyword.Bluemix_notm}} 實例。如需相關資訊，請參閱[管理 {{site.data.keyword.Bluemix_notm}} 本端及專用](/docs/admin/index.html#mng)。如需升級和維護的相關資訊，請參閱[維護專用實例](index.html#maintaindedicated)。
 
 ##角色及責任
 {: #rolesresponsibilities}
@@ -231,7 +229,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取「{{site.data.keyw
 <dt>**規範管理者**</dt>
 <dd>與 IBM 業務代表一起選取符合您安全需求的拓蹼及部署選項。指派給這個角色的人員會與 IBM 規範顧問一起確定哪些部署模式能達到規範目標。</dd>
 <dt>**網路專家**</dt>
-<dd>與 IBM 業務代表一起訂定 {{site.data.keyword.Bluemix_notm}} 部署的網路計劃。指派給這個角色的人員會檢查 IBM 所需的必要網路規格，並與 IBM 一起訂定實作計劃。安裝及驗證階段結束時，指派給這個角色的人員會進行核准，確認網路配置符合組織標準。</dd>
+<dd>與 IBM 業務代表一起訂定 {{site.data.keyword.Bluemix_notm}} 部署的網路方案。指派給這個角色的人員會檢查 IBM 所需的必要網路規格，並與 IBM 一起訂定實作計劃。安裝及驗證階段結束時，指派給這個角色的人員會進行核准，確認網路配置符合組織標準。</dd>
 <dt>**DevOps 聯絡人**</dt>
 <dd>與 IBM 業務代表一起計劃並套用 {{site.data.keyword.Bluemix_notm}} 平台、服務及運行環境所需的維護更新作業。指派給這個角色的人員也會與 IBM 業務代表一起配置您的「{{site.data.keyword.Bluemix_notm}} 專用」實例。</dd>
 </dl>
@@ -356,24 +354,24 @@ IBM 會針對「狀態」頁面上每一個維護時間範圍所計劃的變更�
 如果在維護更新之後發生報告過的問題，請與「{{site.data.keyword.Bluemix_notm}} 支援中心」協議容許 IBM 回復更新是否最符合您的權益。達成協議之後，IBM 會回復更新，以將環境還原至前一個狀態。
 
 
-## {{site.data.keyword.Bluemix_notm}} 專用的偶發事件回應及支援
+## {{site.data.keyword.Bluemix_notm}} 專用的突發事件回應及支援
 {: #incidentresponse}
 
 ### 客戶偵測到的問題
 
 如果您識別到需要 IBM 支援中心及作業注意的問題，則可以使用數種不同的方法來聯絡支援中心。如需如何聯絡支援中心的相關資訊，請參閱[聯絡支援中心](/docs/support/index.html#contacting-bluemix-support-local)。根據問題，您及（或）IBM 會一起合作來修正問題。
 
-### IBM 偵測到的重要偶發事件
+### IBM 偵測到的重要突發事件
 
-重要偶發事件包含緊急、非預期的服務中斷，以及影響環境或使用者的穩定性問題。如果 IBM 在您的環境內偵測到重要偶發事件，則會透過**狀態**頁面上的通知來通知您。您也可以檢查「狀態」頁面，以尋找平台或您服務的任何已知問題。如需「狀態」頁面的相關資訊，請參閱[檢視狀態](/docs/admin/index.html#oc_status)。
+重要突發事件包含緊急、非預期的服務中斷，以及影響環境或使用者的穩定性問題。如果 IBM 在您的環境內偵測到重要突發事件，則會透過**狀態**頁面上的通知來通知您。您也可以檢查「狀態」頁面，以尋找平台或您服務的任何已知問題。如需「狀態」頁面的相關資訊，請參閱[檢視狀態](/docs/admin/index.html#oc_status)。
 
 如果您要整合您的通知與支援 Webhook 的 Web 服務，請參閱[通知及事件訂閱](/docs/admin/index.html#oc_eventsubscription)，以取得如何延伸通知功能的相關資訊。
 
-![偶發事件回應程序](/docs/local/images/incidentresponseprocess.png "偶發事件回應程序")
+![突發事件回應程序](/docs/local/images/incidentresponseprocess.png "突發事件回應程序")
 
-*圖 2. 偶發事件回應程序*
+*圖 2. 突發事件回應程序*
 
-根據問題，您及（或）IBM 會一起合作來修正問題。如果您有關於偶發事件的問題，或者需要 IBM 業務代表來協助您解決問題，則可以開啟支援問題單。如需如何聯絡支援中心的相關資訊，請參閱[聯絡支援中心](/docs/support/index.html#contacting-bluemix-support-local)。
+根據問題，您及（或）IBM 會一起合作來修正問題。如果您有關於突發事件的問題，或者需要 IBM 業務代表來協助您解決問題，則可以開啟支援問題單。如需如何聯絡支援中心的相關資訊，請參閱[聯絡支援中心](/docs/support/index.html#contacting-bluemix-support-local)。
 
 **附註**：我們會 24 小時全年無休地監視嚴重性 1 支援問題單。其他問題單的處理時間是從星期日晚上 10:00 GMT 到星期六凌晨 12:00 GMT。如需支援問題單嚴重性以及與支援中心合作的相關資訊，請參閱<a href="/docs/support/index.html#contacting-bluemix-support-local">聯絡支援中心</a>。
 

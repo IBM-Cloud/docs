@@ -1,20 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 
 # Security
 {: #security}
 
-*Última atualização: 9 de dezembro de 2015*
-
-Com esses serviços de segurança, é possível proteger o acesso a aplicativos e cargas de trabalho e varrer aplicativos quanto a vulnerabilidades. Também é possível integrar controles de segurança no gerenciamento de dados e serviços de Big Data. 
+Com esses serviços de segurança, é possível proteger o acesso a aplicativos e cargas de trabalho e varrer aplicativos quanto a vulnerabilidades. Também é possível integrar controles de segurança no gerenciamento de dados e serviços de Big Data.
 {:shortdesc}
 
 

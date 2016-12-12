@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-03"
  
 
 ---
@@ -18,9 +18,10 @@ lastupdated: "2016-10-27"
 # 升级和联合 {{site.data.keyword.Bluemix_notm}} 与 SoftLayer 缴费账户
 {: #softlayerlink}
 
-如果您拥有 {{site.data.keyword.Bluemix_notm}} 试用帐户，并且要访问“基础架构”仪表板，那么必须升级到 {{site.data.keyword.Bluemix_notm}}“现买现付”帐户。
+如果您拥有 {{site.data.keyword.Bluemix_notm}} 试用帐户，并且要访问“基础架构”仪表板，那么必须升级到 {{site.data.keyword.Bluemix_notm}}“现买现付”帐户。如果要使用在试用帐户内不可用的其他收费资源，或者试用帐户已到期，那么也必须升级。 
 
-您可以通过将现有 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 缴费账户链接在一起，以联合这两个帐户。链接帐户时，您将通过 {{site.data.keyword.Bluemix_notm}} 同时对 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 资源进行记帐。{:shortdesc}
+您可以通过将现有 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 缴费账户链接在一起，以联合这两个帐户。链接帐户时，您将通过 {{site.data.keyword.Bluemix_notm}} 同时对 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 资源进行记帐。
+{:shortdesc}
 
 ## 升级到 {{site.data.keyword.Bluemix_notm}}“现买现付”帐户
 {: #upgradetopayg}
@@ -63,6 +64,8 @@ lastupdated: "2016-10-27"
 您必须是 SoftLayer 帐户中的主用户，才能链接帐户。
 
 链接帐户之后，SoftLayer 全局标题中即可使用**转至 {{site.data.keyword.Bluemix_notm}}** 链接。单击此链接可带您进入 {{site.data.keyword.Bluemix_notm}} 登录页面。此外，**SoftLayer** 链接现在可在 {{site.data.keyword.Bluemix_notm}} 标题中使用。单击该链接可在新窗口中带您进入 {{site.data.keyword.slportal}} 的主页。
+
+{{site.data.keyword.Bluemix_notm}} 基础架构产品连接到一个三层网络，对公共、专用和管理流量进行分段处理。客户的 {{site.data.keyword.Bluemix_notm}} 帐户上的基础架构产品可在专用网络上免费相互传输数据。基础架构产品（例如，裸机服务器、虚拟服务器和云存储器）在公用网络上连接到 {{site.data.keyword.Bluemix_notm}}“目录”中的其他应用程序和服务，如 Watson 服务、容器或运行时。这两种类型的产品之间的数据传输按标准公用网络带宽费率计量并收费。
 
 ## 链接帐户时 {{site.data.keyword.Bluemix_notm}} 使用情况的信用值
 {: #slcredit}

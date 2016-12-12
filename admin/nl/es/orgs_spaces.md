@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # Gestión de organizaciones y espacios
 {: #orgsspacesusers}
-Última actualización: 20 de octubre de 2016
-{: .last-updated}
 
 Como propietario de la cuenta, puede gestionar las organizaciones accediendo a la página **Gestionar organizaciones**. Los gestores de organizaciones también pueden utilizar la página Gestionar organizaciones para gestionar todas las organizaciones en las que se han establecido como gestor.
 {:shortdesc}
@@ -62,7 +60,7 @@ Cuando se crea una organización, el nombre de la organización debe ser exclusi
 
 Debe ponerse en contacto con el soporte de [{{site.data.keyword.Bluemix_notm}} ](http://ibm.biz/bluemixsupport){: new_window} para suprimir una organización. Cuando solicita al equipo de soporte que suprima una organización, se suprimen todos los espacios, aplicaciones y servicios dentro de la organización.
 
-Los siguientes [roles de usuario](users_roles.html#userrolesinfo) pueden asignarse a miembros del equipo en una organización:
+Los siguientes [roles de usuario](/docs/admin/users_roles.html#userrolesinfo) pueden asignarse a miembros del equipo en una organización:
 
 <ul>
 <li>Gestor de organización</li>
@@ -77,7 +75,7 @@ Los siguientes [roles de usuario](users_roles.html#userrolesinfo) pueden asignar
 
 En el seno de una organización, podrá utilizar espacios para agrupar un conjunto de aplicaciones, servicios y miembros del equipo. Los espacios están vinculados a una región específica en {{site.data.keyword.Bluemix_notm}}.
 
-Tras añadir miembros del equipo a una organización, puede otorgarles permisos a los espacios. Similar a las organizaciones, los espacios también tienen un conjunto de [roles de usuario](users_roles.html#userrolesinfo) que se pueden asignar a los miembros del equipo:
+Tras añadir miembros del equipo a una organización, puede otorgarles permisos a los espacios. Similar a las organizaciones, los espacios también tienen un conjunto de [roles de usuario](/docs/admin/users_roles.html#userrolesinfo) que se pueden asignar a los miembros del equipo:
 
 <ul>
 <li>Gestor de espacio</li>
@@ -160,7 +158,7 @@ Para ver la cuota para la organización, complete los siguientes pasos:
 3. Pulse **Editar organización**.
 4. Seleccione el separador **CUOTA**.
 
-Para actualizar la cuota para la organización, debe abrir una incidencia de soporte. Para obtener más información sobre cómo abrir una incidencia de soporte, consulte [Obtención de soporte al cliente](../support/index.html#contacting-support). Para obtener más información sobre la cuota para los contenedores, consulte [Cuota](../containers/container_planning_org_ov.html##container_planning_quota) en la documentación Contenedores.
+Para actualizar la cuota para la organización, debe abrir una incidencia de soporte. Para obtener más información sobre cómo abrir una incidencia de soporte, consulte [Obtención de soporte al cliente](/docs/support/index.html#contacting-support). Para obtener más información sobre la cuota para los contenedores, consulte [Cuota](/docs/containers/container_planning_org_ov.html##container_planning_quota) en la documentación Contenedores.
 
 ## Gestión de dominios
 {: #managedomains}

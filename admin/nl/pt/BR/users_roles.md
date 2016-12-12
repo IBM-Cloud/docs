@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,11 +17,9 @@ copyright:
 
 # Gerenciando membros da equipe e funções
 {: #userroles}
-Última atualização: 20 de outubro de 2016
-{: .last-updated}
 
 A partir da página de **Diretório da equipe** para a sua conta, é possível gerenciar membros da equipe existentes e suas funções em sua organização e espaços, bem como convidar novos
-membros da equipe. Para acessar o diretório da equipe de sua conta, clique em **Conta** &gt; **Diretório de equipe**.
+membros da equipe. Para acessar o diretório da equipe de sua conta, clique em **Conta** &gt; **Diretório de equipe**. 
 {:shortdesc}
 
 Proprietários da conta executam todas as operações nas organizações e espaços, incluindo o gerenciamento de membros da equipe e de suas funções designadas. Gerenciadores de organização têm acesso para
@@ -34,7 +32,8 @@ funções. Verifique as informações a seguir, para saber mais sobre funções.
 
 No nível de conta, há duas funções que permitem o acesso a diferentes recursos de gerenciamento de conta:
 
-*Tabela 1. Funções e permissões da conta*
+Tabela 1. Funções e permissões de conta
+{: #ur_table1}
 
 | Função da conta | Permissões |    
 |----------------|---------|
@@ -51,7 +50,8 @@ funções na página **Diretório da equipe**.
 
 As funções a seguir podem ser designadas no nível de organização:
 
-*Tabela 2. Funções e permissões de organização*
+Tabela 2. Funções e permissões de organização
+{: #ur_table2}
 
 | Função organizacional | Permissões |    
 |-------------------|-------------|
@@ -63,7 +63,8 @@ cota para a organização. Essa função é designada para todos os convidados p
 
 As funções a seguir podem ser designadas no nível de espaço:
 
-*Tabela 3. Funções e permissões de espaço*
+Tabela 3. Funções e permissões de espaço
+{: #ur_table3}
 
 | Função de espaço | Permissões |    
 |------------|-------------|
@@ -157,7 +158,7 @@ Gerenciadores de espaço podem editar funções para os membros da equipe em seu
 Proprietários de conta e gerenciadores de organização podem remover membros da equipe de uma conta usando a página **Diretório**. Para remover um membro da equipe, conclua as etapas a seguir:
 
 1. Clique em **Conta** &gt; **Diretório de equipe**.
-3. Localize o usuário que você deseja remover da conta e clique no ícone **Remover** ![ícone Remover](../icons/icon_remove_teamuser.svg).
+3. Localize o usuário que você deseja remover da conta e clique no ícone **Remove** ![ícone Remover](/docs/icons/icon_remove_teamuser.svg).
 4. Na janela **Remover usuário**, clique em **Remover** para confirmar que você deseja remover o usuário especificado da conta.
 
 O usuário é removido da lista de membros da equipe exibida para a conta.

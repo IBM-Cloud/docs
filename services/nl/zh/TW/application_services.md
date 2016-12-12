@@ -1,18 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # 應用程式服務
 {: #app_services}
-
-*前次更新：2016 年 1 月 28 日*
-{: .last-updated}
 
 使用這些服務，可在雲端中開發 Web 應用程式時快速新增或移除特性。您也可以簡化管理作業，以及組織您的商業程序及規則。
 {:shortdesc}

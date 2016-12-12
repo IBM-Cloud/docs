@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-11"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Fehlerbehebung für die Verwaltung von Anwendungen
 {: #managingapps}
 
-Letzte Aktualisierung: 11. Oktober 2016
-{: .last-updated} 
 
 Allgemeine Probleme im Zusammenhang mit der Verwaltung von Anwendungen können sein, dass Anwendungen nicht aktualisiert werden können
 oder Doppelbytezeichen nicht angezeigt werden. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben.
@@ -190,7 +190,7 @@ Sie verfügen nicht über die erforderliche Berechtigungsebene zum Ausführen de
 Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der folgenden Methoden: 
 {: tsResolve}
  * Wählen Sie eine andere Organisation und einen anderen Bereich aus, für die bzw. den Sie die Rolle des Entwicklers ausfüllen. 
- * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Informationen hierzu finden Sie unter [Organisationen und Bereiche verwalten](../admin/orgs_spaces.html){: new_window}.
+ * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Informationen hierzu finden Sie unter [Organisationen und Bereiche verwalten](/docs/admin/orgs_spaces.html){: new_window}.
  
 
 
@@ -294,7 +294,7 @@ ein {{site.data.keyword.Bluemix_notm}}-Service
 inaktiv ist, überprüfen Sie zunächst die
 [{{site.data.keyword.Bluemix_notm}}-Seite 'Status'](http://ibm.biz/bluemixstatus){: new_window}. Sie können, wenn Sie möchten, den Service in einer anderen {{site.data.keyword.Bluemix_notm}}-Region
 als Ausweichlösung verwenden. Ausführliche Informationen finden Sie in [Services
-in einer anderen Region verwenden](../services/reqnsi.html#cross_region_service){: new_window}. Wenn der Status des Service normal ist,
+in einer anderen Region verwenden](/docs/services/reqnsi.html#cross_region_service){: new_window}. Wenn der Status des Service normal ist,
 führen Sie die folgenden Schritte aus, um das Problem zu lösen: 
 {: tsResolve}
 
@@ -307,7 +307,7 @@ und laden Sie die Seite anschließend erneut.
 können verschiedene Fehler bereinigt werden, die zu dem Fehler 502 führen. 
   * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. Bei einigen Instanzen kann es in Verbindung mit
 Ihrem Internet-Service-Provider oder den {{site.data.keyword.Bluemix_notm}}-Services zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
-  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support](../support/index.html#contacting-bluemix-support){: new_window}. 
+  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
 
 
 
@@ -334,7 +334,7 @@ Das Standardplattenkontingent, das für eine App zugeordnet wird, beträgt
 {: tsCauses}
 
  
-Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. Sie können ein maximales Plattenkontingent von 2 GB angeben. Falls 2 GB dennoch nicht genug sein sollten, setzen Sie versuchsweise einen externen Service ein, z. B. [Object Store](../services/ObjectStorage/index.html){: new_window}.
+Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. Sie können ein maximales Plattenkontingent von 2 GB angeben. Falls 2 GB dennoch nicht genug sein sollten, setzen Sie versuchsweise einen externen Service ein, z. B. [Object Store](/docs/services/ObjectStorage/index.html){: new_window}.
 {: tsResolve}
 
   * Fügen Sie in der Datei 'manifest.yml' den folgenden Teil hinzu:
@@ -396,7 +396,7 @@ Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Gren
 	  1. Heben Sie die Bindung zwischen der Serviceinstanz und der Anwendung auf, indem Sie Folgendes eingeben: `cf unbind-service <appname> <service_instance_name>`.
 	  2. Löschen Sie die Serviceinstanz durch Eingeben von `cf delete-service <service_instance_name>`.
 	  3. Nach dem Löschen der Serviceinstanz möchten Sie möglicherweise Ihre Anwendung, an die die Serviceinstanz gebunden war, erneut bereitstellen, indem Sie `cf restage <appname>` eingeben.
-  * Zum Löschen des Grenzwerts für die Anzahl Serviceinstanzen, die für Sie bestehen können, wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie unter [Vorgehensweise zum Ändern des Plans](../pricing/index.html#changing){: new_window}.
+  * Zum Löschen des Grenzwerts für die Anzahl Serviceinstanzen, die für Sie bestehen können, wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie unter [Vorgehensweise zum Ändern des Plans](/docs/pricing/index.html#changing){: new_window}.
 
   
   
@@ -451,7 +451,7 @@ Dieser Fehler tritt auf, wenn die für Ihre Organisation verbleibende Speicherme
 Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von Ihren Anwendungen verwendeten Speicherplatz verringern.
 {: tsResolve} 
 
-  * Zum Erhöhen des Speicherkontingents für Ihr Konto wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie in [Zahlungskonten](../pricing/index.html#pay-accounts){: new_window}. 
+  * Zum Erhöhen des Speicherkontingents für Ihr Konto wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie in [Zahlungskonten](/docs/pricing/index.html#pay-accounts){: new_window}. 
   * Zum Verringern des Speicherplatzes, den Ihre Apps belegen, verwenden Sie entweder die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle 'cf'.
     Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole verwenden, führen Sie die folgenden Schritte durch:
 	  1. Wählen Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard Ihre Anwendung aus. Die Seite mit den Anwendungsdetails wird geöffnet.
@@ -580,7 +580,7 @@ Das Debug-Feature kann in den folgenden Fällen nicht aktiviert werden:
 Verwenden Sie eine der folgenden Methoden, um das Problem zu lösen: 
 {: tsResolve}
 
-  * Die empfohlene Vorgehensweise ist die Verwendung des IBM Node.js-Buildpacks zum Starten der App. Weitere Informationen finden Sie im Abschnitt zum Startbefehl des Themas zur [Bereitstellung einer Node.js-Anwendung in {{site.data.keyword.Bluemix_notm}}](../runtimes/nodejs/index.html#nodejs_runtime){: new_window}. 
+  * Die empfohlene Vorgehensweise ist die Verwendung des IBM Node.js-Buildpacks zum Starten der App. Weitere Informationen finden Sie im Abschnitt zum Startbefehl des Themas zur [Bereitstellung einer Node.js-Anwendung in {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime){: new_window}. 
   * Inaktivieren Sie den Befehl für die vorhandene App, indem Sie entweder das Befehlsattribut in der Datei `manifest.yml` in 'command: null' ändern oder `-c null` in den Push-Befehl einschließen. 
   * Entfernen Sie das Attribut **command** aus der Datei `manifest.yml`. Dann können Sie die aktuelle App aus {{site.data.keyword.Bluemix_notm}} löschen und erneut per Push-Operation übertragen.
   
@@ -627,7 +627,7 @@ Wenn Sie eine Anwendung mithilfe der cf-Befehlszeilenschnittstelle per Push-Oper
 cf api https://api.eu-gb.bluemix.net
 ```
 Wenn Sie eine Anwendung mithilfe von Eclipse Tools mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, müssen Sie zuerst einen {{site.data.keyword.Bluemix_notm}}-Server erstellen und den API-Endpunkt der {{site.data.keyword.Bluemix_notm}}-Region angeben, in der die Organisation erstellt wurde. Weitere Informationen zur Verwendung
-der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.  
+der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.  
   
   
 
@@ -832,7 +832,7 @@ Das Liberty-Buildpack verwendet die Datei `server.xml` zum Konfigurieren der Anw
 
  
 
-Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die Anwendung mit einer Push-Operation als WAR-Anwendung übertragen. Weitere Informationen finden Sie unter [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
+Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die Anwendung mit einer Push-Operation als WAR-Anwendung übertragen. Weitere Informationen finden Sie unter [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -875,7 +875,7 @@ Dieses Problem kann auftreten, weil für DevOps Services die Datei `manifest.yml
  
 
 Zum Beheben dieses Problems müssen Sie die Datei `manifest.yml` erstellen. Weitere Informationen zum Erstellen der Datei `manifest.yml` finden Sie im
-[Abschnitt zum Anwendungsmanifest](../manageapps/depapps.html#appmanifest){: new_window}.
+[Abschnitt zum Anwendungsmanifest](/docs/manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 

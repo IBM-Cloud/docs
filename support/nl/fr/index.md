@@ -2,6 +2,8 @@
 
 copyright:
   2015, 2016
+  
+lastupdated: "2016-10-22"
 
 ---
 
@@ -12,8 +14,6 @@ copyright:
 # Support client
 {: #getting-customer-support}
 
-Dernière mise à jour : 22 octobre 2016
-{: .last-updated}
 
 
 Si vous rencontrez des problèmes avec {{site.data.keyword.Bluemix}}, plusieurs options d'assistance s'offrent à vous : vous pouvez par exemple obtenir de l'aide via un forum ou ouvrir un ticket de demande de service.
@@ -31,14 +31,14 @@ de demande de service pour les comptes liés](#open-ticket-linked).
 {:shortdesc}
 
 
-### Utilisation du widget Support 
+### Utilisation du widget Support
 {: #using-avatar}
-Le widget Support vous permet d'obtenir de l'aide et de nous faire part de vos commentaires. 
+Le widget Support vous permet d'obtenir de l'aide et de nous faire part de vos commentaires.
 
 Pour ouvrir le widget Support, connectez-vous à la console {{site.data.keyword.Bluemix_notm}}. Depuis la barre de menu, cliquez sur
 **Support** &gt; **Obtenir de l'aide** pour trouver les réponses à vos questions. Sur la page qui s'affiche, entrez votre question dans la zone de recherche. Les réponses provenant de la documentation {{site.data.keyword.Bluemix_notm}} et de Stack Overflow sont affichées. La page fournit également des options permettant de publier votre question dans Stack Overflow ou d'ouvrir un ticket de demande de service en cliquant sur **Obtenir de l'aide**.
 
-### Utilisation du widget Support pour les comptes liés 
+### Utilisation du widget Support pour les comptes liés
 {: #using-avatar-linked}
 
 Si vous utilisez un compte lié pour {{site.data.keyword.Bluemix_notm}} et {{site.data.keyword.BluSoftlayer}}, le widget Support est
@@ -47,23 +47,20 @@ Support, puis sélectionnez **Ajouter un ticket** &gt; **Trouver des réponses**
 
 * Vous pouvez effectuer une recherche dans la documentation Bluemix, le forum Stack Overflow et le forum DW Answers en définissant un
 filtre afin de changer les résultats de recherche pour qu'ils n'incluent que les éléments sélectionnés.
-
 * Vous pouvez accéder directement au forum Stack Overflow **#IBMBluemix** ou au forum DW Answers pour rechercher un
-article. 
+article.
 * Vous pouvez soumettre une idée via IBM User Voice.
 * Vous pouvez prendre contact avec le service commercial en appelant ou en localisant un ingénieur commercial, ou par le biais du formulaire de
 recherche d'un ingénieur commercial.
-
 * Vous pouvez vous connecter à **@IBMBluemixHelp** sur Twitter afin d'améliorer votre expérience de Bluemix.
 
 
 
-
-### Utilisation des éléments de menu Compte 
+### Utilisation des éléments de menu Compte
 {: #using-accountmenu}
 
 Utilisez les éléments de menu Compte pour consulter des informations de compte, afficher le
-statut, rester informé par le biais de notifications, sélectionner votre région, sélectionner et gérer des organisations et vous déconnecter. 
+statut, rester informé par le biais de notifications, sélectionner votre région, sélectionner et gérer des organisations et vous déconnecter.
 
 
 ### Poser une question
@@ -79,7 +76,7 @@ relative à l'offre {{site.data.keyword.Bluemix_notm}} et pour des instructions 
 
 
 Vous pouvez aussi poser une question sur le forum Stack Overflow directement depuis le widget Support en procédant comme suit :
-  1. Depuis le widget Support, cliquez sur **Obtenir de l'aide**.  
+  1. Depuis le widget Support, cliquez sur **Obtenir de l'aide**. 
   2. Sur la page qui s'affiche, entrez votre question dans la zone de recherche pour trouver des réponses. 
   3. Si vous ne trouvez pas de réponse appropriée, cliquez sur **Publier dans Stack Overflow** pour poser votre question.
 
@@ -108,7 +105,7 @@ Les informations suivantes sont disponibles sur la page Statut :
 Vous pouvez afficher la page Statut en choisissant l'une des options suivantes :
 
   * Connectez vous à la console {{site.data.keyword.Bluemix_notm}}. Dans la barre de menu, cliquez sur **Support**, puis
-sur **Statut**. Recherchez dans les ressources répertoriées l'icône signalant ![des problèmes](images/some_issues.svg). Celle-ci peut indiquer une indisponibilité.
+sur **Statut**.  Recherchez dans les ressources répertoriées l'icône signalant ![des problèmes](images/some_issues.svg). Celle-ci peut indiquer une indisponibilité.
   * Accédez directement à la page à l'adresse [IBM {{site.data.keyword.Bluemix_notm}} - System Status](http://ibm.biz/bluemixstatus){: new_window}.
 
 
@@ -152,7 +149,7 @@ Généralement, {{site.data.keyword.Bluemix_notm}} présente environ 50 mises à
 
 Pour l'environnement {{site.data.keyword.Bluemix_notm}} public, vous pouvez vous inscrire pour recevoir des notifications de plateforme. Les notifications de plateforme sont des alertes par courrier électronique facultatives relatives à des événements d'incident et de maintenance pour la plateforme {{site.data.keyword.Bluemix_notm}}. Vous
 pouvez choisir de recevoir ces notifications par courrier électronique en cliquant sur les options **Compte** &gt;
-**Notifications** &gt; **Plateforme**. Pour plus d'informations sur la définition de notifications de compte, accédez à [Définition de notifications](../admin/account.html#notifications).
+**Notifications** &gt; **Plateforme**. Pour plus d'informations sur la définition de notifications de compte, accédez à [Définition de notifications](/docs/admin/account.html#notifications).
 
 
 ### Meilleures pratiques pour la surveillance du statut
@@ -170,7 +167,7 @@ pouvez choisir de recevoir ces notifications par courrier électronique en cliqu
 fonctionne pas comme prévu, recherchez des fenêtres de maintenance ou un
 incident en cours sur la page Statut. Pour signaler un incident qui n'est pas déjà répertorié sur cette page, ouvrez un ticket de demande de service en
 cliquant sur l'élément de menu **Support** dans la barre de menu ou dans la page d'aide
-[IBM Bluemix Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window}. 
+[IBM Bluemix Support](https://support.eu-gb.bluemix.net/gethelp/){: new_window}.
 
   * Bénéfice lié à plusieurs régions {{site.data.keyword.Bluemix_notm}}
 
@@ -242,7 +239,7 @@ pour des problèmes techniques. Pour les problèmes techniques, vous pouvez sél
 **Support technique**. Par exemple, si vous avez besoin d'aide pour des applications Cloud Foundry, OpenWhisk, Containers, Virtual Servers ou des serveurs
 Bare Metal, choisissez **Services d'application**. Si vous avez besoin d'aide pour un service spécifique, sélectionnez la catégorie de
 service correspondante. Pour identifier la catégorie à laquelle votre service appartient, reportez-vous aux catégories sous
-[Services](../services/index.html){: new_window} dans le panneau de navigation.  
+[Services](/docs/services/index.html){: new_window} dans le panneau de navigation.  
   * Depuis le [portail IBM Client Success](https://support.ibmcloud.com){: new_window}. Après vous être connecté au portail,
 cliquez sur **Open Ticket** et renseignez le formulaire de support. 
   
@@ -252,11 +249,11 @@ les différentes gravités. Si votre demande est urgente, mais que vous ne bén�
 vous pouvez mettre à niveau votre compte pour soumettre des tickets de haute gravité (niveau 1, 2, et 3). Pour mettre à niveau votre compte vers un niveau de support
 plus élevé, contactez votre ingénieur commercial IBM par e-mail à l'adresse sales@bluemix.net.
 
-### Ouverture d'un ticket de demande de service pour les comptes liés 
+### Ouverture d'un ticket de demande de service pour les comptes liés
 {: #open-ticket-linked}
 
 Si vous utilisez un compte lié pour {{site.data.keyword.Bluemix_notm}} et {{site.data.keyword.BluSoftlayer}}, vous pouvez ouvrir un
-ticket de demande de service depuis la console {{site.data.keyword.Bluemix_notm}} par le biais du widget Support.  
+ticket de demande de service depuis la console {{site.data.keyword.Bluemix_notm}} par le biais du widget Support. 
 
 Afin d'ouvrir un ticket de demande de service {{site.data.keyword.Bluemix_notm}} pour un compte lié, cliquez sur
 **Support**
@@ -264,7 +261,7 @@ dans la barre de menu pour ouvrir le widget Support et sélectionnez **Ajouter u
 **Technical** comme type de ticket et remplissez le formulaire en indiquant la raison pour laquelle vous avez besoin d'aide. Si vous
 bénéficiez du niveau de support premium, choisissez le niveau de gravité de votre problème. Vous recevrez une notification par courrier électronique
 concernant le ticket quelques minutes après. Suivez les instructions figurant dans le courrier électronique pour toute communication supplémentaire
-relative au problème. 
+relative au problème.
 
 
 ### Vérification du statut du ticket de demande de service
@@ -323,7 +320,7 @@ l'option **{{site.data.keyword.Bluemix_notm}} Local** pour la zone Région.
 possède un ou collaborer avec votre interlocuteur IBM habituel.
 <p>**Remarque** : si vous en faites la demande, la liste des utilisateurs de votre organisation pouvant servir de contacts pour les
 tickets de demande de service peut s'afficher dans la page **Support** dans la console {{site.data.keyword.Bluemix_notm}} de
-votre environnement local. </p></li>
+votre environnement local.</p></li>
 </ul>
 
 ### Gravité et temps de réponse du ticket de demande de service
@@ -401,7 +398,7 @@ il se peut que l'équipe de support {{site.data.keyword.Bluemix_notm}} vous dema
 
 Avant de collecter des informations de diagnostic, procédez comme suit :
 
-  1. Vérifiez que vous avez installé la version la plus récente de l'interface de ligne de commande cf. Pour plus d'informations, voir [Installation de l'interface de ligne de commande cf](../starters/install_cli.html){: new_window}.
+  1. Vérifiez que vous avez installé la version la plus récente de l'interface de ligne de commande cf. Pour plus d'informations, voir [Installation de l'interface de ligne de commande cf](/docs/starters/install_cli.html){: new_window}.
 
      **Remarque :** si vous n'avez pas installé la version la plus récente de l'interface de ligne de commande cf, lorsque
 cette interface est connectée à
@@ -465,7 +462,7 @@ leur expérience avec le support.
 
   * [Portail de support Bluemix](https://support.ibmcloud.com){: new_window} 
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
-  * [Installation de l'outil de commande cf](../starters/install_cli.html){: new_window} 
+  * [Installation de l'outil de commande cf](/docs/starters/install_cli.html){: new_window} 
   * [Manuel de support SaaS](http://www-01.ibm.com/software/support/handbook.html){: new_window}
   * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

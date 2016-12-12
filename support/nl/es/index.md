@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-22"
 
 ---
 
@@ -12,8 +14,6 @@ copyright:
 # Obtención de soporte al cliente
 {: #getting-customer-support}
 
-Última actualización: 22 de octubre de 2016
-{: .last-updated}
 
 
 Si tiene problemas con {{site.data.keyword.Bluemix}},
@@ -38,7 +38,7 @@ en **Póngase en contacto**.
 ### Utilización del widget de Soporte para cuentas enlazadas
 {: #using-avatar-linked}
 
-Si está utilizando una cuenta enlazada entre {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.BluSoftlayer}}, el widget Soporte es ligeramente diferente. Inicie sesión en la consola de Bluemix y pulse el enlace **Soporte** desde la barra de menús para abrir el widget Soporte y, a continuación, seleccione **Añadir incidencia** &gt; **Buscar respuestas**. Las opciones disponibles son:  
+Si está utilizando una cuenta enlazada entre {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.BluSoftlayer}}, el widget Soporte es ligeramente diferente. Inicie sesión en la consola de Bluemix y pulse el enlace **Soporte** desde la barra de menús para abrir el widget Soporte y, a continuación, seleccione **Añadir incidencia** &gt; **Buscar respuestas**. Las opciones disponibles son:
 
 * Puede buscar a través de Documentación de Bluemix, Desbordamiento de pila y DW Answers estableciendo un filtro para cambiar los resultados de búsqueda para incluir sólo los elementos seleccionados.
 * Puede enlazar directamente a Desbordamiento de pila **#IBMBluemix** o a DW Answers para buscar o publicar.
@@ -90,7 +90,7 @@ En la página Estado hay disponible la información siguiente:
 
 Para ver la página Estado, seleccione una de las dos opciones siguientes:
 
-  * Inicie la sesión en la consola de {{site.data.keyword.Bluemix_notm}}. En la barra de menús, pulse **Soporte** y, a continuación, pulse **Estado**. Compruebe la lista de recursos en busca del icono ![algunos problemas](images/some_issues.svg). Este icono podría indicar una parada.
+  * Inicie la sesión en la consola de {{site.data.keyword.Bluemix_notm}}. En la barra de menús, pulse **Soporte** y, a continuación, pulse **Estado**.  Compruebe la lista de recursos en busca del icono ![algunos problemas](images/some_issues.svg). Este icono podría indicar una parada.
   * Acceda directamente a [IBM {{site.data.keyword.Bluemix_notm}} - Estado del sistema](http://ibm.biz/bluemixstatus){: new_window}.
 
 
@@ -135,7 +135,7 @@ siguiente se proporcionan algunos ejemplos de servicios de terceros:
 {: #setting-up-notifications}
 
 Para {{site.data.keyword.Bluemix_notm}} público, puede registrarse para las notificaciones de plataforma. Las notificaciones de plataforma son alertas por correo electrónico para sucesos de mantenimiento e incidencias para la plataforma
-{{site.data.keyword.Bluemix_notm}}. Puede optar por recibir estas notificaciones de correo electrónico pulsando el elemento de menú **Cuenta** y las opciones &gt; **Notificaciones** &gt; **Plataforma**. Para obtener más información sobre el establecimiento de notificaciones de cuenta, vaya a [Configuración de notificaciones](../admin/account.html#notifications).
+{{site.data.keyword.Bluemix_notm}}. Puede optar por recibir estas notificaciones de correo electrónico pulsando el elemento de menú **Cuenta** y las opciones &gt; **Notificaciones** &gt; **Plataforma**. Para obtener más información sobre el establecimiento de notificaciones de cuenta, vaya a [Configuración de notificaciones](/docs/admin/account.html#notifications).
 
 
 ### Prácticas recomendadas para supervisar el estado
@@ -199,7 +199,7 @@ Si el problema no es debido a una parada, puede abrir una incidencia de soporte 
   * Desde el widget Soporte, pulse **Obtener ayuda**. En la página que se muestra, pulse **Póngase en contacto**. Rellene el formulario para indicar qué soporte técnico necesita.
   * Utilice la página de ayuda de [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window}. Puede enviar incidencias para ventas, facturación, ID de IBM e inicio de sesión y problemas de soporte técnico. Para problemas de soporte técnico, puede seleccionar un grupo técnico tras pulsar en **Soporte técnico**. Por ejemplo, si necesita ayuda con apps de Cloud Foundry, OpenWhisk, contenedores, servidores virtuales o servidores nativos, puede elegir **Application Services**. Si necesita ayuda con un servicio específico, seleccione
 la categoría de servicio correspondiente. Para determinar la categoría a la que pertenece su servicio, consulte las categorías
-en [Servicios](../services/index.html){: new_window} en el panel de navegación.  
+en [Servicios](/docs/services/index.html){: new_window} en el panel de navegación.  
   * Desde [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Después de iniciar la sesión en el portal, pulse **Open Ticket** y, a continuación, rellene el formulario de soporte. 
   
 Cuando abra una incidencia de soporte, asegúrese de indicar una gravedad adecuada a su incidencia. La gravedad determina cómo se maneja
@@ -313,7 +313,7 @@ Para diagnosticar y resolver problemas con los servicios y apps de {{site.data.k
 
 Antes de recopilar la información de diagnóstico, siga estos pasos:
 
-  1. Asegúrese de haber instalado la última interfaz de línea de mandatos cf. Para obtener más información, consulte [Instalación de la interfaz de línea de mandatos cf](../starters/install_cli.html){: new_window}.
+  1. Asegúrese de haber instalado la última interfaz de línea de mandatos cf. Para obtener más información, consulte [Instalación de la interfaz de línea de mandatos cf](/docs/starters/install_cli.html){: new_window}.
 
      **Nota:** Si no tiene instalada la última interfaz de línea de mandatos cf, después de conectar la línea de mandatos cf a {{site.data.keyword.Bluemix_notm}} el mandato `cf logs` no devuelve información.
 
@@ -373,7 +373,7 @@ IBM envía periódicamente encuestas a clientes de Bluemix para obtener sus come
 
   * [Portal de soporte de Bluemix](https://support.ibmcloud.com){: new_window} 
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
-  * [Instalación de la herramienta de mandatos cf](../starters/install_cli.html){: new_window} 
+  * [Instalación de la herramienta de mandatos cf](/docs/starters/install_cli.html){: new_window} 
   * [Handbook de soporte de SaaS](http://www-01.ibm.com/software/support/handbook.html){: new_window}
   * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

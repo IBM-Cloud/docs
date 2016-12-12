@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-10-05"
+
+
 
 ---
 
@@ -28,7 +30,7 @@ copyright:
 {:user_ID: data-hd-keyref="user_ID"}
 
 # コマンド・ライン・インターフェースを使用したアプリのデプロイ
-最終更新日: 2016 年 9 月 15 日
+最終更新日: 2016 年 10 月 5 日
 {: .last-updated}
 
 コマンド・ライン・インターフェースを使用して、アプリケーションおよびサービス・インスタンスのデプロイと変更が可能です。
@@ -44,27 +46,31 @@ copyright:
 コマンド・ライン・インターフェースをインストールしたら、以下の手順を開始できます。
 
   1. {: download} スターター・コードをダウンロードし、パッケージを新規ディレクトリーに解凍して開発環境をセットアップします。
-      
+
     <a class="xref" href="http://bluemix.net" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_starter-code.svg" alt="スターター・コードのダウンロード" /> </a>
-  
+
   2. コードが置かれているディレクトリーに移動します。
-  
+
   <pre class="pre">cd <var class="keyword varname">your_new_directory</var></pre>
-  
+
   3.  適切なアプリ・コードを変更します。アプリを {{site.data.keyword.Bluemix}} にデプロイする前に、それがローカルで稼働するか確認することをお勧めします。<br><br>注意が必要なファイルは、`manifest.yml` ファイルです。{{site.data.keyword.Bluemix}} にアプリをデプロイする際、このファイルを使用してアプリケーションの URL、メモリー割り振り、インスタンス数、その他の重要なパラメーターを判別します。Cloud Foundry の資料で[マニフェスト・ファイルの詳細](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window}を参照してください。
-  
+
   4. {{site.data.keyword.Bluemix}} に接続します。
-  
+
   <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
-  
+
   5. {{site.data.keyword.Bluemix_notm}} にログインします。
- 
-  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">org_name</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">space_name</var>"</pre>
-  
+
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
+
+  フェデレーテッド ID を使用する場合は、-sso オプションを使用します。
+
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">org_name</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">space_name</var>" -sso</pre>
+
   6. アプリを {{site.data.keyword.Bluemix_notm}} にデプロイします。cf push コマンドについて詳しくは、『[アプリケーションのアップロード](/docs/starters/upload_app.html)』を参照してください。
-  
+
   <pre class="pre">cf push "<var class="keyword varname" data-hd-keyref="app_name">app_name</var>"</pre>
-  
+
   7. ご使用のブラウザーで以下の URL を入力して、アプリにアクセスします。
-  
+
   <pre class="codeblock"><code><var class="keyword varname" data-hd-keyref="host">host</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span></code></pre>

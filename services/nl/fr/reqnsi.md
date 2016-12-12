@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 #Services
 {: #services}
-
-*Dernière mise à jour : 21 octobre 2016*
-{: .last-updated} 
 
 Vous trouverez les services disponibles dans le **catalogue** sous **Services**, dans l'interface utilisateur
 {{site.data.keyword.Bluemix}}.
@@ -47,7 +45,7 @@ suivant décrit les informations de support générales pour les services {{site
 |:------|:--------------|:--------------|
 |IBM	|Service fourni par IBM et généralement disponible.	|Les problèmes considérés comme un défaut d'un service fourni par IBM généralement disponible sont traités. Le support dépend de la
 gravité que vous définissez. Pour plus d'informations sur la gravité des tickets, voir
-[Contacter le service de support](../support/index.html#contacting-bluemix-support){: new_window}.|
+[Contacter le service de support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 |Tiers	|Service fourni par une société autre qu'IBM.	|Le support des services de tiers est assuré par le fournisseur de service. Si IBM examine un
 problème et détermine qu'il s'agit d'un défaut d'un service de tiers, elle n'est pas obligée de fournir un correctif. IBM partagera son analyse avec le
 fournisseur de service de tiers si nécessaire.|
@@ -57,7 +55,7 @@ obligée de fournir un correctif.|
 |Bêta	|Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Un service bêta peut aider les équipes de développement et marketing à évaluer la valeur d'un service avant de le rendre généralement disponible.	|Les
 problèmes
 identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si
-applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](../support/index.html#contacting-bluemix-support){: new_window}.|
+applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 *Tableau 1. Informations sur le support des services {{site.data.keyword.Bluemix_notm}}*
 
 
@@ -233,14 +231,13 @@ le nom de l'instance de service :
     cf bind-service nom_app instance_service
     ```
 
-Vous ne pouvez lier une instance de service qu'aux instances d'application se trouvant dans le même espace ou la même organisation. Toutefois,
-vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de
+Vous ne pouvez lier une instance de service qu'aux instances d'application se trouvant dans le même espace ou la même organisation. Toutefois, vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de
 créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations sur la façon
 dont les applications externes utilisent les services {{site.data.keyword.Bluemix_notm}}, voir [Utilisation des
 services {{site.data.keyword.Bluemix_notm}} avec des applications externes](#accser_external){: new_window}.
 
 
-## Configuration de votre application pour l'interaction avec un service 
+## Configuration de votre application pour l'interaction avec un service
 {: #config}
 
 Une fois que vous avez lié une instance de service à votre application, vous devez configurer votre application pour
@@ -263,7 +260,7 @@ d'un objet JSON. La variable contient les données d'exécution requises pour in
 Si un service que vous liez à une application tombe en panne, il se peut que l'application s'arrête ou présente des erreurs. {{site.data.keyword.Bluemix_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise à la suite de ces problèmes. Envisagez de coder votre application afin d'identifier les pannes et
 d'assurer la reprise après une indisponibilité, une exception ou une panne de connexion. Voir la rubrique de traitement des incidents
 [Les applications ne sont pas redémarrées
-automatiquement](../troubleshoot/index.html#ts_topmenubar) pour plus d'informations.
+automatiquement](/docs/troubleshoot/index.html#ts_topmenubar) pour plus d'informations.
 
 ## Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des applications externes
 {: #accser_external}
@@ -368,7 +365,7 @@ suivantes :
 [Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des applications externes](#accser_external){: new_window}
 pour des détails.
   * Créez un service fourni par l'utilisateur comme pont.
-    
+
 	Supposez que vous vous trouviez dans la région dans laquelle vous voulez utiliser l'instance de service. Pour utiliser une instance de service qui
 existe dans une autre région, procédez comme suit :
 
@@ -414,7 +411,7 @@ service s'ouvre.
 2. Dans le panneau de navigation, cliquez sur **Gérer** pour autoriser la liaison depuis d'autres instances de service à
 l'aide de la console de l'instance de service.
 3. Si vous voulez refuser à d'autres services l'accès à l'instance de service, cliquez sur **Autorisation d'accès au service** dans le
-panneau de navigation, puis utilisez **Révoquer** pour supprimer la liaison de service. 
+panneau de navigation, puis utilisez **Révoquer** pour supprimer la liaison de service.
 
 # rellinks
 {: #rellinks}
@@ -422,7 +419,5 @@ panneau de navigation, puis utilisez **Révoquer** pour supprimer la liaison de 
 ## general
 {: #general}
 
-* [Liaison d'un service via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}](../cfapps/ee.html#ee_bindui)
-* [Extraction de VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
-
-
+* [Liaison d'un service via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}](/docs/cfapps/ee.html#ee_bindui)
+* [Extraction de VCAP_SERVICES](/docs/cli/vcapsvc.html#retrieving)

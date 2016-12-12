@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Resolução de problemas para gerenciamento de contas
 {: #managingaccounts}
 
-Última atualização: 18 de agosto de 2016
-{: .last-updated}
 
 Você pode ter problemas ao gerenciar sua conta, como apps diferentes compartilham o mesmo nome de domínio e administradores não podem visualizar todas as organizações. No entanto, em vários casos, é possível recuperar-se desses
 problemas seguindo algumas etapas simples.

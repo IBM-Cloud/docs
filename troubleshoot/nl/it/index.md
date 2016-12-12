@@ -3,6 +3,8 @@
 copyright:
   anni: 2015, 2016
   
+lastupdated: "2016-08-11"
+  
 
 ---
 
@@ -16,8 +18,6 @@ copyright:
 # Risoluzione dei problemi di accesso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Ultimo aggiornamento: 11 agosto 2016
-{: .last-updated}
 
 
 I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero includere un utente che non riesce ad accedere a {{site.data.keyword.Bluemix_notm}}, un account bloccato in uno stato In sospeso e così via. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi. 
@@ -443,7 +443,7 @@ Non disponi di un adeguato livello di autorità necessario per eseguire le azion
 Per ottenere il livello di autorità appropriato, utilizza uno dei seguenti metodi: 
 {: tsResolve}
  * Seleziona un'altra organizzazione e uno spazio per cui disponi del ruolo di sviluppatore. 
- * Chiedi al gestore organizzazione di modificare il tuo ruolo in sviluppatore oppure di creare uno spazio e assegnarti quindi un ruolo sviluppatore. Consulta [Gestione di organizzazioni e spazi](../admin/orgs_spaces.html){: new_window} per i dettagli.
+ * Chiedi al gestore organizzazione di modificare il tuo ruolo in sviluppatore oppure di creare uno spazio e assegnarti quindi un ruolo sviluppatore. Consulta [Gestione di organizzazioni e spazi](/docs/admin/orgs_spaces.html){: new_window} per i dettagli.
  
 
  
@@ -537,7 +537,7 @@ errori della cache del browser.
 
 Se sospetti che un servizio {{site.data.keyword.Bluemix_notm}} sia inattivo, controlla prima la pagina [Stato di {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Come soluzione alternativa, potresti voler utilizzare questo servizio in un'altra regione
 {{site.data.keyword.Bluemix_notm}}. Informazioni dettagliate sono disponibili in [Utilizzo
-dei servizi in un'altra regione](../services/reqnsi.html#cross_region_service){: new_window}. Se lo stato del servizio è normale,
+dei servizi in un'altra regione](/docs/services/reqnsi.html#cross_region_service){: new_window}. Se lo stato del servizio è normale,
 prova le seguenti operazioni per risolvere il problema: 
 {: tsResolve}
 
@@ -550,7 +550,7 @@ e i cookie del tuo browser e ricarica di nuovo la pagina.
 dispositivi può cancellare i diversi errori che portano all'errore 502. 
   * Attendi e riprova in seguito. In alcuni casi, possono verificarsi dei
 problemi temporanei con il tuo provider dei servizi Internet o con i servizi {{site.data.keyword.Bluemix_notm}}. Puoi attendere finché i problemi non vengono risolti.
-  * Se il problema persiste, contatta il supporto {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Come contattare il supporto {{site.data.keyword.Bluemix_notm}}](../support/index.html#contacting-bluemix-support){: new_window}. 
+  * Se il problema persiste, contatta il supporto {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, consulta [Come contattare il supporto {{site.data.keyword.Bluemix_notm}}](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
 
 
 
@@ -579,7 +579,7 @@ quota di disco.
 
  
 Utilizza uno dei seguenti metodi per specificare la quota disco. La quota di disco massima che puoi specificare è 2 GB. Se 2 GB non è ancora
-sufficiente, prova un servizio esterno come [Object Store](../services/ObjectStorage/index.html){: new_window}.
+sufficiente, prova un servizio esterno come [Object Store](/docs/services/ObjectStorage/index.html){: new_window}.
 {: tsResolve}
 
   * Nel file manifest.yml, aggiungi la seguente voce:
@@ -711,7 +711,7 @@ unbind-service <nomeapplicazione> <nome_istanza_servizio>`.
 a cui era associata l'istanza del servizio immettendo `cf
 restage <nomeapplicazione>`.
   * Per rimuovere il limite sul numero di istanze del servizio che puoi avere,
-converti il tuo account di prova in un account a pagamento. Per informazioni su come convertire il tuo account di prova in un account a pagamento, vedi [Come modificare il tuo piano](../pricing/index.html#changing){: new_window}.
+converti il tuo account di prova in un account a pagamento. Per informazioni su come convertire il tuo account di prova in un account a pagamento, vedi [Come modificare il tuo piano](/docs/pricing/index.html#changing){: new_window}.
 
   
   
@@ -783,11 +783,11 @@ Puoi aumentare la quota di memoria del tuo account o ridurre la memoria utilizza
   * Per aumentare la quota di memoria dell'account,
 converti il tuo account di prova in un account a pagamento. Per informazioni
 su come convertire il tuo account di prova in un account a pagamento, vedi [Pay
-accounts](../pricing/index.html#pay-accounts){: new_window}. 
+accounts](/docs/pricing/index.html#pay-accounts){: new_window}. 
   * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza l'interfaccia utente{{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando cf.
     Se utilizzi l'interfaccia utente {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
 	  1. Sul Dashboard {{site.data.keyword.Bluemix_notm}}, seleziona la tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
-	  2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione. 
+	  2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione.
 	Se utilizzi l'interfaccia riga di comando cf, completa la seguente procedura:
 	  1. Verifica la quantità di memoria utilizzata per le tue applicazioni:
 	  ```
@@ -811,8 +811,7 @@ Un'applicazione non si riavvia automaticamente quando un servizio che associ med
 	  
  
 
-Quando un servizio che associ mediante bind a un'applicazione viene arrestato in modo anomalo, nell'applicazione potrebbero verificarsi dei problemi come interruzioni, eccezioni ed errori di connessione. {{site.data.keyword.Bluemix_notm}} non
-riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi.
+Quando un servizio che associ mediante bind a un'applicazione viene arrestato in modo anomalo, nell'applicazione potrebbero verificarsi dei problemi come interruzioni, eccezioni ed errori di connessione. {{site.data.keyword.Bluemix_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi.
 {: tsSymptoms}
 
 
@@ -950,7 +949,7 @@ cf api https://api.eu-gb.bluemix.net
 Se stai distribuendo la tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando
 gli strumenti Eclipse, devi prima creare un server {{site.data.keyword.Bluemix_notm}}
 e specificare l'endpoint API della regione {{site.data.keyword.Bluemix_notm}} in
-cui è stata creata la tua organizzazione. Per ulteriori informazioni sull'utilizzo di strumenti Eclipse, consulta il documento relativo alla [distribuzione di applicazioni con IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.  
+cui è stata creata la tua organizzazione. Per ulteriori informazioni sull'utilizzo di strumenti Eclipse, consulta il documento relativo alla [distribuzione di applicazioni con IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.  
   
   
 
@@ -1119,10 +1118,7 @@ problema:
   ...
         ```
 
-  * Assicurati che nella tua applicazione Node.js sia presente un file `package.json`
-per consentire al pacchetto di build Node.js di riconoscere
-l'applicazione. Inoltre, devi inserire questo file nella directory root
-della tua applicazione.	
+  * Assicurati che nella tua applicazione Node.js sia presente un file `package.json` per consentire al pacchetto di build Node.js di riconoscere l'applicazione. Inoltre, devi inserire questo file nella directory root della tua applicazione.	
     Il seguente
                                                   esempio mostra un semplice file
                                                   `package.json`:  
@@ -1166,8 +1162,7 @@ Il pacchetto di build Liberty utilizza il file `server.xml` per configurare l'ap
 
  
 
-Puoi risolvere questo problema rimuovendo il file server.xml dal progetto. Il pacchetto di build crea il file `server.xml` dinamicamente quando
-esegui il push dell'applicazione come un'applicazione WAR. Per ulteriori informazioni, vedi [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
+Puoi risolvere questo problema rimuovendo il file server.xml dal progetto. Il pacchetto di build crea il file `server.xml` dinamicamente quando esegui il push dell'applicazione come un'applicazione WAR. Per ulteriori informazioni, consulta [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -1215,7 +1210,7 @@ Questo problema potrebbe verificarsi perché DevOps Services richiede un file `m
 
 Per risolvere questo problema, devi creare un file `manifest.yml`. Per ulteriori informazioni su come creare un file `manifest.yml`,
 vedi [Manifest
-dell'applicazione](../manageapps/depapps.html#appmanifest){: new_window}.
+dell'applicazione](/docs/manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -1577,10 +1572,7 @@ Potresti riscontrare dei problemi quando utilizzi i runtime IBM® Bluemix™. Tu
 {: #ts_loading_bp}
 
 
-Potresti non essere in grado di utilizzare i componenti di pacchetti di build più recenti
-quando esegui il push di un'applicazione. Puoi utilizzare i pacchetti di build che hanno dei meccanismi integrati
-per impedire il caricamento di componenti obsoleti oppure puoi eliminare il contenuto nella
-directory cache della tua applicazione prima di eseguire il push o di preparare di nuovo l'applicazione. 
+Potresti non essere in grado di utilizzare i componenti di pacchetti di build più recenti quando esegui il push di un'applicazione. Puoi utilizzare i pacchetti di build che hanno dei meccanismi integrati per impedire il caricamento di componenti obsoleti oppure puoi eliminare il contenuto nella directory cache della tua applicazione prima di eseguire il push o di preparare di nuovo l'applicazione. 
 
  
 
@@ -1708,9 +1700,7 @@ Per risolvere il problema, aggiungi un file `requirements.txt` e un file `Procfi
 {: tsResolve}
 
   1. Aggiungi un file `requirements.txt` nella directory root della tua applicazione Python.
-     Il file `requirements.txt`
-specifica i pacchetti di libreria richiesti per la tua applicazione Python
-e la versione dei pacchetti. Il seguente esempio mostra il contenuto del file `requirements.txt`, dove `web.py==0.37` indica
+     Il file `requirements.txt` specifica i pacchetti di libreria richiesti per l'applicazione Python e la versione dei pacchetti. Il seguente esempio mostra il contenuto del file `requirements.txt`, dove `web.py==0.37` indica
 che la versione della libreria `web.py` che verrà scaricata è la 0.37 e `wsgiref==0.1.2` indica che la versione dell'interfaccia gateway del server Web richiesta dalla libreria web.py è la 0.1.2.
 	 ```
 	 web.py==0.37
@@ -1722,9 +1712,7 @@ il file `requirements.txt`, vedi [Requirements files](https://pip.readthedocs.or
   2. Aggiungi un file `Procfile` nella directory root
 della tua applicazione Python.
 	Il file `Procfile`
-deve contenere il comando di avvio per la tua applicazione Python. Nel seguente comando, *ilnomedellatuaapplicazione* è il nome della tua
-applicazione Python e *PORT* è il numero di porta che l'applicazione Python dovrà utilizzare per ricevere le richieste dagli utenti
-dell'applicazione. *$PORT* è facoltativo. Se non specifichi una PORTA nel comando di avvio, verrà utilizzato
+deve contenere il comando di avvio per la tua applicazione Python. Nel seguente comando, *ilnomedellatuaapplicazione* è il nome della tua applicazione Python e *PORT* è il numero di porta che l'applicazione Python dovrà utilizzare per ricevere le richieste dagli utenti dell'applicazione. *$PORT* è facoltativo. Se non specifichi una PORTA nel comando di avvio, verrà utilizzato
 il numero di porta indicato nella variabile di ambiente `VCAP_APP_PORT` che si trova all'interno dell'applicazione. 
 	```
 	web: python <ilnomedellatuaapplicazione>.py $PORT

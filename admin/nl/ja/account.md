@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} アカウントの管理
 {: #mngacct}
-*最終更新日: 2016 年 10 月 20 日*
-{: .last-updated}
 
 **「アカウント」**リンクに移動して、アカウントの通知の設定、アカウントの使用量の表示、または請求の表示を行います。
 {:shortdesc}
@@ -30,7 +28,8 @@ copyright:
 
 お客様の会社が IBM への登録作業を完了している場合にのみ、フェデレーテッド ID で {{site.data.keyword.Bluemix_notm}} にアカウント登録できます。会社のドメインを IBM に登録すると、会社の既存のユーザー資格情報で IBM の製品やサービスにログインできるようになります。認証は、お客様の会社の ID プロバイダーによって処理されます。フェデレーテッド ID で {{site.data.keyword.Bluemix_notm}} にログインすると、お客様の会社のログイン・ページを通じたログインを求められます。会社または組織のドメインを IBM に登録するための申請、またはこのプロセスの詳細については、[IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window} を参照してください。フェデレーテッド ID の登録を申請する際には、IBM のサポート役 (オファリング担当者やお客様担当者など) が必要です。
 
-*表 1. 登録方法*
+表 1. 登録方法
+{: #account_table1}
 
 | 登録方法 | 詳細 |    
 |-----------------|---------|

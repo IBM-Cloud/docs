@@ -1,14 +1,13 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 # DevOps
 {: #devops}
-
-*Letzte Aktualisierung: 9. Dezember 2015*
 
 Anwendungsbereitstellung beschleunigen | Wie soll die Codierung erfolgen? | Zuverlässige Implementierung
 ---- | ---- | ----

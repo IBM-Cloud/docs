@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-03"
  
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2016-10-27"
 # {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정 업그레이드 및 통합
 {: #softlayerlink}
 
-{{site.data.keyword.Bluemix_notm}} 평가판 계정을 보유하고 있으며 인프라 대시보드에 액세스하려는 경우 {{site.data.keyword.Bluemix_notm}} 종량과금제 계정으로 업그레이드해야 합니다. 
+{{site.data.keyword.Bluemix_notm}} 평가판 계정을 보유하고 있으며 인프라 대시보드에 액세스하려는 경우 {{site.data.keyword.Bluemix_notm}} 종량과금제 계정으로 업그레이드해야 합니다. 또한 평가판 계정에서 사용할 수 없는 다른 유료 리소스를 사용하려는 경우에도 업그레이드해야 합니다. 그렇지 않으면 평가판 계정이 완료됩니다. 
 
 계정을 연결하여 기존 {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정을 통합할 수 있습니다. 계정을 연결하면, {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 리소스 모두가 {{site.data.keyword.Bluemix_notm}}를 통해 청구됩니다.
 {:shortdesc}
@@ -64,6 +64,9 @@ SoftLayer 계정을 보유 중이며 {{site.data.keyword.Bluemix_notm}} 계정�
 계정을 연결하려면 SoftLayer 계정의 마스터 사용자여야 합니다. 
 
 계정이 연결되면, SoftLayer 글로벌 헤더에서 **{{site.data.keyword.Bluemix_notm}}로 이동** 링크를 사용할 수 있습니다. 이 링크를 클릭하면 {{site.data.keyword.Bluemix_notm}} 로그인 페이지로 이동됩니다. 또한 {{site.data.keyword.Bluemix_notm}} 헤더에서 이제 **SoftLayer** 링크를 사용할 수 있습니다. 링크를 클릭하면 새 창에서 {{site.data.keyword.slportal}}의 홈 페이지로 이동됩니다. 
+
+{{site.data.keyword.Bluemix_notm}} 인프라 오퍼링은 3계층 네트워크, 퍼블릭, 사설 및 관리 트래픽 세분화에 연결됩니다. 고객의 {{site.data.keyword.Bluemix_notm}} 계정에 대한 인프라 오퍼링은 무료로 사설 네트워크에서 데이터를 서로 전송할 수 있습니다.
+베어메탈 서버, 가상 서버 및 클라우드 스토리지와 같은 인프라 오퍼링은 퍼블릭 네트워크를 통해 {{site.data.keyword.Bluemix_notm}} 카탈로그(예: Watson 서비스, 컨테이너 또는 런타임)의 다른 애플리케이션 및 서비스에 연결합니다. 두 유형의 오퍼링 간의 데이터 전송은 표준 퍼블릭 네트워크 대역폭 비율로 측정되고 청구됩니다. 
 
 ## 계정 연결 시의 {{site.data.keyword.Bluemix_notm}} 사용에 대한 크레딧
 {: #slcredit}

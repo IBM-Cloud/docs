@@ -3,8 +3,8 @@
  
 
 copyright:
-
-  years: 2014，2016
+  years: 2016
+lastupdated: "2016-10-31"
 
  
 
@@ -15,9 +15,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} の用語集 
 {: #glossary}
-
-最終更新日: 2016 年 9 月 2 日
-{: .last-updated}
 
 この用語集は {{site.data.keyword.Bluemix}} の用語と定義を提供します。
 {:shortdesc}

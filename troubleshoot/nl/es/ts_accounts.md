@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Resolución de problemas de gestión de cuentas
 {: #managingaccounts}
 
-Última actualización: 18 de agosto de 2016
-{: .last-updated}
 
 Puede experimentar problemas con la gestión de la cuenta; por ejemplo si distintas
 apps comparten el mismo nombre de dominio, los administradores que no pueden ver

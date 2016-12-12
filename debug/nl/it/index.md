@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -21,27 +23,28 @@ Se si verificano problemi con {{site.data.keyword.Bluemix}}, puoi visualizzare i
 
 I log forniscono informazioni quali la corretta esecuzione di un lavoro o la sua mancata riuscita. Forniscono anche informazioni pertinenti che possono essere utilizzate per eseguire il debug e determinare la causa di un problema.
 
-I log sono in un formato fisso. Per i log dettagliati, puoi filtrarli o utilizzare degli host di registrazione esterni per memorizzare ed elaborare i log. Per ulteriori informazioni su formati dei log, visualizzazione e filtraggio dei log e configurazione della registrazione esterna, vedi [Registrazione per le applicazioni in esecuzione su Cloud Foundry](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
+I log sono in un formato fisso. Per i log dettagliati, puoi filtrarli o utilizzare degli host di registrazione esterni per memorizzare ed elaborare i log. Per ulteriori informazioni su formati dei log, visualizzazione e filtraggio dei log e configurazione della registrazione esterna, vedi [Registrazione per le applicazioni in esecuzione su Cloud Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
 
 
 ## Debug degli errori di preparazione
 {: #debugging-staging-errors}
-Potrebbero verificarsi dei problemi durante la preparazione delle tue applicazioni su {{site.data.keyword.Bluemix_notm}}. Se la preparazione della tua applicazione non viene eseguita correttamente, puoi visualizzare ed effettuare ricerche nei log di preparazione (STG) al fine di scoprire cosa è accaduto durante la distribuzione dell'applicazione e risolvere il problema. Per ulteriori informazioni sui metodi di visualizzazione dei log per le applicazioni Bluemix, vedi [visualizzazione dei log](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
+Potrebbero verificarsi dei problemi durante la preparazione delle tue applicazioni su {{site.data.keyword.Bluemix_notm}}. Se la preparazione della tua applicazione non viene eseguita correttamente, puoi visualizzare ed effettuare ricerche nei log di preparazione (STG) al fine di scoprire cosa è accaduto durante la distribuzione dell'applicazione e risolvere il problema. Per ulteriori informazioni sui metodi di visualizzazione dei log per le applicazioni Bluemix, vedi [visualizzazione dei log](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
 
-Per comprendere il motivo per cui la tua applicazione potrebbe provocare errori in {{site.data.keyword.Bluemix_notm}}, devi sapere come vengono distribuite ed eseguite le applicazioni in {{site.data.keyword.Bluemix_notm}}. Per informazioni dettagliate, vedi [Distribuzione delle applicazioni](../manageapps/depapps.html#appdeploy){: new_window}.
+Per comprendere il motivo per cui la tua applicazione potrebbe provocare errori in {{site.data.keyword.Bluemix_notm}}, devi sapere come vengono distribuite ed eseguite le applicazioni in {{site.data.keyword.Bluemix_notm}}. Per informazioni dettagliate, vedi [Distribuzione
+delle applicazioni](/docs/manageapps/depapps.html#appdeploy){: new_window}.
 
 
 La seguente procedura mostra come puoi utilizzare il comando `cf logs` per eseguire il debug degli errori di preparazione. Prima di iniziare
-la procedura, assicurati di aver installato l'interfaccia riga di comando cf. Per ulteriori informazioni sull'installazione dell'interfaccia riga di comando cf, vedi [Installing the cf command line interface](../starters/install_cli.html){: new_window}.
+la procedura, assicurati di aver installato l'interfaccia riga di comando cf. Per ulteriori informazioni sull'installazione dell'interfaccia riga di comando cf, vedi [Installing the cf command line interface](/docs/starters/install_cli.html){: new_window}.
 
   1. Connettiti a {{site.data.keyword.Bluemix_notm}} immettendo il seguente codice nell'interfaccia riga di comando cf:
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	 cf api https://api.ng.bluemix.net
 	 ```
 
   2. Accedi a {{site.data.keyword.Bluemix_notm}} immettendo `cf login`.
 
-  3. Recupera i log recenti immettendo `cf logs nomeapplicazione --recent`. Se vuoi filtrare un log dettagliato, utilizza l'opzione `grep`. Ad esempio, puoi immettere il seguente codice per visualizzare solo i log [STG]:
+  3. Recupera i log recenti immettendo `cf logs appname --recent`. Se vuoi filtrare un log dettagliato, utilizza l'opzione `grep`. Ad esempio, puoi immettere il seguente codice per visualizzare solo i log [STG]:
     ```
 	cf logs appname --recent | grep '\[STG\]'
 	```

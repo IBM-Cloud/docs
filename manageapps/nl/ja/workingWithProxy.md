@@ -15,8 +15,8 @@ copyright:
 最終更新日: 2016 年 7 月 20 日
 {: .last-updated}
 
-[Bluemix Dedicated](../../dedicated/index.html#dedicated) や
-[Bluemix Local](../../local/index.html#local) などの一部の環境では、ステージングおよび実行時のアプリケーションの動作に影響するプロキシーを構成できます。
+[Bluemix Dedicated](/docs/dedicated/index.html#dedicated) や
+[Bluemix Local](/docs/local/index.html#local) などの一部の環境では、ステージングおよび実行時のアプリケーションの動作に影響するプロキシーを構成できます。
 
 プロキシーで動作するようにアプリケーションを構成するには、以下の環境変数を使用できます。
   * [http_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)
@@ -35,7 +35,7 @@ copyright:
 ## Java アプリケーション
 {: #java_apps}
 
-[Liberty for Java](../runtimes/liberty/index.html) および [java_buildpack](../runtimes/tomcat/index.html) アプリケーションでは、**JAVA_OPTS** 環境変数でプロキシー設定をランタイムに渡すことができます。例えば、以下のコマンドを実行します。 
+[Liberty for Java](/docs/runtimes/liberty/index.html) および [java_buildpack](/docs/runtimes/tomcat/index.html) アプリケーションでは、**JAVA_OPTS** 環境変数でプロキシー設定をランタイムに渡すことができます。例えば、以下のコマンドを実行します。 
 ```
    $ cf se myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
@@ -47,5 +47,5 @@ copyright:
 {: #rellinks}
 ## 一般
 {: #general}
-* [Liberty for Java](../runtimes/liberty/index.html)
-* [SDK for Nodejs](../runtimes/nodejs/index.html)
+* [Liberty for Java](/docs/runtimes/liberty/index.html)
+* [SDK for Nodejs](/docs/runtimes/nodejs/index.html)

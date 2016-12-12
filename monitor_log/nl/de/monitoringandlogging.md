@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-17"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 #Überwachung und Protokollierung mit Cloud Foundry
 {: #monitoringandlogging}
 
-Letzte Aktualisierung: 28. Oktober 2016
-{: .last-updated}
 
 Indem Sie Ihre Apps überwachen und Protokolle überprüfen, können Sie die Anwendungsausführung und den Datenfluss verfolgen, um Ihre Bereitstellung besser zu verstehen. Darüber hinaus können Sie die Zeit und den Aufwand für das Auffinden und Beheben von Problemen reduzieren.
 {:shortdesc}
@@ -42,7 +41,7 @@ Wenn Sie die Cloud Foundry-Infrastruktur verwenden, um Ihre Apps in {{site.data.
 
 Setzen Sie zur Überwachung von {{site.data.keyword.Bluemix_notm}}-Apps eine der folgenden Methoden ein:
 
-* {{site.data.keyword.Bluemix_notm}}-Services. 'Monitoring and Analytics' ist ein Service, mit dem Sie Ihre Anwendungsleistung überwachen können. Zusätzlich stellt dieser Service Analysefunktionen wie eine Protokollanalyse bereit. Weitere Informationen finden Sie unter [Monitoring and Analytics](../services/monana/index.html).
+* {{site.data.keyword.Bluemix_notm}}-Services. 'Monitoring and Analytics' ist ein Service, mit dem Sie Ihre Anwendungsleistung überwachen können. Zusätzlich stellt dieser Service Analysefunktionen wie eine Protokollanalyse bereit. Weitere Informationen finden Sie unter [Monitoring and Analytics](/docs/services/monana/index.html).
 * Optionen von Drittanbietern. Beispiel: [New Relic](http://newrelic.com/){:new_window}.
 
 ###Protokollierung für Apps, die in Cloud Foundry ausgeführt werden
@@ -162,8 +161,7 @@ Wählen Sie eine der folgenden Optionen zum Anzeigen von Protokollen über die B
 <dt><strong>cf logs <var class="keyword varname">App-Name</var></strong></dt>
 <dd>Zeigt Protokolle an, die in dem Moment generiert werden, in dem Sie diesen Befehl eingeben.</dd>
 </dl>
-<div class="note tip"><span class="tiptitle">Tipp:</span> Wenn Sie den Befehl <span class="keyword cmdname">cf push</span> oder <span class="keyword cmdname">cf
-start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="ph codeph">cf logs App-Name --recent</samp> in einem anderen Befehlszeilenfenster eingeben, um die Protokolle in Echtzeit anzuzeigen. </div>
+<div class="note tip"><span class="tiptitle">Tipp:</span> Wenn Sie den Befehl <span class="keyword cmdname">cf push</span> oder <span class="keyword cmdname">cf start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="ph codeph">cf logs App-Name --recent</samp> in einem anderen Befehlszeilenfenster eingeben, um die Protokolle in Echtzeit anzuzeigen. </div>
 </li>
 
 <li>Protokolle anzeigen, nachdem die Apps bereitgestellt wurden.
@@ -173,8 +171,7 @@ start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="
 <dl><strong>buildpack.log</strong></dt>
 <dd>
 <p>Diese Protokolldatei zeichnet differenzierte Informationsereignisse für das Debugging auf. Sie können dieses Protokoll verwenden, um Probleme bei der Ausführung des Buildpacks zu beheben.</p>
-<p>Wenn Daten in der Datei <span class="ph filepath">buildpack.log</span> generiert werden sollen, müssen Sie die Traceerstellung für Buildpacks aktivieren, indem Sie den folgenden Befehl ausführen:
-   <pre class="pre">cf set-env <var class="keyword varname">App-Name</var> JBP_LOG_LEVEL DEBUG</pre>
+<p>Wenn Daten in der Datei <span class="ph filepath">buildpack.log</span> generiert werden sollen, müssen Sie die Traceerstellung für Buildpacks aktivieren, indem Sie den folgenden Befehl ausführen: <pre class="pre">cf set-env <var class="keyword varname">App-Name</var> JBP_LOG_LEVEL DEBUG</pre>
 <p>
 <p>Geben Sie den folgenden Befehl ein, um dieses Protokoll anzuzeigen:
 <pre class="pre">cf files <var class="keyword varname">App-Name</var> app/.buildpack-diagnostics/buildpack.log</pre>
@@ -191,7 +188,7 @@ start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="
 </li></ul>
 
 
-**Hinweis:** Informationen zur Aktivierung der Anwendungsprotokollierung finden Sie unter [Laufzeitfehler beheben](../debug/index.html#debugging-runtime-errors).
+**Hinweis:** Informationen zur Aktivierung der Anwendungsprotokollierung finden Sie unter [Laufzeitfehler beheben](/docs/debug/index.html#debugging-runtime-errors).
 
 
 
@@ -282,7 +279,7 @@ Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer App und dem Syst
 	 
 	 Der Name der vom Benutzer bereitgestellten Serviceinstanz.
 	 
-  4. Führen Sie ein erneutes Staging für die App durch. 
+  4. Führen Sie ein erneutes Staging für die App durch.
      Geben Sie `cf restage appname` ein, damit die Änderungen wirksam werden. 
 
 #### Protokolle in externen Hosts anzeigen
@@ -390,6 +387,53 @@ source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 
 In der Splunk-Webschnittstelle wird ein Protokolldatenstrom angezeigt. Obwohl nur Splunk Light installiert wurde, kann eine Protokollmenge von 500 MB pro Tag gespeichert werden.  
 
+## Protokollierung für Cloud Foundry-Apps in
+{{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}}
+{: #hybrid_apps_logs_ov}
+
+
+In {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}} werden Cloud Foundry-Apps mit integrierter Protokollierung bereitgestellt. Die Daten, die aus Ihren Apps erfasst werden, können Sie in der {{site.data.keyword.Bluemix_notm}}-Konsole prüfen.
+{:shortdesc}
+
+Cloud Foundry-Apps verwenden Cloud Foundry Loggregator, um Protokolle außerhalb der App zu überwachen und weiterzuleiten. Innerhalb der App müssen keine Agenten installiert werden. 
+
+### Hardwarevoraussetzungen
+
+*Tabelle 1. Hardwarevoraussetzung der Protokollierung für {{site.data.keyword.Bluemix_local_notm}}*
+{: #table01}
+
+| **Voraussetzung** |    **1 Knoten**     | **3 Knoten für Hochverfügbarkeit** |
+|-----------------|-------------------|-------------------|
+| vCPU | 19 | 57 |
+| Hauptspeicher | 80 GB | 240 GB |
+| Lokaler Speicher | 2,98 TB | 8,94 TB |
+
+### Konfiguration
+
+In {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}} sind Protokolle standardmäßig für alle Apps aktiv. Informationen zum Lesen der Standardprotokolle finden Sie unter [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden](#logging_for_bluemix_apps). In Umgebungen mit {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}} kann darüber hinaus eine erweiterte Protokollierung aktiviert werden. 
+
+* Zum Aktivieren der erweiterten Protokollierung in Ihrer {{site.data.keyword.Bluemix_dedicated_notm}}- und {{site.data.keyword.Bluemix_local_notm}}-Umgebung führen Sie die Schritte im Abschnitt [Protokolle anzeigen](#hybrid_apps_logs_dash) aus. Falls die Schaltfläche **Erweiterte Ansicht** nicht angezeigt wird, ist diese Funktion nicht aktiviert. 
+
+* Die Schritte, mit denen Sie die erweiterte Protokollierung zu Ihrer Umgebung hinzufügen, sind in der Dokumentation für [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) bzw. [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) beschrieben.  
+
+### Protokollspeicherung
+
+In {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}} werden Protokolldaten für Cloud Foundry-Apps standardmäßig 30 Tage gespeichert.
+
+
+## Protokolle für Cloud Foundry-Apps in {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}} anzeigen
+{: #hybrid_apps_logs_dash}
+
+Für die Apps, die Sie unter {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}} ausführen, können Sie Protokolle prüfen.
+{:shortdesc}
+
+Führen Sie die folgenden Schritte aus, um die Protokolle für Ihre Apps anzuzeigen. 
+1. Wählen Sie eine aktive App aus. 
+2. Klicken Sie auf **Protokolle**. In der Ansicht **Protokolle** können Sie die Protokolle für Ihre aktive App einsehen. 
+4. Klicken Sie auf die Schaltfläche **Erweiterte Ansicht**. Die **erweiterte Ansicht** zeigt mehr Details der Protokolle und verwendet hierzu Kibana, ein Visualisierungstool, das mithilfe von Protokollen und Daten mit Zeitmarken angepasste Visualisierungen erstellt. Weitere Informationen zur Verwendung der erweiterten Ansicht enthält die Dokumentation für [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+
+
+Als nächstes können Sie ein Kibana-Dashboard anpassen. Weitere Informationen finden Sie unter [Anzeige von Protokollen in einem Kibana-Dashboard anpassen](/docs/manageapps/containers/container_ml_logs.html#container_ml_dash_logs_custom).
 
 
 

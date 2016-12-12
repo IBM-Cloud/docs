@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Web 和应用程序
 {: #webapplication}
-
-*上次更新时间：2015 年 12 月 9 日*
 
 使用这些服务可在云中开发 Web 应用程序时快速添加或除去功能部件。还可简化管理任务以及对业务流程和规则进行组织。
 {:shortdesc}

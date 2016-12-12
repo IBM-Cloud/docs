@@ -216,6 +216,7 @@ da linha de comandos cf:
   instances: 1
   memory: 512M</code></pre>
 <p>Para obter mais informações sobre as opções suportadas que podem ser usadas neste arquivo, consulte [Manifest do aplicativo](/docs/manageapps/depapps.html#appmanifest).
+
 </p></li></ol>
 </li>
 

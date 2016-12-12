@@ -1,20 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 
 # Seguridad
 {: #security}
 
-*Última actualización: 9 de diciembre de 2015*
-
-Con estos servicios de seguridad, puede proteger el acceso a app y cargas de trabajo y exploración app en busca de vulnerabilidades. También puede incorporar controles de seguridad de gestión de datos en los servicios de gestión de datos y de Big Data. 
+Con estos servicios de seguridad, puede proteger el acceso a app y cargas de trabajo y exploración app en busca de vulnerabilidades. También puede incorporar controles de seguridad de gestión de datos en los servicios de gestión de datos y de Big Data.
 {:shortdesc}
 
 

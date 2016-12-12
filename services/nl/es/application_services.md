@@ -1,20 +1,18 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Servicios de aplicación
 {: #app_services}
 
-*Última actualización: 28 de enero de 2016*
-{: .last-updated}
-
-Utilice estos servicios para añadir o eliminar rápidamente características mientras desarrolla app web en la nube. También puede simplificar las tareas de gestión y organizar los procesos y las reglas empresariales. 
+Utilice estos servicios para añadir o eliminar rápidamente características mientras desarrolla app web en la nube. También puede simplificar las tareas de gestión y organizar los procesos y las reglas empresariales.
 {:shortdesc}
 
 

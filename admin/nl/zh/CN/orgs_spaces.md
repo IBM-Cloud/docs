@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # 管理组织和空间
 {: #orgsspacesusers}
-上次更新时间：2016 年 10 月 20 日
-{: .last-updated}
 
 作为帐户所有者，您可以通过转至**管理组织**页面来管理组织。组织管理员还可以使用“管理组织”页面来管理自己被设置为其管理员的任何组织。
 {:shortdesc}
@@ -59,7 +57,7 @@ copyright:
 
 您必须联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}来删除组织。请求支持团队删除组织时，会删除该组织内的所有空间、应用程序和服务。
 
-以下[用户角色](users_roles.html#userrolesinfo)可以分配给组织中的团队成员：
+以下[用户角色](/docs/admin/users_roles.html#userrolesinfo)可以分配给组织中的团队成员：
 
 <ul>
 <li>组织管理员</li>
@@ -74,7 +72,7 @@ copyright:
 
 在组织内，您可以使用空间将一组应用程序、服务和团队成员分组在一起。空间与 {{site.data.keyword.Bluemix_notm}} 中的特定区域联系在一起。
 
-在将团队成员添加到组织之后，您可以对其授予空间的许可权。与组织类似，空间也具有一组[用户角色](users_roles.html#userrolesinfo)，这些角色带有分配给团队成员的特定许可权：
+在将团队成员添加到组织之后，您可以对其授予空间的许可权。与组织类似，空间也具有一组[用户角色](/docs/admin/users_roles.html#userrolesinfo)，这些角色带有分配给团队成员的特定许可权：
 
 <ul>
 <li>空间管理员</li>
@@ -157,7 +155,7 @@ copyright:
 3. 单击**编辑组织**。
 4. 选择**配额**选项卡。
 
-要更新组织的配额，必须开具支持凭单。有关开具支持凭单的更多信息，请参阅[获取客户支持](../support/index.html#contacting-support)。有关容器配额的更多信息，请参阅“容器”文档中的[配额](../containers/container_planning_org_ov.html##container_planning_quota)。
+要更新组织的配额，必须开具支持凭单。有关开具支持凭单的更多信息，请参阅[获取客户支持](/docs/support/index.html#contacting-support)。有关容器配额的更多信息，请参阅“容器”文档中的[配额](/docs/containers/container_planning_org_ov.html##container_planning_quota)。
 
 ## 管理域
 {: #managedomains}

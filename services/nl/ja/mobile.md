@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # モバイル
 {: #mobile}
-
-*最終更新日: 2015 年 12 月 9 日*
 
 モバイル・サービスを使用すると、マルチプラットフォームでネイティブまたはハイブリッドの、Android および iOS アプリケーションを構築できます。
 {:shortdesc}

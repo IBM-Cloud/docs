@@ -3,6 +3,8 @@
 copyright:
   years: 2015, 2016
   
+lastupdated: "2016-08-11"
+  
 
 ---
 
@@ -16,8 +18,6 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} へのアクセスに関するトラブルシューティング 
 {: #accessing}
 
-最終更新日: 2016 年 8 月 11 日
-{: .last-updated}
 
 
 {{site.data.keyword.Bluemix}} へのアクセスに関する一般的な問題には、{{site.data.keyword.Bluemix_notm}} へのログインができないユーザー、保留状態で使用できないアカウントなどが含まれます。しかし多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
@@ -397,7 +397,7 @@ Bluemix でアプリを作成しようとすると、以下のエラー・メッ
 適切な権限レベルを取得するには、以下のいずれかの方法を使用します。
 {: tsResolve}
  * 開発者役割を備えている別の組織およびスペースを選択します。 
- * 自分の役割を開発者に変更するように、またはスペースを作成して自分に開発者役割を割り当てるように組織マネージャーに依頼します。詳しくは、『[組織とスペースの管理](../admin/orgs_spaces.html){: new_window}』を参照してください。
+ * 自分の役割を開発者に変更するように、またはスペースを作成して自分に開発者役割を割り当てるように組織マネージャーに依頼します。詳しくは、『[組織とスペースの管理](/docs/admin/orgs_spaces.html){: new_window}』を参照してください。
  
 
  
@@ -472,7 +472,7 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
 
  
 
-{{site.data.keyword.Bluemix_notm}} サービスがダウンしていると疑われる場合は、まず、[{{site.data.keyword.Bluemix_notm}} 状況](http://ibm.biz/bluemixstatus){: new_window}ページを確認してください。回避策として、別の {{site.data.keyword.Bluemix_notm}} 地域でそのサービスを使用することもできます。[サービスを別の地域で使用](../services/reqnsi.html#cross_region_service){: new_window}に詳細情報があります。サービスの状況が正常の場合には、以下のステップで問題を解決してください。
+{{site.data.keyword.Bluemix_notm}} サービスがダウンしていると疑われる場合は、まず、[{{site.data.keyword.Bluemix_notm}} 状況](http://ibm.biz/bluemixstatus){: new_window}ページを確認してください。回避策として、別の {{site.data.keyword.Bluemix_notm}} 地域でそのサービスを使用することもできます。[サービスを別の地域で使用](/docs/services/reqnsi.html#cross_region_service){: new_window}に詳細情報があります。サービスの状況が正常の場合には、以下のステップで問題を解決してください。
 {: tsResolve}
 
   * アクションを再試行します。
@@ -480,7 +480,7 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
 	* 異なるブラウザーを使用します。
 	* ルーター、モデム、およびコンピューターをリブートします。これらのデバイスをリブートすると、エラー 502 につながる各種エラーが解消する可能性があります。 
   * 時間をおいて、後で再試行します。場合によっては、インターネット・サービス・プロバイダーまたは {{site.data.keyword.Bluemix_notm}} サービスで一時的な問題が発生していることがあります。一時的な問題が解決されるまで待ちます。
-  * 問題が解決しない場合は、{{site.data.keyword.Bluemix_notm}} サポートに連絡してください。詳しくは、『[{{site.data.keyword.Bluemix_notm}} サポートへのお問い合わせ](../support/index.html#contacting-bluemix-support){: new_window}』を参照してください。 
+  * 問題が解決しない場合は、{{site.data.keyword.Bluemix_notm}} サポートに連絡してください。詳しくは、『[Contacting {{site.data.keyword.Bluemix_notm}} サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support){: new_window}』を参照してください。 
 
 
 
@@ -500,7 +500,7 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
 {: tsCauses}
 
  
-以下のいずれかの方法でディスク割り当て量を指定します。指定できる最大ディスク割り当て量は 2 GB です。2 GB でも不十分な場合は、[オブジェクト・ストア](../services/ObjectStorage/index.html){: new_window}などの外部サービスを試してください。
+以下のいずれかの方法でディスク割り当て量を指定します。指定できる最大ディスク割り当て量は 2 GB です。2 GB でも不十分な場合は、[オブジェクト・ストア](/docs/services/ObjectStorage/index.html){: new_window}などの外部サービスを試してください。
 {: tsResolve}
 
   * manifest.yml ファイルに以下の項目を追加します。
@@ -600,7 +600,7 @@ IBM Push サービスは、 Google Cloud Messaging (GCM) サービスを使用�
 	  1. 次を入力して、アプリケーションからサービス・インスタンスをアンバインドします: `cf unbind-service <appname> <service_instance_name>`。
 	  2. 次を入力して、サービス・インスタンスを削除します: `cf delete-service <service_instance_name>`。
 	  3. サービス・インスタンスを削除した後、次を入力して、サービス・インスタンスがバインドされていたアプリケーションを再ステージングしなければならない場合があります: `cf restage <appname>`.
-  * 持つことのできるサービス・インスタンスの数に対する上限を撤廃するには、トライアル・アカウントを支払アカウントに変更します。トライアル・アカウントを支払アカウントに変更する方法については、『[プラン変更方法](../pricing/index.html#changing){: new_window}』を参照してください。
+  * 持つことのできるサービス・インスタンスの数に対する上限を撤廃するには、トライアル・アカウントを支払アカウントに変更します。トライアル・アカウントを支払アカウントに変更する方法については、『[プラン変更方法](/docs/pricing/index.html#changing){: new_window}』を参照してください。
 
   
   
@@ -655,7 +655,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 自分のアカウントのメモリー割り当て量を増やすか、自分のアプリが使用するメモリーを減らすか、そのいずれかを行うことができます。
 {: tsResolve} 
 
-  * アカウントのメモリー割り当て量を増やすには、トライアル・アカウントを支払アカウントに変更してください。トライアル・アカウントを支払アカウントに変更する方法については、『[支払アカウント (Pay accounts)](../pricing/index.html#pay-accounts){: new_window}』を参照してください。 
+  * アカウントのメモリー割り当て量を増やすには、トライアル・アカウントを支払アカウントに変更してください。トライアル・アカウントを支払アカウントに切り替える方法については、『[支払アカウント (Pay accounts)](/docs/pricing/index.html#pay-accounts){: new_window}』を参照してください。 
   * アプリが使用するメモリーを削減するには、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは cf コマンド・ライン・インターフェースのいずれかを使用します。
 {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用する場合、以下のステップを実行してください。
 	  1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、アプリケーションを選択します。アプリ詳細ページが開きます。
@@ -796,7 +796,7 @@ cf コマンド・ライン・インターフェースを使用して {{site.dat
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-Eclipse ツールを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュする場合は、まず {{site.data.keyword.Bluemix_notm}} サーバーを作成し、自分の組織が作成された {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントを指定します。Eclipse ツールの使用について詳しくは、『[IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ (Deploying apps with IBM Eclipse Tools for Bluemix)](../manageapps/eclipsetools/eclipsetools.html){: new_window}』を参照してください。  
+Eclipse ツールを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュする場合は、まず {{site.data.keyword.Bluemix_notm}} サーバーを作成し、自分の組織が作成された {{site.data.keyword.Bluemix_notm}} 地域の API エンドポイントを指定します。Eclipse ツールの使用について詳しくは、『[IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ (Deploying apps with IBM Eclipse Tools for Bluemix)](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}』を参照してください。  
   
   
 
@@ -996,9 +996,8 @@ Liberty アプリが {{site.data.keyword.Bluemix_notm}} にプッシュされる
 
  
 
-server.xml ファイルをプロジェクトから削除することで、この問題を解決できます。アプリを WAR アプリとしてプッシュすると、ビルドパックは `server.xml` ファイルを動的に作成します。
-詳しくは、[『Liberty for
-Java』](../runtimes/liberty/index.html){: new_window}を参照してください。
+server.xml ファイルをプロジェクトから削除することで、この問題を解決できます。アプリを WAR アプリとしてプッシュすると、ビルドパックは `server.xml` ファイルを動的に作成します。詳しくは、[『Liberty for
+Java』](/docs/runtimes/liberty/index.html){: new_window}を参照してください。
 {: tsResolve}
 	
 	
@@ -1040,7 +1039,7 @@ DevOps Services から {{site.data.keyword.Bluemix_notm}} にアプリをデプ�
 
  
 
-この問題を解決するには、`manifest.yml` ファイルを作成する必要があります。`manifest.yml` ファイルの作成方法について詳しくは、[「アプリケーション・マニフェスト (Application manifest)」](../manageapps/depapps.html#appmanifest){: new_window}を参照してください。
+この問題を解決するには、`manifest.yml` ファイルを作成する必要があります。`manifest.yml` ファイルの作成方法について詳しくは、『[アプリケーション・マニフェスト (Application manifest)](/docs/manageapps/depapps.html#appmanifest){: new_window}』を参照してください。
 {: tsResolve}	
 	
 

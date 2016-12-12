@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-02-24"
+
 
 ---
 
@@ -140,8 +141,6 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 {: rellinks}
 ## 一般
 {: general}
-* [{{site.data.keyword.autoscaling}} サービス](../../../services/Auto-Scaling/index.html)
+* [{{site.data.keyword.autoscaling}} サービス](/docs/services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}
-
-

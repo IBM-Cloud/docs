@@ -37,7 +37,7 @@ CLI를 사용하여 {{site.data.keyword.openwhisk_short}}를 설정한 후 명�
 ## {{site.data.keyword.openwhisk_short}} CLI 사용
 {: #openwhisk_start_using_cli}
 
-환경을 구성한 후에 {{site.data.keyword.openwhisk_short}} CLI를 사용하여 다음을 수행할 수 있습니다.
+[환경을 구성한](https://new-console.{DomainName}/openwhisk/cli){: new_window} 후에 {{site.data.keyword.openwhisk_short}} CLI를 사용하기 시작하여 다음을 수행할 수 있습니다. 
 
 * {{site.data.keyword.openwhisk_short}}에서 코드 스니펫 또는 조치를 실행합니다. [조치 작성 및 호출](./openwhisk_actions.html)을 참조하십시오.
 * 조치가 이벤트에 응답할 수 있도록 트리거 및 규칙을 사용합니다. [트리거 및 규칙 작성](./openwhisk_triggers_rules.html)을 참조하십시오.

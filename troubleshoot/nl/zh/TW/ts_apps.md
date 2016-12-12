@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-11"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # 管理應用程式疑難排解
 {: #managingapps}
 
-前次更新：2016 年 10 月 11 日
-{: .last-updated} 
 
 管理應用程式的一般問題可能包括無法更新應用程式、未顯示雙位元組字元等問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}
@@ -188,7 +188,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 若要取得適當的權限層級，請使用下列其中一種方法：
 {: tsResolve}
  * 選取另一個您具有開發人員角色的組織及空間。 
- * 要求組織管理者將您的角色變更為開發人員，或建立空間，然後將開發人員角色指派給您。如需詳細資料，請參閱[管理組織和空間](../admin/orgs_spaces.html){: new_window}。
+ * 要求組織管理者將您的角色變更為開發人員，或建立空間，然後將開發人員角色指派給您。如需詳細資料，請參閱[管理組織和空間](/docs/admin/orgs_spaces.html){: new_window}。
  
 
 
@@ -262,7 +262,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 
  
 
-如果您懷疑 {{site.data.keyword.Bluemix_notm}} 服務已關閉，請先檢查 [{{site.data.keyword.Bluemix_notm}} 狀態](http://ibm.biz/bluemixstatus){: new_window}頁面。您可能想要使用另一個 {{site.data.keyword.Bluemix_notm}} 地區的服務作為暫行解決方法。詳細資訊位於[使用另一個地區的服務](../services/reqnsi.html#cross_region_service){: new_window}。如果服務狀態正常，請嘗試下列步驟來解決問題：
+如果您懷疑 {{site.data.keyword.Bluemix_notm}} 服務已關閉，請先檢查 [{{site.data.keyword.Bluemix_notm}} 狀態](http://ibm.biz/bluemixstatus){: new_window}頁面。您可能想要使用另一個 {{site.data.keyword.Bluemix_notm}} 地區的服務作為暫行解決方法。詳細資訊位於[使用另一個地區的服務](/docs/services/reqnsi.html#cross_region_service){: new_window}。如果服務狀態正常，請嘗試下列步驟來解決問題：
 {: tsResolve}
 
   * 重試動作：
@@ -270,7 +270,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 	* 使用不同的瀏覽器。
 	* 將路由器、數據機及電腦重新開機。將這些裝置重新開機可清除導致錯誤 502 的許多種錯誤。 
   * 等待並於稍後再試一次。在部分情況下，暫時問題可能是由於網際網路服務供應商或 {{site.data.keyword.Bluemix_notm}} 服務所造成。您可能要等待暫時問題獲得解決。
-  * 如果問題仍然存在，請與 {{site.data.keyword.Bluemix_notm}} 支援中心聯絡。如需相關資訊，請參閱[與 {{site.data.keyword.Bluemix_notm}} 支援中心聯絡](../support/index.html#contacting-bluemix-support){: new_window}。 
+  * 如果問題仍然存在，請與 {{site.data.keyword.Bluemix_notm}} 支援中心聯絡。如需相關資訊，請參閱[與 {{site.data.keyword.Bluemix_notm}} 支援中心聯絡](/docs/support/index.html#contacting-bluemix-support){: new_window}。 
 
 
 
@@ -290,7 +290,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 {: tsCauses}
 
  
-請使用下列其中一種方法來指定您的磁碟限額。您可以指定的磁碟限額上限是 2 GB。如果 2 GB 仍然不夠，請嘗試使用外部服務，例如 [Object Storage](../services/ObjectStorage/index.html){: new_window}。
+請使用下列其中一種方法來指定您的磁碟限額。您可以指定的磁碟限額上限是 2 GB。如果 2 GB 仍然不夠，請嘗試使用外部服務，例如 [Object Storage](/docs/services/ObjectStorage/index.html){: new_window}。
 {: tsResolve}
 
   * 在 manifest.yml 檔案中，新增下列項目：
@@ -351,7 +351,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GC
 	  1. 鍵入 `cf unbind-service <appname> <service_instance_name>`，將服務實例與應用程式取消連結。
 	  2. 鍵入 `cf delete-service <service_instance_name>`，以刪除服務實例。
 	  3. 刪除服務實例之後，您可能會想要鍵入 `cf restage <appname>`，以重新編譯打包服務實例所連結的應用程式。
-  * 若要移除您可以擁有之服務實例數目的限制，請將您的試用帳戶轉換成付費帳戶。如需如何將試用帳戶轉換成付費帳戶的相關資訊，請參閱[如何變更方案](../pricing/index.html#changing){: new_window}。
+  * 若要移除您可以擁有之服務實例數目的限制，請將您的試用帳戶轉換成付費帳戶。如需如何將試用帳戶轉換成付費帳戶的相關資訊，請參閱[如何變更方案](/docs/pricing/index.html#changing){: new_window}。
 
   
   
@@ -406,7 +406,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 您可以增加帳戶的記憶體配額，或減少應用程式所使用的記憶體。
 {: tsResolve} 
 
-  * 若要增加帳戶的記憶體配額，請將試用帳戶轉換成付費帳戶。如需如何將試用帳戶轉換成付費帳戶的相關資訊，請參閱[付費帳戶](../pricing/index.html#pay-accounts){: new_window}。 
+  * 若要增加帳戶的記憶體配額，請將試用帳戶轉換成付費帳戶。如需如何將試用帳戶轉換成付費帳戶的相關資訊，請參閱[付費帳戶](/docs/pricing/index.html#pay-accounts){: new_window}。 
   * 若要減少應用程式所使用的記憶體，請使用 {{site.data.keyword.Bluemix_notm}} 主控台或 cf 指令行介面。
     如果您使用 {{site.data.keyword.Bluemix_notm}} 主控台，請完成下列步驟：
 	  1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」上，選取您的應用程式。即會開啟應用程式詳細資料頁面。
@@ -534,7 +534,7 @@ path: path_to_application
 請使用下列其中一個選項來解決問題：
 {: tsResolve}
 
-  * 建議的作法是使用 IBM Node.js 建置套件來啟動應用程式。如需相關資訊，請參閱[將 Node.js 應用程式部署至 {{site.data.keyword.Bluemix_notm}}](../runtimes/nodejs/index.html#nodejs_runtime){: new_window} 主題的「啟動指令」小節。 
+  * 建議的作法是使用 IBM Node.js 建置套件來啟動應用程式。如需相關資訊，請參閱[將 Node.js 應用程式部署至 {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime){: new_window} 主題的「啟動指令」小節。 
   * 將 `manifest.yml` 中的 command 屬性修訂為 command: null 或編輯 push 指令以包含 `-c null`，來停用現有應用程式的指令。 
   * 從 `manifest.yml` 移除 **command** 屬性。然後，從 {{site.data.keyword.Bluemix_notm}} 刪除現行應用程式，並重新推送應用程式。
   
@@ -578,7 +578,7 @@ path: path_to_application
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-如果您使用 Eclipse 工具將應用程式推送至 {{site.data.keyword.Bluemix_notm}}，則必須先建立 {{site.data.keyword.Bluemix_notm}} 伺服器，並指定您組織建立所在 {{site.data.keyword.Bluemix_notm}} 地區的 API 端點。如需使用 Eclipse 工具的相關資訊，請參閱[使用 IBM Eclipse Tools for Bluemix 部署應用程式](../manageapps/eclipsetools/eclipsetools.html){: new_window}。  
+如果您使用 Eclipse 工具將應用程式推送至 {{site.data.keyword.Bluemix_notm}}，則必須先建立 {{site.data.keyword.Bluemix_notm}} 伺服器，並指定您組織建立所在 {{site.data.keyword.Bluemix_notm}} 地區的 API 端點。如需使用 Eclipse 工具的相關資訊，請參閱[使用 IBM Eclipse Tools for Bluemix 部署應用程式](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}。  
   
   
 
@@ -778,7 +778,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
  
 
-您可以移除專案中的 server.xml 檔案，來解決此問題。將應用程式推送為 WAR 應用程式時，此建置套件會動態建立 `server.xml` 檔案。如需相關資訊，請參閱 [Liberty for Java](../runtimes/liberty/index.html){: new_window}。
+您可以移除專案中的 server.xml 檔案，來解決此問題。將應用程式推送為 WAR 應用程式時，此建置套件會動態建立 `server.xml` 檔案。如需相關資訊，請參閱 [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}。
 {: tsResolve}
 	
 	
@@ -820,7 +820,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
  
 
-若要解決此問題，您必須建立 `manifest.yml` 檔案。如需如何建立 `manifest.yml` 檔案的相關資訊，請參閱[應用程式資訊清單](../manageapps/depapps.html#appmanifest){: new_window}。
+若要解決此問題，您必須建立 `manifest.yml` 檔案。如需如何建立 `manifest.yml` 檔案的相關資訊，請參閱[應用程式資訊清單](/docs/manageapps/depapps.html#appmanifest){: new_window}。
 {: tsResolve}	
 	
 

@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # 런타임 문제점 해결
 {: #runtimes}
 
-마지막 업데이트 날짜: 2016년 8월 18일
-{: .last-updated}
 
 
 IBM® Bluemix™ 런타임을 사용할 때 문제점이 발생할 수 있습니다. 그러나 대부분의 경우

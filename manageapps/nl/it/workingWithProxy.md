@@ -15,8 +15,8 @@ copyright:
 Ultimo aggiornamento: 20 luglio 2016
 {: .last-updated}
 
-In alcuni ambienti come [Bluemix dedicato](../../dedicated/index.html#dedicated) e
-[Bluemix locale](../../local/index.html#local), un proxy può essere configurato in modo che influisca
+In alcuni ambienti come [Bluemix dedicato](/docs/dedicated/index.html#dedicated) e
+[Bluemix locale](/docs/local/index.html#local), un proxy può essere configurato in modo che influisca
 sul comportamento della tua applicazione durante le fasi di preparazione e runtime.
 
 Puoi configurare la tua applicazione per lavorare con il proxy utilizzando le seguenti variabili di ambiente:
@@ -38,7 +38,7 @@ dall'applicazione e non viene influenzato né dal pacchetto di build né dalle t
 ## Applicazioni Java
 {: #java_apps}
 
-Per le applicazioni [Liberty for Java](../runtimes/liberty/index.html) e [java_buildpack](../runtimes/tomcat/index.html), le impostazioni del proxy possono essere passate al runtime tramite la variabile di ambiente **JAVA_OPTS**.  Ad esempio, puoi immettere il comando: 
+Per le applicazioni [Liberty for Java](/docs/runtimes/liberty/index.html) e [java_buildpack](/docs/runtimes/tomcat/index.html), le impostazioni del proxy possono essere passate al runtime tramite la variabile di ambiente **JAVA_OPTS**.  Ad esempio, puoi immettere il comando: 
 ```
    $ cf se myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
@@ -50,5 +50,5 @@ e ripreparare la tua applicazione.  Al runtime, l'applicazione utilizzerà quind
 {: #rellinks}
 ## generale
 {: #general}
-* [Liberty for Java](../runtimes/liberty/index.html)
-* [SDK for Nodejs](../runtimes/nodejs/index.html)
+* [Liberty for Java](/docs/runtimes/liberty/index.html)
+* [SDK for Nodejs](/docs/runtimes/nodejs/index.html)

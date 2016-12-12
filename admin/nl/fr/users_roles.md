@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,12 +17,10 @@ copyright:
 
 # Gestion des membres d'équipe et des rôles
 {: #userroles}
-Dernière mise à jour : 20 octobre 2016
-{: .last-updated}
 
 Depuis la page **Répertoire d'équipe** pour votre compte, vous pouvez gérer les membres d'équipe existants et leurs rôles dans votre
 organisation et vos espaces, ainsi qu'inviter de nouveaux membres d'équipe. Afin d'accéder au répertoire d'équipe pour votre compte, cliquez sur
-**Compte** &gt; **Répertoire d'équipe**.
+**Compte** &gt; **Répertoire d'équipe**. 
 {:shortdesc}
 
 Un propriétaire de compte effectue toutes les opérations sur les organisations et les espaces, y compris la gestion des membres d'équipe et des
@@ -35,7 +33,8 @@ les informations ci-après pour en savoir plus sur les rôles.
 
 Au niveau du compte, deux rôles permettent l'accès à différentes fonctions de gestion des comptes :
 
-*Tableau 1. Rôles de compte et droits*
+Tableau 1. Rôles de compte et droits
+{: #ur_table1}
 
 | Rôle de compte | Droits |    
 |----------------|---------|
@@ -49,7 +48,8 @@ possèdent le rôle Auditeur de l'organisation par défaut. Pour un espace spéc
 
 Les rôles suivants peuvent être affectés au niveau de l'organisation :
 
-*Tableau 2. Rôles d'organisation et droits*
+Tableau 2. Rôles d'organisation et droits
+{: #ur_table2}
 
 | Rôle d'organisation | Droits |    
 |-------------------|-------------|
@@ -59,7 +59,8 @@ Les rôles suivants peuvent être affectés au niveau de l'organisation :
 
 Les rôles suivants peuvent être affectés au niveau de l'espace :
 
-*Tableau 3. Rôles d'espace et droits*
+Tableau 3. Rôles d'espace et droits
+{: #ur_table3}
 
 | Rôle d'espace | Droits |    
 |------------|-------------|
@@ -110,17 +111,16 @@ adresses électroniques auxquelles envoyer les invitations, puis cliquez sur **E
 Cliquez sur **Afficher les éléments en attente** pour déterminer si les invitations sont en attente ou ont été acceptées. Vous
 pouvez choisir de renvoyer le courrier électronique d'invitation ou d'annuler l'invitation pour une invitation en attente à tout moment.
 
-### Ajout de membres d'équipe SoftLayer 
+### Ajout de membres d'équipe SoftLayer
 Si vous avez un compte SoftLayer lié à votre compte {{site.data.keyword.Bluemix_notm}}, vous pouvez ajouter les membres de votre équipe SoftLayer.
  1. Sélectionnez **Compte** > **Inviter des membres d'équipe**. 
  2. Cliquez sur **Ajouter** dans la section **Ajouter des membres d'équipe SoftLayer** afin de vous
-authentifier auprès de votre compte SoftLayer et d'afficher la liste des membres d'équipe de votre compte SoftLayer.
- 
+authentifier auprès de votre compte SoftLayer et d'afficher la liste des membres d'équipe de votre compte SoftLayer. 
  
 L'ajout de membres d'équipe à votre compte {{site.data.keyword.Bluemix_notm}} n'accorde pas à ces membres l'accès au tableau de bord
 Infrastructure de {{site.data.keyword.Bluemix_notm}}. Pour accorder aux utilisateurs l'accès au tableau de bord Infrastructure, accédez à
 **Infrastructure** > **Compte** > **Utilisateurs**, puis cliquez sur le lien **Ajouter
-un utilisateur**. Vous devez disposer du droit permettant d'ajouter des utilisateurs. 
+un utilisateur**. Vous devez disposer du droit permettant d'ajouter des utilisateurs.
  
  Pour plus d'informations sur l'ajout de membres d'équipe de votre compte
 SoftLayer, voir [Invitation de membres d'équipe SoftLayer dans {{site.data.keyword.Bluemix_notm}}](/docs/admin/softlayerlink.html#invite_users).
@@ -150,17 +150,15 @@ Un gestionnaire de l'espace peut éditer les rôles des membres d'équipe dans s
 6. Sélectionnez ou désélectionnez l'option de rôle d'espace pour le rôle à ajouter ou retirer pour le membre d'équipe.
 7. Ensuite, cliquez sur **Sauvegarder**.
 
-## Retrait de membres d'équipe 
+## Retrait de membres d'équipe
 {: #removingteammembers}
 
 Les propriétaires de compte et les responsables de l'organisation peuvent retirer des membres d'équipe d'un compte dans la page **Répertoire
 d'équipe**. Pour retirer un membre d'équipe, procédez comme suit :
 
 1. Cliquez sur **Compte** &gt; **Répertoire d'équipe**.
-3. Localisez l'utilisateur à retirer du compte et cliquez sur l'icône **Retirer**
-![Icône Retirer](../icons/icon_remove_teamuser.svg).
+3. Localisez l'utilisateur à retirer du compte et cliquez sur l'icône **Retirer** ![Icône Retirer](/docs/icons/icon_remove_teamuser.svg).
 4. Dans la fenêtre **Retirer l'utilisateur**, cliquez sur **Retirer** pour confirmer le retrait de
 l'utilisateur spécifié du compte.
 
-
-L'utilisateur est retiré de la liste affichée des membres d'équipe pour le compte. 
+L'utilisateur est retiré de la liste affichée des membres d'équipe pour le compte.

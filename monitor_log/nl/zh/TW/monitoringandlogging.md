@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-17"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 #使用 Cloud Foundry 監視及記載
 {: #monitoringandlogging}
 
-前次更新：2016 年 10 月 28 日
-{: .last-updated}
 
 監視應用程式以及檢閱日誌，即可遵循應用程式執行及資料流程，以深入瞭解部署。此外，您還可以減少找到任何問題並進行修復所需的時間及工作量。
 {:shortdesc}
@@ -42,7 +41,7 @@ copyright:
 
 若要監視 {{site.data.keyword.Bluemix_notm}} 應用程式，請使用下列其中一種方法：
 
-* {{site.data.keyword.Bluemix_notm}} 服務。Monitoring and Analytics 提供一種服務，可用來監視應用程式效能。此外，此服務也提供分析特性（例如日誌分析）。如需相關資訊，請參閱 [Monitoring and Analytics](../services/monana/index.html)。
+* {{site.data.keyword.Bluemix_notm}} 服務。Monitoring and Analytics 提供一種服務，可用來監視應用程式效能。此外，此服務也提供分析特性（例如日誌分析）。如需相關資訊，請參閱 [Monitoring and Analytics](/docs/services/monana/index.html)。
 * 協力廠商選項。例如，[New Relic](http://newrelic.com/){:new_window}。
 
 ###Cloud Foundry 上執行之應用程式的記載
@@ -190,7 +189,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 </li></ul>
 
 
-**附註：**如需如何啟用應用程式記載的相關資訊，請參閱[針對運行環境錯誤進行除錯](../debug/index.html#debugging-runtime-errors)。
+**附註：**如需如何啟用應用程式記載的相關資訊，請參閱[針對運行環境錯誤進行除錯](/docs/debug/index.html#debugging-runtime-errors)。
 
 
 
@@ -297,7 +296,7 @@ cf logs appname --recent | grep '\[App'
 ### 範例：將 Cloud Foundry 應用程式日誌串流至 Splunk 
 {: #splunk}
 
-在此範例中，一位名叫 Jane 的開發人員使用 IBM Virtual Servers 測試版和 Ubuntu 映像檔來建立虛擬伺服器。Jane 嘗試將 Cloud Foundry 應用程式日誌從 {{site.data.keyword.Bluemix_notm}} 串流至 Splunk。 
+在此範例中，一位名叫 Jane 的開發人員使用「IBM 虛擬伺服器測試版」和 Ubuntu 映像檔來建立虛擬伺服器。Jane 嘗試將 Cloud Foundry 應用程式日誌從 {{site.data.keyword.Bluemix_notm}} 串流至 Splunk。 
 
   1. 一開始，Jane 先設定 Splunk。
 
@@ -389,6 +388,49 @@ source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 
 Jane 在她的 Splunk Web 介面中看到一連串的日誌。雖然 Jane 安裝的 Splunk 是 Splunk Light，但她一天還是可以保留 500MB 的日誌。  
 
+## {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 中 Cloud Foundry 應用程式的記載
+{: #hybrid_apps_logs_ov}
 
+
+在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 中，Cloud Foundry 應用程式隨附內建的記載。您可以在 {{site.data.keyword.Bluemix_notm}} 主控台上檢閱從您的應用程式收集到的資料。
+{:shortdesc}
+
+Cloud Foundry 應用程式會使用 Cloud Foundry 日誌聚集器，來監視並轉遞來自應用程式外部的日誌。您不需要在應用程式內安裝代理程式。
+
+### 硬體需求
+
+*表 1. {{site.data.keyword.Bluemix_local_notm}}* 的記載硬體需求
+{: #table01}
+
+| **需求** |    **1 個節點**     | **3 個節點（針對高可用性）** |
+|-----------------|-------------------|-------------------|
+| vCPU | 19 | 57 |
+| 記憶體 | 80 GB | 240 GB |
+| 本端儲存空間 | 2.98 TB | 8.94 TB |
+
+### 設定
+
+在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 中，對於所有應用程式，日誌預設為作用中。若要檢視讀取標準日誌的相關資訊，請參閱[Cloud Foundry 上執行之應用程式的記載](#logging_for_bluemix_apps)。此外，也可在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 環境中啟用進階記載。
+
+* 若要確認在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 環境中啟用進階記載，請遵循[檢視日誌](#hybrid_apps_logs_dash)中的步驟。如果沒有**進階視圖**按鈕，則不會啟用此特性。
+
+* 若要將進階記載新增至您的環境，請遵循 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) 或 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) 文件中的步驟。 
+
+### 日誌保留
+
+在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 的 Cloud Foundry 應用程式中，日誌資料預設會儲存 30 天。
+
+## 檢視 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 中 Cloud Foundry 應用程式的日誌
+{: #hybrid_apps_logs_dash}
+
+您可以檢閱正在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 上執行之應用程式的日誌。
+{:shortdesc}
+
+若要檢視您的應用程式日誌，請遵循下列步驟。
+1. 選取執行中應用程式。
+2. 按一下**日誌**。在**日誌**視圖中，您可以檢視來自執行中應用程式的日誌。
+4. 按一下**進階視圖**按鈕。**進階視圖**會使用 Kibana 顯示更詳細的視圖。Kibana 是一種視覺化工具，其會使用日誌及時間戳記資料來建立自訂視覺化。如需使用進階視圖的相關資訊，請參閱 [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) 文件。
+
+接下來，您可以自訂 Kibana 儀表板。如需相關資訊，請參閱[自訂 Kibana 儀表板中的日誌顯示方式](/docs/manageapps/containers/container_ml_logs.html#container_ml_dash_logs_custom)。
 
 

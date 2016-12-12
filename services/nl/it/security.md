@@ -1,24 +1,23 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 
 # Sicurezza
 {: #security}
 
-*Ultimo aggiornamento: 9 dicembre 2015*
-
 Con questi
 servizi di sicurezza, puoi proteggere l'accesso alle applicazioni e ai
 carichi di lavoro ed eseguire la scansione delle applicazioni per rilevare
 eventuali vulnerabilità. Puoi anche integrare i controlli di sicurezza nei
-servizi di gestione dati e Big Data. 
+servizi di gestione dati e Big Data.
 {:shortdesc}
 
 

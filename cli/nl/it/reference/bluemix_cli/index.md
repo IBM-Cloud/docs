@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   anni: 2015, 2016
 
- 
+lastupdated: "2016-10-24"
+
 ---
 
 
@@ -15,9 +16,6 @@ copyright:
 
 # Comandi {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
-
-Ultimo aggiornamento: 25 ottobre 2016
-{: .last-updated}
 
 Versione: 0.4.1
 
@@ -300,8 +298,8 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
  <tr>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic stop](index.html#ic_stop)</td>
@@ -311,7 +309,7 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  <td>[bluemix ic unpause](index.html#unpause)</td>
  <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
@@ -461,7 +459,7 @@ bluemix logout
 Impostare o visualizzare l'organizzazione o lo spazio di destinazione. Questo comando include il comando `cf target`.
 
 ```
-bluemix target [-o NOME_ORGANIZZAZIONE] [-s NOME_SPAZIO]
+bluemix target [-o ORG_NAME] [-s SPACE_NAME]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso
@@ -1378,7 +1376,7 @@ bluemix catalog template mobileBackendStarter
 Creare un'applicazione cf basata sul template specificato con l'URL e la descrizione specificati. Per impostazione predefinita, la nuova applicazione viene avviata automaticamente.
 
 ```
-bluemix catalog template-run ID_TEMPLATE MOME_APPLICAZIONE_CF [-u URL] [-d DESCRIZIONE] [--no-start]
+bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [--no-start]
 ```
 
 <strong>Prerequisiti</strong>:  Endpoint, Accesso, Destinazione
@@ -2013,7 +2011,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 
 ## bluemix ic cp
 {: #bluemix_ic_cp}
-Copia file o cartelle tra un contenitore e il file system locale. Questo comando richiama la CLI Docker. Per ulteriori informazioni, vedi il comando [cp](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} nella guida di Docker. 
+Copia file o cartelle tra un contenitore e il file system locale. Questo comando richiama la CLI Docker. Per ulteriori informazioni, vedi il comando [cp](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} nella guida di Docker.
 
 
 ## bluemix ic cpi
@@ -2711,7 +2709,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 Ricrea il servizio IBM Containers nello spazio Bluemix a cui sei collegato. La quota originale per lo spazio viene mantenuta.
 
-<strong>Importante</strong>: quando esegui questo comando, nessuno dei tuoi singoli contenitori e gruppi in questo spazio verrà migrato nello spazio di cui è stato eseguito di nuovo il provisioning e verranno rimossi durante il processo di migrazione. 
+<strong>Importante</strong>: quando esegui questo comando, nessuno dei tuoi singoli contenitori e gruppi in questo spazio verrà migrato nello spazio di cui è stato eseguito di nuovo il provisioning e verranno rimossi durante il processo di migrazione.
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
@@ -3331,7 +3329,7 @@ bluemix ic volume-fs-inspect NOME_CONDIVISIONE_FILE
 
   <dl>
   <dt><i>NOME_CONDIVISIONE_FILE</i> (obbligatorio)</dt>
-   <dd>Il nome della condivisione file. </dd>
+   <dd>Il nome della condivisione file.</dd>
    </dl>
 
 <strong>Esempi</strong>:
@@ -3357,7 +3355,7 @@ bluemix ic volume-fs-remove NOME_CONDIVISIONE_FILE
 
    <dl>
    <dt><i>NOME_CONDIVISIONE_FILE</i> (obbligatorio)</dt>
-   <dd>Il nome della condivisione file. </dd>
+   <dd>Il nome della condivisione file.</dd>
    </dl>
 
 <strong>Esempi</strong>:

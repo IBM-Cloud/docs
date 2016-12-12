@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-
+lastupdated: "2016-11-08"
 
 ---
 
@@ -18,11 +18,8 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-前次更新：2016 年 9 月 1 日
-{: .last-updated}
 
-
-您可以使用 Cloud Foundry 指令行介面與 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式搭配，來管理「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」環境的使用者。例如，您可以從 LDAP 登錄新增使用者。如果您要尋找管理「{{site.data.keyword.Bluemix_notm}} 公用」帳戶的相關資訊，請參閱[管理](../../../admin/adminpublic.html#administer)。
+您可以使用 Cloud Foundry 指令行介面與 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式搭配，來管理「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」環境的使用者。例如，您可以從 LDAP 登錄新增使用者。如果您要尋找管理「{{site.data.keyword.Bluemix_notm}} 公用」帳戶的相關資訊，請參閱[管理](/docs/admin/adminpublic.html#administer)。
 
 在開始之前，請先安裝 cf 指令行介面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式需要 cf 6.11.2 版或更新版本。[下載 Cloud Foundry 指令行介面](https://github.com/cloudfoundry/cli/releases){: new_window}
 
@@ -57,13 +54,13 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 
 如果您需要解除安裝外掛程式，則可以使用下列指令，然後新增已更新的儲存庫以及安裝最新外掛程式：
 
-* 解除安裝外掛程式：`cf uninstall-plugin-repo BluemixAdminCLI`
+* 解除安裝外掛程式：`cf uninstall-plugin BluemixAdminCLI`
 * 移除外掛程式儲存庫：`cf remove-plugin-repo BluemixAdmin`
 
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式
 
-您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式來新增或移除使用者、對組織指派或取消指派使用者，以及執行其他管理作業。 
+您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式來新增或移除使用者、對組織指派或取消指派使用者，以及執行其他管理作業。
 
 若要查看指令清單，請執行下列指令：
 
@@ -107,7 +104,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**附註**：若要將使用者新增至特定組織，您必須是具有 **users.write**（或**超級使用者**）許可權的**管理者**。如果您是組織管理員，則也會具有執行 **enable-managers-add-users** 指令的「超級使用者」將使用者新增至組織的功能。如需相關資訊，請參閱[讓管理員新增使用者](index.html#clius_emau)。
+**附註**：若要將使用者新增至特定組織，您必須是具有 **users.write**（或**超級使用者**）許可權的**管理者**。如果您是組織管理員，則透過「超級使用者」執行 **enable-managers-add-users** 指令，您也可以具有將使用者新增至組織的功能。如需相關資訊，請參閱[允許管理員新增使用者](index.html#clius_emau)。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -134,11 +131,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中的使用者名稱。</dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">指派給使用者的許可權。例如，超級使用者、基本、型錄、使用者及報告。如需所指派使用者許可權的相關資訊，請參閱[許可權](../../../admin/index.html#permissions)。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
+<dd class="pd">指派給使用者的許可權。例如，超級使用者、基本、型錄、使用者及報告。如需所指派使用者許可權的相關資訊，請參閱[許可權](/docs/admin/index.html#permissions)。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
-<dd class="pd">使用者所屬的組織名稱。您不能在相同的查詢中搭配使用此參數與 organization 參數。</dd>
+<dd class="pd">使用者所屬的組織名稱。您不能在相同的查詢中搭配使用此參數與 permission 參數。</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">指派給使用者的組織角色。例如，組織的管理員、帳單管理員或審核員。您必須使用此參數來指定組織。如需角色的相關資訊，請參閱[使用者角色](../../../admin/users_roles.html#userrolesinfo)。</dd>
+<dd class="pd">指派給使用者的組織角色。例如，組織的管理員、帳單管理員或審核員。您必須使用此參數來指定組織。如需角色的相關資訊，請參閱[使用者角色](/docs/admin/users_roles.html#userrolesinfo)。</dd>
 
 </dl>
 
@@ -159,9 +156,9 @@ cf ba set-permissions <user_name> <permission> <access>
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中的使用者名稱。</dd>
 <dt class="pt dlterm">&lt;permission&gt;</dt>
-<dd class="pd">設定使用者的許可權：管理（可用的替代項目是「超級使用者」）、登入（可用的替代項目是「基本存取」）、型錄（「讀取」或「寫入」存取權）、報告（「讀取」或「寫入」存取權）或使用者（「讀取」或「寫入」存取權）。</dd>
+<dd class="pd">設定使用者的許可權：管理（可用的替代項目是「超級使用者」）、登入（可用的替代項目是「基本」）、型錄（「讀取」或「寫入」存取權）、報告（「讀取」或「寫入」存取權）或使用者（「讀取」或「寫入」存取權）。</dd>
 <dt class="pt dlterm">&lt;access&gt;</dt>
-<dd class="pd">對於「型錄」、「報告」或「使用者」許可權，您還必須將存取層次設定為<code>讀取</code>或<code>寫入</code>。</dd>
+<dd class="pd">對於「型錄」、「報告」或「使用者」許可權，您還必須將存取層次設定為 <code>read</code> 或 <code>write</code>。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba sp** 作為較長的 **ba set-permissions** 指令名稱的別名。
@@ -186,10 +183,10 @@ cf ba remove-user <user_name>
 
 **提示：**您也可以使用 **ba ru** 作為較長的 **ba remove-user** 指令名稱的別名。
 
-### 讓管理員新增使用者
+### 允許管理員新增使用者
 {: #clius_emau}
 
-如果您在 {{site.data.keyword.Bluemix_notm}} 環境中具有**超級使用者**許可權，則可以讓組織管理員將使用者新增至他們所管理的組織。輸入下列指令： 
+如果您在 {{site.data.keyword.Bluemix_notm}} 環境中具有**超級使用者**許可權，則可以允許組織管理員將使用者新增至他們所管理的組織。輸入下列指令： 
 
 ```
 cf ba enable-managers-add-users
@@ -198,10 +195,10 @@ cf ba enable-managers-add-users
 
 **提示：**您也可以使用 **ba emau** 作為較長 **ba enable-managers-add-users** 指令名稱的別名。
 
-### 停用管理員新增使用者
+### 禁止管理員新增使用者
 {: #clius_dmau}
 
-如果已在您的 {{site.data.keyword.Bluemix_notm}} 環境中使用 **enable-managers-add-users** 指令以讓組織管理員將使用者新增至他們所管理的組織，而且您具有**超級使用者**許可權，則可以移除此設定。輸入下列指令： 
+如果已在您的 {{site.data.keyword.Bluemix_notm}} 環境中使用 **enable-managers-add-users** 指令，讓組織管理員能將使用者新增至他們所管理的組織，而且您具有**超級使用者**許可權，則可以移除此設定。輸入下列指令：
 
 ```
 cf ba disable-managers-add-users
@@ -259,7 +256,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要指派使用者之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">請參閱[角色](../../../admin/users_roles.html)，以取得 {{site.data.keyword.Bluemix_notm}} 使用者的角色及說明。</dd>
+<dd class="pd">請參閱[角色](/docs/admin/users_roles.html)，以取得 {{site.data.keyword.Bluemix_notm}} 使用者的角色及說明。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba so** 作為較長的 **ba set-org** 指令名稱的別名。
@@ -279,7 +276,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要指派使用者之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">請參閱[角色](../../../admin/users_roles.html)，以取得 {{site.data.keyword.Bluemix_notm}} 使用者的角色及說明。</dd>
+<dd class="pd">請參閱[角色](/docs/admin/users_roles.html)，以取得 {{site.data.keyword.Bluemix_notm}} 使用者的角色及說明。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba uo** 作為較長的 **ba unset-org** 指令名稱的別名。
@@ -317,6 +314,86 @@ cf ba set-quota <organization> <plan>
 </dl>
 
 **提示：**您也可以使用 **ba sq** 作為較長的 **ba set-quota** 指令名稱的別名。
+
+
+### 尋找並設定組織的容器配額
+{: #containquotas}
+
+您可以尋找並設定組織中容器的配額。
+
+若要尋找組織容器的配額，請輸入下列指令：
+
+```
+cf bluemix-admin containers-quota <organization>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Bluemix 中組織的名稱或 ID。這是必要參數。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba cq** 作為較長的 **bluemix-admin containers-quota** 指令名稱的別名。
+
+若要設定組織中容器的配額，請輸入下列指令，並至少包括其中一個選項：
+
+```
+cf bluemix-admin set-containers-quota <organization> <options>
+```
+{: codeblock}
+
+**附註**：您可以包括多個選項，但必須至少包括一個。
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Bluemix 中組織的名稱或 ID。這是必要參數。</dd>
+<dt class="pt dlterm">&lt;options&gt;</dt>
+<dd class="pd">包括下列一個以上的選項，其中的值必須是整數：
+<ul>
+<li>floating-ips-max &lt;value&gt;</li>
+<li>floating-ips-space-default &lt;value&gt;</li>
+<li>memory-max &lt;value&gt;</li>
+<li>memory-space-default &lt;value&gt;</li>
+<li>image-limit &lt;value&gt;</li>
+</ul>
+</dd>
+</dl>
+
+**提示：**您也可以使用下列簡稱作為較長選項名稱的別名：
+<dl class="parml">
+<dt class="pt dlterm">floating-ips-max &lt;value&gt;</dt>
+<dd class="pd"><strong>fim</strong></dd>
+<dt class="pt dlterm">floating-ips-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>fisd</strong></dd>
+<dt class="pt dlterm">memory-max &lt;value&gt;</dt>
+<dd class="pd"><strong>mm</strong></dd>
+<dt class="pt dlterm">memory-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>msd</strong></dd>
+<dt class="pt dlterm">image-limit &lt;value&gt;</dt>
+<dd class="pd"><strong>il</strong></dd>
+</dl>
+
+您可以選擇性地提供一個檔案，其中包含有效 JSON 物件中的特定配置參數。如果使用 **-file** 選項，則會優先處理此選項，並忽略其他選項。若要提供檔案而非設定選項，請輸入下列指令：
+
+```
+cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+```
+{: codeblock}
+
+JSON 檔案應該具有下列範例中所顯示的格式：
+
+```
+{
+  "floating_ips_max": 10,
+  "floating_ips_space_default": 0,
+  "ram_max": 4096,
+  "ram_space_default": 0,
+  "image_limit": 10
+}  
+```
+{: codeblock}
+
+**提示：**您也可以使用 **ba scq** 作為較長的 **bluemix-admin set-containers-quota** 指令名稱的別名。
 
 ### 新增、刪除及擷取報告
 
@@ -465,13 +542,13 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 **提示：**您也可以使用 **ba espv** 作為較長的 **ba edit-service-plan-visibility** 指令名稱的別名。
 
-### 檢視資源用量資訊
+### 檢視資源度量值資訊
 {: #cliresourceusage}
 
-您可以檢視資源用量資訊（包括記憶體、磁碟及 CPU 使用率）。您可以查看可用實體和保留資源以及實體和保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 用量資料以及歷程記憶體和磁碟用量。預設會以遞減順序顯示每週的記憶體及磁碟用量歷程資料。若要檢視資源用量資訊，請使用下列指令：
+您可以檢視資源度量值資訊（包括記憶體用量、磁碟用量及 CPU 使用率）。您可以查看可用的實體資源與保留資源的摘要，以及實體資源與保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 用量資料以及歷程記憶體和磁碟用量。預設會以遞減順序顯示每週的記憶體及磁碟用量歷程資料。若要檢視資源度量值資訊，請使用下列指令：
 
 ```
-cf ba resource-usage <monthly> <weekly> 
+cf ba resource-metrics <monthly> <weekly>
 ```
 {: codeblock}
 
@@ -482,7 +559,7 @@ cf ba resource-usage <monthly> <weekly>
 <dd class="pd">一次檢視一週的記憶體及磁碟空間歷程資料。這是預設值。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba rsu** 作為較長 **ba resource-usage** 指令名稱的別名。
+**提示：**您也可以使用 **ba rsm** 作為較長的 **ba resource-metrics** 指令名稱的別名。
 
 ### 處理服務分配管理系統
 
@@ -540,7 +617,9 @@ cf ba delete-service-broker <service_broker>
 
 * 您可以輸入下列指令來更新服務分配管理系統：
 
-`cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>`
+```
+cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -592,7 +671,7 @@ cf ba security-groups <security-group>
 <dd class="pd">安全群組的名稱</dd>
 </dl>
 
-**提示：**您也可以使用 **ba sg** 作為較長的 **ba security-groups** 指令名稱的別名，以與 `security-group` 參數搭配。
+**提示：**您也可以使用 **ba sg** 作為較長的 **ba security-groups** 指令名稱（含 `security-group` 參數）的別名。
 
 
 * 您可以輸入下列指令來建立安全群組。您建立的每一個安全群組的名稱前面都會加上 `adminconsole_` 字首，以與 IBM 所建立的安全群組進行區別。

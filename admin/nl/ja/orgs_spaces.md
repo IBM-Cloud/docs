@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # 組織とスペースの管理
 {: #orgsspacesusers}
-最終更新日: 2016 年 10 月 20 日
-{: .last-updated}
 
 アカウント所有者は、**「組織の管理」**ページに移動することで、組織を管理できます。組織管理者も、「組織の管理」ページを使用して、管理者として自分が設定されている任意の組織を管理できます。
 {:shortdesc}
@@ -71,7 +69,7 @@ and roles)](users_roles.html#userrolesinfo)』を参照してください。</dd
 
 組織を削除するには、[{{site.data.keyword.Bluemix_notm}} サポート](http://ibm.biz/bluemixsupport){: new_window}に連絡する必要があります。サポート・チームに組織の削除を要求すると、組織内のすべてのスペース、アプリケーション、およびサービスが削除されます。
 
-以下の[ユーザー役割](users_roles.html#userrolesinfo)を組織内のチーム・メンバーに割り当てることができます。
+以下の[ユーザー役割](/docs/admin/users_roles.html#userrolesinfo)を組織内のチーム・メンバーに割り当てることができます。
 
 <ul>
 <li>組織管理者</li>
@@ -86,7 +84,7 @@ and roles)](users_roles.html#userrolesinfo)』を参照してください。</dd
 
 組織内でスペースを使用して、アプリケーション、サービス、およびチーム・メンバーのセットをグループ化することができます。スペースは、{{site.data.keyword.Bluemix_notm}} 内の特定の地域に関連付けられます。
 
-チーム・メンバーを組織に追加した後、そのメンバーにスペースに対する許可を付与することができます。組織と同様に、スペースにも、以下のように、チーム・メンバーに割り当てられる、特定の許可を備えた[ユーザー役割](users_roles.html#userrolesinfo)セットがあります。
+チーム・メンバーを組織に追加した後、そのメンバーにスペースに対する許可を付与することができます。組織と同様に、スペースにも、以下のように、チーム・メンバーに割り当てられる、特定の許可を備えた[ユーザー役割](/docs/admin/users_roles.html#userrolesinfo)セットがあります。
 
 <ul>
 <li>スペース管理者</li>
@@ -170,7 +168,7 @@ and roles)](users_roles.html#userrolesinfo)』を参照してください。</dd
 3. **「組織の編集」**をクリックします。
 4. **「割り当て量」**タブを選択します。
 
-組織の割り当て量を更新するには、サポート・チケットをオープンする必要があります。サポート・チケットのオープンについて詳しくは、『[お客様サポートの利用](../support/index.html#contacting-support)』を参照してください。コンテナーの割り当て量について詳しくは、コンテナー資料の『[割り当て量](../containers/container_planning_org_ov.html##container_planning_quota)』を参照してください。
+組織の割り当て量を更新するには、サポート・チケットをオープンする必要があります。サポート・チケットのオープンについて詳しくは、『[お客様サポートの利用](/docs/support/index.html#contacting-support)』を参照してください。コンテナーの割り当て量について詳しくは、コンテナー資料の『[割り当て量](/docs/containers/container_planning_org_ov.html##container_planning_quota)』を参照してください。
 
 ## ドメインの管理
 {: #managedomains}

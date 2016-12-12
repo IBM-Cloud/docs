@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
- 
+lastupdated: "2016-02-17"
+
+
 
 ---
 
@@ -16,10 +18,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # Riferimenti dell'interfaccia riga di comando
-
-
-*Ultimo aggiornamento: 17 febbraio 2016*
-{: .last-updated}
 
 {{site.data.keyword.IBM}} {{site.data.keyword.Bluemix_short}} utilizza
 l'interfaccia riga di comando Cloud Foundry, cf, per

@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -24,21 +26,21 @@ ein Job erfolgreich ausgeführt wird oder ob er fehlschlägt. Sie enthalten auch
 relevante Informationen, die für Debugzwecke und zum Feststellen der Ursache eines Problems
 verwendet werden können.
 
-Protokolle haben ein festes Format. Bei ausführlichen Protokollen ist eine Filterung möglich; Sie können auch externe Protokollierungshosts zum Speichern und Verarbeiten der Protokolle verwenden. Weitere Informationen zu Protokollformaten, zum Anzeigen und Filtern von Protokollen sowie zur Konfiguration einer externen Protokollierung finden Sie im Abschnitt zur [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
+Protokolle haben ein festes Format. Bei ausführlichen Protokollen ist eine Filterung möglich; Sie können auch externe Protokollierungshosts zum Speichern und Verarbeiten der Protokolle verwenden. Weitere Informationen zu Protokollformaten, zum Anzeigen und Filtern von Protokollen sowie zur Konfiguration einer externen Protokollierung finden Sie im Abschnitt zur [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
 
 
 ## Staging-Fehler beheben
 {: #debugging-staging-errors}
-Beim Durchführen des Stagings für die Anwendungen unter Verwendung von {{site.data.keyword.Bluemix_notm}} können Fehler auftreten. Wenn die Durchführung des Stagings für eine App fehlschlägt, können Sie die STG-Protokolle durchsuchen und prüfen, um den während der Bereitstellung der App aufgetretenen Fehler zu ermitteln und das Problem zu beheben. Weitere Informationen zum Anzeigen von Protokollen für Bluemix-Apps finden Sie unter [Protokolle anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
+Beim Durchführen des Stagings für die Anwendungen unter Verwendung von {{site.data.keyword.Bluemix_notm}} können Fehler auftreten. Wenn die Durchführung des Stagings für eine App fehlschlägt, können Sie die STG-Protokolle durchsuchen und prüfen, um den während der Bereitstellung der App aufgetretenen Fehler zu ermitteln und das Problem zu beheben. Weitere Informationen zum Anzeigen von Protokollen für Bluemix-Apps finden Sie unter [Protokolle anzeigen](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
 
-Um zu verstehen, warum in einer App unter {{site.data.keyword.Bluemix_notm}} ein Fehler auftritt, müssen Sie wissen, wie eine App unter {{site.data.keyword.Bluemix_notm}} bereitgestellt und ausgeführt wird. Detaillierte Informationen hierzu finden Sie in [Bereitstellung von Anwendung](../manageapps/depapps.html#appdeploy){: new_window}.
+Um zu verstehen, warum in einer App unter {{site.data.keyword.Bluemix_notm}} ein Fehler auftritt, müssen Sie wissen, wie eine App unter {{site.data.keyword.Bluemix_notm}} bereitgestellt und ausgeführt wird. Detaillierte Informationen hierzu finden Sie in [Bereitstellung von Anwendung](/docs/manageapps/depapps.html#appdeploy){: new_window}.
 
 
-Anhand der folgenden Prozedur wird veranschaulicht, wie Sie mit dem Befehl `cf logs` Staging-Fehler beheben können. Stellen Sie vor der Ausführung der folgenden Schritte sicher, dass Sie die cf-Befehlszeilenschnittstelle installiert haben. Weitere Informationen zum Installieren der cf-Befehlszeilenschnittstelle finden Sie unter [cf-Befehlszeilenschnittstelle installieren](../starters/install_cli.html){: new_window}.
+Anhand der folgenden Prozedur wird veranschaulicht, wie Sie mit dem Befehl `cf logs` Staging-Fehler beheben können. Stellen Sie vor der Ausführung der folgenden Schritte sicher, dass Sie die cf-Befehlszeilenschnittstelle installiert haben. Weitere Informationen zum Installieren der cf-Befehlszeilenschnittstelle finden Sie unter [cf-Befehlszeilenschnittstelle installieren](/docs/starters/install_cli.html){: new_window}.
 
   1. Stellen Sie durch Eingeben des folgenden Codes in der cf-Befehlszeilenschnittstelle eine Verbindung zu {{site.data.keyword.Bluemix_notm}} her:
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	 cf api https://api.ng.bluemix.net
 	 ```
 
   2. Melden Sie sich durch Eingeben von `cf login` an {{site.data.keyword.Bluemix_notm}} an.
@@ -143,7 +145,7 @@ Je nachdem, wie der neue Code bereitgestellt wurde, können Sie für das Debuggi
 
   * Wenn der neue Code über die Befehlszeilenschnittstelle 'cf' bereitgestellt wurde, überprüfen Sie die Ausgabe des Befehls *cf push*. Darüber hinaus können Sie mit dem Befehl *cf logs* weitere Hinweise zur Lösung des Problems erhalten. Weitere Informationen zur Verwendung des Befehls *cf logs* finden Sie unter [Protokolle über die Befehlszeilenschnittstelle anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}.
 
-  * Wenn der neue Code über eine GUI wie z. B. die {{site.data.keyword.Bluemix_notm}}-Konsole, DevOps Delivery Pipeline oder Travis-CI bereitgestellt wird, können Sie die Protokolle über die Schnittstelle überprüfen. Wenn der neue Code beispielsweise über die {{site.data.keyword.Bluemix_notm}}-Konsole bereitgestellt wird, können Sie zum Dashboard wechseln, Ihre App suchen und die Protokolle auf Suchhinweisbegriffe überprüfen. Weitere Informationen zum Anzeigen von Protokollen über die {{site.data.keyword.Bluemix_notm}}-Konsole finden Sie unter [Protokolle über das Bluemix-Dashboard anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
+  * Wenn der neue Code über eine GUI wie z. B. die {{site.data.keyword.Bluemix_notm}}-Konsole, DevOps Delivery Pipeline oder Travis-CI bereitgestellt wird, können Sie die Protokolle über die Schnittstelle überprüfen. Wenn der neue Code beispielsweise über die {{site.data.keyword.Bluemix_notm}}-Konsole bereitgestellt wird, können Sie zum Dashboard wechseln, Ihre App suchen und die Protokolle auf Suchhinweisbegriffe überprüfen.   Weitere Informationen zum Anzeigen von Protokollen über die {{site.data.keyword.Bluemix_notm}}-Konsole finden Sie unter [Protokolle über das Bluemix-Dashboard anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
 
 
 # Zugehörige Links

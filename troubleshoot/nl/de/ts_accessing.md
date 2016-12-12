@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -17,8 +19,6 @@ copyright:
 # Fehlerbehebung für den Zugriff auf {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Letzte Aktualisierung: 23. Oktober 2016
-{: .last-updated} 
 
 Ein allgemeines Problem in Bezug auf den Zugriff auf {{site.data.keyword.Bluemix}} kann sein, dass sich ein Benutzer nicht an {{site.data.keyword.Bluemix_notm}} anmelden kann oder dass sich ein Konto dauerhaft im Wartestatus befindet. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben. 
 {:shortdesc}
@@ -29,7 +29,7 @@ Ein allgemeines Problem in Bezug auf den Zugriff auf {{site.data.keyword.Bluemix
 Sie müssen über ein gültiges {{site.data.keyword.Bluemix_notm}}-Konto verfügen, um sich anmelden zu können.
 
 
-Wenn Sie versuchen, sich bei {{site.data.keyword.Bluemix_notm}} anzumelden, wird eine der folgenden Fehlermeldungen angezeigt:
+Wenn Sie versuchen, sich bei {{site.data.keyword.Bluemix_notm}} anzumelden, wird eine der folgenden Fehlermeldungen angezeigt: 
 {: tsSymptoms} 
 
  * Vom Kundenportal
@@ -41,11 +41,11 @@ Wenn Sie versuchen, sich bei {{site.data.keyword.Bluemix_notm}} anzumelden, wird
   `Sie sind auf diese Seite gelangt, weil Ihre Authentifizierung erfolgreich war; allerdings ist diese IBM ID keinem {{site.data.keyword.Bluemix_notm}}-Konto zugeordnet.`
 
 
-Einer der wahrscheinlichsten Gründe für diese Fehlernachricht ist, dass Sie noch kein {{site.data.keyword.Bluemix_notm}}-Konto eingerichtet haben oder dass Sie zur IBM ID-Authentifizierung wechseln müssen.
+Einer der wahrscheinlichsten Gründe für diese Fehlernachricht ist, dass Sie noch kein {{site.data.keyword.Bluemix_notm}}-Konto eingerichtet haben oder dass Sie zur IBM ID-Authentifizierung wechseln müssen. 
 {: tsCauses} 
  
 
-Folgen Sie dem Anmeldeprozess, um ein {{site.data.keyword.Bluemix_notm}}-Konto zu erstellen oder sich an Ihren Masterbenutzer oder Kontoadministrator zu wenden, um zur IBM ID zu wechseln.
+Folgen Sie dem Anmeldeprozess, um ein {{site.data.keyword.Bluemix_notm}}-Konto zu erstellen oder sich an Ihren Masterbenutzer oder Kontoadministrator zu wenden, um zur IBM ID zu wechseln. 
 {: tsResolve}
 
 Je nachdem, wie Ihr Konto eingerichtet wurde, können einige dieser Anmeldeoptionen auf Sie zutreffen: 
@@ -60,7 +60,7 @@ Je nachdem, wie Ihr Konto eingerichtet wurde, können einige dieser Anmeldeoptio
 
 Sie müssen über eine gültige IBM ID verfügen, um sich bei der {{site.data.keyword.Bluemix_notm}}-Konsole anzumelden.
 
-Wenn Sie versuchen, sich bei {{site.data.keyword.Bluemix_notm}} anzumelden, wird die folgende Fehlernachricht angezeigt:
+Wenn Sie versuchen, sich bei {{site.data.keyword.Bluemix_notm}} anzumelden, wird die folgende Fehlernachricht angezeigt: 
 {: tsSymptoms} 
 
 `The password that you entered is not correct.` (Das eingegebene Kennwort ist nicht korrekt.)
@@ -81,7 +81,7 @@ Um eine gültige IBM ID und ein gültiges Kennwort zu erhalten, rufen Sie die Se
 Sie müssen über eine gültige IBMid und ein Kennwort verfügen, um sich an {{site.data.keyword.Bluemix_notm}} anmelden zu können.
 
 
-Wenn Sie versuchen, sich mit Ihrem Softlayer-Benutzernamen bei der {{site.data.keyword.Bluemix_notm}}-Konsole anzumelden, erhalten Sie folgende Nachricht:
+Wenn Sie versuchen, sich mit Ihrem Softlayer-Benutzernamen bei der {{site.data.keyword.Bluemix_notm}}-Konsole anzumelden, erhalten Sie folgende Nachricht: 
 {: tsSymptoms} 
 
 `Diese IBM ID oder E-Mail wurde nicht erkannt.`
@@ -91,7 +91,7 @@ Sie müssen über eine IBM ID verfügen, um sich anmelden und das Infrastruktur-
  
 Wenn Sie SoftLayer-Benutzer sind und eine SoftLayer-ID verwenden, müssen Sie in jedem Konto, auf das Sie Zugriff haben, zur IBM ID-Authentifizierung im Kundenportal wechseln, bevor Sie sich mithilfe der IBM ID-Authentifizierung anmelden können. 
 
-Wenden Sie sich an Ihren Masterbenutzer oder Kontoadministrator, um zur IBM ID zu wechseln.
+Wenden Sie sich an Ihren Masterbenutzer oder Kontoadministrator, um zur IBM ID zu wechseln. 
 {: tsResolve}
 
 

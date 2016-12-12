@@ -477,7 +477,7 @@ Les noeuds finaux de collection sont les suivants :
 - `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/activations`
 
 ``openwhisk.``<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>` est le nom d'hôte de l'API OpenWhisk (par exemple
-openwhisk.ng.bluemix.net, 172.17.0.1, etc.). 
+openwhisk.ng.bluemix.net, 172.17.0.1, etc.).
 
 Pour `{espace_nom}`, le caractère `_` peut être utilisé afin de spécifier l'*espace de nom par défaut* (adresse électronique) pour l'utilisateur
 
@@ -545,7 +545,7 @@ avec précaution.
 | timeout | un conteneur ne peut pas s'exécuter plus de N millisecondes | par action |  millisecondes | 60000 |
 | memory | un conteneur ne peut pas allouer plus de N Mo de mémoire | par action | Mo | 256 |
 | logs | un conteneur ne peut pas écrire plus de N Mo de données dans la sortie standard | par action | Mo | 10 |
-| concurrent | N activation maximum sont autorisées par espace de nom en cours d'exécution ou en file d'attente pour l'exécution  | par espace de nom | nombre | 1000 |
+| concurrent | N activation maximum sont autorisées par espace de nom en cours d'exécution ou en file d'attente pour l'exécution | par espace de nom | nombre | 1000 |
 | minuteRate | un utilisateur ne peut pas appeler plus de tant d'actions par minute | par utilisateur | nombre | 5000 |
 | codeSize | taille maximale du code d'action | non configurable, limite par action | Mo | 48 |
 | parameters | taille maximale des paramètres pouvant être associés | non configurable, limite par action/package/déclencheur | Mo | 1 |
@@ -585,7 +585,7 @@ avec précaution.
 
 ### Appels par minute (valeur fixe : 5000)
 {: #openwhisk_syslimits_invocations}
-* La limite de débit N est 5000 et limite le nombre d'appels d'action dans des fenêtres d'une minute. 
+* La limite de débit N est 5000 et limite le nombre d'appels d'action dans des fenêtres d'une minute.
 * Un utilisateur ne peut pas changer cette limite lorsqu'il crée l'action.
 * Un appel d'interface de ligne de commande ou API dépassant cette limite reçoit un code d'erreur correspondant au code de statut HTTP `429:
 TOO MANY REQUESTS`.
@@ -618,7 +618,7 @@ Les déclencheurs sont soumis à un débit de déclenchements par minute et par 
 
 ### Déclencheurs par minute (valeur fixe : 5000)
 {: #openwhisk_syslimits_triggerratelimit}
-* La limite de débit N est 5000 et limite le nombre de déclencheurs dans des fenêtres d'une minute. 
+* La limite de débit N est 5000 et limite le nombre de déclencheurs dans des fenêtres d'une minute.
 * Un utilisateur ne peut pas changer cette limite lorsqu'il crée le déclencheur.
 * Un appel d'interface de ligne de commande ou API dépassant cette limite reçoit un code d'erreur correspondant au code de statut HTTP `429:
 TOO MANY REQUESTS`.

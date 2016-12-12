@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 계정 관리
 {: #mngacct}
-*마지막 업데이트 날짜: 2016년 10월 20일*
-{: .last-updated}
 
 알림을 설정하거나 계정 사용량 또는 청구서를 보려면 **계정** 링크로 이동하십시오.
 {:shortdesc}
@@ -30,7 +28,8 @@ copyright:
 
 사용자 회사에서 등록할 수 있도록 IBM과 이미 작업을 한 경우에만 연합 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 등록할 수 있습니다. 회사의 도메인을 IBM에 등록하면 사용자가 기존 회사 사용자 신임 정보를 사용하여 IBM 제품과 서비스에 로그인할 수 있습니다. 그런 다음 회사의 ID 제공자가 인증을 처리합니다. 연합 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하는 경우 회사의 로그인 페이지를 통해 로그인하도록 프롬프트가 표시됩니다. 회사 또는 조직의 도메인을 IBM에 등록하도록 요청하는 방법에 대한 정보 또는 프로세스에 대한 자세한 정보는 [IBM ID Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}의 내용을 참조하십시오. 연합 ID 등록을 요청하는 경우 오퍼링 중재자 또는 클라이언트 중재자와 같은 IBM 스폰서가 필요합니다. 
 
-*표 1. 등록 방법*
+표 1. 등록 방법
+{: #account_table1}
 
 | 등록 방법       | 세부사항 |    
 |-----------------|---------|

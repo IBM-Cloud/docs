@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-
+lastupdated: "2016-11-08"
 
 ---
 
@@ -18,15 +18,12 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 관리 CLI
 {: #bluemixadmincli}
 
-마지막 업데이트 날짜: 2016년 9월 1일
-{: .last-updated}
-
 
 {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인과 함께
 Cloud Foundry 명령행 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}} 로컬 또는
 {{site.data.keyword.Bluemix_notm}} 데디케이티드 환경의 사용자를
 관리할 수 있습니다. 예를 들어,
-LDAP 레지스트리에서 사용자를 추가할 수 있습니다.{{site.data.keyword.Bluemix_notm}} 퍼블릭 계정 관리에 대한 정보를 찾는 경우 [관리](../../../admin/adminpublic.html#administer)를 참조하십시오.
+LDAP 레지스트리에서 사용자를 추가할 수 있습니다.{{site.data.keyword.Bluemix_notm}} 퍼블릭 계정 관리에 대한 정보를 찾는 경우 [관리](/docs/admin/adminpublic.html#administer)를 참조하십시오.
 
 시작하기 전에 cf 명령행 인터페이스를 설치하십시오.
 {{site.data.keyword.Bluemix_notm}} 관리
@@ -67,14 +64,14 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 
 플러그인을 설치 제거해야 하는 경우 다음 명령을 사용한 후 업데이트된 저장소를 추가하고 최신 플러그인을 설치할 수 있습니다. 
 
-* 플러그인 설치 제거: `cf uninstall-plugin-repo BluemixAdminCLI`
+* 플러그인 설치 제거: `cf uninstall-plugin BluemixAdminCLI`
 * 플러그인 저장소 제거: `cf remove-plugin-repo BluemixAdmin`
 
 
 ## {{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인 사용
 
 {{site.data.keyword.Bluemix_notm}} 관리 CLI
-플러그인을 사용하여 사용자 추가 및 제거, 조직에서 사용자 지정 및 지정 취소, 기타 관리 태스크를 수행할 수 있습니다.  
+플러그인을 사용하여 사용자 추가 및 제거, 조직에서 사용자 지정 및 지정 취소, 기타 관리 태스크를 수행할 수 있습니다. 
 
 명령 목록을 보려면 다음 명령을 실행하십시오.
 
@@ -150,11 +147,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 내의 사용자 이름입니다.</dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">사용자에게 지정된 권한입니다. 예를 들어, 수퍼유저, 카탈로그, 사용자 및 보고서입니다. 지정되는 사용자 권한에 대한 자세한 정보는 [권한](../../../admin/index.html#permissions)을 참조하십시오. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
+<dd class="pd">사용자에게 지정된 권한입니다. 예를 들어, 수퍼유저, 카탈로그, 사용자 및 보고서입니다. 지정되는 사용자 권한에 대한 자세한 정보는 [권한](/docs/admin/index.html#permissions)을 참조하십시오. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">사용자가 속한 조직 이름입니다. 동일한 조회에 조직 매개변수가 있으면 이 매개변수를 사용할 수 없습니다. </dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">사용자에게 지정된 조직 역할입니다. 예를 들어, 조직의 관리자, 청구 관리자 또는 감사자입니다. 이 매개변수와 함께 조직을 지정해야 합니다. 역할에 대한 자세한 정보는 [사용자 역할](../../../admin/users_roles.html#userrolesinfo)을 참조하십시오. </dd>
+<dd class="pd">사용자에게 지정된 조직 역할입니다. 예를 들어, 조직의 관리자, 청구 관리자 또는 감사자입니다. 이 매개변수와 함께 조직을 지정해야 합니다. 역할에 대한 자세한 정보는 [사용자 역할](/docs/admin/users_roles.html#userrolesinfo)을 참조하십시오. </dd>
 
 </dl>
 
@@ -288,7 +285,7 @@ cf ba set-org <user_name> <organization> [<role>]
 이름 또는 GUID입니다.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}}
-사용자 역할 및 설명에 대해서는 [역할](../../../admin/users_roles.html)을 참조하십시오.</dd>
+사용자 역할 및 설명에 대해서는 [역할](/docs/admin/users_roles.html)을 참조하십시오.</dd>
 </dl>
 
 **팁:** 긴 **ba set-org** 명령어에 대한
@@ -313,7 +310,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 이름 또는 GUID입니다.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}}
-사용자 역할 및 설명에 대해서는 [역할](../../../admin/users_roles.html)을 참조하십시오.</dd>
+사용자 역할 및 설명에 대해서는 [역할](/docs/admin/users_roles.html)을 참조하십시오.</dd>
 </dl>
 
 **팁:** 긴 **ba unset-org** 명령어에 대한
@@ -354,6 +351,90 @@ cf ba set-quota <organization> <plan>
 
 **팁:** 긴 **ba set-quota** 명령어에 대한
 별명으로 **ba sq**를 사용할 수도 있습니다.
+
+
+### 조직의 컨테이너 할당량 찾기 및 설정
+{: #containquotas}
+
+조직의 컨테이너에 대한 할당량을 찾고 설정할 수 있습니다. 
+
+조직의 컨테이너 할당량을 찾으려면 다음 명령을 입력하십시오. 
+
+```
+cf bluemix-admin containers-quota <organization>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Bluemix의 조직 이름 또는 ID. 이 매개변수는 필수입니다.
+</dd>
+</dl>
+
+**팁:** 긴 **bluemix-admin containers-quota** 명령어의 별명으로 **ba cq**를 사용할 수도 있습니다.
+
+조직의 컨테이너 할당량을 설정하려면 포함된 옵션 중 하나 이상을 사용하여 다음 명령을 입력하십시오.
+
+```
+cf bluemix-admin set-containers-quota <organization> <options>
+```
+{: codeblock}
+
+**참고**: 여러 옵션을 포함할 수 있지만 적어도 하나는 포함해야 합니다.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Bluemix의 조직 이름 또는 ID. 이 매개변수는 필수입니다.
+</dd>
+<dt class="pt dlterm">&lt;options&gt;</dt>
+<dd class="pd">값이 정수여야 하는 다음 옵션 중 하나 이상을 포함합니다.
+<ul>
+<li>floating-ips-max &lt;value&gt;</li>
+<li>floating-ips-space-default &lt;value&gt;</li>
+<li>memory-max &lt;value&gt;</li>
+<li>memory-space-default &lt;value&gt;</li>
+<li>image-limit &lt;value&gt;</li>
+</ul>
+</dd>
+</dl>
+
+**팁:** 긴 옵션 이름의 별명으로 다음 단축 이름을 사용할 수도 있습니다.
+<dl class="parml">
+<dt class="pt dlterm">floating-ips-max &lt;value&gt;</dt>
+<dd class="pd"><strong>fim</strong></dd>
+<dt class="pt dlterm">floating-ips-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>fisd</strong></dd>
+<dt class="pt dlterm">memory-max &lt;value&gt;</dt>
+<dd class="pd"><strong>mm</strong></dd>
+<dt class="pt dlterm">memory-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>msd</strong></dd>
+<dt class="pt dlterm">image-limit &lt;value&gt;</dt>
+<dd class="pd"><strong>il</strong></dd>
+</dl>
+
+선택적으로 올바른 JSON 오브젝트에 특정 구성 매개변수를 포함하는 파일을 제공할 수 있습니다.
+**-file** 옵션을 사용하면 이 옵션이 우선 적용되고 다른 옵션은 무시됩니다.
+옵션을 설정하는 대신에 파일을 제공하려면 다음 명령을 입력하십시오.
+
+```
+cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+```
+{: codeblock}
+
+JSON 파일의 형식은 다음 예제와 같습니다. 
+
+```
+{
+  "floating_ips_max": 10,
+  "floating_ips_space_default": 0,
+  "ram_max": 4096,
+  "ram_space_default": 0,
+  "image_limit": 10
+}  
+```
+{: codeblock}
+
+**팁:** 긴 **bluemix-admin set-containers-quota** 명령어의 별명으로 **ba scq**를 사용할 수도 있습니다.
 
 ### 보고서 추가, 삭제 및 검색
 
@@ -526,13 +607,14 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 **팁:** 긴 **ba edit-service-plan-visibility** 명령어에 대한
 별명으로 **ba espv**를 사용할 수도 있습니다.
 
-### 리소스 사용량 정보 보기
+### 리소스 메트릭 정보 보기
 {: #cliresourceusage}
 
-메모리, 디스크 및 CPU 사용량을 포함하여 리소스 사용량 정보를 확인할 수 있습니다. 실제 및 예약 리소스의 사용량을 포함하여 사용 가능한 실제 및 예약 리소스의 요약을 볼 수 있습니다. 또한 DEA(Droplet Execution Agent) 사용량 데이터와 메모리 및 디스크 사용량 히스토리도 볼 수 있습니다. 기본적으로 매주 및 내림차순으로 메모리 및 디스크 사용량의 데이터 히스토리가 표시됩니다. 리소스 사용량 정보를 보려면 다음 명령을 사용하십시오.
+메모리, 디스크 및 CPU 사용량을 포함하여 리소스 메트릭 정보를 확인할 수 있습니다.
+실제 및 예약 리소스의 사용량을 포함하여 사용 가능한 실제 및 예약 리소스의 요약을 볼 수 있습니다. 또한 DEA(Droplet Execution Agent) 사용량 데이터와 메모리 및 디스크 사용량 히스토리도 볼 수 있습니다. 기본적으로 매주 및 내림차순으로 메모리 및 디스크 사용량의 데이터 히스토리가 표시됩니다. 리소스 메트릭 정보를 보려면 다음 명령을 사용하십시오.
 
 ```
-cf ba resource-usage <monthly> <weekly> 
+cf ba resource-metrics <monthly> <weekly>
 ```
 {: codeblock}
 
@@ -543,8 +625,7 @@ cf ba resource-usage <monthly> <weekly>
 <dd class="pd">한 주에 한 번 메모리 및 디스크 용량의 히스토리 데이터가 표시됩니다. 이는 기본값입니다.</dd>
 </dl>
 
-**팁:** 긴 **ba resource-usage** 명령어의
-별명으로 **ba rsu**를 사용할 수도 있습니다. 
+**팁:** 긴 **ba resource-metrics** 명령어의 별명으로 **ba rsm**을 사용할 수도 있습니다. 
 
 ### 서비스 브로커에 대한 작업
 
@@ -607,7 +688,9 @@ cf ba delete-service-broker <service_broker>
 
 * 다음 명령을 입력하여 서비스 브로커를 업데이트할 수 있습니다.
 
-`cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>`
+```
+cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
+```
 {: codeblock}
 
 <dl class="parml">

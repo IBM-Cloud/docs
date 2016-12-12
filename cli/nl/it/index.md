@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  anni: 2015, 2016
+  years: 2015，2016
 
- 
+lastupdated: "2016-10-24"
+
 
 ---
 
@@ -18,16 +19,13 @@ copyright:
 # CLI e strumenti di sviluppo
 {: #cli}
 
-*Ultimo aggiornamento: 25 ottobre 2016*
-{: .last-updated}
-
 Con {{site.data.keyword.Bluemix_short}}, hai accesso a potenti strumenti, quali un'interfaccia riga di comando unificata e i plug-in delle CLI. Ciascuno di questi download di CLI è disponibile a supporto della tua esperienza {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
 ## ![](./images/CLI.svg) Interfacce riga di comando
 {: #downloads}
 
-Scarica e installa le interfacce riga di comando a supporto della tua esperienza {{site.data.keyword.Bluemix_notm}}. 
+Scarica e installa le interfacce riga di comando a supporto della tua esperienza {{site.data.keyword.Bluemix_notm}}.
 
 Lo strumento riga di comando cf Cloud Foundry è un prerequisito per tutti gli altri strumenti CLI {{site.data.keyword.Bluemix_notm}}. Lo strumento riga di comando {{site.data.keyword.Bluemix_notm}} fornisce un'esperienza ampliata per gestire il tuo ambiente {{site.data.keyword.Bluemix_notm}} oltre le applicazioni Cloud Foundry.
 
@@ -64,7 +62,7 @@ bluemix plugin install plugin_name -r bluemix-bx
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
 |-----|-----|-----|
-| Nome del plug-in: active-deploy <br> [Visualizza documenti](../services/ActiveDeploy/cli.html#cli) | Nome del plug-in: auto-scaling <br> [Visualizza documenti](./plugins/auto-scaling/index.html) |  Nome del plug-in: nsg <br> [Visualizza documenti](./plugins/networksecuritygroups/index.html)  |
+| Nome del plug-in: active-deploy <br> [Visualizza documenti](/docs/services/ActiveDeploy/cli.html#cli) | Nome del plug-in: auto-scaling <br> [Visualizza documenti](./plugins/auto-scaling/index.html) |  Nome del plug-in: nsg <br> [Visualizza documenti](./plugins/networksecuritygroups/index.html)  |
 
 
 ### Estendi la tua interfaccia riga di comando Cloud Foundry: cf
@@ -85,9 +83,9 @@ cf install-plugin plugin_name -r bluemix-cf
 {: codeblock}
 
 
-| *Active Deploy* | *Console di gestione* | 
+| *Active Deploy* | *Console di gestione* |
 |-----------------|-----------------|
-| Nome del plug-in: active-deploy <br>  [Visualizza documenti](../services/ActiveDeploy/cli.html#cli) |  Nome del plug-in: bluemix-admin <br> [Visualizza documenti](../cli/plugins/bluemix_admin/index.html) | 
+| Nome del plug-in: active-deploy <br>  [Visualizza documenti](/docs/services/ActiveDeploy/cli.html#cli) |  Nome del plug-in: bluemix-admin <br> [Visualizza documenti](/docs/cli/plugins/bluemix_admin/index.html) |
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
@@ -100,4 +98,4 @@ Scarica e installa i plug-in per integrare i tuoi servizi {{site.data.keyword.Bl
 
 | *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* |
 |-------------|----------|----------|----------|
-| [Plug-in Eclipse Egit](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [Plug-in Eclipse RTC](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Plug-in Eclipse Liberty](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plug-in Eclipse](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plug-in Eclipse Rules Designer](../services/rules/index.html#rulov002) |
+| [Plug-in Eclipse Egit](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [Plug-in Eclipse RTC](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Plug-in Eclipse Liberty](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plug-in Eclipse](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plug-in Eclipse Rules Designer](/docs/services/rules/index.html#rulov002) |

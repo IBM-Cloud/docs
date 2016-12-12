@@ -168,10 +168,31 @@ cómo los parámetros `name` y `place` se recuperan del objeto `params` en este 
   wsk action update hello hello.js
   ```
   {: pre}
+
+3.  Los parámetros se puede proporcionar explícitamente en la línea de mandatos o por medio de un archivo que contenga los parámetros que se quiere especificar
+
+  Para pasar los parámetros directamente a través de la línea de mandatos, especifique un par clave/valor para el distintivo `--param`: 
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
+
+  Para poder utilizar un archivo que contenga parámetros, crear un archivo que contenga los parámetros en formato JSON. Luego se debe pasar el nombre del archivo al distintivo `param-file`: 
+
+  Archivo de parámetros de ejemplo denominado parameters.json:
+  ```
+  {
+      "name": "Bernie",
+      "place": "Vermont"
+  }
+ ```
+  {: codeblock}
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+ ```
+  {: pre}
+
   ```
   {
       "payload": "Hello, Bernie from Vermont"
@@ -179,7 +200,7 @@ cómo los parámetros `name` y `place` se recuperan del objeto `params` en este 
   ```
   {: screen}
 
-  Fíjese en el uso de la opción `--param` para especificar un nombre y valor, y la opción
+  Fíjese en el uso de la opción
 `--result` para mostrar solo el resultado de la invocación.
 
 ### Configuración de los parámetros predeterminados
@@ -191,11 +212,28 @@ del ejemplo anterior espera dos parámetros: *name* (nombre) de una persona y *p
 En lugar de pasar todos los parámetros a una acción cada vez, puede enlazar determinados parámetros. El ejemplo siguiente enlaza
 el parámetro *place* para que el valor predeterminado de la acción sea el lugar (place) "Vermont":
  
-1. Actualizar la acción usando la opción `--param` para enlazar valores de parámetros.
+1. Actualizar la acción usando la opción `--param` para enlazar valores de parámetros o pasando un archivo que contiene los parámetros a `--param-file`
+
+  Para especificar parámetros predeterminados explícitamente en la línea de mandatos, especifique un par clave/valor para el distintivo `param`: 
 
   ```
   wsk action update hello --param place Vermont
   ```
+  {: pre}
+
+  Para pasar parámetros desde un archivo hay que crear un archivo con el contenido deseado en formato JSON. Luego se debe pasar el nombre del archivo al distintivo `-param-file`: 
+
+  Archivo de parámetros de ejemplo denominado parameters.json:
+  ```
+  {
+      "place": "Vermont"
+  }
+ ```
+  {: codeblock}
+
+  ```
+  wsk action update hello --param-file parameters.json
+ ```
   {: pre}
 
 2. Invocar la acción, pasando solo el parámetro `name` esta vez.
@@ -214,13 +252,33 @@ el parámetro *place* para que el valor predeterminado de la acción sea el luga
   Observe que no ha necesitado especificar el parámetro place al invocar la acción. Los parámetros enlazados aún se pueden
 sobrescribir especificando el valor de parámetro en el momento de la invocación.
 
-3. Invoca la acción, pasando los valores `name` y `place`. El segundo sobrescribe el
+3. Invocar la acción, pasando los valores `name` y `place`. El segundo sobrescribe el
 valor enlazado a la acción.
+
+  Utilización del distintivo `--param`: 
 
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
+  Utilización del distintivo `--param-file`: 
+
+  Archivo parameters.json:
+  ```
+  {
+    "name": "Bernie",
+      "place": "Vermont"
+  }
+ ```
+  {: codeblock}
+
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+ ```
+  {: pre}
+
   ```
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -248,7 +306,7 @@ Las funciones de JavaScript que se ejecutan de forma asíncrona podrían necesit
 
   Observe que la función `main` devuelve un Promise, que indica que la activación aún no se ha completado, pero que se espera que lo haga en el futuro.
 
-  La función `setTimeout()` de JavaScript en este caso espera 20 segundos antes de invocar la función de devolución de llamada.  Esto representa el código asíncrono y va dentro de la función de devolución de llamada del Promise.
+  La función `setTimeout()` de JavaScript en este caso espera dos segundos antes de invocar la función de devolución de llamada.  Esto representa el código asíncrono y va dentro de la función de devolución de llamada del Promise.
 
   La devolución de llamada del Promise tiene dos argumentos, resolve y reject, ambos son funciones.  La llamada a `resolve()` rellena el Promise e indica que la activación se ha completado con normalidad.
 
@@ -440,8 +498,8 @@ Para crear una acción OpenWhisk desde este paquete:
   {: screen}
 
 Finalmente, tenga en cuenta que mientras que la mayoría de los paquetes de `npm` instalan orígenes JavaScript en `npm install`, algunos también instalan y compilan artefactos binarios. La carga del archivo de archivado no da soporte en este momento a las dependencias binarias, sino únicamente a las dependencias de JavaScript. Las invocaciones de acción pueden fallar si el archivo incluye dependencias binarias.
-    
-### Creación de secuencias de acciones
+
+## Creación de secuencias de acciones
 {: #openwhisk_create_action_sequence}
 
 Puede crear una acción que encadene juntas una secuencia de acciones.
@@ -466,7 +524,7 @@ primera secuencia. Puede obtener más información sobre los paquetes en la secc
   ```
   {: screen}
   
-  You will be using the `split` and `sort` actions in this example.
+  En este ejemplo utilizará las acciones `split` y `sort`. 
   
 2. Crear una secuencia de acciones para que el resultado de una acción se pase como argumento a la acción siguiente.
   
@@ -507,7 +565,7 @@ Para obtener más información sobre la invocación de secuencias de acciones co
 ## Creación de acciones Python
 {: #openwhisk_actions_python}
 
-El proceso de creación de acciones Python es parecido a de las acciones JavaScript. En las secciones siguientes se proporciona una guía para la creación e invocación de una única acción Python, y se añaden parámetros a dicha acción.
+El proceso de creación de acciones Python es parecido al de las acciones JavaScript. En las secciones siguientes se proporciona una guía para la creación e invocación de una única acción Python, y se añaden parámetros a dicha acción.
 
 ### Creación e invocación de una acción
 {: #openwhisk_actions_python_invoke}
@@ -556,7 +614,7 @@ wsk action invoke --blocking --result helloPython --param name World
 ## Creación de acciones Swift
 {: #openwhisk_actions_swift}
 
-El proceso de creación de acciones Swift es parecido a de las acciones JavaScript. En las secciones siguientes se proporciona una guía para la creación e invocación de una única acción Swift, y se añaden parámetros a dicha acción.
+El proceso de creación de acciones Swift es parecido al de las acciones JavaScript. En las secciones siguientes se proporciona una guía para la creación e invocación de una única acción Swift, y se añaden parámetros a dicha acción.
 
 También puede usar el recinto de pruebas [Swift Sandbox](https://swiftlang.ng.bluemix.net) en línea para probar
 el código Swift sin tener que instalar Xcode en su máquina.
@@ -610,6 +668,75 @@ wsk action invoke --blocking --result helloSwift --param name World
 {{site.data.keyword.openwhisk_short}} suele utilizar el release disponible más reciente, que no es necesariamente estable. Además, la versión
 de Swift que se utiliza con {{site.data.keyword.openwhisk_short}} podría no ser coherente con versiones de Swift de releases estables
 de XCode en MacOS.
+
+## Creación de acciones de Java
+{: #openwhisk_actions_java}
+
+El proceso de creación de acciones Java es parecido al de las acciones JavaScript y Swift. En las secciones siguientes se proporciona una guía para la creación e invocación de una única acción Swift, y se añaden parámetros a dicha acción.
+
+Para compilar, probar y archivar archivos Java, debe tener un [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) instalado localmente.
+
+### Creación e invocación de una acción
+{: #openwhisk_actions_java_invoke}
+
+Una acción Java es un programa Java con un método llamado `main` que tiene la firma exacta que se indica a continuación:
+```
+public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
+```
+{: codeblock}
+
+Por ejemplo, cree un archivo Java denominado `Hello.java` con el contenido siguiente:
+
+```
+import com.google.gson.JsonObject;
+public class Hello {
+    public static JsonObject main(JsonObject args) {
+        String name = "stranger";
+        if (args.has("name"))
+            name = args.getAsJsonPrimitive("name").getAsString();
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+    }
+}
+```
+{: codeblock}
+
+A continuación, compile `Hello.java` en un archivo JAR `hello.jar` tal como se indica a continuación:
+```
+javac Hello.java
+jar cvf hello.jar Hello.class
+```
+{: pre}
+
+**Nota:** [google-gson](https://github.com/google/gson) debe existir en CLASSPATH de Java cuando compile el archivo Java.
+
+Puede crear una acción OpenWhisk denominada `helloJava` a partir de este archivo JAR tal como se indica a continuación:
+
+```
+wsk action create helloJava hello.jar
+```
+{: pre}
+
+Cuando se utiliza la línea de mandatos y un archivo de origen `.jar`, no es necesario especificar que
+está creando una acción Java; la herramienta lo determina
+a partir de la extensión de archivo.
+
+La invocación de la acción es la misma para acciones Java que para acciones Swift y JavaScript:
+
+```
+wsk action invoke --blocking --result helloJava --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
+
+**Nota:** si el archivo JAR tiene más de una clase con un método main que coincide con la firma necesaria, la herramienta CLI utiliza el primero que ha identificado `jar- tf`.
 
 
 ## Creación de acciones Docker

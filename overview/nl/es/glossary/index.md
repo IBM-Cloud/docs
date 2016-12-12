@@ -3,8 +3,8 @@
  
 
 copyright:
-
-  years: 2014，2016
+  years: 2016
+lastupdated: "2016-10-31"
 
  
 
@@ -15,9 +15,6 @@ copyright:
 
 # Términos del glosario de {{site.data.keyword.Bluemix_notm}} 
 {: #glossary}
-
-Última actualización: 02 de septiembre de 2016
-{: .last-updated}
 
 Este glosario contiene términos y definiciones correspondientes a {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -946,7 +943,7 @@ Distribución de una plataforma informática, que incluye apps, middleware optim
 ### biblioteca de preproducción
 {: #x7290106}
 
-Colección de características de pruebas de app que recopilan detalles acerca de cuestiones y problemas con un app. Las características de pruebas identifican el dispositivo y el usuario que está experimentando errores para que los desarrolladores puedan obtener registros y otra información a fin de corregir los problemas. Véase también [modalidad de preproducción](#x7290124).
+Colección de características de pruebas de app que recopilan detalles acerca de cuestiones y problemas con una app. Las características de pruebas identifican el dispositivo y el usuario que está experimentando errores para que los desarrolladores puedan obtener registros y otra información a fin de corregir los problemas. Véase también [modalidad de preproducción](#x7290124).
 
 ### modalidad de preproducción
 {: #x7290124}

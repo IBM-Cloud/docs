@@ -3,8 +3,8 @@
  
 
 copyright:
-
-  years: 2014，2016
+  years: 2016
+lastupdated: "2016-10-31"
 
  
 
@@ -15,9 +15,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 的词汇表术语 
 {: #glossary}
-
-上次更新时间：2016 年 9 月 2 日
-{: .last-updated}
 
 本词汇表提供了 {{site.data.keyword.Bluemix}} 的术语和定义。
 {:shortdesc}

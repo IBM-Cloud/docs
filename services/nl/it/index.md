@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  anni: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 #Servizi
 {: #services}
-*Ultimo aggiornamento: 23 ottobre 2016*
 
 {{site.data.keyword.Bluemix_notm}} ti consente di implementare, ospitare o ridimensionare facilmente servizi e applicazioni. Potrai così concentrarti sulla logica e
 sulla progettazione dell'applicazione.
@@ -23,7 +23,7 @@ Per i servizi {{site.data.keyword.Bluemix_notm}} vengono forniti più livelli di
 |Tipo	|Descrizione	|Dettagli sul supporto|
 |:------|:--------------|:--------------|
 |IBM	|Un servizio fornito da IBM e che è generalmente disponibile.	|Viene fornito supporto per i problemi considerati come un difetto
-in un servizio fornito da IBM generalmente disponibile. Il supporto viene fornito in base alla severità da te impostata. Per ulteriori informazioni sulla severità del ticket, vedi [Come contattare il supporto](../support/index.html#contacting-bluemix-support){: new_window}.|
+in un servizio fornito da IBM generalmente disponibile. Il supporto viene fornito in base alla severità da te impostata. Per ulteriori informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 |Terze parti	|Un servizio fornito da un'azienda diversa da IBM.	|Il supporto per i servizi di terze parti è fornito dal
 fornitore del servizio. Se un problema viene analizzato da IBM e tale problema viene considerato come un difetto in un servizio di terze parti, IBM non è tenuto a fornire una correzione. IBM condividerà l'analisi con il fornitore del servizio di terze parti laddove necessario.|
 |Community	|Un servizio fornito da una community
@@ -32,7 +32,7 @@ open source.	|Il supporto per i servizi di community viene fornito dalla Communi
 ed è a una fase di sviluppo di prova. Un servizio beta può aiutare i team di sviluppo
 e di marketing a valutare la qualità dei servizi prima di
 renderli generalmente disponibili.	|Viene fornito supporto per i problemi considerati come un difetto in un servizio beta fornito da IBM, tuttavia  IBM non è tenuto a fornire una correzione. Inoltre,
-laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla severità del ticket, vedi [Come contattare il supporto](../support/index.html#contacting-bluemix-support){: new_window}.|
+laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 *Tabella 1. Informazioni sul supporto dei servizi {{site.data.keyword.Bluemix_notm}}*
 
 ##Servizi sperimentali
@@ -91,7 +91,7 @@ Non tutti i servizi sono disponibili per l'acquisto in ogni regione {{site.data.
 |{{site.data.keyword.GlobalizationPipeline_short}}	|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Ospitato a Sydney,AU |
 |{{site.data.keyword.dataworks_short}}		|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Non disponibile nella regione |
 |{{site.data.keyword.openwhisk}}		|Ospitato a Dallas,USA		|Non disponibile nella regione		|Non disponibile nella regione |
-|{{site.data.keyword.containerlong}}		|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Ospitato a Sydney,AU |
+|{{site.data.keyword.containerlong}}		|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Non disponibile nella regione |
 |{{site.data.keyword.datastagefull}}		|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Ospitato a Sydney,AU |
 |{{site.data.keyword.graphshort}}       |Ospitato a Dallas,USA		|Ospitato a Dallas,USA		|Non disponibile nella regione |
 |{{site.data.keyword.mdmcloudfull}}		|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Ospitato a Sydney,AU |
@@ -147,7 +147,7 @@ Non tutti i servizi sono disponibili per l'acquisto in ogni regione {{site.data.
 
 ## Disponibilità continua per i servizi
 {: #services_availability}
-{{site.data.keyword.Bluemix_notm}} ha identificato una serie di servizi come di Livello 1. IBM non ritirerà alcun servizio di Livello 1 senza rendere disponibile un suo equivalente funzionale o senza fornire almeno un preavviso di ritiro di cinque anni. 
+{{site.data.keyword.Bluemix_notm}} ha identificato una serie di servizi come di Livello 1. IBM non ritirerà alcun servizio di Livello 1 senza rendere disponibile un suo equivalente funzionale o senza fornire almeno un preavviso di ritiro di cinque anni.
 
 I seguenti servizi sono classificati come di Livello 1:
   * {{site.data.keyword.apiconnect_short}}
@@ -161,9 +161,9 @@ I seguenti servizi sono classificati come di Livello 1:
   * PostgresSQL da Compose
   * {{site.data.keyword.ssofull}}
 
-Per ulteriori informazioni sui termini di utilizzo per i servizi, vedi [Termini di {{site.data.keyword.Bluemix_notm}}](../navigation/notices.html#terms).
+Per ulteriori informazioni sui termini di utilizzo per i servizi, vedi: [Termini di {{site.data.keyword.Bluemix_notm}}](/docs/navigation/notices.html#terms).
 
 ## Deprecazione servizio
 {: #service_deprecation}
 
-IBM fornirà un avviso di almeno 30 giorni se intende sospendere o sostituire un servizio generalmente disponibile. Se non viene fornita una sostituzione equivalente, per almeno 12 mesi dalla data dell'annuncio, IBM si impegna a prendere tutte le misure necessarie per continuare l'operazione e supportare le istanze del servizio distribuite precedentemente. 
+IBM fornirà un avviso di almeno 30 giorni se intende sospendere o sostituire un servizio generalmente disponibile. Se non viene fornita una sostituzione equivalente, per almeno 12 mesi dalla data dell'annuncio, IBM si impegna a prendere tutte le misure necessarie per continuare l'operazione e supportare le istanze del servizio distribuite precedentemente.

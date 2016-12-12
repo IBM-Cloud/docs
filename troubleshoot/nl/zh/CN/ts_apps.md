@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-11"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # 有关管理应用程序的故障诊断
 {: #managingapps}
 
-上次更新时间：2016 年 10 月 11 日
-{: .last-updated} 
 
 有关管理应用程序的一般性问题可能包括：无法更新应用程序；未显示双字节字符。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
@@ -188,7 +188,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 要获取相应级别的权限，请使用以下其中一种方法：
 {: tsResolve}
  * 选择您具有其开发者角色的另一个组织和空间。 
- * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织和空间](../admin/orgs_spaces.html){: new_window}。
+ * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织和空间](/docs/admin/orgs_spaces.html){: new_window}。
  
 
 
@@ -260,7 +260,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 
  
 
-如果您怀疑 {{site.data.keyword.Bluemix_notm}} 服务关闭，请先检查 [{{site.data.keyword.Bluemix_notm}} 状态](http://ibm.biz/bluemixstatus){: new_window}页面。您可能想要在其他 {{site.data.keyword.Bluemix_notm}} 区域使用该服务来作为一种变通方法。有关详细信息，请参阅[在另一个区域使用服务](../services/reqnsi.html#cross_region_service){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
+如果您怀疑 {{site.data.keyword.Bluemix_notm}} 服务关闭，请先检查 [{{site.data.keyword.Bluemix_notm}} 状态](http://ibm.biz/bluemixstatus){: new_window}页面。您可能想要在其他 {{site.data.keyword.Bluemix_notm}} 区域使用该服务来作为一种变通方法。有关详细信息，请参阅[在另一个区域使用服务](/docs/services/reqnsi.html#cross_region_service){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
 {: tsResolve}
 
   * 重试操作：
@@ -268,7 +268,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 	* 使用其他浏览器。
 	* 重新引导您的路由器、调制解调器和计算机。重新引导这些设备可以清理导致 502 错误的各种错误。 
   * 稍等，然后重试。在某些情况下，您的因特网服务提供商或 {{site.data.keyword.Bluemix_notm}} 服务可能会发生临时问题。您可以一直等到临时问题得到解决为止。
-  * 如果问题持续存在，请联系 {{site.data.keyword.Bluemix_notm}} 支持。有关更多信息，请参阅[联系 {{site.data.keyword.Bluemix_notm}} 支持](../support/index.html#contacting-bluemix-support){: new_window}。 
+  * 如果问题持续存在，请联系 {{site.data.keyword.Bluemix_notm}} 支持。有关更多信息，请参阅[联系 {{site.data.keyword.Bluemix_notm}} 支持](/docs/support/index.html#contacting-bluemix-support){: new_window}。 
 
 
 
@@ -288,7 +288,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 {: tsCauses}
 
  
-使用以下某个方法可指定磁盘配额。可指定的最大磁盘配额为 2 GB。如果 2 GB 仍不够，请尝试外部服务，例如[对象存储](../services/ObjectStorage/index.html){: new_window}。
+使用以下某个方法可指定磁盘配额。可指定的最大磁盘配额为 2 GB。如果 2 GB 仍不够，请尝试外部服务，例如[对象存储](/docs/services/ObjectStorage/index.html){: new_window}。
 {: tsResolve}
 
   * 在 manifest.yml 文件中，添加以下项：
@@ -348,7 +348,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 	  1. 取消服务实例与应用程序的绑定，方法是输入 `cf unbind-service <appname> <service_instance_name>`。
 	  2. 删除服务实例，方法是输入 `cf delete-service <service_instance_name>`。
 	  3. 在删除服务实例之后，可能需要重新编译打包绑定该服务实例的应用程序，方法是输入 `cf restage <appname>`。
-  * 要除去您可拥有的服务实例数的限制，请将试用帐户转换为付费帐户。有关如何将试用帐户转换为付费帐户的信息，请参阅[如何更改套餐](../pricing/index.html#changing){: new_window}。
+  * 要除去您可拥有的服务实例数的限制，请将试用帐户转换为付费帐户。有关如何将试用帐户转换为付费帐户的信息，请参阅[如何更改套餐](/docs/pricing/index.html#changing){: new_window}。
 
   
   
@@ -403,7 +403,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 您可以增加帐户的内存配额，或者减少应用程序使用的内存。
 {: tsResolve} 
 
-  * 要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅 [付费帐户](../pricing/index.html#pay-accounts){: new_window}。 
+  * 要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅[付费帐户](/docs/pricing/index.html#pay-accounts){: new_window}。 
   * 要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 控制台或 cf 命令行界面。
     如果使用 {{site.data.keyword.Bluemix_notm}} 控制台，请完成以下步骤：
 	  1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，选择应用程序。这将打开应用程序详细信息页面。
@@ -533,7 +533,7 @@ cf push appname -p app_path
 使用以下其中一个选项可解决该问题：
 {: tsResolve}
 
-  * 建议的作法是使用 IBM Node.js buildpack 启动应用程序。有关更多信息，请参阅[将 Node.js 应用程序部署至 {{site.data.keyword.Bluemix_notm}}](../runtimes/nodejs/index.html#nodejs_runtime){: new_window} 主题的“启动命令”一节。 
+  * 建议的作法是使用 IBM Node.js buildpack 启动应用程序。有关更多信息，请参阅[将 Node.js 应用程序部署至 {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime){: new_window} 主题的“启动命令”一节。 
   * 通过将 `manifest.yml` 中的命令属性修改为命令 null 或通过编辑推送命令以包括 `-c null`，禁用现有应用程序的命令。 
   * 从 `manifest.yml` 中除去**命令**属性。然后，从 {{site.data.keyword.Bluemix_notm}} 中删除当前应用程序，并重新推送应用程序。
   
@@ -577,7 +577,7 @@ cf push appname -p app_path
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-如果要使用 Eclipse 工具将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，必须先创建 {{site.data.keyword.Bluemix_notm}} 服务器，然后指定所创建组织所在的 {{site.data.keyword.Bluemix_notm}} 区域的 API 端点。有关使用 Eclipse 工具的更多信息，请参阅[使用 IBM Eclipse Tools for Bluemix 部署应用程序](../manageapps/eclipsetools/eclipsetools.html){: new_window}。  
+如果要使用 Eclipse 工具将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，必须先创建 {{site.data.keyword.Bluemix_notm}} 服务器，然后指定所创建组织所在的 {{site.data.keyword.Bluemix_notm}} 区域的 API 端点。有关使用 Eclipse 工具的更多信息，请参阅[使用 IBM Eclipse Tools for Bluemix 部署应用程序](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}。  
   
   
 
@@ -774,7 +774,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-您可以通过从项目中除去 server.xml 文件来解决此问题。将应用程序作为 WAR 应用程序进行推送时，buildpack 会动态创建 `server.xml` 文件。有关更多信息，请参阅 [Liberty for Java](../runtimes/liberty/index.html){: new_window}。
+您可以通过从项目中除去 server.xml 文件来解决此问题。将应用程序作为 WAR 应用程序进行推送时，buildpack 会动态创建 `server.xml` 文件。有关更多信息，请参阅 [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}。
 {: tsResolve}
 	
 	
@@ -816,7 +816,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅[应用程序清单](../manageapps/depapps.html#appmanifest){: new_window}。
+要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅[应用程序清单](/docs/manageapps/depapps.html#appmanifest){: new_window}。
 {: tsResolve}	
 	
 

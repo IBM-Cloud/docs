@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-20"
 
 
 ---
@@ -14,8 +16,6 @@ copyright:
 # 故障诊断
 {: #troubleshooting}
 
-上次更新时间：2016 年 10 月 20 日
-{: .last-updated}
 
 如果您遇到 {{site.data.keyword.Bluemix}} 问题，可执行故障诊断任务来确定要采取哪些纠正措施。
 

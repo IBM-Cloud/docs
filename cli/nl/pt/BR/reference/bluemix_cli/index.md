@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-24"
+
 ---
 
 
@@ -15,9 +16,6 @@ copyright:
 
 # Comandos do {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
-
-Última atualização: 25 de outubro de 2016
-{: .last-updated}
 
 Versão: 0.4.1
 
@@ -304,8 +302,8 @@ Use os índices nas tabelas a seguir para referir-se aos comandos do Bluemix usa
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
  <tr>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic stop](index.html#ic_stop)</td>
@@ -315,7 +313,7 @@ Use os índices nas tabelas a seguir para referir-se aos comandos do Bluemix usa
  <td>[bluemix ic unpause](index.html#unpause)</td>
  <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
@@ -2742,7 +2740,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 Recrie o serviço IBM Containers no espaço do Bluemix em que você efetuou login. A
 cota original para o espaço é mantida.
 
-<strong>Importante</strong>: quando você executa esse comando, nenhum dos seus contêineres únicos e grupos nesse espaço será migrado para o espaço reprovisionado e eles serão removidos durante o processo de migração. 
+<strong>Importante</strong>: quando você executa esse comando, nenhum dos seus contêineres únicos e grupos nesse espaço será migrado para o espaço reprovisionado e eles serão removidos durante o processo de migração.
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]

@@ -43,7 +43,7 @@ Una vez que {{site.data.keyword.openwhisk_short}} esté configurado con la CLI, 
 ## Uso de la CLI de {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_using_cli}
 
-Tras haber configurado su entorno, puede empezar a usar la CLI de {{site.data.keyword.openwhisk_short}} para hacer lo siguiente:
+Tras haber [configurado su entorno](https://new-console.{DomainName}/openwhisk/cli){: new_window}, puede empezar a usar la CLI de {{site.data.keyword.openwhisk_short}} para hacer lo siguiente:
 
 * Ejecutar sus fragmentos de código, o acciones, en {{site.data.keyword.openwhisk_short}}. Consulte
 [Creación e invocación de acciones](./openwhisk_actions.html).

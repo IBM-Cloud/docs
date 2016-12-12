@@ -1,16 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Data & Analytics
 {: #data_analytics}
-
-*Última atualização: 9 de março de 2016*
 
 Faça mais com serviços analíticos
 e bancos de dados em nuvem integrados e ricos. Além de explorar os serviços, é possível usar o console

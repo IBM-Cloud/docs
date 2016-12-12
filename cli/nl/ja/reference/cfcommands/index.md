@@ -6,7 +6,7 @@ copyright:
 
   years: 2016
 
-
+lastupdated: "2016-11-14"
 
 ---
 
@@ -18,9 +18,6 @@ copyright:
 
 # Cloud Foundry (cf) コマンド
 {: #cf}
-
-最終更新日: 2016 年 10 月 20 日
-{: .last-updated}
 
 Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は、アプリを管理するための一連のコマンドを提供します。以下の情報では、アプリを管理するために最もよく使用される cf コマンドをリストし、コマンドの名前、オプション、使用法、前提条件、説明、および例を示します。すべての cf コマンドと関連ヘルプ情報をリストするには、`cf help` を使用します。特定のコマンドの詳細なヘルプ情報を表示するには、`cf command_name -h` を使用します。
 {: shortdesc}
@@ -74,6 +71,7 @@ Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は
  <td>[スケール (scale)](index.html#cf_scale)</td>
  <td>[services](index.html#cf_services)
  <td>[set-env](index.html#cf_set-env)</td>
+ <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](index.html#cf_stop)</td>
  </tr>
  </tbody>
@@ -666,6 +664,42 @@ cf set-env appname var_name var_value
 `my_app` という名前のアプリケーションに対して、値 `123` を指定して `variable_a` という名前の環境変数を設定します。
 ```
 cf set-env my_app variable_a 123
+```
+{: codeblock}
+
+
+## cf ssh
+{: #cf_ssh}
+
+アプリケーション・コンテナーに安全にログインします。デフォルトで、SSH は、アプリケーションの最初のインスタンス (インデックスが 0 のインスタンス) を実行しているコンテナーにアクセスします。
+
+```
+cf ssh
+```
+<strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
+
+アプリケーション・インスタンスへの SSH アクセスを許可するように Cloud Foundry デプロイメントを構成する必要もあります。詳しくは、[Cloud Foundry の SSH アクセスの構成 (Configuring SSH Access for Cloud Foundry)](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window} を参照してください。
+
+<strong>コマンド・オプション</strong>:
+
+<dl>
+<dt>appname</dt>
+<dd>アプリケーションの名前。SSH が許可されている場合、このオプションを使用して、アプリケーションをホストしている VM と対話式 SSH セッションを開始できます。</dd>
+<dt>-i</dt>
+<dd>アプリケーションの特定インスタンスを対象にします。</dd>
+<dt>-L</dt>
+<dd>マシン上の出力ポートをアプリケーション VM 上の入力ポートにバインドするローカル・ポート転送を有効にします。</dd>
+<dt>-N</dt>
+<dd>リモート・コマンドを実行しません。</dd>
+<dt>-t、-tt、または -T</dt>
+<dd>端末回線出力を生成するのではなく、擬似 tty モードで SSH セッションを実行できるようにします。<dd>
+</dl>
+
+<strong>例</strong>:
+
+アプリケーション `my_app` をホストしている VM と対話式 SSH セッションを開始します。
+```
+$ cf ssh my_app
 ```
 {: codeblock}
 

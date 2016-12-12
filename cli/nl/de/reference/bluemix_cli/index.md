@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-24"
+
 ---
 
 
@@ -15,9 +16,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}}-Befehle (bx)
 {: #bluemix_cli}
-
-Letzte Aktualisierung: 25. Oktober 2016
-{: .last-updated}
 
 Version: 0.4.1
 
@@ -300,8 +298,8 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
  <tr>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic stop](index.html#ic_stop)</td>
@@ -311,7 +309,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  <td>[bluemix ic unpause](index.html#unpause)</td>
  <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
@@ -2665,7 +2663,7 @@ bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--li
    <dt>-a|--all (optional)</dt>
    <dd>Alle Container anzeigen, d. h. aktive und gestoppte Container.</dd>
    <dt>--filter env=<i>SEARCH_CRITERIA</i> (optional)</dt>
-   <dd>Suchcontainer mit einem bestimmten Wert für die Umgebungsvariable. Sie können Ihre Container nach jedem Umgebungsvariablen-Schlüssel oder -Wert filtern, der im Abschnitt 'Env' Ihrer CLI-Antwort aufgelistet wird, wenn Sie einen Container untersuchen. Ersetzen Sie SEARCH_CRITERIA durch den Schlüssel oder Wert, den Sie suchen. Ihre Suchkriterien müssen keine exakten Übereinstimmungen darstellen.</dd>
+   <dd>Suchcontainer mit einem bestimmten Wert für die Umgebungsvariable. Sie können Ihre Container nach jedem Umgebungsvariablen-Schlüssel oder -Wert filtern, der im Abschnitt 'Env' Ihrer CLI-Antwort aufgelistet wird, wenn Sie einen Container untersuchen. Ersetzen Sie SEARCH_CRITERIA durch den Schlüssel oder Wert, den Sie suchen. Ihre Suchkriterien müssen keine exakten Übereinstimmungen darstellen. </dd>
    <dt>-s|--size (optional)</dt>
    <dd>Die Größen der Container auflisten.</dd>
    <dt>-l <i>NUM</i>|--limit <i>NUM</i> (optional)</dt>
@@ -2707,7 +2705,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 Erstellt den IBM Containers-Service erneut in dem Bluemix-Bereich, an dem Sie angemeldet sind. Das ursprüngliche Kontingent für den Bereich wird beibehalten.
 
-<strong>Wichtig</strong>: Bei Ausführung dieses Befehls wird keine(r) Ihrer einzelnen Container und Gruppen in diesem Bereich auf den neu bereitgestellten Bereich migriert, sondern während des Migrationsprozesses entfernt. 
+<strong>Wichtig</strong>: Bei Ausführung dieses Befehls wird keine(r) Ihrer einzelnen Container und Gruppen in diesem Bereich auf den neu bereitgestellten Bereich migriert, sondern während des Migrationsprozesses entfernt.
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
@@ -3317,7 +3315,7 @@ bluemix ic volume-fs-inspect FILE_SHARE_NAME
 
   <dl>
   <dt><i>FILE_SHARE_NAME</i> (erforderlich)</dt>
-   <dd>Der Name der Dateifreigabe. </dd>
+   <dd>Der Name der Dateifreigabe.</dd>
    </dl>
 
 <strong>Beispiele</strong>:
@@ -3343,7 +3341,7 @@ bluemix ic volume-fs-remove FILE_SHARE_NAME
 
    <dl>
    <dt><i>FILE_SHARE_NAME</i> (erforderlich)</dt>
-   <dd>Der Name der Dateifreigabe. </dd>
+   <dd>Der Name der Dateifreigabe.</dd>
    </dl>
 
 <strong>Beispiele</strong>:

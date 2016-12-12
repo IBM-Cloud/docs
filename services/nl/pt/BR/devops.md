@@ -1,14 +1,13 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 # DevOps
 {: #devops}
-
-*Última atualização: 9 de dezembro de 2015*
 
 Acelerar entrega de app | Escolha como codificar | Implementar com confiança
 ---- | ---- | ----

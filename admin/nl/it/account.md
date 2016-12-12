@@ -4,8 +4,8 @@
 
 copyright:
 
-  anni: 2015, 2016
-  
+  years: 2015, 2016
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # Gestione del tuo account {{site.data.keyword.Bluemix_notm}}
 {: #mngacct}
-*Ultimo aggiornamento: 20 ottobre 2016*
-{: .last-updated}
 
 Vai al link **Account** per impostare le notifiche, visualizzare l'utilizzo del tuo account o la tua fattura.
 {:shortdesc}
@@ -30,7 +28,8 @@ Puoi registrarti per un account {{site.data.keyword.Bluemix_notm}} utilizzando u
 
 Un ID federato può essere utilizzato per la registrazione a {{site.data.keyword.Bluemix_notm}} solo se la tua azienda ha già effettuato una registrazione con IBM.  La registrazione di un dominio aziendale con IBM consente agli utenti di accedere a prodotti e servizi IBM utilizzando le proprie credenziali aziendali esistenti. L'autenticazione viene quindi gestita dal provider di identità dell'azienda. Quando accedi a {{site.data.keyword.Bluemix_notm}} con un ID federato, ti viene richiesto di accedere tramite la pagina di accesso della tua azienda. Per informazioni sulla richiesta di registrazione del dominio della tua organizzazione o azienda con IBM o per ulteriori informazioni sul processo, consulta [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Quando richiedi di registrare gli ID federati, è necessario uno sponsor IBM, ad esempio un rappresentate di offerte o clienti.
 
-*Tabella 1. Metodi di registrazione*
+Tabella 1. Metodi di registrazione
+{: #account_table1}
 
 | Metodi di registrazione | Dettagli |    
 |-----------------|---------|

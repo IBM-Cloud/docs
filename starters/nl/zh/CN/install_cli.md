@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-10-05"
+
+
 
 ---
 
@@ -28,7 +30,7 @@ copyright:
 {:user_ID: data-hd-keyref="user_ID"}
 
 # 使用命令行界面部署应用程序
-上次更新时间：2016 年 9 月 15 日
+上次更新时间：2016 年 10 月 5 日
 {: .last-updated}
 
 可以使用命令行界面来部署和修改应用程序和服务实例。
@@ -46,27 +48,31 @@ copyright:
 安装这些命令行界面后，可以开始执行以下操作：
 
   1. {: download} 下载入门模板代码，然后将包解压缩到新目录，以设置开发环境。
-      
+
     <a class="xref" href="http://bluemix.net" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_starter-code.svg" alt="下载入门模板代码" /></a>
-  
+
   2. 切换到代码所在的目录。
-  
+
   <pre class="pre">cd <var class="keyword varname">your_new_directory</var></pre>
-  
+
   3.  根据需要对应用程序代码进行更改。我们建议先确保应用程序在本地运行，然后再将其部署回 {{site.data.keyword.Bluemix}}。<br><br>应该记下的一个文件是 `manifest.yml` 文件。将应用程序部署回 {{site.data.keyword.Bluemix}} 时，此文件用于确定应用程序的 URL、内存分配、实例数和其他关键参数。可以在 Cloud Foundry 文档中[阅读有关清单文件的更多信息](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window}。
-  
+
   4. 连接到 {{site.data.keyword.Bluemix}}。
-  
+
   <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
-  
+
   5. 登录到 {{site.data.keyword.Bluemix_notm}}。
- 
-  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">org_name</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">space_name</var>"</pre>
-  
+
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
+
+  如果使用的是联合标识，请使用 -sso 选项。
+
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">org_name</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">space_name</var>" -sso</pre>
+
   6. 将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。有关 cf push 命令的更多信息，请参阅[上传应用程序](/docs/starters/upload_app.html)。
-  
+
   <pre class="pre">cf push "<var class="keyword varname" data-hd-keyref="app_name">app_name</var>"</pre>
-  
+
   7. 通过在浏览器中输入以下 URL 来访问您的应用程序：
-  
+
   <pre class="codeblock"><code><var class="keyword varname" data-hd-keyref="host">host</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span></code></pre>

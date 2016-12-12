@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-18"
 ---
 
 
@@ -11,27 +11,83 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#アプリのデプロイ
+# アプリのデプロイ
 {: #deployingapps}
-
--*最終更新日: 2016 年 7 月 28 日*
--{: .last-updated}
 
 {{site.data.keyword.Bluemix}} へのアプリケーションのデプロイは、コマンド・ライン・インターフェースや統合開発環境 (IDE) など、さまざまな方法で行うことができます。また、アプリケーション・マニフェストを使用してアプリケーションをデプロイすることも可能です。アプリケーション・マニフェストを使用することで、アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイする度に指定しなければならないデプロイメント詳細の数を減らします。
 {:shortdesc}
 
-##アプリケーション・デプロイメント
+## アプリケーション・デプロイメント
 {: #appdeploy}
 
 アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイする工程には、2 つの段階があります。アプリケーションをステージングする段階、およびアプリケーションを開始する段階です。
 
-###アプリケーションのステージング
+Cloud Foundry は、新しいランタイム・アーキテクチャーの Diego をサポートするようになりました。Diego は、Garden、Docker、および Windows のコンテナーなど、複数のコンテナー・テクノロジーをサポートします。Cloud Foundry の今後の機能拡張とフィックスは直接 Diego に行われ、DEA ではサポートされません。
 
+### Diego によるアプリケーションのステージング
+すべての Diego コンポーネントは、クラスター化されるように設計されています。つまり、異なるアベイラビリティー・ゾーンを簡単に作成することができます。すべての Diego コンポーネント間のセキュア通信は、TLS を使用します。
+
+ステージング・フェーズで、Diego はコンテナーのオーケストレーションに関連するすべての局面に対処します。アプリ・インスタンスの分散は Diego Brain で行われ、クラウド・コントローラーはアプリのステージングのみを行います。Diego Brain は、コンテナーへの SSH アクセスでセルにアプリを割り振ります。
+
+アプリの正常性を検証するために、Diego は DEA に使用されたものと同じポート・ベースのチェックをサポートします。しかし、将来有効になるべき URL ベースのヘルス・チェックのような汎用オプションを、さらに設けられるように設計されています。
+
+Diego でアプリをステージングするには、まず、cf CLI と [Diego-Enabler CLI プラグイン](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}の両方をインストールする必要があります。これは、マイグレーション期間中のみ必要です。
+
+#### 既知の問題
+ Diego の使用に関して、以下の既知の問題があります。
+  * `--no-route` オプションでデプロイされたワーカー・アプリケーションが、正常として報告されません。これを回避するには、`cf set-health-check APP_NAME none` コマンドでポート・ベースのヘルス・チェックを無効にしてください。
+  * VCAP_APP_HOST 環境変数が Diego で使用されません。コードでこの変数を参照する場合は、それを 0.0.0.0 に置き換えてください。
+  * VCAP_APP_PORT 環境変数が Diego で使用されません。コードでこの変数を参照する場合は、それを PORT (デフォルトで 8080 に設定されます) に置き換えてください。
+  * **cf files** コマンドはもうサポートされていません。**cf ssh** コマンドに置き換えられました。**cf ssh** コマンドについて詳しくは、[cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh) を参照してください。
+  * アプリによっては、多くのファイル記述子 (inode) を使用することがあります。この問題が発生した場合は、`cf scale APP_NAME [-k DISK]` コマンドでアプリのディスク割り当て量を増やす必要があります。
+
+#### Diego での新しいアプリケーションのステージング
+Diego で新しいアプリケーションをステージングするには、コマンド・ラインで Diego をバックエンドとして指示するフラグを指定して、アプリケーションをデプロイする必要があります。
+
+  1. アプリケーションを開始せずにデプロイします。
+  ```
+  $ cf push APPLICATION_NAME --no-start
+  ```
+  2. 以下のように Diego のブール値を設定します。
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+    あるいは、以下を行います。
+  ```
+  $ cf curl /v2/apps/$(cf app APPLICATION_NAME --guid) -X PUT -d '{"diego":true}'
+  ```
+  3. 以下のようにしてアプリケーションを開始します。
+  ```
+  $ cf start APPLICATION_NAME
+  ```
+
+**cf push** コマンドについて詳しくは、[cf push](/docs/cli/reference/cfcommands/index.html#cf_push) を参照してください。
+
+#### 既存アプリケーションの Diego への変更
+Diego のフラグを指定して既存アプリケーションをデプロイすることで、それを Diego に移行することができます。アプリケーションは、即時に Diego で実行を開始し、最終的に DEA での実行を停止します。アップタイムを保証したい場合は、アプリケーションのコピーを Diego にデプロイしてから、経路をスワップして DEA アプリケーションをスケールダウンすることで、blue-green デプロイを実行することをお勧めします。
+
+  Diego フラグを設定して、アプリケーションを Diego での実行に変更するには、以下のようにします。
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+
+  DEA に逆に移行するには、以下のようにします。
+  ```
+  $ cf disable-diego APPLICATION_NAME
+  ```
+
+  アプリケーションがどのバックエンドで実行されているかを確認するには、以下のようにします。
+  ```
+  $ cf has-diego-enabled APPLICATION_NAME
+  ```
+
+
+### DEA によるアプリケーションのステージング
 ステージングの段階では、Droplet Execution Agent (DEA) が cf コマンド・ライン・インターフェースまたは `manifest.yml` ファイルでユーザーが指定した情報を使用して、アプリケーションのステージング用に何を作成するかを決定します。DEA は、アプリケーションのステージングのために適切なビルドパックを選択します。このステージング・プロセスの結果が Droplet です。{{site.data.keyword.Bluemix_notm}} へのアプリケーションのデプロイについて詳しくは、『[{{site.data.keyword.Bluemix_notm}} の動作](/docs/overview/whatisbluemix.html#howwork)』を参照してください。
 
 ステージングのプロセス中、DEA はビルドパックがアプリケーションと一致するかどうかをチェックします。例えば、.war ファイルに対する Liberty ランタイム、または .js ファイルに対する Node.js ランタイムなどです。DEA はその後、ビルドパックおよびアプリケーション・コードが含まれる独立したコンテナーを作成します。このコンテナーは Warden コンポーネントによって管理されます。詳しくは、「[How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}」を参照してください。
 
-###アプリケーションの開始
+### アプリケーションの開始
 
 アプリケーションが開始されると、warden コンテナーのインスタンスが作成されます。**cf files** コマンドを使用すると、例えばログなど、Warden コンテナーのファイル・システムに保管されたファイルを表示することができます。アプリケーションの開始に失敗した場合、DEA はアプリケーションを停止し、Warden コンテナーのコンテンツはすべて削除されます。このため、アプリケーションが停止した場合やアプリケーションのステージング・プロセスが失敗した場合、ログ・ファイルを使用することができなくなります。
 
@@ -39,7 +95,8 @@ copyright:
 
 **注:** バッファー・サイズには制限があります。アプリケーションが長時間実行されていて再始動されていない場合、ログ・バッファーがクリアされたために `cf logs appname --recent` を入力してもログが表示されない可能性があります。したがって、大規模なアプリケーションのステージング・エラーをデバッグするには、その cf コマンド・ライン・インターフェースとは別のコマンド・ラインで `cf logs appname` を入力してください。そうすれば、アプリケーションをデプロイしたときのログがトラッキングできます。
 
-{{site.data.keyword.Bluemix_notm}} でアプリケーションをステージングする際に問題が発生している場合は、[「ステージング・エラーのデバッグ (Debugging staging errors)」](../debug/index.html#debugging-staging-errors)のステップに従って問題を解決することができます。
+{{site.data.keyword.Bluemix_notm}} でアプリケーションをステージングする際に問題が発生している場合は、[「ステージング・エラーのデバッグ (Debugging
+staging errors)」](/docs/debug/index.html#debugging-staging-errors)のステップに従って問題を解決することができます。
 
 ##cf コマンドを使用してのアプリケーションのデプロイ
 {: #dep_apps}
@@ -56,7 +113,8 @@ copyright:
   cf push
   ```
   
-  Liberty ビルドパックの詳細については、[「Liberty for Java」](../runtimes/liberty/index.html)を参照してください。
+  Liberty ビルドパックの詳細については、[「Liberty
+for Java」](/docs/runtimes/liberty/index.html)を参照してください。
   
   * Java Tomcat アプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイするには、以下のコマンドを使用します。
   
@@ -122,8 +180,8 @@ cf push appname
   2. アプリケーション・ディレクトリーに移動し、**cf push** コマンドを使用してアプリをデプロイします。ここで、appname はドメイン内で固有でなければなりません。
   
   ```
-  cf push appname
-  ```
+cf push appname 
+```
   
 ##アプリケーション・マニフェスト
 {: #appmanifest}

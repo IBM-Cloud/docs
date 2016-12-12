@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,10 +17,8 @@ copyright:
 
 # プロファイル設定
 {: #usersettings}
-最終更新日: 2016 年 10 月 20 日
-{: .last-updated}
 
-**「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](../icons/i-avatar-icon.svg) &gt;**「ユーザー・プロファイル」**に移動して、プロファイル設定を更新します。{:shortdesc}
+**「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](/docs/icons/i-avatar-icon.svg) &gt;**「ユーザー・プロファイル」**に移動して、プロファイル設定を更新します。{:shortdesc}
 
  **「プロファイル」**ページで、以下の情報を設定または更新できます。
 
@@ -31,7 +29,7 @@ copyright:
 ## プロファイルの写真の変更
 {: #photo}
 
-1. **「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](../icons/i-avatar-icon.svg) &gt;**「ユーザー・プロファイル」**に移動します。
+1. **「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](/docs/icons/i-avatar-icon.svg) &gt;**「ユーザー・プロファイル」**に移動します。
 
 * **「写真のアップロード (UPLOAD A PHOTO)」**をクリックして、写真をアップロードします。
 * **「写真の変更」**をクリックして、新しい写真をアップロードします。
@@ -44,7 +42,7 @@ IBM ID は、インフラストラクチャー、サービス、およびアプ�
 
 IBM ID を変更することはできませんが、それに関連付けられているプロファイル情報を編集することはできます。名前、E メール、電話番号、パスワード、会社名などの IBM ID アカウント情報を変更する必要が生じた場合、以下のステップを実行します。
 
-1. **「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](../icons/i-avatar-icon.svg) &gt;**「ユーザー・プロファイル」**に移動します。
+1. **「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](/docs/icons/i-avatar-icon.svg) &gt;**「ユーザー・プロファイル」**に移動します。
 2. **「IBM ID の編集 (Edit your IBMid)」**をクリックします。
 3. ユーザー情報を編集します。
 4. **「保存」**をクリックします。
@@ -58,5 +56,5 @@ IBM ID を変更することはできませんが、それに関連付けられ�
 
 分析トラッキングを無効にするには、以下のステップを実行します。
 
-1. **「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](../icons/i-avatar-icon.svg) &gt;**「ユーザー・プロファイル」**に移動します。
+1. **「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](/docs/icons/i-avatar-icon.svg) &gt;**「ユーザー・プロファイル」**に移動します。
 2. 分析トラッキングを**「オフ」**に設定します。

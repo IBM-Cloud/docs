@@ -1,19 +1,18 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Web and Application
 {: #webapplication}
 
-*Última atualização: 9 de dezembro de 2015*
-
-Use esses serviços para incluir ou remover recursos rapidamente enquanto você desenvolve aplicativos da web na nuvem. Também é possível simplificar tarefas de gerenciamento e organizar os seus processos e regras de negócios. 
+Use esses serviços para incluir ou remover recursos rapidamente enquanto você desenvolve aplicativos da web na nuvem. Também é possível simplificar tarefas de gerenciamento e organizar os seus processos e regras de negócios.
 {:shortdesc}
 
 

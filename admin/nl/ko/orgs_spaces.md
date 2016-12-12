@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-10-20"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # 조직 및 영역 관리
 {: #orgsspacesusers}
-마지막 업데이트 날짜: 2016년 10월 20일
-{: .last-updated}
 
 계정 소유자는 **조직 관리** 페이지로 이동하여 조직을 관리할 수 있습니다. 또한 조직 관리자는 조직 관리 페이지를 사용하여 자신이 관리자로 설정된 조직을 관리할 수 있습니다.
 {:shortdesc}
@@ -73,7 +71,7 @@ copyright:
 
 조직을 삭제하려면 [{{site.data.keyword.Bluemix_notm}} 지원](http://ibm.biz/bluemixsupport){: new_window}에 문의해야 합니다. 지원 팀에 조직을 삭제하도록 요청하면 조직 내의 모든 영역, 애플리케이션 및 서비스가 삭제됩니다.
 
-다음과 같은 [사용자 역할](users_roles.html#userrolesinfo)을 조직의 팀 구성원에게 지정할 수 있습니다.
+다음과 같은 [사용자 역할](/docs/admin/users_roles.html#userrolesinfo)을 조직의 팀 구성원에게 지정할 수 있습니다.
 
 <ul>
 <li>조직 관리자</li>
@@ -88,7 +86,7 @@ copyright:
 
 조직 내에서는 영역을 사용하여 애플리케이션, 서비스 및 팀 구성원 세트를 그룹화할 수 있습니다. 영역은 {{site.data.keyword.Bluemix_notm}}에서 특정 지역과 연계됩니다.
 
-팀 구성원을 조직에 추가한 후에는 팀 구성원에게 영역에 대한 권한을 부여할 수 있습니다. 조직과 마찬가지로 영역에도 팀 구성원에게 지정된 특정 권한이 있는 [사용자 역할](users_roles.html#userrolesinfo) 세트가 있습니다.
+팀 구성원을 조직에 추가한 후에는 팀 구성원에게 영역에 대한 권한을 부여할 수 있습니다. 조직과 마찬가지로 영역에도 팀 구성원에게 지정된 특정 권한이 있는 [사용자 역할](/docs/admin/users_roles.html#userrolesinfo) 세트가 있습니다.
 
 <ul>
 <li>영역 관리자</li>
@@ -177,7 +175,7 @@ copyright:
 3. **조직 편집**을 클릭하십시오.
 4. **할당량** 탭을 선택하십시오.
 
-조직의 할당량을 업데이트하려면 지원 티켓을 열어야 합니다. 지원 티켓 열기에 대한 자세한 정보는 [고객 지원 가져오기](../support/index.html#contacting-support)를 참조하십시오. 컨테이너 할당량에 대한 자세한 정보는 컨테이너 문서에서 [할당량](../containers/container_planning_org_ov.html##container_planning_quota)을 참조하십시오.
+조직의 할당량을 업데이트하려면 지원 티켓을 열어야 합니다. 지원 티켓 열기에 대한 자세한 정보는 [고객 지원 받기](/docs/support/index.html#contacting-support)를 참조하십시오. 컨테이너 할당량에 대한 자세한 정보는 컨테이너 문서에서 [할당량](/docs/containers/container_planning_org_ov.html##container_planning_quota)을 참조하십시오.
 
 ## 도메인 관리
 {: #managedomains}

@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 #服務
 {: #services}
-
-*前次更新：2016 年 10 月 21 日*
-{: .last-updated} 
 
 您可以在 {{site.data.keyword.Bluemix}} 使用者介面的**型錄**中，在**服務**下找到可用的服務。
 {:shortdesc}
@@ -40,10 +38,10 @@ copyright:
 
 |類型	|說明	|支援詳細資料|
 |:------|:--------------|:--------------|
-|IBM	|IBM 所提供且正式發行的服務。	|在 IBM 所提供且正式發行的服務中，判定為錯誤的問題會受到支援。支援會根據您設定的嚴重性來提供。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-bluemix-support){: new_window}。|
+|IBM	|IBM 所提供且正式發行的服務。	|在 IBM 所提供且正式發行的服務中，判定為錯誤的問題會受到支援。支援會根據您設定的嚴重性來提供。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support){: new_window}。|
 |協力廠商	|由 IBM 以外的公司所提供的服務。	|協力廠商服務支援是由服務提供者所提供。如果是由 IBM 調查問題，且該問題經判定為協力廠商服務中的錯誤，IBM 並不負責提供修正程式。IBM 會視需要與協力廠商服務提供者分享分析資訊。|
 |社群	|開放程式碼社群所提供的服務。	|社群服務支援是由「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為社群服務中的錯誤，IBM 並不負責提供修正程式。|
-|測試版	|尚未準備好進入正式作業且目前處於開發試用階段的服務。「測試版」服務可協助開發及行銷小組先評量服務價值，再正式發行該服務。	|在 IBM 所提供的測試版服務中判定為錯誤的問題會受到支援，但是 IBM 不負責提供修正程式。此外，還會將問題單的嚴重性指派為 3 或 4（適用時）。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-bluemix-support){: new_window}。|
+|測試版	|尚未準備好進入正式作業且目前處於開發試用階段的服務。「測試版」服務可協助開發及行銷小組先評量服務價值，再正式發行該服務。	|在 IBM 所提供的測試版服務中判定為錯誤的問題會受到支援，但是 IBM 不負責提供修正程式。此外，還會將問題單的嚴重性指派為 3 或 4（適用時）。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support){: new_window}。|
 *表 1. {{site.data.keyword.Bluemix_notm}} 服務支援資訊*
 
 
@@ -206,7 +204,7 @@ cf bind-service appname service_instance
 您可以將服務實例僅連結至位於相同空間或組織中的應用程式實例。然而，使用其他空間或組織中的服務實例的方式，與使用外部應用程式的方式一樣。請使用認證直接配置應用程式實例，而非建立連結。如需外部應用程式如何使用 {{site.data.keyword.Bluemix_notm}} 服務的相關資訊，請參閱[讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務](#accser_external){: new_window}。
 
 
-## 配置應用程式以與服務互動 
+## 配置應用程式以與服務互動
 {: #config}
 
 將服務實例連結至應用程式之後，您必須配置應用程式以與服務互動。
@@ -225,7 +223,7 @@ cf bind-service appname service_instance
 您可能需要閱讀服務文件，以瞭解預期的內容，以及如何解譯每一份資訊。
 
 
-如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題中回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[應用程式不會自動重新啟動](../troubleshoot/index.html#ts_topmenubar)疑難排解主題。
+如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題中回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[應用程式不會自動重新啟動](/docs/troubleshoot/index.html#ts_topmenubar)疑難排解主題。
 
 
 ## 讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務
@@ -310,7 +308,7 @@ cf uups testups2 -l syslog://example2.com
 
   * 使用服務認證直接配置應用程式實例。如需詳細資料，請參閱[讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務](#accser_external){: new_window}。
   * 建立使用者提供的服務作為橋接器。
-    
+
 	假設您從想要使用服務實例的地區中開始。若要使用存在於另一個地區的服務實例，請完成下列步驟：
 
       1. 切換至服務實例所在的地區。在 {{site.data.keyword.Bluemix_notm}} 功能表列中，展開**地區**，或按一下**地區**圖示，然後選取服務實例所在的地區。
@@ -344,7 +342,7 @@ cf uups testups2 -l syslog://example2.com
 
 1. 在 {{site.data.keyword.Bluemix_notm}}「儀表板」上，按一下您要存取的服務磚。即會顯示服務的儀表板。
 2. 在導覽窗格中，使用服務實例的主控台，按一下**管理**以授權來自其他服務實例的連結。
-3. 如果您要拒絕其他服務對服務實例的存取權，請按一下導覽窗格中的**服務存取授權**，然後使用**撤銷**以移除服務連結。 
+3. 如果您要拒絕其他服務對服務實例的存取權，請按一下導覽窗格中的**服務存取授權**，然後使用**撤銷**以移除服務連結。
 
 # 相關鏈結
 {: #rellinks}
@@ -352,7 +350,5 @@ cf uups testups2 -l syslog://example2.com
 ## 一般
 {: #general}
 
-* [使用 {{site.data.keyword.Bluemix_notm}} 使用者介面連結服務](../cfapps/ee.html#ee_bindui)
-* [擷取 VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
-
-
+* [使用 {{site.data.keyword.Bluemix_notm}} 使用者介面連結服務](/docs/cfapps/ee.html#ee_bindui)
+* [擷取 VCAP_SERVICES](/docs/cli/vcapsvc.html#retrieving)

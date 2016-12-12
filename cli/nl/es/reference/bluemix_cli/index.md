@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-24"
+
 ---
 
 
@@ -15,9 +16,6 @@ copyright:
 
 # Mandatos {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
-
-Última actualización: 25 de octubre de 2016
-{: .last-updated}
 
 Versión: 0.4.1
 
@@ -301,8 +299,8 @@ Utilice los índices de las tablas siguientes para consultar los mandatos de Blu
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
  <tr>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic stop](index.html#ic_stop)</td>
@@ -312,7 +310,7 @@ Utilice los índices de las tablas siguientes para consultar los mandatos de Blu
  <td>[bluemix ic unpause](index.html#unpause)</td>
  <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
@@ -2723,7 +2721,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 Volver a crear el servicio IBM Containers en el espacio de Bluemix en el que ha iniciado la sesión. La cuota original del espacio se mantiene.
 
-<strong>Importante</strong>: al ejecutar este mandato, no se migrará ninguno de los contenedores individuales y grupos de este espacio al espacio que se ha vuelto a aprovisionar y se eliminarán durante el proceso de migración. 
+<strong>Importante</strong>: al ejecutar este mandato, no se migrará ninguno de los contenedores individuales y grupos de este espacio al espacio que se ha vuelto a aprovisionar y se eliminarán durante el proceso de migración.
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
@@ -3337,7 +3335,7 @@ bluemix ic volume-fs-inspect FILE_SHARE_NAME
 
   <dl>
   <dt><i>FILE_SHARE_NAME</i> (necesario)</dt>
-   <dd>El nombre de compartición de archivos. </dd>
+   <dd>El nombre de compartición de archivos.</dd>
    </dl>
 
 <strong>Ejemplos</strong>:
@@ -3363,7 +3361,7 @@ bluemix ic volume-fs-remove FILE_SHARE_NAME
 
    <dl>
    <dt><i>FILE_SHARE_NAME</i> (necesario)</dt>
-   <dd>El nombre de compartición de archivos. </dd>
+   <dd>El nombre de compartición de archivos.</dd>
    </dl>
 
 <strong>Ejemplos</strong>:

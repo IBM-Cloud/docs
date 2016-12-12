@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-22"
 
 ---
 
@@ -12,8 +14,6 @@ copyright:
 # 取得客戶支援
 {: #getting-customer-support}
 
-前次更新：2016 年 10 月 22 日
-{: .last-updated}
 
 
 如果您遇到 {{site.data.keyword.Bluemix}} 問題，則有數個支援選項，例如透過討論區取得協助，或開啟支援問題單。
@@ -79,9 +79,9 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 在「狀態」頁面上，您可以找到下列資訊：
 
   * 所有 {{site.data.keyword.Bluemix_notm}} 地區中服務及元件的現行狀態。
-  * 維護及偶發事件的公告清單（依時間順序）。您可以過濾清單，或開啟個別公告以取得其他詳細資料。
+  * 維護及突發事件的公告清單（依時間順序）。您可以過濾清單，或開啟個別公告以取得其他詳細資料。
   * 計劃性的維護時間，除非是極端情況，否則至少會提前 24 小時張貼。
-  * 非計劃性的偶發事件或運作中斷，{{site.data.keyword.Bluemix_notm}} 團隊一發現就會立即張貼。偶發事件通知會定期更新，直到解決為止。
+  * 非計劃性的突發事件或運作中斷，{{site.data.keyword.Bluemix_notm}} 團隊一發現就會立即張貼。突發事件通知會定期更新，直到解決為止。
   * 影響各種 {{site.data.keyword.Bluemix_notm}} 服務或該平台的安全性公告的參照。
   * 符合您一般利益的其他平台層面公告。
   * 訂閱的 RSS 資訊來源。
@@ -128,10 +128,10 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 
 
 
-### 設定偶發事件及維護電子郵件通知
+### 設定突發事件及維護電子郵件通知
 {: #setting-up-notifications}
 
-若為「{{site.data.keyword.Bluemix_notm}} 公用」，您可以註冊平台通知。平台通知是 {{site.data.keyword.Bluemix_notm}} 平台的偶發事件及維護事件的選用電子郵件警示。您可以選擇接收這些電子郵件通知，方法是按一下**帳戶**功能表項目 &gt; **通知** &gt; **平台**選項。如需設定帳戶通知的相關資訊，請移至[設定通知](../admin/account.html#notifications)。
+若為「{{site.data.keyword.Bluemix_notm}} 公用」，您可以註冊平台通知。平台通知是 {{site.data.keyword.Bluemix_notm}} 平台的突發事件及維護事件的選用電子郵件警示。您可以選擇接收這些電子郵件通知，方法是按一下**帳戶**功能表項目 &gt; **通知** &gt; **平台**選項。如需設定帳戶通知的相關資訊，請移至[設定通知](/docs/admin/account.html#notifications)。
 
 
 ### 監視狀態的最佳作法
@@ -143,9 +143,9 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 	  * 直接導覽至[狀態](http://ibm.biz/bluemixstatus){: new_window}頁面
 	  * 利用 RSS 資訊來源或 RSS 對電子郵件的轉遞程式
 
-  * 檢查現行維護時間範圍或進行中的偶發事件
+  * 檢查現行維護時間範圍或進行中的突發事件
 
-	如果您懷疑 {{site.data.keyword.Bluemix_notm}} 未如預期般運作，請檢查狀態頁面中的現行維護時間範圍或進行中的偶發事件。若要提報狀態頁面上尚未列出的突發事件，請透過功能表列上的**支援**功能表項目或 [IBM Bluemix 支援中心](https://support.eu-gb.bluemix.net/gethelp/){: new_window}說明頁面來開啟「支援問題單」。
+	如果您懷疑 {{site.data.keyword.Bluemix_notm}} 未如預期般運作，請檢查狀態頁面中的現行維護時間範圍或進行中的突發事件。若要提報狀態頁面上尚未列出的突發事件，請透過功能表列上的**支援**功能表項目或 [IBM Bluemix 支援中心](https://support.eu-gb.bluemix.net/gethelp/){: new_window}說明頁面來開啟「支援問題單」。
 
   * 充分運用多個 {{site.data.keyword.Bluemix_notm}} 地區
 
@@ -155,7 +155,7 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 	  * EU-GB：https://console.eu-gb.bluemix.net
 	  * AU-SYD：https://console.au-syd.bluemix.net
 
-	{{site.data.keyword.Bluemix_notm}} Global Operations 團隊會管理所有地區，以避免維護造成的影響，並讓發生同時影響所有地區之偶發事件的風險降到最低。
+	{{site.data.keyword.Bluemix_notm}} Global Operations 團隊會管理所有地區，以避免維護造成的影響，並讓發生同時影響所有地區之突發事件的風險降到最低。
 
   * 準備進行輕微岔斷
 
@@ -193,7 +193,7 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 如果問題不是由於作業中斷而造成，請使用下列其中一個選項來開啟支援問題單：
 
   * 從「支援」小組件中，按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。請填寫表單，以指出您需要何種技術支援。
-  * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支援中心](http://ibm.biz/bluemixsupport){: new_window}說明頁面。您可以針對銷售、計費、IBM ID 和登入以及技術支援問題來提交問題單。對於技術支援問題，您可以在按一下**技術支援**之後進一步選取技術群組。例如，如果您需要有關 Cloud Foundry 應用程式、OpenWhisk、Containers、Virtual Servers 或 Bare Metal Servers 的協助，則可以選擇**應用程式服務**。如果您需要有關特定服務的協助，請選取對應的服務種類。若要判斷您服務所屬的種類，請查看導覽窗格中[服務](../services/index.html){: new_window}下方的種類。  
+  * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支援中心](http://ibm.biz/bluemixsupport){: new_window}說明頁面。您可以針對銷售、計費、IBM ID 和登入以及技術支援問題來提交問題單。對於技術支援問題，您可以在按一下**技術支援**之後進一步選取技術群組。例如，如果您需要有關 Cloud Foundry 應用程式、OpenWhisk、Containers、Virtual Servers 或 Bare Metal Servers 的協助，則可以選擇**應用程式服務**。如果您需要有關特定服務的協助，請選取對應的服務種類。若要判斷您服務所屬的種類，請查看導覽窗格中[服務](/docs/services/index.html){: new_window}下方的種類。  
   * 從 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}。登入入口網站之後，請按一下**開啟問題單**，然後填寫支援表單。 
   
 開啟支援問題單時，請務必為問題單指定適當的嚴重性。嚴重性會決定問題單的處理方式。如需不同嚴重性的相關資訊，請參閱[支援問題單嚴重性及回應時間](index.html#support-ticket-severity){: new_window}。如果您的要求很緊急，但是您只有免費或基本支援，則可以升級帳戶來提交高嚴重性（層次 1、2 及 3）問題單。若要將您的帳戶升級至較高的支援層次，請透過電子郵件 sales@bluemix.net 來聯絡 IBM 業務代表。
@@ -298,7 +298,7 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 
 在您收集診斷資訊之前，請先完成下列步驟：
 
-  1. 確定您已安裝最新的 cf 指令行介面。如需相關資訊，請參閱[安裝 cf 指令行介面](../starters/install_cli.html){: new_window}。
+  1. 確定您已安裝最新的 cf 指令行介面。如需相關資訊，請參閱[安裝 cf 指令行介面](/docs/starters/install_cli.html){: new_window}。
 
      **附註：**如果您沒有安裝最新的 cf 指令行介面，在 cf 指令行連接至 {{site.data.keyword.Bluemix_notm}} 之後，`cf logs` 指令可能不會傳回輸出。
 
@@ -355,7 +355,7 @@ IBM 會定期將意見調查傳送給 Bluemix 客戶，以取得他們對最近�
 
   * [Bluemix 支援入口網站](https://support.ibmcloud.com){: new_window} 
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
-  * [安裝 cf 指令工具](../starters/install_cli.html){: new_window} 
+  * [安裝 cf 指令工具](/docs/starters/install_cli.html){: new_window} 
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
   * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-
+lastupdated: "2016-11-08"
 
 ---
 
@@ -18,11 +18,8 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 管理 CLI
 {: #bluemixadmincli}
 
-上次更新时间：2016 年 9 月 1 日
-{: .last-updated}
 
-
-您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 环境的用户。例如，可以从 LDAP 注册表添加用户。如果要查看有关管理 {{site.data.keyword.Bluemix_notm}} Public 帐户的信息，请参阅[管理](../../../admin/adminpublic.html#administer)。
+您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 环境的用户。例如，可以从 LDAP 注册表添加用户。如果要查看有关管理 {{site.data.keyword.Bluemix_notm}} Public 帐户的信息，请参阅[管理](/docs/admin/adminpublic.html#administer)。
 
 开始之前，请安装 cf 命令行界面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面](https://github.com/cloudfoundry/cli/releases){: new_window}
 
@@ -57,13 +54,13 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 
 如果需要卸载插件，那么可以使用以下命令，然后可以添加更新的存储库并安装最新的插件：
 
-* 卸载插件：`cf uninstall-plugin-repo BluemixAdminCLI`
+* 卸载插件：`cf uninstall-plugin BluemixAdminCLI`
 * 除去插件存储库：`cf remove-plugin-repo BluemixAdmin`
 
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件
 
-您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件来添加或除去用户、向组织分配或取消分配用户，以及执行其他管理任务。 
+您可以使用 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件来添加或除去用户、向组织分配或取消分配用户，以及执行其他管理任务。
 
 要查看命令的列表，请运行以下命令：
 
@@ -133,11 +130,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">{{site.data.keyword.Bluemix_notm}} 中用户的名称。</dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">分配给用户的许可权。例如，superuser、basic、catalog、user 和 reports。有关分配的用户许可权的更多信息，请参阅[许可权](../../../admin/index.html#permissions)。不能将此参数与 organization 参数用于同一查询中。</dd>
+<dd class="pd">分配给用户的许可权。例如，superuser、basic、catalog、user 和 reports。有关分配的用户许可权的更多信息，请参阅[许可权](/docs/admin/index.html#permissions)。不能将此参数与 organization 参数用于同一查询中。</dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
 <dd class="pd">用户所属的组织名称。不能将此参数与 organization 参数用于同一查询中。</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">分配给用户的组织角色。例如，组织的管理员、记帐管理员或审计员。使用此参数时必须指定组织。有关角色的更多信息，请参阅[用户角色](../../../admin/users_roles.html#userrolesinfo)。</dd>
+<dd class="pd">分配给用户的组织角色。例如，组织的管理员、记帐管理员或审计员。使用此参数时必须指定组织。有关角色的更多信息，请参阅[用户角色](/docs/admin/users_roles.html#userrolesinfo)。</dd>
 
 </dl>
 
@@ -258,7 +255,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要向其分配用户的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](../../../admin/users_roles.html)。</dd>
+<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](/docs/admin/users_roles.html)。</dd>
 </dl>
 
 **提示：****ba set-org** 命令名较长，您还可以使用 **ba so** 作为其别名。
@@ -278,7 +275,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要向其分配用户的 {{site.data.keyword.Bluemix_notm}} 组织的名称或 GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](../../../admin/users_roles.html)。</dd>
+<dd class="pd">有关 {{site.data.keyword.Bluemix_notm}} 用户角色和描述的信息，请参阅[角色](/docs/admin/users_roles.html)。</dd>
 </dl>
 
 **提示：****ba unset-org** 命令名较长，您还可以使用 **ba uo** 作为其别名。
@@ -316,6 +313,85 @@ cf ba set-quota <organization> <plan>
 </dl>
 
 **提示：****ba set-quota** 命令名较长，您还可以使用 **ba sq** 作为其别名。
+
+
+### 查找并设置组织的容器配额
+{: #containquotas}
+
+您可以在组织中查找并设置容器的配额。
+
+要查找组织的容器配额，请输入以下命令：
+
+```
+cf bluemix-admin containers-quota <organization>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Bluemix 中组织的名称或标识。此参数是必需的。</dd>
+</dl>
+
+**提示：****bluemix-admin containers-quota** 命令名较长，您还可以使用 **ba cq** 作为其别名。
+
+要设置组织中容器的配额，请输入以下命令并至少包含一个选项：
+
+```
+cf bluemix-admin set-containers-quota <organization> <options>
+```
+{: codeblock}
+
+**注**：您可以包含多个选项，但必须至少包含一个选项。
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Bluemix 中组织的名称或标识。此参数是必需的。</dd>
+<dt class="pt dlterm">&lt;options&gt;</dt>
+<dd class="pd">包含以下一个或多个选项，其中值必须为整数：<ul>
+<li>floating-ips-max &lt;value&gt;</li>
+<li>floating-ips-space-default &lt;value&gt;</li>
+<li>memory-max &lt;value&gt;</li>
+<li>memory-space-default &lt;value&gt;</li>
+<li>image-limit &lt;value&gt;</li>
+</ul>
+</dd>
+</dl>
+
+**提示：**对于较长的选项名称，您还可以使用以下短名称作为其别名：
+<dl class="parml">
+<dt class="pt dlterm">floating-ips-max &lt;value&gt;</dt>
+<dd class="pd"><strong>fim</strong></dd>
+<dt class="pt dlterm">floating-ips-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>fisd</strong></dd>
+<dt class="pt dlterm">memory-max &lt;value&gt;</dt>
+<dd class="pd"><strong>mm</strong></dd>
+<dt class="pt dlterm">memory-space-default &lt;value&gt;</dt>
+<dd class="pd"><strong>msd</strong></dd>
+<dt class="pt dlterm">image-limit &lt;value&gt;</dt>
+<dd class="pd"><strong>il</strong></dd>
+</dl>
+
+（可选）可以提供一个在有效 JSON 对象中包含特定配置参数的文件。如果使用 **-file** 选项，那么会优先使用此选项并忽略其他选项。要提供文件，而不设置选项，请输入以下命令：
+
+```
+cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
+```
+{: codeblock}
+
+JSON 文件的格式应该如以下示例中所示：
+
+```
+{
+  "floating_ips_max": 10,
+  "floating_ips_space_default": 0,
+  "ram_max": 4096,
+  "ram_space_default": 0,
+  "image_limit": 10
+}  
+```
+{: codeblock}
+
+**提示：****bluemix-admin set-containers-quota** 命令名较长，您还可以使用 **ba scq** 作为其别名。
 
 ### 添加、删除和检索报告
 
@@ -464,13 +540,13 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 **提示：****ba edit-service-plan-visibility** 命令名较长，您还可以使用 **ba espv** 作为其别名。
 
-### 查看资源使用情况信息
+### 查看资源度量值信息
 {: #cliresourceusage}
 
-您可以查看资源使用情况信息，包括内存、磁盘和 CPU 使用情况。可以查看可用物理资源和保留资源的摘要，以及物理资源和保留资源使用情况的摘要。此外，还可以查看 Droplet Execution Agent (DEA) 使用情况数据以及内存和磁盘的历史使用情况。缺省情况下，将按降序显示每周内存和磁盘使用情况的历史数据。要查看资源使用情况信息，请使用以下命令：
+您可以查看资源度量值信息，包括内存、磁盘和 CPU 使用情况。可以查看可用物理资源和保留资源的摘要，以及物理资源和保留资源使用情况的摘要。此外，还可以查看 Droplet Execution Agent (DEA) 使用情况数据以及内存和磁盘的历史使用情况。缺省情况下，将按降序显示每周内存和磁盘使用情况的历史数据。要查看资源度量值信息，请使用以下命令：
 
 ```
-cf ba resource-usage <monthly> <weekly> 
+cf ba resource-metrics <monthly> <weekly>
 ```
 {: codeblock}
 
@@ -481,7 +557,7 @@ cf ba resource-usage <monthly> <weekly>
 <dd class="pd">一次查看一周的内存和磁盘空间历史数据。这是缺省值。</dd>
 </dl>
 
-**提示：****ba resource-usage** 命令名较长，您还可以使用 **ba rsu** 作为其别名。
+**提示：****ba resource-metrics** 命令名较长，您还可以使用 **ba rsm** 作为其别名。
 
 ### 使用服务代理程序
 
@@ -539,7 +615,9 @@ cf ba delete-service-broker <service_broker>
 
 * 可以通过输入以下命令来更新服务代理程序：
 
-`cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>`
+```
+cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
+```
 {: codeblock}
 
 <dl class="parml">

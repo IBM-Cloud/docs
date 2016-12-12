@@ -12,10 +12,10 @@ lastupdated: "2016-08-26"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# {{site.data.keyword.openwhisk_short}}-Mobil-SDK verwenden
+# {{site.data.keyword.openwhisk_short}} Mobile-SDK verwenden
 {: #openwhisk_mobile_sdk}
 
-{{site.data.keyword.openwhisk}} stellt ein Mobil-SDK für iOS- und watchOS-Geräte bereit, mit dem mobile Apps dazu eingerichtet werden können, ohne großen Aufwand ferne Auslöser zu aktivieren und ferne Aktionen aufzurufen. Gegenwärtig ist keine Version für Android verfügbar. Android-Entwickler können die {{site.data.keyword.openwhisk}}-REST-API direkt verwenden.
+{{site.data.keyword.openwhisk}} stellt ein Mobile-SDK für iOS- und watchOS-Geräte bereit, mit dem mobile Apps dazu eingerichtet werden können, ohne großen Aufwand ferne Auslöser zu aktivieren und ferne Aktionen aufzurufen. Gegenwärtig ist keine Version für Android verfügbar. Android-Entwickler können die {{site.data.keyword.openwhisk}}-REST-API direkt verwenden.
 
 Das Mobil-SDK wurde in Swift 3.0 geschrieben und unterstützt iOS 10 und höhere Releases. Sie können das Mobil-SDK mithilfe von Xcode 8.0 erstellen. Bisherige Swift 2.2/Xcode 7-Versionen des SDK sind bis 0.1.7 verfügbar, obgleich sie nicht mehr verwendet werden.
 
@@ -45,8 +45,8 @@ end
 
 Geben Sie über die Befehlszeile den Befehl `pod install` ein. Dieser Befehl installiert das SDK für eine iOS-App mit einer watchOS-Erweiterung.  Verwenden Sie die Arbeitsbereichsdatei, die CocoaPods für Ihre App erstellt, um das Projekt in Xcode zu öffnen.
 
-Nach der Installation öffnen Sie Ihren Projektarbeitsbereich. Bei der Erstellung kann folgende Warnmeldung angezeigt werden: `Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
-Dies geschieht, wenn Cocoapods die Swift-Version im Pods-Projekt nicht aktualisiert. Zur Behebung wählen Sie das Pods-Projekt und das {{site.data.keyword.openwhisk_short}}-Ziel aus. Rufen Sie den Editor zum Erstellen der Einstellungen auf und ändern Sie die Einstellung `Bisherige Swift-Sprachversion verwenden` in `no`. Alternativ können Sie am Ende Ihrer Pod-Datei die folgenden Nachinstallationsschritte hinzufügen:
+Nach der Installation öffnen Sie Ihren Projektarbeitsbereich.  Bei der Erstellung kann folgende Warnmeldung angezeigt werden: `Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
+Dies geschieht, wenn Cocoapods die Swift-Version im Pods-Projekt nicht aktualisiert.  Zur Behebung wählen Sie das Pods-Projekt und das {{site.data.keyword.openwhisk_short}}-Ziel aus.  Rufen Sie den Editor zum Erstellen der Einstellungen auf und ändern Sie die Einstellung `Bisherige Swift-Sprachversion verwenden` in `no`. Alternativ können Sie am Ende Ihrer Pod-Datei die folgenden Nachinstallationsschritte hinzufügen:
 
 ```
 post_install do |installer|

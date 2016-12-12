@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
- 
+lastupdated: "2016-10-24"
+
 
 ---
 
@@ -18,16 +19,13 @@ copyright:
 # CLI と開発ツール
 {: #cli}
 
-*最終更新日: 2016 年 10 月 25 日*
-{: .last-updated}
-
 {{site.data.keyword.Bluemix_short}} では、統合コマンド・ライン・インターフェースおよび CLI プラグインなどの強力なツールにアクセスできます。これらの各 CLI のダウンロードは、ユーザーの {{site.data.keyword.Bluemix_notm}} 体験をサポートするためにすべて使用可能です。
 {:shortdesc}
 
 ## ![](./images/CLI.svg) コマンド・ライン・インターフェース
 {: #downloads}
 
-{{site.data.keyword.Bluemix_notm}} の体験をサポートするコマンド・ライン・インターフェースをダウンロードしてインストールします。 
+{{site.data.keyword.Bluemix_notm}} の体験をサポートするコマンド・ライン・インターフェースをダウンロードしてインストールします。
 
 Cloud Foundry cf コマンド・ライン・ツールは、すべての {{site.data.keyword.Bluemix_notm}} CLI ツールの前提条件です。{{site.data.keyword.Bluemix_notm}} コマンド・ライン・ツールでは、Cloud Foundry アプリケーションの他に、{{site.data.keyword.Bluemix_notm}} 環境を管理するための拡張機能も体験できます。
 
@@ -63,7 +61,7 @@ bluemix plugin install plugin_name -r bluemix-bx
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *ネットワーク・セキュリティー・グループ* |
 |-----|-----|-----|
-| プラグイン名: active-deploy<br> [資料の表示](../services/ActiveDeploy/cli.html#cli) | プラグイン名: auto-scaling <br> [資料の表示](./plugins/auto-scaling/index.html) |  プラグイン名: nsg <br> [資料の表示](./plugins/networksecuritygroups/index.html)  |
+| プラグイン名: active-deploy<br> [資料の表示](/docs/services/ActiveDeploy/cli.html#cli) | プラグイン名: auto-scaling <br> [資料の表示](./plugins/auto-scaling/index.html) |  プラグイン名: nsg <br> [資料の表示](./plugins/networksecuritygroups/index.html)  |
 
 
 ### Cloud Foundry コマンド・ライン・インターフェースの拡張: cf
@@ -84,9 +82,9 @@ cf install-plugin plugin_name -r bluemix-cf
 {: codeblock}
 
 
-| *Active Deploy* | *管理コンソール* | 
+| *Active Deploy* | *管理コンソール* |
 |-----------------|-----------------|
-| プラグイン名: active-deploy<br>  [資料の表示](../services/ActiveDeploy/cli.html#cli) |  プラグイン名: bluemix-admin<br> [資料の表示](../cli/plugins/bluemix_admin/index.html) | 
+| プラグイン名: active-deploy<br>  [資料の表示](/docs/services/ActiveDeploy/cli.html#cli) |  プラグイン名: bluemix-admin<br> [資料の表示](/docs/cli/plugins/bluemix_admin/index.html) |
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
@@ -99,4 +97,4 @@ cf install-plugin plugin_name -r bluemix-cf
 
 | *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* |
 |-------------|----------|----------|----------|
-| [Egit Eclipse プラグイン](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [RTC Eclipse プラグイン](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse プラグイン](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse プラグイン](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse プラグイン](../services/rules/index.html#rulov002) |
+| [Egit Eclipse プラグイン](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [RTC Eclipse プラグイン](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse プラグイン](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse プラグイン](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse プラグイン](/docs/services/rules/index.html#rulov002) |

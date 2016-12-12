@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-10-31"
 
 ---
 
@@ -9,8 +10,6 @@ copyright:
 
 # Watson
 {: #watson}
-
-*Dernière mise à jour : 9 décembre 2015*
 
 Les services cognitifs sont adaptables, interactifs et contextuels dans leur manière de fournir des
   informations. Au lieu de simplement renvoyer des réponses préparées, ils fournissent des réponses basées sur

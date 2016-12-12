@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Web およびアプリケーション
 {: #webapplication}
-
-*最終更新日: 2015 年 12 月 9 日*
 
 これらのサービスを使用すると、クラウド内で Web アプリケーションの開発を行いながら、フィーチャーを素早く追加したり削除したりできます。また、管理タスクを簡素化したり、ビジネス・プロセスやルールを編成したりすることも可能です。
 {:shortdesc}

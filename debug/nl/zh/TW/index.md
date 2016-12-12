@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -21,23 +23,23 @@ copyright:
 
 日誌提供如工作是順利執行還是失敗這類的資訊。它們也會提供可用來除錯並判定問題原因的相關資訊。
 
-日誌是固定格式。對於詳細日誌，您可以過濾日誌，或使用外部記載主機來儲存及處理日誌。如需日誌格式、檢視及過濾日誌，以及配置外部記載的相關資訊，請參閱 [Cloud Foundry 上執行之應用程式的記載](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}。
+日誌是固定格式。對於詳細日誌，您可以過濾日誌，或使用外部記載主機來儲存及處理日誌。如需日誌格式、檢視及過濾日誌，以及配置外部記載的相關資訊，請參閱 [Cloud Foundry 上執行之應用程式的記載](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}。
 
 
 ## 針對編譯打包錯誤進行除錯
 {: #debugging-staging-errors}
-您在 {{site.data.keyword.Bluemix_notm}} 上編譯打包應用程式時可能會遇到問題。如果無法編譯打包應用程式，您可以搜尋及檢閱編譯打包 (STG) 日誌來判斷在應用程式部署期間發生什麼問題，並從問題中回復。如需如何檢視 Bluemix 應用程式日誌的相關資訊，請參閱[檢視日誌](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}。  
+您在 {{site.data.keyword.Bluemix_notm}} 上編譯打包應用程式時可能會遇到問題。如果無法編譯打包應用程式，您可以搜尋及檢閱編譯打包 (STG) 日誌來判斷在應用程式部署期間發生什麼問題，並從問題中回復。如需如何檢視 Bluemix 應用程式日誌的相關資訊，請參閱[檢視日誌](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}。  
 
-若要瞭解應用程式在 {{site.data.keyword.Bluemix_notm}} 上失敗的原因，您需要知道如何將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並在其上執行。如需詳細資訊，請參閱[應用程式部署](../manageapps/depapps.html#appdeploy){: new_window}。
+若要瞭解應用程式在 {{site.data.keyword.Bluemix_notm}} 上失敗的原因，您需要知道如何將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並在其上執行。如需詳細資訊，請參閱[應用程式部署](/docs/manageapps/depapps.html#appdeploy){: new_window}。
 
 
-下列程序顯示如何使用 `cf logs` 指令來針對編譯打包錯誤進行除錯。採取下列步驟之前，請確定已安裝 cf 指令行介面。如需安裝 cf 指令行介面的相關資訊，請參閱[安裝 cf 指令行介面](../starters/install_cli.html){: new_window}。
+下列程序顯示如何使用 `cf logs` 指令來針對編譯打包錯誤進行除錯。採取下列步驟之前，請確定已安裝 cf 指令行介面。如需安裝 cf 指令行介面的相關資訊，請參閱[安裝 cf 指令行介面](/docs/starters/install_cli.html){: new_window}。
 
   1. 在 cf 指令行介面中輸入下列程式碼，以連接至 {{site.data.keyword.Bluemix_notm}}：
      
      ```
-	 cf api https://api.stage1.ng.bluemix.net
-  ```
+	 cf api https://api.ng.bluemix.net
+	 ```
 
   2. 輸入 `cf login`，以登入 {{site.data.keyword.Bluemix_notm}}。
 
@@ -48,9 +50,10 @@ copyright:
 	```
   4. 檢視日誌中顯示的第一個錯誤。
 
-如果您使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 外掛程式來部署應用程式，則會在 Eclipse 工具的**主控台**標籤中，看到類似 cf logs 輸出的日誌。當您部署應用程式時，也可以開啟不同的 Eclipse 視窗來追蹤日誌。
+如果您使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 外掛程式來部署應用程式，則會在 Eclipse 工具的**主控台**標籤中，看到類似 cf logs 輸出的日誌。當您部署應用程式時，也可以開啟不同的 Eclipse 視窗來追蹤日誌。``
 
-除了 `cf logs` 指令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您也可以使用 Monitoring and Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 服務還會監視應用程式的效能、性能及可用性。它也提供 Node.js 及 Liberty 運行環境應用程式的日誌分析。  
+除了 `cf logs` 指令之外，在 {{site.data.keyword.Bluemix_notm}} 中，您也可以使用 Monitoring and
+Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 服務還會監視應用程式的效能、性能及可用性。它也提供 Node.js 及 Liberty 運行環境應用程式的日誌分析。  
 
 ### 針對 Node.js 應用程式的編譯打包錯誤進行除錯
 
@@ -126,7 +129,7 @@ copyright:
 <dd>若要使用 Script 來自動收集日誌並將其匯出到外部檔案，您必須從您的電腦連接至 {{site.data.keyword.Bluemix_notm}} 主控台，而且您的電腦上必須具有足夠的空間可下載日誌。如需相關資訊，請參閱<a href="../support/index.html#collecting-diagnostic-information" target="_blank">收集診斷資訊</a>。</dd>
 </dl>
 
-依預設，之前可透過 {{site.data.keyword.Bluemix_notm}} 主控台中的應用程式視圖，在**檔案** > **日誌**下存取 `stdout.log` 及 `stderr.log` 檔案。然而，{{site.data.keyword.Bluemix_notm}} 所在的現行 Cloud Foundry 版本已不再提供該項應用程式記載功能。若要保存可以透過 {{site.data.keyword.Bluemix_notm}} 主控台在**檔案** > **日誌**下存取 stdout 及 stderr 應用程式記載，您可以將記載重新導向至 {{site.data.keyword.Bluemix_notm}} 檔案系統中的其他檔案（視您使用的運行環境而定）。
+依預設，之前可透過 {{site.data.keyword.Bluemix_notm}} 主控台中的應用程式視圖，在**檔案** > **日誌**下存取 `stdout.log` 及 `stderr.log` 檔案。然而，{{site.data.keyword.Bluemix_notm}} 所在的現行 Cloud Foundry 版本已不再提供該項應用程式記載功能。若要維持可以透過 {{site.data.keyword.Bluemix_notm}} 主控台在**檔案** > **日誌**下存取 stdout 及 stderr 應用程式記載，您可以將記載重新導向至 {{site.data.keyword.Bluemix_notm}} 檔案系統中的其他檔案（視您使用的運行環境而定）。
 
   * 若為 Liberty for Java 應用程式，導向到 stdout 及 stderr 的輸出已包含在 logs 目錄中的 `messages.log` 檔案中。請分別尋找字首為 SystemOut 及 SystemErr 的項目。
   * 若為 Node.js 應用程式，您可以置換 console.log 函數，以明確地寫入 logs 目錄中的檔案。

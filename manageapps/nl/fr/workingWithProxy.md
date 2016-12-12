@@ -15,8 +15,8 @@ copyright:
 Dernière mise à jour : 20 juillet 2016
 {: .last-updated}
 
-Dans certains environnements, tels que [Bluemix dédié](../../dedicated/index.html#dedicated) et
-[Bluemix local](../../local/index.html#local), un proxy peut faire l'objet d'une configuration qui affecte le comportement de votre application lors de la constitution et de l'exécution.
+Dans certains environnements, tels que [Bluemix dédié](/docs/dedicated/index.html#dedicated) et
+[Bluemix local](/docs/local/index.html#local), un proxy peut faire l'objet d'une configuration qui affecte le comportement de votre application lors de la constitution et de l'exécution.
 
 Vous pouvez configurer votre application pour qu'elle fonctionne avec le proxy en utilisant les variables d'environnement suivantes :
   * [http_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)
@@ -32,7 +32,7 @@ Par exemple, vous disposez d'une application nodejs que vous exécutez dans un e
 ## Applications Java
 {: #java_apps}
 
-Pour [Liberty for Java](../runtimes/liberty/index.html) et les applications [java_buildpack](../runtimes/tomcat/index.html), les paramètres de proxy peuvent être transférés à l'exécution via la variable d'environnement **JAVA_OPTS**.  Par exemple, vous pouvez exécuter la commande suivante : 
+Pour [Liberty for Java](/docs/runtimes/liberty/index.html) et les applications [java_buildpack](/docs/runtimes/tomcat/index.html), les paramètres de proxy peuvent être transférés à l'exécution via la variable d'environnement **JAVA_OPTS**.  Par exemple, vous pouvez exécuter la commande suivante : 
 ```
    $ cf se myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
@@ -44,5 +44,5 @@ et reconstituer votre application.  Votre application utilise ensuite les param�
 {: #rellinks}
 ## general
 {: #general}
-* [Liberty for Java](../runtimes/liberty/index.html)
-* [SDK for Nodejs](../runtimes/nodejs/index.html)
+* [Liberty for Java](/docs/runtimes/liberty/index.html)
+* [SDK for Nodejs](/docs/runtimes/nodejs/index.html)

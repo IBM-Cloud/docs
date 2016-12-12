@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-22"
 
 ---
 
@@ -12,8 +14,6 @@ copyright:
 # Obtendo suporte ao cliente
 {: #getting-customer-support}
 
-Última atualização: 22 de outubro de 2016
-{: .last-updated}
 
 
 Se você tiver problemas com o {{site.data.keyword.Bluemix}}, há várias opções de suporte, como obter ajuda por meio de um fórum ou abrir um chamado de suporte.
@@ -155,7 +155,7 @@ para notificações de plataforma. As notificações de plataforma são alertas 
 opcionais para eventos de incidente e manutenção da plataforma
 {{site.data.keyword.Bluemix_notm}}. É possível escolher receber essas notificações por e-mail, clicando no item de menu **Conta** &gt; **Notificações** &gt; **Plataforma**. Para obter
 mais informações sobre como configurar notificações de conta, acesse
-[Configurando notificações](../admin/account.html#notifications).
+[Configurando notificações](/docs/admin/account.html#notifications).
 
 
 ### Melhores práticas para monitorar o status
@@ -232,7 +232,7 @@ do suporte técnico.
 possível enviar chamados para problemas de vendas, faturamento, ID IBM, login e suporte
 técnico. Para problemas de suporte técnico, é possível selecionar um grupo técnico após clicar em **Suporte técnico**. Por exemplo, se você precisar de ajuda com apps Cloud Foundry, OpenWhisk, contêineres, servidores virtuais ou servidores bare metal, será possível escolher **Application Services**. Se precisar de ajuda com um serviço específico, selecione a categoria de serviço correspondente. Para
 determinar a categoria à qual seu serviço pertence, consulte as categorias sob
-[Serviços](../services/index.html){: new_window} na área de janela
+[Serviços](/docs/services/index.html){: new_window} na área de janela
 de navegação.  
   * A partir do [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Depois de conectar-se ao portal, clique em **Abrir chamado** e, em seguida, preencha o formulário de suporte. 
   
@@ -346,8 +346,7 @@ pode solicitar que você colete informações de diagnóstico.
 
 Antes de coletar informações de diagnóstico, conclua as etapas a seguir:
 
-  1. Assegure-se de que tenha instalado a interface da linha de comandos cf mais recente. Para obter mais informações, consulte [Instalando a interface
-de linha de comandos cf](../starters/install_cli.html){: new_window}.
+  1. Assegure-se de que tenha instalado a interface da linha de comandos cf mais recente. Para obter mais informações, veja [Instalando a interface da linha de comandos cf](/docs/starters/install_cli.html){: new_window}.
 
      **Nota:** Se você não tiver a interface de linha de comandos cf mais recente instalada, após a linha de comandos cf ser conectada ao {{site.data.keyword.Bluemix_notm}}, o comando `cf logs` pode não retornar saída.
 
@@ -407,12 +406,12 @@ Periodicamente, a IBM envia pesquisas de opinião aos clientes do Bluemix para o
 # rellinks
 {: #rellinks}
 
-## gerais
+## general
 {: #general}
 
   * [Porta de suporte do Bluemix](https://support.ibmcloud.com){: new_window} 
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
-  * [Instalando a ferramenta de comando cf](../starters/install_cli.html){: new_window} 
+  * [Instalando a ferramenta de comando cf](/docs/starters/install_cli.html){: new_window} 
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
   * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

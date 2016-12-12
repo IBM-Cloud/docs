@@ -2,6 +2,8 @@
 
 copyright:
   anni: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -17,8 +19,6 @@ copyright:
 # Risoluzione dei problemi di accesso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Ultimo aggiornamento: 23 ottobre 2016
-{: .last-updated} 
 
 I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero includere un utente che non riesce ad accedere a {{site.data.keyword.Bluemix_notm}}, un account bloccato in uno stato In sospeso e così via. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi. 
 {:shortdesc}
@@ -29,7 +29,7 @@ I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero inc
 Per eseguire l'accesso, devi avere un account {{site.data.keyword.Bluemix_notm}} valido.
 
 
-Quando tenti di accedere a {{site.data.keyword.Bluemix_notm}}, visualizzi uno dei seguenti messaggi di errore:
+Quando tenti di accedere a {{site.data.keyword.Bluemix_notm}}, visualizzi uno dei seguenti messaggi di errore: 
 {: tsSymptoms} 
 
  * Dal portale del cliente
@@ -41,11 +41,11 @@ Quando tenti di accedere a {{site.data.keyword.Bluemix_notm}}, visualizzi uno de
   `Hai raggiunto questa pagina perché l'autenticazione ha avuto esito positivo, tuttavia questo ID IBM non è associato ad alcun account  {{site.data.keyword.Bluemix_notm}}.`
 
 
-Uno dei motivi più probabili per cui viene visualizzato questo messaggio di errore è che non hai ancora creato un account {{site.data.keyword.Bluemix_notm}} o devi passare all'autenticazione dell'ID IBM.
+Uno dei motivi più probabili per cui viene visualizzato questo messaggio di errore è che non hai ancora creato un account {{site.data.keyword.Bluemix_notm}} o devi passare all'autenticazione dell'ID IBM. 
 {: tsCauses} 
  
 
-Segui il processo di registrazione per creare un account {{site.data.keyword.Bluemix_notm}} oppure contatta il tuo utente master o amministratore account per passare all'ID IBM.
+Segui il processo di registrazione per creare un account {{site.data.keyword.Bluemix_notm}} oppure contatta il tuo utente master o amministratore account per passare all'ID IBM. 
 {: tsResolve}
 
 A seconda di come è configurato il tuo account, potrebbero essere applicabili alcune di queste opzioni di accesso: 
@@ -60,7 +60,7 @@ A seconda di come è configurato il tuo account, potrebbero essere applicabili a
 
 Per accedere alla console {{site.data.keyword.Bluemix_notm}}, devi disporre di un ID IBM valido.
 
-Quando tenti di accedere a {{site.data.keyword.Bluemix_notm}}, visualizzi il seguente messaggio di errore:
+Quando tenti di accedere a {{site.data.keyword.Bluemix_notm}}, visualizzi il seguente messaggio di errore: 
 {: tsSymptoms} 
 
 `La password immessa non è corretta.`
@@ -81,7 +81,7 @@ Per ottenere un ID IBM e password validi, vai alla pagina Il mio profilo IBM e c
 Per accedere a {{site.data.keyword.Bluemix_notm}}, devi disporre di un ID IBM e password validi.
 
 
-Quando tenti di accedere alla console {{site.data.keyword.Bluemix_notm}} con il tuo nome utente Softlayer, ricevi il seguente messaggio:
+Quando tenti di accedere alla console {{site.data.keyword.Bluemix_notm}} con il tuo nome utente Softlayer, ricevi il seguente messaggio: 
 {: tsSymptoms} 
 
 `ID IBM o indirizzo e-mail non riconosciuto.`
@@ -91,7 +91,7 @@ Devi disporre di un ID IBM per accedere e utilizzare il dashboard Infrastruttura
  
 Se sei un utente SoftLayer che sta utilizzando un ID SoftLayer, devi passare all'autenticazione dell'ID IBM nel portale del cliente di ciascun account a cui hai accesso affinché tu possa accedere utilizzando l'autenticazione dell'ID IBM. 
 
-Contatta il tuo utente master o amministratore account per passare all'ID IBM.
+Contatta il tuo utente master o amministratore account per passare all'ID IBM. 
 {: tsResolve}
 
 

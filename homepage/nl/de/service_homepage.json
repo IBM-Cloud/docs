@@ -7,30 +7,30 @@
     "id": "cfApp",
     "title": "Cloud Foundry-Anwendungen",
     "href": "cfapps/index.html",
-    "category_id": "Compute"
+    "category_id": "compute"
   }, {
     "title": "Laufzeiten",
     "href": "cfapps/runtimes.html",
-    "category_id": "Compute"
+    "category_id": "compute"
   }, {
     "title": "Boilerplates",
     "href": "cfapps/boilerplates.html",
-    "category_id": "Compute"
+    "category_id": "compute"
   }, {
     "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
-    "category_id": "Compute"
+    "category_id": "compute"
   }, {
-    "id": "Container",
+    "id": "container",
     "title": "IBM Containers",
     "href": "containers/container_index.html",
-    "category_id": "Compute"
+    "category_id": "compute"
   }, {
     "id": "vm",
     "title": "IBM Virtual Servers",
     "href": "virtualmachines/vm_index.html",
-    "category_id": "Compute"
+    "category_id": "compute"
   }, {
     "type": "extra",
     "title": "Arbeit mit Daten ausprobieren",
@@ -38,17 +38,12 @@
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "Toolchains ausprobieren",
-    "href": "toolchains/toolchains_overview.html",
-    "category_id": "devops"
-  }, {
-    "type": "extra",
     "title": "Dedicated GitHub Enterprise ausprobieren",
     "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Mobiles Bluemix-Dashboard ausprobieren",
+    "title": "Erstellung von Mobilprojekten ausprobieren",
     "href": "mobile/index.html",
     "category_id": "mobile"
   }]

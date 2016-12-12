@@ -1,20 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Web et application
 {: #webapplication}
 
-*Dernière mise à jour : 9 décembre 2015*
-
 Utilisez ces services pour ajouter ou retirer des fonctions rapidement alors que vous développez des applications Web dans le cloud. Vous pouvez également simplifier les tâches
-de gestion et organiser vos règles et processus métier. 
+de gestion et organiser vos règles et processus métier.
 {:shortdesc}
 
 

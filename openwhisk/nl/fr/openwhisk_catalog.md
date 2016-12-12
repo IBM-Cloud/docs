@@ -686,6 +686,7 @@ Le package inclut l'action et le flux suivants :
 | `/whisk.system/pushnotifications/sendMessage` | action | text, url, deviceIds, platforms, tagNames, apnsBadge, apnsCategory, apnsActionKeyTitle, apnsSound, apnsPayload, apnsType, gcmCollapseKey, gcmDelayWhileIdle, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive | Envoi de notification push à un ou plusieurs périphérique(s) spécifié(s) |
 | `/whisk.system/pushnotifications/webhook` | flux | events | Exécution d'événements déclencheur sur des activités de périphérique (enregistrement, annulation d'enregistrement, abonnement ou annulation d'abonnement de périphérique) sur le service Push |
 Il est recommandé de créer une liaison de package avec les valeurs `appId` et `appSecret`. Ainsi, il n'est pas nécessaire de spécifier ces données d'identification à chaque fois que vous appelez les actions du package.
+
 ### Création d'une liaison de package Push
 {: #openwhisk_catalog_pushnotifications_create}
 
@@ -758,7 +759,7 @@ Voici un exemple d'envoi d'une notification push depuis le package de notificati
   ```
   wsk action invoke /nomEspaceNom/monPush/sendMessage --blocking --result  -p url https://exemple.com -p text "ceci est mon message"  -p sound
 nomFichierSon -p deviceIds "[\"T1\",\"T2\"]"
-```
+  ```
   {: pre}
 
   ```

@@ -5,6 +5,8 @@
 copyright:
 
   years: 2014, 2016
+  
+lastupdated: "2016-10-19"
 
  
 
@@ -15,8 +17,6 @@ copyright:
 
 # Sicherheit in {{site.data.keyword.Bluemix_notm}}
 {: #security}
-Letzte Aktualisierung: 19. Oktober 2016
-{: .last-updated}
 
 Die Plattform {{site.data.keyword.Bluemix}} wurde mit Verfahren für sichere Entwicklung entwickelt und besitzt geschichtete netz- und infrastrukturweite Sicherheitsmaßnahmen. {{site.data.keyword.Bluemix_notm}} bietet eine Gruppe von Sicherheitsservices, die von Anwendungsentwicklern zum Sichern ihrer mobilen Apps und Web-Apps verwendet werden kann. Kombiniert machen diese Elemente {{site.data.keyword.Bluemix_notm}} zu einer Plattform mit klaren Auswahlmöglichkeiten für eine sichere Anwendungsentwicklung.
 {:shortdesc}
@@ -50,7 +50,7 @@ Mit {{site.data.keyword.Bluemix_notm}} Local hosten Sie {{site.data.keyword.Blue
 
 Abbildung 2. Übersicht über die Sicherheit der {{site.data.keyword.Bluemix_notm}} Local-Plattform
 
-Mithilfe von Relay. einer in {{site.data.keyword.Bluemix_notm}} Local integrierten Zustellungsfunktion, installiert und verwaltet IBM {{site.data.keyword.Bluemix_notm}} Local in Ihrem Rechenzentrum und führt eine Fernüberwachung durch. Relay stellt eine sichere Verbindung mit Zertifikaten her, die für jede {{site.data.keyword.Bluemix_notm}} Local-Instanz spezifisch sind. Weitere Informationen zu {{site.data.keyword.Bluemix_notm}} Local und Relay finden Sie unter [Bluemix Local](../local/index.html).
+Mithilfe von Relay. einer in {{site.data.keyword.Bluemix_notm}} Local integrierten Zustellungsfunktion, installiert und verwaltet IBM {{site.data.keyword.Bluemix_notm}} Local in Ihrem Rechenzentrum und führt eine Fernüberwachung durch. Relay stellt eine sichere Verbindung mit Zertifikaten her, die für jede {{site.data.keyword.Bluemix_notm}} Local-Instanz spezifisch sind. Weitere Informationen zu {{site.data.keyword.Bluemix_notm}} Local und Relay finden Sie unter [Bluemix Local](/docs/local/index.html).
 
 ### Funktionelle Sicherheit
 
@@ -141,7 +141,10 @@ Folgende HTTP-Methoden sind zulässig:
 <dt>Benutzerzugriffsmanagement</dt>
 <dd>Innerhalb von {{site.data.keyword.Bluemix_notm}} werden die Richtlinien zur Aufgabentrennung befolgt, um Benutzern differenzierte Zugriffsberechtigungen zuzuweisen und sicherzustellen, dass Benutzer nur über den Zugriff verfügen, der entsprechend dem Prinzip der geringsten Rechte zum Ausführen ihres jeweiligen Jobs erforderlich ist.
 
-Innerhalb einer {{site.data.keyword.Bluemix_notm}} Dedicated- und Local-Umgebung können zugewiesene Administratoren mithilfe der Administrationskonsole Rollen und Berechtigungen für {{site.data.keyword.Bluemix_notm}}-Benutzer in ihrer Organisation verwalten. Weitere Informationen finden Sie unter [{{site.data.keyword.Bluemix_notm}} verwalten](../admin/adminpublic.html#mng).
+Innerhalb einer {{site.data.keyword.Bluemix_notm}} Dedicated- und Local-Umgebung können zugewiesene Administratoren mithilfe der Administrationskonsole Rollen und Berechtigungen für {{site.data.keyword.Bluemix_notm}}-Benutzer in ihrer Organisation verwalten. 
+Weitere Informationen finden Sie unter
+[{{site.data.keyword.Bluemix_notm}}
+verwalten](/docs/admin/adminpublic.html#mng).
 </dd>
 </dl>
 
@@ -151,7 +154,7 @@ Innerhalb einer {{site.data.keyword.Bluemix_notm}} Dedicated- und Local-Umgebung
 
 In der Network-within-a-Network-Topologie von {{site.data.keyword.BluSoftlayer}} wird auf der Ebene des öffentlichen Netzes der öffentliche Datenverkehr zu gehosteten Websites oder Onlineressourcen abgewickelt. Die Ebene des privaten Netzes ermöglicht echtes Out-of-band-Management durch einen separaten eigenständigen Netzbetreiber über SSL-, PPTP- oder IPSec VPN-Gateways. Auf der Ebene des Netzes zwischen Rechenzentren wird freie und sichere Konnektivität zwischen Servern bereitgestellt, die sich an unterschiedlichen {{site.data.keyword.BluSoftlayer}}-Standorten befinden.
 
-Jedes {{site.data.keyword.BluSoftlayer}}-Rechenzentrum wird vollständig durch Kontrollmechanismen gesichert, die dem Standard SSAE 16 und den branchenspezifischen Anforderungen ausnahmslos entsprechen. 
+Jedes {{site.data.keyword.BluSoftlayer}}-Rechenzentrum wird vollständig durch Kontrollmechanismen gesichert, die dem Standard SSAE 16 und den branchenspezifischen Anforderungen ausnahmslos entsprechen.
 
 ## Datensicherheit
 {: #data-security}
@@ -203,11 +206,11 @@ Der SSO-Service unterstützt mehrere Identitätsquellen, in denen die Berechtigu
 <dd> Die Benutzerregistrys, die von Google, Facebook und LinkedIn verwaltet werden.</dd>
 </dl>
 
-Weitere Informationen finden Sie in [Einführung in Single Sign-On](../services/SingleSignOn/index.html).
+Weitere Informationen finden Sie in [Einführung in Single Sign-On](/docs/services/SingleSignOn/index.html).
 
 ### Application Security on Cloud
 
-Dieser Service stellt eine Sicherheitsanalyse für mobile Apps und Web-Apps bereit und ermöglicht Ihnen das Scannen von Quellcode auf Sicherheitslücken. Weitere Informationen finden Sie in der [Einführung zu Application Security on Cloud](../services/ApplicationSecurityonCloud/index.html).
+Dieser Service stellt eine Sicherheitsanalyse für mobile Apps und Web-Apps bereit und ermöglicht Ihnen das Scannen von Quellcode auf Sicherheitslücken. Weitere Informationen finden Sie in der [Einführung zu Application Security on Cloud](/docs/services/ApplicationSecurityonCloud/index.html).
 
 ### IBM UrbanCode-Plug-in für das Testen der Anwendungssicherheit
 
@@ -219,13 +222,13 @@ Weitere Informationen finden Sie in [IBM Application Security Testing for Bluemi
 
 Vom Service 'dashDB' wird ein eingebetteter LDAP-Server für die Benutzerauthentifizierung verwendet. Die Verbindung zwischen Anwendungen und der Datenbank wird über SSL-Zertifikate geschützt. Dieser Service nutzt die native DB2®-Verschlüsselungsfunktion, um Ihre bereitgestellte Datenbank und die Datenbankbackups automatisch zu verschlüsseln. Die Rotation der Masterschlüssel geschieht automatisch und wird alle 90 Tage durchgeführt.
 
-Weitere Informationen finden Sie in [Einführung in dashDB](../services/dashDB/index.html).
+Weitere Informationen finden Sie in [Einführung in dashDB](/docs/services/dashDB/index.html).
 
 ### Secure Gateway
 
 Mit dem Service 'Secure Gateways' können Sie lokal oder in der Cloud eine sichere Verbindung zwischen {{site.data.keyword.Bluemix_notm}}-Apps und fernen Standorten herstellen. Es wird eine sichere Verbindung bereitgestellt und ein Tunnel zwischen Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation und dem fernen Standort, zu dem Sie eine Verbindung herstellen möchten, eingerichtet. Mithilfe der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder eines API-Pakets können Sie ein sicheres Gateway konfigurieren und erstellen.
 
-Weitere Informationen finden Sie unter [Einführung in Secure Gateway](../services/SecureGateway/secure_gateway.html).
+Weitere Informationen finden Sie unter [Einführung in Secure Gateway](/docs/services/SecureGateway/secure_gateway.html).
 
 ### Sicherheitsinformationen und Ereignismanagement
 
@@ -356,4 +359,4 @@ Die folgende Tabelle zeigt, welche Services in {{site.data.keyword.Bluemix_notm}
 {: #general}
 
 * [IBM SaaS-Sicherheit](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
-* [Einführung in Single Sign-On](../services/SingleSignOn/index.html)
+* [Einführung in Single Sign-On](/docs/services/SingleSignOn/index.html)

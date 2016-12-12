@@ -1,12 +1,9 @@
 ---
 
- 
 
 copyright:
-
   years: 2016
-
-lastupdated: "2016-10-14" 
+lastupdated: "2016-11-11"
 
 ---
 
@@ -16,12 +13,15 @@ lastupdated: "2016-10-14"
 # Hybride
 {: #hybrid}
 
+
 Grâce aux modèles de déploiement intégrés public, dédié et local, {{site.data.keyword.Bluemix_notm}} vous permet d'expérimenter le
 cloud d'une toute autre façon. {{site.data.keyword.Bluemix_notm}} propose des déploiements de cloud adaptés à vos besoins, que vous soyez une
 petite entreprise qui prévoit d'évoluer ou une grande entreprise qui requiert un isolement supplémentaire. Vous pouvez procéder au développement dans un
 cloud sans frontières, dans lequel vous pouvez connecter vos services privés aux services
-de l'environnement [{{site.data.keyword.Bluemix_notm}} public](/docs/public/index.html) mis à
-disposition par IBM. De plus, vous et votre équipe pouvez utiliser des données, des systèmes et des processus existants avec les outils SaaS disponibles dans {{site.data.keyword.Bluemix_notm}}.
+de l'environnement {{site.data.keyword.Bluemix_notm}} public mis à
+disposition par IBM. De plus, vous et votre équipe pouvez utiliser des données, des systèmes et des processus existants avec les outils SaaS disponibles dans {{site.data.keyword.Bluemix_notm}}. Pour
+plus d'informations sur l'environnement {{site.data.keyword.Bluemix_notm}} public, voir
+[Qu'est-ce que {{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html).
 {:shortdesc}
 
 ## Dédié
@@ -41,8 +41,10 @@ vos données existants sur une plateforme cloud moderne. En savoir plus sur l'en
 [{{site.data.keyword.Bluemix_notm}} local](/docs/local/index.html).
 
 # rellinks
+{: #rellinks}
 ## general
-* [Qu'est-ce que {{site.data.keyword.Bluemix_notm}} ?](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/)
+{: #general}
+* [Qu'est ce que {{site.data.keyword.Bluemix_notm}} ?](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
 * [Initiation](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
 * [En savoir plus sur le modèle hybride](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
 * [Nouveautés de {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)

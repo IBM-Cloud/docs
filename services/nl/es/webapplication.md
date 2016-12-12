@@ -1,19 +1,18 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Web y aplicación
 {: #webapplication}
 
-*Última actualización: 9 de diciembre de 2015*
-
-Utilice estos servicios para añadir o eliminar rápidamente características mientras desarrolla app web en la nube. También puede simplificar las tareas de gestión y organizar los procesos y las reglas empresariales. 
+Utilice estos servicios para añadir o eliminar rápidamente características mientras desarrolla app web en la nube. También puede simplificar las tareas de gestión y organizar los procesos y las reglas empresariales.
 {:shortdesc}
 
 

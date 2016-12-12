@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-22"
 
 ---
 
@@ -12,8 +14,6 @@ copyright:
 # 获取客户支持
 {: #getting-customer-support}
 
-上次更新时间：2016 年 10 月 22 日
-{: .last-updated}
 
 
 如果您遇到 {{site.data.keyword.Bluemix}} 问题，可以使用多个支持选项，例如，通过论坛获取帮助或开具支持凭单。
@@ -131,7 +131,7 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 ### 设置事件和维护电子邮件通知
 {: #setting-up-notifications}
 
-对于 {{site.data.keyword.Bluemix_notm}} Public，您可以注册平台通知。平台通知是 {{site.data.keyword.Bluemix_notm}} 平台事件和维护事件的可选电子邮件警报。您可以通过单击**帐户**菜单项 &gt; **通知** &gt; **平台**选项，选择接收这些电子邮件通知。有关设置帐户通知的更多信息，请转至[设置通知](../admin/account.html#notifications)。
+对于 {{site.data.keyword.Bluemix_notm}} Public，您可以注册平台通知。平台通知是 {{site.data.keyword.Bluemix_notm}} 平台事件和维护事件的可选电子邮件警报。您可以通过单击**帐户**菜单项 &gt; **通知** &gt; **平台**选项，选择接收这些电子邮件通知。有关设置帐户通知的更多信息，请转至[设置通知](/docs/admin/account.html#notifications)。
 
 
 ### 监视状态的最佳做法
@@ -193,7 +193,7 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 如果问题不是因中断而引起的，请使用以下某个选项来开具支持凭单：
 
   * 在“支持”窗口小部件中，单击**获取帮助**。在显示的页面上，单击**取得联系**。填写表单，指出您需要技术支持帮助您解决的问题。
-  * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}帮助页面。可以提交有关销售、记帐、IBM 标识和登录以及技术支持问题的凭单。有关技术支持问题，可以在单击**技术支持**后，进一步选择技术组。例如，如果需要有关 Cloud Foundry 应用程序、OpenWhisk、Containers、Virtual Servers 或裸机服务器的帮助，可以选择**应用程序服务**。如果需要有关特定服务的帮助，请选择相应的服务类别。要确定服务所属的类别，请查看导航窗格中的[服务](../services/index.html){: new_window}下的类别。  
+  * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}帮助页面。可以提交有关销售、记帐、IBM 标识和登录以及技术支持问题的凭单。有关技术支持问题，可以在单击**技术支持**后，进一步选择技术组。例如，如果需要有关 Cloud Foundry 应用程序、OpenWhisk、Containers、Virtual Servers 或裸机服务器的帮助，可以选择**应用程序服务**。如果需要有关特定服务的帮助，请选择相应的服务类别。要确定服务所属的类别，请查看导航窗格中的[服务](/docs/services/index.html){: new_window}下的类别。  
   * 在 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} 中。登录到该门户网站后，单击**开具凭单**，然后填写支持表单。 
   
 开具支持凭单时，确保为您的凭单指示了适当的严重性。严重性将决定凭单的处理方式。请参阅[支持凭单严重性和响应时间](index.html#support-ticket-severity){: new_window}，以获取有关不同严重性的信息。如果请求非常紧急，但您只具有免费或基本支持，那么可以升级您的帐户以提交高严重性（1 级、2 级和 3 级）凭单。要将帐户升级到更高支持级别，请通过电子邮件 sales@bluemix.net 联系 IBM 销售代表。
@@ -293,7 +293,7 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 
 在收集诊断信息之前，请完成以下步骤：
 
-  1. 确保已安装最新的 cf 命令行界面。有关更多信息，请参阅[安装 cf 命令行界面](../starters/install_cli.html){: new_window}。
+  1. 确保已安装最新的 cf 命令行界面。有关更多信息，请参阅[安装 cf 命令行界面](/docs/starters/install_cli.html){: new_window}。
 
      **注：**如果未安装最新 cf 命令行界面，那么在 cf 命令行连接到 {{site.data.keyword.Bluemix_notm}} 后，`cf logs` 命令可能不会返回输出。
 
@@ -350,7 +350,7 @@ IBM 会定期向 Bluemix 客户发送调查，以获取客户对最近使用客�
 
   * [Bluemix 支持门户网站](https://support.ibmcloud.com){: new_window} 
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
-  * [安装 cf 命令工具](../starters/install_cli.html){: new_window} 
+  * [安装 cf 命令工具](/docs/starters/install_cli.html){: new_window} 
   * [SaaS 支持手册](http://www-01.ibm.com/software/support/handbook.html){: new_window}
   * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

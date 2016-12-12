@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -17,8 +19,6 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 액세스 문제점 해결 
 {: #accessing}
 
-마지막 업데이트 날짜: 2016년 10월 23일
-{: .last-updated} 
 
 {{site.data.keyword.Bluemix}} 액세스와 관련한
 일반적인 문제점으로는 사용자가 {{site.data.keyword.Bluemix_notm}}에

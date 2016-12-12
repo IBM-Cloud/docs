@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-
+lastupdated: "2016-11-08"
 
 ---
 
@@ -18,15 +18,12 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}}-Administrator-CLI
 {: #bluemixadmincli}
 
-Letzte Aktualisierung: 1. September 2016
-{: .last-updated}
-
 
 Sie können Benutzer für Ihre {{site.data.keyword.Bluemix_notm}} Local- oder
 {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung über die Cloud
 Foundry-Befehlszeilenschnittstelle mit dem
 {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie können Benutzer zum Beispiel aus einer LDAP-Registry
-hinzufügen. Informationen zur Zuordnung Ihres {{site.data.keyword.Bluemix_notm}} Public-Kontos finden Sie unter [Verwalten](../../../admin/adminpublic.html#administer).
+hinzufügen. Informationen zur Zuordnung Ihres {{site.data.keyword.Bluemix_notm}} Public-Kontos finden Sie unter [Verwalten](/docs/admin/adminpublic.html#administer).
 
 Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Für das
 {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in
@@ -68,13 +65,13 @@ cf install-plugin BluemixAdminCLI -r BluemixAdmin
 
 Wenn Sie das Plug-in deinstallieren müssen, können Sie die folgenden Befehle verwenden. Anschließend können Sie das aktualisierte Repository hinzufügen und das neueste Plug-in installieren.
 
-* Plug-in deinstallieren: `cf uninstall-plugin-repo BluemixAdminCLI`
+* Plug-in deinstallieren: `cf uninstall-plugin BluemixAdminCLI`
 * Plug-in-Repository entfernen: `cf remove-plugin-repo BluemixAdmin`
 
 
 ## {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwenden
 
-Mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in können Sie Benutzer hinzufügen oder entfernen, Benutzer aus Organisationen zuweisen oder die Zuweisung von Benutzern aufheben und andere Management-Tasks ausführen. 
+Mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in können Sie Benutzer hinzufügen oder entfernen, Benutzer aus Organisationen zuweisen oder die Zuweisung von Benutzern aufheben und andere Management-Tasks ausführen.
 
 Führen Sie den folgenden Befehl aus,
 um eine Liste der Befehle anzuzeigen:
@@ -119,7 +116,7 @@ cf ba add-user <user_name> <organization>
 ```
 {: codeblock}
 
-**Hinweis**: Zum Hinzufügen einer bestimmten Organisation müssen Sie ein **Administrator** mit der Berechtigung **users.write** (oder **Superuser**) sein. Wenn Sie ein Organisationsmanager sind, kann Ihnen auch die Funktion bereitgestellt werden, mit der Sie Ihrer Organisation Benutzer über einen Superuser hinzufügen können, der den Befehl **enable-managers-add-users** ausführt. Weitere Informationen hierzu finden Sie unter [Managern die Möglichkeit geben, Benutzer hinzuzufügen](index.html#clius_emau).
+**Hinweis**: Zum Hinzufügen einer bestimmten Organisation müssen Sie ein **Administrator** mit der Berechtigung **users.write** (oder **Superuser**) sein. Wenn Sie ein Organisationsmanager sind, kann Ihnen auch die Funktion bereitgestellt werden, mit der Sie Ihrer Organisation Benutzer über einen Superuser hinzufügen können, der den Befehl **enable-managers-add-users** ausführt.  Weitere Informationen hierzu finden Sie unter [Managern die Möglichkeit geben, Benutzer hinzuzufügen](index.html#clius_emau).
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;user_name&gt;</dt>
@@ -146,11 +143,11 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 <dt class="pt dlterm">&lt;user_name_value&gt;</dt>
 <dd class="pd">Der Name des Benutzers in {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;permission_value&gt;</dt>
-<dd class="pd">Die Berechtigung, die dem Benutzer zugewiesen wurde. Beispiel: Superuser, Basic, Katalog, Benutzer und Berichte. Weitere Informationen zu den zugewiesenen Benutzerberechtigungen finden Sie im Abschnitt [Berechtigungen](../../../admin/index.html#permissions). Dieser Parameter kann nicht mit dem Organisationsparameter in derselben Abfrage verwendet werden. </dd>
+<dd class="pd">Die Berechtigung, die dem Benutzer zugewiesen wurde. Beispiel: Superuser, Basic, Katalog, Benutzer und Berichte. Weitere Informationen zu den zugewiesenen Benutzerberechtigungen finden Sie im Abschnitt [Berechtigungen](/docs/admin/index.html#permissions). Dieser Parameter kann nicht in derselben Abfrage wie der Parameter 'organization' verwendet werden. </dd>
 <dt class="pt dlterm">&lt;organization_value&gt;</dt>
-<dd class="pd">Der Name der Organisation, zu der der Benutzer gehört. Dieser Parameter kann nicht mit dem Organisationsparameter in derselben Abfrage verwendet werden.</dd>
+<dd class="pd">Der Name der Organisation, zu der der Benutzer gehört. Dieser Parameter kann nicht in derselben Abfrage wie der Parameter 'permission' verwendet werden.</dd>
 <dt class="pt dlterm">&lt;role_value&gt;</dt>
-<dd class="pd">Die Organisationsrolle, die dem Benutzer zugewiesen wurde. Beispiel: Manager, Abrechnungsmanager oder Auditor für die Organisation. Sie müssen mit diesem Parameter die Organisation angeben. Weitere Informationen zu Rollen finden Sie im Abschnitt [Benutzerrollen](../../../admin/users_roles.html#userrolesinfo).</dd>
+<dd class="pd">Die Organisationsrolle, die dem Benutzer zugewiesen wurde. Beispiel: Manager, Abrechnungsmanager oder Auditor für die Organisation. Sie müssen mit diesem Parameter die Organisation angeben. Weitere Informationen zu Rollen finden Sie im Abschnitt [Benutzerrollen](/docs/admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 
@@ -215,7 +212,7 @@ cf ba enable-managers-add-users
 ### Managern die Möglichkeit nehmen, Benutzer hinzuzufügen
 {: #clius_dmau}
 
-Wenn Organisationsmanager in Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung die Fähigkeit erhalten haben, den von ihnen verwalteten Organisationen Benutzer hinzuzufügen, indem sie den Befehl **enable-managers-add-users** verwenden, und wenn Sie über die **Superuser**-Berechtigung verfügen, können Sie diese Einstellung entfernen. Geben Sie den folgenden Befehl ein:
+Wenn Organisationsmanager in Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung die Fähigkeit erhalten haben, den von ihnen verwalteten Organisationen Benutzer hinzuzufügen, indem sie den Befehl **enable-managers-add-users** verwenden, und wenn Sie über die **Superuser**-Berechtigung verfügen, können Sie diese Einstellung entfernen.  Geben Sie den folgenden Befehl ein:
 
 ```
 cf ba disable-managers-add-users
@@ -277,7 +274,7 @@ cf ba set-org <user_name> <organization> [<role>]
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, der der Benutzer zugewiesen werden soll.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">Informationen zu {{site.data.keyword.Bluemix_notm}}-Benutzerrollen und Beschreibungen
-finden Sie unter [Rollen](../../../admin/users_roles.html).</dd>
+finden Sie unter [Rollen](/docs/admin/users_roles.html).</dd>
 </dl>
 
 **Tipp:** Sie können auch **ba so** als Alias für den längeren Befehlsnamen **ba set-org** verwenden.
@@ -300,7 +297,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, der der Benutzer zugewiesen werden soll.</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
 <dd class="pd">Informationen zu {{site.data.keyword.Bluemix_notm}}-Benutzerrollen und Beschreibungen
-finden Sie unter [Rollen](../../../admin/users_roles.html).</dd>
+finden Sie unter [Rollen](/docs/admin/users_roles.html).</dd>
 </dl>
 
 **Tipp:** Sie können auch **ba uo** als Alias für den längeren Befehlsnamen **ba unset-org** verwenden.
@@ -340,6 +337,87 @@ cf ba set-quota <organization> <plan>
 </dl>
 
 **Tipp:** Sie können auch **ba sq** als Alias für den längeren Befehlsnamen **ba set-quota** verwenden.
+
+
+### Containerkontingente für eine Organisation ermitteln und festlegen
+{: #containquotas}
+
+Sie können für Container in einer Organisation Kontingente ermitteln und festlegen. 
+
+Geben Sie den folgenden Befehl ein, um das Kontingent für Container einer Organisation zu ermitteln: 
+
+```
+cf bluemix-admin containers-quota <Organisation>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Organisation&gt;</dt>
+<dd class="pd">Der Name oder die ID der Organisation in Bluemix. Dieser Parameter ist erforderlich. </dd>
+</dl>
+
+**Tipp:** Sie können auch **ba cq** als Alias für den längeren Befehlsnamen **bluemix-admin containers-quota** verwenden.
+
+Geben Sie den folgenden Befehl mit mindestens einer der Optionen ein, um das Kontingent für Container in einer Organisation festzulegen:  
+
+```
+cf bluemix-admin set-containers-quota <Organisation> <Optionen>
+```
+{: codeblock}
+
+**Hinweis**: Sie können mehrere Optionen angeben. Es muss jedoch mindestens eine Option angegeben sein. 
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Organisation&gt;</dt>
+<dd class="pd">Der Name oder die ID der Organisation in Bluemix. Dieser Parameter ist erforderlich. </dd>
+<dt class="pt dlterm">&lt;Optionen&gt;</dt>
+<dd class="pd">Geben Sie eine oder mehrere der folgenden Optionen an (der Wert muss jeweils eine ganze Zahl sein):
+<ul>
+<li>floating-ips-max &lt;Wert&gt;</li>
+<li>floating-ips-space-default &lt;Wert&gt;</li>
+<li>memory-max &lt;Wert&gt;</li>
+<li>memory-space-default &lt;Wert&gt;</li>
+<li>image-limit &lt;Wert&gt;</li>
+</ul>
+</dd>
+</dl>
+
+**Tipp:** Sie können auch die folgenden Kurznamen als Aliasnamen für die längeren Optionsnamen verwenden:
+
+<dl class="parml">
+<dt class="pt dlterm">floating-ips-max &lt;Wert&gt;</dt>
+<dd class="pd"><strong>fim</strong></dd>
+<dt class="pt dlterm">floating-ips-space-default &lt;Wert&gt;</dt>
+<dd class="pd"><strong>fisd</strong></dd>
+<dt class="pt dlterm">memory-max &lt;Wert&gt;</dt>
+<dd class="pd"><strong>mm</strong></dd>
+<dt class="pt dlterm">memory-space-default &lt;Wert&gt;</dt>
+<dd class="pd"><strong>msd</strong></dd>
+<dt class="pt dlterm">image-limit &lt;Wert&gt;</dt>
+<dd class="pd"><strong>il</strong></dd>
+</dl>
+
+Optional können Sie eine Datei angeben, die bestimmte Konfigurationsparameter in einem gültigen JSON-Objekt enthält. Falls Sie die Option **-file** verwenden, hat diese Option Vorrang und die anderen Optionen werden ignoriert. Geben Sie den folgenden Befehl ein, um eine Datei bereitzustellen, statt die Optionen festzulegen: 
+
+```
+cf bluemix-admin set-containers-quota <Organisation> <-Dateipfad zur JSON-Datei>
+```
+{: codeblock}
+
+Das Format der JSON-Datei sollte dem folgenden Beispiel entsprechen: 
+
+```
+{
+  "floating_ips_max": 10,
+  "floating_ips_space_default": 0,
+  "ram_max": 4096,
+  "ram_space_default": 0,
+  "image_limit": 10
+}  
+```
+{: codeblock}
+
+**Tipp:** Sie können auch **ba scq** als Alias für den längeren Befehlsnamen **bluemix-admin set-containers-quota** verwenden.
 
 ### Berichte hinzufügen, löschen und abrufen
 
@@ -503,13 +581,13 @@ die Sichtbarkeit des Service für mehrere Organisationen aktivieren, indem Sie w
 **Tipp:** Sie können auch **ba espv** als Alias für den längeren
 Befehlsnamen **ba edit-service-plan-visibility** verwenden.
 
-### Informationen zur Ressourcennutzung anzeigen
+### Metrikinformationen zu Ressourcen anzeigen
 {: #cliresourceusage}
 
-Sie können Informationen zur Ressourcennutzung, darunter zur Nutzung von Speicher, Platte und CPU, anzeigen. Es wird eine Zusammenfassung der verfügbaren physischen und reservierten Ressourcen sowie der Nutzung dieser Ressourcen angezeigt. Zudem werden Nutzungsdaten, die vergangene Speichernutzung und die Plattenbelegung angezeigt. Die Daten zur vergangenen Speichernutzung und Plattenbelegung werden standardmäßig nach Wochen und in absteigender Reihenfolge angezeigt. Zum Anzeigen der Ressourcennutzungsinformationen verwenden Sie den folgenden Befehl:
+Sie können Metrikinformationen zu Ressourcen anzeigen, beispielsweise Hauptspeicher- und Plattenbelegung oder CPU-Auslastung. Es wird eine Zusammenfassung der verfügbaren physischen und reservierten Ressourcen sowie der Nutzung dieser Ressourcen angezeigt. Zudem werden Nutzungsdaten, die vergangene Speichernutzung und die Plattenbelegung angezeigt. Die Daten zur vergangenen Speichernutzung und Plattenbelegung werden standardmäßig nach Wochen und in absteigender Reihenfolge angezeigt. Verwenden Sie den folgenden Befehl, um die Metrikinformationen zu Ressourcen anzuzeigen: 
 
 ```
-cf ba resource-usage <monthly> <weekly> 
+cf ba resource-metrics <monthly> <weekly>
 ```
 {: codeblock}
 
@@ -520,7 +598,7 @@ cf ba resource-usage <monthly> <weekly>
 <dd class="pd">Anzeige der vergangenen Nutzungsdaten für Speicher und Plattenbelegung jeweils für eine Woche. Dies ist der Standardwert.</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba rsu** als Alias für den längeren Befehlsnamen **ba resource-usage** verwenden.
+**Tipp:** Sie können auch **ba rsm** als Alias für den längeren Befehlsnamen **ba resource-metrics** verwenden.
 
 ### Mit Service-Brokern arbeiten
 
@@ -583,17 +661,19 @@ Befehlsnamen **ba delete-service-broker** verwenden.
 
 * Sie können einen Service-Broker aktualisieren, indem Sie den folgenden Befehl eingeben:
 
-`cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>`
+```
+cf ba update-service-broker <Brokername> <Benutzername> <Kennwort> <Broker-URL>
+```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;broker_name&gt;</dt>
+<dt class="pt dlterm">&lt;Brokername&gt;</dt>
 <dd class="pd">Der Name des angepassten Service-Brokers.</dd>
-<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dt class="pt dlterm">&lt;Benutzername&gt;</dt>
 <dd class="pd">Der Benutzername für das Konto, das Zugriff auf den Service-Broker hat.</dd>
-<dt class="pt dlterm">&lt;password&gt;</dt>
+<dt class="pt dlterm">&lt;Kennwort&gt;</dt>
 <dd class="pd">Das Kennwort für das Konto, das Zugriff auf den Service-Broker hat.</dd>
-<dt class="pt dlterm">&lt;broker_url&gt;</dt>
+<dt class="pt dlterm">&lt;Broker-URL&gt;</dt>
 <dd class="pd">Die URL für den Service-Broker.</dd>
 </dl>
 
@@ -805,7 +885,7 @@ cf ba buildpacks <buildpack_name>
 
 #### Buildpack erstellen und hochladen
 
-Sie können ein Buildpack erstellen und hochladen. Jede komprimierte Datei mit der Dateierweiterung .zip kann hochgeladen werden. Zum Hochladen eines Buildpacks verwenden Sie den folgenden Befehl:
+Sie können ein Buildpack erstellen und hochladen. Jede komprimierte Datei mit der Dateierweiterung .zip kann hochgeladen werden.  Zum Hochladen eines Buildpacks verwenden Sie den folgenden Befehl:
 
 ```
 cf ba create-buildpack <buildpack_name> <file_path> <position>
