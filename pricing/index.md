@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-11-30"
+lastupdated: "2016-12-12"
  
 
 ---
@@ -417,7 +417,7 @@ To open the **Usage Dashboard** page, click **Account** &gt; *your_account_name*
 
 The account owner is charged for the total usage that is incurred across all organizations at the end of each billing cycle. Each billing cycle lasts one month.
 
-Account owners can filter the usage summary by region and organization. The charges shown represent the amount that you, as the account owner, are billed for that month.
+Account owners can filter the usage summary by region and organization. If you are an account owner, set **Organization** to **All Organizations** to see the usage for the entire account for a 12-month period. Click a particular month to see the usage for that month.  The charges shown represent the amount that you, as the account owner, are billed for that month.
 
 If you select a specific organization for the **Organization**, you can see the total usage for that organization, including any usage as part of a free tier. The charges shown for the organization are not the charges that you are billed. The free tier usage is shown as free at the account level, but not at the organizational level. Therefore, when you view the organizational usage, you see the real usage for that organization including both free and charged usage. All organizational usage is rolled up to the account usage after the free tier is removed.
 
