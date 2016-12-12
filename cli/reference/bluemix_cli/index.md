@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-24"
+lastupdated: "2016-12-12"
 
 ---
 
@@ -42,6 +42,7 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
 
 
 <table summary="General bluemix commands.">
+<caption>Table 1. General bluemix commands</caption>
  <thead>
  <th colspan="5">General bluemix commands</th>
  </thead>
@@ -66,6 +67,7 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
 
 
 <table summary="bluemix commands that you can use to manage orgs, spaces, and users.">
+<caption>Table 2. Commands for managing orgs, spaces, and users</caption>
  <thead>
  <th colspan="5">Commands for managing orgs, spaces, and users</th>
  </thead>
@@ -103,6 +105,7 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  
 
 <table summary="bluemix commands that you can use to manage Cloud Foundry apps.">
+<caption>Table 3. Commands for managing cf apps</caption>
  <thead>
  <th colspan="5">Commands for managing cf apps</th>
  </thead>
@@ -140,6 +143,7 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
 
 
 <table summary="bluemix commands that you can use to manage Bluemix services.">
+<caption>Table 4. Commands for managing Bluemix services</caption>
  <thead>
  <th colspan="5">Commands for managing Bluemix services</th>
  </thead>
@@ -170,6 +174,7 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
 
 
 <table summary="bluemix commands that you can use to manage Bluemix catalog, plug-ins, billing, and security settings.">
+<caption>Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings</caption>
  <thead>
  <th colspan="5">Commands for managing Bluemix catalog, plug-ins, billing, and security settings</th>
  </thead>
@@ -205,6 +210,7 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
 
 
 <table summary="bluemix commands that you can use to manage network settings.">
+<caption>Table 6. Commands for managing network settings</caption>
  <thead>
  <th colspan="5">Commands for managing network settings</th>
  </thead>
@@ -236,6 +242,7 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
 
 
 <table summary="bluemix commands that you can use to manage containers on Bluemix.">
+<caption>Table 7. Commands for managing containers on Bluemix</caption>
  <thead>
  <th colspan="5">Commands for managing containers on Bluemix</th>
  </thead>
