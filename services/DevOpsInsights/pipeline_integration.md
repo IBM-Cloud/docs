@@ -70,7 +70,7 @@ You must create several environment properties in each pipeline stage that conta
 
 To get started, retrieve the setup information from a test job.
 
-1. On the stage that contains a test job, click the **Stage Configuration** icon ![Pipeline stage configuration icon](/docs/services/DevOpsInsights/images/pipeline-stage-configuration-icon.png). Click **Configure Stage**.
+1. On the stage that contains a test job, click the **Stage Configuration** icon ![Pipeline stage configuration icon](images/pipeline-stage-configuration-icon.png). Click **Configure Stage**.
 2. Create a job. For the job type, select **Test**.
 3. Select a test job that uses the Simple tester type and copy the information that is in the **Test Command** and **Working Directory** fields to an editor. You need that information later.
 4. From the same Simple test job, change the tester type by selecting **Advanced Tester**.
@@ -107,7 +107,7 @@ The values for the **Type of Metric** and **Result File Location** fields must m
 
 *Figure 1* shows a test job that is configured to run unit tests, upload the results in Mocha format, and upload the code coverage results in Istanbul format.
 
-![Deployment Risk Analytics upload job](/docs/services/DevOpsInsights/images/DRA_upload_job.png)
+![Deployment Risk Analytics upload job](images/DRA_upload_job.png)
 *Figure 1. Upload results to DevOps Analytics*
 
 ## Defining {{site.data.keyword.DRA_short}} gates in the pipeline
@@ -115,7 +115,7 @@ The values for the **Type of Metric** and **Result File Location** fields must m
 
 {{site.data.keyword.DRA_short}} gates check whether your test results comply with the defined policy. If the policy is not met, the {{site.data.keyword.DRA_short}} gate fails. Usually, gates are placed at the end of each stage of your pipeline. This location is ideal to check the quality of the build against your policy to ensure that it is safe to promote from one environment to another. However, you can put gates anywhere in the pipeline where you want a specific criterion to be checked.
 
-1. On a stage, click the **Stage Configuration** icon ![Pipeline stage configuration icon](/docs/services/DevOpsInsights/images/pipeline-stage-configuration-icon.png) and click **Configure Stage**.
+1. On a stage, click the **Stage Configuration** icon ![Pipeline stage configuration icon](images/pipeline-stage-configuration-icon.png) and click **Configure Stage**.
 2. Click **Add Job**. For the job type, select **Test**.
 3. Enter a name for the new job, such as *Gate (Unit Test)*.
 4. For tester type, select **{{site.data.keyword.DRA_short}} Gate**.
@@ -132,3 +132,34 @@ The values for the **Type of Metric** and **Result File Location** fields must m
 *Figure 2. DevOps Analytics gate*
 
 After your pipeline is configured, start to use {{site.data.keyword.DRA_short}}. For instructions, see [Running the Delivery Pipeline](/docs/services/DevOpsInsights/pipeline_decision_reports.html#toolchain_reports).
+
+<!--## Performing static code scans and dynamic app scans
+{: #toolchain_pipeline_scan}
+
+You can integrate {{site.data.keyword.DRA_short}} with the IBM Security Static Analyzer and IBM AppScan Dynamic Analyzer services to perform static code scans and dynamic app scans. To perform these scans, your project must be associated with a {{site.data.keyword.contdelivery_short}} toolchain that includes the {{site.data.keyword.DRA_short}} and {{site.data.keyword.contdelivery_short}} services. The code and app scans run as test jobs in a pipeline; the results of those test jobs are sent to {{site.data.keyword.DRA_short}}.
+
+To add static code scans or dynamic app scans to your pipeline:
+ 1. Add the scan test jobs to your pipeline.
+ 2. Add three new environment properties to whichever stages contain those jobs:
+  <table><thead>
+  <tr>
+  <th>Environment property</th>
+  <th>Description</th>
+  </tr>
+  </thead><tbody>
+  <tr>
+  <td><code>LOGICAL_APP_NAME</code></td>
+  <td>The name of the app as it appears on {{site.data.keyword.DRA_short}} dashboards. </td>
+  </tr>
+  <tr>
+  <td><code>LOGICAL_ENV_NAME</code></td>
+  <td>The name of the environment that the app is running in. This property is used to categorize the app in {{site.data.keyword.DRA_short}} dashboards.</td>
+  </tr>
+  <tr>
+  <td><code>BUILD_PREFIX</code></td>
+  <td>A prefix that is added to builds as shown on {{site.data.keyword.DRA_short}} dashboards. This is generally the name of the branch of code that acts as build input.</td>
+  </tr>
+  </tbody></table>
+
+![A pipeline stage that has the required environment properties for DevOps Insights and code or app scanning](images/insights-scan-properties.png)
+-->
