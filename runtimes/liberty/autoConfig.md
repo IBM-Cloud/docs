@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-14"
+lastupdated: "2016-12-12"
 
 ---
 
@@ -26,13 +26,11 @@ A container managed service is a service that is managed by the Liberty run time
 This process is referred to as automatic configuration.
 The Liberty buildpack provides automatic configuration for the following service types:
 
-* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
-* ClearDB MySQL Database
+* [ClearDB MySQL Database](http://www.cleardb.com/developers)
 * [MySQL](/docs/services/MySQL/index.html#MySQL)
-* ElephantSQL
+* [ElephantSQL](docs/services/ElephantSQL/index.html)
 * [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
 * [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
-* MongoLab
 * [dashDB](/docs/services/dashDB/index.html#dashDB)
 * [Data Cache](/docs/services/DataCache/index.html#data_cache)
 * [Session Cache](/docs/services/SessionCache/index.html#session_cache)
@@ -42,6 +40,7 @@ The Liberty buildpack provides automatic configuration for the following service
 * [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
+* [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
 
 As noted, some services can be application managed, or container managed. Mongo and SQLDB are examples of such services. By default, the Liberty buildpack assumes that these services are container managed and automatically configures them. If you want the application to manage the service, you can opt-out of automatic configuration for the service by setting the services_autoconfig_excludes environment variable. For more information, see [Opting out of service auto-configuration](autoConfig.html#opting_out).
 
