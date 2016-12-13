@@ -1,14 +1,18 @@
 ---
 
 copyright:
-years: 2015 2016
+years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Sending basic notifications to web browsers
 {: #web_notifications}
-Last updated: 18 November 2016
+Last updated: 06 December 2016
 {: .last-updated}
 
 After you have developed your applications, you can send a push notification. 
@@ -18,12 +22,16 @@ After you have developed your applications, you can send a push notification.
 3. You can choose to provide optional settings:
   - **Notification Title**: This is the text that would be displayed as message alert heading.
   - **Notification Icon URL**: If your message needs to be delivered with an app notification icon, provide the link to your icon in the field.
-  - **Additional payload**: Specifies the custom payload values for your notifications.
-
+  - **Time to live**: Notifies the server on the validity of the messages.
+4. For web notifications sent to Safari browser, there are some additional information required:
+  - **Action**: This is the label of the action button.
+  - **URL Arguments**: The URL arguments that need to be used with this notification. Ensure that this is provided in the form of a JSON array. 
+ 
 The following image shows the web notifications option in the dashboard.
 
   ![Notifications screen](images/DashboardWebpush.jpg)
-  
+
+
 ## Next steps
   {: #next_steps_tags}
 

@@ -1,49 +1,52 @@
 ---
 
 copyright:
-years: 2015 2016
+years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Enabling web applications to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 08 November 2016
+Last updated: 08 December 2016
 {: .last-updated}
 
-You can now enable Google Chrome and Mozilla Firefox web applications to receive   {{site.data.keyword.mobilepushshort}}.
+You can enable Google Chrome, Mozilla Firefox and Safari web applications to receive {{site.data.keyword.mobilepushshort}}.
 
 ## Installing the web browser client SDK for {{site.data.keyword.mobilepushshort}}
 {: #web_install}
 
 This topic describes how to install and use the client JavaScript Push SDK to further develop your Web applications.
 
-### Initializing in Google Chrome Web application
+### Initializing in the Web application
 
-For installing the Javascript SDK in Chrome Web application complete the steps:
+For installing the Javascript SDK in Google Chrome Web application, complete the steps:
 
-Download the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest_Website.json` from the [Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
+Download the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest_Website.json` files from the [Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
 
 1. Edit the `manifest_Website.json` file.
+	- For Google Chrome browser, change `name` to your site's name. For example, `www.dailynewsupdates.com`. Change the `gcm_sender_id` to your Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) sender_ID. For more information, see [Getting Your Sender ID and API key](t_push_provider_android.html). The gcm_sender_id value contains only numbers.
 
-For Google Chrome browser, change `name` to your site's name. For example, `www.dailynewsupdates.com`. Change the `gcm_sender_id` to your Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) sender_ID. For more information, see [Getting Your Sender ID and API key](t_push_provider_android.html). The gcm_sender_id value contains only numbers.
-
-```
- {
-  "name": "YOUR_WEBSITE_NAME",
-  "gcm_sender_id": "GCM_Sender_Id"
- }
-```
-    {: codeblock}
+		```
+ 			{
+ 			 "name": "YOUR_WEBSITE_NAME",
+  			"gcm_sender_id": "GCM_Sender_Id"
+			 }
+		```
+    		{: codeblock}
  
-For Mozilla Firefox browser, add the following values in `manifest.json` file.     Change `name` to your site's name.
+	- For the Mozilla Firefox browser, add the following values in `manifest_Website.json` file. Provide an appropriate `name`. This would be the name of your website.
 
-```
-{
-  "name": "YOUR_WEBSITE_NAME"
- }
-```
-    {: codeblock}
+		```
+			{
+ 			 "name": "YOUR_WEBSITE_NAME"
+			 }
+		```
+    		{: codeblock}
 
 2. Change the `manifest_Website.json` file name to `manifest.json`.
 3. Add the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` to the  root directory of your website.
@@ -61,7 +64,7 @@ For Mozilla Firefox browser, add the following values in `manifest.json` file.  
 ## Initializing the Web Push SDK 
 {: #web_initialize}
 
-Initialse the push SDK with Bluemix {{site.data.keyword.mobilepushshort}} service `app GUID` and `app Region`.  
+Initialize the push SDK with Bluemix {{site.data.keyword.mobilepushshort}} service `app GUID` and `app Region`.  
 
 To get your app GUID, select the **Configuration** option in the navigation pane for your initialized push services and click **Mobile Options**. Modify the code snippet to use your Bluemix push notifications service appGUID parameter.
 
@@ -80,17 +83,24 @@ The `App Region` specifies the location where the {{site.data.keyword.mobilepush
   "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
    "clientSecret":"clientSecret of your push service"
+   "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
     }
   bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
 
+**Note**: If your FCM credentials are changed for Web push SDK, the message delivery might fail for the Chrome browser. Ensure that you invoke `bmsPush.unRegisterDevice` to avoid failure.
+
+You might see configuration related errors if you provide a wrong parameter. For more information, see [Resolving web push configuration errors](troubleshooting_config_errors.html)
+
 ## Registering the web application
 {: #web_register}
 
-Use the `register()` API to register the device with {{site.data.keyword.mobilepushshort}} service. For registering from Google Chrome, add the Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) API Key and Web Site URL in the Bluemix {{site.data.keyword.mobilepushshort}} service web configuration dashboard. For more information, see [Configuring credentials for Google Cloud Messaging](t_push_provider_android.html) under Chrome setup.
+Use the **register()** API to register the device with {{site.data.keyword.mobilepushshort}} service. Use any of the following options, based on your browser.
 
-For registering from Mozilla Firefox, add website URL in the Bluemix {{site.data.keyword.mobilepushshort}} service web configuration dashboard under Firefox setup.
+- For registering from Google Chrome, add the Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) API Key and Web Site URL in the Bluemix {{site.data.keyword.mobilepushshort}} service web configuration dashboard. For more information, see [Configuring credentials for Google Cloud Messaging](t_push_provider_android.html) under Chrome setup.
+
+- For registering from Mozilla Firefox, add website URL in the Bluemix {{site.data.keyword.mobilepushshort}} service web configuration dashboard under Firefox setup.
 
 Use the following code snippet to register in Bluemix {{site.data.keyword.mobilepushshort}} service.
 ```
@@ -102,6 +112,7 @@ function callback(response) {
   "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
   "clientSecret":"clientSecret of your push service"
+  "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
   }
   bmsPush.initialize(params, callback)
   bmsPush.register(function(response) {
@@ -110,28 +121,7 @@ function callback(response) {
 ```
     {: codeblock}
 
-## Sending basic {{site.data.keyword.mobilepushshort}}
-  {: #send}
 
-After you have developed your applications, you can send a push notification. 
-
-1. Select **Send Notifications**, and compose a message by choosing **Web Notifications** as the **Send To** option. 
-2. Type the message that needs to be delivered in the **Message** field.
-3. You can choose to provide optional settings:
-  - **Notification Title**: This is the text that would be displayed as message alert heading.
-  - **Notification Icon URL**: If your message needs to be delivered with an app notification icon, provide the link to your icon in the field.
-  - **Additional payload**: Specifies the custom payload values for your notifications.
-
-The following image shows the web notifications option in the dashboard.
-
-  ![Notifications screen](images/DashboardWebpush.jpg)
-  
-## Next steps
-  {: #next_steps_tags}
-
-After you have successfully set up basic notifications, you can choose to configure tag-based notifications and advanced options.
-
-Add these {{site.data.keyword.mobilepushshort}} service features to your app. To use tag-based notifications, see [Tag-based Notifications](c_tag_basednotifications.html). To use advanced notifications options, see [Advanced notifications](t_advance_badge_sound_payload.html).
 
 
 

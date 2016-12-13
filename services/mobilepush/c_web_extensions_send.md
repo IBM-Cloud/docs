@@ -1,14 +1,18 @@
 ---
 
 copyright:
-years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Sending basic notifications to Chrome Apps and Extensions 
 {: #web_extensions_notifications}
-Last updated: 15 November 2016
+Last updated: 06 December 2016
 {: .last-updated}
 
 After you have developed your applications, you can send a push notification. 
