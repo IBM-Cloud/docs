@@ -41,7 +41,7 @@ Most users will not experience any issues during the migration to Diego. However
   * Worker applications deployed with the `--no-route` option do not report as healthy. To prevent this, disable the port-based health check with the `cf set-health-check APP_NAME none` command.
   * Diego does not use the VCAP_APP_HOST environment variable. If your code references this variable, replace it with 0.0.0.0.
   * Diego does not use the VCAP_APP_PORT environment variable. If your code references this variable, replace it with PORT, which is set to 8080 by default.
-  * The **cf files** command is no longer supported. The replacement is the **cf ssh** command. For more details on teh **cf ssh** command, see [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
+  * The **cf files** command is no longer supported. The replacement is the **cf ssh** command. For more details on the **cf ssh** command, see [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Some apps might use a high number of file descriptors (inodes). If you encounter this issue, you must increase disk quota for your app with the `cf scale APP_NAME [-k DISK]` command.
  
 
@@ -457,7 +457,7 @@ To specify start commands for your application, you can use one of the following
 
 User-defined environment variables are specific for an application. You have the following options to add a user-defined environment variable to a running app:
 
-  * Use the {{site.data.keyword.Bluemix_notm}} user interafce. Complete the following steps:
+  * Use the {{site.data.keyword.Bluemix_notm}} user interface. Complete the following steps:
     1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click your app tile. The App details page is displayed.
 	2. Click **Environment Variables**.
 	3. Click **USER-DEFINED**, then click **ADD**.
