@@ -6,10 +6,12 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 #Enabling advanced push notifications
-Last updated: 17 October 2016
+Last updated: 06 December 2016
 {: .last-updated}
 
 Configure an iOS badge, sound, additional JSON payload, actionable notifications, and holding notifications.
@@ -183,7 +185,7 @@ Swift
 
 When an actionable notification is received, the control is passed onto the following method based on the identifier chosen.
 
-###Objective-C
+Objective-C
 
 ```
 (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
@@ -196,7 +198,7 @@ When an actionable notification is received, the control is passed onto the foll
 ```
 	{: codeblock}
 
-###Swift
+Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
