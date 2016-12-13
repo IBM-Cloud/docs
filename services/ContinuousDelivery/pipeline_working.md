@@ -23,7 +23,7 @@ Build jobs compile and package your app source code from Git repositories. The b
 
 A deployment job takes output from a build job and deploys it to either IBM Containers or Cloud Foundry servers such as {{site.data.keyword.Bluemix_notm}}.  
 
-You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} to use one or more services, test in one region, and deploy to production in multiple regions. For more information, see [Regions](/docs/overview/whatisbluemix.html#ov_intro_reg).
+You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} to use one or more services, test in one region, and deploy to production in multiple regions. For more information, see [Regions](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window} ![New window icon](images/launch--glyph.svg).
 
 There are several ways to create a pipeline, including adding a pipeline to an existing application and creating a pipeline without an existing application. If you do not already have a {{site.data.keyword.deliverypipeline}} service in your organization, you can go to the catalog, click {{site.data.keyword.deliverypipeline}}, and click Create.
 
@@ -33,7 +33,7 @@ Complete these steps to set up a {{site.data.keyword.deliverypipeline}} for an e
 1. From the hamburger menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **Services**, and then click **DevOps**.
 1. Click **Pipelines**, and then click **Create a Pipeline**.
 
-To [create a pipeline (Link opens in a new window)](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:    
+To [create a pipeline](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} ![New window icon](images/launch--glyph.svg) that is configured to deploy a Cloud Foundry application, follow these steps:    
 
 1. Click **Cloud Foundry**.  
 1. If you want to use a different name for the pipeline, change its default name. 
@@ -58,7 +58,7 @@ To [create a pipeline (Link opens in a new window)](https://console.ng.bluemix.n
 1. Click **Create**. The pipeline is created, configured, and displayed on the toolchain's Overview page. 
  ![Pipeline card](images/cd_pipeline.png)
 
-To create an [empty pipeline (Link opens in a new window)](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
+To create an [empty pipeline](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} ![New window icon](images/launch--glyph.svg) without any preconfigured stages:
 
 1. Click **Custom**.
 1. If you want to use a different name for the pipeline, change its default name. 
