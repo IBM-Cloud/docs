@@ -46,17 +46,15 @@ Complete the following tasks to create and configure a pipeline.
 
 ## Running a stage
 {: #deliverypipeline_run_stage}
-## Running a stage
-{: #deliverypipeline_run_stage}
 
 You can manually run a stage by clicking the **Run Stage** icon on the Pipeline page.
 
-![Clicking the Run Stage icon on a stage](./images/RunStage.png)
+![Clicking the Run Stage icon on a stage](images/RunStage.png)
 
 You can also request on-demand builds and deployments from the build history page in one of two ways:
 * Drag a build to the box that is under a configured stage.
 * Next to a build, click the **Send to** icon and then select a space to deploy to.
-  ![The Execute stage with this build icon](./images/deploy_to.png)
+  ![The Execute stage with this build icon](images/deploy_to.png)
 
 To cancel a running stage, on the stage, click **View logs and history**. In the list of jobs, click the running job's number and then click **CANCEL**. You can also cancel jobs individually by clicking a job and then clicking **CANCEL**, or by clicking the **Stop** icon next to a job on its stage.
 
@@ -75,7 +73,7 @@ When you run a stage manually, or if it runs because the stage before it is comp
 **Tip:** You can deploy a previous build. On the stage that contains the build, click **View logs and history**. On the page that opens, click to expand the run number and then click the build job. Click **SEND TO**, and select a target.
 
 ###Adding services to apps
-You can add services to your apps and manage those services from your Bluemix Dashboard or the Cloud Foundry command line interface (CLI). You can also issue Cloud Foundry CLI commands in scripts for DevOps Services pipeline jobs. For example, you can add a service to an app in the script of a deploy job. For more information about adding services, see [Adding a service to your application](https://www.ng.bluemix.net/docs/services/reqnsi.html#add_service).
+You can add services to your apps and manage those services from your Bluemix Dashboard or the Cloud Foundry command line interface (CLI). You can also issue Cloud Foundry CLI commands in scripts for DevOps Services pipeline jobs. For example, you can add a service to an app in the script of a deploy job. For more information about adding services, see [Adding a service to your application](/docs/services/reqnsi.html#add_service).
 
 ## Viewing logs
 {: #deliverypipeline_view_logs}
@@ -86,7 +84,7 @@ To view a job's log, click the job. Alternatively, on a stage, click **View logs
 
 To view the runtime log of a deployed application, click **View runtime log**.
 
-![Areas in a stage tile that can be clicked to open relevant logs](./images/view_logs_and_history.png)
+![Areas in a stage tile that can be clicked to open relevant logs](images/view_logs_and_history.png)
 
 In addition to job logs, you can view unit test results, generated artifacts, and code changes for any build job.
 
