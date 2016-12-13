@@ -36,7 +36,7 @@ Complete the following steps to create a project with a Code Starter:
 	
 	5. Enter a name for your project and select **Create**.
 	
-2. Make your selections on the **Project Overview** screen.  The **Project Overview** screen displays information about your project and the optional services that you can add to your project, like Push Notifications and Authentication.  
+2. Make your selections on the **Project Overview** screen.  The **Project Overview** screen displays information about your project and the optional services that you can add to your project, like {{site.data.keyword.mobilepushshort}} and Authentication.  
 
 	1. Optional: Select **Add** to add one of the listed services to your project. Edit the **Service name** for your service and click **Create**. When you add services to your project, you link to the {{site.data.keyword.Bluemix_notm}} page for that service. Configure the service by providing the information that is required for for the service.
 	

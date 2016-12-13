@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-12-01"
 
 ---
 {:new_window: target="_blank"}
@@ -36,11 +36,11 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 
    4. Enter your project name and click **Create**.
 
-2. Optional: Add the Push Notifications capability.
+2. Optional: Add the {{site.data.keyword.mobilepushshort}} capability.
 
-   1. Click **Add** for **Push Notifications** on the **Project Overview** page.
+   1. Click **Add** for **{{site.data.keyword.mobilepushshort}}** on the **Project Overview** page.
 
-      You can alternatively click **Create** on the **Push Notifications** page.
+      You can alternatively click **Create** on the **{{site.data.keyword.mobilepushshort}}** page.
 
    2. Enter your service name and click **Create**.
 
@@ -109,15 +109,15 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 
    2. For Android, you can choose from the following options after the code is generated:
 
-      **Download Code**
+      * Download Code
 
-      **Download APK**
+      * Download APK
 
-      **Download with QR Code**
+      * Download with QR Code
 
-   3. For iOS, you can choose from the following options after the code is generated:
+   3. For iOS, you can choose the following option after the code is generated:
 
-      **Download Code**
+      * Download Code
 
 6. Run your app on your device or simulator.
 
@@ -126,3 +126,21 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 {: #tutorial_next}
 
 [Try it out!](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+
+
+### UI Starter tutorials
+{: #tutorials_UI}
+
+* [Tutorial - Store Catalog](tutorial_store_catalog.html)
+
+
+### Code Starter tutorials
+{: #tutorials_Code}
+
+* [Tutorial - Basic](tutorial.html)
+* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Tutorial - Watson Language](tutorial_watson_language.html)
+* [Tutorial - Weather](tutorial_weather.html)
+
