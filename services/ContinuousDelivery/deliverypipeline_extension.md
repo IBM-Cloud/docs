@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-16"
+lastupdated: "2016-12-09"
 
 ---
 
@@ -45,7 +45,7 @@ A pipeline that uses the Static Analyzer service typically includes these stages
 
 ### Creating a static code scan
 
-Before you begin, [review the Terms of Use for the service](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01).
+Before you begin, [review the Terms of Use for the service](http://www.ibm.com/software/sla/sladb.nsf/sla/bm-6814-01){: new_window} ![External link icon, link opens in a new window](images/launch--glyph.svg).
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
@@ -73,7 +73,7 @@ Before you begin, [review the Terms of Use for the service](http://www.ibm.com/s
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select the check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already, or if you want to [configure these requirements manually](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave the check box cleared.
+    * If you configured the service and bound app in your Bluemix space already, or if you want to [configure these requirements manually](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window} ![New window icon](images/launch--glyph.svg), leave the check box cleared.
 
   f. In the **Minutes to wait for analysis to complete** field, type a value of 0 - 59 minutes. The default value is 5 minutes. A URL to the Static Analyzer dashboard is in the console logs at the end of the job.
 
@@ -106,7 +106,7 @@ Console output examples:
 **Pending scan**
 ![Example pending scan](images/analyzer_pending.png)
 
-For more information about using the Static Analyzer service, [see the Static Analyzer service docs](/docs/services/ApplicationSecurityonCloud/index.html).
+For more information about using the Static Analyzer service, see the [Static Analyzer service docs](/docs/services/ApplicationSecurityonCloud/index.html){: new_window} ![New window icon](images/launch--glyph.svg).
 
 <!--
 
@@ -186,7 +186,7 @@ Before you begin, create or copy a Slack WebHook URL:
 3. Select a channel and click **Add Incoming WebHooks Integration**.
 4. Add a **WebHook URL** or copy an existing one.
 
-For more information, [see Incoming WebHooks in the Slack documentation](https://api.slack.com/incoming-webhooks).
+For more information, see [Incoming WebHooks in the Slack documentation](https://api.slack.com/incoming-webhooks){: new_window} ![External link icon, link opens in a new window](images/launch--glyph.svg).
 
 To create Slack notifications:
 
@@ -326,7 +326,7 @@ To create HipChat notifications:
 ## Using Active Deploy for zero downtime deployment in the pipeline
 {: #deliverypipeline_activedeploy}
 
-You can automate the continuous deployment of your apps or container groups by using the IBM® Active Deploy service in the Bluemix® DevOps Services Delivery Pipeline. For more information about getting started, [see the Active Deploy documentation](/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
+You can automate the continuous deployment of your apps or container groups by using the IBM® Active Deploy service in the Bluemix® DevOps Services Delivery Pipeline. For more information about getting started, see the [Active Deploy documentation](/docs/services/ActiveDeploy/updatingapps.html#adpipeline){: new_window} ![New window icon](images/launch--glyph.svg).
 
 ## Building and deploying container images with the pipeline
 {: #deliverypipeline_containers}
@@ -335,4 +335,4 @@ You can automate your app builds and container deployments to Bluemix® by using
   - Building Docker images
   - Deploying images in containers to Bluemix
 
-For more information about getting started, see [the Delivery Pipeline and containers overview](/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
+For more information about getting started, see the [Delivery Pipeline and containers overview](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window} ![New window icon](images/launch--glyph.svg).

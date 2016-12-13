@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-18"
+lastupdated: "2016-12-9"
 ---
 
 {:new_window: target="_blank"}
@@ -49,7 +49,7 @@ After a job runs, the container that was created for it is discarded. The result
 
 **Note**: Jobs can run for up to 60 minutes. When jobs exceed that limit, they fail. If a job is exceeding the limit, break it into multiple jobs. For example, if a job performs three tasks, you might break it into three jobs: one for each task.
 
-To learn how to add a job to a stage, [see Adding a job to a stage](/docs/services/ContinuousDelivery/build_deploy.html#deliverypipeline_add_job){: new_window}.
+To learn how to add a job to a stage, see [Adding a job to a stage](/docs/services/ContinuousDelivery/build_deploy.html#deliverypipeline_add_job){: new_window} ![New window icon](images/launch--glyph.svg).
 
 ### Build jobs
 
@@ -60,7 +60,7 @@ Jobs that take input from build jobs must reference build artifacts in the same 
 **Note**: If you select the **Simple** builder type for a build job, you skip the build process. In that case, your code is not compiled, but is sent to the deployment stage as is. To both build and deploy, select a builder type other than **Simple**.
 
 #### Environment properties for build scripts
-You can include environment properties within a build job's build shell commands. The properties provide access to information about the job's execution environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/ContinuousDelivery/deploy_var.html).
+You can include environment properties within a build job's build shell commands. The properties provide access to information about the job's execution environment. For more information, see [Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/ContinuousDelivery/deploy_var.html).
 
 ### Deploy jobs
 
@@ -68,11 +68,11 @@ Deploy jobs upload your project to Bluemix as an app and are accessible from a U
 
 Deploy jobs can deploy new apps or update existing apps. Even if you first deployed an app by using another method, such as the Cloud Foundry command line interface or the run bar in the Web IDE, you can update the app by using a deploy job. To update an app, in the deploy job, use that app's name.
 
-You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} to use one or more services, test in one region, and deploy to production in multiple regions. For more information, see [Regions](/docs/overview/whatisbluemix.html#ov_intro_reg).
+You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} to use one or more services, test in one region, and deploy to production in multiple regions. For more information, see [Regions](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window} ![New window icon](images/launch--glyph.svg).
 
 #### Environment properties for deployment scripts
 
-You can include environment properties within a deploy job's deployment script. These properties provide access to information about the job's execution environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/ContinuousDelivery/deploy_var.html).
+You can include environment properties within a deploy job's deployment script. These properties provide access to information about the job's execution environment. For more information, see [Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/ContinuousDelivery/deploy_var.html).
 
 ### Test jobs
 If you want to require that conditions are met, include test jobs before or after your build and deploy jobs. You can customize test jobs to be as simple or complex as you need. For example, you might issue a cURL command and expect a particular response. You might also run a suite of unit tests or trigger functional tests with third-party test services, such as Sauce Labs.
@@ -81,18 +81,18 @@ If your tests produce result files in JUnit XML format, a report that is based o
 
 #### Environment properties for test scripts
 
-You can include environment properties in the script of a test job. The properties provide access to information about the job's run environment. For more information, [see Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/ContinuousDelivery/deploy_var.html).
+You can include environment properties in the script of a test job. The properties provide access to information about the job's run environment. For more information, see [Environment properties and resources for the {{site.data.keyword.deliverypipeline}} service](/docs/services/ContinuousDelivery/deploy_var.html).
 
 ## Manifest files
 {: #deliverypipeline_manifest}
 
-Manifest files, which are named `manifest.yml` and stored in a project's root directory, control how your project is deployed to Bluemix. For information about creating manifest files for a project, [see the Bluemix documentation about application manifests](/docs/manageapps/deployingapps.html#appmanifest). To integrate with Bluemix, your project must have a manifest file in its root directory. However, you are not required to deploy based on the information in the file.
+Manifest files, which are named `manifest.yml` and stored in a project's root directory, control how your project is deployed to Bluemix. For information about creating manifest files for a project, see the [Bluemix documentation about application manifests](/docs/manageapps/deployingapps.html#appmanifest). To integrate with Bluemix, your project must have a manifest file in its root directory. However, you are not required to deploy based on the information in the file.
 
 In the pipeline, you can specify everything that a manifest file can by using `cf push` command arguments. The `cf push` command arguments are helpful in projects that have multiple deployment targets. If multiple deploy jobs all try to use the route that is specified in the project manifest file, a conflict occurs.
 
 To avoid conflicts, you can specify a route by using `cf push` followed by the host name argument, `-n`, and a route name. By modifying the deployment script for individual stages, you can avoid route conflicts when you deploy to multiple targets.
 
-To use the `cf push` command arguments, open the configuration settings for a deploy job and modify the **Deploy Script** field. For more information, [see the Cloud Foundry Push documentation](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push).
+To use the `cf push` command arguments, open the configuration settings for a deploy job and modify the **Deploy Script** field. For more information, see the [Cloud Foundry Push documentation](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html#push){: new_window} ![External link icon, link opens in a new window](images/launch--glyph.svg).
 
 ## An example pipeline
 {: #deliverypipeline_example}
