@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-09"
+lastupdated: "2016-12-12"
 
 ---
 
@@ -16,67 +16,93 @@ lastupdated: "2016-11-09"
 ## Log files
 {: #log_files}
 
-The standard Liberty logs, such as messages.log or the ffdc directory, are available in IBM Bluemix in the logs directory of each application instance. These logs can be accessed from the IBM Bluemix console or by using the cf logs and cf files commands.
-For example, to see the messages.log file, run the command:
+The standard Liberty logs, such as `messages.log` or the `ffdc` directory, are available in IBM Bluemix in the `logs` directory of each application instance. These logs can be accessed from the IBM Bluemix console or via the CF CLI. For example:
+
+1. To access recent logs for an app, run the following command:
 ```
-    $ cf files <yourappname> logs/messages.log
+    $ cf logs --recent <appname> 
 ```
 {: codeblock}
 
-The log level and other trace options can be set through the Liberty configuration file. For more information, see [Liberty profile: Trace and logging](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html?cp=SSAW57_8.5.5%2F3-17-0-0). Tracing can also be adjusted on a running application instance by using the IBM Bluemix console.
+2. To see the `messages.log` file of an app running on a DEA node, run the following command:
+```
+    $ cf files <appname> logs/messages.log
+```
+{: codeblock}
+
+3. To see the `messages.log` file of an app running on a Diego cell, run the following command:
+```
+    $ cf ssh <appname> -c "cat logs/messages.log"
+```
+{: codeblock}
+
+The log level and other trace options can be set through the Liberty configuration file. For more information, see [Liberty profile: Trace and logging](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). Tracing can also be adjusted on a running application instance by using the IBM Bluemix console.
 
 ## Using the trace and dump capabilities
 {: #using_trace_and_dump}
 
-In the IBM Bluemix user interface, there are trace and dump capabilities.
-* Use Trace to view and update the Liberty logging traceSpecification on running application instances.
-* Use Dump to create thread and heap dumps on running application instances.
+The Liberty tracing configuration can be adjusted for a running application directly from the IBM Bluemix console. The console also provides capability for requesting and downloading thread and heap dumps. In order to adjust the tracing configuration or request a dump, select a Liberty application in the Bluemix console and choose the `Runtime` menu in the navigation. In the `Runtime` view, select an instance and press the *TRACE* or *DUMP* button. If adjusting the trace level, see [Liberty profile: Trace and logging](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) for the details of the syntax of the trace specification.
 
-To do this action, select a Liberty application in the user interface. In the category Runtime in the navigation, you can open the instance details. Select an instance or multiple instances. In the Actions menu, you can choose TRACE or DUMP.
+### Diego: triggering dumps via SSH
+
+For an application running in a Diego cell, it is also possible to trigger a thread and heap dump via CF CLI using the SSH feature. For example:
+```
+$ cf ssh <appname> -c "pkill java"
+```
+{: codeblock}
+
+See the documentation below for details on downloading the generated dump files.
 
 ## Download dump files
 {: #download_dumps}
 
-<strong>Prerequisite:</strong>
-* [Install CF CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
-* [Install Diego-Enabler plugin](https://github.com/cloudfoundry-incubator/Diego-Enabler) if your application runs in Diego
+By default, the various dump files are placed in the `dumps` directory of the application container.
 
-<strong>If your application runs in DEA, use the following steps:</strong>
+### DEA application
+
+For an application running in a DEA node, use the "cf files" functionality to view and download the dump files.
+
+* To see the generated dumps, run the following command:
+
+  ```
+  $ cf files <appname> dumps
+  ```
+  {: codeblock}
+
+
+* To download a dump file, run the following commands:
   
-1. get app_guid
-```
-$ cf app <app_name> --guid
-```
+    1. Get application GUID
+    ```
+    $ cf app <appname> --guid
+    ```
+    {: codeblock}
 
-2. download dump file
-```
-$ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
-```
+    2. Download dump file
+    ```
+    $ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
+    ```
+    {: codeblock}
 
-<strong>If your application runs in Diego, use the following steps:</strong>
-  
-1. get app_guid
-```
-$ cf app <app_name> --guid
-```
+### Diego application
 
-2. get app_ssh_endpoint(host and port) and app_ssh_host_key_fingerprint
-```
-$ cf curl /v2/info
-```
+For an application running in a Diego cell, use the "cf ssh" functionality to view and download the dump files.
 
-3. get ssh-code for scp command
-```
-$ cf ssh-code
-```
+* To see the generated dumps, run the following command:
 
-4. scp remote dump file to local, use ssh-code when prompted for a password
-```
-$ scp -P <app_ssh_endpoint_port> -o User=cf:<app_guid>/<instance_id> <app_ssh_endpoint_host>:/home/vcap/dumps/<dump_file_name> <local_dump_file_name>
-```
+  ```
+  $ cf ssh <appname> -c "ls -l dumps"
+  ```
+  {: codeblock}
 
-Refer to [Accessing Apps with SSH](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) for more details
+* To download a dump file, run the following command:
 
+  ```
+  $ cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  ```
+  {: codeblock}
+
+It is also possible to use `scp` and other similar tools to view and download the dump files. Refer to [Accessing Apps with SSH](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) for more information.
 
 # rellinks
 {: #rellinks}
