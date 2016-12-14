@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-14"
+lastupdated: "2016-12-07"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,14 +19,6 @@ is a modular open source framework for building .NET web applications.
 They combine to enable modern, cloud-based web applications.
 {: shortdesc}
 
-# Supported versions
-{: #supported_versions}
-This buildpack supports the following versions, those marked as deprecated will be removed in a future buildpack release:
-
-1. .NET Core 1.0.0-rc2-final (beta) (deprecated)
-2. .NET Core 1.0.0
-3. .NET Core 1.0.1
-
 ## Detection
 {: #detection}
 The Bluemix ASP.NET Core buildpack is used if there are one or more folders containing both a project.json and at least one .cs file anywhere in the application,
@@ -40,6 +32,16 @@ The Bluemix ASP.NET Core buildpack is used if there are one or more folders cont
 ## Runtime versions
 {: #runtime_versions}
 
+### Supported versions
+{: #supported_versions}
+This buildpack supports the following versions, those marked as deprecated will be removed in a future buildpack release.  See [Microsoft's support statement for LTS and Current releases](https://www.microsoft.com/net/core/support).
+
+| .NET Core runtime version | .NET CLI version        | Release type | Default |
+|---------------------------|-------------------------|--------------|---------|
+| 1.0.0 (deprecated)        | 1.0.0-preview2-003121   | LTS          |         |
+| 1.0.1                     | 1.0.0-preview2-003131   | LTS          |    X    |
+| 1.1.0                     | 1.0.0-preview2-1-003177 | Current      |         |
+
 ### Specifying the .NET CLI version
 
 Control the .NET CLI version with an optional global.json in the application's root directory. For example:
@@ -47,15 +49,16 @@ Control the .NET CLI version with an optional global.json in the application's r
    {
       "projects": [ "src" ],
       "sdk": {
-        "version": "1.0.0-preview2-003121"
+        "version": "1.0.0-preview2-003131"
       }
    }
 ```
 {: codeblock}
 
-For a list of supported CLI versions see [Latest Updates to the ASP.NET Core Buildpack](/docs/runtimes/dotnet/updates.html). If not specified, the most current stable Release Candidate is used.
+If not specified, the latest Long-term-support (LTS) runtime is used.
 
-### Customizing NuGet package sources
+## Customizing NuGet package sources
+{: #customizing_nuget_package_sources}
 
 Control where your application's dependencies are downloaded from in the NuGet.Config file in the application's root directory. For example:
 ```
@@ -93,11 +96,18 @@ To publish an application issue a command such as:
 ```
 {: codeblock}
   
-The app can then be pushed from the
+For self-contained applications, the app can then be pushed from the
 ```
   bin/<Debug|Release>/<framework>/<runtime>/publish
 ```
 {: codeblock}
+directory.
+
+For portable applications, the app can be pushed from the
+```
+  bin/<Debug|Release>/<framework>/publish
+```
+{:codeblock}
 directory.
 
 Also note that if you are using a manifest.yml file in your application, you can specify the path to the publish output folder in your manifest.yml.  Then you don't have to be in that folder when you push the application.
@@ -110,15 +120,11 @@ To deploy an app which contains multiple projects, you will need to specify whic
 For example if a solution which contains three projects, *MyApp.DAL*, *MyApp.Services*, and *MyApp.Web* in the *src* folder, and *MyApp.Web* is the main project, the format of the .deployment file would be as follows:
 ```
   [config]
-  project = src/MyApp.Web
+  project = src/MyApp.Web/MyApp.Web.xproj
 ```
 {: codeblock}
 
-In this example, the buildpack would automatically compile the *MyApp.DAL* and *MyApp.Services* projects if they are listed as dependencies in the project.json file for *MyApp.Web*, but the buildpack would only attempt to execute the main project, *MyApp.Web*, with dotnet run -p src/MyApp.Web. The path to *MyApp.Web*, assuming this project is an xproj project, could also be specified as 
-```
-  project = src/MyApp.Web/MyApp.Web.xproj 
-```
-{: codeblock}
+In this example, the buildpack would automatically compile the *MyApp.DAL* and *MyApp.Services* projects if they are listed as dependencies in the project.json file for *MyApp.Web*, but the buildpack would only attempt to execute the main project, *MyApp.Web*, with dotnet run -p src/MyApp.Web.
 
 ## Configuring your application to listen on the proper port
 {: #configuring_listen_proper_port}
@@ -191,6 +197,28 @@ In Program.cs `Main` method, remove the following line:
 {: codeblock}
 
 These changes should allow the .NET CLI to find your application's `Views` as they will now be copied to the build output when the `dotnet run` command executes.  If your application has any other files, such as json configuration files, which are required at runtime then you should also add those to the `include` section of `copyToOutput` in the project.json file.
+
+## Disabling the NuGet Package Cache
+{: #disabling_the_nuget_package_cache}
+
+In some situations it may be necessary to clear the NuGet package cache for your application.  Doing so will clear any existing cached NuGet packages and prevent the buildpack from caching any new packages.
+
+You can do this by setting the `CACHE_NUGET_PACKAGES` environment variable to `false` using the CloudFoundry CLI:
+
+```shell
+  cf set-env &lt;app_name&gt; CACHE_NUGET_PACKAGES false
+```
+
+Alternatively, you can set the `CACHE_NUGET_PACKAGES` environment variable to `false` in your application's manifest.yml file:
+
+```yml
+---
+applications:
+- name: sample-aspnetcore-app
+  memory: 512M
+  env:
+    CACHE_NUGET_PACKAGES: false
+```
 
 ## Troubleshooting FAQ
 {: #troubleshooting_faq}

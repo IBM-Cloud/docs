@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-06"
+lastupdated: "2016-12-07"
 
 ---
 
@@ -14,6 +14,12 @@ lastupdated: "2016-10-06"
 
 
 A list of the latest updates in the aspnet buildpack.
+
+## Dec 9, 2016: Updated ASP.NET Core buildpack v1.0.6-20161205-0912
+
+* Add support for .NET Core 1.1.0
+* Remove support for .NET Core 1.0.0 RC2
+* Add an option to clear NuGet packages cache
 
 ## Oct 10, 2016: Updated ASP.NET Core buildpack v1.0.1-20161005-1225
 
