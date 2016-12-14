@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-12-13"
+lastupdated: "2016-12-14"
 
 ---
 
@@ -215,7 +215,7 @@ You can configure {{site.data.keyword.ghe_short}} as a tool integration in your 
 ## Configuring a custom tool (Other Tool)
 {: #othertool}
 
-If your team uses a tool that isn't included on the toolchains integrations list, you can integrate a custom tool. 
+If your team uses a tool that isn't included in the toolchains integrations list, you can integrate a custom tool. 
 
 Configure a custom tool so that it works with other tools in your toolchain and is available to your team:
 
@@ -224,13 +224,13 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Other Tool**.
 1. Type the tool name.
-1. Select the Lifecycle phase that is most closely associated with the tool. The lifecycle phase choice determines which category your tool is listed under on the Overview page.
-1. Add an icon URL. The icon will be shown on your tool's integration card.
+1. Select the lifecycle phase that is most closely associated with the tool. This selection determines which category your tool is listed under on the Overview page.
+1. Add an icon URL. The icon will be shown on your tool integration's card.
 1. Add a documentation URL.
 1. Specify a tool instance name. For example: My Team Tool.
-1. Add a tool instance URL. Clicking the tool integration card leads to the URL you list for the tool instance.
+1. Add a tool instance URL. This URL opens whenever the tool integration's card is clicked. 
 1. Add a description of your tool.
-1. (Advanced) Add more properties if required. For example, list any information or attributes that are required for your tool to integrate with other tools in your toolchain.  
+1. (Advanced) Add more properties as needed. For example, list any information or attributes that are required for your tool to integrate with other tools in the toolchain.  
 1. Click **Create Integration**.
 
 To learn more, see [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} ![External link icon](images/launch--glyph.svg).
