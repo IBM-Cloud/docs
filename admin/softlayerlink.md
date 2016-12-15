@@ -112,7 +112,7 @@ When you check out your order as a new customer, you are asked for an email addr
 ### Enabling users to switch to IBMid
 {: #link_accounts_resellers}
 
-In some cases, before a user can switch to an IBMid, a reseller or distrubutor must enable the account to use IBMid authentication. 
+In some cases, before a user can switch to an IBMid, a reseller or distributor must enable the account to use IBMid authentication. 
 
  * To enable an existing account with legacy SoftLayer credentials to use IBMid authentication, [Contact IBM support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) to enable IBMid migration. This must be enabled for each existing end user account that you want to link to a {{site.data.keyword.Bluemix_notm}} account.
  
