@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-08"
 
 ---
 
@@ -12,9 +13,53 @@ copyright:
 # Ultimi aggiornamenti
 {: #latest_updates}
 
-*Ultimo aggiornamento: 13 giugno 2016*
-
 Un elenco degli aggiornamenti più recenti al servizio.
+
+## 8 novembre 2016: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} aggiornato 
+
+* Aggiunta la capacità per i client di richiedere un indirizzo [IP pubblico](networkEnvironment.html#networkEnvironment) per le loro VM di WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+* Sono state risolte [molte vulnerabilità di sicurezza](http://www-01.ibm.com/support/docview.wss?uid=swg21993842){: new_window} che riguardavano WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} incluse:
+  * Una vulnerabilità in IBM WebSphere Application Server che può consentire ad aggressori in remoto di eseguire il codice Java arbitrario con un oggetto serializzato da origini non attendibili.
+  * Una vulnerabilità DoS (Denial of Service) causata da una lettura non compresa nell'intervallo nella funzione TS_OBJ_print_bio. Un aggressore in remoto può avvalersi di questa vulnerabilità utilizzando un file di data/ora creato appositamente per causare l'arresto anomalo dell'applicazione.
+  * Una vulnerabilità potenziale in OpenSSL che può consentire a un aggressore in remoto di ottenere informazioni sensibili, causata da un errore nel Triple-DES nella crittografia a blocchi a 64-bit, utilizzato come parte del protocollo SSL/TLS. Acquisendo una grande quantità di traffico crittografato tra il server e il client SSL/TLS, un aggressore in remoto in grado di effettuare un attacco MiTM (Man-in-the-Middle) può sfruttare questa vulnerabilità per recuperare i dati di testo non crittografato e ottenere informazioni sensibili. Questa vulnerabilità è conosciuta come attacco SWEET32 Birthday.
+  * OpenSSL è vulnerabile a DoS (Denial of Service). Richiedendo ripetutamente la rinegoziazione, un aggressore autenticato in remoto potrebbe inviare un'estensione della richiesta dello stato OCSP eccessivamente grande per consumare tutte le risorse di memoria disponibili.
+  * OpenSSL è vulnerabile a DoS (Denial of Service), causato da un overflow di numeri interi nella funzione MDC2_Update. Utilizzando dei vettori di attacco sconosciuti, un aggressore in remoto può avvalersi di questa vulnerabilità per attivare una scrittura non compresa nell'intervallo e causare l'arresto anomalo dell'applicazione.
+  * Una vulnerabilità potenziale in OpenSSL che consente a un aggressore in remoto di ottenere informazioni sensibili, causata da un errore nell'implementazione DSA che consente l'aggiunta di un percorso di codice dell'ora non costante per alcune operazioni. Un aggressore in remoto può avvalersi di questa vulnerabilità utilizzando una attacco di timing nella cache per recuperare la chiave DSA privata.
+  * OpenSSL è vulnerabile a DoS (Denial of Service), causato dalla mancanza dei controlli di lunghezza del messaggio durante l'analisi dei certificati. Un aggressore autenticato in remoto può avvalersi di questa vulnerabilità per attivare una lettura compresa nell'intervallo e causare un attacco Denial of Service.
+
+## 19 settembre 2016: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} aggiornato
+
+* I file binari di WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} sono stati aggiornati in modo che la nuova istanza di WebSphere Application Server Liberty (Piani Core e ND) abbia installato il fixpack 16.0.0.3.
+* Sono state risolte [molte vulnerabilità di sicurezza](http://www-01.ibm.com/support/docview.wss?uid=swg21990236){: new_window} che riguardavano WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} incluse:
+  * Una vulnerabilità in IBM WebSphere Application Server Liberty che può consentire ad aggressori in remoto di effettuare attacchi di pishing.
+  * Una vulnerabilità in IBM WebSphere Application Server Liberty di XSS (Cross-Site Scripting) nei client OpenID Connect.
+  * Una vulnerabilità potenziale in IBM WebSphere Application Server Liberty che può consentire ad aggressori in remoto di ottenere informazioni sensibili causata dalla gestione non corretta delle eccezioni quando una pagina dell'errore predefinita non esiste.
+  * Un vulnerabilità in Apache Tomcat per un DoS (Denial of Service), causata da un errore nel componente Apache Commons FileUpload.
+  * Una vulnerabilità in IBM WebSphere Application Server e IBM WebSphere Application Server Liberty che può consentire ad aggressori in remoto di ottenere informazioni sensibili, causata dalla gestione non corretta delle risposte in alcune condizioni. 
+  * Una vulnerabilità non specificata correlata al componente di rete che non ha un impatto di confidenzialità, di bassa integrazione e nessuna disponibilità.
+
+## 17 agosto 2016: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} aggiornato
+
+* I file binari di WebSphere Application Server for Bluemix sono stati aggiornati dalla 8.5.5.9 alla 8.5.5.10
+* Sono state risolte [molte vulnerabilità di sicurezza](http://www-01.ibm.com/support/docview.wss?uid=swg21988710){: new_window} che riguardavano WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} incluse:
+  * Le vulnerabilità Apache Struts che riguardano WebSphere Application Server e la console di gestione WebSphere Application Server Hypervisor Edition.
+  * Una vulnerabilità DoS (Denial of Service) potenziale con IBM WebSphere Application Server quando si utilizzano i servizi SIP.
+  * Le vulnerabilità server che potevano riguardare il IBM HTTP Server utilizzato da WebSphere Application Server.
+  * Una vulnerabilità che consente il reindirizzamento del traffico HTTP con le applicazioni CGI che può influenzare il IBM HTTP Server (IHS). Questa vulnerabilità è conosciuta come "HTTPOXY".
+  * Una vulnerabilità di divulgazione delle informazioni in IBM WebSphere Application Server.
+  * Una vulnerabilità di sicurezza di bypass potenziale in IBM WebSphere Application Server che si verifica solo negli ambienti con la proprietà personalizzata di contenitore HttpSessionIdReuse abilitata.
+
+
+## 24 giugno 2016: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} aggiornato
+
+* Aggiunta la possibilità per i clienti di scegliere tra la V8.5 e la V9.0 quando creano una nuova istanza *Traditional ND* o *Traditional WebSphere*.
+* I file binari di WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} sono stati aggiornati in modo che la nuova istanza di WebSphere Application Server Liberty (Piani Core e ND) abbia installato il fixpack 16.0.0.2. 16.0.0.2 è il fixpack successivo a 8.5.5.9. Come parte di 16.0.0.2, tutte le funzioni facoltative intitolate Liberty supportate per questi piani sono installate per impostazioni predefinita.
+* Sono state risolte [molte vulnerabilità di sicurezza](http://www-01.ibm.com/support/docview.wss?uid=swg21984977){: new_window} che riguardavano WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} incluse:
+  * Una vulnerabilità XML External Entity Injection (XXE) in Apache Standard Taglibs che riguardava IBM WebSphere Application Server.
+  * Una sicurezza potenziale più debole del previsto durante l'utilizzo della funzione WebSphere Application Server Liberty profile API Discovery e della documentazione Swagger.
+  * Una vulnerabilità di divulgazione delle informazioni potenziale nel Admin Center per IBM WebSphere Application Server Liberty.
+  * Una vulnerabilità di suddivisione della risposta HTTP in IBM WebSphere Application Server.
+  * Le vulnerabilità OpenSSL divulgate il 3 maggio 2016 dal progetto OpenSSL.
 
 ## 13 giugno 2016: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} aggiornato
 
