@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-08"
 
 ---
 
@@ -11,10 +12,31 @@ copyright:
 
 # Últimas actualizaciones
 {: #latest_updates}
-Última actualización: 17 de agosto de 2016
-{: .last-updated}
 
 Lista con las últimas actualizaciones del servicio.
+
+## 8 de noviembre de 2016: Se ha actualizado WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* Se ha añadido a los clientes capacidad para solicitar una dirección [IP pública](networkEnvironment.html#networkEnvironment) para su WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} VM
+* Se han corregido [varias vulnerabilidades de seguridad](http://www-01.ibm.com/support/docview.wss?uid=swg21993842){: new_window} que afectan a WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}, incluidas las siguientes:
+  * Una vulnerabilidad en IBM WebSphere Application Server que permitía a atacantes remotos ejecutar código Java arbitrario con un objeto serializado desde orígenes no fiables. 
+  * Una vulnerabilidad de denegación de servicio causada por una lectura fuera de límite en la función TS_OBJ_print_bio. Un atacante remoto podía aprovechar esta vulnerabilidad utilizando un archivo con una indicación de fecha y hora especialmente adaptada para hacer que la aplicación se bloqueara. 
+  * Una potencial vulnerabilidad en OpenSSL que permitía a un atacante remoto obtener información confidencial, ocasionada por un error en Triple-DES en la cifra de bloque de 64 bits que se utiliza como parte del protocolo SSL/TLS. Mediante la captura de grandes cantidades de tráfico cifrado entre el servidor SSL/TLS y el cliente, un atacante remoto capaz de realizar un ataque de tipo man-in-the-middle podía aprovechar esta vulnerabilidad para recuperar los datos de texto din cifrar y obtener información confidencial. Esta vulnerabilidad se conoce como ataque SWEET32 Birthday. 
+  * OpenSSL es vulnerable a la denegación de servicio. Mediante la solicitud repetida de renegociación, un atacante remoto autenticado podría enviar una extensión de OCSP Status de gran tamaño para consumir todos los recursos de memoria disponibles. 
+  * OpenSSL es vulnerable a una denegación de servicio debido a un desbordamiento de enteros de una función MDC2_Update. Mediante el uso de vectores de ataque desconocidos, un atacante remoto podía aprovechar esta vulnerabilidad para activar una grabación fuera de límites y hacer que la aplicación se bloqueara. 
+  * Una potencial vulnerabilidad en OpenSSL que permitía a un atacante remoto obtener información confidencial, ocasionada por un error en la implementación de DSA que permite el seguimiento de una vía de acceso de código en tiempo no constante para ciertas operaciones. Un atacante podía aprovechar esta vulnerabilidad utilizando un ataque de sincronización de caché para recuperar la clave DSA privada. 
+  * OpenSSL es vulnerable a una denegación de servicio debido a la falta de comprobaciones de la longitud de los mensajes cuando se analizan certificados. Un atacante remoto autenticado podía aprovechar esta vulnerabilidad para activar una lectura fuera de límites y ocasionar una denegación de servicio. 
+
+## 19 de septiembre de 2016: Se ha actualizado WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* Se han actualizado los archivos binarios de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} de modo que las nuevas instancias de WebSphere Application Server Liberty (Core y ND Plans) tengan el fixpack 16.0.0.3 instalado. 
+* Se han corregido [varias vulnerabilidades de seguridad](http://www-01.ibm.com/support/docview.wss?uid=swg21990236){: new_window} que afectan a WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}, incluidas las siguientes:
+  * Una vulnerabilidad en IBM WebSphere Application Server Liberty que permitía a un atacante remoto realizar ataques de tipo phishing. 
+  * Una vulnerabilidad en IBM WebSphere Application Server Liberty que permitía cruzar scripts en clientes de OpenID Connect. 
+  * Una potencial vulnerabilidad en IBM WebSphere Application Server Liberty que permitía a un atacante remoto obtener información confidencial debido al manejo incorrecto de excepciones cuando no existe una página de error predeterminada. 
+  * Una vulnerabilidad en Apache Tomcat frente a una denegación de servicio, ocasionada por un error en el componente Apache Commons File Upload. 
+  * Una vulnerabilidad en IBM WebSphere Application Server e IBM WebSphere Application Server Liberty que permitía a un atacante remoto obtener información confidencial debido al manejo incorrecto de respuestas bajo determinadas circunstancias. 
+  * Una vulnerabilidad no especificada relacionada con el componente Networking que no afecta a la confidencialidad ni a disponibilidad y tiene un bajo impacto sobre la integridad. 
 
 ## 17 de agosto de 2016: Se ha actualizado WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 

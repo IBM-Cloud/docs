@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-01"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,8 +11,6 @@ copyright:
 
 # 開始使用 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #getting_started}
-前次更新：2016 年 8 月 25 日
-{: .last-updated}
 
 {{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} 服務可協助您在 {{site.data.keyword.Bluemix_notm}} 管理之雲端環境中的預先配置 WebSphere Application Server Liberty、傳統 Network Deployment 或傳統 WebSphere Java EE 實例上快速設定。
 {: shortdesc}
@@ -26,19 +24,24 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 提供消費
 
 您會有熟悉的 WebSphere 管理經驗，以及具有基礎作業系統的完整存取權。您可以重複使用現有 Script，並進行需要的少量系統調整，以便搭配您自己或協力廠商的架構來使用。「管理中心」及「管理主控台」的提供目的是管理 WebSphere Application Server Liberty、ND 或傳統服務（就像內部部署 WebSphere 配置一樣）。
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment Plan 包含具有兩個以上虛擬機器的 WebSphere Application Server Network Deployment Cell 環境。第一個虛擬機器包含「部署管理程式」和 IBM HTTP Server，而其餘虛擬機器包含與「部署管理程式」聯合的自訂節點（節點代理程式）。使用現有 wsadmin Script 來建立 WebSphere 配置，或使用「WebSphere 管理主控台」來手動配置環境。這些新的功能容許使用者設定叢集環境以獲得高可用性、失效接手及可擴充性。叢集作業是任何中介軟體企業應用程式的重要部分，而且用戶端現在可以選擇對拓蹼進行叢集處理，以負載平衡兩個以上「實例」的要求。
+「WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment 方案」包含具有兩個以上虛擬機器的 WebSphere Application Server Network Deployment Cell 環境。第一個虛擬機器包含「部署管理程式」和 IBM HTTP Server，而其餘虛擬機器包含與「部署管理程式」聯合的自訂節點（節點代理程式）。使用現有 wsadmin Script 來建立 WebSphere 配置，或使用「WebSphere 管理主控台」來手動配置環境。這些新的功能容許使用者設定叢集環境，這對於任何中介軟體企業應用程式而言都是關鍵的一環。用戶端現在可以選擇對拓蹼進行叢集處理，以負載平衡兩個以上「實例」的要求。
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core Plan 包括使用「Liberty 群體」。「Liberty 群體」是一組 Liberty 設定檔（伺服器）的管理網域，其中包含兩個以上的虛擬機器。第一個虛擬機器包含 Collective Controller Liberty 伺服器（即 Liberty Collective 的控制點）。除了 Liberty Collective 之外，此虛擬機器也會包含 IBM HTTP Server，其容許從 Web 瀏覽器存取應用程式。其餘虛擬機器是群體成員所在的群體主機（Liberty 設定檔伺服器）。在 Liberty 控制器伺服器上也會啟用「Liberty 管理中心」特性。
+「WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core 方案」包括使用 Liberty Collective。Liberty Collective 是一組 Liberty 設定檔（伺服器）的管理網域，其中包含兩個以上的虛擬機器。第一個虛擬機器包含 Collective Controller Liberty 伺服器（即 Liberty Collective 的控制點）。除了 Liberty Collective 之外，此虛擬機器也會包含 IBM HTTP Server，其容許從 Web 瀏覽器存取應用程式。其餘虛擬機器是群體成員所在的群體主機（Liberty 設定檔伺服器）。在 Liberty 控制器伺服器上也會啟用「Liberty 管理中心」特性。
 
 下圖顯示 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment Cell 及 Liberty Collective 環境的架構。
 
+圖 1. Network Deployment Cell 及 Liberty Collective 的架構
+
 ![圖 1. Network Deployment Cell 及 Liberty Collective 的架構](images/CellCollectiveDiagram.gif)
+
+**附註**：在上面的*圖 1* 中，敘述 Deployment Manager 或 Collective 控制器與 IBM HTTP Server 並置的型樣，是針對開發與測試用途。WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 也讓您能自由地重新配置預先安裝的軟體，以符合您的正式作業應用程式和操作需要，就像內部部署的一樣。此外，如有最嚴格的正式作業需求，請與您的 IBM 業務代表聯絡，他可以為您介紹我們的單一租用戶 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 供應項目，提供隔離的網路與運算資源。
+
 
 ## 作業環境
 {: #operational_environment}
 
 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 是在共用環境中傳回訪客（虛擬機器）的服務，讓消費者部署應用程式。VPN 會保護公用服務抵禦通用埠掃描及其他自發網路型攻擊。不過，請一定要注意，您用來存取服務實例的服務 VPN
-可能會在多個 {{site.data.keyword.Bluemix_notm}} 組織與使用者之間共用。虛擬機器也會提供運算、記憶體及 I/O 資源，這些來自 IaaS 資源的共用儲存區。如果您要在專用環境中執行應用程式，請與能夠聯繫我們專用 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 產品與服務的 IBM 業務代表聯絡。
+可能會在多個 {{site.data.keyword.Bluemix_notm}} 組織與使用者之間共用。虛擬機器也會提供運算、記憶體及 I/O 資源，這些來自 IaaS 資源的共用儲存區。
 
 由於在共用環境中，運算、記憶體及 I/O 資源是由虛擬機器執行，因此服務配置可能會不同。透過 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服務儀表板及入口網站，可以檢視每個特定服務實例的配置。
 
@@ -51,7 +54,7 @@ IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 提供�
 
 下表呈現了截至 2016 年 4 月 1 日的 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 方案價格，計價單位是美元 (USD)。
 
-*表 1. Liberty 核心方案*
+*表 1. Liberty Core 方案*
 
 | **T 恤** | **vCPU** | **RAM (GB)** | **HD (GB)** | **價格/小時** |       
 |:-------------:|:----------:|:--------------:|:-------------:|:--------------:|

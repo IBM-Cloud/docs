@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-01"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,8 +11,6 @@ copyright:
 
 # IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 入门
 {: #getting_started}
-上次更新时间：2016 年 8 月 25 日
-{: .last-updated}
 
 {{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} 是一种服务，有助于您在 {{site.data.keyword.Bluemix_notm}} 的托管云环境中快速设置预配置的 WebSphere Application Server Liberty、传统 Network Deployment 或传统 WebSphere Java EE 实例。
 {: shortdesc}
@@ -27,20 +25,25 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 为使用者
 
 为您提供了熟悉的 WebSphere 管理体验，并且您对底层的操作系统具有完全访问权。您可以复用现有脚本，并视需要进行一些系统微调，以便与您自己的或第三方的框架搭配使用。系统提供了管理中心和管理控制台来管理 WebSphere Application Server Liberty、ND 或传统服务，就像内部部署 WebSphere 配置那样。
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment 套餐包含带有两个或更多虚拟机的 WebSphere Application Server Network Deployment 单元环境。第一个虚拟机包含 Deployment Manager 和 IBM HTTP Server，而其余的虚拟机包含联合到 Deployment Manager 的定制节点（节点代理程序）。使用现有的 wsadmin 脚本来创建 WebSphere 配置，或者使用 WebSphere 管理控制台来手动配置环境。这些新功能允许用户设置集群环境，以用于高可用性、故障转移和可扩展性。集群是任何中间件企业应用程序的一个关键方面，并且客户现在可以选择建立拓扑集群，以实现两个或更多实例之间的请求负载平衡。
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment 套餐包含带有两个或更多虚拟机的 WebSphere Application Server Network Deployment 单元环境。第一个虚拟机包含 Deployment Manager 和 IBM HTTP Server，而其余的虚拟机包含联合到 Deployment Manager 的定制节点（节点代理程序）。使用现有的 wsadmin 脚本来创建 WebSphere 配置，或者使用 WebSphere 管理控制台来手动配置环境。这些新功能允许用户设置集群环境，这是任何中间件企业应用程序的一个关键方面。现在，客户可以选择建立拓扑集群，以实现两个或更多实例之间的请求负载平衡。
 
 
 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core 套餐包含使用 Liberty 集合。Liberty 集合是 Liberty 概要文件（服务器）组的管理域，该集合由两个或更多虚拟机组成。第一个虚拟机包含 Collective Controller Liberty 服务器作为 Liberty 集合的控制点。除了 Liberty 集合之外，此虚拟机还包含 IBM HTTP Server，允许从 Web 浏览器访问应用程序。其余的虚拟机是集合成员（Liberty 概要文件服务器）所在的集合主机。同时还在 Liberty 控制器服务器上启用了 Liberty 管理中心功能。
 
 下图显示了 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment 单元和 Liberty 集合环境的体系结构。
 
+图 1. Network Deployment 单元和 Liberty 集合的体系结构
+
 ![图 1. Network Deployment 单元和 Liberty 集合的体系结构](images/CellCollectiveDiagram.gif)
+
+**注**：在以上*图 1* 中，描述 Deployment Manager 或 Collective 控制器与 IBM HTTP Server 并置的模式用于开发和测试目的。WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 还允许您重新配置预安装的软件，以满足生产应用程序和操作需求，就像内部部署一样。有关最严格生产需求，请联系 IBM 销售代表，他们可以介绍单租户 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 产品，该产品提供单独的网络和计算资源。
+
 
 ## 运营环境
 {: #operational_environment}
 
 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 是一种在共享环境中返回访客（虚拟机）供使用者部署应用程序的服务。VPN 可以使公共服务不用进行通用端口扫描，还可以使其免于遭受其他基于主动网络的攻击。但是，值得注意的是您用来访问服务实例的服务 VPN 可
-能在多个 {{site.data.keyword.Bluemix_notm}} 组织和用户之间进行共享。虚拟机可提供计算资源、内存资源和 I/O 资源，这些资源都来自于 IaaS 资源共享池。如果要在专用环境中运行应用程序，请联系 IBM 销售代表，他们可为您介绍我们的专用 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 产品。
+能在多个 {{site.data.keyword.Bluemix_notm}} 组织和用户之间进行共享。虚拟机可提供计算资源、内存资源和 I/O 资源，这些资源都来自于 IaaS 资源共享池。
 
 由于虚拟机在共享环境中运行特定的计算资源、内存资源和 I/O 资源，因此服务配置可能会所有不同。通过 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服务仪表板和门户网站，可查看每个特定服务实例的配置。
 

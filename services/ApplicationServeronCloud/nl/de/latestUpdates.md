@@ -1,7 +1,8 @@
 ---
 
-copyright:
-  years: 2015, 2016
+Copyright:
+  Jahre: 2015, 2016
+Letzte Aktualisierung: 08.11.2016
 
 ---
 
@@ -11,10 +12,31 @@ copyright:
 
 # Letzte Aktualisierungen
 {: #latest_updates}
-Letzte Aktualisierung: 17. August 2016
-{: .last-updated}
 
 Eine Liste der neuesten Aktualisierungen für den Service.
+
+## 8. November 2016: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} aktualisiert
+
+* Möglichkeit für Kunden hinzugefügt, eine [öffentliche IP-Adresse](networkEnvironment.html#networkEnvironment) für die WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}-VM anzufordern.
+* Es wurden [verschiedene Sicherheitslücken](http://www-01.ibm.com/support/docview.wss?uid=swg21993842){: new_window} adressiert, die sich auf WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} auswirken; dazu gehören die folgenden:
+  * Eine Sicherheitslücke in IBM WebSphere Application Server, die es Remote-Angreifern ermöglicht, beliebigen Java-Code mit einem serialisierten Objekt aus nicht vertrauenswürdigen Quellen auszuführen.
+  * Eine Denial-of-Service-Sicherheitslücke, verursacht durch einen Lesevorgang außerhalb des gültigen Bereichs in der Funktion 'TS_OBJ_print_bio'. Ein Remote-Angreifer könnte diese Sicherheitslücke nutzen und den Absturz der Anwendung durch eine speziellentwickelte Zeitmarkendatei verursachen.
+  * Eine potenzielle Sicherheitslücke in OpenSSL, die einem Remote-Angreifer das Abrufen schutzwürdiger Informationen ermöglicht, verursacht durch einen Triple-DES-Fehler in der im SSL/TLS-Protokoll verwendeten 64-Bit-Blockverschlüsselung. Durch die Erfassung großer verschlüsselter Datenmengen zwischen dem SSL/TLS-Server und dem Client könnte ein Remote-Angreifer mit der Möglichkeit zur Durchführung einer Man-in-the-Middle-Attacke diese Sicherheitslücke nutzen, um die unverschlüsselten Daten und damitschutzwürdige Informationen abzurufen. Diese Sicherheitslücke wird auch 'SWEET32 Birthday-Attacke' genannt.
+  * Denial-of-Service-Sicherheitslücke bei OpenSSL. Durch die wiederholte Anforderung von Neuvereinbarungen könnte ein authentifizierter Remote-Angreifer eine übermäßig große OCSP Status Request Extension senden, um alle verfügbaren Speicherressourcen zu belegen.
+  * Denial-of-Service-Sicherheitslücke bei OpenSSL, verursacht durch einen Ganzzahlüberlauf in der Funktion 'MDC2_Update'. Ein Remote-Angreifer könnte diese Sicherheitslücke unter Verwendung unbekannter Angriffsvektoren nutzen, um einen Schreibvorgang außerhalb des gültigen Bereichs auszulösen und dadurch den Absturz der Anwendung zu verursachen.
+  * Eine potenzielle Sicherheitslücke in OpenSSL, die einem Remote-Angreifer das Abrufen schutzwürdiger Informationen ermöglicht, verursacht durch einen Fehler in der DSA-Implementierung, der bei bestimmten Operationen die Verfolgung eines nicht konstanten Zeitcodepfads ermöglicht. Ein Remote-Angreifer könnte diese Sicherheitslücke nutzen und den privaten DSA-Schlüssel mittels einer Cache-Timing-Attacke abrufen.
+  * Denial-of-Service-Sicherheitslücke bei OpenSSL, verursacht durch fehlende Überprüfung der Nachrichtenlänge beim Parsing von Zertifikaten. Ein authentifizierter Remote-Angreifer könnte diese Sicherheitslücke nutzen, um einen Lesevorgang außerhalb des gültigen Bereichs auszulösen und eine Serviceverweigerung zu verursachen.
+
+## 19. September 2016: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} aktualisiert
+
+* Upgrade der WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}-Binärdateien, damit für neue Instanzen von WebSphere Application Server Liberty (Core- und ND-Pläne) Fixpack 16.0.0.3 installiert wird. 
+* Es wurden [verschiedene Sicherheitslücken](http://www-01.ibm.com/support/docview.wss?uid=swg21990236){: new_window} adressiert, die sich auf WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} auswirken; dazu gehören die folgenden:
+  * Eine Sicherheitslücke in IBM WebSphere Application Server Liberty, die es einem Remote-Angreifern ermöglicht, Phishing-Attacken durchzuführen.
+  * Eine Sicherheitslücke in IBM WebSphere Application Server Liberty bezüglich Cross-Site Scripting in OIDC-Clients (OpenID Connect).
+  * Eine potenzielle Sicherheitslücke in IBM WebSphere Application Server Liberty, die Remote-Angreifern das Abrufen schutzwürdiger Informationen ermöglicht, verursacht durch die falsche Handhabung von Ausnahmebedingungen bei Nichtvorhandensein einer Standardfehlerseite.
+  * Eine Denial-of-Service-Sicherheitslücke in Apache Tomcat, verursacht durch einen Fehler in der Komponente 'Apache Commons FileUpload'.
+  * Eine Sicherheitslücke in IBM WebSphere Application Server und IBM WebSphere Application Server Liberty, die Remote-Angreifern das Abrufen schutzwürdiger Informationen ermöglicht, verursacht durch die falsche Handhabung von Antworten unter bestimmten Bedingungen.
+  * Eine nicht spezifizierte Sicherheitslücke in Verbindung mit der Netzkomponente, die keine Auswirkungen auf die Vertraulichkeit, geringe Auswirkungen auf die Integrität und keine Auswirkungen auf die Verfügbarkeit hat.
 
 ## 17. August 2016: WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} aktualisiert
 

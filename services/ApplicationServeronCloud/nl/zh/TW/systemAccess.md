@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-26"
 
 ---
 
@@ -11,11 +12,9 @@ copyright:
 
 #系統存取
 {: #system_access}
-前次更新：2016 年 8 月 17 日
-{: .last-updated}
 
 
-以下主題包括建立及管理服務實例的方法，以及如何存取系統以及如何設定存取系統的多種方法。
+本節討論建立及管理服務實例的方法，以及如何存取系統以及如何設定存取系統的多種方法。
 {: shortdesc}
 
 
@@ -27,7 +26,7 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的實例
 * 從 {{site.data.keyword.Bluemix_notm}} 使用者介面的 {{site.data.keyword.Bluemix_notm}}「型錄」及「服務儀表板」。
 * 藉由建立使用 RESTful API 的應用程式或 Script。
 
-透過使用遵循 Swagger 2.0 的 REST API，客戶能夠存取與透過入口網站和儀表板所提供功能的相同功能。如需所支援之 REST API 和資源的相關資訊，請參閱 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文件](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}。如需協助使用 REST API 的範例程式碼，請下載 Git Host 的 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 範例](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}。
+透過使用遵循 Swagger 2.0 的 REST API，客戶能夠存取與透過入口網站和儀表板所提供功能的相同功能。如需所支援之 REST API 和資源的相關資訊，請參閱 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 文件](https://wasaas-broker.ng.bluemix.net/wasaas-broker/api#/){: new_window}。如需示範 REST API 用法的範例程式碼，請下載由 Git 管理的 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} [REST API 範例](https://github.com/IBM-Bluemix/WebSphere-for-Bluemix-API-Usage){: new_window}。
 
 **附註：**建立服務實例之後，根據所建立的 T 恤尺碼，您的服務可能無法立即供使用。建議您查詢所傳回 JSON 的**狀態**欄位，以判斷服務實例的現行狀態。
 
@@ -48,14 +47,14 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的實例
 
 在您建立服務實例之後，即會將您帶至服務儀表板。按一下組織儀表板中的「服務」圖示，一律可以回到服務儀表板。從服務儀表板，您可以存取：
 
-*  此文件的鏈結
-*  下載必要 OpenVPN 配置檔的鏈結。
-*  啟動和停止虛擬機器的能力。一開始會啟動 VM。
-*  主機名稱。
-*  管理使用者及管理密碼。
-*  專用 SSH 金鑰。
-*  WebSphere® 管理使用者及管理密碼。
-*  「管理中心」及「管理主控台」URL。
+* 此文件的鏈結
+* 下載必要 OpenVPN 配置檔的鏈結
+* 啟動和停止虛擬機器的能力。一開始會啟動 VM
+* 主機名稱
+* 管理使用者及管理密碼
+* 專用 SSH 金鑰
+* WebSphere® 管理使用者及管理密碼
+* 「管理中心」及「管理主控台」URL
 
 **附註**：由於特定量的運算、記憶體和 I/O 資源，客戶會因為處理停止狀態的累計 VM，被收取減價 5% 的費用。客戶會被控制在固定數量的已停止實例，最多不超過 10 個 IP 位址或 64 GB 的記憶體。
 
@@ -63,14 +62,14 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 中的實例
 ## 為 WebSphere Application Server for Bluemix 實例設定 openVPN
 {: #setup_openvpn}
 
-需要有 OpenVPN，才能存取 Bluemix 虛擬機器上的任何 WebSphere Application Server。您必須安裝它，而且必須使用管理者專用權來執行它。  
+需要有 OpenVPN，才能存取 Bluemix 虛擬機器上的任何 WebSphere Application Server。必須使用管理者專用權來安裝及執行它。
 
 ### 使用下列指示，在 Windows 中設定 openVPN：
 
 1. 從 [openVPN Windows 下載](http://swupdate.openvpn.org/community/releases/)鏈結，下載
   * [openvpn-install-2.3.4-I001-x86_64.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-x86_64.exe){: new_window}（適用於 64 位元），或
   * [openvpn-install-2.3.4-I001-i686.exe](https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.4-I001-i686.exe){: new_window}（適用於 32 位元）。
-2. 確保[以 Windows 管理者身分執行](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window}，然後安裝 openVPN。
+2. 確定您[以 Windows 管理者身分執行](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window}且已安裝 openVPN。
 3. 在服務儀表板中，從 WebSphere Application Server for Bluemix 實例的 OpenVPN 下載鏈結下載 VPN 配置檔。將壓縮檔中的全部 4 個檔案解壓縮至 **{OpenVPN home}\config** 目錄。例如：
 
   <pre>  
@@ -80,7 +79,7 @@ C:\Program Files\OpenVPN\Config  </pre>
 4. 啟動 openVPN 用戶端程式 "OpenVPN GUI"。確保選取[以 Windows 管理者身分執行](https://technet.microsoft.com/en-us/magazine/ff431742.aspx){: new_window}來啟動程式。如果您沒有這麼做，則可能無法進行連接。
 
 ### 使用下列指示，在 Linux 中設定 openVPN：
-1. 若要安裝 openVPN，請遵循以下[指示](https://openvpn.net/index.php/access-server/docs/admin-guides/182-how-to-connect-to-access-server-with-linux-clients.html){: new_window}。
+1. 若要安裝 openVPN，請遵循[指示](https://openvpn.net/index.php/access-server/docs/admin-guides/182-how-to-connect-to-access-server-with-linux-clients.html){: new_window}。
   * 如果您需要手動下載及安裝 RPM 套件管理程式，請前往 [openVPN unix/linux 下載](https://openvpn.net/index.php/access-server/download-openvpn-as-sw.html){: new_window}。您可能需要 Linux 管理者的協助。
 3. 在服務儀表板中，從 WebSphere Application Server for Bluemix 實例的 OpenVPN 下載鏈結下載 VPN 配置檔。請將檔案解壓縮至您要從中啟動 openVPN 用戶端的目錄。您需要相同目錄中的所有四個檔案。
 3. 啟動 openVPN 用戶端程式。開啟終端機視窗，並移至包含配置檔案的目錄。以 root 身分執行下列指令：
@@ -107,8 +106,7 @@ $ ssh -V
   ```
   {: codeblock}
 
-您將收到與以下內容類似的回應：
-  
+下列訊息是回應的範例：
   ```
 OpenSSH_6.6p1, OpenSSL 1.0.1g 7 Apr 2014
   ```
@@ -116,7 +114,7 @@ OpenSSH_6.6p1, OpenSSL 1.0.1g 7 Apr 2014
 
 使用下列指示，設定 WebSphere Application Server for Bluemix VM 的 SSH 存取權：
 
-1. 在您第一次連接時檢閱出現的警告訊息「無法確定主機 x.x.x.x 的真實性」。這是正常狀況。系統提示時，請選取 yes。現在會在 VM 上為使用者 virtuser 安裝公開金鑰。
+1. 在您第一次連接時檢閱出現的警告訊息「無法確定主機 x.x.x.x 的真實性」。這是正常訊息。系統提示時，請選取 yes。現在會在 VM 上為使用者 virtuser 安裝公開金鑰。
 2. 使用私密金鑰登入 virtuser。為獲取最佳結果，請使用私密金鑰鑑別方法。
 3. 將私密金鑰內容複製至檔案。
 4. 執行以下指令：
@@ -160,13 +158,13 @@ Hostname 169.53.246.xxx
 ## 使用管理中心及管理主控台鏈結
 {: #console_links}
 
-當您按一下「管理中心」或「管理主控台」的鏈結時，可能會收到*未授信的連線*警告。確切的訊息文字會依瀏覽器而不同，而略過或刪除警告的確切步驟也會不同。
+當您按一下「管理中心」或「管理主控台」的鏈結時，可能會收到*未授信的連線* 警告。確切的訊息文字會依瀏覽器而不同，而略過或刪除警告的確切步驟也會不同。
 
 因為您是使用 {{site.data.keyword.IBM}} 所提供的鏈結，所以可以放心忽略該警告並進行連接。如果您的瀏覽器可以儲存安全異常狀況，則這麼做是防止未來發生警告的最簡單方式。
 
-另一個選項是匯出送入的簽章者憑證，然後將它匯入至您的瀏覽器，以作為授信主要憑證。此選擇需要您在 *hosts* 檔案中建立項目，以將 VM 的 IP 位址對映至憑證發行方的通用名稱。此名稱採用下列格式：wl<pureapplication.ibmcloud.com。如果您現在於 URL 中使用主機名稱，而非 IP 位址，則應該會全新地進行連接。您接著需要在 URL 中使用該主機名稱而非 IP 位址來存取「管理中心」或「管理主控台」。
+另一個選項是匯出送入的簽章者憑證，然後將它匯入至您的瀏覽器，以作為授信主要憑證。此選擇需要您在 *hosts* 檔案中建立項目，以將 VM 的 IP 位址對映至憑證發行方的通用名稱。此名稱採用下列格式：wl<pureapplication.ibmcloud.com。如果您現在於 URL 中使用主機名稱，而非 IP 位址，則可以全新地進行連接。您接著必須在 URL 中使用該主機名稱而非 IP 位址來存取「管理中心」或「管理主控台」。
 
-最後，客戶通常會針對他們設為外部的應用程式安裝自己的主要憑證。如需相關資訊，請參閱 [WebSphere Application Server](http://www.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/tsec_securecomm.html?cp=SSEQTP_8.5.5%2F1-11-2-6&lang=en){: new_window} 或 [Liberty Core](http://www.ibm.com/support/knowledgecenter/SSD28V_8.5.5/com.ibm.websphere.wlp.core.doc/ae/twlp_sec_comm.html?lang=en){: new_window} Knowledge Center。
+最後，客戶通常會針對他們設為外部的應用程式安裝自己的主要憑證。如需相關資訊，請參閱 [WebSphere Application Server](http://www.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/tsec_securecomm.html?cp=SSEQTP_8.5.5%2F1-11-2-6&lang=en){: new_window} 或 [Liberty Core](http://www.ibm.com/support/knowledgecenter/SSD28V_8.5.5/com.ibm.websphere.wlp.core.doc/ae/twlp_sec_comm.html?lang=en){: new_window} IBM Knowledge Center。
 
 ## 防火牆埠
 {: #firewall_ports}
@@ -188,4 +186,71 @@ Hostname 169.53.246.xxx
 
 若要指定多個埠，請用逗點 "," 予以區隔。
 
-**附註**：開啟埠的 sport 及 dport，已在防火牆的 INPUT 及 OUTPUT 區段中開啟。您必須使用 sudo，以 root 身分執行此 Script。您也可以直接修改 iptables。
+**附註**：已開啟之埠的 sport 與 dport，已在防火牆的 INPUT 與 OUTPUT 區段開啟。您必須使用 sudo，以 root 身分執行此 Script。您也可以直接修改 iptables。
+
+## 配置 Web 伺服器
+{: #configure_webserver}
+
+當您佈建 Cell 或群體時，會得到預先配置的環境。具體而言，對於傳統的 Network Deployment Cell，您會收到下列環境：
+
+* 與 IBM HTTP Server 並置的部署管理程式，用於開發及測試用途。
+
+* 聯合至部署管理程式的自訂節點。
+
+* 部署管理程式、IHS 伺服器以及節點代理程式，全都在一開始時佈建為 STARTED 狀態。
+
+如果您需要 Web 伺服器處理所有使用者要求，則在部署應用程式之後，可能需要產生並傳播外掛程式。
+
+**避免麻煩：**在產生並傳播外掛程式之前，請確定已完成下列必要作業：
+
+* 在本端 Windows、Linux 或 Mac 環境中，確保已配置、啟動 [openVPN](systemAccess.html#setup_openvpn)，且您已連接到適當的的地區。
+
+* 從 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服務儀表板，按一下**開啟管理主控台**，並使用 wsadmin 和「服務儀表板」中所提供之「管理密碼」來登入。
+
+* 從管理主控台中，建立應用程式伺服器（例如，***server1***)，因為部署管理程式已與空的自訂節點聯合。
+
+* 啟動您建立的伺服器。
+
+* 在應用程式安裝期間，確保您的應用程式模組已對映到您剛啟動的伺服器，以及對映到 Web 伺服器（例如，***webserver1***）。
+
+下列高階步驟假設已完成必要作業：
+
+1. 從「管理主控台」的「環境」選項產生外掛程式：
+   1. 選擇「環境」>「更新廣域 Web 伺服器外掛程式配置」
+   2. 按一下**確定**或**改寫以產生新的外掛程式配置檔**
+2. 從「部署管理程式」，將外掛程式複製到 Web 伺服器配置：
+
+  ```
+   cp /opt/IBM/WebSphere/Profiles/DefaultDmgr01/config/cells/plugin-cfg.xml /opt/IBM/WebSphere/Plugins/config/webserver1/plugin-cfg.xml
+  ```
+  {: codeblock}
+3. 編輯 **IHS_HOME/conf**（例如，*/opt/IBM/WebSphere/HTTPServer/conf*）中的 **httpd.conf**)，並確保下列兩行存在：
+
+    ```
+    LoadModule was_ap22_module /opt/IBM/WebSphere/Plugins/bin/64bits/mod_was_ap22_http.so
+    WebSpherePluginConfig /opt/IBM/WebSphere/Plugins/config/webserver1/plugin-cfg.xml
+    ```
+    {: codeblock}  
+4. 使用這兩個指令開啟埠：
+
+  ```
+   export serverPorts=2810:TCP,2810:UDP,8880:TCP,8880:UDP,9101:TCP,9101:UDP,9061:TCP,9061:UDP,9080:TCP,9080:UDP,9354:TCP,9354:UDP,9044:TCP,9044:UDP,9443:TCP,9443:UDP,5060:TCP,5060:UDP,5061:TCP,5061:UDP,11005:TCP,11005:UDP,11007:TCP,11007:UDP,9633:TCP,9633:UDP,7276:TCP,7276:UDP,7286:TCP,7286:UDP,5558:TCP,5558:UDP,5578:TCP,5578:UDP
+
+   sudo /opt/IBM/WebSphere/AppServer/virtual/bin/openFirewallPorts.sh -ports $serverPorts -persist true
+  ```
+    {: codeblock}
+5. 使用下列兩個指令停止並啟動 Web 伺服器：
+    ```
+    sudo /opt/IBM/WebSphere/HTTPServer/bin/apachectl -k stop
+    sudo /opt/IBM/WebSphere/HTTPServer/bin/apachectl -k start
+    ```
+    {: codeblock}
+8. 透過外掛程式存取應用程式：
+  ```
+   http://169.53.246.xxx/contextRoot/
+  ```
+  {: codeblock}
+
+**附註：**所提供的步驟，代表當您試圖配置 Web 伺服器時的許多路徑之一。如需進一步的協助，請參閱 [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/search/configure%20web%20server?scope=SSAW57_9.0.0){: new_window}。
+
+**附註：**如果您無法存取應用程式，則可能面臨防火牆上的埠存取問題。因此，您可能需要重新啟動下列任何伺服器：應用程式伺服器、節點代理程式、Web 伺服器和部署管理程式。另外，您也可能需要存取 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服務儀表板，然後重新啟動每部虛擬機器。

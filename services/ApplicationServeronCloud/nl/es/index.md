@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-01"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,8 +11,6 @@ copyright:
 
 # Iniciación a IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #getting_started}
-Última actualización: 25 de agosto de 2016
-{: .last-updated}
 
 {{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} es un servicio que facilita una configuración rápida en una instancia pre-configurada de WebSphere Application Server Liberty, Traditional Network Deployment o Traditional WebSphere Java EE en un entorno de nube alojado en {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
@@ -26,9 +24,9 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} proporciona 
 
 Se le proporciona una experiencia de administración de WebSphere familiar y tiene acceso completo al sistema operativo subyacente. Puede reutilizar los scripts existentes y realizar los pequeños ajustes necesarios en el sistema para trabajar con infraestructuras propias o de terceros. El centro de administración y las consolas de administración se proporcionan para administrar su servicio de WebSphere Application Server Liberty, ND o tradicional, igual que las configuraciones de WebSphere locales.
 
-El Plan de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment consiste en un entorno de celdas de WebSphere Application Server Network Deployment con dos o más máquinas virtuales. La primera máquina virtual contiene el Gestor de despliegue e IBM HTTP Server y las demás máquinas virtuales contienen nodos personalizados (agentes de nodo) federados en el Gestor de despliegue. Utilice sus scripts wsadmin existentes para crear su configuración de WebSphere o utilizar WebSphere Admin Console para configurar manualmente el entorno. Estas nuevas funciones permiten a los usuarios configurar un entorno en clúster para obtener alta
-disponibilidad, migración tras error y escalabilidad. La agrupación en clúster
-es un aspecto crítico de cualquier aplicación empresarial de middleware y los clientes ahora pueden elegir agrupar en clúster una topología para cargar solicitudes de carga en dos o más instancias.
+El Plan de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment consiste en un entorno de células de WebSphere Application Server Network Deployment con dos o más máquinas virtuales. La primera máquina virtual contiene el Gestor de despliegue e IBM HTTP Server y las demás máquinas virtuales contienen nodos personalizados (agentes de nodo) federados en el Gestor de despliegue. Utilice sus scripts wsadmin existentes para crear su configuración de WebSphere o utilizar WebSphere Admin Console para configurar manualmente el entorno. Estas nuevas funciones permiten a los usuarios configurar un entorno en clúster, lo que constituye un aspecto básico para cualquier aplicación de empresa de middleware. 
+Ahora los clientes pueden optar por agrupar en clúster una topología para cargar solicitudes de carga en dos o más instancias.
+
 
 El plan de WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core incluye el uso de un Liberty Collective. Liberty Collective es un dominio administrativo para un grupo de perfiles de Liberty (servidores) y consta de dos o más máquinas virtuales. La
 primera máquina virtual contiene el servidor Collective Controller liberty, que es un punto de control
@@ -39,13 +37,17 @@ liberty). La función Liberty Admin Center también está activada en el servido
 
 En la figura siguiente se muestra la arquitectura de los entornos WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment Cell y Liberty Collective.
 
+Figura 1. Arquitectura de la célula de despliegue de red y Liberty colectivo
+
 ![Figura 1. Arquitectura de la célula de despliegue de red y de Liberty colectivo](images/CellCollectiveDiagram.gif)
+
+**Nota**: en la *Figura 1* anterior, el patrón que muestra la colocación de Deployment Manager o del controlador colectivo con IBM HTTP Server está pensado para entornos de desarrollo y de prueba. WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} también le ofrece la libertad de volver a configurar el software preinstalado para que se ajuste a sus requisitos operativos y de las aplicaciones de producción; al igual que lo haría con el entorno local. Además, para los requisitos de producción más estrictos, póngase en contacto con el representante de ventas de IBM, quien le dará información sobre la oferta IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} de un solo arrendatario, que ofrece recursos aislados de red y de cálculo. 
+
 
 ## Entorno operativo
 {: #operational_environment}
 
-IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} es un servicio que devuelve invitados (máquinas virtuales) en un entorno compartido para que los consumidores desplieguen aplicaciones. Una VPN protege el servicio público de exploraciones de puerto genéricas y otros ataques basados en red no solicitado. Sin embargo, es importante tener en cuenta que la VPN del servicio que se utiliza para acceder a la instancia de servicio puede compartirse entre varias organizaciones y usuarios de {{site.data.keyword.Bluemix_notm}}. Las máquinas virtuales proporcionan recursos de cálculo, memoria y E/S, que vienen de una agrupación compartida de recursos de IaaS. Si desea ejecutar sus aplicaciones en un entorno privado, póngase en contacto con su representante de Ventas de IBM, que puede hablarle de nuestra oferta dedicada de IBM WebSphere Application Server for
-{{site.data.keyword.Bluemix_notm}}.
+IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} es un servicio que devuelve invitados (máquinas virtuales) en un entorno compartido para que los consumidores desplieguen aplicaciones. Una VPN protege el servicio público de exploraciones de puerto genéricas y otros ataques basados en red no solicitado. Sin embargo, es importante tener en cuenta que la VPN del servicio que se utiliza para acceder a la instancia de servicio puede compartirse entre varias organizaciones y usuarios de {{site.data.keyword.Bluemix_notm}}. Las máquinas virtuales proporcionan recursos de cálculo, memoria y E/S, que vienen de una agrupación compartida de recursos de IaaS.
 
 Puesto que los recursos específicos de cálculo, memoria y E/S los ejecutan máquinas virtuales en un entorno compartido, las configuraciones de servicio pueden variar. Las configuraciones para cada instancia de servicio determinada se pueden visualizar a través de los paneles de control y portales del servicio IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}.
 
@@ -94,7 +96,7 @@ IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} se ofrec
 
 *  *Instancia-hora*: una instancia se define como acceso a una configuración específica del servicio IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}. Los clientes deben pagar por cada hora completa o parcial para cada instancia del servicio que se despliegue durante el período de facturación. Cada hora de instancia se factura mensualmente y, si una instancia solo se utiliza una parte del mes, la tarifa de uso se prorratea.
 
-Por ejemplo, si utiliza el plan ND, una instancia equivale a 1vCPU con 2 GB de RAM y HD de 12 GB. Por consiguiente, si opta por configurar su celda con un nodo de control y ocho nodos personalizados, se le cobrarán nueve nodos (instancias).
+Por ejemplo, si utiliza el plan ND, una instancia equivale a 1vCPU con 2 GB de RAM y HD de 12 GB. Por consiguiente, si opta por configurar su célula con un nodo de control y ocho nodos personalizados, se le cobrarán nueve nodos (instancias).
 
 **Nota**: la facturación mínima se establece en 0,25 de hora de instancia por nodo personalizado o host Liberty. En el ejemplo anterior, un nodo de control y un nodo personalizado configurado para un mínimo de 15 minutos equivaldría a un cargo mínimo de (0,25 * número de instancias).
 
