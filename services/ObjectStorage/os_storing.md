@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-12-06"
+lastupdated: "2016-12-14"
 
 ---
 {:new_window: target="_blank"}
@@ -38,14 +38,14 @@ You can upload objects to storage by using the UI or CLI. Uploading objects is l
   ```
   {: pre}
 
-2. Create a new {{site.data.keyword.objectstorageshort}} container by running the following command. The *container_name* variable is set, by you, at this time.
+2. Create an {{site.data.keyword.objectstorageshort}} container by running the following command. The *container_name* variable is set, by you, now.
 
   ```
   swift post <container_name>
   ```
   {: pre}
 
-**Note**: If you get an error message, confirm that you have [the prerequisite software](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) installed.
+**Note**: If you receive an error message, confirm that the [the prerequisite software](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) installed.
 
 3. Optional: To verify that your container was created, run the following command to list your containers.
 

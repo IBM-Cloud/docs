@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-12-06"
+lastupdated: "2016-12-14"
 
 ---
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ After you no longer have a need for them, you can delete objects and containers 
   ```
   {: pre}
 
-2. Optional: Confirm that you have a backup of your objects before deleting your files and containers.
+2. Optional: Confirm that you have a backup of your objects before you delete your files and containers.
 
 3. Run the following command to delete a file:
   ```
@@ -55,12 +55,12 @@ After you no longer have a need for them, you can delete objects and containers 
 ## Scheduling object deletion {: #schedule-object-deletion}
 
 
-You can schedule the deletion of your objects. You can do this by making use of either of the `X-Delete-At` or `X-Delete-After` headers.
+You can schedule the deletion of your objects by using either of the `X-Delete-At` or `X-Delete-After` headers.
 {: shortdesc}
 
-The `X-Delete-At` header takes an integer number representing the epoch time at which to delete the object. The `X-Delete_After` header takes an integer number representing the number of seconds after which the object is deleted. To use the swift client to schedule object deletion run the following command that best fits your need.
+The `X-Delete-At` header takes an integer that represents the epoch time at which to delete the object. The `X-Delete_After` header takes an integer that represents the number of seconds after which the object is deleted.
 
-**Note:** The actual deletion of an object might not happen at the exact time indicated. However, the object will in fact expire at the specified time. This means that it will no longer be reachable. The actual deletion will take place the next time the swift-object-expirer daemon configured in your Swift cluster runs.
+**Note:** The actual deletion of an object might not happen at the exact time indicated. However, the object will in fact expire at the specified time. At that time, the object is longer reachable. The actual deletion will take place the next time the swift-object-expirer daemon that is configured in your Swift cluster runs.
 
 #### To use Swift commands:
 

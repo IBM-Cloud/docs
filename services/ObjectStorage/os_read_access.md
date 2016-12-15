@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-12-06"
+lastupdated: "2016-12-14"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ An {{site.data.keyword.objectstorageshort}} user with an [admin role](/docs/serv
 {: shortdesc}
 
 <table>
+<caption> Table 1. Read access permissions by option </caption>
   <tr>
     <th> Permission </th>
     <th> Read ACL options </th>
@@ -39,7 +40,7 @@ An {{site.data.keyword.objectstorageshort}} user with an [admin role](/docs/serv
     <td> <code> &#42;:user_id </code> </td>
   </tr>
   <tr>
-    <td> Read and list for a every user in a specified project </td>
+    <td> Read and list for every user in a specified project </td>
     <td> <code> project_id:&#42; </code> </td>
   </tr>
   <tr>
@@ -47,8 +48,6 @@ An {{site.data.keyword.objectstorageshort}} user with an [admin role](/docs/serv
     <td> <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
-Table 1: Read access permissions by option
 
 
 
@@ -109,7 +108,7 @@ Table 1: Read access permissions by option
     ```
     {: pre}
 
-    You can see in the following example that read access has been granted:
+    Example: The `X-Container-Read` value shows to which container and to whom read access is granted.
 
     ```
     HTTP/1.1 204 No Content

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-12-06"
+lastupdated: "2016-12-14"
 
 ---
 
@@ -27,7 +27,7 @@ A temporary URL is a long, difficult-to-guess URL that can be used for a specifi
   {: pre}
   **Note**: Take note of the full string behind *Account*, including `AUTH_`.
 
-2. Set a secret key. This key can be anything that you select, but best practice is that you select a long, random, and hard to guess string. To set the key, run the following command:
+2. Set a secret key. This key can be anything that you select, but a good practice is to select a long, random, and hard to guess string. To set the key, run the following command:
 
   ```
   swift post -m "Temp-URL-Key:<key>"
@@ -50,6 +50,7 @@ A temporary URL is a long, difficult-to-guess URL that can be used for a specifi
 
   The following table explains the positional arguments that the Swift `tempurl` command takes.
   <table>
+  <caption> Table 1. Temporary URL positional arguments </caption>
     <tr>
       <th> Argument </th>
       <th> Description </th>
@@ -71,7 +72,5 @@ A temporary URL is a long, difficult-to-guess URL that can be used for a specifi
       <td> The secret key that you set in step 2. </td>
     </tr>
   </table>
-
-  Table 1: Temporary URL positional arguments
 
 5. Optional: Append the returned URL to your cluster name to get a full URL. You can then use the full URL to download objects with any compatible HTTP client such as cURL, wget, or Firefox.

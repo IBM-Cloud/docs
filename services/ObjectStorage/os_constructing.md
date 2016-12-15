@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-12-09"
+lastupdated: "2016-12-14"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ You can use the Swift REST API with a command-line client interface, such as cUR
 
 For a comprehensive list of the {{site.data.keyword.objectstorageshort}} REST API options and examples, see the [OpenStack Swift API complete reference](http://developer.openstack.org/api-ref-objectstorage-v1.html).
 
-When you authenticated your service instance with Keystone, you took note of the catalog response. It should look similar to the following example.
+Before you can compose your URL, you must [authenticate](/docs/services/ObjectStorage/os_authenticate.html) your service instance with Keystone. Be sure to note your catalog response. It will look similar to the following example.
 
 ```
 {
@@ -37,5 +37,5 @@ When you authenticated your service instance with Keystone, you took note of the
 Add the namespace of your container and object to the end of your {{site.data.keyword.objectstorageshort}} URL as shown in the following image.
 
 ![{{site.data.keyword.objectstorageshort}} URL pieces shown in an example image](images/Swift_URL.png)
-  
-Figure 1: {{site.data.keyword.objectstorageshort}} URL example
+
+Figure 1. {{site.data.keyword.objectstorageshort}} URL example

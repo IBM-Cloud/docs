@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-12-06"
+lastupdated: "2016-12-14"
 
 ---
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2016-12-06"
 
 # Setting up object versioning {: #setting-up-versioning}
 
-Object versioning allows you to keep older versions of your objects by automatically storing them in a backup container. Versioning allows you to see a history of each object and keep track of when changes are made.
+You can keep older versions of your objects automatically by setting up object versioning. With versioning, you can see a history of each object.
 {: shortdesc}
 
 When you upload a new version of your file to your main container, the previous version is automatically moved into your backup container. If you delete the file from your main container, the most recent version is automatically moved from your backup container into the main container to replace the deleted file.
@@ -67,6 +67,7 @@ When you upload a new version of your file to your main container, the previous 
 
 7.  The objects in your backup container are automatically named with the following format: `<Length><Object_name>/<Timestamp>`.
   <table>
+  <caption> Table 1. Naming attributes described </caption>
     <tr>
       <th> Attribute </th>
       <th> Description </th>
@@ -85,7 +86,6 @@ When you upload a new version of your file to your main container, the previous 
     </tr>
   </table>
 
-  Table 1: Naming attributes described
 
 6. List the objects in your main container to see the new version of your file.
 
@@ -94,7 +94,7 @@ When you upload a new version of your file to your main container, the previous 
     ```
     {: pre}
 
-7. List objects in your backup container. You see the previous version of your file that is stored in this container. Note that a timestamp has been added to your file.
+7. List objects in your backup container. You see the previous version of your file that is stored in this container. Note that a timestamp is added to your file.
 
     ```
     swift list --lh <backup_container_name>
