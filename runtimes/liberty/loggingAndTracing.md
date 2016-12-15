@@ -18,23 +18,26 @@ lastupdated: "2016-12-12"
 
 The standard Liberty logs, such as `messages.log` or the `ffdc` directory, are available in IBM Bluemix in the `logs` directory of each application instance. These logs can be accessed from the IBM Bluemix console or via the CF CLI. For example:
 
-1. To access recent logs for an app, run the following command:
-```
-    $ cf logs --recent <appname> 
-```
-{: codeblock}
+* To access recent logs for an app, run the following command:
 
-2. To see the `messages.log` file of an app running on a DEA node, run the following command:
-```
-    $ cf files <appname> logs/messages.log
-```
-{: codeblock}
+  ```
+  $ cf logs --recent <appname>
+  ```
+  {: codeblock}
 
-3. To see the `messages.log` file of an app running on a Diego cell, run the following command:
-```
-    $ cf ssh <appname> -c "cat logs/messages.log"
-```
-{: codeblock}
+* To see the `messages.log` file of an app running on a DEA node, run the following command:
+
+  ```
+  $ cf files <appname> logs/messages.log
+  ```
+  {: codeblock}
+
+* To see the `messages.log` file of an app running on a Diego cell, run the following command:
+
+  ```
+  $ cf ssh <appname> -c "cat logs/messages.log"
+  ```
+  {: codeblock}
 
 The log level and other trace options can be set through the Liberty configuration file. For more information, see [Liberty profile: Trace and logging](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). Tracing can also be adjusted on a running application instance by using the IBM Bluemix console.
 
@@ -46,8 +49,9 @@ The Liberty tracing configuration can be adjusted for a running application dire
 ### Diego: triggering dumps via SSH
 
 For an application running in a Diego cell, it is also possible to trigger a thread and heap dump via CF CLI using the SSH feature. For example:
+
 ```
-$ cf ssh <appname> -c "pkill java"
+$ cf ssh <appname> -c "pkill -3 java"
 ```
 {: codeblock}
 
@@ -69,20 +73,21 @@ For an application running in a DEA node, use the "cf files" functionality to vi
   ```
   {: codeblock}
 
-
 * To download a dump file, run the following commands:
   
     1. Get application GUID
-    ```
-    $ cf app <appname> --guid
-    ```
-    {: codeblock}
+
+      ```
+      $ cf app <appname> --guid
+      ```
+      {: codeblock}
 
     2. Download dump file
-    ```
-    $ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
-    ```
-    {: codeblock}
+
+      ```
+      $ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
+      ```
+      {: codeblock}
 
 ### Diego application
 

@@ -206,7 +206,7 @@ In some situations it may be necessary to clear the NuGet package cache for your
 You can do this by setting the `CACHE_NUGET_PACKAGES` environment variable to `false` using the CloudFoundry CLI:
 
 ```shell
-  cf set-env &lt;app_name&gt; CACHE_NUGET_PACKAGES false
+  cf set-env <app_name> CACHE_NUGET_PACKAGES false
 ```
 
 Alternatively, you can set the `CACHE_NUGET_PACKAGES` environment variable to `false` in your application's manifest.yml file:
