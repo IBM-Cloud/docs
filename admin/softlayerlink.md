@@ -91,20 +91,51 @@ For more information about inviting team members through the {{site.data.keyword
 ## Switching to  IBMid
 {: #ibmid_switch}
 
-Authentication in SoftLayer now uses IBMid to provide a single login for {{site.data.keyword.Bluemix_notm}}. If you have an existing SoftLayer account, you can switch to an IBMid. A migration wizard will guide you through this switch. 
+Authentication in SoftLayer now uses IBMid to provide a single login for all of {{site.data.keyword.Bluemix_notm}}. Existing SoftLayer accounts are being enabled to switch to IBMid authentication, and a migration wizard will guide you through this switch. 
 {:shortdesc}
 
-After you begin the switch to IBMid, as long as you do not complete the process, you can cancel it. But, you will still be prompted to switch to IBMid the next time that you log in.
+If you are a master user and do not see a prompt to switch to IBMid in the {{site.data.keyword.slportal}}, [Contact IBM support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) for help with enabling the feature.
 
-To begin the switch of your existing SoftLayer username to an IBMid, complete the following steps:
+As you begin the switch to IBMid, you can always cancel this switch before completing the process. However, you will continue to be prompted to switch to IBMid the next time that you log in. Each account that you plan to link to a {{site.data.keyword.Bluemix_notm}} account must be owned by a unique IBMid with a unique email address.
 
- 1. In the {{site.data.keyword.slportal}}, go to the Edit User Profile page and click **Switch to IBMid**.
- 2. Follow the migration wizard prompts to create your IBMid. Once you create your IBMid, you cannot change the ID, which is an email address. You can update the email associated with your profile, but by default that value is set as what you defined for your IBMid. After you complete the wizard, an email is sent to you.
- 3. When you receive the email, follow the link or copy the URL into a browser and enter your registration code. The code is good for 7 days and it is a one-time use only code.  After it is used, it cannot be used again.
- After you set up the IBMid to SoftLayer user link, you can log in to your account only with IBMid.  On the login dialog, you must use the **Log in with IBMid** button instead of entering your SoftLayer username and password.
+To switch your existing SoftLayer username to an IBMid, complete the following steps:
+
+ 1. If you selected **Later** in the inital prompt after log in, but decided that you want to begin the switch to IBMid authentication in the current session, go to the Edit User Profile page and click **Switch to IBMid**.
+ 2. Follow the wizard prompts to create your IBMid. Your IBMid is a unique email address and cannot be changed after it is created. You can update the email associated with your profile later, the default email is set to what you defined for your IBMid. You will receive an email with your registration code indicating you have completed the migration wizard. 
+ 3. When you receive the email, follow the link or copy the URL into a browser and enter your registration code. The code is valid for 7 days and can be used only once.
  
-If you are a new customer, you are asked for an email address for your existing IBMid account, or to create a new IBMid account, when you check out your order. 
+ 
+After you switch to IBMid authentication, you can log in to your account only with your IBMid. At the login prompt, click **Log in with IBMid** instead of entering your SoftLayer username and password.
+ 
+When you check out your order as a new customer, you are asked for an email address for your existing IBMid account or to create a new IBMid account. If you create a new IBMid, enter the email address for your new IBMid. The email address is where the invitation email is sent, and it is also the user name for your new IBMid.
 
+### Enabling users to switch to IBMid
+{: #link_accounts_resellers}
+
+In some cases, before a user can switch to an IBMid, a reseller or distrubutor must enable the account to use IBMid authentication. 
+
+ * To enable an existing account with legacy SoftLayer credentials to use IBMid authentication, [Contact IBM support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) to enable IBMid migration. This must be enabled for each existing end user account that you want to link to a {{site.data.keyword.Bluemix_notm}} account.
+ 
+ * To ensure that new user accounts are created with an IBMid, the `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION`       attribute must be set on the immediate master user account. [Contact IBM support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) or your vendor to have this set for your accounts.
+ 
+### Linking your user accounts
+{: #link_user_accounts}
+After your users switch to IBMid authentication, resellers and distributors can link SoftLayer and {{site.data.keyword.Bluemix_notm}} accounts.
+
+**Note:** 
+  * The master user of the account that is being linked must be an IBMid.
+  * Log in to each end user account as the master user. Go to the user profile page, and click **Switch to IBMid**.
+  * Each account that you link to a {{site.data.keyword.Bluemix_notm}} account must be owned by a unique IBMid with a unique email address. Although one IBMid can own multiple SoftLayer accounts, you cannot link the accounts to {{site.data.keyword.Bluemix_notm}} accounts. If one IBMid is the master user for multiple SoftLayer accounts and you want to link those accounts to {{site.data.keyword.Bluemix_notm}} accounts, you must change the master users to be a unique IBMid for each account. Contact [IBM SoftLayer support](https://knowledgelayer.softlayer.com/topic/support) to change the master user on a SoftLayer account.
+  
+Complete the following steps to link each account to a {{site.data.keyword.Bluemix_notm}} account: 
+
+ 1. To create a new {{site.data.keyword.Bluemix_notm}} account or to link to an existing {{site.data.keyword.Bluemix_notm}} account, log in to your SoftLayer account as the master user and click the **{{site.data.keyword.Bluemix_notm}}** link. This will give you the opportunity to either create a new {{site.data.keyword.Bluemix_notm}} account or link to an existing {{site.data.keyword.Bluemix_notm}} account. The IBMid that is the master user for the SoftLayer account must be the owner of the Bluemix account you're linking to. Follow the wizard prompts, including adding the users in the SoftLayer account to the {{site.data.keyword.Bluemix_notm}} account. 
+ 2. After you link the account, inform the end users of the account to migrate to IBMid. End users can then access the Infrastructure, Applications, and Services dashboards in the {{site.data.keyword.Bluemix_notm}} console.
+ 3. When new users are added to the linked account, you will need to add them to both the SoftLayer account and the {{site.data.keyword.Bluemix_notm}} account in order for them to have access to all the capabilities within the unified console.
+ 
+**Recommendation:** Migrate only the end user accounts to IBMid. Do not migrate brand accounts, which are parent accounts for end user accounts and do not contain any resources. Brand account users that migrate to IBMid lose the ability to log in to the Brand Agent Portal (BAP) portal.
+
+<!--
 ### Mapping multiple SoftLayer accounts to one IBMid
 {: #map_multiple_accounts}
 
@@ -113,6 +144,8 @@ You can associate one IBMid with multiple SoftLayer accounts by using an existin
 For example, an IBMid can map to the master user in accounts A and B, and to an additional user in accounts C and D. One of the accounts mapped to that IBMid is the default account.  Usually, the default account is the account that was first mapped to the IBMid. However, you can switch which account is the default account  through an account switching feature in the Customer Portal.
 
 For a user with IBMid access to multiple accounts with two-factor authentication enabled, an appropriate two-factored authentication verification code per account is required during account log in and account switching.
+-->
+
 
 ## Using {{site.data.keyword.Bluemix_notm}} services with SoftLayer assets
 {: #bluemix_services}
