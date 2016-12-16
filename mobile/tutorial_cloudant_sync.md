@@ -42,13 +42,15 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
 2. Add the Data capability. You can create a new {{site.data.keyword.cloudant}} service instance or add an existing service instance.
 
-   1. Click **Add** for **Data** in the **Project Overview** page.
+   1. Click **View** on the **Data** tile on the **Project Overview** page.
 
-      You can alternatively click **Create** or **Add Existing** from the **Data** page.
+      You can alternatively click **Create** or **Add Existing**, and then **Cloudant NoSQL DB** on the **Data** page.
       
    2. Optional: If you chose to create a new service instance, enter your service name and click **Create**.
 
-   3. Optional: If you chose to add an existing service instance, select your service instance from the list and click **Add**.
+   3. Optional: If you chose to add an existing service instance, select your service instance from the list and click **Add Existing**.
+
+  
 
    4. Click the **Menu** icon in your service tile and select **Launch...** to launch your service instance.
 

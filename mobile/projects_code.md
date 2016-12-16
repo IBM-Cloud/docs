@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-12-16"
 
 ---
 {:new_window: target="_blank"}
@@ -40,14 +40,23 @@ Complete the following steps to create a project with a Code Starter:
 
 	1. Optional: Select **Add** to add one of the listed services to your project. Edit the **Service name** for your service and click **Create**. When you add services to your project, you link to the {{site.data.keyword.Bluemix_notm}} page for that service. Configure the service by providing the information that is required for for the service.
 	
-	2. Optional: Repeat step *a* for any additional capabilities that you want to add to your project. 
+	2. Optional: Repeat step *a* for any additional capabilities that you want to add to your project.
 
-3.  Download your project and complete the setup.
+3. Optional: Select **Data** to connect a Cloudant NoSQL database or Object Storage service.
+	1. Click **Create** to configure a new Cloudant NoSQL DB or Object Storage service.
+	
+	Note: If you create an instance of the Object Storage service, you are guided outside of the project to create it and add the required credentials. Navigate back to the the project after creating it and select **Add Existing** to connect the service with the project.
+	
+	If you already have an existing instance that is not connected to another project that you want to connect to this one, select **Add Existing**. 
+	
+	2. Verify that the tile of the Cloudant NoSQL DB or the Object Storage service that you connected to is displayed on the Data tab of your project.
+
+4.  Download your project and complete the setup.
 
     1. Click **Download Code** and select your preferred language.
    
     2. Extract the archive and view the `README.md` file in a Markdown viewer to complete the setup.
 
-4.  Try out your app! 
+5.  Try out your app! 
 
 

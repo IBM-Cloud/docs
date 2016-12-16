@@ -2,13 +2,28 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-12-13"
+
+lastupdated: "2016-12-15"
 
 ---
 {:new_window: target="_blank"}
 
 # What's new in the Mobile dashboard
 {: #what_is_new}
+
+
+### New as of: December 2016
+{: #dec-2016}
+
+The December 2016 update of the {{site.data.keyword.Bluemix}} Mobile dashboard introduced the following changes:
+
+   * You can remove a connected service from a project so it can be deleted or reused with another project. 
+   * You can add an existing service to a project.
+   * You can create or connect an existing CloudantNoSQL service as a data source when you use a code starter.
+   * Where it is supported, you can create or connect an existing Object Storage service as a data source for your project.
+   * You can customize the navigation design of the app that you are creating with a UI starter. 
+   
+
 
 
 ### New as of: November 2016
