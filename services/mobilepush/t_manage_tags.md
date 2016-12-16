@@ -12,7 +12,7 @@ copyright:
 
 # Managing tags
 {: #manage_tags}
-Last updated: 12 December 2016
+Last updated: 15 December 2016
 {: .last-updated}
 
 Use the {{site.data.keyword.mobilepushshort}} dashboard to create and delete tags for your application and then initiate tag-based notifications. The tag-based notification is received on devices that are subscribed to tags.
@@ -120,47 +120,6 @@ BMSPush.retrieveSubscriptions(function(tags) {
 ```
 	{: codeblock}
 
-## Getting tags on Objective-C
-{: objc-get-tags}
-
-Copy the following code snippets to your iOS application, developed using Objective-C to get a list of tags to which the device is subscribed and get a list of available tags to which the device can subscribe.
-
-Use the following **retrieveAvailableTags** API to get a list of available tags to which the device can subscribe.
-
-```
-//Get a list of available tags to which the device can subscribe
-[push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
-if(error){    
-   [self updateMessage:error.description];  
-   } else {
-   [self updateMessage:@"Successfully retrieved available tags."];
-   NSDictionary *availableTags = [[NSDictionary alloc]init];
-   availableTags = [response tags];
-   [self.appDelegateVC updateMessage:availableTags.description];
-   }
-   }];
- ```
-	{: codeblock}
-
-Use the **retrieveSubscriptions** API to get a list of tags that to which the device is subscribed.
-
-
-```
-// Get a list of tags that to which the device is subscribed.
-[push retrieveSubscriptionsWithCompletionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-  [self updateMessage:error.description];
-  } else {
-   [self updateMessage:@"Successfully retrieved subscriptions."];
-  NSDictionary *subscribedTags = [[NSDictionary alloc]init];
-  subscribedTags = [response subscriptions];
-  [self.appDelegateVC updateMessage:subscribedTags.description];
-  }
-  }];
-  ```
-	{: codeblock}
 
 ## Getting tags on Swift
 {: swift-get-tags}
@@ -313,43 +272,6 @@ BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Subscribing and unsubscribing to tags on Objective-C
-{: objc-subscribe-tags}
-
-Copy and paste this code snippet to your Objective-C mobile application.
-
-Use the **subscribeToTags** API to subscribe to a tag.
-
-```
-[push subscribeToTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-   [self updateMessage:error.description];
-  }else{
-    NSDictionary* subStatus = [[NSDictionary alloc]init];
-    subStatus = [response subscribeStatus];
-    [self updateMessage:@"Parsed subscribe status is:"];
-    [self updateMessage:subStatus.description];
-  }
-  }];
-```
-	{: codeblock}
-
-Use the **unsubscribeFromTags** API to unsubscribe from a tag.
-
-```
-[push unsubscribeFromTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if (error){
-     [self updateMessage:error.description];
-  } else {
-     NSDictionary* subStatus = [[NSDictionary alloc]init];
-     subStatus = [response unsubscribeStatus];
-     [self updateMessage:subStatus.description];
-  }
-  }];
-```
-	{: codeblock}
 
 ## Subscribing and unsubscribing to tags on Swift
 {: swift-subscribe-tags}
