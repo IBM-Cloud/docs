@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-12-12"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,8 +14,6 @@ lastupdated: "2016-10-21"
 
 # {{site.data.keyword.Bluemix_notm}} and the {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
-Last updated: 21 October 2016
-{: .last-updated}
 
 The {{site.data.keyword.iot_full}} is a service that is available in {{site.data.keyword.Bluemix}}. You can access your {{site.data.keyword.iot_short_notm}} organization dashboard by using your {{site.data.keyword.Bluemix_notm}} dashboard. As a {{site.data.keyword.Bluemix_notm}} service, {{site.data.keyword.iot_short_notm}} can be integrated with other services that are hosted on {{site.data.keyword.Bluemix_notm}}. Details of specific third-party service integrations can be found in the [External Service Integrations](/extensions/index.html)
 {:shortdesc}
@@ -37,16 +35,19 @@ The {{site.data.keyword.iot_short_notm}} has provisions for a specified level of
 ## {{site.data.keyword.iot_short_notm}} Pricing
 {: #iot-pricing}
 
-The {{site.data.keyword.iot_short_notm}} offers two pricing models: Free and Standard. {{site.data.keyword.iot_short_notm}} Free allows up to 20 registered devices, 100MB of data exchanged, and a maximum of 10 bound applications.
+The {{site.data.keyword.iot_short_notm}} offers two pricing models: Free and Standard.
 
-{{site.data.keyword.iot_short_notm}} pricing allows an unlimited number of registered devices, 100 MB of data exchanged for free, and a cost per MB of data exchanged after the first 100 MB.
+### IoT Pricing calculator
+For more information on the available {{site.data.keyword.iot_short_notm}} plans and pricing models:
+1. Go to the [IoT Pricing calculator](http://iot-cost-calculator.ng.bluemix.net/).  
+2. Click **Add** or **Configure** next to the Internet of Things Platform item.
+3. Select a **Pricing tier** and then enter estimated values for the amount of data that you plan to exchange, analyze on the cloud, and analyze on edge devices.  
+The price estimate for the selected tier and data load is displayed.
 
-For more information on the {{site.data.keyword.iot_short_notm}} pricing:
-
-1. On your {{site.data.keyword.Bluemix_notm}} dashboard, click your {{site.data.keyword.iot_short_notm}}.
-2. From the navigation menu on the left, select **Plan**.
-
-The pricing plans are displayed.
+### Current plan information
+1. On your {{site.data.keyword.Bluemix_notm}} dashboard, click the Internet of Things Platform tile for the  {{site.data.keyword.iot_short_notm}} organization for which you want current plan information.
+2. Select the **Plan** tab.  
+The details for your current pricing plan are displayed.
 
 # Related Links
 {: #rellinks}
@@ -55,6 +56,7 @@ The pricing plans are displayed.
 ## Related Links
 {: #general}
 
+* [IoT Pricing calculator](http://iot-cost-calculator.ng.bluemix.net/){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} security](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}

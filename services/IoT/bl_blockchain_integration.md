@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-12-04"
+lastupdated: "2016-12-08"
 
 ---
 
@@ -80,7 +80,7 @@ Because {{site.data.keyword.iot_short_notm}} blockchain integration is enabled, 
 To connect to a blockchain fabric:
 1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
 2. In the **Extensions** page, in the Blockchain tile, click **Setup**.
-3. In the Configure blockchain section, click **Add Fabric** and then enter the fabric information.
+3. In the **Extensions** page, in the Blockchain tile, click **Setup**, or click ![Gear icon](images/gear.png "Configure") if you already have fabrics linked, and then enter the fabric information.
  1. In the **Fabric** tab, enter a name to identify the fabric in {{site.data.keyword.iot_short_notm}}, then click **Next**.   
  2. In the **Peer** tab, enter the peer information:  
 <table>
