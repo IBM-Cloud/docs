@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2016
 
 ---
 
@@ -12,12 +12,18 @@ copyright:
 
 # Getting started with {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Last updated: 02 November 2016
+Last updated: 12 December 2016
 {: .last-updated}
 
 {:shortdesc}
 
-The {{site.data.keyword.mobilepushshort}} service provides a unified platform to send and manage mobile and web push notifications that are targeted to iOS, Android mobile platforms, Google Chrome, Mozilla Firefox web browsers and Google Chrome Apps and Extensions. The {{site.data.keyword.mobilepushshort}} service manages the mapping of your application users to their devices, device platform, web browsers and handles dispatching push notifications to them. With this service, you can send broadcasts, unicasts (based on deviceID and userID), and also tags (or topics) as push notifications to your mobile and web browser application users. You can also use an SDK and [REST APIs](https://mobile.{DomainName}/imfpush/) to further develop your client applications.
+The {{site.data.keyword.mobilepushshort}} service provides a unified platform to send and manage mobile and web push notifications that are targeted to the following platforms:
+
+- iOS and Android mobile devices
+- Google Chrome, Mozilla Firefox and Safari web browsers
+- Google Chrome Apps and Extensions
+
+The {{site.data.keyword.mobilepushshort}} service manages the mapping of your application users to their devices, device platform, web browsers and handles dispatching push notifications to them. With this service, you can send broadcasts, unicasts (based on deviceID and userID), and also tags (or topics) as push notifications to your mobile and web browser application users. You can also use an SDK and [REST APIs](https://mobile.{DomainName}/imfpush/) to further develop your client applications.
 
 
 # Related Links

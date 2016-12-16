@@ -1,18 +1,21 @@
-
 ---
 
 copyright:
-years: 2015, 2016
+ years: 2015, 2016
 
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Configuring credentials for FCM
 {: #create-push-enable-gcm}
-Last updated: 17 October 2016
+Last updated: 12 December 2016
 {: .last-updated}
 
-Firebase Cloud Messaging (FCM) is the gateway used to deliver push notifications to Android devices, Google Chrome and Mozilla web browsers. FCM has replaced Google Cloud Messaging (GCM). You need to get your FCM credentials, and then set up the {{site.data.keyword.mobilepushshort}} service on the dashboard. Ensure that you use FCM configurations for new apps. Existing apps can continue to function with the GCM configurations.
+Firebase Cloud Messaging (FCM) is the gateway used to deliver push notifications to Android devices and Google Chrome. FCM is the new version of Google Cloud Messaging (GCM). To set up the {{site.data.keyword.mobilepushshort}} service on the dashboard, you need to get your FCM credentials. Ensure that you use FCM configurations for new apps. Existing apps would continue to function with GCM configurations.
 
 ##Getting Your Sender ID and API key
 {: #android-senderid-apikey}
@@ -41,12 +44,4 @@ To setup the FCM, generate the API key and Sender ID, complete the steps:
 4. Click **Save**.
 5. Next steps. [Enabling notifications for Android](c_enable_push.html) or [Enabling notifications for Google Chrome Apps & Extensions](c_enable_push.html).
 
-###Configuring for Google Chrome and Mozilla Firefox web push (using FCM/GCM)
-{: #config-gcm-mozilla}
 
-1. On the Push Dashboard navigation pane, select **Configure**.
-2. Select the Web tab.
-	![WebPush Configurations](images/webpush_configure.jpg)
-3. Configure the FCM/GCM API key and the URL of your website that will be registered to receive push notifications.
-4. Click **Save**.
-5. Next steps. [Enabling notifications for Google Chrome and Mozilla Firefox browsers](c_enable_push.html).

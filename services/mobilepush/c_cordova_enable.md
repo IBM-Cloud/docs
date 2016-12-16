@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Enabling Cordova applications to receive push notifications
 {: #cordova_enable}
-Last updated: 23 November 2016
+Last updated: 15 December 2016
 {: .last-updated}
 
 Cordova is a platform for building hybrid applications with JavaScript, CSS, and HTML. The {{site.data.keyword.mobilepushshort}} service supports development of Cordova-based iOS and Android applications.
@@ -153,27 +158,6 @@ BMSPush.registerNotificationsCallback(showNotification);
 ```
 	{: codeblock}
 
-### Objective-C
-{: #cordova_register_objective}
-Add the following Objective-C code snippet to your application delegate class.
-
-```
-// Register the device token with Bluemix Push Notification Service
-	- (void)application:(UIApplication *)application
-     didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-       [[CDVBMSPush sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-} 
-// Handle error when failed to register device token with APNs
-	- (void)application:(UIApplication*)application
-     didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-      [[CDVBMSPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
-} 
-```
-	{: codeblock}
-
-###Swift
-{: #cordova_register_swift}
-
 Add the following Swift code snippet to your application delegate class.
 
 ```
@@ -256,33 +240,6 @@ action-loc-key - The string is used as a key to get a localized string in the cu
 * **badge** - The number to display as the badge of the app icon. If this property is absent, the badge is not changed. To remove the badge, set the value of this property to 0.
 * **sound** - The name of a sound file in the app bundle or in the Library/Sounds folder of the app data container.
 
-###Objective-C
-
-Add the following Objective-C code snippets to your application delegate class.
-
-```
-//Handle receiving a remote notification
--(void)application:(UIApplication *)application
-  didReceiveRemoteNotification:(NSDictionary *)userInfo
-  fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationWithNotification:userInfo];
-} 
-```
-	{: codeblock}
-
-
-
-```
-//Handle receiving a remote notification on launch
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-  if (launchOptions != nil) {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationOnLaunchWithLaunchOptions:launchOptions];
-     }
- }
-```
-	{: codeblock}
-
-###Swift
 
 Add the following Swift code snippets to your application delegate class.
 ```
