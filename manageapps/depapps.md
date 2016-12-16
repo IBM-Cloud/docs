@@ -38,8 +38,6 @@ During the staging phase, Diego takes care of all aspects related with container
 
 To validate the app health, Diego supports the same PORT-based checks that are used for DEA. But, it is designed to be able to have more generic options like URL-based health checks, which should be enabled in the future.
 
-To stage apps in Diego, you must first install both the cf CLI and the [Diego-Enabler CLI Plugin](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}. This is required during the migration period only.
-
 #### Migrating an existing app to Diego
 {: #migrateapp}
 
@@ -75,7 +73,7 @@ If your migrated app fails to start, it will remain offline until you identify a
 
 At this time, you cannot enable apps in specific orgs and spaces to only run on Diego. However, you can choose which apps you want to run on Diego. The migration of existing apps to Diego is necessary because the Cloud Foundry foundation is running on different containers and on different virutal machines, which requires all existing apps to be moved to the new Diego container type by re-deploying each app. Currently, the migration step is optional, but it is recommended to prepare your apps for the upcoming mandatory migration when DEA architecture support will be removed. IBM will notify you of the mandatory migration window, and if you have not migrated your apps by that time, the operations team will migrate all apps for you.
 
-##### Known issues
+#### Diego migration known issues
 {: #knownissues} 
 
 There are the following known issues with using Diego:
