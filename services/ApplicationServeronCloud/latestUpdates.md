@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-08"
+lastupdated: "2016-12-16"
 
 ---
 
@@ -14,6 +14,14 @@ lastupdated: "2016-11-08"
 {: #latest_updates}
 
 A list of the latest updates to the service.
+
+## December 16, 2016: Updated WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* Integrated miscellaneous service maintenance.
+* Addressed [several security vulnerabilities](https://www-01.ibm.com/support/docview.wss?uid=swg21995995){: new_window} in the IBM SDK Java Technology Edition that affect WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} including:
+  * An unspecified vulnerability in Oracle Java SE and Java SE Embedded related to the Hotspot component that has high confidentiality impact, high integrity impact, and high availability impact.
+  * An unspecified vulnerability in Oracle Java SE and Java SE Embedded related to the Networking component that could allow a remote attacker to obtain sensitive information resulting in a high confidentiality impact using unknown attack vectors.
+  *  A cross-site schripting vulnerability in IBM WebSphere Application Server that allows users to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session.
 
 ## November 8, 2016: Updated WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 
