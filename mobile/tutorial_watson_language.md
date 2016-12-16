@@ -37,11 +37,11 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
 
    4. Enter your project name and click **Create**.
 
-2. Optional: Add the Push Notifications capability.
+2. Optional: Add the {{site.data.keyword.mobilepushshort}} capability.
 
-   1. Click **Add** for **Push Notifications** in the **Project Overview** page.
+   1. Click **Add** for **{{site.data.keyword.mobilepushshort}}** in the **Project Overview** page.
 
-      You can alternatively click **Create** from the **Push Notifications** page.
+      You can alternatively click **Create** from the **{{site.data.keyword.mobilepushshort}}** page.
 
    2. Enter your service name and click **Create**.
 
@@ -86,3 +86,21 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
 {: #tutorial_next}
 
 [Try it out!](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}
+
+
+
+### UI Starter tutorials
+{: #tutorials_UI}
+
+* [Tutorial - Store Catalog](tutorial_store_catalog.html)
+
+
+### Code Starter tutorials
+{: #tutorials_Code}
+
+* [Tutorial - Basic](tutorial.html)
+* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Tutorial - Weather](tutorial_weather.html)
+

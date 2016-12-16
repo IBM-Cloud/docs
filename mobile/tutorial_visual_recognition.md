@@ -36,11 +36,11 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
    5. Click **Create**.
 
-2. Optional: Add the Push Notifications capability.
+2. Optional: Add the {{site.data.keyword.mobilepushshort}} capability.
 
-   1. Click **Add** for **Push Notifications** in the **Project Overview** page.
+   1. Click **Add** for **{{site.data.keyword.mobilepushshort}}** in the **Project Overview** page.
 
-      You can alternatively click **Create** from the **Push Notifications** page.
+      You can alternatively click **Create** from the **{{site.data.keyword.mobilepushshort}}** page.
 
    2. Enter your service name and click **Create**.
 
@@ -132,7 +132,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
    4. Add your {{site.data.keyword.visualrecognitionshort}} service credentials.
    
-      1. Copy your `api_key` from  your {{site.data.keyword.visualrecognition}} service credentials.
+      1. Copy your `api_key` from  your {{site.data.keyword.visualrecognitionshort}} service credentials.
       
       2. Paste your `api_key` into the `watson_visual_recognition_api_key` key into the `res/values/watson_credentials.xml` file.
       
@@ -154,5 +154,9 @@ View other tutorials.
 ### Code Starter tutorials
 {: #tutorials_Code}
 
+* [Tutorial - Basic](tutorial.html)
+* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)
 * [Tutorial - Weather](tutorial_weather.html)
+
