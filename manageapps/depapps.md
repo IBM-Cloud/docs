@@ -1,8 +1,10 @@
 ---
 
+
 copyright:
   years: 2015, 2016
-lastupdated: "2016-12-06"
+lastupdated: "2016-12-16"
+
 
 ---
 
@@ -15,17 +17,21 @@ lastupdated: "2016-12-06"
 # Deploying apps
 {: #deployingapps}
 
-You can deploy applications to {{site.data.keyword.Bluemix}} by using various methods, such as the command line interface and integrated development environments (IDEs). You can also use application manifests to deploy applications. By using an application manifest, you reduce the number of deployment details that you must specify every time you deploy an application to {{site.data.keyword.Bluemix_notm}}.
+You can deploy applications to {{site.data.keyword.Bluemix}} by using various methods, such as the command line interface and integrated development environments (IDEs). You can also use application manifests to deploy applications. By using an application manifest, you reduce the number of deployment details that you must specify every time that you deploy an application to {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
 ## Application deployment
 {: #appdeploy}
 
-Deploying an application to {{site.data.keyword.Bluemix_notm}} includes two phases: staging the application and starting the application.
+Deploying an application to {{site.data.keyword.Bluemix_notm}} includes two phases, staging the application and starting the application.
 
-Cloud Foundry now supports Diego, a new runtime architecture. Diego provides support for several container technologies, including Garden, Docker, and Windows containers. Future enhancements and fixes for Cloud Foundry will go directly to Diego, and will not be supported in DEA.
+Cloud Foundry now supports Diego, a new runtime architecture. Diego provides support for several container technologies, including Garden, Docker, and Windows containers. Future enhancements and fixes for Cloud Foundry will go directly to Diego, and will not be supported in DEA. For more information about the upgrade, see [Bluemix Cloud Foundry upgrading from DEA to Diego architecture](https://www.ibm.com/blogs/bluemix/2016/11/bluemix-cloud-foundry-upgrading-dea-diego-architecture/){: new_window}.
+
+The updated Cloud Foundry Diego architecture affects all {{site.data.keyword.Bluemix_notm}} Public regions. {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Local environments will be updated at a later date.
 
 ### Staging an application with Diego
+{: #diego}
+
 All Diego components are designed to be clustered which means you can easily create different availability zones. Secure communication between all Diego components uses TLS.
 
 During the staging phase, Diego takes care of all aspects related with container orchestration. Distribution of the app instances are done with Diego Brain and the Cloud Controller only stages the apps. Diego Brain allocates the apps into cells with SSH access to the containers.
@@ -34,13 +40,52 @@ To validate the app health, Diego supports the same PORT-based checks that are u
 
 To stage apps in Diego, you must first install both the cf CLI and the [Diego-Enabler CLI Plugin](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}. This is required during the migration period only.
 
-#### Known issues
- There are the following known issues with using Diego:
+#### Migrating an existing app to Diego
+{: #migrateapp}
+
+You can transition an existing app to Diego by deploying the application with the Diego flag. The application immediately starts running on Diego and will eventually stop running on the DEAs. To limit downtime, perform a blue-green deploy by deploying a copy of your application to Diego, and then swapping routes and scaling down the DEA application. If you do not perform a blue-green deployment, you might experience some downtime.
+
+Complete the following steps to migrate your app to Diego:
+
+ 1. Install both the [cf CLI](https://github.com/cloudfoundry/cli/releases){: new_window} and the [Diego-Enabler CLI Plugin](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}.
+ 2. Review the [known issues list](depapps.html#knownissues). If your code references deprecated variables, update the code for your app.
+ 3. Set the Diego flag to change your app to running on Diego:
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+ 4. Start the application:
+   ```
+  $ cf start APPLICATION_NAME
+  ```
+ 5. Check that the application started by running the following command:
+  ```
+  $ cf app APPLICATION_NAME  
+  ```
+  
+If your migrated app fails to start, it will remain offline until you identify and resolve the issue, and then restart the app.
+  
+  To transition back to DEAs:
+  ```
+  $ cf disable-diego APPLICATION_NAME
+  ```
+  To validate which backend the application is running on:
+  ```
+  $ cf has-diego-enabled APPLICATION_NAME
+  ```
+
+At this time, you cannot enable apps in specific orgs and spaces to only run on Diego. However, you can choose which apps you want to run on Diego. The migration of existing apps to Diego is necessary because the Cloud Foundry foundation is running on different containers and on different virutal machines, which requires all existing apps to be moved to the new Diego container type by re-deploying each app. Currently, the migration step is optional, but it is recommended to prepare your apps for the upcoming mandatory migration when DEA architecture support will be removed. IBM will notify you of the mandatory migration window, and if you have not migrated your apps by that time, the operations team will migrate all apps for you.
+
+##### Known issues
+{: #knownissues} 
+
+There are the following known issues with using Diego:
+
   * Worker applications deployed with the `--no-route` option do not report as healthy. To prevent this, disable the port-based health check with the `cf set-health-check APP_NAME none` command.
   * Diego does not use the VCAP_APP_HOST environment variable. If your code references this variable, replace it with 0.0.0.0.
   * Diego does not use the VCAP_APP_PORT environment variable. If your code references this variable, replace it with PORT, which is set to 8080 by default.
   * The **cf files** command is no longer supported. The replacement is the **cf ssh** command. For more details on the **cf ssh** command, see [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Some apps might use a high number of file descriptors (inodes). If you encounter this issue, you must increase disk quota for your app with the `cf scale APP_NAME [-k DISK]` command.
+ 
 
 #### Staging a new app on Diego
 {: #stageapp}
@@ -66,26 +111,6 @@ To stage a new application on Diego you must deploy the application in the comma
 
 For more details on the **cf push** command, see [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
 
-#### Migrating an existing app to Diego
-{: #migrateapp}
-
-You can transition an existing app to Diego by deploying the application with the Diego flag. The application will immediately start running on Diego and will eventually stop running on the DEAs. If you want to ensure uptime, we recommend performing a blue-green deploy by deploying a copy of your application to Diego, and then swapping routes and scaling down the DEA application.
-
-  To set the Diego flag and change your app to running on Diego:
-  ```
-  $ cf enable-diego APPLICATION_NAME
-  ```
-
-  To transition back to DEAs:
-  ```
-  $ cf disable-diego APPLICATION_NAME
-  ```
-
-  To validate which backend the application is running on:
-  ```
-  $ cf has-diego-enabled APPLICATION_NAME
-  ```
-
 
 ### Staging an application with DEA
 During the staging phase, a droplet execution agent (DEA) uses the information that you provide in the cf command line interface or the `manifest.yml` file to decide what to create for application staging. The DEA selects an appropriate buildpack to stage your application, and the result of the staging process is a droplet. For more information about deploying an application to {{site.data.keyword.Bluemix_notm}}, see [How {{site.data.keyword.Bluemix_notm}} works](/docs/overview/whatisbluemix.html#howwork).
@@ -93,6 +118,7 @@ During the staging phase, a droplet execution agent (DEA) uses the information t
 During the staging process, the DEA checks whether the buildpack matches the application. For example, a Liberty runtime for a `.war` file, or a Node.js runtime for `.js` files. The DEA then creates an isolated container that contains the buildpack and the application code. The container is managed by the Warden component. For more information, see [How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
 
 ### Starting an application
+{: #startapp}
 
 When an application is started, the instance or instances of the warden container are created. You can use the **cf files** command to see the files that are stored on the file system of the Warden container, such as the logs. If the application fails to start, the DEA stops the application and the entire contents of your Warden container are removed. Therefore, if an application stops or if the staging process of an application fails, log files will not be available for you to use.
 
@@ -102,7 +128,7 @@ If the logs for your application are no longer available so that the **cf files*
 
 If you experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}, you can follow the steps in [Debugging staging errors](/docs/debug/index.html#debugging-staging-errors) to resolve the problem.
 
-##Deploying applications by using the cf command
+## Deploying applications by using the cf command
 {: #dep_apps}
 
 When you deploy your applications to {{site.data.keyword.Bluemix_notm}} from the command line interface, a buildpack must be provided as the runtime environment according to your application language and framework. You can also use the Delivery Pipeline service to deploy applications to {{site.data.keyword.Bluemix_notm}}.
@@ -112,36 +138,36 @@ When you deploy your applications to {{site.data.keyword.Bluemix_notm}} from the
 If you use an external buildpack, you must specify the URL of the buildpack by using the **-b** option when you deploy your application to {{site.data.keyword.Bluemix_notm}} from the command prompt.
 
   * To deploy Liberty server packages to {{site.data.keyword.Bluemix_notm}}, use the following command from your source directory:
-  
+
   ```
   cf push
   ```
-  
+
   For more information about Liberty Buildpack, see [Liberty for Java](/docs/runtimes/liberty/index.html).
-  
+
   * To deploy Java Tomcat applications to {{site.data.keyword.Bluemix_notm}}, use the following command:
-  
+
   ```
   cf push appname -b https://github.com/cloudfoundry/java-buildpack.git -p app_path
   ```
-  
+
   * To deploy WAR packages to {{site.data.keyword.Bluemix_notm}}, use the following command:
-  
+
   ```
   cf push appname -p app.war
   ```
   Or, you can specify a directory that contains your application files by using the following command:
-  
+
   ```
   cf push appname -p "./app"
   ```
-  
+
   * To deploy Node.js applications to {{site.data.keyword.Bluemix_notm}}, use the following command:
-  
+
   ```
   cf push appname -p app_path
   ```
-  
+
 A `package.json` file must be in your Node.js application for the application to be recognized by the Node.js buildpack. The `app.js` file is the entry script for the application, and can be specified in the `package.json` file. The following example shows a simple `package.json` file:
 
   ```
@@ -162,45 +188,47 @@ A `package.json` file must be in your Node.js application for the application to
         "repository": {}
   }
   ```
-    
+
   For more information about the `package.json` file, see [package.json](https://www.npmjs.org/doc/files/package.json.html){:new_window}.
-  
+
   * To deploy PHP, Ruby, or Python applications to {{site.data.keyword.Bluemix_notm}}, use the following command from the directory that contains your application source:
-  
+
   ```
   cf push appname
   ```
 
-###Deploying an app in multiple spaces
+### Deploying an app in multiple spaces
 
 An app is specific to the space where it is deployed. You can't move or copy an app from one space to another in {{site.data.keyword.Bluemix_notm}}. To deploy an app in multiple spaces, you must deploy your app in each space where you want to use the app by the following steps:
 
   1. Switch to the space where you want to deploy your app by using the **cf target** command with the **-s** option:
-  
+
   ```
   cf target -s <space_name>
   ```
-  
+
   2. Go to your app directory and deploy your app by using the **cf push** command, where appname must be unique within your domain.
-  
+
   ```
   cf push appname
   ```
-  
-##Application manifest
+
+## Application manifest
 {: #appmanifest}
 
 Application manifests contain options that are applied to the **cf push** command. You can use an application manifest to reduce the number of deployment details that you must specify every time that you push an application to {{site.data.keyword.Bluemix_notm}}.
 
 In application manifests, you can specify options such as the number of application instances to create, the amount of memory and disk quota to allocate to applications, and other environment variables for the application. You can also use application manifests to automate application deployments. The default name of a manifest file is `manifest.yml`.
 
-###Supported options in the manifest file
+### Supported options in the manifest file
 
 The following table shows the supported options that you can use in an application manifest file. If you choose to use a different file name other than `manifest.yml`, you must use the **-f** option with the **cf push** command. In the following example, `appManifest.yml` is the file name:
 
 ```
 cf push -f appManifest.yml
 ```
+
+<p>  </p>
 
 
 |Options	|Description	|Usage or example|
@@ -221,7 +249,7 @@ cf push -f appManifest.yml
 |**env**	|The custom environment variables for the application.|`env: DEV_ENV: production`|
 {: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
-###A sample `manifest.yml` file
+### A sample `manifest.yml` file
 
 The following example shows a manifest file for a Node.js application that uses the built-in community Node.js buildpack in {{site.data.keyword.Bluemix_notm}}.
 
@@ -243,17 +271,17 @@ The following example shows a manifest file for a Node.js application that uses 
 ```
 {:codeblock}
 
-##Environment variables
+## Environment variables
 {: #app_env}
 
 Environment variables contain the environment information of a deployed application on {{site.data.keyword.Bluemix_notm}}. Besides environment variables set by a *Droplet Execution Agent (DEA)* and buildpacks, you can also set application-specific environment variables for applications on {{site.data.keyword.Bluemix_notm}}.
 
 You can view the following environment variables of a running {{site.data.keyword.Bluemix_notm}} application by using the **cf env** command or from the {{site.data.keyword.Bluemix_notm}} user interface:
-	
+
   * User-defined variables that are specific for an application. For information about how to add a user-defined variable to an app, see [Adding user-defined environment variables](#ud_env){:new_window}.
-	 
+
   * The VCAP_SERVICES variable, which contains connection information to access a service instance. If your application is bound to multiple services, the VCAP_SERVICES variable includes the connection information for each service instance. For example:
-  
+
   ```
   {
    "VCAP_SERVICES": {
@@ -299,7 +327,7 @@ You can view the following environment variables of a running {{site.data.keywor
    }
   }
   ```
-        
+
 You also have access to the environment variables that are set by the DEA and buildpacks.
 
 The following variables are defined by the DEA:
@@ -320,7 +348,7 @@ The following variables are defined by the DEA:
   <dt><strong>VCAP_APP_HOST</strong></dt>
   <dd>The IP address of the DEA host.</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
-  <dd>A JSON string that contains information about the deployed application. The information includes the application name, URIs, memory limits, time stamp at which the application achieved its current state, and so on. For example: 
+  <dd>A JSON string that contains information about the deployed application. The information includes the application name, URIs, memory limits, time stamp at which the application achieved its current state, and so on. For example:
   <pre class="pre codeblock"><code>
   {
     "limits": {
@@ -331,14 +359,14 @@ The following variables are defined by the DEA:
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
+        "testapp.AppDomainName.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNameng.mybluemix.net"
+        "testapp.AppDomainName.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -388,7 +416,7 @@ Variables that are defined by buildpacks are different for each buildpack. See [
 
 <ul>
     <li>The following variables are defined by the Liberty Buildpack:
-	
+
 	  <dl>
 	  <dt><strong>JAVA_HOME</strong></dt>
 	  <dd>The location of Java SDK that runs the application.</dd>
@@ -413,7 +441,7 @@ Variables that are defined by buildpacks are different for each buildpack. See [
 	</dl>
 </li>
 </li>
-</ul>	
+</ul>
 
 You can use the following sample Node.js code to get the value of the VCAP_SERVICES environment variable:
 
@@ -439,17 +467,17 @@ To specify start commands for your application, you can use one of the following
 **Note:** If you want the buildpack start commands to take precedence, specify **null** as the start command.
 
   * Use the **cf push** command and specify the -c parameter. For example, when you deploy a Node.js application, you can specify the **node app.js** start command on the -c parameter:
-  
+
   ```
   cf push appname -p app_path -c "node app.js"
   ```
-  
+
   * Use the command parameter in the `manifest.yml` file. For example, when you deploy a Node.js application, you can specify the **node app.js** start command in the manifest file:
-  
+
   ```
   command: node app.js
   ```
-  
+
 
 ### Adding user-defined environment variables
 {: #ud_env}
@@ -461,25 +489,25 @@ User-defined environment variables are specific for an application. You have the
 	2. Click **Environment Variables**.
 	3. Click **USER-DEFINED**, then click **ADD**.
 	4. Fill in the required fields, then click **SAVE**.
-  * Use the cf command line interface. Add a user-defined variable by using the `cf set-env` command. For example: 
+  * Use the cf command line interface. Add a user-defined variable by using the `cf set-env` command. For example:
     ```
     cf set-env appname env_var_name env_var_value
     ```
-	
-  * Use the `manifest.yml` file. Add value pairs in the file. For example: 
+
+  * Use the `manifest.yml` file. Add value pairs in the file. For example:
     ```
 	env:
       VAR1:value1
       VAR2:value2
     ```
-	
+
 After you have added a user-defined environment variable, you can use the following sample Node.js code to get the value of the variable that you defined:
 
 ```
 var myEnv = process.env.env_var_name;
 console.log("My user defined = " + myEnv);
 ```
-	
+
 ### Configuring the startup environment
 
 To configure the startup environment for your application, you can add shell scripts into the `/.profile.d` directory. The `/.profile.d` directory is under the build directory of your application. Scripts in the `/.profile.d` directory are run by {{site.data.keyword.Bluemix_notm}} before the application is run. For example, you can set the NODE_ENV environment variable to **production** by putting a `node_env.sh` file that contains the following content under the `/.profile.d` directory:
@@ -510,4 +538,4 @@ tmp/
 * [Deploying with Application Manifests](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF Manifest Generator](http://cfmanigen.mybluemix.net/){:new_window}
 * [Getting Started with cf v6](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
-* [Getting Started with IBM Continuous Delivery Pipeline for Bluemix](../services/DeliveryPipeline/index.html#getstartwithCD)
+* [Getting Started with IBM Continuous Delivery Pipeline for Bluemix](/docs/services/DeliveryPipeline/index.html#getstartwithCD)
