@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-16"
+lastupdated: "2016-12-16"
 
 ---
 
@@ -27,7 +27,7 @@ To assign a role to a gateway, use the following API:
 PUT /authorization/devices/{deviceId}/roles
 ```
 
-For details of the request schema, see the [{{site.data.keyword.iot_full}} API documentation](LINK TO CORRECT API).
+For details of the request schema, see the [{{site.data.keyword.iot_full}} API documentation](https://docs.internetofthings.ibmcloud.com/swagger/limited-gateway.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles).
 
 ## Adding devices to and removing devices from a resource group
 
@@ -37,7 +37,7 @@ Before a gateway with the *Standard Gateway* role can act on behalf of a device,
  PUT /bulk/devices/{groupId}/add
 ```
 
-The group to add devices to must be specified in the path of the request, and the devices to be added must be specified in the body of the request. For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+The group to add devices to must be specified in the path of the request, and the devices to be added must be specified in the body of the request. For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](https://docs.internetofthings.ibmcloud.com/swagger/limited-gateway.html#!/Limited_Gateway/put_bulk_devices_groupId_add).
 
 To remove multiple devices from a resource group, use the following API:
 
@@ -45,7 +45,7 @@ To remove multiple devices from a resource group, use the following API:
 PUT /bulk/devices/{groupId}/remove
 ```
 
-The devices specified in the body of the request will be removed from the group specified in the path of the request. For more information on the request schema and response, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+The devices specified in the body of the request will be removed from the group specified in the path of the request. For more information on the request schema and response, see the [{{site.data.keyword.iot_short_notm}} API documentation](https://docs.internetofthings.ibmcloud.com/swagger/limited-gateway.html#!/Limited_Gateway/put_bulk_devices_groupId_remove).
 
 ## Finding a resource group
 
@@ -55,15 +55,15 @@ Resource groups can have associated search tags. Search tags can be used to retr
 GET /groups
 ```
 
-This API returns the resource groups associated with the search tag used. If no search tag is specified, all resource groups are returned. For more information about the request schema, response, and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+This API returns the resource groups associated with the search tag used. If no search tag is specified, all resource groups are returned. <!-- For more information about the request schema, response, and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-Information on a resource group can also be found by using the following API:
+A resource group's ID can be found by using the following API:
 
 ```
 GET /authorization/devices/{deviceId}
 ```
 
-This API returns the unique identifier of the resource group(s) this device is a member of. More information on this API can be found in the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+This API returns the unique identifier of the resource group(s) this device is a member of. More information on this API can be found in the [{{site.data.keyword.iot_short_notm}} API documentation](https://docs.internetofthings.ibmcloud.com/swagger/limited-gateway.html#!/Limited_Gateway/get_authorization_devices_deviceId).
 
 ## Querying a resource group
 
@@ -75,7 +75,7 @@ To return the full properties of all devices in the specified resource group, us
 GET /bulk/devices/{groupId}
 ```
 
-This API returns the full properties list for all members of the specified resource group. For more information on the request schema, responses, and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+This API returns the full properties list for all members of the specified resource group. For more information on the request schema, responses, and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](https://docs.internetofthings.ibmcloud.com/swagger/limited-gateway.html#!/Limited_Gateway/get_bulk_devices_groupId).
 
 To return only the unique identifiers of the members of the resource group, use the following API:
 
@@ -83,7 +83,7 @@ To return only the unique identifiers of the members of the resource group, use 
 GET /bulk/devices/{groupId}/ids
 ```
 
-This API returns the unique identifiers of all devices that are members of the resource group. For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+This API returns the unique identifiers of all devices that are members of the resource group. <!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
 To return the properties of the resource group, use the following API:
 
@@ -91,7 +91,7 @@ To return the properties of the resource group, use the following API:
 GET /groups/{groupId}
 ```
 
-This API returns the properties of the resource group (name, description, search tags, and unique identifier) specified in the path, but does not return the list of members of the resource group. For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+This API returns the properties of the resource group (name, description, search tags, and unique identifier) specified in the path, but does not return the list of members of the resource group. <!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
 ## Creating and deleting a resource group.
 
@@ -101,7 +101,7 @@ Resource groups can be created and deleted independently of connecting gateways.
 POST /groups
 ```
 
-This API creates a resource group, and returns the group details. For details on the request schema and the responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+This API creates a resource group, and returns the group details. <!-- For details on the request schema and the responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
 To delete a resource group, use the following API:
 
@@ -109,7 +109,7 @@ To delete a resource group, use the following API:
 DELETE /groups/{groupId}
 ```
 
-This API deletes the specified resource group. Devices which were a member of the group are removed from the group, but the devices themselves are not otherwise affected. For more information, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+This API deletes the specified resource group. Devices which were a member of the group are removed from the group, but the devices themselves are not otherwise affected. <!-- For more information, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
 ## Updating group properties
 
@@ -127,7 +127,7 @@ GET /authorization/devices:
 
 ```
 
-This API returns the properties of all device connected to the organization, including their access control relevant properties (role, status, expiration date). For more information on responses and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+This API returns the properties of all device connected to the organization, including their access control relevant properties (role, status, expiration date). <!-- For more information on responses and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
 To retrieve device properties without retrieving the access control relevant information, use the following API:
 
@@ -135,7 +135,7 @@ To retrieve device properties without retrieving the access control relevant inf
 GET /authorization/devices/{deviceId}
 ```
 
-This API returns all device properties of the specified device, without returning the access control information. For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API).
+This API returns all device properties of the specified device, without returning the access control information. <!-- For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API). -->
 
 To retrieve the access control information of a specific device, use the following API:
 
@@ -143,7 +143,7 @@ To retrieve the access control information of a specific device, use the followi
 GET /authorization/devices/{deviceId}/roles:
 ```
 
-This API retrieves the access control relevant information for the specified device without returning other device properties. For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+This API retrieves the access control relevant information for the specified device without returning other device properties. <!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
 Device properties can be updated in two ways. Properties can be updated without changing the access control properties, or access control properties can be updated directly.
 
@@ -153,7 +153,7 @@ To update device properties without affecting the access control properties, use
 PUT /authorization/devices/{deviceId}
 ```
 
-This API will only update properties of the device which are not associated with access control. For more information on request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+This API will only update properties of the device which are not associated with access control. <!-- For more information on request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
 To update only the access control properties of the specified device, use the following API:
 
@@ -161,4 +161,4 @@ To update only the access control properties of the specified device, use the fo
 PUT /authorization/devices/{deviceId}/withroles:
 ```
 
-This API will only update the access control properties of the specified device. For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API).
+This API will only update the access control properties of the specified device. <!-- For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->

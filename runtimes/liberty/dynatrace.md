@@ -61,16 +61,16 @@ additional configuration steps are needed.
 
 ### Hosting the Dynatrace agent
 {: #hosting_dynatrace_agent}
-The Dynatrace agent must be hosted on a web server, and the Liberty buildpack must be able to download the agent jar from that server. The server must be configured with an index.yml file that specifies details about the agent jar. Complete the steps that follow to set up the Dynatrace agent:
+The Dynatrace agent must be hosted on a web server, and the Liberty buildpack must be able to download the agent jar from that server. The server must be configured with an `index.yml` file that specifies details about the agent jar. Complete the steps that follow to set up the Dynatrace agent:
   1. Download the Dynatrace agent jar. See [Dynatrace Server Platform Installers](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace) at the Dynatrace community website for instructions on downloading the Dynatrace agent jar. The appropriate agent jar file for running on Bluemix is the **dynatrace-agent-unix.jar** version **6.+**.
   2. Host the agent jar file in a location from which the Liberty buildpack can download it. You can host it on Bluemix itself using any of the available server facilities, or you can host it on some publicly available location.
-     * Ensure that you provide a index.yml file at the hosting location. The index.yml file must contain an entry consisting of the version ID of the agent jar follow by a colon and the complete URL of the location of that agent jar. For example:
+     * Ensure that you provide a `index.yml` file at the hosting location. The `index.yml` file must contain an entry consisting of the version ID of the agent jar follow by a colon and the complete URL of the location of that agent jar. For example:
 
             ---
                6.3.0: https://my-dynatrace-agent.mybluemix.net/dynatrace-agent-6.3.0-unix.jar
             {: codeblock}
      
-     * The **dynatrace-agent-6.3.0-unix.jar** file must be available at the location specified in the index.yml file. The location for both the jar file and the index.yml can be the same directory.
+     * The **dynatrace-agent-6.3.0-unix.jar** file must be available at the location specified in the `index.yml` file. The location for both the jar file and the `index.yml` can be the same directory.
 
 ### Configuring the Liberty app
 {: #configuring_liberty_app}
@@ -82,12 +82,13 @@ The Liberty app you want to monitor must be configured to locate the server host
         $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
         {: codeblock}
 
-    In this example, *my-dynatrace-agent-host.mybluemix.net* is the URL of the index.yml file hosted by the server that you previously configured.
+    In this example, *my-dynatrace-agent-host.mybluemix.net* is the URL of the `index.yml` file hosted by the server that you previously configured.
 
-2. After you set the environment variable, restage your app. The staging_task.log for your Liberty app issues a message indicating successful download of the Dynatrace agent from your agent hosting server. For example:
-
-    *Downloading dynatrace-agent-6.3.0-unix.jar 6.3.0 from https://my-dynatrace-agent-host.mybluemix.net/dynatrace-agent-6.3.0-unix.jar (17.8s)*
-
+2. After you set the environment variable, restage your app. Check the staging log for a message indicating successful download of the Dynatrace agent from your agent hosting server. For example:
+```
+    Downloading dynatrace-agent-6.3.0-unix.jar 6.3.0 from https://my-dynatrace-agent-host.mybluemix.net/dynatrace-agent-6.3.0-unix.jar (17.8s)
+```
+{: codeblock}
 
 # rellinks
 {: #rellinks}

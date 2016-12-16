@@ -172,7 +172,7 @@ The significant architectureal components depicted in the previous architecture 
 <dl>
 <dt>{{site.data.keyword.IBM_notm}} Cloud</dt>
 <dd>
-{{site.data.keyword.IBM_notm}} Cloud represents tenancies in {{site.data.keyword.BluSoftlayer}}. Within these tenancies are several networking environments. The significant networking environments are:
+The {{site.data.keyword.IBM_notm}} Cloud environment as a whole includes the following significant networking environments:
 <ul>
 <li>{{site.data.keyword.Bluemix_dedicated_notm}}</li>
 <li>{{site.data.keyword.Bluemix_notm}} Public</li>

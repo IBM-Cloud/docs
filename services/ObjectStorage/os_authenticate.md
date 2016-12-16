@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-12-06"
+lastupdated: "2016-12-14"
 
 ---
 {:new_window: target="_blank"}
@@ -18,11 +18,11 @@ To interact with the service, you must authenticate your {{site.data.keyword.obj
 {: shortdesc}
 
 
-Provisioning a new {{site.data.keyword.objectstorageshort}} instance creates an isolated Keystone project in the IBM Public Cloud. The Keystone credentials structure contains a complete set of attributes to allow you to choose the OpenStack token request method or OpenStack SDK that best fits your app. When you bind a new app to the instance, a new Keystone user with access to the project is created. When you deprovision the instance, the project and user are deleted.
+Provisioning a new {{site.data.keyword.objectstorageshort}} instance creates an isolated Keystone project in the IBM Public Cloud. The Keystone credentials structure contains a complete set of attributes so that you can choose the OpenStack token request method or OpenStack SDK that best fits your app. When you bind a new app to the instance, a new Keystone user with access to the project is created. When you deprovision the instance, the project and user are deleted.
 
 For more information about using OpenStack Swift and Keystone, view the [OpenStack documentation site](http://docs.openstack.org).
 
-1. The recommended v3 token request is a POST request to `https://identity.open.softlayer.com/v3/auth/tokens` as shown in the following cURL command:
+1. Make a POST request to `https://identity.open.softlayer.com/v3/auth/tokens` as shown in the following cURL command.
   ```
   	curl -i \
   	  -H "Content-Type: application/json" \
@@ -51,7 +51,7 @@ For more information about using OpenStack Swift and Keystone, view the [OpenSta
   ```
   {: codeblock}
 
-2. When you authenticate with Keystone you will receive a catalog response. Select an `object-store` endpoint and take note. You need it to construct your full URL. The following response example has been trimmed to show only information relevant to {{site.data.keyword.objectstorageshort}}.
+2. Select an `object-store` endpoint from the catalog response and take note. You need it to construct your full URL. The following response example is trimmed to show only information relevant to {{site.data.keyword.objectstorageshort}}.
 
   ```
   	HTTP/1.1 201 Created
@@ -155,6 +155,7 @@ For more information about using OpenStack Swift and Keystone, view the [OpenSta
   {: screen}
 
   <table>
+  <caption> Table 1. Post request response explained </caption>
     <tr>
       <th> Response endpoint </th>
       <th> Explanation </th>
@@ -165,7 +166,7 @@ For more information about using OpenStack Swift and Keystone, view the [OpenSta
     </tr>
     <tr>
       <td> <code> id </code> </td>
-      <td> Your {{site.data.keyword.objectstorageshort}} instance id. </td>
+      <td> Your {{site.data.keyword.objectstorageshort}} instance ID. </td>
     </tr>
     <tr>
       <td> <code> region </code> </td>
@@ -173,12 +174,10 @@ For more information about using OpenStack Swift and Keystone, view the [OpenSta
     </tr>
     <tr>
       <td> <code> url </code> </td>
-      <td> Your {{site.data.keyword.objectstorageshort}} URL. Used to interact with the service using cURL commands. </td>
+      <td> Your {{site.data.keyword.objectstorageshort}} URL. </td>
     </tr>
     <tr>
       <td> <code> interface </code> </td>
       <td> The internal interface  is not accessible from {{site.data.keyword.Bluemix_notm}}. Use the public interface (<code>publicURL</code>). </td>
     </tr>
   </table>
-
-  Table 1: Post request response explained

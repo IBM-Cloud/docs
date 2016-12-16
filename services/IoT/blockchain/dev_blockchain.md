@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-12-04"
+lastupdated: "2016-12-12"
 
 ---
 
@@ -70,12 +70,11 @@ Before you can begin deploying and testing smart contracts, you must set up your
 **Note:** {{site.data.keyword.iot_short_notm}} blockchain integration supports connecting to both {{site.data.keyword.blockchainfull_notm}} fabrics and Hyperledger fabrics. The following examples are based on the usage of {{site.data.keyword.blockchainfull_notm}}.
 
 1. Create and configure your {{site.data.keyword.blockchainfull_notm}} fabric.
-
 {{site.data.keyword.iot_short_notm}} blockchain integration requires the {{site.data.keyword.blockchainfull_notm}} fabric to manage the blockchain ledger, smart contracts, and the general blockchain infrastructure. {{site.data.keyword.Bluemix_notm}} blockchain integration uses {{site.data.keyword.blockchainfull_notm}} to manage the chains. If you have access to an existing {{site.data.keyword.blockchainfull_notm}} environment, you can use it. If not, you must create an instance of {{site.data.keyword.blockchainfull_notm}} from the {{site.data.keyword.Bluemix_notm}} [catalog](https://console.ng.bluemix.net/catalog/services/blockchain/).
 
   1. From your {{site.data.keyword.Bluemix_notm}} account Dashboard, click **Use services or APIs**.
-  2. Locate the experimental section of the service catalog and select **Blockchain**.  
-   **Tip:** Click [here](https://console.ng.bluemix.net/catalog/services/blockchain/) to go directly to the {{site.data.keyword.blockchainfull_notm}} experimental service page.
+  2. Locate the Application Services section of the service catalog and select **Blockchain**.  
+   **Tip:** Click [here](https://console.ng.bluemix.net/catalog/services/blockchain/) to go directly to the {{site.data.keyword.blockchainfull_notm}} service page.
   3. On the {{site.data.keyword.blockchainfull_notm}} service page, verify the Add Service selections:  
     - Space - If you have more than the default `dev` space, verify that you are deploying the service in the intended space.
     - App - Leave unbound.
@@ -130,7 +129,7 @@ Before you can begin deploying and testing smart contracts, you must set up your
      9. Click the **{{site.data.keyword.iot_short_notm}}** tile.
      10. Click **Launch** to open the {{site.data.keyword.iot_short_notm}} dashboard.
      11. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions** in the menu side bar.
-     12. In the **Extensions** page, in the Blockchain tile, click **Setup**.
+     12. In the **Extensions** page, in the Blockchain tile, click **Setup**, or click ![Gear icon](../images/gear.png "Configure") if you already have fabrics linked.
      13. In the Configure blockchain section, click **Add Fabric** and then enter the fabric information.
     **Note:** Blockchain integration must be enabled to add fabrics. For information, see [Blockchain](../../reference/extensions/index.html#blockchain) in the External service integrations topic.
     1. In the **Fabric** tab, enter a name to identify the fabric in {{site.data.keyword.iot_short_notm}}, then click **Next**.   

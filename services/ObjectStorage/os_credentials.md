@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-12-06"
+lastupdated: "2016-12-14"
 
 ---
 {:new_window: target="_blank"}
@@ -85,7 +85,7 @@ Service credentials are used to provide authentication and security for the serv
   ```
   {: pre}
 
-2. Run the following command using the variables explained in the table to generate service credentials.
+2. Run the following command to generate service credentials.
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name: <service_instance_name>", "role: <user_role>"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: <content_type" -H "Cookie: <cookie>"
@@ -93,12 +93,13 @@ Service credentials are used to provide authentication and security for the serv
   {: pre}
 
   <table>
+  <caption> Table 1. cURL service credential variables explained </caption>
     <tr>
       <th> Variable  </th>
       <th> Explanation </th>
     </tr>
     <tr>
-    <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
+      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
       <td> The service key endpoint.  </td>
     </tr>
     <tr>
@@ -115,11 +116,11 @@ Service credentials are used to provide authentication and security for the serv
     </tr>
     <tr>
       <td><i> bearer_token </i></td>
-      <td> The token you received when you authenticated your instance with Keystone. </td>
+      <td> The token that you received when you authenticated your instance with Keystone. </td>
     </tr>
   </table>
 
-  Table 1: cURL service credential variables explained
+
 
 3. Validate your credentials by running the following command.
 

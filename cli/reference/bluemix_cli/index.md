@@ -40,6 +40,7 @@ The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a s
 
 Use the indexes in the following tables to refer to the frequently used bluemix commands.
 
+**Note:** You can use the short format of bluemix commands; for example, `bx api` is short for `bluemix api`.
 
 <table summary="General bluemix commands.">
 <caption>Table 1. General bluemix commands</caption>

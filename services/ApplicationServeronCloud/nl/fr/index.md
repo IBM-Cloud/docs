@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-01"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,8 +11,6 @@ copyright:
 
 # Initiation à IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 {: #getting_started}
-Dernière mise à jour : 25 août 2016
-{: .last-updated}
 
 {{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} est un service permettant une configuration rapide sur une instance WebSphere Application Server Liberty, Traditional Network Deployment ou Traditional WebSphere Java EE pré-configurée dans un environnement de cloud hébergé sur {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
@@ -28,9 +26,7 @@ Vous êtes initié à l'administration WebSphere et disposez d'un accès complet
 infrastructures tierces. Le centre d'administration et les consoles d'administration vous permettent d'administrer votre service WebSphere Application Server Liberty ou Traditional, de la même façon que vos configurations WebSphere sur site.
 
 La plan WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment se compose d'un environnement de cellule WebSphere Application Server Network Deployment avec deux machines virtuelles, ou plus. La première machine virtuelle contient le gestionnaire de déploiement et IBM HTTP Server ; les autres machines virtuelles contiennent les noeuds personnalisés (agents de noeud) fédérés dans le gestionnaire de déploiement. Utilisez les scripts wsadmin existants pour créer votre configuration WebSphere ou servez-vous de la console d'administration WebSphere pour configurer
-manuellement l'environnement. Ces nouvelles fonctions permettent aux utilisateurs de configurer un environnement en cluster pour la haute disponibilité, la
-reprise en ligne et l'évolutivité. La mise en cluster est un aspect essentiel de toute application d'entreprise middleware, et les clients peuvent désormais choisir de mettre en cluster une
-topologie afin d'équilibrer la charge des demandes entre deux instances, ou plus.
+manuellement l'environnement. Ces nouvelles fonctionnalités permettent aux utilisateurs de créer un environnement en cluster, aspect essentiel de toute application d'entreprise middleware. Les clients peuvent désormais choisir de mettre en cluster une topologie afin d'équilibrer la charge des demandes entre deux instances, ou plus.
 
 Le plan WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core inclut l'utilisation de Liberty Collective. Liberty Collective, qui est un domaine d'administration pour un groupe de profils Liberty (serveurs), se
 compose de deux machines virtuelles, ou plus. La première machine virtuelle contient le serveur Liberty du contrôleur de collectivité, qui constitue un point de contrôle pour la collectivité Liberty. En plus de la collectivité Liberty, cette machine virtuelle contient également le serveur IBM HTTP Server, qui permet l'accès à vos applications depuis un
@@ -39,7 +35,12 @@ Liberty). Le centre d'administration Liberty est également activé sur le serve
 
 Le diagramme suivant présente l'architecture des environnements WebSphere Application Server pour environnements {{site.data.keyword.Bluemix_notm}} de cellule Network Deployment et collectivité Liberty.
 
+Figure 1. Cellule de déploiement réseau et architecture de collectivité Liberty 
+
 ![Figure 1. Architecture de cellule Network Deployment et de collectivité Liberty](images/CellCollectiveDiagram.gif)
+
+**Remarque** : Dans la *Figure 1* ci-dessus, le modèle qui représente la collocation du gestionnaire de déploiement ou du contrôleur de collectivité avec IBM HTTP Server est destiné au développement et au test. WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} vous donne également la liberté de reconfigurer le logiciel préinstallé pour répondre à vos besoins en matière d'applications et de production ; tout comme vous le feriez sur place. En outre, pour les exigences de production les plus strictes, contactez votre ingénieur commercial IBM qui peut vous informer sur notre offre IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} à service exclusif, qui propose des ressources isolées en réseau et en calcul.
+
 
 ## Environnement d'exploitation
 {: #operational_environment}
@@ -48,8 +49,7 @@ IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} est un s
 sur lesquels les consommateurs peuvent déployer des applications. Un réseau privé virtuel protège le service public des analyses de port générique et d'autres attaques indésirables via le réseau. Toutefois,
 il est important que vous vous rappeliez que le réseau privé virtuel du service que vous utilisez pour accéder à votre instance de service
 peut être partagé par plusieurs organisations et utilisateurs {{site.data.keyword.Bluemix_notm}}. Les machines virtuelles fournissent des ressources de traitement, de mémoire
-et d'E-S provenant d'un pool partagé de ressources IaaS. Si vous désirez exécuter vos applications dans un environnement privé, prenez contact avec votre
-ingénieur commercial IBM qui pourra vous présenter notre offre IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}.
+et d'E-S provenant d'un pool partagé de ressources IaaS.
 
 Etant donné que les ressources de traitement,
 de mémoire et d'E-S sont exécutées par des machines virtuelles dans un environnement partagé, les configurations de service peuvent varier. Vous pouvez

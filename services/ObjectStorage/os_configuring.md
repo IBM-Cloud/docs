@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-12-06"
+lastupdated: "2016-12-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -46,8 +46,8 @@ For more information about the prerequisites, see [the Openstack documentation](
 
 To configure the Swift client, you must `export` your authentication information. You can [generate credentials](/docs/services/ObjectStorage/os_credentials.html) through the CLI by using Cloud Foundry or cURL commands or through the {{site.data.keyword.Bluemix_notm}} UI. The client takes the information from the environment variables in the following table.
 
-
 <table>
+<caption> Table 1. Environment variables and descriptions </caption>
   <tr>
     <th> Environment variable </th>
     <th> Description </th>
@@ -74,7 +74,6 @@ To configure the Swift client, you must `export` your authentication information
   </tr>
 </table>
 
-Table 1: Authentication variables and descriptions
 
 
 To export your authentication information, input your credentials and run the following command:

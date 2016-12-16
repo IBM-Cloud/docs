@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-12-06"
+lastupdated: "2016-12-14"
 
 ---
 {:new_window: target="_blank"}
@@ -19,6 +19,7 @@ This FAQ provides answers to common questions about the {{site.data.keyword.obje
 The {{site.data.keyword.objectstorageshort}} service offers two plan options, Free and Standard. [Pricing](https://www.ibm.com/cloud-computing/bluemix/pricing/) varies depending on the chosen plan.
 
 <table>
+<caption> Table 1. Comparison of Free and Standard plans </caption>
   <tr>
     <th> Free plan </th>
     <th> Standard plan </th>
@@ -40,8 +41,6 @@ The {{site.data.keyword.objectstorageshort}} service offers two plan options, Fr
     <td> Unlimited storage </td>
   </tr>
 </table>
-
-Table 1: Comparison of Free and Standard plans
 
 **Attention**: Users working with a {{site.data.keyword.Bluemix_notm}} trial account are able to use the Free plan. After the time in your trial expires, the associated {{site.data.keyword.objectstorageshort}} service instance will be disabled, meaning that you will be unable to access the storage account. After 30 days, your {{site.data.keyword.Bluemix_notm}} account will be purged and all data deleted. To avoid data loss, upgrade to a [Paid {{site.data.keyword.Bluemix_notm}} account](/docs/admin/account.html) as soon as possible.
 

@@ -77,9 +77,9 @@ The {{site.data.keyword.webide}} is integrated with source code management tools
 1. To deploy your app, from the run bar, either select or [create](https://hub.jazz.net/tutorials/livesync/#launch_configuration){: new_window} ![External link icon, link opens in new window](images/launch--glyph.svg) a launch configuration.
 1. Click the deploy icon <img class="inline" src="images/webide_deploy_button_light.png"  alt="The deploy icon">. An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration. 
 2. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
-![Run bar](images/webide_runbar_light.png)
+![Run bar](images/webide_runbar_light.png)    
 
- ## Editing outside of the {{site.data.keyword.webide}}
+## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
 To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}. 

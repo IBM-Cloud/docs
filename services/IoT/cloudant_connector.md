@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-09-16"
+lastupdated: "2016-12-16"
 
 ---
 
@@ -89,6 +89,18 @@ Complete the following steps to connect a {{site.data.keyword.cloudant_short_not
 6. Click **Confirm** in the authorization dialog box.
 
 Your device data is now being stored in your {{site.data.keyword.cloudant}}.
+
+## Recipes on using Historian Service  
+{: #recipes}
+
+The following recipes describe how to use {{site.data.keyword.cloudant_short_notm}} as the Historian storage for {{site.data.keyword.iot_short}}:
+
+- [Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}}](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/) recipe describes how the device data is stored on {{site.data.keyword.cloudant_short_notm}} and demonstrates how to configure and store device data on {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage.
+
+- [Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}}](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/) recipe shows to query and perform data processing operations on the device data that is stored in {{site.data.keyword.cloudant_short_notm}}.
+
+- [Visualize Watson IoT Device Data stored in Cloudant NoSQL DB](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327) recipe shows how to link between Line Chart Cards and Historian Data Storage to display device data on Watson IoT Platform Dashboard.
+
 
 ## Creating new design documents  
 {: #design_docs}

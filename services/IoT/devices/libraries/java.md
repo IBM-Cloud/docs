@@ -40,6 +40,7 @@ The constructor builds the client instance and accepts the `Properties` object, 
 |`MaxInflightMessages`  |Sets the maximum number of in-flight messages for the connection. The default value is 100.|
 |`Automatic-Reconnect`  |A true or false value that is required when you want to automatically reconnect the device to {{site.data.keyword.iot_short_notm}} while it is in a disconnected state. The default value is false.|
 |`Disconnected-Buffer-Size`|The maximum number of messages that can be stored in memory while the client is disconnected. The default value is 5000.|
+|`WebSocket`|A true or false value that is required when you want to use websocket connections with {{site.data.keyword.iot_short_notm}}. The default value is false.|
 
 **Note:** To connect the device in durable subscription mode, set `clean-session` to `false`. For more information about clean session, see the 'Subscription Buffers and Clean Session' section of the [MQTT documentation](../../reference/mqtt/index.html#subscription-buffers-and-clean-session).
 

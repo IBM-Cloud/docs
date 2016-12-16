@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-12-06"
+lastupdated: "2016-12-14"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ An {{site.data.keyword.objectstorageshort}} user with an [admin role](/docs/serv
 {: shortdesc}
 
 <table>
+<caption> Table 1. Write access permissions by option </caption>
   <tr>
     <th> Permission </th>
     <th> Write ACL options </th>
@@ -39,8 +40,6 @@ An {{site.data.keyword.objectstorageshort}} user with an [admin role](/docs/serv
     <td>  <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
-Table 1: Write access permissions by option
 
 
 

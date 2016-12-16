@@ -12,7 +12,7 @@ copyright:
 
 # Registering a device with userId
 {: #register_device_with_userId}
-Last updated: 07 December 2016
+Last updated: 15 December 2016
 {: .last-updated}
 
 To register for userId-based notification, complete the following steps:
@@ -69,40 +69,6 @@ BMSPush.registerDevice(options,success, failure);
 
 - **userId**: Pass the unique userId value for registering for {{site.data.keyword.mobilepushshort}}.
 
-
-## Objective-C
-{: objc-register}
-
-Use the following APIs to register for UserId-based {{site.data.keyword.mobilepushshort}}.
-```
-// Initialize the MFPPush
-IMFPushClient* push = [IMFPushClient sharedInstance];
-[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"];
-```
-	{: codeblock}
-
-
-- **AppGUID**: This is the AppGUID key of the {{site.data.keyword.mobilepushshort}} service.
-- **clientSecret**: This is the clientSecret key of the {{site.data.keyword.mobilepushshort}} service.
-
-Use the **registerWithUserId** API to register the device for {{site.data.keyword.mobilepushshort}}.
-```
-// Register the device to push notifications service.
-[push registerWithDeviceToken:deviceToken WithUserId:@"userId" completionHandler:^(IMFResponse *response, NSError *error) {
-  NSString *message=@"";
-  if (error){
-      message = [NSString stringWithFormat:@"Error registering for push notifications: %@", error.description];
-      NSLog(@"%@",message);
-  } else {
-     message=@"Successfully registered for push notifications";
-     NSLog(@"%@",message);
-  }
-}];
-```
-	{: codeblock}
-
-
-- **userId**: Pass the unique userId value for registering for {{site.data.keyword.mobilepushshort}}.
 
 ## Swift
 {: swift-register}

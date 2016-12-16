@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-22"
+lastupdated: "2016-12-16"
 
 ---
 
@@ -24,8 +24,6 @@ Devices send their data to an edge analytics enabled gateway where edge analytic
 The following diagram illustrates the general architecture of an {{site.data.keyword.iot_full}} edge analytics environment.
 ![IBM Watson IoT Platform for edge analytics architecture](images/architecture_platform_edge.svg "IBM Watson IoT Platform withe edge analytics architecture")
 
-**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Cloud and Edge Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  
-
 ## Before you begin
 {: #byb}
 
@@ -33,6 +31,10 @@ Before you begin creating edge rules and actions:
 - Make sure that your gateway is connected to {{site.data.keyword.iot_short}} and that device data is being transmitted. See [Connecting gateways](gateways/dashboard.html) for more information.
 - Install the Edge Analytics Agent (EAA) on your gateway. For information, see [Installing the edge analytics agent](gateways/dashboard.html#edge). </br> **Tip:** EAA-enabled gateways provide EAA diagnostic data in the form of gateway device messages. For information, see [Edge Analytics Agent diagnostic metrics](#eaa_metrics).
 - Make sure that the device properties that you want to use as conditions in your rules are mapped to schemas. See [Connecting devices](iotplatform_task.html) and [Creating schemas](im_schemas.html) for more information.
+- Review Edge Analytics recipes  
+In our Recipes portal, a couple of recipes describe the steps that are required to carry out IBM Edge Analytics. The recipes clearly describe about how to install and configure IBM Edge Analytics Agent on a device that is built on top of Apache Edgent to run analytics close to an IoT data source.
+ - [Getting Started with Edge Analytics in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/) recipe is the beginning of this series. This recipe describes setting up Cisco DSA Platform on a Laptop System and Raspberry Pi 3 Device, installing and configuring IBM Edge Analytics Agent to connect to {{site.data.keyword.iot_short}}, installing System DS Link and configuring it to connect to Edge Gateway on {{site.data.keyword.iot_short}} as an attched device, defining and Activating the Edge Rule on the Edge Gateway, and the mangement of the Edge Rule from {{site.data.keyword.iot_short}}.
+ - To illustrate an advanced usage of Edge Analytics, the [Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/) recipe show cases building our own DS Link to get data from an Arduino Uno as attached device to Raspberry Pi 3 Device. Then the recipe shows case data filtering and handling of local device actions as part of the Edge Rule alert in the recipe.
 
 ## Managing edge rules and actions  
 {: #managing_rules}
