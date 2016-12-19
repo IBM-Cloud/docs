@@ -234,7 +234,7 @@ To view logs that you are interested in or exclude the content that you don't wa
 cf logs appname --recent | cut -c 29-40,46- 
 ```
 
-For more information about the **grep** option, type cut --help.
+For more information about the **cut** option, type cut --help.
 * To display log entries that contain certain keywords, use the **grep** option. For example, to display log entries that contain the keyword `[APP`, you can use the follow command:
 
 ```
