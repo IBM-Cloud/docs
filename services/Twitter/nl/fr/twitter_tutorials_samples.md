@@ -1,3 +1,11 @@
+﻿---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,9 +13,6 @@
 
 # Exemples Insights for Twitter
 {: #examples}
-
-*Dernière mise à jour : 13 mai 2016*
-{: .last-updated}
 
 Pour vous initier au service {{site.data.keyword.twittershort}}, utilisez les exemples fournis afin d'apprendre à utiliser le service de façon optimale.
 {: shortdesc}
@@ -25,7 +30,7 @@ Depuis l'application exemple, vous pouvez rechercher des tweets en utilisant les
 
 Si "IBM Twitter" est spécifié dans la zone de recherche et que vous cliquez sur **Twitter Count**, le nombre de tweets contenant les deux termes est retourné.
 
-![Image d'un terme de requête et du résultat retourné (nombre de tweets).](images/sample1_tweet_count.jpg "Image d'un terme de requête et du résultat retourné (nombre de tweets).")
+![Image d'un terme de requête et du résultat retourné.](images/sample1_tweet_count.jpg "Image d'un terme de requête et du résultat retourné.")
 
 ## Création d'un suivi basé sur des règles
 {: #creating_rule_track}
@@ -97,7 +102,9 @@ HTTP/1.1 Content-Type: application/json
      ]
 }
 ```
-Les valeurs `username` et `password` sont des valeurs uniques à votre application et instance de service. Ces informations figurent dans les variables d'environnement **VCAP_SERVICES**. Pour plus d'informations, voir [Initiation à {{site.data.keyword.twittershort}}](index.html#insights_twitter_overview){: new.window}.Le corps de la réponse est similaire au fragment de code suivant :
+Les valeurs `username` et `password` sont des valeurs uniques à votre application et instance de service. Ces informations figurent dans les variables d'environnement **VCAP_SERVICES**. Pour plus d'informations, voir [Initiation à {{site.data.keyword.twittershort}}](index.html#insights_twitter_overview){: new.window}.
+
+Le corps de la réponse est similaire au fragment de code suivant :
 
 ```
 HTTP/1.1 201 Created
@@ -143,6 +150,7 @@ HTTP/1.1 Content-Type: application/json
 }
 ```
 De la même façon, vous pouvez retirer des règles d'un suivi existant en émettant une opération GET /api/v1/tracks/{track Id} et en retirant les règles inutiles.
+
 L'exemple de la rubrique [Création d'un suivi agrégé](#creating_aggregated_track) inclut deux suivis. Un autre suivi, avec l'ID `c4562594-1eeb-4a95-8fac-255428d74bce`, pourrait être ajouté au suivi agrégé existant en émettant l'opération suivante :
 
 ```
