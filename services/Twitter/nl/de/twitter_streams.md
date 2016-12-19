@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,10 +13,7 @@
 
 # Decahose- und PowerTrack-Streams {: #decahose_powertrack}
 
-*Letzte Aktualisierung: 13. Mai 2016*
-{: .last-updated}
-
-{{site.data.keyword.twittershort}} bietet Zugriff auf den Twitter Decahose- und den Twitter PowerTrack-Stream auf der Basis der {{site.data.keyword.Bluemix_notm}}-Planregistrierung.
+{{site.data.keyword.twittershort}} bietet Zugriff auf den Twitter Decahose- und den Twitter PowerTrack-Stream auf der Basis der {{site.data.keyword.Bluemix_notm}}-Planregistrierung. 
 Beide Streams liefern Echtzeitfeeds und weisen unterschiedliche Merkmale auf, die den jeweiligen Anforderungen entsprechen.
 {:shortdesc}
 
@@ -21,13 +26,13 @@ die für Tracks ausgeführt werden können, wie z. B. Bearbeiten, Löschen usw.
 
 ## Tracktypen {: #track_types}
 
-Im Rahmen des Einstiegsplans können Benutzer anpassbare Tracks erstellen, mit denen Nachrichten gefiltert werden können, die im PowerTrack-Datenstream erfasst werden. {{site.data.keyword.twittershort}} unterstützt die beiden folgenden Tracktypen.
+Im Rahmen des Einstiegsplans können Benutzer anpassbare Tracks erstellen, mit denen Nachrichten gefiltert werden können, die im PowerTrack-Datenstream erfasst werden.  {{site.data.keyword.twittershort}} unterstützt die beiden folgenden Tracktypen.
 
 <dl>
 <dt>Regelbasiert</dt>
 <dd>Alle in diesem Track erfassten Nachrichten entsprechen mindestens einer der Regeln, die dem Track zugeordnet sind. Sie können in diesem Tracktyp Regeln hinzufügen, bearbeiten und löschen.
 
-Die vollständige [GNIP-PowerTrack-Regelsyntax](http://support.gnip.com/apis/powertrack/rules.html) wird in regelbasierten Tracks unterstützt. Alle Abfragen müssen der {{site.data.keyword.twittershort}}-[Abfragesprache](twitter_rest_apis.html#querylanguage "Abfragesprache") entsprechen.
+Die vollständige [GNIP-PowerTrack-Regelsyntax](http://support.gnip.com/apis/powertrack2.0/rules.html) wird in regelbasierten Tracks unterstützt. Alle Abfragen müssen der {{site.data.keyword.twittershort}}-[Abfragesprache](twitter_rest_apis.html#querylanguage "Abfragesprache") entsprechen.
 </dd>
 
 <dt>Aggregiert</dt>
