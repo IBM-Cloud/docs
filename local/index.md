@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-11-07"
+lastupdated: "2016-12-18"
 
 
 ---
@@ -17,7 +17,6 @@ lastupdated: "2016-11-07"
 # {{site.data.keyword.Bluemix_local_notm}}
 {: #local}
 
-<!-- 10/30/16 Most sections are currently being updated and edited. Do not move full file for production -->
 
 {{site.data.keyword.Bluemix_local}} brings the power and agility of the {{site.data.keyword.Bluemix_notm}} cloud-based platform to your data center. With {{site.data.keyword.Bluemix_local_notm}}, you can protect your most sensitive workloads behind your company firewall, while staying securely connected and in sync with {{site.data.keyword.Bluemix_notm}} Public.
 {:shortdesc}
@@ -245,9 +244,11 @@ The environment is completely visible to you, as the administrator, for incident
 ## Setting up your {{site.data.keyword.Bluemix_local_notm}} instance
 {: #setuplocal}
 
-{{site.data.keyword.Bluemix_local_notm}} is designed to provide a private version of the {{site.data.keyword.Bluemix_notm}} Public offering that is hosted on your own hardware, managed by you. You can use {{site.data.keyword.Bluemix_notm}} services and runtimes to support your computing needs in a secure, customer-hosted and managed cloud environment.
+{{site.data.keyword.Bluemix_local_notm}} is designed to provide a private version of the {{site.data.keyword.Bluemix_notm}} Public offering that is hosted on your hardware of your choice. The two commonly supported options are for you to supply the hardware in the form of VMware, or you can choose to order the {{site.data.keyword.Bluemix_notm}} Local System, which is built on a pre-configured PureApp appliance that you can order through {{site.data.keyword.IBM_notm}}. For more information about the PureApp appliance options, see [IBM Bluemix Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
 
-{{site.data.keyword.IBM_notm}} provides you access to {{site.data.keyword.Bluemix_local_notm}} by using a password-secured login. You can access the services, runtimes, and associated resources, and deploy and remove {{site.data.keyword.Bluemix_notm}} apps. Review the following steps for working with your {{site.data.keyword.IBM_notm}} representative to set up your local instance of {{site.data.keyword.Bluemix_notm}}.
+For {{site.data.keyword.Bluemix_local_notm}}, you can use the {{site.data.keyword.Bluemix_notm}} services and runtimes to support your computing needs in a secure, customer-hosted and managed cloud environment. {{site.data.keyword.IBM_notm}} provides you access to {{site.data.keyword.Bluemix_local_notm}} by using a password-secured login. You can access the services, runtimes, and associated resources, and deploy and remove {{site.data.keyword.Bluemix_notm}} apps. Review the following steps for working with your {{site.data.keyword.IBM_notm}} representative to set up your local instance of {{site.data.keyword.Bluemix_notm}}.
+
+**Note**: If you choose to host {{site.data.keyword.Bluemix_local_notm}} on the {{site.data.keyword.Bluemix_notm}} Local System hardware option, the set up process might differ in that you do not need to provide as much information to the IBM representative. Also, your roles and responsibilities throughout the inception and progression phases might also be reduced in scope due to the "call-home" maintenance model of the PureApp appliance as opposed to the management model that is necessary for using customer-owned VMware.
 
 To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 
@@ -273,6 +274,8 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 
 You can expect a process similar to the following list for the initial deployment and configuration of your environment. For details about who is responsible for each task, see [Roles and responsibilities](/docs/local/index.html#rolesresponsibilities).
 
+**Note**: If you choose to host your local instance on the {{site.data.keyword.Bluemix_notm}} Local System hardware option, you can skip steps 1 through 3 in the following list.
+
 <ol>
 <li>You provide the VMware configuration that meets the specifications for compute resources, networking, and storage. For more information about the infrastructure requirements, see <a href="/docs/local/index.html#localinfra">{{site.data.keyword.Bluemix_notm}} Local infrastructure requirements</a>.</li>
 <li>You provide the vCenter cluster credentials to be used by the inception virtual machine. You must provide the following information:
@@ -293,14 +296,14 @@ You can expect a process similar to the following list for the initial deploymen
 <li>You specify the domain names for the deployment, and the IDs that you want to use. You get two partially defined domains when you set up your local instance, and you pick the prefix for the two domains. For example, you pick the prefix for  <code>*mycompany*.bluemix.net</code> and <code>*mycompany*.mybluemix.net</code>. And, then you can also choose the full domain to create a custom domain.<br />
 <p>You can choose as many custom domains as you want. However, you are responsible for the certificates for the custom domains. For information about creating your custom domain, see <a href="../manageapps/updapps.html#domain">Creating and using a custom domain</a>.</p></li>
 <li>You choose which technology, IPSec or OpenVPN tunnel, to use to configure Relay to connect back to the {{site.data.keyword.IBM_notm}} operations center.</li>
-<li>{{site.data.keyword.IBM_notm}} installs and starts up the inception virtual machine within the {{site.data.keyword.Bluemix_notm}} cluster. If you provide your own VMware, then an {{site.data.keyword.IBM_notm}} representative helps your customer representative to complete this task.</li>
+<li>{{site.data.keyword.IBM_notm}} installs and starts up the inception virtual machine within the {{site.data.keyword.Bluemix_notm}} cluster. If you provide your own VMware, then an {{site.data.keyword.IBM_notm}} representative helps your customer representative to complete this task. If you ordered the {{site.data.keyword.Bluemix_notm}} Local System hardware option, an IBM representative completes this task.</li>
 <li>{{site.data.keyword.IBM_notm}} configures the Relay to communicate back to the {{site.data.keyword.IBM_notm}} operations center.</li>
 <li>The inception virtual machine repository pulls in the updated build artifacts.</li>
 <li>You provide the credentials for {{site.data.keyword.IBM_notm}} to connect to the corporate LDAP directory instance.</li>
 <li>{{site.data.keyword.IBM_notm}} uses automation to deploy the core {{site.data.keyword.Bluemix_notm}} platform.</li>
 <li>{{site.data.keyword.IBM_notm}} deploys the core platform that includes the elastic runtimes, console, administration feature, and monitoring.</li>
-<li>{{site.data.keyword.IBM_notm}} configures your administrative access to the environment.</li>
 <li>{{site.data.keyword.IBM_notm}} links your syndicated catalog from your local deployment to a Public {{site.data.keyword.Bluemix_notm}} instance for use of public services. A set of public services are available in your local instance by default. You can use the administration page for catalog management to turn the services on or off for your local instance.</li>
+<li>{{site.data.keyword.IBM_notm}} configures your administrative access to the environment.</li>
 <li>You can start using your local instance that is monitored by the {{site.data.keyword.IBM_notm}} operations team in order to respond to alerts.</li>
 </ol>
 
@@ -426,7 +429,7 @@ The final stage of completion represents the end of the relationship between you
 ## {{site.data.keyword.Bluemix_local_notm}} infrastructure requirements
 {: #localinfra}
 
-For {{site.data.keyword.Bluemix_local_notm}}, you own the physical security and the infrastructure for hosting the local instance.
+For {{site.data.keyword.Bluemix_local_notm}}, you own the physical security and the infrastructure for hosting the local instance. The infrastructure requirements are the same whether you choose to use and manage your own VMware or purchase the {{site.data.keyword.Bluemix_local_notm}} System which includes a PureApp appliance ordered from IBM. However, there are two PureApp appliance options you choose from when ordering, and the process of scaling your environment does differ for VMware and the {{site.data.keyword.Bluemix_local_notm}} System. For more information about the PureApp appliance options, see [IBM Bluemix Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
 
 {{site.data.keyword.IBM_notm}} sets the following minimum requirements for setting up {{site.data.keyword.Bluemix_local_notm}}.
 
