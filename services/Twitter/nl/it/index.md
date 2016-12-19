@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,13 +13,12 @@
 
 # Introduzione a Insights for Twitter {: #insights_twitter_overview}
 
-*Ultimo aggiornamento: 13 maggio 2016*
-{: .last-updated}
-
-Utilizza {{site.data.keyword.twitterfull}} per incorporare il contenuto di Twitter dai flussi Twitter [Decahose](http://support.gnip.com/apis/firehose/overview.html){: new_window} o [PowerTrack](http://support.gnip.com/apis/powertrack/overview.html){: new_window} nelle tue applicazioni {{site.data.keyword.Bluemix}}.
+Utilizza {{site.data.keyword.twitterfull}} per incorporare il contenuto di Twitter dai flussi Twitter [Decahose](http://support.gnip.com/gnip2.0/){: new_window} o [PowerTrack](http://support.gnip.com/apis/powertrack2.0/){: new_window} nelle tue applicazioni {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
-Per iniziare ad utilizzare {{site.data.keyword.twittershort}}, crea la tua applicazione web Bluemix con un runtime come Liberty for Java, quindi aggiungi il servizio {{site.data.keyword.twittershort}} alla tua applicazione. Quando il servizio {{site.data.keyword.twittershort}} è associato alla tua applicazione, viene eseguito il provisioning dell'istanza del servizio con credenziali univoche. La tua applicazione utilizza queste credenziali con le API REST per cercare e utilizzare il contenuto di Twitter.  Completa i seguenti passi per richiamare le credenziali da VCAP_SERVICES e integrare l'istanza del servizio con la tua applicazione.
+Per iniziare a utilizzare {{site.data.keyword.twittershort}}, crea prima la tua applicazione web Bluemix con un runtime come Liberty for Java e aggiungi quindi il
+servizio {{site.data.keyword.twittershort}} alla tua applicazione. Quando il servizio {{site.data.keyword.twittershort}} è associato alla tua applicazione,
+il provisioning dell'istanza del servizio viene eseguito con delle credenziali univoche. La tua applicazione utilizza queste credenziali con le API REST per cercare e utilizzare il contenuto di Twitter.  Completa i seguenti passi per richiamare le credenziali da VCAP_SERVICES e integrare l'istanza del servizio con la tua applicazione.
 
 1. Passa alla pagina della panoramica sull'applicazione.
 2. Vai alla sezione **Variabili d'ambiente**. Vengono visualizzate le informazioni `VCAP_SERVICES` per ognuno dei tuoi servizi.
@@ -19,8 +26,8 @@ Per iniziare ad utilizzare {{site.data.keyword.twittershort}}, crea la tua appli
 
 ```
 {  
-   "twitterinsights": [    
-     {      
+   "twitterinsights": [
+     {
       "name": "IBM Insights for Twitter-x3",
       "label": "twitterinsights",
       "plan": "Free",
@@ -36,30 +43,6 @@ Per iniziare ad utilizzare {{site.data.keyword.twittershort}}, crea la tua appli
 }
 ```
 
-<!--
-## Adding Insights for Twitter to your application {: #adding_twitter}
-
-The following instructions guide you through the process of creating an application, binding the application to the {{site.data.keyword.twittershort}} service, and retrieving the service credentials to interact with REST API operations in the provided API reference documentation.
-
-### Create an application
-For demonstration purposes, you'll create an application using the Liberty for Java&trade;  runtime, but the general process described below can be applied to other runtimes. If you don't have an existing application, click **CREATE AN APP** in the dashboard. When asked to confirm the type of app, click **WEB**.
-
-1. Open the **Catalog** menu.
-2. From the **Runtimes** section, click **Liberty for Java**.
-3. Click **Create**.
-4. In the **App Name** field, specify the name of your app.
-5. Click **Finish**. Wait for your application to provision.
-
-### Add the Insights for Twitter service
-Follow these steps to add the {{site.data.keyword.twittershort}} service to your app.
-
-1. Open the **Catalog** menu.
-2. From the **Data & Analytics** section, click the {{site.data.keyword.twittershort}} tile.
-3. In the **App** field, select the name of your app.
-4. Click **Create**.
-5. When prompted, click **Restage** to restart your application.
--->
-
 # rellinks
 {: #rellinks}
 ## samples
@@ -73,7 +56,7 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 {: #api}
 * [API REST ](https://cdeservice.{APPDomain}/rest-api/){: new_window}
 
-## runtime compatibili
+## compatible runtimes
 {: #buildpacks}
 * [Go](https://console.{DomainName}/docs/runtimes/go/index.html){: new_window}
 * [Liberty for Java](https://console.{DomainName}/docs/runtimes/liberty/index.html){: new_window}

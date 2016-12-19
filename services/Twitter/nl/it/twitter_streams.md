@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,10 +13,7 @@
 
 # Flussi Decahose e PowerTrack {: #decahose_powertrack}
 
-*Ultimo aggiornamento: 13 maggio 2016*
-{: .last-updated}
-
-{{site.data.keyword.twittershort}} fornisce l'accesso ai flussi Twitter Decahose e PowerTrack, in base alla registrazione del piano {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.twittershort}} fornisce l'accesso ai flussi Twitter Decahose e PowerTrack, in base alla registrazione del piano {{site.data.keyword.Bluemix_notm}}. 
 Entrambi i flussi spediscono le diverse caratteristiche e i feed in tempo reale per adattarsi alle tue necessità.
 {:shortdesc}
 
@@ -26,7 +31,7 @@ Gli utenti del piano di ingresso possono creare tracce personalizzabili per filt
 <dt>Regole</dt>
 <dd>Tutti i messaggi raccolti in questa traccia corrispondono ad almeno una delle regole associate con la traccia. Puoi aggiungere, modificare e eliminare le regole in questo tipo di traccia.
 
-La [GNIP PowerTrack Rules syntax](http://support.gnip.com/apis/powertrack/rules.html) completa è supportata nelle tracce basate sulle regole. Tutte le query devono essere conformi al {{site.data.keyword.twittershort}} [Linguaggio di query](twitter_rest_apis.html#querylanguage "Linguaggio di query").
+La [GNIP PowerTrack Rules syntax](http://support.gnip.com/apis/powertrack2.0/rules.html) completa è supportata nelle tracce basate sulle regole. Tutte le query devono essere conformi al {{site.data.keyword.twittershort}} [Linguaggio di query](twitter_rest_apis.html#querylanguage "Linguaggio di query").
 </dd>
 
 <dt>Aggregata</dt>

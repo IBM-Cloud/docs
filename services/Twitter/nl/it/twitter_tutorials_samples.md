@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,9 +13,6 @@
 
 # Esempi di Insights for Twitter
 {: #examples}
-
-*Ultimo aggiornamento: 13 maggio 2016*
-{: .last-updated}
 
 Introduzione al servizio {{site.data.keyword.twittershort}}, utilizza gli esempi forniti per imparare ad utilizzare e su come sfruttare il servizio.
 {: shortdesc}
@@ -98,6 +103,7 @@ HTTP/1.1 Content-Type: application/json
 }
 ```
 I valori `username` e `password` sono univoci nell'applicazione e nell'istanza del servizio. Queste informazioni possono essere ottenute dalle variabili di ambiente **VCAP_SERVICES**. Per ulteriori informazioni, consulta [Introduzione a {{site.data.keyword.twittershort}}](index.html#insights_twitter_overview){: new.window}.
+
 Il corpo della risposta sarà simile al seguente frammento:
 
 ```
@@ -179,7 +185,7 @@ HTTP/1.1
 }
 ```
 
-## Ricerca di Tweet 
+## Ricerca di Tweet
 {: #searching_tweets}
 
 Puoi immettere un'operazione GET nella tua applicazione per richiamare i Tweet da entrambi i flussi di dati. Ad esempio, la ricerca per i Tweet Decahose viene implementata come: `/api/v1/messages/search?q=QUERY&size=NUMBER&from=NUMBER`. Per gli utenti del piano di ingresso, la ricerca di Tweet dal flusso PowerTrack viene implementata come: `/api/v1/tracks/{trackId}/messages/search?q=QUERY&size=NUMBER&from=NUMBER`.
