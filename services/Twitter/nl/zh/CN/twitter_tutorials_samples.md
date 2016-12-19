@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,9 +13,6 @@
 
 # Insights for Twitter 示例
 {: #examples}
-
-*上次更新时间：2016 年 5 月 13 日*
-{: .last-updated}
 
 要开始使用 {{site.data.keyword.twittershort}} 服务，请使用提供的样本来了解如何利用该服务。
 {: shortdesc}
