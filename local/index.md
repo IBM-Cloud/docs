@@ -188,7 +188,7 @@ For information about the network specifications and infrastructure requirements
 ### Relay
 {: #localrelay}
 
-Relay is the secure link between you enterprise network and {{site.data.keyword.IBM_notm}} Cloud Operations. The traffic over the relay connection is automated activity for serving and maintaining the {{site.data.keyword.Bluemix_local_notm}} platform, compute resources, and services for your instances. The traffic over the relay connection can be categorized as follows:
+Relay is the secure link between your enterprise network and {{site.data.keyword.IBM_notm}} Cloud Operations. The traffic over the relay connection is automated activity for serving and maintaining the {{site.data.keyword.Bluemix_local_notm}} platform, compute resources, and services for your instances. The traffic over the relay connection can be categorized as follows:
 
 * monitoring and events
 * security intelligence
