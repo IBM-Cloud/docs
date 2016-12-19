@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,9 +13,6 @@
 
 # Ejemplos de Insights for Twitter
 {: #examples}
-
-*Última actualización: 13 de mayo de 2016*
-{: .last-updated}
 
 Para empezar a utilizar el servicio {{site.data.keyword.twittershort}}, utilice los ejemplos proporcionados para saber cómo aprovechar sus prestaciones.
 {: shortdesc}
@@ -46,7 +51,7 @@ HTTP/1.1 Content-Type: application/json
 }
 ```
 
-El `nombre de usuario` y la `contraseña` son exclusivos para la instancia de servicio y aplicación. Esta información se puede obtener de las variables de entorno **VCAP_SERVICES**. Para obtener más información, consulte [Guía de iniciación a {{site.data.keyword.twittershort}}](index.html#insights_twitter_overview){: new.window}.
+El nombre de usuario (`username`) y la contraseña (`password`) son exclusivos para la instancia de servicio y aplicación. Esta información se puede obtener de las variables de entorno **VCAP_SERVICES**. Para obtener más información, consulte [Guía de iniciación a {{site.data.keyword.twittershort}}](index.html#insights_twitter_overview){: new.window}.
 
 El cuerpo de la respuesta se parece al siguiente fragmento de código:
 
@@ -101,8 +106,7 @@ HTTP/1.1 Content-Type: application/json
      ]
 }
 ```
-El nombre de usuario (`username`) y la contraseña (`password`)
-son exclusivos para la instancia de servicio y aplicación. Esta información se puede obtener de las variables de entorno **VCAP_SERVICES**. Para obtener más información, consulte [Guía de iniciación a {{site.data.keyword.twittershort}}](index.html#insights_twitter_overview){: new.window}.
+El nombre de usuario (`username`) y la contraseña (`password`) son exclusivos para la instancia de servicio y aplicación. Esta información se puede obtener de las variables de entorno **VCAP_SERVICES**. Para obtener más información, consulte [Guía de iniciación a {{site.data.keyword.twittershort}}](index.html#insights_twitter_overview){: new.window}.
 
 El cuerpo de la respuesta se parece al siguiente fragmento de código:
 
@@ -223,8 +227,7 @@ PowerTrack debe especificarse como:
 curl https://<username>:<password>@cdeservice.mybluemix.net:443/api/v1/tracks/{trackId}/messages/search?q=IBM
 ```
 
-El nombre de usuario (`username`) y la contraseña (`password`)
-son exclusivos para la instancia de servicio y aplicación. Esta información se puede obtener de las variables de entorno **VCAP_SERVICES**. Para obtener más información, consulte [Guía de iniciación a {{site.data.keyword.twittershort}}](index.html#insights_twitter_overview){: new.window}.
+El nombre de usuario (`username`) y la contraseña (`password`) son exclusivos para la instancia de servicio y aplicación. Esta información se puede obtener de las variables de entorno **VCAP_SERVICES**. Para obtener más información, consulte [Guía de iniciación a {{site.data.keyword.twittershort}}](index.html#insights_twitter_overview){: new.window}.
 
 El servicio devuelve respuestas en formato JSON. La tabla
 siguiente lista los posibles códigos de respuesta.
