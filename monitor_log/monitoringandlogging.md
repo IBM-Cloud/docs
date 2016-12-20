@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2016
   
-lastupdated: "2016-12-08"
+lastupdated: "2016-12-20"
 
 ---
 
@@ -129,7 +129,8 @@ Every log entry contains four fields. Refer to the following list for the brief 
 You can view the logs for your Cloud Foundry apps in four places:
 
   * The {{site.data.keyword.Bluemix_notm}} Dashboard
-  * The Kibana dashboard
+  * The 
+  dashboard
   * The command line interface
   * External log hosts
 
@@ -151,7 +152,7 @@ In the **Logs** console, you can view the recent logs for your app or tail logs 
 Create a custom dashboard to display, in a simple or creative manner, the logs for the apps that run in a space.
 
 1. Open [https://logmet.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>](https://logmet.{DomainName}) to log in to the Kibana user interface.
-2. Select the **Kibana 4** tab.
+2. Select the **Kibana 3** tab.
 3. If you don't see any logs, adjust the time picker in the header.
 4. Save the dashboard as a new dashboard.
   1. In the toolbar, click the **Save** icon.
