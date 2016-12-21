@@ -1,8 +1,8 @@
----
+ ---
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-12-14"
+lastupdated: "2016-12-20"
 
 ---
 
@@ -21,8 +21,6 @@ You can configure tool integrations that support development, deployment, and op
 
 The tool integrations that are available to add and configure for your toolchain are different depending on whether you are using toolchains on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. If you are using toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated, the tool integrations that are available to you depend on how {{site.data.keyword.contdelivery_full}} was set up on your specific environment.
 
-*Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated*
-
 |Tool integration |Available on {{site.data.keyword.Bluemix_notm}} Public	|Available on {{site.data.keyword.Bluemix_notm}} Dedicated (environment dependent)|
 |:----------|:------------------------------|:------------------|
 |{{site.data.keyword.deliverypipeline}} 		|Yes	   	|Yes  		|
@@ -34,6 +32,7 @@ The tool integrations that are available to add and configure for your toolchain
 |PagerDuty			|Yes		|Yes		|
 |Sauce Labs		|Yes		|No		|
 |Slack			|Yes		|Yes		|
+{: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated" caption-side="top"}
 
 **Tip**: If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}. 
 
