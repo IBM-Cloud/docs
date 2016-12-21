@@ -402,6 +402,7 @@ Questo esempio richiama un servizio Yahoo Meteo per ottenere le condizioni attua
   {: screen}
 
 ### Creazione pacchetto di un'azione come modulo Node.js
+{: #openwhisk_js_packaged_action}
 
 Come alternativa alla scrittura di tutto il tuo codice di azione in un unico file di origine JavaScript, puoi scrivere un'azione come pacchetto `npm`. Considera come esempio una directory con i seguenti file:
 
