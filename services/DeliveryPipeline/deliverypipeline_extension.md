@@ -195,9 +195,7 @@ To create Slack notifications:
 2. In the **ENVIRONMENT PROPERTIES** tab, click **ADD PROPERTY**.
 3. Select **Text property**.
 4. Enter the name and a value for the environment property. Repeat to create multiple environment properties.
-
-  _Table 1. Environment properties for configuring Slack notifications_
-
+  
   <table>
   <tr>
   <th>Name</th>
@@ -233,6 +231,7 @@ To create Slack notifications:
       <li><code>info</code>: Informational messages about the build process.</li>
       <li><code>unknown</code>: Unknown messages are not assigned a type.</li></ul></td>
    </table>
+{: caption="Table 1. Environment properties for configuring Slack notifications" caption-side="top"}
 
 5. Click **Save**.
 
@@ -256,9 +255,7 @@ To create HipChat notifications:
 2. In the **ENVIRONMENT PROPERTIES** tab, click **ADD PROPERTY**.
 3. Select **Text Property**.
 4. Enter the name and a value for the environment property. Repeat to create multiple environment properties.
-
-  _Table 2. Environment Properties for configuring HipChat notifications_
-
+ 
   <table>
   <tr>
   <th>Name</th>
@@ -319,6 +316,7 @@ To create HipChat notifications:
       <li><code>NOTIFICATION_FILTER = unknown</code> and <code>NOTIFICATION_LEVEL = bad</code>, <code>good</code>, or <code>unknown</code></li></ul></td>
     </tr>
   </table>
+{: caption="Table 2. Environment Properties for configuring HipChat notifications" caption-side="top"}
 
 5. Click **Save**.
 
