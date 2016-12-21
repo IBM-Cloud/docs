@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-11"
+lastupdated: "2016-12-21"
 
 ---
 
@@ -108,7 +108,7 @@ The values for the **Type of Metric** and **Result File Location** fields must m
 *Figure 1* shows a test job that is configured to run unit tests, upload the results in Mocha format, and upload the code coverage results in Istanbul format.
 
 ![Deployment Risk Analytics upload job](images/DRA_upload_job.png)
-*Figure 1. Upload results to DevOps Analytics*
+Figure 1. Upload results to DevOps Analytics
 
 ## Defining {{site.data.keyword.DRA_short}} gates in the pipeline
 {: #toolchain_pipeline_gates}
@@ -129,7 +129,7 @@ The values for the **Type of Metric** and **Result File Location** fields must m
 9. Set up gates for all of your {{site.data.keyword.DRA_short}} policies by repeating these steps.
 
 ![Deployment Risk Analytics Mocha job](images/DRA_gate_job.png)
-*Figure 2. DevOps Analytics gate*
+Figure 2. DevOps Analytics gate
 
 After your pipeline is configured, start to use {{site.data.keyword.DRA_short}}. For instructions, see [Running the Delivery Pipeline](/docs/services/DevOpsInsights/pipeline_decision_reports.html#toolchain_reports).
 
