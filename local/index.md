@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-12-18"
+lastupdated: "2016-12-20"
 
 
 ---
@@ -244,11 +244,11 @@ The environment is completely visible to you, as the administrator, for incident
 ## Setting up your {{site.data.keyword.Bluemix_local_notm}} instance
 {: #setuplocal}
 
-{{site.data.keyword.Bluemix_local_notm}} is designed to provide a private version of the {{site.data.keyword.Bluemix_notm}} Public offering that is hosted on your hardware of your choice. The two commonly supported options are for you to supply the hardware in the form of VMware, or you can choose to order the {{site.data.keyword.Bluemix_notm}} Local System, which is built on a pre-configured PureApp appliance that you can order through {{site.data.keyword.IBM_notm}}. For more information about the PureApp appliance options, see [IBM Bluemix Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
+{{site.data.keyword.Bluemix_local_notm}} is designed to provide a private version of the {{site.data.keyword.Bluemix_notm}} Public offering that is hosted on your hardware of your choice. The two commonly supported options are for you to supply the hardware in the form of VMware, or you can choose to order the {{site.data.keyword.Bluemix_notm}} Local System, which is built on a pre-configured PureApplication appliance that you can order through {{site.data.keyword.IBM_notm}}. For more information about the PureApplication appliance options, see [IBM Bluemix Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 For {{site.data.keyword.Bluemix_local_notm}}, you can use the {{site.data.keyword.Bluemix_notm}} services and runtimes to support your computing needs in a secure, customer-hosted and managed cloud environment. {{site.data.keyword.IBM_notm}} provides you access to {{site.data.keyword.Bluemix_local_notm}} by using a password-secured login. You can access the services, runtimes, and associated resources, and deploy and remove {{site.data.keyword.Bluemix_notm}} apps. Review the following steps for working with your {{site.data.keyword.IBM_notm}} representative to set up your local instance of {{site.data.keyword.Bluemix_notm}}.
 
-**Note**: If you choose to host {{site.data.keyword.Bluemix_local_notm}} on the {{site.data.keyword.Bluemix_notm}} Local System hardware option, the set up process might differ in that you do not need to provide as much information to the IBM representative. Also, your roles and responsibilities throughout the inception and progression phases might also be reduced in scope due to the "call-home" maintenance model of the PureApp appliance as opposed to the management model that is necessary for using customer-owned VMware.
+**Note**: If you choose to host {{site.data.keyword.Bluemix_local_notm}} on the {{site.data.keyword.Bluemix_notm}} Local System hardware option, the set up process might differ in that you do not need to provide as much information to the IBM representative. Also, your roles and responsibilities throughout the inception and progression phases might also be reduced in scope due to the maintenance model of the PureApplication appliance as opposed to the management model that is necessary for using customer-owned VMware.
 
 To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 
@@ -534,13 +534,24 @@ Set the following roles and permissions. Propagation is set for each permission.
 </dd>
 </dl>
 
-### Increasing the Droplet Execution Agent (DEA) pool
-Each DEA is configured with:
+### Scaling your environment
+
+#### VMware option
+
+If you have chosen the provide your own VMware hardware option based on the minimum specifications, you are set up with 64 GB of available memory. If you want to add 16 or 32 GB, then you must work with your hardware team to provide the available memory or add an ESXi server, if needed as described in the following example. When the hardware capacity is available, work with your client success manager who can work with the IBM team to manage the compute memory increase.
+
+For increasing the DEA pool, each DEA is configured with:
+
 - 16 or 32 GB of RAM
 - 2x or 4x vCPU
 - 150 or 300 GB of storage
 
 For example, if the ESXi host size is 256 GB of memory with 16x cores, then eight DEAs are added. If the ESXi host size is 64 GB of memory with 8x cores, then two ESXis and four DEAs are required to be added. An additional 1.5 TB of storage is required for every four DEAs. This example is based on a DEA configured with 32 GB of RAM, 4x vCPU, and 300 GB of storage.
+
+
+#### Bluemix Local System option
+
+If you choose to order the PureApplication hardware through {{site.data.keyword.IBM_notm}} to host your {{site.data.keyword.Bluemix_notm}} Local instance, you must order another compute node in the specification size that you previously purchased. You can order another node through your client success manager who works with the IBM team to get the updated hardware shipped directly to you. Once the hardware is delivered and installed, IBM is notified and the deployment team adds an additional 64 GB. Depending on the compute node size that you ordered, you might have additional capacity available for future upgrades. In that case, you will simply need to contact IBM, and the team can add additional 64 GB increments of available compute memory as needed.
 
 ## Maintaining your local instance
 {: #maintainlocal}
