@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-12-9"
+lastupdated: "2016-12-20"
 
 ---
 
@@ -21,21 +21,6 @@ Toolchains are available in the Public and Dedicated environments on {{site.data
 On {{site.data.keyword.Bluemix_notm}} Public, depending on the template or toolchain that you use, the toolchain might include a GitHub repository (repo) that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's GitHub repo, the delivery pipeline automatically builds and deploys the app to {{site.data.keyword.Bluemix_notm}}. 
 
 On {{site.data.keyword.Bluemix_notm}} Dedicated, depending on the template or toolchain that you use, the toolchain might include a GitHub or GitHub Enterprise repo that is populated with app starter code and a preconfigured delivery pipeline. When you push changes to the toolchain's GitHub or GitHub Enterprise repo, the delivery pipeline automatically builds and deploys the apps to {{site.data.keyword.Bluemix_notm}}.
-
-## Getting help and support for toolchains 
-{: #gettinghelp}
-
-If you have problems or questions when you use toolchains, you can get help by searching for information or by asking questions in a forum. You can also [open a support ticket](https://www.{DomainName}/docs/support/index.html#open-ticket). 
-
-The {{site.data.keyword.Bluemix_notm}} development and support teams actively monitor Stack Overflow and dW Answers, and follow the questions that are tagged with ibm-bluemix, continuous-delivery, and bluemix-continuous-delivery. When you create a question in either forum, tag your question so that the {{site.data.keyword.Bluemix_notm}} development and support teams see it.
-
-* If you have technical questions about developing or deploying an app with toolchains, post your question on [Stack Overflow](http://stackoverflow.com/search?q=ibm-bluemix+continuous-delivery){:new_window} ![External link icon](images/launch--glyph.svg) and tag your question with "ibm-bluemix" and "continuous-delivery".
-
-* If you have questions about toolchains, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/continuous-delivery/?smartspace=bluemix){:new_window} ![External link icon](images/launch--glyph.svg) forum. Include the "continuous-delivery" tag.
-
-For more details about using the forums, see [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help).
-
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://www.{DomainName}/docs/support/index.html#contacting-support).
 
 # Related Links
 {: #rellinks}
@@ -61,3 +46,5 @@ For information about opening an IBM support ticket, or about support levels and
 * [Simple container toolchain](https://www.ibm.com/devops/method/toolchains/toolchain_simple_container){:new_window} ![External link icon](images/launch--glyph.svg)
 * [Simple secure container toolchain](https://www.ibm.com/devops/method/toolchains/toolchain_simple_secure_container){:new_window} ![External link icon](images/launch--glyph.svg)
 * [IBM Bluemix Garage Method](https://www.ibm.com/devops/method){:new_window} ![External link icon](images/launch--glyph.svg)
+
+
