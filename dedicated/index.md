@@ -605,7 +605,9 @@ Because protection of private data is critical, IBM needs your collaboration whe
 </ul>
 
 # rellinks
+{: rellinks}
 ## general
+{: general}
 * [Discover: {{site.data.keyword.Bluemix_dedicated_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} glossary](/docs/overview/glossary/index.html)
