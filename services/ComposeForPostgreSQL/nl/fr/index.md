@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be surrounded by 3 dashes
+    It must be --- surrounded by 3 dashes ---
     The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
     Indentation as per the previous template must be preserved.
 -->
@@ -21,23 +21,20 @@ copyright:
 # Initiation à {{site.data.keyword.composeForPostgreSQL}}
 {: #getting-started-with-compose-for-postgreSQL}
 
-Dernière mise à jour : 20 septembre 2016
-{: .last-updated}
-
 {{site.data.keyword.composeForPostgreSQL}} fournit une base de données relationnelle objet open source puissante hautement personnalisable. Postgres permet un développement rapide et facilement évolutif. Vous pouvez développer dans le langage que vous préférez, par exemple, C/C++, Perl, Python, TCL/TK, Delphi/Kylix, VB, PHP, ASP et Java. Vous disposez d'une base de données d'entreprise possédant de nombreuses fonctions grâce à la prise en charge JSON et vous obtenez ainsi le meilleur des environnements SQL et NoSQL.
 {:shortdesc}
 
-**Remarque :** Les instances de service Compose qui ont été mises à disposition avant le 14 septembre 2016 et qui sont toujours actives peuvent encore être utilisées et sont directement accessibles sur le site [https://www.compose.com/](https://www.compose.com). Les instances de service Compose mises à disposition depuis cette date sont directement accessibles et utilisables dans votre compte Bluemix. 
+**Remarque :** Les instances de service Compose qui ont été mises à disposition avant le 14 septembre 2016 et qui sont toujours actives peuvent encore être utilisées et sont directement accessibles sur le site [https://www.compose.com/](https://www.compose.com). Les instances de service Compose mises à disposition depuis cette date sont directement accessibles et utilisables dans votre compte Bluemix.
 
 Exécutez les étapes décrites ci-dessous pour commencer à utiliser Compose for PostgreSQL :
 
 1. [Créez une instance {{site.data.keyword.composeForPostgreSQL}}](https://console.ng.bluemix.net/catalog/services/compose-for-postgresql/).
 
-  Lorsque vous créez une instance du service, prenez soin de sélectionner un nom pour votre service et un nom de données d'identification. Laissez le service non lié ; vous pourrez connecter une application à votre service ultérieurement en utilisant les données d'identification fournies lors de la mise à disposition du service. La section *Données d'identification disponibles* répertorie les différentes valeurs de données d'identification. 
+  Lorsque vous créez une instance du service, prenez soin de sélectionner un nom pour votre service et un nom de données d'identification. Laissez le service non lié ; vous pourrez connecter une application à votre service ultérieurement en utilisant les données d'identification fournies lors de la mise à disposition du service. La section *Données d'identification disponibles* répertorie les différentes valeurs de données d'identification.
 
-2. Connectez-vous au service {{site.data.keyword.composeForPostgreSQL}}. 
+2. Connectez-vous au service {{site.data.keyword.composeForPostgreSQL}}.
 
-  Pour connecter une application à votre service, utilisez les données d'identification créées en même temps que le service. L'exemple d'application montre comment utiliser Node.js pour établir une connexion au service {{site.data.keyword.composeForPostgreSQL}}. 
+  Pour connecter une application à votre service, utilisez les données d'identification créées en même temps que le service. L'exemple d'application montre comment utiliser Node.js pour établir une connexion au service {{site.data.keyword.composeForPostgreSQL}}.
 
   Téléchargez l'exemple d'application [compose-postgresql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-postgresql-helloworld-nodejs) et suivez les instructions contenues dans le fichier Readme. Ensuite, cliquez sur **Afficher l'application** sur la page des détails d'application pour afficher le contenu du tableau *Exemples*.
 
@@ -51,6 +48,7 @@ Nom de zone|Description
 `deployment_id`|Identificateur interne du service, créé dans Compose.
 `db_type`|Type de base de données fourni par le service, en l'occurrence, `postgresql`.
 `name`|Nom du déploiement de base de données.
+{: caption="Table 1. {{site.data.keyword.composeForPostgreSQL}} credentials" caption-side="top"}
 
 # Liens connexes
 {: #rellinks}
