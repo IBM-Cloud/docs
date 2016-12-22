@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-11-30"
  
 
 ---
@@ -269,9 +269,7 @@ esempio:
 | Livello 3: 2001 - 3000                  |   $0,75 USD                       |
 | Livello 4: 3001 - 4000           |      $0,60 USD                    |
 |Livello 5: &gt; 4000 | $0,40 USD | 
-
-Tabella 1. Tabella di prezzi di livello semplice
-{: #pricing_table1}
+{:caption="Table 1. Simple tier pricing table" caption-side="top"}
 
 La seguente tabella
 illustra quanto paghi con un piano basato su un modello di prezzi di livello semplice:
@@ -283,8 +281,7 @@ illustra quanto paghi con un piano basato su un modello di prezzi di livello sem
 |2500 |	2500 × 0,75 = 1875 |	$1875 USD|
 |... |	... |	...|
 |5200 |	5200 × 0,40 = 2080 |$2080 USD|
-Tabella 2. Calcolo dell'addebito utilizzando il modello di prezzo di livello semplice
-{: #pricing_table2}
+{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
 
 ####Livello graduale
 {: #graduated_tier}
@@ -302,8 +299,7 @@ esempio:
 |    Livello 3: 2001 - 3000 |	$0,75 USD |
 |    Livello 4: 3001 - 4000 |	$0,60 USD |
 |    Livello 5: &gt; 4000 |	$0,40 USD |
-Tabella 3. Tabella di prezzi di livello graduale
-{: #pricing_table3}
+{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
 
 La seguente tabella
 illustra quanto paghi con un piano basato su un modello di prezzi di livello graduale:
@@ -315,8 +311,7 @@ illustra quanto paghi con un piano basato su un modello di prezzi di livello gra
 |2500 |	(1000 × 1 (prezzo unitario per il livello 1)) + (1000 × 0,90 (prezzo unitario per il livello 2)) + (500 × 0,75 (prezzo unitario per il livello 3)) = 2275 |	$2275 USD |
 |... |	... |	...|
 |5200 |	(1000 × 1 (prezzo unitario per il livello 1)) + (1000 × 0,90 (prezzo unitario per il livello 2)) + (1000 × 0,75 (prezzo unitario per il livello 3)) + (1000 × 0,60 (prezzo unitario per il livello 4)) + (1200 × 0,40 (prezzo unitario per il livello 5)) = 3730 |	$3730 USD|
-Tabella 4. Calcolo dell'addebito utilizzando il modello di prezzi di livello graduale
-{: #pricing_table4}
+{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
 
 ####Livello a blocchi
 {: #block_tier}
@@ -334,8 +329,7 @@ esempio:
 | Livello 3: &lt;= 3000 |	$2800 USD|
 | Livello 4: &lt;= 4000 |	$3500 USD|
 | Livello 5: &lt;= 10000 |	$5000 USD|
-Tabella 5. Tabella di prezzi di livello a blocchi
-{: #pricing_table5}
+{:caption="Table 5. Block tier pricing table" caption-side="top"}
 
 La seguente tabella
 illustra quanto paghi con un piano basato su un modello di prezzi di livello a blocchi:
@@ -349,8 +343,7 @@ il prezzo totale è $1900 USD. |	$1900 USD|
 |... |	... |	...|
 |5200 |	Il numero di elementi rientra nel livello 5, quindi
 il prezzo totale è $5000 USD. |	$5000 USD|
-Tabella 6. Calcolo dell'addebito utilizzando il modello di prezzi di livello a blocchi
-{: #pricing_table6}
+{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
 ### Franchigie per i server virtuali
 {: #vms}
@@ -430,8 +423,7 @@ sono in dollari statunitensi.
 |Data Cache - Premium |	25 GB di spazio di cache e una
                                 replica |	$505,00 USD/istanza|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB di archiviazione dati gratuita<br/>50.000 chiamate API light API gratuite al mese<br/>10.000 chiamate API heavy gratuite al mese | $1,00 USD/GB<br/>$0,03 USD/1000 chiamate API light<br/>$0,15 USD/1000 chiamate API heavy |
-Tabella 7. Listino prezzi
-{: #pricing_table7}
+{:caption="Table 7. Pricing sheet" caption-side="top"}
 
 ###Calcolo del prezzo
 dell'applicazione
@@ -502,8 +494,7 @@ Sebbene negli esempi dei prezzi vanga utilizzato il dollaro americano (USD), in 
 |SEK |	  Corona svedese|
 |USD |    Dollaro americano|
 |ZAR |	  Rand sudafricano|
-Tabella 8. Valute supportate
-{: #pricing_table8}
+{:caption="Table 8. Supported currencies" caption-side="top"}
 
 **Nota:** se hai collegato i tuoi account {{site.data.keyword.Bluemix_notm}} e SoftLayer, ricevi un'unica fattura in dollari americani (USD).  
 
@@ -526,9 +517,9 @@ Se selezioni una specifica organizzazione per l'**Organizzazione**, puoi vedere 
 ##Visualizzazione dei crediti
 {: #credits}
 
-In qualità di proprietario dell'account o gestore della fatturazione, puoi utilizzare la pagina **Dashboard di utilizzo** per visualizzare tutti i crediti del tuo account. Potresti avere crediti se, ad esempio, hai associato un account SoftLayer a un account {{site.data.keyword.Bluemix_notm}}.
+In qualità di proprietario dell'account o gestore della fatturazione, puoi utilizzare la pagina **Dashboard di utilizzo** per visualizzare tutti i crediti del tuo account. 
 
-Per aprire la pagina **Dashboard di utilizzo**, fai clic su **Account** > **Dashboard di utilizzo**. Nella pagina vengono mostrati gli eventuali crediti e la rispettiva data di scadenza. 
+Per aprire la pagina **Dashboard di utilizzo**, fai clic su **Account** &gt; **Dashboard di utilizzo**. Il dashboard visualizza eventuali crediti e la rispettiva data di scadenza.
 
 ##Notifiche
 {: #notifications}
@@ -555,8 +546,7 @@ seconda del tipo di modifica del piano e del servizio. Ad esempio, se hai ridott
 |Presence Insights 	|Se hai un piano Lite e superi le franchigie, viene visualizzato oppure registrato nei log un messaggio 403 che indica che non sei più autorizzato e la tua
 istanza del servizio viene disabilitata. Inoltre, le chiamate API POST REST vengono rifiutate con una risposta 403.<br/><br/>Se il tuo servizio è
 disabilitato perché hai superato la franchigia, puoi eseguire l'upgrade da un piano Lite a un piano a pagamento. Il tuo servizio viene riabilitato entro 2 ore.<br/><br/>Se hai un piano a pagamento, puoi ridurlo a un piano Lite a condizione che il tuo utilizzo rimanga entro la franchigia prevista dal piano Lite per gli eventi e l'archiviazione totale.<br/><br/>Quando esegui l'upgrade o la riduzione del tuo piano, non hai bisogno di preparare nuovamente o riavviare le tue applicazioni.|
-Tabella 9. Passi successivi per modificare il tuo piano
-{: #pricing_table9}
+{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###Come modificare il tuo piano tramite l'interfaccia riga di comando
 

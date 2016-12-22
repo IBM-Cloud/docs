@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-11-30"
  
 
 ---
@@ -269,9 +269,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 | 계층 3: 2001 - 3000                  |   $0.75 USD                       |
 | 계층 4: 3001 - 4000           |      $0.60 USD                    |
 |계층 5: &gt; 4000 | $0.40 USD | 
-
-표 1. 단순 계층 가격 책정표
-{: #pricing_table1}
+{:caption="Table 1. Simple tier pricing table" caption-side="top"}
 
 다음 표에는 단순 계층 가격 책정 모델을 기반으로 하는
 플랜에서 지불해야 하는 금액이 설명되어 있습니다.
@@ -283,8 +281,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 |2500 |	2500 × 0.75 = 1875 |	$1875 USD|
 |... |	... |	...|
 |5200 |	5200 × 0.40 = 2080 |$2080 USD|
-표 2. 단순 계층 가격 책정 모델을 사용하여 요금 계산
-{: #pricing_table2}
+{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
 
 ####누진 계층
 {: #graduated_tier}
@@ -301,8 +298,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 |    계층 3: 2001 - 3000 |	$0.75 USD |
 |    계층 4: 3001 - 4000 |	$0.60 USD |
 |    계층 5: &gt; 4000 |	$0.40 USD |
-표 3. 누진 계층 가격 책정표
-{: #pricing_table3}
+{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
 
 다음 표에는 누진 계층 가격 책정 모델을 기반으로 하는
 플랜에서 지불해야 하는 금액이 설명되어 있습니다. 
@@ -314,8 +310,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 |2500 |	(1000 × 1(계층 1의 단가)) + (1000 × 0.90(계층 2의 단가)) + (500 × 0.75(계층 3의 단가)) = 2275 |	$2275 USD |
 |... |	... |	...|
 |5200 |	(1000 × 1(계층 1의 단가)) + (1000 × 0.90(계층 2의 단가)) + (1000 × 0.75(계층 3의 단가)) + (1000 × 0.60(계층 4의 단가)) + (1200 × 0.40(계층 5의 단가)) = 3730 |	$3730 USD|
-표 4. 누진 계층 가격 책정 모델을 사용하여 요금 계산
-{: #pricing_table4}
+{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
 
 ####블록 계층
 {: #block_tier}
@@ -332,8 +327,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 | 계층 3: &lt;= 3000 |	$2800 USD|
 | 계층 4: &lt;= 4000 |	$3500 USD|
 | 계층 5: &lt;= 10000 |	$5000 USD|
-표 5. 블록 계층 가격 책정표
-{: #pricing_table5}
+{:caption="Table 5. Block tier pricing table" caption-side="top"}
 
 다음 표에는 블록 계층 가격 책정 모델을 기반으로 하는
 플랜에서 지불해야 하는 금액이 설명되어 있습니다.
@@ -344,8 +338,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 |1500 |	항목의 수가 계층 2에 속하므로 총 가격은 $1900 USD입니다. |	$1900 USD|
 |... |	... |	...|
 |5200 |	항목의 수가 계층 5에 속하므로 총 가격은 $5000 USD입니다. |	$5000 USD|
-표 6. 블록 계층 가격 책정 모델을 사용하여 요금 계산
-{: #pricing_table6}
+{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
 ### 가상 서버에 대한 무료 사용량
 {: #vms}
@@ -430,8 +423,7 @@ Light API 호출 500,000개
 |데이터 캐시 - 표준 |	5GB의 캐시 공간 및 복제본 |	$155.00 USD/인스턴스 |
 |데이터 캐시 - 프리미엄 |	25GB의 캐시 공간 및 복제본 |	$505.00 USD/인스턴스|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2GB의 무료 데이터 스토리지<br/>매월 무료로 50,000번의 Light API 호출<br/>매월 무료로 10,000번의 Heavy API 호출 | $1.00 USD/GB<br/>$0.03 USD/1000 Light API 호출<br/>$0.15 USD/1000 Heavy API 호출 |
-표 7. 가격 책정 시트
-{: #pricing_table7}
+{:caption="Table 7. Pricing sheet" caption-side="top"}
 
 ###애플리케이션 가격
 계산
@@ -501,8 +493,7 @@ Light API 호출의 경우 무료 사용량인 50,000을 빼고, Heavy API 호�
 |SEK |	  스웨덴 크로나|
 |USD |    미국 달러|
 |ZAR |	  남아프리카공화국 란드|
-표 8. 지원되는 통화
-{: #pricing_table8}
+{:caption="Table 8. Supported currencies" caption-side="top"}
 
 **참고:** 연결된 {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 계정이 있으면 발급되는 단일 송장은 미국 달러(USD)만 사용됩니다.  
 
@@ -524,10 +515,10 @@ Light API 호출의 경우 무료 사용량인 50,000을 빼고, Heavy API 호�
 ##크레딧 보기
 {: #credits}
 
-계정 소유자 또는 청구 관리자인 사용자는 **사용량 대시보드** 페이지를 사용하여 계정에 대한 크레딧을 볼 수 있습니다. 예를 들어, SoftLayer 계정을 {{site.data.keyword.Bluemix_notm}} 계정과 연결하면 크레딧이 있을 수 있습니다. 
+계정 소유자 또는 청구 관리자인 사용자는 **사용량 대시보드** 페이지를 사용하여 계정에 대한 크레딧을 볼 수 있습니다.  
 
-**사용량 대시보드** 페이지를 열려면 **계정** > **사용량 대시보드**를 클릭하십시오.
-페이지에서 크레딧(존재하는 경우) 및 해당 만료 시점을 볼 수 있습니다. 
+**사용량 대시보드** 페이지를 열려면 **계정** &gt; **사용량 대시보드**를 클릭하십시오.
+대시보드에 크레딧(존재하는 경우) 및 해당 만료 시점이 표시됩니다.
 
 ##알림
 {: #notifications}
@@ -550,8 +541,7 @@ Light API 호출의 경우 무료 사용량인 50,000을 빼고, Heavy API 호�
 |서비스 |	정보|
 |--------|-------------|
 |Presence Insights 	|라이트 플랜을 사용하는 중에 무료 사용량을 초과하는 경우, 403 메시지가 표시되거나 사용자에게 더 이상 권한이 없다는 메시지가 로깅되고 서비스 인스턴스 사용이 불가능하게 됩니다. 또한, 403 응답이 나타나고 POST REST API 호출이 거부됩니다.<br/><br/>무료 사용량을 초과하여 서비스가 사용 불가능한 경우 라이트 플랜을 유료 사용제로 업그레이드할 수 있습니다. 서비스는 2시간 이내에 다시 활성화됩니다.<br/><br/>유료 사용제를 사용하는 경우, 이벤트 및 총 스토리지의 사용량이 라이트 플랜 허용량 범위 이내이면 라이트 플랜으로 축소할 수 있습니다.<br/><br/>플랜을 업그레이드하거나 축소할 때 앱을 다시 스테이징하거나 다시 시작할 필요는 없습니다.|
-표 9. 플랜 변경의 다음 단계
-{: #pricing_table9}
+{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###명령행 인터페이스를 통해 플랜을 변경하는 방법
 

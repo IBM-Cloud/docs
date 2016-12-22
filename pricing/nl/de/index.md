@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-11-30"
  
 
 ---
@@ -66,7 +66,8 @@ Ihr Konto wird gebührenfrei mit den folgenden Ressourcen ausgestattet:
 
 Ihr kostenloser Testzeitraum läuft 30 Tage nach Ihrer Registrierung ab. Nach Ablauf des 30-Tage-Tests werden die Anwendungen in Ihrem Konto gestoppt. Sie erhalten keine weitere Möglichkeit mehr, sich für einen Test in {{site.data.keyword.Bluemix_notm}} zu registrieren. Sie können jedoch weiterhin auf Ihr Konto und die Konten zugreifen, in die Sie eingeladen wurden. Zum erneuten Starten Ihrer Anwendungen müssen Sie entweder Ihre Kreditkarteninformationen für ein Konto vom Typ Nutzungsabhängige Zahlung angeben oder ein Konto vom Typ Abonnement erstellen. Nach dem Konvertieren Ihres Kontos können Sie mit der Verwendung der kostenlosen Rechen- und Serviceressourcen fortfahren. Sie zahlen nur für die Nutzung von Services, Containern und Laufzeiten, die nicht durch die kostenlosen Monatsleistungen abgedeckt ist.
 
-Wenn Sie Ihr Konto nach Ablauf des kostenlosen Testzeitraums nicht konvertieren, empfangen Sie E-Mail-Benachrichtigungen über Ihren Kontostatus nach Ablauf des Tests. Die Benachrichtigungen erinnern Sie daran, ein gebührenpflichtiges Konto zu erstellen, damit Ihre Anwendungseinstellungen und -konfigurationen nicht verloren gehen. Wenn Sie diese Benachrichtigungen von {{site.data.keyword.Bluemix_notm}} nicht empfangen möchten, können Sie das Abonnement jederzeit beenden. Einen Monat nach Ablauf des Testzeitraums werden Ihre Anwendungen und Servicekonfigurationen entfernt. In der folgenden Abbildung ist der allgemeine Prozess der
+Wenn Sie Ihr Konto nach Ablauf des kostenlosen Testzeitraums nicht konvertieren, empfangen Sie E-Mail-Benachrichtigungen über Ihren Kontostatus nach Ablauf des Tests. Die Benachrichtigungen erinnern Sie daran, ein gebührenpflichtiges Konto zu erstellen, damit Ihre Anwendungseinstellungen und -konfigurationen nicht verloren gehen. Wenn Sie diese Benachrichtigungen von {{site.data.keyword.Bluemix_notm}} nicht empfangen möchten, können Sie das Abonnement jederzeit beenden.
+Einen Monat nach Ablauf des Testzeitraums werden Ihre Anwendungen und Servicekonfigurationen entfernt. In der folgenden Abbildung ist der allgemeine Prozess der
 {{site.data.keyword.Bluemix_notm}}-Kontenverwaltung dargestellt.
 
 
@@ -98,7 +99,8 @@ Die Ressourcen oder Funktionen variieren in Abhängigkeit vom jeweiligen Code, d
 * Hochladen einer durch den Werbecode angegebenen weiteren Anzahl an SSL-Zertifikaten
 * Verwenden von Prämienserviceplänen
 
-**Hinweis:** Sie können mehrere Werbecodes auf Ihr Testkonto anwenden. Jeder Werbecode kann vor Ablauf seines Verfallsdatums nur ein einziges Mal eingelöst werden. Klicken Sie zum Verwenden eines Werbecodes auf das Symbol **Profileinstellungen**, wählen Sie **Konto** aus und klicken anschließend in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle auf **Kontotyp**.
+**Hinweis:** Sie können mehrere Werbecodes auf Ihr Testkonto anwenden. Jeder Werbecode kann vor Ablauf seines Verfallsdatums nur ein einziges Mal eingelöst werden.
+Klicken Sie zum Verwenden eines Werbecodes auf das Symbol **Profileinstellungen**, wählen Sie **Konto** aus und klicken anschließend in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle auf **Kontotyp**.
 
 ##Rechnungsabwicklung
 {: #pay-accounts}
@@ -218,9 +220,7 @@ Im Modell mit einer einfachen Preisstufe wird der Einzelpreis durch die Preisstu
 | Preisstufe 3: 2001 - 3000                  |   $ 0,75 USD                       |
 | Preisstufe 4: 3001 - 4000           |      $ 0,60 USD                    |
 |Preisstufe 5: &gt; 4000 | $ 0,40 USD | 
-
-Tabelle 1. Preistabelle für einfache Preisstufe
-{: #pricing_table1}
+{:caption="Table 1. Simple tier pricing table" caption-side="top"}
 
 In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Plans anfallen, der auf dem Preismodell mit einfacher Preisstufe basiert:
 
@@ -231,8 +231,7 @@ In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Pla
 |2500 |	2500 × 0,75 = 1875 |	$ 1875 USD|
 |... |	... |	...|
 |5200 |	5200 × 0,40 = 2080 |$ 2080 USD|
-Tabelle 2. Gebührenberechnung anhand des Preismodells mit einfacher Preisstufe
-{: #pricing_table2}
+{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
 
 ####Gestaffelte Preisstufe
 {: #graduated_tier}
@@ -246,8 +245,7 @@ Im Modell mit gestaffelter Preisstufe sinkt der Einzelpreis bei einer höheren N
 |    Preisstufe 3: 2001 - 3000 |	$ 0,75 USD |
 |    Preisstufe 4: 3001 - 4000 |	$ 0,60 USD |
 |    Preisstufe 5: &gt; 4000 |	$ 0,40 USD |
-Tabelle 3. Preisstruktur mit gestaffelter Preisstufe
-{: #pricing_table3}
+{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
 
 In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Plans anfallen, der auf dem Preismodell mit gestaffelter Preisstufe basiert:
 
@@ -258,8 +256,7 @@ In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Pla
 |2500 |	(1000 × 1 (Einzelpreis für Preisstufe 1)) + (1000 × 0,90 (Einzelpreis für Preisstufe 2)) + (500 × 0,75 (Einzelpreis für Preisstufe 3)) = 2275 |	$ 2275 USD |
 |... |	... |	...|
 |5200 |	(1000 × 1 (Einzelpreis für Preisstufe 1)) + (1000 × 0,90 (Einzelpreis für Preisstufe 2)) + (1000 × 0,75 (Einzelpreis für Preisstufe 3)) + (1000 × 0,60 (Einzelpreis für Preisstufe 4)) + (1200 × 0,40 (Einzelpreis für Preisstufe 5)) = 3730 |	$ 3730 USD|
-Tabelle 4. Gebührenberechnung anhand des Preismodells mit gestaffelter Preisstufe
-{: #pricing_table4}
+{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
 
 ####Blockpreisstufe
 {: #block_tier}
@@ -273,8 +270,7 @@ Im Preismodell mit Blockpreisstufen ist der Preis eine feste Gebühr für die ge
 | Preisstufe 3: &lt;= 3000 |	$ 2800 USD|
 | Preisstufe 4: &lt;= 4000 |	$ 3500 USD|
 | Preisstufe 5: &lt;= 10000 |	$ 5000 USD|
-Tabelle 5. Tabelle der Preisstruktur mit Blockpreisstufe
-{: #pricing_table5}
+{:caption="Table 5. Block tier pricing table" caption-side="top"}
 
 In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Plans anfallen, der auf dem Preismodell mit Blockpreisstufe basiert:
 
@@ -284,8 +280,7 @@ In der folgenden Tabelle sind die Gebühren dargestellt, die im Rahmen eines Pla
 |1500 |	Die Anzahl der Posten fällt in die Preisstufe 2, d. h., der Gesamtpreis beträgt $ 1900 USD. |	$ 1900 USD|
 |... |	... |	...|
 |5200 |	Die Anzahl der Posten fällt in die Preisstufe 5, d. h., der Gesamtpreis beträgt $ 5000 USD. |	$ 5000 USD|
-Tabelle 6. Gebührenberechnung anhand des Preismodells mit Blockpreisstufe
-{: #pricing_table6}
+{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
 ### Kostenfreie Leistungen für virtuelle Server
 {: #vms}
@@ -349,8 +344,7 @@ Nehmen Sie an, um das Beispiel einfach zu halten, dass die Preise in der folgend
 |Datencache - Standard |	5 GB Cachebereich und ein Replikat |	$155,00 USD/Instanz |
 |Datencache - Premium |	25 GB Cachebereich und ein Replikat |	$505,00 USD/Instanz|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB freier Speicher<br/>50.000 einfache API-Aufrufe pro Monat kostenlos<br/>10.000 komplexe API-Aufruf pro Monat kostenlos | $1,00 USD/GB<br/>0,03 USD/1000 einfache API-Aufrufe<br/>$0,15 USD/1000 komplexe API-Aufrufe |
-Tabelle 7. Preisliste
-{: #pricing_table7}
+{:caption="Table 7. Pricing sheet" caption-side="top"}
 
 ###Berechnung des Anwendungspreises
 
@@ -410,8 +404,7 @@ Obwohl in den Preisbeispielen US-Dollar (USD) verwendet werden, werden in {{site
 |SEK |	  Schwedische Krone|
 |USD |    US-Dollar|
 |ZAR |	  Südafrikanischer Rand|
-Tabelle 8. Unterstützte Währungen
-{: #pricing_table8}
+{:caption="Table 8. Supported currencies" caption-side="top"}
 
 **Hinweis:** Wenn Sie Ihre {{site.data.keyword.Bluemix_notm}}- und SoftLayer-Konten verknüpft haben, ist die einzige Rechnung, die Sie erhalten, nur in USD ausgestellt.  
 
@@ -431,9 +424,9 @@ Wenn Sie unter **Organisation** eine bestimmte Organisation auswählen, können 
 ##Guthaben anzeigen
 {: #credits}
 
-Als Kontoeigner oder Abrechnungsmanager können Sie auf der Seite **Nutzungsdashboard** vorhandenes Guthaben für Ihr Konto anzeigen. Sie könnten beispielsweise über Guthaben verfügen, wenn Sie ein SoftLayer-Konto mit einem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft haben.
+Als Kontoeigner oder Abrechnungsmanager können Sie auf der Seite **Nutzungsdashboard** vorhandenes Guthaben für Ihr Konto anzeigen. 
 
-Um die Ansicht **Nutzungsdashboard** zu öffnen, klicken Sie auf **Konto** > **Nutzungsdashboard**. Auf dieser Seite werden gegebenenfalls die bestehenden Guthaben und die entsprechenden Ablaufdaten angezeigt.
+Um die Ansicht **Nutzungsdashboard** zu öffnen, klicken Sie auf **Konto** &gt; **Nutzungsdashboard**. Im Dashboard werden gegebenenfalls die bestehenden Guthaben und die entsprechenden Ablaufdaten angezeigt.
 
 ##Benachrichtigungen
 {: #notifications}
@@ -450,17 +443,17 @@ Sie können Ihren Serviceplan in {{site.data.keyword.Bluemix_notm}} im Dashboard
 Nur bestimmte Services ermöglichen Ihnen das Ändern des Serviceplans. Wenn Planänderungen für den Service aktiviert sind, wird im Dashboard für den Service die Option **Plan** im Navigationsbereich angezeigt. Für jeden Service müssen unterschiedliche weitere Schritte ausgeführt werden, wenn Sie Ihren Plan ändern.
 
 1. Klicken Sie zum Ändern des Plans im Dashboard für den Service auf **Plan**. Normalerweise können Sie ein Upgrade oder eine Herabstufung für Ihren Plan vornehmen.
-2. Nach dem Ändern des Plans müssen Sie eine Reihe weiterer Schritte ausführen. Die Schritte variieren abhängig von der Art der Planänderung und vom Service. Wenn Sie Ihren Plan beispielsweise herabstufen, ist möglicherweise ein erneutes Staging für Ihre App erforderlich. Wenn Sie für Ihren Plan ein Upgrade durchführen, müssen Sie möglicherweise ein erneutes Staging für Ihre App sowie weitere Aktionen durchführen.<br/><br/>Für ein erneutes Staging Ihrer App rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf und suchen Sie nach der App, an die der Service gebunden ist. Wählen Sie im Menü der App **Anwendung erneut starten** aus.<br/><br/>Weitere nachfolgende Aktionen sind vom Service abhängig. In der folgenden Tabelle sind bestimmte Aktionen aufgeführt.
+2. Nach dem Ändern des Plans müssen Sie eine Reihe weiterer Schritte ausführen. Die Schritte variieren abhängig von der Art der Planänderung und vom Service. Wenn Sie beispielsweise Ihren Plan reduziert haben, dann ist u. U. ein erneutes Staging Ihrer App erforderlich. Wenn Sie für Ihren Plan ein Upgrade durchgeführt haben, müssen Sie möglicherweise ein erneutes Staging für Ihre App sowie weitere Aktionen durchführen.<br/><br/>Für ein erneutes Staging Ihrer App rufen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard auf und suchen Sie nach der App, an die der Service gebunden ist. Wählen Sie im Menü der App **Anwendung erneut starten** aus.<br/><br/>Weitere nachfolgende Aktionen sind vom Service abhängig. In der folgenden Tabelle sind bestimmte Aktionen aufgeführt.
 
 |Service |	Informationen|
 |--------|-------------|
 |Presence Insights 	|Wenn Sie einen Lite-Plan verwenden und das kostenfreie Kontingent überschreiten, wird die Nachricht 403 angezeigt oder protokolliert, um anzugeben, dass Sie nicht mehr über die entsprechende Berechtigung verfügen und dass Ihre Serviceinstanz inaktiviert ist. Darüber hinaus werden REST-API-Aufrufe des Typs POST mit der Antwort 403 zurückgewiesen.<br/><br/>Wenn der Service inaktiviert wurde, weil Sie das kostenfreie Kontingent überschritten haben, können Sie ein Upgrade von einem Lite-Plan auf einen Paid-Plan durchführen. Der Service wird innerhalb von 2 Stunden erneut aktiviert.<br/><br/>Wenn Sie einen Paid-Plan verwenden, können Sie eine Herabstufung auf einen Lite-Plan durchführen, vorausgesetzt, Ihre Nutzungsrate für Ereignisse und Gesamtspeicher bleibt innerhalb des Lite-Kontingents für diese Posten.<br/><br/>Wenn Sie ein Upgrade oder eine Herabstufung des Plans vornehmen, müssen Sie kein erneutes Staging und keinen Neustart für Ihre Apps durchführen.|
-Tabelle 9: Die nächsten Schritte für die Änderung Ihres Plans
-{: #pricing_table9}
+{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###Verwendungshinweise zum Ändern des Plans über die Befehlszeilenschnittstelle
 
-Optional können Sie den Serviceplan auch über die Befehlszeilenschnittstelle ändern. Geben Sie zum Aktualisieren des Serviceplans den folgenden Befehl ein:
+Optional können Sie den Serviceplan auch über die Befehlszeilenschnittstelle ändern.
+Geben Sie zum Aktualisieren des Serviceplans den folgenden Befehl ein:
 ```
 cf update-service <Servicename> [-p <neuer Plan>]
 ```

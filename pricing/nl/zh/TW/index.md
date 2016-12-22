@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-11-30"
  
 
 ---
@@ -223,9 +223,7 @@ lastupdated: "2016-11-02"
 | 層級 3：2001 - 3000                  |   美金 $0.75                       |
 | 層級 4：3001 - 4000           |      美金 $0.60                    |
 |層級 5：&gt; 4000 | 美金 $0.40 | 
-
-表 1. 簡式層級定價表
-{: #pricing_table1}
+{:caption="Table 1. Simple tier pricing table" caption-side="top"}
 
 下表說明您要對根據簡式層級定價模型的方案支付多少錢：
 
@@ -236,8 +234,7 @@ lastupdated: "2016-11-02"
 |2500 |	2500 × 0.75 = 1875 |	美金 $1875|
 |... |	... |	...|
 |5200 |	5200 × 0.40 = 2080 |美金 $2080|
-表 2. 使用簡式層級定價模型的費用計算
-{: #pricing_table2}
+{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
 
 ####提升層級
 {: #graduated_tier}
@@ -251,8 +248,7 @@ lastupdated: "2016-11-02"
 |    層級 3：2001 - 3000 |	美金 $0.75 |
 |    層級 4：3001 - 4000 |	美金 $0.60 |
 |    層級 5：&gt; 4000 |	美金 $0.40 |
-表 3. 提升層級定價表
-{: #pricing_table3}
+{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
 
 下表說明您要對根據提升層級定價模型的方案支付多少錢：
 
@@ -263,8 +259,7 @@ lastupdated: "2016-11-02"
 |2500 |	(1000 × 1（層級 1 的單價）) + (1000 × 0.90（層級 2 的單價）) + (500 × 0.75（層級 3 的單價）) = 2275 |	美金 $2275 |
 |... |	... |	...|
 |5200 |	(1000 × 1（層級 1 的單價）) + (1000 × 0.90（層級 2 的單價）) + (1000 × 0.75（層級 3 的單價）) + (1000 × 0.60（層級 4 的單價）) + (1200 × 0.40（層級 5 的單價）) = 3730 |	美金 $3730|
-表 4. 使用提升層級定價模型的費用計算
-{: #pricing_table4}
+{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
 
 ####區塊層級
 {: #block_tier}
@@ -278,8 +273,7 @@ lastupdated: "2016-11-02"
 | 層級 3：&lt;= 3000 |	美金 $2800|
 | 層級 4：&lt;= 4000 |	美金 $3500|
 | 層級 5：&lt;= 10000 |	美金 $5000|
-表 5. 區塊層級定價表
-{: #pricing_table5}
+{:caption="Table 5. Block tier pricing table" caption-side="top"}
 
 下表說明您要對根據區塊層級定價模型的方案支付多少錢：
 
@@ -289,8 +283,7 @@ lastupdated: "2016-11-02"
 |1500 |	此項目數落在層級 2，因此總價為美金 $1900。 |	美金 $1900|
 |... |	... |	...|
 |5200 |	此項目數落在層級 5，因此總價為美金 $5000。 |	美金 $5000|
-表 6. 使用區塊層級定價模型的費用計算
-{: #pricing_table6}
+{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
 ### 虛擬伺服器的免費額度
 {: #vms}
@@ -355,8 +348,7 @@ lastupdated: "2016-11-02"
 |Data Cache - Standard |	5 GB 的快取空間及一個抄本  |	$155.00 USD/實例 |
 |Data Cache - Premium |	25 GB 的快取空間及一個抄本 |	$505.00 USD/實例|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB 的免費資料儲存空間<br/>每個月有 50,000 次輕量型 API 呼叫免費<br/>每個月有 10,000 次重量型 API 呼叫免費 | $1.00 USD/GB<br/>$0.03 USD/1000 次輕量型 API 呼叫<br/>$0.15 USD/1000 次重量型 API 呼叫 |
-表 7. 定價單
-{: #pricing_table7}
+{:caption="Table 7. Pricing sheet" caption-side="top"}
 
 ###計算應用程式價格
 
@@ -415,8 +407,7 @@ lastupdated: "2016-11-02"
 |SEK |	  瑞典克朗|
 |USD |    美元|
 |ZAR |	  南非幣|
-表 8. 支援的貨幣
-{: #pricing_table8}
+{:caption="Table 8. Supported currencies" caption-side="top"}
 
 **附註：**如果您已鏈結 {{site.data.keyword.Bluemix_notm}} 與 SoftLayer 帳戶，則所收到的單一發票的計價單位僅為美元 (USD)。  
 
@@ -436,9 +427,9 @@ lastupdated: "2016-11-02"
 ##檢視額度
 {: #credits}
 
-身為帳戶擁有者或帳單管理員，您可以使用**用量儀表板**頁面，來查看帳戶的任何額度。例如，如果您已將 SoftLayer 帳戶與 {{site.data.keyword.Bluemix_notm}} 帳戶鏈結，可能就會有額度。
+身為帳戶擁有者或帳單管理員，您可以使用**用量儀表板**頁面，來查看帳戶的任何額度。 
 
-若要開啟**用量儀表板**頁面，請按一下**帳戶** > **用量儀表板**。在此頁面上，您可以查看任何額度（如果有的話）及其期限。
+若要開啟**用量儀表板**頁面，請按一下**帳戶** &gt; **用量儀表板**。此儀表板會顯示任何額度（如果有的話）及其期限。
 
 ##通知
 {: #notifications}
@@ -460,8 +451,7 @@ lastupdated: "2016-11-02"
 |服務 |	資訊|
 |--------|-------------|
 |Presence Insights 	|如果您有 Lite 方案，並超出免費額度，則會顯示 403 訊息，或記載此訊息以指出您不再獲得授權，並且停用服務實例。此外，還會以 403 回應來拒絕 POST REST API 呼叫。<br/><br/>如果因為超出免費額度而停用您的服務，則可以從 Lite 方案升級為「付費」方案。您的服務會在 2 小時內重新啟用。<br/><br/>如果您有「付費」方案，則只要事件及總儲存空間的用量落在 Lite 方案額度內，就可以將方案降低為 Lite 方案。<br/><br/>當您升級或降低方案時，並不需要重新編譯打包或重新啟動應用程式。|
-表 9. 變更方案的後續步驟
-{: #pricing_table9}
+{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###如何透過指令行介面變更方案
 
