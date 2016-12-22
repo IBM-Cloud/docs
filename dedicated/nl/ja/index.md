@@ -530,7 +530,9 @@ Akamai や Dyn などのグローバル・ロード・バランサーを選択�
 </ul>
 
 # 関連リンク
+{: rellinks}
 ## 一般
+{: general}
 * [詳細: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [{{site.data.keyword.Bluemix_notm}} の新機能](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 用語集](/docs/overview/glossary/index.html)
