@@ -785,9 +785,8 @@ converta sua conta de avaliação em uma conta paga. Para obter informações so
   * Para reduzir a memória que seus apps usam, use a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface de linha de comandos cf.
     Se você usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, selecione seu aplicativo. A página de detalhes do app é aberta.
-	  2. Na área de janela de tempo de execução, é possível reduzir o limite máximo de memória ou os números de instâncias do app, ou ambos, para seu app. 
-	Se você usar a interface de linha de comandos cf, conclua as
-seguintes etapas:
+	  2. Na área de janela de tempo de execução, é possível reduzir o limite máximo de memória ou os números de instâncias do app ou ambos para o seu app. Se
+você usar a interface da linha de comandos cf, conclua as etapas a seguir:
 	  1. Verifique quanta memória está sendo usada para seus apps:
 	  ```
 	  cf apps
@@ -810,8 +809,8 @@ Um app não é reiniciado automaticamente quando um serviço que você liga ao a
 	  
  
 
-Quando um serviço que você liga a um app trava, problemas como indisponibilidades, exceções e falhas na conexão pode ocorrer no app. O {{site.data.keyword.Bluemix_notm}} não
-reinicia automaticamente o app para recuperar desses problemas.
+Quando um serviço que você ligar a um app travar, problemas como indisponibilidade, exceções e falhas de conexão poderão ocorrer no app. O
+{{site.data.keyword.Bluemix_notm}} não reinicia automaticamente o app para se recuperar desses problemas.
 {: tsSymptoms}
 
 
@@ -1118,10 +1117,8 @@ ao problema:
   ...
         ```
 
-  * Assegure-se de que um arquivo `package.json` exista no
-app Node.js para que o buildpack Node.js possa reconhecer o
-app. Além disso, deve-se colocar esse arquivo no diretório-raiz de
-seu app.	
+  * Assegure-se de que um arquivo `package.json` exista em seu app Node.js para ativar o buildpack Node.js para reconhecer o app. Além disso,
+deve-se colocar esse arquivo no diretório-raiz de seu app.	
     O exemplo a seguir mostra um arquivo `package.json` simples:  
 	```
 	{
@@ -1163,7 +1160,8 @@ O buildpack do Liberty usa o arquivo `server.xml` para configurar o app e gera u
 
  
 
-É possível resolver esse problema removendo o arquivo server.xml do projeto. O buildpack cria o arquivo `server.xml` dinamicamente quando você envia por push o app como um app WAR. Para obter mais informações, veja [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
+É possível resolver esse problema removendo o arquivo server.xml do projeto. O buildpack cria o arquivo `server.xml` dinamicamente quando você
+envia por push o app como um app WAR. Para obter mais informações, consulte [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -1576,10 +1574,8 @@ problemas seguindo algumas etapas simples.
 {: #ts_loading_bp}
 
 
-É possível que você não consiga usar os componentes de buildpack mais recentes
-ao enviar um app por push. É possível usar buildpacks que possuem mecanismos integrados
-para evitar o carregamento de componentes obsoletos ou é possível excluir os conteúdos
-no diretório de cache do app antes de enviar por push ou remontar o app. 
+Talvez você não consiga usar os componentes de buildpack mais recentes ao enviar um app por push. É possível usar buildpacks que possuem mecanismos integrados
+para evitar o carregamento de componentes obsoletos ou é possível excluir os conteúdos no diretório de cache de seu app antes de enviar por push ou remontar o app. 
 
  
 
@@ -1711,13 +1707,12 @@ aplicativo Python estão ausentes.
 
  
 
-Para resolver o problema, inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz de seu app Python. As informações a seguir presumem que você está importando a biblioteca web.py:
+Para resolver o problema, inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz de seu app Python. As
+informações a seguir assumem que você esteja importando a biblioteca web.py:
 {: tsResolve}
 
   1. Inclua um arquivo `requirements.txt` no diretório-raiz de seu app Python.
-     O arquivo `requirements.txt`
-especifica os pacotes de biblioteca necessários para o aplicativo Python
-e a versão dos pacotes. O exemplo a seguir mostra o conteúdo do arquivo `requirements.txt`, em que `web.py==0.37` indica que a versão da biblioteca `web.py` que será transferida por download é 0,37 e `wsgiref==0.1.2` indica que a versão da interface do gateway do servidor da web que é requerida pela biblioteca web.py é 0.1.2.
+     O arquivo `requirements.txt` especifica os pacotes de biblioteca necessários para o seu aplicativo Python e a versão dos pacotes. O exemplo a seguir mostra o conteúdo do arquivo `requirements.txt`, em que `web.py==0.37` indica que a versão da biblioteca `web.py` que será transferida por download é 0,37 e `wsgiref==0.1.2` indica que a versão da interface do gateway do servidor da web que é requerida pela biblioteca web.py é 0.1.2.
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
@@ -1727,7 +1722,8 @@ o arquivo `requirements.txt`, consulte [Arquivos de requisitos](https://pip.read
 	 
   2. Inclua um arquivo `Procfile` no diretório-raiz de seu aplicativo Python.
 	O arquivo `Procfile`
-deve conter o comando inicial do aplicativo Python. No comando a seguir, *yourappname* é o nome de seu aplicativo Python e *PORT* é o número da porta que seu aplicativo Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do aplicativo será usado em seu lugar. 
+deve conter o comando inicial do aplicativo Python. No comando a seguir, *yourappname* é o nome de seu aplicativo Python e *PORT* é o número
+da porta que o seu aplicativo Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do aplicativo será usado em seu lugar. 
 	```
 	web: python <yourappname>.py $PORT
 	```

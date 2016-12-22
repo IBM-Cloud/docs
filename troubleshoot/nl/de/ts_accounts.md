@@ -22,18 +22,18 @@ lastupdated: "2016-08-18"
 {: #managingaccounts}
 
 
-Es können Probleme bei der Verwaltung Ihres Kontos auftreten; so kann es zum Beispiel vorkommen, dass unterschiedliche Anwendungen gemeinsam denselben Domänennamen nutzen oder Administratoren nicht alle Organisationen anzeigen können. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben.
+Es können Probleme bei der Verwaltung Ihres Kontos auftreten; so kann es zum Beispiel vorkommen, dass unterschiedliche Apps gemeinsam denselben Domänennamen nutzen oder Administratoren nicht alle Organisationen anzeigen können. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben.
 {:shortdesc}
 
 
 ## Konto ist inaktiv
 {: #ts_accnt_inactive}
 
-Wenn Ihr Konto inaktiv ist, können Sie keine Anwendung in {{site.data.keyword.Bluemix_notm}} erstellen. Wenden Sie sich zur Lösung dieses Problems an das Support-Team.
+Wenn Ihr Konto inaktiv ist, können Sie keine App in {{site.data.keyword.Bluemix_notm}} erstellen. Wenden Sie sich zur Lösung dieses Problems an das Support-Team.
 
 
 
-Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine Anwendung zu erstellen, wird die folgende Fehlernachricht angezeigt:
+Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine App zu erstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms} 
 
 `BXNUI0096E: Die App wurde nicht erstellt. Ihr Konto ist inaktiv, da es storniert oder ausgesetzt wurde.`
@@ -48,7 +48,7 @@ Wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support](http://ibm.b
 {: tsResolve}
 
   * Die IBM ID, mit der Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden.
-  * Der Name der Organisation für Ihre Anwendung. Mithilfe dieser Informationen kann das Support-Team feststellen, ob Ihnen die richtigen Rollen bzw. die richtige Zugehörigkeit innerhalb Ihrer Organisation zugewiesen wurden.
+  * Der Name der Organisation, in der Ihre App erstellt wird. Mithilfe dieser Informationen kann das Support-Team feststellen, ob Ihnen die richtigen Rollen bzw. die richtige Zugehörigkeit innerhalb Ihrer Organisation zugewiesen wurden.
 
 
 
@@ -60,7 +60,7 @@ können Sie keine Anwendung erstellen.
 
 
 
-Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine Anwendung zu erstellen, wird die folgende Fehlernachricht angezeigt:
+Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine App zu erstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms} 
 
 
@@ -68,7 +68,7 @@ Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine Anwendung zu erstell
 
 
 
-Anwendungen in {{site.data.keyword.Bluemix_notm}} müssen in Ihrer Organisation innerhalb eines Bereichs erstellt werden.
+Apps in {{site.data.keyword.Bluemix_notm}} müssen in Ihrer Organisation innerhalb eines Bereichs erstellt werden.
 {: tsCauses} 
 
  
@@ -84,7 +84,7 @@ klicken Sie anschließend auf **Bereich erstellen**.
   
   
   
-## Anwendungen verwenden denselben Domänennamen gemeinsam
+## Apps verwenden denselben Domänennamen gemeinsam
 {: #ts_domain_diff}
 
 Es kann vorkommen, dass in {{site.data.keyword.Bluemix_notm}} von mehreren Anwendungen dieselbe URL gemeinsam genutzt wird.

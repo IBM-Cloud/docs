@@ -31,7 +31,7 @@ Es können Probleme bei der Verwendung von IBM® Bluemix™-Laufzeiten auftreten
 {: #ts_loading_bp}
 
 
-Bei einer Push-Operation für eine App können möglicherweise nicht die neuesten Buildpack-Komponenten verwendet werden. Sie können Buildpacks mit integrierten Mechanismen verwenden, die das Laden veralteter Komponenten verhindern, oder Sie können den Inhalt des Cacheverzeichnisses der App löschen, bevor Sie eine Push-Operation oder erneutes Staging für die App durchführen. 
+Bei einer Push-Operation für eine App können möglicherweise nicht die neuesten Buildpack-Komponenten verwendet werden. Sie können Buildpacks mit integrierten Mechanismen verwenden, die das Laden veralteter Komponenten verhindern, oder Sie können den Inhalt des Cacheverzeichnisses der App löschen, bevor Sie eine Push-Operation oder ein erneutes Staging für die App durchführen.  
 
  
 
@@ -130,11 +130,10 @@ Dieses Problem tritt auf, wenn für die Python-Anwendung Konfigurationsinformati
 
  
 
-Fügen Sie zum Lösen des Problems die Datei `requirements.txt` und die Datei `Procfile` im Stammverzeichnis Ihrer Python-Anwendung hinzu. Bei den folgenden Informationen wird vorausgesetzt, dass Sie die Bibliothek 'web.py' importieren:
+Fügen Sie zum Lösen des Problems die Datei `requirements.txt` und die Datei `Procfile` im Stammverzeichnis Ihrer Python-App hinzu. In den folgenden Informationen wird davon ausgegangen, dass Sie die Bibliothek 'web.py' importieren:
 {: tsResolve}
 
-  1. Fügen Sie die Datei `requirements.txt` im Stammverzeichnis Ihrer Python-Anwendung hinzu.
-     Die Datei `requirements.txt` gibt die für Ihre Python-Anwendung erforderlichen Bibliothekspakete sowie die Version der Pakete an. Das folgende Beispiel zeigt den Inhalt der Datei `requirements.txt`, wobei `web.py==0.37` angibt, dass es sich bei der Version der Bibliothek `web.py` um '0.37' handelt, und `wsgiref==0.1.2` angibt, dass es sich bei der für die Bibliothek 'web.py' erforderliche Version der Gateway-Schnittstelle des Web-Servers um '0.1.2' handelt.
+  1. Fügen Sie die Datei `requirements.txt` im Stammverzeichnis Ihrer Python-App hinzu. Die Datei `requirements.txt` gibt die für Ihre Python-Anwendung erforderlichen Bibliothekspakete sowie die Version der Pakete an. Das folgende Beispiel zeigt den Inhalt der Datei `requirements.txt`, wobei `web.py==0.37` angibt, dass es sich bei der Version der Bibliothek `web.py` um '0.37' handelt, und `wsgiref==0.1.2` angibt, dass es sich bei der für die Bibliothek 'web.py' erforderliche Version der Gateway-Schnittstelle des Web-Servers um '0.1.2' handelt.
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
@@ -142,9 +141,9 @@ Fügen Sie zum Lösen des Problems die Datei `requirements.txt` und die Datei `P
 	Weitere Informationen zur Konfiguration der Datei `requirements.txt` finden Sie unter [Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html). 
 	 
   2. Fügen Sie im Stammverzeichnis Ihrer Python-Anwendung die Datei `Procfile` hinzu.
-	Die Datei `Procfile` muss den Startbefehl für Ihre Python-Anwendung enthalten. Im folgenden Befehl ist *NameIhrerAnwendung* der Name Ihrer Python-Anwendung und *PORT* ist die Portnummer, die Ihre Python-Anwendung zum Empfangen von Anforderungen von Benutzern der Anwendung verwenden muss. *$PORT* ist optional. Wenn Sie im Startbefehl PORT nicht angeben, wird stattdessen die Portnummer unter der Umgebungsvariablen `VCAP_APP_PORT` verwendet, die sich innerhalb der Anwendung befindet. 
+	Die Datei `Procfile` muss den Startbefehl für Ihre Python-Anwendung enthalten. Im folgenden Befehl ist *NameIhrerApp* der Name Ihrer Python-Anwendung und *PORT* ist die Portnummer, die Ihre Python-Anwendung zum Empfangen von Anforderungen von Benutzern der App verwenden muss. Bei *$PORT* handelt es sich um ein optionales Element. Wenn Sie im Startbefehl PORT nicht angeben, wird stattdessen die Portnummer unter der Umgebungsvariablen `VCAP_APP_PORT` verwendet, die sich innerhalb der App befindet. 
 	```
-	web: python <NameIhrerAnwendung>.py $PORT
+	web: python <NameIhrerApp>.py $PORT
 	```
 Sie können nun die Python-Bibliothek eines Drittanbieters in {{site.data.keyword.Bluemix_notm}} importieren.	
 
@@ -264,7 +263,7 @@ Es kann vorkommen, dass im Anwendungsprotokoll angezeigt wird, dass das Datentr�
 
  
 
-Die Fehlernachricht `Disk quota exceeded` (Datenträgerkontingent überschritten) wird im Protokoll der Anwendung angezeigt.
+Die Fehlernachricht `Disk quota exceeded` (Datenträgerkontingent überschritten) wird im Protokoll der App angezeigt.
 {: tsSymptoms}
 
 

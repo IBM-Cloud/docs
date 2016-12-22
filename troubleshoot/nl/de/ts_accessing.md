@@ -126,7 +126,7 @@ kann nicht verwendet werden. Sie können allerdings einen DNS-Anbieter nutzen, d
 IP-Adressen als Ausweichlösung unterstützt.
  
 
-Wenn eine {{site.data.keyword.Bluemix_notm}}-Region nicht mehr verfügbar ist, sind auch die Anwendungen, die in dieser Region ausgeführt werden, nicht mehr verfügbar, selbst dann nicht, wenn dieselben Anwendungen in einer anderen {{site.data.keyword.Bluemix_notm}}-Region ausgeführt werden.
+Wenn eine {{site.data.keyword.Bluemix_notm}}-Region nicht mehr verfügbar ist, sind auch die Apps, die in dieser Region ausgeführt werden, nicht mehr verfügbar, selbst dann nicht, wenn dieselben Apps in einer anderen {{site.data.keyword.Bluemix_notm}}-Region ausgeführt werden.
 {: tsSymptoms}
 
  
@@ -141,7 +141,7 @@ unterstützt, und Ihre DNS-Einstellungen zur Aktivierung der automatischen Funkt
 zwischen {{site.data.keyword.Bluemix_notm}}-Regionen manuell konfigurieren. DNS-Anbieter mit dieser Funktion sind z. B. NSONE, Akamai, Dyn.
 {: tsResolve}
 
-Wenn Sie Ihre DNS-Einstellungen konfigurieren, müssen Sie die öffentlichen IP-Adressen der {{site.data.keyword.Bluemix_notm}}-Regionen angeben, in denen Ihre Anwendungen ausgeführt werden. Verwenden Sie zum Abrufen der öffentlichen IP-Adresse
+Wenn Sie Ihre DNS-Einstellungen konfigurieren, müssen Sie die öffentlichen IP-Adressen der {{site.data.keyword.Bluemix_notm}}-Regionen angeben, in denen Ihre Apps ausgeführt werden. Verwenden Sie zum Abrufen der öffentlichen IP-Adresse
 einer {{site.data.keyword.Bluemix_notm}}-Region
 den Befehl `nslookup`. Sie können in einem Befehlszeilenfenster beispielsweise
 den folgenden Befehl eingeben:

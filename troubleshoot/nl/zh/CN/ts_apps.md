@@ -1438,10 +1438,10 @@ pid @{HOME}/nginx/logs/nginx.pid;
 ## Log4js 记录器对象未在“Node.js 跟踪”弹出窗口中显示
 {: #ts_logger}
 
-当在应用程序中使用 log4js 和 ibmbluemix 模块时，Log4js 记录器对象未在“Node.js 跟踪”弹出窗口中显示。 	
+当在应用程序中同时使用 log4js 和 ibmbluemix 模块时，Log4js 记录器对象未在“Node.js 跟踪”弹出窗口中显示。 	
 
  
-当在应用程序中使用 log4js、winston 和 ibmbluemix 模块时，Log4js 记录器对象未在“Node.js 跟踪”弹出窗口中显示。
+当在应用程序中同时使用 log4js、winston 和 ibmbluemix 模块时，Log4js 记录器对象未在“Node.js 跟踪”弹出窗口中显示。
 {: tsSymptoms}
 
 
