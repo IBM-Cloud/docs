@@ -679,7 +679,9 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 </ul>
 
 # 相關鏈結
+{: rellinks}
 ## 一般
+{: general}
 * [探索：{{site.data.keyword.Bluemix_local_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
 * [{{site.data.keyword.Bluemix_notm}} 新增功能](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 名詞解釋](/docs/overview/glossary/index.html)
