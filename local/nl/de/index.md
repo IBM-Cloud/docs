@@ -709,7 +709,9 @@ Da der Schutz privater Daten kritisch ist, ist {{site.data.keyword.IBM_notm}} be
 </ul>
 
 # Zugehörige Links
+{: rellinks}
 ## Allgemein
+{: general}
 * [Entdecken Sie: {{site.data.keyword.Bluemix_local_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
 * [Neuerungen in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}}-Glossar](/docs/overview/glossary/index.html)
