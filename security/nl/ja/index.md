@@ -349,8 +349,7 @@ FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己
 |{{site.data.keyword.mql}}				|Y	|Y	|Y	|	 		|
 |{{site.data.keyword.SecureGateway}}			|Y	|Y |	|	 		|
 |{{site.data.keyword.sescashort}}     |Y |Y |Y	|  |
-
-*表 1. プラットフォームとサービスの準拠*
+{: caption="Table 1. Platform and service compliance" caption-side="top"}
 
 # 関連リンク
 {: #rellinks}

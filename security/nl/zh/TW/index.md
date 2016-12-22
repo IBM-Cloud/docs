@@ -339,8 +339,7 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
 |{{site.data.keyword.mql}}				|Y	|Y	|Y	|	 		|
 |{{site.data.keyword.SecureGateway}}			|Y	|Y |	|	 		|
 |{{site.data.keyword.sescashort}}     |Y |Y |Y	|  |
-
-*表 1. 平台及服務規範*
+{: caption="Table 1. Platform and service compliance" caption-side="top"}
 
 # 相關鏈結
 {: #rellinks}

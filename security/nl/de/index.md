@@ -141,8 +141,7 @@ Folgende HTTP-Methoden sind zulässig:
 <dt>Benutzerzugriffsmanagement</dt>
 <dd>Innerhalb von {{site.data.keyword.Bluemix_notm}} werden die Richtlinien zur Aufgabentrennung befolgt, um Benutzern differenzierte Zugriffsberechtigungen zuzuweisen und sicherzustellen, dass Benutzer nur über den Zugriff verfügen, der entsprechend dem Prinzip der geringsten Rechte zum Ausführen ihres jeweiligen Jobs erforderlich ist.
 
-Innerhalb einer {{site.data.keyword.Bluemix_notm}} Dedicated- und Local-Umgebung können zugewiesene Administratoren mithilfe der Administrationskonsole Rollen und Berechtigungen für {{site.data.keyword.Bluemix_notm}}-Benutzer in ihrer Organisation verwalten. 
-Weitere Informationen finden Sie unter
+Innerhalb einer {{site.data.keyword.Bluemix_notm}} Dedicated- und Local-Umgebung können zugewiesene Administratoren mithilfe der Administrationskonsole Rollen und Berechtigungen für {{site.data.keyword.Bluemix_notm}}-Benutzer in ihrer Organisation verwalten. Weitere Informationen finden Sie unter
 [{{site.data.keyword.Bluemix_notm}}
 verwalten](/docs/admin/adminpublic.html#mng).
 </dd>
@@ -349,8 +348,7 @@ Die folgende Tabelle zeigt, welche Services in {{site.data.keyword.Bluemix_notm}
 |{{site.data.keyword.mql}}				|J	|J	|J	|	 		|
 |{{site.data.keyword.SecureGateway}}			|J	|J |	|	 		|
 |{{site.data.keyword.sescashort}}     |J |J |J	|  |
-
-*Tabelle 1. Plattform- und Servicekonformität*
+{: caption="Table 1. Platform and service compliance" caption-side="top"}
 
 # Zugehörige Links
 {: #rellinks}
