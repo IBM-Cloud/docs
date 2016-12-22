@@ -1,7 +1,7 @@
 ---
 copyright:
 年: 2016
-最終更新: "2016-12-09"---
+最終更新: "2016-12-09"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
