@@ -94,7 +94,7 @@ cf plugins
  </tr>
   </tbody>
  </table>
-*표 1. dev_mode 명령*
+{: caption="Table 1. dev_mode commands" caption-side="top"}
 
 
 

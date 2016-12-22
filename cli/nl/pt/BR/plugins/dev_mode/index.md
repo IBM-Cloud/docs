@@ -98,7 +98,7 @@ Use o índice na tabela a seguir para referir-se aos comandos da CLI dev_mode us
  </tr>
   </tbody>
  </table>
-*Tabela 1. Comandos do dev_mode*
+{: caption="Table 1. dev_mode commands" caption-side="top"}
 
 
 

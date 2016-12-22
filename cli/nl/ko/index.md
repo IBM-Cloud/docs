@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2016
 
-lastupdated: "2016-10-24"
+lastupdated: "2016-11-29"
 
 
 ---
@@ -34,7 +34,8 @@ Cloud Foundry cf 명령행 도구는 모든 {{site.data.keyword.Bluemix_notm}} C
 
 | *{{site.data.keyword.Bluemix_notm}}: bx* | *Cloud Foundry: cf* |
 |---------------------|---------------|
-| [CLI 다운로드](http://clis.ng.bluemix.net/)  <br> [문서 보기](./reference/bluemix_cli/index.html)|  [CLI 다운로드](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [문서 보기](./reference/cfcommands/index.html) |
+| [CLI 다운로드](http://clis.ng.bluemix.net/)  <br> [문서 보기](/docs/cli/reference/bluemix_cli/index.html)|  [CLI 다운로드](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [문서 보기](/docs/cli/reference/cfcommands/index.html) |
+{: caption="Table 1. CLI download" caption-side="top"}
 
 
 ## ![](./images/CLI_Plugin.svg) 명령행 인터페이스 플러그인
@@ -60,10 +61,15 @@ bluemix plugin install plugin_name -r bluemix-bx
 {: codeblock}
 
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
+| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Containers*  |
 |-----|-----|-----|
-| 플러그인 이름: active-deploy<br> [문서 보기](/docs/services/ActiveDeploy/cli.html#cli) | 플러그인 이름: auto-scaling <br> [문서 보기](./plugins/auto-scaling/index.html) |  플러그인 이름: nsg<br> [문서 보기](./plugins/networksecuritygroups/index.html)  |
+| 플러그인 이름: active-deploy<br> [문서 보기](/docs/services/ActiveDeploy/cli.html#cli) | 플러그인 이름: auto-scaling <br> [문서 보기](/docs/cli/plugins/auto-scaling/index.html) |  플러그인 이름: IBM-Containers  <br> [문서 보기](/docs/cli/plugins/containers/index.html) |
+{: caption="Table 2. Plug-ins" caption-side="top"}
 
+| *Network Security Groups* |  *사설 네트워크 피어* | *VPN*  |  
+|-----|-----|-----|
+| 플러그인 이름: network-security-groups <br> [문서 보기](/docs/cli/plugins/networksecuritygroups/index.html) | 플러그인 이름: private-network-peering  <br> [문서 보기](/docs/cli/plugins/pnp/index.html) |플러그인 이름: VPN <br> [문서 보기](/docs/cli/plugins/bx_vpn/index.html) |
+{: caption="Table 3. Plug-ins" caption-side="top"}
 
 ### Cloud Foundry 명령행 인터페이스 확장: cf
 {: cli_cf_ext}
@@ -87,10 +93,13 @@ cf install-plugin plugin_name -r bluemix-cf
 | *Active Deploy* | *관리 콘솔* |
 |-----------------|-----------------|
 | 플러그인 이름: active-deploy<br>  [문서 보기](/docs/services/ActiveDeploy/cli.html#cli) |  플러그인 이름: bluemix-admin<br> [문서 보기](/docs/cli/plugins/bluemix_admin/index.html) |
+{: caption="Table 4. Plug-ins" caption-side="top"}
+
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
-| 플러그인 이름: ibm-containers<br> [문서 보기](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | 플러그인 이름: VPN <br> [문서 보기](./plugins/vpn/index.html) |
+| 플러그인 이름: ibm-containers<br> [문서 보기](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | 플러그인 이름: VPN <br> [문서 보기](/docs/cli/plugins/vpn/index.html) |
+{: caption="Table 5. Plug-ins" caption-side="top"}
 
 
 ## ![](./images/Integrated_Dev_Tools.svg) 통합 개발 도구
@@ -100,3 +109,4 @@ cf install-plugin plugin_name -r bluemix-cf
 | *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* |
 |-------------|----------|----------|----------|
 | [Egit Eclipse 플러그인](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [RTC Eclipse 플러그인](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse 플러그인](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 플러그인](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 플러그인](/docs/services/rules/index.html#rulov002) |
+{: caption="Table 6. Plug-ins" caption-side="top"}

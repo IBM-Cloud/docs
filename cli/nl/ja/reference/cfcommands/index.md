@@ -45,7 +45,7 @@ Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は
  </tr>
    </tbody>
  </table>
-*表 1. 汎用 Cloud Foundry コマンド*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="アプリ、スペース、およびサービスを管理するためのアルファベット順のコマンド。各コマンドには、コマンドの詳細を表示するリンクが含まれています。">
@@ -76,7 +76,7 @@ Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は
  </tr>
  </tbody>
  </table>
-*表 2. アプリ、スペース、およびサービスを管理するためのコマンド*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api

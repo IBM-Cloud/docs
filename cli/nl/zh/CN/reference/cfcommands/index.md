@@ -45,7 +45,7 @@ Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序
  </tr>
    </tbody>
  </table>
-*表 1. 常规 Cloud Foundry 命令*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="按字母顺序列出的用于管理应用程序、空间和服务的命令。每个命令都具有可获取命令更多信息的链接。">
@@ -76,7 +76,7 @@ Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序
  </tr>
  </tbody>
  </table>
-*表 2. 用于管理应用程序、空间和服务的命令*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api

@@ -4,7 +4,7 @@
 
 copyright:
 
-  anni: 2015, 2016
+  years: 2015, 2016
 
 lastupdated: "2016-10-24"
 
@@ -62,7 +62,7 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  </tr>
   </tbody>
  </table>
-*Tabella 1. Comandi bluemix generali*
+{: caption="Table 1. General bluemix commands" caption-side="top"}
 
 
 
@@ -101,7 +101,7 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  </tr>
  </tbody>
  </table>
-*Tabella 2. Comandi per la gestione di organizzazioni, spazi e utenti*
+ {: caption="Table 2. Commands for managing orgs, spaces, and users" caption-side="top"} 
 
 
 
@@ -140,7 +140,7 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  </tr>
   </tbody>
  </table>
-*Tabella 3. Comandi per la gestione di applicazioni cf*
+{: caption="Table 3. Commands for managing cf apps" caption-side="top"}
 
 
 <table summary="Comandi bluemix che puoi utilizzare per la gestione dei servizi Bluemix.">
@@ -171,7 +171,7 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  </tr>
   </tbody>
  </table>
-*Tabella 4. Comandi per la gestione dei servizi Bluemix*
+{: caption="Table 4. Commands for managing Bluemix services" caption-side="top"}
 
 
 <table summary="comandi bluemix che puoi utilizzare per gestire il catalogo, i plug-in, la fatturazione e le impostazioni di sicurezza Bluemix.">
@@ -207,7 +207,7 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  </tr>
   </tbody>
  </table>
-*Tabella 5. Comandi per la gestione delle impostazioni di sicurezza, dei plug-in, della fatturazione e del catalogo Bluemix*
+{: caption="Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings" caption-side="top"}
 
 
 
@@ -239,7 +239,7 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  </tr>
   </tbody>
  </table>
-*Tabella 6. Comandi per la gestione delle impostazioni di rete*
+{: caption="Table 6. Commands for managing network settings" caption-side="top"}
 
 
 
@@ -327,7 +327,7 @@ Utilizza gli indici delle seguenti tabelle per fare riferimento ai comandi bluem
  </tr>
   </tbody>
  </table>
-*Tabella 7. Comandi per la gestione dei contenitori in Bluemix*
+{: caption="Table 7. Commands for managing containers on Bluemix" caption-side="top"}
 
 
 
@@ -2123,7 +2123,7 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 | CCS_BIND_APP=*&lt;nome_applicazione&gt;*       | Eseguire il bind di un servizio a un contenitore. Utilizza la variabile di ambiente `CCS_BIND_APP` per eseguire il bind di un'applicazione al contenitore. L'applicazione viene associata tramite bind al servizio di destinazione e funge da ponte che consente a {{site.data.keyword.Bluemix_notm}} di portare le informazioni `VCAP_SERVICES` dell'applicazione ponte all'istanza del contenitore in esecuzione. Per ulteriori informazioni sulla creazione di un'applicazione ponte, vedi [Esecuzione del bind di un servizio a un contenitore](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;nome_istanza_servizio1&gt;*,*&lt;nome_istanza_servizio2&gt;* | Per eseguire direttamente il bind di un servizio Bluemix a un contenitore senza utilizzare un'applicazione ponte, utilizza CCS_BIND_SRV. Questo bind consente a Bluemix di inserire le informazioni VCAP_SERVICES nell'istanza del contenitore in esecuzione. Per elencare più servizi Bluemix, puoi includerli come parte della stessa variabile di ambiente. |
 | LOG_LOCATIONS=*&lt;&gt;percorso_verso_file* | Aggiungere un file di log da monitorare nel contenitore. Includi la variabile di ambiente `LOG_LOCATIONS` in un percorso verso il file di log. |
-*Tabella 8. Variabili di ambiente di uso comune*
+{: caption="Table 8. Commonly used environment variables" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>FILE_VARIABILE_AMBIENTE</i> (facoltativo)</dt>
@@ -2712,7 +2712,7 @@ Ricrea il servizio IBM Containers nello spazio Bluemix a cui sei collegato. La q
 <strong>Importante</strong>: quando esegui questo comando, nessuno dei tuoi singoli contenitori e gruppi in questo spazio verrà migrato nello spazio di cui è stato eseguito di nuovo il provisioning e verranno rimossi durante il processo di migrazione.
 
 ```
-bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
+bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ```
 <strong>Opzioni del comando</strong>:
 
@@ -2949,7 +2949,7 @@ bluemix ic run [-p PORT|--publish PORTA] [-P] [-m MEMORIA|--memory MEMORIA] [-e 
 | CCS_BIND_APP=*&lt;nome_applicazione&gt;*       | Eseguire il bind di un servizio a un contenitore. Utilizza la variabile di ambiente `CCS_BIND_APP` per eseguire il bind di un'applicazione al contenitore. L'applicazione viene associata mediante bind al servizio di destinazione e funge da ponte che consente a {{site.data.keyword.Bluemix_notm}} di portare le informazioni `VCAP_SERVICES` dell'applicazione ponte nell'istanza del contenitore in esecuzione. Per ulteriori informazioni sulla creazione di un'applicazione ponte, vedi [Esecuzione del bind di un servizio a un contenitore](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;nome_istanza_servizio1&gt;*,*&lt;nome_istanza_servizio2&gt;* | Per eseguire direttamente il bind di un servizio Bluemix a un contenitore senza utilizzare un'applicazione ponte, utilizza CCS_BIND_SRV. Questo bind consente a Bluemix di inserire le informazioni VCAP_SERVICES nell'istanza del contenitore in esecuzione. Per elencare più servizi Bluemix, puoi includerli come parte della stessa variabile di ambiente. |
 | LOG_LOCATIONS=*&lt;&gt;percorso_verso_file* | Aggiungere un file di log da monitorare nel contenitore. Includi la variabile di ambiente `LOG_LOCATIONS` in un percorso verso il file di log. |
-*Tabella 9. Variabili d'ambiente più utilizzate*
+{: caption="Table 9. Commonly used environment variables" caption-side="top"} 
 
 
    <dl>

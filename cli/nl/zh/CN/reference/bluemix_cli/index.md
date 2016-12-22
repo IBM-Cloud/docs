@@ -62,7 +62,7 @@ lastupdated: "2016-10-24"
  </tr>
   </tbody>
  </table>
-*表 1. 常规 bluemix 命令*
+{: caption="Table 1. General bluemix commands" caption-side="top"}
 
 
 
@@ -101,7 +101,7 @@ lastupdated: "2016-10-24"
  </tr>
  </tbody>
  </table>
-*表 2. 用于管理组织、空间和用户的命令*
+ {: caption="Table 2. Commands for managing orgs, spaces, and users" caption-side="top"} 
 
 
 
@@ -140,7 +140,7 @@ lastupdated: "2016-10-24"
  </tr>
   </tbody>
  </table>
-*表 3. 用于管理 cf 应用程序的命令*
+{: caption="Table 3. Commands for managing cf apps" caption-side="top"}
 
 
 <table summary="可用于管理 Bluemix 服务的 bluemix 命令">
@@ -171,7 +171,7 @@ lastupdated: "2016-10-24"
  </tr>
   </tbody>
  </table>
-*表 4. 用于管理 Bluemix 服务的命令*
+{: caption="Table 4. Commands for managing Bluemix services" caption-side="top"}
 
 
 <table summary="可用于管理 Bluemix 目录、插件、帐单和安全设置的 bluemix 命令">
@@ -207,7 +207,7 @@ lastupdated: "2016-10-24"
  </tr>
   </tbody>
  </table>
-*表 5. 用于管理 Bluemix 目录、插件、帐单和安全设置的命令*
+{: caption="Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings" caption-side="top"}
 
 
 
@@ -239,7 +239,7 @@ lastupdated: "2016-10-24"
  </tr>
   </tbody>
  </table>
-*表 6. 用于管理网络设置的命令*
+{: caption="Table 6. Commands for managing network settings" caption-side="top"}
 
 
 
@@ -327,7 +327,7 @@ lastupdated: "2016-10-24"
  </tr>
   </tbody>
  </table>
-*表 7. 用于在 Bluemix 上管理容器的命令*
+{: caption="Table 7. Commands for managing containers on Bluemix" caption-side="top"}
 
 
 
@@ -1638,7 +1638,7 @@ bluemix bss org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
   <dt>-d MONTH_DATE（可选）</dt>
   <dd>显示使用 YYYY-MM 格式指定的月份和日期的数据。如果未指定，那么会显示当月的使用情况。</dd>
   <dt>-r REGION_NAME</dt>
-  <dd>托管组织的区域的名称。如果设置为“all”，那么会显示所有区域中的组织使用情况。</dd>
+  <dd>托管组织的区域名称。如果设置为“all”，那么会显示所有区域中的组织使用情况。</dd>
   <dt>--json（可选）</dt>
   <dd>以 JSON 格式显示使用情况结果。</dd>
 </dl>
@@ -2124,9 +2124,9 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 | CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用 `CCS_BIND_APP` 环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅[将服务绑定到容器](../../../containers/container_integrations_binding.html){: new_window}。 |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 要在不使用网桥应用程序的情况下将 Bluemix 服务直接绑定到容器，请使用 CCS_BIND_SRV。此绑定允许 Bluemix 将 VCAP_SERVICES 信息插入正在运行的容器实例中。要列出多个 Bluemix 服务，请将这些服务包含在同一环境变量中。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 添加要在容器中监视的日志文件。请包含 `LOG_LOCATIONS` 环境变量以及日志文件的路径。 |
-*表 8. 常用环境变量*
+{: caption="Table 8. Commonly used environment variables" caption-side="top"}
 
-   <dl>
+ <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i>（可选）</dt>
    <dd> 从文件导入环境变量，其中 ENVFILE 是本地目录上您文件的路径。文件中的每一行代表一个 key=value 对。</dd>
    <dt>--volume <i>VOLUME</i>:<i>CONTAINER_PATH</i>[:ro]（可选）</dt>
@@ -2723,7 +2723,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 <strong>重要事项</strong>：运行此命令时，此空间内的所有单个容器和组都不会迁移到重新供应的空间，且在迁移过程中将会除去。
 
 ```
-bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
+bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ```
 <strong>命令选项</strong>：
 
@@ -2956,7 +2956,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 | CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用 `CCS_BIND_APP` 环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅[将服务绑定到容器](../../../containers/container_integrations_binding.html){: new_window}。 |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 要在不使用网桥应用程序的情况下将 Bluemix 服务直接绑定到容器，请使用 CCS_BIND_SRV。此绑定允许 Bluemix 将 VCAP_SERVICES 信息插入正在运行的容器实例中。要列出多个 Bluemix 服务，请将这些服务包含在同一环境变量中。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 添加要在容器中监视的日志文件。请包含 `LOG_LOCATIONS` 环境变量以及日志文件的路径。 |
-*表 9. 常用环境变量*
+{: caption="Table 9. Commonly used environment variables" caption-side="top"} 
 
 
    <dl>
@@ -3231,7 +3231,7 @@ bluemix ic reprovision [--force|-f]
 
 <dl>
    <dt>--force|-f（可选）</dt>
-   <dd>强制从 Bluemix 空间删除 Bluemix。</dd>
+   <dd>强制从 Bluemix 空间删除 IBM Containers 服务。</dd>
  </dl>
 
 

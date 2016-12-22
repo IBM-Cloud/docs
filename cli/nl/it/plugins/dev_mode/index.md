@@ -94,7 +94,7 @@ Utilizza l'indice nella seguente tabella in modo che faccia riferimento ai coman
  </tr>
   </tbody>
  </table>
-*Tabella 1. Comandi dev_mode*
+{: caption="Table 1. dev_mode commands" caption-side="top"}
 
 
 

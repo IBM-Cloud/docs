@@ -94,7 +94,7 @@ cf plugins
  </tr>
   </tbody>
  </table>
-*表 1. dev_mode コマンド*
+{: caption="Table 1. dev_mode commands" caption-side="top"}
 
 
 

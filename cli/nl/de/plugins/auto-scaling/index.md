@@ -43,7 +43,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## Autoskalierungsrichtlinie zuordnen
 
-Sie können eine Autoskalierungsrichtlinie einer bestimmten App zuordnen. Führen Sie den folgenden Befehl aus:
+Sie können eine Autoskalierungsrichtlinie einer bestimmten App zuordnen. Führen Sie den folgenden Befehl aus: 
 
 ```
 bx as policy-attach <APP_NAME> -p <policy_file>
@@ -87,7 +87,7 @@ bx as policy-show <APP_NAME> [--json]
 
 ## Zuordnung einer Autoskalierungsrichtlinie aufheben
 
-Sie können eine Autoskalierungsrichtlinie von einer App entfernen. Führen Sie den folgenden Befehl aus:
+Sie können eine Autoskalierungsrichtlinie aus einer App entfernen. Führen Sie den folgenden Befehl aus: 
 
 ```
 bx as policy-detach <APP_NAME>
@@ -102,7 +102,7 @@ bx as policy-detach <APP_NAME>
 
 ## Autoskalierungsrichtlinie aktivieren oder inaktivieren
 
-Sie können die Autoskalierungsrichtlinie einer bestimmten App aktivieren oder inaktivieren. Führen Sie den folgenden Befehl aus:
+Sie können die Autoskalierungsrichtlinie einer bestimmten App aktivieren oder inaktivieren. Führen Sie den folgenden Befehl aus: 
 
 ```
 bx as policy-enable|policy-disable <APP_NAME>

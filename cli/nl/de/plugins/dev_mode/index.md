@@ -94,7 +94,7 @@ Verwenden Sie den Index in der folgenden Tabelle als Referenz für die häufig v
  </tr>
   </tbody>
  </table>
-*Tabelle 1. Befehle für dev_mode*
+{: caption="Table 1. dev_mode commands" caption-side="top"}
 
 
 

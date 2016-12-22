@@ -46,7 +46,7 @@ Verwenden Sie den Index in der folgenden Tabelle als Referenz für die häufig v
  </tr>
    </tbody>
  </table>
-*Tabelle 1. Allgemeine Cloud Foundry-Befehle*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="Alphabetisch geordnete Befehle zur Verwaltung von Apps, Bereichen und Services. Jeder Befehl verfügt über einen Link, der Ihnen weitere Informationen zu dem Befehl gibt.">
@@ -77,7 +77,7 @@ Verwenden Sie den Index in der folgenden Tabelle als Referenz für die häufig v
  </tr>
  </tbody>
  </table>
-*Tabelle 2. Befehle zur Verwaltung von Apps, Bereichen und Services*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api
@@ -536,7 +536,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>*-p* app_path (optional)</dt>
 <dd>Der Pfad zum Anwendungsverzeichnis oder zur Archivdatei des Anwendungsverzeichnisses.</dd>
 <dt>*-s* stack_name (optional)</dt>
-<dd>Der Stack zum Ausführen der Anwendungen. Ein Stack ist ein vorgefertigtes Dateisystem einschließlich Betriebssystem. Mit `cf stacks` können Sie die in {{site.data.keyword.Bluemix_notm}} verfügbaren Stacks anzeigen.</dd>
+<dd>Der Stack zum Ausführen der Apps. Ein Stack ist ein vorgefertigtes Dateisystem einschließlich Betriebssystem. Mit `cf stacks` können Sie die in {{site.data.keyword.Bluemix_notm}} verfügbaren Stacks anzeigen.</dd>
 <dt>*-t* timeout (optional)</dt>
 <dd>Die maximale Zeit für den Start der Anwendung in Sekunden. Möglicherweise wird dieser Wert durch andere serverseitige Zeitlimits überschrieben.</dd>
 <dt>*--no-hostname* (optional)</dt>
@@ -662,28 +662,28 @@ cf set-env my_app variable_a 123
 ## cf ssh
 {: #cf_ssh}
 
-Meldet Sie sicher bei einem Anwendungscontainer an. SSH greift standardmäßig auf den Container zu, in dem die erste Instanz der Anwendung ausgeführt wird, also die Instanz mit dem Index 0. 
+Meldet Sie sicher bei einem Anwendungscontainer an. SSH greift standardmäßig auf den Container zu, in dem die erste Instanz der Anwendung ausgeführt wird, also die Instanz mit dem Index 0.
 
 ```
 cf ssh
 ```
 <strong>Voraussetzungen</strong>: `cf api`, `cf login`, `cf target`
 
-Außerdem müssen Sie Ihre Cloud Foundry-Bereitstellung so konfigurieren, dass der SSH-Zugriff auf Anwendungsinstanzen zulässig ist. Details können Sie auf der Seite [Configuring SSH Access for Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window} nachlesen. 
+Außerdem müssen Sie Ihre Cloud Foundry-Bereitstellung so konfigurieren, dass der SSH-Zugriff auf Anwendungsinstanzen zulässig ist. Details können Sie auf der Seite [Configuring SSH Access for Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window} nachlesen.
 
 <strong>Befehlsoptionen</strong>:
 
 <dl>
 <dt>appname</dt>
-<dd>Der Name der Anwendung. Falls SSH zulässig ist, können Sie diese Option verwenden, um eine interaktive SSH-Sitzung mit einer VM zu starten, die als Host der Anwendung dient. </dd>
+<dd>Der Name der Anwendung. Falls SSH zulässig ist, können Sie diese Option verwenden, um eine interaktive SSH-Sitzung mit einer VM zu starten, die als Host der Anwendung dient.</dd>
 <dt>-i</dt>
-<dd>Gibt eine bestimmte Instanz einer Anwendung als Ziel an. </dd>
+<dd>Gibt eine bestimmte Instanz einer Anwendung als Ziel an.</dd>
 <dt>-L</dt>
-<dd>Aktiviert die Weiterleitung für den lokalen Port, die einen Ausgabeport auf Ihrer Maschine an einen Eingabeport auf der Anwendungs-VM bindet. </dd>
+<dd>Aktiviert die Weiterleitung für den lokalen Port, die einen Ausgabeport auf Ihrer Maschine an einen Eingabeport auf der Anwendungs-VM bindet.</dd>
 <dt>-N</dt>
-<dd>Gibt an, dass kein ferner Befehl ausgeführt werden soll. </dd>
+<dd>Gibt an, dass kein ferner Befehl ausgeführt werden soll.</dd>
 <dt>-t, -tt oder -T</dt>
-<dd>Ermöglicht Ihnen die Ausführung einer SSH-Sitzung im Pseudo-TTY-Modus, statt eine Zeilenausgabe am Terminal zu generieren. <dd>
+<dd>Ermöglicht Ihnen die Ausführung einer SSH-Sitzung im Pseudo-TTY-Modus, statt eine Zeilenausgabe am Terminal zu generieren.<dd>
 </dl>
 
 <strong>Beispiele</strong>:

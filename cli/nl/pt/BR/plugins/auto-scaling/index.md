@@ -32,7 +32,8 @@ Antes de iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Consulte [CL
 
 Após o {{site.data.keyword.Bluemix_notm}} CLI ser instalado, é possível incluir o plug-in {{site.data.keyword.autoscaling}} CLI.
 
-Conclua as etapas a seguir para incluir o repositório e instalar o plug-in:
+Conclua as etapas a seguir para incluir o repositório e instalar
+o plug-in:
 1. Para incluir o repositório do plug-in {{site.data.keyword.Bluemix_notm}} CLI, execute o comando a seguir:
 ```
 bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
@@ -44,7 +45,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## Anexando uma política de ajuste automático de escala
 
-É possível anexar uma política de ajuste automático de escala a um app específico. Execute o seguinte comando:
+É possível anexar uma política de ajuste automático de escala a um app específico. Execute o comando a seguir:
 
 ```
 bx as policy-attach <APP_NAME> -p <policy_file>
@@ -71,7 +72,7 @@ bx as policy-create
 
 ## Exibindo uma política de ajuste automático de escala
 
-É possível mostrar a política de ajuste automático de escala de um app. O conteúdo da política é impresso na linha de comandos diretamente. Execute o seguinte comando:
+É possível mostrar a política de ajuste automático de escala de um app. O conteúdo da política é impresso diretamente na linha de comandos. Execute o seguinte comando:
 
 ```
 bx as policy-show <APP_NAME> [--json]
@@ -88,7 +89,7 @@ bx as policy-show <APP_NAME> [--json]
 
 ## Removendo uma política de ajuste automático de escala
 
-É possível remover uma política de ajuste automático de escala de um app. Execute o seguinte comando:
+É possível remover uma política de ajuste automático de escala de um app. Execute o comando a seguir:
 
 ```
 bx as policy-detach <APP_NAME>
@@ -103,7 +104,7 @@ bx as policy-detach <APP_NAME>
 
 ## Ativando ou desativando uma política de ajuste automático de escala
 
-É possível ativar ou desativar a política de ajuste automático de escala de um app específico. Execute o seguinte comando:
+É possível ativar ou desativar a política de ajuste automático de escala de um app específico. Execute o comando a seguir:
 
 ```
 bx as policy-enable|policy-disable <APP_NAME>

@@ -45,7 +45,7 @@ Utilizza l'indice nella seguente tabella per fare riferimento ai comandi Cloud F
  </tr>
    </tbody>
  </table>
-*Tabella 1. Comandi generali di Cloud Foundry*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="Comandi in ordine alfabetico per la gestione di applicazioni, spazi e servizi. Ogni comando ha un link che porta a ulteriori informazioni sul comando.">
@@ -76,7 +76,7 @@ Utilizza l'indice nella seguente tabella per fare riferimento ai comandi Cloud F
  </tr>
  </tbody>
  </table>
-*Tabella 2. Comandi per la gestione di applicazioni, spazi e servizi*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api
@@ -685,7 +685,7 @@ Devi inoltre configurare la tua distribuzione Cloud Foundry per consentire l'acc
 
 <dl>
 <dt>nomeapplicazione</dt>
-<dd>Il nome dell'applicazione. Se è consentito SSH, puoi utilizzare questa opzione per avviare una sessione SSH interattiva con una VM che ospita l'applicazione. </dd>
+<dd>Il nome dell'applicazione. Se è consentito SSH, puoi utilizzare questa opzione per avviare una sessione SSH interattiva con una VM che ospita l'applicazione.</dd>
 <dt>-i</dt>
 <dd>Indirizza un'istanza specifica di un'applicazione.</dd>
 <dt>-L</dt>

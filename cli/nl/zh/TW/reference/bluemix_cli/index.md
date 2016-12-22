@@ -62,7 +62,7 @@ lastupdated: "2016-10-24"
  </tr>
   </tbody>
  </table>
-*表 1. 一般 bluemix 指令*
+{: caption="Table 1. General bluemix commands" caption-side="top"}
 
 
 
@@ -101,7 +101,7 @@ lastupdated: "2016-10-24"
  </tr>
  </tbody>
  </table>
-*表 2. 用來管理組織、空間和使用者的指令*
+ {: caption="Table 2. Commands for managing orgs, spaces, and users" caption-side="top"} 
 
 
 
@@ -140,7 +140,7 @@ lastupdated: "2016-10-24"
  </tr>
   </tbody>
  </table>
-*表 3. 用來管理 cf 應用程式的指令*
+{: caption="Table 3. Commands for managing cf apps" caption-side="top"}
 
 
 <table summary="您可以用來管理 Bluemix 服務的 bluemix 指令。">
@@ -171,7 +171,7 @@ lastupdated: "2016-10-24"
  </tr>
   </tbody>
  </table>
-*表 4. 用來管理 Bluemix 服務的指令*
+{: caption="Table 4. Commands for managing Bluemix services" caption-side="top"}
 
 
 <table summary="您可以用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的 bluemix 指令。">
@@ -207,7 +207,7 @@ lastupdated: "2016-10-24"
  </tr>
   </tbody>
  </table>
-*表 5. 用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的指令*
+{: caption="Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings" caption-side="top"}
 
 
 
@@ -239,7 +239,7 @@ lastupdated: "2016-10-24"
  </tr>
   </tbody>
  </table>
-*表 6. 用來管理網路設定的指令*
+{: caption="Table 6. Commands for managing network settings" caption-side="top"}
 
 
 
@@ -327,7 +327,7 @@ lastupdated: "2016-10-24"
  </tr>
   </tbody>
  </table>
-*表 7. 用來在 Bluemix 上管理容器的指令*
+{: caption="Table 7. Commands for managing containers on Bluemix" caption-side="top"}
 
 
 
@@ -2112,9 +2112,9 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 | CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。 |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們併入為相同環境變數的一部分。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。包括含有日誌檔路徑的 `LOG_LOCATIONS` 環境變數。 |
-*表 8. 常用環境變數*
+{: caption="Table 8. Commonly used environment variables" caption-side="top"}
 
-   <dl>
+ <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i>（選用）</dt>
    <dd> 從檔案匯入環境變數，其中 ENVFILE 是本端目錄上檔案的路徑。檔案中的每一行都代表一個 key=value 配對。</dd>
    <dt>--volume <i>VOLUME</i>:<i>CONTAINER_PATH</i>[:ro]（選用）</dt>
@@ -2709,7 +2709,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 <strong>重要事項</strong>：當您執行此指令時，此空間中您的單一容器及群組都不會移轉至重新佈建的空間，而且將會在移轉處理程序期間予以移除。
 
 ```
-bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
+bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ```
 <strong>指令選項</strong>：<dl>
    <dt>--force|-f（選用）</dt>
@@ -2939,7 +2939,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 | CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。 |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們併入為相同環境變數的一部分。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。包括含有日誌檔路徑的 `LOG_LOCATIONS` 環境變數。 |
-*表 9. 常用環境變數*
+{: caption="Table 9. Commonly used environment variables" caption-side="top"} 
 
 
    <dl>

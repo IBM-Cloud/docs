@@ -4,7 +4,7 @@
 
 copyright:
 
-  anni: 2015，2016
+  year: 2015，2016
 
 lastupdated: "2016-02-24"
 
@@ -43,7 +43,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## Collegamento di una politica di ridimensionamento automatico
 
-Puoi collegare una politica di ridimensionamento automatico a una specifica applicazione. Eseguendo il seguente comando: 
+Puoi collegare una politica di ridimensionamento automatico a una specifica applicazione. Eseguendo il seguente comando:
 
 ```
 bx as policy-attach <APP_NAME> -p <policy_file>

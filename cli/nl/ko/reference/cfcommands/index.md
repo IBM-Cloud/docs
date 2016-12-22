@@ -46,7 +46,7 @@ cf 명령과 연관된 도움말 정보를 모두 나열하려면 `cf help`를 �
  </tr>
    </tbody>
  </table>
-*표 1. 일반 Cloud Foundry 명령*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="알파벳순으로 표시된 앱, 영역 및 서비스 관리를 위한 명령입니다. 각 명령에는 명령에 대한 세부 정보를 제공하는 링크가 포함되어 있습니다.">
@@ -77,7 +77,7 @@ cf 명령과 연관된 도움말 정보를 모두 나열하려면 `cf help`를 �
  </tr>
  </tbody>
  </table>
-*표 2. 앱, 영역 및 서비스 관리를 위한 명령*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api

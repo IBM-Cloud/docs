@@ -78,7 +78,7 @@ chmod a+x ./private-network-peering-linux-amd64
 	```  
 
 ## プライベート・ネットワーク・ピアリング・コマンドのリスト
-以下の 4 つのコマンドがサポートされます。使用可能なコマンドのリストを表示するには、`bluemix network` コマンドを使用します。
+以下のコマンドがサポートされます。使用可能なコマンドのリストを表示するには、`bluemix network` コマンドを使用します。
 
 | コマンド     | 説明                                    |
 |-------------|------------------------------------------------|
@@ -86,6 +86,8 @@ chmod a+x ./private-network-peering-linux-amd64
 | pnp-create  | プライベート・ネットワーク・ピアリング接続を作成します   |
 | pnp-delete  | プライベート・ネットワーク・ピアリング接続を削除します   |
 | pnp-show    | すべてのプライベート・ネットワーク・ピアリング接続をリストします  |
+{: caption="Table 1. Private network peering commands" caption-side="top"}
+
 
 ### コマンドの使用法
 コマンドのヘルプ情報を表示するには、`bluemix network [command] -h` を実行します。

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-24"
+lastupdated: "2016-11-29"
 
 
 ---
@@ -34,7 +34,8 @@ Cloud Foundry cf 指令行工具是所有 {{site.data.keyword.Bluemix_notm}} CLI
 
 | *{{site.data.keyword.Bluemix_notm}}：bx* | *Cloud Foundry：cf* |
 |---------------------|---------------|
-| [下載 CLI](http://clis.ng.bluemix.net/)  <br> [檢視文件](./reference/bluemix_cli/index.html)|  [下載 CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [檢視文件](./reference/cfcommands/index.html) |
+| [下載 CLI](http://clis.ng.bluemix.net/)  <br> [檢視文件](/docs/cli/reference/bluemix_cli/index.html)|  [下載 CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [檢視文件](/docs/cli/reference/cfcommands/index.html) |
+{: caption="Table 1. CLI download" caption-side="top"}
 
 
 ## ![](./images/CLI_Plugin.svg) 指令行介面外掛程式
@@ -60,10 +61,15 @@ bluemix plugin install plugin_name -r bluemix-bx
 {: codeblock}
 
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
+| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Containers*  |
 |-----|-----|-----|
-| 外掛程式名稱：active-deploy<br> [檢視文件](/docs/services/ActiveDeploy/cli.html#cli) | 外掛程式名稱：auto-scaling <br> [檢視文件](./plugins/auto-scaling/index.html) |  外掛程式名稱：nsg <br> [檢視文件](./plugins/networksecuritygroups/index.html)  |
+| 外掛程式名稱：active-deploy<br> [檢視文件](/docs/services/ActiveDeploy/cli.html#cli) | 外掛程式名稱：auto-scaling <br> [檢視文件](/docs/cli/plugins/auto-scaling/index.html) |  外掛程式名稱：IBM-Containers  <br> [檢視文件](/docs/cli/plugins/containers/index.html) |
+{: caption="Table 2. Plug-ins" caption-side="top"}
 
+| *Network Security Groups* |  *專用網路對等作業* | *VPN*  |  
+|-----|-----|-----|
+| 外掛程式名稱：network-security-groups <br> [檢視文件](/docs/cli/plugins/networksecuritygroups/index.html) | 外掛程式名稱：private-network-peering  <br> [檢視文件](/docs/cli/plugins/pnp/index.html) |外掛程式名稱：VPN <br> [檢視文件](/docs/cli/plugins/bx_vpn/index.html) |
+{: caption="Table 3. Plug-ins" caption-side="top"}
 
 ### 延伸 Cloud Foundry 指令行介面：cf
 {: cli_cf_ext}
@@ -87,10 +93,13 @@ cf install-plugin plugin_name -r bluemix-cf
 | *Active Deploy* | *Admin Console* |
 |-----------------|-----------------|
 | 外掛程式名稱：active-deploy<br>  [檢視文件](/docs/services/ActiveDeploy/cli.html#cli) |  外掛程式名稱：bluemix-admin<br> [檢視文件](/docs/cli/plugins/bluemix_admin/index.html) |
+{: caption="Table 4. Plug-ins" caption-side="top"}
+
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
-| 外掛程式名稱：ibm-containers<br> [檢視文件](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | 外掛程式名稱：VPN <br> [檢視文件](./plugins/vpn/index.html) |
+| 外掛程式名稱：ibm-containers<br> [檢視文件](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | 外掛程式名稱：VPN <br> [檢視文件](/docs/cli/plugins/vpn/index.html) |
+{: caption="Table 5. Plug-ins" caption-side="top"}
 
 
 ## ![](./images/Integrated_Dev_Tools.svg) 整合式開發工具
@@ -100,3 +109,4 @@ cf install-plugin plugin_name -r bluemix-cf
 | *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* |
 |-------------|----------|----------|----------|
 | [Egit Eclipse 外掛程式](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [RTC Eclipse 外掛程式](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse 外掛程式](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 外掛程式](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 外掛程式](/docs/services/rules/index.html#rulov002) |
+{: caption="Table 6. Plug-ins" caption-side="top"}

@@ -47,7 +47,7 @@ Use o índice na tabela a seguir para se referir aos comandos do Cloud Foundry u
  </tr>
    </tbody>
  </table>
-*Tabela 1. Comandos gerais do Cloud Foundry*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="Comandos ordenados alfabeticamente para gerenciar apps, espaços e serviços. Cada comando tem um link que leva a mais informações sobre ele.">
@@ -80,7 +80,7 @@ Use o índice na tabela a seguir para se referir aos comandos do Cloud Foundry u
  </tr>
  </tbody>
  </table>
-*Tabela 2. Comandos para gerenciar apps, espaços e serviços*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api

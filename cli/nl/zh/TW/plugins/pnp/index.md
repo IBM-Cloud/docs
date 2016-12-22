@@ -78,7 +78,7 @@ chmod a+x ./private-network-peering-linux-amd64
 	```  
 
 ## 專用網路對等作業指令清單
-支援下列四個指令。使用 `bluemix network` 指令，以查看可用的指令清單：
+支援下列指令。使用 `bluemix network` 指令，以查看可用的指令清單：
 
 | 指令     | 說明                                    |
 |-------------|------------------------------------------------|
@@ -86,6 +86,8 @@ chmod a+x ./private-network-peering-linux-amd64
 | pnp-create  | 建立專用網路對等作業連線   |
 | pnp-delete  | 刪除專用網路對等作業連線   |
 | pnp-show    | 列出所有專用網路對等作業連線  |
+{: caption="Table 1. Private network peering commands" caption-side="top"}
+
 
 ### 指令用法
 若要檢視指令的說明資訊，請執行：`bluemix network [command] -h`。

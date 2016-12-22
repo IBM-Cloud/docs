@@ -1,12 +1,10 @@
 ---
 
-
-
 copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-11-08"
+lastupdated: "2016-10-26"
 
 ---
 
@@ -19,7 +17,7 @@ lastupdated: "2016-11-08"
 {: #bluemixadmincli}
 
 
-您可以使用 Cloud Foundry 指令行介面與 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式搭配，來管理「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」環境的使用者。例如，您可以從 LDAP 登錄新增使用者。如果您要尋找管理「{{site.data.keyword.Bluemix_notm}} 公用」帳戶的相關資訊，請參閱[管理](/docs/admin/adminpublic.html#administer)。
+您可以搭配使用 Cloud Foundry 指令行介面與 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式，來管理「{{site.data.keyword.Bluemix_notm}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」環境。例如，您可以從 LDAP 登錄新增使用者。如果您要尋找管理「{{site.data.keyword.Bluemix_notm}} 公用」帳戶的相關資訊，請參閱[管理](/docs/admin/adminpublic.html#administer)。
 
 在開始之前，請先安裝 cf 指令行介面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式需要 cf 6.11.2 版或更新版本。[下載 Cloud Foundry 指令行介面](https://github.com/cloudfoundry/cli/releases){: new_window}
 
@@ -95,9 +93,10 @@ cf login
 </li>
 </ol>
 
-### 新增使用者
+## 新增使用者
+{: #admin_add_user}
 
-您可以從環境的使用者登錄中，將使用者新增至您的 {{site.data.keyword.Bluemix_notm}} 環境。輸入下列指令： 
+若要從環境的使用者登錄中，將使用者新增至 {{site.data.keyword.Bluemix_notm}} 環境，請使用下列指令：
 
 ```
 cf ba add-user <user_name> <organization>
@@ -117,9 +116,10 @@ cf ba add-user <user_name> <organization>
 
 <!-- staging-only commands start. Live for interconnect -->
 
-### 搜尋使用者
+## 搜尋使用者
+{: #admin_search_user}
 
-您可以搜尋使用者。視需要，輸入下列指令與選用搜尋過濾器參數（name、permission、organization 及 role）：
+若要搜尋使用者，請搭配使用下列指令與選用搜尋過濾器參數（name、permission、organization 及 role）：
 
 ```
 cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
@@ -141,9 +141,10 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 
 **提示：**您也可以使用 **ba su** 作為較長的 **ba search-users** 指令名稱的別名。
 
-### 設定使用者的許可權
+## 設定使用者的許可權
+{: #admin_setperm_user}
 
-您可以設定所指定使用者的許可權。輸入下列指令： 
+若要設定所指定使用者的許可權，請使用下列指令：
 
 ```
 cf ba set-permissions <user_name> <permission> <access>
@@ -165,9 +166,10 @@ cf ba set-permissions <user_name> <permission> <access>
 
 <!-- staging-only commands end -->
 
-### 移除使用者
+## 移除使用者
+{: #admin_remov_user}
 
-您可以輸入下列指令，從您的 {{site.data.keyword.Bluemix_notm}} 環境移除使用者：
+若要從 {{site.data.keyword.Bluemix_notm}} 環境中移除使用者，請使用下列指令：
 
 ```
 cf ba remove-user <user_name>
@@ -183,10 +185,10 @@ cf ba remove-user <user_name>
 
 **提示：**您也可以使用 **ba ru** 作為較長的 **ba remove-user** 指令名稱的別名。
 
-### 允許管理員新增使用者
+## 允許管理員新增使用者
 {: #clius_emau}
 
-如果您在 {{site.data.keyword.Bluemix_notm}} 環境中具有**超級使用者**許可權，則可以允許組織管理員將使用者新增至他們所管理的組織。輸入下列指令： 
+如果您在 {{site.data.keyword.Bluemix_notm}} 環境中具有**超級使用者**許可權，則可以允許組織管理員將使用者新增至他們所管理的組織。若要讓管理員新增使用者，請使用下列指令：
 
 ```
 cf ba enable-managers-add-users
@@ -195,10 +197,10 @@ cf ba enable-managers-add-users
 
 **提示：**您也可以使用 **ba emau** 作為較長 **ba enable-managers-add-users** 指令名稱的別名。
 
-### 禁止管理員新增使用者
+## 禁止管理員新增使用者
 {: #clius_dmau}
 
-如果已在您的 {{site.data.keyword.Bluemix_notm}} 環境中使用 **enable-managers-add-users** 指令，讓組織管理員能將使用者新增至他們所管理的組織，而且您具有**超級使用者**許可權，則可以移除此設定。輸入下列指令：
+如果已在您的 {{site.data.keyword.Bluemix_notm}} 環境中使用 **enable-managers-add-users** 指令，讓組織管理員能將使用者新增至他們所管理的組織，而且您具有**超級使用者**許可權，則可以移除此設定。若要停止讓管理員新增使用者，請使用下列指令：
 
 ```
 cf ba disable-managers-add-users
@@ -207,11 +209,10 @@ cf ba disable-managers-add-users
 
 **提示：**您也可以使用 **ba dmau** 作為較長 **ba disable-managers-add-users** 指令名稱的別名。
 
-### 新增及刪除組織
+## 新增組織
+{: #admin_add_org}
 
-您可以新增及刪除組織。
-
-* 若要新增組織，請輸入下列指令：
+若要新增組織，請使用下列指令：
 
 ```
 cf ba create-organization <organization> <manager>
@@ -227,7 +228,10 @@ cf ba create-organization <organization> <manager>
 
 **提示：**您也可以使用 **ba co** 作為較長的 **ba create-organization** 指令名稱的別名。
 
-* 若要刪除組織，請輸入下列指令：
+## 刪除組織
+{: #admin_delete_org}
+
+若要刪除組織，請使用下列指令：
 
 ```
 cf ba delete-organization <organization>
@@ -241,9 +245,10 @@ cf ba delete-organization <organization>
 
 **提示：**您也可以使用 **ba do** 作為較長的 **ba delete-organization** 指令名稱的別名。
 
-### 將使用者指派至組織
+## 將使用者指派至組織
+{: #admin_ass_user_org}
 
-您可以將 {{site.data.keyword.Bluemix_notm}} 環境中的使用者指派給特定組織。輸入下列指令： 
+若要將 {{site.data.keyword.Bluemix_notm}} 環境中的使用者指派給特定組織，請使用下列指令：
 
 ```
 cf ba set-org <user_name> <organization> [<role>]
@@ -261,9 +266,10 @@ cf ba set-org <user_name> <organization> [<role>]
 
 **提示：**您也可以使用 **ba so** 作為較長的 **ba set-org** 指令名稱的別名。
 
-### 從組織取消指派使用者
+## 從組織取消指派使用者
+{: #admin_unass_user_org}
 
-您可以從特定組織取消指派 {{site.data.keyword.Bluemix_notm}} 環境中的使用者。輸入下列指令： 
+若要從特定組織取消指派 {{site.data.keyword.Bluemix_notm}} 環境中的使用者，請使用下列指令：
 
 ```
 cf ba unset-org <user_name> <organization> [<role>]
@@ -276,12 +282,12 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要指派使用者之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
 <dt class="pt dlterm">&lt;role&gt;</dt>
-<dd class="pd">請參閱[角色](/docs/admin/users_roles.html)，以取得 {{site.data.keyword.Bluemix_notm}} 使用者的角色及說明。</dd>
+<dd class="pd">請參閱[指派角色](/docs/admin/users_roles.html)，以取得 {{site.data.keyword.Bluemix_notm}} 使用者角色及說明。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba uo** 作為較長的 **ba unset-org** 指令名稱的別名。
 
-### 角色
+### 指派角色
 
 <dl class="parml">
 <dt class="pt dlterm">OrgManager</dt>
@@ -297,9 +303,10 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dd class="pd">組織審核員。組織審核員可以檢視空間中的應用程式及服務內容。</dd>
 </dl>
 
-### 設定組織的配額
+## 設定組織的配額
+{: #admin_set_org_quota}
 
-您可以設定特定組織的用量配額。
+若要設定特定組織的用量配額，請使用下列指令：
 
 ```
 cf ba set-quota <organization> <plan>
@@ -316,12 +323,10 @@ cf ba set-quota <organization> <plan>
 **提示：**您也可以使用 **ba sq** 作為較長的 **ba set-quota** 指令名稱的別名。
 
 
-### 尋找並設定組織的容器配額
-{: #containquotas}
+## 尋找組織的容器配額
+{: #admin_find_containquotas}
 
-您可以尋找並設定組織中容器的配額。
-
-若要尋找組織容器的配額，請輸入下列指令：
+若要尋找組織的容器配額，請使用下列指令：
 
 ```
 cf bluemix-admin containers-quota <organization>
@@ -335,7 +340,10 @@ cf bluemix-admin containers-quota <organization>
 
 **提示：**您也可以使用 **ba cq** 作為較長的 **bluemix-admin containers-quota** 指令名稱的別名。
 
-若要設定組織中容器的配額，請輸入下列指令，並至少包括其中一個選項：
+## 設定組織的容器配額
+{: #admin_set_containquotas}
+
+若要設定組織中容器的配額，請使用下列指令，並至少包括其中一個選項：
 
 ```
 cf bluemix-admin set-containers-quota <organization> <options>
@@ -373,7 +381,7 @@ cf bluemix-admin set-containers-quota <organization> <options>
 <dd class="pd"><strong>il</strong></dd>
 </dl>
 
-您可以選擇性地提供一個檔案，其中包含有效 JSON 物件中的特定配置參數。如果使用 **-file** 選項，則會優先處理此選項，並忽略其他選項。若要提供檔案而非設定選項，請輸入下列指令：
+您可以選擇性地提供一個檔案，其中包含有效 JSON 物件中的特定配置參數。如果使用 **-file** 選項，則會優先處理此選項，並忽略其他選項。若要提供檔案而非設定選項，請使用下列指令：
 
 ```
 cf bluemix-admin set-containers-quota <organization> <-file path_to_JSON_file>
@@ -389,16 +397,109 @@ JSON 檔案應該具有下列範例中所顯示的格式：
   "ram_max": 4096,
   "ram_space_default": 0,
   "image_limit": 10
-}  
+}
 ```
 {: codeblock}
 
 **提示：**您也可以使用 **ba scq** 作為較長的 **bluemix-admin set-containers-quota** 指令名稱的別名。
 
-### 新增、刪除及擷取報告
+## 啟用所有組織的服務
+{: #admin_ena_service_org}
 
-您可以新增、刪除及擷取安全報告。
-* 若要新增報告，請輸入下列指令：
+若要在 {{site.data.keyword.Bluemix_notm}}「型錄」中顯示所有組織的服務，請使用下列指令：
+
+```
+cf ba enable-service-plan <plan_identifier>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
+<dd class="pd">您要啟用之服務方案的名稱或 GUID。如果輸入非唯一的服務方案名稱（例如 "Standard" 或 "Basic"），系統會提示您可從中選擇的服務方案。若要識別服務方案名稱，請從首頁選取服務種類，然後選取**新增**，以檢視該種類的服務。請按一下服務名稱，以開啟詳細資料視圖，然後您可以檢視該服務可用的服務方案名稱。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba esp** 作為較長的 **ba enable-service-plan** 指令名稱的別名。
+
+## 停用所有組織的服務
+{: #admin_dis_service_org}
+
+若要讓所有組織在 {{site.data.keyword.Bluemix_notm}}「型錄」中看不見服務，請使用下列指令：
+
+```
+cf ba disable-service-plan <plan_identifier>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
+<dd class="pd">您要啟用之服務方案的名稱或 GUID。如果輸入非唯一的服務方案名稱（例如 "Standard" 或 "Basic"），系統會提示您可從中選擇的服務方案。若要識別服務方案名稱，請從首頁選取服務種類，然後選取**新增**，以檢視該種類的服務。請按一下服務名稱，以開啟詳細資料視圖，然後您可以檢視該服務可用的服務方案名稱。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba dsp** 作為較長的 **ba disable-service-plan** 指令名稱的別名。
+
+## 新增組織的服務可見性
+{: #admin_addvis_service_org}
+
+您可以從組織清單中新增可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見特定服務的組織。若要容許組織在 {{site.data.keyword.Bluemix_notm}}「型錄」中檢視特定服務，請使用下列指令：
+
+```
+cf ba add-service-plan-visibility <plan_identifier> <organization>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
+<dd class="pd">您要啟用之服務方案的名稱或 GUID。如果輸入非唯一的服務方案名稱（例如 "Standard" 或 "Basic"），系統會提示您可從中選擇的服務方案。若要識別服務方案名稱，請從首頁選取服務種類，然後選取**新增**，以檢視該種類的服務。請按一下服務名稱，以開啟詳細資料視圖，然後您可以檢視該服務可用的服務方案名稱。</dd>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">要新增至服務可見性清單的 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba aspv** 作為較長的 **ba add-service-plan-visibility** 指令名稱的別名。
+
+## 移除組織的服務可見性
+{: #admin_remvis_service_org}
+
+您可以從組織清單中移除可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見特定服務的組織。若要針對組織移除 {{site.data.keyword.Bluemix_notm}}「型錄」中的服務可見性，請使用下列指令：
+
+```
+cf ba remove-service-plan-visibility <plan_identifier> <organization>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
+<dd class="pd">您要啟用之服務方案的名稱或 GUID。如果輸入非唯一的服務方案名稱（例如 "Standard" 或 "Basic"），系統會提示您可從中選擇的服務方案。若要識別服務方案名稱，請從首頁選取服務種類，然後選取**新增**，以檢視該種類的服務。請按一下服務名稱，以開啟詳細資料視圖，然後您可以檢視該服務可用的服務方案名稱。</dd>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">要從服務的可見性清單移除之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba rspv** 作為較長的 **ba remove-service-plan-visibility** 指令名稱的別名。
+
+## 編輯組織的服務可見性
+{: #admin_editvis_service_org}
+
+您可以編輯及取代特定組織可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看到的服務清單。若要取代一個組織或多個組織的所有現有可見服務，請使用下列指令：
+
+```
+cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>
+```
+{: codeblock}
+
+**附註：**此指令會將所指定組織的現有可見服務取代為您在指令中指定的服務。
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
+<dd class="pd">您要啟用之服務方案的名稱或 GUID。如果輸入非唯一的服務方案名稱（例如 "Standard" 或 "Basic"），系統會提示您可從中選擇的服務方案。若要識別服務方案名稱，請從首頁選取服務種類，然後選取**新增**，以檢視該種類的服務。請按一下服務名稱，以開啟詳細資料視圖，然後您可以檢視該服務可用的服務方案名稱。</dd>
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">要新增可見性之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。您可以在指令中輸入其他組織名稱或 GUID，針對多個組織啟用服務的可見性。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba espv** 作為較長的 **ba edit-service-plan-visibility** 指令名稱的別名。
+
+## 新增報告
+{: #admin_add_report}
+
+若要新增安全報告，請使用下列指令：
 
 ```
 cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
@@ -420,7 +521,10 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 
 **提示：**您也可以使用 **ba ar** 作為較長的 **ba add-report** 指令名稱的別名。
 
-* 若要刪除報告，請輸入下列指令：
+## 刪除報告
+{: #admin_del_report}
+
+若要刪除安全報告，請使用下列指令：
 
 ```
 cf ba delete-report <category> <date> <name>
@@ -438,7 +542,10 @@ cf ba delete-report <category> <date> <name>
 
 **提示：**您也可以使用 **ba dr** 作為較長的 **ba delete-report** 指令名稱的別名。
 
-* 若要擷取報告，請輸入下列指令：
+## 擷取報告
+{: #admin_retr_report}
+
+若要擷取安全報告，請使用下列指令：
 
 ```
 cf ba retrieve-report <category> <date> <name>
@@ -456,93 +563,8 @@ cf ba retrieve-report <category> <date> <name>
 
 **提示：**您也可以使用 **ba rr** 作為較長的 **ba retrieve-report** 指令名稱的別名。
 
-### 啟用及停用所有組織的服務
 
-您可以針對所有組織，啟用或停用服務在 {{site.data.keyword.Bluemix_notm}}「型錄」中的顯示。
-
-* 若要讓所有組織可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見服務，請輸入下列指令：
-
-```
-cf ba enable-service-plan <plan_identifier>
-```
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要啟用之服務方案的名稱或 GUID。如果輸入非唯一的服務方案名稱（例如 "Standard" 或 "Basic"），系統會提示您可從中選擇的服務方案。若要識別服務方案名稱，請從首頁選取服務種類，然後選取**新增**，以檢視該種類的服務。請按一下服務名稱，以開啟詳細資料視圖，然後您可以檢視該服務可用的服務方案名稱。</dd>
-</dl>
-
-**提示：**您也可以使用 **ba esp** 作為較長的 **ba enable-service-plan** 指令名稱的別名。
-
-* 若要讓所有組織在 {{site.data.keyword.Bluemix_notm}}「型錄」中看不見服務，請輸入下列指令：
-
-```
-cf ba disable-service-plan <plan_identifier>
-```
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要啟用之服務方案的名稱或 GUID。如果輸入非唯一的服務方案名稱（例如 "Standard" 或 "Basic"），系統會提示您可從中選擇的服務方案。若要識別服務方案名稱，請從首頁選取服務種類，然後選取**新增**，以檢視該種類的服務。請按一下服務名稱，以開啟詳細資料視圖，然後您可以檢視該服務可用的服務方案名稱。</dd>
-</dl>
-
-**提示：**您也可以使用 **ba dsp** 作為較長的 **ba disable-service-plan** 指令名稱的別名。
-
-### 新增、移除及編輯組織的服務可見性
-
-您可以從組織清單中新增或移除可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看見特定服務的組織。您也可以編輯及取代特定組織可在 {{site.data.keyword.Bluemix_notm}}「型錄」中看到的服務清單。
-
-* 若要容許組織檢視 {{site.data.keyword.Bluemix_notm}}「型錄」中的特定服務，請輸入下列指令：
-
-```
-cf ba add-service-plan-visibility <plan_identifier> <organization>
-```
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要啟用之服務方案的名稱或 GUID。如果輸入非唯一的服務方案名稱（例如 "Standard" 或 "Basic"），系統會提示您可從中選擇的服務方案。若要識別服務方案名稱，請從首頁選取服務種類，然後選取**新增**，以檢視該種類的服務。請按一下服務名稱，以開啟詳細資料視圖，然後您可以檢視該服務可用的服務方案名稱。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要新增至服務可見性清單的 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
-</dl>
-
-**提示：**您也可以使用 **ba aspv** 作為較長的 **ba add-service-plan-visibility** 指令名稱的別名。
-
-* 若要針對組織移除 {{site.data.keyword.Bluemix_notm}}「型錄」中的服務可見性，請輸入下列指令：
-
-```
-cf ba remove-service-plan-visibility <plan_identifier> <organization>
-```
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要啟用之服務方案的名稱或 GUID。如果輸入非唯一的服務方案名稱（例如 "Standard" 或 "Basic"），系統會提示您可從中選擇的服務方案。若要識別服務方案名稱，請從首頁選取服務種類，然後選取**新增**，以檢視該種類的服務。請按一下服務名稱，以開啟詳細資料視圖，然後您可以檢視該服務可用的服務方案名稱。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要從服務的可見性清單移除之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
-</dl>
-
-**提示：**您也可以使用 **ba rspv** 作為較長的 **ba remove-service-plan-visibility** 指令名稱的別名。
-
-* 若要取代一個組織或多個組織的所有現有可見服務，請使用下列指令：
-
-```
-cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optional_organization_2>
-```
-{: codeblock}
-
-**附註：**此指令會將所指定組織的現有可見服務取代為您在指令中指定的服務。
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;plan_identifier&gt;</dt>
-<dd class="pd">您要啟用之服務方案的名稱或 GUID。如果輸入非唯一的服務方案名稱（例如 "Standard" 或 "Basic"），系統會提示您可從中選擇的服務方案。若要識別服務方案名稱，請從首頁選取服務種類，然後選取**新增**，以檢視該種類的服務。請按一下服務名稱，以開啟詳細資料視圖，然後您可以檢視該服務可用的服務方案名稱。</dd>
-<dt class="pt dlterm">&lt;organization&gt;</dt>
-<dd class="pd">要新增可見性之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。您可以在指令中輸入其他組織名稱或 GUID，針對多個組織啟用服務的可見性。</dd>
-</dl>
-
-**提示：**您也可以使用 **ba espv** 作為較長的 **ba edit-service-plan-visibility** 指令名稱的別名。
-
-### 檢視資源度量值資訊
+## 檢視資源度量值資訊
 {: #cliresourceusage}
 
 您可以檢視資源度量值資訊（包括記憶體用量、磁碟用量及 CPU 使用率）。您可以查看可用的實體資源與保留資源的摘要，以及實體資源與保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 用量資料以及歷程記憶體和磁碟用量。預設會以遞減順序顯示每週的記憶體及磁碟用量歷程資料。若要檢視資源度量值資訊，請使用下列指令：
@@ -561,11 +583,10 @@ cf ba resource-metrics <monthly> <weekly>
 
 **提示：**您也可以使用 **ba rsm** 作為較長的 **ba resource-metrics** 指令名稱的別名。
 
-### 處理服務分配管理系統
+## 列出服務分配管理系統
+{: #clilistservbro}
 
-下列指令可用來列出所有服務分配管理系統、新增或刪除服務分配管理系統，或用來更新服務分配管理系統。
-
-* 您可以輸入下列指令來列出服務分配管理系統：
+若要列出所有服務分配管理系統，請使用下列指令：
 
 ```
 cf ba service-brokers <broker_name>
@@ -581,7 +602,10 @@ cf ba service-brokers <broker_name>
 
 **提示：**您也可以使用 **ba sb** 作為較長的 **ba service-brokers** 指令名稱的別名。
 
-* 您可以輸入下列指令來新增服務分配管理系統，以將自訂服務新增至 {{site.data.keyword.Bluemix_notm}}「型錄」：
+## 新增服務分配管理系統
+{: #cliaddservbro}
+
+若要新增服務分配管理系統，以將自訂服務新增至 {{site.data.keyword.Bluemix_notm}}「型錄」，請使用下列指令：
 
 ```
 cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
@@ -601,7 +625,10 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 
 **提示：**您也可以使用 **ba asb** 作為較長的 **ba add-service-broker** 指令名稱的別名。
 
-* 您可以輸入下列指令來刪除服務分配管理系統，以從 {{site.data.keyword.Bluemix_notm}}「型錄」移除自訂服務：
+## 刪除服務分配管理系統
+{: #clidelservbro}
+
+若要刪除服務分配管理系統，以從 {{site.data.keyword.Bluemix_notm}}「型錄」中移除自訂服務，請使用下列指令：
 
 ```
 cf ba delete-service-broker <service_broker>
@@ -615,7 +642,10 @@ cf ba delete-service-broker <service_broker>
 
 **提示：**您也可以使用 **ba dsb** 作為較長的 **ba delete-service-broker** 指令名稱的別名。
 
-* 您可以輸入下列指令來更新服務分配管理系統：
+## 更新服務分配管理系統
+{: #cliupdservbro}
+
+若要更新服務分配管理系統，請使用下列指令：
 
 ```
 cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
@@ -636,7 +666,7 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 **提示：**您也可以使用 **ba usb** 作為較長的 **ba update-service-broker** 指令名稱的別名。
 
 
-### 使用應用程式安全群組
+## 使用應用程式安全群組
 
 若要使用應用程式安全群組 (ASG)，您必須是本端或專用環境中具有完整存取權的管理者。環境的所有使用者都可以使用指令來列出組織中要設為目標的可用 ASG。不過，若要建立、更新或連結 ASG，您必須是 {{site.data.keyword.Bluemix_notm}} 環境的管理者。
 
@@ -644,13 +674,12 @@ ASG 是當作虛擬防火牆使用，可控制 {{site.data.keyword.Bluemix_notm}
 
 {{site.data.keyword.Bluemix_notm}} 一開始是設定成限制外部網路的所有存取權。將 IBM 所建立的兩個安全群組（`public_networks` 及 `dns`）連結至預設 Cloud Foundry 安全群組集時，這些群組就會啟用外部網路的廣域存取權。Cloud Foundry 中用來套用廣域存取權的兩個安全群組集是 **Default Staging** 及 **Default Running** 群組集。這些群組集會套用規則，以容許對所有執行中應用程式或所有編譯打包中應用程式的資料流量。如果您不想要連結至這兩個安全群組集，則可以取消與 Cloud Foundry 群組集的連結，然後將安全群組連結至特定空間。如需相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
 
-**附註**：下列可讓您使用安全群組的指令是根據 Cloud Foundry 1.6 版。
+**附註**：下列可讓您使用安全群組的指令是根據 Cloud Foundry 1.6 版。如需相關資訊（包括必要及選用欄位），請參閱有關[建立應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}的 Cloud Foundry 資訊。
 
-#### 列出、建立、更新及刪除安全群組
+## 列出安全群組
+{: #clilissecgro}
 
-如需建立安全群組以及定義送出資料流量的規則的相關資訊，請參閱[建立應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}。
-
-* 您可以輸入下列指令來列出所有安全群組：
+* 若要列出所有安全群組，請使用下列指令：
 
 ```
 cf ba security-groups
@@ -659,7 +688,7 @@ cf ba security-groups
 
 **提示：**您也可以使用 **ba sgs** 作為較長的 **ba security-groups** 指令名稱的別名。
 
-* 您可以輸入下列指令來顯示特定安全群組的詳細資料：
+* 若要顯示特定安全群組的詳細資料，請使用下列指令：
 
 ```
 cf ba security-groups <security-group>
@@ -674,12 +703,19 @@ cf ba security-groups <security-group>
 **提示：**您也可以使用 **ba sg** 作為較長的 **ba security-groups** 指令名稱（含 `security-group` 參數）的別名。
 
 
-* 您可以輸入下列指令來建立安全群組。您建立的每一個安全群組的名稱前面都會加上 `adminconsole_` 字首，以與 IBM 所建立的安全群組進行區別。
+## 建立安全群組
+{: #clicreasecgro}
+
+如需建立安全群組以及定義送出資料流量的規則的相關資訊，請參閱[建立應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}。
+
+若要建立安全群組，請使用下列指令：
 
 ```
 cf ba create-security-group <security-group> <path-to-rules-file>
 ```
 {: codeblock}
+
+您建立的每一個安全群組的名稱前面都會加上 `adminconsole_` 字首，以與 IBM 所建立的安全群組進行區別。
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;Security group&gt;</dt>
@@ -690,7 +726,10 @@ cf ba create-security-group <security-group> <path-to-rules-file>
 
 **提示：**您也可以使用 **ba csg** 作為較長的 **ba create-security-group** 指令名稱的別名。
 
-* 您可以輸入下列指令來更新安全群組：
+## 更新安全群組
+{: #cliupdsecgro}
+
+若要更新安全群組，請使用下列指令：
 
 ```
 cf ba update-security-group <security-group> <path-to-rules-file>
@@ -706,7 +745,10 @@ cf ba update-security-group <security-group> <path-to-rules-file>
 
 **提示：**您也可以使用 **ba usg** 作為較長的 **ba update-security-group** 指令名稱的別名。
 
-* 您可以輸入下列指令來刪除安全群組：
+## 刪除安全群組
+{: #clidelsecgro}
+
+若要刪除安全群組，請使用下列指令：
 
 ```
 cf ba delete-security-group <security-group>
@@ -721,11 +763,12 @@ cf ba delete-security-group <security-group>
 **提示：**您也可以使用 **ba dsg** 作為較長的 **ba delete-security-group** 指令名稱的別名。
 
 
-#### 連結、取消連結及列出已連結的安全群組
+## 連結安全群組
+{: #clibindsecgro}
 
-如需連結及取消連結安全群組的相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}及[取消連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}。
+如需連結安全群組的相關資訊，請參閱[連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
 
-* 您可以輸入下列指令來連結至 Default Staging 安全群組集：
+* 若要連結至 Default Staging 安全群組集，請使用下列指令：
 
 ```
 cf ba bind-staging-security-group <security-group>
@@ -739,7 +782,7 @@ cf ba bind-staging-security-group <security-group>
 
 **提示：**您也可以使用 **ba bssg** 作為較長的 **ba bind-staging-security-group** 指令名稱的別名。
 
-* 您可以輸入下列指令來連結至 Default Running 安全群組集：
+* 若要連結至 Default Running 安全群組集，請使用下列指令：
 
 ```
 cf ba bind-running-security-group <security-group>
@@ -753,35 +796,7 @@ cf ba bind-running-security-group <security-group>
 
 **提示：**您也可以使用 **ba brsg** 作為較長的 **ba bind-running-security-group** 指令名稱的別名。
 
-* 您可以輸入下列指令來取消 Default Staging 安全群組集的連結：
-
-```
-cf ba cf ba unbind-staging-security-group <security-group>
-```
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Security group&gt;</dt>
-<dd class="pd">您的安全群組名稱</dd>
-</dl>
-
-**提示：**您也可以使用 **ba ussg** 作為較長的 **ba unbind-staging-security-group** 指令名稱的別名。
-
-* 您可以輸入下列指令來取消 Default Running 安全群組集的連結：
-
-```
-cf ba unbind-running-security-group <security-group>
-```
-{: codeblock}
-
-<dl class="parml">
-<dt class="pt dlterm">&lt;Security group&gt;</dt>
-<dd class="pd">您的安全群組名稱</dd>
-</dl>
-
-**提示：**您也可以使用 **ba brsg** 作為較長的 **ba bind-running-security-group** 指令名稱的別名。
-
-* 您可以輸入下列指令，將安全群組連結至一個空間：
+* 若要將安全群組連結至空間，請使用下列指令：
 
 ```
 cf ba bind-security-group <security-group> <org> <space>
@@ -799,7 +814,40 @@ cf ba bind-security-group <security-group> <org> <space>
 
 **提示：**您也可以使用 **ba bsg** 作為較長的 **ba bind-security-group** 指令名稱的別名。
 
-* 您可以輸入下列指令來取消安全群組與空間的連結：
+## 取消連結安全群組
+{: #cliunbindsecgro}
+
+如需取消連結安全群組的相關資訊，請參閱[取消連結應用程式安全群組](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}。
+
+* 若要從 Default Staging 安全群組集取消連結，請使用下列指令：
+
+```
+cf ba unbind-staging-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">您的安全群組名稱</dd>
+</dl>
+
+**提示：**您也可以使用 **ba ussg** 作為較長的 **ba unbind-staging-security-group** 指令名稱的別名。
+
+* 若要從 Default Running 安全群組集取消連結，請使用下列指令：
+
+```
+cf ba unbind-running-security-group <security-group>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;Security group&gt;</dt>
+<dd class="pd">您的安全群組名稱</dd>
+</dl>
+
+**提示：**您也可以使用 **ba brsg** 作為較長的 **ba bind-running-security-group** 指令名稱的別名。
+
+* 若要取消安全群組與空間的連結，請使用下列指令：
 
 ```
 cf ba unbind-security-group <security-group> <org> <space>
@@ -817,13 +865,10 @@ cf ba unbind-security-group <security-group> <org> <space>
 
 **提示：**您也可以使用 **ba usg** 作為較長的 **ba unbind-staging-security-group** 指令名稱的別名。
 
-### 使用建置套件
-{: #buildpacks}
+## 列出建置套件
+{: #clilistbuildpack}
 
-如果您具有應用程式型錄寫入權，則可以列出、建立、更新或刪除建置套件。  
-#### 列出所有建置套件
-
-使用下列指令以列出所有建置套件，或檢視特定建置套件：
+如果您具有應用程式型錄寫入權，則可以列出建置套件。若要列出所有建置套件，或檢視特定建置套件，請使用下列指令：
 
 ```
 cf ba buildpacks <buildpack_name>
@@ -837,9 +882,10 @@ cf ba buildpacks <buildpack_name>
 
 **提示：**您也可以使用 **ba lb** 作為較長 **ba buildpacks** 指令名稱的別名。
 
-#### 建立及上傳建置套件
+## 建立及上傳建置套件
+{: #clicreupbuildpack}
 
-您可以建立及上傳建置套件。您可以上傳任何檔案類型為 .zip 的壓縮檔。使用下列指令，以上傳建置套件：
+如果您具有應用程式型錄寫入權，則可以建立及上傳建置套件。您可以上傳任何檔案類型為 .zip 的壓縮檔。若要上傳建置套件，請使用下列指令：
 
 ```
 cf ba create-buildpack <buildpack_name> <file_path> <position>
@@ -857,9 +903,10 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 
 **提示：**您也可以使用 **ba cb** 作為較長 **ba create-buildpack** 指令名稱的別名。
 
-#### 更新建置套件
+## 更新建置套件
+{: #cliupdabuildpack}
 
-若要更新現有建置套件，請使用下列指令：
+如果您具有應用程式型錄寫入權，則可以更新現有建置套件。若要更新建置套件，請使用下列指令：
 
 ```
 cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
@@ -879,9 +926,10 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 
 **提示：**您也可以使用 **ba ub** 作為較長 **ba update-buildpack** 指令名稱的別名。
 
-#### 刪除建置套件
+## 刪除建置套件
+{: #clidelbuildpack}
 
-若要刪除現有建置套件，請使用下列指令：
+如果您具有應用程式型錄寫入權，則可以刪除現有建置套件。若要刪除建置套件，請使用下列指令：
 
 ```
 cf ba delete-buildpack <buildpack_name>
