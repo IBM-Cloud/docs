@@ -41,11 +41,11 @@ lastupdated: "2016-11-17"
 ###Cloud Foundry で実行されているアプリのモニター
 {: #monitoring_bluemix_apps}
 
-Cloud Foundry インフラストラクチャーを使用して {{site.data.keyword.Bluemix_notm}} でアプリを実行している場合、正常性状況、リソース使用量、トラフィック・メトリックなどの最新のパフォーマンス情報を入手する必要があります。このパフォーマンス情報を使用して、適宜、意思決定やアクション実行を行うことができます。
+Cloud Foundry インフラストラクチャーを使用して {{site.data.keyword.Bluemix_notm}} でアプリを実行している場合、ブラウザーから表示される Web ベース・アプリケーションであっても、モバイル・アプリケーションが接続する API セットであっても、そのアプリケーションの可用性およびパフォーマンスの最新情報を入手することが必要になります。[Bluemix Availability Monitoring](https://console.ng.bluemix.net/catalog/services/availability-monitoring){:new_window} を使用して、世界中の 15 カ所のさまざまな地理的ロケーションからアプリケーションをモニターできます。
 
-{{site.data.keyword.Bluemix_notm}} アプリをモニターするには、以下のいずれかの方法を使用します。
+{{site.data.keyword.Bluemix_notm}} アプリのリソース使用量メトリックをモニターするには、以下のいずれかの方法を使用します。
 
-* {{site.data.keyword.Bluemix_notm}} サービス。Monitoring and Analytics は、アプリケーション・パフォーマンスのモニターに使用できるサービスを提供します。また、このサービスは、ログ分析などの分析機能も提供します。詳しくは、[Monitoring and
+* Bluemix Monitoring and Analytics では、リソースをモニターし、Node、Liberty、または Ruby ベースのアプリケーションから診断を得られるサービスが提供されています。詳しくは、[Monitoring and
 Analytics](/docs/services/monana/index.html) を参照してください。
 * サード・パーティー・オプション。例えば、[New Relic](http://newrelic.com/){:new_window}。
 
@@ -54,17 +54,15 @@ Analytics](/docs/services/monana/index.html) を参照してください。
 
 Cloud Foundry インフラストラクチャーを使用して {{site.data.keyword.Bluemix_notm}} でアプリを実行している場合、ログ・ファイルが自動的に作成されます。デプロイメントからランタイムまでのどのステージでも、エラーが発生した場合は、ログを調べて問題解決の糸口を探すことができます。
 
-###ログ保持期間
-{: #log_retention}
-
-{{site.data.keyword.Bluemix_notm}} Public Cloud Foundry アプリでは、ログ・データはデフォルトで 7 日間保管されます。
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
 
 
-###ログ・フォーマット
+###ログのフォーマットと保持
 {: #log_format}
+
+{{site.data.keyword.Bluemix_notm}} Public Cloud Foundry アプリでは、ログ・データはデフォルトで 7 日間保管されます。
 
 {{site.data.keyword.Bluemix_notm}} アプリケーションのログは、以下のようなパターンの固定フォーマットで表示されます。
 
@@ -133,9 +131,9 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 
 Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
 
-  * [{{site.data.keyword.Bluemix_notm}} ダッシュボード](#viewing_logs_UI){:new_window}
-  * [コマンド・ライン・インターフェース](#viewing_logs_cli){:new_window}
-  * [外部ログ・ホスト](#thirdparty_logging){:new_window}
+  * {{site.data.keyword.Bluemix_notm}} ダッシュボード
+  * コマンド・ライン・インターフェース
+  * 外部ログ・ホスト
 
 #### {{site.data.keyword.Bluemix_notm}} ダッシュボードからのログの表示
 {: #viewing_logs_UI}
@@ -193,7 +191,13 @@ Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
 
 **注:** アプリケーションのロギングを有効にする方法については、『[ランタイム・エラーのデバッグ](/docs/debug/index.html#debugging-runtime-errors)』を参照してください。
 
+#### 外部ホストからのログの表示
+{: #viewing_logs_external}
 
+	 
+ログが生成されると、少し遅れて、外部ログ・ホストにあるメッセージを表示できます。それらは、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは cf コマンド・ライン・インターフェースで表示するメッセージに似たメッセージです。アプリに複数のインスタンスがある場合、ログは集約されるため、アプリのすべてのログを確認できます。それに加えて、ログは、アプリのクラッシュおよびデプロイメントをまたいで継続的に保持されます。
+
+**注:** コマンド・ライン・インターフェースで表示するメッセージは、syslog フォーマットではなく、外部ログ・ホストで表示されるメッセージと完全には一致しないことがあります。 
 
 
 ###ログのフィルタリング
@@ -286,13 +290,6 @@ cf logs appname --recent | grep '\[App'
   4. アプリを再ステージングします。
      変更を有効にするために、`cf restage appname` を入力します。 
 
-#### 外部ホストからのログの表示
-{: #viewing_logs_external}
-
-	 
-ログが生成されると、少し遅れて、外部ログ・ホストにあるメッセージを表示できます。それらは、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは cf コマンド・ライン・インターフェースで表示するメッセージに似たメッセージです。アプリに複数のインスタンスがある場合、ログは集約されるため、アプリのすべてのログを確認できます。それに加えて、ログは、アプリのクラッシュおよびデプロイメントをまたいで継続的に保持されます。
-
-**注:** コマンド・ライン・インターフェースで表示するメッセージは、syslog フォーマットではなく、外部ログ・ホストで表示されるメッセージと完全には一致しないことがあります。 
 
 ### 例: Cloud Foundry アプリケーション・ログの Splunk へのストリーミング 
 {: #splunk}
@@ -434,14 +431,13 @@ Cloud Foundry アプリは、Cloud Foundry Loggregator を使用して、アプ�
 
 ### ハードウェア要件
 
-*表 1. {{site.data.keyword.Bluemix_local_notm}}* でのロギングのハードウェア要件
-{: #table01}
 
 | **要件** |    **1 台のノード**     | **3 台のノード (高可用性に対応)** |
 |-----------------|-------------------|-------------------|
 | vCPU | 19 | 57 |
 | メモリー | 80 GB | 240 GB |
 | ローカル・ストレージ | 2.98 TB | 8.94 TB |
+{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
 
 ### セットアップ
 
@@ -466,6 +462,6 @@ Cloud Foundry アプリは、Cloud Foundry Loggregator を使用して、アプ�
 2. **「ログ (Logs)」**をクリックします。**「ログ (Logs)」**ビューで、実行中のアプリからログを表示することができます。
 4. **「拡張ビュー (Advanced View)」**ボタンをクリックします。**「拡張ビュー (Advanced View)」**には、Kibana を使用してログの詳細ビューが表示されます。Kibana は、ログとタイム・スタンプ付きデータを使用してカスタムの視覚化を作成する視覚化ツールです。拡張ビューの使用について詳しくは、[Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) の資料を参照してください。
 
-次に、Kibana ダッシュボードをカスタマイズできます。詳細情報については、[Kibana ダッシュボードでのログ表示のカスタマイズ](/docs/manageapps/containers/container_ml_logs.html#container_ml_dash_logs_custom)を参照してください。
+次に、Kibana ダッシュボードをカスタマイズできます。詳細情報については、[Kibana ダッシュボードでのログ表示のカスタマイズ](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom)を参照してください。
 
 

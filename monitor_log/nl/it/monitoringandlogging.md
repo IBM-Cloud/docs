@@ -37,11 +37,11 @@ Per le operazioni stabili delle tue distribuzioni sulla piattaforma {{site.data.
 ###Monitoraggio di applicazioni in esecuzione su Cloud Foundry
 {: #monitoring_bluemix_apps}
 
-Se utilizzi l'infrastruttura Cloud Foundry per eseguire le tue applicazioni su {{site.data.keyword.Bluemix_notm}}, puoi tenere sotto controllo le informazioni sulle prestazioni, ad esempio lo stato di integrità, l'utilizzo delle risorse e le metriche di traffico. Mediante queste informazioni, puoi prendere decisioni o agire di conseguenza.
+Se utilizzi l'infrastruttura Cloud Foundry per eseguire le tue applicazioni su {{site.data.keyword.Bluemix_notm}}, potrai controllare la disponibilità e le prestazioni delle tua applicazione, se si tratta di un'applicazione Web visualizzata da un browser o una serie di API a cui si connettono le applicazioni mobili.  Utilizza [Bluemix Availability Monitoring](https://console.ng.bluemix.net/catalog/services/availability-monitoring){:new_window} per monitorare la tua applicazione da quindici diverse località geografiche in tutto il mondo.
 
-Per monitorare le applicazioni {{site.data.keyword.Bluemix_notm}}, utilizza uno dei seguenti metodi:
+Per monitorare le metriche di utilizzo delle risorse per le tue applicazioni {{site.data.keyword.Bluemix_notm}}, utilizza uno dei seguenti metodi:
 
-* Servizi {{site.data.keyword.Bluemix_notm}}. Monitoring and Analytics offre un servizio che ti permette di monitorare le prestazioni della tua applicazione. Inoltre, questo servizio fornisce anche delle funzioni analitiche come l'analisi dei log. Per ulteriori informazioni, vedi [Monitoring and Analytics](/docs/services/monana/index.html).
+* Bluemix Monitoring and Analytics offre un servizio che puoi utilizzare per monitorare le risorse e ottenere la diagnostica dalla tua applicazione basata su Node, Liberty o Ruby. Per ulteriori informazioni, vedi [Monitoring and Analytics](/docs/services/monana/index.html).
 * Opzioni di terze parti. Ad esempio, [New Relic](http://newrelic.com/){:new_window}.
 
 ###Registrazione per le applicazioni in esecuzione su Cloud Foundry
@@ -49,17 +49,15 @@ Per monitorare le applicazioni {{site.data.keyword.Bluemix_notm}}, utilizza uno 
 
 I file di log vengono creati automaticamente quando utilizzi l'infrastruttura Cloud Foundry per eseguire le tue applicazioni su {{site.data.keyword.Bluemix_notm}}. Quando riscontri errori in qualsiasi fase, dalla distribuzione al runtime, puoi controllare i log alla ricerca di indizi che possano aiutarti a risolvere il problema.
 
-###Conservazione dei log
-{: #log_retention}
-
-Nelle applicazioni {{site.data.keyword.Bluemix_notm}} Cloud Foundry pubbliche, i dati dei log vengono memorizzati per 7 giorni per impostazione predefinita.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
 
 
-###Formato dei log
+###Formato e conservazione dei log
 {: #log_format}
+
+Nelle applicazioni {{site.data.keyword.Bluemix_notm}} Cloud Foundry pubbliche, i dati dei log vengono memorizzati per 7 giorni per impostazione predefinita.
 
 I log per le applicazioni {{site.data.keyword.Bluemix_notm}} vengono visualizzati in un formato fisso, simile al seguente modello:
 
@@ -129,9 +127,9 @@ Ogni voce di log contiene quattro campi. Fai riferimento al seguente elenco per 
 
 Puoi visualizzare i log delle tue applicazioni Cloud Foundry in tre punti:
 
-  * Dashboard [ {{site.data.keyword.Bluemix_notm}}](#viewing_logs_UI){:new_window}
-  * [Interfaccia riga di comando](#viewing_logs_cli){:new_window}
-  * [Host log esterni](#thirdparty_logging){:new_window}
+  * Dashboard {{site.data.keyword.Bluemix_notm}}
+  * Interfaccia riga di comando
+  * Host di log esterni
 
 #### Visualizzazione dei log dal dashboard {{site.data.keyword.Bluemix_notm}}
 {: #viewing_logs_UI}
@@ -199,7 +197,13 @@ preparazione.</p>
 
 **Nota:** per informazioni su come abilitare la registrazione dell'applicazione, vedi [Debug degli errori di runtime](/docs/debug/index.html#debugging-runtime-errors).
 
+#### Visualizzazione dei log dagli host esterni
+{: #viewing_logs_external}
 
+	 
+Alla generazione dei log, trascorso qualche istante puoi visualizzare i messaggi del tuo host log esterno simili ai messaggi che visualizzi dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} o dall'interfaccia riga di comando cf.  In caso di più istanze della tua applicazione, i log vengono aggregati e puoi visualizzare tutti i log riguardanti la tua applicazione. Inoltre, i log vengono conservati anche dopo gli arresti anomali dell'applicazione e tra varie distribuzioni.
+
+**Nota:** i log che vedi nell'interfaccia riga di comando non sono in formato syslog e potrebbero non corrispondere esattamente ai messaggi visualizzati nel tuo host log esterno. 
 
 
 ###Filtraggio dei log
@@ -291,13 +295,6 @@ Per trasmettere i log dalla tua applicazione e dal sistema a un host log esterno
   4. Riprepara l'applicazione.
      Immetti `cf restage appname` per rendere effettive le modifiche. 
 
-#### Visualizzazione dei log dagli host esterni
-{: #viewing_logs_external}
-
-	 
-Alla generazione dei log, trascorso qualche istante puoi visualizzare i messaggi del tuo host log esterno simili ai messaggi che visualizzi dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} o dall'interfaccia riga di comando cf.  In caso di più istanze della tua applicazione, i log vengono aggregati e puoi visualizzare tutti i log riguardanti la tua applicazione. Inoltre, i log vengono conservati anche dopo gli arresti anomali dell'applicazione e tra varie distribuzioni.
-
-**Nota:** i log che vedi nell'interfaccia riga di comando non sono in formato syslog e potrebbero non corrispondere esattamente ai messaggi visualizzati nel tuo host log esterno. 
 
 ### Esempio: trasmissione di log di applicazioni Cloud Foundry a Splunk 
 {: #splunk}
@@ -407,14 +404,13 @@ Le applicazioni Cloud Foundry utilizzano il  Loggregator per monitorare e inoltr
 
 ### Requisiti hardware
 
-*Tabella 1. Requisiti hardware per la registrazione per {{site.data.keyword.Bluemix_local_notm}}*
-{: #table01}
 
 | **Requisito** |    **1 nodo**     | **3 nodi per l'alta disponibilità** |
 |-----------------|-------------------|-------------------|
 | vCPU | 19 | 57 |
 | Memoria | 80 GB | 240 GB |
 | Memoria locale | 2.98 TB | 8.94 TB |
+{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
 
 ### Configurazione
 
@@ -439,6 +435,6 @@ Per visualizzare i tuoi log delle applicazioni, segui queste istruzioni.
 2. Fai clic su **Log**. Nella vista **Log**, puoi visualizzare i log dalla tua applicazione in esecuzione.
 4. Fai clic sul pulsante **Vista avanzata**. **Vista avanzata** mostra una vista più dettagliata dei log utilizzando Kibana, uno strumento di visualizzazione che utilizza i log e i dati con data/ora per creare le visualizzazioni personalizzate. Per ulteriori informazioni sull'utilizzo della vista avanzata, consulta la documentazione di [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
 
-Successivamente, puoi personalizzare un dashboard Kibana. Per ulteriori informazioni, consulta [Personalizzazione della visualizzazione del log nel dashboard Kibana](/docs/manageapps/containers/container_ml_logs.html#container_ml_dash_logs_custom).
+Successivamente, puoi personalizzare un dashboard Kibana. Per ulteriori informazioni, consulta [Personalizzazione della visualizzazione del log nel dashboard Kibana](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom).
 
 

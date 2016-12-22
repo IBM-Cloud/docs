@@ -37,11 +37,11 @@ lastupdated: "2016-11-17"
 ###監視 Cloud Foundry 上執行的應用程式
 {: #monitoring_bluemix_apps}
 
-當您使用 Cloud Foundry 基礎架構在 {{site.data.keyword.Bluemix_notm}} 上執行應用程式時，會想要掌握最新的效能資訊（例如性能狀態、資源用量及資料流量度量值）。運用此效能資訊，您便可以相應地進行決策或採取動作。
+當您使用 Cloud Foundry 基礎架構在 {{site.data.keyword.Bluemix_notm}} 上執行應用程式時，會想要掌握最新應用程式可用性及應用程式效能，而不論應用程式是從瀏覽器檢視的 Web 型應用程式，還是行動應用程式所連接的一組 API。使用 [Bluemix 可用性監視](https://console.ng.bluemix.net/catalog/services/availability-monitoring){:new_window}，從全球十五個不同地理位置監視應用程式。
 
-若要監視 {{site.data.keyword.Bluemix_notm}} 應用程式，請使用下列其中一種方法：
+若要監視 {{site.data.keyword.Bluemix_notm}} 應用程式的資源用量度量，請使用下列其中一種方法：
 
-* {{site.data.keyword.Bluemix_notm}} 服務。Monitoring and Analytics 提供一種服務，可用來監視應用程式效能。此外，此服務也提供分析特性（例如日誌分析）。如需相關資訊，請參閱 [Monitoring and Analytics](/docs/services/monana/index.html)。
+* Bluemix Monitoring and Analytics 提供一種服務，可用來監視資源以及取得 Node、Liberty 或 Ruby 型應用程式的診斷。如需相關資訊，請參閱 [Monitoring and Analytics](/docs/services/monana/index.html)。
 * 協力廠商選項。例如，[New Relic](http://newrelic.com/){:new_window}。
 
 ###Cloud Foundry 上執行之應用程式的記載
@@ -49,17 +49,15 @@ lastupdated: "2016-11-17"
 
 當您使用 Cloud Foundry 基礎架構在 {{site.data.keyword.Bluemix_notm}} 上執行應用程式時，會自動建立日誌檔。當您在從部署到運行環境的任何階段中發生錯誤時，可以檢查日誌以尋找可能有助於解決問題的線索。
 
-###日誌保留
-{: #log_retention}
-
-在「{{site.data.keyword.Bluemix_notm}} 公用」Cloud Foundry 應用程式中，日誌資料預設會儲存 7 天。
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
 
 
-###日誌格式
+###日誌格式及保留
 {: #log_format}
+
+在「{{site.data.keyword.Bluemix_notm}} 公用」Cloud Foundry 應用程式中，日誌資料預設會儲存 7 天。
 
 {{site.data.keyword.Bluemix_notm}} 應用程式的日誌會以固定格式顯示，與下列型樣類似：
 
@@ -129,9 +127,9 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 
 您可以在三個位置中檢視 Cloud Foundry 應用程式的日誌：
 
-  * [{{site.data.keyword.Bluemix_notm}} 儀表板](#viewing_logs_UI){:new_window}
-  * [指令行介面](#viewing_logs_cli){:new_window}
-  * [外部日誌主機](#thirdparty_logging){:new_window}
+  * {{site.data.keyword.Bluemix_notm}} 儀表板
+  * 指令行介面
+  * 外部日誌主機
 
 #### 從 {{site.data.keyword.Bluemix_notm}} 儀表板檢視日誌
 {: #viewing_logs_UI}
@@ -191,7 +189,13 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 
 **附註：**如需如何啟用應用程式記載的相關資訊，請參閱[針對運行環境錯誤進行除錯](/docs/debug/index.html#debugging-runtime-errors)。
 
+#### 從外部主機檢視日誌
+{: #viewing_logs_external}
 
+	 
+產生日誌時，在短暫延遲之後，您可以在外部日誌主機中檢視訊息，訊息與從 {{site.data.keyword.Bluemix_notm}} 使用者介面或 cf 指令行介面檢視的訊息類似。如果您的應用程式有多個實例，則會聚集日誌，而且您可以查看您應用程式的所有日誌。此外，在應用程式當機與部署之間，會持續保存日誌。
+
+**附註：**您在指令行介面中檢視的日誌並非 syslog 格式，因此可能不完全符合外部日誌主機中顯示的訊息。 
 
 
 ###過濾日誌
@@ -285,13 +289,6 @@ cf logs appname --recent | grep '\[App'
   4. 重新編譯打包應用程式。
      鍵入 `cf restage appname`，讓變更生效。 
 
-#### 從外部主機檢視日誌
-{: #viewing_logs_external}
-
-	 
-產生日誌時，在短暫延遲之後，您可以在外部日誌主機中檢視訊息，訊息與從 {{site.data.keyword.Bluemix_notm}} 使用者介面或 cf 指令行介面檢視的訊息類似。如果您的應用程式有多個實例，則會聚集日誌，而且您可以查看您應用程式的所有日誌。此外，在應用程式當機與部署之間，會持續保存日誌。
-
-**附註：**您在指令行介面中檢視的日誌並非 syslog 格式，因此可能不完全符合外部日誌主機中顯示的訊息。 
 
 ### 範例：將 Cloud Foundry 應用程式日誌串流至 Splunk 
 {: #splunk}
@@ -399,14 +396,13 @@ Cloud Foundry 應用程式會使用 Cloud Foundry 日誌聚集器，來監視並
 
 ### 硬體需求
 
-*表 1. {{site.data.keyword.Bluemix_local_notm}}* 的記載硬體需求
-{: #table01}
 
 | **需求** |    **1 個節點**     | **3 個節點（針對高可用性）** |
 |-----------------|-------------------|-------------------|
 | vCPU | 19 | 57 |
 | 記憶體 | 80 GB | 240 GB |
 | 本端儲存空間 | 2.98 TB | 8.94 TB |
+{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
 
 ### 設定
 
@@ -431,6 +427,6 @@ Cloud Foundry 應用程式會使用 Cloud Foundry 日誌聚集器，來監視並
 2. 按一下**日誌**。在**日誌**視圖中，您可以檢視來自執行中應用程式的日誌。
 4. 按一下**進階視圖**按鈕。**進階視圖**會使用 Kibana 顯示更詳細的視圖。Kibana 是一種視覺化工具，其會使用日誌及時間戳記資料來建立自訂視覺化。如需使用進階視圖的相關資訊，請參閱 [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) 文件。
 
-接下來，您可以自訂 Kibana 儀表板。如需相關資訊，請參閱[自訂 Kibana 儀表板中的日誌顯示方式](/docs/manageapps/containers/container_ml_logs.html#container_ml_dash_logs_custom)。
+接下來，您可以自訂 Kibana 儀表板。如需相關資訊，請參閱[自訂 Kibana 儀表板中的日誌顯示方式](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom)。
 
 
