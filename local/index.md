@@ -694,7 +694,9 @@ Because protection of private data is critical, {{site.data.keyword.IBM_notm}} n
 </ul>
 
 # rellinks
+{: rellinks}
 ## general
+{: general}
 * [Discover: {{site.data.keyword.Bluemix_local_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
 * [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} glossary](/docs/overview/glossary/index.html)
