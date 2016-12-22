@@ -552,7 +552,9 @@ Light API 호출의 경우 무료 사용량인 50,000을 빼고, Heavy API 호�
 cf update-service <service_name> [-p <new_plan>]
 ```
 # 관련 링크
-## 일반 
+{: rellinks}
+## 일반
+{: general}
 * [{{site.data.keyword.Bluemix_notm}} 가격 책정 시트](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} 개발자 커뮤니티 포럼](https://developer.ibm.com/bluemix/)
 * [온라인으로 도움 얻기](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
