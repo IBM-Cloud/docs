@@ -33,7 +33,7 @@ Sie können ein gehostetes Git-Repository erstellen, das für {{site.data.keywor
    a. Klicken Sie auf der Übersichtseite der App auf **Code bearbeiten**. Ihr Projekt wird in der Web-IDE geöffnet.  
    b. Nehmen Sie die gewünschten Änderungen vor und führen Sie dann mithilfe der integrierten Git-Unterstützung eine Push-Operation durch.  
 
-Die aktualisierte Anwendung wird erneut in {{site.data.keyword.Bluemix_notm}} bereitgestellt.  
+Die aktualisierte App wird erneut in {{site.data.keyword.Bluemix_notm}} bereitgestellt.  
 
 Schrittweise Anweisungen finden Sie in den Informationen zur [Einrichtung der Git-Integration und zur automatischen Bereitstellung in DevOps Services](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment).  
 

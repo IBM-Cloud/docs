@@ -4,7 +4,7 @@
 
 copyright:
 
-  anni: 2015, 2016
+  year: 2015, 2016
 
 lastupdated: "2016-03-02"
 

@@ -69,7 +69,7 @@ Nach der Installation der Befehlszeilenschnittstellen können Sie beginnen:
 
   <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">org_name</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">space_name</var>" -sso</pre>
 
-  6. Stellen Sie Ihre Anwendung für {{site.data.keyword.Bluemix_notm}} bereit. Weitere Informationen zum Befehl 'cf push' finden Sie unter [Anwendung hochladen](/docs/starters/upload_app.html).
+  6. Stellen Sie Ihre App für {{site.data.keyword.Bluemix_notm}} bereit. Weitere Informationen zum Befehl 'cf push' finden Sie unter [Anwendung hochladen](/docs/starters/upload_app.html).
 
   <pre class="pre">cf push "<var class="keyword varname" data-hd-keyref="app_name">app-name</var>"</pre>
 

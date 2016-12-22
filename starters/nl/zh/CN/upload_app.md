@@ -55,7 +55,6 @@ lastupdated: "2016-02-17"
 
   cf push 命令会上传应用程序并将其部署到 {{site.data.keyword.Bluemix_notm}}。有关 cf push 的更多信息，请参阅 [cf 命令](/docs/cli/reference/cfcommands/index.html)。有关 buildpack 的信息，请参阅[使用社区 buildpack](/docs/cfapps/byob.html)。
 
-  2. 如果更改了应用程序，可以通过再次输入 cf push 命令来上传这些更改。cf 命令行界面会使用您先前的选项并根据您对提示的响应，以新的代码段来更新运行中的所有应用程序实例。
-
+  2. 如果更改了应用程序，可以通过再次输入 cf push 命令来上传这些更改。cf 命令行界面会使用您先前的选项并根据您对提示的响应，以新的代码段来更新任何运行中应用程序实例。
 
 **提示：**您还可以从 DevOps Services 上传或部署应用程序。请参阅[在 Node.js 中使用 Web IDE 开发 {{site.data.keyword.Bluemix_notm}} 应用程序](https://hub.jazz.net/tutorials/devopsweb/){: new_window}。
