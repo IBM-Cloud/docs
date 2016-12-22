@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-18"
+lastupdated: "2016-12-07"
 ---
 
 
@@ -33,7 +33,7 @@ Diego는 앱 상태를 유효성 검증하기 위해 DEA에 사용되는 것과 
 
 Diego에서 앱을 스테이징하려면 먼저 CLI 및 [Diego-Enabler CLI 플러그인](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}을 모두 설치해야 합니다. 이는 마이그레이션 기간 동안에만 필요합니다.
 
-#### 알려진 문제
+#### 알려진 문제점
  Diego 사용 시 다음과 같은 알려진 문제점이 있습니다. 
   * `--no-route` 옵션을 사용하여 배치된 작업자 애플리케이션은 정상적으로 보고되지 않습니다. 이 옵션을 사용하지 않으려면 `cf set-health-check APP_NAME none` 명령으로 포트 기반 상태 검사를 사용 안함으로 설정하십시오.
   * Diego는 VCAP_APP_HOST 환경 변수를 사용하지 않습니다. 코드에서 이 변수를 참조하는 경우 0.0.0.0으로 대체하십시오. 
@@ -197,8 +197,6 @@ Node.js 빌드팩에서 애플리케이션을 인식하려면 `package.json` 파
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |옵션	|설명	|사용법 또는 예|
 |:----------|:--------------|:---------------|
@@ -216,7 +214,7 @@ cf push -f appManifest.yml
 |**random-route**	|애플리케이션에 랜덤 라우트를 지정하는 부울 값입니다. 기본값은 **false**입니다.	|`random-route: true`|
 |**services**	|애플리케이션에 바인딩할 서비스입니다.	|`services: - mysql_maptest`|
 |**env**	|애플리케이션에 대한 사용자 정의 환경 변수입니다.|`env: DEV_ENV: production`|
-*표 1. manifest.yml 파일에서 지원되는 옵션*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###샘플 `manifest.yml` 파일
 

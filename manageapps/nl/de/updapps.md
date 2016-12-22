@@ -11,7 +11,7 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Anwendungen aktualisieren
+#Apps aktualisieren
 {: #updatingapps}
 
 Letzte Aktualisierung: 25. August 2016
@@ -43,7 +43,7 @@ entweder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die B
 	2. Klicken Sie auf der Registerkarte **Domänen** auf **Domäne hinzufügen**,
 geben Sie den Namen Ihrer angepassten Domäne ein und klicken Sie auf **Speichern**.
 	
-	**Hinweis**: Sie können beispielsweise `mycompany.com` verwenden, um Ihrer App die Route `www.mycompany.com` zuzuordnen. Sie können auch `example.mycompany.com` verwenden, um Ihrer App die Route `www.example.mycompany.com` zuzuordnen.
+	**Hinweis**: Sie können beispielsweise `mycompany.com` verwenden, um Ihrer App die Route `www.mycompany.com` zuzuordnen. Sie können auch `example.mycompany.com` verwenden, um Ihrer App die Route `www.example.mycompany.com` zuzuordnen. 
 
   2. Fügen Sie die Route mit der angepassten Domäne zu einer Anwendung hinzu.
 
@@ -287,8 +287,7 @@ der App *Blue* :
   ...
   ```
 
-  **Ergebnis:** Der CF-Router sendet keinen Datenverkehr mehr an die App
-*Blue*. Die App *Green* antwortet an beide URLs: `Green.mybluemix.net` und `Blue.mybluemix.net`.
+  **Ergebnis:** Der CF-Router sendet keinen Datenverkehr mehr an die App *Blue*. Die App *Green* antwortet an beide URLs: `Green.mybluemix.net` und `Blue.mybluemix.net`.
 
 5. Entfernen Sie die Route `Green.mybluemix.net` zur App *Green*.
 
@@ -296,8 +295,7 @@ der App *Blue* :
   cf unmap-route Green mybluemix.net -n Green
   ```
 
-  **Ergebnis:** Der CF-Router sendet keinen Datenverkehr mehr an die App
-*Blue*. Die App *Green* antwortet an die URL `Blue.mybluemix.net`.
+  **Ergebnis:** Der CF-Router sendet keinen Datenverkehr mehr an die App *Blue*. Die App *Green* antwortet an die URL `Blue.mybluemix.net`.
 
 6. Optional: Wenn Sie die alte Version (*Blue*) der Anwendung löschen wollen, verwenden Sie hierzu den Befehl `cf
 delete`.

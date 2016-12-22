@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-18"
+lastupdated: "2016-12-07"
 ---
 
 
@@ -30,7 +30,7 @@ due fasi, la preparazione dell'applicazione e il suo avvio.
 
 Cloud Foundry ora supporta Diego, una nuova architettura di runtime. Diego fornisce supporto per molte tecnologie del contenitore, inclusi i contenitori Garden, Docker e Windows. I futuri miglioramenti e correzioni per Cloud Foundry andranno direttamente a Diego e non saranno supportati in DEA.
 
-### Preparazione di un'applicazione con Diego 
+### Preparazione di un'applicazione con Diego
 Tutti i componenti Diego sono progettati per essere in cluster, che significa che puoi facilmente creare diverse zone di disponibilità. La comunicazione sicura tra tutti i componenti Diego utilizza TLS.
 
 Durante la fase di preparazione, Diego si occupa di tutti gli aspetti relativi alla organizzazione del contenitore. La distribuzione delle istanze dell'applicazione viene effettuata con Diego Brain e il controller cloud prepara soltanto le applicazioni. Diego Brain assegna le applicazioni in celle con accesso SSH ai contenitori.
@@ -50,7 +50,7 @@ Per preparare le applicazioni in Diego, devi prima installare la CLI cf e il [Di
 #### Preparazione di una nuova applicazione con Diego
 Per preparare una nuova applicazione con Diego devi distribuire l'applicazione nella riga di comando con un indicatore che indica Diego come backend.
 
-  1. Distribuisci l'applicazione senza avviarla: 
+  1. Distribuisci l'applicazione senza avviarla:
   ```
   $ cf push APPLICATION_NAME --no-start
   ```
@@ -88,7 +88,7 @@ Puoi passare un'applicazione esistente a Diego distribuendola con l'indicatore D
   ```
 
 
-### Preparazione di un'applicazione con DEA 
+### Preparazione di un'applicazione con DEA
 Durante la fase
 di preparazione, un Droplet Execution Agent    (DEA) utilizza le informazioni
 che tu fornisci nell'interfaccia riga di comando cf o nel file `manifest.yml`
@@ -270,8 +270,6 @@ il nome file:
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |Opzioni	|Descrizione	|Utilizzo o esempio|
 |:----------|:--------------|:---------------|
@@ -290,7 +288,7 @@ cf push -f appManifest.yml
 |**random-route**	|Un valore booleano per assegnare una rotta casuale all'applicazione. Il valore predefinito è **false**.	|`random-route: true`|
 |**services**	|I servizi di cui eseguire il bind all'applicazione.	|`services:   - mysql_maptest`|
 |**env**	|Le variabili di ambiente personalizzate per l'applicazione.|`env: DEV_ENV: production`|
-*Tabella 1. Opzioni supportate nel file manifest.yml*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###Un file `manifest.yml` di esempio
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-18"
+lastupdated: "2016-12-07"
 ---
 
 
@@ -11,7 +11,7 @@ lastupdated: "2016-11-18"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Anwendungen bereitstellen
+# Apps bereitstellen
 {: #deployingapps}
 
 Sie können Anwendungen anhand verschiedener Methoden für {{site.data.keyword.Bluemix}} bereitstellen, beispielsweise über die Befehlszeilenschnittstelle oder über integrierte Entwicklungsumgebungen (IDEs). Darüber hinaus können Anwendungen mithilfe von Anwendungsmanifesten bereitgestellt werden. Bei Verwendung eines Anwendungsmanifests wird die Anzahl der Bereitstellungsdetails reduziert, die Sie jedes Mal angeben müssen, wenn Sie die Anwendung in {{site.data.keyword.Bluemix_notm}} bereitstellen.
@@ -29,73 +29,58 @@ Cloud Foundry unterstützt jetzt eine neue Laufzeitarchitektur namens
 Garden, Docker und Windows-Container. Künftige Erweiterungen und Fixes für Cloud
 Foundry werden direkt in Diego umgesetzt und im DEA nicht unterstützt.
 
-
 ### Staging einer Anwendung mit Diego
 Alle Diego-Komponenten sind konzeptionsgemäß in Gruppen zusammengefasst.
 Dies bedeutet, dass Sie ohne großen Aufwand unterschiedliche
-Verfügbarkeitszonen einrichten können.
-Die sichere Kommunikation zwischen allen Diego-Komponenten verwendet TLS.
-
+Verfügbarkeitszonen einrichten können. Die sichere Kommunikation zwischen allen Diego-Komponenten verwendet TLS.
 
 Während der Staging-Phase kümmert sich Diego um alle Aspekte, die mit der
-Containerkoordination verbunden sind.
-Die Verteilung der App-Instanzen erfolgt mit Diego Brain. Der Cloud-Controller
+Containerkoordination verbunden sind. Die Verteilung der App-Instanzen erfolgt mit Diego Brain. Der Cloud-Controller
 ist lediglich für das Staging der Apps zuständig. Diego Brain ordnet die Apps
 in Zellen mit SSH-Zugriff auf die Container zu.
 
-
 Bei der Validierung des App-Status unterstützt Diego dieselben
-PORT-basierten Prüfungen, die für den DEA verwendet werden.
-Diego ist jedoch konzeptionsbedingt in der Lage, eher generische Optionen wie
+PORT-basierten Prüfungen, die für den DEA verwendet werden. Diego ist jedoch konzeptionsbedingt in der Lage, eher generische Optionen wie
 URL-basierte Statusprüfungen zu bieten, die künftig möglich sein sollten.
 
-
-Für das Staging von Anwendungen in Diego müssen Sie zunächst sowohl die
-CLI 'cf' als auch das
-[Diego-Enabler-CLI-Plug-in](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}
-installieren. Dies ist nur während der Migrationsphase erforderlich. 
+Für das Staging von Apps in Diego müssen Sie zunächst sowohl die CLI 'cf' als auch das [Diego-Enabler-CLI-Plug-in](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} installieren. Dies ist nur während der Migrationsphase erforderlich.
 
 #### Bekannte Probleme
  Im Zusammenhang mit der Verwendung von Diego sind die folgenden
 Probleme bekannt:
-
   * Für Worker-Anwendungen, die mit der Option
 `--no-route`
-bereitgestellt werden, wird nicht ein einwandfreier Zustand gemeldet.
-Um dies zu verhindern, inaktivieren Sie die portbasierte Statusprüfung mit
+bereitgestellt werden, wird nicht ein einwandfreier Zustand gemeldet. Um dies zu verhindern, inaktivieren Sie die portbasierte Statusprüfung mit
 dem Befehl `cf
-set-health-check APP_NAME none`. 
+set-health-check APP_NAME none`.
   * Die Umgebungsvariable VCAP_APP_HOST wird von Diego nicht verwendet. Falls
 Ihr Code diese Variable referenziert, ersetzen
 Sie sie durch die Angabe 0.0.0.0.
-  * Die Umgebungsvariable VCAP_APP_HOST wird von Diego nicht verwendet. 
-Falls Ihr Code diese Variable referenziert, ersetzen Sie sie durch die Angabe
+  * Die Umgebungsvariable VCAP_APP_HOST wird von Diego nicht verwendet. Falls Ihr Code diese Variable referenziert, ersetzen Sie sie durch die Angabe
 PORT (Standardeinstellung ist 8080).
   * Der Befehl **cf files** wird nicht mehr
-unterstützt.
-Er wird durch den Befehl **cf ssh** ersetzt. Weitere Details
+unterstützt. Er wird durch den Befehl **cf ssh** ersetzt. Weitere Details
 über den Befehl **cf ssh** finden Sie unter
 [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Einige Apps verwenden möglicherweise eine große Anzahl von
 Dateideskriptoren (inodes). Falls Sie dieses Problem feststellen, müssen Sie
 das Plattenkontingent für Ihre App mit dem Befehl `cf scale APP_NAME
-[-k DISK]` vergrößern. 
+[-k DISK]` vergrößern.
 
 #### Staging einer neuen App bei Diego
 Zum Staging einer neuen Anwendung bei Diego müssen Sie die Anwendung in
 der Befehlszeile mit einem Flag bereitstellen, um Diego als Back-End anzugeben.
 
-
-  1. Anwendung ohne Starten bereitstellen: 
+  1. Anwendung ohne Starten bereitstellen:
   ```
   $ cf push ANWENDUNGSNAME --no-start
   ```
-  2. Booleschen Wert für Diego festlegen: 
+  2. Booleschen Wert für Diego festlegen:
   ```
   $ cf enable-diego ANWENDUNGSNAME
   ```
     Alternative:
-```
+  ```
   $ cf curl /v2/apps/$(cf app ANWENDUNGSNAME --guid) -X PUT -d '{"diego":true}'
   ```
   3. Anwendung starten:
@@ -109,28 +94,24 @@ unter
 
 #### Vorhandene App für Diego ändern
 Sie können für eine vorhandene App einen Übergang zu Diego vornehmen,
-indem Sie die Anwendung mit dem Diego-Flag bereitstellen.
-Die Ausführung der Anwendung wird sofort unter Diego gestartet und schließlich
-unter den DEAs gestoppt.
-Falls Sie die Verfügbarkeitszeit sicherstellen wollen, empfiehlt es sich, eine
+indem Sie die Anwendung mit dem Diego-Flag bereitstellen. Die Ausführung der Anwendung wird sofort unter Diego gestartet und schließlich
+unter den DEAs gestoppt. Falls Sie die Verfügbarkeitszeit sicherstellen wollen, empfiehlt es sich, eine
 Blue-Green-Bereitstellung vorzunehmen. Hierzu stellen Sie eine Kopie Ihrer
 Anwendung für Diego bereit. Anschließend lagern Sie Routes aus und skalieren
 die DEA-Anwendung herab.
 
-
   Führen Sie Folgendes aus, um das Diego-Flag festzulegen und Ihre App
 in die Ausführung unter Diego zu ändern:
-
   ```
   $ cf enable-diego ANWENDUNGSNAME
   ```
 
-  Übergang zurück zu DEAs: 
+  Übergang zurück zu DEAs:
   ```
   $ cf disable-diego ANWENDUNGSNAME
   ```
 
-  Back-End validieren, auf dem die Anwendung ausgeführt wird: 
+  Back-End validieren, auf dem die Anwendung ausgeführt wird:
   ```
   $ cf has-diego-enabled ANWENDUNGSNAME
   ```
@@ -283,8 +264,6 @@ Beispiel wird `appManifest.yml` als Dateiname verwendet:
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |Optionen	|Beschreibung	|Verwendung oder Beispiel|
 |:----------|:--------------|:---------------|
@@ -302,7 +281,7 @@ cf push -f appManifest.yml
 |**random-route**	|Ein boolescher Wert, der verwendet wird, um der Anwendung eine beliebige Route zuzuweisen. Der Standardwert ist **false**.	|`random-route: true`|
 |**services**	|Die Services, die an die Anwendung gebunden werden sollen.	|`services: - mysql_maptest`|
 |**env**	|Die angepassten Umgebungsvariablen für die Anwendung.|`env: DEV_ENV: production`|
-*Tabelle 1. Unterstützte Optionen in der Datei 'manifest.yml'*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###Beispiel für eine Datei `manifest.yml`
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-18"
+lastupdated: "2016-12-07"
 ---
 
 
@@ -197,8 +197,6 @@ cf push appname
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |选项	|描述	|用法或示例|
 |:----------|:--------------|:---------------|
@@ -216,7 +214,7 @@ cf push -f appManifest.yml
 |**random-route**	|布尔值，用于将随机路径分配给应用程序。缺省值为 **false**。	|`random-route: true`|
 |**services**	|要绑定到应用程序的服务。	|`services: - mysql_maptest`|
 |**env**	|应用程序的定制环境变量。|`env: DEV_ENV: production`|
-*表 1. manifest.yml 文件中的受支持选项*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###样本 `manifest.yml` 文件
 

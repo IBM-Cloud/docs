@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-18"
+lastupdated: "2016-12-07"
 ---
 
 
@@ -267,8 +267,6 @@ nome do arquivo:
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |Opções	|Descrição	|Uso ou exemplo|
 |:----------|:--------------|:---------------|
@@ -286,7 +284,7 @@ cf push -f appManifest.yml
 |**random-route**	|Um valor booleano para designar uma rota aleatória para o aplicativo. O valor padrão é **false**.	|`random-route: true`|
 |**Serviços**	|Os serviços a serem ligados ao aplicativo.	|`services:   - mysql_maptest`|
 |**env**	|As variáveis de ambiente customizadas do aplicativo.|`env: DEV_ENV: production`|
-*Tabela 1. Opções suportadas no arquivo manifest.yml*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###Um arquivo `manifest.yml` de amostra
 

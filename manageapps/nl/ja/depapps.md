@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-18"
+lastupdated: "2016-12-07"
 ---
 
 
@@ -198,8 +198,6 @@ cf push appname
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |options	|説明	|使用法または例|
 |:----------|:--------------|:---------------|
@@ -217,7 +215,7 @@ cf push -f appManifest.yml
 |**random-route**	|アプリケーションにランダムな経路を割り当てるブール値。デフォルト値は **false** です。	|`random-route: true`|
 |**services**	|アプリケーションにバインドするサービス。	|`services: - mysql_maptest`|
 |**env**	|アプリケーションのカスタム環境変数。|`env: DEV_ENV: production`|
-*表 1. manifest.yml ファイルでサポートされるオプション*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###サンプル `manifest.yml` ファイル
 
