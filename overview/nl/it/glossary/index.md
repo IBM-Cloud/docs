@@ -206,7 +206,7 @@ Un'immagine che non ha alcuna immagine principale. Vedi anche [immagine](#x20249
 ### servizio beta
 {: #x7470455}
 
-Un servizio che non è pronto per la produzione e che è un una
+Un servizio che non è pronto per la produzione ed è a una
 fase di sviluppo di prova. Vedi anche [servizio
 sperimentale](#x7470450).
 

@@ -52,7 +52,7 @@ lastupdated: "2016-10-23"
 * {{site.data.keyword.IBM_notm}} DevOps 서비스 및 {{site.data.keyword.Bluemix_notm}} Garage Method를 사용하여 필요한 기능이 포함된 혁신적인 새 애플리케이션을 더욱 빠르고 저렴하게 제공합니다. DevOps 사례를 채택하고 혁신과 민첩성이 요구되는 문화를 조성하는 경우 반복적으로 시행하여 시장 상황에 따라 방향을 바꿀 수 있습니다. 
 * 블록체인은 비즈니스 프로세스를 간소화하면서 신뢰, 책임 및 투명성을 확립하는 차세대 트랜잭션 애플리케이션을 위한 피어 투 피어 분배 원장 기술입니다.   
 * Watson은 사용자의 앱에 음성, 영상 및 데이터 API의 전체 세트로 코그너티브 컴퓨팅의 강력함을 제공합니다. Watson 서비스를 통해 코그너티브 플랫폼을 배치하여 가장 복잡한 비즈니스 문제점을 해결하십시오. 
-* {{site.data.keyword.IBM_notm}}를 통해 풍부한 통합 클라우드 데이터베이스, 데이터 및 분석 서비스로 더 많은 작업을 수행할 수 있습니다. 
+* {{site.data.keyword.IBM_notm}}를 통해 풍부한 통합 클라우드 데이터베이스, Data & Analytics 서비스로 더 많은 작업을 수행할 수 있습니다. 
 * {{site.data.keyword.IBM_notm}} Internet of Things 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. IBM이 제안하는 방법을 사용하여 Internet of Things 클라우드에 연결된 디바이스를 쉽게 얻을 수 있습니다. 그러면 앱에서 실시간 및 REST API를 사용하여 디바이스와 통신하고 수집하도록 설정된 데이터를 이용할 수 있습니다.
  
 * {{site.data.keyword.IBM_notm}}는 멀티플랫폼, 기본 또는 하이브리드 앱을 모니터하고 테스트하는 동시에 이들을 빌드할 수 있는 모바일 백엔드 인프라를 제공합니다. 또한 분석, 보안, 사용자 통찰력 및 Continuous Delivery를 사용하여 앱을 개선시킬 수도 있습니다.  
@@ -169,8 +169,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 | 미국 남부 지역 | 댈러스, 미국 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 영국 지역 | 런던, 영국 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | 시드니 지역 | 시드니, 호주 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-
-*표 1. {{site.data.keyword.Bluemix_notm}} 지역 목록*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 
 ### {{site.data.keyword.Bluemix_notm}} 복원성

@@ -49,8 +49,8 @@ lastupdated: "2016-10-23"
 
 通过“服务”仪表板，可访问 {{site.data.keyword.IBM}} 和第三方提供者提供的 {{site.data.keyword.Bluemix_notm}} 服务，包括 Watson、Internet of Things、Analytics、Mobile 和 DevOps 服务：
 
-* 使用 {{site.data.keyword.IBM_notm}} DevOps 服务和 {{site.data.keyword.Bluemix_notm}} Garage Method，以更快速度、更低价格交付只包含所需功能的创新型新应用程序。如果您采用了 DevOps 做法并打造了具有创新性和灵活性的文化，那么在应对市场变化时，您既可以采用反复迭代的做法，也可以改变方向。
-* 区块链是一种点对点分布式分类帐技术，用于实现新一代的交易应用程序，这些应用程序可建立信任、责任和透明度，同时简化业务流程。  
+* 使用 {{site.data.keyword.IBM_notm}} DevOps 服务和 {{site.data.keyword.Bluemix_notm}} Garage Method，以更快速度、更低价格交付新的具备适当功能的创新型应用程序。如果您采用了 DevOps 做法并打造了具有创新性和灵活性的文化，那么在应对市场变化时，您既可以采用反复迭代的做法，也可以改变方向。
+* 区块链是一种点对点分布式账本技术，用于实现新一代的交易应用程序，这些应用程序可建立信任、责任和透明度，同时简化业务流程。  
 * Watson 将为应用程序提供认知计算能力，以及一套完整的语音、视觉和数据 API。通过使用 Watson 服务部署认知平台，可解决最复杂的业务问题。
 * {{site.data.keyword.IBM_notm}} 支持您通过丰富的集成云数据库以及数据和分析服务来执行更多操作。 
 * {{site.data.keyword.IBM_notm}} Internet of Things 服务允许应用程序与连接的设备、传感器和网关进行通信，以及使用这些设备、传感器和网关收集的数据。通过我们的诀窍，能轻松将设备连接到我们的 Internet of Things 云。随后，您的应用程序可以使用实时 API 和 REST API 来与设备进行通信，并使用您将这些设备设置为要收集的数据。 
@@ -164,8 +164,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 | 美国南部区域 | 美国达拉斯 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 英国区域 | 英国伦敦 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | 悉尼区域 | 澳大利亚悉尼 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-
-*表 1. {{site.data.keyword.Bluemix_notm}} 区域列表*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 
 ### {{site.data.keyword.Bluemix_notm}} 弹性

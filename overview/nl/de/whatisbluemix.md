@@ -17,7 +17,7 @@ lastupdated: "2016-10-23"
 
 {{site.data.keyword.Bluemix_notm}} verfügt über Cloudbereitstellungen, die Ihre Anforderungen erfüllen, unabhängig davon, ob Sie eine Skalierung für Ihr Kleinunternehmen planen oder ob Sie für Ihr großes Unternehmen eine zusätzliche Schutzisolierung benötigen. Sie können in einer Cloud praktisch grenzenlos entwickeln und Ihre privaten Services mit den öffentlichen {{site.data.keyword.Bluemix_notm}}-Services von {{site.data.keyword.IBM_notm}} verbinden. Sie und Ihr Team können auf die Apps, Services und Infrastrukturen in {{site.data.keyword.Bluemix_notm}} zugreifen und vorhandene Daten, Systeme und Prozesse sowie PaaS-Tools und IaaS-Tools verwenden. Entwickler können das schnell wachsende Ökosystem von verfügbaren Services und Laufzeit-Frameworks nutzen, um Anwendungen mit Ansätzen der polyglotten Programmierung zu erstellen.
  
-Mit {{site.data.keyword.Bluemix_notm}} müssen Sie keine großen Investitionen in die Hardware vornehmen, um eine neue App zu testen oder auszuführen. Stattdessen verwalten wir alles für Sie und berechnen nur das, wovon Sie Gebrauch machen. {{site.data.keyword.Bluemix_notm}} bietet öffentliche, [dedizierte](/docs/dedicated/index.html) und [lokale](/docs/local/index.html) integrierte Bereitstellungsmodelle. 
+Mit {{site.data.keyword.Bluemix_notm}} müssen Sie keine hohen Investitionen mehr in die Hardware tätigen, um eine neue App zu testen oder auszuführen. Stattdessen verwalten wir alles für Sie und berechnen nur das, wovon Sie Gebrauch machen. {{site.data.keyword.Bluemix_notm}} bietet öffentliche, [dedizierte](/docs/dedicated/index.html) und [lokale](/docs/local/index.html) integrierte Bereitstellungsmodelle. 
 
 Sie können eine Idee von der Konzeption über die Sandbox zur Entwicklung bis hin zu einer globalen verteilten Produktionsumgebung führen, die Rechen- und Speicherinfrastruktur, Open-Source-Plattform-Services und -Container sowie Software-Services und Tools von {{site.data.keyword.IBM_notm}}, Watson und anderen bietet. Neben den Funktionen der Plattform selbst bietet {{site.data.keyword.Bluemix}} auch eine flexible Bereitstellung. Sie können {{site.data.keyword.Bluemix}}-Ressourcen lokal, in dedizierten privaten Cloud-Umgebungen oder in der öffentlichen Cloud bereitstellen und die Ressourcen aller drei Umgebungstypen über nur ein Dashboard verwalten.
  
@@ -49,8 +49,7 @@ Sie können {{site.data.keyword.Bluemix_notm}} Mobile-Services für die Integrat
 
 Das Service-Dashboard bietet Zugriff auf die {{site.data.keyword.Bluemix_notm}}-Services, die über {{site.data.keyword.IBM}} und Drittanbieter zur Verfügung stehen. Dazu gehören Services von Watson, IoT, Analytics, Mobile und DevOps:
 
-* Schnellere, kostengünstigere Bereitstellung neuer innovativer Anwendungen mit genau den richtigen Funktionen unter Verwendung von {{site.data.keyword.IBM_notm}} DevOps-Services und der {{site.data.keyword.Bluemix_notm}} Garage Method. 
-Wenn Sie DevOps-Verfahren übernehmen und eine Kultur der Innovation und
+* Schnellere, kostengünstigere Bereitstellung neuer innovativer Anwendungen mit genau den richtigen Funktionen unter Verwendung von {{site.data.keyword.IBM_notm}} DevOps-Services und der {{site.data.keyword.Bluemix_notm}} Garage Method. Wenn Sie DevOps-Verfahren übernehmen und eine Kultur der Innovation und
 Agilität erzeugen, können Sie mit iterativen Verfahren und Richtungsänderungen
 auf den Markt reagieren.
 * Blockchain ist eine verteilte Peer-to-Peer-Hauptbuch-Technologie für eine neue Generation von Transaktionsanwendungen, die Vertrauen, Verantwortlichkeit und Transparenz vermittelt und gleichzeitig die Geschäftsprozesse optimiert.  
@@ -67,15 +66,13 @@ Darüber hinaus stellt {{site.data.keyword.Bluemix_notm}} experimentelle Service
 
 Das Infrastruktur-Dashboard bietet für Ihren Bedarf an einer Cloudinfrastruktur verschiedene Services an.
 
-Die {{site.data.keyword.Bluemix_notm}}-Infrastruktur bietet eine der leistungsfähigsten Cloudinfrastrukturen überhaupt. Die {{site.data.keyword.Bluemix_notm}}-Infrastruktur ist eine einzige Plattform, die Rechenzentren in der ganzen Welt mit dem größtmöglichen Spektrum an Cloud-Computing-Optionen nutzt, diese Optionen einbindet und automatisiert. {{site.data.keyword.CloudDataCents_notm}} bieten eine riesige Menge an erstklassiger Ausrüstung für Datenverarbeitung, Speicherung und Vernetzung. 
-Jeder Standort wird auf gleiche Weise erbaut, ausgestattet und betrieben,
+Die {{site.data.keyword.Bluemix_notm}}-Infrastruktur bietet eine der leistungsfähigsten Cloudinfrastrukturen überhaupt. Die {{site.data.keyword.Bluemix_notm}}-Infrastruktur ist eine einzige Plattform, die Rechenzentren in der ganzen Welt mit dem größtmöglichen Spektrum an Cloud-Computing-Optionen nutzt, diese Optionen einbindet und automatisiert. {{site.data.keyword.CloudDataCents_notm}} bieten eine riesige Menge an erstklassiger Ausrüstung für Datenverarbeitung, Speicherung und Vernetzung. Jeder Standort wird auf gleiche Weise erbaut, ausgestattet und betrieben,
 sodass Sie immer exakt dieselben Funktionen und Verfügbarkeiten erwarten
 können. Die Standorte sind über das fortgeschrittenste Network-within-a-Network der Branche miteinander verbunden, das eigenständige öffentliche, private und interne Managementnetze zur Senkung der Gesamtnetzkosten, für besseren Zugriff und höhere Geschwindigkeiten integriert. Zudem teilen die Rechenzentren und das Netz ein proprietäres Managementsystem. Über nur ein Verwaltungstool können Sie alles steuern, jeden Bare-Metal-Server, virtuellen Server und jede Speichereinheit, die alle über API-, Portal- und mobile Anwendungen zugänglich sind.
 
 Die {{site.data.keyword.Bluemix_notm}}-Infrastruktur bietet leistungsfähige Bare-Metal-Server und flexible virtuelle Server in einer einzigen übergangslosen Plattform. Alle werden bedarfsgerecht bereitgestellt und monats- bzw. stundenweise berechnet. Bare-Metal-Server bieten die reine Leistung für Ihre prozessorintensiven und Platten-E/A-intensiven Workloads und können nach Ihren genauen Spezifikationen konfiguriert werden. Virtuelle Server ermöglichen eine hohe Geschwindigkeit bei der Bereitstellung, eine flexible Skalierbarkeit und nutzungsabhängige Rechnungsstellung. Um eine hoch leistungsfähige Datenverarbeitung zu erhalten, werten Sie Ihre Cloud mit GPU-Servern auf (GPU - Grafik-Verarbeitungseinheit), die stunden- oder monatsweise zur Verfügung gestellt werden. 
 
-Die Angebote der {{site.data.keyword.Bluemix_notm}}-Infrastruktur sind mit einem dreischichtigen Netz verbunden, das den Datenverkehr in öffentlichen, privaten und Managementdatenverkehr segmentiert. 
-Mit der Infrastruktur auf dem {{site.data.keyword.Bluemix_notm}}-Konto
+Die Angebote der {{site.data.keyword.Bluemix_notm}}-Infrastruktur sind mit einem dreischichtigen Netz verbunden, das den Datenverkehr in öffentlichen, privaten und Managementdatenverkehr segmentiert. Mit der Infrastruktur auf dem {{site.data.keyword.Bluemix_notm}}-Konto
 eines Kunden könnten Daten in einer solchen Infrastruktur kostenlos über das
 private Netz übertragen
 werden. Infrastrukturangebote, z. B. Bare-Metal-Server, virtuelle Server und Cloudspeicherung, stellen Verbindungen zu anderen Anwendungen und Services im {{site.data.keyword.Bluemix_notm}}-Katalog her, z. B. Watson-Services, Container oder Laufzeiten im ganzen öffentlichen Netz. Die Datenübertragung zwischen diesen zwei Angebotstypen wird gemessen und zu Standardpreisen für die öffentliche Netzbandbreite berechnet.
@@ -141,7 +138,7 @@ wie auch die für die Web-App, sind von den Ausführungsumgebungen anderer Apps 
 
 Abbildung 3. App bereitstellen
 
-Wenn Sie eine App erstellen und auf {{site.data.keyword.Bluemix_notm}} Cloud Foundry bereitstellen, bestimmt die {{site.data.keyword.Bluemix_notm}}-Umgebung einen geeigneten virtuellen Server, an den die App bzw. die Artefakte gesendet werden, die die App darstellt. Für mobile Apps wird auf {{site.data.keyword.Bluemix_notm}} eine mobile Back-End-Projektion erstellt. Jeder Code für die in der Cloud ausgeführte mobile Anwendung wird letztendlich in der {{site.data.keyword.Bluemix_notm}}-Umgebung ausgeführt. Für Web-Apps ist der Code, der in der Cloud ausgeführt wird, die App selbst, die der Entwickler auf {{site.data.keyword.Bluemix_notm}} bereitstellt. Welcher virtuelle Server dafür ausgesucht wird, basiert auf mehreren Faktoren, wie zum Beispiel:
+Wenn Sie eine App erstellen und auf {{site.data.keyword.Bluemix_notm}} Cloud Foundry bereitstellen, bestimmt die {{site.data.keyword.Bluemix_notm}}-Umgebung einen geeigneten virtuellen Server, an den die App bzw. die Artefakte gesendet werden, die die App darstellt. Für mobile Apps wird auf {{site.data.keyword.Bluemix_notm}} eine mobile Back-End-Projektion erstellt. Jeder Code für die in der Cloud ausgeführte mobile App wird letztendlich in der {{site.data.keyword.Bluemix_notm}}-Umgebung ausgeführt. Für Web-Apps ist der Code, der in der Cloud ausgeführt wird, die App selbst, die der Entwickler auf {{site.data.keyword.Bluemix_notm}} bereitstellt. Welcher virtuelle Server dafür ausgesucht wird, basiert auf mehreren Faktoren, wie zum Beispiel:
 
 * Die bestehende Auslastung der Maschine
 * Von diesem virtuellen Server unterstützte Laufzeiten oder Frameworks
@@ -158,7 +155,7 @@ In jedem virtuellen Server kommuniziert ein Anwendungsmanager mit der übrigen {
 
 Wenn die
 App bereitgestellt wurde und über eine Webschnittstelle (wie für eine Java-Web-App)
-oder andere REST-basierte Services (z. B. mobile Services, die für die mobile Anwendung öffentlich zugänglich sind)
+oder andere REST-basierte Services (z. B. mobile Services, die für die mobile App öffentlich zugänglich sind)
 verfügt, können Benutzer der App durch normale HTTP-Anforderungen mit ihr kommunizieren.
 
 ![Eine {{site.data.keyword.Bluemix_notm}}-App aufrufen](images/execute.png)
@@ -175,7 +172,7 @@ Eine {{site.data.keyword.Bluemix_notm}}-Region ist ein definiertes geografisches
 Serviceinstanzen in unterschiedlichen Regionen mit
 derselben {{site.data.keyword.Bluemix_notm}}-Infrastruktur
 für das Anwendungsmanagement und dieselbe Ansicht mit den Nutzungsdetails zur Gebührenabrechnung erstellen. Sie können die Region auswählen, die Ihren Kunden am nächsten ist, und Ihre
-Anwendungen in dieser Region bereitstellen, um so eine geringe Anwendungslatenz zu erreichen. Es ist auch möglich,
+Apps in dieser Region bereitstellen, um so eine geringe Anwendungslatenz zu erreichen. Es ist auch möglich,
 die Region, in der Sie die Anwendungsdaten aufbewahren möchten, auszuwählen, um Sicherheitsproblemen
 Rechnung zu tragen. Wenn Sie Apps in mehreren Regionen erstellen, werden die Apps in den anderen Regionen weiter ausgeführt, falls eine Region nicht mehr verfügbar ist. Die verfügbaren Ressourcen
 sind für jede verwendete Region gleich.
@@ -200,8 +197,7 @@ stehen die folgenden Regionen und Regionspräfixe zur Verfügung.
 | Region 'Vereinigte Staaten (Süden)' | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | Region 'United Kingdom' | London, England | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Region 'Sydney' | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-
-*Tabelle 1. Liste der {{site.data.keyword.Bluemix_notm}}-Regionen*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 
 ### Ausfallsicherheit von {{site.data.keyword.Bluemix_notm}}
@@ -271,7 +267,7 @@ an Ihre App gebunden. Weitere Informationen zur Veröffentlichung einer API als 
 auf der Sie ihre mobile App, Cloud-Services und Systems of Record von Unternehmen integrieren können, um eine App einzurichten,
 die mit Ihren lokalen Daten interagiert.
 
-Sie können beispielsweise eine mobile Anwendung aufbauen, die
+Sie können beispielsweise eine mobile App aufbauen, die
 mit Ihrem Customer-Relationship-Managementsystem interagiert, welches sich lokal hinter einer Firewall
 befindet. Sie können auf sicherem Weg ein System of Record aufrufen und die mobilen Services in
 {{site.data.keyword.Bluemix_notm}} zum Aufbau
@@ -289,7 +285,7 @@ Als Nächstes können Sie sich als Anwendungsentwickler bei
 {{site.data.keyword.Bluemix_notm}} anmelden,
 das Android-Entwicklungstoolkit herunterladen und Code entwickeln, mit dem die APIs aufgerufen werden, die
 Ihr Integrationsentwickler eingerichtet hat. Sie können eine mobile App entwickeln, die es dem Benutzer
-ermöglicht, über sein mobiles Gerät Informationen einzugeben. Die mobile Anwendung erstellt daraufhin im
+ermöglicht, über sein mobiles Gerät Informationen einzugeben. Die mobile App erstellt daraufhin im
 Customer-Managementsystem einen Kundenstammdatensatz. Nachdem der Datensatz erstellt ist, übermittelt die
 App per Push-Operation eine Benachrichtigung an ein mobiles Gerät und leitet einen Tweet zu dem neuen
 Datensatz ein.

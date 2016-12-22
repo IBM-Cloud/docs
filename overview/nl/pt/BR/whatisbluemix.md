@@ -17,7 +17,8 @@ O {{site.data.keyword.Bluemix}} é uma plataforma de computação em nuvem inova
 
 O {{site.data.keyword.Bluemix_notm}} possui implementações de nuvem que se ajustam às suas necessidades, independentemente de se você é uma pequena empresa que planeja escalar ou uma grande empresa que requer isolamento adicional. É possível desenvolver em uma nuvem sem fronteiras, na qual é possível conectar seus serviços privados aos serviços públicos do {{site.data.keyword.Bluemix_notm}} disponíveis a partir {{site.data.keyword.IBM_notm}}. Você e sua equipe podem acessar os aplicativos, serviços e infraestrutura no {{site.data.keyword.Bluemix_notm}} e usar dados existentes, sistemas, processos, ferramentas PaaS e ferramentas IaaS. Os desenvolvedores podem acessar o ecossistema de rápido crescimento de serviços e estruturas de tempo de execução disponíveis para construir aplicativos usando abordagens de programação poliglota.
  
-Com o {{site.data.keyword.Bluemix_notm}}, você não tem mais que fazer grandes investimentos em hardware para testar ou executar um novo aplicativo. Em vez disso, nós gerenciamos tudo por você e cobramos apenas pelo que você usa. O {{site.data.keyword.Bluemix_notm}} fornece modelos de implementação integrados públicos, [dedicados](/docs/dedicated/index.html) e [locais](/docs/local/index.html). 
+Com o {{site.data.keyword.Bluemix_notm}}, não será mais necessário fazer grandes investimentos em hardware para testar ou executar um novo app. Em vez
+disso, nós gerenciamos tudo para você e cobramos apenas pelo que você usa. O {{site.data.keyword.Bluemix_notm}} fornece modelos de implementação integrados públicos, [dedicados](/docs/dedicated/index.html) e [locais](/docs/local/index.html). 
 
 É possível ter uma ideia de iniciação para um ambiente de simulação de desenvolvimento, para um ambiente de produção distribuído globalmente com a infraestrutura de cálculo e armazenamento, serviços e contêineres de plataforma de software livre, além de serviços de software e ferramentas do
 {{site.data.keyword.IBM_notm}}, Watson e muito mais. Além dos próprios recursos da plataforma, o {{site.data.keyword.Bluemix}} também fornece implementação flexível. Forneça recursos do {{site.data.keyword.Bluemix}} no local, em ambientes dedicados de nuvem particular ou na nuvem pública e gerencie os recursos de todos os três tipos de ambientes em um único painel.
@@ -143,7 +144,8 @@ no ambiente do {{site.data.keyword.Bluemix_notm}}. Para um app da web, o código
 * A carga que já está na máquina
 * Tempos de execução ou estruturas suportados por esse servidor virtual.
 
-Após um servidor virtual ser escolhido, um gerente de aplicativos em cada servidor virtual instala a estrutura e o tempo de execução apropriados para o aplicativo. Em seguida, o app pode ser implementado nessa estrutura. Quando a implementação é concluída, os artefatos de aplicativo são iniciados.
+Após um servidor virtual ser escolhido, um gerente de aplicativos em cada servidor virtual instala a estrutura e o tempo de execução apropriados para o app. Em
+seguida, o app poderá ser implementado nessa estrutura. Quando a implementação é concluída, os artefatos de aplicativo são iniciados.
 
 A figura a seguir mostra a estrutura de um servidor virtual, também conhecida como Droplet Execution Agent (DEA), que possui vários apps implementados nele:
 
@@ -198,9 +200,7 @@ de API cf** | **Console da interface com o usuário** |
 | Região Sul dos EUA | Dallas, EUA | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | Região do Reino Unido | Londres, Inglaterra | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Região de Sydney | Sydney, Austrália | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-
-*Tabela 1. Lista
-de regiões do {{site.data.keyword.Bluemix_notm}}*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 
 ### Resiliência do {{site.data.keyword.Bluemix_notm}}
@@ -208,8 +208,7 @@ de regiões do {{site.data.keyword.Bluemix_notm}}*
 
 O {{site.data.keyword.Bluemix_notm}} é projetado para hospedar apps e artefatos de aplicativos resilientes e escaláveis que podem escalar para atender às suas necessidades, permanecer altamente disponível e ser rápido para recuperar-se de problemas. O {{site.data.keyword.Bluemix_notm}} separa os componentes que controlam o estado das interações (stateful) daqueles que não controlam (stateless). Essa separação permite que o {{site.data.keyword.Bluemix_notm}} mova apps flexivelmente, conforme necessário, para obter escalabilidade e resiliência.
 
-Pode haver uma ou mais
-instâncias em execução para seu app. Para várias instâncias de um único app, o app é transferido por upload somente uma vez. No entanto, o {{site.data.keyword.Bluemix_notm}} implementa o número solicitado de instâncias do app e as distribui entre quantos servidores virtuais for possível.
+É possível ter uma ou mais instâncias em execução para o seu app. Para múltiplas instâncias de um único app, o app é transferido por upload somente uma vez. No entanto, o {{site.data.keyword.Bluemix_notm}} implementa o número solicitado de instâncias do app e as distribui entre quantos servidores virtuais for possível.
 
 Deve-se salvar todos os dados persistentes em um armazenamento de dados stateful que esteja fora de seu app, tal como em um dos serviços de armazenamento de dados que o {{site.data.keyword.Bluemix_notm}} fornece. Como qualquer coisa armazenada em cache na memória ou no disco pode ainda não estar disponível após uma reinicialização, é possível usar o espaço de memória ou o sistema de arquivos de uma única instância do {{site.data.keyword.Bluemix_notm}} como um cache de breve transação única. Com uma configuração de instância única, a solicitação para seu app pode ser interrompida por causa da
 natureza stateless do {{site.data.keyword.Bluemix_notm}}. Uma melhor prática é usar pelo menos três instâncias para cada app para assegurar sua disponibilidade.

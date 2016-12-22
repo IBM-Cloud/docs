@@ -2,8 +2,8 @@
 
 
 copyright:
-  anni: 2016
-ultimo aggiornamento: "23-10-2016"
+  years: 2016
+lastupdated: "2016-10-23"
 ---
 
 {:shortdesc: .shortdesc}
@@ -49,7 +49,7 @@ Puoi utilizzare i servizi mobili {{site.data.keyword.Bluemix_notm}} per incorpor
 
 Il dashboard Servizi fornisce l'accesso ai servizi {{site.data.keyword.Bluemix_notm}} disponibili dai provider {{site.data.keyword.IBM}} e di terze parti. Questi includono i servizi Watson, Internet delle cose, Analytics, Mobile e DevOps:
 
-* Fornisci nuove applicazioni innovative in modo rapido ed economico con solo le funzioni appropriate utilizzando i servizi {{site.data.keyword.IBM_notm}} DevOps e {{site.data.keyword.Bluemix_notm}} Garage Method. Quando adotti le procedure DevOps e crei una cultura di innovazione e agilità, puoi utilizzare le esercitazioni interattive e cambiare direzione in risposta al mercato.  
+* Fornisci nuove applicazioni innovative in modo rapido ed economico con solo le funzioni appropriate utilizzando i servizi {{site.data.keyword.IBM_notm}} DevOps e {{site.data.keyword.Bluemix_notm}} Garage Method. Quando adotti le procedure DevOps e crei una cultura di innovazione e agilità, puoi utilizzare le esercitazioni interattive e cambiare direzione in risposta al mercato.
 * Blockchain è una tecnologia ledger distribuita peer-to-peer per una nuova generazione di applicazioni transazionali che stabilisce sicurezza, responsabilità e trasparenza durante l'ottimizzazione dei processi di business.  
 * Watson conferisce alle tue applicazioni la potenza del calcolo cognitivo con una suite di completa di API vocali, visive e di dati.  Risolvi i tuoi problemi di business più complessi distribuendo una piattaforma cognitiva con i servizi Watson.
 * {{site.data.keyword.IBM_notm}} ti consente di fare di più con i potenti database cloud e servizi Data & Analytics integrati. 
@@ -172,8 +172,7 @@ seguenti regioni e i seguenti prefissi di regione.
 | Regione Stati Uniti Sud | Dallas, Stati Uniti | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | Regione Regno Unito | Londra, Inghilterra | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Regione Sydney | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-
-*Tabella 1. Elenco di regioni {{site.data.keyword.Bluemix_notm}}*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 
 ### Resilienza {{site.data.keyword.Bluemix_notm}}
