@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # 開始使用 {{site.data.keyword.composeForRethinkDB}}
 {: #getting-started-with-compose-for-rethinkdb}
-
-前次更新：2016 年 9 月 20 日
-{: .last-updated}
 
 {{site.data.keyword.composeForRethinkDB}} 使用整合式管理及探索主控台來提供 JSON 文件型分散式資料庫。RethinkDB 所使用的 ReQL 查詢語言是根據功能鏈結所建置，且位於 Java、JavaScript、Python 及 Ruby 的用戶端程式庫中。使用 ReQL，可以跨叢集節點使用 RethinkDB 伺服器端特性（例如分散式結合及子查詢）。RethinkDB 也支援次要索引，以獲得較佳的讀取查詢效能。RethinkDB 的最強大特性 (changefeeds) 容許將許多 ReQL 查詢轉換成即時資訊來源。
 {:shortdesc}
@@ -44,6 +41,7 @@ copyright:
 `deployment_id`|Compose 內所建立之服務的內部 ID。
 `db_type`|服務所提供的資料庫類型；在此情況下，為 `rethink`。
 `name`|資料庫部署名稱。
+{: caption="Table 1. {{site.data.keyword.composeForRethinkDB}} credentials" caption-side="top"}
 
 # 相關鏈結
 {: #rellinks}

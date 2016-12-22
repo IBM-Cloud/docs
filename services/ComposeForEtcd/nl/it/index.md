@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Introduzione a {{site.data.keyword.composeForEtcd}}
 {: #getting-started-with-compose-for-etcd}
-
-Ultimo aggiornamento: 20 settembre 2016
-{: .last-updated}
 
 etcd è un archivio di valore-chiave che ospita i dati sempre corretti di cui hai bisogno per coordinare e gestire il tuo cluster server per la gestione della configurazione del server distribuito. etcd utilizza l'algoritmo coseno RAFT per assicurare la consistenza dei dati nel tuo cluster. Forza l'ordine in cui vengono eseguite le operazioni sui dati in modo che ogni nodo nel cluster arrivi allo stesso risultato con la stessa modalità. {{site.data.keyword.composeForEtcd_full}} aggiunge backup automatici dei tuoi dati di configurazione archiviati in etcd. Un'interfaccia di amministrazione intuitiva che ti permette di monitorare, ridimensionare e gestire la tua distribuzione con facilità.
 {:shortdesc}
@@ -43,6 +40,7 @@ Nome campo|Descrizione
 `db_type`|Il tipo di database offerto dal servizio; in questo caso `etcd`.
 `name`|Il nome di distribuzione del database.
 `uri`|L'URI da utilizzare durante il collegamento al servizio. `uri` include lo schema (`amqps:), il nome utente e la password amministratore, il nome host del server, il numero di porta a cui collegarsi e il nome `vhost.
+{: caption="Table 1. {{site.data.keyword.composeForEtcd}} credentials" caption-side="top"}
 
 # Link correlati
 {: #rellinks}

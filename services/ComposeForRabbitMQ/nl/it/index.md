@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Introduzione a {{site.data.keyword.composeForRabbitMQ}}
 {: #getting-started-with-compose-for-rabbitmq}
-
-Ultimo aggiornamento: 20 settembre 2016
-{: .last-updated}
 
 RabbitMQ gestisce in modo asincrono i messaggi tra le tue applicazioni e i database, abilitando la separazione dei livelli dati e applicazione. RabbitMQ consente agli sviluppatori di instradare, tracciare ed eseguire query dei messaggi con livelli di persistenza personalizzabili, impostazioni di fornitura e pubblicazione confermata. Utilizzando {{site.data.keyword.composeForRabbitMQ_full}}, ottieni l'accesso all'interfaccia di gestione di facile utilizzo con un host per la gestione delle funzioni come il monitoraggio della distribuzione, il ridimensionamento facendo clic su un pulsante, la configurazione utente e l'accesso al file di log.
 {:shortdesc}
@@ -49,6 +46,7 @@ Nome campo|Descrizione
 `deployment_id`|Un identificativo interno per il servizio come creato in Compose.
 `db_type`|Il tipo di database offerto dal servizio; in questo caso `rabbitmq`.
 `name`|Il nome di distribuzione del database.
+{: caption="Table 1. {{site.data.keyword.composeForRabbitMQ}} credentials" caption-side="top"}
 
 # Link correlati
 {: #rellinks}

@@ -1,7 +1,8 @@
 ---
 
-copyright: anos: 2016
-
+copyright:
+  years: 2016
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ copyright: anos: 2016
 
 # Introdução ao Compose for MongoDB
 {: #getting-started-with-compose-for-mongodb}
-
-Última atualização: 20 de setembro de 2016
-{: .last-updated}
 
 O {{site.data.keyword.composeForMongoDB_full}} usa indexação e
 consulta poderosas, agregação e amplo suporte a driver do MongoDB que fizeram dele
@@ -42,7 +40,7 @@ uma instância do {{site.data.keyword.composeForMongoDB}}](https://console.ng.bl
    Ao criar uma instância do serviço, assegure-se de escolher um nome para seu
 serviço e um nome de credencial. Deixe o serviço desvinculado; é possível conectar um
 aplicativo ao seu serviço mais tarde usando as credenciais que são fornecidas quando o
-serviço é provisionado. Os diversos valores de credenciais são listados na seção
+serviço é provisionado.  Os diversos valores de credenciais são listados na seção
 *Credenciais disponíveis*.
 
 2. Conecte-se ao seu serviço do {{site.data.keyword.composeForMongoDB}}.
@@ -69,11 +67,11 @@ SSL.
 `uri_cli`|Uma linha de comando shell `mongo` que se conecta à instância de banco de dados.
 `ca_certificate_base64`|Um certificado autoassinado que é usado para
 confirmar se um app está se conectando ao servidor apropriado. O certificado é codificado
-em base64. Deve-se decodificar a chave antes de usá-la, conforme mostrado no
-app de amostra.
-`deployment_id`|Um identificador interno para o serviço conforme criado no Compose.
+em base64. Deve-se decodificar a chave antes de usá-la, conforme
+mostrado no aplicativo de amostra. `deployment_id`|Um identificador interno para o serviço conforme criado no Compose.
 `db_type`|O tipo de banco de dados que é oferecido pelo serviço: nesse caso, `mongodb`.
 `name`|O nome da implementação do banco de dados.
+{: caption="Table 1. {{site.data.keyword.composeForMongoDB}} credentials" caption-side="top"}
 
 # Links Relacionados
 {: #rellinks}

@@ -1,7 +1,8 @@
 ---
 
-copyright: anos: 2016
-
+copyright:
+  years: 2016
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,10 +14,8 @@ copyright: anos: 2016
 # Introdução ao {{site.data.keyword.composeForRedis}}
 {: #getting-started-with-compose-for-redis}
 
-Última atualização: 20 de setembro de 2016
-{: .last-updated}
-
-O Redis é um armazenamento de valores de chave de software livre, na memória. Os valores no Redis podem ser sequências simples, hashes, listas e conjuntos ou bitmaps poderosos, hyperloglogs e índices geoespaciais. O Redis é ideal como um cache do aplicativo ou armazenamento de dados de resposta rápida. O {{site.data.keyword.composeForRedis_full}} dá a você uma configuração pré-ajustada para alta disponibilidade e persistência no disco, tudo bloqueado com recursos de segurança extras.{:shortdesc}
+O Redis é um armazenamento de valores de chave de software livre, na memória. Os valores no Redis podem ser sequências simples, hashes, listas e conjuntos ou bitmaps poderosos, hyperloglogs e índices geoespaciais. O Redis é ideal como um cache do aplicativo ou armazenamento de dados de resposta rápida. O {{site.data.keyword.composeForRedis_full}} dá a você uma configuração pré-ajustada para alta disponibilidade e persistência no disco, tudo bloqueado com recursos de segurança extras.
+{:shortdesc}
 
 **Nota:** todas as instâncias de serviço do Compose que foram
 provisionadas antes de 14 de setembro de 2016 que ainda estiverem ativas poderão ser
@@ -57,6 +56,7 @@ Campo de nome|Descrição
 `deployment_id`|Um identificador interno para o serviço conforme criado no Compose.
 `db_type`|O tipo de banco de dados que é oferecido pelo serviço; nesse caso, `redis`.
 `name`|O nome da implementação do banco de dados.
+{: caption="Table 1. {{site.data.keyword.composeForRedis}} credentials" caption-side="top"}
 
 # Links Relacionados
 {: #rellinks}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -14,9 +14,6 @@ copyright:
 # Einführung in Compose for MongoDB
 {: #getting-started-with-compose-for-mongodb}
 
-Letzte Aktualisierung: 20. September 2016
-{: .last-updated}
-
 {{site.data.keyword.composeForMongoDB_full}} verwendet die leistungsfähige Indexierung und Abfrage, die Aggregation und die breite Treiberunterstützung von MongoDB, die es zum gefragtesten JSON-Datenspeicher für viele Startup- und etablierte Unternehmen gemacht haben. {{site.data.keyword.composeForMongoDB}} bietet ein einfaches, selbstskalierendes Bereitstellungssystem. Es bietet hohe Verfügbarkeit und Redundanz, automatisierte und anforderungsbasierte dauerhaft aktive Sicherungsfunktionen, Überwachungstools, Integration in Warnsysteme, Ansichten für die Leistungsanalyse und vieles mehr, alles in einer übersichtlichen, leicht zu bedienenden Benutzerschnittstelle.
 {:shortdesc}
 
@@ -26,7 +23,7 @@ Führen Sie zum Einstieg in {{site.data.keyword.composeForMongoDB}} die folgende
 
 1. [Erstellen Sie eine {{site.data.keyword.composeForMongoDB}}-Instanz](https://console.ng.bluemix.net/catalog/services/compose-for-mongodb/).
 
-   Wenn Sie eine Instanz des Service erstellen, achten Sie darauf, sowohl einen Namen für den Service als auch einen Namen für den Berechtigungsnachweis auszuwählen. Lassen Sie den Service ungebunden; Sie können später eine Anwendung mit Ihrem Service verbinden, indem Sie die Berechtigungsnachweise verwenden, die bei der Bereitstellung des Service angegeben wurden. Die verschiedenen Werte für die Berechtigungsnachweise sind im Abschnitt *Verfügbare Berechtigungsnachweise* aufgeführt.
+   Wenn Sie eine Instanz des Service erstellen, achten Sie darauf, sowohl einen Namen für den Service als auch einen Namen für den Berechtigungsnachweis auszuwählen. Lassen Sie den Service ungebunden; Sie können später eine Anwendung mit Ihrem Service verbinden, indem Sie die Berechtigungsnachweise verwenden, die bei der Bereitstellung des Service angegeben wurden.  Die verschiedenen Werte für die Berechtigungsnachweise sind im Abschnitt *Verfügbare Berechtigungsnachweise* aufgeführt.
 
 2. Stellen Sie eine Verbindung zu Ihrem {{site.data.keyword.composeForMongoDB}}-Service her.
 
@@ -41,10 +38,11 @@ Feldname|Beschreibung
 ----------|-----------
 `uri`|Der URI, der bei der Verbindungsherstellung zum Service verwendet werden soll. `uri` enthält das Schema (`mongodb:`), Administrator-Benutzernamen und Kennwort, den Hostnamen des Servers, die Nummer des Ports, zu dem die Verbindung hergestellt werden soll, den Datenbanknamen sowie `?ssl=true` zur Ermöglichung von SSL-Verbindungen.
 `uri_cli`|Eine `mongo`-Shellbefehlszeile, die eine Verbindung zur Datenbankinstanz herstellt.
-`ca_certificate_base64`|Ein selbst signiertes Zertifikat, mit dem bestätigt wird, dass eine App eine Verbindung zum geeigneten Server herstellt. Das Zertifikat ist base64-codiert. Vor seiner Verwendung muss es decodiert werden, wie in der Beispiel-App gezeigt.
+`ca_certificate_base64`|Ein selbst signiertes Zertifikat, mit dem bestätigt wird, dass eine App eine Verbindung zum geeigneten Server herstellt. Das Zertifikat ist base64-codiert. Vor seiner Verwendung muss der Schlüssel decodiert werden, wie in der Beispiel-App gezeigt.
 `deployment_id`|Eine interne ID für den Service, wie in Compose erstellt.
 `db_type`|Der Datenbanktyp, der vom Service angeboten wird, in diesem Fall `mongodb`.
 `name`|Der Name der Datenbankimplementierung.
+{: caption="Table 1. {{site.data.keyword.composeForMongoDB}} - Berechtigungsnachweise" caption-side="top"}
 
 # Zugehörige Links
 {: #rellinks}

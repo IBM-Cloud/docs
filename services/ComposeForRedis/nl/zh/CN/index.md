@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # 开始使用 {{site.data.keyword.composeForRedis}}
 {: #getting-started-with-compose-for-redis}
-
-上次更新时间：2016 年 9 月 20 日
-{: .last-updated}
 
 Redis 是一个开放式源代码内存中键值存储库。Redis 中的值可以是简单的字符串、散列、列表和集合或强大的位图、hyperloglogs 和地理空间索引。Redis 非常适合作为应用程序高速缓存或快速响应数据存储库。{{site.data.keyword.composeForRedis_full}} 为您提供预调整的配置，以获得高可用性和磁盘上持久性，所有项目都由额外的安全功能锁定。
 {:shortdesc}
@@ -32,7 +29,7 @@ Redis 是一个开放式源代码内存中键值存储库。Redis 中的值可�
 
   要将应用程序连接到服务，请使用随服务一起创建的凭证。样本应用程序会示范如何使用 Node.js 连接到 {{site.data.keyword.composeForRedis}} 服务。
 
-  下载 [compose-redis-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-redis-helloworld-nodejs) 样本应用程序，并遵循自述文件中的指示。然后，在 Bluemix 中的应用程序详细信息页面中，单击**查看应用程序**。
+  下载 [compose-redis-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-redis-helloworld-nodejs) 样本应用程序，并遵循自述文件中的指示信息。然后，在 Bluemix 中的应用程序详细信息页面中，单击**查看应用程序**。
 
 ## 可用凭证
 
@@ -43,6 +40,8 @@ Redis 是一个开放式源代码内存中键值存储库。Redis 中的值可�
 `deployment_id`|在 Compose 内创建的服务的内部标识。
 `db_type`|服务所提供的数据库类型；在本例中为 `redis`。
 `name`|数据库部署名称。
+
+{: caption="Table 1. {{site.data.keyword.composeForRedis}} credentials" caption-side="top"}
 
 # 相关链接
 {: #rellinks}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -21,9 +21,6 @@ copyright:
 # 开始使用 {{site.data.keyword.composeForPostgreSQL}}
 {: #getting-started-with-compose-for-postgreSQL}
 
-上次更新时间：2016 年 9 月 20 日
-{: .last-updated}
-
 {{site.data.keyword.composeForPostgreSQL}} 提供高度可定制的强大开放式源代码对象关系数据库。使用 Postgres，开发快速且易于扩展。您可以使用您熟悉的语言进行开发，如 C/C++、Perl、Python、TCL/TK、Delphi/Kylix、VB、PHP、ASP 和 Java。您将获得功能丰富的企业数据库，其支持 JSON，为您提供最佳的 SQL 和 NoSQL 世界。
 {:shortdesc}
 
@@ -39,7 +36,7 @@ copyright:
 
   要将应用程序连接到服务，请使用随服务一起创建的凭证。样本应用程序会示范如何使用 Node.js 连接到 {{site.data.keyword.composeForPostgreSQL}} 服务。
 
-  下载 [compose-postgresql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-postgresql-helloworld-nodejs) 样本应用程序，并遵循自述文件中的指示。然后，在 Bluemix 中的应用程序详细信息页面中，单击**查看应用程序**，以查看*示例*表的内容。
+  下载 [compose-postgresql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-postgresql-helloworld-nodejs) 样本应用程序，并遵循自述文件中的指示信息。然后，在 Bluemix 中的应用程序详细信息页面中，单击**查看应用程序**，以查看*示例*表的内容。
 
 ## 可用凭证
 
@@ -51,6 +48,8 @@ copyright:
 `deployment_id`|在 Compose 内创建的服务的内部标识。
 `db_type`|服务所提供的数据库类型；在本例中为 `postgresql`。
 `name`|数据库部署名称。
+
+{: caption="Table 1. {{site.data.keyword.composeForPostgreSQL}} credentials" caption-side="top"}
 
 # 相关链接
 {: #rellinks}

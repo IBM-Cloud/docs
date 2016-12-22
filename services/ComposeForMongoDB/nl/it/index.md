@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Introduzione a Compose for MongoDB
 {: #getting-started-with-compose-for-mongodb}
-
-Ultimo aggiornamento: 20 settembre 2016
-{: .last-updated}
 
 {{site.data.keyword.composeForMongoDB_full}} utilizza l'aggregazione e l'indicizzazione e l'esecuzione di query potenti e un ampio supporto driver di MongoDB che è stato l'inizio dell'archiviazione dati JSON per molte nuove imprese e aziende. {{site.data.keyword.composeForMongoDB}} offre un sistema di distribuzione con ridimensionamento automatico facile da utilizzare. Offre disponibilità e ridondanza, backup no-stop in locale e automatizzati, strumenti di monitoraggio, integrazione nei sistemi di avviso, prestazioni delle viste di analisi e altro ancora, tutto con un'interfaccia utente semplice e ordinata.
 {:shortdesc}
@@ -32,7 +29,7 @@ Completa questa procedura per iniziare ad utilizzare {{site.data.keyword.compose
 
    Per collegare un'applicazione al tuo servizio, utilizza le credenziali create insieme al servizio. L'applicazione di esempio illustra come utilizzare Node.js per il collegamento a un servizio {{site.data.keyword.composeForMongoDB}}.
 
-   Scarica l'applicazione di esempio [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs) e segui le istruzioni nel file readme. In seguito, nella pagina dei dettagli della tua applicazione in Bluemix, fai clic su **Visualizza applicazione**. 
+   Scarica l'applicazione di esempio [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs) e segui le istruzioni nel file readme. In seguito, nella pagina dei dettagli della tua applicazione in Bluemix, fai clic su **Visualizza applicazione**.
 
 
 ## Credenziali disponibili
@@ -45,6 +42,7 @@ Nome campo|Descrizione
 `deployment_id`|Un identificativo interno per il servizio come creato in Compose.
 `db_type`|Il tipo di database offerto dal servizio: in questo caso, `mongodb`.
 `name`|Il nome di distribuzione del database.
+{: caption="Table 1. {{site.data.keyword.composeForMongoDB}} credentials" caption-side="top"}
 
 # Link correlati
 {: #rellinks}

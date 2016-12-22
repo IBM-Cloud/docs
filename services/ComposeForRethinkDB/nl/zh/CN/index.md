@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # 开始使用 {{site.data.keyword.composeForRethinkDB}}
 {: #getting-started-with-compose-for-rethinkdb}
-
-上次更新时间：2016 年 9 月 20 日
-{: .last-updated}
 
 {{site.data.keyword.composeForRethinkDB}} 为您提供基于 JSON 文档的分布式数据库，以及集成的管理和探究控制台。RethinkDB 使用 ReQL 查询语言，该语言围绕函数链接进行构建，在客户机库中提供，以供 Java、JavaScript、Python 和 Ruby 使用。通过 ReQL，可以使用 RethinkDB 服务器端功能，如跨集群节点进行分布式联接和子查询。RethinkDB 还支持次要索引，以获得更佳的读取查询性能。RethinkDB 最强大的功能是 Changefeeds，可使许多 ReQL 查询转换为实时反馈。
 {:shortdesc}
@@ -32,7 +29,7 @@ copyright:
 
    要将应用程序连接到服务，请使用随服务一起创建的凭证。样本应用程序会示范如何使用 Node.js 连接到 {{site.data.keyword.composeForRethinkDB}} 服务。
 
-   下载 [compose-rethinkdb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-rethinkdb-helloworld-nodejs) 样本应用程序，并遵循自述文件中的指示。然后，在 Bluemix 中的应用程序详细信息页面中，单击**查看应用程序**。
+   下载 [compose-rethinkdb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-rethinkdb-helloworld-nodejs) 样本应用程序，并遵循自述文件中的指示信息。然后，在 Bluemix 中的应用程序详细信息页面中，单击**查看应用程序**。
 
 ## 可用凭证
 
@@ -44,6 +41,8 @@ copyright:
 `deployment_id`|在 Compose 内创建的服务的内部标识。
 `db_type`|服务所提供的数据库类型；在本例中为 `rethink`。
 `name`|数据库部署名称。
+
+{: caption="Table 1. {{site.data.keyword.composeForRethinkDB}} credentials" caption-side="top"}
 
 # 相关链接
 {: #rellinks}

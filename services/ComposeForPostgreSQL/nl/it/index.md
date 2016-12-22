@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -20,9 +20,6 @@ copyright:
 
 # Introduzione a {{site.data.keyword.composeForPostgreSQL}}
 {: #getting-started-with-compose-for-postgreSQL}
-
-Ultimo aggiornamento: 20 settembre 2016
-{: .last-updated}
 
 {{site.data.keyword.composeForPostgreSQL}} fornisce un database correlato all'oggetto open source potente che è altamente personalizzabile. Con Postgres, lo sviluppo è veloce e facilmente scalabile. Puoi sviluppare in un linguaggio che trovi confortabile, come ad esempio C/C++, Perl, Python, TCL/TK, Delphi/Kylix, VB, PHP, ASP e Java. Disponi di un database aziendale ricco di funzioni con il supporto JSON, che ti fornisce il meglio dei mondi SQL e NoSQL.
 {:shortdesc}
@@ -51,6 +48,7 @@ Nome campo|Descrizione
 `deployment_id`|Un identificativo interno per il servizio come creato in Compose.
 `db_type`|Il tipo di database offerto dal servizio; in questo caso `postgresql`.
 `name`|Il nome di distribuzione del database.
+{: caption="Table 1. {{site.data.keyword.composeForPostgreSQL}} credentials" caption-side="top"}
 
 # Link correlati
 {: #rellinks}
