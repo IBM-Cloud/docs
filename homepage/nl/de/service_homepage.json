@@ -17,7 +17,6 @@
     "href": "cfapps/boilerplates.html",
     "category_id": "Compute"
   }, {
-    "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
     "category_id": "Compute"
