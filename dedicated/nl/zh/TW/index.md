@@ -502,7 +502,9 @@ IBM 會針對「狀態」頁面上每一個維護時間範圍所計劃的變更�
 </ul>
 
 # 相關鏈結
+{: rellinks}
 ## 一般
+{: general}
 * [探索：{{site.data.keyword.Bluemix_notm}} 專用](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [{{site.data.keyword.Bluemix_notm}} 新增功能](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 名詞解釋](/docs/overview/glossary/index.html)
