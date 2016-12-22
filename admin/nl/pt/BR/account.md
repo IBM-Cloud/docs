@@ -4,8 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-10-20"  
+  years: 2015, 2016 lastupdated: "2016-12-05"  
 
 
 ---
@@ -39,9 +38,6 @@ organização na IBM, ou para obter mais informações sobre o processo, consult
 Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Um patrocinador IBM, como um defensor da oferta
 ou do cliente, é necessário quando você solicita o registro de IDs federados.
 
-Tabela 1. Métodos de inscrição
-{: #account_table1}
-
 | Métodos de inscrição | Detalhes |    
 |-----------------|---------|
 |ID IBM existente | Se você já tiver um ID IBM, inscreva-se para o {{site.data.keyword.Bluemix_notm}} com suas credenciais existentes que você usa para outros produtos e serviços IBM. É necessário inserir um número de telefone ao se inscrever. |
@@ -50,6 +46,7 @@ Tabela 1. Métodos de inscrição
 do domínio de sua empresa na IBM, será possível se inscrever para o
 {{site.data.keyword.Bluemix_notm}} usando as credenciais que você já usa para
 login de sua empresa. É necessário inserir um número de telefone ao se inscrever. |
+{:caption="Table 1. Sign up methods" caption-side="top"}
 
 ## Configurando Notificações
 {: #notifications}

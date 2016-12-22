@@ -288,7 +288,7 @@ dettagli di configurazione LDAP.
 ### Aggiornamenti di sistema in sospeso
 
 Nella sezione Aggiornamenti, puoi visualizzare il numero di notifiche di
-aggiornamenti in sospeso che richiedono un tuo intervento. Ci sono due tipi che potresti vedere: 
+aggiornamenti in sospeso che richiedono un tuo intervento. Ci sono due tipi che potresti vedere:
 
 <dl>
 <dt>Aggiornamenti che non comportano interruzioni del servizio</dt>
@@ -593,7 +593,7 @@ Quando implementi il broker dei servizi, nella risposta JSON di <code>GET /v2/ca
             "id":"cool-service-plan-id",
             "metadata":{
                "bullets":[
-                  "1 GB per istanza. 10 GB Max per istanza."
+                  "Minimo 1 GB per istanza. Massimo 10 GB per istanza."
                ],
                "costs":[
                   {
@@ -1304,14 +1304,14 @@ Utilizzando i seguenti parametri della query, puoi raccogliere le metriche per i
 <dt class="pt dlterm">OraInizio</dt>
 <dd class="pd">Il primo punto nel tempo da cui vengono restituiti i dati. Se non viene specificata una OraInizio, viene incluso il primo punto dati disponibile. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraInizio di 14.</dd>
 <dt class="pt dlterm">OraFine</dt>
-<dd class="pd">L'ultimo  punto nel tempo da cui vengono restituiti i dati. Se non viene specificata alcuna OraFine, viene utilizzato il punto dati più recente. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraFine di 17. </dd>
-<dt class="pt dlterm">ordinamento </dt>
+<dd class="pd">L'ultimo  punto nel tempo da cui vengono restituiti i dati. Se non viene specificata alcuna OraFine, viene utilizzato il punto dati più recente. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraFine di 17.</dd>
+<dt class="pt dlterm">ordinamento</dt>
 <dd class="pd">L'ordinamento in cui vengono restituiti i dati. I valori validi sono 'asc' (crescente) e 'desc' (decrescente). Il valore predefinito è decrescente, che restituisce prima i dati più recenti. </dd>
 </dl>
 
 ### Formato dei dati delle metriche di ambiente
 
-Le seguenti sezioni forniscono il formato dei dati. 
+Le seguenti sezioni forniscono il formato dei dati.
 
  * Per raccogliere i dati registrati sul tuo utilizzo della memoria, utilizza il seguente formato dei dati:
  
@@ -1364,7 +1364,7 @@ Le seguenti sezioni forniscono il formato dei dati.
 ```
 {: screen}
 
- * Per raccogliere i dati registrati sul tuo utilizzo del disco, utilizza il seguente formato dei dati: 
+ * Per raccogliere i dati registrati sul tuo utilizzo del disco, utilizza il seguente formato dei dati:
  
 ```
 {
@@ -1415,7 +1415,7 @@ Le seguenti sezioni forniscono il formato dei dati.
 ```
 {: screen}
 
- * Per raccogliere i dati registrati sul tuo utilizzo della CPU, utilizza il seguente formato dei dati: 
+ * Per raccogliere i dati registrati sul tuo utilizzo della CPU, utilizza il seguente formato dei dati:
  
 ```
 {
@@ -1461,7 +1461,7 @@ Le seguenti sezioni forniscono il formato dei dati.
 ```
 {: screen}
 
- * Per raccogliere i dati registrati sulla tua rete, utilizza il seguente formato dei dati: 
+ * Per raccogliere i dati registrati sulla tua rete, utilizza il seguente formato dei dati:
  
 ```
 {
@@ -1513,7 +1513,7 @@ Le seguenti sezioni forniscono il formato dei dati.
 ```
 {: screen}
 
-* Per raccogliere i dati registrati sulle tue applicazioni, utilizza il seguente formato dei dati: 
+* Per raccogliere i dati registrati sulle tue applicazioni, utilizza il seguente formato dei dati:
  
 ```
 {
@@ -1539,7 +1539,7 @@ Le seguenti sezioni forniscono il formato dei dati.
 ```
 {: screen}
 
-## Raccolta delle metriche sulle tue applicazioni 
+## Raccolta delle metriche sulle tue applicazioni
 
 I dati sono registrati per tutte le applicazioni approssimativamente ogni ora. Una richiesta per una metrica particolare restituisce le informazioni per tutte le applicazioni in ogni esempio di dati nel periodo di tempo che specifichi, ordinate in modo decrescente per la metrica richiesta. Ad esempio, la richiesta di tutte le applicazioni per la CPU in un periodo di tempo di 6 ore in un ambiente con 200 applicazioni restituisce 1200 record, 200 alla volta.
 
@@ -1547,14 +1547,14 @@ Per ridurre la quantità di informazioni restituite per ogni esempio di dati nel
 
 ### Endpoint delle applicazioni 
 
-Puoi utilizzare i seguenti endpoint per richiamare questo comando API: 
+Puoi utilizzare i seguenti endpoint per richiamare questo comando API:
 * /api/v1/app/cpu/physical 
 * /api/v1/app/memory/physical
 * /api/v1/app/memory/reserved
 * /api/v1/app/disk/physical
 * /api/v1/app/disk/reserved
 
-### Parametri della query delle applicazioni 
+### Parametri della query delle applicazioni
  
 Utilizza i seguenti parametri della query per raccogliere le metriche per le tue applicazioni:
 
@@ -1562,13 +1562,13 @@ Utilizza i seguenti parametri della query per raccogliere le metriche per le tue
 <dt class="pt dlterm">OraInizio</dt>
 <dd class="pd">Il primo punto nel tempo da cui vengono restituiti i dati. Se non viene specificata una OraInizio, viene incluso il primo punto dati disponibile. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraInizio di 14.</dd>
 <dt class="pt dlterm">OraFine</dt>
-<dd class="pd">L'ultimo  punto nel tempo da cui vengono restituiti i dati. Se non viene specificata alcuna OraFine, viene utilizzato il punto dati più recente. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraFine di 17. </dd>
-<dt class="pt dlterm">conteggio </dt>
+<dd class="pd">L'ultimo  punto nel tempo da cui vengono restituiti i dati. Se non viene specificata alcuna OraFine, viene utilizzato il punto dati più recente. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraFine di 17.</dd>
+<dt class="pt dlterm">conteggio</dt>
 <dd class="pd">Il numero di record da restituire in ogni esempio di dati.
 </dd>
 </dl>
 
-### Formato della risposta delle applicazioni 
+### Formato della risposta delle applicazioni
 
 ```
 {

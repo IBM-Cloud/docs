@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-01"
  
 
 ---
@@ -21,6 +21,9 @@ lastupdated: "2016-11-03"
 {{site.data.keyword.Bluemix_notm}} 평가판 계정을 보유하고 있으며 인프라 대시보드에 액세스하려는 경우 {{site.data.keyword.Bluemix_notm}} 종량과금제 계정으로 업그레이드해야 합니다. 또한 평가판 계정에서 사용할 수 없는 다른 유료 리소스를 사용하려는 경우에도 업그레이드해야 합니다. 그렇지 않으면 평가판 계정이 완료됩니다. 
 
 계정을 연결하여 기존 {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정을 통합할 수 있습니다. 계정을 연결하면, {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 리소스 모두가 {{site.data.keyword.Bluemix_notm}}를 통해 청구됩니다.
+
+
+**주의:** {{site.data.keyword.Bluemix_notm}} 구독 계정을 SoftLayer 계정과 연결할 수 없습니다. 인프라 대시보드에 액세스하려면 SoftLayer 계정과 자동으로 연결되는 두 번째 계정인 종량과금제 계정을 작성해야 합니다. {{site.data.keyword.Bluemix_notm}} 계정에 대해 한 개, 즉 두 개의 송장을 수신합니다. 인프라 리소스에 개별 종량과금제 계정에서 송장을 보내는 경우에도, 구독 계정의 앱과 서비스에 자원을 사용할 수 있습니다. 예를 들어, 구독 계정에서 Watson 서비스를 활성화하는 경우, 서비스 신임 정보를 복사하여 종량과금제 계정에서 제공되는 베어메탈 애플리케이션에 추가할 수 있습니다.
 {:shortdesc}
 
 ## {{site.data.keyword.Bluemix_notm}} 종량과금제 계정으로 업그레이드
@@ -67,13 +70,6 @@ SoftLayer 계정을 보유 중이며 {{site.data.keyword.Bluemix_notm}} 계정�
 
 {{site.data.keyword.Bluemix_notm}} 인프라 오퍼링은 3계층 네트워크, 퍼블릭, 사설 및 관리 트래픽 세분화에 연결됩니다. 고객의 {{site.data.keyword.Bluemix_notm}} 계정에 대한 인프라 오퍼링은 무료로 사설 네트워크에서 데이터를 서로 전송할 수 있습니다.
 베어메탈 서버, 가상 서버 및 클라우드 스토리지와 같은 인프라 오퍼링은 퍼블릭 네트워크를 통해 {{site.data.keyword.Bluemix_notm}} 카탈로그(예: Watson 서비스, 컨테이너 또는 런타임)의 다른 애플리케이션 및 서비스에 연결합니다. 두 유형의 오퍼링 간의 데이터 전송은 표준 퍼블릭 네트워크 대역폭 비율로 측정되고 청구됩니다. 
-
-## 계정 연결 시의 {{site.data.keyword.Bluemix_notm}} 사용에 대한 크레딧
-{: #slcredit}
-
-SoftLayer 계정에서 {{site.data.keyword.Bluemix_notm}} 계정을 연결하는 경우 {{site.data.keyword.Bluemix_notm}} 내에서만 사용할 수 있는 $200.00의 크레딧을 받게 됩니다. 크레딧은 계정 연결 이후 30일 내에 사용해야 합니다. 
-
-크레딧 및 만기 날짜를 보는 방법에 대한 정보는 [크레딧 보기](https://console.ng.bluemix.net/docs/pricing/index.html#credits)를 참조하십시오.
 
 ## {{site.data.keyword.Bluemix_notm}}에 SoftLayer 팀 구성원 초대
 {: #invite_users}
@@ -135,7 +131,8 @@ SoftLayer 자산으로 API 기반 퍼블릭 {{site.data.keyword.Bluemix_notm}} �
 
 SoftLayer에서 사용자 앱의 Watson API를 호출하여 이를 보다 개인화함으로써 *Insights 및 코그너티브* 지식을 얻을 수 있습니다. 또는 *데이터 및 분석* 서비스를 사용하여 앱에 대한 고성능 분석을 활용할 수 있습니다. 또는 {{site.data.keyword.Bluemix_notm}}에 관리를 맡길 수 있는 DaaS(Database-as-a-Service)를 선택하십시오. 
 
-{{site.data.keyword.activedeployshort}} 및 {{site.data.keyword.deliverypipeline}} 등의 서비스와 함께 컨테이너를 사용하여 애플리케이션 개발을 현대화하십시오. 그리고 {{site.data.keyword.vpn_short}} 서비스를 사용하여 SoftLayer로 다시 터널링함으로써 사설 네트워크의 컨테이너를 SoftLayer 사설 네트워크에 연결할 수 있습니다. 컴퓨팅 리소스 및 서비스에 대한 모든 사용 비용은 {{site.data.keyword.Bluemix_notm}} 청구서에 반영됩니다.  
+{{site.data.keyword.activedeployshort}} 및 {{site.data.keyword.deliverypipeline}} 등의 서비스와 함께 컨테이너를 사용하여 애플리케이션 개발을 현대화하십시오. SoftLayer와 통신하는 데 {{site.data.keyword.vpn_short}} 서비스를 사용하여 사설 네트워크의 컨테이너와 SoftLayer 사설 네트워크를 연결할 수 있습니다.
+to the SoftLayer private network. 컴퓨팅 리소스 및 서비스에 대한 모든 사용 비용은 {{site.data.keyword.Bluemix_notm}} 청구서에 반영됩니다.  
 
 ### API 기반 {{site.data.keyword.Bluemix_notm}} 서비스
 일부 {{site.data.keyword.Bluemix_notm}} 서비스는 SoftLayer에서 사용될 수 없습니다. 
@@ -182,7 +179,7 @@ SoftLayer에서 사용자 앱의 Watson API를 호출하여 이를 보다 개인
 
 **참고:** 이 서비스의 일부 플랜은 사용 가능하지 않습니다. 종량과금제 계정에 사용되는 플랜만 연결된 계정에서 사용될 수 있습니다. 그러나 별도로 청구되는 별도의 {{site.data.keyword.Bluemix_notm}} 계정이 있으면 이러한 서비스에 대해 임의의 플랜을 사용할 수 있습니다. 
 
-## 계정 연결 시의 {{site.data.keyword.Bluemix_notm}} 사용에 대한 청구
+## 계정 연결 시 {{site.data.keyword.Bluemix_notm}} 사용에 대한 청구
 {: #bill_usage}
 
 {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정을 연결한 이후, 다음 청구 주기는 단일 {{site.data.keyword.Bluemix_notm}} 청구로 부과됩니다.

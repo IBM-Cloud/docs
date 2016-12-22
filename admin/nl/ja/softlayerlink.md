@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-01"
  
 
 ---
@@ -21,6 +21,9 @@ lastupdated: "2016-11-03"
 {{site.data.keyword.Bluemix_notm}} トライアル・アカウントを使用していて、「インフラストラクチャー」ダッシュボードにアクセスする場合、{{site.data.keyword.Bluemix_notm}} 従量課金 (PAYG) アカウントにアップグレードする必要があります。また、トライアル・アカウントでは使用できない、他の課金対象リソースを使用する場合や、トライアル・アカウントが終了した場合にも、アップグレードが必要です。 
 
 既存の {{site.data.keyword.Bluemix_notm}} 請求アカウントと SoftLayer 請求アカウントをリンクして一元化できます。アカウントをリンクすると、{{site.data.keyword.Bluemix_notm}} と SoftLayer の両方のリソースについて {{site.data.keyword.Bluemix_notm}} から請求されるようになります。
+
+
+**重要:** {{site.data.keyword.Bluemix_notm}} サブスクリプション・アカウントを SoftLayer アカウントとリンクすることはできません。「インフラストラクチャー」ダッシュボードにアクセスするには、2 つ目のアカウントとして従量課金アカウントを作成する必要があります。これは自動的に SoftLayer アカウントとリンクされます。これにより、2 通の請求書 ({{site.data.keyword.Bluemix_notm}} アカウントごとに 1 通ずつ) が送付されます。インフラストラクチャー・リソースは別の従量課金アカウントで請求されますが、サブスクリプション・アカウントのアプリやサービスでそのリソースを使用できます。例えば、サブスクリプション・アカウントで Watson サービスを有効化した場合、サービス資格情報をコピーして、従量課金アカウントから調達したベア・メタル・アプリケーションにその資格情報を追加できます。
 {:shortdesc}
 
 ## {{site.data.keyword.Bluemix_notm}} 従量課金 (PAYG) アカウントへのアップグレード
@@ -65,13 +68,6 @@ SoftLayer アカウントがあり、SoftLayer アカウントと {{site.data.ke
 アカウントをリンクすると、SoftLayer グローバル・ヘッダーで**「{{site.data.keyword.Bluemix_notm}} に進む」**リンクが使用可能になります。このリンクをクリックすると、{{site.data.keyword.Bluemix_notm}} ログイン・ページに移動します。また、{{site.data.keyword.Bluemix_notm}} ヘッダーで**「SoftLayer」**リンクが使用可能になっています。このリンクをクリックすると、新規ウィンドウで {{site.data.keyword.slportal}} のホーム・ページに移動します。
 
 {{site.data.keyword.Bluemix_notm}} インフラストラクチャー・オファリングは、3 層のネットワークに接続され、パブリック・トラフィック、プライベート・トラフィック、および管理トラフィックがセグメント化されます。お客様の {{site.data.keyword.Bluemix_notm}} アカウントのインフラストラクチャー・オファリングは、無料で、プライベート・ネットワークを介して相互にデータを転送できます。ベアメタル・サーバー、仮想サーバー、およびクラウド・ストレージなどのインフラストラクチャー・オファリングは、パブリック・ネットワークを介して、{{site.data.keyword.Bluemix_notm}} カタログ内の他のアプリケーションおよびサービス (Watson サービス、コンテナー、ランタイムなど) に接続します。そのような 2 つのタイプのオファリング間で転送されるデータは、計測され、標準パブリック・ネットワーク帯域幅レートで課金されます。
-
-## アカウントがリンクされている場合の {{site.data.keyword.Bluemix_notm}} 使用量に対するクレジット
-{: #slcredit}
-
-SoftLayer アカウントから {{site.data.keyword.Bluemix_notm}} アカウントをリンクした場合、{{site.data.keyword.Bluemix_notm}} 内でのみ使用可能な $200.00 のクレジットを受け取ります。このクレジットは、アカウントをリンクしてから 30 日以内に使用する必要があります。
-
-クレジットおよび有効期限の表示方法については、『[クレジットの表示](https://console.ng.bluemix.net/docs/pricing/index.html#credits)』を参照してください。
 
 ## {{site.data.keyword.Bluemix_notm}} への SoftLayer チーム・メンバーの招待
 {: #invite_users}
@@ -134,7 +130,7 @@ SoftLayer 資産で API ベースの公開 {{site.data.keyword.Bluemix_notm}} �
 
 SoftLayer のアプリから Watson API を呼び出して*洞察およびコグニティブ* の知識を得ることで、アプリをさらにパーソナライズできます。あるいは、*データおよび分析* サービスを使用して、アプリでハイパフォーマンス分析を利用できます。あるいは、DaaS (Database-as-a-Service) を選択し、管理を {{site.data.keyword.Bluemix_notm}} に任せることができます。
 
-{{site.data.keyword.activedeployshort}} や {{site.data.keyword.deliverypipeline}} などのサービスとともにコンテナーを使用することで、アプリケーション開発を最新化できます。そうすると、{{site.data.keyword.vpn_short}} サービスを使用して SoftLayer にトンネルで戻し、プライベート・ネットワーク内のコンテナーを SoftLayer プライベート・ネットワークに接続できます。計算リソースおよびサービスの使用量に対するすべての課金は、{{site.data.keyword.Bluemix_notm}} 請求に反映されます。 
+{{site.data.keyword.activedeployshort}} や {{site.data.keyword.deliverypipeline}} などのサービスとともにコンテナーを使用することで、アプリケーション開発を最新化できます。これにより、{{site.data.keyword.vpn_short}} サービスを使用して SoftLayer と通信し、プライベート・ネットワーク内のコンテナーを SoftLayer プライベート・ネットワークに接続できるようになります。計算リソースおよびサービスの使用量に対するすべての課金は、{{site.data.keyword.Bluemix_notm}} 請求に反映されます。 
 
 ### API ベースの {{site.data.keyword.Bluemix_notm}} サービス
 一部の {{site.data.keyword.Bluemix_notm}} サービスは、SoftLayer で使用できません。以下のサービスは、アプリケーション・コードを使用して実行するようにセットアップできます。

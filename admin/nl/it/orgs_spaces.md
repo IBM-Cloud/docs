@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-10-20"  
+lastupdated: "2016-12-05"  
 
 
 ---
@@ -161,19 +161,28 @@ Per elencare i membri per uno specifico spazio, completa la seguente procedura:
 ## Gestione della quota
 {: #managequota}
 
-In qualità di proprietario dell'account o di gestore dell'organizzazione, puoi visualizzare la quota assegnata e utilizzata per la tua organizzazione. La quota rappresenta i limiti di risorse per l'organizzazione che viene assegnata quando l'organizzazione viene creata. Applicazioni o servizi in uno spazio dell'organizzazione contribuiscono tutti
-all'utilizzo della quota.
+In qualità di proprietario dell'account o di gestore dell'organizzazione {{site.data.keyword.Bluemix_notm}}, puoi visualizzare la quota utilizzata e assegnata per un'organizzazione. La quota rappresenta i limiti di risorse per l'organizzazione, che viene assegnata quando l'organizzazione viene creata. A seconda che si disponga di un account di prova o di un account fatturabile, le risorse disponibili per un'organizzazione sono diverse. Applicazioni o servizi in uno spazio all'interno dell'organizzazione contribuiscono tutti all'utilizzo della quota assegnata.
 
-Per visualizzare la quota per la tua organizzazione, completa la seguente procedura:
+Per visualizzare la quota utilizzata e assegnata per un'organizzazione, completa la seguente procedura:
 
 1. Fai clic sulla pagina **Account** &gt; **Gestisci organizzazioni**.
 2. Identifica l'organizzazione per cui vuoi visualizzare la quota e fai clic su **Visualizza dettagli**.
 3. Fai clic su **Modifica organizzazione**.
-4. Seleziona la scheda **QUOTA**.
+4. Se hai degli spazi definiti in più di un'organizzazione, seleziona la specifica regione che vuoi visualizzare.
+5. Fai clic su **QUOTA**. 
+6. Per impostazione predefinita, si apre la pagina della quota **Cloud Foundry**. Puoi visualizzare i dettagli della quota per le seguenti risorse:
+ * MEMORIA
+ * SERVIZI
+ * PIANO
+ * PREZZO
+7. Fai clic su **Contenitori** per visualizzare l'assegnazione della quota utilizzate e disponibile per i contenitori. L'assegnazione del contenitore varia a seconda del piano prezzi. Puoi visualizzare i dettagli della quota per le seguenti risorse:
+ * MEMORIA
+ * IP PUBBLICO
 
-Per aggiornare la quota per la tua organizzazione, devi aprire un ticket di supporto. Per ulteriori informazioni sull'apertura di
-un ticket di supporto, vedi [Richiesta di assistenza clienti](/docs/support/index.html#contacting-support). Per ulteriori informazioni
-sulla quota per i contenitori, vedi [Quota](/docs/containers/container_planning_org_ov.html##container_planning_quota) nella documentazione dei contenitori.
+**Nota:** i contenitori non sono disponibili nella regione {{site.data.keyword.Bluemix_notm}} Sydney. 
+
+Per ulteriori informazioni sui contenitori, vedi [Quota](/docs/containers/container_planning_org_ov.html#container_planning_quota) nella documentazione dei contenitori.
+Per modificare la quota assegnata a un'organizzazione, devi aprire un ticket di supporto. Per ulteriori informazioni sull'apertura di un ticket di supporto, vedi [Richiesta di assistenza clienti](/docs/support/index.html#contacting-support). 
 
 ## Gestione dei domini
 {: #managedomains}

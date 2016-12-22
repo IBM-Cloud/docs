@@ -490,7 +490,8 @@ Para visualizar o uso por organização, clique em **ADMINISTRAÇÃO &gt; ADMINI
 - Número de rotas que estão atualmente em uso.
 - Gráfico de cota de memória que mostra o quanto da cota está usado e quanto não está atualmente sendo usado.
 - Gráfico de alocação de aplicativos que mostra quais aplicativos estão incluídos na cota de memória usada.
-- Gráfico de uso de aplicativos medido que mostra um relatório trimestral de GB/horas usados por app implementado. É possível selecionar a **Visualização de lista** para ver dados de todos os apps, incluindo a alocação de memória por app e o uso de GB/hora medido para os últimos três meses.
+- Gráfico de uso de aplicativo medido que mostra um relatório trimestral de GB/horas usados por app implementado. É possível selecionar a
+**Visualização de lista** para ver dados para todos os apps, incluindo a alocação de memória por app e o uso de GB/hora medido para os últimos três meses.
 
 Para obter mais informações sobre como visualizar o uso por organização, ajustar planos de cotas e gerenciar suas organizações, consulte [Administrando organizações](../admin/index.html#oc_organizations).
 
@@ -933,7 +934,9 @@ Na seção Lista de organizações, é possível visualizar todas as organizaç�
   - Número de rotas que estão atualmente em uso.
   - Gráfico de cota de memória que mostra o quanto da cota está usado e quanto não está atualmente sendo usado.
   - Gráfico de alocação de aplicativos que mostra quais aplicativos estão incluídos na cota de memória usada.
-  - Gráfico de uso de aplicativos medido que mostra um relatório trimestral de GB/horas usados por app implementado. É possível selecionar a **Visualização de lista** para ver dados de todos os apps, incluindo a alocação de memória por app e o uso de GB/hora medido para os últimos três meses.
+  - Gráfico de uso de aplicativo medido que mostra um relatório trimestral de GB/horas usados por app implementado. É possível selecionar a
+**Visualização de lista** para ver dados para todos os apps, incluindo a alocação de memória por app e o uso de GB/hora medido para os últimos três
+meses.
 
 - Para editar o nome da organização e incluir ou remover os gerenciadores, clique no nome da organização na lista e siga os prompts na tela.
 

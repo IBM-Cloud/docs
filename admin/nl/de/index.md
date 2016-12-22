@@ -319,7 +319,7 @@ Sie können verschiedene Typen von Nutzungsinformationen für Ihre lokale oder d
 
 - Ressourceninformationen wie Plattenspeicher, CPU-Auslastung, Netzauslastung und durchschnittliche Antwortzeiten. Siehe [Ressourcennutzung](index.html#resourceusage).
 - Kontonutzung pro Organisation, zum Beispiel die Anzahl von Laufzeit-Apps mit Nutzung, Gesamtzahl GB-Stunden für Laufzeiten und die Anzahl von Serviceinstanzen mit Nutzung. Siehe [Kontonutzung](index.html#accountusage).
-- Speicherkontingentnutzung für Organisationen, zugeordneter App-Speicher auf der Basis des verwendeten Gesamtspeicherkontingents und Anzeige der GB-Stundennutzung pro App für eine bestimmte Organisation. Sie können außerdem die Kontingentnutzung für alle Organisationen auf der Seite 'Organisationsadministration' im Abschnitt **Kontingentüberwachung** anzeigen. Siehe [Organisationsadministration](../admin/index.html#orgusage).
+- Speicherkontingentnutzung für Organisationen, zugeordneter App-Speicher auf Basis des verwendeten Gesamtspeicherkontingents und Anzeige der GB-Stundennutzung pro App für eine bestimmte Organisation. Sie können außerdem die Kontingentnutzung für alle Organisationen auf der Seite 'Organisationsadministration' im Abschnitt **Kontingentüberwachung** anzeigen. Siehe [Organisationsadministration](../admin/index.html#orgusage).
 
 
 ### Ressourcennutzung
@@ -412,7 +412,7 @@ Zum Anzeigen der Nutzung pro Organisation klicken Sie auf **Verwaltung &gt; Orga
 - Anzahl der Routen, die zurzeit verwendet werden.
 - Speicherkontingentdiagramm, das zeigt, wie viel des Kontingents zurzeit verwendet und wie viel nicht verwendet wird.
 - Diagramm zur Anwendungszuordnung, das zeigt, welche Anwendungen in dem Wert für das genutzte Speicherkontingent enthalten sind.
-- Diagramm zur gemessenen Anwendungsnutzung, das einen dreimonatigen Bericht zu den genutzten GB-Stunden pro bereitgestellter App zeigt. Sie können die **Listenansicht** auswählen, um Daten für alle Apps mit Speicherzuordnung pro App und gemessener GB-Stundennutzung für die vergangenen drei Monate anzuzeigen.
+- Diagramm zur gemessenen Anwendungsnutzung, das einen dreimonatigen Bericht zu den genutzten GB-Stunden pro bereitgestellter App zeigt. Sie können die **Listenansicht** auswählen, um Daten für alle Apps mit Speicherzuordnung pro App und gemessener GB-Stundennutzung für die vergangenen drei Monate anzuzeigen. 
 
 Weitere Informationen zum Anzeigen der Nutzung pro Organisation, zum Anpassen von Kontingentplänen und zum Verwalten der Organisationen finden Sie unter [Organisationen verwalten](../admin/index.html#oc_organizations).
 
@@ -820,7 +820,7 @@ Im Bereich der Organisationsliste werden alle Organisationen in der {{site.data.
   - Anzahl der Routen, die zurzeit verwendet werden.
   - Speicherkontingentdiagramm, das zeigt, wie viel des Kontingents zurzeit verwendet und wie viel nicht verwendet wird.
   - Diagramm zur Anwendungszuordnung, das zeigt, welche Anwendungen in dem Wert für das genutzte Speicherkontingent enthalten sind.
-  - Diagramm zur gemessenen Anwendungsnutzung, das einen dreimonatigen Bericht zu den genutzten GB-Stunden pro bereitgestellter App zeigt. Sie können die **Listenansicht** auswählen, um Daten für alle Apps mit Speicherzuordnung pro App und gemessener GB-Stundennutzung für die vergangenen drei Monate anzuzeigen.
+  - Diagramm zur gemessenen Anwendungsnutzung, das einen dreimonatigen Bericht zu den genutzten GB-Stunden pro bereitgestellter App zeigt. Sie können die **Listenansicht** auswählen, um Daten für alle Apps mit Speicherzuordnung pro App und gemessener GB-Stundennutzung für die vergangenen drei Monate anzuzeigen. 
 
 - Zum Bearbeiten des Namens der Organisation sowie zum Hinzufügen oder Entfernen von Managern klicken Sie auf den Namen der Organisation in der Liste und folgen den Anweisungen in der Anzeige.
 
@@ -829,7 +829,8 @@ Im Bereich der Organisationsliste werden alle Organisationen in der {{site.data.
 
 Sie können Benutzer einzeln oder in Gruppen hinzufügen. Im Allgemeinen werden Benutzer zur {{site.data.keyword.Bluemix_notm}}-Instanz aus dem Benutzerregistry des Unternehmens über das LDAP-Protokoll hinzugefügt (LDAP - Lightweight Directory Access Protocol). Sie können auch Benutzerberechtigungen anzeigen. Wenn Ihnen die Berechtigung **Superuser** zugewiesen ist, können Sie auch Berechtigungen für andere Benutzer festlegen und verwalten. Klicken Sie auf **Verwaltung &gt; Benutzeradministration**.
 
-Auf der Seite für die Benutzerverwaltung werden alle Benutzer für die lokale oder dedizierte Instanz angezeigt. Die Berechtigungen für jeden Benutzer werden über Symbole in der Tabelle angezeigt. Folgende Berechtigungen sind zulässig: None, **Superuser**, **Basic Access**, **Catalog**, **Reports** und **Users**. Für die Berechtigungen **Superuser** und **Basic Access** kann **On** oder **Off** eingestellt werden; die restlichen Berechtigungen werden mithilfe bestimmter Zugriffstypen aktiviert oder inaktiviert, unter anderem durch den Zugriff **Lesen** oder **Schreiben** für die Berechtigung, die durch Symbole angezeigt wird. Beschreibungen der einzelnen Typen und Erläuterungen der Symbole finden Sie in [Berechtigungen](#permissions).
+Auf der Seite für die Benutzerverwaltung werden alle Benutzer für die lokale oder dedizierte Instanz angezeigt. Die Berechtigungen für jeden Benutzer werden über Symbole in der Tabelle angezeigt. Folgende Berechtigungen sind zulässig: None, **Superuser**, **Basic Access**, **Catalog**, **Reports** und **Users**.
+Für die Berechtigungen **Superuser** und **Basic Access** kann **On** oder **Off** eingestellt werden; die restlichen Berechtigungen werden mithilfe bestimmter Zugriffstypen aktiviert oder inaktiviert, unter anderem durch den Zugriff **Lesen** oder **Schreiben** für die Berechtigung, die durch Symbole angezeigt wird. Beschreibungen der einzelnen Typen und Erläuterungen der Symbole finden Sie in [Berechtigungen](#permissions).
 
 ### Mit Benutzern arbeiten
 
@@ -916,7 +917,8 @@ Den Benutzern können die folgenden Berechtigungen mit bestimmten Zugriffsebenen
 ## Benutzer mit der Admin-REST-API verwalten
 {: #usingadminapi}
 
-Sie können die REST-API `Admin` verwenden, um Benutzer für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz hinzuzufügen und zu entfernen. Die Endpunkte und JSON-Antworten der `Admin`-REST-API werden probeweise zu Verfügung gestellt, um Basisoperationen über eine Befehlszeile zu ermöglichen. Die in den vorliegenden Informationen zu den Beispielen enthaltenen Endpunkte und URLs können jederzeit geändert oder entfernt werden.
+Sie können die REST-API `Admin` verwenden, um Benutzer für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz hinzuzufügen und zu entfernen.
+Die Endpunkte und JSON-Antworten der `Admin`-REST-API werden probeweise zu Verfügung gestellt, um Basisoperationen über eine Befehlszeile zu ermöglichen. Die in den vorliegenden Informationen zu den Beispielen enthaltenen Endpunkte und URLs können jederzeit geändert oder entfernt werden.
 
 Die folgenden Tools sind Voraussetzungen für die Verwendung der nachfolgenden Beispiele. Wenn Sie möchten, können Sie auch andere Tools verwenden.
 * cURL für die Eingabe von REST-API-Anforderungen als Befehle. cURL ist ein Dienstprogramm zur freien Verwendung, mit dessen Hilfe Sie über eine Befehlszeilenschnittstelle HTTP-Anforderungen an einen Server senden und Antworten vom Server empfangen können. Sie können cURL von der [cURL Download-Site](http://curl.haxx.se/download.html){: new_window} herunterladen.
@@ -1223,11 +1225,11 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 ## API für Metriken (experimentell)
 {: #envappmetricsapi}
 
-Zur Erfassung von Metriken über Ihre Umgebung oder Anwendungen können Sie zwei experimentelle APIs verwenden. Beide APIs geben ein Array von Datenpunkten für die angeforderten Metriken und den von Ihnen angegebenen Zeitraum zurück. 
+Zur Erfassung von Metriken über Ihre Umgebung oder Anwendungen können Sie zwei experimentelle APIs verwenden. Beide APIs geben ein Array von Datenpunkten für die angeforderten Metriken und den von Ihnen angegebenen Zeitraum zurück.
 
 **Hinweise**:
 
-1. Ein Benutzer kann pro Stunde bis zu 200 API-Anforderungen für Metriken absetzen. 
+1. Ein Benutzer kann pro Stunde bis zu 200 API-Anforderungen für Metriken absetzen.
 2. Jede API-Anforderung gibt bis zu 200 Datenpunkte pro Anforderung zurück. Falls mehr Daten verfügbar sind, wird in der Antwort eine URL bereitgestellt, mit deren Hilfe die nächste Gruppe von Daten geladen werden kann.
 
 ## Metriken über Ihre Umgebung erfassen 
@@ -1236,24 +1238,24 @@ Mit der experimentellen Umgebungs-API können Sie allgemeine Information zur Umg
 
 ### Abfrageparameter für Umgebungsmetriken
 
-Mit den folgenden Abfrageparametern können Sie Metriken für die CPU, die Platte, den Hauptspeicher, das Netz und Apps erfassen: 
+Mit den folgenden Abfrageparametern können Sie Metriken für die CPU, die Platte, den Hauptspeicher, das Netz und Apps erfassen:
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
 <dd class="pd">Einer oder mehrere der folgenden Werte, durch Kommas getrennt: 'memory', 'disk', 'cpu', 'network' und 'apps.'</dd>
 <dt class="pt dlterm">startTime</dt>
-<dd class="pd">Der früheste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'startTime' nicht angegeben ist, wird der früheste verfügbare Datenpunkt einbezogen. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Startzeit 14.00 Uhr an. </dd>
+<dd class="pd">Der früheste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'startTime' nicht angegeben ist, wird der früheste verfügbare Datenpunkt einbezogen. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Startzeit 14.00 Uhr an.</dd>
 <dt class="pt dlterm">endTime</dt>
-<dd class="pd">Der späteste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'endTime' nicht angegeben ist, wird der neueste Datenpunkt verwendet. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Endzeit 17.00 Uhr an. </dd>
+<dd class="pd">Der späteste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'endTime' nicht angegeben ist, wird der neueste Datenpunkt verwendet. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Endzeit 17.00 Uhr an.</dd>
 <dt class="pt dlterm">sort</dt>
 <dd class="pd">Die Reihenfolge, in der die Daten zurückgegeben werden. Gültige Werte sind 'asc' (aufsteigend) und 'desc' (absteigend). Standardeinstellung ist die absteigende Reihenfolge; hierbei werden zuerst die neuesten Daten zurückgegeben. </dd>
 </dl>
 
 ### Datenformat für Umgebungsmetriken
 
-Das Datenformat ist in den folgenden Abschnitten erläutert. 
+Das Datenformat ist in den folgenden Abschnitten erläutert.
 
- * Um Datensätze über die Hauptspeicherbelegung zu erfassen, verwenden Sie das folgende Datenformat: 
+ * Um Datensätze über die Hauptspeicherbelegung zu erfassen, verwenden Sie das folgende Datenformat:
  
 ```
 {
@@ -1304,7 +1306,7 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 ```
 {: screen}
 
- * Um Datensätze über die Plattenbelegung zu erfassen, verwenden Sie das folgende Datenformat: 
+ * Um Datensätze über die Plattenbelegung zu erfassen, verwenden Sie das folgende Datenformat:
  
 ```
 {
@@ -1355,7 +1357,7 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 ```
 {: screen}
 
- * Um Datensätze über die CPU-Auslastung zu erfassen, verwenden Sie das folgende Datenformat: 
+ * Um Datensätze über die CPU-Auslastung zu erfassen, verwenden Sie das folgende Datenformat:
  
 ```
 {
@@ -1401,7 +1403,7 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 ```
 {: screen}
 
- * Um Datensätze über das Netz zu erfassen, verwenden Sie das folgende Datenformat: 
+ * Um Datensätze über das Netz zu erfassen, verwenden Sie das folgende Datenformat:
  
 ```
 {
@@ -1453,7 +1455,7 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 ```
 {: screen}
 
-* Um Datensätze über Ihre Anwendungen zu erfassen, verwenden Sie das folgende Datenformat: 
+* Um Datensätze über Ihre Anwendungen zu erfassen, verwenden Sie das folgende Datenformat:
  
 ```
 {
@@ -1481,13 +1483,13 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 
 ## Metriken über Ihre Anwendungen erfassen
 
-Für alle Anwendungen werden ungefähr ein Mal pro Stunde Daten aufgezeichnet. Eine Anforderung für eine bestimmte Metrik gibt Informationen zu allen Apps in jeder Datenstichprobe für den von Ihnen angeforderten Zeitraum zurück, die gemäß der angeforderten Metrik in absteigender Reihenfolge sortiert sind. Wenn Sie beispielsweise alle Apps nach CPU für einen sechsstündigen Zeitraum in einer Umgebung anfordern, die 200 Apps enthält, werden 1200 Datensätze (jeweils 200 für jede Stunde) zurückgegeben. 
+Für alle Anwendungen werden ungefähr ein Mal pro Stunde Daten aufgezeichnet. Eine Anforderung für eine bestimmte Metrik gibt Informationen zu allen Apps in jeder Datenstichprobe für den von Ihnen angeforderten Zeitraum zurück, die gemäß der angeforderten Metrik in absteigender Reihenfolge sortiert sind. Wenn Sie beispielsweise alle Apps nach CPU für einen sechsstündigen Zeitraum in einer Umgebung anfordern, die 200 Apps enthält, werden 1200 Datensätze (jeweils 200 für jede Stunde) zurückgegeben.
 
-Um die Menge der Informationen zu verringern, die für jede Datenstichprobe im angeforderten Zeitraum zurückgegeben werden, können Sie eine Option für die Anzahl angeben. Wenn Sie beim vorherigen Beispiel eine Option für die Anzahl mit dem Wert 5 hinzufügen, werden 30 Datensätze zurückgegeben, die für jede Datenstichprobe die 5 Anwendungen mit der höchsten CPU-Auslastung darstellen. 
+Um die Menge der Informationen zu verringern, die für jede Datenstichprobe im angeforderten Zeitraum zurückgegeben werden, können Sie eine Option für die Anzahl angeben. Wenn Sie beim vorherigen Beispiel eine Option für die Anzahl mit dem Wert 5 hinzufügen, werden 30 Datensätze zurückgegeben, die für jede Datenstichprobe die 5 Anwendungen mit der höchsten CPU-Auslastung darstellen.
 
 ### Anwendungsendpunkte 
 
-Zum Aufrufen dieses API-Befehls können Sie die folgenden Endpunkte verwenden: 
+Zum Aufrufen dieses API-Befehls können Sie die folgenden Endpunkte verwenden:
 * /api/v1/app/cpu/physical 
 * /api/v1/app/memory/physical
 * /api/v1/app/memory/reserved
@@ -1496,13 +1498,13 @@ Zum Aufrufen dieses API-Befehls können Sie die folgenden Endpunkte verwenden:
 
 ### Abfrageparameter für Anwendungen
  
-Mit den folgenden Abfrageparametern können Sie Metriken für Ihre Anwendungen erfassen: 
+Mit den folgenden Abfrageparametern können Sie Metriken für Ihre Anwendungen erfassen:
 
 <dl class="parml">
 <dt class="pt dlterm">startTime</dt>
-<dd class="pd">Der früheste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'startTime' nicht angegeben ist, wird der früheste verfügbare Datenpunkt einbezogen. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Startzeit 14.00 Uhr an. </dd>
+<dd class="pd">Der früheste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'startTime' nicht angegeben ist, wird der früheste verfügbare Datenpunkt einbezogen. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Startzeit 14.00 Uhr an.</dd>
 <dt class="pt dlterm">endTime</dt>
-<dd class="pd">Der späteste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'endTime' nicht angegeben ist, wird der neueste Datenpunkt verwendet. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Endzeit 17.00 Uhr an. </dd>
+<dd class="pd">Der späteste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'endTime' nicht angegeben ist, wird der neueste Datenpunkt verwendet. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Endzeit 17.00 Uhr an.</dd>
 <dt class="pt dlterm">count</dt>
 <dd class="pd">Die Anzahl der Datensätze in jeder Datenstichprobe, die zurückgegeben werden sollen.
 </dd>
@@ -1518,7 +1520,7 @@ Mit den folgenden Abfrageparametern können Sie Metriken für Ihre Anwendungen e
 ```
 {: screen}
 
-Jedes zurückgegebene Dokument stellt die angeforderten Metriken für eine Anwendung in jeder Datenstichprobe zum Zeitpunkt der Anforderung dar. 
+Jedes zurückgegebene Dokument stellt die angeforderten Metriken für eine Anwendung in jeder Datenstichprobe zum Zeitpunkt der Anforderung dar.
 
 
 ## API für angepasste Services

@@ -4,8 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-10-20"  
+  years: 2015, 2016 lastupdated: "2016-12-05"  
 
 
 ---
@@ -175,22 +174,34 @@ Conclua as etapas a seguir, para listar os membros para um espaço específico:
 ## Gerenciando cota
 {: #managequota}
 
-Como um proprietário da conta ou gerenciador de organização, é possível visualizar a cota alocada e usada para a sua organização. A cota representa os limites de recurso para a organização que é
-designada quando a organização é criada. Qualquer
-aplicativo ou serviço em um espaço da organização contribui para o uso da cota.
+Como um proprietário da conta ou gerenciador de organização do {{site.data.keyword.Bluemix_notm}}, é possível visualizar a cota usada e alocada para uma
+organização. A cota representa os limites de recurso para a organização, a qual é designada quando a organização é criada. Dependendo se você tem uma conta de avaliação
+ou uma conta faturável, os recursos que estão disponíveis para uma organização variam. Qualquer aplicativo ou serviço em um espaço dentro da organização contribui
+para o uso da cota alocada.
 
-Para visualizar a cota para a sua organização, conclua as etapas a seguir:
+Para visualizar a cota usada e alocada para uma organização, conclua as etapas a seguir:
 
 1. Clique na página **Conta** &gt; **Gerenciar organizações**.
 2. Identifique a organização para a qual deseja visualizar a cota e clique em **Visualizar detalhes**.
 3. Clique em **Editar organização**.
-4. Selecione a guia **COTA**.
+4. Se você tiver espaços definidos em mais de uma região, selecione a região específica que deseja visualizar.
+5. Clique em **COTA**. 
+6. Por padrão, a página de cota do **Cloud Foundry** é aberta. É possível visualizar os detalhes da cota para os recursos a seguir:
+ * MEMÓRIA
+ * SERVIÇOS
+ * PLANO
+ * PREÇO
+7. Clique em **Contêineres** para visualizar a alocação de cota de contêiner usada e disponível. A alocação de contêiner varia dependendo
+de seu plano de precificação. É possível visualizar os detalhes da cota para os recursos a seguir:
+ * MEMÓRIA
+ * IP PÚBLICO
 
-Para atualizar a cota para sua organização, deve-se abrir um chamado de suporte. Para obter mais informações sobre a abertura de um chamado de suporte, consulte
-[Obtendo suporte ao cliente](/docs/support/index.html#contacting-support).
-Para obter mais informações sobre a cota para contêineres, consulte
-[Cota](/docs/containers/container_planning_org_ov.html##container_planning_quota)
-na documentação Contêineres.
+**Nota:** Os contêineres não estão disponíveis na região de Sydney do {{site.data.keyword.Bluemix_notm}}. 
+
+Para obter mais informações sobre contêineres, consulte [Cota](/docs/containers/container_planning_org_ov.html#container_planning_quota) na
+documentação de Contêineres.
+Para mudar a cota que está alocada para uma organização, deve-se abrir um chamado de suporte. Para obter mais informações sobre como abrir um chamado de suporte,
+consulte [Obtendo suporte ao cliente](/docs/support/index.html#contacting-support). 
 
 ## Gerenciando Domínios
 {: #managedomains}

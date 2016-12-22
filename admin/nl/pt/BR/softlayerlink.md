@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-01"
  
 
 ---
@@ -21,6 +21,13 @@ lastupdated: "2016-11-03"
 Se você tem uma conta para teste do {{site.data.keyword.Bluemix_notm}} e deseja acessar o painel Infraestrutura, deve-se fazer upgrade para uma conta pay-as-you-go do {{site.data.keyword.Bluemix_notm}}. Você também deverá fazer upgrade se usar outros recursos debitáveis que não estão disponíveis em uma conta para teste, ou sua conta para teste será concluída. 
 
 É possível unificar suas contas de cobrança {{site.data.keyword.Bluemix_notm}} e SoftLayer existentes, vinculando as contas. Ao vincular as suas contas, você será faturado pelo {{site.data.keyword.Bluemix_notm}} pelos recursos do {{site.data.keyword.Bluemix_notm}} e do SoftLayer.
+
+**Atenção:** Uma conta da assinatura do {{site.data.keyword.Bluemix_notm}} não pode ser vinculada com uma conta do SoftLayer. Para
+acessar o painel Infraestrutura deve-se criar uma conta Pay-As-You-Go, uma segunda conta, que é automaticamente vinculada com uma conta do SoftLayer. Você, então,
+receberá duas faturas, uma para cada conta do {{site.data.keyword.Bluemix_notm}}. Embora os seus recursos de infraestrutura irão ser faturados em uma conta
+Pay-As-You-Go separada, os recursos poderão ser usados com apps e serviços em sua conta da assinatura. Por exemplo, se você ativar um serviço do Watson em sua conta
+da assinatura, poderá copiar as credenciais de serviço e, em seguida, incluir as credenciais em seu aplicativo bare metal que for originado de sua conta
+Pay-As-You-Go.
 {:shortdesc}
 
 ## Fazendo upgrade para uma conta pay-as-you-go do {{site.data.keyword.Bluemix_notm}}
@@ -72,14 +79,6 @@ conduz você para a página inicial do {{site.data.keyword.slportal}} em uma nov
 
 As ofertas de infraestrutura do {{site.data.keyword.Bluemix_notm}} estão conectadas a uma rede de três camadas, segmentando o tráfego público, privado e de gerenciamento. As ofertas de infraestrutura em uma conta do {{site.data.keyword.Bluemix_notm}} do cliente podem transferir dados entre si através da rede privada, sem nenhum custo. As ofertas de infraestrutura, como servidores bare metal, servidores virtuais e armazenamento em nuvem, conectam-se a outros aplicativos e serviços no catálogo do {{site.data.keyword.Bluemix_notm}}, como serviços, contêineres ou tempos de execução do Watson, através
 da rede pública. A transferência de dados entre esses dois tipos de ofertas é medida e cobrada em taxas padrão de largura da banda da rede pública.
-
-## Créditos para uso do {{site.data.keyword.Bluemix_notm}} quando as contas estão vinculadas
-{: #slcredit}
-
-Ao vincular a sua conta do {{site.data.keyword.Bluemix_notm}} a partir de sua conta do SoftLayer, você receberá um crédito de $ 200,00 que poderá ser usado somente no {{site.data.keyword.Bluemix_notm}}. O crédito deve
-ser usado dentro de 30 dias da vinculação das contas.
-
-Para obter informações sobre como visualizar os créditos e a data de expiração, consulte [Visualizando créditos](https://console.ng.bluemix.net/docs/pricing/index.html#credits).
 
 ## Convidando membros da equipe do SoftLayer para o {{site.data.keyword.Bluemix_notm}}
 {: #invite_users}
@@ -152,8 +151,8 @@ gerenciamento para o
 {{site.data.keyword.Bluemix_notm}}.
 
 Modernize o seu desenvolvimento de aplicativo usando contêineres com serviços como {{site.data.keyword.activedeployshort}} e
-{{site.data.keyword.deliverypipeline}}. É possível então usar o serviço do {{site.data.keyword.vpn_short}} para construir um túnel de volta para o SoftLayer para conectar o seu contêiner em uma
-rede privada para a rede privada do SoftLayer. Todos os encargos de uso dos recursos de cálculo e serviços são refletidos em sua conta do {{site.data.keyword.Bluemix_notm}}. 
+{{site.data.keyword.deliverypipeline}}. É possível, então, usar o serviço do {{site.data.keyword.vpn_short}} para se comunicar com o SoftLayer
+para conectar o seu contêiner em uma rede privada com a rede privada do SoftLayer. Todos os encargos de uso dos recursos de cálculo e serviços são refletidos em sua conta do {{site.data.keyword.Bluemix_notm}}. 
 
 ### Serviços do {{site.data.keyword.Bluemix_notm}} baseados em API
 Nem todos os serviços do {{site.data.keyword.Bluemix_notm}} podem ser usados com o SoftLayer. Os serviços a seguir podem ser configurados para execução com o seu código do aplicativo:

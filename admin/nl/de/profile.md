@@ -18,7 +18,7 @@ lastupdated: "2016-10-20"
 # Profileinstellungen
 {: #usersettings}
 
-Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](/docs/icons/i-avatar-icon.svg) &gt; **Benutzerprofil**, um Ihre Profileinstellungen zu aktualisieren.
+Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Benutzerprofil**, um Ihre Profileinstellungen zu aktualisieren.
 {:shortdesc}
 
  Auf der Seite **Profil** können Sie die folgenden Informationen festlegen oder aktualisieren:
@@ -30,7 +30,7 @@ Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](/doc
 ## Profilfoto ändern
 {: #photo}
 
-1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](/docs/icons/i-avatar-icon.svg) &gt; **Benutzerprofil**.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Benutzerprofil**.
 
 * Klicken Sie auf **Foto hochladen**, um ein Foto hochzuladen.
 * Klicken Sie auf **Foto ändern**, um ein neues Foto hochzuladen.
@@ -43,7 +43,7 @@ Eine IBM ID ist eine einzelne ID, die Sie für die Anmeldung an Ihrem {{site.dat
 
 Sie können Ihre IBM ID nicht ändern, aber Sie können Ihre Profilinformationen bearbeiten, die der ID zugeordnet sind. Wenn Sie Informationen zu Ihrer IBMid wie beispielsweise Ihren Namen, Ihre E-Mail-Adresse, Ihre Telefonnummer, Ihr Kennwort oder Ihren Firmennamen ändern müssen, führen Sie die folgenden Schritte aus:
 
-1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](/docs/icons/i-avatar-icon.svg) &gt; **Benutzerprofil**.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Benutzerprofil**.
 2. Klicken Sie auf **Eigene IBM ID bearbeiten**.
 3. Bearbeiten Sie Ihre Benutzerdaten.
 4. Klicken Sie auf **Speichern**.
@@ -57,5 +57,5 @@ Wenn Sie die Aufzeichnung inaktivieren, können Sie möglicherweise einige Funkt
 
 Um die Analyseaufzeichnung zu inaktivieren, führen Sie die folgenden Schritte aus:
 
-1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](/docs/icons/i-avatar-icon.svg) &gt; **Benutzerprofil**.
+1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Benutzerprofil**.
 2. Legen Sie für die Analyseaufzeichnung **Aus** fest.

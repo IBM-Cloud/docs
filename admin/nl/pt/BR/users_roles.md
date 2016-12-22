@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-10-20"
+lastupdated: "2016-12-05"
 
 
 ---
@@ -32,9 +32,6 @@ funções. Verifique as informações a seguir, para saber mais sobre funções.
 
 No nível de conta, há duas funções que permitem o acesso a diferentes recursos de gerenciamento de conta:
 
-Tabela 1. Funções e permissões de conta
-{: #ur_table1}
-
 | Função da conta | Permissões |    
 |----------------|---------|
 |Proprietário | Um proprietário para a conta tem acesso ao seu perfil, diretório da equipe, às suas informações de faturamento, notificações de gastos e ao seu painel de uso. A partir da página de diretório da
@@ -42,6 +39,7 @@ equipe, o proprietário pode convidar novos membros da equipe e ajustar funçõe
 serviço e gerenciar organizações e espaços. |
 |Membro | Um membro tem acesso ao seu perfil, diretório da equipe, ao seus créditos da conta e limites de faturamento no cabeçalho do {{site.data.keyword.Bluemix_notm}}. No entanto, na página de
 diretório da equipe, um membro pode apenas visualizar os membros da equipe dentro da conta. |
+{:caption="Table 1. Account roles and permissions" caption-side="top"}
 
  Todos os novos membros da equipe são incluídos como um membro da conta. É possível designar funções de organização e espaço para convidados, a fim de ativar visualizações e permissões específicas no
 {{site.data.keyword.Bluemix_notm}}. Novos membros da equipe incluídos em uma organização são designados com a função de organização de auditor por padrão. Para um espaço específico, é possível optar por
@@ -50,9 +48,6 @@ funções na página **Diretório da equipe**.
 
 As funções a seguir podem ser designadas no nível de organização:
 
-Tabela 2. Funções e permissões de organização
-{: #ur_table2}
-
 | Função organizacional | Permissões |    
 |-------------------|-------------|
 |Gerente | Gerenciadores de organização podem criar, visualizar, editar ou excluir espaços dentro da organização, visualizar o uso e a cota da organização, convidar membros da equipe para a organização,
@@ -60,11 +55,9 @@ gerenciar quem tem acesso à organização e às suas funções na organização
 |Gerenciador de faturamento | Gerenciadores de faturamento podem visualizar informações de uso de tempo de execução e serviço para a organização na página de Painel de uso.  |
 |Auditor | Auditores da organização podem visualizar o conteúdo do aplicativo e do serviço na organização. Auditores também podem visualizar os membros da equipe na organização e as suas funções designadas e a
 cota para a organização. Essa função é designada para todos os convidados por padrão.|
+{:caption="Table 2. Organization roles and permissions" caption-side="top"}
 
 As funções a seguir podem ser designadas no nível de espaço:
-
-Tabela 3. Funções e permissões de espaço
-{: #ur_table3}
 
 | Função de espaço | Permissões |    
 |------------|-------------|
@@ -75,6 +68,7 @@ aplicativos, renomear um aplicativo, excluir um aplicativo, renomear um espaço,
 para cada aplicativo no espaço. Além disso, o desenvolvedor de espaço pode associar uma URL interna ou externa com um aplicativo no espaço.   |
 |Auditor | Auditores de espaço têm acesso somente leitura a todas as informações sobre o espaço, como informações sobre o número de instâncias, ligações de serviço e uso de recurso para cada aplicativo no
 espaço. |
+{:caption="Table 3. Space roles and permissions" caption-side="top"}
 
 **Nota**: membros da equipe que são designados com a função de espaço de gerenciador ou desenvolvedor podem acessar a variável de ambiente VCAP_SERVICES. No entanto, um membro da
 equipe designado com a função de auditor não pode acessar VCAP_SERVICES.
@@ -158,7 +152,7 @@ Gerenciadores de espaço podem editar funções para os membros da equipe em seu
 Proprietários de conta e gerenciadores de organização podem remover membros da equipe de uma conta usando a página **Diretório**. Para remover um membro da equipe, conclua as etapas a seguir:
 
 1. Clique em **Conta** &gt; **Diretório de equipe**.
-3. Localize o usuário que você deseja remover da conta e clique no ícone **Remove** ![ícone Remover](/docs/icons/icon_remove_teamuser.svg).
+3. Localize o usuário que você deseja remover da conta e clique no ícone **Remover** ![ícone Remover](../icons/icon_remove_teamuser.svg).
 4. Na janela **Remover usuário**, clique em **Remover** para confirmar que você deseja remover o usuário especificado da conta.
 
 O usuário é removido da lista de membros da equipe exibida para a conta.

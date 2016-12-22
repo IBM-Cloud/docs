@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-10-20"  
+lastupdated: "2016-12-05"  
 
 
 ---
@@ -44,7 +44,7 @@ Organisationen können mehrere Regionen umfassen und sind durch folgende Element
 <dd>Stellen die Route im Internet bereit, die der Organisation zugeordnet ist. Eine Route hat eine Unterdomäne und eine Domäne. Eine Unterdomäne ist in der Regel der Anwendungsname. Eine Domäne kann eine Systemdomäne oder eine angepasste Domäne sein, die Sie für Ihre Anwendung registriert haben. Siehe den Abschnitt zum Thema [Angepasste Domänen verwalten](orgs_spaces.html#managedomains).<br/>
 <p>**Hinweis**: Wenn Sie eine angepasste Domäne hinzufügen, müssen Sie Ihren DNS-Server so konfigurieren, dass er Ihre angepasste Domäne in einen Verweis auf die {{site.data.keyword.Bluemix_notm}}-Systemdomäne auflöst. Auf diese Weise kann {{site.data.keyword.Bluemix_notm}} eine aus Ihrer angepassten Domäne empfangene Anforderung ordnungsgemäß an Ihre Anwendung weiterleiten.</p></dd>
 <dt>Kontingent</dt>
-<dd>Stellt die Ressourcengrenzwerte für die Organisation dar, einschließlich der Anzahl der Services und die Speicherkapazität, die für die Verwendung durch Ihre Organisation zugeordnet werden können. Kontingente werden bei der Erstellung von Organisationen zugeordnet. Jede Anwendung und jeder Service in einem Bereich der Organisation trägt zur Nutzung des Kontingents bei. Sowohl mit dem nutzungsabhängigen Plan als auch dem Abonnementplan können Sie Ihr Kontingent für Cloud Foundry-Anwendungen und -Container anpassen, sobald sich die Bedürfnisse für Ihre Organisation ändern. Siehe den Abschnitt zum Thema [Kontingent verwalten](orgs_spaces.html#managequota).</dd>
+<dd>Stellt die Ressourcengrenzen für die Organisation dar, einschließlich der Anzahl der Services und die Speicherkapazität, die für die Verwendung durch Ihre Organisation zugeordnet werden können. Kontingente werden bei der Erstellung von Organisationen zugeordnet. Jede Anwendung und jeder Service in einem Bereich der Organisation trägt zur Nutzung des Kontingents bei. Sowohl mit dem nutzungsabhängigen Plan als auch dem Abonnementplan können Sie Ihr Kontingent für Cloud Foundry-Anwendungen und -Container anpassen, sobald sich die Bedürfnisse für Ihre Organisation ändern. Siehe den Abschnitt zum Thema [Kontingent verwalten](orgs_spaces.html#managequota).</dd>
 </dl>
 
 In {{site.data.keyword.Bluemix_notm}} können Sie Organisationen verwenden, um die Onlinezusammenarbeit unter den Teammitgliedern zu ermöglichen und die logische Gruppierung von Projektressourcen auf folgende Weise zu erleichtern:
@@ -147,16 +147,28 @@ Führen Sie die folgenden Schritte aus, um die Mitglieder für einen bestimmten 
 ## Kontingent verwalten
 {: #managequota}
 
-Als Kontoeigner oder Organisationsmanager können Sie das zugeordnete und das verwendete Kontingent für Ihre Organisation anzeigen. Das Kontingent stellt die Ressourcengrenzen für die Organisation dar, die beim Erstellen der Organisation zugeordnet wird. Jede Anwendung und jeder Service in einem Bereich der Organisation trägt zur Nutzung des Kontingents bei.
+Als {{site.data.keyword.Bluemix_notm}}-Kontoeigner oder -Organisationsmanager können Sie das verwendete und zugeordnete Kontingent für eine Organisation anzeigen. Das Kontingent stellt die Ressourcengrenzen für die Organisation dar, die beim Erstellen der Organisation zugeordnet wird. Abhängig davon, ob Sie über ein Testkonto oder ein belastbares Konto verfügen, können die für eine Organisation verfügbaren Ressourcen variieren. Jede Anwendung oder jeder Service in einem Bereich der Organisation trägt zur Nutzung des zugeordneten Kontingents bei.
 
-Führen Sie folgende Schritte aus, um das Kontingent für Ihre Organisation anzuzeigen:
+Führen Sie die folgenden Schritte aus, um das verwendete und zugeordnete Kontingent für eine Organisation anzuzeigen:
 
 1. Klicken Sie auf die Seite **Konto** &gt; **Organisationen verwalten**.
 2. Ermitteln Sie die Organisation, deren Kontingent Sie anzeigen möchten, und klicken Sie auf **Details anzeigen**.
 3. Klicken Sie auf **Organisation bearbeiten**.
-4. Wählen Sie die Registerkarte **Kontingent** aus.
+4. Wenn Bereiche in mehreren Regionen definiert wurden, dann wählen Sie die Region aus, die Sie anzeigen möchten.
+5. Klicken Sie auf **Kontingent**. 
+6. Standardmäßig wird die Kontingentseite **Cloud Foundry** geöffnet. Sie können die Kontingentdetails für die folgenden Ressourcen anzeigen:
+ * SPEICHER
+ * SERVICES
+ * PLAN
+ * PREIS
+7. Klicken Sie auf **Container**, um die verwendete und verfügbare Containerkontingentzuordnung anzuzeigen. Die Containerzuordnung variiert abhängig von Ihrem Preistarif. Sie können die Kontingentdetails für die folgenden Ressourcen anzeigen:
+ * SPEICHER
+ * ÖFFENTLICHE IP
 
-Um das Kontingent für Ihre Organisation zu aktualisieren, müssen Sie ein Support-Ticket öffnen. Weitere Informationen zum Öffnen eines Support-Tickets finden Sie unter dem Thema [Kundenunterstützung abrufen](/docs/support/index.html#contacting-support). Weitere Informationen zum Kontingent für Container finden Sie unter dem Thema[Kontingent](/docs/containers/container_planning_org_ov.html##container_planning_quota) in der Dokumentation zu Containern.
+**Hinweis:** In der {{site.data.keyword.Bluemix_notm}}-Region 'Sydney' stehen keine Container zur Verfügung. 
+
+Weitere Informationen zu Containern finden Sie unter dem Thema [Kontingent](/docs/containers/container_planning_org_ov.html#container_planning_quota) in der Dokumentation zu Containern.
+Um das Kontingent zu ändern, das einer Organisation zugeordnet ist, müssen Sie ein Support-Ticket öffnen. Weitere Informationen zum Öffnen eines Support-Tickets finden Sie unter dem Thema [Kundenunterstützung abrufen](/docs/support/index.html#contacting-support). 
 
 ## Domänen verwalten
 {: #managedomains}

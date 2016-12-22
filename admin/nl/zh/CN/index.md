@@ -635,7 +635,7 @@ lastupdated: "2016-10-25"
 |notCreatable（可选） | 布尔值，指示是否可以通过 {{site.data.keyword.Bluemix_notm}} 用户界面和 cf 命令行界面创建服务实例。值为 true 表示无法通过 {{site.data.keyword.Bluemix_notm}} 用户界面或 cf 命令行界面创建服务实例。缺省值为 false。 |
 |notCreatableMessage（可选） | 无法创建服务实例时，在 {{site.data.keyword.Bluemix_notm}} 用户界面中显示的消息。如果未指定此字段，那么将显示以下缺省消息：可用时进行通知，请确认您的电子邮件地址，或输入其他电子邮件地址。 |
 |notCreatableRobotMessage（可选） | 在 {{site.data.keyword.Bluemix_notm}} 用户界面的服务详细信息页面中的对话气泡中显示的消息。此消息用于指示服务可能存在问题，或者指示导致服务不可用的其他原因。可以指定消息来说明原因。如果未指定此字段，那么将显示以下缺省消息：此服务当前不可用。 |
-|apiReferenceUrl（可选） | iFrame 的 URL，位于“目录”中服务详细信息页面上的“API 引用”区域中。如果未用于“目录”中的服务详细信息页面，那么可以输入在“{{site.data.keyword.Bluemix_notm}} REST API 文档”微型服务中注册服务时，分配给服务的“REST API 文档”的数字值。这将在服务仪表板中显示 REST API 文档。 |
+|apiReferenceUrl（可选） | iFrame 的 URL，位于“目录”中服务详细信息页面上的“API 引用”区域中。如果未用于“目录”中的服务详细信息页面，那么可以输入在“{{site.data.keyword.Bluemix_notm}} REST API 文档”微服务中注册服务时，分配给服务的“REST API 文档”的数字值。这将在服务仪表板中显示 REST API 文档。 |
 |sdkDownloadUrl（可选） | 单击“下载 SDK”按钮时打开的 Web 页面的 URL。“下载 SDK”按钮位于“仪表板”中“应用程序概述”页面的服务磁贴上。Web 页面会在新的浏览器选项卡中打开。 |
 |serviceMonitorApi    | 返回 JSON 数据的 API 的 URL，如以下示例中所示，用于报告服务运行状况。必须在服务元数据中具有 serviceMonitorApi 或 serviceMonitorApp。请参阅以下代码样本以获取示例。 |
 |serviceMonitorApp    | 应用程序的 URL，该应用程序可部署到 {{site.data.keyword.Bluemix_notm}} 并绑定服务，以提供特定于服务状态的输出。应用程序返回的 JSON 数据格式必须与 serviceMonitorApi 相同。必须在服务元数据中具有 serviceMonitorApi 或 serviceMonitorApp。请参阅以下代码样本以获取示例。 |

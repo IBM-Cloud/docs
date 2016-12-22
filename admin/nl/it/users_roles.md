@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-10-20"
+lastupdated: "2016-12-05"
 
 
 ---
@@ -30,20 +30,15 @@ consulta le seguenti informazioni.
 
 A livello di account, esistono due ruoli che abilitano l'accesso a funzioni di gestione dell'account differenti:
 
-Tabella 1. Ruoli dell'account e autorizzazioni
-{: #ur_table1}
-
 | Ruolo dell'account | Autorizzazioni |    
 |----------------|---------|
 |Proprietario | Un proprietario per l'account ha accesso al proprio profilo e dashboard di utilizzo e alle proprie directory di team, informazioni di fatturazione e notifiche di spesa. Dalla pagina directory team, il proprietario può invitare nuovi membri del team e regolare i ruoli. Il proprietario può anche aggiungere dei crediti promozionali, impostare o modificare il limite di fatturazione, impostare l'accesso al servizio e gestire organizzazioni e spazi. |
 |Membro | Un membro ha accesso ai proprio limiti di fatturazione, crediti dell'account e profilo e alla propria directory team nell'intestazione {{site.data.keyword.Bluemix_notm}}. Tuttavia, nella pagina directory team, un membro può visualizzare solo i membri del team all'interno dell'account. |
+{:caption="Table 1. Account roles and permissions" caption-side="top"}
 
  Tutti i nuovi membri del team vengono aggiunti come un membro dell'account. Puoi assegnare i ruoli organizzazione e spazio agli invitati per abilitare specifiche viste e autorizzazioni in {{site.data.keyword.Bluemix_notm}}. Ai nuovi membri del team aggiunti a un'organizzazione viene assegnato per impostazione predefinita il ruolo organizzazione di revisore. Per uno specifico spazio, puoi scegliere di assegnare il ruolo di sviluppatore o di revisore agli invitati. Dopo che gli invitati hanno accettato l'invito e si sono uniti a {{site.data.keyword.Bluemix_notm}}, puoi modificarne i ruoli nella pagina **Directory team**.
 
 I seguenti ruoli possono essere assegnati a livello dell'organizzazione:
-
-Tabella 2. Ruoli organizzazione e autorizzazioni
-{: #ur_table2}
 
 | Ruolo organizzazione | Autorizzazioni |    
 |-------------------|-------------|
@@ -51,17 +46,16 @@ Tabella 2. Ruoli organizzazione e autorizzazioni
 |Gestore fatturazione | I gestori fatturazione possono visualizzare le informazioni sull'utilizzo di runtime e servizi per l'organizzazione nella pagina Dashboard di utilizzo.  |
 |Revisore | I revisori organizzazione possono visualizzare il contenuto di applicazioni e servizi nell'organizzazione. I revisori possono anche visualizzare i membri
 del team nell'organizzazione e i ruoli ad essi assegnati, nonché la quota per l'organizzazione. Questo ruolo viene assegnato a tutti gli invitati per impostazione predefinita.|
+{:caption="Table 2. Organization roles and permissions" caption-side="top"}
 
 I seguenti ruoli possono essere assegnati a livello dello spazio:
-
-Tabella 3. Ruoli spazio e autorizzazioni
-{: #ur_table3}
 
 | Ruolo spazio | Autorizzazioni |    
 |------------|-------------|
 |Gestore | I gestori spazio possono aggiungere membri del team esistenti e gestire i ruoli nello spazio. Il gestore spazio può anche visualizzare il numero di istanze, i bind di servizio e l'utilizzo delle risorse per ciascuna applicazione nello spazio. |
 |Sviluppatore | Gli sviluppatori spazio possono creare, eliminare e gestire applicazioni e servizi nello spazio. Alcune delle attività di gestione includono la distribuzione di applicazioni, l'avvio e l'arresto di applicazioni, la rinominazione di un'applicazione, l'eliminazione di un'applicazione, la rinominazione di uno spazio, il bind o l'annullamento del bind di un servizio a un'applicazione, la visualizzazione del numero di istanze, i bind di servizi e l'utilizzo di risorse per ciascuna applicazione nello spazio. Inoltre, lo sviluppatore spazio può associare un URL interno o esterno a un'applicazione nello spazio.   |
 |Revisore | I revisori spazio hanno un accesso in sola lettura a tutte le informazioni sullo spazio, quali le informazioni sul numero di istanze, i bind di servizio e l'utilizzo di risorse per ciascuna applicazione nello spazio. |
+{:caption="Table 3. Space roles and permissions" caption-side="top"}
 
 **Nota**: ai membri del team a cui nello spazio è assegnato il ruolo di gestore o sviluppatore possono accedere alla variabile di ambiente VCAP_SERVICES. Tuttavia, un membro del team a cui è assegnato il ruolo di revisore non può accedere a VCAP_SERVICES.
 
@@ -138,7 +132,7 @@ I gestori spazio possono modificare i ruoli per i membri del team nel loro spazi
 I proprietari dell'account e i gestori dell'organizzazione possono rimuovere membri del team da un account utilizzando la pagina **Directory team**. Per rimuovere un membro del team, completa la seguente procedura:
 
 1. Fai clic su **Account** &gt; **Directory team**.
-3. Individua l'utente che desideri rimuovere dall'account e fai clic sull'icona **Rimuovi** ![Icona Rimuovi](/docs/icons/icon_remove_teamuser.svg).
+3. Individua l'utente che desideri rimuovere dall'account e fai clic sull'icona **Rimuovi** ![Icona Rimuovi](../icons/icon_remove_teamuser.svg).
 4. Nella finestra **Rimuovi utente**, fai clic su **Rimuovi** per confermare di voler rimuovere l'utente specificato dall'account.
 
 L'utente viene rimosso dall'elenco di membri del team visualizzato per l'account.

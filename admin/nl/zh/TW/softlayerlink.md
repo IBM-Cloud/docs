@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-01"
  
 
 ---
@@ -21,6 +21,9 @@ lastupdated: "2016-11-03"
 如果您有 {{site.data.keyword.Bluemix_notm}} 試用帳戶，並且想要存取「基礎架構」儀表板，則必須升級至 {{site.data.keyword.Bluemix_notm}}「隨收隨付制」帳戶。如果想要使用無法在試用帳戶內使用的其他付費資源，或您的試用帳戶到期，則您也必須升級。 
 
 您可以透過鏈結帳戶，來統一現有的 {{site.data.keyword.Bluemix_notm}} 與 SoftLayer 計費帳戶。鏈結帳戶之後，即會透過 {{site.data.keyword.Bluemix_notm}} 向您收取 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 資源的費用。
+
+
+**注意：**{{site.data.keyword.Bluemix_notm}} 訂閱帳戶不能與 SoftLayer 帳戶相鏈結。若要存取「基礎架構」儀表板，您必須建立自動鏈結至 SoftLayer 帳戶的「隨收隨付制」帳戶（第二個帳戶）。您之後會收到兩張發票，一個 {{site.data.keyword.Bluemix_notm}} 帳戶一張。雖然在個別「隨收隨付制」帳戶中會開出基礎架構資源的發票，但是在訂閱帳戶中，可以搭配使用資源與應用程式及服務。例如，如果您在訂閱帳戶中啟動 Watson 服務，則可以複製服務認證，然後將認證新增至源自「隨收隨付制」帳戶的裸機應用程式。
 {:shortdesc}
 
 ## 升級至 {{site.data.keyword.Bluemix_notm}} 隨收隨付制帳戶
@@ -65,13 +68,6 @@ lastupdated: "2016-11-03"
 鏈結帳戶之後，SoftLayer 廣域標頭中會出現**移至 {{site.data.keyword.Bluemix_notm}}** 鏈結。按一下此鏈結，即可讓您進入 {{site.data.keyword.Bluemix_notm}} 登入頁面。此外，{{site.data.keyword.Bluemix_notm}} 標頭中現在也會出現 **SoftLayer** 鏈結。按一下此鏈結，即可讓您進入新視窗中的 {{site.data.keyword.slportal}} 首頁。
 
 {{site.data.keyword.Bluemix_notm}} 基礎架構供應項目是連接至分成公用、專用及管理資料流量的三層網路。客戶 {{site.data.keyword.Bluemix_notm}} 帳戶的基礎架構供應項目可能會跨專用網路彼此傳送資料，而無需任何成本。基礎架構供應項目（例如裸機伺服器、虛擬伺服器及雲端儲存空間）會跨公用網路連接至 {{site.data.keyword.Bluemix_notm}} 型錄中的其他應用程式及服務（例如 Watson 服務、容器或運行環境）。這兩種類型供應項目之間的資料傳送是依標準公用網路頻寬速率進行計量及收費。
-
-## 帳戶鏈結後的 {{site.data.keyword.Bluemix_notm}} 使用額度
-{: #slcredit}
-
-從 SoftLayer 帳戶鏈結 {{site.data.keyword.Bluemix_notm}} 帳戶時，您會收到只能在 {{site.data.keyword.Bluemix_notm}} 內使用的 $200.00 額度。該額度必須在鏈結帳戶後的 30 天內使用。
-
-如需如何檢視額度和到期日的相關資訊，請參閱[檢視額度](https://console.ng.bluemix.net/docs/pricing/index.html#credits)。
 
 ## 邀請 SoftLayer 團隊成員加入 {{site.data.keyword.Bluemix_notm}}
 {: #invite_users}
@@ -133,7 +129,7 @@ SoftLayer 中的鑑別現在使用 IBM ID 來提供 {{site.data.keyword.Bluemix_
 
 您可以從 SoftLayer 中的應用程式呼叫 Watson API，使其更加個人化，以獲得*見解和認知* 的知識。或者，使用*資料和分析* 服務，為您的應用程式進行高效能分析。或者，選擇資料庫即服務 (database-as-a-service)，將管理工作交給 {{site.data.keyword.Bluemix_notm}}。
 
-使用容器搭配 {{site.data.keyword.activedeployshort}} 和 {{site.data.keyword.deliverypipeline}} 等服務，使您的應用程式開發作業現代化。然後，您可以使用 {{site.data.keyword.vpn_short}} 服務來建立回到 SoftLayer 的通道，以將私密網路中的容器連接至 SoftLayer 私密網路。運算資源及服務的所有使用收費都會反映在您的 {{site.data.keyword.Bluemix_notm}} 帳單上。 
+使用容器搭配 {{site.data.keyword.activedeployshort}} 和 {{site.data.keyword.deliverypipeline}} 等服務，使您的應用程式開發作業現代化。然後，您可以使用 {{site.data.keyword.vpn_short}} 服務與 SoftLayer 進行通訊，以將專用網路中的容器連接至 SoftLayer 專用網路。運算資源及服務的所有使用收費都會反映在您的 {{site.data.keyword.Bluemix_notm}} 帳單上。 
 
 ### API 型 {{site.data.keyword.Bluemix_notm}} 服務
 並非所有 {{site.data.keyword.Bluemix_notm}} 服務都可以與 SoftLayer 搭配使用。下列服務可設定為與您的應用程式碼搭配執行：
