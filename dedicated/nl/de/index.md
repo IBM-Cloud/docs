@@ -507,7 +507,9 @@ Da der Schutz privater Daten kritisch ist, ist IBM beim Umgang mit dem Sicherung
 </ul>
 
 # Zugehörige Links
+{: rellinks}
 ## Allgemein
+{: general}
 * [Entdecken Sie: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [Neuerungen in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}}-Glossar](/docs/overview/glossary/index.html)
