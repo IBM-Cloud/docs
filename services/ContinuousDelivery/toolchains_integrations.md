@@ -1,4 +1,4 @@
- ---
+---
 
 copyright:
   years: 2015, 2016
