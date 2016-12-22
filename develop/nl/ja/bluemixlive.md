@@ -3,10 +3,8 @@
 
 
 copyright:
-
   years: 2015，2016
-
-
+lastupdated: "2016-10-19"
 
 ---
 
@@ -15,11 +13,10 @@ copyright:
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
+#{{site.data.keyword.Bluemix_notm}} Live Sync 
+{: #live-sync}
 
-*最終更新日: 2016 年 6 月 24 日*
-{: .last-updated}  
-
+ 
 Node.js アプリケーションを作成する場合、{{site.data.keyword.Bluemix}} Live Sync を使用すると、{{site.data.keyword.Bluemix_notm}} にあるアプリケーション・インスタンスを迅速に更新して、デスクトップにある場合と同じように再デプロイせずに開発することができます。   
 {: shortdesc}
 
@@ -41,10 +38,10 @@ Desktop Sync を使用すれば、デスクトップのワークスペースを�
 
 Bluemix Live Sync プロセスを以下の図に示します。
 
-*図 1. Bluemix Live Sync プロセス*
+図 1. Bluemix Live Sync プロセス
 ![Bluemix Live Sync プロセスのイメージ](images/bluemix-live-sync.png)
 
-Liberty で実行される Java アプリケーションを開発している場合、[Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) を使用してリモートでデバッグすることができます。
+Liberty で実行される Java アプリケーションを開発している場合、[Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools) を使用してリモートでデバッグすることができます。
 
 ##Desktop Sync {: #desktop-sync}
 
@@ -74,7 +71,7 @@ Desktop Sync では以下の点を考慮してください。
 <li>コマンド・ラインで、以下のコマンドを使用してログインします。ユーザー ID とパスワードの入力を求めるプロンプトが出されます。  
 <pre class="codeblock">bl login</pre>
 
-<strong>注:</strong> DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a> を参照してください。 
+<strong>注:</strong> DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a> を参照してください。
 </li>
 
 <li>以下のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} Live Sync で同期できるプロジェクトのリストを表示します。
@@ -204,7 +201,7 @@ Node.js アプリケーションを構築する場合、{{site.data.keyword.Blue
 * 同期に使用可能なプロジェクトのリストの表示。
 * 実行中のアプリケーションの状況の表示。
 
-bl コマンドのダウンロードと使用について詳しくは、[Bluemix Live Sync](../develop/bluemixlive.html) を参照してください。
+bl コマンドのダウンロードと使用について詳しくは、[Bluemix Live Sync](/docs/develop/bluemixlive.html) を参照してください。
 
 ## bl コマンド
 {: #bl_commands}

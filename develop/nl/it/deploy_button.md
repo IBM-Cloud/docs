@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
-  anni: 2015, 2016
-
- 
+  years: 2015, 2016
+lastupdated: "2016-11-29"
 
 ---
 
@@ -18,20 +14,19 @@ copyright:
 
 #Creazione di un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-*Ultimo aggiornamento: 2 marzo 2016*
-{: .last-updated} 
-
 Il pulsante Distribuisci a {{site.data.keyword.Bluemix}} è un modo efficiente per condividere la tua applicazione originata da Git pubblica in modo che altri utenti possano sperimentarne il codice ed eseguirne la distribuzione a IBM {{site.data.keyword.Bluemix_notm}}. Il pulsante
 richiede una configurazione minima e puoi inserirlo dovunque siano supportate le markup. Un utente che fa clic sul pulsante crea
 una copia clonata del codice in un nuovo repository Git in modo che la tua applicazione originale rimanga invariata. 
 {: shortdesc} 
 
-**Suggerimento:** se il branding dell'azienda è importante, puoi [incorporare un flusso iFrame Distribuisci a {{site.data.keyword.Bluemix_notm}}](../develop/deploy_button_embed.html) nel tuo contenuto invece di inserire un pulsante. Quando le persone creano una copia clonata della tua applicazione
+**Suggerimento:** se il branding dell'azienda è importante, puoi [incorporare un flusso iFrame Distribuisci a {{site.data.keyword.Bluemix_notm}}](/docs/develop/deploy_button_embed.html) nel tuo contenuto invece di inserire un pulsante. Quando le persone creano una copia clonata della tua applicazione
 originata da Git pubblica, restano nel tuo contenuto invece di essere reindirizzati al sito web di bluemix.net. 
+
+**Nota**: è ora disponibile la funzione toolchain. Chiunque faccia clic sul pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}, può selezionare il link nel banner per provare a distribuire la propria applicazione utilizzando una toolchain.
 
 Quando qualcuno fa clic sul tuo pulsante, si verificano le seguenti azioni: 
 
-1. Se la persona non ha un account {{site.data.keyword.Bluemix}} attivo,
+1. Se la persona non ha un account {{site.data.keyword.Bluemix_notm}} attivo,
 è necessario che venga creato un account di prova. 
 
 2. La persona può selezionare una regione, organizzazione, spazio e nome applicazione. Il nome applicazione consigliato viene creato in base al nome applicazione precedente,
@@ -160,7 +155,7 @@ il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei p
   applications:
   - services
     - &lt;`nome_istanza_servizio_arbitrario`&gt;
-    name: &lt;`appname`&gt;
+    name: &lt;`nomeapplicazione`&gt;
     host: &lt;`apphostname`&gt;
 </pre>
 
@@ -180,9 +175,7 @@ il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei p
 </pre>
    </li>
    </ul>
-	<li> Se il repository deve essere creato prima che venga distribuita l'applicazione, viene attivato un build automatico del codice nel repository
-prima della distribuzione. I build automatici si verificano quando nella directory root del repository viene rilevato un file script di
-build. 
+	<li> Se occorre creare l'applicazione prima che possa essere distribuita, devi includere un file di build nel tuo repository. Se viene rilevato un file script di build nella directory root del repository, viene attivato un build automatico del codice prima della distribuzione.
 	
 	Builder supportati: 
 	    <ul>
@@ -204,8 +197,9 @@ crea l'output nella cartella <code>./target/</code></li>
 <li>Nella directory root del tuo progetto, crea una directory <code>.bluemix</code>.</li>
 <li>Carica il file <code>pipeline.yml</code> nel repository <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Se stai distribuendo un'applicazione in un contenitore tramite <strong>IBM Containers</strong>, devi includere Dockerfile nella directory root del repository e un file <code>pipeline.yml</code>  in una directory <code>.bluemix</code>. 
+	<li>Per distribuire un'applicazione in un contenitore tramite <strong>IBM Containers</strong>, devi includere Dockerfile nella directory root del repository e un file <code>pipeline.yml</code> in una directory <code>.bluemix</code>.
 	<ul>
+	    <li>Il Dockerfile agisce come una sorta di script di build per l'applicazione. Se un Dockerfile viene rilevato nel repository, l'applicazione viene integrata automaticamente in un'immagine prima che venga distribuita in un contenitore. Se la stessa applicazione deve essere creata prima di essere integrata in un'immagine, includi uno script di build per l'applicazione insieme a un Dockerfile, come descritto in precedenza.</li>
 	    <li> Per saperne di più sulla creazione dei Dockerfile, <a href="https://docs.docker.com/reference/builder/" target="_blank">vedi la documentazione di Docker</a>. </li>
 	    <li>Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare manualmente un file <code>pipeline.yml</code> specifico per i contenitori, <a href="https://github.com/Puquios/" target="_blank">vedi gli esempi in GitHub</a>. </li>
         </ul>
@@ -214,4 +208,5 @@ crea l'output nella cartella <code>./target/</code></li>
  </ul>
 </ul>
 
-Per un aiuto nella risoluzione dei problemi, vedi [Il pulsante Distribuisci a Bluemix non distribuisce un'applicazione](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+Per un aiuto nella risoluzione dei problemi, vedi [Il pulsante Distribuisci a Bluemix non distribuisce un'applicazione](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+

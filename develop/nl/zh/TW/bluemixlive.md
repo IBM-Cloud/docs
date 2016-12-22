@@ -3,10 +3,8 @@
 
 
 copyright:
-
-  years: 2015, 2016
-
-
+  years: 2015，2016
+lastupdated: "2016-10-19"
 
 ---
 
@@ -15,11 +13,10 @@ copyright:
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
+#{{site.data.keyword.Bluemix_notm}} Live Sync 
+{: #live-sync}
 
-*前次更新：2016 年 6 月 24 日*
-{: .last-updated}  
-
+ 
 如果您要建置 Node.js 應用程式，可以使用 {{site.data.keyword.Bluemix}} Live Sync 快速更新 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例，並像在桌面上那樣地開發應用程式而不必重新部署。   
 {: shortdesc}
 
@@ -40,10 +37,10 @@ copyright:
 
 下圖說明 Bluemix Live Sync 處理程序。
 
-*圖 1. Bluemix Live Sync 處理程序*
+圖 1. Bluemix Live Sync 處理程序
 ![Bluemix Live Sync 處理程序的影像](images/bluemix-live-sync.png)
 
-如果您要開發在 Liberty 上執行的 Java 應用程式，可以使用 [Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) 進行遠端除錯。
+如果您要開發在 Liberty 上執行的 Java 應用程式，可以使用 [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools) 進行遠端除錯。
 
 ##桌面同步 {: #desktop-sync}
 
@@ -73,7 +70,7 @@ copyright:
 <li>在指令行上，使用下列指令登入。系統會提示您輸入使用者 ID 和密碼。  
 <pre class="codeblock">bl login</pre>
 
-<strong>附註：</strong>您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">何謂聯合鑑別以及它對我有什麼影響？</a> 
+<strong>附註：</strong>您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">何謂聯合鑑別以及它對我有什麼影響？</a>
 </li>
 
 <li>輸入下列指令，以查看可用於 {{site.data.keyword.Bluemix_notm}} Live Sync 同步化的專案清單：
@@ -171,13 +168,13 @@ bl start --restart
 
 3. 增加記憶體。  
 
-    a. 在應用程式 `manifest.yml` 檔案中，在為記憶體屬性指定的值再增加 128M 以上。
+    a. 在應用程式 `manifest.yml` 檔案中，在為記憶體屬性指定的值加上 128M 以上。
 
 安裝「{{site.data.keyword.Bluemix_notm}} 即時除錯」之後，您可以使用除錯工具。
 
 推送應用程式，然後瀏覽至 `https://app-host.mybluemix.net/bluemix-debug/manage`，以存取 {{site.data.keyword.Bluemix_notm}} 除錯使用者介面。當系統提示您進行鑑別時，請輸入您的使用者 ID 及個人存取記號或 IBM ID 密碼。    
 
-   **附註**：您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果不使用聯合鑑別，則您的 IBM ID 和密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱[何謂聯合鑑別以及它對我有什麼影響？](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **附註**：您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱[何謂聯合鑑別以及它對我有什麼影響？](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 ###還原應用程式配置並停用 Bluemix 即時除錯 {: #restore_live_debug}
 
@@ -200,7 +197,7 @@ bl start --restart
 * 查看可以同步化的專案清單。
 * 查看執行中應用程式的狀態。
 
-如需下載及使用 bl 指令的相關資訊，請參閱 [Bluemix Live Sync](../develop/bluemixlive.html)。
+如需下載及使用 bl 指令的相關資訊，請參閱 [Bluemix Live Sync](/docs/develop/bluemixlive.html)。
 
 ## bl 指令
 {: #bl_commands}
@@ -301,7 +298,7 @@ bl login | l [ -u username ] [-p password ][ -s server ]
 
 -s *server*：{{site.data.keyword.jazzhub_short}} 伺服器的伺服器名稱或 IP 位址。    
 
-   **附註**：您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果不使用聯合鑑別，則您的 IBM ID 和密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱[何謂聯合鑑別以及它對我有什麼影響？](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **附註**：您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱[何謂聯合鑑別以及它對我有什麼影響？](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 **範例**
 

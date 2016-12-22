@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -16,8 +12,6 @@ copyright:
 {:codeblock: .codeblock}
 
 #{{site.data.keyword.jazzhub_short}} 샘플 프로젝트에서 텍스트 기반 파이프라인 공유 {: #share-pipeline}
-
-*마지막 업데이트 날짜: 2015년 12월 7일* 
 
 {{site.data.keyword.Bluemix_notm}}에 배치 단추를 통해 {{site.data.keyword.Bluemix_notm}}에 배치된 샘플 프로젝트의 경우 {{site.data.keyword.jazzhub_short}} 파이프라인 구성을 YAML 파일로 정의할 수 있습니다. 프로젝트를 분기 실행하는 사용자가 고유 파이프라인을 구성할 필요가 없도록 텍스트로 정의된 파이프라인을 공유할 수 있습니다. 이 기능은 개발 중입니다. YAML 형식과 구현은 언제든 변경될 수 있습니다. 현재 이 기능은 {{site.data.keyword.Bluemix_notm}}를 대상으로 하는 Git 및 GitHub 저장소가 있는 프로젝트에서만 사용할 수 있습니다.
 {: shortdesc} 
@@ -226,4 +220,3 @@ CF_APP	| 앱 이름
 이 호출에는 승인 머리글이 필요하지 않습니다. 이 호출은 브라우저에서 사용할 수 있습니다. 
 
 **참고:** 안전을 위해 생성된 파이프라인 YAML 파일에서 secure-stage 환경 특성 값은 생략됩니다. 
-

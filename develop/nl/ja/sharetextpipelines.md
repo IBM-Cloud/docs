@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -16,8 +12,6 @@ copyright:
 {:codeblock: .codeblock}
 
 #{{site.data.keyword.jazzhub_short}} サンプル・プロジェクトにおけるテキスト・ベースのパイプラインの共有 {: #share-pipeline}
-
-*最終更新日: 2015 年 12 月 7 日* 
 
 「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンで {{site.data.keyword.Bluemix_notm}} にデプロイされたサンプル・プロジェクトに対して、{{site.data.keyword.jazzhub_short}} パイプライン構成を YAML ファイルとして定義できます。テキストとして定義されたパイプラインは共有することができ、それによりプロジェクトをフォークする人は独自のパイプラインを構成する必要がなくなります。この機能は現在開発中で、YAML フォーマットと実装は随時変更される可能性があります。現在この機能は、{{site.data.keyword.Bluemix_notm}} をターゲットとする Git リポジトリーおよび GitHub リポジトリーを持つプロジェクトでのみ使用可能です。
 {: shortdesc} 
@@ -219,4 +213,3 @@ CF_APP	| アプリ名
 accept ヘッダーはこの呼び出しでは必要ありません。この呼び出しはブラウザーから使用できます。 
 
 **注:** 安全上の理由により、secure-stage 環境プロパティー値は生成されたパイプライン YAML ファイルから省略されます。 
-

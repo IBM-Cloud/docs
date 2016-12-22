@@ -3,10 +3,8 @@
 
 
 copyright:
-
-  years: 2015，20166
-
-
+  years: 2015，2016
+lastupdated: "2016-10-19"
 
 ---
 
@@ -15,11 +13,10 @@ copyright:
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
+#{{site.data.keyword.Bluemix_notm}} Live Sync
+{: #live-sync}
 
-*Letzte Aktualisierung: 24. Juni 2016*
-{: .last-updated}  
-
+ 
 Wenn Sie eine Node.js-Anwendung erstellen, können Sie {{site.data.keyword.Bluemix}} Live Sync dazu verwenden, die Anwendungsinstanz ohne großen Zeitaufwand in {{site.data.keyword.Bluemix_notm}} zu aktualisieren und Entwicklungsprozesse wie auf dem Desktop durchzuführen, ohne dass eine erneute Bereitstellung erforderlich ist.   
 {: shortdesc}
 
@@ -40,10 +37,10 @@ Mit Desktop Sync können Sie den Desktop-Arbeitsbereich mit dem cloudbasierten P
 
 Der Bluemix Live Sync-Prozess ist im folgenden Diagramm dargestellt.
 
-*Abbildung 1. Der Bluemix Live Sync-Prozess*
+Abbildung 1. Der Bluemix Live Sync-Prozess
 ![Abbildung des Bluemix Live Sync-Prozesses](images/bluemix-live-sync.png)
 
-Wenn Sie eine Java-Anwendung entwickeln, die auf Liberty ausgeführt wird, können Sie mit [Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) ein fernes Debugging durchführen.
+Wenn Sie eine Java-Anwendung entwickeln, die auf Liberty ausgeführt wird, können Sie mit [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools) ein fernes Debugging durchführen.
 
 ##Desktop Sync {: #desktop-sync}
 
@@ -73,7 +70,7 @@ Weitere Details zu den Befehlen finden Sie unter [Bluemix Live Sync-Befehle (bl)
 <li>Melden Sie sich in einer Befehlszeile mit dem folgenden Befehl an. Sie werden zur Eingabe Ihrer Benutzer-ID und des entsprechenden Kennworts aufgefordert.  
 <pre class="codeblock">bl login</pre>
 
-<strong>Hinweis:</strong> Ihre Benutzer-ID für DevOps Services kann entweder eine IBM ID oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBM ID und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> What's federated authentication and how does it affect me?</a>. 
+<strong>Hinweis:</strong> Ihre Benutzer-ID für DevOps Services kann entweder eine IBM ID oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBM ID und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> What's federated authentication and how does it affect me?</a>.
 </li>
 
 <li>Zeigen Sie die Liste der für die {{site.data.keyword.Bluemix_notm}} Live Sync-Synchronisation verfügbaren Projekte an, indem Sie den folgenden Befehl eingeben:
@@ -198,7 +195,7 @@ Mithilfe der Befehle der **bl**-Befehlszeilenschnittstelle können Sie die folge
 * Die Liste der Projekte anzeigen, die für die Synchronisation verfügbar sind.
 * Den Status von aktiven Anwendungen anzeigen.
 
-Weitere Informationen zum Herunterladen und Verwenden des Befehls 'bl' finden Sie in der Veröffentlichung [Bluemix Live Sync](../develop/bluemixlive.html).
+Weitere Informationen zum Herunterladen und Verwenden des Befehls 'bl' finden Sie in der Veröffentlichung [Bluemix Live Sync](/docs/develop/bluemixlive.html).
 
 ## bl-Befehle
 {: #bl_commands}

@@ -3,10 +3,8 @@
 
 
 copyright:
-
   years: 2015，2016
-
-
+lastupdated: "2016-10-19"
 
 ---
 
@@ -15,11 +13,10 @@ copyright:
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
+#{{site.data.keyword.Bluemix_notm}} Live Sync
+{: #live-sync}
 
-*Última atualização: 24 de junho de 2016*
-{: .last-updated}  
-
+ 
 Se você estiver construindo um aplicativo Node.js, será possível usar o {{site.data.keyword.Bluemix}} Live Sync para atualizar rapidamente a instância do aplicativo no {{site.data.keyword.Bluemix_notm}} e desenvolver da forma usual na área de trabalho sem reimplementar.   
 {: shortdesc}
 
@@ -47,10 +44,10 @@ Live Edit, poderá depurar seu aplicativo em execução.
 
 O processo Bluemix Live Sync é ilustrado no diagrama a seguir.
 
-*Figura 1. O processo Bluemix Live Sync*
-![Imagem do processo Bluemix Live Sync](images/bluemix-live-sync.png)
+Figura 1. O processo do Bluemix Live Sync
+![Imagem do processo do Bluemix Live Sync](images/bluemix-live-sync.png)
 
-Se você estiver desenvolvendo um aplicativo Java que esteja em execução no Liberty, será possível depurar remotamente usando o [Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html#eclipsetools).
+Se você estiver desenvolvendo um aplicativo Java que esteja em execução no Liberty, será possível depurar remotamente usando o [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools).
 
 ##Desktop Sync {: #desktop-sync}
 
@@ -84,7 +81,7 @@ Para obter mais detalhes sobre os comandos, consulte [Comandos do Bluemix Live S
 comando do Bluemix Live Sync, deverá usar um token de acesso pessoal em vez de uma senha. Se você não usar autenticação federada, o seu ID IBM e a senha funcionarão com todos os clientes. Para obter mais
 informações sobre a criação de um token de acesso pessoal, consulte
 <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> O que é autenticação
-federada e como ela me afeta?</a> 
+federada e como ela me afeta?</a>
 </li>
 
 <li>Consulte a lista de projetos que estão disponíveis para sincronização do {{site.data.keyword.Bluemix_notm}} Live Sync, inserindo o comando a seguir:
@@ -212,7 +209,7 @@ Envie por push o aplicativo e, em seguida, navegue para `https://app-host.myblue
 {{site.data.keyword.Bluemix_notm}}. Quando for solicitado que você autentique, insira o seu ID do usuário e o token de acesso pessoal ou a senha do ID IBM.    
 
    **Nota**: o seu ID do usuário para o DevOps Services pode ser um ID IBM ou um ID federado (ID corporativo). Se você usar autenticação federada, para efetuar login em seu cliente da linha de
-comando do Bluemix Live Sync, deverá usar um token de acesso pessoal em vez de uma senha. Se você não usar autenticação federada, o seu ID IBM e senha funcionarão com todos os clientes. Para obter mais
+comando do Bluemix Live Sync, deverá usar um token de acesso pessoal em vez de uma senha. Se você não usar autenticação federada, o seu ID IBM e a senha funcionarão com todos os clientes. Para obter mais
 informações sobre a criação de um token de acesso pessoal, consulte [O que é autenticação
 federada e como ela me afeta?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
@@ -241,7 +238,7 @@ imediatamente. A interface da linha de comandos do {{site.data.keyword.Bluemix_l
 * Consulte a lista de projetos disponíveis para sincronização.
 * Consulte o status dos aplicativos em execução.
 
-Para obter informações adicionais sobre download e uso do comando bl, veja [Bluemix Live Sync](../develop/bluemixlive.html).
+Para obter informações adicionais sobre download e uso do comando bl, veja [Bluemix Live Sync](/docs/develop/bluemixlive.html).
 
 ## Comandos bl
 {: #bl_commands}
@@ -342,7 +339,7 @@ Use esse comando para efetuar login no {{site.data.keyword.Bluemix_notm}}. O log
 -s *server*: o nome do servidor ou endereço IP do servidor {{site.data.keyword.jazzhub_short}}.    
 
    **Nota**: o seu ID do usuário para o DevOps Services pode ser um ID IBM ou um ID federado (ID corporativo). Se você usar autenticação federada, para efetuar login em seu cliente da linha de
-comando do Bluemix Live Sync, deverá usar um token de acesso pessoal em vez de uma senha. Se você não usar autenticação federada, o seu ID IBM e senha funcionarão com todos os clientes. Para obter mais
+comando do Bluemix Live Sync, deverá usar um token de acesso pessoal em vez de uma senha. Se você não usar autenticação federada, o seu ID IBM e a senha funcionarão com todos os clientes. Para obter mais
 informações sobre a criação de um token de acesso pessoal, consulte [O que é autenticação
 federada e como ela me afeta?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
@@ -479,7 +476,7 @@ no {{site.data.keyword.Bluemix_notm}}.
 
 -r *REGION*: uma região do {{site.data.keyword.Bluemix_notm}}. Padrão: Sul dos EUA.
 
--o *ORG*: uma organização do {{site.data.keyword.Bluemix_notm}}. Padrão: Primeiro org localizado.
+-o *ORG*: Uma organização do {{site.data.keyword.Bluemix_notm}}. Padrão: primeira organização localizada.
 
 -s *SPACE*: um espaço do {{site.data.keyword.Bluemix_notm}}. Parão: primeiro espaço localizado.
 

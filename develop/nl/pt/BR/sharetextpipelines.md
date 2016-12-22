@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -16,8 +12,6 @@ copyright:
 {:codeblock: .codeblock}
 
 #Compartilhando pipelines baseados em texto em projetos de amostra do {{site.data.keyword.jazzhub_short}} {: #share-pipeline}
-
-*Última atualização: 7 de dezembro de 2015* 
 
 No caso dos projetos de amostra implementados no
 {{site.data.keyword.Bluemix_notm}} pelo botão
@@ -246,4 +240,3 @@ Essa
 chamada não requer um cabeçalho Accept. Você pode usar a chamada em um navegador. 
 
 **Nota:** Por motivos de segurança, os valores da propriedade de ambiente secure-stage são omitidos nos arquivos YAML do pipeline gerado. 
-

@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -18,17 +14,16 @@ copyright:
 
 #「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンの作成 {: #deploy-button} 
 
-*最終更新日: 2016 年 3 月 2 日*
-{: .last-updated} 
-
 「{{site.data.keyword.Bluemix}} にデプロイ」ボタンを使用すると Git から入手したパブリック・アプリを効率的に共有することができ、それによって、他のユーザーがそのコードを試し、IBM {{site.data.keyword.Bluemix_notm}} にデプロイできるようになります。このボタンは最小限の構成で済み、マークアップをサポートする場所ならどこにでも挿入できます。誰かがこのボタンをクリックすると、オリジナルのアプリには影響しないように、新しい Git リポジトリー内にコードの複製コピーが作成されます。
 {: shortdesc} 
 
-**ヒント:** 企業ブランディングが重要な場合、ボタンを挿入する代わりに、[「{{site.data.keyword.Bluemix_notm}} にデプロイ」iFrame フローを埋め込む](../develop/deploy_button_embed.html)ことができます。Git から入手したパブリック・アプリの複製コピーを作成したユーザーは、bluemix.net Web サイトにリダイレクトされる代わりに、コンテンツにとどまります。 
+**ヒント:** 企業ブランディングが重要な場合、ボタンを挿入する代わりに、[「{{site.data.keyword.Bluemix_notm}} にデプロイ」iFrame フローを埋め込む](/docs/develop/deploy_button_embed.html)ことができます。Git から入手したパブリック・アプリの複製コピーを作成したユーザーは、bluemix.net Web サイトにリダイレクトされる代わりに、コンテンツにとどまります。 
+
+**注**: ツールチェーン・フィーチャーが使用可能になりました。「{{site.data.keyword.Bluemix_notm}} にデプロイ」ボタンをクリックすれば誰でも、バナーの該当リンクをクリックして、ツールチェーンを使用したアプリケーションのデプロイを試すことができます。
 
 誰かがボタンをクリックすると、以下のアクションが起こります。 
 
-1. クリックしたユーザーがアクティブな {{site.data.keyword.Bluemix}} アカウントを持っていない場合、トライアル・アカウントが作成される必要があります。 
+1. クリックしたユーザーがアクティブな {{site.data.keyword.Bluemix_notm}} アカウントを持っていない場合、トライアル・アカウントが作成される必要があります。 
 
 2. ユーザーは、地域、組織、スペース、およびアプリ名を選択できます。推奨アプリ名は、前のアプリ名、ユーザーのユーザー名、および時刻で構成されます。 
 
@@ -168,9 +163,9 @@ copyright:
 </pre>
    </li>
    </ul>
-	<li> アプリがデプロイされる前にリポジトリーが作成されている必要がある場合、デプロイメントの前にリポジトリー内でコードの自動ビルドがトリガーされます。自動ビルドは、リポジトリーのルート・ディレクトリー内でビルド・スクリプト・ファイルが検出された場合に起こります。
+	<li> アプリケーションのデプロイ前にビルドが必要な場合は、リポジトリーにビルド・ファイルを含めてください。リポジトリーのルート・ディレクトリーにビルド・スクリプト・ファイルが検出されると、デプロイメントの前にコードの自動ビルドが起動されます。
 	
-サポートされるビルダー:<ul>
+	サポートされるビルダー:<ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code> (<code>./output/</code> フォルダーへの出力をビルドする)</li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code> (<code>. </code> フォルダーへの出力をビルドする) </li>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code> (<code>. </code> フォルダーへの出力をビルドする)</li>
@@ -187,8 +182,9 @@ copyright:
 <li>プロジェクトのルート・ディレクトリー内に <code>.bluemix</code> ディレクトリーを作成します。</li>
 <li>この <code>pipeline.yml</code> ファイルを <code>.bluemix</code> リポジトリーにアップロードします。</li>
 </ol> </li>
-	<li><strong>IBM Containers</strong> を使用してアプリをコンテナーにデプロイする場合、リポジトリーのルート・ディレクトリーに Dockerfile を、<code>.bluemix</code> ディレクトリーに <code>pipeline.yml</code> ファイルを含める必要があります。
+	<li><strong>IBM Containers</strong> を使用してアプリをコンテナーにデプロイするには、リポジトリーのルート・ディレクトリーに Dockerfile を、<code>.bluemix</code> ディレクトリーに <code>pipeline.yml</code> ファイルを含める必要があります。
 	<ul>
+	    <li>Dockerfile は、アプリのビルド・スクリプトのようなものとして機能します。リポジトリーに Dockerfile が検出されると、アプリは、コンテナーにデプロイされる前に自動的にイメージにビルドされます。アプリがイメージにビルドされる前にアプリ自体をビルドする必要がある場合は、前述のとおり、Dockerfile とともにアプリのビルド・スクリプトを含めてください。</li>
 	    <li> Dockerfile の作成について詳しくは、<a href="https://docs.docker.com/reference/builder/" target="_blank">Docker 資料</a>を参照してください。</li>
 	    <li><code>pipeline.yml</code> ファイルは手動で作成するか、既存の DevOps Services プロジェクトから生成することができます。コンテナーに固有の <code>pipeline.yml</code> を手動で作成するには、<a href="https://github.com/Puquios/" target="_blank">GitHub にある例</a>を参照してください。</li>
         </ul>
@@ -197,4 +193,5 @@ copyright:
  </ul>
 </ul>
 
-トラブルシューティングのヘルプについては、[「Bluemix にデプロイ」ボタンでアプリがデプロイされない](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}を参照してください。	
+トラブルシューティングのヘルプについては、[「Bluemix にデプロイ」ボタンでアプリがデプロイされない](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}を参照してください。	
+

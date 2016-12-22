@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -16,8 +12,6 @@ copyright:
 {:codeblock: .codeblock}
 
 #Textbasierte Pipelines in Beispielprojekten von {{site.data.keyword.jazzhub_short}} gemeinsam nutzen {: #share-pipeline}
-
-*Letzte Aktualisierung: 7. Dezember 2015* 
 
 Für Beispielprojekte, die in {{site.data.keyword.Bluemix_notm}} über die Schaltfläche 'In {{site.data.keyword.Bluemix_notm}} bereitstellen' bereitgestellt werden, können Sie {{site.data.keyword.jazzhub_short}}-Pipelinekonfigurationen
 als YAML-Dateien definieren. Pipelines, die als Text definiert sind, können gemeinsam genutzt werden,
@@ -230,4 +224,3 @@ Dieser Aufruf erfordert keinen Header 'Accept'. Sie können diesen Aufruf in ein
 
 **Hinweis:** Aus Sicherheitsgründen sind die Umgebungseigenschaftswerte für die Stage 'secure'
 nicht in den generierten Pipeline-YAML-Dateien enthalten. 
-
