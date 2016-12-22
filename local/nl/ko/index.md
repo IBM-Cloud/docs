@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-11-11"
+lastupdated: "2016-11-07"
 
 
 ---
@@ -16,6 +16,8 @@ lastupdated: "2016-11-11"
 
 # {{site.data.keyword.Bluemix_local_notm}}
 {: #local}
+
+<!-- 10/30/16 Most sections are currently being updated and edited. Do not move full file for production -->
 
 {{site.data.keyword.Bluemix_local}}은 {{site.data.keyword.Bluemix_notm}} 클라우드 기반 플랫폼의 강력함 및 민첩성을 데이터 센터로 가져옵니다. {{site.data.keyword.Bluemix_local_notm}}을 사용하여 안전하게 연결되고 {{site.data.keyword.Bluemix_notm}} 퍼블릭 동기화를 유지하는 동안 회사 방화벽 뒤에 가장 민감한 워크로드를 보호할 수 있습니다.
 {:shortdesc}
@@ -27,9 +29,6 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 {{site.data.keyword.Bluemix_local_notm}}은 {{site.data.keyword.Bluemix_notm}} 런타임 및 64GB의 컴퓨팅 메모리가 모두 포함되어 제공됩니다.
 
 또한 {{site.data.keyword.Bluemix_local_notm}} 서비스로서 사용 가능한 서비스 세트도 있습니다. 다음 표를 검토하여 포함되는 항목과 구입 가능한 항목을 확인하십시오.
-
-표 1. 로컬 서비스 및 런타임
-{: #table01}
 
 | **유형** | **이름** | **설명** |
 |----------|----------|-----------------|
@@ -43,12 +42,11 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |선택사항 | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}}는 iOS 및 Android 디바이스에 알림을 보내는 데 사용할 수 있는 서비스입니다. 알림은 모든 애플리케이션 사용자와 태그를 사용하는 특정 디바이스 및 사용자 세트를 대상으로 할 수 있습니다. 디바이스, 태그 및 구독을 관리할 수 있습니다. SDK(Software Development Kit) 및 REST(Representational State Transfer) API(Application Program Interface)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다. |
 |선택사항 | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 증가된 중복성을 위해 {{site.data.keyword.sescashort}}에서는 캐시에 저장된 세션의 복제본을 제공합니다. 따라서 등화 관제 또는 가동 중단의 상황에서도 클라이언트 애플리케이션은 캐시의 세션에 계속 액세스할 수 있습니다. 이 서비스는 웹 및 모바일 애플리케이션에 대한 세션 캐싱 시나리오를 지원합니다. |
 |선택사항 | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | 이 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. 로컬 기본 오퍼링에는 1.6TB의 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 전용 환경 내에서 IBM {{site.data.keyword.iot_short}}의 개인용 버전 실행을 허용하는 초기 환경이 포함됩니다. |
+{: caption="Table 1. Local services and runtimes" caption-side="top"}
+{: #table01}
 
 
 리소스 및 서비스의 용량을 스케일링하고 확장하기 위해 구입할 수 있는 선택적 컴포넌트가 있습니다. 영업 팀에 문의하면 이 컴포넌트를 구입할 수 있습니다. 영업 담당자의 연락처 정보를 보려면 [담당자](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)로 이동하십시오. 서비스에 대한 플랜을 늘리기 위해 카탈로그의 서비스 타일에서 플랜을 선택할 수 있습니다.
-
-*표 2. 구입할 선택적 컴포넌트: 서비스 추가 기능*
-{: #table02}
 
 | **이름** | **설명** |
 |----------|-----------------|
@@ -60,9 +58,8 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |{{site.data.keyword.Bluemix_notm}} 데이터 & 세션 캐시 50GB 용량 증가 | 최대 50GB 누적 용량까지 데이터 캐시 및 세션 캐시 인스턴스의 배치 및 실행을 허용하는 환경입니다. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} 로컬 증분 증가 | 0.5TB 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 로컬 환경 내에서 {{site.data.keyword.iot_short}}의 개인용 버전 실행을 허용하는 {{site.data.keyword.iot_short}} 로컬 기본 서비스 오퍼링에 대한 추가 환경입니다. |
 |{{site.data.keyword.IBM_notm}} {{site.data.keyword.mobilepush}} 로컬 추가 기능 인스턴스 | 초당 300개의 추가 요청을 승인할 수 있는 능력이 있는 {{site.data.keyword.mobilepush}} 인스턴스를 배치하고 실행할 수 있는 환경입니다.  |
-
-*표 3. 구입할 선택적 컴포넌트: 플랫폼 추가 기능*
-{: #table03}
+{: caption="Table 2. Optional services components for purchase" caption-side="top"}
+{: #table02}
 
 | **이름** | **설명** |
 |----------|-----------------|
@@ -70,6 +67,8 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |로컬 Cloud Foundry 런타임 16GB 용량 증가  | 추가 16GB 런타임 용량을 제공하는 Cloud Foundry 런타임 환경의 확장입니다. |
 |로컬 {{site.data.keyword.containerlong}} 16GB 용량 증가  | 추가 16GB 용량을 제공하는 {{site.data.keyword.containerlong}} 환경의 확장입니다. |
 |로컬 {{site.data.keyword.containerlong}} 64GB 용량  | 64GB 용량을 제공하는 {{site.data.keyword.containerlong}} 환경입니다. |
+{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: #table03}
 
 **참고**: {{site.data.keyword.Bluemix_notm}} 로컬 컴포넌트는 특정 구성 용량(예: 기가바이트 또는 초당 트랜잭션)을 표시할 수 있습니다. 클라우드 서비스의 구성에 대한 사실상의 실제 용량이 수많은 요인에 따라 다양하므로, 사실상의 실제 용량은 구성된 용량보다 크거나 작을 수 있습니다.
 
@@ -79,9 +78,6 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 {{site.data.keyword.Bluemix_local_notm}}에는 퍼블릭 및 로컬 배치의 승인된 서비스를 한데 모으는 개인용 카탈로그가 있습니다. 이 {{site.data.keyword.Bluemix_notm}} 카탈로그를 통해 사용자 소유의 서비스를 공개하고 서비스에 대한 액세스를 관리할 수도 있습니다. 데이터에 대한 개인정보 보호정책 및 보안 기준에 따라 사용자 비즈니스의 요구사항을 충족해야 하는 공용 서비스를 결정하는 옵션이 있습니다. 
 
 로컬 환경에 대한 {{site.data.keyword.Bluemix_notm}} 서비스의 개인용 인스턴스가 있으면 카탈로그 관리 보기에 서비스 이름과 함께 "로컬" 태그가 표시됩니다. 마찬가지로, 사용자 정의 서비스인 경우(즉, 서비스 브로커를 사용하여 작성한 경우)에는 서비스 이름과 함께 "사용자 정의"가 나열됩니다. "로컬" 또는 "사용자 정의" 태그 없이 나열된 기타 모든 서비스는 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 신디케이션을 사용하여 사용할 수 있습니다. 신디케이트된(각 클라우드 형태 간 동일하게 연동된) 카탈로그는 공용 및 개인 서비스로 구성되는 하이브리드 애플리케이션을 작성하는 기능을 제공합니다. 
-
-*표 4. 지역별로 {{site.data.keyword.Bluemix_notm}} 퍼블릭에서 신디케이션에 사용 가능한 서비스*
-{: #table04}
 
 |서비스	|미국 남부 지역에서 사용 가능	|유럽 영국 지역에서 사용 가능 |오스트레일리아 시드니 지역에서 사용 가능|
 |:----------|:------------------------------|:------------------|:------------------|
@@ -134,6 +130,8 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |{{site.data.keyword.iot_short}}		|예		|예		|아니오|
 |{{site.data.keyword.weather_short}}		|예		|예		|예|
 |{{site.data.keyword.workloadscheduler}}	|예		|예		|예 |
+{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
+{: #table04}
 
 **참고**: 표에 써드파티 서비스가 포함되어 있지 않습니다. 써드파티 서비스 옵션에 대한 카탈로그를 확인하십시오. 
 
@@ -290,10 +288,10 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 <li>사용자 네트워크의 7개 IP 주소를 제공합니다. 내부 {{site.data.keyword.Bluemix_notm}} 컴포넌트에 아웃바운드 인터넷 액세스를 허용하기 위해 보안 웹 프록시를 사용하는 경우, 연결에 필요한 신임 정보를 제공해야 합니다.
 <p>**참고**: 웹 프록시에 보안이 설정되어 있지 않으면 신임 정보를 제공할 필요가 없습니다. 또한 일부 {{site.data.keyword.Bluemix_local_notm}} 고객은 웹 프록시를 사용하지 않는다는 점에 유의하십시오.</p></li>
 <li>{{site.data.keyword.IBM_notm}}은 배치를 시작하기 전에 웹 프록시를 통해 허용되어야 하는 URL 화이트리스트를 제공합니다.<br />
-<p>**참고**: 기존 또는 새 애플리케이션에서 필요한 리소스에 액세스할 수 있는지 확인하려면 리소스를 빌드팩과 번들화하는 추가 단계를 수행하거나 보안 팀과 함께 작업하여 애플리케이션을 실행하는 데 필요한 URL을 화이트리스트로 작성해야 합니다. node.js 빌드팩과 Liberty for Java 빌드팩 관련 작업에 대한 자세한 정보는 <a href="/docs/runtimes/nodejs/offlineMode.html">node.js의 오프라인 모드</a>와 <a href="/docs/runtimes/liberty/offlineMode.html">Liberty for Java의 오프라인 모드</a>의 내용을 참조하십시오. </p>
+<p>**참고**: 기존 또는 새 애플리케이션에서 필요한 리소스에 액세스할 수 있는지 확인하려면 리소스를 빌드팩과 번들화하는 추가 단계를 수행하거나 보안 팀과 함께 작업하여 애플리케이션을 실행하는 데 필요한 URL을 화이트리스트로 작성해야 합니다. node.js 빌드팩과 Liberty for Java 빌드팩 관련 작업에 대한 자세한 정보는 <a href="../runtimes/nodejs/offlineMode.html">node.js의 오프라인 모드</a>와 <a href="../runtimes/liberty/offlineMode.html">Liberty for Java의 오프라인 모드</a>의 내용을 참조하십시오. </p>
 </li>
 <li>배치에 필요한 도메인 이름 및 사용할 ID를 지정합니다. 로컬 인스턴스를 설정할 때 특별히 정의된 두 개의 도메인이 나타나고, 이 두 개 도메인의 접두부를 선택합니다. 예를 들어, <code>*mycompany*.bluemix.net</code> 및 <code>*mycompany*.mybluemix.net</code>에 대한 접두부를 선택합니다. 그런 다음, 전체 도메인을 선택하여 사용자 정의 도메인을 작성할 수도 있습니다.<br />
-<p>사용자 정의 도메인은 필요한 만큼 선택할 수 있습니다. 그러나, 사용자 정의 도메인의 인증은 사용자 자신이 책임져야 합니다. 사용자 정의 도메인 작성에 대한 자세한 정보는 <a href="/docs/manageapps/updapps.html#domain">사용자 정의 도메인 작성 및 사용</a>을 참조하십시오.</p></li>
+<p>사용자 정의 도메인은 필요한 만큼 선택할 수 있습니다. 그러나, 사용자 정의 도메인의 인증은 사용자 자신이 책임져야 합니다. 사용자 정의 도메인 작성에 대한 자세한 정보는 <a href="../manageapps/updapps.html#domain">사용자 정의 도메인 작성 및 사용</a>을 참조하십시오.</p></li>
 <li>{{site.data.keyword.IBM_notm}} 운영 센터에 다시 연결하도록 릴레이를 구성하는 데 사용할 기술을 IPSec 또는 OpenVPN 터널 중에서 선택합니다.</li>
 <li>{{site.data.keyword.IBM_notm}}이 {{site.data.keyword.Bluemix_notm}} 클러스터 내에 도입/인식(Inception) 가상 머신을 설치하고 시작합니다. 고유 VMware를 제공하는 경우, 고객 대표가 이 태스크를 완료할 수 있도록 {{site.data.keyword.IBM_notm}} 담당자가 도와드립니다.</li>
 <li>{{site.data.keyword.IBM_notm}}이 {{site.data.keyword.IBM_notm}} 운영 센터와 다시 통신하도록 릴레이를 구성합니다.</li>
@@ -306,7 +304,7 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 <li>경보에 대응하기 위해 {{site.data.keyword.IBM_notm}} 운영 팀에서 모니터링하는 로컬 인스턴스의 사용을 시작할 수 있습니다.</li>
 </ol>
 
-{{site.data.keyword.Bluemix_notm}} 인스턴스를 설정하고 나면 관리 페이지를 사용하여 {{site.data.keyword.Bluemix_notm}} 인스턴스를 모니터링하고 관리할 수 있습니다. 자세한 정보는 [{{site.data.keyword.Bluemix_local_notm}} 및 데디케이티드 관리](/docs/admin/index.html#mng)를 참조하십시오. 업그레이드 및 유지보수에 대한 자세한 정보는 [로컬 인스턴스 유지보수](index.html#maintainlocal)를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} 인스턴스를 설정하고 나면 관리 페이지를 사용하여 {{site.data.keyword.Bluemix_notm}} 인스턴스를 모니터링하고 관리할 수 있습니다. 자세한 정보는 [{{site.data.keyword.Bluemix_local_notm}} 및 데디케이티드 관리](../admin/index.html#mng)를 참조하십시오. 업그레이드 및 유지보수에 대한 자세한 정보는 [로컬 인스턴스 유지보수](index.html#maintainlocal)를 참조하십시오.
 
 ##역할 및 책임
 {: #rolesresponsibilities}
@@ -327,13 +325,13 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 <dt>**DevOps 담당자**</dt>
 <dd>{{site.data.keyword.IBM_notm}} 담당자와 협력하여 {{site.data.keyword.Bluemix_notm}} 플랫폼, 서비스 및 런타임에 필요한 유지보수 업데이트를 계획하고 적용합니다. 이 역할에 지정된 사용자는 {{site.data.keyword.Bluemix_local_notm}} 인스턴스의 구성에 대해서도 {{site.data.keyword.IBM_notm}} 담당자와 함께 작업합니다.</dd>
 <dt>**IaaS 전문가**</dt>
-<dd>VMware의 배치 플랜에 대해 {{site.data.keyword.IBM_notm}} 담당자와 함께 작업합니다. 일반적으로 데이터 센터의 VMware 관리자입니다. 이 역할에 지정된 사용자는 <a href="/docs/local/index.html#localinfra">{{site.data.keyword.Bluemix_local_notm}} 인프라 요구사항</a>을 검토하고 {{site.data.keyword.IBM_notm}}과 함께 구현 플랜에 대한 작업을 수행합니다. 배치 단계의 끝에서 이 역할에 지정된 사용자는 배치가 laaS 계층의 기업 표준에 부합함을 승인합니다.</dd>
+<dd>VMware의 배치 플랜에 대해 {{site.data.keyword.IBM_notm}} 담당자와 함께 작업합니다. 일반적으로 데이터 센터의 VMware 관리자입니다. 이 역할에 지정된 사용자는 <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_local_notm}} 인프라 요구사항</a>을 검토하고 {{site.data.keyword.IBM_notm}}과 함께 구현 플랜에 대한 작업을 수행합니다. 배치 단계의 끝에서 이 역할에 지정된 사용자는 배치가 laaS 계층의 기업 표준에 부합함을 승인합니다.</dd>
 <dt>**운영 담당자**</dt>
 <dd>환경이 시작되고 실행되면 필요에 따라 {{site.data.keyword.IBM_notm}} 지원 팀과 함께 작업합니다. {{site.data.keyword.Bluemix_notm}} 환경에 대한 유지보수 업데이트를 승인 및 스케줄링할 수 있고 중대 인시던트 발생 시 항상 사용할 수 있는 관리 콘솔에 대한 **수퍼유저** 액세스 권한이 있는 사용자입니다. 이 역할에 지정된 사용자는 {{site.data.keyword.Bluemix_notm}} 환경에 대한 기술적 지식이 있어야 하고, 예를 들어 네트워킹 또는 보안을 포함하여 영향을 받는 영역에서 전문적인 스킬을 갖춘 회사 내 다른 직원들에게 연락할 수 있는 위치에 있어야 합니다.
 </dd>
 </dl>
 
-고객 대표는 {{site.data.keyword.IBM_notm}} 전문가와 공동 작업을 통해 사용자가 항상 필요한 지원을 받을 수 있도록 보장합니다. 프리미엄 지원 계층으로 업그레이드하여 계정에 대한 데디케이티드 CSM(Client Success Manager)을 사용하여 작업할 수 있습니다. 여러 지원 계층에 대한 자세한 정보는 [지원 문의](/docs/support/index.html#contacting-support)를 참조하십시오. CSM은 다음 유형의 태스크를 완료합니다.
+고객 대표는 {{site.data.keyword.IBM_notm}} 전문가와 공동 작업을 통해 사용자가 항상 필요한 지원을 받을 수 있도록 보장합니다. 프리미엄 지원 계층으로 업그레이드하여 계정에 대한 데디케이티드 CSM(Client Success Manager)을 사용하여 작업할 수 있습니다. 여러 지원 계층에 대한 자세한 정보는 [지원 문의](../support/index.html#contacting-support)를 참조하십시오. CSM은 다음 유형의 태스크를 완료합니다.
 
 <ul>
 <li>사용자와 IBM 사이에서 기술적 중재를 제공합니다.</li>
@@ -353,14 +351,12 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 
 환경 설정에서부터 지속적 유지보수에 이르기까지 사용자와 IBM 모두 다양한 태스크를 완료해야 합니다. 다음 표에서는 도입/인식(Inception), 진행 및 완료 단계에서 태스크 완료를 위한 소유자와 필수 태스크를 보여줍니다.
 
-도입/인식(Inception) 단계(Phase)는 {{site.data.keyword.Bluemix_local_notm}} 환경을 설정하는 데 사용됩니다. 이 시점에서 사용자는 [로컬 인프라 요구사항](/docs/local/index.html#localinfra)에 대한 검토를 마쳤습니다. 이 단계의 1차 목표에는 다음이 포함됩니다.
+도입/인식(Inception) 단계(Phase)는 {{site.data.keyword.Bluemix_local_notm}} 환경을 설정하는 데 사용됩니다. 이 시점에서 사용자는 [Local 인프라 요구사항](../local/index.html#localinfra)에 대한 검토를 마쳤습니다. 이 단계의 1차 목표에는 다음이 포함됩니다.
 
 - 재무 계약을 검토하고 전달을 위한 마일스톤 날짜를 설정합니다.
 - {{site.data.keyword.Bluemix_notm}} 플랫폼을 작성하고 런타임 및 서비스에 대한 액세스를 제공합니다.
 - 기업 네트워크 및 {{site.data.keyword.Bluemix_notm}} 오퍼레이션 간의 네트워크 연결을 정의하고 설정합니다.
 - 관리 팀에 대한 역할을 식별하고 지정합니다.
-
-*표 4. 도입/인식(Inception) 단계 태스크*
 
 | **태스크** | **태스크 세부사항** | **책임자** |
 |----------|------------------|-----------------------|
@@ -375,7 +371,7 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |이벤트 발견 및 문제점 판별을 위한 식별 도구 | {{site.data.keyword.Bluemix_notm}} 플랫폼 레벨에서 이벤트 발견 및 문제점 판별에 사용되는 {{site.data.keyword.IBM_notm}} 및 써드파티 도구를 식별합니다. | {{site.data.keyword.IBM_notm}} |
 |확대 플랜 정의 | 모니터링 컴포넌트를 통해 발견된 이벤트를 선별하고 해결하는 단계적 확대 플랜을 정의합니다. | {{site.data.keyword.IBM_notm}} |
 |인프라, 플랫폼 및 지원 계약에 서명 | 환경에 대한 재무 조건을 포함하여 구독 계약에 서명합니다. 지원 구독에 서명합니다. | 고객 |
-|환경 조달 | 컴퓨팅 리소스, 네트워크 및 스토리지를 조달합니다. 환경의 인프라 요구사항에 대한 자세한 정보는 [로컬 인프라 요구사항](/docs/local/index.html#localinfra)을 참조하십시오. | 고객 |
+|환경 조달 | 컴퓨팅 리소스, 네트워크 및 스토리지를 조달합니다. 환경의 인프라 요구사항에 대한 자세한 정보는 [Local 인프라 요구사항](../local/index.html#localinfra)을 참조하십시오. | 고객 |
 |VPN 솔루션 설치 | 양방향 VPN 솔루션을 설치합니다. | {{site.data.keyword.IBM_notm}} |
 |플랫폼, 애플리케이션, 모니터링 및 관리 컴포넌트 설치 | 플랫폼 컴포넌트(예: BOSH Director, 클라우드 제어기, 상태 관리자, 메시징, 라우터, DEA 및 서비스 제공자)와, 단계적 확대 및 문제점 발견 플랜에 정의된 모니터링 컴포넌트를 설치하고 구성하며 확인합니다. | {{site.data.keyword.IBM_notm}} |
 |보안 컴포넌트 설치 및 구성 | 모니터링 및 단계적 확대 플랜에 연결된 보안 컴포넌트(예: {{site.data.keyword.IBM_notm}} QRadar, 신임 정보 저장소, 침입 방지 시스템, {{site.data.keyword.IBM_notm}} BigFix 및 {{site.data.keyword.IBM_notm}} Security Privileged Identity Management)를 설치하고 구성합니다. | {{site.data.keyword.IBM_notm}} |
@@ -387,14 +383,13 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |실제 인프라 검토 | 위협에 대비한 솔루션 컴포넌트를 호스팅하는 실제 구내와 데이터 센터를 보호하기 위한 보안 제어를 검토합니다. | 고객 |
 |모니터링 소프트웨어 검사 | 단계적 확대 및 문제점 판별 플랜에 정의된 대로 모니터링 및 관리 컴포넌트를 검사합니다. | 고객 |
 |OS 검사 | 운영 체제 이미지가 규제 준수 표준에 부합하는지 검사합니다. {{site.data.keyword.IBM_notm}}이 OS 이미지에 대한 액세스를 제공합니다. | {{site.data.keyword.IBM_notm}} 및 고객 책임 공유 |
+{: caption="Table 5. Inception phase tasks" caption-side="top"}
 
 다음은 진행 단계입니다. 진행 단계에서 사용자와 IBM 사이의 지속적 협력 관계를 기술합니다. 이 단계의 1차 목표에는 다음이 포함됩니다.
 
 - 용량을 검토하여 필요한 조정을 합니다.
 - 유지보수 및 플랫폼 개선 방안을 검토합니다.
 - 문제점 해결 및 근본 원인 분석을 위한 활동을 조정합니다.
-
-*표 6. 진행 단계 태스크*
 
 | **태스크** | **태스크 세부사항** | **책임자** |
 |----------|------------------|-----------------------|
@@ -411,6 +406,7 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |상태 보고, 감사 조정 및 규제 준수 미팅  | 규제 준수 검토 상태 미팅에서 상태 보고, 외부 감사 조정 및 표시를 완료합니다. | {{site.data.keyword.IBM_notm}} |
 |채용 및 비즈니스 수요 검증 | 고객 환경에 액세스하는 {{site.data.keyword.IBM_notm}} 담당자를 위해 분기별 채용 확인 및 지속적 비즈니스 수요에 대한 확인을 완료합니다. | {{site.data.keyword.IBM_notm}} |
 |보안 취약점 해결 | 플랫폼에서 보고된 보안 취약점을 해결합니다. | {{site.data.keyword.IBM_notm}} |
+{: caption="Table 6. Progression phase tasks" caption-side="top"}
 
 최종 완료 단계는 사용자와 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 사이의 관계 종료를 나타냅니다. 이 단계의 1차 태스크에는 다음이 포함됩니다.
 
@@ -418,14 +414,14 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 * 모든 네트워크 연결 제거
 * 인프라 재사용
 
-*표 7. 완료 단계 태스크*
-
 | **태스크** | **태스크 세부사항** | **책임자** |
 |----------|------------------|-----------------------|
 |재무 계약 종료 | 재무 계약의 종료를 논의하고 합의합니다. | {{site.data.keyword.IBM_notm}} 및 고객 책임 공유 |
 |환경에 대한 커미션 해지 | 환경에 대한 액세스 권한과 신임 정보를 종료합니다. | {{site.data.keyword.IBM_notm}} 및 고객 책임 공유 |
 |Relay 종료 | Relay 연결을 종료합니다. | {{site.data.keyword.IBM_notm}} |
 |인프라 재사용 | 회사 가이드라인에 따라 인프라를 재사용합니다. | 고객 |
+{: caption="Table 7. Completion phase tasks" caption-side="top"}
+
 
 ## {{site.data.keyword.Bluemix_local_notm}} 인프라 요구사항
 {: #localinfra}
@@ -562,7 +558,7 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 
 <dt>**{{site.data.keyword.Bluemix_notm}} 플랫폼의 표준 유지보수**</dt>
 <dd>유지보수 업데이트는 21일 기간 내에서 사용자와 {{site.data.keyword.IBM_notm}} 간의 조정을 기반으로 적용됩니다. 사용자는 {{site.data.keyword.IBM_notm}}에 사전 승인된 유지보수 기간 및 작업이 없는 특정 날짜 또는 시간을 제공하고, {{site.data.keyword.IBM_notm}}은 사용자가 선택한 날짜 동안이나 날짜에 맞춰 업데이트를 스케줄링합니다. <br />
-<p>**관리 > 시스템 정보**로 이동하여 스케줄 및 보류 중인 유지보수 업데이트를 확인하십시오. 사전 승인된 기간 설정, 사용 불가능한 날짜, 유지보수 업데이트 보기 또는 승인에 대한 자세한 정보는 <a href="/docs/admin/index.html#oc_schedulemaintenance">유지보수 업데이트</a>를 참조하십시오.</p></dd>
+<p>**관리 > 시스템 정보**로 이동하여 스케줄 및 보류 중인 유지보수 업데이트를 확인하십시오. 사전 승인된 기간 설정, 사용 불가능한 날짜, 유지보수 업데이트 보기 또는 승인에 대한 자세한 정보는 <a href="../admin/index.html#oc_schedulemaintenance">유지보수 업데이트</a>를 참조하십시오.</p></dd>
 </dl>
 
 **중요**: {{site.data.keyword.IBM_notm}}은 필요에 따라 비상 유지보수를 적용하기 위해 서비스를 인터럽트할 수 있는 권한을 보유합니다. {{site.data.keyword.IBM_notm}}은 스케줄된 유지보수 시간을 변경할 수 있습니다. 하지만 이러한 변경은 물론 비상 유지보수 정보에 대해서도 사용자에게 알려드립니다.
@@ -572,7 +568,7 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 ### 고객 인프라 유지보수
 {: #inframaintenance}
 
-{{site.data.keyword.Bluemix_local_notm}}은 ESXi 하이퍼바이저에 배치되며, vCenter 애플리케이션은 가상 머신 및 ESXi 호스트를 중앙 집중식으로 관리하는 데 사용됩니다. {{site.data.keyword.Bluemix_notm}}는 모든 중간 업데이트 및 패치를 포함하여 3가지 최신 버전의 ESXi 및 vCenter를 지원합니다. 언제든지 [로컬 인프라 요구사항](/docs/local/index.html#localinfra) 문서에서 최신 지원 버전을 찾을 수 있습니다. 
+{{site.data.keyword.Bluemix_local_notm}}은 ESXi 하이퍼바이저에 배치되며, vCenter 애플리케이션은 가상 머신 및 ESXi 호스트를 중앙 집중식으로 관리하는 데 사용됩니다. {{site.data.keyword.Bluemix_notm}}는 모든 중간 업데이트 및 패치를 포함하여 3가지 최신 버전의 ESXi 및 vCenter를 지원합니다. 언제든지 [로컬 인프라 요구사항](../local/index.html#localinfra) 문서에서 최신 지원 버전을 찾을 수 있습니다. 
 
 **중요사항**: {{site.data.keyword.Bluemix_local_notm}}이 ESXi 하이퍼바이저로 배치된 경우, ESXi에 대한 업그레이드 및 패치는 환경 내에서 실행 중인 모든 애플리케이션 및 서비스를 포함하여 로컬 환경의 가용성에 지장을 초래할 수 있습니다. 중단 때문에 오류의 운영 팀에 경보하지 않도록 보장하려면, 업그레이드 또는 패치를 완료하기 전에 지원 티켓을 사용하여 {{site.data.keyword.Bluemix_notm}}에 알려야 합니다. 지정된 CSM(Client Success Manager)이 있는 경우, CSM과 공동 작업으로 업그레이드 스케줄을 교환할 수 있습니다. 
 
@@ -586,19 +582,19 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 
 ### 고객이 발견한 문제
 
-{{site.data.keyword.IBM_notm}} 지원 센터 및 운영 센터의 주의가 필요한 문제를 식별하는 경우 몇 가지 다양한 방법을 사용하여 지원 센터에 문의할 수 있습니다. 지원 센터에 문의하는 방법에 대한 정보는 [지원 센터에 문의](/docs/support/index.html#contacting-bluemix-support-local)를 참조하십시오. 문제에 따라 사용자 본인이나 IBM이 또는 사용자와 IBM이 협력하여 문제를 수정합니다.
+{{site.data.keyword.IBM_notm}} 지원 센터 및 운영 센터의 주의가 필요한 문제를 식별하는 경우 몇 가지 다양한 방법을 사용하여 지원 센터에 문의할 수 있습니다. 지원 센터에 문의하는 방법에 대한 정보는 [지원 센터에 문의](../support/index.html#contacting-bluemix-support-local)를 참조하십시오. 문제에 따라 사용자 본인이나 IBM이 또는 사용자와 IBM이 협력하여 문제를 수정합니다.
 
 ### IBM이 발견한 중요 인시던트
 
-중요 인시던트는 환경 또는 사용자에게 영향을 미치는 긴급하고 예상치 못한 서비스 가동 중단 및 안정성 문제입니다. {{site.data.keyword.IBM_notm}}이 사용자 환경 내에서 중요 인시던트를 발견하는 경우 **상태** 페이지의 알림을 통해 사용자에게 알립니다. 상태 페이지에서 플랫폼이나 사용하는 서비스에 대한 알려진 문제가 있는지 확인할 수도 있습니다. 상태 페이지에 대한 자세한 정보는 [상태 보기](/docs/admin/index.html#oc_status)를 참조하십시오.
+중요 인시던트는 환경 또는 사용자에게 영향을 미치는 긴급하고 예상치 못한 서비스 가동 중단 및 안정성 문제입니다. {{site.data.keyword.IBM_notm}}이 사용자 환경 내에서 중요 인시던트를 발견하는 경우 **상태** 페이지의 알림을 통해 사용자에게 알립니다. 상태 페이지에서 플랫폼이나 사용하는 서비스에 대한 알려진 문제가 있는지 확인할 수도 있습니다. 상태 페이지에 대한 자세한 정보는 [상태 보기](../admin/index.html#oc_status)를 참조하십시오.
 
 웹 후크를 지원하는 웹 서비스와 알림을 통합하려면 [알림 및 이벤트 구독](/docs/admin/index.html#oc_eventsubscription)에서 알림 기능 확장 방법에 대한 정보를 참조하십시오.
 
 ![인시던트 대응 프로세스](images/incidentresponseprocess.png "인시던트 대응 프로세스")
 
-*그림 2. 인시던트 대응 프로세스*
+그림 2. 인시던트 응답 프로세스
 
-문제에 따라 사용자 본인이나 IBM이 또는 사용자와 IBM이 협력하여 문제를 수정합니다. 인시던트에 관한 질문이 있거나 문제를 해결하는 데 {{site.data.keyword.IBM_notm}} 담당자의 도움이 필요한 경우 지원 티켓을 열 수 있습니다. 지원 센터에 문의하는 방법에 대한 정보는 [지원 센터에 문의](/docs/support/index.html#contacting-bluemix-support-local)를 참조하십시오. 
+문제에 따라 사용자 본인이나 IBM이 또는 사용자와 IBM이 협력하여 문제를 수정합니다. 인시던트에 관한 질문이 있거나 문제를 해결하는 데 {{site.data.keyword.IBM_notm}} 담당자의 도움이 필요한 경우 지원 티켓을 열 수 있습니다. 지원 센터에 문의하는 방법에 대한 정보는 [지원 센터에 문의](../support/index.html#contacting-bluemix-support-local)를 참조하십시오. 
 
 **참고**: 심각도 1 지원 티켓은 연중 무휴로 모니터링됩니다. 기타 티켓은 일요일 GMT 오후 10:00부터 토요일 GMT 오전 12:00까지 처리됩니다. 지원 티켓의 심각도와 지원 관련 작업에 대한 자세한 정보는 <a href="/docs/support/index.html#contacting-bluemix-support-local">지원 센터에 문의</a>를 참조하십시오.
 
@@ -625,7 +621,7 @@ ESXi는 실제 서버에서 실행되고 프로세서, 메모리, 스토리지 �
 
 두 번째 또는 더 많은 위치에 배치하려면 1차 지리적 위치에서 했던 것과 유사한 프로세스를 따라야 합니다.
 
-1. 새 로컬 환경이 애플리케이션의 추가 인스턴스를 호스팅할 수 있게 하십시오. 새 환경을 작성하려면 {{site.data.keyword.IBM_notm}} 영업 팀에 문의하여 프로세스를 시작하십시오. 로컬 인스턴스 설정에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_local_notm}} 설정](/docs/local/index.html#setuplocal)을 참조하십시오. 각 환경에 액세스하려면 별도로 로그인해야 합니다. 가용성을 보장하려면 호스팅되는 각 환경의 실제 위치가 1차 위치와 200km 이상 떨어져 있어야 합니다.
+1. 새 로컬 환경이 애플리케이션의 추가 인스턴스를 호스팅할 수 있게 하십시오. 새 환경을 작성하려면 {{site.data.keyword.IBM_notm}} 영업 팀에 문의하여 프로세스를 시작하십시오. 로컬 인스턴스 설정에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_local_notm}} 설정](../local/index.html#setuplocal)을 참조하십시오. 각 환경에 액세스하려면 별도로 로그인해야 합니다. 가용성을 보장하려면 호스팅되는 각 환경의 실제 위치가 1차 위치와 200km 이상 떨어져 있어야 합니다.
 2. 배치된 새 앱이 호스팅되는 고유 도메인 이름을 확보하십시오. 예를 들어, 원래 도메인이 *mycompany.caeast.bluemix.net*이면 새 도메인(예: *mycompany.cawest.bluemix.net*)을 사용하여 새 로컬 환경을 작성하고 새 도메인에 배치할 수 있습니다.
 3. 원본 앱을 배치할 때마다 새 위치에도 배치하십시오. 배치에 대한 자세한 정보는 [앱 업로드](/docs/starters/upload_app.html)를 참조하십시오.
 
@@ -688,5 +684,5 @@ Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습�
 * [검색: {{site.data.keyword.Bluemix_local_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
 * [{{site.data.keyword.Bluemix_notm}}의 새로운 기능](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 용어집](/docs/overview/glossary/index.html)
-* [{{site.data.keyword.Bluemix_local_notm}} 및 {{site.data.keyword.Bluemix_notm}} 데디케이티드 관리](/docs/admin/index.html#mng)
+* [{{site.data.keyword.Bluemix_local_notm}} 및 {{site.data.keyword.Bluemix_notm}} 데디케이티드 관리](../admin/index.html#mng)
 * [지원 문의](/docs/support/index.html#getting-customer-support)

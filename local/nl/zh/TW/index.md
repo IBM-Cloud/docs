@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-11-11"
+lastupdated: "2016-11-07"
 
 
 ---
@@ -16,6 +16,8 @@ lastupdated: "2016-11-11"
 
 # {{site.data.keyword.Bluemix_local_notm}}
 {: #local}
+
+<!-- 10/30/16 Most sections are currently being updated and edited. Do not move full file for production -->
 
 {{site.data.keyword.Bluemix_local}} 將 {{site.data.keyword.Bluemix_notm}} 雲端型平台的功能及靈活性帶給資料中心。使用 {{site.data.keyword.Bluemix_local_notm}}，您可以利用公司防火牆來保護最機密的工作負載，同時安全地連接至「{{site.data.keyword.Bluemix_notm}} 公用」並與它同步。
 {:shortdesc}
@@ -27,9 +29,6 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 {{site.data.keyword.Bluemix_local_notm}} 包含所有內含的 {{site.data.keyword.Bluemix_notm}} 運行環境，以及 64 GB 的運算記憶體。
 
 此外，還會有一組服務可用來作為 {{site.data.keyword.Bluemix_local_notm}} 服務。請檢閱下表，以查看所含項目及您可購買的項目。
-
-表 1. 本端服務及運行環境
-{: #table01}
 
 | **類型** | **名稱** | **說明** |
 |----------|----------|-----------------|
@@ -43,12 +42,11 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |選用 | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} 是一種服務，可用來將通知傳送至 iOS 及 Android 裝置。可以將通知目標設為所有應用程式使用者或一組使用標籤的特定使用者和裝置。您可以管理裝置、標籤及訂閱。您也可以使用 SDK（軟體開發套件）及「具象狀態傳輸 (REST)」應用程式介面 (API) 來進一步開發用戶端應用程式。 |
 |選用 | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 為了提高備援，{{site.data.keyword.sescashort}} 會提供快取中所儲存階段作業的抄本。因此，電壓過低或作業中斷時，用戶端應用程式仍然保有快取中階段作業的存取權。此服務支援 Web 及行動應用程式的階段作業快取情境。 |
 |選用 | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | 此服務可讓您的應用程式與已連接的裝置、感應器及閘道進行通訊，並且耗用這些項目所收集的資料。本端基本供應項目包括起始環境，此環境允許在本端環境內執行專用版本的 {{site.data.keyword.iot_short}}，其容量為 100,000 台同時連接的裝置或應用程式，以及 1.6 TB 的資料交換。 |
+{: caption="Table 1. Local services and runtimes" caption-side="top"}
+{: #table01}
 
 
 您可以選購一些元件來擴充及延伸您的資源和服務容量。聯絡銷售團隊，即可購買所有這些元件；如需聯絡業務代表的相關資訊，請移至[與我們聯絡](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)。若要增加服務的方案，您可以從型錄的服務磚選取方案。
-
-*表 2. 選購元件：服務附加程式*
-{: #table02}
 
 | **名稱** | **說明** |
 |----------|-----------------|
@@ -60,9 +58,8 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |{{site.data.keyword.Bluemix_notm}} Data 和 Session Cache 50 GB 容量增加 | 此環境允許部署及執行 Data Cache 和 Session Cache 實例，最多有 50 GB 的累積容量。 |
 |「{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} 本端」漸進式增加 | 「{{site.data.keyword.iot_short}} 本端」基本服務供應項目再加上一個環境，此環境允許在本端環境內執行專用版本的 {{site.data.keyword.iot_short}}，其容量為 100,000 台同時連接的裝置或應用程式，以及 0.5 TB 的資料交換。 |
 |「{{site.data.keyword.IBM_notm}} {{site.data.keyword.mobilepush}} 本端」附加程式實例 | 此環境允許部署及執行每秒可接受 300 個額外要求的 {{site.data.keyword.mobilepush}} 實例。 |
-
-*表 3. 選購元件：平台附加程式*
-{: #table03}
+{: caption="Table 2. Optional services components for purchase" caption-side="top"}
+{: #table02}
 
 | **名稱** | **說明** |
 |----------|-----------------|
@@ -70,6 +67,8 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |本端 Cloud Foundry 運行環境 16 GB 容量增加  | 延伸 Cloud Foundry 運行環境，以提供額外的 16 GB 運行環境容量。 |
 |本端 {{site.data.keyword.containerlong}} 16 GB 容量增加  | 延伸 {{site.data.keyword.containerlong}} 環境，以提供額外的 16 GB 容量。 |
 |本端 {{site.data.keyword.containerlong}} 64 GB 容量  | 容量為 64 GB 的 {{site.data.keyword.containerlong}} 環境。 |
+{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: #table03}
 
 **附註**：「{{site.data.keyword.Bluemix_notm}} 本端」元件可能會指出特定的已配置容量（例如 GB 數或每秒交易數）。因為任何雲端服務配置的實際容量實際上會因許多因素而不同，所以實際容量實際上可能會高於或低於已配置的容量。
 
@@ -79,9 +78,6 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 {{site.data.keyword.Bluemix_local_notm}} 包括一份專用型錄，將公用及本端部署的核准服務組織在一起。您甚至可以透過 {{site.data.keyword.Bluemix_notm}} 型錄發佈及管理專屬服務的存取權。您可以選擇根據資料隱私及安全準則來決定符合您商業需求的公用服務。
 
 如果有適用於您本端環境的 {{site.data.keyword.Bluemix_notm}} 服務專用實例，您會在型錄管理視圖中看到服務名稱有「本端」標籤。同樣地，如果它是自訂服務（表示您已使用服務分配管理系統來建立它），則會看到服務名稱列有「自訂」。透過從「{{site.data.keyword.Bluemix_notm}} 公用」進行聯合，可以使用已列出且沒有「本端」或「自訂」標籤的所有其他服務。聯合服務提供建立包含公用及專用服務之混合式應用程式的功能。
-
-*表 4. 可從「{{site.data.keyword.Bluemix_notm}} 公用」進行聯合的服務（依地區）*
-{: #table04}
 
 |服務	|可在美國南部地區使用	|可在歐洲英國地區使用 |可在澳洲雪梨地區使用|
 |:----------|:------------------------------|:------------------|:------------------|
@@ -134,6 +130,8 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |{{site.data.keyword.iot_short}}		|是		|是		|否|
 |{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.workloadscheduler}}	|是		|是		|是 |
+{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
+{: #table04}
 
 **附註**：此表格不包括協力廠商服務。請檢查協力廠商服務選項的型錄。
 
@@ -222,7 +220,7 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 </dt>
 <dd>
 除了在部署程序的早期階段安裝的初始 VM 的起始安裝外，都會使用「UrbanCode 部署」自動部署其他大部分元件。<br>
-<p>對於部署活動，「UrbanCode 部署」會根據 [BOSH](https://bosh.cloudfoundry.org/){:new_window}，而 BOSH 元件是在最先從初始 VM 部署的元件內。「UrbanCode 部署」的持續交付功能是用來透過一致的測試及驗證程序來交＼付平台更新項目。</p>
+<p>對於部署活動，「UrbanCode 部署」會根據 [BOSH](https://bosh.cloudfoundry.org/)，而 BOSH 元件是在最先從初始 VM 部署的元件內。「UrbanCode 部署」的持續交付功能是用來透過一致的測試及驗證程序來交付平台更新項目。</p>
 <p>Script 及套件是透過「轉遞」從「{{site.data.keyword.IBM_notm}} 作業中心」傳送至您的本端 {{site.data.keyword.Bluemix_notm}} 平台。</p>
 </dd>
 <dt>
@@ -287,11 +285,11 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 <li>您提供自己網路上的 7 個 IP 位址。如果您有安全的 Web Proxy，容許內部 {{site.data.keyword.Bluemix_notm}} 元件對網際網路進行出埠存取，則必須提供認證以便進行連接。
 <p>**附註**：如果您的 Web Proxy 不是安全的 Proxy，則無需提供認證。另請注意，並非所有 {{site.data.keyword.Bluemix_local_notm}} 客戶都使用 Web Proxy。</p></li>
 <li>{{site.data.keyword.IBM_notm}} 提供一個 URL 白名單，在開始部署之前，您必須容許這些 URL 可通過您的 Web Proxy。<br />
-<p>**附註**：若要確保現有或新的應用程式可以存取必要資源，您可能需要採取額外的步驟來組合資源與建置套件，或與安全團隊一起合作將執行應用程式所需的 URL 設為白名單。如需使用 node.js 及 Liberty for Java 建置套件的相關資訊，請參閱 <a href="/docs/runtimes/nodejs/offlineMode.html">node.js 的離線模式</a>及 <a href="/docs/runtimes/liberty/offlineMode.html">Liberty for Java 的離線模式</a>。</p>
+<p>**附註**：若要確保現有或新的應用程式可以存取必要資源，您可能需要採取額外的步驟來組合資源與建置套件，或與安全團隊一起合作將執行應用程式所需的 URL 設為白名單。如需使用 node.js 及 Liberty for Java 建置套件的相關資訊，請參閱 <a href="../runtimes/nodejs/offlineMode.html">node.js 的離線模式</a>及 <a href="../runtimes/liberty/offlineMode.html">Liberty for Java 的離線模式</a>。</p>
 </li>
 <li>您為部署指定網域名稱，以及要使用的 ID。設定本端實例時，您會得到兩個局部定義的網域，請挑選這兩個網域的字首。例如，挑選 <code>*mycompany*.bluemix.net</code> 和 <code>*mycompany*.mybluemix.net</code> 的字首。然後，還可以選擇完整網域來建立自訂網域。
 <br />
-<p>您可以根據自己的需要選擇任意數量的自訂網域。不過，您應負責取得自訂網域的憑證。如需建立自訂網域的相關資訊，請參閱<a href="/docs/manageapps/updapps.html#domain">建立及使用自訂網域</a>。</p></li>
+<p>您可以根據自己的需要選擇任意數量的自訂網域。不過，您應負責取得自訂網域的憑證。如需建立自訂網域的相關資訊，請參閱<a href="../manageapps/updapps.html#domain">建立及使用自訂網域</a>。</p></li>
 <li>您選擇要使用何種技術（IPSec 或 OpenVPN 通道）來配置「轉遞」，以便連回 {{site.data.keyword.IBM_notm}} 作業中心。</li>
 <li>{{site.data.keyword.IBM_notm}} 在 {{site.data.keyword.Bluemix_notm}} 叢集內安裝並啟動初始虛擬機器。如果您提供自己的 VMware，則 {{site.data.keyword.IBM_notm}} 業務代表會協助您的客戶代表來完成此作業。</li>
 <li>{{site.data.keyword.IBM_notm}} 配置「轉遞」，以便連回 {{site.data.keyword.IBM_notm}} 作業中心與之進行通訊。</li>
@@ -304,7 +302,7 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 <li>您可以開始使用您的本端實例來回應警示，該實例由 {{site.data.keyword.IBM_notm}} 作業團隊進行監視。</li>
 </ol>
 
-在設定 {{site.data.keyword.Bluemix_notm}} 實例之後，您可以使用「管理」頁面來監視和管理 {{site.data.keyword.Bluemix_notm}} 實例。如需相關資訊，請參閱[管理 {{site.data.keyword.Bluemix_local_notm}} 及專用](/docs/admin/index.html#mng)。如需升級和維護的相關資訊，請參閱[維護本端實例](index.html#maintainlocal)。
+在設定 {{site.data.keyword.Bluemix_notm}} 實例之後，您可以使用「管理」頁面來監視和管理 {{site.data.keyword.Bluemix_notm}} 實例。如需相關資訊，請參閱[管理 {{site.data.keyword.Bluemix_local_notm}} 及專用](../admin/index.html#mng)。如需升級和維護的相關資訊，請參閱[維護本端實例](index.html#maintainlocal)。
 
 ##角色及責任
 {: #rolesresponsibilities}
@@ -325,13 +323,13 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 <dt>**DevOps 聯絡人**</dt>
 <dd>與 {{site.data.keyword.IBM_notm}} 業務代表一起計劃並套用 {{site.data.keyword.Bluemix_notm}} 平台、服務及運行環境所需的維護更新。指派給這個角色的人員也會與 {{site.data.keyword.IBM_notm}} 業務代表一起配置您的 {{site.data.keyword.Bluemix_local_notm}} 實例。</dd>
 <dt>**IaaS 專家**</dt>
-<dd>與 {{site.data.keyword.IBM_notm}} 業務代表一起訂定 VMware 的部計劃。一般而言，這是資料中心的一位 VMware 管理者。指派給這個角色的人員會檢查 <a href="/docs/local/index.html#localinfra">{{site.data.keyword.Bluemix_local_notm}} 基礎架構需求</a>，以及與 {{site.data.keyword.IBM_notm}} 一起訂定實作計劃。部署結束時，指派給這個角色的人員會進行核准，確認部署符合 IaaS 層的組織標準。</dd>
+<dd>與 {{site.data.keyword.IBM_notm}} 業務代表一起訂定 VMware 的部署計劃。一般而言，這是資料中心的一位 VMware 管理者。指派給這個角色的人員會檢查 <a href="../local/index.html#localinfra">{{site.data.keyword.Bluemix_local_notm}} 基礎架構需求</a>，以及與 {{site.data.keyword.IBM_notm}} 一起訂定實作計劃。部署結束時，指派給這個角色的人員會進行核准，確認部署符合 IaaS 層的組織標準。</dd>
 <dt>**作業焦點**</dt>
 <dd>一旦環境開始運行，視需要與 {{site.data.keyword.IBM_notm}} 支援團隊合作。這是對「管理」主控台具有**超級使用者**存取權的人員，其可核准並排定 {{site.data.keyword.Bluemix_notm}} 環境的維護更新，而且隨時可在發生重要突發事件時予以協助。指派給此角色的人員必須具備 {{site.data.keyword.Bluemix_notm}} 環境的技術知識，而且其所處位置可以聯繫公司內對可能受到影響的區域（例如，網路或安全）具備專業技能的其他人員。
 </dd>
 </dl>
 
-您的客戶代表會與其他合作的 {{site.data.keyword.IBM_notm}} 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「高階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[聯絡支援中心](/docs/support/index.html#contacting-support)。CSM 會完成下列類型的作業：
+您的客戶代表會與其他合作的 {{site.data.keyword.IBM_notm}} 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「高階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[聯絡支援中心](../support/index.html#contacting-support)。CSM 會完成下列類型的作業：
 
 <ul>
 <li>提供您與 IBM 之間的技術協調。</li>
@@ -351,14 +349,12 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 
 從設定您的環境一直到持續維護，您和 IBM 必須完成各種作業。下列各表概述在初始、進度及完成階段的必要作業以及完成作業的擁有者。
 
-初始階段用來建立 {{site.data.keyword.Bluemix_local_notm}} 環境。此刻，您已檢閱[本端基礎架構需求](/docs/local/index.html#localinfra)。此階段的主要目標包括下列各項：
+初始階段用來建立 {{site.data.keyword.Bluemix_local_notm}} 環境。此刻，您已檢閱[本端基礎架構需求](../local/index.html#localinfra)。此階段的主要目標包括下列各項：
 
 - 審查財務合約，並建立交付的里程碑日期。
 - 建立 {{site.data.keyword.Bluemix_notm}} 平台，並提供運行環境及服務的存取權。
 - 定義並建立貴組織網路與 {{site.data.keyword.Bluemix_notm}} 作業之間的網路連線功能。
 - 識別並指派管理團隊的角色。
-
-*表 4. 初始階段作業*
 
 | **作業** | **作業詳細資料** | **負責單位** |
 |----------|------------------|-----------------------|
@@ -373,7 +369,7 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |識別進行事件偵測及問題判斷的工具 | 識別用於在 {{site.data.keyword.Bluemix_notm}} 平台層次進行事件偵測及問題判斷的 {{site.data.keyword.IBM_notm}} 及協力廠商工具。 | {{site.data.keyword.IBM_notm}} |
 |定義提升計劃 | 定義提升計劃來分類並解決從監視元件偵測到的事件。 | {{site.data.keyword.IBM_notm}} |
 |簽署基礎架構、平台及支援合約 | 簽署訂閱合約（包括環境的財務條款）。簽署支援訂閱。 | 客戶 |
-|採購環境 | 採購運算資源、網路及儲存空間。如需環境基礎架構需求的相關資訊，請參閱[本端基礎架構需求](/docs/local/index.html#localinfra)。 | 客戶 |
+|採購環境 | 採購運算資源、網路及儲存空間。如需環境基礎架構需求的相關資訊，請參閱[本端基礎架構需求](../local/index.html#localinfra)。 | 客戶 |
 |安裝 VPN 解決方案 | 安裝雙向 VPN 解決方案。 | {{site.data.keyword.IBM_notm}} |
 |安裝平台、應用程式，以及監視和管理元件 | 安裝、配置及驗證平台元件（例如 BOSH Director、「雲端控制器」、「性能管理程式」、傳訊、路由器、DEA 及服務提供者），以及提升及問題偵測計劃中所定義的監視元件。 | {{site.data.keyword.IBM_notm}} |
 |安裝並配置安全元件 | 安裝並配置嵌入監視及提升計劃的安全元件（包括 {{site.data.keyword.IBM_notm}} QRadar、認證儲存庫、侵入防禦系統、{{site.data.keyword.IBM_notm}} BigFix 及「{{site.data.keyword.IBM_notm}} Security 特許身分管理」）。 | {{site.data.keyword.IBM_notm}} |
@@ -385,14 +381,13 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |檢查實體基礎架構 | 檢查可管理威脅解決方案元件的實體場所，並檢查保護資料中心用的安全控制。 | 客戶 |
 |檢查監視軟體 | 檢查監視及管理元件（如提升及問題判斷計劃中所定義）。 | 客戶 |
 |檢查 OS | 檢查以確保作業系統映像檔符合規範標準。{{site.data.keyword.IBM_notm}} 提供 OS 映像檔的存取權。 | {{site.data.keyword.IBM_notm}} 及客戶皆負有責任 |
+{: caption="Table 5. Inception phase tasks" caption-side="top"}
 
 接下來是進度階段。進度階段說明您與 IBM 之間的進行中協同關係。此階段的主要目標包括下列各項：
 
 - 檢查容量，並協調進行必要調整。
 - 檢查維護及平台增進功能。
 - 協調進行問題解決及主要原因分析的活動。
-
-*表 6. 進度階段作業*
 
 | **作業** | **作業詳細資料** | **負責單位** |
 |----------|------------------|-----------------------|
@@ -409,6 +404,7 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |狀態報告、審核協調及規範會議  | 完成狀態報告、外部審核協調，以及規範審查狀態會議的呈現。 | {{site.data.keyword.IBM_notm}} |
 |聘雇及商業需求驗證 | 完成可存取客戶環境之 {{site.data.keyword.IBM_notm}} 業務代表的每季聘雇驗證及持續商業需求驗證。 | {{site.data.keyword.IBM_notm}} |
 |解決安全漏洞 | 解決平台中所報告的安全漏洞。 | {{site.data.keyword.IBM_notm}} |
+{: caption="Table 6. Progression phase tasks" caption-side="top"}
 
 最終階段「完成」代表您與 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 之間的關係結束。此階段的主要作業包括下列各項：
 
@@ -416,14 +412,14 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 * 移除所有網路連線
 * 回收基礎架構
 
-*表 7. 完成階段作業*
-
 | **作業** | **作業詳細資料** | **負責單位** |
 |----------|------------------|-----------------------|
 |結束財務合約 | 討論並同意結束財務合約。 | {{site.data.keyword.IBM_notm}} 及客戶皆負有責任 |
 |解除任務環境 | 關閉環境的存取權及認證。 | {{site.data.keyword.IBM_notm}} 及客戶皆負有責任 |
 |關閉轉遞 | 終止「轉遞」連線。 | {{site.data.keyword.IBM_notm}} |
 |回收基礎架構 | 根據公司準則，回收基礎架構。 | 客戶 |
+{: caption="Table 7. Completion phase tasks" caption-side="top"}
+
 
 ## {{site.data.keyword.Bluemix_local_notm}} 基礎架構需求
 {: #localinfra}
@@ -561,7 +557,7 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 <dt>**{{site.data.keyword.Bluemix_notm}} 平台的標準維護**</dt>
 <dd>維護更新是根據 21 天的時間範圍內，您與 {{site.data.keyword.IBM_notm}} 之間的協調來套用。您將您不適用但 {{site.data.keyword.IBM_notm}} 適用的預先核准維護時間範圍及特定日期或時間提供給 {{site.data.keyword.IBM_notm}}，來排定在所選取日期期間或大約時間進行更新。
 <br />
-<p>移至**管理 > 系統資訊**，以檢視已排定及擱置維護更新。如需設定預先核准時間範圍、設定無法使用日期，以及檢視或核准排定之維護更新的相關資訊，請參閱<a href="/docs/admin/index.html#oc_schedulemaintenance">維護更新</a>。</p></dd>
+<p>移至**管理 > 系統資訊**，以檢視已排定及擱置維護更新。如需設定預先核准時間範圍、設定無法使用日期，以及檢視或核准排定之維護更新的相關資訊，請參閱<a href="../admin/index.html#oc_schedulemaintenance">維護更新</a>。</p></dd>
 </dl>
 
 **重要事項**：{{site.data.keyword.IBM_notm}} 保留視需要岔斷服務以套用緊急維護的權利。{{site.data.keyword.IBM_notm}} 可能會變更排定的維護時間，但是一旦有這樣的變更以及任何緊急維護資訊時，就會通知您。
@@ -571,7 +567,7 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 ### 客戶基礎架構維護
 {: #inframaintenance}
 
-{{site.data.keyword.Bluemix_local_notm}} 部署在 ESXi Hypervisor 上，而 vCenter 應用程式可用來集中管理虛擬機器和 ESXi 主機。{{site.data.keyword.Bluemix_notm}} 支援最新三版的 ESXi 和 vCenter，包括所有中繼更新項目和修補程式。您可以隨時在[本端基礎架構需求](/docs/local/index.html#localinfra)文件中找到最新支援的版本。
+{{site.data.keyword.Bluemix_local_notm}} 部署在 ESXi Hypervisor 上，而 vCenter 應用程式可用來集中管理虛擬機器和 ESXi 主機。{{site.data.keyword.Bluemix_notm}} 支援最新三版的 ESXi 和 vCenter，包括所有中繼更新項目和修補程式。您可以隨時在[本端基礎架構需求](../local/index.html#localinfra)文件中找到最新支援的版本。
 
 **重要事項**：{{site.data.keyword.Bluemix_local_notm}} 部署在 ESXi Hypervisor 上的情況下，ESXi 的升級和修補會中斷本端環境的可用性，包括在環境中執行的所有應用程式和服務。您必須在完成升級或修補之前，使用支援問題單通知 {{site.data.keyword.Bluemix_notm}}，以確保不會錯誤地警示作業團隊此中斷狀況。如果您有已指派的客戶成功經理 (CSM)，則可以和 CSM 一起溝通升級排程。
 
@@ -585,19 +581,19 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 
 ### 客戶偵測到的問題
 
-如果您識別到需要 {{site.data.keyword.IBM_notm}} 支援中心及作業中心注意的問題，則可以使用數種不同的方法來聯絡支援中心。如需如何聯絡支援中心的相關資訊，請參閱[聯絡支援中心](/docs/support/index.html#contacting-bluemix-support-local)。根據問題，您及（或）IBM 會一起合作來修正問題。
+如果您識別到需要 {{site.data.keyword.IBM_notm}} 支援中心及作業中心注意的問題，則可以使用數種不同的方法來聯絡支援中心。如需如何聯絡支援中心的相關資訊，請參閱[聯絡支援中心](../support/index.html#contacting-bluemix-support-local)。根據問題，您及（或）IBM 會一起合作來修正問題。
 
 ### IBM 偵測到的重要突發事件
 
-重要突發事件包含緊急、非預期的服務中斷，以及影響環境或使用者的穩定性問題。如果 {{site.data.keyword.IBM_notm}} 在您的環境內偵測到重要突發事件，則會透過**狀態**頁面上的通知來通知您。您也可以檢查「狀態」頁面，以尋找平台或您服務的任何已知問題。如需「狀態」頁面的相關資訊，請參閱[檢視狀態](/docs/admin/index.html#oc_status)。
+重要突發事件包含緊急、非預期的服務中斷，以及影響環境或使用者的穩定性問題。如果 {{site.data.keyword.IBM_notm}} 在您的環境內偵測到重要突發事件，則會透過**狀態**頁面上的通知來通知您。您也可以檢查「狀態」頁面，以尋找平台或您服務的任何已知問題。如需「狀態」頁面的相關資訊，請參閱[檢視狀態](../admin/index.html#oc_status)。
 
 如果您要整合您的通知與支援 Webhook 的 Web 服務，請參閱[通知及事件訂閱](/docs/admin/index.html#oc_eventsubscription)，以取得如何延伸通知功能的相關資訊。
 
 ![突發事件回應程序](images/incidentresponseprocess.png "突發事件回應程序")
 
-*圖 2. 突發事件回應程序*
+圖 2. 突發事件回應程序
 
-根據問題，您及（或）IBM 會一起合作來修正問題。如果您有關於突發事件的問題，或者需要 {{site.data.keyword.IBM_notm}} 業務代表來協助您解決問題，則可以開啟支援問題單。如需如何聯絡支援中心的相關資訊，請參閱[聯絡支援中心](/docs/support/index.html#contacting-bluemix-support-local)。
+根據問題，您及（或）IBM 會一起合作來修正問題。如果您有關於突發事件的問題，或者需要 {{site.data.keyword.IBM_notm}} 業務代表來協助您解決問題，則可以開啟支援問題單。如需如何聯絡支援中心的相關資訊，請參閱[聯絡支援中心](../support/index.html#contacting-bluemix-support-local)。
 
 **附註**：我們會 24 小時全年無休地監視嚴重性 1 支援問題單。其他問題單的處理時間是從星期日晚上 10:00 GMT 到星期六凌晨 12:00 GMT。如需支援問題單嚴重性以及與支援中心合作的相關資訊，請參閱<a href="/docs/support/index.html#contacting-bluemix-support-local">聯絡支援中心</a>。
 
@@ -624,7 +620,7 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 
 若要部署至第二個位置或多個位置，您必須遵循與用來啟用主要地理位置類似的處理程序：
 
-1. 啟用新的本端環境來管理您應用程式的其他實例。若要建立新的環境，請聯絡 {{site.data.keyword.IBM_notm}} 銷售團隊來起始處理程序。如需設定本端實例的相關資訊，請參閱[設定 {{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#setuplocal)。您必須分別登入才能存取每一個環境。所管理環境的每一個實體位置都應該與原始位置距離最少 200 公里，以確保可用性。
+1. 啟用新的本端環境來管理您應用程式的其他實例。若要建立新的環境，請聯絡 {{site.data.keyword.IBM_notm}} 銷售團隊來起始處理程序。如需設定本端實例的相關資訊，請參閱[設定 {{site.data.keyword.Bluemix_local_notm}}](../local/index.html#setuplocal)。您必須分別登入才能存取每一個環境。所管理環境的每一個實體位置都應該與原始位置距離最少 200 公里，以確保可用性。
 2. 取得將管理新的已部署應用程式所在之唯一網域名稱。比方說，如果您的原始網域是 *mycompany.caeast.bluemix.net*，則可以建立具有新網域（例如 *mycompany.cawest.bluemix.net*）的新的本端環境，並部署至新網域。
 3. 每次部署原始應用程式時，都會部署至新位置。如需部署的相關資訊，請參閱[上傳應用程式](/docs/starters/upload_app.html)。
 
@@ -687,5 +683,5 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 * [探索：{{site.data.keyword.Bluemix_local_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
 * [{{site.data.keyword.Bluemix_notm}} 新增功能](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 名詞解釋](/docs/overview/glossary/index.html)
-* [管理 {{site.data.keyword.Bluemix_local_notm}} 及 {{site.data.keyword.Bluemix_notm}} 專用](/docs/admin/index.html#mng)
+* [管理 {{site.data.keyword.Bluemix_local_notm}} 及 {{site.data.keyword.Bluemix_notm}} 專用](../admin/index.html#mng)
 * [與支援中心聯絡](/docs/support/index.html#getting-customer-support)
