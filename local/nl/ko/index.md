@@ -680,7 +680,9 @@ Akamai 또는 Dyn과 같은 글로벌 로드 밸런서를 선택할 수 있습�
 </ul>
 
 # 관련 링크
+{: rellinks}
 ## 일반
+{: general
 * [검색: {{site.data.keyword.Bluemix_local_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
 * [{{site.data.keyword.Bluemix_notm}}의 새로운 기능](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 용어집](/docs/overview/glossary/index.html)
