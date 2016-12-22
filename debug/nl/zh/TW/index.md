@@ -134,7 +134,7 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
   * 若為 Liberty for Java 應用程式，導向到 stdout 及 stderr 的輸出已包含在 logs 目錄中的 `messages.log` 檔案中。請分別尋找字首為 SystemOut 及 SystemErr 的項目。
   * 若為 Node.js 應用程式，您可以置換 console.log 函數，以明確地寫入 logs 目錄中的檔案。
   * 若為 PHP 應用程式，您可以使用 error_log 函數來寫入 logs 目錄中的檔案。
-  * 若為 Python 應用程式，您可以讓日誌程式寫入 logs 目錄中的檔案，如下所示：logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * 若為 Python 應用程式，您可以讓日誌程式寫入 logs 目錄中的檔案：`logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
   * 若為 Ruby 應用程式，您可以讓日誌程式寫入 logs 目錄中的檔案。
 
 

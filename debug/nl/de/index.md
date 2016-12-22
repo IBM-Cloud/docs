@@ -132,7 +132,7 @@ Auf die Dateien `stdout.log` und `stderr.log` konnte früher standardmäßig üb
   * Bei Liberty for Java-Anwendungen ist die an 'stdout' und 'stderr' übertragene Ausgabe bereits in der Datei `messages.log` im Protokollverzeichnis enthalten. Suchen Sie nach Einträgen mit dem Präfix 'SystemOut' bzw. 'SystemErr'.
   * Bei Node.js-Anwendungen können Sie die Funktion 'console.log' überschreiben, um explizit in eine Datei im Protokollverzeichnis zu schreiben.
   * Bei PHP-Anwendungen können Sie die Funktion 'error_log' verwenden, um in eine Datei im Protokollverzeichnis zu schreiben.
-  * Bei Python-Anwendungen können Sie konfigurieren, dass von der Protokollfunktion in eine Datei im Protokollverzeichnis geschrieben wird: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * Bei Python-Anwendungen können Sie konfigurieren, dass von der Protokollfunktion in eine Datei im Protokollverzeichnis geschrieben wird: `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
   * Bei Ruby-Anwendungen können Sie konfigurieren, dass von der Protokollfunktion in eine Datei im Protokollverzeichnis geschrieben wird.
 
 

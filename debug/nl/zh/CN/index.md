@@ -21,7 +21,7 @@ lastupdated: "2016-10-23"
 如果您遇到 {{site.data.keyword.Bluemix}} 问题，那么可以查看日志文件来调查问题并调试错误。
 {:shortdesc}
 
-日志提供了相关信息，例如，作业运行成功还是失败。另外，还提供了可用于调试和确定问题原因的相关信息。
+日志提供了相关信息，例如，作业运行成功还是失败。另外，还提供了可用于调试问题和确定问题原因的相关信息。
 
 日志为固定格式。对于详细日志，可过滤这些日志或使用外部日志记录主机来存储和处理这些日志。有关日志格式、查看和过滤日志以及配置外部日志记录的更多信息，请参阅[为 Cloud Foundry 上运行的应用程序进行日志记录](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}。
 
@@ -55,7 +55,7 @@ lastupdated: "2016-10-23"
 
 ### 调试 Node.js 应用程序的编译打包错误
 
-以下示例显示的是输入 `cf logs appname --recent` 之后显示的日志。示例假设 Node.js 应用程序发生的编译打包错误：
+以下示例显示的是输入 `cf logs appname --recent` 之后显示的日志。以下示例假设 Node.js 应用程序发生了编译打包错误：
 ```
 2014-08-11T14:19:36.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({name"=>"SampleExpressApp"}
 2014-08-11T14:20:44.17+0100 [API]     OUT Updated app with guid 6d80051d-eb56-4fc5-b499-e43d6fb87bc2 ({"state"=>"STOPPED"})
@@ -80,7 +80,7 @@ lastupdated: "2016-10-23"
 {: screen}
 
 
-对于 Node.js 应用程序，DEA 使用 `package.json` 文件中的信息来下载模块。从此错误，您可以看到模块发生错误。因此，您可能需要复查 `package.json` 文件中的第 18 行。
+对于 Node.js 应用程序，DEA 使用 `package.json` 文件中的信息来下载模块。根据这一错误信息，您可以知道模块发生错误。因此，您可能需要复查 `package.json` 文件中的第 18 行。
 
 ```
 15   "jade": "~1.3.0",
@@ -131,14 +131,14 @@ Analytics</a>。</dd>
   * 对于 Liberty for Java 应用程序，定向到 stdout 和 stderr 的输出已包含在日志目录下的 `messages.log` 文件中。分别查找以 SystemOut 和 SystemErr 为前缀的条目。
   * 对于 Node.js 应用程序，可以覆盖 console.log 函数以明确写入日志目录中的文件。
   * 对于 PHP 应用程序，您可以使用 error_log 函数来写入日志目录中的文件。
-  * 对于 Python 应用程序，您可以让记录器将日志写入日志目录中的文件：logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * 对于 Python 应用程序，您可以让记录器将日志写入日志目录中的文件：`logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
   * 对于 Ruby 应用程序，您可以让记录器将日志写入日志目录中的文件。
 
 
 ### 调试代码更改
 {: #debug_code_changes}
 
-如果您对已经部署且正在运作的应用程序进行代码更改，但您的代码更改并未反映在 {{site.data.keyword.Bluemix_notm}} 中，那么您可以使用日志进行调试。无论您的应用程序运行与否，您都可以检查应用程序部署期间或运行时生成的日志，来对新代码不运作的原因进行调试。
+如果您对已经部署且正在运作的应用程序进行代码更改，但您的代码更改并未反映在 {{site.data.keyword.Bluemix_notm}} 中，那么您可以使用日志进行调试。无论您的应用程序运行与否，您都可以检查应用程序部署期间或运行时生成的日志，进行调试以找出新代码不运作的原因。
 
 根据部署新代码的方式，选择下列其中一个方法，来调试代码更改：
 

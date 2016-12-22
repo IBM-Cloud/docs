@@ -153,7 +153,8 @@ de arquivos {{site.data.keyword.Bluemix_notm}}, dependendo do tempo de execuçã
 está contida no arquivo `messages.log` no diretório de logs. Consulte as entradas prefixadas com SystemOut e SystemErr, respectivamente.
   * Para aplicativos Node.js, é possível substituir a função console.log para gravar explicitamente em um arquivo no diretório de logs.
   * Para aplicativos PHP, é possível fazer a função error_log gravar em um arquivo no diretório de logs.
-  * Para aplicativos Python, é possível fazer o criador de logs gravar em um arquivo no diretório de logs: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * Para aplicativos Python, é possível fazer o criador de logs gravar em um arquivo no diretório de logs:
+`logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
   * Para aplicativos Ruby, é possível fazer o criador de logs gravar em um arquivo no diretório de logs.
 
 

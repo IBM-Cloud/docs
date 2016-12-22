@@ -150,7 +150,7 @@ Analytics</a> を参照してください。</dd>
 SystemErr のエントリーをそれぞれ探してください。
   * Node.js アプリケーションの場合、console.log 関数をオーバーライドして、明示的に logs ディレクトリー内のファイルに書き込むことができます。
   * PHP アプリケーションの場合、error_log 関数を使用して、logs ディレクトリー内のファイルに書き込むことができます。
-  * Python アプリケーションの場合、次のように、ロガーを使用して logs ディレクトリー内のファイルに書き込むことができます: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * Python アプリケーションの場合、次のように、ロガーを使用して logs ディレクトリー内のファイルに書き込むことができます: `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
   * Ruby アプリケーションの場合、ロガーを使用して logs ディレクトリー内のファイルに書き込むことができます。
 
 

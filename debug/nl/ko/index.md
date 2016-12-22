@@ -161,8 +161,7 @@ cf 명령행 인터페이스에 `cf logs appname --recent`를 입력하면 가�
   * Node.js 애플리케이션의 경우, 로그 디렉토리의 파일에 명시적으로 기록하도록 console.log 함수를 대체할 수 있습니다.
   * PHP 애플리케이션의 경우, error_log 함수를 사용하여 로그 디렉토리의 파일에
 기록할 수 있습니다. 
-  * Python 애플리케이션의 경우, 다음과 같이 로거가 로그 디렉토리의 파일에
-기록하도록 할 수 있습니다. logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * Python 애플리케이션의 경우, 다음과 같이 로거가 로그 디렉토리의 파일에 기록하도록 할 수 있습니다. `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
   * Ruby 애플리케이션의 경우, 로거가 로그 디렉토리의 파일에
 기록하도록 할 수 있습니다. 
 
@@ -185,7 +184,7 @@ cf 명령행 인터페이스에 `cf logs appname --recent`를 입력하면 가�
 ## 일반
 {: #general}
 
-  * [Droplet Execution Agent(DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
+  * [DEA(Droplet Execution Agent)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [IBM Monitoring and Analytics for Bluemix 서비스 시작하기](../services/monana/index.html#gettingstartedtemplate){: new_window}
   * [Bluemix의 작동 방식](../overview/whatisbluemix.html#howwork){: new_window}
   * [cf 명령 도구 설치](../starters/install_cli.html){: new_window}

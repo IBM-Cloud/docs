@@ -136,7 +136,7 @@ con la versione corrente di Cloud Foundry in cui è ospitato {{site.data.keyword
   * Per le applicazioni Liberty for Java, l'output indirizzato a stdout e stderr è già contenuto nel file `messages.log` nella directory logs. Ricerca le voci con prefisso SystemOut e SystemErr.
   * Per le applicazioni Node.js, puoi sovrascrivere la funzione console.log per scrivere esplicitamente in un file nella directory logs.
   * Per le applicazioni PHP, puoi utilizzare la funzione error_log per scrivere in un file nella directory logs.
-  * Per le applicazioni Python, puoi fare in modo che il logger scriva in un file nella directory logs: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * Per le applicazioni Python, puoi fare in modo che il logger scriva in un file nella directory logs: `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
   * Per le applicazioni Ruby, puoi fare in modo che il logger scriva in un file nella directory logs.
 
 
