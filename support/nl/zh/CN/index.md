@@ -178,10 +178,10 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 级别 | 免费 |  基本 | 标准 | 高级
 --- | --- | --- | --- | --- |
 描述 | 支持所有 Bluemix 试用客户。  |  支持非生产环境或无需传统严重性和响应时间的工作负载。 | 支持具有有限数量的业务关键型应用程序的环境。{{site.data.keyword.Bluemix_notm}} Dedicated 和 {{site.data.keyword.Bluemix_notm}} Local 客户会获得标准支持。 | 支持对 {{site.data.keyword.Bluemix_notm}} 具有战略依赖关系的任务关键型环境。
-高严重性支持 |  不适用 | 不适用 | 内含 | 内含
+高严重性支持 |  不适用 | 不适用 | 已包含 | 包含的
 支持语言 | 英语 | 英语 | 英语 | 英语
 分配的客户成功经理 (CSM) | 不包含 | 不包含 | 不包含 | 包含：<br> 8 小时/周
-*表 1. 支持级别*
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### 开具支持凭单
 {: #open-ticket}
@@ -258,7 +258,8 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 严重性 2 | <strong>重大业务影响。</strong><br> 服务特色或功能的使用受到严重限制，或者您即将超过业务截止期限。 | <ul><li><strong>免费：</strong>不适用</li><li><strong>基本：</strong>不适用</li><li><strong>标准：</strong>2 小时内</li><li><strong>高级：</strong>90 分钟内</li></ul> | <ul><li><strong>免费：</strong>不适用</li><li><strong>基本：</strong>不适用</li><li><strong>标准：</strong>工作时间内</li><li><strong>高级：</strong>工作时间内</li></ul>
 严重性 3 | <strong>轻微业务影响。</strong><br> 服务特色或功能可使用，但存在一些影响其使用的问题。不会对操作产生严重影响。 | <ul><li><strong>免费：</strong>不适用</li><li><strong>基本：</strong>不适用</li><li><strong>标准：</strong>4 小时内</li><li><strong>高级：</strong>2 小时内</li></ul> | <ul><li><strong>免费：</strong>不适用</li><li><strong>基本：</strong>不适用</li><li><strong>标准：</strong>工作时间内</li><li><strong>高级：</strong>工作时间内</li></ul>
 严重性 4 | <strong>最小业务影响。</strong><br> 查询或非技术请求。 | <ul><li><strong>免费：</strong>尽力</li><li><strong>基本：</strong>尽力</li><li><strong>标准：</strong>8 小时内</li><li><strong>高级：</strong>4 小时内</li></ul> | <ul><li><strong>免费：</strong>工作时间内</li><li><strong>基本：</strong>工作时间内</li><li><strong>标准：</strong>工作时间内</li><li><strong>高级：</strong>工作时间内</li></ul>
-*表 2. 严重性定义和响应时间*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
+
 
 ### 报告潜在安全漏洞
 {: #report-security-vulnerability}
@@ -332,8 +333,7 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 | 西班牙语 | es |
 | 简体中文 | zh_CN |
 | 繁体中文 | zh_TW |
-
-*表 3. 支持的本地语言和语言代码*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## 对 {{site.data.keyword.Bluemix_notm}} 支持的满意度调查  

@@ -179,7 +179,7 @@ Beschreibung | Support für alle Bluemix-Testkunden.  |  Support für Nicht-Prod
 Support mit hoher Priorität |  Nicht zutreffend | Nicht zutreffend | Inbegriffen | Inbegriffene
 Support-Sprache | Englisch | Englisch | Englisch | Englisch
 Zugeordneter Client Success Manager (CSM) | Nicht inbegriffen | Nicht inbegriffen | Nicht inbegriffen | Inbegriffen für<br> 8 Stunden pro Woche
-*Tabelle 1. Supportstufen*
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### Support-Ticket öffnen
 {: #open-ticket}
@@ -260,7 +260,7 @@ Priorität 1 | <strong>Kritischer Einfluss auf die Geschäftsabläufe oder Servi
 Priorität 2 | <strong>Signifikanter Einfluss auf die Geschäftsabläufe.</strong> <br> Die Verwendung eines Servicefeature oder einer Funktion ist sehr stark eingeschränkt oder die Einhaltung von Geschäftsterminen ist gefährdet. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Innerhalb von 2 Stunden</li><li><strong>Premium:</strong> Innerhalb von 90 Minuten </li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
 Priorität 3 | <strong>Geringfügiger Einfluss auf die Geschäftsabläufe.</strong> <br> Ein Servicefeature oder eine Funktion ist verwendbar, aber die Verwendbarkeit ist durch Probleme eingeschränkt. Es werden keine kritischen Auswirkungen auf Betriebsoperationen verursacht. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Innerhalb von 4 Stunden</li><li><strong>Premium:</strong> Innerhalb von 2 Stunden</li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
 Priorität 4 | <strong>Minimaler Einfluss auf die Geschäftsabläufe.</strong> <br> Eine Anfrage oder eine Anforderung nicht technischer Art. | <ul><li><strong>Free:</strong> Bestmöglich </li><li><strong>Basic:</strong> Bestmöglich</li><li><strong>Standard:</strong> Innerhalb von 8 Stunden</li><li><strong>Premium:</strong> Innerhalb von 4 Stunden</li></ul> | <ul><li><strong>Free:</strong> Betriebszeiten </li><li><strong>Basic:</strong> Betriebszeiten </li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
-*Tabelle 2. Prioritätsdefinition und Reaktionszeit*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### Potenzielle Sicherheitslücke melden
@@ -339,8 +339,7 @@ In der folgenden Tabelle sind die unterstützten Landessprachen und die Sprachen
 | Spanisch | es |
 | Vereinfachtes Chinesisch | zh_CN |
 | Traditionelles Chinesisch | zh_TW |
-
-*Tabelle 3. Unterstützte Landessprachen und Sprachencodes*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## Zufriedenheitsumfragen für den {{site.data.keyword.Bluemix_notm}}-Support  

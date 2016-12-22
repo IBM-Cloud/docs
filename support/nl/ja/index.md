@@ -211,8 +211,8 @@ RSS フィードを読み取るには他に、以下のような Web ブラウ�
 説明 | Bluemix を試用するすべてのお客様に対するサポート。  |  従来の重大度および応答時間を必要としない非実稼働環境およびワークロードに対するサポート。 | ビジネスに不可欠なアプリケーションを少しだけ使用する環境に対するサポート。{{site.data.keyword.Bluemix_notm}} Dedicated と {{site.data.keyword.Bluemix_notm}} Local のお客様は標準サポートを受けます。 |  {{site.data.keyword.Bluemix_notm}} への戦略的な依存関係を持つ基幹業務向け環境に対するサポート。
 重大度の高いサポート |  N/A | N/A | 組み込み | 組み込み
 サポート言語 | 英語 | 英語 | 英語 | 英語
-CSM (client success manager) 割り当て | 含まれない | 含まれない | 含まれない | 含まれる<br> (週 8 時間)
-*表 1. サポート・レベル*
+CSM (client success manager) 割り当て | 含まれない | 含まれない | 含まれない | 含まれる<br> 週 8 時間
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### サポート・チケットのオープン
 {: #open-ticket}
@@ -291,7 +291,7 @@ CSM (client success manager) 割り当て | 含まれない | 含まれない | 
 重大度 2 | <strong>著しい事業影響。</strong> <br> サービス機能の使用が著しく制限されるか、ビジネスの最終期限に間に合わない危険がある。 | <ul><li><strong>無料:</strong> N/A</li><li><strong>基本:</strong> N/A</li><li><strong>標準:</strong> 2 時間以内</li><li><strong>プレミアム:</strong> 90 分以内</li></ul> | <ul><li><strong>無料:</strong> N/A</li><li><strong>基本:</strong> N/A</li><li><strong>標準:</strong> 営業時間</li><li><strong>プレミアム:</strong> 営業時間</li></ul>
 重大度 3 | <strong>軽度の事業影響。</strong> <br> サービス機能は使用できるが、使用に影響を与えるいくつかの問題がある。運用に重大な影響は生じない。 | <ul><li><strong>無料:</strong> N/A</li><li><strong>基本:</strong> N/A</li><li><strong>標準:</strong> 4 時間以内</li><li><strong>プレミアム:</strong> 2 時間以内</li></ul> | <ul><li><strong>無料:</strong> N/A</li><li><strong>基本:</strong> N/A</li><li><strong>標準:</strong> 営業時間</li><li><strong>プレミアム:</strong> 営業時間</li></ul>
 重大度 4 | <strong>最小の事業影響。</strong> <br> 問い合わせまたは非技術的な要求。 | <ul><li><strong>無料:</strong> ベスト・エフォート</li><li><strong>基本:</strong> ベスト・エフォート</li><li><strong>標準:</strong> 8 時間以内</li><li><strong>プレミアム:</strong> 4 時間以内</li></ul> | <ul><li><strong>無料:</strong> 営業時間</li><li><strong>基本:</strong> 営業時間</li><li><strong>標準:</strong> 営業時間</li><li><strong>プレミアム:</strong> 営業時間</li></ul>
-*表 2. 重大度の定義および回答時間*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### 潜在的なセキュリティー脆弱性の報告
@@ -366,8 +366,7 @@ CSM (client success manager) 割り当て | 含まれない | 含まれない | 
 | スペイン語 | es |
 | 中国語 (簡体字) | zh_CN |
 | 中国語 (繁体字) | zh_TW |
-
-*表 3. サポートされる各国語と言語コード*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## {{site.data.keyword.Bluemix_notm}} サポートの満足度調査  

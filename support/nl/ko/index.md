@@ -180,7 +180,7 @@ lastupdated: "2016-10-22"
 고심각도 지원 |  해당사항 없음 | 해당사항 없음 | 포함 | 포함된
 지원 언어 | 영어 | 영어 | 영어 | 영어
 지정된 CSM(Client Success Manager) | 포함되지 않음 | 포함되지 않음 | 포함되지 않음 | 포함:<br> 주당 8시간
-*표 1. 지원 레벨*
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### 지원 티켓 열기
 {: #open-ticket}
@@ -261,7 +261,7 @@ lastupdated: "2016-10-22"
 심각도 2 | <strong>중대한 비즈니스 영향.</strong> <br> 서비스 특성 또는 기능의 사용에 상당한 제약이 있거나, 비즈니스 최종 기한을 맞추지 못할 위험에 노출됩니다.  | <ul><li><strong>무료:</strong> 해당사항 없음</li><li><strong>기본:</strong> 해당사항 없음</li><li><strong>표준:</strong> 2시간 이내</li><li><strong>프리미엄:</strong> 90분 이내</li></ul> | <ul><li><strong>무료:</strong> 해당사항 없음</li><li><strong>기본:</strong> 해당사항 없음</li><li><strong>표준:</strong> 운영 시간</li><li><strong>프리미엄:</strong> 운영 시간</li></ul>
 심각도 3 | <strong>사소한 비즈니스 영향.</strong> <br> 서비스 특성 또는 기능을 사용할 수는 있지만, 일부 문제점 때문에 사용에 영향이 있습니다. 운영 관련 중요 영향은 발생하지 않습니다. | <ul><li><strong>무료:</strong> 해당사항 없음</li><li><strong>기본:</strong> 해당사항 없음</li><li><strong>표준:</strong> 4시간 이내</li><li><strong>프리미엄:</strong> 2시간 이내</li></ul> | <ul><li><strong>무료:</strong> 해당사항 없음</li><li><strong>기본:</strong> 해당사항 없음</li><li><strong>표준:</strong> 운영 시간</li><li><strong>프리미엄:</strong> 운영 시간</li></ul>
 심각도 4 | <strong>미미한 비즈니스 영향.</strong> <br> 문의 또는 기술적 이외의 요청. | <ul><li><strong>무료:</strong> 최상의 노력</li><li><strong>기본:</strong> 최상의 노력</li><li><strong>표준:</strong> 8시간 이내</li><li><strong>프리미엄:</strong> 4시간 이내</li></ul> | <ul><li><strong>무료:</strong> 운영 시간</li><li><strong>기본:</strong> 운영 시간</li><li><strong>표준:</strong> 운영 시간</li><li><strong>프리미엄:</strong> 운영 시간</li></ul>
-*표 2. 심각도 정의 및 응답 시간*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### 잠재적 보안 취약성 보고
@@ -337,8 +337,7 @@ lastupdated: "2016-10-22"
 | 스페인어 | es |
 | 중국어 | zh_CN |
 | 대만어 | zh_TW |
-
-*표 3. 지원되는 자국어 및 언어 코드*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## {{site.data.keyword.Bluemix_notm}} 지원에 대한 만족도 설문조사  

@@ -181,7 +181,7 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 高嚴重性支援 |  N/A | N/A | 內含 | 內含
 支援語言 | 英文 | 英文 | 英文 | 英文
 指派的客戶成功經理 (CSM) | 不包含 | 不包含 | 不包含 | 內含，<br> 每週 8 小時
-*表 1. 支援層次*
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### 開啟支援問題單
 {: #open-ticket}
@@ -262,7 +262,7 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 嚴重性 2 | <strong>重大業務影響。</strong> <br> 服務特性或功能的使用嚴重受限，或者您快要錯過業務截止時間。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>2 小時內</li><li><strong>高階：</strong>90 分鐘內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
 嚴重性 3 | <strong>次要業務影響。</strong> <br> 服務特性或功能仍可使用，但有些問題會影響其使用。未對作業造成重要影響。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>4 小時內</li><li><strong>高階：</strong>2 小時內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
 嚴重性 4 | <strong>最小業務影響。</strong> <br> 查詢或非技術要求。 | <ul><li><strong>免費：</strong>最大努力</li><li><strong>基本：</strong>最大努力</li><li><strong>標準：</strong>8 小時內</li><li><strong>高階：</strong>4 小時內</li></ul> | <ul><li><strong>免費：</strong>作業時間</li><li><strong>基本：</strong>作業時間</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
-*表 2. 嚴重性定義及回應時間*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### 報告潛在的安全漏洞
@@ -337,8 +337,7 @@ Script 使用 cf 指令行介面來擷取應用程式環境的下列資訊：
 | 西班牙文 | es |
 | 簡體中文 | zh_CN |
 | 繁體中文 | zh_TW |
-
-*表 3. 支援的國家語言及語言碼*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## {{site.data.keyword.Bluemix_notm}} 支援的滿意度意見調查  

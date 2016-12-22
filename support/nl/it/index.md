@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  anni: 2015, 2016
+  years: 2015, 2016
   
 lastupdated: "2016-10-22"
 
@@ -201,7 +201,7 @@ Descrizione | Supporto per tutti i clienti in prova di Bluemix.  |  Supporto per
 Supporto di severità elevata |  N/D | N/D | Incluso | Include
 il supporto lingua | Inglese | Inglese | Inglese | CSM (client success manager)
 assegnato inglese | Non incluso | Non incluso | Non incluso | Incluso per<br> 8 ore a settimana
-*Tabella 1. Livelli di supporto*
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### Apertura di un ticket di supporto
 {: #open-ticket}
@@ -284,7 +284,7 @@ Severità 1 | <strong>Impatto sul business critico o il servizio non funziona.</
 Severità 2 | <strong>Impatto sul business significativo.</strong> <br> L'utilizzo di una funzione o funzionalità è severamente limitato o sei a rischio di saltare delle scadenze di business. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D </li><li><strong>Standard:</strong> in 2 ore</li><li><strong>Premium:</strong> in 90 minuti </li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D </li><li><strong>Standard:</strong> Orario di operatività </li><li><strong>Premium:</strong> Orario di operatività </li></ul>
 Severità 3 | <strong>Impatto sul business minore.</strong> <br> Una funzione o funzionalità è utilizzabile ma riscontra dei problemi che ne influenzano l'utilizzo. Non viene causato alcun impatto critico sulle operazioni. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D </li><li><strong>Standard:</strong> in 4 ore</li><li><strong>Premium:</strong> in 2 ore</li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D </li><li><strong>Standard:</strong> Orario di operatività </li><li><strong>Premium:</strong> Orario di operatività </li></ul>
 Severità 4 | <strong>Impatto sul business minimo.</strong> <br> Una domanda o una richiesta non tecnica. | <ul><li><strong>Gratuito:</strong> Massimo impegno </li><li><strong>Di base:</strong> Massimo impegno</li><li><strong>Standard:</strong> in 8 ore</li><li><strong>Premium:</strong> in 4 ore</li></ul> | <ul><li><strong>Gratuito:</strong> Orario di operatività </li><li><strong>Di base:</strong> Orario di operatività </li><li><strong>Standard:</strong> Orario di operatività </li><li><strong>Premium:</strong> Orario di operatività </li></ul>
-*Tabella 2. Definizione di severità e tempo di risposta*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### Notifica di una vulnerabilità di sicurezza potenziale
@@ -370,8 +370,7 @@ La seguente tabella elenca le lingue nazionali supportate e i codici lingua per 
 | Spagnolo | es |
 | Cinese semplificato | zh_CN |
 | Cinese tradizionale | zh_TW |
-
-*Tabella 3. Lingue nazionali supportate e codici lingua*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## Sondaggio sulla soddisfazione per il supporto {{site.data.keyword.Bluemix_notm}}  
