@@ -461,7 +461,9 @@ lastupdated: "2016-11-30"
 cf update-service <service_name> [-p <new_plan>]
 ```
 # 相關鏈結
-## 一般 
+{: rellinks}
+## 一般
+{: general}
 * [{{site.data.keyword.Bluemix_notm}} 定價單](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} Developers 社群討論區](https://developer.ibm.com/bluemix/)
 * [取得線上說明](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
