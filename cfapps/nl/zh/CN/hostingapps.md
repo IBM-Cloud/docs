@@ -89,14 +89,13 @@ lastupdated: "2016-05-09"
 
 可以使用 {{site.data.keyword.Bluemix_notm}} 提供的以下工具和服务：
 
-*表 1. {{site.data.keyword.Bluemix_notm}} 工具*
-
 | 工具	| 方法 |
 |:------|:--------|
 |Cloud Foundry 命令行界面 (cf cli)	|在本地客户机上管理代码，并使用 Cloud Foundry 命令行界面将应用程序手动推送到 {{site.data.keyword.Bluemix_notm}}。有关更多信息，请参阅[上传应用程序](/docs/starters/upload_app.html)。|
 |Eclipse	|在 Eclipse 中管理代码，并使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 来推送应用程序。|
 |Git 集成	|在 GitHub 上管理代码，并将 Git 集成到 {{site.data.keyword.Bluemix_notm}} 中。您可以与其他开发者进行协作。落实代码中的更改时，应用程序将自动部署到 {{site.data.keyword.Bluemix_notm}}。无需手动推送应用程序。|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|在 DevOps GitHub 存储库上管理代码，并通过 DevOps Delivery Pipeline 将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。|
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
 
 
 如果 Cloud Foundry 平台不支持应用程序需求，那么可以使用可通过更多定制选项来设置、配置和维护运行时的容器或 VM。
@@ -138,7 +137,7 @@ lastupdated: "2016-05-09"
 </li></ol>
 </li>
 
-<li>可选：如果更改了应用程序，那么必须重新输入 cf push 命令来上传这些更改。cf 命令行界面会使用您先前的选项并根据您对提示的响应，以新的代码段来更新运行中的所有应用程序实例。</li>
+<li>可选：如果更改了应用程序，那么必须重新输入 cf push 命令来上传这些更改。cf 命令行界面会使用您先前的选项并根据您对提示的响应，以新的代码段来更新任何运行中应用程序实例。</li>
 </ol>
 
 **注：**

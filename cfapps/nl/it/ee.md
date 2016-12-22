@@ -4,9 +4,9 @@
 
 copyright:
 
-  anni: 2015, 2016
+  year: 2015, 2016
 
-ultimo aggiornamento: "18-10-2016"
+lastupdated: "2016-10-18"
 
 ---
 

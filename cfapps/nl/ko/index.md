@@ -95,5 +95,3 @@ Track & Plan 및 Delivery Pipeline과 Web IDE 및 Git 호스팅도 포함됩니�
 <tr><td>라우트 수</td> <td>500</td>
 </table>
 </dd></dl>
-
-*표 1. 평가판 계정에 대한 {{site.data.keyword.Bluemix_notm}} 리소스 한계*

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-ultimo aggiornamento: "12-01-2016" 
+lastupdated: "2016-01-12" 
 
 ---
 
