@@ -21,7 +21,7 @@ Verfügbare Services finden Sie im **Katalog** unter **Services** in der
 
 {{site.data.keyword.Bluemix_notm}} stellt vordefinierte Services für mobile Anwendungen bereit. So
 erleichtert {{site.data.keyword.Bluemix_notm}} Ihnen das Implementieren, Betreiben und Skalieren dieser
-mobilen Services für Ihre mobilen Anwendungen. Somit können Sie sich auf Ihre Anwendungslogik und den Anwendungsentwurf konzentrieren.
+mobilen Services für Ihre mobilen Apps. Somit können Sie sich auf Ihre Anwendungslogik und den Anwendungsentwurf konzentrieren.
 
 {{site.data.keyword.Bluemix_notm}} betreibt und verwaltet Middleware-Services für Webanwendungen. Anwendungsentwickler haben die Möglichkeit, die für sie erforderlichen Middleware-Services anzugeben. {{site.data.keyword.Bluemix_notm}} stellt daraufhin automatisch neue Instanzen der angegebenen Middleware-Services bereit und bindet die Serviceinstanzen an die Anwendung.
 
@@ -53,7 +53,7 @@ erweisen, steht Support zur Verfügung. Die Art des Supports beruht auf der von 
 |Community	|Ein Service, der von einer Open-Source-Community bereitgestellt wird.	|Support für Community-Services wird von der {{site.data.keyword.Bluemix_notm}} Developers Community bereitgestellt. Wenn ein Problem von IBM untersucht wird und sich als Mangel im Community-Service herausstellt, ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen.|
 |Beta	|Ein Service, der für die Produktionsumgebung noch nicht einsatzfähig ist und sich in einer Versuchsphase der
 Entwicklungsstufe befindet. Ein Betaservice kann den Entwicklungs- und Marketingteams dabei helfen, den Wert der Services einzuschätzen, bevor sie den Service der Allgemeinheit zur Verfügung stellen.	|Probleme, die sich als Mängel in einem von IBM bereitgestellten Betaservice erweisen, werden unterstützt; jedoch ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen. Zusätzlich wird dem Problemticket eine Prioritätsstufe von 3 oder 4 zugeordnet, soweit zutreffend. Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
-*Tabelle 1. Supportinformationen für {{site.data.keyword.Bluemix_notm}}*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 
 
@@ -154,6 +154,8 @@ Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region verfügbar. In
 |{{site.data.keyword.workloadscheduler}}	|Ja		|Ja		|Nein|
 |{{site.data.keyword.xpagesservice_short}}	|Ja		|Ja		|Nein|
 *Tabelle 2. Serviceverfügbarkeit*
+{: caption="Table 2. Service availability" caption-side="top"}
+
 
 
 # Service zur Anwendung hinzufügen
@@ -221,7 +223,7 @@ der Serviceinstanz.
     cf bind-service appname service_instance
     ```
 
-Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich im selben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external){: new_window}.
+Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich in demselben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external){: new_window}.
 
 
 ## Die eigene Anwendung für die Interaktion mit einem Service konfigurieren
@@ -240,7 +242,7 @@ Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführ
 ## Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen
 {: #accser_external}
 
-Möglicherweise verfügen Sie über Anwendungen, die außerhalb von {{site.data.keyword.Bluemix_notm}} eingerichtet und in Betrieb genommen wurden, oder Sie verwenden Tools anderer Hersteller. Sofern ein {{site.data.keyword.Bluemix_notm}}-Service Endpunkte zur Verfügung stellt, die über das Internet zugänglich sind, können Sie diese Services mit Ihren lokalen Anwendungen oder Tools anderer Hersteller verwenden.
+Möglicherweise verfügen Sie über Anwendungen, die außerhalb von {{site.data.keyword.Bluemix_notm}} eingerichtet und in Betrieb genommen wurden, oder Sie verwenden Tools anderer Hersteller. Sofern ein {{site.data.keyword.Bluemix_notm}}-Service Endpunkte zur Verfügung stellt, die über das Internet zugänglich sind, können Sie diese Services mit Ihren lokalen Apps oder Tools anderer Hersteller verwenden.
 
 Um einer externen App oder einem Tool eines anderen Herstellers die Verwendung eines {{site.data.keyword.Bluemix_notm}}-Service zu ermöglichen, führen Sie die folgenden Schritte durch:
 

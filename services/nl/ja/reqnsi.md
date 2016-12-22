@@ -42,9 +42,7 @@ lastupdated: "2016-11-03"
 |サード・パーティー	|IBM 以外の企業が提供するサービス。	|サード・パーティー・サービスに対するサポートは、各サービス・プロバイダーから提供されます。IBM が問題を調査し、その問題がサード・パーティー・サービスの欠陥であると判定された場合、IBM は修正を提供する義務を負いません。IBM は、必要に応じてサード・パーティー・サービスのプロバイダーと分析内容を共有します。|
 |コミュニティー	|オープン・ソース・コミュニティーにより提供されるサービス。	|コミュニティー・サービスに対するサポートは、{{site.data.keyword.Bluemix_notm}} Developers Community から提供されます。IBM が問題を調査し、その問題がコミュニティー・サービスの欠陥であると判定された場合、IBM は修正を提供する義務を負いません。|
 |ベータ	|生産準備が未完了で、開発のトライアル・ステージにあるサービス。ベータ・サービスは、開発チームやマーケティング・チームがサービスを一般出荷可能にする前にそのサービスの価値を評価するのに役立ちます。	|IBM が提供するベータ・サービスの欠陥であると判定された問題はサポート対象となりますが、IBM は修正を提供する義務を負いません。また、該当する場合、問題チケットには重大度 3 または 4 が割り当てられます。チケット重大度については、『[サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support){: new_window}』を参照してください。|
-*表 1. {{site.data.keyword.Bluemix_notm}} サービスのサポート情報*
-
-
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 {{site.data.keyword.Bluemix_notm}} には、試すことができる試験的サービスもあります。使用可能な試験的サービス、ボイラープレート、およびランタイムをすべて表示するには、{{site.data.keyword.Bluemix_notm}} にログインした後、「カタログ」の終わりまでスクロールし、**「{{site.data.keyword.Bluemix_notm}} ラボ・カタログ ({{site.data.keyword.Bluemix_notm}} Lab Catalog)」**をクリックします。
 
@@ -138,6 +136,10 @@ lastupdated: "2016-11-03"
 |{{site.data.keyword.workloadscheduler}}	|はい		|はい		|いいえ|
 |{{site.data.keyword.xpagesservice_short}}	|はい		|はい		|いいえ|
 *表 2. サービスの利用可能性*
+
+
+{: caption="Table 2. Service availability" caption-side="top"}
+
 
 
 # アプリケーションへのサービスの追加

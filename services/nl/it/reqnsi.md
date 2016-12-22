@@ -57,12 +57,12 @@ in un servizio fornito da IBM generalmente disponibile. Il supporto viene fornit
 fornitore del servizio. Se un problema viene analizzato da IBM e tale problema viene considerato come un difetto in un servizio di terze parti, IBM non è tenuto a fornire una correzione. IBM condividerà l'analisi con il fornitore del servizio di terze parti laddove necessario.|
 |Community	|Un servizio fornito da una community
 open source.	|Il supporto per i servizi di community viene fornito dalla Community di sviluppatori {{site.data.keyword.Bluemix_notm}}. Se un problema viene analizzato da IBM e tale problema viene considerato come un difetto in un servizio di community, IBM non è tenuto a fornire una correzione.|
-|Beta	|Un servizio che non è pronto per la produzione e che è un una
+|Beta	|Un servizio che non è pronto per la produzione ed è a una
 fase di sviluppo di prova. Un servizio beta può aiutare i team di sviluppo
 e di marketing a valutare la qualità dei servizi prima di
 renderli generalmente disponibili.	|Viene fornito supporto per i problemi considerati come un difetto in un servizio beta fornito da IBM, tuttavia  IBM non è tenuto a fornire una correzione. Inoltre,
 laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
-*Tabella 1. Informazioni sul supporto dei servizi {{site.data.keyword.Bluemix_notm}}*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 
 
@@ -164,6 +164,8 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.workloadscheduler}}	|Sì		|Sì		|No|
 |{{site.data.keyword.xpagesservice_short}}	|Sì		|Sì		|No|
 *Tabella 2. Disponibilità dei servizi*
+{: caption="Table 2. Service availability" caption-side="top"}
+
 
 
 # Aggiunta di un servizio alla tua applicazione

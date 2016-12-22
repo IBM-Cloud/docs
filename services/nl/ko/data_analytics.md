@@ -21,3 +21,4 @@ lastupdated: "2016-11-03"
 추가 빌드 | 계속 성장 | 계속 휴면
 ---- | ---- | ----
 시스템 관리가 아니라 새 앱 작성이라는 흥미로운 작업에 집중합니다.  | IBM 클라우드에서 데이터를 스케일링합니다. | 연중 무휴로 하루 24시간 실행되는 데이터는 IBM 전문가에게 맡겨두고 편히 쉽니다.
+{: caption="Table 1. Benefits of using the Work with Data console" caption-side="top"}

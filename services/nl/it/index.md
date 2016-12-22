@@ -33,7 +33,7 @@ ed è a una fase di sviluppo di prova. Un servizio beta può aiutare i team di s
 e di marketing a valutare la qualità dei servizi prima di
 renderli generalmente disponibili.	|Viene fornito supporto per i problemi considerati come un difetto in un servizio beta fornito da IBM, tuttavia  IBM non è tenuto a fornire una correzione. Inoltre,
 laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
-*Tabella 1. Informazioni sul supporto dei servizi {{site.data.keyword.Bluemix_notm}}*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 ##Servizi sperimentali
 {: #experimental_services}
@@ -142,7 +142,7 @@ Non tutti i servizi sono disponibili per l'acquisto in ogni regione {{site.data.
 |{{site.data.keyword.appserver_short}}	|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Ospitato a Sydney,AU |
 |{{site.data.keyword.workloadscheduler}}	|Ospitato a Dallas,USA e Washington,USA		|Ospitato ad Amsterdam,NL e Milano,IT		|Ospitato a Melbourne,AU |
 |{{site.data.keyword.xpagesservice_short}}	|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Ospitato a Sydney,AU |
-*Tabella 2. Disponibilità dei servizi*
+{: caption="Table 2. Service availability" caption-side="top"}
 
 
 ## Disponibilità continua per i servizi

@@ -60,7 +60,7 @@ serviço geralmente disponível.	|Problemas que são determinados como sendo um 
 em um serviço beta fornecido pela IBM são suportados mas a IBM não é obrigada a
 fornecer uma correção. Além disso,
 o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Para obter informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
-*Tabela 1. Informações de suporte de serviços do {{site.data.keyword.Bluemix_notm}}*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 
 
@@ -163,6 +163,8 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.workloadscheduler}}	|Sim		|Sim		|Não|
 |{{site.data.keyword.xpagesservice_short}}	|Sim		|Sim		|Não|
 *Tabela 2. Disponibilidade do serviço*
+{: caption="Table 2. Service availability" caption-side="top"}
+
 
 
 # Incluindo um serviço em seu aplicativo
@@ -236,7 +238,8 @@ que você requer.
     cf bind-service appname service_instance
     ```
 
-É possível ligar uma instância de serviço a apenas às instâncias do app que estão no mesmo espaço ou organização. No entanto, é possível usar instâncias de serviço de outros espaços ou organizações da mesma maneira que um app externo. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações sobre como apps externos usam serviços do {{site.data.keyword.Bluemix_notm}}, consulte [Permitindo que apps externos usem serviços do {{site.data.keyword.Bluemix_notm}}](#accser_external){: new_window}.
+É possível ligar uma instância de serviço apenas àquelas instâncias do app que estão no mesmo espaço ou organização. No entanto, é possível usar instâncias
+de serviço de outros espaços ou organizações da mesma maneira que um app externo faz. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações sobre como apps externos usam serviços do {{site.data.keyword.Bluemix_notm}}, consulte [Permitindo que apps externos usem serviços do {{site.data.keyword.Bluemix_notm}}](#accser_external){: new_window}.
 
 
 ## Configurando seu aplicativo para interagir com um serviço
