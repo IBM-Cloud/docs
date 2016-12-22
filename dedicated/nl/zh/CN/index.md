@@ -499,7 +499,9 @@ IBM 会发送有关在“状态”页面上针对每个维护时段计划进行�
 </ul>
 
 # 相关链接
+{: rellinks}
 ## 常规
+{: general}
 * [Discover: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [{{site.data.keyword.Bluemix_notm}} 中的新增功能](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 词汇表](/docs/overview/glossary/index.html)
