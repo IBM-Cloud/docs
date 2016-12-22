@@ -458,7 +458,9 @@ To update the service plan, enter the following command:
 cf update-service <service_name> [-p <new_plan>]
 ```
 # rellinks
-## general 
+{: rellinks}
+## general
+{: general} 
 * [{{site.data.keyword.Bluemix_notm}} Pricing Sheet](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} Developers Community Forum](https://developer.ibm.com/bluemix/)
 * [Getting online help](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
