@@ -96,8 +96,7 @@ wsk sdk install iOS
 ```
 {: pre}
 
-Esse comando faz download de um arquivo compactado que contém o app iniciador. Dentro
-do diretório de projeto está um podfile.
+Esse comando faz download de um arquivo compactado que contém o app iniciador. Dentro do diretório de projeto há um arquivo pod.
 
 Para instalar o SDK, insira o comando a seguir:
 ```

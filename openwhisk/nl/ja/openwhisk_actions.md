@@ -144,7 +144,7 @@ lastupdated: "2016-09-27"
 1. アクションでパラメーターを使用します。例えば、「hello.js」ファイルを更新して、次のような内容にします。
   
   ```
-function main(params) {
+  function main(params) {
       return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
@@ -173,7 +173,7 @@ function main(params) {
   ```
   {
       "name": "Bernie",
-    "place": "Vermont"
+      "place": "Vermont"
   }
   ```
   {: codeblock}
@@ -402,6 +402,7 @@ function main(params) {
   {: screen}
 
 ### Node.js モジュールとしてのアクションのパッケージ化
+{: #openwhisk_js_packaged_action}
 
 単一の JavaScript ソース・ファイル内にすべてのアクション・コードを作成する代わりに、`npm` パッケージとしてアクションを作成できます。例として、以下のファイルが含まれたディレクトリーについて考えます。
 

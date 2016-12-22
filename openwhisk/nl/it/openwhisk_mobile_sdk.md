@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  anni: 2016
-ultimo aggiornamento: "26-08-2016"
+  years: 2016
+lastupdated: "2016-08-26"
 
 ---
 

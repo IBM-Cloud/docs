@@ -186,5 +186,17 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
 
   hello 조치가 이벤트 페이로드를 수신하고 예상 문자열을 리턴한 것을 볼 수 있습니다.
 
-동일한 트리거를 다른 조치와 연관시키는 다중 규칙을 작성할 수 있습니다. 규칙을 작성하는 조치 및 트리거는 동일한 네임스페이스 안에 있어야 하며 패키지에 속할 수 없습니다.
-패키지에 속한 조치를 사용하려는 경우 네임스페이스에 조치를 복사할 수 있습니다. 예: `wsk action create echo --copy /whisk.system/utils/echo`.
+동일한 트리거를 다른 조치와 연관시키는 다중 규칙을 작성할 수 있습니다. 트리거 및 규칙은 패키지에 속할 수 없습니다. 그러나 규칙은 패키지에 속한 조치와 연결시킬 수 있습니다. 예:
+
+  ```
+  wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
+  ```
+  {: pre}
+
+시퀀스와 함께 규칙을 사용할 수도 있습니다. 예를 들어, `anotherRule` 조치에서 활성화된 조치
+시퀀스 `recordLocationAndHello`를 작성할 수 있습니다.
+  ```
+  wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  wsk rule create anotherRule locationUpdate recordLocationAndHello
+  ```
+  {: pre}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  anni: 2016
-ultimo aggiornamento: "22-02-2016"
+  years: 2016
+lastupdated: "2016-02-22"
 
 ---
 
@@ -183,5 +183,17 @@ Ad esempio, crea una regola che richiama l'azione "hello" ogni volta che viene p
   Puoi vedere che l'azione "hello" ha ricevuto il payload dell'evento e ha restituito la stringa prevista.
 
 Puoi creare più regole che associano lo stesso trigger ad azioni differenti.
-Il trigger e l'azione che crea una regola devono essere nello stesso spazio dei nomi e non possono appartenere allo stesso pacchetto.
-Se desideri utilizzare un'azione che appartiene a un pacchetto, puoi copiare l'azione nel tuo spazio dei nomi. Ad esempio: `wsk action create echo --copy /whisk.system/utils/echo`.
+I trigger e le regole non possono appartenere a un pacchetto. Tuttavia, la regola deve essere associata ad
+un'azione che appartiene a un pacchetto, ad esempio:
+  ```
+  wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
+  ```
+  {: pre}
+
+Puoi anche utilizzare le regole con le sequenze. Ad esempio, è possibile creare una sequenza di azioni
+`recordLocationAndHello` che viene attivata dalla regola `anotherRule`.
+  ```
+  wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  wsk rule create anotherRule locationUpdate recordLocationAndHello
+  ```
+  {: pre}

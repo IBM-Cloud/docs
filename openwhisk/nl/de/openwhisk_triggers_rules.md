@@ -180,5 +180,15 @@ Erstellen Sie zum Beispiel eine Regel, die die Aktion "hello" aufruft, wenn eine
   Wie Sie sehen, hat die Aktion 'hello' die Ereignisnutzdaten (payload) empfangen und die erwartete Zeichenfolge zurückgegeben.
 
 Sie können mehrere Regeln erstellen, die denselben Auslöser verschiedenen Aktionen zuordnen.
-Der Auslöser und die Aktion, aus denen eine Regel besteht, müssen sich in demselben Namensbereich befinden und dürfen nicht zu einem Paket gehören.
-Wenn Sie eine Aktion verwenden möchten, die zu einem Paket gehört, können Sie die Aktion in den Namensbereich kopieren. Beispiel: `wsk action create echo --copy /whisk.system/utils/echo`.
+Auslöser und Regeln können nicht zu einem Paket gehören. Die Regel kann jedoch einer Aktion zugeordnet werden, die zu einem Paket gehört. Beispiel: 
+  ```
+  wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
+  ```
+  {: pre}
+
+Sie können Regeln auch mit Sequenzen verwenden. Beispielsweise können Sie eine Aktionssequenz `recordLocationAndHello` erstellen, die mit der Regel `anotherRule` aktiviert wird.
+  ```
+  wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  wsk rule create anotherRule locationUpdate recordLocationAndHello
+  ```
+  {: pre}

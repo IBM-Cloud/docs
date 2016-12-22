@@ -20,15 +20,25 @@ lastupdated: "2016-09-09"
 
 {{site.data.keyword.openwhisk_short}} の動作について詳しくは、『[{{site.data.keyword.openwhisk_short}} 概要](./openwhisk_about.html)』を参照してください。
 
+ブラウザーおよび CLI を使用して、{{site.data.keyword.openwhisk_short}} アプリケーションを開発できます。
+この 2 つには、類似したアプリケーション開発機能がありますが、CLI では、デプロイメントおよび操作をより詳細に制御できます。
+
+
+## ブラウザーで開発
+{: #openwhisk_start_editor}
+
+[ブラウザー](https://console.{DomainName}/openwhisk/editor){: new_window}で {{site.data.keyword.openwhisk_short}} を試して、アクションの作成、トリガーを使用したアクションの自動化、パブリック・パッケージの探索を行ってください。
+OpenWhisk ユーザー・インターフェースのクイック・ツアーについては、[詳細](https://console.{DomainName}/openwhisk/learn){: new_window}ページを参照してください。
+
 ## {{site.data.keyword.openwhisk_short}} CLI のセットアップ
 {: #openwhisk_start_configure_cli}
 
 {{site.data.keyword.openwhisk_short}} コマンド・ライン・インターフェース (CLI) を使用して、名前空間および許可鍵をセットアップできます。[「CLI の構成」](https://new-console.{DomainName}/openwhisk/cli){: new_window}に移動し、手順に従ってインストールしてください。
 
 ### HTTPS プロキシーを使用するための CLI の構成
+{: #openwhisk_configure_https_proxy_cli}
 
 HTTPS プロキシーを使用するように CLI をセットアップできます。HTTPS プロキシーをセットアップするには、`HTTPS_PROXY` という名前の環境変数を作成する必要があります。この変数をフォーマット `{PROXY IP}:{PROXY PORT}` を使用して HTTPS プロキシーのアドレスとそのポートに設定する必要があります。
-
 
 {{site.data.keyword.openwhisk_short}} を CLI と共にセットアップした後、コマンド・ラインから使用を開始できます。
 

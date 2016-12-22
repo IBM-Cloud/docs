@@ -20,16 +20,27 @@ lastupdated: "2016-09-09"
 
 Weitere Einzelheiten zur Funktionsweise von {{site.data.keyword.openwhisk_short}} finden Sie unter [Informationen zu {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
+Sie können den Browser oder die CLI (Command-Line Interface) verwenden, um Ihre {{site.data.keyword.openwhisk_short}}-Anwendungen zu entwickeln.
+Beide Komponenten haben ein ähnliches Leistungsspektrum in Hinblick auf die Entwicklung von Anwendungen. Die CLI bietet ein höheres Maß an Kontrolle über die Bereitstellung und die Operationen.
+
+
+## Im eigenen Browser entwickeln
+{: #openwhisk_start_editor}
+
+Testen Sie {{site.data.keyword.openwhisk_short}} in Ihrem [Browser](https://console.{DomainName}/openwhisk/editor){: new_window}, um Aktionen zu erstellen, Aktionen mit Auslösern zu automatisieren und öffentliche Pakete zu untersuchen.
+Besuchen Sie die Seite [Weitere Informationen](https://console.{DomainName}/openwhisk/learn){: new_window}, auf der Sie eine Schnelleinführung zur OpenWhisk-Benutzerschnittstelle finden.
+
 ## {{site.data.keyword.openwhisk_short}}-CLI einrichten
 {: #openwhisk_start_configure_cli}
 
-Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) einrichten. Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk/cli){: new_window} und gehen Sie gemäß den Anweisungen für die Installation vor.
+Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) einrichten.
+Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk/cli){: new_window} und gehen Sie gemäß den Anweisungen für die Installation vor.
 
 ### CLI für die Verwendung eines HTTPS-Proxy konfigurieren
+{: #openwhisk_configure_https_proxy_cli}
 
 Die CLI kann so eingerichtet werden, dass ein HTTPS-Proxy verwendet werden kann. Um einen HTTPS-Proxy einzurichten, muss die Umgebungsvariable `HTTPS_PROXY` erstellt werden erstellt werden. Die Variable muss auf die Adresse des HTTPS-Proxy festgelegt werden und der Port muss das folgende Format haben:
 `{PROXY IP}:{PROXY PORT}`.
-
 
 Nach der Einrichtung von {{site.data.keyword.openwhisk_short}} mithilfe der Befehlszeilenschnittstelle können Sie mit der Verwendung über die Befehlszeile beginnen.
 
@@ -52,7 +63,8 @@ Sie können {{site.data.keyword.openwhisk_short}} mithilfe des {{site.data.keywo
 ## REST-APIs mit {{site.data.keyword.openwhisk_short}} verwenden
 {: #openwhisk_start_using_restapi}
 
-Nach der Einrichtung Ihrer {{site.data.keyword.openwhisk_short}}-Umgebung können Sie {{site.data.keyword.openwhisk_short}} mit Ihren Web-Apps oder mobilen Apps mithilfe von REST-API-Aufrufen verwenden. Weitere Details zu den APIs für Aktionen, Aktivierungen, Pakete, Regeln und Auslöser finden Sie in der [API-Dokumentation für {{site.data.keyword.openwhisk_short}}](https://new-console.{DomainName}/apidocs/98).
+Nach der Einrichtung Ihrer {{site.data.keyword.openwhisk_short}}-Umgebung können Sie {{site.data.keyword.openwhisk_short}} mit Ihren Web-Apps oder mobilen Apps mithilfe von REST-API-Aufrufen verwenden.
+Weitere Details zu den APIs für Aktionen, Aktivierungen, Pakete, Regeln und Auslöser finden Sie in der [API-Dokumentation für {{site.data.keyword.openwhisk_short}}](https://new-console.{DomainName}/apidocs/98).
 
 ## {{site.data.keyword.openwhisk_short}}-Beispiel Hello World
 {: #openwhisk_start_hello_world}

@@ -185,5 +185,17 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
 
   hello アクションがイベント・ペイロードを受け取り、予期されるストリングを戻したことが分かります。
 
-複数のルールを作成して、同じトリガーを異なるアクションに関連付けることができます。ルールを構成するトリガーとアクションは、同じ名前空間内に存在する必要があり、パッケージに属していてはなりません。
-パッケージに属しているアクションを使用する場合は、そのアクションを名前空間にコピーします。例えば、`wsk action create echo --copy /whisk.system/utils/echo` です。
+複数のルールを作成して、同じトリガーを異なるアクションに関連付けることができます。トリガーおよびルールは、パッケージに属することができません。
+ただし、パッケージに属しているアクションに、ルールを関連付けることはできます。以下に例を示します。
+  ```
+  wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
+  ```
+  {: pre}
+
+また、ルールをシーケンスとともに使用することも可能です。例えば、ルール  `anotherRule`
+で有効化されるアクション・シーケンス `recordLocationAndHello` を作成することができます。
+  ```
+  wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  wsk rule create anotherRule locationUpdate recordLocationAndHello
+  ```
+  {: pre}

@@ -3,8 +3,8 @@
 
 
 copyright:
-  anni: 2016
-ultimo aggiornamento: "09-09-2016"
+  years: 2016
+lastupdated: "2016-09-09"
 
 ---
 

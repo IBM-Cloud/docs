@@ -32,10 +32,10 @@ lastupdated: "2016-09-09"
 
 | エンティティー | タイプ  | パラメーター | 説明 |
 | --- | --- | --- | --- |
-| `/whisk.system/cloudant` | パッケージ | {{site.data.keyword.Bluemix_notm}}ServiceName、host、username、password、dbname、includeDoc、overwrite | Cloudant データベースを処理 |
+| `/whisk.system/cloudant` | パッケージ | {{site.data.keyword.Bluemix_notm}}ServiceName、host、username、password、dbname、overwrite | Cloudant データベースを処理 |
 | `/whisk.system/cloudant/read` | アクション | dbname、includeDoc、id | データベースから文書を読み取る |
 | `/whisk.system/cloudant/write` | アクション | dbname、overwrite、doc | データベースに文書を書き込む |
-| `/whisk.system/cloudant/changes` | フィード | dbname、includeDoc、maxTriggers | データベースの変更時にトリガー・イベントを発生させる |
+| `/whisk.system/cloudant/changes` | フィード | dbname、maxTriggers | データベースの変更時にトリガー・イベントを発生させる |
 
 以降のトピックでは、Cloudant データベースのセットアップ、関連付けられたパッケージの構成、および `/whisk.system/cloudant` パッケージのアクションとフィードの使用をウォークスルーします。
 
@@ -143,13 +143,12 @@ packages
 
 
 - `dbname`: Cloudant データベースの名前。
-- `includeDoc`: true に設定すると、発生する各トリガー・イベントに、変更された Cloudant 文書が含まれます。 
 - `maxTriggers`: この限界に達するとトリガーの発生を停止します。デフォルトは 1000 です。最大 10,000 に設定できます。10,000 を超える値に設定しようとすると、要求は拒否されます。
 
 1. 前に作成したパッケージ・バインディングの `changes` フィードを使用してトリガーを作成します。`/myNamespace/myCloudant` を、ご使用のパッケージ名に置き換えてください。
 
   ```
-wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
   ```
@@ -172,20 +171,7 @@ wsk activation poll
 
 これで、ルールを作成してアクションに関連付け、文書の更新に対応することができるようになります。
 
-生成されたイベントのコンテンツは、トリガーを作成するときの `includeDoc` パラメーターの値によって異なります。パラメーターを true に設定すると、発生する各トリガー・イベントに、変更された Cloudant 文書が含まれます。たとえば、次の変更された文書を考えてみます。 
-
-  ```
-  {
-    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
-    "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
-    "name": "Heisenberg"
-  }
-  ```
-  {: screen}
-
-この例のコードは、対応する `_id`、`_rev`、および `name` の各パラメーターを使用してトリガー・イベントを生成します。実際には、トリガー・イベントの JSON 表記は文書に一致します。
-
-`includeDoc` が false の場合は、イベントに以下のパラメーターが含まれます。
+生成されるイベントの内容には、以下のパラメーターがあります。
 
 - `id`: 文書 ID。
 - `seq`: Cloudant によって生成されるシーケンス ID。
@@ -255,6 +241,53 @@ wsk activation poll
   ```
   {: screen}
 
+### Cloudant データベースからの変更イベントに関する文書の処理におけるアクション・シーケンスの使用
+
+ルールでアクション・シーケンスを使用して、Cloudant 変更イベントに関連する文書をフェッチして処理することができます。
+
+Cloudant からの文書を処理するアクションを作成します。これは、パラメーターとして文書を予期します。
+以下は、文書を処理するアクションのサンプル・コードです。
+```
+function main(doc){
+  return { "isWalter:" : doc.name === "Walter White"};
+}
+```
+{: codeblock}
+```
+wsk action create myAction myAction.js
+```
+{: pre}
+データベースから文書を読み取るには、cloudant パッケージで `read` アクションを使用できます。このアクションは、アクション `myAction` とともにアクション・シーケンスに組み込むことができます。
+`read` アクションを使用してアクション・シーケンスを作成し、その後、文書を入力として予期するアクション `myAction` を呼び出します。
+```
+wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
+```
+{: pre}
+
+ここで、トリガーを新しいアクション `sequenceAction` と関連付けるルールを作成します。
+```
+wsk rule create myRule myCloudantTrigger sequenceAction
+```
+{: pre}
+
+このアクション・シーケンスには、文書のフェッチ元のデータベース名が必要です。
+トリガーで、`dbname` のパラメーターを設定します。
+```
+wsk trigger update myCloudantTrigger --param dbname testdb
+```
+{: pre}
+
+**注** Cloudant の変更トリガーでは以前、パラメーター `includeDoc` がサポートされていましたが、これはサポートされなくなりました。
+`includeDoc` を使用して以前に作成されたトリガーは作成し直す必要があります。
+`includeDoc` パラメーターを使用せずに、トリガーを作成し直してください。
+  ```
+  wsk trigger delete myCloudantTrigger
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
+  ```
+  {: pre}
+  上記のステップに従うことで、文書を取得して既存のアクションを呼び出すアクション・シーケンスを作成できます。
+  その後、新しいアクション・シーケンスを使用するようにルールを更新してください。
+
 
 ## Alarm パッケージの使用
 {: #openwhisk_catalog_alarm}
@@ -276,28 +309,31 @@ wsk activation poll
 Alarm サービスを構成して、指定した頻度でトリガー・イベントを発生させます。パラメーターは次のとおりです。
 
 
-- `cron`: トリガーを発生させるタイミングを協定世界時 (UTC) で示す、UNIX crontab 構文に基づいたストリング。このストリングは、`X X X X X X ` のようにスペースで区切られた 6 個のフィールドのシーケンスです。cron 構文の使用について詳しくは、https://github.com/ncb000gt/node-cron を参照してください。ストリングで示される頻度のいくつかの例を以下に示しま す。
+- `cron`: トリガーを発生させるタイミングを協定世界時 (UTC) で示す、UNIX crontab 構文に基づいたストリング。このストリングは、`X X X X X` のようにスペースで区切られた 5 個のフィールドのシーケンスです。cron 構文の使用について詳しくは、http://crontab.org を参照してください。ストリングで示される頻度のいくつかの例を以下に示しま す。
 
-  - `* * * * * *`: 毎秒。
-  - `0 * * * * *`: 毎分の先頭。
-  - `* 0 * * * *`: 毎時の先頭。
-  - `0 0 9 8 * *`: 毎月 8 日目の午前 9:00:00 (UTC)
+  - `* * * * *`: 毎分の先頭。
+  - `0 * * * *`: 毎時の先頭。
+  - `0 */2 * * *`: 2 時間ごと (つまり、02:00:00、04:00:00、...)
+  - `0 9 8 * *`: 毎月 8 日目の午前 9:00:00 (UTC)
 
 - `trigger_payload`: このパラメーターの値は、
 トリガーが発生するたびにトリガーのコンテンツになります。
 
 - `maxTriggers`: この限界に達するとトリガーの発生を停止します。デフォルトは 1000 です。最大 10,000 に設定できます。10,000 を超える値に設定しようとすると、要求は拒否されます。
 
-以下は、トリガー・イベントに `name` と `place` の値を指定して、20 秒ごとに 1 回発生するトリガーを作成する例です。
+以下は、トリガー・イベントに `name` と `place` の値を指定して、2 分ごとに 1 回発生するトリガーを作成する例です。
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
-  {: pre}
 
 生成される各イベントは、`trigger_payload` の値に指定されるプロパティーをパラメーターとして含みます。この場合、各トリガー・イベントは、
 パラメーター `name=Odin` と `place=Asgard` を含みます。
 
+**注**: パラメーター `cron` も、6 個のフィールドのカスタム構文をサポートします。ここで、最初のフィールドは秒を表します。
+このカスタム cron 構文の使用について詳しくは、https://github.com/ncb000gt/node-cron を参照してください。
+以下は、6 個のフィールドの表記を使用した例です。
+  - `*/30 * * * * *`: 30 秒ごと。
 
 ## Weather パッケージの使用
 {: #openwhisk_catalog_weather}
@@ -370,46 +406,102 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 
 ## Watson パッケージの使用
 {: #openwhisk_catalog_watson}
+Watson パッケージは、各種の Watson API を呼び出すために便利な方法を提供します。
 
-`/whisk.system/watson` パッケージは、各種の Watson API を呼び出すために便利な方法を提供します。
+以下の Watson パッケージが提供されています。
+
+| パッケージ | 説明 |
+| --- | --- |
+| `/whisk.system/watson-translator`   | テキストおよび言語の識別を変換する Watson API のアクション |
+| `/whisk.system/watson-textToSpeech` | テキストをスピーチに変換する Watson API のアクション |
+| `/whisk.system/watson-speechToText` | スピーチをテキストに変換する Watson API のアクション |
+
+**注** パッケージ `/whisk.system/watson` は現在、非推奨です。上記の新しいパッケージにマイグレーションしてください。新しいアクションでは、同じインターフェースが提供されています。
+
+### Watson Translator パッケージの使用
+
+`/whisk.system/watson-translator` パッケージを利用して、変換するための Watson API を簡単に呼び出すことができます。
 
 このパッケージには、以下のアクションが含まれています。
 
 | エンティティー | タイプ  | パラメーター | 説明 |
 | --- | --- | --- | --- |
-| `/whisk.system/watson` | パッケージ | username、password | Watson 分析 API のアクション |
-| `/whisk.system/watson/translate` | アクション | translateFrom、translateTo、translateParam、username、password | テキストの変換 |
-| `/whisk.system/watson/languageId` | アクション | payload、username、password | 言語の識別 |
-| `/whisk.system/watson/speechToText` | アクション | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 音声のテキストへの変換 |
-| `/whisk.system/watson/textToSpeech` | アクション | payload、voice、accept、encoding、username、password | テキストの音声への変換 |
+| `/whisk.system/watson-translator` | パッケージ | username、password | テキストおよび言語の識別を変換する Watson API のアクション  |
+| `/whisk.system/watson-translator/translator` | アクション | payload、translateFrom、translateTo、translateParam、username、password | テキストの変換 |
+| `/whisk.system/watson-translator/languageId` | アクション | payload、username、password | 言語の識別 |
 
-`username` と `password` の値を使用して、パッケージ・バインディングを作成することをお勧めします。この方法を使用すると、パッケージ内のアクションを起動するたびにこれらの資格情報を指定する必要はありません。
+**注**: パッケージ `/whisk.system/watson` は、アクション `/whisk.system/watson/translate` および `/whisk.system/watson/languageId` を含め、非推奨です。
 
-### テキストの変換
+#### Bluemix での Watson Translator パッケージのセットアップ
+
+Bluemix から OpenWhisk を使用している場合、Bluemix Watson サービス・インスタンスのパッケージ・バインディングは OpenWhisk が自動的に作成します。
+
+1. Bluemix [ダッシュボード](http://console.ng.Bluemix.net)で Watson Translator のサービス・インスタンスを作成します。
+
+  サービス・インスタンスの名前、およびユーザーが所属している Bluemix の組織とスペースの名前を忘れないようにしてください。
+
+2. ご使用の OpenWhisk CLI が、前のステップで使用した Bluemix 組織とスペースに対応する名前空間に存在するようにします。
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  あるいは、`wsk property set --namespace` を使用して、アクセス可能な名前空間のリストから名前空間を設定することができます。
+
+3. 名前空間でパッケージを最新表示します。最新表示により、ユーザーが作成した Watson サービス・インスタンスのパッケージ・バインディングが自動的に作成されます。
+
+  ```
+wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_Translator_Credentials-1
+  ```
+  {: screen}
+
+  ```
+wsk package list
+  ```
+  {: pre}
+  
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Bluemix 外部での Watson Translator パッケージのセットアップ
+
+Bluemix で OpenWhisk を使用していない場合、または Bluemix の外部で Watson Translator をセットアップしたい場合は、Watson Translator サービスのパッケージ・バインディングを手動で作成する必要があります。Watson Translator サービスのユーザー名とパスワードが必要になります。
+
+- Watson Translator サービス用に構成されるパッケージ・バインディングを作成します。
+
+  ```
+  wsk package bind /whisk.system/watson-translator myWatsonTranslator -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### テキストの変換
 {: #openwhisk_catalog_watson_translate}
 
-`/whisk.system/watson/translate` アクションは、テキストをある言語から別の言語に変換します。パラメーターは次のとおりです。
+`/whisk.system/watson-translator/translator` アクションは、テキストをある言語から別の言語に変換します。パラメーターは次のとおりです。
 
 
 - `username`: Watson API ユーザー名。
 - `password`: Watson API パスワード。
+- `payload`: 変換するテキスト。
 - `translateParam`: 変換するテキストを示す入力パラメーター。例えば、`translateParam=payload` の場合は、アクションに渡される `payload` パラメーターの値が変換されます。
 - `translateFrom`: ソース言語の 2 桁のコード。
 - `translateTo`: ターゲット言語の 2 桁のコード。
 
-以下は、パッケージ・バインディングを作成してテキストを変換する例です。
-
-1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
+- パッケージ・バインディングの `translator` アクションを起動して、テキストを英語からフランス語に変換します。
 
   ```
-  wsk package bind /whisk.system/watson myWatson --param username MY_WATSON_USERNAME --param password MY_WATSON_PASSWORD
-  ```
-  {: pre}
-
-2. パッケージ・バインディングの `translate` アクションを起動して、テキストを英語からフランス語に変換します。
-
-  ```
-  wsk action invoke myWatson/translate --blocking --result --param payload "Blue skies ahead" --param translateParam payload --param translateFrom en --param translateTo fr
+  wsk action invoke myWatsonTranslator/translator --blocking --result --param payload 'Blue skies ahead' --param translateFrom 'en' --param translateTo 'fr'
   ```
   {: pre}
 
@@ -421,29 +513,20 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
   {: screen}
 
 
-### テキストの言語の識別
+#### テキストの言語の識別
 {: #openwhisk_catalog_watson_identifylang}
 
-`/whisk.system/watson/languageId` アクションは、テキストの言語を識別します。パラメーターは次のとおりです。
+`/whisk.system/watson-translator/languageId` アクションは、テキストの言語を識別します。パラメーターは次のとおりです。
 
 
 - `username`: Watson API ユーザー名。
 - `password`: Watson API パスワード。
 - `payload`: 識別するテキスト。
 
-以下は、パッケージ・バインディングを作成してテキストの言語を識別する例です。
-
-1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
+- パッケージ・バインディングの `languageId` アクションを起動して、言語を識別します。
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
-  ```
-  {: pre}
-
-2. パッケージ・バインディングの `languageId` アクションを起動して、言語を識別します。
-
-  ```
-  wsk action invoke myWatson/languageId --blocking --result --param payload "Ciel bleu a venir"
+  wsk action invoke myWatsonTranslator/languageId --blocking --result --param payload 'Ciel bleu a venir'
   ```
   {: pre}
   ```
@@ -456,10 +539,75 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
   {: screen}
 
 
-### テキストをスピーチに変換
+### Watson Text to Speech パッケージの使用
 {: #openwhisk_catalog_watson_texttospeech}
 
-`/whisk.system/watson/textToSpeech` アクショ
+`/whisk.system/watson-textToSpeech` パッケージを利用して、テキストをスピーチに変換するための Watson API を簡単に呼び出すことができます。
+
+このパッケージには、以下のアクションが含まれています。
+
+| エンティティー | タイプ  | パラメーター | 説明 |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-textToSpeech` | パッケージ | username、password | テキストをスピーチに変換する Watson API のアクション |
+| `/whisk.system/watson-textToSpeech/textToSpeech` | アクション | payload、voice、accept、encoding、username、password | テキストの音声への変換 |
+
+**注**: パッケージ `/whisk.system/watson` は、アクション `/whisk.system/watson/textToSpeech` を含め、非推奨です。
+
+#### Bluemix での Watson Text to Speech パッケージのセットアップ
+
+Bluemix から OpenWhisk を使用している場合、Bluemix Watson サービス・インスタンスのパッケージ・バインディングは OpenWhisk が自動的に作成します。
+
+1. Bluemix [ダッシュボード](http://console.ng.Bluemix.net)で Watson Text to Speech のサービス・インスタンスを作成します。
+
+  サービス・インスタンスの名前、およびユーザーが所属している Bluemix の組織とスペースの名前を忘れないようにしてください。
+
+2. ご使用の OpenWhisk CLI が、前のステップで使用した Bluemix 組織とスペースに対応する名前空間に存在するようにします。
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  あるいは、`wsk property set --namespace` を使用して、アクセス可能な名前空間のリストから名前空間を設定することができます。
+
+3. 名前空間でパッケージを最新表示します。最新表示により、ユーザーが作成した Watson サービス・インスタンスのパッケージ・バインディングが自動的に作成されます。
+
+  ```
+wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_TextToSpeech_Credentials-1
+  ```
+  {: screen}
+
+  ```
+wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_TextToSpeec_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Bluemix 外部での Watson Text to Speech パッケージのセットアップ
+
+Bluemix で OpenWhisk を使用していない場合、または Bluemix の外部で Watson Text to Speech をセットアップしたい場合は、Watson Text to Speech サービスのパッケージ・バインディングを手動で作成する必要があります。Watson Text to Speech サービスのユーザー名とパスワードが必要になります。
+
+- Watson Speech to Text サービス用に構成されるパッケージ・バインディングを作成します。
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonTextToSpeech -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### テキストをスピーチに変換
+{: #openwhisk_catalog_watson_speechtotext}
+`/whisk.system/watson-speechToText/textToSpeech` アクショ
 ンはテキストを音声スピーチに変換します。パラメーターは次のとおりです。
 
 
@@ -471,21 +619,13 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 - `encoding`: スピーチ・バイナリー・データの
 エンコード。
 
-以下は、パッケージ・バインディングを作成してテキストをスピーチに変換する例です。
 
-1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
-
-  ```
-  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
-  ```
-  {: pre}
-
-2. パッケージ・バインディングで
+- パッケージ・バインディングで
 `textToSpeech` アクションを起動して、テキストを変換
 します。
 
   ```
-  wsk action invoke myWatson/textToSpeech --blocking --result --param payload Hey. --param voice en-US_MichaelVoice --param accept audio/wav --param encoding base64
+  wsk action invoke myWatsonTextToSpeech/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -495,11 +635,77 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
   ```
   {: screen}
 
-
-### スピーチのテキストへの変換
+### Watson Speech to Text パッケージの使用
 {: #openwhisk_catalog_watson_speechtotext}
 
-`/whisk.system/watson/speechToText` アクショ
+`/whisk.system/watson-speechToText` パッケージを利用して、スピーチをテキストに変換するための Watson API を簡単に呼び出すことができます。
+
+このパッケージには、以下のアクションが含まれています。
+
+| エンティティー | タイプ  | パラメーター | 説明 |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-speechToText` | パッケージ | username、password | スピーチをテキストに変換する Watson API のアクション |
+| `/whisk.system/watson-speechToText/speechToText` | アクション | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 音声のテキストへの変換 |
+
+**注**: パッケージ `/whisk.system/watson` は、アクション `/whisk.system/watson/speechToText` を含め、非推奨です。
+
+
+#### Bluemix での Watson Speech to Text パッケージのセットアップ
+
+Bluemix から OpenWhisk を使用している場合、Bluemix Watson サービス・インスタンスのパッケージ・バインディングは OpenWhisk が自動的に作成します。
+
+1. Bluemix [ダッシュボード](http://console.ng.Bluemix.net)で Watson Speech to Text のサービス・インスタンスを作成します。
+
+  サービス・インスタンスの名前、およびユーザーが所属している Bluemix の組織とスペースの名前を忘れないようにしてください。
+
+2. ご使用の OpenWhisk CLI が、前のステップで使用した Bluemix 組織とスペースに対応する名前空間に存在するようにします。
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  あるいは、`wsk property set --namespace` を使用して、アクセス可能な名前空間のリストから名前空間を設定することができます。
+
+3. 名前空間でパッケージを最新表示します。最新表示により、ユーザーが作成した Watson サービス・インスタンスのパッケージ・バインディングが自動的に作成されます。
+
+  ```
+wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_SpeechToText_Credentials-1
+  ```
+  {: screen}
+
+  ```
+wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_SpeechToText_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Bluemix 外部での Watson Speech to Text パッケージのセットアップ
+
+Bluemix で OpenWhisk を使用していない場合、または Bluemix の外部で Watson Speech to Text をセットアップしたい場合は、Watson Speech to Text サービスのパッケージ・バインディングを手動で作成する必要があります。Watson Speech to Text サービスのユーザー名とパスワードが必要になります。
+
+- Watson Speech to Text サービス用に構成されるパッケージ・バインディングを作成します。
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonSpeechToText -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+
+#### スピーチのテキストへの変換
+
+`/whisk.system/watson-speechToText/speechToText` アクショ
 ンは 音声スピーチをテキストに変換します。パラメーターは次のとおりです。
 
 
@@ -523,21 +729,13 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 - `word_confidence`: 単語ごとに信頼度の指標を 0 から 1 の範囲で返すかどうかを示します。
 - `X-Watson-Learning-Opt-Out`: 呼び出しのデータ収集をオプトアウトするかどうかを示します。
  
-以下は、パッケージ・バインディングを作成してスピーチをテキストに変換する例です。
 
-1. Watson の資格情報を使用してパッケージ・バインディングを作成します。
-
-  ```
-  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
-  ```
-  {: pre}
-
-2. パッケージ・バインディングで
+- パッケージ・バインディングで
 `speechToText` アクションを起動して、エンコードされ
 た音声を変換します。
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type audio/wav --param encoding base64
+  wsk action invoke myWatsonSpeechToText/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -546,7 +744,7 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
   }
   ```
   {: screen}
-  
+ 
  
 ## Slack パッケージの使用
 {: #openwhisk_catalog_slack}

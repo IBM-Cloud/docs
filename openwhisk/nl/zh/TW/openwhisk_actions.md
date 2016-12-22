@@ -398,6 +398,7 @@ wsk action create weather weather.js
   {: screen}
 
 ### 將動作包裝為 Node.js 模組
+{: #openwhisk_js_packaged_action}
 
 使用單一 JavaScript 原始檔撰寫所有動作碼的替代方案，是您可以將動作撰寫為 `npm` 套件。以具有下列檔案的目錄為例：
 

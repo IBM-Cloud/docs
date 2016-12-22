@@ -397,6 +397,7 @@ wsk action create weather weather.js
   {: screen}
 
 ### 将操作包装为 Node.js 模块
+{: #openwhisk_js_packaged_action}
 
 作为在单个 JavaScript 源文件中编写所有操作码的替代方法，可以将操作编写为 `npm` 包。例如，假设一个目录包含以下文件：
 
@@ -790,7 +791,7 @@ wsk action invoke --blocking --result example --param payload Rey
   ```
   {: screen}
   
-  要更新 Docker 操作，请运行 buildAndPush.sh 以将最新的映像上传到 Docker Hub。这将允许系统在下次运行操作的代码时，拉取新的 Docker 映像。如果没有暖容器，那么任何新调用都将使用新的 Docker 映像。但是，如果存在使用先前版本的 Docker 映像的暖容器，那么除非运行 wsk 操作更新，否则任何新调用都将继续使用该映像。这将指示系统对于任何新调用，都应该执行 docekr pull 来获取新的 Docker 映像。
+  要更新 Docker 操作，请运行 buildAndPush.sh 以将最新的映像上传到 Docker Hub。这将允许系统在下次运行操作的代码时，拉取新的 Docker 映像。如果没有运行中的容器，那么任何新调用都将使用新的 Docker 映像。但是，如果有使用前版 Docker 映像的运行中容器，那么除非运行 wsk 操作更新，否则任何新调用都将继续使用该映像。这将指示系统对于任何新调用，都应该执行 docekr pull 来获取新的 Docker 映像。
  
   ```
 ./buildAndPush.sh janesmith/blackboxdemo

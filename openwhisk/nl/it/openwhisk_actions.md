@@ -4,8 +4,8 @@
 
 copyright:
 
-  anni: 2016
-ultimo aggiornamento: "27-09-2016"
+  years: 2016
+lastupdated: "2016-09-27"
  
 
 ---
@@ -292,7 +292,7 @@ Le funzioni JavaScript eseguite in modo asincrono potrebbero dover restituire il
 
   Nota che la funzione `main` restituisce una Promessa, che indica che l'attivazione non è stata ancora completata, ma il suo completamento è previsto in futuro.
 
-  In questo caso, la funzione JavaScript `setTimeout()` attende due secondi prima di richiamare la funzione di callback. Questo rappresenta il codice asincrono e va all'interno della funzione di callback della Promessa.
+  In questo caso, la funzione JavaScript `setTimeout()` attende due secondi prima di richiamare la funzione di callback.  Questo rappresenta il codice asincrono e va all'interno della funzione di callback della Promessa.
 
   Il callback della Promessa utilizza due argomenti, resolve e reject, che sono entrambe funzioni.  La chiamata a `resolve()` soddisfa la Promessa e indica che l'attivazione è stata completata normalmente.
 
@@ -661,7 +661,7 @@ public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
 ```
 {: codeblock}
 
-Ad esempio, crea un file Java denominaro `Hello.java` con il seguente contenuto:
+Ad esempio, crea un file Java denominato `Hello.java` con il seguente contenuto:
 
 ```
 import com.google.gson.JsonObject;
@@ -687,7 +687,7 @@ jar cvf hello.jar Hello.class
 
 **Nota:** [google-gson](https://github.com/google/gson) deve essere presente nel tuo CLASSPATH Java durante la compilazione del file Java.
 
-Puoi creare un'azione OpenWhisk denominata `helloJava` da questo file JAR nel seguente modo: 
+Puoi creare un'azione OpenWhisk denominata `helloJava` da questo file JAR nel seguente modo:
 
 ```
 wsk action create helloJava hello.jar

@@ -398,6 +398,7 @@ wsk action create weather weather.js
   {: screen}
 
 ### Node.js 모듈로 조치 패키징
+{: #openwhisk_js_packaged_action}
 
 단일 JavaScript 소스 파일에 모든 조치 코드를 쓰는 것의 대안으로 `npm` 패키지로 조치를 쓸 수 있습니다. 다음 파일을 사용한 디렉토리를 예제로 고려해 보십시오. 
 

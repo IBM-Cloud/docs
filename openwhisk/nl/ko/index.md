@@ -20,6 +20,16 @@ lastupdated: "2016-09-09"
 
 {{site.data.keyword.openwhisk_short}} 작동 방법에 대한 세부사항은 [{{site.data.keyword.openwhisk_short}} 정보](./openwhisk_about.html)를 참조하십시오.
 
+브라우저 또는 CLI를 사용하여 {{site.data.keyword.openwhisk_short}} 애플리케이션을 개발할 수 있습니다.
+둘 다 애플리케이션을 개발하는 데 유사한 기능을 제공하지만, CLI가 배치와 오퍼레이션을 더 효율적으로 제어합니다.
+
+
+## 브라우저에서 개발
+{: #openwhisk_start_editor}
+
+[브라우저](https://console.{DomainName}/openwhisk/editor){: new_window}에서 {{site.data.keyword.openwhisk_short}}를 시도하여 조치를 작성하고, 트리거를 사용해 조치를 자동화하며, 퍼블릭 패키지를 탐색하십시오.
+OpenWhisk 사용자 인터페이스 둘러보기를 보려면 [자세히 보기](https://console.{DomainName}/openwhisk/learn){: new_window} 페이지를 참조하십시오.
+
 ## {{site.data.keyword.openwhisk_short}} CLI 설정
 {: #openwhisk_start_configure_cli}
 
@@ -27,10 +37,10 @@ lastupdated: "2016-09-09"
 
 
 ### HTTPS 프록시를 사용하도록 CLI 구성
+{: #openwhisk_configure_https_proxy_cli}
 
 HTTPS 프록시를 사용하도록 CLI를 설정할 수 있습니다. HTTPS 프록시를 설정하려면 `HTTPS_PROXY`라는 환경 변수를
  작성해야 합니다. 이 변수는 `{PROXY IP}:{PROXY PORT}` 형식을 사용하여 HTTPS 프록시의 주소 및 해당 포트로 설정해야 합니다. 
-
 
 CLI를 사용하여 {{site.data.keyword.openwhisk_short}}를 설정한 후 명령행에서 이를 시작할 수 있습니다. 
 

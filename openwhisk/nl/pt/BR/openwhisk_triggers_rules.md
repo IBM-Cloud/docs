@@ -181,6 +181,17 @@ ação hello será chamada com os parâmetros do evento.
   Você vê que a ação hello recebeu a carga útil do evento e retornou a sequência esperada.
 
 É possível criar várias regras que associem o mesmo acionador a diferentes ações.
-O acionador e a ação que fazem uma regra devem estar no mesmo namespace e não podem pertencer a um pacote.
-Se você desejar usar uma ação que pertença a um pacote, será possível copiar a ação em seu
-namespace. Por exemplo: `wsk action create echo --copy /whisk.system/utils/echo`.
+Acionadores e regras não podem pertencer a um pacote. No entanto, a regra pode ser associada
+com uma ação que pertença a um pacote, por exemplo:
+  ```
+  wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
+  ```
+  {: pre}
+
+Também é possível usar regras com sequências. Por exemplo, é possível criar uma sequência
+de ações `recordLocationAndHello` que é ativada pela regra `anotherRule`.
+  ```
+  wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  wsk rule create anotherRule locationUpdate recordLocationAndHello
+  ```
+  {: pre}

@@ -30,7 +30,7 @@ Aktionen können aus Aufrufen weiterer Aktionen oder aus einer definierten Folge
 ## JavaScript-Aktionen erstellen und aufrufen
 {: #openwhisk_create_action_js}
 
-In den folgenden Abschnitten werden Sie in die Arbeit mit Aktionen in JavaScript eingeführt. Sie beginnen mit dem Erstellen und Aufrufen einer einfachen Aktion. Anschließend werden Sie einer Aktion Parameter hinzufügen und diese Aktion mit Parametern aufrufen. Als Nächstes folgt das Festlegen von Standardparametern und das Aufrufen dieser Parameter. Danach erstellen Sie asynchrone Aktionen und zum Schluss arbeiten Sie mit Aktionsfolgen.
+In den folgenden Abschnitten werden Sie in die Arbeit mit Aktionen in JavaScript eingeführt. Sie beginnen mit dem Erstellen und Aufrufen einer einfachen Aktion. Anschließend werden Sie einer Aktion Parameter hinzufügen und diese Aktion mit Parametern aufrufen. Als Nächstes folgt das Festlegen von Standardparametern und das Aufrufen dieser Parameter. Danach erstellen Sie asynchrone Aktionen und zum Schluss arbeiten Sie mit Aktionssequenzen.
 
 
 ### Einfache JavaScript-Aktion erstellen und aufrufen
@@ -161,18 +161,16 @@ Beim Aufruf können Parameter an die Aktion übergeben werden.
 3.  Parameter können in der Befehlszeile explizit angegeben oder in
 einer Datei bereitgestellt werden, die die gewünschten Parameter enthält.
 
-
   Um Parameter direkt in der Befehlszeile zu übergeben, geben Sie für das
-Flag `--param` ein Schlüssel/Wert-Paar an: 
+Flag `--param` ein Schlüssel/Wert-Paar an:
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
 
   Um eine Datei zu verwenden, die Parameterinhalt enthält, erstellen Sie
-eine Datei mit den Parametern im JSON-Format.
-Anschließend muss der Dateiname an
-das Flag `param-file` übergeben werden: 
+eine Datei mit den Parametern im JSON-Format. Anschließend muss der Dateiname an
+das Flag `param-file` übergeben werden:
 
   Beispielparameterdatei namens 'parameters.json':
   ```
@@ -198,7 +196,6 @@ das Flag `param-file` übergeben werden:
   Beachten Sie die Verwendung der Option `--result`,
 damit nur das Aufrufergebnis angezeigt wird.
 
-
 ### Standardparameter festlegen
 {: #openwhisk_binding_actions}
 
@@ -212,7 +209,7 @@ Anstatt nun jedes Mal alle Parameter an eine Aktion zu übergeben, können Sie b
 `--param-file`.
 
   Um Standardparameter in der Befehlszeile explizit anzugeben, geben Sie
-für das Flag `param` ein Schlüssel/Wert-Paar an: 
+für das Flag `param` ein Schlüssel/Wert-Paar an:
 
   ```
   wsk action update hello --param place Vermont
@@ -221,8 +218,8 @@ für das Flag `param` ein Schlüssel/Wert-Paar an:
 
   Zur Übergabe von Parametern aus einer Datei muss eine Datei erstellt
 werden, die den gewünschten Inhalt im JSON-Format enthält.
-Anschließend muss der Dateiname an das Flag `-param-file`
-übergeben werden: 
+  Anschließend muss der Dateiname an das Flag `-param-file`
+übergeben werden:
 
   Beispielparameterdatei namens 'parameters.json':
   ```
@@ -416,6 +413,7 @@ Im folgenden Beispiel wird ein Yahoo Weather-Services aufgerufen, um die aktuell
   {: screen}
 
 ### Aktion als Node.js-Modul paketieren
+{: #openwhisk_js_packaged_action}
 
 Als Alternative zum Schreiben des gesamten Aktionscodes in einer einzigen JavaScript-Quellendatei können Sie eine Aktion als `npm`-Paket schreiben. Nehmen Sie als Beispiel ein Verzeichnis mit den folgenden Dateien:
 
@@ -492,7 +490,7 @@ Gehen Sie wie folgt vor, um aus diesem Paket eine OpenWhisk-Aktion zu erstellen:
 
 Zum Schluss beachten Sie, dass zwar die meisten `npm`-Pakete JavaScript-Quellen mit `npm install` installieren, andere jedoch auch Binärartefakte installieren und kompilieren. Der Upload von Archivdateien unterstützt derzeit keine binären Abhängigkeiten, sondern nur JavaScript-Abhängigkeiten. Wenn im Archiv binäre Abhängigkeiten eingeschlossen sind, können Aktionsaufrufe fehlschlagen.
 
-## Aktionsfolgen erstellen
+## Aktionssequenzen erstellen
 {: #openwhisk_create_action_sequence}
 
 Sie können eine Aktion erstellen, die eine Folge von Aktionen miteinander verkettet.
@@ -518,14 +516,14 @@ Verschiedene Dienstprogrammaktionen werden in einem Paket mit dem Namen `/whisk.
   
   Sie werden die Aktionen `split` (Aufteilen) und `sort` (Sortieren) in diesem Beispiel verwenden.
   
-2. Erstellen Sie eine Aktionsfolge, sodass das Ergebnis der einen Aktion als Argument an die nächste Aktion übergeben wird.
+2. Erstellen Sie eine Aktionssequenz, sodass das Ergebnis der einen Aktion als Argument an die nächste Aktion übergeben wird.
   
   ```
   wsk action create sequenceAction --sequence /whisk.system/utils/split,/whisk.system/utils/sort
   ```
   {: pre}
   
-  Diese Aktionsfolge konvertiert Zeilen von Text in ein Array und sortiert die Zeilen.
+  Diese Aktionssequenz konvertiert Zeilen von Text in ein Array und sortiert die Zeilen.
   
 3. Rufen Sie die Aktion auf:
   
@@ -552,7 +550,7 @@ Daher sind die Parameter, die der Aktionssequenz übergeben werden, nur für die
 Das Ergebnis der ersten Aktion in der Sequenz wird zum JSON-Eingabeobjekt für die zweite Aktion in der Sequenz usw.
 Das Objekt enthält keine Parameter, die ursprünglich an die Sequenz übergeben wurden, es sei denn, die erste Aktion enthält sie explizit in ihrem Ergebnis.
 Die Eingabeparameter für eine Aktion werden mit den Standardparametern der Aktion zusammengeführt. Erstere haben Vorrang und überschreiben alle übereinstimmenden Standardparameter.
-Weitere Informationen zum Aufrufen von Aktionsfolgen mit mehreren benannten Parametern finden Sie unter [Standardparameter festlegen](./openwhisk_actions.html#openwhisk_binding_actions).
+Weitere Informationen zum Aufrufen von Aktionssequenzen mit mehreren benannten Parametern finden Sie unter [Standardparameter festlegen](./openwhisk_actions.html#openwhisk_binding_actions).
 
 ## Python-Aktionen erstellen
 {: #openwhisk_actions_python}
@@ -660,13 +658,13 @@ Schritte zum Erstellen und Aufrufen einer einzelnen Java-Aktion sowie zum
 Damit Sie Java-Dateien kompilieren, testen und archivieren können, muss
 lokal eine
 [JDK
-8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installiert sein. 
+8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installiert sein.
 
 ### Aktion erstellen und aufrufen
 {: #openwhisk_actions_java_invoke}
 
 Eine Java-Aktion ist ein Java-Programm mit einer Methode namens
-`main`, deren exakte Signatur wie folgt lautet: 
+`main`, deren exakte Signatur wie folgt lautet:
 ```
 public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
 ```
@@ -674,7 +672,6 @@ public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
 
 Erstellen Sie beispielsweise eine Java-Datei namens
 `Hello.java` mit dem folgenden Inhalt:
-
 
 ```
 import com.google.gson.JsonObject;
@@ -693,7 +690,7 @@ public class Hello {
 
 Kompilieren Sie anschließend die Datei `Hello.java` wie
 folgt in einer Datei
-`hello.jar`: 
+`hello.jar`:
 ```
 javac Hello.java
 jar cvf hello.jar Hello.class
@@ -705,10 +702,8 @@ jar cvf hello.jar Hello.class
 Java-Klassenpfad (CLASSPATH) vorhanden sein, wenn Sie die Java-Datei
 kompilieren.
 
-
 Aus dieser JAR-Datei können Sie folgendermaßen eine OpenWhisk-Aktion
 namens `helloJava` erstellen:
-
 
 ```
 wsk action create helloJava hello.jar
@@ -864,7 +859,7 @@ In den nachfolgenden Anweisungen wird die Docker-Benutzer-ID `janesmith` und das
 ## Aktionsausgaben beobachten
 {: #openwhisk_actions_polling}
 
-{{site.data.keyword.openwhisk_short}}-Aktionen können von anderen Benutzern, als Reaktion auf verschiedene Ereignisse oder als Teil einer Aktionsfolge aufgerufen werden. In solchen Fällen kann es nützlich sein, die Aufrufe zu überwachen.
+{{site.data.keyword.openwhisk_short}}-Aktionen können von anderen Benutzern, als Reaktion auf verschiedene Ereignisse oder als Teil einer Aktionssequenz aufgerufen werden. In solchen Fällen kann es nützlich sein, die Aufrufe zu überwachen.
 
 Sie können die Ausgabe von Aktionen, wenn sie aufgerufen werden, über die {{site.data.keyword.openwhisk_short}}-CLI beobachten.
 

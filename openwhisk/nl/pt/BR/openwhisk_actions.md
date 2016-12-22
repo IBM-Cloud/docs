@@ -304,7 +304,7 @@ possível fazer isso retornando uma Promessa em sua ação.
 
   Observe que a função `main` retorna uma Promessa, que indica que a ativação não foi concluída ainda, mas espera-se que seja no futuro.
 
-  A função JavaScript `setTimeout()` nesse caso aguarda dois segundos antes de chamar a função de retorno de chamada. Isso representa o código
+  A função JavaScript `setTimeout()` nesse caso aguarda dois segundos antes de chamar a função de retorno de chamada.  Isso representa o código
 assíncrono e vai dentro da função de retorno de chamada da Promessa.
 
   O retorno de chamada da Promessa aceita dois argumentos, resolver e rejeitar, que
@@ -423,6 +423,7 @@ argumento para a função `resolve()`.
   {: screen}
 
 ### Empacotamento de uma ação como um módulo Node.js
+{: #openwhisk_js_packaged_action}
 
 Como uma alternativa para gravar todo o seu código de ação em um único arquivo de origem JavaScript, é possível gravar uma ação como um pacote `npm`. Considere como um exemplo um diretório com os seguintes arquivos:
 
