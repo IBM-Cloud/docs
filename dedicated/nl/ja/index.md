@@ -6,93 +6,95 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-11-18" 
+lastupdated: "2016-12-06" 
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-#{{site.data.keyword.Bluemix_notm}} Dedicated
+# {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #dedicated}
 
-{{site.data.keyword.Bluemix}} は、アプリケーションをビルド、実行、および管理するためのクラウド・ベースのオープン標準プラットフォームです。{{site.data.keyword.Bluemix_notm}} Dedicated を使用すれば、{{site.data.keyword.Bluemix_notm}}&mdash; Public 環境とお客様のネットワークの両方にセキュアに接続されたお客様の専用 {{site.data.keyword.BluSoftlayer}} 環境で、{{site.data.keyword.Bluemix_notm}} が持つ能力と簡潔さが得られます。{:shortdesc}
 
+{{site.data.keyword.Bluemix}} は、アプリケーションをビルド、実行、および管理するためのクラウド・ベースのオープン標準プラットフォームです。{{site.data.keyword.Bluemix_dedicated_notm}} を使用すれば、{{site.data.keyword.Bluemix_notm}}&mdash; Public 環境とお客様のネットワークの両方にセキュアに接続されたお客様の専用 SoftLayer 環境で、{{site.data.keyword.Bluemix_notm}} が持つ能力と簡潔さが得られます。{:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} のすべての専用デプロイメントには、追加コストなしで次の利点およびフィーチャーが含まれています。VPN、プライベート仮想ローカル・エリア・ネットワーク (VLAN)、ファイアウォール、ご使用の LDAP との接続性、既存のオンプレミス・データベースおよびアプリを利用する機能、 週 7 日 24 時間体制のオンサイト・セキュリティー、専用ハードウェア、および標準サポート。
 
-デフォルトでは、プライベート {{site.data.keyword.Bluemix_notm}} インスタンスへは、企業ネットワークからのみアクセス可能です。例えば、{{site.data.keyword.Bluemix_notm}} 環境にインターネットまたはモバイル・デバイスから直接アクセスできることが必要な場合は、追加のネットワーク・セキュリティー・コンポーネントが必要であり、余分なコストがかかります。
+デフォルトでは、プライベート {{site.data.keyword.Bluemix_notm}} インスタンスへは、企業ネットワークからのみアクセス可能です。例えば、{{site.data.keyword.Bluemix_notm}} 環境にインターネット、モバイル・デバイス、または専用データベースから直接アクセスできることが必要な場合は、追加のネットワーク・セキュリティー・コンポーネントが必要であり、余分なコストがかかります。
 
-{{site.data.keyword.Bluemix_notm}} (Dedicated) には、付属しているすべての {{site.data.keyword.Bluemix_notm}} ランタイムおよび 64 GB の計算リソース・メモリーが備わっています。
+{{site.data.keyword.Bluemix_dedicated_notm}} には、付属しているすべての {{site.data.keyword.Bluemix_notm}} ランタイムおよび 64 GB の計算リソース・メモリーが搭載されています。
 
 さらに、組み込まれているか、オプションで購入可能な、一連のサービスおよびコンポーネントがあります。以下の表に、組み込みのものとオプションで購入可能なものを示します。
 
-*表 1. Dedicated のサービス*
-
-| **タイプ **        | **名前**            | **説明** |      
+| **タイプ **        | **名前**            | **説明** |
 |-----------------|-------------------|-------------------|
-|組み込み | [{{site.data.keyword.Bluemix_notm}} ランタイム](/docs/cfapps/runtimes.html) | ランタイムはアプリを素早く立ち上げて実行するために使用します。マシンとオペレーティング・システムのセットアップと管理は不要です。すべての {{site.data.keyword.Bluemix_notm}} ランタイムが、{{site.data.keyword.Bluemix_notm}} Dedicated インスタンスで使用可能です。|
-|組み込み | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html) | ポリシーに基づいて、アプリケーションの計算能力を動的に増減します。このサービスを使用することで、{{site.data.keyword.Bluemix_notm}} Dedicated 環境で使用量が無制限になります。 |
+|組み込み | [{{site.data.keyword.Bluemix_notm}} ランタイム](/docs/cfapps/runtimes.html) | ランタイムはアプリを素早く立ち上げて実行するために使用します。マシンとオペレーティング・システムのセットアップと管理は不要です。すべての {{site.data.keyword.Bluemix_notm}} ランタイムが、{{site.data.keyword.Bluemix_dedicated_notm}} インスタンスで使用可能です。|
+| 組み込み | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html) | ポリシーに基づいて、アプリケーションの計算能力を動的に増減します。このサービスを使用することで、{{site.data.keyword.Bluemix_dedicated_notm}} 環境で使用量が無制限になります。 |
 |オプション | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} は、{{site.data.keyword.APIM}} と IBM StrongLoop を単一のオファリングに統合し、API とマイクロサービスを作成、実行、管理、および強化する包括的な解決策を提供します。 |
 |オプション | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。 |
-|オプション | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_notm}} Dedicated で Docker コンテナーを実行します。コンテナーは、アプリが実行のために必要とするすべてのエレメントを含む仮想ソフトウェア・オブジェクトです。コンテナーには、リソースの分離と割り振りの利点がありますが、例えば仮想マシンなどよりも、移植可能性と効率性が高まっています。ハードウェア要件については、『[{{site.data.keyword.Bluemix_notm}} Dedicated および Bluemix Local における IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)』を参照してください。|
+|オプション | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | {{site.data.keyword.Bluemix_dedicated_notm}} で Docker コンテナーを実行します。コンテナーは、アプリが実行のために必要とするすべてのエレメントを含む仮想ソフトウェア・オブジェクトです。コンテナーには、リソースの分離と割り振りの利点がありますが、例えば仮想マシンなどよりも、移植可能性と効率性が高まっています。ハードウェア要件については、『[{{site.data.keyword.Bluemix_dedicated_notm}} および Bluemix Local における IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)』を参照してください。|
 | オプション | [{{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) | {{site.data.keyword.contdelivery_short}} Dedicated を使用して、ビルド、単体テスト、デプロイメントなどを自動化します。機能豊富な Web ベース IDE により、コードの編集およびプッシュを行います。開発、デプロイメント、および運用の作業をサポートするツール統合を実現するツールチェーンを作成します。 |
-|オプション | [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/dashDB.html) | dashDB を使用して、地理空間情報などの特殊タイプを含む、リレーショナル・データを保管します。次に、そのデータを SQL、または予測分析とデータ・マイニング、R による分析、および Geospatial Analytics などの拡張組み込み分析を使用して分析します。 |
-|オプション | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
-| オプション | [Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html) | {{site.data.keyword.ghe_long}} は、IBM Cloud でホストされて完全に管理されるバージョンの GitHub Enterprise であり、開発者が愛好するソーシャル・エクスペリエンスを提供します。このサービスは、現在は {{site.data.keyword.Bluemix_notm}} Dedicated 環境でのみ使用可能です。 |
+| オプション | [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/dashDB.html) | IBM {{site.data.keyword.dashdbshort}} for Analytics は、データウェアハウスおよび分析のワークロード用に最適化された完全管理の SQL クラウド・データベース・サービスです。IBM {{site.data.keyword.dashdbshort}} for Transactions は、汎用、Web アプリ、およびトランザクションのワークロード用に最適化された完全管理の SQL クラウド・データベース・サービスです。 |
+| オプション | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | このサービスは、アプリで分散キャッシュ・シナリオをサポートするメモリー内データ・グリッドを提供します。50 GB のメモリー内キャッシュが含まれます。 |
+| オプション | [Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html) | {{site.data.keyword.ghe_long}} は、IBM Cloud でホストされて完全に管理されるバージョンの GitHub Enterprise であり、開発者が愛好するソーシャル・エクスペリエンスを提供します。このサービスは、現在は {{site.data.keyword.Bluemix_dedicated_notm}} 環境でのみ使用可能です。 |
 | オプション (ベータ版) | [ロギング](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースで Cloud Foundry アプリのログおよび Kibana で検索可能なログとダッシュボードを提供します。 |
-|オプション | [{{site.data.keyword.messagehub}}](/docs/services/MessageHub/index.html#messagehub) | {{site.data.keyword.messagehub}} は、配布されたスケーラブルで高スループットのメッセージ・バスであり、オンプレミス・テクノロジーとオフプレミス・テクノロジーを統合します。{{site.data.keyword.messagehub}} は、Apache Kafka に基づいています。これは、高速かつスケーラブルで永続的なリアルタイムのメッセージング・エンジンです。 |
-|オプション | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} は、通知を iOS および Android デバイスに送信するために使用することができるサービスです。通知は、すべてのアプリケーション・ユーザー、またはタグを使用して特定のユーザーとデバイスのセットを対象にすることができます。デバイス、タグ、およびサブスクリプションを管理することができます。SDK (Software Development Kit) および　Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用して、さらにクライアント・アプリケーションを開発することも可能です。 |
+| オプション | [{{site.data.keyword.messagehub}}](/docs/services/MessageHub/index.html#messagehub) | {{site.data.keyword.messagehub}} は、配布されたスケーラブルで高スループットのメッセージ・バスであり、オンプレミス・テクノロジーとオフプレミス・テクノロジーを統合します。{{site.data.keyword.messagehub}} は、Apache Kafka に基づいています。これは、高速かつスケーラブルで永続的なリアルタイムのメッセージング・エンジンです。 |
+|オプション | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} は、通知を iOS および Android デバイスに送信するために使用することができるサービスです。通知は、すべてのアプリケーション・ユーザー、またはタグを使用して特定のユーザーとデバイスのセットを対象にすることができます。デバイス、タグ、およびサブスクリプションを管理することができます。SDK (Software Development Kit) および　Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用して、さらにクライアント・アプリケーションを開発することも可能です。|
 |オプション | [{{site.data.keyword.SecureGateway}}](/docs/services/SecureGateway/secure_gateway.html) | {{site.data.keyword.SecureGateway}} サービスは、{{site.data.keyword.Bluemix_notm}} アプリケーションをオンプレミスまたはクラウド内のリモート・ロケーションに接続するための安全な方法を提供します。  |
 |オプション | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 冗長性を高めるために、{{site.data.keyword.sescashort}} は、キャッシュに保管されたセッションのレプリカを提供します。これにより、ブラウンアウトまたは障害が発生した場合、クライアント・アプリケーションはキャッシュ内のセッションへのアクセスを維持できます。サービスでは、Web アプリケーションとモバイル・アプリケーションのセッション・キャッシュ・シナリオがサポートされます。 |
-|オプション | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | このサービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイが収集したデータと通信して、それらのデータを取り込むことができます。基本オファリングでは、100,000 個の同時接続されたデバイスまたはアプリケーションと 1.6 TB のデータ交換の容量を備えた専用環境内で {{site.data.keyword.iot_full}} の専用バージョンを実行することができます。 |
+| オプション | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | このサービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイが収集したデータと通信して、それらのデータを取り込むことができます。基本オファリングでは、100,000 個の同時接続されたデバイスまたはアプリケーションと 1.6 TB のデータ交換の容量を備えた専用環境内で {{site.data.keyword.iot_short}} の専用バージョンを実行することができます。 |
+{: caption="Table 1. Dedicated Services" caption-side="top"}
+{: #table01}
+
+
 
 リソースおよびサービスの容量を拡大および拡張するために購入できる、オプションのコンポーネントが用意されています。販売チームに連絡して、これらのコンポーネントを購入できます。営業担当員への連絡について詳しくは、[「お問い合わせ」](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)にアクセスしてください。サービスのプランを増やすには、カタログのサービス・タイルからプランを選択します。
 
-*表 2. 購入用のオプション・コンポーネント: サービス*
-
-| **名前**            | **説明** |      
+| **名前**            | **説明** |
 |-------------------|-------------------|
 |Dedicated {{site.data.keyword.apiconnect_short}} Professional 500 万回の API 呼び出し | 部門別の API プロジェクトを対象にした、1 月当たり 500 万回の API 呼び出し容量を持つ専用環境内で {{site.data.keyword.apiconnect_short}} の専用バージョンを実行できる環境。 |
 |Dedicated {{site.data.keyword.apiconnect_short}} Professional 10 万回の API 呼び出し容量の増加 | 1 月当たり 10 万回の API 呼び出し容量を追加する {{site.data.keyword.apiconnect_short}} Professional 環境の拡張。 |
 |Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 2500 万回の API 呼び出し | 企業全体の API プロジェクトを対象にした、1 月当たり 2500 万回の API 呼び出し容量を持つ専用環境内で {{site.data.keyword.apiconnect_short}} の専用バージョンを実行できる環境。 |
 |Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 10 万回の API 呼び出し容量の増加 | 1 月当たり 10 万回の API 呼び出し容量を追加する {{site.data.keyword.apiconnect_short}} Enterprise 環境の拡張。 |
 |Dedicated {{site.data.keyword.cloudant}} の 1.6 TB の容量増加 | 設計容量が 1.6 テラバイトの専用環境内での {{site.data.keyword.cloudantfull}} の専用バージョンの実行が組み込まれます。  |
+|{{site.data.keyword.contdelivery_short}} Dedicated インスタンス | 専用環境内で実行されるプライベート・バージョンの {{site.data.keyword.contdelivery_short}}。容量は、{{site.data.keyword.contdelivery_short}} Dedicated 許可ユーザーのライセンスで決まります。 |
+|{{site.data.keyword.contdelivery_short}} Dedicated 許可ユーザー | 指定された {{site.data.keyword.contdelivery_short}} Dedicated 環境へのアクセスと使用を許可ユーザーに認可します。{{site.data.keyword.contdelivery_short}} サービス・インスタンスを含む {{site.data.keyword.Bluemix_notm}} 組織に属するすべてのユーザーが許可されなければなりません。 |
 |Dedicated {{site.data.keyword.datacshort}} および {{site.data.keyword.sescashort}} の 50 GB の容量増加 | 最大 50 GB の累積容量まで「{{site.data.keyword.datacshort}}」および「{{site.data.keyword.sescashort}}」のインスタンスをデプロイして実行することができる環境。 |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 64.1 | 64 GB RAM、16 vCPU 搭載の専用サーバー上のサービス・インスタンスごとに 1 つのデータベース。標準圧縮に基づき、最大 1 TB のプリロード・データに対して推奨。  |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.4 | 256 GB RAM、32 コアを搭載の専用ベアメタル・サーバー上のサービス・インスタンスごとに 1 つのデータベース。標準圧縮に基づき、最大 4 TB のプリロード・データに対して推奨。 |
 |Dedicated {{site.data.keyword.dashdbshort}} Enterprise 256.12  | 256 GB RAM、32 コアを搭載の専用ベアメタル・サーバー上のサービス・インスタンスごとに 1 つのデータベース。標準圧縮に基づき、最大 12 TB のプリロード・データに対して推奨。これは、データ量が比較的多く、照会をメモリー内の速度で実行する必要のない環境に適したストレージ高密度プランです。 |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions 2.8.500 | データおよびログ用に 8 GB RAM および 500 GB のスペースを備えた、オンライン・トランザクション処理 (OLTP) ワークロードをサポートする専用インスタンス。 |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions 12.128.1400 | データおよびログ用に 128 GB RAM および 1.4 TB SSD ストレージを備えた、オンライン・トランザクション処理 (OLTP) ワークロードをサポートする専用インスタンス。 |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 2.8.500 | データおよびログ用に 8 GB RAM および 500 GB のスペースを備えた、オンライン・トランザクション処理 (OLTP) ワークロードをサポートする専用インスタンスであり、高可用性のための追加スタンバイ・サーバーを含みます。 |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | データおよびログ用に 128 GB RAM および 1.4 TB SSD ストレージを備えた、オンライン・トランザクション処理 (OLTP) ワークロードをサポートする専用インスタンスであり、高可用性のための追加スタンバイ・サーバーを含みます。 |
-|{{site.data.keyword.Bluemix_notm}} Dedicated コミュニティー・サービス  | コミュニティー・サービスごとに、最大合計 50 インスタンスまでコミュニティー・サービスをデプロイして実行できる環境。  |
-|{{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.cloudant}} クラスター・インスタンス | このオプションのコンポーネントには、お客様がインフラストラクチャーの提供を担当する 3 ノードのクラスターが含まれ、特定のニーズに基づいて、ストレージおよび計算キャパシティーを決定できます。{{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。 |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.messagehub}} | 1 区画当たり最大 10 GB のパブリッシュおよびサブスクライブ・メッセージングを提供する環境。メッセージは最大 24 時間保持され、消費用に使用可能です。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions 2.8.500 | データおよびログ用に 8 GB RAM および 500 GB のスペースを備えた、オンライン・トランザクション処理 (OLTP) ワークロードをサポートする専用インスタンス。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions 12.128.1400 | データおよびログ用に 128 GB RAM および 1.4 TB SSD ストレージを備えた、オンライン・トランザクション処理 (OLTP) ワークロードをサポートする専用インスタンス。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 2.8.500 | データおよびログ用に 8 GB RAM および 500 GB のスペースを備えた、オンライン・トランザクション処理 (OLTP) ワークロードをサポートする専用インスタンスであり、高可用性のための追加スタンバイ・サーバーを含みます。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | データおよびログ用に 128 GB RAM および 1.4 TB SSD ストレージを備えた、オンライン・トランザクション処理 (OLTP) ワークロードをサポートする専用インスタンスであり、高可用性のための追加スタンバイ・サーバーを含みます。 |
+|{{site.data.keyword.Bluemix_dedicated_notm}} コミュニティー・サービス  | コミュニティー・サービスごとに、最大合計 50 インスタンスまでコミュニティー・サービスをデプロイして実行できる環境。  |
+|{{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.cloudant}} クラスター・インスタンス | このオプションのコンポーネントには、お客様がインフラストラクチャーの提供を担当する 3 ノードのクラスターが含まれ、特定のニーズに基づいて、ストレージおよび計算キャパシティーを決定できます。{{site.data.keyword.cloudant}} は、常に稼働している完全管理 NoSQL JSON データ層へのアクセスを提供します。このサービスは CouchDB と互換性があり、モバイル・アプリケーション・モデルおよび Web アプリケーション・モデル用の、簡単に使用できる HTTP インターフェースでアクセスできます。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | 1 区画当たり最大 10 GB のパブリッシュおよびサブスクライブ・メッセージングを提供する環境。メッセージは最大 24 時間保持され、消費用に使用可能です。 |
 |IBM Bluemix Dedicated {{site.data.keyword.mobilepushshort}} | 1 秒当たり 300 個の要求を受け入れる能力を持つ {{site.data.keyword.mobilepushshort}} インスタンスをデプロイして実行できる環境。 |
 |{{site.data.keyword.iot_short}} Dedicated の増分式の拡張 | 環境の拡張。拡張される環境では、100,000 個の同時接続されたデバイスまたはアプリケーションと 0.5 TB のデータ交換の容量を備えた専用環境内で {{site.data.keyword.iot_short}} の専用バージョンを実行できます。 |
+{: caption="Table 2. Optional services components for purchase" caption-side="top"}
+{: #table02}
 
-*表 3. 購入用のオプション・コンポーネント: プラットフォーム・アドオン*
 
-| **名前**            | **説明** |      
+
+| **名前**            | **説明** |
 |-------------------|-------------------|
 |専用ランタイムの 16 GB の容量増加  | ランタイム容量を 16 GB 分追加する、ランタイム環境の拡張。 |
 |Dedicated Direct Link 1 Gbps 容量 | 最大 1 Gbps のデータ転送用に設計され、適切に配置された {{site.data.keyword.BluSoftlayer}} ネットワーク・ポイントに直接接続される、専用ネットワーク・リンク。 |
 |Dedicated Direct Link 10 Gbps 容量 | 最大 10 Gbps のデータ転送用に設計され、適切に配置された {{site.data.keyword.BluSoftlayer}} ネットワーク・ポイントに直接接続される、専用ネットワーク・リンク。 |
 |IBM Bluemix Dedicated ハードウェア・ファイアウォール - 高可用性 | 専用環境内の同じ VLAN 上の単一、複数、またはすべてのサーバーを保護するように構成された、冗長 1 Gbps ハードウェア・ファイアウォール。 |
+{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: #table03}
 
-**注**: {{site.data.keyword.Bluemix_notm}} Dedicated のコンポーネントは、構成された特定の容量 (ギガバイト数や、1 秒当たりのトランザクション数など) で示される場合があります。どんな構成でも、クラウド・サービスで実際に使用される容量は、さまざまな要因によって異なるため、実際に使用される容量は、構成された容量より増減する可能性があります。
-
-
+**注**: {{site.data.keyword.Bluemix_dedicated_notm}} のコンポーネントは、構成された特定の容量 (ギガバイト数や、1 秒当たりのトランザクション数など) で示される場合があります。どんな構成でも、クラウド・サービスで実際に使用される容量は、さまざまな要因によって異なるため、実際に使用される容量は、構成された容量より増減する可能性があります。
 
 ### シンジケートされたカタログ
 {: #catalogdedicated}
 
-{{site.data.keyword.Bluemix_notm}} Dedicated には、パブリック・デプロイメント、専用デプロイメント、およびローカル・デプロイメントすべてにわたって承認済みサービスを集めたプライベート・カタログが含まれています。{{site.data.keyword.Bluemix_notm}} カタログを通して、お客様独自のサービスを公開したり、それらのサービスへのアクセスを管理したりすることもできます。データ・プライバシーとセキュリティー基準に基づいて、ビジネスの要件に合致したパブリック・サービスを決定できます。 
+{{site.data.keyword.Bluemix_dedicated_notm}} には、パブリック・デプロイメント、専用デプロイメント、およびローカル・デプロイメントすべてにわたって承認済みサービスを集めたプライベート・カタログが含まれています。{{site.data.keyword.Bluemix_notm}} カタログを通して、お客様独自のサービスを公開したり、それらのサービスへのアクセスを管理したりすることもできます。データ・プライバシーとセキュリティー基準に基づいて、ビジネスの要件に合致したパブリック・サービスを決定できます。
 
-専用環境用にサービスのプライベート・インスタンスを保有している場合、カタログ内でサービス名と共に「専用」というタグが示されます。同様に、カスタム・サービスである場合 (つまり、サービス・ブローカーを使用して作成した場合)、サービス名と共に「カスタム」と表示されます。「専用」というタグも「カスタム」というタグも付いていない、リスト中の他のサービスはすべて、{{site.data.keyword.Bluemix_notm}} Public からシンジケーションを使用して利用可能です。シンジケートされたサービスは、パブリック・サービスとプライベート・サービスからなるハイブリッド・アプリケーションを作成する機能を提供します。 
-
-*表 4. {{site.data.keyword.Bluemix_notm}} Public (地域別)* からのシンジケーションに利用可能なサービス
+専用環境用にサービスのプライベート・インスタンスを保有している場合、カタログ内でサービス名と共に「Dedicated」というタグが示されます。同様に、カスタム・サービスである場合 (つまり、サービス・ブローカーを使用して作成した場合)、サービス名と共に「カスタム」と表示されます。「専用」というタグも「カスタム」というタグも付いていない、リスト中の他のサービスはすべて、{{site.data.keyword.Bluemix_notm}} Public からシンジケーションを使用して利用可能です。シンジケートされたサービスは、パブリック・サービスとプライベート・サービスからなるハイブリッド・アプリケーションを作成する機能を提供します。
 
 |サービス	|米国南部地域で利用可能	|ヨーロッパ英国地域で利用可能 |オーストラリア、シドニー地域で利用可能|
 |:----------|:------------------------------|:------------------|:------------------|
@@ -145,27 +147,62 @@ lastupdated: "2016-11-18"
 |{{site.data.keyword.iot_short}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.weather_short}}		|はい		|はい		|はい|
 |{{site.data.keyword.workloadscheduler}}	|はい		|はい		|はい |
+{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
+{: #table04}
 
 **注**: サード・パーティー・サービスは表に含まれていません。サード・パーティー・サービス・オプションについては、専用カタログを確認してください。
 
-## {{site.data.keyword.Bluemix_notm}} Dedicated アーキテクチャー
+
+
+## {{site.data.keyword.Bluemix_dedicated_notm}} アーキテクチャー
 {: #dedicatedarch}
 
-{{site.data.keyword.Bluemix_notm}} Dedicated は、{{site.data.keyword.BluSoftlayer}} に基づいて構築されているため、最高のパフォーマンスを誇るクラウド・インフラストラクチャーを使用できます。各データ・センターは 1 週間に 7 日、1 日 24 時間のセキュリティー、および厳格な管理が施されています。お客様および IBM は、VPN トンネルおよび専用 VLAN を介して {{site.data.keyword.Bluemix_notm}} Dedicated インスタンスにアクセスします。
+{{site.data.keyword.Bluemix_dedicated_notm}} は、世界中のどの [{{site.data.keyword.IBM_notm}} SoftLayer データ・センター](http://www.softlayer.com/data-centers){: new_window}にもデプロイできます。{{site.data.keyword.IBM_notm}} SoftLayer は、最高レベルの性能を示すクラウド・インフラストラクチャーを提供します。各データ・センターは 1 週間に 7 日、1 日 24 時間のセキュリティー、および厳格な管理が施されています。
 
-{{site.data.keyword.Bluemix_notm}} Dedicated は、VPN または直接のネットワーク接続によってご使用のネットワーク上に置かれます。
-シングル・テナントのハードウェアのセットアップは、世界中のどの [{{site.data.keyword.BluSoftlayer}} データ・センター](http://www.softlayer.com/data-centers){: new_window}でも行うことができます。専用プラットフォームと専用サービスの管理は {{site.data.keyword.IBM_notm}} が行うので、ユーザーはカスタム・アプリの作成に集中することができます。
-また、{{site.data.keyword.IBM_notm}} は、ユーザーが選択した保
-守期間中に専用インスタンスのすべての保守を実行します。
+{{site.data.keyword.Bluemix_dedicated_notm}} の各デプロイメントは、固有プライベート・ネットワーク内の {{site.data.keyword.IBM_notm}} SoftLayer 専用ハードウェア上の単一エンタープライズ専用です。インフラストラクチャー、運用、および物理的セキュリティーの観点から、{{site.data.keyword.Bluemix_dedicated_notm}} 環境のセキュリティー標準はパブリック {{site.data.keyword.Bluemix_notm}} のセキュリティー標準と同じです。ただし、専用 {{site.data.keyword.Bluemix_notm}} に対する開発者のアクセスは LDAP ポリシーによって制御されます。{{site.data.keyword.Bluemix_notm}} チームは、ご使用の環境の設定時にこのポリシーを構成することができます。専用環境内で、ユーザーの役割および許可を管理できます。詳しくは、『[ユーザーおよび許可の管理](/docs/admin/index.html#oc_useradmin)』を参照してください。以下の図は、デフォルト {{site.data.keyword.Bluemix_dedicated_notm}} デプロイメントの論理アーキテクチャーを示したものです。
 
-![{{site.data.keyword.Bluemix_notm}} Dedicated](images/dedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
+![{{site.data.keyword.Bluemix_dedicated_notm}}](images/bm_dedicated_arch.png "{{site.data.keyword.Bluemix_dedicated_notm}} デフォルト・アーキテクチャー")
 
-*図 1. {{site.data.keyword.Bluemix_notm}} Dedicated の詳細図*
+図 1. {{site.data.keyword.Bluemix_dedicated_notm}} デフォルト・アーキテクチャーの詳細図
+{: #figure01}
 
-インフラストラクチャー、運用、および物理的セキュリティーの観点から、{{site.data.keyword.Bluemix_notm}} Dedicated 環境のセキュリティー標準は Public {{site.data.keyword.Bluemix_notm}} のセキュリティー標準と同じです。ただし、専用 {{site.data.keyword.Bluemix_notm}} に対する開発者のアクセスは LDAP ポリシーによって制御されます。{{site.data.keyword.Bluemix_notm}} チームは、ご使用の環境の設定時にこのポリシーを構成することができます。専用環境内で、ユーザーの役割および許可を管理できます。詳しくは、『[ユーザーおよび許可の管理](/docs/admin/index.html#oc_useradmin)』を参照してください。
+上記のアーキテクチャー図に示された重要なアーキテクチャー・コンポーネントには、以下があります。
+
+<dl>
+<dt>{{site.data.keyword.IBM_notm}} Cloud</dt>
+<dd>
+{{site.data.keyword.IBM_notm}} Cloud は、{{site.data.keyword.BluSoftlayer}} でテナントに対応します。これらのテナントの中には、いくつかのネットワーキング環境があります。重要なネットワーキング環境は、以下のものです。
+<ul>
+<li>{{site.data.keyword.Bluemix_dedicated_notm}}</li>
+<li>{{site.data.keyword.Bluemix_notm}} Public</li>
+<li>{{site.data.keyword.IBM_notm}} 運用</li>
+</ul>
+</dd>
+<dt>{{site.data.keyword.Bluemix_dedicated_notm}}</dt>
+<dd>
+これには最小で Cloud Foundry コンポーネントといくつかの専用アプリケーション・サービスが含まれます。{{site.data.keyword.Bluemix_notm}} では、Cloud Foundry と {{site.data.keyword.containerlong}} ベースの計算環境が提供されます。エンタープライズには、これらの計算環境の一方または両方を構成できます。<br>
+エンタープライズで専用アプリケーション・サービスを追加する場合もあります。<br>
+追加できるサービスおよび計算機能については、[表 2](#table02) を参照してください。
+</dd>
+<dt>{{site.data.keyword.Bluemix_notm}} Public</dt>
+<dd>
+{{site.data.keyword.Bluemix_dedicated_notm}} には、{{site.data.keyword.Bluemix_notm}} Public 領域へのアウトバウンド接続が含まれる場合があります。これにより、専用カタログへのパブリック・サービスのシンジケーションが行われます。{{site.data.keyword.Bluemix_notm}} Public サービスのシンジケーションにより、開発者が簡単に、エンタープライズの {{site.data.keyword.Bluemix_dedicated_notm}} でホストされるアプリケーションを構築し、また、{{site.data.keyword.Bluemix_notm}} Public で稼働しているサービスにアクセスすることができます。{{site.data.keyword.Bluemix_notm}} Public からシンジケートできるサービスのリストは、[『シンジケートされたカタログ』のセクションの表 4](#catalogdedicated) に示されています。
+</dd>
+<dt>{{site.data.keyword.IBM_notm}} 運用</dt>
+<dd>
+専用プラットフォームと専用サービスの管理、モニター、保守は {{site.data.keyword.IBM_notm}} が行うため、お客様は革新的なアプリケーションの構築に集中することができます。{{site.data.keyword.IBM_notm}} 運用サポート・サービス (OSS) チームは、{{site.data.keyword.IBM_notm}} の運用ネットワークから VPN トンネル接続を使用して、運用を実行します。</dd>
+<dt>エンタープライズ</dt>
+<dd>
+エンタープライズ・ネットワーク環境には、{{site.data.keyword.Bluemix_dedicated_notm}} へのセキュアでプライベートな双方向のネットワーク・リンクがある場合があります。これにより、{{site.data.keyword.Bluemix_dedicated_notm}} でホストされたアプリケーションが、データ・ソースやエンタープライズ・サービスなど、エンタープライズ内のサービスおよびリソースにアクセスすることができます。また、このネットワーク・リンクにより、{{site.data.keyword.Bluemix_dedicated_notm}} がエンタープライズの開発者および管理者の認証に LDAP を使用することも可能になります。<br>
+<br>
+{{site.data.keyword.Bluemix_dedicated_notm}} からエンタープライズ・ネットワークへのデフォルト接続では、仮想プライベート・ネットワーク (VPN) を使用します。{{site.data.keyword.Bluemix_dedicated_notm}} では、高可用性のために専用 1 Gbps Vyatta の VPN 終端が構成されています。
+<br>
+[図 1]{#figure01} で示された {{site.data.keyword.Bluemix_dedicated_notm}} のデフォルト・アーキテクチャーでは、インターネットから直接のインバウンド・ネットワーク・トラフィックはありません。{{site.data.keyword.Bluemix_dedicated_notm}} でホストされているアプリケーションへのインターネット・アクセスを、エンタープライズが許可したい場合は、エンタープライズ・ネットワークを通してそのアクセスが構成される必要があります。さらに、必要であれば、インターネットからの直接のインバウンド・ネットワーク・トラフィックを許可するように {{site.data.keyword.Bluemix_dedicated_notm}} を設計することも可能です。
+</dd>
+</dl>
 
 
-##{{site.data.keyword.Bluemix_notm}} Dedicated のセットアップ
+## {{site.data.keyword.Bluemix_notm}} Dedicated のセットアップ
 {: #setupdedicated}
 
 {{site.data.keyword.Bluemix_notm}} Dedicated は、{{site.data.keyword.Bluemix_notm}} Public オファリングの専用バージョンを提供するように設計されています。{{site.data.keyword.Bluemix_notm}} サービスおよびランタイムを使用して、IBM でホストされている {{site.data.keyword.BluSoftlayer}} アカウントでコンピューティング・ニーズをサポートすることができます。
@@ -269,8 +306,6 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 - 企業ネットワークと {{site.data.keyword.Bluemix_notm}} 操作との間のネットワーク接続を定義して確立します。
 - 管理チームの役割を特定して割り当てます。
 
-*表 5. 方向付けフェーズのタスク*
-
 | **タスク** | **タスクの詳細** | **責任を持つ側** |
 |----------|------------------|-----------------------|
 |コンプライアンス規格の設定 | 環境に必要な政府、業界、および専有企業の標準を特定します。 | お客様 |
@@ -297,6 +332,8 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 |物理的インフラストラクチャーのレビュー | データ・センターを保護するセキュリティー制御の脅威および審査のためのソリューション・コンポーネントをホストする物理的プレミスをレビューします。 | お客様 |
 |モニタリング・ソフトウェアの検査 | エスカレーションおよび問題判別の計画で定義したモニターおよび管理コンポーネントを検査します。 | お客様 |
 |OS の検査 | オペレーティング・システム・イメージがコンプライアンス規格に合っていることを確認するための検査を行います。IBM が OS イメージにアクセスできるようにします。 | IBM とお客様の共同の責任 |
+{: caption="Table 5. Inception phase tasks" caption-side="top"}
+
 
 次に、進行フェーズについて説明します。進行フェーズは、お客様と IBM Cloud との進行中の協力関係を記述します。このフェーズの主な目標には、以下のものがあります。
 
@@ -304,7 +341,6 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 - 保守およびプラットフォームの改善を検討します。
 - 問題解決および根本原因分析のアクティビティーを調整します。
 
-*表 6. 進行フェーズのタスク*
 
 | **タスク** | **タスクの詳細** | **責任を持つ側** |
 |----------|------------------|-----------------------|
@@ -322,6 +358,7 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 |状況レポート作成、監査調整、およびコンプライアンス会議  | 状況レポート作成、外部監査調整、およびコンプライアンス・レビュー状況会議での説明を実施します。 | IBM |
 |雇用とビジネス・ニーズの確認 | 四半期ごとに、顧客環境にアクセスできる IBM 担当者について、雇用の確認およびビジネス・ニーズが継続していることの確認を行います。 | IBM |
 |セキュリティー脆弱性の解決 | プラットフォームで報告されたセキュリティー脆弱性を解決します。 | IBM |
+{: caption="Table 6. Progression phase tasks" caption-side="top"}
 
 最終の完了ステージは、お客様と IBM {{site.data.keyword.Bluemix_notm}} 間の関係の終了を表します。このフェーズの主なタスクには、以下のものがあります。
 
@@ -329,14 +366,14 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 * すべてのネットワーク接続の削除
 * インフラストラクチャーのリサイクル
 
-*表 7. 完了フェーズのタスク*
-
 | **タスク** | **タスクの詳細** | **責任を持つ側** |
 |----------|------------------|-----------------------|
 |金銭的合意の終了 | 金銭的合意の契約の終了について話し合い、終了に合意します。 | IBM とお客様の共同の責任 |
 |環境の廃止 | 環境へのアクセスおよび環境の資格情報をシャットダウンします。 | IBM とお客様の共同の責任 |
 |お客様とのネットワーク接続の削除 | IBM とお客様環境との間のネットワーク接続を削除します。 | IBM とお客様の共同の責任 |
 |インフラストラクチャーのリサイクル | お客様の環境は {{site.data.keyword.BluSoftlayer}} 定義のプロセスに基づいてリサイクルされます。 | IBM |
+{: caption="Table 7. Completion phase tasks" caption-side="top"}
+
 
 ##専用インスタンスの保守
 {: #maintaindedicated}
@@ -389,9 +426,9 @@ IBM サポートおよび運用チームに知らせる必要のある問題を�
 
 通知を、Web フックをサポートする Web サービスと統合したい場合は、[通知およびイベント・サブスクリプション](/docs/admin/index.html#oc_eventsubscription)で、通知機能の拡張方法についての説明を参照してください。
 
-![インシデント対応プロセス](/docs/local/images/incidentresponseprocess.png "インシデント対応プロセス")
+![インシデント対応プロセス](images/incidentresponseprocess.png "インシデント対応プロセス")
 
-*図 2. インシデント対応プロセス*
+図 2. インシデント対応プロセス
 
 問題に応じて、お客様または IBM が問題を修正するか、または協力して問題を修正します。インシデントに関する質問がある場合、または、問題を解決するために IBM 担当員の支援を必要とする場合、サポート・チケットをオープンすることができます。サポートへの連絡方法について詳しくは、[サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support-local)を参照してください。
 
