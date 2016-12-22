@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-
+年: 2016
+最終更新: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # {{site.data.keyword.composeForRethinkDB}} の概説
 {: #getting-started-with-compose-for-rethinkdb}
-
-最終更新日: 2016 年 9 月 20 日
-{: .last-updated}
 
 {{site.data.keyword.composeForRethinkDB}} は、統合管理および探索コンソールを備えた、JSON 文書ベースの分散データベースを提供します。RethinkDB では ReQL 照会言語を使用します。この照会言語は、関数のチェーニングをベースに構築され、Java、JavaScript、Python、Ruby のクライアント・ライブラリーで使用できます。ReQL を使用すると、クラスターのノード間での分散結合および副照会といった、RethinkDB のサーバー・サイド機能を使用できます。また RethinkDB は、読み取り照会パフォーマンスを向上させる 2 次索引もサポートします。RethinkDB の最強機能 changefeeds を利用すると、多数の ReQL 照会をリアルタイム・フィードに変換できます。
 {:shortdesc}
@@ -44,6 +41,7 @@ copyright:
 `deployment_id`|Compose 内で作成された、サービスの内部 ID。
 `db_type`|サービスによって提供されるデータベースのタイプ。この場合は、`rethink`。
 `name`|データベース・デプロイメント名。
+{: caption="Table 1. {{site.data.keyword.composeForRethinkDB}} credentials" caption-side="top"}
 
 # 関連リンク
 {: #rellinks}

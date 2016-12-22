@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-
+年: 2016
+最終更新: "2016-12-09"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -20,9 +20,6 @@ copyright:
 
 # {{site.data.keyword.composeForPostgreSQL}} の概説
 {: #getting-started-with-compose-for-postgreSQL}
-
-最終更新日: 2016 年 9 月 20 日
-{: .last-updated}
 
 {{site.data.keyword.composeForPostgreSQL}} は、高度にカスタマイズ可能な、強力なオープン・ソースのオブジェクト関係データベースです。Postgres を使用すると、迅速で拡張が容易な開発が可能になります。C/C++、Perl、Python、TCL/TK、Delphi/Kylix、VB、PHP、ASP、Java など、使い慣れた言語で開発できます。JSON をサポートする機能が豊富なエンタープライズ・データベースを使用できるので、SQL と NoSQL の両領域のメリットが得られます。
 {:shortdesc}
@@ -51,6 +48,7 @@ Compose for PostgreSQL の使用を開始するには、以下の手順を実行
 `deployment_id`|Compose 内で作成された、サービスの内部 ID。
 `db_type`|サービスによって提供されるデータベースのタイプ。この場合は、`postgresql`。
 `name`|データベース・デプロイメント名。
+{: caption="Table 1. {{site.data.keyword.composeForPostgreSQL}} credentials" caption-side="top"}
 
 # 関連リンク
 {: #rellinks}

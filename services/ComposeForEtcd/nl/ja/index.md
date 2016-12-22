@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-
+年: 2016
+最終更新: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # {{site.data.keyword.composeForEtcd}} の概説
 {: #getting-started-with-compose-for-etcd}
-
-最終更新日: 2016 年 9 月 20 日
-{: .last-updated}
 
 etcd は、分散サーバー構成管理のためにサーバー・クラスターの調整と管理に必要な、常に正確なデータを保持するキー/値ストアです。etcd は、RAFT コンセンサス・アルゴリズムを使用して、クラスター内のデータの整合性を保証します。データに対する操作の実行順序を強制することで、クラスター内のすべてのノードにおいて同じ方法で同じ結果が得られるようにします。{{site.data.keyword.composeForEtcd_full}} は、etcd に保管された構成データの自動バックアップを追加します。直感的な管理インターフェースで、デプロイメントのモニター、スケーリング、管理を簡単に行えます。
 {:shortdesc}
@@ -43,6 +40,8 @@ etcd は、分散サーバー構成管理のためにサーバー・クラスタ
 `db_type`|サービスによって提供されるデータベースのタイプ。この場合は、`etcd`。
 `name`|データベース・デプロイメント名。
 ``uri``|サービスに接続するときに使用する URI。``uri` には、スキーマ (``amqps:)、管理者ユーザー名とパスワード、サーバーのホスト名、接続先のポート番号、`vhost` 名が含まれます。
+
+{: caption="Table 1. {{site.data.keyword.composeForEtcd}} credentials" caption-side="top"}
 
 # 関連リンク
 {: #rellinks}

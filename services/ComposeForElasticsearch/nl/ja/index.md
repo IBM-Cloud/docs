@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-
+年: 2016
+最終更新: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Compose for Elasticsearch の概説
 {: #getting-started-with-compose-for-elasticsearch}
-
-最終更新日: 2016 年 9 月 20 日
-{: .last-updated}
 
 {{site.data.keyword.composeForElasticsearch_full}} は、フルテキスト検索エンジンの能力と JSON 文書データベースの索引作成の強みを組み合わせたものです。この組み合わせにより、大量のデータの多様な分析を可能にする、強力なツールを生み出します。Elasticsearch を利用することで、検索時の一致度をスコア化できるため、データ・セットを探索していて見逃しかねない類似一致やニアミスを検出できるようになります。
 {:shortdesc}
@@ -46,6 +43,7 @@ copyright:
 `deployment_id`|Compose 内で作成された、サービスの内部 ID。
 `db_type`|サービスによって提供されるデータベースのタイプ。この場合は、`elastic_search`。
 `name`|データベース・デプロイメント名。
+{: caption="Table 1. {{site.data.keyword.composeForElasticsearch}} credentials" caption-side="top"}
 
 **注:** 2 つの `haproxy` ポータルは、Elasticsearch クラスターへのアクセスを提供します。クラスターに接続するために `uri` と `uri_direct_1` の両方を使用できます。アプリケーションで、接続障害の対応管理のために `uri` と `uri_direct_1` を切り替えます。
 

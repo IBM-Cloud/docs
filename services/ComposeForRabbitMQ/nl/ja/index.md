@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-
+年: 2016
+最終更新: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # {{site.data.keyword.composeForRabbitMQ}} の概説
 {: #getting-started-with-compose-for-rabbitmq}
-
-最終更新日: 2016 年 9 月 20 日
-{: .last-updated}
 
 RabbitMQ は、アプリケーションとデータベースの間のメッセージを非同期的に処理し、データ層とアプリケーション層の分離を可能にします。開発者は RabbitMQ を利用すると、カスタマイズ可能な永続性レベル、送達設定、確認済みパブリケーションを指定してメッセージをルーティングし、追跡し、キューに入れることができます。{{site.data.keyword.composeForRabbitMQ_full}} を使用すると、デプロイメントのモニタリング、ボタン・クリックによるスケーリング、ユーザー・セットアップ、ログ・ファイル・アクセスなどといった多数の管理機能を備えた、使いやすい管理インターフェースにアクセスできます。
 {:shortdesc}
@@ -49,6 +46,7 @@ RabbitMQ は、アプリケーションとデータベースの間のメッセ�
 `deployment_id`|Compose 内で作成された、サービスの内部 ID。
 `db_type`|サービスによって提供されるデータベースのタイプ。この場合は、`rabbitmq`。
 `name`|データベース・デプロイメント名。
+{: caption="Table 1. {{site.data.keyword.composeForRabbitMQ}} credentials" caption-side="top"}
 
 # 関連リンク
 {: #rellinks}
