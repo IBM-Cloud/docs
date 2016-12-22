@@ -218,7 +218,7 @@
 				"name": "Business Rules",
 				"href": "services/rules/index.html"
 			}, {
-				"name": "資料快取",
+				"name": "Data Cache",
 				"href": "services/DataCache/index.html"
 			}, {
 				"name": "Message Hub",
@@ -270,7 +270,7 @@
 			"img": "homepage/images/iot.svg",
 			"href": "services/internetofthings.html",
 			"links": [{
-				"name": "Internet of Things 平台",
+				"name": "Internet of Things Platform",
 				"href": "services/IoT/index.html"
 			}, {
 				"name": "IoT Real-Time Insights",
@@ -293,7 +293,7 @@
 		}]
 		
 	}, {
-		"id": "資源",
+		"id": "Resources",
 		"descriptionTitle": "資源",
 		"items": [{
 			"title": "為何要用 Bluemix？",

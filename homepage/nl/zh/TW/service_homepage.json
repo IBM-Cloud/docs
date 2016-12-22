@@ -23,7 +23,7 @@
     "category_id": "compute"
   }, {
     "id": "container",
-    "title": "IBM Containers",
+    "title": "IBM Bluemix Container Service",
     "href": "containers/container_index.html",
     "category_id": "compute"
   }, {
