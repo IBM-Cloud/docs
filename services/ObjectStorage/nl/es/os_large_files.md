@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-11-04"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -12,13 +12,14 @@ lastupdated: "2016-11-04"
 {:pre: .pre}
 
 
-# Trabajo con archivos de gran tamaño {: #large-files}
+# Almacenamiento de objetos grandes {: #large-files}
 
-
-La carga de objetos está limitada a un tamaño máximo de 5 GB en una carga única. Sin embargo, puede seguir cargando objetos mayores de 5 GB si los segmenta en objetos más pequeños. Una vez que se hayan cargado los objetos segmentados, también será necesario un archivo de manifiesto para concatenar los segmentos en el objeto original. Hay dos formas de hacerlo: Dynamic Large Objects (DLO) y Static Large Objects (SLO).
+Las cargas están limitadas a un tamaño máximo de 5 GB para una carga única. Sin embargo, puede segmentar objetos grandes en partes más pequeñas y utilizar un archivo de manifiesto para concatenar los segmentos. Siempre que cada segmento tenga 5 GB o menos durante el proceso de carga, no habrá un tamaño máximo para el objeto una vez que se concatene.
 {: shortdesc}
 
-### Dynamic Large Objects: {: #dynamic}
+Hay dos formas de realizar la carga de objetos grandes: Dynamic Large Objects (DLO) y Static Large Objects (SLO).
+
+## Dynamic Large Objects: {: #dynamic}
 
 Hay dos formas de manejar DLO:
   * Hacer que el cliente de Swift lo maneje todo automáticamente
@@ -29,7 +30,6 @@ Hay dos formas de manejar DLO:
 El cliente de Swift utiliza el parámetro `-segment-size` para descomponer el objeto en piezas más pequeñas. El cliente crea un contenedor nuevo con el nombre del contenedor en el que desea cargar los archivos y añade un sufijo con el número de segmento (`<nombre_contenedor>_segmentos`). Los segmentos se cargan en paralelo. Una vez que se hayan cargado todos los segmentos, se descargarán como un objeto concatenado en un archivo de manifiesto con el nombre de archivo original.
 
 1. Una vez que se haya registrado en {{site.data.keyword.Bluemix_notm}} y esté listo para cargar, ejecute el mandato siguiente para segmentar el archivo.
-
     ```
     swift upload <nombre_contenedor> <nombre_archivo> --segment-size <tamaño_en_bytes>
     ```
@@ -64,7 +64,7 @@ Usted mismo puede segmentar los objetos para que tengan 5 GB o menos y, a contin
     {: pre}
 
 
-### Static Large Objects {: #static}
+## Static Large Objects {: #static}
 
 Los Static Large Objects utilizan los segmentos y un archivo de manifiesto, pero le dan un mayor control. Con SLO, los segmentos no tienen que estar en el mismo contenedor; cada segmento se puede almacenar en cualquier contenedor y se les puede dar cualquier nombre. Sin embargo, los segmentos deben tener al menos 1 MB. No es necesario que establezca una cabecera para el archivo de manifiesto, aunque la cabecera “X-Static-Large-Object” se añade automáticamente y se establece en true una vez que se haya cargado un manifiesto correcto.
 {: shortdesc}
@@ -77,22 +77,22 @@ El archivo de manifiesto es un documento JSON que proporciona detalles de los se
     <th> Descripción </th>
   </tr>
   <tr>
-    <td> path </td>
+    <td> <i>vía de acceso</i> </td>
     <td> La ubicación y el nombre del segmento. Se especifica como container_name/object_name. </td>
   </tr>
   <tr>
-    <td> etag </td>
+    <td> <i> etag </i> </td>
     <td> Proporcionado por la solicitud PUT cuando se carga el objeto. También puede encontrarlo haciendo un HEAD al objeto. </td>
   </tr>
   <tr>
-    <td> size_bytes </td>
+    <td> <i> size_bytes </i> </td>
     <td> El tamaño del objeto en bytes. </td>
   </tr>
 </table>
 
 *Tabla 1: Atributos JSON en el archivo de manifiesto en el orden de concatenación*
 
-Puede cargar archivos grandes completando los pasos siguientes:
+#### Para cargar archivos grandes
 
 1. Ejecute el siguiente mandato para cargar los segmentos. El regulador para descargas se inicia una vez que se haya cargado el décimo segmento, y aumenta el tiempo de carga considerablemente.  Por este motivo, se recomienda que el tamaño del segmento no sea inferior al tamaño del archivo dividido por 10.
 
@@ -139,6 +139,8 @@ Puede cargar archivos grandes completando los pasos siguientes:
     curl -O -X GET -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
+
+
 
 A continuación se muestran algunos mandatos que puede necesitar al trabajar con Static Large Objects.
 

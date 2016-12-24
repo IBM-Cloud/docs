@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-11-04"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -63,6 +63,6 @@ at java.lang.reflect.Method.invoke(Unknown Source)
 * {{site.data.keyword.objectstorageshort}} に関する技術的な質問がある場合は、[Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window} に質問を投稿し、質問に「ibm-bluemix」と「object-storage」のタグを付けてください。
 * サービスと使用開始の手順に関する質問の場合は、[IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window} フォーラムを使用してください。「objectstorage」と「bluemix」のタグを含めてください。
 
-フォーラムの使用について詳しくは、[「ヘルプの取得」](https://console.ng.bluemix.net/docs/support/index.html#getting-help){: new_window}を参照してください。
+フォーラムの使用について詳しくは、[「ヘルプの取得」](/docs/support/index.html#getting-help)を参照してください。
 
-IBM サポート・チケットのオープン、またはサポート・レベルとチケットの重大度に関する情報は、[「サポートへのお問い合わせ」](https://console.ng.bluemix.net/docs/support/index.html#contacting-support){: new_window}を参照してください。
+IBM サポート・チケットのオープン、またはサポート・レベルとチケットの重大度に関する情報は、[「サポートへのお問い合わせ」](/docs/support/index.html#contacting-support)を参照してください。

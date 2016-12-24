@@ -29,7 +29,7 @@ Alcuni casi di utilizzo comuni per il servizio {{site.data.keyword.objectstorage
 
 1.	Esegui il provisioning della tua istanza del servizio dal catalogo {{site.data.keyword.Bluemix_notm}}. Configura la tua istanza e fai clic su **Crea**. e inizialmente scegli l'opzione **Lascia senza binding** per il campo **Applicazione**, puoi ancora eseguire il bind dell'istanza del servizio alla tua applicazione {{site.data.keyword.Bluemix_notm}} successivamente.
 2. Nel tuo dashboard dell'istanza del servizio, crea un contenitore per iniziare ad archiviare gli oggetti.
-3. ggiungi un file al tuo contenitore dal menu a discesa **Azioni**. 
+3. ggiungi un file al tuo contenitore dal menu a discesa **Azioni**.
 4. Per verificare l'accesso ai tuoi oggetti, fai clic su **Scarica** e rivedi i file.
 5. Quando sei pronto per collegare la tua istanza a un'applicazione, configura le tue credenziali del servizio e [esegui il bind del servizio](/docs/services/reqnsi.html#add_service).
 

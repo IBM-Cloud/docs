@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-11-04"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -12,13 +12,14 @@ lastupdated: "2016-11-04"
 {:pre: .pre}
 
 
-# Utilizzo di grandi file {: #large-files}
+# Archiviazione di oggetti grandi {: #large-files}
 
-
-Il caricamento degli oggetti è limitato a una dimensione massima di 5 GB per singolo caricamento. Tuttavia, puoi ancora caricare oggetti più grandi di 5GB se li frazioni in oggetti più piccoli. Come gli oggetti frazionati sono stati caricati, ti serve anche un file manifest per concatenare i segmenti nell'oggetto originale. Esistono due modi per farlo: DLO (Dynamic Large Objects) e SLO (Static Large Objects).
+I caricamenti sono limitati a una dimensione massima di 5 GB per singolo caricamento. Tuttavia, puoi suddividere gli oggetti grandi in parti più piccole e utilizzare il file manifest per concatenare i segmenti. Se ogni segmento è più piccolo di 5 GB durante il processo di caricamento, non esiste una dimensione massima per il tuo oggetto concatenato.
 {: shortdesc}
 
-### DLO (Dynamic Large Objects): {: #dynamic}
+Esistono due modi per caricare oggetti grandi: DLO (Dynamic Large Objects) e SLO (Static Large Objects). 
+
+## DLO (Dynamic Large Objects): {: #dynamic}
 
 Esistono due modi per gestire DLO:
   * Lasciare al client Swift gestire tutto automaticamente
@@ -29,7 +30,6 @@ Esistono due modi per gestire DLO:
 Il client Swift utilizza il parametro `-segment-size` per dividere il tuo oggetto in parti più piccole. Il client crea un nuovo contenitore con il nome del contenitore in cui desideri caricare i file e aggiunge un suffisso con il numero di segmento (`<container_name>_segments`). I segmenti vengono caricati in parallelo. Dopo che sono stati caricati tutti i segmenti, vengono scaricati come un oggetto concatenato in un file manifest con il nome del file originale.
 
 1. Dopo aver eseguito l'accesso a {{site.data.keyword.Bluemix_notm}} ed essere pronto per il caricamento, esegui il seguente comando per frazionare il tuo file.
-
     ```
     swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     ```
@@ -37,7 +37,7 @@ Il client Swift utilizza il parametro `-segment-size` per dividere il tuo oggett
 
 #### Utilizzo dell'API Swift per gestire DLO (Dynamic Large Objects)
 
-Puoi personalmente frazionare gli oggetti in modo che siano di 5GB o meno e quindi caricarli tramite l'API Swift. È importante che durante il caricamento per prima cosa carichi tutti i segmenti prima di caricare il manifest. Se l'oggetto viene scaricato prima che sia finito il caricamento di tutti i segmenti, l'oggetto scaricato non sarà congruente. Puoi caricare file grandi completando la seguente procedura.
+Puoi personalmente frazionare gli oggetti in modo che siano di 5 GB o meno e quindi caricarli tramite l'API Swift È importante che durante il caricamento per prima cosa carichi tutti i segmenti prima di caricare il manifest. Se l'oggetto viene scaricato prima che sia finito il caricamento di tutti i segmenti, l'oggetto scaricato non sarà congruente. Puoi caricare file grandi completando la seguente procedura.
 
 1. Ordina i segmenti per nome nell'ordine in cui dovrebbero essere concatenati per formare l'oggetto originale.
 2. Carica i tuoi segmenti in un contenitore separato dal contenitore che ospita il file manifest. Limita in modo che i caricamenti si avviino dopo che il decimo segmento è stato caricato e incrementa il tempo di caricamento sensibilmente.  Per questo motivo, è raccomandato che la dimensione del segmento sia non più piccola della dimensione del file divisa per 10.
@@ -64,7 +64,7 @@ Puoi personalmente frazionare gli oggetti in modo che siano di 5GB o meno e quin
     {: pre}
 
 
-### SLO (Static Large Objects) {: #static}
+## SLO (Static Large Objects) {: #static}
 
 SLO (Static Large Objects) utilizza i segmenti e un file manifest, ma non ti consente ulteriore controllo. Con SLO, i segmenti non devono essere nello stesso contenitore; ogni segmento può essere archiviato in un qualsiasi contenitore e può avere un nome qualsiasi. Tuttavia, i segmenti devono essere di almeno 1 MB. Non ti viene richiesto di impostare un'intestazione per il file manifest, anche se l'intestazione “X-Static-Large-Object” viene aggiunta automaticamente e impostata su true dopo che è stato caricato un manifest correttamente.
 {: shortdesc}
@@ -77,22 +77,22 @@ Il file manifest è un documento JSON che fornisce i dettagli sui segmenti e dev
     <th> Descrizione </th>
   </tr>
   <tr>
-    <td> path </td>
+    <td> <i> path </i> </td>
     <td> L'ubicazione e il nome del segmento. Specificati come container_name/object_name. </td>
   </tr>
   <tr>
-    <td> etag </td>
+    <td> <i> etag </i> </td>
     <td> Fornita dalla richiesta PUT quando l'oggetto viene caricato. Puoi anche trovarla eseguendo un HEAD all'oggetto. </td>
   </tr>
   <tr>
-    <td> size_bytes </td>
+    <td> <i> size_bytes </i> </td>
     <td> La dimensione dell'oggetto in byte. </td>
   </tr>
 </table>
 
 *Tabella 1: gli attributi JSON nel file manifest nell'ordine di concatenazione *
 
-Puoi caricare file grandi completando la seguente procedura:
+#### Per caricare file grandi
 
 1. Esegui il seguente comando per caricare i segmenti. Limita in modo che i caricamenti si avviino dopo che il decimo segmento è stato caricato e incrementa il tempo di caricamento sensibilmente.  Per questo motivo, è raccomandato che la dimensione del segmento sia non più piccola della dimensione del file divisa per 10.
 
@@ -139,6 +139,8 @@ Puoi caricare file grandi completando la seguente procedura:
     curl -O -X GET -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
+
+
 
 Questi sono alcuni comandi di cui potresti aver bisogno quando utilizzi SLO (Static Large Objects).
 

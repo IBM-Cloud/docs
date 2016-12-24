@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-11-04"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -12,16 +12,15 @@ lastupdated: "2016-11-04"
 {:pre: .pre}
 
 
-# Trabalhando com arquivos grandes {: #large-files}
+# Armazenando objetos grandes {: #large-files}
 
-
-O upload de objetos é limitado a um tamanho máximo de 5 GB em um único upload. No
-entanto, ainda será possível fazer upload de objetos maiores que 5 GB se segmentá-los em
-objetos menores. Após o upload dos objetos segmentados, um arquivo manifest também será
-necessário para concatenar os segmentos no objeto original. Há duas maneiras de fazer isso: Objetos Grandes Dinâmicos (DLO) e Objetos Grandes Estáticos (SLO).
+Os uploads são limitados a um tamanho máximo de 5 GB para um único upload. No entanto, é possível segmentar objetos maiores em partes menores e usar um arquivo manifest para concatenar os segmentos. Contanto que cada segmento tenha 5 GB ou menos durante o processo de upload, não há tamanho máximo para seu objeto após ele ser concatenado.
 {: shortdesc}
 
-### Objetos grandes dinâmicos: {: #dynamic}
+Há duas maneiras de fazer upload de objetos grandes: Dynamic Large Objects (DLO) e Static Large Objects (SLO).
+
+
+## Objetos grandes dinâmicos: {: #dynamic}
 
 Há duas maneiras de manipular DLO:
   * Ter o cliente Swift manipulando tudo automaticamente
@@ -39,7 +38,6 @@ arquivo original.
 
 1. Depois de ter efetuado login no {{site.data.keyword.Bluemix_notm}} e
 estar pronto para o upload, execute o comando a seguir para segmentar seu arquivo.
-
     ```
     swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     ```
@@ -47,8 +45,7 @@ estar pronto para o upload, execute o comando a seguir para segmentar seu arquiv
 
 #### Usando a API Swift para manipular Objetos grandes dinâmicos
 
-Você mesmo pode segmentar os objetos para que eles tenham 5 GB ou menos e, em
-seguida, fazer upload deles por meio da API Swift. Ao fazer upload, é importante que seja
+É possível segmentar os objetos para que eles tenham 5 GB ou menos e, em seguida, fazer upload deles por meio da API do Swift. Ao fazer upload, é importante que seja
 feito primeiro o upload de todos os segmentos antes de fazer o do manifest. Se o objeto
 for transferido por download antes de todos os segmentos terem concluído o upload, o
 objeto transferido por download será inconsistente. É possível fazer upload de arquivos
@@ -90,7 +87,7 @@ excluirá os segmentos.
     {: pre}
 
 
-### Objetos grandes estáticos {: #static}
+## Objetos grandes estáticos {: #static}
 
 Objetos grandes estáticos usam segmentos e um arquivo manifest, mas permitem mais
 controle. Com SLO, os segmentos não precisam estar no mesmo contêiner; cada segmento
@@ -100,8 +97,7 @@ segmentos devem ter pelo menos 1 MB. Você não é obrigado a configurar um cabe
 
 O arquivo manifest é um documento JSON que fornece detalhes dos segmentos e
 deve ser transferido por upload depois que todos os segmentos foram transferidos por
-upload. Os dados fornecidos para cada segmento no manifest são comparados com os
-metadados dos segmentos reais. Se algo não corresponder, o manifest não será transferido
+upload. Os dados fornecidos para cada segmento no manifest são comparados com os metadados dos segmentos reais. Se algo não corresponder, o manifest não será transferido
 por upload.
 
 <table>
@@ -110,22 +106,22 @@ por upload.
     <th> Descrição </th>
   </tr>
   <tr>
-    <td> path </td>
+    <td> <i>path</i> </td>
     <td> O local e o nome do segmento. Especificado como container_name/object_name. </td>
   </tr>
   <tr>
-    <td> etag </td>
+    <td> <i> etag </i> </td>
     <td> Fornecido pela solicitação PUT quando o objeto é transferido por upload. É possível também localizá-lo executando um HEAD para o objeto. </td>
   </tr>
   <tr>
-    <td> size_bytes </td>
+    <td> <i> size_bytes </i> </td>
     <td> O tamanho do objeto, em bytes. </td>
   </tr>
 </table>
 
 *Tabela 1: Atributos JSON no arquivo manifest na ordem de concatenação*
 
-É possível fazer upload de arquivos grandes concluindo as etapas a seguir:
+#### Para fazer upload de arquivos grandes
 
 1. Execute o comando a seguir para fazer upload dos segmentos. O regulador para uploads inicia após o décimo segmento ter
 sido transferido por upload e aumenta o tempo de upload consideravelmente.  Por esse
@@ -177,6 +173,8 @@ seguir:
     curl -O -X GET -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
+
+
 
 Aqui estão alguns comandos que podem ser necessários ao trabalhar com Objetos grandes estáticos.
 

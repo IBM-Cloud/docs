@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-11-04"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -66,7 +66,7 @@ inserisci la tua domanda in [Stack Overflow](http://stackoverflow.com/search?q=o
 e contrassegnala con le  tag "ibm-bluemix" e "object-storage".
 * Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window}. Includi le tag "objectstorage" e "bluemix".
 
-Consulta [Come ottenere supporto](https://console.ng.bluemix.net/docs/support/index.html#getting-help){: new_window} per ulteriori dettagli sull'utilizzo dei forum.
+Consulta [Come ottenere supporto](/docs/support/index.html#getting-help) per ulteriori dettagli sull'utilizzo dei forum.
 
 Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta
-[Come contattare il supporto](https://console.ng.bluemix.net/docs/support/index.html#contacting-support){: new_window}.
+[Come contattare il supporto](/docs/support/index.html#contacting-support).

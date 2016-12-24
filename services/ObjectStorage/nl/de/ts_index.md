@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-11-04"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -63,6 +63,6 @@ Wenn Sie in Foren eine Frage stellen, versehen Sie Ihre Frage mit einem Tag, sod
 * Wenn Sie technische Fragen zu {{site.data.keyword.objectstorageshort}} haben, stellen Sie Ihre Frage auf [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window} und versehen Sie sie mit den Tags "ibm-bluemix" und "object-storage".
 * Bei Fragen zum Service sowie zum Abruf von Einführungsanweisungen wenden Sie sich an das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window}. Versehen Sie Ihre Anfrage mit den Tags "objectstorage" und "bluemix".
 
-Unter [Hilfe anfordern](https://console.ng.bluemix.net/docs/support/index.html#getting-help){: new_window} finden Sie weitere Informationen zur Nutzung der Foren.
+Unter [Hilfe anfordern](/docs/support/index.html#getting-help) finden Sie weitere Informationen zur Nutzung der Foren.
 
-Informationen zum Öffnen eines IBM Support-Tickets oder zu den Supportebenen und Ticket-Prioritätsstufen finden Sie unter [Support kontaktieren](https://console.ng.bluemix.net/docs/support/index.html#contacting-support){: new_window}.
+Informationen zum Öffnen eines IBM Support-Tickets oder zu den Supportebenen und Ticket-Prioritätsstufen finden Sie unter [Support kontaktieren](/docs/support/index.html#contacting-support).

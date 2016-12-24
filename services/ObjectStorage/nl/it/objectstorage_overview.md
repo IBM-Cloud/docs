@@ -34,6 +34,6 @@ lastupdated: "2016-11-14"
 
 ![Come {{site.data.keyword.objectstorageshort}} funziona è stato scritto in precedenza, qui viene illustrato in un diagramma.](images/OS_howitworks.png)
 
-Figura 1. Come {{site.data.keyword.Bluemix_notm}} Pubblico {{site.data.keyword.objectstorageshort}} funziona 
+Figura 1. Come {{site.data.keyword.Bluemix_notm}} Pubblico {{site.data.keyword.objectstorageshort}} funziona
 
 **Attenzione**: la crittografia lato provider non è fornita. È responsabilità dell'applicazione client crittografare i dati prima del loro caricamento. La crittografia a livello del disco non è al momento disponibile per {{site.data.keyword.Bluemix_notm}} Pubblico {{site.data.keyword.objectstorageshort}}.

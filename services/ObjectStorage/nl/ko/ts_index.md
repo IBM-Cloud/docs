@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-11-04"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -60,9 +60,9 @@ at java.lang.reflect.Method.invoke(Unknown Source)
 
 포럼을 통해 질문하는 경우 {{site.data.keyword.Bluemix_notm}} 개발 팀이 볼 수 있도록 질문에 태그를 지정하십시오.
 
-* {{site.data.keyword.objectstorageshort}}에 대한 기술적인 질문이 있는 경우, [스택 오버플로우](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window}에 질문을 게시하고 "ibm-bluemix" 및 "object-storage"를 사용하여 질문을 태그하십시오.
+* {{site.data.keyword.objectstorageshort}}에 대한 기술적인 질문이 있는 경우, [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window}에 질문을 게시하고 "ibm-bluemix" 및 "object-storage"를 사용하여 질문을 태그하십시오.
 * 서비스 및 시작하기 지시사항에 대한 질문은 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window} 포럼을 사용하십시오. "objectstorage" 태그와 "bluemix" 태그를 포함하십시오. 
 
-포럼 사용에 대한 세부사항은 [도움 받기](https://console.ng.bluemix.net/docs/support/index.html#getting-help){: new_window}를 참조하십시오.
+포럼 사용에 대한 세부사항은 [도움 받기](/docs/support/index.html#getting-help)를 참조하십시오.
 
-IBM 지원 티켓 열기 또는 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 문의](https://console.ng.bluemix.net/docs/support/index.html#contacting-support){: new_window}를 참조하십시오.
+IBM 지원 티켓 열기 또는 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 문의](/docs/support/index.html#contacting-support)를 참조하십시오.

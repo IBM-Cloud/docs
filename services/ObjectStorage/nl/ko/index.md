@@ -45,7 +45,7 @@ lastupdated: "2016-11-14"
 
 ## SDK 
 {: #sdk}
-* [OpenStack SDK(Software Development Kits)](https://wiki.openstack.org/wiki/SDKs){: new_window}
+* [OpenStack Software Development Kits (SDK)](https://wiki.openstack.org/wiki/SDKs){: new_window}
 
 ## 튜토리얼 및 샘플 
 {: #samples}

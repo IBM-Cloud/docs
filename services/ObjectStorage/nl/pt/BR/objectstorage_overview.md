@@ -20,10 +20,7 @@ rapidamente acessíveis mesmo entre grandes quantidades de dados.
 ## Como o {{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} funciona {: #public}
 
 O {{site.data.keyword.objectstorageshort}} público tem duas rotas separadas
-que um usuário pode seguir ao provisionar uma conta. E possível iniciar dentro de sua
-própria rede privada ou acessar o {{site.data.keyword.objectstorageshort}} por
-meio de um app {{site.data.keyword.Bluemix_notm}}. Administradores e
-desenvolvedores podem armazenar e acessar objetos, conforme mostrado no diagrama a seguir.
+que um usuário pode seguir ao provisionar uma conta. É possível iniciar dentro de sua própria rede privada ou acessar o {{site.data.keyword.objectstorageshort}} por meio de um app {{site.data.keyword.Bluemix_notm}}. Os administradores e os desenvolvedores podem armazenar e acessar objetos conforme mostrado no diagrama a seguir.
 
 <dl>
   <dt><dfn> App {{site.data.keyword.Bluemix_notm}} </dfn></dt>
