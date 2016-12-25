@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-12-05"
+lastupdated: "2016-12-18"
 
 ---
 {:new_window: target="_blank"}
@@ -14,9 +14,7 @@ lastupdated: "2016-12-05"
 # Enabling Google authentication for iOS apps (Swift SDK)
 {: #google-auth-ios}
 
-Use Google Sign-In to authenticate users on your {{site.data.keyword.amafull}} iOS Swift app. The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves the functionality provided by the existing Mobile Client Access Objective-C SDK.
-
-**Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK.
+Use Google Sign-In to authenticate users on your {{site.data.keyword.amafull}} iOS Swift app.
 
 
 ## Before you begin

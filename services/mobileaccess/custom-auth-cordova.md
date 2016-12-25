@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-22"
+lastupdated: "2016-12-19"
 
 ---
 
@@ -22,6 +22,7 @@ Instrument your Cordova application to use custom authentication and {{site.data
 * Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`, `United Kingdom`, or `Sydney`. Exact syntax of the corresponding SDK constants are given in the code examples.
 
 For more information, see the following information:
+
  * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html). This shows you how to set up the {{site.data.keyword.amashort}} service for custom authentication. Here you define the **Realm** value.
  * [Setting up Cordova SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html). Information on setting  up the Cordova client app.
  * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html). How to authenticate users with a custom identity provider.
@@ -180,7 +181,7 @@ Register your Authorization Manager according to your version of Xcode.
 ```
 {: codeblock}
 
-Note: Replace `your_module_name` with the module name of your project, for example, if your module name is `Cordova` then it should be `#import "Cordova-Swift.h"`. To find the module name go to **Build Settings > Packagin` > Product Module Name**.
+Note: For the correct Swift header file name, replace `your_module_name` with the module name of your project, for example, if your module name is `Cordova` then it should be `#import "Cordova-Swift.h"`. To find the module name go to **Build Settings > Packagin` > Product Module Name**.
 
 **Note:** Replace your `tenantId` with your tenant id found in **Mobile Options** button on the {{site.data.keyword.amashort}} service dashboard.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-18"
 
 ---
 {:screen:  .screen}
@@ -54,5 +54,4 @@ The {{site.data.keyword.amashort}} web application request flow is similar to th
 
 * [Enabling Google authentication for Android apps](google-auth-android.html)
 * [Enabling Google authentication for iOS apps (Swift SDK)](google-auth-ios-swift-sdk.html)
-* [Enabling Google authentication for iOS apps (Objective-C SDK)](google-auth-ios.html)
 * [Enabling Google authentication for Cordova apps](google-auth-cordova.html)

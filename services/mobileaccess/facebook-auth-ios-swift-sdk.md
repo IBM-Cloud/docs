@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-12-05"
+lastupdated: "2016-12-18"
 
 ---
 {:new_window: target="_blank"}
@@ -21,6 +21,7 @@ To use Facebook as an identity provider in your {{site.data.keyword.amafull}} iO
 {: #before-you-begin}
 
 You must have
+
 * An instance of an {{site.data.keyword.amafull}} service and {{site.data.keyword.Bluemix_notm}} application. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
 * The URL of your back-end application (**App Route**). You will need this values for sending requests to the protected endpoints of your back-end application.
 * Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
@@ -30,8 +31,6 @@ You must have
 * A Facebook application on the [Facebook for Developers](https://developers.facebook.com) website.
 
 **Important:** You do not need to separately install the Facebook SDK (`com.facebook.FacebookSdk`). The Facebook SDK  installs automatically with the {{site.data.keyword.amashort}} `BMSFacebookAuthentication` pod. You can skip the **Add the Facebook SDK to your Xcode Project** step when you add or configure your app on the Facebook for Developers website.
-
-**Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK.
 
 ## Configuring your Facebook Application for the iOS Platform
 {: #facebook-auth-ios-config}

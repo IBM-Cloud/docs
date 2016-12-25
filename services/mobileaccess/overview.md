@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-06"
+lastupdated: "2016-12-15"
 
 ---
 
@@ -20,14 +20,19 @@ You can use the {{site.data.keyword.amashort}} service to protect Node.js and Li
 {: #components}
 
 * **{{site.data.keyword.amashort}} dashboard**: Configure various authentication types
+
 * **{{site.data.keyword.amashort}} client SDK**: Instrument mobile applications to use {{site.data.keyword.amashort}}  functionality. Supported platforms are: iOS 8+, Android 4+, Cordova and Web applications.
+
 * **{{site.data.keyword.amashort}} server SDK**: Protect resources that are hosted on {{site.data.keyword.Bluemix_notm}}. Currently, supported runtimes are Node.js and Liberty for Java&trade;.
 
 ## Authentication types
 {: #authtypes}
 You can use the following types of authentication in your mobile app:
+
 * **Facebook**: Use Facebook as an identity provider. Your users log in to the mobile or Web app with their Facebook credentials.
+
 * **Google**: Use Google as an identity provider. Your users log in to the mobile or Web app with their Google+ credentials.
+
 * **Custom**: Create your own identity provider. You fully control what kind of information is gathered and validated.
 
 ## Architecture overview
@@ -36,13 +41,21 @@ You can use the following types of authentication in your mobile app:
 ![Architecture overview diagram](images/mca-overview.jpg)
 
 * Protect your cloud resources (Node.js applications) with {{site.data.keyword.amashort}} server SDK.
+
 * Use the `Request` class provided by the {{site.data.keyword.amashort}} client SDK to communicate with your protected cloud resources.
+
 * The {{site.data.keyword.amashort}} server SDK detects an unauthorized request and returns HTTP 401 authorization challenge.
+
 * The {{site.data.keyword.amashort}} client SDK detects HTTP 401 Authorization challenge and automatically starts the authentication process with the {{site.data.keyword.amashort}}  service.
+
 * Facebook, Google, or Custom authentification is attempted.
+
 * After successful authentication, {{site.data.keyword.amashort}} returns an authorization token.
+
 * The {{site.data.keyword.amashort}} client SDK automatically adds the authorization token to the original request, and re-sends the request to the cloud resource.
+
 * The {{site.data.keyword.amashort}}  server SDK extracts the access token from the request and validates it with the {{site.data.keyword.amashort}} service.
+
 * Access is granted.  The response is returned to the mobile application.
 
 ## Request flow
