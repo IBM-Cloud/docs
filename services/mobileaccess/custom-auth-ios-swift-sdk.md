@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-12-19"
 
 ---
 
@@ -12,9 +12,8 @@ lastupdated: "2016-10-27"
 # Configuring custom authentication for your {{site.data.keyword.amashort}} iOS (Swift SDK) app
 {: #custom-ios}
 
-Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amafull}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.  The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves on the functionality provided by the existing Mobile Client Access Objective-C SDK.
+Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amafull}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.  
 
-**Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK.
 
 ## Before you begin
 {: #before-you-begin}

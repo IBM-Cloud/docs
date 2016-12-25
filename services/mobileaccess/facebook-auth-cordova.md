@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-24"
+lastupdated: "2016-12-18"
 
 ---
 
@@ -136,7 +136,7 @@ FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListene
 ## Configuring the iOS platform
 {: #facebook-auth-cordova-ios}
 
-The steps required to configure iOS Platform of Cordova application for Facebook authentication integration are similar to the steps required for native iOS Swift applications. The major difference is that currently Cordova CLI does not support the CocoaPods dependency manager. You must manually add files that are required for integrating the {{site.data.keyword.amashort}} client with Facebook authentication. For more information, see [Enabling Facebook authentication for iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html). Complete the following steps:
+The steps required to configure iOS Platform of Cordova application for Facebook authentication integration are similar to the steps required for native iOS Swift applications (header files are needed for using Objective-C code with the Swift SDK). The major difference is that currently Cordova CLI does not support the CocoaPods dependency manager. You must manually add files that are required for integrating the {{site.data.keyword.amashort}} client with Facebook authentication. For more information, see [Enabling Facebook authentication for iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html). Complete the following steps:
 
 * [Configuring your Facebook application for the iOS Platform](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config). This sets up the Facebook authentication service on the Facebook Developers site.
 * [Configuring MCA for Facebook authentication](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca). This configures your {{site.data.keyword.amashort}} service on the {{site.data.keyword.Bluemix}} server.

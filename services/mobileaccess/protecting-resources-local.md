@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-12-04"
+lastupdated: "2016-12-25"
 
 ---
 {:shortdesc: .shortdesc}
@@ -18,6 +18,7 @@ You can configure your local development  to use the {{site.data.keyword.amafull
 {: #before-you-begin}
 
 You must have:
+
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
 * Your **TenantID**. Open your service in the  {{site.data.keyword.amafull}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  values are displayed in the  **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
 * Your **Application Route**. This is the URL of your back-end application. You need this value for for sending requests to its protected endpoints.
@@ -91,14 +92,15 @@ For information on finding the *tenantID* value see [Before you begin](#before-y
 
 Initialize the {{site.data.keyword.amashort}} client SDKs with the real URL of your {{site.data.keyword.Bluemix_notm}} application, and use the localhost (or IP address) in each of your requests. See the following samples.
 
-Replace the region with the appropriate region.
+Replace the region with the appropriate region. See the code examples for the correct syntax.
 
-Replace the *appGUID* and *bluemixAppRoute* values with the values obtained in [Before you begin](#before-you-begin).
+Replace the *appGUID* and *bluemixAppRoute* values. For information on obtaining these values, see [Before you begin](#before-you-begin).
 
 You might need to change `localhost` to an actual IP address of your development server in the following examples.
 
 ### Android
 {: #android}
+
 ```Java
 String baseRequestUrl = "http://localhost:3000";
 String bluemixAppRoute = "http://myapp.mybluemix.net";
@@ -131,40 +133,6 @@ request.send(this, new ResponseListener() {
 		}
 	}
 });
-```
-{: codeblock}
-
-
-
-### iOS - Objective C
-{: #objc}
-
-```Objective-C
-NSString *baseRequestUrl = @"http://localhost:3000";
-NSString *bluemixAppRoute = @"http://myapp.mybluemix.net";
-NSString *bluemixAppGUID = @"your-bluemix-app-guid";
-NSString *tenantId = "your-MCA-service-tenantID";
-
-[[IMFClient sharedInstance] initializeWithBackendRoute:bluemixAppRoute
-			backendGUID:bluemixAppGUID];
-
-[[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: tenantId];
-
-
-NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
-								baseRequestUrl];
-
-IMFResourceRequest *request =  [IMFResourceRequest
-				requestWithPath:requestPath
-				method:@"GET"];
-
-[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-	if (error){
-		NSLog(@"Error :: %@", [error description]);
-	} else {
-		NSLog(@"Response :: %@", [response responseText]);
-	}
-}];
 ```
 {: codeblock}
 

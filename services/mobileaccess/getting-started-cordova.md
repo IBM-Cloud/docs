@@ -7,19 +7,20 @@ lastupdated: "2016-12-04"
 ---
 
 {:shortdesc: .shortdesc}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
 
 # Setting up the Cordova plug-in
 {: #getting-started-cordova}
 
-Instrument your Cordova client application with {{site.data.keyword.amafull}} client SDK. Initialize the Authorization Manager in your Android (Java) or iOS (Objective C) code. Initialize the client, and make requests to protected and unprotected resources from the WebView.
+Instrument your Cordova client application with {{site.data.keyword.amafull}} client SDK. Initialize the Authorization Manager in your Android (Java) or iOS code (Objective C using the Swift SDK and relevant header file). Initialize the client, and make requests to protected and unprotected resources from the WebView.
 
 {:shortdesc}
 
 ## Before you begin
 {: #before-you-begin}
 You must have:
-* An instance of a  {{site.data.keyword.Bluemix_notm}} application. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
+
+* An instance of a {{site.data.keyword.Bluemix_notm}} application. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end application, see [Getting started](index.html).
 * An instance of a {{site.data.keyword.amafull}} service.
 * The URL of your back-end application (**App Route**). You will need this values for sending requests to the protected endpoints of your back-end application.
 * Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
