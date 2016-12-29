@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-11-04"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -63,6 +63,6 @@ at java.lang.reflect.Method.invoke(Unknown Source)
 * 有关 {{site.data.keyword.objectstorageshort}} 的技术问题，请将您的问题发布到 [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window} 上，并使用“ibm-bluemix”和“object-storage”标记您的问题。
 * 有关服务的问题和入门指示信息，请使用 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window} 论坛。请加上“objectstorage”和“bluemix”标记。
 
-有关使用论坛的更多详细信息，请参阅[获取帮助](https://console.ng.bluemix.net/docs/support/index.html#getting-help){: new_window}。
+有关使用论坛的更多详细信息，请参阅[获取帮助](/docs/support/index.html#getting-help)。
 
-有关提交 IBM 支持凭单或支持级别和凭单严重性的信息，请参阅[联系支持人员](https://console.ng.bluemix.net/docs/support/index.html#contacting-support){: new_window}。
+有关提交 IBM 支持凭单或支持级别和凭单严重性的信息，请参阅[联系支持人员](/docs/support/index.html#contacting-support)。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2016
-lastupdated: "2016-11-04"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -12,13 +12,14 @@ lastupdated: "2016-11-04"
 {:pre: .pre}
 
 
-# 使用大型文件 {: #large-files}
+# 存储大对象 {: #large-files}
 
-
-在单个上传中，上传对象的最大大小限制为 5 GB。但是，如果将大于 5 GB 的对象分段为较小的对象，那么仍可以上传。一旦上传了分段对象，那么还需要清单文件来将这些分段合并成原始对象。这可通过两种方式实现：动态大对象 (DLO) 和静态大对象 (SLO)。
+对于单个上传，上传内容的最大大小限制为 5 GB。但是，可以将较大的对象分段成较小的部分，并使用清单文件来合并这些分段。在上传过程中，只要每个分段的大小不超过 5 GB 即可，对于合并后对象的最大大小没有限制。
 {: shortdesc}
 
-### 动态大对象： {: #dynamic}
+上传大对象可通过两种方式实现：动态大对象 (DLO) 和静态大对象 (SLO)。
+
+## 动态大对象： {: #dynamic}
 
 处理 DLO 的方式有两种：
   * 使 Swift 客户机自动处理一切操作
@@ -29,7 +30,6 @@ lastupdated: "2016-11-04"
 Swift 客户机使用 `-segment-size` 参数将对象分解成较小的部分。客户机会创建一个新容器，新容器的名称将使用上传文件的目标容器的名称，并添加一个分段号作为后缀 (`<container_name>_segments`)。各个分段会并行上传。上传完所有分段后，会将这些分段作为一个合并对象下载到使用原始文件名的清单文件。
 
 1. 登录到 {{site.data.keyword.Bluemix_notm}} 并已准备好上传后，运行以下命令对文件分段。
-
     ```
 swift upload <container_name> <file_name> --segment-size <size_in_bytes>
 ```
@@ -37,7 +37,7 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
 
 #### 使用 Swift API 处理动态大对象
 
-您可以手动对对象分段，使其大小小于 5 GB，然后通过 Swift API 进行上传。上传时，一定要先上传所有分段，然后再上传清单。如果还未上传完所有分段就下载了对象，那么下载的对象将不一致。可以通过完成以下步骤上传大型文件。
+您可以手动对对象分段，使其大小小于或等于 5 GB，然后通过 Swift API 进行上传。上传时，一定要先上传所有分段，然后再上传清单。如果还未上传完所有分段就下载了对象，那么下载的对象将不一致。可以通过完成以下步骤上传大型文件。
 
 1. 按名称对分段排序，分段应该按此顺序合并才能构成原始对象。
 2. 将分段上传到一个容器，该容器须不同于保存清单文件的容器。上传第 10 个分段之后将开始对上传进行调速，这会大大延长上传时间。为此，建议分段大小不要小于文件大小的十分之一。
@@ -64,7 +64,7 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     {: pre}
 
 
-### 静态大对象 {: #static}
+## 静态大对象 {: #static}
 
 静态大对象也使用分段和清单文件，但您可以进行更多控制。通过 SLO，分段不必位于同一容器中；每个分段可以存储在任意容器中，并且可以任意命名。但是，分段的大小必须至少为 1 MB。您无需设置清单文件的头，但在上传了正确的清单后，头“X-Static-Large-Object”会自动添加并设置为 true。
 {: shortdesc}
@@ -77,22 +77,22 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     <th> 描述</th>
   </tr>
   <tr>
-    <td> path</td>
+    <td> <i> path </i></td>
     <td> 分段的位置和名称。指定为 container_name/object_name。</td>
   </tr>
   <tr>
-    <td> etag</td>
+    <td> <i> etag </i></td>
     <td> 上传对象时由 PUT 请求提供。您还可以通过对对象执行 HEAD 来找到此属性。</td>
   </tr>
   <tr>
-    <td> size_bytes</td>
+    <td> <i> size_bytes </i></td>
     <td> 对象的大小（以字节为单位）。</td>
   </tr>
 </table>
 
 *表 1：清单文件中按合并顺序列出的 JSON 属性*
 
-可以通过完成以下步骤上传大型文件：
+#### 上传大型文件 
 
 1. 运行以下命令上传分段。上传第 10 个分段之后将开始对上传进行调速，这会大大延长上传时间。为此，建议分段大小不要小于文件大小的十分之一。
 
@@ -139,6 +139,8 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     curl -O -X GET -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
+
+
 
 下面是使用静态大对象时可能会需要的一些命令。
 
