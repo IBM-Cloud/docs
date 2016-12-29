@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -14,15 +14,12 @@ copyright:
 # Iniciación a {{site.data.keyword.composeForRethinkDB}}
 {: #getting-started-with-compose-for-rethinkdb}
 
-Última actualización: 20 de septiembre de 2016
-{: .last-updated}
-
 {{site.data.keyword.composeForRethinkDB}} le proporciona una base de datos JSON distribuida y basada en documentos con una consola integrada de administración y exploración. RethinkDB utiliza el lenguaje de consulta ReQL, que se crea en torno al encadenamiento de funciones y que está disponible en bibliotecas de cliente para Java, JavaScript, Python y Ruby. Con ReQL, es posible utilizar las características de lado del servidor de RethinkDB como las uniones distribuidas y las subconsultas en los nodos del clúster. RethinkDB también da soporte a índices secundarios para un mejor rendimiento de consultas de lectura. La característica más potente de RethinkDB, changefeeds, permite que muchas consultas de ReQL se conviertan en canales de información en tiempo real.
 {:shortdesc}
 
 **Nota:** Cualquier instancia de servicio de Compose proporcionada antes del 14 de septiembre de 2016 que siga activa se puede seguir utilizando y se puede acceder a ella directamente en [https://www.compose.com/](https://www.compose.com). Se puede acceder directamente a cualquier instancia de servicio de Compose que se proporcione desde este momento en adelante y se utilizará dentro de la cuenta de Bluemix.
 
-Finalice estos pasos para iniciarse a {{site.data.keyword.composeForRethinkDB}}.
+Siga estos pasos para iniciarse a {{site.data.keyword.composeForRethinkDB}}.
 
 1. [Cree una instancia de {{site.data.keyword.composeForRethinkDB}}](https://console.ng.bluemix.net/catalog/services/compose-for-rethinkdb/).
 
@@ -44,6 +41,7 @@ Nombre de campo|Descripción
 `deployment_id`|Un identificador interno para el servicio, tal como se ha creado en Compose.
 `db_type`|El tipo de base de datos que ofrece el servicio; en este caso, `rethink`.
 `name`|El nombre del despliegue de la base de datos.
+{: caption="Table 1. {{site.data.keyword.composeForRethinkDB}} credentials" caption-side="top"}
 
 # Enlaces relacionados
 {: #rellinks}

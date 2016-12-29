@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -14,15 +14,12 @@ copyright:
 # Iniciación a {{site.data.keyword.composeForRedis}}
 {: #getting-started-with-compose-for-redis}
 
-Última actualización: 20 de septiembre de 2016
-{: .last-updated}
-
 Redis es un almacén de valor de clave, en memoria, de código abierto. Los valores de Redis pueden ser cadenas sencillas, hash, listas y conjuntos o mapas de bits potentes, registros de hyperlog e índices geoespaciales. Redis es ideal como memoria caché de aplicaciones o como almacén de datos de respuesta rápida. {{site.data.keyword.composeForRedis_full}} le proporciona una configuración preajustada para alta disponibilidad y persistencia en disco, bloqueados con características de seguridad adicionales.
 {:shortdesc}
 
 **Nota:** Cualquier instancia de servicio de Compose proporcionada antes del 14 de septiembre de 2016 que siga activa se puede seguir utilizando y se puede acceder a ella directamente en [https://www.compose.com/](https://www.compose.com). Se puede acceder directamente a cualquier instancia de servicio de Compose que se proporcione desde este momento en adelante y se utilizará dentro de la cuenta de Bluemix.
 
-Finalice estos pasos para iniciarse a {{site.data.keyword.composeForRedis}}.
+Siga estos pasos para iniciarse a {{site.data.keyword.composeForRedis}}.
 
 1. [Cree una instancia de {{site.data.keyword.composeForRedis}}](https://console.ng.bluemix.net/catalog/services/compose-for-redis/).
 
@@ -43,6 +40,7 @@ Nombre de campo|Descripción
 `deployment_id`|Un identificador interno para el servicio, tal como se ha creado en Compose.
 `db_type`|El tipo de base de datos que ofrece el servicio; en este caso, `redis`.
 `name`|El nombre del despliegue de la base de datos.
+{: caption="Table 1. {{site.data.keyword.composeForRedis}} credentials" caption-side="top"}
 
 # Enlaces relacionados
 {: #rellinks}
