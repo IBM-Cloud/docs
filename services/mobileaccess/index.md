@@ -23,7 +23,7 @@ To get up and running with the {{site.data.keyword.amashort}} service:
 
    When you use the MobileFirst Services Starter, you get an instance of a Node.js runtime that runs on IBM {{site.data.keyword.Bluemix_notm}} to implement your custom back-end logic. A set of core mobile services that provide security, data, push, and monitoring functions are bound to that Node.js app. After the {{site.data.keyword.Bluemix_notm}} Node.js app is created, you can set up your development environment and start to use the {{site.data.keyword.Bluemix_notm}} Mobile Services SDKs. You can use the SDKs to access the services that are bound to your cloud app with simple API calls.
 
-	For more information on how to create and work with projects, applications and services see [IBM Bluemix Mobile dashboard](https://console.{DomainName}/docs/mobile/index.html).
+	For more information on how to create and work with projects, applications, and services see [IBM Bluemix Mobile dashboard](https://console.{DomainName}/docs/mobile/index.html).
 
 2. Secure server-side resources.
 
