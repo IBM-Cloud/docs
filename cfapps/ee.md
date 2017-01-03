@@ -25,7 +25,7 @@ You can use the {{site.data.keyword.Bluemix}} user interface, platform, and a se
 ## Signing up
 {: #ee_start}
 
-Before you can get started, you sign up for an IBMid from [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/). After that, you log in to {{site.data.keyword.Bluemix_notm}} and start your 30-day free trial. {{site.data.keyword.Bluemix_notm}} provides an allowance of 2 GB runtime memory and 10 service instances for your free trial.
+Before you can get started, you sign up for an IBMid from [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg). After that, you log in to {{site.data.keyword.Bluemix_notm}} and start your 30-day free trial. {{site.data.keyword.Bluemix_notm}} provides an allowance of 2 GB runtime memory and 10 service instances for your free trial.
 
 ## Creating your web app by using {{site.data.keyword.Bluemix_notm}} user interface
 {: #ee_appui}
