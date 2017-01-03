@@ -13,7 +13,7 @@ copyright:
 
 # Configuring security policies (Beta)
 {: #set_up_policies.md}
-Last updated: 30 November 2016
+Last updated: 29 December 2016
 {: .last-updated}
 
 A security analyst can configure connection security policies and blacklists or whitelists.
@@ -29,6 +29,7 @@ You can set the default security level that is applied to all devices. You can t
     - TLS with Token Authentication
     - TLS with Client Certificate Authentication
     - TLS with Token and Client Certificate Authentication
+    - TLS with Client Certificate or Token
 
 Based on the security level you select, the table shows the number of devices that are impacted, and the predicted level of compliance at the set security level.
 
@@ -55,6 +56,7 @@ Restrict access to the server from certain devices by using a blacklist or use a
 
 ### Configure a whitelist
 {: #config_whitelist.md}
+
 1. On the Risk and Security Management **Policies**, click **Configure** beside **Whitelist**.
 2. On the **Whitelist** page, click **Add to Whitelist**.
 3. In the **Add to Whitelist** window, do one of the following:
