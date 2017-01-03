@@ -88,7 +88,8 @@ la conception de votre application.
 	2. Personnalisez la présentation de votre application dans
 l'onglet **Ecrans**.
 	
-	3. Ajoutez de nouveaux écrans en sélectionnant **Ajouter des écrans**. Indiquez le nom des nouveaux écrans pour y faire référence plus facilement dans votre application. Vous pouvez sélectionnez les types d'écran suivants :  
+	3. Ajoutez de nouveaux écrans en sélectionnant **Ajouter des écrans**. Attribuez un nom à vos nouveaux écrans pour vous y référer plus
+facilement dans votre application. Vous pouvez sélectionnez les types d'écran suivants : 
 	    * Menu
 		* Liste
 		* Carte
@@ -159,7 +160,7 @@ Foundation à votre projet dans l'écran *Paramètres*, l'élément
 **Foundation** et indiquez les informations requises
 spécifiques à IBM MobileFirst Platform Foundation.
 	
-	9. Sélectionnez **Publier** dans le menu de navigation afin d'entrer les informations finales permettant de créer votre application mobile. Vous pouvez entrer votre Identificateur du bundle pour iOS et l'identifiant d'application pour Android. 
+	9. Sélectionnez **Publier** dans le menu de navigation afin d'entrer les informations finales permettant de créer votre application mobile. Vous pouvez entrer votre Identificateur du bundle pour iOS et l'identifiant d'application pour Android.
 	
 	Si vous créez une application iOS, vous devez vous procurer votre
 Identificateur de bundle, votre certificat de distribution sous forme de

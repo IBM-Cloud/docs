@@ -13,7 +13,9 @@ copyright:
 Dernière mise à jour : 1er juin 2016
 {: .last-updated}  
 
-Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application Hello Bluemix. Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application mobile sans authentification. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans votre application.
+Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application Hello Bluemix.
+Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
+mobile sans authentification. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans votre application.
 
 1. Créez votre application de back end mobile dans {{site.data.keyword.Bluemix_notm}}.
     1. Dans la section Conteneurs boilerplate du catalogue {{site.data.keyword.Bluemix_notm}}, cliquez sur MobileFirst Services Starter.
@@ -34,7 +36,8 @@ Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser 
 	
 4. Dans le simulateur, cliquez sur **Ping {{site.data.keyword.Bluemix_notm}}**. Le modèle d'application obtient l'en-tête d'autorisation depuis le service Mobile Client Access. Si la commande ping aboutit, le texte dans le simulateur est mis à jour.
 
-  Quand vous vous connectez à {{site.data.keyword.Bluemix_notm}} depuis l'application mobile dans Xcode, le message suivant s'affiche : `Yay! You are connected` {: screen}
+  Quand vous vous connectez à {{site.data.keyword.Bluemix_notm}} depuis l'application mobile dans Xcode, le message suivant s'affiche : `Yay! You are connected`
+  {: screen}
 
   <!--
   ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")

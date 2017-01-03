@@ -1,8 +1,7 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016 lastupdated: "2016-12-01"
 
 ---
 {:new_window: target="_blank"}
@@ -74,7 +73,7 @@ Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){
    2. Entrez le nom de votre service et cliquez sur
 **Créer**.
 
-   3. Suivez les instructions fournies avec le service pour le configurer. 
+   3. Suivez les instructions fournies avec le service pour le configurer.
 
 4. Concevez votre application.
 
@@ -159,7 +158,7 @@ MobileFirst Platform Foundation à votre projet dans l'écran
 dans la navigation. Sélectionnez **Foundation** et indiquez
 les informations requises spécifiques à IBM MobileFirst Platform Foundation.
 
-   9. Sélectionnez **Publier** dans le menu de navigation afin d'entrer les informations finales requises pour créer votre application mobile. Vous pouvez entrer votre Identificateur du bundle pour iOS et l'identifiant d'application pour Android. 
+   9. Sélectionnez **Publier** dans le menu de navigation afin d'entrer les informations finales requises pour créer votre application mobile. Vous pouvez entrer votre Identificateur du bundle pour iOS et l'identifiant d'application pour Android.
 
        Si vous créez une application iOS, vous devez vous procurer
 votre Identificateur de bundle, votre certificat de distribution sous forme de
@@ -178,16 +177,15 @@ plateforme ou votre langage de programmation préféré.
    2. Pour Android, vous avez le choix parmi les options suivantes une
 fois le code généré :
 
-      **Télécharger le code**
+      * Télécharger le code
 
-      **Télécharger APK**
+      * Télécharger le fichier APK
 
-      **Télécharger avec le code QR**
+      * Télécharger avec le code QR
 
-   3. Pour iOS, vous pouvez choisi l'option suivante une fois
-le code généré :
+   3. Pour iOS, vous pouvez choisi l'option suivante une fois le code généré :
 
-      **Télécharger le code**
+      * Télécharger le code
 
 6. Exécutez votre application sur le périphérique ou sur le
 simulateur.

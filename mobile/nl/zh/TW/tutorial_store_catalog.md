@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-12-01"
 
 ---
 {:new_window: target="_blank"}
@@ -10,7 +10,7 @@ lastupdated: "2016-10-21"
 # 指導教學 - Store Catalog 使用者介面入門範本
 {: #tutorial_store_catalog}
 
-「{{site.data.keyword.Bluemix}} Store Catalog 使用者介面入門範本」提供您可自訂的基本銷售應用程式結構，並提供每一個 {{site.data.keyword.Bluemix_notm}} Mobile 服務的整合點。
+「{{site.data.keyword.Bluemix}} Store Catalog 使用者介面入門範本」提供您可自訂的基本銷售應用程式結構，並提供每一個 {{site.data.keyword.Bluemix_notm}} 行動服務的整合點。
 
 
 ## 需求
@@ -24,9 +24,9 @@ lastupdated: "2016-10-21"
 
 若要快速開始進行「Store Catalog 使用者介面入門範本」，請遵循下列步驟：
 
-1. 在 {{site.data.keyword.Bluemix_notm}} 中建立 Mobile 儀表板專案。
+1. 在 {{site.data.keyword.Bluemix_notm}} 中建立行動儀表板專案。
 
-   1. 從 Mobile 儀表板的**開始使用**頁面中，按一下**建立專案**。
+   1. 從行動儀表板的**開始使用**頁面中，按一下**建立專案**。
 
       您也可以按一下**專案**頁面上的**建立專案**。
 
@@ -109,15 +109,15 @@ lastupdated: "2016-10-21"
 
    2. 若為 Android，您可以在產生程式碼之後從下列選項中進行選擇：
 
-      **下載程式碼**
+      * 下載程式碼
 
-      **下載 APK**
+      * 下載 APK
 
-      **使用 QR 碼下載**
+      * 使用 QR Code 下載
 
-   3. 若為 iOS，您可以在產生程式碼之後從下列選項中進行選擇：
+   3. 若為 iOS，您可以在產生程式碼之後選擇下列選項：
 
-      **下載程式碼**
+      * 下載程式碼
 
 6. 在裝置或模擬器上執行您的應用程式。
 

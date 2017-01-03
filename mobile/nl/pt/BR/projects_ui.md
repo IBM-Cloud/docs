@@ -51,10 +51,7 @@ tela **Visão geral do projeto** exibe informações sobre seu projeto e
 os recursos opcionais que podem ser incluídos em seu projeto, como Notificações push.  
 
 	1. Opcional: selecione **Incluir** para incluir um dos
-recursos listados em seu projeto. Edite o **Nome do serviço** para seu
-serviço e clique em **Criar**. Ao incluir serviços
-em seu projeto, você é vinculado à página do
-{{site.data.keyword.Bluemix_notm}} para tal serviço. Configure
+recursos listados em seu projeto. Edite o **Nome do serviço** para seu serviço e clique em **Criar**. Ao incluir serviços em seu projeto, você é vinculado à página do {{site.data.keyword.Bluemix_notm}} para tal serviço. Configure
 o serviço fornecendo as informações que são requeridas para o
 serviço.
 	
@@ -74,9 +71,8 @@ de UI.
 	
 	2. Customize o layout do seu app na guia **Telas**.
 	
-	3. Inclua novas telas selecionando **Criar tela**. Nomeie uma
-nova tela para facilitar a consulta em seu app. É possível selecionar dentre os tipos de
-telas a seguir: 
+	3. Inclua novas telas selecionando **Criar tela**. Nomeie uma nova tela para
+facilitar a consulta em seu app. É possível selecionar entre os tipos de tela a seguir:  
 	    * Menu
 		* Listar
 		* Map
@@ -100,9 +96,9 @@ Origens de dados que são identificadas na visualização **Dados**.*
 		Um item identificado na árvore como *Formulário* é independente e
 pode ser modificado sequencialmente. Ele não faz referência a informações de Origem de dados.
 	
-	5. Selecione **Dados** na navegação para visualizar os dados
-que estão sendo usados pelo aplicativo. Há informações padrão no modelo; no entanto, é
-possível mudar a origem dos dados selecionando **Criar novo**. É
+	5. Selecione **Dados** na navegação para visualizar os dados que estiverem sendo
+usados pelo app. Há informações padrão no modelo; no entanto, é possível mudar a origem dos dados selecionando
+**Criar novo**. É
 possível referenciar mais de uma origem de dados; por isso, forneça um nome para cada uma
 que você usar. É possível selecionar dentre as opções de origem de dados a seguir:
 		* Cloud
@@ -140,9 +136,9 @@ Foundation em seu projeto na tela *Configurações*, uma seleção
 **Foundation** e conclua as informações necessárias que são
 específicas do IBM MobileFirst Platform Foundation.
 	
-	9. Selecione **Publicar** no menu de navegação para inserir as
-informações finais para criar seu app móvel. É possível inserir seu identificador de
-pacote configurável para iOS e o identificador do aplicativo para Android.
+	9. Selecione **Publicar** no menu de navegação para inserir as informações finais
+para criar seu app móvel. É possível inserir seu identificador de Pacote configurável para iOS e o
+identificador de Aplicativo para Android.
 	
 	Se você estiver criando um app iOS, deverá obter o Identificador de pacote
 configurável, o Certificado de distribuição como um arquivo *.p12* e o

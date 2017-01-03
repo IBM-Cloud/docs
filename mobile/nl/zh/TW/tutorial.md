@@ -2,15 +2,15 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-11-22"
 
 ---
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.visualrecognitionshort}} 程式碼入門範本的完整指導教學
+# Basic Code Starter 的完整指導教學
 {: #tutorial}
 
-下列完整指導教學逐步執行從「{{site.data.keyword.visualrecognitionshort}} 程式碼入門範本」（包括必須已安裝的工具）建立專案的步驟，隨後則進行在 Xcode 及 Android Studio 中執行入門範本的步驟。
+下列完整指導教學逐步執行從 Basic Code Starter 建立專案的步驟，包括您必須安裝的工具，以及在 Xcode 和 Android Studio 中執行入門範本的步驟。
 
 
 ### 安裝開發人員工具
@@ -19,20 +19,20 @@ lastupdated: "2016-10-21"
 請確定您已安裝[必備開發人員工具](get_code.html#prereq-dev-tools){: new_window}。
 
 
-### 從 {{site.data.keyword.visualrecognitionshort}} 程式碼入門範本建立專案
+### 從 Basic Code Starter 建立專案
 {: #create_project}
 
-1. 在 {{site.data.keyword.Bluemix}} 中建立 Mobile 儀表板專案。
+1. 在 {{site.data.keyword.Bluemix}} 中建立行動儀表板專案。
 
-   1. 從 Mobile 儀表板的**開始使用**頁面中，按一下**建立專案**。
+   1. 從行動儀表板的**開始使用**頁面中，按一下**建立專案**。
 
       您也可以按一下**專案**頁面中的**建立專案**。
 
    2. 按一下**程式碼入門範本**。
 
-   3. 選取 **Visual Recognition**，然後按一下**建立專案**。
+   3. 選取 **Basic**，然後按一下**建立專案**。
 
-   4. 輸入專案名稱。對於此指導教學，使用 `VisualRecognitionProject`。
+   4. 輸入專案名稱。對於此指導教學，使用 `BasicProject`。
    
    5. 按一下**建立**。
 
@@ -80,23 +80,25 @@ lastupdated: "2016-10-21"
    
       您也可以按一下**程式碼**頁面。
       
-   2. 若為 iOS，按一下 **iOS Swift**。
+   2. 若為 Objective-C，按一下 **iOS Obj-C**。
+
+   3. 若為 Swift，按一下 **iOS Swift**。
    
-   3. 若為 Android，按一下 **Android**。
+   4. 若為 Cordova，按一下 **Cordova**。
+
+   5. 若為 Android，按一下 **Android**。
    
-   4. 當專案程式碼生成完成時，請按一下**下載程式碼**來下載專案保存檔。
+   6. 當專案程式碼生成完成時，請按一下**下載程式碼**來下載專案保存檔。
 
 
-### 在 Xcode 中執行專案
-{: #run_xcode}
+### 在 Xcode 中執行 Objective-C 專案
+{: #run_obj-c}
 
-1. 解壓縮 `VisualRecognitionProject-Swift.zip` 檔案。
+1. 解壓縮 `BasicProject-ObjC.zip` 檔案。
 
 2. 在 Markdown 檢視器中開啟 `README.md` 檔案，以檢閱配置專案的步驟。
 
-   1. 建立 [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} 服務實例。
-   
-   2. 開啟終端機，然後導覽至您的專案資料夾。
+   1. 開啟終端機，然後導覽至您的專案資料夾。
    
       1. 如果您需要設定 CocoaPods 儲存庫，請執行 `pod setup`。
       
@@ -104,37 +106,63 @@ lastupdated: "2016-10-21"
       
       3. 執行 `pod install`，以安裝您專案所需的 Pods。
       
-      4. 執行 `carthage update --platform iOS`，以建置相依關係及架構來使用 {{site.data.keyword.ibmwatson}} Developer Cloud iOS SDK。
-      
-   3. 開啟 `VisualRecognitionProject.xcworkspace` Xcode 工作區。
-   
-   4. 新增 {{site.data.keyword.visualrecognitionshort}} 服務認證。
-   
-      1. 從 {{site.data.keyword.visualrecognition}} 服務認證中複製您的 `api_key`。
-      
-      2. 將 `api_key` 貼入 `WatsonCredentials.plist` 檔案中的 `VisualRecognitionAPIKey` 金鑰。
+   2. 開啟 `BasicProject.xcworkspace` Xcode 工作區。
       
 3. 執行應用程式。
 
 
-### 在 Android Studio 中執行專案
-{: #run_studio}
+### 在 Xcode 中執行 Swift 專案
+{: #run_swift}
 
-1. 解壓縮 `VisualRecognitionProject-Android.zip` 檔案。
+1. 解壓縮 `BasicProject-Swift.zip` 檔案。
+
+2. 在 Markdown 檢視器中開啟 `README.md` 檔案，以檢閱配置專案的步驟。
+
+   1. 開啟終端機，然後導覽至您的專案資料夾。
+   
+      1. 如果您需要設定 CocoaPods 儲存庫，請執行 `pod setup`。
+      
+      2. 如果您需要更新現有 Pods，請執行 `pod update`。
+      
+      3. 執行 `pod install`，以安裝您專案所需的 Pods。
+      
+   3. 開啟 `BasicProject.xcworkspace` Xcode 工作區。
+      
+3. 執行應用程式。
+
+
+### 在 Xcode 中執行 Cordova 專案
+{: #run_cordova_xcode}
+
+1. 解壓縮 `BasicProject-Cordova.zip` 檔案。
 
 2. 在 Markdown 檢視器中開啟 `README.md` 檔案，以配置專案。
 
-   1. 建立 [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} 服務實例。
-   
-      如果您已具有 {{site.data.keyword.visualrecognitionshort}} 服務實例，請跳過此步驟。
-   
-   2. 在 Android Studio 中開啟 `VisualRecognitionProject-Android` 專案。
-   
-   4. 新增 {{site.data.keyword.visualrecognitionshort}} 服務認證。
-   
-      1. 從 {{site.data.keyword.visualrecognition}} 服務認證中複製您的 `api_key`。
+   1. 在 Xcode 中開啟 `platforms/ios` 專案。
       
-      2. 將 `api_key` 貼入 `res/values/watson_credentials.xml` 檔案中的 `watson_visual_recognition_api_key` 金鑰。
+3. 執行應用程式。
+
+
+### 在 Android Studio 中執行 Cordova 專案
+{: #run_cordova_studio}
+
+1. 解壓縮 `BasicProject-Cordova.zip` 檔案。
+
+2. 在 Markdown 檢視器中開啟 `README.md` 檔案，以配置專案。
+
+   1. 在 Android Studio 中開啟 `platforms/android` 專案。
+      
+3. 執行應用程式。
+
+
+### 在 Android Studio 中執行 Android 專案
+{: #run_android}
+
+1. 解壓縮 `BasicProject-Android.zip` 檔案。
+
+2. 在 Markdown 檢視器中開啟 `README.md` 檔案，以配置專案。
+
+   1. 在 Android Studio 中開啟 `BasicProject-Android` 專案。
       
 3. 執行應用程式。
 
@@ -154,5 +182,6 @@ lastupdated: "2016-10-21"
 ### 程式碼入門範本指導教學
 {: #tutorials_Code}
 
+* [指導教學 - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [指導教學 - Watson Language](tutorial_watson_language.html)
 * [指導教學 - Weather](tutorial_weather.html)

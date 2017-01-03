@@ -26,12 +26,12 @@ lastupdated: "2016-11-07"
   ```
   {: codeblock}
 
-2. 通过在 Android 应用程序中主活动的 `onCreate` 方法中添加初始化代码，或在最适合运行项目的位置中添加初始化代码，以初始化 Android 应用程序中的 `BMSCore` SDK。
+2. 通过在 Android 应用程序中主活动的 `onCreate` 方法中添加初始化代码，或在最适合运行项目的位置中添加初始化代码，以初始化 Android 应用程序中的 `BMSClient` SDK。
 
-	```Java
+  ```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
 	```
-	{: codeblock}
+  {: codeblock}
 
   必须使用 **bluemixRegion** 参数来初始化 `BMSClient`。在初始化程序中，**bluemixRegion** 值指定您使用的 {{site.data.keyword.Bluemix_notm}} 部署，例如 `BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
 
@@ -69,7 +69,7 @@ lastupdated: "2016-11-07"
 
   3. 构建完成后，通过遵循 Carthage 指示信息中的[第 3 步](https://github.com/Carthage/Carthage#getting-started)，将 `BMSCore.framework` 添加到项目。
 
-  对于使用 Swift 2.3 构建的应用程序，请使用 `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` 命令。否则，请使用 `carthage update` 命令。
+      对于使用 Swift 2.3 构建的应用程序，请使用 `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` 命令。否则，请使用 `carthage update` 命令。
 
 3. 导入模块。
 
@@ -82,9 +82,40 @@ lastupdated: "2016-11-07"
 
   将初始化代码放入应用程序代表的 `application(_:didFinishLaunchingWithOptions:)` 方法中，或放入最适合运行项目的位置中。
 
-    ```Swift
+  ```Swift
     BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
     ```
-   {: codeblock}
+  {: codeblock}
 
-    要使用 {{site.data.keyword.mobileanalytics_short}} 客户机 SDK，必须使用 **bluemixRegion** 参数初始化 `BMSClient`。在初始化程序中，**bluemixRegion** 值指定您使用的 {{site.data.keyword.Bluemix_notm}} 部署，例如 `BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
+  必须使用 **bluemixRegion** 参数来初始化 `BMSClient`。在初始化程序中，**bluemixRegion** 值指定您使用的 {{site.data.keyword.Bluemix_notm}} 部署，例如 `BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
+
+
+## 初始化 Cordova 应用程序
+{: #init-BMSClient-cordova}
+
+1. 从 Cordova 应用程序根目录运行以下命令来添加 Cordova 插件：
+
+  ```
+  cordova plugin add bms-core
+  ```
+  {: codeblock}
+
+2. 通过在主 JavaScript 文件中添加初始化代码，或在最适合运行项目的位置中添加初始化代码，以初始化 Cordova 应用程序中的 `BMSClient` 类。
+
+  ```
+  BMSClient.initialize(BMSClient.REGION_US_SOUTH);
+  ```
+  {: codeblock}
+	
+  必须使用 **bluemixRegion** 参数来初始化 `BMSClient`。在初始化程序中，**bluemixRegion** 值指定您使用的 {{site.data.keyword.Bluemix_notm}} 部署，例如 `BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。
+
+
+# 相关链接
+{: #rellinks}
+
+## 相关链接
+{: #general}
+
+* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [BMSCore Cordova 插件](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

@@ -20,7 +20,7 @@ lastupdated: "2016-10-13"
 ### 必備開發人員工具
 {: #prereq-dev-tools}
 
-當您從 {{site.data.keyword.Bluemix_notm}} Mobile 儀表板使用產生的程式碼時，需要下列開發人員工具：
+當您從 {{site.data.keyword.Bluemix_notm}} 行動儀表板使用產生的程式碼時，需要下列開發人員工具：
 
 #### Android
 * [Android Studio 2.2](https://developer.android.com/studio)

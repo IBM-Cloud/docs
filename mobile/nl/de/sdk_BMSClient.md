@@ -26,12 +26,12 @@ Sie können das `BMSCore`-Paket entweder in Ihr Android Studio-Projekt herunterl
   ```
   {: codeblock}
 
-2. Initialisieren Sie das `BMSCore`-SDK in Ihrer Android-Anwendung, indem Sie den Initialisierungscode in der Methode `onCreate` der Hauptaktivität in Ihrer Android-Anwendung oder an einer Position hinzufügen, die für Ihr Projekt am geeignetsten ist.
+2. Initialisieren Sie das `BMSClient`-SDK in Ihrer Android-Anwendung, indem Sie den Initialisierungscode in der Methode `onCreate` der Hauptaktivität in Ihrer Android-Anwendung oder an einer Position hinzufügen, die für Ihr Projekt am geeignetsten ist.
 
-	```Java
+  ```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
-	```
-	{: codeblock}
+  ```
+  {: codeblock}
 
   Sie müssen `BMSClient` mit dem Parameter **bluemixRegion** initialisieren. Im Initialisierungsoperator gibt der Wert **bluemixRegion** an, welche {{site.data.keyword.Bluemix_notm}}-Bereitstellung Sie verwenden, z. B. `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` oder `BMSClient.REGION_SYDNEY`.
 
@@ -69,7 +69,7 @@ Sie können mithilfe von [CocoaPods](https://cocoapods.org){: new_window} oder [
 
   3. Nach der Fertigstellung des Builds fügen Sie `BMSCore.framework` zu Ihrem Projekt hinzu; führen Sie hierfür [Schritt 3](https://github.com/Carthage/Carthage#getting-started) in den Carthage-Anweisungen durch.
 
-  Verwenden Sie für Anwendungen, die mit Swift 2.3 aufgebaut sind, den Befehl `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Verwenden Sie andernfalls den Befehl `carthage update`.
+      Verwenden Sie für Anwendungen, die mit Swift 2.3 aufgebaut sind, den Befehl `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Verwenden Sie andernfalls den Befehl `carthage update`.
 
 3. Importieren Sie das Modul.
 
@@ -82,9 +82,40 @@ Sie können mithilfe von [CocoaPods](https://cocoapods.org){: new_window} oder [
 
   Platzieren Sie den Initialisierungscode in der Methode `application(_:didFinishLaunchingWithOptions:)` Ihres Anwendungsbeauftragten oder an einer Position, die für Ihr Projekt am geeignetsten ist.
 
-    ```Swift
+  ```Swift
     BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
-    ```
-   {: codeblock}
+  ```
+  {: codeblock}
 
-    Für die Verwendung des {{site.data.keyword.mobileanalytics_short}}-Client-SDK müssen Sie `BMSClient` mit dem Parameter **bluemixRegion** initialisieren. Im Initialisierungsoperator gibt der Wert **bluemixRegion** an, welche {{site.data.keyword.Bluemix_notm}}-Bereitstellung Sie verwenden, z. B. `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` oder `BMSClient.Region.sydney`.
+  Sie müssen `BMSClient` mit dem Parameter **bluemixRegion** initialisieren. Im Initialisierungsoperator gibt der Wert **bluemixRegion** an, welche {{site.data.keyword.Bluemix_notm}}-Bereitstellung Sie verwenden, z. B. `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` oder `BMSClient.Region.sydney`.
+
+
+## Eigene Cordova-Anwendung initialisieren
+{: #init-BMSClient-cordova}
+
+1. Fügen Sie das Cordova-Plug-in hinzu, indem Sie den folgenden Befehl im Stammverzeichnis Ihrer Cordova-Anwendung ausführen:
+
+  ```
+  cordova plugin add bms-core
+  ```
+  {: codeblock}
+
+2. Initialisieren Sie die Klasse `BMSClient` in Ihrer Cordova-Anwendung, indem Sie den Initialisierungscode in der Haupt-JavaScript-Datei oder an einer Position hinzufügen, die für Ihr Projekt am geeignetsten ist.
+
+  ```
+  BMSClient.initialize(BMSClient.REGION_US_SOUTH);
+  ```
+  {: codeblock}
+	
+  Sie müssen `BMSClient` mit dem Parameter **bluemixRegion** initialisieren. Im Initialisierungsoperator gibt der Wert **bluemixRegion** an, welche {{site.data.keyword.Bluemix_notm}}-Bereitstellung Sie verwenden, z. B. `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` oder `BMSClient.REGION_SYDNEY`.
+
+
+# Zugehörige Links
+{: #rellinks}
+
+## Zugehörige Links
+{: #general}
+
+* [BMSCore-Android-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [BMSCore-iOS-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [BMSCore-Cordova-Plug-in](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

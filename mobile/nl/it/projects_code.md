@@ -10,7 +10,7 @@ lastupdated: "2016-10-13"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Utilizzo di uno starter codice per creare un progetto 
+# Utilizzo di uno starter codice per creare un progetto
 {: #projects_code}
 
 Puoi utilizzare uno [Starter codice](starters.html#Code_Starter) nel dashboard {{site.data.keyword.Bluemix}} Mobile per creare un progetto nell'ambiente {{site.data.keyword.Bluemix_notm}}. Questa procedura non si applica ai progetti che utilizzano gli starter IU. Consulta [Creazione di un progetto con uno starter IU](projects_ui.html) per istruzioni sugli starter IU. 
@@ -20,7 +20,7 @@ Completa i seguenti passi per creare un progetto con uno starter codice:
 
 1. Crea un nuovo progetto dashboard Mobile in {{site.data.keyword.Bluemix_notm}}.
 
- Inizia con la scheda *Introduzione* dopo aver selezionato il catalogo Mobile. Esistono le descrizioni degli starter selezionati che puoi utilizzare e diversi modi per creare un progetto in base a quanta assistenza ti serve. Se desideri soltanto iniziare, seleziona **Crea progetto**. 
+ Inizia con la scheda *Introduzione* dopo aver selezionato il catalogo Mobile. Esistono le descrizioni degli starter selezionati che puoi utilizzare e diversi modi per creare un progetto in base a quanta assistenza ti serve. Se desideri soltanto iniziare, seleziona **Crea progetto**.
 
  Se già disponi di progetti, puoi anche iniziare con la scheda *Progetti* selezionata. Dal dashboard {{site.data.keyword.Bluemix_notm}} Mobile, vista **Progetti**, puoi selezionare un progetto con cui lavorare, utilizza le *Azioni* di un progetto per eliminarlo o per scaricarne il codice o crea un nuovo progetto.
 

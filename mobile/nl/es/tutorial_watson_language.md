@@ -57,7 +57,7 @@ Para comenzar a utilizar rápidamente el Iniciador de código de lenguaje Watson
 
    2. Especifique el nombre del servicio y pulse **Crear**.
    
-   3. Desactive la **Modalidad de demostración** para ver los datos del análisis después de ejecutar la app. 
+   3. Desactive la **Modalidad de demostración** para ver los datos del análisis después de ejecutar la app.
 
 4. Opcional: Añada capacidad de autenticación.
 
@@ -69,9 +69,9 @@ Para comenzar a utilizar rápidamente el Iniciador de código de lenguaje Watson
    
    3. Active **Autenticación**.
    
-   4. Seleccione su proveedor de identidad y especifique la información necesaria para configurarlo. Solo puede habilitar un proveedor de identidad. 
+   4. Seleccione su proveedor de identidad y especifique la información necesaria para configurarlo. Solo puede habilitar un proveedor de identidad.
 
-   5. Consulte [Iniciación a Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window} para obtener más información sobre cómo configurar la autenticación. 
+   5. Consulte [Iniciación a Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window} para obtener más información sobre cómo configurar la autenticación.
 
 5. Descargue el proyecto.
 

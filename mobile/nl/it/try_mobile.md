@@ -11,7 +11,7 @@ lastupdated: "2016-10-19"
 
 Puoi utilizzare ognuno dei servizi mobili {{site.data.keyword.Bluemix}} indipendentemente. Puoi anche utilizzarli insieme, con il contenitore tipo starter {{site.data.keyword.mobilefirstbp}}, per trarne il massimo vantaggio.
 
-Per iniziare, usa {{site.data.keyword.mobilefirstbp}} Starter per creare la tua applicazione. Il contenitore tipo ti abilita a completare le seguenti azioni:
+Per iniziare, utilizza {{site.data.keyword.mobilefirstbp}} Starter per creare la tua applicazione. Il contenitore tipo ti permette di completare le seguenti azioni:
 
 * Crea un runtime Node.js con un'applicazione template. Puoi utilizzare questa applicazione per fornire funzioni lato server, come le API RESTful e i file statici. <!-- You can read more about operating this application in the Developing Mobile Backend section.-->
 * Fornisce un'istanza di ciascuno dei servizi mobili {{site.data.keyword.Bluemix_notm}} ed esegue il bind del servizio all'applicazione Node.js.

@@ -118,8 +118,8 @@ Se mostrará una aplicación de vista única con un botón **PING BLUEMIX**. Cua
 
 <!--![Hello World application not connected to Bluemix](images/bummer_android.jpg "Figure 2. Hello World application not connected to Bluemix")-->
 
-Si la conexión falla, verá:
-  `Bummer. Something went wrong`
+Si la conexión falla, verá el mensaje:
+  `Algo salió mal`
   {: screen}
    
 En el mensaje se incluye más información sobre el error. Puede comprobar los siguientes elementos para resolver el error:

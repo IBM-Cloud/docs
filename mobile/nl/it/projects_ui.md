@@ -36,7 +36,7 @@ Completa i seguenti passi per creare un progetto con uno starter IU:
 	
 2. Effettua le tue selezioni nella schermata **Panoramica progetto**.  La schermata **Panoramica progetto** visualizza le informazioni sul tuo progetto e sulle funzionalità facoltative che puoi aggiungere al tuo progetto come Push Notifications.  
 
-	1. Facoltativo: seleziona **Aggiungi** per aggiungere una delle funzionalità elencate al tuo progetto. Modifica il **Nome servizio** per il tuo servizio e fai clic su **Crea**. Quando aggiungi i servizi al tuo progetto, ti colleghi alla pagina {{site.data.keyword.Bluemix_notm}} per tale servizio. Configura il servizio fornendo le informazioni obbligatorie per esso. 
+	1. Facoltativo: seleziona **Aggiungi** per aggiungere una delle funzionalità elencate al tuo progetto. Modifica il **Nome servizio** per il tuo servizio e fai clic su **Crea**. Quando aggiungi i servizi al tuo progetto, ti colleghi alla pagina {{site.data.keyword.Bluemix_notm}} per tale servizio. Configura il servizio fornendo le informazioni obbligatorie per esso.
 	
 	2. Facoltativo: ripeti il passo *a* per ogni ulteriore funzionalità che desideri aggiungere al tuo progetto. 
 
@@ -50,7 +50,7 @@ Completa i seguenti passi per creare un progetto con uno starter IU:
 	
 	2. Personalizza il tuo layout dell'applicazione dalla scheda **Schermate**.
 	
-	3. Aggiungi nuove schermate selezionando **Crea schermata**. Denomina una nuova schermata per rendere più facile il riferimento alla tua applicazione. Puoi anche selezionarla dai seguenti tipi di schermata: 
+	3. Aggiungi nuove schermate selezionando **Crea schermata**. Denomina una nuova schermata per rendere più facile il riferimento alla tua applicazione. Puoi scegliere tra i seguenti tipi di schermata: 
 	    * Menu
 		* Elenco
 		* Associazione
@@ -63,7 +63,7 @@ Completa i seguenti passi per creare un progetto con uno starter IU:
 		
 		Un elemento che viene identificato nell'albero come un *Modulo* è indipendente e può essere modificato inline. Non dispone di informazioni di riferimento da un'origine dati.
 	
-	5. Seleziona **Dati** nella navigazione per visualizzare i dati che stanno venendo utilizzati dall'applicazione. Nel template sono disponibili informazioni predefinite; tuttavia, puoi modificare l'origine dei dati selezionando **Crea nuovo**. Puoi fare riferimento a più di una origine dati, in modo da fornire un nome per ogni origine che vuoi utilizzare. Puoi anche selezionarla dalla seguenti opzioni di origine dati
+	5. Seleziona **Dati** nella navigazione per visualizzare i dati che vengono utilizzati dall'applicazione. Nel template sono disponibili informazioni predefinite; tuttavia, puoi modificare l'origine dei dati selezionando **Crea nuovo**. Puoi fare riferimento a più di una origine dati, in modo da fornire un nome per ogni origine che vuoi utilizzare. Puoi anche selezionarla dalla seguenti opzioni di origine dati
 		* Cloud
 		* Locale
 		* Cloudant
@@ -83,7 +83,7 @@ Completa i seguenti passi per creare un progetto con uno starter IU:
 		
 	8. Se hai attivato lo switch per aggiungere IBM MobileFirst Platform Foundation al tuo progetto nella schermata *Impostazioni*, viene visualizzata una selezione **Foundation** nella navigazione. Seleziona **Foundation** e completa le informazioni necessarie specifiche per IBM MobileFirst Platform Foundation.
 	
-	9. Seleziona **Pubblica** nel menu di navigazione per immettere le informazioni finali per creare la tua applicazione mobile. Puoi immettere il tuo identificativo bundle per iOS e l'identificativo applicazione per Android.
+	9. Seleziona **Pubblica** nel menu di navigazione per immettere le informazioni finali per creare la tua applicazione mobile. Puoi immettere il tuo identificativo Bundle per iOS e l'identificativo Applicazione per Android.
 	
 	Se stai creando un'applicazione iOS, devi ottenere il tuo identificativo bundle, il tuo certificato di distribuzione come ad esempio un file *.p12* e il tuo profilo di provisioning come un file *.mobileprovision* dal portale di provisioning di Apple. Possono essere creati contemporaneamente e con lo stesso computer che utilizzerai quando invierai la tua applicazione all'Apple store. Il certificato di distribuzione e il profilo di provisioning devono basarsi sull'identificativo bundle. 	
 

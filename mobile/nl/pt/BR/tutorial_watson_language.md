@@ -52,7 +52,9 @@ Para colocar em funcionamento rapidamente o Iniciador de código de idioma do Wa
 
    3. Para iOS, [configure o Serviço de notificação push da Apple](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
-   4. Para Android, [configure o Sistema de mensagens em nuvem do Google](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Para Android,
+[configure o Sistema de
+mensagens em nuvem do Google](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
    
 3. Opcional: inclua o recurso de Analítica.
 

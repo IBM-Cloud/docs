@@ -12,8 +12,8 @@ lastupdated: "2016-10-19"
 É possível usar cada um dos Serviços móveis do {{site.data.keyword.Bluemix}} de forma independente. Também é possível usá-los
 juntos, com o modelo do {{site.data.keyword.mobilefirstbp}} Starter, para se beneficiar ao máximo.
 
-Para começar, use o {{site.data.keyword.mobilefirstbp}} Starter para criar seu aplicativo. O modelo permite concluir as ações a
-seguir:
+Para começar, use o {{site.data.keyword.mobilefirstbp}} Starter para criar seu app. O
+modelo permite concluir as ações a seguir: 
 
 * Crie um tempo de execução Node.js com um aplicativo modelo. É possível usar esse
 aplicativo para fornecer funções do lado do servidor, como APIs RESTful e arquivos estáticos.
@@ -52,7 +52,7 @@ ID do app é usado pela plataforma como contexto para funções comuns, como med
 </tr>
 <tr>
 <td><img src="images/authentication_icon.png" alt="{{site.data.keyword.amashort}} ícone de serviço"> <b>{{site.data.keyword.amashort}}</b><br/>Use o serviço {{site.data.keyword.amafull}} para proteger aplicativos Node.js e Java for Liberty hospedados no {{site.data.keyword.Bluemix_notm}}. Ao
-instrumentar o seu aplicativo móvel com o SDK do {{site.data.keyword.amashort}}, será possível requerer que os usuários efetuem login para acessar o Node.js ou os serviços móveis do {{site.data.keyword.Bluemix_notm}}.
+instrumentar seu aplicativo móvel com o SDK do {{site.data.keyword.amashort}}, será possível requerer que os usuários efetuem login para acessar o Node.js ou os serviços móveis do {{site.data.keyword.Bluemix_notm}}.
 <!-- In addition to security capabilities, {{site.data.keyword.amashort}} also gathers analytics data, so that you can monitor your mobile application performance and collect client logs and usage statistics.--> </td>
 <td valign="top"><b>Provedores de identidade do usuário</b> <br/>É possível usar os provedores de identidade a seguir: <ul><li>Facebook</li><li>Google</li><li> Customizado </li></ul></td>
 </tr>

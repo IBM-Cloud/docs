@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-12-01"
 
 ---
 {:new_window: target="_blank"}
@@ -60,7 +60,7 @@ Para comenzar a utilizar rápidamente el Iniciador de IU del Catálogo de almace
 
    1. Seleccione **Creador de IU** en el menú de navegación para personalizar el diseño de la aplicación.
    
-		**Consejo:** para ver una breve visión general del creador de IU, seleccione **Mostrar cómo funciona** en el panel de navegación después de seleccionar el creador de IU. 
+		**Consejo:** para ver una breve visión general del creador de IU, seleccione **Mostrar cómo funciona** en el panel de navegación después de seleccionar el creador de IU.
 
    2. Seleccione el separador **Diseño** en la navegación.
 
@@ -99,7 +99,7 @@ Para comenzar a utilizar rápidamente el Iniciador de IU del Catálogo de almace
 
    8. Si ha alternado el conmutador para añadir IBM MobileFirst Platform Foundation a su proyecto en la pantalla *Valores*, se mostrará una selección **Foundation** en la navegación. Seleccione **Foundation** y complete la información necesaria específica para IBM MobileFirst Platform Foundation.
 
-   9. Seleccione **Publicar** en el menú de navegación para especificar la información final necesaria para crear la aplicación móvil. Puede especificar el identificador de paquetes para iOS y el identificador de aplicaciones para Android. 
+   9. Seleccione **Publicar** en el menú de navegación para especificar la información final necesaria para crear la aplicación móvil. Puede especificar el identificador de paquetes para iOS y el identificador de aplicaciones para Android.
 
        Si está creando una aplicación de iOS, debe obtener el Identificador de paquetes, el Certificado de distribución como un archivo *.p12* y el Perfil de suministro como un archivo *.mobileprovision* desde el portal de suministro de Apple. El árbol debería crearse al mismo tiempo y con el mismo sistema con el que piensa utilizarlo al publicar la aplicación en la Apple Store. El Certificado de distribución y el Perfil de suministro deben basarse en el Identificador de paquetes. 	
 
@@ -109,15 +109,15 @@ Para comenzar a utilizar rápidamente el Iniciador de IU del Catálogo de almace
 
    2. Para Android, puede elegir entre las siguientes opciones una vez que se genere el código:
 
-      **Descargar código**
+      * Descargar código
 
-      **Descargar APK**
+      * Descargar APK
 
-      **Descargar con código QR**
+      * Descargar con código QR
 
-   3. Para iOS, puede elegir entre las siguientes opciones una vez que se genere el código:
+   3. Para iOS, puede elegir la siguiente opción una vez que se genere el código:
 
-      **Descargar código**
+      * Descargar código
 
 6. Ejecute la app en su dispositivo o simulador.
 
