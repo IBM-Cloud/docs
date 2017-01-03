@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-12-12"
+lastupdated: "2016-11-29"
 
 ---
 
@@ -24,15 +24,15 @@ Before you begin, you must deploy an instance of the {{site.data.keyword.iotelec
 
 1. If you just deployed the {{site.data.keyword.iotelectronics}} starter, the Getting Started tab of the starter app is displayed, and you should proceed to the next step of these instructions. If the starter app is not displayed, open your {{site.data.keyword.Bluemix_notm}} dashboard and start your {{site.data.keyword.iotelectronics}} starter application by clicking the starter application name.
 
-    ![{{site.data.keyword.iotelectronics}} in the dashboard](images/IoT4E_bm_dashboard.png "{{site.data.keyword.iotelectronics}} in the dashboard")
+    ![{{site.data.keyword.iotelectronics}} in the dashboard](images/IoT4E_bm_dashboard.svg "{{site.data.keyword.iotelectronics}} in the dashboard")
 
 2. Copy the URL of the {{site.data.keyword.iotelectronics}} web app by right-clicking **View App** and selecting **Copy Link Location**.
 
 3. On the **Connections** tab, click the {{site.data.keyword.amashort}} service to open it.
 
-4. On the {{site.data.keyword.amashort}} Authentication page, enable authentication by clicking **On**.
+3. On the {{site.data.keyword.amashort}} Authentication page, enable authentication by clicking **On**.
 
-5. In the **Custom** section, enter the following authentication credentials:
+4. In the **Custom** section, enter the following authentication credentials:
 
     - **Realm name**: `myRealm`
 
@@ -42,6 +42,6 @@ Before you begin, you must deploy an instance of the {{site.data.keyword.iotelec
 
     - **Your Web Application Redirect URIs**: Leave this field blank.
 
-   ![Configure {{site.data.keyword.amashort}}.](images/MCA_config_pg.png "{{site.data.keyword.amashort}} Authentication page")  
+   ![Configure {{site.data.keyword.amashort}}.](images/MCA_config_pg.svg "{{site.data.keyword.amashort}} Authentication page")  
 
 5. Save your settings. You can now return to the {{site.data.keyword.iotelectronics}} service console or your {{site.data.keyword.Bluemix_notm}} console.
