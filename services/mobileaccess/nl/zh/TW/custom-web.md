@@ -39,16 +39,15 @@ lastupdated: "2016-06-16"
 
 ## 使用 {{site.data.keyword.amashort}} 進行自訂 Web 鑑別
 
-若要啟動授權處理程序，請執行下列動作：
+若要開始授權處理程序，請執行下列動作：
 
 1. 從您的 Web 應用程式重新導向至授權伺服器的下列端點：
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
 
-
   使用下列查詢參數：
    ```
-response_type='authorization_code'
+   response_type='authorization_code'
    client_id= <bluemix\_app\_guid>
    redirect_uri= <uri for the redirect after getting an authorization code>
    scope= 'openid'
@@ -59,12 +58,7 @@ response_type='authorization_code'
 
     `redirect_uri` 參數決定自訂身分提供者成功或失敗鑑別之後的重新導向。
 
-
-
-1. 重新導向至授權端點之後，您會取得登入表單。根據身分提供者輸入要起始鑑別的使用者名稱和密碼，並對 `redirect_uri` 輸入重新導向。
-成功鑑別之後所傳回的回應包含要求查詢參數中的授權碼。
-
-
+1. 重新導向至授權端點之後，您會取得登入表單。輸入要向身分提供者起始鑑別的使用者名稱和密碼，並對 `redirect_uri` 輸入重新導向。成功鑑別之後所傳回的回應包含要求查詢參數中的授權碼。
 
 4. 對授權伺服器記號端點提出 `POST` 要求：
 
@@ -80,17 +74,9 @@ response_type='authorization_code'
 `redirect_uri` 參數必須符合步驟 1 中的 `redirect_uri`。授權碼是由步驟 2 中的要求所傳回。
   因為授權碼的有效時間最多為 10 分鐘，所以請一定要在 10 分鐘內傳送此 `POST` 要求。
 
-
-
 `POST` 回應內文包含以 base64 編碼的 *access_token* 及 *id_token*。
-
-
 
 ## 測試鑑別
 
 
-現在，您可以開始對受保護資源提出要求。所有對受保護資源的要求都應該包含 `access_token`。
-請在 `the-Authorization-request` 標頭欄位中傳送存取記號。
-
-
-
+現在，您可以開始對受保護資源提出要求。所有對受保護資源的要求都應該包含 `access_token`。請在 `the-Authorization-request` 標頭欄位中傳送存取記號。

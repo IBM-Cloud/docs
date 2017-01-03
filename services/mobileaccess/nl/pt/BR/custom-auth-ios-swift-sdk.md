@@ -6,6 +6,9 @@ lastupdated: "2016-10-27"
 
 ---
 
+{:codeblock:.codeblock}
+
+
 # Configurando a autenticação customizada para seu aplicativo {{site.data.keyword.amashort}} iOS (Swift SDK)
 {: #custom-ios}
 
@@ -26,9 +29,8 @@ Antes de começar, deve-se ter:
 serviço {{site.data.keyword.amashort}} que está
 configurado para usar um provedor de identidade customizado
 (consulte
-[Configurando autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).   
-* Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. 
-Clique no botão **Opções móveis**. O valor
+[Configurando autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique no botão **Opções móveis**. O valor
 `tenantId` (também conhecido como
 `appGUID`) é exibido no campo **App
 GUID / TenantId**. Você precisará desse valor para
@@ -36,8 +38,7 @@ inicializar o Gerenciador de Autorização.
 * Seu nome de **Domínio**. Este é o
 valor que você especificou no campo **Nome do
 domínio** da seção **Customizado**
-no guia **Gerenciamento** do
-painel {{site.data.keyword.amashort}}.
+no guia **Gerenciamento** do painel {{site.data.keyword.amashort}}.
 * A URL do seu aplicativo backend (**Rota de App**). Você precisará desse valor para enviar
 solicitações para os terminais protegido do seu aplicativo
 backend.
@@ -57,6 +58,14 @@ ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mo
  * [Criando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
+### Ativar Compartilhamento Keychain para iOS
+{: #enable_keychain}
+
+Ative `Compartilhamento Keychain`. Acesse
+a guia `Recursos` e mude
+`Compartilhamento Keychain` para
+`On` em seu projeto Xcode.
+
 
 ### Inicializando o client SDK
 {: #custom-ios-sdk-initialize}
@@ -72,6 +81,7 @@ Inicialize o SDK passando o parâmetro
 	import BMSCore
 	import BMSSecurity
 	```
+	{: codeblock}
 
 1. Inicialize o SDK do cliente {{site.data.keyword.amashort}}, mude o
 gerenciador de autorização para `MCAAuthorizationManager`, bem como
@@ -118,6 +128,7 @@ defina e registre uma delegação de autenticação.
 
 
 ```
+{: codeblock}
 
 No código:
 * Substitua `MCAServiceTenantId` pelo valor
@@ -156,7 +167,7 @@ pelo valor recuperado a partir das **Opções de dispositivo móvel** (veja
 código a seguir depois de inicializar `BMSClient` e registrar a
 delegação de autenticação customizada:
 
-	```Swift
+    ```Swift
 
 	let protectedResourceURL = "<your protected resource absolute path>"
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
@@ -168,9 +179,9 @@ delegação de autenticação customizada:
 	       print ("error: \(error)")
 	    }
 	}
-
 	request.send(completionHandler: callBack)
-	 ```
+     ```
+     {: codeblock}
 
 1. Quando suas solicitações forem bem-sucedidas, você verá a saída a seguir no console Xcode:
 
@@ -185,12 +196,14 @@ delegação de autenticação customizada:
  })
 	 response:Optional("Hello Don Lon"), no error
 	 ```
+	 {: codeblock}
 
 1. Também é possível incluir a funcionalidade de logout incluindo o código a seguir:
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
-	 ```  
+	 ``` 
+	 {: codeblock}
 
  Se você chamar esse código depois que um usuário estiver conectado, ele será desconectado. Quando o usuário tentar efetuar login novamente, ele deverá responder ao desafio recebido do servidor novamente.
 

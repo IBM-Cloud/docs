@@ -5,9 +5,10 @@ copyright:
 lastupdated: "2016-11-02"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-
+{:codeblock:.codeblock}
 
 
 # Configuración de la autenticación personalizada para la app {{site.data.keyword.amashort}} Android
@@ -21,10 +22,10 @@ Configure su aplicación de Android con autenticación personalizada para que ut
 Antes de empezar, debe tener:
 
 * Un recurso protegido mediante una instancia del servicio {{site.data.keyword.amashort}} configurado para que utilice un proveedor de identidad personalizado (consulte [Configuración de la autenticación personalizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
-* El valor de **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse el botón **Opciones móviles**. El valor `tenantId` (también conocido como `appGUID`) se muestra en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización. 
-* Su nombre de **Dominio**. Es el valor que ha especificado en el campo **Nombre de dominio** de la sección **Personalizado** del separador **Gestión** del panel de control de {{site.data.keyword.amashort}}. 
-* El URL de la aplicación de programa de fondo (**Ruta de app**). Necesitará estos valores para enviar solicitudes a los puntos finales protegidos de la aplicación de programa de fondo. 
-* Su {{site.data.keyword.Bluemix_notm}} **Región**. Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de región que aparece debe ser uno de los siguientes: `EE.UU. Sur`, `Reino Unido` o `Sidney` y debe corresponder con los valores de SDK necesarios en el código Javascript de WebView: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`. Necesitará este valor para inicializar el cliente {{site.data.keyword.amashort}}. 
+* El valor de **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse el botón **Opciones móviles**. El valor `tenantId` (también conocido como `appGUID`) se muestra en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización.
+* Su nombre de **Dominio**. Es el valor que ha especificado en el campo **Nombre de dominio** de la sección **Personalizado** del separador **Gestión** del panel de control de {{site.data.keyword.amashort}}.
+* El URL de la aplicación de programa de fondo (**Ruta de app**). Necesitará estos valores para enviar solicitudes a los puntos finales protegidos de la aplicación de programa de fondo.
+* Su {{site.data.keyword.Bluemix_notm}} **Región**. Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de región que aparece debe ser uno de los siguientes: `EE.UU. Sur`, `Reino Unido` o `Sidney` y debe corresponder con los valores de SDK necesarios en el código Javascript de WebView: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`. Necesitará este valor para inicializar el cliente {{site.data.keyword.amashort}}.
 
 Para obtener más información, consulte la siguiente información:
  * [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
@@ -52,6 +53,7 @@ Si tiene una Android preparada con el SDK de Android de {{site.data.keyword.amas
     	// other dependencies  
 	}
 	```
+	{: codeblock}
 
 1. Sincronice el proyecto con Gradle. Pulse **Tools > Android > Sync Project with Gradle Files**.
 
@@ -61,13 +63,15 @@ Añada el permiso de acceso a Internet al elemento `<manifest>`:
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
+	{: codeblock}
 
 1. Inicialice el SDK.  
 	Un lugar habitual, pero no obligatorio, donde poner el código de inicialización es en el método `onCreate` de la actividad principal de la aplicación de Android.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
-```
+	```
+	{: codeblock}
 
 Sustituya `BMSClient.REGION_UK` por la región de {{site.data.keyword.amashort}}. Para obtener más información sobre cómo obtener estos valores, consulte [Antes de empezar](#before-you-begin)).
 	
@@ -84,6 +88,7 @@ Llame a este método cuando se reciba un cambio de autenticación personalizada 
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+{: codeblock}
 
 
 #### Argumentos
@@ -101,6 +106,7 @@ Llame a este método después de una autenticación satisfactoria. Los argumento
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ### Método onAuthenticationFailure
 {: #custom-android-authlistener-onfail}
@@ -108,6 +114,7 @@ Llame a este método después de un error en la autenticación. Los argumentos i
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ## Interfaz AuthenticationContext
 {: #custom-android-authcontext}
@@ -117,10 +124,12 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+{: codeblock}
 
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+{: codeblock}
 
 ## Implementación de ejemplo de una AuthenticationListener personalizada
 {: #custom-android-samplecustom}
@@ -179,6 +188,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	}
 }
 ```
+{: codeblock}
 
 ## Registro de una clase AuthenticationListener personalizada
 {: #custom-android-register}
@@ -192,6 +202,7 @@ mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuth
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
+{: codeblock}
 
 
 En el código:
@@ -233,7 +244,8 @@ Debe tener una aplicación que disponga de un recurso que esté protegido por {{
 			}
 		}
 	});
-```
+	```
+	{: codeblock}
 	
 1. 	Cuando la solicitud se realiza correctamente, se muestra la siguiente salida en la herramienta LogCat:
 
@@ -244,6 +256,7 @@ Debe tener una aplicación que disponga de un recurso que esté protegido por {{
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+ {: codeblock}
 
 
  Si invoca este código después de que el usuario haya iniciado sesión, la sesión del usuario se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá volver a responder a la pregunta que reciba del servidor.

@@ -22,9 +22,9 @@ Vous devez disposer des éléments suivants :
 {: #custom-dash-config}
 Utilisez le tableau de bord {{site.data.keyword.amafull}} pour configurer l'authentification personnalisée.
 
-1. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amafull}}. 
+1. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amafull}}.
 1. Dans l'onglet **Gérer**, activez **Autorisation**.
-1. Développez la section **Personnalisé**. 
+1. Développez la section **Personnalisé**.
 1. Entrez le **Nom de domaine**, **URL de fournisseur d'identité personnalisé**. La valeur **Vos URI de redirection d'application Web** n'est requise que pour les applications Web.
 
 ## Etapes suivantes

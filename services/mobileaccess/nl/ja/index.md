@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-11-15"
 
 ---
 
@@ -23,6 +23,8 @@ lastupdated: "2016-11-07"
  * {{site.data.keyword.amashort}} ダッシュボードを使用して、{{site.data.keyword.amashort}} サービスを作成します。サービスを既存のバックエンド・アプリケーションにバインドし、{{site.data.keyword.amashort}} ダッシュボードで構成することができます。
 
    MobileFirst Services Starter を使用すると、カスタム・バックエンド・ロジックを実装するために、IBM {{site.data.keyword.Bluemix_notm}} で稼働する Node.js ランタイムのインスタンスを取得します。セキュリティー、データ、プッシュ、およびモニターの各機能を提供する一連のコア・モバイル・サービスは、その Node.js アプリにバインドされています。{{site.data.keyword.Bluemix_notm}} Node.js アプリが作成されたら、 開発環境をセットアップし、{{site.data.keyword.Bluemix_notm}} モバイル・サービスの SDK の使用を開始できます。SDK を使用すると、単純な API 呼び出しを使用して、クラウド・アプリにバインドされているサービスにアクセスできます。
+
+	プロジェクト、アプリケーション、およびサービスの作成方法と処理方法について詳しくは、[IBM Bluemix モバイル・ダッシュボード](https://console.{DomainName}/docs/mobile/index.html)を参照してください。
 
 2. サーバー・サイド・リソースを保護します。
 

@@ -26,10 +26,9 @@ Use o painel do {{site.data.keyword.amafull}} para configurar a autenticação c
 1. Abra o seu serviço no painel do {{site.data.keyword.amafull}}.
 1. Na guia **Gerenciar**, acione
 **Autorização**.
-1. Expanda a seção **Customizado**. 
+1. Expanda a seção **Customizado**.
 1. Insira o **Nome do domínio**,
-**URL do provedor de identidade customizado**.
-O valor **URIs de redirecionamento de aplicativo da
+**URL do provedor de identidade customizado**. O valor **URIs de redirecionamento de aplicativo da
 web** é necessário somente para aplicativos da web.
 
 ## Próximas etapas

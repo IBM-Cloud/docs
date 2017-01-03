@@ -12,9 +12,9 @@ lastupdated: "2016-11-03"
 # Autenticando usuários com as credenciais do Google
 {: #google-auth}
 
-É possível configurar o serviço {{site.data.keyword.amafull}} para proteger recursos usando o Google como provedor de identidade. 
-Os usuários do seu aplicativo móvel ou da Web podem usar suas
-credenciais do Google para autenticação.{:shortdesc}
+É possível configurar o serviço {{site.data.keyword.amafull}} para proteger recursos usando o Google como provedor de identidade. Os usuários do seu aplicativo móvel ou da Web podem usar suas
+credenciais do Google para autenticação.
+{:shortdesc}
 
 **Importante**: não é necessário instalar separadamente o client SDK fornecido pelo Google. O Google SDK é instalado automaticamente por gerenciadores de dependência quando você configura o {{site.data.keyword.amashort}} client SDK.
 

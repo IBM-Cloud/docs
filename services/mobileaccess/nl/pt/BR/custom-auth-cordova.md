@@ -2,9 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-11-22"
 
 ---
+
+{:codeblock:.codeblock}
+
 
 # Configurando a autenticação customizada para seu aplicativo {{site.data.keyword.amashort}} Cordova
 {: #custom-cordova}
@@ -13,14 +16,29 @@ Instrua seu aplicativo Cordova para usar autenticação personalizada e o client
 
 ## Antes de Começar
 {: #before-you-begin}
-* Um recurso que seja protegido por uma instância do serviço {{site.data.keyword.amashort}} que está configurado para usar um provedor de identidade customizado (consulte [Configurando autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).   
-* Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique no botão **Opções móveis**. O valor `tenantId` (também conhecido como `appGUID`) é exibido no campo **App GUID / TenantId**. Você precisará desse valor para inicializar o Gerenciador de Autorização.
-* Seu nome de **Domínio**. Este é o valor que você especificou no campo **Nome do domínio** da seção **Customizado** no guia **Gerenciamento** do painel {{site.data.keyword.amashort}}.
-* A {{site.data.keyword.Bluemix_notm}} **Região**. É possível encontrar a sua região {{site.data.keyword.Bluemix_notm}} atual no cabeçalho, próximo ao ícone **Avatar** ![ícone de avatar](images/face.jpg "ícone de avatar"). O valor da região que aparece deve ser um dos seguintes: `US South`, `United Kingdom` ou `Sydney`. A sintaxe exata das constantes SDK correspondentes é fornecida nos exemplos de código.
+* Um recurso que seja protegido por uma instância do
+serviço {{site.data.keyword.amashort}} que está
+configurado para usar um provedor de identidade customizado
+(consulte
+[Configurando autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique no botão **Opções móveis**. O valor
+`tenantId` (também conhecido como
+`appGUID`) é exibido no campo **App
+GUID / TenantId**. Você precisará desse valor para
+inicializar o Gerenciador de Autorização.
+* Seu nome de **Domínio**. Este é o
+valor que você especificou no campo **Nome do
+domínio** da seção **Customizado**
+no guia **Gerenciamento** do painel {{site.data.keyword.amashort}}.
+* A {{site.data.keyword.Bluemix_notm}}
+**Região**. É possível encontrar a sua região
+{{site.data.keyword.Bluemix_notm}} atual no cabeçalho,
+próximo ao ícone **Avatar**
+![ícone de avatar](images/face.jpg "ícone de avatar"). O valor da região que aparece deve ser um dos seguintes: `US South`, `United Kingdom` ou `Sydney`. A sintaxe exata das constantes SDK correspondentes é fornecida nos exemplos de código.
 
 Para obter informações adicionais, consulte as seguintes informações:
- * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html). Isso mostra como configurar o serviço {{site.data.keyword.amashort}} para autenticação customizada. Aqui você define o valor **Domínio**. 
- * [Configurando o Cordova SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html).Informações sobre como configurar o aplicativo cliente Cordova.
+ * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html). Isso mostra como configurar o serviço {{site.data.keyword.amashort}} para autenticação customizada. Aqui você define o valor **Domínio**.
+ * [Configurando o Cordova SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html). Informações sobre como configurar o aplicativo cliente Cordova.
  * [Usando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html). Como autenticar usuários com um provedor de identidade customizado.
  * [Criando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html). Alguns exemplos de como um provedor de identidade customizado funciona. 
 
@@ -32,6 +50,7 @@ Inicialize o SDK passando o parâmetro `< applicationBluemixRegion>` no arquivo 
 ```JavaScript
 BMSClient.initialize("<applicationBluemixRegion>");
 ```
+{: codeblock}
 
 Substitua `<applicationBluemixRegion>` pela sua região (consulte [Antes de iniciar](#before-you-begin)). 
  
@@ -48,6 +67,7 @@ var customAuthenticationListener = {
 	onAuthenticationFailure: function(info){...}
 }
 ```
+{: codeblock}
 
 Cada método manipula uma fase diferente de um processo de autenticação.
 
@@ -57,6 +77,7 @@ Esse método é chamado quando um desafio de autenticação customizado é receb
 ```JavaScript
 onAuthenticationChallengeReceived: function(authenticationContext, challenge) {...}
 ```
+{: codeblock}
 
 * `authenticationContext`: fornecido pelo {{site.data.keyword.amashort}} client SDK para que o desenvolvedor possa relatar respostas de desafio ou falha de autenticação durante a coleta de credenciais, como o cancelamento da solicitação de autenticação pelo usuário.
 * `challenge`: um objeto JSON que contém um desafio de autenticação customizado, conforme retornado por um provedor de identidade customizado.
@@ -66,12 +87,14 @@ Ao chamar o método `onAuthenticationChallengeReceived`, o {{site.data.keyword.a
 ```JavaScript
 onAuthenticationSuccess: function(info){...}
 ```
+{: codeblock}
 
 Este método é chamado após uma autenticação bem-sucedida. Os argumentos incluem um objeto JSON opcional que contém informações estendidas sobre o sucesso da autenticação.
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
+{: codeblock}
 
 Esse método é chamado após uma falha de autenticação. Os argumentos incluem um objeto JSON opcional que contém informações estendidas sobre a falha de autenticação.
 
@@ -82,10 +105,17 @@ O valor `authenticationContext` é fornecido como um argumento para o método `o
 
 ```JavaScript
 authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
+```
+{: codeblock}
 
+```JavaScript
 authenticationContext.submitAuthenticationFailure(info);
 ```
-O código a seguir demonstra como um listener de autorização do cliente pode coletar credenciais, lidar com desafios e fornecer respostas de autenticação.
+{: codeblock}
+
+O código a seguir demonstra como um listener de autenticação do cliente pode coletar
+credenciais, lidar com desafios e fornecer respostas de autenticação.
+
 ## Implementação de amostra de um fluxo de trabalho do listener de autenticação customizado
 {: #custom-cordova-authlisten-sample}
 
@@ -118,21 +148,21 @@ var customAuthenticationListener = {
 		console.log("onAuthenticationSuccess :: ", info);
 	},
 
-	onAuthenticationFailure: function(info){
-		console.log("onAuthenticationFailure :: ", info);
-	}
+	onAuthenticationFailure: function(info){ 		console.log("onAuthenticationFailure :: ", info); 	}
 }
 ```
+{: codeblock}
 
 ## Registrando um listener de autenticação customizado no WebView Cordova
 {: #custom-cordova-authreg}
 
-Após criar um listener de autenticação customizado, você deverá registrá-lo com `BMSClient` antes de poder iniciar o uso. Inclua o código a seguir no aplicativo.  Chame esse código antes de enviar quaisquer solicitações para seus recursos protegidos.
+Após criar um listener de autenticação customizado, você deverá registrá-lo com `BMSClient` antes de poder iniciar o uso. Inclua o código a seguir em seu aplicativo.  Chame esse código antes de enviar quaisquer solicitações para seus recursos protegidos.
 
 ```Java
 BMSClient.registerAuthenticationListener(<realmName>, customAuthenticationListener);
 ```
-Use o `realmName` especificado no painel do {{site.data.keyword.amashort}}.
+{: codeblock}
+ Use o `realmName` especificado no painel do {{site.data.keyword.amashort}}.
 
 ## Configure o Gerenciador de autorização no código nativo
 
@@ -145,6 +175,7 @@ String tenantId = "<tenantId>";
 MCAAuthorizationManager.createInstance(this.getApplicationContext(),tenantId);
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 
 **iOS Objective-C** (incluir ao
 `AppDelegate.m`)
@@ -161,6 +192,7 @@ Registre seu Gerenciador de autorização de acordo com sua versão do Xcode.
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
+{: codeblock}
 
 Nota: substitua `your_module_name` pelo nome do módulo do seu projeto, por exemplo, se o nome do seu módulo for `Cordova`, deve ser `#import "Cordova-Swift.h"`. Para localizar o nome do módulo, acesse **Construir configurações > Pacote > Nome do módulo do produto**.
 
@@ -182,8 +214,7 @@ Deve-se ter um aplicativo que foi criado com o modelo do {{site.data.keyword.mob
 
 
 1. Envie uma solicitação para o terminal protegido do aplicativo backend móvel em seu navegador abrindo `{applicationRoute}/protected`, por exemplo, `http://my-mobile-backend.mybluemix.net/protected`.
- O terminal `/protected` de um aplicativo backend móvel criado com o modelo {{site.data.keyword.mobilefirstbp}} está protegido com o {{site.data.keyword.amashort}}. 
-O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o cliente SDK {{site.data.keyword.amashort}}. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
+ O terminal `/protected` de um aplicativo backend móvel criado com o modelo {{site.data.keyword.mobilefirstbp}} está protegido com o {{site.data.keyword.amashort}}. O terminal pode ser acessado somente por aplicativos móveis que sejam instrumentados com o cliente SDK {{site.data.keyword.amashort}}. Como resultado, uma mensagem `Unauthorized` é exibida em seu navegador.
 
 1. Use seu aplicativo Cordova para fazer solicitação para o mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient` e registrar o AuthenticationListener customizado.
 
@@ -197,6 +228,7 @@ O terminal pode ser acessado somente por aplicativos móveis que sejam instrumen
 	var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 	
 	Substitua `<
 your-application-route>` pela URL do aplicativo backend

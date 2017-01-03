@@ -17,20 +17,20 @@ Para utilizar Facebook como proveedor de identidad en las aplicaciones de {{site
 **Nota:** si bien el SDK de Objective-C sigue recibiendo soporte, y sigue considerándose el SDK principal para {{site.data.keyword.Bluemix}} Mobile Services, está previsto dejar de utilizarlo en unos meses en favor del SDK de Swift (consulte [Configuración de SDK de Swift para iOS](facebook-auth-ios-swift-sdk.html)).
 
 ## Antes de empezar
-{: #facebook-auth-ios-before}
+{: #before-you-begin}
 
 Debe tener lo siguiente:
 * Un proyecto de iOS configurado para funcionar con CocoaPods.  Para obtener información, consulte **Instalar CocoaPods** en [Configuración del SDK para iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
    **Nota:** no es necesario que instale el SDK de cliente {{site.data.keyword.amashort}} principal antes de proceder.
 * Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de un programa de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
-* El valor de **AppGUID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse el botón **Opciones móviles**. El valor `appGUID` (también conocido como `tenantId`) se muestra en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización. 
-* Un ID de aplicación de Facebook. Para obtener más información, consulte [Creación de una aplicación en el sitio web de Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* El valor de **AppGUID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse el botón **Opciones móviles**. El valor `appGUID` (también conocido como `tenantId`) se muestra en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización.
+* Un ID de aplicación y una aplicación de Facebook. Para obtener más información, consulte [Creación de una aplicación en el sitio web de Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Configuración de la aplicación de Facebook para la plataforma iOS
 {: #facebook-auth-ios-config}
 En el sitio Facebook for Developers:
 
-1. Inicie la sesión en su cuenta en [Facebook for Developers](https://developers.facebook.com). Para obtener información sobre cómo crear una nueva app, consulte https://console. {DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Inicie la sesión en su cuenta en [Facebook for Developers](https://developers.facebook.com). 
 
 1. Asegúrese de que la plataforma iOS se haya añadido a la app. Cuando añada o configure la plataforma iOS, deberá especificar el valor de **bundleId** de la aplicación iOS. Para encontrar **bundleId** de la aplicación de iOS, busque el **Identificador de paquete** en el archivo `info.plist` o el separador **General** del proyecto Xcode.
 
@@ -47,7 +47,7 @@ Después de haber configurado el ID y la aplicación de Facebook para dar servic
 
 1. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}.
 1. En el separador **Gestionar**, active **Autorización**.
-	1. Expanda la sección **Facebook**. 
+	1. Expanda la sección **Facebook**.
 	1. Añada el **ID de aplicación de Facebook** y pulse **Guardar**.
 
 ## Configuración del SDK del cliente de cliente de Facebook de {{site.data.keyword.amashort}} para iOS
@@ -182,7 +182,7 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
 		1. Defina el valor en la ubicación del archivo `BridgingHeader.h`, por ejemplo:`$(SRCROOT)/MyApp/BridgingHeader.h`.
 		1. Asegúrese de que la cabecera puente se selecciona en Xcode al crear el proyecto. No debería ver mensajes de error.
 
-2. Inicialice el SDK del cliente.	Para obtener información sobre cómo obtener los valores `applicationRoute` y `applicationGUID`, consulte [Antes de empezar](#before-you-begin)).
+2. Inicialice el SDK del cliente.	Para obtener información sobre cómo obtener los valores `applicationRoute` y `applicationGUID`, consulte [Antes de empezar](#before-you-begin).
 
 	####Objective-C
 	{: #approute-objc}
@@ -201,8 +201,7 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
 	 							backendGUID: "applicationGUID")
 	```
 
-1. Inicialice `AuthorizationManager` pasando el parámetro `tenantId` del servicio {{site.data.keyword.amashort}}. Consulte [Antes de empezar].
-(#before-you-begin)).
+1. Inicialice `AuthorizationManager` pasando el parámetro `tenantId` del servicio {{site.data.keyword.amashort}}. Consulte [Antes de empezar](#before-you-begin).
 
 	####Objective-C
 	{: #authman-objc}

@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-06"
+lastupdated: "2016-11-24"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -28,7 +29,7 @@ Vous devez disposer des éléments suivants :
 * Route de votre application. Il s'agit de l'URL de votre application back end.
 * Valeur de votre `tenantId`. Ouvrez votre tableau de bord de service {{site.data.keyword.amashort}}. Cliquez sur **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de ces valeurs pour l'initialisation du logiciel SDK et l'envoi de demandes au service de back-end.
 *  Trouvez la région où votre service {{site.data.keyword.Bluemix_notm}} est hébergé. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar") dans la barre de menus. La valeur de région doit être l'une des suivantes : **US South**, **Sydney** ou **UK**. Les valeurs des constantes SDK exactes qui correspondent à ces noms sont indiquées dans les exemples de code.
-* Un ID d'application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le site Web Facebook for Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* Un ID d'application et une application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le site Web Facebook for Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
 
@@ -41,7 +42,7 @@ Les étapes requises pour configurer l'intégration de l'authentification Facebo
 * [Configuration de MCA pour l'authentification Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-mca). Cette fonctionnalité configure votre service {{site.data.keyword.amashort}} sur le serveur {{site.data.keyword.Bluemix}} pour l'authentification Facebook Android.
 
 
-### Configuration du SDK client Facebook de {{site.data.keyword.amashort}} pour Android
+### Configuration du SDK client Facebook de {{site.data.keyword.amashort}} pour la plateforme Android
 {: #configure_android}
 
 Le SDK du client Facebook de {{site.data.keyword.amashort}} doit être ajouté par Gradle dans votre projet d'application Android natif.
@@ -58,6 +59,7 @@ Le SDK du client Facebook de {{site.data.keyword.amashort}} doit être ajouté p
     	// autres dépendances
 	}
 	```
+	{: codeblock}
 
 2. Cliquez sur **Tools (Outils) > Android > Sync Project with Gradle Files (Synchroniser le projet avec les fichiers Gradle)** pour synchroniser votre projet avec Gradle.
 
@@ -71,6 +73,7 @@ Le SDK du client Facebook de {{site.data.keyword.amashort}} doit être ajouté p
 		<string name="facebook_app_id">"<facebook_app_id>"</string>
 	</resources>
 	```
+	{: codeblock}
 
 4. Dans le fichier `AndroidManifest.xml` de votre projet Android (`android/manifests/AndroidManifest.xml`) :
 
@@ -86,6 +89,7 @@ Le SDK du client Facebook de {{site.data.keyword.amashort}} doit être ajouté p
     <activity ...../>
     </application>
     ```
+    {: codeblock}
 
    * Ajoutez un élément Facebook activity sous vos activités existantes :
 
@@ -101,6 +105,7 @@ Le SDK du client Facebook de {{site.data.keyword.amashort}} doit être ajouté p
         />
     </application>
     ```
+    {: codeblock}
 
 5. Ajoutez le code suivant à votre code Activity Java.
 
@@ -112,6 +117,7 @@ Le SDK du client Facebook de {{site.data.keyword.amashort}} doit être ajouté p
 	      .onActivityResultCalled(requestCode, resultCode, data);
 	}
 	```
+	{: codeblock}
 
 ### Initialisez le Gestionnaire d'autorisations dans votre code Android natif
 {: #initialize_android}
@@ -124,6 +130,7 @@ MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.create
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListener(this);
 ```
+{: codeblock}
 
 
 ## Configuration de la plateforme iOS
@@ -143,7 +150,7 @@ Activez le partage de chaîne de certificats, `Keychain Sharing`. Accédez à l'
 
 
 
-### Initialisez le Gestionnaire d'autorisations {{site.data.keyword.amashort}} dans Objective-C 
+### Initialisez le Gestionnaire d'autorisations {{site.data.keyword.amashort}} dans Objective-C
 {: #initialize_objc}
 
 Le Gestionnaire d'autorisations doit être initialisé dans le code Objective-C natif du fichier `app-delegate.m `, en fonction de votre version de Xcode.
@@ -175,6 +182,7 @@ Le Gestionnaire d'autorisations doit être initialisé dans le code Objective-C 
 	}
 
 ```
+{: codeblock}
 
 **Remarque :** le nom du fichier d'en-têtes importé est composé du nom de votre module concaténé à la chaîne `-Swift.h`, par exemple, si le nom de votre module est `Cordova` alors la ligne d'importation est `#import "Cordova-Swift.h"`. Pour trouver le nom du module, allez à
 `Build Settings` > `Packaging` > `Product Module Name`.
@@ -190,6 +198,7 @@ Pour toutes les plateformes, utilisez le code JavaScript suivant dans votre WebV
 ```javascript
 BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
 Remplacez `<applicationBluemixRegion>` par votre région (voir [Avant de commencer](#facebook-auth-before)).
 
@@ -223,6 +232,7 @@ protégée par {{site.data.keyword.amashort}}. Un message signalant l'interdicti
 	var request = new BMSRequest("<applicationRoute}/protected>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 
 1. Lancez votre application. Un écran de connexion Facebook s'affiche :
 

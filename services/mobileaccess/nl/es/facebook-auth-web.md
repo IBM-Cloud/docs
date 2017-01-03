@@ -2,9 +2,10 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-12-04"
 
 ---
+
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -30,11 +31,12 @@ Debe tener lo siguiente:
 
 Para utilizar Facebook como proveedor de identidad en su sitio web, debe añadir y configurar la plataforma de sitio web en su aplicación de Facebook.
 
-1. Inicie la sesión en su cuenta en el sitio [Facebook for Developers](https://developers.facebook.com). Para obtener información sobre cómo crear una nueva app, consulte [Creación de una aplicación en el sitio web de Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
-1. Anote el **ID de aplicación** y el **Secreto de la aplicación**. Necesitará estos valores al configurar el proyecto web para la autenticación de Facebook en el panel de control de Mobile Client Access. 
+1. Inicie la sesión en su cuenta en el sitio [Facebook for Developers](https://developers.facebook.com). 
+	Para obtener información sobre cómo crear una nueva app, consulte [Creación de una aplicación en el sitio web de Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Anote el **ID de aplicación** y el **Secreto de la aplicación**. Necesitará estos valores al configurar el proyecto web para la autenticación de Facebook en el panel de control de Mobile Client Access.
 1. En la **Lista de productos**, seleccione **Inicio de sesión de Facebook**.
 4. Añada la plataforma **Web**, en el caso de que no exista.
-6. Especifique el URI de punto final de devolución de llamada del servidor de autorización en el recuadro **URI de redirección de OAuth válidos**. Puede añadir este valor después de configurar el servicio de {{site.data.keyword.amashort}} en los pasos siguientes. 
+6. Especifique el URI de punto final de devolución de llamada del servidor de autorización en el recuadro **URI de redirección de OAuth válidos**. Puede añadir este valor después de configurar el servicio de {{site.data.keyword.amashort}} en los pasos siguientes.
 7. Guarde los cambios realizados.
 
 
@@ -45,10 +47,10 @@ Una vez que tenga el ID de la aplicación de Facebook y el Secreto de la aplicac
 
 1. Abra el panel de control del servicio de {{site.data.keyword.amashort}}.
 1. En el separador **Gestionar**, active **Autorización**.
-1. Expanda la sección **Facebook**. 
+1. Expanda la sección **Facebook**.
 1. Seleccione **Añadir Facebook a una app web**.
-5. Anote el valor del recuadro de **URI de redireccionamiento de Mobile Client Access para Facebook for Developers**. Necesita este valor para añadirlo en el recuadro **URI de redirección de OAuth válido** en el **Inicio de sesión de Facebook** del portal de los desarrolladores de Facebook. 
-6. Especifique el **ID de app** y el **Secreto de la app** de Facebook que ha obtenido de sitio web de Facebook for Developers. 
+5. Anote el valor del recuadro de **URI de redireccionamiento de Mobile Client Access para Facebook for Developers**. Necesita este valor para añadirlo en el recuadro **URI de redirección de OAuth válido** en el **Inicio de sesión de Facebook** del portal de los desarrolladores de Facebook.
+6. Especifique el **ID de app** y el **Secreto de la app** de Facebook que ha obtenido de sitio web de Facebook for Developers.
 7. Especifique el URI de redireccionamiento en las **URI de redireccionamiento de la aplicación web**. Este valor es para que se acceda a la URI de redireccionamiento una vez que se haya completado el proceso de autorización, y que lo determine el desarrollador.
 8. Pulse **Guardar**.
 
@@ -56,7 +58,7 @@ Una vez que tenga el ID de la aplicación de Facebook y el Secreto de la aplicac
 ## Implementación del flujo de autorización de {{site.data.keyword.amashort}} utilizando Facebook como proveedor de identidad
 {: #facebook-auth-flow}
 
-La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instancia de servicio de {{site.data.keyword.amashort}} y contiene propiedades necesarias para el proceso de autorización. Consta de un objeto JSON y se puede ver en el separador **Credenciales de servicio** del panel de control del servicio de {{site.data.keyword.amashort}}. 
+La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instancia de servicio de {{site.data.keyword.amashort}} y contiene propiedades necesarias para el proceso de autorización. Consta de un objeto JSON y se puede ver en el separador **Credenciales de servicio** del panel de control del servicio de {{site.data.keyword.amashort}}.
 
 Para iniciar el proceso de autorización:
 
@@ -106,7 +108,7 @@ Para iniciar el proceso de autorización:
 			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
 			var clientId = mcaCredentials.clientId;
 			var redirectUri = "http://some-server/oauth/callback";
-			// Your Web application redirect URI
+			// Your Web application redirect URI   
 
 			var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;   

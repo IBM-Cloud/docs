@@ -5,9 +5,10 @@ copyright:
 lastupdated: "2016-11-02"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-
+{:codeblock:.codeblock}
 
 
 # 配置適用於 {{site.data.keyword.amashort}} Android 應用程式的自訂鑑別
@@ -21,10 +22,10 @@ lastupdated: "2016-11-02"
 開始之前，您必須具有：
 
 * 配置為使用自訂身分提供者之 {{site.data.keyword.amashort}} 服務實例所保護的資源（請參閱[配置自訂鑑別](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。  
-* **租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
+* **承租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
 * **領域**名稱。這是您在 {{site.data.keyword.amashort}} 儀表板的**管理**標籤上，**自訂**區段內的**領域名稱**欄位中指定的值。
 * 後端應用程式的 URL（**應用程式路徑**）。在傳送要求至後端應用程式的受保護端點時，將需要此值。
-* {{site.data.keyword.Bluemix_notm}} **地區**。您可以在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 旁邊的標頭中，找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區。出現的地區值應該是下列其中一項：`US South`、`United Kingdom` 或 `Sydney`，並對應至 WebView Javascript 程式碼中所需的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
+* {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：`美國南部`、`雪梨`或`英國`，並對應至 WebView Javascript 程式碼中所需的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
 
 如需相關資訊，請參閱下列資訊：
  * [開始使用 {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
@@ -52,6 +53,7 @@ lastupdated: "2016-11-02"
     	// other dependencies  
 	}
 	```
+	{: codeblock}
 
 1. 將專案與 Gradle 同步化。按一下**工具 > Android > 將專案與 Gradle 檔案同步化**。
 
@@ -61,12 +63,14 @@ lastupdated: "2016-11-02"
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
+	{: codeblock}
 
 1. 起始設定 SDK。放置起始設定碼的一般（但非強制）位置是在 Android 應用程式中主要活動的 `onCreate` 方法。
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 ```
+	{: codeblock}
 
 將 `BMSClient.REGION_UK` 取代為 {{site.data.keyword.amashort}} 地區。如需取得這些值的相關資訊，請參閱[開始之前](#before-you-begin)。
 	
@@ -78,11 +82,12 @@ lastupdated: "2016-11-02"
 
 ### onAuthenticationChallengeReceived 方法
 {: #custom-onAuth}
-從 {{site.data.keyword.amashort}} 服務接收自訂鑑別盤查時，會呼叫此方法。
+從 {{site.data.keyword.amashort}} 服務收到自訂鑑別盤查時，會呼叫此方法。
 
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+{: codeblock}
 
 
 #### 引數
@@ -96,19 +101,21 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 
 ### onAuthenticationSuccess 方法
 {: #custom-android-authlistener-onsuccess}
-在成功鑑別之後，會呼叫此方法。引數包括「Android 環境定義」以及內含鑑別成功延伸資訊的選用 JSONObject。
+在成功鑑別之後，會呼叫此方法。引數包含「Android 環境定義」以及內含鑑別成功延伸資訊的選用 JSONObject。
 
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ### onAuthenticationFailure 方法
 {: #custom-android-authlistener-onfail}
-在鑑別失敗之後，會呼叫此方法。引數包括「Android 環境定義」以及選用性的 JSONObject，其中包含鑑別失敗的延伸資訊。
+在鑑別失敗之後，會呼叫此方法。引數包含「Android 環境定義」以及選用性的 JSONObject，其中包含鑑別失敗的延伸資訊。
 
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ## AuthenticationContext 介面
 {: #custom-android-authcontext}
@@ -118,10 +125,12 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+{: codeblock}
 
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+{: codeblock}
 
 ## 自訂 AuthenticationListener 範例實作
 {: #custom-android-samplecustom}
@@ -181,6 +190,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	}
 }
 ```
+{: codeblock}
 
 ## 登錄自訂 AuthenticationListener
 {: #custom-android-register}
@@ -194,6 +204,7 @@ mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuth
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
+{: codeblock}
 
 
 在程式碼中：
@@ -207,7 +218,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ### 測試之前
 {: #custom-android-testing-before}
-必須要有應用程式的資源位於 `/protected` 端點而受 {{site.data.keyword.amashort}} 所保護。
+您必須具有資源位於 `/protected` 端點且受 {{site.data.keyword.amashort}} 所保護的應用程式。
 
 
 1. 從瀏覽器中將要求傳送至行動後端應用程式的受保護端點 (`{applicationRoute}/protected`)，例如 `http://my-mobile-backend.mybluemix.net/protected`。如需取得 `{applicationRoute}` 值的相關資訊，請參閱[開始之前](#before-you-begin)。 
@@ -235,7 +246,8 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 			}
 		}
 	});
-```
+	```
+	{: codeblock}
 	
 1. 	當要求成功時，LogCat 工具中會有下列輸出：
 
@@ -246,6 +258,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+ {: codeblock}
 
 
  如果您在使用者登入之後呼叫此程式碼，則會將使用者登出。使用者嘗試再次登入時，必須再次回答從伺服器收到的盤查。

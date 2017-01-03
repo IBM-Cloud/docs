@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-11-15"
 
 ---
 
@@ -11,8 +11,7 @@ lastupdated: "2016-11-07"
 {: #gettingstarted}
 
 Inclua segurança em seu app móvel com o serviço {{site.data.keyword.amafull}}. É possível configurar a autorização do cliente para acessar recursos de
-backend protegidos em execução no {{site.data.keyword.Bluemix_notm}}. 
-Use provedores de identidade (Google e Facebook) ou identidades
+backend protegidos em execução no {{site.data.keyword.Bluemix_notm}}. Use provedores de identidade (Google e Facebook) ou identidades
 customizadas para autenticar usuários e conceder acesso a
 recursos backend protegidos e apps da web.
 {:shortdesc}
@@ -27,17 +26,22 @@ Para fazer com que o serviço {{site.data.keyword.amashort}} funcione:
 serviço desvinculado:
  * Crie um aplicativo usando o modelo do
 {{site.data.keyword.Bluemix_notm}}
-**MobileFirst Services Starter** no catálogo. 
-Isso cria um limite de serviço
+**MobileFirst Services Starter** no catálogo. Isso cria um limite de serviço
 {{site.data.keyword.amashort}}
 para um aplicativo backend
 {{site.data.keyword.Bluemix_notm}}.
  * Crie um serviço {{site.data.keyword.amashort}}
-usando o painel {{site.data.keyword.amashort}}. É
+usando o painel {{site.data.keyword.amashort}}.  É
 possível ligar o serviço a um aplicativo backend existente e
 configurá-lo no painel {{site.data.keyword.amashort}}.
 
-   Ao usar o MobileFirst Services Starter, você obtém uma instância de um tempo de execução do Node.js que é executada no IBM {{site.data.keyword.Bluemix_notm}} para implementar sua lógica de backend customizada. Um conjunto de serviços móveis principais que fornecem funções de segurança, dados, push e monitoramento está ligado a esse app Node.js. Depois que o {{site.data.keyword.Bluemix_notm}} Node.js for criado, é possível configurar seu ambiente de desenvolvimento e começar a usar os SDKs de serviços móveis do {{site.data.keyword.Bluemix_notm}}. É possível usar os SDKs para acessar os serviços que estão ligados ao seu app em nuvem com chamadas API simples.
+   Ao usar o MobileFirst Services Starter, você obtém uma instância de um tempo de execução do Node.js que é executada no IBM {{site.data.keyword.Bluemix_notm}} para implementar sua lógica de backend customizada. 
+Um conjunto de serviços móveis principais que fornece segurança, dados, push e funções de
+monitoramento está vinculado a esse app Node.js. Após o app Node.js do {{site.data.keyword.Bluemix_notm}} ser criado, será possível configurar seu ambiente de desenvolvimento e iniciar o uso dos SDKs do {{site.data.keyword.Bluemix_notm}} Mobile Services. É possível usar os SDKs para acessar os serviços que estão ligados ao seu app em nuvem com chamadas API simples.
+
+	Para obter mais informações sobre como criar e trabalhar com projetos, aplicativos
+e serviços, veja [painel do
+IBM Bluemix Mobile](https://console.{DomainName}/docs/mobile/index.html).
 
 2. Recursos seguros do lado do servidor.
 
@@ -67,8 +71,7 @@ configurá-lo no painel {{site.data.keyword.amashort}}.
    {: #web-development}
 
    O serviço {{site.data.keyword.amashort}} pode
-proteger seu aplicativo da web, não requerendo SDK especial. É possível alavancar diferentes provedores de identidade, além da proteção fornecida pelo serviço {{site.data.keyword.amashort}}. A integração do {{site.data.keyword.amashort}} permite que qualquer aplicativo da web, independentemente da tecnologia que ele implementa, aproveite o protocolo OAuth2. 
-Para obter informações sobre como configurar seu
+proteger seu aplicativo da web, não requerendo SDK especial. É possível alavancar diferentes provedores de identidade, além da proteção fornecida pelo serviço {{site.data.keyword.amashort}}. A integração do {{site.data.keyword.amashort}} permite que qualquer aplicativo da web, independentemente da tecnologia que ele implementa, aproveite o protocolo OAuth2. Para obter informações sobre como configurar seu
 {{site.data.keyword.amashort}} aplicativo da web para
 acessar o serviço {{site.data.keyword.amashort}} usando
 diferentes provedores de identidade, consulte:
@@ -100,9 +103,9 @@ autenticação customizada para aplicativos da web](custom-auth-web.html)
 ## SDK
 {: #sdk}
 * [Core SDK (Android)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
-* [Core SDK (plug-in do Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
+* [Core SDK (Cordova plug-in)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}
 * [Core SDK (iOS - Swift) ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
-* [Core SDK (iOS - Objective-C - descontinuado) ](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
+* [Core SDK (iOS - Objective-C - Deprecated) ](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
 * [Autenticação customizada - amostra simples](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
 * [Autenticação customizada - amostra avançada](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
 

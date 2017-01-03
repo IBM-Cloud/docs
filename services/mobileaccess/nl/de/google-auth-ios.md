@@ -159,7 +159,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 
 	8. Stellen Sie sicher, dass Ihr Überbrückungsheader von Xcode aufgenommen wird, indem Sie Ihr Projekt erstellen (Build).
 
-3. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren. Ersetzen `<applicationRoute>` und `<TenantID>` durch Ihre **Route** und **Tenant-ID**.
+3. Verwenden Sie den folgenden Code, um das Client-SDK zu initialisieren.  Ersetzen `<applicationRoute>` und `<TenantID>` durch Ihre **Route** und **Tenant-ID**.
 
 	#### Objective-C:
 

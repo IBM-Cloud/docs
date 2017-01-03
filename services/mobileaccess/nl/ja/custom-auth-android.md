@@ -5,9 +5,10 @@ copyright:
 lastupdated: "2016-11-02"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-
+{:codeblock:.codeblock}
 
 
 # {{site.data.keyword.amashort}} Android アプリ用のカスタム認証の構成
@@ -53,6 +54,7 @@ lastupdated: "2016-11-02"
     	// other dependencies  
 	}
 	```
+	{: codeblock}
 
 1. プロジェクトを Gradle と同期化します。**「ツール」>「Android」>「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**とクリックします。
 
@@ -62,12 +64,15 @@ lastupdated: "2016-11-02"
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
+	{: codeblock}
 
 1. SDK を初期化します。初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
-```
+
+	```
+	{: codeblock}
 
 `BMSClient.REGION_UK` を {{site.data.keyword.amashort}} 地域に置き換えます。これらの値の取得について詳しくは、[開始する前に](#before-you-begin)を参照してください。
 	
@@ -84,6 +89,7 @@ lastupdated: "2016-11-02"
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+{: codeblock}
 
 
 #### 引数
@@ -102,6 +108,7 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ### onAuthenticationFailure メソッド
 {: #custom-android-authlistener-onfail}
@@ -110,6 +117,7 @@ void onAuthenticationSuccess(Context context, JSONObject info);
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ## AuthenticationContext インターフェース
 {: #custom-android-authcontext}
@@ -119,10 +127,12 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+{: codeblock}
 
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+{: codeblock}
 
 ## カスタム AuthenticationListener の実装例
 {: #custom-android-samplecustom}
@@ -182,6 +192,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	}
 }
 ```
+{: codeblock}
 
 ## カスタム AuthenticationListener の登録
 {: #custom-android-register}
@@ -195,6 +206,7 @@ mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuth
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
+{: codeblock}
 
 
 コードの中で次のようにします。
@@ -236,7 +248,8 @@ Client SDK が初期化され、カスタム AuthenticationListener の登録が
 			}
 		}
 	});
-```
+	```
+	{: codeblock}
 	
 1. 	要求が成功したら、LogCat ツールで以下のように出力されます。
 
@@ -247,6 +260,7 @@ Client SDK が初期化され、カスタム AuthenticationListener の登録が
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+ {: codeblock}
 
 
  ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。

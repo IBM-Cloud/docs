@@ -5,9 +5,10 @@ copyright:
 lastupdated: "2016-11-02"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-
+{:codeblock:.codeblock}
 
 
 # 针对 {{site.data.keyword.amashort}} Android 应用程序配置定制认证
@@ -24,7 +25,7 @@ lastupdated: "2016-11-02"
 * **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
 * **域名**。这是在 {{site.data.keyword.amashort}}“仪表板”的**管理**选项卡中**定制**部分的**域名**字段中指定的值。
 * 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
-* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`美国南部`、`英国`或`悉尼`，并对应于 WebView Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`US South`、`United Kingdom` 或 `Sydney`，并对应于 WebView Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
 
 有关更多信息，请参阅以下信息：
  * [{{site.data.keyword.amashort}} 入门](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
@@ -52,6 +53,7 @@ lastupdated: "2016-11-02"
     	// other dependencies  
 	}
 	```
+	{: codeblock}
 
 1. 使用 Gradle 同步项目。单击**工具 > Android > 使用 Gradle 文件同步项目**。
 
@@ -61,6 +63,7 @@ lastupdated: "2016-11-02"
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
+	{: codeblock}
 
 1. 初始化 SDK。
 在 Android 应用程序中，通常会将初始化代码放置在主 Activity 的 `onCreate` 方法中，但这不是强制性的。
@@ -69,6 +72,7 @@ lastupdated: "2016-11-02"
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
 	```
+	{: codeblock}
 
 将 `BMSClient.REGION_UK` 替换为 {{site.data.keyword.amashort}} 区域。有关获取这些值的更多信息，请参阅[开始之前](#before-you-begin)。
 	
@@ -85,6 +89,7 @@ lastupdated: "2016-11-02"
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+{: codeblock}
 
 
 #### 自变量
@@ -103,6 +108,7 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ### onAuthenticationFailure 方法
 {: #custom-android-authlistener-onfail}
@@ -111,6 +117,7 @@ void onAuthenticationSuccess(Context context, JSONObject info);
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ## AuthenticationContext 接口
 {: #custom-android-authcontext}
@@ -120,10 +127,12 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+{: codeblock}
 
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+{: codeblock}
 
 ## 定制 AuthenticationListener 的样本实现
 {: #custom-android-samplecustom}
@@ -172,6 +181,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {@Ov
 	}
 }
 ```
+{: codeblock}
 
 ## 注册定制 AuthenticationListener
 {: #custom-android-register}
@@ -185,6 +195,7 @@ mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuth
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
+{: codeblock}
 
 
 在代码中：
@@ -226,7 +237,8 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 			}
 		}
 	});
-```
+	```
+	{: codeblock}
 	
 1. 	请求成功后，将在 LogCat 工具中显示以下输出：
 
@@ -237,6 +249,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+ {: codeblock}
 
 
  如果您在用户登录之后调用此代码，那么用户将注销。用户在尝试重新登录时，必须重新回答服务器发出的质询。

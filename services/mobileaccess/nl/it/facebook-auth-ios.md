@@ -17,20 +17,20 @@ Per utilizzare Facebook come un provider di identità nelle tue applicazioni iOS
 **Nota:** mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix}}, è pianificato di abbandonarla più avanti questo anno in favore della nuova SDK Swift (consulta [Configurazione dell'SDK Swift iOS](facebook-auth-ios-swift-sdk.html)).
 
 ## Prima di cominciare
-{: #facebook-auth-ios-before}
+{: #before-you-begin}
 
 È necessario disporre di:
 * Un progetto iOS configurato per lavorare con CocoaPods.  Per ulteriori informazioni, vedi **Installa CocoaPods** in  [Configurazione dell'SDK iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
    **Nota:** non è necessario installare l'SDK {{site.data.keyword.amashort}} core prima di procedere.
 * Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un back-end {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione](index.html).
 * Il tuo valore **AppGUID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}. Fai clic sul pulsante **Opzioni per dispositivi mobili**. Il valore `appGUID` (noto anche come `tenantId`)  viene visualizzato nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione.
-* Un ID dell'applicazione Facebook. Per ulteriori informazioni, vedi [Creazione di un'applicazione nel sito web Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* Un'applicazione Facebook e l'ID applicazione. Per ulteriori informazioni, vedi [Creazione di un'applicazione nel sito web Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Configurazione della tua applicazione Facebook per la piattaforma iOS
 {: #facebook-auth-ios-config}
 Sul sito Facebook for Developers:
 
-1. Accedi al tuo account in  [Facebook for Developers](https://developers.facebook.com). Per informazioni sulla creazione di una nuova applicazione, consulta https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Accedi al tuo account in  [Facebook for Developers](https://developers.facebook.com). 
 
 1. Assicurati che la piattaforma iOS sia stata aggiunta alla tua applicazione. Quando aggiungi o configuri la piattaforma iOS devi fornire il **bundleId** della tua applicazione iOS. Per trovare il **bundleId** della tua applicazione iOS, cerca il **Bundle Identifier**
 nel file `info.plist` o nella scheda **General** del progetto Xcode.
@@ -47,11 +47,11 @@ nel file `info.plist` o nella scheda **General** del progetto Xcode.
 Dopo che hai configurato l'ID applicazione Facebook e la tua applicazione Facebook perché serva client iOS, puoi abilitare l'autenticazione Facebook in {{site.data.keyword.amashort}}.
 
 1. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}.
-1. Dalla scheda **Gestione**, attiva **Autorizzazione**.
+1. Dalla scheda **Manage**, attiva **Authorization**.
 	1. Espandi la sezione **Facebook**.
 	1. Aggiungi l'**ID applicazione Facebook** e fai clic su **Salva**.
 
-## Configurazione dell'SDK client Facebook {{site.data.keyword.amashort}} per iOS 
+## Configurazione dell'SDK client Facebook {{site.data.keyword.amashort}} per iOS
 {: #facebook-auth-ios-sdk}
 
 ### Installazione di CocoaPods
@@ -63,7 +63,7 @@ L'SDK client {{site.data.keyword.amashort}} è distribuito con CocoaPods, un ges
 
 1. Installa CocoaPods eseguendo `sudo gem install cocoapods`. Fai riferimento al [sito web CocoaPods](https://cocoapods.org/) nel caso ti occorrano ulteriori indicazioni.
 
-### Installazione dell'SDK client Facebook {{site.data.keyword.amashort}} con CocoaPods 
+### Installazione dell'SDK client Facebook {{site.data.keyword.amashort}} con CocoaPods
 {: #facebook-auth-install-cocoapods}
 
 1. Nel tuo progetto iOS, modifica il `Podfile` e la seguente riga:
@@ -184,7 +184,7 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 		1. Imposta il valore sull'ubicazione del tuo file `BridgingHeader.h`, ad esempio: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 		1. Assicurati che la tua intestazione di collegamento venga rilevata da Xcode compilando il tuo progetto. Non dovresti vedere alcun messaggio di errore.
 
-2. Inizializza l'SDK client.	Per informazioni su come ottenere `applicationRoute` e `applicationGUID`  consulta [Prima di cominciare](#before-you-begin)).
+2. Inizializza l'SDK client.	Per informazioni su come ottenere `applicationRoute` e `applicationGUID`, vedi [Prima di cominciare](#before-you-begin).
 
 	####Objective-C
 	{: #approute-objc}
@@ -203,8 +203,7 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 	 							backendGUID: "applicationGUID")
 	```
 
-1. Inizializza `AuthorizationManager` trasmettendo al servizio  {{site.data.keyword.amashort}} il parametro `tenantId`. Consulta [Prima di cominciare].
-(#before-you-begin)).
+1. Inizializza `AuthorizationManager` trasmettendo al servizio  {{site.data.keyword.amashort}} il parametro `tenantId`. Vedi [Prima di cominciare](#before-you-begin).
 
 	####Objective-C
 	{: #authman-objc}

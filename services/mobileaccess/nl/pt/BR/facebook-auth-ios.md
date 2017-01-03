@@ -20,20 +20,19 @@ favor do novo SDK do Swift (veja [Configurando o SDK do
 Swift iOS](facebook-auth-ios-swift-sdk.html)).
 
 ## Antes de Começar
-{: #facebook-auth-ios-before}
+{: #before-you-begin}
 
 Você deve ter:
 * Um projeto do iOS configurado para trabalhar com CocoaPods.  Para obter mais informações, veja **Instalar o
 CocoaPods** em [Configurando o SDK iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
    **Nota:** não é necessário instalar o {{site.data.keyword.amashort}} client SDK principal antes de continuar.
 * Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que é protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
-* Seu valor **AppGUID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. 
-Clique no botão **Opções móveis**. O valor
+* Seu valor **AppGUID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique no botão **Opções móveis**. O valor
 `appGUID` (também conhecido como
 `tenantId`) é exibido no campo **App
 GUID / TenantId**. Você precisará desse valor para
 inicializar o Gerenciador de Autorização.
-* Um ID de aplicativo do Facebook. Para obter mais
+* Um aplicativo do Facebook e um ID do aplicativo. Para obter mais
 informações, consulte
 [Criando um aplicativo no website Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
@@ -42,19 +41,15 @@ informações, consulte
 No site Facebook for Developers:
 
 1. Efetue login em sua conta em [Facebook for Developers](https://developers.facebook.com). 
-Para obter informações sobre como criar um novo aplicativo,
-consulte https://console.{
-DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
 
-1. Assegure-se de que a plataforma iOS tenha sido incluída em seu aplicativo. 
-Ao incluir ou configurar a plataforma iOS, é necessário fornecer
-o **bundleId** de seu aplicativo iOS. Para
+1. Assegure-se de que a plataforma iOS tenha sido incluída em seu app. Ao incluir ou
+configurar a plataforma iOS, será necessário fornecer o **bundleId** do
+seu aplicativo iOS. Para
 localizar o **bundleId** de seu aplicativo
 iOS, procure o **Identificador de pacote
 configurável** no arquivo
 `info.plist` ou na guia
 **Geral** do projeto Xcode.
-
 
 1. Clique em **Salvar Configurações**.
 
@@ -210,10 +205,7 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 		1. Configure o valor para o local do seu arquivo `BridgingHeader.h`, por exemplo: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 		1. Assegure-se de que seu cabeçalho de ponte esteja sendo selecionado pelo Xcode, compilando o seu projeto. Nenhuma mensagem de falha deve ser vista.
 
-2. Inicialize o client SDK.	Para informações sobre
-como obter o `applicationRoute` e o
-`applicationGUID`, consulte
-[Antes de iniciar](#before-you-begin)).
+2. Inicialize o client SDK.	Para obter informações sobre a obtenção de`applicationRoute` e `applicationGUID`, veja [Antes de iniciar](#before-you-begin).
 
 	####Objective-C
 	{: #approute-objc}
@@ -233,8 +225,7 @@ como obter o `applicationRoute` e o
 	```
 
 1. Inicialize o `AuthorizationManager` passando o parâmetro
-`tenantId` do serviço {{site.data.keyword.amashort}}. 
-Consulte [Antes de começar].(#before-you-begin)).
+`tenantId` do serviço {{site.data.keyword.amashort}}. Veja [Antes de iniciar](#before-you-begin).
 
 	####Objective-C
 	{: #authman-objc}

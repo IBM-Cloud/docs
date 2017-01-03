@@ -6,7 +6,8 @@ lastupdated: "2016-10-27"
 
 ---
 
-{:shortdesc: .shortdesc} {:codeblock:.codeblock}
+{:shortdesc: .shortdesc} 
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.amashort}} 서비스로 백엔드 리소스 보호
 {: #protecting-resources}

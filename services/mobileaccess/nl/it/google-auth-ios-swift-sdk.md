@@ -2,23 +2,26 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-12-05"
 
 ---
-{:screen:  .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Abilitazione dell'autenticazione Google per le applicazioni iOS (SDK Swift)
 {: #google-auth-ios}
 
-Utilizza l'accesso Google per autenticare gli utenti nella tua applicazione Swift iOS {{site.data.keyword.amafull}}. La nuova SDK Swift rilasciata {{site.data.keyword.amashort}} aggiunge e migliora le funzionalità fornite dalla SDK Objective-C Mobile Client Access esistente. 
+Utilizza l'accesso Google per autenticare gli utenti nella tua applicazione Swift iOS {{site.data.keyword.amafull}}. La nuova SDK Swift rilasciata {{site.data.keyword.amashort}} aggiunge e migliora le funzionalità fornite dalla SDK Objective-C Mobile Client Access esistente.
 
 **Nota:** mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix_notm}}, è pianificato di abbandonarla più avanti questo anno in favore di questa nuova SDK Swift.
 
 
-
 ## Prima di cominciare
 {: #before-you-begin}
+
 È necessario disporre di:
 
 * Un'istanza di un servizio {{site.data.keyword.amafull}} e di un'applicazione {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni su come creare un'applicazione di back-end {{site.data.keyword.Bluemix_notm}}, vedi [Introduzione](index.html).
@@ -28,13 +31,13 @@ Utilizza l'accesso Google per autenticare gli utenti nella tua applicazione Swif
 * Un progetto iOS in Xcode. Non deve essere instrumentato con l'SDK client {{site.data.keyword.amashort}}.  
 
 
-
 ## Preparazione della tua applicazione per l'accesso Google
 {: #google-sign-in-ios}
 
 Prepara la tua applicazione per l'accesso Google attenendoti alle istruzioni fornite da Google in [Google Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start-integrating).
 
 Questo processo:
+
 * prepara un nuovo progetto sul sito Google Developers,
 * crea il file `GoogleService-Info.plist` e il valore `REVERSE_CLIENT_ID` da aggiungere al tuo progetto Xcode e
 * crea l'**ID client Google** da aggiungere alla tua applicazione di back-end {{site.data.keyword.Bluemix_notm}}.
@@ -47,11 +50,11 @@ La seguente procedura ti fornisce una breve sintesi delle attività che devi ese
 
 1. Crea un progetto su Google Developer per Google Sign-In for iOS all'indirizzo https://developers.google.com/mobile/add?platform=ios.
 
-2. Aggiungi l'API Google Sign-In API al tuo progetto.
+1. Aggiungi l'API Google Sign-In API al tuo progetto.
 
-3. Richiama il `GoogleService-Info.plist`.
+1. Richiama il `GoogleService-Info.plist`.
 
-  **Importante:** quando ottieni il file `GoogleService-Info.plist`, aprilo e annota il valore di `CLIENT_ID`. Hai bisogno di questo valore per configurare l'applicazione di back-end {{site.data.keyword.amashort}}.
+   **Importante:** quando ottieni il file `GoogleService-Info.plist`, aprilo e annota il valore di `CLIENT_ID`. Hai bisogno di questo valore per configurare l'applicazione di back-end {{site.data.keyword.amashort}}.
 
 1. Aggiungi il file `GoogleService-Info.plist` al tuo progetto Xcode. Per ulteriori informazioni, vedi [Add the configuration file to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config).
 
@@ -60,12 +63,12 @@ vedi [Add URL schemes to your project](https://developers.google.com/identity/si
 
 1. Aggiorna il file `project-Bridging-Header.h` della tua applicazione con il seguente codice:
 
- ```
- #import <Google/SignIn.h>
- ```
- {: codeblock}
+	```
+	#import <Google/SignIn.h>
+	```
+	{: codeblock}
 
- Per ulteriori informazioni sull'aggiornamento del file di intestazione di collegamento,  [Enable sign-in](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in).
+	Per ulteriori informazioni sull'aggiornamento del file di intestazione di collegamento,  [Enable sign-in](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in).
 
 ## Configurazione di {{site.data.keyword.amashort}} per l'autenticazione Google
 {: #google-auth-ios-config}
@@ -87,10 +90,11 @@ Ora che hai un ID client iOS, puoi abilitare l'autenticazione Google nel servizi
 1. Apri il terminale ed esegui il comando **pod --version**. Se già hai CocoaPods installato, viene visualizzato il numero versione. Puoi passare direttamente alla sezione successiva per l'installare l'SDK.
 
 1. Se non hai CocoaPods installato, esegui:
-```
-sudo gem install cocoapods
-```
-{: codeblock}
+
+	```
+	sudo gem install cocoapods
+	```
+	{: codeblock}
 
 Per ulteriori informazioni, visita il [sito web di CocoaPods](https://cocoapods.org/).
 
@@ -101,19 +105,19 @@ Per ulteriori informazioni, visita il [sito web di CocoaPods](https://cocoapods.
 
 1. Modifica `Podfile` e aggiungi le seguenti righe alla destinazione pertinente:
 
- ```
- use_frameworks!
- pod 'BMSGoogleAuthentication'
- ```
- {: codeblock}
+	```
+	use_frameworks!
+	pod 'BMSGoogleAuthentication'
+	```
+	{: codeblock}
 
- **Nota:** se hai già installato l'SDK core {{site.data.keyword.amashort}}, puoi rimuovere questa riga: `pod 'BMSSecurity'`. Il pod `BMSGoogleAuthentication` installa tutti i frameork necessari.
+	**Nota:** se hai già installato l'SDK core {{site.data.keyword.amashort}}, puoi rimuovere questa riga: `pod 'BMSSecurity'`. Il pod `BMSGoogleAuthentication` installa tutti i frameork necessari.
 
- **Suggerimento:** puoi aggiungere `use_frameworks!` alla tua destinazione Xcode invece di averlo nel Podfile.
+	**Suggerimento:** puoi aggiungere `use_frameworks!` alla tua destinazione Xcode invece di averlo nel Podfile.
 
 1. Salva il `Podfile` ed esegui `pod install` dalla riga di comando. CocoaPods installa le dipendenze. Vedrai lo stato di avanzamento e quali componenti sono stati aggiunti.
 
- **Importante**: devi ora aprire il tuo progetto utilizzando il file `xcworkspace` che viene generato da CocoaPods. Di norma, il
+	**Importante**: devi ora aprire il tuo progetto utilizzando il file `xcworkspace` che viene generato da CocoaPods. Di norma, il
 nome è `{il-tuo-nome-progetto}.xcworkspace`.  
 
 1. Esegui `open {il-tuo-nome-progetto}.xcworkspace` dalla riga di comando per aprire il tuo spazio di lavoro del progetto iOS.
@@ -135,17 +139,17 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 
 1. Importa i framework richiesti nella classe dove vuoi utilizzare l'SDK client {{site.data.keyword.amashort}}. Aggiungi le seguenti intestazioni:
 
-	 ```Swift
+	```Swift
 	let tenantId = "<serviceTenantID>"
 	let regionName = <applicationBluemixRegion>
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: 
 		[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-	    let mcaAuthManager = MCAAuthorizationManager.sharedInstance
-	    		mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
-	 ///regionName deve essere uno dei seguenti: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom o BMSClient.Region.sydney
-	    BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+		let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+		mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+		//the regionName should be one of the following: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney   
+		BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 		GoogleAuthenticationManager.sharedInstance.register()
 		return true
 	}
@@ -153,21 +157,23 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 	// [START openurl]
 	    func application(_ application: UIApplication,
 			     open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+			return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, sourceApplication: sourceApplication, annotation: annotation)
       }
 
-	    @available(iOS 9.0, *)
-	    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+	@available(iOS 9.0, *)
+	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
 		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, options: options)
   }
 
-	 ```
+	```
+	{: codeblock}
 
- Nel codice:
- 	* Sostituisci  `<serviceTenantID>` con il valore richiamato dalle **Opzioni mobili**. 
-	* Sostituisci `<applicationBluemixRegion>` con la tua **Regione** {{site.data.keyword.Bluemix_notm}}. 
+	Nel codice:
+
+      * Sostituisci  `<serviceTenantID>` con il valore richiamato dalle **Opzioni mobili**.
+      * Sostituisci `<applicationBluemixRegion>` con la tua **Regione** {{site.data.keyword.Bluemix_notm}}. 
 	
-	Per ulteriori informazioni su come ottenere questi valori consulta [Prima di cominciare](#before-you-begin). 
+	Per ulteriori informazioni su come ottenere questi valori consulta [Prima di cominciare](#before-you-begin).
 
 
 ## Verifica dell'autenticazione
@@ -180,28 +186,29 @@ Dopo che l'SDK client è stato inizializzato e il gestore autenticazione Google 
 
 Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e disporre già di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`. Se devi configurare un endpoint `/protected`, consulta [Protezione delle risorse](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-
 1. Prova a inviare una richiesta all'endpoint protetto della tua applicazione di back-end mobile nel tuo browser desktop aprendo `{applicationRoute}/protected`.  Ad esempio `http://my-mobile-backend.mybluemix.net/protected`.
 
 1. L'endpoint `/protected` di un'applicazione di back-end mobile creato con il contenitore tipo MobileFirst Services è protetto con {{site.data.keyword.amashort}}; pertanto, possono accedere ad esso solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}. Di conseguenza, vedrai `Unauthorized` nel tuo browser del desktop.
 
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint.
 
- ```Swift
+	```Swift
 	let protectedResourceURL = "<your protected resource absolute path>"
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
   if error == nil {
-	       print ("response:\(response?.responseText), no error")
+			print ("response:\(response?.responseText), no error")
  } else {
-	       print ("error: \(error)")
- }
+			print ("error: \(error)")
+     }
 	}
 
 	request.send(completionHandler: callBack)
 
 	```
+	{: codeblock}
+
 1. Esegui la tua applicazione. Vedrai comparire una schermata di accesso Google
 
  ![immagine](images/ios-google-login.png)
@@ -210,18 +217,18 @@ Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e dispor
 
 1. La tua richiesta dovrebbe avere esito positivo. Il seguente output viene visualizzato nel log.
 
- ```
-response:Optional("Salve, questa è una risorsa protetta dell'applicazione backend mobile!"), no error
-
- ```
-{: screen}
+	```
+	response:Optional("Salve, questa è una risorsa protetta dell'applicazione backend mobile!"), no error
+	```
+	{: screen}
 
 1. Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
 
- ```
- GoogleAuthenticationManager.sharedInstance.logout(callBack)
- ```
+	```
+	GoogleAuthenticationManager.sharedInstance.logout(callBack)
+	```
+	{: codeblock}
 
-  Se richiami questo codice dopo che un utente ha eseguito l'accesso con Google e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Google per scopi di autenticazione. A tal punto, l'utente può fare clic sul nome utente <!--in the upper-right corner of the screen--> per selezionare, ed eseguire l'accesso con, un altro utente.
+	Se richiami questo codice dopo che un utente ha eseguito l'accesso con Google e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Google per scopi di autenticazione. A tal punto, l'utente può fare clic sul nome utente <!--in the upper-right corner of the screen--> per selezionare, ed eseguire l'accesso con, un altro utente.
 
-   Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.
+	Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.

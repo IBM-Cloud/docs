@@ -2,14 +2,15 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-11-15"
 
 ---
 
 # Einführung in {{site.data.keyword.amashort}}
 {: #gettingstarted}
 
-Fügen Sie mit dem {{site.data.keyword.amafull}}-Service Sicherheit zu Ihrer mobilen App hinzu. Sie können die Clientberechtigung für den Zugriff auf geschützte Back-End-Ressourcen konfigurieren, die auf {{site.data.keyword.Bluemix_notm}} ausgeführt werden. Verwenden Sie Identitätsprovider (Google und Facebook) oder angepasste Identitäten, um Benutzer zu authentifizieren und Zugriff auf geschützte Back-End-Ressourcen und Web-Apps zu gewähren.{:shortdesc}
+Fügen Sie mit dem {{site.data.keyword.amafull}}-Service Sicherheit zu Ihrer mobilen App hinzu. Sie können die Clientberechtigung für den Zugriff auf geschützte Back-End-Ressourcen konfigurieren, die auf {{site.data.keyword.Bluemix_notm}} ausgeführt werden. Verwenden Sie Identitätsprovider (Google und Facebook) oder angepasste Identitäten, um Benutzer zu authentifizieren und Zugriff auf geschützte Back-End-Ressourcen und Web-Apps zu gewähren.
+{:shortdesc}
 
 **Anmerkung:** Der {{site.data.keyword.amashort}}-Service wurde früher als Advanced Mobile Access bezeichnet.
 
@@ -18,9 +19,11 @@ Führen Sie die folgenden Schritte aus, um den {{site.data.keyword.amashort}}-Se
 
 1. Verwenden Sie zum Erstellen eines gebundenen oder nicht gebundenen Service eine der folgenden Optionen:
  * Erstellen Sie eine {{site.data.keyword.Bluemix_notm}}-Anwendung mithilfe der **MobileFirst Services Starter**-Boilerplate aus dem Katalog. Dadurch wird ein {{site.data.keyword.amashort}}-Service erstellt, der an eine {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung gebunden ist.
- * Erstellen Sie einen {{site.data.keyword.amashort}}-Service im {{site.data.keyword.amashort}}-Dashboard. Sie können den Service an eine vorhandene Back-End-Anwendung binden und ihn im {{site.data.keyword.amashort}}-Dashboard konfigurieren.
+ * Erstellen Sie einen {{site.data.keyword.amashort}}-Service im {{site.data.keyword.amashort}}-Dashboard.  Sie können den Service an eine vorhandene Back-End-Anwendung binden und ihn im {{site.data.keyword.amashort}}-Dashboard konfigurieren.
 
    Wenn Sie den Starter 'MobileFirst Services' verwenden, erhalten Sie eine Instanz einer Node.js-Laufzeit, die auf IBM {{site.data.keyword.Bluemix_notm}} aktiv ist, um Ihre angepasste Back-End-Logik zu implementieren. Ein Satz von mobilen Kernservices, die Sicherheits-, Daten-, Push- und Überwachungsfunktionen bereitstellen, wird an diese Node.js-App gebunden. Nach dem Erstellen der Node.js-App in {{site.data.keyword.Bluemix_notm}} können Sie Ihre Entwicklungsumgebung einrichten und mit der Verwendung der {{site.data.keyword.Bluemix_notm}} Mobile Services-SDKs beginnen. Sie können die SDKs verwenden, um mit einfachen API-Aufrufen auf die Services zuzugreifen, die an Ihre Cloud-App gebunden sind.
+
+	Weitere Informationen zur Erstellung von und Arbeit mit Projekten, Anwendungen und Services finden Sie im [IBM Bluemix Mobile-Dashboard](https://console.{DomainName}/docs/mobile/index.html).
 
 2. Schützen Sie serverseitige Ressourcen.
 

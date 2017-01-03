@@ -5,9 +5,10 @@ copyright:
 lastupdated: "2016-11-02"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-
+{:codeblock:.codeblock}
 
 
 # Configurazione dell'autenticazione personalizzata per l'applicazione Android {{site.data.keyword.amashort}}
@@ -18,7 +19,7 @@ Configura la tua applicazione Android con l'autenticazione personalizzata per ut
 
 ## Prima di cominciare
 {: #before-you-begin}
-Prima di iniziare devi disporre di: 
+Prima di iniziare devi disporre di:
 
 * Una risorsa che sia protetta da un'istanza del servizio {{site.data.keyword.amashort}} configurata per utilizzare un provider di identità personalizzato (consulta [Configurazione dell'autenticazione personalizzata](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
 * Il tuo valore **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}. Fai clic sul pulsante **Opzioni per dispositivi mobili**. Il valore `tenantId` (noto anche come `appGUID`)  viene visualizzato nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione.
@@ -52,6 +53,7 @@ Se disponi di un'applicazione Android strumentata con l'SDK Android {{site.data.
     	// altre dipendenze
 	}
 	```
+	{: codeblock}
 
 1. Sincronizza il tuo progetto con Gradle. Fai clic su **Tools > Android > Sync Project with Gradle Files**.
 
@@ -61,13 +63,15 @@ Aggiungi l'autorizzazione di accesso a internet sotto l'elemento `<manifest>`:
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
+	{: codeblock}
 
 1. Inizializza l'SDK.  
 	Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `onCreate` dell'attività principale nella tua applicazione Android.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
-```
+	```
+	{: codeblock}
 
 Sostituisci `BMSClient.REGION_UK` con la regione {{site.data.keyword.amashort}}. Per ulteriori informazioni su come ottenere questi valori consulta [Prima di cominciare](#before-you-begin)).
 	
@@ -84,6 +88,7 @@ Richiama questo metodo quando una richiesta di verifica dell'autenticazione pers
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+{: codeblock}
 
 
 #### Argomenti
@@ -102,6 +107,7 @@ Richiama questo metodo dopo un'autenticazione con esito positivo. Gli argomenti 
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ### Metodo onAuthenticationFailure
 {: #custom-android-authlistener-onfail}
@@ -109,6 +115,7 @@ Richiama questo metodo dopo che l'autenticazione ha esito negativo. Gli argoment
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ## Interfaccia AuthenticationContext
 {: #custom-android-authcontext}
@@ -119,10 +126,12 @@ un `AuthenticationListener` personalizzato. Devi raccogliere le credenziali e ut
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+{: codeblock}
 
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+{: codeblock}
 
 ## Implementazione di esempio di un AuthenticationListener personalizzato
 {: #custom-android-samplecustom}
@@ -183,6 +192,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	}
 }
 ```
+{: codeblock}
 
 ## Registrazione di un AuthenticationListener personalizzato
 {: #custom-android-register}
@@ -196,6 +206,7 @@ mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuth
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
+{: codeblock}
 
 
 Nel codice:
@@ -237,7 +248,8 @@ Devi disporre di un'applicazione con una risorsa protetta da {{site.data.keyword
 			}
 		}
 	});
-```
+	```
+	{: codeblock}
 	
 1. 	Quando la tua richiesta ha esito positivo, nello strumento LogCat è presente il seguente output:
 
@@ -248,6 +260,7 @@ Devi disporre di un'applicazione con una risorsa protetta da {{site.data.keyword
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+ {: codeblock}
 
 
  Se richiami questo codice dopo che un utente ha eseguito l'accesso, l'utente viene disconnesso. Quando l'utente prova ad eseguire nuovamente l'accesso, deve rispondere nuovamente alla richiesta di verifica proveniente dal server.

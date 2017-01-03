@@ -2,28 +2,31 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 设置 Android SDK
 {: #getting-started-android}
 
 在 Android 应用程序中安装 {{site.data.keyword.amafull}} 客户端 SDK，初始化该 SDK，然后对受保护和不受保护的资源发起请求。
-
-
-{:shortdesc}
+{: shortdesc}
 
 ## 开始之前
 {: #before-you-begin}
+
 您必须具有：
+
 * {{site.data.keyword.Bluemix_notm}} 应用程序的实例。
 * {{site.data.keyword.amafull}} 服务的实例。
 * **TenantID**。在 {{site.data.keyword.amafull}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
 * **应用程序路径**。这是后端应用程序的 URL。您将需要此值来向其受保护端点发送请求。
-* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`美国南部`、`悉尼`或`英国`，并对应于代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`US South`、`Sydney` 或 `United Kingdom`，并对应于代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
 * Android Studio 项目，设置为使用 Gradle。有关如何设置 Android 开发环境的更多信息，请参阅 [Google Developer Tools](http://developer.android.com/sdk/index.html)。
 
 ## 安装 {{site.data.keyword.amashort}} 客户端 SDK
@@ -47,6 +50,7 @@ lastupdated: "2016-11-03"
     	// other dependencies  
 }
 ```
+	{: codeblock}
 
 1. 使用 Gradle 同步项目。单击**工具 &gt; Android &gt; 使用 Gradle 文件同步项目**。
 
@@ -55,7 +59,8 @@ lastupdated: "2016-11-03"
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
-```
+	```
+	{: codeblock}
 
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #initalize-mca-sdk}
@@ -69,9 +74,12 @@ lastupdated: "2016-11-03"
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 						
 	```
+{: codeblock}
 
 * 将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 服务的区域。
-* 将 `<MCAServiceTenantId>` 替换为 **tenantId**。
+* 将 `<MCAServiceTenantId>` 替换为 **tenantId** 
+
+。
 有关这些值的更多信息，请参阅[开始之前](#before-you-begin)。
 
 ## 对移动后端应用程序发起请求
@@ -106,6 +114,7 @@ lastupdated: "2016-11-03"
 		}
 	});
 	```
+	{: codeblock}
 
 1. 请求成功后，将在 LogCat 实用程序中看到以下输出：
 
@@ -116,6 +125,7 @@ lastupdated: "2016-11-03"
 {: #next-steps}
 
 连接到受保护端点时，无需任何凭证。如果需要用户登录到您的应用程序，那么必须配置 Facebook、Google 或定制认证。
+
 * [Facebook](facebook-auth-android.html)
 * [Google](google-auth-android.html)
 * [定制](custom-auth-android.html)

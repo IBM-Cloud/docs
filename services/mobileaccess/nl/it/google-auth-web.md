@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -47,7 +47,7 @@ Dopo aver ottenuto il segreto e l'ID client Google, puoi abilitare l'autenticazi
 1. Apri la tua sezione **Google**.
 1. Controlla **Add Google to a Web App**
 4. Nella sezione **Configure for Web**:   
-    * Prendi nota del valore nella casella di testo **Mobile Client Access Redirect URI for Google Developer Console**. Questo è il valore che dovrai aggiungere alla casella **Authorized redirect URIs** in **Restrictions in the Client ID for Web application** di **Google Developers Portal**. 
+    * Prendi nota del valore nella casella di testo **Mobile Client Access Redirect URI for Google Developer Console**. Questo è il valore che dovrai aggiungere alla casella **Authorized redirect URIs** in **Restrictions in the Client ID for Web application** di **Google Developers Portal**.
     * Immetti il **Client ID** e il **Client Secret**.
     * Immetti l'URI di reindirizzamento in **Your Web Application Redirect URIs**. Questo valore è per l'URI di reindirizzamento a cui accedere dopo che viene completato il processo di autorizzazione e viene determinato dallo sviluppatore.
 5. Fai clic su **Save**.
@@ -61,8 +61,10 @@ La variabile di ambiente `VCAP_SERVICES` viene creata automaticamente per ogni i
 Per avviare il processo di autorizzazione:
 
 1. Richiama l'endpoint di autorizzazione (`authorizationEndpoint`) e l'ID client (`clientId`) dalle credenziali del servizio archiviate nella variabile di ambiente `VCAP_SERVICES`. 
+
 	`var cfEnv = require("cfenv");` 
-	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**Nota:** se hai aggiunto il servizio {{site.data.keyword.amashort}} prima dell'aggiunta del supporto Web potresti non avere l'endpoint token nelle credenziali del servizio. Invece, utilizza i seguenti URL, a seconda della tua regione {{site.data.keyword.Bluemix_notm}}: 
  
@@ -110,15 +112,16 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 				redirectUrl += "&client_id=" + clientId;
 				redirectUrl += "&redirect_uri=" + redirectUri;
 				res.redirect(redirectUrl);
-			}
-		} 
-	}
+			} 
+		 	} 
+	   	}
+       }
 	```
 	{: codeblock}
 
 	Tieni presente che il parametro `redirect_uri` rappresenta l'URI di reindirizzamento della tua applicazione Web e deve essere uguale al valore definito nel dashboard {{site.data.keyword.amashort}}.
 
-	Dopo il reindirizzamento dell'endpoint di autorizzazione l'utente visualizzerà un modulo di accesso da Google. Dopo che l'utente ha consesso le autorizzazioni ad accedere utilizzando l'identità Google, il servizio {{site.data.keyword.amashort}} richiama il tuo URI di reindirizzamento dell'applicazione Web fornendo il codice concesso come un parametro di query. 
+	Dopo il reindirizzamento dell'endpoint di autorizzazione l'utente visualizzerà un modulo di accesso da Google. Dopo che l'utente ha consesso le autorizzazioni ad accedere utilizzando l'identità Google, il servizio {{site.data.keyword.amashort}} richiama il tuo URI di reindirizzamento dell'applicazione Web fornendo il codice concesso come un parametro di query.
 
 ## Ottenimento dei token
 {: #google-auth-tokens}
@@ -181,13 +184,13 @@ Il passo successivo è quello di ottenere il token di accesso e i token di ident
 	```
 	{: codeblock}
 
-	Il parametro `redirect_uri` è l'URI per il reindirizzamento dopo l'esito positivo o negativo dell'autenticazione con Google+ e deve corrispondere a `redirect_uri` dal passo 1.  
+	Il parametro `redirect_uri` è l'URI per il reindirizzamento dopo l'esito positivo o negativo dell'autenticazione con Google+ e deve corrispondere a `redirect_uri` definito nel dashboard {{site.data.keyword.amashort}}.  
    
 	Assicurati di inviare questa richiesta POST entro 10 minuti, dopo i quali il codice concesso scade. Dopo 10 minuti è necessario un nuovo codice.
 
 	Il corpo della risposta POST contiene il `access_token` e il `id_token` codificati in base64.
 
-	Quando hai ricevuto l'accesso e i token di identità, puoi indicare la sessione Web come autenticata e facoltativamente conservare questi token.   
+	Quando hai ricevuto l'accesso e i token di identità, puoi indicare la sessione Web come autenticata e facoltativamente conservare questi token.  
 
 
 ##Utilizzo dell'accesso ottenuto e del token di identità

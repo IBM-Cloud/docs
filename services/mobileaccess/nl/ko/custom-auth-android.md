@@ -5,9 +5,10 @@ copyright:
 lastupdated: "2016-11-02"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-
+{:codeblock:.codeblock}
 
 
 # {{site.data.keyword.amashort}} Android 앱용 사용자 정의 인증 구성 
@@ -52,6 +53,7 @@ lastupdated: "2016-11-02"
     	// other dependencies  
 	}
 	```
+	{: codeblock}
 
 1. 프로젝트를 Gradle과 동기화하십시오. **도구 > Android > Gradle 파일과 프로젝트 동기화**를 클릭하십시오. 
 
@@ -61,6 +63,7 @@ lastupdated: "2016-11-02"
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
+	{: codeblock}
 
 1. SDK를 초기화하십시오.
 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 Android 애플리케이션 기본 활동의 `onCreate` 메소드입니다. 
@@ -68,6 +71,7 @@ lastupdated: "2016-11-02"
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 ```
+	{: codeblock}
 
 `BMSClient.REGION_UK`를 {{site.data.keyword.amashort}} 지역으로 대체하십시오. 이러한 값을 얻는 방법에 대한 자세한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.
 	
@@ -84,6 +88,7 @@ lastupdated: "2016-11-02"
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+{: codeblock}
 
 
 #### 인수
@@ -101,6 +106,7 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ### onAuthenticationFailure 메소드
 {: #custom-android-authlistener-onfail}
@@ -108,6 +114,7 @@ void onAuthenticationSuccess(Context context, JSONObject info);
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ## AuthenticationContext 인터페이스
 {: #custom-android-authcontext}
@@ -117,10 +124,12 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+{: codeblock}
 
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+{: codeblock}
 
 ## 사용자 정의 AuthenticationListener의 샘플 구현
 {: #custom-android-samplecustom}
@@ -180,6 +189,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	}
 }
 ```
+{: codeblock}
 
 ## 사용자 정의 AuthenticationListener 등록
 {: #custom-android-register}
@@ -193,6 +203,7 @@ mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuth
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
+{: codeblock}
 
 
 코드에서: 
@@ -234,7 +245,8 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 			}
 		}
 	});
-```
+	```
+	{: codeblock}
 	
 1. 	요청이 성공하면 LogCat 도구에 다음과 같은 출력이 표시됩니다. 
 
@@ -245,6 +257,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+ {: codeblock}
 
 
  사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 사용자가 다시 로그인하려고 시도하는 경우 서버에서 수신된 확인에 다시 응답해야 합니다. 

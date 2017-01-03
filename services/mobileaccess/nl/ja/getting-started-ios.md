@@ -76,7 +76,6 @@ sudo gem install cocoapods
 
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
-	
 	```
 
 	####Swift

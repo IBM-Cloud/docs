@@ -6,6 +6,9 @@ lastupdated: "2016-10-27"
 
 ---
 
+{:codeblock:.codeblock}
+
+
 # {{site.data.keyword.amashort}} iOS(Swift SDK) 앱용 사용자 정의 인증 구성
 {: #custom-ios}
 
@@ -31,6 +34,11 @@ lastupdated: "2016-10-27"
  * [사용자 정의 ID 제공자 작성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [사용자 정의 인증용 {{site.data.keyword.amashort}} 구성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
+### iOS에서 키 체인 공유 사용
+{: #enable_keychain}
+
+`키 체인 공유`를 사용 가능하게 설정하십시오. `기능` 탭으로 이동하여 Xcode 프로젝트에서 `키 체인 공유`를 `On`으로 전환하십시오. 
+
 
 ### 클라이언트 SDK 초기화
 {: #custom-ios-sdk-initialize}
@@ -44,6 +52,7 @@ lastupdated: "2016-10-27"
 	import BMSCore
 	import BMSSecurity
 	```
+	{: codeblock}
 
 1. {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하고 권한 관리자를 `MCAAuthorizationManager`로 변경하며 인증 위임을 정의하고 등록하십시오. 
 
@@ -88,6 +97,7 @@ lastupdated: "2016-10-27"
 
 
 ```
+{: codeblock}
 
 코드에서: 
 * `MCAServiceTenantId`를 **TenantId** 값으로 대체하고 `<applicationBluemixRegion>`을 해당 {{site.data.keyword.amashort}} **지역**으로 대체하십시오([시작하기 전에](##before-you-begin) 참조). 
@@ -111,7 +121,7 @@ lastupdated: "2016-10-27"
 
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화한 후 다음 코드를 추가하고 사용자 정의 인증 위임을 등록하십시오.
 
-	```Swift
+    ```Swift
 
 	let protectedResourceURL = "<your protected resource absolute path>"
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
@@ -125,7 +135,8 @@ lastupdated: "2016-10-27"
  }
 
 	request.send(completionHandler: callBack)
-	 ```
+     ```
+     {: codeblock}
 
 1. 요청이 성공하면 Xcode 콘솔에 다음과 같은 출력이 표시됩니다. 
 
@@ -140,12 +151,14 @@ lastupdated: "2016-10-27"
   })
   response:Optional("Hello Don Lon"), no error
   ```
+	 {: codeblock}
 
 1. 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
- ```  
+ ``` 
+	 {: codeblock}
 
  사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 사용자가 다시 로그인을 시도하는 경우, 사용자는 서버에서 수신된 인증 확인에 다시 응답해야 합니다. 
 

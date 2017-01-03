@@ -6,6 +6,8 @@ lastupdated: "2016-10-02"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Communication entre applications de back end et services
 {: #backend-comm}
 
@@ -21,6 +23,7 @@ Sur une ligne de commande, ouvrez le répertoire de l'application Node.js et lan
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## Utilisation du module bms-mca-oauth-sdk
 {: #using-sdk}
@@ -61,3 +64,4 @@ oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 });
 
 ```
+{: codeblock}

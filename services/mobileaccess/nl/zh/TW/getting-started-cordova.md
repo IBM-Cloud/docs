@@ -2,10 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-13"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
+{:codeblock:.codeblock}
 
 # 設定 Cordova 外掛程式
 {: #getting-started-cordova}
@@ -20,8 +22,8 @@ lastupdated: "2016-11-13"
 * {{site.data.keyword.Bluemix_notm}} 應用程式的實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
 * {{site.data.keyword.amafull}} 服務的實例。
 * 後端應用程式的 URL（**應用程式路徑**）。在傳送要求至後端應用程式的受保護端點時，將需要此值。
-* **租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
-* {{site.data.keyword.Bluemix_notm}} **地區**。您可以在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 旁邊的標頭中，找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區。出現的地區值應該是下列其中一項：`US South`、`United Kingdom` 或 `Sydney`，並對應至 WebView Javascript 程式碼中所需的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
+* **承租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
+* {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：`美國南部`、`雪梨`或`英國`，並對應至 WebView Javascript 程式碼中所需的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
 * Cordova 應用程式或現有專案。如需如何設定 Cordova 應用程式的相關資訊，請參閱 [Cordova 網站](https://cordova.apache.org/)。
 
 ## 安裝 {{site.data.keyword.amashort}} Cordova 外掛程式
@@ -37,6 +39,7 @@ lastupdated: "2016-11-13"
 	```
 	cordova platform add android
 	```
+	{: codeblock}
 
 	###iOS
 	{: #install-cordova-ios}
@@ -44,6 +47,7 @@ lastupdated: "2016-11-13"
 	```Bash
 	cordova platform add ios
 	```
+	{: codeblock}
 
 2. 如果您已新增 Android 平台，則必須將最低支援的 API 層次新增至 Cordova 應用程式的 `config.xml` 檔案。開啟 `config.xml` 檔案，並將下行新增至 `<platform name="android">` 元素：
 
@@ -54,6 +58,7 @@ lastupdated: "2016-11-13"
   	<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
+	{: codeblock}
 
 	*minSdkVersion* 值必須是 `15` 或更高。*targetSdkVersion* 值必須是 `23`。Cordova 目前不支援高於 **Android-23** 的版本。
 	
@@ -65,12 +70,14 @@ lastupdated: "2016-11-13"
 		<!-- add deployment target declaration -->
 	 </platform>
 	```
+	{: codeblock}
 
 4. 安裝 {{site.data.keyword.amashort}} Cordova 外掛程式：
 
  	```Bash
 	cordova plugin add bms-core
 	```
+	{: codeblock}
 
 5. 為 Andro為 Android 或 iOS 配置您的平台，或兩者都配置。
 
@@ -82,6 +89,7 @@ lastupdated: "2016-11-13"
 	```Bash
 	cordova build android
 	```
+	{: codeblock}
 
 	####iOS
 	{: #cordova-ios}
@@ -101,8 +109,8 @@ lastupdated: "2016-11-13"
 			{ platform:iOS Simulator }
 
 		Missing required device specifier option.
-		The device type “iOS Simulator” requires that either “name” or “id” be specified.
-		Please supply either “name” or “id”.
+		The device type "iOS Simulator" requires that either "name" or "id" be specified.
+		Please supply either "name" or "id".
 	```
 	
 6. 執行下列指令，驗證已順利安裝外掛程式：
@@ -110,10 +118,11 @@ lastupdated: "2016-11-13"
 	```Bash
 	cordova plugin list
 	```
+	{: codeblock}
 	
 7. 在 **Capabilities** 標籤中將 **Keychain Sharing** 切換為 `On`，以針對 iOS 啟用「金鑰鏈共用」。
   
-8. 在**建置設定** > **包裝**標籤中，將**定義模組**切換為 `YES`，以針對 iOS 啟用**定義模組**。
+8. 在 **Build Settings** > **Packaging** 標籤中，將 **Defines Module** 切換為 `YES`，以針對 iOS 啟用 **Defines Module**。
 
 
 ## 在 Cordova WebView 中起始設定 {{site.data.keyword.amashort}} 用戶端 (Javascript)
@@ -126,6 +135,7 @@ lastupdated: "2016-11-13"
 ```JavaScript
 BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
 **注意：**請將 `<applicationBluemixRegion>` 取代為管理 {{site.data.keyword.Bluemix_notm}} 服務的地區，請參閱[開始之前](#before-you-begin)。
 
@@ -141,12 +151,14 @@ BMSClient.initialize(<applicationBluemixRegion>);
 MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<tenantId>");
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 ### iOS (Objective C)
 根據您的 Xcode 版本，在 `AppDelegate.m` 中新增「授權管理程式」起始設定。
 
 ```Objective-C
   [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
 ```
+{: codeblock}
 
 
 ## 對行動後端服務提出要求
@@ -175,10 +187,11 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 	 request.send(success, failure);
 	```
+	{: codeblock}
 
 3. 當要求成功時，您會在 LogCat 或 Xcode 主控台中看到下列輸出（視使用的平台而定）：
 
-	![影像](images/getting-started-android-success.png)
+	![成功訊息](images/getting-started-android-success.png)
 
 	## 後續步驟
 	{: #next-steps}

@@ -6,6 +6,8 @@ lastupdated: "2016-11-2"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Autenticando usuários com um provedor de identidade customizado
 {: #custom-id}
 
@@ -73,6 +75,7 @@ aplicativo cliente móvel ou da Web. Um desafio de autenticação é um objeto J
 		}
 	}
 	```
+	{: codeblock}
 
 1. Implemente qualquer fluxo de coleção de credenciais customizado no cliente, incluindo a autenticação de várias etapas e de vários formulários. Da mesma forma que para o desafio de autenticação customizado, deve-se projetar a estrutura de uma resposta de desafio de autenticação customizada.
 
@@ -85,6 +88,8 @@ aplicativo cliente móvel ou da Web. Um desafio de autenticação é um objeto J
 		pincode:"1234"
 	}
 	```
+	{: codeblock}
+	
 1. Implemente a lógica customizada de validação da resposta de desafio de autenticação fornecida.
 
 1. Defina um objeto de identidade do usuário customizado que contém as propriedades customizadas necessárias. Existe um exemplo de um
@@ -101,6 +106,7 @@ objeto de identidade do usuário customizado que é obtido pelo cliente após a 
 		}
 	}
 	```
+	{: codeblock}
 
 ### Implementação de amostra do provedor de identidade customizado
 {: #custom-sample}

@@ -2,11 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-30"
+lastupdated: "2016-10-25"
 
 ---
-
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 
 # {{site.data.keyword.amashort}} SDKs, amostras e referência de API
@@ -205,7 +206,7 @@ pod 'BMSGoogleAuthentication'
 ```
 {: codeblock}
 
-### iOS (Objective-C SDK - descontinuado)
+### iOS (Objective-C SDK - Deprecated)
 {: #googlesdk-ios}
 
 [Repositório Git](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),

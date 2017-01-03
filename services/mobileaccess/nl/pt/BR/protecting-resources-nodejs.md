@@ -6,6 +6,9 @@ lastupdated: "2016-10-27"
 
 ---
 
+{:shortdesc: .shortdesc} 
+{:codeblock:.codeblock}
+
 # Protegendo recursos Node.js com o {{site.data.keyword.amashort}}
 {: #protecting-resources-nodejs}
 
@@ -40,6 +43,7 @@ npm install -save express
 npm install -save passport
 npm install -save bms-mca-token-validation-strategy
 ```
+{: codeblock}
 
 ## Protegendo recursos no Node.js
 {: #protecting-resources-nodesdk}
@@ -65,3 +69,4 @@ app.get('/protected', passport.authenticate('mca-backend-strategy', {session: fa
 
 app.listen(process.env.PORT);
 ```
+{: codeblock}

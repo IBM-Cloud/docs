@@ -27,8 +27,8 @@ funzionalità di autenticazione fornite dal servizio {{site.data.keyword.amashor
 ## Tipi di autenticazione
 {: #authtypes}
 Nella tua applicazione mobile puoi usare i seguenti tipi di autenticazione:
-* **Facebook**: usa Facebook come un provider di identità. I tuoi utenti accedono all'applicazione mobile o Web con le loro credenziali Facebook. 
-* **Google**: usa Google come un provider di identità. I tuoi utenti accedono all'applicazione mobile o Web con le loro credenziali Google+. 
+* **Facebook**: usa Facebook come un provider di identità. I tuoi utenti accedono all'applicazione mobile o Web con le loro credenziali Facebook.
+* **Google**: usa Google come un provider di identità. I tuoi utenti accedono all'applicazione mobile o Web con le loro credenziali Google+.
 * **Personalizzata**: crea un tuo provider di identità. Controlli pienamente quali tipi di informazioni vengono raccolti e convalidati.
 
 ## Panoramica sull'architettura

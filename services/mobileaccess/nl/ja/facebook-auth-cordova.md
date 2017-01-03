@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-06"
+lastupdated: "2016-11-24"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -29,7 +30,7 @@ Facebook 認証を使用可能にするために、ネイティブ・プラッ�
 * アプリケーションの経路。これは、バックエンド・アプリケーションの URL です。
 * `tenantId` 値。{{site.data.keyword.amashort}} サービス・ダッシュボードを開きます。**「モバイル・オプション」**をクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。これらの値は、SDK を初期化するため、および要求をバックエンド・サービスに送信するために必要になります。
 *  {{site.data.keyword.Bluemix_notm}} サービスがホストされている地域を見つけます。メニュー・バーの **「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。地域値は、**「米国南部」**、**「シドニー」**、または**「英国」**のいずれかでなければなりません。これらの名前に対応する正確な SDK の定数値は、コードの例に示しています。
-* Facebook App ID。詳しくは、『[Facebook for Developers Web サイトからの Facebook App ID の取得](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)』を参照してください。
+* Facebook アプリケーションと App ID。詳しくは、『[Facebook for Developers Web サイトからの Facebook App ID の取得](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)』を参照してください。
 
 
 
@@ -42,7 +43,7 @@ Cordova アプリケーションの Android プラットフォームを Facebook
 * [Facebook 認証用の MCA の構成](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-mca)。これは、{{site.data.keyword.Bluemix}} サーバー上で Android Facebook 認証用に {{site.data.keyword.amashort}} サービスを構成します。
 
 
-### Android 用の {{site.data.keyword.amashort}} Facebook Client SDK の構成
+### Android プラットフォーム用の {{site.data.keyword.amashort}} Facebook Client SDK の構成
 {: #configure_android}
 
 {{site.data.keyword.amashort}} Facebook Client SDK は、ネイティブ Android アプリケーション・プロジェクト内で Gradle によって追加する必要があります。
@@ -59,6 +60,7 @@ Cordova アプリケーションの Android プラットフォームを Facebook
     	// other dependencies
 	}
 	```
+	{: codeblock}
 
 2. **「ツール」>「Android」>「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**をクリックして、プロジェクトと Gradle を同期します。
 
@@ -72,6 +74,7 @@ Cordova アプリケーションの Android プラットフォームを Facebook
 		<string name="facebook_app_id">"<facebook_app_id>"</string>
 	</resources>
 	```
+	{: codeblock}
 
 4. Android プロジェクトの `AndroidManifest.xml` ファイル (`android/manifests/AndroidManifest.xml`) で、以下を実行します。
 
@@ -87,6 +90,7 @@ Cordova アプリケーションの Android プラットフォームを Facebook
     <activity ...../>
     </application>
     ```
+    {: codeblock}
 
    * 既存のアクティビティーの下に Facebook Activity エレメントを追加します。
 
@@ -101,6 +105,7 @@ Cordova アプリケーションの Android プラットフォームを Facebook
 			    />
     </application>
     ```
+    {: codeblock}
 
 5. アクティビティー Java コードに以下を追加します。
 
@@ -112,6 +117,7 @@ Cordova アプリケーションの Android プラットフォームを Facebook
 			.onActivityResultCalled(requestCode, resultCode, data);
 	}
 	```
+	{: codeblock}
 
 ### ネイティブ Android コードでの許可マネージャーの初期化
 {: #initialize_android}
@@ -124,6 +130,7 @@ MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.create
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListener(this);
 ```
+{: codeblock}
 
 
 ## iOS プラットフォームの構成
@@ -177,6 +184,7 @@ Xcode のバージョンに応じて、`app-delegate.m` ファイル内のネイ
 	}
 
 ```
+{: codeblock}
 
 **注:** インポートされたヘッダー・ファイル名は、モジュール名をストリング `-Swift.h` に連結して構成されます。例えば、モジュール名が `Cordova` の場合、インポート行は `#import "Cordova-Swift.h"` となります。モジュール名を見つけるには、`「ビルド設定 (Build Settings)」` > `「パッケージ化 (Packaging)」` > `「製品モジュール名 (Product Module Name)」`に移動してください。
 
@@ -191,6 +199,7 @@ Xcode のバージョンに応じて、`app-delegate.m` ファイル内のネイ
 ```javascript
 BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
 `<applicationBluemixRegion>` をご使用の地域 ([開始する前に](#facebook-auth-before)を参照) に置き換えます。
 
@@ -221,6 +230,7 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 	var request = new BMSRequest("<applicationRoute}/protected>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 
 1. アプリケーションを実行します。Facebook のログイン画面が表示されます。
 

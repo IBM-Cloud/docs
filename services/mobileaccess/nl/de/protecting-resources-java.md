@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-12-04"
 
 ---
+{:codeblock:.codeblock}
 
 # Liberty for Java-Ressourcen mit {{site.data.keyword.amashort}} schützen
 {: #protecting-liberty}
@@ -40,6 +41,7 @@ Sie müssen mit der Entwicklung von Liberty for Java-Anwendungen in {{site.data.
 	</featureManager>
 
 	```
+	{: codeblock}
 1. Setzen Sie die Bearbeitung der Datei `server.xml` fort und konfigurieren Sie das `OAuthTAI`-Feature. Die Sicherheitsrolle `TAIUserRole` ist einem bestimmten Subjekt mit dem Namen `ALL_AUTHENTICATED_USERS` zugeordnet. Das folgende Snippet demonstriert, wie GET-Methoden für den Endpunkt `/protected` geschützt werden.
 
 	```XML
@@ -58,12 +60,14 @@ Sie müssen mit der Entwicklung von Liberty for Java-Anwendungen in {{site.data.
 		</application-bnd>
 	</application>
 	```
+	{: codeblock}
 
 1. Fügen Sie die folgende Eigenschaft, die die {{site.data.keyword.amashort}}-Service-URL enthält, den Umgebungsvariablen Ihrer Back-End-Anwendung hinzu. Sie können die URL der Datei `manifest.yml` oder `server.env` hinzufügen.
 
 	```
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver
 	```
+	{: codeblock}
 
 ## Liberty for Java-Ressourcen schützen
 {: #protecting-liberty-resources}
@@ -89,6 +93,7 @@ Beispiel:
 		<role-name>TAIUserRole</role-name>
 	</security-role>
 	```
+	{: codeblock}
 
 * Verwenden Sie zur Angabe von `TAIUserRole` mit einer Annotation die folgende Syntax:
 
@@ -99,6 +104,7 @@ Beispiel:
 	    // Servlet-Code
 	}
 	```
+	{: codeblock}
 
 ### Auf ein Sicherheitskontextobjekt zugreifen
 {: #accessing-security}
@@ -115,6 +121,8 @@ Subject callerSubject = WSSubject.getCallerSubject();
 WSCredential callerCredential =
     callerSubject.getPublicCredentials(WSCredential.class).iterator().next();
 ```
+{: codeblock}
+
 Weitere Informationen finden Sie in [WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html).
 
 #### Eigenschaft com.worklight.oauth.tai.WLCredential
@@ -133,3 +141,4 @@ JSONObject imfDevice = securityContext.get("imf.device");
 JSONObject imfApplication = securityContext.get("imf.application");
 
 ```
+{: codeblock}

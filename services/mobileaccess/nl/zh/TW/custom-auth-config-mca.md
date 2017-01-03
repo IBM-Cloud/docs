@@ -29,6 +29,6 @@ lastupdated: "2016-11-07"
 
 ## 後續步驟
 {: #next-steps}
-* [配置適用於 Android 的自訂鑑別](custom-auth-android.html)
-* [配置適用於 iOS 的自訂鑑別](custom-auth-ios.html)
-* [配置適用於 Cordova 的自訂鑑別](custom-auth-cordova.html)
+* [配置 Android 應用程式的自訂鑑別](custom-auth-android.html)
+* [配置 iOS 應用程式的自訂鑑別](custom-auth-ios.html)
+* [配置 Cordova 應用程式的自訂鑑別](custom-auth-cordova.html)

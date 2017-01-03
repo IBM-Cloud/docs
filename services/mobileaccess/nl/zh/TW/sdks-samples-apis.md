@@ -2,11 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-30"
+lastupdated: "2016-10-25"
 
 ---
-
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 
 # {{site.data.keyword.amashort}} SDK、範例及 API 參考資料
@@ -20,7 +21,7 @@ lastupdated: "2016-10-30"
 ## 核心 SDK
 {: #coresdk}
 
-「核心 SDK」包括用於啟用自訂鑑別和記載的 API。
+「核心 SDK」包含用於啟用自訂鑑別和記載的 API。
 
 ### Android
 {: #coresdk-android}

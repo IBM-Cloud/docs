@@ -2,16 +2,17 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 #Configurazione dell'autenticazione personalizzata per le applicazioni Web {{site.data.keyword.amashort}}
 {: #custom-web}
-
 
 Aggiungi l'autenticazione personalizzata e la funzionalità di sicurezza {{site.data.keyword.amafull}} alla tua applicazione Web.
 
@@ -109,7 +110,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 Dopo che hai configurato il tuo provider di identità personalizzato, puoi abilitare l'autenticazione personalizzata nel dashboard {{site.data.keyword.amashort}}. 
 
 1. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}.
-1. Dalla scheda **Gestione**, attiva **Autorizzazione**.
+1. Dalla scheda **Manage**, attiva **Authorization**.
 1. Espandi la sezione **Personalizzato**.
 1. Immetti **Nome realm**, **URL provider di identità personalizzato**. 
 1. Immetti il valore **I tuoi URI di reindirizzamento dell'applicazione web**. Questo è l'URI del reindirizzamento finale dopo una corretta autorizzazione.
@@ -123,15 +124,14 @@ La variabile di ambiente `VCAP_SERVICES` viene creata automaticamente per ogni i
 
 Per richiedere l'autenticazione utente, reindirizzare il browser all'endpoint del server di autorizzazione. A tal fine: 
 
-1. Richiama l'endpoint di autorizzazione (`authorizationEndpoint`) e l'ID client (`clientId`) dalle credenziali del servizio archiviate nella variabile di ambiente `VCAP_SERVICES`. 
+1. Richiama l'endpoint di autorizzazione (`authorizationEndpoint`) e l'ID client (`clientId`) dalle credenziali del servizio memorizzate nella variabile di ambiente `VCAP_SERVICES`. 
 
 	`var cfEnv = require("cfenv");` 
-	
+
 	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
-
 	**Nota:** se hai aggiunto il servizio {{site.data.keyword.amashort}} prima dell'aggiunta del supporto web potresti non avere l'endpoint token nelle credenziali del servizio. Invece, utilizza i seguenti URL, a seconda della tua regione {{site.data.keyword.Bluemix_notm}}: 
-  
+
 	Stati Uniti Sud: 
 
 	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
@@ -151,7 +151,7 @@ Per richiedere l'autenticazione utente, reindirizzare il browser all'endpoint de
 
 3. Vai dalla tua applicazione Web all'URI generato. 
 
-	Il seguente esempio richiama i parametri dalla variabile `VCAP_SERVICES`, crea l'URL e invia la richiesta di reindirizzamento.
+   Il seguente esempio richiama i parametri dalla variabile `VCAP_SERVICES`, crea l'URL e invia la richiesta di reindirizzamento.
 
 	```Java
 var cfEnv = require("cfenv"); 
@@ -183,7 +183,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 	Un parametro `state` può essere trasmesso con la richiesta. Questo parametro sarà propagato al metodo POST del provider di identità personalizzato e vi si può accedere dal corpo della richiesta (`req.body.stateId`).  
 
-	Dopo il reindirizzamento dell'endpoint di autorizzazione l'utente visualizzerà un modulo di accesso. Dopo avere autenticato le credenziali dell'utente con il provider di identità personalizzato, il servizio {{site.data.keyword.amashort}} richiamerà il tuo URI di reindirizzamento dell'applicazione web fornendo il codice concesso come un parametro di query.   
+	Dopo il reindirizzamento dell'endpoint di autorizzazione l'utente visualizzerà un modulo di accesso. Dopo avere autenticato le credenziali dell'utente con il provider di identità personalizzato, il servizio {{site.data.keyword.amashort}} richiamerà il tuo URI di reindirizzamento dell'applicazione web fornendo il codice concesso come un parametro di query.  
 
 	Dopo il reindirizzamento, l'utente riceve un modulo di accesso. Dopo avere autenticato le credenziali dell'utente con il provider di identità personalizzato, il servizio {{site.data.keyword.amashort}} richiamerà il tuo URI di reindirizzamento dell'applicazione Web fornendo il codice concesso come un parametro di query. 
 
@@ -197,17 +197,17 @@ Il passo successivo è quello di ottenere il token di accesso e il token di iden
 	**Nota:** se hai aggiunto il servizio {{site.data.keyword.amashort}} prima dell'aggiunta del supporto Web potresti non avere l'endpoint token nelle credenziali del servizio. Invece, utilizza i seguenti URL, a seconda della tua regione {{site.data.keyword.Bluemix_notm}}: 
 
 	Stati Uniti Sud: 
-  
+
 	`     https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
  `
- 
+
 	Londra: 
- 
+	
 	`     https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
  ` 
  
 	Sydney: 
- 
+
 	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token
  `
  
@@ -229,7 +229,7 @@ app.get("/oauth/callback", function(req, res, next){
 			code: req.query.code
 		}
 
-		request.post({
+		request.post({ 
 			url: tokenEndpoint, 
     formData: formData 
     }, function (err, response, body){ 
@@ -269,7 +269,4 @@ Il token di accesso consente la comunicazione con le risorse protette dai filtri
 
 * Il `<accessToken>` e il `<idToken>` devono essere separati da uno spazio vuoto.
 
-* Il token di identità è facoltativo. Se hai fornito il token di identità, è possibile accedere alla risorsa protetta ma non si riceveranno le informazioni sull'utente autorizzato. 
-
-
-
+* Il token di identità è facoltativo. Se hai fornito il token di identità, è possibile accedere alla risorsa protetta ma non si riceveranno le informazioni sull'utente autorizzato.

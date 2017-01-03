@@ -2,11 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-30"
+lastupdated: "2016-10-25"
 
 ---
-
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 
 # {{site.data.keyword.amashort}} Logiciels SDK, exemples et référence d'API

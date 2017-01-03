@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-11-15"
 
 ---
 
@@ -22,6 +22,8 @@ lastupdated: "2016-11-07"
  * 使用 {{site.data.keyword.amashort}} 仪表板创建 {{site.data.keyword.amashort}} 服务。可以在 {{site.data.keyword.amashort}} 仪表板中将该服务与现有后端应用程序绑定，并对其进行配置。
 
    使用 MobileFirst Services Starter 时，您会获得在 IBM {{site.data.keyword.Bluemix_notm}} 上运行的 Node.js 运行时的实例，以实现定制后端逻辑。此外，还会将一组提供了安全性、数据、推送和监视功能的核心移动服务绑定到该 Node.js 应用程序。创建 {{site.data.keyword.Bluemix_notm}} Node.js 应用程序后，可设置开发环境，并开始使用 {{site.data.keyword.Bluemix_notm}} Mobile Services SDK。您可以使用 SDK 通过简单的 API 调用来访问绑定到云应用程序的服务。
+
+	有关如何创建和使用项目、应用程序和服务的更多信息，请参阅 [IBM Bluemix Mobile 仪表板](https://console.{DomainName}/docs/mobile/index.html)。
 
 2. 保护服务器端资源。
 

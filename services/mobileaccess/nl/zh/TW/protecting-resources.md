@@ -6,7 +6,8 @@ lastupdated: "2016-10-27"
 
 ---
 
-  
+{:shortdesc: .shortdesc} 
+{:codeblock:.codeblock}
 
 # 使用 {{site.data.keyword.amashort}} 服務保護後端資源
 {: #protecting-resources}

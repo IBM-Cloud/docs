@@ -22,7 +22,7 @@ Utilisez Google Sign-In pour authentifier les utilisateurs sur votre application
 {: #before-you-begin}
 Vous devez disposer des éléments suivants :
 * Une instance d'un service {{site.data.keyword.amafull}} et une application {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
-* L'URL de votre application back-end (**Route de l'application**). Vous aurez besoin de ces valeurs pour envoyer des requêtes aux noeuds finaux protégés de votre application back end. 
+* L'URL de votre application back-end (**Route de l'application**). Vous aurez besoin de ces valeurs pour envoyer des requêtes aux noeuds finaux protégés de votre application back end.
 * Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur le bouton **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
 
 ## Configuration d'un projet Google pour la plateforme iOS
@@ -51,7 +51,7 @@ Maintenant que vous disposez d'un ID client Google, vous pouvez activer l'authen
 
 1. Ouvrez votre service dans le tableau de bord {{site.data.keyword.amashort}}.
 1. Dans l'onglet **Gérer**, activez **Autorisation**.
-1. Développez la section **Google**. 
+1. Développez la section **Google**.
 1. Dans la zone **ID application pour iOS**, spécifiez votre ID client pour iOS.
 1. Cliquez sur **Sauvegarder**.
 

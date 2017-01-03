@@ -6,6 +6,8 @@ lastupdated: "2016-10-02"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Comunicando-se entre aplicativos backend e serviços
 {: #backend-comm}
 
@@ -21,6 +23,7 @@ Em uma linha de comandos, abra o diretório do aplicativo Node.js e execute o co
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## Usando o módulo bms-mca-oauth-sdk
 {: #using-sdk}
@@ -61,3 +64,4 @@ resource, 	// add the authHeader value.
 });
 
 ```
+{: codeblock}

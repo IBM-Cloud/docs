@@ -2,16 +2,17 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 #{{site.data.keyword.amashort}} Web アプリケーション用のカスタム認証の構成
 {: #custom-web}
-
 
 カスタム認証と {{site.data.keyword.amafull}} セキュリティー機能を Web アプリに追加します。
 
@@ -50,14 +51,14 @@ lastupdated: "2016-11-03"
 ユーザーを検証した後、この経路は以下の構造の JSON オブジェクトを返す必要があります。
 
 ```json
-{ 
-	status: "success", 
-            userIdentity: { 
-                userName: <user name>, 
-                displayName: <display name> 
-                attributes: <additional attributes json> 
-            } 
-        } 
+{
+	status: "success",
+	userIdentity: {
+		userName: <user name>,
+		displayName: <display name>
+		attributes: <additional attributes json>
+	}
+} 
 ```
 {: codeblock}
 
@@ -71,31 +72,30 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 var users = {
-"John": {
-      password: "123",
-      displayName: "John Doe"
-    }
+	"John": {
+		password: "123",
+		displayName: "John Doe"
+	}
 };
 
-app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
-         function(req, res) {
-         console.log ("tenantID " + req.params.tenantID);
-         
-         var challengeAnswer = req.body.challengeAnswer;
-         console.log ("challengeAnswer " + JSON.stringify(challengeAnswer));
+app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req, res) {
+	console.log ("tenantID " + req.params.tenantID);
 
-         if (challengeAnswer && users[challengeAnswer.username] && challengeAnswer.password === users[challengeAnswer.username].password) {
-         res.json({
-                  status: "success",
-                  userIdentity: {
-                  userName: challengeAnswer.username,
-                  displayName: users[challengeAnswer.username].displayName
-                  }
-                  });
-         } else {
-         res.json({
-                  status: "failure"
-                  });
+	var challengeAnswer = req.body.challengeAnswer;
+	console.log ("challengeAnswer " + JSON.stringify(challengeAnswer));
+
+	if (challengeAnswer && users[challengeAnswer.username] && challengeAnswer.password === users[challengeAnswer.username].password) {
+		res.json({
+			status: "success",
+			userIdentity: {
+				userName: challengeAnswer.username,
+				displayName: users[challengeAnswer.username].displayName
+			}
+		});
+	} else {
+		res.json({
+			status: "failure"
+		});
 	}
         
 });
@@ -123,15 +123,14 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 ユーザー許可を要求するには、ブラウザーを許可サーバー・エンドポイントにリダイレクトします。これには、次のようにします。 
 
-1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) およびクライアント ID (`clientId`) を取り出します。 
+1. `VCAP_SERVICES` 環境変数に保管されているサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) とクライアント ID (`clientId`) を取得します。 
 
 	`var cfEnv = require("cfenv");` 
-	
+
 	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
-
 	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
-  
+
 	米国南部: 
 
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
@@ -148,7 +147,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 3. Web アプリから、生成された URI へリダイレクトします。 
 
-	以下の例は、`VCAP_SERVICES` 変数からパラメーターを取り出し、URL を構築し、リダイレクト要求を送信します。
+   以下の例は、`VCAP_SERVICES` 変数からパラメーターを取り出し、URL を構築し、リダイレクト要求を送信します。
 
 	```Java
 	var cfEnv = require("cfenv");
@@ -194,15 +193,15 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
 
 	米国南部: 
-  
+
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
- 
+
 	ロンドン: 
- 
+	
 	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
  
 	シドニー: 
- 
+
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
  
 2. `grant_type`、`client_id`、`redirect_uri`、および `code` をフォーム・パラメーターとして使用し、`clientId` および `secret` を基本 HTTP 認証資格情報として使用して、トークン・サーバー URI に POST 要求を送信します。
@@ -210,35 +209,35 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 	以下の例に示すコードは、必要な値を取り出し、それらを POST 要求で送信します。
 
 	```Java
-var cfEnv = require("cfenv");
-var base64url = require("base64url ");
-app.get("/oauth/callback", function(req, res, next){
-    var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-    var tokenEndpoint = mcaCredentials.tokenEndpoint; 
+	var cfEnv = require("cfenv");
+	var base64url = require("base64url");
+	app.get("/oauth/callback", function(req, res, next) {
+		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+		var tokenEndpoint = mcaCredentials.tokenEndpoint;
 
-    var formData = { 
-      grant_type: "authorization_code", 
-			client_id: mcaCredentials.clientId, 
-			redirect_uri: "http://some-server/oauth/callback",// Your Web application redirect uri 
-			code: req.query.code 
-		} 
-
-		request.post({ 
-			url: tokenEndpoint, 
-    formData: formData 
-    }, function (err, response, body){ 
-      var parsedBody = JSON.parse(body); 
-
-      req.session.accessToken = parsedBody.access_token; 
-      req.session.idToken = parsedBody.id_token; 
-      var idTokenComponents = parsedBody.id_token.split("."); // [header, payload, signature] 
-			var decodedIdentity= base64url.decode(idTokenComponents[1]);
-			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"]; 
-			res.redirect("/"); 
+		var formData = {
+			grant_type: "authorization_code",
+			client_id: mcaCredentials.clientId,
+			redirect_uri: "http://some-server/oauth/callback",   // Your Web application redirect uri
+			code: req.query.code
 		}
-		).auth(mcaCredentials.clientId, mcaCredentials.secret); 
-  }
-); 
+
+		request.post({
+			url: tokenEndpoint,
+			formData: formData
+		}, function (err, response, body) {
+			var parsedBody = JSON.parse(body);
+
+			req.session.accessToken = parsedBody.access_token;
+			req.session.idToken = parsedBody.id_token;
+			var idTokenComponents = parsedBody.id_token.split("."); // [header, payload, signature]
+			var decodedIdentity= base64url.decode(idTokenComponents[1]);
+			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"];
+			res.redirect("/");
+		}
+		).auth(mcaCredentials.clientId, mcaCredentials.secret);
+  	}
+	); 
 	```
 	{: codeblock}
 	
@@ -265,7 +264,4 @@ app.get("/oauth/callback", function(req, res, next){
 
 * `<accessToken>` と `<idToken>` は空白で分離する必要があります。
 
-* 識別トークンはオプションです。識別トークンを提供しない場合、保護リソースはアクセス可能ですが、許可ユーザーに関する情報を受け取ることはありません。 
-
-
-
+* 識別トークンはオプションです。識別トークンを提供しない場合、保護リソースはアクセス可能ですが、許可ユーザーに関する情報を受け取ることはありません。

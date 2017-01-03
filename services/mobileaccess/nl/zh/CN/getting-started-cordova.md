@@ -2,10 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-13"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
+{:codeblock:.codeblock}
 
 # 设置 Cordova 插件
 {: #getting-started-cordova}
@@ -22,7 +24,7 @@ lastupdated: "2016-11-13"
 * {{site.data.keyword.amafull}} 服务的实例。
 * 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
 * **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
-* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`美国南部`、`英国`或`悉尼`，并对应于 WebView Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`US South`、`United Kingdom` 或 `Sydney`，并对应于 WebView Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
 * Cordova 应用程序或现有项目。有关如何设置 Cordova 应用程序的更多信息，请参阅 [Cordova Web 站点](https://cordova.apache.org/)。
 
 ## 安装 {{site.data.keyword.amashort}} Cordova 插件
@@ -38,6 +40,7 @@ lastupdated: "2016-11-13"
 	```
 	cordova platform add android
 	```
+	{: codeblock}
 
 	###iOS
 	{: #install-cordova-ios}
@@ -45,6 +48,7 @@ lastupdated: "2016-11-13"
 	```Bash
 	cordova platform add ios
 	```
+	{: codeblock}
 
 2. 如果添加的是 Android 平台，那么必须将支持的最低 API 级别添加到 Cordova 应用程序的 `config.xml` 文件。打开 `config.xml` 文件，并将以下行添加到 `<platform name="android">` 元素：
 
@@ -55,6 +59,7 @@ lastupdated: "2016-11-13"
   	<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
+	{: codeblock}
 
 	*minSdkVersion* 值必须不低于 `15`。*targetSdkVersion* 值必须为 `23`。目前，Cordova 不支持高于 **Android-23** 的版本。
 	
@@ -66,12 +71,14 @@ lastupdated: "2016-11-13"
 		<!-- add deployment target declaration -->
 	 </platform>
 	```
+	{: codeblock}
 
 4. 安装 {{site.data.keyword.amashort}} Cordova 插件：
 
  	```Bash
 	cordova plugin add bms-core
 	```
+	{: codeblock}
 
 5. 针对 Android 和/或 iOS 配置平台。
 
@@ -83,6 +90,7 @@ lastupdated: "2016-11-13"
 	```Bash
 	cordova build android
 	```
+	{: codeblock}
 
 	####iOS
 	{: #cordova-ios}
@@ -112,6 +120,7 @@ lastupdated: "2016-11-13"
 	```Bash
 	cordova plugin list
 	```
+	{: codeblock}
 	
 7. 通过在**功能**选项卡中将**密钥链共享**切换为`开启`来启用 iOS 的密钥链共享。
   
@@ -128,6 +137,7 @@ lastupdated: "2016-11-13"
 ```JavaScript
 BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
 **注：**将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 服务的区域；请参阅[开始之前](#before-you-begin)。
 
@@ -143,12 +153,14 @@ BMSClient.initialize(<applicationBluemixRegion>);
 MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<tenantId>");
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 ### iOS (Objective C)
 根据 Xcode 的版本，在 `AppDelegate.m` 中添加授权管理器初始化。
 
 ```Objective-C
   [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
 ```
+{: codeblock}
 
 
 ## 对移动后端服务发起请求
@@ -177,10 +189,11 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 	 request.send(success, failure);
 	```
+	{: codeblock}
 
 3. 请求成功后，将在 LogCat 或 Xcode 控制台（取决于使用的平台）中看到以下输出：
 
-	![图像](images/getting-started-android-success.png)
+	![成功消息](images/getting-started-android-success.png)
 
 	## 后续步骤
 	{: #next-steps}

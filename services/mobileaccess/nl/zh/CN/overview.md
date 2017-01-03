@@ -46,7 +46,7 @@ lastupdated: "2016-11-06"
 * {{site.data.keyword.amashort}} 服务器 SDK 从请求中抽取访问令牌，并使用 {{site.data.keyword.amashort}} 服务进行验证。
 * 这样就授予了访问权。响应会返回给移动应用程序。
 
-## 请求流
+## 请求流程
 {: #flow}
 下图描述了请求是如何从客户端 SDK 流向移动后端应用程序和身份提供者的。
 
@@ -74,7 +74,7 @@ lastupdated: "2016-11-06"
 {: #gettinghelp}
 
 如果在使用 {{site.data.keyword.amashort}} 时遇到任何问题或者有任何疑问，都可以
-通过搜索信息或者通过论坛提问来获得帮助。您还可以打开支持凭单。 
+通过搜索信息或通过论坛提问来获得帮助。您还可以开具支持凭单。 
 
 在使用论坛提问时，请给问题做标记，以便 {{site.data.keyword.Bluemix_notm}} 开发
 团队能看到您的问题。
@@ -89,5 +89,5 @@ developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type
 请参阅[获取
 帮助](https://www.{DomainName}/docs/support/index.html#getting-help)了解有关如何使用论坛的更多详细信息。
 
-有关打开 IBM 支持凭单的信息，或者有关支持级别和凭单严重性的信息，请参阅[联系支持人员](https://www.{DomainName}/docs/support/index.html#contacting-support)。
+有关开具 IBM 支持凭单的信息，或有关支持级别和凭单严重性的信息，请参阅[联系支持人员](https://www.{DomainName}/docs/support/index.html#contacting-support)。
 

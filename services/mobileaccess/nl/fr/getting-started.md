@@ -9,7 +9,7 @@ lastupdated: "2016-11-03"
 # Configuration du SDK {{site.data.keyword.amashort}}
 {: #getting-started}
 
-Vous pouvez configurer l'utilisation du logiciel SDK {{site.data.keyword.amafull}} dans votre appli mobile. Après avoir ajouté le SDK, vous pouvez commencer à configurer l'authentification et l'autorisation d'accès à votre application de back end. Le SDK de {{site.data.keyword.amashort}} est disponible pour Android, iOS, Cordova et les applications Web. Un nouveau SDK Swift est sorti, qui facilite la protection de vos ressources de back end. Suivez les instructions d'ajout du SDK, configurez votre application pour vous connecter aux services {{site.data.keyword.amashort}} et rédigez
+Vous pouvez configurer l'utilisation du logiciel SDK {{site.data.keyword.amafull}} dans votre appli mobile.  Après avoir ajouté le SDK, vous pouvez commencer à configurer l'authentification et l'autorisation d'accès à votre application de back end.  Le SDK de {{site.data.keyword.amashort}} est disponible pour Android, iOS, Cordova et les applications Web. Un nouveau SDK Swift est sorti, qui facilite la protection de vos ressources de back end. Suivez les instructions d'ajout du SDK, configurez votre application pour vous connecter aux services {{site.data.keyword.amashort}} et rédigez
 le code d'accès aux ressources du serveur.
 
 

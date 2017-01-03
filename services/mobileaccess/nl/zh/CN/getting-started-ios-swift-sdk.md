@@ -2,11 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
+{:codeblock:.codeblock}
 
 # 设置 iOS Swift SDK
 {: #getting-started-ios}
@@ -26,7 +28,7 @@ lastupdated: "2016-11-02"
 * {{site.data.keyword.amafull}} 服务的实例。
 * **TenantID**。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化 {{site.data.keyword.amashort}} 授权管理器。
 * **应用程序路径**。这是后端应用程序的 URL。您将需要此值来向其受保护端点发送请求。
-* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`美国南部`、`英国`或`悉尼`，并对应于代码中需要的 SDK 值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。您将需要此值来初始化 {{site.data.keyword.amashort}} SDK。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`US South`、`United Kingdom` 或 `Sydney`，并对应于代码中需要的 SDK 值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。您将需要此值来初始化 {{site.data.keyword.amashort}} SDK。
 * Xcode 项目。有关如何设置 iOS 开发环境的更多信息，请参阅 [Apple Developer Web 站点](https://developer.apple.com/support/xcode/)。
 
 
@@ -45,6 +47,7 @@ lastupdated: "2016-11-02"
 ```
 sudo gem install cocoapods
 ```
+{: codeblock}
 
 有关更多信息，请参阅 [CocoaPods Web 站点](https://cocoapods.org/)。
 
@@ -64,6 +67,7 @@ sudo gem install cocoapods
 use_frameworks!
  pod 'BMSSecurity'
 	```
+	{: codeblock}
 
   **提示：**您可以将 `use_frameworks!` 添加到 Xcode 目标中，而不是置于 Podfile 中。
 
@@ -108,6 +112,7 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 	return true
 	}
  ```
+ {: codeblock}
 
 * 将 `tenantId` 值替换为从**移动选项**获取的值。 
 * 将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。 

@@ -2,9 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-11-22"
 
 ---
+
+{:codeblock:.codeblock}
+
 
 # {{site.data.keyword.amashort}} Cordova 앱용 사용자 정의 인증 구성
 {: #custom-cordova}
@@ -32,6 +35,7 @@ lastupdated: "2016-11-03"
 ```JavaScript
 BMSClient.initialize("<applicationBluemixRegion>");
 ```
+{: codeblock}
 
 `<applicationBluemixRegion>`을 해당 지역으로 대체하십시오([시작하기 전에](#before-you-begin) 참조). 
  
@@ -48,6 +52,7 @@ var customAuthenticationListener = {
 	onAuthenticationFailure: function(info){...}
 }
 ```
+{: codeblock}
 
 각 메소드는 인증 프로세스의 서로 다른 단계를 처리합니다. 
 
@@ -57,6 +62,7 @@ var customAuthenticationListener = {
 ```JavaScript
 onAuthenticationChallengeReceived: function(authenticationContext, challenge) {...}
 ```
+{: codeblock}
 
 * `authenticationContext`: 개발자가 신임 정보 수집 중 인증 확인 응답 또는 실패를 보고할 수 있도록 {{site.data.keyword.amashort}} 클라이언트 SDK에서 제공합니다(예: 사용자가 인증 요청을 취소하는 경우).
 * `challenge`: 사용자 정의 ID 제공자가 리턴하는 사용자 정의 인증 확인이 포함된 JSON 오브젝트입니다. 
@@ -66,12 +72,14 @@ onAuthenticationChallengeReceived: function(authenticationContext, challenge) {.
 ```JavaScript
 onAuthenticationSuccess: function(info){...}
 ```
+{: codeblock}
 
 이 메소드는 인증 성공 후에 호출됩니다. 인수로는 인증 성공에 대한 확장 정보가 포함된 선택적 JSON 오브젝트가 있습니다. 
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
+{: codeblock}
 
 이 메소드는 인증 실패 후에 호출됩니다. 인수로는 인증 실패에 대한 확장 정보가 포함된 선택적 JSON 오브젝트가 있습니다. 
 
@@ -82,10 +90,15 @@ onAuthenticationFailure: function(info){...}
 
 ```JavaScript
 authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
+```
+{: codeblock}
 
+```JavaScript
 authenticationContext.submitAuthenticationFailure(info);
 ```
-다음 코드는 고객 권한 리스너가 신임 정보를 수집하고 인증 확인을 처리하며 인증 응답을 제공하는 방법을 설명합니다.
+{: codeblock}
+
+다음 코드는 고객 인증 리스너가 신임 정보를 수집하고 인증 확인을 처리하며 인증 응답을 제공하는 방법을 설명합니다. 
 
 ## 사용자 정의 인증 리스너 워크플로우의 샘플 구현
 {: #custom-cordova-authlisten-sample}
@@ -125,6 +138,7 @@ var customAuthenticationListener = {
 	}
 }
 ```
+{: codeblock}
 
 ## Cordova WebView에서 사용자 정의 인증 리스너 등록
 {: #custom-cordova-authreg}
@@ -134,6 +148,7 @@ var customAuthenticationListener = {
 ```Java
 BMSClient.registerAuthenticationListener(<realmName>, customAuthenticationListener);
 ```
+{: codeblock}
 {{site.data.keyword.amashort}} 대시보드에서 지정한 `realmName`을 사용하십시오.
 
 ## 원시 코드에 권한 관리자 설정
@@ -147,6 +162,7 @@ String tenantId = "<tenantId>";
 MCAAuthorizationManager.createInstance(this.getApplicationContext(),tenantId);
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 
 **iOS Objective-C**(`AppDelegate.m`에 추가)
 
@@ -162,6 +178,7 @@ Xcode의 버전에 따라 권한 관리자를 등록하십시오.
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
+{: codeblock}
 
 참고: ``your_module_name``을 프로젝트의 모듈 이름으로 대체하십시오. 예를 들어, 모듈 이름이 ``Cordova`인 경우 ``#import "Cordova-Swift.h"`가 되어야 합니다. 모듈 이름을 찾으려면 **빌드 설정 > 패키징` > 제품 모듈 이름**으로 이동하십시오. 
 
@@ -197,6 +214,7 @@ Xcode의 버전에 따라 권한 관리자를 등록하십시오.
 	var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 	
 	`<your-application-route>`를 백엔드 애플리케이션 URL로 대체하십시오([시작하기 전에](#before-you-begin) 참조). 
 

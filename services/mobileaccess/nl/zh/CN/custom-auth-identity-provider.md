@@ -6,6 +6,8 @@ lastupdated: "2016-11-07"
 
 ---
 
+{:codeblock:.codeblock}
+
 # 创建定制身份提供者
 {: #custom-create}
 
@@ -25,6 +27,7 @@ lastupdated: "2016-11-07"
 {: #custom-startauthorization}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/startAuthorization`
+{: codeblock}
 
 `startAuthorization` API 用作认证过程的第一步。定制身份提供者必须使用“challenge”、“success”或“failure”状态进行响应。
 
@@ -38,6 +41,7 @@ lastupdated: "2016-11-07"
     }
 }
 ```
+{: codeblock}
 
 定制身份提供者可能会使用认证质询进行响应，也可能会使用直接的 success 或 failure 进行响应。响应 HTTP 状态必须为 `HTTP 200`，并且响应 JSON 必须包含以下属性：
 
@@ -59,11 +63,13 @@ lastupdated: "2016-11-07"
 	}
 }
 ```
+{: codeblock}
 
 ## `handleChallengeAnswer` API
 {: #custom-handleChallengeAnswer}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/handleChallengeAnswer`
+{: codeblock}
 
 `handleChallengeAnswer` API 处理来自移动客户端的认证质询响应。与 `startAuthorization` API 一样，`handleChallengeAnswer` API 也是使用 `challenge`、`success` 或 `failure` 状态进行响应。
 
@@ -84,6 +90,7 @@ lastupdated: "2016-11-07"
  	}
 }
 ```
+{: codeblock}
 
 来自 `handleChallengeAnswer` API 的响应必须具有与 `startAuthorization` API 的响应相同的结构。
 
@@ -107,6 +114,7 @@ lastupdated: "2016-11-07"
     }
 }
 ```
+{: codeblock}
 
 用户身份对象由 {{site.data.keyword.amashort}} 服务用于生成标识令牌，此令牌会作为 Authorization 头的一部分发送到移动客户端。成功认证后，移动客户端即对用户身份对象具有完全访问权。
 

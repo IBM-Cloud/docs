@@ -2,11 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
+{:codeblock:.codeblock}
 
 # iOS Swift SDK のセットアップ
 {: #getting-started-ios}
@@ -45,6 +47,7 @@ Objective-C SDK は現在も完全にサポートされており、{{site.data.k
 ```
 sudo gem install cocoapods
 ```
+{: codeblock}
 
 詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。
 
@@ -61,6 +64,7 @@ sudo gem install cocoapods
 use_frameworks!
  pod 'BMSSecurity'
 	```
+	{: codeblock}
 
   **ヒント:** `use_frameworks!` を、Podfile に含めるのではなく、Xcode ターゲットに追加できます。
 
@@ -105,6 +109,7 @@ use_frameworks!
 	return true
 	}
  ```
+ {: codeblock}
 
 * `tenantId` を、**「モバイル・オプション」**から取得した値に置き換えます。 
 * `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。 

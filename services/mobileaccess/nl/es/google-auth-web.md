@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -31,7 +31,7 @@ Debe tener lo siguiente:
 Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en [Google Developer Console](https://console.developers.google.com). Parte de la creación de un proyecto consiste en obtener un **ID de cliente de Google** y **Secreto**. El ID de cliente de Google y Secreto son los únicos identificadores para la aplicación utilizados por la autenticación de Google y se necesitan para configurar el panel de control de {{site.data.keyword.amashort}}.
 
 1. Abra la aplicación de Google en la consola del desarrollador de Google. 
-3. Añada la API de **Google+**.  
+3. Añada la API de **Google+**. 
 3. Cree credenciales mediante OAuth. Seleccione la Aplicación web en el tipo de aplicación. Especifique el URI de redireccionamiento de {{site.data.keyword.amashort}} en el recuadro URI de redirección autorizados. Obtenga el URI de autorización de redireccionamiento de {{site.data.keyword.amashort}} desde la pantalla de configuración de Google del panel de control de {{site.data.keyword.amashort}} (consulte los pasos siguientes). 
 4. Guarde los cambios realizados. Anote el **ID de cliente de Google** y el **Secreto de la aplicación**.
 
@@ -43,10 +43,10 @@ Una vez que ya tenga el ID de aplicación y el secreto de Google puede habilitar
 
 1. Abra el panel de control del servicio de {{site.data.keyword.amashort}}.
 1. En el separador **Gestionar**, active **Autorización**.
-1. Abra la sección **Google**. 
+1. Abra la sección **Google**.
 1. Marque **Añadir Google a la app web**
 4. En la sección **Configurar para web**:   
-    * Anote el valor en el recuadro de texto de **URI de redireccionamiento de Mobile Client Access para la consola de Google Developer**. Este es el valor que tiene que añadir al recuadro **URI de redirección autorizados** en **Restricciones en el ID de cliente para la aplicación web** del **Portal de Google Developers**. 
+    * Anote el valor en el recuadro de texto de **URI de redireccionamiento de Mobile Client Access para la consola de Google Developer**. Este es el valor que tiene que añadir al recuadro **URI de redirección autorizados** en **Restricciones en el ID de cliente para la aplicación web** del **Portal de Google Developers**.
     * Especifique el **ID de cliente** y el **Secreto de cliente**.
     * Especifique el URI de redireccionamiento en las **URI de redireccionamiento de la aplicación web**. Este valor es para que se acceda a la URI de redireccionamiento una vez que se haya completado el proceso de autorización, y que lo determine el desarrollador.
 5. Pulse **Guardar**.
@@ -55,13 +55,15 @@ Una vez que ya tenga el ID de aplicación y el secreto de Google puede habilitar
 ## Implementación del flujo de autorización de {{site.data.keyword.amashort}} utilizando Google como proveedor de identidad
 {: #google-auth-flow}
 
-La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instancia de servicio de {{site.data.keyword.amashort}} y contiene propiedades necesarias para el proceso de autorización. Consta de un objeto JSON y se puede ver pulsando en el separador **Credenciales de servicio** del panel de control del servicio de {{site.data.keyword.amashort}}. 
+La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instancia de servicio de {{site.data.keyword.amashort}} y contiene propiedades necesarias para el proceso de autorización. Consta de un objeto JSON y se puede ver pulsando en el separador **Credenciales de servicio** del panel de control del servicio de {{site.data.keyword.amashort}}.
 
 Para iniciar el proceso de autorización:
 
 1. Recupere el punto final de autorización (`authorizationEndpoint`) y el clientId (`clientId`) de las credenciales de servicio almacenadas en la variable de entorno `VCAP_SERVICES`. 
-	`var cfEnv = require("cfenv");`
-	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+
+	`var cfEnv = require("cfenv");` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**Nota:** En el caso de que haya añadido el servicio de {{site.data.keyword.amashort}} a la aplicación antes de que se añadiera el soporte Web, es posible que no tenga el punto final de la señal en las credenciales del servicio. En este caso, utilice las URL siguientes, en función de la región de {{site.data.keyword.Bluemix_notm}}: 
  
@@ -109,9 +111,10 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 				redirectUrl += "&client_id=" + clientId;
 				redirectUrl += "&redirect_uri=" + redirectUri;
 				res.redirect(redirectUrl);
-			}
-		} 
-	}
+			} 
+		 	} 
+	   	}
+       }
 	```
 	{: codeblock}
 
@@ -162,7 +165,7 @@ El siguiente paso consiste en obtener la señal de acceso y las señales de iden
 			code: req.query.code
 		}
 
-		request.post({
+		request.post({ 
 			url: tokenEndpoint, 
     formData: formData 
     }, function (err, response, body){ 
@@ -180,7 +183,7 @@ El siguiente paso consiste en obtener la señal de acceso y las señales de iden
 	```
 	{: codeblock}
 
-	El parámetro `redirect_uri` es el URI para la redirección, después de una autenticación satisfactoria o con error con Google+, y debe coincidir con el `redirect_uri` del paso 1.  
+	El parámetro `redirect_uri` es el URI para la redirección, después de una autenticación satisfactoria o con error con Google+, y debe coincidir con el `redirect_uri` definido en el panel de control de {{site.data.keyword.amashort}}.  
    
 	Asegúrese de enviar esta solicitud POST en el plazo de 10 minutos tras los cuales caducará el código de concesión. Después de 10 minutos, se necesitará un código nuevo.
 

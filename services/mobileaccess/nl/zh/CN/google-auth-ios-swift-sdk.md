@@ -2,11 +2,14 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-12-05"
 
 ---
-{:screen:  .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 启用 iOS 应用程序 (Swift SDK) 的 Google 认证
 {: #google-auth-ios}
@@ -16,17 +19,16 @@ lastupdated: "2016-11-01"
 **注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用 Objective-C SDK，以支持此新的 Swift SDK。
 
 
-
 ## 开始之前
 {: #before-you-begin}
+
 您必须具有：
 
 * {{site.data.keyword.amafull}} 服务和 {{site.data.keyword.Bluemix_notm}} 应用程序的实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
 * 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
 * **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
-* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：**美国南部**、**英国**或**悉尼**，并对应于代码中需要的值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：**美国南部**、**英国**或**悉尼**，并对应于代码中需要的值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
 * Xcode 中的 iOS 项目。它不需要安装 {{site.data.keyword.amashort}} 客户端 SDK。  
-
 
 
 ## 准备应用程序以进行 Google 登录
@@ -35,6 +37,7 @@ lastupdated: "2016-11-01"
 遵循 Google 在[针对 iOS 的 Google 登录](https://developers.google.com/identity/sign-in/ios/start-integrating)中提供的指示信息，准备应用程序以进行 Google 登录。
 
 此过程会：
+
 * 在 Google 开发者网站上准备新项目，
 * 创建 `GoogleService-Info.plist` 文件和 `REVERSE_CLIENT_ID` 值，以添加到 Xcode 项目，以及
 * 创建 **Google 客户端标识**，以添加到 {{site.data.keyword.Bluemix_notm}} 后端应用程序。
@@ -47,11 +50,11 @@ lastupdated: "2016-11-01"
 
 1. 在 Google 开发者上，针对 iOS 的 Google 登录创建项目，网址为 https://developers.google.com/mobile/add?platform=ios。
 
-2. 向您的项目添加 Google 登录 API。
+1. 向您的项目添加 Google 登录 API。
 
-3. 检索 `GoogleService-Info.plist`。
+1. 检索 `GoogleService-Info.plist`。
 
-  **重要信息：**获取 `GoogleService-Info.plist` 文件时，请打开该文件，并记录 `CLIENT_ID` 值。您稍后配置 {{site.data.keyword.amashort}} 后端应用程序时需要此值。
+   **重要信息：**获取 `GoogleService-Info.plist` 文件时，请打开该文件，并记录 `CLIENT_ID` 值。您稍后配置 {{site.data.keyword.amashort}} 后端应用程序时需要此值。
 
 1. 将 `GoogleService-Info.plist` 文件添加到 Xcode 项目。有关更多信息，请参阅[将配置文件添加到项目](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config)。
 
@@ -59,12 +62,12 @@ lastupdated: "2016-11-01"
 
 1. 使用以下代码更新应用程序的 `project-Bridging-Header.h` 文件：
 
- ```
- #import <Google/SignIn.h>
- ```
- {: codeblock}
+	```
+	#import <Google/SignIn.h>
+	```
+	{: codeblock}
 
- 有关更新桥接头文件的更多信息，请参阅[启用登录](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in)。
+	有关更新桥接头文件的更多信息，请参阅[启用登录](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in)。
 
 ## 配置 {{site.data.keyword.amashort}} 进行 Google 认证
 {: #google-auth-ios-config}
@@ -86,10 +89,11 @@ lastupdated: "2016-11-01"
 1. 打开终端并运行 **pod --version** 命令。如果已经安装了 CocoaPods，那么将显示版本号。可以跳至下一部分来安装 SDK。
 
 1. 如果未安装 CocoaPods，请运行：
+
+	```
+	sudo gem install cocoapods
 ```
-sudo gem install cocoapods
-```
-{: codeblock}
+	{: codeblock}
 
 有关更多信息，请参阅 [CocoaPods Web 站点](https://cocoapods.org/)。
 
@@ -102,19 +106,19 @@ sudo gem install cocoapods
 
 1. 编辑 `Podfile` 并向相关目标添加以下行：
 
- ```
-use_frameworks!
- pod 'BMSGoogleAuthentication'
- ```
- {: codeblock}
+	```
+	use_frameworks!
+	pod 'BMSGoogleAuthentication'
+	```
+	{: codeblock}
 
- **注：**如果已安装 {{site.data.keyword.amashort}} 核心 SDK，那么您可以除去此行：`pod 'BMSSecurity'`。`BMSGoogleAuthentication` Pod 会安装所有必要的框架。
+	**注：**如果已安装 {{site.data.keyword.amashort}} 核心 SDK，那么您可以除去此行：`pod 'BMSSecurity'`。`BMSGoogleAuthentication` Pod 会安装所有必要的框架。
 
- **提示：**您可以将 `use_frameworks!` 添加到 Xcode 目标中，而不是置于 Podfile 中。
+	**提示：**您可以将 `use_frameworks!` 添加到 Xcode 目标中，而不是置于 Podfile 中。
 
 1. 保存 `Podfile`，然后在命令行中运行 `pod install`。CocoaPods 会安装依赖关系。您将看到进度和添加的组件。
 
- **重要信息**：您现在必须使用 CocoaPods 生成的 `xcworkspace` 文件来打开项目。通常该文件的名称为 `{your-project-name}.xcworkspace`。  
+	**重要信息**：您现在必须使用 CocoaPods 生成的 `xcworkspace` 文件来打开项目。通常该文件的名称为 `{your-project-name}.xcworkspace`。  
 
 1. 在命令行中运行 `open {your-project-name}.xcworkspace` 以打开 iOS 项目工作空间。
 
@@ -135,15 +139,15 @@ use_frameworks!
 
 1. 将所需框架导入要使用 {{site.data.keyword.amashort}} 客户端 SDK 的类中。添加以下头：
 
-	 ```Swift
+	```Swift
 	let tenantId = "<serviceTenantID>"
 	let regionName = <applicationBluemixRegion>
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 let mcaAuthManager = MCAAuthorizationManager.sharedInstance
-	    		mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
-	 ///the regionName should be one of the following: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney   
-	    BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+		mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+		//the regionName should be one of the following: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney   
+		BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 		GoogleAuthenticationManager.sharedInstance.register()
 		return true
 	}
@@ -159,10 +163,12 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, options: options)
   }
  ```
+	{: codeblock}
 
- 在代码中：
- 	* 将 `<serviceTenantID>` 替换为从**移动选项**中检索到的值。
-	* 将 `<applicationBluemixRegion>` 替换为 {{site.data.keyword.Bluemix_notm}} **区域**。 
+	在代码中：
+
+      * 将 `<serviceTenantID>` 替换为从**移动选项**中检索到的值。
+      * 将 `<applicationBluemixRegion>` 替换为 {{site.data.keyword.Bluemix_notm}} **区域**。 
 	
 	有关获取这些值的更多信息，请参阅[开始之前](#before-you-begin)。
 
@@ -177,28 +183,29 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 
 您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
 
-
 1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`，向移动后端应用程序的受保护端点发送请求。例如，`http://my-mobile-backend.mybluemix.net/protected`。
 
 1. 使用 MobileFirst Services 样板创建的移动后端应用程序的 `/protected` 端点通过 {{site.data.keyword.amashort}} 进行保护，所以它只能由安装了 {{site.data.keyword.amashort}} 客户端 SDK 的移动应用程序进行访问。因此，您会在桌面浏览器中看到 `Unauthorized`。
 
 1. 使用 iOS 应用程序对同一端点发起请求。
 
- ```Swift
+	```Swift
 	let protectedResourceURL = "<your protected resource absolute path>"
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
   if error == nil {
       print ("response:\(response?.responseText), no error")
- } else {
-    print ("error: \(error)")
-  }
-  }
+	    } else {
+	       print ("error: \(error)")
+	    }
+	}
 
 	request.send(completionHandler: callBack)
 
 	```
+	{: codeblock}
+
 1. 运行应用程序。您将看到 Google 登录屏幕弹出窗口
 
  ![图像](images/ios-google-login.png)
@@ -207,17 +214,18 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 
 1. 您的请求应该会成功。日志中会显示以下输出。
 
+	```
+	 response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
  ```
- response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
- ```
-{: screen}
+	{: screen}
 
 1. 通过添加以下代码，您还可以添加注销功能：
 
+	```
+	GoogleAuthenticationManager.sharedInstance.logout(callBack)
  ```
-GoogleAuthenticationManager.sharedInstance.logout(callBack)
- ```
+	{: codeblock}
 
-  如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Google 进行认证。此时，用户可以单击<!--in the upper-right corner of the screen-->用户名，以选择其他用户并登录。
+	如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授权 {{site.data.keyword.amashort}} 使用 Google 进行认证。此时，用户可以单击<!--in the upper-right corner of the screen-->用户名，以选择其他用户并登录。
 
-   您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。
+	您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。

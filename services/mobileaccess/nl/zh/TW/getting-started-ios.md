@@ -21,7 +21,7 @@ lastupdated: "2016-10-02"
 {: #before-you-begin}
 您必須具有：
 * {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
-* **租戶 ID**。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/租戶 ID** 欄位中。您需要此值來起始設定「{{site.data.keyword.amashort}} 授權管理程式」。
+* **承租戶 ID**。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「{{site.data.keyword.amashort}} 授權管理程式」。
 * **應用程式路徑**。這是後端應用程式的 URL。在傳送要求至其受保護端點時，將需要此值。
 * Xcode 專案。  
 
@@ -79,10 +79,10 @@ sudo gem install cocoapods
 	{: #sdk-swift}
 
 	{{site.data.keyword.amashort}} 用戶端 SDK 是使用 Objective-C 進行實作。您可能需要將橋接標頭新增至 Swift 專案：
-	1. 在 Xcode 中用滑鼠右鍵按一下您的專案，然後選取**新建檔案**。
-	1. 在 **iOS 來源**種類中，按一下**標頭檔**。將檔案命名為 `BridgingHeader.h`。
-	1. 將下列字行新增至橋接標頭：`#import <IMFCore/IMFCore.h>`。
-	1. 在 Xcode 中按一下您的專案，然後選取**建置設定**標籤。
+	1. 在 Xcode 中的專案上按一下滑鼠右鍵，然後選取 **New File**。
+	1. 在 **iOS Source** 種類中，按一下 **Header file**。將檔案命名為 `BridgingHeader.h`。
+	1. 將下行新增至橋接標頭：`#import <IMFCore/IMFCore.h>`。
+	1. 在 Xcode 中按一下您的專案，然後選取 **Build Settings** 標籤。
 	1. 搜尋 `Objective-C Bridging Header`。
 	1. 將值設為 `BridgingHeader.h` 檔案的位置（例如 `$(SRCROOT)/MyApp/BridgingHeader.h`）。
 	1. 建置專案，以確定 Xcode 取得橋接標頭。您應該不會看到任何失敗訊息。

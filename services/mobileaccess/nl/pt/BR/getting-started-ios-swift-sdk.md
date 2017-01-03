@@ -2,11 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
+{:codeblock:.codeblock}
 
 # Configurando o iOS Swift SDK
 {: #getting-started-ios}
@@ -29,17 +31,17 @@ Você deve ter:
 {{site.data.keyword.Bluemix_notm}}.
 * Uma instância de um serviço
 {{site.data.keyword.amafull}}.
-* Seu **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique em **Opções de dispositivo móvel**. 
-Os valores `tenantId` (também conhecido como
+* Seu **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique em **Opções de dispositivo móvel**. Os valores
+`tenantId` (também conhecido como
 `appGUID`) são exibidos no campo **App
-GUID / TenantId**. Você precisará desse valor para
-inicializar o {{site.data.keyword.amashort}}
+GUID / TenantId**. Você precisará desse
+valor para inicializar o {{site.data.keyword.amashort}}
 Authorization Manager.
 * Sua **Rota do aplicativo**. Esta é a
 URL do seu aplicativo backend. Você precisa desse valor para
 enviar solicitações para seus terminais protegidos.
 * A {{site.data.keyword.Bluemix_notm}}
-**Região**. É possível encontrar a sua região
+**Região**.  É possível encontrar a sua região
 {{site.data.keyword.Bluemix_notm}} atual no cabeçalho,
 próximo ao ícone **Avatar**
 ![ícone de avatar](images/face.jpg "ícone de avatar"). O valor da região que aparece deve ser um dos
@@ -49,7 +51,7 @@ ou `United Kingdom`, e corresponder aos
 valores de SDK requeridos no código code SDK:
 `BMSClient.Region.usSouth`,
 `BMSClient.Region.unitedKingdom` ou
-`BMSClient.Region.sydney`.Você precisará desse
+`BMSClient.Region.sydney`.  Você precisará desse
 valor para inicializar o SDK
 {{site.data.keyword.amashort}}.
 * Um projeto do Xcode. Para obter mais informações sobre como configurar o seu ambiente do iOS, consulte o [website do Apple Developer](https://developer.apple.com/support/xcode/).
@@ -71,9 +73,10 @@ versão será exibido e será possível pular para a próxima seção para insta
 ```
 sudo gem install cocoapods
 ```
+{: codeblock}
 
-Para obter mais informações, veja o
-[website CocoaPods](https://cocoapods.org/).
+Para obter mais informações, consulte o [website do
+CocoaPods](https://cocoapods.org/).
 
 ### Instalar o {{site.data.keyword.amashort}} client SDK com o CocoaPods
 {: #install-sdk-cocoapods}
@@ -89,8 +92,10 @@ O CocoaPods cria um arquivo `Podfile` para você, que fica onde você define as 
   use_frameworks!
   pod 'BMSSecurity'
 	```
+	{: codeblock}
 
-  **Dica:** é possível incluir `use_frameworks!` em seu destino Xcode em vez de tê-lo no Podfile.
+  **Dica:** é possível incluir `use_frameworks!` em
+seu destino Xcode em vez de tê-lo no Podfile.
 
 1. Salve o arquivo `Podfile` e execute `pod install` a partir da linha de comandos. O CocoaPods instala as
 dependências relevantes e exibe as dependências e pods incluídos.<br/>
@@ -126,8 +131,7 @@ a guia `Recursos` e mude
 
 ```Swift 	let tenantId = "<serviceTenantID>" 	let regionName = <applicationBluemixRegion>
 
-	func application(_ application: UIApplication,
-didFinishLaunchingWithOptions launchOptions: 		[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: 		[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
 	let mcaAuthManager = MCAAuthorizationManager.sharedInstance
     mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
@@ -136,6 +140,7 @@ didFinishLaunchingWithOptions launchOptions: 		[UIApplicationLaunchOptionsKey: A
 	return true
 	}
  ```
+ {: codeblock}
 
 * Substitua o `tenantId` pelo valor que obteve a partir de **Opções de dispositivo móvel**. 
 * Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. 

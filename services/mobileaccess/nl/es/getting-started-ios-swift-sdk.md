@@ -2,11 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
+{:codeblock:.codeblock}
 
 # Configuración del SDK de Swift de iOS
 {: #getting-started-ios}
@@ -21,11 +23,11 @@ Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como 
 ## Antes de empezar
 {: #before-you-begin}
 Debe tener lo siguiente:
-* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}}. 
-* Una instancia de un servicio {{site.data.keyword.amafull}}. 
-* Su **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse **Opciones móviles**. Los valores `tenantId` (también conocidos como `appGUID`) se muestran en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización de {{site.data.keyword.amashort}}. 
-* Su **Ruta de aplicación**. Es el URL de la aplicación de programa de fondo. Necesita este valor para enviar solicitudes a sus puntos finales protegidos. 
-* Su {{site.data.keyword.Bluemix_notm}} **Región**. Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de región que aparece debe ser uno de los siguientes: `EE.UU. Sur`,  `Sidney` o  `Reino Unido` y debe corresponder con los valores de SDK requeridos en el código: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`.  Necesitará este valor para inicializar el SDK de {{site.data.keyword.amashort}}. 
+* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}}.
+* Una instancia de un servicio {{site.data.keyword.amafull}}.
+* Su **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse **Opciones móviles**. Los valores `tenantId` (también conocidos como `appGUID`) se muestran en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización de {{site.data.keyword.amashort}}.
+* Su **Ruta de aplicación**. Es el URL de la aplicación de programa de fondo. Necesita este valor para enviar solicitudes a sus puntos finales protegidos.
+* Su {{site.data.keyword.Bluemix_notm}} **Región**.  Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de región que aparece debe ser uno de los siguientes: `EE.UU. Sur`,  `Sidney` o  `Reino Unido` y debe corresponder con los valores de SDK requeridos en el código: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`.  Necesitará este valor para inicializar el SDK de {{site.data.keyword.amashort}}.
 * Un proyecto Xcode. Para ver más información sobre la configuración del entorno de desarrollo de iOS, consulte el [sitio web de Apple Developer](https://developer.apple.com/support/xcode/).
 
 
@@ -44,6 +46,7 @@ El SDK de {{site.data.keyword.amashort}} se distribuye con CocoaPods, un gestor 
 ```
 sudo gem install cocoapods
 ```
+{: codeblock}
 
 Para obtener más información, consulte el [sitio web de CocoaPods](https://cocoapods.org/).
 
@@ -61,6 +64,7 @@ Para obtener más información, consulte el [sitio web de CocoaPods](https://coc
   use_frameworks!
   pod 'BMSSecurity'
 	```
+	{: codeblock}
 
   **Consejo:** puede añadir `use_frameworks!` al destino de Xcode en lugar de especificarlo en el archivo Podfile.
 
@@ -75,7 +79,7 @@ Para obtener más información, consulte el [sitio web de CocoaPods](https://coc
 ### Habilitación de Keychain Sharing para iOS
 {: #enable_keychain}
 
-Habilite `Keychain Sharing`. Vaya al separador `Capacidades` y `active` `Keychain Sharing` en el proyecto Xcode. 
+Habilite `Keychain Sharing`. Vaya al separador `Capacidades` y `active` `Keychain Sharing` en el proyecto Xcode.
 
 ## Inicialización del SDK del cliente de {{site.data.keyword.amashort}}
 {: #init-mca-sdk-ios}
@@ -105,6 +109,7 @@ Habilite `Keychain Sharing`. Vaya al separador `Capacidades` y `active` `Keychai
 	return true
 	}
  ```
+ {: codeblock}
 
 * Sustituya el `tenantId` por el valor que ha obtenido desde **Opciones móviles**. 
 * Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. 

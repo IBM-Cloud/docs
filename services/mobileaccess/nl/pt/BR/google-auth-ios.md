@@ -25,11 +25,10 @@ Você deve ter:
 * Uma instância de um serviço
 {{site.data.keyword.amafull}} e um aplicativo
 {{site.data.keyword.Bluemix_notm}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
-* A URL do seu aplicativo backend (**Rota de App**).Você precisará desse valor para enviar
+* A URL do seu aplicativo backend (**Rota de App**). Você precisará desse valor para enviar
 solicitações para os terminais protegido do seu aplicativo
 backend.
-* Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. 
-Clique no botão **Opções móveis**. O valor
+* Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique no botão **Opções móveis**. O valor
 `tenantId` (também conhecido como
 `appGUID`) é exibido no campo **App
 GUID / TenantId**. Você precisará desse valor para
@@ -190,8 +189,7 @@ Um local comum, mas não obrigatório, para colocar o código de inicialização
 
 	8. Assegure-se de que seu cabeçalho de ponte esteja sendo selecionado pelo Xcode, compilando o seu projeto.
 
-3. Use o código a seguir para inicializar o client SDK.  
-Substitua `< applicationRoute>` e
+3. Use o código a seguir para inicializar o client SDK.  Substitua `< applicationRoute>` e
 `< TenantID>` pela
 **Route** e **TenantID**.
 
@@ -287,7 +285,7 @@ Após a inicialização do client SDK, é possível começar a fazer solicitaç�
 
 ### Antes de Começar
 {: #google-auth-ios-testing-before}
-Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido por {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
 
 1. Tente enviar uma solicitação para o terminal protegido de seu backend móvel no

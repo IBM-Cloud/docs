@@ -2,9 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-11-22"
 
 ---
+
+{:codeblock:.codeblock}
+
 
 # Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Cordova-App konfigurieren
 {: #custom-cordova}
@@ -15,7 +18,7 @@ Instrumentieren Sie die Cordova-Anwendung für die Verwendung der angepassten Au
 {: #before-you-begin}
 * Eine Ressource, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist (siehe die Veröffentlichung zur[Konfiguration der angepassten Authentifizierung](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
 * Der Wert für die Tenant-ID. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
-* Der Realname. Dies ist der Wert, den Sie im Feld **Realmname** des Abschnitts **Angepasst** auf der Registerkarte **Management** des {{site.data.keyword.amashort}}-Dashboards angegeben haben. 
+* Der Realname. Dies ist der Wert, den Sie im Feld **Realmname** des Abschnitts **Angepasst** auf der Registerkarte **Management** des {{site.data.keyword.amashort}}-Dashboards angegeben haben.
 * Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der angezeigte Regionswert muss einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Die genaue Syntax der entsprechenden SDK-Konstanten finden Sie in den Codebeispielen.
 
 Weitere Informationen finden Sie über die folgenden Links:
@@ -32,6 +35,7 @@ Initialisieren Sie das SDK, indem Sie den Parameter `<applicationBluemixRegion>`
 ```JavaScript
 BMSClient.initialize("<applicationBluemixRegion>");
 ```
+{: codeblock}
 
 Ersetzen Sie `<applicationBluemixRegion>` durch Ihre Region (siehe [Vorbereitungen](#before-you-begin)). 
  
@@ -48,6 +52,7 @@ var customAuthenticationListener = {
 	onAuthenticationFailure: function(info){...}
 }
 ```
+{: codeblock}
 
 Jede Methode verarbeitet eine andere Phase eines Authentifizierungsprozesses.
 
@@ -57,6 +62,7 @@ Diese Methode wird aufgerufen, wenn eine angepasste Authentifizierungsanforderun
 ```JavaScript
 onAuthenticationChallengeReceived: function(authenticationContext, challenge) {...}
 ```
+{: codeblock}
 
 * `authenticationContext`: Wird vom {{site.data.keyword.amashort}}-Client-SDK bereitgestellt, sodass der Entwickler Antworten auf Authentifizierungsanforderungen oder Fehler, die bei der Erfassung von Berechtigungsnachweisen auftreten, wie zum Beispiel, ein Abbruch der Authentifizierungsanforderung durch den Benutzer, zurückmelden kann.
 * `challenge`: Ein JSON-Objekt, das eine angepasste Authentifizierungsanforderung enthält, wie sie durch einen angepassten Identitätsprovider zurückgegeben wird.
@@ -66,12 +72,14 @@ Durch das Aufrufen der Methode `onAuthenticationChallengeReceived` delegiert das
 ```JavaScript
 onAuthenticationSuccess: function(info){...}
 ```
+{: codeblock}
 
 Diese Methode wird nach einer erfolgreichen Authentifizierung aufgerufen. Die Argumente umfassen ein optionales JSON-Objekt, das erweiterte Informationen zu dem Authentifizierungserfolg enthält.
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
+{: codeblock}
 
 Diese Methode wird nach einem Authentifizierungsfehler aufgerufen. Die Argumente umfassen ein optionales JSON-Objekt, das erweiterte Informationen zu dem Authentifizierungsfehler enthält.
 
@@ -82,9 +90,14 @@ Der Wert von `authenticationContext` wird als Argument für die Methode `onAuthe
 
 ```JavaScript
 authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
+```
+{: codeblock}
 
+```JavaScript
 authenticationContext.submitAuthenticationFailure(info);
 ```
+{: codeblock}
+
 Der folgende Code zeigt, wie ein Authentifizierungslistener eines Kunden Berechtigungsnachweise erfassen, Anforderungen (Challenges) verarbeiten und Authentifizierungsantworten bereitstellen kann.
 
 ## Workflow für die Beispielimplementierung eines angepassten Authentifizierungslisteners
@@ -125,6 +138,7 @@ var customAuthenticationListener = {
 	}
 }
 ```
+{: codeblock}
 
 ## Angepassten Authentifizierungslistener im Cordova-WebView registrieren
 {: #custom-cordova-authreg}
@@ -134,6 +148,7 @@ Nach dem Erstellen eines angepassten Authentifizierungslisteners müssen Sie die
 ```Java
 BMSClient.registerAuthenticationListener(<realmName>, customAuthenticationListener);
 ```
+{: codeblock}
  Verwenden Sie den Wert für `realmName`, den Sie im {{site.data.keyword.amashort}}-Dashboard angegeben haben.
 
 ## Authorization Manager im nativen Code angeben
@@ -147,6 +162,7 @@ String tenantId = "<tenantId>";
 MCAAuthorizationManager.createInstance(this.getApplicationContext(),tenantId);
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 
 **iOS Objective-C** (zu `AppDelegate.m` hinzufügen)
 
@@ -162,6 +178,7 @@ Registrieren Sie Authorization Manager gemäß Ihrer Version von Xcode hinzu.
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
+{: codeblock}
 
 Hinweis: Ersetzen Sie ``ihr_modulname`` mit dem Modulnamen Ihres Projekts. Wenn beispielsweise der Modulname ``Cordova` ist, sollte der Code ``#import "Cordova-Swift.h"` lauten. Um nach dem Modulnamen zu suchen, wechseln Sie zu **Build Settings > Packagin` > Product Module Name**.
 
@@ -197,6 +214,7 @@ Sie müssen eine Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boil
 	var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 	
 	Ersetzen Sie `<your-application-route>` durch die URL Ihrer Back-End-Anwendung (siehe [Vorbereitungen](#before-you-begin)). 
 

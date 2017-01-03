@@ -1,10 +1,13 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-11-22"
 
 ---
+
+{:codeblock:.codeblock}
+
 
 # Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}} Cordova
 {: #custom-cordova}
@@ -13,7 +16,7 @@ Instrumentez votre application Cordova pour utiliser l'authentification personna
 
 ## Avant de commencer
 {: #before-you-begin}
-* Ressource protégée par une instance du service {{site.data.keyword.amashort}} qui est configurée pour utiliser un fournisseur d'identité personnalisé (voir [Configuration de l'authentification personnalisée](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).    
+* Ressource protégée par une instance du service {{site.data.keyword.amashort}} qui est configurée pour utiliser un fournisseur d'identité personnalisé (voir [Configuration de l'authentification personnalisée](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
 * Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur le bouton **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
 * Nom de votre **Realm**. Il s'agit de la valeur que vous avez spécifiée dans la zone **Nom du domaine** de la section **Personnalisé** dans l'onglet **Gestion** du tableau de bord de {{site.data.keyword.amashort}}.
 * Votre **région** {{site.data.keyword.Bluemix_notm}}. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de région doit être l'une des suivantes : `US South`, `United Kingdom` ou `Sydney`. La syntaxe exacte des constantes SDK correspondantes est donnée dans les exemples de code.
@@ -24,14 +27,15 @@ Pour plus d'informations, voir les sujets suivants :
  * [Utilisation d'un fournisseur d'identité personnalisé](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html). Comment authentifier des utilisateurs avec un fournisseur d'identité personnalisé.
  * [Création d'un fournisseur d'identité personnalisé](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html). Exemples de fonctionnement d'un fournisseur d'identité personnalisé. 
 
-## Configurez votre code WebView Cordova 
+## Configurez votre code WebView Cordova
 ### Initialisation du SDK client {{site.data.keyword.amashort}} dans le WebView Cordova
 {: #custom-cordova-sdk}
-Initialisez le logiciel SDK en transmettant le paramètre `<applicationBluemixRegion>` dans le fichier `index.js`. 
+Initialisez le logiciel SDK en transmettant le paramètre `<applicationBluemixRegion>` dans le fichier `index.js`.
 
 ```JavaScript
 BMSClient.initialize("<applicationBluemixRegion>");
 ```
+{: codeblock}
 
 Remplacez `<applicationBluemixRegion>` par votre région (voir [Avant de commencer](#before-you-begin)). 
  
@@ -48,6 +52,7 @@ var customAuthenticationListener = {
 	onAuthenticationFailure: function(info){...}
 }
 ```
+{: codeblock}
 
 Chaque méthode gère une phase du processus d'authentification.
 
@@ -57,6 +62,7 @@ Cette méthode est appelée lorsqu'une demande d'authentification personnalisée
 ```JavaScript
 onAuthenticationChallengeReceived: function(authenticationContext, challenge) {...}
 ```
+{: codeblock}
 
 * `authenticationContext` : Fourni par le SDK client de {{site.data.keyword.amashort}} pour permettre au développeur de communiquer les réponses aux demandes d'authentification ou les échecs de collecte des données d'identification (par exemple, lorsque l'utilisateur annule la demande d'authentification).
 * `challenge` : Objet JSON qui contient une demande d'authentification personnalisée, renvoyée par un fournisseur d'identité personnalisé.
@@ -66,12 +72,14 @@ En appelant la méthode `onAuthenticationChallengeReceived`, le SDK client de {{
 ```JavaScript
 onAuthenticationSuccess: function(info){...}
 ```
+{: codeblock}
 
 Cette méthode est appelée après une authentification réussie. Les arguments comprennent un objet JSON facultatif contenant des informations détaillées sur le succès de l'authentification.
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
+{: codeblock}
 
 Cette méthode est appelée après un échec d'authentification. Les arguments comprennent un objet JSON facultatif contenant des informations détaillées sur l'échec de l'authentification.
 
@@ -82,10 +90,15 @@ La valeur de `authenticationContext` est fournie comme argument de la méthode `
 
 ```JavaScript
 authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
+```
+{: codeblock}
 
+```JavaScript
 authenticationContext.submitAuthenticationFailure(info);
 ```
-Le code suivant montre comment un programme d'écoute d'autorisation client peut recueillir des informations d'identification, traiter des problèmes et fournir des réponses d'authentification.
+{: codeblock}
+
+Le code suivant montre comment un programme d'écoute d'authentification client peut recueillir des informations d'identification, traiter des problèmes et fournir des réponses d'authentification.
 
 ## Exemple d'implémentation du workflow d'un programme d'écoute d'authentification personnalisé
 {: #custom-cordova-authlisten-sample}
@@ -125,8 +138,9 @@ var customAuthenticationListener = {
 	}
 }
 ```
+{: codeblock}
 
-## Enregistrement d'un programme d'écoute d'authentification personnalisé dans le WebView Cordova   
+## Enregistrement d'un programme d'écoute d'authentification personnalisé dans le WebView Cordova
 {: #custom-cordova-authreg}
 
 Après avoir créé un programme d'écoute d'authentification personnalisé, vous devez l'enregistrer auprès de `BMSClient` avant de commencer à l'utiliser. Ajoutez le code suivant à votre application.  Ce code doit être appelé avant l'envoi de demandes à vos ressources protégées.
@@ -134,7 +148,8 @@ Après avoir créé un programme d'écoute d'authentification personnalisé, vou
 ```Java
 BMSClient.registerAuthenticationListener(<realmName>, customAuthenticationListener);
 ```
-Utilisez le nom de domaine, `realmName`, que vous avez spécifié dans le tableau de bord {{site.data.keyword.amashort}}.
+{: codeblock}
+ Utilisez le nom de domaine, `realmName`, que vous avez spécifié dans le tableau de bord {{site.data.keyword.amashort}}.
 
 ## Définissez le Gestionnaire d'autorisations dans le code natif
 
@@ -147,6 +162,7 @@ String tenantId = "<tenantId>";
 MCAAuthorizationManager.createInstance(this.getApplicationContext(),tenantId);
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 
 **iOS Objective-C** (ajouter à `AppDelegate.m`)
 
@@ -162,6 +178,7 @@ Enregistrez votre Gestionnaire d'autorisations selon votre version de Xcode.
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
+{: codeblock}
 
 Remarque : remplacez ``your_module_name`` par le nom du module de votre projet, par exemple, si votre nom de module est ``Cordova`, ce nom doit être ``#import "Cordova-Swift.h"`. Pour trouver le nom du module, allez à **Build Settings > Packagin` > Product Module Name**.
 
@@ -182,7 +199,8 @@ Une fois que le SDK client est initialisé et qu'un programme `AuthenticationLis
 Vous devez disposer d'une application créée avec un conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`.
 
 
-1. Envoyez une demande à un noeud final protégé de votre application de back end mobile dans votre navigateur en ouvrant `{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`. Le noeud final `/protected` d'une application de back end mobile qui a été créée avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} est protégé par {{site.data.keyword.amashort}}. Ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}. En conséquence, un message `Unauthorized` s'affiche dans le navigateur.
+1. Envoyez une demande à un noeud final protégé de votre application de back end mobile dans votre navigateur en ouvrant `{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.
+ Le noeud final `/protected` d'une application de back end mobile qui a été créée avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} est protégé par {{site.data.keyword.amashort}}. Ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}. En conséquence, un message `Unauthorized` s'affiche dans le navigateur.
 
 1. A l'aide de votre application Cordova, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` et enregistré votre programme d'écoute d'authentification.
 
@@ -196,6 +214,7 @@ Vous devez disposer d'une application créée avec un conteneur boilerplate {{si
 	var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 	
 	Remplacez `<your-application-route>` par votre URL d'application back end (voir [Avant de commencer](#before-you-begin)). 
 

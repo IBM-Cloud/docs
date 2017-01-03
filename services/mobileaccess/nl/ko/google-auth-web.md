@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -59,9 +59,11 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 
 권한 부여 프로세스를 시작하려면 다음을 수행하십시오. 
 
-1. 권한 엔드포인트(`authorizationEndpoint`) 및 클라이언트 ID(`clientId`)를 `VCAP_SERVICES` 환경 변수에 저장된 서비스 신임 정보에서 검색하십시오.
- `var cfEnv = require("cfenv");`
-	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+1. 권한 엔드포인트(`authorizationEndpoint`) 및 클라이언트 ID(`clientId`)를 `VCAP_SERVICES` 환경 변수에 저장된 서비스 신임 정보에서 검색하십시오.  
+
+	`var cfEnv = require("cfenv");` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**참고:** 웹 지원을 추가하기 전에 애플리케이션에 {{site.data.keyword.amashort}} 서비스를 추가한 경우 서비스 신임 정보에 토큰 엔드포인트가 없을 수 있습니다. 대신, {{site.data.keyword.Bluemix_notm}} 지역에 따라 다음 URL을 사용하십시오. 
  
@@ -71,11 +73,11 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 
 	런던: 
 
-	`  https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
 
 	시드니: 
 
-	`  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
 	 
 2. 조회 매개변수로 `response_type("code")`, `client_id` 및 `redirect_uri`를 사용하여 권한 서버 URI를 빌드하십시오. 
 
@@ -108,7 +110,8 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 				res.redirect(redirectUrl); 
 			} 
 		} 
-	}
+	   	}
+       }
 	```
 	{: codeblock}
 
@@ -174,7 +177,7 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 	```
 	{: codeblock}
 
-	`redirect_uri` 매개변수는 Google+를 사용하는 인증 성공 또는 실패 이후 경로 재지정을 위한 URI이며, 1단계의 `redirect_uri`와 일치해야 합니다.   
+	`redirect_uri` 매개변수는 Google+를 사용하는 인증 성공 또는 실패 이후 경로 재지정을 위한 URI이며, {{site.data.keyword.amashort}} 대시보드에서 정의된 `redirect_uri`와 일치해야 합니다.   
    
 	권한 부여 코드가 만료되기 10분 전 이내에 이 POST 요청을 전송해야 합니다. 10분이 지나면 새 코드가 필요합니다.
 

@@ -2,10 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-13"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
+{:codeblock:.codeblock}
 
 # Cordova プラグインのセットアップ
 {: #getting-started-cordova}
@@ -41,6 +43,7 @@ Cordova クライアント・アプリケーションに {{site.data.keyword.ama
 	```
 	cordova platform add android
 	```
+	{: codeblock}
 
 	###iOS
 	{: #install-cordova-ios}
@@ -48,6 +51,7 @@ Cordova クライアント・アプリケーションに {{site.data.keyword.ama
 	```Bash
 	cordova platform add ios
 	```
+	{: codeblock}
 
 2. Android プラットフォームを追加した場合は、Cordova アプリケーションの `config.xml` ファイルに、サポートされる最小 API レベルを追加する必要があります。`config.xml` ファイルを開き、以下の行を `<platform name="android">` エレメントに追加します。
 
@@ -58,6 +62,7 @@ Cordova クライアント・アプリケーションに {{site.data.keyword.ama
 		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
+	{: codeblock}
 
 	*minSdkVersion* の値は、`15` 以上でなければなりません。*targetSdkVersion* 値は `23` でなければなりません。現時点では、Cordova は **Android-23** より高いバージョンをサポートしていません。
 	
@@ -69,12 +74,14 @@ Cordova クライアント・アプリケーションに {{site.data.keyword.ama
 		<!-- add deployment target declaration -->
 	 </platform>
 	```
+	{: codeblock}
 
 4. 以下のようにして、{{site.data.keyword.amashort}} Cordova プラグインをインストールします。
 
  	```Bash
 	cordova plugin add bms-core
 	```
+	{: codeblock}
 
 5. Android、iOS、またはその両方に対応するようにプラットフォームを構成します。
 
@@ -86,6 +93,7 @@ Cordova クライアント・アプリケーションに {{site.data.keyword.ama
 	```Bash
 	cordova build android
 	```
+	{: codeblock}
 
 	####iOS
 	{: #cordova-ios}
@@ -114,6 +122,7 @@ Cordova クライアント・アプリケーションに {{site.data.keyword.ama
 	```Bash
 	cordova plugin list
 	```
+	{: codeblock}
 	
 7. **「Capabilities」**タブで**「Keychain Sharing」**を`「On」`に切り替えて、iOS のキーチェーン共有 (Keychain Sharing) を使用可能にします。
   
@@ -130,6 +139,7 @@ Cordova クライアント・アプリケーションに {{site.data.keyword.ama
 ```JavaScript
 BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
 **注:** `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} サービスがホストされている地域 ([開始する前に](#before-you-begin)を参照) に置き換えます。
 
@@ -145,12 +155,14 @@ BMSClient.initialize(<applicationBluemixRegion>);
 MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<tenantId>");
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 ### iOS (Objective C)
 Xcode のバージョンに応じて、`AppDelegate.m` に許可マネージャーの初期化を追加します。
 
 ```Objective-C
   [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
 ```
+{: codeblock}
 
 
 ## モバイル・バックエンド・サービスへの要求の実行
@@ -177,10 +189,11 @@ Xcode のバージョンに応じて、`AppDelegate.m` に許可マネージャ�
 
 	 request.send(success, failure);
 	```
+	{: codeblock}
 
 3. 要求が正常に実行されると、LogCat コンソールまたは Xcode コンソール (使用しているプラットフォームによって決まる) に以下の出力が表示されます。
 
-	![image](images/getting-started-android-success.png)
+	![成功メッセージ](images/getting-started-android-success.png)
 
 	## 次のステップ
 	{: #next-steps}

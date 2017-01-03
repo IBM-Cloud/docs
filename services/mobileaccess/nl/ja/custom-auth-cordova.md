@@ -2,9 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-11-22"
 
 ---
+
+{:codeblock:.codeblock}
+
 
 # {{site.data.keyword.amashort}} Cordova アプリ用のカスタム認証の構成
 {: #custom-cordova}
@@ -33,6 +36,7 @@ lastupdated: "2016-11-03"
 ```JavaScript
 BMSClient.initialize("<applicationBluemixRegion>");
 ```
+{: codeblock}
 
 `<applicationBluemixRegion>` をご使用の地域 ([開始する前に](#before-you-begin)を参照) に置き換えます。 
  
@@ -49,6 +53,7 @@ var customAuthenticationListener = {
 	onAuthenticationFailure: function(info){...}
 }
 ```
+{: codeblock}
 
 各メソッドは、認証プロセスの異なるフェーズを処理します。
 
@@ -59,6 +64,7 @@ var customAuthenticationListener = {
 ```JavaScript
 onAuthenticationChallengeReceived: function(authenticationContext, challenge) {...}
 ```
+{: codeblock}
 
 * `authenticationContext`: 開発者が認証チャレンジ応答、または資格情報収集中の失敗 (例: ユーザーによる認証要求の取り消し）を返すことができるように、{{site.data.keyword.amashort}} Client SDK によって提供されます。
 * `challenge`: カスタム ID プロバイダーによって返されるカスタム認証チャレンジを含む JSON オブジェクト。
@@ -68,12 +74,14 @@ onAuthenticationChallengeReceived: function(authenticationContext, challenge) {.
 ```JavaScript
 onAuthenticationSuccess: function(info){...}
 ```
+{: codeblock}
 
 このメソッドは認証が成功した後で呼び出されます。引数には、認証の成功に関する詳しい情報が含まれた、オプションの JSON オブジェクトが含まれます。
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
+{: codeblock}
 
 このメソッドは認証が失敗した後で呼び出されます。引数には、認証の失敗に関する詳しい情報が含まれた、オプションの JSON オブジェクトが含まれます。
 
@@ -85,9 +93,16 @@ onAuthenticationFailure: function(info){...}
 ```JavaScript
 authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
 
+```
+{: codeblock}
+
+```JavaScript
 authenticationContext.submitAuthenticationFailure(info);
 ```
-以下のコードは、カスタム認証リスナーが資格情報を収集し、問題を処理して、認証応答を提供する方法を示しています。
+{: codeblock}
+
+以下のコードは、カスタム認証リスナーがどのように資格情報を収集し、チャレンジを処理し、認証応答を提供できるかを示しています。
+
 ## カスタム認証リスナーのワークフローの実装例
 {: #custom-cordova-authlisten-sample}
 
@@ -126,6 +141,7 @@ var customAuthenticationListener = {
 	}
 }
 ```
+{: codeblock}
 
 ## Cordova WebView でのカスタム認証リスナーの登録
 {: #custom-cordova-authreg}
@@ -135,6 +151,7 @@ var customAuthenticationListener = {
 ```Java
 BMSClient.registerAuthenticationListener(<realmName>, customAuthenticationListener);
 ```
+{: codeblock}
 `realmName` には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用してください。
 
 
@@ -149,6 +166,7 @@ String tenantId = "<tenantId>";
 MCAAuthorizationManager.createInstance(this.getApplicationContext(),tenantId);
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 
 **iOS Objective-C** (`AppDelegate.m` に追加します)
 
@@ -164,6 +182,7 @@ Xcode のバージョンに応じて、許可マネージャーを登録しま�
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
+{: codeblock}
 
 注: `your_module_name` をプロジェクトのモジュール名に置き換えます。例えば、モジュール名が `Cordova` の場合は、`#import "Cordova-Swift.h"` のようになります。モジュール名を見つけるには、**「ビルド設定 (Build Settings)」>「パッケージ化 (Packaging)」>「製品モジュール名 (Product Module Name)」**に移動します。
 
@@ -198,6 +217,7 @@ Client SDK が初期化され、カスタム `AuthenticationListener` の登録�
 	var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 	
 	`<your-application-route>` をご使用のバックエンド・アプリケーション URL ([開始する前に](#before-you-begin)を参照) に置き換えます。 
 

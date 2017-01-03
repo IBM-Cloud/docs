@@ -2,11 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
+{:codeblock:.codeblock}
 
 # Configurazione dell'SDK Swift iOS
 {: #getting-started-ios}
@@ -25,7 +27,7 @@ Mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora consi
 * Un'istanza di un servizio {{site.data.keyword.amafull}}.
 * Il tuo **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}. Fai clic su **Opzioni mobili**. I valori `tenantId` (noti anche come `appGUID`)  vengono visualizzati nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione {{site.data.keyword.amashort}}.
 * La tua **Rotta applicazione**. Questa è l'URL della tua applicazione di back-end. Hai bisogno di questo valore per inviare le richieste agli endpoint protetti correlati.
-* La tua **Regione** {{site.data.keyword.Bluemix_notm}}.  Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione visualizzato deve essere uno dei seguenti: `Stati Uniti Sud`,  `Sydney` o  `Regno Unito` e corrisponde ai valori delle SDK richiesti nel codice: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`. Avrai bisogno di questo valore per inizializzare l'SDK {{site.data.keyword.amashort}}.
+* La tua **Regione** {{site.data.keyword.Bluemix_notm}}.  Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione visualizzato deve essere uno dei seguenti: `Stati Uniti Sud`,  `Sydney` o  `Regno Unito` e corrisponde ai valori delle SDK richiesti nel codice: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`.  Avrai bisogno di questo valore per inizializzare l'SDK {{site.data.keyword.amashort}}.
 * Un progetto Xcode. Per ulteriori informazioni su come configurare il tuo ambiente di sviluppo iOS, consulta il [sito web per gli sviluppatori Apple](https://developer.apple.com/support/xcode/).
 
 
@@ -44,6 +46,7 @@ L'SDK {{site.data.keyword.amashort}} è distribuito con CocoaPods, un gestore di
 ```
 sudo gem install cocoapods
 ```
+{: codeblock}
 
 Per ulteriori informazioni, visita il [sito web di CocoaPods](https://cocoapods.org/).
 
@@ -61,6 +64,7 @@ Per ulteriori informazioni, visita il [sito web di CocoaPods](https://cocoapods.
   use_frameworks!
   pod 'BMSSecurity'
 	```
+	{: codeblock}
 
   **Suggerimento:** puoi aggiungere `use_frameworks!` alla tua destinazione Xcode invece di averlo nel Podfile.
 
@@ -105,11 +109,12 @@ Abilita `Keychain Sharing`. Vai alla scheda `Funzionalità` e passa `Keychain Sh
 	return true
 	}
  ```
+ {: codeblock}
 
 * Sostituisci `tenantId` con il valore ottenuto dalle **Opzioni mobili**. 
 * Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. 
 
-Per informazioni su questi valori, consulta [Prima di cominciare](#before-you-begin).  
+Per informazioni su questi valori, consulta [Prima di cominciare](#before-you-begin). 
 
 
 ## Effettuare una richiesta alla tua applicazione di back-end mobile

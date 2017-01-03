@@ -6,6 +6,8 @@ lastupdated: "2016-11-2"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Autenticazione utenti con un provider di identità personalizzato
 {: #custom-id}
 
@@ -36,13 +38,13 @@ Crea un provider di identità personalizzato che utilizza il servizio  {{site.da
 * L'SDK client {{site.data.keyword.amashort}} reinvia automaticamente la richiesta originale che ha attivato il flusso di autorizzazione.
 * L'SDK server {{site.data.keyword.amashort}} estrae l'intestazione di autorizzazione dalla richiesta, la convalida presso il servizio {{site.data.keyword.amashort}} e concede l'accesso a una risorsa di back-end.
 
-### Flusso della richiesta dell'applicazione Web {{site.data.keyword.amashort}} 
+### Flusso della richiesta dell'applicazione Web {{site.data.keyword.amashort}}
 {: #mca-custom-web-sequence}
 
 Il flusso della richiesta dell'applicazione Web {{site.data.keyword.amashort}} è simile al flusso del client mobile. Tuttavia, {{site.data.keyword.amashort}} protegge l'applicazione web, invece della risorsa di back-end {{site.data.keyword.Bluemix_notm}}.
 
-  * La richiesta iniziale viene inviata dall'applicazione Web (da un modulo di accesso, ad esempio). 
-  * Il reindirizzamento finale è all'area protetta dell'applicazione stessa, invece che alla risorsa protetta di backend.  
+  * La richiesta iniziale viene inviata dall'applicazione Web (da un modulo di accesso, ad esempio).
+  * Il reindirizzamento finale è all'area protetta dell'applicazione stessa, invece che alla risorsa protetta di backend. 
 
 ## Descrizione dei provider di identità personalizzati
 {: #custom-id-about}
@@ -65,6 +67,7 @@ Quando crei un provider di identità personalizzato, puoi:
 		}
 	}
 	```
+	{: codeblock}
 
 1. Implementa l'eventuale flusso di raccolta delle credenziali personalizzato sul client, compresa l'autenticazione in più passi e in più moduli. Analogamente alla richiesta di verifica dell'autenticazione personalizzata, devi progettare la struttura di una risposta alla richiesta di verifica dell'autenticazione personalizzata.
 
@@ -77,6 +80,8 @@ Quando crei un provider di identità personalizzato, puoi:
 		pincode:"1234"
 	}
 	```
+	{: codeblock}
+	
 1. Implementa la logica personalizzata di convalida della risposta alla richiesta di verifica dell'autenticazione fornita.
 
 1. Definisci un oggetto di identità utente personalizzato che contiene le eventuali proprietà personalizzate richieste. Questo è un esempio di un oggetto di identità utente personalizzato ottenuto dal client dopo l'autenticazione eseguita con esito positivo:
@@ -92,6 +97,7 @@ Quando crei un provider di identità personalizzato, puoi:
 		}
 	}
 	```
+	{: codeblock}
 
 ### Implementazione di esempio del provider di identità personalizzato
 {: #custom-sample}

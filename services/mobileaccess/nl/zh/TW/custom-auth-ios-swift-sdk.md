@@ -6,6 +6,9 @@ lastupdated: "2016-10-27"
 
 ---
 
+{:codeblock:.codeblock}
+
+
 # 配置適用於 {{site.data.keyword.amashort}} iOS (Swift SDK) 應用程式的自訂鑑別
 {: #custom-ios}
 
@@ -19,10 +22,10 @@ lastupdated: "2016-10-27"
 開始之前，您必須具有：
 
 * 配置為使用自訂身分提供者之 {{site.data.keyword.amashort}} 服務實例所保護的資源（請參閱[配置自訂鑑別](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。  
-* **租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
+* **承租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
 * **領域**名稱。這是您在 {{site.data.keyword.amashort}} 儀表板的**管理**標籤上，**自訂**區段內的**領域名稱**欄位中指定的值。
 * 後端應用程式的 URL（**應用程式路徑**）。在傳送要求至後端應用程式的受保護端點時，將需要此值。
-* {{site.data.keyword.Bluemix_notm}} **地區**。您可以在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 旁邊的標頭中，找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區。出現的地區值應該是下列其中一項：**美國南部**、**英國**或**雪梨**，並對應至程式碼中所需的常數：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
+* {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：**美國南部**、**英國**或**雪梨**，並對應至程式碼中所需的常數：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
 
 如需相關資訊，請參閱下列資訊：
  * [開始使用 {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
@@ -30,6 +33,11 @@ lastupdated: "2016-10-27"
  * [使用自訂身分提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [建立自訂身分提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [配置 {{site.data.keyword.amashort}} 進行自訂鑑別](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+
+### 針對 iOS 啟用金鑰鏈共用
+{: #enable_keychain}
+
+啟用 `Keychain Sharing`。移至 `Capabilities` 標籤，並將 Xcode 專案中的 `Keychain Sharing` 切換為 `On`。
 
 
 ### 起始設定用戶端 SDK
@@ -44,6 +52,7 @@ lastupdated: "2016-10-27"
 	import BMSCore
 	import BMSSecurity
 	```
+	{: codeblock}
 
 1. 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK、將授權管理程式變更為 `MCAAuthorizationManager`，以及定義並登錄鑑別委派。
 
@@ -86,6 +95,7 @@ lastupdated: "2016-10-27"
 	     return true
  }
  ```
+{: codeblock}
 
 在程式碼中：
 * 將 `MCAServiceTenantId` 取代為 **TenantId** 值，並將 `<applicationBluemixRegion>` 取代為 {{site.data.keyword.amashort}} **Region**（請參閱[開始之前](##before-you-begin)）。 
@@ -109,7 +119,7 @@ lastupdated: "2016-10-27"
 
 1. 使用 iOS 應用程式以對相同的端點提出要求。起始設定 `BMSClient` 並登錄自訂鑑別委派之後，請新增下列程式碼：
 
-	```Swift
+    ```Swift
 
 	let protectedResourceURL = "<your protected resource absolute path>"
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
@@ -121,9 +131,9 @@ lastupdated: "2016-10-27"
     print ("error: \(error)")
   }
  }
-
 	request.send(completionHandler: callBack)
-	 ```
+ ```
+     {: codeblock}
 
 1. 當要求成功時，您會在 Xcode 主控台中看到下列輸出：
 
@@ -138,13 +148,15 @@ lastupdated: "2016-10-27"
  })
  response:Optional("Hello Don Lon"), no error
  ```
+	 {: codeblock}
 
 1. 您也可以新增下列程式碼，來新增登出功能：
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
- ```  
+ ``` 
+	 {: codeblock}
 
  如果您在使用者登入之後呼叫此程式碼，則會將使用者登出。使用者嘗試再次登入時，必須再次回答從伺服器收到的盤查。
 
- 將 `callBack` 傳遞給 logout 函數是選用性的作業。您也可以傳遞 `nil`。
+ 將 `callBack` 傳遞給 logout 函數是選用性的作業。您也可以傳遞 `nil`。

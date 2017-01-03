@@ -6,6 +6,9 @@ lastupdated: "2016-10-27"
 
 ---
 
+{:codeblock:.codeblock}
+
+
 # Configurazione dell'autenticazione personalizzata per la tua applicazione iOS (Swift SDK) {{site.data.keyword.amashort}}
 {: #custom-ios}
 
@@ -31,6 +34,11 @@ Per ulteriori informazioni, consulta:
  * [Creazione di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
+### Abilitare Keychain Sharing per iOS
+{: #enable_keychain}
+
+Abilita `Keychain Sharing`. Vai alla scheda `Funzionalità` e passa `Keychain Sharing` su `Attivo` nel tuo progetto Xcode.
+
 
 ### Inizializzazione dell'SDK client
 {: #custom-ios-sdk-initialize}
@@ -44,6 +52,7 @@ Inizializza l'SDK passando il parametro `applicationGUID` (**TenantId**). Un pun
 	import BMSCore
 	import BMSSecurity
 	```
+	{: codeblock}
 
 1. Inizializza l'SDK client {{site.data.keyword.amashort}}, modifica il gestore autorizzazione in modo che sia  `MCAAuthorizationManager` e definisci un delegato di autenticazione e registralo.
 
@@ -88,6 +97,7 @@ Inizializza l'SDK passando il parametro `applicationGUID` (**TenantId**). Un pun
 
 
 ```
+{: codeblock}
 
 Nel codice:
 * Sostituisci `MCAServiceTenantId` con il valore **TenantId** e `<applicationBluemixRegion>` con la tua **Regione** {{site.data.keyword.amashort}} (consulta [Prima di cominciare](##before-you-begin)). 
@@ -111,7 +121,7 @@ Dopo che hai inizializzato l'SDK client e registrato un delegato di autenticazio
 
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint. Aggiungi il seguente codice dopo che hai inizializzato `BMSClient` e registrato il tuo delegato di autenticazione personalizzato:
 
-	```Swift
+    ```Swift
 
 	let protectedResourceURL = "<your protected resource absolute path>"
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
@@ -125,7 +135,8 @@ Dopo che hai inizializzato l'SDK client e registrato un delegato di autenticazio
 	}
 
 	request.send(completionHandler: callBack)
-	 ```
+     ```
+     {: codeblock}
 
 1. Quando la tua richiesta ha esito positivo, nella console Xcode vedi il seguente output:
 
@@ -140,12 +151,14 @@ Dopo che hai inizializzato l'SDK client e registrato un delegato di autenticazio
  })
 	 response:Optional("Salve Don Lon"), no error
 	 ```
+	 {: codeblock}
 
 1. Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
-	 ```  
+	 ``` 
+	 {: codeblock}
 
  Se richiami questo codice dopo che un utente ha eseguito l'accesso, l'utente viene disconnesso. Quando l'utente prova ad eseguire nuovamente l'accesso, deve rispondere nuovamente alla richiesta di verifica proveniente dal server.
 

@@ -17,20 +17,20 @@ Wenn Sie Facebook als Identitätsprovider in Ihren {{site.data.keyword.amafull}}
 **Hinweis:** Das Objective-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden (Informationen hierzu finden Sie in [Facebook-Authentifizierung für iOS-Apps aktivieren (Swift-SDK)](facebook-auth-ios-swift-sdk.html)).
 
 ## Vorbereitungen
-{: #facebook-auth-ios-before}
+{: #before-you-begin}
 
 Voraussetzungen:
 * iOS-Projekt, das für das Arbeiten mit CocoaPods eingerichtet ist.  Weitere Informationen finden Sie unter **Install CocoaPods** in [Setting up the iOS SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
    **Hinweis:** Sie müssen nicht den Kern des {{site.data.keyword.amashort}}-Client-SDK installieren, bevor Sie fortfahren.
 * Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung eines {{site.data.keyword.Bluemix_notm}}-Back-Ends finden Sie in der [Einführung](index.html).
 * Wert für die **App-GUID**. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `appGUID` (auch als `tenantId` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
-* Facebook-Anwendungs-ID. Weitere Informationen finden Sie im Abschnitt [Anwendung auf der Site 'Facebook for Developers' erstellen](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* Facebook-Anwendungs- und Anwendungs-ID. Weitere Informationen finden Sie im Abschnitt [Anwendung auf der Site 'Facebook for Developers' erstellen](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Facebook-Anwendung für die iOS-Plattform konfigurieren
 {: #facebook-auth-ios-config}
 Führen Sie die folgenden Schritte auf der Site 'Facebook for Developers' aus:
 
-1. Melden Sie sich bei Ihrem Konto auf [Facebook for Developers](https://developers.facebook.com) an. Informationen zum Erstellen einer neuen App finden Sie unter 'https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID'. 
+1. Melden Sie sich bei Ihrem Konto auf [Facebook for Developers](https://developers.facebook.com) an. 
 
 1. Stellen Sie sicher, dass die iOS-Plattform zu Ihrer App hinzugefügt wurde. Wenn Sie die iOS-Plattform hinzufügen oder konfigurieren, müssen Sie die **Bundle-ID** der iOS-Anwendung angeben. Zum Ermitteln der Bundle-ID (**bundleId**) Ihrer iOS-Anwendung suchen Sie nach **Bundle Identifier** in der Datei `info.plist` oder auf der Registerkarte **General** des Projekts in Xcode.
 
@@ -182,7 +182,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 		1. Setzen Sie den Wert auf die Position Ihrer Datei `BridgingHeader.h`. Beispiel: `$(SRCROOT)/MyApp/BridgingHeader.h`.
 		1. Stellen Sie sicher, dass Ihr Überbrückungsheader von Xcode aufgenommen wird, indem Sie Ihr Projekt erstellen (Build). Dabei sollten keine Fehlernachrichten angezeigt werden.
 
-2. Initialisieren Sie das Client-SDK.	Informationen zum Abrufen der Werte für `applicationRoute` und `applicationGUID` finden Sie unter [Vorbereitungen](#before-you-begin). 
+2. Initialisieren Sie das Client-SDK.	Informationen zum Abrufen der Werte für `applicationRoute` und `applicationGUID` finden Sie unter [Vorbereitungen](#before-you-begin).
 
 	####Objective-C
 	{: #approute-objc}
@@ -201,8 +201,7 @@ Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungs
 	 							backendGUID: "applicationGUID")
 	```
 
-1. Initialisieren Sie den `AuthorizationManager` durch Übergeben des Parameters `tenantId` des {{site.data.keyword.amashort}}-Service. Siehe [Vorbereitungen].
-(#before-you-begin).
+1. Initialisieren Sie den `AuthorizationManager` durch Übergeben des Parameters `tenantId` des {{site.data.keyword.amashort}}-Service. Siehe [Vorbereitungen](#before-you-begin).
 
 	####Objective-C
 	{: #authman-objc}

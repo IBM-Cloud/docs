@@ -15,8 +15,8 @@ Para utilizar la autenticación personalizada con su app móvil, debe registrar 
 ## Antes de empezar
 {: #custom-dash-begin}
 Debe tener lo siguiente:
-* Una instancia de un servicio {{site.data.keyword.amafull}}. 
-* Disponga de una aplicación de proveedor de identidad. 
+* Una instancia de un servicio {{site.data.keyword.amafull}}.
+* Disponga de una aplicación de proveedor de identidad.
 
 ## Configuración de la autenticación personalizada en el panel de control de {{site.data.keyword.amafull}}
 {: #custom-dash-config}
@@ -24,7 +24,7 @@ Utilice el panel de control de {{site.data.keyword.amafull}} para configurar la 
 
 1. Abra el servicio en el panel de control de {{site.data.keyword.amafull}}.
 1. En el separador **Gestionar**, active **Autorización**.
-1. Expanda la sección **Personalizada**. 
+1. Expanda la sección **Personalizada**.
 1. Especifique el **Nombre de dominio** y el **URL de proveedor de identidad personalizado**. El valor **URI de redirección de su aplicación web** sólo es necesario para aplicaciones web.
 
 ## Pasos siguientes

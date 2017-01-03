@@ -2,10 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-13"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
+{:codeblock:.codeblock}
 
 # Configurazione del plugin Cordova
 {: #getting-started-cordova}
@@ -38,6 +40,7 @@ l'interfaccia riga di comando (CLI) Cordova e `npmjs`, un repository di plug-in 
 	```
 	cordova platform add android
 	```
+	{: codeblock}
 
 	###iOS
 	{: #install-cordova-ios}
@@ -45,6 +48,7 @@ l'interfaccia riga di comando (CLI) Cordova e `npmjs`, un repository di plug-in 
 	```Bash
 	cordova platform add ios
 	```
+	{: codeblock}
 
 2. Se hai aggiunto la piattaforma Android, devi aggiungere il livello API minimo supportato al file `config.xml` della
 tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga all'elemento `<platform name="android">`:
@@ -56,6 +60,7 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
+	{: codeblock}
 
 	Il valore *minSdkVersion* deve essere maggiore di `15`. Il valore di *targetSdkVersion* deve essere `23`. Al momento, Cordova non supporta le versioni successive alla **Android-23**.
 	
@@ -67,12 +72,14 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 		<!-- add deployment target declaration -->
 	 </platform>
 	```
+	{: codeblock}
 
 4. Installa il plugin Cordova {{site.data.keyword.amashort}}:
 
  	```Bash
 	cordova plugin add bms-core
 	```
+	{: codeblock}
 
 5. Configura la tua piattaforma per Android, iOS o per entrambi.
 
@@ -84,15 +91,16 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 	```Bash
 	cordova build android
 	```
+	{: codeblock}
 
 	####iOS
 	{: #cordova-ios}
 
-	Configura il tuo progetto Xcode nel seguente modo. 
+	Configura il tuo progetto Xcode nel seguente modo.
 
 	1. Utilizza la versione più recente di Xcode per aprire il tuo file `xcode.proj` nella directory `<app_name>/platforms/ios`.
 
-		**Importante:** se ricevi un messaggio che indica di eseguire la conversione alla sintassi Swift più recente, fai clic su **Cancel**. 
+		**Importante:** se ricevi un messaggio che indica di eseguire la conversione alla sintassi Swift più recente, fai clic su **Cancel**.
 
 	2. Genera ed esegui la tua applicazione con Xcode.
 
@@ -112,6 +120,7 @@ tua applicazione Cordova. Apri il file `config.xml` e aggiungi la seguente riga 
 	```Bash
 	cordova plugin list
 	```
+	{: codeblock}
 	
 7. Abilita Keychain Sharing per iOS impostando **Keychain Sharing** su `On` nella scheda **Capabilities**.
   
@@ -128,6 +137,7 @@ Aggiungi la seguente chiamata al tuo file `index.js` per inizializzare l'SDK cli
 ```JavaScript
 BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
 **NB:** Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitato il tuo servizio {{site.data.keyword.Bluemix_notm}}, consulta [Prima di cominciare](#before-you-begin).
 
@@ -143,20 +153,22 @@ Nel metodo `OnCreate` nel file `MainActivity.java` aggiungi il codice prima di `
 MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<tenantId>");
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 ### iOS (Objective C)
 Aggiungi l'inizializzazione del gestore autorizzazione in `AppDelegate.m` in base alla tua versione di Xcode.
 
 ```Objective-C
   [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
 ```
+{: codeblock}
 
 
-## Effettuare una richiesta al servizio di back-end mobile 
+## Effettuare una richiesta al servizio di back-end mobile
 {: #getting-started-request}
 
-Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puoi iniziare a effettuare richieste al tuo servizio di back-end mobile. 
+Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puoi iniziare a effettuare richieste al tuo servizio di back-end mobile.
 
-1. Prova a inviare una richiesta a un endpoint protetto della tua applicazione di back-end mobile.  Nel tuo browser, apri il seguente URL: `{applicationRoute}/protected` (ad esempio: `http://my-mobile-backend.mybluemix.net/protected`).
+1. Prova a inviare una richiesta a un endpoint protetto della tua applicazione di back-end mobile. Nel tuo browser, apri il seguente URL: `{applicationRoute}/protected` (ad esempio: `http://my-mobile-backend.mybluemix.net/protected`).
 
 	L'endpoint `/protected` di un'applicazione di backend mobile creato con il contenitore tipo MobileFirst Services Starter è protetto con {{site.data.keyword.amashort}}. Nel tuo browser viene restituito un messaggio `Unauthorized`. Questo messaggio viene restituito perché a questo endpoint accedono solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}.
 
@@ -175,10 +187,11 @@ Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puo
 
 	 request.send(success, failure);
 	```
+	{: codeblock}
 
 3. Quando la tua richiesta ha esito positivo, vedrai il seguente output nella console LogCat o Xcode (a seconda della piattaforma che stai usando):
 
-	![immagine](images/getting-started-android-success.png)
+	![messaggio di esito positivo](images/getting-started-android-success.png)
 
 	## Fasi successive
 	{: #next-steps}

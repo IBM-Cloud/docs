@@ -5,9 +5,10 @@ copyright:
 lastupdated: "2016-11-02"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-
+{:codeblock:.codeblock}
 
 
 # Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Android-App konfigurieren
@@ -22,7 +23,7 @@ Voraussetzungen:
 
 * Eine Ressource, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist (siehe die Veröffentlichung zur [Konfiguration der angepassten Authentifizierung](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
 * Der Wert für die Tenant-ID. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
-* Der Realname. Dies ist der Wert, den Sie im Feld **Realmname** des Abschnitts **Angepasst** auf der Registerkarte **Management** des {{site.data.keyword.amashort}}-Dashboards angegeben haben. 
+* Der Realname. Dies ist der Wert, den Sie im Feld **Realmname** des Abschnitts **Angepasst** auf der Registerkarte **Management** des {{site.data.keyword.amashort}}-Dashboards angegeben haben.
 * Die URL der Back-End-Anwendung (**App-Route**). Sie benötigen diese Werte zum Senden von Anforderungen an die geschützten Endpunkte der Back-End-Anwendung.
 * Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im WebView-JavaScript-Code erforderlichen SDK-Werten entsprechen: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`. Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-Clients.
 
@@ -52,6 +53,7 @@ Wenn eine Android-App mit dem {{site.data.keyword.amashort}}-Android-SDK instrum
     	// andere Abhängigkeiten
 	}
 	```
+	{: codeblock}
 
 1. Synchronisieren Sie Ihr Projekt mit Gradle. Klicken Sie auf **Tools > Android > Sync Project with Gradle Files**.
 
@@ -61,13 +63,15 @@ Fügen Sie die Internetzugriffsberechtigung unter dem Element `<manifest>` hinzu
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
+	{: codeblock}
 
 1. Initialisieren Sie das SDK.  
 	Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `onCreate` der Hauptaktivität in Ihrer Android-Anwendung.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
-```
+	```
+	{: codeblock}
 
 Ersetzen Sie `BMSClient.REGION_UK` durch die {{site.data.keyword.amashort}}-Region. Weitere Informationen zum Abrufen dieser Werte finden Sie unter [Vorbereitungen](#before-you-begin).
 	
@@ -84,6 +88,7 @@ Rufen Sie diese Methode auf, wenn eine angepasste Authentifizierungsanforderung 
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+{: codeblock}
 
 
 #### Argumente
@@ -101,6 +106,7 @@ Rufen Sie diese Methode nach einer erfolgreichen Authentifizierung auf. Die Argu
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ### Methode 'onAuthenticationFailure'
 {: #custom-android-authlistener-onfail}
@@ -108,6 +114,7 @@ Rufen Sie diese Methode auf, wenn eine Authentifizierung fehlgeschlagen ist. Die
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ## Schnittstelle 'AuthenticationContext'
 {: #custom-android-authcontext}
@@ -117,10 +124,12 @@ Die Schnittstelle `AuthenticationContext` wird als Argument für die Methode `on
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+{: codeblock}
 
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+{: codeblock}
 
 ## Beispielimplementierung einer angepassten Schnittstelle 'AuthenticationListener'
 {: #custom-android-samplecustom}
@@ -180,6 +189,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	}
 }
 ```
+{: codeblock}
 
 ## Angepasste Schnittstelle 'AuthenticationListener' registrieren
 {: #custom-android-register}
@@ -193,6 +203,7 @@ mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuth
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
+{: codeblock}
 
 
 Gehen Sie im Code wie folgt vor:
@@ -234,7 +245,8 @@ Sie müssen eine Anwendung am Endpunkt `/protected` haben, die über eine Ressou
 			}
 		}
 	});
-```
+	```
+	{: codeblock}
 	
 1. 	Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe im LogCat-Tool angezeigt:
 
@@ -245,6 +257,7 @@ Sie müssen eine Anwendung am Endpunkt `/protected` haben, die über eine Ressou
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+ {: codeblock}
 
 
  Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer angemeldet hat, wird der Benutzer abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er auf die vom Server empfangene Anforderung erneut reagieren.

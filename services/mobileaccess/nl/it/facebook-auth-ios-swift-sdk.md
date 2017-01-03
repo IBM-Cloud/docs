@@ -2,17 +2,20 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-12-05"
 
 ---
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Abilitazione dell'autenticazione Facebook per le applicazioni iOS (SDK Swift)
 {: #facebook-auth-ios}
 
 Per utilizzare Facebook come un provider di identità nelle tue applicazioni iOS {{site.data.keyword.amafull}}, aggiungi e configura la piattaforma iOS per la tua applicazione Facebook.
-{:shortdesc}
+{: shortdesc}
 
 ## Prima di cominciare
 {: #before-you-begin}
@@ -24,17 +27,18 @@ Per utilizzare Facebook come un provider di identità nelle tue applicazioni iOS
 * La tua **Regione** {{site.data.keyword.Bluemix_notm}}. Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione visualizzato deve essere uno dei seguenti: `Stati Uniti Sud`, `Regno Unito` o `Sydney` e corrisponde ai valori SDK richiesti per la SDK Swift: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`. Avrai bisogno di questo valore per inizializzare il client {{site.data.keyword.amashort}}.
 * Un progetto iOS configurato per lavorare con CocoaPods.  Per ulteriori informazioni, vedi **Installa CocoaPods** in  [Configurazione dell'SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
    **Nota:** non è necessario installare l'SDK {{site.data.keyword.amashort}} core prima di procedere.
-* Un'applicazione Facebook sul sito [Facebook for Developers](https://developers.facebook.com).
-
+* Un'applicazione Facebook sul sito Web [Facebook for Developers](https://developers.facebook.com).
 
 **Importante:** non devi necessariamente installare separatamente l'SDK Facebook (`com.facebook.FacebookSdk`). L'SDK Facebook viene installato automaticamente con il seguente pod {{site.data.keyword.amashort}} `BMSFacebookAuthentication`. Puoi saltare il passo **Aggiungi l'SDK Facebook al tuo progetto Xcode** quando aggiungi o configuri la tua applicazione sul sito web Facebook for Developers.
 
 **Nota:** mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix_notm}}, è pianificato di abbandonarla più avanti questo anno in favore di questa nuova SDK Swift.
+
 ## Configurazione della tua applicazione Facebook per la piattaforma iOS
 {: #facebook-auth-ios-config}
+
 Sul sito Facebook for Developers:
 
-1. Accedi al tuo account in  [Facebook for Developers](https://developers.facebook.com). Per informazioni sulla creazione di una nuova applicazione, consulta [Creazione di un'applicazione nel sito web Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Accedi al tuo account in  [Facebook for Developers](https://developers.facebook.com). 
 
 1. Assicurati che la piattaforma iOS sia stata aggiunta alla tua applicazione. Quando aggiungi o configuri la piattaforma iOS devi fornire il **bundleId** della tua applicazione iOS. Per trovare il **bundleId** della tua applicazione iOS, cerca il **Bundle Identifier**
 nel file `info.plist` o nella scheda **General** del progetto Xcode.
@@ -49,7 +53,7 @@ nel file `info.plist` o nella scheda **General** del progetto Xcode.
 Dopo che hai configurato l'ID applicazione Facebook e la tua applicazione Facebook perché serva client iOS, puoi abilitare l'autenticazione Facebook nel tuo servizio {{site.data.keyword.amashort}}.
 
 1. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}.
-1. Dalla scheda **Gestione**, attiva **Autorizzazione**.
+1. Dalla scheda **Manage**, attiva **Authorization**.
 1. Espandi la sezione **Facebook**.
 1. Aggiungi l'**ID applicazione Facebook** e fai clic su **Salva**.
 
@@ -63,9 +67,10 @@ Dopo che hai configurato l'ID applicazione Facebook e la tua applicazione Facebo
 
 1. Se non hai CocoaPods installato, esegui:
 
-```
-sudo gem install cocoapods
-```
+   ```
+   sudo gem install cocoapods
+   ```
+   {: codeblock}
 
 Per ulteriori informazioni, visita il [sito web di CocoaPods](https://cocoapods.org/).
 
@@ -76,17 +81,19 @@ Per ulteriori informazioni, visita il [sito web di CocoaPods](https://cocoapods.
 
 1. Modifica `Podfile` e aggiungi le seguenti righe:
 
- ```
-use_frameworks!
-pod 'BMSFacebookAuthentication'
-	```
+   ```
+   use_frameworks!
+   pod 'BMSFacebookAuthentication'
+   ```
+   {: codeblock}
+
    **Nota:** se hai questa riga nel tuo file Pod: `pod 'BMSSecurity'`, la devi rimuovere. Il pod `BMSFacebookAuthentication` installa tutti i frameork necessari.
 
    **Suggerimento:** puoi aggiungere `use_frameworks!` alla tua destinazione Xcode invece di averlo nel Podfile.
 
 1. Salva il `Podfile` ed esegui il comando `pod install` dalla riga di comando. CocoaPods installa le dipendenze. Vengono visualizzati lo stato di avanzamento e quali componenti sono stati aggiunti.
 
- **Importante**: devi ora aprire il tuo progetto utilizzando il file `xcworkspace` che viene generato da CocoaPods. Di norma, il
+   **Importante**: devi ora aprire il tuo progetto utilizzando il file `xcworkspace` che viene generato da CocoaPods. Di norma, il
 nome è `{il-tuo-nome-progetto}.xcworkspace`.  
 
 1. Esegui `open {il-tuo-nome-progetto}.xcworkspace` dalla riga di comando per aprire il tuo spazio di lavoro del progetto iOS.
@@ -95,8 +102,6 @@ nome è `{il-tuo-nome-progetto}.xcworkspace`.
 {: #enable_keychain}
 
 Abilita `Keychain Sharing`. Vai alla scheda `Funzionalità` e passa `Keychain Sharing` su `Attivo` nel tuo progetto Xcode.
-
-
 
 ### Configurazione del tuo progetto iOS per l'autenticazione Facebook
 {: #facebook-auth-ios-configproject}
@@ -107,58 +112,58 @@ Abilita `Keychain Sharing`. Vai alla scheda `Funzionalità` e passa `Keychain Sh
 
    ![immagine](images/ios-facebook-infoplist-settings.png)
 
-
    Aggiorna le proprietà schema URL e FacebookAppID con il tuo ID applicazione Facebook.
 
    Puoi anche aggiornare il file `info.plist` facendo clic con il pulsante destro del mouse su di esso, selezionando **Open as > Source Code** e aggiungendo il seguente XML:
 
    ```XML
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb{your-facebook-application-id}</string>
-			</array>
-		</dict>
-	</array>
-	<key>FacebookAppID</key>
-	<string>{your-facebook-application-id}</string>
-	<key>FacebookDisplayName</key>
-	<string>{your-faceebook-application-name}</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fbauth</string>
-		<string>fbauth2</string>
-	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-	    <key>NSExceptionDomains</key>
-	    <dict>
-	        <key>facebook.com</key>
-	        <dict>
-	            <key>NSIncludesSubdomains</key>
-	            <true/>                
-	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	            <false/>
-	        </dict>
-	        <key>fbcdn.net</key>
-	        <dict>
-	            <key>NSIncludesSubdomains</key>
-	            <true/>
-	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	            <false/>
-	        </dict>
-	        <key>akamaihd.net</key>
-	        <dict>
-	            <key>NSIncludesSubdomains</key>
-	            <true/>
-	            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-	            <false/>
-	        </dict>
-	    </dict>
-	</dict>
-```
+   <key>CFBundleURLTypes</key>
+   <array>
+      <dict>
+         <key>CFBundleURLSchemes</key>
+         <array>
+            <string>fb{your-facebook-application-id}</string>
+         </array>
+      </dict>
+   </array>
+   <key>FacebookAppID</key>
+   <string>{your-facebook-application-id}</string>
+   <key>FacebookDisplayName</key>
+   <string>{your-faceebook-application-name}</string>
+   <key>LSApplicationQueriesSchemes</key>
+   <array>
+      <string>fbauth</string>
+      <string>fbauth2</string>
+   </array>
+   <key>NSAppTransportSecurity</key>
+   <dict>
+      <key>NSExceptionDomains</key>
+      <dict>
+         <key>facebook.com</key>
+         <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>                
+            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+            <false/>
+         </dict>
+         <key>fbcdn.net</key>
+         <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+            <false/>
+         </dict>
+         <key>akamaihd.net</key>
+         <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+            <false/>
+         </dict>
+      </dict>
+   </dict>
+   ```
+   {: codeblock}
 
    Aggiorna le proprietà `CFBundleURLSchemes` e `FacebookappID` con il tuo ID applicazione Facebook. Aggiorna `FacebookDisplayName` con il nome della tua applicazione Facebook.
 
@@ -171,60 +176,59 @@ Inizializza l'SDK client passando il parametro `tenantId`.
 
 Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializzazione è nel metodo `application:didFinishLaunchingWithOptions` del tuo delegato dell'applicazione.
 
-
 1. Importa il framework richiesto nella classe che desideri utilizzi l'SDK client {{site.data.keyword.amashort}} aggiungendo le seguenti intestazioni:
 
- ```swift
+   ```swift
  import UIKit
  import BMSCore
  import BMSSecurity
- ```
-2. Inizializza l'SDK client.
+   ```
+   {: codeblock}
 
- ```Swift
+1. Inizializza l'SDK client.
+
+   ```Swift
 	let tenantId = "<serviceTenantID>"
 	let regionName = <applicationBluemixRegion>
 
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: 
+   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: 
 		[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		let mcaAuthManager = MCAAuthorizationManager.sharedInstance
-   			 mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
-	//regionName deve essere uno dei seguenti: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom o BMSClient.Region.sydney
-		BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+      let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+      mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+      //the regionName should be one of the following: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney
+      BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+      FacebookAuthenticationManager.sharedInstance.register()
+   }
+   ```
+   {: codeblock}
 
-		FacebookAuthenticationManager.sharedInstance.register()
-	}
+   Nel codice:
 
- ```
-
- Nel codice:
-
- * Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}.
- * Sostituisci `tenantId` con il valore **TenantId/GUID applicazione**.
+   * Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}.
+   * Sostituisci `tenantId` con il valore **TenantId/GUID applicazione**.
  
- Per ulteriori informazioni su questi valori, consulta [Prima di cominciare](#before-you-begin)).
+   Per ulteriori informazioni su questi valori, consulta [Prima di cominciare](#before-you-begin)).
 
 1. Segnala all'SDK Facebook l'attivazione dell'applicazione e registra il gestore autenticazione Facebook aggiungendo il seguente codice al
 metodo `application:didFinishLaunchingWithOptions` nel tuo delegato dell'applicazione. Aggiungi questo codice dopo aver inizializzato l'istanza BMSClient e registrato Facebook come gestore autenticazione.
 
- ```Swift
+   ```Swift
   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)
- ```
+   ```
+   {: codeblock}
 
 1. Copia il file `FacebookAuthenticationManager.swift` dai file di origine pod `BMSFacebookAuthentication` alla directory del tuo progetto.
 
 1. Aggiungi il seguente codice al tuo delegato dell'applicazione.
 
- ```Swift
-
-	func application(_ application: UIApplication, open url: URL,
-                     sourceApplication: String?, annotation: Any) -> Bool {
-
-        return FacebookAuthenticationManager.sharedInstance.onOpenURL(application: application,
-		url: url, sourceApplication: sourceApplication, annotation: annotation)
-
-    }
- ```
+   ```Swift
+   func application(_ app: UIApplication,
+      open url: URL,
+      options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool{
+         return FacebookAuthenticationManager.sharedInstance.onOpenURL(app, open: url, options: options)
+      }
+   ```
+   {: codeblock}
 
 ## Verifica dell'autenticazione
 {: #facebook-auth-ios-testing}
@@ -242,21 +246,21 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 
 1. Utilizza la tua applicazione iOS per effettuare una richiesta allo stesso endpoint.
 
-	```Swift
+   ```Swift
 	let protectedResourceURL = "<your protected resource absolute path>"
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
 
-	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
+   let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
   if error == nil {
-			print ("response:\(response?.responseText), no error")
+         print ("response:\(response?.responseText), no error")
   } else {
-			print ("error: \(error)")
+         print ("error: \(error)")
   }
-		}
+   }
 
 	request.send(completionHandler: callBack)
-
- ```
+   ```
+   {: codeblock}
 
 1. Esegui la tua applicazione. Viene visualizzata una schermata di accesso Facebook.
 
@@ -268,21 +272,20 @@ Ad esempio: `http://my-mobile-backend.mybluemix.net/protected`
 
 1. 	Quando la tua richiesta ha esito positivo, nella console Xcode è visualizzato il seguente output:
 
- ```
- response:Optional("Salve, questa è una risorsa protetta dell'applicazione backend mobile!"), no error
-
- ```
- {: screen}
+   ```
+   response:Optional("Salve, questa è una risorsa protetta dell'applicazione backend mobile!"), no error
+   ```
+   {: screen}
 
 1. Puoi anche aggiungere la funzionalità di disconnessione aggiungendo il seguente codice:
 
- ```
-FacebookAuthenticationManager.sharedInstance.logout(callBack)
-```
+   ```
+   FacebookAuthenticationManager.sharedInstance.logout(callBack)
+   ```
+   {: codeblock}
 
+   Se richiami questo codice dopo che un utente ha eseguito l'accesso con Facebook e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Facebook per scopi di autenticazione.
 
- Se richiami questo codice dopo che un utente ha eseguito l'accesso con Facebook e l'utente prova ad eseguire nuovamente l'accesso, gli viene richiesto di autorizzare {{site.data.keyword.amashort}} a utilizzare Facebook per scopi di autenticazione.
+   Per passare da un utente all'altro, è necessario richiamare questo codice e l'utente deve eseguire la disconnessione da Facebook nel suo browser.
 
- Per passare da un utente all'altro, è necessario richiamare questo codice e l'utente deve eseguire la disconnessione da Facebook nel suo browser.
-
- Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.
+   Passare `callBack` alla funzione di disconnessione è facoltativo. Puoi anche passare `nil`.

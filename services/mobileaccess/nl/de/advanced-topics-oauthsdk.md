@@ -6,6 +6,8 @@ lastupdated: "2016-10-02"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Kommunikation zwischen Back-End-Anwendungen und -Services
 {: #backend-comm}
 
@@ -21,6 +23,7 @@ Verwenden Sie das Modul `bms-mca-oauth-sdk npmjs`, um OAuth-Tokens abzurufen und
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## Modul 'bms-mca-oauth-sdk' verwenden
 {: #using-sdk}
@@ -62,3 +65,4 @@ oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 });
 
 ```
+{: codeblock}

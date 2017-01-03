@@ -22,10 +22,10 @@ e não protegidos.
 {: #before-you-begin}
 Você deve ter:
 * Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que é protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
-* Seu **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique em **Opções de dispositivo móvel**. 
-Os valores `tenantId` (também conhecido como
-`appGUID`) são exibidos no campo
-**App GUID / TenantId**. Você precisará desse
+* Seu **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique em **Opções de dispositivo móvel**. Os valores
+`tenantId` (também conhecido como
+`appGUID`) são exibidos no campo **App
+GUID / TenantId**. Você precisará desse
 valor para inicializar o {{site.data.keyword.amashort}}
 Authorization Manager.
 * Sua **Rota do aplicativo**. Esta é a
@@ -51,8 +51,8 @@ para a próxima seção para instalar o SDK.
 sudo gem install cocoapods
 ```
 
-Para obter mais informações, veja o
-[website CocoaPods](https://cocoapods.org/).
+Para obter mais informações, consulte o [website do
+CocoaPods](https://cocoapods.org/).
 
 ### Instalar o {{site.data.keyword.amashort}} client SDK com o CocoaPods
 {: #install-sdk-cocoapods}
@@ -100,8 +100,7 @@ Xcode e selecione **Novo Arquivo**.
 	1. Configure o valor para o local do seu arquivo `BridgingHeader.h`, por exemplo, `$(SRCROOT)/MyApp/BridgingHeader.h`.
 	1. Assegure-se de que seu cabeçalho de ponte esteja sendo selecionado pelo Xcode, compilando o seu projeto. Nenhuma mensagem de falha deve ser vista.
 
-1. Use o código a seguir para inicializar o {{site.data.keyword.amashort}} client SDK.  Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo. 
-<br/> Para informações sobre como obter o
+1. Use o código a seguir para inicializar o {{site.data.keyword.amashort}} client SDK.  Um local comum, mas não obrigatório, para colocar o código de inicialização é o método `application:didFinishLaunchingWithOptions` de delegado do seu aplicativo. <br/> Para informações sobre como obter o
 `applicationRoute` e o
 `applicationGUID`, consulte
 [Antes de iniciar](#before-you-begin). 
@@ -123,8 +122,7 @@ Xcode e selecione **Novo Arquivo**.
 
 ## Inicializando o AuthorizationManager
 Inicialize o `AuthorizationManager` passando o parâmetro
-`tenantId` do serviço {{site.data.keyword.amashort}}. 
-Para obter informações sobre como obter esses valores, consulte
+`tenantId` do serviço {{site.data.keyword.amashort}}. Para obter informações sobre como obter esses valores, consulte
 [Antes de iniciar](#before-you-begin). 
 
 ####Objective-C

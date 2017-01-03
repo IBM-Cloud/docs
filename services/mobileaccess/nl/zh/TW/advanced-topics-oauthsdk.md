@@ -6,6 +6,8 @@ lastupdated: "2016-10-02"
 
 ---
 
+{:codeblock:.codeblock}
+
 # 在後端應用程式與服務之間通訊
 {: #backend-comm}
 
@@ -21,6 +23,7 @@ lastupdated: "2016-10-02"
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## 使用 bms-mca-oauth-sdk 模組
 {: #using-sdk}
@@ -61,3 +64,4 @@ oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 });
 
 ```
+{: codeblock}

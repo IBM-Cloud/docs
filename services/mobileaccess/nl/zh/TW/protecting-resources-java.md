@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-12-04"
 
 ---
+{:codeblock:.codeblock}
 
 # 使用 {{site.data.keyword.amashort}} 保護 Liberty for Java 資源
 {: #protecting-liberty}
@@ -40,6 +41,7 @@ lastupdated: "2016-10-02"
 	</featureManager>
 
 	```
+	{: codeblock}
 1. 繼續編輯 `server.xml` 檔案，並配置 `OAuthTAI` 特性。安全角色 `TAIUserRole` 會對映至名為 `ALL_AUTHENTICATED_USERS` 的特殊主題。下列 Snippet 示範如何保護 `/protected` 端點 GET 方法。
 
 	```XML
@@ -58,12 +60,14 @@ lastupdated: "2016-10-02"
 		</application-bnd>
 	</application>
 	```
+	{: codeblock}
 
 1. 將包含 {{site.data.keyword.amashort}} 服務 URL 的下列內容新增至後端應用程式的環境變數。您可以將 URL 新增至 `manifest.yml` 或 `server.env` 檔案。
 
 	```
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver
 	```
+	{: codeblock}
 
 ## 保護 Liberty for Java 資源
 {: #protecting-liberty-resources}
@@ -89,6 +93,7 @@ lastupdated: "2016-10-02"
 		<role-name>TAIUserRole</role-name>
 	</security-role>
 	```
+	{: codeblock}
 
 * 若要指定具有註釋的 `TAIUserRole`，請使用下列語法：
 
@@ -99,6 +104,7 @@ lastupdated: "2016-10-02"
 	    // servlet code
 	}
 	```
+	{: codeblock}
 
 ### 存取安全環境定義物件
 {: #accessing-security}
@@ -115,6 +121,8 @@ Subject callerSubject = WSSubject.getCallerSubject();
 WSCredential callerCredential =
     callerSubject.getPublicCredentials(WSCredential.class).iterator().next();
 ```
+{: codeblock}
+
 如需相關資訊，請參閱 [WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html)。
 
 #### com.worklight.oauth.tai.WLCredential 內容
@@ -133,3 +141,4 @@ JSONObject imfDevice = securityContext.get("imf.device");
 JSONObject imfApplication = securityContext.get("imf.application");
 
 ```
+{: codeblock}

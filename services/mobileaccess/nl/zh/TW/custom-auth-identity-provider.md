@@ -6,6 +6,8 @@ lastupdated: "2016-11-07"
 
 ---
 
+{:codeblock:.codeblock}
+
 # 建立自訂身分提供者
 {: #custom-create}
 
@@ -25,10 +27,11 @@ lastupdated: "2016-11-07"
 {: #custom-startauthorization}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/startAuthorization`
+{: codeblock}
 
 `startAuthorization` API 是用來作為鑑別處理程序的首要步驟。自訂身分提供者必須使用 "challenge"、"success" 或 "failure" 狀態進行回應。
 
-為了容許鑑別處理程序的最大彈性，自訂身分提供者可以存取要求內文中行動用戶端所傳送的所有 HTTP 標頭。標頭是以下列格式所提供：
+為了容許鑑別處理程序保有最大的彈性，自訂身分提供者可以存取要求內文中行動用戶端所傳送的所有 HTTP 標頭。標頭是以下列格式所提供：
 
 ```JavaScript
 {
@@ -38,6 +41,7 @@ lastupdated: "2016-11-07"
     }
 }
 ```
+{: codeblock}
 
 自訂身分提供者可能會使用鑑別盤查進行回應，或直接使用 success 或 failure 進行回應。回應 HTTP 狀態必須是 `HTTP 200`，而且回應 JSON 必須包含下列內容：
 
@@ -58,15 +62,17 @@ lastupdated: "2016-11-07"
 	}
 }
 ```
+{: codeblock}
 
 ## `handleChallengeAnswer` API
 {: #custom-handleChallengeAnswer}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/handleChallengeAnswer`
+{: codeblock}
 
 `handleChallengeAnswer` API 處理來自行動用戶端的鑑別盤查回應。與 `startAuthorization` API 相同，`handleChallengeAnswer` API 會使用 `challenge`、`success` 或 `failure` 狀態進行回應。
 
-與 `startAuthorization` 要求類似，自訂身分提供者可以存取要求內文中行動用戶端所傳送的所有 HTTP 標頭。除了行動用戶端要求標頭之外，`handleChallengeAnswer` 要求的內文也會包括 `stateId` 及 `challengeAnswer` 內容。
+與 `startAuthorization` 要求類似，自訂身分提供者可以存取要求內文中行動用戶端所傳送的所有 HTTP 標頭。除了行動用戶端要求標頭之外，`handleChallengeAnswer` 要求的內文也會包含 `stateId` 及 `challengeAnswer` 內容。
 
 ### `handleChallengeAnswer` 要求內文範例
 {: #custom-handleChallengeAnswer-example}
@@ -83,13 +89,14 @@ lastupdated: "2016-11-07"
  	}
 }
 ```
+{: codeblock}
 
 來自 `handleChallengeAnswer` API 的回應結構必須與 `startAuthorization` API 的回應相同。
 
 ## 使用者身分物件
 {: #custom-user-identity}
 
-對成功鑑別要求的回應必須包括具有下列屬性的使用者身分物件：
+對成功鑑別要求的回應必須包含具有下列屬性的使用者身分物件：
 * `userName`：指定唯一的使用者名稱。
 * `displayName`：指定使用者的顯示名稱。
 * `attributes`（選用）：指定包含自訂使用者屬性的 JSON 物件。
@@ -106,6 +113,7 @@ lastupdated: "2016-11-07"
     }
 }
 ```
+{: codeblock}
 
 {{site.data.keyword.amashort}} 服務利用使用者身分物件來產生 ID 記號，並作為授權標頭的一部分傳送給行動用戶端。成功鑑別之後，行動用戶端即具有使用者身分物件的完整存取權。
 

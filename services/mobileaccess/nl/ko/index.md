@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-11-15"
 
 ---
 
@@ -22,6 +22,8 @@ lastupdated: "2016-11-07"
  * {{site.data.keyword.amashort}} 대시보드를 사용하여 {{site.data.keyword.amashort}} 서비스를 작성하십시오. {{site.data.keyword.amashort}} 대시보드에서 이 서비스를 기존 백엔드 애플리케이션에 바인드하여 구성할 수 있습니다. 
 
    MobileFirst Services Starter를 사용하는 경우 사용자 정의 백엔드 로직을 구현하기 위해 IBM {{site.data.keyword.Bluemix_notm}}에서 실행하는 Node.js 런타임의 인스턴스를 가져옵니다. 보안, 데이터, 푸시 및 모니터링 기능을 제공하는 코어 모바일 서비스 세트가 해당 Node.js 앱으로 바인드됩니다. {{site.data.keyword.Bluemix_notm}} Node.js 앱이 작성되면 개발 환경을 설정하고 {{site.data.keyword.Bluemix_notm}} 모바일 서비스 SDK를 시작할 수 있습니다. SDK를 사용하면 단순 API 호출로 사용자의 클라우드 앱에 바인드되는 서비스에 액세스할 수 있습니다.
+
+	프로젝트, 애플리케이션 및 서비스 작성 및 사용 방법에 대한 자세한 정보는 [IBM Bluemix 모바일 대시보드](https://console.{DomainName}/docs/mobile/index.html)를 참조하십시오.
 
 2. 서버측 리소스를 보호하십시오. 
 

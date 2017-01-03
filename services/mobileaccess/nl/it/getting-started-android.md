@@ -2,22 +2,26 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Configurazione dell'SDK Android
 {: #getting-started-android}
 
 Strumenta la tua applicazione Android con l'SDK client {{site.data.keyword.amafull}}, inizializza l'SDK e effettua richieste a risorse protette e non protette.
-
-{:shortdesc}
+{: shortdesc}
 
 ## Prima di cominciare
 {: #before-you-begin}
+
 È necessario disporre di:
+
 * Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}}.
 * Un'istanza di un servizio {{site.data.keyword.amafull}}.
 * Il tuo **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amafull}}. Fai clic sul pulsante **Opzioni per dispositivi mobili**. I valori `tenantId` (noti anche come `appGUID`)  vengono visualizzati nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione.
@@ -45,7 +49,8 @@ L'SDK client {{site.data.keyword.amashort}} viene distribuito con Gradle, un ges
         transitive: true
     	// altre dipendenze
 	}
-```
+	```
+	{: codeblock}
 
 1. Sincronizza il tuo progetto con Gradle. Fai clic su **Tools &gt; Android &gt; Sync Project with Gradle Files**.
 
@@ -53,7 +58,8 @@ L'SDK client {{site.data.keyword.amashort}} viene distribuito con Gradle, un ges
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
-```
+	```
+	{: codeblock}
 
 ## Inizializzazione dell'SDK client {{site.data.keyword.amashort}}
 {: #initalize-mca-sdk}
@@ -63,13 +69,15 @@ Inizializza l'SDK client passando i parametri **context** e **region** al metodo
 ```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
-  BMSClient.getInstance().setAuthorizationManager(
+BMSClient.getInstance().setAuthorizationManager(
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
-
 ```
+{: codeblock}
 
-* Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitato il tuo servizio {{site.data.keyword.Bluemix_notm}}. 
-* Sostituisci `<MCAServiceTenantId>` con il **tenantId**
+* Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitato il tuo servizio {{site.data.keyword.Bluemix_notm}}.
+* Sostituisci `<MCAServiceTenantId>` con il **tenantId** 
+
+
 Per ulteriori informazioni su questi valori, consulta [Prima di iniziare](#before-you-begin).
 
 ## Effettuare una richiesta alla tua applicazione di back-end mobile
@@ -77,7 +85,7 @@ Per ulteriori informazioni su questi valori, consulta [Prima di iniziare](#befor
 
 Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puoi iniziare a effettuare richieste alla tua applicazione di back-end mobile.
 
-1. Prova a inviare una richiesta a un endpoint protetto della tua applicazione di back-end mobile.  Nel tuo browser, apri il seguente URL: `{applicationRoute}/protected` (ad esempio `http://my-mobile-backend.mybluemix.net/protected`).   
+1. Prova a inviare una richiesta a un endpoint protetto della tua applicazione di back-end mobile. Nel tuo browser, apri il seguente URL: `{applicationRoute}/protected` (ad esempio `http://my-mobile-backend.mybluemix.net/protected`).   
 
 	L'endpoint `/protected` di un'applicazione di backend mobile creato con il contenitore tipo MobileFirst Services Starter è protetto con {{site.data.keyword.amashort}}. Nel tuo browser viene restituito un messaggio `Unauthorized` perché a questo endpoint possono accedere solo le applicazioni mobili strumentate con l'SDK client {{site.data.keyword.amashort}}.
 
@@ -102,6 +110,7 @@ Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puo
 		}
 	});
 	```
+	{: codeblock}
 
 1. Quando la tua richiesta ha esito positivo, vedrai il seguente output nello strumento di utilità LogCat:
 
@@ -111,6 +120,7 @@ Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puo
 {: #next-steps}
 
 Quando ti sei connesso all'endpoint protetto, non è stata richiesta alcuna credenziale. Per richiedere ai tuoi utenti di accedere alla tua applicazione, devi configurare l'autenticazione Facebook, Google o personalizzata.
+
 * [Facebook](facebook-auth-android.html)
 * [Google](google-auth-android.html)
 * [Personalizzata](custom-auth-android.html)

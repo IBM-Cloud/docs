@@ -6,7 +6,8 @@ lastupdated: "2016-10-27"
 
 ---
 
-{:shortdesc: .shortdesc} {:codeblock:.codeblock}
+{:shortdesc: .shortdesc} 
+{:codeblock:.codeblock}
 
 # Back-End-Ressourcen mit dem {{site.data.keyword.amashort}}-Service schützen
 {: #protecting-resources}

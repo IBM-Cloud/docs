@@ -2,27 +2,31 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Configuración del SDK de Android
 {: #getting-started-android}
 
 Instrumente su aplicación de Android con el SDK del cliente de {{site.data.keyword.amafull}}, inicialice el SDK y realice solicitudes a recursos protegidos o no protegidos.
-
-{:shortdesc}
+{: shortdesc}
 
 ## Antes de empezar
 {: #before-you-begin}
+
 Debe tener lo siguiente:
-* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}}. 
-* Una instancia de un servicio {{site.data.keyword.amafull}}. 
-* Su **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amafull}}. Pulse el botón **Opciones móviles**. Los valores `tenantId` (también conocidos como `appGUID`) se muestran en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización. 
-* Su **Ruta de aplicación**. Es el URL de la aplicación de programa de fondo. Necesita este valor para enviar solicitudes a sus puntos finales protegidos. 
-* Su {{site.data.keyword.Bluemix_notm}} **Región**. Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de región que aparece debe ser uno de los siguientes: `EE.UU. Sur`,  `Sidney` o `Reino Unido` y corresponde  lo valores de SDK requeridos en el código: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`. Necesitará este valor para inicializar el cliente {{site.data.keyword.amashort}}. 
+
+* Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}}.
+* Una instancia de un servicio {{site.data.keyword.amafull}}.
+* Su **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amafull}}. Pulse el botón **Opciones móviles**. Los valores `tenantId` (también conocidos como `appGUID`) se muestran en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización.
+* Su **Ruta de aplicación**. Es el URL de la aplicación de programa de fondo. Necesita este valor para enviar solicitudes a sus puntos finales protegidos.
+* Su {{site.data.keyword.Bluemix_notm}} **Región**.  Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de región que aparece debe ser uno de los siguientes: `EE.UU. Sur`,  `Sidney` o `Reino Unido` y corresponde  lo valores de SDK requeridos en el código: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`. Necesitará este valor para inicializar el cliente {{site.data.keyword.amashort}}.
 * Un proyecto de Android Studio, configurado para funcionar con Gradle. Para obtener más información sobre la configuración del entorno de desarrollo de Android, consulte las [Herramientas del desarrollador de Google](http://developer.android.com/sdk/index.html).
 
 ## Instalación del SDK del cliente de {{site.data.keyword.amashort}}
@@ -45,7 +49,8 @@ El SDK del cliente de {{site.data.keyword.amashort}} se distribuye con Gradle, u
         transitive: true
     	// other dependencies  
 }
-```
+	```
+	{: codeblock}
 
 1. Sincronice el proyecto con Gradle. Pulse **Tools &gt; Android &gt; Sync Project with Gradle Files**.
 
@@ -53,7 +58,8 @@ El SDK del cliente de {{site.data.keyword.amashort}} se distribuye con Gradle, u
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
-```
+	```
+	{: codeblock}
 
 ## Inicialización del SDK del cliente de {{site.data.keyword.amashort}}
 {: #initalize-mca-sdk}
@@ -63,13 +69,15 @@ Inicialice el SDK de cliente pasando los parámetros **context** y **region** al
 ```Java
   BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
-  BMSClient.getInstance().setAuthorizationManager(
+BMSClient.getInstance().setAuthorizationManager(
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
-
 ```
+{: codeblock}
 
-* Sustituya `<applicationBluemixRegion>` por la región en la que se aloja el servicio {{site.data.keyword.Bluemix_notm}}. 
-* Sustituya `<MCAServiceTenantId>` por **tenantId** (consulte [Antes de comenzar](#before-you-begin)).
+* Sustituya `<applicationBluemixRegion>` por la región en la que se aloja el servicio {{site.data.keyword.Bluemix_notm}}.
+* Sustituya `<MCAServiceTenantId>` por **tenantId** 
+
+ (consulte [Antes de comenzar](#before-you-begin)).
 
 ## Cómo realizar una solicitud a la aplicación de programa de fondo móvil
 {: #request}
@@ -101,6 +109,7 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
 		}
 	});
 	```
+	{: codeblock}
 
 1. Cuando la solicitud se realiza correctamente, verá la siguiente salida en la utilidad LogCat:
 
@@ -110,6 +119,7 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
 {: #next-steps}
 
 Cuando se ha conectado al punto final protegido, no se han necesitado credenciales. Para que los usuarios inicien sesión en la aplicación, debe configurar la autenticación de Facebook, Google o Personalizada.
+
 * [Facebook](facebook-auth-android.html)
 * [Google](google-auth-android.html)
 * [Personalizada](custom-auth-android.html)

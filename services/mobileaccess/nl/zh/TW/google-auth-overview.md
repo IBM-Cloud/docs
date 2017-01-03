@@ -15,7 +15,7 @@ lastupdated: "2016-11-03"
 您可以配置 {{site.data.keyword.amafull}} 服務以使用 Google 作為身分提供者來保護資源。然後，您的行動或 Web 應用程式使用者可以使用其 Google 認證進行鑑別。
 {:shortdesc}
 
-**重要事項：**您不需要個別安裝 Google 所提供的 Client SDK。當您配置 {{site.data.keyword.amashort}} Client SDK 時，相依關係管理程式會自動安裝 Google SDK。
+**重要事項：**您不需要個別安裝 Google 所提供的用戶端 SDK。當您配置 {{site.data.keyword.amashort}} 用戶端 SDK 時，相依關係管理程式會自動安裝 Google SDK。
 
 ## {{site.data.keyword.amashort}} 要求流程
 {: #google-auth-overview}

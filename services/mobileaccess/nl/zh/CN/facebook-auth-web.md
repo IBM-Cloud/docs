@@ -2,9 +2,10 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-12-04"
 
 ---
+
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -46,10 +47,10 @@ lastupdated: "2016-11-07"
 1. 在**管理**选项卡中，将**授权**切换为“开启”。
 1. 展开 **Facebook** 部分。
 1. 选中**向 Web 应用程序添加 Facebook**。
-5. 记录 **Facebook for Developers 的 Mobile Client Access 重定向 URI** 文本框中的值。您需要将此值添加到 Facebook 开发人员门户网站的 **Facebook 登录**中的**有效的 OAuth 重定向 URI** 框中。
+5. 记录 **Facebook for Developers 的 Mobile Client Access 重定向 URI** 文本框中的值。您需要将此值添加到 Facebook 开发者门户网站的 **Facebook 登录**中的**有效的 OAuth 重定向 URI** 框中。
 6. 输入从 Facebook for Developers Web 站点中获取的 Facebook **应用程序标识**和**应用程序私钥**。
 7. 在 **Web 应用程序重定向 URI**中输入重定向 URI。
-此值用于在完成授权流程之后可访问重定向 URI，由开发者确定。
+此值是为了在完成授权流程之后可访问该重定向 URI，由开发者确定。
 8. 单击**保存**。
 
 
@@ -71,13 +72,11 @@ lastupdated: "2016-11-07"
 	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
    ` 
 
-	  伦敦：
-   
+	伦敦： 
 
 	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
 
-	  悉尼：
-   
+	悉尼： 
 
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization` 
 
@@ -121,7 +120,7 @@ lastupdated: "2016-11-07"
 
 	`redirect_uri` 参数是 URI，用于在使用 Facebook 成功认证或认证失败之后进行重定向。   
 
-	重定向到授权端点之后，用户将从 Facebook 获取登录表单。在 Facebook 授权用户的凭证之后，{{site.data.keyword.amashort}} 服务将会调用 Web 应用程序重定向 URI，并提供授权代码作为查询参数。  
+	重定向到授权端点之后，用户将从 Facebook 获取登录表单。在 Facebook 向用户身份授权之后，{{site.data.keyword.amashort}} 服务将会调用 Web 应用程序重定向 URI，并提供授权代码作为查询参数。  
 
 
 ## 获取令牌
@@ -136,20 +135,15 @@ lastupdated: "2016-11-07"
 
 	美国南部： 
   
-	`     https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
- `
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
  
-	  伦敦：
-   
+	伦敦： 
  
-	`     https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
- ` 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
  
-	  悉尼：
-   
+	悉尼： 
  
-	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
- `
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
  
 2. 使用授权类型 ("authorization_code")、`clientId` 和重定向 URI 作为表单参数，向令牌服务器 URI 发送 POST 请求。发送 `clientId` 和 `secret` 作为基本 HTTP 认证凭证。
  
@@ -161,21 +155,21 @@ lastupdated: "2016-11-07"
   var request = require('request');
   
   app.get("/oauth/callback", function(req, res, next){ 
-    var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-    var tokenEndpoint = mcaCredentials.tokenEndpoint; 
-    var formData = { 
-      grant_type: "authorization_code", 
-			client_id: mcaCredentials.clientId, 
+    var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+		var tokenEndpoint = mcaCredentials.tokenEndpoint;
+		var formData = {
+			grant_type: "authorization_code",
+			client_id: mcaCredentials.clientId,
 			redirect_uri: "http://some-server/oauth/callback",
-			// Your web application redirect uri 
-			code: req.query.code 
-		} 
+			// Your web application redirect uri
+			code: req.query.code
+		}
 
-		request.post( { 
-			url: tokenEndpoint, 
-        formData: formData 
-      }, function (err, response, body){ 
-        var parsedBody = JSON.parse(body); 
+		request.post( {
+			url: tokenEndpoint,
+			formData: formData
+		}, function (err, response, body) {
+			var parsedBody = JSON.parse(body); 
 			req.session.accessToken = parsedBody.access_token; 
 			req.session.idToken = parsedBody.id_token; 
 			var idTokenComponents = parsedBody.id_token.split("."); 
@@ -184,10 +178,9 @@ lastupdated: "2016-11-07"
 			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"]; 
 			res.redirect("/");
 		}
-		).auth(mcaCredentials.clientId, mcaCredentials.secret); 
-
-   }
-  );
+		).auth(mcaCredentials.clientId, mcaCredentials.secret);
+		}
+	);
 	```
 	{: codeblock}
 

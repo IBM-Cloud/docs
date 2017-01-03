@@ -2,22 +2,26 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Android SDK 설정
 {: #getting-started-android}
 
 {{site.data.keyword.amafull}} 클라이언트 SDK를 사용하여 Android 애플리케이션을 계측하고 SDK를 초기화하고 보호 및 비보호 리소스를 요청하십시오.
-
-{:shortdesc}
+{: shortdesc}
 
 ## 시작하기 전에
 {: #before-you-begin}
+
 다음이 있어야 합니다.
+
 * {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스
 * {{site.data.keyword.amafull}} 서비스의 인스턴스
 * **테넌트 ID**. {{site.data.keyword.amafull}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
@@ -46,6 +50,7 @@ lastupdated: "2016-11-03"
     	// other dependencies  
 }
 ```
+	{: codeblock}
 
 1. 프로젝트를 Gradle과 동기화하십시오. **도구 &gt; Android &gt; Gradle 파일과 프로젝트 동기화**를 클릭하십시오. 
 
@@ -54,6 +59,7 @@ lastupdated: "2016-11-03"
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 ```
+	{: codeblock}
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
 {: #initalize-mca-sdk}
@@ -61,15 +67,16 @@ lastupdated: "2016-11-03"
 **context** 매개변수와 **region** 매개변수를 `initialize` 메소드에 전달하여 클라이언트 SDK를 초기화하십시오. 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 Android 애플리케이션 기본 활동의 `onCreate` 메소드입니다. 
 
 ```Java
-  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 					
-  BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
-						
-	```
+BMSClient.getInstance().setAuthorizationManager(
+	MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>")); 			
+```
+{: codeblock}
 
 * `<applicationBluemixRegion>`을 {{site.data.keyword.Bluemix_notm}} 서비스가 호스트되는 지역으로 대체하십시오. 
-* `<MCAServiceTenantId>`를 **tenantId**로 대체하십시오.
+* `<MCAServiceTenantId>`를 **tenantId**로 대체하십시오. 
+
 이러한 값에 대한 자세한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오. 
 
 ## 모바일 백엔드 애플리케이션에 대한 요청 작성
@@ -102,6 +109,7 @@ lastupdated: "2016-11-03"
 		}
 	});
 	```
+	{: codeblock}
 
 1. 요청에 성공하면 LogCat 유틸리티에 다음 출력이 표시됩니다. 
 
@@ -111,6 +119,7 @@ lastupdated: "2016-11-03"
 {: #next-steps}
 
 보호 엔드포인트에 연결된 경우 신임 정보는 필요하지 않습니다. 사용자가 애플리케이션에 로그인하게 하려면 Facebook, Google 또는 사용자 정의 인증을 구성해야 합니다. 
+
 * [Facebook](facebook-auth-android.html)
 * [Google](google-auth-android.html)
 * [사용자 정의](custom-auth-android.html)

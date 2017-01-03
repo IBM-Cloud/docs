@@ -16,7 +16,7 @@ Per utilizzare l'autenticazione personalizzata con la tua applicazione mobile, d
 {: #custom-dash-begin}
 È necessario disporre di:
 * Un'istanza di un servizio {{site.data.keyword.amafull}}.
-* Un'applicazione provider di identità personalizzata. 
+* Un'applicazione provider di identità personalizzata.
 
 ## Configura l'autenticazione personalizzata nel dashboard {{site.data.keyword.amafull}}
 {: #custom-dash-config}
@@ -24,7 +24,7 @@ Utilizza il dashboard {{site.data.keyword.amafull}} per configurare l'autenticaz
 
 1. Apri il tuo servizio nel dashboard {{site.data.keyword.amafull}}.
 1. Dalla scheda **Gestione**, attiva **Autorizzazione**.
-1. Espandi la sezione **Personalizzato**. 
+1. Espandi la sezione **Personalizzato**.
 1. Immetti **Nome realm**, **URL provider di identità personalizzato**. Il valore **I tuoi URI di reindirizzamento dell'applicazione web** è obbligatorio solo per le applicazioni web.
 
 ## Fasi successive

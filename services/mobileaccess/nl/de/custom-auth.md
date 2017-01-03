@@ -6,6 +6,8 @@ lastupdated: "2016-11-2"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Benutzer mit angepasstem Identitätsprovider authentifizieren
 {: #custom-id}
 
@@ -65,6 +67,7 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 		}
 	}
 	```
+	{: codeblock}
 
 1. Sie können einen angepassten Ablauf für die Erfassung von Berechtigungsnachweisen auf dem Client implementieren, einschließlich einer Authentifizierung in mehreren Schritten und mit mehreren Formularen. Ähnlich wie bei der angepassten Authentifizierungsanforderung müssen Sie die Struktur einer Antwort auf eine angepasste Authentifizierungsanforderung gestalten.
 
@@ -77,6 +80,8 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 		pincode:"1234"
 	}
 	```
+	{: codeblock}
+	
 1. Sie können angepasste Logik für die Validierung der bereitgestellten Antwort auf eine Authentifizierungsanforderung implementieren.
 
 1. Sie können ein angepasstes Benutzeridentitätsobjekt definieren, das beliebige erforderliche angepasste Eigenschaften enthält. Es folgt ein Beispiel für ein angepasstes Benutzeridentitätsobjekt, das nach einer erfolgreichen Authentifizierung vom Client abgerufen wird:
@@ -92,6 +97,7 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 		}
 	}
 	```
+	{: codeblock}
 
 ### Beispielimplementierung eines angepassten Identitätsproviders
 {: #custom-sample}

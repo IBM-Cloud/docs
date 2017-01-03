@@ -20,7 +20,7 @@ Swift (voir
 [Configuration du SDK Swift iOS](facebook-auth-ios-swift-sdk.html)).
 
 ## Avant de commencer
-{: #facebook-auth-ios-before}
+{: #before-you-begin}
 
 Vous devez disposer des éléments suivants :
 * Un projet iOS qui est configuré pour fonctionner avec CocoaPods.  Pour plus d'informations, voir **Installation de CocoaPods** dans  [Configuration du SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html).  
@@ -28,13 +28,13 @@ Vous devez disposer des éléments suivants :
 * Une instance d'une application {{site.data.keyword.Bluemix_notm}} protégée par le service
 {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
 * Valeur de votre **AppGUID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur le bouton **Options pour application mobile**. La valeur `appGUID` (qui porte également le nom `tenantId`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
-* Un ID d'application Facebook. Pour plus d'informations, voir [Création d'une application sur le site Web Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* Un ID d'application et une application Facebook. Pour plus d'informations, voir [Création d'une application sur le site Web Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 ## Configuration d'une application Facebook pour la plateforme iOS
 {: #facebook-auth-ios-config}
 Sur le site Facebook for Developers :
 
-1. Connectez-vous à votre compte sur [Facebook for Developers](https://developers.facebook.com). Pour plus d'informations sur la création d'une appli, voir https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Connectez-vous à votre compte sur [Facebook for Developers](https://developers.facebook.com). 
 
 1. Assurez-vous que la plateforme iOS a été ajoutée à votre appli. Lorsque vous ajoutez ou configurez la plate-forme iOS, vous devez fournir le **bundleId** de votre application iOS. Pour trouver l'ID **bundleId**, recherchez la valeur de **Bundle Identifier (ID de bundle)** dans le fichier `info.plist` ou dans l'onglet **General** du projet Xcode.
 
@@ -51,7 +51,7 @@ Après avoir configuré l'ID d'application Facebook, ainsi que votre application
 
 1. Ouvrez votre service dans le tableau de bord {{site.data.keyword.amashort}}.
 1. Dans l'onglet **Gérer**, activez **Autorisation**.
-	1. Développez la section **Facebook**. 
+	1. Développez la section **Facebook**.
 	1. Ajoutez l'**ID d'application Facebook** et cliquez sur **Sauvegarder**.
 
 ## Configuration du SDK client Facebook de {{site.data.keyword.amashort}} pour iOS
@@ -187,7 +187,7 @@ En général, vous pouvez placer le code d'initialisation dans la méthode `appl
 `$(SRCROOT)/MyApp/BridgingHeader.h`.
 		1. Vérifiez que l'en-tête de pontage est prélevé par Xcode lors de la génération de votre projet. Vous ne devez voir aucun message d'erreur.
 
-2. Initialisez le SDK client.	Pour plus d'informations sur l'obtention des valeurs `applicationRoute` et `applicationGUID`, voir [Avant de commencer](#before-you-begin)).
+2. Initialisez le SDK client.	Pour plus d'informations sur l'obtention des valeurs `applicationRoute` et `applicationGUID`, voir [Avant de commencer](#before-you-begin).
 
 	####Objective-C
 	{: #approute-objc}
@@ -206,8 +206,7 @@ En général, vous pouvez placer le code d'initialisation dans la méthode `appl
 	 							backendGUID: "applicationGUID")
 	```
 
-1. Initialisez le gestionnaire `AuthorizationManager` en transmettant le paramètre `tenantId` du service {{site.data.keyword.amashort}}. Voir [Avant de commencer].
-(#before-you-begin)).
+1. Initialisez le gestionnaire `AuthorizationManager` en transmettant le paramètre `tenantId` du service {{site.data.keyword.amashort}}. Voir [Avant de commencer](#before-you-begin).
 
 	####Objective-C
 	{: #authman-objc}

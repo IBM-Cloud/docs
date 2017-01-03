@@ -6,6 +6,8 @@ lastupdated: "2016-11-2"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Autenticación de usuarios con un proveedor de identidades personalizadas
 {: #custom-id}
 
@@ -65,6 +67,7 @@ Al crear un proveedor de identidad personalizado, puede:
 		}
 	}
 	```
+	{: codeblock}
 
 1. Implemente un flujo de recopilación de credenciales en el cliente, incluida la autenticación de varios formularios y varios pasos. Igual que el cambio de autenticación personalizada, debe diseñar la estructura de respuesta a un cambio de autenticación personalizada.
 
@@ -77,6 +80,8 @@ Al crear un proveedor de identidad personalizado, puede:
 		pincode:"1234"
 	}
 	```
+	{: codeblock}
+	
 1. Implemente la lógica personalizada de validación de la respuesta al cambio de autenticación personalizada.
 
 1. Defina un objeto de identidad de usuario que contenga las propiedades personalizadas necesarias. A continuación se muestra un ejemplo de un objeto de identidad de usuario obtenido por el cliente después de una autenticación satisfactoria:
@@ -92,6 +97,7 @@ Al crear un proveedor de identidad personalizado, puede:
 		}
 	}
 	```
+	{: codeblock}
 
 ### Implementación de ejemplo de un proveedor de identidad personalizado
 {: #custom-sample}
