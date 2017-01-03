@@ -5,12 +5,17 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # {{site.data.keyword.mobilepushshort}}の概要
 {: #overview-push}
-最終更新日: 2016 年 11 月 11 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} は、iOS や Android のモバイル・デバイス、Google Chrome や Mozilla Firefox の Webブラウザー、さらに Google Chrome アプリケーションおよびエクステンションに通知を送信するために使用できるサービスです。通知は、すべてのアプリケーション・ユーザーをターゲットとすることも、タグを使用して特定のユーザーおよびデバイスの集合をターゲットとすることもできます。デバイス、タグ、およびサブスクリプションを管理できます。
+IBM {{site.data.keyword.mobilepushshort}} は、iOS や Android のモバイル・デバイス、Google Chrome、Mozilla Firefox、および Safari の Web ブラウザー、さらに Google Chrome アプリケーションおよびエクステンションに通知を送信するために使用できるサービスです。通知は、すべてのアプリケーション・ユーザーをターゲットとすることも、タグを使用して特定のユーザーおよびデバイスの集合をターゲットとすることもできます。デバイス、タグ、およびサブスクリプションを管理できます。
 クライアント・アプリケーションをさらに開発するために、SDK (software development kit) および Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用することもできます。 
 
 {{site.data.keyword.mobilepushshort}}は、Bluemix 専用サービスとしても使用可能です。専用サービスの{{site.data.keyword.mobilepushshort}}については、[専用サービス](/docs/dedicated/index.html)を参照してください。なお、{{site.data.keyword.mobilepushshort}}のモニター・タブには、分析データは表示されません。

@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Habilitación de notificaciones basadas en etiquetas
 {: #tag_based_notifications}
-Última actualización: 18 de octubre de 2016
+Última actualización: 06 de diciembre de 2016
 {: .last-updated}
 
 Los mensajes de notificación basados en etiquetas están pensados para todos los dispositivos suscritos a una etiqueta determinada. 

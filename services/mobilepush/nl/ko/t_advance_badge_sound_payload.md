@@ -6,10 +6,12 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 #고급 푸시 알림 사용
-마지막 업데이트 날짜: 2016년 10월 17일
+마지막 업데이트 날짜: 2016년 12월 6일
 {: .last-updated}
 
 iOS 배지(badge), 사운드, 추가 JSON 페이로드, 조치 가능 알림, 보류 알림을 구성합니다. 
@@ -183,7 +185,7 @@ Swift
 
 조치 가능 알림이 수신되면 선택한 ID를 기반으로 다음 메소드에 제어가 전달됩니다. 
 
-###Objective-C
+Objective-C
 
 ```
 (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
@@ -196,7 +198,7 @@ Swift
 ```
 	{: codeblock}
 
-###Swift
+Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

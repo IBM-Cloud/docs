@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Configurando credenciais para o FCM
 {: #create-push-enable-gcm}
-Última atualização: 15 de novembro de 2016
+Última atualização: 06 de dezembro de 2016
 {: .last-updated}
 
 O Firebase Cloud Messaging (FCM) é o gateway usado para entregar notificações push para dispositivos Android e navegadores da web Google Chrome e Mozilla. O FCM

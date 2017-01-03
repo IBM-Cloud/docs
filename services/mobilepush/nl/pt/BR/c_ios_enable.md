@@ -5,12 +5,18 @@ copyright:
 
 ---
 
-#Ativando aplicativos iOS para receber e enviar {{site.data.keyword.mobilepushshort}}
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
+#Ativando aplicativos iOS para enviar {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
-Última atualização: 19 de outubro de 2016
+Última atualização: 07 de dezembro de 2016
 {: .last-updated}
 
-É possível ativar aplicativos iOS para receber e enviar {{site.data.keyword.mobilepushshort}} aos seus dispositivos.
+É possível ativar aplicativos iOS para enviar {{site.data.keyword.mobilepushshort}}
+para os seus dispositivos.
 
 
 ##Instalando o CocoaPods
@@ -73,7 +79,7 @@ modificar a pasta de origem de serviços móveis do Bluemix, é possível locali
 projeto Pods, em `Pods/yourImportedSourceFolder`, por exemplo:
 `Pods/BMSPush`.
 
-##Carthage
+##Incluindo estruturas usando Carthage
 {: #carthage}
 
 Inclua estruturas em seu projeto usando [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos). Observe que
@@ -87,6 +93,18 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 2. Execute o comando `carthage update`. Quando a construção for concluída, arraste `BMSPush.framework`, `BMSCore.framework` e `BMSAnalyticsAPI.framework` até seu projeto Xcode.
 3. Siga as instruções no site [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) para concluir a integração.
 
+##Configurando o SDK do iOS
+{: ios-sdk}
+
+Configure o SDK iOS, inclua o código a seguir no arquivo **AppDelegate.swift**
+em seu aplicativo.
+```
+func application(_ application: UIApplication,
+didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {  
+ BMSPushClient.sharedInstance.setupPush()
+  }
+```
+    {: codeblock}
 
 ##Usando estruturas importadas e pastas de origem
 {: using-imported-frameworks}
@@ -223,10 +241,12 @@ Para registrar aplicativos e dispositivos iOS, será necessário:
 2. Passar o token para o {{site.data.keyword.mobilepushshort}}.
 
 
-###Crie um aplicativo backend
+###Criar um aplicativo backend
 {: create-a-backend-app}
 
-Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos, que ligará automaticamente o serviço {{site.data.keyword.mobilepushshort}} a esse aplicativo. Se você já criou um app de backend, assegure-se de ligar o app ao serviço {{site.data.keyword.mobilepushshort}}.
+Crie um aplicativo backend no catálogo do Bluemix® da seção Modelos, que ligará automaticamente o
+serviço {{site.data.keyword.mobilepushshort}} a esse aplicativo. Se você já criou um app backend,
+assegure-se de ligar o app ao serviço {{site.data.keyword.mobilepushshort}}.
 
 **Objective-C**
 
@@ -353,7 +373,7 @@ escolhendo uma opção **Enviar para**. As opções suportadas são
 **Dispositivos iOS**, **Notificações da web** e
 **Todos os dispositivos**.  
 **Nota**: ao selecionar a opção **Todos os dispositivos**, todos os dispositivos inscritos para {{site.data.keyword.mobilepushshort}} receberão notificações.
-![Tela Notificações](images/tag_notification.jpg)
+![Tela de notificações](images/tag_notification.jpg)
 
 2. No campo **Mensagem**, componha sua mensagem. Escolha a
 configurar das definições opcionais conforme necessário.
@@ -375,6 +395,43 @@ iOS. As opções de customização opcionais a seguir são suportadas.
 - **Som**: indica que um clique de som seja reproduzido no recebimento de uma notificação. Suporta o padrão ou o nome de um recurso de som empacotado no app.
 - **Carga útil adicional**: especifica os valores de carga útil customizados para suas notificações.
 
+##Ativando notificações interativas 
+
+Agora, é possível enriquecer suas notificações de iOS com mais detalhes, como incluir uma imagem, um mapa
+ou um botão de resposta ativando notificações interativas. Isso fornece mais contexto aos clientes,
+além da capacidade de executar ação imediata sem sair do contexto atual.  
+
+Para ativar notificações interativas, use o código a seguir:
+
+```
+// This defines the button action.
+let actionOne = BMSPushNotificationAction(identifierName: "ACCEPT", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+ let actionTwo = BMSPushNotificationAction(identifierName: "DECLINE", buttonTitle: "Decline", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+```
+	{: codeblock}
+```
+// This defines category for the buttons
+let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
+```
+	{: codeblock}
+```
+// This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
+let notificationOptions = BMSPushClientOptions(categoryName: [category])
+let push = BMSPushClient.sharedInstance
+push.notificationOptions = notificationOptions
+```
+	{: codeblock}
+
+Para enviar uma notificação interativa, conclua estas etapas:
+
+1. Na seção Editar, para a lista suspensa Enviar para, selecione **Dispositivos iOS**.
+2. Insira a mensagem de notificação que talvez queira enviar.
+3. Na seção Configurações opcionais, selecione **Móvel** e clique em
+**iOS**.
+4. Na lista suspensa Tipo, selecione **Combinado**.
+5. No campo Categoria, especifique o tipo de notificação que você definiu em seu app. 
+
+![Notificação interativa para iOS](images/push_ios_notification_interactive.jpg) 
 
 ## Etapas Seguintes
 {: #next_steps_tags}
@@ -383,6 +440,6 @@ Depois de configurar com êxito notificações básicas,
 é possível configurar notificações baseadas em tag e opções
 avançadas.
 
-Inclua esses recursos do Serviço de notificações push em seu app.
-Para usar notificações baseadas em tag, consulte [Notificações baseadas em tag](c_tag_basednotifications.html).
-Para usar opções de notificações avançadas, veja [Ativando notificações push avançadas](t_advance_badge_sound_payload.html).
+Inclua esses recursos de serviço de Notificações push no seu app. Para usar
+notificações baseadas em tag, consulte [Notificações baseadas em
+tag](c_tag_basednotifications.html). Para usar opções de notificações avançadas, veja [Ativando notificações push avançadas](t_advance_badge_sound_payload.html).

@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Gerenciando Identificações
 {: #manage_tags}
-Última atualização: 17 de outubro de 2016
+Última atualização: 07 de dezembro de 2016
 {: .last-updated}
 
 Use o painel {{site.data.keyword.mobilepushshort}} para criar e excluir
@@ -62,7 +67,7 @@ móvel. É possível usar esses fragmentos de código para obter assinaturas, as
 tag, cancelar a assinatura de uma tag ou obter uma lista de tags disponíveis. Copie esses
 fragmentos de código para seu aplicativo móvel.
 
-## Android
+## Obtendo tags no Android
 {: android-get-tags}
 
 A API **getTags**
@@ -114,31 +119,31 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 	```
 	{: codeblock}
 
-## Cordova
+## Obtendo tags no Cordova
 {: cordova-get-tags}
 
 Copie os fragmentos de código a seguir para seu aplicativo móvel para obter uma
 lista de tags nas quais o dispositivo está inscrito e uma lista de tags disponíveis.
 
-Recupere uma matriz de tags que estão disponíveis para assinatura.
+Recupere uma matriz de tags que estiverem disponíveis para assinatura.
 
 ```
 //Get a list of available tags to which the device can subscribe
-MFPPush.retrieveAvailableTags(function(tags) {
+BMSPush.retrieveAvailableTags(function(tags) {
   alert(tags);
-}, null);
+}, failure); 
 ```
 	{: codeblock}
 
 ```
 //Get a list of available tags to which the device is subscribed.
-MFPPush.getSubscriptionStatus(function(tags) {
-  alert(tags);
-}, null);
+BMSPush.retrieveSubscriptions(function(tags) {
+   alert(tags); 
+}, failure); 
 ```
 	{: codeblock}
 
-## Objective-C
+## Obtendo tags no Objective-C
 {: objc-get-tags}
 
 Copie os fragmentos de código a seguir para seu aplicativo iOS, desenvolvido
@@ -184,7 +189,7 @@ subscribedTags = [response subscriptions];
   ```
 	{: codeblock}
 
-## Swift
+## Obtendo tags no Swift
 {: swift-get-tags}
 
 A API **retrieveAvailableTagsWithCompletionHandler** retorna a lista de
@@ -226,7 +231,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 ```
 	{: codeblock}
 
-## Google Chrome e Mozilla Firefox
+## Google Chrome, Safari e Mozilla Firefox
 {: web-get-tags}
 
 Para obter a lista de identificações disponíveis, a qual os clientes podem assinar, use o código a seguir.
@@ -247,17 +252,6 @@ var bmsPush = new BMSPush();
 ```
 	{: codeblock}
 
-Copie os fragmentos de código a seguir em seus Apps Google Chrome e Extensões para
-obter uma lista de identificações nas quais os clientes se inscreveram.
-
-```
-var bmsPush = new BMSPush();
-  bmsPush.retrieveSubscriptions(function(response) 
-	{
-   alert(response.response)
- })
-```
-	{: codeblock}
 
 ## Apps Google Chrome e Extensões
 {: web-get-tags}
@@ -299,7 +293,7 @@ var bmsPush = new BMSPush();
 Use os fragmentos de código a seguir para permitir que seus dispositivos obtenham
 assinaturas, bem como assinem e cancelem a assinatura de uma tag.
 
-## Android
+## Assinando e removendo assinatura de tags no Android
 {: android-subscribe-tags}
 
 Copie e cole este fragmento de código em seu aplicativo móvel Android.
@@ -336,19 +330,19 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-## Cordova
+## Assinando e removendo assinatura de tags no Cordova
 {: cordova-subscribe-tags}
 
 Copie e cole este fragmento de código em seu aplicativo móvel Cordova.
 
 ```
 var tag = "YourTag";
-MFPPush.subscribe(tag, success, failure);
-MFPPush.unsubscribe(tag, success, failure);
+BMSPush.subscribe(tag, success, failure);
+BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Objective-C
+## Assinando e removendo assinatura de tags no Objective-C
 {: objc-subscribe-tags}
 
 Copie e cole este fragmento de código em seu aplicativo móvel Objective-C.
@@ -388,7 +382,7 @@ identificação.
 ```
 	{: codeblock}
 
-## Swift
+## Assinando e removendo assinatura de tags no Swift
 {: swift-subscribe-tags}
 
 Copie e cole este fragmento de código em seu aplicativo móvel Swift.
@@ -399,13 +393,15 @@ Use a API **subscribeToTags** para assinar uma
 identificação.
 
 ```
-push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
-	//error while subscribing to tags
-	} else {
-//successfully subscribed to tags var subStatus = response.subscribeStatus();
-	}
-}
+push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statusCode, error) -> Void in
+    if error.isEmpty {
+        print("Response when subscribing to tags: \(response?.description)")
+        print("Status code when subscribing to tags: \(statusCode)")
+    } else {
+        print("Error when subscribing to tags: \(error) ")
+        print("Error status code when subscribing to tags: \(statusCode)")
+    }
+})
 ```
 	{: codeblock}
 
@@ -459,9 +455,6 @@ tópico descreve como enviar notificações baseadas em tag. As assinaturas são
 assinatura automático é necessário para essa tag, uma vez que ela não existe mais e
 nenhuma ação adicional é necessária no lado do cliente.
 
-###Antes de começar
-{: before-you-begin}
-
 Crie tags na tela **Tag**. Para obter informações sobre como
 criar tags, consulte
 [Criando tags](t_manage_tags.html).
@@ -469,6 +462,6 @@ criar tags, consulte
 1. A partir do painel **Notificação push**, clique em **Enviar notificações**.
 1. Selecione a opção **Dispositivo por identificação** na lista suspensa **Enviar para**.
 1. Procure as identificações que deseja usar e selecione-as.
-![Tela Notificações](images/tag_notification.jpg)
+![Tela de notificações](images/tag_notification.jpg)
 1. No campo **Texto da mensagem**, insira o texto que seria enviado como uma notificação ao público inscrito.
 1. Clique em **Enviar**.

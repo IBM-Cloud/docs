@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2016
 
 ---
 
@@ -12,12 +12,12 @@ copyright:
 
 # Iniciación a {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Última actualización: 02 de noviembre de 2016
+Última actualización: 06 de diciembre de 2016
 {: .last-updated}
 
 {:shortdesc}
 
-El servicio {{site.data.keyword.mobilepushshort}} proporciona una plataforma unificada para enviar y gestionar notificaciones push móviles y web destinadas a plataformas móviles iOS y Android, así como a navegadores web Google Chrome, Mozilla Firefox y a aplicaciones y extensiones de Google Chrome. El servicio {{site.data.keyword.mobilepushshort}} gestiona la correlación de los usuarios de la aplicación a sus dispositivos, a la plataforma de dispositivo y a los navegadores web y maneja el envío de notificaciones push a estos. Con este servicio puede enviar difusiones, difusiones únicas (en función del ID de dispositivo y del ID de usuario) y también etiquetas (o temas) como notificaciones push a los usuarios de la aplicación móvil y del navegador web. También puede utilizar las [API REST](https://mobile.{DomainName}/imfpush/) y SDK para desarrollar más las aplicaciones de cliente.
+El servicio {{site.data.keyword.mobilepushshort}} proporciona una plataforma unificada para enviar y gestionar notificaciones push móviles y web destinadas a plataformas móviles iOS y Android, así como a navegadores web Google Chrome, Mozilla Firefox y Safari y a aplicaciones y extensiones de Google Chrome. El servicio {{site.data.keyword.mobilepushshort}} gestiona la correlación de los usuarios de la aplicación a sus dispositivos, a la plataforma de dispositivo y a los navegadores web y maneja el envío de notificaciones push a estos. Con este servicio puede enviar difusiones, difusiones únicas (en función del ID de dispositivo y del ID de usuario) y también etiquetas (o temas) como notificaciones push a los usuarios de la aplicación móvil y del navegador web. También puede utilizar las [API REST](https://mobile.{DomainName}/imfpush/) y SDK para desarrollar más las aplicaciones de cliente.
 
 
 # Enlaces relacionados

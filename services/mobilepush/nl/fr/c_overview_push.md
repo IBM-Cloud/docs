@@ -5,12 +5,17 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # A propos de {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Dernière mise à jour : 11 novembre 2016
+Dernière mise à jour : 6 décembre 2016
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} est un service que vous pouvez utiliser pour envoyer des notifications vers des appareils mobiles iOS et Android, vers les navigateurs Web Google Chrome et Mozilla Firefox ainsi que vers les applications et extensions Google Chrome. Les notifications peuvent être ciblées vers tous les utilisateurs d'application ou vers un ensemble spécifique d'utilisateurs et d'appareils à l'aide de balises. Vous pouvez administrer les appareils, les balises et les abonnements. Vous pouvez aussi utiliser un logiciel SDK (kit de développement de logiciels) et des API REST (K) pour développer davantage vos applications client. 
+IBM {{site.data.keyword.mobilepushshort}} est un service que vous pouvez utiliser pour envoyer des notifications vers des appareils mobiles iOS et Android, vers les navigateurs Web Google Chrome et Mozilla Firefox, ainsi que vers les applications et extensions Google Chrome. Les notifications peuvent être ciblées vers tous les utilisateurs d'application ou vers un ensemble spécifique d'utilisateurs et d'appareils à l'aide de balises. Vous pouvez administrer les appareils, les balises et les abonnements. Vous pouvez aussi utiliser un logiciel SDK (kit de développement de logiciels) et des API REST (K) pour développer davantage vos applications client. 
 
 {{site.data.keyword.mobilepushshort}} est aussi disponible en tant que service Bluemix dédié. Pour plus d'informations sur le service dédié {{site.data.keyword.mobilepushshort}}, voir [Services dédiés](/docs/dedicated/index.html). Notez que l'onglet de surveillance {{site.data.keyword.mobilepushshort}} n'affiche pas de données d'analyse.
 

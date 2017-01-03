@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Interaktive Benachrichtigungen
 {: #interactive-notifications}
-Letzte Aktualisierung: 17. Oktober 2016
+Letzte Aktualisierung: 06. Dezember 2016
 {: .last-updated}
 
 Interaktive Benachrichtigungen ermöglichen es Benutzern, beim Eingang einer Benachrichtigung zu reagieren, ohne dass die Anwendung geöffnet werden muss. Wenn eine interaktive Benachrichtigung eingeht, zeigt das Gerät die Aktionsschaltflächen zusammen mit der Benachrichtigung an. Interaktive Benachrichtigungen werden für iOS-Geräte mit Version 8 oder einer neueren Version unterstützt. Wenn eine interaktive Benachrichtigung an iOS-Geräte gesendet wird, die mit einer älteren Version als Version 8 ausgeführt werden, werden die Benachrichtigungsaktionen nicht angezeigt.

@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Notificações interativas
 {: #interactive-notifications}
-Última atualização: 17 de outubro de 2016
+Última atualização: 06 de dezembro de 2016
 {: .last-updated}
 
 As notificações interativas permitem que os usuários executem uma ação quando uma notificação chega, sem abrir o aplicativo. Quando uma notificação interativa chega, o dispositivo mostra os botões de ação junto com a mensagem de notificação. As notificações interativas são suportadas em dispositivos iOS com a versão 8 e
@@ -18,7 +23,7 @@ posterior. Se uma notificação interativa for enviada a dispositivos iOS com a 
 
 A notificação interativa pode ser enviada usando o painel Push ou usando a [Documentação da API de REST](t_restapi.html).
 
-No Console de Push: 
+No console de Push: 
 
 1. Na guia de notificação no painel Push, clique em **Enviar notificação**. 
 2. Escolha seus destinatários de notificação e clique em **Avançar**. 

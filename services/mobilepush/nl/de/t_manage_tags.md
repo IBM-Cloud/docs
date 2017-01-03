@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Tags verwalten
 {: #manage_tags}
-Letzte Aktualisierung: 17. Oktober 2016
+Letzte Aktualisierung: 07. Dezember 2016
 {: .last-updated}
 
 Verwenden Sie das {{site.data.keyword.mobilepushshort}}-Dashboard, um Tags für Ihre Anwendung zu erstellen und zu löschen und anschließend tagbasierte Benachrichtigungen zu initiieren. Die tagbasierte Benachrichtigung wird auf Geräten empfangen, von denen Tags subskribiert wurden.
@@ -46,7 +51,7 @@ bestimmten Tag subskribiert haben. Jedes Gerät kann beliebig viele Tags subskri
 
 Mit Tags können im Gegensatz zu allgemeinen Rundsendungen, die an alle Anwendungen gesendet werden, Benachrichtigungen auf der Grundlage eines Interessenbereichs zielgruppenspezifisch an Benutzer gesendet werden. Sie können Tags erstellen und verwalten, indem Sie die Registerkarte 'Tag' im {{site.data.keyword.mobilepushshort}}-Dashboard oder REST-APIs verwenden. Sie können Code-Snippets verwenden, um Ihre Tag-Subskriptionen für Ihre mobile Anwendung zu verwalten und abzufragen. Sie können diese Code-Snippets verwenden, um Subskriptionen abzurufen, eine Subskription für einen Tag einzurichten, eine Subskription für einen Tag aufzuheben oder eine Liste der verfügbaren Tags abzurufen. Kopieren Sie diese Code-Snippets in Ihre mobile Anwendung.
 
-## Android
+## Tags mit Android abrufen
 {: android-get-tags}
 
 Die API **getTags** gibt die Liste mit den verfügbaren Tags zurück, die das Gerät subskribieren kann. Nachdem das Gerät einen bestimmten Tag subskribiert hat, kann es die Push-Benachrichtigungen empfangen, die für diesen Tag gesendet werden.
@@ -93,7 +98,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 	```
 	{: codeblock}
 
-## Cordova
+## Tags mit Cordova abrufen
 {: cordova-get-tags}
 
 Kopieren Sie die folgenden Code-Snippets in Ihre mobile Anwendung, um eine Liste der Tags abzurufen, die das Gerät subskribiert hat, und eine Liste der verfügbaren Tags, die das Gerät subskribieren kann.
@@ -102,21 +107,21 @@ Rufen Sie einen Array der Tags ab, die zum Subskribieren verfügbar sind.
 
 ```
 //Get a list of available tags to which the device can subscribe
-MFPPush.retrieveAvailableTags(function(tags) {
+BMSPush.retrieveAvailableTags(function(tags) {
   alert(tags);
-}, null);
+}, failure); 
 ```
 	{: codeblock}
 
 ```
 //Get a list of available tags to which the device is subscribed.
-MFPPush.getSubscriptionStatus(function(tags) {
-  alert(tags);
-}, null);
+BMSPush.retrieveSubscriptions(function(tags) {
+   alert(tags); 
+}, failure); 
 ```
 	{: codeblock}
 
-## Objective-C
+## Tags mit Objective-C abrufen
 {: objc-get-tags}
 
 Kopieren Sie die folgenden Code-Snippets in Ihre mit Objective-C entwickelte iOS-Anwendung, um eine Liste der Tags abzurufen, die das Gerät subskribiert hat, und eine Liste der verfügbaren Tags, die das Gerät subskribieren kann.
@@ -158,7 +163,7 @@ subscribedTags = [response subscriptions];
   ```
 	{: codeblock}
 
-## Swift
+## Tags mit Swift abrufen
 {: swift-get-tags}
 
 Die API **retrieveAvailableTagsWithCompletionHandler** gibt die Liste mit den verfügbaren Tags zurück, die das Gerät subskribieren kann. Nachdem das Gerät einen bestimmten Tag subskribiert hat, kann es Push-Benachrichtigungen empfangen, die für diesen Tag gesendet werden.
@@ -200,7 +205,7 @@ Kopieren Sie die folgenden Code-Snippets in Ihre mobile Swift-Anwendung, um eine
 ```
 	{: codeblock}
 
-## Google Chrome und Mozilla Firefox
+## Google Chrome, Safari und Mozilla Firefox
 {: web-get-tags}
 
 Zum Abrufen der Liste verfügbarer Tags, die von Kunden subskribiert werden können, verwenden Sie folgenden Code.
@@ -221,16 +226,6 @@ var bmsPush = new BMSPush();
 ```
 	{: codeblock}
 
-Kopieren Sie die folgenden Code-Snippets in Ihre Google Chrome-Apps und Erweiterungen, um eine Liste von Tags abzurufen, die von Kunden subskribiert wurden.
-
-```
-var bmsPush = new BMSPush();
-  bmsPush.retrieveSubscriptions(function(response) 
-	{
-   alert(response.response)
- })
-```
-	{: codeblock}
 
 ## Google Chrome-Apps und Erweiterungen
 {: web-get-tags}
@@ -270,7 +265,7 @@ var bmsPush = new BMSPush();
 
 Verwenden Sie die folgenden Code-Snippets, um Ihren Geräten das Abrufen von Subskriptionen und das Subskribieren und das Aufheben der Subskription von Tags zu ermöglichen.
 
-## Android
+## Tags mit Android subskribieren und die Subskription aufheben
 {: android-subscribe-tags}
 
 Kopieren Sie dieses Code-Snippet und fügen Sie es in Ihre mobile Android-Anwendung ein.
@@ -307,19 +302,19 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-## Cordova
+## Tags mit Cordova subskribieren und die Subskription aufheben
 {: cordova-subscribe-tags}
 
 Kopieren Sie dieses Code-Snippet und fügen Sie es in Ihre mobile Cordova-Anwendung ein.
 
 ```
 var tag = "YourTag";
-MFPPush.subscribe(tag, success, failure);
-MFPPush.unsubscribe(tag, success, failure);
+BMSPush.subscribe(tag, success, failure);
+BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Objective-C
+## Tags mit Objective-C subskribieren und die Subskription aufheben
 {: objc-subscribe-tags}
 
 Kopieren Sie dieses Code-Snippet und fügen Sie es in Ihre mobile Objective-C-Anwendung ein.
@@ -357,7 +352,7 @@ Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskription eine
 ```
 	{: codeblock}
 
-## Swift
+## Tags mit Swift subskribieren und die Subskription aufheben
 {: swift-subscribe-tags}
 
 Kopieren Sie dieses Code-Snippet und fügen Sie es in Ihre mobile Swift-Anwendung ein.
@@ -367,13 +362,15 @@ Kopieren Sie dieses Code-Snippet und fügen Sie es in Ihre mobile Swift-Anwendun
 Verwenden Sie die API **subscribeToTags** zum Subskribieren eines Tags.
 
 ```
-push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
-	//error while subscribing to tags
-	} else {
-//successfully subscribed to tags var subStatus = response.subscribeStatus();
-	}
-}
+push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statusCode, error) -> Void in
+    if error.isEmpty {
+        print("Response when subscribing to tags: \(response?.description)")
+        print("Status code when subscribing to tags: \(statusCode)")
+    } else {
+        print("Error when subscribing to tags: \(error) ")
+        print("Error status code when subscribing to tags: \(statusCode)")
+    }
+})
 ```
 	{: codeblock}
 
@@ -422,9 +419,6 @@ var tagsArray = ["tag1", "Tag2"]
 {: #using_tags}
 
 Tagbasierte Benachrichtigungen sind Benachrichtigungen, die alle diejenigen Geräte zum Ziel haben, die einen bestimmten Tag subskribiert haben. Jedes Gerät kann beliebig viele Tags subskribieren. Dieses Thema beschreibt, wie tagbasierte Benachrichtigungen gesendet werden. Subskriptionen werden von der Bluemix-Instanz des {{site.data.keyword.mobilepushshort}}-Service verwaltet. Wenn ein Tag gelöscht wird, werden alle diesem Tag zugeordneten Informationen (einschließlich Subskribenten und Geräte) gelöscht. Für diesen Tag ist keine automatische Aufhebung der Subskription erforderlich, da er nicht mehr vorhanden ist und daher clientseitig keine weiteren Aktionen nötig sind.
-
-###Vorbemerkungen
-{: before-you-begin}
 
 Erstellen Sie Tags in der Anzeige **Tag**. Informationen zum Erstellen von Tags finden Sie in [Tags erstellen](t_manage_tags.html).
 

@@ -1,17 +1,22 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Ativando aplicativos da web para receber o {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Última atualização: 15 de novembro de 2016
+Última atualização: 07 de dezembro de 2016
 {: .last-updated}
 
-Agora é possível ativar os aplicativos da web Google Chrome e Mozilla Firefox para receber o {{site.data.keyword.mobilepushshort}}.
+É possível ativar os aplicativos da web Google Chrome, Mozilla Firefox e Safari para receber o
+{{site.data.keyword.mobilepushshort}}.
 
 ## Instalando o SDK do cliente do navegador da web para {{site.data.keyword.mobilepushshort}}
 {: #web_install}
@@ -22,8 +27,10 @@ Este tópico descreve como instalar e usar o SDK de Push do JavaScript do client
 
 Para instalar o SDK do Javascript no aplicativo da web do Google Chrome, conclua as etapas:
 
-Faça download do `BMSPushSDK.js`, do `BMSPushServiceWorker.js` e do `manifest_Website.json` a partir do
-[SDK de push da Web do Bluemix](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
+Faça download dos arquivos `BMSPushSDK.js`, `BMSPushServiceWorker.js` e
+`manifest_Website.json` por meio do
+[SDK
+de push da web do Bluemix](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
 
 1. Edite o arquivo `manifest_Website.json`.
 
@@ -89,22 +96,26 @@ O `App Region` especifica o local no qual o serviço {{site.data.keyword.mobilep
   "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
    "clientSecret":"clientSecret of your push service"
+   "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the
+website Push ID provided during the server side configuration."
     }
   bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
 
+**Nota**: se suas credenciais de FCM forem mudadas para SDK de push da web, a
+entrega da mensagem poderá falhar para o navegador Chrome. Assegure-se de chamar
+`bmsPush.unRegisterDevice` para evitar falha.
+
 ## Registrando o aplicativo da web
 {: #web_register}
 
-Use a API `register()` para registrar o dispositivo no serviço
+Use a API **register()** para registrar o dispositivo no serviço
 {{site.data.keyword.mobilepushshort}}. Use qualquer uma das
 opções a seguir, com base em seu navegador.
 
 - Para o registro a partir do Google Chrome, inclua a Chave API do Firebase Cloud Messaging (FCM) ou do Google Cloud
 Messaging (GCM) e a URL do website no painel de configuração da web de serviço {{site.data.keyword.mobilepushshort}} do Bluemix. Para obter mais informações, consulte [Configurando as credenciais do Google Cloud Messaging](t_push_provider_android.html) na configuração do Chrome.
-
-
 
 - Para registro a partir do Mozilla Firefox, inclua a URL do website no painel de configuração da web do serviço Bluemix {{site.data.keyword.mobilepushshort}} na configuração do Firefox.
 
@@ -119,6 +130,7 @@ var bmsPush = new BMSPush();
   "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
   "clientSecret":"clientSecret of your push service"
+  "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
   }
   bmsPush.initialize(params, callback)
     bmsPush.register(function(response) {

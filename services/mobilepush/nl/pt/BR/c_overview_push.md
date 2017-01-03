@@ -5,13 +5,19 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Sobre {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Última atualização: 11 de novembro de 2016
+Última atualização: 06 de dezembro de 2016
 {: .last-updated}
 
-O IBM {{site.data.keyword.mobilepushshort}} é um serviço que pode ser usado para enviar notificações a dispositivos móveis iOS e Android, bem como aos
-navegadores da web Google Chrome e Mozilla Firefox, além dos Apps Chrome e Extensões. É possível direcionar notificações para todos os usuários
+O IBM {{site.data.keyword.mobilepushshort}} é um serviço que pode ser usado para enviar
+notificações para dispositivos móveis iOS e Android, para os navegadores da web Google Chrome, Mozilla
+Firefox e Safari e também para os Apps e as Extensões do Google Chrome. É possível direcionar notificações para todos os usuários
 do aplicativo ou para um conjunto específico de usuários e dispositivos usando tags. É possível administrar dispositivos, tags e assinaturas. É
 possível também usar um SDK (kit de desenvolvimento de software) e interfaces de
 programação de aplicativo (APIs) Representational State Transfer (REST) para
@@ -94,8 +100,9 @@ Por padrão, a verificação do segredo do cliente é impingida apenas em novos 
 usando a API de REST verifyClientSecret. Recomenda-se que você impinja a verificação do segredo do cliente para evitar
 expor dispositivos para usuários que possam conhecer o ID do aplicativo e o ID do dispositivo.
 
-Assegure-se de que o 'clientSecret' seja mantido confidencial e nunca seja codificado permanentemente no app móvel. Há vários padrões de inicialização de
-aplicativo que podem ser usados para puxar o 'clientSecret' dinamicamente durante o tempo de execução dos aplicativos. O diagrama de sequência é descrito nesse
+Assegure-se de que 'clientSecret' seja mantido confidencial e que nunca seja codificado permanentemente
+no app móvel. Há vários padrões de inicialização de aplicativo que podem ser usados para puxar o
+'clientSecret' dinamicamente durante o tempo de execução dos aplicativos. O diagrama de sequência é descrito nesse
 possível padrão.
 ![Enable_Push](images/init_client_secret.jpg) 
 

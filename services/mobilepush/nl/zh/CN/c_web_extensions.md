@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # 让 Chrome Apps and Extensions 能够接收 {{site.data.keyword.mobilepushshort}} 
 {: #web_notifications}
-上次更新时间：2016 年 11 月 15 日
+上次更新时间：2016 年 12 月 6 日
 {: .last-updated}
 
 您现在可以支持 Chrome Apps and Extensions 接收 {{site.data.keyword.mobilepushshort}}。

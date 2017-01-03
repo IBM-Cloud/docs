@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 対話式通知
 {: #interactive-notifications}
-最終更新日: 2016 年 10 月 17 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
 対話式通知を使用すると、ユーザーは通知が到着したときにアプリケーションを開かずにアクションを取ることができます。対話式通知が到着すると、デバイスは通知メッセージとともにアクション・ボタンを表示します。対話式通知は、バージョン 8 以降の iOS デバイスでサポートされています。対話式通知が iOS 8 より低いバージョンの iOS デバイスに送信された場合、通知アクションは表示されません。

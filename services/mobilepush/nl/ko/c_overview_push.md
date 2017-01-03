@@ -5,12 +5,17 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # {{site.data.keyword.mobilepushshort}} 정보
 {: #overview-push}
-마지막 업데이트 날짜: 2016년 11월 11일
+마지막 업데이트 날짜: 2016년 12월 6일
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}}은 iOS 및 Android 모바일 디바이스, Google Chrome 및 Mozilla Firefox 웹 브라우저, Google Chrome 앱과 확장 프로그램에 알림을 전송하는 데 사용할 수 있는 서비스입니다. 알림은 모든 애플리케이션 사용자와 태그를 사용하는 특정 디바이스 및 사용자 세트를 대상으로 할 수 있습니다. 디바이스, 태그 및 구독을 관리할 수 있습니다. 또한 SDK(software development kit) 및 REST(Representational State Transfer) API(application program interface)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다.  
+IBM {{site.data.keyword.mobilepushshort}}은 iOS 및 Android 모바일 디바이스, Google Chrome, Mozilla Firefox 및 Safari 웹 브라우저, Google Chrome 앱과 확장 프로그램에 알림을 전송하는 데 사용할 수 있는 서비스입니다. 알림은 모든 애플리케이션 사용자와 태그를 사용하는 특정 디바이스 및 사용자 세트를 대상으로 할 수 있습니다. 디바이스, 태그 및 구독을 관리할 수 있습니다. 또한 SDK(software development kit) 및 REST(Representational State Transfer) API(application program interface)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다.  
 
 {{site.data.keyword.mobilepushshort}}을 Bluemix 전용 서비스로 사용할 수도 있습니다. {{site.data.keyword.mobilepushshort}}을 전용 서비스로 사용하는 방법에 대한 정보는 [전용 서비스](/docs/dedicated/index.html)를 참조하십시오. {{site.data.keyword.mobilepushshort}} 모니터링 탭에는 분석 데이터가 표시되지 않습니다. 
 
@@ -33,7 +38,7 @@ IBM {{site.data.keyword.mobilepushshort}}은 iOS 및 Android 모바일 디바이
 ###백엔드 애플리케이션
 {: backend-applications}
 
-백엔드 애플리케이션은 사내 구축 환경 또는 퍼블릭 클라우드에 있습니다. 백엔드 애플리케이션은 {{site.data.keyword.mobilepushshort}} 서비스를 사용하여 컨텍스트 알림을 모바일 및 브라우저 애플리케이션 사용자에게 전송합니다. 백엔드 애플리케이션은 푸시 알림을 전송하기 위해 모바일 디바이스, 브라우저 에이전트 및 사용자 정보를 유지보수하고 관리할 필요가 없습니다. 대신 백엔드 애플리케이션에서는 이들을 관리하고 유지보수하는 {{site.data.keyword.mobilepushshort}} 서비스를 사용할 수 있습니다.
+백엔드 애플리케이션은 온프레미스 또는 퍼블릭 클라우드에 있습니다. 백엔드 애플리케이션은 {{site.data.keyword.mobilepushshort}} 서비스를 사용하여 컨텍스트 알림을 모바일 및 브라우저 애플리케이션 사용자에게 전송합니다. 백엔드 애플리케이션은 푸시 알림을 전송하기 위해 모바일 디바이스, 브라우저 에이전트 및 사용자 정보를 유지보수하고 관리할 필요가 없습니다. 대신 백엔드 애플리케이션에서는 이들을 관리하고 유지보수하는 {{site.data.keyword.mobilepushshort}} 서비스를 사용할 수 있습니다.
 
 ###앱 백엔드 소유자
 {: app-backend-owner}

@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,12 +6,16 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Configurazione delle credenziali per FCM
 {: #create-push-enable-gcm}
-Ultimo aggiornamento: 15 novembre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
-FCM (Firebase Cloud Messaging) è il gateway utilizzato per consegnare le notifiche di push ai dispositivi Android e ai browser web Google Chrome e Mozilla. FCM ha sostituito GCM (Google Cloud Messaging). Ottieni le tue credenziali FCM e configura quindi il servizio {{site.data.keyword.mobilepushshort}} sul dashboard. Assicurati di utilizzare le configurazioni FCM per le nuove applicazioni. Le applicazioni esistenti continuaranno a funzionare con le configurazioni GCM. 
+FCM (Firebase Cloud Messaging) è il gateway utilizzato per consegnare le notifiche di push ai dispositivi Android e ai browser web Google Chrome e Mozilla. FCM ha sostituito GCM (Google Cloud Messaging). Ottieni le tue credenziali FCM e configura quindi il servizio {{site.data.keyword.mobilepushshort}} sul dashboard. Assicurati di utilizzare le configurazioni FCM per le nuove applicazioni. Le applicazioni esistenti continueranno a funzionare con le configurazioni GCM.
 
 ##Come ottenere il tuo ID mittente e la chiave API
 {: #android-senderid-apikey}

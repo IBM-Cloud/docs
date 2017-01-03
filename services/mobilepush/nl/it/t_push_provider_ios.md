@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Configurazione delle credenziali per APNs
 {: #create-push-credentials-apns}
-Ultimo aggiornamento: 10 novembre 2016
+Ultimo aggiornamento: 07 dicembre 2016
 {: .last-updated}
 
 Il servizio APNS (Apple Push Notification Service) consente agli sviluppatori dell'applicazione di inviare notifiche remote dall'istanza del servizio {{site.data.keyword.mobilepushshort}} su Bluemix (il provider) alle applicazioni e ai dispositivi iOS. I messaggi sono inviati a un'applicazione di destinazione sul dispositivo. 
@@ -50,8 +53,7 @@ Quando registri un ID applicazione, seleziona le seguenti opzioni:
 ##Crea un certificato SSL di APNS di sviluppo e distribuzione
 {: #create-push-credentials-apns-ssl}
 
-Prima di poter ottenere un certificato APNS, devi generare una CSR (certificate
-            signing request) e inoltrarla ad Apple, l'autorità di certificazione (CA). La CSR contiene informazioni che identificano la tua società e la tua chiave pubblica e privata che usi per firmare le tue notifiche di push Apple. Genera quindi il certificato SSL
+Prima di ottenere un certificato APNs, devi generare una CSR (certificate signing request) e inoltrarla ad Apple, l'autorità di certificazione (CA). La CSR contiene informazioni che identificano la tua società e la tua chiave pubblica e privata che usi per firmare le tue notifiche di push Apple. Genera quindi il certificato SSL
             nel portale per sviluppatori iOS. Il certificato, insieme alla sua chiave pubblica e a quella privata,
              viene archiviato in Keychain Access.
 
@@ -116,12 +118,7 @@ Il profilo di provisioning utilizza l'ID applicazione per determinare quali sono
             gli sviluppatori a cui è consentito creare l'applicazione e quali sono i dispositivi
             di cui è consentita l'esecuzione di test sull'applicazione.
 
-###Prima di cominciare
-{: before-you-begin-provisioning-file}
-
-Assicurati di aver registrato un ID applicazione, di averlo abilitato
-                    per Push Notification Service e di averlo configurato per utilizzare un certificato SSL di
-                    APNS di sviluppo e produzione.
+Assicurati di aver registrato un ID applicazione, di averlo abilitato per il servizio {{site.data.keyword.mobilepushshort}} e di averlo configurato per utilizzare un certificato SSL APNs di sviluppo e produzione. 
 
 Crea un profilo di provisioning di sviluppo nel seguente modo:
 
@@ -146,14 +143,9 @@ Utilizza il profilo di provisioning di archivio per inoltrare la tua applicazion
 
 Per utilizzare il servizio {{site.data.keyword.mobilepushshort}} per inviare notifiche, carica i certificati SSL richiesti per APNS (Apple Push Notification Service). Puoi inoltre utilizzare l'API REST per caricare un certificato APNS.
 
-
-###Prima di cominciare
-{: before-you-begin-dashboard}
-
-
 <!-- Get your development and production APNs SSL certificate and the password associated with each type of certificate. For information, see Creating and configuring push credentials for APNs.-->
 
-I certificati necessari per APNs sono i certificati `.p12`, che contengono la chiave privata, e i certificati SSL richiesti per creare e pubblicare la tua applicazione. Devi generare i certificati dal Member Center del sito Web Apple
+I certificati richiesti per APNs sono i certificati `.p12`. Questi certificati contengono i certificati di chiave privata e SSL richiesti per creare e pubblicare la tua applicazione. Devi generare i certificati dal Member Center del sito Web Apple
                     Developer (per il quale è richiesto un account Apple Developer
                 valido). Sono richiesti dei certificati separati per l'ambiente di sviluppo (sandbox) e
                     l'ambiente di produzione (distribuzione).

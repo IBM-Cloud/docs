@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 啟用標籤型通知
 {: #tag_based_notifications}
-前次更新：2016 年 10 月 18 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
 標籤型通知訊息是指以所有訂閱特定標籤之裝置為目標的訊息。 

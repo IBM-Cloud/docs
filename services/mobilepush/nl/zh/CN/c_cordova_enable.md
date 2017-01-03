@@ -5,12 +5,17 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 使 Cordova 应用程序能够接收推送通知
 {: #cordova_enable}
-上次更新时间：2016 年 10 月 17 日
+上次更新时间：2016 年 11 月 6 日
 {: .last-updated}
 
-Cordova 是一种平台，用于通过 JavaScript、CSS 和 HTML 构建混合应用程序。{{site.data.keyword.mobilepushshort}} 支持开发基于 Cordova 的 iOS 和 Android 应用程序。
+Cordova 是一种平台，用于通过 JavaScript、CSS 和 HTML 构建混合应用程序。{{site.data.keyword.mobilepushshort}} 服务支持开发基于 Cordova 的 iOS 和 Android 应用程序。
 
 您可以让 Cordova 应用程序具有向您的设备接收推送通知的能力。
 
@@ -67,47 +72,27 @@ cordova platform add ios
 	```
 	{: codeblock}
 
-1. 在 Cordova 应用程序根目录中，输入以下命令来安装 Cordova 推送插件：**cordova plugin add ibm-mfp-push**。根据您所添加的平台，您可能会看到：
+1. 在 Cordova 应用程序根目录中，输入以下命令来安装 Cordova 推送插件：**cordova plugin add bms-push**。根据您所添加的平台，您可能会看到：
 ```
-Installing "ibm-mfp-push" for android
-	Installing "ibm-mfp-push" for ios
-	```
+Installing "bms-push" for android
+Installing "bms-push" for ios
+```
 	{: codeblock}
 
-1. 在 *your-app-root-folder* 中，使用以下命令来验证 Cordova 核心和推送插件是否成功安装：**cordova plugin list**。根据您所添加的平台，您可能会看到：
+1. 在 your-app-root-folder 中，使用以下命令来验证 Cordova 核心和推送插件是否成功安装：**cordova plugin list**。根据您所添加的平台，您可能会看到：
 ```
-ibm-mfp-core 1.0.0 "MFPCore"
-	ibm-mfp-push 1.0.0 “MFPPush"
-	```
+bms-core <version> "BMSCore"
+bms-push <version> "BMSPush" 
+```
 	{: codeblock}
 
 1. （仅限 iOS）- 配置 iOS 开发环境。
 	
-2. 请完成以下分步：
-
- a. 使用 Xcode 打开 *your-app-name***/platforms/ios** 目录中的 your-app-name.xcodeproj 文件。
-
- b. 添加桥接头。转至**构建设置 > Swift 编译器 - 代码生成 > Objective-C 桥接头**，然后添加以下路径：*your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
-
- c. 添加 Frameworks 参数。转至**构建设置 > 链接 > Runpath 搜索路径**，然后添加 `@executable_path/Frameworks` 参数。
-	
-
- d. 取消注释桥接头中的以下推送导入语句。转至 *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
-
-```
-//#import <IMFPush/IMFPush.h>
-	//#import <IMFPush/IMFPushClient.h>
-	//#import <IMFPush/IMFResponse+IMFPushCategory.h>
-	```
-	{: codeblock}
-
- e. 使用 Xcode 构建并运行应用程序。
-
+2. 使用 Xcode 构建并运行应用程序。
 1. （仅限 Android）- 使用以下命令来构建 Android 项目：
 **cordova build android**。
 
 	**注**：在 Android Studio 中打开项目之前，先通过 Cordova CLI 构建 Cordova 应用程序。这将帮助您避免构建错误。
-
 
 
 ## 初始化 Cordova 插件
@@ -118,21 +103,29 @@ ibm-mfp-core 1.0.0 "MFPCore"
 1. 通过将以下代码片段复制并粘贴到主 JavaScript 文件（通常位于 **www/js** 目录下）中来初始化 BMSClient。
 
 ```
-BMSClient.initialize("https://myapp.mybluemix.net","App GUID");
-```
-	{: codeblock}
-
-1. 修改代码片段以使用 Bluemix 的 Route 和 appGUID 参数。 单击“推送”仪表板中的**移动选项**链接，以获取“路径”、“应用程序 GUID”和“客户机私钥”。在 `BMSClient.initialize` 代码片段中将“路径”和“应用程序 GUID”值用作您的参数。
-
-	**注**：如果是使用 Cordova CLI（例如，Cordova create app-name 命令）创建的 Cordova 应用程序，请将此 JavaScript 代码放入 **index.js** 文件内 `onDeviceReady: function()` 函数中的 `app.receivedEvent` 函数之后，以初始化 BMS 客户机。
-
-```
 onDeviceReady: function() {
      app.receivedEvent('deviceready');
-BMSClient.initialize("https://myapp.mybluemix.net","App GUID");
-    },
+BMSClient.initialize("YOUR APP REGION");
+    } 
 ```
 	{: codeblock}
+
+为应用程序传入区域。提供以下常量：
+
+```
+REGION_US_SOUTH // ".ng.bluemix.net";
+REGION_UK //".eu-gb.bluemix.net";
+REGION_SYDNEY // ".au-syd.bluemix.net";
+```
+
+例如：
+
+```
+BMSClient.initialize(BMSClient.REGION_US_SOUTH);
+```
+
+**注**：如果是使用 Cordova CLI（例如，Cordova create app-name 命令）创建的 Cordova 应用程序，请将此 JavaScript 代码放入 index.js 文件内 onDeviceReady: function() 函数中的 app.receivedEvent 函数之后，以初始化 `BMSClient`。 
+
 
 ## 注册设备
 {: #cordova_register}
@@ -142,120 +135,63 @@ BMSClient.initialize("https://myapp.mybluemix.net","App GUID");
 
 ```
 var success = function(message) { console.log("Success: " + message); };
-	var failure = function(message) { console.log("Error: " + message); };
-	MFPPush.registerDevice({}, success, failure);
+var failure = function(message) { console.log("Error: " + message); };
+BMSPush.registerDevice({}, success, failure);
 ```
 	{: codeblock}
-
-### Android
-{: #cordova_register_android}
-Android 不使用 settings 参数。如果只是构建 Android 应用程序，请传递空对象。例如：
-
-```
-MFPPush.registerDevice({}, success, failure);
-	MFPPush.unregisterDevice(success, failure);
-```
-	{: codeblock}
-
-### iOS
-{: #cordova_register_ios}
-要定制警报、角标和声音属性，请将以下 JavaScript 代码片段添加到 Cordova 应用程序的 Web 部分中。
-
-```
-var settings = {
-	   ios: {
-             alert: true,
-      badge: true,
-      sound: true
-   }
-}
-	MFPPush.registerDevice(settings, success, failure);
-```
-	{: codeblock}
-
-
-### JavaScript
-{: #cordova_register_js}
-
-```
-MFPPush.registerDevice({}, success, failure);
-```
-	{: codeblock}
-
-可使用 JSON.parse 访问 JavaScript 中成功响应参数的内容：**var token = JSON.parse(response).token**
-
-
-可用的键如下：`token` 和 `deviceId`。
 
 以下 JavaScript 代码片段显示如何初始化 Bluemix Mobile Services 客户机 SDK，向 {{site.data.keyword.mobilepushshort}} 服务注册设备以及侦听推送通知。将此代码放入 JavaScript 文件中。
 
-```
-//Register device token with Bluemix Push Notification Service
-funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
-  CDVMFPPush.sharedInstance().didRegisterForRemoteNotifications(deviceToken)
-}
-```
-	{: codeblock}
-
-```
-//Handle error when failed to register device token with APNs
-funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
-CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
-}
-```
-	{: codeblock}
 在 **onDeviceReady: function()** 中。
 
 ```
 onDeviceReady: function() {
      app.receivedEvent('deviceready');
-     BMSClient.initialize("https://http://myroute_mybluemix.net","my_appGuid");
-     var success = function(message) { console.log("Success: " + message); };
-     var failure = function(message) { console.log("Error: " + message); };
-     var settings = {
-         ios: {
-             alert: true,
-         badge: true,
-         sound: true
-     }
-  };
-   MFPPush.registerDevice(settings, success, failure);
-   var notification = function(notif){
-       alert (notif.message);
-    };
-    MFPPush.registerNotificationsCallback(notification);
-	 }
+BMSClient.initialize("YOUR APP REGION");
+var success = function(message) { console.log("Success: " + message); };
+var failure = function(message) { console.log("Error: " + message); };
+BMSPush.registerDevice({}, success, failure); 
+ var showNotification = function(notif)
+ {
+ alert(JSON.stringify(notif));
+ };
+BMSPush.registerNotificationsCallback(showNotification); 
 ```
 	{: codeblock}
 
 ### Objective-C
 {: #cordova_register_objective}
-将以下 Objective-C 代码片段添加到应用程序代表类中
+将以下 Objective-C 代码片段添加到应用程序代表类中。
 
 ```
 // Register the device token with Bluemix Push Notification Service
-	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
-	}
-	// Handle error when failed to register device token with APNs
+	- (void)application:(UIApplication *)application
+     didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+       [[CDVBMSPush sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+} 
+// Handle error when failed to register device token with APNs
 	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-	   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
-	}
+	   [[CDVBMSPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
+} 
 ```
 	{: codeblock}
 
 ###Swift
 {: #cordova_register_swift}
+
 将以下 Swift 代码片段添加到应用程序代表类中。
 
 ```
-funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
-   CDVMFPPush.sharedInstance().didRegisterForRemoteNotifications(deviceToken)
-}
+// Register the device token with Bluemix Push Notification Service
+func application(application: UIApplication,
+  didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+   CDVBMSPush.sharedInstance().didRegisterForRemoteNotificationsWithDeviceToken(deviceToken)
+} 
 // Handle error when failed to register device token with APNs
-	funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
-    CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
-	}
+func application(application: UIApplication,
+    didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer) {
+    CDVBMSPush.sharedInstance().didReceiveRemoteNotificationWithNotification(error)
+} 
 ```
 	{: codeblock}
 
@@ -300,11 +236,10 @@ cordova run ios
 
 将以下 JavaScript 代码片段添加到 Cordova 应用程序的 Web 部分中。
 ```
-var notification = function(notification){
-    // notification is a JSON object.
-    alert(notification.message);
-};
-MFPPush.registerNotificationsCallback(notification);
+var showNotification = function(notif) {
+  alert(JSON.stringify(notif));
+        };
+        BMSPush.registerNotificationsCallback(showNotification); 
 ```
 	{: codeblock}
 
@@ -312,18 +247,18 @@ MFPPush.registerNotificationsCallback(notification);
 
 以下部分列出了 Android 通知属性：
 
-* message - 推送通知消息
-* payload - 包含通知有效内容的 JSON 对象
+* **message** - 推送通知消息
+* **payload** - 包含通知有效内容的 JSON 对象
 
 
 ###iOS 通知属性
 
 以下部分列出了 iOS 通知属性：
 
-* message - 推送通知消息
-* payload - 包含通知有效内容的 JSON 对象 action-loc-key - 此字符串用作键以从当前本地化版本中获取本地化字符串，用于适当按钮标题，而不是 `View`。
-* badge - 要显示为应用程序图标角标的数字。如果缺少此属性，那么角标不会改变。要除去角标，请将此属性的值设置为 0。
-* sound - 应用程序捆绑包中或应用程序数据容器的 Library/Sounds 文件夹中声音文件的名称。
+* **message** - 推送通知消息
+* **payload** - 包含通知有效内容的 JSON 对象 action-loc-key - 此字符串用作键以从当前本地化版本中获取本地化字符串，用于适当按钮标题，而不是 `View`。
+* **badge** - 要显示为应用程序图标角标的数字。如果缺少此属性，那么角标不会改变。要除去角标，请将此属性的值设置为 0。
+* **sound** - 应用程序捆绑包中或应用程序数据容器的 Library/Sounds 文件夹中声音文件的名称。
 
 ###Objective-C
 
@@ -333,17 +268,20 @@ MFPPush.registerNotificationsCallback(notification);
 // Handle receiving a remote notification
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
 
- [[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
-}
+ [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationWithNotification:userInfo];
+} 
 ```
 	{: codeblock}
 
 
+
 ```
-// Handle receiving a remote notification on launch
-		- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
-    [[CDVMFPPush sharedInstance] didReceiveRemoteNotificationOnLaunch:launchOptions];
-	}
+//Handle receiving a remote notification on launch
+- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
+  if (launchOptions != nil) {
+   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationOnLaunchWithLaunchOptions:launchOptions];
+     }
+ }
 ```
 	{: codeblock}
 
@@ -352,8 +290,9 @@ MFPPush.registerNotificationsCallback(notification);
 将以下 Swift 代码片段添加到应用程序代表类中。
 ```
 // Handle receiving a remote notification
-funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){
-  CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
+func application(application: UIApplication,
+   didReceiveRemoteNotification userInfo: [NSObject : AnyObject],  fetchCompletionHandler completionHandler: ) {
+   CDVBMSPush.sharedInstance().didReceiveRemoteNotificationWithNotification(userInfo)
 }
 ```
 	{: codeblock}
@@ -362,8 +301,11 @@ funcapplication(application: UIApplication, didReceiveRemoteNotification userInf
 // Handle receiving a remote notification on launch
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-    CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
-}
+    let remoteNotif = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary
+  if remoteNotif != nil {
+    CDVBMSPush.sharedInstance().didReceiveRemoteNotificationOnLaunchWithLaunchOptions(launchOptions)
+  }
+} 
 ```
 	{: codeblock}
 

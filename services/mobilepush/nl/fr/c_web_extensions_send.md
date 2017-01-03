@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
-# Envoi de notifications de base aux Applications et extensions Google Chrome  
+# Envoi de notifications de base aux Applications et extensions Google Chrome 
 {: #web_extensions_notifications}
-Dernière mise à jour : 15 novembre 2016
+Dernière mise à jour : 6 décembre 2016
 {: .last-updated}
 
 Une fois que vous avez développé vos applications, vous pouvez envoyer une notification push. 
@@ -33,4 +37,4 @@ L'image suivante montre l'option Applications et extensions Google Chrome du tab
 Une fois que vous avez configuré les notifications de base, vous pouvez choisir de configurer des notifications basées sur des balises et des options
 avancées.
 
-Ajoutez ces fonctions du service {{site.data.keyword.mobilepushshort}} à votre application. Pour utiliser des notifications basées sur les balises, voir [Notifications basées sur les balises](c_tag_basednotifications.html).Pour utiliser des options de notification avancées, voir [Activation des notifications push avancées](t_advance_badge_sound_payload.html).
+Ajoutez ces fonctions de service {{site.data.keyword.mobilepushshort}} à votre application. Pour utiliser des notifications basées sur les balises, voir [Notifications basées sur les balises](c_tag_basednotifications.html). Pour utiliser des options de notification avancées, voir [Activation des notifications push avancées](t_advance_badge_sound_payload.html).

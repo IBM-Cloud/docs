@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # 啟用 Chrome Apps and Extensions 來接收 {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-前次更新：2016 年 11 月 15 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
 您現在可以啟用 Google Chrome Apps and Extensions 來接收 {{site.data.keyword.mobilepushshort}}。

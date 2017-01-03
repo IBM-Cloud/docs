@@ -5,15 +5,17 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Informationen zu {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Letzte Aktualisierung: 11. November 2016
+Letzte Aktualisierung: 06. Dezember 2016
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} ist ein Service, mit dem Sie Benachrichtigungen an mobile iOS- und Android-Geräte, an Google Chrome- und Mozilla Firefox-Web-Browser und auch an Google Chrome-Apps und -Erweiterungen senden können. Benachrichtigungen können zielgruppenspezifisch an alle Anwendungsbenutzer und an bestimmte
-Benutzergruppen und Geräte mithilfe von Tags gesendet werden. Sie können Geräte, Tags und Subskriptionen verwalten. Sie können
-auch ein SDK (Software Development Kit) und REST-APIs (Representational State Transfer Application Program Interfaces) verwenden, um Ihre Clientanwendungen weiter
-zu entwickeln. 
+IBM {{site.data.keyword.mobilepushshort}} ist ein Service, mit dem Sie Benachrichtigungen an mobile iOS- und Android-Geräte, an Google Chrome-, Mozilla Firefox- und Safari-Web-Browser und auch an Google Chrome-Apps und Erweiterungen senden können. Benachrichtigungen können zielgruppenspezifisch an alle Anwendungsbenutzer und an bestimmte Benutzergruppen und Geräte mithilfe von Tags gesendet werden. Sie können Geräte, Tags und Subskriptionen verwalten. Sie können auch ein SDK (Software Development Kit) und REST-APIs (Representational State Transfer Application Program Interfaces) verwenden, um Ihre Clientanwendungen weiter zu entwickeln. 
 
 {{site.data.keyword.mobilepushshort}} ist auch als Bluemix Dedicated-Service verfügbar. Informationen zu {{site.data.keyword.mobilepushshort}} als dediziertem Service finden Sie im Abschnitt [Dedizierte Services](/docs/dedicated/index.html). Beachten Sie, dass auf der Registerkarte zur Überwachung von Push-Benachrichtigungen keine Analysedaten angezeigt werden.
 

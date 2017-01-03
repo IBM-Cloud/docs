@@ -6,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Enviando notificações push básicas
 {: #push-send-notifications}
-Última atualização: 17 de outubro de 2016
+Última atualização: 06 de dezembro de 2016
 {: .last-updated}
 
 Depois de desenvolver seus aplicativos, é possível enviar notificações push básicas (sem usar tags, badges, cargas úteis adicionais ou arquivos de som).
@@ -20,7 +24,7 @@ Para enviar notificações push básicas, conclua as etapas listadas:
 
 **Nota**: ao selecionar a opção **Todos os dispositivos**, todos os dispositivos inscritos para {{site.data.keyword.mobilepushshort}} receberão notificações.
 
-![Tela Notificações](images/tag_notification.jpg)
+![Tela de notificações](images/tag_notification.jpg)
 2. No campo **Mensagem**, insira sua mensagem e, em seguida,
 clique em **Enviar**.
 

@@ -1,28 +1,32 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Abilitazione delle applicazioni web alla ricezione di {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Ultimo aggiornamento: 15 novembre 2016
+Ultimo aggiornamento: 07 dicembre 2016
 {: .last-updated}
 
-Puoi ora abilitare le applicazioni web Google Chrome e Mozilla Firefox a ricevere   {{site.data.keyword.mobilepushshort}}.
+Puoi abilitare le applicazioni web Google Chrome, Mozilla Firefox e Safari a ricevere {{site.data.keyword.mobilepushshort}}.
 
 ## Installazione dell'SDK client del browser web per {{site.data.keyword.mobilepushshort}}
 {: #web_install}
 
 Questo argomento descrive come installare e utilizzare il JavaScript Push SDK client per sviluppare ulteriormente le tue applicazioni Web.
 
-### Inizializzazione nell'applicazione web 
+### Inizializzazione nell'applicazione web
 
-Per l'installazione dell'SDK Javascript nell'applicazione web Google Chrome completa la seguente procedura: 
+Per l'installazione dell'SDK Javascript nell'applicazione web Google Chrome completa la seguente procedura:
 
-Scarica `BMSPushSDK.js`, `BMSPushServiceWorker.js` e `manifest_Website.json` dalla [SDK di push web di Bluemix](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
+Scarica i file `BMSPushSDK.js`, `BMSPushServiceWorker.js` e `manifest_Website.json` dalla [SDK di push web di Bluemix](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
 
 1. Modifica il file `manifest_Website.json`.
 
@@ -46,7 +50,7 @@ Per il browser Mozilla Firefox, aggiungi i seguenti valori nel file `manifest.js
     {: codeblock}
 
 2. Modifica il nome del file `manifest_Website.json` con `manifest.json`.
-3. Aggiungi `BMSPushSDK.js`, `BMSPushServiceWorker.js` e `manifest.json` alla directory root del tuo sito web. 
+3. Aggiungi `BMSPushSDK.js`, `BMSPushServiceWorker.js` e `manifest.json` alla directory root del tuo sito web.
 3. Includi `manifest.json` nella tag `<head>` del tuo file html.
 ```
  <link rel="manifest" href="manifest.json">
@@ -80,19 +84,20 @@ Per ottenere il tuo GUID dell'applicazione, seleziona l'opzione **Configurazione
   "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
    "clientSecret":"clientSecret of your push service"
+   "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
     }
   bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
 
+**Nota**: se le tue credenziali FCM sono state modificate per l'SDK push Web, la ricezione dei messaggi potrebbe non riuscire per il browser Chrome. Assicurati di richiamare `bmsPush.unRegisterDevice` per evitare errori.
+
 ## Registrazione dell'applicazione web
 {: #web_register}
 
-Utilizza l'API `register()` per registrare il dispositivo con il servizio {{site.data.keyword.mobilepushshort}}. Utilizza una delle seguenti opzioni, in base al tuo browser.
+Utilizza l'API **register()** per registrare il dispositivo con il servizio {{site.data.keyword.mobilepushshort}}. Utilizza una delle seguenti opzioni, in base al tuo browser.
 
 - Per la registrazione da Google Chrome, aggiungi l'URL del sito web e la chiave API di FCM (Firebase Cloud Messaging) o GCM (Google Cloud Messaging) nel dashboard di configurazione web del servizio {{site.data.keyword.mobilepushshort}} di Bluemix. Per ulteriori informazioni, consulta [Configurazione delle credenziali per GCM (Google Cloud Messaging)](t_push_provider_android.html) nelle impostazioni di Chrome.
-
-
 
 - Per la registrazione da Mozilla Firefox, aggiungi l'URL del sito web nel dashboard di configurazione web del servizio {{site.data.keyword.mobilepushshort}} di Bluemix nelle impostazioni di Firefox.
 
@@ -106,6 +111,7 @@ var bmsPush = new BMSPush();
   "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
   "clientSecret":"clientSecret of your push service"
+  "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
   }
   bmsPush.initialize(params, callback)
     bmsPush.register(function(response) {

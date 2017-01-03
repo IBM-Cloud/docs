@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.mobilepushshort}}을 수신하도록 Chrome 앱과 확장 프로그램 설정
 {: #web_notifications}
-마지막 업데이트 날짜: 2016년 11월 15일
+마지막 업데이트 날짜: 2016년 12월 6일
 {: .last-updated}
 
 Google Chrome 앱과 확장 프로그램에서 {{site.data.keyword.mobilepushshort}}을 수신하도록 설정할 수 있습니다. 

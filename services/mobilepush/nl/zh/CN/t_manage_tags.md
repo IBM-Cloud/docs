@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 管理标记
 {: #manage_tags}
-上次更新时间：2016 年 10 月 17 日
+上次更新时间：2016 年 12 月 7 日
 {: .last-updated}
 
 使用 {{site.data.keyword.mobilepushshort}} 仪表板，可以创建和删除应用程序的标记，然后初始化基于标记的通知。预订了标记的设备会收到基于标记的通知。
@@ -45,7 +50,7 @@ copyright:
 
 不同于发送给所有应用程序的一般性广播，通过标记，可以根据用户的兴趣发送有针对性的通知。您可以使用 {{site.data.keyword.mobilepushshort}} 仪表板上的“标记”选项卡或使用 REST API 来创建和管理标记。您可以使用代码片段来管理和查询移动应用程序的标记预订。还可以使用这些代码片段来获取预订、预订标记、取消预订标记，或者获取可用标记的列表。将这些代码片段复制到移动应用程序中。
 
-## Android
+## 在 Android 上获取标记
 {: android-get-tags}
 
 **getTags** API 会返回设备可预订的可用标记的列表。在设备预订特定标记后，该设备可以接收针对该标记发送的 {{site.data.keyword.mobilepushshort}}。
@@ -92,7 +97,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 	```
 	{: codeblock}
 
-## Cordova
+## 在 Cordova 上获取标记
 {: cordova-get-tags}
 
 将以下代码片段复制到移动应用程序中，以获取设备所预订的标记的列
@@ -102,20 +107,21 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 
 ```
 //Get a list of available tags to which the device can subscribe
-MFPPush.retrieveAvailableTags(function(tags) {alert(tags);
-}, null);
+BMSPush.retrieveAvailableTags(function(tags) {
+  alert(tags);
+}, failure); 
 ```
 	{: codeblock}
 
 ```
 //Get a list of available tags to which the device is subscribed.
-MFPPush.getSubscriptionStatus(function(tags) {
-alert(tags);
-}, null);
+BMSPush.retrieveSubscriptions(function(tags) {
+   alert(tags); 
+}, failure); 
 ```
 	{: codeblock}
 
-## Objective-C
+## 在 Objective-C 上获取标记
 {: objc-get-tags}
 
 将以下代码片段复制到使用 Objective-C 开发的 iOS 应用程序中，以获取设备所预订的标记的列表以及获取设备可预订的可用标记的列表。
@@ -157,7 +163,7 @@ subscribedTags = [response subscriptions];
   ```
 	{: codeblock}
 
-## Swift
+## 在 Swift 上获取标记
 {: swift-get-tags}
 
 **retrieveAvailableTagsWithCompletionHandler** API 会返回设备可预订的可用标记的列表。在设备预订特定标记后，该设备可以接收针对该标记发送的 {{site.data.keyword.mobilepushshort}}。
@@ -199,7 +205,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 ```
 	{: codeblock}
 
-## Google Chrome 和 Mozilla Firefox
+## Google Chrome、Safari 和 Mozilla Firefox
 {: web-get-tags}
 
 要获取客户可以预订的可用标记列表，请使用以下代码。
@@ -220,16 +226,6 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 ```
 	{: codeblock}
 
-将以下代码片段复制到 Google Chrome Apps and Extensions 中，以获取客户所预订的标记列表。
-
-```
-  var bmsPush = new BMSPush();
-  bmsPush.retrieveSubscriptions(function(response) 
-	{
-    alert(response.response)
-  })
-```
-	{: codeblock}
 
 ## Google Chrome Apps and Extensions
 {: web-get-tags}
@@ -269,7 +265,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 
 使用以下代码片段可允许设备获取预订、预订某个标记以及取消预订某个标记。
 
-## Android
+## 在 Android 上预订和取消预订标记
 {: android-subscribe-tags}
 
 将以下代码片段复制并粘贴到 Android 移动应用程序中。
@@ -306,19 +302,19 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-## Cordova
+## 在 Cordova 上预订和取消预订标记
 {: cordova-subscribe-tags}
 
 将以下代码片段复制并粘贴到 Cordova 移动应用程序中。
 
 ```
 var tag = "YourTag";
-MFPPush.subscribe(tag, success, failure);
-MFPPush.unsubscribe(tag, success, failure);
+BMSPush.subscribe(tag, success, failure);
+BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Objective-C
+## 在 Objective-C 上预订和取消预订标记
 {: objc-subscribe-tags}
 
 将以下代码片段复制并粘贴到 Objective-C 移动应用程序中。
@@ -356,7 +352,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Swift
+## 在 Swift 上预订和取消预订标记
 {: swift-subscribe-tags}
 
 将以下代码片段复制并粘贴到 Swift 移动应用程序中。
@@ -366,13 +362,15 @@ MFPPush.unsubscribe(tag, success, failure);
 使用 **subscribeToTags** API，可以预订标记。
 
 ```
-push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
-		//error while subscribing to tags
-	} else {
-		//successfully subscribed to tags var subStatus = response.subscribeStatus();
-	}
-}
+push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statusCode, error) -> Void in
+    if error.isEmpty {
+        print("Response when subscribing to tags: \(response?.description)")
+        print("Status code when subscribing to tags: \(statusCode)")
+    } else {
+        print("Error when subscribing to tags: \(error) ")
+        print("Error status code when subscribing to tags: \(statusCode)")
+    }
+})
 ```
 	{: codeblock}
 
@@ -386,8 +384,9 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
         print( "Response during unsubscribed tags : \(response?.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
-    else {
-print( "Error during  unsubscribed tags \(error) ")
+    else 
+	{
+    print( "Error during  unsubscribed tags \(error) ")
         print( "Error during unsubscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
     }
 }
@@ -421,9 +420,6 @@ var tagsArray = ["tag1", "Tag2"]
 {: #using_tags}
 
 基于标记的通知是针对预订了特定标记的所有设备的消息。每个设备都可以预订任意数量的标记。本主题描述了如何发送基于标记的通知。预订通过 {{site.data.keyword.mobilepushshort}} 服务 Bluemix 实例进行维护。删除标记时，与该标记关联的所有信息（包括其订户和设备）都会一并删除。无需对此标记自动取消预订，因为此标记不再存在，因此也不需要从客户机端执行进一步的操作。
-
-###开始之前
-{: before-you-begin}
 
 在**标记**屏幕上创建标记。有关如何创建标记的信息，请参阅[创建标记](t_manage_tags.html)。
 

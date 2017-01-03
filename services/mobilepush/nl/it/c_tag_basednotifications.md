@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Abilitazione di notifiche basate sulle tag
 {: #tag_based_notifications}
-Ultimo aggiornamento: 18 ottobre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
 Le notifiche basate sulle tag sono messaggi destinati a tutti i dispositivi che hanno sottoscritto una specifica tag. 

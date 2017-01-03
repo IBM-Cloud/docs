@@ -12,12 +12,13 @@ copyright:
 
 # Initiation à {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Dernière mise à jour : 02 novembre 2016
+Dernière mise à jour : 6 décembre 2016
 {: .last-updated}
 
 {:shortdesc}
 
-Le service {{site.data.keyword.mobilepushshort}} met à disposition une plateforme unifiée pour l'envoi et la gestion de notifications push mobiles et Web ciblées pour les plateformes mobiles iOS et Android mobiles, pour les navigateurs Web Google Chrome et Mozilla Firefox et pour les applications et extensions Google Chrome. Le service {{site.data.keyword.mobilepushshort}} gère le mappage des utilisateurs d'applications aux appareils, à la plateforme d'appareil et aux navigateurs Web et s'occupe de la répartition des notifications push vers ces derniers. Avec ce service, vous pouvez envoyer des notifications push de diffusion, des notifications push unicast (en fonction de l'ID d'appareil et de l'ID utilisateur), mais également des notifications push basées sur les balises (ou les rubriques) aux utilisateurs d'applications mobiles ou de navigateurs Web. Vous pouvez également utiliser un logiciel SDK et des [API REST](https://mobile.{DomainName}/imfpush/) pour développer davantage vos applications client.
+Le service {{site.data.keyword.mobilepushshort}} offre une plateforme unifiée pour l'envoi et la gestion de notifications push Web et de mobiles
+ciblant iOS, les plateformes Android mobiles, Google Chrome, Mozilla Firefox, les navigateurs Web Safari et les applications et extensions Google Chrome. Le service {{site.data.keyword.mobilepushshort}} gère le mappage des utilisateurs d'applications aux appareils, à la plateforme d'appareil et aux navigateurs Web et s'occupe de la répartition des notifications push vers ces derniers. Avec ce service, vous pouvez envoyer des notifications push de diffusion, des notifications push unicast (en fonction de l'ID d'appareil et de l'ID utilisateur), mais également des notifications push basées sur les balises (ou les rubriques) aux utilisateurs d'applications mobiles ou de navigateurs Web. Vous pouvez également utiliser un logiciel SDK et des [API REST](https://mobile.{DomainName}/imfpush/) pour développer davantage vos applications client.
 
 
 # Liens connexes

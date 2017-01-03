@@ -12,12 +12,12 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}} 入门
 {: #gettingstartedtemplate}
-上次更新时间：2016 年 11 月 2 日
+上次更新时间：2016 年 12 月 6 日
 {: .last-updated}
 
 {:shortdesc}
 
-{{site.data.keyword.mobilepushshort}} 服务提供统一平台来发送和管理针对 iOS 和、Android 移动平台、Google Chrome、Mozilla Firefox Web 浏览器和 Google Chrome Apps and Extensions 的移动和 Web 推送通知。
+{{site.data.keyword.mobilepushshort}} 服务提供统一平台来发送和管理针对 iOS 和、Android 移动平台、Google Chrome、Mozilla Firefox、Safari Web 浏览器和 Google Chrome Apps and Extensions 的移动和 Web 推送通知。
 {{site.data.keyword.mobilepushshort}} 服务可管理应用程序用户到设备的映射、管理设备平台、Web 浏览器以及处理向用户分派推送通知。使用此服务，作为推送通知，向移动和 Web 浏览器应用程序用户发送广播、单点广播（基于 deviceID 和 userID）和标记（或主题）。还可以使用 SDK 和 [REST API](https://mobile.{DomainName}/imfpush/) 来进一步开发您的客户机应用程序。
 
 

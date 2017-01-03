@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Configuración de credenciales para APNs
 {: #create-push-credentials-apns}
-Última actualización: 10 de noviembre de 2016
+Última actualización: 07 de diciembre de 2016
 {: .last-updated}
 
 El servicio de notificaciones push de Apple (APNs) permite a los desarrolladores de aplicaciones enviar
@@ -49,7 +52,7 @@ Al registrar un ID de App, seleccione las opciones siguientes:
 ##Crear un certificado SSL de APN de desarrollo y distribución
 {: #create-push-credentials-apns-ssl}
 
-Para poder obtener un certificado del APN, debe generar en primer lugar una solicitud de firma de certificado (CSR) y enviarla a Apple, la entidad emisora de certificados (CA). La CSR contiene información que identifica a la empresa y a la clave pública y privada que utilice para firmar las notificaciones push de Apple. A continuación, genere el certificado SSL en el Portal de desarrollador de iOS. El certificado, junto con su clave pública y privada, se almacena en el Acceso de cadena de claves.
+Para poder obtener un certificado de APN, debe generar en primer lugar una solicitud de firma de certificado (CSR) y enviarla a Apple, la entidad emisora de certificados (CA). La CSR contiene información que identifica a la empresa y a la clave pública y privada que utilice para firmar las notificaciones push de Apple. A continuación, genere el certificado SSL en el Portal de desarrollador de iOS. El certificado, junto con su clave pública y privada, se almacena en el Acceso de cadena de claves.
 
 <!-- ###Before you begin -->
 <!-- {: before-you-begin-certificate} -->
@@ -99,10 +102,7 @@ Debe obtener certificados independientes para los entornos de desarrollo y de di
 
 El perfil de suministro funciona con el ID de App para determinar qué dispositivos pueden instalar y ejecutar la app y a qué servicios puede acceder la app. Para cada ID de App, cree dos perfiles de suministro: uno para desarrollo y otro para distribución. Xcode utiliza el perfil de suministro de desarrollo para determinar qué desarrolladores están permitidos para crear la aplicación y qué dispositivos están permitidos para probarse en la aplicación.
 
-###Antes de empezar
-{: before-you-begin-provisioning-file}
-
-Asegúrese de que ha registrado un ID de App, de que lo ha habilitado para el Servicio de notificaciones Push y de que lo ha configurado para utilizar un certificado SSL de APN de desarrollo y producción.
+Asegúrese de que ha registrado un ID de App, de que lo ha habilitado para el servicio de {{site.data.keyword.mobilepushshort}} y de que lo ha configurado para utilizar un certificado SSL de APN de desarrollo y producción.
 
 Cree un perfil de suministro de desarrollo, como se indica a continuación:
 
@@ -127,23 +127,18 @@ Utilice el perfil de suministro del almacén para enviar la app para su distribu
 
 Para utilizar el servicio {{site.data.keyword.mobilepushshort}} para enviar notificaciones, cargue los certificados SSL necesarios para el servicio de Notificaciones Push de Apple (APNs). También se puede utilizar la API REST para subir un certificado APN.
 
-
-###Antes de empezar
-{: before-you-begin-dashboard}
-
-
 <!-- Get your development and production APNs SSL certificate and the password associated with each type of certificate. For information, see Creating and configuring push credentials for APNs.-->
 
-Los certificados que son necesarios para APNs son certificados `.p12`, que contienen la clave privada y certificados SSL que son necesarios para crear y publicar la aplicación. Debe generar los certificados desde el Centro de miembros del sitio web Desarrollador de Apple (es necesaria una cuenta válida de desarrollador de Apple). Los certificados independientes son necesarios para el entorno de desarrollo (pruebas) y el entorno de producción (distribución).
+Los certificados necesarios para las APN son los certificados `.p12`. Estos certificados contienen la clave privada y certificados SSL que son necesarios para crear y publicar la aplicación. Debe generar los certificados desde el Centro de miembros del sitio web Desarrollador de Apple (es necesaria una cuenta válida de desarrollador de Apple). Los certificados independientes son necesarios para el entorno de desarrollo (pruebas) y el entorno de producción (distribución).
 
 **Nota**: Después de que el archivo `.cer` se encuentre en el acceso de cadena de claves, expórtelo al sistema para crear un certificado `.p12`.
 
 Para obtener más información sobre la utilización de APN, consulte [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4).
 
-Para configurar APN en el panel de control de servicios de notificación push, siga estos pasos: 
+Para configurar APN en el panel de control de servicios de notificación push, siga estos pasos:
 
-1. Seleccione **Configurar** en el panel de control de servicios de notificación push. 
-2. Elija la opción **Móvil** para actualizar la información del formulario **Credenciales push de APN**. 
+1. Seleccione **Configurar** en el panel de control de servicios de notificación push.
+2. Elija la opción **Móvil** para actualizar la información del formulario **Credenciales push de APN**.
 3. Seleccione **Recinto de seguridad** (desarrollo) o **Producción** (distribución) según convenga y cargue los certificados `p.12` que ha creado en el [paso](#step18) anterior.
   ![Panel de control Establecer notificaciones push](images/wizard.jpg)
 3. En el campo **Contraseña**, especifique la contraseña asociada con el archivo de certificado `.p12` y, a continuación, pulse **Guardar**.

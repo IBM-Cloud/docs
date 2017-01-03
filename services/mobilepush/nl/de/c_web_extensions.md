@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Chrome-Apps und Erweiterungen für den Empfang von {{site.data.keyword.mobilepushshort}} aktivieren
 {: #web_notifications}
-Letzte Aktualisierung: 15. November 2016
+Letzte Aktualisierung: 06. Dezember 2016
 {: .last-updated}
 
 Sie können jetzt Google Chrome-Apps und Erweiterungen für den Empfang von {{site.data.keyword.mobilepushshort}} aktivieren.

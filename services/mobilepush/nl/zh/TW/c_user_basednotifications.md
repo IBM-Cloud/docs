@@ -1,12 +1,18 @@
 ---
+
 copyright:
  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 啟用使用者型通知
 {: #user_based_notifications}
-前次更新：2016 年 10 月 18 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
 使用者 ID 型 {{site.data.keyword.mobilepushshort}} 是以具有自訂訊息的行動應用程式使用者為目標。運用使用者型通知，您可以選擇根據其喜好設定來通知特定個體。

@@ -6,10 +6,12 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 #啟用進階推送通知
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
 配置 iOS 徽章、音效、其他 JSON 有效負載、可採取動作的通知，以及保存通知。
@@ -121,7 +123,7 @@ protected void onPause() {
 
 2. 建立通知種類並設定動作。**UIUserNotificationActionContextDefault** 或 **UIUserNotificationActionContextMinimal** 是有效的環境定義。
 
-   Objective-C
+Objective-C
 
 ```
 	// For Objective-C
@@ -131,7 +133,7 @@ protected void onPause() {
 ```    
 	{: codeblock}
 
-   Swift
+Swift
 
 ```
 	// For Swift
@@ -143,7 +145,7 @@ protected void onPause() {
 
 1. 建立通知設定，並指派先前步驟的種類。
 
-   Objective-C
+Objective-C
 
 ```
 	// For Objective-C
@@ -151,7 +153,7 @@ protected void onPause() {
 ```
 	{: codeblock}
 
-   Swift
+Swift
 
 ```
 	// For Swift
@@ -161,7 +163,7 @@ protected void onPause() {
 
 1. 建立本端或遠端通知，並為其指派種類身分。
 
-   Objective-C
+Objective-C
 
 ```
 	//For Objective-C
@@ -170,7 +172,7 @@ protected void onPause() {
 ```
 	{: codeblock}
 
-   Swift
+Swift
 
 ```
 	//For Swift
@@ -185,7 +187,7 @@ protected void onPause() {
 
 接收到可採取動作的通知時，會根據選擇的 ID，將控制權傳遞給下列方法。
 
-###Objective-C
+Objective-C
 
 ```
 (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
@@ -198,7 +200,7 @@ protected void onPause() {
 ```
 	{: codeblock}
 
-###Swift
+Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

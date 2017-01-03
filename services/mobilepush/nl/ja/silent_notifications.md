@@ -1,13 +1,18 @@
----
+------
 
 copyright:
  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # iOS のサイレント通知の処理
 {: #silent-notifications}
-最終更新日: 2016 年 11 月 10 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
 サイレント通知は、デバイスの画面に表示されません。これらの通知は、アプリケーションがバックグラウンドで受け取ります。その結果、アプリケーションは最大で 30 秒までウェイク状態になり、指定されたバックグラウンド・タスクを実行します。ユーザーは、この通知の着信に気付かない可能性があります。iOS のサイレント通知の送信には、[REST API](https://mobile.{DomainName}/imfpush/) を使用します。   

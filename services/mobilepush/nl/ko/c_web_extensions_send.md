@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Chrome 앱 및 확장기능에 기본 알림 전송 
 {: #web_extensions_notifications}
-마지막 업데이트 날짜: 2016년 11월 15일
+마지막 업데이트 날짜: 2016년 12월 6일
 {: .last-updated}
 
 애플리케이션을 개발한 후에는 푸시 알림을 전송할 수 있습니다.  

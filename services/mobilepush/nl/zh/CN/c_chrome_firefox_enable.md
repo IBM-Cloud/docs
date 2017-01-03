@@ -1,17 +1,21 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # 让 Web 应用程序能够接收 {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-上次更新时间：2016 年 11 月 15 日
+上次更新时间：2016 年 12 月 7 日
 {: .last-updated}
 
-您现在可以支持 Google Chrome 和 Mozilla Firefox Web 应用程序接收 {{site.data.keyword.mobilepushshort}}。
+您可以启用 Google Chrome、Mozilla Firefox 和 Safari Web 应用程序以接收 {{site.data.keyword.mobilepushshort}}。
 
 ## 安装 Web 浏览器客户机 SDK 以支持 {{site.data.keyword.mobilepushshort}} 
 {: #web_install}
@@ -22,7 +26,7 @@ copyright:
 
 要在 Google Chrome Web 应用程序中安装 JavaScript SDK，请完成以下步骤：
 
-从 [Bluemix Web 推送 SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master) 下载 `BMSPushSDK.js`、`BMSPushServiceWorker.js` 和 `manifest_Website.json`。
+从 [Bluemix Web 推送 SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master) 下载 `BMSPushSDK.js`、`BMSPushServiceWorker.js` 和 `manifest_Website.json` 文件。
 
 1. 编辑 `manifest_Website.json` 文件。
 
@@ -80,19 +84,20 @@ copyright:
       "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
    "clientSecret":"clientSecret of your push service"
+   "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
     }
   bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
 
+**注**：如果针对 Web 推送 SDK 更改了您的 FCM 凭证，那么对于 Chrome 浏览器，消息传送可能会失败。请确保调用 `bmsPush.unRegisterDevice` 以避免失败。
+
 ## 注册 Web 应用程序 
 {: #web_register}
 
-使用 `register()` API 向 {{site.data.keyword.mobilepushshort}} 服务注册设备。基于您的浏览器，使用以下任一选项。
+使用 **register()** API 向 {{site.data.keyword.mobilepushshort}} 服务注册设备。基于您的浏览器，使用以下任一选项。
 
 - 对于从 Google Chrome 注册，请在 Bluemix {{site.data.keyword.mobilepushshort}} 服务 Web 配置仪表板中添加 Firebase 云消息传递 (FCM) 和 Google 云消息传递 (GCM) API 密钥和 Web 站点 URL。有关更多信息，请参阅 Chrome 设置下的[为 Google 云消息传递配置凭证](t_push_provider_android.html)。
-
-
 
 - 对于从 Mozilla Firefox 注册，在 Firefox 设置下的 Bluemix {{site.data.keyword.mobilepushshort}} 服务 Web 配置仪表板中添加 Web 站点 URL。
 
@@ -106,6 +111,7 @@ copyright:
       "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
   "clientSecret":"clientSecret of your push service"
+  "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
   }
   bmsPush.initialize(params, callback)
     bmsPush.register(function(response) {

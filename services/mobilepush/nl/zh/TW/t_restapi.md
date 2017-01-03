@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 使用 REST API
 {: #push-api-rest}
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
 您可以對 {{site.data.keyword.mobilepushshort}} 使用 REST（具象狀態傳輸）API（應用程式介面）。也可以使用 SDK 及 [Push API](https://mobile.{DomainName}/imfpush/) 來進一步開發用戶端應用程式。
@@ -19,6 +24,7 @@ copyright:
 - 訊息
 - 訂閱
 - 標籤
+- Webhook
 
 若要取得 REST API 的基本 URL，請完成下列步驟：
 
@@ -43,9 +49,9 @@ copyright:
 ## appSecret 
 {: #push-api-rest-secret}
 
-應用程式連結至 {{site.data.keyword.mobilepushshort}} 時，服務會產生 appSecret（唯一金鑰）並透過回應標頭進行傳遞。如果您使用的是 IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，請使用 REST API 參考資料來取得所需保護之 API 的資訊。如需 REST API 的相關資訊，請參閱「REST API 參考資料」。
+應用程式連結至 {{site.data.keyword.mobilepushshort}} 時，服務會產生 appSecret（唯一金鑰）並透過回應標頭進行傳遞。如果您使用的是 IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，請使用 REST API 參考資料來取得所需保護之 API 的資訊。如需相關資訊，請參閱 [Push REST API](https://mobile.{DomainName}/imfpush/)。
 
-要求標頭必須包含 appSecret。如果沒有，則伺服器會傳回「401 未獲授權」的錯誤碼。將 {{site.data.keyword.mobilepushshort}} 新增至應用程式時，會建立特定的 AppID。在回應中有一個稱為 appSecret 的標頭，它用來建立「標籤」或傳送訊息。作業是透過型錄或樣板中的服務進行。
+要求標頭必須包含 appSecret。如果沒有，則伺服器會傳回「401 未獲授權」的錯誤碼。將 {{site.data.keyword.mobilepushshort}} 新增至應用程式時，會建立特定的 AppID。在回應中有一個稱為 appSecret 的標頭，它用來建立標籤或傳送訊息。作業是透過型錄或樣板中的服務進行。
 
 若要取得 appSecret 值，請執行下列動作：
 
@@ -75,7 +81,7 @@ copyright:
 ##Push REST API 過濾器
 {: #push-api-rest-filters}
 
-過濾器會定義一個搜尋準則，以限制從 {{site.data.keyword.mobilepushshort}} 的 GET API 傳回的資料。請將過濾器套用至您要過濾的 Get 作業結果。過濾器會限制結果中包括的項目數。例如，您可以使用過濾器來搜尋開頭為 "test" 的標籤。 
+過濾器會定義一個搜尋準則，以限制從 {{site.data.keyword.mobilepushshort}} 的 GET API 傳回的資料。請將過濾器套用至您要過濾的 Get 作業結果。過濾器會限制結果中包含的項目數。例如，您可以使用過濾器來搜尋開頭為 "test" 的標籤。 
 
 過濾器可以使用下列語法產生：
 
@@ -83,7 +89,7 @@ copyright:
 
 **operator**：說明要使用的過濾器相符項目的 ==（完全相符）或 =@（包含子字串）。
 
-**expression**：要併入結果中的值。
+**expression**：要包含在結果中的值。
 
 在表示式中顯示逗點及反斜線時，必須使用反斜線跳出。
 

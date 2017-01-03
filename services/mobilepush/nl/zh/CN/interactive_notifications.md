@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 交互式通知
 {: #interactive-notifications}
-上次更新时间：2016 年 10 月 17 日
+上次更新时间：2016 年 12 月 6 日
 {: .last-updated}
 
 交互式通知允许用户在通知到达时进行操作，而无需打开应用程序。当交互式通知到达时，设备会显示通知消息及相应的操作按钮。V8 和更高版本的 iOS 设备上支持交互式通知。如果向版本低于 8 的 iOS 设备发送交互式通知，那么不会显示通知操作。
