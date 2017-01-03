@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 使用 REST API
 {: #push-api-rest}
-上次更新时间：2016 年 10 月 17 日
+上次更新时间：2016 年 12 月 6 日
 {: .last-updated}
 
 您可以将 REST（具象状态传输）API（应用程序编程接口）用于 {{site.data.keyword.mobilepushshort}}。还可以使用 SDK 和 [Push API](https://mobile.{DomainName}/imfpush/) 来进一步开发您的客户机应用程序。
@@ -19,6 +24,7 @@ copyright:
 - 消息
 - 预订
 - 标记
+- Webhook
 
 要获取 REST API 的基本 URL，请完成以下步骤：
 
@@ -43,7 +49,7 @@ copyright:
 ## appSecret 
 {: #push-api-rest-secret}
 
-应用程序绑定到 {{site.data.keyword.mobilepushshort}} 后，该服务会生成一个 appSecret（唯一密钥），并会在响应头中传递该密钥。如果是使用 IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，请参阅 REST API 参考来获取有关需要保护哪些 API 的信息。有关 REST API 的信息，请参阅 REST API 参考。
+应用程序绑定到 {{site.data.keyword.mobilepushshort}} 后，该服务会生成一个 appSecret（唯一密钥），并会在响应头中传递该密钥。如果是使用 IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，请参阅 REST API 参考来获取有关需要保护哪些 API 的信息。有关更多信息，请参阅[推送 REST API](https://mobile.{DomainName}/imfpush/)。
 
 请求头必须包含 appSecret。如果不包含，服务器会返回“401 未授权”错误代码。将 {{site.data.keyword.mobilepushshort}} 添加到应用程序时，会创建特定的 AppID。作为响应的一部分，您会获取名为 appSecret 的头，其用于创建标记或发送消息。通过目录或样板中的服务，可执行该操作。
 

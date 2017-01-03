@@ -9,12 +9,9 @@ lastupdated: "2016-10-19"
 # Mobile Apps aus der {{site.data.keyword.mobilefirstbp}} Starter-Boilerplate erstellen
 {: #try_mobile}
 
-Letzte Aktualisierung: 19. Oktober 2016
-{: .last-updated}
-
 Jeder {{site.data.keyword.Bluemix}} Mobile-Service kann unabhängig verwendet werden. Durch die kombinierte Verwendung mit der {{site.data.keyword.mobilefirstbp}} Starter-Boilerplate können Sie den größten Nutzen erzielen.
 
-Erstellen Sie zu Beginn mit dem {{site.data.keyword.mobilefirstbp}} Starter eine eigene App. Mit der Boilerplate können Sie die folgenden Aktionen durchführen:
+Erstellen Sie zu Beginn mit dem {{site.data.keyword.mobilefirstbp}}-Starter Ihre App. Die Boilerplate ermöglicht Ihnen die Durchführung der folgenden Aktionen:
 
 * Erstellen Sie eine Node.js-Laufzeit mit einer Vorlagenanwendung. Mithilfe dieser Anwendung können Sie serverseitige Funktionen wie REST-konforme APIs und statische Dateien bereitstellen. <!-- You can read more about operating this application in the Developing Mobile Backend section.-->
 * Stellen Sie eine Instanz für jeden der {{site.data.keyword.Bluemix_notm}} Mobile-Services bereit und binden Sie den Service an die Node.js-Anwendung.
@@ -48,11 +45,11 @@ Sie können entweder mithilfe der {{site.data.keyword.Bluemix_notm}} {{site.data
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="Symbol für Service {{site.data.keyword.amashort}}"> <b>{{site.data.keyword.amashort}}</b><br/>Mit dem Service {{site.data.keyword.amafull}} können Sie Node.js- und Java for Liberty-Anwendungen schützen, die in {{site.data.keyword.Bluemix_notm}} gehostet werden. Durch das Instrumentieren Ihrer mobilen App mit dem {{site.data.keyword.amashort}}-SDK kann die Benutzeranmeldung bei Node.js oder bei den mobilen {{site.data.keyword.Bluemix_notm}}-Services erzwungen werden. Zusätzlich zur Bereitstellung von Sicherheitsfunktionen erfasst {{site.data.keyword.amashort}} auch Analysedaten, mit denen Sie die Leistung Ihrer mobilen Anwendung überwachen sowie Clientprotokolle und Nutzungsstatistiken erfassen können. </td>
-<td valign="top"><b>Benutzeridentitätsanbieter</b> <br/>Sie können die folgenden Identitätsanbieter verwenden: <ul><li>Facebook</li><li>Google</li></ul></td>
+<td><img src="images/authentication_icon.png" alt="Symbol für Service {{site.data.keyword.amashort}}"> <b>{{site.data.keyword.amashort}}</b><br/>Mit dem Service {{site.data.keyword.amafull}} können Sie Node.js- und Java for Liberty-Anwendungen schützen, die in {{site.data.keyword.Bluemix_notm}} gehostet werden. Durch das Instrumentieren Ihrer mobilen App mit dem {{site.data.keyword.amashort}}-SDK kann die Benutzeranmeldung bei Node.js oder bei den mobilen {{site.data.keyword.Bluemix_notm}}-Services erzwungen werden. <!-- In addition to security capabilities, {{site.data.keyword.amashort}} also gathers analytics data, so that you can monitor your mobile application performance and collect client logs and usage statistics.--> </td>
+<td valign="top"><b>Benutzeridentitätsanbieter</b> <br/>Sie können die folgenden Identitätsanbieter verwenden: <ul><li>Facebook</li><li>Google</li><li> Angepasst </li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Symbol für Service 'Push Notifications'"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>Der {{site.data.keyword.mobilepushfull}}-Service bietet eine einheitliche Plattform zum Senden und Verwalten von Push-Benachrichtigungen mit (iOS- & Android-) Plattformen und Web-Browser-Anwendungen als Ziel. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu ihren Geräten, zur Geräteplattform und zu den Browsern und führt das Senden von Push-Benachrichtigungen an Subskribenten aus. Mit diesem Service können Sie Rundsendungen, Unicasts (auf der Basis von Benutzer-ID und Geräte-ID) sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an Ihre Kunden senden.</td>
+<td><img src="images/push_icon.png" alt="Symbol für Service 'Push Notifications'"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>Der {{site.data.keyword.mobilepushfull}}-Service bietet eine einheitliche Plattform zum Senden und Verwalten von Push-Benachrichtigungen mit (iOS- & Android-) Plattformen und Web-Browser-Anwendungen als Ziel. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu ihren Geräten, zur Geräteplattform und zu den Browsern und führt das Senden von Push-Benachrichtigungen an Subskribenten aus. Mit diesem Service können Sie Rundsendungen, Unicasts (auf der Basis von Benutzer-ID und Geräte-ID) sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an Ihre Kunden senden.</td>
 <td valign="top"><b>Push-Serviceanbieter</b><ul><li>Apple Push Notifications Service</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
@@ -13,10 +13,7 @@ lastupdated: "2016-10-13"
 # 使用 UI 入门模板创建项目
 {: #projects_ui}
 
-上次更新时间：2016 年 10 月 13 日
-{: .last-updated}
-
-您可以使用 {{site.data.keyword.Bluemix}} Mobile 仪表板中的“UI 入门模板”，在 {{site.data.keyword.Bluemix_notm}} 环境中创建项目。此过程不适用于使用“代码入门模板”的项目。请参阅[使用代码入门模板创建项目](projects_code.html)，以获取适用于“代码入门模板”的指示信息。
+您可以使用 {{site.data.keyword.Bluemix}} Mobile 仪表板中的 [UI 入门模板](starters.html#UI_Starter)，在 {{site.data.keyword.Bluemix_notm}} 环境中创建项目。此过程不适用于使用“代码入门模板”的项目。请参阅[使用代码入门模板创建项目](projects_code.html)，以获取适用于“代码入门模板”的指示信息。
 {:shortdesc}
 
 完成以下步骤，以使用“UI 入门模板”创建项目：
@@ -39,7 +36,7 @@ lastupdated: "2016-10-13"
 	
 2. 在**项目概述**屏幕上进行选择。**项目概述**屏幕显示项目的相关信息，以及您可以添加到项目的可选功能，如 Push Notifications。  
 
-	1. 可选：选择**添加**以向项目添加其中一个所列功能。编辑服务的**服务名称**，然后单击**创建**。
+	1. 可选：选择**添加**以向项目添加其中一个所列功能。编辑服务的**服务名称**，然后单击**创建**。当您向项目添加服务时，会链接到该服务的 {{site.data.keyword.Bluemix_notm}} 页面。通过提供服务所需的信息来配置该服务。
 	
 	2. 可选：针对您要添加到项目中的任何其他功能，重复步骤 *a*。 
 
@@ -47,7 +44,9 @@ lastupdated: "2016-10-13"
 
    注：由于“代码入门模板”没有可定制的用户界面，因此无法使用*设计*选项卡。
 
-    1. 在导航菜单中选择 **UI 构建器**，以定制应用程序的设计。<!--Most of the design screens have sections that begin with a navigation on the left of the screen, and the sections more specific as it moves to the right side preview of your app. Note: Not all design screens in the starters have the same sections.--> 
+    1. 在导航菜单中选择 **UI 构建器**，以定制应用程序的设计。 
+	
+		**提示：**要查看“UI 构建器”的快速概述，请在选择“UI 构建器”后，在导航中选择**显示如何工作**。 
 	
 	2. 从**屏幕**选项卡中定制应用程序布局。
 	

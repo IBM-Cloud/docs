@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-17"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -18,8 +18,6 @@ copyright:
 
 # Environment properties and resources
 {: #deliverypipeline_environment}
-Last updated: 29 April 2016
-{: .last-updated}
 
 You can use environment properties and pre-installed resources to interact with the IBM&reg; Bluemix&reg; {{site.data.keyword.deliverypipeline}} service. For example, you might use them in a job script or test command.
 {:shortdesc}
@@ -111,7 +109,7 @@ Several runtimes, tools, and Node modules are pre-installed in every pipeline.
 |IBM Node |node |/opt/IBM/node |
 |IBM Rational Team Concert&trade; SCM Tools |RTC-SCM-Tools |/opt/IBM/RTC-SCM-Tools |
 
-64-bit versions of IBM Node 0.10.40, 0.12.7, and 4.2.2 are available in the pipeline environment. To choose a version, use the export command.
+64-bit versions of IBM Node 0.10, 0.10.48, 0.12, 0.12.17, 4.2, 4.4.5, 4.6.0, 6.2.2, and 6.7.0 are available in the pipeline environment. To choose a version, use the export command.
 
 For example, to use Node 0.12.7, enter this command:
 `export PATH=/opt/IBM/node-v0.12/bin:$PATH`

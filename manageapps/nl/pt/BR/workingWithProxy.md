@@ -16,7 +16,7 @@ copyright:
 {: .last-updated}
 
 Em alguns ambientes como [Bluemix
-Dedicado](../../dedicated/index.html#dedicated) e [Bluemix Local](../../local/index.html#local), um proxy
+Dedicated](/docs/dedicated/index.html#dedicated) e [Bluemix Local](/docs/local/index.html#local), um proxy
 pode ser configurado que afeta o comportamento de seu aplicativo durante preparação e
 tempo de execução.
 
@@ -47,8 +47,8 @@ ambiente.
 ## aplicativos Java
 {: #java_apps}
 
-Para [Liberty for Java](../runtimes/liberty/index.html) e os
-aplicativos [java_buildpack](../runtimes/tomcat/index.html), as
+Para [Liberty for Java](/docs/runtimes/liberty/index.html) e os
+aplicativos [java_buildpack](/docs/runtimes/tomcat/index.html), as
 configurações de proxy podem ser passadas ao tempo de execução por meio da variável de
 ambiente **JAVA_OPTS**.  Por exemplo, é possível emitir o comando: 
 ```
@@ -65,5 +65,5 @@ e proxies Java](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxi
 {: #rellinks}
 ## gerais
 {: #general}
-* [Liberty for Java](../runtimes/liberty/index.html)
-* [SDK for Nodejs](../runtimes/nodejs/index.html)
+* [Liberty for Java](/docs/runtimes/liberty/index.html)
+* [SDK for Nodejs](/docs/runtimes/nodejs/index.html)

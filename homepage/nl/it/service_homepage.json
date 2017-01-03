@@ -7,40 +7,34 @@
     "id": "cfApp",
     "title": "Applicazioni Cloud Foundry",
     "href": "cfapps/index.html",
-    "category_id": "calcola"
+    "category_id": "compute"
   }, {
     "title": "Runtime",
     "href": "cfapps/runtimes.html",
-    "category_id": "calcola"
+    "category_id": "compute"
   }, {
     "title": "Contenitori tipo",
     "href": "cfapps/boilerplates.html",
-    "category_id": "calcola"
+    "category_id": "compute"
   }, {
-    "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
-    "category_id": "calcola"
+    "category_id": "compute"
   }, {
-    "id": "contenitore",
-    "title": "IBM Containers",
+    "id": "container",
+    "title": "Servizio IBM Bluemix Container",
     "href": "containers/container_index.html",
-    "category_id": "calcola"
+    "category_id": "compute"
   }, {
     "id": "vm",
     "title": "Server virtuali IBM",
     "href": "virtualmachines/vm_index.html",
-    "category_id": "calcola"
+    "category_id": "compute"
   }, {
     "type": "extra",
     "title": "Prova a lavorare con i dati",
     "href": "services/WorkWithData/index.html",
-    "category_id": "dati"
-  }, {
-    "type": "extra",
-    "title": "Prova i toolchain",
-    "href": "toolchains/toolchains_overview.html",
-    "category_id": "devops"
+    "category_id": "data"
   }, {
     "type": "extra",
     "title": "Prova Dedicated GitHub Enterprise",
@@ -48,7 +42,7 @@
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Prova il dashboard Bluemix Mobile",
+    "title": "Prova la creazione di progetti mobili",
     "href": "mobile/index.html",
     "category_id": "mobile"
   }]

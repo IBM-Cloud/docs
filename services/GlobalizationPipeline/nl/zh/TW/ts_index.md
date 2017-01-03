@@ -11,13 +11,13 @@ copyright:
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.GlobalizationPipeline_full}} 疑難排解
+# {{site.data.keyword.GlobalizationPipeline_short}} 疑難排解
 {: #globalizationpipelinets}
 
-*前次更新：2016 年 6 月 27 日*
+*前次更新：2016 年 8 月 30 日*
 {: .last-updated}
 
-以下是 {{site.data.keyword.GlobalizationPipeline_full}} 常見使用問題的一些回答。
+以下是 {{site.data.keyword.GlobalizationPipeline_short}} 常見使用問題的一些回答。
 {:shortdesc}
 
 
@@ -47,7 +47,7 @@ copyright:
 將資源檔新增至新的翻譯軟體組或更新要翻譯的現有資源檔時，我接收到錯誤。
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}} 只接受下列類型的資源檔：Java™ .properties、JSON 和 AMD I18N。
+{{site.data.keyword.GlobalizationPipeline_short}} 只接受下列類型的資源檔：Java™ .properties、JSON 和 AMD I18N。
 {: tsCauses}
 
 請確定正在上傳的資源檔為下列其中一種類型。
@@ -67,7 +67,7 @@ copyright:
 將資源檔新增或更新至翻譯專案時，因為檔案的某個部分太大，所以發生錯誤。
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}} 只能接受符合特定大小需求的資源檔。
+{{site.data.keyword.GlobalizationPipeline_short}} 只能接受符合特定大小需求的資源檔。
 {: tsCauses}
 
 請確定資源檔符合下列準則：
@@ -77,22 +77,6 @@ copyright:
 * 每一個翻譯專案最多可以包含 500 個鍵值組。
 * 資源檔不可以超過 2 MB。
 
-
-
-## 非英文資源檔未適當地翻譯成其他語言
-{: #problem4}
-
-未適當地翻譯非英文來源的資源檔。
-{:shortdesc}
-
-將來源不是英文的資源檔上傳至翻譯軟體組時，產生的翻譯不正確。
-{: tsSymptoms}
-
-{{site.data.keyword.GlobalizationPipeline_full}} 目前僅支援以英文作為來源語言。
-{: tsCauses}
-
-尚未支援非英文資源檔的翻譯。
-{: tsResolve}
 
 
 
@@ -108,5 +92,5 @@ copyright:
 機器翻譯引擎的設計是使用自然語言，而且不一定可辨識或知道如何處理程式設計語言所使用的特定語法。因此，混合使用純文字之語法的處理可能會不同。
 {: tsCauses}
 
-{{site.data.keyword.GlobalizationPipeline_full}} 目前可辨識常用來代表變數的型樣 "{}"，而且將保留其內所含內容的原始格式。
+{{site.data.keyword.GlobalizationPipeline_short}} 目前可辨識常用來代表變數的型樣 "{}"，而且將保留其內所含內容的原始格式。
 {: tsResolve}

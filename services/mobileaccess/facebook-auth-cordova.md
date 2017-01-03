@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-06"
+lastupdated: "2016-12-18"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -28,7 +29,7 @@ You must have:
 * Your application route. This is the URL of your back-end application.
 * Your `tenantId` value. Open your {{site.data.keyword.amashort}} service dashboard. Click **Mobile Options**. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need these values for intializing the SDK and for sending requests to the back-end service.
 *  Find the region where your {{site.data.keyword.Bluemix_notm}} service is hosted. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar. The region value should be one of the following: **US South**, **Sydney**, or **UK**. The exact SDK constant values that correspond to these names are indicated in the code examples.
-* A Facebook App ID. For more information, see [Obtaining a Facebook App ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* A Facebook application and App ID. For more information, see [Obtaining a Facebook App ID from the Facebook Developer Portal](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
 
@@ -41,7 +42,7 @@ The steps that are required to configure the Android platform of a Cordova appli
 * [Configuring MCA for Facebook authentication](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-mca). This configures your {{site.data.keyword.amashort}} service on the {{site.data.keyword.Bluemix}} server for Android Facebook authentication.
 
 
-### Configuring {{site.data.keyword.amashort}} Facebook client SDK for Android
+### Configuring {{site.data.keyword.amashort}} Facebook client SDK for the Android platform
 {: #configure_android}
 
 The {{site.data.keyword.amashort}} Facebook client SDK must be added by Gradle within your native Android app project.
@@ -58,6 +59,7 @@ The {{site.data.keyword.amashort}} Facebook client SDK must be added by Gradle w
 			// other dependencies  
 	}
 	```
+	{: codeblock}
 
 2. Click **Tools > Android > Sync Project with Gradle Files** to synchronize your project with Gradle.
 
@@ -71,6 +73,7 @@ The {{site.data.keyword.amashort}} Facebook client SDK must be added by Gradle w
 		<string name="facebook_app_id">"<facebook_app_id>"</string>
 	</resources>
 	```
+	{: codeblock}
 
 4. In the `AndroidManifest.xml` file of your Android project (`android/manifests/AndroidManifest.xml`):
 
@@ -86,6 +89,7 @@ The {{site.data.keyword.amashort}} Facebook client SDK must be added by Gradle w
     <activity ...../>
     </application>
     ```
+    {: codeblock}
 
    * Add a Facebook Activity element under your existing activities:
 
@@ -101,6 +105,7 @@ The {{site.data.keyword.amashort}} Facebook client SDK must be added by Gradle w
         />
     </application>
     ```
+    {: codeblock}
 
 5. Add the following to your Activity Java code.
 
@@ -112,6 +117,7 @@ The {{site.data.keyword.amashort}} Facebook client SDK must be added by Gradle w
 	      .onActivityResultCalled(requestCode, resultCode, data);
 	}
 	```
+	{: codeblock}
 
 ### Initialize the Authorization Manager in your native Android code
 {: #initialize_android}
@@ -124,12 +130,13 @@ MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.create
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListener(this);
 ```
+{: codeblock}
 
 
 ## Configuring the iOS platform
 {: #facebook-auth-cordova-ios}
 
-The steps required to configure iOS Platform of Cordova application for Facebook authentication integration are similar to the steps required for native iOS Swift applications. The major difference is that currently Cordova CLI does not support the CocoaPods dependency manager. You must manually add files that are required for integrating the {{site.data.keyword.amashort}} client with Facebook authentication. For more information, see [Enabling Facebook authentication for iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html). Complete the following steps:
+The steps required to configure iOS Platform of Cordova application for Facebook authentication integration are similar to the steps required for native iOS Swift applications (header files are needed for using Objective-C code with the Swift SDK). The major difference is that currently Cordova CLI does not support the CocoaPods dependency manager. You must manually add files that are required for integrating the {{site.data.keyword.amashort}} client with Facebook authentication. For more information, see [Enabling Facebook authentication for iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html). Complete the following steps:
 
 * [Configuring your Facebook application for the iOS Platform](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config). This sets up the Facebook authentication service on the Facebook Developers site.
 * [Configuring MCA for Facebook authentication](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca). This configures your {{site.data.keyword.amashort}} service on the {{site.data.keyword.Bluemix}} server.
@@ -177,6 +184,7 @@ The Authorization Manager must be initialized in the native Objective-C code in 
 	}
 
 ```
+{: codeblock}
 
 **Note:** The imported header file name is composed of your module name concatenated to the string `-Swift.h`, for example, if your module name is `Cordova` then the import line would be `#import "Cordova-Swift.h"` To find the module name go to
 `Build Settings` > `Packaging` > `Product Module Name`.
@@ -192,6 +200,7 @@ For all platforms, use the following JavaScript code in your Cordova Javascript 
 ```javascript
 BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
 Replace `<applicationBluemixRegion>` with your region (see [Before you begin](#facebook-auth-before)).
 
@@ -222,6 +231,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 	var request = new BMSRequest("<applicationRoute}/protected>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 
 1. Run your application. A Facebook login screen pops up:
 

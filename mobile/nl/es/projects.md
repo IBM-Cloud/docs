@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
@@ -13,13 +13,8 @@ lastupdated: "2016-10-13"
 # Proyectos
 {: #projects}
 
-Última actualización: 13 de octubre de 2016
-{: .last-updated}
+El panel de control de {{site.data.keyword.Bluemix}} Mobile combina la interfaz de usuario, los datos y los servicios de la aplicación en un *proyecto* completo. Al crear un proyecto, se mantienen todas las partes necesarias de la aplicación y las prestaciones añadidas en el servidor de {{site.data.keyword.Bluemix_notm}}. Puede descargar el código de la aplicación tras completar el proyecto, y los ID necesarios para habilitar las prestaciones y los datos ya se han añadido a las ubicaciones requeridas en el código. Para ver todos los proyectos, seleccione *Proyectos* en la navegación de Mobile.  
 
-El panel de control de {{site.data.keyword.Bluemix}} Mobile combina la interfaz de usuario, los datos y los servicios de la aplicación en un *proyecto* completo. Al crear un proyecto, se mantienen todas las partes necesarias de la aplicación y las prestaciones añadidas en el servidor de {{site.data.keyword.Bluemix_notm}}. Puede descargar el código de la aplicación tras completar el proyecto, y los ID necesarios para habilitar las prestaciones y los datos ya se han añadido a las ubicaciones requeridas en el código.
+Para ver más información sobre un determinado proyecto, selecciónelo en la página Proyectos. Se abrirá la página Visión general del proyecto, que incluye los servicios configurados y disponibles para el proyecto. Los servicios son prestaciones independientes que amplían la aplicación añadiendo una función. Debido a que se añaden individualmente, puede añadir los servicios que necesite, como los servicios push u otros. Cuando añade un servicio al proyecto en la página Visión general del proyecto y sigue las instrucciones para configurarlo, se asocia automáticamente a la app.
 
-Al crear el proyecto, puede añadir servicios al mismo. Los servicios son prestaciones independientes que amplían la aplicación añadiendo una función.  Debido a que se añaden individualmente, sólo puede añadir los servicios que necesite, como los servicios push u otros. Para añadir servicios, siga las instrucciones para configurar el servicio y, a continuación, enlácelo al proyecto cuando cree este último.
-
-Si está iniciando con un Iniciador de IU, continúe con [Creación de un proyecto con un Iniciador de IU](projects_ui.html).
-
-Si está iniciando con un Iniciador de código, continúe con [Creación de un proyecto con un Iniciador de código](projects_code.html).
+Inmediatamente después de crear el proyecto, debe seleccionar un iniciador para el mismo.  Para obtener más información sobre iniciadores, consulte [Iniciadores](starters.html).

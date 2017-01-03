@@ -1,13 +1,18 @@
-﻿---
+---
 
 copyright:
  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Utilisation des API REST
 {: #push-api-rest}
-Dernière mise à jour : 17 octobre 2016
+Dernière mise à jour : 6 décembre 2016
 {: .last-updated}
 
 Vous pouvez utiliser une interface de programmation d'application REST (Representational State Transfer) pour {{site.data.keyword.mobilepushshort}}. Vous pouvez aussi utiliser le logiciel SDK et les [API Push](https://mobile.{DomainName}/imfpush/) pour développer davantage vos applications client.
@@ -19,6 +24,7 @@ Avec l'API REST Push, les applications serveur de back end et les clients peuven
 - Messages
 - Abonnements
 - Balises
+- Webhooks
 
 Pour obtenir l'URL de base pour l'API REST, procédez comme suit :
 
@@ -30,7 +36,8 @@ Il vous est aussi possible d'utiliser la ligne de commande pour obtenir les donn
 
 ```
     cf create-service-key {push_instance_name} {key_name}
-    cf service-key {push_instance_name} {key_name}
+
+ cf service-key {push_instance_name} {key_name}
 ```
 	{: codeblock}
 
@@ -42,9 +49,9 @@ L'en-tête "Accept-Language" spécifie la langue à utiliser pour les messages d
 ## Valeur confidentielle d'application 
 {: #push-api-rest-secret}
 
-Quand une application est liée à {{site.data.keyword.mobilepushshort}}, le service génère une valeur confidentielle appSecret (clé unique) et la transmet dans l'en-tête de réponse. Si vous utilisez l'API REST IBM {{site.data.keyword.mobilepushshort}} for Bluemix, servez-vous de la référence de l'API REST pour savoir quelles sont les API que vous devez sécuriser. Pour obtenir des informations sur l'API REST, voir la référence de l'API REST.
+Quand une application est liée à {{site.data.keyword.mobilepushshort}}, le service génère une valeur confidentielle appSecret (clé unique) et la transmet dans l'en-tête de réponse. Si vous utilisez l'API REST IBM {{site.data.keyword.mobilepushshort}} for Bluemix, servez-vous de la référence de l'API REST pour savoir quelles sont les API que vous devez sécuriser. Pour plus d'informations, reportez-vous à l'[API REST Push](https://mobile.{DomainName}/imfpush/).
 
-L'en-tête de demande doit contenir la valeur appSecret. Si tel n'est pas le cas, le serveur renvoie le code d'erreur 401 Unauthorized. Quand {{site.data.keyword.mobilepushshort}} est ajouté à une application, un ID d'application spécifique est créé. Dans le cadre de la réponse, vous obtenez un en-tête appelé appSecret (valeur confidentielle d'application) qui est utilisé pour créer des balises ou envoyer des messages. L'opération est effectuée via des services dans le catalogue ou le conteneur boilerplate.
+L'en-tête de demande doit contenir la valeur appSecret. Si tel n'est pas le cas, le serveur renvoie le code d'erreur 401 Unauthorized. Quand {{site.data.keyword.mobilepushshort}} est ajouté à une application, un ID d'application spécifique est créé. Dans le cadre de la réponse, vous obtenez un en-tête intitulé appSecret (valeur confidentielle d'application) qui est utilisé pour créer des balises ou envoyer des messages. L'opération est effectuée via des services dans le catalogue ou le conteneur boilerplate.
 
 Pour obtenir la valeur appSecret :
 
@@ -55,7 +62,7 @@ L'écran **Afficher les données d'identification** affiche des informations sur
 ```
 	{
     "imfpush_Dev": [
-    {
+   {
      "name": "testapp1",
      "label": "imfpush_Dev",
      "plan": "Basic",
@@ -93,7 +100,7 @@ Si vous utilisez plusieurs filtres, vous pouvez les combiner avec la logique AND
 - Pour la logique AND et OR : une requête simple peut comporter les deux logiques, AND et OR. Chaque filtre est évalué individuellement avant que les filtres ne soient combinés dans une expression AND.
 
 Pour l'API GET d'appareil, les combinaisons suivantes sont prises en charge :
-- Le nom est la zone de plateforme.
+-Le nom est la zone de plateforme.
 - Sauf pour platform, l'opérateur peut être == ou =@
 - Pour platform, l'opérateur doit être ==. Si l'opérateur =@ est utilisé, la valeur peut être une sous-chaîne.
 - Si l'opérateur == est utilisé, la valeur doit être une chaîne qui correspond exactement.
@@ -104,8 +111,7 @@ Pour l'API GET d'abonnement, les combinaisons suivantes sont prises en charge :
 - Sauf pour platform, l'opérateur peut être == ou =@
 - Pour platform, l'opérateur doit être ==
 - Si l'opérateur =@ est utilisé, la valeur peut être une sous-chaîne. Si l'opérateur == est utilisé, la valeur doit être une chaîne qui correspond exactement.
-
-Pour l'API GET de balise, les combinaisons suivantes sont prises en charge :
+- Pour l'API GET d'étiquette, les combinaisons suivantes sont prises en charge :
 - Le nom peut être l'une des zones suivantes : “name” ou “description”
 - Si l'opérateur =@ est utilisé, la valeur peut être une sous-chaîne.
 - Si l'opérateur == est utilisé, la valeur doit être une chaîne qui correspond exactement.

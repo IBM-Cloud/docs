@@ -2,14 +2,17 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-2"
+
 ---
+
+{:codeblock:.codeblock}
 
 # 사용자 정의 ID 제공자로 사용자 인증
 {: #custom-id}
 
 
-{{site.data.keyword.amafull}} 서비스를 사용하고 신임 정보 수집 및 유효성 검증을 위한 자체 로직을 구현하는 사용자 정의 ID 제공자를 작성하십시오. 사용자 정의 ID 제공자는 RESTful 인터페이스를 표시하는 웹 애플리케이션입니다. 사내 구축형 또는 {{site.data.keyword.Bluemix}}에서 사용자 정의 ID 제공자를 호스팅할 수 있습니다. 유일한 요구사항은 {{site.data.keyword.amashort}} 서비스와 통신할 수 있도록 사용자 정의 ID 제공자를 공용 인터넷에서 액세스할 수 있어야 합니다. 
+{{site.data.keyword.amafull}} 서비스를 사용하고 신임 정보 수집 및 유효성 검증을 위한 자체 로직을 구현하는 사용자 정의 ID 제공자를 작성하십시오. 사용자 정의 ID 제공자는 RESTful 인터페이스를 표시하는 웹 애플리케이션입니다. 온프레미스 또는 {{site.data.keyword.Bluemix}}에서 사용자 정의 ID 제공자를 호스팅할 수 있습니다. 유일한 요구사항은 {{site.data.keyword.amashort}} 서비스와 통신할 수 있도록 사용자 정의 ID 제공자를 공용 인터넷에서 액세스할 수 있어야 합니다. 
 
 ## {{site.data.keyword.amashort}} 사용자 정의 ID 요청 플로우
 {: #custom-id-ovr}
@@ -41,10 +44,7 @@ lastupdated: "2016-10-02"
 {{site.data.keyword.amashort}} 웹 애플리케이션 요청 플로우는 모바일 클라이언트 플로우와 유사합니다. 그러나 {{site.data.keyword.amashort}}는 {{site.data.keyword.Bluemix_notm}} 백엔드 리소스 대신 웹 애플리케이션을 보호합니다. 
 
   * 초기 요청은 웹 애플리케이션에서 전송합니다(예: 로그인 양식에서).
-  * 최종 경로는 백엔드 보호 리소스보다 웹 애플리케이션 자체의 보호 영역으로 재지정됩니다. 
-
-
-
+  * 최종 경로는 백엔드 보호 리소스가 아니라 웹 애플리케이션 자체의 보호 영역으로 재지정됩니다. 
 
 ## 사용자 정의 ID 제공자 이해
 {: #custom-id-about}
@@ -67,6 +67,7 @@ lastupdated: "2016-10-02"
 		}
 	}
 	```
+	{: codeblock}
 
 1. 여러 단계 및 여러 양식 인증을 포함하여 클라이언트에서 사용자 정의 신임 정보 콜렉션 플로우를 구현하십시오. 사용자 정의 인증 확인과 마찬가지로, 사용자 정의 인증 확인 응답의 구조를 디자인해야 합니다. 
 
@@ -79,6 +80,8 @@ lastupdated: "2016-10-02"
 		pincode:"1234"
 	}
 	```
+	{: codeblock}
+	
 1. 제공된 인증 확인 응답의 유효성을 검증하는 사용자 정의 로직을 구현하십시오. 
 
 1. 필요한 사용자 정의 특성이 포함된 사용자 정의 사용자 ID 오브젝트를 정의하십시오. 다음은 인증 성공 후에 클라이언트에서 확보한 사용자 정의 사용자 ID 오브젝트의 예입니다. 
@@ -94,6 +97,7 @@ lastupdated: "2016-10-02"
 		}
 	}
 	```
+	{: codeblock}
 
 ### 사용자 정의 ID 제공자의 샘플 구현
 {: #custom-sample}

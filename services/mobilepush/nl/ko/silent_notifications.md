@@ -1,13 +1,18 @@
----
+------
 
 copyright:
  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # iOS의 자동 알림 처리
 {: #silent-notifications}
-마지막 업데이트 날짜: 2016년 10월 17일
+마지막 업데이트 날짜: 2016년 12월 6일
 {: .last-updated}
 
 자동 알림은 디바이스 화면에 표시되지 않습니다. 이러한 알림은 애플리케이션에서 백그라운드로 수신되며 애플리케이션이 최대 30초 동안 특정 백그라운드 작업을 수행하도록 지시합니다. 사용자는 알림 도착을 인식하지 못할 수 있습니다. iOS를 위한 자동 알림을 전송하려면 [REST API](https://mobile.{DomainName}/imfpush/)를 사용하십시오.    

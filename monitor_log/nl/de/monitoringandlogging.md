@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-17"
 
 ---
 
@@ -11,11 +12,9 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Überwachung und Protokollierung
+#Überwachung und Protokollierung mit Cloud Foundry
 {: #monitoringandlogging}
 
-Letzte Aktualisierung: 2. September 2016
-{: .last-updated}
 
 Indem Sie Ihre Apps überwachen und Protokolle überprüfen, können Sie die Anwendungsausführung und den Datenfluss verfolgen, um Ihre Bereitstellung besser zu verstehen. Darüber hinaus können Sie die Zeit und den Aufwand für das Auffinden und Beheben von Problemen reduzieren.
 {:shortdesc}
@@ -25,7 +24,7 @@ Bei {{site.data.keyword.Bluemix}}-Anwendungen kann es sich um weit verteilte Anw
 ##Cloud Foundry-Apps für Überwachung und Protokollierung
 {: #monitoring_logging_bluemix_apps}
 
-{{site.data.keyword.Bluemix_notm}} hat einen integrierten Protokolliermechanismus, um Protokolldateien für Ihre Apps zu erstellen, während sie ausgeführt werden. In den Protokollen können Sie die Fehler, Warnungen und Informationsnachrichten sehen, die für Ihre Apps erzeugt werden. Sie können Ihre App auch so konfigurieren, dass Protokollnachrichten in die Protokolldatei geschrieben werden. Weitere Informationen zu Protokollformaten und zur Anzeige von Protokollen finden Sie unter [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden](#logging_for_bluemix_apps).
+{{site.data.keyword.Bluemix_notm}} hat einen integrierten Protokolliermechanismus, um Protokolldateien für Ihre Apps zu erstellen, während sie ausgeführt werden. In den Protokollen können Sie die Fehler, Warnungen und Informationsnachrichten sehen, die für Ihre App erzeugt werden. Sie können Ihre App auch so konfigurieren, dass Protokollnachrichten in die Protokolldatei geschrieben werden. Weitere Informationen zu Protokollformaten und zur Anzeige von Protokollen finden Sie unter [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden](#logging_for_bluemix_apps).
 
 Durch die Überwachung Ihrer App können Sie Ihre App-Bereitstellung anzeigen und steuern. Mithilfe der Überwachung können Sie die folgenden Tasks ausführen:
 
@@ -38,11 +37,11 @@ Für einen stabilen Betrieb Ihrer Bereitstellungen auf der {{site.data.keyword.B
 ###Überwachung von Apps, die in Cloud Foundry ausgeführt werden
 {: #monitoring_bluemix_apps}
 
-Wenn Sie die Cloud Foundry-Infrastruktur verwenden, um Ihre Apps in {{site.data.keyword.Bluemix_notm}} auszuführen, möchten Sie über aktuelle Leistungsdaten wie den allgemeinen Status, die Ressourcennutzung und Datenverkehrsmetriken auf dem Laufenden bleiben. Anhand dieser Leistungsdaten können Sie Entscheidungen treffen oder entsprechende Maßnahmen ergreifen.
+Wenn Sie die Cloud Foundry-Infrastruktur verwenden, um Ihre Apps in {{site.data.keyword.Bluemix_notm}} auszuführen, möchten Sie über die Verfügbarkeit und Leistung Ihrer Anwendung auf dem Laufenden bleiben und das unabhängig davon, ob es sich um eine webbasierte Anwendung handelt, die anhand eines Browsers angezeigt wird, oder aber um eine Gruppe von APIs, zu denen mobile Anwendungen eine Verbindung herstellen. Verwenden Sie [Bluemix Availability Monitoring](https://console.ng.bluemix.net/catalog/services/availability-monitoring){:new_window}, um Ihre Anwendung von fünfzehn unterschiedlichen Orten weltweit überwachen zu können.
 
-Setzen Sie zur Überwachung von {{site.data.keyword.Bluemix_notm}}-Apps eine der folgenden Methoden ein:
+Setzen Sie zur Überwachung der Ressourcennutzungsmetriken für Ihre {{site.data.keyword.Bluemix_notm}}-Apps eine der folgenden Methoden ein:
 
-* {{site.data.keyword.Bluemix_notm}}-Services. 'Monitoring and Analytics' ist ein Service, mit dem Sie Ihre Anwendungsleistung überwachen können. Zusätzlich stellt dieser Service Analysefunktionen wie eine Protokollanalyse bereit. Weitere Informationen finden Sie unter [Monitoring and Analytics](../services/monana/index.html).
+* Bluemix Monitoring and Analytics bietet einen Service, den Sie zur Überwachung von Ressourcen und zum Abrufen von Diagnosedaten von Ihrer Node-, Liberty- oder Ruby-basierten Anwendung einsetzen können. Weitere Informationen finden Sie unter [Monitoring and Analytics](/docs/services/monana/index.html).
 * Optionen von Drittanbietern. Beispiel: [New Relic](http://newrelic.com/){:new_window}.
 
 ###Protokollierung für Apps, die in Cloud Foundry ausgeführt werden
@@ -50,17 +49,15 @@ Setzen Sie zur Überwachung von {{site.data.keyword.Bluemix_notm}}-Apps eine der
 
 Protokolldateien werden automatisch erstellt, wenn Sie die Cloud Foundry-Infrastruktur verwenden, um Ihre Apps in {{site.data.keyword.Bluemix_notm}} auszuführen. Wenn in einer der Phasen von der Entwicklung bis zur Laufzeit Fehler auftreten, können Sie die Protokolle auf Hinweise prüfen, die Ihnen bei der Lösung des Problems möglicherweise helfen.
 
-###Protokollspeicherung
-{: #log_retention}
-
-* In den Bluemix Cloud Foundry-Apps werden die Protokolldaten standardmäßig 30 Tage lang gespeichert.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
 
 
-###Protokollformat
+###Protokollformat und -aufbewahrungsdauer
 {: #log_format}
+
+In den {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry-Apps werden die Protokolldaten standardmäßig 7 Tage lang gespeichert.
 
 Protokolle für {{site.data.keyword.Bluemix_notm}}-Anwendungen werden in einem festen Format angezeigt, ähnlich dem folgenden Muster:
 
@@ -130,15 +127,15 @@ Jeder Protokolleintrag enthält vier Felder. In der folgenden Liste finden Sie e
 
 Sie können die Protokolle für Ihre Cloud Foundry-Apps an drei Positionen anzeigen:
 
-  * [{{site.data.keyword.Bluemix_notm}}-Dashboard](#viewing_logs_UI){:new_window}
-  * [Befehlszeilenschnittstelle](#viewing_logs_cli){:new_window}
-  * [Externe Protokollhosts](#thirdparty_logging){:new_window}
+  * {{site.data.keyword.Bluemix_notm}}-Dashboard
+  * Befehlszeilenschnittstelle
+  * Externe Protokollhosts
 
 #### Protokolle im {{site.data.keyword.Bluemix_notm}}-Dashboard anzeigen
 {: #viewing_logs_UI}
 
 Führen Sie die folgenden Schritte aus, um die Bereitstellungs- oder Laufzeitprotokolle anzuzeigen:
-1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und klicken Sie dann auf die Kachel für Ihre App auf dem Dashboard. Die Seite mit den Anwendungsdetails wird angezeigt.
+1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und klicken Sie dann auf die Kachel für Ihre App. Daraufhin wird die Detailseite der App angezeigt. 
 2. Klicken Sie in der Navigationsleiste auf **Protokolle**.
 
 In der Konsole für **Protokolle** können Sie die kürzlich generierten Protokolle für Ihre App oder Protokollendabschnitte in Echtzeit anzeigen. Darüber hinaus können Sie Protokolle nach Protokolltyp und Kanal filtern.
@@ -162,8 +159,7 @@ Wählen Sie eine der folgenden Optionen zum Anzeigen von Protokollen über die B
 <dt><strong>cf logs <var class="keyword varname">App-Name</var></strong></dt>
 <dd>Zeigt Protokolle an, die in dem Moment generiert werden, in dem Sie diesen Befehl eingeben.</dd>
 </dl>
-<div class="note tip"><span class="tiptitle">Tipp:</span> Wenn Sie den Befehl <span class="keyword cmdname">cf push</span> oder <span class="keyword cmdname">cf
-start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="ph codeph">cf logs App-Name --recent</samp> in einem anderen Befehlszeilenfenster eingeben, um die Protokolle in Echtzeit anzuzeigen. </div>
+<div class="note tip"><span class="tiptitle">Tipp:</span> Wenn Sie den Befehl <span class="keyword cmdname">cf push</span> oder <span class="keyword cmdname">cf start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="ph codeph">cf logs App-Name --recent</samp> in einem anderen Befehlszeilenfenster eingeben, um die Protokolle in Echtzeit anzuzeigen. </div>
 </li>
 
 <li>Protokolle anzeigen, nachdem die Apps bereitgestellt wurden.
@@ -191,9 +187,15 @@ start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="
 </li></ul>
 
 
-**Hinweis:** Informationen zur Aktivierung der Anwendungsprotokollierung finden Sie unter [Laufzeitfehler beheben](../debug/index.html#debugging-runtime-errors).
+**Hinweis:** Informationen zur Aktivierung der Anwendungsprotokollierung finden Sie unter [Laufzeitfehler beheben](/docs/debug/index.html#debugging-runtime-errors).
 
+#### Protokolle in externen Hosts anzeigen
+{: #viewing_logs_external}
 
+	 
+Wenn Protokolle generiert werden, können Sie nach einer kurzen Verzögerung Nachrichten in Ihrem externen Protokollhost anzeigen, die den Nachrichten ähnlich sind, die Sie über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder über die Befehlszeilenschnittstelle 'cf' anzeigen.  Wenn Sie über mehrere Instanzen Ihrer App verfügen, werden die Protokolle zusammengefasst und Sie können alle Protokolle für Ihre App anzeigen. Darüber hinaus werden die Protokolle über App-Abstürze und App-Bereitstellungen hinweg gespeichert. 
+
+**Hinweis:** Protokolle, die Sie über die Befehlszeilenschnittstelle anzeigen, haben nicht das Syslog-Format und stimmen daher möglicherweise nicht genau mit den Nachrichten überein, die in Ihren externen Protokollhost angezeigt werden. 
 
 
 ###Protokolle filtern
@@ -282,16 +284,8 @@ Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer App und dem Syst
 	 
 	 Der Name der vom Benutzer bereitgestellten Serviceinstanz.
 	 
-  4. Führen Sie ein erneutes Staging für die App durch. 
-     Geben Sie `cf restage appname` ein, damit die Änderungen wirksam werden. 
+  4. Führen Sie für die App ein erneutes Staging durch. Geben Sie `cf restage appname` ein, damit die Änderungen wirksam werden.  
 
-#### Protokolle in externen Hosts anzeigen
-{: #viewing_logs_external}
-
-	 
-Wenn Protokolle generiert werden, können Sie nach einer kurzen Verzögerung Nachrichten in Ihrem externen Protokollhost anzeigen, die den Nachrichten ähnlich sind, die Sie über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder über die Befehlszeilenschnittstelle 'cf' anzeigen.  Wenn Sie mehrere Instanzen Ihrer App haben, werden die Protokolle zusammengefasst und Sie können alle Protokolle für Ihre App anzeigen. Darüber hinaus werden die Protokolle über App-Abstürze und App-Bereitstellungen hinweg gespeichert.
-
-**Hinweis:** Protokolle, die Sie über die Befehlszeilenschnittstelle anzeigen, haben nicht das Syslog-Format und stimmen daher möglicherweise nicht genau mit den Nachrichten überein, die in Ihren externen Protokollhost angezeigt werden. 
 
 ### Beispiel: Streaming von Cloud Foundry-Anwendungsprotokollen in Splunk 
 {: #splunk}
@@ -388,8 +382,51 @@ Jane testet die App und gibt dann die folgende Abfragezeichenfolge in die Splunk
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-In der Splunk-Webschnittstelle wird ein Protokolldatenstrom angezeigt. Obwohl nur Splunk Light installiert wurde, kann eine Protokollmenge von 500 MB pro Tag gespeichert werden. 
+In der Splunk-Webschnittstelle wird ein Protokolldatenstrom angezeigt. Obwohl nur Splunk Light installiert wurde, kann eine Protokollmenge von 500 MB pro Tag gespeichert werden.  
+
+## Protokollierung für Cloud Foundry-Apps in
+{{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}}
+{: #hybrid_apps_logs_ov}
 
 
+In {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}} werden Cloud Foundry-Apps mit integrierter Protokollierung bereitgestellt. Die Daten, die aus Ihren Apps erfasst werden, können Sie in der {{site.data.keyword.Bluemix_notm}}-Konsole prüfen.
+{:shortdesc}
+
+Cloud Foundry-Apps verwenden Cloud Foundry Loggregator, um Protokolle außerhalb der App zu überwachen und weiterzuleiten. Innerhalb der App müssen keine Agenten installiert werden.
+
+### Hardwarevoraussetzungen
+
+
+| **Voraussetzung** |    **1 Knoten**     | **3 Knoten für Hochverfügbarkeit** |
+|-----------------|-------------------|-------------------|
+| vCPU | 19 | 57 |
+| Hauptspeicher | 80 GB | 240 GB |
+| Lokaler Speicher | 2,98 TB | 8,94 TB |
+{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
+
+### Konfiguration
+
+In {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}} sind Protokolle standardmäßig für alle Apps aktiv. Informationen zum Lesen der Standardprotokolle finden Sie unter [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden](#logging_for_bluemix_apps). In Umgebungen mit {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}} kann darüber hinaus eine erweiterte Protokollierung aktiviert werden.
+
+* Zum Aktivieren der erweiterten Protokollierung in Ihrer {{site.data.keyword.Bluemix_dedicated_notm}}- und {{site.data.keyword.Bluemix_local_notm}}-Umgebung führen Sie die Schritte im Abschnitt [Protokolle anzeigen](#hybrid_apps_logs_dash) aus. Falls die Schaltfläche **Erweiterte Ansicht** nicht angezeigt wird, ist diese Funktion nicht aktiviert.
+
+* Die Schritte, mit denen Sie die erweiterte Protokollierung zu Ihrer Umgebung hinzufügen, sind in der Dokumentation für [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) bzw. [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) beschrieben. 
+
+### Protokollspeicherung
+
+In {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}} werden Protokolldaten für Cloud Foundry-Apps standardmäßig 30 Tage gespeichert.
+
+## Protokolle für Cloud Foundry-Apps in {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}} anzeigen
+{: #hybrid_apps_logs_dash}
+
+Für die Apps, die Sie unter {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}} ausführen, können Sie Protokolle prüfen.
+{:shortdesc}
+
+Führen Sie die folgenden Schritte aus, um die Protokolle für Ihre Apps anzuzeigen.
+1. Wählen Sie eine aktive App aus.
+2. Klicken Sie auf **Protokolle**. In der Ansicht **Protokolle** können Sie die Protokolle für Ihre aktive App einsehen.
+4. Klicken Sie auf die Schaltfläche **Erweiterte Ansicht**. Die **erweiterte Ansicht** zeigt mehr Details der Protokolle und verwendet hierzu Kibana, ein Visualisierungstool, das mithilfe von Protokollen und Daten mit Zeitmarken angepasste Visualisierungen erstellt. Weitere Informationen zur Verwendung der erweiterten Ansicht enthält die Dokumentation für [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+
+Als nächstes können Sie ein Kibana-Dashboard anpassen. Weitere Informationen finden Sie unter [Anzeige von Protokollen in einem Kibana-Dashboard anpassen](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom).
 
 

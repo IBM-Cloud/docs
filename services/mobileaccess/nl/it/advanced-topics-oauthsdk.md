@@ -2,8 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-02"
+
 ---
+
+{:codeblock:.codeblock}
 
 # Comunicazione tra le applicazioni e i servizi di backend
 {: #backend-comm}
@@ -20,6 +23,7 @@ Su una riga di comando, apri la directory dell'applicazione Node.js ed esegui qu
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## Utilizzo del modulo bms-mca-oauth-sdk
 {: #using-sdk}
@@ -42,7 +46,7 @@ var options = {
 	// In alternativa, puoi ottenere i valori di questa proprietà facendo clic su Visualizza credenziali
 	// sul tile del servizio {{site.data.keyword.amashort}} nel tuo dashboard dell'applicazione {{site.data.keyword.Bluemix_notm}}
 
-	appId: "appId",				// applicationGUID Bleumix, noto anche come tenantId
+	appId: "tenantID",				// a.k.a. Bluemix applicationGUID
 	clientId: "clientId",			
 	secret: "secret",
 	serverUrl: "serverUrl"
@@ -60,3 +64,4 @@ oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 });
 
 ```
+{: codeblock}

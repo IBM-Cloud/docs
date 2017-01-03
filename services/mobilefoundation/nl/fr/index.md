@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated:  "2016-08-31"
+lastupdated:  "2016-11-16"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated:  "2016-08-31"
 
 # Initiation à {{site.data.keyword.mobilefoundation_short}}
 {: #gettingstartedtemplate}
-
-<!--Last updated: 31 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_long}} accélère la
 configuration d'un environnement {{site.data.keyword.mfp_full}} qui
@@ -98,6 +96,10 @@ Configuration**. Pour plus d'informations, voir
 configuration avancée](c_using_mfs_p2.html#using_mfs_advanced_p2).
 
 Accédez à la page [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/) pour vous initier à {{site.data.keyword.mobilefoundation_short}}.
+
+##  Limitations connues
+
+* L'interface utilisateur du service {{site.data.keyword.mobilefoundation_short}} n'utilise pas le modèle spécifique à l'environnement local sélectionné par l'utilisateur pour l'affichage des nombres.
 
 
 # Liens connexes

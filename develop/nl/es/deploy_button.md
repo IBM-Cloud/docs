@@ -101,12 +101,12 @@ Specified Git branch:
 Default master branch:
 </p>
 <pre class="codeblock">
-[![Desplegar en Bluemix](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
+[&excl;[Desplegar en Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
 </pre>
 <p>Specified Git branch:
 </p>
 <pre class="codeblock">
-[![Desplegar en Bluemix](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;)(https://bluemix.net/deploy/button.png)]
+[&excl;[Desplegar en Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
 </pre>
 </li>
 </ul>
@@ -141,7 +141,7 @@ Revise estas consideraciones del repositorio del proyecto que utilizará en el b
 En el archivo de manifiesto puede especificar: 
     <ul>
     <li>Un nombre de app exclusivo.</li>  
-    <li>Servicios declarados: una extensión de manifiesto que crea o busca los servicios necesarios u opcionales que deben configurarse previsiblemente antes de desplegar la app, como por ejemplo un servicio de caché de datos. Encontrará una lista de los servicios, etiquetas y planes seleccionables de {{site.data.keyword.Bluemix_notm}}; para ello, utilice la interfaz de línea de mandatos CF de <a href="https://github.com/cloudfoundry/cli/releases"></a> para ejecutar el mandato <code>cf marketplace</code> o vaya al <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">catálogo de {{site.data.keyword.Bluemix_notm}}</a>.
+    <li>Servicios declarados: una extensión de manifiesto que crea o busca los servicios necesarios u opcionales que deben configurarse previsiblemente antes de desplegar la app, como por ejemplo un servicio de caché de datos. Encontrará una lista de los servicios, etiquetas y planes seleccionables de {{site.data.keyword.Bluemix_notm}}; para ello, utilice la interfaz de línea de mandatos CF de <a href="https://github.com/cloudfoundry/cli/releases"></a> para ejecutar el mandato <code>cf marketplace</code> o vaya al <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">catálogo de {{site.data.keyword.Bluemix_notm}}</a>. 
     
     <strong>Nota:</strong> Los servicios declarados son una extensión de IBM del formato de manifiesto estándar de Cloud Foundry. Es posible que se vaya revisando dicha extensión en posteriores releases a medida que se desarrolle y mejore la característica.
 	
@@ -198,7 +198,7 @@ En el archivo de manifiesto puede especificar:
 <li>En el directorio raíz del proyecto, cree un directorio <code>.bluemix</code>.</li>
 <li>Suba el archivo <code>pipeline.yml</code> al repositorio <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Si está desarrollando una app en un contenedor utilizando <strong>IBM Containers</strong>, debe incluir Dockerfile en el directorio raíz del repositorio y, en un directorio <code>.bluemix</code>, incluya un archivo <code>pipeline.yml</code>.
+	<li>Si está desarrollando una app en un contenedor utilizando <strong>IBM Containers</strong>, debe incluir Dockerfile en el directorio raíz del repositorio y, en un directorio <code>.bluemix</code>, incluya un archivo <code>pipeline.yml</code>. 
 	<ul>
 	    <li> Para obtener más información sobre cómo crear Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">consulte la documentación de Docker</a>. </li>
 	    <li>Puede crear un archivo <code>pipeline.yml</code> manualmente o puede generar uno a partir de un proyecto existente de DevOps Services. Para crear un <code>pipeline.yml</code> manualmente que sea específicamente para contenedores, <a href="https://github.com/Puquios/" target="_blank">consulte los ejemplos en GitHub</a>. </li>

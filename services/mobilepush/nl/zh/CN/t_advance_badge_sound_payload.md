@@ -6,10 +6,12 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 #启用高级推送通知
-上次更新时间：2016 年 10 月 17 日
+上次更新时间：2016 年 12 月 6 日
 {: .last-updated}
 
 配置 iOS 角标、声音、其他 JSON 有效内容、可操作通知和暂停通知。
@@ -185,7 +187,7 @@ Swift
 
 收到可操作通知时，会根据所选择的标识将控制权传递到以下方法上。
 
-###Objective-C
+Objective-C
 
 ```
 (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
@@ -198,7 +200,7 @@ Swift
 ```
 	{: codeblock}
 
-###Swift
+Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

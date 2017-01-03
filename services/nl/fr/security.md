@@ -1,22 +1,21 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 
 # Sécurité
 {: #security}
 
-*Dernière mise à jour : 9 décembre 2015*
-
 Ces services de sécurité permettent de protéger l'accès aux applications ainsi qu'aux
 charges de travail, et de rechercher les vulnérabilités dans les applications. Vous pouvez également imbriquer des contrôles de sécurité dans les services
-de gestion des données et big data. 
+de gestion des données et big data.
 {:shortdesc}
 
 

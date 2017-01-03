@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,16 +13,14 @@ copyright:
 
 # node.js의 오프라인 모드
 {: #offline_mode}
-마지막 업데이트 날짜: 2016년 7월 20일
-{: .last-updated}
 
 node.js 애플리케이션이 {{site.data.keyword.Bluemix}}에 푸시될 때 SDK for Node.js 빌드팩은
 일반적으로 NPM의 노드 모듈 등 외부 리소스에서 아티팩트를 다운로드합니다. 일부
-상황(예: [Bluemix 데디케이티드](../../dedicated/index.html#dedicated) 및
-[Bluemix 로컬](../../local/index.html#local) 포함)에서,
+상황(예: [Bluemix 데디케이티드](/docs/dedicated/index.html#dedicated) 및
+[Bluemix 로컬](/docs/local/index.html#local) 포함)에서,
 Bluemix의 외부에 있는 액세스 사이트를 신뢰하지 않거나 이를 더 명시적으로 제어할 수도 있습니다.  
 
-다음은 node.js 빌드팩이 액세스할 수 있는 외부 사이트입니다. [Bluemix 데디케이티드](../../dedicated/index.html#dedicated) 및 [Bluemix 로컬](../../local/index.html#local) Bluemix 환경에서 이러한 사이트는 *화이트리스트에 나열*되어 있어야 할 수 있습니다.
+다음은 node.js 빌드팩이 액세스할 수 있는 외부 사이트입니다. [Bluemix 데디케이티드](/docs/dedicated/index.html#dedicated) 및 [Bluemix 로컬](/docs/local/index.html#local) Bluemix 환경에서 이러한 사이트는 *화이트리스트에 나열*되어 있어야 할 수 있습니다.
 
 * 다음은 사용 가능한 노드 엔진 버전을 확인하는 데 사용될 수 있습니다. http://nodejs.org/
 * 다음은 빌드팩에 포함되지 않은 노드 엔진 버전을 검색하는 데 사용됩니다. https://s3pository.heroku.com
@@ -52,11 +51,11 @@ https://registry.npmjs.org 여기에 액세스할 필요성을 제거하기 위�
 ## 프록시 작업
 {: #working_with_proxy}
 
-[Bluemix 데디케이티드](../../dedicated/index.html#dedicated) 및 [Bluemix 로컬](../../local/index.html#local) 등의 일부 환경에서 프록시를 구성할 수 있습니다. 자세한 내용은 [프록시 작업](../../manageapps/workingWithProxy.html)을 참조하십시오.
+[Bluemix 데디케이티드](/docs/dedicated/index.html#dedicated) 및 [Bluemix 로컬](/docs/local/index.html#local) 등의 일부 환경에서 프록시를 구성할 수 있습니다. 자세한 내용은 [프록시 작업](/docs/manageapps/workingWithProxy.html)을 참조하십시오.
 
 # 관련 링크
 {: #rellinks}
 ## 일반
 {: #general}
-* [Node.js 빌드팩의 최신 업데이트](../../runtimes/nodejs/updates.html)
+* [Node.js 빌드팩의 최신 업데이트](/docs/runtimes/nodejs/updates.html)
 * [Node.js](https://nodejs.org)

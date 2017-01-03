@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-27"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}}-Systemdetails
 {: #openwhisk_reference}
-Letzte Aktualisierung: 9. September 2016
-{: .last-updated}
+
 
 Die folgenden Abschnitte enthalten weitere Details zum {{site.data.keyword.openwhisk}}-System.
 {: shortdesc}
@@ -109,7 +104,7 @@ Das Ergebnis wird im Feld `status` des Aktivierungsdatensatzes wie im folgenden 
 
 Jeder Aufruf, der erfolgreich empfangen wurde und der dem Benutzer möglicherweise in Rechnung gestellt wird, erhält schließlich einen Aktivierungsdatensatz.
 
-Beachten Sie, dass bei einem *Entwicklerfehler der Aktion* die Aktion teilweise ausgeführt wurde und extern sichtbare Nebeneffekte generiert hat. Es liegt in der Verantwortung des Benutzers, zu prüfen, ob solche Nebeneffekte auftreten, und bei Bedarf eine Retry-Logik auszugeben. Bestimmte *interne Bearbeitungsfehler* zeigen an, dass die Ausführung einer Aktion begonnen wurde, aber das System fehlgeschlagen ist, bevor der Aktionsabschluss registriert wurde.
+Beachten Sie, dass bei einem *Entwicklerfehler der Aktion* die Aktion teilweise ausgeführt wurde und extern sichtbare Nebeneffekte generiert hat.   Es liegt in der Verantwortung des Benutzers, zu prüfen, ob solche Nebeneffekte auftreten, und bei Bedarf eine Retry-Logik auszugeben.   Bestimmte *interne Bearbeitungsfehler* zeigen an, dass die Ausführung einer Aktion begonnen wurde, aber das System fehlgeschlagen ist, bevor der Aktionsabschluss registriert wurde.
 
 ## Aktivierungsdatensatz
 {: #openwhisk_ref_activation}
@@ -134,7 +129,7 @@ Ein Aktivierungsdatensatz enthält die folgenden Felder:
 ### Funktionsprototyp
 {: #openwhisk_ref_javascript_fnproto}
 
-{{site.data.keyword.openwhisk_short}}-JavaScript-Aktionen werden in einer Node.js-Laufzeit (gegenwärtig Version 6.2.0) ausgeführt.
+{{site.data.keyword.openwhisk_short}}-JavaScript-Aktionen werden in einer Node.js-Laufzeit ausgeführt.
 
 Aktionen, die in JavaScript geschrieben sind, müssen auf eine einzige Datei beschränkt werden. Die Datei kann mehrere Funktionen enthalten, jedoch muss konventionsgemäß eine Funktion mit dem Namen `main` vorhanden sein, die aufgerufen wird, wenn die Aktion aufgerufen wird. Das folgende Beispiel zeigt eine Aktion mit mehreren Funktionen.
 
@@ -275,7 +270,7 @@ Die Funktion `whisk.trigger()` aktiviert einen Auslöser und gibt für die resul
 - *apiKey*: Der Berechtigungsschlüssel, mit dem der Auslöser aktiviert wird. Standardwert: `whisk.getAuthKey()`.
 
 `whisk.trigger()` gibt einen Promise zurück. Wenn das OpenWhisk-System auf den Abschluss des Auslösers warten soll, sollten Sie diesen Promise von der Funktion `main` Ihrer Aktion zurückgeben.
-- Wenn der Auslöser fehlschlägt, wird der Promise mit einem Objekt abgelehnt, das den Fehler beschreibt. 
+- Wenn der Auslöser fehlschlägt, wird der Promise mit einem Objekt abgelehnt, das den Fehler beschreibt.
 - Wenn der Auslöser erfolgreich ist, wird der Promise mit einem Wörterbuch mit dem Feld `activationId`, das die Aktivierungs-ID enthält, aufgelöst.
 
 Die Funktion `whisk.getAuthKey()` gibt den Berechtigungsschlüssel zurück, unter dem die Aktion ausgeführt wird. In der Regel müssen Sie diese Funktion nicht direkt aufrufen, weil sie implizit von den Funktionen `whisk.invoke()` und `whisk.trigger()` aufgerufen wird.
@@ -283,59 +278,67 @@ Die Funktion `whisk.getAuthKey()` gibt den Berechtigungsschlüssel zurück, unte
 ### JavaScript-Laufzeitumgebungen
 {: #openwhisk_ref_javascript_environments}
 
-JavaScript-Aktionen werden standardmäßig in einer Node.js Version 6.2.0-Umgebung ausgeführt.  Die 6.2.0-Umgebung wird außerdem für eine Aktion verwendet, wenn das Flag `--kind` bei der Erstellung oder Aktualisierung der Aktion explizit mit dem Wert 'nodejs:6' angegeben wird.
-In der Node.js Version 6.2.0-Umgebung können die folgenden Pakete verwendet werden:
+JavaScript-Aktionen werden standardmäßig in einer Node.js Version 6.9.1-Umgebung ausgeführt. Die 6.9.1-Umgebung wird außerdem für eine Aktion verwendet, wenn das Flag `--kind` bei der Erstellung oder Aktualisierung der Aktion explizit mit dem Wert 'nodejs:6' angegeben wird.
+In der Node.js Version 6.9.1-Umgebung können die folgenden Pakete verwendet werden:
 
-- apn v1.7.5
-- async v1.5.2
-- body-parser v1.15.1
+- apn v2.1.2
+- async v2.1.4
 - btoa v1.1.2
-- cheerio v0.20.0
-- cloudant v1.4.1
+- cheerio v0.22.0
+- cloudant v1.6.2
 - commander v2.9.0
-- consul v0.25.0
-- cookie-parser v1.4.2
+- consul v0.27.0
+- cookie-parser v1.4.3
 - cradle v0.7.1
-- errorhandler v1.4.3
-- express v4.13.4
-- express-session v1.12.1
-- gm v1.22.0
-- log4js v0.6.36
-- iconv-lite v0.4.13
+- errorhandler v1.5.0
+- glob v7.1.1
+- gm v1.23.0
+- lodash v4.17.2
+- log4js v0.6.38
+- iconv-lite v0.4.15
+- marked v0.3.6
 - merge v1.2.0
-- moment v2.13.0
-- mustache v2.2.1
+- moment v2.17.0
+- mongodb v2.2.11
+- mustache v2.3.0
 - nano v6.2.0
 - node-uuid v1.4.7
-- nodemailer v2.5.0
+- nodemailer v2.6.4
 - oauth2-server v2.4.1
-- pkgcloud v1.3.0
-- process v0.11.3
-- pug v2.0.0
-- request v2.72.0
-- rimraf v2.5.2
-- semver v5.1.0
-- sendgrid v3.0.11
-- serve-favicon v2.3.0
-- socket.io v1.4.6
-- socket.io-client v1.4.6
-- superagent v1.8.3
+- pkgcloud v1.4.0
+- process v0.11.9
+- pug v2.0.0-beta6
+- redis v2.6.3
+- request v2.79.0
+- request-promise v4.1.1
+- rimraf v2.5.4
+- semver v5.3.0
+- sendgrid v4.7.1
+- serve-favicon v2.3.2
+- socket.io v1.6.0
+- socket.io-client v1.6.0
+- superagent v3.0.0
 - swagger-tools v0.10.1
-- tmp v0.0.28
-- twilio v2.9.1
-- watson-developer-cloud v1.12.4
+- tmp v0.0.31
+- twilio v2.11.1
+- underscore v1.8.3
+- uuid v3.0.0
+- validator v6.1.0
+- watson-developer-cloud v2.9.0
 - when v3.7.7
-- ws v1.1.0
-- xml2js v0.4.16
+- winston v2.3.0
+- ws v1.1.1
+- xml2js v0.4.17
 - xmlhttprequest v1.8.0
-- yauzl v2.4.2
+- yauzl v2.7.0
 
-Die Node.js Version 0.12.14-Umgebung wird für eine Aktion verwendet, wenn das Flag `--kind` bei der Erstellung oder Aktualisierung der Aktion explizit mit dem Wert 'nodejs' angegeben wird.
-In der Node.js Version 0.12.14-Umgebung können die folgenden Pakete verwendet werden:
+Die Node.js Version 0.12.17-Umgebung wird für eine Aktion verwendet, wenn das Flag `--kind` bei der Erstellung oder Aktualisierung der Aktion explizit mit dem Wert 'nodejs' angegeben wird.
+In der Node.js Version 0.12.17-Umgebung können die folgenden Pakete verwendet werden:
+
+**Hinweis**: Node.js Version 0.12.x ist veraltet. Führen Sie eine Migration aller Node.js-Aktionen durch, sodass Node.js Version 6.x verwendet wird.
 
 - apn v1.7.4
 - async v1.5.2
-- body-parser v1.12.0
 - btoa v1.1.2
 - cheerio v0.20.0
 - cloudant v1.4.1
@@ -344,11 +347,9 @@ In der Node.js Version 0.12.14-Umgebung können die folgenden Pakete verwendet w
 - cookie-parser v1.3.4
 - cradle v0.6.7
 - errorhandler v1.3.5
-- express v4.12.2
-- express-session v1.11.1
 - gm v1.20.0
 - jade v1.9.2
-- log4js v0.6.25
+- log4js v0.6.38
 - merge v1.2.0
 - moment v2.8.1
 - mustache v2.1.3
@@ -356,7 +357,7 @@ In der Node.js Version 0.12.14-Umgebung können die folgenden Pakete verwendet w
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
 - process v0.11.0
-- request v2.60.0
+- request v2.79.0
 - rimraf v2.5.1
 - semver v4.3.6
 - serve-favicon v2.2.0
@@ -430,14 +431,14 @@ Alle Funktionen im System stehen über eine REST-API zur Verfügung. Es gibt Sam
 
 Die Sammlungsendpunkte lauten wie folgt:
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
 
-The `openwhisk.{DomainName}` ist der OpenWhisk-API-Hostname (z. B. openwhisk.ng.bluemix.net, 172.17.0.1 usw.).
+``openwhisk.``<span class="keyword" data-hd-keyref="DomainName">DomainName</span>` ist der OpenWhisk-API-Hostname (z. B. openwhisk.ng.bluemix.net, 172.17.0.1 usw.).
 
 Für `{namespace}` kann das Zeichen `_` zum Angeben des *Standardnamensbereichs* (d.h. einer E-Mail-Adresse) verwendet werden.
 
@@ -445,16 +446,17 @@ Sie können eine GET-Anforderung für die Sammlungsendpunkte ausführen, um eine
 
 Für jeden Entitätstyp gibt es Entitätsendpunkte:
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
+
 
 Die Endpunkte für Namensbereiche und Aktivierungen unterstützen nur GET-Anforderungen. Die Endpunkte für Aktionen, Auslöser, Regeln und Pakete unterstützen GET-, PUT- und DELETE-Anforderungen. Die Endpunkte für Aktionen, Auslöser und Regeln unterstützen auch POST-Anforderungen, die zum Aufrufen von Aktionen und Auslösern sowie zum Aktivieren und Inaktivieren von Regeln verwendet werden. Weitere Details hierzu finden Sie in der [API-Referenz](https://new-console.{DomainName}/apidocs/98).
 
-Alle APIs sind mit der HTTP-Basisauthentifizierung geschützt. Die durch einen Doppelpunkt voneinander getrennten Basic-Berechtigungsnachweise zur Authentifizierung befinden sich in der Eigenschaft `AUTH` in der `~/.wskprops`-Datei. Sie finden diese Berechtigungsnachweise auch in den [Konfigurationsschritten der Befehlszeilenschnittstelle (CLI)](../README.md#setup-cli).
+Alle APIs sind mit der HTTP-Basisauthentifizierung geschützt. Die durch einen Doppelpunkt voneinander getrennten Basic-Berechtigungsnachweise zur Authentifizierung befinden sich in der Eigenschaft `AUTH` in der `~/.wskprops`-Datei. Sie finden diese Berechtigungsnachweise auch in den [Konfigurationsschritten der Befehlszeilenschnittstelle (CLI)](./index.html#openwhisk_start_configure_cli).
 
 Das folgende Beispiel zeigt, wie Sie mit dem Befehl 'cURL' eine Liste aller Pakete im Namensbereich `whisk.system` abrufen können:
 
@@ -497,11 +499,10 @@ Von der OpenWhisk-API werden Anforderung/Antwort-Aufrufe von Web-Clients unterst
 | Zeitlimit | Ein Container darf nicht länger als N Millisekunden aktiv sein. | pro Aktion |  Millisekunden | 60000 |
 | Speicher | Ein Container darf nicht mehr als N MB Speicher zuordnen. | pro Aktion | MB | 256 |
 | Protokolle | Ein Container darf nicht mehr als N MB in die Standardausgabe schreiben. | pro Aktion | MB | 10 |
-| Gleichzeitig | Pro Namensbereich sind nicht mehr als N gleichzeitige Aufrufe zulässig. | pro Namensbereich | Anzahl | 100 |
-| Minutenrate | Ein Benutzer kann nicht mehr als diese Anzahl Aktionen pro Minute aufrufen. | pro Benutzer | Anzahl | 120 |
-| Stundenrate | Ein Benutzer kann nicht mehr als diese Anzahl Aktionen pro Stunde aufrufen. | pro Benutzer | Anzahl | 3600 |
+| Gleichzeitig | Pro Namensbereich sind nicht mehr als N aktuell ausgeführte oder in die Warteschlange für die Ausführung gestellte Aktivierungen zulässig. | pro Namensbereich | Anzahl | 1000 |
+| Minutenrate | Ein Benutzer kann nicht mehr als diese Anzahl Aktionen pro Minute aufrufen. | pro Benutzer | Anzahl | 5000 |
 | Codegröße | Die maximale Größe des Aktionscodes. | nicht konfigurierbar, Limit pro Aktion | MB | 48 |
-| Parameter | Die maximale Größe der Parameter, die zugeordnet werden können. | nicht konfigurierbar, Limit pro Aktion/Paket/Auslöser | MB | 1 |
+| Parameter | Die maximale Größe der Parameter, die angehängt werden können. | nicht konfigurierbar, Limit pro Aktion/Paket/Auslöser | MB | 1 |
 
 ### Zeitlimit pro Aktion (ms) (Standardwert: 60s)
 {: #openwhisk_syslimits_timeout}
@@ -530,15 +531,15 @@ Von der OpenWhisk-API werden Anforderung/Antwort-Aufrufe von Web-Clients unterst
 {: #openwhisk_syslimits_activationsize}
 * Die maximale POST-Inhaltsgröße plus alle umgewandelten Parameter für einen Aktionsaufruf oder eine Auslöseraktivierung ist 1 MB.
 
-### Gleichzeitige Aufrufe pro Namensbereich (Standardwert: 100)
+### Gleichzeitige Aufrufe pro Namensbereich (Standardwert: 1000)
 {: #openwhisk_syslimits_concur}
-* Die Anzahl der Aktivierungen, die für einen Namensbereich gleichzeitig verarbeitet werden, kann 100 nicht überschreiten.
+* Die Anzahl der Aktivierungen, die für einen Namensbereich entweder ausgeführt oder in die Warteschlange für die Ausführung gestellt werden, kann 1000 nicht überschreiten.
 * Die Standardbegrenzung kann von Whisk in Consul-KV-Store statisch konfiguriert werden.
 * Ein Benutzer hat gegenwärtig keine Möglichkeit, die Begrenzungen zu ändern.
 
-### Aufrufe pro Minute/Stunde (Festgelegt: 120/3600)
+### Aufrufe pro Minute (Festgelegt: 5000)
 {: #openwhisk_syslimits_invocations}
-* Die Begrenzung N der Rate ist auf 120/3600 festgelegt und begrenzt die Anzahl von Aktionsaufrufen in Fenstern von 1 Minute bzw. 1 Stunde.
+* Die Begrenzung N der Rate ist auf 5000 festgelegt und begrenzt die Anzahl von Aktionsaufrufen in Fenstern von 1 Minute.
 * Ein Benutzer kann diese Begrenzung beim Erstellen der Aktion nicht ändern.
 * Ein CLI- oder API-Aufruf, der diese Begrenzung überschreitet, empfängt einen Fehlercode, der dem HTTP-Statuscode `429: TOO MANY REQUESTS` entspricht.
 
@@ -566,11 +567,10 @@ Auslöser unterliegen einer Auslöserate pro Minute und pro Stunde (wie in der f
 
 | Begrenzung | Beschreibung | Konfigurierbar | Einheit | Standardwert |
 | ----- | ----------- | ------------ | -----| ------- |
-| Minutenrate | Ein Benutzer kann nicht mehr als diese Anzahl Auslöser pro Minute abrufen. | pro Benutzer | Anzahl | 60 |
-| Stundenrate | Ein Benutzer kann nicht mehr als diese Anzahl Auslöser pro Stunde abrufen. | pro Benutzer | Anzahl | 720 |
+| Minutenrate | Ein Benutzer kann nicht mehr als diese Anzahl Auslöser pro Minute abrufen. | pro Benutzer | Anzahl | 5000 |
 
-### Auslöser pro Minute/Stunde (Festgelegt: 60/720)
+### Auslöser pro Minute (Festgelegt: 5000)
 {: #openwhisk_syslimits_triggerratelimit}
-* Die Begrenzung N der Rate ist auf 60/720 festgelegt und begrenzt die Anzahl von Auslösern in Fenstern von 1 Minute bzw. 1 Stunde.
+* Die Begrenzung N der Rate ist auf 5000 festgelegt und begrenzt die Anzahl von Auslösern in Fenstern von 1 Minute.
 * Ein Benutzer kann diese Begrenzung beim Erstellen des Auslösers nicht ändern.
 * Ein CLI- oder API-Aufruf, der diese Begrenzung überschreitet, empfängt einen Fehlercode, der dem HTTP-Statuscode `429: TOO MANY REQUESTS` entspricht.

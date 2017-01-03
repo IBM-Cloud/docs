@@ -78,7 +78,7 @@ Befolgen Sie diese Schritte, um das Plug-in aus dem Bluemix-Repository zu instal
 	```  
 
 ## Liste der Befehle für das private Netzpeering
-Folgende vier Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix network`, um die Liste der verfügbaren Befehle anzuzeigen:
+Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix network`, um die Liste der verfügbaren Befehle anzuzeigen:
 
 | Befehl     | Beschreibung                                    |
 |-------------|------------------------------------------------|
@@ -86,6 +86,8 @@ Folgende vier Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix net
 | pnp-create  | Erstellt eine Verbindung für das private Netzpeering.   |
 | pnp-delete  | Löscht eine Verbindung für das private Netzpeering.   |
 | pnp-show    | Listet alle Verbindungen für das private Netzpeering auf.  |
+{: caption="Table 1. Private network peering commands" caption-side="top"}
+
 
 ### Verwendung der Befehle
 Zur Anzeige der Hilfeinformationen für die Befehle führen Sie folgenden Befehl aus: `bluemix network [command] -h`.

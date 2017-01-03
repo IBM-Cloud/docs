@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-06"
 
 ---
 
@@ -11,9 +12,14 @@ copyright:
 # Atualizações mais recentes para o buildpack do ASP.NET Core
 {: #latest_updates}
 
-Última atualização: 26 de agosto de 2016
 
 Uma lista das atualizações mais recentes no buildpack do aspnet.
+
+## 10 de outubro de 2016: buildpack do ASP.NET Core atualizado v1.0.1-20161005-1225
+
+* Incluir suporte para .NET Core 1.0.1
+* Corrija um problema intermitente que fez a implementação falhar ao armazenar em cache os
+pacotes NuGet
 
 ## 31 de agosto de 2016: buildpack do ASP.NET Core atualizado v1.0-20160826-1345
 

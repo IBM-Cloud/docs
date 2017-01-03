@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Supervisión de Liberty en Bluemix con JConsole
 {: #jconsole}
-
-Última actualización: 10 de junio de 2016
-{: .last-updated}
 
 ## A continuación se muestran los pasos para supervisar el tiempo de ejecución de Bluemix Liberty con JConsole:
 {: #steps_to_monitor}
@@ -24,7 +22,7 @@ copyright:
 ### Enviar el paquete de servidor
 {: #push_server_package}
 
-Envíe el paquete de servidor que contiene la aplicación, limitándolo a una sola instancia. El archivo server.xml debe contener las características `monitor-1.0` y `restConnector-1.0`. También debe contener un elemento basicRegistry y un elemento administrator-role.
+Envíe el paquete de servidor que contiene la aplicación, limitándolo a una sola instancia. El archivo server.xml debe contener las características `monitor-1.0` y `restConnector-1.0`. También debe contener un elemento basicRegistry y un elemento administrator-role. 
 ```xml
        <featureManager>
            <feature>jsp-2.2</feature>
@@ -63,7 +61,7 @@ Puede que tenga que pasar parámetros adicionales para configurar Java trustStor
 {: start_jconsole_app}
   * Rellene el campo Proceso remoto con el siguiente url:
     * service:jmx:rest://&lt;appName&gt;.mybluemix.net:443/IBMJMXConnectorREST.
-  *  En los campos Nombre de usuario y Contraseña especifique un usuario y contraseña con el rol de administrador desde el archivo server.xml.
+  *  En los campos Nombre de usuario y Contraseña especifique un usuario y contraseña con el rol de administrador desde el archivo server.xml. 
   * Pulse Conectar.
 
 Cuando se establece una conexión correcta, JConsole empieza a supervisar.
@@ -82,7 +80,7 @@ A continuación se muestra un ejemplo de archivo de propiedades de registro:
 ```
 {: codeblock}
 
-También puede añadir <b>&dash;J&dash;Djavax.net.debug=ssl</b> al mandato jconsole. Este genera el rastreo de diagnóstico de SSL en otra ventana de salida de JConsole.  Por último, puede habilitar el rastreo en el lado del servidor añadiendo lo siguiente a su archivo server.xml:
+También puede añadir <b>&dash;J&dash;Djavax.net.debug=ssl</b> al mandato jconsole. Esto genera el rastreo de diagnóstico de SSL en otra ventana de salida de JConsole.  Por último, puede habilitar el rastreo en el lado del servidor añadiendo lo siguiente a su archivo server.xml:
 ```
     <logging traceSpecification="com.ibm.ws.jmx.*=all"/>
 ```

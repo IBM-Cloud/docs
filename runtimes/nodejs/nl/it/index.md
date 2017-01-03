@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-Ultimo aggiornamento: 29 agosto 2016
-{: .last-updated}
 
 Il runtime Node.js su {{site.data.keyword.Bluemix}} si avvale della tecnologia del pacchetto di build sdk-for-nodejs.
 Il pacchetto di build sdk-for-nodejs fornisce un ambiente di runtime completo per le applicazioni Node.js.
@@ -24,7 +23,7 @@ Il pacchetto di build sdk-for-nodejs è utilizzato quando l'applicazione contien
 ## Applicazione starter
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} Fornisce un'applicazione starter Node.js.  L'applicazione starter Node.js è un'applicazione Node.js semplice che fornisce un template che puoi utilizzare per la tua applicazione. Puoi sperimentare l'applicazione starter ed effettuare e inviare modifiche all'ambiente Bluemix  Consulta [Utilizzo di applicazioni starter](../../cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+{{site.data.keyword.Bluemix}} Fornisce un'applicazione starter Node.js.  L'applicazione starter Node.js è un'applicazione Node.js semplice che fornisce un template che puoi utilizzare per la tua applicazione. Puoi sperimentare l'applicazione starter ed effettuare e inviare modifiche all'ambiente Bluemix  Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter. 
 
 ## Comando di avvio
 {: #starup_commmand}
@@ -65,12 +64,11 @@ Utilizza queste informazioni per agevolare l'esecuzione della tua applicazione N
 
 Il seguente esempio mostra parte del sorgente per un file **js**:
 ```
-var port = (process.env.VCAP_APP_PORT || 3000);
-var host = (process.env.VCAP_APP_HOST || 'localhost');
+var port = (process.env.PORT || 3000);
 ```
 {: codeblock}
 
-Con questo codice, quando l'applicazione è in esecuzione su Bluemix, le variabili di ambiente VCAP_APP_HOST e VCAP_APP_PORT contengono i valori di host e porta interni per Bluemix e su cui l'applicazione è in ascolto per le connessioni in entrata. Quando l'applicazione è in esecuzione in locale, VCAP_APP_HOST e VCAP_APP_PORT non sono definite e si utilizza pertanto **localhost** come host e **3000** come numero porta. Scritto in questo modo, puoi eseguire l'applicazione in locale per attività di test e su Bluemix senza apportare ulteriori modifiche.
+Con questo codice, quando l'applicazione è in esecuzione su Bluemix, la variabile di ambiente PORT contiene il valore della porta su cui l'applicazione è in ascolto per le connessioni in entrata. Quando l'applicazione è in esecuzione in locale, PORT non è definita per cui **3000** viene utilizzato come il numero della porta. Scritto in questo modo, puoi eseguire l'applicazione in locale per attività di test e su Bluemix senza apportare ulteriori modifiche.
 
 ## Modalità offline
 {: #offline_mode}
@@ -78,14 +76,14 @@ Con questo codice, quando l'applicazione è in esecuzione su Bluemix, le variabi
 Consulta [Modalità offline](offlineMode.html) per informazioni sul controllo dell'accesso al pacchetto di build da siti esterni. 
 
 ## Gestione applicazioni
-{{site.data.keyword.Bluemix}} fornisce diversi programmi di utilità per la gestione e il debug della tua applicazione Node.js.  Consulta [Gestione applicazioni](../../manageapps/app_mng.html) per i dettagli completi.
+{{site.data.keyword.Bluemix}} fornisce diversi programmi di utilità per la gestione e il debug della tua applicazione Node.js.  Consulta [Gestione applicazione](/docs/manageapps/app_mng.html) per i dettagli completi.
 
 ## Versioni disponibili
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} fornisce tutti i [runtime Node.js attualmente disponibili](http://nodejs.org/dist/). Di questi, IBM fornisce delle versioni contenenti miglioramenti e correzioni di bug. Per ulteriori informazioni, consulta [Aggiornamenti più recenti al pacchetto di build Node.js](../../runtimes/nodejs/updates.html).
+{{site.data.keyword.Bluemix}} fornisce tutti i [runtime Node.js attualmente disponibili](http://nodejs.org/dist/). Di questi, IBM fornisce delle versioni contenenti miglioramenti e correzioni di bug. Per ulteriori informazioni, consulta [Aggiornamenti più recenti al pacchetto di build Node.js](/docs/runtimes/nodejs/updates.html).
 
-Il pacchetto di build IBM Node.js memorizza in cache tutte le versioni di runtime di IBM. Quindi, se utilizzi il runtime IBM SDK for Node.js nella tua applicazione, ottieni delle prestazioni della tua applicazione più rapide quando ne viene eseguito il push a Bluemix.
+Il pacchetto di build IBM Node.js memorizza in cache le versioni di runtime di IBM. Quindi, se utilizzi il runtime IBM SDK for Node.js nella tua applicazione, ottieni delle prestazioni della tua applicazione più rapide quando ne viene eseguito il push a Bluemix.
 
 Utilizza il parametro **node** nella sezione **engines** nel file **package.json** per specificare la versione di runtime Node.js che vuoi eseguire.
 
@@ -156,7 +154,7 @@ false nella tua applicazione Express può aiutare ad aggirare questo problema. A
 Consulta post stackoverflow [](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
 per ulteriori informazioni.
 
-**NOTA** [Gestione applicazioni](../../manageapps/app_mng.html) e FIPS_MODE *NON* sono supportati contemporaneamente.  Se la variabile di ambiente BLUEMIX_APP_MGMT_ENABLE è configurata e le variabili di ambiente FIPS_MODE sono impostate su true, la preparazione dell'applicazione avrà esito negativo.
+**NOTA** [Gestione applicazioni](/docs/manageapps/app_mng.html) e FIPS_MODE *NON* sono supportati contemporaneamente.  Se la variabile di ambiente BLUEMIX_APP_MGMT_ENABLE è configurata e le variabili di ambiente FIPS_MODE sono impostate su true, la preparazione dell'applicazione avrà esito negativo.
 
 Esistono vari metodi per controllare lo stato di FIPS_MODE:
 <ul>
@@ -279,7 +277,7 @@ Di norma, sono disponibili il pacchetto di build **sdk-for-nodejs** e una versio
 {: #rellinks}
 ## general
 {: #general}
-* [Aggiornamenti più recenti al pacchetto di build Node.js](../../runtimes/nodejs/updates.html)
-* [Gestione applicazioni](../../manageapps/app_mng.html)
+* [Aggiornamenti più recenti al pacchetto di build Node.js](/docs/runtimes/nodejs/updates.html)
+* [Gestione applicazioni](/docs/manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [IBM API Connect](https://strongloop.com/)

@@ -18,3 +18,4 @@ Do more with rich, integrated cloud databases and analytic services. In addition
 Build more | Grow more | Sleep more
 ---- | ---- | ----
 Stay focused on the fun stuff... creating new apps, not system administration. | Scale your data on the IBM Cloud. | Rest easy while IBM experts keep your data running 24 hours a day, seven days a week.
+{: caption="Table 1. Benefits of using the Work with Data console" caption-side="top"}

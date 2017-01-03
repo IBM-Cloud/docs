@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-08-02"
 
 ---
 
@@ -17,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # 使用 {{site.data.keyword.openwhisk_short}} 儀表板監視 {{site.data.keyword.openwhisk_short}} 活動
-前次更新：2016 年 8 月 2 日
-{: .last-updated}
 
 [{{site.data.keyword.openwhisk}} 儀表板](https://{DomainName}/whisk/dashboard/)提供活動的圖形摘要。使用儀表板，以判定 {{site.data.keyword.openwhisk_short}} 動作的效能及性能。
 {:shortdesc}
@@ -31,7 +25,7 @@ copyright:
 此視圖提供 {{site.data.keyword.openwhisk_short}} 環境的高階摘要。使用**活動摘要**視圖，以監視啟用 {{site.data.keyword.openwhisk_short}} 功能的服務的整體性能及效能。從此視圖中的度量值，您可以執行下列動作：
 * 判定服務之啟用 {{site.data.keyword.openwhisk_short}} 功能的動作的使用率，方法是檢視呼叫這些動作的次數。
 * 判定所有動作的整體失敗率。如果您發現錯誤，則可以檢視**活動直方圖**視圖，來找出發生錯誤的服務或動作。檢視**活動日誌**，以找出錯誤本身。
-* 檢視與每一個動作相關聯的平均完成時間，以判定動作的效能。 
+* 檢視與每一個動作相關聯的平均完成時間，以判定動作的效能。
 
 <!-- For tips on improving performance, see troubleshooting? -->
 
@@ -49,16 +43,16 @@ copyright:
 {: #log}
 
 此視圖顯示啟動日誌的格式化版本。它會顯示每次啟動的詳細資料，但是一分鐘會輪詢一次來尋找新的啟動。按一下動作來顯示詳細日誌。
-**附註：**若要使用 CLI 來取得「活動日誌」中顯示的輸出，請使用下列指令： 
+**附註：**若要使用 CLI 來取得「活動日誌」中顯示的輸出，請使用下列指令：
 
   ```
 wsk activation poll
   ```
-  {: pre} 
+  {: pre}
 
 ## 過濾選項
 {: #filtering}
 
-選取您要檢視的動作日誌，以及選取所記載活動的時間範圍。 
+選取您要檢視的動作日誌，以及選取所記載活動的時間範圍。
 
 **附註：**這些過濾器會套用至儀表板上的所有視圖。

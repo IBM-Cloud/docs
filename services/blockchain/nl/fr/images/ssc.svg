@@ -86,8 +86,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.88714286"
-     inkscape:cx="580.27375"
-     inkscape:cy="350"
+     inkscape:cx="600"
+     inkscape:cy="440.17713"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -149,15 +149,15 @@
        y="189.97867" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-anchor:start;text-align:start;writing-mode:lr;"
-       x="-298.01309"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-308.01309"
        y="706.62811"
        id="text5918-6"
        sodipodi:linespacing="125%"
        transform="matrix(0,-1,1,0,0,0)"><tspan
          sodipodi:role="line"
          id="tspan5920-6"
-         x="-298.01309"
+         x="-308.01309"
          y="706.62811">Code blockchain 0</tspan></text>
     <text
        xml:space="preserve"
@@ -287,14 +287,14 @@
          y="709.12537">Chaîne de blocs </tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="325.92099"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="331.92099"
        y="521.87555"
        id="text5914"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5916"
-         x="325.92099"
+         x="331.92099"
          y="521.87555">Homologue 0</tspan></text>
     <rect
        style="opacity:1;fill:#fc4109;fill-opacity:1;stroke:#000000;stroke-width:0.48139429;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -305,15 +305,15 @@
        y="542.63318" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-anchor:start;text-align:start;writing-mode:lr;"
-       x="-650.6676"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-656.6676"
        y="345.57547"
        id="text5918"
        sodipodi:linespacing="125%"
        transform="matrix(0,-1,1,0,0,0)"><tspan
          sodipodi:role="line"
          id="tspan5920"
-         x="-650.6676"
+         x="-656.6676"
          y="345.57547">Code blockchain 0</tspan></text>
     <rect
        style="opacity:1;fill:#fc4109;fill-opacity:1;stroke:#000000;stroke-width:0.46542206;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -324,15 +324,15 @@
        y="542.64648" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.49999998px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-anchor:start;text-align:start;writing-mode:lr;"
-       x="-632.00916"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-637.8374"
        y="457.28638"
        id="text5926"
        sodipodi:linespacing="125%"
        transform="matrix(0,-1.0294767,0.9713673,0,0,0)"><tspan
          sodipodi:role="line"
          id="tspan5928"
-         x="-632.00916"
+         x="-637.8374"
          y="457.28638">Code blockchain j</tspan></text>
     <rect
        style="opacity:1;fill:#079d49;fill-opacity:1;stroke:#000000;stroke-width:3.27582431;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -510,15 +510,15 @@
        y="542.56464" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-anchor:start;text-align:start;writing-mode:lr;"
-       x="-646.29834"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-656.23822"
        y="740.39514"
        id="text5922-2"
        sodipodi:linespacing="125%"
        transform="matrix(0,-1.0060634,0.99397315,0,0,0)"><tspan
          sodipodi:role="line"
          id="tspan5924-6"
-         x="-646.29834"
+         x="-656.23822"
          y="740.39514">Code blockchain 1</tspan></text>
     <text
        xml:space="preserve"
@@ -540,26 +540,24 @@
        y="542.99597" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.4999999px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-anchor:start;text-align:start;writing-mode:lr;"
-       x="-630.90527"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="-640.59918"
        y="827.6507"
        id="text5926-0"
        sodipodi:linespacing="125%"
-       transform="matrix(0,-1.0315687,0.9693974,0,0,0)"><tspan
+       transform="matrix(0,-1.0315687,0.96939739,0,0,0)"><tspan
          sodipodi:role="line"
-         id="tspan5928-4"
-         x="-630.90527"
-         y="827.6507">Ccode blockchain j</tspan></text>
+         id="tspan3427">Code blockchain j</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="683.92102"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="691.92102"
        y="521.58319"
        id="text5914-5"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5916-3"
-         x="683.92102"
+         x="691.92102"
          y="521.58319">Homologue 3</tspan></text>
     <rect
        style="opacity:1;fill:#fc4109;fill-opacity:1;stroke:#000000;stroke-width:0.4548735;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -570,15 +568,15 @@
        y="543.2403" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.49999996px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-anchor:start;text-align:start;writing-mode:lr;"
-       x="-646.96991"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-652.93384"
        y="377.73145"
        id="text5922-2-8"
        sodipodi:linespacing="125%"
        transform="matrix(0,-1.0060634,0.99397315,0,0,0)"><tspan
          sodipodi:role="line"
          id="tspan5924-6-1"
-         x="-646.96991"
+         x="-652.93384"
          y="377.73145">Code blockchain 1</tspan></text>
   </g>
   <style

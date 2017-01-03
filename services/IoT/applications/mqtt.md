@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-30"
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -58,6 +58,9 @@ An application can publish events as if they came from any registered device, fo
 To port existing data from a device into  {{site.data.keyword.iot_short_notm}}, you can create an application to process the data and publish it into {{site.data.keyword.iot_short_notm}}.
 
 **Important:** The message payload is limited to a maximum of 131072 bytes.  Messages that exceed the limit are rejected.
+
+### Retained messages
+{{site.data.keyword.iot_short_notm}} organizations are not authorized to publish retained MQTT messages. If an application, gateway, or device sends a retained message, the {{site.data.keyword.iot_short_notm}} service overrides the retained message flag when it is set to true and processes the message as if the retained message flag is set to false.
 
 ## Publishing device commands
 {: #publishing_device_commands}
@@ -149,10 +152,9 @@ Where:
 - Other clients that are part of the scalable application must use the same client ID.
 
 
-### How it works
+### Shared subscriptions
 
 The {{site.data.keyword.iot_short_notm}} service extends the MQTT V3.1.1 messaging protocol specification to support shared subscriptions. Shared subscriptions provide load balancing capabilities for applications. A shared subscription might be needed if a back-end enterprise application cannot process the volume of messages that are being published to a specific topic space. For example, when many devices publish messages that are being processed by a single application, it might be necessary to use the load balancing capability of a shared subscription. {{site.data.keyword.iot_short_notm}} shared subscription support is limited to non-durable subscriptions only.
-
 
 **Example**
 

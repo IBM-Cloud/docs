@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -16,8 +12,6 @@ copyright:
 {:codeblock: .codeblock}
 
 #共享 {{site.data.keyword.jazzhub_short}} 样本项目中基于文本的管道 {: #share-pipeline}
-
-*上次更新时间：2015 年 12 月 7 日* 
 
 对于通过“部署到 {{site.data.keyword.Bluemix_notm}}”按钮部署到 {{site.data.keyword.Bluemix_notm}} 的样本项目，可以将 {{site.data.keyword.jazzhub_short}} 管道配置定义为 YAML 文件。定义为文本的管道可以共享，这样派生您项目的人员就不必对自己的管道进行配置。此功能正在开发中：YAML 格式和实现可能会随时更改。目前，此功能仅可用于具有以 {{site.data.keyword.Bluemix_notm}} 为目标的 Git 和 GitHub 存储库的项目。
 {: shortdesc} 
@@ -216,7 +210,7 @@ CF_APP	| 应用程序名称
 
 可以从管道生成 YAML 文件。 
 
-从现有管道生成带有以下格式 URL 的文件：
+使用以下格式的 URL 从现有管道生成文件： 
 
 ```
 <DevOps Services domain>/pipeline/user/project/yaml
@@ -226,4 +220,3 @@ CF_APP	| 应用程序名称
 此调用无需 accept 头。可以从浏览器使用此调用。 
 
 **注：**出于安全原因，会在生成的管道 YAML 文件中省略安全阶段环境属性值。 
-

@@ -19,9 +19,9 @@ lastupdated: "2016-05-09"
 
 <!--The whole topic is staging only -->
 
-In {{site.data.keyword.Bluemix}} können Sie Anwendungen erstellen sowie vorhandene Anwendungen hosten. Sie können Ihre Anwendungen nach {{site.data.keyword.Bluemix_notm}} migrieren, sofern diese für die Cloud geeignet sind. Von {{site.data.keyword.Bluemix_notm}} werden unterschiedliche Methoden zum Ausführen von Anwendungen bereitgestellt, z. B. Cloud Foundry, IBM Containers und virtuelle Maschinen.
+In {{site.data.keyword.Bluemix}} können Sie Anwendungen erstellen sowie vorhandene Anwendungen hosten. Sie können Ihre Apps nach {{site.data.keyword.Bluemix_notm}} migrieren, sofern diese für die Cloud geeignet sind. Von {{site.data.keyword.Bluemix_notm}} werden unterschiedliche Methoden zum Ausführen von Anwendungen bereitgestellt, z. B. Cloud Foundry, IBM Containers und virtuelle Maschinen.
 
-##Anwendungen für die Cloud vorbereiten
+##Apps für die Cloud vorbereiten
 {: #cloud-readyapps}
 
 Beim Entwickeln und Erstellen einer Cloud-fähigen Anwendung werden die Prinzipien einer Cloudplattform berücksichtigt. Von einer Cloud-fähigen Anwendung können die Funktionen verwendet werden, die von der Cloudplattform bereitgestellt werden.
@@ -89,14 +89,13 @@ Wenn Sie eine Anwendung in {{site.data.keyword.Bluemix_notm}} als Cloud Foundry-
 
 Sie können die folgenden Tools und Services verwenden, die von {{site.data.keyword.Bluemix_notm}} bereitgestellt werden:
 
-*Tabelle 1. {{site.data.keyword.Bluemix_notm}}-Tools*
-
 | Tool	| Methode |
 |:------|:--------|
 |Cloud Foundry-Befehlszeilenschnittstelle (Befehlszeilenschnittstelle 'cf')	|Verwalten Sie den Code auf einem lokalen Client und verwenden Sie die Cloud Foundry-Befehlszeilenschnittstelle, um Ihre Anwendung mit einer Push-Operation manuell zu {{site.data.keyword.Bluemix_notm}} zu übertragen. Weitere Informationen finden Sie unter [Apps hochladen](/docs/starters/upload_app.html).|
 |Eclipse	|Verwalten Sie den Code in Eclipse und verwenden Sie IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, um Ihre Anwendung mit einer Push-Operation zu übertragen.|
 |Git-Integration	|Verwalten Sie den Code mit GitHub und integrieren Sie Git in {{site.data.keyword.Bluemix_notm}}. Sie können mit anderen Entwicklern zusammenarbeiten. Die Anwendung wird automatisch in {{site.data.keyword.Bluemix_notm}} bereitgestellt, wenn Sie Änderungen am Code festschreiben. Sie müssen die Anwendung nicht manuell mit einer Push-Operation übertragen.|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Verwalten Sie den Code mithilfe eines DevOps GitHub-Repositorys und stellen Sie die Anwendung in {{site.data.keyword.Bluemix_notm}} unter Verwendung von DevOps Delivery Pipeline bereit.|
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
 
 
 Wenn die Cloud Foundry-Plattform nicht die Anforderungen der Anwendung erfüllt, können Sie einen Container oder eine virtuelle Maschine verwenden, für den bzw. die eine Laufzeit mit entsprechend angepassten Optionen konfiguriert ist und verwaltet wird.

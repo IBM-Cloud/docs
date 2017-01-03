@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,10 +17,8 @@ copyright:
 
 # Configuración del perfil
 {: #usersettings}
-Última actualización: 20 de octubre de 2016
-{: .last-updated}
 
-Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Perfil de usuario** para actualizar su configuración de perfil.
+Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](/docs/icons/i-avatar-icon.svg) &gt; **Perfil de usuario** para actualizar su configuración de perfil.
 {:shortdesc}
 
  En la página **Perfil**, puede establecer o actualizar la siguiente información:
@@ -32,7 +30,7 @@ Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar
 ## Cambio de la foto de perfil
 {: #photo}
 
-1. Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Perfil de usuario**.
+1. Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](/docs/icons/i-avatar-icon.svg) &gt; **Perfil de usuario**.
 
 * Pulse **CARGAR UNA FOTO** para cargar una foto.
 * Pulse **CAMBIAR FOTO** para cargar una nueva foto.
@@ -45,7 +43,7 @@ Un ID de IBM es un ID único que utiliza para iniciar sesión en la cuenta de {{
 
 No puede cambiar su ID de IBM, pero puede editar la información del perfil asociada con él. Si necesita cambiar la información de cuenta de ID de IBM, como por ejemplo el nombre, el correo electrónico, el número de teléfono, la contraseña o el nombre de empresa, realice los siguientes pasos:
 
-1. Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Perfil de usuario**.
+1. Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](/docs/icons/i-avatar-icon.svg) &gt; **Perfil de usuario**.
 2. Pulse **Editar el ID de IBM**.
 3. Edite la información de usuario.
 4. Pulse **Guardar**.
@@ -59,5 +57,5 @@ Si elige inhabilitar el seguimiento, es posible que no pueda utilizar algunas ca
 
 Para inhabilitar el seguimiento de las herramientas de análisis, realice los siguientes pasos:
 
-1. Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](../icons/i-avatar-icon.svg) &gt; **Perfil de usuario**.
+1. Vaya al icono **{{site.data.keyword.avatar}}** ![Icono Avatar](/docs/icons/i-avatar-icon.svg) &gt; **Perfil de usuario**.
 2. Establezca el seguimiento de las herramientas de análisis en **Desactivado**.

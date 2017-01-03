@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Herramientas de análisis empresarial
 {: #businessanalytics}
-
-*Última actualización: 9 de diciembre de 2015*
 
 Con estos servicios, puede incorporar en las apps inteligencia empresarial para descubrir de forma rápida y sencilla información detallada procedente de todos los tipos de datos.
 {:shortdesc}

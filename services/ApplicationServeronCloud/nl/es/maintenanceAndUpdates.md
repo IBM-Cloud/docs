@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-28"
 
 ---
 
@@ -22,7 +23,7 @@ middleware y el invitado operativo subyacente. Estos repositorios permiten a los
 
 En el siguiente apartado se describe cómo aplica cambios del sistema en la máquina virtual.
 
-Puede actualizar su VM del mismo modo que actualiza cualquier otro sistema RHEL normal. Mediante el gestor de paquetes "Yum" de Red Had, puede instalar, actualizar, desinstalar y realizar muchas otras acciones con sus paquetes.
+Puede actualizar su VM del mismo modo que actualiza cualquier otro sistema RHEL normal. Mediante el gestor de paquetes "Yum" de Red Hat, puede instalar, actualizar, desinstalar y realizar muchas otras acciones con sus paquetes.
 
 El sistema está configurado para recibir estas actualizaciones del IBM Red Hat Satellite Server. Este satélite proporciona paquetes seguros de la red de Red Hat a través del gestor de paquetes Yum.
 

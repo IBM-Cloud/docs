@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # 開始使用 {{site.data.keyword.composeForRabbitMQ}}
 {: #getting-started-with-compose-for-rabbitmq}
-
-前次更新：2016 年 9 月 20 日
-{: .last-updated}
 
 RabbitMQ 會非同步處理應用程式與資料庫之間的訊息，以分隔資料及應用程式層。RabbitMQ 可讓開發人員遞送及追蹤具有可自訂持續性層次、遞送設定及已確認發佈的訊息，並且將其置入佇列。透過使用 {{site.data.keyword.composeForRabbitMQ_full}}，您可以存取具有一組管理特性（例如部署監視、按一下按鈕擴充、使用者設定及日誌檔存取）的簡易管理介面。
 {:shortdesc}
@@ -38,7 +35,7 @@ RabbitMQ 會非同步處理應用程式與資料庫之間的訊息，以分隔�
 
 欄位名稱|說明
 ----------|-----------
-``uri``|要在連接至服務時使用的 URI。包括綱目 (`amqps:)、管理使用者名稱和密碼、伺服器的主機名稱、要連接至的埠號，以及 vhost 名稱。
+``uri``|要在連接至服務時使用的 URI。包括綱目 (`amqps:`)、管理使用者名稱和密碼、伺服器的主機名稱、要連接至的埠號，以及 vhost 名稱。
 `uri_direct_1`|可以在連接至服務時使用的替代 URI。根據 `uri` 進行格式化。
 `uri_admin`|應該在瀏覽器中造訪以存取資料庫管理介面的 URI。需要來自 `uri` 欄位的管理使用者名稱和密碼才能進行存取。
 `uri_admin_1`|替代管理 URI - 請參閱 `uri_admin`。
@@ -49,6 +46,7 @@ RabbitMQ 會非同步處理應用程式與資料庫之間的訊息，以分隔�
 `deployment_id`|Compose 內所建立之服務的內部 ID。
 `db_type`|服務所提供的資料庫類型；在此情況下，為 `rabbitmq`。
 `name`|資料庫部署名稱。
+{: caption="Table 1. {{site.data.keyword.composeForRabbitMQ}} credentials" caption-side="top"}
 
 # 相關鏈結
 {: #rellinks}

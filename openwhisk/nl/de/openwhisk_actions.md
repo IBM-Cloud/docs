@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-27"
  
 
 ---
@@ -19,8 +19,6 @@ copyright:
 # {{site.data.keyword.openwhisk_short}}-Aktionen erstellen und aufrufen
 {: #openwhisk_actions}
 
-Letzte Aktualisierung: 9. September 2016
-{: .last-updated}
 
 Aktionen sind statusunabhängige Code-Snippets, die auf der {{site.data.keyword.openwhisk}}-Plattform ausgeführt werden. Bei einer Aktion kann es sich um eine JavaScript-Funktion, eine Swift-Funktion oder ein angepasstes ausführbares Programm, das in einem Docker-Container enthalten ist, handeln. Eine Aktion kann zum Beispiel zum Erkennen der Gesichter auf einem Bild, zum Aggregieren einer Gruppe von API-Aufrufen oder zum Senden eines Tweets verwendet werden.
 {:shortdesc}
@@ -32,7 +30,7 @@ Aktionen können aus Aufrufen weiterer Aktionen oder aus einer definierten Folge
 ## JavaScript-Aktionen erstellen und aufrufen
 {: #openwhisk_create_action_js}
 
-In den folgenden Abschnitten werden Sie in die Arbeit mit Aktionen in JavaScript eingeführt. Sie beginnen mit dem Erstellen und Aufrufen einer einfachen Aktion. Anschließend werden Sie einer Aktion Parameter hinzufügen und diese Aktion mit Parametern aufrufen. Als Nächstes folgt das Festlegen von Standardparametern und das Aufrufen dieser Parameter. Danach erstellen Sie asynchrone Aktionen und zum Schluss arbeiten Sie mit Aktionsfolgen.
+In den folgenden Abschnitten werden Sie in die Arbeit mit Aktionen in JavaScript eingeführt. Sie beginnen mit dem Erstellen und Aufrufen einer einfachen Aktion. Anschließend werden Sie einer Aktion Parameter hinzufügen und diese Aktion mit Parametern aufrufen. Als Nächstes folgt das Festlegen von Standardparametern und das Aufrufen dieser Parameter. Danach erstellen Sie asynchrone Aktionen und zum Schluss arbeiten Sie mit Aktionssequenzen.
 
 
 ### Einfache JavaScript-Aktion erstellen und aufrufen
@@ -76,7 +74,7 @@ Sehen Sie sich die folgenden Schritte und Beispiele an, um Ihre erste JavaScript
 
   Die soeben erstellte Aktion `hello` wird angezeigt.
 
-4. Nach dem Erstellen der Aktion können Sie sie in der Cloud in OpenWhisk mit dem Befehl 'invoke' ausführen. Sie können Aktionen mit einem blockierenden (Flag *blocking*) oder mit einem nicht blockierenden (Flag *non-blocking*) Aufruf (d. h. Anforderung/Antwort) ausführen. Eine Anforderung für einen blockierenden Aufruf *wartet*, bis das Aktivierungsergebnis verfügbar ist. Der Wartezeitraum beträgt weniger als 60 Sekunden oder hat ein [Zeitlimit](./reference.md#per-action-timeout-ms-default-60s), das für die Aktion konfiguriert wurde. Das Ergebnis der Aktivierung wird zurückgegeben, wenn es innerhalb des Wartezeitraums verfügbar ist. Anderenfalls fährt die Aktivierung mit der Verarbeitung weiter und eine Aktivierungs-ID wird zurückgegeben, sodass das Ergebnis wie bei nicht blockierenden Anforderungen später geprüft werden kann (weitere Tipps zur Überwachung von Aktivierungen finden Sie [hier](#watching-action-output)).
+4. Nach dem Erstellen der Aktion können Sie sie in der Cloud in OpenWhisk mit dem Befehl 'invoke' ausführen. Sie können Aktionen mit einem blockierenden (Flag *blocking*) oder mit einem nicht blockierenden (Flag *non-blocking*) Aufruf (d. h. Anforderung/Antwort) ausführen. Eine Anforderung für einen blockierenden Aufruf *wartet*, bis das Aktivierungsergebnis verfügbar ist. Der Wartezeitraum beträgt weniger als 60 Sekunden oder hat ein [Zeitlimit](./openwhisk_reference.html#openwhisk_syslimits_timeout), das für die Aktion konfiguriert wurde. Das Ergebnis der Aktivierung wird zurückgegeben, wenn es innerhalb des Wartezeitraums verfügbar ist. Anderenfalls fährt die Aktivierung mit der Verarbeitung weiter und eine Aktivierungs-ID wird zurückgegeben, sodass das Ergebnis wie bei nicht blockierenden Anforderungen später geprüft werden kann (weitere Tipps zur Überwachung von Aktivierungen finden Sie [hier](#watching-action-output)).
 
   Im folgenden Beispiel wird der Blockierungsparameter `--blocking` verwendet:
 
@@ -159,10 +157,35 @@ Beim Aufruf können Parameter an die Aktion übergeben werden.
   wsk action update hello hello.js
   ```
   {: pre}
+
+3.  Parameter können in der Befehlszeile explizit angegeben oder in
+einer Datei bereitgestellt werden, die die gewünschten Parameter enthält.
+
+  Um Parameter direkt in der Befehlszeile zu übergeben, geben Sie für das
+Flag `--param` ein Schlüssel/Wert-Paar an:
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+  wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
+
+  Um eine Datei zu verwenden, die Parameterinhalt enthält, erstellen Sie
+eine Datei mit den Parametern im JSON-Format. Anschließend muss der Dateiname an
+das Flag `param-file` übergeben werden:
+
+  Beispielparameterdatei namens 'parameters.json':
+  ```
+  {
+      "name": "Bernie",
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {
       "payload": "Hello, Bernie from Vermont"
@@ -170,7 +193,8 @@ Beim Aufruf können Parameter an die Aktion übergeben werden.
   ```
   {: screen}
 
-  Beachten Sie die Verwendung der Option `--param` zur Angabe eines Parameternamens und eines Parameterwerts sowie die Verwendung der Option `--result`, um nur das Aufrufergebnis anzuzeigen.
+  Beachten Sie die Verwendung der Option `--result`,
+damit nur das Aufrufergebnis angezeigt wird.
 
 ### Standardparameter festlegen
 {: #openwhisk_binding_actions}
@@ -179,17 +203,41 @@ Aktionen können mit mehreren benannten Parameter aufgerufen werden. Die Aktion 
 
 Anstatt nun jedes Mal alle Parameter an eine Aktion zu übergeben, können Sie bestimmte Parameter binden. Im folgenden Beispiel wird der Parameter *place* gebunden, sodass die Aktion mit dem Standardwert "Vermont" arbeitet:
  
-1. Aktualisieren Sie die Aktion mit der Option `--param`, um Parameterwerte zu binden.
+1. Aktualisieren Sie die Aktion mit der Option
+`--param`, um Parameterwerte zu binden, oder durch die
+Übergabe einer Datei, die die Parameter enthält, an
+`--param-file`.
+
+  Um Standardparameter in der Befehlszeile explizit anzugeben, geben Sie
+für das Flag `param` ein Schlüssel/Wert-Paar an:
 
   ```
-  wsk action update hello --param place 'Vermont'
+  wsk action update hello --param place Vermont
+  ```
+  {: pre}
+
+  Zur Übergabe von Parametern aus einer Datei muss eine Datei erstellt
+werden, die den gewünschten Inhalt im JSON-Format enthält.
+  Anschließend muss der Dateiname an das Flag `-param-file`
+übergeben werden:
+
+  Beispielparameterdatei namens 'parameters.json':
+  ```
+  {
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action update hello --param-file parameters.json
   ```
   {: pre}
 
 2. Rufen Sie die Aktion auf, indem Sie diesmal nur den Parameter `name` übergeben.
 
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie'
+  wsk action invoke --blocking --result hello --param name Bernie
   ```
   {: pre}
   ```
@@ -203,10 +251,30 @@ Anstatt nun jedes Mal alle Parameter an eine Aktion zu übergeben, können Sie b
 
 3. Rufen Sie die Aktion auf, indem Sie Werte für `name` und `place` übergeben. Der letztere Wert überschreibt den Wert, der an die Aktion gebunden ist.
 
+  Verwendung des Flags `--param`:
+
   ```
-  wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+  wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
+  Verwendung des Flags `--param-file`:
+
+  Datei 'parameters.json':
+  ```
+  {
+    "name": "Bernie",
+    "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -234,7 +302,8 @@ JavaScript-Funktionen, die asynchron ausgeführt werden, müssen möglicherweise
 
   Beachten Sie, dass die Funktion `main` ein Promise zurückgibt. Dies weist darauf hin, dass die Aktivierung noch nicht abgeschlossen wurde, der Abschluss aber erwartet wird.
 
-  Die JavaScript-Funktion `setTimeout()` wartet in diesem Beispiel 20 Sekunden ab, bevor die Callback-Funktion aufgerufen wird.  Dies stellt den asynchronen Code dar, der in die Callback-Funktion des Promise eingeht.
+  Die JavaScript-Funktion `setTimeout()` wartet in
+diesem Beispiel zwei Sekunden ab, bevor die Callback-Funktion aufgerufen wird.  Dies stellt den asynchronen Code dar, der in die Callback-Funktion des Promise eingeht.
 
   Der Callback des Promise verwendet zwei Argumente ('resolve' und 'reject'), die beide Funktionen sind.  Der Aufruf von `resolve()` erfüllt das Promise und weist darauf hin, dass die Aktivierung normal abgeschlossen wurde.
 
@@ -322,7 +391,7 @@ Im folgenden Beispiel wird ein Yahoo Weather-Services aufgerufen, um die aktuell
   ```
   {: codeblock}
   
-  Beachten Sie, dass die Aktion in diesem Beispiel die JavaScript-Bibliothek `request` verwendet, um eine HTTP-Anforderung an die Yahoo Weather-API durchzuführen, und Felder aus dem JSON-Ergebnis extrahiert. In den [Referenzinformationen](./reference.md#javascript-runtime-environments) finden Sie detaillierte Informationen zu den Node.js-Paketen, die Sie in Ihren Aktionen verwenden können.
+  Beachten Sie, dass die Aktion in diesem Beispiel die JavaScript-Bibliothek `request` verwendet, um eine HTTP-Anforderung an die Yahoo Weather-API durchzuführen, und Felder aus dem JSON-Ergebnis extrahiert. In den [Referenzinformationen](./openwhisk_reference.html#openwhisk_ref_javascript_environments) finden Sie detaillierte Informationen zu den Node.js-Paketen, die Sie in Ihren Aktionen verwenden können.
   
   Dieses Beispiel demonstriert außerdem den Bedarf an asynchronen Aktionen. Die Aktion gibt ein Promise zurück, um anzugeben, dass das Ergebnis dieser Aktion noch nicht verfügbar ist, wenn die Funktion die Ausführung beendet. Das Ergebnis ist erst im Callback `request` verfügbar, wenn der HTTP-Aufruf abgeschlossen ist, und wird als Argument an die Funktion `resolve()` übergeben.
   
@@ -333,7 +402,7 @@ Im folgenden Beispiel wird ein Yahoo Weather-Services aufgerufen, um die aktuell
   ```
   {: pre}
   ```
-  wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+  wsk action invoke --blocking --result weather --param location "Brooklyn, NY"
   ```
   {: pre}
   ```
@@ -342,13 +411,91 @@ Im folgenden Beispiel wird ein Yahoo Weather-Services aufgerufen, um die aktuell
   }
   ```
   {: screen}
-  
-### Aktionsfolgen erstellen
+
+### Aktion als Node.js-Modul paketieren
+{: #openwhisk_js_packaged_action}
+
+Als Alternative zum Schreiben des gesamten Aktionscodes in einer einzigen JavaScript-Quellendatei können Sie eine Aktion als `npm`-Paket schreiben. Nehmen Sie als Beispiel ein Verzeichnis mit den folgenden Dateien:
+
+Zunächst `package.json`:
+
+```
+{
+  "name": "my-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies" : {
+    "left-pad" : "1.1.3"
+  }
+}
+```
+{: codeblock}
+
+Dann `index.js`:
+
+```
+function myAction(args) {
+    const leftPad = require("left-pad")
+    const lines = args.lines || [];
+    return { padded: lines.map(l => leftPad(l, 30, ".")) }
+}
+
+exports.main = myAction;
+```
+{: codeblock}
+
+Beachten Sie, dass die Aktion über `exports.main` zugänglich gemacht wird; der Aktionshandler selbst kann einen beliebigen Namen haben, solange er der üblichen Signatur für die Annahme und die Rückgabe eines Objekts (oder einem `Promise` eines Objekts) entspricht.
+
+Gehen Sie wie folgt vor, um aus diesem Paket eine OpenWhisk-Aktion zu erstellen:
+
+1. Installieren Sie zunächst alle Abhängigkeiten lokal.
+
+  ```
+  npm install
+  ```
+  {: pre}
+
+2. Erstellen Sie ein `.zip`-Archiv, in dem alle Dateien (einschließlich aller Abhängigkeiten) enthalten sind:
+
+  ```
+  zip -r action.zip *
+  ```
+  {: pre}
+
+3. Erstellen Sie die Aktion:
+
+  ```
+  wsk action create packageAction --kind nodejs:6 action.zip
+  ```
+  {: pre}
+
+  Bei der Erstellung einer Aktion aus einem `.zip`-Archiv mithilfe des CLI-Tools beachten Sie, dass Sie explizit einen Wert für das Flag `--kind` angeben müssen.
+
+4. Sie können die Aktion wie jede andere aufrufen:
+
+  ```
+  wsk action invoke --blocking --result packageAction --param lines "[\"and now\", \"for something completely\", \"different\" ]"
+  ```
+  {: pre}
+  ```
+  {
+      "padded": [
+          ".......................and now",
+          "......for something completely",
+          ".....................different"
+      ]
+  }
+  ```
+  {: screen}
+
+Zum Schluss beachten Sie, dass zwar die meisten `npm`-Pakete JavaScript-Quellen mit `npm install` installieren, andere jedoch auch Binärartefakte installieren und kompilieren. Der Upload von Archivdateien unterstützt derzeit keine binären Abhängigkeiten, sondern nur JavaScript-Abhängigkeiten. Wenn im Archiv binäre Abhängigkeiten eingeschlossen sind, können Aktionsaufrufe fehlschlagen.
+
+## Aktionssequenzen erstellen
 {: #openwhisk_create_action_sequence}
 
 Sie können eine Aktion erstellen, die eine Folge von Aktionen miteinander verkettet.
 
-Verschiedene Dienstprogrammaktionen werden in einem Paket mit dem Namen `/whisk.system/utils` bereitgestellt, die Sie zum Erstellen Ihrer ersten Folge verwenden können. Weitere Informationen zu Paketen finden Sie im Abschnitt zu [Paketen](./packages.md).
+Verschiedene Dienstprogrammaktionen werden in einem Paket mit dem Namen `/whisk.system/utils` bereitgestellt, die Sie zum Erstellen Ihrer ersten Folge verwenden können. Weitere Informationen zu Paketen finden Sie im Abschnitt zu [Paketen](./openwhisk_packages.html).
 
 1. Zeigen Sie die Aktionen im Paket `/whisk.system/utils` an.
   
@@ -366,17 +513,17 @@ Verschiedene Dienstprogrammaktionen werden in einem Paket mit dem Namen `/whisk.
    action /whisk.system/utils/cat: Concatenates input into a string
   ```
   {: screen}
-
+  
   Sie werden die Aktionen `split` (Aufteilen) und `sort` (Sortieren) in diesem Beispiel verwenden.
-
-2. Erstellen Sie eine Aktionsfolge, sodass das Ergebnis der einen Aktion als Argument an die nächste Aktion übergeben wird.
+  
+2. Erstellen Sie eine Aktionssequenz, sodass das Ergebnis der einen Aktion als Argument an die nächste Aktion übergeben wird.
   
   ```
   wsk action create sequenceAction --sequence /whisk.system/utils/split,/whisk.system/utils/sort
   ```
   {: pre}
   
-  Diese Aktionsfolge konvertiert Zeilen von Text in ein Array und sortiert die Zeilen.
+  Diese Aktionssequenz konvertiert Zeilen von Text in ein Array und sortiert die Zeilen.
   
 3. Rufen Sie die Aktion auf:
   
@@ -403,7 +550,7 @@ Daher sind die Parameter, die der Aktionssequenz übergeben werden, nur für die
 Das Ergebnis der ersten Aktion in der Sequenz wird zum JSON-Eingabeobjekt für die zweite Aktion in der Sequenz usw.
 Das Objekt enthält keine Parameter, die ursprünglich an die Sequenz übergeben wurden, es sei denn, die erste Aktion enthält sie explizit in ihrem Ergebnis.
 Die Eingabeparameter für eine Aktion werden mit den Standardparametern der Aktion zusammengeführt. Erstere haben Vorrang und überschreiben alle übereinstimmenden Standardparameter.
-Weitere Informationen zum Aufrufen von Aktionsfolgen mit mehreren benannten Parametern finden Sie unter [Standardparameter festlegen](./actions.md#setting-default-parameters).
+Weitere Informationen zum Aufrufen von Aktionssequenzen mit mehreren benannten Parametern finden Sie unter [Standardparameter festlegen](./openwhisk_actions.html#openwhisk_binding_actions).
 
 ## Python-Aktionen erstellen
 {: #openwhisk_actions_python}
@@ -500,6 +647,94 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **Achtung:** Swift-Aktionen werden in einer Linux-Umgebung ausgeführt. Swift unter Linux befindet sich noch in Entwicklung und {{site.data.keyword.openwhisk_short}} arbeitet in der Regel mit dem neuesten verfügbaren Release, das jedoch nicht unbedingt stabil ist. Darüber hinaus ist es möglich, dass die mit {{site.data.keyword.openwhisk_short}} verwendete Version von Swift nicht mit den Versionen von Swift aus stabilen Releases von XCode on MacOS konsistent ist.
 
+## Java-Aktionen erstellen
+{: #openwhisk_actions_java}
+
+Das Verfahren zur Erstellung von Java-Aktionen ist dem von
+JavaScript- und Swift-Aktionen ähnlich. In den folgenden Abschnitten werden die
+Schritte zum Erstellen und Aufrufen einer einzelnen Java-Aktion sowie zum
+Übergeben von Parametern an diese Aktion beschrieben.
+
+Damit Sie Java-Dateien kompilieren, testen und archivieren können, muss
+lokal eine
+[JDK
+8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installiert sein.
+
+### Aktion erstellen und aufrufen
+{: #openwhisk_actions_java_invoke}
+
+Eine Java-Aktion ist ein Java-Programm mit einer Methode namens
+`main`, deren exakte Signatur wie folgt lautet:
+```
+public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
+```
+{: codeblock}
+
+Erstellen Sie beispielsweise eine Java-Datei namens
+`Hello.java` mit dem folgenden Inhalt:
+
+```
+import com.google.gson.JsonObject;
+public class Hello {
+    public static JsonObject main(JsonObject args) {
+        String name = "stranger";
+        if (args.has("name"))
+            name = args.getAsJsonPrimitive("name").getAsString();
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+    }
+}
+```
+{: codeblock}
+
+Kompilieren Sie anschließend die Datei `Hello.java` wie
+folgt in einer Datei
+`hello.jar`:
+```
+javac Hello.java
+jar cvf hello.jar Hello.class
+```
+{: pre}
+
+**Hinweis:**
+[google-gson](https://github.com/google/gson) muss im
+Java-Klassenpfad (CLASSPATH) vorhanden sein, wenn Sie die Java-Datei
+kompilieren.
+
+Aus dieser JAR-Datei können Sie folgendermaßen eine OpenWhisk-Aktion
+namens `helloJava` erstellen:
+
+```
+wsk action create helloJava hello.jar
+```
+{: pre}
+
+Bei Verwendung der Befehlszeile und einer Swift-Quellendatei
+(`.jar`) brauchen Sie nicht anzugeben, dass Sie eine
+Java-Aktion erstellen; das Tool
+bestimmt dies anhand der Dateierweiterung.
+
+Der Aktionsaufruf für Java-Aktionen stimmt mit dem für
+Swift- und JavaScript-Aktionen überein:
+
+```
+wsk action invoke --blocking --result helloJava --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
+
+**Hinweis:** Falls die JAR-Datei mehrere Klassen
+mit einer Methode 'main' enthält, die mit der erforderlichen Signatur
+übereinstimmt, verwendet das CLI-Tool die erste Klasse, die von `jar
+-tf` gemeldet wird.
+
 
 ## Docker-Aktionen erstellen
 {: #openwhisk_actions_docker}
@@ -510,7 +745,7 @@ Ihr Code wird in eine ausführbare Binärdatei kompiliert und in ein Docker-Imag
 
 Voraussetzung ist, dass Sie über ein Docker Hub-Konto verfügen.  Rufen Sie zur Einrichtung einer kostenlosen Docker-ID und eines Kontos [Docker Hub](https://hub.docker.com){: new_window} auf.
 
-In den nachfolgenden Anweisungen wird die Docker-Benutzer-ID `janesmith` und das Kennwort `janes_password` verwendet. Wenn die CLI bereits eingerichtet ist, sind drei Schritte erforderlich, um eine angepasste Binärdatei zur Verwendung durch {{site.data.keyword.openwhisk_short}} einzurichten.  Anschließend kann das hochgeladene Docker-Image als Aktion verwendet werden.
+In den nachfolgenden Anweisungen wird die Docker-Benutzer-ID `janesmith` und das Kennwort `janes_password` verwendet.  Wenn die CLI bereits eingerichtet ist, sind drei Schritte erforderlich, um eine angepasste Binärdatei zur Verwendung durch {{site.data.keyword.openwhisk_short}} einzurichten. Anschließend kann das hochgeladene Docker-Image als Aktion verwendet werden.
 
 1. Laden Sie das Docker-Gerüst (Skeleton) herunter. Sie können es über die CLI wie folgt herunterladen:
 
@@ -606,10 +841,10 @@ In den nachfolgenden Anweisungen wird die Docker-Benutzer-ID `janesmith` und das
   ```
   {: screen}
   
-  Um eine Docker-Aktion zu aktualisieren, führen Sie 'buildAndPush.sh' aus, um das Image auf dem Docker-Hub zu aktualisieren. Dadurch wird der neue Code für Ihre Aktion ausgeführt, wenn Ihr Docker-Image das nächste Mal extrahiert wird.
+  Zum Aktualisieren der Docker-Aktion führen Sie buildAndPush.sh aus, um das neueste Image auf Docker Hub hochzuladen. Dies ermöglicht dem System das Extrahieren Ihres neuen Docker-Images bei der nächsten Ausführung des Codes für Ihre Aktion.
   Wenn es keine aktiven Container gibt, verwenden die Aufrufe das neue Docker-Image.
-  Beachten Sie, dass bei einem aktiven Container, der eine ältere Version Ihres Docker-Images verwendet, die neuen Aufrufe weiterhin dieses Image verwenden, es sei denn, Sie führen 'wsk action update' aus. Dadurch geben Sie dan, dass für alle neuen Aufrufe eine 'docekr'-Pull-Operation erzwungen wird, die Ihr neues Docker-Image extrahiert.
-  
+  Wenn jedoch ein aktiver Container vorhanden ist, der eine ältere Version Ihres Docker-Images verwendet, verwenden neue Aufrufe weiterhin dieses Image, solange Sie nicht 'wsk action update' ausführen. Damit wird dem System angezeigt, dass es für neue Aufrufe eine Docker-Pull-Operation ausführen muss, um Ihr neues Docker-Image abzurufen.
+ 
   ```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```
@@ -624,7 +859,7 @@ In den nachfolgenden Anweisungen wird die Docker-Benutzer-ID `janesmith` und das
 ## Aktionsausgaben beobachten
 {: #openwhisk_actions_polling}
 
-{{site.data.keyword.openwhisk_short}}-Aktionen können von anderen Benutzern, als Reaktion auf verschiedene Ereignisse oder als Teil einer Aktionsfolge aufgerufen werden. In solchen Fällen kann es nützlich sein, die Aufrufe zu überwachen.
+{{site.data.keyword.openwhisk_short}}-Aktionen können von anderen Benutzern, als Reaktion auf verschiedene Ereignisse oder als Teil einer Aktionssequenz aufgerufen werden. In solchen Fällen kann es nützlich sein, die Aufrufe zu überwachen.
 
 Sie können die Ausgabe von Aktionen, wenn sie aufgerufen werden, über die {{site.data.keyword.openwhisk_short}}-CLI beobachten.
 

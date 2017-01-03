@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # 业务分析
 {: #businessanalytics}
-
-*上次更新时间：2015 年 12 月 9 日*
 
 使用这些服务，可以将商业智能嵌入到应用程序中，以更快速、更轻松地从所有类型的数据洞察有用信息。
 {:shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,13 +12,21 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-Última atualização: 30 de maio de 2016
 
 O tempo de execução ASP.NET Core no {{site.data.keyword.Bluemix}} é desenvolvido com o buildpack ASP.NET Core. O ASP.NET Core
 é uma estrutura de software livre modular para a construção de aplicativos da web .NET.
 O .Net Core é um tempo de execução pequeno de plataforma cruzada que pode ser direcionado pelos aplicativos ASP.NET Core. 
 Eles combinam para permitir aplicativos da web modernos, baseados em nuvem.
 {: shortdesc}
+
+# Versões suportadas
+{: #supported_versions}
+Este buildpack suporta as versões a seguir e aquelas marcadas como descontinuados serão removidas em uma
+liberação do buildpack futura:
+
+1. .NET Core 1.0.0-rc2-final (beta) (descontinuado)
+2. .NET Core 1.0.0
+3. .NET Core 1.0.1
 
 ## Detecção
 {: #detection}
@@ -28,7 +36,7 @@ ou se o aplicativo for enviado por push do diretório de saída do comando *dotn
 ## Aplicativo iniciador
 {: #starter_application}
 
-O {{site.data.keyword.Bluemix}} fornece um aplicativo iniciador do ASP.NET Core.  O aplicativo iniciador do ASP.NET Core é um app simples que fornece um modelo que pode ser usado. É possível experimentar o app iniciador e fazer mudanças e enviá-las por push para o ambiente do Bluemix.  Consulte [Usando os aplicativos iniciadores](../../cfapps/starter_app_usage.html) para obter ajuda sobre o uso
+O {{site.data.keyword.Bluemix}} fornece um aplicativo iniciador do ASP.NET Core.  O aplicativo iniciador do ASP.NET Core é um app simples que fornece um modelo que pode ser usado. É possível experimentar o app iniciador e fazer mudanças e enviá-las por push para o ambiente do Bluemix.  Consulte [Usando os aplicativos iniciadores](/docs/cfapps/starter_app_usage.html) para obter ajuda sobre o uso
 do aplicativo iniciador.
 
 ## Versões de tempo de execução
@@ -47,7 +55,9 @@ Controle a versão da CLI .NET com um global.json opcional no diretório raiz do
 ```
 {: codeblock}
 
-Se não for especificado, o Candidato a Liberação estável mais atual será usado.
+Para obter uma lista de versões suportadas da CLI, consulte
+[Atualizações mais recentes para o ASP.NET
+Core Buildpack](/docs/runtimes/dotnet/updates.html).Se não for especificado, o Candidato a Liberação estável mais atual será usado.
 
 ### Customizando fontes de pacote NuGet
 
@@ -73,9 +83,10 @@ A ferramenta Yeoman pode ser usada para gerar novos modelos de projeto, conforme
 [Construindo projetos com o Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html).
 
 Para obter informações sobre como desenvolver localmente usando o Visual Studio,
-consulte [Desenvolvendo com o Visual Studio](../../starters/deploy_vs.html){: new_window}.
+consulte [Desenvolvendo com o Visual Studio](/docs/starters/deploy_vs.html){: new_window}.
 
 ## Enviando por push um aplicativo publicado
+{: #pushing_published_app}
 
 Se você quiser que seu aplicativo contenha todos os binários necessários para que o buildpack não faça download de
 qualquer binário externo, será possível enviar por push um aplicativo *autocontido* publicado.  Consulte
@@ -102,6 +113,7 @@ manifest.yml.  Assim, não é necessário estar nessa pasta quando enviar o apli
 push.
 
 ## Implementando apps com diversos projetos
+{: #developing_apps_with_multiple_projects}
 
 Para implementar um app que contém diversos projetos, você precisará especificar
 qual projeto deseja que o buildpack execute como projeto principal. Isso pode ser feito
@@ -131,6 +143,7 @@ este seja um projeto xproj, também poderia ser especificado como
 {: codeblock}
 
 ## Configurando seu aplicativo para atender na porta adequada
+{: #configuring_listen_proper_port}
 
 O buildpack executará seu aplicativo com o comando *dotnet run* e
 passará o argumento de linha de comandos da seguinte forma
@@ -203,11 +216,20 @@ No método Program.cs `Main`, remova a linha a seguir:
 
 Essas mudanças devem permitir que a CLI .NET localize as `Views`
 do seu aplicativo, uma vez que elas agora serão copiadas na saída de construção quando o
-comando `dotnet run` for executado. Se seu aplicativo tiver qualquer
+comando `dotnet run` for executado.  Se seu aplicativo tiver qualquer
 outro arquivo, como arquivos de configuração json, que são necessários no tempo de
 execução, também será necessário incluí-los na seção
 `include` de
 `copyToOutput` no arquivo project.json.
+
+## FAQ de resolução de problemas
+{: #troubleshooting_faq}
+
+**Q**: o aplicativo falha ao implementar com a mensagem: `API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, ...}`.  O que isso significa?
+
+**A**: se você estiver recebendo uma mensagem semelhante ao enviar por push seu
+aplicativo, provavelmente seu aplicativo está excedendo os limites de cota de memória ou de disco.
+Isso pode ser resolvido aumentando as cotas para seu aplicativo.
 
 # rellinks
 {: #rellinks}

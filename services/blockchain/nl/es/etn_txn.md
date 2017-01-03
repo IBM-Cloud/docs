@@ -14,7 +14,7 @@ years: 2016
 
 # Realización de pruebas en redes de blockchain
 {: #etn_txn}
-Última actualización: 07 de octubre de 2016
+Última actualización: 03 de noviembre de 2016
 {: .last-updated}
 
 Utilice las siguientes pruebas de roles y transacciones para confirmar la disponibilidad y seguridad de la red de IBM Blockchain. Todas las pruebas pueden llevarse a cabo utilizando el plan de desarrollador inicial o el plan de Red empresarial de alta seguridad.
@@ -23,7 +23,8 @@ Utilice las siguientes pruebas de roles y transacciones para confirmar la dispon
 ## Realización de pruebas de roles y transacciones
 {: #sdk}
 
-El SDK de Hyperledger Fabric v0.5 HFC para Node.js contiene pruebas de unidad que destacan las características de seguridad tales como privacidad, confidencialidad y capacidad de no asociación. Puede explorar estas pruebas de unidad en https://github.com/hyperledger/fabric/tree/master/sdk/node/test/unit para ver ejemplos de código para registrar e inscribir usuarios, transferir activos y gestionar activos con roles de usuario y atributos de usuario. Están disponibles las siguientes pruebas de unidad:
+El SDK de Hyperledger Fabric v0.6 HFC para Node.js contiene pruebas de unidad que destacan las características de seguridad tales como privacidad, confidencialidad y capacidad de no asociación.
+Puede explorar estas pruebas de unidad en https://github.com/hyperledger/fabric/tree/v0.6/sdk/node/test/unit para ver ejemplos de código para registrar e inscribir usuarios, transferir activos y gestionar activos con roles de usuario y atributos de usuario. Están disponibles las siguientes pruebas de unidad:
 
 ### registrar.js
 La prueba registrar.js inscribe un usuario "admin" y designa ese usuario como el `registrador` de la red de blockchain. Esta prueba también registra e inscribe los usuarios adicionales "webAdmin" y "webUser". A la identidad "webAdmin" se le otorga autorización para registrar miembros adicionales con el rol de 'cliente'. A la identidad "webUser" no se le otorga autorización para registrar miembros adicionales. Cuando "webAdmin" intenta registrar e inscribir usuarios con los roles "auditor" y "validador", y cuando "webUser" intenta registrar e inscribir "webUser2", los intentos fallan.
@@ -201,11 +202,10 @@ Alice intenta asignar a Bob como el propietario del activo. El intento falla, po
             }
 ```
 
-<!-- comment this one out until Hl v0.6 GAs
 ### asset-mgmt-with-dynamic-roles
-The asset-mgmt-with-dynamic-roles.js test is a variation of `asset-mgmt-with-roles.js`.  The prior test shows the users Alice, Bob, and assigner being enrolled to the network.  However, these users were previously registered with attributes hardcoded in the membersrvc.yaml.  In other words, the `chain.enroll` function logged these users into the network with their corresponding attributes, affiliations, and roles from the membersrvc.yaml; the registration portion had already occurred.  
+La prueba asset-mgmt-with-dynamic-roles.js es una variación de `asset-mgmt-with-roles.js`.  La prueba anterior muestra la inscripción a la red de los usuarios Alice, Bob y assigner.  Sin embargo, estos usuarios se registraron anteriormente con atributos grabados en el código en membersrvc.yaml.  En otras palabras, la función `chain.enroll` ha registrado a estos usuarios en la red con sus correspondientes atributos, afiliaciones y roles de membersrvc.yaml; la parte de registro ya se ha producido.  
 
-In this test we see the registration and enrollment of unique users (i.e. users not already present in the membersrvc.yaml). The dynamic registration and enrollment is done through a callback of the `registerAndEnroll` function, as seen at the end of this test:
+En esta prueba vemos el registro y la inscripción de usuarios exclusivos (es decir, usuarios que todavía no están presentes en membersrvc.yaml). El registro y la inscripción dinámicos se llevan a cabo a través de una devolución de llamada de la función `registerAndEnroll`, como se muestra al final de esta prueba:
 
 ```js
 function registerAndEnroll(name, attrs, cb) {
@@ -220,7 +220,7 @@ function registerAndEnroll(name, attrs, cb) {
 }
 ```
 
-For example, we see alice2 being registered and enrolled with two unique attributes: a 'role' with the value of 'client' and an 'account' with the value of 'aliceAccount'.
+Por ejemplo, vemos el registro y la inscripción de alice2 con dos atributos exclusivos: un 'role' con el valor de 'client' y una 'account' con el valor de 'aliceAccount'.
 
 ```js
 console.log("enrolling alice2 ...");
@@ -229,6 +229,4 @@ console.log("enrolling alice2 ...");
             alice = user;
 ```
 
-The remainder of the test is the same as `asset-mgmt-with-roles.js`, with Alice failing to assign Bob as the owner of the asset.
-
--->
+El resto de esta prueba es igual que `asset-mgmt-with-roles.js`, con Alice no pudiendo asignar a Bob como propietario del activo.

@@ -2,17 +2,16 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.Bluemix}} Painel móvel
 {: #mobile}
-Última atualização: 13 de outubro de 2016
-{: .last-updated}
 
-O painel do {{site.data.keyword.Bluemix}} Mobile oferece um único local para gerenciar os recursos do {{site.data.keyword.Bluemix_notm}} que você precisa para criar e gerenciar seu aplicativo {{site.data.keyword.Bluemix_notm}} Mobile. O painel Móvel traz os serviços mais comuns que são necessários a um desenvolvedor móvel para uma experiência única e conectada que foi otimizada para o desenvolvedor móvel.
+O painel do {{site.data.keyword.Bluemix}} Mobile oferece um único local para gerenciar os recursos do {{site.data.keyword.Bluemix_notm}} que você precisa para criar e gerenciar seu aplicativo {{site.data.keyword.Bluemix_notm}} Mobile. É possível gerenciar apps móveis por meio do conceito de
+[Projetos](projects.html). O painel Móvel traz os serviços mais comuns que são necessários a um desenvolvedor móvel para uma experiência única e conectada que foi otimizada para o desenvolvedor móvel.
 
 O painel Móvel permite que um desenvolvedor móvel crie um projeto de uma variedade
 de Iniciadores, crie e conecte os principais serviços otimizados pelo
@@ -38,52 +37,38 @@ Para uma introdução ao painel Móvel, clique na categoria **Móvel** a partir 
 ## Guia de Introdução
 {: getting-started-mobiledashboard}
 
-O painel permite que você gerencie apps móveis por meio do conceito de um projeto. Crie um projeto na página **Introdução** clicando em **Criar projeto**. Serão apresentadas as opções do [Iniciador](starters.html) que permitem a você começar a criar rapidamente seu app.
+Crie um projeto na página **Introdução** clicando em **Criar projeto**. Serão apresentadas as opções do [Iniciador](starters.html) que permitem a você começar a criar rapidamente seu app.
 
-Com a visualização [Projetos](projects.html), é possível gerenciar todos os seus projetos em um lugar. O
-projeto contém todas as informações de capacidade que você precisa para o app móvel. É
-possível integrar e gerenciar facilmente os serviços móveis de Push, Analítica e
-Autenticação no projeto, com mais recursos a seguir no futuro próximo.
+É possível visualizar e gerenciar todos os seus projetos em um
+lugar selecionando a página Projetos. O projeto mantém as informações de todos os recursos que estão (e que podem ser) integrados em seu app móvel. Se ele estiver disponível, será possível integrar e gerenciar facilmente os serviços móveis de Push, Analítica e Autenticação no projeto, com mais recursos para seguir no futuro
+próximo.
 
-A visualização [Serviços](services.html) mostra uma visão
-operacional das instâncias de serviços móveis existentes. O painel Móvel suporta um
-desenvolvedor móvel e um usuário de gerenciamento de app móvel.
+A visualização [Serviços](services.html) mostra uma visão operacional das instâncias de serviços móveis existentes. O painel Móvel suporta um desenvolvedor móvel e um usuário de gerenciamento de app móvel.
 
 
 <!--You can also discover the {{site.data.keyword.Bluemix_notm}} Mobile offerings, link to the Mobile documentation and get answers from our {{site.data.keyword.Bluemix_notm}} Mobile services community on Stack Overflow.-->
 
 
-Verifique novamente várias vezes para se manter atualizado com novos recursos.
-
-
 # Links relacionados
 {: #rellinks}
 
-<!-- links to internal services don't work
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
-
-<!--## Blog Posts
-{: #general}
--->
-* [Postagem do blog: Introducing the Bluemix Mobile
-dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Postagem
-do blog: Introducing the next generation of the Bluemix Mobile dashboard](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
-* [Postagem
-do blog: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [Postagem do blog: Bluemix
-Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [Postagem do blog: Bluemix
-Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
-<!--## Tutorials and Samples
+## Tutoriais e amostras
 {: #samples}
--->
+
 * [Amostra: Backend móvel para Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+* [Postagem do blog: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
+* [Postagem do blog: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
+* [Postagem do blog: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
+* [Postagem do blog: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
+* [Postagem do blog: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
+* [developerWorks Recipe: Translated weather updates with Push Notifications and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
+* [Tutoriais em vídeo](https://www.youtube.com/channel/UCRW4t4Hzm9gzuiq5naERkCw){: new_window}
+
+## Links relacionados
+{: #general}
+
+* [Mobile Analytics (Beta)](/docs/services/mobileanalytics/index.html){: new_window}
+* [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
+* [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
+* [Mobile Quality Assurance](/docs/services/MobileQualityAssurance/index.html){: new_window}
+* [Notificações push](/docs/services/mobilepush/index.html){: new_window}

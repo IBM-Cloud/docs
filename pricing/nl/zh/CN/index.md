@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-11-30"
  
 
 ---
@@ -51,9 +51,6 @@ copyright:
 # 定价
 {: #pricing}
 
-*上次更新时间：2016 年 9 月 13 日*
-{: .last-updated}
-
 您可以在 {{site.data.keyword.Bluemix}} 中运行应用程序，并免费试用 {{site.data.keyword.Bluemix_notm}} 服务。您可以注册以免费试用 30 天，试用期内可获得额外的限额，包括免费支持。30 天后，您可以选择帐户类型，而且只需要为超出免费限额的使用量付费。Bluemix 为您提供了成本计算器，可用于提前估算成本，还为您提供了“使用情况仪表板”视图，可用于在构建应用程序后检查实际成本。
 {:shortdesc}
 
@@ -74,7 +71,8 @@ copyright:
 
 ![{{site.data.keyword.Bluemix_notm}} 帐户管理流程图](acctmgmt600.png)
 
-*图 1. {{site.data.keyword.Bluemix_notm}} 帐户管理流程图*
+图 1. {{site.data.keyword.Bluemix_notm}} 帐户管理流程图
+{: #pricing_figure1}
 
 
 如果您在免费试用期间转换您的帐户，那么免费限额限制为每个服务通常提供的限额。限额不再是免费试用期间许多 IBM 服务提供的不受限使用限额。
@@ -118,7 +116,7 @@ copyright:
 
 如果在使用现买现付或预订帐户时遇到任何 {{site.data.keyword.Bluemix_notm}} 问题，请参阅[获取联机帮助](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help)来了解更多信息。
 
-**注：**如果您将 {{site.data.keyword.Bluemix_notm}} 缴费帐户与 SoftLayer 帐户相链接，那么从下个月的第一天开始，您的 {{site.data.keyword.Bluemix_notm}} 费用将会列在 SoftLayer 发票上。有关详细信息，请参阅[查看信用值](../admin//softlayerlink.html#bill_usage)。
+**注：**如果您将 {{site.data.keyword.Bluemix_notm}} 缴费帐户与 SoftLayer 帐户相链接，那么从下个月的第一天开始，您的 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 费用将会列在 {{site.data.keyword.Bluemix_notm}} 发票上。有关详细信息，请参阅[查看信用值](/docs/admin//softlayerlink.html#bill_usage)。
 
 ###现买现付帐户
 {: #pay-as-you-go}
@@ -219,8 +217,7 @@ copyright:
 | 第 3 层：2001 - 3000                  |   0.75 美元                       |
 | 第 4 层：3001 - 4000           |      0.60 美元                    |
 |第 5 层：大于 4000 | 0.40 美元 | 
-
-*表 1. 简单层价格表*
+{:caption="Table 1. Simple tier pricing table" caption-side="top"}
 
 下表说明了使用基于简单层定价模型的套餐要支付的费用：
 
@@ -231,7 +228,7 @@ copyright:
 |2500 |	2500 × 0.75 = 1875 |	1875 美元|
 |... |	... |	...|
 |5200 |	5200 × 0.40 = 2080 |2080 美元|
-*表 2. 使用简单层定价模型的费用计算*
+{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
 
 ####累进层
 {: #graduated_tier}
@@ -245,7 +242,7 @@ copyright:
 |    第 3 层：2001 - 3000 |	0.75 美元 |
 |    第 4 层：3001 - 4000 |	0.60 美元 |
 |    第 5 层：大于 4000 |	0.40 美元 |
-*表 3. 累进层价格表*
+{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
 
 下表说明了使用基于累进层定价模型的套餐要支付的费用：
 
@@ -256,7 +253,7 @@ copyright:
 |2500 |	(1000 × 1 (第 1 层的单价)) + (1000 × 0.90 (第 2 层的单价)) + (500 × 0.75 (第 3 层的单价)) = 2275 |	2275 美元 |
 |... |	... |	...|
 |5200 |	(1000 × 1 (第 1 层的单价)) + (1000 × 0.90 (第 2 层的单价)) + (1000 × 0.75 (第 3 层的单价)) + (1000 × 0.60 (第 4 层的单价)) + (1200 × 0.40 (第 5 层的单价)) = 3730 |	3730 美元|
-*表 4. 使用累进层定价模型的费用计算*
+{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
 
 ####包量层
 {: #block_tier}
@@ -270,7 +267,7 @@ copyright:
 | 第 3 层：小于等于 3000 |	2800 美元|
 | 第 4 层：小于等于 4000 |	3500 美元|
 | 第 5 层：小于等于 10000 |	5000 美元|
-*表 5. 包量层价格表*
+{:caption="Table 5. Block tier pricing table" caption-side="top"}
 
 下表说明了使用基于包量层定价模型的套餐要支付的费用：
 
@@ -280,7 +277,7 @@ copyright:
 |1500 |	项数属于第 2 层，所以总价是 1900 美元。 |	1900 美元|
 |... |	... |	...|
 |5200 |	项数属于第 5 层，所以总价是 5000 美元。 |	5000 美元|
-*表 6. 使用包量层定价模型的费用计算*
+{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
 ### 虚拟服务器的免费限额
 {: #vms}
@@ -301,7 +298,7 @@ copyright:
 
 您可以使用不同的方法来了解通过 {{site.data.keyword.Bluemix_notm}} 构建和托管应用程序所需的费用。
 
-* {{site.data.keyword.Bluemix_notm}}“定价”页面上的成本估算工具根据您应用程序的大小来提供粗略的成本估算。
+* {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}} 上的成本估算工具根据您应用程序的大小来提供粗略的成本估算。
 * {{site.data.keyword.Bluemix_notm}}“定价”页面上的成本计算器根据您输入的运行时和服务使用量来提供准确的应用程序价格。
 * 您还可以手动计算成本。
 
@@ -310,7 +307,7 @@ copyright:
 
 您可以通过使用 {{site.data.keyword.Bluemix_notm}} 提供的成本计算器，对应用程序进行快速定价。
 
-1. 转至 {{site.data.keyword.Bluemix_notm}} [ 定价页面](https://console.{DomainName}/pricing/)。 
+1. 转至 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}}。 
 2. 使用其中一个**成本估算**窗口小部件，或者单击**打开计算器**以使用**定价计算器（精确到分）**。
 
 要使用该计算器，请键入所列资源的每月计划使用量；例如，实例数或推送通知数。单击**每月的使用情况**字段，以获取有关字段中预期的单元的提示。计算器会针对您的输入立即显示价格。您还可以调整计算器，以显示每年成本，而不是每月成本。
@@ -344,7 +341,7 @@ copyright:
 |Data Cache - 标准 |	5 GB 高速缓存空间和副本 |	155.00 美元/实例 |
 |Data Cache - 高级 |	25 GB 高速缓存空间和副本 |	505.00 美元/实例|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB 免费数据存储<br/>50,000 个免费稀少 API 调用/月<br/>10,000 个免费频繁 API 调用/月 | 1.00 美元/GB<br/>0.03 美元/1000 个稀少 API 调用<br/>0.15 美元/1000 个频繁 API 调用 |
-*表 7. 价格表*
+{:caption="Table 7. Pricing sheet" caption-side="top"}
 
 ###计算应用程序价格
 
@@ -402,34 +399,36 @@ copyright:
 |SEK |	  瑞典克朗|
 |USD |    美元|
 |ZAR |	  南非兰特|
-*表 8. 支持的货币*
+{:caption="Table 8. Supported currencies" caption-side="top"}
+
+**注：**如果已链接您的 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 帐户，那么您收到的单个发票只使用美元 (USD)。  
 
 ##使用情况仪表板
 {: #usage}
 
-作为帐户所有者或记帐管理员，您可通过“使用情况仪表板”视图来查看贵组织中每月使用的运行时和服务的实时费用。您可以查看所有区域中的运行时 GB-小时和服务使用量，也可选择查看过去 12 个月的特定区域和空间。
+作为帐户所有者或记帐管理员，您可通过“使用情况仪表板”页面来查看贵组织中每月使用的运行时和服务的实时费用。您可以查看所有区域中的运行时 GB-小时和服务使用量，也可选择查看过去 12 个月的特定区域和空间。
 
-要打开“使用情况仪表板”视图，请单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; *your_account_name* &gt; **使用情况仪表板**。在此视图中，您可以查看帐户的运行时和服务使用情况的摘要。记帐管理员只能查看其作为记帐管理员的组织的详细信息。
+要打开**使用情况仪表板**页面，请单击**帐户** &gt; *your_account_name* &gt; **使用情况仪表板**。在此页面中，您可以查看帐户的运行时和服务使用情况的摘要。记帐管理员只能查看其作为记帐管理员的组织的详细信息。
 
 在每个记帐周期结束时，将向帐户所有者收取所有组织中发生的总使用量费用。每个记帐周期持续一个月。
 
-帐户所有者可以按区域和组织过滤使用情况摘要。如果您是帐户所有者，将**组织**设置为**所有组织**，即可查看整个帐户 12 个月的使用情况。单击特定的月份可查看该月的使用情况。所显示的费用表示该月对您（即帐户所有者）记帐的金额。
+帐户所有者可以按区域和组织过滤使用情况摘要。所显示的费用表示该月对您（即帐户所有者）记帐的金额。
 
 如果在**组织**中选择了特定组织，那么会看到该组织的总使用量，包括免费层中的任何使用量。所显示的该组织的费用不是对您记帐的费用。免费层使用量在帐户级别显示为免费，但在组织级别不会显示为免费。因此，查看组织使用量时，会看到该组织的实际使用量，包括免费使用量和收费使用量。除去免费层后，所有组织使用量都会累积到帐户使用量上。
 
 ##查看信用值
 {: #credits}
 
-作为帐户所有者或记帐管理员，您可通过“使用情况仪表板”视图来查看您帐户的任何信用值。例如，如果您已将 SoftLayer 帐户与 {{site.data.keyword.Bluemix_notm}} 帐户相链接，那么您可能已经具有信用值。
+作为帐户所有者或记帐管理员，您可通过**使用情况仪表板**页面来查看您帐户的任何信用值。 
 
-要打开“使用情况仪表板”视图，请单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg)，然后选择**帐户**。在显示的页面上，单击**使用情况仪表板**。在此视图中，您可以查看任何信用值（如果存在的话）以及它们何时到期。
+要打开**使用情况仪表板**页面，请单击**帐户** &gt; **使用情况仪表板**。仪表板显示任何信用值（如果存在）以及它们何时到期。
 
 ##通知
 {: #notifications}
 
 作为现买现付帐户的帐户管理员，您可以针对运行时和服务以及针对单个服务（排除第三方服务）按帐户总成本设置花费通知。在达到所指定花费阈值的 80%、90% 和 100% 时，您会收到通知。
 
-要打开**通知**视图，请单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **帐户** &gt; *your_account_name* &gt; **开支通知**。输入数字值，以根据需要为每种类型的花费通知设置用于触发通知的花费阈值。还可以添加和删除针对个人服务的通知。
+要打开**通知**视图，请单击**帐户** &gt; *your_account_name* &gt; **花费通知**。输入数字值，以根据需要为每种类型的花费通知设置用于触发通知的花费阈值。还可以添加和删除针对个人服务的通知。
 
 ##套餐更改方法
 {: #changing}
@@ -444,7 +443,7 @@ copyright:
 |服务 |	信息|
 |--------|-------------|
 |Presence Insights 	|如果您拥有 Lite 套餐，但已超过免费限额，那么会显示或记录 403 消息，指示您不再有权使用，且您的服务实例已禁用。此外，还会拒绝 POST REST API 调用，并返回 403 响应。<br/><br/>如果服务是因为超过免费限额而禁用，那么可以从 Lite 套餐升级到付费套餐。您的服务会在两小时内重新启用。<br/><br/>如果您拥有付费套餐，那么可以将套餐降级到 Lite 套餐，只要您的使用量未超出事件和总存储量的 Lite 套餐限额即可。<br/><br/>升级或降级套餐时，无需重新编译打包或重新启动应用程序。|
-*表 9. 更改套餐的后续步骤*
+{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###通过命令行界面更改套餐
 
@@ -453,7 +452,9 @@ copyright:
 cf update-service <service_name> [-p <new_plan>]
 ```
 # 相关链接
+{: rellinks}
 ## 常规 
+{: general}
 * [{{site.data.keyword.Bluemix_notm}} 价格表](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} 开发者社区论坛](https://developer.ibm.com/bluemix/)
 * [获取联机帮助](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)

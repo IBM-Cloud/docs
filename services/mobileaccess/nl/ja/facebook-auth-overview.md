@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -11,8 +12,6 @@ lastupdated: "2016-10-02"
 
 # Facebook 資格情報を使用したユーザーの認証
 {: #facebook-auth-overview}
-
-
 
 Facebook を ID プロバイダーとして使用してリソースを保護するように、{{site.data.keyword.amafull}} サービスを構成できます。モバイル・アプリケーションまたは Web アプリケーションのユーザーは、ユーザー自身の Facebook 資格情報を認証に使用できます。
 
@@ -49,13 +48,13 @@ Facebook を ID プロバイダーとして使用してリソースを保護す�
 {{site.data.keyword.amashort}} Web アプリケーション要求フローは、モバイル・クライアントのフローに似ています。ただし、{{site.data.keyword.amashort}} は、{{site.data.keyword.Bluemix_notm}} バックエンド・リソースではなくて Web アプリケーションを保護します。
 
   * 最初の要求は Web アプリケーションによって (例えばログイン・フォームから) 送信されます。
-  * 最終のリダイレクトは、バックエンド保護リソースではなく Web アプリケーション自体の保護領域へのリダイレクトです。 
+  * 最終のリダイレクトは、バックエンド保護リソースではなく Web アプリケーション自体の保護領域へのリダイレクトです。
 
 
-## Facebook for Developers Web サイトからの Facebook App ID の取得
+## Facebook for Developers Web サイトでのアプリケーションの作成
 {: #facebook-appID}
 
-Facebook を ID プロバイダーとして使用し始めるには、Facebook for Developer Web サイトでアプリケーションを作成する必要があります。このプロセス時に、Facebook App ID が作成されます。これは、どのアプリケーションが接続を試行しているかを認識するために Facebook によって使用される固有 ID です。 
+Facebook を ID プロバイダーとして使用し始めるには、Facebook for Developers Web サイトでアプリケーションを作成する必要があります。このプロセス時に、Facebook App ID が作成されます。これは、どのアプリケーションが接続を試行しているかを認識するために Facebook によって使用される固有 ID です。
 
 モバイル・アプリまたは Web アプリ用に Facebook 認証を構成する際にこの値が必要になります。
 
@@ -69,7 +68,7 @@ Facebook を ID プロバイダーとして使用し始めるには、Facebook f
 
 1. セキュリティー検査が表示されることがあります。要求されたアクションを実行します。
 
-1. **「Product Setup」**ページが表示されます。表示される**「アプリ ID (App ID)」**をコピーします。 
+1. **「Product Setup」**ページが表示されます。表示される**「アプリ ID (App ID)」**をコピーします。
 
 ## 次のステップ
 {: #next-steps}

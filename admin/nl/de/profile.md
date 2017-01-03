@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # Profileinstellungen
 {: #usersettings}
-Letzte Aktualisierung: 20. Oktober 2016
-{: .last-updated}
 
 Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Benutzerprofil**, um Ihre Profileinstellungen zu aktualisieren.
 {:shortdesc}

@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,9 +13,6 @@
 
 # Exemplos de Insights for Twitter
 {: #examples}
-
-*Última atualização: 13 de maio de 2016*
-{: .last-updated}
 
 Para introduzir o serviço {{site.data.keyword.twittershort}}, use as amostras fornecidas para entender como aproveitar o
 serviço.
@@ -200,7 +205,8 @@ HTTP/1.1
 
 É possível emitir uma operação GET em seu aplicativo para recuperar tweets de um dos fluxos de dados. Por exemplo, a procura de tweets do Decahose é implementada como: `/api/v1/messages/search?q=QUERY&size=NUMBER&from=NUMBER`. Para usuários do Plano de entrada, a procura de tweets do fluxo do PowerTrack é implementada como: `/api/v1/tracks/{trackId}/messages/search?q=QUERY&size=NUMBER&from=NUMBER`.
 
-O parâmetro "size" especifica o número de mensagens a serem retornadas em uma resposta de consulta, enquanto o parâmetro "from" indica a mensagem inicial a ser retornada no conjunto de resultados completo. A referência {trackId} é o identificador exclusivo de uma faixa específica. Ao usar cURL, é possível procurar no fluxo do Decahose tweets que contêm "IBM", digitando:
+O parâmetro "size" especifica o número de mensagens a serem retornadas em uma resposta de consulta, enquanto o parâmetro "from" indica a mensagem inicial a ser retornada no conjunto de resultados completo. A referência {trackId} é o identificador exclusivo de uma faixa específica.
+Ao usar cURL, é possível procurar no fluxo do Decahose tweets que contêm "IBM", digitando:
 
 ```
 curl https://<username>:<password>@cdeservice.mybluemix.net:443/api/v1/messages/search?q=IBM

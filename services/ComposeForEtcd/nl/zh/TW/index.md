@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # 開始使用 {{site.data.keyword.composeForEtcd}}
 {: #getting-started-with-compose-for-etcd}
-
-前次更新：2016 年 9 月 20 日
-{: .last-updated}
 
 etcd 是鍵值儲存庫，保留協調及管理伺服器叢集進行分散式伺服器配置管理所需的一律正確資料。etcd 使用 RAFT 共識演算法，來確保叢集中的資料一致性。它會強制執行對資料執行作業的順序，讓叢集中的每個節點以相同的方式達到相同的結果。{{site.data.keyword.composeForEtcd_full}} 會新增 etcd 中所儲存配置資料的自動備份。直覺式管理介面可讓您輕鬆地監視、調整及管理部署。
 {:shortdesc}
@@ -43,6 +40,8 @@ etcd 是鍵值儲存庫，保留協調及管理伺服器叢集進行分散式伺
 `db_type`|服務所提供的資料庫類型；在此情況下，為 `etcd`。
 `name`|資料庫部署名稱。
 `uri`|要在連接至服務時使用的 URI。`uri` 包括綱目 (`amqps:`)、管理使用者名稱和密碼、伺服器的主機名稱、要連接至的埠號，以及 vhost 名稱。
+
+{: caption="Table 1. {{site.data.keyword.composeForEtcd}} credentials" caption-side="top"}
 
 # 相關鏈結
 {: #rellinks}

@@ -17,8 +17,7 @@ years: 2016
 Dernière mise à jour : 7 octobre 2016
 {: .last-updated}
 
-Les comportements suivants ont été testés et vérifiés par IBM. 
-Les résultats ont été obtenus dans un environnement High Security (sauf indication contraire) :
+Les comportements suivants ont été testés et vérifiés par IBM. Les résultats ont été obtenus dans un environnement High Security (sauf indication contraire) :
 {:shortdesc}
 
 ### Performances/Contrainte
@@ -47,4 +46,6 @@ Ces tests ont été effectués pour garantir la stabilité et la résistance de 
 - L'arrêt de 2 noeuds, le réseau s'arrête en l'absence de consensus.
 - Le redémarrage de l'un des noeuds arrêtés au cours du test précédent.  Le réseau reprend et le noeud qui a redémarré se synchronise avec d'autres homologues de validation. Pour plus de détails sur les étapes de test PBFT, consultez la rubrique [Tests du consensus et de la disponibilité](etn_pbft.html).
 
-Passez à la rubrique [Tests complémentaires](etn_next.html) pour effectuer des tests supplémentaires et des fonctionnalités vérifiés.  
+Passez à la rubrique [Tests
+complémentaires](etn_next.html) pour effectuer des tests supplémentaires et
+des fonctionnalités vérifiés.  

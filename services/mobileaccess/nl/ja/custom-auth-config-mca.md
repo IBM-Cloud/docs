@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02" 
+lastupdated: "2016-11-07"
+
 ---
 
 # カスタム認証用の {{site.data.keyword.amashort}} の構成
@@ -13,23 +14,18 @@ lastupdated: "2016-10-02"
 
 ## 開始する前に
 {: #custom-dash-begin}
-* [概説](index.html)をお読みください。
-* {{site.data.keyword.amashort}} Server SDK でバックエンド・アプリケーションを保護します。詳しくは、[リソースの保護](protecting-resources.html)を参照してください。
-* カスタム ID プロバイダー・アプリケーションを実行します。
+以下が必要です。
+* {{site.data.keyword.amafull}} サービスのインスタンス。
+* カスタム ID プロバイダー・アプリケーション。
 
-## {{site.data.keyword.Bluemix}} ダッシュボードでのカスタム認証の構成
+## {{site.data.keyword.amafull}} ダッシュボードでのカスタム認証の構成
 {: #custom-dash-config}
-{{site.data.keyword.Bluemix}} ダッシュボードを使用してカスタム認証を構成します。
+{{site.data.keyword.amafull}} ダッシュボードを使用してカスタム認証を構成します。
 
-1. {{site.data.keyword.Bluemix}}ダッシュボードでアプリを開きます。
-
-1. **「モバイル・オプション」**をクリックし、**「経路」** (`applicationRoute`) と **「アプリ GUID」** (`applicationGUID`) のメモを取ります。SDK を初期化するために、これらの値が必要になります。
-
-1. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードがロードされます。
-
-1. **「カスタム」**タイルをクリックします。
-
-1. カスタム ID プロバイダーの**「レルム名」**と**「ベース URL」** を入力し、変更内容を保存します。
+1. {{site.data.keyword.amafull}} ダッシュボードでサービスを開きます。
+1. **「管理」**タブで、**「許可」**をオンに切り替えます。
+1. **「カスタム」**セクションを展開します。
+1. **「レルム名」**、**「カスタム ID プロバイダー URL」**を入力します。**「Web アプリケーションのリダイレクト URI (Your Web Application Redirect URIs)」**値は、Web アプリケーションの場合にのみ必要です。
 
 ## 次のステップ
 {: #next-steps}

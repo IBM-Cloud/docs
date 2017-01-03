@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Compose for MongoDB 시작하기
 {: #getting-started-with-compose-for-mongodb}
-
-마지막 업데이트 날짜: 2016년 9월 20일
-{: .last-updated}
 
 {{site.data.keyword.composeForMongoDB_full}}에서는 MongoDB의 강력한 색인 작성, 조회, 집계, 폭넓은 드라이버 지원을 사용함으로써 많은 스타트업과 엔터프라이즈에서 찾는 JSON 데이터 저장소가 되었습니다. {{site.data.keyword.composeForMongoDB}}에서는 간단한 Auto-Scaling 배치 시스템을 제공합니다. 고가용성과 중복성, 자동화된 백업과 On-Demand의 중단 없는 백업, 모니터링 도구, 경보 시스템으로 통합, 성능 분석 보기 외의 여러 기능을 깔끔하고 단순한 사용자 인터페이스에서 제공합니다.
 {:shortdesc}
@@ -41,10 +38,11 @@ copyright:
 ----------|-----------
 `uri`|서비스에 연결할 때 사용할 URI입니다. `uri`는 스키마(`mongodb:`), 관리 사용자 이름과 비밀번호, 서버의 호스트 이름, 연결할 포트 번호, 데이터베이스 이름, SSL 연결을 사용할 `?ssl=true`를 포함합니다.
 `uri_cli`|데이터베이스 인스턴스에 연결하는 `mongo` 쉘 명령행입니다.
-`ca_certificate_base64`|앱이 적합한 서버에 연결되었는지 확인하는 데 사용되는 자체 서명된 인증서입니다. 인증서는 base64로 인코딩됩니다. 샘플 앱에 표시된 대로 사용하기 전에 키를 디코딩해야 합니다.
+`ca_certificate_base64`|앱이 적합한 서버에 연결되었는지 확인하는 데 사용되는 자체 서명된 인증서입니다. 인증서는 base64로 인코딩됩니다. You must decode the key before using it, as shown in the sample app.
 `deployment_id`|Compose에서 작성된 서비스의 내부 ID입니다.
 `db_type`|서비스에서 제공하는 데이터베이스의 유형입니다. 이 경우 `mongodb`입니다.
 `이름`|데이터베이스 배치 이름입니다.
+{: caption="Table 1. {{site.data.keyword.composeForMongoDB}} credentials" caption-side="top"}
 
 # 관련 링크
 {: #rellinks}

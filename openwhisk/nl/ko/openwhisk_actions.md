@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-27"
  
 
 ---
@@ -19,8 +19,6 @@ copyright:
 # {{site.data.keyword.openwhisk_short}} 조치 작성 및 호출
 {: #openwhisk_actions}
 
-마지막 업데이트 날짜: 2016년 9월 9일
-{: .last-updated}
 
 조치는 {{site.data.keyword.openwhisk}} 플랫폼에서 실행되는 Stateless 코드 스니펫입니다. 조치는 JavaScript 함수, Swift 함수 또는 Docker 컨테이너에 패키지화된 사용자 정의 실행 가능 프로그램일 수 있습니다. 예를 들어, 이미지에서 얼굴을 발견하거나 일련의 API 호출을 집계하거나 트윗을 게시하기 위해 조치를 사용할 수 있습니다.
 {:shortdesc}
@@ -64,7 +62,7 @@ ok: created action hello
 3. 작성한 조치 나열:
   
   ```
-wsk action list
+  wsk action list
   ```
   {: pre}
   ```
@@ -75,7 +73,7 @@ actions
 
   방금 작성한 `hello` 조치를 볼 수 있습니다.
 
-4. 조치를 작성한 후에 'invoke' 명령을 사용하여 OpenWhisk의 클라우드 내에서 이를 실행할 수 있습니다. 명령에 플래그를 지정하여 *블로킹* 호출(즉, 요청/응답 스타일) 또는 *비블로킹* 호출로 조치를 호출할 수 있습니다. 블로킹 호출 요청은 활성화 결과를 사용할 수 있을 때까지 *대기*합니다. 대기 기간은 조치의 구성된 [시간 한계](./reference.md#per-action-timeout-ms-default-60s) 또는 60초 미만입니다. 대기 기간 내에 활성화 결과를 사용할 수 있는 경우 활성화 결과가 리턴됩니다. 그렇지 않은 경우, 비블로킹 요청과 마찬가지로 시스템에서 활성화 처리가 계속되고 나중에 결과를 확인할 수 있도록 활성화 ID가 리턴됩니다(활성화 모니터링에 대한 팁은 [여기](#watching-action-output) 참조). 
+4. 조치를 작성한 후에 'invoke' 명령을 사용하여 OpenWhisk의 클라우드 내에서 이를 실행할 수 있습니다. 명령에 플래그를 지정하여 *블로킹* 호출(즉, 요청/응답 스타일) 또는 *비블로킹* 호출로 조치를 호출할 수 있습니다. 블로킹 호출 요청은 활성화 결과를 사용할 수 있을 때까지 *대기*합니다. 대기 기간은 조치의 구성된 [시간 한계](./openwhisk_reference.html#openwhisk_syslimits_timeout) 또는 60초 미만입니다. 대기 기간 내에 활성화 결과를 사용할 수 있는 경우 활성화 결과가 리턴됩니다. 그렇지 않은 경우, 비블로킹 요청과 마찬가지로 시스템에서 활성화 처리가 계속되고 나중에 결과를 확인할 수 있도록 활성화 ID가 리턴됩니다(활성화 모니터링에 대한 팁은 [여기](#watching-action-output) 참조). 
 
   이 예에서는 블로킹 매개변수인 `--blocking`을 사용합니다. 
 
@@ -157,10 +155,32 @@ function main(params) {
 wsk action update hello hello.js
   ```
   {: pre}
+
+3.  매개변수는 명령행에 명시적으로 제공하거나 원하는 매개변수가 포함된 파일로 제공할 수 있습니다. 
+
+  명령행을 통해 직접 매개변수를 전달하려면 `--param` 플래그에 키/값 쌍을 제공하십시오. 
   ```
-wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+  wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
+
+  매개변수 내용이 포함된 파일을 사용하려면 매개변수가 포함된 파일을 JSON 형식으로 작성하십시오.
+파일 이름은 `param-file` 플래그에 전달되어야 합니다.
+
+  parameters.json이라는 예제 매개변수 파일: 
+  ```
+  {
+      "name": "Bernie",
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {
             "payload": "Hello, Bernie from Vermont"
@@ -168,7 +188,7 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
   ```
   {: screen}
 
-  `--param` 옵션을 사용하여 매개변수 이름 및 값을 지정하고 `--result` 옵션을 사용하여 호출 결과만 표시하는 방법에 주의하십시오.
+  호출 결과만 표시하려면 `--result` 옵션을 사용하십시오. 
 
 ### 기본 매개변수 설정
 {: #openwhisk_binding_actions}
@@ -177,17 +197,34 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
 
 모든 매개변수를 매번 조치에 전달하기보다 특정 매개변수를 바인딩할 수 있습니다. 다음은 조치가 "Vermont"라는 위치를 기본값으로 사용하도록 *place* 매개변수를 바인딩하는 예입니다.
  
-1. `--param` 옵션을 사용하여 매개변수값을 바인딩하도록 조치를 업데이트하십시오. 
+1. `--param` 옵션을 사용하여 매개변수값을 바인딩하거나 매개변수가 포함된 파일을 `--param-file`에 전달하여 조치를 업데이트하십시오. 
+
+  명령행에 명시적으로 기본 매개변수를 지정하려면 키/값 쌍을 `param` 플래그에 제공하십시오.
 
   ```
-wsk action update hello --param place 'Vermont'
+  wsk action update hello --param place Vermont
+  ```
+  {: pre}
+
+  파일의 매개변수를 전달하려면 원하는 컨텐츠를 JSON 형식으로 포함하여 파일을 작성해야 합니다. 파일 이름은 `param-file` 플래그에 전달되어야 합니다.
+
+  parameters.json이라는 예제 매개변수 파일: 
+  ```
+  {
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action update hello --param-file parameters.json
   ```
   {: pre}
 
 2. 이번에는 `name` 매개변수만 전달하여 조치를 호출하십시오. 
 
   ```
-wsk action invoke --blocking --result hello --param name 'Bernie'
+  wsk action invoke --blocking --result hello --param name Bernie
   ```
   {: pre}
   ```
@@ -201,10 +238,30 @@ wsk action invoke --blocking --result hello --param name 'Bernie'
 
 3. `name` 및 `place` 값을 둘 다 전달하여 조치를 호출하십시오. 나중에 조치에 바인딩된 값을 겹쳐씁니다. 
 
+  `--param` 플래그 사용:
+
   ```
-wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+  wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
+  `--param-file` 플래그 사용:
+
+  parameters.json 파일:
+  ```
+  {
+    "name": "Bernie",
+    "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -232,7 +289,7 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
 
   `main` 함수가 Promise를 리턴하며 이는 활성화가 아직 완료되지 않았지만 나중에 완료될 것으로 예상됨을 표시합니다. 
 
-  이 경우에 `setTimeout()` JavaScript 함수는 콜백 함수를 호출하기 전에 20초 동안 대기합니다. 이는 비동기 코드를 나타내며 Promise의 콜백 함수 내부에 들어갑니다. 
+  이 경우에 `setTimeout()` JavaScript 함수는 콜백 함수를 호출하기 전에 2초 동안 대기합니다. 이는 비동기 코드를 나타내며 Promise의 콜백 함수 내부에 들어갑니다. 
 
   Promise의 콜백에는 resolve와 reject라는 두 개의 인수가 사용되며 이는 둘 다 함수입니다. `resolve()`를 호출하면 Promise를 이행하고 활성화가 정상적으로 완료되었음을 표시합니다. 
 
@@ -319,7 +376,7 @@ var request = require('request');function main(params) {
   ```
   {: codeblock}
   
-  예에서 조치가 JavaScript `request` 라이브러리를 사용하여 Yahoo Weather API에 대한 HTTP 요청을 작성하고 JSON 결과에서 필드를 추출합니다. [참조](./reference.md#javascript-runtime-environments)에서는 사용자의 조치에서 사용할 수 있는 Node.js 패키지에 대해 자세히 설명합니다.
+  예에서 조치가 JavaScript `request` 라이브러리를 사용하여 Yahoo Weather API에 대한 HTTP 요청을 작성하고 JSON 결과에서 필드를 추출합니다. [참조](./openwhisk_reference.html#openwhisk_ref_javascript_environments)에서는 사용자의 조치에서 사용할 수 있는 Node.js 패키지에 대해 자세히 설명합니다.
   
   또한 이 예에서는 비동기 조치에 대한 필요성을 표시합니다. 이 조치는 Promise를 리턴하여 함수가 리턴할 때 이 조치의 결과를 아직 사용할 수 없음을 표시합니다. 대신 HTTP 호출이 완료된 후 `request` 콜백에서 결과를 사용할 수 있으며 결과는 `resolve()` 함수에 인수로 전달됩니다. 
   
@@ -330,7 +387,7 @@ wsk action create weather weather.js
   ```
   {: pre}
   ```
-wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+  wsk action invoke --blocking --result weather --param location "Brooklyn, NY"
   ```
   {: pre}
   ```
@@ -339,13 +396,91 @@ wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
   }
   ```
   {: screen}
-  
-### 조치 시퀀스 작성
+
+### Node.js 모듈로 조치 패키징
+{: #openwhisk_js_packaged_action}
+
+단일 JavaScript 소스 파일에 모든 조치 코드를 쓰는 것의 대안으로 `npm` 패키지로 조치를 쓸 수 있습니다. 다음 파일을 사용한 디렉토리를 예제로 고려해 보십시오. 
+
+먼저, `package.json`:
+
+```
+{
+  "name": "my-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies" : {
+    "left-pad" : "1.1.3"
+  }
+}
+```
+{: codeblock}
+
+그런 다음, `index.js`:
+
+```
+function myAction(args) {
+    const leftPad = require("left-pad")
+    const lines = args.lines || [];
+    return { padded: lines.map(l => leftPad(l, 30, ".")) }
+}
+
+exports.main = myAction;
+```
+{: codeblock}
+
+조치는 `exports.main`을 통해 표시됨에 유의하십시오. 조치 핸들러가 오브젝트(또는 오브젝트의 `Promise`) 채택 및 리턴의 일반적인 시그니처를 따르는 한 조치 핸들러는 자체적으로 이름을 지정할 수 있습니다. 
+
+이 패키지에서 OpenWhisk 조치를 작성하려면 다음을 수행하십시오.
+
+1. 먼저 로컬로 모든 종속 항목을 설치하십시오.
+
+  ```
+  npm install
+  ```
+  {: pre}
+
+2. 모든 파일(모든 종속 항목 포함)이 있는 `.zip` 아카이브를 작성하십시오.
+
+  ```
+  zip -r action.zip *
+  ```
+  {: pre}
+
+3. 조치를 작성하십시오.
+
+  ```
+  wsk action create packageAction --kind nodejs:6 action.zip
+  ```
+  {: pre}
+
+  CLI 도구를 사용하여 `.zip` 아카이브에서 조치를 작성하는 경우 명시적으로 `--kind` 플래그의 값을 제공해야 합니다. 
+
+4. 조치를 다른 조치와 같이 호출할 수 있습니다.
+
+  ```
+  wsk action invoke --blocking --result packageAction --param lines "[\"and now\", \"for something completely\", \"different\" ]"
+  ```
+  {: pre}
+  ```
+  {
+      "padded": [
+          ".......................and now",
+          "......for something completely",
+          ".....................different"
+      ]
+  }
+  ```
+  {: screen}
+
+마지막으로, 대부분의 `npm` 패키지가 `npm install`에 JavaScript 소스를 설치하는 동안 일부 패키지도 2진 아티팩트를 설치하고 컴파일하는 점에 유의하십시오. 현재 아카이브 파일 업로드는 2진 종속 항목이 아닌 JavaScript 종속 항목만 지원합니다. 조치 호출은 아카이브에 2진 종속 항목이 포함된 경우 실패할 수 있습니다.
+
+## 조치 시퀀스 작성
 {: #openwhisk_create_action_sequence}
 
 일련의 조치를 연결하는 조치를 작성할 수 있습니다.
 
-몇 개의 유틸리티 조치가 `/whisk.system/utils`라는 패키지에서 제공되며 첫 번째 시퀀스를 작성하는 데 이를 사용할 수 있습니다. [패키지](./packages.md) 절에서 패키지에 대한 자세한 정보를 볼 수 있습니다.
+몇 개의 유틸리티 조치가 `/whisk.system/utils`라는 패키지에서 제공되며 첫 번째 시퀀스를 작성하는 데 이를 사용할 수 있습니다. [패키지](./openwhisk_packages.html) 절에서 패키지에 대한 자세한 정보를 볼 수 있습니다.
 
 1. `/whisk.system/utils` 패키지의 조치를 표시하십시오.
   
@@ -363,9 +498,9 @@ wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
    action /whisk.system/utils/cat: Concatenates input into a string
   ```
   {: screen}
-
+  
   이 예에서는 `split` 및 `sort` 조치를 사용합니다. 
-
+  
 2. 한 조치의 결과가 다음 조치에 인수로 전달되도록 조치 시퀀스를 작성하십시오.
   
   ```
@@ -400,7 +535,7 @@ wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
 시퀀스에 있는 첫 번째 조치의 결과는 시퀀스의 두 번째 조치에 대한 입력 JSON 오브젝트가 됩니다(계속해서 동일하게 반복).
 시퀀스에 처음 전달된 매개변수를 첫 번째 조치가 명시적으로 해당 결과에 포함시키지 않는 경우 이 오브젝트는 그러한 매개변수를 포함하지 않습니다.
 조치에 대한 입력 매개변수는 조치의 기본 매개변수와 병합되며, 앞에 있는 것이 우선되고 일치하는 기본 매개변수를 대체합니다.
-이름 지정된 여러 매개변수를 사용하여 조치 시퀀스를 호출하는 방법에 대한 자세한 정보는 [기본 매개변수 설정](./actions.md#setting-default-parameters)을 참조하십시오.
+이름 지정된 여러 매개변수를 사용하여 조치 시퀀스를 호출하는 방법에 대한 자세한 정보는 [기본 매개변수 설정](./openwhisk_actions.html#openwhisk_binding_actions)을 참조하십시오.
 
 ## Python 조치 작성
 {: #openwhisk_actions_python}
@@ -504,6 +639,74 @@ wsk action invoke --blocking --result helloSwift --param name World
 개발 중이며 {{site.data.keyword.openwhisk_short}}에서는 일반적으로 사용 가능한 가장 최신 릴리스를
 사용합니다. 이러한 최신 릴리스가 항상 안정적인 것은 아닙니다. 또한 {{site.data.keyword.openwhisk_short}}와
 함께 사용되는 Swift의 버전이 XCode on MacOS의 안정적인 릴리스의 Swift 버전과 일치하지 않을 수 있습니다.
+
+## Java 조치 작성
+{: #openwhisk_actions_java}
+
+Java 조치 작성 프로세스는 JavaScript 및 Swift 조치 작성 프로세스와 유사합니다.
+다음 절에서는 단일 Java 조치를 작성하고 호출하여 해당 조치에 매개변수를 추가하는 방법에 대해 안내합니다.
+
+Java 파일을 컴파일, 테스트 및 아카이브하려면 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)이 로컬에 설치되어 있어야 합니다. 
+
+### 조치 작성 및 호출
+{: #openwhisk_actions_java_invoke}
+
+Java 조치는 다음과 같은 정확한 시그니처가 있는 `main`이라는 메소드가 포함된 Java 프로그램입니다. 
+```
+public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
+```
+{: codeblock}
+
+예를 들어, 다음 컨텐츠를 사용하여 `Hello.java`라는 Java 파일을 작성하십시오. 
+
+```
+import com.google.gson.JsonObject;
+public class Hello {
+    public static JsonObject main(JsonObject args) {
+        String name = "stranger";
+        if (args.has("name"))
+            name = args.getAsJsonPrimitive("name").getAsString();
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+    }
+}
+```
+{: codeblock}
+
+그런 다음 다음과 같이 `Hello.java`를 JAR 파일로 컴파일하십시오. 
+```
+javac Hello.java
+jar cvf hello.jar Hello.class
+```
+{: pre}
+
+**참고:** [google-gson](https://github.com/google/gson)은 Java 파일을 컴파일할 때 Java CLASSPATH에 있어야 합니다.
+
+다음과 같이 이 JAR 파일에서 `helloJava`라는 OpenWhisk 조치를 작성할 수 있습니다.
+
+```
+wsk action create helloJava hello.jar
+```
+{: pre}
+
+명령행과 `.jar` 소스 파일을 사용하는 경우 Java 조치를 작성하도록 지정할 필요가 없습니다. 도구가 파일 확장자에서 이를 판별합니다. 
+
+Java 조치에 대한 조치 호출은 Swift 및 JavaScript 조치에 대한 조치 호출과 동일합니다. 
+
+```
+wsk action invoke --blocking --result helloJava --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
+
+**참고:** JAR 파일에 필수 시그니처와 일치하는 기본 메소드가 포함된 둘 이상의 클래스가 있는 경우, CLI 도구는 `jar -tf`에 의해 보고된 첫 번째 클래스를 사용합니다.
 
 
 ## Docker 조치 작성
@@ -609,10 +812,9 @@ wsk action invoke --blocking --result example --param payload Rey
   ```
   {: screen}
   
-  Docker 조치를 업데이트하려면 buildAndPush.sh를 실행하여 Docker 허브의 이미지를 새로 고치십시오. 그러면 다음 번에 시스템이 Docker 이미지를 가져와 조치의 새 코드를 실행할 수 있습니다.
-  웜(warm) 컨테이너가 없는 경우 새 호출은 새 Docker 이미지를 사용합니다.
-  이전 버전의 Docker 이미지를 사용하는 웜(warm) 컨테이너가 있는 경우, wsk 조치 업데이트를 실행하지 않는 한 새 호출은 계속해서 이 이미지를 사용합니다. wsk 조치 업데이트는 새 호출에 대해 새 Docker 이미지를 가져오는 docker pull을 강제 실행하도록 시스템에 지시합니다. 
-  
+  Docker 조치를 업데이트하려면 buildAndPush.sh를 실행하여 Docker 허브에 최신 이미지로 업로드하십시오. 이에 따라 다음에 시스템이 사용자의 조치에 대한 코드를 실행할 때 새 Docker 이미지를 가져올 수 있습니다. 웜(warm) 컨테이너가 없는 경우 새 호출은 새 Docker 이미지를 사용합니다.
+  그러나 이전 버전의 Docker 이미지를 사용하는 웜(warm) 컨테이너가 있는 경우, wsk 조치 업데이트를 실행하지 않는 한 새 호출은 계속해서 이 이미지를 사용합니다. wsk 조치 업데이트는 새 호출에 대해 새 Docker 이미지를 가져오는 docker pull을 실행하도록 시스템에 지시합니다.
+ 
   ```
 ./buildAndPush.sh janesmith/blackboxdemo
   ```

@@ -6,10 +6,12 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 #Habilitación de notificaciones push avanzadas
-Última actualización: 17 de octubre de 2016
+Última actualización: 06 de diciembre de 2016
 {: .last-updated}
 
 Configure un identificador de iOS, un sonido, una carga útil de JSON adicional, notificaciones accionables y notificaciones retenidas.
@@ -183,7 +185,7 @@ Swift
 
 Al recibir una notificación que necesita reacciones, el control se pasa al siguiente método según el identificador seleccionado.
 
-###Objective-C
+Objective-C
 
 ```
 (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
@@ -196,7 +198,7 @@ Al recibir una notificación que necesita reacciones, el control se pasa al sigu
 ```
 	{: codeblock}
 
-###Swift
+Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

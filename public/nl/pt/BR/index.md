@@ -1,11 +1,9 @@
 ---
-
  
 
 copyright:
-
   years: 2016
-
+lastupdated: "2016-08-08"
  
 
 ---
@@ -13,10 +11,8 @@ copyright:
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} Público
+# {{site.data.keyword.Bluemix_notm}} Public
 {: #public}
-Última atualização: 8 de agosto de 2016
-{: .last-updated}
 
 
 O {{site.data.keyword.Bluemix_notm}} sumariza e oculta

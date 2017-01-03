@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -23,28 +25,28 @@ copyright:
 로그는 작업이 성공적으로 실행되었는지 또는 실패하였는지 등의 정보를 제공합니다.
 또한 문제점을 디버그하고 문제점의 원인을 판별하는 데 사용할 수 있는 관련 정보도 제공합니다. 
 
-로그 형식은 고정되어 있습니다. 상세 로그의 경우 로그를 필터링하거나 외부 로깅 호스트를 사용하여 로그를 저장하고 처리할 수 있습니다. 로그 형식, 로그 보기 및 필터링, 외부 로깅 구성에 대한 자세한 정보는 [Cloud Foundry에서 실행되는 앱 로깅](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}을 참조하십시오.
+로그 형식은 고정되어 있습니다. 상세 로그의 경우 로그를 필터링하거나 외부 로깅 호스트를 사용하여 로그를 저장하고 처리할 수 있습니다. 로그 형식, 로그 보기 및 필터링, 외부 로깅 구성에 대한 자세한 정보는 [Cloud Foundry에서 실행되는 앱 로깅](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}을 참조하십시오.
 
 
 ## 스테이징 오류 디버깅
 {: #debugging-staging-errors}
 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을
-스테이징할 때 문제점이 발견될 수 있습니다. 앱이 스테이징에 실패하는 경우, 스테이징(STG) 로그를 검색하고 검토하여 앱 배치 중에 발생한 내용을 판별하고 문제점에서 복구할 수 있습니다. Bluemix 앱에 대한 로그를 보는 방법에 대한 자세한 정보는 [로그 보기](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}를 참조하십시오.   
+스테이징할 때 문제점이 발견될 수 있습니다. 앱이 스테이징에 실패하는 경우, 스테이징(STG) 로그를 검색하고 검토하여 앱 배치 중에 발생한 내용을 판별하고 문제점에서 복구할 수 있습니다. Bluemix 앱에 대한 로그를 보는 방법에 대한 자세한 정보는 [로그 보기](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}를 참조하십시오.   
 
 {{site.data.keyword.Bluemix_notm}}에서 앱이 실패하는 원인을 파악하려면 앱이 {{site.data.keyword.Bluemix_notm}}에 배치되고 그 위에서 실행되는 방법을 알고 있어야 합니다. 자세한 정보는 [애플리케이션
-배치](../manageapps/depapps.html#appdeploy){: new_window}를 참조하십시오. 
+배치](/docs/manageapps/depapps.html#appdeploy){: new_window}를 참조하십시오. 
 
 
 다음 프로시저는 `cf logs` 명령을 사용하여 스테이징 오류를
 디버그하는 방법을 보여줍니다. 다음 단계를 수행하기 전에 cf 명령행 인터페이스를 설치했는지
 확인하십시오. cf 명령행 인터페이스 설치에 대한 자세한 정보는
-[ cf 명령행 인터페이스 설치](../starters/install_cli.html){: new_window}를
+[ cf 명령행 인터페이스 설치](/docs/starters/install_cli.html){: new_window}를
 참조하십시오.
 
   1. cf 명령행 인터페이스에 다음 코드를 입력하여 {{site.data.keyword.Bluemix_notm}}에 연결하십시오.
 
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	   cf api https://api.ng.bluemix.net
   ```
 
   2. `cf login`을 입력하여 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오. 
@@ -159,8 +161,7 @@ cf 명령행 인터페이스에 `cf logs appname --recent`를 입력하면 가�
   * Node.js 애플리케이션의 경우, 로그 디렉토리의 파일에 명시적으로 기록하도록 console.log 함수를 대체할 수 있습니다.
   * PHP 애플리케이션의 경우, error_log 함수를 사용하여 로그 디렉토리의 파일에
 기록할 수 있습니다. 
-  * Python 애플리케이션의 경우, 다음과 같이 로거가 로그 디렉토리의 파일에
-기록하도록 할 수 있습니다. logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * Python 애플리케이션의 경우, 다음과 같이 로거가 로그 디렉토리의 파일에 기록하도록 할 수 있습니다. `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
   * Ruby 애플리케이션의 경우, 로거가 로그 디렉토리의 파일에
 기록하도록 할 수 있습니다. 
 

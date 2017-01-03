@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-01"
+
 ---
 
 {:screen: .screen}
@@ -18,10 +19,15 @@ lastupdated: "2016-10-02"
 **注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK。有关我们强烈建议使用 Swift SDK 的新应用程序。本页面中的指示信息适用于 {{site.data.keyword.amashort}} 客户端 Objective-C SDK。有关使用 Swift SDK 的指示信息，请参阅[在 iOS 应用程序 (Swift SDK) 中启用 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)。
 
 ## 开始之前
-{: #google-auth-ios-before}
+{: #before-you-begin}
 您必须具有：
-* Xcode 中的 iOS 项目。它不需要安装 {{site.data.keyword.amashort}} 客户端 SDK。
-* 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
+* {{site.data.keyword.amafull}} 服务和 {{site.data.keyword.Bluemix_notm}} 应用程序的实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
+
+
+
+
+* 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
+* **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
 
 ## 针对 iOS 平台配置 Google 项目
 {: #google-auth-ios-project}
@@ -31,7 +37,7 @@ lastupdated: "2016-10-02"
 
 1. 从**社交 API** 列表中，选择 **Google+ API**，然后单击**启用**。
 
-1. 从**凭证**列表中，单击**创建凭证**按钮，然后选择 *OAuth 客户端标识*。
+1. 从**凭证**列表中，单击**创建凭证**按钮，然后选择 **OAuth 客户端标识**。
 
 1. 此时，将向您显示应用程序类型选项。请选择 **iOS**。
 
@@ -47,15 +53,11 @@ lastupdated: "2016-10-02"
 
 现在，您已经有 Google iOS 客户端标识，可以在 {{site.data.keyword.Bluemix_notm}}“仪表板”中启用 Google 认证。
 
-1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开应用程序。
-
-1. 单击**移动选项**，然后记录**路径** (`applicationRoute`) 和**应用程序 GUID** (`applicationGUID`)。初始化 SDK 时需要这些值。
-
-1. 单击 {{site.data.keyword.amashort}} 磁贴。这将装入 {{site.data.keyword.amashort}}“仪表板”。
-
-1. 单击 **Google** 磁贴。
-
-1. 在 **iOS 的应用程序标识**中，指定 iOS 的 Google 客户端标识，然后单击**保存**。
+1. 在 {{site.data.keyword.amashort}}“仪表板”中打开服务。
+1. 在**管理**选项卡中，将**授权**切换为“开启”。
+1. 展开 **Google** 部分。
+1. 在 **iOS 的应用程序标识**中，指定 iOS 的 Google 客户端标识。
+1. 单击**保存**。
 
 
 ## 针对 iOS 配置 {{site.data.keyword.amashort}} Google 客户端 SDK
@@ -125,11 +127,9 @@ lastupdated: "2016-10-02"
 ## 初始化 {{site.data.keyword.amashort}} 客户端 SDK
 {: #google-auth-ios-initialize}
 
-要使用 {{site.data.keyword.amashort}} 客户端 SDK，请通过传递 applicationGUID 和 applicationRoute 参数来对其进行初始化。
+要使用 {{site.data.keyword.amashort}} 客户端 SDK，请通过传递 TenantID 和“应用程序路径”参数来对其进行初始化。
 
 通常会将初始化代码放置在应用程序代表的 `application:didFinishLaunchingWithOptions` 方法中，但这不是强制性的。
-
-1. 获取 applicationGUID 和 applicationRoute 值。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击您的应用程序。单击**移动选项**。这将显示“应用程序路径”和“应用程序 GUID”值。
 
 1. 将所需框架导入要使用 {{site.data.keyword.amashort}} 客户端 SDK 的类中。添加以下头：
 
@@ -152,12 +152,11 @@ lastupdated: "2016-10-02"
 	3. 将其命名为 `BridgingHeader.h`。
 
 	4. 将以下 import 添加到桥接头：
-
-	```Swift
-	#import <IMFCore/IMFCore.h>
-	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
-	```
-
+		
+	   `#import <IMFCore/IMFCore.h>`
+		
+	   `#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>`
+	
 	5. 在 Xcode 中单击项目，然后选择**构建设置**选项卡。
 
 	6. 搜索 `Objective-C Bridging Header`。
@@ -166,27 +165,26 @@ lastupdated: "2016-10-02"
 
 	8. 通过构建项目来确保 Xcode 选取了您的桥接头。
 
-3. 使用以下代码来初始化客户端 SDK。将 `applicationRoute` 和 `applicationGUID` 替换为从**移动选项**中获取的**路径**和**应用程序 GUID** 值。
+3. 使用以下代码来初始化客户端 SDK。将 `<applicationRoute>` 和 `<TenantID>` 替换为您的**路径**和 **TenantID**。
 
 	#### Objective-C：
 
 	```Objective-C
 	[[IMFClient sharedInstance]
-			initializeWithBackendRoute:@"applicationRoute"
-			backendGUID:@"applicationGUID"];
+			initializeWithBackendRoute:@"<applicationRoute>"
+			backendGUID:@"<TenantID>"];
 	```
 {: codeblock}
 
 	#### Swift：
 
 	```Swift
-	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
-	 							backendGUID: "applicationGUID")
+	IMFClient.sharedInstance().initializeWithBackendRoute("<applicationRoute>",
+	 							backendGUID: "<TenantID>")
 	```
 {: codeblock}
 
-1. 通过传递 {{site.data.keyword.amashort}} 服务 `tenantId` 参数来初始化 `AuthorizationManager`。您可以通过单击 {{site.data.keyword.amashort}} 服务磁贴上的**显示凭证**按钮找到此值。
-
+1. 通过传递 {{site.data.keyword.amashort}} 服务 `tenantId` 参数来初始化 `AuthorizationManager`。 
   ####Objective-C
 	
   ```Objective-C
@@ -336,6 +334,6 @@ return shouldHandleGoogleURL;
 	```
 {: codeblock}
 
-	如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Google 进行认证。此时，用户可以单击<!--in the upper-right corner of the screen-->用户名，以选择其他用户并登录。
+	如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授权 {{site.data.keyword.amashort}} 使用 Google 进行认证。此时，用户可以单击<!--in the upper-right corner of the screen-->用户名，以选择其他用户并登录。
 
 	您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。

@@ -1,10 +1,12 @@
----
+﻿---
 
  
 
 copyright:
 
   2014, 2016
+  
+lastupdated: "2016-10-19"
 
  
 
@@ -15,13 +17,10 @@ copyright:
 
 # Sécurité {{site.data.keyword.Bluemix_notm}}
 {: #security}
-Dernière mise à jour : 22 juillet 2016
-{: .last-updated}
 
 Conçue selon les pratiques d'ingénierie sécurisée, la plateforme {{site.data.keyword.Bluemix}}
-possède des contrôles de sécurité répartis dans des couches sur le réseau et dans l'infrastructure. {{site.data.keyword.Bluemix_notm}}
-fournit un groupe de services de sécurité que les développeurs d'applications peuvent utiliser afin de sécuriser leurs applications
-mobiles et Web. La combinaison de ces éléments permet de faire d'{{site.data.keyword.Bluemix_notm}} une plateforme
+possède des contrôles de sécurité répartis dans des couches sur le réseau et dans l'infrastructure. {{site.data.keyword.Bluemix_notm}} fournit un
+groupe de services de sécurité que les développeurs d'applications peuvent utiliser afin de sécuriser leurs applications mobiles et Web. La combinaison de ces éléments permet de faire d'{{site.data.keyword.Bluemix_notm}} une plateforme
 proposant des choix clairs pour le développement d'applications sécurisé.
 {:shortdesc}
 
@@ -29,23 +28,25 @@ proposant des choix clairs pour le développement d'applications sécurisé.
 sécurisée. Ces règles incluent des pratiques telles que l'analyse du code source, l'analyse dynamique, la modélisation des menaces et des tests de pénétration. {{site.data.keyword.Bluemix_notm}} suit le processus IBM Product Security Incident Response Team (PSIRT) pour la gestion des incidents de sécurité. Pour plus de détails, voir le site [IBM Security Vulnerability Management
 (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window}.
 
-Les environnements {{site.data.keyword.Bluemix_notm}} public et dédié utilisent les services cloud d'infrastructure sous forme de service
-(IaaS) IBM SoftLayer et profitent pleinement de son architecture sécurisée. SoftLayer IaaS fournit des
-niveaux de protection multiples qui se chevauchent pour vos applications et vos données. Pour l'environnement {{site.data.keyword.Bluemix_notm}} local, vous êtes en charge de la sécurité physique et
+Les environnements {{site.data.keyword.Bluemix_notm}} public et dédié utilisent les services cloud d'infrastructure sous forme de services
+(IaaS) {{site.data.keyword.BluSoftlayer}} et profitent pleinement de son architecture sécurisée. L'infrastructure
+sous forme de services {{site.data.keyword.BluSoftlayer}} fournit des niveaux de protection
+multiples qui se chevauchent pour vos applications et vos données. Pour l'environnement {{site.data.keyword.Bluemix_notm}} local, vous êtes en charge de la sécurité physique et
 fournissez l'infrastructure en hébergeant l'environnement {{site.data.keyword.Bluemix_notm}} local dans votre
 propre centre de données situé derrière le pare-feu de la société. De plus,
-{{site.data.keyword.Bluemix_notm}} ajoute des fonctions de sécurité au niveau de la couche plateforme sous forme
-de service (PaaS) dans différentes catégories : plateforme, données et application.
+{{site.data.keyword.Bluemix_notm}} ajoute des fonctions de sécurité au niveau de la couche plateforme sous forme de services (PaaS) dans différentes catégories : plateforme, données et application.
 
 ## Sécurité de la plateforme {{site.data.keyword.Bluemix_notm}}
 {: #platform-security}
 
-{{site.data.keyword.Bluemix_notm}} offre une sécurité fonctionnelle, d'infrastructure, opérationnelle et physique (via IBM SoftLayer) pour la plateforme de base. Toutefois, l'environnement
+{{site.data.keyword.Bluemix_notm}} offre une sécurité fonctionnelle, d'infrastructure, opérationnelle et physique (via {{site.data.keyword.BluSoftlayer}}) pour la
+plateforme de base. Toutefois, l'environnement
 {{site.data.keyword.Bluemix_notm}} local est unique car le client fournit l'infrastructure et le centre de
 données, et est en charge de la sécurité physique.
 
-L'environnement {{site.data.keyword.Bluemix_notm}} sur SoftLayer est conforme aux normes IBM de sécurité en matière de technologie de l'information, qui répondent et dépassent les
-valeurs standard de l'industrie. Ces normes incluent les éléments suivants : Réseau, chiffrement de données et contrôle d'accès
+L'environnement {{site.data.keyword.Bluemix_notm}} sur {{site.data.keyword.BluSoftlayer}} est conforme aux normes IBM de sécurité en
+matière de technologie de
+l'information, qui satisfont et dépassent les valeurs standard de l'industrie. Ces normes incluent les éléments suivants : Réseau, chiffrement de données et contrôle d'accès
  * Listes de contrôle d'accès, droits et tests de pénétration
  * Identification, authentification et autorisation
  * Protection des informations et des données
@@ -56,7 +57,7 @@ valeurs standard de l'industrie. Ces normes incluent les éléments suivants : R
 
 ![Présentation de la sécurité de la plateforme Bluemix ](images/platform_sec.svg)
 
-*Figure 1. Présentation de la sécurité de la plateforme {{site.data.keyword.Bluemix_notm}}*
+Figure 1. Présentation de la sécurité de la plateforme {{site.data.keyword.Bluemix_notm}}
 
 Avec l'environnement {{site.data.keyword.Bluemix_notm}} local, vous hébergez {{site.data.keyword.Bluemix_notm}} derrière le pare-feu
 de votre société et dans votre centre de données. Par conséquent, vous êtes responsable de certains aspects de la sécurité. L'image ci-dessous indique quelles sont les parties
@@ -64,12 +65,12 @@ de la sécurité qui appartiennent au client et quelles sont celles qui sont gé
 
 ![Présentation de la sécurité de la plateforme Bluemix locale](images/security_local_platform.svg)
 
-*Figure 2. Présentation de la sécurité de la plateforme {{site.data.keyword.Bluemix_notm}} locale*
+Figure 2. Présentation de la sécurité de la plateforme {{site.data.keyword.Bluemix_notm}} locale
 
 IBM installe, surveille à distance et gère l'environnement {{site.data.keyword.Bluemix_notm}} local dans votre centre de données par le biais
 d'un relais, une fonction de distribution incluse dans l'environnement {{site.data.keyword.Bluemix_notm}} local. Le relais se connecte de façon
 sécurisée avec des certificats propres à chaque instance {{site.data.keyword.Bluemix_notm}} locale. Pour plus d'informations sur l'environnement
-{{site.data.keyword.Bluemix_notm}} local et le relais, voir [Environnement Bluemix local](../local/index.html).
+{{site.data.keyword.Bluemix_notm}} local et le relais, voir [Environnement Bluemix local](/docs/local/index.html).
 
 ### Sécurité fonctionnelle
 
@@ -106,9 +107,8 @@ Les méthodes HTTP suivantes sont autorisées :
 <li>PUT</li>
 <li>TRACE</li>
 </ul>
-Le délai d'attente d'inactivité HTTP est de 2 minutes.</dd>
-<dd>
-Les en-têtes suivants sont remplis par DataPower :
+ Le délai d'attente d'inactivité HTTP est de 2 minutes.</dd>
+<dd>Les en-têtes suivants sont remplis par DataPower :
 <dl>
 <dt>$wsis</dt>
 <dd>true si la connexion côté client est sécurisée (HTTPS) ; false dans le cas contraire.</dd>
@@ -141,10 +141,10 @@ plus, la gestion des modifications ainsi que des procédures de sauvegarde et de
 
 <dl>
 <dt>Séparation des environnements</dt>
-<dd>Pour l'environnement {{site.data.keyword.Bluemix_notm}} public, les environnements de développement et de production sont séparés afin d'améliorer la stabilité et la sécurité des applications.</dd>
+<dd> Pour l'environnement {{site.data.keyword.Bluemix_notm}} public, les environnements de développement et de production sont séparés afin d'améliorer la stabilité et la sécurité des applications.</dd>
 
 <dt>Pare-feux</dt>
-<dd>Des pare-feux sont en place pour restreindre l'accès au réseau {{site.data.keyword.Bluemix_notm}}. Pour l'environnement
+<dd> Des pare-feux sont en place pour restreindre l'accès au réseau {{site.data.keyword.Bluemix_notm}}. Pour l'environnement
 {{site.data.keyword.Bluemix_notm}} local, le pare-feu de votre société sépare le reste de votre réseau de votre
 instance {{site.data.keyword.Bluemix_notm}}.</dd>
 
@@ -175,10 +175,7 @@ Security, pour détecter les anomalies liées au réseau et aux configurations h
 systèmes d'exploitation sont appliqués à une fréquence appropriée. Les correctifs automatisés sont activés avec IBM Endpoint Manager.</dd>
 
 <dt>Analyse et consolidation des journaux d'audit</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} utilise les outils IBM Security QRadar® pour consolider les journaux Linux afin de surveiller l'accès privilégié sur les systèmes Linux. {{site.data.keyword.Bluemix_notm}}
-utilise également les outils SIEM (gestion des événements et des informations de sécurité) d'IBM QRadar pour surveiller les tentatives de connexion,
-réussies ou
-non, des développeurs d'applications.</dd>
+<dd>{{site.data.keyword.Bluemix_notm}} utilise les outils IBM Security QRadar® pour consolider les journaux Linux afin de surveiller l'accès privilégié sur les systèmes Linux. {{site.data.keyword.Bluemix_notm}} utilise également les outils SIEM (gestion des événements et des informations de sécurité) d'IBM QRadar pour surveiller les tentatives de connexion, réussies ou non, des développeurs d'applications.</dd>
 
 <dt>Gestion de l'accès utilisateur</dt>
 <dd>Dans {{site.data.keyword.Bluemix_notm}}, les instructions de répartition des tâches sont suivies pour affecter des privilèges d'accès
@@ -187,25 +184,26 @@ principe du moindre privilège.
 
 Dans les environnements {{site.data.keyword.Bluemix_notm}} dédié et local, les administrateurs désignés
 peuvent
-gérer les rôles et les droits pour les utilisateurs {{site.data.keyword.Bluemix_notm}} dans leur organisation dans la console d'administration. Pour plus d'informations, voir
-[Gestion des environnements {{site.data.keyword.Bluemix_notm}} local et dédié](../admin/index.html#mng).
+gérer les rôles et les droits pour les utilisateurs {{site.data.keyword.Bluemix_notm}} dans leur organisation dans la console d'administration. Voir
+[Gestion de {{site.data.keyword.Bluemix_notm}}](/docs/admin/adminpublic.html#mng) pour des détails.
 </dd>
 </dl>
 
 ### Sécurité physique
 
-Les environnements {{site.data.keyword.Bluemix_notm}} public et dédié s'appuient sur la topologie "un réseau dans le réseau" de SoftLayer en
-matière de sécurité de réseau
-physique. Cette architecture permet de s'assurer que les systèmes sont accessibles uniquement au personnel autorisé. Pour l'environnement {{site.data.keyword.Bluemix_notm}} local, vous êtes en charge de la sécurité physique de
+Les environnements {{site.data.keyword.Bluemix_notm}} public et dédié s'appuient sur la topologie "un réseau dans le réseau" de {{site.data.keyword.BluSoftlayer}} en
+matière de sécurité de réseau physique. Cette architecture permet de s'assurer que les systèmes sont accessibles uniquement au personnel autorisé. Pour l'environnement {{site.data.keyword.Bluemix_notm}} local, vous êtes en charge de la sécurité physique de
 l'instance locale. Votre centre de données est sécurisé derrière le pare-feu de votre société.
 
-Dans le réseau dans le réseau SoftLayer, la couche réseau public gère le trafic public vers les sites Web hébergés ou les ressources en ligne. La
+Dans la topologie "un réseau dans le réseau" de {{site.data.keyword.BluSoftlayer}}, la couche réseau public gère le trafic public vers les sites Web hébergés ou les
+ressources en
+ligne. La
 couche réseau privé permet une véritable gestion externe par un opérateur tiers autonome via des passerelles de réseau privé virtuel SSL, PPTP ou IPSec. La
 couche réseau centre de données à centre de données offre une connectivité gratuite et sécurisée entre les serveurs hébergés dans des installations
-SoftLayer distinctes.
+{{site.data.keyword.BluSoftlayer}} distinctes.
 
-Chaque centre de données SoftLayer est totalement sécurisé grâce à des contrôles qui répondent aux exigences standard de l'industrie et de la
-norme SSAE 16, sans exception. Pour plus d'informations, voir la page SoftLayer Security Compliance.
+Chaque centre de données {{site.data.keyword.BluSoftlayer}} est totalement sécurisé grâce à des contrôles qui répondent aux exigences standard de l'industrie et de la norme
+SSAE 16, sans exception.
 
 ## Sécurité des données
 {: #data-security}
@@ -229,8 +227,9 @@ Les données qui sont associées à une application en cours d'exécution peuven
 
 Vous devez prendre en compte chaque type de données lorsque vous planifiez la sécurité des données.
 
-La plateforme {{site.data.keyword.Bluemix_notm}} sécurise les données transférées en sécurisant l'accès de l'utilisateur final à l'application via SSL sur le réseau, jusqu'à ce que
-les données atteignent IBM DataPower Gateway à la frontière du réseau interne de {{site.data.keyword.Bluemix_notm}}. IBM DataPower Gateway sert de
+La plateforme {{site.data.keyword.Bluemix_notm}} sécurise les données transférées en sécurisant l'accès de l'utilisateur final à
+l'application via SSL sur le réseau, jusqu'à ce que les données atteignent IBM DataPower Gateway à la frontière du réseau interne de
+{{site.data.keyword.Bluemix_notm}}. IBM DataPower Gateway sert de
 proxy inverse et fournit la terminaison SSL. IPSEC est utilisé pour sécuriser les données qui transitent entre IBM DataPower Gateway et l'application.
 
 La sécurité des données utilisées et des données au repos vous incombe lorsque vous développez votre application. Vous pouvez tirer profit de
@@ -243,7 +242,8 @@ En tant que développeur, vous devez activer la configuration des paramètres de
 
 Vous pouvez utiliser les fonctions de sécurité fournies par plusieurs services {{site.data.keyword.Bluemix_notm}} pour sécuriser vos applications. Tous les services {{site.data.keyword.Bluemix_notm}} qui sont produits par IBM suivent les pratiques de développement d'ingénierie sécurisée d'IBM.
 
-**Remarque :** il se peut que certains services décrits ici ne soient pas applicables dans les instances {{site.data.keyword.Bluemix_notm}} dédiées ou locales.
+**Remarque :** il se peut que certains services décrits ici ne soient pas applicables dans les instances
+{{site.data.keyword.Bluemix_notm}} dédiées ou locales.
 
 ### Service SSO
 
@@ -265,12 +265,12 @@ Le service Single Sign On prend en charge plusieurs sources d'identité dans les
 <dd> Il s'agit des registres d'utilisateurs qui sont gérés par Google, Facebook et LinkedIn.</dd>
 </dl>
 
-Pour plus d'informations, voir [Initiation à Single Sign On](../services/SingleSignOn/index.html).
+Pour plus d'informations, voir [Initiation à Single Sign On](/docs/services/SingleSignOn/index.html).
 
 ### Application Security on Cloud
 
 Ce service fournit une analyse de sécurité des applications mobiles et Web et vous permet d'analyser le code source afin d'identifier d'éventuelles
-vulnérabilités en matière de sécurité. Pour plus d'informations, voir [Initiation à Application Security on Cloud](../services/ApplicationSecurityonCloud/index.html).
+vulnérabilités en matière de sécurité. Pour plus d'informations, voir [Initiation à Application Security on Cloud](/docs/services/ApplicationSecurityonCloud/index.html).
 
 ### Plug-in IBM UrbanCode pour le test de la sécurité des applications
 
@@ -285,7 +285,7 @@ Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/pl
 Le service dashDB utilise un serveur LDAP imbriqué pour l'authentification d'utilisateur. La connexion entre les applications et la base de données est protégée par des certificats SSL. Ce service utilise la capacité de chiffrement native de DB2® pour chiffrer automatiquement votre base de données déployée et vos sauvegardes de base de
 données. La rotation de clé principale automatique a lieu tous les 90 jours.
 
-Pour plus d'informations, voir [Initiation à dashDB](../services/dashDB/index.html).
+Pour plus d'informations, voir [Initiation à dashDB](/docs/services/dashDB/index.html).
 
 ### Secure Gateway
 
@@ -294,12 +294,11 @@ distants, sur site ou dans le cloud. Il assure la connectivité et établit un t
 l'emplacement distant auquel vous voulez vous connecter. Vous pouvez configurer et créer une passerelle sécurisée en utilisant l'interface utilisateur
 {{site.data.keyword.Bluemix_notm}} ou un package d'API.
 
-Pour plus d'informations, voir [Initiation à Secure Gateway](../services/SecureGateway/secure_gateway.html).
+Pour plus d'informations, voir [Initiation à Secure Gateway](/docs/services/SecureGateway/secure_gateway.html).
 
 ### Gestion des événements et des informations de sécurité
 
-Vous pouvez utiliser les outils SIEM (gestion des événements et des informations de sécurité) pour analyser les alertes de sécurité dans les
-journaux d'application. L'un de ces outils est IBM Security QRadar&reg; SIEM, qui fournit la sécurité intérieure dans les environnements de cloud. Pour des informations, voir [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
+Vous pouvez utiliser les outils SIEM (gestion des événements et informations de sécurité) pour analyser les alertes de sécurité dans les journaux d'application. L'un de ces outils est IBM Security QRadar&reg; SIEM, qui fournit la sécurité intérieure dans les environnements de cloud. Pour des informations, voir [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
 
 ## Déploiement de la sécurité {{site.data.keyword.Bluemix_notm}}
 {: #security-deployment}
@@ -309,7 +308,7 @@ flux d'informations pour les utilisateurs et les développeurs d'applications af
 
 ![Architecture de déploiement de la sécurité Bluemix](images/sec_deployment.svg)
 
-*Figure 3. Architecture de déploiement de la sécurité Bluemix*
+Figure 3. Architecture de déploiement de la sécurité Bluemix
 
 Pour les *utilisateurs d'application* {{site.data.keyword.Bluemix_notm}}, le **flux d'un utilisateur
 d'application** est le suivant :
@@ -318,7 +317,9 @@ d'application** est le suivant :
  3. Via le routeur réseau.
  4. Atteint le contexte d'exécution d'application dans l'agent DEA (Droplet Execution Agent).
 
-Le *développeur* {{site.data.keyword.Bluemix_notm}} suit les deux flux principaux : pour la connexion et pour le développement et le déploiement.
+Le *développeur* {{site.data.keyword.Bluemix_notm}} suit les deux flux principaux : pour la connexion ainsi que pour le
+développement
+et le déploiement.
  * Le **flux de connexion d'un développeur** est le suivant :
     * Pour les développeurs qui se connectent à l'environnement {{site.data.keyword.Bluemix_notm}} public, le flux
 est le suivant :
@@ -358,45 +359,130 @@ physique et des analyses au sein de votre pare-feu.
 {{site.data.keyword.Bluemix}} fournit une plateforme cloud sécurisée, digne de confiance. La conformité {{site.data.keyword.Bluemix_notm}} résulte d'une plateforme et de services générés avec les meilleures normes de sécurité de l'industrie, notamment ISO 27001 et ISO 27002.
 {:shortdesc}
 
-![Clause contractuelle de protection des données dans l'Union européenne](images/icon_eumc.png)  Une **clause contractuelle de l'Union européenne (UE)** est un accord conçu pour protéger les données personnelles transférées de l'Union européenne ou de l'Espace économique européen (EEE) vers un pays tiers. La clause contractuelle de l'Union européenne (UE) est signée entre le client situé dans l'UE ou l'EEE (l'exportateur de données) et le processeur de données IBM situé dans le pays tiers (l'importateur de données). La clause [IBM
+![Clause contractuelle de protection des données dans l'Union européenne](images/icon_eumc.png)  Une **clause contractuelle de l'Union européenne (UE)** est un accord conçu pour protéger les données personnelles transférées de l'Union européenne ou de l'Espace économique européen (EEE) vers un pays tiers. La clause contractuelle de l'Union européenne (UE) est signée entre le client qui se trouve dans l'UE ou l'EEE (l'exportateur de données) et le
+processeur de
+données IBM qui se trouve dans le pays tiers (l'importateur de données). La clause [IBM
 SaaS EU Model Clause](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} comprend les droits et les obligations de l'exportateur de données et de l'importateur de données, ainsi que les droits des personnes concernées. La clause IBM SaaS EU Model Clause garantit que les données personnelles, lorsqu'elles sont traitées dans un pays tiers, sont protégées de la même manière que dans l'UE ou l'EEE.
 
-![Financial Industry Information Systems (FISC)](images/FISC.gif) Pour les institutions bancaires et financières au Japon, les systèmes informatiques doivent avoir mis en place des procédures de sécurité, en accord avec les directives de sécurité établies par le FISC (Center for Financial Industry Information Systems). Les directives de sécurité du **FISC** sont imposées par l'agence japonaise FSA (Financial Services Agency), la banque BOJ (Bank of Japan) et le FISC.
+Pour les clients qui souhaitent transférer des données provenant de l'Espace économique européen (EEE) vers un pays hors de l'EEE,
+{{site.data.keyword.Bluemix}} propose des clauses contractuelles européennes dans le formulaire approuvé par les autorités de protection
+des données de la Commission européenne et de l'Union européenne. Les clauses contractuelles européennes garantissent aux clients européens que {{site.data.keyword.Bluemix_notm}} assure la confidentialité des
+données requise partout dans le monde.
 
-Vous pourrez trouver un document d'auto-évaluation {{site.data.keyword.Bluemix_notm}} correspondant aux directives en matière de sécurité du FISC, écrit en langue japonaise, sur le site [IBM Bluemix risk survey results](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}. 
+![Financial Industry Information Systems - FISC](images/FISC.gif) Pour les institutions bancaires et financières au Japon, les systèmes informatiques doivent avoir mis en place des procédures de sécurité, en accord avec les directives de sécurité établies par le FISC (Center for Financial Industry Information Systems). Les directives de sécurité du FISC sont imposées par l'agence japonaise FSA (Financial Services Agency), la banque BOJ (Bank of
+Japan) et le FISC.
 
-![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} est certifié aux **normes ISO (International Organization for Standardization) 27001 et 27002**, qui définissent le code de bonne pratique pour les processus de management de la sécurité de l'information. La norme ISO 27001 spécifie les exigences en matière d'établissement, de mise en oeuvre et de documentation des systèmes de management de la sécurité de l'information (SMSI) et les exigences relatives à la mise en oeuvre des contrôles de sécurité, en fonction des besoins des organisations individuelles. La norme ISO 27002 explique en détail chaque contrôle de sécurité de la norme ISO 27001. La famille de normes ISO 27000 intègre un processus d'évaluation des risques et d'estimation des ressources, dans le but de protéger la confidentialité, l'intégrité et l'accessibilité des informations écrites, orales et électroniques.
+Vous trouverez un document d'auto-évaluation {{site.data.keyword.Bluemix_notm}} correspondant aux directives en matière de sécurité du
+FISC, écrit en langue japonaise, sur le site [IBM Bluemix risk survey
+results](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}.
+
+![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} est certifié conformément aux **normes
+ISO
+(International Organization for Standardization) 27001 et 27002**, qui définissent les meilleures pratiques pour les
+processus de gestion de la sécurité des informations. ISO
+27001 est une norme de sécurité globale largement adoptée qui énonce les exigences pour les systèmes de gestion de la sécurité des informations. Elle
+permet une approche systématique de la gestion des informations des entreprises et des clients en fonction d'évaluations de risque régulières. La norme la
+plus récente, ISO/IEC 27001:2013, a été publiée le 25 septembre 2013 par **l'International Organization of Standardization (ISO) et la
+commission électrotechnique internationale (CEI)** sous le partenariat ISO et CEI. La norme ISO 27001 spécifie les exigences en matière d'établissement, de mise en oeuvre et de documentation des systèmes de management de la sécurité de l'information (SMSI) et les exigences relatives à la mise en oeuvre des contrôles de sécurité, en fonction des besoins des organisations individuelles. La norme ISO 27002 explique en détail chaque contrôle de sécurité de la norme ISO 27001. La famille de normes ISO 27000 intègre un processus d'évaluation des risques et d'estimation des ressources, dans le but de protéger la confidentialité, l'intégrité et l'accessibilité des informations écrites, orales et électroniques.
+
+Pour obtenir la certification ISO 27001:2013, une entreprise doit démontrer qu'elle suit une approche systématique et continue pour gérer les risques
+en matière de sécurité des informations ayant un impact sur la confidentialité, l'intégrité et la disponibilité des informations des entreprises et des
+clients. Cette norme met l'accent sur la mesure et l'évaluation des performances du système de gestion de la sécurité informatique d'une organisation et
+inclut également des contrôles liés à la sécurité des informations, qui reposent sur des exigences système et d'autres exigences.
 
 {{site.data.keyword.Bluemix_notm}} fait l'objet d'un audit par une firme indépendante et répond à toutes les exigences de la norme ISO 27001 : [Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}.
+
+![PCI DSS](images/icon_pci.png) **Payment Card Industry (PCI) Data Security Standards (DSS)** est une norme de
+sécurité des informations qui a été conçue pour protéger les données de carte de crédit. Elle s'applique à toutes les entités impliquées dans le traitement
+de cartes de paiement, notamment les commerçants, les organismes de traitement, les émetteurs et les fournisseurs de services. Elle s'applique également à
+toutes les autres entités qui stockent, traitent ou transmettent des données relatives aux titulaires de carte ou des données d'authentification sensibles.
+
+Si vous stockez ou traitez des données de carte de crédit, la conformité à la norme Payment Card Industry (PCI) et la sécurité du réseau constituent
+des préoccupations essentielles pour votre activité. Afin de garantir des normes cohérentes pour les commerçants, le conseil des normes de sécurité PCI
+(Payment Card Industry Security Standards Council) a établi des normes de sécurité des données PCI. Celles-ci incorporent les meilleures pratiques de
+protection des données sur les titulaires de carte et requièrent souvent la validation d'un évaluateur de sécurité qualifié (QSA) tiers. IBM aide les clients à satisfaire leurs besoins en matière de conformité PCI en fournissant une attestation de conformité émise par un évaluateur de
+sécurité qualifié (QSA) indépendant. L'attestation de conformité peut être utilisée avec le rapport SOC 2 et la certification ISO 27001 afin de prouver que
+l'infrastructure satisfait les contrôles PCI.
+
+{{site.data.keyword.Bluemix}} procède à une évaluation PCI DSS annuelle à l'aide d'un évaluateur de sécurité qualifié (QSA) approuvé. {{site.data.keyword.Bluemix_notm}}
+est compatible conformément à la norme PCI DSS version 3.1 au niveau de fournisseur de services 1, comme énoncé dans [Bluemix PCI DSS AOC](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/IBM_Bluemix_PCI){: new_window}. Pour
+des informations et de l'aide relatives à la conformité à la norme PCI DSS pour votre environnement {{site.data.keyword.Bluemix_notm}}, prenez
+contact avec le service commercial
+depuis la page [Contactez-nous](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs){: new_window}.
 
 ![SSAE16 SOC1/2/3](images/icon_aicpa.png) Les rapports **Service Organization Controls (SOC)** définissent l'évaluation des pratiques de contrôle interne exemplaires liées à la sécurité, l'accessibilité, l'intégrité du traitement, la confidentialité et la protection des données personnelles au sein d'une organisation de services. Ces rapports générés à partir du guide de l'AICPA (American Institute of Certified Public Accountants) comprennent les éléments suivants : 
   * Supervision de l'organisation
   * Programme de gestion des fournisseurs
   * Processus internes de gouvernance d'entreprise et de gestion des risques
   * Régime réglementaire de surveillance
+ 
+{{site.data.keyword.Bluemix_notm}} met à disposition des rapports SOC 1, SOC 2 et SOC 3. Pour plus d'informations, prenez contact avec l'[équipe commerciale {{site.data.keyword.Bluemix_notm}}](mailto:bmxcert1@us.ibm.com){:new_window}. 
 
-{{site.data.keyword.Bluemix_notm}} utilise les services cloud d'IBM SoftLayer Infrastructure-as-a-Service (IaaS) et bénéficie de tous les avantages de leur architecture de sécurité. Pour plus d'informations, prenez contact avec l'[équipe commerciale {{site.data.keyword.Bluemix_notm}}](mailto:bmxcert1@us.ibm.com){:new_window}.
+
+![HIPAA](images/icon_hipaa.png) La loi Health Insurance Portability and Accountability Act (HIPAA), adoptée par le congrès
+américain en 1996, concerne la couverture d'assurance maladie des employés qui ont perdu leur travail. Elle est régie et appliquée par le bureau des droits civiques (Office of Civil Rights) et le département de la santé et des services sociaux (Department of
+Health and Human Services) aux
+Etats-Unis. Elle englobe la réglementation de la
+loi de 1996, ainsi que des exigences de confidentialité de la loi Health Information Technology for Economic and Clinical Health (HITECH) Act de 2009. {{site.data.keyword.Bluemix_notm}}
+satisfait toutes les exigences de la loi HIPAA en ce qui concerne les centres de données ou les fournisseurs de services.
+
+Pour plus d'informations ou de l'aide afin d'assurer la conformité à la loi HIPAA pour votre environnement
+Bluemix, de la certifier et de la conserver, prenez contact avec le [service
+commercial](mailto:cloudplatform_compliance@us.ibm.com){:new_window} de {{site.data.keyword.Bluemix_notm}}.
+
+
+![ISO 27017](images/icon_ISO27017.png) La norme ISO/IEC 27017:2015 fournit des directives pour les contrôles de sécurité des
+informations
+applicables à la mise à disposition et à l'utilisation des services de cloud. De plus, elle fournit des conseils d'implémentation pour les fournisseurs de
+service de cloud et les clients de service de cloud. La norme ISO 27017 fournit des conseils d'implémentation pour les contrôles pertinents qui sont spécifiés
+dans la norme ISO/IEC 27002, ainsi que des contrôles et des conseils supplémentaires concernant spécifiquement les services de cloud.
+
+L'alignement de {{site.data.keyword.Bluemix_notm}} avec la norme ISO 27017:2015 démontre qu'IBM a mis en place un système sophistiqué
+de contrôles propres aux clouds. De plus, elle révèle qu'IBM s'est engagée à proposer la meilleure infrastructure sous forme de
+services (IaaS), dans le monde entier.
+
+
+![ISO 27018](images/icon_ISO27018.png) La norme ISO 27018:2014 définit des objectifs de contrôle, des contrôles et des directives
+communément acceptés pour l'implémentation des mesures permettant de protéger les informations identifiant la personne. Ces mesures sont conformes aux
+principes de confidentialité de la norme ISO 29100 pour l'environnement de cloud computing public.
+
+En particulier, la norme ISO 27018:2014 spécifie des directives reposant sur la norme ISO 27002. Celles-ci prennent en compte les exigences
+réglementaires relatives à la protection des informations identifiant la personne, qui peuvent être applicables dans le contexte des environnements de
+risque en matière de sécurité des informations d'un fournisseur de services de cloud publics.
+
+
+![Cloud Security Alliance – STAR Registrant](images/icon_CSA.png) Cloud Security Alliance est un organisme à but non lucratif dont
+la mission est de promouvoir l'utilisation des meilleures pratiques afin de garantir la sécurité dans le cloud computing. L'un des mécanismes qu'il
+utilise dans le cadre de sa mission est le mécanisme STAR (Security, Trust, and Assurance Registry). Il s'agit d'un registre gratuit, accessible
+publiquement, qui document les contrôles de sécurité mis à disposition par diverses offres de cloud computing.
+
+
+![Normes CJIS](images/icon_CJIS.png) Le département Criminal Justice Information Systems (CJIS) est un département du bureau
+fédéral d'investigation (FBI) du ministère de la justice américain. Il a créé et publié des règles de sécurité (CJISD-ITS-DOC-08140-5.4). Celles-ci énoncent les exigences en matière de sécurité des informations, les
+directives et les accords minimaux reflétant la volonté des organismes d'application de la loi et de justice pénale de protéger les sources, la
+transmission, le stockage et la génération de l'information en matière de justice pénale.
+
+
 
 ### Conformité de la plateforme et des services
 Le tableau ci-dessous indique quels sont les services dans {{site.data.keyword.Bluemix_notm}} qui sont conformes à chaque norme.
 
-|Composants {{site.data.keyword.Bluemix_notm}}		|FISC		|ISO 27001	|SOC 2 Type 1		|
-|:----------------------|:---------:|:---------:|:---------:|
-|Plateforme {{site.data.keyword.Bluemix_notm}}		|O			|O	|O	|
-|{{site.data.keyword.APIM}}			|O	|O |			|
-|{{site.data.keyword.autoscaling}}			|O	|O |			|
-|{{site.data.keyword.bigicloudst}}			|O |O |O |
-|{{site.data.keyword.cloudant}}				|O |O |O	|
-|{{site.data.keyword.dashdbshort}}			|O	|O	|O	|
-|{{site.data.keyword.datacshort}}			|O	|O	|			|
-|{{site.data.keyword.jazzhub_short}}					|O	|O	|			|
-|{{site.data.keyword.containerlong}}			|O		|O	|			|
-|{{site.data.keyword.mql}}				|O	|O	|	 		|
-|{{site.data.keyword.SecureGateway}}			|O	|O |	 		|
-|{{site.data.keyword.sescashort}}     |O |O | |
+|Composants {{site.data.keyword.Bluemix_notm}}		|FISC		|ISO 27001	|PCI |SOC 2 Type 1		|
+|:----------------------|:---------:|:---------:|:---------:|:---------:|
+|Plateforme {{site.data.keyword.Bluemix_notm}}		|O			|O	|O	|O	|
+|{{site.data.keyword.APIM}}			|O	|O |O	|			|
+|{{site.data.keyword.autoscaling}}			|O	|O |O	|			|
+|{{site.data.keyword.bigicloudst}}			|O |O |	|O |
+|{{site.data.keyword.cloudant}}				|O |O |	|O	|
+|{{site.data.keyword.dashdbshort}}			|O	|O	|	|O	|
+|{{site.data.keyword.datacshort}}			|O	|O	|O	|			|
+|{{site.data.keyword.jazzhub_short}}					|O	|O	|	|			|
+|{{site.data.keyword.containerlong}}			|O		|O	|	|			|
+|{{site.data.keyword.mql}}				|O	|O	|O	|	 		|
+|{{site.data.keyword.SecureGateway}}			|O	|O |	|	 		|
+|{{site.data.keyword.sescashort}}     |O |O |O	|  |
 
 *Tableau 1. Conformité de la plateforme et des services*
-
 
 # Liens connexes
 {: #rellinks}
@@ -404,5 +490,5 @@ Le tableau ci-dessous indique quels sont les services dans {{site.data.keyword.B
 ## Liens connexes
 {: #general}
 
-* [SoftLayer Security Compliance](http://www.softlayer.com/security)
-* [Initiation à Single Sign On](../services/SingleSignOn/index.html)
+* [Sécurité d'IBM SaaS](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
+* [Initiation à Single Sign On](/docs/services/SingleSignOn/index.html)

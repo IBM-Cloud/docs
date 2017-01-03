@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-08-02"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -12,27 +12,24 @@ lastupdated: "2016-08-02"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Java client library - managed devices
+# Developing managed devices by using Java
 {: #java_deviceManagement}
 
 ##Introduction
 {: #introduction}
 
-This client library describes how to use devices with the Java 'ibmiotf' client library. For help with getting started with this module, see [Java Client Library - Introduction](../java/javaintro.html).
+In {{site.data.keyword.iot_full}}, a managed device is a device that can do device management operations, such as firmware, location, and diagnostic updates.
+By using the {{site.data.keyword.iot_short}} Java™ client library and the information that is provided, you can develop Java code to turn your connected devices into managed devices. Samples are also provided to help you develop Java code to connect a device to the Device Management service and run device management operations.
 
-This section contains information on how devices can to the {{site.data.keyword.iot_full}} Device Management service using Java and perform device management operations like Firmware Update, location update, and diagnostics update.
-
-The Device section contains information on how devices can publish events and handle commands using the Java ibmiotf Client Library.
-
-The Applications section contains information on how applications can use the Java ibmiotf Client Library to interact with devices.
+For more information about how your applications can use the Java client library to interact with devices, see [Java for application developers](../../applications/libraries/java.html).
 
 ## Device Management
 {: #device_management}
 
 The [device management](../reference/device_mgmt.html) feature enhances the {{site.data.keyword.iot_short_notm}} service with more capabilities for managing devices. Device management makes a distinction between managed and unmanaged devices:
 
--   **Managed devices** are defined as devices which have a management agent installed. The management agent sends and receives device metadata and responds to device management commands from the {{site.data.keyword.iot_short_notm}}.
--   **Unmanaged devices** are any devices which do not have a device management agent. All devices begin their lifecycle as unmanaged devices, and can transition to managed devices by sending a message from a device management agent to the {{site.data.keyword.iot_short_notm}}.
+-   **Managed devices** are defined as devices which have a management agent installed. The management agent sends and receives device metadata and responds to device management commands from {{site.data.keyword.iot_short_notm}}.
+-   **Unmanaged devices** are any devices which do not have a device management agent. All devices begin their lifecycle as unmanaged devices, and can transition to managed devices by sending a message from a device management agent to {{site.data.keyword.iot_short_notm}}.
 
 ## Connecting to the {{site.data.keyword.iot_short_notm}} Device Management service
 {: #connecting_dm_service}

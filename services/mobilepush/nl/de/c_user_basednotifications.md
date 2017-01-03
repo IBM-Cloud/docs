@@ -1,12 +1,18 @@
 ---
+
 copyright:
  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Benutzerbasierte Benachrichtigungen aktivieren
 {: #user_based_notifications}
-Letzte Aktualisierung: 18. Oktober 2016
+Letzte Aktualisierung: 06. Dezember 2016
 {: .last-updated}
 
 Auf Benutzer-ID basierte Push-Benachrichtigungen zielen mit angepassten Nachrichten auf Benutzer mobiler Apps ab. Bei benutzerbasierten Benachrichtigungen können Sie auswählen, dass bestimmte Personen auf Grundlage Ihrer Vorgaben benachrichtigt werden.

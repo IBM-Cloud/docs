@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Berechtigungsnachweise für APNs generieren
 {: #create-push-credentials-apns}
-Letzte Aktualisierung: 17. Oktober 2016
+Letzte Aktualisierung: 07. Dezember 2016
 {: .last-updated}
 
 Apple Push Notification Service (APNs) ermöglicht Anwendungsentwicklern das Senden ferner Benachrichtigungen aus der Bluemix-Instanz des {{site.data.keyword.mobilepushshort}}-Service (d. h. dem Provider) an iOS-Geräte und -Anwendungen. Die Nachrichten werden an eine Zielanwendung auf dem Gerät gesendet. 
@@ -48,7 +51,7 @@ Wählen Sie beim Registrieren einer App-ID die folgenden Optionen aus:
 ##SSL-Zertifikat zum Entwickeln und Verteilen von APNs erstellen
 {: #create-push-credentials-apns-ssl}
 
-Bevor Sie ein APNs-Zertifikat anfordern können, müssen Sie zunächst eine Zertifikatssignieranforderung (Certificate Signing Request, CSR) generieren und an die Zertifizierungsstelle (Certificate Authority, CA) von Apple schicken. Die CSR enthält Informationen zum Identifizieren Ihres Unternehmens und beinhaltet Ihren öffentlichen sowie Ihren privaten Schlüssel, den Sie zum Signieren Ihrer Apple-Push-Benachrichtigungen verwenden. Generieren Sie anschließend das SSL-Zertifikat in iOS Developer Portal. Das Zertifikat mit dem zugehörigen öffentlichen und privaten Schlüssel wird in Keychain Access gespeichert.
+Bevor Sie ein APNs-Zertifikat anfordern, müssen Sie zunächst eine Zertifikatssignieranforderung (Certificate Signing Request, CSR) generieren und an die Zertifizierungsstelle (Certificate Authority, CA) von Apple schicken. Die CSR enthält Informationen zum Identifizieren Ihres Unternehmens und beinhaltet Ihren öffentlichen sowie Ihren privaten Schlüssel, den Sie zum Signieren Ihrer Apple-Push-Benachrichtigungen verwenden. Generieren Sie anschließend das SSL-Zertifikat in iOS Developer Portal. Das Zertifikat mit dem zugehörigen öffentlichen und privaten Schlüssel wird in Keychain Access gespeichert.
 
 <!-- ###Before you begin -->
 <!-- {: before-you-begin-certificate} -->
@@ -100,10 +103,7 @@ Sie müssen separate Zertifikate für Ihre Entwicklungs- und Verteilungsumgebung
 Das Bereitstellungsprofil ermittelt anhand der App-ID, auf welchen Geräten Ihre App installiert und ausgeführt werden kann und auf welche Services die App zugreifen kann. Sie erstellen für jede App-ID zwei Bereitstellungsprofile, eines für die Entwicklung und das zweite für die Verteilung. Xcode ermittelt anhand des Entwicklungsbereitstellungsprofils, welche Entwickler den Build für die App durchführen dürfen und welche Geräte in der Anwendung
 getestet werden dürfen.
 
-###Vorbemerkungen
-{: before-you-begin-provisioning-file}
-
-Stellen Sie sicher, dass die App-ID registriert, für den Push Notifications-Service aktiviert und für die Verwendung eines SSL-Zertifikats für APNs im Entwicklungs- sowie im Produktionsmodus konfiguriert wurde.
+Stellen Sie sicher, dass die App-ID registriert, für den {{site.data.keyword.mobilepushshort}}-Service aktiviert und für die Verwendung eines SSL-Zertifikats für APNs im Entwicklungs- sowie im Produktionsmodus konfiguriert wurde.
 
 Erstellen Sie ein Entwicklungsbereitstellungsprofil wie folgt:
 
@@ -129,27 +129,20 @@ an den App-Store übergeben.
 
 Um den {{site.data.keyword.mobilepushshort}}-Service zum Senden von Benachrichtigungen verwenden zu können, laden Sie die SSL-Zertifikate hoch, die für Apple Push Notification Service (APNs) erforderlich sind. Sie können auch die REST-API verwenden, um ein APNs-Zertifikat hochzuladen.
 
-
-###Vorbemerkungen
-{: before-you-begin-dashboard}
-
-
 <!-- Get your development and production APNs SSL certificate and the password associated with each type of certificate. For information, see Creating and configuring push credentials for APNs.-->
 
-Die Zertifikate, die für APNs erforderlich sind, sind `.p12`-Zertifikate, die den privaten Schlüssel und die SSL-Zertifikate enthalten, die zum Erstellen und Veröffentlichen der Anwendung erforderlich sind. Sie müssen die Zertifikate über das Member Center der Apple Developer-Website (wofür Sie ein gültiges Apple Developer-Konto benötigen) generieren. Für die Entwicklungsumgebung (Sandbox) und die Produktionsumgebung (Verteilung) sind unterschiedliche Zertifikate erforderlich.
+Die für APNs erforderlichen Zertifikate sind `.p12`-Zertifikate. Diese Zertifikate enthalten den privaten Schlüssel und SSL-Zertifikate, die zum Erstellen und Veröffentlichen Ihrer Anwendung erforderlich sind. Sie müssen die Zertifikate über das Member Center der Apple Developer-Website (wofür Sie ein gültiges Apple Developer-Konto benötigen) generieren. Für die Entwicklungsumgebung (Sandbox) und die Produktionsumgebung (Verteilung) sind unterschiedliche Zertifikate erforderlich.
 
 **Hinweis**: Nachdem sich die `.cer`-Datei in Ihrem Key Chain-Zugriff befindet, exportieren Sie sie auf Ihrem Computer, um ein `.p12`-Zertifikat zu erstellen.
 
 Weitere Informationen zur Verwendung von APNs finden Sie in der Veröffentlichung [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4).
 
-Set up APNs on the Push dashboard, as follows:
+Führen Sie die folgenden Schritte aus, um APNs im Push Notification-Services-Dashboard einzurichten:
 
-1. Öffnen Sie Ihre Back-End-Anwendung im Bluemix-Dashboard und klicken Sie anschließend auf den **IBM Push Notifications**-Service, um das Push-Dashboard zu öffnen.
-
-	Das Push-Dashboard zeigt Folgendes an:
-	![Dashboard 'Push-Benachrichtigungen konfigurieren'](images/wizard.jpg)
-2. Navigieren Sie auf der Registerkarte **Konfiguration** zum Abschnitt **Apple-Push-Zertifikat** und wählen Sie **Sandbox** (Entwicklung) oder **Produktion** (Verteilung) aus und laden Sie dann das `p.12`-Zertifikat hoch, das Sie im vorherigen [Schritt](#step18) erstellt haben.
-	![Registerkarte für die Konfiguration von Push-Benachrichtigungen festlegen](images/credential_screen.jpg)
+1. Wählen Sie im Push Notification-Services-Dashboard die Option **Konfigurieren** aus.
+2. Wählen Sie die Option **Mobile** aus, um die Informationen im Formular mit den APNs-Push-Berechtigungsnachweisen zu aktualisieren.
+3. Wählen Sie je nach Bedarf **Sandbox** (Entwicklung) oder **Produktion** (Verteilung) aus und laden Sie dann das `p.12`-Zertifikat hoch, das Sie im vorherigen [Schritt](#step18) erstellt haben.
+  ![Dashboard zum Festlegen von Push-Benachrichtigungen](images/wizard.jpg)
 3. Geben Sie in das Feld **Kennwort** das zugehörige Kennwort für die `.p12`-Zertifikatsdatei ein und klicken Sie anschließend auf **Speichern**.
 
 Nachdem die Zertifikate erfolgreich mit einem gültigen Kennwort hochgeladen wurden, können Sie mit dem Senden von Benachrichtigungen beginnen.

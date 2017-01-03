@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -17,65 +19,80 @@ copyright:
 # 有关访问 {{site.data.keyword.Bluemix_notm}} 的故障诊断 
 {: #accessing}
 
-上次更新时间：2016 年 8 月 18 日
-{: .last-updated} 
 
 访问 {{site.data.keyword.Bluemix}} 的一般性问题可能包括用户无法登录到 {{site.data.keyword.Bluemix_notm}} 和帐户困于暂挂状态等。然而，在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
 
 ## 无法登录到 {{site.data.keyword.Bluemix_notm}}
+{: #ts_unabletologin}
+
+您必须具有有效的 {{site.data.keyword.Bluemix_notm}} 帐户才能登录。
+
+
+在尝试登录到 {{site.data.keyword.Bluemix_notm}} 时，您看到以下其中一条错误消息：
+{: tsSymptoms} 
+
+ * 在客户门户网站中
+  
+   `由于认证成功，您已位于此页面中，但是此 IBM 标识未与任何 IBM Cloud 帐户关联。如果您认为这是错误，请联系帐户所有者或主用户。`
+
+ * 在 {{site.data.keyword.Bluemix_notm}} 控制台中
+  
+  `由于认证成功，您已位于此页面中，但是此 IBM 标识未与任何 {{site.data.keyword.Bluemix_notm}} 帐户关联。`
+
+
+最有可能导致收到此错误消息的一个原因是，您尚未创建 {{site.data.keyword.Bluemix_notm}} 帐户，或者您需要切换到 IBM 标识认证。
+{: tsCauses} 
+ 
+
+执行注册流程以创建 {{site.data.keyword.Bluemix_notm}} 帐户，或者联系主用户或帐户管理员来切换到 IBM 标识。
+{: tsResolve}
+
+根据帐户的设置方式，下面的一些登录选项可能适用： 
+ * 使用 SoftLayer 标识的 SoftLayer 用户必须通过[客户门户网站](https://control.softlayer.com)登录。
+ * 使用 IBM 标识且具有或不具有链接 Bluemix 帐户的 SoftLayer 用户可以通过[客户门户网站](https://control.softlayer.com)登录来打开 SoftLayer 客户门户网站，也可以通过 [Bluemix 控制台](https://console.{DomainName})登录来打开“基础架构”仪表板。 
+ * 没有链接 SoftLayer 帐户的 Bluemix 用户必须通过 Bluemix 控制台登录。
+ * 具有链接 SoftLayer 帐户的 Bluemix 用户可以通过 [Bluemix 控制台](https://console.{DomainName})或[客户门户网站](https://control.softlayer.com)登录。
+ 
+
+## 密码无效
 {: #ts_logintobm}
 
-您必须具有有效的 IBM 标识和密码才能登录到 {{site.data.keyword.Bluemix_notm}}。
+您必须具有有效的 IBM 标识才能登录到 {{site.data.keyword.Bluemix_notm}} 控制台。
 
-
-在尝试登录到 {{site.data.keyword.Bluemix_notm}} 时，您会看到以下错误消息： 
+在尝试登录到 {{site.data.keyword.Bluemix_notm}} 时，您看到以下错误消息：
 {: tsSymptoms} 
 
 `输入的密码不正确。`
 
-
-用于登录 {{site.data.keyword.Bluemix_notm}} 的 IBM 标识和密码无效。
+用于登录到 {{site.data.keyword.Bluemix_notm}} 的 IBM 标识和密码无效。
 {: tsCauses} 
  
-
-要获取有效的 IBM 标识和密码，请转至我的 IBM 个人档案页面，然后完成以下其中一个步骤：
+要获取有效的 IBM 标识和密码，请转至“我的 IBM 个人档案”页面，然后完成以下某个步骤：
 {: tsResolve}
-  * 如果已注册 IBM 标识并且想要检查标识和密码是否有效，请单击**登录**，并在“登录”页面中输入 IBM 标识和密码。如果忘记密码，请单击“登录”页面的**忘记密码**以重置密码。如果忘记 IBM 标识或密码问题仍未解决，请联系全球 IBM 注册帮助台来获取帮助。 
+  * 如果已注册 IBM 标识并且想要检查标识和密码是否有效，请单击**登录**，并在“登录”页面中输入 IBM 标识和密码。如果忘记密码，请单击“登录”页面上的**忘记密码**以重置密码。如果忘记 IBM 标识或密码问题仍未解决，请联系全球 IBM 注册帮助台来获取帮助。 
   * 如果没有 IBM 标识，请单击**注册**以注册 IBM 标识和密码。 
-  
-**注：**对于 IBM 员工，IBM 标识可能不同于内部网登录标识。 
 
 
 
-<!-- begin STAGING ONLY --> 
+## 无法使用 SoftLayer 用户名登录
+{: #ts_softlayer_username}
 
-## 访问外部 Web 站点时发生问题
-{: #ts_bmlinkid}
-
-您无法使用 IBM 内部网标识登录到 {{site.data.keyword.Bluemix_notm}}，除非您将内部网标识与 IBM 标识链接到一起。
+您必须具有有效的 IBM 标识和密码才能登录到 {{site.data.keyword.Bluemix_notm}}。
 
 
-从 {{site.data.keyword.Bluemix_notm}}“登录”页面选择**使用内部网标识登录**之后，可能会看到以下错误消息：
+尝试使用 SoftLayer 用户名登录到 {{site.data.keyword.Bluemix_notm}} 控制台时，收到以下消息：
 {: tsSymptoms} 
 
-`访问外部 Web 站点时发生问题`
+`无法识别此 IBM 标识或电子邮件。`
 
+您必须通过 IBM 标识登录才能使用 Bluemix 控制台中的“基础架构”仪表板。
+{: tsCauses} 
+ 
+如果您是使用 SoftLayer 标识的 SoftLayer 用户，那么必须切换到客户门户网站以在您有权访问的每个帐户内进行 IBM 认证，然后才能使用 IBM 标识认证进行登录。 
 
-
-当您使用未与 IBM 标识相链接的 IBM 内部网标识登录到 {{site.data.keyword.Bluemix_notm}} 时会发生此问题。IBM 标识是用于登录 www.ibm.com 的标识。
-{: tsCauses}
-
-
-作为 IBM 员工，您必须将 IBM 内部网标识与外部 IBM 标识相链接，才能使用内部网标识登录到 {{site.data.keyword.Bluemix_notm}}。要链接这两个标识，请完成以下步骤：
-{: tsResolve} 
-
-  1. 在[中央登录](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window}页面中，单击**我的登录**。
-  2. 在“我的登录”页面上，单击**链接标识**，然后在 {{site.data.keyword.Bluemix_notm}}“登录”页面上输入 IBM 标识和密码。之后，内部网标识与 IBM 标识即会自动链接在一起。
-  
-
-<!-- end STAGING ONLY -->
-
+联系主用户或帐户管理员来切换到 IBM 标识。
+{: tsResolve}
 
 
 
@@ -99,10 +116,7 @@ copyright:
 关闭消息窗口，然后单击运行时窗格中的**重置**按钮。
 {: tsResolve} 
 
-
-
-
-    
+  
     
 ## {{site.data.keyword.Bluemix_notm}} 区域之间的自动故障转移不可用
 {: #ts_failover}
@@ -182,7 +196,7 @@ nslookup stage1.mybluemix.net
 如果您无法邀请用户加入组织，并需要其他角色来完成此操作，请联系组织管理员来更改您的角色。要识别组织管理员，请完成以下步骤：
 {: tsResolve}
 
-  1. 转至 {{site.data.keyword.Bluemix_notm}}“仪表板”，单击菜单栏中的 {{site.data.keyword.avatar}} 图标 ![Avatar 图标](images/account_support.svg) ，然后选择**管理组织**。
+  1. 转至 {{site.data.keyword.Bluemix_notm}} 仪表板。在菜单栏中，单击**支持**菜单项，然后单击**管理组织**。
   2. 转至您的组织，并查看**用户**选项卡上的组织管理员信息。  
   
 如果由于您是合作者（并非成员）而无法邀请用户，那么您必须删除您先前的 {{site.data.keyword.Bluemix_notm}} 帐户，然后被邀请以组织成员身份加入帐户。要删除您先前的帐户并以成员身份加入帐户，请完成以下步骤： 
@@ -210,7 +224,7 @@ nslookup stage1.mybluemix.net
 要对 {{site.data.keyword.Bluemix_notm}} 注册多个用户，必须为每个用户完成以下步骤：
 {: tsResolve}
 
-  1. 在 {{site.data.keyword.Bluemix_notm}} 用户界面中单击**注册**。
+  1. 在 {{site.data.keyword.Bluemix_notm}} 控制台中单击**注册**。
   2. 按照向导的提示完成每个步骤。
 
     
@@ -218,10 +232,10 @@ nslookup stage1.mybluemix.net
 ## 无法装入 {{site.data.keyword.Bluemix_notm}} 页面
 {: #ts_err}
 
-在使用 {{site.data.keyword.Bluemix_notm}} 用户界面时，您可能无法装入 {{site.data.keyword.Bluemix_notm}} 页面。相反，您可能会看到错误消息 BXNUI0001E 或 BXNUI0016E。
+在使用 {{site.data.keyword.Bluemix_notm}} 控制台时，您可能无法装入 {{site.data.keyword.Bluemix_notm}} 页面。相反，您可能会看到错误消息 BXNUI0001E 或 BXNUI0016E。
  
 
-在使用 {{site.data.keyword.Bluemix_notm}} 用户界面时，您可能看到以下一条错误消息：
+在使用 {{site.data.keyword.Bluemix_notm}} 控制台时，您可能会看到以下其中一条错误消息：
 {: tsSymptoms}
 
 `BXNUI0001E: 未装入页面，因为 Bluemix 未检测到是否存在会话。`
@@ -230,7 +244,6 @@ nslookup stage1.mybluemix.net
 `BXNUI0016E: 未检索到应用程序和服务，因为未装入 Bluemix 页面。`
 
  
-
 您可以根据需要完成以下一个或多个操作：
 {: tsResolve}
 

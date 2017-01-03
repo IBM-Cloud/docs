@@ -5,10 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Ein Gerät mit einer Benutzer-ID registrieren
 {: #register_device_with_userId}
-Letzte Aktualisierung: 17. Oktober 2016
+Letzte Aktualisierung: 07. Dezember 2016
 {: .last-updated}
 
 Führen Sie die folgenden Schritte aus, um eine Registrierung für die Benachrichtigung auf Benutzer-ID-Basis durchzuführen:
@@ -24,17 +28,11 @@ push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 ```
 	{: codeblock}
 
-####AppGUID
-{: push-app-guid}
 
-Dies ist der 'AppGUID'-Schlüssel des {{site.data.keyword.mobilepushshort}}-Service.
+- **AppGUID**: Dies ist der 'AppGUID'-Schlüssel des {{site.data.keyword.mobilepushshort}}-Service.
+- **clientSecret**: Dies ist der 'clientSecret'-Schlüssel des {{site.data.keyword.mobilepushshort}}-Service.
 
-####clientSecret
-{: android-client-secret}
-
-Dies ist der geheime Clientschlüssel des {{site.data.keyword.mobilepushshort}}-Service.
-
-Verwenden Sie die API **registerDeviceWithUserId**, um das Gerät für Push-Benachrichtigungen zu registrieren.
+  Verwenden Sie die API **registerDeviceWithUserId**, um das Gerät für Push-Benachrichtigungen zu registrieren.
 ```
 // Register the device to {{site.data.keyword.mobilepushshort}}.
 push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
@@ -51,18 +49,31 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-####userId
-{: android-user-id}
 
-Übergeben Sie die eindeutige Benutzer-ID für die Registrierung bei {{site.data.keyword.mobilepushshort}}.
+- **userId**: Übergeben Sie die eindeutige Benutzer-ID für die Registrierung bei {{site.data.keyword.mobilepushshort}}.
 
 **Hinweis:** Um {{site.data.keyword.mobilepushshort}} zu aktivieren, die auf einer Benutzer-ID basieren, müssen Sie sicherstellen, dass Sie das Gerät mit einer Benutzer-ID registrieren und außerdem den geheimen Clientschlüssel ('clientSecret') übergeben, der bei der Bereitstellung der {{site.data.keyword.mobilepushshort}}-Services zugeordnet wird. Die Geräteregistrierung schlägt ohne einen gültigen geheimen Clientschlüssel fehl.
+
+## Cordova
+{: cordova}
+
+Verwenden Sie die folgenden APIs für die Registrierung von Push-Benachrichtigungen auf Benutzer-ID-Basis.
+
+```
+// Register device for push notification with UserId
+var options = {"userId": "Your User Id value"};
+BMSPush.registerDevice(options,success, failure); 
+```
+	{: codeblock}
+
+
+- **userId**: Übergeben Sie die eindeutige Benutzer-ID für die Registrierung bei {{site.data.keyword.mobilepushshort}}.
 
 
 ## Objective-C
 {: objc-register}
 
-Verwenden Sie die folgenden APIs für die Registrierung von Push-Benachrichtigungen auf Benutzer-ID-Basis.
+Verwenden Sie die folgenden APIs für die Registrierung für Push-Benachrichtigungen auf Benutzer-ID-Basis.
 ```
 // Initialize the MFPPush
 IMFPushClient* push = [IMFPushClient sharedInstance];
@@ -70,15 +81,9 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 ```
 	{: codeblock}
 
-###AppGUID
-{: objc-pushappguid}
 
-Dies ist der 'AppGUID'-Schlüssel des {{site.data.keyword.mobilepushshort}}-Service.
-
-####clientSecret
-{: objc-client-secret}
-
-Dies ist der geheime Clientschlüssel des {{site.data.keyword.mobilepushshort}}-Service.
+- **AppGUID**: Dies ist der 'AppGUID'-Schlüssel des {{site.data.keyword.mobilepushshort}}-Service.
+- **clientSecret**: Dies ist der 'clientSecret'-Schlüssel des {{site.data.keyword.mobilepushshort}}-Service.
 
 Verwenden Sie die API **registerWithUserId**, um das Gerät für Push-Benachrichtigungen zu registrieren.
 ```
@@ -96,10 +101,8 @@ Verwenden Sie die API **registerWithUserId**, um das Gerät für Push-Benachrich
 ```
 	{: codeblock}
 
-####userId
-{: objc-user-id}
 
-Übergeben Sie die eindeutige Benutzer-ID für die Registrierung bei {{site.data.keyword.mobilepushshort}}.
+- **userId**: Übergeben Sie die eindeutige Benutzer-ID für die Registrierung bei {{site.data.keyword.mobilepushshort}}.
 
 ## Swift
 {: swift-register}
@@ -111,14 +114,9 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 ```
 	{: codeblock}
 
-####AppGUID
-{: swift-pushappguid}
-Dies ist der 'AppGUID'-Schlüssel des {{site.data.keyword.mobilepushshort}}-Service.
 
-####clientSecret
-{: swift-client-secret}
-
-Dies ist der geheime Clientschlüssel des {{site.data.keyword.mobilepushshort}}-Service.
+- **AppGUID**: Dies ist der 'AppGUID'-Schlüssel des {{site.data.keyword.mobilepushshort}}-Service.
+- **clientSecret**: Dies ist der 'clientSecret'-Schlüssel des {{site.data.keyword.mobilepushshort}}-Service.
 
 Verwenden Sie die API **registerWithUserId**, um das Gerät für Push-Benachrichtigungen zu registrieren.
 
@@ -135,12 +133,9 @@ if error.isEmpty {
 ```
 	{: codeblock}
 
-####userId
-{: swift-user-id}
+- **userId**: Übergeben Sie die eindeutige Benutzer-ID für die Registrierung bei {{site.data.keyword.mobilepushshort}}.
 
-Übergeben Sie die eindeutige Benutzer-ID für die Registrierung bei {{site.data.keyword.mobilepushshort}}.
-
-## Google Chrome und Mozilla Firefox
+## Google Chrome, Safari und Mozilla Firefox
 {: web-register}
 
 Verwenden Sie die folgenden APIs, um die Registrierung für Benachrichtigungen durchzuführen, die auf einer Benutzer-ID basieren. Initialisieren Sie das SDK mit `app GUID`, `app Region` und `Client Secret`.
@@ -150,7 +145,7 @@ var bmsPush = new BMSPush();
 var params = {
     "appGUID":"push app GUID",
     "appRegion":"App Region",
-    "clientSecret":"Push Client Secret" 
+    "clientSecret":"Push Client Secret"
     }
   bmsPush.initialize(params, function(response){
           alert(response.response)
@@ -185,7 +180,7 @@ var params = {
 ```
 	{: codeblock}
   
-Nach der erfolgreichen Registrierung registrieren Sie die Webanwendung bei der Benutzer-ID.
+Nach der erfolgreichen Initialisierung müssen Sie die Webanwendung mit der Benutzer-ID registrieren.
 
 ```
 bmsPush.registerWithUserId("UserId", function(response) {
@@ -196,7 +191,6 @@ bmsPush.registerWithUserId("UserId", function(response) {
 
 # Benachrichtigungen, die auf einer Benutzer-ID basieren
 {: #using_userid}
-
 
 Die Benachrichtigungen, die auf einer Benutzer-ID basieren, sind Benachrichtigungsnachrichten, deren Ziel ein bestimmter Benutzer ist. Viele Geräte können mit einem einzigen Benutzer registriert werden. In den folgenden Schritten wird beschrieben, wie Benachrichtigungen auf Benutzer-ID-Basis gesendet werden.
 

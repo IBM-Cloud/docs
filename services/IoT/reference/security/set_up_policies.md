@@ -11,14 +11,15 @@ copyright:
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Configuring security policies
+# Configuring security policies (Beta)
 {: #set_up_policies.md}
-Last updated: 15 November 2016
+Last updated: 29 December 2016
 {: .last-updated}
 
 A security analyst can configure connection security policies and blacklists or whitelists.
 
 ## Configuring connection policies
+{: #config_connect.md}
 
 You can set the default security level that is applied to all devices. You can then add custom security settings for specific devices.
 
@@ -28,6 +29,7 @@ You can set the default security level that is applied to all devices. You can t
     - TLS with Token Authentication
     - TLS with Client Certificate Authentication
     - TLS with Token and Client Certificate Authentication
+    - TLS with Client Certificate or Token
 
 Based on the security level you select, the table shows the number of devices that are impacted, and the predicted level of compliance at the set security level.
 
@@ -35,10 +37,12 @@ Based on the security level you select, the table shows the number of devices th
 4. Click **Save**.  
 
 ## Configuring blacklists and whitelists
+{: #config_black_white.md}
 
 Restrict access to the server from certain devices by using a blacklist or use a whitelist to grant server access to specific devices. You an use either a blacklist or a whitelist -- they cannot be used together.
 
 ### Configure a blacklist
+{: #config_blacklist.md}
 
 1. On the Risk and Security Management **Policies** page, in the **Blacklist** section, click **Configure**.
 2. On the **Blacklist** page, click **Add to Blacklist**.
@@ -47,10 +51,12 @@ Restrict access to the server from certain devices by using a blacklist or use a
     - On the **CIDR** tab, enter a Classless Inter-Domain Routing (CIDR) notated block.
     - On the **Country** tab, enter or select countries from which you want to block all devices.
 4. In the **Add to Blacklist** window, click **Save**.
-5. Review the list of blocked devices. Any devices that are a part of the list, based on IP address, CIDR, or country, are not able to connect to the Watson IoT Platform server.
+5. Review the list of blocked devices. Any devices that are a part of the list, based on IP address, CIDR, or country, are not able to connect to the {{site.data.keyword.iot_short_notm}} server.
 6. Click **Save**.
 
 ### Configure a whitelist
+{: #config_whitelist.md}
+
 1. On the Risk and Security Management **Policies**, click **Configure** beside **Whitelist**.
 2. On the **Whitelist** page, click **Add to Whitelist**.
 3. In the **Add to Whitelist** window, do one of the following:
@@ -58,5 +64,5 @@ Restrict access to the server from certain devices by using a blacklist or use a
     - On the **CIDR** tab, enter a Classless Inter-Domain Routing (CIDR) notated block.
     - On the **Country** tab, enter or select countries from which you want to block access for all devices.
 4. In the **Add to Whitelist** window, click **Save**.
-5. Review the list of allowed devices. Any devices that are a part of the list, based on IP address, CIDR, or country, are  able to connect to the Watson IoTP server.
+5. Review the list of allowed devices. Any devices that are a part of the list, based on IP address, CIDR, or country, are  able to connect to the {{site.data.keyword.iot_short_notm}} server.
 6. Click **Save**.

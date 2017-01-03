@@ -13,9 +13,6 @@ lastupdated: "2016-10-18"
 # サービス
 {: #services}
 
-最終更新日: 2016 年 10 月 18 日
-{: .last-updated}
-
 {{site.data.keyword.Bluemix}} 「モバイル」ダッシュボードの**「サービス」**ビューから、既存サービスを表示したり、新規サービスを作成したりできます。「モバイル」ダッシュボードでは、プロジェクトによって管理されているすべての Bluemix サービスを 1 箇所で表示できます。  
 
 **「サービス」**ビューからサービスを削除すると、そのサービスが関連付けられているプロジェクトからそのサービスを切断することになります。そのサービスをプロジェクトに再接続したい場合は、新しいサービス・インスタンスを作成してください。
@@ -32,29 +29,29 @@ lastupdated: "2016-10-18"
 <tr>
 <td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}アイコン"><br/>{{site.data.keyword.mobileanalytics_short}} (ベータ)</td>
 <td valign="top">{{site.data.keyword.mobileanalytics_full}} サービスを使用して、モバイル・アプリがどのように実行され、使用されているのかについての洞察を得ることができます。<br/><br/>
-このサービスの操作について詳しくは、<a href="../services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 文書リンク">{{site.data.keyword.mobileanalytics_short}} 文書</a>を参照してください。
+このサービスの操作について詳しくは、<a href="/docs/services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 文書リンク">{{site.data.keyword.mobileanalytics_short}} 文書</a>を参照してください。
 </td>
 </tr>
 <tr>
 <td><img src="images/authentication_icon
 .png" alt="{{site.data.keyword.amashort}} サービスのアイコン"><br/>{{site.data.keyword.amashort}}</td>
 <td valign="top">{{site.data.keyword.amafull}} サービスを使用して、モバイル・アプリにセキュリティー機能を追加します。クライアント認証プロバイダーおよび ID プロバイダーを構成して、ユーザーが既存の Google アカウントまたは Facebook アカウントを使用してアプリにログインできるようにすることができます。<br/><br/>
-このサービスの操作について詳しくは、<a href="../services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} 文書リンク">{{site.data.keyword.amashort}} 文書</a>を参照してください。</td>
+このサービスの操作について詳しくは、<a href="/docs/services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} 文書リンク">{{site.data.keyword.amashort}} 文書</a>を参照してください。</td>
 </tr>
 <tr>
 <td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}} サービスのアイコン"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
 <td valign="top">{{site.data.keyword.mobilefoundation_long}} サービスを使用して、エンタープライズ・モバイル・アプリの開発、テスト、操作を行うことのできる {{site.data.keyword.mfp_full}} 環境のセットアップを迅速に行います。<br/><br/>
-このサービスの操作について詳しくは、<a href="../services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} 文書リンク">{{site.data.keyword.mobilefoundation_short}} 文書</a>を参照してください。</td>
+このサービスの操作について詳しくは、<a href="/docs/services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} 文書リンク">{{site.data.keyword.mobilefoundation_short}} 文書</a>を参照してください。</td>
 </tr>
 <tr>
 <td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}} サービスのアイコン"><br/>{{site.data.keyword.mqa}}</td>
 <td valign="top">{{site.data.keyword.mqafull}} サービスを使用して、アプリのモバイル品質サービスをディスカバーしてセットアップします。モバイル・アプリの品質メトリックの概要を表示して、開発しているアプリの問題を素早く理解することができます。これらのメトリックには、異常終了、バグ、ユーザー・フィードバック、およびユーザー評価の情報が含まれます。アプリに関するこの情報を確認することによって、特定の問題を詳しく調査するかどうかを判別できます。<br/><br/>
-このサービスの操作について詳しくは、<a href="../services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 文書リンク">{{site.data.keyword.mqa}} 文書</a>を参照してください。</td>
+このサービスの操作について詳しくは、<a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 文書リンク">{{site.data.keyword.mqa}} 文書</a>を参照してください。</td>
 </tr>
 <tr>
 <td><img src="images/push_icon.png" alt="プッシュ通知サービスのアイコン"><br/>{{site.data.keyword.mobilepushshort}}</td>
 <td valign="top">{{site.data.keyword.mobilepushfull}} サービスを使用して、iOS プラットフォームおよび Android プラットフォームをターゲットとするモバイル・プッシュ通知を送信および管理します。このサービスは、アプリケーション・ユーザーと各ユーザーのデバイスとのマッピング、およびデバイス・プラットフォームを管理し、デバイスへのプッシュ通知のディスパッチを処理します。このサービスを使用して、ブロードキャスト、ユニキャスト (ユーザー ID、デバイス ID に基づく)、およびタグ (またはトピック) をプッシュ通知に基づいてモバイル・アプリケーション・ユーザーに送信することができます。<br/><br/>
-このサービスの操作について詳しくは、<a href="../services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 文書リンク">{{site.data.keyword.mobilepushshort}} 文書</a>を参照してください。</td>
+このサービスの操作について詳しくは、<a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 文書リンク">{{site.data.keyword.mobilepushshort}} 文書</a>を参照してください。</td>
 </table>
 
 ## モバイル・サービスの統合

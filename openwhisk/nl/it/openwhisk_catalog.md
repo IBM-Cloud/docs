@@ -4,8 +4,8 @@
 
 copyright:
 
-  anni: 2016
-
+  years: 2016
+lastupdated: "2016-09-09"
  
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # Utilizzo dei servizi {{site.data.keyword.Bluemix_notm}} abilitati per {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_ecosystem}
-Ultimo aggiornamento: 09 settembre 2016
-{: .last-updated}
 
 In {{site.data.keyword.openwhisk}}, un catalogo di pacchetti mette a tua disposizione un modo facile per migliorare la tua applicazione con delle utili funzionalità e di accedere ai servizi interni nell'ecosistema. Sono esempi di servizi esterni con attivazione {{site.data.keyword.openwhisk_short}}: Cloudant, The Weather Company, Slack e GitHub.
 {: shortdesc}
@@ -34,10 +32,10 @@ Il pacchetto `/whisk.system/cloudant` ti consente di lavorare con un database Cl
 
 | Entità | Tipo | Parametri | Descrizione |
 | --- | --- | --- | --- |
-| `/whisk.system/cloudant` | pacchetto | {{site.data.keyword.Bluemix_notm}}ServiceName, host, username, password, dbname, includeDoc, overwrite | Lavorare con un database Cloudant |
+| `/whisk.system/cloudant` | pacchetto | {{site.data.keyword.Bluemix_notm}}ServiceName, host, username, password, dbname, overwrite | Lavorare con un database Cloudant |
 | `/whisk.system/cloudant/read` | azione | dbname, includeDoc, id | Leggere un documento da un database |
 | `/whisk.system/cloudant/write` | azione | dbname, overwrite, doc | Scrivere un documento in un database |
-| `/whisk.system/cloudant/changes` | feed | dbname, includeDoc, maxTriggers | Attivare degli eventi di trigger in caso di modifiche a un database |
+| `/whisk.system/cloudant/changes` | feed | dbname, maxTriggers | Attivare degli eventi di trigger in caso di modifiche a un database |
 
 I seguenti argomenti descrivono la configurazione di un database Cloudant, la configurazione di un pacchetto associato e l'utilizzo di azioni e feed nel pacchetto `/whisk.system/cloudant`.
 
@@ -118,7 +116,7 @@ Se non stai utilizzando {{site.data.keyword.openwhisk_short}} in {{site.data.key
 1. Crea un bind di pacchetto configurato per il tuo account Cloudant.
 
   ```
-  wsk package bind /whisk.system/cloudant myCloudant -p username 'MIONOMEUTENTE' -p password 'MIAPASSWORD' -p host 'MIOACCOUNTCLOUDANT.cloudant.com'
+  wsk package bind /whisk.system/cloudant myCloudant -p username MYUSERNAME -p password MYPASSWORD -p host MYCLOUDANTACCOUNT.cloudant.com
   ```
   {: pre}
 
@@ -141,13 +139,12 @@ Se non stai utilizzando {{site.data.keyword.openwhisk_short}} in {{site.data.key
 Puoi utilizzare il feed `changes` per configurare un servizio per attivare un trigger ogni volta che viene apportata una modifica al tuo database Cloudant. I parametri sono i seguenti:
 
 - `dbname`: nome del database Cloudant.
-- `includeDoc`: se è impostato su true, ogni evento di trigger che viene attivato include il documento Cloudant modificato. 
 - `maxTriggers`: arrestare l'attivazione dei trigger quando viene raggiunto questo limite. Il valore predefinito è 1000. Puoi impostarlo su un massimo di 10.000. Se tenti di impostare più di 10.000, la richiesta viene rifiutata.
 
 1. Crea un trigger con il feed `changes` nel bind di pacchetto che hai creato precedentemente. Accertati di sostituire `/myNamespace/myCloudant` con il tuo nome pacchetto.
 
   ```
-  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
   ```
@@ -166,24 +163,11 @@ Puoi utilizzare il feed `changes` per configurare un servizio per attivare un tr
 
 4. Osserva le nuove attivazioni per il trigger `myCloudantTrigger` trigger per ogni modifica di documento.
 
-**Nota**: se non sei in grado di osservare le nuove attivazioni, consulta le sezioni successive relative alla lettura da, e alla scrittura in, un database Cloudant. L'esecuzione di test sulle seguenti procedure di lettura e scrittura aiuterà a verificare la correttezza delle credenziali Cloudant.
+**Nota**: se non se in grado di osservare le nuove attivazioni, consulta le sezioni successive relative alla lettura da, e alla scrittura in, un database Cloudant. L'esecuzione di test sulle seguenti procedure di lettura e scrittura aiuterà a verificare la correttezza delle credenziali Cloudant.
 
 Puoi ora creare le regole e associarle alle azioni per reagire agli aggiornamenti dei documenti.
 
-Il contenuto degli eventi generati dipende dal valore del parametro `includeDoc` alla creazione del trigger. Se il parametro è impostato su true, ogni evento di trigger che viene attivato include il documento Cloudant modificato. Considera, ad esempio, il seguente documento modificato:
-
-  ```
-  {
-    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
-    "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
-    "name": "Heisenberg"
-  }
-  ```
-  {: screen}
-
-Il codice in questo esempio genera un evento di trigger con i parametri `_id`, `_rev` e `name` corrispondenti. In effetti, la rappresentazione JSON dell'evento di trigger è identica al documento.
-
-In caso contrario, se `includeDoc` è false, gli eventi includono i seguenti parametri:
+Il contenuto degli eventi generati include i seguenti parametri:
 
 - `id`: l'ID documento.
 - `seq`: l'identificativo della sequenza generato da Cloudant.
@@ -212,7 +196,7 @@ Puoi utilizzare un'azione per memorizzare un documento in un database Cloudant d
 1. Memorizza un documento utilizzando l'azione `write` nel bind di pacchetto che hai creato precedentemente. Accertati di sostituire `/myNamespace/myCloudant` con il tuo nome pacchetto.
 
   ```
-  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc "{\"_id\":\"heisenberg\",\"name\":\"Walter White\"}"
   ```
   {: pre}
   ```
@@ -250,6 +234,53 @@ Puoi utilizzare un'azione per recuperare un documento da un database Cloudant de
   ```
   {: screen}
 
+### Utilizzo di una sequenza di azioni per elaborare un documento su un evento di modifica da un database Cloudant
+
+Puoi utilizzare una sequenza di azioni in una regola per recuperare ed elaborare il documento associato a un evento di modifica Cloudant.
+
+Crea un'azione che elaborerà un documento da Cloudant; il documento è previsto come parametro.
+Di seguito è riportato un codice di esempio di un'azione che gestisce un documento:
+```
+function main(doc){
+  return { "isWalter:" : doc.name === "Walter White"};
+}
+```
+{: codeblock}
+```
+wsk action create myAction myAction.js
+```
+{: pre}
+Per leggere il documento dal database, puoi utilizzare l'azione `read` nel pacchetto cloudant; questa azione può essere inclusa con la tua azione `myAction` in una sequenza di azioni.
+Crea una sequenza di azioni mediante l'azione `read`, quindi richiama la tua azione `myAction` che prevede un documento come input.
+```
+wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
+```
+{: pre}
+
+Adesso crea una regola che associ il tuo trigger alla nuova azione `sequenceAction`
+```
+wsk rule create myRule myCloudantTrigger sequenceAction
+```
+{: pre}
+
+La sequenza di azioni dovrà conoscere il nome del database da cui recuperare il documento.
+Imposta un parametro sul trigger per `dbname`
+```
+wsk trigger update myCloudantTrigger --param dbname testdb
+```
+{: pre}
+
+**Nota:** il trigger di modifica Cloudant veniva utilizzato per supportare il parametro `includeDoc`; questo non è più supportato.
+  Dovrai ricreare i trigger creati in precedenza con `includeDoc`:
+  Ricrea il trigger senza il parametro `includeDoc`
+  ```
+  wsk trigger delete myCloudantTrigger
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
+  ```
+  {: pre}
+  Puoi seguire i passaggi precedenti per creare una sequenza di azioni per ottenere il documento e chiamare la tua azione esistente.
+  Quindi, aggiorna la tua regola per utilizzare la nuova sequenza di azioni.
+
 
 ## Utilizzo del pacchetto Alarm
 {: #openwhisk_catalog_alarm}
@@ -269,26 +300,30 @@ Il pacchetto include il seguente feed.
 
 Il feed `/whisk.system/alarms/alarm` configura il servizio Alarm per attivare un evento di trigger con una specifica frequenza. I parametri sono i seguenti:
 
-- `cron`: una stringa, basata sulla sintassi crontab Unix, che indica quando attivare il trigger in UTC (Coordinated Universal Time). La stringa è una sequenza di sei campi separati da spazi: `X X X X X X `. Per ulteriori dettagli sull'utilizzo di sintassi cron, consulta: https://github.com/ncb000gt/node-cron. Di seguito sono riportati alcuni esempi della frequenza indicata dalla stringa:
+- `cron`: una stringa, basata sulla sintassi crontab Unix, che indica quando attivare il trigger in UTC (Coordinated Universal Time). La stringa è una sequenza di cinque campi separati da spazi: `X X X X X`.
+Per ulteriori dettagli sull'utilizzo di sintassi cron, consulta: http://crontab.org. Di seguito sono riportati alcuni esempi della frequenza indicata dalla stringa:
 
-  - `* * * * * *`: ogni secondo.
-  - `0 * * * * *`: all'inizio di ogni minuto.
-  - `* 0 * * * *`: all'inizio di ogni ora.
-  - `0 0 9 8 * *`: alle 9:00:00 AM (UTC) l'ottavo giorno di ogni mese
+  - `* * * * *`: all'inizio di ogni minuto.
+  - `0 * * * *`: all'inizio di ogni ora.
+  - `0 */2 * * *`: ogni 2 ore (ad esempio, 02:00:00, 04:00:00, ...)
+  - `0 9 8 * *`: alle 9:00:00AM (UTC) l'ottavo giorno di ogni mese
 
 - `trigger_payload`: il valore di questo parametro diventa il contenuto del trigger ogni volta che il trigger viene attivato.
 
 - `maxTriggers`: arrestare l'attivazione dei trigger quando viene raggiunto questo limite. Il valore predefinito è 1000. Puoi impostarlo su un massimo di 10.000. Se tenti di impostare più di 10.000, la richiesta viene rifiutata.
 
-Di seguito viene riportato un esempio di creazione di un trigger che verrà attivato una volta ogni 20 secondi con i valori `name` e `place` nell'evento di trigger.
+Di seguito viene riportato un esempio di creazione di un trigger che verrà attivato una volta ogni 2 minuti con i valori `name` e `place` nell'evento di trigger.
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
-  {: pre}
 
 Ogni evento generato includerà come parametri le proprietà specificate nel valore `trigger_payload`. In questo caso, ogni evento di trigger avrà i parametri `name=Odin` e `place=Asgard`.
 
+**Nota**: il parametro `cron` supporta anche una sintassi personalizzata di sei campi, dove il primo campo rappresenta i secondi.
+Per ulteriori dettagli sull'utilizzo di sintassi cron personalizzata, consulta: https://github.com/ncb000gt/node-cron.
+Di seguito è riportato un esempio che utilizza una notazione di sei campi:
+  - `*/30 * * * * *`: ogni trenta secondi.
 
 ## Utilizzo del pacchetto Weather
 {: #openwhisk_catalog_weather}
@@ -321,14 +356,14 @@ Di seguito viene riportato un esempio di creazione di un bind di pacchetto e suc
 1. Crea un bind di pacchetto con la tua chiave API.
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
+  wsk package bind /whisk.system/weather myWeather --param username MY_USERNAME --param password MY_PASSWORD
   ```
   {: pre}
 
 2. Richiama l'azione `forecast` nel tuo bind di pacchetto per ottenere la previsione meteo.
 
   ```
-  wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+  wsk action invoke myWeather/forecast --blocking --result --param latitude 43.7 --param longitude -79.4
   ```
   {: pre}
 
@@ -357,47 +392,103 @@ Di seguito viene riportato un esempio di creazione di un bind di pacchetto e suc
   {: screen}
 
 
-## Utilizzo del pacchetto Watson
+## Utilizzo dei pacchetti Watson
 {: #openwhisk_catalog_watson}
+I pacchetti Watson offrono una soluzione pratica per richiamare le diverse API Watson.
 
-Il pacchetto `/whisk.system/watson` offre un pratico modo per richiamare diverse API Watson.
+Sono forniti i seguenti pacchetti Watson:
+
+| Pacchetto | Descrizione |
+| --- | --- |
+| `/whisk.system/watson-translator`   | Azioni per le API per la traduzione di testo e identificazione della lingua |
+| `/whisk.system/watson-textToSpeech` | Azioni per le API per la conversione da testo a voce |
+| `/whisk.system/watson-speechToText` | Azioni per le API per la conversione da voce a testo |
+
+**Nota** il pacchetto `/whisk.system/watson` è attualmente obsoleto; esegui la migrazione ai nuovi pacchetti menzionati sopra. Le nuove azioni forniscono la stessa interfaccia.
+
+### Utilizzo del pacchetto Watson Translator
+
+Il pacchetto `/whisk.system/watson-translator` offre una soluzione pratica per richiamare le diverse API Watson per la traduzione.
 
 Il pacchetto include le seguenti azioni.
 
 | Entità | Tipo | Parametri | Descrizione |
 | --- | --- | --- | --- |
-| `/whisk.system/watson` | pacchetto | username, password | Azioni per le API di Watson Analytics |
-| `/whisk.system/watson/translate` | azione | translateFrom, translateTo, translateParam, username, password | Tradurre il testo |
-| `/whisk.system/watson/languageId` | azione | payload, username, password | Identificare la lingua |
-| `/whisk.system/watson/speechToText` | azione | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertire audio in testo |
-| `/whisk.system/watson/textToSpeech` | azione | payload, voice, accept, encoding, username, password | Convertire testo in audio |
+| `/whisk.system/watson-translator` | pacchetto | username, password | Azioni per le API per la traduzione di testo e identificazione della lingua  |
+| `/whisk.system/watson-translator/translator` | azione | payload, translateFrom, translateTo, translateParam, username, password | Tradurre il testo |
+| `/whisk.system/watson-translator/languageId` | azione | payload, username, password | Identificare la lingua |
 
-Si consiglia di effettuare la creazione di un bind di pacchetto con i valori `username` e `password`. In questo modo, non dovrai specificare queste credenziali ogni volta che richiami le azioni nel pacchetto.
+**Nota**: il pacchetto `/whisk.system/watson` è obsoleto, incluse le azioni `/whisk.system/watson/translate` e `/whisk.system/watson/languageId`.
 
-### Traduzione di testo
+#### Configurazione del pacchetto Watson Translator in Bluemix
+
+Se stai utilizzando OpenWhisk da Bluemix, OpenWhisk crea automaticamente i bind di pacchetto per le tue istanze del servizio Bluemix Watson.
+
+1. Crea un'istanza del servizio Watson Translator nel tuo [dashboard](http://console.ng.Bluemix.net) Bluemix.
+
+  Assicurati di ricordare il nome dell'istanza del servizio e dell'organizzazione e dello spazio Bluemix in cui ti trovi.
+
+2. Assicurati che la CLI OpenWhisk si trovi nello spazio dei nomi corrispondente all'organizzazione e allo spazio Bluemix che hai utilizzato nel passo precedente.
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  In alternativa, puoi utilizzare `wsk property set --namespace` per impostare uno spazio dei nomi da un elenco di quelli a cui puoi accedere.
+
+3. Aggiorna i pacchetti nel tuo spazio dei nomi. L'aggiornamento crea automaticamente un bind di pacchetto per l'istanza del servizio Watson da te creata.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_Translator_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Configurazione del pacchetto Watson Translator esternamente a Bluemix
+
+Se non stai utilizzando OpenWhisk in Bluemix o se vuoi configurare Watson Translator esternamente a Bluemix, devi creare manualmente un bind di pacchetto per il tuo servizio Watson Translator. Ti servono il nome utente e la password del servizio Watson Translator.
+
+- Crea un bind di pacchetto configurato per il tuo servizio Watson Translator.
+
+  ```
+  wsk package bind /whisk.system/watson-translator myWatsonTranslator -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### Traduzione di testo
 {: #openwhisk_catalog_watson_translate}
 
-L'azione `/whisk.system/watson/translate` traduce il testo da una lingua a un'altra. I parametri sono i seguenti:
+L'azione `/whisk.system/watson-translator/translator` traduce il testo da una lingua a un'altra. I parametri sono i seguenti:
 
 - `username`: il nome utente dell'API Watson API.
 - `password`: la password della API Watson.
+- `payload`: il testo da tradurre.
 - `translateParam`: il parametro di input che indica il testo da tradurre. Ad esempio, se `translateParam=payload`, viene tradotto il valore del parametro `payload` che viene passato all'azione.
 - `translateFrom`: un codice a due cifre della lingua di origine.
 - `translateTo`: un codice a due cifre della lingua di destinazione.
 
-Il seguente è un esempio di creazione di un bind di pacchetto e di traduzione di testo.
-
-1. Crea un bind di pacchetto con le tue credenziali Watson.
+- Richiama l'azione `translator` nel tuo bind di pacchetto per tradurre del testo dall'inglese al francese.
 
   ```
-  wsk package bind /whisk.system/watson myWatson --param username 'MIO_NOMEUTENTE_WATSON' --param password 'MIA_PASSWORD_WATSON'
-  ```
-  {: pre}
-
-2. Richiama l'azione `translate` nel tuo bind di pacchetto per tradurre del testo dall'inglese al francese.
-
-  ```
-  wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+  wsk action invoke myWatsonTranslator/translator --blocking --result --param payload 'Blue skies ahead' --param translateFrom 'en' --param translateTo 'fr'
   ```
   {: pre}
 
@@ -409,28 +500,19 @@ Il seguente è un esempio di creazione di un bind di pacchetto e di traduzione d
   {: screen}
 
 
-### Identificazione della lingua di un testo
+#### Identificazione della lingua di un testo
 {: #openwhisk_catalog_watson_identifylang}
 
-L'azione `/whisk.system/watson/languageId` identifica la lingua di un testo. I parametri sono i seguenti:
+L'azione `/whisk.system/watson-translator/languageId` identifica la lingua di un testo. I parametri sono i seguenti:
 
 - `username`: il nome utente dell'API Watson API.
 - `password`: la password della API Watson.
 - `payload`: il testo da identificare.
 
-Di seguito viene riportato un esempio di creazione di un bind di pacchetto e identificazione della lingua di un testo.
-
-1. Crea un bind di pacchetto con le tue credenziali Watson.
+- Richiama l'azione `languageId` nel tuo bind di pacchetto per identificare la lingua.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MIO_NOMEUTENTE_WATSON' -p password 'MIA_PASSWORD_WATSON'
-  ```
-  {: pre}
-
-2. Richiama l'azione `languageId` nel tuo bind di pacchetto per identificare la lingua.
-
-  ```
-  wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+  wsk action invoke myWatsonTranslator/languageId --blocking --result --param payload 'Ciel bleu a venir'
   ```
   {: pre}
   ```
@@ -443,10 +525,75 @@ Di seguito viene riportato un esempio di creazione di un bind di pacchetto e ide
   {: screen}
 
 
-### Conversione da testo a voce
+### Utilizzo del pacchetto Watson Text to Speech
 {: #openwhisk_catalog_watson_texttospeech}
 
-L'azione `/whisk.system/watson/textToSpeech` converte un testo in un discorso audio. I parametri sono i seguenti:
+Il pacchetto `/whisk.system/watson-textToSpeech` offre una soluzione pratica per richiamare le diverse API Watson per la conversione da testo a voce.
+
+Il pacchetto include le seguenti azioni.
+
+| Entità | Tipo | Parametri | Descrizione |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-textToSpeech` | pacchetto | username, password | Azioni per le API per la conversione da testo a voce |
+| `/whisk.system/watson-textToSpeech/textToSpeech` | azione | payload, voice, accept, encoding, username, password | Convertire testo in audio |
+
+**Nota**: il pacchetto `/whisk.system/watson` è obsoleto, inclusa l'azione `/whisk.system/watson/textToSpeech`.
+
+#### Configurazione del pacchetto Watson Text to Speech in Bluemix
+
+Se stai utilizzando OpenWhisk da Bluemix, OpenWhisk crea automaticamente i bind di pacchetto per le tue istanze del servizio Bluemix Watson.
+
+1. Crea un'istanza del servizio Watson Text to Speech nel tuo [dashboard](http://console.ng.Bluemix.net) Bluemix.
+
+  Assicurati di ricordare il nome dell'istanza del servizio e dell'organizzazione e dello spazio Bluemix in cui ti trovi.
+
+2. Assicurati che la CLI OpenWhisk si trovi nello spazio dei nomi corrispondente all'organizzazione e allo spazio Bluemix che hai utilizzato nel passo precedente.
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  In alternativa, puoi utilizzare `wsk property set --namespace` per impostare uno spazio dei nomi da un elenco di quelli a cui puoi accedere.
+
+3. Aggiorna i pacchetti nel tuo spazio dei nomi. L'aggiornamento crea automaticamente un bind di pacchetto per l'istanza del servizio Watson da te creata.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_TextToSpeech_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_TextToSpeec_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Configurazione del pacchetto Watson Text to Speech esternamente a Bluemix
+
+Se non stai utilizzando OpenWhisk in Bluemix o se vuoi configurare Watson Text to Speech esternamente a Bluemix, devi creare manualmente un bind di pacchetto per il tuo servizio Watson Text to Speech. Ti servono il nome utente e la password del servizio Watson Text to Speech.
+
+- Crea un bind di pacchetto configurato per il tuo servizio Watson Speech to Text.
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonTextToSpeech -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### Conversione da testo a voce
+{: #openwhisk_catalog_watson_speechtotext}
+L'azione `/whisk.system/watson-speechToText/textToSpeech` converte un testo in audio. I parametri sono i seguenti:
 
 - `username`: il nome utente dell'API Watson API.
 - `password`: la password della API Watson.
@@ -455,19 +602,11 @@ L'azione `/whisk.system/watson/textToSpeech` converte un testo in un discorso au
 - `accept`: il formato del file audio.
 - `encoding`: la codifica dei dati binari del file audio.
 
-Di seguito viene riportato un esempio di creazione di un bind di pacchetto e conversione da testo a voce.
 
-1. Crea un bind di pacchetto con le tue credenziali Watson.
-
-  ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MIO_NOMEUTENTE_WATSON' -p password 'MIA_PASSWORD_WATSON'
-  ```
-  {: pre}
-
-2. Richiama l'azione `textToSpeech` nel tuo bind di pacchetto per convertire il testo.
+- Richiama l'azione `textToSpeech` nel tuo bind di pacchetto per convertire il testo.
 
   ```
-  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatsonTextToSpeech/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -477,11 +616,77 @@ Di seguito viene riportato un esempio di creazione di un bind di pacchetto e con
   ```
   {: screen}
 
-
-### Conversione da voce a testo
+### Utilizzo del pacchetto Watson Speech to Text
 {: #openwhisk_catalog_watson_speechtotext}
 
-L'azione `/whisk.system/watson/speechToText` converte il discorso audio in testo. I parametri sono i seguenti:
+Il pacchetto `/whisk.system/watson-speechToText` offre una soluzione pratica per richiamare le diverse API Watson per la conversione da voce a testo.
+
+Il pacchetto include le seguenti azioni.
+
+| Entità | Tipo | Parametri | Descrizione |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-speechToText` | pacchetto | username, password | Azioni per le API per la conversione da voce a testo |
+| `/whisk.system/watson-speechToText/speechToText` | azione | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertire audio in testo |
+
+**Nota**: il pacchetto `/whisk.system/watson` è obsoleto, inclusa l'azione `/whisk.system/watson/speechToText`.
+
+
+#### Configurazione del pacchetto Watson Speech to Text in Bluemix
+
+Se stai utilizzando OpenWhisk da Bluemix, OpenWhisk crea automaticamente i bind di pacchetto per le tue istanze del servizio Bluemix Watson.
+
+1. Crea un'istanza del servizio Watson Speech to Text nel tuo [dashboard](http://console.ng.Bluemix.net) Bluemix.
+
+  Assicurati di ricordare il nome dell'istanza del servizio e dell'organizzazione e dello spazio Bluemix in cui ti trovi.
+
+2. Assicurati che la CLI OpenWhisk si trovi nello spazio dei nomi corrispondente all'organizzazione e allo spazio Bluemix che hai utilizzato nel passo precedente.
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  In alternativa, puoi utilizzare `wsk property set --namespace` per impostare uno spazio dei nomi da un elenco di quelli a cui puoi accedere.
+
+3. Aggiorna i pacchetti nel tuo spazio dei nomi. L'aggiornamento crea automaticamente un bind di pacchetto per l'istanza del servizio Watson da te creata.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_SpeechToText_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_SpeechToText_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Configurazione del pacchetto Watson Speech to Text esternamente a Bluemix
+
+Se non stai utilizzando OpenWhisk in Bluemix o se vuoi configurare  Watson Speech to Text esternamente a Bluemix, devi creare manualmente un bind di pacchetto per il tuo servizio Watson Speech to Text. Ti servono il nome utente e la password del servizio Watson Speech to Text.
+
+- Crea un bind di pacchetto configurato per il tuo servizio Watson Speech to Text.
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonSpeechToText -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+
+#### Conversione da voce a testo
+
+L'azione `/whisk.system/watson-speechToText/speechToText` converte l'audio in testo. I parametri sono i seguenti:
 
 - `username`: il nome utente dell'API Watson API.
 - `password`: la password della API Watson.
@@ -501,19 +706,11 @@ L'azione `/whisk.system/watson/speechToText` converte il discorso audio in testo
 - `word_confidence`: indica se per ciascuna parola deve essere restituita una misura di attendibilità compresa nell'intervallo da 0 a 1.
 - `X-Watson-Learning-Opt-Out`: indica se annullare la selezione della raccolta dati per la chiamata.
  
-Di seguito viene riportato un esempio di creazione di un bind di pacchetto e conversione da voce a testo.
 
-1. Crea un bind di pacchetto con le tue credenziali Watson.
-
-  ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MIO_NOMEUTENTE_WATSON' -p password 'MIA_PASSWORD_WATSON'
-  ```
-  {: pre}
-
-2. Richiama l'azione `speechToText` nel tuo bind di pacchetto per convertire l'audio codificato.
+- Richiama l'azione `speechToText` nel tuo bind di pacchetto per convertire l'audio codificato.
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatsonSpeechToText/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -522,7 +719,7 @@ Di seguito viene riportato un esempio di creazione di un bind di pacchetto e con
   }
   ```
   {: screen}
-  
+ 
  
 ## Utilizzo del pacchetto Slack
 {: #openwhisk_catalog_slack}
@@ -558,14 +755,14 @@ Il seguente è un esempio di configurazione di Slack, creazione di un bind di pa
 2. Crea un bind di pacchetto con le tue credenziali Slack, il canale in cui vuoi pubblicare il messaggio e il nome utente con il quale vuoi farlo.
 
   ```
-  wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+  wsk package bind /whisk.system/slack mySlack --param url "https://hooks.slack.com/services/..." --param username Bob --param channel "#MySlackChannel"
   ```
   {: pre}
 
 3. Richiama l'azione `post` nel tuo bind di pacchetto per pubblicare un messaggio nel canale Slack.
 
   ```
-  wsk action invoke mySlack/post --blocking --result --param text 'Salve da OpenWhisk!'
+  wsk action invoke mySlack/post --blocking --result --param text "Hello from OpenWhisk!"
   ```
   {: pre}
 
@@ -659,7 +856,7 @@ Il seguente è un esempio di creazione di un bind di pacchetto.
 4. Crea un bind al pacchetto con `/whisk.system/pushnotifications`.
 
   ```
-  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  wsk package bind /whisk.system/pushnotifications myPush -p appId myAppID -p appSecret myAppSecret
   ```
   {: pre}
 
@@ -682,7 +879,10 @@ Il seguente è un esempio di creazione di un bind di pacchetto.
 L'azione `/whisk.system/pushnotifications/sendMessage` invia notifiche push ai dispositivi registrati. I parametri sono i seguenti:
 - `text`: il messaggio della notifica visualizzato dall'utente. Ad esempio: `-p text "Hi ,OpenWhisk send a notification"`.
 - `url`: un URL facoltativo che può essere inviato con l'avviso. Ad esempio: `-p url "https:\\www.w3.ibm.com"`.
-- `gcmPayload`: payload JSON personalizzato che verrà inviato come parte del messaggio di notifica. Ad esempio: `-p gcmPayload "{"hi":"hello"}"`
+- `deviceIds`: l'elenco di dispositivi specificati. Ad esempio: `-p deviceIds "[\"deviceID1\"]"`.
+- `platforms`: invia notifiche ai dispositivi delle piattaforme specificate. 'A' per i dispositivi Apple (iOS) e 'G' per i dispositivi Google (Android). Ad esempio `-p platforms "[\"A\"]"`.
+- `tagNames`:  invia notifiche ai dispositivi sottoscritti a una di queste tag. Ad esempio `-p tagNames "[\"tag1\"]" `.
+- `gcmPayload`: payload JSON personalizzato che verrà inviato come parte del messaggio di notifica. Ad esempio: `-p gcmPayload "{\"hi\":\"hello\"}"`
 - `gcmSound`: il file audio (sul dispositivo) che tenterà di essere eseguito quando la notifica arriva al dispositivo.
 - `gcmCollapseKey`: questo parametro identifica un gruppo di messaggi.
 - `gcmDelayWhileIdle`: quando questo parametro è impostato su true, indica che il messaggio non verrà inviato finché il dispositivo non diventa attivo.
@@ -700,7 +900,7 @@ Questo è un esempio di invio di una notifica push dal pacchetto pushnotificatio
 1. Invia la notifica push utilizzando l'azione `sendMessage` nel bind di pacchetto che hai precedentemente creato. Accertati di sostituire `/myNamespace/myPush` con il tuo nome pacchetto.
 
   ```
-  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds "[\"T1\",\"T2\"]"
   ```
   {: pre}
 

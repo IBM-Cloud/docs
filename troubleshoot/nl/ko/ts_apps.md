@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-11"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # 앱 관리 문제점 해결
 {: #managingapps}
 
-마지막 업데이트 날짜: 2016년 8월 18일
-{: .last-updated} 
 
 애플리케이션 관리와 관련된 일반적인 문제점으로는 애플리케이션을 업데이트할 수 없거나 2바이트 문자가 표시되지 않는 경우가 있습니다. 그러나 대부분의 경우 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {:shortdesc}
@@ -100,7 +100,7 @@ IBM Eclipse Tools for Bluemix가 실행 중인 Java의 버전을 확인하려면
 
 워크벤치 JVM이 IBM JVM 7 또는 8, 또는 Oracle JVM 8의 이전 버전인 경우에는 다음 단계를 완료하여 Oracle JVM 8로 전환하십시오.
 
-  1. Oracle JVM 8을 다운로드한 후에 이를 설치하십시오. 세부사항은 [Java SE 다운로드](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}를 참조하십시오.
+  1. Oracle JVM 8을 다운로드한 후에 이를 설치하십시오. 세부사항은 [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}를 참조하십시오.
   2. Eclipse를 다시 시작하십시오.
   3. `eclipse.vm` 특성이 Oracle JVM 8의 새 설치를 지시하는지 확인하십시오.
 
@@ -149,7 +149,7 @@ IBM Eclipse Tools for Bluemix가 실행 중인 Java의 버전을 확인하려면
 Bluemix에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
 
-`BXNUI0515E: The attempt to retrieve the spaces in the org failed because of a network connection problem.`
+`BXNUI0515E: 조직의 영역이 검색되지 않았습니다. 네트워크 연결 문제점이 발생하거나 현재 조직에 연관되어 있는 영역이 없습니다.`
 
 이 오류는 영역이 아직 작성되지 않은 경우 카탈로그에서 앱 또는 서비스를 작성하려고 처음 시도할 때 종종 수신됩니다.
 {: tsCauses}
@@ -157,7 +157,7 @@ Bluemix에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지�
 현재 조직에서 영역을 작성했는지 확인하십시오. 영역을 작성하려면 다음 방법 중 하나를 사용하십시오. 
 {: tsResolve}
 
-  * {{site.data.keyword.avatar}} 아이콘 ![아바타 아이콘](images/account_support.svg)을 클릭하여 계정 및 지원 위젯을 열고 영역을 작성할 조직을 선택한 후 **영역 작성**을 클릭하십시오. 
+  * 메뉴 표시줄에서 **계정** &gt; **조직 관리**를 클릭하십시오. 영역을 작성할 조직을 선택한 다음 **영역 작성**을 클릭하십시오.
   * cf 명령행 인터페이스에서 `cf create-space <space_name> -o <organization_name>`을 입력하십시오.
 
 다시 시도하십시오. 이 메시지가 다시 표시되면 [Bluemix 상태](http://ibm.biz/bluemixstatus){: new_window} 페이지로 이동하여 서비스 또는 컴포넌트에 문제가 있는지 여부를 확인하십시오.
@@ -174,10 +174,10 @@ Bluemix에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지�
 서비스 인스턴스 또는 앱 인스턴스에 대해 조치를 수행하려 할 때 요청된 조치를 완료할 수 없고 다음 오류 메시지 중 하나가 표시됩니다. 
 {: tsSymptoms}
 
-`BXNUI0514E: You are not a developer for any of the spaces in the <orgName> organization.`
+`BXNUI0514E: <orgName> 조직의 영역에 대한 개발자가 아닙니다.`
 
 
-`Server error, status code: 403, error code: 10003, message: You are not authorized to perform the requested action.`
+`서버 오류, 상태 코드: 403, 오류 코드: 10003, 메시지: 요청된 조치를 수행할 권한이 없습니다.`
 
  
 
@@ -188,7 +188,7 @@ Bluemix에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지�
 해당 권한 레벨을 확보하려면 다음 방법 중 하나를 사용하십시오. 
 {: tsResolve}
  * 개발자 역할이 있는 다른 조직과 영역을 선택하십시오. 
- * 조직 관리자에게 문의하여 사용자의 역할을 개발자 역할로 변경하거나 영역을 작성한 다음 사용자에게 개발자 역할을 지정하십시오. 세부사항은 [조직 및 공간 관리](../admin/orgs_spaces.html){: new_window}를 참조하십시오.
+ * 조직 관리자에게 문의하여 사용자의 역할을 개발자 역할로 변경하거나 영역을 작성한 다음 사용자에게 개발자 역할을 지정하십시오. 세부사항은 [조직 및 영역 관리](/docs/admin/orgs_spaces.html){: new_window}를 참조하십시오.
  
 
 
@@ -262,7 +262,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 
  
 
-{{site.data.keyword.Bluemix_notm}} 서비스가 작동 중지되었다고 의심하는 경우에는 먼저 [{{site.data.keyword.Bluemix_notm}} 상태](http://ibm.biz/bluemixstatus){: new_window} 페이지를 확인하십시오. 다른 {{site.data.keyword.Bluemix_notm}} 지역의 서비스를 임시 해결책으로 사용할 수 있습니다. 자세한 정보는 [다른 지역에서 서비스 사용](../services/reqnsi.html#cross_region_service){: new_window}에서 확인할 수 있습니다. 서비스 상태가 정상이면 다음의 단계를 수행하여 문제를 해결하십시오.
+{{site.data.keyword.Bluemix_notm}} 서비스가 작동 중지되었다고 의심하는 경우에는 먼저 [{{site.data.keyword.Bluemix_notm}} 상태](http://ibm.biz/bluemixstatus){: new_window} 페이지를 확인하십시오. 다른 {{site.data.keyword.Bluemix_notm}} 지역의 서비스를 임시 해결책으로 사용할 수 있습니다. 자세한 정보는 [다른 지역에서 서비스 사용](/docs/services/reqnsi.html#cross_region_service){: new_window}에서 확인할 수 있습니다. 서비스 상태가 정상이면 다음의 단계를 수행하여 문제를 해결하십시오.
 {: tsResolve}
 
   * 조치 재시도:
@@ -270,7 +270,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 	* 다른 브라우저를 사용하십시오.
 	* 라우터, 모뎀 및 컴퓨터를 다시 부팅하십시오. 이 디바이스를 다시 부팅하면 오류 502의 원인이 되는 다양한 오류를 정리할 수 있습니다. 
   * 대기한 후 나중에 다시 시도하십시오. 일부 경우에는 인터넷 서비스 제공업체 또는 {{site.data.keyword.Bluemix_notm}} 서비스에 일시적인 문제점이 발생할 수 있습니다. 일시적인 문제점이 해결될 때까지 대기할 수 있습니다.
-  * 문제점이 계속 존재하면 {{site.data.keyword.Bluemix_notm}} 지원 센터에 문의하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 지원 센터에 문의](../support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오. 
+  * 문제점이 계속 존재하면 {{site.data.keyword.Bluemix_notm}} 지원 센터에 문의하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 지원 센터에 문의](/docs/support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오. 
 
 
 
@@ -290,7 +290,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 {: tsCauses}
 
  
-다음 방법 중 하나를 사용하여 디스크 할당량을 지정하십시오. 지정할 수 있는 최대 디스크 할당량은 2GB입니다. 2GB로도 충분하지 않은 경우에는 [오브젝트 저장소](../services/ObjectStorage/index.html){: new_window} 등의 외부 서비스를 사용해 보십시오.
+다음 방법 중 하나를 사용하여 디스크 할당량을 지정하십시오. 지정할 수 있는 최대 디스크 할당량은 2GB입니다. 2GB로도 충분하지 않은 경우에는 [오브젝트 저장소](/docs/services/ObjectStorage/index.html){: new_window} 등의 외부 서비스를 사용해 보십시오.
 {: tsResolve}
 
   * manifest.yml 파일에서 다음 항목을 추가하십시오. 
@@ -329,7 +329,7 @@ GCM 서비스에 의존하지 않는 써드파티 서비스를 임시 해결책�
 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
 
-`BXNUI2032E: The <service_instances> resource wasn't created. While Cloud Foundry was being contacted to create the resource, an error occurred. Cloud Foundry message: "You have exceeded your organization's services limit."`
+`BXNUI2032E: <service_instances> 리소스가 작성되지 않았습니다. 리소스를 작성하기 위해 Cloud Foundry에 접속하는 중에 오류가 발생했습니다. Cloud Foundry 메시지: "조직의 서비스 한계를 초과했습니다."`
 
 
 
@@ -341,16 +341,16 @@ GCM 서비스에 의존하지 않는 써드파티 서비스를 임시 해결책�
 필요하지 않은 서비스 인스턴스를 삭제하거나, 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하십시오.
 {: tsResolve}
  
-  * 서비스 인스턴스를 삭제하려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 명령행 인터페이스를 사용할 수 있습니다.
-    {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
-	  1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 삭제할 서비스를 클릭하십시오. 서비스 타일이 표시됩니다. 
-	  2. 서비스 타일에서 **메뉴** 아이콘을 클릭하십시오. 
+  * 서비스 인스턴스를 삭제하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 명령행 인터페이스를 사용할 수 있습니다.
+    {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오. 
+	  1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 삭제할 서비스를 클릭하십시오. 서비스 카드가 표시됩니다. 
+	  2. 서비스 카드에서 **메뉴** 아이콘을 클릭하십시오. 
 	  3. **서비스 삭제**를 클릭하십시오. 서비스 인스턴스를 삭제한 후에는 서비스 인스턴스가 바인딩되었던 애플리케이션을 다시 스테이징하라는 메시지가 표시됩니다.
     명령행 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
 	  1. `cf unbind-service <appname> <service_instance_name>`을 입력하여 애플리케이션에서 서비스 인스턴스의 바인드를 해제하십시오.
 	  2. `cf delete-service <service_instance_name>`을 입력하여 서비스 인스턴스를 삭제하십시오.
 	  3. 서비스 인스턴스를 삭제한 후에는 `cf restage <appname>`을 입력하여 서비스 인스턴스가 바인딩되었던 애플리케이션을 다시 스테이징할 수 있습니다.
-  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [플랜 변경 방법](../pricing/index.html#changing){: new_window}을 참조하십시오.
+  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [플랜 변경 방법](/docs/pricing/index.html#changing){: new_window}을 참조하십시오.
 
   
   
@@ -405,9 +405,9 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 계정의 메모리 할당량을 늘리거나, 앱에서 사용하는 메모리를 줄일 수 있습니다.
 {: tsResolve} 
 
-  * 계정의 메모리 할당량을 늘리려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [유료 계정](../pricing/index.html#pay-accounts){: new_window}을 참조하십시오. 
-  * 앱에서 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 cf 명령행 인터페이스를 사용하십시오.
-    {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
+  * 계정의 메모리 할당량을 늘리려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [유료 계정](/docs/pricing/index.html#pay-accounts){: new_window}을 참조하십시오. 
+  * 앱에서 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 cf 명령행 인터페이스를 사용하십시오.
+    {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하는 경우 다음 단계를 수행하십시오. 
 	  1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션을 선택하십시오. 앱 세부사항 페이지가 열립니다.
 	  2. 런타임 페이지에서 앱에 대한 최대 메모리 한계 또는 앱 인스턴스 수를 줄이거나 둘 다 줄일 수 있습니다. 
 	  
@@ -534,7 +534,7 @@ DevOps Services Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.B
 다음 옵션 중 하나를 사용하여 문제를 해결하십시오.
 {: tsResolve}
 
-  * IBM Node.js 빌드팩을 사용하여 앱을 시작하는 것이 좋습니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 Node.js 애플리케이션 배치](../runtimes/nodejs/index.html#nodejs_runtime){: new_window} 주제의 시작 명령 섹션을 참조하십시오.  
+  * IBM Node.js 빌드팩을 사용하여 앱을 시작하는 것이 좋습니다. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}}에 Node.js 애플리케이션 배치](/docs/runtimes/nodejs/index.html#nodejs_runtime){: new_window} 주제의 시작 명령 섹션을 참조하십시오. 
   * `manifest.yml`의 명령 속성을 command: null로 수정하거나 `-c null`을 포함하도록 푸시 명령을 편집하여 기존 앱의 명령을 사용 안함으로 설정하십시오.  
   * **명령** 속성을 `manifest.yml`에서 제거하십시오. 그런 다음 {{site.data.keyword.Bluemix_notm}}에서 현재 앱을 삭제하고 다시 앱을 푸시하십시오. 
   
@@ -551,7 +551,7 @@ DevOps Services Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.B
   
  
 
-{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에 로그인할 수는 있지만, cf 명령행 인터페이스 또는 Eclipse 플러그인을 사용하여 앱을 푸시할 수 없습니다.
+{{site.data.keyword.Bluemix_notm}} 콘솔에 로그인할 수는 있지만, cf 명령행 인터페이스 또는 Eclipse 플러그인을 사용하여 앱을 푸시할 수 없습니다.
 {: tsSymptoms}
 
 cf 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하려고 할 때 다음과 같은 오류 메시지가 표시되고 해당 메시지에 지정된 조직 이름도 함께 표시됩니다. 
@@ -578,7 +578,7 @@ cf 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.k
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-Eclipse 도구를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시한 경우 먼저 {{site.data.keyword.Bluemix_notm}} 서버를 작성한 다음 조직이 작성된 {{site.data.keyword.Bluemix_notm}} 지역의 API 엔드포인트를 지정하십시오. Eclipse 도구에 대한 자세한 정보는 [IBM Eclipse Tools for Bluemix를 사용하여 앱 배치](../manageapps/eclipsetools/eclipsetools.html){: new_window}를 참조하십시오.  
+Eclipse 도구를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시한 경우 먼저 {{site.data.keyword.Bluemix_notm}} 서버를 작성한 다음 조직이 작성된 {{site.data.keyword.Bluemix_notm}} 지역의 API 엔드포인트를 지정하십시오. Eclipse 도구에 대한 자세한 정보는 [IBM Eclipse Tools for Bluemix를 사용하여 앱 배치](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}를 참조하십시오.  
   
   
 
@@ -755,7 +755,7 @@ Node.js 앱을 업데이트하거나 {{site.data.keyword.Bluemix_notm}}에 배�
  }
     ```
 	
-Node.js 앱에 대한 추가 팁은 [Node.js 애플리케이션에 대한 팁](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}의 내용을 참조하십시오.	
+Node.js 앱에 대한 추가 팁은 [Tips for Node.js Applications](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}의 내용을 참조하십시오.	
 
 
 
@@ -777,7 +777,7 @@ Liberty 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시되면 Liberty 빌드
 
  
 
-이 문제점은 프로젝트에서 server.xml 파일을 제거하여 해결할 수 있습니다. 앱을 WAR 앱으로 푸시하면 빌드팩이 동적으로 `server.xml` 파일을 작성합니다. 자세한 정보는 [Liberty for Java](../runtimes/liberty/index.html){: new_window}를 참조하십시오.
+이 문제점은 프로젝트에서 server.xml 파일을 제거하여 해결할 수 있습니다. 앱을 WAR 앱으로 푸시하면 빌드팩이 동적으로 `server.xml` 파일을 작성합니다. 자세한 정보는 [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}를 참조하십시오.
 {: tsResolve}
 	
 	
@@ -819,7 +819,7 @@ Liberty 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시되면 Liberty 빌드
 
  
 
-이 문제점을 해결하려면 `manifest.yml` 파일을 작성해야 합니다. `manifest.yml` 파일을 작성하는 방법에 대한 자세한 정보는 [애플리케이션 Manifest](../manageapps/depapps.html#appmanifest){: new_window}를 참조하십시오.
+이 문제점을 해결하려면 `manifest.yml` 파일을 작성해야 합니다. `manifest.yml` 파일을 작성하는 방법에 대한 자세한 정보는 [애플리케이션 Manifest](/docs/manageapps/depapps.html#appmanifest){: new_window}를 참조하십시오.
 {: tsResolve}	
 	
 
@@ -864,9 +864,8 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 {{site.data.keyword.Bluemix_notm}}에 배치 단추를 클릭해도 Git 저장소가 복제되지 않거나 앱이 배치되지 않는 경우 다음 문제에 대한 문제점 해결 방법을 사용해 보십시오.
   * [Bluemix DevOps Services 프로젝트를 작성할 수 없음](#project-cannot-be-created)
   * [Git 저장소를 찾을 수 없어 DevOps Services에 복제할 수 없음](#repo-not-found)
-  * [Git 저장소가 DevOps Services에 복제되었지만 앱이 {{site.data.keyword.Bluemix_notm}}](#repo-cloned-app-not-deployed)
+  * [Git 저장소가 DevOps Services에 복제되었지만 앱이 {{site.data.keyword.Bluemix_notm}}에 배치되지 않음](#repo-cloned-app-not-deployed)
 
-에 배치되지 않음.
 단추 작성 방법에 대한 자세한 정보는 {{site.data.keyword.Bluemix_notm}}로 배치 단추 작성을 참조하십시오.
 
 ### Bluemix DevOps Services 프로젝트를 작성할 수 없음
@@ -1029,7 +1028,7 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
 6. 상태 아이콘을 다시 확인하여 오류가 없는지 확인하십시오.
    ![오류가 없는 상태 아이콘](images/githubResolved_small.png)
 
-자세한 정보는 [GitHub for Bluemix DevOps Services 프로젝트 설정](https://hub.jazz.net/docs/githubhooks/){: new_window}의 내용을 참조하십시오. 
+자세한 정보는 [Setting up GitHub for Bluemix DevOps Services projects](https://hub.jazz.net/docs/githubhooks/){: new_window}의 내용을 참조하십시오. 
 
 
 # 계정 관리 문제점 해결
@@ -1050,7 +1049,7 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms} 
 
-`BXNUI0096E: The app wasn't created. Your account is inactive because it was canceled or suspended.`
+`BXNUI0096E: 앱이 작성되지 않았습니다. 계정이 취소되었거나 일시중단되었기 때문에 계정이 비활성 상태입니다.`
 
 
 계정이 취소되었거나 일시중단된 경우 {{site.data.keyword.Bluemix_notm}} 계정의 상태가 비활성화됩니다.
@@ -1058,7 +1057,7 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
 
  
 
-계정을 다시 활성화하려면 [{{site.data.keyword.Bluemix_notm}} 지원 센터](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오. 이메일에 다음 정보를 포함해야 합니다.
+계정을 다시 활성화하려면 [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오. 이메일에 다음 정보를 포함해야 합니다.
 {: tsResolve}
 
   * {{site.data.keyword.Bluemix_notm}}에 로그인하는 데 사용하는 IBM ID입니다.
@@ -1078,7 +1077,7 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
 {: tsSymptoms} 
 
 
-`BXNUI0097E: Before you can add an app, at least one space must be associated with your organization and region. On the Dashboard, click **Create a Space**. When the space is created, try again.`
+`BXNUI0097E: 앱을 추가하려면 하나 이상의 영역을 조직 및 지역과 연관시켜야 합니다. 대시보드에서 **영역 작성**을 클릭하십시오. 영역이 작성되면 다시 시도하십시오.`
 
 
 
@@ -1119,19 +1118,19 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
 <!-- begin STAGING ONLY --> 
 	
 	
-## 관리자는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 모든 조직을 볼 수 없음
+## 관리자는 {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하여 모든 조직을 볼 수 없음
 {: #ts_ui_org}
 
-관리자는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용할 때 모든 조직을 표시하여 관리할 수 없습니다. 관리자가 속한 조직만 표시하고 관리할 수 있습니다. 
+관리자는 {{site.data.keyword.Bluemix_notm}} 콘솔을 사용할 때 모든 조직을 표시하여 관리할 수 없습니다. 관리자가 속한 조직만 표시하고 관리할 수 있습니다. 
 
  
 
-관리자는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 모든 조직을 볼 수 없습니다.
+관리자는 {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하여 모든 조직을 볼 수 없습니다.
 {: tsSymptoms}
 
  
 
-이는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 제한사항입니다.
+이는 {{site.data.keyword.Bluemix_notm}} 콘솔의 제한사항입니다.
 {: tsCauses}
 
  
@@ -1207,8 +1206,8 @@ IBM® Bluemix™ 런타임을 사용할 때 문제점이 발생할 수 있습니
 set NODE_MODULES_CACHE=false
   ```
 사용 중인 빌드팩에서 자동으로 최신 컴포넌트를 로드하는 메커니즘을 제공하지 않는 경우 수동으로 캐시 디렉토리에서 컨텐츠를 삭제하고 다음 단계를 수행하여 앱을 푸시할 수 있습니다.
-  1. 널 빌드팩의 분기를 체크아웃합니다. 예: https://github.com/ryandotsmith/null-buildpack 분기를 체크아웃하는 방법에 대한 정보는 [Git 기본 - Git 저장소 가져오기](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}를 참조하십시오.  
-  2. `null-buildpack/bin/compile` 파일에 다음 링크를 추가하고 변경사항을 커미트합니다. 변경사항을 커미트하는 방법에 대한 정보는 [Git 기본 - 저장소에 변경사항 기록](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}을 참조하십시오.
+  1. 널 빌드팩의 분기를 체크아웃합니다. 예: https://github.com/ryandotsmith/null-buildpack 분기를 체크아웃하는 방법에 대한 정보는 [Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}를 참조하십시오.  
+  2. `null-buildpack/bin/compile` 파일에 다음 링크를 추가하고 변경사항을 커미트합니다. 변경사항을 커미트하는 방법에 대한 정보는 [Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}를 참조하십시오.
   ```
   rm -rfv $2/*
   ```

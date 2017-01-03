@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-09-20"
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -20,8 +20,6 @@ lastupdated: "2016-09-20"
 **Note:** Any Compose service instances that were provisioned before 14 September 2016 that are still active can still be used and directly accessed at [https://www.compose.com/](https://www.compose.com). Any Compose service instance that is provisioned from this point forward is directly accessed and used within your Bluemix account.
 
 Complete these steps to get started with {{site.data.keyword.composeForMongoDB}}:
-
-<a href="https://console.ng.bluemix.net/catalog/services/compose-for-mongodb/">
 
 1. [Create a {{site.data.keyword.composeForMongoDB}} instance](https://console.ng.bluemix.net/catalog/services/compose-for-mongodb/).
 
@@ -44,6 +42,7 @@ Field Name|Description
 `deployment_id`|An internal identifier for the service as created within Compose.
 `db_type`|The type of database that is offered by the service: in this case, `mongodb`.
 `name`|The database deployment name.
+{: caption="Table 1. {{site.data.keyword.composeForMongoDB}} credentials" caption-side="top"}
 
 # Related Links
 {: #rellinks}

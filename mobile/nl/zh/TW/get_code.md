@@ -13,21 +13,21 @@ lastupdated: "2016-10-13"
 # 取得程式碼
 {: #Get_Code}
 
-當您使用 Push、Analytics 及 Authentication 功能完成配置及設定行動專案時，請下載讓您使用 Xcode 或 Android Studio 執行程式碼的程式碼。您的已下載專案已預先配置您所配置的每一個功能的必要 SDK 相依關係及認證。
+當您使用選取的功能完成配置及設定行動專案時，即可下載讓您採用 Xcode 或 Android Studio 執行程式碼的程式碼。您的已下載專案已預先配置您所配置的每一個功能的必要 SDK 相依關係及認證。
 
 您需要完成無法在已下載專案中配置之服務的認證。入門範本專案的 `README.md` 檔案包含這些指示。請使用 Markdown 檢視器檢視 `README.md` 檔案，以完成設定。
 
 ### 必備開發人員工具
-{: prereq-dev-tools}
+{: #prereq-dev-tools}
 
-當您從 {{site.data.keyword.Bluemix_notm}} Mobile 儀表板使用產生的程式碼時，需要下列開發人員工具：
+當您從 {{site.data.keyword.Bluemix_notm}} 行動儀表板使用產生的程式碼時，需要下列開發人員工具：
 
 #### Android
 * [Android Studio 2.2](https://developer.android.com/studio)
 	* 安裝最新的 [Android 7.0](https://www.android.com/versions/nougat-7-0/) 運行環境。
 
 #### iOS
-* Xcode 8.0（建議）
+* [Xcode 8.0](https://developer.apple.com/xcode/)（建議）
 	* 安裝最新的 [iOS 10](http://www.apple.com/ios/ios-10/) 運行環境。
 * [Homebrew](http://brew.sh/)
 	* 協助 Apple 開發人員安裝其他工具及運行環境（例如 CocoaPods 及 Carthage）的指令行工具。

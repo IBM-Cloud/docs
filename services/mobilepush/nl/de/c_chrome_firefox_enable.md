@@ -1,32 +1,36 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
-# Webanwendungen für den Empfang von {{site.data.keyword.mobilepushshort}} aktivieren
+# Webanwendungen für den Empfang von Push-Benachrichtigungen aktivieren
 {: #web_notifications}
-Letzte Aktualisierung: 17. Oktober 2016
+Letzte Aktualisierung: 07. Dezember 2016
 {: .last-updated}
 
-Sie können jetzt Google Chrome- und Mozilla Firefox-Webanwendungen für den Empfang von {{site.data.keyword.mobilepushshort}} aktivieren.
+Sie können Google Chrome-, Mozilla Firefox- und Safari-Webanwendungen für den Empfang von Push-Benachrichtigungen aktivieren.
 
 ## Web-Browser-Client-SDK für {{site.data.keyword.mobilepushshort}} installieren
 {: #web_install}
 
 Dieses Thema beschreibt die Vorgehensweise zum Installieren und Verwenden des Client-JavaScript-Push-SDKs für die weitere Entwicklung Ihrer Web-Anwendungen.
 
-### Initialisierung in der Google Chrome-Webanwendung
+### Webanwendung initialisieren
 
-Führen Sie folgende Schritte für die Installation des Javascript-SDK in Chrome-Webanwendungen aus:
+Führen Sie folgende Schritte für die Installation des JavaScript SDK in der Google Chrome-Webanwendung aus:
 
 Laden Sie die Dateien `BMSPushSDK.js`, `BMSPushServiceWorker.js` und `manifest_Website.json` vom [Bluemix-Web-Push-SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master) herunter.
 
 1. Bearbeiten Sie die Datei `manifest_Website.json`.
 
-Beim Google Chrome-Browser ändern Sie `name` in den Namen Ihrer Site. Ändern Sie `gcm_sender_id` in Ihre Absender-ID von Firebase Cloud Messaging (FCM) bzw. Google Cloud Messaging (GCM). Weitere Informationen finden Sie in der Dokumentation zu [Google](https://developers.google.com/web/fundamentals/getting-started/codelabs/push-notifications/#make_a_project_on_the_google_developer_console). Der Wert für gcm_sender_id enthält nur Ziffern.
+Beim Google Chrome-Browser ändern Sie `name` in den Namen Ihrer Site. Beispiel: `www.dailynewsupdates.com`. Ändern Sie `gcm_sender_id` in Ihre Absender-ID von Firebase Cloud Messaging (FCM) bzw. Google Cloud Messaging (GCM). Weitere Informationen finden Sie in [Absender-ID und API-Schlüssel abrufen](t_push_provider_android.html). Der Wert für gcm_sender_id enthält nur Ziffern.
 
 ```
  {
@@ -36,7 +40,7 @@ Beim Google Chrome-Browser ändern Sie `name` in den Namen Ihrer Site. Ändern S
 ```
     {: codeblock}
  
-Fügen Sie für Mozilla Firefox-Browser die folgenden Werte in der Datei `manifest.json` hinzu.     Ändern Sie `name` in den Namen Ihrer Site.
+Fügen Sie für Mozilla Firefox-Browser die folgenden Werte in der Datei `manifest.json` hinzu.     Geben Sie einen entsprechenden Namen (`name`) an. Dies kann der Name Ihrer Website sein.
 
 ```
 {
@@ -46,13 +50,13 @@ Fügen Sie für Mozilla Firefox-Browser die folgenden Werte in der Datei `manife
     {: codeblock}
 
 2. Ändern Sie den Namen der Datei `manifest_Website.json` in `manifest.json`.
-3. Fügen Sie die Dateien `BMSPushSDK.js`, `BMSPushServiceWorker.js` und `manifest.json` zu Ihrem Stammverzeichnis hinzu.
-3. Schließen Sie die Datei `manifest.json` in das Tag `<head>` Ihrer HTML-Datei ein.
+3. Fügen Sie die Dateien `BMSPushSDK.js`, `BMSPushServiceWorker.js` und `manifest.json` zum Stammverzeichnis Ihrer Website hinzu.
+3. Schließen Sie die Datei `manifest.json` in den Tag `<head>` Ihrer HTML-Datei ein.
 ```
  <link rel="manifest" href="manifest.json">
 ```
     {: codeblock}
-4. Fügen Sie das Bluemix-Web-Push-SDK von GitHub zur Webanwendung hinzu.
+4. Nehmen Sie das Web-Push-SDK von Bluemix in Ihre Webanwendung auf.
 ```
  <script src="BMSPushSDK.js" async></script>
 ```
@@ -80,17 +84,22 @@ Die `App Region` gibt den Standort an, an dem der {{site.data.keyword.mobilepush
   "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
    "clientSecret":"clientSecret of your push service"
+   "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
     }
-  bmsPush.initialize(params, callback)
+  bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
+
+**Anmerkung**: Wenn Ihre FCM-Berechtigungsnachweise für das Web-Push-SDK geändert werden, kann die Nachrichtenübermittlung für den Browser Chrome fehlschlagen. Um ein Fehlschlagen zu vermeiden, stellen Sie sicher, dass Sie `bmsPush.unRegisterDevice` aufrufen.
 
 ## Webanwendung registrieren
 {: #web_register}
 
-Verwenden Sie die API `register()`, um das Gerät beim {{site.data.keyword.mobilepushshort}}-Service zu registrieren. Für die Registrierung von Google Chrome aus fügen Sie den API-Schlüssel für Firebase Cloud Messaging (FCM) bzw. Google Cloud Messaging (GCM) sowie die URL der Website im Bluemix-Dashboard für die Webkonfiguration des {{site.data.keyword.mobilepushshort}}-Service hinzu. Weitere Informationen finden Sie im Abschnitt [Berechtigungsnachweise für Google Cloud Messaging (GCM) konfigurieren](t_push_provider_android.html) unter dem Thema Chrome-Konfiguration.
+Verwenden Sie die API **register()**, um das Gerät beim {{site.data.keyword.mobilepushshort}}-Service zu registrieren. Verwenden Sie in Abhängigkeit von Ihrem Browser eine oder mehrere der folgenden Optionen.
 
-Für die Registrierung von Mozilla Firefox fügen Sie die URL der Website im Dashboard für die Webkonfiguration von Bluemix {{site.data.keyword.mobilepushshort}}-Service unter der Firefox-Konfiguration hinzu.
+- Für die Registrierung von Google Chrome aus fügen Sie den API-Schlüssel für Firebase Cloud Messaging (FCM) bzw. Google Cloud Messaging (GCM) sowie die URL der Website im Bluemix-Dashboard für die Webkonfiguration des {{site.data.keyword.mobilepushshort}}-Service hinzu. Weitere Informationen finden Sie im Abschnitt [Berechtigungsnachweise für Google Cloud Messaging (GCM) konfigurieren](t_push_provider_android.html) unter dem Thema Chrome-Konfiguration.
+
+- Für die Registrierung von Mozilla Firefox fügen Sie die URL der Website im Dashboard für die Webkonfiguration von Bluemix {{site.data.keyword.mobilepushshort}}-Service unter der Firefox-Konfiguration hinzu.
 
 Verwenden Sie folgendes Code-Snippet, um sich beim Bluemix {{site.data.keyword.mobilepushshort}}-Service zu registrieren.
 ```
@@ -101,8 +110,9 @@ var bmsPush = new BMSPush();
   var initParams = {
   "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
-   "clientSecret":"clientSecret of your push service"
-    }
+  "clientSecret":"clientSecret of your push service"
+  "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
+  }
   bmsPush.initialize(params, callback)
     bmsPush.register(function(response) {
     alert(response.response)
@@ -110,28 +120,8 @@ var bmsPush = new BMSPush();
 ```
     {: codeblock}
 
-## Einfache Push-Benachrichtigungen senden
-  {: #send}
 
-Nach dem Entwickeln Ihrer Anwendungen können Sie Push-Benachrichtigungen senden. 
 
-1. Wählen Sie **Benachrichtigungen senden** aus und erstellen Sie eine Nachricht, indem Sie **Webbenachrichtigungen** als Option für **Senden an** auswählen. 
-2. Geben Sie im Feld **Nachricht** die Nachricht an, die gesendet werden soll.
-3. Sie können auswählen, optionale Einstellungen anzugeben:
-  - **Benachrichtigungstitel**: Dies ist der Text, der als Kopfzeile des Nachrichtenalerts angezeigt würde.
-  - **URL des Benachrichtigungssymbols**: Falls Ihre Nachricht mit einem App-Benachrichtigungssymbol gesendet werden muss, stellen Sie den Link zu Ihrem Symbol in dem Feld zur Verfügung.
-  - **Zusätzliche Nutzdaten**: Gibt die angepassten Werte für Nutzdaten für Ihre Benachrichtigungen an.
-
-Die folgende Abbildung zeigt die Webbenachrichtigungesoptionen im Dashboard an.
-
-  ![Anzeige 'Benachrichtigungen'](images/DashboardWebpush.jpg)
-  
-## Nächste Schritte
-  {: #next_steps_tags}
-
-Nachdem Sie einfache Benachrichtigungen erfolgreich eingerichtet haben, können Sie tagbasierte Benachrichtigungen und erweiterte Optionen konfigurieren.
-
-Fügen Sie die folgenden Funktionen des {{site.data.keyword.mobilepushshort}}-Service zu Ihrer App hinzu. Informationen zur Verwendung tagbasierter Benachrichtigungen finden Sie in [Tagbasierte Benachrichtigungen](c_tag_basednotifications.html). Informationen zur Verwendung erweiterter Benachrichtigungsoptionen finden Sie in [Erweiterte Benachrichtigungen](t_advance_badge_sound_payload.html).
 
 
 

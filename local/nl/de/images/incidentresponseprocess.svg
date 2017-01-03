@@ -1,1451 +1,527 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 557 502.69" style="enable-background:new 0 0 557 502.69;" xml:space="preserve">
+	 viewBox="0 0 490 502" style="enable-background:new 0 0 490 502;" xml:space="preserve">
 <style type="text/css">
 	.st0{clip-path:url(#SVGID_2_);}
-	.st1{clip-path:url(#SVGID_4_);fill:#4B4B4B;}
+	.st1{clip-path:url(#SVGID_4_);fill:#4A4A4A;}
 	.st2{clip-path:url(#SVGID_6_);}
-	.st3{clip-path:url(#SVGID_8_);fill:#4B4B4B;}
+	.st3{clip-path:url(#SVGID_8_);fill:#4A4A4A;}
 	.st4{clip-path:url(#SVGID_10_);}
-	.st5{clip-path:url(#SVGID_12_);fill:#4B4B4B;}
+	.st5{clip-path:url(#SVGID_12_);fill:#4A4A4A;}
 	.st6{clip-path:url(#SVGID_14_);}
-	.st7{clip-path:url(#SVGID_16_);fill:#4B4B4B;}
+	.st7{clip-path:url(#SVGID_16_);fill:#4A4A4A;}
 	.st8{clip-path:url(#SVGID_18_);}
-	.st9{clip-path:url(#SVGID_20_);fill:#4B4B4B;}
+	.st9{clip-path:url(#SVGID_20_);fill:#4A4A4A;}
 	.st10{clip-path:url(#SVGID_22_);}
-	.st11{clip-path:url(#SVGID_24_);fill:#4B4B4B;}
+	.st11{clip-path:url(#SVGID_24_);fill:#4A4A4A;}
 	.st12{clip-path:url(#SVGID_26_);}
-	.st13{clip-path:url(#SVGID_28_);fill:#4B4B4B;}
+	.st13{clip-path:url(#SVGID_28_);fill:#4A4A4A;}
 	.st14{clip-path:url(#SVGID_30_);}
 	.st15{clip-path:url(#SVGID_32_);fill:#FFFFFF;}
 	.st16{clip-path:url(#SVGID_34_);}
-	.st17{clip-path:url(#SVGID_36_);fill:#4B4B4B;}
+	.st17{clip-path:url(#SVGID_36_);fill:#4A4A4A;}
 	.st18{clip-path:url(#SVGID_38_);}
-	.st19{clip-path:url(#SVGID_40_);fill:#4B4B4B;}
-	.st20{clip-path:url(#SVGID_42_);}
-	.st21{clip-path:url(#SVGID_44_);fill:#FFFFFF;}
-	.st22{fill:none;stroke:#4B4B4B;stroke-width:2;stroke-miterlimit:10;}
-	.st23{clip-path:url(#SVGID_46_);}
-	.st24{clip-path:url(#SVGID_48_);fill:#FFFFFF;}
-	.st25{fill:#5D5D5D;}
-	.st26{fill:none;stroke:#4B4B4B;stroke-width:3;stroke-miterlimit:10;}
-	.st27{clip-path:url(#SVGID_50_);}
-	.st28{clip-path:url(#SVGID_52_);fill:#4B4B4B;}
-	.st29{clip-path:url(#SVGID_54_);}
-	.st30{clip-path:url(#SVGID_56_);fill:#4B4B4B;}
-	.st31{fill:none;stroke:#365E80;stroke-width:2;stroke-miterlimit:10;}
-	.st32{clip-path:url(#SVGID_58_);}
-	.st33{clip-path:url(#SVGID_60_);fill:#FFFFFF;}
-	.st34{clip-path:url(#SVGID_62_);}
-	.st35{clip-path:url(#SVGID_64_);fill:#FFFFFF;}
-	.st36{clip-path:url(#SVGID_66_);}
-	.st37{clip-path:url(#SVGID_68_);fill:#4B4B4B;}
-	.st38{clip-path:url(#SVGID_70_);}
-	.st39{clip-path:url(#SVGID_72_);enable-background:new    ;}
-	.st40{clip-path:url(#SVGID_74_);}
-	.st41{clip-path:url(#SVGID_76_);}
-	.st42{clip-path:url(#SVGID_78_);fill:#4B4B4B;}
-	.st43{fill:none;stroke:#365E80;stroke-width:5;stroke-miterlimit:10;stroke-dasharray:5,5,5,5;}
-	.st44{clip-path:url(#SVGID_80_);}
-	.st45{clip-path:url(#SVGID_82_);fill:#365E80;}
-	.st46{fill:none;stroke:#365E80;stroke-width:3;stroke-miterlimit:10;}
-	.st47{clip-path:url(#SVGID_84_);}
-	.st48{clip-path:url(#SVGID_86_);fill:#365E80;}
-	.st49{clip-path:url(#SVGID_88_);}
-	.st50{clip-path:url(#SVGID_90_);fill:#365E80;}
-	.st51{clip-path:url(#SVGID_92_);}
-	.st52{clip-path:url(#SVGID_94_);fill:#365E80;}
+	.st19{clip-path:url(#SVGID_40_);fill:#4A4A4A;}
+	.st20{clip-path:url(#SVGID_42_);fill:none;stroke:#345D7F;stroke-width:2;stroke-miterlimit:10;}
+	.st21{clip-path:url(#SVGID_44_);}
+	.st22{clip-path:url(#SVGID_46_);fill:#FFFFFF;}
+	.st23{clip-path:url(#SVGID_48_);fill:none;stroke:#4A4A4A;stroke-width:2;stroke-miterlimit:10;}
+	.st24{clip-path:url(#SVGID_50_);}
+	.st25{clip-path:url(#SVGID_52_);fill:#FFFFFF;}
+	.st26{clip-path:url(#SVGID_54_);fill:none;stroke:#4A4A4A;stroke-width:2;stroke-miterlimit:10;}
+	.st27{clip-path:url(#SVGID_56_);}
+	.st28{clip-path:url(#SVGID_58_);fill:#FFFFFF;}
+	.st29{clip-path:url(#SVGID_60_);fill:none;stroke:#4A4A4A;stroke-width:2;stroke-miterlimit:10;}
+	.st30{clip-path:url(#SVGID_62_);}
+	.st31{clip-path:url(#SVGID_64_);fill:#FFFFFF;}
+	.st32{clip-path:url(#SVGID_66_);fill:none;stroke:#4A4A4A;stroke-width:2;stroke-miterlimit:10;}
+	.st33{clip-path:url(#SVGID_66_);fill:none;stroke:#345D7F;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:5,8,5,8;}
+	.st34{clip-path:url(#SVGID_66_);}
+	.st35{fill:#5C5C5C;}
+	.st36{font-family:'HelvNeueRomanforIBM';}
+	.st37{font-size:12px;}
+	.st38{font-family:'HelvNeueBoldforIBM';}
+	.st39{font-size:8px;}
+	.st40{clip-path:url(#SVGID_68_);}
+	.st41{clip-path:url(#SVGID_70_);fill:#4A4A4A;}
+	.st42{clip-path:url(#SVGID_72_);fill:none;stroke:#345D7F;stroke-width:5;stroke-miterlimit:10;stroke-dasharray:5,5,5,5;}
+	.st43{clip-path:url(#SVGID_72_);fill:none;stroke:#4A4A4A;stroke-width:3;stroke-miterlimit:10;}
+	.st44{clip-path:url(#SVGID_72_);}
+	.st45{clip-path:url(#SVGID_74_);}
+	.st46{clip-path:url(#SVGID_76_);fill:#4A4A4A;}
+	.st47{clip-path:url(#SVGID_78_);}
+	.st48{clip-path:url(#SVGID_80_);fill:#4A4A4A;}
+	.st49{font-size:12.7632px;}
+	.st50{clip-path:url(#SVGID_82_);}
+	.st51{clip-path:url(#SVGID_84_);enable-background:new    ;}
+	.st52{clip-path:url(#SVGID_86_);}
+	.st53{clip-path:url(#SVGID_88_);}
+	.st54{clip-path:url(#SVGID_90_);fill:#4A4A4A;}
+	.st55{clip-path:url(#SVGID_92_);}
+	.st56{clip-path:url(#SVGID_94_);fill:#4A4A4A;}
+	.st57{clip-path:url(#SVGID_96_);}
+	.st58{clip-path:url(#SVGID_98_);fill:#4A4A4A;}
+	.st59{clip-path:url(#SVGID_100_);}
+	.st60{clip-path:url(#SVGID_102_);fill:#4A4A4A;}
+	.st61{clip-path:url(#SVGID_104_);}
+	.st62{clip-path:url(#SVGID_106_);fill:#4A4A4A;}
+	.st63{clip-path:url(#SVGID_108_);}
+	.st64{clip-path:url(#SVGID_110_);fill:#4A4A4A;}
+	.st65{clip-path:url(#SVGID_112_);}
+	.st66{clip-path:url(#SVGID_114_);fill:#FF5003;}
+	.st67{fill:none;stroke:#345D7F;stroke-width:3;stroke-miterlimit:10;}
+	.st68{clip-path:url(#SVGID_116_);}
+	.st69{clip-path:url(#SVGID_118_);fill:#345D7F;}
+	.st70{clip-path:url(#SVGID_120_);}
+	.st71{clip-path:url(#SVGID_122_);fill:#345D7F;}
+	.st72{clip-path:url(#SVGID_124_);}
+	.st73{clip-path:url(#SVGID_126_);fill:#345D7F;}
+	.st74{clip-path:url(#SVGID_128_);}
+	.st75{clip-path:url(#SVGID_130_);fill:#345D7F;}
 </style>
-<metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c111 79.158366, 2015/09/25-01:12:00        ">
-   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-      <rdf:Description rdf:about=""
-            xmlns:dc="http://purl.org/dc/elements/1.1/"
-            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
-            xmlns:xmpGImg="http://ns.adobe.com/xap/1.0/g/img/"
-            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
-            xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#"
-            xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
-            xmlns:illustrator="http://ns.adobe.com/illustrator/1.0/"
-            xmlns:xmpTPg="http://ns.adobe.com/xap/1.0/t/pg/"
-            xmlns:stDim="http://ns.adobe.com/xap/1.0/sType/Dimensions#"
-            xmlns:xmpG="http://ns.adobe.com/xap/1.0/g/"
-            xmlns:pdf="http://ns.adobe.com/pdf/1.3/">
-         <dc:format>image/svg+xml</dc:format>
-         <dc:title>
-            <rdf:Alt>
-               <rdf:li xml:lang="x-default">bluemix-support-incident-report</rdf:li>
-            </rdf:Alt>
-         </dc:title>
-         <xmp:MetadataDate>2016-04-05T11:42:02-05:00</xmp:MetadataDate>
-         <xmp:ModifyDate>2016-04-05T11:42:02-05:00</xmp:ModifyDate>
-         <xmp:CreateDate>2016-04-05T11:42:02-05:00</xmp:CreateDate>
-         <xmp:CreatorTool>Adobe Illustrator CC 2015 (Macintosh)</xmp:CreatorTool>
-         <xmp:Thumbnails>
-            <rdf:Alt>
-               <rdf:li rdf:parseType="Resource">
-                  <xmpGImg:width>256</xmpGImg:width>
-                  <xmpGImg:height>236</xmpGImg:height>
-                  <xmpGImg:format>JPEG</xmpGImg:format>
-                  <xmpGImg:image>/9j/4AAQSkZJRgABAgEASABIAAD/7QAsUGhvdG9zaG9wIDMuMAA4QklNA+0AAAAAABAASAAAAAEA&#xA;AQBIAAAAAQAB/+4ADkFkb2JlAGTAAAAAAf/bAIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoK&#xA;DBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxscHx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8f&#xA;Hx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f/8AAEQgA7AEAAwER&#xA;AAIRAQMRAf/EAaIAAAAHAQEBAQEAAAAAAAAAAAQFAwIGAQAHCAkKCwEAAgIDAQEBAQEAAAAAAAAA&#xA;AQACAwQFBgcICQoLEAACAQMDAgQCBgcDBAIGAnMBAgMRBAAFIRIxQVEGE2EicYEUMpGhBxWxQiPB&#xA;UtHhMxZi8CRygvElQzRTkqKyY3PCNUQnk6OzNhdUZHTD0uIIJoMJChgZhJRFRqS0VtNVKBry4/PE&#xA;1OT0ZXWFlaW1xdXl9WZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3OEhYaHiImKi4yNjo+Ck5SVlpeYmZ&#xA;qbnJ2en5KjpKWmp6ipqqusra6voRAAICAQIDBQUEBQYECAMDbQEAAhEDBCESMUEFURNhIgZxgZEy&#xA;obHwFMHR4SNCFVJicvEzJDRDghaSUyWiY7LCB3PSNeJEgxdUkwgJChgZJjZFGidkdFU38qOzwygp&#xA;0+PzhJSktMTU5PRldYWVpbXF1eX1RlZmdoaWprbG1ub2R1dnd4eXp7fH1+f3OEhYaHiImKi4yNjo&#xA;+DlJWWl5iZmpucnZ6fkqOkpaanqKmqq6ytrq+v/aAAwDAQACEQMRAD8A9U4q7FXYq7FXYq7FXYq7&#xA;FXYq7FXYq7FXYq7FWA+ZY085ebYvKn29B0fhe+YeJIWWZt7a0JH/ACMceFOhxVHf8qg/LX/qw2/3&#xA;yf8ANWKu/wCVQflr/wBWG3++T/mrFVr/AJPflqyMv6CgXkCOStICK9weWKrfy71C6szeeTdUkL6n&#xA;oFFtpm63Gnv/ALzzDfqo+BvAgd8VZpirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdirsVdi&#xA;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&#xA;LirsVdirsVdirsVdirsVdirsVdir/9k=</xmpGImg:image>
-               </rdf:li>
-            </rdf:Alt>
-         </xmp:Thumbnails>
-         <xmpMM:InstanceID>xmp.iid:4481bbba-4634-4e44-b25a-6195567b2f32</xmpMM:InstanceID>
-         <xmpMM:DocumentID>xmp.did:4481bbba-4634-4e44-b25a-6195567b2f32</xmpMM:DocumentID>
-         <xmpMM:OriginalDocumentID>uuid:5D20892493BFDB11914A8590D31508C8</xmpMM:OriginalDocumentID>
-         <xmpMM:RenditionClass>proof:pdf</xmpMM:RenditionClass>
-         <xmpMM:DerivedFrom rdf:parseType="Resource">
-            <stRef:instanceID>uuid:850e30f4-20b1-2946-83cc-fc3fc3d560ea</stRef:instanceID>
-            <stRef:documentID>xmp.did:312e49c5-bb2e-4f1e-abf1-e5c675fcf7a7</stRef:documentID>
-            <stRef:originalDocumentID>uuid:5D20892493BFDB11914A8590D31508C8</stRef:originalDocumentID>
-            <stRef:renditionClass>proof:pdf</stRef:renditionClass>
-         </xmpMM:DerivedFrom>
-         <xmpMM:History>
-            <rdf:Seq>
-               <rdf:li rdf:parseType="Resource">
-                  <stEvt:action>saved</stEvt:action>
-                  <stEvt:instanceID>xmp.iid:312e49c5-bb2e-4f1e-abf1-e5c675fcf7a7</stEvt:instanceID>
-                  <stEvt:when>2016-02-09T15:36:36-06:00</stEvt:when>
-                  <stEvt:softwareAgent>Adobe Illustrator CC 2015 (Macintosh)</stEvt:softwareAgent>
-                  <stEvt:changed>/</stEvt:changed>
-               </rdf:li>
-               <rdf:li rdf:parseType="Resource">
-                  <stEvt:action>saved</stEvt:action>
-                  <stEvt:instanceID>xmp.iid:4481bbba-4634-4e44-b25a-6195567b2f32</stEvt:instanceID>
-                  <stEvt:when>2016-04-05T11:42:02-05:00</stEvt:when>
-                  <stEvt:softwareAgent>Adobe Illustrator CC 2015 (Macintosh)</stEvt:softwareAgent>
-                  <stEvt:changed>/</stEvt:changed>
-               </rdf:li>
-            </rdf:Seq>
-         </xmpMM:History>
-         <illustrator:StartupProfile>Print</illustrator:StartupProfile>
-         <xmpTPg:HasVisibleOverprint>False</xmpTPg:HasVisibleOverprint>
-         <xmpTPg:HasVisibleTransparency>False</xmpTPg:HasVisibleTransparency>
-         <xmpTPg:NPages>1</xmpTPg:NPages>
-         <xmpTPg:MaxPageSize rdf:parseType="Resource">
-            <stDim:w>557.000000</stDim:w>
-            <stDim:h>502.693001</stDim:h>
-            <stDim:unit>Points</stDim:unit>
-         </xmpTPg:MaxPageSize>
-         <xmpTPg:PlateNames>
-            <rdf:Seq>
-               <rdf:li>Cyan</rdf:li>
-               <rdf:li>Magenta</rdf:li>
-               <rdf:li>Yellow</rdf:li>
-               <rdf:li>Black</rdf:li>
-            </rdf:Seq>
-         </xmpTPg:PlateNames>
-         <xmpTPg:SwatchGroups>
-            <rdf:Seq>
-               <rdf:li rdf:parseType="Resource">
-                  <xmpG:groupName>Default Swatch Group</xmpG:groupName>
-                  <xmpG:groupType>0</xmpG:groupType>
-                  <xmpG:Colorants>
-                     <rdf:Seq>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>White</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>Black</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>100.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>CMYK Red</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>100.000000</xmpG:magenta>
-                           <xmpG:yellow>100.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>CMYK Yellow</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>100.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>CMYK Green</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>100.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>100.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>CMYK Cyan</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>100.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>CMYK Blue</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>100.000000</xmpG:cyan>
-                           <xmpG:magenta>100.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>CMYK Magenta</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>100.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=15 M=100 Y=90 K=10</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>15.000000</xmpG:cyan>
-                           <xmpG:magenta>100.000000</xmpG:magenta>
-                           <xmpG:yellow>90.000000</xmpG:yellow>
-                           <xmpG:black>10.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=90 Y=85 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>90.000000</xmpG:magenta>
-                           <xmpG:yellow>85.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=80 Y=95 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>80.000000</xmpG:magenta>
-                           <xmpG:yellow>95.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=50 Y=100 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>50.000000</xmpG:magenta>
-                           <xmpG:yellow>100.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=35 Y=85 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>35.000000</xmpG:magenta>
-                           <xmpG:yellow>85.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=5 M=0 Y=90 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>5.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>90.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=20 M=0 Y=100 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>20.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>100.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=50 M=0 Y=100 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>50.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>100.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=75 M=0 Y=100 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>75.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>100.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=85 M=10 Y=100 K=10</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>85.000000</xmpG:cyan>
-                           <xmpG:magenta>10.000000</xmpG:magenta>
-                           <xmpG:yellow>100.000000</xmpG:yellow>
-                           <xmpG:black>10.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=90 M=30 Y=95 K=30</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>90.000000</xmpG:cyan>
-                           <xmpG:magenta>30.000000</xmpG:magenta>
-                           <xmpG:yellow>95.000000</xmpG:yellow>
-                           <xmpG:black>30.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=75 M=0 Y=75 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>75.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>75.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=80 M=10 Y=45 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>80.000000</xmpG:cyan>
-                           <xmpG:magenta>10.000000</xmpG:magenta>
-                           <xmpG:yellow>45.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=70 M=15 Y=0 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>70.000000</xmpG:cyan>
-                           <xmpG:magenta>15.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=85 M=50 Y=0 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>85.000000</xmpG:cyan>
-                           <xmpG:magenta>50.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=100 M=95 Y=5 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>100.000000</xmpG:cyan>
-                           <xmpG:magenta>95.000000</xmpG:magenta>
-                           <xmpG:yellow>5.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=100 M=100 Y=25 K=25</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>100.000000</xmpG:cyan>
-                           <xmpG:magenta>100.000000</xmpG:magenta>
-                           <xmpG:yellow>25.000000</xmpG:yellow>
-                           <xmpG:black>25.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=75 M=100 Y=0 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>75.000000</xmpG:cyan>
-                           <xmpG:magenta>100.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=50 M=100 Y=0 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>50.000000</xmpG:cyan>
-                           <xmpG:magenta>100.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=35 M=100 Y=35 K=10</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>35.000000</xmpG:cyan>
-                           <xmpG:magenta>100.000000</xmpG:magenta>
-                           <xmpG:yellow>35.000000</xmpG:yellow>
-                           <xmpG:black>10.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=10 M=100 Y=50 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>10.000000</xmpG:cyan>
-                           <xmpG:magenta>100.000000</xmpG:magenta>
-                           <xmpG:yellow>50.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=95 Y=20 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>95.000000</xmpG:magenta>
-                           <xmpG:yellow>20.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=25 M=25 Y=40 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>25.000000</xmpG:cyan>
-                           <xmpG:magenta>25.000000</xmpG:magenta>
-                           <xmpG:yellow>40.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=40 M=45 Y=50 K=5</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>40.000000</xmpG:cyan>
-                           <xmpG:magenta>45.000000</xmpG:magenta>
-                           <xmpG:yellow>50.000000</xmpG:yellow>
-                           <xmpG:black>5.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=50 M=50 Y=60 K=25</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>50.000000</xmpG:cyan>
-                           <xmpG:magenta>50.000000</xmpG:magenta>
-                           <xmpG:yellow>60.000000</xmpG:yellow>
-                           <xmpG:black>25.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=55 M=60 Y=65 K=40</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>55.000000</xmpG:cyan>
-                           <xmpG:magenta>60.000000</xmpG:magenta>
-                           <xmpG:yellow>65.000000</xmpG:yellow>
-                           <xmpG:black>40.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=25 M=40 Y=65 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>25.000000</xmpG:cyan>
-                           <xmpG:magenta>40.000000</xmpG:magenta>
-                           <xmpG:yellow>65.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=30 M=50 Y=75 K=10</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>30.000000</xmpG:cyan>
-                           <xmpG:magenta>50.000000</xmpG:magenta>
-                           <xmpG:yellow>75.000000</xmpG:yellow>
-                           <xmpG:black>10.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=35 M=60 Y=80 K=25</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>35.000000</xmpG:cyan>
-                           <xmpG:magenta>60.000000</xmpG:magenta>
-                           <xmpG:yellow>80.000000</xmpG:yellow>
-                           <xmpG:black>25.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=40 M=65 Y=90 K=35</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>40.000000</xmpG:cyan>
-                           <xmpG:magenta>65.000000</xmpG:magenta>
-                           <xmpG:yellow>90.000000</xmpG:yellow>
-                           <xmpG:black>35.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=40 M=70 Y=100 K=50</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>40.000000</xmpG:cyan>
-                           <xmpG:magenta>70.000000</xmpG:magenta>
-                           <xmpG:yellow>100.000000</xmpG:yellow>
-                           <xmpG:black>50.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=50 M=70 Y=80 K=70</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>50.000000</xmpG:cyan>
-                           <xmpG:magenta>70.000000</xmpG:magenta>
-                           <xmpG:yellow>80.000000</xmpG:yellow>
-                           <xmpG:black>70.000000</xmpG:black>
-                        </rdf:li>
-                     </rdf:Seq>
-                  </xmpG:Colorants>
-               </rdf:li>
-               <rdf:li rdf:parseType="Resource">
-                  <xmpG:groupName>Grays</xmpG:groupName>
-                  <xmpG:groupType>1</xmpG:groupType>
-                  <xmpG:Colorants>
-                     <rdf:Seq>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=0 Y=0 K=100</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>100.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=0 Y=0 K=90</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>89.999400</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=0 Y=0 K=80</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>79.998800</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=0 Y=0 K=70</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>69.999700</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=0 Y=0 K=60</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>59.999100</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=0 Y=0 K=50</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>50.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=0 Y=0 K=40</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>39.999400</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=0 Y=0 K=30</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>29.998800</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=0 Y=0 K=20</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>19.999700</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=0 Y=0 K=10</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>9.999100</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=0 Y=0 K=5</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>0.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>4.998800</xmpG:black>
-                        </rdf:li>
-                     </rdf:Seq>
-                  </xmpG:Colorants>
-               </rdf:li>
-               <rdf:li rdf:parseType="Resource">
-                  <xmpG:groupName>Brights</xmpG:groupName>
-                  <xmpG:groupType>1</xmpG:groupType>
-                  <xmpG:Colorants>
-                     <rdf:Seq>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=100 Y=100 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>100.000000</xmpG:magenta>
-                           <xmpG:yellow>100.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=75 Y=100 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>75.000000</xmpG:magenta>
-                           <xmpG:yellow>100.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=0 M=10 Y=95 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>0.000000</xmpG:cyan>
-                           <xmpG:magenta>10.000000</xmpG:magenta>
-                           <xmpG:yellow>95.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=85 M=10 Y=100 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>85.000000</xmpG:cyan>
-                           <xmpG:magenta>10.000000</xmpG:magenta>
-                           <xmpG:yellow>100.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=100 M=90 Y=0 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>100.000000</xmpG:cyan>
-                           <xmpG:magenta>90.000000</xmpG:magenta>
-                           <xmpG:yellow>0.000000</xmpG:yellow>
-                           <xmpG:black>0.000000</xmpG:black>
-                        </rdf:li>
-                        <rdf:li rdf:parseType="Resource">
-                           <xmpG:swatchName>C=60 M=90 Y=0 K=0</xmpG:swatchName>
-                           <xmpG:mode>CMYK</xmpG:mode>
-                           <xmpG:type>PROCESS</xmpG:type>
-                           <xmpG:cyan>60.000000</xmpG:cyan>
-                           <xmpG:magenta>90.000000</xmpG:magenta>
-                           <xmpG:yellow>0.003100</xmpG:yellow>
-                           <xmpG:black>0.003100</xmpG:black>
-                        </rdf:li>
-                     </rdf:Seq>
-                  </xmpG:Colorants>
-               </rdf:li>
-            </rdf:Seq>
-         </xmpTPg:SwatchGroups>
-         <pdf:Producer>Adobe PDF library 15.00</pdf:Producer>
-      </rdf:Description>
-   </rdf:RDF>
-</x:xmpmeta>
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                           
-<?xpacket end="w"?>
-	</metadata>
+<title>bluemix-support-incident-report</title>
 <g>
 	<defs>
-		<path id="SVGID_1_" d="M302.48,33.22c1.72,0,3.11,1.39,3.11,3.11c0,1.72-1.39,3.11-3.11,3.11c-1.72,0-3.11-1.39-3.11-3.11
-			C299.37,34.61,300.76,33.22,302.48,33.22z M309.73,60.17h-47.66V45.66h47.66V60.17z M309.73,76.76h-47.66V62.25h47.66V76.76z
-			 M260,27v16.59v2.07v14.51v2.07v16.59h51.8V62.25v-2.07V45.66v-2.07V27H260z"/>
+		<path id="SVGID_1_" d="M78.22,195.4c1.72,0,3.11,1.39,3.11,3.11c0,1.72-1.39,3.11-3.11,3.11c-1.72,0-3.11-1.39-3.11-3.11
+			C75.11,196.8,76.51,195.4,78.22,195.4z M85.47,222.36H37.82v-14.51h47.66V222.36z M85.47,238.94H37.82v-14.51h47.66V238.94z
+			 M35.74,189.18v16.59v2.07v14.51v2.07v16.59h51.8v-16.59v-2.07v-14.51v-2.07v-16.59H35.74z"/>
 	</defs>
 	<clipPath id="SVGID_2_">
 		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 	</clipPath>
 	<g class="st0">
 		<defs>
-			<rect id="SVGID_3_" x="1" width="556" height="504"/>
+			<rect id="SVGID_3_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_4_">
 			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="255" y="22" class="st1" width="61.8" height="61.83"/>
+		<rect x="30.74" y="184.18" class="st1" width="61.8" height="61.83"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<circle id="SVGID_5_" cx="302.48" cy="52.92" r="3.11"/>
+		<circle id="SVGID_5_" cx="78.22" cy="215.1" r="3.11"/>
 	</defs>
 	<clipPath id="SVGID_6_">
 		<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
 	</clipPath>
 	<g class="st2">
 		<defs>
-			<rect id="SVGID_7_" x="1" width="556" height="504"/>
+			<rect id="SVGID_7_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_8_">
 			<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="294.37" y="44.81" class="st3" width="16.22" height="16.22"/>
+		<rect x="70.11" y="206.99" class="st3" width="16.22" height="16.22"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<circle id="SVGID_9_" cx="302.48" cy="69.5" r="3.11"/>
+		<circle id="SVGID_9_" cx="78.22" cy="231.69" r="3.11"/>
 	</defs>
 	<clipPath id="SVGID_10_">
 		<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
 	</clipPath>
 	<g class="st4">
 		<defs>
-			<rect id="SVGID_11_" x="1" width="556" height="504"/>
+			<rect id="SVGID_11_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_12_">
 			<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="294.37" y="61.39" class="st5" width="16.22" height="16.22"/>
+		<rect x="70.11" y="223.58" class="st5" width="16.22" height="16.22"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<path id="SVGID_13_" d="M285.9,65.59l12.54,21.75h-25.09L285.9,65.59z M285.9,63.7l-14.18,24.59h28.36L285.9,63.7z"/>
+		<path id="SVGID_13_" d="M61.65,227.78l12.54,21.75H49.1L61.65,227.78z M61.64,225.88l-14.18,24.59h28.36L61.64,225.88z"/>
 	</defs>
 	<clipPath id="SVGID_14_">
 		<use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
 	</clipPath>
 	<g class="st6">
 		<defs>
-			<rect id="SVGID_15_" x="1" width="556" height="504"/>
+			<rect id="SVGID_15_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_16_">
 			<use xlink:href="#SVGID_15_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="266.72" y="58.7" class="st7" width="38.36" height="34.59"/>
+		<rect x="42.47" y="220.88" class="st7" width="38.36" height="34.59"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<path id="SVGID_17_" d="M285.9,65.59l12.54,21.75h-25.09L285.9,65.59z M285.9,63.7l-14.18,24.59h28.36L285.9,63.7z"/>
+		<path id="SVGID_17_" d="M61.65,227.78l12.54,21.75H49.1L61.65,227.78z M61.65,225.88l-14.18,24.59h28.36L61.65,225.88z"/>
 	</defs>
 	<clipPath id="SVGID_18_">
 		<use xlink:href="#SVGID_17_"  style="overflow:visible;"/>
 	</clipPath>
 	<g class="st8">
 		<defs>
-			<rect id="SVGID_19_" x="1" width="556" height="504"/>
+			<rect id="SVGID_19_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_20_">
 			<use xlink:href="#SVGID_19_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="266.72" y="58.7" class="st9" width="38.36" height="34.59"/>
+		<rect x="42.47" y="220.88" class="st9" width="38.36" height="34.59"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<polygon id="SVGID_21_" points="284.96,74.1 284.96,76 285.43,80.72 286.37,80.72 286.85,76 286.85,74.1 		"/>
+		<polygon id="SVGID_21_" points="60.7,236.29 60.7,238.18 61.17,242.91 62.12,242.91 62.59,238.18 62.59,236.29 		"/>
 	</defs>
 	<clipPath id="SVGID_22_">
 		<use xlink:href="#SVGID_21_"  style="overflow:visible;"/>
 	</clipPath>
 	<g class="st10">
 		<defs>
-			<rect id="SVGID_23_" x="1" width="556" height="504"/>
+			<rect id="SVGID_23_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_24_">
 			<use xlink:href="#SVGID_23_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="279.96" y="69.1" class="st11" width="11.89" height="16.62"/>
+		<rect x="55.7" y="231.29" class="st11" width="11.89" height="16.62"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<circle id="SVGID_25_" cx="285.9" cy="82.62" r="0.95"/>
+		<circle id="SVGID_25_" cx="61.65" cy="244.8" r="0.95"/>
 	</defs>
 	<clipPath id="SVGID_26_">
 		<use xlink:href="#SVGID_25_"  style="overflow:visible;"/>
 	</clipPath>
 	<g class="st12">
 		<defs>
-			<rect id="SVGID_27_" x="1" width="556" height="504"/>
+			<rect id="SVGID_27_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_28_">
 			<use xlink:href="#SVGID_27_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="279.96" y="76.67" class="st13" width="11.89" height="11.89"/>
+		<rect x="55.7" y="238.86" class="st13" width="11.89" height="11.89"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<polygon id="SVGID_29_" points="285.9,65.59 298.44,87.35 273.36,87.35 		"/>
+		<polygon id="SVGID_29_" points="61.65,227.78 74.19,249.53 49.1,249.53 		"/>
 	</defs>
 	<clipPath id="SVGID_30_">
 		<use xlink:href="#SVGID_29_"  style="overflow:visible;"/>
 	</clipPath>
 	<g class="st14">
 		<defs>
-			<rect id="SVGID_31_" x="1" width="556" height="504"/>
+			<rect id="SVGID_31_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_32_">
 			<use xlink:href="#SVGID_31_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="268.36" y="60.59" class="st15" width="35.09" height="31.75"/>
+		<rect x="44.1" y="222.78" class="st15" width="35.09" height="31.75"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<polygon id="SVGID_33_" points="284.96,74.1 284.96,76 285.43,80.72 286.37,80.72 286.85,76 286.85,74.1 		"/>
+		<polygon id="SVGID_33_" points="60.7,236.29 60.7,238.18 61.17,242.91 62.12,242.91 62.59,238.18 62.59,236.29 		"/>
 	</defs>
 	<clipPath id="SVGID_34_">
 		<use xlink:href="#SVGID_33_"  style="overflow:visible;"/>
 	</clipPath>
 	<g class="st16">
 		<defs>
-			<rect id="SVGID_35_" x="1" width="556" height="504"/>
+			<rect id="SVGID_35_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_36_">
 			<use xlink:href="#SVGID_35_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="279.96" y="69.1" class="st17" width="11.89" height="16.62"/>
+		<rect x="55.7" y="231.29" class="st17" width="11.89" height="16.62"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<circle id="SVGID_37_" cx="285.9" cy="82.62" r="0.95"/>
+		<circle id="SVGID_37_" cx="61.65" cy="244.8" r="0.95"/>
 	</defs>
 	<clipPath id="SVGID_38_">
 		<use xlink:href="#SVGID_37_"  style="overflow:visible;"/>
 	</clipPath>
 	<g class="st18">
 		<defs>
-			<rect id="SVGID_39_" x="1" width="556" height="504"/>
+			<rect id="SVGID_39_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_40_">
 			<use xlink:href="#SVGID_39_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="279.96" y="76.67" class="st19" width="11.89" height="11.89"/>
+		<rect x="55.7" y="238.86" class="st19" width="11.89" height="11.89"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<polygon id="SVGID_41_" points="121.7,213.67 102.28,247.33 63.43,247.33 44,213.67 63.43,180 102.28,180 		"/>
+		<rect id="SVGID_41_" width="490" height="502"/>
 	</defs>
 	<clipPath id="SVGID_42_">
 		<use xlink:href="#SVGID_41_"  style="overflow:visible;"/>
 	</clipPath>
-	<g class="st20">
-		<defs>
-			<rect id="SVGID_43_" x="1" width="556" height="504"/>
-		</defs>
-		<clipPath id="SVGID_44_">
-			<use xlink:href="#SVGID_43_"  style="overflow:visible;"/>
-		</clipPath>
-		<rect x="39" y="175" class="st21" width="87.7" height="77.33"/>
-	</g>
-</g>
-<g>
-	<polygon class="st22" points="121.7,213.67 102.28,247.33 63.43,247.33 44,213.67 63.43,180 102.28,180 	"/>
+	<ellipse class="st20" cx="400.96" cy="216.66" rx="54.39" ry="54.42"/>
 </g>
 <g>
 	<defs>
-		<polygon id="SVGID_45_" points="508.28,247.33 469.43,247.33 450,213.67 469.43,180 508.28,180 527.7,213.67 		"/>
+		<polygon id="SVGID_43_" points="401.47,217.69 382.05,251.36 343.19,251.36 323.77,217.69 343.19,184.03 382.05,184.03 		"/>
 	</defs>
-	<clipPath id="SVGID_46_">
-		<use xlink:href="#SVGID_45_"  style="overflow:visible;"/>
+	<clipPath id="SVGID_44_">
+		<use xlink:href="#SVGID_43_"  style="overflow:visible;"/>
 	</clipPath>
-	<g class="st23">
+	<g class="st21">
 		<defs>
-			<rect id="SVGID_47_" x="1" width="556" height="504"/>
+			<rect id="SVGID_45_" width="490" height="502"/>
 		</defs>
-		<clipPath id="SVGID_48_">
-			<use xlink:href="#SVGID_47_"  style="overflow:visible;"/>
+		<clipPath id="SVGID_46_">
+			<use xlink:href="#SVGID_45_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="445" y="175" class="st24" width="87.7" height="77.33"/>
-	</g>
-</g>
-<g>
-	<polygon class="st22" points="508.28,247.33 469.43,247.33 450,213.67 469.43,180 508.28,180 527.7,213.67 	"/>
-	<g>
-		<path class="st25" d="M235.36,114.44h1.14V123h-1.14V114.44z"/>
-		<path class="st25" d="M238,116.8h0.96v0.98h0.02c0.43-0.77,1.12-1.13,2.01-1.13c1.63,0,2.13,0.94,2.13,2.27V123h-1.02v-4.2
-			c0-0.77-0.48-1.25-1.26-1.25c-1.24,0-1.83,0.83-1.83,1.94v3.5H238V116.8z"/>
-		<path class="st25" d="M248.64,118.79c-0.16-0.78-0.68-1.24-1.54-1.24c-1.47,0-1.93,1.18-1.93,2.42c0,1.15,0.52,2.27,1.81,2.27
-			c1,0,1.57-0.56,1.7-1.51h1.04c-0.23,1.52-1.16,2.41-2.73,2.41c-1.9,0-2.9-1.31-2.9-3.17s0.96-3.32,2.93-3.32
-			c1.42,0,2.52,0.66,2.67,2.14H248.64z"/>
-		<path class="st25" d="M251.78,115.68h-1.02v-1.25h1.02V115.68z M250.76,116.8h1.02v6.2h-1.02V116.8z"/>
-		<path class="st25" d="M258.71,123h-1.02v-0.84h-0.02c-0.34,0.68-1.12,0.98-1.98,0.98c-1.91,0-2.85-1.51-2.85-3.26
-			s0.94-3.23,2.83-3.23c0.62,0,1.56,0.24,2,0.97h0.02v-3.19h1.02V123z M255.83,122.24c1.38,0,1.89-1.19,1.89-2.34
-			c0-1.21-0.55-2.35-1.95-2.35c-1.39,0-1.86,1.19-1.86,2.4C253.91,121.12,254.51,122.24,255.83,122.24z"/>
-		<path class="st25" d="M265.33,121.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.91-3.23
-			c2.2,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H265.33z M264.35,119.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H264.35z"/>
-		<path class="st25" d="M266.45,116.8h0.96v0.98h0.02c0.43-0.77,1.12-1.13,2.01-1.13c1.63,0,2.13,0.94,2.13,2.27V123h-1.02v-4.2
-			c0-0.77-0.48-1.25-1.26-1.25c-1.24,0-1.83,0.83-1.83,1.94v3.5h-1.02V116.8z"/>
-		<path class="st25" d="M274.16,116.8h1.24v0.9h-1.24v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V116.8z"/>
-		<path class="st25" d="M284.85,123h-1.02v-0.84h-0.02c-0.34,0.68-1.12,0.98-1.98,0.98c-1.91,0-2.85-1.51-2.85-3.26
-			s0.94-3.23,2.83-3.23c0.62,0,1.56,0.24,2,0.97h0.02v-3.19h1.02V123z M281.98,122.24c1.38,0,1.89-1.19,1.89-2.34
-			c0-1.21-0.55-2.35-1.95-2.35c-1.39,0-1.86,1.19-1.86,2.4C280.06,121.12,280.66,122.24,281.98,122.24z"/>
-		<path class="st25" d="M291.48,121.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.91-3.23
-			c2.2,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H291.48z M290.5,119.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H290.5z"/>
-		<path class="st25" d="M293.96,116.8h1.23v0.9h-1.23v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V116.8z"/>
-		<path class="st25" d="M301.15,121.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.91-3.23
-			c2.2,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H301.15z M300.17,119.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H300.17z"/>
-		<path class="st25" d="M306.61,118.79c-0.16-0.78-0.68-1.24-1.54-1.24c-1.47,0-1.93,1.18-1.93,2.42c0,1.15,0.52,2.27,1.81,2.27
-			c1,0,1.57-0.56,1.7-1.51h1.04c-0.23,1.52-1.16,2.41-2.73,2.41c-1.9,0-2.9-1.31-2.9-3.17s0.96-3.32,2.93-3.32
-			c1.42,0,2.52,0.66,2.67,2.14H306.61z"/>
-		<path class="st25" d="M310.19,116.8h1.24v0.9h-1.24v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V116.8z"/>
-		<path class="st25" d="M317.37,121.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.92-3.23
-			c2.19,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H317.37z M316.39,119.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H316.39z"/>
-		<path class="st25" d="M324.17,123h-1.02v-0.84h-0.02c-0.34,0.68-1.12,0.98-1.98,0.98c-1.91,0-2.85-1.51-2.85-3.26
-			s0.94-3.23,2.83-3.23c0.62,0,1.56,0.24,2,0.97h0.02v-3.19h1.02V123z M321.29,122.24c1.38,0,1.89-1.19,1.89-2.34
-			c0-1.21-0.55-2.35-1.95-2.35c-1.39,0-1.86,1.19-1.86,2.4C319.37,121.12,319.97,122.24,321.29,122.24z"/>
-		<path class="st25" d="M329.35,115.68h-1.02v-1.25h1.02V115.68z M328.33,116.8h1.02v6.2h-1.02V116.8z"/>
-		<path class="st25" d="M330.66,116.8h0.96v0.98h0.02c0.43-0.77,1.12-1.13,2.01-1.13c1.63,0,2.13,0.94,2.13,2.27V123h-1.02v-4.2
-			c0-0.77-0.48-1.25-1.26-1.25c-1.24,0-1.83,0.83-1.83,1.94v3.5h-1.02V116.8z"/>
-	</g>
-	<g>
-		<path class="st25" d="M232.43,134.79c-0.16-0.78-0.68-1.24-1.54-1.24c-1.47,0-1.93,1.18-1.93,2.42c0,1.15,0.52,2.27,1.81,2.27
-			c1,0,1.57-0.56,1.7-1.51h1.04c-0.23,1.52-1.16,2.41-2.73,2.41c-1.9,0-2.9-1.31-2.9-3.17s0.96-3.32,2.93-3.32
-			c1.42,0,2.52,0.66,2.67,2.14H232.43z"/>
-		<path class="st25" d="M239.67,139h-0.96v-0.98h-0.02c-0.43,0.77-1.12,1.13-2.01,1.13c-1.63,0-2.13-0.94-2.13-2.27v-4.08h1.02v4.2
-			c0,0.77,0.48,1.25,1.26,1.25c1.24,0,1.83-0.83,1.83-1.94v-3.5h1.02V139z"/>
-		<path class="st25" d="M241.64,137.04c0.04,0.91,0.84,1.2,1.67,1.2c0.64,0,1.5-0.14,1.5-0.92c0-1.6-4.05-0.52-4.05-2.9
-			c0-1.25,1.22-1.76,2.32-1.76c1.39,0,2.45,0.43,2.54,1.94h-1.02c-0.06-0.79-0.78-1.04-1.44-1.04c-0.61,0-1.32,0.17-1.32,0.79
-			c0,0.72,1.08,0.86,2.03,1.08c1.02,0.23,2.03,0.58,2.03,1.76c0,1.49-1.38,1.96-2.64,1.96c-1.39,0-2.57-0.56-2.63-2.1H241.64z"/>
-		<path class="st25" d="M248.27,132.8h1.24v0.9h-1.24v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V132.8z"/>
-		<path class="st25" d="M252.87,132.66c1.97,0,3.01,1.43,3.01,3.25c0,1.81-1.04,3.24-3.01,3.24s-3.01-1.43-3.01-3.24
-			C249.86,134.08,250.9,132.66,252.87,132.66z M252.87,138.24c1.07,0,1.93-0.84,1.93-2.34s-0.86-2.35-1.93-2.35
-			s-1.93,0.85-1.93,2.35S251.8,138.24,252.87,138.24z"/>
-		<path class="st25" d="M256.91,132.8h0.96v0.91h0.02c0.47-0.71,1.13-1.06,2-1.06c0.77,0,1.45,0.29,1.7,1.06
-			c0.42-0.67,1.14-1.06,1.94-1.06c1.24,0,2.06,0.52,2.06,1.8V139h-1.02v-4.07c0-0.77-0.2-1.38-1.2-1.38c-1,0-1.62,0.62-1.62,1.58
-			V139h-1.02v-4.07c0-0.8-0.25-1.38-1.16-1.38c-1.2,0-1.66,1.1-1.66,1.58V139h-1.02V132.8z"/>
-		<path class="st25" d="M272.2,137.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.92-3.23
-			c2.19,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H272.2z M271.22,135.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H271.22z"/>
-		<path class="st25" d="M273.32,132.8h0.96v1.31h0.02c0.49-1.01,1.18-1.49,2.28-1.45v1.08c-1.64,0-2.24,0.92-2.24,2.51V139h-1.02
-			V132.8z"/>
-		<path class="st25" d="M285.39,137.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.92-3.23
-			c2.19,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H285.39z M284.4,135.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H284.4z"/>
-		<path class="st25" d="M286.51,132.8h0.96v0.98h0.02c0.43-0.77,1.12-1.13,2.01-1.13c1.63,0,2.13,0.94,2.13,2.27V139h-1.02v-4.2
-			c0-0.77-0.48-1.25-1.26-1.25c-1.24,0-1.83,0.83-1.83,1.94v3.5h-1.02V132.8z"/>
-		<path class="st25" d="M295.47,139h-1.09l-2.3-6.2h1.14l1.74,5.17h0.02l1.69-5.17h1.07L295.47,139z"/>
-		<path class="st25" d="M299.51,131.68h-1.02v-1.25h1.02V131.68z M298.49,132.8h1.02v6.2h-1.02V132.8z"/>
-		<path class="st25" d="M300.82,132.8h0.96v1.31h0.02c0.49-1.01,1.18-1.49,2.28-1.45v1.08c-1.64,0-2.24,0.92-2.24,2.51V139h-1.02
-			V132.8z"/>
-		<path class="st25" d="M307.29,132.66c1.97,0,3.01,1.43,3.01,3.25c0,1.81-1.04,3.24-3.01,3.24s-3.01-1.43-3.01-3.24
-			C304.28,134.08,305.32,132.66,307.29,132.66z M307.29,138.24c1.07,0,1.93-0.84,1.93-2.34s-0.86-2.35-1.93-2.35
-			s-1.93,0.85-1.93,2.35S306.22,138.24,307.29,138.24z"/>
-		<path class="st25" d="M311.31,132.8h0.96v0.98h0.02c0.43-0.77,1.12-1.13,2.01-1.13c1.63,0,2.13,0.94,2.13,2.27V139h-1.02v-4.2
-			c0-0.77-0.48-1.25-1.26-1.25c-1.24,0-1.83,0.83-1.83,1.94v3.5h-1.02V132.8z"/>
-		<path class="st25" d="M317.74,132.8h0.96v0.91h0.02c0.47-0.71,1.13-1.06,2-1.06c0.77,0,1.45,0.29,1.7,1.06
-			c0.42-0.67,1.14-1.06,1.94-1.06c1.24,0,2.06,0.52,2.06,1.8V139h-1.02v-4.07c0-0.77-0.2-1.38-1.2-1.38c-1,0-1.62,0.62-1.62,1.58
-			V139h-1.02v-4.07c0-0.8-0.25-1.38-1.16-1.38c-1.2,0-1.66,1.1-1.66,1.58V139h-1.02V132.8z"/>
-		<path class="st25" d="M333.03,137.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.91-3.23
-			c2.2,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H333.03z M332.04,135.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H332.04z"/>
-		<path class="st25" d="M334.15,132.8h0.96v0.98h0.02c0.43-0.77,1.12-1.13,2.01-1.13c1.63,0,2.13,0.94,2.13,2.27V139h-1.02v-4.2
-			c0-0.77-0.48-1.25-1.26-1.25c-1.24,0-1.83,0.83-1.83,1.94v3.5h-1.02V132.8z"/>
-		<path class="st25" d="M341.85,132.8h1.23v0.9h-1.23v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V132.8z"/>
-	</g>
-	<polygon class="st26" points="337.61,55.89 311.7,100.78 259.9,100.78 234,55.89 259.9,11 311.7,11 	"/>
-	<g>
-		<path class="st25" d="M15.42,264.44h3.11c0.74,0,1.76,0,2.27,0.31c0.56,0.34,1.01,0.94,1.01,1.79c0,0.91-0.47,1.6-1.27,1.92v0.02
-			c1.06,0.23,1.63,1.01,1.63,2.06c0,1.25-0.91,2.46-2.6,2.46h-4.14V264.44z M16.56,268.12h2.28c1.29,0,1.82-0.46,1.82-1.37
-			c0-1.2-0.83-1.36-1.82-1.36h-2.28V268.12z M16.56,272.04h2.85c1,0,1.61-0.59,1.61-1.54c0-1.12-0.9-1.43-1.86-1.43h-2.6V272.04z"/>
-		<path class="st25" d="M23.26,264.44h1.02V273h-1.02V264.44z"/>
-		<path class="st25" d="M30.72,273h-0.96v-0.98h-0.02c-0.43,0.77-1.12,1.13-2.01,1.13c-1.63,0-2.13-0.94-2.13-2.27v-4.08h1.02v4.2
-			c0,0.77,0.48,1.25,1.26,1.25c1.24,0,1.83-0.83,1.83-1.94v-3.5h1.02V273z"/>
-		<path class="st25" d="M37.33,271.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.91-3.23
-			c2.2,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H37.33z M36.34,269.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H36.34z"/>
-		<path class="st25" d="M38.47,266.8h0.96v0.91h0.02c0.47-0.71,1.13-1.06,2-1.06c0.77,0,1.45,0.29,1.7,1.06
-			c0.42-0.67,1.14-1.06,1.94-1.06c1.24,0,2.06,0.52,2.06,1.8V273h-1.02v-4.07c0-0.77-0.2-1.38-1.2-1.38c-1,0-1.62,0.62-1.62,1.58
-			V273h-1.02v-4.07c0-0.8-0.25-1.38-1.16-1.38c-1.2,0-1.66,1.1-1.66,1.58V273h-1.02V266.8z"/>
-		<path class="st25" d="M49.51,265.68h-1.02v-1.25h1.02V265.68z M48.49,266.8h1.02v6.2h-1.02V266.8z"/>
-		<path class="st25" d="M52.47,269.74l-2.16-2.94h1.31l1.49,2.17l1.55-2.17h1.22l-2.13,2.85l2.4,3.35h-1.31l-1.73-2.57L51.38,273
-			h-1.24L52.47,269.74z"/>
-		<path class="st25" d="M60.29,271.04c0.04,0.91,0.84,1.2,1.67,1.2c0.64,0,1.5-0.14,1.5-0.92c0-1.6-4.05-0.52-4.05-2.9
-			c0-1.25,1.22-1.76,2.32-1.76c1.39,0,2.45,0.43,2.54,1.94h-1.02c-0.06-0.79-0.78-1.04-1.44-1.04c-0.61,0-1.32,0.17-1.32,0.79
-			c0,0.72,1.08,0.86,2.03,1.08c1.02,0.23,2.03,0.58,2.03,1.76c0,1.49-1.38,1.96-2.64,1.96c-1.39,0-2.57-0.56-2.63-2.1H60.29z"/>
-		<path class="st25" d="M70.84,271.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.91-3.23
-			c2.2,0,2.87,2.05,2.81,3.55H66.3c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H70.84z M69.86,269.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H69.86z"/>
-		<path class="st25" d="M71.96,266.8h0.96v0.98h0.02c0.43-0.77,1.12-1.13,2.01-1.13c1.63,0,2.13,0.94,2.13,2.27V273h-1.02v-4.2
-			c0-0.77-0.48-1.25-1.26-1.25c-1.24,0-1.83,0.83-1.83,1.94v3.5h-1.02V266.8z"/>
-		<path class="st25" d="M83.92,273H82.9v-0.84h-0.02c-0.34,0.68-1.12,0.98-1.98,0.98c-1.91,0-2.85-1.51-2.85-3.26
-			s0.94-3.23,2.83-3.23c0.62,0,1.56,0.24,2,0.97h0.02v-3.19h1.02V273z M81.04,272.24c1.38,0,1.89-1.19,1.89-2.34
-			c0-1.21-0.55-2.35-1.95-2.35c-1.39,0-1.86,1.19-1.86,2.4C79.13,271.12,79.73,272.24,81.04,272.24z"/>
-		<path class="st25" d="M85.91,271.04c0.04,0.91,0.84,1.2,1.67,1.2c0.64,0,1.5-0.14,1.5-0.92c0-1.6-4.05-0.52-4.05-2.9
-			c0-1.25,1.22-1.76,2.32-1.76c1.39,0,2.45,0.43,2.54,1.94h-1.02c-0.06-0.79-0.78-1.04-1.44-1.04c-0.61,0-1.32,0.17-1.32,0.79
-			c0,0.72,1.08,0.86,2.03,1.08c1.02,0.23,2.03,0.58,2.03,1.76c0,1.49-1.38,1.96-2.64,1.96c-1.39,0-2.57-0.56-2.63-2.1H85.91z"/>
-		<path class="st25" d="M93.97,266.8h0.96v0.98h0.02c0.43-0.77,1.12-1.13,2.01-1.13c1.63,0,2.13,0.94,2.13,2.27V273h-1.02v-4.2
-			c0-0.77-0.48-1.25-1.26-1.25c-1.24,0-1.83,0.83-1.83,1.94v3.5h-1.02V266.8z"/>
-		<path class="st25" d="M103.08,266.66c1.97,0,3.01,1.43,3.01,3.25c0,1.81-1.04,3.24-3.01,3.24s-3.01-1.43-3.01-3.24
-			C100.07,268.08,101.11,266.66,103.08,266.66z M103.08,272.24c1.07,0,1.93-0.84,1.93-2.34s-0.86-2.35-1.93-2.35
-			s-1.93,0.85-1.93,2.35S102.01,272.24,103.08,272.24z"/>
-		<path class="st25" d="M108.46,266.8h1.24v0.9h-1.24v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V266.8z"/>
-		<path class="st25" d="M111.73,265.68h-1.02v-1.25h1.02V265.68z M110.71,266.8h1.02v6.2h-1.02V266.8z"/>
-		<path class="st25" d="M113.61,267.7h-1.04v-0.9h1.04v-0.92c0-1.01,0.6-1.54,1.72-1.54c0.19,0,0.47,0.04,0.66,0.1v0.89
-			c-0.18-0.06-0.4-0.08-0.58-0.08c-0.49,0-0.78,0.16-0.78,0.7v0.86h1.2v0.9h-1.2v5.3h-1.02V267.7z M116.8,265.68v-1.25h1.02v1.25
-			H116.8z M116.8,273v-6.2h1.02v6.2H116.8z"/>
-		<path class="st25" d="M123.42,268.79c-0.16-0.78-0.68-1.24-1.54-1.24c-1.47,0-1.93,1.18-1.93,2.42c0,1.15,0.52,2.27,1.81,2.27
-			c1,0,1.57-0.56,1.7-1.51h1.04c-0.23,1.52-1.16,2.41-2.73,2.41c-1.9,0-2.9-1.31-2.9-3.17s0.96-3.32,2.93-3.32
-			c1.42,0,2.52,0.66,2.67,2.14H123.42z"/>
-		<path class="st25" d="M131.05,272.98c-0.18,0.11-0.43,0.17-0.73,0.17c-0.53,0-0.86-0.29-0.86-0.96c-0.56,0.67-1.32,0.96-2.18,0.96
-			c-1.13,0-2.05-0.49-2.05-1.74c0-1.4,1.04-1.71,2.1-1.91c1.12-0.23,2.09-0.13,2.09-0.91c0-0.9-0.74-1.03-1.38-1.03
-			c-0.86,0-1.5,0.26-1.55,1.18h-1.02c0.06-1.54,1.23-2.08,2.63-2.08c1.12,0,2.33,0.25,2.33,1.7v3.19c0,0.48,0,0.7,0.32,0.7
-			c0.1,0,0.2-0.02,0.31-0.06V272.98z M129.39,269.8c-0.79,0.59-3.09,0.01-3.09,1.54c0,0.67,0.58,0.91,1.2,0.91
-			c1.34,0,1.9-0.83,1.9-1.4V269.8z"/>
-		<path class="st25" d="M133.3,266.8h1.24v0.9h-1.24v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V266.8z"/>
-		<path class="st25" d="M136.57,265.68h-1.02v-1.25h1.02V265.68z M135.55,266.8h1.02v6.2h-1.02V266.8z"/>
-		<path class="st25" d="M140.62,266.66c1.97,0,3.01,1.43,3.01,3.25c0,1.81-1.04,3.24-3.01,3.24s-3.01-1.43-3.01-3.24
-			C137.61,268.08,138.66,266.66,140.62,266.66z M140.62,272.24c1.07,0,1.93-0.84,1.93-2.34s-0.86-2.35-1.93-2.35
-			s-1.93,0.85-1.93,2.35S139.56,272.24,140.62,272.24z"/>
-		<path class="st25" d="M144.65,266.8h0.96v0.98h0.02c0.43-0.77,1.12-1.13,2.01-1.13c1.63,0,2.13,0.94,2.13,2.27V273h-1.02v-4.2
-			c0-0.77-0.48-1.25-1.26-1.25c-1.24,0-1.83,0.83-1.83,1.94v3.5h-1.02V266.8z"/>
-	</g>
-	<g>
-		<path class="st25" d="M46.58,282.8h1.24v0.9h-1.24v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95H44.5v-0.9h1.06v-1.86h1.02V282.8z"/>
-		<path class="st25" d="M51.18,282.66c1.97,0,3.01,1.43,3.01,3.25c0,1.81-1.04,3.24-3.01,3.24s-3.01-1.43-3.01-3.24
-			C48.17,284.08,49.22,282.66,51.18,282.66z M51.18,288.24c1.07,0,1.93-0.84,1.93-2.34s-0.86-2.35-1.93-2.35s-1.93,0.85-1.93,2.35
-			S50.12,288.24,51.18,288.24z"/>
-		<path class="st25" d="M63.21,282.94c-0.13-1.24-0.94-1.75-2.12-1.75c-0.97,0-1.92,0.35-1.92,1.46c0,2.11,5.48,0.62,5.48,3.99
-			c0,1.82-1.79,2.55-3.35,2.55c-1.92,0-3.54-0.95-3.54-3.02h1.08c0,1.44,1.2,2.06,2.5,2.06c1.03,0,2.17-0.32,2.17-1.56
-			c0-2.35-5.48-0.8-5.48-3.95c0-1.73,1.54-2.51,3.11-2.51c1.75,0,3.09,0.83,3.15,2.71H63.21z"/>
-		<path class="st25" d="M67.1,282.8h1.24v0.9H67.1v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V282.8z"/>
-		<path class="st25" d="M74.7,288.98c-0.18,0.11-0.43,0.17-0.73,0.17c-0.53,0-0.86-0.29-0.86-0.96c-0.56,0.67-1.32,0.96-2.18,0.96
-			c-1.13,0-2.05-0.49-2.05-1.74c0-1.4,1.04-1.71,2.1-1.91c1.12-0.23,2.09-0.13,2.09-0.91c0-0.9-0.74-1.03-1.38-1.03
-			c-0.86,0-1.5,0.26-1.55,1.18h-1.02c0.06-1.54,1.23-2.08,2.63-2.08c1.12,0,2.33,0.25,2.33,1.7v3.19c0,0.48,0,0.7,0.32,0.7
-			c0.1,0,0.2-0.02,0.31-0.06V288.98z M73.05,285.8c-0.79,0.59-3.09,0.01-3.09,1.54c0,0.67,0.58,0.91,1.2,0.91
-			c1.34,0,1.9-0.83,1.9-1.4V285.8z"/>
-		<path class="st25" d="M76.96,282.8h1.23v0.9h-1.23v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V282.8z"/>
-		<path class="st25" d="M84.31,289h-0.96v-0.98h-0.02c-0.43,0.77-1.12,1.13-2.01,1.13c-1.63,0-2.13-0.94-2.13-2.27v-4.08h1.02v4.2
-			c0,0.77,0.48,1.25,1.26,1.25c1.24,0,1.83-0.83,1.83-1.94v-3.5h1.02V289z"/>
-		<path class="st25" d="M86.28,287.04c0.04,0.91,0.84,1.2,1.67,1.2c0.64,0,1.5-0.14,1.5-0.92c0-1.6-4.05-0.52-4.05-2.9
-			c0-1.25,1.22-1.76,2.32-1.76c1.39,0,2.45,0.43,2.54,1.94h-1.02c-0.06-0.79-0.78-1.04-1.44-1.04c-0.61,0-1.32,0.17-1.32,0.79
-			c0,0.72,1.08,0.86,2.03,1.08c1.02,0.23,2.03,0.58,2.03,1.76c0,1.49-1.38,1.96-2.64,1.96c-1.39,0-2.57-0.56-2.63-2.1H86.28z"/>
-		<path class="st25" d="M94.53,280.44h3.75c1.71,0,2.63,0.94,2.63,2.53s-0.91,2.54-2.63,2.53h-2.61v3.5h-1.14V280.44z M95.67,284.54
-			h2.23c1.3,0.01,1.87-0.55,1.87-1.57s-0.58-1.57-1.87-1.57h-2.23V284.54z"/>
-		<path class="st25" d="M107.22,288.98c-0.18,0.11-0.43,0.17-0.73,0.17c-0.53,0-0.86-0.29-0.86-0.96c-0.56,0.67-1.32,0.96-2.18,0.96
-			c-1.13,0-2.05-0.49-2.05-1.74c0-1.4,1.04-1.71,2.1-1.91c1.12-0.23,2.09-0.13,2.09-0.91c0-0.9-0.74-1.03-1.38-1.03
-			c-0.86,0-1.5,0.26-1.55,1.18h-1.02c0.06-1.54,1.24-2.08,2.63-2.08c1.12,0,2.33,0.25,2.33,1.7v3.19c0,0.48,0,0.7,0.32,0.7
-			c0.1,0,0.2-0.02,0.31-0.06V288.98z M105.57,285.8c-0.79,0.59-3.09,0.01-3.09,1.54c0,0.67,0.58,0.91,1.2,0.91
-			c1.34,0,1.9-0.83,1.9-1.4V285.8z"/>
-		<path class="st25" d="M113.46,288.47c0,2.03-0.91,3.05-2.88,3.05c-1.16,0-2.51-0.48-2.57-1.82h1.02c0.04,0.73,0.95,1.01,1.61,1.01
-			c1.33,0,1.86-0.96,1.86-2.35v-0.41h-0.02c-0.35,0.76-1.14,1.13-1.93,1.13c-1.85,0-2.77-1.45-2.77-3.14c0-1.46,0.71-3.27,2.87-3.27
-			c0.78,0,1.47,0.35,1.85,1.03h0.01v-0.89h0.96V288.47z M112.45,285.77c0-1.09-0.48-2.22-1.76-2.22c-1.31,0-1.83,1.07-1.83,2.25
-			c0,1.12,0.41,2.36,1.75,2.36C111.95,288.17,112.45,286.94,112.45,285.77z"/>
-		<path class="st25" d="M120.09,287.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.91-3.23
-			c2.2,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H120.09z M119.1,285.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H119.1z"/>
+		<rect x="318.77" y="179.03" class="st22" width="87.7" height="77.33"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<path id="SVGID_49_" d="M98.05,222.65l-28.73-8.21v-2.75l28.73-8.21V222.65z M79.26,219.69c0,0.61-0.5,1.11-1.11,1.11h-4.42
-			c-0.61,0-1.11-0.5-1.11-1.11v-3.16l6.63,1.9V219.69z M69.32,210.53v-0.79h-1.11v-1.11H66v8.85h2.21v-1.11h1.11v-0.79l2.21,0.63
-			v3.48c0,1.22,0.99,2.21,2.21,2.21h4.42c1.22,0,2.21-0.99,2.21-2.21v-0.95l18.79,5.37V202L69.32,210.53z"/>
+		<rect id="SVGID_47_" width="490" height="502"/>
+	</defs>
+	<clipPath id="SVGID_48_">
+		<use xlink:href="#SVGID_47_"  style="overflow:visible;"/>
+	</clipPath>
+	<polygon class="st23" points="401.47,217.69 382.05,251.36 343.19,251.36 323.77,217.69 343.19,184.03 382.05,184.03 	"/>
+</g>
+<g>
+	<defs>
+		<polygon id="SVGID_49_" points="268.34,45.09 248.91,78.76 210.06,78.76 190.63,45.09 210.06,11.42 248.91,11.42 		"/>
 	</defs>
 	<clipPath id="SVGID_50_">
 		<use xlink:href="#SVGID_49_"  style="overflow:visible;"/>
 	</clipPath>
-	<g class="st27">
+	<g class="st24">
 		<defs>
-			<rect id="SVGID_51_" x="1" width="556" height="504"/>
+			<rect id="SVGID_51_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_52_">
 			<use xlink:href="#SVGID_51_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="61" y="197" class="st28" width="43.15" height="32.12"/>
+		<rect x="185.63" y="6.42" class="st25" width="87.7" height="77.33"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<path id="SVGID_53_" d="M488.68,228.72c-8.26,0-15.02-6.76-15.02-15.03c0-8.27,6.76-15.03,15.02-15.03
-			c8.26,0,15.02,6.73,15.02,15.03C503.7,221.96,496.94,228.72,488.68,228.72z M488.58,197c-9.15,0-16.58,7.43-16.58,16.59
-			c0,9.16,7.43,16.59,16.58,16.59c9.15,0,16.58-7.43,16.58-16.59C505.15,204.43,497.73,197,488.58,197z M486.92,208.64l0.83,8.26
-			h1.66l0.83-8.26v-3.32h-3.32V208.64z M488.58,218.53c-0.9,0-1.66,0.73-1.66,1.66c0,0.9,0.73,1.66,1.66,1.66
-			c0.93,0,1.66-0.73,1.66-1.66C490.23,219.29,489.47,218.53,488.58,218.53z"/>
+		<rect id="SVGID_53_" width="490" height="502"/>
 	</defs>
 	<clipPath id="SVGID_54_">
 		<use xlink:href="#SVGID_53_"  style="overflow:visible;"/>
 	</clipPath>
-	<g class="st29">
-		<defs>
-			<rect id="SVGID_55_" x="1" width="556" height="504"/>
-		</defs>
-		<clipPath id="SVGID_56_">
-			<use xlink:href="#SVGID_55_"  style="overflow:visible;"/>
-		</clipPath>
-		<rect x="467" y="192" class="st30" width="43.15" height="43.17"/>
-	</g>
-</g>
-<g>
-	<g>
-		<path class="st25" d="M438.46,273.44h1.26l3.35,8.56h-1.26l-0.94-2.58h-3.62l-0.96,2.58h-1.18L438.46,273.44z M437.61,278.46h2.9
-			l-1.43-3.99h-0.02L437.61,278.46z"/>
-		<path class="st25" d="M443.9,273.44h1.02V282h-1.02V273.44z"/>
-		<path class="st25" d="M451.56,280.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.91-3.23
-			c2.2,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H451.56z M450.58,278.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H450.58z"/>
-		<path class="st25" d="M452.68,275.8h0.96v1.31h0.02c0.49-1.01,1.18-1.49,2.28-1.45v1.08c-1.64,0-2.24,0.92-2.24,2.51V282h-1.02
-			V275.8z"/>
-		<path class="st25" d="M458.78,275.8h1.23v0.9h-1.23v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V275.8z"/>
-		<path class="st25" d="M464.55,280.04c0.04,0.91,0.84,1.2,1.67,1.2c0.64,0,1.5-0.14,1.5-0.92c0-1.6-4.05-0.52-4.05-2.9
-			c0-1.25,1.22-1.76,2.32-1.76c1.39,0,2.45,0.43,2.54,1.94h-1.02c-0.06-0.79-0.78-1.04-1.44-1.04c-0.61,0-1.32,0.17-1.32,0.79
-			c0,0.72,1.08,0.86,2.03,1.08c1.02,0.23,2.03,0.58,2.03,1.76c0,1.49-1.38,1.95-2.64,1.95c-1.39,0-2.57-0.56-2.63-2.1H464.55z"/>
-		<path class="st25" d="M475.11,280.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.91-3.23
-			c2.2,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H475.11z M474.12,278.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H474.12z"/>
-		<path class="st25" d="M476.22,275.8h0.96v0.98h0.02c0.43-0.77,1.12-1.13,2.01-1.13c1.63,0,2.13,0.94,2.13,2.27V282h-1.02v-4.2
-			c0-0.77-0.48-1.25-1.26-1.25c-1.24,0-1.83,0.83-1.83,1.94v3.5h-1.02V275.8z"/>
-		<path class="st25" d="M483.93,275.8h1.24v0.9h-1.24v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V275.8z"/>
-		<path class="st25" d="M490.48,275.8h1.23v0.9h-1.23v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V275.8z"/>
-		<path class="st25" d="M495.08,275.66c1.97,0,3.01,1.43,3.01,3.25c0,1.81-1.04,3.24-3.01,3.24s-3.01-1.43-3.01-3.24
-			C492.07,277.08,493.11,275.66,495.08,275.66z M495.08,281.24c1.07,0,1.93-0.84,1.93-2.34s-0.86-2.35-1.93-2.35
-			s-1.93,0.85-1.93,2.35S494.01,281.24,495.08,281.24z"/>
-		<path class="st25" d="M502.13,273.44h3.11c0.74,0,1.76,0,2.27,0.31c0.56,0.34,1.01,0.94,1.01,1.79c0,0.91-0.47,1.6-1.27,1.92v0.02
-			c1.06,0.23,1.63,1.01,1.63,2.06c0,1.25-0.91,2.46-2.6,2.46h-4.14V273.44z M503.27,277.12h2.28c1.3,0,1.82-0.46,1.82-1.37
-			c0-1.2-0.83-1.36-1.82-1.36h-2.28V277.12z M503.27,281.04h2.85c1,0,1.61-0.59,1.61-1.54c0-1.12-0.9-1.43-1.86-1.43h-2.6V281.04z"
-			/>
-		<path class="st25" d="M509.97,273.44h1.02V282h-1.02V273.44z"/>
-		<path class="st25" d="M517.43,282h-0.96v-0.98h-0.02c-0.43,0.77-1.12,1.13-2.01,1.13c-1.63,0-2.13-0.94-2.13-2.27v-4.08h1.02v4.2
-			c0,0.77,0.48,1.25,1.26,1.25c1.24,0,1.83-0.83,1.83-1.94v-3.5h1.02V282z"/>
-		<path class="st25" d="M524.04,280.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.91-3.23
-			c2.2,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H524.04z M523.06,278.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H523.06z"/>
-		<path class="st25" d="M525.18,275.8h0.96v0.91h0.02c0.47-0.71,1.13-1.06,2-1.06c0.77,0,1.45,0.29,1.7,1.06
-			c0.42-0.67,1.14-1.06,1.94-1.06c1.24,0,2.06,0.52,2.06,1.8V282h-1.02v-4.07c0-0.77-0.2-1.38-1.2-1.38c-1,0-1.62,0.62-1.62,1.58
-			V282h-1.02v-4.07c0-0.8-0.25-1.38-1.16-1.38c-1.2,0-1.66,1.1-1.66,1.58V282h-1.02V275.8z"/>
-		<path class="st25" d="M536.22,274.68h-1.02v-1.25h1.02V274.68z M535.2,275.8h1.02v6.2h-1.02V275.8z"/>
-		<path class="st25" d="M539.19,278.74l-2.16-2.94h1.31l1.49,2.17l1.55-2.17h1.22l-2.13,2.85l2.4,3.35h-1.31l-1.73-2.57L538.1,282
-			h-1.24L539.19,278.74z"/>
-	</g>
-	<g>
-		<path class="st25" d="M217.75,486.51c-0.1-1.73,0.94-3.01,2.73-3.01c1.47,0,2.66,0.86,2.66,2.45c0,1.5-1.01,2.24-2.06,2.91
-			c-1.06,0.64-2.19,1.2-2.39,2.24h4.37v0.9h-5.55c0.16-2,1.19-2.76,2.39-3.48c1.44-0.9,2.17-1.4,2.17-2.59
-			c0-0.92-0.74-1.54-1.64-1.54c-1.19,0-1.69,1.09-1.65,2.11H217.75z"/>
-		<path class="st25" d="M228.22,489.11h1.15v0.9h-1.15V492h-0.96v-1.99h-3.73v-0.98l3.87-5.53h0.82V489.11z M227.26,489.11v-4.16
-			h-0.02l-2.83,4.16H227.26z"/>
-		<path class="st25" d="M233.05,483.23h0.88l-3.55,8.97h-0.88L233.05,483.23z"/>
-		<path class="st25" d="M239.26,484.52c-1.71,1.69-3.11,4.83-3.26,7.48h-1.14c0.19-2.88,1.57-5.52,3.36-7.4h-4.46v-0.96h5.5V484.52z
-			"/>
-		<path class="st25" d="M242.95,483.44h3.11c0.74,0,1.76,0,2.27,0.31c0.56,0.34,1.01,0.94,1.01,1.79c0,0.91-0.47,1.6-1.27,1.92v0.02
-			c1.06,0.23,1.63,1.01,1.63,2.06c0,1.25-0.91,2.46-2.6,2.46h-4.14V483.44z M244.09,487.12h2.28c1.3,0,1.82-0.46,1.82-1.37
-			c0-1.2-0.83-1.36-1.82-1.36h-2.28V487.12z M244.09,491.04h2.85c1,0,1.61-0.59,1.61-1.54c0-1.12-0.9-1.43-1.86-1.43h-2.6V491.04z"
-			/>
-		<path class="st25" d="M250.78,483.44h1.02V492h-1.02V483.44z"/>
-		<path class="st25" d="M258.24,492h-0.96v-0.98h-0.02c-0.43,0.77-1.12,1.13-2.01,1.13c-1.63,0-2.13-0.93-2.13-2.27v-4.08h1.02v4.2
-			c0,0.77,0.48,1.25,1.26,1.25c1.24,0,1.83-0.83,1.83-1.94v-3.5h1.02V492z"/>
-		<path class="st25" d="M264.86,490.03c-0.28,1.38-1.25,2.11-2.65,2.11c-1.98,0-2.91-1.38-2.97-3.26c0-1.87,1.22-3.23,2.92-3.23
-			c2.19,0,2.87,2.05,2.81,3.55h-4.64c-0.04,1.08,0.58,2.04,1.93,2.04c0.85,0,1.43-0.4,1.61-1.21H264.86z M263.87,488.31
-			c-0.06-0.97-0.77-1.75-1.79-1.75c-1.06,0-1.71,0.79-1.78,1.75H263.87z"/>
-		<path class="st25" d="M266,485.8h0.96v0.91h0.02c0.47-0.71,1.13-1.06,2-1.06c0.77,0,1.45,0.29,1.7,1.06
-			c0.42-0.67,1.14-1.06,1.94-1.06c1.24,0,2.06,0.52,2.06,1.8V492h-1.02v-4.07c0-0.77-0.2-1.38-1.2-1.38c-1,0-1.62,0.62-1.62,1.58
-			V492h-1.02v-4.07c0-0.8-0.25-1.38-1.16-1.38c-1.2,0-1.66,1.1-1.66,1.58V492H266V485.8z"/>
-		<path class="st25" d="M277.04,484.68h-1.02v-1.25h1.02V484.68z M276.02,485.8h1.02v6.2h-1.02V485.8z"/>
-		<path class="st25" d="M280,488.74l-2.16-2.94h1.31l1.49,2.17l1.55-2.17h1.22l-2.13,2.86l2.4,3.35h-1.31l-1.73-2.57l-1.73,2.57
-			h-1.24L280,488.74z"/>
-		<path class="st25" d="M291.4,487.79c-0.16-0.78-0.68-1.24-1.54-1.24c-1.47,0-1.93,1.18-1.93,2.42c0,1.15,0.52,2.27,1.81,2.27
-			c1,0,1.57-0.56,1.7-1.51h1.04c-0.23,1.52-1.16,2.41-2.73,2.41c-1.9,0-2.9-1.31-2.9-3.17s0.96-3.32,2.93-3.32
-			c1.42,0,2.52,0.66,2.67,2.14H291.4z"/>
-		<path class="st25" d="M296.22,485.66c1.97,0,3.01,1.43,3.01,3.25c0,1.81-1.04,3.24-3.01,3.24s-3.01-1.43-3.01-3.24
-			C293.21,487.08,294.26,485.66,296.22,485.66z M296.22,491.24c1.07,0,1.93-0.84,1.93-2.34c0-1.5-0.86-2.35-1.93-2.35
-			s-1.93,0.85-1.93,2.35C294.29,490.4,295.16,491.24,296.22,491.24z"/>
-		<path class="st25" d="M300.28,483.44h1.02V492h-1.02V483.44z"/>
-		<path class="st25" d="M302.65,483.44h1.02V492h-1.02V483.44z"/>
-		<path class="st25" d="M310.5,491.98c-0.18,0.11-0.43,0.17-0.73,0.17c-0.53,0-0.86-0.29-0.86-0.96c-0.56,0.67-1.32,0.96-2.18,0.96
-			c-1.13,0-2.05-0.49-2.05-1.74c0-1.4,1.04-1.71,2.1-1.91c1.12-0.23,2.09-0.13,2.09-0.91c0-0.9-0.74-1.03-1.38-1.03
-			c-0.86,0-1.5,0.26-1.55,1.18h-1.02c0.06-1.54,1.24-2.08,2.63-2.08c1.12,0,2.33,0.25,2.33,1.7v3.19c0,0.48,0,0.7,0.32,0.7
-			c0.1,0,0.2-0.02,0.31-0.06V491.98z M308.85,488.8c-0.79,0.59-3.09,0.01-3.09,1.54c0,0.67,0.58,0.91,1.2,0.91
-			c1.34,0,1.9-0.83,1.9-1.4V488.8z"/>
-		<path class="st25" d="M311.44,483.44h1.02v3.2h0.02c0.34-0.68,1.12-0.98,1.98-0.98c1.91,0,2.85,1.51,2.85,3.26
-			c0,1.76-0.94,3.23-2.83,3.23c-0.62,0-1.56-0.24-2-0.97h-0.02V492h-1.02V483.44z M314.32,486.55c-1.38,0-1.9,1.19-1.9,2.34
-			c0,1.21,0.55,2.35,1.96,2.35c1.39,0,1.86-1.19,1.86-2.4C316.24,487.68,315.64,486.55,314.32,486.55z"/>
-		<path class="st25" d="M321.15,485.66c1.97,0,3.01,1.43,3.01,3.25c0,1.81-1.04,3.24-3.01,3.24s-3.01-1.43-3.01-3.24
-			C318.14,487.08,319.18,485.66,321.15,485.66z M321.15,491.24c1.07,0,1.93-0.84,1.93-2.34c0-1.5-0.86-2.35-1.93-2.35
-			s-1.93,0.85-1.93,2.35C319.22,490.4,320.08,491.24,321.15,491.24z"/>
-		<path class="st25" d="M325.17,485.8h0.96v1.31h0.02c0.49-1.01,1.18-1.49,2.28-1.45v1.08c-1.64,0-2.24,0.92-2.24,2.51V492h-1.02
-			V485.8z"/>
-		<path class="st25" d="M334.52,491.98c-0.18,0.11-0.43,0.17-0.73,0.17c-0.53,0-0.86-0.29-0.86-0.96c-0.56,0.67-1.32,0.96-2.18,0.96
-			c-1.13,0-2.05-0.49-2.05-1.74c0-1.4,1.04-1.71,2.1-1.91c1.12-0.23,2.09-0.13,2.09-0.91c0-0.9-0.74-1.03-1.38-1.03
-			c-0.86,0-1.5,0.26-1.55,1.18h-1.02c0.06-1.54,1.24-2.08,2.63-2.08c1.12,0,2.33,0.25,2.33,1.7v3.19c0,0.48,0,0.7,0.32,0.7
-			c0.1,0,0.2-0.02,0.31-0.06V491.98z M332.86,488.8c-0.79,0.59-3.09,0.01-3.09,1.54c0,0.67,0.58,0.91,1.2,0.91
-			c1.34,0,1.9-0.83,1.9-1.4V488.8z"/>
-		<path class="st25" d="M336.77,485.8h1.23v0.9h-1.23v3.85c0,0.48,0.13,0.55,0.77,0.55h0.47v0.9h-0.78c-1.06,0-1.47-0.22-1.47-1.36
-			v-3.95h-1.06v-0.9h1.06v-1.86h1.02V485.8z"/>
-		<path class="st25" d="M340.04,484.68h-1.02v-1.25h1.02V484.68z M339.02,485.8h1.02v6.2h-1.02V485.8z"/>
-		<path class="st25" d="M344.09,485.66c1.97,0,3.01,1.43,3.01,3.25c0,1.81-1.04,3.24-3.01,3.24s-3.01-1.43-3.01-3.24
-			C341.08,487.08,342.13,485.66,344.09,485.66z M344.09,491.24c1.07,0,1.93-0.84,1.93-2.34c0-1.5-0.86-2.35-1.93-2.35
-			s-1.93,0.85-1.93,2.35C342.16,490.4,343.03,491.24,344.09,491.24z"/>
-		<path class="st25" d="M348.11,485.8h0.96v0.98h0.02c0.43-0.77,1.12-1.13,2.01-1.13c1.63,0,2.13,0.94,2.13,2.27V492h-1.02v-4.2
-			c0-0.77-0.48-1.25-1.26-1.25c-1.24,0-1.83,0.83-1.83,1.94v3.5h-1.02V485.8z"/>
-	</g>
-	<ellipse class="st31" cx="284.39" cy="423.42" rx="54.39" ry="54.42"/>
+	<polygon class="st26" points="268.34,45.09 248.91,78.76 210.06,78.76 190.63,45.09 210.06,11.42 248.91,11.42 	"/>
 </g>
 <g>
 	<defs>
-		<polygon id="SVGID_57_" points="284.7,424.67 265.28,458.33 226.43,458.33 207,424.67 226.43,391 265.28,391 		"/>
+		<polygon id="SVGID_55_" points="248.91,459.21 210.06,459.21 190.63,425.54 210.06,391.88 248.91,391.88 268.34,425.54 		"/>
 	</defs>
-	<clipPath id="SVGID_58_">
-		<use xlink:href="#SVGID_57_"  style="overflow:visible;"/>
+	<clipPath id="SVGID_56_">
+		<use xlink:href="#SVGID_55_"  style="overflow:visible;"/>
 	</clipPath>
-	<g class="st32">
+	<g class="st27">
 		<defs>
-			<rect id="SVGID_59_" x="1" width="556" height="504"/>
+			<rect id="SVGID_57_" width="490" height="502"/>
 		</defs>
-		<clipPath id="SVGID_60_">
-			<use xlink:href="#SVGID_59_"  style="overflow:visible;"/>
+		<clipPath id="SVGID_58_">
+			<use xlink:href="#SVGID_57_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="202" y="386" class="st33" width="87.7" height="77.33"/>
+		<rect x="185.63" y="386.88" class="st28" width="87.7" height="77.33"/>
 	</g>
 </g>
 <g>
-	<polygon class="st22" points="284.7,424.67 265.28,458.33 226.43,458.33 207,424.67 226.43,391 265.28,391 	"/>
+	<defs>
+		<rect id="SVGID_59_" width="490" height="502"/>
+	</defs>
+	<clipPath id="SVGID_60_">
+		<use xlink:href="#SVGID_59_"  style="overflow:visible;"/>
+	</clipPath>
+	<polygon class="st29" points="248.91,459.21 210.06,459.21 190.63,425.54 210.06,391.88 248.91,391.88 268.34,425.54 	"/>
 </g>
 <g>
 	<defs>
-		<polygon id="SVGID_61_" points="363.7,424.67 344.28,458.33 305.43,458.33 286,424.67 305.43,391 344.28,391 		"/>
+		<polygon id="SVGID_61_" points="480.21,217.69 460.79,251.36 421.94,251.36 402.51,217.69 421.94,184.03 460.79,184.03 		"/>
 	</defs>
 	<clipPath id="SVGID_62_">
 		<use xlink:href="#SVGID_61_"  style="overflow:visible;"/>
 	</clipPath>
-	<g class="st34">
+	<g class="st30">
 		<defs>
-			<rect id="SVGID_63_" x="1" width="556" height="504"/>
+			<rect id="SVGID_63_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_64_">
 			<use xlink:href="#SVGID_63_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="281" y="386" class="st35" width="87.7" height="77.33"/>
-	</g>
-</g>
-<g>
-	<polygon class="st22" points="363.7,424.67 344.28,458.33 305.43,458.33 286,424.67 305.43,391 344.28,391 	"/>
-	<g>
-		<path class="st25" d="M310.08,435.29h2.69c1.09,0,1.82,0.35,1.82,1.42c0,0.57-0.27,0.94-0.78,1.19c0.7,0.2,1.05,0.74,1.05,1.45
-			c0,1.16-0.98,1.66-2.02,1.66h-2.77V435.29z M311.33,437.6h1.27c0.45,0,0.77-0.2,0.77-0.68c0-0.54-0.42-0.66-0.86-0.66h-1.17V437.6
-			z M311.33,440.02h1.34c0.49,0,0.93-0.16,0.93-0.75c0-0.58-0.36-0.82-0.9-0.82h-1.37V440.02z"/>
-		<path class="st25" d="M315.48,435.29h1.13V441h-1.13V435.29z"/>
-		<path class="st25" d="M321.26,441h-1.08v-0.58h-0.02c-0.29,0.47-0.78,0.69-1.26,0.69c-1.21,0-1.51-0.68-1.51-1.7v-2.54h1.13v2.33
-			c0,0.68,0.19,1.02,0.73,1.02c0.62,0,0.88-0.34,0.88-1.18v-2.17h1.14V441z"/>
-		<path class="st25" d="M322.96,439.21c0.03,0.73,0.38,1.05,1.02,1.05c0.46,0,0.82-0.28,0.9-0.54h1c-0.32,0.98-1,1.39-1.93,1.39
-			c-1.3,0-2.11-0.9-2.11-2.17c0-1.24,0.86-2.18,2.11-2.18c1.41,0,2.09,1.18,2.01,2.46H322.96z M324.81,438.49
-			c-0.1-0.58-0.35-0.88-0.9-0.88c-0.74,0-0.92,0.56-0.94,0.88H324.81z"/>
-		<path class="st25" d="M326.57,436.87h1.07v0.56h0.02c0.3-0.42,0.72-0.67,1.26-0.67c0.52,0,0.98,0.18,1.21,0.69
-			c0.25-0.36,0.67-0.69,1.25-0.69c0.88,0,1.51,0.41,1.51,1.48V441h-1.14v-2.34c0-0.55-0.05-1.01-0.7-1.01
-			c-0.64,0-0.76,0.54-0.76,1.05v2.3h-1.14v-2.32c0-0.48,0.03-1.03-0.69-1.03c-0.22,0-0.77,0.14-0.77,0.95v2.4h-1.14V436.87z"/>
-		<path class="st25" d="M334.82,436.23h-1.14v-0.94h1.14V436.23z M333.69,436.87h1.14V441h-1.14V436.87z"/>
-		<path class="st25" d="M336.65,438.83l-1.36-1.96h1.3l0.73,1.08l0.72-1.08h1.25l-1.36,1.93l1.53,2.2h-1.29l-0.86-1.3l-0.86,1.3
-			h-1.27L336.65,438.83z"/>
-	</g>
-	<g>
-		<path class="st25" d="M308.28,445.16c1.81,0,2.73,1.43,2.73,2.99s-0.92,2.99-2.73,2.99c-1.82,0-2.74-1.43-2.74-2.99
-			S306.47,445.16,308.28,445.16z M308.28,450.5c1.39,0,1.97-1.2,1.97-2.35s-0.58-2.35-1.97-2.35c-1.39,0-1.98,1.2-1.98,2.35
-			S306.89,450.5,308.28,450.5z"/>
-		<path class="st25" d="M311.72,446.87h0.68v0.56h0.02c0.22-0.46,0.74-0.66,1.32-0.66c1.27,0,1.9,1.01,1.9,2.17
-			c0,1.18-0.62,2.15-1.89,2.15c-0.42,0-1.04-0.16-1.33-0.65h-0.02v2.13h-0.68V446.87z M313.63,447.37c-0.92,0-1.26,0.79-1.26,1.56
-			c0,0.81,0.37,1.57,1.3,1.57c0.93,0,1.24-0.79,1.24-1.6C314.91,448.12,314.51,447.37,313.63,447.37z"/>
-		<path class="st25" d="M319.91,449.69c-0.18,0.92-0.83,1.41-1.77,1.41c-1.32,0-1.94-0.92-1.98-2.17c0-1.25,0.82-2.15,1.94-2.15
-			c1.46,0,1.91,1.37,1.87,2.37h-3.09c-0.02,0.72,0.38,1.36,1.29,1.36c0.57,0,0.95-0.26,1.07-0.81H319.91z M319.25,448.54
-			c-0.04-0.65-0.51-1.17-1.19-1.17c-0.7,0-1.14,0.53-1.18,1.17H319.25z"/>
-		<path class="st25" d="M320.65,446.87h0.64v0.87h0.02c0.33-0.67,0.78-0.99,1.52-0.97v0.72c-1.1,0-1.5,0.62-1.5,1.67V451h-0.68
-			V446.87z"/>
-		<path class="st25" d="M326.88,450.98c-0.12,0.07-0.29,0.11-0.49,0.11c-0.35,0-0.58-0.19-0.58-0.64c-0.38,0.45-0.88,0.64-1.46,0.64
-			c-0.75,0-1.37-0.33-1.37-1.16c0-0.94,0.7-1.14,1.4-1.27c0.74-0.15,1.39-0.09,1.39-0.61c0-0.6-0.5-0.69-0.92-0.69
-			c-0.58,0-1,0.18-1.03,0.78h-0.68c0.04-1.02,0.82-1.38,1.75-1.38c0.74,0,1.55,0.17,1.55,1.14v2.13c0,0.32,0,0.46,0.22,0.46
-			c0.06,0,0.14-0.02,0.21-0.04V450.98z M325.78,448.87c-0.53,0.39-2.06,0.01-2.06,1.02c0,0.45,0.38,0.61,0.8,0.61
-			c0.9,0,1.26-0.55,1.26-0.94V448.87z"/>
-		<path class="st25" d="M328.38,446.87h0.82v0.6h-0.82v2.57c0,0.32,0.09,0.37,0.51,0.37h0.31v0.6h-0.52c-0.7,0-0.98-0.14-0.98-0.9
-			v-2.63H327v-0.6h0.7v-1.24h0.68V446.87z"/>
-		<path class="st25" d="M330.56,446.12h-0.68v-0.83h0.68V446.12z M329.88,446.87h0.68V451h-0.68V446.87z"/>
-		<path class="st25" d="M333.26,446.77c1.31,0,2.01,0.95,2.01,2.17c0,1.21-0.7,2.16-2.01,2.16s-2.01-0.95-2.01-2.16
-			C331.25,447.72,331.95,446.77,333.26,446.77z M333.26,450.5c0.71,0,1.29-0.56,1.29-1.56c0-1-0.58-1.57-1.29-1.57
-			s-1.29,0.57-1.29,1.57C331.97,449.94,332.55,450.5,333.26,450.5z"/>
-		<path class="st25" d="M335.94,446.87h0.64v0.66h0.02c0.29-0.51,0.74-0.75,1.34-0.75c1.09,0,1.42,0.62,1.42,1.51V451h-0.68v-2.8
-			c0-0.51-0.32-0.83-0.84-0.83c-0.82,0-1.22,0.55-1.22,1.29V451h-0.68V446.87z"/>
-		<path class="st25" d="M340.68,449.7c0.02,0.61,0.56,0.8,1.11,0.8c0.42,0,1-0.1,1-0.62c0-1.06-2.7-0.34-2.7-1.94
-			c0-0.83,0.82-1.17,1.54-1.17c0.93,0,1.63,0.29,1.7,1.29h-0.68c-0.04-0.53-0.52-0.7-0.96-0.7c-0.41,0-0.88,0.11-0.88,0.53
-			c0,0.48,0.72,0.58,1.35,0.72c0.68,0.15,1.35,0.38,1.35,1.18c0,0.99-0.92,1.3-1.76,1.3c-0.93,0-1.71-0.38-1.75-1.4H340.68z"/>
-	</g>
-	<g>
-		<path class="st25" d="M231.58,435.29h2.69c1.09,0,1.82,0.35,1.82,1.42c0,0.57-0.27,0.94-0.78,1.19c0.7,0.2,1.05,0.74,1.05,1.45
-			c0,1.16-0.98,1.66-2.01,1.66h-2.77V435.29z M232.83,437.6h1.27c0.45,0,0.77-0.2,0.77-0.68c0-0.54-0.42-0.66-0.86-0.66h-1.18V437.6
-			z M232.83,440.02h1.34c0.49,0,0.93-0.16,0.93-0.75c0-0.58-0.36-0.82-0.9-0.82h-1.37V440.02z"/>
-		<path class="st25" d="M236.98,435.29h1.14V441h-1.14V435.29z"/>
-		<path class="st25" d="M242.76,441h-1.08v-0.58h-0.02c-0.29,0.47-0.78,0.69-1.26,0.69c-1.21,0-1.51-0.68-1.51-1.7v-2.54h1.14v2.33
-			c0,0.68,0.19,1.02,0.73,1.02c0.62,0,0.88-0.34,0.88-1.18v-2.17h1.14V441z"/>
-		<path class="st25" d="M244.46,439.21c0.03,0.73,0.38,1.05,1.02,1.05c0.46,0,0.82-0.28,0.9-0.54h1c-0.32,0.98-1,1.39-1.93,1.39
-			c-1.3,0-2.11-0.9-2.11-2.17c0-1.24,0.86-2.18,2.11-2.18c1.41,0,2.09,1.18,2.01,2.46H244.46z M246.31,438.49
-			c-0.1-0.58-0.35-0.88-0.9-0.88c-0.74,0-0.92,0.56-0.94,0.88H246.31z"/>
-		<path class="st25" d="M248.07,436.87h1.07v0.56h0.02c0.3-0.42,0.72-0.67,1.26-0.67c0.52,0,0.98,0.18,1.21,0.69
-			c0.25-0.36,0.67-0.69,1.25-0.69c0.88,0,1.51,0.41,1.51,1.48V441h-1.14v-2.34c0-0.55-0.05-1.01-0.7-1.01
-			c-0.64,0-0.76,0.54-0.76,1.05v2.3h-1.14v-2.32c0-0.48,0.03-1.03-0.69-1.03c-0.22,0-0.77,0.14-0.77,0.95v2.4h-1.14V436.87z"/>
-		<path class="st25" d="M256.32,436.23h-1.14v-0.94h1.14V436.23z M255.19,436.87h1.14V441h-1.14V436.87z"/>
-		<path class="st25" d="M258.15,438.83l-1.36-1.96h1.3l0.73,1.08l0.72-1.08h1.25l-1.36,1.93l1.53,2.2h-1.29l-0.86-1.3l-0.86,1.3
-			h-1.27L258.15,438.83z"/>
-	</g>
-	<g>
-		<path class="st25" d="M235.55,446.96c-0.09-0.82-0.62-1.17-1.42-1.17c-0.65,0-1.28,0.23-1.28,0.98c0,1.41,3.65,0.42,3.65,2.66
-			c0,1.22-1.19,1.7-2.23,1.7c-1.28,0-2.36-0.63-2.36-2.01h0.72c0,0.96,0.8,1.38,1.66,1.38c0.69,0,1.45-0.22,1.45-1.04
-			c0-1.57-3.65-0.54-3.65-2.63c0-1.15,1.02-1.67,2.07-1.67c1.17,0,2.06,0.55,2.1,1.81H235.55z"/>
-		<path class="st25" d="M240.59,451h-0.64v-0.66h-0.02c-0.29,0.51-0.74,0.75-1.34,0.75c-1.09,0-1.42-0.62-1.42-1.51v-2.72h0.68v2.8
-			c0,0.51,0.32,0.83,0.84,0.83c0.82,0,1.22-0.55,1.22-1.29v-2.33h0.68V451z"/>
-		<path class="st25" d="M241.44,446.87h0.68v0.56h0.02c0.22-0.46,0.74-0.66,1.32-0.66c1.27,0,1.9,1.01,1.9,2.17
-			c0,1.18-0.62,2.15-1.89,2.15c-0.42,0-1.04-0.16-1.34-0.65h-0.02v2.13h-0.68V446.87z M243.36,447.37c-0.92,0-1.26,0.79-1.26,1.56
-			c0,0.81,0.37,1.57,1.3,1.57c0.93,0,1.24-0.79,1.24-1.6C244.64,448.12,244.24,447.37,243.36,447.37z"/>
-		<path class="st25" d="M246.04,446.87h0.68v0.56h0.02c0.22-0.46,0.74-0.66,1.32-0.66c1.27,0,1.9,1.01,1.9,2.17
-			c0,1.18-0.62,2.15-1.89,2.15c-0.42,0-1.04-0.16-1.34-0.65h-0.02v2.13h-0.68V446.87z M247.96,447.37c-0.92,0-1.26,0.79-1.26,1.56
-			c0,0.81,0.37,1.57,1.3,1.57c0.93,0,1.24-0.79,1.24-1.6C249.24,448.12,248.84,447.37,247.96,447.37z"/>
-		<path class="st25" d="M252.5,446.77c1.31,0,2.01,0.95,2.01,2.17c0,1.21-0.7,2.16-2.01,2.16s-2.01-0.95-2.01-2.16
-			C250.49,447.72,251.19,446.77,252.5,446.77z M252.5,450.5c0.71,0,1.29-0.56,1.29-1.56c0-1-0.58-1.57-1.29-1.57
-			s-1.29,0.57-1.29,1.57C251.21,449.94,251.79,450.5,252.5,450.5z"/>
-		<path class="st25" d="M255.18,446.87h0.64v0.87h0.02c0.33-0.67,0.78-0.99,1.52-0.97v0.72c-1.1,0-1.5,0.62-1.5,1.67V451h-0.68
-			V446.87z"/>
-		<path class="st25" d="M259.24,446.87h0.82v0.6h-0.82v2.57c0,0.32,0.09,0.37,0.51,0.37h0.31v0.6h-0.52c-0.7,0-0.98-0.14-0.98-0.9
-			v-2.63h-0.7v-0.6h0.7v-1.24h0.68V446.87z"/>
+		<rect x="397.51" y="179.03" class="st31" width="87.7" height="77.33"/>
 	</g>
 </g>
 <g>
 	<defs>
-		<path id="SVGID_65_" d="M253.42,416.84c0.52-1.15,0.82-2.43,0.82-3.77c0-1.35-0.3-2.62-0.82-3.77l4.22-4.22
-			c1.47,2.31,2.34,5.05,2.34,7.99s-0.87,5.68-2.34,7.99L253.42,416.84z M252.54,415.97c-0.82,2.1-2.48,3.77-4.58,4.58
-			c-0.9,0.35-1.88,0.55-2.9,0.55c-1.02,0-2-0.2-2.9-0.55c-2.1-0.82-3.76-2.48-4.58-4.58c-0.35-0.9-0.55-1.88-0.55-2.9
-			s0.2-2,0.55-2.9c0.82-2.1,2.48-3.77,4.58-4.58c0.9-0.35,1.88-0.55,2.9-0.55c1.02,0,2,0.2,2.9,0.55c2.1,0.82,3.76,2.48,4.58,4.58
-			c0.35,0.9,0.55,1.88,0.55,2.9S252.89,415.07,252.54,415.97z M245.06,427.99c-2.94,0-5.67-0.87-7.98-2.34l4.22-4.22
-			c1.15,0.52,2.43,0.82,3.77,0.82c1.34,0,2.62-0.3,3.77-0.82l4.22,4.22C250.73,427.12,248,427.99,245.06,427.99z M236.7,416.84
-			l-4.22,4.22c-1.47-2.31-2.34-5.05-2.34-7.99s0.87-5.68,2.34-7.99l4.22,4.22c-0.52,1.15-0.82,2.43-0.82,3.77
-			C235.88,414.41,236.18,415.69,236.7,416.84z M245.06,398.15c2.94,0,5.67,0.87,7.98,2.34l-4.22,4.22
-			c-1.15-0.52-2.43-0.82-3.77-0.82c-1.34,0-2.62,0.3-3.77,0.82l-4.22-4.22C239.39,399.01,242.12,398.15,245.06,398.15z M245.06,397
-			c-8.87,0-16.06,7.19-16.06,16.07c0,8.87,7.19,16.07,16.06,16.07c8.87,0,16.06-7.19,16.06-16.07
-			C261.12,404.19,253.93,397,245.06,397z"/>
+		<rect id="SVGID_65_" width="490" height="502"/>
 	</defs>
 	<clipPath id="SVGID_66_">
 		<use xlink:href="#SVGID_65_"  style="overflow:visible;"/>
 	</clipPath>
-	<g class="st36">
-		<defs>
-			<rect id="SVGID_67_" x="1" width="556" height="504"/>
-		</defs>
-		<clipPath id="SVGID_68_">
-			<use xlink:href="#SVGID_67_"  style="overflow:visible;"/>
-		</clipPath>
-		<rect x="224" y="392" class="st37" width="42.12" height="42.14"/>
+	<polygon class="st32" points="480.21,217.69 460.79,251.36 421.94,251.36 402.51,217.69 421.94,184.03 460.79,184.03 	"/>
+	<line class="st33" x1="113" y1="218.52" x2="320.21" y2="218.52"/>
+	<g class="st34">
+		<text transform="matrix(1 0 0 1 128.7402 239)"><tspan x="0" y="0" class="st35 st36 st37">O</tspan><tspan x="9" y="0" class="st35 st36 st37">p</tspan><tspan x="15.79" y="0" class="st35 st36 st37">tion</tspan><tspan x="35.02" y="0" class="st35 st36 st37">a</tspan><tspan x="41.47" y="0" class="st35 st36 st37">l: K</tspan><tspan x="64.79" y="0" class="st35 st36 st37">u</tspan><tspan x="70.64" y="0" class="st35 st36 st37">n</tspan><tspan x="73.97" y="0" class="st35 st36 st37">d</tspan><tspan x="80.74" y="0" class="st35 st36 st37">e</tspan><tspan x="90.71" y="0" class="st35 st36 st37"> ö</tspan><tspan x="110.66" y="0" class="st35 st36 st37">f</tspan><tspan x="117.62" y="0" class="st35 st36 st37">fnet ein Tic</tspan><tspan x="160.89" y="0" class="st35 st36 st37">k</tspan><tspan x="166.52" y="0" class="st35 st36 st37">e</tspan><tspan x="172.87" y="0" class="st35 st36 st37">t </tspan></text>
+	</g>
+	<g class="st34">
+		<text transform="matrix(1 0 0 1 19.5059 284.6728)"><tspan x="0" y="0" class="st35 st36 st37">V</tspan><tspan x="2.86" y="0" class="st35 st36 st37">o</tspan><tspan x="9.22" y="0" class="st35 st36 st37">rfa</tspan><tspan x="31.31" y="0" class="st35 st36 st37">l</tspan><tspan x="37.55" y="0" class="st35 st36 st37">l e</tspan><tspan x="51" y="0" class="st35 st36 st37">r</tspan><tspan x="57.35" y="0" class="st35 st36 st37">k</tspan><tspan x="60.67" y="0" class="st35 st36 st37">a</tspan><tspan x="67.19" y="0" class="st35 st36 st37">n</tspan><tspan x="73.57" y="0" class="st35 st36 st37">n</tspan><tspan x="76.9" y="0" class="st35 st36 st37">t</tspan><tspan x="83.41" y="0" class="st35 st36 st37"> in </tspan></text>
+	</g>
+	<g class="st34">
+		<text transform="matrix(1 0 0 1 12.5156 301.6728)"><tspan x="0" y="0" class="st35 st36 st37">K</tspan><tspan x="12.79" y="0" class="st35 st36 st37">u</tspan><tspan x="18.65" y="0" class="st35 st36 st37">n</tspan><tspan x="21.97" y="0" class="st35 st36 st37">d</tspan><tspan x="28.74" y="0" class="st35 st36 st37">e</tspan><tspan x="38.71" y="0" class="st35 st36 st37">n</tspan><tspan x="58.36" y="0" class="st35 st36 st37">u</tspan><tspan x="64.56" y="0" class="st35 st36 st37">m</tspan><tspan x="72.67" y="0" class="st35 st36 st37">g</tspan><tspan x="76.39" y="0" class="st35 st36 st37">e</tspan><tspan x="89.57" y="0" class="st35 st36 st37">b</tspan><tspan x="99.54" y="0" class="st35 st36 st37">u</tspan><tspan x="106" y="0" class="st35 st36 st37">n</tspan><tspan x="112.22" y="0" class="st35 st36 st37">g</tspan></text>
+	</g>
+	<g class="st34">
+		<text transform="matrix(1 0 0 1 355.5565 291.0394)"><tspan x="0" y="0" class="st35 st36 st37">2</tspan><tspan x="6.08" y="0" class="st35 st36 st37">4/7-</tspan><tspan x="24.98" y="0" class="st35 st36 st37">Z</tspan><tspan x="31.33" y="0" class="st35 st36 st37">usa</tspan><tspan x="42.83" y="0" class="st35 st36 st37">m</tspan><tspan x="49.28" y="0" class="st35 st36 st37">m</tspan><tspan x="56.25" y="0" class="st35 st36 st37">e</tspan><tspan x="63.02" y="0" class="st35 st36 st37">n</tspan><tspan x="66.83" y="0" class="st35 st36 st37">a</tspan><tspan x="73.14" y="0" class="st35 st36 st37">rbeit</tspan></text>
+	</g>
+	<g class="st34">
+		<text transform="matrix(1 0 0 1 426.6889 234.468)" class="st35 st38 st39">Bluemix</text>
+	</g>
+	<g class="st34">
+		<text transform="matrix(1 0 0 1 422.3652 244.468)"><tspan x="0" y="0" class="st35 st36 st39">O</tspan><tspan x="6" y="0" class="st35 st36 st39">p</tspan><tspan x="10.64" y="0" class="st35 st36 st39">e</tspan><tspan x="14.94" y="0" class="st35 st36 st39">ra</tspan><tspan x="21.69" y="0" class="st35 st36 st39">tionen</tspan></text>
+	</g>
+	<g class="st34">
+		<text transform="matrix(1 0 0 1 347.6339 234.2215)" class="st35 st38 st39">Bluemix</text>
+	</g>
+	<g class="st34">
+		<text transform="matrix(1 0 0 1 348.2179 244.2215)"><tspan x="0" y="0" class="st35 st36 st39">Sup</tspan><tspan x="13.92" y="0" class="st35 st36 st39">p</tspan><tspan x="18.55" y="0" class="st35 st36 st39">o</tspan><tspan x="23.06" y="0" class="st35 st36 st39">r</tspan><tspan x="26.14" y="0" class="st35 st36 st39">t</tspan></text>
 	</g>
 </g>
 <g>
 	<defs>
-		<rect id="SVGID_69_" x="309" y="398.11" width="30.96" height="30.3"/>
+		<path id="SVGID_67_" d="M369.94,210.06c0.52-1.15,0.82-2.43,0.82-3.77c0-1.35-0.3-2.62-0.82-3.77l4.22-4.22
+			c1.47,2.31,2.34,5.05,2.34,7.99s-0.87,5.68-2.34,7.99L369.94,210.06z M369.07,209.19c-0.82,2.1-2.48,3.77-4.58,4.58
+			c-0.9,0.35-1.88,0.55-2.9,0.55c-1.02,0-2-0.2-2.9-0.55c-2.1-0.82-3.76-2.48-4.58-4.58c-0.35-0.9-0.55-1.88-0.55-2.9
+			c0-1.02,0.2-2,0.55-2.9c0.82-2.1,2.48-3.77,4.58-4.58c0.9-0.35,1.88-0.55,2.9-0.55c1.02,0,2,0.2,2.9,0.55
+			c2.1,0.82,3.76,2.48,4.58,4.58c0.35,0.9,0.55,1.88,0.55,2.9C369.61,207.31,369.42,208.29,369.07,209.19z M361.58,221.21
+			c-2.94,0-5.67-0.87-7.98-2.34l4.22-4.22c1.15,0.52,2.43,0.82,3.77,0.82c1.34,0,2.62-0.3,3.77-0.82l4.22,4.22
+			C367.26,220.34,364.52,221.21,361.58,221.21z M353.23,210.06l-4.22,4.22c-1.47-2.31-2.34-5.05-2.34-7.99s0.87-5.68,2.34-7.99
+			l4.22,4.22c-0.52,1.15-0.82,2.43-0.82,3.77C352.41,207.63,352.71,208.91,353.23,210.06z M361.58,191.37
+			c2.94,0,5.67,0.87,7.98,2.34l-4.22,4.22c-1.15-0.52-2.43-0.82-3.77-0.82c-1.34,0-2.62,0.3-3.77,0.82l-4.22-4.22
+			C355.91,192.24,358.65,191.37,361.58,191.37z M361.58,190.22c-8.87,0-16.06,7.19-16.06,16.07c0,8.87,7.19,16.07,16.06,16.07
+			c8.87,0,16.06-7.19,16.06-16.07C377.64,197.42,370.45,190.22,361.58,190.22z"/>
 	</defs>
-	<clipPath id="SVGID_70_">
-		<use xlink:href="#SVGID_69_"  style="overflow:visible;"/>
+	<clipPath id="SVGID_68_">
+		<use xlink:href="#SVGID_67_"  style="overflow:visible;"/>
 	</clipPath>
-	<g class="st38">
+	<g class="st40">
 		<defs>
-			<rect id="SVGID_71_" x="1" width="556" height="504"/>
+			<rect id="SVGID_69_" width="490" height="502"/>
 		</defs>
-		<clipPath id="SVGID_72_">
-			<use xlink:href="#SVGID_71_"  style="overflow:visible;"/>
+		<clipPath id="SVGID_70_">
+			<use xlink:href="#SVGID_69_"  style="overflow:visible;"/>
 		</clipPath>
-		<g class="st39">
+		<rect x="340.53" y="185.22" class="st41" width="42.12" height="42.14"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_71_" width="490" height="502"/>
+	</defs>
+	<clipPath id="SVGID_72_">
+		<use xlink:href="#SVGID_71_"  style="overflow:visible;"/>
+	</clipPath>
+	<path class="st42" d="M288.02,424.51c62.08,0,112.41-50.36,112.41-112.48"/>
+	<path class="st42" d="M403.29,161.97c0-62.12-50.33-112.48-112.41-112.48"/>
+	<path class="st42" d="M54.49,312.66c0,62.12,50.33,112.48,112.41,112.48"/>
+	<path class="st42" d="M171.47,44.57c-62.08,0-112.41,50.36-112.41,112.48"/>
+	<polygon class="st43" points="113.45,218.21 87.55,263.1 35.74,263.1 9.84,218.21 35.74,173.32 87.55,173.32 	"/>
+	<g class="st44">
+		<text transform="matrix(1 0 0 1 161.5913 104.2935)"><tspan x="0" y="0" class="st35 st36 st37">Bluemix </tspan><tspan x="44.35" y="0" class="st35 st36 st37">s</tspan><tspan x="50.27" y="0" class="st35 st36 st37">e</tspan><tspan x="56.72" y="0" class="st35 st36 st37">n</tspan><tspan x="63.07" y="0" class="st35 st36 st37">det </tspan><tspan x="78.73" y="0" class="st35 st36 st37">B</tspan><tspan x="85.09" y="0" class="st35 st36 st37">e</tspan><tspan x="91.75" y="0" class="st35 st36 st37">n</tspan><tspan x="95.45" y="0" class="st35 st36 st37">a</tspan><tspan x="97.98" y="0" class="st35 st36 st37">chrich</tspan><tspan x="110.29" y="0" class="st35 st36 st37">ti</tspan><tspan x="116.59" y="0" class="st35 st36 st37">gung</tspan></text>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_73_" d="M244.96,54.33l-28.73-8.21v-2.75l28.73-8.21V54.33z M226.17,51.38c0,0.61-0.5,1.11-1.11,1.11h-4.42
+			c-0.61,0-1.11-0.5-1.11-1.11v-3.16l6.63,1.9V51.38z M216.23,42.22v-0.79h-1.11v-1.11h-2.21v8.85h2.21v-1.11h1.11v-0.79l2.21,0.63
+			v3.48c0,1.22,0.99,2.21,2.21,2.21h4.42c1.22,0,2.21-0.99,2.21-2.21v-0.95l18.79,5.37V33.69L216.23,42.22z"/>
+	</defs>
+	<clipPath id="SVGID_74_">
+		<use xlink:href="#SVGID_73_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st45">
+		<defs>
+			<rect id="SVGID_75_" width="490" height="502"/>
+		</defs>
+		<clipPath id="SVGID_76_">
+			<use xlink:href="#SVGID_75_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="207.91" y="28.69" class="st46" width="43.15" height="32.12"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="SVGID_77_" d="M229.59,440.68c-8.26,0-15.02-6.76-15.02-15.03s6.76-15.03,15.02-15.03s15.02,6.73,15.02,15.03
+			C244.61,433.92,237.86,440.68,229.59,440.68z M229.49,408.96c-9.15,0-16.58,7.43-16.58,16.59c0,9.16,7.43,16.59,16.58,16.59
+			s16.58-7.43,16.58-16.59C246.06,416.39,238.64,408.96,229.49,408.96z M227.83,420.6l0.83,8.26h1.66l0.83-8.26v-3.32h-3.32V420.6z
+			 M229.49,430.49c-0.9,0-1.66,0.73-1.66,1.66c0,0.9,0.73,1.66,1.66,1.66s1.66-0.73,1.66-1.66
+			C231.15,431.25,230.38,430.49,229.49,430.49z"/>
+	</defs>
+	<clipPath id="SVGID_78_">
+		<use xlink:href="#SVGID_77_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st47">
+		<defs>
+			<rect id="SVGID_79_" width="490" height="502"/>
+		</defs>
+		<clipPath id="SVGID_80_">
+			<use xlink:href="#SVGID_79_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="207.91" y="403.96" class="st48" width="43.15" height="43.17"/>
+	</g>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 172.2383 481.0837)"><tspan x="0" y="0" class="st35 st36 st49">An </tspan><tspan x="8.56" y="0" class="st35 st36 st49">Blu</tspan><tspan x="17.94" y="0" class="st35 st36 st49">mi</tspan><tspan x="22.86" y="0" class="st35 st36 st49">x </tspan><tspan x="29.83" y="0" class="st35 st36 st49">ge</tspan><tspan x="36.12" y="0" class="st35 st36 st49">s</tspan><tspan x="42.99" y="0" class="st35 st36 st49">en</tspan><tspan x="49.61" y="0" class="st35 st36 st49">d</tspan><tspan x="56.58" y="0" class="st35 st36 st49">eter</tspan><tspan x="60.11" y="0" class="st35 st36 st49"> Alert</tspan></text>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_81_" x="425.3" y="191.37" width="30.96" height="30.3"/>
+	</defs>
+	<clipPath id="SVGID_82_">
+		<use xlink:href="#SVGID_81_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st50">
+		<defs>
+			<rect id="SVGID_83_" width="490" height="502"/>
+		</defs>
+		<clipPath id="SVGID_84_">
+			<use xlink:href="#SVGID_83_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st51">
 			<g>
 				<defs>
-					<rect id="SVGID_73_" x="309" y="397.5" width="31" height="31"/>
+					<rect id="SVGID_85_" x="425" y="191" width="32" height="31"/>
 				</defs>
-				<clipPath id="SVGID_74_">
-					<use xlink:href="#SVGID_73_"  style="overflow:visible;"/>
+				<clipPath id="SVGID_86_">
+					<use xlink:href="#SVGID_85_"  style="overflow:visible;"/>
 				</clipPath>
-				<g class="st40">
+				<g class="st52">
 					<defs>
-						<path id="SVGID_75_" d="M326.63,428.41h8.59c0.16,0,0.31-0.09,0.39-0.22l4.29-7.35c0.04-0.07,0.06-0.15,0.06-0.23
-							c0-0.08-0.02-0.16-0.06-0.23l-4.16-7.12l4.16-7.12c0.04-0.07,0.06-0.15,0.06-0.23c0-0.08-0.02-0.16-0.06-0.23l-4.29-7.35
+						<path id="SVGID_87_" d="M442.93,221.67h8.59c0.16,0,0.31-0.09,0.39-0.22l4.29-7.35c0.04-0.07,0.06-0.15,0.06-0.23
+							c0-0.08-0.02-0.16-0.06-0.23l-4.16-7.12l4.16-7.12c0.04-0.07,0.06-0.15,0.06-0.23s-0.02-0.16-0.06-0.23l-4.29-7.35
 							c-0.08-0.14-0.23-0.22-0.39-0.22h-8.59c-0.16,0-0.31,0.09-0.39,0.22l-4.16,7.13h-8.33c-0.16,0-0.31,0.09-0.39,0.22l-4.29,7.35
 							c-0.08,0.14-0.08,0.32,0,0.46l4.29,7.35c0.08,0.14,0.23,0.22,0.39,0.22h8.33l4.16,7.13
-							C326.32,428.33,326.47,428.41,326.63,428.41z M334.43,412.81h-7.54l-0.13-0.23l-3.63-6.22h7.54L334.43,412.81z M322.33,419.72
-							l-3.77-6.46l3.77-6.46l3.77,6.46L322.33,419.72z M334.43,413.71l-3.77,6.45h-7.54l3.63-6.22l0.13-0.23H334.43z M314,406.36
-							h7.54l-3.9,6.67c-0.08,0.14-0.08,0.32,0,0.46l3.9,6.67H314l-4.03-6.9L314,406.36z M335.22,412.37l-3.91-6.68
-							c-0.08-0.14-0.23-0.22-0.39-0.22h-7.8l3.77-6.45h8.07l4.03,6.9L335.22,412.37z M326.89,427.51l-3.77-6.45h7.8
-							c0.16,0,0.31-0.09,0.39-0.22l3.91-6.68l3.77,6.46l-4.03,6.9H326.89z"/>
+							C442.62,221.59,442.77,221.67,442.93,221.67z M450.73,206.07h-7.54l-0.13-0.23l-3.63-6.22h7.54L450.73,206.07z M438.64,212.98
+							l-3.77-6.46l3.77-6.46l3.77,6.46L438.64,212.98z M450.73,206.97l-3.77,6.45h-7.54l3.63-6.22l0.13-0.23H450.73z M430.31,199.62
+							h7.54l-3.9,6.67c-0.08,0.14-0.08,0.32,0,0.46l3.9,6.67h-7.54l-4.03-6.9L430.31,199.62z M451.52,205.63l-3.91-6.68
+							c-0.08-0.14-0.23-0.22-0.39-0.22h-7.8l3.77-6.45h8.07l4.03,6.9L451.52,205.63z M443.19,220.77l-3.77-6.45h7.8
+							c0.16,0,0.31-0.09,0.39-0.22l3.91-6.68l3.77,6.46l-4.03,6.9H443.19z"/>
 					</defs>
-					<clipPath id="SVGID_76_">
-						<use xlink:href="#SVGID_75_"  style="overflow:visible;"/>
+					<clipPath id="SVGID_88_">
+						<use xlink:href="#SVGID_87_"  style="overflow:visible;"/>
 					</clipPath>
-					<g class="st41">
+					<g class="st53">
 						<defs>
-							<rect id="SVGID_77_" x="309" y="397.5" width="31" height="31"/>
+							<rect id="SVGID_89_" x="425" y="191" width="32" height="31"/>
 						</defs>
-						<clipPath id="SVGID_78_">
-							<use xlink:href="#SVGID_77_"  style="overflow:visible;"/>
+						<clipPath id="SVGID_90_">
+							<use xlink:href="#SVGID_89_"  style="overflow:visible;"/>
 						</clipPath>
-						<rect x="304" y="393.11" class="st42" width="40.96" height="40.3"/>
+						<rect x="420.3" y="186.37" class="st54" width="40.96" height="40.3"/>
 					</g>
 				</g>
 			</g>
@@ -1453,93 +529,191 @@
 	</g>
 </g>
 <g>
-	<path class="st43" d="M491.51,307.03c0,64.19-48.36,118.22-110.48,118.22"/>
-</g>
-<g>
 	<defs>
-		<polygon id="SVGID_79_" points="379.36,419.89 380.16,420.72 376.6,424.4 376.6,425.57 380.16,429.24 379.36,430.07 
-			374.44,424.98 		"/>
-	</defs>
-	<clipPath id="SVGID_80_">
-		<use xlink:href="#SVGID_79_"  style="overflow:visible;"/>
-	</clipPath>
-	<g class="st44">
-		<defs>
-			<rect id="SVGID_81_" x="1" width="556" height="504"/>
-		</defs>
-		<clipPath id="SVGID_82_">
-			<use xlink:href="#SVGID_81_"  style="overflow:visible;"/>
-		</clipPath>
-		<rect x="369.44" y="414.89" class="st45" width="15.72" height="20.18"/>
-	</g>
-</g>
-<g>
-	<polygon class="st46" points="379.36,419.89 380.16,420.72 376.6,424.4 376.6,425.57 380.16,429.24 379.36,430.07 374.44,424.98 	
-		"/>
-	<path class="st43" d="M81.49,164.98c0-62.08,50.36-112.41,112.48-112.41"/>
-</g>
-<g>
-	<defs>
-		<polygon id="SVGID_83_" points="197.64,57.74 196.84,56.94 200.4,53.39 200.4,52.26 196.84,48.7 197.64,47.9 202.56,52.82 		"/>
-	</defs>
-	<clipPath id="SVGID_84_">
-		<use xlink:href="#SVGID_83_"  style="overflow:visible;"/>
-	</clipPath>
-	<g class="st47">
-		<defs>
-			<rect id="SVGID_85_" x="1" width="556" height="504"/>
-		</defs>
-		<clipPath id="SVGID_86_">
-			<use xlink:href="#SVGID_85_"  style="overflow:visible;"/>
-		</clipPath>
-		<rect x="191.84" y="42.9" class="st48" width="15.72" height="19.84"/>
-	</g>
-</g>
-<g>
-	<polygon class="st46" points="197.64,57.74 196.84,56.94 200.4,53.39 200.4,52.26 196.84,48.7 197.64,47.9 202.56,52.82 	"/>
-	<path class="st43" d="M372.02,48.48c62.08,0,117.41,47.71,117.41,107.79"/>
-</g>
-<g>
-	<defs>
-		<polygon id="SVGID_87_" points="484.26,163.81 485.06,163.04 488.61,166.48 489.74,166.48 493.3,163.04 494.1,163.81 
-			489.18,168.58 		"/>
-	</defs>
-	<clipPath id="SVGID_88_">
-		<use xlink:href="#SVGID_87_"  style="overflow:visible;"/>
-	</clipPath>
-	<g class="st49">
-		<defs>
-			<rect id="SVGID_89_" x="1" width="556" height="504"/>
-		</defs>
-		<clipPath id="SVGID_90_">
-			<use xlink:href="#SVGID_89_"  style="overflow:visible;"/>
-		</clipPath>
-		<rect x="479.26" y="158.04" class="st50" width="19.84" height="15.54"/>
-	</g>
-</g>
-<g>
-	<polygon class="st46" points="484.26,163.81 485.06,163.04 488.61,166.48 489.74,166.48 493.3,163.04 494.1,163.81 489.18,168.58 	
-		"/>
-	<path class="st43" d="M198.98,425.51c-62.08,0-112.41-50.36-112.41-112.48"/>
-</g>
-<g>
-	<defs>
-		<polygon id="SVGID_91_" points="91.74,309.36 90.94,310.16 87.39,306.6 86.26,306.6 82.7,310.16 81.9,309.36 86.82,304.44 		"/>
+		<rect id="SVGID_91_" x="208.25" y="208.02" width="17.27" height="0.86"/>
 	</defs>
 	<clipPath id="SVGID_92_">
 		<use xlink:href="#SVGID_91_"  style="overflow:visible;"/>
 	</clipPath>
-	<g class="st51">
+	<g class="st55">
 		<defs>
-			<rect id="SVGID_93_" x="1" width="556" height="504"/>
+			<rect id="SVGID_93_" width="490" height="502"/>
 		</defs>
 		<clipPath id="SVGID_94_">
 			<use xlink:href="#SVGID_93_"  style="overflow:visible;"/>
 		</clipPath>
-		<rect x="76.9" y="299.44" class="st52" width="19.84" height="15.72"/>
+		<rect x="203.25" y="203.02" class="st56" width="27.27" height="10.86"/>
 	</g>
 </g>
 <g>
-	<polygon class="st46" points="91.74,309.36 90.94,310.16 87.39,306.6 86.26,306.6 82.7,310.16 81.9,309.36 86.82,304.44 	"/>
+	<defs>
+		<path id="SVGID_95_" d="M224.65,206.29h-15.54v-19.01h15.54V206.29z M208.25,182.96v3.46v20.73h17.27v-20.73v-3.46H208.25z"/>
+	</defs>
+	<clipPath id="SVGID_96_">
+		<use xlink:href="#SVGID_95_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st57">
+		<defs>
+			<rect id="SVGID_97_" width="490" height="502"/>
+		</defs>
+		<clipPath id="SVGID_98_">
+			<use xlink:href="#SVGID_97_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="203.25" y="177.96" class="st58" width="27.27" height="34.19"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_99_" x="211.7" y="195.06" width="10.36" height="0.86"/>
+	</defs>
+	<clipPath id="SVGID_100_">
+		<use xlink:href="#SVGID_99_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st59">
+		<defs>
+			<rect id="SVGID_101_" width="490" height="502"/>
+		</defs>
+		<clipPath id="SVGID_102_">
+			<use xlink:href="#SVGID_101_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="206.7" y="190.06" class="st60" width="20.36" height="10.86"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_103_" x="211.7" y="191.6" width="10.36" height="0.86"/>
+	</defs>
+	<clipPath id="SVGID_104_">
+		<use xlink:href="#SVGID_103_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st61">
+		<defs>
+			<rect id="SVGID_105_" width="490" height="502"/>
+		</defs>
+		<clipPath id="SVGID_106_">
+			<use xlink:href="#SVGID_105_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="206.7" y="186.6" class="st62" width="20.36" height="10.86"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_107_" x="211.7" y="198.51" width="10.36" height="0.86"/>
+	</defs>
+	<clipPath id="SVGID_108_">
+		<use xlink:href="#SVGID_107_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st63">
+		<defs>
+			<rect id="SVGID_109_" width="490" height="502"/>
+		</defs>
+		<clipPath id="SVGID_110_">
+			<use xlink:href="#SVGID_109_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="206.7" y="193.51" class="st64" width="20.36" height="10.86"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<polygon id="SVGID_111_" points="54.26,160.06 55.06,159.26 58.62,162.82 59.75,162.82 63.31,159.26 64.1,160.06 59.18,164.98 		
+			"/>
+	</defs>
+	<clipPath id="SVGID_112_">
+		<use xlink:href="#SVGID_111_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st65">
+		<defs>
+			<rect id="SVGID_113_" width="490" height="502"/>
+		</defs>
+		<clipPath id="SVGID_114_">
+			<use xlink:href="#SVGID_113_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="49.26" y="154.26" class="st66" width="19.84" height="15.72"/>
+	</g>
+</g>
+<g>
+	<polygon class="st67" points="54.26,160.06 55.06,159.26 58.62,162.82 59.75,162.82 63.31,159.26 64.1,160.06 59.18,164.98 	"/>
+</g>
+<g>
+	<defs>
+		<polygon id="SVGID_115_" points="395.26,308.36 396.06,309.16 399.61,305.6 400.74,305.6 404.3,309.16 405.1,308.36 
+			400.18,303.44 		"/>
+	</defs>
+	<clipPath id="SVGID_116_">
+		<use xlink:href="#SVGID_115_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st68">
+		<defs>
+			<rect id="SVGID_117_" width="490" height="502"/>
+		</defs>
+		<clipPath id="SVGID_118_">
+			<use xlink:href="#SVGID_117_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="390.26" y="298.44" class="st69" width="19.84" height="15.72"/>
+	</g>
+</g>
+<g>
+	<polygon class="st67" points="395.26,308.36 396.06,309.16 399.61,305.6 400.74,305.6 404.3,309.16 405.1,308.36 400.18,303.44 	
+		"/>
+</g>
+<g>
+	<defs>
+		<polygon id="SVGID_119_" points="288.32,54.75 289.12,53.95 285.56,50.39 285.56,49.26 289.12,45.7 288.32,44.9 283.4,49.83 		"/>
+	</defs>
+	<clipPath id="SVGID_120_">
+		<use xlink:href="#SVGID_119_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st70">
+		<defs>
+			<rect id="SVGID_121_" width="490" height="502"/>
+		</defs>
+		<clipPath id="SVGID_122_">
+			<use xlink:href="#SVGID_121_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="278.4" y="39.9" class="st71" width="15.72" height="19.85"/>
+	</g>
+</g>
+<g>
+	<polygon class="st67" points="288.32,54.75 289.12,53.95 285.56,50.39 285.56,49.26 289.12,45.7 288.32,44.9 283.4,49.83 	"/>
+</g>
+<g>
+	<defs>
+		<polygon id="SVGID_123_" points="170.5,430.21 169.7,429.41 173.25,425.85 173.25,424.72 169.7,421.16 170.5,420.36 
+			175.42,425.29 		"/>
+	</defs>
+	<clipPath id="SVGID_124_">
+		<use xlink:href="#SVGID_123_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st72">
+		<defs>
+			<rect id="SVGID_125_" width="490" height="502"/>
+		</defs>
+		<clipPath id="SVGID_126_">
+			<use xlink:href="#SVGID_125_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="164.7" y="415.36" class="st73" width="15.72" height="19.85"/>
+	</g>
+</g>
+<g>
+	<polygon class="st67" points="170.5,430.21 169.7,429.41 173.25,425.85 173.25,424.72 169.7,421.16 170.5,420.36 175.42,425.29 	
+		"/>
+</g>
+<g>
+	<defs>
+		<polygon id="SVGID_127_" points="315.24,222.88 314.44,222.08 318,218.52 318,217.39 314.44,213.83 315.24,213.03 320.16,217.95 
+					"/>
+	</defs>
+	<clipPath id="SVGID_128_">
+		<use xlink:href="#SVGID_127_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st74">
+		<defs>
+			<rect id="SVGID_129_" width="490" height="502"/>
+		</defs>
+		<clipPath id="SVGID_130_">
+			<use xlink:href="#SVGID_129_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="309.44" y="208.03" class="st75" width="15.72" height="19.85"/>
+	</g>
 </g>
 </svg>

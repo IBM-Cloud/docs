@@ -66,7 +66,7 @@ Les utilitaires ci-après prennent en charge Liberty seulement.
   1. *debug* : active le mode débogage pour l'application Liberty et permet aux clients tels qu'IBM Eclipse Tools for
 {{site.data.keyword.Bluemix_notm}} d'établir une session de débogage à distance avec l'application.
   
-   Pour plus d'informations, voir [Débogage à distance](../manageapps/eclipsetools/eclipsetools.html#remotedebug).
+   Pour plus d'informations, voir [Débogage à distance](/docs/manageapps/eclipsetools/eclipsetools.html#remotedebug).
    
    L'utilitaire *debug* démarre aussi *proxy*.
    
@@ -103,7 +103,7 @@ ou *bunyan*.
   Accédez à la page Détails de l'instance dans la console Web de {{site.data.keyword.Bluemix_notm}} et sélectionnez
 **Actions** pour afficher l'interface utilisateur.
 
-  L'utilitaire *trace* n'est pas disponible si l'application a été démarrée avec l'option "-b buildpack". 
+  L'utilitaire *trace* n'est pas disponible si l'application a été démarrée avec l'option "-b buildpack".
 
   L'utilitaire *trace* ne démarre pas *proxy*.
 
@@ -148,7 +148,7 @@ démarrage des applications Node.js. Pour de meilleurs résultats, définissez l
 ##Mode développement pour Eclipse Tools
 {: #devmode}
 
-Le mode développement est une fonction d'[Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) qui permet aux développeurs d'utiliser leurs applications lorsqu'elles s'exécutent dans le cloud.
+Le mode développement est une fonction d'[Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools) qui permet aux développeurs d'utiliser leurs applications lorsqu'elles s'exécutent dans le cloud.
 
 Lorsqu'ils utilisent leurs applications dans {{site.data.keyword.Bluemix_notm}}, les développeurs peuvent
 avoir l'impression de ne pas pouvoir effectuer les activités de développement habituelles qu'ils peuvent effectuer dans un

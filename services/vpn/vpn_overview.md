@@ -4,6 +4,8 @@ copyright:
 
   years: 2015, 2016
 
+lastupdated: "2016-04-14"
+
 ---
 
 {:new_window: target="_blank"}
@@ -11,8 +13,6 @@ copyright:
 
 # About {{site.data.keyword.vpn_short}}
 {: #vpn_overview}  
-*Last updated: 14 July 2016*
-{: .last-updated}
 
 The {{site.data.keyword.vpn_full}} (VPN) service provides a secure communication channel between your corporate data center and your resources in the IBM Bluemix&reg; cloud environment. The connection is established over the Internet.
 {:shortdesc}
@@ -48,7 +48,7 @@ The IBM VPN service is compliant with the following IETF RFCs:
 ##Simplicity
 You can create the IBM VPN service by using a simple and intuitive graphical interface. You can specify your gateway IP address and your data center subnets. You can either use default IPsec and IKE policies, or customize the policies to suit your needs.  
 ##Management
-You can manage the IBM VPN service by using a graphical interface, a [command line interface](../../cli/plugins/vpn/index.html), or [APIs](https://new-console.ng.bluemix.net/apidocs/101).
+You can manage the IBM VPN service by using a graphical interface, a [command line interface](/docs/cli/plugins/vpn/index.html), or [APIs](https://new-console.ng.bluemix.net/apidocs/101).
 
 ## Getting help and support for {{site.data.keyword.vpn_short}} 
 {: #gettinghelp}

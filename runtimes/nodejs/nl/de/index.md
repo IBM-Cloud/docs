@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # SDK for Node.js
 {: #nodejs_runtime}
-Letzte Aktualisierung: 29. August 2016
-{: .last-updated}
 
 Die Laufzeit von Node.js in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'sdk-for-nodejs'.
 Das Buildpack 'sdk-for-nodejs' bietet eine vollständige Laufzeitumgebung für Node.js-Apps.
@@ -24,7 +23,7 @@ Das Buildpack 'sdk-for-nodejs' wird verwendet, wenn die Anwendung die Datei **pa
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine Node.js-Starteranwendung bereit.  Die Node.js-Starteranwendung ist eine einfache Node.js-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der Bluemix-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Lesen Sie als Hilfe für die Verwendung von Starteranwendungen [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix}} stellt eine Node.js-Starteranwendung bereit.  Die Node.js-Starteranwendung ist eine einfache Node.js-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der Bluemix-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Lesen Sie als Hilfe für die Verwendung von Starteranwendungen [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
 
 ## Startbefehl
 {: #starup_commmand}
@@ -65,12 +64,11 @@ Mithilfe dieser Informationen können Sie die Ausführung Ihrer Node.js-Anwendun
 
 Im folgenden Beispiel wird ein Teil der Quelle für eine **js**-Datei gezeigt:
 ```
-var port = (process.env.VCAP_APP_PORT || 3000);
-var host = (process.env.VCAP_APP_HOST || 'localhost');
+var port = (process.env.PORT || 3000);
 ```
 {: codeblock}
 
-Wenn die Anwendung in Bluemix ausgeführt wird, enthalten die Umgebungsvariablen VCAP_APP_HOST und VCAP_APP_PORT mit diesem Code die für Bluemix internen Werte für den Host und den Port, auf dem die App für eingehende Verbindungen empfangsbereit ist. Bei lokaler Ausführung der Anwendung sind die Umgebungsvariablen VCAP_APP_HOST und VCAP_APP_PORT nicht definiert, wodurch **localhost** als Host und **3000** als Portnummer verwendet werden. Durch diese Schreibung können Sie die Anwendung sowohl lokal für Testzwecke als auch in Bluemix ausführen, ohne Änderungen vornehmen zu müssen.
+Wenn die Anwendung bei diesem Code in Bluemix ausgeführt wird, enthält die Umgebungsvariable PORT den internen Portwert von Bluemix , auf dem die App für eingehende Verbindungen empfangsbereit ist. Bei lokaler Ausführung der Anwendung ist die Umgebungsvariablen PORT nicht definiert, sodass **3000** als Portnummer verwendet wird. Durch diese Schreibung können Sie die Anwendung sowohl lokal für Testzwecke als auch in Bluemix ausführen, ohne Änderungen vornehmen zu müssen.
 
 ## Offlinemodus
 {: #offline_mode}
@@ -78,14 +76,14 @@ Wenn die Anwendung in Bluemix ausgeführt wird, enthalten die Umgebungsvariablen
 Informationen zum Steuern des Buildpack-Zugriff auf externe Sites finden Sie unter [Offlinemodus](offlineMode.html). 
 
 ## App-Management
-{{site.data.keyword.Bluemix}} stellt eine Anzahl Dienstprogramme für das Management und das Debugging Ihrer Node.js-App zur Verfügung.  Vollständige Details finden Sie in [App-Management](../../manageapps/app_mng.html).
+{{site.data.keyword.Bluemix}} stellt eine Anzahl Dienstprogramme für das Management und das Debugging Ihrer Node.js-App zur Verfügung.  Vollständige Details finden Sie in [App-Management](/docs/manageapps/app_mng.html).
 
 ## Verfügbare Versionen
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} stellt alle [zurzeit verfügbaren Node.js-Laufzeiten](http://nodejs.org/dist/) zur Verfügung. Davon stellt IBM Versionen zur Verfügung, die Erweiterungen und Fehlerkorrekturen enthalten. Weitere Informationen finden Sie in [Neueste Aktualisierungen für das Node.js-Buildpack](../../runtimes/nodejs/updates.html).
+{{site.data.keyword.Bluemix}} stellt alle [zurzeit verfügbaren Node.js-Laufzeiten](http://nodejs.org/dist/) zur Verfügung. Davon stellt IBM Versionen zur Verfügung, die Erweiterungen und Fehlerkorrekturen enthalten. Weitere Informationen finden Sie in [Neueste Aktualisierungen für das Node.js-Buildpack](/docs/runtimes/nodejs/updates.html).
 
-Das IBM Node.js-Buildpack stellt alle IBM Laufzeitversionen in den Cache. Verwenden Sie die IBM SDK for Node.js-Laufzeit also in Ihrer Anwendung, erhalten Sie eine bessere Anwendungsleistung, wenn Ihre Anwendung mit einer Push-Operation an Bluemix übertragen wird.
+Das IBM Node.js-Buildpack stellt die IBM Laufzeitversionen in den Cache. Verwenden Sie die IBM SDK for Node.js-Laufzeit also in Ihrer Anwendung, erhalten Sie eine bessere Anwendungsleistung, wenn Ihre Anwendung mit einer Push-Operation an Bluemix übertragen wird.
 
 Verwenden Sie den Parameter **node** im Abschnitt **engines** der Datei **package.json**, um die Version der Node.js-Laufzeit anzugeben, die Sie ausführen möchten.
 
@@ -117,7 +115,7 @@ NPM stellt eine Scripting-Funktion bereit, mit der Sie Scripts einschließlich d
 
 ### Caching-Verhalten
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} enthält pro Knotenanwendung ein Cacheverzeichnis, das von einem Build zum anderen erhalten bleibt. Der Cache speichert aufgelöste Abhängigkeiten, das heißt, sie werden nicht bei jeder Implementierung der App heruntergeladen und installiert. Beispiel: Nehmen Sie an, die 'myapp' hängt von **express** ab. Dann wird 'myapp' das erste Mal bereitgestellt, wenn das Modul **express** heruntergeladen wird. Bei den nachfolgenden Implementierungen von 'myapp' wird die in den Cache gestellte Instanz von **express** verwendet. Das Standardverhalten sieht so aus, dass alle von NPM installierten Knotenmodule (node_modules) und alle von Bower installierten Bower-Komponenten (bower_components) in den Cache gestellt werden.
+{{site.data.keyword.Bluemix}} enthält pro Knotenanwendung ein Cacheverzeichnis, das von einem Build zum anderen erhalten bleibt. Der Cache speichert aufgelöste Abhängigkeiten, das heißt, sie werden nicht bei jeder Implementierung der App heruntergeladen und installiert.  Beispiel: Nehmen Sie an, die 'myapp' hängt von **express** ab.  Dann wird 'myapp' das erste Mal bereitgestellt, wenn das Modul **express** heruntergeladen wird.  Bei den nachfolgenden Implementierungen von 'myapp' wird die in den Cache gestellte Instanz von **express** verwendet. Das Standardverhalten sieht so aus, dass alle von NPM installierten Knotenmodule (node_modules) und alle von Bower installierten Bower-Komponenten (bower_components) in den Cache gestellt werden.
 
 Legen Sie mithilfe der Variablen NODE_MODULES_CACHE fest, ob das Node-Buildpack den bei vorherigen Builds verwendeten Cache verwendet oder ignoriert. Der Standardwert ist 'true'.  Legen Sie zum Inaktivieren des Cachings für NODE_MODULES_CACHE den Wert 'false' fest, beispielsweise über die cf-Befehlszeile:
 ```
@@ -155,11 +153,11 @@ Expess-App auf 'false' setzen. Sie können Ihren Code beispielsweise wie folgt b
 {: codeblock}
 Weitere Informationen finden Sie in diesem [stackoverflow-Post](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js).
 
-**ANMERKUNG** [App-Management](../../manageapps/app_mng.html) und FIPS_MODE werden *NICHT* gleichzeitig unterstützt.  Wenn die Umgebungsvariable BLUEMIX_APP_MGMT_ENABLE eingestellt ist und die Umgebungsvariable FIPS_MODE auf 'true' gesetzt ist, kann für die App kein Staging durchgeführt werden.
+**ANMERKUNG** [App-Management](/docs/manageapps/app_mng.html) und FIPS_MODE werden *NICHT* gleichzeitig unterstützt.  Wenn die Umgebungsvariable BLUEMIX_APP_MGMT_ENABLE eingestellt ist und die Umgebungsvariable FIPS_MODE auf 'true' gesetzt ist, kann für die App kein Staging durchgeführt werden.
 
 Es gibt mehrere Möglichkeiten, den FIPS_MODE-Status zu überprüfen:
 <ul>
-<li> Sie können in der Datei staging_task.log für Ihre Anwendung
+<li> Sie können in der Datei 'staging_task.log' für Ihre Anwendung
 nach einer Nachricht ähnlich der folgenden suchen:    
 
   <pre>
@@ -277,7 +275,7 @@ In der Regel stehen das aktuelle Buildpack **sdk-for-nodejs** und eine frühere 
 {: #rellinks}
 ## Allgemein
 {: #general}
-* [Neueste Aktualisierungen für das Node.js-Buildpack](../../runtimes/nodejs/updates.html)
-* [App-Management](../../manageapps/app_mng.html)
+* [Neueste Aktualisierungen für das Node.js-Buildpack](/docs/runtimes/nodejs/updates.html)
+* [App-Management](/docs/manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [IBM API Connect](https://strongloop.com/)

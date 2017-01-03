@@ -3,13 +3,12 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:shortdesc: .shortdesc}
 
 # 設定 iOS Objective-C SDK
 {: #getting-started-ios}
-
-
 
 使用 {{site.data.keyword.amafull}} SDK 檢測 iOS 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
 
@@ -22,6 +21,8 @@ lastupdated: "2016-10-02"
 {: #before-you-begin}
 您必須具有：
 * {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
+* **承租戶 ID**。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「{{site.data.keyword.amashort}} 授權管理程式」。
+* **應用程式路徑**。這是後端應用程式的 URL。在傳送要求至其受保護端點時，將需要此值。
 * Xcode 專案。  
 
 
@@ -52,9 +53,8 @@ sudo gem install cocoapods
 
 1. 編輯 `Podfile` 檔案，並將下行新增至必要目標：
 
-	```
-	pod 'IMFCore'
-	```
+
+	`pod 'IMFCore'`
 
 1. 儲存 `Podfile` 檔案，然後從指令行執行 `pod install`。<br/>Cocoapods 會安裝新增的相依關係，並顯示新增的元件。<br/>
 
@@ -65,15 +65,11 @@ sudo gem install cocoapods
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #init-mca-sdk-ios}
 
-若要使用 {{site.data.keyword.amashort}} 用戶端 SDK，您必須傳遞**路徑** (`applicationRoute`) 及**應用程式 GUID** (`applicationGUID`) 參數來起始設定 SDK。
-
-1. 從 {{site.data.keyword.Bluemix_notm}} 儀表板的主頁面，按一下應用程式。按一下**行動選項**。您需要有**路徑**及**應用程式 GUID** 值，才能起始設定 SDK。
-
 1. 新增下列標頭，在您要使用 {{site.data.keyword.amashort}} 用戶端 SDK 的類別中匯入 `IMFCore` 架構：
 
 	####Objective-C
 	{: #imfcore-objc}
-	
+
 	```Objective-C
 	  #import <IMFCore/IMFCore.h>
 	
@@ -81,18 +77,18 @@ sudo gem install cocoapods
 
 	####Swift
 	{: #sdk-swift}
-	
+
 	{{site.data.keyword.amashort}} 用戶端 SDK 是使用 Objective-C 進行實作。您可能需要將橋接標頭新增至 Swift 專案：
-	1. 在 Xcode 中的專案上按一下滑鼠右鍵，然後選取**新建檔案...**。
-	1. 在 **iOS 來源**種類中，按一下**標頭檔**。將檔案命名為 `BridgingHeader.h`。
+	1. 在 Xcode 中的專案上按一下滑鼠右鍵，然後選取 **New File**。
+	1. 在 **iOS Source** 種類中，按一下 **Header file**。將檔案命名為 `BridgingHeader.h`。
 	1. 將下行新增至橋接標頭：`#import <IMFCore/IMFCore.h>`。
-	1. 在 Xcode 中按一下您的專案，然後選取**建置設定**標籤。
+	1. 在 Xcode 中按一下您的專案，然後選取 **Build Settings** 標籤。
 	1. 搜尋 `Objective-C Bridging Header`。
 	1. 將值設為 `BridgingHeader.h` 檔案的位置（例如 `$(SRCROOT)/MyApp/BridgingHeader.h`）。
 	1. 建置專案，以確定 Xcode 取得橋接標頭。您應該不會看到任何失敗訊息。
-	
+
 1. 使用下列程式碼來起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。放置起始設定碼的一般（但非強制）位置是在應用程式委派的 `application:didFinishLaunchingWithOptions` 方法。<br/>
-將 `applicationRoute` 及 vapplicationGUID 取代為 {{site.data.keyword.Bluemix_notm}} 儀表板中**行動選項**的值。
+如需取得 `applicationRoute` 和 `applicationGUID` 的相關資訊，請參閱[開始之前](#before-you-begin)。 
 
 	####Objective-C
 	{: #sharedinstance-objc}
@@ -110,20 +106,21 @@ sudo gem install cocoapods
 	```
 
 ## 起始設定 AuthorizationManager
-藉由傳遞 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，起始設定 `AuthorizationManager`。按一下 {{site.data.keyword.amashort}} 服務磚上的**顯示認證**按鈕，來尋找此值。
+傳遞 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，以起始設定 `AuthorizationManager`。如需取得這些值的相關資訊，請參閱[開始之前](#before-you-begin)。 
 
 ####Objective-C
-	
+
 ```Objective-C
-     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
-  ```
+[[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"<tenantId>"];
+```
 
 ####Swift
 
 ```Swift
-  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
- ```
+IMFAuthorizationManager.sharedInstance().initializeWithTenantId("<tenantId>")
+```
 
+	
 ## 對行動後端應用程式提出要求
 {: #request}
 

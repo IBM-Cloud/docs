@@ -15,8 +15,8 @@ copyright:
 Última actualización: 20 de julio de 2016
 {: .last-updated}
 
-En algunos entornos como [Bluemix dedicado](../../dedicated/index.html#dedicated) y
-[Bluemix local](../../local/index.html#local), es posible configurar un proxy que afecte al comportamiento de la aplicación durante la etapa de transferencia y de tiempo de ejecución.
+En algunos entornos como [Bluemix dedicado](/docs/dedicated/index.html#dedicated) y
+[Bluemix local](/docs/local/index.html#local), es posible configurar un proxy que afecte al comportamiento de la aplicación durante la etapa de transferencia y de tiempo de ejecución.
 
 Puede configurar la aplicación para que funcione con el proxy utilizando las variables de entorno siguiente:
   * [http_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)
@@ -34,8 +34,8 @@ Por ejemplo, supongamos que tiene una aplicación nodejs y que la ejecución se 
 ## Aplicaciones Java
 {: #java_apps}
 
-Para [Liberty for Java](../runtimes/liberty/index.html) y las aplicaciones
-[java_buildpack](../runtimes/tomcat/index.html), los valores de proxy pueden pasarse al entorno de ejecución a través de la variable de entorno **JAVA_OPTS**.  Por ejemplo, puede emitir el mandato: 
+Para [Liberty for Java](/docs/runtimes/liberty/index.html) y las aplicaciones
+[java_buildpack](/docs/runtimes/tomcat/index.html), los valores de proxy pueden pasarse al entorno de ejecución a través de la variable de entorno **JAVA_OPTS**.  Por ejemplo, puede emitir el mandato: 
 ```
    $ cf se myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
@@ -48,5 +48,5 @@ y volver a transferir la aplicación.  La aplicación utilizará los valores de 
 {: #rellinks}
 ## general
 {: #general}
-* [Liberty for Java](../runtimes/liberty/index.html)
-* [SDK for Nodejs](../runtimes/nodejs/index.html)
+* [Liberty for Java](/docs/runtimes/liberty/index.html)
+* [SDK for Nodejs](/docs/runtimes/nodejs/index.html)

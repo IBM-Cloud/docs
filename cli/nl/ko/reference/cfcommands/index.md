@@ -6,7 +6,7 @@ copyright:
 
   years: 2016
 
-
+lastupdated: "2016-11-14"
 
 ---
 
@@ -18,9 +18,6 @@ copyright:
 
 # Cloud Foundry(cf) 명령
 {: #cf}
-
-마지막 업데이트 날짜: 2016년 10월 20일
-{: .last-updated}
 
 Cloud Foundry(cf) 명령행 인터페이스(CLI)는 앱 관리를 위한 명령 세트를 제공합니다. 다음 정보는 앱 관리를 위해 가장 공통적으로 사용되는 cf 명령을 나열하며, 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제가 포함됩니다.
 cf 명령과 연관된 도움말 정보를 모두 나열하려면 `cf help`를 사용하십시오. `cf command_name -h`를 사용하면 특정 명령에 대한 자세한 도움말 정보를 볼 수 있습니다.
@@ -49,7 +46,7 @@ cf 명령과 연관된 도움말 정보를 모두 나열하려면 `cf help`를 �
  </tr>
    </tbody>
  </table>
-*표 1. 일반 Cloud Foundry 명령*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="알파벳순으로 표시된 앱, 영역 및 서비스 관리를 위한 명령입니다. 각 명령에는 명령에 대한 세부 정보를 제공하는 링크가 포함되어 있습니다.">
@@ -67,19 +64,20 @@ cf 명령과 연관된 도움말 정보를 모두 나열하려면 `cf help`를 �
  <tr>
  <td>[delete-space](index.html#cf_delete-space)</td>
  <td>[events](index.html#cf_events)</td>
- <td>[로그](index.html#cf_logs)</td>
+ <td>[logs](index.html#cf_logs)</td>
  <td>[marketplace](index.html#cf_marketplace)</td>
- <td>[푸시(push)](index.html#cf_push)</td>
+ <td>[push](index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[스케일링(scale)](index.html#cf_scale)</td>
+ <td>[scale](index.html#cf_scale)</td>
  <td>[services](index.html#cf_services)
  <td>[set-env](index.html#cf_set-env)</td>
+ <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
-*표 2. 앱, 영역 및 서비스 관리를 위한 명령*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api
@@ -677,6 +675,43 @@ cf set-env my_app variable_a 123
 {: codeblock}
 
 
+## cf ssh
+{: #cf_ssh}
+
+애플리케이션 컨테이너에 안전하게 로그인합니다.
+기본적으로 SSH는 애플리케이션의 첫 번째 인스턴스(인덱스 0인 인스턴스)를 실행하는 컨테이너에 액세스합니다.
+
+```
+cf ssh
+```
+<strong>전제조건</strong>: `cf api`, `cf login`, `cf target`
+
+또한 애플리케이션 인스턴스에 대한 SSH 액세스를 허용하도록 Cloud Foundry 배치를 구성해야 합니다. 세부사항은 [Configuring SSH Access for Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}를 참조하십시오. 
+
+<strong>명령 옵션</strong>:
+
+<dl>
+<dt>appname</dt>
+<dd>애플리케이션 이름입니다. SSH가 허용되면 이 옵션을 사용하여 애플리케이션을 호스팅하는 VM과 대화식 SSH 세션을 시작할 수 있습니다.</dd>
+<dt>-i</dt>
+<dd>애플리케이션의 특정 인스턴스를 대상으로 합니다. </dd>
+<dt>-L</dt>
+<dd>시스템의 출력 포트를 애플리케이션 VM의 입력 포트에 바인딩하도록 로컬 포트 전달을 사용으로 설정합니다.</dd>
+<dt>-N</dt>
+<dd>원격 명령을 실행하지 않습니다.</dd>
+<dt>-t, -tt 또는 -T</dt>
+<dd>터미널 라인 출력을 생성하지 않고 pseudo-tty 모드로 SSH 세션을 실행할 수 있습니다.<dd>
+</dl>
+
+<strong>예제</strong>:
+
+`my_app`라는 애플리케이션을 호스팅하는 VM과 대화식 SSH 세션을 시작하십시오.
+```
+$ cf ssh my_app
+```
+{: codeblock}
+
+
 ## cf stacks
 {: #cf_stacks}
 
@@ -784,5 +819,5 @@ cf -v
 
 * [Cloud Foundry CLI 다운로드](https://github.com/cloudfoundry/cli/releases)
 {:new_window}
-* [빠른 참조 카드 - cf 명령](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
 {:new_window}

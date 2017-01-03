@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-24"
 
 ---
 
@@ -23,8 +23,10 @@ Before you can begin receiving data from your your IoT devices, you must connect
 
 Before you start the connection process, you must ensure that your devices meet the following requirements for communicating with {{site.data.keyword.iot_short_notm}}:
 
-- Your device must be able to communicate by sending device messages in [MQTT format](reference/mqtt/index.html).
-- The device messages must conform to the {{site.data.keyword.iot_short_notm}} [message payload](reference/mqtt/index.html#/message-payload) requirements.
+- Your device must be able to communicate by using HTTP or MQTT protocols.
+- The device messages must conform to the {{site.data.keyword.iot_short_notm}} message payload requirements.
+
+For more information, see [Developing devices on Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/devices/device_dev_index.html).
 
 Complete the following steps to connect your device to {{site.data.keyword.iot_short_notm}}.
 
@@ -86,7 +88,7 @@ If you choose to create your own token, make sure that it is between 8 and 36 ch
  - Ampersand (&)
  - At sign (@)
  - Question mark (?)
- - Asterisk (&#42;)
+ - Asterisk (\*)
  - Plus sign (+)
  - Period (.)
  - Right and left parentheses.  

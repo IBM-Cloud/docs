@@ -17,7 +17,13 @@ lastupdated: "2016-09-16"
 From the access dashboard, you can control and manage access to your {{site.data.keyword.iot_full}} organization. You can add users by adding, inviting, registering, or importing them. You can also give different levels of access to your users by assiging roles.
 {:shortdesc}
 
+- [Adding new users](#adding-new-users)
+- [Editing users](#editing-users)
+- [Blocking user access](#blocking-users)
+- [Removing users](#removing-users)
+
 ## User access
+{: #adding-new-users}
 
 From the **Access** tab of the dashboard, you can add individual members by using the Add, Invite, or Register functions. You can also add, invite, or register multiple members simultaneously by using the Import function.
 
@@ -88,3 +94,31 @@ To register multiple members simultaneously, you must upload a CSV (`.csv`) file
 ### Constructing your CSV file
 
 When you construct a CSV file to import members into your organization, ensure that you include the required information for the method that you are using. Use either commas or semi-colons to separate columns. When you upload the CSV file, under **CSV settings**, ensure that you select the correct column separator.
+
+## Editing users
+{: #editing-users}
+
+Users can be edited to change their role, add, remove, or change an access expiration date, or add or remove access to the organization.
+
+1. From your {{site.data.keyword.iot_short_notm}} dashboard, click **Members** from the navigation bar on the left.
+2. Click the **Edit** icon ![Edit](/docs/images/edit_32.svg) next to the user you wish to edit.
+3. Make the desired changes to the user.
+4. Click **Save**.
+
+## Blocking user access
+{: #blocking-users}
+
+Users can be blocked from accessing the {{site.data.keyword.iot_short_notm}} organization, while still maintaining organization membership.
+
+1. From your {{site.data.keyword.iot_short_notm}} dashboard, click **Members** from the navigation bar on the left.
+2. Click the toggle next to the user you wish to block from accessing the {{site.data.keyword.iot_short_notm}} organization.
+
+
+## Removing users
+{: #removing-users}
+
+Users can be removed entirely from the {{site.data.keyword.iot_short_notm}} organization. Removing users cannot be undone, and users must be [added to the platform](#adding-new-users) to restore access.
+
+1. From your {{site.data.keyword.iot_short_notm}} dashboard, click **Members** from the navigation bar on the left.
+2. Click the **Delete** icon ![Delete](/docs/images/trash_32.svg) next to the user to be removed.
+3. Click **Delete** in the confirmation dialog.

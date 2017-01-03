@@ -46,4 +46,4 @@ Esta prueba se ha realizado para asegurar la estabilidad y la capacidad de recup
 - Detener 2 nodos, la red se detiene debido a la falta de consenso.
 - Reiniciar uno de los nodos detenidos en la prueba anterior.  La red se reanuda y el nodo que ha reiniciado las sincronizaciones se sincroniza con los demás iguales de validación. Para obtener pasos detallados sobre las pruebas de PBFT, consulte el tema [Realización de pruebas de consenso y disponibilidad](etn_pbft.html).
 
-Continuar con el tema [Más pruebas](etn_next.html) para ver pruebas adicionales y la funcionalidad verificada.  
+Continúe con el tema [Prueba adicional](etn_next.html) para ver pruebas adicionales y funciones verificadas.  

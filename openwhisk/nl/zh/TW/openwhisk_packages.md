@@ -1,12 +1,11 @@
 ---
 
- 
+
 
 copyright:
-
   years: 2016
+lastupdated: "2016-08-02"
 
- 
 
 ---
 
@@ -18,8 +17,7 @@ copyright:
 
 # 使用及建立 {{site.data.keyword.openwhisk_short}} 套件
 {: #openwhisk_packages}
-前次更新：2016 年 8 月 2 日
-{: .last-updated}
+
 
 在 {{site.data.keyword.openwhisk}} 中，您可以使用套件以將一組相關動作組合在一起，並與其他人共用。
 
@@ -244,7 +242,7 @@ wsk action get --summary /whisk.system/alarms/alarm
 2. 建立每八秒即發動的觸發程式。
 
   ```
-  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron '*/8 * * * * *' -p trigger_payload '{"name":"Mork", "place":"Ork"}'
+  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron "*/8 * * * * *" -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"
   ```
   {: pre}
   ```
@@ -384,12 +382,14 @@ ok: updated package custom
 2. 顯示套件及動作中的參數，以及查看套件中的 `identity` 動作如何繼承套件中的參數。
 
   ```
-wsk package get custom parameters
+  wsk package get custom
   ```
   {: pre}
   ```
-ok: got package custom, projecting parameters
-  [{
+  ok: got package custom
+  ...
+  "parameters": [
+      {
           "key": "city",
           "value": "Austin"
       },
@@ -398,16 +398,19 @@ ok: got package custom, projecting parameters
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
   ```
-wsk action get custom/identity parameters
+  wsk action get custom/identity
   ```
   {: pre}
   ```
-ok: got action custom/identity, projecting parameters
-  [{
+  ok: got action custom/identity
+  ...
+  "parameters": [
+      {
           "key": "city",
           "value": "Austin"
       },
@@ -416,6 +419,7 @@ ok: got action custom/identity, projecting parameters
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
@@ -468,12 +472,14 @@ ok: updated package custom
 2. 顯示套件的 `publish` 內容，以驗證它現在為 true。
 
   ```
-wsk package get custom publish
+  wsk package get custom
   ```
   {: pre}
   ```
-ok: got package custom, projecting publish
-  true
+  ok: got package custom
+  ...
+  "publish": true,
+  ...
   ```
   {: screen}
 

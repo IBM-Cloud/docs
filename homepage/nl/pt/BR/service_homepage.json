@@ -7,40 +7,34 @@
     "id": "cfApp",
     "title": "Aplicativos Cloud Foundry",
     "href": "cfapps/index.html",
-    "category_id": "calcular"
+    "category_id": "compute"
   }, {
     "title": "Tempos de execução",
     "href": "cfapps/runtimes.html",
-    "category_id": "calcular"
+    "category_id": "compute"
   }, {
     "title": "Modelos",
     "href": "cfapps/boilerplates.html",
-    "category_id": "calcular"
+    "category_id": "compute"
   }, {
-    "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
-    "category_id": "calcular"
+    "category_id": "compute"
   }, {
-    "id": "contêiner",
-    "title": "IBM Containers",
+    "id": "container",
+    "title": "IBM Bluemix Container Service",
     "href": "containers/container_index.html",
-    "category_id": "calcular"
+    "category_id": "compute"
   }, {
     "id": "MV",
     "title": "IBM Virtual Servers",
     "href": "virtualmachines/vm_index.html",
-    "category_id": "calcular"
+    "category_id": "compute"
   }, {
     "type": "extra",
     "title": "Tente trabalhar com dados",
     "href": "services/WorkWithData/index.html",
-    "category_id": "dados"
-  }, {
-    "type": "extra",
-    "title": "Tente as cadeias de ferramentas",
-    "href": "toolchains/toolchains_overview.html",
-    "category_id": "devops"
+    "category_id": "data"
   }, {
     "type": "extra",
     "title": "Tente o Dedicated GitHub Enterprise",
@@ -48,9 +42,9 @@
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Tente o painel Móvel do Bluemix",
+    "title": "Tentar construção de projetos móveis",
     "href": "mobile/index.html",
-    "category_id": "móvel"
+    "category_id": "mobile"
   }]
 }
 

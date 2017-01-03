@@ -13,7 +13,7 @@ copyright:
 # 번역 관리
 {: #globalizationpipeline_managingtranslations}
 
-*마지막 업데이트 날짜: 2016년 7월 6일*
+*마지막 업데이트 날짜: 2016년 10월 14일*
 {: .last-updated}
 
 번들을 작성하고 애플리케이션에 대한 번역 생성을 시작했으면 기계 번역 컨텐츠를 현상태대로 사용하거나 추가로 수정할 수 있습니다. 기본값 외에 기계 번역을 사용하도록 선택할 수도 있습니다. 이 섹션에서는 번들의 번역을 수행하는 기계 번역 엔진을 변경하는 방법, 번역 후 직접 편집을 수행하는 방법, 번역에 액세스해야 하는 사람들에 대한 액세스 제한 및 사용자 역할을 지정하는 방법을 설명합니다.
@@ -22,15 +22,15 @@ copyright:
 ## 기계 번역 구성
 {: #globalizationpipeline_service_to_service}
 
-{{site.data.keyword.GlobalizationPipeline_full}}에서는 대체 기계 번역 서비스를 통합하는 기능을 지원하여 번들에 대해 기계 번역을 수행합니다. {{site.data.keyword.GlobalizationPipeline_full}}에서 활용되는 기본 엔진이 필요한 특정 언어를 제공하지 않는 경우나 다른 엔진에서 생성되는 기계 번역을 선호하는 경우 대체 서비스를 추가하면 유용할 수 있습니다. 대체 서비스의 사용 및 담당은 해당 서비스의 이용 약관에 따릅니다.
+{{site.data.keyword.GlobalizationPipeline_full}}에서는 대체 기계 번역 서비스를 통합하는 기능을 지원하여 번들에 대해 기계 번역을 수행합니다. {{site.data.keyword.GlobalizationPipeline_short}}에서 활용되는 기본 엔진이 필요한 특정 언어를 제공하지 않는 경우나 다른 엔진에서 생성되는 기계 번역을 선호하는 경우 대체 서비스를 추가하면 유용할 수 있습니다. 대체 서비스의 사용 및 담당은 해당 서비스의 이용 약관에 따릅니다.
 
-{{site.data.keyword.GlobalizationPipeline_full}}에 대해 대체 기계 번역 서비스를 추가하고 구성하려면 {{site.data.keyword.GlobalizationPipeline_full}} 대시보드에서 **기계 번역 구성** 탭을 선택하십시오.
+{{site.data.keyword.GlobalizationPipeline_short}}에 대해 대체 기계 번역 서비스를 추가하고 구성하려면 {{site.data.keyword.GlobalizationPipeline_short}} 대시보드에서 **기계 번역 구성** 탭을 선택하십시오.
 
-* {{site.data.keyword.Bluemix_notm}} 카탈로그에 있는 기계 번역 서비스를 추가하려면(**Watson 언어 번역**), 서비스가 {{site.data.keyword.Bluemix_notm}} 공간에 먼저 추가해야 합니다.
+* {{site.data.keyword.Bluemix_notm}} 카탈로그에 있는 기계 번역 서비스(**Watson 언어 번역기**)를 추가하려면 먼저 서비스를 {{site.data.keyword.Bluemix_notm}} 영역에 추가해야 합니다.
 
 * 써드파티 서비스를 추가하려면 **기계 번역 구성** 탭의 해당 서비스 단추를 선택하고 서비스에 액세스하는 데 필요한 사용자 신임 정보를 제공하십시오.
 
-기계 번역 서비스가 {{site.data.keyword.GlobalizationPipeline_full}}에 추가된 후 나머지 단계를 수행하여 해당 서비스의 통합을 완료하십시오.
+기계 번역 서비스가 {{site.data.keyword.GlobalizationPipeline_short}}에 추가된 후 나머지 단계를 수행하여 해당 서비스의 통합을 완료하십시오.
 
 1. **사용**을 클릭하여 해당 서비스와의 통합을 켜십시오.
 
@@ -40,7 +40,7 @@ copyright:
 
 4. **저장**을 클릭하여 **기계 번역 구성** 탭으로 돌아가십시오.
 
-대체 서비스가 {{site.data.keyword.GlobalizationPipeline_full}}과 함께 구성되었으면 해당 엔진에 지정된 모든 대상 언어가 해당 엔진을 통해 생성되기 시작합니다. 
+대체 서비스가 {{site.data.keyword.GlobalizationPipeline_short}}과 함께 구성되었으면 해당 엔진에 지정된 모든 대상 언어가 해당 엔진을 통해 생성되기 시작합니다. 
 
 대체 기계 번역 엔진 사용을 중지하려면 다음을 수행하십시오.
 
@@ -53,7 +53,7 @@ copyright:
 ## 번역 보기 및 편집
 {: #globalizationpipeline_translations}
 
-{{site.data.keyword.GlobalizationPipeline_full}} 서비스에서 번역 후 직접 편집 기능을 제공합니다. 전문 번역사 또는 다른 대상 언어 사용자가 생성된 번역을 편집할 수 있습니다. 번역의 품질 또는 일관성을 향상시키고 다른 단어로 대체하도록 편집할 수 있습니다. 예를 들어, 제품 이름의 번역을 겹쳐써야 할 수 있습니다.
+{{site.data.keyword.GlobalizationPipeline_short}} 서비스에서 번역 후 직접 편집 기능을 제공합니다. 전문 번역사 또는 다른 대상 언어 사용자가 생성된 번역을 편집할 수 있습니다. 번역의 품질 또는 일관성을 향상시키고 다른 단어로 대체하도록 편집할 수 있습니다. 예를 들어, 제품 이름의 번역을 겹쳐써야 할 수 있습니다.
 
 대상 언어에 대해 번역을 보고 편집하려면 다음을 수행하십시오.
 
@@ -79,15 +79,15 @@ copyright:
 
 | 역할 유형 | 번역 보기 여부     | 번역 편집 여부     | 번들 정보 수정 여부        |
 |-----------|--------------------|--------------------|----------------------------|
-| 독자      | 예                 | 아니오             | 아니오                     |
-| 번역사    | 예                 | 예                 | 아니오                     |
-| 관리자    | 예                 | 예                 | 예                         |
+| 독자      | 예                         | 아니오                     | 아니오                     |
+| 번역사    | 예                         | 예                         | 아니오                     |
+| 관리자    | 예                         | 예                         | 예                         |
 
 추가 API 사용자를 작성하는 경우 다수의 특정 번들에 대해 액세스 권한을 제한하거나 모든 사용 가능한 번들에 대해 액세스 권한을 부여할 수 있습니다.
 
-{{site.data.keyword.GlobalizationPipeline_full}} 서비스 인스턴스에서 번들에 API 사용자 액세스 권한을 부여하려면 다음을 수행하십시오.
+{{site.data.keyword.GlobalizationPipeline_short}} 서비스 인스턴스에서 번들에 API 사용자 액세스 권한을 부여하려면 다음을 수행하십시오.
 
-1. {{site.data.keyword.GlobalizationPipeline_full}} 대시보드에서 **API 사용자** 탭을 클릭하십시오.
+1. {{site.data.keyword.GlobalizationPipeline_short}} 대시보드에서 **API 사용자** 탭을 클릭하십시오.
 2. **새 API 사용자**를 클릭하십시오.
 3. **표시 이름** 및 **주석**을 입력하여 새 API 사용자에 대해 설명하십시오.
 4. 새 API 사용자의 **유형**을 선택하십시오.
@@ -100,6 +100,6 @@ API 사용자 ID 및 비밀번호가 생성되고 표시됩니다. 해당 신임
 
 API 사용자 비밀번호를 재설정하려면 다음을 수행하십시오.
 
-1. {{site.data.keyword.GlobalizationPipeline_full}} 대시보드에서 **API 사용자** 탭을 클릭하십시오.
+1. {{site.data.keyword.GlobalizationPipeline_short}} 대시보드에서 **API 사용자** 탭을 클릭하십시오.
 2. **비밀번호 재설정** 아이콘 ![이 아이콘을 선택하여 API 사용자 비밀번호 재설정](images/resetPW.png)을 클릭하여 특정 사용자 ID의 비밀번호를 재설정하십시오. 
 3. **예**를 클릭하십시오. 

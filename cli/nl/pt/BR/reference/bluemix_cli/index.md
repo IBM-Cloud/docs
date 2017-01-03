@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-24"
+
 ---
 
 
@@ -15,9 +16,6 @@ copyright:
 
 # Comandos do {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
-
-Última atualização: 25 de outubro de 2016
-{: .last-updated}
 
 Versão: 0.4.1
 
@@ -68,7 +66,7 @@ Use os índices nas tabelas a seguir para referir-se aos comandos do Bluemix usa
  </tr>
   </tbody>
  </table>
-*Tabela 1. Comandos gerais do Bluemix*
+{: caption="Table 1. General bluemix commands" caption-side="top"}
 
 
 
@@ -107,7 +105,7 @@ Use os índices nas tabelas a seguir para referir-se aos comandos do Bluemix usa
  </tr>
  </tbody>
  </table>
-*Tabela 2. Comandos para gerenciar organizações, espaços e usuários*
+ {: caption="Table 2. Commands for managing orgs, spaces, and users" caption-side="top"} 
 
 
 
@@ -146,7 +144,7 @@ Use os índices nas tabelas a seguir para referir-se aos comandos do Bluemix usa
  </tr>
   </tbody>
  </table>
-*Tabela 3. Comandos para gerenciar aplicativos cf*
+{: caption="Table 3. Commands for managing cf apps" caption-side="top"}
 
 
 <table summary="comandos do Bluemix que podem ser usados para gerenciar serviços do Bluemix.">
@@ -177,7 +175,7 @@ Use os índices nas tabelas a seguir para referir-se aos comandos do Bluemix usa
  </tr>
   </tbody>
  </table>
-*Tabela 4. Comandos para gerenciar serviços do Bluemix*
+{: caption="Table 4. Commands for managing Bluemix services" caption-side="top"}
 
 
 <table summary="comandos do Bluemix que podem ser usados para gerenciar catálogo, plug-ins, faturamento e configurações de segurança do Bluemix.">
@@ -213,7 +211,7 @@ Use os índices nas tabelas a seguir para referir-se aos comandos do Bluemix usa
  </tr>
   </tbody>
  </table>
-*Tabela 5. Comandos para gerenciar catálogo, plug-ins, faturamento e configurações de segurança do Bluemix*
+{: caption="Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings" caption-side="top"}
 
 
 
@@ -245,7 +243,7 @@ Use os índices nas tabelas a seguir para referir-se aos comandos do Bluemix usa
  </tr>
   </tbody>
  </table>
-*Tabela 6. Comandos para gerenciar configurações de rede*
+{: caption="Table 6. Commands for managing network settings" caption-side="top"}
 
 
 
@@ -304,8 +302,8 @@ Use os índices nas tabelas a seguir para referir-se aos comandos do Bluemix usa
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
  <tr>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic stop](index.html#ic_stop)</td>
@@ -315,7 +313,7 @@ Use os índices nas tabelas a seguir para referir-se aos comandos do Bluemix usa
  <td>[bluemix ic unpause](index.html#unpause)</td>
  <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
@@ -333,7 +331,7 @@ Use os índices nas tabelas a seguir para referir-se aos comandos do Bluemix usa
  </tr>
   </tbody>
  </table>
-*Tabela 7. Comandos para gerenciar contêineres no Bluemix*
+{: caption="Table 7. Commands for managing containers on Bluemix" caption-side="top"}
 
 
 
@@ -1629,7 +1627,7 @@ bluemix bss account-usage -d 2016-06
 ## bluemix bss org-usage
 {: #bluemix_bss_org_usage}
 
-Mostrar os detalhes de uso mensal de uma organização. Essa operação pode ser executada somente por um gerenciador de faturamento da organização.
+Mostrar detalhes de uso mensal de uma organização. Essa operação pode ser executada somente por um gerente de faturamento da organização.
 
 ```
 bluemix bss org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
@@ -2133,7 +2131,7 @@ exemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  A tabela a segui
 | CCS_BIND_APP=*&lt;appname&gt;*       | Faça a ligação de um serviço a um contêiner. Use a variável de ambiente `CCS_BIND_APP` para ligar um aplicativo ao contêiner. O app é ligado ao serviço de destino e age como uma ponte que permite que o {{site.data.keyword.Bluemix_notm}} traga as informações de `VCAP_SERVICES` de seu app de ponte para a instância do contêiner em execução. Para obter mais informações sobre como criar um app de ponte, consulte [Ligando um serviço a um contêiner](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | Para ligar um serviço Bluemix diretamente a um contêiner, sem usar um app de ponte, use CCS_BIND_SRV. Essa ligação permite que o Bluemix injete as informações de VCAP_SERVICES na instância do contêiner em execução. Para listar vários serviços do Bluemix, inclua-os como parte da mesma variável de ambiente. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Inclua um arquivo de log a ser monitorado no contêiner. Inclua a variável de ambiente `LOG_LOCATIONS` com um caminho para o arquivo de log. |
-*Tabela 8. Variáveis de ambiente comumente usadas*
+{: caption="Table 8. Commonly used environment variables" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (opcional)</dt>
@@ -2742,10 +2740,10 @@ bluemix ic rename OLD_NAME NEW_NAME
 Recrie o serviço IBM Containers no espaço do Bluemix em que você efetuou login. A
 cota original para o espaço é mantida.
 
-<strong>Importante</strong>: quando você executa esse comando, nenhum dos seus contêineres únicos e grupos nesse espaço será migrado para o espaço reprovisionado e eles serão removidos durante o processo de migração. 
+<strong>Importante</strong>: quando você executa esse comando, nenhum dos seus contêineres únicos e grupos nesse espaço será migrado para o espaço reprovisionado e eles serão removidos durante o processo de migração.
 
 ```
-bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
+bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ```
 <strong>Opções de comando</strong>:
 
@@ -2983,7 +2981,7 @@ exemplo: -e "key1=value1" -e "key2=value2" -e "key3=value3". A tabela a seguir m
 | CCS_BIND_APP=*&lt;appname&gt;*       | Faça a ligação de um serviço a um contêiner. Use a variável de ambiente `CCS_BIND_APP` para ligar um aplicativo ao contêiner. O app é ligado ao serviço de destino e age como uma ponte que permite que o {{site.data.keyword.Bluemix_notm}} traga as informações de `VCAP_SERVICES` de seu app de ponte para a instância do contêiner em execução. Para obter mais informações sobre como criar um app de ponte, consulte [Ligando um serviço a um contêiner](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | Para ligar um serviço Bluemix diretamente a um contêiner, sem usar um app de ponte, use CCS_BIND_SRV. Essa ligação permite que o Bluemix injete as informações de VCAP_SERVICES na instância do contêiner em execução. Para listar vários serviços do Bluemix, inclua-os como parte da mesma variável de ambiente. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Inclua um arquivo de log a ser monitorado no contêiner. Inclua a variável de ambiente `LOG_LOCATIONS` com um caminho para o arquivo de log. |
-*Tabela 9. Variáveis de ambiente comumente usadas*
+{: caption="Table 9. Commonly used environment variables" caption-side="top"} 
 
 
    <dl>

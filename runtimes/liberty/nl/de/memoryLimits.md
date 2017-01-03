@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Speicherbegrenzungen und das Liberty-Buildpack
 {: #memory_limits}
-
-Letzte Aktualisierung: 10. Juni 2016
-{: .last-updated}
 
 Bei der Implementierung einer Anwendung mit dem Liberty-Buildpack muss eine
 Speicherbegrenzung angegeben werden.

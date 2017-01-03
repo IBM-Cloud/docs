@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-10-14"
+
 ---
 
-#	Utilizzo del piano Developer Pro 
+#	Utilizzo del piano Developer Pro
 {: #using_mobilefoundation_p3}
-
-<!--Last updated: 14 October 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}}: Developer Pro è adatto per il test e lo sviluppo basato sul team, questo piano non è adatto alla produzione.
 
@@ -32,7 +30,7 @@ Tieni conto di quanto segue, prima di configurare l'istanza del servizio {{site.
 ###  Prime operazioni
 {: #firststeps_p3}
 
-Dopo che hai creato l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Developer Pro, completa la seguente procedura per iniziare a utilizzarla. 
+Dopo che hai creato l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Developer Pro, completa la seguente procedura per iniziare a utilizzarla.
 
 ### Impostazione della connessione all'istanza del servizio {{site.data.keyword.dashdbshort_notm}}
 {: #connect_dashdb_p3}
@@ -61,7 +59,7 @@ Dopo che l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: De
 * Per avviare {{site.data.keyword.mfserver_short_notm}}, con le impostazioni predefinite, fai clic su **Avvia server di base**.
 
 * Questa selezione fornisce un {{site.data.keyword.mfserver_long_notm}} con le seguenti impostazioni:
-    - Singolo nodo con 1 GB di memoria. Questa dimensione è sufficiente per lo sviluppo, per delle attività moderate di test e i carichi di lavoro di produzione su piccola scala. 
+    - Singolo nodo con 1 GB di memoria. Questa dimensione è sufficiente per lo sviluppo, per delle attività moderate di test e i carichi di lavoro di produzione su piccola scala.
 
     -	Il `nome utente` e la `password` ti vengono generati automaticamente. Disporrai dell'accesso ad essi quando il server è avviato e in esecuzione.
 
@@ -80,7 +78,6 @@ dove puoi vedere:
 
 <!--This console runs inside the container.--> Con la console, puoi gestire le tue applicazioni mobili, gli adattatori e i tuoi dispositivi mobili, utilizzare il tuo server come un backend mobile, inviare notifiche di push e altro ancora.
 
-
 ##  Aggiunta del server Mobile Analytics
 {: #adding_analytics_server_p3}
 
@@ -90,7 +87,7 @@ dove puoi vedere:
 
  Gli utenti possono anche allegare i volumi ai contenitore per conservare i dati. Il volume selezionato non può essere modificato. 20 GB è lo spazio di condivisione file predefinito disponibile all'utente. Se l'utente necessita di ulteriore spazio di archiviazione per conservare i dati di analisi, deve acquistare ulteriore condivisione file e creare un volume utilizzando questa condivisione file. Può quindi selezionare questo nuovo volume mentre distribuisce il server di analisi.
 
- Per ulteriori informazioni sull'aggiunta di volumi a {{site.data.keyword.containerlong}}, fai riferimento a [Memorizzazione dei dati persistenti in un volume utilizzando il dashboard {{site.data.keyword.Bluemix_notm}}  ](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ Per ulteriori informazioni sull'aggiunta di volumi a {{site.data.keyword.containerlong}}, fai riferimento a [Memorizzazione dei dati persistenti in un volume utilizzando il dashboard {{site.data.keyword.Bluemix_notm}}  ](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Fai clic su **Aggiungi Analytics** per aggiungere il server Mobile Analytics all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
 

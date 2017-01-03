@@ -1,8 +1,13 @@
 ---
 
 copyright:
-  years: 2015, 2016 lastupdated: "2016-10-02"
+  years: 2015, 2016
+lastupdated: "2016-10-27"
+
 ---
+
+{:shortdesc: .shortdesc} 
+{:codeblock:.codeblock}
 
 # Protegendo recursos Node.js com o {{site.data.keyword.amashort}}
 {: #protecting-resources-nodejs}
@@ -26,7 +31,7 @@ que há outras estruturas que usam estruturas `Express`, como LoopBack. É poss�
 O SDK do servidor {{site.data.keyword.amashort}} fornece uma estratégia de passaporte `MCABackendStrategy`
 para ser usada em aplicativos backend implementados no IBM {{site.data.keyword.Bluemix_notm}}. Para proteger seu app contra acesso não autorizado e obter informações de monitoramento, deve-se instrumentar seu servidor Node.js com o `MCABackendStrategy`. O módulo npm `bms-mca-token-validation-strategy` fornece a estratégia de passaporte `MCABackendStrategy` e o método de verificação para validar o token de acesso e o token de ID emitidos pelo {{site.data.keyword.amashort}}. Esse módulo também fornece automaticamente informações de monitoramento sobre eventos de segurança.
 
-O {{site.data.keyword.amashort}} server SDK usa a estrutura `Passport` para impor a autorização.  Para obter mais informações, veja [Passportjs.org](http://passportjs.org/).
+O {{site.data.keyword.amashort}} server SDK usa a estrutura `Passport` para impor a autorização.  Para obter mais informações, consulte [Passportjs.org](http://passportjs.org/).
 
 ## Instalando o SDK do servidor
 {: #protecting-resources-serversdk}
@@ -38,6 +43,7 @@ npm install -save express
 npm install -save passport
 npm install -save bms-mca-token-validation-strategy
 ```
+{: codeblock}
 
 ## Protegendo recursos no Node.js
 {: #protecting-resources-nodesdk}
@@ -63,3 +69,4 @@ app.get('/protected', passport.authenticate('mca-backend-strategy', {session: fa
 
 app.listen(process.env.PORT);
 ```
+{: codeblock}

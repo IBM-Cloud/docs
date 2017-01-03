@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-08"
 
 ---
 
@@ -11,10 +12,31 @@ copyright:
 
 # 최신 업데이트
 {: #latest_updates}
-마지막 업데이트 날짜: 2016년 8월 17일
-{: .last-updated}
 
 서비스에 대한 최신 업데이트 목록입니다.
+
+## 2016년 11월 8일: 업데이트된 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* 클라이언트가 해당 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} VM에 대해 [공인 IP](networkEnvironment.html#networkEnvironment) 주소를 요청하도록 기능이 추가되었습니다.
+* 다음을 포함하여 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}에 영향을 미치는 [몇 가지 보안 취약점](http://www-01.ibm.com/support/docview.wss?uid=swg21993842){: new_window}이 해결되었습니다.
+  * 신뢰할 수 없는 소스에서 직렬화된 오브젝트로 원격 공격자가 임의 Java 코드를 실행하도록 허용할 수 있는 IBM WebSphere Application Server의 취약성
+  * TS_OBJ_print_bio 기능의 out-of-bounds 읽기에 의해 발생된 서비스 거부(Dos) 취약성. 원격 공격자는 애플리케이션이 충돌하도록 특별하게 만들어진 시간소인 파일을 사용하여 이 취약성을 활용할 수 있습니다. 
+  * SSL/TLS 프로토콜의 일부로 사용된 64비트 블록 암호에 Triple-DES에서 오류에 의해 발생된 민감한 정보를 원격 공격자가 얻도록 허용할 수 있는 OpenSSL의 잠재적 취약성. SSL/TLS 서버와 클라이언트 사이에서 많은 양의 암호화된 트래픽을 캡처하여 man-in-the-middle 공격을 수행할 수 있는 원격 공격자가 평문 데이터를 복구하고 민감한 정보를 얻기 위해 이 취약성을 활용할 수 있습니다. 이 취약성은 SWEET32 Birthday 공격으로 알려졌습니다.
+  * OpenSSL은 서비스 거부(DoS)에 취약합니다. 반복적으로 재조정을 요청하여 원격 인증 공격자는 사용 가능한 모든 메모리 리소스를 이용하도록 지나치게 큰 OCSP 상태 요청 확장을 보낼 수 있습니다. 
+  * OpenSSL은 MDC2_Update 기능에서 정수 오버플로우에 의해 발생된 서비스 거부(DoS)에 취약합니다. 알 수 없는 공격 벡터를 사용하여 원격 공격자는 out-of-bounds 쓰기를 트리거하고 애플리케이션 충돌을 유발하도록 이 취약성을 활용할 수 있습니다. 
+  * 특정 오퍼레이션에 대해 상수가 아닌 시간 코드 경로 중 다음을 허용하는 DSA 구현에서 오류에 의해 발생된 민감한 정보를 원격 공격자가 얻도록 허용하는 OpenSSL의 잠재적 취약성. 공격자는 개인용 DSA 키를 복구하도록 캐시 타이밍 공격을 사용하여 이 취약성을 활용할 수 있습니다. 
+  * OpenSSL은 인증서 구문 분석 시에 누락된 메시지 길이 확인에 의해 발생된 서비스 거부(DoS)에 취약합니다. 원격 인증 공격자는 out-of-bounds 읽기를 트리거하고 서비스 거부(DoS)를 유발하도록 이 취약성을 활용할 수 있습니다. 
+
+## 2016년 9월 19일: 업데이트된 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* WebSphere Application Server Liberty(Core 및 ND 플랜)의 새 인스턴스에 수정팩 16.0.0.3이 설치되도록 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 2진을 업그레이드했습니다. 
+* 다음을 포함하여 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}에 영향을 미치는 [몇 가지 보안 취약점](http://www-01.ibm.com/support/docview.wss?uid=swg21990236){: new_window}이 해결되었습니다.
+  * 원격 공격자가 피싱 공격을 수행하도록 허용할 수 있는 IBM WebSphere Application Server Liberty의 취약성
+  * OpenID Connect 클라이언트에서 XSS(Cross-site scripting)를 하기 위한 IBM WebSphere Application Server Liberty의 취약성
+  * 기본 오류 페이지가 존재하지 않을 때 예외의 부적절한 처리로 인해 발생된 민감한 정보를 원격 공격자가 얻도록 허용할 수 있는 IBM WebSphere Application Server Liberty의 잠재적 취약성
+  * Apache Commons FileUpload 컴포넌트에서 오류에 의해 발생된 서비스 거부(DoS)에 대한 Apache Tomcat의 취약성
+  * 특정 조건에서 응답의 부적절한 처리로 인해 발생된 민감한 정보를 원격 공격자가 얻도록 허용할 수 있는 IBM WebSphere Application Server 및 IBM WebSphere Application Server Liberty의 취약성
+  * 기밀성 영향력이 없고, 무결성 영향력이 낮으며 사용 가능성이 없는 네트워킹 컴포넌트와 관련된 지정되지 않은 취약성
 
 ## 2016년 8월 17일: 업데이트된 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 
@@ -31,7 +53,7 @@ copyright:
 ## 2016년 6월 24일: 업데이트된 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 
 
 * 새 *Traditional ND* 또는 *Traditional WebSphere* 인스턴스를 작성하는 경우 V8.5 및 V9.0 중에 선택할 수 있는 기능이 추가되었습니다. 
-* WebSphere Application Server Liberty(Core 및 ND 플랜)의 새 인스턴스에 수정팩 16.0.0.2가 설치되도록 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 2진이 업그레이드되었습니다. 16.0.0.2는 8.5.5.9 이후 최신 수정팩입니다. 16.0.0.2부터, 이러한 플랜을 지원하는 권한이 있는 모든 Liberty 선택 기능이 기본적으로 설치됩니다. 
+* WebSphere Application Server Liberty(Core 및 ND 플랜)의 새 인스턴스에 수정팩 16.0.0.2가 설치되도록 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 2진을 업그레이드했습니다. 16.0.0.2는 8.5.5.9 이후 최신 수정팩입니다. 16.0.0.2부터, 이러한 플랜을 지원하는 권한이 있는 모든 Liberty 선택 기능이 기본적으로 설치됩니다. 
 * 다음을 포함하여 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}에 영향을 미치는 [몇 가지 보안 취약점](http://www-01.ibm.com/support/docview.wss?uid=swg21984977){: new_window}이 해결되었습니다. 
   * IBM WebSphere Application Server에 영향을 미치는 Apache Standard Taglibs의 XXE(XML External Entity Injection) 취약점.
   * WebSphere Application Server Liberty Profile API 검색 기능 및 Swagger 문서를 사용하는 경우 예상되는 보안보다 약한 잠재적 취약점.

@@ -12,24 +12,18 @@ copyright:
 
 # Introduzione a {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Ultimo aggiornamento: 17 ottobre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
 {:shortdesc}
 
-Il servizio {{site.data.keyword.mobilepushshort}} fornisce una piattaforma unificata per inviare e gestire le notifiche push  mobili e web mobili mirate a iOS, alle piattaforme mobili Android e ai browser web Google Chrome, Mozilla Firefox e alle estensioni e applicazioni Google Chrome. Il servizio {{site.data.keyword.mobilepushshort}} gestisce l'associazione dei tuoi utenti dell'applicazione ai loro dispositivi, alla loro piattaforma del dispositivo e ai loro browser web e gestisce l'invio a essi di notifiche di push. Con questo servizio, puoi inviare broadcast, unicast (basati su ID dispositivo) e anche tag (o argomenti) come notifiche push ai tuoi utenti delle applicazioni mobili e browser web. Puoi anche utilizzare un SDK e le [API REST](https://mobile.{DomainName}/imfpush/) per sviluppare ulteriormente le tue applicazioni client.
+Il servizio {{site.data.keyword.mobilepushshort}} fornisce una piattaforma unificata per inviare e gestire le notifiche di push mobili e web destinate alle piattaforme mobili iOS e Android, ai browser web Google Chrome, Mozilla Firefox e Safari e alle applicazioni ed estensioni Google Chrome. Il servizio {{site.data.keyword.mobilepushshort}} gestisce l'associazione dei tuoi utenti dell'applicazione ai loro dispositivi, alla loro piattaforma del dispositivo e ai loro browser web e gestisce l'invio a essi di notifiche di push. Con questo servizio, puoi inviare broadcast, unicast (basati su ID dispositivo e ID utente) e anche tag (o argomenti) come notifiche push ai tuoi utenti delle applicazioni mobili e browser web. Puoi anche utilizzare un SDK e le [API REST](https://mobile.{DomainName}/imfpush/) per sviluppare ulteriormente le tue applicazioni client.
 
-Questa sezione descrive come configurare notifiche di push di base. Quando utilizzi una notifica di base, viene eseguita la trasmissione in broadcast
-      delle notifiche invece di raggiungere una specifica serie di utenti utilizzando le tag.
-
-1. [Configura le credenziali per un provider di notifica](t__main_push_config_provider.html)
-2. [Abilita l'applicazione mobile a ricevere notifiche](c_enable_push.html)
-3. [Invia notifiche di base](t_send_push_notifications.html)
 
 # Link correlati
 {: #rellinks}
 
-* [Panoramica](c_overview_push.md){: new_window}
+* [Panoramica](c_overview_push.html){: new_window}
 
 ## Esercitazioni ed esempi {:id="samples"}
 {: #samples}

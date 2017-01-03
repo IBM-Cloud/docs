@@ -10,11 +10,11 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Migração de dados de recurso beta
+# Migrando dados de recurso da versão beta
 {: #globalizationpipeline_beta_resource_data_migration}
 
-*Última atualização: 27 de junho de 2016*
+*Última atualização: 13 de julho de 2016*
 {: .last-updated}
 
-{{site.data.keyword.GlobalizationPipeline_full}} fornece a usuários beta uma ferramenta simples para migrar conteúdo traduzido para o serviço GA. Consulte [Migração de dados de recurso beta](betaresourcedatamigration.html).
-
+{{site.data.keyword.GlobalizationPipeline_full}} fornece a usuários beta uma ferramenta simples para migrar conteúdo traduzido para o serviço GA. Consulte
+[Migrando dados de recurso da versão beta](betaresourcedatamigration.html).

@@ -2,8 +2,12 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-09"
+lastupdated: "2016-10-27"
+
 ---
+
+{:codeblock:.codeblock}
+
 
 # Angepasste Authentifizierung für {{site.data.keyword.amashort}}-iOS-App konfigurieren (Swift-SDK)
 {: #custom-ios}
@@ -15,38 +19,31 @@ Konfigurieren Sie Ihre iOS-Anwendung, die mit der angepassten Authentifizierung 
 ## Vorbereitungen
 {: #before-you-begin}
 
-Sie müssen über eine Ressource verfügen, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist.  Ihre mobile App muss außerdem mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  Weitere Informationen finden Sie über die folgenden Links:
+Voraussetzungen:
+
+* Eine Ressource, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist (siehe die Veröffentlichung zur [Konfiguration der angepassten Authentifizierung](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Der Wert für die Tenant-ID. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
+* Der Realname. Dies ist der Wert, den Sie im Feld **Realmname** des Abschnitts **Angepasst** auf der Registerkarte **Management** des {{site.data.keyword.amashort}}-Dashboards angegeben haben.
+* Die URL der Back-End-Anwendung (**App-Route**). Sie benötigen diese Werte zum Senden von Anforderungen an die geschützten Endpunkte der Back-End-Anwendung.
+* Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: **USA (Süden)**, **Vereinigtes Königreich** oder **Sydney**. Zudem sollte er den Konstanten entsprechen, die im Code erforderlich sind: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` oder `BMSClient.Region.sydney`.
+
+Weitere Informationen finden Sie über die folgenden Links:
  * [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
  * [iOS-Swift-SDK einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
  * [Angepassten Identitätsprovider verwenden](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Angepassten Identitätsprovider erstellen](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [{{site.data.keyword.amashort}} für die angepasste Authentifizierung konfigurieren](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
+### Gemeinsame Nutzung der Schlüsselkette (Keychain) für iOS aktivieren
+{: #enable_keychain}
 
-## {{site.data.keyword.amashort}} für eine angepasste Authentifizierung konfigurieren
- {: #custom-auth-ios-configmca}
-
- 1. Öffnen Sie Ihr Service-Dashboard.
- 
- 1. Klicken Sie auf **Mobile Systemerweiterungen** und notieren Sie die Werte für **Route** (*applicationRoute*) und **App-GUID/TenantId** (*serviceTenantID*). Sie benötigen diese Werte, wenn Sie das SDK initialisieren und Anforderungen an die Back-End-Anwendung senden.
-
- 1. Klicken Sie auf die Kachel für {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
-
- 1. Klicken Sie auf die Kachel **Angepasst**.
-
- 1. Geben Sie in **Realmname** Ihren angepassten Authentifizierungrealm an.
-
- 1. Geben Sie in **URL** Ihre Anwendungsroute (applicationRoute) an.
-
- 1. Klicken Sie auf **Speichern**.
-
-
+Aktivieren Sie `Keychain Sharing`. Rufen Sie dazu die Registerkarte `Capabilities` auf und setzen Sie `Keychain Sharing` in Ihrem Xcode-Projekt auf `On`.
 
 
 ### Client-SDK initialisieren
 {: #custom-ios-sdk-initialize}
 
-Initialisieren Sie das SDK, indem Sie den Parameter `applicationGUID` (tenantId) übergeben. Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `application:didFinishLaunchingWithOptions` Ihres Anwendungsdelegats.
+Initialisieren Sie das SDK, indem Sie den Parameter `applicationGUID` (**TenantId**) übergeben. Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `application:didFinishLaunchingWithOptions` Ihres Anwendungsdelegats.
 
 1. Importieren Sie die erforderlichen Frameworks in die Klasse, in der Sie das {{site.data.keyword.amashort}}-Client-SDK verwenden möchten.
 
@@ -55,6 +52,7 @@ Initialisieren Sie das SDK, indem Sie den Parameter `applicationGUID` (tenantId)
 	import BMSCore
 	import BMSSecurity
 	```
+	{: codeblock}
 
 1. Initialisieren Sie das {{site.data.keyword.amashort}}-Client-SDK, geben Sie `MCAAuthorizationManager` als Berechtigungsmanager an und definieren und registrieren Sie ein Authentifizierungsdelegat.
 
@@ -99,15 +97,12 @@ Initialisieren Sie das SDK, indem Sie den Parameter `applicationGUID` (tenantId)
 
 
 ```
+{: codeblock}
 
 Gehen Sie im Code wie folgt vor:
-
+* Ersetzen Sie `MCAServiceTenantId` durch den Wert der **Tenant-ID** und `<applicationBluemixRegion>` durch Ihre {{site.data.keyword.amashort}}-**Region** (siehe [Vorbereitungen](##before-you-begin)). 
+* Verwenden Sie den Wert für `realmName`, den Sie im {{site.data.keyword.amashort}}-Dashboard angegeben haben (siehe [Angepasste Authentifizierung konfigurieren](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
 * Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol 'Avatar' ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen.  Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: **USA (Süden)**, **Vereinigtes Königreich** oder **Sydney**. Zudem sollte er den Konstanten entsprechen, die im Code erforderlich sind: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` oder `BMSClient.Region.sydney`.
-* Ersetzen Sie `"<yourProtectedRealm>"` durch den Wert für **Realmname**, den Sie in der Kachel **Angepasst** des {{site.data.keyword.amashort}}-Dashboards definiert haben. 
-* Ersetzen Sie `"<serviceTenantID>"` durch den Wert für **tenantId**, den Sie aus **Mobile Systemerweiterungen** abgerufen haben. Siehe [Mobile Client Access für angepasste Authentifizierung konfigurieren](#custom-auth-ios-configmca).
-
-### Client-SDK initialisieren
-{: #custom-ios-sdk-initialize}
    
   
 ## Authentifizierung testen
@@ -126,7 +121,7 @@ Nachdem Sie das Client-SDK initialisiert und ein angepasstes Authentifizierungsd
 
 1. Verwenden Sie Ihre iOS-Anwendung, um eine Anforderung an denselben Endpunkt zu senden. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert und Ihr angepasstes Authentifizierungsdelegat registriert haben:
 
-	```Swift
+    ```Swift
 
 	let protectedResourceURL = "<your protected resource absolute path>"
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
@@ -138,9 +133,9 @@ Nachdem Sie das Client-SDK initialisiert und ein angepasstes Authentifizierungsd
 	       print ("error: \(error)")
   }
 	}
-
 	request.send(completionHandler: callBack)
-	 ```
+     ```
+     {: codeblock}
 
 1. Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe in der Xcode-Konsole angezeigt:
 
@@ -155,12 +150,14 @@ Nachdem Sie das Client-SDK initialisiert und ein angepasstes Authentifizierungsd
  })
 	 response:Optional("Hello Don Lon"), no error
 	 ```
+	 {: codeblock}
 
 1. Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
-	 ```  
+	 ``` 
+	 {: codeblock}
 
  Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer angemeldet hat, wird der Benutzer abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er auf die vom Server empfangene Anforderung erneut reagieren.
 

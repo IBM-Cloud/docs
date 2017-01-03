@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -21,24 +23,25 @@ Se você tiver problemas com o {{site.data.keyword.Bluemix}}, será possível vi
 
 Os logs fornecem informações, tais como se uma tarefa é executada com sucesso ou se ela falha. Eles também fornecem informações relevantes que podem ser usadas para depurar e determinar a causa de um problema.
 
-Os logs estão em um formato fixo. Para logs detalhados, é possível filtrar os logs ou usar os hosts de criação de log externa para armazenar e processar os logs. Para obter mais informações sobre formatos de log, visualização e filtragem de logs e configuração de criação de log externa, consulte [Criação de log para apps em execução no Cloud Foundry](../monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
+Os logs estão em um formato fixo. Para logs detalhados, é possível filtrar os logs ou usar os hosts de criação de log externa para armazenar e processar os logs. Para obter mais informações sobre formatos de log, visualização e filtragem de logs e configuração de criação de log externa, consulte [Criação de log para apps em execução no Cloud Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
 
 
 ## Depurando erros de preparação
 {: #debugging-staging-errors}
 Você poderá ter problemas ao preparar seus aplicativos no {{site.data.keyword.Bluemix_notm}}. Se o seu aplicativo falhar na preparação, será possível procurar e revisar os logs de preparação (STG)
 para determinar o que aconteceu durante a implementação do aplicativo e recuperar-se do problema. Para obter mais informações sobre os métodos de visualizar logs para aplicativos Bluemix, consulte
-[Visualizando Logs](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
+[Visualizando Logs](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
 
 Para entender por que o seu aplicativo pode estar falhando no {{site.data.keyword.Bluemix_notm}}, é necessário saber como um aplicativo é implementado no
-{{site.data.keyword.Bluemix_notm}} e executado nele. Para obter informações detalhadas, consulte [Implementação do aplicativo](../manageapps/depapps.html#appdeploy){: new_window}.
+{{site.data.keyword.Bluemix_notm}} e executado nele. Para obter informações detalhadas, consulte [Implementação do
+aplicativo](/docs/manageapps/depapps.html#appdeploy){: new_window}.
 
 
-O procedimento a seguir mostra como você pode usar o comando `cf logs` para depurar os erros de preparação. Antes de executar as etapas a seguir, assegure-se de que tenha instalado a interface de linha de comandos cf. Para obter mais informações sobre como instalar a interface de linha de comandos cf, veja [Instalando a interface de linha de comandos cf](../starters/install_cli.html){: new_window}.
+O procedimento a seguir mostra como você pode usar o comando `cf logs` para depurar os erros de preparação. Antes de executar as etapas a seguir, assegure-se de que tenha instalado a interface de linha de comandos cf. Para obter mais informações sobre como instalar a interface da linha de comandos cf, veja [Instalando a interface da linha de comandos cf](/docs/starters/install_cli.html){: new_window}.
 
   1. Conecte-se ao {{site.data.keyword.Bluemix_notm}} inserindo o código a seguir na interface de linha de comandos:
      ```
-	 cf api https://api.stage1.ng.bluemix.net
+	 cf api https://api.ng.bluemix.net
 	 ```
 
   2. Efetue login no {{site.data.keyword.Bluemix_notm}} inserindo `cf login`.
@@ -150,7 +153,8 @@ de arquivos {{site.data.keyword.Bluemix_notm}}, dependendo do tempo de execuçã
 está contida no arquivo `messages.log` no diretório de logs. Consulte as entradas prefixadas com SystemOut e SystemErr, respectivamente.
   * Para aplicativos Node.js, é possível substituir a função console.log para gravar explicitamente em um arquivo no diretório de logs.
   * Para aplicativos PHP, é possível fazer a função error_log gravar em um arquivo no diretório de logs.
-  * Para aplicativos Python, é possível fazer o criador de logs gravar em um arquivo no diretório de logs: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * Para aplicativos Python, é possível fazer o criador de logs gravar em um arquivo no diretório de logs:
+`logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
   * Para aplicativos Ruby, é possível fazer o criador de logs gravar em um arquivo no diretório de logs.
 
 
@@ -168,14 +172,14 @@ Dependendo da forma como o novo código é implementado, escolha um dos métodos
 localizar mais pistas para resolver o problema. Para obter mais informações sobre como usar o comando *cf logs*, consulte
 [visualizando logs a partir da interface da linha de comandos](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}.
 
-  * Para o novo código que é implementado a partir de uma GUI, como o console do {{site.data.keyword.Bluemix_notm}}, o DevOps Delivery Pipeline ou o Travis-CI, é possível verificar os logs a partir da interface. Por exemplo, se você implementar o novo código do console do {{site.data.keyword.Bluemix_notm}}, será possível ir para Painel, localizar o seu aplicativo e, em seguida, visualizar os logs para obter pistas. Para obter mais informações sobre como visualizar logs a partir do console do {{site.data.keyword.Bluemix_notm}}, consulte [Visualizando
+  * Para o novo código que é implementado a partir de uma GUI, como o console do {{site.data.keyword.Bluemix_notm}}, o DevOps Delivery Pipeline ou o Travis-CI, é possível verificar os logs a partir da interface. Por exemplo, se você implementar o novo código do console do {{site.data.keyword.Bluemix_notm}}, será possível ir para Painel, localizar o seu aplicativo e, em seguida, visualizar os logs para obter pistas.   Para obter mais informações sobre como visualizar logs a partir do console do {{site.data.keyword.Bluemix_notm}}, consulte [Visualizando
 logs a partir do Painel do Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.
 
 
 # rellinks
 {: #rellinks}
 
-## gerais
+## general
 {: #general}
 
   * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}

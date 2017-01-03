@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Monitoraggio di Liberty in Bluemix con JConsole
 {: #jconsole}
-
-Ultimo aggiornamento: 10 giugno 2016
-{: .last-updated}
 
 ## La procedura per monitorare il runtime Liberty Bluemix con JConsole è la seguente:
 {: #steps_to_monitor}

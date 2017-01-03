@@ -2,8 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-02"
+
 ---
+
+{:codeblock:.codeblock}
 
 # 在后端应用程序与服务之间进行通信
 {: #backend-comm}
@@ -20,6 +23,7 @@ lastupdated: "2016-10-02"
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## 使用 bms-mca-oauth-sdk 模块
 {: #using-sdk}
@@ -37,7 +41,7 @@ var options = {
 	// Alternatively, you can get these property values by clicking Show Credentials
 	// on the {{site.data.keyword.amashort}} Service tile in your {{site.data.keyword.Bluemix_notm}} application dashboard
 
-	appId: "appId",				// Bleumix applicationGUID，即 tenantId
+	appId: "tenantID",				// a.k.a. Bluemix applicationGUID
 	clientId: "clientId",			
 	secret: "secret",
 	serverUrl: "serverUrl"
@@ -47,3 +51,4 @@ oauthSDK.getAuthorizationHeader(options).then(function(authHeader){// In the req
 	// add the authHeader value.request.headers.Authorization = authHeader;// Send request});
 
 ```
+{: codeblock}

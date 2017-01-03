@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 后续步骤
 {: #next_steps_tags}
-上次更新时间：2016 年 10 月 17 日
+上次更新时间：2016 年 12 月 6 日
 {: .last-updated}
 
 成功设置基本通知后，可以配置基于标记的通知和高级选项。

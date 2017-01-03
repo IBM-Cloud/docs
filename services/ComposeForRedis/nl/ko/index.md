@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # {{site.data.keyword.composeForRedis}} 시작하기
 {: #getting-started-with-compose-for-redis}
-
-마지막 업데이트 날짜: 2016년 9월 20일
-{: .last-updated}
 
 Redis는 오픈 소스인 인메모리 키-값 저장소입니다. Redis의 값은 단순 문자열, 해시, 목록, 집합 또는 강력한 비트맵, hyperloglog, 지리공간 색인입니다. Redis는 애플리케이션 캐시 또는 응답이 빠른 데이터 저장소로 이상적입니다. {{site.data.keyword.composeForRedis_full}}에서는 고가용성과 온디스크 지속성을 확보할 수 있도록 미리 조정된 구성을 제공하며 이는 모두 추가 보안 기능을 사용해 잠겨 있습니다.
 {:shortdesc}
@@ -43,6 +40,7 @@ Redis는 오픈 소스인 인메모리 키-값 저장소입니다. Redis의 값�
 `deployment_id`|Compose에서 작성된 서비스의 내부 ID입니다.
 `db_type`|서비스에서 제공하는 데이터베이스의 유형입니다. 이 경우 `redis`입니다.
 `이름`|데이터베이스 배치 이름입니다.
+{: caption="Table 1. {{site.data.keyword.composeForRedis}} credentials" caption-side="top"}
 
 # 관련 링크
 {: #rellinks}

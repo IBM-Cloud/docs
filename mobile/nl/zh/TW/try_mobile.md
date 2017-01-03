@@ -9,15 +9,12 @@ lastupdated: "2016-10-19"
 # 從 {{site.data.keyword.mobilefirstbp}} Starter 樣板建立行動應用程式
 {: #try_mobile}
 
-前次更新：2016 年 10 月 19 日
-{: .last-updated}
-
-您可以單獨使用每一個 {{site.data.keyword.Bluemix}} Mobile 服務。您也可以搭配 {{site.data.keyword.mobilefirstbp}} Starter 樣板一起使用它們來獲得最大優點。
+您可以單獨使用每一個 {{site.data.keyword.Bluemix}} 行動服務。您也可以搭配 {{site.data.keyword.mobilefirstbp}} Starter 樣板一起使用它們來獲得最大優點。
 
 若要開始使用，請使用 {{site.data.keyword.mobilefirstbp}} Starter 來建立應用程式。此樣板可讓您完成下列動作：
 
 * 使用範本應用程式來建立 Node.js 運行環境。您可以使用此應用程式來提供伺服器端功能（例如 RESTful API 及靜態檔案）。<!-- You can read more about operating this application in the Developing Mobile Backend section.-->
-* 佈建每一個 {{site.data.keyword.Bluemix_notm}} Mobile 服務的實例，並將服務連結至 Node.js 應用程式。
+* 佈建每一個 {{site.data.keyword.Bluemix_notm}} 行動服務的實例，並將服務連結至 Node.js 應用程式。
 
 <!--
 <img src="images/mf_boiler_icon.png" alt="Bluemix mobile services" width="500"> {{site.data.keyword.mobilefirstbp}} Starter boilerplate
@@ -28,11 +25,11 @@ lastupdated: "2016-10-19"
 
 ## 服務概觀
 {: #services-overview}
-您可以透過使用 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobilefirstbp}} Starter 樣板以同時使用所有 {{site.data.keyword.Bluemix_notm}} Mobile 服務，也可以使用來自 {{site.data.keyword.Bluemix_notm}} 型錄的個別服務。下圖概述 {{site.data.keyword.Bluemix_notm}} Mobile 服務的元件。
+您可以透過使用 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobilefirstbp}} Starter 樣板以同時使用所有 {{site.data.keyword.Bluemix_notm}} 行動服務，也可以使用來自 {{site.data.keyword.Bluemix_notm}} 型錄的個別服務。下圖概述 {{site.data.keyword.Bluemix_notm}} 行動服務的元件。
 
-![{{site.data.keyword.Bluemix_notm}} Mobile Services 架構](images/bms_architecture.jpg)
+![{{site.data.keyword.Bluemix_notm}} 行動服務架構](images/bms_architecture.jpg)
 
-<table summary="此表格說明 {{site.data.keyword.Bluemix_notm}} Mobile 服務">
+<table summary="此表格說明 {{site.data.keyword.Bluemix_notm}} 行動服務">
 <caption>表格 1. {{site.data.keyword.Bluemix_notm}} 及企業系統</caption>
 <th>{{site.data.keyword.Bluemix_notm}}</th>
 <th>企業系統</th>
@@ -48,11 +45,11 @@ lastupdated: "2016-10-19"
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}} 服務圖示"> <b>{{site.data.keyword.amashort}}</b><br/>使用 {{site.data.keyword.amafull}} 服務來保護在 {{site.data.keyword.Bluemix_notm}} 上管理的 Node.js 及 Java for Liberty 應用程式。透過使用 {{site.data.keyword.amashort}} SDK 檢測行動應用程式，即可要求使用者登入以存取 Node.js 或 {{site.data.keyword.Bluemix_notm}} Mobile 服務。除了安全功能之外，{{site.data.keyword.amashort}} 也會收集分析資料，因此，您可以監視行動應用程式效能，以及收集用戶端日誌及使用統計資料。</td>
-<td valign="top"><b>使用者身分提供者</b> <br/>您可以使用下列身分提供者：<ul><li>Facebook</li><li>Google</li></ul></td>
+<td><img src="images/authentication_icon.png" alt="{{site.data.keyword.amashort}} 服務圖示"> <b>{{site.data.keyword.amashort}}</b><br/>使用 {{site.data.keyword.amafull}} 服務來保護在 {{site.data.keyword.Bluemix_notm}} 上管理的 Node.js 及 Java for Liberty 應用程式。透過使用 {{site.data.keyword.amashort}} SDK 檢測行動應用程式，即可要求使用者登入以存取 Node.js 或 {{site.data.keyword.Bluemix_notm}} 行動服務。<!-- In addition to security capabilities, {{site.data.keyword.amashort}} also gathers analytics data, so that you can monitor your mobile application performance and collect client logs and usage statistics.--> </td>
+<td valign="top"><b>使用者身分提供者</b> <br/>您可以使用下列身分提供者：<ul><li>Facebook</li><li>Google</li><li> 自訂</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Push Notifications 服務圖示"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} 服務提供一個統一平台，用來傳送及管理目標設為 Mobile（iOS 及 Android）平台及 Web 瀏覽器應用程式的推送通知。此服務可管理應用程式使用者與其裝置、裝置平台及瀏覽器的對映，並處理如何將推送通知分派給訂閱者。使用此服務，您可以將播送、單點播送（根據 userID、deviceID）以及根據推送通知的標籤（或主題）傳送給客戶。</td>
+<td><img src="images/push_icon.png" alt="Push Notifications 服務圖示"> <b>{{site.data.keyword.mobilepushshort}}</b><br/> {{site.data.keyword.mobilepushfull}} 服務提供一個統一平台，用來傳送及管理目標設為 Mobile（iOS 及 Android）平台及 Web 瀏覽器應用程式的推送通知。此服務可管理應用程式使用者與其裝置、裝置平台及瀏覽器的對映，並處理如何將推送通知分派給訂閱者。使用此服務，您可以將播送、單點播送（根據 userID、deviceID）以及根據推送通知的標籤（或主題）傳送給客戶。</td>
 <td valign="top"><b>Push 服務提供者</b><ul><li>Apple Push Notifications Service</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>

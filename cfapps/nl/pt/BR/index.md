@@ -98,5 +98,3 @@ são os seguintes:
 <tr><td>Número de rotas</td> <td>500</td>
 </table>
 </dd></dl>
-
-*Tabela 1. Lista de recursos do {{site.data.keyword.Bluemix_notm}} para uma conta para teste*

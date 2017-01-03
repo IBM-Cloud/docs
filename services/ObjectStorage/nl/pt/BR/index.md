@@ -2,15 +2,16 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-14"
+
 ---
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+
 
 
 # Introdução ao {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage}
 
-*Última atualização: 19 de outubro de 2016*
-{: .last-updated}
 
 O {{site.data.keyword.objectstoragefull}} fornece armazenamento de dados em nuvem não estruturado. É possível armazenar e acessar seu conteúdo, assim como interativamente compor e conectar-se a apps e serviços.
 {: shortdesc}
@@ -23,7 +24,6 @@ Alguns casos de uso comuns para o serviço {{site.data.keyword.objectstorageshor
 * Agindo como um armazenador central
 
 
-
 O {{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} fornece a você acesso a uma conta do Swift {{site.data.keyword.objectstorageshort}} totalmente provisionada para gerenciar seus dados. A criptografia no lado do provedor não é fornecida.
 
 
@@ -34,9 +34,9 @@ desvinculado** para o campo **App**, ainda será possível
 ligar a instância de serviço ao seu app {{site.data.keyword.Bluemix_notm}}
 posteriormente.
 2. No painel da instância de serviço, crie um contêiner para começar a armazenar objetos.
-3. Inclua um arquivo em seu contêiner ou depósito no menu suspenso **Ações**.
+3. Inclua um arquivo em seu contêiner a partir do menu suspenso **Ações**.
 4. Para testar o acesso aos seus objetos, clique em **Fazer download** e revise o arquivo.
-5. Quando estiver pronto para conectar sua instância a um aplicativo, configure as credenciais de serviço e [ligue o serviço](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service).
+5. Quando estiver pronto para conectar sua instância a um aplicativo, configure as credenciais de serviço e [ligue o serviço](/docs/services/reqnsi.html#add_service).
 
 
 

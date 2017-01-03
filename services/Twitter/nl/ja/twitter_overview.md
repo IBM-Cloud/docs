@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-21"
 
 ---
 
@@ -13,14 +14,13 @@ copyright:
 # {{site.data.keyword.twittershort}} について
 {: #about_twitter}
 
-*最終更新日: 2016 年 5 月 13 日*
-{: .last-updated}
-
-{{site.data.keyword.twitterfull}} を使用して、 Twitter [Decahose](http://support.gnip.com/apis/firehose/overview.html){: new_window} または [PowerTrack](http://support.gnip.com/apis/powertrack/overview.html){: new_window} ストリームの Twitter の内容を {{site.data.keyword.Bluemix}} アプリケーションに組み込みます。
+{{site.data.keyword.twitterfull}} を使用して、Twitter [Decahose](http://support.gnip.com/gnip2.0/){: new_window} または
+[PowerTrack](http://support.gnip.com/apis/powertrack2.0/){: new_window} ストリームの Twitter の内容を {{site.data.keyword.Bluemix}} ア
+プリケーションに組み込みます。
 {:shortdesc}
 
 Content Store がリアルタイムで更新および索引付けされることにより、検索が動的かつ高速になります。このサービスは、[IBM ソーシャル・メディア分析](http://www.ibm.com/software/products/en/social-media-analytics/){: new_window}の高度な自然言語処理アルゴリズムに基づく、複数の言語での感情その他の洞察によって、ツイートに拡張情報を提供します。Twitter データ・ストリームのリアルタイムでの処理が完全にサポートされており、充実したクエリーのパラメーターとキーワードのセットを使用して構成することが可能です。{{site.data.keyword.twittershort}} には、検索をカスタマイズして、ツイートおよび拡張情報を JSON 形式で返すことを可能にする、RESTful API が含まれます。
-			返されたツイートは、Twitter データの [Gnip アクティビティー・ストリーム](http://support.gnip.com/sources/twitter/data_format.html){: new_window}形式に準拠しています。
+			返されたツイートは、Twitter データの [Gnip アクティビティー・ストリーム](http://support.gnip.com/){: new_window}形式に準拠しています。
 
 {{site.data.keyword.twittershort}} サービスは Twitter Decahose および PowerTrack のストリームをリアルタイムで分析し、それぞれのツイートの作成者に、次のような拡張情報を提供します。
 * 性別
@@ -36,12 +36,17 @@ Content Store がリアルタイムで更新および索引付けされること
 ## フィードバックとサポート 
 {: #feedback_support}
 
-{{site.data.keyword.twitterfull}} チームは
-		皆様からのご意見をお待ちしております。
+問題や質問がある場合は、フォーラムを通じて情報を検索するか質問することで、ヘルプをご利用できます。サポート・チケットをオープンすることもできます。
 
-このサービスに関して何か問題がある場合は、IBM [developerWorks Answers](https://developer.ibm.com/answers/topics/insights-twitter/?smartspace=bluemix){: new.window} フォーラムにアクセスしてください。以前に送信された質問への回答を検索するか、新たに質問を追加してください。
-**insights-twitter** タグと **bluemix** タグを含めると、応答時間が向上します。
+フォーラムを使用して質問する場合は、IBM Bluemix 開発チームの目に留まるように質問にタグを付けてください。 
+* {{site.data.keyword.twittershort}} を使用するアプリの開発やデプロイメントについて技術的な質問がある場合は、質問を Stack Overflow に投稿し、質問に
+**bluemix** と
+**twitter** のタグを付けてください。 
+* サービスおよびその開始方法についての質問は、[developerWorks dW
+Answers](https://developer.ibm.com/answers/topics/insights-twitter/?smartspace=bluemix){: new.window} のフォーラムを使用してください。insights-twitter タグと bluemix タグを含めてください。
 
-ご質問が developerWorks Answers で対処されていない場合は、質問を [Stack Overflow](http://stackoverflow.com/search?q=twitter+bluemix){: new.window} に投稿し、質問に **twitter** と **bluemix** のタグを付けてください。
+フォーラムの使用について詳しくは、『[ヘルプの取得
+](https://new-console.ng.bluemix.net/docs/support/index.html#getting-help){: new.window}』を参照してください。 
 
-[Bluemix プラットフォーム](https://developer.ibm.com/bluemix/support/#status){: new.window}の状況を表示すること、および[サポート・チケットをオープン](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&offering=ibmbluemix){: new.window}することもできます。詳細については、[『トラブルシューティング』](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}を参照してください。
+IBM サポート・チケットのオープンやサポート・レベルおよびチケットの重大度については、
+『[サポートへのお問い合わせ](https://new-console.ng.bluemix.net/docs/support/index.html#contacting-support){: new.window}』を参照してください。

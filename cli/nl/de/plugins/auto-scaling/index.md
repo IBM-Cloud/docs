@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，20166
 
- 
+lastupdated: "2016-02-24"
+
 
 ---
 
@@ -42,7 +43,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## Autoskalierungsrichtlinie zuordnen
 
-Sie können eine Autoskalierungsrichtlinie einer bestimmten App zuordnen. Führen Sie den folgenden Befehl aus:
+Sie können eine Autoskalierungsrichtlinie einer bestimmten App zuordnen. Führen Sie den folgenden Befehl aus: 
 
 ```
 bx as policy-attach <APP_NAME> -p <policy_file>
@@ -86,7 +87,7 @@ bx as policy-show <APP_NAME> [--json]
 
 ## Zuordnung einer Autoskalierungsrichtlinie aufheben
 
-Sie können eine Autoskalierungsrichtlinie von einer App entfernen. Führen Sie den folgenden Befehl aus:
+Sie können eine Autoskalierungsrichtlinie aus einer App entfernen. Führen Sie den folgenden Befehl aus: 
 
 ```
 bx as policy-detach <APP_NAME>
@@ -101,7 +102,7 @@ bx as policy-detach <APP_NAME>
 
 ## Autoskalierungsrichtlinie aktivieren oder inaktivieren
 
-Sie können die Autoskalierungsrichtlinie einer bestimmten App aktivieren oder inaktivieren. Führen Sie den folgenden Befehl aus:
+Sie können die Autoskalierungsrichtlinie einer bestimmten App aktivieren oder inaktivieren. Führen Sie den folgenden Befehl aus: 
 
 ```
 bx as policy-enable|policy-disable <APP_NAME>
@@ -127,9 +128,9 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">Der Name der App, für die das Protokoll der Autoskalierungsrichtlinie angezeigt werden soll.
 <dt class="pt dlterm">&lt;start_timestamp&gt;</dt>
-<dd class="pd">Die Zeitmarke für den Beginn des Protokollbereichs. Die unterstützten Formate sind `jjjj-MM-ttTHH:mm:ss+/-hhmm, jjjj-MM-ttTHH:mm:ssZ`. Standardmäßig ist die Zeitmarke auf 50 Stunden vor der aktuellen Uhrzeit eingestellt. Detaillierte Informationen zum Zeitmarkenformat enthält der <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C-Standard 'Date and Time Formats'</a>. 
+<dd class="pd">Die Zeitmarke für den Beginn des Protokollbereichs. Die unterstützten Formate sind `jjjj-MM-ttTHH:mm:ss+/-hhmm, jjjj-MM-ttTHH:mm:ssZ`. Standardmäßig ist die Zeitmarke auf 50 Stunden vor der aktuellen Uhrzeit eingestellt. Detaillierte Informationen zum Zeitmarkenformat enthält der <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C-Standard 'Date and Time Formats'</a>.
 <dt class="pt dlterm">&lt;end_timestamp&gt;</dt>
-<dd class="pd">Die Zeitmarke für das Ende des Protokollbereichs. Die unterstützten Formate sind `jjjj-MM-ttTHH:mm:ss+/-hhmm, jjjj-MM-ttTHH:mm:ssZ`. Standardmäßig ist die Zeitmarke auf die aktuelle Uhrzeit eingestellt. Detaillierte Informationen zum Zeitmarkenformat enthält der <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C-Standard 'Date and Time Formats'</a>. 
+<dd class="pd">Die Zeitmarke für das Ende des Protokollbereichs. Die unterstützten Formate sind `jjjj-MM-ttTHH:mm:ss+/-hhmm, jjjj-MM-ttTHH:mm:ssZ`. Standardmäßig ist die Zeitmarke auf die aktuelle Uhrzeit eingestellt. Detaillierte Informationen zum Zeitmarkenformat enthält der <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">W3C-Standard 'Date and Time Formats'</a>.
 </dl>
 
 
@@ -140,8 +141,6 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 {: rellinks}
 ## Allgemein
 {: general}
-* [{{site.data.keyword.autoscaling}}-Service](../../../services/Auto-Scaling/index.html)
+* [{{site.data.keyword.autoscaling}}-Service](/docs/services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}}-CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [W3C-Standard 'Date and Time Formats'](https://www.w3.org/TR/NOTE-datetime){: new_window}
-
-

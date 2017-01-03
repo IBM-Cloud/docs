@@ -5,16 +5,21 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # {{site.data.keyword.mobilepushshort}} 정보
 {: #overview-push}
-마지막 업데이트 날짜: 2016년 10월 17일
+마지막 업데이트 날짜: 2016년 12월 6일
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}}은 iOS 및 Android 모바일 디바이스, Google Chrome 및 Mozilla Firefox 웹 브라우저, Google Chrome 앱과 확장 프로그램에 알림을 전송하는 데 사용할 수 있는 서비스입니다. 알림은 모든 애플리케이션 사용자와 태그를 사용하는 특정 디바이스 및 사용자 세트를 대상으로 할 수 있습니다. 디바이스, 태그 및 구독을 관리할 수 있습니다. 또한 SDK(software development kit) 및 REST(Representational State Transfer) API(application program interface)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다.  
+IBM {{site.data.keyword.mobilepushshort}}은 iOS 및 Android 모바일 디바이스, Google Chrome, Mozilla Firefox 및 Safari 웹 브라우저, Google Chrome 앱과 확장 프로그램에 알림을 전송하는 데 사용할 수 있는 서비스입니다. 알림은 모든 애플리케이션 사용자와 태그를 사용하는 특정 디바이스 및 사용자 세트를 대상으로 할 수 있습니다. 디바이스, 태그 및 구독을 관리할 수 있습니다. 또한 SDK(software development kit) 및 REST(Representational State Transfer) API(application program interface)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다.  
 
-{{site.data.keyword.mobilepushshort}}을 Bluemix 전용 서비스로 사용할 수도 있습니다. {{site.data.keyword.mobilepushshort}}을 전용 서비스로 사용하는 방법에 대한 정보는 [전용 서비스](../../dedicated/index.html)를 참조하십시오. {{site.data.keyword.mobilepushshort}} 모니터링 탭에는 분석 데이터가 표시되지 않습니다. 
+{{site.data.keyword.mobilepushshort}}을 Bluemix 전용 서비스로 사용할 수도 있습니다. {{site.data.keyword.mobilepushshort}}을 전용 서비스로 사용하는 방법에 대한 정보는 [전용 서비스](/docs/dedicated/index.html)를 참조하십시오. {{site.data.keyword.mobilepushshort}} 모니터링 탭에는 분석 데이터가 표시되지 않습니다. 
 
-이제 {{site.data.keyword.mobilepushshort}} 서비스에서 OpenWhisk를 사용할 수 있습니다. 자세한 정보는 [OpenWhisk](../../openwhisk/index.html)를 참조하십시오. 
+이제 {{site.data.keyword.mobilepushshort}} 서비스에서 OpenWhisk를 사용할 수 있습니다. 자세한 정보는 [OpenWhisk](/docs/openwhisk/index.html)를 참조하십시오. 
 
 
 ## {{site.data.keyword.mobilepushshort}} 서비스 프로세스
@@ -33,7 +38,7 @@ IBM {{site.data.keyword.mobilepushshort}}은 iOS 및 Android 모바일 디바이
 ###백엔드 애플리케이션
 {: backend-applications}
 
-백엔드 애플리케이션은 사내 구축 환경 또는 퍼블릭 클라우드에 있습니다. 백엔드 애플리케이션은 {{site.data.keyword.mobilepushshort}} 서비스를 사용하여 컨텍스트 알림을 모바일 및 브라우저 애플리케이션 사용자에게 전송합니다. 백엔드 애플리케이션은 푸시 알림을 전송하기 위해 모바일 디바이스, 브라우저 에이전트 및 사용자 정보를 유지보수하고 관리할 필요가 없습니다. 대신 백엔드 애플리케이션에서는 이들을 관리하고 유지보수하는 {{site.data.keyword.mobilepushshort}} 서비스를 사용할 수 있습니다.
+백엔드 애플리케이션은 온프레미스 또는 퍼블릭 클라우드에 있습니다. 백엔드 애플리케이션은 {{site.data.keyword.mobilepushshort}} 서비스를 사용하여 컨텍스트 알림을 모바일 및 브라우저 애플리케이션 사용자에게 전송합니다. 백엔드 애플리케이션은 푸시 알림을 전송하기 위해 모바일 디바이스, 브라우저 에이전트 및 사용자 정보를 유지보수하고 관리할 필요가 없습니다. 대신 백엔드 애플리케이션에서는 이들을 관리하고 유지보수하는 {{site.data.keyword.mobilepushshort}} 서비스를 사용할 수 있습니다.
 
 ###앱 백엔드 소유자
 {: app-backend-owner}
@@ -82,7 +87,7 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서 모바일 애플리케
 
 그러나 사용자를 대상으로 하는 유니캐스트 알림에서는 {{site.data.keyword.mobilepushshort}}을 수신하도록 클라이언트 모바일 디바이스나 웹 브라우저 또는 Chrome 앱과 확장 프로그램을 등록할 때 사용자 ID와 디바이스를 연관시켜야 합니다.    
 
-일반적으로 클라이언트 애플리케이션은 제일 먼저 인증 주기를 실행하며 여기서 모바일 앱 사용자가 인증 서비스(예: [Mobile Client Access](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html))에 대해 인증됩니다. 인증에 성공하면 인증된 사용자 ID가 푸시 디바이스 등록 API에 전달됩니다.
+일반적으로 클라이언트 애플리케이션은 제일 먼저 인증 주기를 실행하며 여기서 모바일 앱 사용자가 인증 서비스(예: [Mobile Client Access](docs/services/mobileaccess/index.html))에 대해 인증됩니다. 인증에 성공하면 인증된 사용자 ID가 푸시 디바이스 등록 API에 전달됩니다.
 REST API를 통해 유니캐스트 알림을 전송하려면 메시지 자원에 게시할 때 deviceIds 또는 userIds가 제공되는지 확인하십시오. 
 
 ###플랫폼 기반 알림
@@ -105,7 +110,7 @@ REST API를 통해 유니캐스트 알림을 전송하려면 메시지 자원에
 
 iOS 8 이상의 경우 허용된 최대 크기는 2KB입니다. Apple 푸시 알림 서비스는 이 한계를 초과하는 알림을 전송하지 않습니다. 
 
-###Android, Chrome 및 Firefox 브라우저
+###Android, Firefox 브라우저, Chrome 브라우저, Chrome 앱 및 확장기능
 {: android-message-size}
 
-허용되는 최대 메시지 크기는 4KB입니다.  
+허용되는 최대 메시지 페이로드 크기는 4KB입니다.  

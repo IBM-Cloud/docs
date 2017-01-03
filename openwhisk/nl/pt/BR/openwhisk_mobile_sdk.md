@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -13,42 +14,53 @@ copyright:
 
 # Usando o SDK móvel do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_mobile_sdk}
-Última atualização: 26 de agosto de 2016
-{: .last-updated}
 
-O {{site.data.keyword.openwhisk}} fornece um SDK móvel para dispositivos com iOS e watchOS 2 que permite que apps móveis disparem acionadores remotos e chamem ações remotas facilmente. Uma versão para Android não está atualmente disponível; os desenvolvedores para Android podem usar a API REST do {{site.data.keyword.openwhisk}} diretamente.
-{: shortdesc}
+O {{site.data.keyword.openwhisk}} fornece um SDK móvel para dispositivos iOS e watchOS que permite que apps móveis dispara facilmente acionadores remotos e chamem ações remotas. Uma versão para Android não está atualmente disponível; os desenvolvedores para Android podem usar a API REST do {{site.data.keyword.openwhisk}} diretamente.
 
-O SDK móvel é escrito em Swift 2.2 e suporta o iOS 9 e liberações posteriores.
+O SDK móvel é gravado em Swift 3.0 e suporta o iOS 10 e liberações mais recentes. É possível construir o SDK móvel usando o Xcode 8.0. As versões do Swift 2.2/Xcode 7 legado do SDK estão disponíveis até 0.1.7, embora isso agora esteja descontinuado.
 
 ## Incluindo o SDK em seu app
 {: #openwhisk_add_sdk}
 
 É possível instalar o SDK móvel usando o CocoaPods, o Carthage ou a partir do diretório de origem.
 
-### Instalando usando o CocoaPods 
+### Instalando usando o CocoaPods
 {: #openwhisk_add_sdk_cocoapods}
 
 O SDK do {{site.data.keyword.openwhisk_short}} para dispositivo móvel está disponível para distribuição pública por meio do CocoaPods. Supondo que o CocoaPods esteja instalado, coloque as linhas
-a seguir em um arquivo chamado 'Podfile' dentro do diretório de projeto do aplicativo iniciador. 
+a seguir em um arquivo chamado 'Podfile' dentro do diretório de projeto do aplicativo iniciador.
 
 ```
 install! 'cocoapods', :deterministic_uuids => false
 use_frameworks!
 
 target 'MyApp' do
-     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 
-target 'MyApp WatchKit Extension' do 
-     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.1.7'
+target 'MyApp WatchKit Extension' do
+     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
 end
 ```
 {: codeblock}
 
-A partir da linha de comandos, digite `pod install`. Esse comando
-instala o SDK para um app iOS com uma extensão watchOS 2.  Use o arquivo de área de trabalho que o CocoaPods cria para o seu
+A partir da linha de comandos, digite `pod install`. Esse comando instala o SDK para um app iOS com uma extensão watchOS.  Use o arquivo de área de trabalho que o CocoaPods cria para o seu
 aplicativo para abrir o projeto no Xcode.
+
+Após a instalação, abra a área de trabalho do seu projeto.  É possível obter o seguinte aviso ao construir:
+`Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
+Isso ocorrerá se o Cocoapods não atualizar a versão do Swift no projeto Pods.  Para corrigir, selecione o projeto Pods e o destino {{site.data.keyword.openwhisk_short}}.  Acesse Configurações de construção e mude a configuração `Use Legacy Swift Language Version` para `no`. Como alternativa, é possível incluir as seguintes instruções de instalação no final do seu arquivo pod:
+
+```
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
+```
+{: codeblock}
 
 ### Instalando usando o Carthage
 {: #openwhisk_add_sdk_carthage}
@@ -56,13 +68,13 @@ aplicativo para abrir o projeto no Xcode.
 Crie um arquivo no diretório de projeto do app e chame-o de 'Cartfile'. Coloque a
 linha a seguir no arquivo:
 ```
-github "openwhisk/openwhisk-client-swift.git" ~> 0.1.7 # Or latest version
+github "openwhisk/openwhisk-client-swift.git" ~> 0.2.2 # Or latest version
 ```
 {: codeblock}
 
-A partir da linha de comandos, digite `carthage update --platform ios`. O Carthage faz download e constrói o SDK, cria um diretório chamado Carthage no diretório de projeto do seu app e coloca um arquivo OpenWhisk.framework dentro de Carthage/build/iOS.
+A partir da linha de comandos, digite `carthage update --platform ios`. O Carthage faz download e constrói o SDK, cria um diretório chamado Carthage no diretório de projeto do app e coloca um arquivo {{site.data.keyword.openwhisk_short}}.framework dentro de Carthage/build/iOS.
 
-Deve-se, então, incluir OpenWhisk.framework nas estruturas integradas em seu projeto Xcode
+Deve-se, então, incluir {{site.data.keyword.openwhisk_short}}.framework nas estruturas integradas em seu projeto Xcode
 
 ### Instalando a partir do código-fonte
 {: #openwhisk_add_sdk_source}
@@ -84,14 +96,13 @@ wsk sdk install iOS
 ```
 {: pre}
 
-Esse comando faz download de um arquivo compactado que contém o app iniciador. Dentro
-do diretório de projeto está um podfile. 
+Esse comando faz download de um arquivo compactado que contém o app iniciador. Dentro do diretório de projeto há um arquivo pod.
 
 Para instalar o SDK, insira o comando a seguir:
 ```
 pod install
 ```
-{: pre} 
+{: pre}
 
 ## Introdução ao SDK
 {: #openwhisk_sdk_getstart}
@@ -100,7 +111,7 @@ Para estar funcionando rapidamente, crie um objeto WhiskCredentials com suas
 credenciais de API do {{site.data.keyword.openwhisk_short}} e crie uma instância
 do {{site.data.keyword.openwhisk_short}} a partir do objeto.
 
-Por exemplo, no Swift 2.1, use o código de exemplo a seguir para criar um objeto de credenciais:
+Por exemplo, use o código de exemplo a seguir para criar um objeto de credenciais:
 
 ```
 let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")
@@ -135,8 +146,8 @@ Por
 exemplo:
 
 ```
-// Neste exemplo, estamos chamando uma ação para imprimir uma mensagem nos parâmetros var do OpenWhisk
-Console = Dictionary<String, String>()
+// In this example, we are invoking an action to print a message to the {{site.data.keyword.openwhisk_short}} Console
+var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
 
 do {

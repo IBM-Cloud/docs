@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -18,17 +14,16 @@ copyright:
 
 #建立「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕 {: #deploy-button} 
 
-*前次更新：2016 年 3 月 2 日*
-{: .last-updated} 
-
 「部署至 {{site.data.keyword.Bluemix}}」按鈕可讓您有效率地共用您的公用 Git 來源應用程式，讓其他人能夠試用程式碼，並將其部署至 IBM {{site.data.keyword.Bluemix_notm}}。此按鈕需要的配置最少，而且您可以將其插入到任何支援標記的地方。任何人按一下此按鈕，就可以在新的 Git 儲存庫中建立複製的程式碼副本，所以您的原始應用程式會保持原狀，不受任何影響。
 {: shortdesc} 
 
-**提示：**如果公司品牌很重要，您可以在內容中[內嵌「部署至 {{site.data.keyword.Bluemix_notm}}」的 iFrame 流程](../develop/deploy_button_embed.html)，而非插入按鈕。當有人建立您的公用 Git 來源應用程式的副本時，他們會停留在您的內容中，而非重新導向至 bluemix.net 網站。 
+**提示：**如果公司品牌很重要，您可以在內容中[內嵌「部署至 {{site.data.keyword.Bluemix_notm}}」的 iFrame 流程](/docs/develop/deploy_button_embed.html)，而非插入按鈕。當有人建立您的公用 Git 來源應用程式的副本時，他們會停留在您的內容中，而非重新導向至 bluemix.net 網站。 
+
+**附註**：現在可以使用工具鏈特性。任何按一下「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕的人員都可以按一下橫幅中的鏈結，以嘗試使用工具鏈來部署其應用程式。
 
 當有人按一下您的按鈕時，就會進行下列動作： 
 
-1. 如果那個人沒有作用中的 {{site.data.keyword.Bluemix}} 帳戶，則必須建立試用帳戶。 
+1. 如果那個人沒有作用中的 {{site.data.keyword.Bluemix_notm}} 帳戶，則必須建立試用帳戶。 
 
 2. 那個人可以選取地區、組織、空間及應用程式名稱。建議的應用程式名稱是依據前一個應用程式名稱、那個人的使用者名稱以及時間來建構。 
 
@@ -76,13 +71,13 @@ copyright:
 預設主要分支：
 </p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署至 Bluemix"&gt;&lt;/a&gt;
 </pre>
 <p>
 指定的 Git 分支：
 </p>
 <pre class="codeblock">
-&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
+&lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署至 Bluemix"&gt;&lt;/a&gt;
 </pre>
 </li>
 <li>Markdown：
@@ -90,12 +85,12 @@ copyright:
 預設主要分支：
 </p>
 <pre class="codeblock">
-[![部署至 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required])
+[&excl;[部署至 Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
 </pre>
 <p>指定的 Git 分支：
 </p>
 <pre class="codeblock">
-[![部署至 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required])
+[&excl;[部署至 Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
 </pre>
 </li>
 </ul>
@@ -162,11 +157,11 @@ copyright:
 </pre>
    </li>
    </ul>
-	<li> 如果在部署應用程式之前必須建置儲存庫，則在部署之前會觸發自動建置儲存庫中的程式碼。在儲存庫的根目錄中偵測到建置 Script 檔時，即會進行自動建置。
+	<li> 如果應用程式必須先進行建置才能部署，則您必須在儲存庫中併入建置檔。如果在儲存庫的根目錄中偵測到建置 Script 檔，則會在部署之前觸發程式碼的自動建置。
 	
-支援的建置器：<ul>
+	支援的建置器：<ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant：</a>/<code>build.xml</code>，會將輸出建置到 <code>./output/</code> 資料夾</li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle：</a><code>/build.gradle</code>，會將輸出建置到 <code>. </code> 資料夾</li>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle：</a><code>/build.gradle</code>，會將輸出建置到 <code>.</code> 資料夾</li>
 		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt：</a><code>/Gruntfile.js</code>，會將輸出建置到 <code>.</code> 資料夾</li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven：</a><code>/pom.xml</code>，會將輸出建置到 <code>./target/</code> 資料夾</li>
 	   </ul>
@@ -181,8 +176,9 @@ copyright:
 <li>在專案的根目錄中，建立 <code>.bluemix</code> 目錄。</li>
 <li>將 <code>pipeline.yml</code> 檔案上傳至 <code>.bluemix</code> 儲存庫。</li>
 </ol> </li>
-	<li>如果您使用 <strong>IBM Containers</strong> 在容器中部署應用程式，則必須在儲存庫的根目錄中包含 Dockerfile，以及在 <code>.bluemix</code> 目錄中包含 <code>pipeline.yml</code> 檔案。
+	<li>若要使用 <strong>IBM Containers</strong> 在容器中部署應用程式，則必須在儲存庫的根目錄中併入 Dockerfile，以及在 <code>.bluemix</code> 目錄中併入 <code>pipeline.yml</code> 檔案。
 	<ul>
+	    <li>Dockerfile 用來作為應用程式的一種建置 Script。如果在儲存庫中偵測到 Dockerfile，則會先自動將應用程式建置至映像檔，再將它部署於容器中。如果必須先建置應用程式本身，再將應用程式建置成映像檔，請併入應用程式的建置 Script 以及 Dockerfile（如前所述）。</li>
 	    <li> 若要進一步瞭解如何建立 Dockerfile，<a href="https://docs.docker.com/reference/builder/" target="_blank">請參閱 Docker 文件</a>。</li>
 	    <li>您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要手動建立專用於容器的 <code>pipeline.yml</code>，<a href="https://github.com/Puquios/" target="_blank">請參閱 GitHub 中的範例</a>。</li>
         </ul>
@@ -191,4 +187,5 @@ copyright:
  </ul>
 </ul>
 
-如需疑難排解說明，請參閱[「部署至 Bluemix」按鈕未部署應用程式](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}。	
+如需疑難排解說明，請參閱[「部署至 Bluemix」按鈕未部署應用程式](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}。	
+

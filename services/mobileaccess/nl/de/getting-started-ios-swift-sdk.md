@@ -2,11 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-12-04"
+
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-
+{:codeblock:.codeblock}
 
 # iOS-Swift-SDK einrichten
 {: #getting-started-ios}
@@ -15,15 +17,17 @@ Von {{site.data.keyword.amafull}} wurde ein neues Swift-SDK freigegeben, das die
 
 {:shortdesc}
 
-**Hinweis:** Das Objective-C-SDK meldet Überwachungsdaten an die Überwachungskonsole des {{site.data.keyword.amashort}}-Service. Falls Sie auf die Überwachungsfunktionalität des {{site.data.keyword.amashort}}-Service angewiesen sind, müssen Sie weiterhin das Objective-C-SDK verwenden.
-
-Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden. 
+Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden.
 
 
 ## Vorbereitungen
 {: #before-you-begin}
 Voraussetzungen:
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
+* Eine Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung.
+* Eine Instanz eines {{site.data.keyword.amafull}}-Service.
+* Die **Tenant-ID**. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von {{site.data.keyword.amashort}} Authorization Manager.
+* Die **Anwendungsroute**. Dies ist die URL Ihrer Back-End-Anwendung. Sie benötigen diesen Wert zum Senden von Anforderungen an die geschützten Endpunkte der Anwendung.
+* Die {{site.data.keyword.Bluemix_notm}}-**Region**.  Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im Code erforderlichen SDK-Werten entsprechen: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` oder `BMSClient.Region.sydney`.  Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-SDK.
 * Xcode-Projekt. Weitere Informationen zur Einrichtung Ihrer iOS-Entwicklungsumgebung finden Sie auf der [Apple Developer-Website](https://developer.apple.com/support/xcode/).
 
 
@@ -42,6 +46,7 @@ Das {{site.data.keyword.amashort}}-SDK wird mit CocoaPods, einem Abhängigkeiten
 ```
 sudo gem install cocoapods
 ```
+{: codeblock}
 
 Weitere Informationen finden Sie auf der [CocoaPods-Website](https://cocoapods.org/).
 
@@ -59,6 +64,7 @@ Weitere Informationen finden Sie auf der [CocoaPods-Website](https://cocoapods.o
   use_frameworks!
   pod 'BMSSecurity'
 	```
+	{: codeblock}
 
   **Tipp:** Sie können `use_frameworks!` in Ihrem Xcode-Ziel hinzufügen anstatt in der Podfile-Datei.
 
@@ -70,13 +76,15 @@ Weitere Informationen finden Sie auf der [CocoaPods-Website](https://cocoapods.o
 
 	`open {your-project-name}.xcworkspace`
 
+### Gemeinsame Nutzung der Schlüsselkette (Keychain) für iOS aktivieren
+{: #enable_keychain}
+
+Aktivieren Sie `Keychain Sharing`. Rufen Sie dazu die Registerkarte `Capabilities` auf und setzen Sie `Keychain Sharing` in Ihrem Xcode-Projekt auf `On`.
+
 ## {{site.data.keyword.amashort}}-Client-SDK initialisieren
 {: #init-mca-sdk-ios}
 
- Initialisieren Sie das SDK, indem Sie den Parameter `applicationGUID` übergeben. Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `application:didFinishLaunchingWithOptions` Ihres Anwendungsdelegats.
- 
-
-1. Ermitteln Sie die Parameterwerte für Ihren Service. Öffnen Sie den Service im {{site.data.keyword.Bluemix_notm}}-Dashboard. Klicken Sie auf **Mobile Systemerweiterungen**. In den Feldern **Route** und **App-GUID/TenantId** werden die Werte `applicationRoute` und `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Diese Werte benötigen Sie für die Initialisierung des SDK und zum Senden von Anforderungen an die Back-End-Anwendung.
+ Initialisieren Sie das SDK, indem Sie den Parameter `tenantId` übergeben. Eine gängige, wenngleich nicht verbindliche, Position für den Initialisierungscode ist die Methode `application:didFinishLaunchingWithOptions` Ihres Anwendungsdelegats.
 
 1. Importieren Sie die erforderlichen Frameworks in die Klasse, in der Sie das {{site.data.keyword.amashort}}-Client-SDK verwenden möchten.
 
@@ -101,22 +109,25 @@ Weitere Informationen finden Sie auf der [CocoaPods-Website](https://cocoapods.o
 	return true
 	}
  ```
+ {: codeblock}
 
-* Ersetzen Sie `tenantId` durch den Wert, den Sie aus **Mobile Systemerweiterungen** abgerufen haben. Siehe **Schritt 1**.
-* Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen. Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: **USA (Süden)**, **Vereinigtes Königreich** oder **Sydney**. Zudem sollte er den Konstanten entsprechen, die im Code erforderlich sind: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` oder `BMSClient.Region.sydney`.
+* Ersetzen Sie `tenantId` durch den Wert, den Sie aus **Mobile Systemerweiterungen** abgerufen haben. 
+* Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. 
 
-   
+Weitere Informationen zu diesen Werten finden Sie unter [Vorbereitungen](#before-you-begin). 
+
+
 ## Anforderung an mobile Back-End-Anwendung senden
 {: #request}
 
 Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen.
 
-1. Versuchen Sie, in Ihrem Browser eine Anforderung an einen geschützten Endpunkt in Ihrer mobilen Back-End-Anwendung zu senden. Öffnen Sie die URL `{applicationRoute}/protected`, wobei Sie `{applicationRoute}` durch den Wert **applicationRoute** ersetzen, den Sie aus **Mobile Systemerweiterungen** abgerufen haben (siehe [Client-SDK für Mobile Client Access initialisieren](#init-mca-sdk-ios)). Beispiel: 
+1. Versuchen Sie, in Ihrem Browser eine Anforderung an einen geschützten Endpunkt in Ihrer mobilen Back-End-Anwendung zu senden. Öffnen Sie die URL `{applicationRoute}/protected`, wobei Sie `{applicationRoute}` durch den Wert **applicationRoute** ersetzen, den Sie aus **Mobile Systemerweiterungen** abgerufen haben (siehe [Client-SDK für Mobile Client Access initialisieren](#init-mca-sdk-ios)). Beispiel:
 
 	`http://my-mobile-backend.mybluemix.net/protected
 	`
 
-	Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der MobileFirst Services Starter-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Eine Nachricht des Typs `Unauthorized` (Nicht autorisiert) wird in Ihrem Browser zurückgegeben, weil auf diesen Endpunkt nur mobile Anwendungen zugreifen können, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind.
+	Eine Nachricht des Typs `Unauthorized` (Nicht autorisiert) wird in Ihrem Browser zurückgegeben, weil auf diesen Endpunkt nur mobile Anwendungen zugreifen können, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind.
 
 1. Verwenden Sie Ihre iOS-Anwendung, um eine Anforderung an denselben Endpunkt zu senden. Fügen Sie den folgenden Code hinzu, nachdem Sie `BMSClient` initialisiert haben:
 
@@ -141,7 +152,7 @@ Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können S
  response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
  ```
 {: screen}
- 
+
 ## Nächste Schritte
 {: #next-steps}
 Wenn Sie eine Verbindung zu dem geschützten Endpunkt hergestellt haben, waren keine Berechtigungsnachweise erforderlich. Wenn Sie die Benutzer zur Anmeldung bei Ihrer Anwendung veranlassen wollen, müssen Sie eine Authentifizierung über Facebook oder Google oder eine angepasste Authentifizierung konfigurieren.

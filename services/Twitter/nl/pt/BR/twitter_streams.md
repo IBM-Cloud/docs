@@ -1,12 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
 # Fluxos do Decahose e do PowerTrack {: #decahose_powertrack}
-
-*Última atualização: 13 de maio de 2016*
-{: .last-updated}
 
 O {{site.data.keyword.twittershort}} fornece acesso aos fluxos do
 Decahose e do PowerTrack do Twitter, com base na inscrição do plano do {{site.data.keyword.Bluemix_notm}}. 
@@ -36,7 +41,7 @@ suporta os seguintes dois tipos de faixas.
 <dd>Todas as mensagens coletadas nesta faixa corresponde a, ao menos, uma das regras associadas
 à faixa. É possível incluir, editar e excluir regras neste tipo de faixa.
 
-A [sintaxe de Regras GNIP PowerTrack](http://support.gnip.com/apis/powertrack/rules.html) completa nas faixas baseadas em regra. Todas as consultas devem se adequar à {{site.data.keyword.twittershort}} [Linguagem de consulta](twitter_rest_apis.html#querylanguage "Linguagem de consulta").
+A [sintaxe de Regras GNIP PowerTrack](http://support.gnip.com/apis/powertrack2.0/rules.html) completa nas faixas baseadas em regra. Todas as consultas devem se adequar à {{site.data.keyword.twittershort}} [Linguagem de consulta](twitter_rest_apis.html#querylanguage "Linguagem de consulta").
 </dd>
 
 <dt>Agregado</dt>

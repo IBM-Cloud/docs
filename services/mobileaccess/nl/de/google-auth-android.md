@@ -2,46 +2,55 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-12-05"
+
 ---
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Google-Authentifizierung für Android-Apps aktivieren
 {: #google-auth-android}
 
-Sie können Benutzer über Google für Ihre {{site.data.keyword.amafull}}-Android-Anwendung authentifizieren. Fügen Sie die Sicherheitsfunktionalität von {{site.data.keyword.amashort}} hinzu. 
+Sie können Benutzer über Google für Ihre {{site.data.keyword.amafull}}-Android-Anwendung authentifizieren. Fügen Sie die Sicherheitsfunktionalität von {{site.data.keyword.amashort}} hinzu.
 
 ## Vorbereitungen
 {: #before-you-begin}
+
 Voraussetzungen:
 
-* Android-Projekt in Android Studio, das für das Arbeiten mit Gradle konfiguriert ist. Das Projekt muss nicht mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
-* Die Parameterwerte Ihres Service. Öffnen Sie den Service im {{site.data.keyword.Bluemix_notm}}-Dashboard. Klicken Sie auf **Mobile Systemerweiterungen**. In den Feldern **Route** und **App-GUID/TenantId** werden die Werte `applicationRoute` und `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Diese Werte benötigen Sie für die Initialisierung des SDK und zum Senden von Anforderungen an die Back-End-Anwendung.
+* Eine Instanz einer {{site.data.keyword.amafull}} service and {{site.data.keyword.Bluemix_notm}}-Anwendung. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
+* Die URL der Back-End-Anwendung (**App-Route**). Sie benötigen diese Werte zum Senden von Anforderungen an die geschützten Endpunkte der Back-End-Anwendung.
+* Der Wert für die **Tenant-ID**. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
+* Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im WebView-JavaScript-Code erforderlichen SDK-Werten entsprechen: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`. Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-Clients.
+* Android-Projekt, das für das Arbeiten mit Gradle konfiguriert ist. Das Projekt muss nicht mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sein.  
 
 Das Einrichten der Google-Authentifizierung für Ihre {{site.data.keyword.amashort}}-Android-App erfordert außerdem die Konfiguration der folgenden Komponenten:
+
 * {{site.data.keyword.Bluemix_notm}}-Anwendung
 * Android Studio-Projekt
 
 ## Projekt in Google Developer Console erstellen
 {: #create-google-project}
 
-Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in der Entwicklerkonsole von Google '[Google Developer Console](https://console.developers.google.com)'. 
-Zur Erstellung eines Projekts gehört das Anfordern einer Google-Client-ID.  Die Google-Client-ID ist eine eindeutige Kennung für Ihre Anwendung, die von der Google-Authentifizierung verwendet wird und zum Einrichten der {{site.data.keyword.Bluemix_notm}}-Anwendung erforderlich ist.
+Erstellen Sie zur Verwendung von Google als Identitätsprovider ein Projekt in der Entwicklerkonsole von Google '[Google Developer Console](https://console.developers.google.com)'.
+Zur Erstellung eines Projekts gehört das Anfordern einer Google-Client-ID.  Die Google-Client-ID ist eine eindeutige Kennung für Ihre Anwendung, die von der Google-Authentifizierung verwendet wird und zum Einrichten des {{site.data.keyword.amashort}}-Service erforderlich ist.
 
 Führen Sie die folgenden Schritte von der Konsole aus:
 
 1. Erstellen Sie ein Projekt mithilfe der **Google+**-API.
 2. Fügen Sie den Benutzerzugriff **OAuth** hinzu.
 3. Vor dem Hinzufügen der Berechtigungsnachweise müssen Sie die Plattform auswählen (Android).
-4. Fügen Sie die Berechtigungsnachweise hinzu. 
+4. Fügen Sie die Berechtigungsnachweise hinzu.
 
 Zum Abschließen der Erstellung der Berechtigungsnachweise müssen Sie den **Fingerabdruck für das Signaturzertifikat** hinzufügen.
 
 
-
 ### Signaturzertifikat einrichten
+{: #signing_cert}
+
 Damit Google Ihre Anwendungsauthentizität überprüfen kann, müssen Sie einen Fingerabdruck für das Signaturzertifikat angeben.
 
 Das Android-Betriebssystem erfordert, dass alle Anwendungen, die auf einem Android-Gerät installiert sind, mit einem Entwicklerzertifikat signiert sind. Eine Android-Anwendung kann in zwei Modi erstellt werden: Debugmodus und Freigabemodus (Release). Es wird gewöhnlich empfohlen, zwei unterschiedliche Zertifikate für den Debugmodus und den Freigabemodus zu haben.  Zertifikate, die zum Signieren von Android-Anwendungen im Debugmodus verwendet werden, werden in das Android-SDK gepackt.  Das Android-SDK wird in der Regel von Android Studio automatisch installiert. Wenn Sie Ihre Anwendung für Google Play freigeben möchten, müssen Sie die App mit einem anderen Zertifikat signieren, das Sie normalerweise selbst generieren. Weitere Informationen finden Sie unter [Android-Anwendungen signieren](http://developer.android.com/tools/publishing/app-signing.html).
@@ -53,6 +62,7 @@ Ein Keystore (Schlüsselspeicher), der ein Zertifikat für Entwicklungsumgebunge
 	```XML
 	keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v
 	```
+	{: codeblock}
 
 	Mit derselben Syntax können Sie auch den Schlüsselhashwert Ihres Freigabemoduszertifikats abrufen. Ersetzen Sie in dem Befehl den Alias- und den Keystorepfad entsprechend.
 
@@ -60,15 +70,19 @@ Ein Keystore (Schlüsselspeicher), der ein Zertifikat für Entwicklungsumgebunge
 
 ###Paketname
 
-1. Geben Sie im Dialog 'Credentials' den Paketnamen Ihrer Android-Anwendung ein. 
+1. Geben Sie im Dialog 'Credentials' den Paketnamen Ihrer Android-Anwendung ein.
 
-  Zur Ermittlung des Paketnamens Ihrer Android-Anwendung öffnen Sie die Datei `AndroidManifest.xml` in Android Studio und suchen nach: 
-  	
-  	`<manifest package="{your-package-name}">`
+	Zur Ermittlung des Paketnamens Ihrer Android-Anwendung öffnen Sie die Datei `AndroidManifest.xml` in Android Studio und suchen nach:
+
+	```
+	<manifest package="{your-package-name}">
+	```
+	{: codeblock}
 
 1. Wenn Sie dies erledigt haben, klicken Sie auf **Create**. Damit ist die Erstellung der Berechtigungsnachweise abgeschlossen.
 
 ###Google-Client-ID
+{: #google-client-id}
 
 Wenn die Berechtigungsnachweise erfolgreich erstellt wurden, wird auf der Seite für Berechtigungsnachweise Ihre Google-Client-ID angezeigt. Notieren Sie sich diesen Wert. Sie müssen diesen Wert in der {{site.data.keyword.Bluemix}}-Anwendung registrieren.
 
@@ -78,24 +92,21 @@ Wenn die Berechtigungsnachweise erfolgreich erstellt wurden, wird auf der Seite 
 
 Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-Authentifizierung im {{site.data.keyword.amashort}}-Dashboard aktivieren.
 
-1. Öffnen Sie Ihre App im {{site.data.keyword.Bluemix_notm}}-Dashboard.
-
-1. Klicken Sie auf die Kachel für {{site.data.keyword.amashort}}. Das {{site.data.keyword.amashort}}-Dashboard wird geladen.
-
-1. Klicken Sie auf die Schaltfläche **Konfigurieren** in der Anzeige **Google**.
-
-1. Geben Sie bei **Anwendungs-ID für Android** Ihre Google-Client-ID für Android an und klicken Sie auf **Speichern**.
+1. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard.
+1. Aktivieren Sie auf der Registerkarte **Verwalten** die Option **Berechtigung**.
+1. Erweitern Sie den Abschnitt **Google**.
+1. Geben Sie in **Client-ID für Android** Ihre Google-Client-ID für Android an und klicken Sie auf **Speichern**.
 
 ## {{site.data.keyword.amashort}}-Client-SDK für Android konfigurieren
 {: #google-auth-android-sdk}
 
-1. Kehren Sie zu Android Studio zurück.
+Über das Android Studio-Projekt.
 
 1. Öffnen Sie die Datei `build.gradle` Ihres App-Moduls.
 
 	Ihr Android-Projekt enthält möglicherweise zwei Dateien `build.gradle`: eine für das Projekt und eine für das Anwendungsmodul. Verwenden Sie die Datei für das Anwendungsmodul.
 
-  Suchen Sie den Abschnitt für Abhängigkeiten ('dependencies') und fügen Sie eine neue Abhängigkeit 'compile' für das Client-SDK hinzu:
+	Suchen Sie den Abschnitt für Abhängigkeiten ('dependencies') und fügen Sie eine neue Abhängigkeit 'compile' für das Client-SDK hinzu:
 
 	```Gradle
 	dependencies {
@@ -107,6 +118,8 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
     	// andere Abhängigkeiten
 	}
 	```
+	{: codeblock}
+
 	**Hinweis:** Sie können die Abhängigkeit vom Modul `core` der Gruppe `com.ibm.mobilefirstplatform.clientsdk.android` entfernen, wenn diese vorhanden ist. Das Modul `googleauthentication` lädt sie automatisch für Sie herunter. Das Modul `googleauthentication` lädt das Google+-SDK herunter und installiert es in Ihrem Android-Projekt.
 
 1. Synchronisieren Sie Ihr Projekt mit Gradle, indem Sie auf **Tools > Android > Sync Project with Gradle Files** klicken.
@@ -120,6 +133,7 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
 	```
+	{: codeblock}
 
 1. Zur Verwendung des {{site.data.keyword.amashort}}-Client-SDK müssen Sie es initialisieren, indem Sie die Parameter **context** und **region** übergeben.
 
@@ -132,14 +146,17 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
 
 	BMSClient.getInstance().setAuthorizationManager(
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
-						
+
 	GoogleAuthenticationManager.getInstance().register(this);
 	```
+	{: codeblock}
 
-  * Ersetzen Sie `BMSClient.REGION_UK` durch die entsprechende Region.  Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen.  Der Regionswert muss einer der folgenden sein: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`.
-  * Ersetzen Sie `<MCAServiceTenantId>` durch den Wert `tenantId` (siehe [Vorbereitungen](##before-you-begin)). 
+	* Ersetzen Sie `BMSClient.REGION_UK` durch Ihre {{site.data.keyword.Bluemix_notm}}-**Region**.
+	* Ersetzen Sie `<MCAServiceTenantId>` durch den Wert der **Tenant-ID**.
 
-   **Hinweis:** Wenn Ihre Android-Anwendung als Ziel Android Version 6.0 (API-Stufe 23) oder höher ausgewählt hat, müssen Sie sicherstellen, dass die Anwendung über einen `android.permission.GET_ACCOUNTS`-Aufruf verfügt, bevor `register` aufgerufen wird. Weitere Informationen finden Sie unter [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
+	Informationen zum Abrufen dieser Werte finden Sie unter [Vorbereitungen](##before-you-begin).
+
+	**Hinweis:** Wenn Ihre Android-Anwendung als Ziel Android Version 6.0 (API-Stufe 23) oder höher ausgewählt hat, müssen Sie sicherstellen, dass die Anwendung über einen `android.permission.GET_ACCOUNTS`-Aufruf verfügt, bevor `register` aufgerufen wird. Weitere Informationen finden Sie unter [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
 1. Fügen Sie Ihrer Aktivität den folgenden Code hinzu:
 
@@ -151,15 +168,16 @@ Jetzt, da Sie eine Google-Client-ID für Android haben, können Sie die Google-A
 			.onActivityResultCalled(requestCode, resultCode, data);
 	}
 	```
+	{: codeblock}
 
 ## Authentifizierung testen
 {: #google-auth-android-test}
-Nach der Initialisierung des Client-SDK und der Registrierung des Google-Authentifizierungsmanagers können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen.
 
+Nach der Initialisierung des Client-SDK und der Registrierung des Google-Authentifizierungsmanagers können Sie mit dem Senden von Anforderungen an Ihre Back-End-Anwendung beginnen.
 
 Bevor Sie mit dem Test beginnen, müssen Sie über eine mobile Back-End-Anwendung verfügen, die mit der **MobileFirst Services Starter**-Boilerplate erstellt wurde. Außerdem müssen Sie bereits eine Ressource haben, die durch den Endpunkt `/protected` von {{site.data.keyword.amashort}} geschützt wird. Weitere Informationen finden Sie in [Ressourcen schützen](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).  Informationen zum Abrufen des Wertes für `{applicationRoute}` finden Sie unter [Vorbereitungen](#before-you-begin). 
+1. Versuchen Sie, in Ihrem Desktop-Browser eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung zu senden, indem Sie `{applicationRoute}/protected` öffnen (z. B. `http://my-mobile-backend.mybluemix.net/protected`).  Informationen zum Abrufen des Wertes für `{applicationRoute}` finden Sie unter [Vorbereitungen](#before-you-begin).
 
 	Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der Boilerplate 'MobileFirst Services' erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Daher können nur mobile Anwendungen auf den Endpunkt zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Infolgedessen wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Desktop-Browser angezeigt.
 
@@ -185,6 +203,7 @@ Bevor Sie mit dem Test beginnen, müssen Sie über eine mobile Back-End-Anwendun
 		}
 	});
 	```
+	{: codeblock}
 
 1. Führen Sie Ihre Anwendung aus. Eine Google-Anmeldeanzeige wird geöffnet. Nach der Anmeldung fordert die App eine Berechtigung für den Zugriff auf Ressourcen an:
 
@@ -192,18 +211,19 @@ Bevor Sie mit dem Test beginnen, müssen Sie über eine mobile Back-End-Anwendun
 
 	Abhängig von Ihrem Android-Gerät sowie davon, ob Sie gerade bei Google angemeldet sind, wird möglicherweise eine andere Benutzerschnittstelle angezeigt.
 
-  Indem Sie auf **OK** klicken, berechtigen Sie {{site.data.keyword.amashort}} Ihre Google-Benutzeridentität zu Authentifizierungszwecken zu nutzen.
+	Indem Sie auf **OK** klicken, berechtigen Sie {{site.data.keyword.amashort}} Ihre Google-Benutzeridentität zu Authentifizierungszwecken zu nutzen.
 
 1. 	Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe im LogCat-Tool angezeigt:
 
 	![Bild](images/android-google-login-success.png)
 
- Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
+	Durch Hinzufügen des folgenden Codes können Sie auch die Abmeldefunktion (logout) hinzufügen:
 
- ```Java
+	```Java
  GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
- ```
+	```
+	{: codeblock}
 
- Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Google angemeldet hat, wird der Benutzer bei Google abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er ein Google-Konto für die erneute Anmeldung auswählen. Wird die Anmeldung mit einer zuvor angemeldeten Google-ID versucht, wird der Benutzer nicht noch einmal zur Eingabe der Berechtigungsnachweise aufgefordert. Um erneut zur Eingabe der Anmeldeberechtigungsnachweise aufgefordert zu werden, muss der Benutzer sein Google-Konto von dem Android-Gerät entfernen.
+	Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer bei Google angemeldet hat, wird der Benutzer bei Google abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er ein Google-Konto für die erneute Anmeldung auswählen. Wird die Anmeldung mit einer zuvor angemeldeten Google-ID versucht, wird der Benutzer nicht noch einmal zur Eingabe der Berechtigungsnachweise aufgefordert. Um erneut zur Eingabe der Anmeldeberechtigungsnachweise aufgefordert zu werden, muss der Benutzer sein Google-Konto von dem Android-Gerät entfernen.
 
- Der Wert für `listener`, der an die Abmeldefunktion übergeben wird, kann `null` sein.
+	Der Wert für `listener`, der an die Abmeldefunktion übergeben wird, kann `null` sein.

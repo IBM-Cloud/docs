@@ -38,7 +38,7 @@ CF 앱 및 컨테이너 그룹의 경우, 애플리케이션의 URL에 기본 {{
 
 	2. **도메인** 탭에서 **도메인 추가**를 클릭하고 사용자 정의 도메인 이름을 입력한 다음 **저장**을 클릭하십시오.
 	
-	**참고**: 예를 들어, `mycompany.com`을 사용하여 라우트 `www.mycompany.com`을 사용하는 앱에 연관시킬 수 있습니다. `example.mycompany.com`을 사용하여 라우트 `www.example.mycompany.com`을 사용하는 앱에 연관시킬 수도 있습니다. 
+	**참고**: 예를 들어, `mycompany.com`을 사용하여 라우트 `www.mycompany.com`을 사용하는 앱에 연관시킬 수 있습니다. `example.mycompany.com`을 사용하여 라우트 `www.example.mycompany.com`을 사용하는 앱에 연관시킬 수도 있습니다.
 
   2. 사용자 정의 도메인을 포함한 라우트를 애플리케이션에 추가하십시오.
 
@@ -65,10 +65,10 @@ cf create-domain <your org name> mydomain
 
         사용하려는 사용자 정의 도메인 이름입니다.
 
-  2. 사용자 정의 도메인을 포함한 라우트를 애플리케이션에 추가하십시오.CF 앱의 경우 다음 명령을 입력하십시오. 
+  2. 사용자 정의 도메인을 포함한 라우트를 애플리케이션에 추가하십시오. CF 앱의 경우 다음 명령을 입력하십시오. 
 
     ```
-cf map-route myapp mydomain -n host_name
+    cf map-route myapp mydomain -n host_name
     ```
     컨테이너 그룹의 경우 다음 명령을 입력하십시오.
      ```
@@ -263,7 +263,7 @@ cf unmap-route Blue mybluemix.net -n Blue
   ...
   ```
 
-  **결과:** CF 라우터가 *Blue* 앱에 대한 트래픽 전송을 중지합니다. *Green* 앱이 URL `Green.mybluemix.net` 및 `Blue.mybluemix.net`에 응답합니다.
+  **결과:** CF 라우터가 *Blue* 앱에 대한 트래픽 전송을 중지합니다. *Green* 앱이 URL `Green.mybluemix.net` 및 `Blue.mybluemix.net`에 응답합니다. 
 
 5. *Green* 앱에 대한 `Green.mybluemix.net` 라우트를 제거하십시오.
 
@@ -271,7 +271,7 @@ cf unmap-route Blue mybluemix.net -n Blue
 cf unmap-route Green mybluemix.net -n Green
   ```
 
-  **결과:** CF 라우터가 *Blue* 앱에 대한 트래픽 전송을 중지합니다. *Green* 앱이 URL `Blue.mybluemix.net`에 응답합니다.
+  **결과:** CF 라우터가 *Blue* 앱에 대한 트래픽 전송을 중지합니다. *초록색* 앱이 URL `Blue.mybluemix.net`에 응답합니다..
 
 6. 선택사항: 애플리케이션의 이전 버전(*Blue*)을 삭제하려는 경우, `cf delete` 명령을 사용하십시오.
 

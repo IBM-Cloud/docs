@@ -2,9 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-19"
 
 ---
+
+{:codeblock:.codeblock}
+
 
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Cordova app
 {: #custom-cordova}
@@ -19,6 +22,7 @@ Instrument your Cordova application to use custom authentication and {{site.data
 * Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`, `United Kingdom`, or `Sydney`. Exact syntax of the corresponding SDK constants are given in the code examples.
 
 For more information, see the following information:
+
  * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html). This shows you how to set up the {{site.data.keyword.amashort}} service for custom authentication. Here you define the **Realm** value.
  * [Setting up Cordova SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html). Information on setting  up the Cordova client app.
  * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html). How to authenticate users with a custom identity provider.
@@ -32,6 +36,7 @@ Initialize the SDK by passing the `<applicationBluemixRegion>` parameter in the 
 ```JavaScript
 BMSClient.initialize("<applicationBluemixRegion>");
 ```
+{: codeblock}
 
 Replace `<applicationBluemixRegion>` with your region (see [Before you begin](#before-you-begin)). 
  
@@ -48,6 +53,7 @@ var customAuthenticationListener = {
 	onAuthenticationFailure: function(info){...}
 }
 ```
+{: codeblock}
 
 Each method handles a different phase of an authentication process.
 
@@ -57,6 +63,7 @@ This method is called when a custom authentication challenge is received from {{
 ```JavaScript
 onAuthenticationChallengeReceived: function(authenticationContext, challenge) {...}
 ```
+{: codeblock}
 
 * `authenticationContext`: Provided by {{site.data.keyword.amashort}} client SDK so that developer can report back authentication challenge answers or failure during credentials collection, such as the user cancelling the authentication request.
 * `challenge`: A JSON object that contains a custom authentication challenge, as returned by a custom identity provider.
@@ -66,12 +73,14 @@ Calling the `onAuthenticationChallengeReceived` method the {{site.data.keyword.a
 ```JavaScript
 onAuthenticationSuccess: function(info){...}
 ```
+{: codeblock}
 
 This method is called after a successful authentication. The arguments include an optional JSON object that contains extended information about the authentication success.
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
+{: codeblock}
 
 This method is called after an authentication failure. The arguments include an optional JSON object that contains extended information about the authentication failure.
 
@@ -82,10 +91,15 @@ The `authenticationContext` value is supplied as an argument to the `onAuthentic
 
 ```JavaScript
 authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
+```
+{: codeblock}
 
+```JavaScript
 authenticationContext.submitAuthenticationFailure(info);
 ```
-The following code demonstrates how a customer authorization listener can collect credentials, deal with challenges, and provide authentication responses.
+{: codeblock}
+
+The following code demonstrates how a customer authentication listener can collect credentials, deal with challenges, and provide authentication responses.
 
 ## Sample implementation of a custom authentication listener workflow
 {: #custom-cordova-authlisten-sample}
@@ -125,6 +139,7 @@ var customAuthenticationListener = {
 	}
 }
 ```
+{: codeblock}
 
 ## Registering a custom authentication listener in the Cordova WebView
 {: #custom-cordova-authreg}
@@ -134,6 +149,7 @@ After you create a custom authentication listener, you must register it with `BM
 ```Java
 BMSClient.registerAuthenticationListener(<realmName>, customAuthenticationListener);
 ```
+{: codeblock}
  Use `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard.
 
 ## Set Authorization Manager in the native code
@@ -147,6 +163,7 @@ String tenantId = "<tenantId>";
 MCAAuthorizationManager.createInstance(this.getApplicationContext(),tenantId);
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 
 **iOS Objective-C** (add to `AppDelegate.m`)
 
@@ -162,8 +179,9 @@ Register your Authorization Manager according to your version of Xcode.
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
+{: codeblock}
 
-Note: Replace `your_module_name` with the module name of your project, for example, if your module name is `Cordova` then it should be `#import "Cordova-Swift.h"`. To find the module name go to **Build Settings > Packagin` > Product Module Name**.
+Note: For the correct Swift header file name, replace `your_module_name` with the module name of your project, for example, if your module name is `Cordova` then it should be `#import "Cordova-Swift.h"`. To find the module name go to **Build Settings > Packagin` > Product Module Name**.
 
 **Note:** Replace your `tenantId` with your tenant id found in **Mobile Options** button on the {{site.data.keyword.amashort}} service dashboard.
 
@@ -197,6 +215,7 @@ You must have an application that was created with the {{site.data.keyword.mobil
 	var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 	
 	Replace `<your-application-route>` with your back-end application URL (see [Before you begin](#before-you-begin)). 
 

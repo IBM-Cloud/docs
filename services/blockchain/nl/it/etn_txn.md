@@ -14,7 +14,7 @@ years: 2016
 
 # Esecuzione di test di reti blockchain
 {: #etn_txn}
-Ultimo aggiornamento: 07 ottobre 2016
+Ultimo aggiornamento: 03 novembre 2016
 {: .last-updated}
 
 Utilizza i seguenti test di transazioni e ruoli per confermare la sicurezza e la disponibilità di rete di IBM Blockchain. Tutti i test possono essere eseguiti utilizzando il piano Starter Developer oppure il piano High Security Business Network.
@@ -23,7 +23,7 @@ Utilizza i seguenti test di transazioni e ruoli per confermare la sicurezza e la
 ## Esecuzione di test di ruoli e transazioni
 {: #sdk}
 
-L'HFC SDK per Node.js di Hyperledger Fabric v0.5 contiene i test d'unità che evidenziano le funzioni di sicurezza quali la privacy, la confidenzialità e la non collegabilità. Puoi esplorare questi test d'unità all'indirizzo https://github.com/hyperledger/fabric/tree/master/sdk/node/test/unit per visualizzare degli esempi di codice per la registrazione e il completamento della registrazione degli utenti, per il trasferimento di risorse e per la gestione di risorse con ruoli utente e attributi utente. Sono disponibili i seguenti test d'unità:
+L'HFC SDK per Node.js di Hyperledger Fabric v0.6 contiene i test d'unità che evidenziano le funzioni di sicurezza quali la privacy, la confidenzialità e la non collegabilità. Puoi esplorare questi test d'unità all'indirizzo https://github.com/hyperledger/fabric/tree/v0.6/sdk/node/test/unit per visualizzare degli esempi di codice per la registrazione e il completamento della registrazione degli utenti, per il trasferimento di risorse e per la gestione di risorse con ruoli utente e attributi utente. Sono disponibili i seguenti test d'unità:
 
 ### registrar.js
 Il test registrar.js registra un utente "admin" e lo indica come `registrar` (conservatore del registro) della rete blockchain. Questo test esegue anche la registrazione e il completamento della registrazione degli utenti aggiuntivi "webAdmin" e "webUser". All'identità "webAdmin" viene concessa l'autorizzazione a registrare ulteriori membri con il ruolo di 'client'. All'identità "webUser" non viene concessa l'autorizzazione a registrare ulteriori membri. Quando "webAdmin" prova ad eseguire la registrazione e il completamento della registrazione di utenti con i ruoli "auditor" e "validator" e quando "webUser" prova ad eseguire la registrazione e il completamento della registrazione di "webUser2", i tentativi hanno esito negativo.
@@ -201,11 +201,10 @@ Alice prova ad assegnare Bob come proprietario della risorsa. Il tentativo non r
             }
 ```
 
-<!-- comment this one out until Hl v0.6 GAs
 ### asset-mgmt-with-dynamic-roles
-The asset-mgmt-with-dynamic-roles.js test is a variation of `asset-mgmt-with-roles.js`.  The prior test shows the users Alice, Bob, and assigner being enrolled to the network.  However, these users were previously registered with attributes hardcoded in the membersrvc.yaml.  In other words, the `chain.enroll` function logged these users into the network with their corresponding attributes, affiliations, and roles from the membersrvc.yaml; the registration portion had already occurred.  
+Il test asset-mgmt-with-dynamic-roles.js è una variazione di `asset-mgmt-with-roles.js`.  Il test precedente mostra il completamento della registrazione degli utenti Alice, Bob e dell'assegnatore alla rete.  Tuttavia, tali utenti erano stati precedentemente registrati con gli attributi codificati (hardcoded) in membersrvc.yaml.  In altre parole, la funzione `chain.enroll` ha registrato questi utenti nella rete con i loro attributi, affiliazioni e ruoli corrispondenti da membersrvc.yaml; la parte di registrazione aveva già avuto luogo.  
 
-In this test we see the registration and enrollment of unique users (i.e. users not already present in the membersrvc.yaml). The dynamic registration and enrollment is done through a callback of the `registerAndEnroll` function, as seen at the end of this test:
+In questo test, vediamo la registrazione e il completamento della registrazione di utenti univoci (ossia utenti non già presenti in membersrvc.yaml). La registrazione e il completamento della registrazione in modo dinamico vengono eseguiti tramite una richiamata della funzione `registerAndEnroll`, come si vede alla fine di questo test:
 
 ```js
 function registerAndEnroll(name, attrs, cb) {
@@ -220,15 +219,13 @@ function registerAndEnroll(name, attrs, cb) {
 }
 ```
 
-For example, we see alice2 being registered and enrolled with two unique attributes: a 'role' with the value of 'client' and an 'account' with the value of 'aliceAccount'.
+Ad esempio, vediamo che si sta eseguendo il completamento della registrazione di alice2 con due attributi univoci: un 'role' con il valore di 'client' e un 'account' con il valore di'aliceAccount'.
 
 ```js
-console.log("enrolling alice2 ...");
+console.log("completamento della registrazione di alice2 in corso ...");
          registerAndEnroll("alice2",[{name:'role',value:'client'},{name:'account',value:aliceAccount}], function(err,user) {
             if (err) return cb(err);
             alice = user;
 ```
 
-The remainder of the test is the same as `asset-mgmt-with-roles.js`, with Alice failing to assign Bob as the owner of the asset.
-
--->
+Il resto del test è uguale a `asset-mgmt-with-roles.js`, e vede Alice che non riesce ad assegnare Bob come proprietario della risorsa. 

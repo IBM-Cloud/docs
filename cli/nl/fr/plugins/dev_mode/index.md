@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
   2015，2016
 
- 
+lastupdated: "2016-05-12"
+
+
 
 ---
 
@@ -17,9 +19,6 @@ copyright:
 # (Obsolète) Interface de ligne de commande en mode développement
 {: #devmodecli}
 
-*Dernière mise à jour : 23 juin 2016*
-{: .last-updated}
-
 **Cette interface de ligne de commande est obsolète :** au lieu d'utiliser l'interface de ligne de commande en mode développement
 (dev_mode), utilisez IBM Eclipse Tools for Bluemix ou l'interface IDE Web DevOps. Vous pouvez continuer à utiliser l'interface de ligne de commande dev_mode
 jusqu'au 30 juin 2016.
@@ -29,7 +28,7 @@ cloud. Celle-ci est construite comme un plug-in d'interface de ligne de commande
 charge les
 applications Liberty et IBM Node.js.
 {: shortdesc}
- 
+
 
 Vous pouvez effectuer les tâches suivantes à l'aide de l'interface de ligne de commande dev_mode :
 - Basculement de votre application entre le mode développement et le mode normal.
@@ -37,34 +36,34 @@ Vous pouvez effectuer les tâches suivantes à l'aide de l'interface de ligne de
 - Démarrage, arrêt ou redémarrage de votre application dans le conteneur existant.
 
 ## Installation du plug-in dev_mode
-**Prérequis :** avant de commencer, installez l'interface de ligne de commande Cloud Foundry. Pour plus de détails, voir [Start coding with Cloud Foundry command line interface](https://github.com/cloudfoundry/cli). 
+**Prérequis :** avant de commencer, installez l'interface de ligne de commande Cloud Foundry. Pour plus de détails, voir [Start coding with Cloud Foundry command line interface](https://github.com/cloudfoundry/cli).
 
 
 Utilisez l'une des méthodes suivantes pour installer l'outil de ligne de commande dev_mode :
 - Installation locale
   1. Téléchargez le plug-in dev_mode correspondant à votre plateforme depuis le [référentiel de plug-in
 de l'interface de ligne de commande IBM Bluemix](http://plugins.ng.bluemix.net).
-  2. Accédez au dossier dans lequel le plug-in dev_mode est enregistré et installez ce plug-in via la commande cf install-plugin. Par exemple : 
-  
+  2. Accédez au dossier dans lequel le plug-in dev_mode est enregistré et installez ce plug-in via la commande cf install-plugin. Par exemple :
+
         ```
         cf install-plugin dev_mode-linux64
         ```
 
 - Installez le plug-in depuis le référentiel CLI de Bluemix
   1. Ajoutez le référentiel bluemix-repo aux référentiels d'interface de ligne de commande Cloud Foundry avec la commande suivante :
-  
+
         ```
         cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
   2. Entrez cf repo-plugins. Le plug-in dev_mode apparaît dans le référentiel bluemix-repo.
-		
+
 		```
         cf repo-plugins
         ```
-  
+
   3. Installez le plug-in dev_mode dans les plug-in d'interface de ligne de commande Cloud Foundry avec la commande suivante :
-  
+
         ```
         cf install-plugin dev_mode -r bluemix-repo
         ```
@@ -82,25 +81,25 @@ cf plugins
 
 Utilisez l'index de la table suivante pour consulter les commandes CLI dev_mode fréquemment utilisées :
 
-<table summary="Index des commandes dev_mode"> 
+<table summary="Index des commandes dev_mode">
  <thead>
  <th colspan="4">Commandes dev_mode</th>
  </thead>
- <tbody> 
- <tr> 
- <td>[help](#help)</td> 
- <td>[mode](#mode)</td> 
+ <tbody>
+ <tr>
+ <td>[help](#help)</td>
+ <td>[mode](#mode)</td>
  <td>[statut](#status)</td>
  <td>[update-file](#update_file)</td>
- </tr> 
- <tr> 
+ </tr>
+ <tr>
  <td>[delete-file](#delete_file)</td>
  <td>[start-inplace](#start_inplace)</td>
  <td>[stop-inplace](#stop_inplace)</td>
  <td>[restart-inplace](#restart_inplace)</td>
  </tr>
-  </tbody> 
- </table> 
+  </tbody>
+ </table>
 *Tableau 1. Commandes dev_mode*
 
 
@@ -163,7 +162,7 @@ cf update-file <chemin_distant> <chemin_local> [options_commande]
    </dl>
 
 
-  
+
 ## delete-file
 {: #delete_file}
 
@@ -219,5 +218,3 @@ cf restart-inplace <nom_app>
 {: #general}
 * [Interface de ligne de commande en mode développement](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
 * [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
-
-

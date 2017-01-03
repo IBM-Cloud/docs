@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-11"
 
 ---
 
@@ -16,11 +18,9 @@ copyright:
 
 
 
-# Fehlerbehebung für die Verwaltung von Anwendungen
+# Fehlerbehebung für die Verwaltung von Apps
 {: #managingapps}
 
-Letzte Aktualisierung: 18. August 2016
-{: .last-updated} 
 
 Allgemeine Probleme im Zusammenhang mit der Verwaltung von Anwendungen können sein, dass Anwendungen nicht aktualisiert werden können
 oder Doppelbytezeichen nicht angezeigt werden. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben.
@@ -147,10 +147,10 @@ Führen Sie die folgenden Schritte aus, um die nicht verwendete Route zu lösche
 {: #ts_retrieve_space}
 Sie können eine App oder einen Service nicht erstellen, wenn der derzeitigen Organisation kein Bereich zugeordnet ist.
 
-Bei dem Versuch, in Bluemix eine Anwendung zu erstellen, wird die folgende Fehlernachricht angezeigt:
+Bei dem Versuch, in Bluemix eine App zu erstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms}
 
-`BXNUI0515E: Die Bereiche in der Organisation wurden aufgrund eines Netzverbindungsproblems nicht abgerufen.`
+`BXNUI0515E: Die Bereiche in der Organisation wurden nicht abgerufen. Es ist entweder ein Netzverbindungsproblem aufgetreten oder Ihrer aktuellen Organisation ist kein Bereich zugeordnet.`
 
 Dieser Fehler tritt oft auf, wenn Sie zum ersten Mal versuchen, im Katalog eine App oder einen Service zu erstellen, wenn noch kein Bereich erstellt wurde. 
 {: tsCauses}
@@ -159,7 +159,7 @@ Stellen Sie sicher, dass Sie in der derzeitigen Organisation einen Bereich erste
 um einen Bereich zu erstellen:
 {: tsResolve}
 
-  * Klicken Sie auf das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg), um das Widget 'Konto und Unterstützung' zu öffnen. Wählen Sie die Organisation aus, in der Sie den Bereich erstellen möchten, und klicken Sie anschließend auf **Bereich erstellen**.
+  * Klicken Sie in der Menüleiste auf **Konto** &gt; **Organisationen verwalten**. Wählen Sie die Organisation aus, in der der Bereich erstellt werden soll, und klicken Sie anschließend auf **Bereich erstellen**.
   * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: `cf create-space <Name des Bereichs> -o <Name der Organisation>`.
 
 Wiederholen Sie den Vorgang. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt.
@@ -190,7 +190,7 @@ Sie verfügen nicht über die erforderliche Berechtigungsebene zum Ausführen de
 Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der folgenden Methoden: 
 {: tsResolve}
  * Wählen Sie eine andere Organisation und einen anderen Bereich aus, für die bzw. den Sie die Rolle des Entwicklers ausfüllen. 
- * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Informationen hierzu finden Sie unter [Organisationen und Bereiche verwalten](../admin/orgs_spaces.html){: new_window}.
+ * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Informationen hierzu finden Sie unter [Organisationen und Bereiche verwalten](/docs/admin/orgs_spaces.html){: new_window}.
  
 
 
@@ -294,7 +294,7 @@ ein {{site.data.keyword.Bluemix_notm}}-Service
 inaktiv ist, überprüfen Sie zunächst die
 [{{site.data.keyword.Bluemix_notm}}-Seite 'Status'](http://ibm.biz/bluemixstatus){: new_window}. Sie können, wenn Sie möchten, den Service in einer anderen {{site.data.keyword.Bluemix_notm}}-Region
 als Ausweichlösung verwenden. Ausführliche Informationen finden Sie in [Services
-in einer anderen Region verwenden](../services/reqnsi.html#cross_region_service){: new_window}. Wenn der Status des Service normal ist,
+in einer anderen Region verwenden](/docs/services/reqnsi.html#cross_region_service){: new_window}. Wenn der Status des Service normal ist,
 führen Sie die folgenden Schritte aus, um das Problem zu lösen: 
 {: tsResolve}
 
@@ -307,7 +307,7 @@ und laden Sie die Seite anschließend erneut.
 können verschiedene Fehler bereinigt werden, die zu dem Fehler 502 führen. 
   * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. Bei einigen Instanzen kann es in Verbindung mit
 Ihrem Internet-Service-Provider oder den {{site.data.keyword.Bluemix_notm}}-Services zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
-  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support](../support/index.html#contacting-bluemix-support){: new_window}. 
+  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
 
 
 
@@ -334,7 +334,7 @@ Das Standardplattenkontingent, das für eine App zugeordnet wird, beträgt
 {: tsCauses}
 
  
-Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. Sie können ein maximales Plattenkontingent von 2 GB angeben. Falls 2 GB dennoch nicht genug sein sollten, setzen Sie versuchsweise einen externen Service ein, z. B. [Object Store](../services/ObjectStorage/index.html){: new_window}.
+Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. Sie können ein maximales Plattenkontingent von 2 GB angeben. Falls 2 GB dennoch nicht genug sein sollten, setzen Sie versuchsweise einen externen Service ein, z. B. [Object Store](/docs/services/ObjectStorage/index.html){: new_window}.
 {: tsResolve}
 
   * Fügen Sie in der Datei 'manifest.yml' den folgenden Teil hinzu:
@@ -387,16 +387,16 @@ Dieser Fehler tritt auf, wenn Sie den Grenzwert für die Anzahl der Serviceinsta
 Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Grenzwert für die Anzahl der Serviceinstanzen, die für Sie bestehen können.
 {: tsResolve}
  
-  * Zum Löschen einer Serviceinstanz können Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die Befehlszeilenschnittstelle verwenden.
-    Führen Sie folgende Schritte aus, wenn Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle zum Löschen einer Serviceinstanz verwenden:
-	  1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf den Service, den Sie löschen möchten.  Daraufhin wird die Kachel für den Service angezeigt.
-	  2. Klicken Sie auf der Servicekachel auf das Symbol **Menü**.
+  * Zum Löschen einer Serviceinstanz können Sie die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle verwenden.
+    Führen Sie die folgenden Schritte aus, um die {{site.data.keyword.Bluemix_notm}}-Konsole zum Löschen einer Serviceinstanz zu verwenden:
+	  1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf den Service, den Sie löschen möchten.  Die Servicekarte wird angezeigt.
+	  2. Klicken Sie in der Servicekarte auf das Symbol **Menü**.
 	  3. Klicken Sie auf **Service löschen**. Nach dem Löschen der Serviceinstanz werden Sie aufgefordert, die Anwendung erneut bereitzustellen, an die die Serviceinstanz gebunden war. 
     Führen Sie folgende Schritte aus, wenn Sie die Befehlszeilenschnittstelle zum Löschen einer Serviceinstanz verwenden:
 	  1. Heben Sie die Bindung zwischen der Serviceinstanz und der Anwendung auf, indem Sie Folgendes eingeben: `cf unbind-service <appname> <service_instance_name>`.
 	  2. Löschen Sie die Serviceinstanz durch Eingeben von `cf delete-service <service_instance_name>`.
 	  3. Nach dem Löschen der Serviceinstanz möchten Sie möglicherweise Ihre Anwendung, an die die Serviceinstanz gebunden war, erneut bereitstellen, indem Sie `cf restage <appname>` eingeben.
-  * Zum Löschen des Grenzwerts für die Anzahl Serviceinstanzen, die für Sie bestehen können, wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie unter [Vorgehensweise zum Ändern des Plans](../pricing/index.html#changing){: new_window}.
+  * Zum Löschen des Grenzwerts für die Anzahl Serviceinstanzen, die für Sie bestehen können, wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie unter [Vorgehensweise zum Ändern des Plans](/docs/pricing/index.html#changing){: new_window}.
 
   
   
@@ -432,43 +432,43 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## Für Organisation geltende Speicherbegrenzung wurde überschritten
 {: #ts_outofmemory}
 
-Wenn Sie Benutzer eines Testkontos sind, können Sie möglicherweise eine Anwendung nicht in {{site.data.keyword.Bluemix_notm}} bereitstellen, wenn Sie die für Ihre Organisation geltende Speicherbegrenzung überschritten haben. Sie können entweder den von Ihren Apps verwendeten Speicherplatz verringern oder das Speicherkontingent Ihres Konto erhöhen. 
+Wenn Sie Benutzer eines Testkontos sind, können Sie möglicherweise eine App nicht in {{site.data.keyword.Bluemix_notm}} bereitstellen, wenn Sie die für Ihre Organisation geltende Speicherbegrenzung überschritten haben. Sie können entweder den von Ihren Apps verwendeten Speicherplatz verringern oder das Speicherkontingent Ihres Konto erhöhen. 
 
 
 
-Wenn Sie eine Anwendung unter {{site.data.keyword.Bluemix_notm}} bereitstellen, wird die folgende Fehlernachricht angezeigt:
+Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} bereitstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms} 
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.` (FEHLGESCHLAGEN Serverfehler, Statuscode: 400, Fehlercode: 100005, Nachricht: Sie haben die für Ihre Organisation geltende Speicherbegrenzung überschritten.)
 
  
 
-Dieser Fehler tritt auf, wenn die für Ihre Organisation verbleibende Speichermenge niedriger ist, als die Speichermenge, die für die bereitzustellende Anwendung erforderlich ist. Das Kontingent der maximalen Hauptspeicherkapazität für ein Testkonto beträgt 2 Gigabyte.
+Dieser Fehler tritt auf, wenn die für Ihre Organisation verbleibende Speichermenge niedriger ist, als die Speichermenge, die für die bereitzustellende App erforderlich ist. Das Kontingent der maximalen Hauptspeicherkapazität für ein Testkonto beträgt 2 Gigabyte.
 {: tsCauses}
 
 
 
-Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von Ihren Anwendungen verwendeten Speicherplatz verringern.
+Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von Ihren Apps verwendeten Speicherplatz verringern.
 {: tsResolve} 
 
-  * Zum Erhöhen des Speicherkontingents für Ihr Konto wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie in [Zahlungskonten](../pricing/index.html#pay-accounts){: new_window}. 
-  * Zum Verringern des von Ihren Anwendungen verwendeten Speicherplatzes verwenden Sie entweder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die cf-Befehlszeilenschnittstelle.
-    Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle verwenden, führen Sie die folgenden Schritte durch:
+  * Zum Erhöhen des Speicherkontingents für Ihr Konto wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie in [Zahlungskonten](/docs/pricing/index.html#pay-accounts){: new_window}. 
+  * Zum Verringern des Speicherplatzes, den Ihre Apps belegen, verwenden Sie entweder die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle 'cf'.
+    Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole verwenden, führen Sie die folgenden Schritte durch:
 	  1. Wählen Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard Ihre Anwendung aus. Die Seite mit den Anwendungsdetails wird geöffnet.
-	  2. Im Teilfenster für die Laufzeit können Sie die maximale Hauptspeicherkapazität für Ihre Anwendung, die Anzahl der Anwendungsinstanzen oder beides reduzieren. 
+	  2. Im Teilfenster für die Laufzeit können Sie die maximale Hauptspeicherkapazität für Ihre App, die Anzahl der App-Instanzen oder beides reduzieren. 
 	  
 	Führen Sie bei Verwendung der cf-Befehlszeilenschnittstelle folgende Schritte aus:
 	
-	  1. Überprüfen Sie, wie viel Speicherplatz für Ihre Anwendungen verwendet wird:
+	  1. Überprüfen Sie, wie viel Speicherplatz für Ihre Apps verwendet wird:
 	  ```
 	  cf apps
 	  ```
-	     Mit dem Befehl 'cf apps' werden alle Anwendungen aufgelistet, die Sie in Ihrem aktuellen Bereich bereitgestellt haben. Der Status der einzelnen Anwendungen wird auch angezeigt.
-      2. Zum Verringern der von Ihrer Anwendung verwendeten Speichermenge verringern Sie die Anzahl der Anwendungsinstanzen, die maximale Hauptspeicherkapazität oder beides:
+	     Mit dem Befehl 'cf apps' werden alle Apps aufgelistet, die Sie in Ihrem aktuellen Bereich bereitgestellt haben. Der Status der einzelnen Apps wird auch angezeigt.
+      2. Zum Verringern der von Ihrer App verwendeten Speichermenge verringern Sie die Anzahl der App-Instanzen, die maximale Hauptspeicherkapazität oder beides:
 	  ```
 	  cf push appname -p app_path -i instance_number -m memory_limit
       ```
-	  3. Starten Sie Ihre Anwendung erneut, damit die Änderungen wirksam werden.
+	  3. Starten Sie Ihre App erneut, damit die Änderungen wirksam werden.
 
 
 
@@ -477,11 +477,11 @@ Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von
 {: #ts_apps_not_auto_restarted}
 
 
-Eine Anwendung wird nicht automatisch erneut gestartet, wenn ein Service, den Sie an die Anwendung binden, nicht mehr ausgeführt wird.	  
+Eine App wird nicht automatisch erneut gestartet, wenn ein Service, den Sie an die App binden, nicht mehr ausgeführt wird.	  
 	  
  
 
-Bei Absturz eines Service, den Sie an die Anwendung binden, können in der Anwendung Probleme wie beispielsweise Ausfallzeiten, Ausnahmebedingungen und Verbindungsfehler auftreten. {{site.data.keyword.Bluemix_notm}} startet die App nicht automatisch erneut, um eine entsprechende Recovery für diese Probleme durchzuführen.
+Bei Absturz eines Service, den Sie an eine App binden, können in der App Probleme wie beispielsweise Ausfallzeiten, Ausnahmebedingungen und Verbindungsfehler auftreten. Die App wird von {{site.data.keyword.Bluemix_notm}} nicht automatisch neu gestartet, um diese Probleme zu beheben.
 {: tsSymptoms}
 
 
@@ -491,24 +491,24 @@ Dieses Verhalten gehört zum Design von Cloud Foundry.
 
  
 
-Sie können die Anwendung manuell starten, indem Sie den folgenden Befehl in die Befehlszeilenschnittstelle eingeben:
+Sie können die App manuell erneut starten, indem Sie den folgenden Befehl in die Befehlszeilenschnittstelle eingeben:
 {: tsResolve}
 
 ```
 cf push appname -p app_path
 ```
-Darüber hinaus können Sie die Anwendung so codieren, dass Probleme wie Ausfallzeiten, Ausnahmebedingungen und Verbindungsfehler erkannt werden und eine Recovery durchgeführt wird. 
+Darüber hinaus können Sie die App so codieren, dass Probleme wie Ausfallzeiten, Ausnahmebedingungen und Verbindungsfehler erkannt werden und eine Recovery durchgeführt wird.
 
 	  
 
 ## Verlust benutzerdefinierter Variablen bei Push-Operation für Anwendung
 {: #ts_varsnotretained}
 
-Wenn Sie eine Anwendung mit einer Push-Operation aus IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} an {{site.data.keyword.Bluemix_notm}} übertragen, werden die angegebenen Variablen zurückgesetzt, sofern die Variablen nicht in der Manifestdatei gespeichert werden.
+Wenn Sie eine App mit einer Push-Operation aus IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} an {{site.data.keyword.Bluemix_notm}} übertragen, werden die angegebenen Variablen zurückgesetzt, sofern die Variablen nicht in der Manifestdatei gespeichert werden.
 
 
 
-Die angegebenen Variablen gehen verloren, nachdem Sie eine Anwendung mit einer Push-Operation von IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} an {{site.data.keyword.Bluemix_notm}} übertragen haben.
+Die angegebenen Variablen gehen verloren, nachdem Sie eine App mit einer Push-Operation von IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} an {{site.data.keyword.Bluemix_notm}} übertragen haben.
 {: tsSymptoms} 
 
 
@@ -517,7 +517,7 @@ Die angegebenen Variablen werden nur gespeichert, wenn Sie sie in der Manifestda
 
  
 
-Wenn Sie eine Anwendung aus IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, wählen Sie das Kontrollkästchen **In Manifestdatei speichern** auf der Seite 'Anwendungsdetails' im Assistenten 'Anwendung' aus. Danach werden die Variablen, die Sie im Assistenten angeben, in der Manifestdatei für die Anwendung gespeichert. Beim nächsten Öffnen des Assistenten werden die Variablen automatisch angezeigt.
+Wenn Sie eine App aus IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, wählen Sie das Kontrollkästchen **In Manifestdatei speichern** auf der Seite 'Anwendungsdetails' im Assistenten 'Anwendung' aus. Danach werden die Variablen, die Sie im Assistenten angeben, in der Manifestdatei für die Anwendung gespeichert. Beim nächsten Öffnen des Assistenten werden die Variablen automatisch angezeigt.
 {: tsResolve}
 
 
@@ -580,7 +580,7 @@ Das Debug-Feature kann in den folgenden Fällen nicht aktiviert werden:
 Verwenden Sie eine der folgenden Methoden, um das Problem zu lösen: 
 {: tsResolve}
 
-  * Die empfohlene Vorgehensweise ist die Verwendung des IBM Node.js-Buildpacks zum Starten der App. Weitere Informationen finden Sie im Abschnitt zum Startbefehl des Themas zur [Bereitstellung einer Node.js-Anwendung in {{site.data.keyword.Bluemix_notm}}](../runtimes/nodejs/index.html#nodejs_runtime){: new_window}. 
+  * Die empfohlene Vorgehensweise ist die Verwendung des IBM Node.js-Buildpacks zum Starten der App. Weitere Informationen finden Sie im Abschnitt zum Startbefehl des Themas zur [Bereitstellung einer Node.js-Anwendung in {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime){: new_window}.  
   * Inaktivieren Sie den Befehl für die vorhandene App, indem Sie entweder das Befehlsattribut in der Datei `manifest.yml` in 'command: null' ändern oder `-c null` in den Push-Befehl einschließen. 
   * Entfernen Sie das Attribut **command** aus der Datei `manifest.yml`. Dann können Sie die aktuelle App aus {{site.data.keyword.Bluemix_notm}} löschen und erneut per Push-Operation übertragen.
   
@@ -597,7 +597,7 @@ Es kann vorkommen, dass Sie Ihre Organisation in {{site.data.keyword.Bluemix_not
   
  
 
-Sie können sich zwar erfolgreich an der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle anmelden, jedoch nicht Anwendungen mithilfe der cf-Befehlszeilenschnittstelle oder des Eclipse-Plug-ins per Push-Operation übertragen.
+Sie können sich zwar erfolgreich an der {{site.data.keyword.Bluemix_notm}}-Konsole anmelden, jedoch keine Apps mithilfe der Befehlszeilenschnittstelle 'cf' oder des Eclipse-Plug-ins per Push-Operation übertragen.
 {: tsSymptoms}
 
 Wenn Sie versuchen, mithilfe der Befehlszeilenschnittstelle 'cf' eine Anwendung per Push-Operation an
@@ -627,7 +627,7 @@ Wenn Sie eine Anwendung mithilfe der cf-Befehlszeilenschnittstelle per Push-Oper
 cf api https://api.eu-gb.bluemix.net
 ```
 Wenn Sie eine Anwendung mithilfe von Eclipse Tools mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, müssen Sie zuerst einen {{site.data.keyword.Bluemix_notm}}-Server erstellen und den API-Endpunkt der {{site.data.keyword.Bluemix_notm}}-Region angeben, in der die Organisation erstellt wurde. Weitere Informationen zur Verwendung
-der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.  
+der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.  
   
   
 
@@ -635,11 +635,11 @@ der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclip
 ## Erstellung von Anwendungsrouten nicht möglich
 {: #ts_hostistaken}
 
-Wenn Sie eine Anwendung unter {{site.data.keyword.Bluemix_notm}} implementieren, kann die Route einer Anwendung nicht erstellt werden, wenn der angegebene Hostname bereits verwendet wird.
+Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} bereitstellen, kann die Route einer App nicht erstellt werden, wenn der angegebene Hostname bereits verwendet wird.
 
 
 
-Wenn Sie eine Anwendung unter {{site.data.keyword.Bluemix_notm}} bereitstellen, wird die folgende Fehlernachricht angezeigt: 
+Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} bereitstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms} 
 
 `Creating route hostname.domainname ... FAILED Server error, status code: 400, error code: 210003, message: The host is taken: hostname` (Erstellen von Route 'hostname.domänenname' ... FEHLGESCHLAGEN Serverfehler, Statuscode: 400, Fehlercode: 210003, Nachricht: Der Hostname ist vergeben: 'hostname')
@@ -667,11 +667,11 @@ Der angegebene Hostname muss innerhalb der verwendeten Domäne eindeutig sein. V
 ## Push-Operation für WAR-Anwendung mit Befehl cf push nicht möglich
 {: #ts_cf_war}
 
-Es kann vorkommen, dass Sie mit dem Befehl 'cf push' nicht eine archivierte Webanwendung unter {{site.data.keyword.Bluemix_notm}} implementieren können, wenn die Position der Anwendung nicht ordnungsgemäß angegeben ist.
+Es kann vorkommen, dass Sie mit dem Befehl 'cf push' eine archivierte Web-App unter {{site.data.keyword.Bluemix_notm}} nicht bereitstellen können, wenn die Position der App nicht ordnungsgemäß angegeben ist.
 	
 
 
-Wenn Sie eine WAR-Anwendung in {{site.data.keyword.Bluemix_notm}} mit dem Befehl `cf push` hochladen, wird die Fehlernachricht `Staging error: cannot get instances since staging failed.` (Staging-Fehler: Instanzen können nicht abgerufen werden, weil Staging fehlgeschlagen ist) angezeigt.
+Wenn Sie eine WAR-App in {{site.data.keyword.Bluemix_notm}} mit dem Befehl `cf push` hochladen, wird die Fehlernachricht `Staging error: cannot get instances since staging failed.` (Staging-Fehler: Instanzen können nicht abgerufen werden, weil Staging fehlgeschlagen ist) angezeigt.
 {: tsSymptoms} 
 
  
@@ -704,7 +704,7 @@ Es kann vorkommen, dass Doppelbytezeichen nicht ordnungsgemäß angezeigt werden
 
  
 
-Wenn eine Liberty-Anwendung per Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen wird, werden Doppelbytezeichen, die in der Anwendung angegeben sind, nicht ordnungsgemäß angezeigt.
+Wenn eine Liberty-Anwendung per Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen wird, werden Doppelbytezeichen, die in der App angegeben sind, nicht ordnungsgemäß angezeigt.
 {: tsSymptoms}
 
  
@@ -787,10 +787,7 @@ in Abhängigkeit von der Ursache durch, die zu dem Problem geführt hat:
   ...
         ```
 
-  * Stellen Sie sicher, dass in Ihrer Node.js-App eine Datei des Typs `package.json`
-existiert, damit das Node.js-Buildpack für die Erkennung der App aktiviert werden kann. Außerdem müssen Sie diese Datei
-in das Stammverzeichnis Ihrer App stellen.	
-    Das folgende Beispiel zeigt eine einfache `package.json`-Datei:  
+  * Stellen Sie sicher, dass in Ihrer Node.js-App eine Datei des Typs `package.json` existiert, damit das Node.js-Buildpack für die Erkennung der App aktiviert werden kann. Außerdem müssen Sie diese Datei in das Stammverzeichnis Ihrer App stellen.	Das folgende Beispiel zeigt eine einfache `package.json`-Datei:  
 	```
 	{
         "name": "MyUniqueNodejs01",
@@ -827,23 +824,23 @@ Nach dem Import einer {{site.data.keyword.Bluemix_notm}} Liberty-Anwendung aus {
 
  
 
-Das Liberty-Buildpack verwendet die Datei `server.xml` zum Konfigurieren der Anwendung und generiert die Datei `runtime-vars.xml`, wenn die Liberty-Anwendung per Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen wird. Wenn Sie die Anwendung in Eclipse importieren, ist die Datei `runtime-vars.xml` in der lokalen Umgebung nicht vorhanden.
+Das Liberty-Buildpack verwendet die Datei `server.xml` zum Konfigurieren der App und generiert die Datei `runtime-vars.xml`, wenn die Liberty-App per Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen wird. Wenn Sie die App in Eclipse importieren, ist die Datei `runtime-vars.xml` in der lokalen Umgebung nicht vorhanden.
 {: tsCauses}
 
  
 
-Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die Anwendung mit einer Push-Operation als WAR-Anwendung übertragen. Weitere Informationen finden Sie unter [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
+Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die App mit einer Push-Operation als WAR-App übertragen. Weitere Informationen finden Sie unter [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
-## Staging für Anwendungen mit angepassten Buildpacks nicht möglich
+## Staging für Apps mit angepassten Buildpacks nicht möglich
 {: #ts_bp_compilation}
 
-Es kann vorkommen, dass eine Anwendung unter {{site.data.keyword.Bluemix_notm}} nicht unter Verwendung eines angepassten Buildpacks implementiert werden kann, wenn die Scripts im Buildpack nicht ausführbar sind.
+Es kann vorkommen, dass eine App unter {{site.data.keyword.Bluemix_notm}} nicht unter Verwendung eines angepassten Buildpacks bereitgestellt werden kann, wenn die Scripts im Buildpack nicht ausführbar sind.
 
 
 
-Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} unter Verwendung eines angepassten Buildpacks implementieren, kann es vorkommen, dass die Fehlernachricht `The application failed to stage, so there are no instances to display.` (Anzeigen der Instanzen nicht möglich, da Staging der Anwendung fehlgeschlagen ist) angezeigt wird.
+Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} unter Verwendung eines angepassten Buildpacks bereitstellen, kann es vorkommen, dass die Fehlernachricht `The application failed to stage, so there are no instances to display.` (Anzeigen der Instanzen nicht möglich, da Staging der Anwendung fehlgeschlagen ist) angezeigt wird.
 {: tsSymptoms} 
 
 
@@ -875,7 +872,7 @@ Dieses Problem kann auftreten, weil für DevOps Services die Datei `manifest.yml
  
 
 Zum Beheben dieses Problems müssen Sie die Datei `manifest.yml` erstellen. Weitere Informationen zum Erstellen der Datei `manifest.yml` finden Sie im
-[Abschnitt zum Anwendungsmanifest](../manageapps/depapps.html#appmanifest){: new_window}.
+[Abschnitt zum Anwendungsmanifest](/docs/manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -889,7 +886,7 @@ Es kann vorkommen, dass eine Meteor-Anwendung nicht per Push-Operation an {{site
 
  
 
-Wenn Sie eine Meteor-App unter {{site.data.keyword.Bluemix_notm}}implementieren, kann die Fehlernachricht `The application failed to stage, so there are no instances to display.` (Anzeigen der Instanzen nicht möglich, da Staging der Anwendung fehlgeschlagen ist) angezeigt werden.
+Wenn Sie eine Meteor-App unter {{site.data.keyword.Bluemix_notm}} bereitstellen, kann die Fehlernachricht `The application failed to stage, so there are no instances to display.` (Anzeigen der Instanzen nicht möglich, da Staging der Anwendung fehlgeschlagen ist) angezeigt werden.
 {: tsSymptoms}
 
 
@@ -1080,18 +1077,18 @@ Weitere Informationen finden Sie in [Setting up GitHub for Bluemix DevOps Servic
 # Fehlerbehebung für die Verwaltung von Konten
 {: #managingaccounts}
 
-Es können Probleme bei der Verwaltung Ihres Kontos auftreten; so kann es zum Beispiel vorkommen, dass unterschiedliche Anwendungen gemeinsam denselben Domänennamen nutzen oder Administratoren nicht alle Organisationen anzeigen können. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben.
+Es können Probleme bei der Verwaltung Ihres Kontos auftreten; so kann es zum Beispiel vorkommen, dass unterschiedliche Apps gemeinsam denselben Domänennamen nutzen oder Administratoren nicht alle Organisationen anzeigen können. In vielen Fällen können Sie diese Probleme jedoch durch Ausführen weniger einfacher Schritte beheben.
 {:shortdesc}
 
 
 ## Konto ist inaktiv
 {: #ts_accnt_inactive}
 
-Wenn Ihr Konto inaktiv ist, können Sie keine Anwendung in {{site.data.keyword.Bluemix_notm}} erstellen. Wenden Sie sich zur Lösung dieses Problems an das Support-Team.
+Wenn Ihr Konto inaktiv ist, können Sie keine App in {{site.data.keyword.Bluemix_notm}} erstellen. Wenden Sie sich zur Lösung dieses Problems an das Support-Team.
 
 
 
-Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine Anwendung zu erstellen, wird die folgende Fehlernachricht angezeigt:
+Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine App zu erstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms} 
 
 `BXNUI0096E: Die App wurde nicht erstellt. Ihr Konto ist inaktiv, da es storniert oder ausgesetzt wurde.`
@@ -1106,7 +1103,7 @@ Wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support](http://ibm.b
 {: tsResolve}
 
   * Die IBM ID, mit der Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden.
-  * Der Name der Organisation für Ihre Anwendung. Mithilfe dieser Informationen kann das Support-Team feststellen, ob Ihnen die richtigen Rollen bzw. die richtige Zugehörigkeit innerhalb Ihrer Organisation zugewiesen wurden.
+  * Der Name der Organisation, in der Ihre App erstellt wird. Mithilfe dieser Informationen kann das Support-Team feststellen, ob Ihnen die richtigen Rollen bzw. die richtige Zugehörigkeit innerhalb Ihrer Organisation zugewiesen wurden.
 
 
 
@@ -1118,7 +1115,7 @@ können Sie keine Anwendung erstellen.
 
 
 
-Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine Anwendung zu erstellen, wird die folgende Fehlernachricht angezeigt:
+Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine App zu erstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms} 
 
 
@@ -1126,7 +1123,7 @@ Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine Anwendung zu erstell
 
 
 
-Anwendungen in {{site.data.keyword.Bluemix_notm}} müssen in Ihrer Organisation innerhalb eines Bereichs erstellt werden.
+Apps in {{site.data.keyword.Bluemix_notm}} müssen in Ihrer Organisation innerhalb eines Bereichs erstellt werden.
 {: tsCauses} 
 
  
@@ -1142,7 +1139,7 @@ klicken Sie anschließend auf **Bereich erstellen**.
   
   
   
-## Anwendungen verwenden denselben Domänennamen gemeinsam
+## Apps verwenden denselben Domänennamen gemeinsam
 {: #ts_domain_diff}
 
 Es kann vorkommen, dass in {{site.data.keyword.Bluemix_notm}} von mehreren Anwendungen dieselbe URL gemeinsam genutzt wird.
@@ -1164,19 +1161,19 @@ Hierbei handelt es sich um ein unterstütztes Verhalten von {{site.data.keyword.
 <!-- begin STAGING ONLY --> 
 	
 	
-## Administratoren können über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle nicht alle Organisationen anzeigen
+## Administratoren können über die {{site.data.keyword.Bluemix_notm}}-Konsole nicht alle Organisationen anzeigen
 {: #ts_ui_org}
 
-Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle als Administrator verwenden, können Sie nicht alle Organisationen zu Verwaltungszwecken anzeigen. Sie können nur die Organisationen anzeigen und verwalten, zu denen Sie gehören.
+Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole als Administrator verwenden, können Sie nicht alle Organisationen zu Verwaltungszwecken anzeigen. Sie können nur die Organisationen anzeigen und verwalten, zu denen Sie gehören.
 
  
 
-Als Administrator können Sie nicht alle Organisationen über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle anzeigen.
+Als Administrator können Sie nicht alle Organisationen über die {{site.data.keyword.Bluemix_notm}}-Konsole anzeigen.
 {: tsSymptoms}
 
  
 
-Dies ist eine Einschränkung der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle.
+Dies ist eine Einschränkung der {{site.data.keyword.Bluemix_notm}}-Konsole.
 {: tsCauses}
 
  
@@ -1228,7 +1225,7 @@ Es können Probleme bei der Verwendung von IBM® Bluemix™-Laufzeiten auftreten
 {: #ts_loading_bp}
 
 
-Bei einer Push-Operation für eine App können möglicherweise nicht die neuesten Buildpack-Komponenten verwendet werden. Sie können Buildpacks mit integrierten Mechanismen verwenden, die das Laden veralteter Komponenten verhindern, oder Sie können den Inhalt des Cacheverzeichnisses der App löschen, bevor Sie eine Push-Operation oder erneutes Staging für die App durchführen. 
+Bei einer Push-Operation für eine App können möglicherweise nicht die neuesten Buildpack-Komponenten verwendet werden. Sie können Buildpacks mit integrierten Mechanismen verwenden, die das Laden veralteter Komponenten verhindern, oder Sie können den Inhalt des Cacheverzeichnisses der App löschen, bevor Sie eine Push-Operation oder ein erneutes Staging für die App durchführen.  
 
  
 
@@ -1327,11 +1324,10 @@ Dieses Problem tritt auf, wenn für die Python-Anwendung Konfigurationsinformati
 
  
 
-Fügen Sie zum Lösen des Problems die Datei `requirements.txt` und die Datei `Procfile` im Stammverzeichnis Ihrer Python-Anwendung hinzu. Bei den folgenden Informationen wird vorausgesetzt, dass Sie die Bibliothek 'web.py' importieren:
+Fügen Sie zum Lösen des Problems die Datei `requirements.txt` und die Datei `Procfile` im Stammverzeichnis Ihrer Python-App hinzu. In den folgenden Informationen wird davon ausgegangen, dass Sie die Bibliothek 'web.py' importieren:
 {: tsResolve}
 
-  1. Fügen Sie die Datei `requirements.txt` im Stammverzeichnis Ihrer Python-Anwendung hinzu.
-     Die Datei `requirements.txt` gibt die für Ihre Python-Anwendung erforderlichen Bibliothekspakete sowie die Version der Pakete an. Das folgende Beispiel zeigt den Inhalt der Datei `requirements.txt`, wobei `web.py==0.37` angibt, dass es sich bei der Version der Bibliothek `web.py` um '0.37' handelt, und `wsgiref==0.1.2` angibt, dass es sich bei der für die Bibliothek 'web.py' erforderliche Version der Gateway-Schnittstelle des Web-Servers um '0.1.2' handelt.
+  1. Fügen Sie die Datei `requirements.txt` im Stammverzeichnis Ihrer Python-App hinzu. Die Datei `requirements.txt` gibt die für Ihre Python-Anwendung erforderlichen Bibliothekspakete sowie die Version der Pakete an. Das folgende Beispiel zeigt den Inhalt der Datei `requirements.txt`, wobei `web.py==0.37` angibt, dass es sich bei der Version der Bibliothek `web.py` um '0.37' handelt, und `wsgiref==0.1.2` angibt, dass es sich bei der für die Bibliothek 'web.py' erforderliche Version der Gateway-Schnittstelle des Web-Servers um '0.1.2' handelt.
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
@@ -1339,9 +1335,9 @@ Fügen Sie zum Lösen des Problems die Datei `requirements.txt` und die Datei `P
 	Weitere Informationen zur Konfiguration der Datei `requirements.txt` finden Sie unter [Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html). 
 	 
   2. Fügen Sie im Stammverzeichnis Ihrer Python-Anwendung die Datei `Procfile` hinzu.
-	Die Datei `Procfile` muss den Startbefehl für Ihre Python-Anwendung enthalten. Im folgenden Befehl ist *NameIhrerAnwendung* der Name Ihrer Python-Anwendung und *PORT* ist die Portnummer, die Ihre Python-Anwendung zum Empfangen von Anforderungen von Benutzern der Anwendung verwenden muss. *$PORT* ist optional. Wenn Sie im Startbefehl PORT nicht angeben, wird stattdessen die Portnummer unter der Umgebungsvariablen `VCAP_APP_PORT` verwendet, die sich innerhalb der Anwendung befindet. 
+	Die Datei `Procfile` muss den Startbefehl für Ihre Python-Anwendung enthalten. Im folgenden Befehl ist *NameIhrerApp* der Name Ihrer Python-Anwendung und *PORT* ist die Portnummer, die Ihre Python-Anwendung zum Empfangen von Anforderungen von Benutzern der App verwenden muss. Bei *$PORT* handelt es sich um ein optionales Element. Wenn Sie im Startbefehl PORT nicht angeben, wird stattdessen die Portnummer unter der Umgebungsvariablen `VCAP_APP_PORT` verwendet, die sich innerhalb der App befindet. 
 	```
-	web: python <NameIhrerAnwendung>.py $PORT
+	web: python <NameIhrerApp>.py $PORT
 	```
 Sie können nun die Python-Bibliothek eines Drittanbieters in {{site.data.keyword.Bluemix_notm}} importieren.	
 
@@ -1461,7 +1457,7 @@ Es kann vorkommen, dass im Anwendungsprotokoll angezeigt wird, dass das Datentr�
 
  
 
-Die Fehlernachricht `Disk quota exceeded` (Datenträgerkontingent überschritten) wird im Protokoll der Anwendung angezeigt.
+Die Fehlernachricht `Disk quota exceeded` (Datenträgerkontingent überschritten) wird im Protokoll der App angezeigt.
 {: tsSymptoms}
 
 

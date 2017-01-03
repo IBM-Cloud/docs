@@ -9,12 +9,9 @@ lastupdated: "2016-10-19"
 # Creazione delle applicazioni mobili dal contenitore tipo starter {{site.data.keyword.mobilefirstbp}}
 {: #try_mobile}
 
-Ultimo aggiornamento: 19 ottobre 2016
-{: .last-updated}
-
 Puoi utilizzare ognuno dei servizi mobili {{site.data.keyword.Bluemix}} indipendentemente. Puoi anche utilizzarli insieme, con il contenitore tipo starter {{site.data.keyword.mobilefirstbp}}, per trarne il massimo vantaggio.
 
-Per iniziare, usa {{site.data.keyword.mobilefirstbp}} Starter per creare la tua applicazione. Il contenitore tipo ti abilita a completare le seguenti azioni:
+Per iniziare, utilizza {{site.data.keyword.mobilefirstbp}} Starter per creare la tua applicazione. Il contenitore tipo ti permette di completare le seguenti azioni:
 
 * Crea un runtime Node.js con un'applicazione template. Puoi utilizzare questa applicazione per fornire funzioni lato server, come le API RESTful e i file statici. <!-- You can read more about operating this application in the Developing Mobile Backend section.-->
 * Fornisce un'istanza di ciascuno dei servizi mobili {{site.data.keyword.Bluemix_notm}} ed esegue il bind del servizio all'applicazione Node.js.
@@ -48,11 +45,11 @@ Puoi utilizzare tutti i servizi mobili {{site.data.keyword.Bluemix_notm}} insiem
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}} - icona di servizio"> <b>{{site.data.keyword.amashort}}</b><br/>Utilizza il servizio {{site.data.keyword.amafull}}  per proteggere le applicazioni Node.js e Liberty for Java ospitate su {{site.data.keyword.Bluemix_notm}}. Strumentando la tua applicazione mobile con SDK {{site.data.keyword.amashort}}, puoi richiedere agli utenti di eseguire il login per accedere ai servizi mobili {{site.data.keyword.Bluemix_notm}}. Oltre alle funzionalità di sicurezza, {{site.data.keyword.amashort}} raccoglie anche i dati di analisi per consentirti di monitorare le prestazioni delle applicazioni mobili e raccogliere i log client e le statistiche di utilizzo. </td>
-<td valign="top"><b>Provider di identità utente</b> <br/>Puoi utilizzare i seguenti provider di identità: <ul><li>Facebook</li><li>Google</li></ul></td>
+<td><img src="images/authentication_icon.png" alt="{{site.data.keyword.amashort}} - icona di servizio"> <b>{{site.data.keyword.amashort}}</b><br/>Utilizza il servizio {{site.data.keyword.amafull}}  per proteggere le applicazioni Node.js e Liberty for Java ospitate su {{site.data.keyword.Bluemix_notm}}. Strumentando la tua applicazione mobile con SDK {{site.data.keyword.amashort}}, puoi richiedere agli utenti di eseguire il login per accedere ai servizi mobili {{site.data.keyword.Bluemix_notm}}. <!-- In addition to security capabilities, {{site.data.keyword.amashort}} also gathers analytics data, so that you can monitor your mobile application performance and collect client logs and usage statistics.--> </td>
+<td valign="top"><b>Provider di identità utente</b> <br/>Puoi utilizzare i seguenti provider di identità: <ul><li>Facebook</li><li>Google</li><li> Personalizzata </li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Icona di servizio Push Notifications"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>Il servizio  {{site.data.keyword.mobilepushfull}}  indirizzate alle piattaforme mobili (iOS & Android) e alle applicazioni browser web. Questo servizio gestisce l'associazione dei tuoi utenti delle applicazioni ai loro dispositivi, alla loro piattaforma del dispositivo e ai browser e gestisce l'invio delle notifiche di push ai sottoscrittori. Con questo servizio, puoi inviare broadcast, unicast (basati su ID utente e ID dispositivo) e tag (o argomenti) basati sulle notifiche di push ai tuoi clienti. </td>
+<td><img src="images/push_icon.png" alt="Icona di servizio Push Notifications"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>Il servizio  {{site.data.keyword.mobilepushfull}}  indirizzate alle piattaforme mobili (iOS & Android) e alle applicazioni browser web. Questo servizio gestisce l'associazione dei tuoi utenti delle applicazioni ai loro dispositivi, alla loro piattaforma del dispositivo e ai browser e gestisce l'invio delle notifiche di push ai sottoscrittori. Con questo servizio, puoi inviare broadcast, unicast (basati su ID utente e ID dispositivo) e tag (o argomenti) basati sulle notifiche di push ai tuoi clienti.</td>
 <td valign="top"><b>Provider di servizi di push</b><ul><li>APNS (Apple Push Notifications Service)</li><li>FCM (Firebase Cloud Messaging)</li></ul></td>
 </tr>
 <tr>

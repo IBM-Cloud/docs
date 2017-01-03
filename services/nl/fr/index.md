@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 #Services
 {: #services}
-*Dernière mise à jour : 10 août 2016*
 
 {{site.data.keyword.Bluemix_notm}} simplifie l'implémentation, l'hébergement et la mise à l'échelle des services et des applications. Ainsi,
 vous pouvez vous consacrer à la logique et à la conception de l'application.
@@ -25,26 +25,20 @@ suivant décrit les informations de support générales pour les services {{site
 |:------|:--------------|:--------------|
 |IBM	|Service fourni par IBM et généralement disponible.	|Les problèmes considérés comme un défaut d'un service fourni par IBM généralement disponible sont traités. Le support dépend de la
 gravité que vous définissez. Pour plus d'informations sur la gravité des tickets, voir
-[Contacter le service de support](../support/index.html#contacting-bluemix-support){: new_window}.|
-|Tiers	|Service fourni par une société autre qu'IBM.	|Le support des services de tiers est assuré par le fournisseur de service. Si IBM examine un
-problème et détermine qu'il s'agit d'un défaut d'un service de tiers, elle n'est pas obligée de fournir un correctif. IBM partagera son analyse avec le
-fournisseur de service de tiers si nécessaire.|
-|Communauté	|Service fourni par une communauté open source.	|Le support des services de communauté est assuré par la communauté des développeurs
-{{site.data.keyword.Bluemix_notm}}. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de communauté, elle n'est pas
-obligée de fournir un correctif.|
-|Bêta	|Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Un service bêta peut aider les équipes de développement et marketing à évaluer la valeur d'un service avant de le rendre généralement disponible.	|Les
-problèmes
-identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si
-applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](../support/index.html#contacting-bluemix-support){: new_window}.|
+[Contacter le service de support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+|Tiers	|Service fourni par une société autre qu'IBM.	|Le support des services de tiers est assuré par le fournisseur de service. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de tiers, elle n'est pas obligée de fournir un correctif. IBM partagera son analyse avec le fournisseur de service de tiers si nécessaire.|
+|Communauté	|Service fourni par une communauté open source.	|Le support des services de communauté est assuré par la communauté des développeurs {{site.data.keyword.Bluemix_notm}}. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de communauté, elle n'est pas obligée de fournir un correctif.|
+|Bêta	|Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Un service bêta peut aider les équipes de développement et marketing à évaluer la valeur d'un service avant de le rendre généralement disponible.	|Les problèmes identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
 *Tableau 1. Informations sur le support des services {{site.data.keyword.Bluemix_notm}}*
 
 ##Services expérimentaux
 {: #experimental_services}
 
 {{site.data.keyword.Bluemix_notm}}
-propose également des services expérimentaux que vous pouvez essayer. Pour examiner tous les services expérimentaux, boilerplates et contextes d'exécution,
-connectez-vous à {{site.data.keyword.Bluemix_notm}}, accédez au bas du catalogue et cliquez sur
-**{{site.data.keyword.Bluemix_notm}} Services expérimentaux**.
+propose également des services expérimentaux que vous pouvez essayer. Pour afficher tous les services expérimentaux, les conteneurs boilerplate et les
+contextes d'exécution disponibles, connectez-vous à la console {{site.data.keyword.Bluemix_notm}}, cliquez sur **Catalogue**,
+faites défiler le catalogue jusqu'à la fin, puis cliquez sur **Services expérimentaux
+{{site.data.keyword.Bluemix_notm}}**.
 
 Les services expérimentaux peuvent
 être instables et faire l'objet de modifications entraînant leur incompatibilité avec les versions précédentes. L'utilisation de ces services dans des
@@ -54,92 +48,110 @@ détermine qu'il s'agit d'un défaut d'un service expérimental, elle n'est pas 
 ##Services par région
 {: #services_region}
 
-Les services ne sont pas tous disponibles dans toutes les régions {{site.data.keyword.Bluemix_notm}}. Le tableau ci-dessous affiche le
-services qui sont fournis par IBM.
+Les services ne sont pas tous disponibles à l'achat dans toutes les régions {{site.data.keyword.Bluemix_notm}}. De plus, même si le
+service est disponible à l'achat dans une région, il se peut qu'il soit hébergé ailleurs. Le tableau ci-dessous répertorie les services qui sont fournis par
+IBM.
 
 
-
-|Service	|Disponible dans la région Sud des Etats-Unis	|Disponible dans la région Europe-Royaume-Uni |Disponible dans la région Australie-Sydney|
+|Service	|Disponible à l'achat à Dallas, aux Etats-Unis	|Disponible à l'achat à Londres, au Royaume-Uni |Disponible à l'achat à Sydney, en Australie|
 |:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.cloudaccesstrailshort}}			|Oui		|Non		|Non|
-|{{site.data.keyword.activedeployshort}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.alchemyapishort}} 		|Oui	   	|Oui  		|Oui|
-|{{site.data.keyword.alertnotificationshort}}		|Oui		|Oui			|Oui		|
-|{{site.data.keyword.appsecshort}}		|Oui		|Non		|Non|
-|{{site.data.keyword.appseccloudshort}}  |Oui  |Oui  |Oui  |
-|{{site.data.keyword.APS_DA}}			|Oui		|Non		|Non|
-|{{site.data.keyword.APS_MA}}			|Oui		|Non		|Non|
-|{{site.data.keyword.amashort}}			|Oui		|Oui		|Oui|
-|{{site.data.keyword.hadoopst}}			|Oui		|Non		|Non|
-|{{site.data.keyword.APIM}}			|Oui		|Oui		|Oui|
-|{{site.data.keyword.autoscaling}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.bigicloudst}}		|Oui		|Non		|Non|
-|{{site.data.keyword.blockstorageshort}}  |Non  |Oui  |Non|
-|{{site.data.keyword.rules_short}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.cloudint}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.cloudant}}			|Oui		|Oui		|Oui|
-|{{site.data.keyword.conceptexpansionshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.conceptinsightsshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.dashdbshort}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.datacshort}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.DB2OnCloud_short}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.deliverypipeline}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.dialogshort}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.documentconversionshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.creshort}}			|Oui		|Non		|Non|
-|{{site.data.keyword.game}}			|Oui		|Oui		|Oui|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|Oui	|Oui		|Oui|
-|{{site.data.keyword.GlobalizationPipeline_short}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.dataworks_short}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.twittershort}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.weather_short}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.IntegrationTestingshort}}	|Oui		|Oui		|Non|
-|{{site.data.keyword.iot_short}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.keymanagementserviceshort}}	|Oui		|Oui		|Non|
-|{{site.data.keyword.languagetranslationshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.messagehub}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.messageresonanceshort}}	|Oui		|Oui		|Non|
-|{{site.data.keyword.APS_MAiOS}} 		|Oui		|Non		|Non|
-|{{site.data.keyword.macm_short}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.mobilemam}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.mobiledata}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.manda}}			|Oui		|Oui		|Oui|
-|{{site.data.keyword.mqa}}			|Oui		|Oui		|Oui|
-|{{site.data.keyword.mql}}			|Oui		|Oui		|Oui|
-|{{site.data.keyword.nlclassifierlshort}} 	|Oui 		|Oui 		|Oui|
-|{{site.data.keyword.objectstorageshort}}	|Oui		|Oui		|Non|
-|{{site.data.keyword.personalityinsightsshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.mobilepush}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.mobilepushshort}}				|Oui		|Oui		|Oui|
-|{{site.data.keyword.questionandanswershort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.rapidApps}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.relationshipextractionshort}}	|Oui	|Oui		|Oui|
-|{{site.data.keyword.retrieveandrankshort}}	|Oui 		|Oui 		|Oui|
-|{{site.data.keyword.SecureGateway}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.servicediscoveryshort}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.serviceproxyshort}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.sescashort}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.ssofull}}			|Oui		|Non		|Non|
-|{{site.data.keyword.speechtotextshort}}	|Oui 		|Oui	 	|Oui|
-|{{site.data.keyword.sqldb}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.staticanalyzershort}}	|Oui		|Oui		|Non|
-|{{site.data.keyword.streaminganalyticsshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.texttospeechshort}} 	|Oui 		|Oui	 	|Oui|
-|{{site.data.keyword.times}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.toneanalyzershort}} 	|Oui 		|Oui 		|Oui|
-|{{site.data.keyword.trackplan}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.visualinsightsshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.visualizationrenderingshort}} |Oui		|Oui		|Non|
-|{{site.data.keyword.workflow}}			|Oui		|Oui		|Oui|
-|{{site.data.keyword.workloadscheduler}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.xpagesservice_short}}	|Oui		|Oui		|Non|
+|{{site.data.keyword.cloudaccesstrailshort}}			|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
+|{{site.data.keyword.activedeployshort}}			|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région |
+|{{site.data.keyword.alchemyapishort}} 		|Hébergé à Dallas, aux Etats-Unis	   	|Hébergé à Dallas, aux Etats-Unis  		|Hébergé à Dallas, aux Etats-Unis |
+|{{site.data.keyword.alertnotificationshort}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni			|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.appseccloudshort}}  |Hébergé à Dallas, aux Etats-Unis  |Hébergé à Dallas, aux Etats-Unis  |Hébergé à Dallas, aux Etats-Unis  |
+|Apache Spark			|Hébergé à Dallas, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région|
+|{{site.data.keyword.apiconnect_short}}			|Hébergé dans le Sud des Etats-Unis		|Hébergé au Royaume-Uni		|Hébergé à Sydney |
+|{{site.data.keyword.APIHarmony}}			|Hébergé dans le Sud des Etats-Unis		|Hébergé au Royaume-Uni		|Hébergé à Sydney |
+|Automated Accessibility Tester			|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.autoscaling}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.prf_hubshort}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.bigicloudst}}		|Hébergé à Dallas, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région |
+|{{site.data.keyword.blockchain}}  |Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.rules_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|CDN			|Hébergé à Dallas, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région |
+|{{site.data.keyword.conversationshort}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis |
+|{{site.data.keyword.iotmapinsights_short}}			|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|Cloud Foundry Runtimes		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.cloudant}}			|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.composeForEtcd}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.composeForMongoDB}}			|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.composeForPostgreSQL}}			|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.composeForRethinkDB}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.composeForRabbitMQ}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.composeForRedis}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.conceptinsightsshort}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis |
+|{{site.data.keyword.dashdbshort}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney |
+|{{site.data.keyword.datacshort}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.DB2OnCloud_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.deliverypipeline}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis |
+|Analyse des risques liés au déploiement		|Hébergé à Dallas, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région |
+|Digital Content Checker		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.documentconversionshort}}	|Hébergé à Houston, au Etats-Unis		|Hébergé à Houston, au Etats-Unis		|Hébergé à Houston, au Etats-Unis |
+|{{site.data.keyword.docgen_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région |
+|Elasticsearch by Compose	|Hébergé à Dallas, aux Etats-Unis et en Virginie du Nord, aux Etats-Unis	|Hébergé à Londres, au Royaume-Uni et en Irlande		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.geospatialshort_Geospatial}}	|Hébergé à Dallas, aux Etats-Unis	|Hébergé à Londres, au Royaume-Uni		|Hébergé à Londres, au Royaume-Uni |
+|{{site.data.keyword.GlobalizationPipeline_short}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.dataworks_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région |
+|{{site.data.keyword.openwhisk}}		|Hébergé à Dallas, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région |
+|{{site.data.keyword.containerlong}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région |
+|{{site.data.keyword.datastagefull}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.graphshort}}       |Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Indisponible dans la région |
+|{{site.data.keyword.mdmcloudfull}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|Identity Mixer		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.IOCloud_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.twittershort}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.IntegrationTestingshort}}	|Hébergé à San Jose, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région|
+|{{site.data.keyword.iot4auto_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie|
+|{{site.data.keyword.iotelectronics}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie|
+|{{site.data.keyword.iotinsurance_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie|
+|{{site.data.keyword.iot_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
+|{{site.data.keyword.iotrtinsights_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie|
+|IoT Workbench		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie|
+|{{site.data.keyword.keymanagementserviceshort}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
+|{{site.data.keyword.languagetranslationshort}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis |
+|{{site.data.keyword.pm_short}}   |Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
+|{{site.data.keyword.eventhubshort}}		|Hébergé à Dallas, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région|
+|{{site.data.keyword.messagehub}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
+|{{site.data.keyword.incubator}}		|Hébergé à Dallas, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région|
+|{{site.data.keyword.mobileanalytics_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
+|{{site.data.keyword.amashort}}			|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni			|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.macm_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni			|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.mobilefoundation_short}}			|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni			|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.mqa}}			|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni			|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.manda}}			|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.mql}}			|Indisponible dans la région		|Indisponible dans la région		|Hébergé à Sydney, en Australie |
+|Network Security Groups for VMs 	|Indisponible dans la région		|Hébergé à Dallas, aux Etats-Unis		|Indisponible dans la région |
+|{{site.data.keyword.nlclassifierlshort}} 	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis |
+|{{site.data.keyword.objectstorageshort}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
+|Open Toolchain			|Hébergé à Dallas, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région|
+|{{site.data.keyword.personalityinsightsshort}}	|Hébergé à Houston, au Etats-Unis		|Hébergé à Houston, au Etats-Unis		|Hébergé à Houston, au Etats-Unis |
+|{{site.data.keyword.mobilepushshort}}				|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni			|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.runbook_short}}				|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni			|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.SecureGateway}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.sescashort}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.servicediscoveryshort}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
+|{{site.data.keyword.serviceproxyshort}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
+|{{site.data.keyword.ssofull}}			|Hébergé à Washington, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région|
+|{{site.data.keyword.speechtotextshort}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis |
+|{{site.data.keyword.streaminganalyticsshort}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Londres, au Royaume-Uni|
+|{{site.data.keyword.texttospeechshort}} 	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis |
+|{{site.data.keyword.toneanalyzershort}} 	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis |
+|{{site.data.keyword.trackplan}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.tradeoffanalyticsshort}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis |
+|Visual Recognition	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis |
+|réseau privé virtuel			|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
+|{{site.data.keyword.weather_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.appserver_short}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
+|{{site.data.keyword.workloadscheduler}}	|Hébergé à Dallas et à Washington, aux Etats-Unis		|Hébergé à Amsterdam, aux Pays-Bas et à Milan en Italie		|Hébergé à Melbourne, en Australie |
+|{{site.data.keyword.xpagesservice_short}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
 *Tableau 2. Disponibilité des services*
+
 
 ## Disponibilité ininterrompue des services
 {: #services_availability}
 {{site.data.keyword.Bluemix_notm}} a identifié un ensemble de services de niveau 1. Elle ne retirera aucun service de niveau 1 sans proposer
-de fonction équivalente ou vous aviser de son retrait au moins cinq ans à l'avance. 
+de fonction équivalente ou vous aviser de son retrait au moins cinq ans à l'avance.
 
 Les services suivants ont été classés dans le niveau 1 :
   * {{site.data.keyword.apiconnect_short}}
@@ -153,12 +165,11 @@ Les services suivants ont été classés dans le niveau 1 :
   * PostgresSQL by Compose
   * {{site.data.keyword.ssofull}}
 
-Pour en savoir plus sur les conditions d'utilisation des services, voir
-[Conditions d'utilisation de {{site.data.keyword.Bluemix_notm}}](../navigation/notices.html#terms).
+Pour en savoir plus sur les conditions d'utilisation des services, voir [Conditions d'utilisation de {{site.data.keyword.Bluemix_notm}}](/docs/navigation/notices.html#terms).
 
 ## Obsolescence de service
 {: #service_deprecation}
 
 IBM vous avisera au moins 30 jours à l'avance de son intention d'arrêter ou de remplacer
 un service disponible. Si un remplacement équivalent n'est pas fourni, pendant au moins 12 mois à compter de cet annonce, IBM utilisera tout moyen
-commercialement disponible pour assurer le fonctionnement et le support des instances du service déployées auparavant. 
+commercialement disponible pour assurer le fonctionnement et le support des instances du service déployées auparavant.

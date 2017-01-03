@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # 記憶體限制與 Liberty 建置套件
 {: #memory_limits}
-
-前次更新：2016 年 6 月 10 日
-{: .last-updated}
 
 當您使用 Liberty 建置套件部署應用程式時，必須指定記憶體限制。
 

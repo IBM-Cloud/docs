@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-21"
 
 ---
 
@@ -12,9 +13,6 @@ copyright:
 
 # Using the Insights for Twitter REST APIs
 {: #rest_apis}
-
-*Last updated: 18 July 2016*
-{: .last-updated}
 
 The {{site.data.keyword.twittershort}} service consists of RESTful APIs to search and consume Twitter content. The [Query language](twitter_rest_apis.html#querylanguage){: new.window} table lists the query terms that are supported by the service APIs. Examples are provided to demonstrate how queries can be constructed.
 {:shortdesc}

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  anni: 2016
+  year: 2016
 
-ultimo aggiornamento: "06-09-2016"
+lastupdated: "2016-09-06"
 
 ---
 

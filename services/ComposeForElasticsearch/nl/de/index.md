@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -14,10 +14,8 @@ copyright:
 # Einführung in Compose for Elasticsearch
 {: #getting-started-with-compose-for-elasticsearch}
 
-Letzte Aktualisierung: 20. September 2016
-{: .last-updated}
-
-{{site.data.keyword.composeForElasticsearch_full}} vereint die Leistung einer Engine für die Volltextsuche mit den Indexierungsfähigkeiten einer JSON-Dokument-Datenbank. Gemeinsam bilden sie ein leistungsfähiges Tool zur Analyse komplexer Daten bei großen Datenvolumen. Mit Elasticsearch kann Ihre Suche mit Genauigkeits-Scores bewertet werden, was es Ihnen ermöglicht, Ihren Datensatz nach diesen jeweils größten Übereinstimmungen und Beinahe-Treffern zu durchsuchen, die Sie sonst überspringen würden.{:shortdesc}
+{{site.data.keyword.composeForElasticsearch_full}} vereint die Leistung einer Engine für die Volltextsuche mit den Indexierungsfähigkeiten einer JSON-Dokument-Datenbank. Gemeinsam bilden sie ein leistungsfähiges Tool zur Analyse komplexer Daten bei großen Datenvolumen. Mit Elasticsearch kann Ihre Suche mit Genauigkeits-Scores bewertet werden, was es Ihnen ermöglicht, Ihren Datensatz nach diesen jeweils größten Übereinstimmungen und Beinahe-Treffern zu durchsuchen, die Sie sonst überspringen würden.
+{:shortdesc}
 
 **Hinweis:** Alle Compose-Serviceinstanzen, die vor dem 14. September 2016 bereitgestellt wurden und noch aktiv sind, können weiterhin verwendet werden und sind über [https://www.compose.com/](https://www.compose.com) zugänglich. Jede Compose-Serviceinstanz, die ab diesem Punkt bereitgestellt wird, ist direkt über Ihr Bluemix-Konto zugänglich und kann dort verwendet werden.
 
@@ -45,6 +43,7 @@ Feldname|Beschreibung
 `deployment_id`|Eine interne ID für den Service entsprechend der Erstellung in Compose.
 `db_type`|Der Datenbanktyp, der vom Service angeboten wird, in diesem Fall `elastic_search`.
 `name`|Der Name der Datenbankimplementierung.
+{: caption="Table 1. {{site.data.keyword.composeForElasticsearch}} - Berechtigungsnachweise" caption-side="top"}
 
 **Hinweis:** Zwei `haproxy`-Portale bieten Zugriff auf den Elasticsearch-Cluster. Sowohl `uri` als auch `uri_direct_1` können für die Verbindung zum Cluster verwendet werden. In Ihrer Anwendung wechseln Sie zwischen `uri` und `uri_direct_1`, um die Reaktionen auf Verbindungsfehler zu verwalten.
 

@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-09"
 
 ---
 
@@ -17,8 +13,7 @@ copyright:
 {:pre: .pre}
 
 # Introdução ao {{site.data.keyword.openwhisk_short}} (Beta)
-Última atualização: 9 de setembro de 2016
-{: .last-updated}
+
 
 O {{site.data.keyword.openwhisk}} é um serviço de cálculo distribuído, orientado para eventos também referido como Cálculo sem servidor ou como Função como um serviço (FaaS), o
 {{site.data.keyword.openwhisk_short}} executa uma lógica de aplicativo em resposta a eventos ou chamadas diretas a partir de aplicativos da web ou móveis sobre HTTP. Os eventos
@@ -30,18 +25,29 @@ escala e resiliência inerentes, além de utilização ideal. Você paga somente
 
 Para obter mais detalhes sobre como o {{site.data.keyword.openwhisk_short}} funciona, consulte [Sobre o {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
+É possível usar o Navegador ou a CLI para desenvolver os seus aplicativos {{site.data.keyword.openwhisk_short}}.
+Ambos têm recursos semelhantes para desenvolver aplicativos; a CLI fornece mais controle sobre a sua implementação e as operações.
+
+
+## Desenvolver em seu navegador
+{: #openwhisk_start_editor}
+
+Teste o {{site.data.keyword.openwhisk_short}} e seu [Navegador](https://console.{DomainName}/openwhisk/editor){: new_window} para
+criar ações, automatizar ações usando acionadores e explorar pacotes públicos.
+Visite a página [saiba mais](https://console.{DomainName}/openwhisk/learn){: new_window} para um tour rápido da Interface com o Usuário do OpenWhisk.
+
 ## Configurando a CLI do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_configure_cli}
 
-É possível usar a interface da linha de comandos (CLI) do {{site.data.keyword.openwhisk_short}} para configurar o namespace e a chave de autorização. 
-Acesse [Configurar CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e siga as instruções para instalá-la. 
+É possível usar a interface da linha de comandos (CLI) do {{site.data.keyword.openwhisk_short}} para configurar o namespace e a chave de autorização.
+Acesse [Configurar CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window} e siga as instruções para instalá-la.
 
 ### Configure a CLI para usar um proxy HTTPS
+{: #openwhisk_configure_https_proxy_cli}
 
 A CLI pode ser configurada para usar um proxy HTTPS. Para configurar um proxy HTTPS, uma variável de ambiente chamada `HTTPS_PROXY` deve
  ser criada. A variável deve ser configurada para o endereço do proxy HTTPS e a sua porta usando o formato a seguir:
 `{PROXY IP}:{PROXY PORT}`.
-
 
 Após o {{site.data.keyword.openwhisk_short}} ser configurado com a CLI,
 será possível iniciá-lo a partir da linha de comandos.
@@ -49,7 +55,7 @@ será possível iniciá-lo a partir da linha de comandos.
 ## Usando o CLI do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_using_cli}
 
-Após ter configurado seu ambiente, será possível iniciar o uso da CLI do {{site.data.keyword.openwhisk_short}} para executar o seguinte:
+Depois de ter [configurado seu ambiente](https://new-console.{DomainName}/openwhisk/cli){: new_window}, é possível começar a usar a CLI do {{site.data.keyword.openwhisk_short}} para executar o seguinte:
 
 * Executar os fragmentos de código ou ações no {{site.data.keyword.openwhisk_short}}. Consulte [Criando e chamando ações](./openwhisk_actions.html).
 * Usar acionadores e regras para ativar suas ações para responder a eventos. Consulte [Criando acionadores e regras](./openwhisk_triggers_rules.html).

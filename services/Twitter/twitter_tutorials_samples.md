@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,9 +13,6 @@
 
 # Insights for Twitter examples
 {: #examples}
-
-*Last updated: 13 May 2016*
-{: .last-updated}
 
 To get started with the {{site.data.keyword.twittershort}} service, use the provided samples to gain an understanding of how to leverage the service.
 {: shortdesc}

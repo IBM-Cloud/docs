@@ -15,7 +15,7 @@ copyright:
 上次更新时间：2016 年 7 月 20 日
 {: .last-updated}
 
-在某些环境（如 [Bluemix Dedicated](../../dedicated/index.html#dedicated) 和 [Bluemix Local](../../local/index.html#local)）中，可以对代理进行设置，以影响应用程序在编译打包和运行时的行为。
+在某些环境（如 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) 和 [Bluemix Local](/docs/local/index.html#local)）中，可以对代理进行设置，以影响应用程序在编译打包和运行时的行为。
 
 
 您可以使用以下环境变量，对应用程序进行配置，以使用代理：
@@ -34,7 +34,7 @@ copyright:
 ## Java 应用程序
 {: #java_apps}
 
-对于 [Liberty for Java](../runtimes/liberty/index.html) 和 [java_buildpack](../runtimes/tomcat/index.html) 应用程序，可以通过 **JAVA_OPTS** 环境变量将代理设置传递给运行时。例如，可以发出以下命令： 
+对于 [Liberty for Java](/docs/runtimes/liberty/index.html) 和 [java_buildpack](/docs/runtimes/tomcat/index.html) 应用程序，可以通过 **JAVA_OPTS** 环境变量将代理设置传递给运行时。例如，可以发出以下命令： 
 ```
    $ cf se myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
@@ -46,5 +46,5 @@ copyright:
 {: #rellinks}
 ## 常规
 {: #general}
-* [Liberty for Java](../runtimes/liberty/index.html)
-* [SDK for Nodejs](../runtimes/nodejs/index.html)
+* [Liberty for Java](/docs/runtimes/liberty/index.html)
+* [SDK for Nodejs](/docs/runtimes/nodejs/index.html)

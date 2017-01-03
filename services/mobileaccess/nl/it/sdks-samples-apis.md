@@ -2,16 +2,18 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
----
+lastupdated: "2016-10-25"
 
+---
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 
 # {{site.data.keyword.amashort}} SDK, esempi e guida di riferimento alle API
 
 
-Per aggiungere degli SDK {{site.data.keyword.amafull}} alla tua applicazione, scegli quelli che vuoi utilizzare. Quindi configura il tuo gestore dipendenze per inserire gli SDK nella tua applicazione.
+Per aggiungere delle SDK {{site.data.keyword.amafull}} alla tua applicazione client, scegli quelli che vuoi utilizzare. Quindi configura il tuo gestore dipendenze per inserire gli SDK nella tua applicazione.
 {:shortdesc}
 
 **Nota:** le seguenti sezioni forniscono ulteriori informazioni sull'installazione degli SDK.
@@ -19,7 +21,7 @@ Per aggiungere degli SDK {{site.data.keyword.amafull}} alla tua applicazione, sc
 ## SDK Core
 {: #coresdk}
 
-L'SDK Core include le API per abilitare l'autenticazione personalizzata, il monitoraggio e la registrazione in log nella tua applicazione mobile.
+L'SDK Core include le API per abilitare l'autenticazione e l'accesso personalizzati.
 
 ### Android
 {: #coresdk-android}
@@ -30,7 +32,7 @@ L'SDK Core include le API per abilitare l'autenticazione personalizzata, il moni
 #### Installa l'SDK Core con Gradle
 {: #coresdk-android-gradle}
 
-Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua applicaizone:
+Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua applicazione:
 
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
@@ -83,7 +85,7 @@ pod 'IMFCore'
 
 Installa il plugin Mobile Client Access Cordova:
 ```Bash
-cordova plugin add ibm-mfp-core
+cordova plugin add bms-core
 ```
 {: codeblock}
 
@@ -99,7 +101,7 @@ cordova plugin add ibm-mfp-core
 #### Installa l'SDK Facebook con Gradle
 {: #facebooksdk-android-gradle}
 
-Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua applicaizone:
+Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua applicazione:
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
     	name:'facebookauthentication',
@@ -168,7 +170,7 @@ cordova plugin add ibm-mfp-core
 #### Installa l'SDK Google+ con Gradle
 {: #googlesdk-android-gradle}
 
-Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua applicaizone:
+Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua applicazione:
 
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    

@@ -2,25 +2,31 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
----
-{:shortdesc: .shortdesc}
-{:screen:.screen}
+lastupdated: "2016-12-05"
 
+---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Android SDK のセットアップ
 {: #getting-started-android}
 
 Android アプリケーションに {{site.data.keyword.amafull}} Client SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
-
-
-{:shortdesc}
+{: shortdesc}
 
 ## 開始する前に
 {: #before-you-begin}
+
 以下が必要です。
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
-* サービス・パラメーター値。{{site.data.keyword.Bluemix_notm}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**をクリックします。`applicationRoute` および `tenantId` (`appGUID` とも呼ばれる) の値が、**「経路」**および**「アプリ GUID」/「TenantId」**フィールドに表示されます。これらの値は、SDK を初期化するため、および要求をバックエンド・アプリケーションに送信するために必要になります。
+
+* {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。
+* {{site.data.keyword.amafull}} サービスのインスタンス。
+* **「TenantID」**。{{site.data.keyword.amafull}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
+* **「アプリケーションの経路 (Application Route)」**。これは、バックエンド・アプリケーションの URL です。保護されているエンドポイントに要求を送信するためにこの値が必要になります。
+* {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域の値は、`「米国南部」`、`「シドニー」`、または`「英国」`のいずれかでなければならず、またコードで必要な SDK 値 (`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、または `BMSClient.REGION_UK`) に対応している必要があります。{{site.data.keyword.amashort}} クライアントを初期化するためにこの値が必要になります。
 * Gradle と連動して機能するようにセットアップされた Android Studio プロジェクト。Android 開発環境のセットアップ方法について詳しくは、[Google Developer Tools](http://developer.android.com/sdk/index.html) を参照してください。
 
 ## {{site.data.keyword.amashort}} Client SDK のインストール
@@ -44,6 +50,7 @@ Android アプリケーションに {{site.data.keyword.amafull}} Client SDK を
     	// other dependencies  
 }
 ```
+	{: codeblock}
 
 1. プロジェクトを Gradle と同期化します。**「ツール」&gt;「Android」&gt;「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**とクリックします。
 
@@ -51,7 +58,8 @@ Android アプリケーションに {{site.data.keyword.amafull}} Client SDK を
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
-```
+	```
+	{: codeblock}
 
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #initalize-mca-sdk}
@@ -62,31 +70,30 @@ Android アプリケーションに {{site.data.keyword.amafull}} Client SDK を
   BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 					
   BMSClient.getInstance().setAuthorizationManager(
-                 MCAAuthorizationManager.createInstance(this, "MCAServiceTenantId"));
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
+						
+	```
+{: codeblock}
 
-```
+* `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} サービスがホストされている地域に置き換えます。
+* `<MCAServiceTenantId>` を**「tenantId」** 
 
-   * `
-BMSClient.REGION_UK` は適切な地域に置き換えてください。 	
-
-{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
-
-地域値は、`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、または `BMSClient.REGION_UK` のうちいずれかのはずです。
-   * 「MCAServiceTenantId」を **tenantId** 値 (『[開始する前に](#before-you-begin)』を参照) に置き換えます。 
+に置き換えます。
+これらの値について詳しくは、[開始する前に](#before-you-begin)を参照してください。
 
 ## モバイル・バックエンド・アプリケーションへの要求の実行
 {: #request}
 
 {{site.data.keyword.amashort}} Client SDK が初期化された後、モバイル・バックエンド・アプリケーションに要求を出すことができるようになります。
 
-1. 新しいモバイル・バックエンド・アプリケーションの、保護されたエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` (例えば、`http://my-mobile-backend.mybluemix.net/protected`)`{applicationRoute}` 値の取得については、『[開始する前に](#before-you-begin)』を参照してください。 
-	
+1. モバイル・バックエンド・アプリケーションの、保護されたエンドポイントに要求を送信してみてください。ブラウザーで次の URL を開きます。`{applicationRoute}/protected` (例えば、`http://my-mobile-backend.mybluemix.net/protected`)   
+
 	MobileFirst Services Starter ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントにアクセスできるのは、{{site.data.keyword.amashort}} Client SDK が装備されたモバイル・アプリケーションのみであるため、ブラウザーに `Unauthorized` メッセージが返されます。
 
 1. Android アプリケーションを使用して、同じエンドポイントへ要求を出します。`BMSClient` を初期化した後に、以下のコードを追加してください。
 
 	```Java
-	Request request = new Request("/protected", Request.GET);
+	Request request = new Request("http://my-mobile-backend.mybluemix.net/protected", Request.GET);
 	request.send(this, new ResponseListener() {
 		@Override
 		public void onSuccess (Response response) {
@@ -104,6 +111,7 @@ BMSClient.REGION_UK` は適切な地域に置き換えてください。
 		}
 	});
 	```
+	{: codeblock}
 
 1. 要求が正常に実行されると、LogCat ユーティリティーで以下の出力が表示されます。
 
@@ -113,6 +121,7 @@ BMSClient.REGION_UK` は適切な地域に置き換えてください。
 {: #next-steps}
 
 保護されているエンドポイントに繋がった場合、資格情報は必要とされません。アプリケーションにユーザーのログインを要求する場合、Facebook、Google またはカスタム認証を構成する必要があります。
+
 * [Facebook](facebook-auth-android.html)
 * [Google](google-auth-android.html)
 * [カスタム](custom-auth-android.html)

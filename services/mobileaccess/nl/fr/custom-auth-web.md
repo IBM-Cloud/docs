@@ -2,16 +2,17 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-12-05"
 
 ---
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 #Configuration d'une authentification personnalisée pour les applications Web {{site.data.keyword.amashort}}
 {: #custom-web}
-
 
 Ajoutez une authentification personnalisée et une fonctionnalité de sécurité {{site.data.keyword.amafull}} à votre application Web.
 
@@ -20,9 +21,13 @@ Ajoutez une authentification personnalisée et une fonctionnalité de sécurité
 
 Avant de commencer, vous devez disposer des éléments suivants :
 
-* Une application Web. 
-* Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'une application back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html).
-* L'URI de redirection finale (à l'issue du processus d'autorisation).
+* Une appli Web.
+* Ressource protégée par une instance du service {{site.data.keyword.amashort}} qui est configurée pour utiliser un fournisseur d'identité personnalisé (voir [Configuration de l'authentification personnalisée](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur le bouton **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
+* Nom de votre **Realm**. Il s'agit de la valeur que vous avez spécifiée dans la zone **Nom du domaine** de la section **Personnalisé** dans l'onglet **Gestion** du tableau de bord de {{site.data.keyword.amashort}}.
+* L'URL de votre application back-end (**Route de l'application**). Vous aurez besoin de ces valeurs pour envoyer des requêtes aux noeuds finaux protégés de votre application back end.
+* Votre **région** {{site.data.keyword.Bluemix_notm}}. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`, `United Kingdom` ou `Sydney`, et correspondre aux valeurs requises dans le code Javascript : `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` ou `BMSClient.REGION_UK`. Vous aurez besoin de cette valeur pour initialiser le client {{site.data.keyword.amashort}}.
+* L'URI de redirection finale (au terme du processus d'autorisation). Il s'agit de la valeur **Vos URI de redirection d'application Web** que vous avez saisie dans la section **Personnalisé** de l'onglet **Gestion**.
 
 Pour plus d'informations, voir :
 
@@ -105,30 +110,29 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 Une fois que vous avez configuré votre fournisseur d'identité personnalisé, vous pouvez activer l'authentification personnalisée dans le tableau de bord
 {{site.data.keyword.amashort}} . 
 
-1. Ouvrez le tableau de bord {{site.data.keyword.Bluemix_notm}}. 
-2. Cliquez sur la vignette de l'application {{site.data.keyword.amashort}} pertinente. Le tableau de bord de l'application est chargé. 
-3. Cliquez sur le bouton **Configurer** sur la vignette Personnalisé. 
-4. Dans la zone de texte **Nom de domaine**, entrez le nom de domaine configuré dans votre noeud final de gestionnaire de fournisseur
-d'identité personnalisé.
-5. Entrez l'URL du fournisseur d'identité personnalisé. 
-6. Entrez l'URI de redirection d'application Web à utiliser par le tableau de bord {{site.data.keyword.amashort}} après l'aboutissement de
-l'authentification. 
-7. Enregistrez. 
+1. Ouvrez votre service dans le tableau de bord {{site.data.keyword.amashort}}.
+1. Dans l'onglet **Gérer**, activez **Autorisation**.
+1. Développez la section **Personnalisé**.
+1. Entrez le **Nom de domaine**, **URL de fournisseur d'identité personnalisé**. 
+1. Entrez la valeur de **Vos URI de redirection d'application Web**. Il s'agit de l'URI de la redirection finale après autorisation réussie.
+1. Cliquez sur **Sauvegarder**.
 
 
 ##Implémentation du flux d'autorisation {{site.data.keyword.amashort}} à l'aide d'un fournisseur d'identité personnalisé
 {: #custom-auth-flow}
 
-La variable d'environnement `VCAP_SERVICES` est créée automatiquement pour chaque instance de service {{site.data.keyword.amashort}} et contient les propriétés requises pour le processus d'autorisation. Elle est constituée d'un objet JSON et peut être affichée en cliquant sur **Variables d'environnement** dans la barre de navigation sur le côté gauche de votre application.
+La variable d'environnement `VCAP_SERVICES` est créée automatiquement pour chaque instance de service {{site.data.keyword.amashort}} et contient les propriétés requises pour le processus d'autorisation. Elle se compose d'un objet JSON et vous pouvez la visualiser dans l'onglet **Données d'identification pour le service** du tableau de bord de {{site.data.keyword.amashort}}.
 
 Pour demander l'autorisation de l'utilisateur, redirigez le navigateur vers le noeud final du serveur d'autorisation. Pour ce faire, procédez comme suit : 
 
-1. Identifiez le noeud final d'autorisation (`authorizationEndpoint`) et l'ID client
-(`clientId`) depuis les données d'identification du service stockées dans la variable d'environnement
-`VCAP_SERVICES`. 
+1. Extrayez le noeud final d'autorisation (`authorizationEndpoint`) et l'ID client ID (`clientId`) depuis les données d'identification du service stockées dans la variable `VCAP_SERVICES`. 
+
+	`var cfEnv = require("cfenv");` 
+
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**Remarque :** si vous avez ajouté le service {{site.data.keyword.amashort}} dans votre application avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. A la place, utilisez les URL suivantes, selon votre région {{site.data.keyword.Bluemix_notm}} : 
-  
+
 	Sud des Etats-Unis : 
 
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
@@ -147,7 +151,7 @@ Pour demander l'autorisation de l'utilisateur, redirigez le navigateur vers le n
 
 3. Redirigez l'utilisateur depuis votre application Web vers l'URI généré. 
 
-	L'exemple suivant extrait les paramètres depuis la variable `VCAP_SERVICES`,
+   L'exemple suivant extrait les paramètres depuis la variable `VCAP_SERVICES`,
 construit l'URL et envoie la demande de redirection.
 
 	```Java
@@ -201,17 +205,17 @@ d'identification du service stockées dans la variable d'environnement `VCAP_SER
 	**Remarque :** si vous avez ajouté le service {{site.data.keyword.amashort}} dans votre application avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. A la place, utilisez les URL suivantes, selon votre région {{site.data.keyword.Bluemix_notm}} : 
 
 	Sud des Etats-Unis : 
-  
+
 	`     https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
  `
- 
+
 	Londres : 
- 
+	
 	`     https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
  ` 
  
 	Sydney : 
- 
+
 	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
  `
  
@@ -225,13 +229,13 @@ d'authentification HTTP de base.
     var tokenEndpoint = mcaCredentials.tokenEndpoint; 
 
 		var formData = { 
-			grant_type: "authorization_code",
-      client_id: mcaCredentials.clientId,
-      redirect_uri: "http://some-server/oauth/callback",   // URI de redirection d'application Web
-      code: req.query.code
-    }
+			grant_type: "authorization_code", 
+			client_id: mcaCredentials.clientId, 
+			redirect_uri: "http://some-server/oauth/callback",   // Your Web application redirect uri 
+			code: req.query.code 
+		} 
 
-  request.post({ 
+		request.post({ 
 			url: tokenEndpoint,
     formData: formData
     }, function (err, response, body){ 
@@ -279,7 +283,4 @@ Le jeton d'accès permet une communication avec les ressources protégées par l
 * Les éléments `<accessToken>` et `<idToken>` doivent être séparés par un espace.
 
 * Le jeton d'identité est facultatif. Si vous l'omettez, il est possible d'accéder à la ressource protégée, mais sans recevoir
-d'informations sur l'utilisateur autorisé. 
-
-
-
+d'informations sur l'utilisateur autorisé.

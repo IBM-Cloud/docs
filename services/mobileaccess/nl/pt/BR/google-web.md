@@ -56,7 +56,6 @@ Para iniciar o processo de autorização:
 	```
 
   O parâmetro `state` não está em uso por enquanto e pode permanecer vazio.
-  
 
   O URI do parâmetro `redirect_uri` é o redirecionamento após a autenticação bem-sucedida ou com falha com o Google.
   A resposta obtida após o redirecionamento contém o código de autorização nos parâmetros de consulta da solicitação.

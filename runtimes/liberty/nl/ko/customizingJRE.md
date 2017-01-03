@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-15"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 # JRE 사용자 정의
 {: #customizing_jre}
 
-마지막 업데이트 날짜: 2016년 8월 15일
-{: .last-updated}
-
 애플리케이션은 Liberty 빌드팩에 의해 제공되고 구성되는 Java 런타임 환경(JRE)에서 실행됩니다. 또한 Liberty 빌드팩은 JRE 버전 또는 유형을 구성하고 JVM 옵션을 사용자 정의하거나 JRE 기능을 오버레이할 수 있도록 합니다. 
 
 ## IBM JRE
@@ -22,7 +20,7 @@ copyright:
 
 기본적으로 IBM JRE 버전 8이 사용됩니다. JBP_CONFIG_IBMJDK 환경 변수를 사용하면 IBM JRE의 대체 버전을 지정할 수 있습니다. 예를 들어, 최신 IBM JRE 7.1을 사용하려면 다음 환경 변수를 설정하십시오. 
 ```
-$ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -33,14 +31,14 @@ $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 
 선택사항으로, 애플리케이션을 JRE로서 OpenJDK에서 실행되도록 구성할 수 있습니다. 애플리케이션이 OpenJDK로 실행되도록 하려면 JVM 환경 변수를 "openjdk"로 설정하십시오. 예를 들어, cf 명령행 도구를 사용하여 다음 명령을 실행하십시오. 
 ```
-$ cf set-env myapp JVM 'openjdk'
+    $ cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
 사용으로 설정되는 경우 기본적으로 OpenJDK 버전 8이 사용됩니다. JBP_CONFIG_OPENJDK 환경 변수를 사용하면 OpenJDK의 대체 버전을 지정할 수 있습니다. 예를 들어, 최신 OpenJDK 7을 사용하려면 다음 환경 변수를 설정하십시오.
 
 ```
-$ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -76,7 +74,7 @@ JVM 옵션은 Bluemix 환경에서 최적화를 제공하고 메모리 관련 �
 
 다음은 512M 메모리 제한을 적용하여 배치된 애플리케이션에 대한 빌드팩이 생성하는 기본 JVM 구성 예제입니다.    
 ```
--Xtune:virtualized
+    -Xtune:virtualized
     -Xmx384M
     -Xdump:none
     -Xdump:heap:defaults:file=../../../../../dumps/heapdump.%Y%m%d.%H%M%S.%pid.%seq.phd
@@ -110,7 +108,7 @@ JVM 옵션은 Bluemix 환경에서 최적화를 제공하고 메모리 관련 �
 <tr>
 <td> OpenJDK</td>
 <td>표준이 아닌 옵션에서는 -X로, 개발자 옵션에서는 -XX로 표시되는 HotSpot 런타임와 옵션의 사용 여부를 설정하는 부울 플래그를 기반으로 합니다.</td>
-<td>[HotSpot 런타임 개요](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html) </td>
+<td>[HotSpot 런타임 개요](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -175,7 +173,7 @@ JVM_ARGS 환경 변수를 통해 지정된 애플리케이션 정의 옵션을 �
 독립형 Java 애플리케이션에 대한 JVM 옵션은 명령행 옵션으로서 유지됩니다. 이 옵션은 staging_info.yml 파일에서 확인할 수 있습니다.
 
 ```
-$ cf files myapp staging_info.yml
+    $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
@@ -184,14 +182,14 @@ WAR, EAR, 서버 디렉토리 및 패키지된 서버 배치에 대한 JVM 옵�
 WAR, EAR 및 서버 디렉토리에 대한 jvm.options 파일을 보려면 다음 명령을 실행하십시오.
 
 ```
-$ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
 패키지된 서버의 jvm.options 파일을 보려면 <serverName>을 서버의 이름으로 대체하고 다음 명령을 실행하십시오.
 
 ```
-$ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
+    $ cf files myapp app/wlp/usr/servers/<serverName>jvm.options
 ```
 {: codeblock}
 
@@ -203,7 +201,7 @@ IBM JRE JVM 세부 가비지 콜렉션 로깅을 활성화하기 위해 사용�
 
 
   <pre>
-env:
+    env:
       JAVA_OPTS: "-verbose:gc -Xverbosegclog:./verbosegc.log,10,1000"
   </pre>
   {: codeblock}
@@ -212,14 +210,14 @@ env:
 
 
   <pre>
-$ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
+    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
   </pre>
   {: codeblock}    
 
 * 메모리 부족 조건에서 힙, 스냅 및 javacore를 트리거하도록 배치된 애플리케이션의 IBM JRE JVM 옵션을 업데이트하려면 애플리케이션의 환경 변수를 JVM 옵션과 함께 설정하고 애플리케이션을 다시 시작하십시오.
 
   <pre>
-$ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
+    $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
     $ cf restart myapp
   </pre>
   {: codeblock}
@@ -228,14 +226,15 @@ $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/l
 
 
   <pre>
-$ cf files myapp dumps
+    $ cf files myapp dumps
+
     Getting files for app myapp in org myemail@email.com / space dev as myemail@email.com...
     OK
 
-Snap.20141106.100252.81.0003.trc           307.3K
+    Snap.20141106.100252.81.0003.trc           307.3K
     heapdump.20141106.100252.81.0001.phd       3.9M
     javacore.20141106.100252.81.0002.txt     870.5K
-</pre>
+  </pre>
   {: codeblock}
 
 ### JRE 오버레이
@@ -279,7 +278,7 @@ Snap.20141106.100252.81.0003.trc           307.3K
 예를 들어, AES 256비트 암호화를 사용하려는 경우 이 Java 정책 파일을 오버레이해야 합니다.
 
 ```
-.java\jre\lib\security\US_export_policy.jar
+    .java\jre\lib\security\US_export_policy.jar
     .java\jre\lib\security\local_policy.jar
 ```
 {: codeblock}
@@ -287,7 +286,7 @@ Snap.20141106.100252.81.0003.trc           307.3K
 적절한 제한 없는 정책 파일을 다운로드하여 애플리케이션에 다음과 같이 추가하십시오.
 
 ```
-resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
+    resources\.java-overlay\.java\jre\lib\security\US_export_policy.jar
     resources\.java-overlay\.java\jre\lib\security\local_policy.jar
 ```
 {: codeblock}

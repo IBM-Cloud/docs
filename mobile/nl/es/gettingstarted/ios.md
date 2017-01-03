@@ -32,8 +32,7 @@ Si desea empezar a trabajar con una aplicación para iOS nueva, puede utilizar l
 
 	**Importante:** La appRoute debe utilizar un protocolo `https` y no `http`, o podría obtener un error de conexión, debido a los valores de seguridad del transporte de la app. Puede obtener más información sobre estos valores en la publicación del blog [Conecte la app de iOS 9 a Bluemix ahora mismo](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/).
 	
-4. En el simulador, pulse **Ping
-                {{site.data.keyword.Bluemix_notm}}**. La app de ejemplo obtiene la cabecera de autorización del servicio de Mobile Client Access. Si ping se ejecuta correctamente, el texto del simulador se actualiza.
+4. En el simulador, pulse **Ping {{site.data.keyword.Bluemix_notm}}**. La app de ejemplo obtiene la cabecera de autorización del servicio de Mobile Client Access. Si ping se ejecuta correctamente, el texto del simulador se actualiza.
 
   Cuando se conecte correctamente a {{site.data.keyword.Bluemix_notm}} desde la app móvil en Xcode, verá:
   `¡Se ha conectado!`
@@ -43,8 +42,8 @@ Si desea empezar a trabajar con una aplicación para iOS nueva, puede utilizar l
   ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
 -->
 
-  Si la conexión falla, verá:
-  `Bummer. Something went wrong`
+  Si la conexión falla, verá el mensaje:
+  `Algo salió mal`
   {: screen}
 
  <!--

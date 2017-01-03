@@ -26,7 +26,7 @@ The php_buildpack is used in the following conditions:
 ## Starter application
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} provides a PHP starter app.  The PHP starter application is a simple PHP app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the {site.data.keyword.Bluemix}}
+{{site.data.keyword.Bluemix}} provides a PHP starter app.  The PHP starter application is a simple PHP app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix}}
 environment.  See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter app.
 
 ## Runtime versions

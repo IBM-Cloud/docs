@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-12-05"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # 管理组织和空间
 {: #orgsspacesusers}
-上次更新时间：2016 年 10 月 20 日
-{: .last-updated}
 
 作为帐户所有者，您可以通过转至**管理组织**页面来管理组织。组织管理员还可以使用“管理组织”页面来管理自己被设置为其管理员的任何组织。
 {:shortdesc}
@@ -59,7 +57,7 @@ copyright:
 
 您必须联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}来删除组织。请求支持团队删除组织时，会删除该组织内的所有空间、应用程序和服务。
 
-以下[用户角色](users_roles.html#userrolesinfo)可以分配给组织中的团队成员：
+以下[用户角色](/docs/admin/users_roles.html#userrolesinfo)可以分配给组织中的团队成员：
 
 <ul>
 <li>组织管理员</li>
@@ -74,7 +72,7 @@ copyright:
 
 在组织内，您可以使用空间将一组应用程序、服务和团队成员分组在一起。空间与 {{site.data.keyword.Bluemix_notm}} 中的特定区域联系在一起。
 
-在将团队成员添加到组织之后，您可以对其授予空间的许可权。与组织类似，空间也具有一组[用户角色](users_roles.html#userrolesinfo)，这些角色带有分配给团队成员的特定许可权：
+在将团队成员添加到组织之后，您可以对其授予空间的许可权。与组织类似，空间也具有一组[用户角色](/docs/admin/users_roles.html#userrolesinfo)，这些角色带有分配给团队成员的特定许可权：
 
 <ul>
 <li>空间管理员</li>
@@ -148,16 +146,29 @@ copyright:
 ## 管理配额
 {: #managequota}
 
-作为帐户所有者或组织管理员，您可以查看已分配和已使用的组织配额。配额表示创建组织时为其分配的资源限制。组织的空间中任何应用程序或服务都会使用一定的配额。
+作为 {{site.data.keyword.Bluemix_notm}} 帐户所有者或组织管理员，您可以查看已使用和已分配的组织配额。配额表示创建组织时为其分配的资源限制。根据您是具有试用帐户还是计费帐户，组织可以使用的资源会有所不同。组织空间中的任何应用程序或服务都会使用一定的已分配的配额。
 
-要查看组织的配额，请完成以下步骤：
+要查看组织的已用和已分配的配额，请完成以下步骤：
 
 1. 单击**帐户** &gt; **管理组织**页面。
 2. 确定要查看其配额的组织，然后单击**查看详细信息**。
 3. 单击**编辑组织**。
-4. 选择**配额**选项卡。
+4. 如果您已在多个区域定义空间，请选择要查看的特定区域。
+5. 单击**配额**。 
+6. 缺省情况下会打开 **Cloud Foundry** 配额页面。您可以查看以下资源的配额详细信息：
 
-要更新组织的配额，必须开具支持凭单。有关开具支持凭单的更多信息，请参阅[获取客户支持](../support/index.html#contacting-support)。有关容器配额的更多信息，请参阅“容器”文档中的[配额](../containers/container_planning_org_ov.html##container_planning_quota)。
+ * 内存
+ * 服务
+ * 套餐
+ * 价格
+7. 单击**容器**以查看已用和可用的容器配额分配。容器分配根据价格套餐而有所不用。您可以查看以下资源的配额详细信息：
+
+ * 内存
+ * 公共 IP
+
+**注：**在 {{site.data.keyword.Bluemix_notm}} 悉尼区域中无法使用容器。 
+
+有关容器的更多信息，请参阅“容器”文档中的[配额](/docs/containers/container_planning_org_ov.html#container_planning_quota)。要更改为组织所分配的配额，必须开具支持凭单。有关开具支持凭单的更多信息，请参阅[获取客户支持](/docs/support/index.html#contacting-support)。 
 
 ## 管理域
 {: #managedomains}

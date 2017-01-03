@@ -16,10 +16,10 @@
 				"name": "IBM Bluemix OpenWhisk",
 				"href": "openwhisk/index.html"
 			}, {
-				"name": "컨테이너",
+				"name": "Containers",
 				"href": "containers/container_index.html"
 			}, {
-				"name": "가상 서버",
+				"name": "Virtual Servers",
 				"href": "virtualmachines/vm_index.html"
 			}]
 		}, {
@@ -123,7 +123,7 @@
 				"name": "Dialog",
 				"href": "services/Dialog/index.html"
 			}, {
-				"name": "문서 변환",
+				"name": "Document Conversion",
 				"href": "services/DocumentConversion/index.html"
 			}, {
 				"name": "Language Translation",
@@ -161,7 +161,7 @@
 			"img": "homepage/images/integration.svg",
 			"href": "services/integrate.html",
 			"links": [{
-				"name": "클라우드 통합",
+				"name": "Cloud Integration",
 				"href": "services/CloudIntegration/index.html"
 			}, {
 				"name": "Secure Gateway",

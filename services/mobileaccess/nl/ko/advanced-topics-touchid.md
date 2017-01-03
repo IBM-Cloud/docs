@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-27" 
+
 ---
 
 # Touch ID로 액세스 권한 부여

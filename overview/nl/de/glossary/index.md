@@ -3,8 +3,8 @@
  
 
 copyright:
-
-  years: 2014，2016
+  years: 2016
+lastupdated: "2016-10-31"
 
  
 
@@ -15,9 +15,6 @@ copyright:
 
 # Glossareinträge für {{site.data.keyword.Bluemix_notm}} 
 {: #glossary}
-
-Letzte Aktualisierung: 02. September 2016
-{: .last-updated}
 
 In diesem Glossar werden Begriffe und Definitionen für {{site.data.keyword.Bluemix}} bereitgestellt.
 {:shortdesc}
@@ -250,7 +247,7 @@ der Anwendung in 'Green' wird 'Green' zur Produktionsumgebung und
 {: #x7301758}
 
 Eine cloudbasierte Plattform mit offenen Standards für die Erstellung, Verwaltung und Ausführung von
-Anwendungen aller Typen, z. B. Web- oder mobile Geräte sowie Big Data- oder intelligente mobile Endgeräte. Das Leistungsspektrum
+Apps aller Typen, z. B. Web- oder mobile Geräte sowie Big Data- oder intelligente mobile Endgeräte. Das Leistungsspektrum
 umfasst Java, Back-End-Entwicklung für mobile Anwendungen und Anwendungsüberwachung sowie Funktionen von
 Ökosystempartnern und Open Source. Alle Funktionen werden als Service ('as-a-Service') in der Cloud
 zur Verfügung gestellt.
@@ -511,7 +508,7 @@ Ein Entwurf von Prozessmeilensteinen und Aktivitäten in diesen Meilensteinen f�
 ### Domäne
 {: #x2021210}
 
-Teil einer Benennungshierarchie, mit dem eine Route angegeben wird. Beispiel: example.com. In Bluemix werden Domänen Organisationen zugeordnet. Domänenobjekte werden nicht direkt an Anwendungen gebunden. Siehe auch [Angepasste Domäne](#x5728384), [Host](#x2002243), [Organisation](#x2032585), [Route](#x2037338), [Unterdomäne](#x2040080) und [Uniform Resource Locator](#x2042491).
+Teil einer Benennungshierarchie, mit dem eine Route angegeben wird. Beispiel: example.com. In Bluemix werden Domänen Organisationen zugeordnet. Domänenobjekte werden nicht direkt an Apps gebunden. Siehe auch [Angepasste Domäne](#x5728384), [Host](#x2002243), [Organisation](#x2032585), [Route](#x2037338), [Unterdomäne](#x2040080) und [Uniform Resource Locator](#x2042491).
 
 ### DQM
 {: #x3744906}
@@ -949,7 +946,7 @@ Siehe [Platform as a Service](#x2029786).
 ### paralleles Gateway
 {: #x4118340}
 
-Ein Gateway, das parallel Pfade erstellt, ohne die Bedingungen zu prüfen. 
+Ein Gateway, das parallel Pfade erstellt, ohne die Bedingungen zu prüfen.
 
 ### Übergeordnetes Image
 {: #x8439210}
@@ -979,9 +976,7 @@ Die Bereitstellung einer Datenverarbeitungsplattform einschließlich Anwendungen
 ### Vorbereitungsbibliothek
 {: #x7290106}
 
-Eine Sammlung von Testfunktionen für Apps, die umfassende Details zu Problemen und Fehlern in
-einer App erfassen. Die Testfunktionen identifizieren das Gerät und den Benutzer, bei dem die Fehler auftreten,
-sodass Entwickler Protokolle und sonstige Informationen abrufen können, um die Probleme zu beheben. Siehe auch [Vorbereitungsmodus](#x7290124).
+Eine Sammlung von Testfunktionen für Apps, die umfassende Details zu Problemen und Fehlern in einer App erfassen. Die Testfunktionen identifizieren das Gerät und den Benutzer, bei dem die Fehler auftreten, sodass Entwickler Protokolle und sonstige Informationen abrufen können, um die Probleme zu beheben. Siehe auch [Vorbereitungsmodus](#x7290124).
 
 ### Vorbereitungsmodus
 {: #x7290124}
@@ -1063,7 +1058,7 @@ Server selbst und nicht nach einer Aufforderung durch den Client eingeleitet.
 ### Push-Benachrichtigung
 {: #x5599582}
 
-Ein Alert, der auf eine Änderung oder ein Update hinweist und auf dem Symbol einer mobilen Anwendung angezeigt wird.
+Ein Alert, der auf eine Änderung oder ein Update hinweist und auf dem Symbol einer mobilen App angezeigt wird.
 
 
 ## R
@@ -1248,7 +1243,7 @@ erfordern gewöhnlich keine Installation oder Wartung und könnten miteinander k
 ### Sitzung
 {: #x2004539}
 
-Der Zeitraum, nachdem eine Anwendung auf einem mobilen Gerät gestartet und das Qualitätssicherungsprodukt
+Der Zeitraum, nachdem eine App auf einem mobilen Gerät gestartet und das Qualitätssicherungsprodukt
 benachrichtigt wurde, dass es mit der Erfassung von Informationen zum Appverhalten sowie von Problemen und
 Fehlern beginnen kann.
 
@@ -1261,7 +1256,7 @@ In der Software- und Systementwicklung ein Maß für die Wichtigkeit einer Arbei
 {: #x5905152}
 
 Eine Bewegung verursachen, und zwar derart, dass der Beschleunigungssensor eines Geräts diese Bewegung erkennt und
-ein Ereignis startet. So können beispielsweise Tester und Kunden einen Problembericht zu einer Anwendung auslösen, indem sie
+ein Ereignis startet. So können beispielsweise Tester und Kunden einen Problembericht zu einer App auslösen, indem sie
 ihr Gerät schütteln.
 
 ### Single Sign-on (SSO)
@@ -1291,7 +1286,7 @@ gehören.
 ### Bereich
 {: #x2039442}
 
-- Eine Untergruppe innerhalb einer Bluemix-Organisation. Benutzer, die Mitglieder einer Organisation sind, erhalten Zugriff auf einen oder mehrere ihrer Bereiche, wobei die Berechtigungen mit einer bestimmten Rolle verknüpft sind (z. B. Entwickler, Manager, Prüfer). Jedes Mitglied des Bereichs kann Anwendungen anzeigen, aber nur Mitglieder mit der Rolle des Entwicklers können Anwendungen erstellen und dem Bereich Serviceinstanzen hinzufügen. Anwendungen und Serviceinstanzen werden den Bereichen zugeordnet. Siehe auch [Organisation](#x2032585).
+- Eine Untergruppe innerhalb einer Bluemix-Organisation. Benutzer, die Mitglieder einer Organisation sind, erhalten Zugriff auf einen oder mehrere ihrer Bereiche, wobei die Berechtigungen einer bestimmten Rolle zugeordnet sind (z. B. Entwickler, Manager oder Prüfer). Jedes Mitglied des Bereichs kann Apps anzeigen, aber nur Mitglieder mit der Rolle des Entwicklers können Apps erstellen und dem Bereich Serviceinstanzen hinzufügen. Apps und Serviceinstanzen werden den Bereichen zugeordnet. Siehe auch [Organisation](#x2032585).
 - Eine Organisationseinheit innerhalb der Cloud Foundry-Infrastruktur, die Anwendungen und Services enthält und zum Speichern und Verfolgen von Anwendungsressourcen verwendet werden kann.
 - Ein Bereich mit Zugriffssteuerung innerhalb eines Kontos, in dem Blueworks Live-Artefakte erstellt und organisiert werden.
 
@@ -1363,7 +1358,7 @@ Stack-Traces eingefügt werden, um die Traces für Tester und Entwickler lesbar 
 ### Syntaxprüfung
 {: #x7344042}
 
-Eine Funktion, die Code analysiert und versucht, ihn vor der Kompilierung zu interpretieren, um Syntaxfehler zu entdecken, die dazu führen könnten, dass Anwendungen nicht ordnungsgemäß kompiliert werden, und anschließend den Benutzer benachrichtigt.
+Eine Funktion, die Code analysiert und versucht, ihn vor der Kompilierung zu interpretieren, um Syntaxfehler zu entdecken, die dazu führen könnten, dass Apps nicht ordnungsgemäß kompiliert werden, und anschließend den Benutzer benachrichtigt.
 
 ### System of Engagement
 {: #x6528306}
@@ -1428,7 +1423,7 @@ Ein Arbeitselement in der Entwicklung, das nach einem fehlgeschlagenen Build erf
 
 Ein Mechanismus, der Aktionen auslösen kann. Auslöser können explizit durch einen Benutzer oder für einen Benutzer durch eine externe Ereignisquelle aktiviert werden.
 
-### </a>Trust-Association-Interceptor (TAI)
+### Trust-Association-Interceptor (TAI)
 {: #x2239009}
 
 Der Mechanismus, durch den die Anerkennung in der Produktumgebung für jede Anforderung validiert wird, die der Proxy-Server empfängt. Proxy-Server und Interceptor stimmen der Validierungsmethode zu.
@@ -1472,7 +1467,7 @@ Siehe [Uniform Resource Locator](#x2042491).
 {: #x7290116}
 
 Das Ergebnis einer Benutzerbewertung, das aus der Einstufung einer Anwendung durch die Benutzer aus den
-wichtigsten Online-Einzelhandelsgeschäften für Anwendungen abgeleitet wird. Die Funktion durchsucht alle Bewertungen und Prüfungen, um ein kumulatives Ergebnis für die mobilen Anwendungen zu generieren, in dem die Qualität, Benutzerzufriedenheit und die Gesamtheit des positiven und negativen Feedbacks der Benutzer zusammengefasst wird.
+wichtigsten Online-Einzelhandelsgeschäften für Anwendungen abgeleitet wird. Die Funktion durchsucht alle Bewertungen und Prüfungen, um ein kumulatives Ergebnis für die mobilen Apps zu generieren, in dem die Qualität, Benutzerzufriedenheit und die Gesamtheit des positiven und negativen Feedbacks der Benutzer zusammengefasst wird.
 
 
 ## V

@@ -1,13 +1,18 @@
----
+------
 
 copyright:
  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Handling silent notifications for iOS
 {: #silent-notifications}
-Last updated: 10 November 2016
+Last updated: 06 December 2016
 {: .last-updated}
 
 Silent notifications do not appear on the device screen. These notifications are received by the application in the background, which wakes up the application for up to 30 seconds to perform the specified background task. A user might not be aware of the notification arrival. To send silent notifications for iOS, use the [REST API](https://mobile.{DomainName}/imfpush/).   

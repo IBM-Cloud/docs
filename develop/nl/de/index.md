@@ -16,7 +16,7 @@ copyright:
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-#Anwendungen entwickeln 
+#Apps entwickeln 
 {: #develop-apps-IDS}
 
 *Letzte Aktualisierung: 7. Dezember 2015*  

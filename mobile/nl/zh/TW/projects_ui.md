@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
@@ -10,24 +10,21 @@ lastupdated: "2016-10-13"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 使用使用者介面入門範本建立專案
+# 以使用者介面入門範本建立專案
 {: #projects_ui}
 
-前次更新：2016 年 10 月 13 日
-{: .last-updated}
-
-您可以在 {{site.data.keyword.Bluemix}} Mobile 儀表板中使用「使用者介面入門範本」，以在 {{site.data.keyword.Bluemix_notm}} 環境中建立專案。此程序不適用於使用「程式碼入門範本」的專案。如需「程式碼入門範本」的指示，請參閱[使用程式碼入門範本建立專案](projects_code.html)。
+您可以在 {{site.data.keyword.Bluemix}} 行動儀表板中使用[使用者介面入門範本](starters.html#UI_Starter)，以在 {{site.data.keyword.Bluemix_notm}} 環境中建立專案。此程序不適用於使用「程式碼入門範本」的專案。如需「程式碼入門範本」的指示，請參閱[使用程式碼入門範本建立專案](projects_code.html)。
 {:shortdesc}
 
-請完成下列步驟，以使用「使用者介面入門範本」來建立專案：
+請完成下列步驟，以「使用者介面入門範本」建立專案：
 
-1. 在 {{site.data.keyword.Bluemix_notm}} 中建立新的 Mobile 儀表板專案。
+1. 在 {{site.data.keyword.Bluemix_notm}} 中建立新的行動儀表板專案。
 
- 在您選取 Mobile 型錄之後，即可從*開始使用* 標籤開始。提供您可使用之已選取入門範本的說明，並且提供不同的方法，根據您所需的協助來建立專案。如果您只需要最少的協助，請選取**建立專案**。
+ 在您選取「行動」型錄之後，即可從*開始使用* 標籤開始。提供您可使用之已選取入門範本的說明，並且提供不同的方法，根據您所需的協助來建立專案。如果您只需要最少的協助，請選取**建立專案**。
 
- 如果您已有專案，則可以在位於*開始使用* 標籤時選取*專案* 標籤。從 {{site.data.keyword.Bluemix_notm}} Mobile 儀表板的**專案**視圖中，您可以選取要使用的專案、使用專案的*動作* 來刪除專案或下載其程式碼，或者建立新的專案。如果專案是從「使用者介面入門範本」開始，您也可以直接從*動作* 功能表中，在「使用者介面建置器」中開啟專案。 
+ 如果您已有專案，則可以在位於*開始使用* 標籤時選取*專案* 標籤。從 {{site.data.keyword.Bluemix_notm}} 行動儀表板的**專案**視圖中，您可以選取要使用的專案、使用專案的*動作* 來刪除專案或下載其程式碼，或者建立新的專案。如果專案是從「使用者介面入門範本」開始，您也可以直接從*動作* 功能表中，在「使用者介面建置器」中開啟專案。 
 
-	1. 在「{{site.data.keyword.Bluemix_notm}} 主控台」上，於您展開 {{site.data.keyword.Bluemix_notm}} 標誌旁內含三行的功能表之後選取 **Mobile**。 
+	1. 在「{{site.data.keyword.Bluemix_notm}} 主控台」上，於您展開 {{site.data.keyword.Bluemix_notm}} 標誌旁內含三行的功能表之後選取**行動**。 
 	
 	2. 選取**建立專案**。 
 
@@ -39,15 +36,17 @@ lastupdated: "2016-10-13"
 	
 2. 在**專案概觀**畫面上，進行選擇。**專案概觀**畫面會顯示專案以及可新增至專案之選用功能（例如 Push Notifications）的相關資訊。  
 
-	1. 選用項目：選取**新增**，以將其中一個列出的功能新增至專案。編輯服務的**服務名稱**，然後按一下**建立**。
+	1. 選用項目：選取**新增**，以將其中一個列出的功能新增至專案。編輯服務的**服務名稱**，然後按一下**建立**。當您將服務新增至專案時，即鏈結至該服務的 {{site.data.keyword.Bluemix_notm}} 頁面。請提供服務的必要資訊，以配置該服務。
 	
 	2. 選用項目：針對要新增至專案的任何其他功能，重複步驟 *a*。 
 
-3. 使用「使用者介面建置器」來設計使用者介面。
+3. 利用「使用者介面建置器」來設計使用者介面。
 
    附註：因為「程式碼入門範本」沒有可自訂的使用者介面，所以無法使用*設計* 標籤。
 
-    1. 選取導覽功能表中的**使用者介面建置器**，以自訂應用程式的設計。<!--Most of the design screens have sections that begin with a navigation on the left of the screen, and the sections more specific as it moves to the right side preview of your app. Note: Not all design screens in the starters have the same sections.--> 
+    1. 選取導覽功能表中的**使用者介面建置器**，以自訂應用程式的設計。 
+	
+		**提示：**若要檢視「使用者介面建置器」的快速概觀，請在選取「使用者介面建置器」之後，選取導覽中的**顯示其運作方式**。 
 	
 	2. 從**畫面**標籤中，自訂應用程式佈置。
 	

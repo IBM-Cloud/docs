@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-21"
 
 ---
 
@@ -13,10 +14,9 @@ copyright:
 # Insights for Twitter の REST API の使用
 {: #rest_apis}
 
-*最終更新日: 2016 年 5 月 13 日*
-{: .last-updated}
-
-{{site.data.keyword.twittershort}} サービスは、Twitter の内容を検索して取り込むための RESTful API で構成されています。以下のクエリー言語のセクションに、サービス API でサポートされるクエリー用語がリストされています。また、クエリーの構成方法を示すための例が提供されています。
+{{site.data.keyword.twittershort}} サービスは、Twitter の内容を検索して取り込むための RESTful API で構成されています。[クエリー言語
+](twitter_rest_apis.html#querylanguage){: new.window}の表に、サービス API でサポートされる
+クエリー用語をリストしています。また、クエリーの構成方法を示すための例が提供されています。
 {:shortdesc}
 
 ## REST API の資料 {: #rest_api}
@@ -68,23 +68,23 @@ REST API の資料は、Swagger を使用してビルドされています。こ
 | `bio_lang:language` 	| プロフィールの言語設定が、指定された言語コードに一致するユーザーのツイートと一致します。サポートされる言語のリストについては、`lang:` を参照してください。 	| `bio_lang:en` 	|
 | `bio_location:"location"` 	| プロファイルのロケーション設定に、指定された `location` 参照が含まれているユーザーからのツイートに突き合わせます。 	| `bio_location:"New York"` 	|
 | `country_code:country-code` 	| タグが付いた場所や所在地が、指定された国別コードに一致するツイートと一致します。</br>**サポートされる国別コードのリストについては、**: http://en.wikipedia.org/wiki/ISO_3166-1 を参照してください。 	| `country_code:us` 	|
-| `followers_count: lowerLimit,upperLimit` 	| 指定された範囲内のフォロワー数を持つユーザーからのツイートと一致します。オプションで上限を指定することもでき、いずれの制限値も、その値を含みます。
- 	| `followers_count:500` 	|
-| `friends_count: lowerLimit,upperLimit` 	| 指定された範囲内の数のユーザーをフォローしているユーザーからのツイートと一致します。オプションで上限を指定することもでき、いずれの制限値も、その値を含みます。 	| `friends_count:1000,3000` 	|
+| `followers_count: lowerLimit,upperLimit` 	| 指定された範囲内のフォロワー数を持つユーザーからのツイートと一致します。upperLimit はオプションであり、いずれの制限値もその値を含みます。 	| `followers_count:500` 	|
+| `friends_count: lowerLimit,upperLimit` 	| 指定された範囲内の数のユーザーをフォローしているユーザーからのツイートと一致します。upperLimit はオプションであり、いずれの制限値もその値を含みま
+す。 	| `friends_count:1000,3000` 	|
 | `from:twitterHandle` 	| preferredUsername の *twitterHandle* を持つユーザーによるツイートと一致します。&commat; 記号を含めてはなりません。 	| `from:alexlang11` 	|
 | `has:children` 	| 子ありのユーザーからのツイートと一致します。 	| `has:children` 	|
 | `is:married` 	| 既婚のユーザーからのツイートと一致します。 	| `is:married` 	|
 | `is:verified` 	| 作成者が  Twitter により検証済みであるツイートと一致します。 	| `analytics is:verified` 	|
 | `lang:language-code` 	| 特定言語のツイートと一致します。サポートされている言語コードのリストを以下に示します。<ul><li>`ar` (アラビア語)</li><li>`zh` (中国語)</li><li>`da` (デンマーク語)</li><li>`dl` (オランダ語)</li><li>`en` (英語)</li><li>`fi` (フィンランド語)</li><li>`fr` (フランス語)</li><li>`de` (ドイツ語)</li><li>`el` (ギリシャ語)</li><li>`he` (ヘブライ語)</li><li>`id` (インドネシア語)</li><li>`it` (イタリア語)</li><li>`ja` (日本語)</li><li>`ko` (韓国語)</li><li>`no` (ノルウェー語)</li><li>`fa` (ペルシア語)</li><li>`pl` (ポーランド語)</li><li>`pt` (ポルトガル語)</li><li>`ru` (ロシア語)</li><li>`es` (スペイン語)</li><li>`sv` (スウェーデン語)</li><li>`th` (タイ語)</li><li>`tr` (トルコ語)</li><li>`uk` (ウクライナ語)</li></ul>    | `lang:de` (ドイツ語のツイートと突き合わせる場合) 	|
-| `listed_count: lowerLimit,upperLimit` 	| ツイッターの作成者のリストが指定された範囲に該当するツイートと一致します。オプションで上限を指定することもでき、いずれの制限値も、その値を含みます。 	| `listed_count:1000,3000` 	|
+| `listed_count: lowerLimit,upperLimit` 	| ツイッターの作成者のリストが指定された範囲に該当するツイートと一致します。upperLimit はオプションであり、いずれの制限値もその値を含みま す。 	| `listed_count:1000,3000` 	|
 | `point_radius:[longitude latitude radius]` 	| 緯度と経度の座標と半径によって指定された地域からのツイートと一致します。</br></br>すべての座標は、10 進数の度数で示されます。`longitude` は -180 から +180 までの値である必要があり、`latitude` は -90 から +90 までの値である必要があります。サポートされるこれらの範囲ではない値を指定すると、エラーが返されます。値は、浮動小数点数として入力する必要があります。整数はサポートされていません。</br></br>周辺地域の半径は、マイル (mi) またはキロメートル (km) で指定する必要があります。 	| `point_radius:[41.128611 -73.707778 5.0mi]` 	|
 | `posted:startTime  posted:startTime,endTime` 	| 「startTime」以降に投稿されたツイートに突き合わせます。「endTime」はオプションです。いずれの制限値も、それ自体の値を含みます。タイム・スタンプは、次のいずれかの形式である必要があります。 </br>「yyyy-mm-dd」または「yyyy-mm-ddTHH:MM:SSZ」</br>  タイム・ゾーンは UTC (協定世界時) に基づいています。時、分、および秒を指定する場合、規定の形式に示されているように、時刻を「T」と「Z」で囲む必要があります。 	| `posted:2014-12-01,2014-12-12` 	|
 | `sentiment:sentiment-value` 	| 特定の感情のツイートと一致します。サポートされる値は以下のとおりです。</br><dl>positive</dl> <dlentry>ツイートには、否定より肯定の感情を表す語句が多く含まれています。</dlentry> </br></br><dl>negative</dl> <dlentry>ツイートには、肯定より否定の感情を表す語句が多く含まれています。</dlentry>  </br></br><dl>neutral</dl>  <dlentry>ツイートには感情が含まれていないか、感情を検出できない言語で書かれています。</dlentry> </br></br><dl>ambivalent</dl>  <dlentry>ツイートには、肯定の感情を表す語句と否定の感情を表す語句が同等の量で含まれています。</dlentry> 	| `sentiment:positive` 	|
-| `statuses_count: lowerLimit,upperLimit` 	| 指定された範囲内のステータス数を投稿したユーザーからのツイートと一致します。オプションで上限を指定することもでき、いずれの制限値も、その値を含みます。 	| `statuses_count:1000,3000` 	|
+| `statuses_count: lowerLimit,upperLimit` 	| 指定された範囲内のステータス数を投稿したユーザーからのツイートと一致します。upperLimit はオプションであり、いずれの制限値もその値を含みます。 	| `statuses_count:1000,3000` 	|
 | `time_zone:timeZone` 	| プロフィールの設定が、指定されたタイム・ゾーンと一致するユーザーのツイートと一致します。 	| `time_zone:"Eastern Time (US & Canada)"` 	|
 | `time_zone:city` 	| プロフィールの設定が、指定された市区町村と一致するユーザーのツイートと一致します。 	| `time_zone:"Dublin"` 	|
 *表 2. クエリー用語*
 
-サポートされるすべてのクエリー用語は、上記のブール演算子を使って組み合わせることができます。例えば、次のようにできます。
+サポートされるすべてのクエリー用語は、上述のブール演算子を使って組み合わせることができます。例えば、次のようにできます。
 
 `ibm -apple followers_count:500`

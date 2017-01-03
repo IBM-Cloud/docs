@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-09-20"
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -40,6 +40,7 @@ Field Name|Description
 `deployment_id`|An internal identifier for the service as created within Compose.
 `db_type`|The type of database that is offered by the service; in this case `redis`.
 `name`|The database deployment name.
+{: caption="Table 1. {{site.data.keyword.composeForRedis}} credentials" caption-side="top"}
 
 # Related Links
 {: #rellinks}

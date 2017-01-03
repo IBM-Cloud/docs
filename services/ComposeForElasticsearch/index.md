@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-09-20"
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -43,6 +43,7 @@ Field Name|Description
 `deployment_id`|An internal identifier for the service as created within Compose.
 `db_type`|The type of database that is offered by the service; in this case `elastic_search`.
 `name`|The database deployment name.
+{: caption="Table 1. {{site.data.keyword.composeForElasticsearch}} credentials" caption-side="top"}
 
 **Note:** Two `haproxy` portals provide access to the Elasticsearch cluster. Both `uri` and `uri_direct_1` can be used to connect to the cluster. In your applications, switch between `uri` and `uri_direct_1` to manage responses to connection failures.
 

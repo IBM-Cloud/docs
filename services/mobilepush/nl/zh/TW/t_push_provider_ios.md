@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 配置 APNs 的認證
 {: #create-push-credentials-apns}
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 12 月 7 日
 {: .last-updated}
 
 Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端通知從 Bluemix（提供者）上的 {{site.data.keyword.mobilepushshort}} Service 實例傳送給 iOS 裝置及應用程式。訊息會傳送至裝置上的目標應用程式。 
@@ -48,7 +51,7 @@ Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端�
 ##建立開發及配送 APNs SSL 憑證
 {: #create-push-credentials-apns-ssl}
 
-您必須先產生憑證簽署要求 (CSR) 並將它提交給 Apple（憑證管理中心，CA），才能取得 APNs 憑證。CSR 所含的資訊可識別您的公司，以及用來簽署 Apple Push Notifications 的公開和私密金鑰。然後，在「iOS 開發者入口網站」上產生 SSL 憑證。憑證以及其公開和私密金鑰都儲存在「金鑰鏈存取」中。
+您必須先產生憑證簽署要求 (CSR) 並將它提交給 Apple（憑證管理中心 (CA)），才能取得 APNs 憑證。CSR 所含的資訊可識別您的公司，以及用來簽署 Apple Push Notifications 的公開和私密金鑰。然後，在「iOS 開發者入口網站」上產生 SSL 憑證。憑證以及其公開和私密金鑰都儲存在「金鑰鏈存取」中。
 
 <!-- ###Before you begin -->
 <!-- {: before-you-begin-certificate} -->
@@ -97,10 +100,7 @@ Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端�
 
 佈建設定檔與「應用程式 ID」搭配使用，以判定可安裝及執行應用程式的裝置以及您的應用程式可存取的服務。對於每一個「應用程式 ID」，您可以建立兩個佈建設定檔：一個用於開發，另一個用於配送。Xcode 使用開發佈建設定檔來判定容許建置應用程式的開發人員，以及容許在應用程式上進行測試的裝置。
 
-###開始之前
-{: before-you-begin-provisioning-file}
-
-請確定您已登錄「應用程式 ID」、已針對 Push Notification Service 予以啟用，以及配置它來使用開發及正式作業 APNs SSL 憑證。
+請確定您已登錄「應用程式 ID」、已針對 {{site.data.keyword.mobilepushshort}} 服務予以啟用，以及配置它來使用開發及正式作業 APNs SSL 憑證。
 
 建立開發佈建設定檔，如下所示：
 
@@ -125,27 +125,20 @@ Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端�
 
 若要使用 {{site.data.keyword.mobilepushshort}} Service 來傳送通知，請上傳 Apple Push Notification Service (APNs) 所需的 SSL 憑證。您也可以使用 REST API 來上傳 APNs 憑證。
 
-
-###開始之前
-{: before-you-begin-dashboard}
-
-
 <!-- Get your development and production APNs SSL certificate and the password associated with each type of certificate. For information, see Creating and configuring push credentials for APNs.-->
 
-APNs 所需的憑證是 `.p12` 憑證，其中包含私密金鑰以及建置和發佈應用程式所需的 SSL 憑證。您必須從 Apple Developer 網站的 Member Center 產生憑證（這需要有效的 Apple Developer 帳戶）。開發環境（沙盤推演）和正式作業（配送）環境需要個別憑證。
+APNs 需要的憑證為 `.p12` 憑證。這些憑證包含私密金鑰以及建置和發佈應用程式所需的 SSL 憑證。您必須從 Apple Developer 網站的 Member Center 產生憑證（這需要有效的 Apple Developer 帳戶）。開發環境（沙盤推演）和正式作業（配送）環境需要個別憑證。
 
 **附註**：`.cer` 檔案位於您的金鑰鏈存取之後，請將它匯出至您的電腦，以建立 `.p12` 憑證。
 
 如需使用 APNs 的相關資訊，請參閱 [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4)。
 
-在 Push 儀表板上設定 APNs，如下所示：
+若要在 Push Notification Service 儀表板上設定 APNs，請完成以下步驟：
 
-1. 在 Bluemix 儀表板中開啟後端應用程式，然後按一下 **IBM Push Notifications** 服務來開啟 Push 儀表板。
-
-	Push 儀表板會顯示：
+1. 在 Push Notification Service 儀表板上，選取**配置**。
+2. 選擇 **Mobile** 選項，以更新 **APNs Push 認證**表單中的資訊。
+3. 適當地選取**沙盤推演**（開發）或**正式作業**（配送），然後上傳您使用前一個[步驟](#step18)所建立的 `p.12` 憑證。
 ![設定 Push Notifications 儀表板](images/wizard.jpg)
-2. 在**配置**標籤上，移至 **Apple Push 憑證**區段，並選取**沙盤推演**（開發）或**正式作業**（配送），然後上傳您使用前一個[步驟](#step18)所建立的 `p.12` 憑證。
-![設定 Push Notifications 配置標籤](images/credential_screen.jpg)
 3. 在**密碼**欄位中，輸入與 `.p12` 憑證檔案相關聯的密碼，然後按一下**儲存**。
 
 

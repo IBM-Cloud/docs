@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 启用基于标记的通知
 {: #tag_based_notifications}
-上次更新时间：2016 年 10 月 18 日
+上次更新时间：2016 年 12 月 6 日
 {: .last-updated}
 
 基于标记的通知消息是针对预订了特定标记的所有设备的通知消息。 

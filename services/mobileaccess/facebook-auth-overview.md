@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-12-18"
 
 ---
 {:new_window: target="_blank"}
@@ -74,5 +74,4 @@ You need this value to configure Facebook authentication for your mobile or web 
 
 * [Enabling Facebook authentication for Android apps](facebook-auth-android.html)
 * [Enabling Facebook authentication for iOS apps (Swift SDK)](facebook-auth-ios-swift-sdk.html)
-* [Enabling Facebook authentication for iOS apps (Objective-C SDK - Deprecated)](facebook-auth-ios.html)
 * [Enabling Facebook authentication for Cordova apps](facebook-auth-cordova.html)

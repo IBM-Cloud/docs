@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Dynatrace verwenden
 {: #using_dynatrace}
-
-Letzte Aktualisierung: 10. Juni 2016
-{: .last-updated}
 
 Bei Dynatrace handelt es sich um einen Service eines anderen Anbieters, der Überwachungsmetriken für Ihre App bereitstellt.
 

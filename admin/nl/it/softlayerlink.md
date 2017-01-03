@@ -4,8 +4,8 @@
 
 copyright:
 
-  anni: 2016
-ultimo aggiornamento: "27-10-2016"
+  years: 2016
+lastupdated: "2016-12-01"
  
 
 ---
@@ -18,9 +18,11 @@ ultimo aggiornamento: "27-10-2016"
 # Aggiornamento e unificazione degli account di fatturazione {{site.data.keyword.Bluemix_notm}} e SoftLayer
 {: #softlayerlink}
 
-Se disponi di un account {{site.data.keyword.Bluemix_notm}} di prova e vuoi accedere al dashboard Infrastruttura, devi eseguire l'aggiornamento a un account {{site.data.keyword.Bluemix_notm}} con pagamento a consumo.
+Se disponi di un account {{site.data.keyword.Bluemix_notm}} di prova e vuoi accedere al dashboard Infrastruttura, devi eseguire l'aggiornamento a un account {{site.data.keyword.Bluemix_notm}} con pagamento a consumo. Devi inoltre eseguire l'aggiornamento se desideri utilizzare altre risorse a consumo che non sono disponibili in un account di prova o se il tuo account di prova è terminato. 
 
 Puoi unificare i tuoi account {{site.data.keyword.Bluemix_notm}} e SoftLayer esistenti collegando tali account. Quando colleghi i tuoi account, ricevi la fattura attraverso {{site.data.keyword.Bluemix_notm}} sia per le risorse {{site.data.keyword.Bluemix_notm}} che per le risorse SoftLayer.
+
+**Attenzione:** un account di sottoscrizione {{site.data.keyword.Bluemix_notm}} non può essere collegato a un account SoftLayer. Per accedere al dashboard Infrastruttura, devi creare un account Pagamento a consumo, un secondo account che viene collegato automaticamente a un account SoftLayer. Riceverai quindi due fatture, una per ogni account {{site.data.keyword.Bluemix_notm}}. Anche se le risorse dell'infrastruttura verranno fatturate in un account Pagamento a consumo separato, le risorse possono essere utilizzate con applicazioni e servizi nel tuo account di sottoscrizione. Ad esempio, se attivi un servizio Watson nel tuo account di sottoscrizione, puoi copiare le credenziali del servizio e quindi aggiungerle alla tua applicazione bare metal proveniente dal tuo account Pagamento a consumo.
 {:shortdesc}
 
 ## Aggiornamento a un account Pagamento a consumo di {{site.data.keyword.Bluemix_notm}}
@@ -64,12 +66,7 @@ Per collegare gli account, devi essere un utente master dell'account SoftLayer.
 
 Dopo aver collegato gli account, nell'intestazione generale di SoftLayer viene visualizzato il link **Vai a {{site.data.keyword.Bluemix_notm}}**. Facendo clic su questo link, arrivi alla pagina di accesso {{site.data.keyword.Bluemix_notm}}. Inoltre, il link **SoftLayer** è ora disponibile nell'intestazione di {{site.data.keyword.Bluemix_notm}}. Facendo clic sul collegamento, accedi attraverso una nuova finestra alla home page di {{site.data.keyword.slportal}}.
 
-## Crediti per l'utilizzo di {{site.data.keyword.Bluemix_notm}} con gli account collegati
-{: #slcredit}
-
-Quando colleghi il tuo account {{site.data.keyword.Bluemix_notm}} all'account SoftLayer, ricevi un credito di 200 dollari che puoi utilizzare solo all'interno di {{site.data.keyword.Bluemix_notm}}. Il credito deve essere utilizzato entro 30 giorni dal collegamento degli account.
-
-Per informazioni su come visualizzare i crediti e la data di scadenza, vedi [Visualizzazione dei crediti](https://console.ng.bluemix.net/docs/pricing/index.html#credits).
+Le offerte dell'infrastruttura {{site.data.keyword.Bluemix_notm}} sono collegate a una rete a tre livelli, segmentando il traffico pubblico, privato e di gestione. Le offerte dell'infrastruttura sull'account {{site.data.keyword.Bluemix_notm}} di un cliente potrebbe trasferire i dati da uno all'altro attraverso la rete privata a costo zero. Le offerte dell'infrastruttura, quali i server bare metal, i server virtuali e l'archiviazione cloud, si collegano ad altre applicazioni e altri servizi nel catalogo {{site.data.keyword.Bluemix_notm}}, ad esempio i servizi Watson, contenitori o runtime, attraverso al rete pubblica. Il trasferimento dati tra questi due tipi di offerte viene misurato e addebitato a tariffe di larghezza di banda della rete pubblica standard.
 
 ## Come invitare membri del team SoftLayer in {{site.data.keyword.Bluemix_notm}}
 {: #invite_users}
@@ -94,7 +91,7 @@ Per ulteriori informazioni su come invitare i membri del team attraverso l'inter
 ## Passaggio all'ID IBM
 {: #ibmid_switch}
 
-L'autenticazione in SoftLayer adesso utilizza l'ID IBM per fornire un singolo accesso in {{site.data.keyword.Bluemix_notm}}. Se disponi di un account SoftLayer esistente, puoi passare a un ID IBM. Una procedura guidata di migrazione ti guiderà in questo passaggio.
+L'autenticazione in SoftLayer adesso utilizza l'ID IBM per fornire un singolo accesso in {{site.data.keyword.Bluemix_notm}}. Se disponi di un account SoftLayer esistente, puoi passare a un ID IBM. Una procedura guidata di migrazione ti guiderà in questo passaggio. 
 {:shortdesc}
 
 Dopo aver iniziato il passaggio all'ID IBM, finché non si completa il processo, è possibile annullarlo. Tuttavia, ti verrà richiesto di passare all'ID IBM la prossima volta che effettuerai l'accesso.
@@ -104,7 +101,7 @@ Per iniziare il passaggio dal tuo nome utente SoftLayer esistente a un ID IBM, c
  1. In {{site.data.keyword.slportal}}, vai alla pagina Modifica profilo utente e fai clic su **Passa a ID IBM**.
  2. Segui le istruzioni della procedura guidata di migrazione per creare il tuo ID IBM. Dopo aver creato il tuo ID IBM, non puoi modificare l'ID, che corrisponde a un indirizzo e-mail. Puoi aggiornare l'e-mail associata al tuo profilo, ma per impostazione predefinita il valore è impostato su quello che hai definito per l'ID IBM. Dopo aver completato la procedura guidata, ti viene inviata un'e-mail.
  3. Quando ricevi l'e-mail, segui il link o copia l'URL in un browser e immetti il codice di registrazione. Il codice è valido per 7 giorni ed è un codice monouso.  Una volta utilizzato, non è possibile riutilizzarlo.
- Dopo aver impostato il collegamento tra l'ID IBM e l'utente SoftLayer, puoi accedere al tuo account solo con l'ID IBM. Nella finestra di dialogo di accesso, devi utilizzare il pulsante **Accedi con ID IBM** invece di immettere nome utente e password SoftLayer.
+ Dopo aver impostato il collegamento tra l'ID IBM e l'utente SoftLayer, puoi accedere al tuo account solo con l'ID IBM.  Nella finestra di dialogo di accesso, devi utilizzare il pulsante **Accedi con ID IBM** invece di immettere nome utente e password SoftLayer.
  
 Se sei un nuovo cliente, quando controlli il tuo ordine ti verrà chiesto un indirizzo e-mail per il tuo account ID IBM esistente o di creare un nuovo account. 
 
@@ -113,7 +110,7 @@ Se sei un nuovo cliente, quando controlli il tuo ordine ti verrà chiesto un ind
 
 Puoi associare un ID IBM a più account SoftLayer utilizzando un'e-mail ID IBM esistente durante l'impostazione dell'account. È possibile associare un solo utente SoftLayer per ogni account al singolo ID IBM. L'ID IBM deve essere univoco all'interno di ogni account SoftLayer. Tuttavia, un utente con accesso a più account SoftLayer può utilizzare un ID IBM per accedere a diversi account SoftLayer.
 
-Ad esempio, un ID IBM può essere associato all'utente master negli account A e B e a un ulteriore utente negli account C e D. Uno degli account associato a tale ID IBM è l'account predefinito. Di solito, l'account predefinito è quello che è stato associato per primo all'ID IBM. Tuttavia, puoi cambiare l'account predefinito utilizzando una funzione di passaggio tra account nel portale clienti.
+Ad esempio, un ID IBM può essere associato all'utente master negli account A e B e a un ulteriore utente negli account C e D. Uno degli account associato a tale ID IBM è l'account predefinito.  Di solito, l'account predefinito è quello che è stato associato per primo all'ID IBM. Tuttavia, puoi cambiare l'account predefinito utilizzando una funzione di passaggio tra account nel portale clienti.
 
 Per un utente che dispone dell'accesso ID IBM a più account e per cui è abilitata l'autenticazione a due fattori, è richiesto un codice di verifica appropriato per tale autenticazione durante l'accesso e il passaggio tra gli account.
 
@@ -132,7 +129,7 @@ Ad esempio, hai mai desiderato di aggiungere da SoftLayer capacità cognitive Wa
 
 Puoi ottenere una conoscenza di *Insights and Cognitive* richiamando le API Watson dalle tue applicazioni in SoftLayer per personalizzarle maggiormente. In alternativa, utilizza i servizi *Data and Analytics* per accedere a un'analisi ad alte prestazioni per le tue applicazioni. In alternativa, selezionare un database-as-a-service in cui tu possa lasciare la gestione a {{site.data.keyword.Bluemix_notm}}.
 
-Rinnova lo sviluppo delle tue applicazioni attraverso contenitori con servizi quali {{site.data.keyword.activedeployshort}} e {{site.data.keyword.deliverypipeline}}. Puoi quindi utilizzare il servizio {{site.data.keyword.vpn_short}} per ricollegarti a SoftLayer per connettere il tuo contenitore appartenente a una rete privata alla rete privata SoftLayer. Tutti gli addebiti di utilizzo dei servizi e delle risorse di calcolo sono riportati nella fattura {{site.data.keyword.Bluemix_notm}}. 
+Rinnova lo sviluppo delle tue applicazioni attraverso contenitori con servizi quali {{site.data.keyword.activedeployshort}} e {{site.data.keyword.deliverypipeline}}. Puoi quindi utilizzare il servizio {{site.data.keyword.vpn_short}} per comunicare con SoftLayer per connettere il tuo contenitore appartenente a una rete privata alla rete privata SoftLayer. Tutti gli addebiti di utilizzo dei servizi e delle risorse di calcolo sono riportati nella fattura {{site.data.keyword.Bluemix_notm}}. 
 
 ### Servizi {{site.data.keyword.Bluemix_notm}} basati sull'API
 Non tutti i servizi {{site.data.keyword.Bluemix_notm}} possono essere utilizzati con SoftLayer. I seguenti servizi possono essere impostati in modo da essere eseguiti con il codice della tua applicazione:

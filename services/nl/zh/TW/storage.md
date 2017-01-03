@@ -1,20 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # 儲存空間
 {: #storage}
 
-*前次更新：2015 年 12 月 9 日*
-
 使用這些儲存空間服務，可以存取可靠且具成本效益的雲端資料儲存空間。
 {: shortdesc}
-
-
-

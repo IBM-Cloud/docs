@@ -12,34 +12,25 @@ copyright:
 
 # Introdução ao {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Última atualização: 17 de outubro de 2016
+Última atualização: 06 de dezembro de 2016
 {: .last-updated}
 
 {:shortdesc}
 
-O serviço {{site.data.keyword.mobilepushshort}} fornece uma plataforma unificada para enviar e gerenciar notificações push móveis e da web que são
-destinadas para plataformas móveis iOS, Android, navegadores da web Google Chrome, Mozilla Firefox e Apps Google Chrome e Extensões. O serviço {{site.data.keyword.mobilepushshort}} gerencia o mapeamento de
+O serviço {{site.data.keyword.mobilepushshort}} fornece uma plataforma unificada para enviar e
+gerenciar notificações push móveis e da web que são destinadas para plataformas móveis iOS, Android,
+navegadores da web Google Chrome, Mozilla Firefox e Safari e Apps e Extensões Google Chrome. O serviço {{site.data.keyword.mobilepushshort}} gerencia o mapeamento de
 seus usuários de aplicativos para seus dispositivos, plataforma, navegadores da web e
-manipula o despacho de notificações push para eles. Com esse serviço, é possível enviar
-transmissões, unicasts, (com base em deviceID) e também tags (ou tópicos) como
-notificações push para seus usuários de aplicativos móveis e de navegador da web. Também é possível usar um SDK e
+manipula o despacho de notificações push para eles. Com esse serviço,
+é possível enviar transmissões, unicasts (com base em deviceID e userID) e também tags (ou tópicos), como notificações push para seus
+usuários de aplicativos móveis e de navegador da web. Também é possível usar um SDK e
 [APIs de REST](https://mobile.{DomainName}/imfpush/) para desenvolver ainda mais os aplicativos clientes.
 
-Esta
-seção descreve como configurar notificações push básicas. Ao usar uma
-notificação básica, as notificações são transmitidas em vez de
-atingirem um conjunto específico de usuários usando tags.
-
-1. [Configure
-credenciais para um provedor de notificação](t__main_push_config_provider.html)
-2. [Ative o app móvel para receber
-notificações](c_enable_push.html)
-3. [Enviar notificações básicas](t_send_push_notifications.html)
 
 # Links relacionados
 {: #rellinks}
 
-* [Visão geral](c_overview_push.md){: new_window}
+* [Visão geral](c_overview_push.html){: new_window}
 
 ## Tutoriais e Amostras {:id="samples"}
 {: #samples}

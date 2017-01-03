@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2016
 
-lastupdated: "2016-10-24"
+lastupdated: "2016-11-29"
 
 
 ---
@@ -34,7 +34,8 @@ Both CLI tools use 443 port by default. If you have HTTP proxy between the CLI t
 
 | *{{site.data.keyword.Bluemix_notm}}: bx* | *Cloud Foundry: cf* |
 |---------------------|---------------|
-| [Download CLI](http://clis.ng.bluemix.net/) <br> [View Docs](./reference/bluemix_cli/index.html)|  [Download CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [View Docs](./reference/cfcommands/index.html) |
+| [Download CLI](http://clis.ng.bluemix.net/) <br> [View Docs](/docs/cli/reference/bluemix_cli/index.html)|  [Download CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [View Docs](/docs/cli/reference/cfcommands/index.html) |
+{: caption="Table 1. CLI download" caption-side="top"}
 
 
 ## ![](./images/CLI_Plugin.svg) Command line interface plug-ins
@@ -59,9 +60,15 @@ bluemix plugin install plugin_name -r bluemix-bx
 {: codeblock}
 
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Network Security Groups* |
+| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Containers*  |
 |-----|-----|-----|
-| Plug-in name: active-deploy <br> [View Docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [View Docs](./plugins/auto-scaling/index.html) |  Plug-in name: nsg <br> [View Docs](./plugins/networksecuritygroups/index.html)  |
+| Plug-in name: active-deploy <br> [View Docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [View Docs](/docs/cli/plugins/auto-scaling/index.html) |  Plug-in name: IBM-Containers  <br> [View Docs](/docs/cli/plugins/containers/index.html) |
+{: caption="Table 2. Plug-ins" caption-side="top"}
+
+|  *Private network peering* | *VPN*  |  
+|-----|-----|
+| Plug-in name: private-network-peering  <br> [View Docs](/docs/cli/plugins/pnp/index.html) |Plug-in name: VPN  <br> [View Docs](/docs/cli/plugins/bx_vpn/index.html) |
+{: caption="Table 3. Plug-ins" caption-side="top"}
 
 
 ### Extend your Cloud Foundry command line interface: cf
@@ -85,16 +92,20 @@ cf install-plugin plugin_name -r bluemix-cf
 | *Active Deploy* | *Admin Console* |
 |-----------------|-----------------|
 | Plug-in name: active-deploy <br>  [View Docs](/docs/services/ActiveDeploy/cli.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](/docs/cli/plugins/bluemix_admin/index.html) |
+{: caption="Table 4. Plug-ins" caption-side="top"}
+
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
-| Plug-in name: ibm-containers <br> [View Docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Plug-in name: VPN <br> [View Docs](./plugins/vpn/index.html) |
+| Plug-in name: ibm-containers <br> [View Docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Plug-in name: VPN <br> [View Docs](/docs/cli/plugins/vpn/index.html) |
+{: caption="Table 5. Plug-ins" caption-side="top"}
 
 
 ## ![](./images/Integrated_Dev_Tools.svg) Integrated development tools
 
 Download and install plug-ins to integrate your favorite {{site.data.keyword.Bluemix_notm}} services.
 
-| *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* |
-|-------------|----------|----------|----------|
-| [Egit Eclipse Plug-in](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [RTC Eclipse Plug-in](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse Plug-in](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse Plug-in](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](/docs/services/rules/index.html#rulov002) |
+| *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *Eclipse Tools for Bluemix* |
+|-------------|----------|----------|----------|----------|
+| [Egit Eclipse Plug-in](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [RTC Eclipse Plug-in](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse Plug-in](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse Plug-in](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](/docs/services/rules/index.html#rulov002) | [Bluemix Eclipse Plug-in](https://console.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){: new_window} |
+{: caption="Table 6. Plug-ins" caption-side="top"}

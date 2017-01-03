@@ -1,12 +1,18 @@
 ---
+
 copyright:
  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 사용자 기반 알림 사용
 {: #user_based_notifications}
-마지막 업데이트 날짜: 2016년 10월 18일
+마지막 업데이트 날짜: 2016년 12월 6일
 {: .last-updated}
 
 사용자 ID 기반 {{site.data.keyword.mobilepushshort}}은 사용자 정의된 메시지를 사용하는 모바일 앱 사용자가 대상입니다. 사용자 기반 알림에서는 사용자의 환경 설정을 기반으로 특정 개인에게 알림을 전송하도록 선택할 수 있습니다.

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,10 +12,12 @@ copyright:
 # sdk-for-nodejs buildpack 的最新更新
 {: #latest_updates}
 
-上次更新时间：2016 年 8 月 26 日
-{: .last-updated}
-
 sdk-for-nodejs buildpack 中最新更新的列表。
+## 2016 年 10 月 7 日：更新了 Node.js buildpack V3.8-20161006-1211
+此 buildpack 发行版支持以下 IBM SDK for Node.js 运行时版本：0.10.46、0.10.47、0.12.15、0.12.16、4.5.0、4.6.0、6.6.0 和 6.7.0。现在的缺省值为 4.6.0。
+
+除了新运行时，此发行版还包含 buildpack 错误修订。使用 Node.js 6.x 和 V3.7-20160826-1101 发行版更新中提到的开发方式时已知问题的修订如下所示。此发行版还与 [Cloud Foundry Node.js buildpack V1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20) 同步。 
+
 ## 2016 年 8 月 26 日：更新了 Node.js buildpack V3.7-20160826-1101
 此 buildpack 发行版支持以下 IBM SDK for Node.js 运行时版本：0.10.45、0.10.46、0.12.14、0.12.15、4.4.7、4.5.0、6.2.2 和 6.4.0。现在的缺省值为 4.5.0。
 
@@ -22,7 +25,7 @@ sdk-for-nodejs buildpack 中最新更新的列表。
 
 该发行版不再支持 strongpm 应用程序管理处理程序，如 [Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/) 中所声明。
 
-请注意，使用 Node.js 6.x 和[开发方式](../../manageapps/app_mng.html#devmode)时存在一个已知问题。要解决该问题，您将需要在启用“开发方式”之后重新编译打包应用程序，然后才能开始使用。
+请注意，使用 Node.js 6.x 和[开发方式](/docs/manageapps/app_mng.html#devmode)时存在一个已知问题。要解决该问题，您将需要在启用“开发方式”之后重新编译打包应用程序，然后才能开始使用。
 
 ## 2016 年 7 月 22 日：更新了 Node.js buildpack V3.6-20160715-0749
 此 buildpack 发行版添加了以下 IBM SDK for Node.js 运行时版本：0.10.45、0.10.46、0.12.14、0.12.15、4.4.6、4.4.7、6.2.1 和 6.2.2。现在的缺省版本为 4.4.7。
@@ -142,7 +145,7 @@ Node.js V2.6.1 引入了对 [StrongPM 应用程序管理处理程序](https://de
 
 ## 2015 年 6 月 15 日：更新了 Node.js buildpack V2.0-20150608-1503
 
-在此发行版中，我们已将 Node.js buildpack 与最新的 [CF 社区 Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack) 同步，这带来大量来自该社区的新功能。此外，我们改进了 Node.js buildpack 中的“应用程序管理”功能，该功能启用 shell、node-inspector、Bluemix Live Sync 等实用程序。请参阅[应用程序管理](../../manageapps/app_mng.html)，以获取详细信息。
+在此发行版中，我们已将 Node.js buildpack 与最新的 [CF 社区 Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack) 同步，这带来大量来自该社区的新功能。此外，我们改进了 Node.js buildpack 中的“应用程序管理”功能，该功能启用 shell、node-inspector、Bluemix Live Sync 等实用程序。请参阅[应用程序管理](/docs/manageapps/app_mng.html)，以获取详细信息。
 
 ## 2015 年 5 月 5 日：更新了 Node.js buildpack V1.17-20150429-1033
 
@@ -170,7 +173,7 @@ Node.js V2.6.1 引入了对 [StrongPM 应用程序管理处理程序](https://de
   * 桌面同步：将任何 (Windows) 桌面树同步到基于云的项目工作空间
   * 实时编辑：使您可以对在 Bluemix 中运行的 Node.js 应用程序执行更改，并立即在浏览器中对更改进行测试。
   * 调试：在环境中执行 Shell 并进行调试！您可以使用 Node Inspector 调试器来动态编辑代码、插入断点、单步执行代码、重新启动运行时等
-  * 请参阅[应用程序管理](../../manageapps/app_mng.html#Utilities)，以获取更多信息。
+  * 请参阅[应用程序管理](/docs/manageapps/app_mng.html#Utilities)，以获取更多信息。
 * 我们已从 [Cloud Foundry 的 Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack) 中拉入最新的更改。此更改带来该社区进行的大量错误修订和改进。
 * 该 Node.js buildpack 现在随 [IBM SDK for Node.js V1.1.0.13](https://developer.ibm.com/node/sdk/) 一起提供。
 

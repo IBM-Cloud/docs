@@ -6,7 +6,7 @@ copyright:
 
   years: 2016
 
-
+lastupdated: "2016-11-14"
 
 ---
 
@@ -18,9 +18,6 @@ copyright:
 
 # Cloud Foundry (cf) 指令
 {: #cf}
-
-前次更新：2016 年 10 月 20 日
-{: .last-updated}
 
 Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令。下列資訊列出最常用來管理應用程式的 cf 指令，並且包括其名稱、選項、用法、必要條件、說明及範例。若要列出所有 cf 指令及關聯的說明資訊，請使用 `cf help`。使用 `cf command_name -h` 可檢視特定指令的詳細說明資訊。
 {: shortdesc}
@@ -48,7 +45,7 @@ Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令
  </tr>
    </tbody>
  </table>
-*表 1. 一般 Cloud Foundry 指令*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="按字母順序排序的指令，用於管理應用程式、空間及服務。每一個指令都有鏈結可提供指令的相關資訊。">
@@ -74,11 +71,12 @@ Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令
  <td>[擴充 (scale)](index.html#cf_scale)</td>
  <td>[services](index.html#cf_services)
  <td>[set-env](index.html#cf_set-env)</td>
+ <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
-*表 2. 用來管理應用程式、空間及服務的指令*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api
@@ -435,19 +433,19 @@ cf login
 ```
 {: codeblock}
 
-登入具有已定義端點 `https://api.ng.bluemix.net` 的 {{site.data.keyword.Bluemix_notm}}。
+登入 {{site.data.keyword.Bluemix_notm}}，並使用已定義端點 `https://api.ng.bluemix.net`。
 ```
 cf login -a https://api.ng.bluemix.net
 ```
 {: codeblock}
 
-登入具有已定義端點 `https://api.ng.bluemix.net`、使用者名稱 `user_name` 以及基於安全原因未指定密碼的 {{site.data.keyword.Bluemix_notm}}。
+登入 {{site.data.keyword.Bluemix_notm}}，並使用已定義端點 `https://api.ng.bluemix.net`、使用者名稱 `user_name` 且不指定密碼（這是基於安全原因）。
 ```
 cf login -a https://api.ng.bluemix.net -u user_name
 ```
 {: codeblock}
 
-登入具有已定義端點 `https://api.ng.bluemix.net`、使用者名稱 `user_name`、基於安全原因未指定密碼、組織名稱 `org_name` 且空間名稱 `space_name` 的 {{site.data.keyword.Bluemix_notm}}。
+登入 {{site.data.keyword.Bluemix_notm}}，並使用已定義端點 `https://api.ng.bluemix.net`、使用者名稱 `user_name`、不指定密碼（這是基於安全原因）、組織名稱 `org_name`，以及空間名稱 `space_name`。
 ```
 cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
 ```
@@ -561,7 +559,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 
 <strong>範例</strong>：
 
-使用預設 start 指令，以啟動 `my_app` 應用程式。
+使用預設啟動指令，以啟動 `my_app` 應用程式。
 ```
 cf push `my_app` -c null
 ```
@@ -669,6 +667,42 @@ cf set-env my_app variable_a 123
 {: codeblock}
 
 
+## cf ssh
+{: #cf_ssh}
+
+讓您安全地登入應用程式容器。依預設，SSH 會存取執行第一個應用程式實例（即具有索引 0 的實例）的容器。
+
+```
+cf ssh
+```
+<strong>必要條件</strong>：`cf api`、`cf login`、`cf target`
+
+您也須配置 Cloud Foundry 部署，以容許透過 SSH 存取應用程式實例。如需詳細資料，請參閱[配置 Cloud Foundry 的 SSH 存取](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}
+
+<strong>指令選項</strong>：
+
+<dl>
+<dt>appname</dt>
+<dd>應用程式的名稱。如果容許 SSH，則您可以使用此選項，啟動與管理應用程式的 VM 互動的 SSH 階段作業。</dd>
+<dt>-i</dt>
+<dd>將特定應用程式實例設為目標。</dd>
+<dt>-L</dt>
+<dd>啟用本端埠轉遞，這會將機器上的輸出埠連結至應用程式 VM 上的輸入埠。</dd>
+<dt>-N</dt>
+<dd>不要執行遠端指令。</dd>
+<dt>-t、-tt 或 -T</dt>
+<dd>可讓您在 pseudo-tty 模式下執行 SSH 階段作業，而不是產生終端機行輸出。<dd>
+</dl>
+
+<strong>範例</strong>：
+
+啟動與管理應用程式（名為 `my_app`）的 VM 互動的 SSH 階段作業。
+```
+$ cf ssh my_app
+```
+{: codeblock}
+
+
 ## cf stacks
 {: #cf_stacks}
 
@@ -720,7 +754,7 @@ cf stop my_app
 ## cf target
 {: #cf_target}
 
-設定或檢視已設定目標的組織或空間
+設定或檢視已設定為目標的組織或空間
 
 ```
 cf target [-o org_name] [-s space_name]

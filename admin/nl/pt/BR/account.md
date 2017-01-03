@@ -4,8 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
-  
+  years: 2015, 2016 lastupdated: "2016-12-05"  
 
 
 ---
@@ -17,8 +16,6 @@ copyright:
 
 # Gerenciando a sua conta do {{site.data.keyword.Bluemix_notm}}
 {: #mngacct}
-*Última atualização: 20 de outubro de 2016*
-{: .last-updated}
 
 Acesse o link **Conta** para configurar notificações, visualizar o uso da conta ou visualizar sua fatura.
 {:shortdesc}
@@ -26,7 +23,7 @@ Acesse o link **Conta** para configurar notificações, visualizar o uso da cont
 ## Inscrevendo-se para o {{site.data.keyword.Bluemix_notm}}
 {: #signup}
 
-É possível se inscrever para uma conta do {{site.data.keyword.Bluemix_notm}} usando um ID IBM existente, criando um novo ou usando um ID federado. Um ID federado é um ID dentro do domínio de uma empresa que foi registrado na IBM para que as credenciais do domínio e do usuário possam ser usadas para acessar aplicativos da web IBM.  
+É possível se inscrever para uma conta {{site.data.keyword.Bluemix_notm}} usando um ID IBM existente, criando um novo ou usando um ID federado. Um ID federado é um ID dentro do domínio de uma empresa que foi registrado na IBM para que as credenciais do domínio e do usuário possam ser usadas para acessar aplicativos da web IBM.  
 
 Um ID federado poderá ser usado para se inscrever para o
 {{site.data.keyword.Bluemix_notm}} somente se sua empresa já tiver trabalhado
@@ -41,8 +38,6 @@ organização na IBM, ou para obter mais informações sobre o processo, consult
 Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Um patrocinador IBM, como um defensor da oferta
 ou do cliente, é necessário quando você solicita o registro de IDs federados.
 
-*Tabela 1. Métodos de inscrição*
-
 | Métodos de inscrição | Detalhes |    
 |-----------------|---------|
 |ID IBM existente | Se você já tiver um ID IBM, inscreva-se para o {{site.data.keyword.Bluemix_notm}} com suas credenciais existentes que você usa para outros produtos e serviços IBM. É necessário inserir um número de telefone ao se inscrever. |
@@ -51,6 +46,7 @@ ou do cliente, é necessário quando você solicita o registro de IDs federados.
 do domínio de sua empresa na IBM, será possível se inscrever para o
 {{site.data.keyword.Bluemix_notm}} usando as credenciais que você já usa para
 login de sua empresa. É necessário inserir um número de telefone ao se inscrever. |
+{:caption="Table 1. Sign up methods" caption-side="top"}
 
 ## Configurando Notificações
 {: #notifications}

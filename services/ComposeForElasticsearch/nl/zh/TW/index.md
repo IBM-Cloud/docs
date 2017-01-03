@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # 開始使用 Compose for Elasticsearch
 {: #getting-started-with-compose-for-elasticsearch}
-
-前次更新：2016 年 9 月 20 日
-{: .last-updated}
 
 {{site.data.keyword.composeForElasticsearch_full}} 合併全文檢索引擎的功能與 JSON 文件資料庫的編製索引強度。它們也會建立強大的工具，以對大量資料進行豐富資料分析。使用 Elasticsearch，可以針對確切程度評分搜尋，讓您可以探索資料集以尋找最相符的項目以及可能遺漏的接近遺漏項目。
 {:shortdesc}
@@ -46,6 +43,7 @@ copyright:
 `deployment_id`|Compose 內所建立之服務的內部 ID。
 `db_type`|服務所提供的資料庫類型；在此情況下，為 `elastic_search`。
 `name`|資料庫部署名稱。
+{: caption="Table 1. {{site.data.keyword.composeForElasticsearch}} credentials" caption-side="top"}
 
 **附註：**兩個 `haproxy` 入口網站都可以存取 Elasticsearch 叢集。`uri` 及 `uri_direct_1` 都可以用來連接至叢集。在應用程式中，切換 `uri` 與 `uri_direct_1`，以管理連線失敗的回應。
 

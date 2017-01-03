@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-02-22"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # 创建触发器和规则
 {: #openwhisk_triggers}
-上次更新时间：2016 年 2 月 22 日
-{: .last-updated}
+
 
 {{site.data.keyword.openwhisk}} 触发器和规则为平台带来了事件驱动型功能。来自外部和内部事件源的事件将通过触发器进行传递，并且规则允许操作对这些事件做出反应。
 {: shortdesc}
@@ -59,7 +54,7 @@ copyright:
 - `imageUpload -> classifyImage` 规则。
 - `imageUpload -> thumbnailImage` 规则。
 
-这三个规则确定了以下行为：对推文中的图像和上传的图像分类，对上传的图像分类，以及生成缩略图版本。 
+这三个规则确定了以下行为：对推文中的图像和上传的图像分类，对上传的图像分类，以及生成缩略图版本。
 
 ## 创建并触发触发器
 {: #openwhisk_triggers_fire}
@@ -69,12 +64,12 @@ copyright:
 例如，创建触发器来发送用户位置更新，然后手动触发该触发器。
 
 1. 输入以下命令来创建触发器：
- 
+
   ```
 wsk trigger create locationUpdate
   ```
   {: pre}
- 
+
   ```
 ok: created trigger locationUpdate
   ```
@@ -86,7 +81,7 @@ ok: created trigger locationUpdate
 wsk trigger list
   ```
   {: pre}
- 
+
   ```
 triggers
   /someNamespace/locationUpdate                            private
@@ -98,7 +93,7 @@ triggers
 3. 接下来，通过指定触发器名称和参数来触发触发器事件：
 
   ```
-wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
 
@@ -115,7 +110,7 @@ ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
 
 规则用于将触发器与操作关联在一起。每次触发触发器事件时，都会通过事件参数来调用操作。
 
-例如，创建一个规则，用于在每次发布位置更新时都调用 hello 操作。 
+例如，创建一个规则，用于在每次发布位置更新时都调用 hello 操作。
 
 1. 通过我们将使用的操作码来创建“hello.js”文件：
   ```
@@ -130,7 +125,7 @@ function main(params) {
 wsk trigger update locationUpdate
   ```
   {: pre}
-  
+
   ```
 wsk action update hello hello.js
   ```
@@ -150,10 +145,10 @@ wsk action update hello hello.js
 
 4. 触发 locationUpdate 触发器。每次触发事件时，都会通过事件参数来调用 hello 操作。
   ```
-wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-  
+
   ```
 ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
@@ -164,13 +159,13 @@ ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
 wsk activation list --limit 1 hello
   ```
   {: pre}
-  
+
   ```
 activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
   {: screen}
-  
+
   ```
 wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
@@ -184,5 +179,15 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
 
   您将看到 hello 操作收到了事件有效内容，并返回了期望的字符串。
 
-可以创建多个规则，用于将同一触发器与不同操作相关联。制定规则的触发器和操作必须位于相同的名称空间，且不能属于包。
-如果您想要使用属于包的操作，那么您可以将该操作复制到名称空间。例如：`wsk action create echo --copy /whisk.system/utils/echo`。
+可以创建多个规则，用于将同一触发器与不同操作相关联。触发器和规则不能属于包。但是，规则可能与属于包的操作相关联，例如：
+  ```
+  wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
+  ```
+  {: pre}
+
+您还可以搭配使用规则与序列。例如，您可以创建由规则 `anotherRule` 激活的操作序列 `recordLocationAndHello`。
+  ```
+  wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  wsk rule create anotherRule locationUpdate recordLocationAndHello
+  ```
+  {: pre}

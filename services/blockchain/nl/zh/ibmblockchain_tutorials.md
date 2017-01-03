@@ -1,7 +1,7 @@
 ---
 
 copyright:
-years: 2016
+  years: 2016
 
 ---
 
@@ -11,91 +11,181 @@ years: 2016
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 範例應用程式及指導教學
+# 样本应用程序和教程
 {: #1stanchor}
-前次更新：2016 年 10 月 5 日
+上次更新时间：2016 年 11 月 8 日
 {: .last-updated}
 
-下列範例示範 IBM Blockchain 網路中的應用程式和鏈碼如何運作。若要進一步瞭解加強您的區塊鏈網路的 Hyperledger Fabric 0.5 版程式碼，請造訪 Linux Foundation 之 Hyperledger Project 的 [Fabric Docs](https://github.com/hyperledger/fabric/tree/master/docs) 小節。  
+以下样本演示了应用程序和链代码在测试 IBM Blockchain 网络上是如何工作的。要了解有关支持 IBM Blockchain 网络的 Hyperledger Fabric V0.6 代码的更多信息，请访问 Linux Foundation 的 Hyperledger 项目的 [Fabric 文档](https://github.com/hyperledger/fabric/tree/v0.6/docs)。  
 {:shortdesc}
 
-若要動態體驗鏈碼應用程式，您可以立即部署底下的「大理石」、「商業票據」或「租車」展示（按一下「部署至 Bluemix」按鈕）。或繼續閱讀以探索 Hello 鏈碼指導教學。
+要体验运行中的链代码应用程序，可以立即部署下面的 Marbles、Commercial Paper 或 Car Lease 演示（单击“部署到 Bluemix”按钮）。或者，继续阅读以探索 Hello Chaincode 教程。
 
-- [![部署至 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)  **大理石**
-- [![部署至 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)  **商業票據**
-- [![部署至 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)  **租車**  
+- [![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)  **Marbles**
+- [![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)  **Commercial Paper**
+- [![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)  **Car Lease**  
 
 <br>
-## 使用 Hello 鏈碼指導教學
+## 学习链代码教程
 {: #hellocc}
-本指導教學可指引您完成使用基本構成要素來撰寫基礎鏈碼應用程式的程式碼。您將漸進式地建置可運作的鏈碼，建立一般資產以在網路上交換。接著您會透過網路 API 與鏈碼互動。完成本指導教學之後，您將可以回答下列問題：
-- 何謂鏈碼？
-- 如何實作鏈碼？
-- 有什麼相依關係存在？
-- 主要函數有哪些？
-- 如何將不同值傳遞至我的引數？
-- 如何在我的網路上安全地登記使用者？
-- 如何編譯鏈碼？
-- 如何透過 REST API 與我的鏈碼互動？
+本教程指导您逐步完成使用基本构建块对基础链代码应用程序进行编码的过程。您将以渐进方式构建有效的链代码，以创建用于在网络上进行交换的通用资产。接着，您将通过网络 API 与链代码进行交互。完成本教程后，您将能回答以下问题：
+- 什么是链代码？
+- 如何实现链代码？
+- 存在哪些依赖关系？
+- 什么是主函数？
+- 如果将不同的值传递到自变量？
+- 如何在我的网络上安全登记用户？
+- 如何编译链代码？
+- 如何通过 REST API 与链代码进行交互？
 
-### 何謂鏈碼？
-鏈碼是可讓使用者與區塊鏈網路互動的 Go (GoLang) 或 Java 程式碼。每當您在網路上「呼叫」(invoke) 交易時，都會呼叫鏈碼中的函數，讀取及寫入分類帳中的值。
+### 什么是链代码？
+链代码是 Go (Golang) 或 Java 代码，支持用户与区块链网络进行交互。每当在网络上“调用”交易时，都将调用链代码中的函数，以读取分类帐的值以及将值写入分类帐。  
 
-### 實作您的第一個鏈碼
-請完成下列主題，以在 IBM Blockchain on Bluemix 網路上實作鏈碼：
-#### 設定環境
-1. 下載並安裝您作業系統的 Golang：[GoLang](https://golang.org/dl/)。
-2. 設定 GOPATH：
-	- $GOPATH 是您的 Go 程式碼及專案的**環境變數**路徑。必須設定 $GOPATH 才能在標準 Go 樹狀結構之外取得、建置及安裝套件。因此，$GOPATH 必須是從 $GOROOT 路徑（您的原始 Go 樹狀結構所在之處）起唯一的路徑徑。您只要建立目錄，然後將 $GOPATH 指向該處。
-	- 在 Windows 上設定 $GOPATH：
-		- 建立專案的工作區目錄，例如 C:\Users\ADMIN\Documents\GoProjects。
-		- 按一下 Windows **開始**功能表，並搜尋「系統環境變數」。
-		- 按一下**編輯系統環境變數**。
-		- 從**進階**標籤，按一下**環境變數**。
-		- 尋找您的系統環境變數 GOPATH 和 GOROOT。如果需要建立 GOPATH，請按一下**新建**。  
-		- GOROOT 及 GOPATH 值必須是唯一的。當您安裝 Go 時會自動產生 GOROOT，且應該是 C:\Go\。
-		- 將 GOPATH 設定成您建立的工作區目錄。在此範例中，**GOPATH** 是 **C:\Users\ADMIN\Documents\GoProjects**。  
-		- 如需詳細資料，請執行指令 `go help gopath` 或造訪 [Go 文件](https://golang.org/doc/install)。
-3. 執行下列指令，將 Hyperledger Faric 0.5 版 shim 程式碼新增至 Go 路徑：
+<br>
+## 设置开发环境
+要开始开发链代码，请首先安装以下依赖项和建议的工具：
 
-	```
-	go get github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview/core/chaincode/shim
-	```
+### Git
 
-4. **附註**：請務必遵循上述鏈結來匯入 0.5 版 hyperledger-archives shim 程式碼。Bluemix 後端會使用這個相同的版本來建置；因此，請務必使 shim 版本和 Bluemix 版本一致。
+- [Git 下载页面](https://git-scm.com/downloads)
+- [Pro Git 书籍](https://git-scm.com/book/en/v2)
+- [Git Desktop（Git CLI 的替代工具）](https://desktop.github.com/)
 
-#### 設定 GitHub
-Blockchain on Bluemix 方案要求您的鏈碼位於 [GitHub](https://Github.com/) 儲存庫。建立 GitHub 帳戶並如 [Set Up Git](https://help.github.com/articles/set-up-git/) 中所述地設定 Git。設定 GitHub 之後，請完成下列步驟：
-1. 前往 [learn chaincode](https://github.com/IBM-Blockchain/learn-chaincode) 並分出儲存庫。  
-2. 將分出項複製到 $GOPATH 中指定的目錄。  
-3. 儲存庫包含兩個鏈碼目錄：[Start](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/start/chaincode_start.go) 是您要從該處開始建置的鏈碼。[Finished](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/finished/chaincode_finished.go) 是您最終會建置的鏈碼。
-4. 確定鏈碼建置在您的本端環境中。開啟命令提示字元，然後導覽至包含 `chaincode_start.go` 的資料夾。輸入下列指令：
+Git 是一个运行速度快、功能强大的版本控制工具，用于链代码开发和常规软件开发。Git Bash 随 Git for Windows 一起安装，是建议使用的命令行终端。
 
-	```
-	go build ./
-	```
-指令應該傳回且沒有錯誤或訊息。
+完成 Git 安装后，请验证 Git 是否已正确安装：
 
+```
+$ git version
+git version 2.9.0.windows.1
+```
 
-#### 實作鏈碼介面
-下一步是在您的 Golang 程式碼中實作鏈碼 shim 介面。三個主要的函數是 **Init**、**Invoke** 和 **Query**。這三個函數都需要一個函數名稱和一個字串陣列作為輸入，但會隨著它們呼叫的時機而變。您將建置可運作的鏈碼，建立一般資產以在區塊鏈網路上交換。
+一旦 Git 安装后，请在 [GitHub](https://github.com/) 上为自己创建帐户。IBM Blockchain on Bluemix 服务要求链代码位于 GitHub 存储库中，才可通过 REST API 进行部署。  
 
-### 相依關係
-The `import` 陳述式會列出建置鏈碼所需要的相依關係：
-1. `fmt` - 包含 `Println` 以進行除錯/記載。
-2. `errors` - 標準的 Go 錯誤格式。
-3. `github.com/hyperledger/fabric/core/chaincode/shim` - 讓 Golang 程式碼與網路對等節點互動的程式碼。
+## Go
 
-### 傳遞值
+Go 目前是 Bluemix 上唯一支持的用于编写链代码的语言。Go 安装包含一组非常有用的工具，可用于编写链代码。例如，`go build` 命令允许在尝试将链代码部署到网络之前，先对其进行编译。请安装 Go V1.6，这是用于开发 Hyperledger Fabric V0.6 的版本：  
 
-會傳遞下列鏈碼值：
+- [Go 1.6 安装](https://golang.org/dl/#go1.6.3)
+- [Go 安装指示信息](https://golang.org/doc/install)
+- [Go 文档和教程](https://golang.org/doc/)
+
+通过运行以下命令，验证 Go 是否已正确安装。`go version` 命令的输出会根据操作系统而变化：
+
+```
+$ go version
+go version go1.6.3 windows/amd64
+
+$ echo $GOPATH
+C:\gopath
+```
+
+`GOPATH` 环境变量不必与上面的示例一样，但必须使用文件系统上的有效目录。运行 `go build` 来验证链代码是否编译时，Go 会在 `$GOPATH/src` 目录中查找列在链代码的 `import` 块中的任何非标准依赖项。[Go 安装指示信息](https://golang.org/doc/install)将指导您完成 GOPATH 环境变量设置。  
+
+<br>
+## Hyperledger Fabric
+
+Blockchain on Bluemix 支持两个版本的 Hyperledger Fabric：V0.5 和 V0.6。如下所述，链代码版本必须与 Bluemix 网络上的 Hyperledger 版本一致。
+
+注意：
+1. 要对分类帐启用 read 和 write 函数，链代码必须从 Hyperledger Fabric 导入链代码垫片。
+2. 要本地编译链代码，必须在 `GOPATH` 环境变量中指定 Hyperledger Fabric 代码位置。
+
+要确定 Bluemix 实例运行的 Hyperledger Fabric 的版本，请单击“仪表板监视器”上的**服务状态**选项卡。向下滚动到**发行说明**部分；“`您的网络使用的是以下版本`”面板将显示运行的 **Hyperledger 落实级别**：
+
+![Bluemix 后端版本](images/fabricversion.png "Bluemix 后端版本")
+图 1. Hyperledger Fabric 版本
+
+链代码版本必须与将链代码部署到的 Hyperledger Fabric 版本一致。例如，图 1 中显示的网络需要克隆 Hyperledger Fabric V0.6（预览）代码库。对于任一版本，Fabric 代码库都必须存储在 `$GOPATH/hyperledger/fabric` 路径中：
+
+- [V0.5 Hyperledger Fabric](https://github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview)
+- [V0.6 HHyperledger Fabric](https://gerrit.hyperledger.org/r/gitweb?p=fabric.git;a=shortlog;h=refs/heads/v0.6)
+
+要安装 Hyperledger Fabric V0.5 代码库，请使用以下 git clone 命令：
+
+```
+# 在 GOPATH 上创建父目录
+mkdir -p $GOPATH/src/github.com/hyperledger
+cd $GOAPTH/src/github.com/hyperledger
+
+# 将相应的发行版代码库克隆到 $GOPATH/src/github.com/hyperledger/fabric 中
+# 请注意，V0.5 发行版是存储库的分支。下面对其进行了定义（位于 -b 自变量后）
+git clone -b v0.5-developer-preview https://github.com/hyperledger-archives/fabric.git
+```
+
+要安装 Hyperledger Fabric V0.6 代码库，请使用以下 git clone 命令：
+
+```
+# V0.6 发行版作为 Gerrit 光纤网存储库内部的分支存在
+git clone -b v0.6 http://gerrit.hyperledger.org/r/fabric
+```
+
+如果 Fabric 未正确安装在 `GOPATH` 中，那么构建链代码将返回类似于以下示例的错误：
+```
+$ go build .
+chaincode_example02.go:27:2: cannot find package "github.com/hyperledger/fabric/core/chaincode/shim" in any of:
+        C:\Go\src\github.com\hyperledger\fabric\core\chaincode\shim (from $GOROOT)
+        C:\gopath\src\github.com\hyperledger\fabric\core\chaincode\shim (from $GOPATH)
+```
+
+### 设置开发管道
+
+使用以下步骤设置管道，用于编写、构建和测试链代码。您将在本地计算机上编写链代码，验证其是否编译，以及将其上传到 GitHub。然后，您将使用 Fabric REST API 在 Bluemix 网络上测试链代码：
+
+1. 针对网络版本，将[学习链代码](https://github.com/IBM-Blockchain/learn-chaincode)存储库的相应版本派生到您的 GitHub 帐户。对于 V0.5 Fabric 网络，请派生 V1.0，或者对于 V0.6 Fabric 网络，请派生 V2.0。一种选择是使用位于存储库页面右上角的**派生**按钮。派生会将整个存储库复制到本地计算机，包括所有分支；分支可通过单击页面左上角的**分支：**按钮来显示。要使用 CLI 进行派生，请将以下命令输入到 Git Bash shell 中：
+
+2. 将派生克隆到 $GOPATH：
+
+  ```bash
+  cd $GOPATH
+  mkdir -p src/github.com/<YOUR_GITHUB_ID_HERE>/
+  cd src/github.com/<YOUR_GITHUB_ID_HERE>/
+  git clone -b v1.0 https://github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode.git
+  或
+  git clone -b v2.0 https://github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode.git
+  ```
+
+  现在，您在本地计算机上具有派生的副本。您将通过更改或添加本地文件来编写链代码，将其推送到 GitHub 上的派生，然后使用网络同级上的 REST API 将链代码部署到区块链网络。
+
+3. 提供了本教程中使用的两个版本的链代码：**start** 是将从其开始的框架链代码，**finished* 是可供构建的已完成链代码。首先，请确保 **start** 在本地环境中构建：
+
+  ```bash
+  cd $GOPATH/src/github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode/start
+  go build ./
+  ```
+
+**start** 版本的学习链代码在编译时应该不会包含任何错误或消息。如果包含任何错误或消息，请查看先前的指示信息以正确安装 Go。
+
+5. 将更改写入本地链代码文件，然后将更新后的文件推送到 GitHub 派生：
+
+  ```bash
+  cd $GOPATH/src/github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode/
+  # 查看本地更改了哪些文件。您应该会看到 chaincode_start.go
+  git status
+  # 对本地存储库中的所有更改编译打包以进行落实
+  git add --all
+  # 落实所有编译打包的更改。在 -m 自变量后插入简短描述
+  git commit -m "Compiled my code"
+  # 将本地落实推送回 https://github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode/
+  git push
+  ```
+
+#### 实现链代码接口
+下一步是在 Go 代码中实现链代码垫片接口。三个主函数为 **Init**、**Invoke** 和 **Query**。这三个函数都会将函数名和字符串数组用作输入，但调用点各不相同。开发路径以用于创建通用资产以在区块链网络上进行交换的工作链代码结尾。
+
+### 依赖项
+`import` 语句列出用于构建链代码的依赖项：
+1. `fmt` - 包含用于调试/日志记录的 `Println`。
+2. `errors` - 标准 Go 错误格式。
+3. `github.com/hyperledger/fabric/core/chaincode/shim` - 用于将 Golang 代码与网络同级连接在一起的代码。
+
 #### Init()
-在您第一次將鏈碼部署至網路時，會呼叫 Init 以起始設定您的鏈碼。在本例中，您使用 `Init` 來配置分類帳上一個變數的起始狀態。
+首次部署链代码时，将调用 `Init` 函数。顾名思义，使用此函数可初始化链代码。在此示例中，`Init` 用于配置分类帐上单个键/值对的初始状态。
 
-在您的 `chaincode_start.go` 檔中，變更 `Init` 函數，使其將第一個 `args` 元素儲存至索引鍵 "hello_world"：
+在 `chaincode_start.go` 文件中更改 `Init` 函数，使其将第一个 `args` 元素存储到键“hello_world”中：
 
 ```go
-func (t *SimpleChaincode) Init(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
+func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	if len(args) != 1 {
 		return nil, errors.New("Incorrect number of arguments. Expecting 1")
 	}
@@ -109,15 +199,15 @@ func (t *SimpleChaincode) Init(stub *shim.ChaincodeStub, function string, args [
 }
 ```
 
-這是使用 shim 函數 `stub.PutState` 來完成。第一個引數以字串形式採用索引鍵，第二個引數則是位元組陣列形式的值。此函數可能傳回錯誤，如果有錯誤的話您的程式碼會檢查並傳回它。
+这可使用存根函数 `stub.PutState` 来完成。此函数将部署请求中发送的第一个自变量解释为要存储在键“hello_world”下的值。如果由于传递的自变量数不正确或因为写入分类帐时有问题而发生错误，那么此函数会返回错误。否则，此函数将完全退出，不返回任何消息。  
 
 #### Invoke()
-會呼叫 `Invoke` 以新增交易要求給鏈結。`Invoke` 的結構很簡單；它收到 `function` 引數，並根據這個引數在鏈碼中呼叫 Go 函數。
+使用 `Invoke` 函数可调用链代码函数在区块链网络上执行“真正的工作”。Invoke 函数会捕获为交易，随后这些交易分组成块，以写入分类帐。更新分类帐可通过调用链代码来实现。`Invoke` 的结构非常简单；它接收函数和自变量数组。根据调用请求中 function 参数传入的函数，`Invoke` 将调用助手函数或返回错误。
 
-在您的 `chaincode_start.go` 檔中，變更 `Invoke` 函數，使其呼叫一般的 write 函數。
+在 `chaincode_start.go` 文件中更改 `Invoke` 函数，使其调用常规 write 函数。
 
 ```go
-func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
+func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	fmt.Println("invoke is running " + function)
 
 	// Handle different functions
@@ -132,10 +222,10 @@ func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args
 }
 ```
 
-程式碼現在會尋找 `write`，因此請將該函數新增至您的 `chaincode_start.go` 檔案：
+现在，代码将查找 `write`，所以请将 write 函数添加到 `chaincode_start.go` 文件：
 
 ```go
-func (t *SimpleChaincode) write(stub *shim.ChaincodeStub, args []string) ([]byte, error) {
+func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 	var name, value string
 	var err error
 	fmt.Println("running write()")
@@ -154,15 +244,15 @@ func (t *SimpleChaincode) write(stub *shim.ChaincodeStub, args []string) ([]byte
 }
 ```
 
-這個 `write` 函數應該看起來類似您先前的 `Init` 變更。您現在可以設定 `PutState` 的索引鍵和值，它允許您在區塊鏈分類帳上儲存任何索引鍵/值配對。
+此 `write` 函数应该类似于先前的 `Init` 更改。现在，可以设置 `PutState` 的键和值，这允许您在区块链分类帐上存储任何键/值对。
 
 #### Query()
-會呼叫 `Query` 來查詢您的鏈碼狀態，且不會新增區塊至鏈結。只有 deploy 和 invoke 函數會新增區塊。請使用 `Query` 來讀取鏈碼狀態的索引鍵/值配對的值。
+调用 `Query` 函数可查询链代码状态，而不会向链（分类帐）添加区块。只有 deploy 和 invoke 函数可添加新区块。使用 `Query` 可读取链代码状态的键/值对的值。
 
-在您的 `chaincode_start.go` 檔中，變更 `Query` 函數，使其呼叫一般的 read 函數：
+在 `chaincode_start.go` 文件中更改 `Invoke` 函数，使其调用通用 read 函数：
 
 ```go
-func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
+func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	fmt.Println("query is running " + function)
 
 	// Handle different functions
@@ -175,10 +265,10 @@ func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args 
 }
 ```
 
-程式碼現在會尋找 `read`，因此請將該函數新增至您的 `chaincode_start.go` 檔案：
+现在，代码将查找 `read`，所以请将“read”函数添加到 `chaincode_start.go` 文件：
 
 ```go
-func (t *SimpleChaincode) read(stub *shim.ChaincodeStub, args []string) ([]byte, error) {
+func (t *SimpleChaincode) read(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 	var name, jsonResp string
 	var err error
 
@@ -197,10 +287,10 @@ func (t *SimpleChaincode) read(stub *shim.ChaincodeStub, args []string) ([]byte,
 }
 ```
 
-這個 `read` 函數會使用 `GetState`，它是 `PutState` 的互補。這個 shim 函數只採用一個字串引數，也就是要擷取的索引鍵名稱。接下來，這個函數會將位元組陣列形式的值，傳回給 `Query`，後者則將它傳送給 REST 處理程式。
+此 `read` 函数使用 `GetState`，后者是对 `PutState` 的补充。此垫片函数只采用一个字符串自变量：要检索的键的名称。接着，此函数会向 `Query` 返回字节数组形式的值，然后 Query 会将此值发送到 REST 处理程序。
 
 #### Main()
-`main` 函數會在每個對等節點部署其鏈碼實例時執行。它會啟動鏈碼並向對等節點登錄。'main' 不需要程式碼更新；chaincode_start.go 和 chaincode_finished.go 都在每個檔案的頂端包含了 `main` 函數：
+`main` 函数在每个同级部署其链代码实例时执行。此函数会启动链代码，并向同级进行注册。“main”无需进行代码更新；chaincode_start.go 和 chaincode_finished.go 文件的顶部都包含一个 `main` 函数：
 
 ```go
 func main() {
@@ -211,59 +301,59 @@ func main() {
 }
 ```
 
-### 與鏈碼互動
-測試鏈碼最快的方法是在對等節點使用 REST 介面。Bluemix 儀表板監視器上的 Swagger 使用者介面，可讓您實驗鏈碼的部署，而不必撰寫任何其他程式碼。  
+### 与链代码进行交互
+测试链代码的最快方法是在同级上使用 REST 接口。Bluemix 仪表板监视器上的 Swagger UI 允许您试验部署链代码，而不编写任何额外的代码。  
 
-<br>
 #### Swagger API
-完成下列步驟，以使用 Swagger API：
+要使用 Swagger API，请完成以下步骤：
 
-1. 登入 [Bluemix](https://console.ng.bluemix.net/login) 並確定您在**儀表板**標籤上。
-1. 檢查您是否在包含 IBM Blockchain 服務的相同 Bluemix 空間中。空間導覽在左邊。
-1. 接近底端有一個**服務**畫面；按一下 IBM Blockchain 服務。
-1. 您應該看到「歡迎使用 IBM Blockchain...」訊息；按一下右邊的**啟動**按鈕。
-1. 在監視器頁面上，您應該看到兩個表格；底端表格可能是空的。
-	- **網路標籤：**
-		- **對等節點日誌**在頂端表格。在**對等節點 1** 的列，按一下檔案圖示，以檢視日誌。除了這個靜態視圖，在接近頁面頂端的**檢視日誌**標籤有即時的**串流對等節點日誌**。
-		- **鏈碼日誌**在底端表格。每個鏈碼會標示鏈碼雜湊，這是在它部署時所傳回。選取任何鏈碼列中的對等節點，然後按一下檔案圖示，以檢視日誌。
-	- **API 標籤**：顯示 Swagger API 文件頁面。
-1. 繼續下列步驟，以實作安全的登記。在 REST 介面呼叫 `/chaincode` 端點需要安全環境定義 ID。為了讓大部分 REST 呼叫被接受，您必須傳遞來自服務認證清單的已登錄 *enrollID*：
-  - 按一下 **+ 網路的登記 ID**，以展開 *enrollID* 值及其密碼的清單。
-  - 將認證集複製到文字檔，以便之後使用。
-  - 展開**登記員** API 區段。
-  - 展開 `POST /registrar` 區段。
-  - 用 JSON 移入 ``Value`` 欄位，該 JSON 指定來自您的認證的 ``enrollID` 和 `enrollSecret`：
+1. 登录到 [Bluemix](https://console.ng.bluemix.net/login)，并确保您位于**仪表板**选项卡上。
+1. 检查您是否位于包含 IBM Blockchain 服务的同一 Bluemix“空间”中。空间导航位于左侧。
+1. 在底部附近有**服务**面板；单击 IBM Blockchain 服务。
+1. 您应该会看到“欢迎使用 IBM Blockchain...”消息；单击右侧的**启动**按钮。
+1. 在“监视器”页面上，您应该会看到两张表；底部表可能为空。
+	- **“网络”选项卡：**
+		- **同级日志**位于顶部表中。在**同级 1** 对应的行中，单击“文件”图标以查看日志。除了此静态视图外，在该页面顶部附近的**查看日志**选项卡中还有实时**流式采集同级日志**。
+		- **链代码日志**位于底部表中。每个链代码都标记有部署该链代码时返回的链代码散列。选择任一链代码行中的同级，然后单击“文件”图标以查看日志。
+	- **API 选项卡**：显示“Swagger API 文档”页面。
+1. 继续执行以下步骤来实现安全登记。调用 REST 接口中的 `/chaincode` 端点需要安全上下文标识。要使大部分 REST 调用能够被接受，必须传递服务凭证列表中的已注册 *enrollID*：
+  - 单击 **+ 网络的登记标识**以展开 *enrollID* 值及其密钥的列表。
+  - 将凭证集复制到文本文件以供将来使用。
+  - 展开**注册器** API 部分。
+  - 展开 `POST /registrar` 部分。
+  - 使用凭证中指定 `enrollID` 和“enrollSecret”的 JSON 填充`值`字段：
 
-  ![Register 範例](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/registrar.PNG "Register 範例")
 
-  *回應內文* 應該類似下列範例：
+  ![注册示例](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/registrar.PNG "注册示例")
 
-  ![Register 範例](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/register_response.PNG "Register 範例回應內文")
+  *响应主体*应该看起来类似以下示例：
 
-既然您已設定 `enrollID`，便可以在接下來的步驟裡部署、呼叫及查詢鏈碼時使用此 ID。
-### 部署鏈碼
-為了要透過 REST 介面部署鏈碼，您的鏈碼必須儲存在公用 GitHub 儲存庫。傳送 deploy 要求到對等節點時，請指定鏈碼儲存庫的 URL，以及起始設定鏈碼用的參數。
+  ![注册示例](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/register_response.PNG "注册示例响应主体")
 
-**在部署鏈碼之前**，請驗證它是在本端環境建置：
-1. 開啟命令提示字元，然後瀏覽至包含 `chaincode_start.go` 的目錄。輸入下列指令：
+现在，您已设置 `enrollID`，可以在以下步骤中部署、调用和查询链代码时使用此标识。
+### 部署链代码
+为了通过 REST 接口部署链代码，链代码必须存储在公共 GitHub 存储库中。向同级发送部署请求时，请指定链代码存储库的 URL 以及用于初始化链代码的参数。
+
+对链代码进行**部署之前**，请验证链代码是否为本地构建的：
+1. 打开命令提示符，然后浏览到包含 `chaincode_start.go` 的目录。输入以下命令：
 	```
 	go build ./
 	```
-1. 展開**鏈碼** API 區段。
-1. 展開 `POST /chaincode` 區段。
-1. 使用以下的程式碼範例設定 `DeploySpec` 文字欄位（讓其他欄位空白），並指定您的鏈碼儲存庫路徑，以及先前 `/registrar` 步驟中的 `enrollID`。`"path":` 應該看似：`"https://github.com/johndoe/learn-chaincode/finished"`。這是儲存庫分出項的路徑，加上您 chaincode_finished.go 檔案的路徑：
+1. 展开**链代码** API 部分。
+1. 展开 `POST /chaincode` 部分。
+1. 使用以下示例代码设置 `DeploySpec` 文本字段（使其他字段为空白），指定链代码存储库路径，以及先前 `/registrar` 步骤中的 `enrollID`。`"path":` 应该类似于以下内容：`"https://github.com/johndoe/learn-chaincode/finished"`。这是存储库派生的路径，加上 chaincode_finished.go 文件的路径：
 
 	```
 	{
 		"jsonrpc": "2.0",
-		"method": "deploy",
-		"params": {
-			"type": 1,
-			"chaincodeID": {
-				"path": "https://github.com/ibm-blockchain/learn-chaincode/finished"
+       "method": "deploy",
+       "params": {
+       "type": 1,
+      "chaincodeID":{
+      "path": "https://github.com/ibm-blockchain/learn-chaincode/finished"
 			},
-			"ctorMsg": {
-				"function": "init",
+"ctorMsg": {
+"function": "init",
 				"args": [
 					"hi there"
 				]
@@ -274,17 +364,17 @@ func main() {
 	}
 	```
 
-  *回應內文* 應該類似下列範例：
+  *响应主体*应该看起来类似以下示例：
 
-  ![Deploy 範例](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/deploy_response.PNG "Deploy 範例回應內文")
+  ![部署示例](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/deploy_response.PNG "部署示例响应主体")
 
-  部署的回應將包含此鏈碼的 ID。ID 是一個 128 個字元的英數雜湊，您可以將其用於未來的 invoke 或 query 要求。請將這個 ID 複製到文字編輯器。
+  部署的响应将包含此链代码的标识。标识为 128 个字符的字母数字散列，可用于未来的调用或查询请求。将此标识复制到文本编辑器。
 
-#### Query()
-查詢鏈碼的 `hello_world` 索引鍵值，這是您使用 `Init` 函數所設定：
-1. 展開**鏈碼** API 區段。
-1. 展開 `POST /chaincode` 區段。
-1. 使用下列範例移入 `QuerySpec` 文字欄位（讓其他欄位空白），並指定先前部署步驟的鏈碼 ID，以及先前 `/registrar` 步驟中的 `enrollID`。
+#### Query
+在链代码中查询 `hello_world` 键的值，此键是使用 `Init` 函数设置的：
+1. 展开**链代码** API 部分。
+1. 展开 `POST /chaincode` 部分。
+1. 使用以下示例填充 `QuerySpec` 文本字段（使其他字段为空白），指定先前部署步骤中的链代码标识，以及先前 `/registrar` 步骤中的 `enrollID`：
 
 	```
 	{
@@ -292,11 +382,11 @@ func main() {
 		"method": "query",
 		"params": {
 			"type": 1,
-			"chaincodeID": {
-				"name": "CHAINCODE_HASH_HERE"
+      "chaincodeID":{
+      "name": "CHAINCODE_HASH_HERE"
 			},
-			"ctorMsg": {
-				"function": "read",
+"ctorMsg": {
+"function": "read",
 				"args": [
 					"hello_world"
 				]
@@ -306,17 +396,17 @@ func main() {
 		"id": 2
 	}
 	```
- 「回應內文」應該類似下列範例：
+“*响应主体”应该看起来类似以下示例：
 
-  ![Query 範例](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/query_response.PNG "Query 範例回應內文")
+  ![查询示例](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/query_response.PNG "查询示例响应主体")
 
-  `hello_world` 的值是 "hi there"，這是由您先前 deploy 呼叫的內文所設定。
+  `hello_world` 的值为“hi there”这是由先前 deploy 调用主体设置的。
 
-#### Invoke()
-使用 `invoke` 呼叫您的一般 write 函數。將 `hello_world` 的值變更為 "go away"：
-1. 展開**鏈碼** API 區段。
-1. 展開 `POST /chaincode` 區段。
-1. 使用下列範例移入 `InvokeSpec` 文字欄位（讓其他欄位空白），並指定先前部署步驟的鏈碼 ID，以及先前 `/registrar` 步驟中的 `enrollID`。
+#### 调用
+通过 `invoke` 调用通用 write 函数。将 `hello_world` 的值更改为 "go away"：
+1. 展开**链代码** API 部分。
+1. 展开 `POST /chaincode` 部分。
+1. 使用以下示例填充 `InvokeSpec` 文本字段（使其他字段为空白），指定先前部署步骤中的链代码标识，以及先前 `/registrar` 步骤中的 `enrollID`：
 
 	```
 	{
@@ -324,11 +414,11 @@ func main() {
 		"method": "invoke",
 		"params": {
 			"type": 1,
-			"chaincodeID": {
-				"name": "CHAINCODE_HASH_HERE"
+      "chaincodeID":{
+      "name": "CHAINCODE_HASH_HERE"
 			},
-			"ctorMsg": {
-				"function": "write",
+"ctorMsg": {
+"function": "write",
 				"args": [
 					"hello_world",
 					"go away"
@@ -339,73 +429,76 @@ func main() {
 		"id": 3
 	}
 	```
- 「回應內文」應該類似下列範例：
+“*响应主体”应该看起来类似以下示例：
 
-  ![Invoke 範例](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/invoke_response.PNG "Invoke 範例回應內文")
+  ![调用示例](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/invoke_response.PNG "调用示例响应主体")
 
-  重新執行上述查詢，您應該得到下列回應：
+  重新运行上面的查询，您应该会获得以下响应：
 
-  ![Query2 範例](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/query2_response.PNG "Invoke 範例回應")
 
-您剛剛已完成撰寫某個基本鏈碼。  
+  ![Query2 示例](https://raw.githubusercontent.com/IBM-Blockchain/learn-chaincode/master/imgs/query2_response.PNG "调用示例响应")
+
+您刚刚完成了编写一些基本链代码的过程。  
 
 <br>
-## 大理石、商業票據和租車展示的需求
+## 演示需求
 {: #requirements}
 
-下列必要條件包含在您的 Bluemix 服務，以便在本端執行「大理石」、「商業票據」及「租車」應用程式。您的 Bluemix 環境會複製 Hyperledger Fabric 以提供下列相依關係：
+Bluemix 服务随附以下先决条件，这些先决条件对于运行 Marbles、Commercial Paper 和 Car Lease 演示应用程序是必需的。您的 Bluemix 环境克隆了 Hyperledger Fabric 来提供以下依赖项：
 
-- Bluemix ID https://console.ng.bluemix.net/（建立 IBM Blockchain 網路及提供服務認證給對等節點和憑證管理中心時需要）
-- Node.js 0.12.0+ 及 npm v2+
-- Golang 環境（僅自行建置鏈碼時需要）
+- Bluemix 标识 https://console.ng.bluemix.net/（必需，用于创建 IBM Blockchain 网络并为同级和认证中心提供服务凭证）
+- Node.js 0.12.0+ 和 npm v2+
+- Golang 环境（仅当构建自己的链代码时必需）
 
-展示需要您精通 Node.js 和 express 模組。您也必須對於區塊鏈環境定義的「鏈碼」、「分類帳」和「對等節點」有概念上的瞭解；請參閱 [Hyperledger Fabric  Glossary](https://github.com/hyperledger/fabric/blob/master/docs/glossary.md)。  
+这些演示还需要熟练使用 Node.js 和 Express 模块。您还必须对区块链上下文中的“链代码”、“分类帐”和“同级”有概念性的了解；请参阅 [Hyperledger Fabric 词汇表](https://github.com/hyperledger/fabric/blob/v0.6/docs/glossary.md)。  
 
 <br>
-## 使用大理石展示
+## Marbles 演示
 {: #marbles}
 
-「大理石」應用程式示範兩方之間簡單的資產轉移。應用程式的設計是要測試 JavaScript SDK、指引其開發，以及協助開發人員熟悉 SDK 和鏈碼。
+Marbles 应用程序演示两个参与方之间的简单资产转移。该应用程序旨在测试 JavaScript SDK，指导其开发，以及帮助开发者熟悉该 SDK 和链代码。
 
-探索 [Marbles Tutorials](https://github.com/IBM-Blockchain/marbles/blob/master/tutorial_part1.md) 以瞭解 Web 應用程式、SDK 及鏈碼如何一起運作。如果您已經熟悉鏈碼和 IBM Blockchain，可以將展示[手動部署](https://github.com/IBM-Blockchain/marbles/blob/master/tutorial_part1.md#)至 Bluemix，或按一下「部署至 Bluemix」按鈕以使用 Web 應用程式：
+探索 [Marbles 教程](https://github.com/IBM-Blockchain/marbles/blob/master/tutorial_part1.md)，以了解 Web 应用程序、SDK 和链代码如何一起工作。如果已经熟悉链代码和 IBM Blockchain，那么可以将该演示[手动部署](https://github.com/IBM-Blockchain/marbles/blob/master/tutorial_part1.md#)到 Bluemix，或者单击“部署到 Bluemix”按钮来使用该 Web 应用程序：
   
-[![部署至 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)  
+[![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)
 
 <br>
-## 使用商業票據展示
+## Commercial Paper 演示
 {: #commercialpaper}
 
-「商業票據」應用程式示範如何使用 IBM Blockchain 實作商業票據交易網路。「商業票據」展示會探索具有許可權的區塊鏈網路，在這個網路上，參與者會被指派角色以及相對應的存取層次。請造訪 [Commercial Paper README](https://github.com/IBM-Blockchain/cp-web#readme) 以進一步瞭解這份展示的元件，或立即將它部署至 Bluemix，查看運作中的交易網路：
+Commercial Paper 应用程序演示可以如何使用 IBM Blockchain 来实现商业票据交易网络。Commercial Paper 演示探索获得许可的区块链网络，在该网络上，会为参与者分配角色和相应的访问级别。请访问 [Commercial Paper 自述文件](https://github.com/IBM-Blockchain/cp-web#readme)，以了解有关此演示的组件的更多信息，或将其立即部署到 Bluemix 以查看运行中的交易网络：
   
-[![部署至 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)  
+[![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)   
 
 <br>
-## 使用租車展示
+## Car Lease 演示
 {: #carlease}
 
-「租車」應用程式示範車輛的生命週期，從製造、經過一系列擁有者，最後到車輛報廢。展示使用 Node.js 進行伺服器端程式設計，針對在 IBM Blockchain 網路上執行的鏈碼則使用 Golang。展示包含兩個鏈碼實例：一個定義車輛交易的規則，另一個則記載生命週期內的所有車輛交易。兩個鏈碼程式都使用 JSON 物件來儲存資料。請造訪 [Car Lease README](https://github.com/IBM-Blockchain/car-lease-demo/blob/master/README.md) 以進一步瞭解與這份展示相關聯的應用程式架構和車輛屬性，或將展示立即部署至 Bluemix：
+Car Lease 应用程序演示车辆的生命周期，从制造开始，经过一系列的车主之手，到车辆报废结束。该演示将 Node.js 用于服务器端编程，并将 Golang 用于在 IBM Blockchain 网络上运行的链代码。该演示包含两个链代码实例：一个定义车辆交易的规则，另一个记录车辆生命周期内的所有车辆交易。这两个链代码程序都使用 JSON 对象来存储数据。请访问 [Car Lease 自述文件](https://github.com/IBM-Blockchain/car-lease-demo/blob/master/README.md)，以了解有关该应用程序体系结构以及与此演示关联的车辆属性的更多信息，或者将演示立即部署到 Bluemix：
   
-[![部署至 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)  
+[![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git) 
 
 <br>
-## 非唯一性鏈碼
+
+<!-- comment out - moving to separate file for now jh
+## Non-deterministic chaincode
 {: #ndcc}
 
-IBM Blockchain 網路只支援唯一性鏈碼。在任何區塊鏈網路上都不支援使用非唯一性鏈碼，且會導致重大錯誤。
+IBM Blockchain networks support deterministic chaincode only. Using non-deterministic chaincode is not supported, and will cause severe errors, on any blockchain network.
 
-**非唯一性鏈碼** 是指跨越時間和節點，**不會**在區塊鏈分類帳上導致相同附加值的任何鏈碼。相反地，**唯一性鏈碼** 則會在區塊鏈分類帳上，跨越時間和節點，一律產生相同的附加值。
+**Non-deterministic chaincode** is any chaincode that does **not** result in the same appended value, over time and across nodes, on the blockchain ledger. By contrast, **deterministic chaincode** always produces the same appended value, over time and across nodes, on the blockchain ledger.
 
-### 唯一性鏈碼範例
-一律將變數值加一的 **invoke** 交易是唯一性的，因為結果在每個節點上都一律相同，不會有變化。例如，每當對固定值五執行這個交易時，附加的值在每個節點上、每次都一律是六。唯一性鏈碼的網路結果不會在區塊鏈中造成分歧；每個節點上的分類帳副本一律會指出（在同步化之後）值比前一次呼叫多一。
+### Deterministic chaincode example
+An **invoke** transaction that always increments the value of a variable by one is deterministic, because the result is always the same, on every node, without variance. Whenever this transaction is run against a fixed value of five, for example, the appended value is always six, on every node, every time. The network outcome for deterministic chaincode is no divergence in the blockchain; the copy of the ledger on each node always indicates (after syncing) that the value is one greater than the previous invocation.
 
-### 非唯一性鏈碼範例
-根據當日開始 (00:00) 之後經歷的秒數來增加區塊鏈變數值的 **invoke** 交易，則是非唯一性的，因為值會隨著時間不同而在各節點之間變化。例如，每次對固定值「五」執行這個交易時，附加的值會在各節點不同（罕有例外），因為自 00:00 起經歷的秒數勢必會變化。這個非唯一性鏈碼的網路結果就是分歧的區塊鏈；所有節點無法針對「五 + 自 00:00 起經歷秒數」的值達成一致。
+### Non-deterministic chaincode example
+An **invoke** transaction that increments the value of a blockchain variable with the number of elapsed seconds since the start of the day (00:00) is non-deterministic, because over time the value will vary across nodes. Each time this transaction is run against a fixed value of five, for example, the appended value diverges across nodes (with rare exceptions), because the number of elapsed seconds since 00:00 will inevitably vary. The network outcome for this non-deterministic chaincode is divergent blockchains; all nodes will not agree on the value of five + the number of elapsed seconds since 00:00.
 
-### 隨機性
-鏈碼跨越時間和節點，對於附加的值都不能有任何隨機性。任何隨機性都會在各節點之間造成分歧的區塊鏈，然後就必須由網路來解決此現象。為了避免隨機性，您必須確保不會有任何平行鏈碼影響來自呼叫鏈碼的輸入值。例如，請勿同時執行任何 **query** 交易和 **invoke** 交易，因為平行查詢可能會在各節點之間的呼叫值產生變化。
+### Randomness
+Chaincode must exhibit no randomness in the appended values, over time and across nodes. Any randomness produces divergent blockchains across nodes, which must then be resolved by the network. To avoid randomness, you must ensure that no parallel chaincode can affect the input value from invocation chaincode. For example, do not run any **query** transactions in parallel with **invoke** transactions, because parallel queries could produce variance in the invocation values across nodes.
 
-### 使用廣域變數
-使用廣域變數或實例變數來儲存從分類帳中擷取的值或在分類帳上設定值，可能會導致非唯一性。鏈碼不應該根據在重新啟動鏈碼容器時不會保留其狀態的廣域變數或實例變數。以下是使用廣域變數的範例；透過 `stub.PutState` 函數寫入分類帳的 `key` 值，是衍生自廣域變數：
+### Using a global variable
+Using a global or instance variable to store a value that was retrieved from the ledger, or to set a value on the ledger, can lead to non-determinism. Chaincode should not rely on global or instance variables that will not retain their state across restarts of a chaincode container. The following is an example that uses a global variable; the value of `key`, which is written to the ledger via the `stub.PutState` function, is derived from a global variable:
 
 ```go
 //declare global variable
@@ -418,8 +511,8 @@ var INVOICE_COUNTER int64
 		stub.PutState(key,[]byte(invoiceID))
 ```
 
-### 反覆運算對映類型
-反覆運算對映類型可能導致非唯一性，因為順序在 Go 程式設計語言中不具唯一性。下列範例說明如何反覆運算名為 `columnTypes` 的對映：
+### Iterating over a map type
+Iteration over a map type can lead to non-determinism, because order is not deterministic in the Go programming language. The following is an example of iteration over the map named `columnTypes`:
 
 ```go
  func generateColumns(colTypes map[string]string, colKeys []bool) ([]*shim.ColumnDefinition, error) {
@@ -434,7 +527,10 @@ var INVOICE_COUNTER int64
 }
 ```
 
-<!---## Using the Node.js SDK
+-->
+
+
+<!-- ## Using the Node.js SDK
 {: #nodesdk}
 
-Use the [Hyperledger fabric client SDK ](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md) library for easier interaction with an IBM Blockchain network.  The SDK, through importing packages and libraries, allows for an application developer to build Node.js applications that can invoke functionality on the blockchain network from the client side.  Member services and asset management are now pluggable components on client side applications.  See the [Enhanced Node.js SDK](etn_sdk.html) section for full documentation and application examples.--->
+Use the [Hyperledger fabric client SDK ](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md) library for easier interaction with an IBM Blockchain network.  The SDK, through importing packages and libraries, allows for an application developer to build Node.js applications that can invoke functionality on the blockchain network from the client side.  Member services and asset management are now pluggable components on client side applications.  See the [Enhanced Node.js SDK](etn_sdk.html) section for full documentation and application examples. -->

@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # 商業分析
 {: #businessanalytics}
-
-*前次更新：2015 年 12 月 9 日*
 
 使用這些服務，您可以將商業智慧內嵌至應用程式，以更快速且輕鬆地發現所有資料類型的見解。
 {:shortdesc}

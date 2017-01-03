@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-21"
 
 ---
 {:new_window: target="_blank"}
@@ -13,15 +13,12 @@ lastupdated: "2016-10-13"
 # Dispositivos de Arranque
 {: #starters}
 
-Última atualização: 13 de outubro de 2016
-{: .last-updated}
-
 Com o painel do {{site.data.keyword.Bluemix}} Mobile, é possível criar seu
 projeto usando um Iniciador de UI (interface com o usuário) ou código.
 
+
 ## Iniciador de UI
 {: #UI_Starter}
-
 
 Os desenvolvedores móveis do {{site.data.keyword.Bluemix_notm}} podem usar
 os iniciadores de UI (interface com o usuário) para criar apps usando o construtor de UI (interface com o usuário), que permite a um
@@ -34,6 +31,9 @@ Os iniciadores de UI (interface com o usuário) oferecem padrões de aplicativos
 e ajustar suas necessidades de caso de uso. Use o iniciador em branco quando desejar
 criar uma ideia do zero. Cada iniciador de UI (interface com o usuário) é configurado para ser ativado com recursos
 de Push e Analítica, se você decidir configurá-los para seu projeto móvel.
+
+Se você estiver começando com um Iniciador de UI, continue com
+[Usando um iniciador de UI para criar um projeto](projects_ui.html).
 
 <!-- If you choose to create your project with a UI Starter, you have the option to design your app from within the UI Builder.-->
 
@@ -54,16 +54,20 @@ produção que foca na demonstração de uma integração principal do
 {{site.data.keyword.Bluemix_notm}} com um serviço de alto valor. Cada iniciador
 foca em um serviço e mostra a integração dos SDKs de serviço no código. Em alguns casos,
 os iniciadores de código oferecem uma experiência de usuário simples para destacar a
-integração dos dados de serviço ou as interações com o usuário. Cada iniciador de código
-será configurado para ser ativado com recursos de Push, Analítica e Autenticação, se você
-decidir configurá-los para seu projeto móvel.
+integração dos dados de serviço ou as interações com o usuário. Cada
+Iniciador de código será configurado para ser ativado com Push,
+Autenticação e, possivelmente, outros recursos, se você decidir configurá-los para seu projeto móvel.
 
 Se você optar por criar seu projeto com um iniciador de código, não terá a opção de
 projetar seu app de dentro do construtor de UI (interface com o usuário).
 
+Se você estiver começando com um Iniciador de código, continue com [Usando um iniciador para criar um projeto](projects_code.html).
 
 ## Tutorials
 {: #tutorials}
+
+Para obter instruções mais detalhadas sobre como criar
+aplicativos com Iniciadores, é possível usar os tutoriais de ponta a ponta. 
 
 ### Tutoriais do iniciador de UI (interface com o usuário)
 {: #tutorials_UI}
@@ -73,5 +77,7 @@ projetar seu app de dentro do construtor de UI (interface com o usuário).
 ### Tutoriais do iniciador de código
 {: #tutorials_Code}
 
+* [Tutorial de ponta a ponta
+do Iniciador de código do {{site.data.keyword.visualrecognitionshort}}](tutorial.html)
 * [Tutorial - Idioma do Watson](tutorial_watson_language.html)
 * [Tutorial - Clima](tutorial_weather.html)

@@ -10,11 +10,11 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Lernprogramm zu Globalization Pipeline
+# Lernprogramm für {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipeline_tutorial}
 
-*Letzte Aktualisierung: 5 Juli 2016*
+*Letzte Aktualisierung: 13. Juli 2016*
 {: .last-updated}
 
-Ein Schulungsvideo über {{site.data.keyword.GlobalizationPipeline_full}} finden Sie unter [{{site.data.keyword.GlobalizationPipeline_full}} Lernprogramm](https://www.youtube.com/watch?v=r_w7IvPNtH0){: new_window}.
+Ein Schulungsvideo über {{site.data.keyword.GlobalizationPipeline_short}} finden Sie unter [{{site.data.keyword.GlobalizationPipeline_short}} Lernprogramm](https://www.youtube.com/watch?v=r_w7IvPNtH0){: new_window}.
 

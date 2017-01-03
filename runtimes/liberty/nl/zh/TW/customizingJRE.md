@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-15"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # 自訂 JRE
 {: #customizing_jre}
-
-前次更新：2016 年 8 月 15 日
-{: .last-updated}
 
 應用程式是在 Liberty 建置套件所提供及配置的 Java 運行環境 (JRE) 中執行。Liberty 建置套件也可以配置 JRE 版本或類型、自訂 JVM 選項，或重疊 JRE 功能。
 
@@ -108,7 +106,7 @@ JVM 選項的配置是為了提供 Bluemix 環境中的最佳化，以及輔助�
 <tr>
 <td> OpenJDK</td>
 <td>根據 HotSpot 運行環境，以 -X 表示非標準、-XX 表示開發人員選項，並使用布林旗標來啟用或停用選項</td>
-<td>[HotSpot 運行環境概觀](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html) </td>
+<td>[HotSpot 運行環境概觀](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 

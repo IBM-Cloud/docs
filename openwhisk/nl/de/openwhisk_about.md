@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-08-02"
  
 
 ---
@@ -17,9 +17,6 @@ copyright:
 {:pre: .pre}
 
 # Informationen zu {{site.data.keyword.openwhisk_short}}
-
-Letzte Aktualisierung: 2. August 2016
-{: .last-updated}
 
 Die folgenden Abschnitte enthalten detaillierte Informationen zu {{site.data.keyword.openwhisk}}.
 {: shortdesc}

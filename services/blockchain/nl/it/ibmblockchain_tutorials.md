@@ -13,10 +13,10 @@ copyright:
 
 # Applicazioni di esempio ed esercitazioni
 {: #1stanchor}
-Ultimo aggiornamento: 5 ottobre 2016
+Ultimo aggiornamento: 08 novembre 2016
 {: .last-updated}
 
-I seguenti esempi illustrano la modalità di funzionamento di applicazioni e chaincode in una rete IBM Blockchain. Per ulteriori informazioni sul codice Hyperledger Fabric v0.5, che è alla base della rete blockchain, visita la sezione [Fabric Docs](https://github.com/hyperledger/fabric/tree/master/docs) del progetto Hyperledger della Linux Foundation.  
+ seguenti esempi illustrano la modalità di funzionamento di applicazioni e chaincode in una rete IBM Blockchain di test. Per ulteriori informazioni sul codice Hyperledger Fabric v0.6, che è alla base delle reti IBM Blockchain, visita la [Fabric Docs](https://github.com/hyperledger/fabric/tree/v0.6/docs) per il progetto Hyperledger della Linux Foundation.  
 {:shortdesc}
 
 Per provare le applicazioni chaincode in azione, puoi distribuire immediatamente le demo Marbles, Commercial Paper o Car Lease qui di seguito (fai clic su un pulsante Distribuisci a Bluemix). Altrimenti, continua a leggere per esplorare l'esercitazione Hello Chaincode.
@@ -26,7 +26,7 @@ Per provare le applicazioni chaincode in azione, puoi distribuire immediatamente
 - [![Distribuisci a Bluemix](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)(https://bluemix.net/deploy/button.png)]  **Car Lease**  
 
 <br>
-## Utilizzo dell'esercitazione Hello Chaincode
+## Ulteriori informazioni sull'esercitazione del chaincode
 {: #hellocc}
 Questa esercitazione ti guida nell'utilizzo degli elementi di base per codificare una semplice applicazione chaincode. Svilupperai in modo incrementale un chaincode funzionante che crea le risorse generiche per lo scambio su una rete. Interagirai quindi con il chaincode tramite la API di rete. Dopo aver completato questa esercitazione, sarai in grado di rispondere alle seguenti domande:
 - Cos'è chaincode?
@@ -39,62 +39,153 @@ Questa esercitazione ti guida nell'utilizzo degli elementi di base per codificar
 - Come interagisco con il chaincode tramite la API REST?
 
 ### Cos'è chaincode?
-Chaincode è codice Go (GoLang) o Java che consente agli utenti di interagire con una rete blockchain. Quando 'richiami' una transazione sulla rete, richiami una funzione in chaincode che legge e scrive valori nel registro.
+Chaincode è codice Go (Golang) o Java che consente agli utenti di interagire con una rete blockchain. Quando 'richiami' una transazione sulla rete, richiami una funzione in chaincode che legge e scrive valori nel registro.  
 
-### Implementazione del tuo primo chaincode
-Completa i seguenti argomenti per implementare chaincode su una rete IBM Blockchain su Bluemix:
-#### Impostazione dell'ambiente
-1. Scarica e installa Golang per il tuo sistema operativo da: [GoLang](https://golang.org/dl/).
-2. Imposta il tuo GOPATH:
-	- $GOPATH è un percorso **Variabile di ambiente** al tuo codice e ai tuoi progetti Go. Il tuo $GOPATH deve essere impostato per ottenere, sviluppare e installare pacchetti al di fuori della struttura ad albero Go standard. Pertanto, $GOPATH deve essere univoco dal percorso $GOROOT dove si trova la tua struttura ad albero Go originale. Ti basta creare una directory e puntare quindi il tuo $GOPATH a essa.
-	- Imposta il tuo $GOPATH su Windows:
-		- Crea una directory di spazio di lavoro per il tuo progetto, come ad esempio C:\Users\ADMIN\Documents\GoProjects.
-		- Fai clic sul menu **Start** di Windows e cerca "variabili di ambiente di sistema".
-		- Fai clic su **Modificare le variabili di ambiente relative al sistema**.
-		- Dalla scheda **Avanzate**, fai clic su **Variabili di ambiente**.
-		- Trova le tue variabili di ambiente di sistema GOPATH e GOROOT. Se devi creare GOPATH, fai clic su **Nuovo**.  
-		- I tuoi valori GOROOT e GOPATH devono essere univoci. GOROOT viene generato automaticamente quando installi Go e dovrebbe essere C:\Go\.
-		- Imposta il tuo GOPATH sulla directory di spazio di lavoro che hai creato. In questo esempio, **GOPATH** è **C:\Users\ADMIN\Documents\GoProjects**.  
-		- Per ulteriori dettagli, esegui il comando `go help gopath` oppure visita la [documentazione di Go](https://golang.org/doc/install).
-3. Aggiungi il codice shim Hyperledger Fabric v0.5 al tuo percorso Go immettendo il seguente comando:
+<br>
+## Impostazione dell'ambiente di sviluppo
+Per avviare lo sviluppo del chaincode, installa prima i seguenti strumenti e dipendenze raccomandati:
 
-	```
-	go get github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview/core/chaincode/shim
-	```
+### Git
 
-4. **Nota**: assicurati di seguire il link precedente per importare il codice shim v0.5 hyperledger-archives.  Il beckend Bluemix è costruito con lo stesso controllo delle versioni; di conseguenza, è importante che la versione shim e la versione Bluemix siano allineate.
+- [Git download page](https://git-scm.com/downloads)
+- [Pro Git book](https://git-scm.com/book/en/v2)
+- [Git Desktop (an alternative to the Git CLI)](https://desktop.github.com/)
 
-#### Impostazione di GitHub
-I piani Blockchain su Bluemix richiedono che il tuo chaincode si trovi in un repository [GitHub](https://Github.com/). Crea un account GitHub e imposta Git come descritto in [Set Up Git](https://help.github.com/articles/set-up-git/). Dopo aver impostato GitHub, completa la seguente procedura:
-1. Vai a [learn chaincode](https://github.com/IBM-Blockchain/learn-chaincode) e biforca il repository.  
-2. Clona la biforcazione alla directory specificata nel tuo $GOPATH.  
-3. Il repository include due directory chaincode: [Start](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/start/chaincode_start.go) è il chaincode dal quale inizierai l'attività di sviluppo. [Finished](https://github.com/IBM-Blockchain/learn-chaincode/blob/master/finished/chaincode_finished.go) è il chaincode finale prodotto dalla tua attività di sviluppo.
-4. Accertati che lo sviluppo del chaincode abbia luogo nel tuo ambiente locale. Apri un prompt dei comandi e vai alla cartella che contiene `chaincode_start.go`. Immetti il seguente comando:
+Git è un potente strumento di controllo della versione per lo sviluppo del chaincode e per lo sviluppo del software in generale. Git Bash, che viene installato con Git per Windows, è il terminale della riga di comando raccomandato.
 
-	```
-	go build ./
-	```
-Il comando non dovrebbe restituire alcun errore o messaggio.
+Dopo aver completato le installazioni di Git, verifica che Git sia installato:
 
-#### Implementazione dell'interfaccia chaincode
-Il prossimo passo consiste nell'implementazione dell'interfaccia shim chaincode nel tuo codice Golang. Le tre funzioni principali sono **Init**, **Invoke** e **Query**. Tutte e tre le funzioni prendono un nome funzione e un array di stringhe come input ma variano per quanto riguarda il quando vengono richiamate. Eseguirai l'attività di sviluppo su un chaincode funzionante che crea risorse generiche per lo scambio si una rete blockchain.
+```
+$ git version
+git version 2.9.0.windows.1
+```
+
+Dopo aver installato Git, crea un account per te stesso su [GitHub](https://github.com/). Il servizio IBM Blockchain su Bluemix richiede che il chaincode sia in un repository GitHub per la distribuzione tramite l'API REST.  
+
+## Go
+
+Go è al momento l'unico linguaggio supportato per la scrittura del chaincode in Bluemix. L'installazione di Go include una serie di strumenti della CLI utili per la scrittura del chaincode. Ad esempio, il comando `go build` ti permette di compilare il tuo chaincode prima di tentare di distribuirlo in una rete. Installa Go v1.6, che è la versione utilizzata per lo sviluppo di Hyperledger Fabric v0.6:  
+
+- [Go 1.6 install](https://golang.org/dl/#go1.6.3)
+- [Go installation instructions](https://golang.org/doc/install)
+- [Go documentation and tutorials](https://golang.org/doc/)
+
+Verifica che Go sia stato correttamente installato eseguendo i seguenti comandi. L'output del comando `go version` può variare, a seconda del tuo sistema operativo:
+
+```
+$ go version
+go version go1.6.3 windows/amd64
+
+$ echo $GOPATH
+C:\gopath
+```
+
+La tua variabile di ambiente `GOPATH` non deve corrispondere all'esempio precedente, ma devi utilizzare una directory valida nel tuo file system. Quando esegui `go build` per verificare che il tuo chaincode sia in compilazione, Go ricerca nella directory `$GOPATH/src` tutte le dipendenze non standard che elenchi nel blocco `import` nel tuo chaincode. [Go installation instructions](https://golang.org/doc/install) ti guidano nella configurazione della variabile di ambiente GOPATH.  
+
+<br>
+## Hyperledger Fabric
+
+Sono supportate due versioni di Hyperledger Fabric per Blockchain in Bluemix: v0.5 e v0.6.  Come descritto qui di seguito, la tua versione del chaincode deve essere allineata alla versione di Hyperledger nella tua rete Bluemix.
+
+Attenzione:
+1. Per abilitare le funzioni di lettura e scrittura sul registro, il tuo chaincode deve importare lo shim da Hyperledger Fabric.
+2. Per compilare il tuo chaincode localmente, devi aver specificato l'ubicazione del codice Hyperledger Fabric nella tua variabile di ambiente `GOPATH`.
+
+Per determinare quale versione di Hyperledger Fabric la tua istanza Bluemix sta eseguendo, fai clic sulla scheda **Stato servizio** nel tuo monitoraggio del dashboard.  Scorri fino alla sezione **Note sulla release**; il pannello `La tua rete sta utilizzando questa versione` visualizzerà il **Livello di commit di Hyperledger** che stai eseguendo:
+
+![Versione di backend di Bluemix](images/fabricversion.png "Versione di backend di Bluemix")
+Figura 1. Versione Hyperledger Fabric
+
+La tua versione del chaincode deve essere allineata alla versione di Hyperledger Fabric a cui distribuirai il tuo chaincode. Ad esempio, la rete rappresentata nella Figura 1 richiede la clonazione della base di codice Hyperledger Fabric v0.6-preview. La base di codice fabric, per entrambe le versioni, deve essere archiviato nel tuo percorso `$GOPATH/hyperledger/fabric`:
+
+- [v0.5 Hyperledger Fabric](https://github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview)
+- [v0.6 HHyperledger Fabric](https://gerrit.hyperledger.org/r/gitweb?p=fabric.git;a=shortlog;h=refs/heads/v0.6)
+
+Per installare la base di codice Hyperledger Fabric v0.5, utilizza il seguente comando git clone:
+
+```
+# Crea le directory principali nel tuo GOPATH
+mkdir -p $GOPATH/src/github.com/hyperledger
+cd $GOAPTH/src/github.com/hyperledger
+
+# Clona la base di codice della release appropriata in $GOPATH/src/github.com/hyperledger/fabric
+# Tieni presente che la release v0.5 è un ramo del repository.  Definita dopo l'argomento -b
+git clone -b v0.5-developer-preview https://github.com/hyperledger-archives/fabric.git
+```
+
+Per installare la base di codice Hyperledger Fabric v0.6, utilizza il seguente comando git clone:
+
+```
+# La release v0.6 esiste come un ramo nel repository fabric Gerrit
+git clone -b v0.6 http://gerrit.hyperledger.org/r/fabric
+```
+
+Se il fabric non è stato correttamente installato nel tuo `GOPATH`, il tuo chaincode restituirà un errore simile al seguente esempio:
+```
+$ go build .
+chaincode_example02.go:27:2: cannot find package "github.com/hyperledger/fabric/core/chaincode/shim" in any of:
+        C:\Go\src\github.com\hyperledger\fabric\core\chaincode\shim (from $GOROOT)
+        C:\gopath\src\github.com\hyperledger\fabric\core\chaincode\shim (from $GOPATH)
+```
+
+### Configura la tua pipeline di sviluppo
+
+Utilizza le seguenti istruzioni per configurare una pipeline per la scrittura, la creazione e la verifica del tuo chaincode. Scriverai il chaincode nella tua macchina locale, verificherai che è stato compilato e lo caricherai su GitHub. Quindi lo distribuirai e verificherai sulla rete Bluemix utilizzando l'API REST fabric.
+
+1. Dividi la versione corretta del repository [learn chaincode](https://github.com/IBM-Blockchain/learn-chaincode) per la tua versione di rete al tuo account GitHub. Dividi v1.0 in una rete fabric v0.5 o dividi v2.0 in una rete fabric v0.6. Un'opzione è di utilizzare il pulsante **Fork**, posizionato nell'angolo in alto a destra nella pagina del repository. Dividere le copie del repository completo nella tua macchina locale, inclusi tutti i rami che vengono mostrati facendo clic sul pulsante **Branch:** nell'angolo in alto a sinistra nella pagina. Per eseguire la divisione utilizzando la CLI, immetti i seguenti comandi nella shell Git Bash:
+
+2. Clona la tua divisione nel tuo $GOPATH:
+
+  ```bash
+  cd $GOPATH
+  mkdir -p src/github.com/<YOUR_GITHUB_ID_HERE>/
+  cd src/github.com/<YOUR_GITHUB_ID_HERE>/
+  git clone -b v1.0 https://github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode.git
+  OR
+  git clone -b v2.0 https://github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode.git
+  ```
+
+  Ora hai una copia della tua divisione nella tua macchina locale. Scriverai il chaincode modificando o aggiungendo i file locali, eseguendo il loro push alla tua divisione GitHub e quindi distribuirai il tuo chaincode alla tua rete blockchain utilizzando l'API REST in un peer di rete.
+
+3. Vengono fornite due versioni del chaincode utilizzato in questa esercitazione: **start** è il chaincode di base da cui patirai e **finished* è il tuo chaincode completato pronto per la build. Per prima cosa, assicurati che **start** sia stato creato nel tuo ambiente locale:
+
+  ```bash
+  cd $GOPATH/src/github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode/start
+  go build ./
+  ```
+
+La versione **start** del learn-chaincode deve essere compilata senza errori o messaggi. Se questo non si verifica, rivedi le precedenti istruzioni per la corretta installazione di Go.
+
+5. Scrivi le modifiche nei tuoi file chaincode locali ed esegui il push dei file aggiornati alla tua divisione GitHub:
+
+  ```bash
+  cd $GOPATH/src/github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode/
+  # Consulta quali file sono stati modificati localmente.  Dovresti visualizzare chaincode_start.go
+  git status
+  # Prepara tutte le modifiche nel repository locale per il commit
+  git add --all
+  # Esegui il commit di tutte le modifiche preparate.  Inserisci una breve descrizione dopo l'argomento -m
+  git commit -m "Compiled my code"
+  # Riesegui il push dei commit locali a https://github.com/<YOUR_GITHUB_ID_HERE>/learn-chaincode/
+  git push
+  ```
+
+#### Implementa l'interfaccia chaincode
+Il tuo prossimo passo è di implementare l'interfaccia shim chaincode nel tuo codice Go. Le tre funzioni principali sono **Init**, **Invoke** e **Query**. Tutte e tre le funzioni prendono un nome funzione e un array di stringhe come input ma sono richiamate in punti differenti. Il tuo percorso di sviluppo termina con n chaincode funzionante che crea risorse generiche per lo scambio si una rete blockchain.
 
 ### Dipendenze
-L'istruzione `import` elenca le dipendenze necessarie per sviluppare il tuo chaincode:
+L'istruzione `import` elenca le dipendenze per la creazione del tuo chaincode:
 1. `fmt` - contiene `Println` per attività di debug/registrazione.
 2. `errors` - formato di errore Go standard.
 3. `github.com/hyperledger/fabric/core/chaincode/shim` - codice che interfaccia il tuo codice Golang con un peer di rete.
 
-### Passaggio di valori
-
-Vengono passati i seguenti valori di chaincode:
 #### Init()
-Init viene richiamato per inizializzare il tuo chaincode quando ne esegui la distribuzione iniziale alla rete. In questo esempio, utilizzi `Init` per configurare lo stato iniziale di una variabile nel registro.
+La funzione `Init` viene richiamata quando distribuisci per la prima volta il tuo chaincode. Come è implicito nel nome, utilizza questa funzione per inizializzare il tuo chaincode. In questo esempio, utilizziamo `Init` per configurare lo stato iniziale di una sola coppia chiave/valore nel registro.
 
 Nel tuo file `chaincode_start.go`, modifica la funzione `Init` in modo che memorizzi il primo elemento `args` nella chiave "hello_world":
 
 ```go
-func (t *SimpleChaincode) Init(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
+func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	if len(args) != 1 {
 		return nil, errors.New("Incorrect number of arguments. Expecting 1")
 	}
@@ -108,16 +199,15 @@ func (t *SimpleChaincode) Init(stub *shim.ChaincodeStub, function string, args [
 }
 ```
 
-Questa operazione viene eseguita utilizzando la funzione shim `stub.PutState`. Il primo argomento è la chiave come una stringa e il secondo argomento è il valore come un array di byte. Questa funzione può restituire un errore, che il tuo codice ispeziona e restituisce, se presente.
+Questa operazione viene eseguita utilizzando la funzione stub `stub.PutState`. Questa funzione interpreta il primo argomento inviato nella richiesta di distribuzione come il valore da archiviare nella chiave 'hello_world'. Se si verifica un errore perché è stato trasmesso un numero sbagliato di argomenti o perché qualcosa non ha funzionato durante la scrittura nel registro, questa funzione restituisce un errore. Altrimenti, termina senza errori e senza restituire alcun messaggio.  
 
 #### Invoke()
-`Invoke` viene richiamato per aggiungere una richiesta di transazione alla catena. La struttura di `Invoke` è semplice;
-riceve un argomento `function` e, in base a questo argomento, richiama le funzioni Go nel chaincode.
+Utilizza la funzione `Invoke` per richiamare le funzioni chaincode per eseguire del "lavoro reale" nella rete blockchain. Le funzioni Invoke sono acquisite come transazioni, che vengono raggruppate in blocchi per la scrittura nel registro. L'aggiornamento del registro viene archiviato richiamando il tuo chaincode. La struttura di `Invoke` è semplice; riceve una funzione o un array di argomenti. In base alla funzione trasmessa dal parametro della funzione nella richiesta di richiamo, `Invoke` richiamerà una funzione di supporto o restituirà un errore.
 
-Nel tuo file `chaincode_start.go`, modifica la funzione `Invoke` in modo che richiami una funzione di scrittura (write) generica.
+Nel tuo file `chaincode_start.go`, modifica la funzione `Invoke` per richiamare una funzione di scrittura generica:
 
 ```go
-func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
+func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	fmt.Println("invoke is running " + function)
 
 	// Handle different functions
@@ -132,10 +222,10 @@ func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args
 }
 ```
 
-Il codice sta ora cercando `write`; aggiungi quindi tale funzione al tuo file `chaincode_start.go`:
+Il codice sta ora cercando `write`; aggiungi quindi la funzione di scrittura al tuo file `chaincode_start.go`: 
 
 ```go
-func (t *SimpleChaincode) write(stub *shim.ChaincodeStub, args []string) ([]byte, error) {
+func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 	var name, value string
 	var err error
 	fmt.Println("running write()")
@@ -157,12 +247,12 @@ func (t *SimpleChaincode) write(stub *shim.ChaincodeStub, args []string) ([]byte
 Questa funzione `write` dovrebbe presentarsi in modo simile alla precedente modifica `Init`. Puoi ora impostare la chiave e il valore per`PutState`, che ti consente di memorizzare qualsiasi coppia chiave/valore nel registro del blockchain.
 
 #### Query()
-`Query` viene richiamato per eseguire una query dello stato del tuo chaincode e non aggiunge blocchi alla catena. Solo le funzioni di distribuzione e richiamano aggiungono dei nuovi blocchi. Utilizza `Query` per leggere il valore delle coppie chiave/valore dello stato del tuo chaincode.
+La funzione `Query` viene richiamata per eseguire una query dello stato del tuo chaincode e non aggiunge blocchi alla catena (ledger). Solo le funzioni di distribuzione e richiamano aggiungono dei nuovi blocchi. Utilizza `Query` per leggere il valore delle coppie chiave/valore dello stato del tuo chaincode.
 
 Nel tuo file `chaincode_start.go`, modifica la funzione `Query` in modo che richiami una funzione di lettura (read) generica:
 
 ```go
-func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
+func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	fmt.Println("query is running " + function)
 
 	// Handle different functions
@@ -175,10 +265,10 @@ func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args 
 }
 ```
 
-Il codice sta ora cercando `read`; aggiungi quindi tale funzione al tuo file `chaincode_start.go`:
+Il codice sta ora cercando `read`; aggiungi quindi la funzione di 'lettura' al tuo file `chaincode_start.go`: 
 
 ```go
-func (t *SimpleChaincode) read(stub *shim.ChaincodeStub, args []string) ([]byte, error) {
+func (t *SimpleChaincode) read(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 	var name, jsonResp string
 	var err error
 
@@ -197,7 +287,7 @@ func (t *SimpleChaincode) read(stub *shim.ChaincodeStub, args []string) ([]byte,
 }
 ```
 
-Questa funzione `read` utilizza `GetState`, che è il complemento di `PutState`. Questa funzione shim prende solo un singolo argomento stringa, che è il nome della chiave da richiamare. Questa funzione restituisce quindi il valore, come un array di byte, a `Query`, che a sua volta lo invia al gestore REST.
+Questa funzione `read` utilizza `GetState`, che è il complemento di `PutState`. Questa funzione shim prende solo un singolo argomento stringa: il nome della chiave da richiamare. Questa funzione restituisce quindi il valore, come un array di byte, a `Query`, che a sua volta lo invia al gestore REST.
 
 #### Main()
 La funzione `main` viene eseguita quando ciascun peer distribuisce la sua istanza del chaincode. Avvia il chaincode e lo registra presso il peer. Non è richiesto alcun aggiornamento del codice per 'main'; sia chaincode_start.go che chaincode_finished.go includono una funzione `main` all'inizio di ciascun file:
@@ -215,7 +305,6 @@ func main() {
 Il modo più rapido per testare il tuo chaincode consiste nell'utilizzare l'interfaccia REST sui tuoi peer.
 L'IU Swagger sul tuo monitor dashboard Bluemix ti consente di provare la distribuzione di chaincode senza scrivere del codice aggiuntivo.  
 
-<br>
 #### API Swagger
 Per utilizzare la API Swagger, completa la seguente procedura:
 
@@ -351,19 +440,19 @@ Richiama la funzione di scrittura (write) generica con `invoke`. Modifica il val
 Hai appena completato la scrittura di un po' di chaincode di base.  
 
 <br>
-## Requisiti per le demo Marbles, Commercial Paper e Car Lease
+## Requisiti per la demo
 {: #requirements}
 
-I seguenti prerequisiti sono inclusi con il tuo servizio Bluemix per eseguire le applicazioni Marbles, Commercial Paper e Car Lease localmente. Il tuo ambiente Bluemix clona l'Hyperledger Fabric per fornire queste dipendenze:
+I seguenti prerequisiti, inclusi con il tuo servizio Bluemix, sono obbligatori per eseguire le applicazioni demo Marbles, Commercial Paper e Car Lease. Il tuo ambiente Bluemix clona l'Hyperledger Fabric per fornire queste dipendenze:
 
 - ID Bluemix https://console.ng.bluemix.net/ (richiesto per creare la tua rete IBM Blockchain e fornire le credenziali di servizio per i peer e per l'autorità di certificazione)
 - Node.js 0.12.0+ e npm v2+
 - Ambiente Golang (richiesto solo per sviluppare un tuo chaincode)
 
-Le demo richiedono dimestichezza con Node.js e il modulo express. Devi anche avere una comprensione concettuale di 'chaincode', 'registro' (in inglese 'ledger') e 'peer' in un contesto di blockchain; consulta il [glossario di Hyperledger Fabric](https://github.com/hyperledger/fabric/blob/master/docs/glossary.md).  
+Le demo richiedono inoltre dimestichezza con Node.js e il modulo express. Devi anche avere una comprensione concettuale di 'chaincode', 'registro' (in inglese 'ledger') e 'peer' in un contesto di blockchain; consulta il [glossario di Hyperledger Fabric](https://github.com/hyperledger/fabric/blob/v0.6/docs/glossary.md).  
 
 <br>
-## Utilizzo della demo Marbles
+## Demo Marbles
 {: #marbles}
 
 L'applicazione Marbles illustra un semplice trasferimento di risorsa tra due parti. L'applicazione è progettata per testare l'SDK JavaScript, guidarne lo sviluppo e aiutare gli sviluppatori ad acquisire dimestichezza con l'SDK e il chaincode.
@@ -373,7 +462,7 @@ Esplora le [esercitazioni Marbles](https://github.com/IBM-Blockchain/marbles/blo
 [![Distribuisci a Bluemix](https://bluemix.net/deploy?repository=https://github.com/ibm-blockchain/marbles.git)(https://bluemix.net/deploy/button.png)]  
 
 <br>
-## Utilizzo della demo Commercial Paper
+## Demo Commercial Paper
 {: #commercialpaper}
 
 L'applicazione Commercial Paper illustra il modo in cui è possibile implementare una rete di scambi commerciali di commercial paper utilizzando IBM Blockchain. La demo Commercial Paper esplora una rete blockchain con autorizzazioni, su cui ai partecipanti vengono assegnati dei ruoli e i corrispondenti livelli di accesso. Consulta il [README di Commercial Paper](https://github.com/IBM-Blockchain/cp-web#readme) per saperne di più sui componenti di questa demo oppure distribuiscila a Bluemix immediatamente per vedere la rete di scambi commerciali in azione:
@@ -381,7 +470,7 @@ L'applicazione Commercial Paper illustra il modo in cui è possibile implementar
 [![Distribuisci a Bluemix](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/cp-web.git)(https://bluemix.net/deploy/button.png)]  
 
 <br>
-## Utilizzo della demo Car Lease
+## Demo Car Lease
 {: #carlease}
 
 L'applicazione Car Lease illustra il ciclo di vita di un veicolo, andando dalla produzione, passando per diversi proprietari e finendo con la rottamazione del veicolo. La demo utilizza Node.js per la programmazione lato server e Golang per il chaincode in esecuzione sulla rete IBM Blockchain. La demo include anche due istanze di chaincode: una definisce le regole per le transazioni del veicolo e l'altra registra tutte le transazioni del veicolo durante il suo ciclo di vita. Entrambi i programmi chaincode utilizzano gli oggetti JSON per memorizzare i dati. Consulta il [README di Car Lease](https://github.com/IBM-Blockchain/car-lease-demo/blob/master/README.md) per saperne di più sull'architettura dell'applicazione e gli attributi di veicolo associati a questa demo oppure distribuisci la demo immediatamente a Bluemix:
@@ -389,24 +478,26 @@ L'applicazione Car Lease illustra il ciclo di vita di un veicolo, andando dalla 
 [![Distribuisci a Bluemix](https://bluemix.net/deploy?repository=https://github.com/IBM-Blockchain/car-lease-demo.git)(https://bluemix.net/deploy/button.png)]  
 
 <br>
-## Chaincode non deterministico
+
+<!-- comment out - moving to separate file for now jh
+## Non-deterministic chaincode
 {: #ndcc}
 
-Le reti IBM Blockchain supportano solo il chaincode deterministico. L'utilizzo di chaincode non deterministico non è supportato e causerà degli errori server su qualsiasi rete blockchain.
+IBM Blockchain networks support deterministic chaincode only. Using non-deterministic chaincode is not supported, and will cause severe errors, on any blockchain network.
 
-Un **chaincode non deterministico** è qualsiasi chaincode che **non** produce lo stesso valore accodato, nel corso del tempo e tra i nodi, sul registro del blockchain. Il **chaincode deterministico**, invece, produce sempre lo stesso valore accodato, nel tempo e tra i nodi, sul registro del blockchain.
+**Non-deterministic chaincode** is any chaincode that does **not** result in the same appended value, over time and across nodes, on the blockchain ledger. By contrast, **deterministic chaincode** always produces the same appended value, over time and across nodes, on the blockchain ledger.
 
-### Esempio di chaincode deterministico
-Una transazione di richiamo (**invoke**) che incrementa sempre il valore di una variabile di uno è deterministica perché il risultato è sempre lo stesso, su ogni nodo, senza variazioni. Quando questa transazione viene eseguita su un valore fisso di cinque, ad esempio, il valore accodato è sempre sei, su ogni nodo e ogni volta. L'esito di rete per il chaincode deterministico non vede alcuna divergenza nel blockchain; la copia del registro su ciascun nodo indica sempre (dopo la sincronizzazione) che il valore è di uno più grande del richiamo precedente.
+### Deterministic chaincode example
+An **invoke** transaction that always increments the value of a variable by one is deterministic, because the result is always the same, on every node, without variance. Whenever this transaction is run against a fixed value of five, for example, the appended value is always six, on every node, every time. The network outcome for deterministic chaincode is no divergence in the blockchain; the copy of the ledger on each node always indicates (after syncing) that the value is one greater than the previous invocation.
 
-### Esempio di chaincode non deterministico
-Una transazione di richiamo (**invoke**) che incrementa il valore di una variabile blockchain con il numero di secondi trascorsi dall'inizio del giorno (00:00) è non deterministico perché nel corso del tempo il valore varierà tra i nodi. Ogni volta che questa transazione viene eseguita su un valore fisso di cinque, ad esempio, il valore accodato è diverso tra i nodi (con rare eccezioni) perché il numero di secondi trascorso da 00:00 varierà inevitabilmente. L'esito di rete per questo chaincode non deterministico vede dei blockchain divergenti; tutti i nodi non concorderanno sul valore di cinque + il numero di secondi trascorsi da 00:00.
+### Non-deterministic chaincode example
+An **invoke** transaction that increments the value of a blockchain variable with the number of elapsed seconds since the start of the day (00:00) is non-deterministic, because over time the value will vary across nodes. Each time this transaction is run against a fixed value of five, for example, the appended value diverges across nodes (with rare exceptions), because the number of elapsed seconds since 00:00 will inevitably vary. The network outcome for this non-deterministic chaincode is divergent blockchains; all nodes will not agree on the value of five + the number of elapsed seconds since 00:00.
 
-### Casualità
-Il chaincode non deve presentare alcuna casualità nei valori accodati, nel tempo e tra i nodi. Qualsiasi casualità produce dei blockchain divergenti tra i nodi che devono quindi essere risolti dalla rete. Per evitare casualità, devi assicurarti che nessun chaincode parallelo possa influenzare il valore di input dal chaincode di richiamo. Ad esempio, non eseguire transazioni di **query** in parallelo con le transazioni di richiamo (**invoke**) perché le query parallele potrebbero produrre delle variazioni nei valori del richiamo tra i nodi.
+### Randomness
+Chaincode must exhibit no randomness in the appended values, over time and across nodes. Any randomness produces divergent blockchains across nodes, which must then be resolved by the network. To avoid randomness, you must ensure that no parallel chaincode can affect the input value from invocation chaincode. For example, do not run any **query** transactions in parallel with **invoke** transactions, because parallel queries could produce variance in the invocation values across nodes.
 
-### Utilizzo di una variabile globale
-L'utilizzo di una variabile globale o di istanza per memorizzare un valore richiamato da un registro o per impostare un valore sul registro, può portare al non determinismo. Il chaincode non dovrebbe basarsi sulle variabili globali o di istanza che non mantengono il proprio stato tra i riavvii di un contenitore chaincode. Di seguito, viene riportato un esempio che utilizza una variabile globale; il valore di `key`, che viene scritto nel registro tramite la funzione `stub.PutState`, è derivato da una variabile globale:
+### Using a global variable
+Using a global or instance variable to store a value that was retrieved from the ledger, or to set a value on the ledger, can lead to non-determinism. Chaincode should not rely on global or instance variables that will not retain their state across restarts of a chaincode container. The following is an example that uses a global variable; the value of `key`, which is written to the ledger via the `stub.PutState` function, is derived from a global variable:
 
 ```go
 //declare global variable
@@ -419,8 +510,8 @@ var INVOICE_COUNTER int64
 		stub.PutState(key,[]byte(invoiceID))
 ```
 
-### Iterazione su un tipo di associazione
-L'iterazione su un tipo di associazione può portare al non determinismo in quanto l'ordine non è deterministico nel linguaggio di programmazione Go. Di seguito è riportato un esempio di iterazione sull'associazione denominata `columnTypes`:
+### Iterating over a map type
+Iteration over a map type can lead to non-determinism, because order is not deterministic in the Go programming language. The following is an example of iteration over the map named `columnTypes`:
 
 ```go
  func generateColumns(colTypes map[string]string, colKeys []bool) ([]*shim.ColumnDefinition, error) {
@@ -435,7 +526,10 @@ L'iterazione su un tipo di associazione può portare al non determinismo in quan
 }
 ```
 
-<!---## Using the Node.js SDK
+-->
+
+
+<!-- ## Using the Node.js SDK
 {: #nodesdk}
 
-Use the [Hyperledger fabric client SDK ](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md) library for easier interaction with an IBM Blockchain network.  The SDK, through importing packages and libraries, allows for an application developer to build Node.js applications that can invoke functionality on the blockchain network from the client side.  Member services and asset management are now pluggable components on client side applications.  See the [Enhanced Node.js SDK](etn_sdk.html) section for full documentation and application examples.--->
+Use the [Hyperledger fabric client SDK ](https://github.com/IBM-Blockchain/ibm-blockchain-js/blob/master/README.md) library for easier interaction with an IBM Blockchain network.  The SDK, through importing packages and libraries, allows for an application developer to build Node.js applications that can invoke functionality on the blockchain network from the client side.  Member services and asset management are now pluggable components on client side applications.  See the [Enhanced Node.js SDK](etn_sdk.html) section for full documentation and application examples. -->

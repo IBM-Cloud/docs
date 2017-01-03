@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-09"
 
 ---
 
@@ -17,14 +13,12 @@ copyright:
 {:pre: .pre}
 
 # Initiation à {{site.data.keyword.openwhisk_short}} (bêta)
-Dernière mise à jour : 9 septembre 2016
-{: .last-updated}
 
-{{site.data.keyword.openwhisk}} est un service de calcul distribué et géré par des événements, également appelé calcul sans serveur ou
+
+{{site.data.keyword.openwhisk}} est un service de traitement distribué et géré par des événements, également appelé traitement sans serveur ou
 Function as a
 Service (FaaS). {{site.data.keyword.openwhisk_short}} exécute une
-logique d'application en réponse à des événements ou à des appels directs provenant d'applications Web ou mobiles via HTTP.
-Les événements peuvent être fournis par des services Bluemix tels que Cloudant et par des sources externes. Les développeurs peuvent se consacrer à
+logique d'application en réponse à des événements ou à des appels directs provenant d'applications Web ou mobiles via HTTP. Les événements peuvent être fournis par des services Bluemix tels que Cloudant et par des sources externes. Les développeurs peuvent se consacrer à
 l'écriture de la logique d'application et à la création d'actions qui sont exécutées à la demande. La fréquence d'exécution des actions correspond toujours
 à la fréquence des événements, ce qui assure une mise à l'échelle et une résilience inhérentes ainsi qu'une utilisation optimale. Vous ne payez que pour ce que vous utilisez et il n'est pas nécessaire de gérer un serveur. Vous pouvez aussi obtenir le
 [code source](https://github.com/openwhisk/openwhisk) et exécuter le système vous-même.
@@ -36,10 +30,10 @@ Pour plus de détails sur le fonctionnement d'{{site.data.keyword.openwhisk_shor
 {: #openwhisk_start_configure_cli}
 
 Vous pouvez utiliser l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}} pour configurer votre espace de nom et votre
-clé d'autorisation. 
-Accédez à la page de [configuration de l'interface de ligne de commande](https://new-console.{DomainName}/openwhisk/cli){: new_window} et suivez les instructions d'installation. 
+clé d'autorisation.
+Accédez à la page de [configuration de l'interface de ligne de commande](https://new-console.{DomainName}/openwhisk/cli){: new_window} et suivez les instructions d'installation.
 
-### Configuration de l'interface de ligne de commande pour l'utilisation d'un proxy HTTPS 
+### Configuration de l'interface de ligne de commande pour l'utilisation d'un proxy HTTPS
 
 L'interface de ligne de commande peut être configurée en vue de l'utilisation d'un proxy HTTPS. Pour configurer un proxy HTTPS, vous devez créer une
 variable d'environnement appelée `HTTPS_PROXY`. Celle-ci doit avoir pour valeur l'adresse du proxy HTTPS et son port au format suivant :
@@ -52,8 +46,10 @@ de la ligne de commande.
 ## Utilisation de l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_using_cli}
 
-Une fois que vous avez configuré votre environnement, vous pouvez commencer à utiliser l'interface de ligne de commande
-d'{{site.data.keyword.openwhisk_short}} pour effectuer les opérations suivantes :
+Une fois que vous avez
+[configuré votre
+environnement](https://new-console.{DomainName}/openwhisk/cli){: new_window}, vous pouvez commencer à utiliser
+l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}} pour effectuer les opérations suivantes :
 
 * Exécuter vos fragments de code, ou vos actions, dans {{site.data.keyword.openwhisk_short}}. Voir
 [Création et appel d'actions](./openwhisk_actions.html).

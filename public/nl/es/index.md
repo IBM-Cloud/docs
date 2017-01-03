@@ -1,11 +1,9 @@
 ---
-
  
 
 copyright:
-
   years: 2016
-
+lastupdated: "2016-08-08"
  
 
 ---
@@ -15,8 +13,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} público
 {: #public}
-Última actualización: 8 de agosto de 2016
-{: .last-updated}
 
 
 {{site.data.keyword.Bluemix_notm}} abstrae y oculta la mayoría de las complejidades asociadas con el alojamiento y la gestión de apps basadas en la nube. Como desarrollador de apps, puede centrarse en desarrollar la app sin tener que gestionar la infraestructura necesaria para alojarla.

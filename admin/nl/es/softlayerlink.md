@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-11-03"
  
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2016-10-27"
 # Actualización y unificación de las cuentas de facturación de {{site.data.keyword.Bluemix_notm}} y SoftLayer
 {: #softlayerlink}
 
-Si tiene una cuenta de prueba de {{site.data.keyword.Bluemix_notm}} y desea acceder al panel de control Infraestructura, debe actualizar a una cuenta de Pago según uso de {{site.data.keyword.Bluemix_notm}}.
+Si tiene una cuenta de prueba de {{site.data.keyword.Bluemix_notm}} y desea acceder al panel de control Infraestructura, debe actualizar a una cuenta de Pago según uso de {{site.data.keyword.Bluemix_notm}}. También debe actualizar si desea utilizar otros recursos facturables que no están disponibles dentro de una cuenta de prueba, o si su cuenta de prueba finaliza. 
 
 Puede unificar las cuentas de facturación existentes de {{site.data.keyword.Bluemix_notm}} y SoftLayer enlazando las cuentas. Cuando enlace las cuentas, se le facturará mediante {{site.data.keyword.Bluemix_notm}} para ambos recursos de {{site.data.keyword.Bluemix_notm}} y SoftLayer.
 {:shortdesc}
@@ -51,7 +51,7 @@ Una vez que se hayan enlazado las cuentas:
 * Cualquier descuento existente de SoftLayer se aplicará en cargos de {{site.data.keyword.Bluemix_notm}}. 
 * Recibirá una factura en dólares de Estados Unidos (USD).
 * Puede supervisar el uso de los recursos de
-{{site.data.keyword.BluSoftlayer}} en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}.  
+{{site.data.keyword.BluSoftlayer}} en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}. 
 
 **Atención:** una vez que las cuentas estén enlazadas, no podrá desenlazarlas. 
 
@@ -64,6 +64,8 @@ Si tiene una cuenta SoftLayer, y desea enlazar cuentas de SoftLayer y {{site.dat
 Debe ser usuario maestro en la cuenta de SoftLayer para enlazar cuentas.
 
 Después de enlazar las cuentas, el enlace **Ir a {{site.data.keyword.Bluemix_notm}}** aparece disponible en la cabecera global de SoftLayer. Al hacer clic en este enlace, accederá a la página de inicio de sesión de {{site.data.keyword.Bluemix_notm}}. Además, el enlace de **SoftLayer** estará disponible en la cabecera de {{site.data.keyword.Bluemix_notm}}. Al hacer clic en este enlace, accederá a la página de inicio de {{site.data.keyword.slportal}} en una nueva ventana.
+
+Las ofertas de infraestructura de {{site.data.keyword.Bluemix_notm}} están conectadas a una red de tres capas, que segmenta tráfico público, privado y de gestión. Las ofertas de infraestructura de una cuenta de {{site.data.keyword.Bluemix_notm}} del cliente pueden transferir datos entre sí mediante la red privada sin coste adicional. Las ofertas de infraestructura, como los servidores nativos, los servidores virtuales y el almacenamiento en nube, se conectan con otras aplicaciones y servicios del catálogo de {{site.data.keyword.Bluemix_notm}}, como por ejemplo servicios, contenedores o tiempos de ejecución de Watson, en la red pública. La transferencia de datos entre estos dos tipos de ofertas se mide y se carga en tasas estándares de ancho de banda de red públicas.
 
 ## Uso de créditos para {{site.data.keyword.Bluemix_notm}} cuando las cuentas están enlazadas
 {: #slcredit}
@@ -95,7 +97,7 @@ Para obtener más información sobre cómo invitar a miembros a través de la in
 ## Cambiar al ID de IBM
 {: #ibmid_switch}
 
-La autenticación en SoftLayer ahora utiliza el ID de IBM para proporcionar un inicio de sesión único para {{site.data.keyword.Bluemix_notm}}. Si tiene una cuenta existente de SoftLayer, puede cambiar a un ID de IBM. Un asistente de migración le guiará a través de este conmutador.
+La autenticación en SoftLayer ahora utiliza el ID de IBM para proporcionar un inicio de sesión único para {{site.data.keyword.Bluemix_notm}}. Si tiene una cuenta existente de SoftLayer, puede cambiar a un ID de IBM. Un asistente de migración le guiará a través de este conmutador. 
 {:shortdesc}
 
 Después de empezar el cambio al ID de IBM, siempre que no complete el proceso, podrá cancelarla. Pero se le seguirá solicitando que cambie al ID de IBM la próxima vez que inicie sesión.
@@ -104,8 +106,8 @@ Para empezar el cambio del nombre de usuario de SoftLayer existente a un ID de I
 
  1. En el {{site.data.keyword.slportal}}, vaya a la página Editar perfil de usuario y pulse **Cambiar al ID de IBM**.
  2. Siga las indicaciones del asistente de migración para crear el ID de IBM. Una vez que haya creado el ID de IBM, no podrá cambiar el ID, que es una dirección de correo electrónico. Puede actualizar el correo electrónico asociado con el perfil, pero de forma predeterminada dicho valor se establece como lo que se ha definido para el ID de IBM. Una vez que finalice el asistente, se le enviará un correo electrónico.
- 3. Cuando reciba el correo electrónico, siga el enlace o copie el URL en un navegador y especifique el código de registro. El código sirve para 7 días y es un código de un solo uso. Una vez que se utilice, no se podrá utilizar de nuevo.
- Después de configurar el ID de IBM para el enlace de usuario de SoftLayer, puede iniciar la sesión en su cuenta sólo con el ID de IBM. En el diálogo de inicio de sesión, debe utilizar el botón **Iniciar sesión con el ID de IBM** en lugar de especificar el nombre de usuario y la cuenta de SoftLayer.
+ 3. Cuando reciba el correo electrónico, siga el enlace o copie el URL en un navegador y especifique el código de registro. El código sirve para 7 días y es un código de un solo uso.  Una vez que se utilice, no se podrá utilizar de nuevo.
+ Después de configurar el ID de IBM para el enlace de usuario de SoftLayer, puede iniciar la sesión en su cuenta sólo con el ID de IBM.  En el diálogo de inicio de sesión, debe utilizar el botón **Iniciar sesión con el ID de IBM** en lugar de especificar el nombre de usuario y la cuenta de SoftLayer.
  
 Si es usted un cliente nuevo, se le pedirá una dirección de correo electrónico para la cuenta del ID de IBM existen, o para crear una cuenta nueva del ID de IBM, cuando finalice el pedido. 
 
@@ -114,7 +116,7 @@ Si es usted un cliente nuevo, se le pedirá una dirección de correo electrónic
 
 Puede asociar un ID de IBM con varias cuentas de SoftLayer utilizando una dirección de correo electrónico de ID de IBM existente al configurar la cuenta. Sólo se puede correlacionar un usuario de SoftLayer para cada cuenta en el ID de IBM único. El ID de IBM debe ser exclusivo dentro de cada cuenta de SoftLayer. Sin embargo, un usuario con acceso a varias cuentas de SoftLayer puede utilizar un ID de IBM para acceder a varias cuentas de SoftLayer.
 
-Por ejemplo, un ID de IBM puede correlacionar al usuario maestro en las cuentas A y B, y a un usuario adicional en las cuentas C y D. Una de las cuentas correlacionadas a dicho ID de IBM es la cuenta predeterminada. Normalmente, la cuenta predeterminada es la cuenta que se correlacionó por primera vez en el ID de IBM. Sin embargo, puede cambiar qué la cuenta es la predeterminada mediante una característica de cambio de cuentas en el Portal de cliente.
+Por ejemplo, un ID de IBM puede correlacionar al usuario maestro en las cuentas A y B, y a un usuario adicional en las cuentas C y D. Una de las cuentas correlacionadas a dicho ID de IBM es la cuenta predeterminada.  Normalmente, la cuenta predeterminada es la cuenta que se correlacionó por primera vez en el ID de IBM. Sin embargo, puede cambiar qué la cuenta es la predeterminada mediante una característica de cambio de cuentas en el Portal de cliente.
 
 Para un usuario con acceso de ID de IBM a varias cuentas con la autenticación por dos factores habilitada, se requerirá un código de verificación de autenticación por dos factores adecuado por cuenta durante el inicio de sesión a la cuenta y el cambio de cuenta.
 
@@ -179,7 +181,7 @@ No todos los servicios de {{site.data.keyword.Bluemix_notm}} pueden utilizarse c
 
 **Nota:** no todos los planes de estos servicios están disponibles. Para utilizar con las cuentas enlazadas, solo están disponibles los planes habilitados para cuentas Pago según uso. Sin embargo, puede utilizar cualquier plan para cualquiera de estos servicios si tiene una cuenta de {{site.data.keyword.Bluemix_notm}} independiente que se factura por separado.
 
-## Facturación para el uso de {{site.data.keyword.Bluemix_notm}} cunado las cuentas están enlazadas
+## Facturación para el uso de {{site.data.keyword.Bluemix_notm}} cuando las cuentas están enlazadas
 {: #bill_usage}
 
 Una vez que haya enlazado sus cuentas de facturación de {{site.data.keyword.Bluemix_notm}} y SoftLayer, el siguiente ciclo de facturación se cargará en una única factura de {{site.data.keyword.Bluemix_notm}}.

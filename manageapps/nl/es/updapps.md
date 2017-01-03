@@ -18,7 +18,7 @@ copyright:
 {: .last-updated}
 
 
-Puede utilizar el mandato cf push o {{site.data.keyword.Bluemix}} DevOps Services para actualizar las app en {{site.data.keyword.Bluemix_notm}}. En muchos casos, incluso para los paquetes de compilación integrados como Node.js, también debe escribir un parámetro -c para especificar el mandato que se sebe utilizar para iniciar la aplicación.
+Puede utilizar el mandato cf push o {{site.data.keyword.Bluemix}} DevOps Services para actualizar las apps en {{site.data.keyword.Bluemix_notm}}. En muchos casos, incluso para los paquetes de compilación integrados como Node.js, también debe escribir un parámetro -c para especificar el mandato que se sebe utilizar para iniciar la aplicación.
 {:shortdesc}
 
 ##Creación y utilización de un dominio personalizado
@@ -70,8 +70,8 @@ Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_no
     ```
     cf map-route myapp mydomain -n nombre_host
     ```
-    Para grupos de contenedor, escriba el siguiente mandato:
-```
+    Para grupos de contenedor, escriba el siguiente mandato:	
+     ```
      cf ic route map -n host_name -d mydomain mycontainergroup
      ```
     *myapp*
@@ -148,7 +148,7 @@ En este ejemplo, el nombre de la aplicación es Blue. El ejemplo muestra cómo a
   cf rename Blue Green
   ```
 
-  Obtenga una lista de las app del espacio actual mediante el mandato **cf apps**:
+  Obtenga una lista de las apps del espacio actual mediante el mandato **cf apps**:
 
   ```
   ...
@@ -165,7 +165,7 @@ En este ejemplo, el nombre de la aplicación es Blue. El ejemplo muestra cómo a
   cf push Blue
   ```
 
-  Obtenga una lista de las app del espacio actual mediante el mandato **cf apps**:
+  Obtenga una lista de las apps del espacio actual mediante el mandato **cf apps**:
 
   ```
   ...
@@ -217,7 +217,7 @@ En este ejemplo, *Blue* es la aplicación previamente desplegada y *Green* es la
   cf push Green
   ```
 
-  Obtenga una lista de las app del espacio actual mediante el mandato **cf route**:
+  Obtenga una lista de las apps del espacio actual mediante el mandato **cf route**:
 
   ```
   ...

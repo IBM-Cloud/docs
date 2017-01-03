@@ -2,13 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-06-15"
 
 ---
 
 # Facebook-Authentifizierung für Web-Apps aktivieren
-
-Letzte Aktualisierung: 15. Juni 2016
-{: .last-updated}
+{: #facebook_web}
 
 Sie können Benutzer über Facebook für Ihre Web-App authentifizieren.
 
@@ -86,5 +85,3 @@ Sie müssen diese `POST`-Anforderung innerhalb von 10 Minuten senden, da der Aut
 ## Authentifizierung testen
 Nun können Sie mit dem Senden von Anforderungen an Ihre geschützten Ressourcen beginnen.
 Alle Anforderungen an geschützte Ressourcen sollten das `access_token` im Headerfeld für die Autorisierungsanforderung enthalten.
-
-

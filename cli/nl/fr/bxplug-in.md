@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
- 
+lastupdated: "2016-02-02"
+
 
 ---
 
@@ -16,9 +17,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # Plug-in de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} (bx cli)
-
-*Dernière mise à jour : 24 février 2016*
-{: .last-updated}
 
 Etendez votre interface de ligne de commande {{site.data.keyword.Bluemix_notm}} (bx cli) avec des plug-in. Vous pouvez installer et utiliser
 les plug-in qui sont disponibles dans le [référentiel de plug-in de l'interface de ligne de commande](http://plugins.ng.bluemix.net/){: new_window}. Chaque

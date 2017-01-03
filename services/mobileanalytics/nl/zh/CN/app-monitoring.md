@@ -2,16 +2,18 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-10-31"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 使用 {{site.data.keyword.mobileanalytics_short}} 监视应用程序
 {: #monitoringapps}
 
-上次更新时间：2016 年 9 月 27 日
-{: .last-updated}
-
-{{site.data.keyword.mobileanalytics_full}} 可监视和分析移动应用程序。您可以使用 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK 来记录应用程序日志并监视数据。开发者可以控制何时将这些数据发送到 {{site.data.keyword.mobileanalytics_short}} 服务。数据传递到 {{site.data.keyword.mobileanalytics_short}} 后，可以使用 {{site.data.keyword.mobileanalytics_short}} 仪表板，来获取有关移动应用程序、设备和应用程序日志的分析洞察。
+{{site.data.keyword.mobileanalytics_full}} 可监视和分析移动应用程序。您可以使用 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK 来记录应用程序日志并监视数据。开发者可以控制何时将这些数据发送到 {{site.data.keyword.mobileanalytics_short}} 服务。数据传递到 {{site.data.keyword.mobileanalytics_short}} 后，可以使用 {{site.data.keyword.mobileanalytics_short}} 控制台，来获取有关移动应用程序、设备和应用程序日志的分析洞察。
 {: shortdesc}
 
 <!--
@@ -90,10 +92,9 @@ You can also export and import custom chart definitions programmatically by usin
 ## 设置警报
 {: #alerts}
 
-您可以在 {{site.data.keyword.mobileanalytics_short}} Console 中的警报定义内设置阈值，以更好地监视活动。
+您可以在 {{site.data.keyword.mobileanalytics_short}} 控制台中的警报定义内设置阈值，以更好地监视活动。
 
-
-您可以配置阈值，当超过阈值时，触发器便会触发警报以向 {{site.data.keyword.mobileanalytics_short}} Console 监视器通知此情况。已触发的警报可以显示在控制台中，也可以由定制 webhook 进行处理。<!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> 此功能能够主动检测应用程序日志错误和应用程序崩溃服务器日志错误。响应式阈值和警报使您不必筛查数据，或者设置大范围的阈值。
+您可以配置阈值，当超过阈值时，触发器便会触发警报以向 {{site.data.keyword.mobileanalytics_short}} 控制台监视器通知此情况。已触发的警报可以显示在控制台中，也可以由定制 webhook 进行处理。<!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> 此功能能够主动检测应用程序日志错误和应用程序崩溃服务器日志错误。响应式阈值和警报使您不必筛查数据，或者设置大范围的阈值。
 
 ### 为应用程序日志创建警报定义
 {: #alert-def-client-logs}
@@ -102,7 +103,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 在此示例中，您将使用应用程序日志数据来创建警报定义。该警报会监控在过去 5 分钟内收到的所有应用程序日志，并且每 5 分钟继续检查一次，直到该警报定义被禁用或删除。如果设备发送了 3 个或更多个具有相同应用程序名称和版本的应用程序错误日志，那么将会触发警报。
 
-1. 在 {{site.data.keyword.mobileanalytics_short}} Console 中，单击**定义**以转至“警报定义”页面。
+1. 在 {{site.data.keyword.mobileanalytics_short}} 控制台中，单击**定义**以转至“警报定义”页面。
 2. 单击**创建警报**以创建警报。
 3. 提供以下值：
 	* 警报名称：应用程序日志的警报
@@ -138,7 +139,7 @@ You can also export and import custom chart definitions programmatically by usin
 在此示例中，您将使用应用程序崩溃数据来创建警报定义。该警报会监控在过去 2 分钟内出现的所有应用程序崩溃，并且每 2 分钟继续检查一次，直到该警报定义被禁用或删除。对于出现 5 次或以上崩溃事件的应用程序，将触发警报。
 有关应用程序崩溃的更多信息，请参阅[应用程序崩溃](#app_crash)。
 
-1. 在 {{site.data.keyword.mobileanalytics_short}} Console 中，单击**定义**以显示“警报定义”页面。
+1. 在 {{site.data.keyword.mobileanalytics_short}} 控制台中，单击**定义**以显示“警报定义”页面。
 2. 单击**创建警报**。 
 3. 提供以下值：
 	* 警报名称：应用程序崩溃的警报
@@ -163,7 +164,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 在此示例中，您将通过“警报管理”页面来管理警报定义。
 
-1. 在 {{site.data.keyword.mobileanalytics_short}} Console 中，单击**日志**。此操作会打开“警报日志”页面。
+1. 在 {{site.data.keyword.mobileanalytics_short}} 控制台中，单击**日志**。此操作会打开“警报日志”页面。
 2. 可选：切换**启用**列下的复选框，以启用或禁用特定警报定义。
 3. 可选：如果您想要创建警报定义的副本并更改一些值，请单击**复制**图标。
 4. 可选：如果您想要编辑警报定义，请单击**画笔**图标。
@@ -174,7 +175,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 在此示例中，您将在“警报日志”页面中查看已触发警报的详细信息。
 
-1. 在 {{site.data.keyword.mobileanalytics_short}} Console 中，单击**日志**。此操作会打开“警报日志”页面。
+1. 在 {{site.data.keyword.mobileanalytics_short}} 控制台中，单击**日志**。此操作会打开“警报日志”页面。
 2. 单击任意警报的 **+** 图标。该操作会显示**警报定义**和**警报实例**部分。
 
     **注**：如果未删除或修改相应的警报定义，那么您可以通过单击**编辑警报**，来编辑警报定义。否则，无法使用**编辑警报**按钮，且会显示下列消息：
@@ -186,8 +187,7 @@ You can also export and import custom chart definitions programmatically by usin
 ## 监视应用程序崩溃
 {: #monitor-app-crash}
 
-您可以在 {{site.data.keyword.mobileanalytics_short}} Console 中查看应用程序崩溃的相关信息，以更好地监视应用程序和进行故障诊断。
-
+您可以在 {{site.data.keyword.mobileanalytics_short}} 控制台中查看应用程序崩溃的相关信息，以更好地监视应用程序和进行故障诊断。
 
 ### 应用程序崩溃监视
 {: #app-crash}
@@ -201,7 +201,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 您可以快速查看应用程序使**崩溃**表崩溃的相关信息。<!--In the **Overview** page of the **Dashboard** section,-->**崩溃**条形图显示崩溃次数随时间变化的直方图。
 
-您可以使用两种方式来显示数据：
+您可以使用两种方式来显示崩溃数据：
 
 1. 显示崩溃率：随时间变化的崩溃率
 2. 显示总崩溃次数：随时间变化的总崩溃次数
@@ -209,7 +209,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### 应用程序崩溃故障诊断
 {: #app-crash-troubleshooting}
 
-您可以在 {{site.data.keyword.mobileanalytics_short}} Console 中查看**故障诊断**页面<!-- **Applications** section of the -->以更好地管理应用程序。
+{{site.data.keyword.mobileanalytics_short}} 控制台中的**故障诊断**页面<!-- **Applications** section of the -->提供了应用程序崩溃的详细视图。
 
 **崩溃摘要**表可进行排序，且包含下列数据列：
 
@@ -232,5 +232,23 @@ You can also export and import custom chart definitions programmatically by usin
 展开**崩溃详细信息**表中的任何条目，以获取包含堆栈跟踪在内的更多详细信息。
 
 **注**：通过查询致命级别应用程序日志，可以填充**崩溃摘要**表的数据。如果您的应用程序未收集致命应用程序日志，那么没有可用的数据。
+
+## 监视网络请求
+{: #monitor-network-requests}
+
+
+在 {{site.data.keyword.mobileanalytics_short}} 控制台中查看应用程序的网络请求数据。 
+
+数据可用于以下度量：
+	
+* 往返时间 - 定义应用程序发出网络请求花费的时间长度，以毫秒为单位。
+* 请求计数 - 显示应用程序发出网络请求的频率。数据还作为平均值显示。
+
+## 将数据导出到 dashDB
+{: #dashdb}
+
+{{site.data.keyword.mobileanalytics_short}} 控制台中显示的度量仅为样本洞察，您可从移动数据进行收集。您可以将移动数据自动传递到 {{site.data.keyword.IBM}} dashDB 数据仓库，在其中定制分析、将您的数据与其他公共和专用数据源聚集以及应用前沿分析来获取深入、详细且复杂的洞察，以帮助您了解和推动业务发展。
+
+在 {{site.data.keyword.mobileanalytics_short}} 控制台中，通过单击**导出**页面上的 **DashDB**，对 dashDB 进行设置。完成设置之后，发送到 {{site.data.keyword.mobileanalytics_short}} 的新数据也会在 1-2 小时内转发给 dashDB。 
 
 

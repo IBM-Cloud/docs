@@ -2,16 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-21"
 
 ---
 {:new_window: target="_blank"}
 
 # Guía de aprendizaje: Iniciador de código de lenguaje Watson
 {: #tutorial_watson_language}
-
-Última actualización: 13 de octubre de 2016
-{: .last-updated}
 
 El Iniciador de código de {{site.data.keyword.Bluemix}} Mobile para el lenguaje Watson muestra los servicios de Text To Speech y de Language Translation de Watson y le proporciona los puntos de integración para cada uno de los servicios de {{site.data.keyword.Bluemix_notm}} Mobile.
 
@@ -40,7 +37,7 @@ Para comenzar a utilizar rápidamente el Iniciador de código de lenguaje Watson
 
    4. Especifique el nombre de proyecto y pulse **Crear**.
 
-2. Opcional: Añada Notificaciones Push.
+2. Opcional: Añada capacidad de notificaciones Push.
 
    1. Pulse **Añadir** para **Notificaciones Push** en la página **Visión general del proyecto**.
 
@@ -48,54 +45,44 @@ Para comenzar a utilizar rápidamente el Iniciador de código de lenguaje Watson
 
    2. Especifique el nombre del servicio y pulse **Crear**.
 
-   3. Para iOS, [configure el Servicio de notificaciones Push de Apple](../services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Para iOS, [configure el Servicio de notificaciones Push de Apple](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
-   4. Para Android, [configure Google Cloud Messaging](../services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Para Android, [configure Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   
+3. Opcional: Añada capacidad de análisis.
 
-3. Opcional: Añada otros servicios.
+   1. Pulse **Añadir** para **Análisis** en la página **Visión general del proyecto**.
 
-   1. Pulse **Añadir** para el servicio en la página **Visión general del proyecto**.
+      De forma alternativa, puede pulsar **Crear** desde la página **Análisis**.
 
    2. Especifique el nombre del servicio y pulse **Crear**.
+   
+   3. Desactive la **Modalidad de demostración** para ver los datos del análisis después de ejecutar la app.
 
-   3. Siga las instrucciones del servicio para configurarlo.
+4. Opcional: Añada capacidad de autenticación.
 
-4. Descargue el proyecto.
+   1. Pulse **Añadir** para **Autenticación** en la página **Visión general del proyecto**.
+
+      De forma alternativa, puede seleccionar **Crear** en la página **Autenticación**.
+
+   2. Especifique el nombre del servicio y pulse **Crear**.
+   
+   3. Active **Autenticación**.
+   
+   4. Seleccione su proveedor de identidad y especifique la información necesaria para configurarlo. Solo puede habilitar un proveedor de identidad.
+
+   5. Consulte [Iniciación a Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window} para obtener más información sobre cómo configurar la autenticación.
+
+5. Descargue el proyecto.
 
    1. Pulse **Código** y seleccione el lenguaje preferido.
 
    2. Pulse **Descargar código**.
 
-5. Extraiga el archivado y visualice el archivo `README.md` en un visor Markdown para completar la configuración.
+6. Extraiga el archivado y visualice el archivo `README.md` en un visor Markdown para completar la configuración.
 
 
 ## Qué hacer a continuación
 {: #tutorial_next}
 
-[Pruébelo.](http://new-console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}
-
-
-# Enlaces relacionados
-{: #rellinks}
-
-<!-- links to internal services don't work
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
-
-## Publicaciones del blog
-{: #general}
-* [Publicación del blog: Introducción del panel de control de Bluemix Mobile](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Publicación del blog: Introducción de la siguiente generación del panel de control de Bluemix Mobile](https://ibm.event.ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
-* [Publicación del blog: Introducción de Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [Publicación del blog: Bluemix Mobile, Parte 1: Creación de una aplicación Store Catalog](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [Publicación del blog: Bluemix Mobile, Parte 2: Integración de programa de fondo de Bluemix personalizado en la app Store Catalog](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
-## Guías de aprendizaje y ejemplos
-{: #samples}
-* [Backend móvil para Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+[Pruébelo.](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}

@@ -1,8 +1,7 @@
 ---
-
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +12,6 @@ copyright:
 
 # {{site.data.keyword.composeForRedis}} の概説
 {: #getting-started-with-compose-for-redis}
-
-最終更新日: 2016 年 9 月 20 日
-{: .last-updated}
 
 Redis は、オープン・ソースでインメモリー型のキー/値ストアです。Redis には値として、単純なストリング、ハッシュ、リスト、セットを格納したり、強力なビットマップ、hyperloglog、地理空間インデックスを格納したりできます。Redis は、アプリケーション・キャッシュまたは高速応答用データ・ストアに向いています。{{site.data.keyword.composeForRedis_full}} で提供する構成は、高可用性とディスク上での永続性のために事前調整されており、追加のセキュリティー機能によってすべてがロックダウンされます。
 {:shortdesc}
@@ -43,6 +39,7 @@ Redis は、オープン・ソースでインメモリー型のキー/値スト�
 `deployment_id`|Compose 内で作成された、サービスの内部 ID。
 `db_type`|サービスによって提供されるデータベースのタイプ。この場合は、`redis`。
 `name`|データベース・デプロイメント名。
+{: caption="Table 1. {{site.data.keyword.composeForRedis}} credentials" caption-side="top"}
 
 # 関連リンク
 {: #rellinks}

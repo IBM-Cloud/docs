@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-27"
  
 
 ---
@@ -19,8 +19,6 @@ copyright:
 # 建立及呼叫 {{site.data.keyword.openwhisk_short}} 動作
 {: #openwhisk_actions}
 
-前次更新：2016 年 9 月 9 日
-{: .last-updated}
 
 動作是在 {{site.data.keyword.openwhisk}} 平台上執行的無狀態程式碼 Snippet。動作可以是 JavaScript 函數、Swift 函數，或包裝在 Docker 容器中的自訂可執行程式。例如，動作可以用來偵測映像檔中的樣式、聚集一組 API 呼叫，或張貼推文。
 {:shortdesc}
@@ -75,7 +73,7 @@ actions
 
   您可以看到剛剛建立的 `hello` 動作。
 
-4. 建立動作之後，即可使用 'invoke' 指令透過 OpenWhisk 在雲端執行它。在指令中指定旗標，即可透過*封鎖* 呼叫（即要求/回應樣式）或*非封鎖* 呼叫來呼叫動作。封鎖呼叫要求將*等待* 啟動結果可供使用。等待期間小於 60 秒或動作的已配置[時間限制](./reference.md#per-action-timeout-ms-default-60s)。如果在等待期間內有啟動結果，則會予以傳回。否則，會在系統中繼續處理啟動，並傳回啟動 ID，讓您可以稍後檢查結果，這與非封鎖要求相同（如需監視啟動的提示，請參閱[這裡](#watching-action-output)）。
+4. 建立動作之後，即可使用 'invoke' 指令透過 OpenWhisk 在雲端執行它。在指令中指定旗標，即可透過*封鎖* 呼叫（即要求/回應樣式）或*非封鎖* 呼叫來呼叫動作。封鎖呼叫要求將*等待* 啟動結果可供使用。等待期間小於 60 秒或動作的已配置[時間限制](./openwhisk_reference.html#openwhisk_syslimits_timeout)。如果在等待期間內有啟動結果，則會予以傳回。否則，會在系統中繼續處理啟動，並傳回啟動 ID，讓您可以稍後檢查結果，這與非封鎖要求相同（如需監視啟動的提示，請參閱[這裡](#watching-action-output)）。
 
   這個範例使用封鎖參數 `--blocking`：
 
@@ -157,10 +155,31 @@ function main(params) {
 wsk action update hello hello.js
   ```
   {: pre}
+
+3.  可在指令行上明確地提供參數，或提供包含所需參數的檔案來提供參數
+
+  若要透過指令行直接傳遞參數，請提供一對索引鍵/值給 `--param` 旗標：
   ```
-wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Vermont'
+  wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
+
+  若要使用包含參數內容的檔案，請以 JSON 格式建立包含參數的檔案。然後，必須將檔名傳遞至 `param-file` 旗標：
+
+  稱為 parameters.json 的範例參數檔案：
+  ```
+  {
+      "name": "Bernie",
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {
       "payload": "Hello, Bernie from Vermont"
@@ -168,7 +187,7 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
   ```
   {: screen}
 
-  請注意，`--param` 選項用來指定參數名稱及值，而 `--result` 選項用來只顯示呼叫結果。
+  請注意，使用 `--result` 選項，只會顯示呼叫結果。
 
 ### 設定預設參數
 {: #openwhisk_binding_actions}
@@ -177,17 +196,35 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
 
 您可以連結特定參數，而非每次都將所有參數傳遞給動作。下列範例會連結 *place* 參數，以將動作預設為 "Vermont" 這個位置：
  
-1. 使用 `--param` 選項來連結參數值，以更新動作。
+1. 更新動作，方法為使用 `--param` 選項來連結參數值，或將包含參數的檔案傳遞至 `--param-file`
+
+  若要在指令行上明確地指定預設參數，請將一對索引鍵/值提供給 `param` 旗標：
 
   ```
-wsk action update hello --param place 'Vermont'
+  wsk action update hello --param place Vermont
+  ```
+  {: pre}
+
+  從檔案傳遞參數需要以 JSON 格式建立一個包含所需內容的檔案。
+然後，必須將檔名傳遞至 `-param-file` 旗標：
+
+  稱為 parameters.json 的範例參數檔案：
+  ```
+  {
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action update hello --param-file parameters.json
   ```
   {: pre}
 
 2. 呼叫動作，但這次只傳遞 `name` 參數。
 
   ```
-wsk action invoke --blocking --result hello --param name 'Bernie'
+  wsk action invoke --blocking --result hello --param name Bernie
   ```
   {: pre}
   ```
@@ -201,10 +238,30 @@ wsk action invoke --blocking --result hello --param name 'Bernie'
 
 3. 呼叫動作，並傳遞 `name` 及 `place` 值。後者會改寫連結至動作的值。
 
+  使用 `--param` 旗標：
+
   ```
-wsk action invoke --blocking --result hello --param name 'Bernie' --param place 'Washington, DC'
+  wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
+  使用 `--param-file` 旗標：
+
+  檔案 parameters.json：
+  ```
+  {
+    "name": "Bernie",
+    "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -232,7 +289,7 @@ wsk action invoke --blocking --result hello --param name 'Bernie' --param place 
 
   請注意，`main` 函數會傳回 Promise，這表示啟動尚未完成，但預期未來可完成。
 
-  在此情況下，`setTimeout()` JavaScript 函數會先等待 20 秒，再呼叫回呼函數。這會呈現非同步程式碼，並進入 Promise 的回呼函數內。
+  在此情況下，`setTimeout()` JavaScript 函數會等待兩秒，再呼叫回呼函數。這會呈現非同步程式碼，並進入 Promise 的回呼函數內。
 
   Promise 的回呼接受兩個引數（resolve 及 reject），這兩個都是函數。`resolve()` 呼叫可滿足 Promise，並指出啟動正常完成。
 
@@ -319,7 +376,7 @@ var request = require('request');function main(params) {
   ```
   {: codeblock}
   
-  請注意，此範例中的動作使用 JavaScript `request` 程式庫，對 Yahoo Weather API 發出 HTTP 要求，以及從 JSON 結果中擷取欄位。[參照](./reference.md#javascript-runtime-environments)詳述可在動作中使用的 Node.js 套件。
+  請注意，此範例中的動作使用 JavaScript `request` 程式庫，對 Yahoo Weather API 發出 HTTP 要求，以及從 JSON 結果中擷取欄位。[參照](./openwhisk_reference.html#openwhisk_ref_javascript_environments)詳述可在動作中使用的 Node.js 套件。
   
   此範例也會顯示需要非同步動作。此動作會傳回 Promise，指出在函數返回時還無法取得這個動作的結果。而是，在 HTTP 呼叫完成之後，會在 `request` 回呼中取得結果，並且它會作為 `resolve()` 函數的引數傳遞。
   
@@ -330,7 +387,7 @@ wsk action create weather weather.js
   ```
   {: pre}
   ```
-wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
+  wsk action invoke --blocking --result weather --param location "Brooklyn, NY"
   ```
   {: pre}
   ```
@@ -339,13 +396,91 @@ wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
   }
   ```
   {: screen}
-  
-### 建立動作序列
+
+### 將動作包裝為 Node.js 模組
+{: #openwhisk_js_packaged_action}
+
+使用單一 JavaScript 原始檔撰寫所有動作碼的替代方案，是您可以將動作撰寫為 `npm` 套件。以具有下列檔案的目錄為例：
+
+首先是 `package.json`：
+
+```
+{
+  "name": "my-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies" : {
+    "left-pad" : "1.1.3"
+  }
+}
+```
+{: codeblock}
+
+然後是 `index.js`：
+
+```
+function myAction(args) {
+    const leftPad = require("left-pad")
+    const lines = args.lines || [];
+    return { padded: lines.map(l => leftPad(l, 30, ".")) }
+}
+
+exports.main = myAction;
+```
+{: codeblock}
+
+請注意，動作是透過 `exports.main` 公開；動作處理程式本身可以有任何名稱，只要符合接受物件以及傳回物件的正常簽章（或物件的 `Promise`）。
+
+若要從此套件建立 OpenWhisk 動作，請執行下列動作：
+
+1. 先在本端安裝所有相依關係
+
+  ```
+  npm install
+  ```
+  {: pre}
+
+2. 建立包含所有檔案的 `.zip` 保存檔（包括所有相依關係）：
+
+  ```
+  zip -r action.zip *
+  ```
+  {: pre}
+
+3. 建立動作：
+
+  ```
+  wsk action create packageAction --kind nodejs:6 action.zip
+  ```
+  {: pre}
+
+  請注意，使用 CLI 工具從 `.zip` 保存檔建立動作時，必須明確地提供 `--kind` 旗標的值。
+
+4. 您可以呼叫任何其他動作：
+
+  ```
+  wsk action invoke --blocking --result packageAction --param lines "[\"and now\", \"for something completely\", \"different\" ]"
+  ```
+  {: pre}
+  ```
+  {
+      "padded": [
+          ".......................and now",
+          "......for something completely",
+          ".....................different"
+      ]
+  }
+  ```
+  {: screen}
+
+最後，請注意，雖然大部分 `npm` 套件都會在 `npm install` 上安裝 JavaScript 原始檔，但是有一部分也會安裝及編譯二進位構件。保存檔上傳目前不支援二進位相依關係，而只支援 JavaScript 相依關係。如果保存檔包括二進位相依關係，則動作呼叫可能會失敗。
+
+## 建立動作序列
 {: #openwhisk_create_action_sequence}
 
 您可以建立一個動作，以將一連串的動作鏈結在一起。
 
-在稱為 `/whisk.system/utils` 的套件中提供數個公用程式動作，可用來建立第一個序列。您可以在[套件](./packages.md)小節中進一步瞭解套件。
+在稱為 `/whisk.system/utils` 的套件中提供數個公用程式動作，可用來建立第一個序列。您可以在[套件](./openwhisk_packages.html)小節中進一步瞭解套件。
 
 1. 顯示 `/whisk.system/utils` 套件中的動作。
   
@@ -363,9 +498,9 @@ wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
    action /whisk.system/utils/cat: Concatenates input into a string
   ```
   {: screen}
-
+  
   在此範例中，您將使用 `split` 及 `sort` 動作。
-
+  
 2. 建立動作序列，以將某個動作的結果當作下一個動作的引數來傳遞。
   
   ```
@@ -400,7 +535,7 @@ wsk action invoke --blocking --result weather --param location 'Brooklyn, NY'
 序列中第一個動作的結果會變成序列中第二個動作的輸入 JSON 物件（以此類推）。
 此物件不會包括一開始傳遞給序列的任何參數，除非第一個動作將它們明確地包括在結果中。
 動作的輸入參數會與動作的預設參數合併，而前者的優先順序較高，並且會置換任何相符的預設參數。
-如需使用多個具名參數來呼叫動作序列的相關資訊，請參閱[設定預設參數](./actions.md#setting-default-parameters)。
+如需使用多個具名參數來呼叫動作序列的相關資訊，請參閱[設定預設參數](./openwhisk_actions.html#openwhisk_binding_actions)。
 
 ## 建立 Python 動作
 {: #openwhisk_actions_python}
@@ -495,6 +630,73 @@ wsk action invoke --blocking --result helloSwift --param name World
 {: screen}
 
 **注意：**Swift 動作是在 Linux 環境中執行。Swift on Linux 仍在開發中，而且 {{site.data.keyword.openwhisk_short}} 通常會使用最新的可用版本，但此版本不一定是穩定的。此外，與 {{site.data.keyword.openwhisk_short}} 搭配使用的 Swift 版本，可能與 MacOS 上穩定 XCode 版本的 Swift 版本不一致。
+
+## 建立 Java 動作
+{: #openwhisk_actions_java}
+
+建立 Java 動作的程序，與建立 JavaScript 及 Swift 動作的程序類似。下列各節會引導您建立及呼叫單一 Java 動作，以及將參數新增至該動作。
+
+若要編譯、測試及保存 Java 檔案，您必須已在本端安裝 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。
+
+### 建立及呼叫動作
+{: #openwhisk_actions_java_invoke}
+
+Java 動作是一種 Java 程式，搭配稱為 `main` 的方法，其具有確切的簽章，如下所示：
+```
+public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
+```
+{: codeblock}
+
+例如，使用下列內容建立稱為 `Hello.java` 的 Java 檔案：
+
+```
+import com.google.gson.JsonObject;
+public class Hello {
+    public static JsonObject main(JsonObject args) {
+        String name = "stranger";
+        if (args.has("name"))
+            name = args.getAsJsonPrimitive("name").getAsString();
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+    }
+}
+```
+{: codeblock}
+
+然後，將 `Hello.java` 編譯成 JAR 檔 `hello.jar`，如下所示：
+```
+javac Hello.java
+jar cvf hello.jar Hello.class
+```
+{: pre}
+
+**附註：**當編譯 Java 檔案時，[google-gson](https://github.com/google/gson) 必須存在於您的 Java CLASSPATH 中。
+
+您可以從這個 JAR 檔建立稱為 `helloJava` 的 OpenWhisk 動作，如下所示：
+
+```
+wsk action create helloJava hello.jar
+```
+{: pre}
+
+當使用指令行及 `.jar` 原始檔時，您不需要指定您是建立 Java 動作；工具會根據副檔名判定。
+
+對於 Java 動作，動作呼叫是相同的，因為其適用於 Swift 及 JavaScript 動作：
+
+```
+wsk action invoke --blocking --result helloJava --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
+
+**附註：**如果 JAR 檔具有多個類別，其 main 方法符合必要簽章，則 CLI 工具會使用 `jar -tf` 所報告的第一個類別。
 
 
 ## 建立 Docker 動作
@@ -600,10 +802,10 @@ wsk action invoke --blocking --result example --param payload Rey
   ```
   {: screen}
   
-  若要更新 Docker 動作，請執行 buildAndPush.sh 來重新整理 Docker Hub 上的映像檔，這可容許下次系統取回您的 Docker 映像檔來執行您動作的新程式碼。
-如果沒有暖容器，任何新呼叫將會使用新的 Docker 映像檔。
-請考慮，如果有暖容器使用舊版 Docker 映像檔，則除非您執行 wsk 動作更新，否則任何新呼叫都會繼續使用此映像檔，這指出針對任何新呼叫，系統都會強制 Docekr 在取回新的 Docker 映像檔時取回結果。
-  
+  若要更新 Docker 動作，請執行 buildAndPush.sh，以將最新映像檔上傳至 Docker Hub。這可讓系統在下次執行您動作的程式碼時取回新的 Docker 映像檔。
+  如果沒有暖容器，任何新呼叫將會使用新的 Docker 映像檔。
+不過，如果有暖容器使用舊版 Docker 映像檔，則除非您執行 wsk 動作更新，否則任何新呼叫都會繼續使用該映像檔。這指出針對新呼叫，系統應該會執行 Docekr 取回，以取得新的 Docker 映像檔。
+ 
   ```
 ./buildAndPush.sh janesmith/blackboxdemo
   ```

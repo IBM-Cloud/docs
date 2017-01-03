@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-03"
+
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -10,7 +11,6 @@ lastupdated: "2016-10-02"
 
 # Benutzer mit Google-Berechtigungsnachweisen authentifizieren
 {: #google-auth}
-
 
 Sie können den {{site.data.keyword.amafull}}-Service zum Schutz von Ressourcen konfigurieren und Google als Identitätsprovider verwenden. Die Benutzer Ihrer mobilen Anwendung oder Ihrer Webanwendung können dann ihre Google-Berechtigungsnachweise für die Authentifizierung nutzen.
 {:shortdesc}
@@ -45,7 +45,7 @@ Im folgenden Diagramm wird die Integration von {{site.data.keyword.amashort}} in
 Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist vergleichbar mit dem Ablauf für einen mobilen Client. {{site.data.keyword.amashort}} schützt jedoch die Webanwendung anstatt einer {{site.data.keyword.Bluemix_notm}}-Back-End-Ressource.
 
   * Die ursprüngliche Anforderung wird von der Webanwendung (zum Beispiel von einem Anmeldeformular) gesendet.
-  * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource. 
+  * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource.
 
 
 
@@ -56,4 +56,3 @@ Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist
 * [Google-Authentifizierung für iOS-Apps aktivieren (Swift-SDK)](google-auth-ios-swift-sdk.html)
 * [Google-Authentifizierung für iOS-Apps aktivieren (Objective-C-SDK)](google-auth-ios.html)
 * [Google-Authentifizierung für Cordova-Apps aktivieren](google-auth-cordova.html)
-

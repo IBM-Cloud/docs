@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Valeurs par défaut du pack de construction
 {: #buildpack_defauts}
-
-Dernière mise à jour : 10 juin 2016
-{: .last-updated}
 
 Le pack de construction Liberty est mis à jour régulièrement dans Bluemix. Chaque édition peut contenir des correctifs de sécurité ou des
 améliorations de fonction.

@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,17 +6,21 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Configurazione delle credenziali per FCM
 {: #create-push-enable-gcm}
-Ultimo aggiornamento: 17 ottobre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
-FCM (Firebase Cloud Messaging) è il gateway utilizzato per consegnare le notifiche di push ai dispositivi Android e ai browser web Google Chrome e Mozilla. FCM ha sostituito GCM (Google Cloud Messaging). Ottieni le tue credenziali FCM e configura quindi il servizio {{site.data.keyword.mobilepushshort}} sul dashboard. Assicurati di utilizzare le configurazioni FCM per le nuove applicazioni. Le applicazioni esistenti possono continuare a funzionare con le configurazioni GCM.
+FCM (Firebase Cloud Messaging) è il gateway utilizzato per consegnare le notifiche di push ai dispositivi Android e ai browser web Google Chrome e Mozilla. FCM ha sostituito GCM (Google Cloud Messaging). Ottieni le tue credenziali FCM e configura quindi il servizio {{site.data.keyword.mobilepushshort}} sul dashboard. Assicurati di utilizzare le configurazioni FCM per le nuove applicazioni. Le applicazioni esistenti continueranno a funzionare con le configurazioni GCM.
 
 ##Come ottenere il tuo ID mittente e la chiave API
 {: #android-senderid-apikey}
 
-La chiave API è archiviata in modo protetto e utilizzata dal servizio {{site.data.keyword.mobilepushshort}} per stabilire una connessione al server FCM e l'ID mittente (numero progetto) viene utilizzato dall'SDK Android e dall'SDK JS per Google Chrome e Mozilla Firefox sul lato client.  
+La chiave API è archiviata in modo protetto e utilizzata dal servizio {{site.data.keyword.mobilepushshort}} per stabilire una connessione al server FCM e l'ID mittente (numero progetto) viene utilizzato dall'SDK Android e dall'SDK JS per Google Chrome e Mozilla Firefox sul lato client. 
 
 Per configurare FCM, generare la chiave API e l'ID mittente, completa la seguente procedura:
 
@@ -47,6 +50,6 @@ Per configurare FCM, generare la chiave API e l'ID mittente, completa la seguent
 1. Nel pannello di navigazione del dashboard Push, seleziona **Configure**.
 2. Seleziona la scheda Web.
 	![Configurazioni push web](images/webpush_configure.jpg)
-3. Configura la chiave API FCM/GCM e l'URL del tuo sito web che sarà registrato per ricevere le notifiche push. 
+3. Configura la chiave API FCM/GCM e l'URL del tuo sito web che sarà registrato per ricevere le notifiche push.
 4. Fai clic su **Save**.
 5. Fasi successive. [Abilitazione delle notifiche per i browser Google Chrome e Mozilla Firefox](c_enable_push.html).

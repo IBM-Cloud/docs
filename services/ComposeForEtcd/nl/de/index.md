@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Einführung in {{site.data.keyword.composeForEtcd}}
 {: #getting-started-with-compose-for-etcd}
-
-Letzte Aktualisierung: 20. September 2016
-{: .last-updated}
 
 "etcd" ist ein Schlüssel/Wert-Speicher mit den immer korrekten Daten, die Sie zum Koordinieren und Verwalten Ihres Server-Clusters für die Konfigurationsverwaltung für verteilte Server benötigen. "etcd" verwendet den RAFT-Datenkonsistenzalgorithmus zur Sicherstellung der Konsistenz in Ihrem Cluster. Er erzwingt die Reihenfolge der Operationen an den Daten, sodass jeder Knoten im Cluster auf demselben Weg zum selben Ergebnis kommt. {{site.data.keyword.composeForEtcd_full}} fügt automatische Sicherungen Ihrer Konfigurationsdaten durch, die in "etcd" gespeichert sind. Über eine intuitive Verwaltungsschnittstelle können Sie Ihre Bereitstellung mit Leichtigkeit überwachen, skalieren und verwalten.
 {:shortdesc}
@@ -38,11 +35,12 @@ Laden Sie die Beispiel-App [compose-etcd-helloworld-nodejs](https://github.com/I
 
 Feldname|Beschreibung
 ----------|-----------
-`ca_certificate_base64`|Ein selbst signiertes Zertifikat, mit dem bestätigt wird, dass eine App eine Verbindung zum geeigneten Server herstellt. Das Zertifikat ist base64-codiert. Vor seiner Verwendung muss es decodiert werden, wie in der Beispiel-App gezeigt.
+`ca_certificate_base64`|Ein selbst signiertes Zertifikat, mit dem bestätigt wird, dass eine App eine Verbindung zum geeigneten Server herstellt. Das Zertifikat ist base64-codiert. Vor seiner Verwendung muss der Schlüssel decodiert werden, wie in der Beispiel-App gezeigt.
 `deployment_id`|Eine interne ID für den Service, wie in Compose erstellt.
 `db_type`|Der Datenbanktyp, der vom Service angeboten wird, in diesem Fall `etcd`.
 `name`|Der Name der Datenbankimplementierung.
 `uri`|Der URI, der bei der Verbindungsherstellung zum Service verwendet werden soll. `uri` enthält das Schema (`amqps:), Administrator-Benutzernamen und Kennwort, den Hostnamen des Servers, die Nummer des Ports, zu dem die Verbindung hergestellt werden soll, sowie den Namen des `virtuellen Hosts.
+{: caption="Table 1. {{site.data.keyword.composeForEtcd}} - Berechtigungsnachweise" caption-side="top"}
 
 # Zugehörige Links
 {: #rellinks}

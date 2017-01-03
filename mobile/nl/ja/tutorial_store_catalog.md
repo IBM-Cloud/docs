@@ -2,16 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-12-01"
 
 ---
 {:new_window: target="_blank"}
 
 # チュートリアル - Store Catalog UI スターター
 {: #tutorial_store_catalog}
-
-最終更新日: 2016 年 10 月 13 日
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} Store Catalog UI スターターは、カスタマイズ可能な基本的販売アプリ構造を提供し、各 {{site.data.keyword.Bluemix_notm}} モバイル・サービスの統合ポイントを提供します。
 
@@ -27,9 +24,9 @@ lastupdated: "2016-10-13"
 
 Store Catalog コード・スターターを使用して素早く稼働中にするには、以下のステップに従ってください。
 
-1. {{site.data.keyword.Bluemix_notm}} 「モバイル」ダッシュボードでプロジェクトを作成します。
+1. {{site.data.keyword.Bluemix_notm}} でモバイル・ダッシュボード・プロジェクトを作成します。
 
-   1. 「モバイル」ダッシュボードの**「開始」**ページで**「プロジェクトの作成」**をクリックします。
+   1. モバイル・ダッシュボードの**「開始」**ページで**「プロジェクトの作成」**をクリックします。
 
       代替方法として、**「プロジェクト」**ページで**「プロジェクトの作成」**をクリックすることもできます。
 
@@ -39,7 +36,7 @@ Store Catalog コード・スターターを使用して素早く稼働中にす
 
    4. プロジェクト名を入力し、**「作成」**をクリックします。
 
-2. オプション: Push Notifications (プッシュ通知) を追加します。
+2. オプション: Push Notifications (プッシュ通知) 機能を追加します。
 
    1. **「プロジェクト概要 (Project Overview)」**ページで、**「Push Notifications」**に対して**「追加」**をクリックします。
 
@@ -47,21 +44,23 @@ Store Catalog コード・スターターを使用して素早く稼働中にす
 
    2. サービス名を入力し、**「作成」**をクリックします。
 
-   3. iOS の場合、[Apple プッシュ通知サービスの構成](../services/mobilepush/t_push_provider_ios.html){: new_window}を行います。
+   3. iOS の場合、[Apple プッシュ通知サービスの構成](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}を行います。
 
-   4. Android の場合、[Google クラウド・メッセージングの構成](../services/mobilepush/t_push_provider_android.html){: new_window}を行います。
+   4. Android の場合、[Google クラウド・メッセージングの構成](/docs/services/mobilepush/t_push_provider_android.html){: new_window}を行います。
 
-3. オプション: その他のサービスを追加します。
+3. オプション: その他の機能を追加します。
 
-   1. **「プロジェクト概要 (Project Overview)」**ページで、追加するサービスに対して**「追加」**をクリックします。
+   1. **「プロジェクト概要 (Project Overview)」**ページで、追加する機能に対して**「追加」**をクリックします。
 
    2. サービス名を入力し、**「作成」**をクリックします。
 
-   3. サービスの指示に従ってサービスをセットアップします。
+   3. サービスで提供される指示に従って、サービスをセットアップします。
 
 4. アプリを設計します。
 
    1. アプリの設計をカスタマイズするため、ナビゲーション・メニューで**「UI ビルダー (UI Builder)」**を選択します。
+   
+		**ヒント:** UI ビルダーの概要を表示するには、UI ビルダーを選択した後、ナビゲーションで**「動作の仕組みの表示 (Show me how it works)」**を選択します。
 
    2. ナビゲーションで**「設計」**タブを選択します。
 
@@ -110,15 +109,15 @@ Store Catalog コード・スターターを使用して素早く稼働中にす
 
    2. Android の場合、コードが生成された後、以下のオプションから選択することができます。
 
-      **コードのダウンロード**
+      * コードのダウンロード
 
-      **APK のダウンロード**
+      * APK のダウンロード
 
-      **QR コードとともにダウンロード**
+      * QR コードとともにダウンロード
 
-   3. iOS の場合、コードが生成された後、以下のオプションから選択することができます。
+   3. iOS の場合、コードが生成された後に以下のオプションを選択できます。
 
-      **コードのダウンロード**
+      * コードのダウンロード
 
 6. デバイスまたはシミュレーターでアプリを実行します。
 
@@ -126,30 +125,4 @@ Store Catalog コード・スターターを使用して素早く稼働中にす
 ## 次のタスク
 {: #tutorial_next}
 
-[試してみてください](http://new-console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
-
-
-# 関連リンク
-{: #rellinks}
-
-<!-- links to internal services don't work
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
-
-## ブログ投稿
-{: #general}
-* [ブログ投稿: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [ブログ投稿: Introducing the next generation of the Bluemix Mobile dashboard](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
-* [ブログ投稿: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [ブログ投稿: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [ブログ投稿: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
-## チュートリアルおよびサンプル
-{: #samples}
-* [Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+[試してみてください](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}

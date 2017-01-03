@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-09"
  
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}}-Services für {{site.data.keyword.openwhisk_short}} verwenden
 {: #openwhisk_ecosystem}
-Letzte Aktualisierung: 9. September 2016
-{: .last-updated}
 
 In {{site.data.keyword.openwhisk}} stellt ein Katalog von Paketen eine einfache Methode bereit, um Ihre App mit nützlichen Funktionen zu erweitern und um auf externe Services im direkten Geschäftsumfeld ('Ökosystem') zuzugreifen. Zu den externen Services, die für {{site.data.keyword.openwhisk_short}} eingerichtet sind, gehören zum Beispiel Cloudant, The Weather Company, Slack und GitHub.
 {: shortdesc}
@@ -34,10 +32,10 @@ Das Paket `/whisk.system/cloudant` ermöglicht Ihnen die Arbeit mit einer Clouda
 
 | Entität | Typ | Parameter | Beschreibung |
 | --- | --- | --- | --- |
-| `/whisk.system/cloudant` | Paket | {{site.data.keyword.Bluemix_notm}}ServiceName, host, username, password, dbname, includeDoc, overwrite | Dient zur Arbeit mit einer Cloudant-Datenbank. |
+| `/whisk.system/cloudant` | Paket | {{site.data.keyword.Bluemix_notm}}ServiceName, host, username, password, dbname, overwrite | Dient zur Arbeit mit einer Cloudant-Datenbank. |
 | `/whisk.system/cloudant/read` | Aktion | dbname, includeDoc, id | Liest ein Dokument aus einer Datenbank. |
 | `/whisk.system/cloudant/write` | Aktion | dbname, overwrite, doc | Schreibt ein Dokument in eine Datenbank. |
-| `/whisk.system/cloudant/changes` | Feed | dbname, includeDoc, maxTriggers | Aktiviert Auslöserereignisse bei Änderungen an einer Datenbank. |
+| `/whisk.system/cloudant/changes` | Feed | dbname, maxTriggers | Aktiviert Auslöserereignisse bei Änderungen an einer Datenbank. |
 
 In den folgenden Abschnitten werden die Einrichtung einer Cloudant-Datenbank, die Konfiguration eines zugeordneten Pakets sowie die Verwendung der Aktionen und Feeds im Paket `/whisk.system/cloudant` schrittweise erläutert.
 
@@ -118,7 +116,7 @@ Wenn Sie {{site.data.keyword.openwhisk_short}} in {{site.data.keyword.Bluemix_no
 1. Erstellen Sie eine Paketbindung, die für Ihr Cloudant-Konto konfiguriert ist.
 
   ```
-  wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+  wsk package bind /whisk.system/cloudant myCloudant -p username MYUSERNAME -p password MYPASSWORD -p host MYCLOUDANTACCOUNT.cloudant.com
   ```
   {: pre}
 
@@ -141,13 +139,12 @@ Wenn Sie {{site.data.keyword.openwhisk_short}} in {{site.data.keyword.Bluemix_no
 Mit dem Feed `changes` können Sie einen Service konfigurieren, der bei jeder Änderung an Ihrer Cloudant-Datenbank einen Auslöser aktiviert. Die folgenden Parameter sind verfügbar:
 
 - `dbname`: Name der Cloudant-Datenbank.
-- `includeDoc`: Wenn der Parameter den Wert 'true' hat, enthält jedes Auslöserereignis, das aktiviert wird, das geänderte Cloudant-Dokument. 
 - `maxTriggers`: Stoppt die Aktivierung von Auslösern, wenn dieser Grenzwert erreicht wird. Standardwert: 1000. Als Maximalwert kann 10.000 eingestellt werden. Wenn Sie versuchen, einen höheren Wert einzustellen, wird die Anforderung abgelehnt.
 
 1. Erstellen Sie einen Auslöser mit dem Feed `changes` in der Paketbindung, die Sie zuvor erstellt haben. Stellen Sie sicher, dass Sie `/myNamespace/myCloudant` durch Ihren Paketnamen ersetzen.
 
   ```
-  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
   ```
@@ -170,20 +167,7 @@ Mit dem Feed `changes` können Sie einen Service konfigurieren, der bei jeder Ä
 
 Sie können jetzt Regeln erstellen und diese Aktionen zuordnen, um auf die Dokumentaktualisierungen zu reagieren.
 
-Der Inhalt der generierten Ereignisse hängt vom Wert des Parameters `includeDoc` beim Erstellen des Auslösers ab. Wenn der Parameter den Wert 'true' hat, enthält jedes Auslöserereignis, das aktiviert wird, das geänderte Cloudant-Dokument. Betrachten Sie zum Beispiel das folgende geänderte Dokument:
-
-  ```
-  {
-    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
-    "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
-    "name": "Heisenberg"
-  }
-  ```
-  {: screen}
-
-Der Code in diesem Beispiel generiert ein Auslöserereignis mit den entsprechenden Parametern `_id`, `_rev` und `name`. Tatsächlich ist die JSON-Darstellung des Auslöserereignisses mit dem Dokument identisch.
-
-Andernfalls, wenn der Parameter `includeDoc` den Wert 'false' hat, enthalten die Ereignisse die folgenden Parameter:
+Der Inhalt der generierten Ereignisse weist die folgenden Parameter auf:
 
 - `id`: Die Dokument-ID.
 - `seq`: Die von Cloudant generierte Sequenz-ID.
@@ -212,7 +196,7 @@ Sie können eine Aktion verwenden, um ein Dokument in einer Cloudant-Datenbank m
 1. Speichern Sie ein Dokument mit der Aktion `write` in der Paketbindung, die Sie zuvor erstellt haben. Stellen Sie sicher, dass Sie `/myNamespace/myCloudant` durch Ihren Paketnamen ersetzen.
 
   ```
-  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc "{\"_id\":\"heisenberg\",\"name\":\"Walter White\"}"
   ```
   {: pre}
   ```
@@ -250,6 +234,53 @@ Sie können eine Aktion verwenden, um ein Dokument aus einer Cloudant-Datenbank 
   ```
   {: screen}
 
+### Aktionssequenz zur Verarbeitung eines Dokuments für ein Änderungsereignis aus einer Cloudant-Datenbank verwenden
+
+Sie können eine Aktionssequenz in einer Regel verwenden, um das Dokument, das einem Cloudant-Änderungsereignis zugeordnet ist, abzurufen und zu verarbeiten.
+
+Erstellen Sie eine Aktion, mit der ein Dokument von Cloudant verarbeitet werden kann, dann wird ein Dokument als Parameter erwartet.
+Im Folgenden ist ein Beispielcode einer Aktion aufgeführt, die zur Verarbeitung eines Dokuments dient: 
+```
+function main(doc){
+  return { "isWalter:" : doc.name === "Walter White"};
+}
+```
+{: codeblock}
+```
+wsk action create myAction myAction.js
+```
+{: pre}
+Um das Dokument aus der Datenbank zu lesen, können Sie die Aktion `read` im Cloudant-Paket verwenden. Diese Aktion kann mit der Aktion `myAction` in eine Aktionssequenz eingebunden werden.
+Erstellen Sie eine Aktionssequenz mithilfe der Aktion `read`, dann wird die Aktion `myAction` aufgerufen, die als Eingabe ein Dokument erwartet.
+```
+wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
+```
+{: pre}
+
+Erstellen Sie nun eine Regel, die Ihren Auslöser der neuen Aktion `sequenceAction` zuordnet. 
+```
+wsk rule create myRule myCloudantTrigger sequenceAction
+```
+{: pre}
+
+Für die Aktionssequenz muss der Name der Datenbank bekannt sein, aus der das Dokument abgerufen werden soll.
+Legen Sie einen Parameter für den Auslöser für `dbname` fest. 
+```
+wsk trigger update myCloudantTrigger --param dbname testdb
+```
+{: pre}
+
+**Hinweis:** Der Cloudant-Änderungsauslöser, der zur Unterstützung des Parameters `includeDoc` verwendet wird, wird nicht mehr unterstützt.
+  Sie müssen Auslöser, die zuvor mit `includeDoc` erstellt wurden, erneut erstellen:
+  Erstellen Sie den Auslöser ohne den Parameter `includeDoc` erneut.
+  ```
+  wsk trigger delete myCloudantTrigger
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
+  ```
+  {: pre}
+  Sie können die hier beschriebenen Schritte ausführen, um eine Aktionssequenz zu erstellen, mit der das Dokument abgerufen und die vorhandene Aktion aufgerufen werden kann.
+  Aktualisieren Sie dann Ihre Regel, um die neue Aktionssequenz zu verwenden.
+
 
 ## Paket für Alarme verwenden
 {: #openwhisk_catalog_alarm}
@@ -269,26 +300,28 @@ Das Paket enthält den folgenden Feed.
 
 Der Feed `/whisk.system/alarms/alarm` konfiguriert den Alarm-Service so, dass er ein Auslöserereignis mit einer angegebenen Häufigkeit aktiviert. Die folgenden Parameter sind verfügbar:
 
-- `cron`: Eine Zeichenfolge auf der Basis der UNIX-Syntax 'crontab', die angibt, wann der Auslöser zu aktivieren ist (angegeben in koordinierter Weltzeit, UTC). Die Zeichenfolge besteht aus einer Reihe von sechs durch Leerzeichen getrennten Feldern: `X X X X X X `. Weitere Informationen zur Verwendung der cron-Syntax finden Sie in https://github.com/ncb000gt/node-cron. Beispiele für die von der Zeichenfolge angegebenen Häufigkeit:
+- `cron`: Eine Zeichenfolge auf der Basis der UNIX-Syntax 'crontab', die angibt, wann der Auslöser zu aktivieren ist (angegeben in koordinierter Weltzeit, UTC). Die Zeichenfolge besteht aus einer Reihe von fünf durch Leerzeichen getrennten Feldern: `X X X X X`. Weitere Informationen zur Verwendung der cron-Syntax finden Sie unter 'http://crontab.org'. Beispiele für die von der Zeichenfolge angegebene Häufigkeit:
 
-  - `* * * * * *`: jede Sekunde
-  - `0 * * * * *`: zu Beginn jeder Minute
-  - `* 0 * * * *`: zu Beginn jeder Stunde
-  - `0 0 9 8 * *`: um 9:00:00 (UTC) am achten Tag des Monats
+  - `* * * * *`: zu Beginn jeder Minute.
+  - `0 * * * *`: zu Beginn jeder Stunde.
+  - `0 */2 * * *`: alle zwei Stunden (z. B. 02:00:00, 04:00:00, ...).
+  - `0 9 8 * *`: um 9:00:00 (UTC) am achten Tag jeden Monats.
 
 - `trigger_payload`: Der Wert dieses Parameters wird jedes Mal zum Inhalt des Auslösers, wenn der Auslöser aktiviert wird.
 
 - `maxTriggers`: Stoppt die Aktivierung von Auslösern, wenn dieser Grenzwert erreicht wird. Standardwert: 1000. Als Maximalwert kann 10.000 eingestellt werden. Wenn Sie versuchen, einen höheren Wert einzustellen, wird die Anforderung abgelehnt.
 
-Das folgende Beispiel zeigt, wie ein Auslöser erstellt wird, der einmal alle 20 Sekunden aktiviert wird, wobei das Auslöserereignis die Werte für `name` und `place` enthält.
+Das folgende Beispiel zeigt, wie ein Auslöser erstellt wird, der einmal alle 2 Minuten aktiviert wird, wobei das Auslöserereignis die Werte für `name` und `place` enthält.
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
-  {: pre}
 
 Jedes generierte Ereignis enthält die im Wert von `trigger_payload` angegebenen Eigenschaften als Parameter. In diesem Fall erhält jedes Auslöserereignis die Parameter `name=Odin` und `place=Asgard`.
 
+**Hinweis**: Der Parameter `cron` bietet auch Unterstützung für eine angepasste Syntax mit sechs Feldern, wobei das erste Feld für Sekunden steht.
+Weitere Informationen zur Verwendung dieser angepassten cron-Syntax finden Sie unter 'https://github.com/ncb000gt/node-cron'. Im Folgenden ist ein Beispiel für die Notation mit sechs Feldern aufgeführt:
+  - `*/30 * * * * *`: alle 30 Sekunden.
 
 ## Weather-Paket verwenden
 {: #openwhisk_catalog_weather}
@@ -321,14 +354,14 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und den anschließ
 1. Erstellen Sie eine Paketbindung mit Ihrem API-Schlüssel.
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
+  wsk package bind /whisk.system/weather myWeather --param username MY_USERNAME --param password MY_PASSWORD
   ```
   {: pre}
 
 2. Rufen Sie die Aktion `forecast` in Ihrer Paketbindung auf, um die Wettervorhersage abzurufen.
 
   ```
-  wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+  wsk action invoke myWeather/forecast --blocking --result --param latitude 43.7 --param longitude -79.4
   ```
   {: pre}
 
@@ -357,47 +390,103 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und den anschließ
   {: screen}
 
 
-## Watson-Paket verwenden
+## Watson-Pakete verwenden
 {: #openwhisk_catalog_watson}
+Die Watson-Pakete bieten eine komfortable Möglichkeit zum Aufrufen verschiedener Watson-APIs.
 
-Das Paket `/whisk.system/watson` bietet eine komfortable Methode zum Aufrufen verschiedener Watson-APIs.
+Die folgenden Watson-Pakete werden bereitgestellt:
+
+| Paket | Beschreibung |
+| --- | --- |
+| `/whisk.system/watson-translator`   | Aktionen für die Watson-APIs zum Übersetzen von Text und Spracherkennung |
+| `/whisk.system/watson-textToSpeech` | Aktionen für die Watson-APIs zum Konvertieren von Text in Sprache |
+| `/whisk.system/watson-speechToText` | Aktionen für die Watson-APIs zum Konvertieren von Sprache in Text |
+
+**Hinweis:** Das Paket `/whisk.system/watson` wird momentan nicht mehr verwendet. Führen Sie eine Migration auf die hier aufgeführten neuen Pakete durch. Die neuen Aktionen bieten die gleiche Schnittstelle.
+
+### Watson Translator-Paket verwenden
+
+Das Paket `/whisk.system/watson-translator` bietet eine komfortable Methode zum Aufrufen der Watson-APIs für die Übersetzung.
 
 Das Paket enthält die folgenden Aktionen.
 
 | Entität | Typ | Parameter | Beschreibung |
 | --- | --- | --- | --- |
-| `/whisk.system/watson` | Paket | username, password | Aktionen für die Watson-Analyse-APIs |
-| `/whisk.system/watson/translate` | Aktion | translateFrom, translateTo, translateParam, username, password | Übersetzung von Text |
-| `/whisk.system/watson/languageId` | Aktion | payload, username, password | Ermittlung einer Sprache |
-| `/whisk.system/watson/speechToText` | Aktion | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Umsetzung von Sprache in Text |
-| `/whisk.system/watson/textToSpeech` | Aktion | payload, voice, accept, encoding, username, password | Umsetzung von Text in Sprache |
+| `/whisk.system/watson-translator` | Paket | username, password | Aktionen für die Watson-APIs zum Übersetzen von Text und Spracherkennung  |
+| `/whisk.system/watson-translator/translator` | Aktion | payload, translateFrom, translateTo, translateParam, username, password | Übersetzung von Text |
+| `/whisk.system/watson-translator/languageId` | Aktion | payload, username, password | Ermittlung einer Sprache |
 
-Es wird empfohlen, eine Paketbindung mit den Werten `username` und `password` zu erstellen. Auf diese Weise brauchen Sie diese Berechtigungsnachweise nicht jedes Mal anzugeben, wenn Sie die Aktionen im Paket aufrufen.
+**Hinweis**: Das Paket `/whisk.system/watson` wird einschließlich der Aktionen `/whisk.system/watson/translate` und `/whisk.system/watson/languageId` nicht mehr verwendet.
 
-### Text übersetzen
+#### Watson Translator-Paket in Bluemix einrichten
+
+Wenn Sie OpenWhisk von Bluemix verwenden, dann erstellt OpenWhisk automatisch Paketbindungen für Ihre Bluemix-Watson-Serviceinstanzen. 
+
+1. Erstellen Sie eine Watson Translator-Serviceinstanz in Ihrem Bluemix-[Dashboard](http://console.ng.Bluemix.net).
+
+  Stellen Sie sicher, dass Sie sich den Namen der Serviceinstanz sowie der Bluemix-Organisation und den Bereich merken, in dem Sie sich befinden.
+
+2. Stellen Sie sicher, dass sich Ihre OpenWhisk-Befehlszeilenschnittstelle (CLI = Command-Line Interface) in dem Namensbereich befindet, der der Bluemix-Organisation und dem Bereich entspricht, die Sie im vorherigen Schritt verwendet haben.
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  Alternativ können Sie mit dem Befehl `wsk property set --namespace` den Namensbereich mithilfe einer Liste der für sie zugänglichen Namensbereiche festlegen.
+
+3. Aktualisieren Sie die Pakete in Ihrem Namensbereich. Die Aktualisierung erstellt automatisch eine Paketbindung für die Watson-Serviceinstanz, die Sie erstellt haben.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_Translator_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Watson Translator-Paket außerhalb von Bluemix einrichten
+
+Wenn Sie OpenWhisk in Bluemix nicht verwenden oder wenn Sie Watson Translator außerhalb von Bluemix einrichten möchten, müssen Sie manuell eine Paketbindung für Ihren Watson Translator-Service erstellen. Sie benötigen hierzu den Benutzernamen und das Kennwort des Watson Translator-Service.
+
+- Erstellen Sie eine Paketbindung, die für Ihren Watson Translator-Service konfiguriert ist.
+
+  ```
+  wsk package bind /whisk.system/watson-translator myWatsonTranslator -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### Text übersetzen
 {: #openwhisk_catalog_watson_translate}
 
-Die Aktion `/whisk.system/watson/translate` übersetzt Text aus einer Sprache in eine andere. Die folgenden Parameter sind verfügbar:
+Die Aktion `/whisk.system/watson-translator/translator` übersetzt Text aus einer Sprache in eine andere. Die folgenden Parameter sind verfügbar:
 
 - `username`: Der Benutzername für die Watson-API.
 - `password`: Das Kennwort für die Watson-API.
+- `payload`: Der zu übersetzende Text.
 - `translateParam`: Der Eingabeparameter, der den zu übersetzenden Text angibt. Beispiel: Wenn `translateParam=payload` angegeben wird, wird der Wert des Parameters `payload`, der an die Aktion übergeben wird, übersetzt.
 - `translateFrom`: Ein zweistelliger Code für die Ausgangssprache.
 - `translateTo`: Ein zweistelliger Code für die Zielsprache.
 
-Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Übersetzung eines Texts.
-
-1. Erstellen Sie eine Paketbindung mit Ihren Watson-Berechtigungsnachweisen.
+- Rufen Sie die Aktion `translator` in Ihrer Paketbindung auf, um einen Text aus dem Englischen ins Französische zu übersetzen.
 
   ```
-  wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
-  ```
-  {: pre}
-
-2. Rufen Sie die Aktion `translate` in Ihrer Paketbindung auf, um einen Text aus dem Englischen ins Französische zu übersetzen.
-
-  ```
-  wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+  wsk action invoke myWatsonTranslator/translator --blocking --result --param payload 'Blue skies ahead' --param translateFrom 'en' --param translateTo 'fr'
   ```
   {: pre}
 
@@ -409,28 +498,19 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Übersetzu
   {: screen}
 
 
-### Sprache eines Texts ermitteln
+#### Sprache eines Texts ermitteln
 {: #openwhisk_catalog_watson_identifylang}
 
-Die Aktion `/whisk.system/watson/languageId` ermittelt die Sprache eines Texts. Die folgenden Parameter sind verfügbar:
+Die Aktion `/whisk.system/watson-translator/languageId` ermittelt die Sprache eines Texts. Die folgenden Parameter sind verfügbar:
 
 - `username`: Der Benutzername für die Watson-API.
 - `password`: Das Kennwort für die Watson-API.
 - `payload`: Der zu ermittelnde Text.
 
-Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Ermittlung der Sprache eines Texts.
-
-1. Erstellen Sie eine Paketbindung mit Ihren Watson-Berechtigungsnachweisen.
+- Rufen Sie die Aktion `languageId` in Ihrer Paketbindung auf, um die Sprache zu ermitteln.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
-  ```
-  {: pre}
-
-2. Rufen Sie die Aktion `languageId` in Ihrer Paketbindung auf, um die Sprache zu ermitteln.
-
-  ```
-  wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+  wsk action invoke myWatsonTranslator/languageId --blocking --result --param payload 'Ciel bleu a venir'
   ```
   {: pre}
   ```
@@ -443,10 +523,75 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Ermittlung
   {: screen}
 
 
-### Umsetzung von Text in Sprache
+### Watson-Paket 'Text to Speech' verwenden
 {: #openwhisk_catalog_watson_texttospeech}
 
-Mit der Aktion `/whisk.system/watson/textToSpeech` kann Text in Sprache umgesetzt werden. Die folgenden Parameter sind verfügbar:
+Das Paket `/whisk.system/watson-textToSpeech` bietet eine komfortable Methode zum Aufrufen der Watson-APIs für die Konvertierung von Text in Sprache.
+
+Das Paket enthält die folgenden Aktionen.
+
+| Entität | Typ | Parameter | Beschreibung |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-textToSpeech` | Paket | username, password | Aktionen für die Watson-APIs zum Konvertieren von Text in Sprache |
+| `/whisk.system/watson-textToSpeech/textToSpeech` | Aktion | payload, voice, accept, encoding, username, password | Umsetzung von Text in Sprache |
+
+**Hinweis**: Das Paket `/whisk.system/watson` wird einschließlich der Aktion `/whisk.system/watson/textToSpeech` nicht mehr verwendet.
+
+#### Watson-Paket 'Text to Speech' in Bluemix einrichten
+
+Wenn Sie OpenWhisk von Bluemix verwenden, dann erstellt OpenWhisk automatisch Paketbindungen für Ihre Bluemix-Watson-Serviceinstanzen. 
+
+1. Erstellen Sie eine Watson-Serviceinstanz für 'Text to Speech' in Ihrem Bluemix-[Dashboard](http://console.ng.Bluemix.net).
+
+  Stellen Sie sicher, dass Sie sich den Namen der Serviceinstanz sowie der Bluemix-Organisation und den Bereich merken, in dem Sie sich befinden.
+
+2. Stellen Sie sicher, dass sich Ihre OpenWhisk-Befehlszeilenschnittstelle (CLI = Command-Line Interface) in dem Namensbereich befindet, der der Bluemix-Organisation und dem Bereich entspricht, die Sie im vorherigen Schritt verwendet haben.
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  Alternativ können Sie mit dem Befehl `wsk property set --namespace` den Namensbereich mithilfe einer Liste der für sie zugänglichen Namensbereiche festlegen.
+
+3. Aktualisieren Sie die Pakete in Ihrem Namensbereich. Die Aktualisierung erstellt automatisch eine Paketbindung für die Watson-Serviceinstanz, die Sie erstellt haben.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_TextToSpeech_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_TextToSpeec_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Watson-Paket 'Text to Speech' außerhalb von Bluemix einrichten
+
+Wenn Sie OpenWhisk in Bluemix nicht verwenden oder wenn Sie den Watson-Service 'Text to Speech' außerhalb von Bluemix einrichten möchten, müssen Sie manuell eine Paketbindung für Ihren Watson-Service 'Text to Speech' erstellen. Sie benötigen hierzu den Benutzernamen und das Kennwort des Watson-Service 'Text to Speech'.
+
+- Erstellen Sie eine Paketbindung, die für Ihren Watson-Service 'Text to Speech' konfiguriert ist.
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonTextToSpeech -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### Umsetzung von Text in Sprache
+{: #openwhisk_catalog_watson_speechtotext}
+Mit der Aktion `/whisk.system/watson-speechToText/textToSpeech` kann Text in eine Audioansage konvertiert werden. Die folgenden Parameter sind verfügbar:
 
 - `username`: Der Benutzername für die Watson-API.
 - `password`: Das Kennwort für die Watson-API.
@@ -455,19 +600,11 @@ Mit der Aktion `/whisk.system/watson/textToSpeech` kann Text in Sprache umgesetz
 - `accept`: Das Format der Sprachdatei.
 - `encoding`: Die Codierung der binären Sprachdaten.
 
-Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Umsetzung von Text in Sprache.
 
-1. Erstellen Sie eine Paketbindung mit Ihren Watson-Berechtigungsnachweisen.
-
-  ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
-  ```
-  {: pre}
-
-2. Rufen Sie die Aktion `textToSpeech` in Ihrer Paketbindung auf, um den Text umzusetzen.
+- Rufen Sie die Aktion `textToSpeech` in Ihrer Paketbindung auf, um den Text umzusetzen.
 
   ```
-  wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatsonTextToSpeech/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -477,11 +614,77 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Umsetzung 
   ```
   {: screen}
 
-
-### Umsetzung von Sprache in Text
+### Watson-Paket 'Speech to Text' verwenden
 {: #openwhisk_catalog_watson_speechtotext}
 
-Mit der Aktion `/whisk.system/watson/speechToText` kann Sprache in Text umgesetzt werden. Die folgenden Parameter sind verfügbar:
+Das Paket `/whisk.system/watson-speechToText` bietet eine komfortable Methode zum Aufrufen der Watson-APIs für die Konvertierung von Sprache in Text.
+
+Das Paket enthält die folgenden Aktionen.
+
+| Entität | Typ | Parameter | Beschreibung |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-speechToText` | Paket | username, password | Aktionen für die Watson-APIs zum Konvertieren von Sprache in Text |
+| `/whisk.system/watson-speechToText/speechToText` | Aktion | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Umsetzung von Sprache in Text |
+
+**Hinweis**: Das Paket `/whisk.system/watson` wird einschließlich der Aktion `/whisk.system/watson/speechToText` nicht mehr verwendet.
+
+
+#### Watson-Paket 'Speech to Text' in Bluemix einrichten
+
+Wenn Sie OpenWhisk von Bluemix verwenden, dann erstellt OpenWhisk automatisch Paketbindungen für Ihre Bluemix-Watson-Serviceinstanzen. 
+
+1. Erstellen Sie eine Watson-Serviceinstanz für 'Speech to Text' in Ihrem Bluemix-[Dashboard](http://console.ng.Bluemix.net).
+
+  Stellen Sie sicher, dass Sie sich den Namen der Serviceinstanz sowie der Bluemix-Organisation und den Bereich merken, in dem Sie sich befinden.
+
+2. Stellen Sie sicher, dass sich Ihre OpenWhisk-Befehlszeilenschnittstelle (CLI = Command-Line Interface) in dem Namensbereich befindet, der der Bluemix-Organisation und dem Bereich entspricht, die Sie im vorherigen Schritt verwendet haben.
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  Alternativ können Sie mit dem Befehl `wsk property set --namespace` den Namensbereich mithilfe einer Liste der für sie zugänglichen Namensbereiche festlegen.
+
+3. Aktualisieren Sie die Pakete in Ihrem Namensbereich. Die Aktualisierung erstellt automatisch eine Paketbindung für die Watson-Serviceinstanz, die Sie erstellt haben.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_SpeechToText_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_SpeechToText_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Watson-Paket 'Speech to Text' außerhalb von Bluemix einrichten
+
+Wenn Sie OpenWhisk in Bluemix nicht verwenden oder wenn Sie den Watson-Service 'Speech to Text' außerhalb von Bluemix einrichten möchten, müssen Sie manuell eine Paketbindung für Ihren Watson-Service 'Speech to Text' erstellen. Sie benötigen hierzu den Benutzernamen und das Kennwort des Watson-Service 'Speech to Text'.
+
+- Erstellen Sie eine Paketbindung, die für Ihren Watson-Service 'Text to Speech' konfiguriert ist.
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonSpeechToText -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+
+#### Umsetzung von Sprache in Text
+
+Mit der Aktion `/whisk.system/watson-speechToText/speechToText` kann eine Audioansage in Text konvertiert werden. Die folgenden Parameter sind verfügbar:
 
 - `username`: Der Benutzername für die Watson-API.
 - `password`: Das Kennwort für die Watson-API.
@@ -501,19 +704,11 @@ Mit der Aktion `/whisk.system/watson/speechToText` kann Sprache in Text umgesetz
 - `word_confidence`: Gibt an, ob für jedes Wort ein Übereinstimmungswert im Bereich von 0 bis 1 zurückgegeben wird.
 - `X-Watson-Learning-Opt-Out`: Gibt an, ob die Datenerfassung für den Aufruf abgelehnt wird.
  
-Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Umsetzung von Sprache in Text.
 
-1. Erstellen Sie eine Paketbindung mit Ihren Watson-Berechtigungsnachweisen.
-
-  ```
-  wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
-  ```
-  {: pre}
-
-2. Rufen Sie die Aktion `speechToText` in Ihrer Paketbindung auf, um die codierten Sprachdaten umzusetzen.
+- Rufen Sie die Aktion `speechToText` in Ihrer Paketbindung auf, um die codierten Sprachdaten umzusetzen.
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatsonSpeechToText/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -522,7 +717,7 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung und die Umsetzung 
   }
   ```
   {: screen}
-  
+ 
  
 ## Slack-Paket verwenden
 {: #openwhisk_catalog_slack}
@@ -558,14 +753,14 @@ Das folgende Beispiel zeigt die Konfiguration von Slack, die Erstellung einer Pa
 2. Erstellen Sie eine Paketbindung mit Ihren Slack-Berechtigungsnachweisen, mit dem Kanal, an den gesendet werden soll, sowie mit dem Benutzernamen, unter dem gesendet werden soll.
 
   ```
-  wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+  wsk package bind /whisk.system/slack mySlack --param url "https://hooks.slack.com/services/..." --param username Bob --param channel "#MySlackChannel"
   ```
   {: pre}
 
 3. Rufen Sie die Aktion `post` in Ihrer Paketbindung auf, um eine Nachricht an Ihren Slack-Kanal zu senden.
 
   ```
-  wsk action invoke mySlack/post --blocking --result --param text 'Hallo von OpenWhisk!'
+  wsk action invoke mySlack/post --blocking --result --param text "Hello from OpenWhisk!"
   ```
   {: pre}
 
@@ -659,7 +854,7 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung.
 4. Erstellen Sie eine Paketbindung mit den `/whisk.system/pushnotifications`.
 
   ```
-  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  wsk package bind /whisk.system/pushnotifications myPush -p appId myAppID -p appSecret myAppSecret
   ```
   {: pre}
 
@@ -682,7 +877,10 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung.
 Von der Aktion `/whisk.system/pushnotifications/sendMessage` werden Push-Benachrichtigungen an registrierte Geräte gesendet. Die folgenden Parameter sind verfügbar:
 - `text`: Die Benachrichtigung, die dem Benutzer angezeigt wird. Beispiel: `-p text "Hallo, OpenWhisk sendet eine Benachrichtigung"`.
 - `url`: Eine optionale URL, die zusammen mit einem Alert gesendet werden kann. Beispiel: `-p url "https:\\www.w3.ibm.com"`.
-- `gcmPayload`: Angepasste JSON-Nutzdaten, die als Bestandteil einer Benachrichtigung gesendet werden. Beispiel: `-p gcmPayload "{"hi":"hallo"}"`
+- `deviceIds` Die Liste der angegebenen Geräte. Beispiel: `-p deviceIds "[\"deviceID1\"]"`.
+- `platforms` Zum Senden einer Benachrichtigung an die Geräte der angegebenen Plattformen. 'A' für Apple- (iOS) Geräte und 'G' für Google- (Android) Geräte. Beispiel: `-p platforms "[\"A\"]"`.
+- `tagNames` Zum Senden einer Benachrichtigung an die Geräte, die einen dieser Tags subskribiert haben. Beispiel: `-p tagNames "[\"tag1\"]" `.
+- `gcmPayload`: Angepasste JSON-Nutzdaten, die als Bestandteil einer Benachrichtigung gesendet werden. Beispiel: `-p gcmPayload "{\"hi\":\"hello\"}"`
 - `gcmSound`: Die Audiodatei (auf einem Gerät), die abgespielt werden soll, wenn die Benachrichtigung vom Gerät empfangen wird.
 - `gcmCollapseKey`: Dieser Parameter gibt eine Gruppe aus Nachrichten an.
 - `gcmDelayWhileIdle`: Wenn für diesen Parameter der Wert 'true' festgelegt wird, gibt dies an, dass die Nachricht erst gesendet werden darf, wenn das Gerät aktiv wird.
@@ -700,7 +898,7 @@ Nachfolgend ein Beispiel für das Senden einer Push-Benachrichtigung von einem P
 1. Senden Sie die Push-Benachrichtigung mithilfe der Aktion `sendMessage` in der Paketbindung ab, die Sie zuvor erstellt haben. Stellen Sie sicher, dass Sie `/myNamespace/myPush` durch Ihren Paketnamen ersetzen.
 
   ```
-  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds "[\"T1\",\"T2\"]"
   ```
   {: pre}
 

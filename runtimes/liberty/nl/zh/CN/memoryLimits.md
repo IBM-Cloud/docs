@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # 内存限制和 Liberty buildpack
 {: #memory_limits}
-
-上次更新时间：2016 年 6 月 10 日
-{: .last-updated}
 
 使用 Liberty buildpack 部署应用程序时，必须指定内存限制。
 

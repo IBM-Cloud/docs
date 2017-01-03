@@ -2,31 +2,32 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-06"
+
 ---
 
 # 关于 {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 
-{{site.data.keyword.amafull}} 服务为访问 {{site.data.keyword.Bluemix_notm}} 上所托管云资源的移动和 Web 应用程序提供认证和监视服务。
+{{site.data.keyword.amafull}} 服务为访问 {{site.data.keyword.Bluemix_notm}} 上所托管云资源的移动和 Web 应用程序提供认证。
 
-您可以使用 {{site.data.keyword.amashort}} 服务，通过各种认证类型来保护在 {{site.data.keyword.Bluemix_notm}} 上托管的 Node.js 和 Liberty for Java&trade; 应用程序。通过在移动应用程序中安装 {{site.data.keyword.amashort}} SDK，您可以使用 {{site.data.keyword.amashort}} 服务提供的认证功能。客户端日志会自动收集，并根据需要发送到 {{site.data.keyword.amashort}} 服务。使用 {{site.data.keyword.amashort}} 仪表板可配置各种认证类型，并查看由客户端 SDK 收集和发送的数据。
+您可以使用 {{site.data.keyword.amashort}} 服务，通过各种认证类型来保护在 {{site.data.keyword.Bluemix_notm}} 上托管的 Node.js 和 Liberty for Java&trade; 应用程序。通过在移动应用程序中安装 {{site.data.keyword.amashort}} SDK，您可以使用 {{site.data.keyword.amashort}} 服务提供的认证功能。使用 {{site.data.keyword.amashort}} 仪表板可配置各种认证类型，并查看由客户端 SDK 收集和发送的数据。
 
 **注**：{{site.data.keyword.amashort}} 服务先前称为 Advanced Mobile Access。
 
 ## 组件
 {: #components}
 
-* **{{site.data.keyword.amashort}}“仪表板”**：配置各种认证类型，并监视移动应用程序性能、分析、使用情况统计信息和设备日志。
-* **{{site.data.keyword.amashort}} 客户端 SDK**：在移动应用程序中安装该组件，以使用 {{site.data.keyword.amashort}} 功能。支持的平台为：iOS 8+、Android 4+ 和 Cordova。
+* **{{site.data.keyword.amashort}} 仪表板**：配置各种认证类型
+* **{{site.data.keyword.amashort}} 客户端 SDK**：在移动应用程序中安装该组件，以使用 {{site.data.keyword.amashort}} 功能。支持的平台为：iOS 8+、Android 4+、Cordova 和 Web 应用程序。
 * **{{site.data.keyword.amashort}} 服务器 SDK**：保护在 {{site.data.keyword.Bluemix_notm}} 上托管的资源。目前支持的运行时为 Node.js 和 Liberty for Java&trade;。
 
 ## 认证类型
 {: #authtypes}
 可以在移动应用程序中使用以下类型的认证：
-* **Facebook**：将 Facebook 用作身份提供者。用户使用自己的 Facebook 凭证登录到移动应用程序。
-* **Google**：将 Google 用作身份提供者。用户使用自己的 Google+ 凭证登录到移动应用程序。
+* **Facebook**：将 Facebook 用作身份提供者。用户使用自己的 Facebook 凭证登录到移动或 Web 应用程序。
+* **Google**：将 Google 用作身份提供者。用户使用自己的 Google+ 凭证登录到移动或 Web 应用程序。
 * **定制**：创建您自己的身份提供者。您可全面控制收集和验证的信息类型。
 
 ## 体系结构概述
@@ -45,7 +46,7 @@ lastupdated: "2016-10-02"
 * {{site.data.keyword.amashort}} 服务器 SDK 从请求中抽取访问令牌，并使用 {{site.data.keyword.amashort}} 服务进行验证。
 * 这样就授予了访问权。响应会返回给移动应用程序。
 
-## 请求流
+## 请求流程
 {: #flow}
 下图描述了请求是如何从客户端 SDK 流向移动后端应用程序和身份提供者的。
 
@@ -73,7 +74,7 @@ lastupdated: "2016-10-02"
 {: #gettinghelp}
 
 如果在使用 {{site.data.keyword.amashort}} 时遇到任何问题或者有任何疑问，都可以
-通过搜索信息或者通过论坛提问来获得帮助。您还可以打开支持凭单。 
+通过搜索信息或通过论坛提问来获得帮助。您还可以开具支持凭单。 
 
 在使用论坛提问时，请给问题做标记，以便 {{site.data.keyword.Bluemix_notm}} 开发
 团队能看到您的问题。
@@ -88,5 +89,5 @@ developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type
 请参阅[获取
 帮助](https://www.{DomainName}/docs/support/index.html#getting-help)了解有关如何使用论坛的更多详细信息。
 
-有关打开 IBM 支持凭单的信息，或者有关支持级别和凭单严重性的信息，请参阅[联系支持人员](https://www.{DomainName}/docs/support/index.html#contacting-support)。
+有关开具 IBM 支持凭单的信息，或有关支持级别和凭单严重性的信息，请参阅[联系支持人员](https://www.{DomainName}/docs/support/index.html#contacting-support)。
 

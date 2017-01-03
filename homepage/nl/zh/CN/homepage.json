@@ -293,7 +293,7 @@
 		}]
 		
 	}, {
-		"id": "资源",
+		"id": "Resources",
 		"descriptionTitle": "资源",
 		"items": [{
 			"title": "为什么要使用 Bluemix？",

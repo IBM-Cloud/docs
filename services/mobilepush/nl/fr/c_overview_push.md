@@ -5,18 +5,21 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # A propos de {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Dernière mise à jour : 17 octobre 2016
+Dernière mise à jour : 6 décembre 2016
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} est un service que vous pouvez utiliser pour envoyer des notifications vers des appareils mobiles iOS et Android, vers les navigateurs Web Google Chrome et Mozilla Firefox ainsi que vers les applications et extensions Google Chrome. Les notifications peuvent être ciblées vers tous les utilisateurs d'application ou vers un ensemble spécifique d'utilisateurs et d'appareils à l'aide de balises. Vous pouvez administrer les appareils, les
-balises et les abonnements. Vous pouvez aussi utiliser un logiciel SDK (kit de développement de logiciels) et des API REST (K) pour développer davantage vos
-applications client. 
+IBM {{site.data.keyword.mobilepushshort}} est un service que vous pouvez utiliser pour envoyer des notifications vers des appareils mobiles iOS et Android, vers les navigateurs Web Google Chrome et Mozilla Firefox, ainsi que vers les applications et extensions Google Chrome. Les notifications peuvent être ciblées vers tous les utilisateurs d'application ou vers un ensemble spécifique d'utilisateurs et d'appareils à l'aide de balises. Vous pouvez administrer les appareils, les balises et les abonnements. Vous pouvez aussi utiliser un logiciel SDK (kit de développement de logiciels) et des API REST (K) pour développer davantage vos applications client. 
 
-{{site.data.keyword.mobilepushshort}} est aussi disponible en tant que service Bluemix dédié. Pour plus d'informations sur le service dédié {{site.data.keyword.mobilepushshort}}, voir [Services dédiés](../../dedicated/index.html). Notez que l'onglet de surveillance {{site.data.keyword.mobilepushshort}} n'affiche pas de données d'analyse.
+{{site.data.keyword.mobilepushshort}} est aussi disponible en tant que service Bluemix dédié. Pour plus d'informations sur le service dédié {{site.data.keyword.mobilepushshort}}, voir [Services dédiés](/docs/dedicated/index.html). Notez que l'onglet de surveillance {{site.data.keyword.mobilepushshort}} n'affiche pas de données d'analyse.
 
-Le service {{site.data.keyword.mobilepushshort}}  est maintenant activé pour OpenWhisk. Pour plus d'informations, voir [OpenWhisk](../../openwhisk/index.html).
+Le service {{site.data.keyword.mobilepushshort}}  est maintenant activé pour OpenWhisk. Pour plus d'informations, voir [OpenWhisk](/docs/openwhisk/index.html).
 
 
 ## Processus du service {{site.data.keyword.mobilepushshort}}
@@ -30,8 +33,7 @@ Les clients mobiles et de navigateurs Web et les applications et extensions Goog
 ###Applications mobiles et applications de navigateur
 {: mobile-applications}
 
-Au démarrage, les applications client  s'inscrivent et s'abonnent elles-mêmes au service {{site.data.keyword.mobilepushshort}} pour
-recevoir des notifications.
+Au démarrage, les applications client s'inscrivent et s'abonnent elles-mêmes au service {{site.data.keyword.mobilepushshort}} pour recevoir des notifications.
 
 ###Applications de back end
 {: backend-applications}
@@ -58,7 +60,7 @@ Il s'agit de services de cloud Notifications push spécifiques aux plateformes, 
 
 Les interfaces API {{site.data.keyword.mobilepushshort}} sont sécurisées par deux types de valeurs confidentielles : i) appSecret ii) clientSecret. La valeur appSecret protège les interfaces API qui sont typiquement invoquées par des applications de back end (API d'envoi de {{site.data.keyword.mobilepushshort}} ou API de configuration de paramètres, par exemple).   La valeur clientSecret protège les API qui sont généralement invoquées par des applications client mobiles. Il n'y a qu'une seule API relative à l'enregistrement d'un appareil avec un ID utilisateur associé qui nécessite cette valeur confidentielle clientSecret. Aucune des autres API invoquées depuis les clients mobiles n'ont besoin de clientSecret. Les valeurs appSecret et clientSecret sont allouées à chaque instance de service au moment de la liaison d'une application au service {{site.data.keyword.mobilepushshort}}. Référez-vous à la documentation de l'API ReST pour plus d'informations sur la façon dont les valeurs confidentielles sont passées, et pour quelles API.
 
-Remarque : les applications précédentes ne devaient passer la valeur clientSecret que lors de l'enregistrement ou la mise à jour des appareils via la zone userId. Toutes les autres interfaces API invoquées par des clients mobiles et de navigateur n'avaient pas besoin de clientSecret. Toutes ces anciennes applications peuvent continuer à se servir facultativement de clientSecret pour les enregistrements d'appareil ou la mise à jour des appels. Il est toutefois vivement conseillé d'appliquer une vérification clientSecret pour tous les appels d'API client. Pour mettre en oeuvre ce processus dans les applications existantes, une nouvelle API, verifyClientSecret, a été publiée. Pour les nouvelles applications, la vérification clientSecret sera mise en oeuvre sur tous les appels d'API client et ce comportement ne peut être modifié avec l'API verfiyClientSecret.
+Remarque : les applications précédentes ne devaient passer la valeur clientSecret que lors de l'enregistrement ou la mise à jour des appareils via la zone userId. Toutes les autres interfaces API invoquées par des clients mobiles et de navigateur n'avaient pas besoin de clientSecret. Toutes ces anciennes applications peuvent continuer à se servir facultativement de clientSecret pour les enregistrements d'appareil ou la mise à jour des appels. Il est toutefois vivement conseillé d'appliquer une vérification clientSecret pour tous les appels d'API client. Pour mettre en oeuvre ce processus dans les applications existantes, une nouvelle API, verifyClientSecret, a été publiée.  Pour les nouvelles applications, la vérification clientSecret sera mise en oeuvre sur tous les appels d'API client et ce comportement ne peut être modifié avec l'API verfiyClientSecret.
 
 Par défaut, la vérification de la valeur confidentielle n'est appliquée que dans les nouvelles applications, mais aussi bien les applications existantes que les applications nouvelles sont autorisées à activer ou désactiver cette vérification en utilisant l'API REST verifyClientSecret. Il est conseillé d'imposer la vérification de la valeur confidentielle pour éviter d'exposer des appareils à des utilisateurs qui pourraient avoir connaissance des valeurs applicationId et deviceId.
 
@@ -71,18 +73,12 @@ Prenez soin de préserver la confidentialité de clientSecret et ne procédez ja
 ###Diffusion
 {: broadcast}
 
-Quand une application client s'enregistre auprès du service {{site.data.keyword.mobilepushshort}}, elle peut commencer à recevoir des diffusions. Les notifications de diffusion sont des messages ciblés vers toutes les instances d'une application installée sur des appareils mobiles et des navigateurs ou implémentée en tant qu'application ou instance d'application Chrome et configurée pour le service {{site.data.keyword.mobilepushshort}} ; elles sont activées par défaut dans toute application activée pour {{site.data.keyword.mobilepushshort}}. Les applications activées pour le service {{site.data.keyword.mobilepushshort}} possèdent un abonnement prédéfini à la balise Push.ALL, qui est utilisé par le serveur pour diffuser des messages de notification de diffusion à tous les appareils. Pour envoyer une notification de diffusion qui utilise l'API REST Push, assurez-vous que la "cible" est un fichier
-JSON vide lors de l'envoi à la ressource de message.
+Quand une application client s'enregistre auprès du service {{site.data.keyword.mobilepushshort}}, elle peut commencer à recevoir des diffusions. Les notifications de diffusion sont des messages ciblés vers toutes les instances d'une application installée sur des appareils mobiles et des navigateurs ou implémentée en tant qu'application ou instance d'application Chrome et configurée pour le service {{site.data.keyword.mobilepushshort}} ; elles sont activées par défaut dans toute application activée pour {{site.data.keyword.mobilepushshort}}. Les applications activées pour le service {{site.data.keyword.mobilepushshort}} possèdent un abonnement prédéfini à la balise Push.ALL, qui est utilisé par le serveur pour diffuser des messages de notification de diffusion à tous les appareils. Pour envoyer une notification de diffusion qui utilise l'API REST Push, assurez-vous que la "cible" est un fichier JSON vide lors de l'envoi à la ressource de message.
 
 ###Notifications basées sur les balises
 {: tag-based-notifications}
 
-Les notifications basées sur les balises sont des messages qui sont ciblés vers tous les appareils abonnés à une balise
-particulière. Elles permettent la segmentation des notifications en fonction de domaines ou de rubriques. Les destinataires des notifications peuvent
-choisir de ne recevoir les notifications que si elles concernent un sujet ou une rubrique qui les intéresse. Par conséquent, les notifications en fonction d'une balise constituent un moyen de segmenter les destinataires. Cette fonction permet de définir des
-balises, puis d'envoyer et de recevoir des messages en fonction des balises. Un message n'est ciblé que vers les instances d'application client (sur un appareil mobile, un navigateur ou une extension) qui sont abonnées à la balise. Vous devez d'abord créer des balises pour l'application, configurer les abonnements aux balises puis initier les
-notifications basées sur une balise. Pour envoyer une notification basée sur une balise qui utilise l'API REST, vérifiez que les éléments
-"tagNames" sont fournis lors de l'envoi à la ressource de message.
+Les notifications basées sur les balises sont des messages qui sont ciblés vers tous les appareils abonnés à une balise particulière. Elles permettent la segmentation des notifications en fonction de domaines ou de rubriques. Les destinataires des notifications peuvent choisir de ne recevoir les notifications que si elles concernent un sujet ou une rubrique qui les intéresse. Par conséquent, les notifications en fonction d'une balise constituent un moyen de segmenter les destinataires. Cette fonction permet de définir des balises, puis d'envoyer et de recevoir des messages en fonction des balises. Un message n'est ciblé que vers les instances d'application client (sur un appareil mobile, un navigateur ou une extension) qui sont abonnées à la balise. Vous devez d'abord créer des balises pour l'application, configurer les abonnements aux balises puis initier les notifications basées sur une balise. Pour envoyer une notification basée sur une balise qui utilise l'API REST, vérifiez que les éléments "tagNames" sont fournis lors de l'envoi à la ressource de message.
 
 ###Notifications Unicast
 {: unicast-notifications}
@@ -91,15 +87,13 @@ Les notifications Unicast sont des messages qui sont envoyés à un appareil ou 
 
 Toutefois, les notifications Unicast ciblées vers des utilisateurs nécessitent l'association d'un ID utilisateur à un appareil au moment de l'enregistrement de l'appareil mobile client, du navigateur Web ou des applications et extensions Chrome pour {{site.data.keyword.mobilepushshort}}.   
 
-En général, une application client exécute d'abord un cycle d'authentification au cours duquel l'utilisateur d'application mobile est authentifié auprès d'un service d'authentification comme [Mobile Client Access](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html). Si l'authentification aboutit, l'ID de l'utilisateur authentifié est transféré vers l'API d'enregistrement d'appareil Push. 
+En général, une application client exécute d'abord un cycle d'authentification au cours duquel l'utilisateur d'application mobile est authentifié auprès d'un service d'authentification comme [Mobile Client Access](docs/services/mobileaccess/index.html). Si l'authentification aboutit, l'ID de l'utilisateur authentifié est transféré vers l'API d'enregistrement d'appareil Push. 
 Pour envoyer une notifications Unicast via une API REST, veillez à ce que les ID d'appareil ou d'utilisateur soient fournis lors de l'envoi à une ressource de message.
 
 ###Notifications en fonction de la plateforme
 {: platform-based-notifications}
 
-Les notifications peuvent être ciblées afin de viser une plateforme d'appareil
-particulière. Ainsi, une notification peut être envoyée uniquement aux utilisateurs Android ou aux utilisateurs Google Chrome. Pour envoyer une notification en fonction de la
-plateforme qui utilise l'API REST, veillez à ce que les plateformes ciblées soient fournies lors de l'envoi à une ressource de message. Spécifiez les plateformes dans un tableau. Les plateformes prises en charge sont les suivantes :
+Les notifications peuvent être ciblées afin de viser une plateforme d'appareil particulière. Ainsi, une notification peut être envoyée uniquement aux utilisateurs Android ou aux utilisateurs Google Chrome. Pour envoyer une notification en fonction de la plateforme qui utilise l'API REST, veillez à ce que les plateformes ciblées soient fournies lors de l'envoi à une ressource de message. Spécifiez les plateformes dans un tableau. Les plateformes prises en charge sont les suivantes :
 * A (Apple)
 * G (Google)
 * WEB_CHROME (Google Chrome Browser WebPush)
@@ -116,7 +110,7 @@ La taille d'un message de type {{site.data.keyword.mobilepushshort}} dépend des
 
 Pour iOS 8 et ultérieur, la taille maximale autorisée est de 2 kilo-octets. Le service des notifications push d'Apple n'envoie pas les notifications qui dépassent cette limite.
 
-###Navigateurs Android, Chrome et Firefox
+###Android, navigateur Firefox, navigateur Chrome et Applications et extensions Chrome
 {: android-message-size}
 
-La taille maximale autorisée pour les messages est de 4 kilo-octets.  
+La taille de la charge maximale autorisée pour les messages est de 4 kilo-octets.  

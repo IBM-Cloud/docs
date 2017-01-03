@@ -13,7 +13,7 @@ copyright:
 Última actualización: 27 de mayo de 2016
 {: .last-updated}  
 
-Si desea empezar a trabajar con una aplicación para Android nueva, puede utilizar la app HelloWorld. Esta app muestra cómo conectar con el programa de fondo de {{site.data.keyword.Bluemix}} desde una app para móvil sin autenticación. La app la tiene instalado el SDK. Cuando esté listo, puede obtener las bibliotecas específicas que desee utilizar en la app.
+Si desea empezar a trabajar con una aplicación para Android nueva, puede utilizar la app HelloWorld. Esta app muestra cómo conectar con el programa de fondo de {{site.data.keyword.Bluemix}} desde una app para móvil sin autenticación. La app ya tiene instalado el SDK. Cuando esté listo, puede obtener las bibliotecas específicas que desee utilizar en la app.
 
 1. Cree el programa de fondo móvil en {{site.data.keyword.Bluemix_notm}}.
     1. En la sección Contenedores modelo del catálogo de {{site.data.keyword.Bluemix_notm}}, pulse MobileFirst Services Starter.
@@ -30,9 +30,8 @@ Si desea empezar a trabajar con una aplicación para Android nueva, puede utiliz
 BMSClient.getInstance().initialize(this, "<RUTA_APLICACIÓN>", "<ID_APLICACIÓN>");
 ```
 4. Ejecute el ejemplo en el entorno de desarrollo.
-En la barra de herramientas de Android Studio, pulse el botón **Play** y seleccione un simulador.
-5. En el simulador, pulse **Ping
-                {{site.data.keyword.Bluemix_notm}}**. La app de ejemplo envía una solicitud Get al tiempo de ejecución de `Node.js` en {{site.data.keyword.Bluemix_notm}}. Si la solicitud es satisfactoria, la conexión se verifica y el texto del simulador se actualiza.
+En la barra de herramientas de Android Studio, pulse el botón **Reproducir** y seleccione un simulador.
+5. En el simulador, pulse **Ping {{site.data.keyword.Bluemix_notm}}**. La app de ejemplo envía una solicitud Get al tiempo de ejecución de `Node.js` en {{site.data.keyword.Bluemix_notm}}. Si la solicitud es satisfactoria, la conexión se verifica y el texto del simulador se actualiza.
 
   **Nota:** El código de tiempo de ejecución de `Node.js` se proporciona en el contenedor modelo de MobileFirst Services Starter. Si la aplicación de fondo no se ha creado con el contenedor modelo de MobileFirst Services Starter, la aplicación no se conectará satisfactoriamente.
 
@@ -44,8 +43,8 @@ En la barra de herramientas de Android Studio, pulse el botón **Play** y selecc
   ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
   -->
 
-  Si la conexión falla, verá:
-  `Bummer. Something went wrong`
+  Si la conexión falla, verá el mensaje:
+  `Algo salió mal`
   {: screen}
 
 <!--

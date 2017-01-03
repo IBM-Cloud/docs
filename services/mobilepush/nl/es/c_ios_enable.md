@@ -5,12 +5,17 @@ copyright:
 
 ---
 
-#Habilitación de aplicaciones iOS para recibir y enviar {{site.data.keyword.mobilepushshort}}
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
+#Habilitación de aplicaciones iOS para enviar {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
-Última actualización: 19 de octubre de 2016
+Última actualización: 07 de diciembre de 2016
 {: .last-updated}
 
-Puede habilitar aplicaciones iOS para recibir y enviar {{site.data.keyword.mobilepushshort}} a sus dispositivos.
+Puede habilitar aplicaciones iOS para enviar {{site.data.keyword.mobilepushshort}} a sus dispositivos.
 
 
 ##Instalación de CocoaPods
@@ -66,7 +71,7 @@ $ open App.xcworkspace
 
 El espacio de trabajo contiene el proyecto original y el proyecto Pods que contiene las dependencias. Para modificar una carpeta fuente de Bluemix mobile services, puede encontrarla en el proyecto Pods, en `Pods/yourImportedSourceFolder`, por ejemplo: `Pods/BMSPush`.
 
-##Carthage
+##Adición de infraestructuras mediante Carthage
 {: #carthage}
 
 Añada infraestructuras al proyecto utilizando [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos). Tenga en cuenta que Carthage en Xcode8 no está soportado.
@@ -79,6 +84,17 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 2. Ejecute el mandato `carthage update`. Cuando la compilación finalice, arrastre `BMSPush.framework`, `BMSCore.framework` y `BMSAnalyticsAPI.framework` al proyecto Xcode.
 3. Siga las instrucciones del sitio [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) para completar la integración.
 
+##Configuración de iOS SDK
+{: ios-sdk}
+
+Configure el iOS SDK, añada el código siguiente al archivo **AppDelegate.swift** de su aplicación.
+```
+func application(_ application: UIApplication,
+didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {  
+ BMSPushClient.sharedInstance.setupPush()
+  }
+```
+    {: codeblock}
 
 ##Utilización de infraestructuras importadas y carpetas fuente
 {: using-imported-frameworks}
@@ -117,7 +133,9 @@ import BMSCore
 import BMSPush
 ```
 	{: codeblock}
-Para ver el archivo readme Push de Swift, vaya a [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master).##Crear configuración
+Para ver el archivo readme Push de Swift, vaya a [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master).
+
+##Crear configuración
 {: build-settings}
 
 Vaya a **Xcode > Crear configuración > Opciones de creación y Establecer la habilitación de Bitcode** en **No**.
@@ -146,7 +164,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 ```
 // Inicialice el SDK principal para Swift con la GUID, la ruta y la región de IBM Bluemix
 let myBMSClient = BMSClient.sharedInstance
-myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
+myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.") 
 myBMSClient.defaultRequestTimeout = 10.0 // Tiempo de espera en segundos
 ```
 	{: codeblock}
@@ -212,7 +230,7 @@ Para registrar las aplicaciones y los dispositivos de iOS, tiene que:
 2. Pasar la señal a {{site.data.keyword.mobilepushshort}}.
 
 
-###Cree una aplicación de fondo
+###Crear una aplicación de fondo
 {: create-a-backend-app}
 
 Cree una aplicación de fondo en el catálogo Bluemix® de la sección de Contenedores modelo, que enlaza automáticamente el servicio {{site.data.keyword.mobilepushshort}} a esta aplicación. Si ya ha creado una aplicación de fondo, asegúrese de enlazarla al servicio {{site.data.keyword.mobilepushshort}}.
@@ -350,12 +368,45 @@ Puede personalizar aún más los valores de {{site.data.keyword.mobilepushshort}
 - **Sonido**: indica un fragmento de sonido que se reproducirá al recibir una notificación. Da soporte a la opción predeterminada o al nombre de un recurso de sonido incorporado en la aplicación.
 - **Carga útil adicional**: permite especificar valores personalizados de carga útil para las notificaciones.
 
+##Habilitación de notificaciones interactivas
+
+Ahora puede enriquecer sus notificaciones de iOS con más detalles como la adición de una imagen, mapa o un botón de respuesta mediante la habilitación de notificaciones interactivas. Ello proporciona más contexto a los clientes, junto con la capacidad para realizar una acción inmediata sin abandonar el contexto actual.  
+
+Para habilitar las notificaciones interactivas, utilice el código siguiente:
+
+```
+// Esto define la acción del botón.
+let actionOne = BMSPushNotificationAction(identifierName: "ACCEPT", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+ let actionTwo = BMSPushNotificationAction(identifierName: "DECLINE", buttonTitle: "Decline", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+```
+	{: codeblock}
+```
+// Esto define la categoría para los botones
+let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
+```
+	{: codeblock}
+```
+// Esto actualiza el registro para que incluya la categoría definida de buttonsPass en iOS BMSPushClientOptions
+let notificationOptions = BMSPushClientOptions(categoryName: [category])
+let push = BMSPushClient.sharedInstance
+push.notificationOptions = notificationOptions
+```
+	{: codeblock}
+
+Para enviar una notificación interactiva, realice estos pasos:
+
+1. En la sección Componer, para la lista desplegable Enviar a, seleccione **Dispositivos iOS**.
+2. Introduzca el mensaje de notificación que puede desear enviar.
+3. En la sección Valores opcionales, seleccione **Móvil** y pulse **iOS**.
+4. En la lista desplegable Tipo, seleccione **Mixto**.
+5. En el campo Categoría, especifique el tipo de notificación que ha definido en la app. 
+
+![Notificación interactiva para iOS](images/push_ios_notification_interactive.jpg) 
 
 ## Pasos siguientes
 {: #next_steps_tags}
 
 Una vez que haya configurado correctamente las notificaciones básicas, puede configurar las notificaciones basadas en código y las opciones avanzadas.
 
-Añada estas características de Servicio de notificaciones push a la aplicación.
-Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
+Añada estas características de servicio de notificaciones push a la app. Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html).
 Para utilizar opciones de notificaciones avanzadas, consulte [Habilitación de notificaciones push avanzadas](t_advance_badge_sound_payload.html).

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-26"
+lastupdated: "2016-12-27"
 
 ---
 
@@ -71,3 +71,8 @@ Following are some frequently asked questions.
 		4. Create a connection with the IKE and IPsec policies that you created with SHA256 as the authorization algorithm.
 		5. Complete the remaining configurations to enable the VPN connection. See the [Getting Started](https://console.stage1.ng.bluemix.net/docs/services/vpn/index.html) page.
 	2. Configure or update the remote end (your on-premises VPN gateway) IKE and IPsec policies with SHA256. Restart the IPsec connection.
+
+10. If I enable high availability (HA) for containers, what is the impact on the IBM VPN service?  
+	
+	If you enable [HA for containers](https://console.ng.bluemix.net/docs/containers/container_ha.html) in different Bluemix spaces, then you need to create a separate IBM VPN service for each of these spaces.
+

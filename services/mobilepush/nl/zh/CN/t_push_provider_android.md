@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,12 +6,16 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 为 FCM 配置凭证
 {: #create-push-enable-gcm}
-上次更新时间：2016 年 10 月 17 日
+上次更新时间：2016 年 12 月 6 日
 {: .last-updated}
 
-Firebase 云消息传递 (FCM) 是用于向 Android 设备、Google Chrome 和 Mozilla Web 浏览器传递推送通知的网关。FCM 已经替换了 Google 云消息传递 (GCM)。您需要获取 FCM 凭证，然后在仪表板上设置 {{site.data.keyword.mobilepushshort}} 服务。请确保您为新应用程序使用 FCM 配置。现有应用程序可以继续以 GCM 配置运作。
+Firebase 云消息传递 (FCM) 是用于向 Android 设备、Google Chrome 和 Mozilla Web 浏览器传递推送通知的网关。FCM 已经替换了 Google 云消息传递 (GCM)。您需要获取 FCM 凭证，然后在仪表板上设置 {{site.data.keyword.mobilepushshort}} 服务。请确保您为新应用程序使用 FCM 配置。现有应用程序将继续以 GCM 配置运作。
 
 ##获取发送方标识和 API 密钥
 {: #android-senderid-apikey}

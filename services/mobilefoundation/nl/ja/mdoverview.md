@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-08-03"
+
 ---
 
 #	{{site.data.keyword.mobilefoundation_short}} について
 {: #overview_mobilefoundation}
-
-<!--Last updated: 03 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} サービスにより、{{site.data.keyword.Bluemix}} 上で {{site.data.keyword.mobilefirst}} サーバー環境を迅速にセットアップする方法が提供されます。その後、このクラウド環境からモバイル・アプリを開発、テスト、および管理できます。
 

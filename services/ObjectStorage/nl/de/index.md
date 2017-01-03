@@ -2,15 +2,16 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-14"
+
 ---
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+
 
 
 # Einführung in {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage}
 
-*Letzte Aktualisierung: 19. Oktober 2016*
-{: .last-updated}
 
 {{site.data.keyword.objectstoragefull}} bietet eine unstrukturierte Clouddatenspeicherung. Sie können Ihren Inhalt speichern und darauf zugreifen sowie interaktiv zusammenstellen und mit Apps und Services verbinden.
 {: shortdesc}
@@ -23,15 +24,14 @@ Beispiele für häufige Anwendungsfälle für den {{site.data.keyword.objectstor
 * Einsatz als zentrales Repository
 
 
-
 {{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} ermöglicht Ihnen zur Verwaltung Ihrer Daten den Zugriff auf ein vollständig eingerichtetes Swift {{site.data.keyword.objectstorageshort}}-Konto. Eine providerseitige Verschlüsselung wird nicht bereitgestellt.
 
 
 1.	Stellen Sie über den {{site.data.keyword.Bluemix_notm}}-Katalog Ihre Serviceinstanz bereit. Konfigurieren Sie Ihre Instanz und klicken Sie auf **Erstellen**. Wenn Sie anfangs die Option **Nicht binden** für das Feld **App** auswählen, können Sie die Serviceinstanz dennoch zu einem späteren Zeitpunkt an Ihre {{site.data.keyword.Bluemix_notm}}-App binden.
 2. Erstellen Sie In Ihrem Serviceinstanz-Dashboard einen Container, um mit dem Speichern von Objekten zu beginnen.
-3. Fügen Sie Ihrem Container oder Bucket über das Dropdown-Menü **Aktionen** eine Datei hinzu.
+3. Fügen Sie Ihrem Container über das Dropdown-Menü **Aktionen** eine Datei hinzu.
 4. Um den Zugriff auf Ihre Objekte zu testen, klicken Sie auf **Download** und überprüfen Sie die Datei.
-5. Wenn Sie für die Verbindung Ihrer Instanz mit einer Anwendung bereit sind, richten Sie Ihre Serviceberechtigungsnachweise ein und [binden Sie den Service](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service).
+5. Wenn Sie für die Verbindung Ihrer Instanz mit einer Anwendung bereit sind, richten Sie Ihre Serviceberechtigungsnachweise ein und [binden Sie den Service](/docs/services/reqnsi.html#add_service).
 
 
 

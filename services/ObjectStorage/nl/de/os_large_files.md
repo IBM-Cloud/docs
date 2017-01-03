@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -11,14 +12,15 @@ copyright:
 {:pre: .pre}
 
 
-# Mit umfangreichen Dateien arbeiten{: #large-files}
-*Letzte Aktualisierung: 19. Oktober 2016*
-{: .last-updated}
+# Große Objekte speichern {: #large-files}
 
-Das Hochladen von Objekten ist auf eine maximale Größe von 5 GB bei einem einzigen Übertragungsvorgang beschränkt. Sie können aber Objekte, die größer sind als 5 GB, hochladen, nachdem Sie sie in kleinere Objekte segmentiert haben. Nach dem Hochladen der segmentierten Objekte ist außerdem eine Manifestdatei erforderlich, um die Segmente zum ursprünglichen Objekt zu verketten. Dafür gibt es zwei Wege: über dynamische große Objekte (Dynamic Large Objects, DLO) und über statische große Objekte (Static Large Objects, SLO).
+Uploads sind auf eine maximale Größe von 5 GB für einen einzigen Übertragungsvorgang beschränkt. Sie können größere Objekte jedoch in kleinere Teile aufteilen und mit einer Manifestdatei diese Segmente verknüpfen. Solange jedes Segment während des Uploadprozesses höchstens 5 MB ist, gibt es keine für das Objekt nach der Verknüpfung keine Größenbeschränkung.
 {: shortdesc}
 
-### Dynamic Large Objects (DLO): {: #dynamic}
+Es gibt zwei Wege zum Hochladen von großen Objekten: über dynamische große Objekte (Dynamic Large Objects, DLO) und über statische große Objekte (Static Large Objects, SLO).
+
+
+## Dynamic Large Objects (DLO): {: #dynamic}
 
 Für die Bearbeitung von DLO gibt es zwei Methoden:
   * Der Swift-Client bearbeitet alle Objekte automatisch
@@ -29,7 +31,6 @@ Für die Bearbeitung von DLO gibt es zwei Methoden:
 Der Swift-Client verwendet den Parameter `-segment-size`, um Ihr Objekt in kleinere Teile aufzugliedern. Der Client erstellt einen neuen Container mit dem Namen des Containers, in den die Dateien hochgeladen werden sollen, und fügt ein Suffix mit der Segmentnummer (`<Containername>_segments`) hinzu. Die Segmente werden parallel hochgeladen. Nachdem alle Segmente hochgeladen sind, werden sie als ein einziges verkettetes Objekt in eine Manifestdatei mit dem ursprünglichen Dateinamen heruntergeladen.
 
 1. Nachdem Sie sich bei {{site.data.keyword.Bluemix_notm}} angemeldet haben und Sie für den Upload bereit sind, führen Sie folgenden Befehl aus, um Ihre Datei zu segmentieren.
-
     ```
     swift upload <Containername> <Dateiname> --segment-size <Größe_in_Byte>
     ```
@@ -40,22 +41,22 @@ Der Swift-Client verwendet den Parameter `-segment-size`, um Ihr Objekt in klein
 Sie können die Objekte manuell auf eine Größe von maximal 5 GB segmentieren und sie anschließend über die Swift-API hochladen. Beim Hochladen ist es wichtig, zuerst alle Segmente hochzuladen, bevor das Manifest hochgeladen wird. Wenn das Objekt heruntergeladen wird, bevor alle Segmente fertig gestellt sind, wird das heruntergeladene Objekt inkonsistent sein. Sie können große Dateien hochladen, indem Sie folgende Schritte durchführen.
 
 1. Sortieren Sie die Segmente nach Namen in der Reihenfolge, in der sie zur Bildung des ursprünglichen Objekts verkettet werden sollen.
-2. Laden Sie Ihre Segmente in einen einzigen Container hoch, der von dem Container getrennt ist, der die Manifestdatei enthält. Die Regulierung für Uploads startet nach dem Hochladen des 10. Segments und erhöht die Zeit für das Hochladen erheblich. Aus diesem Grund wird empfohlen, dass die Segmente nicht kleiner als ein Zehntel der Datei werden zu lassen.
+2. Laden Sie Ihre Segmente in einen einzigen Container hoch, der von dem Container getrennt ist, der die Manifestdatei enthält. Die Regulierung für Uploads startet nach dem Hochladen des 10. Segments und erhöht die Zeit für das Hochladen erheblich.  Aus diesem Grund wird empfohlen, die Segmente nicht kleiner als ein Zehntel der Datei werden zu lassen.
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<Objektspeicher-URL>/<Containername>/<Objektname>/000001
     curl -i -X PUT --data-binary @segment2 -H "X-Auth-Token: <token>" https://<Objektspeicher-URL>/<Containername>/<Objektname>/000002
     ```
     {: pre}
-    
+
 3. Laden Sie eine leere Manifestdatei hoch, wobei der Header `X-Object-Manifest` auf den entsprechenden Wert für `<container>/prefix>` festgelegt ist.
 
     ```
     curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Object-Manifest: <Containername>/<Objektname>/" https://<Objektspeicher-URL>/<Manifest-Containername>/<Objektname>
     ```
     {: pre}
-    
-    **Hinweis**: Die Manifestdatei muss leer sein. Ist sie nicht leer, wird der Inhalt der Datei als eines der Segmente betrachtet und fällt in die Reihenfolge der Verkettung, die von den sortierten Namen bestimmt ist.
+
+    **Anmerkung**: Die Manifestdatei muss leer sein. Ist sie nicht leer, wird der Inhalt der Datei als eines der Segmente betrachtet und fällt in die Reihenfolge der Verkettung, die von den sortierten Namen bestimmt ist.
 4. Laden Sie das Objekt herunter. Sie erhalten als Ergebnis das gesamte Objekt. Sie können Segmente hinzufügen oder entfernen, ohne die Manifestdatei aktualisieren zu müssen. Segmente mit dem korrekten Präfix bleiben ein Teil des Objekts. Beim Löschen des Manifests werden die Segmente nicht gelöscht.
 
     ```
@@ -64,7 +65,7 @@ Sie können die Objekte manuell auf eine Größe von maximal 5 GB segmentieren u
     {: pre}
 
 
-### Static Large Objects (SLO){: #static}
+## Static Large Objects (SLO) {: #static}
 
 Statische große Objekte (Static Large Objects, SLO) verwenden Segmente und eine Manifestdatei, ermöglichen Ihnen aber eine größere Kontrolle. Bei SLO müssen sich die Segmente nicht im selben Container befinden; jedes Segment kann in einem beliebigen Container gespeichert werden und mit beliebigen Namen benannt werden. Die Segmente müssen jedoch eine Größe von mindestens 1 MB aufweisen. Es ist nicht erforderlich, einen Header für die Manifestdatei einzurichten, wenngleich der Header "X-Static-Large-Object" automatisch hinzugefügt und nach dem Hochladen eines korrekten Manifests auf 'true' gesetzt wird.
 {: shortdesc}
@@ -73,28 +74,28 @@ Die Manifestdatei ist ein JSON-Dokument, das Details der Segmente bereitstellt u
 
 <table>
   <tr>
-    <th> Attribut</th>
-    <th> Beschreibung</th>
+    <th> Attribut </th>
+    <th> Beschreibung </th>
   </tr>
   <tr>
-    <td> Pfad</td>
+    <td> <i> path </i> </td>
     <td> Die Position und der Name des Segments. Angegeben mit Containername/Objektname. </td>
   </tr>
   <tr>
-    <td> etag</td>
+    <td> <i> etag </i> </td>
     <td> Wird beim Hochladen des Objekts von der PUT-Anforderung bereitgestellt. Sie finden dieses Attribut auch, indem Sie eine HEAD-Operation am Objekt ausführen. </td>
   </tr>
   <tr>
-    <td> Größe_in_Byte</td>
-    <td> Die Größe des Objekts in Byte.</td>
+    <td> <i> size_bytes </i> </td>
+    <td> Die Größe des Objekts in Byte. </td>
   </tr>
 </table>
 
 *Tabelle 1: JSON-Attribute in der Manifestdatei in der Reihenfolge ihrer Verkettung*
 
-Sie können große Dateien hochladen, indem Sie folgende Schritte durchführen:
+#### Große Dateien hochladen
 
-1. Führen Sie folgenden Befehl aus, um die Segmente hochzuladen. Die Regulierung für Uploads startet nach dem Hochladen des 10. Segments und erhöht die Zeit für das Hochladen erheblich. Aus diesem Grund wird empfohlen, die Segmente nicht kleiner als ein Zehntel der Datei werden zu lassen.
+1. Führen Sie folgenden Befehl aus, um die Segmente hochzuladen. Die Regulierung für Uploads startet nach dem Hochladen des 10. Segments und erhöht die Zeit für das Hochladen erheblich.  Aus diesem Grund wird empfohlen, die Segmente nicht kleiner als ein Zehntel der Datei werden zu lassen.
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<Objektspeicher-URL>/<container_one>/<segment>
@@ -102,7 +103,7 @@ Sie können große Dateien hochladen, indem Sie folgende Schritte durchführen:
     curl -i -X PUT --data-binary @segment3 -H "X-Auth-Token: <token>" https://<Objektspeicher-URL>/<container_one>/<segment>
     ```
     {: pre}
-    
+
 2. Erstellen Sie das Manifest:
 
     ```
@@ -125,21 +126,23 @@ Sie können große Dateien hochladen, indem Sie folgende Schritte durchführen:
     ]
     ```
     {: pre}
-    
+
 3. Laden Sie das Manifest hoch. Dazu müssen Sie die Abfrage `multipart-manifest=put` dem Namen des Manifests hinzufügen, indem Sie folgenden Befehl ausführen:
 
     ```
     curl -i -X PUT --data-binary @object_name -H "X-Auth-Token: <token>" https://<Objektspeicher-URL>/container_two/<Objektname>?multipart-manifest=put
     ```
     {: pre}
-    
+
 4. Laden Sie das Objekt herunter.
 
     ```
     curl -O -X GET -H "X-Auth-Token: <token>" https://<Objektspeicher-URL>/<container_two>/<Objektname>
     ```
     {: pre}
-    
+
+
+
 Nachstehend einige Befehle, die Sie bei der Arbeit mit SLO möglicherweise benötigen.
 
 * Zum Herunterladen des Inhalts der Manifestdatei müssen Sie Ihrem Befehl die Abfrage `multipart-manifest=get` hinzufügen. Der Inhalt, den Sie erhalten, wird nicht identisch mit dem hochgeladenen Inhalt sein.
@@ -148,14 +151,14 @@ Nachstehend einige Befehle, die Sie bei der Arbeit mit SLO möglicherweise benö
     curl -O -X GET -H "X-Auth-Token:<token>" https://<Objektspeicher-URL>/<container_two>/<Objektname>?multipart-manifest=get
     ```
     {: pre}
-    
+
 * Zum Löschen des Manifests führen Sie den folgenden Befehl aus:
 
     ```
     curl -i -X DELETE -H "X-Auth-Token: <token>" https://<Objektspeicher-URL>/<container_two>/<Objektname>
     ```
     {: pre}
-    
+
 * Zum Löschen des Manifests und aller Segmente fügen Sie die Abfrage `multipart-manifest=delete` nach dem Namen des Manifests hinzu:
 
     ```
@@ -163,4 +166,4 @@ Nachstehend einige Befehle, die Sie bei der Arbeit mit SLO möglicherweise benö
     ```
     {: pre}
 
-**Hinweis**: Zum Hinzufügen von Segmenten zum Objekt oder zum Entfernen von Segmenten aus dem Objekt müssen Sie eine neue Manifestdatei mit einer neuen Liste von Segmenten hochladen. Der Manifestname kann belassen werden.
+**Anmerkung**: Zum Hinzufügen von Segmenten zum Objekt oder zum Entfernen von Segmenten aus dem Objekt müssen Sie eine neue Manifestdatei mit einer neuen Liste von Segmenten hochladen. Der Manifestname kann belassen werden.

@@ -1,21 +1,19 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-03-15"
+
 
 ---
 
 {:shortdesc: .shortdesc}
 
 # VCAP 서비스
-
-*마지막 업데이트 날짜: 2016년 3월 15일*
-{: .last-updated}
 
 
 VCAP_SERVICES 환경 변수는 {{site.data.keyword.Bluemix_notm}}의

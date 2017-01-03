@@ -17,7 +17,7 @@ copyright:
 *Última actualización: 9 de mayo de 2016*
 {: .last-updated}
 
-Puede proteger las app subiendo certificados SSL y limitando el acceso a las app.
+Puede proteger las apps subiendo certificados SSL y limitando el acceso a las apps.
 {:shortdesc}
 
 ##Creación de solicitudes de firma de certificado
@@ -66,7 +66,7 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
     privatekey.key
 ```
 
-**Nota:** La implementación SHA-512 de OpenSSL depende del soporte del compilador para el tipo de entero de 64 bits. Puede utilizar la opción SHA-1 para las app que tienen problemas de compatibilidad con el certificado SHA-256.
+**Nota:** La implementación SHA-512 de OpenSSL depende del soporte del compilador para el tipo de entero de 64 bits. Puede utilizar la opción SHA-1 para las apps que tienen problemas de compatibilidad con el certificado SHA-256.
 
 Un certificado lo emite una entidad emisora de certificados, que lo firma digitalmente. Después de crear la CSR, puede generar el certificado SSL en una entidad emisora de certificados pública. 
 
@@ -132,7 +132,7 @@ protege mediante una contraseña.
   
     Si habilita esta opción, a los usuarios que intenten acceder a un dominio protegido por SSL se les solicitará que especifiquen un certificado del lado del cliente. Por ejemplo en un navegador web, cuando un usuario intenta acceder a un dominio protegido por SSL, el navegador web le solicita que especifique un certificado de cliente para el dominio. Utilice la opción de carga de archivo de **Almacén de confianza de certificado de cliente** para definir los certificados del lado del cliente que permiten acceder al dominio personalizado.
   
-  **Nota:** La característica de certificado personalizado de la gestión de dominios de {{site.data.keyword.Bluemix_notm}} depende de la extensión Server Name Indication (SNI) del protocolo de seguridad de la capa de transporte (TLS). Por lo tanto, el código de cliente que accede a las app {{site.data.keyword.Bluemix_notm}} que se protegen mediante certificados personalizados deben admitir la extensión SNI de la implementación de TLS. Para obtener más información, consulte la [sección 7.4.2 de RFC 4346](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
+  **Nota:** La característica de certificado personalizado de la gestión de dominios de {{site.data.keyword.Bluemix_notm}} depende de la extensión Server Name Indication (SNI) del protocolo de seguridad de la capa de transporte (TLS). Por lo tanto, el código de cliente que accede a las apps {{site.data.keyword.Bluemix_notm}} que se protegen mediante certificados personalizados deben admitir la extensión SNI de la implementación de TLS. Para obtener más información, consulte la [sección 7.4.2 de RFC 4346](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
 
   **Almacén de confianza de certificado de cliente**
   

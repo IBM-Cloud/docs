@@ -6,17 +6,21 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Modalità sandbox e di produzione
 {: #push-sandboxandproduction-modes}
-Ultimo aggiornamento: 17 settembre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
 Puoi utilizzare {{site.data.keyword.mobilepushshort}} in una delle seguenti modalità: sandbox o produzione. Sandbox è un ambiente di test autonomo per sviluppare e testare l'integrazione
-                della API di push con il servizio push dell'applicazione del server. Per prima cosa configura il sandbox e le modalità di produzione utilizzando il dashboard Push. Passa alla modalità dell'operazione per eseguire il servizio di push tra il sandbox e la produzione utilizzando l'[API REST di Push](https://mobile.{DomainName}/imfpush/){: new_window} . Per impostazione predefinita,
-                la modalità sandbox è abilitata. Tuttavia, quando passi da una modalità all'altra, le tag, i dispositivi e le sottoscrizioni non sono condivisi tra queste modalità.
+                della API di push con il servizio push dell'applicazione del server. 
 
+Configura le modalità sandbox e di produzione utilizzando il dashboard Push. Puoi passare dalla modalità operativa sandbox alla modalità di produzione del servizio di push utilizzando l'[API REST Push](https://mobile.{DomainName}/imfpush/){: new_window}. Per impostazione predefinita, è abilitata la modalità sandbox. Tuttavia, quando passi da una modalità all'altra, le tag, i dispositivi e le sottoscrizioni non sono condivisi tra queste modalità.
 
-Quando sei pronto a distribuire l'applicazione a un ambiente live, seleziona la modalità di PRODUZIONE utilizzando l'API REST di push. Per informazioni sulla API REST, consulta l'API REST.
+Quando sei pronto a distribuire l'applicazione a un ambiente live, seleziona la modalità di PRODUZIONE utilizzando l'[API REST Push](https://mobile.{DomainName}/imfpush/){: new_window}. 
 
 Per passare alla modalità di operazione del servizio di push dal sandbox alla produzione:
 

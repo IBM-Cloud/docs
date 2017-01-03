@@ -1,7 +1,9 @@
 ---
 
 copyright:
-  anni: 2015, 2016
+  year: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Risoluzione dei problemi relativi alla gestione degli account
 {: #managingaccounts}
 
-Ultimo aggiornamento: 18 agosto 2016
-{: .last-updated}
 
 Potrebbero verificarsi dei problemi durante la gestione del tuo account, ad esempio problemi relativi ad applicazioni differenti che condividono lo stesso nome dominio o amministratori che non riescono a visualizzare tutte le organizzazioni. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi.
 {:shortdesc}

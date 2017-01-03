@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Notifications interactives
 {: #interactive-notifications}
-Dernière mise à jour : 17 octobre 2016
+Dernière mise à jour : 6 décembre 2016
 {: .last-updated}
 
 Les notifications interactives permettent aux utilisateurs de réagir sans avoir à ouvrir l'application lorsqu'ils reçoivent une notification. Lorsqu'une notification interactive est reçue, l'appareil affiche
@@ -20,7 +25,7 @@ version 8, les actions de notification ne sont pas affichées.
 
 Une notification interactive peut être envoyée en utilisant le tableau de bord Push ou la [documentation de l'API REST](t_restapi.html).
 
-A partir de la console push : 
+Depuis la console Push : 
 
 1. Sous l'onglet de notification du tableau de bord Push, cliquez sur la commande relative à l'envoi de la notification. 
 2. Choisissez les destinataires de votre notification et cliquez sur **Suivant**. 

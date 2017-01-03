@@ -1,12 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
 # Decahose 及 PowerTrack 串流 {: #decahose_powertrack}
-
-*前次更新：2016 年 5 月 13 日*
-{: .last-updated}
 
 {{site.data.keyword.twittershort}} 可讓您根據 {{site.data.keyword.Bluemix_notm}} 計劃登記存取 Twitter Decahose 及 PowerTrack 串流。這兩個串流提供即時資訊來源及不同性質來符合您的需求。
 {:shortdesc}
@@ -23,7 +28,7 @@ PowerTrack 串流提供新增的好處，根據使用者定義的規則型過濾
 
 <dl>
 <dt>Rule</dt>
-<dd>在此追蹤中收集的所有訊息都符合至少一個與追蹤相關聯的規則。您可以在此追蹤類型內新增、編輯及刪除規則。規則型追蹤內支援完整的 [GNIP PowerTrack 規則語法](http://support.gnip.com/apis/powertrack/rules.html)。所有查詢必須符合 {{site.data.keyword.twittershort}} [查詢語言](twitter_rest_apis.html#querylanguage "查詢語言")。
+<dd>在此追蹤中收集的所有訊息都符合至少一個與追蹤相關聯的規則。您可以在此追蹤類型內新增、編輯及刪除規則。規則型追蹤內支援完整的 [GNIP PowerTrack 規則語法](http://support.gnip.com/apis/powertrack2.0/rules.html)。所有查詢必須符合 {{site.data.keyword.twittershort}} [查詢語言](twitter_rest_apis.html#querylanguage "查詢語言")。
 </dd>
 
 <dt>Aggregated</dt>

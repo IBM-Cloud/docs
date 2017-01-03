@@ -4,6 +4,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-25"
 
 
 ---
@@ -18,27 +19,29 @@ copyright:
 # Gestione di {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato
 {: #mng}
 
-*Ultimo aggiornamento: 20 ottobre 2016*
-{: .last-updated}
 
-Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix}} locale o {{site.data.keyword.Bluemix_notm}} dedicato, vai alla pagina **Amministrazione** per gestire risorse, monitorare l'utilizzo delle quote, amministrare le autorizzazioni utente, pianificare le notifiche di aggiornamento, visualizzare log e report di sicurezza e altro. Puoi gestire le tue organizzazioni creando degli spazi e impostando dei [ruoli e delle autorizzazioni per gli utenti](index.html#oc_useradmin); vedi [Gestione delle tue organizzazioni](../admin/orgs_spaces.html).
+Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix}} locale o {{site.data.keyword.Bluemix_notm}} dedicato, vai alla pagina **Amministrazione** per gestire risorse, monitorare l'utilizzo delle quote, amministrare le autorizzazioni utente, pianificare le notifiche di aggiornamento, visualizzare log e report di sicurezza e altro. Puoi gestire le tue organizzazioni creando degli spazi e impostando dei [ruoli e delle autorizzazioni per gli utenti](/docs/admin/index.html#oc_useradmin); vedi [Gestione delle tue organizzazioni](/docs/admin/orgs_spaces.html).
 {:shortdesc}
 
 *Tabella 1. Attività amministrative per la gestione della tua istanza di {{site.data.keyword.Bluemix_notm}} locale o dedicato*
-{: #caption}
 
 | Quali operazioni posso eseguire? | Dettagli |    
 |----------------|---------|
-|Monitorare l'utilizzo del sistema | Fai clic su **AMMINISTRAZIONE &gt; UTILIZZO**. Visualizza le informazioni sul sistema, monitora l'utilizzo della CPU e pianifica l'utilizzo per ottimizzare il processo decisionale per la tua azienda. Vedi [Visualizzazione delle informazioni sull'utilizzo](index.html#oc_resource).|
-|Gestire il tuo catalogo | Fai clic su **AMMINISTRAZIONE &gt; GESTIONE CATALOGO** per stabilire quali servizi sono visibili ai tuoi utenti e organizzazioni. Vedi [Gestione del tuo catalogo](index.html#oc_catalog).|
-|Amministrare le organizzazioni | Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE ORGANIZZAZIONE** per creare organizzazioni, monitorare le quote per le organizzazioni e prendere decisioni rapide basate sulle esigenze. Vedi [Amministrazione delle organizzazioni](index.html#oc_organizations).|
-|Creare spazi e assegnare i ruoli utente | Fai clic sull'icona **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), quindi seleziona **Gestisci organizzazioni** per creare spazi all'interno delle tue organizzazioni. Aggiungi utenti e assegna loro dei ruoli per l'organizzazione e lo spazio. Vedi [Gestione delle tue organizzazioni](../admin/orgs_spaces.html). |
-|Gestire le autorizzazioni degli utenti amministrativi | Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE UTENTI** per aggiungere e rimuovere utenti e modifica le autorizzazioni utente. Vedi [Gestione di utenti e autorizzazioni](index.html#oc_useradmin). |
-|Esaminare report e log | Fai clic su **AMMINISTRAZIONE &gt; REPORT E LOG** per visualizzare i report di sicurezza e i log di controllo relativi alla tua istanza. Vedi [Visualizzazione dei report](index.html#oc_report). |
-|Visualizzare le informazioni sul sistema. | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** per visualizzare le informazioni di sistema, quali aggiornamenti di manutenzione in sospeso, nome e versione della tua istanza, regione, URL API, URL CLI, dettagli di configurazione LDAP, associazioni di gruppi e utenti, statistiche e domini condivisi. Vedi [Visualizzazione delle informazioni sul sistema](index.html#oc_system). |
-|Estendere le notifiche e impostare le sottoscrizioni notifica | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso**. Puoi utilizzare webhook da integrare con un servizio Web a scelta per impostare una sottoscrizione di notifica evento per un aggiornamento o incidente. Vedi [Notifiche e sottoscrizioni di notifica](index.html#oc_eventsubscription). |
+|Monitorare l'utilizzo del sistema | Fai clic su **AMMINISTRAZIONE &gt; UTILIZZO**. Visualizza le informazioni sul sistema, monitora l'utilizzo della CPU e pianifica l'utilizzo per ottimizzare il processo decisionale per la tua azienda. Vedi [Visualizzazione delle informazioni sull'utilizzo](/docs/admin/index.html#oc_resource).|
+|Gestire il tuo catalogo | Fai clic su **AMMINISTRAZIONE &gt; GESTIONE CATALOGO** per stabilire quali servizi sono visibili ai tuoi utenti e organizzazioni. Vedi [Gestione del tuo catalogo](/docs/admin/index.html#oc_catalog).|
+|Amministrare le organizzazioni | Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE ORGANIZZAZIONE** per creare organizzazioni, monitorare le quote per le organizzazioni e prendere decisioni rapide basate sulle esigenze. Vedi [Amministrazione delle organizzazioni](/docs/admin/index.html#oc_organizations).|
+|Creare spazi e assegnare i ruoli utente | Fai clic sull'icona **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), quindi seleziona **Gestisci organizzazioni** per creare spazi all'interno delle tue organizzazioni. Aggiungi utenti e assegna loro dei ruoli per l'organizzazione e lo spazio. Vedi [Gestione delle tue organizzazioni](/docs/admin/orgs_spaces.html). |
+|Gestire le autorizzazioni degli utenti amministrativi | Fai clic su **AMMINISTRAZIONE &gt; AMMINISTRAZIONE UTENTI** per aggiungere e rimuovere utenti e modifica le autorizzazioni utente. Vedi [Gestione di utenti e autorizzazioni](/docs/admin/index.html#oc_useradmin). |
+|Esaminare report e log | Fai clic su **AMMINISTRAZIONE &gt; REPORT E LOG** per visualizzare i report di sicurezza e i log di controllo relativi alla tua istanza. Vedi [Visualizzazione dei report](/docs/admin/index.html#oc_report). |
+|Visualizzare le informazioni sul sistema. | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** per visualizzare le informazioni di sistema, quali aggiornamenti di manutenzione in sospeso, nome e versione della tua istanza, regione, URL API, URL CLI, dettagli di configurazione LDAP, associazioni di gruppi e utenti, statistiche e domini condivisi. Vedi [Visualizzazione delle informazioni sul sistema](/docs/admin/index.html#oc_system). |
+|Estendere le notifiche e impostare le sottoscrizioni notifica | Fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA &gt; *Numero* in sospeso**. Puoi utilizzare webhook da integrare con un servizio Web a scelta per impostare una sottoscrizione di notifica evento per un aggiornamento o incidente. Vedi [Notifiche e sottoscrizioni di notifica](/docs/admin/index.html#oc_eventsubscription). |
+
+<!-- staging only for WoW start -->
 
 **Suggerimento**: il dashboard Infrastruttura nella console {{site.data.keyword.Bluemix_notm}} è disponibile solo per gli account collegati negli ambienti di {{site.data.keyword.Bluemix_notm}} pubblico.
+
+
+<!-- staging only for WoW end -->
 
 
 ## Notifiche e sottoscrizioni di notifica
@@ -51,7 +54,6 @@ Puoi sempre conoscere lo stato del tuo ambiente consultando la pagina Stato. Non
 Puoi visualizzare le notifiche riguardanti il tuo ambiente locale o dedicato, al fine di monitorare lo stato del tuo ambiente. Consulta la seguente tabella per informazioni sui diversi tipi di notifiche e sui rispettivi punti di pubblicazione.
 
 *Tabella 2. Tipi di evento e metodi di notifica*
-{: #caption}
 
 | **Tipo di evento** | **Metodo di notifica** |       
 |-----------------|-------------------|
@@ -65,7 +67,7 @@ Puoi visualizzare le notifiche riguardanti il tuo ambiente locale o dedicato, al
 ### Impostazione di sottoscrizioni di notifica
 {: #seteventsub}
 
-Puoi estendere la funzionalità delle notifiche inviate alla pagina Amministrazione e alla pagina Stato, utilizzando le sottoscrizioni di notifica. Utilizza le sottoscrizioni di notifica per configurare un'e-mail personalizzata o utilizzare dei webhook da integrare con uno strumento a scelta. 
+Puoi estendere la funzionalità delle notifiche inviate alla pagina Amministrazione e alla pagina Stato, utilizzando le sottoscrizioni di notifica. Utilizza le sottoscrizioni di notifica per configurare un'e-mail personalizzata o utilizzare dei webhook da integrare con uno strumento a scelta.
  * Se selezioni l'opzione e-mail, le notifiche vengono inviate agli indirizzi e-mail da te specificati. Puoi selezionare le notifiche di incidenti, aggiornamenti di manutenzione o soglie. Viene inviata una notifica e-mail iniziale. Successivamente, ogni volta che l'evento subisce delle modifiche, viene inviata un'altra notifica con la modifica apportata.  
  * Se selezioni l'opzione webhook, le tue notifiche vengono indirizzate direttamente a una destinazione a scelta, ad esempio un numero di telefono (tramite messaggio SMS). Puoi personalizzare il tipo di notifica, in particolare gli aggiornamenti di manutenzione, gli avvisi di incidenti critici e le soglie. Puoi scegliere se ricevere nuove notifiche oppure notifiche sulle modifiche apportate alle sottoscrizioni e puoi indicare quali informazioni includere nel corpo di ogni notifica.
 
@@ -89,7 +91,6 @@ Per creare una sottoscrizione webhook o e-mail dalla pagina **Sottoscrizioni di 
   * Fai clic su **Salva e chiudi** per salvare la sottoscrizione nel tuo elenco di sottoscrizioni di notifica e tornare alla pagina precedente.
 
 *Tabella 3. Campi per sottoscrizioni di notifica e-mail per gli aggiornamenti di manutenzione o gli incidenti*
-{: #caption}
 {: #emailnotmaintinc}
 
 | **Campo** | **Descrizione** |
@@ -104,7 +105,6 @@ Per creare una sottoscrizione webhook o e-mail dalla pagina **Sottoscrizioni di 
 | Descrizione | Aggiungi una descrizione univoca della sottoscrizione e stai creando. |
 
 *Tabella 4. Campi per sottoscrizioni di notifica e-mail per le soglie*
-{: #caption}
 {: #emailnottrhesh}
 
 | **Campo** | **Descrizione** |
@@ -126,7 +126,6 @@ I dati della soglia vengono raccolti una volta ogni 6 ore. Una notifica viene in
 Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della soglia, dopo aver completato i campi nel modulo, puoi fare clic su **Salva e verifica** per salvare e verificare la notifica con i dati di esempio.
 
 *Tabella 5. Campi del modulo per una sottoscrizione di notifica webhook su manutenzione o incidenti*
-{: #caption}
 {: #webhooknotsub}
 
 | **Campo** | **Descrizione** |
@@ -144,14 +143,13 @@ Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della so
 | Proprietà di risposta | Questo campo facoltativo è il nome della proprietà che identifica la risorsa creata dal tuo servizio Web quando viene inviata una richiesta POST o PUT. Se fornisci una proprietà di risposta per un nuovo evento e scegli di creare una sottoscrizione per le modifiche a un evento, dovrai fornirla anche per la sottoscrizione Modifica all'evento. A seconda del servizio Web utilizzato, puoi specificarla come parte dell'URL o come valore di payload.  |
 | Payload | Se hai selezionato il metodo POST o PUT, immetti le proprietà specifiche del servizio Web che stai utilizzando insieme i valori di payload utilizzati per la notifica IBM. Vedi la tabella [Valori della sezione di payload di manutenzione e incidenti](index.html#payload) per identificare i valori utilizzabili. Se non immetti informazioni in questa sezione, ricevi una notifica che non contiene informazioni aggiuntive. |
 | Modifica all'evento | Seleziona questa opzione per creare sottoscrizioni di notifica relative alle modifiche agli eventi di manutenzione o incidenti per cui hai creato le sottoscrizioni. Deselezionare l'opzione per disabilitare la notifica. |
-| Utilizza valori e payload da Nuovo evento | Usa il contenuto del campi Metodo, URL e Payload della sezione Nuovo evento. Nota che se l'opzione è selezionata, questi campi non sono disponibili per ulteriori modifiche nella sezione Modifica all'evento.  |
+| Utilizza valori e payload da Nuovo evento | Usa il contenuto del campi Metodo, URL e Payload della sezione Nuovo evento. Nota che se l'opzione è selezionata, questi campi non sono disponibili per ulteriori modifiche nella sezione Modifica all'evento. |
 | Metodo | Seleziona **GET**, **POST** o **PUT**. |
 | URL | Immetti l'URL per la connessione al tuo servizio Web. |
 | Payload | Se hai selezionato il metodo POST o PUT, immetti le proprietà specifiche del servizio Web che stai utilizzando insieme i valori di payload utilizzati per la notifica IBM. Vedi la tabella [Valori della sezione di payload di manutenzione e incidenti](index.html#payload) per identificare i valori utilizzabili. Se non immetti informazioni in questa sezione, ricevi una notifica che non contiene informazioni aggiuntive. |
 | Combina notifiche | Seleziona l'opzione per combinare le notifiche di incidente di tutte le regioni in una singola notifica. Questa opzione è disponibile solo per gli incidenti. |
 
 *Tabella 6. Campi del modulo per una sottoscrizione di notifica webhook sulle soglie*
-{: #caption}
 {: #webhooknotthresh}
 
 | **Campo** | **Descrizione** |
@@ -166,12 +164,11 @@ Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della so
 | Descrizione | Aggiungi una descrizione univoca della sottoscrizione e stai creando. |
 | Autorizzazione | Scegli se abilitare l'autorizzazione.  Le opzioni sono: **Di base** o **Nessuna**. |
 | Nome utente | Se hai scelto l'autorizzazione di base, immetti il tuo nome utente per il servizio Web. Se non desideri utilizzare le tue credenziali personali, puoi impostare un ID funzionale da utilizzare specificatamente con {{site.data.keyword.Bluemix_notm}}. |
-| Password | Se hai scelto l'autorizzazione di base, immetti la tua password per il servizio Web.  |
+| Password | Se hai scelto l'autorizzazione di base, immetti la tua password per il servizio Web. |
 | Metodo | Seleziona **GET**, **POST** o **PUT**. |
 | URL | Immetti l'URL per la connessione al tuo servizio Web. |
 
 *Tabella 7. Valori della sezione di payload di manutenzione e incidenti*
-{: #caption}
 {: #payload}
 
 | **Valore IBM** | **Descrizione** | **Tipo di evento** |
@@ -189,7 +186,6 @@ Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della so
 | {{type}} | Aggiornamento o incidente | Aggiornamento di manutenzione e incidente |
 
 *Tabella 8. Valori della sezione di payload di soglia*
-{: #caption}
 {: #threshpayload}
 
 | **Valore IBM** | **Descrizione** | **Tipo di evento** |
@@ -292,7 +288,7 @@ dettagli di configurazione LDAP.
 ### Aggiornamenti di sistema in sospeso
 
 Nella sezione Aggiornamenti, puoi visualizzare il numero di notifiche di
-aggiornamenti in sospeso che richiedono un tuo intervento. Ci sono due tipi di aggiornamenti di manutenzione che potresti vedere:
+aggiornamenti in sospeso che richiedono un tuo intervento. Ci sono due tipi che potresti vedere:
 
 <dl>
 <dt>Aggiornamenti che non comportano interruzioni del servizio</dt>
@@ -440,7 +436,6 @@ per scaricare il report.
 La seguente tabella mostra l'elenco dei report di sicurezza generati per {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato. La maggior parte dei report viene generata ogni giorno. Tuttavia, i report per gli eventi di gestione chiavi e crittografia vengono generati mensilmente. Tutti i report vengono conservati per 90 giorni nella console di gestione. Al termine dei 90 giorni, i report sono disponibili offline su richiesta a {{site.data.keyword.Bluemix_notm}} per 9 mesi. In totale, i report sono disponibili per il recupero per un massimo di 1 anno.
 
 *Tabella 9. Elenco dei report di sicurezza*
-{: #caption}
 
 | **Categoria** | **Report** | **Descrizione** |      
 |-----------------|-------------------|---------------------|
@@ -598,7 +593,7 @@ Quando implementi il broker dei servizi, nella risposta JSON di <code>GET /v2/ca
             "id":"cool-service-plan-id",
             "metadata":{
                "bullets":[
-                  "1 GB per istanza. 10 GB Max per istanza."
+                  "Minimo 1 GB per istanza. Massimo 10 GB per istanza."
                ],
                "costs":[
                   {
@@ -620,7 +615,6 @@ Quando implementi il broker dei servizi, nella risposta JSON di <code>GET /v2/ca
 Le seguenti tabelle possono aiutarti a compilare il file JSON.
 
 *Tabella 10. Campi JSON*
-{: #caption}
 
 | **Campi JSON** | **Descrizione** |
 |-----------------|-----------------|
@@ -632,7 +626,6 @@ Le seguenti tabelle possono aiutarti a compilare il file JSON.
 |plans | Un array di definizioni del piano di servizio. Per ulteriori informazioni, vedi la seguente tabella per i [campi Piano](index.html#planfields). |
 
 *Tabella 11. Campi Metadati*
-{: #caption}
 {: #metadatafields}
 
 | **Valori metadati** | **Descrizione** |
@@ -689,7 +682,6 @@ Il seguente esempio mostra come la risposta JSON di GET /v2/catalog è associata
 ![Dettagli del servizio nel catalogo.](images/metadata.png "Vista dettagli del servizio nel catalogo Bluemix")
 
 *Tabella 12. Campi Piano*
-{: #caption}
 {: #planfields}
 
 | **Valori del piano** | **Descrizione** |
@@ -701,7 +693,6 @@ Il seguente esempio mostra come la risposta JSON di GET /v2/catalog è associata
 |metadata (facoltativo)    | I metadati del piano di servizio visualizzati nel catalogo {{site.data.keyword.Bluemix_notm}} e nel listino prezzi. Il campo dei metadati è facoltativo. Nel campo metadata puoi specificare i seguenti campi: displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber) e paidOnly. Per ulteriori informazioni, vedi la seguente tabella per i [campi Metadati del piano](index.html#planmetadata). |
 
 *Tabella 13. Campi Metadati del piano*
-{: #caption}
 {: #planmetadata}
 
 | **Valori dei metadati del piano** | **Descrizione** |
@@ -932,7 +923,6 @@ non dispongono di autorizzazioni.
 È possibile assegnare agli utenti le seguenti autorizzazioni con livelli di accesso specifici (lettura o scrittura) che consentono all'utente di completare attività specifiche all'interno della console di gestione.
 
 *Tabella 14. Autorizzazioni*
-{: #caption}
 
 | **Autorizzazione utente** | **Descrizione** |       
 |-----------------|-------------------|
@@ -974,7 +964,9 @@ cookie per tutte le operazioni con la Console di gestione.
 Per accedere alla
 Console di gestione, esegui questo comando:
 
-`curl --user <id_utente>:<password> -c ./cookies.txt --header "Accept: application/json" https://<il_tuo_host>.ibm.com/login | python -m json.tool`
+```
+curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -994,6 +986,7 @@ Console di gestione, esegui questo comando:
 
 Il seguente esempio mostra l'output di questo
                 comando:
+
 ```
 {
     "message": "Logged in",
@@ -1013,7 +1006,9 @@ utilizzare la API REST `Admin` per elencare tutte le organizzazioni. Devi dispor
 **Utenti** con l'accesso in **Lettura** per elencare
 le organizzazioni. Per elencare tutte le organizzazioni, esegui questo comando:
 
-`curl -b ./cookies.txt https://<il_tuo_host>.ibm.com/codi/v1/organizations | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1059,7 +1054,9 @@ l'API REST `Admin` per elencare gli utenti registrati. Devi disporre dell'autori
 **Utenti** con l'accesso in **Lettura** per elencare gli
 utenti registrati. Per elencare tutti gli utenti, esegui questo comando:
 
-`curl -b ./cookies.txt https://<il_tuo_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1152,7 +1149,9 @@ devi fornire le seguenti informazioni:
 
 Per fornire le informazioni, ti servi di un file JSON.
 
-`curl -b ./cookies.txt https://<il_tuo_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1247,7 +1246,9 @@ gli utenti, devi disporre dell'autorizzazione **Utenti** con l'accesso in **Scri
 
 Per rimuovere un utente, devi fornire l'ID dell'utente: Immetti il seguente comando:
 
-`curl -v -b ./cookies.txt -X DELETE https://<il_tuo_host>.ibm.com/codi/v1/users?user_id=<un_id_utente@dominio.com>`
+```
+curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1278,6 +1279,307 @@ Il seguente esempio mostra l'output di questo
  <
  ```
 {: screen}
+
+## API per le metriche (sperimentale)
+{: #envappmetricsapi}
+
+Puoi utilizzare due API sperimentali per raccogliere le metriche sul tuo ambiente o sulle tue applicazioni. Entrambe la API restituiscono un array di punti dati per le metriche che hai richiesto nell'intervallo di tempo che hai specificato.
+
+**Note**:
+
+1. Un utente può effettuare fino a 200 richieste API per le metriche in un'ora.
+2. Ogni richiesta API restituisce fino a 200 punti dati per richiesta. Se sono disponibili più dati, viene fornito un URL per il caricamento della successiva serie di dati.
+
+## Raccolta delle metriche sul tuo ambiente 
+
+Puoi utilizzare l'API di ambiente sperimentale per raccogliere le informazioni sull'ambiente di alto livello in un periodo di tempo che specifichi. Vengono restituiti i punti dati nel periodo di tempo che specifichi. I dati sono registrati approssimativamente ogni ora. Se, ad esempio, hai richiesto sei ore di dati CPU per l'ambiente, la risposta includerà i dati CPU per ognuna delle sei ore richieste.
+
+### Parametri della query delle metriche di ambiente
+
+Utilizzando i seguenti parametri della query, puoi raccogliere le metriche per i tuoi CPU, disco, memoria, rete e applicazioni:
+
+<dl class="parml">
+<dt class="pt dlterm">metrica</dt>
+<dd class="pd">Uno o più dei seguenti valori, separati da virgole: 'memory', 'disk', 'cpu', 'network' e 'apps.'</dd>
+<dt class="pt dlterm">OraInizio</dt>
+<dd class="pd">Il primo punto nel tempo da cui vengono restituiti i dati. Se non viene specificata una OraInizio, viene incluso il primo punto dati disponibile. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraInizio di 14.</dd>
+<dt class="pt dlterm">OraFine</dt>
+<dd class="pd">L'ultimo  punto nel tempo da cui vengono restituiti i dati. Se non viene specificata alcuna OraFine, viene utilizzato il punto dati più recente. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraFine di 17.</dd>
+<dt class="pt dlterm">ordinamento</dt>
+<dd class="pd">L'ordinamento in cui vengono restituiti i dati. I valori validi sono 'asc' (crescente) e 'desc' (decrescente). Il valore predefinito è decrescente, che restituisce prima i dati più recenti. </dd>
+</dl>
+
+### Formato dei dati delle metriche di ambiente
+
+Le seguenti sezioni forniscono il formato dei dati.
+
+ * Per raccogliere i dati registrati sul tuo utilizzo della memoria, utilizza il seguente formato dei dati:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "memory": {
+    "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
+    "memory_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "47"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "51"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "45"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "43"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * Per raccogliere i dati registrati sul tuo utilizzo del disco, utilizza il seguente formato dei dati:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "disk": {
+    "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
+    "disk_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "14"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "12"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * Per raccogliere i dati registrati sul tuo utilizzo della CPU, utilizza il seguente formato dei dati:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "cpu": {
+    "average_percent_cpu_used": 27.288461538461544,
+    "cpu_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "sys_percent": "8.4",
+        "user_percent": "2.7",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "sys_percent": "7.4",
+        "user_percent": "2.4",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "sys_percent": "5.3",
+        "user_percent": "1.9",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "sys_percent": "8.2",
+        "user_percent": "22.6",
+        "wait_percent": "0.0"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * Per raccogliere i dati registrati sulla tua rete, utilizza il seguente formato dei dati:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "network": {
+    "datapower": {
+    "response_times": [
+      {
+        "proxy": "custom_certificates",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "90",
+        "one_minute_ms": "89",
+        "ten_minutes_ms": "83",
+        "one_hour_ms": "85",
+        "one_day_ms": "95"
+      }
+      ],
+        "transactions": [
+      {
+        "proxy": "custom_domains",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "697",
+        "one_minute_ms": "747",
+        "ten_minutes_ms": "802",
+        "one_hour_ms": "794",
+        "one_day_ms": "730"
+      }
+      ],
+        "bandwidth": {
+        "in_mbps": 10855,
+        "out_mbps": 38090
+      }
+  }
+}
+```
+{: screen}
+
+* Per raccogliere i dati registrati sulle tue applicazioni, utilizza il seguente formato dei dati:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "apps": {
+    "count": 1406,
+    "allocation": {
+      "memory_gb": 571.8,
+      "disk_gb": 1204
+    }
+  }
+}
+```
+{: screen}
+
+### Formato della risposta delle metriche di ambiente
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+## Raccolta delle metriche sulle tue applicazioni
+
+I dati sono registrati per tutte le applicazioni approssimativamente ogni ora. Una richiesta per una metrica particolare restituisce le informazioni per tutte le applicazioni in ogni esempio di dati nel periodo di tempo che specifichi, ordinate in modo decrescente per la metrica richiesta. Ad esempio, la richiesta di tutte le applicazioni per la CPU in un periodo di tempo di 6 ore in un ambiente con 200 applicazioni restituisce 1200 record, 200 alla volta.
+
+Per ridurre la quantità di informazioni restituite per ogni esempio di dati nel periodo di tempo richiesto, puoi specificare un'opzione di conteggio. Utilizzando il precedente esempio e aggiungendo un'opzione di conteggio di 5, vengono restituiti 30 record che rappresentano le prime 5 applicazioni per CPU per ogni esempio di dati.
+
+### Endpoint delle applicazioni 
+
+Puoi utilizzare i seguenti endpoint per richiamare questo comando API:
+* /api/v1/app/cpu/physical 
+* /api/v1/app/memory/physical
+* /api/v1/app/memory/reserved
+* /api/v1/app/disk/physical
+* /api/v1/app/disk/reserved
+
+### Parametri della query delle applicazioni
+ 
+Utilizza i seguenti parametri della query per raccogliere le metriche per le tue applicazioni:
+
+<dl class="parml">
+<dt class="pt dlterm">OraInizio</dt>
+<dd class="pd">Il primo punto nel tempo da cui vengono restituiti i dati. Se non viene specificata una OraInizio, viene incluso il primo punto dati disponibile. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraInizio di 14.</dd>
+<dt class="pt dlterm">OraFine</dt>
+<dd class="pd">L'ultimo  punto nel tempo da cui vengono restituiti i dati. Se non viene specificata alcuna OraFine, viene utilizzato il punto dati più recente. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraFine di 17.</dd>
+<dt class="pt dlterm">conteggio</dt>
+<dd class="pd">Il numero di record da restituire in ogni esempio di dati.
+</dd>
+</dl>
+
+### Formato della risposta delle applicazioni
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+Ogni documento restituito rappresenta le metriche richieste per un'applicazione in ogni esempio di dati, al momento della richiesta.
+
 
 ## API del servizio personalizzato
 {: #servicebrokerapi}
@@ -1357,20 +1659,14 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {
-    "name": "Nome del broker dei servizi",
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
+    "name": "Service broker's name",
     "broker_url": "https://provision-broker.comp.bluemix.net/bmx/provisioning/brokers/2063580064-8f23230c-7f36-4ce5-a298-2ab4108f1120",
-    "auth_username": "nome utente",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "49f3adcc-ecc2-46fa-83c1-03322f04b3b1",
-    "created_at": "2015-12-07T19:51:50Z",
-    "updated_at": null,
-    "url": "/v2/service_brokers/49f3adcc-ecc2-46fa-83c1-03322f04b3b1"
-  }
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
+    "auth_username": "username",
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
+
 ```
 {: screen}
 
@@ -1381,14 +1677,15 @@ Utilizza i seguenti esempi di API e codice per aggiornare un servizio.
 ### Rotta
 {: #updateroute}
 
-`PUT /codi/v1/serviceBrokers`
+```
+PUT /codi/v1/serviceBrokers
+```
 {: screen}
 
 ### Richiesta
 {: #updaterequest}
 
 *Tabella 16. Campi*
-{: #caption}
 
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
@@ -1438,19 +1735,12 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {
-    "name": "Nome del broker dei servizi",
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
+    "name": "Service Broker's name",
     "broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-d11bdd84-7556-469f-858d-2098b531f7f2",
-    "auth_username": "nome utente",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "2cbdb812-d37f-443b-894a-a96de31e5c38",
-    "created_at": "2015-12-07T20:11:08Z",
-    "updated_at": "2015-12-07T20:11:19Z",
-    "url": "/v2/service_brokers/2cbdb812-d37f-443b-894a-a96de31e5c38"
-  }
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
+    "auth_username": "username",
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
 ```
 {: screen}
@@ -1460,7 +1750,6 @@ Content-Type: application/json
 Utilizza i seguenti esempi di API e codice per eliminare un servizio.
 
 *Tabella 17. Parametro*
-{: #caption}
 
 | **Nome** | **Descrizione** |
 |-----------------|-------------------|
@@ -1544,7 +1833,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 Per visualizzare un elenco di comandi, immetti il seguente
 comando:
 
-`cf plugins`
+```
+cf plugins
+```
 {: codeblock}
 
 Per ulteriore assistenza per un comando, utilizza l'opzione `-help`.

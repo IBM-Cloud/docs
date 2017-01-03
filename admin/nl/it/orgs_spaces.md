@@ -4,8 +4,8 @@
 
 copyright:
 
-  anni: 2015, 2016
-  
+  years: 2015, 2016
+lastupdated: "2016-12-05"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # Gestione di organizzazioni e spazi
 {: #orgsspacesusers}
-Ultimo aggiornamento: 20 ottobre 2016
-{: .last-updated}
 
 In qualità di proprietario dell'account, puoi gestire le tue organizzazioni andando alla pagina **Gestisci organizzazioni**. I gestori dell'organizzazione possono anche utilizzare la pagina Gestisci organizzazioni per gestire le organizzazioni dove sono impostati come gestore.
 {:shortdesc}
@@ -32,7 +30,7 @@ Le attività di gestione includono quanto segue:
 * Gestione o visualizzazione della quota
 * Gestione dei domini personalizzati
 
-**Nota**: per creare un'organizzazione devi essere il proprietario di un account con pagamento a consumo. 
+**Nota**: per creare un'organizzazione devi essere il proprietario di un account con pagamento a consumo.
 
 ## Organizzazioni
 {: #orginfo}
@@ -70,7 +68,7 @@ l'autorizzazione *Gestore organizzazione*, che ti consente di modificare il nome
 
 Per eliminare un'organizzazione devi rivolgerti al [Supporto di {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window}. Quando richiedi al team di supporto di eliminare un'organizzazione, vengono eliminati tutti gli spazi, i servizi e le applicazioni al suo interno.
 
-I seguenti [ruoli utente](users_roles.html#userrolesinfo) possono essere assegnati ai membri del team in un'organizzazione:
+I seguenti [ruoli utente](/docs/admin/users_roles.html#userrolesinfo) possono essere assegnati ai membri del team in un'organizzazione:
 
 <ul>
 <li>Gestore organizzazione</li>
@@ -86,7 +84,7 @@ I seguenti [ruoli utente](users_roles.html#userrolesinfo) possono essere assegna
 In un'organizzazione, puoi utilizzare gli spazi per raggruppare una serie di applicazioni, servizi e membri del team. Gli spazi sono collegati a una specifica
 regione in {{site.data.keyword.Bluemix_notm}}.
 
-Dopo che hai aggiunto dei membri del team a un'organizzazione, puoi concedere loro le autorizzazioni agli spazi. Analogamente alle organizzazioni, anche gli spazi hanno una serie di [ruoli utente](users_roles.html#userrolesinfo) con specifiche autorizzazioni che vengono assegnati ai membri del team:
+Dopo che hai aggiunto dei membri del team a un'organizzazione, puoi concedere loro le autorizzazioni agli spazi. Analogamente alle organizzazioni, anche gli spazi hanno una serie di [ruoli utente](/docs/admin/users_roles.html#userrolesinfo) con specifiche autorizzazioni che vengono assegnati ai membri del team:
 
 <ul>
 <li>Gestore spazio</li>
@@ -163,19 +161,28 @@ Per elencare i membri per uno specifico spazio, completa la seguente procedura:
 ## Gestione della quota
 {: #managequota}
 
-In qualità di proprietario dell'account o di gestore dell'organizzazione, puoi visualizzare la quota assegnata e utilizzata per la tua organizzazione. La quota rappresenta i limiti di risorse per l'organizzazione che viene assegnata quando l'organizzazione viene creata. Applicazioni o servizi in uno spazio dell'organizzazione contribuiscono tutti
-all'utilizzo della quota.
+In qualità di proprietario dell'account o di gestore dell'organizzazione {{site.data.keyword.Bluemix_notm}}, puoi visualizzare la quota utilizzata e assegnata per un'organizzazione. La quota rappresenta i limiti di risorse per l'organizzazione, che viene assegnata quando l'organizzazione viene creata. A seconda che si disponga di un account di prova o di un account fatturabile, le risorse disponibili per un'organizzazione sono diverse. Applicazioni o servizi in uno spazio all'interno dell'organizzazione contribuiscono tutti all'utilizzo della quota assegnata.
 
-Per visualizzare la quota per la tua organizzazione, completa la seguente procedura:
+Per visualizzare la quota utilizzata e assegnata per un'organizzazione, completa la seguente procedura:
 
 1. Fai clic sulla pagina **Account** &gt; **Gestisci organizzazioni**.
 2. Identifica l'organizzazione per cui vuoi visualizzare la quota e fai clic su **Visualizza dettagli**.
 3. Fai clic su **Modifica organizzazione**.
-4. Seleziona la scheda **QUOTA**.
+4. Se hai degli spazi definiti in più di un'organizzazione, seleziona la specifica regione che vuoi visualizzare.
+5. Fai clic su **QUOTA**. 
+6. Per impostazione predefinita, si apre la pagina della quota **Cloud Foundry**. Puoi visualizzare i dettagli della quota per le seguenti risorse:
+ * MEMORIA
+ * SERVIZI
+ * PIANO
+ * PREZZO
+7. Fai clic su **Contenitori** per visualizzare l'assegnazione della quota utilizzate e disponibile per i contenitori. L'assegnazione del contenitore varia a seconda del piano prezzi. Puoi visualizzare i dettagli della quota per le seguenti risorse:
+ * MEMORIA
+ * IP PUBBLICO
 
-Per aggiornare la quota per la tua organizzazione, devi aprire un ticket di supporto. Per ulteriori informazioni sull'apertura di
-un ticket di supporto, vedi [Richiesta di assistenza clienti](../support/index.html#contacting-support). Per ulteriori informazioni
-sulla quota per i contenitori, vedi [Quota](../containers/container_planning_org_ov.html##container_planning_quota) nella documentazione dei contenitori.
+**Nota:** i contenitori non sono disponibili nella regione {{site.data.keyword.Bluemix_notm}} Sydney. 
+
+Per ulteriori informazioni sui contenitori, vedi [Quota](/docs/containers/container_planning_org_ov.html#container_planning_quota) nella documentazione dei contenitori.
+Per modificare la quota assegnata a un'organizzazione, devi aprire un ticket di supporto. Per ulteriori informazioni sull'apertura di un ticket di supporto, vedi [Richiesta di assistenza clienti](/docs/support/index.html#contacting-support). 
 
 ## Gestione dei domini
 {: #managedomains}

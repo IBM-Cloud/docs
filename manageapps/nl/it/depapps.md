@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  anni: 2015, 2016
-
+  years: 2015, 2016
+lastupdated: "2016-12-07"
 ---
 
 
@@ -11,11 +11,8 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Distribuzione delle applicazioni
+# Distribuzione delle applicazioni
 {: #deployingapps}
-
-*Ultimo aggiornamento: 28 luglio 2016*
-{: .last-updated}
 
 Puoi distribuire applicazioni in {{site.data.keyword.Bluemix}}
 utilizzando vari metodi, quali ad esempio l'interfaccia riga di comando e gli ambienti di
@@ -25,20 +22,79 @@ il numero di dettagli di distribuzione che devi specificare ogni volta che
 distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
-##Distribuzione delle applicazioni
+## Distribuzione delle applicazioni
 {: #appdeploy}
 
 La distribuzione di un'applicazione in {{site.data.keyword.Bluemix_notm}} include
 due fasi, la preparazione dell'applicazione e il suo avvio.
 
-###Preparazione di un'applicazione
+Cloud Foundry ora supporta Diego, una nuova architettura di runtime. Diego fornisce supporto per molte tecnologie del contenitore, inclusi i contenitori Garden, Docker e Windows. I futuri miglioramenti e correzioni per Cloud Foundry andranno direttamente a Diego e non saranno supportati in DEA.
 
+### Preparazione di un'applicazione con Diego
+Tutti i componenti Diego sono progettati per essere in cluster, che significa che puoi facilmente creare diverse zone di disponibilità. La comunicazione sicura tra tutti i componenti Diego utilizza TLS.
+
+Durante la fase di preparazione, Diego si occupa di tutti gli aspetti relativi alla organizzazione del contenitore. La distribuzione delle istanze dell'applicazione viene effettuata con Diego Brain e il controller cloud prepara soltanto le applicazioni. Diego Brain assegna le applicazioni in celle con accesso SSH ai contenitori.
+
+Per convalidare l'integrità dell'applicazione, Diego supporta gli stessi controlli basati sulla PORTA che sono utilizzati da DEA. Ma è progettato per avere più opzioni generiche come i controlli di integrità basati sull'URL, che dovrebbe venire abilitati in futuro.
+
+Per preparare le applicazioni in Diego, devi prima installare la CLI cf e il [Diego-Enabler CLI Plugin](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}. Questo è obbligatorio solo durante il periodo di migrazione.
+
+#### Problemi noti
+ Esistono i seguenti problemi noti nell'utilizzo di Diego:
+  * Le applicazioni di lavoro distribuite con l'opzione `--no-route` non sono riportate come integre. Per evitare questo, disabilita il controllo di integrità basato sulla porta con il comando `cf set-health-check APP_NAME none`.
+  * Diego non utilizza la variabile di ambiente VCAP_APP_HOST. Se il tuo codice fa riferimento a questa variabile, sostituiscila con 0.0.0.0.
+  * Diego non utilizza la variabile di ambiente VCAP_APP_PORT. Se il tuo codice fa riferimento a questa variabile, sostituiscila con PORT, che per impostazione predefinita è 8080.
+  * Il comando **cf files** non è più supportato. Viene sostituito dal comando **cf ssh**. Per ulteriori dettagli sul comando **cf ssh**, consulta [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
+  * Alcune applicazioni potrebbero utilizzare un gran numero di descrittori file (inode). Se riscontri questo problema, devi aumentare la quota disco della tua applicazione con il comando `cf scale APP_NAME [-k DISK]`.
+
+#### Preparazione di una nuova applicazione con Diego
+Per preparare una nuova applicazione con Diego devi distribuire l'applicazione nella riga di comando con un indicatore che indica Diego come backend.
+
+  1. Distribuisci l'applicazione senza avviarla:
+  ```
+  $ cf push APPLICATION_NAME --no-start
+  ```
+  2. Imposta il valore booleano di Diego:
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+    o in alternativa:
+  ```
+  $ cf curl /v2/apps/$(cf app APPLICATION_NAME --guid) -X PUT -d '{"diego":true}'
+  ```
+  3. Avvia l'applicazione:
+  ```
+  $ cf start APPLICATION_NAME
+  ```
+
+Per ulteriori dettagli sul comando **cf push**, consulta [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
+
+#### Passaggio di un'applicazione esistente a Diego
+Puoi passare un'applicazione esistente a Diego distribuendola con l'indicatore Diego. L'applicazione inizierà immediatamente l'esecuzione su Diego e sarà eventualmente arrestata sui DEA. Se desideri garantire l'attività, ti raccomandiamo di eseguire un distribuzione blue-green distribuendo una copia della tua applicazione a Diego e quindi scambiando le rotte e riducendo l'applicazione DEA.
+
+  Per impostare l'indicatore Diego e modificare la tua applicazione per l'esecuzione su Diego:
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+
+  Per ritornare ai DEA:
+  ```
+  $ cf disable-diego APPLICATION_NAME
+  ```
+
+  Per convalidare su quale backend l'applicazione è in esecuzione:
+  ```
+  $ cf has-diego-enabled APPLICATION_NAME
+  ```
+
+
+### Preparazione di un'applicazione con DEA
 Durante la fase
 di preparazione, un Droplet Execution Agent    (DEA) utilizza le informazioni
 che tu fornisci nell'interfaccia riga di comando cf o nel file `manifest.yml`
 per stabilire che cosa creare per la preparazione dell'applicazione. Il DEA seleziona
 un pacchetto di build appropriato per preparare la tua applicazione; il risultato del
-processo di preparazione è un droplet. Per ulteriori informazioni sulla distribuzione di un'applicazione in {{site.data.keyword.Bluemix_notm}}, vedi [Architettura {{site.data.keyword.Bluemix_notm}}, come funziona {{site.data.keyword.Bluemix_notm}}](../public/index.html#publicarch).
+processo di preparazione è un droplet. Per ulteriori informazioni sulla distribuzione di un'applicazione a {{site.data.keyword.Bluemix_notm}}, vedi [Modalità di funzionamento di {{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html#howwork).
 
 Durante
 il processo di preparazione, il DEA verifica se il pacchetto di build
@@ -48,7 +104,7 @@ isolato contenente il pacchetto di build e il codice applicativo. Il
 contenitore è gestito dal componente Warden. Per ulteriori informazioni,
 vedi [How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
 
-###Avvio di un'applicazione
+### Avvio di un'applicazione
 
 Quando un'applicazione
 viene avviata, vengono create l'istanza o le istanze del
@@ -74,7 +130,7 @@ ulteriori informazioni sull'aggregatore di log, vedi [Logging in Cloud Foundry](
 Se rilevi dei problemi durante la preparazione delle
 tue applicazioni su {{site.data.keyword.Bluemix_notm}},
 puoi seguire le istruzioni che si trovano in [Debug degli
-errori di preparazione](../debug/index.html#debugging-staging-errors) per risolvere il problema.
+errori di preparazione](/docs/debug/index.html#debugging-staging-errors) per risolvere il problema.
 
 ##Distribuzione delle applicazioni mediante il comando cf
 {: #dep_apps}
@@ -101,7 +157,7 @@ prompt dei comandi.
   
   Per ulteriori
 informazioni sul pacchetto di build Liberty, vedi [Liberty
-for Java](../runtimes/liberty/index.html).
+for Java](/docs/runtimes/liberty/index.html).
   
   * Per distribuire le applicazioni Java Tomcat a {{site.data.keyword.Bluemix_notm}}, utilizza il seguente comando:
   
@@ -214,8 +270,6 @@ il nome file:
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |Opzioni	|Descrizione	|Utilizzo o esempio|
 |:----------|:--------------|:---------------|
@@ -234,7 +288,7 @@ cf push -f appManifest.yml
 |**random-route**	|Un valore booleano per assegnare una rotta casuale all'applicazione. Il valore predefinito è **false**.	|`random-route: true`|
 |**services**	|I servizi di cui eseguire il bind all'applicazione.	|`services:   - mysql_maptest`|
 |**env**	|Le variabili di ambiente personalizzate per l'applicazione.|`env: DEV_ENV: production`|
-*Tabella 1. Opzioni supportate nel file manifest.yml*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###Un file `manifest.yml` di esempio
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # 빌드팩 기본값
 {: #buildpack_defauts}
-
-마지막 업데이트 날짜: 2016년 6월 10일
-{: .last-updated}
 
 Liberty 빌드팩은 Bluemix에서 자주 업데이트됩니다. 각 릴리스에는 보안 수정사항 또는 기능 개선사항이 포함될 수 있습니다. 
 

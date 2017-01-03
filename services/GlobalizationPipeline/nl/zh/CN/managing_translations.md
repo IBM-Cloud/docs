@@ -13,7 +13,7 @@ copyright:
 # 管理翻译
 {: #globalizationpipeline_managingtranslations}
 
-*上次更新时间：2016 年 7 月 6 日*
+*上次更新时间：2016 年 10 月 14 日*
 {: .last-updated}
 
 在您创建束并开始生成应用程序的翻译之后，可按原样使用机器生成的内容或进一步修改之后使用。您还可以选择使用非缺省的机器翻译。本节描述如何更改执行束翻译的机器翻译引擎、如何执行人类翻译后编辑，以及您可以如何向需要访问翻译的人员分配用户角色和访问限制。
@@ -22,15 +22,15 @@ copyright:
 ## 机器翻译配置
 {: #globalizationpipeline_service_to_service}
 
-{{site.data.keyword.GlobalizationPipeline_full}} 支持集成替代机器翻译服务，以对束执行机器翻译的能力。如果 {{site.data.keyword.GlobalizationPipeline_full}} 使用的缺省引擎不提供您所需的特定语言，或者如果您更愿意使用不同引擎所生成的机器翻译，那么添加替代服务会很有益处。替代服务的使用和收费涵盖在那些服务的条款下。
+{{site.data.keyword.GlobalizationPipeline_full}} 支持集成替代机器翻译服务，以对束执行机器翻译的能力。如果 {{site.data.keyword.GlobalizationPipeline_short}} 使用的缺省引擎不提供您所需的特定语言，或者如果您更愿意使用不同引擎所生成的机器翻译，那么添加替代服务会很有益处。替代服务的使用和收费涵盖在那些服务的条款下。
 
-要添加并配置 {{site.data.keyword.GlobalizationPipeline_full}} 的替代机器翻译服务，请从 {{site.data.keyword.GlobalizationPipeline_full}} 仪表板选择**机器翻译配置**选项卡。
+要添加并配置 {{site.data.keyword.GlobalizationPipeline_short}} 的替代机器翻译服务，请从 {{site.data.keyword.GlobalizationPipeline_short}} 仪表板选择**机器翻译配置**选项卡。
 
-* 要添加 {{site.data.keyword.Bluemix_notm}} 目录中的机器翻译服务（**Watson 语言翻译**），必须首先将该服务添加到您的 {{site.data.keyword.Bluemix_notm}} 空间。
+* 要添加 {{site.data.keyword.Bluemix_notm}} 目录中的机器翻译服务（**Watson 语言转换程序**），必须首先将该服务添加到您的 {{site.data.keyword.Bluemix_notm}} 空间。
 
 * 要添加第三方服务，请在**机器翻译配置**选项卡上选择该服务的按钮，然后提供访问该服务所需的用户凭证。
 
-在向 {{site.data.keyword.GlobalizationPipeline_full}} 添加了机器翻译服务之后，请完成其余的步骤，以完成该服务的集成。
+在向 {{site.data.keyword.GlobalizationPipeline_short}} 添加了机器翻译服务之后，请完成其余的步骤，以完成该服务的集成。
 
 1. 单击**启用**，以开启与该服务的集成。
 
@@ -40,7 +40,7 @@ copyright:
 
 4. 单击**保存**，以返回到**机器翻译配置**选项卡。
 
-在使用 {{site.data.keyword.GlobalizationPipeline_full}} 配置替代服务之后，将会使用该引擎开始生成分配给该引擎的所有目标语言。 
+在使用 {{site.data.keyword.GlobalizationPipeline_short}} 配置替代服务之后，将会使用该引擎开始生成分配给该引擎的所有目标语言。 
 
 要停止使用替代机器翻译引擎：
 
@@ -53,7 +53,7 @@ copyright:
 ## 查看和编辑翻译
 {: #globalizationpipeline_translations}
 
-{{site.data.keyword.GlobalizationPipeline_full}} 服务提供人类翻译后编辑功能。专业的翻译人员或精通任何目标语言的人都可以对已生成的翻译进行编辑。您可以进行编辑，以改进翻译质量或一致性，或者替换想要的措词。例如，您可能想要改写产品名称的翻译。
+{{site.data.keyword.GlobalizationPipeline_short}} 服务提供人类翻译后编辑功能。专业的翻译人员或精通任何目标语言的人都可以对已生成的翻译进行编辑。您可以进行编辑，以改进翻译质量或一致性，或者替换想要的措词。例如，您可能想要改写产品名称的翻译。
 
 要查看和编辑目标语言的翻译：
 
@@ -85,9 +85,9 @@ copyright:
 
 如果您创建更多的 API 用户，那么您可以限制他们对一个或多个特定束的访问，或者授予他们对所有可用束的访问权。
 
-要授予 API 用户访问 {{site.data.keyword.GlobalizationPipeline_full}} 服务实例中束的权限：
+要授予 API 用户访问 {{site.data.keyword.GlobalizationPipeline_short}} 服务实例中束的权限：
 
-1. 在 {{site.data.keyword.GlobalizationPipeline_full}} 仪表板上，单击 **API 用户**选项卡。
+1. 在 {{site.data.keyword.GlobalizationPipeline_short}} 仪表板上，单击 **API 用户**选项卡。
 2. 单击**新建 API 用户**。
 3. 输入**显示名称**和**注释**，以描述新 API 用户。
 4. 选择新 API 用户的**类型**。
@@ -100,6 +100,6 @@ copyright:
 
 要重置 API 用户密码：
 
-1. 在 {{site.data.keyword.GlobalizationPipeline_full}} 仪表板上，单击 **API 用户**选项卡。
+1. 在 {{site.data.keyword.GlobalizationPipeline_short}} 仪表板上，单击 **API 用户**选项卡。
 2. 单击**重置密码**图标 ![选择此图表以重置 API 用户密码](images/resetPW.png)，以重置特定用户标识的密码。 
 3. 单击**是**。 

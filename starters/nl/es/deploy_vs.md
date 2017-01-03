@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2016
+  years: 2015 2016
 
- 
+lastupdated: "2016-06-25"
+
+
 
 ---
 
@@ -14,8 +16,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # Desarrollo con Visual Studio
-
-*Última actualización: 23 de junio de 2016*
 
   1. Si aún no tiene Visual Studio, instale Visual Studio 2015 o Visual Studio Code siguiendo las instrucciones indicadas
 [aquí](https://msdn.microsoft.com/en-us/library/e2h7fzkw.aspx){: new_window}.

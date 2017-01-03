@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # 使用 JConsole 在 Bluemix 中監視 Liberty
 {: #jconsole}
-
-前次更新：2016 年 6 月 10 日
-{: .last-updated}
 
 ## 使用 JConsole 監視 Bluemix Liberty 運行環境的步驟如下：
 {: #steps_to_monitor}

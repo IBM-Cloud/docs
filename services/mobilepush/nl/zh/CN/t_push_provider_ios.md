@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 为 APNs 配置凭证
 {: #create-push-credentials-apns}
-上次更新时间：2016 年 10 月 17 日
+上次更新时间：2016 年 12 月 7 日
 {: .last-updated}
 
 通过 Apple 推送通知服务 (APNs)，应用程序开发者可以将远程通知从 Bluemix 上的 {{site.data.keyword.mobilepushshort}} 服务实例（提供者）发送到 iOS 设备和应用程序。消息会发送到设备上的目标应用程序。 
@@ -99,10 +102,7 @@ copyright:
 
 供应概要文件与应用程序标识一起来确定哪些设备可以安装并运行您的应用程序，以及您的应用程序可以访问哪些服务。对于每个应用程序标识，都可创建两个供应概要文件：一个用于开发，另一个用于分发。Xcode 使用开发供应概要文件来确定允许哪些开发者构建应用程序，以及允许哪些设备在应用程序上进行测试。
 
-###开始之前
-{: before-you-begin-provisioning-file}
-
-请确保您已执行以下操作：注册应用程序标识，针对 Push Notification Service 启用该标识，然后将其配置为使用开发和生产 APNs SSL 证书。
+请确保您已执行以下操作：注册应用程序标识，针对 {{site.data.keyword.mobilepushshort}} Service 启用该标识，然后将其配置为使用开发和生产 APNs SSL 证书。
 
 创建开发供应概要文件，如下所示：
 
@@ -127,27 +127,19 @@ copyright:
 
 要使用 {{site.data.keyword.mobilepushshort}} 服务发送通知，请上传 Apple 推送通知服务 (APNs) 所需的 SSL 证书。此外，也可以使用 REST API 来上传 APNs 证书。
 
-
-###开始之前
-{: before-you-begin-dashboard}
-
-
 <!-- Get your development and production APNs SSL certificate and the password associated with each type of certificate. For information, see Creating and configuring push credentials for APNs.-->
 
-APNs 所需的证书为 `.p12` 证书，其中包含构建和发布应用程序所需的专用密钥和 SSL 证书。您必须从 Apple Developer Web 站点的 Member Center 生成证书（此操作需要有效的 Apple Developer 帐户）。对于开发（沙箱）环境和生产（分发）环境，需要不同的证书。
+APNs 所需的证书为 `.p12` 证书。这些证书包含构建和发布应用程序所需的专用密钥和 SSL 证书。您必须从 Apple Developer Web 站点的 Member Center 生成证书（此操作需要有效的 Apple Developer 帐户）。对于开发（沙箱）环境和生产（分发）环境，需要不同的证书。
 
 **注**：当 `.cer` 文件出现在钥匙串访问中之后，请将其导出到您的计算机，以创建 `.p12` 证书。
 
 有关使用 APNs 的更多信息，请参阅 [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4)。
 
-在“推送”仪表板上设置 APNs，如下所示：
+要在“推送通知”服务仪表板上设置 APNs，请完成以下步骤：
 
-1. 在 Bluemix“仪表板”中打开后端应用程序，然后单击 **IBM Push Notifications** 服务，以打开“推送”仪表板。
-
-	这将显示“推送”仪表板：
-![设置推送通知仪表板](images/wizard.jpg)
-2. 在**配置**选项卡上，转至 **Apple 推送证书**部分，选择**沙箱**（开发）或**生产**（分发），然后上传在先前[步骤](#step18)中创建的 `p.12` 证书。
-![设置推送通知配置选项卡](images/credential_screen.jpg)
+1. 在“推送通知”服务仪表板上选择**配置**。
+2. 选择**移动**选项，以更新 **APNs 推送凭证**表单上的信息。
+3. 根据需要选择**沙箱**（开发）或**生产**（分发），然后上传在先前[步骤](#step18)中创建的 `p.12` 证书。![设置推送通知仪表板](images/wizard.jpg)
 3. 在**密码**字段中，输入与 `.p12` 证书文件相关联的密码，然后单击**保存**。 
 
 使用有效的密码成功上传证书后，即可开始发送通知。

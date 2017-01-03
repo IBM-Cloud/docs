@@ -9,12 +9,9 @@ lastupdated: "2016-10-19"
 # Creación de apps móviles desde el contenedor modelo de {{site.data.keyword.mobilefirstbp}} Starter
 {: #try_mobile}
 
-Última actualización: 19 de octubre de 2016
-{: .last-updated}
-
 Puede utilizar cada uno de los servicios de {{site.data.keyword.Bluemix}} Mobile independientemente. También puede utilizarlos juntos, con el contenedor modelo de {{site.data.keyword.mobilefirstbp}} Starter, para obtener el mayor beneficio.
 
-Para comenzar, utilice {{site.data.keyword.mobilefirstbp}} Starter para crear su app. El contenedor modelo le permite completar las siguientes acciones:
+Para comenzar, utilice {{site.data.keyword.mobilefirstbp}} Starter para crear su app. El contenedor modelo le permite llevar a cabo las siguientes tareas:
 
 * Cree un tiempo de ejecución Node.js con una aplicación de plantilla. Puede utilizar esta aplicación para proporcionar funciones de lado de servidor, como por ejemplo las API RESTful y los archivos estáticos. <!-- You can read more about operating this application in the Developing Mobile Backend section.-->
 * Proporcione una instancia de cada uno de los servicios de {{site.data.keyword.Bluemix_notm}} Mobile y enlace el servicio a la aplicación Node.js.
@@ -48,11 +45,12 @@ Arquitectura de ![{{site.data.keyword.Bluemix_notm}} Mobile Services](images/bms
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="icono de servicio {{site.data.keyword.amashort}}"> <b>{{site.data.keyword.amashort}}</b><br/>Utilice el servicio {{site.data.keyword.amafull}} para proteger las aplicaciones Node.js y Java for Liberty alojadas en {{site.data.keyword.Bluemix_notm}}. Al instrumentar la app para móvil con el SDK de {{site.data.keyword.amashort}}, puede necesitar que los usuarios inicien sesión para acceder a Node.js o los servicios de {{site.data.keyword.Bluemix_notm}} Mobile. Además de las prestaciones de seguridad, {{site.data.keyword.amashort}} también recopila datos analíticos, por lo que puede supervisar el rendimiento de la aplicación móvil y recopilar los registros del cliente y las estadísticas de uso. </td>
-<td valign="top"><b>Proveedores de identidad de usuarios</b> <br/>Puede utilizar los siguientes proveedores de identidad: <ul><li>Facebook</li><li>Google</li></ul></td>
+<td><img src="images/authentication_icon.png" alt="{{site.data.keyword.amashort}} service icon"> <b>{{site.data.keyword.amashort}}</b><br/>Utilice el servicio {{site.data.keyword.amafull}} para proteger las aplicaciones Node.js y Java for Liberty alojadas en {{site.data.keyword.Bluemix_notm}}. Al instrumentar la app para móvil con el SDK de {{site.data.keyword.amashort}}, puede necesitar que los usuarios inicien sesión para acceder a Node.js o los servicios de {{site.data.keyword.Bluemix_notm}} Mobile.
+<!-- In addition to security capabilities, {{site.data.keyword.amashort}} also gathers analytics data, so that you can monitor your mobile application performance and collect client logs and usage statistics.--> </td>
+<td valign="top"><b>Proveedores de identidad de usuarios</b> <br/>Puede utilizar los siguientes proveedores de identidad: <ul><li>Facebook</li><li>Google</li><li> Personalizada </li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="Icono del servicio Push Notifications"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>El servicio {{site.data.keyword.mobilepushfull}} ofrece una plataforma unificada para enviar y gestionar notificaciones push destinadas a plataformas móviles (iOS y Android) y aplicaciones de navegador web. Este servicio gestiona la correlación de los usuarios de aplicaciones en sus dispositivos, plataforma de dispositivos y navegadores, y maneja la asignación de notificaciones push en los suscriptores. Con este servicio, puede enviar difusiones, unicasts (en función del userID, deviceID), y etiquetas (o temas) basadas en notificaciones push para sus clientes.</td>
+<td><img src="images/push_icon.png" alt="icono servicio Notificaciones Push"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>El servicio {{site.data.keyword.mobilepushfull}} proporciona una plataforma unificada para enviar y gestionar notificaciones push destinadas a plataformas móviles (iOS y Android) y a aplicaciones de navegador web. Este servicio gestiona la correlación de los usuarios de aplicaciones en sus dispositivos, plataforma de dispositivos y navegadores, y maneja la asignación de notificaciones push en los suscriptores. Con este servicio, puede enviar difusiones, unicasts (en función del userID, deviceID), y etiquetas (o temas) basadas en notificaciones push para sus clientes.</td>
 <td valign="top"><b>Proveedores de servicio Push</b><ul><li>Apple Push Notifications Service</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>

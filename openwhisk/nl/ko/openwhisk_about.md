@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-08-02"
  
 
 ---
@@ -18,9 +18,6 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 정보
 
-마지막 업데이트 날짜: 2016년 8월 2일
-{: .last-updated}
-
 다음 절에서는 {{site.data.keyword.openwhisk}}에 대한 세부사항을 제공합니다.
 {: shortdesc}
 
@@ -29,9 +26,7 @@ copyright:
 
 {{site.data.keyword.openwhisk_short}}는 이벤트 구동 컴퓨팅 플랫폼으로 Serverless 컴퓨팅 또는 FaaS(Function as a Service)라고도 하며 이벤트 또는 직접 호출에 대한 응답으로 코드를 실행합니다. 
 
-다음 그림에서는
-상위 레벨 {{site.data.keyword.openwhisk_short}} 아키텍처를 보여줍니다.
-
+다음 그림에서는 상위 레벨 {{site.data.keyword.openwhisk_short}} 아키텍처를 보여줍니다. 
 
 ![{{site.data.keyword.openwhisk_short}} 아키텍처](OpenWhisk.png)
 

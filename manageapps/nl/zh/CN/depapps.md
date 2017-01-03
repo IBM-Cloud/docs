@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-12-07"
 ---
 
 
@@ -11,35 +11,91 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#部署应用程序
+# 部署应用程序
 {: #deployingapps}
-
-*上次更新时间：2016 年 7 月 28 日*
-{: .last-updated}
 
 您可以使用各种方法（例如，命令行界面和集成开发环境 (IDE)）将应用程序部署到 {{site.data.keyword.Bluemix}}。您还可以使用应用程序清单来部署应用程序。通过使用应用程序清单，可减少每次将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时必须指定的部署详细信息的数量。
 {:shortdesc}
 
-##应用程序部署
+## 应用程序部署
 {: #appdeploy}
 
 将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 包含两个阶段：应用程序编译打包和应用程序启动。
 
-###应用程序编译打包
+现在，Cloud Foundry 支持 Diego，这是一种新的运行时体系结构。Diego 支持多项容器技术，包括 Garden、Docker 和 Windows 容器。Cloud Foundry 的未来增强功能和修订将直接应用于 Diego，DEA 中将不再支持这些增强功能和修订。
 
-在编译打包阶段，Droplet Execution Agent (DEA) 会使用在 cf 命令行界面或 `manifest.yml` 文件中提供的信息来确定要为应用程序编译打包创建的内容。DEA 会选择相应的 buildpack 来编译打包应用程序，并且编译打包过程的结果为 Droplet。有关将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 体系结构，{{site.data.keyword.Bluemix_notm}} 的工作方式](../public/index.html#publicarch)。
+### 使用 Diego 对应用程序编译打包
+所有 Diego 组件都设计为进行集群，这意味着您可以轻松创建不同的可用性区域。所有 Diego 组件之间的安全通信会使用 TLS。
+
+在编译打包阶段，Diego 将关注与容器编排相关的所有方面。应用程序实例的分发通过 Diego Brain 执行，云控制器只用于对应用程序编译打包。Diego Brain 将应用程序分配到可通过 SSH 访问容器的单元中。
+
+为了验证应用程序的运行状况，Diego 支持用于 DEA 的基于端口的相同检查。但是，Diego 能够使用更通用的选项，如基于 URL 的运行状况检查，未来应该会启用这些选项。
+
+要在 Diego 中对应用程序编译打包，必须首先安装 cf CLI 和 [Diego-Enabler CLI 插件](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}。仅在迁移期间必须执行此操作。
+
+#### 已知问题
+ 下面是使用 Diego 的已知问题：
+  * 使用 `--no-route` 选项部署的工作程序应用程序未报告为“正常运行”。为了避免此问题，请使用 `cf set-health-check APP_NAME none` 命令禁用基于端口的运行状况检查。
+  * Diego 不使用 VCAP_APP_HOST 环境变量。如果代码引用了此变量，请将其替换为 0.0.0.0。
+  * Diego 不使用 VCAP_APP_PORT 环境变量。如果代码引用了此变量，请将其替换为 PORT，缺省情况下 PORT 设置为 8080。
+  * 不再支持 **cf files** 命令。替代命令为 **cf ssh**。有关 **cf ssh** 命令的更多详细信息，请参阅 [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)。
+  * 有些应用程序可能会使用大量文件描述符 (inode)。如果遇到此问题，必须使用 `cf scale APP_NAME [-k DISK]` 命令增大用于应用程序的磁盘限额。
+
+#### 在 Diego 上对新应用程序编译打包
+要在 Diego 上对新应用程序编译打包，必须在命令行上部署该应用程序，并使用标志指示将 Diego 作为后端。
+
+  1. 在不启动应用程序的情况下，对应用程序进行部署：
+  ```
+  $ cf push APPLICATION_NAME --no-start
+  ```
+  2. 设置 Diego 布尔值：
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+    或者采用替代方法：
+  ```
+  $ cf curl /v2/apps/$(cf app APPLICATION_NAME --guid) -X PUT -d '{"diego":true}'
+  ```
+  3. 启动应用程序：
+  ```
+  $ cf start APPLICATION_NAME
+  ```
+
+有关 **cf push** 命令的更多详细信息，请参阅 [cf push](/docs/cli/reference/cfcommands/index.html#cf_push)。
+
+#### 将现有应用程序切换到 Diego
+您可以通过使用 Diego 标志来部署现有应用程序，将该应用程序转换到 Diego。应用程序将立即开始在 Diego 上运行，并且最终将停止在 DEA 上运行。如果要确保正常运行时间，建议通过将应用程序的副本部署到 Diego，然后交换路径并向下扩展 DEA 应用程序，从而执行蓝绿部署。
+
+  设置 Diego 标志，并将应用程序切换为在 Diego 上运行：
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+
+  转换回 DEA：
+  ```
+  $ cf disable-diego APPLICATION_NAME
+  ```
+
+  验证应用程序正在哪个后端上运行：
+  ```
+  $ cf has-diego-enabled APPLICATION_NAME
+  ```
+
+
+### 使用 DEA 对应用程序编译打包
+在编译打包阶段，Droplet Execution Agent (DEA) 会使用在 cf 命令行界面或 `manifest.yml` 文件中提供的信息来确定要为应用程序编译打包创建的内容。DEA 会选择相应的 buildpack 来编译打包应用程序，并且编译打包过程的结果为 Droplet。有关将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 的更多信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 的工作方式](/docs/overview/whatisbluemix.html#howwork)。
 
 在编译打包过程中，DEA 会检查 buildpack 是否与应用程序相匹配。例如，Liberty 运行时用于 .war 文件，或者 Node.js 运行时用于 .js 文件。然后，DEA 会创建包含 buildpack 和应用程序代码的独立容器。容器由 Warden 组件进行管理。有关更多信息，请参阅 [How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}。
 
-###应用程序启动
+### 应用程序启动
 
 启动应用程序时，将创建 Warden 容器的一个或多个实例。可以使用 **cf files** 命令来查看存储在 Warden 容器的文件系统中的文件，例如日志。如果应用程序无法启动，那么 DEA 将停止该应用程序，并除去 Warden 容器的整个内容。因此，如果应用程序停止，或者如果应用程序的编译打包过程失败，那么不会有日志文件可供您使用。
 
-如果应用程序的日志不再可用，并因此导致 **cf files** 命令无法再用于查看编译打包错误的原因，那么可以改用 **cf logs** 命令。**cf logs** 使用 Cloud Foundry 日志聚集器来收集应用程序日志和系统日志的详细信息，并且可以查看在日志聚集器中缓冲的内容。有关日志聚集器的更多信息，请参阅[在 Cloud Foundry 中进行日志记录](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}。
+如果应用程序的日志不再可用，并因此导致 **cf files** 命令无法再用于查看编译打包错误的原因，那么可以改用 **cf logs** 命令。**cf logs** 使用 Cloud Foundry 日志聚集器来收集应用程序日志和系统日志的详细信息，并且可以查看在日志聚集器中缓冲的内容。有关日志聚集器的更多信息，请参阅 [Logging in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}。
 
 **注：**缓冲区大小是有限制的。如果应用程序运行了很长时间且未重新启动，那么输入 `cf logs appname --recent` 后可能不会显示日志，原因是日志缓冲区可能已清除。因此，要调试大型应用程序的编译打包错误，可以在部署应用程序时，在 cf 命令行界面的单独命令行中输入 `cf logs appname` 来跟踪日志。
 
-如果在 {{site.data.keyword.Bluemix_notm}} 上编译打包应用程序时遇到问题，那么可以执行[调试编译打包错误](../debug/index.html#debugging-staging-errors)中的步骤来解决问题。
+如果在 {{site.data.keyword.Bluemix_notm}} 上编译打包应用程序时遇到问题，那么可以执行[调试编译打包错误](/docs/debug/index.html#debugging-staging-errors)中的步骤来解决问题。
 
 ##使用 cf 命令部署应用程序
 {: #dep_apps}
@@ -56,7 +112,7 @@ copyright:
 cf push
   ```
   
-  有关 Liberty buildpack 的更多信息，请参阅 [Liberty for Java](../runtimes/liberty/index.html)。
+  有关 Liberty buildpack 的更多信息，请参阅 [Liberty for Java](/docs/runtimes/liberty/index.html)。
   
   * 要将 Java Tomcat 应用程序部署到 {{site.data.keyword.Bluemix_notm}}，请使用以下命令：
   
@@ -141,8 +197,6 @@ cf push appname
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |选项	|描述	|用法或示例|
 |:----------|:--------------|:---------------|
@@ -160,7 +214,7 @@ cf push -f appManifest.yml
 |**random-route**	|布尔值，用于将随机路径分配给应用程序。缺省值为 **false**。	|`random-route: true`|
 |**services**	|要绑定到应用程序的服务。	|`services: - mysql_maptest`|
 |**env**	|应用程序的定制环境变量。|`env: DEV_ENV: production`|
-*表 1. manifest.yml 文件中的受支持选项*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###样本 `manifest.yml` 文件
 

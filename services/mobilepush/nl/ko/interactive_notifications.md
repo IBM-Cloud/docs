@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 대화식 알림
 {: #interactive-notifications}
-마지막 업데이트 날짜: 2016년 10월 17일
+마지막 업데이트 날짜: 2016년 12월 6일
 {: .last-updated}
 
 대화식 알림을 사용자여 사용자는 알림이 도착했을 때 애플리케이션을 열지 않고 조치를 취할 수 있습니다. 대화식 알림이 도착하면 디바이스에 알림 메시지와 함께 조치 단추가 표시됩니다. 대화식 알림은 iOS 버전 8 이상이 설치된 디바이스에서 지원됩니다. iOS 버전 8 미만이 설치된 디바이스에 대화식 알림이 전송되는 경우에는 알림 조치가 표시되지 않습니다.  

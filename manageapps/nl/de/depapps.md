@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-12-07"
 ---
 
 
@@ -11,30 +11,119 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Anwendungen bereitstellen
+# Apps bereitstellen
 {: #deployingapps}
-
-*Letzte Aktualisierung: 28. Juli 2016*
-{: .last-updated}
 
 Sie können Anwendungen anhand verschiedener Methoden für {{site.data.keyword.Bluemix}} bereitstellen, beispielsweise über die Befehlszeilenschnittstelle oder über integrierte Entwicklungsumgebungen (IDEs). Darüber hinaus können Anwendungen mithilfe von Anwendungsmanifesten bereitgestellt werden. Bei Verwendung eines Anwendungsmanifests wird die Anzahl der Bereitstellungsdetails reduziert, die Sie jedes Mal angeben müssen, wenn Sie die Anwendung in {{site.data.keyword.Bluemix_notm}} bereitstellen.
 {:shortdesc}
 
-##Anwendungsbereitstellung
+## Anwendungsbereitstellung
 {: #appdeploy}
 
 Das Bereitstellen einer Anwendung in
 {{site.data.keyword.Bluemix_notm}} umfasst zwei Phasen: Das Staging der Anwendung und das Starten der
 Anwendung.
 
-###Staging einer Anwendung
+Cloud Foundry unterstützt jetzt eine neue Laufzeitarchitektur namens
+'Diego'. Diego unterstützt verschiedene Containertechnologien, unter anderem
+Garden, Docker und Windows-Container. Künftige Erweiterungen und Fixes für Cloud
+Foundry werden direkt in Diego umgesetzt und im DEA nicht unterstützt.
 
-Während der Staging-Phase werden die Informationen, die Sie in der Befehlszeilenschnittstelle 'cf' oder in der Datei `manifest.yml` angeben, von einem Droplet Execution Agent (DEA) verwendet, um zu entscheiden, was für das Staging der Anwendung erstellt werden muss. Der DEA wählt ein geeignetes Buildpack für das Staging Ihrer Anwendung aus, und das Ergebnis des Staging-Prozesses ist ein Droplet. Weitere Informationen zur Bereitstellung einer Anwendung in {{site.data.keyword.Bluemix_notm}} finden Sie unter [{{site.data.keyword.Bluemix_notm}}-Architektur, Funktionsweise von {{site.data.keyword.Bluemix_notm}}](../public/index.html#publicarch).
+### Staging einer Anwendung mit Diego
+Alle Diego-Komponenten sind konzeptionsgemäß in Gruppen zusammengefasst.
+Dies bedeutet, dass Sie ohne großen Aufwand unterschiedliche
+Verfügbarkeitszonen einrichten können. Die sichere Kommunikation zwischen allen Diego-Komponenten verwendet TLS.
+
+Während der Staging-Phase kümmert sich Diego um alle Aspekte, die mit der
+Containerkoordination verbunden sind. Die Verteilung der App-Instanzen erfolgt mit Diego Brain. Der Cloud-Controller
+ist lediglich für das Staging der Apps zuständig. Diego Brain ordnet die Apps
+in Zellen mit SSH-Zugriff auf die Container zu.
+
+Bei der Validierung des App-Status unterstützt Diego dieselben
+PORT-basierten Prüfungen, die für den DEA verwendet werden. Diego ist jedoch konzeptionsbedingt in der Lage, eher generische Optionen wie
+URL-basierte Statusprüfungen zu bieten, die künftig möglich sein sollten.
+
+Für das Staging von Apps in Diego müssen Sie zunächst sowohl die CLI 'cf' als auch das [Diego-Enabler-CLI-Plug-in](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} installieren. Dies ist nur während der Migrationsphase erforderlich.
+
+#### Bekannte Probleme
+ Im Zusammenhang mit der Verwendung von Diego sind die folgenden
+Probleme bekannt:
+  * Für Worker-Anwendungen, die mit der Option
+`--no-route`
+bereitgestellt werden, wird nicht ein einwandfreier Zustand gemeldet. Um dies zu verhindern, inaktivieren Sie die portbasierte Statusprüfung mit
+dem Befehl `cf
+set-health-check APP_NAME none`.
+  * Die Umgebungsvariable VCAP_APP_HOST wird von Diego nicht verwendet. Falls
+Ihr Code diese Variable referenziert, ersetzen
+Sie sie durch die Angabe 0.0.0.0.
+  * Die Umgebungsvariable VCAP_APP_HOST wird von Diego nicht verwendet. Falls Ihr Code diese Variable referenziert, ersetzen Sie sie durch die Angabe
+PORT (Standardeinstellung ist 8080).
+  * Der Befehl **cf files** wird nicht mehr
+unterstützt. Er wird durch den Befehl **cf ssh** ersetzt. Weitere Details
+über den Befehl **cf ssh** finden Sie unter
+[cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
+  * Einige Apps verwenden möglicherweise eine große Anzahl von
+Dateideskriptoren (inodes). Falls Sie dieses Problem feststellen, müssen Sie
+das Plattenkontingent für Ihre App mit dem Befehl `cf scale APP_NAME
+[-k DISK]` vergrößern.
+
+#### Staging einer neuen App bei Diego
+Zum Staging einer neuen Anwendung bei Diego müssen Sie die Anwendung in
+der Befehlszeile mit einem Flag bereitstellen, um Diego als Back-End anzugeben.
+
+  1. Anwendung ohne Starten bereitstellen:
+  ```
+  $ cf push ANWENDUNGSNAME --no-start
+  ```
+  2. Booleschen Wert für Diego festlegen:
+  ```
+  $ cf enable-diego ANWENDUNGSNAME
+  ```
+    Alternative:
+  ```
+  $ cf curl /v2/apps/$(cf app ANWENDUNGSNAME --guid) -X PUT -d '{"diego":true}'
+  ```
+  3. Anwendung starten:
+  ```
+  $ cf start ANWENDUNGSNAME
+  ```
+
+Weitere Details über den Befehl **cf push** finden Sie
+unter
+[cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
+
+#### Vorhandene App für Diego ändern
+Sie können für eine vorhandene App einen Übergang zu Diego vornehmen,
+indem Sie die Anwendung mit dem Diego-Flag bereitstellen. Die Ausführung der Anwendung wird sofort unter Diego gestartet und schließlich
+unter den DEAs gestoppt. Falls Sie die Verfügbarkeitszeit sicherstellen wollen, empfiehlt es sich, eine
+Blue-Green-Bereitstellung vorzunehmen. Hierzu stellen Sie eine Kopie Ihrer
+Anwendung für Diego bereit. Anschließend lagern Sie Routes aus und skalieren
+die DEA-Anwendung herab.
+
+  Führen Sie Folgendes aus, um das Diego-Flag festzulegen und Ihre App
+in die Ausführung unter Diego zu ändern:
+  ```
+  $ cf enable-diego ANWENDUNGSNAME
+  ```
+
+  Übergang zurück zu DEAs:
+  ```
+  $ cf disable-diego ANWENDUNGSNAME
+  ```
+
+  Back-End validieren, auf dem die Anwendung ausgeführt wird:
+  ```
+  $ cf has-diego-enabled ANWENDUNGSNAME
+  ```
+
+
+### Staging einer Anwendung mit DEA
+Während der Staging-Phase werden die Informationen, die Sie in der Befehlszeilenschnittstelle 'cf' oder in der Datei `manifest.yml` angeben, von einem Droplet Execution Agent (DEA) verwendet, um zu entscheiden, was für das Staging der Anwendung erstellt werden muss. Der DEA wählt ein geeignetes Buildpack für das Staging Ihrer Anwendung aus, und das Ergebnis des Staging-Prozesses ist ein Droplet. Weitere Informationen zur Bereitstellung einer Anwendung in {{site.data.keyword.Bluemix_notm}} finden Sie unter [Funktionsweise von {{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html#howwork).
 
 Während des Staging-Prozesses überprüft der DEA, ob das Buildpack mit der Anwendung übereinstimmt, d. h. für diese geeignet ist. Beispiel: eine Liberty-Laufzeit für eine .war-Datei oder eine Node.js-Laufzeit für .js-Dateien. Anschließend erstellt der DEA einen isolierten Container, der das Buildpack und den Anwendungscode enthält. Der Container wird von der Komponente 'Warden'
 verwaltet. Weitere Informationen finden Sie unter [How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
 
-###Starten einer Anwendung
+### Starten einer Anwendung
 
 Beim Starten einer Anwendung wird die Instanz des Warden-Containers erstellt. Gegebenenfalls werden auch
 mehrere Instanzen erstellt. Mithilfe des Befehls **cf files** können Sie die Dateien (beispielsweise Protokolle) anzeigen, die im
@@ -57,7 +146,7 @@ bereitstellen.
 
 Wenn beim Staging Ihrer Anwendungen unter
 {{site.data.keyword.Bluemix_notm}} Probleme auftreten, können Sie die Schritte im Thema
-[Staging-Fehler beheben](../debug/index.html#debugging-staging-errors) befolgen, um diese Probleme zu beheben.
+[Staging-Fehler beheben](/docs/debug/index.html#debugging-staging-errors) befolgen, um diese Probleme zu beheben.
 
 ##Bereitstellung von Anwendungen mit dem Befehl 'cf'
 {: #dep_apps}
@@ -83,7 +172,7 @@ für {{site.data.keyword.Bluemix_notm}} bereitstellen.
   cf push
   ```
   
-  Weitere Informationen zum Liberty-Buildpack finden Sie unter [Liberty for Java](../runtimes/liberty/index.html).
+  Weitere Informationen zum Liberty-Buildpack finden Sie unter [Liberty for Java](/docs/runtimes/liberty/index.html).
   
   * Um Java Tomcat-Anwendungen für {{site.data.keyword.Bluemix_notm}} bereitzustellen, verwenden Sie den folgenden Befehl:
   
@@ -175,8 +264,6 @@ Beispiel wird `appManifest.yml` als Dateiname verwendet:
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |Optionen	|Beschreibung	|Verwendung oder Beispiel|
 |:----------|:--------------|:---------------|
@@ -194,7 +281,7 @@ cf push -f appManifest.yml
 |**random-route**	|Ein boolescher Wert, der verwendet wird, um der Anwendung eine beliebige Route zuzuweisen. Der Standardwert ist **false**.	|`random-route: true`|
 |**services**	|Die Services, die an die Anwendung gebunden werden sollen.	|`services: - mysql_maptest`|
 |**env**	|Die angepassten Umgebungsvariablen für die Anwendung.|`env: DEV_ENV: production`|
-*Tabelle 1. Unterstützte Optionen in der Datei 'manifest.yml'*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###Beispiel für eine Datei `manifest.yml`
 

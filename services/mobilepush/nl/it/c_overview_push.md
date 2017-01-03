@@ -5,22 +5,27 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Informazioni su {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Ultimo aggiornamento: 17 ottobre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} è un servizio che puoi utilizzare per inviare notifiche ai dispositivi mobili iOS e Android e ai browser web Google Chrome e Mozilla Firefox e anche alle estensioni e alle applicazioni Google Chrome. Le notifiche possono essere destinate a tutti gli utenti dell'applicazione oppure a uno specifico insieme di utenti e dispositivi facendo uso delle tag. Puoi amministrare dispositivi, tag e sottoscrizioni. Puoi anche utilizzare API (application program interface) REST (Representational State Transfer) e SDK (software development kit) per sviluppare ulteriormente le tue applicazioni client. 
+IBM {{site.data.keyword.mobilepushshort}} è un servizio che puoi utilizzare per inviare notifiche ai dispositivi mobili iOS e Android, ai browser web Google Chrome, Mozilla Firefox e Safari e anche alle estensioni e alle applicazioni Google Chrome. Le notifiche possono essere destinate a tutti gli utenti dell'applicazione oppure a uno specifico insieme di utenti e dispositivi facendo uso delle tag. Puoi amministrare dispositivi, tag e sottoscrizioni. Puoi anche utilizzare API (application program interface) REST (Representational State Transfer) e SDK (software development kit) per sviluppare ulteriormente le tue applicazioni client. 
 
-{{site.data.keyword.mobilepushshort}} è anche disponibile come servizio Bluemix Dedicato. Per informazioni sul servizio dedicato {{site.data.keyword.mobilepushshort}}, vedi [Servizi dedicati](../../dedicated/index.html). Tieni presente che la scheda di monitoraggio di {{site.data.keyword.mobilepushshort}} non visualizza dati di analisi.
+{{site.data.keyword.mobilepushshort}} è anche disponibile come servizio Bluemix Dedicato. Per informazioni sul servizio dedicato {{site.data.keyword.mobilepushshort}}, vedi [Servizi dedicati](/docs/dedicated/index.html). Tieni presente che la scheda di monitoraggio di {{site.data.keyword.mobilepushshort}} non visualizza dati di analisi.
 
-Il servizio {{site.data.keyword.mobilepushshort}} è ora abilitato con OpenWhisk. Per ulteriori informazioni, vedi [OpenWhisk](../../openwhisk/index.html).
+Il servizio {{site.data.keyword.mobilepushshort}} è ora abilitato con OpenWhisk. Per ulteriori informazioni, vedi [OpenWhisk](/docs/openwhisk/index.html).
 
 
 ## Processo del servizio {{site.data.keyword.mobilepushshort}}
 {: #overview_push_process}
 
-I client browser web, mobili e le estensioni e le applicazioni Google Chrome possono sottoscriversi e registrarsi per il servizio {{site.data.keyword.mobilepushshort}}. All'avvio, le applicazioni client si registrano al servizio {{site.data.keyword.mobilepushshort}} e lo sottoscrivono. Le notifiche vengono spedite al servizio APNS (Apple Push Notification Service) o al server FCM (Firebase Cloud Messaging)/GCM (Google Cloud Messaging) e inviate quindi ai client mobili o browser registrati. 
+I client browser web, mobili e le estensioni e le applicazioni Google Chrome possono sottoscriversi e registrarsi per il servizio {{site.data.keyword.mobilepushshort}}. All'avvio, le applicazioni client si registrano al servizio {{site.data.keyword.mobilepushshort}} e lo sottoscrivono. Le notifiche vengono spedite al servizio APNS (Apple Push Notification Service) o al server FCM (Firebase Cloud Messaging)/GCM (Google Cloud Messaging) e inviate quindi ai client mobili o browser registrati.
 
 ![Panoramica Push](images/overview.jpg)
 
@@ -28,7 +33,7 @@ I client browser web, mobili e le estensioni e le applicazioni Google Chrome pos
 ###Applicazioni mobili e browser
 {: mobile-applications}
 
-All'avvio, le applicazioni client si registrano al servizio {{site.data.keyword.mobilepushshort}} e lo sottoscrivono per ricevere notifiche. 
+All'avvio, le applicazioni client si registrano al servizio {{site.data.keyword.mobilepushshort}} e lo sottoscrivono per ricevere notifiche.
 
 ###Applicazioni di backend
 {: backend-applications}
@@ -55,11 +60,12 @@ Servizi cloud specifici per piattaforme quali FCM/GCM o APNS (Apple Push Notific
 
 Le API {{site.data.keyword.mobilepushshort}} sono protette da due tipi di segreti - i) appSecret ii) clientSecret. 'appSecret' protegge le API normalmente richiamate dalle applicazioni di backend come le API da inviare a {{site.data.keyword.mobilepushshort}}, l'API configura le impostazioni.   'clientSecret' protegge le API normalmente richiamate dalle applicazioni client mobili. È presente solo un'API correlata alla registrazione di un dispositivo con un ID utente associato che richiede 'clientSecret'. Nessuna delle altre API richiamate dai client mobili richiede il clientSecret. 'appSecret' e 'clientSecret' sono assegnati a ogni istanza del servizio al momento del bind di un'applicazione al servizio {{site.data.keyword.mobilepushshort}}. Fai riferimento alla documentazione API ReST per ulteriori informazioni su come i segreti vengono trasmessi e a quale API.
 
-Sono necessarie le precedenti applicazioni per trasmettere il clientSecret solo quando viene seguita la registrazione o l'aggiornamento dei dispositivi con il campo userID. Tutte le altre API richiamate dai client mobili e browser non richiedono il clientSecret. Queste vecchie applicazioni possono continuare ad utilizzare il clientSecret facoltativamente per le registrazioni del dispositivo o per l'aggiornamento delle chiamate. Tuttavia, è fortemente raccomandato che il controllo clientSecret venga applicato a tutte le chiamate API client. Per applicarlo alle applicazioni esistenti, è stata pubblicata una nuova API denominata 'verifyClientSecret'. Per le nuove applicazioni, il controllo clientSecret sarà imposto per tutte le chiamate API client e questo comportamento non può essere modificato con l'API 'verfiyClientSecret'. 
+Sono necessarie le precedenti applicazioni per trasmettere il clientSecret solo quando viene seguita la registrazione o l'aggiornamento dei dispositivi con il campo userID. Tutte le altre API richiamate dai client mobili e browser non richiedono il clientSecret. Queste vecchie applicazioni possono continuare ad utilizzare il clientSecret facoltativamente per le registrazioni del dispositivo o per l'aggiornamento delle chiamate. Tuttavia, è fortemente raccomandato che il controllo clientSecret venga applicato a tutte le chiamate API client. Per applicarlo alle applicazioni esistenti, è stata pubblicata una nuova API denominata 'verifyClientSecret'.  Per le nuove applicazioni, il controllo clientSecret sarà imposto per tutte le chiamate API client e questo comportamento non può essere modificato con l'API 'verfiyClientSecret'.
 
 Per impostazione predefinita, la verifica del segreto client viene forzata solo nelle nuove applicazioni. Alle applicazioni nuove e esistenti è consentito abilitare o disabilitare la verifica del segreto client utilizzando l'API REST verifyClientSecret. Ti raccomandiamo di forzare la verifica del segreto client per evitare l'esposizione dei dispositivi agli utenti che possono conoscere il applicationId e il deviceId.
 
-Assicurati che il 'clientSecret' sia mantenuto confidenziale e non inserirlo mai nell'applicazione mobile. Esistono vari modelli di inizializzazione dell'applicazione che possono essere utilizzati per estrarre il 'clientSecret' dinamicamente durante il runtime delle applicazioni. Il diagramma della sequenza illustra il possibile modello. ![Enable_Push](images/init_client_secret.jpg) 
+Assicurati che il 'clientSecret' sia mantenuto confidenziale e non inserirlo mai nell'applicazione mobile. Esistono vari modelli di inizializzazione dell'applicazione che possono essere utilizzati per estrarre il 'clientSecret' dinamicamente durante il runtime delle applicazioni. Il diagramma della sequenza illustra il possibile modello.
+![Enable_Push](images/init_client_secret.jpg) 
 
 ## Tipi di {{site.data.keyword.mobilepushshort}}
 {: #overview-push-types}
@@ -89,7 +95,7 @@ Le notifiche Unicast sono messaggi destinati a un dispositivo o un utente partic
 
 Tuttavia, le notifiche Unicast indirizzate agli utenti richiedono l'associazione di un ID utente a un dispositivo al momento della registrazione del dispositivo mobile client o del browser web o delle estensioni e delle applicazioni Chrome per {{site.data.keyword.mobilepushshort}}.   
 
-Normalmente, un'applicazione client prima eseguirà un ciclo di autenticazione in cui l'utente dell'applicazione mobile viene autenticato in un servizio di autenticazione come [Mobile Client Access](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html). Dopo la corretta autenticazione, l'ID dell'utente autenticato viene trasmesso all'API Push Device Registration. 
+Normalmente, un'applicazione client prima eseguirà un ciclo di autenticazione in cui l'utente dell'applicazione mobile viene autenticato in un servizio di autenticazione come [Mobile Client Access](docs/services/mobileaccess/index.html). Dopo la corretta autenticazione, l'ID dell'utente autenticato viene trasmesso all'API Push Device Registration. 
 Per inviare notifiche Unicast tramite l'API REST, assicurati che gli ID del dispositivo o dell'utente siano forniti durante l'inserimento in una risorsa messaggi.
 
 ###Notifiche basate sulla piattaforma
@@ -115,7 +121,7 @@ La dimensione del payload del messaggio di {{site.data.keyword.mobilepushshort}}
 
 Per iOS 8 e successivi, la dimensione massima consentita è 2 kilobyte. Il Push Notification service per Apple non invia notifiche che superano questo limite.
 
-###Browser Android, Chrome e Firefox
+###Estensioni Android, browser Firefox, browser Chrome e applicazioni Chrome &
 {: android-message-size}
 
-Esiste una limitazione di 4 kilobyte come massimo consentito per la dimensione del messaggio.  
+Esiste una limitazione di 4 kilobyte come massimo consentito per la dimensione del payload del messaggio.  

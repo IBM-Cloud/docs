@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -13,25 +14,36 @@ copyright:
 
 ## Liste des dernières mises à jour apportées au pack de construction Liberty.
 
-Dernière mise à jour : 13 septembre 2016
-{: .last-updated}
+### 1 novembre 2016 : Pack de construction Liberty v3.4.1-20161030-2241 mis à jour
+* Le pack de construction contient un correctif destiné à remédier à un problème lié au démarrage de certains types d'application. En particulier, les applications déployées en tant que répertoire de serveur ou package de serveur avec les fichiers d'application dans le répertoire `dropins`.
+
+### 21 octobre 2016 : Pack de construction Liberty v3.4-20161018-2004 mis à jour
+* La version d'exécution Liberty par défaut `16.0.0.3` a été mise à jour pour inclure les correctifs temporaires [PI68805](http://www-01.ibm.com/support/docview.wss?uid=swg1PI68805) et [PI69141](http://www-01.ibm.com/support/docview.wss?uid=swg1PI69141). 
+* La version d'exécution Liberty mensuelle a été mise au niveau de l'édition [2016.9.0.1](https://developer.ibm.com/wasdev/blog/2016/09/23/beta-websphere-liberty-and-tools-october-2016/). 
+* Le pack de construction contient également une version mise à jour de l'environnement IBM JRE 8.0 : SR3 FP12.
+* Les environnements IBM JRE 8.0 et 7.1 sont désormais configurés pour activer [tous les protocoles TLS lorsque `SSLContext.getContext("TLS")` est appelé](https://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/matchsslcontext_tls.html) afin de correspondre au comportement du JRE d'Oracle. L'environnement IBM JRE 7.1 est également configuré pour activer [tous les protocoles TLS lorsque `SSLContext.getDefault()` est appelé](https://www.ibm.com/support/knowledgecenter/SSYKE2_7.1.0/com.ibm.java.security.component.71.doc/security-component/jsse2Docs/overrideSSLprotocol.html) pour correspondre au comportement du JRE JRE 8.0 d'IBM. 
+* Le pack de construction fournit un collecteur de données mis à jour pour le [service Monitoring and Analytics](/docs/services/monana/index.html#monana_oview).
+* Le pack de construction a été restauré pour télécharger le [pilote JDBC MariaDB Connector/J](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) 1.5.x le plus récent lors de la [configuration automatique du type de service MySQL](autoConfig.html).
+* Le pack de construction introduit la prise en charge de la personnalisation du comportement de configuration automatique de service grâce à la variable d'environnement `LBP_SERVICE_CONFIG_<serviceType>`. Il peut ainsi être employé pour modifier l'emplacement ou la version d'un pilote JDBC à télécharger pour le service MySQL. Pour plus d'informations, voir la documentation relative aux [services qui prennent en charge la configuration automatique](autoConfig.html). 
+* Le pack de construction contient également un certain nombre d'améliorations [Diego](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) liées au diagnostic d'intégrité d'application et à la fonctionnalité [App Management](/docs/manageapps/app_mng.html).
 
 ### 16 septembre 2016 : Pack de construction Liberty v3.3-20160912-1729 mis à jour
 * La version d'exécution Liberty par défaut a été mise au niveau de l'édition [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661). La version d'exécution Liberty mensuelle a été mise au niveau de l'édition [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/). Avec ces mises à jour, les fonctions Liberty `cloudant-1.0` et `passwordUtilities-1.0`, disponibles auparavant en tant que fonctions bêta, sont désormais disponibles en tant que fonctions prêtes pour la
-production. 
+production.
+* Les [correctifs de sécurité](http://www-01.ibm.com/support/docview.wss?uid=swg21990527) de l'environnement d'exécution Liberty sont inclus. 
 * Le pack de construction contient également une version mise à jour de l'environnement IBM JRE 8.0 : SR3 FP11.
 * Le pack de construction a été ajusté pour télécharger le dernier niveau du [pilote JDBC MariaDB Connector/J](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) lors de l'exécution de la [configuration automatique du type MySQL de services](autoConfig.html), du fait d'un problème avec le dernier pilote 1.5.x.
 
 ### 26 août 2016 : Pack de construction Liberty v3.2-20160822-2200 mis à jour
 * Le pack de construction contient également les versions mises à jour d'IBM JRE : 8 SR3 FP10 et 7.1 SR3 FP50.
 * La version d'exécution Liberty mensuelle a été mise au niveau de l'édition [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/).
-* Le plug-in de service qui fournit le [support de configuration automatique](autoConfig.html) pour le service [SQL Database](../../services/SQLDB/index.html#SQLDB) a été mis à jour pour toujours utiliser les certificats sécurisés JVM lors de la connexion au service sur TLS.
+* Le plug-in de service qui fournit le [support de configuration automatique](autoConfig.html) pour le service [SQL Database](/docs/services/SQLDB/index.html#SQLDB) a été mis à jour pour toujours utiliser les certificats sécurisés JVM lors de la connexion au service sur TLS.
 
 ### 22 juillet 2016 : Pack de construction Liberty v3.1-20160717-2254 mis à jour
-* La fonctionnalité [Gestion de l'appli](../../manageapps/app_mng.html) a été mise à jour pour prendre en charge l'authentification fédérée. De plus, le contexte d'exécution Node.js dont se servent les utilitaires `devconsole` et `shell` a été mis à jour vers la version la plus récente, `0.12.15`. 
+* La fonctionnalité [Gestion de l'appli](/docs/manageapps/app_mng.html) a été mise à jour pour prendre en charge l'authentification fédérée. De plus, le contexte d'exécution Node.js dont se servent les utilitaires `devconsole` et `shell` a été mis à jour vers la version la plus récente, `0.12.15`. 
 * Le pack de construction ajoute une prise en charge de l'agent de surveillance d'application [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/).
-* Le pack de construction fournit un collecteur de données mis à jour pour le [service Monitoring and Analytics](../../services/monana/index.html#monana_oview).
-* Le pack de construction fournit aussi une version mise à jour de l'agent pour le [service de mise à l'échelle automatique](../../services/Auto-Scaling/index.html). 
+* Le pack de construction fournit un collecteur de données mis à jour pour le [service Monitoring and Analytics](/docs/services/monana/index.html#monana_oview).
+* Le pack de construction fournit aussi une version mise à jour de l'agent pour le [service de mise à l'échelle automatique](/docs/services/Auto-Scaling/index.html). 
 * La version d'exécution Liberty mensuelle a été mise au niveau de l'édition [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/).
 
 ### 17 juin 2016 : Pack de construction Liberty v3.0-20160608-1450 mis à jour
@@ -46,17 +58,17 @@ production.
 * Le pack de construction contient également les versions mises à jour d'IBM JRE : 8 SR3 et 7.1 SR3 FP40. 
 * Le pack de construction ajoute la prise en charge initiale de l'agent de surveillance d'application [AppDynamics](https://www.appdynamics.com/).
 * La prise en charge de [Dynatrace](dynatrace.html) a été améliorée afin de simplifier l'installation de l'agent.
-* Le pack de construction fournit un collecteur de données mis à jour pour le [service Monitoring and Analytics](../../services/monana/index.html#monana_oview). Il contient un correctif destiné à remédier un problème lié à la collecte de données de segment de mémoire maximales.
-* L'environnement d'exécution Node.js dont se servent les [utilitaires devconsole et shell d'App Management](../../manageapps/app_mng.html#app_management) a été mis à jour vers la version 0.12.13 la plus récente.
+* Le pack de construction fournit un collecteur de données mis à jour pour le [service Monitoring and Analytics](/docs/services/monana/index.html#monana_oview). Il contient un correctif destiné à remédier un problème lié à la collecte de données de segment de mémoire maximales.
+* L'environnement d'exécution Node.js dont se servent les [utilitaires devconsole et shell d'App Management](/docs/manageapps/app_mng.html#app_management) a été mis à jour vers la version 0.12.13 la plus récente.
 
 ### 25 mars 2016 : Pack de construction Liberty v2.7-20160321-1358 mis à jour
 * Le pack de construction contient une version mise à jour du profil Liberty qui repose sur la [version bêta de mars](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). La version mise à jour de Liberty met à disposition la fonction bêta cloudant-1.0 dans Bluemix.
 * Le pack de construction contient également les versions mises à jour suivantes d'IBM JRE : 8 SR2 FP12 et 7.1 SR3 FP32. 
-* Le pack de construction fournit une version mise à jour de l'agent pour le [service Auto-Scaling](../../services/Auto-Scaling/index.html). 
-* Le pack de construction comporte désormais un nouveau collecteur de données pour le [service Monitoring and Analytics](../../services/monana/index.html#monana_oview). Le nouveau collecteur active la configuration des seuils de surveillance et contient un certain nombre de correctifs de bogue.
+* Le pack de construction fournit une version mise à jour de l'agent pour le [service Auto-Scaling](/docs/services/Auto-Scaling/index.html). 
+* Le pack de construction comporte désormais un nouveau collecteur de données pour le [service Monitoring and Analytics](/docs/services/monana/index.html#monana_oview). Le nouveau collecteur active la configuration des seuils de surveillance et contient un certain nombre de correctifs de bogue.
 * Le pack de construction fournit un pilote JDBC DB2 version 4.19.49 mis à jour. 
 * L'environnement d'exécution Node.js dont se servent les [utilitaires devconsole et shell
-d'App Management](../../manageapps/app_mng.html#app_management) a  été mis à jour vers la version 0.12.12 la plus récente.
+d'App Management](/docs/manageapps/app_mng.html#app_management) a  été mis à jour vers la version 0.12.12 la plus récente.
 
 ### 7 mars 2016 : Pack de construction Liberty v2.6-20160225-1649 mis à jour
 * Le pack de construction ajoute la prise en charge de la surveillance d'applications Dynatrace. Pour plus d'informations, voir [Utilisation de Dynatrace](dynatrace.html).
@@ -84,7 +96,7 @@ d'Apache Commons Collection](http://www-01.ibm.com/support/docview.wss?uid=swg21
 [pilote Java
 MongoDB](https://docs.mongodb.org/ecosystem/drivers/java/) version 2.13.3. Le nouveau pilote est compatible avec MongoDB versions 2.4, 2.6 et 3.0.
 * Le pack de construction fournit également une version mise à jour du collecteur de données pour le
-[service Monitoring and Analytics](../../services/monana/index.html). Le collecteur de
+[service Monitoring and Analytics](/docs/services/monana/index.html). Le collecteur de
 données mis à jour propose des fonctions de trace de méthode améliorées.
 
 ### 16 octobre 2015 : Pack de construction Liberty v2.1-20151006-0912 mis à jour
@@ -96,7 +108,7 @@ en tant que fonctions bêta, sont désormais disponibles en tant que fonctions p
 * Le pack de construction contient également plusieurs optimisations et améliorations des performances :
   * La fonction d'examen des archives de bean implicites [CDI 1.2](optionsForPushing.html) est
 désactivée par défaut lors du déploiement des fichiers WAR ou EAR.
-  * Pour réduire la taille des gouttelettes, les [utilitaires App Management](../../manageapps/app_mng.html) devconsole et shell requièrent une opération de reconstitution au lieu d'un redémarrage.
+  * Pour réduire la taille des gouttelettes, les [utilitaires App Management](/docs/manageapps/app_mng.html) devconsole et shell requièrent une opération de reconstitution au lieu d'un redémarrage.
   * Le cache de classe partagée d'IBM JRE est désactivé car il n'a pas été réutilisé dans l'environnement Bluemix.
 
 ### 18 septembre 2015 : Pack de construction Liberty v2.0-20150914-1535 mis à jour
@@ -122,7 +134,7 @@ environnements d'exécution Java (JRE) mis à jour contiennent les
 [correctifs de sécurité les plus récents](http://www-01.ibm.com/support/docview.wss?uid=swg21964161) ainsi
 que d'autres améliorations.
 * Le plug-in de service qui fournit le [support de configuration automatique](autoConfig.html) pour le service
-[Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant) a été mis à jour pour garantir que les connexions au service sont établies sur un canal sécurisé.
+[Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant) a été mis à jour pour garantir que les connexions au service sont établies sur un canal sécurisé.
 
 ### 21 juillet 2015 : Pack de construction Liberty v1.20-20150713-1450 mis à jour
 * Le pack de construction contient une version mise à jour du profil Liberty en fonction de
@@ -132,7 +144,7 @@ fonctions prêtes pour la production. En raison du port et d'autres restrictions
 intégralement prises en charge sur la plateforme.
 * Le pack de construction reconnaît et exécute des packages d'applications avec [distZip-style](https://docs.gradle.org/current/userguide/application_plugin.html).
 * Le pack de construction contient un collecteur de données mis à jour pour le
-[service Monitoring and Analytics](../../services/monana/index.html) ainsi que le
+[service Monitoring and Analytics](/docs/services/monana/index.html) ainsi que le
 client WebSphere eXtreme Scale qui prennent en charge la nouvelle version de l'environnement d'exécution Liberty.
 
 ### 30 juin 2015 : Pack de construction Liberty v1.19.1-20150622-1509 mis à jour
@@ -144,9 +156,9 @@ Relic](newRelic.html) a été mis à jour vers la version 3.17. La nouvelle vers
 
 ### 14 juin 2015 : Pack de construction Liberty v1.19-20150608-1717 mis à jour
 * Le pack de construction contient plusieurs améliorations de la gestion des applications, notamment la prise en charge de la console de développement et
-un accès Web à l'interpréteur de commandes. Pour plus d'informations, voir la [documentation relative à la gestion des applications](../../manageapps/app_mng.html).
+un accès Web à l'interpréteur de commandes. Pour plus d'informations, voir la [documentation relative à la gestion des applications](/docs/manageapps/app_mng.html).
 * Le pack de construction contient également un correctif visant à résoudre un problème qui empêchait de trouver la fonction Liberty pour le
-[service Monitoring and Analytics](../../services/monana/index.html).
+[service Monitoring and Analytics](/docs/services/monana/index.html).
 
 ### 27 mai 2015 : Pack de construction Liberty v1.18-20150519-1642 mis à jour
 * Le pack de construction contient une version mise à jour du profil Liberty qui repose sur la
@@ -167,7 +179,7 @@ fonctions Liberty activées pour une application lors du déploiement d'un fichi
 [Applications
 autonomes](optionsForPushing.html#stand_alone_apps) pour plus d'informations.
 * Le plug-in du [service Monitoring and
-Analytics](../../services/monana/index.html) a été mis à jour afin de réduire la taille des journaux générés pour le service.
+Analytics](/docs/services/monana/index.html) a été mis à jour afin de réduire la taille des journaux générés pour le service.
 * Avec cette version du pack de construction, la façon dont les fichiers d'application sont présentés dans la gouttelette a changé. La modification
 apportée à la structure de fichier élimine la complexité relative à la gestion des liens symboliques et ne devrait pas avoir d'impact sur les applications.
 
@@ -184,7 +196,7 @@ le fichier **ibm-web-ext.xml**.
 [version bêta de
 mars](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-tools-march-2015/). La version mise à jour des profils Liberty met à disposition la fonction bêta jsf-2.2 dans Bluemix.
 * Le pack de construction contient également une version mise à jour du collecteur de données pour le
-[service Monitoring and Analytics](../../services/monana/index.html).
+[service Monitoring and Analytics](/docs/services/monana/index.html).
 
 ### 20 mars 2015 : Mise à jour du pack de construction Liberty version 1.14-20150319-1159
 * Cette version du pack de construction contient un environnement d'exécution Java IBM JRE 7.1.2.11 mis à jour avec
@@ -210,7 +222,7 @@ de février](https://developer.ibm.com/wasdev/blog/2015/02/13/announcing-liberty
 * Le pack de construction contient une version mise à jour du profil Liberty qui repose sur la
 [version bêta
 de janvier](https://developer.ibm.com/wasdev/blog/2015/01/16/announcing-liberty-beta-tools-january-2015/).
-* Le pack de construction contient une version épurée du collecteur de données pour le service [Monitoring and Analytics](../../services/monana/index.html#gettingstartedtemplate).
+* Le pack de construction contient une version épurée du collecteur de données pour le service [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
 
 ### 23 janvier 2015 : Mise à jour du pack de construction Liberty version 1.11-20150119-1511
 * Le pack de construction contient un environnement d'exécution Java IBM JRE version 7.1 SR2 FP1 mis à jour.
@@ -267,7 +279,7 @@ déploiement des applications avec une configuration de serveur contenant des
 caractères Unicode.
 
 ### 23 octobre 2014 : Mise à jour du pack de construction Liberty version 1.6-20141013-1628
-* Le pack de construction comporte désormais un nouveau collecteur de données pour [Monitoring and Analytics](../../services/monana/index.html). Le nouveau collecteur de données
+* Le pack de construction comporte désormais un nouveau collecteur de données pour [Monitoring and Analytics](/docs/services/monana/index.html). Le nouveau collecteur de données
 collecte des informations de diagnostic approfondies qui permettent aux utilisateurs du plan Diagnostics du service de diagnostiquer les problèmes affectant leurs
 applications, en traçant leur origine jusqu'à la ligne de code spécifique concernée.
 * Le pack de construction contient des versions mises à jour des agents de gestion et de mise à l'échelle qui comprennent des correctifs de bogue et des améliorations mineures. Il inclut également une version mise à jour du [profil Liberty](https://developer.ibm.com/wasdev/) et du [pilote Java MongoDB](https://docs.mongodb.org/ecosystem/drivers/java/), v2.12.3.

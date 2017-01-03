@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,9 +13,6 @@
 
 # Insights for Twitter - Beispiele
 {: #examples}
-
-*Letzte Aktualisierung: 13. Mai 2016*
-{: .last-updated}
 
 Als Einführung in den {{site.data.keyword.twittershort}}-Service können Sie die bereitgestellten Beispiele dazu verwenden, sich mit der Nutzung des Service vertraut zu machen.
 {: shortdesc}
@@ -184,7 +189,7 @@ HTTP/1.1
 ## Suche nach Tweets
 {: #searching_tweets}
 
-Sie können in Ihrer Anwendung eine GET-Operation absetzen, um Tweets aus einem der Streams abzurufen. Die Suche nach Decahose-Tweets wird beispielsweise wie folgt implementiert: `/api/v1/messages/search?q=QUERY&size=NUMBER&from=NUMBER`. Im Rahmen des Einstiegsplans können Benutzer die Suche nach Tweets des PowerTrack-Streams wie folgt implementieren: `/api/v1/tracks/{trackId}/messages/search?q=QUERY&size=NUMBER&from=NUMBER`. 
+Sie können in Ihrer Anwendung eine GET-Operation absetzen, um Tweets aus einem der Streams abzurufen. Die Suche nach Decahose-Tweets wird beispielsweise wie folgt implementiert: `/api/v1/messages/search?q=QUERY&size=NUMBER&from=NUMBER`. Im Rahmen des Einstiegsplans können Benutzer die Suche nach Tweets des PowerTrack-Streams wie folgt implementieren: `/api/v1/tracks/{trackId}/messages/search?q=QUERY&size=NUMBER&from=NUMBER`.
 
 Der Parameter "size" gibt die Anzahl der Nachrichten an, die in einer Abfrageantwort zurückgegeben werden sollen, der Parameter "from" gibt die ursprüngliche Nachricht an, die im vollständigen Ergebnissatz zurückgegeben werden soll. Die Referenz {trackId} ist die eindeutige ID für einen bestimmten Track.
 Mithilfe von cURL können Sie im Decahose-Stream nach Tweets suchen, die die Zeichenfolge "IBM" enthalten, indem Sie Folgendes eingeben:

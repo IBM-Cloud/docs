@@ -14,7 +14,7 @@ copyright:
 # 使用束
 {: #globalizationpipeline_workingwithbundles}
 
-*上次更新时间：2016 年 7 月 6 日*
+*上次更新时间：2016 年 8 月 30 日*
 {: .last-updated}
 
 您所创建的每个束都包含资源文件的键值对，以及生成的完整翻译集。
@@ -131,7 +131,7 @@ define({
 </tbody>
 </table>
 
-**注：**英语是目前唯一受支持的源语言。随着 {{site.data.keyword.GlobalizationPipeline_full}} 服务的发展，将会添加其他源和目标语言。
+**注：**{{site.data.keyword.GlobalizationPipeline_short}} 的缺省机器翻译引擎仅提供对将英语作为源语言的支持。但可在 {{site.data.keyword.GlobalizationPipeline_short}} 中配置替代的机器翻译引擎来支持其他非英语源语言/语言对。
 
 当您创建束时，它们会添加到**束**选项卡中，以便您可以轻松地对它们进行访问。从那里，可以对翻译执行其他任务。
 
@@ -190,7 +190,7 @@ define({
 
 ### 下载生成的目标语言翻译
 
-{{site.data.keyword.GlobalizationPipeline_full}} 提供多种方法，可将目标语言的翻译引入到您的应用程序中。您可以将翻译下载为资源文件，并在您的应用程序构建中包含该资源文件。您还可以通过 {{site.data.keyword.GlobalizationPipeline_full}}，使用其中一个开放式源代码 [SDK](https://github.com/IBM-Bluemix/gp-common)，动态地参考翻译。 
+{{site.data.keyword.GlobalizationPipeline_short}} 提供多种方法，可将目标语言的翻译引入到您的应用程序中。您可以将翻译下载为资源文件，并在您的应用程序构建中包含该资源文件。您还可以通过 {{site.data.keyword.GlobalizationPipeline_short}}，使用其中一个开放式源代码 [SDK](https://github.com/IBM-Bluemix/gp-common)，动态地参考翻译。 
 
 <!-- For information on {{site.data.keyword.GlobalizationPipeline_full}} SDKs, see <link>. -->
 

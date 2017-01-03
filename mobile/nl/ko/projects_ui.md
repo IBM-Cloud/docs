@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
@@ -13,10 +13,7 @@ lastupdated: "2016-10-13"
 # UI 스타터를 사용하여 프로젝트 작성
 {: #projects_ui}
 
-마지막 업데이트 날짜: 2016년 10월 13일
-{: .last-updated}
-
-{{site.data.keyword.Bluemix}} 모바일 대시보드에서 UI 스타터를 사용하여 {{site.data.keyword.Bluemix_notm}} 환경에 프로젝트를 작성할 수 있습니다. 이 프로시저는 코드 스타터를 사용하는 프로젝트에 적용되지 않습니다. 코드 스타터 관련 지시사항은 [코드 스타터를 사용하여 프로젝트 작성](projects_code.html)을 참조하십시오.
+{{site.data.keyword.Bluemix}} 모바일 대시보드에서 [UI 스타터](starters.html#UI_Starter)를 사용하여 {{site.data.keyword.Bluemix_notm}} 환경에 프로젝트를 작성할 수 있습니다. 이 프로시저는 코드 스타터를 사용하는 프로젝트에 적용되지 않습니다. 코드 스타터 관련 지시사항은 [코드 스타터를 사용하여 프로젝트 작성](projects_code.html)을 참조하십시오.
 {:shortdesc}
 
 UI 스타터를 사용하여 프로젝트를 작성하려면 다음 단계를 완료하십시오. 
@@ -39,7 +36,7 @@ UI 스타터를 사용하여 프로젝트를 작성하려면 다음 단계를 �
 	
 2. **프로젝트 개요** 화면에서 선택사항을 결정하십시오. **프로젝트 개요** 화면에는 프로젝트와 프로젝트에 추가할 수 있는 선택적 기능(예: Push Notifications)에 대한 정보가 표시됩니다.   
 
-	1. 선택사항: 나열된 기능 중 하나를 프로젝트에 추가하려면 **추가**를 선택하십시오. 서비스의 **서비스 이름**을 편집하고 **작성**을 클릭하십시오. 
+	1. 선택사항: 나열된 기능 중 하나를 프로젝트에 추가하려면 **추가**를 선택하십시오. 서비스의 **서비스 이름**을 편집하고 **작성**을 클릭하십시오. 프로젝트에 서비스를 추가하면 해당 서비스의 {{site.data.keyword.Bluemix_notm}} 페이지에 링크됩니다. 서비스에 필요한 정보를 제공하여 서비스를 구성하십시오. 
 	
 	2. 선택사항: 프로젝트에 추가하려는 추가 기능에 대해 *a* 단계를 반복하십시오.  
 
@@ -47,11 +44,13 @@ UI 스타터를 사용하여 프로젝트를 작성하려면 다음 단계를 �
 
    참고: 코드 스타터에는 사용자 정의할 수 있는 사용자 인터페이스가 없으므로 *디자인* 탭을 사용할 수 없습니다. 
 
-    1. 탐색 메뉴에서 **UI 빌더**를 선택하여 앱의 디자인을 사용자 정의하십시오. <!--Most of the design screens have sections that begin with a navigation on the left of the screen, and the sections more specific as it moves to the right side preview of your app. Note: Not all design screens in the starters have the same sections.--> 
+    1. 탐색 메뉴에서 **UI 빌더**를 선택하여 앱의 디자인을 사용자 정의하십시오.  
+	
+		**팁:** UI 빌더의 빠른 개요를 보려면 UI 빌더를 선택한 후 탐색에서 **작동 방법 보기**를 선택하십시오.  
 	
 	2. **화면** 탭에서 앱 레이아웃을 사용자 정의하십시오. 
 	
-	3. **화면 작성**을 선택하여 새 화면을 추가하십시오. 앱에서 참조하기 쉽도록 새 화면의 이름을 지정하십시오. 다음 유형의 화면 중에서 선택할 수 있습니다.  
+	3. **화면 작성**을 선택하여 새 화면을 추가하십시오. 앱에서 참조하기 쉽도록 새 화면의 이름을 지정하십시오. 다음 유형의 화면 중에서 선택할 수 있습니다. 
 	    * 메뉴
 		* 목록
 		* 맵
@@ -84,7 +83,7 @@ UI 스타터를 사용하여 프로젝트를 작성하려면 다음 단계를 �
 		
 	8. *설정* 화면에서 프로젝트에 IBM MobileFirst Platform Foundation을 추가하도록 스위치를 토글한 경우 탐색에 **Foundation** 선택사항이 표시됩니다. **Foundation**을 선택하고 IBM MobileFirst Platform Foundation에 특정한 필수 정보를 완료하십시오. 
 	
-	9. 탐색 메뉴에서 **공개**를 선택해서 모바일 앱을 작성할 최종 정보를 입력하십시오. iOS용 번들 ID와 Android용 애플리케이션 ID를 입력할 수 있습니다. 
+	9. 탐색 메뉴에서 **공개**를 선택해서 모바일 앱을 작성할 최종 정보를 입력하십시오. iOS용 번들 ID와 Android용 애플리케이션 ID를 입력할 수 있습니다.
 	
 	iOS 앱을 작성할 경우 번들 ID, 배포 인증서를 *.p12* 파일로 얻고 Apple 프로비저닝 포털에서 프로비저닝 프로파일을 *.mobileprovision* 파일로 얻어야 합니다. 이 세 항목을 Apple Store에 앱을 게시할 때 사용할 컴퓨터에서 동시에 작성해야 합니다. 배포 인증서와 프로비저닝 프로파일은 번들 ID를 기반으로 해야 합니다.  	
 

@@ -3,10 +3,8 @@
 
 
 copyright:
-
   years: 2015，2016
-
-
+lastupdated: "2016-10-19"
 
 ---
 
@@ -15,11 +13,10 @@ copyright:
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
+#{{site.data.keyword.Bluemix_notm}} Live Sync 
+{: #live-sync}
 
-*上次更新时间：2016 年 6 月 24 日*
-{: .last-updated}  
-
+ 
 如果您要构建 Node.js 应用程序，那么可以使用 {{site.data.keyword.Bluemix}} Live Sync 快速更新 {{site.data.keyword.Bluemix_notm}} 上的应用程序实例，并像在桌面上进行操作一样进行开发，而无需重新部署。   
 {: shortdesc}
 
@@ -40,10 +37,10 @@ copyright:
 
 下图说明了 Bluemix Live Sync 过程。
 
-*图 1. Bluemix Live Sync 过程*
+图 1. Bluemix Live Sync 过程
 ![Bluemix Live Sync 过程的图像](images/bluemix-live-sync.png)
 
-如果您要开发在 Liberty 上运行的 Java 应用程序，那么可以使用 [Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html#eclipsetools) 进行远程调试。
+如果您要开发在 Liberty 上运行的 Java 应用程序，那么可以使用 [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools) 进行远程调试。
 
 ##桌面同步 {: #desktop-sync}
 
@@ -73,7 +70,7 @@ copyright:
 <li>在命令行上，使用以下命令登录。系统将提示您输入用户标识和密码。  
 <pre class="codeblock">bl login</pre>
 
-<strong>注：</strong>DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么您的 IBM 标识和密码可以用于所有客户机。有关创建个人访问令牌的更多信息，请参阅 <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a> 
+<strong>注：</strong>DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么在所有客户端登录时均可使用您的 IBM 标识和密码。有关创建个人访问令牌的更多信息，请参阅 <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a>
 </li>
 
 <li>通过输入以下命令，查看可用于 {{site.data.keyword.Bluemix_notm}} Live Sync 同步的项目的列表：
@@ -113,9 +110,9 @@ bl start --restart
 
 ##{{site.data.keyword.Bluemix_notm}} 实时调试 {: #live-debug}
 
-只要为您的 Node.js 应用程序启用了 {{site.data.keyword.Bluemix_notm}} Live Sync，就可以访问 {{site.data.keyword.Bluemix_notm}} Live Sync 的“调试”功能。
+只要为您的 Node.js 应用程序启用了 {{site.data.keyword.Bluemix_notm}} Live Sync，就可以访问 {{site.data.keyword.Bluemix_notm}} Live Sync 的“实时调试”功能。
 
-使用“调试”，可以执行动态编辑代码、插入断点、单步调试代码、重新启动运行时等操作，而且所有这些操作都可在 {{site.data.keyword.Bluemix_notm}} 为应用程序提供服务期间来执行。通过从大型 {{site.data.keyword.Bluemix_notm}} 服务列表中进行选择，可以敏捷地以递增方式开发应用程序。
+通过调试，可以执行动态编辑代码、插入断点、单步调试代码、重新启动运行时等操作，而且所有这些操作都可在 {{site.data.keyword.Bluemix_notm}} 为应用程序提供服务期间来执行。通过从大型 {{site.data.keyword.Bluemix_notm}} 服务列表中进行选择，可以敏捷地以递增方式开发应用程序。
 
 {{site.data.keyword.Bluemix_notm}} 实时调试包括以下功能：
 
@@ -176,7 +173,7 @@ bl start --restart
 
 推送应用程序，然后浏览到 `https://app-host.mybluemix.net/bluemix-debug/manage`，以访问 {{site.data.keyword.Bluemix_notm}} 调试用户界面。收到认证提示时，请输入用户标识和个人访问令牌或 IBM 标识密码。    
 
-   **注：**DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么您的 IBM 标识和密码可以与所有客户端一起使用。有关创建个人访问令牌的更多信息，请参阅 [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **注：**DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么在所有客户端登录时均可使用您的 IBM 标识和密码。有关创建个人访问令牌的更多信息，请参阅 [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 ###复原应用程序配置并禁用 Bluemix 实时调试 {: #restore_live_debug}
 
@@ -199,7 +196,7 @@ bl start --restart
 * 请参阅可用于同步的项目列表。
 * 请参阅运行中应用程序的状态。
 
-有关下载和使用 bl 命令的更多信息，请参阅 [Bluemix Live Sync](../develop/bluemixlive.html)。
+有关下载和使用 bl 命令的更多信息，请参阅 [Bluemix Live Sync](/docs/develop/bluemixlive.html)。
 
 ## bl 命令
 {: #bl_commands}
@@ -275,7 +272,7 @@ bl sync --help
 ```
 {: pre}
 
-## Login
+## 登录
 {: bl_login}
 
 ```
@@ -299,7 +296,7 @@ bl login | l [ -u username ] [-p password ][ -s server ]
 
 -s *server*：{{site.data.keyword.jazzhub_short}} 服务器的服务器名称或 IP 地址。    
 
-   **注：**DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么您的 IBM 标识和密码可以与所有客户端一起使用。有关创建个人访问令牌的更多信息，请参阅 [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **注：**DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么在所有客户端登录时均可使用您的 IBM 标识和密码。有关创建个人访问令牌的更多信息，请参阅 [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
 
 **示例**
 
@@ -336,7 +333,7 @@ bl logout | lo
 
 使用此命令可注销。
 
-## 项目
+## Projects
 {: bl_projects}
 
 ```
@@ -346,7 +343,7 @@ bl projects | p
 
 **用途**
 
-使用此命令可列出已登录用户可用于进行同步的所有项目。
+使用此命令列出已登录用户可用于进行同步的所有项目。
 
 ## Sync
 {: bl_sync}

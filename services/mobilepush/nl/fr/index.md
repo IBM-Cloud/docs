@@ -12,24 +12,19 @@ copyright:
 
 # Initiation à {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Dernière mise à jour : 17 octobre 2016
+Dernière mise à jour : 6 décembre 2016
 {: .last-updated}
 
 {:shortdesc}
 
-Le service {{site.data.keyword.mobilepushshort}} met à disposition une plateforme unifiée pour l'envoi et la gestion de notifications push mobiles et Web ciblées pour les plateformes mobiles iOS et Android mobiles, pour les navigateurs Web Google Chrome et Mozilla Firefox et pour les applications et extensions Google Chrome. Le service {{site.data.keyword.mobilepushshort}} gère le mappage des utilisateurs d'applications aux appareils, à la plateforme d'appareil et aux navigateurs Web et s'occupe de la répartition des notifications push vers ces derniers. Avec ce service, vous pouvez envoyer des notifications push de diffusion, des notifications push unicast (en fonction de l'ID d'appareil), mais également des notifications push basées sur les balises (ou les rubriques) aux utilisateurs d'applications mobiles ou de navigateurs Web. Vous pouvez également utiliser un logiciel SDK et des [API REST](https://mobile.{DomainName}/imfpush/) pour développer davantage vos applications client.
+Le service {{site.data.keyword.mobilepushshort}} offre une plateforme unifiée pour l'envoi et la gestion de notifications push Web et de mobiles
+ciblant iOS, les plateformes Android mobiles, Google Chrome, Mozilla Firefox, les navigateurs Web Safari et les applications et extensions Google Chrome. Le service {{site.data.keyword.mobilepushshort}} gère le mappage des utilisateurs d'applications aux appareils, à la plateforme d'appareil et aux navigateurs Web et s'occupe de la répartition des notifications push vers ces derniers. Avec ce service, vous pouvez envoyer des notifications push de diffusion, des notifications push unicast (en fonction de l'ID d'appareil et de l'ID utilisateur), mais également des notifications push basées sur les balises (ou les rubriques) aux utilisateurs d'applications mobiles ou de navigateurs Web. Vous pouvez également utiliser un logiciel SDK et des [API REST](https://mobile.{DomainName}/imfpush/) pour développer davantage vos applications client.
 
-Cette section explique comment configurer des notifications push de base. Lorsque vous utilisez une notification de base, les
-notifications sont diffusées au lieu d'être envoyées à un ensemble spécifique d'utilisateurs abonnés à des balises.
-
-1. [Configurez les données d'identification pour un fournisseur de notification](t__main_push_config_provider.html)
-2. [Configurez l'application mobile pour qu'elle reçoive des notifications](c_enable_push.html)
-3. [Envoyez des notifications de base](t_send_push_notifications.html)
 
 # Liens connexes
 {: #rellinks}
 
-* [Présentation](c_overview_push.md){: new_window}
+* [Présentation](c_overview_push.html){: new_window}
 
 ## Tutoriels et exemples {:id="samples"}
 {: #samples}

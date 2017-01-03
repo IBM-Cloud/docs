@@ -10,20 +10,17 @@ lastupdated: "2016-10-13"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Projekt mit einem Code-Starter erstellen
+# Code-Starter zur Erstellung eines Projekts verwenden
 {: #projects_code}
 
-Letzte Aktualisierung: 13. Oktober 2016
-{: .last-updated}
-
-Im {{site.data.keyword.Bluemix}} Mobile-Dashboard können Sie mit einem Code-Starter ein Projekt in der {{site.data.keyword.Bluemix_notm}}-Umgebung erstellen. Dieses Verfahren ist nicht auf Projekte anwendbar, die Benutzerschnittstellenstarter verwenden. Anweisungen zu Benutzerschnittstellenstartern finden Sie unter [Projekt mit einem Benutzerschnittstellenstarter erstellen](projects_ui.html).
+Sie können einen [Code-Starter](starters.html#Code_Starter) in einem {{site.data.keyword.Bluemix}} Mobile-Dashboard verwenden, um ein Projekt in der {{site.data.keyword.Bluemix_notm}}-Umgebung zu erstellen. Dieses Verfahren ist nicht auf Projekte anwendbar, die Benutzerschnittstellenstarter verwenden. Anweisungen zu Benutzerschnittstellenstartern finden Sie unter [Projekt mit einem Benutzerschnittstellenstarter erstellen](projects_ui.html). 
 {:shortdesc}
 
 Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Code-Starter zu erstellen:
 
 1. Erstellen Sie ein neues Mobile-Dashboard-Projekt in {{site.data.keyword.Bluemix_notm}}.
 
- Nachdem Sie den Mobile-Katalog ausgewählt haben, starten Sie mit der Registerkarte *Einführung*. Diese enthält Beschreibungen von ausgewählten Startern, die Sie verwenden können, sowie unterschiedliche Methoden zur Erstellung von Projekten, je nachdem, wie viel Hilfe Sie benötigen. Wenn Sie mit minimaler Hilfestellung einfach anfangen wollen, wählen Sie **Projekt erstellen** aus.
+ Nachdem Sie den Mobile-Katalog ausgewählt haben, starten Sie mit der Registerkarte *Einführung*. Diese enthält Beschreibungen von ausgewählten Startern, die Sie verwenden können, sowie unterschiedliche Methoden zur Erstellung von Projekten, je nachdem, wie viel Hilfe Sie benötigen. Wenn Sie einfach anfangen wollen, wählen Sie **Projekt erstellen** aus.
 
  Wenn Sie bereits über Projekte verfügen, können Sie auch mit der ausgewählten Registerkarte *Projekte* anfangen. Im {{site.data.keyword.Bluemix_notm}} Mobile-Dashboard können Sie in der Ansicht **Projekte** ein Projekt auswählen, mit dem Sie arbeiten möchten, über *Aktionen* ein Projekt löschen oder den Code dafür herunterladen oder ein neues Projekt erstellen.
 
@@ -39,9 +36,9 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Code-Starter zu
 	
 	5. Geben Sie einen Namen für Ihr Projekt ein und wählen Sie **Erstellen** aus.
 	
-2. Treffen Sie Ihre Auswahlen in der Anzeige **Projektübersicht**. In der Anzeige **Projektübersicht** werden Informationen zu Ihrem Projekt und den optionalen Services angezeigt, die Sie Ihrem Projekt hinzufügen können, z. B. Push Notifications.  
+2. Treffen Sie Ihre Auswahlen in der Anzeige **Projektübersicht**.  In der Anzeige **Projektübersicht** werden Informationen zu Ihrem Projekt und den optionalen Services angezeigt, die Sie Ihrem Projekt hinzufügen können, z. B. Push Notifications und Authentication.  
 
-	1. Optional: Wählen Sie **Hinzufügen** aus, um Ihrem Projekt einen der aufgelisteten Services hinzuzufügen. Wenn Sie Ihrem Projekt Services hinzufügen, erstellen Sie eine Verknüpfung mit der {{site.data.keyword.Bluemix_notm}}-Konsole. Wählen Sie in der {{site.data.keyword.Bluemix_notm}}-Konsole die Kategorie *Mobile* aus, um die Mobile-Services anzuzeigen. Wählen Sie *Push Notifications* oder einen anderen Service aus, um ihn einzurichten. Konfigurieren Sie den Service, indem Sie die Anweisungen für den Service befolgen.
+	1. Optional: Wählen Sie **Hinzufügen** aus, um Ihrem Projekt einen der aufgelisteten Services hinzuzufügen. Bearbeiten Sie **Servicename** für Ihren Service und klicken Sie auf **Erstellen**. Wenn Sie Ihrem Projekt Services hinzufügen, erstellen Sie eine Verknüpfung mit der {{site.data.keyword.Bluemix_notm}}-Seite für diesen Service. Konfigurieren Sie den Service durch Bereitstellen der Informationen, die für den Service erforderlich sind.
 	
 	2. Optional: Wiederholen Sie Schritt *a* für alle zusätzlichen Leistungsmerkmale, die Sie Ihrem Projekt hinzufügen möchten. 
 

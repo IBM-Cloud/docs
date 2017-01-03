@@ -14,7 +14,7 @@ years: 2016
 
 # Tests des réseaux de blockchain
 {: #etn_txn}
-Dernière mise à jour : 7 octobre 2016
+Dernière mise à jour : 03 novembre 2016
 {: .last-updated}
 
 Utilisez les tests de rôles et de transactions suivants afin de confirmer la sécurité et la disponibilité du réseau de blockchain IBM. Tous les tests peuvent être menés à l'aide du plan Starter Developer ou du plan High Security Business Network.
@@ -23,12 +23,12 @@ Utilisez les tests de rôles et de transactions suivants afin de confirmer la s�
 ## Tests des rôles et des transactions
 {: #sdk}
 
-Le logiciel SDK HFC Hyperledger Fabric v0.5 pour Node.js
+Le logiciel SDK HFC Hyperledger Fabric v0.6 pour Node.js
 comporte des tests unitaires qui mettent en avant des fonctions de
 sécurité, telles que l'impossibilité de relier des transactions et la
 confidentialité. Vous pouvez découvrir ces tests unitaires à
 l'adresse
-https://github.com/hyperledger/fabric/tree/master/sdk/node/test/unit,
+https://github.com/hyperledger/fabric/tree/v0.6/sdk/node/test/unit,
 avec des exemples de code pour l'enregistrement et l'inscription
 d'utilisateurs, le transfert d'actifs, et la gestion d'actifs à
 l'aide de rôles utilisateur et d'attributs utilisateur. Les tests unitaires suivants sont disponibles :
@@ -209,11 +209,24 @@ Alice essaie d'affecter Bob en tant que propriétaire de l'actif. La tentative �
             }
 ```
 
-<!-- comment this one out until Hl v0.6 GAs
 ### asset-mgmt-with-dynamic-roles
-The asset-mgmt-with-dynamic-roles.js test is a variation of `asset-mgmt-with-roles.js`.  The prior test shows the users Alice, Bob, and assigner being enrolled to the network.  However, these users were previously registered with attributes hardcoded in the membersrvc.yaml.  In other words, the `chain.enroll` function logged these users into the network with their corresponding attributes, affiliations, and roles from the membersrvc.yaml; the registration portion had already occurred.  
+Le test asset-mgmt-with-dynamic-roles.js est une variante du
+test `asset-mgmt-with-roles.js`. Dans le test
+précédent, les utilisateurs Alice, Bob et l'attributeur sont inscrits
+sur le réseau. Toutefois, ces utilisateurs étaient auparavant
+enregistrés avec des attributs codés en dur dans le fichier
+membersrvc.yaml. En d'autres termes, la fonction
+`chain.enroll` a consigné ces utilisateurs sur le
+réseau avec les attributs, affiliations et rôles correspondants du
+fichier membersrvc.yaml ; la partie enregistrement a donc déjà été
+effectuée.  
 
-In this test we see the registration and enrollment of unique users (i.e. users not already present in the membersrvc.yaml). The dynamic registration and enrollment is done through a callback of the `registerAndEnroll` function, as seen at the end of this test:
+Dans ce test, nous voyons l'enregistrement et l'inscription
+d'utilisateurs uniques (c'est-à-dire d'utilisateurs qui ne sont pas
+déjà présents dans le fichier membersrvc.yaml). L'enregistrement et
+l'inscription dynamiques s'effectuent via un rappel de la fonction
+`registerAndEnroll`, comme illustré à la fin de ce
+test :
 
 ```js
 function registerAndEnroll(name, attrs, cb) {
@@ -228,7 +241,10 @@ function registerAndEnroll(name, attrs, cb) {
 }
 ```
 
-For example, we see alice2 being registered and enrolled with two unique attributes: a 'role' with the value of 'client' and an 'account' with the value of 'aliceAccount'.
+Par exemple, nous pouvons voir que alice2 est enregistrée puis
+inscrite avec deux attributs uniques : un 'rôle' (role) avec la
+valeur 'client' et un 'compte' (account) avec la valeur
+'aliceAccount'.
 
 ```js
 console.log("enrolling alice2 ...");
@@ -237,6 +253,6 @@ console.log("enrolling alice2 ...");
             alice = user;
 ```
 
-The remainder of the test is the same as `asset-mgmt-with-roles.js`, with Alice failing to assign Bob as the owner of the asset.
-
--->
+Le reste du test est identique à celui du test
+`asset-mgmt-with-roles.js`, avec Alice qui ne
+parvient pas à affecter Bob en tant que propriétaire de l'actif.

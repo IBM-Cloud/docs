@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # 开始使用 {{site.data.keyword.composeForEtcd}}
 {: #getting-started-with-compose-for-etcd}
-
-上次更新时间：2016 年 9 月 20 日
-{: .last-updated}
 
 etcd 是一个键值存储库，用于保留始终正确的数据，您需要这些数据来协调和管理服务器集群，以进行分布式服务器配置管理。etcd 使用 RAFT 一致性算法，以确保您集群中数据的一致性。它会强制施行对数据进行操作的顺序，以便集群中的每一个节点以相同的方式达到相同的结果。{{site.data.keyword.composeForEtcd_full}} 会对存储在 etcd 中的配置数据添加自动备份。直观的管理界面使您可以轻松地监视、扩展和管理您的部署。
 {:shortdesc}
@@ -32,7 +29,7 @@ etcd 是一个键值存储库，用于保留始终正确的数据，您需要这
 
 要将应用程序连接到服务，请使用随服务一起创建的凭证。样本应用程序会示范如何使用 Node.js 连接到 {{site.data.keyword.composeForEtcd}} 服务。
 
-下载 [compose-etcd-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-etcd-helloworld-nodejs) 样本应用程序，并遵循自述文件中的指示。然后，在 Bluemix 中的应用程序详细信息页面中，单击**查看应用程序**，以查看*示例*的内容。
+下载 [compose-etcd-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-etcd-helloworld-nodejs) 样本应用程序，并遵循自述文件中的指示信息。然后，在 Bluemix 中的应用程序详细信息页面中，单击**查看应用程序**，以查看*示例*的内容。
 
 ## 可用凭证
 
@@ -44,6 +41,8 @@ etcd 是一个键值存储库，用于保留始终正确的数据，您需要这
 `name`|数据库部署名称。
 
 ``uri``|连接到服务时要使用的 URI。``uri` 包括模式 (``amqps:)、管理用户名和密码、服务器的主机名、要连接到的端口号和 `vhost` 名称。
+
+{: caption="Table 1. {{site.data.keyword.composeForEtcd}} credentials" caption-side="top"}
 
 # 相关链接
 {: #rellinks}

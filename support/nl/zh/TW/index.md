@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-22"
 
 ---
 
@@ -12,25 +14,43 @@ copyright:
 # 取得客戶支援
 {: #getting-customer-support}
 
-前次更新：2016 年 8 月 4 日
-{: .last-updated}
 
 
 如果您遇到 {{site.data.keyword.Bluemix}} 問題，則有數個支援選項，例如透過討論區取得協助，或開啟支援問題單。
 {:shortdesc}
 
+
 ## 取得協助
 {: #getting-help}
-若要開啟支援問題單，或尋找其他協助選項，您可以使用「帳戶及支援」小組件。您也可以直接移至 Stack Overflow 或 developerWorks (dW) Answers 討論區，以搜尋資訊或張貼問題。
+若要開啟支援問題單，或尋找其他協助選項，您可以使用「支援」小組件。您也可以直接移至 Stack Overflow 或 developerWorks (dW) Answers 討論區，以搜尋資訊或張貼問題。
+如果您要使用在 {{site.data.keyword.Bluemix_notm}} 與 {{site.data.keyword.BluSoftlayer}} 之間鏈結的帳戶，請參閱[使用鏈結帳戶的支援小組件](#using-avatar-linked)及[開啟鏈結帳戶的支援問題單](#open-ticket-linked)。
+
 {:shortdesc}
 
-### 使用帳戶及支援小組件
+
+### 使用支援小組件
 {: #using-avatar}
-「帳戶及支援」小組件可讓您檢查帳戶資訊、檢視狀態、透過通知掌握最新資訊、選取地區、選取及管理組織，以及登出。此外，您也可以取得協助並提供意見。
+「支援」小組件可讓您取得協助，並提供意見。
 
-若要開啟「帳戶及支援」小組件，請登入 {{site.data.keyword.Bluemix_notm}} 使用者介面，然後按一下功能表列中的{{site.data.keyword.avatar}}圖示 ![「虛擬人像」圖示](images/account_support.svg)。
+若要開啟「支援」小組件，請登入 {{site.data.keyword.Bluemix_notm}} 主控台。從功能表列中，按一下**支援** &gt; **取得協助**，以找出問題的答案。在顯示的頁面上，於搜尋欄位中鍵入您的問題。畫面上會顯示 {{site.data.keyword.Bluemix_notm}} 文件及 Stack Overflow 提供的答案。此頁面也會提供選項，將您的問題張貼至 Stack Overflow，或按一下**保持聯繫**來開啟問題單。
 
-按一下**取得協助**，以找出問題的答案。在顯示的頁面上，於搜尋欄位中鍵入您的問題。畫面上會顯示 {{site.data.keyword.Bluemix_notm}} 文件及 Stack Overflow 提供的答案。此頁面也會提供選項，將您的問題張貼至 Stack Overflow，或按一下**保持聯繫**來開啟問題單。
+### 使用鏈結帳戶的支援小組件
+{: #using-avatar-linked}
+
+如果您要使用在 {{site.data.keyword.Bluemix_notm}} 與 {{site.data.keyword.BluSoftlayer}} 之間鏈結的帳戶，則「支援」小組件會略為不同。登入 Bluemix 主控台，按一下功能表列中的**支援**鏈結來開啟「支援」小組件，然後選取**新增問題單** &gt; **尋找答案**。下列是您可用的選項：
+
+* 您可以設定過濾器，將搜尋結果變更成只包括選取的項目，以搜尋 Bluemix Docs、Stack Overflow 及 DW Answers。
+* 您可以直接鏈結至 Stack Overflow **#IBMBluemix** 或 DW Answers，以進行搜尋或張貼。
+* 您可以將構想提交至 IBM User Voice。
+* 呼叫或尋找業務代表，或者鏈結至「尋找業務代表」表單，即可聯絡銷售人員。
+* 您可以與 Twitter 上的 **@IBMBluemixHelp** 連線，以加強 Bluemix 體驗。
+
+
+
+### 使用帳戶功能表項目
+{: #using-accountmenu}
+
+使用「帳戶」功能表項目，以檢查帳戶資訊、檢視狀態、透過通知掌握最新資訊、選取地區、選取並管理組織，以及登出。
 
 
 ### 發問
@@ -40,10 +60,10 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 
   * 移至 [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window}，以提出有關使用 Bluemix 平台和服務來開發應用程式的技術問題。
   * 移至 [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window}，以提出有關 {{site.data.keyword.Bluemix_notm}} 供應項目以及入門指示的問題。
-  * 在中國，請移至 [IBM developerWorks 中國 Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} 提出問題。
 
-完成下列步驟，也可以直接利用「帳戶及支援」小組件在 Stack Overflow 中提出問題：
-  1. 從「帳戶及支援」小組件中，按一下**取得協助**。 
+
+完成下列步驟，也可以直接利用「支援」小組件在 Stack Overflow 中提出問題：
+  1. 從「支援」小組件中，按一下**取得協助**。 
   2. 在顯示的頁面上，在搜尋欄位鍵入您的問題以尋找答案。 
   3. 如果未傳回預期的答案，請按一下**貼文到 Stack Overflow**，來張貼您的問題。
 
@@ -59,16 +79,16 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 在「狀態」頁面上，您可以找到下列資訊：
 
   * 所有 {{site.data.keyword.Bluemix_notm}} 地區中服務及元件的現行狀態。
-  * 維護及偶發事件的公告清單（依時間順序）。您可以過濾清單，或開啟個別公告以取得其他詳細資料。
+  * 維護及突發事件的公告清單（依時間順序）。您可以過濾清單，或開啟個別公告以取得其他詳細資料。
   * 計劃性的維護時間，除非是極端情況，否則至少會提前 24 小時張貼。
-  * 非計劃性的偶發事件或運作中斷，{{site.data.keyword.Bluemix_notm}} 團隊一發現就會立即張貼。偶發事件通知會定期更新，直到解決為止。
+  * 非計劃性的突發事件或運作中斷，{{site.data.keyword.Bluemix_notm}} 團隊一發現就會立即張貼。突發事件通知會定期更新，直到解決為止。
   * 影響各種 {{site.data.keyword.Bluemix_notm}} 服務或該平台的安全性公告的參照。
   * 符合您一般利益的其他平台層面公告。
   * 訂閱的 RSS 資訊來源。
 
 您可以選擇下列其中一個選項來尋找「狀態」頁面：
 
-  * 登入 {{site.data.keyword.Bluemix_notm}} 使用者介面，按一下功能表列中的{{site.data.keyword.avatar}}圖示 ![「虛擬人像」圖示](./images/account_support.svg)，然後按一下**狀態**。請檢查針對 ![部分問題](images/some_issues.svg) 圖示列出的資源。此圖示可能指出運作中斷。
+  * 登入 {{site.data.keyword.Bluemix_notm}} 主控台。從功能表列中，按一下**支援**，然後按一下**狀態**。請檢查針對 ![部分問題](images/some_issues.svg) 圖示列出的資源。此圖示可能指出運作中斷。
   * 直接在 [IBM {{site.data.keyword.Bluemix_notm}} - 系統狀態](http://ibm.biz/bluemixstatus){: new_window}進行存取。
 
 
@@ -87,15 +107,13 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 	如需相關資訊，請參閱閱讀器的**說明**區段。
  	   
 
-透過 Web 瀏覽器外掛程式（例如下列項目），可以取得其他讀取 RSS 資訊來源的方法：
-  * 適用於 Chrome 的 [RSS 資訊來源](http://feeder.co/){: new_window}讀取器 
+透過 Web 瀏覽器外掛程式（例如下列項目），可以取得其他讀取 RSS 資訊來源的方法： 
+  * 適用於 Chrome 的 [RSS 資訊來源](http://feeder.co/){: new_window}讀取器
   * 適用於 Firefox 的 [Brief](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} 附加程式
 
-
 下列這類 News 來源也提供方法來讀取 RSS 資訊來源：
-
   * [Feedly](http://www.feedly.com/){: new_window} 
-  * [G2reader](http://www.g2reader.com/en/){: new_window} 
+  * [G2reader](http://www.g2reader.com/en/){: new_window}
 
 您也可以使用協力廠商服務，自動為每一個 RSS 更新傳送電子郵件。下列清單提供部分協力廠商服務範例：
 
@@ -108,10 +126,14 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 
 {{site.data.keyword.Bluemix_notm}} 每個月通常約有 50 次更新。
 
-### 設定偶發事件及維護電子郵件通知
+
+
+### 設定突發事件及維護電子郵件通知
 {: #setting-up-notifications}
 
-若為「{{site.data.keyword.Bluemix_notm}} 公用」，您可以註冊平台通知。平台通知是 {{site.data.keyword.Bluemix_notm}} 平台的偶發事件及維護事件的選用電子郵件警示。您可以選擇接收這些電子郵件通知，方法是按一下{{site.data.keyword.avatar}}圖示 ![「虛擬人像」圖示](../admin/images/account_support.svg) &gt; **通知** &gt; **平台**選項。如需設定帳戶通知的相關資訊，請移至[設定通知](../admin/account.html#notifications)。
+若為「{{site.data.keyword.Bluemix_notm}} 公用」，您可以註冊平台通知。平台通知是 {{site.data.keyword.Bluemix_notm}} 平台的突發事件及維護事件的選用電子郵件警示。您可以選擇接收這些電子郵件通知，方法是按一下**帳戶**功能表項目 &gt; **通知** &gt; **平台**選項。如需設定帳戶通知的相關資訊，請移至[設定通知](/docs/admin/account.html#notifications)。
+
+
 ### 監視狀態的最佳作法
 {: #best-practices}
 
@@ -121,9 +143,9 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 	  * 直接導覽至[狀態](http://ibm.biz/bluemixstatus){: new_window}頁面
 	  * 利用 RSS 資訊來源或 RSS 對電子郵件的轉遞程式
 
-  * 檢查現行維護時間範圍或進行中的偶發事件
+  * 檢查現行維護時間範圍或進行中的突發事件
 
-	如果您懷疑 {{site.data.keyword.Bluemix_notm}} 未如預期般運作，請檢查狀態頁面中的現行維護時間範圍或進行中的偶發事件。若要提報狀態頁面上尚未列出的偶發事件，請透過功能表列中的{{site.data.keyword.avatar}}圖示 ![「虛擬人像」圖示](images/account_support.svg) 或 [IBM Bluemix 支援中心](https://support.eu-gb.bluemix.net/gethelp/){: new_window}說明頁面來開啟「支援問題單」。
+	如果您懷疑 {{site.data.keyword.Bluemix_notm}} 未如預期般運作，請檢查狀態頁面中的現行維護時間範圍或進行中的突發事件。若要提報狀態頁面上尚未列出的突發事件，請透過功能表列上的**支援**功能表項目或 [IBM Bluemix 支援中心](https://support.eu-gb.bluemix.net/gethelp/){: new_window}說明頁面來開啟「支援問題單」。
 
   * 充分運用多個 {{site.data.keyword.Bluemix_notm}} 地區
 
@@ -133,7 +155,7 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 	  * EU-GB：https://console.eu-gb.bluemix.net
 	  * AU-SYD：https://console.au-syd.bluemix.net
 
-	{{site.data.keyword.Bluemix_notm}} Global Operations 團隊會管理所有地區，以避免維護造成的影響，並讓發生同時影響所有地區之偶發事件的風險降到最低。
+	{{site.data.keyword.Bluemix_notm}} Global Operations 團隊會管理所有地區，以避免維護造成的影響，並讓發生同時影響所有地區之突發事件的風險降到最低。
 
   * 準備進行輕微岔斷
 
@@ -144,9 +166,9 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 ## 與支援中心聯絡
 {: #contacting-support}
 
-如果您有有效的 {{site.data.keyword.Bluemix_notm}} 帳戶，便可開啟支援問題單。 
+如果您有有效的 {{site.data.keyword.Bluemix_notm}} 帳戶，即可使用各種選項來開啟支援問題單。[開啟支援問題單](#open-ticket)。 
 
-如果您有 {{site.data.keyword.Bluemix_notm}} 帳戶與 SoftLayer 帳戶鏈結，可以從「SoftLayer 客戶」入口網站或從 {{site.data.keyword.Bluemix_notm}} 使用者介面開啟 {{site.data.keyword.Bluemix_notm}} 的支援問題單。
+如果您的 {{site.data.keyword.Bluemix_notm}} 帳戶與 {{site.data.keyword.BluSoftlayer_full}} 帳戶鏈結，則可以從「{{site.data.keyword.BluSoftlayer}} 客戶入口網站」或從 {{site.data.keyword.Bluemix_notm}} 主控台，使用「支援」小組件來開啟 {{site.data.keyword.Bluemix_notm}} 的支援問題單。請參閱[開啟鏈結帳戶的支援問題單](#open-ticket-linked)。
 
 ### 與「{{site.data.keyword.Bluemix_notm}} 公用」的支援中心聯絡
 {: #contacting-bluemix-support}
@@ -159,29 +181,37 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 高嚴重性支援 |  N/A | N/A | 內含 | 內含
 支援語言 | 英文 | 英文 | 英文 | 英文
 指派的客戶成功經理 (CSM) | 不包含 | 不包含 | 不包含 | 內含，<br> 每週 8 小時
-*表 1. 支援層次*
+{: caption="Table 1. Support levels" caption-side="top"}
 
-#### 開啟支援問題單
+### 開啟支援問題單
 {: #open-ticket}
 
 如果無法透過疑難排解及說明選項來解決您的技術問題，您可以要求支援。不過，因技術問題而聯絡支援中心之前，請檢查 {{site.data.keyword.Bluemix_notm}} 狀態，以確定問題不是由於運作中斷而造成。
 
-如果問題不是由於作業中斷而造成，而且您是中國以外國家或地區的客戶，請使用下列其中一個選項來開啟支援問題單：
 
-  * 從「帳戶及支援」小組件中，按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。請填寫表單，以指出您需要何種技術支援。
-  * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支援中心](http://ibm.biz/bluemixsupport){: new_window}說明頁面。您可以針對銷售、計費、IBM ID 和登入以及技術支援問題來提交問題單。對於技術支援問題，您可以在按一下**技術支援**磚之後進一步選取技術群組。例如，如果您需要有關 Cloud Foundry 應用程式、OpenWhisk、Containers、Virtual Servers 或 Bare Metal Servers 的協助，則可以選擇**應用程式服務**。如果您需要有關特定服務的協助，請選取對應的服務種類。若要判斷您服務所屬的種類，請查看導覽窗格中[服務](../services/index.html){: new_window}下方的種類。  
+
+如果問題不是由於作業中斷而造成，請使用下列其中一個選項來開啟支援問題單：
+
+  * 從「支援」小組件中，按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。請填寫表單，以指出您需要何種技術支援。
+  * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支援中心](http://ibm.biz/bluemixsupport){: new_window}說明頁面。您可以針對銷售、計費、IBM ID 和登入以及技術支援問題來提交問題單。對於技術支援問題，您可以在按一下**技術支援**之後進一步選取技術群組。例如，如果您需要有關 Cloud Foundry 應用程式、OpenWhisk、Containers、Virtual Servers 或 Bare Metal Servers 的協助，則可以選擇**應用程式服務**。如果您需要有關特定服務的協助，請選取對應的服務種類。若要判斷您服務所屬的種類，請查看導覽窗格中[服務](/docs/services/index.html){: new_window}下方的種類。  
   * 從 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}。登入入口網站之後，請按一下**開啟問題單**，然後填寫支援表單。 
   
-
-
 開啟支援問題單時，請務必為問題單指定適當的嚴重性。嚴重性會決定問題單的處理方式。如需不同嚴重性的相關資訊，請參閱[支援問題單嚴重性及回應時間](index.html#support-ticket-severity){: new_window}。如果您的要求很緊急，但是您只有免費或基本支援，則可以升級帳戶來提交高嚴重性（層次 1、2 及 3）問題單。若要將您的帳戶升級至較高的支援層次，請透過電子郵件 sales@bluemix.net 來聯絡 IBM 業務代表。
 
-如果您是中國客戶，則可以從 [UNISYS Service Management IBM Bluemix 頁面](https://chinabluemix.itsm.unisysedge.cn){: new_window}，為您的帳戶取得付費支援。
+### 開啟鏈結帳戶的支援問題單
+{: #open-ticket-linked}
 
-#### 檢查支援問題單狀態
+如果您要使用在 {{site.data.keyword.Bluemix_notm}} 與 {{site.data.keyword.BluSoftlayer}} 之間鏈結的帳戶，則可以從 {{site.data.keyword.Bluemix_notm}} 主控台中，使用「支援」小組件來開啟支援問題單。 
+
+若要開啟鏈結帳戶的 {{site.data.keyword.Bluemix_notm}} 支援問題單，請按一下功能表列中的**支援**來開啟「支援」小組件，然後選取**新增問題單**。在問題單表單中，對於問題單類型請選取**技術**，並完成表單，以指出您需要何種技術支援。如果您有「高階層次支援」，請選擇問題的嚴重性層次。您會在幾分鐘後收到有關問題單的電子郵件通知。請遵循電子郵件中的指示，進一步溝通該問題。
+
+
+### 檢查支援問題單狀態
 {: #check-ticket-status}
 
-每一個支援問題單都會獲指派一個唯一的問題單號碼，以供參照。在中國以外的國家或地區，您可以使用問題單號碼，在 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} 上檢閱支援問題單進度及更新支援問題單。更新和回應會透過電子郵件傳送給您，並且記錄在問題單注意事項中。 
+每一個支援問題單都會獲指派一個唯一的問題單號碼，以供參照。您可以使用問題單號碼，在 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} 檢閱支援問題單進度以及更新支援問題單。更新和回應會透過電子郵件傳送給您，並且記錄在問題單注意事項中。  
+
+
 
 
 ### 與「{{site.data.keyword.Bluemix_notm}} 專用」的支援中心聯絡
@@ -189,7 +219,7 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 
 <!-- Michelle links to this anchor  -->
 
-如果您是中國以外的國家或地區的「{{site.data.keyword.Bluemix_notm}} 專用」客戶，會由 IBM {{site.data.keyword.Bluemix_notm}} 支援團隊提供支援。您可以從一些不同的選項中進行選擇以取得支援（視您是否有 IBM ID 而定）。
+如果您是「{{site.data.keyword.Bluemix_notm}} 專用」客戶，會由 IBM {{site.data.keyword.Bluemix_notm}} 支援團隊提供支援。您可以從一些不同的選項中進行選擇以取得支援（視您是否有 IBM ID 而定）。
 
 <ul>
 <li>使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 支援中心</a>說明頁面開啟新的問題單，以聯絡支援中心。您可以在此表單中使用電子郵件位址或 IBM ID。為「地區」欄位選取 **{{site.data.keyword.Bluemix_notm}} 專用**選項。
@@ -197,11 +227,8 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 </li>
 <li>如果您有 IBM ID 且能存取「{{site.data.keyword.Bluemix_notm}} 公用」環境，請按一下功能表列中的{{site.data.keyword.avatar}}圖示 <img src="images/account_support.svg" alt="「虛擬人像」圖示" />，然後按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。</li>
 <li>如果您沒有 IBM ID，則可以聯絡組織中有 IBM ID 的人，或是與您的 IBM 業務代表合作。
-<p>**附註**：您可以要求在「專用」環境中 {{site.data.keyword.Bluemix_notm}} 使用者介面的**支援**頁面上，顯示您組織中可作為支援問題單聯絡人的使用者的清單。</p></li>
+<p>**附註**：您可以要求在「專用」環境中 {{site.data.keyword.Bluemix_notm}} 主控台的**支援**頁面上，顯示您組織中可作為支援問題單聯絡人的使用者的清單。</p></li>
 </ul>
-
-如果您是中國的「{{site.data.keyword.Bluemix_notm}} 專用」客戶，則可以從 [UNISYS Service Management IBM Bluemix 頁面](https://chinabluemix.itsm.unisysedge.cn){: new_window}要求支援。此外，中國客戶還可以在 [IBM developerWorks 中國 Developer Centers](https://developer.ibm.com/cn_answers/bluemix/){: new_window} 取得免費支援。
-
 
 ### 與「{{site.data.keyword.Bluemix_notm}} 本端」的支援中心聯絡
 {: #contacting-bluemix-support-local}
@@ -214,13 +241,10 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 <li>使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 支援中心</a>說明頁面開啟新的問題單，以聯絡支援中心。您可以在此表單中使用電子郵件位址或 IBM ID。為「地區」欄位選取 **{{site.data.keyword.Bluemix_notm}} 本端**選項。
 <p>IBM 會在星期日晚上 10:00 UTC 到星期五晚上 11:59 UTC 監視表單的提交。</p>
 </li>
-<li>如果您有 IBM ID 且能存取「{{site.data.keyword.Bluemix_notm}} 公用」環境，請按一下功能表列中的{{site.data.keyword.avatar}}圖示 <img src="images/account_support.svg" alt="「虛擬人像」圖示" />，然後按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。</li>
+<li>如果您有 IBM ID 且能存取「{{site.data.keyword.Bluemix_notm}} 公用」環境，請按一下**支援**功能表列項目，然後按一下**取得協助**。在顯示的頁面上，按一下**保持聯繫**。</li>
 <li>如果您沒有 IBM ID，則可以聯絡組織中有 IBM ID 的人，或是與您的 IBM 業務代表合作。
-<p>**附註**：您可以要求在「本端」環境中 {{site.data.keyword.Bluemix_notm}} 使用者介面的**支援**頁面上，顯示您組織中可作為支援問題單聯絡人的使用者的清單。</p></li>
+<p>**附註**：您可以要求在「本端」環境中 {{site.data.keyword.Bluemix_notm}} 主控台的**支援**頁面上，顯示您組織中可作為支援問題單聯絡人的使用者的清單。</p></li>
 </ul>
-
-
-
 
 ### 支援問題單嚴重性及回應時間
 {: #support-ticket-severity}
@@ -238,7 +262,7 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 嚴重性 2 | <strong>重大業務影響。</strong> <br> 服務特性或功能的使用嚴重受限，或者您快要錯過業務截止時間。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>2 小時內</li><li><strong>高階：</strong>90 分鐘內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
 嚴重性 3 | <strong>次要業務影響。</strong> <br> 服務特性或功能仍可使用，但有些問題會影響其使用。未對作業造成重要影響。 | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>4 小時內</li><li><strong>高階：</strong>2 小時內</li></ul> | <ul><li><strong>免費：</strong>N/A</li><li><strong>基本：</strong>N/A</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
 嚴重性 4 | <strong>最小業務影響。</strong> <br> 查詢或非技術要求。 | <ul><li><strong>免費：</strong>最大努力</li><li><strong>基本：</strong>最大努力</li><li><strong>標準：</strong>8 小時內</li><li><strong>高階：</strong>4 小時內</li></ul> | <ul><li><strong>免費：</strong>作業時間</li><li><strong>基本：</strong>作業時間</li><li><strong>標準：</strong>作業時間</li><li><strong>高階：</strong>作業時間</li></ul>
-*表 2. 嚴重性定義及回應時間*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### 報告潛在的安全漏洞
@@ -251,15 +275,14 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
   2. 在問題單摘要中，清楚說明問題單是有關潛在的安全漏洞。
   2. 包括下列其中一個項目，以提供潛在安全漏洞的詳細資料：
        * 可以聯絡到您一起討論問題的電話號碼。
-	   * 問題的詳細資料。您必須將詳細資料加密為問題單主體中的一個文字區塊，並提供「IBM 支援中心」如何安全聯絡您以取得解密指示的指示。
-	   
+	   * 問題的詳細資料。您必須將詳細資料加密為問題單主體中的一個文字區塊，並提供「IBM 支援中心」如何安全聯絡您以取得解密指示的指示。 
 	   
 	   
 
 ### 提升支援問題單
 {: #escalation}
 
-在中國以外的國家或地區使用標準或高階支援時，如果您未接收到支援問題單的及時回應，或覺得未適當地解決支援問題單，則可以呈報支援問題單。透過支援問題單呈報程序，IBM 管理會檢閱您的問題，並與您合作來改善支援體驗。
+使用標準或高階支援時，如果您未接收到支援問題單的及時回應，或覺得未適當地解決支援問題單，則可以呈報支援問題單。透過支援問題單呈報程序，IBM 管理會檢閱您的問題，並與您合作來改善支援體驗。
 
 若要提交呈報要求，請完成下列步驟：
   1. 開啟摘要為**呈報要求**的新支援問題單。
@@ -269,14 +292,13 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 
 
 
-
 ## 收集診斷資訊
 {: #collecting-diagnostic-information}
 為了診斷及解決 {{site.data.keyword.Bluemix_notm}} 應用程式及服務的問題，「{{site.data.keyword.Bluemix_notm}} 支援」團隊可能會要求您收集診斷資訊。
 
 在您收集診斷資訊之前，請先完成下列步驟：
 
-  1. 確定您已安裝最新的 cf 指令行介面。如需相關資訊，請參閱[安裝 cf 指令行介面](../starters/install_cli.html){: new_window}。
+  1. 確定您已安裝最新的 cf 指令行介面。如需相關資訊，請參閱[安裝 cf 指令行介面](/docs/starters/install_cli.html){: new_window}。
 
      **附註：**如果您沒有安裝最新的 cf 指令行介面，在 cf 指令行連接至 {{site.data.keyword.Bluemix_notm}} 之後，`cf logs` 指令可能不會傳回輸出。
 
@@ -315,8 +337,7 @@ Script 使用 cf 指令行介面來擷取應用程式環境的下列資訊：
 | 西班牙文 | es |
 | 簡體中文 | zh_CN |
 | 繁體中文 | zh_TW |
-
-*表 3. 支援的國家語言及語言碼*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## {{site.data.keyword.Bluemix_notm}} 支援的滿意度意見調查  
@@ -333,7 +354,7 @@ IBM 會定期將意見調查傳送給 Bluemix 客戶，以取得他們對最近�
 
   * [Bluemix 支援入口網站](https://support.ibmcloud.com){: new_window} 
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
-  * [安裝 cf 指令工具](../starters/install_cli.html){: new_window} 
+  * [安裝 cf 指令工具](/docs/starters/install_cli.html){: new_window} 
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
   * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

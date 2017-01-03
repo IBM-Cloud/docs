@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-12-01"
 
 ---
 {:new_window: target="_blank"}
@@ -10,13 +10,7 @@ lastupdated: "2016-10-13"
 # Tutorial - Iniciador de UI (interface com o usuário) de catálogo de loja
 {: #tutorial_store_catalog}
 
-Última atualização: 13 de outubro de 2016
-{: .last-updated}
-
-O Iniciador de UI (interface com o usuário) de catálogo de loja do {{site.data.keyword.Bluemix}}
-fornece uma estrutura básica de app de vendas que é possível customizar e dá a você
-pontos de integração para cada um dos serviços do
-{{site.data.keyword.Bluemix_notm}} Mobile.
+O Iniciador de UI (interface com o usuário) de catálogo de loja do {{site.data.keyword.Bluemix}} fornece uma estrutura básica de app de vendas que é possível customizar e dá a você pontos de integração para cada um dos serviços do {{site.data.keyword.Bluemix_notm}} Mobile.
 
 
 ## Requisitos
@@ -42,7 +36,7 @@ Para colocar em funcionamento rapidamente o Iniciador de UI (interface com o usu
 
    4. Insira o nome do projeto e clique em **Criar**.
 
-2. Opcional: Inclua notificações push.
+2. Opcional: inclua o recurso Notificações push.
 
    1. Clique em **Incluir** para **Notificações push** na página **Visão geral do projeto**.
 
@@ -50,33 +44,40 @@ Para colocar em funcionamento rapidamente o Iniciador de UI (interface com o usu
 
    2. Insira o nome do serviço e clique em **Criar**.
 
-   3. Para iOS, [configure o Serviço de notificação push da Apple](../services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Para iOS, [configure o Serviço de notificação push da Apple](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
    4. Para Android,
 [configure o Sistema de
-mensagens em nuvem do Google](../services/mobilepush/t_push_provider_android.html){: new_window}.
+mensagens em nuvem do Google](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
 
-3. Opcional: Inclua outros serviços.
+3. Opcional: inclua outros recursos.
 
-   1. Clique em **Incluir** para o serviço na página **Visão geral do projeto**.
+   1. Clique em **Incluir** para o
+recurso na página **Visão geral do projeto**.
 
    2. Insira o nome do serviço e clique em **Criar**.
 
-   3. Siga as instruções do serviço para configurá-lo.
+   3. Siga as instruções que são fornecidas com o serviço
+para configurá-lo.
 
 4. Projete seu app.
 
    1. Selecione **Construtor de UI (interface com o usuário)** no menu de navegação para
 customizar o design de seu app.
+   
+		**Dica:** para visualizar uma visão
+geral rápida do Construtor de UI, selecione **Mostre-me
+como funciona** na navegação após selecionar o Construtor
+de UI.
 
    2. Selecione a guia **Design** na navegação.
 
       Há uma área de trabalho para o design de seu app e uma visualização simulada da aparência do seu app.
 
    3. Como opção, inclua novas telas selecionando **Criar
-tela**. Nomeie uma nova tela para facilitar a consulta em seu app. As novas
-telas são criadas no mesmo nível que a tela principal, independentemente do que está
-selecionado na árvore. É possível selecionar dentre os tipos de telas a seguir:
+tela**. Nomeie uma nova tela para facilitar a consulta em seu app. As novas telas são criadas no
+mesmo nível que a tela principal, independentemente do que estiver selecionado na árvore. É possível selecionar dentre os tipos de
+telas a seguir:
       * Menu
       * Listar
       * Map
@@ -84,27 +85,25 @@ selecionado na árvore. É possível selecionar dentre os tipos de telas a segui
       * Diagrama	   
 
    4. É possível mudar o título do menu de seu app selecionando a caixa de texto
-*Menu* na seção **Layout** de sua interface e
-substituindo o conteúdo no campo **Data a serem exibidos**. Visualize
-suas atualizações na seção de dispositivo simulado.
+*Menu* na seção **Layout** de sua
+interface e substituindo o conteúdo no campo **Data a serem
+exibidos**. Visualize suas atualizações na seção de dispositivo simulado.
 
-      Atualize os itens de design selecionando cada um e atualizando as
-informações, conforme necessário. Esses itens são exibidos em um formato de árvore. É
-possível mudar a ordem ou o local dos itens de menu arrastando um item para um novo
-local. Todos os filhos do item também são movidos com o pai. As informações textuais nos
-itens da árvore que são exibidas nos campos **Dados a serem exibidos**
-referenciam conteúdo na planilha de origem de dados. *Não mude esses itens na
-visualização **Design** porque eles serão sobrescritos pelo
-conteúdo nas Origens de dados que são identificadas na visualização
-**Dados**.*
+      Atualize os itens de design selecionando cada um e atualizando as informações,
+conforme necessário. Esses itens são exibidos em um formato de árvore. É possível mudar a
+ordem ou o local dos itens de menu arrastando um item para um novo local. Todos os filhos
+do item também são movidos com o pai. As informações textuais nos itens da árvore que são
+exibidas nos campos **Dados a serem exibidos** referenciam conteúdo na
+planilha de origem de dados. *Não mude esses itens na visualização
+**Design** porque eles serão sobrescritos pelo conteúdo nas
+Origens de dados que são identificadas na visualização **Dados**.*
 
 		Um item identificado na árvore como *Formulário* é independente e
-pode ser modificado sequencialmente. Ele não faz referência a informações de Origem de
-dados.
+pode ser modificado sequencialmente. Ele não faz referência a informações de Origem de dados.
 
-   5. Selecione **Dados** na navegação para visualizar os dados
-que estão sendo usados pelo aplicativo. Há informações padrão no modelo; no entanto, é
-possível mudar a origem dos dados selecionando **Criar novo**. É
+   5. Selecione **Dados** na navegação para visualizar os dados que estiverem sendo
+usados pelo app. Há informações padrão no modelo; no entanto, é possível mudar a origem dos dados selecionando
+**Criar novo**. É
 possível referenciar mais de uma origem de dados; por isso, forneça um nome para cada uma
 que você usar. É possível selecionar dentre as opções de origem de dados a seguir:
       * Cloud
@@ -114,28 +113,27 @@ que você usar. É possível selecionar dentre as opções de origem de dados a 
       * Excel Online
       * Google Drive
 
-      É possível também importar, exportar ou modificar o conteúdo que está na
-tabela, se ele for local, usando os botões e selecionando o conteúdo na tabela.
+      É possível também importar, exportar ou modificar o conteúdo que está na tabela,
+se ele for local, usando os botões e selecionando o conteúdo na tabela.
 
 	  Aviso: se você importar dados que não correspondem à estrutura dos dados
 padrão, ative a régua de controle *Substituir esquema*. Um exemplo disso é
 um arquivo .csv que tem menos colunas do que os dados que são fornecidos com seu
 iniciador.
 
-   6. Selecione **Acesso do usuário** na navegação para
-modificar os requisitos de acesso de seu projeto. É possível ativar e desativar o acesso
-do usuário com o comutador. Quando o acesso do usuário está ativado, é possível
-configurar o tempo limite de usuário inativo e as credenciais dos usuários que podem
-acessar o app.
+   6. Selecione **Acesso do usuário** na navegação para modificar os
+requisitos de acesso de seu projeto. É possível ativar e desativar o acesso do usuário
+com o comutador. Quando o acesso do usuário está ativado, é possível configurar o
+tempo limite de usuário inativo e as credenciais dos usuários que podem acessar o app.
 
    7. Selecione **Configurações** no menu de navegação para
 modificar as informações gerais e as cores do projeto. Essa tela é onde você insere sua
-chave API do Google, se for necessário para os serviços que você incluiu em seu projeto. 
-Essa tela é também onde você inclui seu identificador de pacote configurável exclusivo
-que é registrado na Apple Store ou Google Play Store.
+chave API do Google, se for necessário para os serviços que você incluiu em seu projeto. Essa
+tela é também onde você inclui seu identificador de pacote configurável exclusivo que é
+registrado na Apple Store ou Google Play Store.
 
-      Se você desejar incluir o IBM MobileFirst Foundation SDK em seu projeto,
-ative o comutador.
+      Se você desejar incluir o IBM MobileFirst Foundation SDK em seu projeto, ative
+o comutador.
 
    8. Se você alternou o comutador para incluir o IBM MobileFirst Platform
 Foundation em seu projeto na tela *Configurações*, uma seleção
@@ -143,18 +141,16 @@ Foundation em seu projeto na tela *Configurações*, uma seleção
 **Foundation** e conclua as informações necessárias que são
 específicas do IBM MobileFirst Platform Foundation.
 
-   9. Selecione **Publicar** no menu de navegação para inserir
-as informações finais que são necessárias para criar seu app móvel. É possível inserir
-seu identificador de pacote configurável para iOS e o identificador do aplicativo para
-Android.
+   9. Selecione **Publicar** no menu de navegação para inserir as informações finais
+que são necessárias para criar seu app móvel. É possível inserir seu identificador de Pacote configurável para
+iOS e o identificador de Aplicativo para Android.
 
-       Se você estiver criando um app iOS, deverá obter o Identificador de
-pacote configurável, o Certificado de distribuição como um arquivo *.p12* e
-o Perfil de fornecimento como um arquivo *.mobileprovision* no portal de
+       Se você estiver criando um app iOS, deverá obter o Identificador de pacote
+configurável, o Certificado de distribuição como um arquivo *.p12* e o
+Perfil de fornecimento como um arquivo *.mobileprovision* no portal de
 fornecimento da Apple. Os três devem ser criados ao mesmo tempo e com o mesmo computador
 que você planeja usar quando postar seu aplicativo na Apple store. O Certificado de
-distribuição e o Perfil de fornecimento devem ser baseados no Identificador de pacote
-configurável. 	
+distribuição e o Perfil de fornecimento devem ser baseados no Identificador de pacote configurável. 	
 
 5. Faça download do seu projeto.
 
@@ -162,15 +158,15 @@ configurável.
 
    2. Para Android, é possível escolher dentre as opções a seguir após o código ser gerado:
 
-      **Fazer download do código**
+      * Fazer download do código
 
-      **Fazer download do APK**
+      * Fazer download do APK
 
-      **Fazer download com o código QR**
+      * Fazer download com o Código Quick Response
 
    3. Para iOS, é possível escolher dentre as opções a seguir após o código ser gerado:
 
-      **Fazer download do código**
+      * Fazer download do código
 
 6. Execute seu app no dispositivo ou no simulador.
 
@@ -178,33 +174,4 @@ configurável.
 ## O que Fazer a Seguir
 {: #tutorial_next}
 
-[Teste-o!](http://new-console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
-
-
-# Links relacionados
-{: #rellinks}
-
-<!-- links to internal services don't work
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
-
-## Postagens do blog
-{: #general}
-* [Postagem do blog: Introducing the Bluemix Mobile
-dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Postagem do blog: Introducing the next generation of the Bluemix Mobile dashboard](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
-* [Postagem do blog: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [Postagem do blog: Bluemix
-Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [Postagem do blog: Bluemix
-Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
-## Tutoriais e amostras
-{: #samples}
-* [Backend móvel para Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+[Teste-o!](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}

@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,10 +13,8 @@
 
 # Einführung in Insights for Twitter {: #insights_twitter_overview}
 
-*Letzte Aktualisierung: 13. Mai 2016*
-{: .last-updated}
-
-Mithilfe von {{site.data.keyword.twitterfull}} können Sie Twitter-Inhalte aus den Twitter [Decahose](http://support.gnip.com/apis/firehose/overview.html){: new_window}- oder [PowerTrack](http://support.gnip.com/apis/powertrack/overview.html){: new_window}-Streams in Ihre {{site.data.keyword.Bluemix}}-Anwendungen integrieren.{:shortdesc}
+Mithilfe von {{site.data.keyword.twitterfull}} können Sie Twitter-Inhalte aus den Twitter [Decahose](http://support.gnip.com/gnip2.0/){: new_window}- oder [PowerTrack](http://support.gnip.com/apis/powertrack2.0/){: new_window}-Streams in Ihre {{site.data.keyword.Bluemix}}-Anwendungen integrieren.
+{:shortdesc}
 
 Um mit der Verwendung von {{site.data.keyword.twittershort}} zu beginnen, müssen Sie zunächst Ihre Bluemix-Webanwendung mit einer Laufzeit erstellen, z. B. Liberty for Java, und anschließend den Service {{site.data.keyword.twittershort}} zu Ihrer App hinzufügen. Ist der Service {{site.data.keyword.twittershort}} an Ihre App gebunden, wird die Serviceinstanz mit eindeutigen Berechtigungsnachweisen bereitgestellt. Ihre App verwendet diese Berechtigungsnachweise in Kombination mit den REST-APIs, um den Twitter-Inhalt zu durchsuchen und zu nutzen.  Führen Sie diese Schritte durch, um die Berechtigungsnachweise aus VCAP_SERVICES abzurufen und die Serviceinstanz mit Ihrer App zu integrieren.
 
@@ -34,30 +40,6 @@ Um mit der Verwendung von {{site.data.keyword.twittershort}} zu beginnen, müsse
    ]
 }
 ```
-
-<!--
-## Adding Insights for Twitter to your application {: #adding_twitter}
-
-The following instructions guide you through the process of creating an application, binding the application to the {{site.data.keyword.twittershort}} service, and retrieving the service credentials to interact with REST API operations in the provided API reference documentation.
-
-### Create an application
-For demonstration purposes, you'll create an application using the Liberty for Java&trade;  runtime, but the general process described below can be applied to other runtimes. If you don't have an existing application, click **CREATE AN APP** in the dashboard. When asked to confirm the type of app, click **WEB**.
-
-1. Open the **Catalog** menu.
-2. From the **Runtimes** section, click **Liberty for Java**.
-3. Click **Create**.
-4. In the **App Name** field, specify the name of your app.
-5. Click **Finish**. Wait for your application to provision.
-
-### Add the Insights for Twitter service
-Follow these steps to add the {{site.data.keyword.twittershort}} service to your app.
-
-1. Open the **Catalog** menu.
-2. From the **Data & Analytics** section, click the {{site.data.keyword.twittershort}} tile.
-3. In the **App** field, select the name of your app.
-4. Click **Create**.
-5. When prompted, click **Restage** to restart your application.
--->
 
 # Zugehörige Links
 {: #rellinks}

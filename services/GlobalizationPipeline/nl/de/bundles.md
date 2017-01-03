@@ -14,16 +14,16 @@ copyright:
 # Mit Bundles arbeiten
 {: #globalizationpipeline_workingwithbundles}
 
-*Letzte Aktualisierung: 6 Juli 2016*
+*Letzte Aktualisierung: 30. August 2016*
 {: .last-updated}
 
 Jedes von Ihnen erstellte Bundle enthält die Schlüssel/Wert-Paare aus Ihrer Ressourcendatei und die vollständige Gruppe von generierten Übersetzungen.
 {:shortdesc}
 
-Die Ressourcendateien, die Sie hochladen, können eines der folgenden Formate aufweisen und müssen Inhalt in Form von Schlüssel/Wertpaaren enthalten, die die Zeichenfolgen der Benutzerschnittstelle Ihrer App darstellen. 
+Die Ressourcendateien, die Sie hochladen, können eines der folgenden Formate aufweisen und müssen Inhalt in Form von Schlüssel/Wertpaaren enthalten, die die Zeichenfolgen der Benutzerschnittstelle Ihrer App darstellen.
 
 
-* Dateityp: *Java™ Properties files (.properties)*<br>
+* Dateityp: *Java™-Eigenschaftendateien (.properties)*<br>
 Beispiel:
 ```js
 logout=Logout 
@@ -81,10 +81,10 @@ Beispiel:
 }
 ``` 
 
-Zusätzlich muss eine Ressourcendatei die folgenden Richtlinien einhalten: 
-* Jeder Schlüssel kann maximal 255 Zeichen enthalten. 
-* Jeder Wert kann maximal 8191 Zeichen enthalten. 
-* Jedes Bundle kann maximal 500 Schlüssel/Wertpaare enthalten. 
+Zusätzlich muss eine Ressourcendatei die folgenden Richtlinien einhalten:
+* Jeder Schlüssel kann maximal 255 Zeichen enthalten.
+* Jeder Wert kann maximal 8191 Zeichen enthalten.
+* Jedes Bundle kann maximal 500 Schlüssel/Wertpaare enthalten.
 
 
 ## Bundle übersetzen
@@ -92,7 +92,7 @@ Zusätzlich muss eine Ressourcendatei die folgenden Richtlinien einhalten:
 
 Nur hochgeladene Ressourcendateien werden übersetzt. Sie können eine Ressourcendatei hochladen, wenn Sie ein [Bundle erstellen](index.html#globalizationpipeline_creatingbundles) oder [Details zum Bundle ändern](bundles.html#globalizationpipeline_modifyingbundles).
 
-Nachdem Sie eine Ressourcendatei hochgeladen haben, können Sie ihren Inhalt in eine der Sprachen übersetzen, die von der Standardengine für automatische Übersetzung angeboten wird. Optional können Sie eine alternative Engine für automatische Übersetzung verwenden. Dies wird im Abschnitt über die [Konfiguration der automatischen Übersetzung](managing_translations.html#globalizationpipeline_service_to_service) beschrieben. Die Standardengine unterstützt die folgenden Zielsprachen: 
+Nachdem Sie eine Ressourcendatei hochgeladen haben, können Sie ihren Inhalt in eine der Sprachen übersetzen, die von der Standardengine für automatische Übersetzung angeboten wird. Optional können Sie eine alternative Engine für automatische Übersetzung verwenden. Dies wird im Abschnitt über die [Konfiguration der automatischen Übersetzung](managing_translations.html#globalizationpipeline_service_to_service) beschrieben. Die Standardengine unterstützt die folgenden Zielsprachen:
 
 <table>
 <thead>
@@ -131,31 +131,31 @@ Nachdem Sie eine Ressourcendatei hochgeladen haben, können Sie ihren Inhalt in 
 </tbody>
 </table>
 
-**Hinweis: ** Englisch ist momentan die einzige unterstützte Ausgangssprache. Wenn für den Service {{site.data.keyword.GlobalizationPipeline_full}} weitere Ausgangs- und Zielsprachen entstehen, werden weitere Ausgangs- und Zielsprachen hinzugefügt. 
+**Anmerkung:** Die Standardengine für die automatische Übersetzung von {{site.data.keyword.GlobalizationPipeline_short}} bietet nur Unterstützung für Englisch als Ausgangssprache. Allerdings sind alternative Engines für die automatische Übersetzung zur Konfiguration innerhalb der {{site.data.keyword.GlobalizationPipeline_short}} verfügbar und unterstützen die Übersetzung weiterer Sprachenpaare außer Englisch.
 
-Wenn Sie Bundle erstellen, werden diese zur Registerkarte **Bundles** hinzugefügt, damit leichter auf sie zugegriffen werden kann. Von der Registerkarte aus können weitere Tasks mit den Übersetzungen ausgeführt werden. 
+Wenn Sie Bundle erstellen, werden diese zur Registerkarte **Bundles** hinzugefügt, damit leichter auf sie zugegriffen werden kann. Von der Registerkarte aus können weitere Tasks mit den Übersetzungen ausgeführt werden.
 
 
 ## Ein Bundle für die Arbeit auswählen
 {: #globalizationpipeline_selectingabundle}
 
-1. Klicken Sie auf die Registerkarte **Bundles**, um alle Bundles anzuzeigen, die Sie erstellt haben. 
-2. Klicken Sie auf eine **Bundle-ID** in der Liste, um weitere Details zu diesem Bundle anzuzeigen, oder klicken Sie auf das Symbol **Bundle-Details anzeigen** ![Wählen Sie das Symbol 'Bundle-Details anzeigen', um ein Bundle zu öffnen und mit seiner Übersetzung zu arbeiten](images/viewProjectDetailIcon.png)	in der Spalte 'Aktionen'. 
+1. Klicken Sie auf die Registerkarte **Bundles**, um alle Bundles anzuzeigen, die Sie erstellt haben.
+2. Klicken Sie auf eine **Bundle-ID** in der Liste, um weitere Details zu diesem Bundle anzuzeigen, oder klicken Sie auf das Symbol **Bundle-Details anzeigen** ![Wählen Sie das Symbol 'Bundle-Details anzeigen', um ein Bundle zu öffnen und mit seiner Übersetzung zu arbeiten](images/viewProjectDetailIcon.png)	in der Spalte 'Aktionen'.
 
 ![Alle verfügbaren Bundles auf der Registerkarte 'Bundles' anzeigen.](images/translationBundles.png)
 
-Nachdem Sie ein Bundle für die Arbeit ausgewählt haben, können Sie den Status der zugehörigen Übersetzungen anzeigen, Sprachen hinzufügen oder entfernen, die Übersetzungen bearbeiten oder Updates für die Ressourcendatei zur Verfügung stellen. 
+Nachdem Sie ein Bundle für die Arbeit ausgewählt haben, können Sie den Status der zugehörigen Übersetzungen anzeigen, Sprachen hinzufügen oder entfernen, die Übersetzungen bearbeiten oder Updates für die Ressourcendatei zur Verfügung stellen.
 
-Wenn Sie ein Bundle nicht mehr benötigen, können Sie es von der Registerkarte **Bundles** löschen. Alle Übersetzungen, die dem Bundle zugeordnet sind, werden ebenfalls gelöscht. 
+Wenn Sie ein Bundle nicht mehr benötigen, können Sie es von der Registerkarte **Bundles** löschen. Alle Übersetzungen, die dem Bundle zugeordnet sind, werden ebenfalls gelöscht.
 
 ## Details zu Bundle ändern
 {: #globalizationpipeline_modifyingbundles}
 
-Wenn Sie ein Bundle öffnen, können Sie alle Details zum Bundle anzeigen. Alle Zielsprachen im Bundle werden zusammen mit dem jeweils aktuellen Übersetzungsstatus aufgelistet. 
+Wenn Sie ein Bundle öffnen, können Sie alle Details zum Bundle anzeigen. Alle Zielsprachen im Bundle werden zusammen mit dem jeweils aktuellen Übersetzungsstatus aufgelistet.
 
 ![Die Seite mit den Bundle-Details zeigt Informationen zum Bundle und den zugehörigen Übersetzungen an. ](images/bundleDetails.png)
 
-Der Status für jede Sprache im Bundle kann 'In Bearbeitung', 'Fehlgeschlagen' oder 'Übersetzt' lauten: 
+Der Status für jede Sprache im Bundle kann 'In Bearbeitung', 'Fehlgeschlagen' oder 'Übersetzt' lauten:
 
 | Status | Beschreibung |
 |--------|-------------|
@@ -163,13 +163,13 @@ Der Status für jede Sprache im Bundle kann 'In Bearbeitung', 'Fehlgeschlagen' o
 | Fehlgeschlagen | Es ist ein Fehler aufgetreten, als die Ressourcendatei in die Zielsprache übersetzt wurde. |
 | Übersetzt | Die Übersetzung in die Zielsprache ist abgeschlossen. |
 
-Sie können die Ressourcendatei aktualisieren, die das Bundle verwendet, eine Zielsprache zum Bundle hinzufügen, eine Zielsprache aus dem Bundle löschen und die generierten Übersetzungen für eine Zielsprache herunterladen. 
+Sie können die Ressourcendatei aktualisieren, die das Bundle verwendet, eine Zielsprache zum Bundle hinzufügen, eine Zielsprache aus dem Bundle löschen und die generierten Übersetzungen für eine Zielsprache herunterladen.
 
 ### Ressourcendatei aktualisieren, die vom Bundle verwendet wird
 
-1. Klicken Sie in der Spalte 'Aktionen' neben der Ausgangssprache auf das Symbol **Ressourcen hochladen** ![Wählen Sie dieses Symbol aus, um eine neue Ressourcendatei hochzuladen](images/uploadIcon.png). 
-2. Klicken Sie auf **Durchsuchen** und wählen Sie eine neue Ressourcendatei zum Hochladen aus. 
-3. Wählen Sie den Typ der Ressourcendatei aus, den Sie hochladen. 
+1. Klicken Sie in der Spalte 'Aktionen' neben der Ausgangssprache auf das Symbol **Ressourcen hochladen** ![Wählen Sie dieses Symbol aus, um eine neue Ressourcendatei hochzuladen](images/uploadIcon.png).
+2. Klicken Sie auf **Durchsuchen** und wählen Sie eine neue Ressourcendatei zum Hochladen aus.
+3. Wählen Sie den Typ der Ressourcendatei aus, den Sie hochladen.
  * Java-Eigenschaftendatei
  * AMD I18N
  * JSON
@@ -179,23 +179,23 @@ Die Schlüssel/Wertpaare, die sich in der neuen oder aktualisierten Ressourcenda
 
 ### Eine Zielsprache zu einem Bundle hinzufügen
 
-1. Klicken Sie auf die Schaltfläche **Sprache hinzufügen**. 
-2. Alle verfügbaren Zielsprachen werden angezeigt. Wählen Sie die Sprachen aus, die zum Bundle hinzugefügt werden sollen. 
+1. Klicken Sie auf die Schaltfläche **Sprache hinzufügen**.
+2. Alle verfügbaren Zielsprachen werden angezeigt. Wählen Sie die Sprachen aus, die zum Bundle hinzugefügt werden sollen.
 
-Die Übersetzung für die ausgewählten Sprachen beginnt sofort. 
+Die Übersetzung für die ausgewählten Sprachen beginnt sofort.
 
 ### Eine Zielsprache aus dem Bundle löschen
 
 Wenn Sie eine Zielsprache aus dem Bundle löschen, entfernen Sie die Zielsprache und alle zugehörigen Übersetzungen aus dem Projekt. Klicken Sie in der Spalte 'Aktionen' der Zielsprache auf das Symbol **Diese Zielsprache entfernen** ![Wählen Sie das Papierkorbsymbol zum Entfernen dieser Zielsprache aus](images/trashIcon.png).
 
-### Generierte Übersetzungen für eine Zielsprache herunterladen. 
+### Generierte Übersetzungen für eine Zielsprache herunterladen.
 
-{{site.data.keyword.GlobalizationPipeline_full}} bietet mehrere Möglichkeiten, um die Übersetzung in eine Zielsprache in Ihre Anwendung zu integrieren. Sie können die Übersetzung als Ressourcendatei herunterladen und in Ihren Anwendungsbuild einbeziehen. Sie können auf die Übersetzung auch dynamisch von {{site.data.keyword.GlobalizationPipeline_full}} mithilfe eines der Open-Source-[SDKs](https://github.com/IBM-Bluemix/gp-common) verweisen. 
+{{site.data.keyword.GlobalizationPipeline_short}} bietet mehrere Möglichkeiten, um die Übersetzung in eine Zielsprache in Ihre Anwendung zu integrieren. Sie können die Übersetzung als Ressourcendatei herunterladen und in Ihren Anwendungsbuild einbeziehen. Sie können auf die Übersetzung auch dynamisch von {{site.data.keyword.GlobalizationPipeline_short}} mithilfe eines der Open-Source-[SDKs](https://github.com/IBM-Bluemix/gp-common) verweisen. 
 
 <!-- For information on {{site.data.keyword.GlobalizationPipeline_full}} SDKs, see <link>. -->
 
-Gehen Sie folgt vor, um die Übersetzung als Ressourcendatei herunterzuladen:  
+Gehen Sie folgt vor, um die Übersetzung als Ressourcendatei herunterzuladen: 
 
 1. Klicken Sie in der Spalte **Aktionen** der Ziel- und Ausgangssprache auf das Symbol **Übersetzungen herunterladen** ![Wählen Sie das Symbol zum Herunterladen der Ausgangsschlüssel oder der Übersetzungen für eine Zielsprache aus](images/downloadIcon.png).
-2. Wählen Sie ein Dateiformat aus. 
+2. Wählen Sie ein Dateiformat aus.
 3. Klicken Sie auf **Herunterladen**.

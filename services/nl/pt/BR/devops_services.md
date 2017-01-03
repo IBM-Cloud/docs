@@ -1,13 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Serviços DevOps
 {: #devops_services}
-
-*Última atualização: 7 de abril de 2016*

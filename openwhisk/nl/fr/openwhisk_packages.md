@@ -1,12 +1,11 @@
 ---
 
- 
+
 
 copyright:
+  years: 2016
+lastupdated: "2016-08-02"
 
-  2016
-
- 
 
 ---
 
@@ -18,8 +17,7 @@ copyright:
 
 # Utilisation et création de packages {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
-Dernière mise à jour : 2 août 2016
-{: .last-updated}
+
 
 Dans {{site.data.keyword.openwhisk}}, vous pouvez utiliser des packages afin de regrouper des actions connexes et de les partager.
 
@@ -266,7 +264,7 @@ déclencheur toutes les secondes, et comment utiliser une règle permettant d'ap
 2. Créez un déclencheur qui s'exécute toutes les huit secondes.
 
   ```
-  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron '*/8 * * * * *' -p trigger_payload '{"name":"Mork", "place":"Ork"}'
+  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron "*/8 * * * * *" -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"
   ```
   {: pre}
   ```
@@ -410,12 +408,13 @@ du package, qui sont hérités par toutes les actions dans le package. Voici un 
 paramètres du package.
 
   ```
-  wsk package get custom parameters
+  wsk package get custom
   ```
   {: pre}
   ```
-  ok: got package custom, projecting parameters
-  [
+  ok: got package custom
+  ...
+  "parameters": [
       {
           "key": "city",
           "value": "Austin"
@@ -425,16 +424,18 @@ paramètres du package.
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
   ```
-  wsk action get custom/identity parameters
+  wsk action get custom/identity
   ```
   {: pre}
   ```
-  ok: got action custom/identity, projecting parameters
-  [
+  ok: got action custom/identity
+  ...
+  "parameters": [
       {
           "key": "city",
           "value": "Austin"
@@ -444,6 +445,7 @@ paramètres du package.
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
@@ -498,12 +500,14 @@ du package et de créer des actions de séquence et des règles {{site.data.keyw
 2. Affichez la propriété `publish` du package pour vérifier qu'elle est désormais associée à la valeur true.
 
   ```
-  wsk package get custom publish
+  wsk package get custom
   ```
   {: pre}
   ```
-  ok: got package custom, projecting publish
-  true
+  ok: got package custom
+  ...
+  "publish": true,
+  ...
   ```
   {: screen}
 

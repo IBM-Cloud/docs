@@ -11,13 +11,13 @@ copyright:
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.GlobalizationPipeline_full}} 문제점 해결
+# {{site.data.keyword.GlobalizationPipeline_short}} 문제점 해결
 {: #globalizationpipelinets}
 
-*마지막 업데이트 날짜: 2016년 6월 27일*
+*마지막 업데이트 날짜: 2016년 8월 30일*
 {: .last-updated}
 
-다음은 {{site.data.keyword.GlobalizationPipeline_full}} 사용에 대한 일반적인 질문에 대한 답변입니다.
+다음은 {{site.data.keyword.GlobalizationPipeline_short}} 사용에 대한 일반적인 질문에 대한 답변입니다.
 {:shortdesc}
 
 
@@ -47,7 +47,7 @@ copyright:
 새 번역 번들에 리소스 파일을 추가하거나 번역될 기존의 리소스 파일을 업데이트할 때, 오류가 발생합니다.
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}}에서는 다음 유형의 리소스 파일만 허용합니다. Java™ .properties, JSON 및 AMD I18N
+{{site.data.keyword.GlobalizationPipeline_short}}에서는 다음 유형의 리소스 파일만 허용합니다. Java™ .properties, JSON 및 AMD I18N
 {: tsCauses}
 
 업로드되는 리소스 파일이 다음 유형 중 하나인지 확인하십시오.
@@ -67,7 +67,7 @@ copyright:
 번역 프로젝트에 리소스 파일을 추가하거나 업데이트할 때, 파일의 일부가 너무 커서 오류가 발생합니다.
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}}에서는 특정 크기 요구사항과 일치하는 리소스 파일만 허용할 수 있습니다.
+{{site.data.keyword.GlobalizationPipeline_short}}에서는 특정 크기 요구사항과 일치하는 리소스 파일만 허용할 수 있습니다.
 {: tsCauses}
 
 리소스 파일이 다음 가이드라인을 따르는지 확인하십시오.
@@ -77,22 +77,6 @@ copyright:
 * 각 번역 프로젝트에는 최대 500개의 키/값 쌍이 포함될 수 있습니다.
 * 리소스 파일은 2MB보다 클 수 없습니다.
 
-
-
-## 비영어 리소스 파일이 기타 언어로 적절히 번역되지 않음
-{: #problem4}
-
-비영어 소스 리소스 파일은 적절히 번역되지 않습니다.
-{:shortdesc}
-
-소스가 영어로 되지 않은 리소스 파일이 번역 번들에 업로드될 때, 생성된 번역이 올바르지 않습니다.
-{: tsSymptoms}
-
-{{site.data.keyword.GlobalizationPipeline_full}}에서는 소스 언어로 현재 영어만 지원합니다.
-{: tsCauses}
-
-비영어 리소스 파일의 번역이 아직 지원되지 않습니다.
-{: tsResolve}
 
 
 
@@ -108,5 +92,5 @@ copyright:
 기계 번역 엔진이 자연어로 작업하도록 디자인되고, 프로그래밍 언어로 사용된 특정 구문을 처리하는 방법을 항상 인식하거나 알 수 있는 것은 아닙니다. 따라서, 일반 텍스트와 혼합된 구문의 처리가 다를 수 있습니다.
 {: tsCauses}
 
-{{site.data.keyword.GlobalizationPipeline_full}}에서는 변수를 나타내는 데 공통적으로 사용된 "{}" 패턴을 현재 인식하고 내부에 포함된 컨텐츠의 기존 형식을 유지합니다.
+{{site.data.keyword.GlobalizationPipeline_short}}에서는 변수를 나타내는 데 공통적으로 사용된 "{}" 패턴을 현재 인식하고 내부에 포함된 컨텐츠의 기존 형식을 유지합니다.
 {: tsResolve}

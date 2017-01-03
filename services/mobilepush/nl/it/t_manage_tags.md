@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Gestione delle tag
 {: #manage_tags}
-Ultimo aggiornamento: 17 ottobre 2016
+Ultimo aggiornamento: 07 dicembre 2016
 {: .last-updated}
 
 Utilizza il dashboard {{site.data.keyword.mobilepushshort}} per creare ed eliminare tag per la tua applicazione e avviare quindi le notifiche basate sulle tag. La notifica basata sulle tag viene ricevuta dai dispositivi che hanno sottoscritto le tag.
@@ -46,7 +51,7 @@ Le notifiche basate sulle tag sono messaggi destinati a tutti i dispositivi sott
 Le tag forniscono un modo per inviare notifiche mirate agli utenti sulla base dei loro interessi, a differenza dai broadcast generali che vengono inviati a tutte le applicazioni. Puoi creare e gestire le tag utilizzando la scheda Tag nel dashboard {{site.data.keyword.mobilepushshort}}oppure utilizzare le API REST. Puoi utilizzare i frammenti di codice per gestire e sottoporre a query le tue sottoscrizioni di tag per la tua
             applicazione mobile. Puoi utilizzare questi frammenti di codice per ottenere sottoscrizioni, sottoscrivere una tag, annullare la sottoscrizione a un tag o ottenere un elenco delle tag disponibili. Copia e incolla questi frammenti di codice nella tua applicazione mobile.
 
-## Android
+## Come ottenere le tag su Android
 {: android-get-tags}
 
 La API **getTags** restituisce l'elenco di
@@ -94,7 +99,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 	```
 	{: codeblock}
 
-## Cordova
+## Come ottenere le tag su Cordova
 {: cordova-get-tags}
 
 Copia i seguenti frammenti di codice nella tua applicazione mobile per ottenere un elenco di tag sottoscritte dal dispositivo e per ottenere un elenco delle tag disponibili.
@@ -103,21 +108,21 @@ Richiama un array delle tag disponibili per la sottoscrizione.
 
 ```
 //Ottieni un elenco di tag disponibili a cui può sottoscriversi il dispositivo
-MFPPush.retrieveAvailableTags(function(tags) {
+BMSPush.retrieveAvailableTags(function(tags) {
   alert(tags);
-}, null);
+}, failure); 
 ```
 	{: codeblock}
 
 ```
 //Ottieni un elenco di tag disponibili sottoscritte dal dispositivo.
-MFPPush.getSubscriptionStatus(function(tags) {
-  alert(tags);
-}, null);
+BMSPush.retrieveSubscriptions(function(tags) {
+   alert(tags); 
+}, failure); 
 ```
 	{: codeblock}
 
-## Objective-C
+## Come ottenere le tag su Objective-C
 {: objc-get-tags}
 
 Copia i seguenti frammenti di codice nella tua applicazione iOS sviluppata con Objective-C per ottenere un elenco di tag sottoscritte dal dispositivo e per ottenere un elenco delle tag disponibili a cui può sottoscriversi il dispositivo.
@@ -159,7 +164,7 @@ subscribedTags = [response subscriptions];
   ```
 	{: codeblock}
 
-## Swift
+## Come ottenere le tag su Swift
 {: swift-get-tags}
 
 La API **retrieveAvailableTagsWithCompletionHandler** restituisce l'elenco di
@@ -201,7 +206,29 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 ```
 	{: codeblock}
 
-## Google Chrome e Mozilla Firefox
+## Google Chrome, Safari e Mozilla Firefox
+{: web-get-tags}
+
+Per ottenere l'elenco delle tag disponibili, a cui possono sottoscriversi i clienti, utilizza il seguente codice.
+
+```
+var bmsPush = new BMSPush();
+  bmsPush.retrieveAvailableTags(function(response) 
+	{
+  alert(response.response)
+    var json = JSON.parse(response.response);
+    var tagsA = []
+  for (i in json.tags)
+	{
+    tagsA.push(json.tags[i].name)
+    }
+   alert(tagsA)
+ })
+```
+	{: codeblock}
+
+
+## Estensioni e applicazioni Google Chrome
 {: web-get-tags}
 
 Per ottenere l'elenco delle tag disponibili, a cui possono sottoscriversi i clienti, utilizza il seguente codice.
@@ -233,45 +260,13 @@ var bmsPush = new BMSPush();
 ```
 	{: codeblock}
 
-## Estensioni e applicazioni Google Chrome 
-{: web-get-tags}
 
-Per ottenere l'elenco delle tag disponibili, a cui possono sottoscriversi i clienti, utilizza il seguente codice.
-
-```
-var bmsPush = new BMSPush();
-  bmsPush.retrieveAvailableTags(function(response) 
-	{
-  alert(response.response)
-    var json = JSON.parse(response.response);
-    var tagsA = []
-  for (i in json.tags)
-	{
-    tagsA.push(json.tags[i].name)
-    }
-   alert(tagsA)
- })
-```
-	{: codeblock}
-
-Copia i seguenti frammenti di codice nelle tue estensioni e applicazioni Google Chrome per ottenere un elenco di tag a cui sono sottoscritti i clienti.
-
-```
-var bmsPush = new BMSPush();
-  bmsPush.retrieveSubscriptions(function(response) 
-	{
-   alert(response.response)
- })
-```
-	{: codeblock}
-
-
-# Sottoscrizione e annullamento di sottoscrizioni di tag
+# Sottoscrizione e annullamento di sottoscrizioni alle tag
 {: #Subscribe_tags}
 
 Utilizza i seguenti frammenti di codice per consentire ai tuoi dispositivi di ottenere sottoscrizioni, sottoscriversi a una tag e annullare la sottoscrizione a una tag.
 
-## Android
+## Sottoscrizione e annullamento di sottoscrizioni alle tag su Android
 {: android-subscribe-tags}
 
 Copia e incolla questo frammento di codice nella tua applicazione mobile Android.
@@ -308,19 +303,19 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-## Cordova
+## Sottoscrizione e annullamento di sottoscrizioni alle tag su Cordova
 {: cordova-subscribe-tags}
 
 Copia e incolla questo frammento di codice nella tua applicazione mobile Cordova.
 
 ```
 var tag = "YourTag";
-MFPPush.subscribe(tag, success, failure);
-MFPPush.unsubscribe(tag, success, failure);
+BMSPush.subscribe(tag, success, failure);
+BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Objective-C
+## Sottoscrizione e annullamento di sottoscrizioni alle tag su Objective-C
 {: objc-subscribe-tags}
 
 Copia e incolla questo frammento di codice nella tua applicazione mobile Objective-C.
@@ -360,7 +355,7 @@ Utilizza la API **unsubscribeFromTags** per annullare la sottoscrizione a una
 ```
 	{: codeblock}
 
-## Swift
+## Sottoscrizione e annullamento di sottoscrizioni alle tag su Swift
 {: swift-subscribe-tags}
 
 Copia e incolla questo frammento di codice nella tua applicazione mobile Swift.
@@ -371,13 +366,15 @@ Utilizza la API **subscribeToTags** per sottoscrivere a una
                 tag.
 
 ```
-push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
-	//error while subscribing to tags
-	} else {
-//successfully subscribed to tags var subStatus = response.subscribeStatus();
-	}
-}
+push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statusCode, error) -> Void in
+    if error.isEmpty {
+        print("Response when subscribing to tags: \(response?.description)")
+        print("Status code when subscribing to tags: \(statusCode)")
+    } else {
+        print("Error when subscribing to tags: \(error) ")
+        print("Error status code when subscribing to tags: \(statusCode)")
+    }
+})
 ```
 	{: codeblock}
 
@@ -427,9 +424,6 @@ var tagsArray = ["tag1", "Tag2"]
 {: #using_tags}
 
 Le notifiche basate sulle tag sono messaggi destinati a tutti i dispositivi sottoscritti a una particolare tag. Ciascun dispositivo può essere sottoscritto a un qualsiasi numero di tag. Questo argomento descrive come inviare notifiche basate sulle tag. Le sottoscrizioni vengono gestite dall'istanza Bluemix del servizio {{site.data.keyword.mobilepushshort}}. Quando viene eliminata una tag, vengono eliminate anche tutte le informazioni associate con tale tag, inclusi i relativi sottoscrittori e dispositivi. Non è necessario un annullamento della sottoscrizione automatico per questa tag poiché non esiste più e non sono richieste ulteriori azioni dal lato client.
-
-###Prima di cominciare
-{: before-you-begin}
 
 Crea le tag sulla schermata **Tag**. Per informazioni su come creare le tag, vedi [Creazione di tag](t_manage_tags.html).
 

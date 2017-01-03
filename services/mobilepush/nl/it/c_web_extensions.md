@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Abilitazione delle estensioni e delle applicazioni Chrome a ricevere {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Ultimo aggiornamento: 17 ottobre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
 Puoi ora abilitare le estensioni e le applicazioni Chrome a ricevere {{site.data.keyword.mobilepushshort}}.
@@ -16,11 +20,11 @@ Puoi ora abilitare le estensioni e le applicazioni Chrome a ricevere {{site.data
 ## Installazione dell'SDK client per {{site.data.keyword.mobilepushshort}}
 {: #web_install}
 
-Questo argomento descrive come installare e utilizzare il JavaScript Push SDK client per sviluppare ulteriormente le tue estensioni e applicazioni Chrome. 
+Questo argomento descrive come installare e utilizzare il JavaScript Push SDK client per sviluppare ulteriormente le tue estensioni e applicazioni Chrome.
 
-### Inizializzazione delle estensioni e delle applicazioni Google Chrome 
+### Inizializzazione delle estensioni e delle applicazioni Google Chrome
 
-Per l'installazione dell'SDK Javascript SDK nelle estensioni e applicazioni Chrome completa la seguente procedura: 
+Per l'installazione dell'SDK Javascript SDK nelle estensioni e applicazioni Chrome completa la seguente procedura:
 
 Scarica `BMSPushSDK.js` e `manifest_Chrome_Ext.json` (per le estensioni Chrome) o `manifest_Chrome_App.json` (per le applicazioni Chrome) dalla [SDK di push web di Bluemix](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
 
@@ -31,7 +35,7 @@ Scarica `BMSPushSDK.js` e `manifest_Chrome_Ext.json` (per le estensioni Chrome) 
  2. Aggiungi `BMSPushSDK.js` in `app.background.scripts`.
  3. Modifica `manifest_Chrome_App.json` in `manifest.json`.
 
-- Per le estensioni Chrome, configura il file manifest: 
+- Per le estensioni Chrome, configura il file manifest:
  1. Nel file `manifest_Chrome_Ext.json` fornisci nome, descrizione e icone.
  2. Aggiungi `BMSPushSDK.js` in `background.scripts`.
  3. Modifica `manifest_Chrome_Ext.json` in `manifest.json`.
@@ -46,7 +50,7 @@ chrome.notifications.onButtonClicked.addListener(BMSPushBackground.notifiation_b
 
 
 
-## Inizializzazione della SDK di push  
+## Inizializzazione della SDK di push 
 {: #web_initialize}
 
 Inizializza la SDK di push con `app GUID` e `app Region` del servizio {{site.data.keyword.mobilepushshort}} di Bluemix.  
@@ -73,7 +77,7 @@ Per ottenere il tuo GUID dell'applicazione, seleziona l'opzione **Configurazione
 ```
 	{: codeblock}
 
-## Registrazione delle estensioni e delle applicazioni Chrome 
+## Registrazione delle estensioni e delle applicazioni Chrome
 {: #web_register}
 
 Utilizza l'API `register()` per registrare il dispositivo con il servizio {{site.data.keyword.mobilepushshort}}. Per la registrazione da Google Chrome, aggiungi l'URL del sito web e la chiave API di FCM (Firebase Cloud Messaging) o GCM (Google Cloud Messaging) nel dashboard di configurazione web del servizio {{site.data.keyword.mobilepushshort}} di Bluemix. Per ulteriori informazioni, consulta [Configurazione delle credenziali per GCM (Google Cloud Messaging)](t_push_provider_android.html) nelle impostazioni di Chrome.
@@ -98,32 +102,6 @@ var bmsPush = new BMSPush();
 ```
     {: codeblock}
 
-## Invio di {{site.data.keyword.mobilepushshort}} di base
-  {: #send}
-
-Dopo che hai sviluppato le tue applicazioni, puoi inviare una notifica push. 
-
-1. Seleziona **Send Notifications** e componi un messaggio scegliendo **Web Notifications** come l'opzione **Send To**. 
-2. Immetti il messaggio che deve essere consegnato nel campo **Message**.
-3. Puoi scegliere di fornire delle impostazioni facoltative:
-  - **Titolo della notifica**: questo è il testo che deve essere visualizzato nell'intestazione dell'avviso del messaggio.
-  - **URL dell'icona di notifica**: se il tuo messaggio deve essere consegnato con un'icona di notifica dell'applicazione, fornisci il link alla tua icona nel campo.
-  - **Chiave di compressione**:  le chiavi di compressione solo allegate alle notifiche. Se più notifiche arrivano in sequenza con la stessa chiave di compressione quando il dispositivo è offline, esse vengono compresse. Quando un dispositivo va online, riceve le notifiche dal server FCM/GCM e visualizza solo l'ultima notifica rilevando la stessa chiave di compressione. Se la chiave di compressione non viene inviata, sia il nuovo che il vecchio messaggio vengono archiviati per una consegna successiva.
-  - **TTL (Time to live)**: questo valore è impostato in secondi. Se questo parametro non viene specificato, il server FCM/GCM archivia il messaggio per quattro settimane e tenterà di consegnarlo. La validità scade dopo quattro settimane. L'intervallo di valori possibile è compreso tra 0 e 2,419,200 secondi.
-  - **Ritarda quando inattivo**: impostando questo valore su `true` si danno istruzioni al server FCM/GCM di non consegnare la notifica se il dispositivo è inattivo. Imposta questo valore su `false`, per assicurati di consegnare la notifica anche se il dispositivo è inattivo.
-  - **Payload addizionale**: specifica i valori di payload personalizzati per le tue notifiche.
-
-La seguente immagine mostra l'opzione delle notifiche web nel dashboard.
-
-  ![Schermata notifiche](images/push_chrome_extns.jpg)
-  
-## Fasi successive
-  {: #next_steps_tags}
-
-Dopo che hai correttamente configurato le notifiche di base, puoi configurare le notifiche
-        basate sulle tag e le opzioni avanzate.
-
-Aggiungi queste funzioni del servizio {{site.data.keyword.mobilepushshort}} alla tua applicazione. Per utilizzare le notifiche basate sulle tag, vedi [Notifiche basate sulle tag](c_tag_basednotifications.html). Per utilizzare le opzioni di notifica avanzate, vedi [Notifiche avanzate](t_advance_badge_sound_payload.html). 
 
 
 

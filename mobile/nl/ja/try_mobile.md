@@ -9,9 +9,6 @@ lastupdated: "2016-10-19"
 # {{site.data.keyword.mobilefirstbp}} Starter ボイラープレートからのモバイル・アプリの作成
 {: #try_mobile}
 
-最終更新日: 2016 年 10 月 19 日
-{: .last-updated}
-
 {{site.data.keyword.Bluemix}} Mobile サービスはそれぞれ独立して使用できます。{{site.data.keyword.mobilefirstbp}} Starter ボイラープレートと一緒に使用することもでき、そうすることで最大の利点を得ることができます。
 
 始めに、{{site.data.keyword.mobilefirstbp}} Starter を使用してアプリを作成します。このボイラープレートによって、以下のアクションを実行することが可能になります。
@@ -49,11 +46,11 @@ lastupdated: "2016-10-19"
 </td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-05.png" alt="{{site.data.keyword.amashort}} サービス・アイコン"> <b>{{site.data.keyword.amashort}}</b><br/>{{site.data.keyword.amafull}} サービスを使用して、{{site.data.keyword.Bluemix_notm}} でホストされる Node.js アプリケーションおよび Java for Liberty アプリケーションを保護します。{{site.data.keyword.amashort}} SDK を使用してモバイル・アプリを装備することによって、Node.js または {{site.data.keyword.Bluemix_notm}} モバイル・サービスにアクセスするユーザーにログインを要求することができます。{{site.data.keyword.amashort}} は、セキュリティー機能に加えて、分析データの収集機能も提供するので、モバイル・アプリケーションのパフォーマンスをモニターし、クライアント・ログと使用統計を収集することができます。</td>
-<td valign="top"><b>ユーザー ID プロバイダー</b> <br/>以下の ID プロバイダーを使用できます。<ul><li>Facebook</li><li>Google</li></ul></td>
+<td><img src="images/authentication_icon.png" alt="{{site.data.keyword.amashort}} サービス・アイコン"> <b>{{site.data.keyword.amashort}}</b><br/>{{site.data.keyword.amafull}} サービスを使用して、{{site.data.keyword.Bluemix_notm}} でホストされる Node.js アプリケーションおよび Java for Liberty アプリケーションを保護します。モバイル・アプリに {{site.data.keyword.amashort}} SDK を装備することによって、Node.js または {{site.data.keyword.Bluemix_notm}} モバイル・サービスにアクセスするユーザーにログインを要求することができます。<!-- In addition to security capabilities, {{site.data.keyword.amashort}} also gathers analytics data, so that you can monitor your mobile application performance and collect client logs and usage statistics.--> </td>
+<td valign="top"><b>ユーザー ID プロバイダー</b> <br/>以下の ID プロバイダーを使用できます。<ul><li>Facebook</li><li>Google</li><li> カスタム</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/catalog_icons-09.png" alt="プッシュ通知サービスのアイコン"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} サービスは、モバイル (iOS & Android) プラットフォームおよび Web ブラウザー・アプリケーションをターゲットとしたプッシュ通知を送信および管理するための統合プラットフォームを提供します。このサービスは、デバイス、デバイス・プラットフォーム、およびブラウザーへのアプリケーション・ユーザーのマッピングを管理し、サブスクライバーへのプッシュ通知のディスパッチを処理します。このサービスを使用して、ブロードキャスト、ユニキャスト (ユーザー ID、デバイス ID に基づく)、およびタグ (またはトピック) をプッシュ通知に基づいてカスタマーに送信することができます。</td>
+<td><img src="images/push_icon.png" alt="プッシュ通知サービスのアイコン"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>The  {{site.data.keyword.mobilepushfull}} サービスは、モバイル (iOS & Android) プラットフォームおよび Web ブラウザー・アプリケーションをターゲットとしたプッシュ通知を送信および管理するための統合プラットフォームを提供します。このサービスは、デバイス、デバイス・プラットフォーム、およびブラウザーへのアプリケーション・ユーザーのマッピングを管理し、サブスクライバーへのプッシュ通知のディスパッチを処理します。このサービスを使用して、ブロードキャスト、ユニキャスト (ユーザー ID、デバイス ID に基づく)、およびタグ (またはトピック) をプッシュ通知に基づいてカスタマーに送信することができます。</td>
 <td valign="top"><b>プッシュ・サービス・プロバイダー</b><ul><li>Apple プッシュ通知サービス</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>

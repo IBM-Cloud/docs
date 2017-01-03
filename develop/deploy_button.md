@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -18,17 +14,16 @@ copyright:
 
 #Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button {: #deploy-button} 
 
-*Last Updated: 2 March 2016*
-{: .last-updated} 
-
 The Deploy to {{site.data.keyword.Bluemix}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to IBM {{site.data.keyword.Bluemix_notm}}. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository so that your original app remains unaffected. 
 {: shortdesc} 
 
-**Tip:** If company branding is important, you can [embed a Deploy to {{site.data.keyword.Bluemix_notm}} iFrame flow](../develop/deploy_button_embed.html) in your content instead of inserting a button. When people create a cloned copy of your public Git-sourced app, they stay in your content instead of being redirected to the bluemix.net website. 
+**Tip:** If company branding is important, you can [embed a Deploy to {{site.data.keyword.Bluemix_notm}} iFrame flow](/docs/develop/deploy_button_embed.html) in your content instead of inserting a button. When people create a cloned copy of your public Git-sourced app, they stay in your content instead of being redirected to the bluemix.net website. 
+
+**Note**: The toolchains feature is now available. Anyone who clicks the Deploy to {{site.data.keyword.Bluemix_notm}} button can click the link in the banner to try deploying their application by using a toolchain.
 
 When someone clicks your button, these actions occur: 
 
-1. If the person does not have an active {{site.data.keyword.Bluemix}} account, a trial account must be created. 
+1. If the person does not have an active {{site.data.keyword.Bluemix_notm}} account, a trial account must be created. 
 
 2. The person can select a region, organization, space, and app name. The suggested app name is constructed from the previous app name, the person's user name, and the time. 
 
@@ -166,7 +161,7 @@ With the manifest file, you can specify:
 </pre>
    </li>
    </ul>
-	<li> If the repository must be built before the app is deployed, an automated build of the code in the repository is triggered before deployment. Automated builds occur when a build script file is detected in the root directory of the repository. 
+	<li> If the app must be built before it can be deployed, you must include a build file in your repository. If a build script file is detected in the root directory of the repository, an automated build of the code is triggered before deployment. 
 	
 	Supported builders: 
 	    <ul>
@@ -186,8 +181,9 @@ With the manifest file, you can specify:
 <li>In the root directory of your project, create a <code>.bluemix</code> directory.</li>
 <li>Upload the <code>pipeline.yml</code> file to the <code>.bluemix</code> repository.</li>
 </ol> </li>
-	<li>If you are deploying an app in a container by using <strong>IBM Containers</strong>, you must include Dockerfile in the root directory of the repository and, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. 
+	<li>To deploy an app in a container by using <strong>IBM Containers</strong>, you must include Dockerfile in the root directory of the repository and, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. 
 	<ul>
+	    <li>The Dockerfile acts as a kind of build script for the app. If a Dockerfile is detected in the repository, the app is automatically built into an image before it is deployed in a container. If the app itself must be built before the app is built into an image, include a build script for the app as well as a Dockerfile, as previously described.</li>
 	    <li> To learn more about creating Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">see the Docker documentation</a>. </li>
 	    <li>You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing DevOps Services project. To create a <code>pipeline.yml</code> manually that is specifically for containers, <a href="https://github.com/Puquios/" target="_blank">see the examples in GitHub</a>. </li>
         </ul>
@@ -196,4 +192,5 @@ With the manifest file, you can specify:
  </ul>
 </ul>
 
-For troubleshooting help, see [Deploy to Bluemix button doesn't deploy an app](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+For troubleshooting help, see [Deploy to Bluemix button doesn't deploy an app](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+

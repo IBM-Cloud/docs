@@ -37,11 +37,11 @@ To get up and running quickly with the Weather Code Starter, follow these steps:
 
    4. Enter your project name and click **Create**.
 
-2. Optional: Add the Push Notifications capability.
+2. Optional: Add the {{site.data.keyword.mobilepushshort}} capability.
 
-   1. Click **Add** for **Push Notifications** in the **Project Overview** page.
+   1. Click **Add** for **{{site.data.keyword.mobilepushshort}}** in the **Project Overview** page.
 
-      You can alternatively click **Create** from the **Push Notifications** page.
+      You can alternatively click **Create** from the **{{site.data.keyword.mobilepushshort}}** page.
 
    2. Enter your service name and click **Create**.
 
@@ -88,28 +88,17 @@ To get up and running quickly with the Weather Code Starter, follow these steps:
 [Try it out!](http://console.{DomainName}/mobile/create-project?starter=fad1d49e-f7b6-3aff-9b53-14673fca4399){: new_window}
 
 
-# Related Links
-{: #rellinks}
+### UI Starter tutorials
+{: #tutorials_UI}
+
+* [Tutorial - Store Catalog](tutorial_store_catalog.html)
 
 
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
+### Code Starter tutorials
+{: #tutorials_Code}
 
-* [Mobile Analytics (Beta)](/docs/services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](/docs/services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](/docs/services/mobilepush/index.html){: new_window}
-
-<!--## Blog Posts-->
-* [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-* [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
-
-<!--## Tutorials and Samples-->
-{: #samples}
-
-* [Sample: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+* [Tutorial - Basic](tutorial.html)
+* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Tutorial - Watson Language](tutorial_watson_language.html)

@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # REST API の使用
 {: #push-api-rest}
-最終更新日: 2016 年 10 月 17 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
 {{site.data.keyword.mobilepushshort}}には REST (Representational State Transfer) API (アプリケーション・プログラム・インターフェース) を使用できます。また、クライアント・アプリケーションをさらに開発するために、SDK および [Push API](https://mobile.{DomainName}/imfpush/) を使用することもできます。
@@ -19,6 +24,7 @@ copyright:
 - メッセージ
 - サブスクリプション
 - タグ (Tags)
+- Web フック
 
 REST API のベース URL を取得するには、以下の手順を実行します。
 
@@ -42,7 +48,7 @@ REST API のベース URL を取得するには、以下の手順を実行しま
 ## appSecret 
 {: #push-api-rest-secret}
 
-アプリケーションが {{site.data.keyword.mobilepushshort}} にバインドされると、サービスは appSecret (固有キー) を生成し、それを応答ヘッダーで渡します。IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API を使用している場合は、REST API リファレンスを使用して、保護する必要のある API に関する情報を取得してください。REST API については、REST API リファレンスを参照してください。
+アプリケーションが {{site.data.keyword.mobilepushshort}} にバインドされると、サービスは appSecret (固有キー) を生成し、それを応答ヘッダーで渡します。IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API を使用している場合は、REST API リファレンスを使用して、保護する必要のある API に関する情報を取得してください。詳しくは、[Push REST API](https://mobile.{DomainName}/imfpush/) を参照してください。
 
 要求ヘッダーには appSecret が含まれている必要があります。含まれていない場合、サーバーは 401 無許可エラー・コードを返します。{{site.data.keyword.mobilepushshort}} がアプリケーションに追加されると、特定の AppID が作成されます。応答の一部として、タグの作成やメッセージの送信に使用される appSecret というヘッダーを取得します。操作は、カタログまたはボイラープレートのサービスを介して行われます。
 
@@ -107,7 +113,7 @@ appSecret 値を取得するには、以下のようにします。
 - タグ GET API では、以下の組み合わせがサポートされます。
 - name は、name または description のいずれかのフィールドにすることができます。
 - operator として =@ が使用された場合、値はサブストリングになることがあります。
-- == が使用された場合は、値は完全一致ストリングでなければなりません。
+- == が使用された場合、値は完全一致ストリングでなければなりません。
 
 
 ##{{site.data.keyword.mobilepushshort}}の応答コード

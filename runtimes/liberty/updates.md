@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-14"
+lastupdated: "2016-12-12"
 
 ---
 
@@ -13,6 +13,24 @@ lastupdated: "2016-11-14"
 {: #latest_updates}
 
 ## A list of the latest updates in the Liberty buildpack.
+
+### December 13, 2016: Updated Liberty buildpack v3.6-20161209-1351
+* The default Liberty runtime version was updated to the [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) release.
+* The IBM JRE version 8 was updated to SR3 FP21 version.
+* The [auto-configuration](autoConfig.html) support was also extended to work with the [Compose for PostgreSQL service](https://console.ng.bluemix.net/docs/services/ComposeForPostgreSQL/index.html).
+* The buildpack also provides an updated version of the agent for the [Auto-Scaling service](/docs/services/Auto-Scaling/index.html).
+* The buildpack was updated to support environment variables as part of the include locations in the `server.xml` files.
+
+### November 29, 2016: Updated Liberty buildpack v3.5-20161114-1152
+* The default Liberty runtime version `16.0.0.3` was updated to include [PI62375](https://www-01.ibm.com/support/docview.wss?uid=swg24042712) iFix and to provide the `microProfile-1.0` convenience feature. 
+* The monthly Liberty runtime version was updated to the `2016.11.0.0` release. 
+* The buildpack also contains updated IBM JREs: version 8 SR3 FP20 and version 7.1 SR3 FP60.
+* The DB2 JDBC driver was updated to the `4.21.29` version.
+* The Monitoring and Analytics service integration was fixed to work with [Diego](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html).
+* The [Dynatrace](dynatrace.html) service integrations were updated to work better with the Dynatrace service offerings.
+* The [auto-configuration](autoConfig.html) support for PostgreSQL and MySQL type of services was improved to work better when deploying a server directory or packaged server.
+* The Node.js runtime that is used by the [devconsole and shell App Management utilities](/docs/manageapps/app_mng.html#app_management) was updated to the latest `0.12.17` version.
+* [Security fixes](http://www.ibm.com/support/docview.wss?uid=swg21994945) for the Liberty runtime are included.
 
 ### November 1, 2016: Updated Liberty buildpack v3.4.1-20161030-2241
 * The buildpack contains a fix for a problem starting certain types of applications. Specifically, applications deployed as a server directory or a packaged server with the application files in the `dropins` directory.

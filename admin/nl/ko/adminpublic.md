@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-23"
 
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # 계정 설정
 {: #account}
-마지막 업데이트 날짜: 2016년 10월 23일
-{: .last-updated}
 
 이제 {{site.data.keyword.Bluemix_notm}}에 등록되었습니다. 계정을 설정하면 인프라 프로비저닝 또는 애플리케이션 빌드로 빠르게 이동할 수 있습니다.
 {:shortdesc}

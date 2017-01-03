@@ -1,12 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
 # Flux Decahose et PowerTrack {: #decahose_powertrack}
-
-*Dernière mise à jour : 13 mai 2016*
-{: .last-updated}
 
 {{site.data.keyword.twittershort}} permet d'accéder aux flux Decahose et PowerTrack de Twitter, en fonction de l'inscription aux plans {{site.data.keyword.Bluemix_notm}}. 
 Ces deux flux en temps réel ont des caractéristiques différentes pour répondre à vos besoins.
@@ -16,7 +21,7 @@ Le flux Decahose fournit un échantillon aléatoire de 10 % du flux Firehose de 
 
 Le flux PowerTrack permet en outre de filtrer les tweets entrants à partir de règles définies par l'utilisateur, dans un suivi nommé "track". Les utilisateurs du plan payant peuvent créer jusqu'à 1000 règles par compte. Pour filtrer le flux de façon plus précise, il est possible de combiner plusieurs suivis dans un suivi agrégé (complexe). Les sections qui suivent décrivent les différents états des suivis, leurs propriétés et les actions qui peuvent leur être appliquées (édition, suppression...).
 
-**Remarque** : l'indexation du flux PowerTrack est limitée à 1 million de tweets par mois calendaire. Une fois la limite atteinte, l'indexation s'arrête pour le mois.Au début du mois suivant, vous pouvez réactiver vos suivis. Ils ne s'activent pas automatiquement. Pour tirer le meilleur parti du flux, il est fortement recommandé de gérer attentivement les suivis. Ainsi, les flux redondants peuvent être désactivés.
+**Remarque** : l'indexation du flux PowerTrack est limitée à 1 million de tweets par mois calendaire. Une fois la limite atteinte, l'indexation s'arrête pour le mois. Au début du mois suivant, vous pouvez réactiver vos suivis. Ils ne s'activent pas automatiquement. Pour tirer le meilleur parti du flux, il est fortement recommandé de gérer attentivement les suivis. Ainsi, les flux redondants peuvent être désactivés.
 
 ## Types de suivi {: #track_types}
 
@@ -28,7 +33,7 @@ prend en charge les deux types de suivi ci-dessous.
 <dt>Rule</dt>
 <dd>Tous les messages collectés dans ce suivi correspondent à au moins une des règles associées au suivi. Ce type de suivi permet d'ajouter, d'éditer et de supprimer des règles.
 
-L'ensemble de la [syntaxe des règles de GNIP PowerTrack](http://support.gnip.com/apis/powertrack/rules.html) est prise en charge dans les suivis basés sur des règles. Toutes les requêtes doivent se conformer au [langage d'interrogation](twitter_rest_apis.html#querylanguage "langage d'interrogation") {{site.data.keyword.twittershort}}.
+L'ensemble de la [syntaxe des règles de GNIP PowerTrack](http://support.gnip.com/apis/powertrack2.0/rules.html) est prise en charge dans les suivis basés sur des règles. Toutes les requêtes doivent se conformer au [langage d'interrogation](twitter_rest_apis.html#querylanguage "langage d'interrogation") {{site.data.keyword.twittershort}}.
 </dd>
 
 <dt>Aggregated</dt>
@@ -45,6 +50,7 @@ Les suivis ont les propriétés ci-dessous. Certaines propriétés ne s'applique
 
 <dt>endDate</dt>
 <dd>Indique quand le suivi arrête de collecter les messages. Il doit s'agir d'une valeur dans le futur, entrée dans l'un des formats suivants : `YYYY-MM-DD` ou `YYYY-MM-DDTHH:MM:SSZ`. La spécification d'une date dans le passé renvoie une erreur HTTP 400.
+
 Cette propriété ne s'applique pas aux suivis complexes.</dd>
 
 <dt>id</dt>

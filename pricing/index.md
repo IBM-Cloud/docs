@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-12-12"
  
 
 ---
@@ -219,9 +219,7 @@ In the simple tier model, the unit price is determined by the tier that the quan
 | Tier 3: 2001 - 3000                  |   $0.75 USD                       |
 | Tier 4: 3001 - 4000           |      $0.60 USD                    |
 |Tier 5: &gt; 4000 | $0.40 USD | 
-
-Table 1. Simple tier pricing table
-{: #pricing_table1}
+{:caption="Table 1. Simple tier pricing table" caption-side="top"}
 
 The following table illustrates how much you pay with a plan that is based on a simple tier pricing model:
 
@@ -232,8 +230,7 @@ The following table illustrates how much you pay with a plan that is based on a 
 |2500 |	2500 × 0.75 = 1875 |	$1875 USD|
 |... |	... |	...|
 |5200 |	5200 × 0.40 = 2080 |$2080 USD|
-Table 2. Charge calculation by using the simple tier pricing model
-{: #pricing_table2}
+{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
 
 ####Graduated tier
 {: #graduated_tier}
@@ -247,8 +244,7 @@ In the graduated tier model, the unit price per tier decreases as your level of 
 |    Tier 3: 2001 - 3000 |	$0.75 USD |
 |    Tier 4: 3001 - 4000 |	$0.60 USD |
 |    Tier 5: &gt; 4000 |	$0.40 USD |
-Table 3. Graduated tier pricing table
-{: #pricing_table3}
+{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
 
 The following table illustrates how much you pay with a plan that is based on a graduated tier pricing model:
 
@@ -259,8 +255,7 @@ The following table illustrates how much you pay with a plan that is based on a 
 |2500 |	(1000 × 1 (unit price for Tier 1)) + (1000 × 0.90 (unit price for Tier 2)) + (500 × 0.75 (unit price for Tier 3)) = 2275 |	$2275 USD |
 |... |	... |	...|
 |5200 |	(1000 × 1 (unit price for Tier 1)) + (1000 × 0.90 (unit price for Tier 2)) + (1000 × 0.75 (unit price for Tier 3)) + (1000 × 0.60 (unit price for Tier 4)) + (1200 × 0.40 (unit price for Tier 5)) = 3730 |	$3730 USD|
-Table 4. Charge calculation by using the graduated tier pricing model
-{: #pricing_table4}
+{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
 
 ####Block tier
 {: #block_tier}
@@ -274,8 +269,7 @@ In the block tier model, the price is a set charge for the quantity you use with
 | Tier 3: &lt;= 3000 |	$2800 USD|
 | Tier 4: &lt;= 4000 |	$3500 USD|
 | Tier 5: &lt;= 10000 |	$5000 USD|
-Table 5. Block tier pricing table
-{: #pricing_table5}
+{:caption="Table 5. Block tier pricing table" caption-side="top"}
 
 The following table illustrates how much you pay with a plan that is based on a block tier pricing model:
 
@@ -285,8 +279,7 @@ The following table illustrates how much you pay with a plan that is based on a 
 |1500 |	The number of items falls into Tier 2, so the total price is $1900 USD. |	$1900 USD|
 |... |	... |	...|
 |5200 |	The number of items falls into Tier 5, so the total price is $5000 USD. |	$5000 USD|
-Table 6. Charge calculation by using the block tier pricing model
-{: #pricing_table6}
+{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
 ### Free allowances for virtual servers
 {: #vms}
@@ -351,8 +344,7 @@ To keep the example simple, assume that the prices in the following table do not
 |Data Cache - Standard |	5 GB of cache space and a replica |	$155.00 USD/instance |
 |Data Cache - Premium |	25 GB of cache space and a replica |	$505.00 USD/instance|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB of free data storage<br/>50,000 light API calls free per month<br/>10,000 heavy API calls free per month | $1.00 USD/GB<br/>$0.03 USD/1000 light API calls<br/>$0.15 USD/1000 heavy API calls |
-Table 7. Pricing sheet
-{: #pricing_table7}
+{:caption="Table 7. Pricing sheet" caption-side="top"}
 
 ###Calculating the application price
 
@@ -412,8 +404,7 @@ Although the United States dollar (USD) is used in the pricing examples, other c
 |SEK |	  Swedish krona|
 |USD |    United States dollar|
 |ZAR |	  South African rand|
-Table 8. Supported currencies
-{: #pricing_table8}
+{:caption="Table 8. Supported currencies" caption-side="top"}
 
 **Note:** If you have linked your {{site.data.keyword.Bluemix_notm}} and SoftLayer accounts, the single invoice you receive is in United States dollars (USD) only.  
 
@@ -426,16 +417,16 @@ To open the **Usage Dashboard** page, click **Account** &gt; *your_account_name*
 
 The account owner is charged for the total usage that is incurred across all organizations at the end of each billing cycle. Each billing cycle lasts one month.
 
-Account owners can filter the usage summary by region and organization. The charges shown represent the amount that you, as the account owner, are billed for that month.
+Account owners can filter the usage summary by region and organization. If you are an account owner, set **Organization** to **All Organizations** to see the usage for the entire account for a 12-month period. Click a particular month to see the usage for that month.  The charges shown represent the amount that you, as the account owner, are billed for that month.
 
 If you select a specific organization for the **Organization**, you can see the total usage for that organization, including any usage as part of a free tier. The charges shown for the organization are not the charges that you are billed. The free tier usage is shown as free at the account level, but not at the organizational level. Therefore, when you view the organizational usage, you see the real usage for that organization including both free and charged usage. All organizational usage is rolled up to the account usage after the free tier is removed.
 
 ##Viewing credits
 {: #credits}
 
-As an account owner or a billing manager, you can use the **Usage Dashboard** page to see any credits for your account. You might have credits if, for example, you linked a SoftLayer account with a {{site.data.keyword.Bluemix_notm}} account.
+As an account owner or a billing manager, you can use the **Usage Dashboard** page to see any credits for your account. 
 
-To open the **Usage Dashboard** page, click **Account** > **Usage Dashboard**. On the page, you can see any credits, if they exist, and when they expire.
+To open the **Usage Dashboard** page, click **Account** &gt; **Usage Dashboard**. The dashboard displays any credits, if they exist, and when they expire.
 
 ##Notifications
 {: #notifications}
@@ -457,8 +448,7 @@ Only certain services provide the ability for you to change the service plan. If
 |Service |	Information|
 |--------|-------------|
 |Presence Insights 	|If you have a Lite plan and exceed the free allowances, a 403 message displays or is logged to indicate that you are no longer authorized, and your service instance is disabled. In addition, POST REST API calls are rejected with a 403 response.<br/><br/>If your service is disabled because you exceed the free allowance, you can upgrade from a Lite plan to a Paid plan. Your service is re-enabled within 2 hours.<br/><br/>If you have a Paid plan, you can reduce your plan to the Lite plan, as long as your usage stays within the Lite plan allowance for events and total storage.<br/><br/>When you upgrade or reduce your plan, you do not need to restage or restart your apps.|
-Table 9. Next steps for changing your plan
-{: #pricing_table9}
+{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###How to change your plan through the command line interface
 
@@ -468,7 +458,9 @@ To update the service plan, enter the following command:
 cf update-service <service_name> [-p <new_plan>]
 ```
 # rellinks
-## general 
+{: rellinks}
+## general
+{: general} 
 * [{{site.data.keyword.Bluemix_notm}} Pricing Sheet](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} Developers Community Forum](https://developer.ibm.com/bluemix/)
 * [Getting online help](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-24"
+lastupdated: "2016-12-12"
 
 ---
 
@@ -40,8 +40,10 @@ The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a s
 
 Use the indexes in the following tables to refer to the frequently used bluemix commands.
 
+**Note:** You can use the short format of bluemix commands; for example, `bx api` is short for `bluemix api`.
 
 <table summary="General bluemix commands.">
+<caption>Table 1. General bluemix commands</caption>
  <thead>
  <th colspan="5">General bluemix commands</th>
  </thead>
@@ -62,11 +64,11 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
-*Table 1. General bluemix commands*
 
 
 
 <table summary="bluemix commands that you can use to manage orgs, spaces, and users.">
+<caption>Table 2. Commands for managing orgs, spaces, and users</caption>
  <thead>
  <th colspan="5">Commands for managing orgs, spaces, and users</th>
  </thead>
@@ -101,11 +103,10 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
  </tbody>
  </table>
-*Table 2. Commands for managing orgs, spaces, and users*
-
-
+ 
 
 <table summary="bluemix commands that you can use to manage Cloud Foundry apps.">
+<caption>Table 3. Commands for managing cf apps</caption>
  <thead>
  <th colspan="5">Commands for managing cf apps</th>
  </thead>
@@ -140,10 +141,10 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
-*Table 3. Commands for managing cf apps*
 
 
 <table summary="bluemix commands that you can use to manage Bluemix services.">
+<caption>Table 4. Commands for managing Bluemix services</caption>
  <thead>
  <th colspan="5">Commands for managing Bluemix services</th>
  </thead>
@@ -171,10 +172,10 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
-*Table 4. Commands for managing Bluemix services*
 
 
 <table summary="bluemix commands that you can use to manage Bluemix catalog, plug-ins, billing, and security settings.">
+<caption>Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings</caption>
  <thead>
  <th colspan="5">Commands for managing Bluemix catalog, plug-ins, billing, and security settings</th>
  </thead>
@@ -207,11 +208,10 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
-*Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings*
-
 
 
 <table summary="bluemix commands that you can use to manage network settings.">
+<caption>Table 6. Commands for managing network settings</caption>
  <thead>
  <th colspan="5">Commands for managing network settings</th>
  </thead>
@@ -239,11 +239,11 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
-*Table 6. Commands for managing network settings*
 
 
 
 <table summary="bluemix commands that you can use to manage containers on Bluemix.">
+<caption>Table 7. Commands for managing containers on Bluemix</caption>
  <thead>
  <th colspan="5">Commands for managing containers on Bluemix</th>
  </thead>
@@ -327,7 +327,6 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
   </tbody>
  </table>
-*Table 7. Commands for managing containers on Bluemix*
 
 
 
@@ -2122,7 +2121,7 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 | CCS_BIND_APP=*&lt;appname&gt;*       | Bind a service to a container. Use the `CCS_BIND_APP` environment variable to bind an app to the container. The app is bound to the target service and acts as a bridge that allows {{site.data.keyword.Bluemix_notm}} to bring your bridge app’s `VCAP_SERVICES` information to the running container instance. For more information about creating a bridge app, see [Binding a service to a container](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | To bind a Bluemix service directly to a container without using a bridge app, use CCS_BIND_SRV. This binding allows Bluemix to inject the VCAP_SERVICES information into the running container instance. To list multiple Bluemix services, include them as part of the same environment variable. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Add a log file to be monitored in the container. Include the `LOG_LOCATIONS` environment variable with a path to the log file. |
-*Table 8. Commonly used environment variables*
+{: caption="Table 8. Commonly used environment variables" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (optional)</dt>
@@ -2710,7 +2709,7 @@ Re-create the IBM Containers service in the Bluemix space that you are logged in
 <strong>Important</strong>: When you run this command, none of your single containers and groups in this space will be migrated to the re-provisioned space and they will be removed during the migration process.
 
 ```
-bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
+bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ```
 <strong>Command options</strong>:
 
@@ -2940,7 +2939,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 | CCS_BIND_APP=*&lt;appname&gt;*       | Bind a service to a container. Use the `CCS_BIND_APP` environment variable to bind an app to the container. The app is bound to the target service and acts as a bridge that allows {{site.data.keyword.Bluemix_notm}} to bring your bridge app’s `VCAP_SERVICES` information into the running container instance. For more information about creating a bridge app, see [Binding a service to a container](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | To bind a Bluemix service directly to a container without using a bridge app, use CCS_BIND_SRV. This binding allows Bluemix to inject the VCAP_SERVICES information into the running container instance. To list multiple Bluemix services, include them as part of the same environment variable. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Add a log file to be monitored in the container. Include the `LOG_LOCATIONS` environment variable with a path to the log file. |
-*Table 9. Commonly used environment variables*
+{: caption="Table 9. Commonly used environment variables" caption-side="top"} 
 
 
    <dl>

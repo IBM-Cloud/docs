@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,12 +12,19 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-Última actualización: 30 de mayo de 2016
 
 El tiempo de ejecución de ASP.NET en {{site.data.keyword.Bluemix}} está basado en el paquete de compilación de ASP.NET Core. ASP.NET Core es una infraestructura de código abierto modular para crear aplicaciones web .NET.
 .Net Core es un tiempo de ejecución pequeño multiplataforma que puede ser objetivo de las aplicaciones de ASP.NET Core. 
 Se combinan para habilitar aplicaciones web modernas basadas en la nube.
 {: shortdesc}
+
+# Versiones soportadas
+{: #supported_versions}
+Este paquete de compilación da soporte a las versiones siguientes; las marcadas como en desuso se eliminará en un futuro release del paquete de compilación:
+
+1. .NET Core 1.0.0-rc2-final (beta) (en desuso)
+2. .NET Core 1.0.0
+3. .NET Core 1.0.1
 
 ## Detección
 {: #detection}
@@ -26,7 +33,7 @@ El paquete de compilación de ASP.NET Core de Bluemix se utiliza si hay una o m�
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio de ASP.NET Core.  La aplicación de inicio de ASP.NET Core es una app sencilla que proporciona una plantilla que puede utilizar. Puede experimentar con la app de inicio, y realizar y enviar los cambios por push al entorno de Bluemix.  Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio de ASP.NET Core.  La aplicación de inicio de ASP.NET Core es una app sencilla que proporciona una plantilla que puede utilizar. Puede experimentar con la app de inicio, y realizar y enviar los cambios por push al entorno de Bluemix.  Consulte [Utilización de las aplicaciones de inicio](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
@@ -44,7 +51,7 @@ Controle la versión de .NET CLI con un global.json opcional en el directorio ra
 ```
 {: codeblock}
 
-Si no se especifica, se utiliza el Release Candidate más estable actualmente.
+Para ver una lista de las versiones soportadas de la CLI, consulte [Últimas actualizaciones para el paquete de compilación ASP.NET](/docs/runtimes/dotnet/updates.html). Si no se especifica, se utiliza el Release Candidate más estable actualmente.
 
 ### Personalización de las fuentes de paquetes de NuGet
 
@@ -69,12 +76,12 @@ Para coincidir más a fondo con cómo se ejecuta la aplicación Bluemix, siga la
 La herramienta Yeoman puede utilizarse para generar nuevas plantillas de proyecto tal como se describen en
 [Creación de proyectos con Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html).
 
-Para más información sobre cómo desarrollar localmente utilizando Visual Studio, consulte [Desarrollo con Visual Studio](../../starters/deploy_vs.html){: new_window}.
+Para más información sobre cómo desarrollar localmente utilizando Visual Studio, consulte [Desarrollo con Visual Studio](/docs/starters/deploy_vs.html){: new_window}.
 
 ## Envío por push de una aplicación publicada
+{: #pushing_published_app}
 
 Si desea que la aplicación contenga todos sus binarios necesarios de modo que el paquete de compilación no descargue ningún binario externo, puede enviar por push una aplicación *autocontenida* publicada.  Consulte [Tipos de app de .NET Core ](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window} para obtener más información sobre aplicaciones autocontenidas.
-
 
 Para publicar un problema de aplicación, emita un mandato como el siguiente:
 ```
@@ -92,6 +99,7 @@ La app podrá enviar por push desde el directorio
 Tenga en cuenta que si utiliza un archivo manifest.yml en la aplicación, puede especificar la vía de acceso a la carpeta de salida de publicación en manifest.yml.  Después no tendrá que estar en esa carpeta cuando envíe por push la aplicación.
 
 ## Despliegue de apps con varios proyectos
+{: #developing_apps_with_multiple_projects}
 
 Para desplegar una app que contiene varios proyectos, será necesario especificar qué proyecto desea que el paquete de compilación ejecute como proyecto principal. Esto puede llevarse a cabo creando un archivo .deployment en la carpeta raíz de la solución que establece la vía de acceso al proyecto principal. La vía de acceso al proyecto principal puede especificarse como carpeta de proyecto o el archivo de proyecto (.xproj o .csproj).
 
@@ -109,6 +117,7 @@ En este ejemplo, el paquete de compilación compila automáticamente los proyect
 {: codeblock}
 
 ## Configuración de la aplicación para que escuche en el puerto correcto
+{: #configuring_listen_proper_port}
 
 El paquete de compilación ejecutará la aplicación con el mandato *dotnet run* y pasará el argumento de línea de mandato como se indica a continuación
 ```
@@ -176,7 +185,15 @@ En el método `Main` de Program.cs, elimine la siguiente línea:
 ```
 {: codeblock}
 
-Estos cambios deben permitir que .NET CLI encuentre las `Vistas` de la aplicación porque ahora se copiarán en la salida de la compilación cuando se ejecute el mandato `dotnet run`. Si la aplicación tiene otros archivos, como los archivos de configuración json, que son necesarios en el tiempo de ejecución, también deberá añadirlos a la sección `include` de `copyToOutput` del archivo project.json.
+Estos cambios deben permitir que .NET CLI encuentre las `Vistas` de la aplicación porque ahora se copiarán en la salida de la compilación cuando se ejecute el mandato `dotnet run`.  Si la aplicación tiene otros archivos, como los archivos de configuración json, que son necesarios en el tiempo de ejecución, también deberá añadirlos a la sección `include` de `copyToOutput` del archivo project.json.
+
+## Preguntas más frecuentes (FAQ) de resolución de problemas
+
+{: #troubleshooting_faq}
+
+**Q**: Mi aplicación no se despliega y aparece el mensaje: `API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, ...}`.  ¿Qué significa?
+
+**A**: Si recibe un mensaje parecido cuando envía la aplicación, lo más probable es que se deba que la aplicación supera los límites de cuota de memoria o de disco. Se puede solucionar aumentando las cuotas para la aplicación. 
 
 # rellinks
 {: #rellinks}

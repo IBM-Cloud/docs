@@ -2,11 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-12-04"
+
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-
+{:codeblock:.codeblock}
 
 # Configuration du SDK Swift iOS
 {: #getting-started-ios}
@@ -18,19 +20,19 @@ non protégées.
 
 {:shortdesc}
 
-**Remarque :** Le SDK Objective-C communique des données de surveillance à la console de surveillance du service {{site.data.keyword.amashort}}. Si vous
-êtes tributaire de la fonctionnalité de surveillance du service {{site.data.keyword.amashort}}, vous devez continuer à utiliser le SDK
-Objective-C.
-
 Bien que le SDK Objective-C soit toujours totalement pris en charge et soit encore considéré comme le SDK principal de
 {{site.data.keyword.Bluemix_notm}} Mobile Services, il est envisagé de cesser de l'utiliser plus tard cette année et de le remplacer par ce nouveau SDK
-Swift. 
+Swift.
 
 
 ## Avant de commencer
 {: #before-you-begin}
 Vous devez disposer des éléments suivants :
-* Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
+* Une instance d'une application {{site.data.keyword.Bluemix_notm}}.
+* Une instance d'un service {{site.data.keyword.amafull}}.
+* Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord {{site.data.keyword.amashort}}. Cliquez sur **Options pour application mobile**. Les valeurs `tenantId` (qui portent également le nom d'`appGUID`) sont affichées dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations {{site.data.keyword.amashort}}.
+* Votre **Application Route**. Il s'agit de l'URL de votre application back end. Vous avez besoin de cette valeur pour envoyer des demandes à ses noeuds finaux protégés.
+* Votre **région** {{site.data.keyword.Bluemix_notm}}.  Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`, `Sydney` ou `United Kingdom`, et correspondre aux valeurs SDK requises dans le code : `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.  Vous aurez besoin de cette valeur pour initialiser le SDK {{site.data.keyword.amashort}}.
 * Un projet Xcode. Pour plus d'informations sur la configuration de votre environnement de développement iOS, consultez le [site Web Apple Developer](https://developer.apple.com/support/xcode/).
 
 
@@ -51,6 +53,7 @@ et vous pouvez passer à la section suivante pour installer le SDK.
 ```
 sudo gem install cocoapods
 ```
+{: codeblock}
 
 Pour plus d'informations, reportez-vous au [site Web CocoaPods](https://cocoapods.org/).
 
@@ -68,6 +71,7 @@ CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définire
   use_frameworks!
   pod 'BMSSecurity'
 	```
+	{: codeblock}
 
   **Astuce :** Vous pouvez ajouter `use_frameworks!` à votre cible Xcode au lieu du Podfile.
 
@@ -80,13 +84,15 @@ pertinentes et affiche les dépendances et nacelles ajoutées.<br/>
 
 	`open {your-project-name}.xcworkspace`
 
+### Activez le partage de chaîne de certificats pour iOS
+{: #enable_keychain}
+
+Activez le partage de chaîne de certificats, `Keychain Sharing`. Accédez à l'onglet `Capabilities` et basculez `Keychain Sharing` sur `On` dans votre projet Xcode.
+
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #init-mca-sdk-ios}
 
- Initialisez le logiciel SDK en passant le paramètre `applicationGUID`. En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire.
- 
-
-1. Obtenez vos valeurs de paramètres de service. Ouvrez votre service dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Cliquez sur **Options pour application mobile**. Les valeurs `applicationRoute` et `tenantId` (qui portent également le nom d'`appGUID`) s'affichent dans les zones **Route** et **Identificateur global unique de l'application / ID titulaire**. Vous aurez besoin de ces valeurs pour l'initialisation du logiciel SDK et l'envoi de demandes à l'application de back-end.
+ Initialisez le logiciel SDK en transmettant le paramètre `tenantId`. En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire.
 
 1. Importez les structures requises dans la classe où vous comptez utiliser le SDK client {{site.data.keyword.amashort}}.
 
@@ -111,24 +117,26 @@ pertinentes et affiche les dépendances et nacelles ajoutées.<br/>
 	return true
 	}
  ```
+ {: codeblock}
 
-* Remplacez la valeur `tenantId` par la valeur que vous avez obtenue depuis **Options pour application mobile**. Voir l'**étape 1**.
-* Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Avatar**  ![icône Avatar](images/face.jpg "icône Avatar")  dans la barre de menu pour ouvrir le widget **Compte et support**. La valeur de région qui apparaît doit être l'une des suivantes : **US South**, **United Kingdom** ou **Sydney** et correspondre aux valeurs des constantes requises dans le code : `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.
+* Remplacez la valeur `tenantId` par la valeur que vous avez obtenue depuis **Options pour application mobile**. 
+* Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. 
 
-   
+Pour des informations sur ces valeurs, voir [Avant de commencer](#before-you-begin). 
+
+
 ## Envoi d'une demande à votre application back end mobile
 {: #request}
 
 Une fois que le SDK client {{site.data.keyword.amashort}} est initialisé, vous pouvez commencer à envoyer des requêtes à votre application back end
 mobile.
 
-1. Essayez d'envoyer depuis votre navigateur une requête à un noeud final protégé de votre application back end mobile. Ouvrez l'URL suivante : `{applicationRoute}/protected`, en remplaçant `{applicationRoute}` par la valeur **applicationRoute** extraite depuis **Options pour application mobile** (voir [Initialisation du logiciel SDK client de Mobile Client Access](#init-mca-sdk-ios)). Exemple : 
+1. Essayez d'envoyer depuis votre navigateur une requête à un noeud final protégé de votre application back end mobile. Ouvrez l'URL suivante : `{applicationRoute}/protected`, en remplaçant `{applicationRoute}` par la valeur **applicationRoute** extraite depuis **Options pour application mobile** (voir [Initialisation du logiciel SDK client de Mobile Client Access](#init-mca-sdk-ios)). Exemple :
 
 	`http://my-mobile-backend.mybluemix.net/protected
 	`
 
-	Le noeud final `/protected` d'une application back end mobile créée avec le conteneur boilerplate MobileFirst Services Starter est
-protégé par {{site.data.keyword.amashort}}. Un message `Non autorisé` est renvoyé à votre navigateur car ce noeud final n'est
+	Un message `Non autorisé` est renvoyé à votre navigateur car ce noeud final n'est
 accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}.
 
 1. A l'aide de votre application iOS, envoyez une demande au même noeud final. Ajoutez le code ci-dessous après avoir initialisé `BMSClient` :
@@ -155,7 +163,7 @@ accessible qu'aux applications mobiles instrumentées avec le SDK client de {{si
  response:Optional("Bonjour, ceci est une ressource protégée de l'application back end mobile !"), no error
  ```
 {: screen}
- 
+
 ## Etapes suivantes
 {: #next-steps}
 Lorsque vous vous êtes connecté au noeud final protégé, les données d'identification n'ont pas été nécessaires. Pour obliger les utilisateurs à utiliser des données d'identification pour se connecter à votre application, vous devez configurer Facebook, Google ou l'authentification personnalisée.

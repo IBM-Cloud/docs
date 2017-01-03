@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # {{site.data.keyword.composeForRethinkDB}} 시작하기
 {: #getting-started-with-compose-for-rethinkdb}
-
-마지막 업데이트 날짜: 2016년 9월 20일
-{: .last-updated}
 
 {{site.data.keyword.composeForRethinkDB}}에서는 통합된 관리 및 탐색 콘솔이 있는 JSON 문서 기반의 분산 데이터베이스를 제공합니다. RethinkDB에서는 ReQL 조회 언어를 사용하며 이는 함수 체인화를 중심으로 빌드되고 Java, JavaScript, Python, Ruby의 클라이언트 라이브러리에서 사용 가능합니다. ReQL을 사용하면 클러스터의 노드에서 분배된 결합, 하위 조회와 같은 RethinkDB 서버 측 기능을 사용할 수 있습니다. 또한 RethinkDB는 읽기 조회 성능을 향상시킬 수 있도록 2차 색인을 지원합니다. RethinkDB의 가장 강력한 기능인 changefeeds를 사용하면 여러 ReQL 조회를 실시간 피드로 변환할 수 있습니다.
 {:shortdesc}
@@ -44,6 +41,7 @@ copyright:
 `deployment_id`|Compose에서 작성된 서비스의 내부 ID입니다.
 `db_type`|서비스에서 제공하는 데이터베이스의 유형입니다. 이 경우 `rethink`입니다.
 `이름`|데이터베이스 배치 이름입니다.
+{: caption="Table 1. {{site.data.keyword.composeForRethinkDB}} credentials" caption-side="top"}
 
 # 관련 링크
 {: #rellinks}

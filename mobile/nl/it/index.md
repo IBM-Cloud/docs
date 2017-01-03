@@ -2,17 +2,15 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.Bluemix}} Dashboard mobile
 {: #mobile}
-Ultimo aggiornamento: 13 ottobre 2016
-{: .last-updated}
 
-Il dashboard {{site.data.keyword.Bluemix}} Mobile offre un solo posto per gestire le funzionalità {{site.data.keyword.Bluemix_notm}} di cui hai bisogno per creare e gestire la tua applicazione {{site.data.keyword.Bluemix_notm}} Mobile. Il dashboard Mobile offre i servizi più comuni necessari allo sviluppatore mobile in una sola esperienza collegata che è stata ottimizzata per lo sviluppatore mobile.
+Il dashboard {{site.data.keyword.Bluemix}} Mobile offre un solo posto per gestire le funzionalità {{site.data.keyword.Bluemix_notm}} di cui hai bisogno per creare e gestire la tua applicazione {{site.data.keyword.Bluemix_notm}} Mobile. Puoi gestire le applicazioni mobili tramite il concetto di [Progetti](projects.html). Il dashboard Mobile offre i servizi più comuni necessari allo sviluppatore mobile in una sola esperienza collegata che è stata ottimizzata per lo sviluppatore mobile.
 
 Il dashboard Mobile abilita uno sviluppatore mobile a creare un progetto da molti starter, creare e collegare i servizi ottimizzati {{site.data.keyword.Bluemix_notm}} chiave al tuo progetto e a scaricare velocemente il codice di lavoro con le SDK. Le SDK sono completamente integrate con le credenziali della funzionalità, questo ti abilita ad averle in esecuzione sul tuo dispositivo in pochi minuti. Quando la tua applicazione è in esecuzione e hai configurato le funzionalità Push, Analytics e/o Mobile Authentication, puoi tornare al tuo progetto per monitorare e gestire il coinvolgimento dei tuoi utenti dell'applicazione.
 
@@ -31,9 +29,9 @@ Per iniziare ad utilizzare il dashboard Mobile, fai clic sulla categoria **Mobil
 ## Introduzione
 {: getting-started-mobiledashboard}
 
-Il dashboard ti abilita a gestire le applicazioni mobili tramite il concetto di un progetto. Crea un progetto nella pagina **Introduzione** facendo clic su **Crea progetto**. Saranno visualizzate le opzioni [Starter](starters.html) che ti abilitano ad avviare velocemente la creazione della tua applicazione.
+Crea un progetto nella pagina **Introduzione** facendo clic su **Crea progetto**. Saranno visualizzate le opzioni [Starter](starters.html) che ti abilitano ad avviare velocemente la creazione della tua applicazione.
 
-Con la vista [Progetti](projects.html), puoi gestire tutti i tuoi progetti in un solo posto. Il progetto mantiene tutte le informazioni sulla funzionalità di cui hai bisogno per l'applicazione mobile. Puoi semplicemente integrare e gestire i servizi mobili Push, Analytics e Authentication nel progetto, con ulteriori funzionalità disponibili nel prossimo futuro:
+Puoi visualizzare e gestire tutti i tuoi progetti in un solo posto selezionando la pagina dei progetti. Il progetto contiene le informazioni per tutte le funzionalità che sono (e possono essere) integrate con la tua applicazione mobile. Se disponibili, puoi facilmente integrare e gestire i servizi mobili Push, Analytics e Authentication nel progetto, con ulteriori funzionalità disponibili nel prossimo futuro.
 
 La vista [Servizi](services.html) mostra una vista operativa delle tue istanze del servizio mobile esistenti. Il dashboard Mobile supporta uno sviluppatore mobile e un utente di gestione dell'applicazione mobile.
 
@@ -41,32 +39,26 @@ La vista [Servizi](services.html) mostra una vista operativa delle tue istanze d
 <!--You can also discover the {{site.data.keyword.Bluemix_notm}} Mobile offerings, link to the Mobile documentation and get answers from our {{site.data.keyword.Bluemix_notm}} Mobile services community on Stack Overflow.-->
 
 
-Controlla frequentemente di essere al passo con le nuove funzioni.
-
-
 # Link correlati
 {: #rellinks}
 
-<!-- links to internal services don't work
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
+## Esercitazioni ed esempi
+{: #samples}
 
-<!--## Blog Posts
-{: #general}
--->
+* [Sample: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
 * [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
+* [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
 * [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
+* [developerWorks Recipe: Translated weather updates with Push Notifications and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
+* [Video dei supporti didattici](https://www.youtube.com/channel/UCRW4t4Hzm9gzuiq5naERkCw){: new_window}
 
-<!--## Tutorials and Samples
-{: #samples}
--->
-* [Sample: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+## Link correlati
+{: #general}
+
+* [Mobile Analytics (Beta)](/docs/services/mobileanalytics/index.html){: new_window}
+* [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
+* [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
+* [Mobile Quality Assurance](/docs/services/MobileQualityAssurance/index.html){: new_window}
+* [Push Notifications](/docs/services/mobilepush/index.html){: new_window}

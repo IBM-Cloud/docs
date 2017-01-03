@@ -2,8 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-2"
+
 ---
+
+{:codeblock:.codeblock}
 
 # Benutzer mit angepasstem Identitätsprovider authentifizieren
 {: #custom-id}
@@ -43,9 +46,6 @@ Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist
   * Die ursprüngliche Anforderung wird von der Webanwendung (zum Beispiel von einem Anmeldeformular) gesendet.
   * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource. 
 
-
-
-
 ## Informationen zu angepassten Identitätsprovidern
 {: #custom-id-about}
 
@@ -53,7 +53,7 @@ Mit einem angepassten Identitätsprovider können Sie angepasste Authentifizieru
 
 Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglichkeiten:
 
-1. Sie können eine Authentifizierungsanforderung (Challenge) anpassen, die vom {{site.data.keyword.amashort}}-Service an die mobile Anwendung oder an die Web-Clientanwendung gesendet werden soll. Eine Authentifizierungsanforderung ist ein JSON-Objekt, das angepasste Daten enthält. Der Client kann mithilfe dieser angepassten Daten Authentifizierungsabläufe anpassen.
+1. Sie können eine Authentifizierungsanforderung (Challenge) anpassen, die vom {{site.data.keyword.amashort}}-Service an die mobile Anwendung oder an die Web-Client-Anwendung gesendet werden soll. Eine Authentifizierungsanforderung ist ein JSON-Objekt, das angepasste Daten enthält. Der Client kann mithilfe dieser angepassten Daten Authentifizierungsabläufe anpassen.
 
   Beispiel für eine angepasste Authentifizierungsanforderung:
 
@@ -67,6 +67,7 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 		}
 	}
 	```
+	{: codeblock}
 
 1. Sie können einen angepassten Ablauf für die Erfassung von Berechtigungsnachweisen auf dem Client implementieren, einschließlich einer Authentifizierung in mehreren Schritten und mit mehreren Formularen. Ähnlich wie bei der angepassten Authentifizierungsanforderung müssen Sie die Struktur einer Antwort auf eine angepasste Authentifizierungsanforderung gestalten.
 
@@ -79,6 +80,8 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 		pincode:"1234"
 	}
 	```
+	{: codeblock}
+	
 1. Sie können angepasste Logik für die Validierung der bereitgestellten Antwort auf eine Authentifizierungsanforderung implementieren.
 
 1. Sie können ein angepasstes Benutzeridentitätsobjekt definieren, das beliebige erforderliche angepasste Eigenschaften enthält. Es folgt ein Beispiel für ein angepasstes Benutzeridentitätsobjekt, das nach einer erfolgreichen Authentifizierung vom Client abgerufen wird:
@@ -94,6 +97,7 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 		}
 	}
 	```
+	{: codeblock}
 
 ### Beispielimplementierung eines angepassten Identitätsproviders
 {: #custom-sample}

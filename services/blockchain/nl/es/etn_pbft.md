@@ -21,7 +21,6 @@ years: 2016
 El plan de desarrollador inicial y el plan Red empresarial de alta seguridad le permiten probar el protocolo de consenso PBFT (Practical Byzantine Fault Tolerance) en una red de blockchain de cuatro nodos. Los siguientes temas proporcionan detalles sobre el consenso en general, y PBFT en particular. Una vez esté preparado para iniciar la prueba, se proporcionan casos de prueba de PBFT.  
 {:shortdesc}  
 
-<br>
 ## ¿Qué es consenso?
 
 Consenso es un método para validar el orden de solicitudes, o transacciones, (desplegar e invocar), en una red de blockchain. El orden de transacciones correcto es muy importante, porque muchas transacciones tienen una dependencia de una o más transacciones anteriores (por ejemplo, los cargos en cuenta a menudo tienen una dependencia de créditos anteriores).
@@ -30,12 +29,12 @@ En una red de blockchain, no hay ninguna autoridad centralizada que determine el
 
 * Esta garantía depende de variables como el protocolo de consenso concreto implementado y el número de nodos en la red de blockchain. Los dos planes de Blockchain en Bluemix implementan el protocolo de consenso PBFT.  
 
-<br><br>
+<br>
 ## ¿Qué es PBFT?
 
 Practical Byzantine Fault Tolerance (PBFT) es un tipo de protocolo de consenso. La función de un protocolo de consenso es mantener el orden de transacciones en una red de blockchain, a pesar de las amenazas a este orden. Una de esas amenazas es la anomalía simultánea arbitraria (un tipo de error bizantino) de varios nodos de red. Si se utiliza PBFT, una red de blockchain de (N) nodos puede soportar (f) número de nodos bizantinos, donde f = (N-1)/3. En otras palabras, PBFT garantiza que un mínimo de 2\*f + 1 nodos alcancen el consenso en el orden de transacciones antes de añadirlos a un libro mayor compartido. Al derivar alguna fórmula revela la regla que una red PBFT garantiza la consistencia de datos y la integridad a pesar de errores bizantinos en menos de un tercio de todos los nodos de red.  
 
-<br><br>
+<br>
 ## PBFT y la red de blockchain
 
 La regla PBFT 2\*f + 1 tiene las siguientes implicaciones para el plan de Desarrollador inicial y el plan de Red empresarial de alta seguridad:
@@ -63,5 +62,5 @@ Atención: Revise las siguientes notas antes de iniciar la prueba de consenso:
 ![](images/stopstartpeer.png "Detener e iniciar iguales")
 *Figura 1. Detener e iniciar iguales*
 
-- Los casos de prueba utilizan **chaincode_example02**, de forma predeterminada, desde https://github.com/hyperledger/fabric/blob/master/examples/chaincode/go/chaincode_example02/chaincode_example02.go. No obstante, puede utilizar su propio código de encadenamiento, o cualquiera de los ejemplos de código de encadenamiento en: https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go.
+- Los casos de prueba utilizan **chaincode_example02**, de forma predeterminada, desde: https://github.com/hyperledger/fabric/tree/v0.6/examples/chaincode/go/chaincode_example02. No obstante, puede utilizar su propio código de encadenamiento, o cualquiera de los ejemplos de código de encadenamiento en: https://github.com/hyperledger/fabric/tree/v0.6/examples/chaincode/go.
 - Las solicitudes se procesan por lotes en una transacción para su proceso. Sin embargo, puede asegurar un proceso inmediato confiando en el valor de tiempo de espera de lotes; si espera como mínimo dos segundos antes de someter la siguiente solicitud se procesará la transacción inmediatamente.

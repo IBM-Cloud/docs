@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated:  "2016-08-31"
+lastupdated:  "2016-11-16"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated:  "2016-08-31"
 
 # {{site.data.keyword.mobilefoundation_short}} の概要
 {: #gettingstartedtemplate}
-
-<!--Last updated: 31 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_long}} は {{site.data.keyword.mfp_full}} 環境 (この環境からエンタープライズ・モバイル・アプリの開発、テスト、操作が可能です) のセットアップを迅速に処理します。
 {{site.data.keyword.mobilefoundation_short}} は、「開発者」と「プロフェッショナル 1 アプリケーション」の 2 つの異なるサービス・プランで利用可能です。
@@ -55,14 +53,17 @@ lastupdated:  "2016-08-31"
 
 2.  サーバーを作成して始動します。
 
-    * デフォルト構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「基本サーバーの始動」**をクリックします。
-		
+    * デフォルト構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「基本サーバーの始動」**をクリックします。 
 
       `基本サーバー・インスタンスには、単一のノードと 1 GB のメモリーが含まれています。`
 
     * トポロジー、セキュリティー、およびその他のサーバー構成について拡張構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「拡張構成を使用したサーバーの始動 (Start Server with Advanced Configuration)」**をクリックします。詳しくは、[拡張構成のセットアップ](c_using_mfs_p2.html#using_mfs_advanced_p2)を参照してください。
 
 {{site.data.keyword.mobilefoundation_short}} の使用を開始する方法について詳しくは、[Using the Mobile Foundation service to set up MobileFirst Server (Mobile Foundation サービスを使用した、MobileFirst Server のセットアップ)<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/)を参照してください。
+
+##  既知の制限
+
+* {{site.data.keyword.mobilefoundation_short}} サービス UI は、番号を表示するためにユーザーが選択したロケール特定パターンを使用しません。
 
 
 # 関連リンク

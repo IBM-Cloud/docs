@@ -1,12 +1,11 @@
 ---
 
- 
+
 
 copyright:
-
   years: 2016
+lastupdated: "2016-08-02"
 
- 
 
 ---
 
@@ -18,8 +17,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}}-Pakete verwenden und erstellen
 {: #openwhisk_packages}
-Letzte Aktualisierung: 2. August 2016
-{: .last-updated}
+
 
 In {{site.data.keyword.openwhisk}} können Sie Pakete verwenden, um eine Gruppe zusammengehöriger Aktionen zu bündeln und diese zur gemeinsamen Nutzung mit anderen Benutzern bereitzustellen.
 
@@ -244,7 +242,7 @@ Feeds sind eine bequeme Methode zum Konfigurieren einer externen Ereignisquelle 
 2. Erstellen Sie einen Auslöser, der alle acht Sekunden aktiviert wird.
 
   ```
-  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron '*/8 * * * * *' -p trigger_payload '{"name":"Mork", "place":"Ork"}'
+  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron "*/8 * * * * *" -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"
   ```
   {: pre}
   ```
@@ -384,12 +382,13 @@ Sie können Standardparameter für alle Entitäten in einem Paket festlegen. Daz
 2. Zeigen Sie die Parameter in dem Paket und in der Aktion an und beachten Sie, wie die Aktion `identity` in dem Paket die Parameter aus dem Paket übernimmt.
 
   ```
-  wsk package get custom parameters
+  wsk package get custom
   ```
   {: pre}
   ```
-  ok: got package custom, projecting parameters
-  [
+  ok: got package custom
+  ...
+  "parameters": [
       {
           "key": "city",
           "value": "Austin"
@@ -399,16 +398,18 @@ Sie können Standardparameter für alle Entitäten in einem Paket festlegen. Daz
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
   ```
-  wsk action get custom/identity parameters
+  wsk action get custom/identity
   ```
   {: pre}
   ```
-  ok: got action custom/identity, projecting parameters
-  [
+  ok: got action custom/identity
+  ...
+  "parameters": [
       {
           "key": "city",
           "value": "Austin"
@@ -418,6 +419,7 @@ Sie können Standardparameter für alle Entitäten in einem Paket festlegen. Daz
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
@@ -454,7 +456,7 @@ Sie können Standardparameter für alle Entitäten in einem Paket festlegen. Daz
 ## Paket gemeinsam nutzen
 {: #openwhisk_packages_share}
 
-Wenn die Aktionen und Feeds, die ein Paket bilden, auf Fehler geprüft und getestet wurden, kann das Paket zur gemeinsamen Nutzung durch alle {{site.data.keyword.openwhisk_short}}-Benutzer bereitgestellt werden. Durch die gemeinsame Nutzung haben Benutzer die Möglichkeit, das Paket zu binden, Aktionen in dem Paket aufzurufen sowie {{site.data.keyword.openwhisk_short}}-Regeln zu verfassen und Aktionsfolgen zu erstellen.
+Wenn die Aktionen und Feeds, die ein Paket bilden, auf Fehler geprüft und getestet wurden, kann das Paket zur gemeinsamen Nutzung durch alle {{site.data.keyword.openwhisk_short}}-Benutzer bereitgestellt werden. Durch die gemeinsame Nutzung haben Benutzer die Möglichkeit, das Paket zu binden, Aktionen in dem Paket aufzurufen sowie {{site.data.keyword.openwhisk_short}}-Regeln zu verfassen und Aktionssequenzen zu erstellen.
 
 1. Stellen Sie das Paket zur gemeinsamen Nutzung durch alle Benutzer bereit:
 
@@ -470,12 +472,14 @@ Wenn die Aktionen und Feeds, die ein Paket bilden, auf Fehler geprüft und getes
 2. Zeigen Sie die Eigenschaft `publish` des Pakets an, um zu prüfen, ob sie jetzt den Wert 'true' hat.
 
   ```
-  wsk package get custom publish
+  wsk package get custom
   ```
   {: pre}
   ```
-  ok: got package custom, projecting publish
-  true
+  ok: got package custom
+  ...
+  "publish": true,
+  ...
   ```
   {: screen}
 

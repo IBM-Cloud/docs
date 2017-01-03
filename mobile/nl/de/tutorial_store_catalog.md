@@ -2,16 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-12-01"
 
 ---
 {:new_window: target="_blank"}
 
 # Lernprogramm - Benutzerschnittstellenstarter für Store Catalog
 {: #tutorial_store_catalog}
-
-Letzte Aktualisierung: 13. Oktober 2016
-{: .last-updated}
 
 Der Benutzerschnittstellenstarter für {{site.data.keyword.Bluemix}} Store Catalog bietet eine grundlegende, anpassbare Struktur für Verkaufs-Apps sowie Integrationspunkte für jeden der {{site.data.keyword.Bluemix_notm}} Mobile-Services.
 
@@ -39,7 +36,7 @@ Zur schnellen Einrichtung und Ausführung mit dem Benutzerschnittstellenstarter 
 
    4. Geben Sie Ihren Projektnamen ein und klicken Sie auf **Erstellen**.
 
-2. Optional: Fügen Sie Push Notifications hinzu.
+2. Optional: Fügen Sie die Push Notifications-Funktion hinzu.
 
    1. Klicken Sie auf der Seite **Projektübersicht** für **Push Notifications** auf **Hinzufügen**.
 
@@ -47,21 +44,23 @@ Zur schnellen Einrichtung und Ausführung mit dem Benutzerschnittstellenstarter 
 
    2. Geben Sie Ihren Servicenamen ein und klicken Sie auf **Erstellen**.
 
-   3. Unter iOS [konfigurieren Sie den Apple-Service 'Push Notification'](../services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Unter iOS [konfigurieren Sie den Apple-Service 'Push Notification'](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
-   4. Unter Android [konfigurieren Sie Google Cloud Messaging](../services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Unter Android [konfigurieren Sie Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
 
-3. Optional: Fügen Sie andere Services hinzu.
+3. Optional: Fügen Sie andere Funktionen hinzu.
 
-   1. Klicken Sie auf der Seite **Projektübersicht** auf **Hinzufügen**.
+   1. Klicken Sie auf der Seite **Projektübersicht** für die Funktion auf **Hinzufügen**.
 
    2. Geben Sie Ihren Servicenamen ein und klicken Sie auf **Erstellen**.
 
-   3. Befolgen Sie die Anweisungen zum Service, um ihn einzurichten.
+   3. Befolgen Sie die Anweisungen, die im Lieferumfang des Service enthalten sind, um ihn einzurichten.
 
 4. Entwerfen Sie Ihre App.
 
    1. Wählen Sie im Navigationsmenü die Option **Benutzerschnittstellenbuilder** aus, um das Design Ihrer App anzupassen.
+   
+		**Tipp:** Für eine Schnellansicht des Benutzerschnittstellenbuilders müssen Sie nach der Auswahl des Benutzerschnittstellenbuilders in der Navigation die Option zum Anzeigen der Funktion auswählen.
 
    2. Wählen Sie in der Navigation die Registerkarte **Design** aus.
 
@@ -80,7 +79,7 @@ Zur schnellen Einrichtung und Ausführung mit dem Benutzerschnittstellenstarter 
 
 		Ein Element, das in der Baumstruktur als *Formular* angegeben ist, ist unabhängig und kann integriert geändert werden. Es referenziert keine Informationen aus einer Datenquelle.
 
-   5. Wählen Sie in der Navigation die Option **Daten** aus, um die von der App verwendeten Daten anzuzeigen. Die Vorlage enthält Standardinformationen; Sie können die Quelle der Daten jedoch ändern, indem Sie **Neue erstellen** auswählen. Da Sie mehr als eine Datenquelle referenzieren können, geben Sie für jede Datenquelle, die Sie verwenden, einen Namen an. Sie können aus den folgenden Optionen für Datenquellen auswählen:
+   5. Wählen Sie in der Navigation die Option **Daten** aus, um die von der App verwendeten Daten anzuzeigen. Die Vorlage enthält Standardinformationen. Sie können die Quelle der Daten jedoch ändern, indem Sie **Neue erstellen** auswählen. Da Sie mehr als eine Datenquelle referenzieren können, geben Sie für jede Datenquelle, die Sie verwenden, einen Namen an. Sie können aus den folgenden Optionen für Datenquellen auswählen:
       * Cloud
       * Local
       * Cloudant
@@ -110,15 +109,15 @@ Zur schnellen Einrichtung und Ausführung mit dem Benutzerschnittstellenstarter 
 
    2. Unter Android können Sie nach der Code-Generierung aus folgenden Optionen auswählen:
 
-      **Code herunterladen**
+      * Code herunterladen
 
-      **APK herunterladen**
+      * APK herunterladen
 
-      **Mit QR-Code herunterladen**
+      * Mit QR-Code herunterladen
 
-   3. Unter iOS können Sie nach der Code-Generierung aus folgenden Optionen auswählen:
+   3. Für iOS können Sie nach der Generierung des Codes die folgende Option auswählen:
 
-      **Code herunterladen**
+      * Code herunterladen
 
 6. Führen Sie Ihre App auf Ihrem Gerät oder Simulator aus.
 
@@ -126,30 +125,4 @@ Zur schnellen Einrichtung und Ausführung mit dem Benutzerschnittstellenstarter 
 ## Nächste Schritte
 {: #tutorial_next}
 
-[Testen Sie Ihre App!](http://new-console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
-
-
-# Zugehörige Links
-{: #rellinks}
-
-<!-- links to internal services don't work
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-* [Mobile Analytics (Beta)](../services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](../services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](../services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](../services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](../services/mobilepush/index.html){: new_window}
--->
-
-## Blogbeiträge
-{: #general}
-* [Blogbeitrag: Einführung in das Bluemix Mobile-Dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Blogbeitrag: Einführung in die nächste Generation des Bluemix Mobile-Dashboards](https://ibm.com/blogs/bluemix/2016/10/introducing-the-next-generation-of-the-bluemix-mobile-dashboard/){: new_window}
-* [Blogbeitrag: Einführung in Code-Starter für Bluemix Mobile](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [Blogbeitrag: Bluemix Mobile, Teil 1: App 'Store Catalog' erstellen](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [Blogbeitrag: Bluemix Mobile, Teil 2: Angepasstes Bluemix-Back-End in die App 'Store Catalog' integrieren](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-
-## Lernprogramme und Beispiele
-{: #samples}
-* [Mobiles Back-End für Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
+[Testen Sie Ihre App!](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}

@@ -2,16 +2,17 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-12-05"
 
 ---
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 #{{site.data.keyword.amashort}} Web アプリケーション用のカスタム認証の構成
 {: #custom-web}
-
 
 カスタム認証と {{site.data.keyword.amafull}} セキュリティー機能を Web アプリに追加します。
 
@@ -20,9 +21,13 @@ lastupdated: "2016-10-03"
 
 開始する前に以下が必要です。
 
-* Web アプリ。 
-* {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[{{site.data.keyword.amashort}} 概説](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)を参照してください。
-* (許可プロセス完了後の) 最終リダイレクトのための URI。
+* Web アプリ。
+* カスタム ID プロバイダーを使用するように構成済みの {{site.data.keyword.amashort}} サービスのインスタンスによって保護されているリソース ([カスタム認証の構成](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)を参照してください)。  
+* **TenantID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
+* **「レルム」**名。これは、{{site.data.keyword.amashort}} ダッシュボードの**「管理」**タブで、**「カスタム」**セクションの**「レルム名」**フィールドに指定した値です。
+* バックエンド・アプリケーションの URL (**「アプリの経路 (App Route)」**)。バックエンド・アプリケーションの保護されたエンドポイントに要求を送信するためにこの値が必要になります。
+* {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域の値は、`「米国南部」`、`「英国」`、または`「シドニー」`のいずれかでなければならず、また Javascript コードで必要な SDK 値 (`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、または `BMSClient.REGION_UK`) に対応している必要があります。{{site.data.keyword.amashort}} クライアントを初期化するためにこの値が必要になります。
+* (許可プロセス完了後の) 最終リダイレクトのための URI。これは、**「管理」**タブの**「カスタム」**セクションで入力した**「Web アプリケーションのリダイレクト URI (Your Web Application Redirect URIs)」**値です。
 
 詳細情報:
 
@@ -46,14 +51,14 @@ lastupdated: "2016-10-03"
 ユーザーを検証した後、この経路は以下の構造の JSON オブジェクトを返す必要があります。
 
 ```json
-{ 
-	status: "success", 
-            userIdentity: { 
-                userName: <user name>, 
-                displayName: <display name> 
-                attributes: <additional attributes json> 
-            } 
-        } 
+{
+	status: "success",
+	userIdentity: {
+		userName: <user name>,
+		displayName: <display name>
+		attributes: <additional attributes json>
+	}
+} 
 ```
 {: codeblock}
 
@@ -67,31 +72,30 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 var users = {
-"John": {
-      password: "123",
-      displayName: "John Doe"
-    }
+	"John": {
+		password: "123",
+		displayName: "John Doe"
+	}
 };
 
-app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
-         function(req, res) {
-         console.log ("tenantID " + req.params.tenantID);
-         
-         var challengeAnswer = req.body.challengeAnswer;
-         console.log ("challengeAnswer " + JSON.stringify(challengeAnswer));
+app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req, res) {
+	console.log ("tenantID " + req.params.tenantID);
 
-         if (challengeAnswer && users[challengeAnswer.username] && challengeAnswer.password === users[challengeAnswer.username].password) {
-         res.json({
-                  status: "success",
-                  userIdentity: {
-                  userName: challengeAnswer.username,
-                  displayName: users[challengeAnswer.username].displayName
-                  }
-                  });
-         } else {
-         res.json({
-                  status: "failure"
-                  });
+	var challengeAnswer = req.body.challengeAnswer;
+	console.log ("challengeAnswer " + JSON.stringify(challengeAnswer));
+
+	if (challengeAnswer && users[challengeAnswer.username] && challengeAnswer.password === users[challengeAnswer.username].password) {
+		res.json({
+			status: "success",
+			userIdentity: {
+				userName: challengeAnswer.username,
+				displayName: users[challengeAnswer.username].displayName
+			}
+		});
+	} else {
+		res.json({
+			status: "failure"
+		});
 	}
         
 });
@@ -104,26 +108,29 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 カスタム ID プロバイダーを構成した後、{{site.data.keyword.amashort}} ダッシュボードでカスタム認証を使用可能にすることができます。 
 
-1. {{site.data.keyword.Bluemix_notm}}ダッシュボードを開きます。 
-2. 関連する {{site.data.keyword.amashort}} アプリケーションのタイルをクリックします。アプリ・ダッシュボードがロードされます。 
-3. 「カスタム」タイルの**「構成」**ボタンをクリックします。 
-4. **「レルム名」**テキスト・ボックスに、カスタム ID プロバイダー・ハンドラー・エンドポイントに構成したレルム名を入力します。
-5. カスタム ID プロバイダー URL を入力します。 
-6. 認証が成功した後に {{site.data.keyword.amashort}} ダッシュボードで使用される Web アプリケーション・リダイレクト URI を入力します。 
-7. 保存します。 
+1. {{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。
+1. **「管理」**タブで、**「許可」**をオンに切り替えます。
+1. **「カスタム」**セクションを展開します。
+1. **「レルム名」**、**「カスタム ID プロバイダー URL」**を入力します。 
+1. **「Web アプリケーションのリダイレクト URI (Your Web Application Redirect URIs)」**値を入力します。これは、正常に許可された後の最終リダイレクトの URI です。
+1. **「保存」**をクリックします。
 
 
 ##カスタム ID プロバイダーを使用した {{site.data.keyword.amashort}} 許可フローの実装
 {: #custom-auth-flow}
 
-`VCAP_SERVICES` 環境変数が {{site.data.keyword.amashort}} サービス・インスタンスごとに自動的に作成され、許可プロセスに必要なプロパティーが含まれます。この環境変数は 1 つの JSON オブジェクトから成り、アプリケーションの左側のナビゲーション・バーで**「環境変数」**をクリックすることによって表示できます。
+`VCAP_SERVICES` 環境変数が {{site.data.keyword.amashort}} サービス・インスタンスごとに自動的に作成され、許可プロセスに必要なプロパティーが含まれます。この環境変数は 1 つの JSON オブジェクトから成り、{{site.data.keyword.amashort}} ダッシュボード内の **「サービス資格情報」**タブに表示できます。
 
 ユーザー許可を要求するには、ブラウザーを許可サーバー・エンドポイントにリダイレクトします。これには、次のようにします。 
 
-1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) およびクライアント ID (`clientId`) を取り出します。 
+1. `VCAP_SERVICES` 環境変数に保管されているサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) とクライアント ID (`clientId`) を取得します。 
+
+	`var cfEnv = require("cfenv");` 
+
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
-  
+
 	米国南部: 
 
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
@@ -140,7 +147,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 3. Web アプリから、生成された URI へリダイレクトします。 
 
-	以下の例は、`VCAP_SERVICES` 変数からパラメーターを取り出し、URL を構築し、リダイレクト要求を送信します。
+   以下の例は、`VCAP_SERVICES` 変数からパラメーターを取り出し、URL を構築し、リダイレクト要求を送信します。
 
 	```Java
 	var cfEnv = require("cfenv");
@@ -186,15 +193,15 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
 
 	米国南部: 
-  
+
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
- 
+
 	ロンドン: 
- 
+	
 	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
  
 	シドニー: 
- 
+
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
  
 2. `grant_type`、`client_id`、`redirect_uri`、および `code` をフォーム・パラメーターとして使用し、`clientId` および `secret` を基本 HTTP 認証資格情報として使用して、トークン・サーバー URI に POST 要求を送信します。
@@ -202,35 +209,35 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 	以下の例に示すコードは、必要な値を取り出し、それらを POST 要求で送信します。
 
 	```Java
-var cfEnv = require("cfenv");
-var base64url = require("base64url ");
-app.get("/oauth/callback", function(req, res, next){
-    var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-    var tokenEndpoint = mcaCredentials.tokenEndpoint; 
+	var cfEnv = require("cfenv");
+	var base64url = require("base64url");
+	app.get("/oauth/callback", function(req, res, next) {
+		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+		var tokenEndpoint = mcaCredentials.tokenEndpoint;
 
-    var formData = { 
-      grant_type: "authorization_code", 
-      client_id: mcaCredentials.clientId, 
-      redirect_uri: "http://some-server/oauth/callback",   // Your web application redirect uri 
-      code: req.query.code 
-    } 
-
-  request.post({ 
-    url: tokenEndpoint, 
-    formData: formData 
-    }, function (err, response, body){ 
-      var parsedBody = JSON.parse(body); 
-
-      req.session.accessToken = parsedBody.access_token; 
-      req.session.idToken = parsedBody.id_token; 
-      var idTokenComponents = parsedBody.id_token.split("."); // [header, payload, signature] 
-			var decodedIdentity= base64url.decode(idTokenComponents[1]);
-			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"]; 
-			res.redirect("/"); 
+		var formData = {
+			grant_type: "authorization_code",
+			client_id: mcaCredentials.clientId,
+			redirect_uri: "http://some-server/oauth/callback",   // Your Web application redirect uri
+			code: req.query.code
 		}
-		).auth(mcaCredentials.clientId, mcaCredentials.secret); 
-  }
-); 
+
+		request.post({
+			url: tokenEndpoint,
+			formData: formData
+		}, function (err, response, body) {
+			var parsedBody = JSON.parse(body);
+
+			req.session.accessToken = parsedBody.access_token;
+			req.session.idToken = parsedBody.id_token;
+			var idTokenComponents = parsedBody.id_token.split("."); // [header, payload, signature]
+			var decodedIdentity= base64url.decode(idTokenComponents[1]);
+			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"];
+			res.redirect("/");
+		}
+		).auth(mcaCredentials.clientId, mcaCredentials.secret);
+  	}
+	); 
 	```
 	{: codeblock}
 	
@@ -257,7 +264,4 @@ app.get("/oauth/callback", function(req, res, next){
 
 * `<accessToken>` と `<idToken>` は空白で分離する必要があります。
 
-* 識別トークンはオプションです。識別トークンを提供しない場合、保護リソースはアクセス可能ですが、許可ユーザーに関する情報を受け取ることはありません。 
-
-
-
+* 識別トークンはオプションです。識別トークンを提供しない場合、保護リソースはアクセス可能ですが、許可ユーザーに関する情報を受け取ることはありません。

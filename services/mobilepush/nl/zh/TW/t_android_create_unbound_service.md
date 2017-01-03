@@ -6,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 建立適用於 Android 的未連結 {{site.data.keyword.mobilepushshort}} Service
 {: #create_android_unbound}
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
 建立 {{site.data.keyword.mobilepushshort}} Service 實例。您可以使用 {{site.data.keyword.mobilepushshort}} Service 實例，而不連結至任何後端應用程式。

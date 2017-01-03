@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Fonctions Liberty prises en charge dans Bluemix
 {: #liberty_features}
-
-Dernière mise à jour : 28 juillet 2016
-{: .last-updated}
 
 Le contexte d'exécution instantané Liberty for Java inclut un sous-ensemble de fonctions Liberty Profile.  Certaines fonctions fournies par Liberty Profile ne sont pas disponibles dans le contexte d'exécution instantané Liberty for Java, car elles ne sont pas applicables dans l'environnement de cloud.
 
@@ -208,9 +206,9 @@ Le tableau suivant présente les fonctions Liberty prises en charge dans Bluemix
 </tr>
 </table>
 
-Un sous-ensemble des fonctions disponibles sont activées par défaut lors du déploiement des fichiers WAR ou EAR. Voir [Applications autonomes](optionsForPushing.html#stand_alone_apps) pour plus de détails.
+Un sous-ensemble des fonctions disponibles sont activées par défaut lors du déploiement des fichiers WAR ou EAR.  Voir [Applications autonomes](optionsForPushing.html#stand_alone_apps) pour plus de détails.
 
-Le contexte d'exécution Liberty for Java met également à disposition quelques fonctions bêta Liberty, qui ne se trouvent pas dans le tableau ci-dessus mais sont répertoriées dans la rubrique <a href="https://new-console.ng.bluemix.net/docs/runtimes/liberty/usingBetaFeatures.html">Utilisation des fonctions bêta</a>.
+Le contexte d'exécution Liberty for Java met également à disposition quelques fonctions bêta Liberty, qui ne se trouvent pas dans le tableau ci-dessus mais sont répertoriées dans la rubrique [Utilisation des fonctions bêta](/docs/runtimes/liberty/usingBetaFeatures.html).
 
 Gardez à l'esprit qu'un serveur ne peut pas charger de fonctions incompatibles, assurez-vous donc qu'il est configuré pour n'activer que des fonctions qui sont compatibles. Voir
     <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Combinaisons de fonctions Java EE 6 et 7 prises en charge</a>.

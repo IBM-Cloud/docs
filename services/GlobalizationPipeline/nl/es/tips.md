@@ -11,10 +11,10 @@ copyright:
 {:codeblock:.codeblock}
 
 
-# Consejos de traducción automática
+# Consejos sobre traducción automática
 {: #globalizationpipeline_tips}
 
-*Última actualización: 27 de marzo de 2016*
+*Última actualización: 12 de julio de 2016*
 {: .last-updated}
 
 La traducción automática puede ser eficaz en proporcionar una aproximación al significado del texto de origen. Sin embargo, la calidad y la utilidad de la traducción automática varía en gran medida en función del idioma de destino y del motor de traducción automática que utilice. Uno de los factores clave en la calidad de la traducción automática es la calidad de la fuente en sí misma. Es posible que no se traduzca de forma precisa el texto de origen que esté cargado con coloquialismos, frases incompletas, puntuación incorrecta y palabras y frases ambiguas.
@@ -90,3 +90,4 @@ Además, solicite a un hablante nativo del idioma que revise y edite la traducci
 
 * **Evite el texto en gráficos.**
 * **Evite utilizar el formato para enfatizar.**
+

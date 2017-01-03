@@ -10,23 +10,17 @@ lastupdated: "2016-10-13"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Criando um projeto com um iniciador de código
+# Usando um Iniciador de código para criar um projeto
 {: #projects_code}
 
-Última atualização: 13 de outubro de 2016
-{: .last-updated}
-
-É possível usar um iniciador de código no painel do
-{{site.data.keyword.Bluemix}} Mobile para criar um projeto no ambiente do
-{{site.data.keyword.Bluemix_notm}}. Esse procedimento não se aplica a projetos
-que usam os iniciadores de UI (interface com o usuário). Consulte [Criando um projeto
-com um iniciador de UI (interface com o usuário)](projects_ui.html) para obter instruções sobre iniciadores de UI (interface com o usuário).{:shortdesc}
+É possível usar um [Iniciador de código](starters.html#Code_Starter) no painel Móvel do {{site.data.keyword.Bluemix}} para criar um projeto no ambiente do {{site.data.keyword.Bluemix_notm}}. Esse procedimento não se aplica a projetos que usam os iniciadores de UI. Consulte [Criando um projeto com um iniciador de UI](projects_ui.html) para obter instruções sobre iniciadores de UI.
+{:shortdesc}
 
 Conclua as etapas a seguir para criar um projeto com um iniciador de código:
 
 1. Crie um novo projeto do painel Móvel no {{site.data.keyword.Bluemix_notm}}.
 
- Você inicia com a guia *Introdução* depois de selecionar o catálogo Móvel. Há descrições de iniciadores selecionados que podem ser usados e diferentes maneiras de criar um projeto que dependem do quanto de ajuda você precisa. Se você desejar apenas começar com ajuda mínima, selecione **Criar projeto**.
+ Você inicia com a guia *Introdução* depois de selecionar o catálogo Móvel. Há descrições de iniciadores selecionados que podem ser usados e diferentes maneiras de criar um projeto que dependem do quanto de ajuda você precisa. Se desejar apenas começar, selecione **Criar projeto**.
 
  Se você já tiver projetos, poderá também iniciar com a guia *Projetos* selecionada. Na visualização **Projetos** do painel do {{site.data.keyword.Bluemix_notm}} Mobile, é possível selecionar um projeto com o qual trabalhar, usar as *Ações* para um projeto para excluí-lo ou fazer download do código para ele, ou criar um novo projeto.
 
@@ -42,14 +36,9 @@ Conclua as etapas a seguir para criar um projeto com um iniciador de código:
 	
 	5. Insira um nome para seu projeto e selecione **Criar**.
 	
-2. Faça suas seleções na tela **Visão geral do projeto**. A tela **Visão geral do projeto** exibe informações sobre seu projeto e os serviços opcionais que podem ser incluídos em seu projeto, como Notificações push.   
+2. Faça suas seleções na tela **Visão geral do projeto**.  A tela **Visão geral do projeto** exibe as informações sobre o seu projeto e os serviços opcionais que podem ser incluídos no seu projeto, como Notificações push e Autenticação.  
 
-	1. Opcional: selecione **Incluir** para incluir um dos
-serviços listados em seu projeto. Ao incluir serviços em seu projeto, você vincula-se ao
-Console do {{site.data.keyword.Bluemix_notm}} principal. Selecione a categoria
-*Móvel* no Console do {{site.data.keyword.Bluemix_notm}} para
-visualizar os serviços Móveis. Selecione *Notificações push* ou outro
-serviço para configurá-lo. Configure o serviço seguindo as instruções pertinentes.
+	1. Opcional: selecione **Incluir** para incluir um dos serviços listados em seu projeto. Edite o **Nome do serviço** para seu serviço e clique em **Criar**. Ao incluir serviços em seu projeto, você é vinculado à página do {{site.data.keyword.Bluemix_notm}} para tal serviço. Configure o serviço fornecendo as informações que são requeridas para o serviço.
 	
 	2. Opcional: repita a etapa *a* para qualquer recurso adicional que você queira incluir em seu projeto. 
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-21"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Oracle JRE 사용
 {: #using_oraacle_jre}
-
-마지막 업데이트 날짜: 2016년 6월 21일
-{: .last-updated}
 
 선택한 경우 Oracle JRE로 Bluemix에서 Liberty 애플리케이션을 실행할 수 있습니다. 해당 작업을 수행하려면 다음을 수행해야 합니다.
 * 빌드팩이 다운로드할 수 있는 소스 위치에서 JRE를 호스트합니다.

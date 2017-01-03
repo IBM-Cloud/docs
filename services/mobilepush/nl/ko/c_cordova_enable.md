@@ -5,12 +5,17 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 푸시 알림을 수신하도록 Cordova 애플리케이션 설정
 {: #cordova_enable}
-마지막 업데이트 날짜: 2016년 10월 17일
+마지막 업데이트 날짜: 2016년 11월 6일
 {: .last-updated}
 
-Cordova는 JavaScript, CSS 및 HTML을 사용하여 하이브리드 애플리케이션을 빌드하는 플랫폼입니다. {{site.data.keyword.mobilepushshort}}는 Cordova 기반 iOS 및 Android 애플리케이션의 개발을 지원합니다. 
+Cordova는 JavaScript, CSS 및 HTML을 사용하여 하이브리드 애플리케이션을 빌드하는 플랫폼입니다. {{site.data.keyword.mobilepushshort}} 서비스는 Cordova 기반 iOS 및 Android 애플리케이션의 개발을 지원합니다. 
 
 Cordova 애플리케이션에서 사용자 디바이스에 푸시 알림을 수신하도록 설정할 수 있습니다. 
 
@@ -68,45 +73,26 @@ cordova platform add ios
 	```
 	{: codeblock}
 
-1. Cordova 애플리케이션 루트 디렉토리에서 다음 명령을 입력하여 Cordova 푸시 플러그인을 설치하십시오. **cordova plugin add ibm-mfp-push**추가한 플랫폼에 따라 다음과 같이 표시됩니다. 
+1. Cordova 애플리케이션 루트 디렉토리에서 다음 명령을 입력하여 Cordova 푸시 플러그인을 설치하십시오. **cordova plugin add bms-push**. 추가한 플랫폼에 따라 다음과 같이 표시됩니다. 
 ```
-Installing "ibm-mfp-push" for android
-	Installing "ibm-mfp-push" for ios
-	```
+Installing "bms-push" for android
+Installing "bms-push" for ios
+```
 	{: codeblock}
 
-1. *your-app-root-folder*에서 다음 명령을 사용하여 Cordova 코어 플러그인과 푸시 플러그인이 정상적으로 설치되었는지 확인하십시오. **cordova plugin list**.추가한 플랫폼에 따라 다음과 같이 표시됩니다. 
+1. your-app-root-folder에서 다음 명령을 사용하여 Cordova 코어 플러그인과 푸시 플러그인이 정상적으로 설치되었는지 확인하십시오. **cordova plugin list**. 추가한 플랫폼에 따라 다음과 같이 표시됩니다. 
 ```
-ibm-mfp-core 1.0.0 "MFPCore"
-	ibm-mfp-push 1.0.0 “MFPPush"
-	```
+bms-core <version> "BMSCore"
+bms-push <version> "BMSPush" 
+```
 	{: codeblock}
 
 1. (iOS만 해당) - iOS 개발 환경을 구성하십시오.
-2. 다음 부속 단계를 완료하십시오.
-
- a. Xcode가 있는 *your-app-name***/platforms/ios** 디렉토리에서 your-app-name.xcodeproj 파일을 여십시오. 
-
- b. 브릿지 헤더를 추가하십시오. **빌드 설정 > Swift 컴파일러 - 코드 생성 > Objective-C 브릿지 헤더**로 이동하여 다음 경로를 추가하십시오. *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**
-
- c. 프레임워크 매개변수를 추가하십시오. **빌드 설정 > 링크 > Runpath 검색 경로**로 이동하여 `@executable_path/Frameworks` 매개변수를 추가하십시오. 
-
- d. 브릿지 헤더에서 다음 푸시 가져오기 명령을 주석 해제하십시오. *your-project-name***/Plugins/ibm-mfp-core/Bridging-Header.h**로 이동하십시오. 
-
-```
-//#import <IMFPush/IMFPush.h>
-	//#import <IMFPush/IMFPushClient.h>
-	//#import <IMFPush/IMFResponse+IMFPushCategory.h>
-	```
-	{: codeblock}
-
- e. Xcode를 사용하여 애플리케이션을 빌드하고 실행하십시오.
-
+2. Xcode를 사용하여 애플리케이션을 빌드하고 실행하십시오.
 1. (Android만 해당) - 다음 명령을 사용하여 Android 프로젝트를 빌드하십시오.
 **cordova build android**.
 
 	**참고**: Android Studio에서 프로젝트를 열기 전에 먼저 Cordova CLI를 통해 Cordova 애플리케이션을 빌드하십시오. 그러면 빌드 오류를 방지하는 데 유용합니다. 
-
 
 ## Cordova 플러그인 초기화
 {: #cordova_initialize}
@@ -116,21 +102,29 @@ ibm-mfp-core 1.0.0 "MFPCore"
 1. 다음 코드 스니펫을 복사하여 기본 JavaScript 파일(일반적으로 **www/js** 디렉토리 아래에 있음)에 붙여넣어 BMSClient를 초기화하십시오. 
 
 ```
-BMSClient.initialize("https://myapp.mybluemix.net","App GUID");
-```
-	{: codeblock}
-
-1. Bluemix Route 및 appGUID 매개변수를 사용하려면 코드 스니펫을 수정하십시오. 푸시 대시보드의 **모바일 옵션** 링크를 클릭하여 앱 라우트, 앱 GUID, 클라이언트 본인확인정보를 가져오십시오. `BMSClient.initialize` 코드 스니펫에서 라우트 및 앱 GUID 값을 매개변수로 사용하십시오. 
-
-	**참고**: Cordova CLI(예: Cordova create app-name 명령)를 사용하여 Cordova 앱을 작성한 경우 이 Javascript 코드를 **index.js** 파일에서 `onDeviceReady: function()` 함수의 `app.receivedEvent` 함수 뒤에 넣어서 BMS 클라이언트를 초기화하십시오. 
-
-```
   onDeviceReady: function() {
 	 app.receivedEvent('deviceready');
-BMSClient.initialize("https://myapp.mybluemix.net","App GUID");
-    },
+BMSClient.initialize("YOUR APP REGION");
+    } 
 ```
 	{: codeblock}
+
+애플리케이션의 영역을 전달하십시오. 다음 상수가 제공됩니다. 
+
+```
+REGION_US_SOUTH // ".ng.bluemix.net";
+REGION_UK //".eu-gb.bluemix.net";
+REGION_SYDNEY // ".au-syd.bluemix.net";
+```
+
+예를 들면, 다음과 같습니다. 
+
+```
+BMSClient.initialize(BMSClient.REGION_US_SOUTH);
+```
+
+**참고**: Cordova CLI(예: Cordova create app-name 명령)를 사용하여 Cordova 앱을 작성한 경우 이 Javascript 코드를 index.js 파일에서 onDeviceReady: function() 함수의 app.receivedEvent 함수 뒤에 넣어서 `BMSClient`를 초기화하십시오. 
+
 
 ## 디바이스 등록
 {: #cordova_register}
@@ -140,90 +134,27 @@ BMSClient.initialize("https://myapp.mybluemix.net","App GUID");
 
 ```
 var success = function(message) { console.log("Success: " + message); };
-	var failure = function(message) { console.log("Error: " + message); };
-	MFPPush.registerDevice({}, success, failure);
+var failure = function(message) { console.log("Error: " + message); };
+BMSPush.registerDevice({}, success, failure);
 ```
 	{: codeblock}
-
-### Android
-{: #cordova_register_android}
-Android에서는 이 설정 매개변수를 사용하지 않습니다. Android 앱만 빌드하는 경우 빈 오브젝트를 전달하십시오. 예를 들면, 다음과 같습니다. 
-
-```
-MFPPush.registerDevice({}, success, failure);
-	MFPPush.unregisterDevice(success, failure);
-```
-	{: codeblock}
-
-### iOS
-{: #cordova_register_ios}
-경보, 배지 및 사운드 특성을 사용자 정의하려면, 다음 JavaScript 코드 스니펫을 Cordova 애플리케이션의 웹 파트에 추가하십시오. 
-
-```
-var settings = {
-ios: {
-           alert: true,
-           badge: true,
-           sound: true
-       }
-	 }
-	MFPPush.registerDevice(settings, success, failure);
-```
-	{: codeblock}
-
-
-### JavaScript
-{: #cordova_register_js}
-
-```
-MFPPush.registerDevice({}, success, failure);
-```
-	{: codeblock}
-
-JSON.parse를 사용하여 Javascript에서 성공 응답 매개변수의 컨텐츠에 액세스할 수 있습니다.
-**var token = JSON.parse(response).token**
-
-
-사용 가능한 키는 `token`과 `deviceId`입니다. 
 
 다음 JavaScript 코드 스니펫은 Bluemix 모바일 서비스 클라이언트 SDK를 초기화하고, 디바이스를 {{site.data.keyword.mobilepushshort}} 서비스에 등록하고, 푸시 알림을 청취하는 방법을 표시합니다. 이 코드를 Javascript 파일에 포함하십시오. 
 
-```
-//Register device token with Bluemix Push Notification Service
-funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
-  CDVMFPPush.sharedInstance().didRegisterForRemoteNotifications(deviceToken)
-}
-```
-	{: codeblock}
-
-```
-//Handle error when failed to register device token with APNs
-funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
-CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
-}
-```
-	{: codeblock}
-**onDeviceReady: function()**에서 다음을 수행하십시오.
+**onDeviceReady: function()**에서 다음을 수행하십시오. 
 
 ```
   onDeviceReady: function() {
 	 app.receivedEvent('deviceready');
-  BMSClient.initialize("https://http://myroute_mybluemix.net","my_appGuid");
-  var success = function(message) { console.log("Success: " + message); };
-  var failure = function(message) { console.log("Error: " + message); };
-  var settings = {
-       ios: {
-           alert: true,
-           badge: true,
-           sound: true
-       }
-	   };
-   MFPPush.registerDevice(settings, success, failure);
-   var notification = function(notif){
-       alert (notif.message);
-    };
-    MFPPush.registerNotificationsCallback(notification);
-	 }
+BMSClient.initialize("YOUR APP REGION");
+var success = function(message) { console.log("Success: " + message); };
+var failure = function(message) { console.log("Error: " + message); };
+BMSPush.registerDevice({}, success, failure); 
+ var showNotification = function(notif)
+ {
+ alert(JSON.stringify(notif));
+ };
+BMSPush.registerNotificationsCallback(showNotification); 
 ```
 	{: codeblock}
 
@@ -233,28 +164,34 @@ CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 
 ```
 // Register the device token with Bluemix Push Notification Service
-	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
-	}
-	// Handle error when failed to register device token with APNs
-	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-	   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
-	}
+	- (void)application:(UIApplication *)application
+     didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+       [[CDVBMSPush sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+} 
+// Handle error when failed to register device token with APNs
+	- (void)application:(UIApplication*)application
+     didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
+	     [[CDVBMSPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
+}
 ```
 	{: codeblock}
 
 ###Swift
 {: #cordova_register_swift}
+
 다음의 Swift 코드 스니펫을 애플리케이션 위임 클래스에 추가하십시오. 
 
 ```
-funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
-   CDVMFPPush.sharedInstance().didRegisterForRemoteNotifications(deviceToken)
-}
+// Register the device token with Bluemix Push Notification Service
+func application(application: UIApplication,
+  didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+   CDVBMSPush.sharedInstance().didRegisterForRemoteNotificationsWithDeviceToken(deviceToken)
+} 
 // Handle error when failed to register device token with APNs
-funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
-   CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
-}
+func application(application: UIApplication,
+    didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer) {
+    CDVBMSPush.sharedInstance().didReceiveRemoteNotificationWithNotification(error)
+} 
 ```
 	{: codeblock}
 
@@ -299,11 +236,10 @@ cordova run ios
 
 다음의 JavaScript 코드 스니펫을 Cordova 애플리케이션의 웹 파트에 추가하십시오. 
 ```
-var notification = function(notification){
-    // notification is a JSON object.
-    alert(notification.message);
-};
-MFPPush.registerNotificationsCallback(notification);
+var showNotification = function(notif) {
+  alert(JSON.stringify(notif));
+        };
+        BMSPush.registerNotificationsCallback(showNotification); 
 ```
 	{: codeblock}
 
@@ -311,19 +247,19 @@ MFPPush.registerNotificationsCallback(notification);
 
 다음 섹션에는 Android 알림 특성이 나열되어 있습니다. 
 
-* 메시지 - 푸시 알림 메시지
-* 페이로드 - 알림 페이로드를 포함하는 JSON 오브젝트
+* **메시지** - 푸시 알림 메시지
+* **페이로드** - 알림 페이로드를 포함하는 JSON 오브젝트
 
 
 ###iOS 알림 특성
 
 다음 섹션에는 iOS 알림 특성이 나열되어 있습니다. 
 
-* 메시지 - 푸시 알림 메시지
-* 페이로드 - 알림 페이로드를 포함한 JSON 오브젝트
+* **메시지** - 푸시 알림 메시지
+* **페이로드** - 알림 페이로드를 포함한 JSON 오브젝트
 action-loc-key - 이 문자열은 `View` 대신 해당 단추 제목에 사용할 현재 로컬라이제이션의 현지화된 문자열을 가져올 키로 사용됩니다. 
-* 배지 - 앱 아이콘의 배지로 표시할 숫자입니다. 이 특성을 비워두면 배지가 변경되지 않습니다. 배지를 제거하려면 이 특성의 값을 0으로 설정하십시오. 
-* 사운드 - 앱 번들 또는 앱 데이터 컨테이너의 라이브러리/사운드 폴더에 있는 사운드 파일의 이름입니다. 
+* **배지** - 앱 아이콘의 배지로 표시할 숫자입니다. 이 특성을 비워두면 배지가 변경되지 않습니다. 배지를 제거하려면 이 특성의 값을 0으로 설정하십시오. 
+* **사운드** - 앱 번들 또는 앱 데이터 컨테이너의 라이브러리/사운드 폴더에 있는 사운드 파일의 이름입니다. 
 
 ###Objective-C
 
@@ -331,19 +267,23 @@ action-loc-key - 이 문자열은 `View` 대신 해당 단추 제목에 사용�
 
 ```
 // Handle receiving a remote notification
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-
- [[CDVMFPPush sharedInstance] didReceiveRemoteNotification:userInfo];
-}
+-(void)application:(UIApplication *)application
+  didReceiveRemoteNotification:(NSDictionary *)userInfo
+  fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationWithNotification:userInfo];
+} 
 ```
 	{: codeblock}
 
 
+
 ```
-// Handle receiving a remote notification on launch
-		- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
-    [[CDVMFPPush sharedInstance] didReceiveRemoteNotificationOnLaunch:launchOptions];
-	}
+//Handle receiving a remote notification on launch
+- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
+  if (launchOptions != nil) {
+   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationOnLaunchWithLaunchOptions:launchOptions];
+     }
+ }
 ```
 	{: codeblock}
 
@@ -352,18 +292,21 @@ action-loc-key - 이 문자열은 `View` 대신 해당 단추 제목에 사용�
 다음의 Swift 코드 스니펫을 애플리케이션 위임 클래스에 추가하십시오. 
 ```
 // Handle receiving a remote notification
-funcapplication(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: ){
-  CDVMFPPush.sharedInstance().didReceiveRemoteNotification(userInfo)
+func application(application: UIApplication,
+   didReceiveRemoteNotification userInfo: [NSObject : AnyObject],  fetchCompletionHandler completionHandler: ) {
+   CDVBMSPush.sharedInstance().didReceiveRemoteNotificationWithNotification(userInfo)
 }
 ```
 	{: codeblock}
 
 ```
 // Handle receiving a remote notification on launch
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
-  {
-  CDVMFPPush.sharedInstance().didReceiveRemoteNotificationOnLaunch(launchOptions)
- }
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+  let remoteNotif = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary
+  if remoteNotif != nil {
+    CDVBMSPush.sharedInstance().didReceiveRemoteNotificationOnLaunchWithLaunchOptions(launchOptions)
+  }
+} 
 ```
 	{: codeblock}
 
@@ -396,6 +339,6 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 정상적으로 기본 알림을 설정한 후 태그 기반 알림 및 고급 옵션을 구성할 수 있습니다. 
 
-{{site.data.keyword.mobilepushshort}} 서비스 기능을 앱에 추가하십시오.
+이러한 {{site.data.keyword.mobilepushshort}} 서비스 기능을 앱에 추가하십시오.
 태그 기반 알림을 사용하려면 [태그 기반 알림](c_tag_basednotifications.html)을 참조하십시오.
 고급 알림 옵션을 사용하려면 [고급 푸시 알림 사용](t_advance_badge_sound_payload.html)의 내용을 참조하십시오. 

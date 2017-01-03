@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-06"
 
 ---
 
@@ -11,9 +12,13 @@ copyright:
 # Aggiornamenti più recenti al pacchetto di build ASP.NET Core
 {: #latest_updates}
 
-Ultimo aggiornamento: 26 agosto 2016
 
 Un elenco degli aggiornamenti più recenti nel pacchetto di build aspnet.
+
+## 10 ottobre, 2016: aggiornamento del pacchetto di build ASP.NET Core v1.0.1-20161005-1225 
+
+* Aggiunto il supporto per .NET Core 1.0.1
+* Risolto un problema intermittente che causava un malfunzionamento della distribuzione durante la memorizzazione nella cache dei pacchetti NuGet
 
 ## 31 agosto, 2016: aggiornamento del pacchetto di build ASP.NET Core v1.0-20160826-1345
 

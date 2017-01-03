@@ -1,12 +1,18 @@
 ---
+
 copyright:
  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Ativando notificações baseadas no usuário
 {: #user_based_notifications}
-Última atualização: 18 de outubro de 2016
+Última atualização: 06 de dezembro de 2016
 {: .last-updated}
 
 {{site.data.keyword.mobilepushshort}} baseado no ID do usuário destina-se a usuários do app móvel com mensagens customizadas. Com

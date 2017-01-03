@@ -2,8 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-27"
+
 ---
+
+{:shortdesc: .shortdesc} 
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.amashort}} を使用した Node.js リソースの保護
 {: #protecting-resources-nodejs}
@@ -34,6 +38,7 @@ npm install -save express
 npm install -save passport
 npm install -save bms-mca-token-validation-strategy
 ```
+{: codeblock}
 
 ## Node.js のリソースの保護
 {: #protecting-resources-nodesdk}
@@ -59,3 +64,4 @@ app.get('/protected', passport.authenticate('mca-backend-strategy', {session: fa
 
 app.listen(process.env.PORT);
 ```
+{: codeblock}

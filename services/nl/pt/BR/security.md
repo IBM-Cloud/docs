@@ -1,20 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 
 # Security
 {: #security}
 
-*Última atualização: 9 de dezembro de 2015*
-
-Com esses serviços de segurança, é possível proteger o acesso a aplicativos e cargas de trabalho e varrer aplicativos quanto a vulnerabilidades. Também é possível integrar controles de segurança no gerenciamento de dados e serviços de Big Data. 
+Com esses serviços de segurança, é possível proteger o acesso a aplicativos e cargas de trabalho e varrer aplicativos quanto a vulnerabilidades. Também é possível integrar controles de segurança no gerenciamento de dados e serviços de Big Data.
 {:shortdesc}
 
 
@@ -24,3 +23,4 @@ Inclua facilmente a autenticação do usuário e recursos de conexão única na 
 em execução no Bluemix. As interfaces de autenticação baseadas em política permitem a rápida criação da autenticação de fatores múltiplos. | Avalie os aplicativos móveis e da web quanto a vulnerabilidades, fortalecendo
 os esforços de conformidade regulamentar e segurança. Ao varrer os apps antes da implementação, é possível
 identificar os problemas, gerar relatórios e fazer as correções recomendadas. | Utilize os controles de segurança e de privacidade integrados no Big Data e nos serviços de gerenciamento de dados, incluindo mascaramento de dados, descoberta e auditoria.
+{: caption="Table 1. Benefits of using security services" caption-side="top"}

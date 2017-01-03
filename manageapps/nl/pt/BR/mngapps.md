@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2015-03-17"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 #Gerenciando aplicativos
 {: #manageapps}
-
-*Última atualização: 17 de março de 2015*
 
 É possível usar o Painel na interface com o usuário do {{site.data.keyword.Bluemix}} para visualizar e gerenciar seus aplicativos e serviços, além de monitorar o uso de recursos usando os calibradores de cota.
 {:shortdesc}

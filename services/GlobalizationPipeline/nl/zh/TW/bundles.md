@@ -14,7 +14,7 @@ copyright:
 # 使用軟體組
 {: #globalizationpipeline_workingwithbundles}
 
-*前次更新：2016 年 7 月 6 日*
+*前次更新：2016 年 8 月 30 日*
 {: .last-updated}
 
 您建立的每一個軟體組都會包含資源檔中的鍵值組，以及一組已產生的完整翻譯。
@@ -131,7 +131,7 @@ define({
 </tbody>
 </table>
 
-**附註：**英文是目前唯一支援的來源語言。隨著 {{site.data.keyword.GlobalizationPipeline_full}} 服務的發展，將會新增其他來源和目標語言。
+**附註：**{{site.data.keyword.GlobalizationPipeline_short}} 的預設機器翻譯引擎只提供以英文作為原始語言的支援。不過，可在 {{site.data.keyword.GlobalizationPipeline_short}} 內配置替代機器翻譯引擎，這些引擎支援翻譯非英文的原始語言/語言配對。
 
 軟體組在建立之後，會新增至**軟體組**標籤，讓它們更容易存取。您可以在這裡對您的翻譯執行其他作業。
 
@@ -190,7 +190,7 @@ define({
 
 ### 下載目標語言的已產生翻譯
 
-{{site.data.keyword.GlobalizationPipeline_full}} 提供數種方法，將目標語言的翻譯併入應用程式中。您可以將翻譯下載為資源檔，並將它併入應用程式建置中。您也可以使用其中一個開放程式碼 [SDK](https://github.com/IBM-Bluemix/gp-common)，從 {{site.data.keyword.GlobalizationPipeline_full}} 動態參照翻譯。 
+{{site.data.keyword.GlobalizationPipeline_short}} 提供數種方法，將目標語言的翻譯併入應用程式中。您可以將翻譯下載為資源檔，並將它併入應用程式建置中。您也可以使用其中一個開放程式碼 [SDK](https://github.com/IBM-Bluemix/gp-common)，從 {{site.data.keyword.GlobalizationPipeline_short}} 動態參照翻譯。 
 
 <!-- For information on {{site.data.keyword.GlobalizationPipeline_full}} SDKs, see <link>. -->
 

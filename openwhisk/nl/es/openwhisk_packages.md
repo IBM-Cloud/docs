@@ -1,12 +1,11 @@
 ---
 
- 
+
 
 copyright:
-
   years: 2016
+lastupdated: "2016-08-02"
 
- 
 
 ---
 
@@ -18,8 +17,7 @@ copyright:
 
 # Uso y creación de paquetes de {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
-Última actualización: 2 de agosto de 2016
-{: .last-updated}
+
 
 En {{site.data.keyword.openwhisk}}, puede utilizar paquetes para agrupar un conjunto de acciones relacionadas y
 compartirlas con otros.
@@ -261,7 +259,7 @@ para un desencadenante de {{site.data.keyword.openwhisk_short}}. En este ejemplo
 2. Crear un desencadenante que se active cada ocho segundos.
 
   ```
-  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron '*/8 * * * * *' -p trigger_payload '{"name":"Mork", "place":"Ork"}'
+  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron "*/8 * * * * *" -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"
   ```
   {: pre}
   ```
@@ -406,12 +404,13 @@ paquete, que se heredan para todas las acciones del paquete. Para ver cómo func
 2. Mostrar los parámetros en el paquete y acción, y ver cómo la acción `identity` del paquete hereda los parámetros del paquete.
 
   ```
-  wsk package get custom parameters
+  wsk package get custom
   ```
   {: pre}
   ```
-  ok: got package custom, projecting parameters
-  [
+  ok: got package custom
+  ...
+  "parameters": [
       {
           "key": "city",
           "value": "Austin"
@@ -421,16 +420,18 @@ paquete, que se heredan para todas las acciones del paquete. Para ver cómo func
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
   ```
-  wsk action get custom/identity parameters
+  wsk action get custom/identity
   ```
   {: pre}
   ```
-  ok: got action custom/identity, projecting parameters
-  [
+  ok: got action custom/identity
+  ...
+  "parameters": [
       {
           "key": "city",
           "value": "Austin"
@@ -440,6 +441,7 @@ paquete, que se heredan para todas las acciones del paquete. Para ver cómo func
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
@@ -494,12 +496,14 @@ en el mismo y creen reglas de {{site.data.keyword.openwhisk_short}} y acciones d
 2. Mostrar la propiedad `publish` del paquete para verificar que ahora es true.
 
   ```
-  wsk package get custom publish
+  wsk package get custom
   ```
   {: pre}
   ```
-  ok: got package custom, projecting publish
-  true
+  ok: got package custom
+  ...
+  "publish": true,
+  ...
   ```
   {: screen}
 

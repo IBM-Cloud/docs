@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016 lastupdated: "2016-10-02"
+  years: 2015, 2016
+lastupdated: "2016-11-2"
+
 ---
+
+{:codeblock:.codeblock}
 
 # Autenticando usuários com um provedor de identidade customizado
 {: #custom-id}
@@ -37,16 +41,16 @@ um cabeçalho de autorização.
 * O {{site.data.keyword.amashort}} client SDK reenvia automaticamente a solicitação original que acionou o fluxo de autorização.
 * O {{site.data.keyword.amashort}} server SDK extrai o cabeçalho de autorização da solicitação, valida-o com o serviço {{site.data.keyword.amashort}} e concede acesso a um recurso de backend.
 
-### Fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}}
+### {{site.data.keyword.amashort}} Fluxo de
+solicitação de aplicativo da Web
 {: #mca-custom-web-sequence}
 
-O fluxo de solicitação de aplicativo da web {{site.data.keyword.amashort}} é semelhante ao fluxo do cliente móvel. Entretanto, o {{site.data.keyword.amashort}} protege o aplicativo da web, em vez de um recurso de backend do {{site.data.keyword.Bluemix_notm}}.
+O aplicativo da Web {{site.data.keyword.amashort}}
+fluxo de pedido é semelhante ao fluxo do cliente móvel. Entretanto, o {{site.data.keyword.amashort}} protege o aplicativo da web, em vez de um recurso de backend do {{site.data.keyword.Bluemix_notm}}.
 
-  * A solicitação inicial é enviada pelo aplicativo da web (a partir de um formulário de login, por exemplo).
-  * O redirecionamento final é para a área protegida do próprio aplicativo da web, em vez do recurso protegido de backend. 
-
-
-
+  * A solicitação inicial é enviada pelo aplicativo da
+Web (de um formulário de login, por exemplo).
+  * O redirecionamento final é para a área protegida do aplicativo da Web em si, em vez de backend do recurso protegido. 
 
 ## Entendendo os provedores de identidade customizados
 {: #custom-id-about}
@@ -55,8 +59,9 @@ Com um provedor de identidade customizado, é possível fornecer desafios de aut
 
 Ao criar um provedor de identidade customizado, será possível:
 
-1. Customize um desafio de autenticação a ser enviado pelo serviço {{site.data.keyword.amashort}} para o aplicativo cliente
-móvel ou da web. Um desafio de autenticação é um objeto JSON que contém dados customizados. O cliente pode usar esses dados customizados para customizar os fluxos de autenticação.
+1. Customize um desafio de autenticação a ser enviado
+pelo serviço {{site.data.keyword.amashort}} para o
+aplicativo cliente móvel ou da Web. Um desafio de autenticação é um objeto JSON que contém dados customizados. O cliente pode usar esses dados customizados para customizar os fluxos de autenticação.
 
   Exemplo de um desafio de autenticação customizado:
 
@@ -70,6 +75,7 @@ móvel ou da web. Um desafio de autenticação é um objeto JSON que contém dad
 		}
 	}
 	```
+	{: codeblock}
 
 1. Implemente qualquer fluxo de coleção de credenciais customizado no cliente, incluindo a autenticação de várias etapas e de vários formulários. Da mesma forma que para o desafio de autenticação customizado, deve-se projetar a estrutura de uma resposta de desafio de autenticação customizada.
 
@@ -82,6 +88,8 @@ móvel ou da web. Um desafio de autenticação é um objeto JSON que contém dad
 		pincode:"1234"
 	}
 	```
+	{: codeblock}
+	
 1. Implemente a lógica customizada de validação da resposta de desafio de autenticação fornecida.
 
 1. Defina um objeto de identidade do usuário customizado que contém as propriedades customizadas necessárias. Existe um exemplo de um
@@ -98,6 +106,7 @@ objeto de identidade do usuário customizado que é obtido pelo cliente após a 
 		}
 	}
 	```
+	{: codeblock}
 
 ### Implementação de amostra do provedor de identidade customizado
 {: #custom-sample}

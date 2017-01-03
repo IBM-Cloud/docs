@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015 2016
 
- 
+lastupdated: "2016-03-02"
+
+
 
 ---
 
@@ -15,15 +17,13 @@ copyright:
 {:download: .download}
 
 # Empezar a escribir código con Git
-Última actualización: 2 de marzo de 2016
-{: .last-updated}  
 
 Puede crear un repositorio
-Git alojado que se desplegará automáticamente en {{site.data.keyword.Bluemix}}. A continuación, puede modificar el código que se ejecuta en la app enviando los cambios al repositorio Git. 
+Git alojado que se desplegará automáticamente en {{site.data.keyword.Bluemix}}. A continuación, puede modificar el código que se ejecuta en la app enviando los cambios al repositorio Git.
 {:shortdesc}
 
 1. Para empezar, en la página de visión general de la app, pulse **Añadir repositorio Git y conducto**, o en
-{{site.data.keyword.Bluemix_notm}} Classic Experience, pulse **ADD GIT**. 
+{{site.data.keyword.Bluemix_notm}} Classic Experience, pulse **ADD GIT**.
 2. En la ventana que se abre, asegúrese de que el recuadro de selección **Rellenar el repositorio con el paquete de apps del iniciador y habilitar el conducto (Build & Deploy)** está marcado. Se crea el repositorio Git. Si el código del iniciador está disponible,
 se carga en el repositorio. Además, el servicio de Delivery Pipeline que se ejecuta en {{site.data.keyword.jazzhub}} despliega la app.  
 3. Para actualizar la app puede utilizar la línea de mandatos o Web IDE.  
@@ -31,11 +31,11 @@ se carga en el repositorio. Además, el servicio de Delivery Pipeline que se eje
    a. Clone el repositorio Git desde el URL de Git en la página Visión general de la app.  
    b. En su editor favorito, actualice el código.  
    c. En la interfaz de línea de mandatos de Git, envíe los cambios.  
-	    
+
    **Si utiliza Web IDE:**  
    a. En la página Visión general de la app, pulse **Editar código**. El proyecto se abrirá en Web IDE.  
    b. Realice los cambios necesarios y, a continuación, envíelos con el soporte Git integrado.  
-		
+
 La app actualizada se vuelve a desplegar para {{site.data.keyword.Bluemix_notm}}.  
 
 Para ver instrucciones paso a paso, consulte [Configuración de la integración de Git y despliegue automático en DevOps Services](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment).  
@@ -44,9 +44,9 @@ Para ver instrucciones paso a paso, consulte [Configuración de la integración 
 
 Si va a crear una app Node.js, puede utilizar {{site.data.keyword.Bluemix_notm}} Live Sync para actualizar rápidamente la instancia de la app en {{site.data.keyword.Bluemix_notm}} y desarrollarla como lo haría en el escritorio.  
 
-Para obtener más información sobre {{site.data.keyword.Bluemix_notm}} Live Sync, consulte [{{site.data.keyword.Bluemix_notm}} Live Sync](../develop/bluemixlive.html). Para obtener más detalles sobre los mandatos, consulte la documentación de la CLI de [{{site.data.keyword.Bluemix_notm}} Live Sync](../cli/reference/bl/index.html). Para utilizar {{site.data.keyword.Bluemix_notm}} Live Sync con Web IDE, consulte [Edición en directo](../develop/bluemixlive.html).  
+Para obtener más información sobre {{site.data.keyword.Bluemix_notm}} Live Sync, consulte [{{site.data.keyword.Bluemix_notm}} Live Sync](/docs/develop/bluemixlive.html). Para obtener más detalles sobre los mandatos, consulte la documentación de la CLI de [{{site.data.keyword.Bluemix_notm}} Live Sync](/docs/cli/reference/bl/index.html). Para utilizar {{site.data.keyword.Bluemix_notm}} Live Sync con Web IDE, consulte [Edición en directo](/docs/develop/bluemixlive.html).  
 
-Antes de empezar, descargue e instale la línea de mandatos bl de {{site.data.keyword.Bluemix_notm}} Live Sync. 
+Antes de empezar, descargue e instale la línea de mandatos bl de {{site.data.keyword.Bluemix_notm}} Live Sync.
 
 **Importante:** La herramienta de línea de mandatos bl solo está disponible para Windows 7 y 8 y Mac OS X versión 10.9 o posterior.
 
@@ -60,20 +60,20 @@ bl login
 ```
 Cuando se le solicite, especifique su {{site.data.keyword.ibmid}} y contraseña.
 
-2. Consulte la lista de proyectos disponibles para sincronizar {{site.data.keyword.Bluemix_notm}} Live Sync introduciendo el siguiente mandato: 
+2. Consulte la lista de proyectos disponibles para sincronizar {{site.data.keyword.Bluemix_notm}} Live Sync introduciendo el siguiente mandato:
 ```
 bl projects
 ```
-Busque el nombre de proyecto en la lista que coincida con la app. El nombre del proyecto tiene el formato de su *alias* | *nombre app*. 
+Busque el nombre de proyecto en la lista que coincida con la app. El nombre del proyecto tiene el formato de su *alias* | *nombre app*.
 
 3. Sincronice el entorno local con el proyecto en {{site.data.keyword.Bluemix_notm}} especificando
-el siguiente mandato. Si es el propietario del proyecto, solo debe especificar nombre-app para nombreProyecto. 
+el siguiente mandato. Si es el propietario del proyecto, solo debe especificar nombre-app para nombreProyecto.
 <!--- this command needs italicized parameters projectName localDirectory and yellow on 'local' -->
 ```
 bl sync nombre_proyecto -d directorio_local --verbose
 ```
 Este mandato seguirá ejecutándose (y la sincronización continuará) hasta que se especifique una "q". La opción --verbose muestra la información de estado e inicio de sesión. Si alguno de los argumentos contiene un espacio,
-deberá escribir el nombre entre comillas. 
+deberá escribir el nombre entre comillas.
 
 4. En otra ventana de la línea de mandatos del directorio local,
 despliegue la app en {{site.data.keyword.Bluemix_notm}} en la
@@ -88,5 +88,5 @@ en {{site.data.keyword.Bluemix_notm}} y
 en el espacio de trabajo de la nube del proyecto. Si tiene que reiniciar la app Node
 puede utilizar el siguiente mandato:
 ```
-bl start --restart 
+bl start --restart
 ```

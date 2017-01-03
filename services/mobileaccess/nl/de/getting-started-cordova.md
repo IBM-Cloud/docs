@@ -2,23 +2,28 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-12-04"
+
 ---
-{:shortdesc: .shortdesc} 
+
+{:shortdesc: .shortdesc}
+{:codeblock:.codeblock}
 
 # Cordova-Plug-in einrichten
 {: #getting-started-cordova}
 
-
-Instrumentieren Sie Ihre Cordova-Anwendung mit dem {{site.data.keyword.amafull}}-Client-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und nicht geschützte Ressourcen.
+Instrumentieren Sie die Cordova-Clientanwendung mit dem {{site.data.keyword.amafull}}-Client-SDK. Initialisieren Sie Authorization Manager in Ihrem Android-Code (Java) oder iOS-Code (Objective C). Initialisieren Sie den Client und setzen Sie über WebView Anforderungen an geschützte und ungeschützte Ressourcen ab.
 
 {:shortdesc}
 
 ## Vorbereitungen
 {: #before-you-begin}
 Voraussetzungen:
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
-
+* Eine Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
+* Eine Instanz eines {{site.data.keyword.amafull}}-Service.
+* Die URL der Back-End-Anwendung (**App-Route**). Sie benötigen diese Werte zum Senden von Anforderungen an die geschützten Endpunkte der Back-End-Anwendung.
+* Der Wert für die Tenant-ID. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
+* Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im WebView-JavaScript-Code erforderlichen SDK-Werten entsprechen: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`. Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-Clients.
 * Cordova-Anwendung oder ein vorhandenes Projekt. Weitere Informationen zur Einrichtung Ihrer Cordova-Anwendung finden Sie auf der [Cordova-Website](https://cordova.apache.org/).
 
 ## Cordova-Plug-in für {{site.data.keyword.amashort}} installieren
@@ -26,21 +31,23 @@ Voraussetzungen:
 
 Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-in, das als Wrapper für die nativen {{site.data.keyword.amashort}}-Client-SDKs fungiert. Es wird mithilfe der Cordova-Befehlszeilenschnittstelle (CLI) und mit `npmjs`, einem Plug-in-Repository für Cordova-Projekte verteilt. Die Cordova-CLI lädt Plug-ins automatisch aus Repositorys herunter und stellt sie Ihrer Cordova-Anwendung zur Verfügung.
 
-1. Fügen Sie Android- und iOS-Plattformen zur Ihrer Cordova-Anwendung hinzu. Führen Sie einen oder beide der folgenden Befehle über die Befehlszeile aus:
-   	
+1. Fügen Sie Android- und/oder iOS-Plattformen zur Ihrer Cordova-Anwendung hinzu. Führen Sie einen oder beide der folgenden Befehle über die Befehlszeile aus:
+
 	###Android
 	{: #install-cordova-android}
 
 	```
 	cordova platform add android
 	```
-	
+	{: codeblock}
+
 	###iOS
 	{: #install-cordova-ios}
 
 	```Bash
 	cordova platform add ios
 	```
+	{: codeblock}
 
 2. Wenn Sie die Android-Plattform hinzugefügt haben, müssen Sie die minimal unterstützte API-Stufe in der Datei `config.xml` Ihrer Cordova-Anwendung hinzufügen. Öffnen Sie die Datei `config.xml` und fügen Sie die folgende Zeile dem Element `<platform name="android">` hinzu:
 
@@ -51,9 +58,10 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
-	
-	Der Wert für *minSdkVersion* muss `15` oder höher sein. Der Wert für *targetSdkVersion* muss das neueste Android-SDK angeben, das über Google verfügbar ist.
+	{: codeblock}
 
+	Der Wert für *minSdkVersion* muss `15` oder höher sein. Der Wert für *targetSdkVersion* muss `23` lauten. Derzeitig unterstützt Cordova keine höheren Versionen als **Android-23**.
+	
 3. Wenn Sie das iOS-Betriebssystem hinzugefügt haben, aktualisieren Sie das Element `<platform name="ios">` mit einer Zieldeklaration ('target'):
 
 	```XML
@@ -62,12 +70,14 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 		<!-- add deployment target declaration -->
 	 </platform>
 	```
+	{: codeblock}
 
 4. Installieren Sie das Cordova-Plug-in für {{site.data.keyword.amashort}}:
 
  	```Bash
-	cordova plugin add ibm-mfp-core
+	cordova plugin add bms-core
 	```
+	{: codeblock}
 
 5. Konfigurieren Sie Ihre Plattform für Android und/oder iOS.
 
@@ -75,67 +85,86 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 	{: #cordova-android}
 
 	Erstellen Sie vor dem Öffnen Ihres Projekts in Android Studio den Build Ihrer Cordova-Anwendung über Ihre Befehlszeilenschnittstelle (Command-Line Interface, CLI), um Buildfehler zu vermeiden.
-	
+
 	```Bash
 	cordova build android
 	```
-	
+	{: codeblock}
+
 	####iOS
 	{: #cordova-ios}
 
-	Konfigurieren Sie Ihr Xcode-Projekt wie nachfolgend angegeben, um Buildfehler zu vermeiden.
+	Konfigurieren Sie Ihr Xcode-Projekt wie nachfolgend angegeben.
 
 	1. Öffnen Sie Ihre Datei `xcode.proj` mit der neuesten Version von Xcode im Verzeichnis `<app_name>/platforms/ios`.
 
 		**Wichtig:** Wenn Sie eine Nachricht erhalten, dass Sie eine Konvertierung zur neuesten Swift-Syntax durchführen sollen, klicken Sie auf die Schaltfläche für Abbrechen.
 
-	2. Navigieren Sie zu **Build Settings > Swift Compiler - Code Generation > Objective-C Bridging Header** und fügen Sie den folgenden Pfad hinzu:
+	2. Erstellen Sie den Build mit Xcode und führen Sie Ihre Anwendung mit Xcode aus.
 
-		`<your_project_name>/Plugins/ibm-mfp-core/Bridging-Header.h`
+	**Hinweis**: Beim Ausführen von `cordova build ios` kann der folgende Fehler auftreten. Dieses Problem ist auf einen Fehler in einem Abhängigkeits-Plug-in zurückzuführen, der unter [Issue 12](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12) verfolgt wird. Sie können das iOS-Projekt aber weiterhin in Xcode über einen Simulator oder ein Gerät ausführen.
 
-	3. Navigieren Sie zu **Build Settings > Linking > Runpath Search Paths** und fügen Sie den folgenden Frameworks-Parameter hinzu:
+	```
+	xcodebuild: error: Unable to find a destination matching the provided destination specifier:
+			{ platform:iOS Simulator }
 
-		`@executable_path/Frameworks
-			`
-
-	4. Erstellen Sie den Build mit Xcode und führen Sie Ihre Anwendung mit Xcode aus.
-
+		Missing required device specifier option.
+		The device type “iOS Simulator” requires that either “name” or “id” be specified.
+		Please supply either “name” or “id”.
+	```
+	
 6. Überprüfen Sie, ob das Plug-in erfolgreich installiert wurde, indem Sie den folgenden Befehl ausführen:
 
 	```Bash
 	cordova plugin list
 	```
+	{: codeblock}
+	
+7. Aktivieren Sie die gemeinsame Nutzung der Schlüsselkette (Keychain) für iOS, indem Sie auf der Registerkarte **Capabilities** die Option **Keychain Sharing** auf `On` setzen.
+  
+8. Aktivieren Sie **Defines Module** für iOS, indem Sie auf der Registerkarte **Build Settings** > **Packaging** die Option **Defines Module** auf `YES` setzen.
 
-## {{site.data.keyword.amashort}}-Client-Plug-in initialisieren
+
+## {{site.data.keyword.amashort}}-Client im Cordova-WebView (JavaScript) initialisieren
 {: #getting-started-cordova-initialize}
 
-Zur Verwendung des {{site.data.keyword.amashort}}-Client-SDK müssen Sie das SDK initialisieren, indem Sie die Parameter *applicationGUID* und *applicationRoute* übergeben.
+Zur Verwendung des {{site.data.keyword.amashort}}-Client-SDK müssen Sie das SDK initialisieren, indem Sie den Wert für `applicationBluemixRegion` übergeben.
 
-1. Ermitteln Sie Ihre Werte für die Route und die GUID der Anwendung auf der Hauptseite des {{site.data.keyword.Bluemix_notm}}-Dashboards. Klicken Sie auf den Namen Ihrer App und anschließend auf **Mobile Systemerweiterungen**, um die Wert für die **Anwendungsroute** und die **Anwendungs-GUID** zum Initialisieren des SDK anzuzeigen.
-
-3. Fügen Sie Ihrer Datei `index.js` den folgenden Aufruf hinzu, um das {{site.data.keyword.amashort}}-Client-SDK zu initialisieren. 
-
-	```JavaScript
-	BMSClient.initialize("applicationRoute", "applicationGUID");
-	```
-
-  * Ersetzen Sie die Werte für `applicationRoute` und `applicationGUID` durch die Werte aus **Mobile Systemerweiterungen** im {{site.data.keyword.Bluemix_notm}}-Dashboard.
-
-##{{site.data.keyword.amashort}}-AuthorizationManager initialisieren
-{: #initializing-auth-manager}
-
-Verwenden Sie den folgenden JavaScript-Code in Ihrer Cordova-Anwendung, um den {{site.data.keyword.amashort}} AuthorizationManager zu initialisieren.
+Fügen Sie Ihrer Datei `index.js` den folgenden Aufruf hinzu, um das {{site.data.keyword.amashort}}-Client-SDK zu initialisieren.
 
 ```JavaScript
-  MFPAuthorizationManager.initialize("tenantId");
+BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
-Ersetzen Sie den Wert für `tenantId` durch den Wert für die `tenantId` des {{site.data.keyword.amashort}}-Service. Diesen Wert erhalten Sie, wenn Sie auf die Schaltfläche **Berechtigungsnachweise anzeigen** der Kachel für den {{site.data.keyword.amashort}}-Service klicken.
+**NB:** Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihr {{site.data.keyword.Bluemix_notm}}-Service per Hosting bereitgestellt wird. Siehe [Vorbereitungen](#before-you-begin).
 
-## Anforderung an mobile Back-End-Anwendung senden
+##{{site.data.keyword.amashort}} Authorization Manager im nativen Code initialisieren
+{: #initializing-auth-manager}
+
+Zur Verwendung von `BMSAuthorizationManager` müssen Sie das folgende Code-Snippet hinzufügen. Der folgende native Code initialisiert `BMSAuthorizationManager` mit dem {{site.data.keyword.amashort}}-Service `tenantId` (siehe [Vorbereitungen](#before-you-begin)).
+
+### Android (Java)
+
+Fügen Sie in der Methode `OnCreate` in der Datei `MainActivity.java` den Code vor `loadUrl` hinzu.
+```Java
+MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<tenantId>");
+BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
+```
+{: codeblock}
+### iOS (Objective C)
+Fügen Sie die Authorization Manager-Initialisierung in `AppDelegate.m` gemäß Ihrer Version von Xcode hinzu.
+
+```Objective-C
+  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
+```
+{: codeblock}
+
+
+## Anforderung an mobilen Back-End-Service senden
 {: #getting-started-request}
 
-Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können Sie mit dem Senden von Anforderungen an Ihre mobile Back-End-Anwendung beginnen.
+Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können Sie mit dem Senden von Anforderungen an Ihren mobilen Back-End-Service beginnen.
 
 1. Versuchen Sie, eine Anforderung an den geschützten Endpunkt Ihrer mobilen Back-End-Anwendung zu senden. Öffnen Sie in Ihrem Browser die folgende URL: `{applicationRoute}/protected` (z. B. `http://my-mobile-backend.mybluemix.net/protected`).
 
@@ -145,21 +174,22 @@ Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können S
 
 	```Javascript
 	var success = function(data){
-	console.log("success", data);
-	}
+	 console.log("success", data);
+	 }
 
-	var failure = function(error){
-	console.log("failure", error);
-	}
+	 var failure = function(error){
+	 console.log("failure", error);
+	 }
 
-	var request = new MFPRequest("/protected", MFPRequest.GET);
+	 var request = new BMSRequest("<your route>/protected", BMSRequest.GET);
 
-	request.send(success, failure);
+	 request.send(success, failure);
 	```
+	{: codeblock}
 
 3. Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe in der LogCat- oder Xcode-Konsole (abhängig von der verwendeten Plattform) angezeigt:
 
-	![Bild](images/getting-started-android-success.png)
+	![Nachricht über erfolgreiche Ausführung](images/getting-started-android-success.png)
 
 	## Nächste Schritte
 	{: #next-steps}

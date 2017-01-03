@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-09"
  
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # 使用针对 {{site.data.keyword.openwhisk_short}} 启用的 {{site.data.keyword.Bluemix_notm}} 服务
 {: #openwhisk_ecosystem}
-上次更新时间：2016 年 9 月 9 日
-{: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，通过包的目录，您能够轻松地借助多个有用的功能增强应用程序，以及访问生态系统中的外部服务。启用了 {{site.data.keyword.openwhisk_short}} 的外部服务的示例包括 Cloudant、The Weather Company、Slack 和 GitHub。
 {: shortdesc}
@@ -34,10 +32,10 @@ copyright:
 
 | 实体 | 类型 | 参数 | 描述 |
 | --- | --- | --- | --- |
-| `/whisk.system/cloudant` | 包 | {{site.data.keyword.Bluemix_notm}}ServiceName、host、username、password、dbname、includeDoc 和 overwrite | 使用 Cloudant 数据库 |
+| `/whisk.system/cloudant` | 包 | {{site.data.keyword.Bluemix_notm}}ServiceName、host、username、password、dbname、overwrite | 使用 Cloudant 数据库 |
 | `/whisk.system/cloudant/read` | 操作 | dbname、includeDoc 和 id | 从数据库中读取文档 |
 | `/whisk.system/cloudant/write` | 操作 | dbname、overwrite 和 doc | 将文档写入数据库 |
-| `/whisk.system/cloudant/changes` | 订阅源 | dbname、includeDoc、maxTriggers | 对数据库进行更改时触发触发器事件 |
+| `/whisk.system/cloudant/changes` | 订阅源 | dbname、maxTriggers | 对数据库进行更改时触发触发器事件 |
 
 以下主题将指导您设置 Cloudant 数据库，配置关联的包以及使用 `/whisk.system/cloudant` 包中的操作和订阅源。
 
@@ -118,7 +116,7 @@ wsk package refresh
 1. 创建为您的 Cloudant 帐户配置的包绑定。
 
   ```
-wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+  wsk package bind /whisk.system/cloudant myCloudant -p username MYUSERNAME -p password MYPASSWORD -p host MYCLOUDANTACCOUNT.cloudant.com
   ```
   {: pre}
 
@@ -141,13 +139,12 @@ packages
 可以使用 `changes` 订阅源来配置服务，以在每次对 Cloudant 数据库进行更改时都触发触发器。参数如下所示：
 
 - `dbname`：Cloudant 数据库的名称。
-- `includeDoc`：如果设置为 true，那么触发的每个触发器事件都会包含修改后的 Cloudant 文档。 
 - `maxTriggers`：达到此限制时，停止触发触发器。缺省值为 1000。您可以将其设置为最大值 10,000。如果您尝试设置超过 10,000，那么会拒绝该请求。
 
 1. 使用先前创建的包绑定中的 `changes` 订阅源来创建触发器。确保将 `/myNamespace/myCloudant` 替换为您的包名。
 
   ```
-wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
   ```
@@ -170,20 +167,7 @@ wsk activation poll
 
 现在，可以创建规则并将其关联到操作，以对文档更新做出反应。
 
-生成的事件的内容取决于创建触发器时 `includeDoc` 参数的值。如果参数设置为 true，那么触发的每个触发器事件都会包含修改后的 Cloudant 文档。例如，假设修改后的文档如下：
-
-  ```
-  {
-    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
-    "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
-    "name": "Heisenberg"
-  }
-  ```
-  {: screen}
-
-此示例中的代码会使用对应的 `_id`、`_rev` 和 `name` 参数来生成触发器事件。事实上，触发器事件的 JSON 表示与该文档完全相同。
-
-否则，如果 `includeDoc` 为 false，那么事件将包含以下参数：
+生成的事件的内容具有以下参数：
 
 - `id`：文档标识。
 - `seq`：Cloudant 生成的序列标识。
@@ -212,7 +196,7 @@ wsk activation poll
 1. 使用先前创建的包绑定中的 `write` 操作来存储文档。确保将 `/myNamespace/myCloudant` 替换为您的包名。
 
   ```
-  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc "{\"_id\":\"heisenberg\",\"name\":\"Walter White\"}"
   ```
   {: pre}
   ```
@@ -250,6 +234,52 @@ wsk activation poll
   ```
   {: screen}
 
+### 使用操作序列从 Cloudant 数据库处理更改事件相关的文档
+
+您可以使用规则中的操作序列来访存和处理与 Cloudant 更改事件相关联的文档。
+
+创建将从 Cloudant 处理文档的操作，它期望将文档作为参数。
+以下是处理文档的操作的样本代码：
+```
+function main(doc){
+  return { "isWalter:" : doc.name === "Walter White"};
+}
+```
+{: codeblock}
+```
+wsk action create myAction myAction.js
+```
+{: pre}
+要从数据库读取文档，您可以使用 Cloudant 包中的 `read` 操作，此操作可随附于操作序列的 `myAction` 操作中。
+使用 `read` 操作创建操作序列，然后调用期望将文档作为输入的 `myAction` 操作。
+```
+wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
+```
+{: pre}
+
+现在，创建将触发器与新操作 `sequenceAction` 相关联的规则
+```
+wsk rule create myRule myCloudantTrigger sequenceAction
+```
+{: pre}
+
+操作序列需要了解数据库名称以从中访存文档。
+在 `dbname` 的触发器上设置参数
+```
+wsk trigger update myCloudantTrigger --param dbname testdb
+```
+{: pre}
+
+**注**：不再支持用于支持参数 `includeDoc` 的 Cloudant 更改触发器。
+您需要重新创建之前使用 `includeDoc` 创建的触发器：不使用 `includeDoc` 参数创建触发器
+  ```
+  wsk trigger delete myCloudantTrigger
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
+  ```
+  {: pre}
+您可以遵循上述步骤，来创建操作序列，以获取文档并调用现有操作。
+然后，更新规则以使用新操作序列。
+
 
 ## 使用 Alarm 包
 {: #openwhisk_catalog_alarm}
@@ -269,26 +299,28 @@ wsk activation poll
 
 `/whisk.system/alarms/alarm` 订阅源将警报服务配置为按指定的频率触发触发器事件。参数如下所示：
 
-- `cron`：字符串，基于 UNIX crontab 语法，用于指示何时触发触发器，时间采用全球标准时间 (UTC)。此字符串是 6 个字段组成的序列，字段之间用空格分隔：`X X X X X X `。有关使用 cron 语法的更多详细信息，请参阅 https://github.com/ncb000gt/node-cron。以下是该字符串所指示的一些频率示例：
+- `cron`：字符串，基于 UNIX crontab 语法，用于指示何时触发触发器，时间采用全球标准时间 (UTC)。此字符串是 5 个字段组成的序列，字段之间用空格分隔：`X X X X X`。有关使用 cron 语法的更多详细信息，请参阅 http://crontab.org。以下是该字符串所指示的一些频率示例：
 
-  - `* * * * * *`：每一秒。
-  - `0 * * * * *`：每一分钟的顶部。
-  - `* 0 * * * *`：每一小时的顶部。
-  - `0 0 9 8 * *`：每一个月第八天的上午 9:00:00 (UTC)
+  - `* * * * *`：每一分钟的顶部。
+  - `0 * * * *`：每一小时的顶部。
+  - `0 */2 * * *`：每 2 小时（即 02:00:00、04:00:00、...）
+  - `0 9 8 * *`：每一个月第八天的上午 9:00:00 (UTC)
 
 - `trigger_payload`：此参数的值成为每次触发器触发时触发器的内容。
 
 - `maxTriggers`：达到此限制时，停止触发触发器。缺省值为 1000。您可以将其设置为最大值 10,000。如果您尝试设置超过 10,000，那么会拒绝该请求。
 
-以下是通过触发器事件中的 `name` 和 `place` 值创建每 20 秒将触发一次的触发器的示例。
+以下是通过触发器事件中的 `name` 和 `place` 值创建每 2 分钟将触发一次的触发器的示例。
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
-  {: pre}
 
 每次生成的事件将包含 `trigger_payload` 值中指定的属性作为参数。在本例中，每个触发器事件将包含参数 `name=Odin` 和 `place=Asgard`。
 
+**注**：参数 `cron` 还支持 6 个字段的定制语法，其中第一个字段代表秒。
+有关使用此定制 cron 语法的更多详细信息，请参阅 https://github.com/ncb000gt/node-cron。以下是使用 6 字段表示法的示例：
+  - `*/30 * * * * *`：每 30 秒。
 
 ## 使用 Weather 包
 {: #openwhisk_catalog_weather}
@@ -321,14 +353,14 @@ wsk activation poll
 1. 使用 API 密钥创建包绑定。
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
+  wsk package bind /whisk.system/weather myWeather --param username MY_USERNAME --param password MY_PASSWORD
   ```
   {: pre}
 
 2. 调用包绑定中的 `forecast` 操作来获取天气预报。
 
   ```
-wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+  wsk action invoke myWeather/forecast --blocking --result --param latitude 43.7 --param longitude -79.4
   ```
   {: pre}
 
@@ -359,47 +391,101 @@ wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7'
 
 ## 使用 Watson 包
 {: #openwhisk_catalog_watson}
+通过 Watson 包，可以方便地调用各种 Watson API。
 
-通过 `/whisk.system/watson` 包，可以方便地调用各种 Watson API。
+提供以下 Watson 包：
+
+| 包 | 描述 |
+| --- | --- |
+| `/whisk.system/watson-translator`   | Watson API 的操作，用于翻译文本和语言标识 |
+| `/whisk.system/watson-textToSpeech` | Watson API 的操作，用于将文本转换为语音 |
+| `/whisk.system/watson-speechToText` | Watson API 的操作，用于将语音转换为文本 |
+
+**注**：当前不推荐使用 `/whisk.system/watson` 包，请迁移到上述新包，而新操作提供相同的接口。
+
+### 使用 Watson Translator 包
+
+通过 `/whisk.system/watson-translator` 包，可以方便地调用 Watson API 以进行翻译。
 
 此包中包含以下操作。
 
 | 实体 | 类型 | 参数 | 描述 |
 | --- | --- | --- | --- |
-| `/whisk.system/watson` | 包 | username 和 password | Watson Analytics API 的操作 |
-| `/whisk.system/watson/translate` | 操作 | translateFrom、translateTo、translateParam、username 和 password | 翻译文本 |
-| `/whisk.system/watson/languageId` | 操作 | payload、username 和 password | 识别语言 |
-| `/whisk.system/watson/speechToText` | 操作 | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 将音频转换为文本 |
-| `/whisk.system/watson/textToSpeech` | 操作 | payload、voice、accept、encoding、username、password | 将文本转换为音频 |
+| `/whisk.system/watson-translator` | 包 | username 和 password | Watson API 的操作，用于翻译文本和语言标识  |
+| `/whisk.system/watson-translator/translator` | 操作 | payload、translateFrom、translateTo、translateParam、username、password | 翻译文本 |
+| `/whisk.system/watson-translator/languageId` | 操作 | payload、username 和 password | 识别语言 |
 
-建议使用 `username` 和 `password` 值创建包绑定。这样就无需在每次调用包中的操作时指定这些凭证。
+**注**：不推荐使用包含 `/whisk.system/watson/translate` 和 `/whisk.system/watson/languageId` 操作的 `/whisk.system/watson` 包。
+
+#### 在 Bluemix 中设置 Watson Translator 包
+
+如果是在 Bluemix 中使用 OpenWhisk，那么 OpenWhisk 将为 Bluemix Watson 服务实例自动创建包绑定。
+
+1. 在 Bluemix [仪表板](http://console.ng.Bluemix.net)中创建 Watson Translator 服务实例。
+
+  确保记住服务实例的名称以及您所在的 Bluemix 组织和空间的名称。
+
+2. 确保 OpenWhisk CLI 位于与上一步中使用的 Bluemix 组织和空间对应的名称空间中。
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  或者，可以使用 `wsk property set --namespace` 从您可访问的名称空间的列表中设置名称空间。
+
+3. 刷新名称空间中的包。刷新操作将自动为已创建的 Watson 服务实例创建包绑定。
+
+  ```
+wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_Translator_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
+  ```
+  {: screen}
 
 
+#### 在 Bluemix 外设置 Watson Translator 包
 
-### 翻译文本
+如果不是在 Bluemix 中使用 OpenWhisk，或者如果要在 Bluemix 外部设置 Watson Translator，那么必须为您的 Watson Translator 服务手动创建包绑定。您需要 Watson Translator 服务用户名和密码。
+
+- 创建为您的 Watson Translator 服务配置的包绑定。
+
+  ```
+  wsk package bind /whisk.system/watson-translator myWatsonTranslator -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### 翻译文本
 {: #openwhisk_catalog_watson_translate}
 
-`/whisk.system/watson/translate` 操作将文本从一种语言翻译为另一种语言。参数如下所示：
+`/whisk.system/watson-translator/translator` 操作将文本从一种语言翻译为另一种语言。参数如下所示：
 
 - `username`：Watson API 用户名。
 - `password`：Watson API 密码。
+- `payload`：要翻译的文本。
 - `translateParam`：指示要翻译文本的输入参数。例如，如果 `translateParam=payload`，那么将翻译传递给该操作的 `payload` 参数的值。
 - `translateFrom`：源语言的两位数代码。
 - `translateTo`：目标语言的两位数代码。
 
-下面是创建包绑定并翻译某些文本的示例。
-
-1. 使用 Watson 凭证创建包绑定。
+- 调用包绑定中的 `translator` 操作，以将某些文本从英语翻译为法语。
 
   ```
-wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
-  ```
-  {: pre}
-
-2. 调用包绑定中的 `translate` 操作，以将某些文本从英语翻译为法语。
-
-  ```
-wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+  wsk action invoke myWatsonTranslator/translator --blocking --result --param payload 'Blue skies ahead' --param translateFrom 'en' --param translateTo 'fr'
   ```
   {: pre}
 
@@ -411,28 +497,19 @@ wsk action invoke myWatson/translate --blocking --result --param payload 'Blue s
   {: screen}
 
 
-### 识别某些文本的语言
+#### 识别某些文本的语言
 {: #openwhisk_catalog_watson_identifylang}
 
-`/whisk.system/watson/languageId` 操作可识别某些文本的语言。参数如下所示：
+`/whisk.system/watson-translator/languageId` 操作可识别某些文本的语言。参数如下所示：
 
 - `username`：Watson API 用户名。
 - `password`：Watson API 密码。
 - `payload`：要识别的文本。
 
-以下是创建包绑定并识别某些文本的语言的示例。
-
-1. 使用 Watson 凭证创建包绑定。
+- 调用包绑定中的 `languageId` 操作来识别语言。
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
-  ```
-  {: pre}
-
-2. 调用包绑定中的 `languageId` 操作来识别语言。
-
-  ```
-wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+  wsk action invoke myWatsonTranslator/languageId --blocking --result --param payload 'Ciel bleu a venir'
   ```
   {: pre}
   ```
@@ -445,10 +522,75 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
   {: screen}
 
 
-### 将某些文本转换为语音
+### 使用 Watson Text to Speech 包
 {: #openwhisk_catalog_watson_texttospeech}
 
-`/whisk.system/watson/textToSpeech` 操作可将某些文本转换为音频语音。参数如下所示：
+通过 `/whisk.system/watson-textToSpeech` 包，可以方便地调用要将文本转换为语音的 Watson API。
+
+此包中包含以下操作。
+
+| 实体 | 类型 | 参数 | 描述 |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-textToSpeech` | 包 | username 和 password | Watson API 的操作，用于将文本转换为语音 |
+| `/whisk.system/watson-textToSpeech/textToSpeech` | 操作 | payload、voice、accept、encoding、username、password | 将文本转换为音频 |
+
+**注**：不推荐使用包含 `/whisk.system/watson/textToSpeech` 操作的 `/whisk.system/watson` 包。
+
+#### 在 Bluemix 中设置 Watson Text to Speech 包
+
+如果是在 Bluemix 中使用 OpenWhisk，那么 OpenWhisk 将为 Bluemix Watson 服务实例自动创建包绑定。
+
+1. 在 Bluemix [仪表板](http://console.ng.Bluemix.net)中创建 Watson Text to Speech 服务实例。
+
+  确保记住服务实例的名称以及您所在的 Bluemix 组织和空间的名称。
+
+2. 确保 OpenWhisk CLI 位于与上一步中使用的 Bluemix 组织和空间对应的名称空间中。
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  或者，可以使用 `wsk property set --namespace` 从您可访问的名称空间的列表中设置名称空间。
+
+3. 刷新名称空间中的包。刷新操作将自动为已创建的 Watson 服务实例创建包绑定。
+
+  ```
+wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_TextToSpeech_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_TextToSpeec_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### 在 Bluemix 外设置 Watson Text to Speech 包
+
+如果不是在 Bluemix 中使用 OpenWhisk，或者如果要在 Bluemix 外部设置 Watson Text to Speech，那么必须为您的 Watson Text to Speech 服务手动创建包绑定。您需要 Watson Text to Speech 服务用户名和密码。
+
+- 创建为您的 Watson Speech to Text 服务配置的包绑定。
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonTextToSpeech -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### 将某些文本转换为语音
+{: #openwhisk_catalog_watson_speechtotext}
+`/whisk.system/watson-speechToText/textToSpeech` 操作可将某些文本转换为音频语音。参数如下所示：
 
 - `username`：Watson API 用户名。
 - `password`：Watson API 密码。
@@ -457,19 +599,11 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
 - `accept`：语音文件的格式。
 - `encoding`：语音二进制数据的编码。
 
-以下是创建包绑定并将某些文本转换为语音的示例。
 
-1. 使用 Watson 凭证创建包绑定。
-
-  ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
-  ```
-  {: pre}
-
-2. 调用包绑定中的 `textToSpeech` 操作来转换文本。
+- 调用包绑定中的 `textToSpeech` 操作来转换文本。
 
   ```
-wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatsonTextToSpeech/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -479,11 +613,77 @@ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey
   ```
   {: screen}
 
-
-### 将语音转换为文本
+### 使用 Watson Speech to Text 包
 {: #openwhisk_catalog_watson_speechtotext}
 
-`/whisk.system/watson/speechToText` 操作可将音频语音转换为文本。参数如下所示：
+通过 `/whisk.system/watson-speechToText` 包，可以方便地调用要将语音转换为文本的 Watson API。
+
+此包中包含以下操作。
+
+| 实体 | 类型 | 参数 | 描述 |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-speechToText` | 包 | username 和 password | Watson API 的操作，用于将语音转换为文本 |
+| `/whisk.system/watson-speechToText/speechToText` | 操作 | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 将音频转换为文本 |
+
+**注**：不推荐使用包含 `/whisk.system/watson/speechToText` 操作的 `/whisk.system/watson` 包。
+
+
+#### 在 Bluemix 中设置 Watson Speech to Text 包
+
+如果是在 Bluemix 中使用 OpenWhisk，那么 OpenWhisk 将为 Bluemix Watson 服务实例自动创建包绑定。
+
+1. 在 Bluemix [仪表板](http://console.ng.Bluemix.net)中创建 Watson Speech to Text 服务实例。
+
+  确保记住服务实例的名称以及您所在的 Bluemix 组织和空间的名称。
+
+2. 确保 OpenWhisk CLI 位于与上一步中使用的 Bluemix 组织和空间对应的名称空间中。
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  或者，可以使用 `wsk property set --namespace` 从您可访问的名称空间的列表中设置名称空间。
+
+3. 刷新名称空间中的包。刷新操作将自动为已创建的 Watson 服务实例创建包绑定。
+
+  ```
+wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_SpeechToText_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_SpeechToText_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### 在 Bluemix 外设置 Watson Speech to Text 包
+
+如果不是在 Bluemix 中使用 OpenWhisk，或者如果要在 Bluemix 外部设置 Watson Speech to Text，那么必须为您的 Watson Speech to Text 服务手动创建包绑定。您需要 Watson Speech to Text 服务用户名和密码。
+
+- 创建为您的 Watson Speech to Text 服务配置的包绑定。
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonSpeechToText -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+
+#### 将语音转换为文本
+
+`/whisk.system/watson-speechToText/speechToText` 操作可将音频语音转换为文本。参数如下所示：
 
 - `username`：Watson API 用户名。
 - `password`：Watson API 密码。
@@ -503,19 +703,11 @@ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey
 - `word_confidence`：指示是否针对每一个字返回 0 到 1 范围内的置信度测量。
 - `X-Watson-Learning-Opt-Out`：指示是否针对调用选择退出数据收集。
  
-以下是创建包绑定并将语音转换为文本的示例。
 
-1. 使用 Watson 凭证创建包绑定。
-
-  ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
-  ```
-  {: pre}
-
-2. 调用包绑定中的 `speechToText` 操作来转换已编码的音频。
+- 调用包绑定中的 `speechToText` 操作来转换已编码的音频。
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatsonSpeechToText/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -524,7 +716,7 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
   }
   ```
   {: screen}
-  
+ 
  
 ## 使用 Slack 包
 {: #openwhisk_catalog_slack}
@@ -560,14 +752,14 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 2. 使用 Slack 凭证、要发布到的通道和执行发布的用户名来创建包绑定。
 
   ```
-wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+  wsk package bind /whisk.system/slack mySlack --param url "https://hooks.slack.com/services/..." --param username Bob --param channel "#MySlackChannel"
   ```
   {: pre}
 
 3. 调用包绑定中的 `post` 操作，以将消息发布到 Slack 通道。
 
   ```
-wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
+  wsk action invoke mySlack/post --blocking --result --param text "Hello from OpenWhisk!"
   ```
   {: pre}
 
@@ -661,7 +853,7 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 4. 创建与 `/whisk.system/pushnotifications` 的包绑定。
 
   ```
-  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  wsk package bind /whisk.system/pushnotifications myPush -p appId myAppID -p appSecret myAppSecret
   ```
   {: pre}
 
@@ -684,7 +876,10 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 `/whisk.system/pushnotifications/sendMessage` 操作会将推送通知发送到已注册的设备。参数如下所示：
 - `text`：要向用户显示的通知消息。例如：`-p text "Hi ,OpenWhisk send a notification"`。
 - `url`：可与警报一起发送的可选 URL。例如：`-p url "https:\\www.w3.ibm.com"`。
-- `gcmPayload`：作为通知消息一部分发送的定制 JSON 有效内容。例如：`-p gcmPayload "{"hi":"hello"}"`
+- `deviceIds`：指定设备的列表。例如：`-p deviceIds "[\"deviceID1\"]"`。
+- `platforms`：向指定平台的设备发送通知。“A”表示 apple (iOS) 设备，“G”表示 google (Android) 设备。例如，`-p platforms "[\"A\"]"`。
+- `tagNames`：向已预订其中任何标记的设备发送通知。例如，`-p tagNames "[\"tag1\"]"`。
+- `gcmPayload`：作为通知消息一部分发送的定制 JSON 有效内容。例如：`-p gcmPayload "{\"hi\":\"hello\"}"`
 - `gcmSound`：通知到达设备时，要尝试播放的声音文件（在设备上）。
 - `gcmCollapseKey`：此参数可识别一组消息
 - `gcmDelayWhileIdle`：当此参数设置为 true 时，表示在设备变为活动之前，不会发送消息。
@@ -702,7 +897,7 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 1. 使用先前创建的包绑定中的 `sendMessage` 操作来发送推送通知。确保将 `/myNamespace/myPush` 替换为您的包名。
 
   ```
-  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds "[\"T1\",\"T2\"]"
   ```
   {: pre}
 

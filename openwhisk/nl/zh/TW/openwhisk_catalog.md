@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-
+lastupdated: "2016-09-09"
  
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # 使用針對 {{site.data.keyword.openwhisk_short}} 啟用的 {{site.data.keyword.Bluemix_notm}} 服務
 {: #openwhisk_ecosystem}
-前次更新：2016 年 9 月 9 日
-{: .last-updated}
 
 在 {{site.data.keyword.openwhisk}} 中，套件的型錄可讓您輕鬆地使用有用的功能來加強應用程式，以及在生態系統中存取外部服務。已啟用 {{site.data.keyword.openwhisk_short}} 功能的外部服務範例包括 Cloudant、The Weather Company、Slack 及 GitHub。
 {: shortdesc}
@@ -30,14 +28,14 @@ copyright:
 
 ## 使用 Cloudant 套件
 {: #openwhisk_catalog_cloudant}
-`/whisk.system/cloudant` 套件可讓您使用 Cloudant 資料庫。它包含下列動作及資訊來源。
+`/whisk.system/cloudant` 套件可讓您使用 Cloudant 資料庫。它包括下列動作及資訊來源。
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
-| `/whisk.system/cloudant` | 套件 | {{site.data.keyword.Bluemix_notm}}ServiceName、host、username、password、dbname、includeDoc、overwrite | 使用 Cloudant 資料庫 |
+| `/whisk.system/cloudant` | 套件 | {{site.data.keyword.Bluemix_notm}}ServiceName、host、username、password、dbname、overwrite | 使用 Cloudant 資料庫 |
 | `/whisk.system/cloudant/read` | 動作 | dbname、includeDoc、id | 讀取資料庫中的文件 |
 | `/whisk.system/cloudant/write` | 動作 | dbname、overwrite、doc | 將文件寫入資料庫 |
-| `/whisk.system/cloudant/changes` | 資訊來源 | dbname、includeDoc、maxTriggers | 在資料庫變更時發動觸發程式事件 |
+| `/whisk.system/cloudant/changes` | 資訊來源 | dbname、maxTriggers | 在資料庫變更時發動觸發程式事件 |
 
 下列各主題逐步說明如何設定 Cloudant 資料庫、配置關聯的套件，以及使用 `/whisk.system/cloudant` 套件中的動作及資訊來源。
 
@@ -118,7 +116,7 @@ wsk package list
 1. 建立針對 Cloudant 帳戶所配置的套件連結。
 
   ```
-wsk package bind /whisk.system/cloudant myCloudant -p username 'MYUSERNAME' -p password 'MYPASSWORD' -p host 'MYCLOUDANTACCOUNT.cloudant.com'
+  wsk package bind /whisk.system/cloudant myCloudant -p username MYUSERNAME -p password MYPASSWORD -p host MYCLOUDANTACCOUNT.cloudant.com
   ```
   {: pre}
 
@@ -141,13 +139,12 @@ packages
 您可以使用 `changes` 資訊來源，配置服務在每次變更 Cloudant 資料庫時發動觸發程式。參數如下所示：
 
 - `dbname`：Cloudant 資料庫的名稱。
-- `includeDoc`：如果設為 true，所發動的每一個觸發程式事件都會包含已修改的 Cloudant 文件。 
 - `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1000。您可以將其設定至上限 10,000。如果您嘗試設定超過 10,000 的值，將會拒絕要求。
 
 1. 使用您先前建立的套件連結中的 `changes` 資訊來源，來建立觸發程式。請務必將 `/myNamespace/myCloudant` 取代為套件名稱。
 
   ```
-wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
   ```
@@ -170,20 +167,7 @@ wsk activation poll
 
 您現在可以建立規則，並將它們關聯至可反應文件更新的動作。
 
-所產生事件的內容取決於建立觸發程式時的 `includeDoc` 參數值。如果參數設為 true，所發動的每一個觸發程式事件都會包含已修改的 Cloudant 文件。例如，請考量下列已修改的文件：
-
-  ```
-  {
-    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
-    "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
-    "name": "Heisenberg"
-  }
-  ```
-  {: screen}
-
-此範例中的程式碼會使用對應的 `_id`、`_rev` 及 `name` 參數來產生觸發程式事件。事實上，觸發程式事件的 JSON 表示法與文件相同。
-
-否則，如果 `includeDoc` 是 false，則事件包含下列參數：
+所產生事件的內容具有下列參數：
 
 - `id`：文件 ID。
 - `seq`：Cloudant 所產生的序列 ID。
@@ -212,7 +196,7 @@ wsk activation poll
 1. 使用您先前建立的套件連結中的 `write` 動作，來儲存文件。請務必將 `/myNamespace/myCloudant` 取代為套件名稱。
 
   ```
-  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc '{"_id":"heisenberg", "name":"Walter White"}'
+  wsk action invoke /myNamespace/myCloudant/write --blocking --result --param dbname testdb --param doc "{\"_id\":\"heisenberg\",\"name\":\"Walter White\"}"
   ```
   {: pre}
   ```
@@ -250,6 +234,53 @@ wsk activation poll
   ```
   {: screen}
 
+### 使用動作序列來處理 Cloudant 資料庫中有關變更事件的文件
+
+您可以在規則中使用動作序列，來提取及處理與 Cloudant 變更事件相關聯的文件。
+
+建立一個將處理 Cloudant 中文件的動作，它會將文件預期為參數。
+以下是可處理文件的動作的範例程式碼：
+```
+function main(doc){
+  return { "isWalter:" : doc.name === "Walter White"};
+}
+```
+{: codeblock}
+```
+wsk action create myAction myAction.js
+```
+{: pre}
+若要從資料庫中讀取文件，您可以使用 cloudant 套件中的 `read` 動作，在動作序列中，這個動作可以隨附於您的動作 `myAction`。
+請使用 `read` 動作來建立動作序列，然後呼叫將文件預期為輸入的 `myAction` 動作。
+```
+wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
+```
+{: pre}
+
+現在，建立一個規則，用來建立您的觸發程式與新動作 `sequenceAction` 的關聯
+```
+wsk rule create myRule myCloudantTrigger sequenceAction
+```
+{: pre}
+
+動作序列將需要知道從中提取文件的資料庫名稱。
+請針對 `dbname` 設定觸發程式的參數
+```
+wsk trigger update myCloudantTrigger --param dbname testdb
+```
+{: pre}
+
+**附註** Cloudant 變更觸發程式用來支援參數 `includeDoc`，但不再支援此作業。
+  您需要重建先前使用 `includeDoc` 所建立的觸發程式：
+  請重建觸發程式，但不使用 `includeDoc` 參數。
+  ```
+  wsk trigger delete myCloudantTrigger
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
+  ```
+  {: pre}
+  您可以遵循上述步驟來建立動作序列，以取得文件以及呼叫您的現有動作。
+  然後更新您的規則，以使用新的動作序列。
+
 
 ## 使用警示套件
 {: #openwhisk_catalog_alarm}
@@ -269,26 +300,30 @@ wsk activation poll
 
 `/whisk.system/alarms/alarm` 資訊來源會配置「警示」服務依指定的頻率發動觸發程式事件。參數如下所示：
 
-- `cron`：根據 UNIX crontab 語法，指出何時發動觸發程式的字串（世界標準時間，UTC）。字串是六個欄位的序列，以空格區隔：`X X X X X X `。如需使用 cron 語法的詳細資料，請參閱：https://github.com/ncb000gt/node-cron。以下是一些以該字串指出的頻率範例：
+- `cron`：根據 UNIX crontab 語法，指出何時發動觸發程式的字串（世界標準時間，UTC）。字串是五個欄位的序列，以空格區隔：`X X X X X`。
+如需使用 cron 語法的詳細資料，請參閱：http://crontab.org。以下是一些以該字串指出的頻率範例：
 
-  - `* * * * * *`：每秒。
-  - `0 * * * * *`：每分鐘整分。
-  - `* 0 * * * *`：每小時整點。
-  - `0 0 9 8 * *`：每月 8 日上午 9:00:00（世界標準時間）
+  - `* * * * *`：每分鐘整分。
+  - `0 * * * *`：每小時整點。
+  - `0 */2 * * *`：每 2 小時（亦即 02:00:00、04:00:00、...）
+  - `0 9 8 * *`：每月 8 日上午 9:00:00 (UTC)
 
 - `trigger_payload`：每次發動觸發程式時，此參數的值都會變成觸發程式的內容。
 
 - `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1000。您可以將其設定至上限 10,000。如果您嘗試設定超過 10,000 的值，將會拒絕要求。
 
-下列範例說明如何使用觸發程式事件中的 `name` 及 `place` 值來建立每 20 秒發動一次的觸發程式。
+下列範例說明如何使用觸發程式事件中的 `name` 及 `place` 值來建立每 2 分鐘發動一次的觸發程式。
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron '*/20 * * * * *' --param trigger_payload '{"name":"Odin","place":"Asgard"}'
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
-  {: pre}
 
 每一個產生的事件都會包含為參數，即 `trigger_payload` 值所指定的內容。在此情況下，每一個觸發程式事件都會有參數 `name=Odin` 及 `place=Asgard`。
 
+**附註**：參數 `cron` 也支援六個欄位的自訂語法，其中第一個欄位代表秒。
+如需使用此自訂 cron 語法的詳細資料，請參閱：https://github.com/ncb000gt/node-cron。
+以下是使用六個欄位表示法的範例：
+  - `*/30 * * * * *`：每 30 秒。
 
 ## 使用 Weather 套件
 {: #openwhisk_catalog_weather}
@@ -321,14 +356,14 @@ wsk activation poll
 1. 使用 API 金鑰建立套件連結。
 
   ```
-  wsk package bind /whisk.system/weather myWeather --param username 'MY_USERNAME' --param password 'MY_PASSWORD'
+  wsk package bind /whisk.system/weather myWeather --param username MY_USERNAME --param password MY_PASSWORD
   ```
   {: pre}
 
 2. 在套件連結中呼叫 `forecast` 動作，以取得天氣預報。
 
   ```
-wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7' --param longitude '-79.4'
+  wsk action invoke myWeather/forecast --blocking --result --param latitude 43.7 --param longitude -79.4
   ```
   {: pre}
 
@@ -359,45 +394,101 @@ wsk action invoke myWeather/forecast --blocking --result --param latitude '43.7'
 
 ## 使用 Watson 套件
 {: #openwhisk_catalog_watson}
+Watson 套件提供一種簡便的方式來呼叫各種 Watson API。
 
-`/whisk.system/watson` 套件提供一種簡便的方來呼叫各種 Watson API。
+下列是提供的 Watson 套件：
+
+| 套件 | 說明 |
+| --- | --- |
+| `/whisk.system/watson-translator`   | Watson API 用來翻譯文字及語言識別的動作 |
+| `/whisk.system/watson-textToSpeech` | Watson API 用來將文字轉換成語音的動作 |
+| `/whisk.system/watson-speechToText` | Watson API 用來將語音轉換成文字的動作 |
+
+**附註** 目前已淘汰套件 `/whisk.system/watson`，請移轉至上面所提及的新套件，新的動作提供相同的介面。
+
+### 使用 Watson Translator 套件
+
+`/whisk.system/watson-translator` 套件提供一種簡便的方式來呼叫要翻譯的 Watson API。
 
 該套件包含下列動作。
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
-| `/whisk.system/watson` | 套件 | username、password | Watson 分析 API 的動作 |
-| `/whisk.system/watson/translate` | 動作 | translateFrom、translateTo、translateParam、username、password | 翻譯文字 |
-| `/whisk.system/watson/languageId` | 動作 | payload、username、password | 識別語言 |
-| `/whisk.system/watson/speechToText` | 動作 | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 將音訊轉換成文字 |
-| `/whisk.system/watson/textToSpeech` | 動作 | payload、voice、accept、encoding、username、password | 將文字轉換成音訊 |
+| `/whisk.system/watson-translator` | 套件 | username、password | Watson API 用來翻譯文字及語言識別的動作  |
+| `/whisk.system/watson-translator/translator` | 動作 | payload、translateFrom、translateTo、translateParam、username、password | 翻譯文字 |
+| `/whisk.system/watson-translator/languageId` | 動作 | payload、username、password | 識別語言 |
 
-建議使用 `username` 及 `password` 值來建立套件連結。如此，您就不需要每次在呼叫套件中的動作時都指定這些認證。
+**附註**：已淘汰套件 `/whisk.system/watson`（包括動作 `/whisk.system/watson/translate` 及 `/whisk.system/watson/languageId`）。
 
-### 翻譯文字
+#### 在 Bluemix 中設定 Watson Translator 套件
+
+如果您是從 Bluemix 使用 OpenWhisk，則 OpenWhisk 會自動建立 Bluemix Watson 服務實例的套件連結。
+
+1. 在 Bluemix [儀表板](http://console.ng.Bluemix.net)中，建立 Watson Translator 服務實例。
+
+  請務必記住服務實例的名稱，以及您所在的 Bluemix 組織及空間。
+
+2. 確定 OpenWhisk CLI 位於對應至前一個步驟中所使用之 Bluemix 組織及空間的名稱空間中。
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  或者，您也可以使用 `wsk property set --namespace`，從可存取的名稱空間清單中設定名稱空間。
+
+3. 重新整理名稱空間中的套件。重新整理會自動建立您所建立之 Watson 服務實例的套件連結。
+
+  ```
+wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_Translator_Credentials-1
+  ```
+  {: screen}
+
+  ```
+wsk package list
+  ```
+  {: pre}
+  
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### 在 Bluemix 外部設定 Watson Translator 套件
+
+如果您不是在 Bluemix 中使用 OpenWhisk，或者要在 Bluemix 外部設定 Watson Translator，則必須手動建立 Watson Translator 服務的套件連結。您需要 Watson Translator 服務使用者名稱及密碼。
+
+- 建立針對 Watson Translator 服務所配置的套件連結。
+
+  ```
+  wsk package bind /whisk.system/watson-translator myWatsonTranslator -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### 翻譯文字
 {: #openwhisk_catalog_watson_translate}
 
-`/whisk.system/watson/translate` 動作會將文字從某種語言翻譯成另一種語言。參數如下所示：
+`/whisk.system/watson-translator/translator` 動作會將文字從某種語言翻譯成另一種語言。參數如下所示：
 
 - `username`：Watson API 使用者名稱。
 - `password`：Watson API 密碼。
+- `payload`：要翻譯的文字。
 - `translateParam`：指出要翻譯的文字的輸入參數。例如，如果 `translateParam=payload`，則會翻譯傳遞給動作的 `payload` 參數值。
 - `translateFrom`：兩位數的來源語言代碼。
 - `translateTo`：兩位數的目標語言代碼。
 
-下列範例說明如何建立套件連結以及翻譯某串文字。
-
-1. 使用 Watson 認證建立套件連結。
+- 在套件連結中呼叫 `translator` 動作，以將某串文字從英文翻譯成法文。
 
   ```
-wsk package bind /whisk.system/watson myWatson --param username 'MY_WATSON_USERNAME' --param password 'MY_WATSON_PASSWORD'
-  ```
-  {: pre}
-
-2. 在套件連結中呼叫 `translate` 動作，以將某串文字從英文翻譯成法文。
-
-  ```
-wsk action invoke myWatson/translate --blocking --result --param payload 'Blue skies ahead' --param translateParam 'payload' --param translateFrom 'en' --param translateTo 'fr'
+  wsk action invoke myWatsonTranslator/translator --blocking --result --param payload 'Blue skies ahead' --param translateFrom 'en' --param translateTo 'fr'
   ```
   {: pre}
 
@@ -409,28 +500,19 @@ wsk action invoke myWatson/translate --blocking --result --param payload 'Blue s
   {: screen}
 
 
-### 識別某串文字的語言
+#### 識別某串文字的語言
 {: #openwhisk_catalog_watson_identifylang}
 
-`/whisk.system/watson/languageId` 動作識別某串文字的語言。參數如下所示：
+`/whisk.system/watson-translator/languageId` 動作識別某串文字的語言。參數如下所示：
 
 - `username`：Watson API 使用者名稱。
 - `password`：Watson API 密碼。
 - `payload`：要識別的文字。
 
-下列範例說明如何建立套件連結，以及識別某串文字的語言。
-
-1. 使用 Watson 認證建立套件連結。
+- 在套件連結中呼叫 `languageId` 動作，以識別語言。
 
   ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
-  ```
-  {: pre}
-
-2. 在套件連結中呼叫 `languageId` 動作，以識別語言。
-
-  ```
-wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel bleu a venir'
+  wsk action invoke myWatsonTranslator/languageId --blocking --result --param payload 'Ciel bleu a venir'
   ```
   {: pre}
   ```
@@ -443,10 +525,75 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
   {: screen}
 
 
-### 將某串文字轉換成語音
+### 使用 Watson Text to Speech 套件
 {: #openwhisk_catalog_watson_texttospeech}
 
-`/whisk.system/watson/textToSpeech` 動作會將某串文字轉換成音訊語音。參數如下所示：
+`/whisk.system/watson-textToSpeech` 套件提供一種簡便的方式來呼叫要將文字轉換成語音的 Watson API。
+
+該套件包含下列動作。
+
+| 實體 | 類型 | 參數 | 說明 |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-textToSpeech` | 套件 | username、password | Watson API 用來將文字轉換成語音的動作 |
+| `/whisk.system/watson-textToSpeech/textToSpeech` | 動作 | payload、voice、accept、encoding、username、password | 將文字轉換成音訊 |
+
+**附註**：已淘汰套件 `/whisk.system/watson`（包括動作 `/whisk.system/watson/textToSpeech`）。
+
+#### 在 Bluemix 中設定 Watson Text to Speech 套件
+
+如果您是從 Bluemix 使用 OpenWhisk，則 OpenWhisk 會自動建立 Bluemix Watson 服務實例的套件連結。
+
+1. 在 Bluemix [儀表板](http://console.ng.Bluemix.net)中，建立 Watson Text to Speech 服務實例。
+
+  請務必記住服務實例的名稱，以及您所在的 Bluemix 組織及空間。
+
+2. 確定 OpenWhisk CLI 位於對應至前一個步驟中所使用之 Bluemix 組織及空間的名稱空間中。
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  或者，您也可以使用 `wsk property set --namespace`，從可存取的名稱空間清單中設定名稱空間。
+
+3. 重新整理名稱空間中的套件。重新整理會自動建立您所建立之 Watson 服務實例的套件連結。
+
+  ```
+wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_TextToSpeech_Credentials-1
+  ```
+  {: screen}
+
+  ```
+wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_TextToSpeec_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### 在 Bluemix 外部設定 Watson Text to Speech 套件
+
+如果您不是在 Bluemix 中使用 OpenWhisk，或者要在 Bluemix 外部設定 Watson Text to Speech，則必須手動建立 Watson Text to Speech 服務的套件連結。您需要 Watson Text to Speech 服務使用者名稱及密碼。
+
+- 建立針對 Watson Speech to Text 服務所配置的套件連結。
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonTextToSpeech -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### 將某串文字轉換成語音
+{: #openwhisk_catalog_watson_speechtotext}
+`/whisk.system/watson-speechToText/textToSpeech` 動作會將某串文字轉換成音訊語音。參數如下所示：
 
 - `username`：Watson API 使用者名稱。
 - `password`：Watson API 密碼。
@@ -455,19 +602,11 @@ wsk action invoke myWatson/languageId --blocking --result --param payload 'Ciel 
 - `accept`：語音檔的格式。
 - `encoding`：語音二進位資料的編碼。
 
-下列範例說明如何建立套件連結，以及將某串文字轉換成語音。
 
-1. 使用 Watson 認證建立套件連結。
-
-  ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
-  ```
-  {: pre}
-
-2. 在套件連結中呼叫 `textToSpeech` 動作，以轉換文字。
+- 在套件連結中呼叫 `textToSpeech` 動作，以轉換文字。
 
   ```
-wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatsonTextToSpeech/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -477,11 +616,77 @@ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey
   ```
   {: screen}
 
-
-### 將語音轉換成文字
+### 使用 Watson Speech to Text 套件
 {: #openwhisk_catalog_watson_speechtotext}
 
-`/whisk.system/watson/speechToText` 動作會將音訊語音轉換成文字。參數如下所示：
+`/whisk.system/watson-speechToText` 套件提供一種簡便的方式來呼叫要將語音轉換成文字的 Watson API。
+
+該套件包含下列動作。
+
+| 實體 | 類型 | 參數 | 說明 |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-speechToText` | 套件 | username、password | Watson API 用來將語音轉換成文字的動作 |
+| `/whisk.system/watson-speechToText/speechToText` | 動作 | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 將音訊轉換成文字 |
+
+**附註**：已淘汰套件 `/whisk.system/watson`（包括動作 `/whisk.system/watson/speechToText`）。
+
+
+#### 在 Bluemix 中設定 Watson Speech to Text 套件
+
+如果您是從 Bluemix 使用 OpenWhisk，則 OpenWhisk 會自動建立 Bluemix Watson 服務實例的套件連結。
+
+1. 在 Bluemix [儀表板](http://console.ng.Bluemix.net)中，建立 Watson Speech to Text 服務實例。
+
+  請務必記住服務實例的名稱，以及您所在的 Bluemix 組織及空間。
+
+2. 確定 OpenWhisk CLI 位於對應至前一個步驟中所使用之 Bluemix 組織及空間的名稱空間中。
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  或者，您也可以使用 `wsk property set --namespace`，從可存取的名稱空間清單中設定名稱空間。
+
+3. 重新整理名稱空間中的套件。重新整理會自動建立您所建立之 Watson 服務實例的套件連結。
+
+  ```
+wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_SpeechToText_Credentials-1
+  ```
+  {: screen}
+
+  ```
+wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_SpeechToText_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### 在 Bluemix 外部設定 Watson Speech to Text 套件
+
+如果您不是在 Bluemix 中使用 OpenWhisk，或者要在 Bluemix 外部設定 Watson Speech to Text，則必須手動建立 Watson Speech to Text 服務的套件連結。您需要 Watson Speech to Text 服務使用者名稱及密碼。
+
+- 建立針對 Watson Speech to Text 服務所配置的套件連結。
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonSpeechToText -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+
+#### 將語音轉換成文字
+
+`/whisk.system/watson-speechToText/speechToText` 動作會將音訊語音轉換成文字。參數如下所示：
 
 - `username`：Watson API 使用者名稱。
 - `password`：Watson API 密碼。
@@ -501,19 +706,11 @@ wsk action invoke myWatson/textToSpeech --blocking --result --param payload 'Hey
 - `word_confidence`：指出是否要為每個單字傳回範圍從 0 到 1 之間的信任測量值。
 - `X-Watson-Learning-Opt-Out`：指出是否要拒絕呼叫的資料收集。
  
-下列範例說明如何建立套件連結，以及將語音轉換成文字。
 
-1. 使用 Watson 認證建立套件連結。
-
-  ```
-wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' -p password 'MY_WATSON_PASSWORD'
-  ```
-  {: pre}
-
-2. 在套件連結中呼叫 `speechToText` 動作，以轉換已編碼的音訊。
+- 在套件連結中呼叫 `speechToText` 動作，以轉換已編碼的音訊。
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
+  wsk action invoke myWatsonSpeechToText/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -522,7 +719,7 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
   }
   ```
   {: screen}
-  
+ 
  
 ## 使用 Slack 套件
 {: #openwhisk_catalog_slack}
@@ -558,14 +755,14 @@ wsk package bind /whisk.system/watson myWatson -p username 'MY_WATSON_USERNAME' 
 2. 使用 Slack 認證、要張貼至其中的通道，以及用來進行張貼的使用者名稱，來建立套件連結。
 
   ```
-wsk package bind /whisk.system/slack mySlack --param url 'https://hooks.slack.com/services/...' --param username 'Bob' --param channel '#MySlackChannel'
+  wsk package bind /whisk.system/slack mySlack --param url "https://hooks.slack.com/services/..." --param username Bob --param channel "#MySlackChannel"
   ```
   {: pre}
 
 3. 在套件連結中呼叫 `post` 動作，以將訊息張貼至 Slack 通道。
 
   ```
-wsk action invoke mySlack/post --blocking --result --param text 'Hello from OpenWhisk!'
+  wsk action invoke mySlack/post --blocking --result --param text "Hello from OpenWhisk!"
   ```
   {: pre}
 
@@ -659,7 +856,7 @@ wsk trigger create myGitTrigger --feed myGit/webhook --param events push
 4. 建立與 `/whisk.system/pushnotifications` 連結的套件。
 
   ```
-  wsk package bind /whisk.system/pushnotifications myPush -p appId "myAppID" -p appSecret "myAppSecret"
+  wsk package bind /whisk.system/pushnotifications myPush -p appId myAppID -p appSecret myAppSecret
   ```
   {: pre}
 
@@ -682,7 +879,10 @@ wsk package list
 `/whisk.system/pushnotifications/sendMessage` 動作會將推送通知傳送至已登錄的裝置。參數如下所示：
 - `text`：要對使用者顯示的通知訊息。例如：`-p text "Hi ,OpenWhisk send a notification"`。
 - `url` - 可隨著警示一起傳送的選用性 URL。例如：`-p url "https:\\www.w3.ibm.com"`。
-- `gcmPayload`：會放在通知訊息中一起傳送的自訂 JSON 有效負載。例如：`-p gcmPayload "{"hi":"hello"}"`
+- `deviceIds` 所指定裝置的清單。例如：`-p deviceIds "[\"deviceID1\"]"`。
+- `platforms` 將通知傳送至指定平台的裝置。'A' 表示 Apple (iOS) 裝置，而 'G' 表示 google (Android) 裝置。例如 `-p platforms "[\"A\"]"`。
+- `tagNames` 將通知傳送至已訂閱其中任何標籤的裝置。例如 `-p tagNames "[\"tag1\"]" `。
+- `gcmPayload`：會放在通知訊息中一起傳送的自訂 JSON 有效負載。例如：`-p gcmPayload "{\"hi\":\"hello\"}"`
 - `gcmSound`：當通知到達裝置時，將會嘗試播放的音效檔（在裝置上）。
 - `gcmCollapseKey`：此參數可識別訊息的群組。
 - `gcmDelayWhileIdle`：當此參數設為 true 時，表示要等到裝置變成作用中時才會傳送訊息。
@@ -700,7 +900,7 @@ wsk package list
 1. 使用您先前建立之套件連結中的 `sendMessage` 動作來傳送推送通知。請務必將 `/myNamespace/myPush` 取代成您的套件名稱。
 
   ```
-  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds '["T1","T2"]'
+  wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds "[\"T1\",\"T2\"]"
   ```
   {: pre}
 

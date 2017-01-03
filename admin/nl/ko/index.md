@@ -4,6 +4,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-25"
 
 
 ---
@@ -18,27 +19,29 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 로컬 및 {{site.data.keyword.Bluemix_notm}} 데디케이티드 관리
 {: #mng}
 
-*마지막 업데이트 날짜: 2016년 10월 20일*
-{: .last-updated}
 
-{{site.data.keyword.Bluemix}} 로컬 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드에 대한 관리자 액세스 권한이 있으면 **관리** 페이지로 이동하여 리소스를 관리하고, 할당 사용량을 모니터링하고, 사용자 권한을 관리하고, 업그레이드 알림을 스케줄링하고, 보안 보고서 및 로그를 확인하는 등 다양한 작업을 수행할 수 있습니다. 영역을 작성하고 [사용자 역할 및 권한](index.html#oc_useradmin)을 설정하여 조직을 관리할 수 있습니다. [조직 관리](../admin/orgs_spaces.html)를 참조하십시오.
+{{site.data.keyword.Bluemix}} 로컬 또는 {{site.data.keyword.Bluemix_notm}} 데디케이티드에 대한 관리자 액세스 권한이 있으면 **관리** 페이지로 이동하여 리소스를 관리하고, 할당 사용량을 모니터링하고, 사용자 권한을 관리하고, 업그레이드 알림을 스케줄링하고, 보안 보고서 및 로그를 확인하는 등 다양한 작업을 수행할 수 있습니다. 영역을 작성하고 [사용자 역할 및 권한](/docs/admin/index.html#oc_useradmin)을 설정하여 조직을 관리할 수 있습니다. [조직 관리](/docs/admin/orgs_spaces.html)를 참조하십시오.
 {:shortdesc}
 
 *표 1. {{site.data.keyword.Bluemix_notm}} 로컬 또는 데디케이티드 인스턴스* 관리를 위한 관리 태스크
-{: #caption}
 
 | 수행할 수 있는 작업 | 세부사항 |    
 |----------------|---------|
-|시스템 사용량 모니터링 | **관리 &gt; 사용량**을 클릭하십시오. 시스템 정보를 확인하고, CPU 사용량을 모니터링하고, 사용량을 계획하여 기업에 가장 최선의 결정을 내리십시오. [사용량 정보 보기](index.html#oc_resource)를 참조하십시오.|
-|카탈로그 관리 | 사용자 및 조직에 표시되는 서비스를 관리하려면 **관리 &gt; 카탈로그 관리**를 클릭하십시오. [카탈로그 관리](index.html#oc_catalog)를 참조하십시오.|
-|조직 관리 | 조직을 작성하고 조직의 할당량을 모니터링하며 요구사항에 따라 신속하게 의사결정을 내리려면 **관리 &gt; 조직 관리**를 클릭하십시오. [조직 관리](index.html#oc_organizations)를 참조하십시오.|
-|영역 작성 및 사용자 역할 지정 | 조직 내에 영역을 작성하려면 **{{site.data.keyword.avatar}}** 아이콘 ![아바타](../support/images/account_support.svg)을 클릭한 후 **조직 관리**를 선택하십시오. 사용자를 추가하고 조직과 영역을 사용자에게 지정하십시오. [조직 관리](../admin/orgs_spaces.html)를 참조하십시오. |
-|관리자 권한 관리 | 사용자를 추가하거나 제거하고 사용자 권한을 조정하려면 **관리 &gt; 사용자 관리**를 클릭하십시오. [사용자 및 권한 관리](index.html#oc_useradmin)를 참조하십시오. |
-|보고서 및 로그 검토 | 인스턴스에 대한 보안 보고서 및 감사 로그를 보려면 **관리 &gt; 보고서 및 로그**를 클릭하십시오. [보고서 보기](index.html#oc_report)를 참조하십시오. |
-|시스템 정보 보기 | 보류 중인 업데이트, 인스턴스의 이름 및 버전, 지역, API URL, CLI URL, LDAP 구성 세부사항, 그룹 맵핑과 사용자 맵핑, 통계, 공유 도메인 등의 시스템 정보를 보려면 **관리 &gt; 시스템 정보**를 클릭하십시오. [시스템 정보 보기](index.html#oc_system)를 참조하십시오. |
-|알림 확장 및 알림 구독 설정 | **관리 &gt; 시스템 정보 &gt; 보류 중인 *수***를 클릭하십시오. 웹후크를 사용해서 선택한 웹 서비스와 통합하여 업데이트 또는 인시던트에 대한 이벤트 알림 구독을 설정할 수 있습니다. [알림 구독](index.html#oc_eventsubscription)을 참조하십시오. |
+|시스템 사용량 모니터링 | **관리 &gt; 사용량**을 클릭하십시오. 시스템 정보를 확인하고, CPU 사용량을 모니터링하고, 사용량을 계획하여 기업에 가장 최선의 결정을 내리십시오. [사용량 정보 보기](/docs/admin/index.html#oc_resource)를 참조하십시오.|
+|카탈로그 관리 | 사용자 및 조직에 표시되는 서비스를 관리하려면 **관리 &gt; 카탈로그 관리**를 클릭하십시오. [카탈로그 관리](/docs/admin/index.html#oc_catalog)를 참조하십시오.|
+|조직 관리 | 조직을 작성하고 조직의 할당량을 모니터링하며 요구사항에 따라 신속하게 의사결정을 내리려면 **관리 &gt; 조직 관리**를 클릭하십시오. [조직 관리](/docs/admin/index.html#oc_organizations)를 참조하십시오.|
+|영역 작성 및 사용자 역할 지정 | 조직 내에 영역을 작성하려면 **{{site.data.keyword.avatar}}** 아이콘 ![아바타](../support/images/account_support.svg)을 클릭한 후 **조직 관리**를 선택하십시오. 사용자를 추가하고 조직과 영역을 사용자에게 지정하십시오. [조직 관리](/docs/admin/orgs_spaces.html)를 참조하십시오. |
+|관리자 권한 관리 | 사용자를 추가하거나 제거하고 사용자 권한을 조정하려면 **관리 &gt; 사용자 관리**를 클릭하십시오. [사용자 및 권한 관리](/docs/admin/index.html#oc_useradmin)를 참조하십시오. |
+|보고서 및 로그 검토 | 인스턴스에 대한 보안 보고서 및 감사 로그를 보려면 **관리 &gt; 보고서 및 로그**를 클릭하십시오. [보고서 보기](/docs/admin/index.html#oc_report)를 참조하십시오. |
+|시스템 정보 보기 | 보류 중인 업데이트, 인스턴스의 이름 및 버전, 지역, API URL, CLI URL, LDAP 구성 세부사항, 그룹 맵핑과 사용자 맵핑, 통계, 공유 도메인 등의 시스템 정보를 보려면 **관리 &gt; 시스템 정보**를 클릭하십시오. [시스템 정보 보기](/docs/admin/index.html#oc_system)를 참조하십시오. |
+|알림 확장 및 알림 구독 설정 | **관리 &gt; 시스템 정보 &gt; 보류 중인 *수***를 클릭하십시오. 웹후크를 사용해서 선택한 웹 서비스와 통합하여 업데이트 또는 인시던트에 대한 이벤트 알림 구독을 설정할 수 있습니다. [알림 구독](/docs/admin/index.html#oc_eventsubscription)을 참조하십시오. |
+
+<!-- staging only for WoW start -->
 
 **팁**: {{site.data.keyword.Bluemix_notm}} 콘솔의 인프라 대시보드는 {{site.data.keyword.Bluemix_notm}} 퍼블릭 환경의 연결된 계정에만 사용 가능합니다.
+
+
+<!-- staging only for WoW end -->
 
 
 ## 알림 구독
@@ -51,7 +54,6 @@ copyright:
 로컬 또는 데디케이티드 환경에 대한 알림을 보고 환경의 상태를 모니터링할 수 있습니다. 다양한 알림 유형 및 각각의 알림 유형이 게시되는 위치에 대한 정보는 다음 표를 참조하십시오. 
 
 *표 2. 이벤트 유형 및 알림 방법*
-{: #caption}
 
 | **이벤트 유형** | **알림 방법** |       
 |-----------------|-------------------|
@@ -89,7 +91,6 @@ copyright:
   * **저장 및 닫기**를 클릭하여 알림 구독 목록에 구독을 저장한 후에 이전 페이지로 돌아갑니다. 
 
 *표 3. 유지보수 업데이트 또는 인시던트에 대한 이메일 알림 구독의 필드*
-{: #caption}
 {: #emailnotmaintinc}
 
 | **필드** | **설명** |
@@ -99,12 +100,11 @@ copyright:
 | 이벤트 | **유지보수** 또는 **인시던트** 이벤트에 대한 알림을 구독하려면 선택하십시오. |
 | 알림 결합 | 모든 지역에 대한 인시던트 알림을 하나의 알림으로 결합하려면 이 옵션을 선택하십시오. 인시던트에만 이 옵션을 사용할 수 있습니다. |
 | 제목 | 이메일의 제목 행을 입력하십시오.  이는 필수 필드입니다.   |
-| 본문 | 이메일에서 발송되는 메시지 본문 텍스트를 입력하십시오. IBM 페이로드 값을 사용하여 관련 정보로 이메일 알림을 채울 수 있습니다. 사용할 수 있는 값을 식별하려면 [유지보수 및 인시던트 페이로드 섹션 값](index.html#payload) 테이블을 참조하십시오. 기본 HTML 태그를 사용하여 이메일을 구성하십시오.  이는 필수 필드입니다.  |
+| 본문 | 이메일에서 발송되는 메시지 본문 텍스트를 입력하십시오. IBM 페이로드 값을 사용하여 관련 정보로 이메일 알림을 채울 수 있습니다. 사용할 수 있는 값을 식별하려면 [유지보수 및 인시던트 페이로드 섹션 값](index.html#payload) 표를 참조하십시오. 기본 HTML 태그를 사용하여 이메일을 구성하십시오.  이는 필수 필드입니다.  |
 | 수신 | 이메일 알림의 수신인에 대해 쉼표로 분리된 목록을 사용하여 이메일 주소를 입력하십시오. 이메일에서 다른 사용자를 복사하려면 "참조" 또는 "숨은 참조" 옵션을 펼치십시오.  이는 필수 필드입니다.  |
 | 설명 | 작성 중인 구독에 대한 고유한 설명을 추가하십시오.  |
 
 *표 4. 임계값에 대한 이메일 알림 구독의 필드*
-{: #caption}
 {: #emailnottrhesh}
 
 | **필드** | **설명** |
@@ -126,7 +126,6 @@ copyright:
 임계값이 충족될 때 알림이 전송될 6시간을 기다리지 않으려면 양식의 필드를 완료한 후 **저장 및 테스트**를 클릭하여 샘플 데이터로 알림을 저장하고 테스트할 수 있습니다.
 
 *표 5. 유지보수 또는 인시던트에 대한 웹후크 알림 구독의 양식 필드*
-{: #caption}
 {: #webhooknotsub}
 
 | **필드** | **설명** |
@@ -142,16 +141,15 @@ copyright:
 | 방법 | **GET**, **POST** 또는 **PUT**을 선택하십시오. |
 | URL | 웹 서비스에 연결하기 위한 URL을 입력하십시오.  |
 | 응답 특성 | 이 선택적 필드는 특성 이름으로, POST 또는 PUT 요청이 전송될 때 웹 서비스에서 작성되는 리소스를 식별합니다. 새 이벤트에 대한 응답 특성을 제공하고 이벤트로의 변경에 대한 구독을 작성하도록 선택한 경우 이벤트로 변경 구독에 대해서도 응답 특성을 제공해야 합니다. 사용 중인 웹 서비스에 따라 URL의 일부 또는 페이로드 값으로 이를 지정할 수 있습니다.   |
-| 페이로드 | POST 또는 PUT 메소드를 선택한 경우, 사용 중인 웹 서비스에 특정한 특성을 IBM 알림에 사용되는 페이로드 값과 짝을 지어 입력하십시오. 사용할 수 있는 값을 식별하려면 [유지보수 및 인시던트 페이로드 섹션 값](index.html#payload) 테이블을 참조하십시오. 이 섹션에 정보를 입력하지 않으면 추가 정보가 없는 알림이 수신됩니다. |
+| 페이로드 | POST 또는 PUT 메소드를 선택한 경우, 사용 중인 웹 서비스에 특정한 특성을 IBM 알림에 사용되는 페이로드 값과 짝을 지어 입력하십시오. 사용할 수 있는 값을 식별하려면 [유지보수 및 인시던트 페이로드 섹션 값](index.html#payload) 표를 참조하십시오. 이 섹션에 정보를 입력하지 않으면 추가 정보가 없는 알림이 수신됩니다. |
 | 이벤트로 변경 | 구독을 작성한 유지보수 또는 인시던트로의 변경에 대해 알림 구독을 작성하려면 이 옵션을 선택하십시오. 알림을 사용하지 않으려면 선택을 취소하십시오.  |
 | 새 이벤트에서 값 또는 페이로드 사용 | 새 이벤트 섹션에서 방법, URL 및 페이로드 필드의 컨텐츠를 사용하십시오. 이 옵션이 선택되면 이들 필드는 이벤트로 변경 섹션의 추가 편집이 불가능합니다. |
 | 방법 | **GET**, **POST** 또는 **PUT**을 선택하십시오. |
 | URL | 웹 서비스에 연결하기 위한 URL을 입력하십시오.  |
-| 페이로드 | POST 또는 PUT 메소드를 선택한 경우, 사용 중인 웹 서비스에 특정한 특성을 IBM 알림에 사용되는 페이로드 값과 짝을 지어 입력하십시오. 사용할 수 있는 값을 식별하려면 [유지보수 및 인시던트 페이로드 섹션 값](index.html#payload) 테이블을 참조하십시오. 이 섹션에 정보를 입력하지 않으면 추가 정보가 없는 알림이 수신됩니다. |
+| 페이로드 | POST 또는 PUT 메소드를 선택한 경우, 사용 중인 웹 서비스에 특정한 특성을 IBM 알림에 사용되는 페이로드 값과 짝을 지어 입력하십시오. 사용할 수 있는 값을 식별하려면 [유지보수 및 인시던트 페이로드 섹션 값](index.html#payload) 표를 참조하십시오. 이 섹션에 정보를 입력하지 않으면 추가 정보가 없는 알림이 수신됩니다. |
 | 알림 결합 | 모든 지역에 대한 인시던트 알림을 하나의 알림으로 결합하려면 이 옵션을 선택하십시오. 인시던트에만 이 옵션을 사용할 수 있습니다. |
 
 *표 6. 임계값에 대한 웹후크 알림 구독의 양식 필드*
-{: #caption}
 {: #webhooknotthresh}
 
 | **필드** | **설명** |
@@ -171,7 +169,6 @@ copyright:
 | URL | 웹 서비스에 연결하기 위한 URL을 입력하십시오.  |
 
 *표 7. 유지보수 및 인시던트 페이로드 섹션 값*
-{: #caption}
 {: #payload}
 
 | **IBM 값** | **설명** | **이벤트 유형** |
@@ -189,7 +186,6 @@ copyright:
 | {{type}} | 업데이트 또는 인시던트 | 유지보수 업데이트 및 인시던트 |
 
 *표 8. 임계값 페이로드 섹션 값*
-{: #caption}
 {: #threshpayload}
 
 | **IBM 값** | **설명** | **이벤트 유형** |
@@ -292,7 +288,7 @@ copyright:
 ### 보류 중인 시스템 업데이트
 
 업데이트 섹션에서 사용자 측의 조치가 필요한
-보류 중인 업데이트 수를 볼 수 있습니다. 두 가지 유형의 유지보수 업데이트를 볼 수 있습니다.
+보류 중인 업데이트 수를 볼 수 있습니다. 다음과 같은 두 가지 유형이 있습니다.
 
 <dl>
 <dt>시스템을 중단하지 않는 업데이트</dt>
@@ -444,7 +440,6 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 다음 표는 {{site.data.keyword.Bluemix_notm}} 로컬 및 {{site.data.keyword.Bluemix_notm}} 데디케이티드에 대해 생성되는 보안 보고서 목록을 보여줍니다. 대부분의 보고서는 일별로 생성됩니다. 그러나 암호화 및 키 관리 이벤트 보고서는 월별로 생성됩니다. 모든 보고서는 검색 가능하도록 관리 콘솔에서 90일 동안 유지됩니다. 90일 후에는 9개월 동안 {{site.data.keyword.Bluemix_notm}}에서 요청할 때마다 오프라인으로 보고서가 제공됩니다. 전부 합해서 최대 1년 동안 보고서를 검색할 수 있습니다. 
 
 *표 9. 보안 보고서 목록*
-{: #caption}
 
 | **카테고리** | **보고서** | **설명** |      
 |-----------------|-------------------|---------------------|
@@ -622,7 +617,6 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 다음 표는 JSON 파일을 작성하는 데 도움이 됩니다. 
 
 *표 10. JSON 필드*
-{: #caption}
 
 | **JSON 필드** | **설명** |
 |-----------------|-----------------|
@@ -634,7 +628,6 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 |plans | 일련의 서비스 플랜 정의입니다. 자세한 정보는 [플랜 필드](index.html#planfields)에 대한 다음 표를 참조하십시오.  |
 
 *표 11. 메타데이터 필드*
-{: #caption}
 {: #metadatafields}
 
 | **메타데이터 값** | **설명** |
@@ -691,7 +684,6 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 ![카탈로그의 서비스 세부사항](images/metadata.png "Bluemix 카탈로그 서비스 세부사항 보기")
 
 *표 12. 플랜 필드*
-{: #caption}
 {: #planfields}
 
 | **플랜 값** | **설명** |
@@ -703,7 +695,6 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 |metadata(선택사항)    | {{site.data.keyword.Bluemix_notm}} 카탈로그 및 가격 책정 시트에 표시되는 서비스 플랜 메타데이터입니다. metadata 필드는 선택적 필드입니다. 메타데이터 필드 내에 displayName, type(subscription, reservable, planDetails), bullets, costs(unitId, unit, partNumber) 및 paidOnly 필드를 지정할 수 있습니다. 자세한 정보는 [플랜 메타데이터 필드](index.html#planmetadata)에 대한 다음 표를 참조하십시오.  |
 
 *표 13. 플랜 메타데이터 필드*
-{: #caption}
 {: #planmetadata}
 
 | **플랜 메타데이터 값** | **설명** |
@@ -833,7 +824,7 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 조직 목록 섹션에서
 {{site.data.keyword.Bluemix_notm}} 환경에 있는 모든 조직을 볼 수 있으며 조직 이름을 클릭하여 개별 조직에 대해 조치를 수행할 수 있습니다.
 
-- 조직을 삭제하려면 조치 열에서 **삭제** 아이콘 ![삭제](images/icon_trash.svg)를 클릭하십시오.
+- 조직을 삭제하려면 조치 열에서 **삭제** 아이콘![삭제](images/icon_trash.svg)을 클릭하십시오.
 - 조직의 할당량 플랜 및 사용량을 보려면 목록에서 해당 조직의 이름을
 클릭하십시오. 선택한 조직의 **조직 관리** 페이지에서 다음과 같은 사용 정보를 볼 수 있습니다.
 
@@ -928,7 +919,6 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 관리 콘솔 내에서 특정 태스크를 완료하는 데 필요한 특정 액세스 레벨(읽기 또는 쓰기)을 지정하여 사용자에게 다음 권한을 지정할 수 있습니다. 
 
 *표 14. 권한*
-{: #caption}
 
 | **사용자 권한** | **설명** |       
 |-----------------|-------------------|
@@ -971,7 +961,9 @@ JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합
 
 관리 콘솔에 로그인하려면 다음 명령을 실행하십시오.
 
-`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool`
+```
+curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -990,6 +982,7 @@ JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합
 </dl>
 
 다음은 이 명령의 출력을 표시하는 예입니다.
+
 ```
 {
     "message": "Logged in",
@@ -1009,7 +1002,9 @@ JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합
 **읽기** 액세스 권한이 포함된 **사용자** 권한이 있어야
 합니다. 모든 조직을 나열하려면 다음 명령을 실행하십시오. 
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1054,7 +1049,9 @@ JSON 텍스트를 입력으로 받아들이고 읽기 쉬운 출력을 제공합
 나열하려면 **읽기** 액세스 권한이 포함된 **사용자** 권한이 있어야
 합니다. 모든 사용자를 나열하려면 다음 명령을 실행하십시오. 
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1146,7 +1143,9 @@ PUT console.<subdomain>.bluemix.net/codi/env_config/allow_managers?flag=<TRUE or
 
 JSON 파일에 정보를 제공합니다.
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1241,7 +1240,9 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 
 사용자를 제거하려면 사용자의 ID를 제공해야 합니다. 다음 명령을 실행하십시오. 
 
-`curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>`
+```
+curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1271,6 +1272,317 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
  <
  ```
 {: screen}
+
+## 메트릭용 API(시범)
+{: #envappmetricsapi}
+
+두 가지 시범 API를 사용하여 환경 또는 애플리케이션에 대한 메트릭을 수집할 수 있습니다.
+두 API 모두 지정한 시간에 요청한 메시지에 대한 데이터 점 배열을 리턴합니다. 
+
+**참고**:
+
+1. 사용자는 한 시간에 최대 200개의 API 요청을 메트릭에 대해 구성할 수 있습니다.
+2. 각 API 요청은 요청당 최대 200개의 데이터 점을 리턴합니다. 추가 데이터를 사용할 수 있는 경우 다음 데이터 세트를 로드하기 위한 URL이 응답에 제공됩니다.
+
+
+## 환경에 대한 메트릭 수집 
+
+시범 환경 API를 사용하여 지정한 기간 동안 상위 레벨 환경 정보를 수집할 수 있습니다.
+지정하는 시간 내에 사용 가능한 데이터 점이 리턴됩니다. 데이터는 약 1시간마다 기록됩니다.
+예를 들어, 환경에 대해 6시간의 CPU 데이터를 요청한 경우 요청한 6시간마다 CPU 데이터가 응답에 포함됩니다. 
+
+### 환경 메트릭 조회 매개변수
+
+다음 조회 매개변수를 사용하여 CPU, 디스크, 메모리, 네트워크 및 앱에 대한 메트릭을 수집할 수 있습니다. 
+
+<dl class="parml">
+<dt class="pt dlterm">metric</dt>
+<dd class="pd">쉼표로 구분된 다음 값 중 하나 이상: '메모리', '디스크', 'CPU', '네트워크' 및 '앱'</dd>
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">데이터가 리턴되는 가장 빠른 시점입니다. startTime을 지정하지 않으면 사용 가능한 가장 빠른 데이터 점이 포함됩니다.
+예를 들어, 오후 2시에서 5시 사이에 데이터를 수집하려면 startTime을 오후 2시로 지정하십시오. </dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">데이터가 리턴되는 가장 늦은 시점입니다. endTime을 지정하지 않으면 가장 최근의 데이터 점이 사용됩니다.
+예를 들어, 오후 2시에서 5시 사이에 데이터를 수집하려면 endTime을 오후 5시로 지정하십시오. </dd>
+<dt class="pt dlterm">sort</dt>
+<dd class="pd">데이터가 리턴되는 순서입니다. 올바른 값은 'asc'(오름차순) 및 'desc'(내림차순)입니다. 기본값은 가장 최근의 데이터를 먼저 리턴하는 내림차순입니다. </dd>
+</dl>
+
+### 환경 메트릭 데이터 형식
+
+다음 절에서는 데이터 형식을 제공합니다. 
+
+ * 메모리 사용량에 대한 데이터 레코드를 수집하려면 다음 데이터 형식을 사용하십시오. 
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "memory": {
+    "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
+    "memory_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "47"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "51"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "45"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "43"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * 디스크 사용량에 대한 데이터 레코드를 수집하려면 다음 데이터 형식을 사용하십시오. 
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "disk": {
+    "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
+    "disk_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "14"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "12"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * CPU 사용량에 대한 데이터 레코드를 수집하려면 다음 데이터 형식을 사용하십시오. 
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "cpu": {
+    "average_percent_cpu_used": 27.288461538461544,
+    "cpu_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "sys_percent": "8.4",
+        "user_percent": "2.7",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "sys_percent": "7.4",
+        "user_percent": "2.4",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "sys_percent": "5.3",
+        "user_percent": "1.9",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "sys_percent": "8.2",
+        "user_percent": "22.6",
+        "wait_percent": "0.0"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * 네트워크에 대한 데이터 레코드를 수집하려면 다음 데이터 형식을 사용하십시오.
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "network": {
+    "datapower": {
+    "response_times": [
+      {
+        "proxy": "custom_certificates",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "90",
+        "one_minute_ms": "89",
+        "ten_minutes_ms": "83",
+        "one_hour_ms": "85",
+        "one_day_ms": "95"
+      }
+      ],
+        "transactions": [
+      {
+        "proxy": "custom_domains",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "697",
+        "one_minute_ms": "747",
+        "ten_minutes_ms": "802",
+        "one_hour_ms": "794",
+        "one_day_ms": "730"
+      }
+      ],
+        "bandwidth": {
+        "in_mbps": 10855,
+        "out_mbps": 38090
+      }
+  }
+}
+```
+{: screen}
+
+* 애플리케이션에 대한 데이터 레코드를 수집하려면 다음 데이터 형식을 사용하십시오.
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "apps": {
+    "count": 1406,
+    "allocation": {
+      "memory_gb": 571.8,
+      "disk_gb": 1204
+    }
+  }
+}
+```
+{: screen}
+
+### 환경 메트릭 응답 형식
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+## 애플리케이션에 대한 메트릭 수집
+
+약 1시간마다 모든 애플리케이션의 데이터가 기록됩니다.
+특정 메트릭에 대한 요청은 지정한 기간에 각 데이터 샘플의 모든 앱에 대한 정보를 리턴하며, 요청된 메트릭에 따라 정보가 내림차순으로 정렬됩니다.
+예를 들어, 200개의 앱이 있는 환경에서 6시간 동안 CPU를 통해 모든 앱을 요청하면 한 번에 200개씩 1200개의 레코드가 리턴됩니다. 
+
+요청된 기간에 각 데이터 샘플에 대해 리턴되는 정보의 양을 줄이기 위해 계수 옵션을 지정할 수 있습니다.
+앞의 예제를 사용하여 계수 옵션을 5로 추가하면 각 데이터 샘플에 대해 CPU별로 상위 5개 애플리케이션을 나타내는 30개의 레코드가 리턴됩니다. 
+
+### 애플리케이션 엔드포인트 
+
+다음 엔드포인트를 사용하여 이 API 명령을 호출할 수 있습니다. 
+* /api/v1/app/cpu/physical 
+* /api/v1/app/memory/physical
+* /api/v1/app/memory/reserved
+* /api/v1/app/disk/physical
+* /api/v1/app/disk/reserved
+
+### 애플리케이션 조회 매개변수
+ 
+다음 조회 매개변수를 사용하여 애플리케이션에 대한 메트릭을 수집하십시오. 
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">데이터가 리턴되는 가장 빠른 시점입니다. startTime을 지정하지 않으면 사용 가능한 가장 빠른 데이터 점이 포함됩니다.
+예를 들어, 오후 2시에서 5시 사이에 데이터를 수집하려면 startTime을 오후 2시로 지정하십시오. </dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">데이터가 리턴되는 가장 늦은 시점입니다. endTime을 지정하지 않으면 가장 최근의 데이터 점이 사용됩니다.
+예를 들어, 오후 2시에서 5시 사이에 데이터를 수집하려면 endTime을 오후 5시로 지정하십시오. </dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">각 데이터 샘플 내에서 리턴할 레코드 수입니다. </dd>
+</dl>
+
+### 애플리케이션 응답 형식
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+리턴되는 각 문서는 요청 시점에 각 데이터 샘플에 있는 애플리케이션에 대해 요청된 메트릭을 나타냅니다. 
+
 
 ## 사용자 정의 서비스 API
 {: #servicebrokerapi}
@@ -1350,20 +1662,14 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "name": "Service broker's name",
     "broker_url": "https://provision-broker.comp.bluemix.net/bmx/provisioning/brokers/2063580064-8f23230c-7f36-4ce5-a298-2ab4108f1120",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "49f3adcc-ecc2-46fa-83c1-03322f04b3b1",
-    "created_at": "2015-12-07T19:51:50Z",
-    "updated_at": null,
-    "url": "/v2/service_brokers/49f3adcc-ecc2-46fa-83c1-03322f04b3b1"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
+
 ```
 {: screen}
 
@@ -1374,14 +1680,15 @@ Content-Type: application/json
 ### 라우트
 {: #updateroute}
 
-`PUT /codi/v1/serviceBrokers`
+```
+PUT /codi/v1/serviceBrokers
+```
 {: screen}
 
 ### 요청
 {: #updaterequest}
 
 *표 16. 필드*
-{: #caption}
 
 | **이름** | **설명** |
 |-----------------|-------------------|
@@ -1431,19 +1738,12 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "name": "Service Broker's name",
     "broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-d11bdd84-7556-469f-858d-2098b531f7f2",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "2cbdb812-d37f-443b-894a-a96de31e5c38",
-    "created_at": "2015-12-07T20:11:08Z",
-    "updated_at": "2015-12-07T20:11:19Z",
-    "url": "/v2/service_brokers/2cbdb812-d37f-443b-894a-a96de31e5c38"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
 ```
 {: screen}
@@ -1453,7 +1753,6 @@ Content-Type: application/json
 서비스를 삭제하려면 다음 API와 코드 예제를 사용하십시오.
 
 *표 17. 매개변수*
-{: #caption}
 
 | **이름** | **설명** |
 |-----------------|-------------------|
@@ -1536,7 +1835,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 명령 목록을 보려면 다음 명령을
 실행하십시오.
 
-`cf plugins`
+```
+cf plugins
+```
 {: codeblock}
 
 명령에 대한 도움말을 보려면 `-help` 옵션을 사용하십시오.

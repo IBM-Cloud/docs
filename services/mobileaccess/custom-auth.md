@@ -2,9 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-2"
+lastupdated: "2016-12-18"
 
 ---
+
+{:codeblock:.codeblock}
 
 # Authenticating users with a custom identity provider
 {: #custom-id}
@@ -65,6 +67,7 @@ When you create a custom identity provider, you might:
 		}
 	}
 	```
+	{: codeblock}
 
 1. Implement any custom credentials collection flow on the client, including multi-step and multi-form authentication. Similarly to the custom authentication challenge, you must design the structure of a custom authentication challenge answer.
 
@@ -77,6 +80,8 @@ When you create a custom identity provider, you might:
 		pincode:"1234"
 	}
 	```
+	{: codeblock}
+	
 1. Implement custom logic of validating supplied authentication challenge answer.
 
 1. Define a custom user identity object that contains any required custom properties. here is an example of a custom user identity object that is obtained by client after successful authentication:
@@ -92,6 +97,7 @@ When you create a custom identity provider, you might:
 		}
 	}
 	```
+	{: codeblock}
 
 ### Sample implementation of custom identity provider
 {: #custom-sample}
@@ -123,10 +129,10 @@ A custom identity provider supports one custom authentication realm. To handle i
 
 ## Next steps
 {: #next-steps}
+
 * [Creating a Custom Identity Provider](custom-auth-identity-provider.html)
 * [Configuring {{site.data.keyword.amashort}} for custom authentication](custom-auth-config-mca.html)
 * [Configuring custom authentication for Android](custom-auth-android.html)
 * [Configuring custom authentication for iOS (Swift SDK)](custom-auth-ios-swift-sdk.html)
-* [Configuring custom authentication for iOS (Objective-C SDK)](custom-auth-ios.html)
 * [Configuring custom authentication for Cordova](custom-auth-cordova.html)
 

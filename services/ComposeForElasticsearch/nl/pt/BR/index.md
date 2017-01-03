@@ -1,7 +1,8 @@
 ---
 
-copyright: anos: 2016
-
+copyright:
+  years: 2016
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,15 +14,13 @@ copyright: anos: 2016
 # Introdução ao Compose for Elasticsearch
 {: #getting-started-with-compose-for-elasticsearch}
 
-Última atualização: 20 de setembro de 2016
-{: .last-updated}
-
 O {{site.data.keyword.composeForElasticsearch_full}} combina o poder de um
 mecanismo de procura de texto completa com os potenciais de indexação de um banco de
 dados de documento JSON. Juntos, eles criam uma ferramenta poderosa para análise de dados
 ricos em grandes volumes de dados. Com o Elasticsearch, sua procura pode ser pontuada
 para fins de exatidão, permitindo que você pesquise a fundo seu conjunto de dados em busca de
-correspondências próximas e quase perdas que você possa estar deixando passar.{:shortdesc}
+correspondências próximas e quase perdas que você possa estar deixando passar.
+{:shortdesc}
 
 **Nota:** todas as instâncias de serviço do Compose que foram
 provisionadas antes de 14 de setembro de 2016 que ainda estiverem ativas poderão ser
@@ -65,6 +64,7 @@ a chave antes de usá-la, conforme mostrado no aplicativo de amostra.
 `deployment_id`|Um identificador interno para o serviço conforme criado no Compose.
 `db_type`|O tipo de banco de dados que é oferecido pelo serviço; nesse caso, `elastic_search`.
 `name`|O nome da implementação do banco de dados.
+{: caption="Table 1. {{site.data.keyword.composeForElasticsearch}} credentials" caption-side="top"}
 
 **Nota:** dois portais `haproxy` fornecem
 acesso ao cluster do Elasticsearch. `uri` e

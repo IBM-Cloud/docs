@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # 个人档案设置
 {: #usersettings}
-上次更新时间：2016 年 10 月 20 日
-{: .last-updated}
 
 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **用户个人档案**，以更新个人档案设置。
 {:shortdesc}

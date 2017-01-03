@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-11-30"
  
 
 ---
@@ -51,9 +51,6 @@ copyright:
 # 가격 책정
 {: #pricing}
 
-*마지막 업데이트 날짜: 2016년 9월 13일*
-{: .last-updated}
-
 {{site.data.keyword.Bluemix}}에서 애플리케이션을
 실행하고 {{site.data.keyword.Bluemix_notm}} 서비스를 무료로
 사용해 볼 수 있습니다. 무료 지원을 포함한 추가 허용량을 제공하는
@@ -87,7 +84,8 @@ copyright:
 
 ![{{site.data.keyword.Bluemix_notm}} 계정 관리의 프로세스 순서도](acctmgmt600.png)
 
-*그림 1. {{site.data.keyword.Bluemix_notm}} 계정 관리의 프로세스 순서도*
+그림 1. {{site.data.keyword.Bluemix_notm}} 계정 관리의 프로세스 순서도
+{: #pricing_figure1}
 
 
 무료 평가판 사용 중 계정을 변환할 경우 무료 사용량이 각 서비스에서 일반적으로 제공하는
@@ -141,7 +139,7 @@ copyright:
 
 종량과금제 또는 구독 계정을 사용할 때 {{site.data.keyword.Bluemix_notm}}에 문제점이 발생할 경우, 자세한 정보는 [온라인으로 도움 얻기](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help)를 참조하십시오.
 
-**참고:** {{site.data.keyword.Bluemix_notm}} 청구 계정을 SoftLayer 계정과 연결하며, 다음 달 초에서 시작하여 {{site.data.keyword.Bluemix_notm}} 비용이 SoftLayer 송장에서 부과됩니다. 세부사항은 [크레딧 보기](../admin//softlayerlink.html#bill_usage)를 참조하십시오. 
+**참고:** {{site.data.keyword.Bluemix_notm}} 청구 계정을 SoftLayer 계정과 연결하며, 다음 달 초에서 시작하여 {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 비용이 {{site.data.keyword.Bluemix_notm}} 송장에서 부과됩니다. 세부사항은 [크레딧 보기](/docs/admin//softlayerlink.html#bill_usage)를 참조하십시오. 
 
 ###종량과금제 계정
 {: #pay-as-you-go}
@@ -271,8 +269,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 | 계층 3: 2001 - 3000                  |   $0.75 USD                       |
 | 계층 4: 3001 - 4000           |      $0.60 USD                    |
 |계층 5: &gt; 4000 | $0.40 USD | 
-
-*표 1. 단순 계층 가격 책정표*
+{:caption="Table 1. Simple tier pricing table" caption-side="top"}
 
 다음 표에는 단순 계층 가격 책정 모델을 기반으로 하는
 플랜에서 지불해야 하는 금액이 설명되어 있습니다.
@@ -284,7 +281,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 |2500 |	2500 × 0.75 = 1875 |	$1875 USD|
 |... |	... |	...|
 |5200 |	5200 × 0.40 = 2080 |$2080 USD|
-*표 2. 단순 계층 가격 책정 모델을 사용하여 비용 계산*
+{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
 
 ####누진 계층
 {: #graduated_tier}
@@ -301,7 +298,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 |    계층 3: 2001 - 3000 |	$0.75 USD |
 |    계층 4: 3001 - 4000 |	$0.60 USD |
 |    계층 5: &gt; 4000 |	$0.40 USD |
-*표 3. 누진 계층 가격 책정표*
+{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
 
 다음 표에는 누진 계층 가격 책정 모델을 기반으로 하는
 플랜에서 지불해야 하는 금액이 설명되어 있습니다. 
@@ -313,7 +310,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 |2500 |	(1000 × 1(계층 1의 단가)) + (1000 × 0.90(계층 2의 단가)) + (500 × 0.75(계층 3의 단가)) = 2275 |	$2275 USD |
 |... |	... |	...|
 |5200 |	(1000 × 1(계층 1의 단가)) + (1000 × 0.90(계층 2의 단가)) + (1000 × 0.75(계층 3의 단가)) + (1000 × 0.60(계층 4의 단가)) + (1200 × 0.40(계층 5의 단가)) = 3730 |	$3730 USD|
-*표 4. 누진 계층 가격 책정 모델을 사용하여 요금 계산*
+{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
 
 ####블록 계층
 {: #block_tier}
@@ -330,7 +327,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 | 계층 3: &lt;= 3000 |	$2800 USD|
 | 계층 4: &lt;= 4000 |	$3500 USD|
 | 계층 5: &lt;= 10000 |	$5000 USD|
-*표 5. 블록 계층 가격 책정표*
+{:caption="Table 5. Block tier pricing table" caption-side="top"}
 
 다음 표에는 블록 계층 가격 책정 모델을 기반으로 하는
 플랜에서 지불해야 하는 금액이 설명되어 있습니다.
@@ -341,7 +338,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 |1500 |	항목의 수가 계층 2에 속하므로 총 가격은 $1900 USD입니다. |	$1900 USD|
 |... |	... |	...|
 |5200 |	항목의 수가 계층 5에 속하므로 총 가격은 $5000 USD입니다. |	$5000 USD|
-*표 6. 블록 계층 가격 책정 모델을 사용하여 요금 계산*
+{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
 ### 가상 서버에 대한 무료 사용량
 {: #vms}
@@ -363,7 +360,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 다른 방법을 통해 {{site.data.keyword.Bluemix_notm}}를
 사용하여 앱을 빌드하고 호스팅하기 위해 지불해야 하는 비용을 확인할 수 있습니다. 
 
-* {{site.data.keyword.Bluemix_notm}} 가격 책정 페이지의 비용 추정기는 앱의 크기를 기반으로 비용의 대략적인 추정값을 제공합니다.
+* {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}}의 비용 추정기는 앱의 크기를 기반으로 비용의 대략적인 추정값을 제공합니다.
 * {{site.data.keyword.Bluemix_notm}} 가격 책정 페이지의 비용 계산기는 런타임 및 서비스 사용에 대한 입력 내용을 기반으로 정확한 앱 가격을 제공합니다.
 * 또한 비용을 수동으로 계산할 수도 있습니다.
 
@@ -372,7 +369,7 @@ GB-시간은 애플리케이션 인스턴스 수, 인스턴스당 메모리, 인
 
 {{site.data.keyword.Bluemix_notm}}에서 제공하는 비용 계산기를 사용하면 앱의 비용을 신속하게 계산할 수 있습니다.
 
-1. {{site.data.keyword.Bluemix_notm}} [가격 책정 페이지](https://console.{DomainName}/pricing/)로 이동하십시오. 
+1. {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}}로 이동하십시오. 
 2. **비용 추정** 위젯 중 하나를 사용하거나 **계산기 열기**를 사용하여 **정밀 가격 책정 계산기**를 사용하십시오.
 
 계산기를 사용하려면 나열된 리소스(예: 인스턴스 수 또는
@@ -426,7 +423,7 @@ Light API 호출 500,000개
 |데이터 캐시 - 표준 |	5GB의 캐시 공간 및 복제본 |	$155.00 USD/인스턴스 |
 |데이터 캐시 - 프리미엄 |	25GB의 캐시 공간 및 복제본 |	$505.00 USD/인스턴스|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2GB의 무료 데이터 스토리지<br/>매월 무료로 50,000번의 Light API 호출<br/>매월 무료로 10,000번의 Heavy API 호출 | $1.00 USD/GB<br/>$0.03 USD/1000 Light API 호출<br/>$0.15 USD/1000 Heavy API 호출 |
-*표 7. 가격 책정 시트*
+{:caption="Table 7. Pricing sheet" caption-side="top"}
 
 ###애플리케이션 가격
 계산
@@ -496,37 +493,39 @@ Light API 호출의 경우 무료 사용량인 50,000을 빼고, Heavy API 호�
 |SEK |	  스웨덴 크로나|
 |USD |    미국 달러|
 |ZAR |	  남아프리카공화국 란드|
-*표 8. 지원 통화*
+{:caption="Table 8. Supported currencies" caption-side="top"}
+
+**참고:** 연결된 {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 계정이 있으면 발급되는 단일 송장은 미국 달러(USD)만 사용됩니다.  
 
 ##사용량 대시보드
 {: #usage}
 
-계정 소유자 또는 청구 관리자는 사용량 대시보드 보기를 사용하여 조직에서 매달 사용하는 런타임 및 서비스에 대한 실시간 요금을 확인할 수 있습니다. 모든 지역의 런타임 GB-시간 및 서비스 사용량을 확인하거나,
+계정 소유자 또는 청구 관리자는 사용량 대시보드 페이지를 사용하여 조직에서 매달 사용하는 런타임 및 서비스에 대한 실시간 요금을 확인할 수 있습니다. 모든 지역의 런타임 GB-시간 및 서비스 사용량을 확인하거나,
 특정 지역 및 영역을 선택하여 지난 12개월 동안의 사용량을 확인할 수 있습니다. 
 
-사용량 대시보드 보기를 열려면 **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg) &gt; **계정** &gt; *your_account_name* &gt; **사용량 대시보드**를 클릭하십시오. 이 보기에서 계정의 런타임 및 서비스 사용량에 대한 요약 정보를
-확인할 수 있습니다. 청구 관리자는 청구 관리자를 맡고 있는 조직에 대한 세부사항만 확인할 수 있습니다. 
+**사용량 대시보드** 페이지를 열려면 **계정** &gt; *your_account_name* &gt; **사용량 대시보드**를 클릭하십시오. 페이지에서 계정의 런타임 및 서비스 사용량에 대한 요약 정보를 확인할 수 있습니다. 청구 관리자는 청구 관리자를 맡고 있는 조직에 대한 세부사항만 확인할 수 있습니다. 
 
 각 청구 주기가 끝날 때 모든 조직에서 발생한 총 사용량이 계정 소유자에게 청구됩니다. 각 청구 주기는 한 달입니다. 
 
 계정 소유자는 지역 및 조직별로 사용량 요약을 필터링할 수 있습니다.
-계정 소유자인 경우 12개월 기간 전체 계정의 사용량을 확인하려면 **조직**을 **모든 조직**으로 설정합니다. 특정 월의 사용량을 확인하려면 해당 월을 클릭합니다. 표시된 비용은 계정 소유자가 해당 월에 지불해야 하는 금액을 나타냅니다.
+표시된 비용은 계정 소유자가 해당 월에 지불해야 하는 금액을 나타냅니다.
 
 **조직**에 대해 특정 조직을 선택하면 무료 계층의 사용량을 포함하여 해당 조직의 전체 사용량을 확인할 수 있습니다. 조직에 표시되는 비용이 청구되는 비용은 아닙니다. 무료 계층 사용량은 조직 레벨이 아닌 계정 레벨에서 무료로 표시됩니다. 따라서 조직 사용량을 확인할 때는 무료 사용량과 유료 사용량을 포함한 해당 조직의 실제 사용량이 표시됩니다. 무료 계층이 제거된 후 모든 조직의 사용량이 계정 사용량으로 계산됩니다.
 
 ##크레딧 보기
 {: #credits}
 
-계정 소유자 또는 청구 관리자인 사용자는 사용량 대시보드 보기를 사용하여 계정에 대한 크레딧을 볼 수 있습니다. 예를 들어, SoftLayer 계정을 {{site.data.keyword.Bluemix_notm}} 계정과 연결하면 크레딧이 있을 수 있습니다. 
+계정 소유자 또는 청구 관리자인 사용자는 **사용량 대시보드** 페이지를 사용하여 계정에 대한 크레딧을 볼 수 있습니다.  
 
-사용량 대시보드 보기를 열려면 **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg)을 클릭한 후 **계정**을 선택하십시오. 표시되는 페이지에서 **사용량 대시보드**를 클릭하십시오. 보기에서 크레딧(존재하는 경우) 및 해당 만료 시점을 볼 수 있습니다. 
+**사용량 대시보드** 페이지를 열려면 **계정** &gt; **사용량 대시보드**를 클릭하십시오.
+대시보드에 크레딧(존재하는 경우) 및 해당 만료 시점이 표시됩니다.
 
 ##알림
 {: #notifications}
 
 종량과금제 계정의 계정 관리자는 계정의 총 비용, 런타임 및 서비스, 개별 서비스(써드파티 서비스 제외)에 대한 알림을 전송하도록 설정할 수 있습니다. 지정한 지출 임계값의 80%, 90%, 및 100% 에 도달하면 알림을 받게 됩니다.
 
-**알림** 보기를 열려면 **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg) &gt; **계정** &gt; *your_account_name* &gt; **지출 알림**을 클릭하십시오. 필요에 따라 각 지출 알림 유형에 대해 알림을 트리거할 지출 임계값을 설정하는 숫자 값을 입력하십시오. 개별 서비스에 대한 알림을 추가 및 삭제할 수도 있습니다. 
+**알림** 보기를 열려면 **계정** &gt; *your_account_name* &gt; **지출 알림**을 클릭하십시오. 필요에 따라 각 지출 알림 유형에 대해 알림을 트리거할 지출 임계값을 설정하는 숫자 값을 입력하십시오. 개별 서비스에 대한 알림을 추가 및 삭제할 수도 있습니다. 
 
 ##플랜 변경 방법
 {: #changing}
@@ -542,7 +541,7 @@ Light API 호출의 경우 무료 사용량인 50,000을 빼고, Heavy API 호�
 |서비스 |	정보|
 |--------|-------------|
 |Presence Insights 	|라이트 플랜을 사용하는 중에 무료 사용량을 초과하는 경우, 403 메시지가 표시되거나 사용자에게 더 이상 권한이 없다는 메시지가 로깅되고 서비스 인스턴스 사용이 불가능하게 됩니다. 또한, 403 응답이 나타나고 POST REST API 호출이 거부됩니다.<br/><br/>무료 사용량을 초과하여 서비스가 사용 불가능한 경우 라이트 플랜을 유료 사용제로 업그레이드할 수 있습니다. 서비스는 2시간 이내에 다시 활성화됩니다.<br/><br/>유료 사용제를 사용하는 경우, 이벤트 및 총 스토리지의 사용량이 라이트 플랜 허용량 범위 이내이면 라이트 플랜으로 축소할 수 있습니다.<br/><br/>플랜을 업그레이드하거나 축소할 때 앱을 다시 스테이징하거나 다시 시작할 필요는 없습니다.|
-*표 9. 플랜 변경의 다음 단계*
+{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###명령행 인터페이스를 통해 플랜을 변경하는 방법
 
@@ -553,7 +552,9 @@ Light API 호출의 경우 무료 사용량인 50,000을 빼고, Heavy API 호�
 cf update-service <service_name> [-p <new_plan>]
 ```
 # 관련 링크
-## 일반 
+{: rellinks}
+## 일반
+{: general}
 * [{{site.data.keyword.Bluemix_notm}} 가격 책정 시트](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} 개발자 커뮤니티 포럼](https://developer.ibm.com/bluemix/)
 * [온라인으로 도움 얻기](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)

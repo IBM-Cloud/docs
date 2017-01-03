@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2016
+lastupdated: "2016-11-23"
 
 ---
  
@@ -9,10 +10,7 @@ copyright:
 {:new_window: target="_blank"}
 
 # Getting started with toolchains
-{: #toolchains_getting_started}
-
-Last updated: 17 November 2016
-{: .last-updated}  
+{: #toolchains_getting_started} 
 
 This page has moved. Check out the latest information in its new location.
 {: shortdesc}

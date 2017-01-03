@@ -89,7 +89,7 @@ de la trame d'information. Cette valeur est facultative.</dd>
 <dd class="pd">ID de la région cible par défaut. Par exemple : <code>ibm:yp:us-south</code>. Cette valeur est facultative.</dd>
 	
 <dt class="pt dlterm">organization_guid</dt>
-<dd class="pd">Identificateur global unique de l'organisation cible par défaut. Pour trouver cette valeur, cliquez sur <strong>Gérer les organisations</strong> > <i>nom_organisation</i>. L'URL de l'organisation contient l'identificateur global unique de cette organisation. Cette valeur est facultative.</dd>
+<dd class="pd">Identificateur global unique de l'organisation cible par défaut. Pour trouver cette valeur, cliquez sur <strong>Gérer les organisations</strong> > <i>nom_organisation</i>. L'URL de l'organisation contient l'identificateur global unique de cette organisation. Cette valeur est facultative. </dd>
 	
 <dt class="pt dlterm">space_guid</dt>
 <dd class="pd">Identificateur global unique de l'espace cible par défaut. Pour trouver cette valeur, cliquez sur <strong>Gérer les organisations</strong> >

@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-27"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 系统详细信息
 {: #openwhisk_reference}
-上次更新时间：2016 年 9 月 9 日
-{: .last-updated}
+
 
 以下各部分提供了有关 {{site.data.keyword.openwhisk}} 系统的更多详细信息。
 {: shortdesc}
@@ -134,7 +129,7 @@ copyright:
 ### 函数原型
 {: #openwhisk_ref_javascript_fnproto}
 
-{{site.data.keyword.openwhisk_short}} JavaScript 操作在 Node.js 运行时中运行，此运行时当前版本为 6.2.0。
+{{site.data.keyword.openwhisk_short}} JavaScript 操作在 Node.js 运行时中运行。
 
 用 JavaScript 编写的操作必须限制为单个文件。该文件可以包含多个函数，但根据约定，必须存在名为 `main` 的函数，并且此函数是调用操作时调用的函数。例如，下面是具有多个函数的操作的示例。
 
@@ -282,59 +277,67 @@ return whisk.invoke({
 ### JavaScript 运行时环境
 {: #openwhisk_ref_javascript_environments}
 
-JavaScript 操作缺省情况下在 Node.js V6.2.0 环境中执行。如果在创建/更新操作时使用“nodejs:6”值明确指定 `--kind` 标记，那么 6.2.0 环境也将用于操作。
-以下包可在 Node.js 6.2.0 环境中使用：
+JavaScript 操作缺省情况下在 Node.js V6.9.1 环境中执行。如果在创建/更新操作时使用“nodejs:6”值明确指定 `--kind` 标记，那么 6.9.1 环境也将用于操作。
+以下包可在 Node.js 6.9.1 环境中使用：
 
-- apn v1.7.5
-- async v1.5.2
-- body-parser v1.15.1
+- apn v2.1.2
+- async v2.1.4
 - btoa v1.1.2
-- cheerio v0.20.0
-- cloudant v1.4.1
+- cheerio v0.22.0
+- cloudant v1.6.2
 - commander v2.9.0
-- consul v0.25.0
-- cookie-parser v1.4.2
+- consul v0.27.0
+- cookie-parser v1.4.3
 - cradle v0.7.1
-- errorhandler v1.4.3
-- express v4.13.4
-- express-session v1.12.1
-- gm v1.22.0
-- log4js v0.6.36
-- iconv-lite v0.4.13
+- errorhandler v1.5.0
+- glob v7.1.1
+- gm v1.23.0
+- lodash v4.17.2
+- log4js v0.6.38
+- iconv-lite v0.4.15
+- marked v0.3.6
 - merge v1.2.0
-- moment v2.13.0
-- mustache v2.2.1
+- moment v2.17.0
+- mongodb v2.2.11
+- mustache v2.3.0
 - nano v6.2.0
 - node-uuid v1.4.7
-- nodemailer v2.5.0
+- nodemailer v2.6.4
 - oauth2-server v2.4.1
-- pkgcloud v1.3.0
-- process v0.11.3
-- pug v2.0.0
-- request v2.72.0
-- rimraf v2.5.2
-- semver v5.1.0
-- sendgrid v3.0.11
-- serve-favicon v2.3.0
-- socket.io v1.4.6
-- socket.io-client v1.4.6
-- superagent v1.8.3
+- pkgcloud v1.4.0
+- process v0.11.9
+- pug v2.0.0-beta6
+- redis v2.6.3
+- request v2.79.0
+- request-promise v4.1.1
+- rimraf v2.5.4
+- semver v5.3.0
+- sendgrid v4.7.1
+- serve-favicon v2.3.2
+- socket.io v1.6.0
+- socket.io-client v1.6.0
+- superagent v3.0.0
 - swagger-tools v0.10.1
-- tmp v0.0.28
-- twilio v2.9.1
-- watson-developer-cloud v1.12.4
+- tmp v0.0.31
+- twilio v2.11.1
+- underscore v1.8.3
+- uuid v3.0.0
+- validator v6.1.0
+- watson-developer-cloud v2.9.0
 - when v3.7.7
-- ws v1.1.0
-- xml2js v0.4.16
+- winston v2.3.0
+- ws v1.1.1
+- xml2js v0.4.17
 - xmlhttprequest v1.8.0
-- yauzl v2.4.2
+- yauzl v2.7.0
 
-如果在创建/更新操作时使用“nodejs”值明确指定 `--kind` 标记，那么 Node.js V0.12.14 环境将用于操作。
-以下包可在 Node.js 0.12.14 环境中使用：
+如果在创建/更新操作时使用“nodejs”值明确指定 `--kind` 标记，那么 Node.js V0.12.17 环境将用于操作。
+以下包可在 Node.js 0.12.17 环境中使用：
+
+**注**：不推荐使用 Node.js V0.12.x，请迁移所有 Node.js 操作以使用 Node.js V6.x。
 
 - apn v1.7.4
 - async v1.5.2
-- body-parser v1.12.0
 - btoa v1.1.2
 - cheerio v0.20.0
 - cloudant v1.4.1
@@ -343,11 +346,9 @@ JavaScript 操作缺省情况下在 Node.js V6.2.0 环境中执行。如果在�
 - cookie-parser v1.3.4
 - cradle v0.6.7
 - errorhandler v1.3.5
-- express v4.12.2
-- express-session v1.11.1
 - gm v1.20.0
 - jade v1.9.2
-- log4js v0.6.25
+- log4js v0.6.38
 - merge v1.2.0
 - moment v2.8.1
 - mustache v2.1.3
@@ -355,7 +356,7 @@ JavaScript 操作缺省情况下在 Node.js V6.2.0 环境中执行。如果在�
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
 - process v0.11.0
-- request v2.60.0
+- request v2.79.0
 - rimraf v2.5.1
 - semver v4.3.6
 - serve-favicon v2.2.0
@@ -428,14 +429,14 @@ Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二�
 
 以下是集合端点：
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
 
-`openwhisk.{DomainName}` 是 OpenWhisk API 主机名（例如，openwhisk.ng.bluemix.net、172.17.0.1 等）。
+`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span> 是 OpenWhisk API 主机名（例如，openwhisk.ng.bluemix.net、172.17.0.1 等）。
 
 对于 `{namespace}`，可以使用字符 `_` 来指定用户的 *缺省名称空间*（即电子邮件地址）。
 
@@ -443,16 +444,17 @@ Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二�
 
 每一个实体类型都具有实体端点：
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
+
 
 名称空间和激活端点仅支持 GET 请求。操作、触发器、规则和包端点支持 GET、PUT 和 DELETE 请求。操作、触发器和规则的端点还支持 POST 请求，其用于调用操作和触发器，以及启用或禁用规则。有关详细信息，请参阅 [API参考](https://new-console.{DomainName}/apidocs/98)。
 
-所有 API 都通过 HTTP 基本认证进行保护。基本认证凭证位于 `~/.wskprops` 文件的 `AUTH` 属性中，以冒号分隔。您还可以在 [CLI 配置步骤](../README.md#setup-cli)中，对这些凭证进行检索。
+所有 API 都通过 HTTP 基本认证进行保护。基本认证凭证位于 `~/.wskprops` 文件的 `AUTH` 属性中，以冒号分隔。您还可以在 [CLI 配置步骤](./index.html#openwhisk_start_configure_cli)中，对这些凭证进行检索。
 
 以下示例使用 cURL 命令，获取 `whisk.system` 名称空间中所有包的列表：
 
@@ -495,9 +497,8 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 | timeout | 不允许容器运行时间超过 N 毫秒 | 每个操作 |  毫秒 | 60000 |
 | memory | 不允许容器分配的内存超过 N MB | 每个操作 | MB | 256 |
 | logs | 不允许容器向标准输出写入超过 N MB | 每个操作 | MB | 10 |
-| concurrent | 不允许每个名称空间的并行激活数超过 N 个 | 每个名称空间 | 个 | 100 |
-| minuteRate | 用户每分钟调用的操作数不能超过此值 | 每个用户 | 个 | 120 |
-| hourRate | 用户每小时调用的操作数不能超过此值 | 每个用户 | 个 | 3600 |
+| concurrent | 每个名称空间中允许的正在执行或排队等待执行的激活数不超过 N | 每个名称空间 | 个 | 1000 |
+| minuteRate | 用户每分钟调用的操作数不能超过此值 | 每个用户 | 个 | 5000 |
 | codeSize | 操作码的最大大小 | 无法配置，每个操作的限制 | MB | 48 |
 | parameters | 可以附加的参数的最大大小 | 无法配置，每个操作/包/触发器的限制 | MB | 1 |
 
@@ -528,15 +529,15 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 {: #openwhisk_syslimits_activationsize}
 * 最大 POST 内容大小加上用于操作调用或触发的任何加工参数等于 1 MB。
 
-### 每个名称空间的并行调用数（缺省值：100）
+### 每个名称空间的并行调用数（缺省值：1000）
 {: #openwhisk_syslimits_concur}
-* 当前为一个名称空间处理的激活数不能超过 100。
+* 为一个名称空间正在执行或排队等待执行的激活数不能超过 1000。
 * 缺省限制可以通过静态方式由 whisk 在 consul kvstore 中进行配置。
 * 用户当前不能更改限制。
 
-### 每分钟/小时的调用数（固定值：120/3600）
+### 每分钟的调用数（固定值：5000）
 {: #openwhisk_syslimits_invocations}
-* 速率限制 N 设置为 120/3600，用于限制 1 分钟/小时时段中的操作调用数。
+* 速率限制 N 设置为 5000，用于限制 1 分钟时段中的操作调用数。
 * 用户在创建操作时不能更改此限制。
 * 超过此限制的 CLI 或 API 调用将收到与 HTTP 状态码“`429：请求过多`”对应的错误代码。
 
@@ -564,11 +565,10 @@ OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cros
 
 | 限制 | 描述 | 可配置 | 单位 | 缺省值 |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | 用户每分钟触发的触发器数不能超过此值 | 每个用户 | 个 | 60 |
-| hourRate | 用户每小时触发的触发器数不能超过此值 | 每个用户 | 个 | 720 |
+| minuteRate | 用户每分钟触发的触发器数不能超过此值 | 每个用户 | 个 | 5000 |
 
-### 每分钟/小时的触发器数（固定值：60/720）
+### 每分钟的触发数（固定值：5000）
 {: #openwhisk_syslimits_triggerratelimit}
-* 速率限制 N 设置为 60/720，用于限制 1 分钟/小时时段中可能触发的触发器数。
+* 速率限制 N 设置为 5000，用于限制 1 分钟时段中可能触发的触发器数。
 * 用户在创建触发器时不能更改此限制。
 * 超过此限制的 CLI 或 API 调用将收到与 HTTP 状态码“`429：请求过多`”对应的错误代码。

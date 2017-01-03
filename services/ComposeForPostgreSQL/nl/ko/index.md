@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -20,9 +20,6 @@ copyright:
 
 # {{site.data.keyword.composeForPostgreSQL}} 시작하기
 {: #getting-started-with-compose-for-postgreSQL}
-
-마지막 업데이트 날짜: 2016년 9월 20일
-{: .last-updated}
 
 {{site.data.keyword.composeForPostgreSQL}}에서는 쉽게 사용자 정의할 수 있는 강력한 오픈 소스 오브젝트 관계형 데이터베이스를 제공합니다. Postgres를 사용하면 개발을 빠르고 간편하게 스케일링할 수 있습니다. C/C++, Perl, Python, TCL/TK, Delphi/Kylix, VB, PHP, ASP, Java 등 사용자가 편한 언어로 개발할 수 있습니다. 사용자는 JSON이 지원되는 풍부한 기능을 갖춘 엔터프라이즈 데이터베이스를 확보하여 SQL과 NoSQL 모두 잘 활용할 수 있습니다.
 {:shortdesc}
@@ -51,6 +48,7 @@ Compose for PostgreSQL을 시작하려면 다음 단계를 완료하십시오.
 `deployment_id`|Compose에서 작성된 서비스의 내부 ID입니다.
 `db_type`|서비스에서 제공하는 데이터베이스의 유형입니다. 이 경우 `postgresql`입니다.
 `이름`|데이터베이스 배치 이름입니다.
+{: caption="Table 1. {{site.data.keyword.composeForPostgreSQL}} credentials" caption-side="top"}
 
 # 관련 링크
 {: #rellinks}

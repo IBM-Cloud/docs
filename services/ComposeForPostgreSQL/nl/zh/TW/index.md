@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -20,9 +20,6 @@ copyright:
 
 # 開始使用 {{site.data.keyword.composeForPostgreSQL}}
 {: #getting-started-with-compose-for-postgreSQL}
-
-前次更新：2016 年 9 月 20 日
-{: .last-updated}
 
 {{site.data.keyword.composeForPostgreSQL}} 提供可高度自訂的強大開放程式碼物件導向資料庫。使用 Postgres，開發十分快速，而且可以輕鬆地擴充。您可以使用想要的語言（例如 C/C++、Perl、Python、TCL/TK、Delphi/Kylix、VB、PHP、ASP 及 Java）進行開發。您可以取得具有 JSON 支援之特性豐富的企業資料庫，提供最佳的 SQL 及 NoSQL 世界。
 {:shortdesc}
@@ -51,6 +48,7 @@ copyright:
 `deployment_id`|Compose 內所建立之服務的內部 ID。
 `db_type`|服務所提供的資料庫類型；在此情況下，為 `postgresql`。
 `name`|資料庫部署名稱。
+{: caption="Table 1. {{site.data.keyword.composeForPostgreSQL}} credentials" caption-side="top"}
 
 # 相關鏈結
 {: #rellinks}

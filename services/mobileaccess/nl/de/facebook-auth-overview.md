@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -11,8 +12,6 @@ lastupdated: "2016-10-02"
 
 # Benutzer mit Facebook-Berechtigungsnachweisen authentifizieren
 {: #facebook-auth-overview}
-
-
 
 Sie können den {{site.data.keyword.amafull}}-Service zum Schützen von Ressourcen durch die Verwendung von Facebook als Identitätsprovider konfigurieren. Die Benutzer Ihrer mobilen Anwendung oder Ihrer Webanwendung können ihre Facebook-Berechtigungsnachweise für die Authentifizierung nutzen.
 
@@ -48,13 +47,13 @@ Im folgenden Diagramm wird die Integration von {{site.data.keyword.amashort}} in
 Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist vergleichbar mit dem Ablauf für einen mobilen Client. {{site.data.keyword.amashort}} schützt jedoch die Webanwendung anstatt einer {{site.data.keyword.Bluemix_notm}}-Back-End-Ressource.
 
   * Die ursprüngliche Anforderung wird von der Webanwendung (zum Beispiel von einem Anmeldeformular) gesendet.
-  * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource. 
+  * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource.
 
 
-## Facebook-App-ID vom Facebook-Entwicklerportal anfordern
+## Anwendung auf der Site 'Facebook for Developers' erstellen
 {: #facebook-appID}
 
-Zur Verwendung von Facebook als Identitätsprovider müssen Sie eine Anwendung auf der Site 'Facebook for Developers' erstellen. Während dieses Vorgangs wird eine Facebook-App-ID erstellt. Dabei handelt es sich um eine eindeutige ID, die von Facebook verwendet wird, um zu erkennen, welche Anwendung versucht, eine Verbindung herzustellen. 
+Zur Verwendung von Facebook als Identitätsprovider müssen Sie eine Anwendung auf der Site 'Facebook for Developers' erstellen. Während dieses Vorgangs wird eine Facebook-App-ID erstellt. Dabei handelt es sich um eine eindeutige ID, die von Facebook verwendet wird, um zu erkennen, welche Anwendung versucht, eine Verbindung herzustellen.
 
 Diesen Wert benötigen Sie, um die Facebook-Authentifizierung für Ihre mobile App oder Web-App zu konfigurieren.
 
@@ -68,7 +67,7 @@ Diesen Wert benötigen Sie, um die Facebook-Authentifizierung für Ihre mobile A
 
 1. Unter Umständen wird eine Sicherheitsprüfung angezeigt. Führen Sie die angeforderte Aktion durch.
 
-1. Die Seite **Produktkonfiguration** wird angezeigt. Kopieren Sie den angezeigten Wert für **App ID**. 
+1. Die Seite **Produktkonfiguration** wird angezeigt. Kopieren Sie den angezeigten Wert für **App ID**.
 
 ## Nächste Schritte
 {: #next-steps}

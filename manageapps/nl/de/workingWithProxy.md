@@ -15,7 +15,7 @@ copyright:
 Letzte Aktualisierung: 20. Juli 2016
 {: .last-updated}
 
-In einigen Umgebungen wie [Bluemix Dedicated](../../dedicated/index.html#dedicated) und [Bluemix Local](../../local/index.html#local) kann ein Proxy konfiguriert werden, was sich auf das Verhalten der Anwendung beim Staging und während der Laufzeit auswirkt.
+In einigen Umgebungen wie [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) und [Bluemix Local](/docs/local/index.html#local) kann ein Proxy konfiguriert werden, was sich auf das Verhalten der Anwendung beim Staging und während der Laufzeit auswirkt.
 
 Mit den folgenden Umgebungsvariablen können Sie Ihre Anwendung für den Proxy konfigurieren:
   * [http_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)
@@ -31,7 +31,7 @@ Beispiel: Sie verfügen über eine Node.js-Anwendung und in Ihrer Umgebung ist *
 ## Java-Anwendungen
 {: #java_apps}
 
-Für [Liberty for Java](../runtimes/liberty/index.html) und die [java_buildpack](../runtimes/tomcat/index.html)-Anwendungen können die Proxy-Einstellungen über die Umgebungsvariable **JAVA_OPTS** an die Laufzeit übergeben werden.  Geben Sie beispielsweise den folgenden Befehl ein: 
+Für [Liberty for Java](/docs/runtimes/liberty/index.html) und die [java_buildpack](/docs/runtimes/tomcat/index.html)-Anwendungen können die Proxy-Einstellungen über die Umgebungsvariable **JAVA_OPTS** an die Laufzeit übergeben werden.  Geben Sie beispielsweise den folgenden Befehl ein: 
 ```
    $ cf se myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
@@ -43,5 +43,5 @@ Führen Sie ein erneutes Staging für die Anwendung durch.  Die angegebenen Prox
 {: #rellinks}
 ## Allgemein
 {: #general}
-* [Liberty for Java](../runtimes/liberty/index.html)
-* [SDK for Nodejs](../runtimes/nodejs/index.html)
+* [Liberty for Java](/docs/runtimes/liberty/index.html)
+* [SDK for Nodejs](/docs/runtimes/nodejs/index.html)

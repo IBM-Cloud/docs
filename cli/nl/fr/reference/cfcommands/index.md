@@ -6,7 +6,7 @@ copyright:
 
   years: 2016
 
-
+lastupdated: "2016-11-14"
 
 ---
 
@@ -18,9 +18,6 @@ copyright:
 
 # Commandes Cloud Foundry (cf)
 {: #cf}
-
-Dernière mise à jour : 20 octobre 2016
-{: .last-updated}
 
 L'interface de ligne de commande Cloud Foundry (cf) fournit un ensemble de commandes permettant de gérer vos applications. Les informations ci-après
 répertorient les commandes cf le plus souvent utilisées pour gérer les applications avec leurs noms, leurs options, leur syntaxe, les éléments
@@ -34,14 +31,14 @@ d'API Cloud Foundry, vous devez spécifier le nom d'hôte ou l'adresse IP du ser
 `HTTP_PROXY`. Pour plus de détails, voir [Using the cf CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html).
 
 
-## Index des commandes de l'interface de ligne de commande Cloud Foundry 
+## Index des commandes de l'interface de ligne de commande Cloud Foundry
 {: #CLIname_commands_index}
 
 Utilisez l'index du tableau suivant pour consulter les commandes Cloud Foundry fréquemment utilisées :
 
 <table summary="Commandes Cloud Foundry générales classées par ordre alphabétique avec des liens vers des informations supplémentaires">
  <thead>
- <th colspan="6">Commandes Cloud Foundry générales </th>
+ <th colspan="6">Commandes Cloud Foundry générales</th>
  </thead>
  <tbody>
  <tr>
@@ -57,10 +54,9 @@ Utilisez l'index du tableau suivant pour consulter les commandes Cloud Foundry f
 *Tableau 1. Commandes Cloud Foundry générales*
 
 
-<table summary="Commandes classées par ordre alphabétique pour la gestion des applications, des espaces et des services, avec un lien vers des informations
-supplémentaires.">
+<table summary="Commandes classées par ordre alphabétique pour la gestion des applications, des espaces et des services, avec un lien vers des informations supplémentaires.">
  <thead>
- <th colspan="5">Commandes pour la gestion des applications, des espaces et des services </th>
+ <th colspan="5">Commandes pour la gestion des applications, des espaces et des services</th>
  </thead>
  <tbody>
  <tr>
@@ -81,6 +77,7 @@ supplémentaires.">
  <td>[scale](index.html#cf_scale)</td>
  <td>[services](index.html#cf_services)
  <td>[set-env](index.html#cf_set-env)</td>
+ <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](index.html#cf_stop)</td>
  </tr>
  </tbody>
@@ -97,12 +94,12 @@ Utilisez cette commande pour afficher ou spécifier l'adresse URL du noeud final
 cf api [URL_serveur_Bluemix] [--skip-ssl-validation] [--unset]
 ```
 
-<strong>Prérequis</strong> : aucun. 
+<strong>Prérequis</strong> : aucun.
 
 <strong>Options de commande</strong> :  
 
    <dl>
-   <dt>URL_serveur_Bluemix (facultatif) </dt>
+   <dt>URL_serveur_Bluemix (facultatif)</dt>
    <dd>Adresse URL du noeud final d'API Bluemix que vous devez spécifier lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}}. En
 général, il s'agit de `https://api.{NomDomaine}`.
    Si vous voulez afficher l'adresse URL du noeud final de l'API que vous utilisez actuellement, il n'est pas nécessaire de spécifier ce paramètre pour la
@@ -115,19 +112,19 @@ commande cf api.</dd>
 
 <strong>Exemples</strong> :
 
-Affichez le noeud final d'API en cours. 
+Affichez le noeud final d'API en cours.
 ```
 cf api
 ```
 {: codeblock}
 
-Retirez la connexion à tous les noeuds finaux d'API pour api.ng.bluemix.net. 
+Retirez la connexion à tous les noeuds finaux d'API pour api.ng.bluemix.net.
 ```
 cf api api.ng.bluemix.network --unset
 ```
 {: codeblock}
 
-Désactivez le processus de validation SSL pour api.ng.bluemix.network. 
+Désactivez le processus de validation SSL pour api.ng.bluemix.network.
 ```
 cf api api.ng.bluemix.network --skip-ssl-validation
 ```
@@ -167,9 +164,9 @@ cf bind-service nom_app instance_service
 <strong>Options de commande</strong> :  
 
    <dl>
-   <dt>nom_app (requis) </dt>
+   <dt>nom_app (requis)</dt>
    <dd>Nom de l'application.</dd>
-   <dt>instance_service (requis) </dt>
+   <dt>instance_service (requis)</dt>
    <dd>Nom de l'instance de service existante.</dd>
     </dl>
 
@@ -185,7 +182,7 @@ cf bind-service mon_app mon_dataworks
 ## cf create-service
 {: #cf_create-service}
 
-Crée une instance de service. 
+Crée une instance de service.
 
 ```
 cf create-service nom_service plan_service instance_service
@@ -196,17 +193,17 @@ cf create-service nom_service plan_service instance_service
 <strong>Options de commande</strong> :  
 
    <dl>
-   <dt>nom_service (requis) </dt>
+   <dt>nom_service (requis)</dt>
    <dd>Nom du service.</dd>
-   <dt>plan_service (requis) </dt>
+   <dt>plan_service (requis)</dt>
    <dd>Nom du plan de service.</dd>
-   <dt>instance_service (requis) </dt>
+   <dt>instance_service (requis)</dt>
    <dd>Nom à utiliser pour la nouvelle instance de service que vous créez.</dd>
     </dl>
 
 <strong>Exemples</strong> :
 
-Créez une instance du service {{site.data.keyword.dataworks_short}} avec un plan `free`. 
+Créez une instance du service {{site.data.keyword.dataworks_short}} avec un plan `free`.
 ```
 cf create-service DataWorks free mon_dataworks
 ```
@@ -227,17 +224,17 @@ cf create-space nom_espace [-o] [-q]
 <strong>Options de commande</strong> :  
 
    <dl>
-   <dt>nom_espace (requis) </dt>
+   <dt>nom_espace (requis)</dt>
    <dd>Nom de l'espace.</dd>
-   <dt>*-o* (facultatif) </dt>
+   <dt>*-o* (facultatif)</dt>
    <dd>Nom de l'organisation dans laquelle créer un espace.</dd>
-   <dt>*-q* (facultatif) </dt>
+   <dt>*-q* (facultatif)</dt>
    <dd>Quota à affecter au nouvel espace. S'il n'est pas spécifié, un quota par défaut est affecté automatiquement.</dd>
     </dl>
 
 <strong>Exemples</strong> :
 
-Créez un espace appelé nouvel_espace. 
+Créez un espace appelé nouvel_espace.
 ```
 cf create-space nouvel_espace
 ```
@@ -258,23 +255,23 @@ cf delete nom_app [-f] [-r]
 <strong>Options de commande</strong> :  
 
    <dl>
-   <dt>nom_app (requis) </dt>
+   <dt>nom_app (requis)</dt>
    <dd>Nom de l'application.</dd>
-   <dt>*-f* (facultatif) </dt>
+   <dt>*-f* (facultatif)</dt>
    <dd>Force la suppression de l'application sans confirmation.</dd>
-   <dt>*-r* (facultatif) </dt>
+   <dt>*-r* (facultatif)</dt>
    <dd>Supprime tous les noms de domaine associés à l'application. </dd>
     </dl>
 
 <strong>Exemples</strong> :
 
-Supprime une application appelée `mon_app` (confirmation requise). 
+Supprime une application appelée `mon_app` (confirmation requise).
 ```
 cf delete mon_app
 ```
 {: codeblock}
 
-Supprime une application appelée `mon_app` sans confirmation. 
+Supprime une application appelée `mon_app` sans confirmation.
 ```
 cf delete mon_app -f
 ```
@@ -287,7 +284,6 @@ cf delete mon_app -r
 {: codeblock}
 
 Supprime une application appelée `mon_app` et tous les noms de domaine associés à `mon_app` sans confirmation.
-
 ```
 cf delete mon_app -f -r
 ```
@@ -308,22 +304,22 @@ cf delete-space nom_espace [-f]
 <strong>Options de commande</strong> :  
 
    <dl>
-   <dt>nom_espace (requis) </dt>
+   <dt>nom_espace (requis)</dt>
    <dd>Nom de l'espace.</dd>
-   <dt>*-f* (facultatif) </dt>
+   <dt>*-f* (facultatif)</dt>
    <dd>Force la suppression de l'espace sans confirmation.</dd>
    *Remarque :* la suppression d'un espace est une opération irréversible.
     </dl>
 
 <strong>Exemples</strong> :
 
-Supprime une application appelée `mon_app` (confirmation requise). 
+Supprime une application appelée `mon_app` (confirmation requise).
 ```
 cf delete mon_app
 ```
 {: codeblock}
 
-Supprime une application appelée `mon_app` sans confirmation. 
+Supprime une application appelée `mon_app` sans confirmation.
 ```
 cf delete mon_app -f
 ```
@@ -336,7 +332,6 @@ cf delete mon_app -r
 {: codeblock}
 
 Supprime une application appelée `mon_app` et tous les noms de domaine associés à `mon_app` sans confirmation.
-
 ```
 cf delete mon_app -f -r
 ```
@@ -373,30 +368,30 @@ cf events mon_app
 ## cf help
 {: #cf_help}
 
-Affiche les informations d'aide pour toutes les commandes cf ou pour une commande cf spécifique. 
+Affiche les informations d'aide pour toutes les commandes cf ou pour une commande cf spécifique.
 
 ```
 cf help [nom_commande]
 ```
 
-<strong>Prérequis</strong> : aucun. 
+<strong>Prérequis</strong> : aucun.
 
 <strong>Options de commande</strong> :  
 
    <dl>
-   <dt>nom_commande (facultatif) </dt>
+   <dt>nom_commande (facultatif)</dt>
    <dd>Nom d'une commande.</dd>
     </dl>
 
 <strong>Exemples</strong> :
 
-Affichez les informations d'aide pour toutes les commandes cf. 
+Affichez les informations d'aide pour toutes les commandes cf.
 ```
 cf help
 ```
 {: codeblock}
 
-Affichez les informations d'aide pour la commande events. 
+Affichez les informations d'aide pour la commande events.
 ```
 cf help events
 ```
@@ -414,16 +409,16 @@ Vous connecte à {{site.data.keyword.Bluemix_notm}}.
 cf login [-a url] [-u nom_utilisateur] [-p mot_de_passe] [-sso] [-o nom_organisation] [-s nom_espace] [--skip-ssl-validation]
 ```
 
-<strong>Prérequis</strong> : aucun. 
+<strong>Prérequis</strong> : aucun.
 
 <strong>Options de commande</strong> :
 
 <dl>
-<dt>*-a* https://api.{NomDomaine} (facultatif) </dt>
+<dt>*-a* https://api.{NomDomaine} (facultatif)</dt>
 <dd>Adresse URL du noeud final d'API de {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>*-u* nom_utilisateur (facultatif) </dt>
+<dt>*-u* nom_utilisateur (facultatif)</dt>
 <dd>Votre nom d'utilisateur.</dd>
-<dt>*-p* mot_de_passe (facultatif) </dt>
+<dt>*-p* mot_de_passe (facultatif)</dt>
 <dd>Votre mot de passe.</dd>
 <dd>*Important :* si vous indiquez un mot de passe avec le paramètre *-p* dans l'interface de ligne de commande, le mot
 de passe peut être enregistré dans l'historique de la ligne de commande. Pour des raisons de sécurité, évitez de fournir le mot de passe
@@ -435,7 +430,7 @@ entrez le mot de passe lorsque l'interface de ligne de commande vous y invite.</
 <dd>Nom de l'organisation à laquelle vous voulez vous connecter.</dd>
 <dt>*-s*nom_espace</dt>
 <dd>Nom de l'espace auquel vous voulez vous connecter.</dd>
-<dt>*--skip-ssl-validation* (facultatif) </dt>
+<dt>*--skip-ssl-validation* (facultatif)</dt>
 <dd>Désactive le processus de validation SSL. L'utilisation de ce paramètre peut entraîner des problèmes de sécurité.</dd>
 </dl>
 
@@ -488,7 +483,7 @@ cf logs nom_app [--recent]
 <dl>
 <dt>nom_app</dt>
 <dd>Nom de l'application.</dd>
-<dt>*--recent* (facultatif) </dt>
+<dt>*--recent* (facultatif)</dt>
 <dd>Extrait les journaux récents.</dd>
 </dl>
 
@@ -518,11 +513,11 @@ cf marketplace
 ```
 <strong>Prérequis</strong> : `cf api`
 
-<strong>Options de commande</strong> : aucune. 
+<strong>Options de commande</strong> : aucune.
 
 <strong>Exemples</strong> :
 
-Affichez la liste de tous les services de la place de marché. 
+Affichez la liste de tous les services de la place de marché.
 ```
 cf marketplace
 ```
@@ -546,45 +541,45 @@ nom_hôte] [-p chemin_app] [-s nom_pile] [-t délai] [--no-hostname] [--no-manif
 <strong>Options de commande</strong> :
 
 <dl>
-<dt>nom_app (requis) </dt>
+<dt>nom_app (requis)</dt>
 <dd>Nom de l'application.</dd>
-<dt>*-b* nom_pack_construction (facultatif) </dt>
+<dt>*-b* nom_pack_construction (facultatif)</dt>
 <dd>Nom du pack de construction. nom_pack_construction peut être le nom d'un pack de construction personnalisé ou une adresse URL Git, par exemple
 `mon_pack_construction` ou `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
-<dt>*-c* commande_démarrage (facultatif) </dt>
+<dt>*-c* commande_démarrage (facultatif)</dt>
 <dd>Commande de démarrage de votre application. Pour utiliser la commande de démarrage par défaut, spécifiez la valeur null pour cette option. </dd>
-<dt>*-f* chemin_manifeste (facultatif) </dt>
+<dt>*-f* chemin_manifeste (facultatif)</dt>
 <dd>Chemin d'accès au fichier manifeste. Le fichier manifeste par défaut est manifest.yml sous le répertoire racine de votre application.</dd>
-<dt>*-i* nombre_instances (facultatif) </dt>
+<dt>*-i* nombre_instances (facultatif)</dt>
 <dd>Nombre d'instances.</dd>
-<dt>*-k* limite_disque (facultatif) </dt>
+<dt>*-k* limite_disque (facultatif)</dt>
 <dd>Limite de disque pour l'application. Les valeurs admises sont *256M*, *1024M* et *1G*.</dd>
-<dt>*-m* limite_mémoire (facultatif) </dt>
+<dt>*-m* limite_mémoire (facultatif)</dt>
 <dd>Limite de mémoire pour l'application. Les valeurs admises sont *256M*, *1024M* et *1G*.</dd>
-<dt>*-n* nom_hôte (facultatif) </dt>
+<dt>*-n* nom_hôte (facultatif)</dt>
 <dd>Nom d'hôte de l'application, par exemple *mon_sous-domaine*.</dd>
-<dt>*-p* chemin_app (facultatif) </dt>
+<dt>*-p* chemin_app (facultatif)</dt>
 <dd>Chemin d'accès au répertoire de l'application ou au fichier archive de l'application.</dd>
-<dt>*-s* nom_pile (facultatif) </dt>
+<dt>*-s* nom_pile (facultatif)</dt>
 <dd>Pile pour l'exécution des applications. Une pile est un système de fichiers préconfiguré incluant le système d'exploitation. Utilisez `cf
 stacks` pour afficher les piles disponibles dans {{site.data.keyword.Bluemix_notm}}.</dd>
-<dt>*-t* délai (facultatif) </dt>
+<dt>*-t* délai (facultatif)</dt>
 <dd>Délai maximal de démarrage de l'application, en secondes. Il se peut que d'autres délais d'attente côté serveur remplacent cette valeur.</dd>
-<dt>*--no-hostname* (facultatif) </dt>
+<dt>*--no-hostname* (facultatif)</dt>
 <dd>Mappe le domaine de système {{site.data.keyword.Bluemix_notm}} à cette application.</dd>
-<dt>*--no-manifest* (facultatif) </dt>
+<dt>*--no-manifest* (facultatif)</dt>
 <dd>Ignore le fichier manifeste par défaut.</dd>
-<dt>*--no-route* (facultatif) </dt>
+<dt>*--no-route* (facultatif)</dt>
 <dd>Ne mappe pas de route à cette application.</dd>
-<dt>*--no-start* (facultatif) </dt>
+<dt>*--no-start* (facultatif)</dt>
 <dd>Ne démarre pas l'application une fois qu'elle est déployée.</dd>
-<dt>*--random-route* (facultatif) </dt>
+<dt>*--random-route* (facultatif)</dt>
 <dd>Crée une route aléatoire pour l'application.</dd>
 </dl>
 
 <strong>Exemples</strong> :
 
-Démarrez une application appelée `mon_app` avec la commande de démarrage par défaut. 
+Démarrez une application appelée `mon_app` avec la commande de démarrage par défaut.
 ```
 cf push `mon_app` -c null
 ```
@@ -612,15 +607,15 @@ cf scale nom_app [-i nombre_instances] [-k limite_disque] [-m limite_mémoire] [
 <strong>Options de commande</strong> :
 
 <dl>
-<dt>nom_app (requis) </dt>
+<dt>nom_app (requis)</dt>
 <dd>Nom de l'application.</dd>
-<dt>*-i* nombre_instances (facultatif) </dt>
+<dt>*-i* nombre_instances (facultatif)</dt>
 <dd>Nombre d'instances.</dd>
-<dt>*-k* limite_disque (facultatif) </dt>
+<dt>*-k* limite_disque (facultatif)</dt>
 <dd>Limite de disque pour l'application ; les valeurs admises sont `256M`, `1024M` et `1G`.</dd>
-<dt>*-m* limite_mémoire (facultatif) </dt>
+<dt>*-m* limite_mémoire (facultatif)</dt>
 <dd>Limite de mémoire pour l'application ; les valeurs admises sont `256M`, `1024M` et `1G`.</dd>
-<dt>*-f* (facultatif) </dt>
+<dt>*-f* (facultatif)</dt>
 <dd>Force l'application à redémarrer sans invite.</dd>
 </dl>
 
@@ -649,11 +644,12 @@ Répertorie tous les services disponibles dans l'espace en cours.
 cf services
 ```
 <strong>Prérequis</strong> : `cf api`, `cf login`, `cf target`
-<strong>Options de commande</strong> : aucune. 
+
+<strong>Options de commande</strong> : aucune.
 
 <strong>Exemples</strong> :
 
-Affichez la liste de tous les services dans l'espace en cours. 
+Affichez la liste de tous les services dans l'espace en cours.
 ```
 cf services
 ```
@@ -669,12 +665,13 @@ Définit une variable d'environnement pour une application.
 cf set-env nom_app nom_var valeur_var
 ```
 <strong>Prérequis</strong> : `cf api`, `cf login`, `cf target`
+
 <strong>Options de commande</strong> :
 
 <dl>
-<dt>nom_app (requis) </dt>
+<dt>nom_app (requis)</dt>
 <dd>Nom de l'application.</dd>
-<dt>nom_var (requis) </dt>
+<dt>nom_var (requis)</dt>
 <dd>Nom de la variable d'environnement.</dd>
 <dt>valeur_var (requis)</dt>
 <dd>Valeur de la variable d'environnement.</dd>
@@ -690,6 +687,42 @@ cf set-env mon_app variable_a 123
 {: codeblock}
 
 
+## cf ssh
+{: #cf_ssh}
+
+Vous connecte de manière sécurisée à un conteneur d'applications. Par défaut, SSH accède au conteneur en exécutant la première instance de l'application, qui est l'instance dotée de l'index 0.
+
+```
+cf ssh
+```
+<strong>Prérequis</strong> : `cf api`, `cf login`, `cf target`
+
+Vous devez également configurer votre déploiement Cloud Foundry afin d'autoriser SSH à accéder aux instances d'application. Pour plus de détails, voir [Configuring SSH Access for Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}.
+
+<strong>Options de commande</strong> :
+
+<dl>
+<dt>nom_app</dt>
+<dd>Nom de l'application. Si SSH est autorisé, vous pouvez employer cette option pour démarrer une session SSH interactive avec une machine virtuelle hébergeant l'application.</dd>
+<dt>-i</dt>
+<dd>Cible une instance spécifique d'une application.</dd>
+<dt>-L</dt>
+<dd>Active l'acheminement de port local, ce qui lie un port de sortie de votre machine à un port d'entrée sur la machine virtuelle de l'application.</dd>
+<dt>-N</dt>
+<dd>N'exécutez pas de commande distante.</dd>
+<dt>-t, -tt ou -T</dt>
+<dd>Vous permet d'exécuter une session SSH en mode pseudo-tty plutôt que de générer une sortie sous forme de1 ligne de terminal.<dd>
+</dl>
+
+<strong>Exemples</strong> :
+
+Démarrez une session SSH interactive avec une machine virtuelle hébergeant une application nommée `mon_app`.
+```
+$ cf ssh mon_app
+```
+{: codeblock}
+
+
 ## cf stacks
 {: #cf_stacks}
 
@@ -701,11 +734,11 @@ cf stacks
 ```
 <strong>Prérequis</strong> : `cf api`, `cf login`
 
-<strong>Options de commande</strong> : aucune. 
+<strong>Options de commande</strong> : aucune.
 
 <strong>Exemples</strong> :
 
-Affichez la liste de toutes les piles. 
+Affichez la liste de toutes les piles.
 ```
 cf stacks
 ```
@@ -715,16 +748,17 @@ cf stacks
 ## cf stop
 {: #cf_stop}
 
-Arrête une application. 
+Arrête une application.
 
 ```
 cf stop nom_app
 ```
 <strong>Prérequis</strong> : `cf api`, `cf login`, `cf target`
+
 <strong>Options de commande</strong> :
 
 <dl>
-<dt>nom_app (requis) </dt>
+<dt>nom_app (requis)</dt>
 <dd>Nom de l'application.</dd>
 </dl>
 
@@ -740,7 +774,7 @@ cf stop mon_app
 ## cf target
 {: #cf_target}
 
-Définit ou affiche l'organisation ou l'espace ciblé. 
+Définit ou affiche l'organisation ou l'espace ciblé.
 
 ```
 cf target [-o nom_org] [-s nom_espace]
@@ -750,9 +784,9 @@ cf target [-o nom_org] [-s nom_espace]
 <strong>Options de commande</strong> :
 
 <dl>
-<dt>-o *nom_org* (facultatif) </dt>
-<dd>Nom de l'organisation dans laquelle se trouve l'espace. </dd>
-<dt>-s *nom_espace* (facultatif) </dt>
+<dt>-o *nom_org* (facultatif)</dt>
+<dd>Nom de l'organisation dans laquelle se trouve l'espace.</dd>
+<dt>-s *nom_espace* (facultatif)</dt>
 <dd>Nom de l'espace.</dd>
 </dl>
 
@@ -775,11 +809,11 @@ cf -v
 ```
 <strong>Prérequis</strong> : aucun.
 
-<strong>Options de commande</strong> : aucune. 
+<strong>Options de commande</strong> : aucune.
 
 <strong>Exemples</strong> :
 
-Affichez la version de l'interface de ligne de commande cf. 
+Affichez la version de l'interface de ligne de commande cf.
 ```
 cf -v
 ```

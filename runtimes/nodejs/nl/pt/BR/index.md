@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-Última atualização: 29 de agosto de 2016
-{: .last-updated}
 
 O tempo de execução Node.js no {{site.data.keyword.Bluemix}} é desenvolvido com o buildpack sdk-for-nodejs.
 O buildpack sdk-for-nodejs fornece um ambiente de tempo de execução completo para apps Node.js.
@@ -25,7 +24,7 @@ O buildpack sdk-for-nodejs é usado quando o aplicativo contém um arquivo **pac
 {: #starter_application}
 
 {{site.data.keyword.Bluemix}} fornece um aplicativo iniciador Node.js.  O aplicativo iniciador Node.js é um app Node.js simples que fornece um modelo que você pode usar para seu app. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o ambiente
-Bluemix. Consulte [Usando os aplicativos iniciadores](../../cfapps/starter_app_usage.html) para obter ajuda sobre o uso do
+Bluemix. Consulte [Usando os aplicativos iniciadores](/docs/cfapps/starter_app_usage.html) para obter ajuda sobre o uso do
 aplicativo iniciador.
 
 ## Comando de inicialização
@@ -72,12 +71,14 @@ Use estas informações para facilitar a execução do seu aplicativo Node.js lo
 
 O exemplo a seguir mostra parte da origem para um arquivo **js**:
 ```
-var port = (process.env.VCAP_APP_PORT || 3000);
-var host = (process.env.VCAP_APP_HOST || 'localhost');
+var port = (process.env.PORT || 3000);
 ```
 {: codeblock}
 
-Com este código, quando o aplicativo está em execução no Bluemix, as variáveis de ambiente VCAP_APP_HOST e VCAP_APP_PORT contêm os valores do host e da porta que são internos para o Bluemix e nos quais o aplicativo atende as conexões recebidas. Quando o aplicativo está em execução localmente, VCAP_APP_HOST e VCAP_APP_PORT não são definidos, portanto, **localhost** é usado como o host e **3000** é usado como o número da porta. Gravando dessa maneira, é possível executar o aplicativo localmente para fins de teste e no Bluemix sem fazer mudanças adicionais.
+Com este código, quando o aplicativo está em execução no Bluemix, a variável de ambiente PORT contém o
+valor da porta que é interno para o Bluemix e no qual o aplicativo atende as conexões recebidas. Quando o
+aplicativo está sendo executado localmente, PORT não está definido, de modo que **3000** é
+usado como o número da porta. Gravando dessa maneira, é possível executar o aplicativo localmente para fins de teste e no Bluemix sem fazer mudanças adicionais.
 
 ## Modo offline
 {: #offline_mode}
@@ -85,15 +86,15 @@ Com este código, quando o aplicativo está em execução no Bluemix, as variáv
 Consulte [Modo off-line](offlineMode.html) para obter informações sobre como controlar o acesso do buildpack a sites externos. 
 
 ## App Management
-{{site.data.keyword.Bluemix}} fornece vários utilitários para gerenciar e depurar seu app Node.js.  Consulte [Gerenciamento de App](../../manageapps/app_mng.html) para obter detalhes completos.
+{{site.data.keyword.Bluemix}} fornece vários utilitários para gerenciar e depurar seu app Node.js.  Consulte [Gerenciamento de App](/docs/manageapps/app_mng.html) para obter detalhes completos.
 
 ## Versões disponíveis
 {: #available_versions}
 
 {{site.data.keyword.Bluemix}} fornece todos os
-[tempos de execução Node.js atualmente disponíveis](http://nodejs.org/dist/). Desses, a IBM fornece versões que contêm aprimoramentos e correções de bug. Consulte [Atualizações Mais Recentes para o Buildpack Node.js](../../runtimes/nodejs/updates.html) para obter mais informações.
+[tempos de execução Node.js atualmente disponíveis](http://nodejs.org/dist/). Desses, a IBM fornece versões que contêm aprimoramentos e correções de bug. Consulte [Atualizações Mais Recentes para o Buildpack Node.js](/docs/runtimes/nodejs/updates.html) para obter mais informações.
 
-O buildpack IBM Node.js armazena em cache todas as versões de tempo de execução da IBM. Portanto, se usar o tempo de execução do IBM SDK para Node.js em seu aplicativo, você obterá um desempenho mais rápido do aplicativo quando seu aplicativo for enviado por push para o Bluemix.
+O buildpack IBM Node.js armazena em cache as versões de tempo de execução da IBM. Portanto, se usar o tempo de execução do IBM SDK para Node.js em seu aplicativo, você obterá um desempenho mais rápido do aplicativo quando seu aplicativo for enviado por push para o Bluemix.
 
 Use o parâmetro **node** na seção **engines** no arquivo **package.json** para especificar a versão do tempo de execução Node.js que você deseja executar.
 
@@ -127,7 +128,7 @@ NPM fornece um recurso de script permitindo que você execute scripts, incluindo
 {: #cache_behavior}
 {{site.data.keyword.Bluemix}} mantém um diretório de cache por aplicativo de nó, que é persistido entre as construções. O cache armazena dependências resolvidas para que elas não sejam transferidas por download e instaladas toda vez que o app for implementado.  Por exemplo, suponha que myapp dependa de **express**.  Em
 seguida, na primeira vez que myapp for implementado, o módulo
-**express** será transferido por download. Em implementações subsequentes de myapp, a instância armazenada em cache de **express** será usada. O comportamento padrão é armazenar em cache todos os node_modules instalados pelo NPM e bower_components instalados pelo bower.
+**express** será transferido por download.  Em implementações subsequentes de myapp, a instância armazenada em cache de **express** será usada. O comportamento padrão é armazenar em cache todos os node_modules instalados pelo NPM e bower_components instalados pelo bower.
 
 Use a variável NODE_MODULES_CACHE para determinar se o builpack Node usa ou ignora ou não o cache de construções anteriores. O valor padrão é true.  Para desativar o armazenamento em cache, configure NODE_MODULES_CACHE como false, por exemplo, por meio da linha de comandos cf:
 ```
@@ -171,9 +172,8 @@ ajudar a contornar isso. Por exemplo, é possível fazer o seguinte em seu códi
 Veja este [post de stackoverflow](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
 para obter mais informações.
 
-**NOTA**
-[Gerenciamento de app](../../manageapps/app_mng.html) e FIPS_MODE
-*NÃO* são suportados simultaneamente.  Se a variável de ambiente
+**NOTA**: o [Gerenciamento de
+aplicativo](/docs/manageapps/app_mng.html) e o FIPS_MODE NÃO são suportados simultaneamente.  Se a variável de ambiente
 BLUEMIX_APP_MGMT_ENABLE for configurada e a variável de ambiente FIPS_MODE for
 configurada como true, o app falhará no estágio.
 
@@ -300,8 +300,7 @@ Geralmente, o buildpack **sdk-for-nodejs** atual e uma versão anterior estão d
 {: #rellinks}
 ## geral
 {: #general}
-* [Atualizações mais recentes para o buildpack Node.js](../../runtimes/nodejs/updates.html)
-* [Gerenciamento de Aplicativos
-](../../manageapps/app_mng.html)
+* [Atualizações mais recentes para o buildpack Node.js](/docs/runtimes/nodejs/updates.html)
+* [App Management](/docs/manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [IBM API Connect](https://strongloop.com/)

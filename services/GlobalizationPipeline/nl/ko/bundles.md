@@ -14,7 +14,7 @@ copyright:
 # 번들 작업
 {: #globalizationpipeline_workingwithbundles}
 
-*마지막 업데이트 날짜: 2016년 7월 6일*
+*마지막 업데이트 날짜: 2016년 8월 30일*
 {: .last-updated}
 
 작성하는 각 번들에는 생성된 번역의 전체 세트 및 리소스 파일의 키 값 쌍이 포함되어 있습니다.
@@ -24,7 +24,7 @@ copyright:
 
 
 * 파일 유형: *Java™ 특성 파일(.properties)*<br>
-예제:
+예:
 ```js
 logout=Logout 
 back=Back 
@@ -41,7 +41,7 @@ topics=Topics
 appExitMsg=Are you sure you want to quit the application?
 ```
 * 파일 유형: *AMD I18N(.js)*<br>
-예제:
+예:
 ```js
 define({
     "root": {
@@ -62,7 +62,7 @@ define({
 });
 ``` 
 * 파일 유형: *JSON(.json)*<br>
-예제:
+예:
 ```js
 {
   "logout": "Logout",
@@ -102,7 +102,7 @@ define({
 </thead>
 <tbody>
 <tr>
-<td>중국어(간체)</td>
+<td>중국어</td>
 </tr>
 <tr>
 <td>대만어</td>
@@ -131,7 +131,7 @@ define({
 </tbody>
 </table>
 
-**참고:** 영어가 현재 유일하게 지원되는 소스 언어입니다. {{site.data.keyword.GlobalizationPipeline_full}} 서비스가 전개되면서, 추가적인 소스 및 대상 언어가 추가됩니다.
+**참고:** {{site.data.keyword.GlobalizationPipeline_short}}의 기본 기계 번역 엔진은 소스 언어로 영어만 지원합니다. 하지만 {{site.data.keyword.GlobalizationPipeline_short}} 내 구성에 사용 가능한 대체 기계 번역 엔진은 영어가 아닌 다른 소스 언어/언어 쌍의 번역을 지원합니다.
 
 번들을 작성하면 **번들** 탭에 추가되어 쉽게 액세스할 수 있습니다. 거기부터 추가 태스크가 번역에서 수행될 수 있습니다.
 
@@ -190,7 +190,7 @@ define({
 
 ### 대상 언어의 생성된 번역 다운로드
 
-{{site.data.keyword.GlobalizationPipeline_full}}에서는 대상 언어에 대한 번역을 애플리케이션에 통합하는 몇몇 방법을 제공합니다. 리소스 파일로 번역을 다운로드하여 애플리케이션 빌드에 포함할 수 있습니다. 또한 오픈 소스 [SDK](https://github.com/IBM-Bluemix/gp-common) 중 하나를 통해 {{site.data.keyword.GlobalizationPipeline_full}}에서 동적으로 번역을 참조할 수 있습니다. 
+{{site.data.keyword.GlobalizationPipeline_short}}에서는 대상 언어에 대한 번역을 애플리케이션에 통합하는 몇몇 방법을 제공합니다. 리소스 파일로 번역을 다운로드하여 애플리케이션 빌드에 포함할 수 있습니다. 또한 오픈 소스 [SDK](https://github.com/IBM-Bluemix/gp-common) 중 하나를 통해 {{site.data.keyword.GlobalizationPipeline_short}}에서 동적으로 번역을 참조할 수 있습니다. 
 
 <!-- For information on {{site.data.keyword.GlobalizationPipeline_full}} SDKs, see <link>. -->
 

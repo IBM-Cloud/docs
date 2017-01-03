@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -11,12 +12,9 @@ copyright:
 # In Bluemix unterstützte Liberty-Features
 {: #liberty_features}
 
-Letzte Aktualisierung: 28. Juli 2016
-{: .last-updated}
+Die Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java umfasst eine Untergruppe von Liberty-Profilfunktionen.  Einige Features, die das Liberty-Profil anbietet, stehen in der Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java nicht zur Verfügung, weil sie nicht in der Cloudumgebung angewendet werden können.
 
-Die Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java umfasst eine Untergruppe von Liberty-Profilfunktionen. Einige Features, die das Liberty-Profil anbietet, stehen in der Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java nicht zur Verfügung, weil sie nicht in der Cloudumgebung angewendet werden können. 
-
-Die folgenden Funktionen, die für Bluemix spezifisch sind, sind enthalten: 
+Die folgenden Funktionen, die für Bluemix spezifisch sind, sind enthalten:
 * appState-1.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
@@ -208,11 +206,11 @@ Die folgende Tabelle zeigt die in Bluemix unterstützten Liberty-Features.
 </tr>
 </table>
 
-Eine Untergruppe verfügbarer Funktionen wird standardmäßig aktiviert, wenn WAR- oder EAR-Dateien implementiert werden. Details finden Sie unter dem Thema [Eigenständige Apps](optionsForPushing.html#stand_alone_apps).
+Eine Untergruppe verfügbarer Funktionen wird standardmäßig aktiviert, wenn WAR- oder EAR-Dateien implementiert werden.  Details finden Sie unter dem Thema [Eigenständige Apps](optionsForPushing.html#stand_alone_apps).
 
-Die Liberty for Java-Laufzeit stellt ferner einige Funktionen der Liberty-Betaversion zur Verfügung. Diese Funktionen werden nicht in der Tabelle aufgelistet, können jedoch unter <a href="https://new-console.ng.bluemix.net/docs/runtimes/liberty/usingBetaFeatures.html">Beta-Features verwenden</a> gefunden werden.
+Die Liberty for Java-Laufzeit stellt ferner einige Funktionen der Liberty-Betaversion zur Verfügung. Diese Funktionen werden nicht in der Tabelle aufgelistet, können jedoch unter [Beta-Features verwenden](/docs/runtimes/liberty/usingBetaFeatures.html) gefunden werden.
 
-Bedenken Sie, dass ein Server keine inkompatiblen Funktionen laden kann. Stellen Sie daher sicher, dass er so konfiguriert ist, dass nur kompatible Funktionen aktiviert werden. Siehe auch den Abschnitt zu unterstützten Kombinationen von Funktionen von Java EE 6 und 7 
+Bedenken Sie, dass ein Server keine inkompatiblen Funktionen laden kann. Stellen Sie daher sicher, dass er so konfiguriert ist, dass nur kompatible Funktionen aktiviert werden. Siehe auch den Abschnitt zu unterstützten Kombinationen von Funktionen von Java EE 6 und 7
     <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Supported Java EE 6 and 7 feature combinations</a>.
 
 Eine vollständige Liste der in Liberty verfügbaren Funktionen mit Java EE-Versionen und anderen Informationen finden Sie im Abschnitt über Liberty-Funktionen [Liberty Features](https://www.ibm.com/support/knowledgecenter/SSCKBL_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)

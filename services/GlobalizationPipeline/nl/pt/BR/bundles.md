@@ -14,7 +14,7 @@ copyright:
 # Trabalhando com pacotes configuráveis
 {: #globalizationpipeline_workingwithbundles}
 
-*Última atualização: 6 de julho de 2016*
+*Última atualização: 30 de agosto de 2016*
 {: .last-updated}
 
 Cada pacote configurável que você cria contém os pares de valores de chave de seu arquivo de recursos e o conjunto completo de traduções que foram geradas.
@@ -26,18 +26,18 @@ Os arquivos de recursos que você faz upload podem ser de qualquer um dos format
 * Tipo de arquivo: *Arquivos de propriedade Java™ (.properties)*<br>
 Exemplo:
 ```js
-logout=Efetuar logout
-back=Voltar
+logout=Logout
+back=Back
 examples=Menu
-home=Início
+home=Home
 web=Web
-enterprise=Corporativo
-extra=Recursos
-about=Sobre
-settings=Configurações
-help=Ajuda
-support=Suporte
-topics=Tópicos
+enterprise=Enterprise
+extra=Resources
+about=About
+settings=Settings
+help=Help
+support=Support
+topics=Topics
 appExitMsg=Tem certeza de que deseja sair do aplicativo?
 ```
 * Tipo de arquivo: *AMD I18N (.js)*<br>
@@ -136,9 +136,9 @@ de tradução de máquina](managing_translations.html#globalizationpipeline_serv
 </tbody>
 </table>
 
-**Nota:** o inglês é atualmente o único idioma de origem
-suportado. Conforme o serviço {{site.data.keyword.GlobalizationPipeline_full}} se
-desenvolver, idiomas adicionais de origem e destino serão incluídos.
+**Nota:** o mecanismo de tradução de máquina padrão do {{site.data.keyword.GlobalizationPipeline_short}} só fornece suporte para inglês como um idioma de origem. Entretanto,
+mecanismos de tradução de máquina alternativos disponíveis para configuração no {{site.data.keyword.GlobalizationPipeline_short}} suportam a tradução de outros idiomas de origem/pares de
+idiomas não inglês.
 
 À medida que você cria pacotes configuráveis, eles são incluídos na guia
 **Pacotes configuráveis** para torná-los facilmente acessíveis. De lá,
@@ -209,11 +209,11 @@ destino](images/trashIcon.png).
 
 ### Fazendo download das traduções geradas para um idioma de destino
 
-O {{site.data.keyword.GlobalizationPipeline_full}} fornece diversas
+O {{site.data.keyword.GlobalizationPipeline_short}} fornece diversas
 maneiras de incorporar a tradução para um idioma de destino em seu aplicativo. É possível
 fazer download da tradução como arquivo de recursos e incluí-la na construção do seu
 aplicativo. É possível também referenciar a tradução dinamicamente a partir do
-{{site.data.keyword.GlobalizationPipeline_full}} usando um dos
+{{site.data.keyword.GlobalizationPipeline_short}} usando um dos
 [SDKs](https://github.com/IBM-Bluemix/gp-common) de software livre. 
 
 <!-- For information on {{site.data.keyword.GlobalizationPipeline_full}} SDKs, see <link>. -->

@@ -2,16 +2,18 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-12-19"
 
 ---
+
+{:codeblock:.codeblock}
+
 
 # Configuring custom authentication for your {{site.data.keyword.amashort}} iOS (Swift SDK) app
 {: #custom-ios}
 
-Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amafull}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.  The newly released {{site.data.keyword.amashort}} Swift SDK  adds to and improves on the functionality provided by the existing Mobile Client Access Objective-C SDK.
+Configure your iOS application that is using custom authentication to use the {{site.data.keyword.amafull}} client SDK and connect your application to {{site.data.keyword.Bluemix}}.  
 
-**Note:** While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK.
 
 ## Before you begin
 {: #before-you-begin}
@@ -31,6 +33,11 @@ For more information, see the following information:
  * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
+### Enable Keychain Sharing for iOS
+{: #enable_keychain}
+
+Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain Sharing` to `On` in your Xcode project.
+
 
 ### Initializing the client SDK
 {: #custom-ios-sdk-initialize}
@@ -44,6 +51,7 @@ Initialize the SDK by passing the `applicationGUID` (**TenantId**) parameter. A 
 	import BMSCore
 	import BMSSecurity
 	```
+	{: codeblock}
 
 1. Initialize the {{site.data.keyword.amashort}} client SDK, change the authorization manager to the  `MCAAuthorizationManager`, and define and register an authentication delegate.
 
@@ -88,6 +96,7 @@ Initialize the SDK by passing the `applicationGUID` (**TenantId**) parameter. A 
 
 
 ```
+{: codeblock}
 
 In the code:
 * Replace `MCAServiceTenantId` with the **TenantId** value and `<applicationBluemixRegion>` with your {{site.data.keyword.amashort}} **Region** (see [Before you begin](##before-you-begin)). 
@@ -111,7 +120,7 @@ After you initialize the client SDK and register a custom authentication delegat
 
 1. Use your iOS application to make request to the same endpoint. Add the following code after you initialize `BMSClient` and register your custom authentication delegate:
 
-	```Swift
+    ```Swift
 
 	let protectedResourceURL = "<your protected resource absolute path>"
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
@@ -125,7 +134,8 @@ After you initialize the client SDK and register a custom authentication delegat
 	}
 
 	request.send(completionHandler: callBack)
-	 ```
+     ```
+     {: codeblock}
 
 1. When your requests succeeds, you see the following output in the Xcode console:
 
@@ -140,12 +150,14 @@ After you initialize the client SDK and register a custom authentication delegat
 	 })
 	 response:Optional("Hello Don Lon"), no error
 	 ```
+	 {: codeblock}
 
 1. You can also add logout functionality by adding the following code:
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
-	 ```  
+	 ``` 
+	 {: codeblock}
 
  If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge received from the server again.
 

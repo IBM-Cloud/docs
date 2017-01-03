@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-08-31"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -22,7 +22,7 @@ Client libraries, content, and samples are available to help you to build and de
 
 ## Developing your {{site.data.keyword.iot_short_notm}}
 {: #goals}
-There are several ways in which you can set up and connect your devices to {{site.data.keyword.iot_short_notm}} and retrieve and analyze the real-time data that you are interested in. Information is provided to help you to do the following tasks:
+You can develop code to set up and connect your devices to {{site.data.keyword.iot_short_notm}} and to retrieve and analyze the real-time data that you are interested in. Information is provided to help you to do the following common tasks:
 
 -  Create and manage applications
 -  Create, connect, and manage devices
@@ -39,7 +39,7 @@ You can build and manage applications in {{site.data.keyword.iot_short_notm}} by
 - MQTT messaging protocol
 - Python
 - Node.js
-- Java
+- Java™
 - C#
 
 ## Device development
@@ -60,7 +60,7 @@ You can build and manage devices in {{site.data.keyword.iot_short_notm}} by usin
 If your devices cannot directly connect to the internet, use the information provided to build a gateway device to retrieve and send data to applications in your {{site.data.keyword.iot_short_notm}} organization.
 The MQTT messaging protocol is supported for gateway development in {{site.data.keyword.iot_short_notm}}.
 
-For links to the available client libraries for {{site.data.keyword.iot_short_notm}}, click **Resources**.
+For more information and links to the client libraries that are available, see [Client libraries for {{site.data.keyword.iot_short_notm}} development](iot_platform_client_lib.html).
 
 # Related Links
 {: #rellinks}

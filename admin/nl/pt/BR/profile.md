@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # Configurações de perfil
 {: #usersettings}
-Última atualização: 20 de outubro de 2016
-{: .last-updated}
 
 Acesse o ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../icons/i-avatar-icon.svg) &gt; **Perfil do usuário** para atualizar suas configurações de perfil.
 {:shortdesc}

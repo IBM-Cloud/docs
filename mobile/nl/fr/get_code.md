@@ -13,20 +13,14 @@ lastupdated: "2016-10-13"
 # Obtention du code
 {: #Get_Code}
 
-Une fois que vous avez terminé la configuration de votre projet mobile
-avec les fonctions Notifications push, Analyse et Authentification, vous pouvez
-télécharger le code qui vous permet d'exécuter le code dans Xcode ou Android Studio. Le
+Une fois que vous avez terminé la configuration de votre projet mobile avec les fonctions sélectionnées, vous pouvez télécharger le code qui vous permet d'exécuter le code dans Xcode ou Android Studio. Le
 projet téléchargé est préconfiguré avec les dépendances aux logiciels SDK
-requises et les données d'identification de chaque fonction configurée. 
+requises et les données d'identification de chaque fonction configurée.
 
-Vous devez terminer les données d'identification des services services
-qui ne sont pas configurables dans le projet téléchargé. Le fichier
-`README.md` du projet du module de démarrage contient les
-instructions associées. Consultez le fichier `README.md` dans
-un afficheur Markdown afin de terminer la configuration. 
+Vous devez terminer les données d'identification des services qui ne sont pas configurables dans le projet téléchargé. Le fichier `README.md` du projet du module de démarrage contient les instructions associées. Consultez le fichier `README.md` dans un afficheur Markdown afin de terminer la configuration.
 
 ### Outils prérequis pour le développeur
-{: prereq-dev-tools}
+{: #prereq-dev-tools}
 
 Les outils de développement suivants sont nécessaires lorsque vous
 utilisez du code généré à partir du tableau de bord {{site.data.keyword.Bluemix_notm}} Mobile :
@@ -36,13 +30,13 @@ utilisez du code généré à partir du tableau de bord {{site.data.keyword.Blue
 	* Installez la dernière version [Android 7.0](https://www.android.com/versions/nougat-7-0/).
 
 #### iOS
-* Xcode 8.0 (recommandé)
+* [Xcode 8.0](https://developer.apple.com/xcode/) (recommandé)
 	* Installez la dernière version [iOS 10](http://www.apple.com/ios/ios-10/).
 * [Homebrew](http://brew.sh/)
 	* Outil de ligne de commande facilitant l'installation d'autres outils, tels que CocoaPods et Carthage, destiné aux développeurs Apple.
 * Gestionnaire de
 dépendances [CocoaPods](https://cocoapods.org/) pour
-l'installation des dépendances aux logiciels SDK iOS. Utilisez la version la plus récente : 
+l'installation des dépendances aux logiciels SDK iOS. Utilisez la version la plus récente :
 
 	```
 	$ sudo gem install cocoapods --pre
@@ -59,7 +53,7 @@ l'installation des logiciels SDK Watson Developer Cloud.
 * NodeJS (modules d'exécution Node et NPM) facilitant l'exécution d'API Connect
 Loopback et d'autres outils de productivité Bluemix.
 
-	Pour exécuter les outils API Connect en local, utilisez Node 5.x : 
+	Pour exécuter les outils API Connect en local, utilisez Node 5.x :
 	```
 	$ brew install Node5
 	```

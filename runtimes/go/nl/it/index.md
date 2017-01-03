@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 # Go
 {: #go_runtime}
-Ultimo aggiornamento: 06 luglio 2016 
 
 Il runtime Go su {{site.data.keyword.Bluemix}} si avvale della tecnologia go_buildpack.
 go_buildpack fornisce un ambiente di runtime completo per la applicazione GO.
@@ -23,7 +23,7 @@ go_buildpack viene utilizzato se la tua applicazione contiene un file denominato
 ## Applicazione starter
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} Fornisce un'applicazione starter Go.  L'applicazione starter Go è un'applicazione Go semplice che fornisce un template che puoi utilizzare per la tua applicazione. Puoi sperimentare l'applicazione starter ed effettuare e inviare modifiche all'ambiente Bluemix  Consulta [Utilizzo di applicazioni starter](../../cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+{{site.data.keyword.Bluemix}} Fornisce un'applicazione starter Go.  L'applicazione starter Go è un'applicazione Go semplice che fornisce un template che puoi utilizzare per la tua applicazione. Puoi sperimentare l'applicazione starter ed effettuare e inviare modifiche all'ambiente Bluemix  Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
 
 ## Versioni di runtime
 {: #runtime_versions}

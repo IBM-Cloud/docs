@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # 계정 관리 문제점 해결
 {: #managingaccounts}
 
-마지막 업데이트 날짜: 2016년 8월 18일
-{: .last-updated}
 
 계정을 관리할 때 여러 앱이 동일한 도메인 이름을 공유하거나 관리자가 일부 조직을 볼 수 없는 것과 같은 문제점이 발생할 수 있습니다. 그러나 대부분의 경우
 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다. 
@@ -37,7 +37,7 @@ copyright:
 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms} 
 
-`BXNUI0096E: The app wasn't created. Your account is inactive because it was canceled or suspended.`
+`BXNUI0096E: 앱이 작성되지 않았습니다. 계정이 취소되었거나 일시중단되었기 때문에 계정이 비활성 상태입니다.`
 
 
 계정이 취소되었거나 일시중단된 경우 {{site.data.keyword.Bluemix_notm}} 계정의 상태가 비활성화됩니다.
@@ -45,7 +45,7 @@ copyright:
 
  
 
-계정을 다시 활성화하려면 [{{site.data.keyword.Bluemix_notm}} 지원 센터](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오. 이메일에 다음 정보를 포함해야 합니다.
+계정을 다시 활성화하려면 [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오. 이메일에 다음 정보를 포함해야 합니다.
 {: tsResolve}
 
   * {{site.data.keyword.Bluemix_notm}}에 로그인하는 데 사용하는 IBM ID입니다.
@@ -65,7 +65,7 @@ copyright:
 {: tsSymptoms} 
 
 
-`BXNUI0097E: Before you can add an app, at least one space must be associated with your organization and region. On the Dashboard, click Create a Space. When the space is created, try again.`
+`BXNUI0097E: 앱을 추가하려면 하나 이상의 영역을 조직 및 지역과 연관시켜야 합니다. 대시보드에서 영역 작성을 클릭하십시오. 영역이 작성되면 다시 시도하십시오.`
 
 
 

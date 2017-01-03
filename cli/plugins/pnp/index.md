@@ -79,7 +79,7 @@ Follow these steps to install the plug-in from the Bluemix repository:
 	```  
 
 ## List of private network peering commands
-The following four commands are supported. Use the `bluemix network` command to see the list of available commands:
+The following commands are supported. Use the `bluemix network` command to see the list of available commands:
 
 | Command     | Description                                    |
 |-------------|------------------------------------------------|
@@ -87,6 +87,8 @@ The following four commands are supported. Use the `bluemix network` command to 
 | pnp-create  | Creates a private network peering connection   |
 | pnp-delete  | Deletes a private network peering connection   |
 | pnp-show    | Lists all private network peering connections  |
+{: caption="Table 1. Private network peering commands" caption-side="top"}
+
 
 ### Command usage
 To view help information for the commands, run: `bluemix network [command] -h`.

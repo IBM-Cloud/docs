@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-
+lastupdated: "2016-11-08"
 
 ---
 
@@ -18,14 +18,11 @@ copyright:
 # Interface de ligne de commande pour l'administration de {{site.data.keyword.Bluemix_notm}}
 {: #bluemixadmincli}
 
-Dernière mise à jour : 1 septembre 2016
-{: .last-updated}
-
 
 Vous pouvez gérer les utilisateurs pour votre environnement
 {{site.data.keyword.Bluemix_notm}} local ou {{site.data.keyword.Bluemix_notm}} dédié en utilisant l'interface de ligne de commande Cloud Foundry avec le plug-in
 d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis
-un registre LDAP. Pour des informations sur la gestion de votre compte {{site.data.keyword.Bluemix_notm}} public, voir [Administration](../../../admin/adminpublic.html#administer).
+un registre LDAP. Pour des informations sur la gestion de votre compte {{site.data.keyword.Bluemix_notm}} public, voir [Administration](/docs/admin/adminpublic.html#administer).
 
 Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window}
 
@@ -60,7 +57,7 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;sous-domaine&gt;.bluemix.net
 
 Si vous devez désinstaller le plug-in, vous pouvez utiliser les commandes suivantes, puis vous pouvez ajouter le référentiel mis à jour et installer la dernière version du plug-in :
 
-* Désinstallez le plug-in : `cf uninstall-plugin-repo BluemixAdminCLI`
+* Désinstallez le plug-in : `cf uninstall-plugin BluemixAdminCLI`
 * Retirez le référentiel de plug-in : `cf remove-plugin-repo BluemixAdmin`
 
 
@@ -69,7 +66,7 @@ d'administration {{site.data.keyword.Bluemix_notm}}
 
 Vous pouvez utiliser le plug-in d'interface de ligne de commande d'administration
 {{site.data.keyword.Bluemix_notm}} pour ajouter ou retirer des utilisateurs, affecter des
-utilisateurs à des organisations ou annuler leur affectation, et effectuer d'autres tâches de gestion. 
+utilisateurs à des organisations ou annuler leur affectation, et effectuer d'autres tâches de gestion.
 
 Pour afficher la liste des commandes, exécutez la
 commande suivante :
@@ -117,9 +114,8 @@ cf ba add-user <nom_utilisateur> <organisation>
 **Remarque** : pour ajouter un utilisateur à une organisation spécifique, vous devez être un **administrateur**
 disposant du droit **users.write** (ou **Superutilisateur**). Si vous êtes un responsable de l'organisation, vous
 pouvez aussi disposer de la capacité d'ajouter des utilisateurs à votre organisation via un superutilisateur qui exécute la commande
-**enable-managers-add-users**. Voir [Permettre aux responsables d'ajouter des utilisateurs](index.html#clius_emau) pour
+**enable-managers-add-users**.  Voir [Permettre aux responsables d'ajouter des utilisateurs](index.html#clius_emau) pour
 plus d'informations.
-
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_utilisateur&gt;</dt>
@@ -152,7 +148,7 @@ cf ba search-users -name=<valeur_nom_utilisateur> -permission=<valeur_droit> -or
 <dd class="pd">Nom de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}. </dd>
 <dt class="pt dlterm">&lt;valeur_droit&gt;</dt>
 <dd class="pd">Droit accordé à l'utilisateur. Exemple : Superutilisateur, Accès de base, Catalogue, Utilisateur et Rapports. Pour plus d'informations sur les droits pouvant être
-affectés aux utilisateurs, voir [Droits](../../../admin/index.html#permissions). Vous ne pouvez pas utiliser ce paramètre avec le
+affectés aux utilisateurs, voir [Droits](/docs/admin/index.html#permissions). Vous ne pouvez pas utiliser ce paramètre avec le
 paramètre organization dans une même requête. </dd>
 <dt class="pt dlterm">&lt;valeur_organisation&gt;</dt>
 <dd class="pd">Nom de l'organisation à laquelle appartient l'utilisateur. Vous ne pouvez pas utiliser ce paramètre avec le paramètre organization dans une
@@ -160,7 +156,7 @@ même requête.</dd>
 <dt class="pt dlterm">&lt;valeur_rôle&gt;</dt>
 <dd class="pd">Rôle de l'organisation affecté à l'utilisateur. Exemple : responsable, responsable de la facturation ou auditeur de l'organisation. Vous
 devez spécifier l'organisation avec ce paramètre. Pour plus d'informations sur les rôles, voir
-[Rôles utilisateur](../../../admin/users_roles.html#userrolesinfo).</dd>
+[Rôles utilisateur](/docs/admin/users_roles.html#userrolesinfo).</dd>
 
 </dl>
 
@@ -213,7 +209,7 @@ cf ba remove-user <nom_utilisateur>
 **Astuce :** vous pouvez aussi utiliser **ba ru** comme alias pour le nom de commande plus long **ba
 remove-user**.
 
-### Permettre aux responsables d'ajouter des utilisateurs 
+### Permettre aux responsables d'ajouter des utilisateurs
 {: #clius_emau}
 
 Si vous disposez du droit **Superutilisateur** dans votre environnement {{site.data.keyword.Bluemix_notm}}, vous pouvez
@@ -227,12 +223,12 @@ cf ba enable-managers-add-users
 **Astuce :** vous pouvez aussi utiliser **ba emau** comme alias pour le nom de commande plus long **ba
 enable-managers-add-users**.
 
-### Empêcher les responsables d'ajouter des utilisateurs 
+### Empêcher les responsables d'ajouter des utilisateurs
 {: #clius_dmau}
 
 Si des responsables de l'organisation ont été autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement
 {{site.data.keyword.Bluemix_notm}} avec la commande **enable-managers-add-users** et que vous disposez du droit
-**Superutilisateur**, vous pouvez supprimer cette capacité. Entrez la commande suivante :
+**Superutilisateur**, vous pouvez supprimer cette capacité.  Entrez la commande suivante :
 
 ```
 cf ba disable-managers-add-users
@@ -296,7 +292,7 @@ cf ba set-org <nom_utilisateur> <organisation> [<rôle>]
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à laquelle affecter l'utilisateur.</dd>
 <dt class="pt dlterm">&lt;rôle&gt;</dt>
-<dd class="pd">Voir [Rôles](../../../admin/users_roles.html) pour prendre connaissance des rôles utilisateur
+<dd class="pd">Voir [Rôles](/docs/admin/users_roles.html) pour prendre connaissance des rôles utilisateur
 {{site.data.keyword.Bluemix_notm}} et pour des descriptions.</dd>
 </dl>
 
@@ -320,7 +316,7 @@ cf ba unset-org <nom_utilisateur> <organisation> [<rôle>]
 <dd class="pd">Nom ou identificateur global unique de l'organisation {{site.data.keyword.Bluemix_notm}}
 à laquelle affecter l'utilisateur.</dd>
 <dt class="pt dlterm">&lt;rôle&gt;</dt>
-<dd class="pd">Voir [Rôles](../../../admin/users_roles.html) pour prendre connaissance des rôles utilisateur
+<dd class="pd">Voir [Rôles](/docs/admin/users_roles.html) pour prendre connaissance des rôles utilisateur
 {{site.data.keyword.Bluemix_notm}} et pour des descriptions.</dd>
 </dl>
 
@@ -364,6 +360,94 @@ pour laquelle définir le quota.</dd>
 
 **Astuce :** vous pouvez aussi utiliser **ba sq** comme alias pour le nom de commande plus long **ba
 set-quota**.
+
+
+### Recherche et définition des quotas de conteneur pour une organisation
+{: #containquotas}
+
+Vous pouvez rechercher et définir des quotas pour les conteneurs d'une
+organisation. 
+
+Pour rechercher le quota des conteneurs d'une organisation, entrez la commande suivante : 
+
+```
+cf bluemix-admin containers-quota <organisation>
+```
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dd class="pd">Nom ou ID de l'organisation dans Bluemix. Ce paramètre est obligatoire.</dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser **ba cq** comme alias pour le nom de commande plus long
+**bluemix-admin containers-quota**.
+
+Pour définir le quota des conteneurs d'une organisation, entrez la commande ci-après en incluant au moins l'une des options suivantes : 
+
+```
+cf bluemix-admin set-containers-quota <organisation> <options>
+```
+{: codeblock}
+
+**Remarque** : Vous pouvez inclure plusieurs options,
+mais vous devez en indiquer au moins une. 
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organisation&gt;</dt>
+<dd class="pd">Nom ou ID de l'organisation dans Bluemix. Ce paramètre est obligatoire.</dd>
+<dt class="pt dlterm">&lt;options&gt;</dt>
+<dd class="pd">Incluez au moins l'une des options suivantes, dont la valeur
+doit être un entier :
+<ul>
+<li>floating-ips-max &lt;valeur&gt;</li>
+<li>floating-ips-space-default &lt;valeur&gt;</li>
+<li>memory-max &lt;valeur&gt;</li>
+<li>memory-space-default &lt;valeur&gt;</li>
+<li>image-limit &lt;valeur&gt;</li>
+</ul>
+</dd>
+</dl>
+
+**Astuce :** vous pouvez aussi utiliser les noms
+abrégés suivants comme alias des noms d'option plus longs : 
+<dl class="parml">
+<dt class="pt dlterm">floating-ips-max &lt;valeur&gt;</dt>
+<dd class="pd"><strong>fim</strong></dd>
+<dt class="pt dlterm">floating-ips-space-default &lt;valeur&gt;</dt>
+<dd class="pd"><strong>fisd</strong></dd>
+<dt class="pt dlterm">memory-max &lt;valeur&gt;</dt>
+<dd class="pd"><strong>mm</strong></dd>
+<dt class="pt dlterm">memory-space-default &lt;valeur&gt;</dt>
+<dd class="pd"><strong>msd</strong></dd>
+<dt class="pt dlterm">image-limit &lt;valeur&gt;</dt>
+<dd class="pd"><strong>il</strong></dd>
+</dl>
+
+Vous pouvez, si vous le souhaitez, fournir un fichier contenant des paramètres de configuration spécifiques dans un objet JSON valide. Si
+vous utilisez l'option **-file**, elle prévaut sur les
+autres options qui sont ignorées. Pour indiquer un fichier au lieu des options,
+entrez la commande suivante :
+
+```
+cf bluemix-admin set-containers-quota <organisation> <-file chemin_fichier_JSON>
+```
+{: codeblock}
+
+Le fichier JSON doit être au format indiqué dans l'exemple suivant : 
+
+```
+{
+  "floating_ips_max": 10,
+  "floating_ips_space_default": 0,
+  "ram_max": 4096,
+  "ram_space_default": 0,
+  "image_limit": 10
+}  
+```
+{: codeblock}
+
+**Astuce :** vous pouvez aussi utiliser **ba scq** comme alias pour le nom de commande plus long **bluemix-admin set-containers-quota**.
 
 ### Ajout, suppression et extraction de rapports
 
@@ -548,30 +632,30 @@ globaux uniques supplémentaires dans la commande.</dd>
 **Astuce :** vous pouvez aussi utiliser **ba espv** comme alias pour le nom de commande plus long **ba
 edit-service-plan-visibility**.
 
-### Affichage des informations sur l'utilisation des ressources 
+### Affichage des informations relatives aux mesures des ressources
 {: #cliresourceusage}
 
-Vous pouvez afficher des informations sur l'utilisation des ressources, notamment sur l'utilisation de la mémoire, du disque et de l'unité centrale. Vous
+Vous pouvez afficher des informations sur les mesures des ressources,
+notamment sur l'utilisation de la mémoire, du disque et de l'unité centrale. Vous
 pouvez consulter un récapitulatif des ressources physiques et réservées disponibles, ainsi que l'utilisation des ressources physiques et réservées. Vous
 pouvez également afficher les données d'utilisation des agents DEA (Droplet Execution Agent) et l'utilisation historique de la mémoire et du disque. Les
-données d'historique pour l'utilisation de la mémoire et du disque sont affichées par défaut par semaine et par ordre décroissant. Pour afficher
-les informations sur l'utilisation des ressources, entrez la commande suivante :
+données d'historique pour l'utilisation de la mémoire et du disque sont affichées par défaut par semaine et par ordre décroissant. 
+Pour afficher les informations sur les mesures des ressources, entrez la commande suivante :
 
 
 ```
-cf ba resource-usage <monthly> <weekly> 
+cf ba resource-metrics <monthly> <weekly>
 ```
 {: codeblock}
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;monthly&gt;</dt>
-<dd class="pd">Affichez les données d'historique pour la mémoire et l'espace disque un mois à la fois. </dd>
+<dd class="pd">Affichez les données d'historique pour la mémoire et l'espace disque un mois à la fois.</dd>
 <dt class="pt dlterm">&lt;weekly&gt;</dt>
 <dd class="pd">Affichez les données d'historique pour la mémoire et l'espace disque une semaine à la fois. Il s'agit de la valeur par défaut.</dd>
 </dl>
 
-**Astuce :** vous pouvez aussi utiliser **ba rsu** comme alias pour le nom de commande plus long **ba
-resource-usage**.
+**Astuce :** vous pouvez aussi utiliser **ba rsm** comme alias pour le nom de commande plus long **ba resource-metrics**.
 
 ### Utilisation de courtiers de services
 
@@ -637,7 +721,9 @@ delete-service-broker**.
 
 * Vous pouvez mettre à jour un courtier de services avec la commande suivante :
 
-`cf ba update-service-broker <nom_courtier> <nom_utilisateur> <mot_de_passe> <url_courtier>`
+```
+cf ba update-service-broker <nom_courtier> <nom_utilisateur> <mot_de_passe> <url_courtier>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -837,14 +923,14 @@ cf ba unbind-security-group <groupe-sécurité> <org> <espace>
 
 **Astuce :** vous pouvez aussi utiliser **ba usg** comme alias pour le nom de commande plus long **ba unbind-staging-security-group**.
 
-### Utilisation des packs de construction 
+### Utilisation des packs de construction
 {: #buildpacks}
 
 Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez répertorier, créer, mettre à jour et supprimer les packs de
-construction.   
-#### Répertorier tous les packs de construction 
+construction.  
+#### Répertorier tous les packs de construction
 
-Entrez la commande suivante pour répertorier tous les packs de construction ou pour afficher un pack de construction spécifique : 
+Entrez la commande suivante pour répertorier tous les packs de construction ou pour afficher un pack de construction spécifique :
 
 ```
 cf ba buildpacks <nom_pack_construction>
@@ -853,18 +939,16 @@ cf ba buildpacks <nom_pack_construction>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
-<dd class="pd">Paramètre facultatif permettant de spécifier un pack de construction particulier à afficher.
-</dd>
+<dd class="pd">Paramètre facultatif permettant de spécifier un pack de construction particulier à afficher.</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba lb** comme alias pour le nom de commande plus long **ba
 buildpacks**.
 
-#### Créer et télécharger un pack de construction 
+#### Créer et télécharger un pack de construction
 
-Vous pouvez créer et télécharger un pack de construction. Vous pouvez télécharger tout fichier compressé dont le type est .zip. Entrez la commande
+Vous pouvez créer et télécharger un pack de construction. Vous pouvez télécharger tout fichier compressé dont le type est .zip.  Entrez la commande
 suivante pour télécharger un pack de construction :
-
 
 ```
 cf ba create-buildpack <nom_pack_construction> <chemin_fichier> <position>
@@ -873,20 +957,19 @@ cf ba create-buildpack <nom_pack_construction> <chemin_fichier> <position>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
-<dd class="pd">Nom du pack de construction à télécharger. </dd>
+<dd class="pd">Nom du pack de construction à télécharger.</dd>
 <dt class="pt dlterm">&lt;chemin_fichier&gt;</dt>
-<dd class="pd">Chemin du fichier compressé du pack de construction. </dd>
+<dd class="pd">Chemin du fichier compressé du pack de construction.</dd>
 <dt class="pt dlterm">&lt;position&gt;</dt>
-<dd class="pd">Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction.
-</dd>
+<dd class="pd">Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction.</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba cb** comme alias pour le nom de commande plus long **ba
 create-buildpack**.
 
-#### Mettre à jour un pack de construction 
+#### Mettre à jour un pack de construction
 
-Pour mettre à jour un pack de construction existant, entrez la commande suivante : 
+Pour mettre à jour un pack de construction existant, entrez la commande suivante :
 
 ```
 cf ba update-buildpack <nom_pack_construction> <position> <activé> <verrouillé>
@@ -895,21 +978,21 @@ cf ba update-buildpack <nom_pack_construction> <position> <activé> <verrouillé
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
-<dd class="pd">Nom du pack de construction à mettre à jour. </dd>
+<dd class="pd">Nom du pack de construction à mettre à jour.</dd>
 <dt class="pt dlterm">&lt;position&gt;</dt>
-<dd class="pd">Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction. </dd>
+<dd class="pd">Ordre dans lequel les packs de construction sont recherchés au cours de la détection automatique des packs de construction.</dd>
 <dt class="pt dlterm">&lt;activé&gt;</dt>
-<dd class="pd">Indique si le pack de construction est utilisé pour la constitution. </dd>
+<dd class="pd">Indique si le pack de construction est utilisé pour la constitution.</dd>
 <dt class="pt dlterm">&lt;verrouillé&gt;</dt>
-<dd class="pd">Indique si le pack de construction est verrouillé pour empêcher les mises à jour. </dd>
+<dd class="pd">Indique si le pack de construction est verrouillé pour empêcher les mises à jour.</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba ub** comme alias pour le nom de commande plus long **ba
 update-buildpack**.
 
-#### Supprimer un pack de construction 
+#### Supprimer un pack de construction
 
-Pour supprimer un pack de construction existant, entrez la commande suivante : 
+Pour supprimer un pack de construction existant, entrez la commande suivante :
 
 ```
 cf ba delete-buildpack <nom_pack_construction>
@@ -918,7 +1001,7 @@ cf ba delete-buildpack <nom_pack_construction>
 
 <dl class="parml">
 <dt class="pt dlterm">&lt;nom_pack_construction&gt;</dt>
-<dd class="pd">Nom du pack de construction à supprimer. </dd>
+<dd class="pd">Nom du pack de construction à supprimer.</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba db** comme alias pour le nom de commande plus long **ba

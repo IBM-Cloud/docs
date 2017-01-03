@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # 开始使用 Compose for MongoDB
 {: #getting-started-with-compose-for-mongodb}
-
-上次更新时间：2016 年 9 月 20 日
-{: .last-updated}
 
 {{site.data.keyword.composeForMongoDB_full}} 使用强大的建立索引和查询、聚集功能，以及 MongoDB 的广泛驱动程序支持，使其成为许多初创公司和企业的首选 JSON 数据存储库。{{site.data.keyword.composeForMongoDB}} 提供一种简单的自动扩展部署系统。它可在一个简洁明了的用户界面中，提供高可用性和冗余、自动和随需应变不停止备份、监视工具、与警报系统的集成、性能分析视图等一切功能。
 {:shortdesc}
@@ -32,7 +29,7 @@ copyright:
 
    要将应用程序连接到服务，请使用随服务一起创建的凭证。样本应用程序会示范如何使用 Node.js 连接到 {{site.data.keyword.composeForMongoDB}} 服务。
 
-   下载 [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs) 样本应用程序，并遵循自述文件中的指示。然后，在 Bluemix 中的应用程序详细信息页面中，单击**查看应用程序**。
+   下载 [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs) 样本应用程序，并遵循自述文件中的指示信息。然后，在 Bluemix 中的应用程序详细信息页面中，单击**查看应用程序**。
 
 
 ## 可用凭证
@@ -45,6 +42,8 @@ copyright:
 `deployment_id`|在 Compose 内创建的服务的内部标识。
 `db_type`|服务所提供的数据库类型：在本例中为 `mongodb`。
 `name`|数据库部署名称。
+
+{: caption="Table 1. {{site.data.keyword.composeForMongoDB}} credentials" caption-side="top"}
 
 # 相关链接
 {: #rellinks}

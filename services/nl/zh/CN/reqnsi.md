@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 #服务
 {: #services}
-*上次更新时间：2016 年 8 月 10 日*
 
 在 {{site.data.keyword.Bluemix}} 用户界面中，可以在**目录**的**服务**下找到可用的服务。
 {:shortdesc}
@@ -37,11 +37,11 @@ copyright:
 
 |类型	|描述	|支持详细信息|
 |:------|:--------------|:--------------|
-|IBM	|IBM 提供且普遍可用的服务。	|如果问题确定为 IBM 提供且普遍可用的服务中的缺陷，那么将受支持。将基于您设置的严重性提供支持。有关凭单严重性的更多信息，请参阅[联系支持人员](../support/index.html#contacting-bluemix-support){: new_window}。|
+|IBM	|IBM 提供且普遍可用的服务。	|如果问题确定为 IBM 提供且普遍可用的服务中的缺陷，那么将受支持。将基于您设置的严重性提供支持。有关凭单严重性的更多信息，请参阅[联系支持人员](/docs/support/index.html#contacting-bluemix-support){: new_window}。|
 |第三方	|非 IBM 公司提供的服务。	|对第三方服务的支持由服务提供者提供。如果 IBM 调查的某个问题确定为第三方服务中的缺陷，那么 IBM 没有义务提供修订。如果需要，IBM 将与第三方服务提供者共享分析。|
 |社区	|开放式源代码社区提供的服务。	|对社区服务的支持由 {{site.data.keyword.Bluemix_notm}} 开发者社区提供。如果 IBM 调查的某个问题确定为社区服务中的缺陷，那么 IBM 没有义务提供修订。|
-|Beta	|尚不可用于生产、目前处于开发试用阶段的服务。Beta 服务可帮助开发和市场营销团队先评估服务价值，再使服务普遍可用。	|如果问题确定为 IBM 提供的 beta 服务中的缺陷，那么将受支持，但 IBM 没有义务提供修订。此外，将在适当的情况下为问题凭单分配严重性 3 或 4。有关凭单严重性的信息，请参阅[联系支持人员](../support/index.html#contacting-bluemix-support){: new_window}。|
-*表 1. {{site.data.keyword.Bluemix_notm}} 服务支持信息*
+|Beta	|尚不可用于生产、目前处于开发试用阶段的服务。Beta 服务可帮助开发和市场营销团队先评估服务价值，再使服务普遍可用。	|如果问题确定为 IBM 提供的 beta 服务中的缺陷，那么将受支持，但 IBM 没有义务提供修订。此外，将在适当的情况下为问题凭单分配严重性 3 或 4。有关凭单严重性的信息，请参阅[联系支持人员](/docs/support/index.html#contacting-bluemix-support){: new_window}。|
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 
 
@@ -139,11 +139,15 @@ copyright:
 *表 2. 服务可用性*
 
 
+{: caption="Table 2. Service availability" caption-side="top"}
+
+
+
 # 将服务添加到应用程序
 {: #add_service}
-*上次更新时间：2016 年 3 月 8 日*
 
-{{site.data.keyword.Bluemix}} 具有服务列表并为开发人员管理这些服务。要添加服务以供您的应用程序使用，必须请求此服务的实例，并将该应用程序配置为与此服务进行交互。
+
+{{site.data.keyword.Bluemix}} 具有服务列表并为开发者管理这些服务。要添加服务以供您的应用程序使用，必须请求此服务的实例，并将该应用程序配置为与此服务进行交互。
 
 通过下列方式，您可以在 {{site.data.keyword.Bluemix_notm}} 中查看所有可用服务：
 
@@ -195,7 +199,7 @@ cf create-service service_name service_plan service_instance
 只能将服务实例绑定到位于同一空间或组织中的应用程序实例。不过，也可以按照与外部应用程序相同的方式使用其他空间或组织中的服务实例。不要创建绑定，请改用凭证来直接配置应用程序实例。有关外部应用程序如何使用 {{site.data.keyword.Bluemix_notm}} 服务的更多信息，请参阅[允许外部应用程序使用 {{site.data.keyword.Bluemix_notm}} 服务](#accser_external){: new_window}。
 
 
-## 将应用程序配置为与服务进行交互 
+## 将应用程序配置为与服务进行交互
 {: #config}
 
 将服务实例绑定到应用程序后，必须将应用程序配置为与服务交互。
@@ -206,7 +210,7 @@ cf create-service service_name service_plan service_instance
 * 要与移动后端服务交互，请使用 {{site.data.keyword.Bluemix_notm}} 提供的信息，例如，应用程序标识、特定于客户机的安全性信息以及应用程序的访问 URI。移动服务通常彼此配合工作，以便能够在一组服务之间共享上下文信息，例如，应用程序开发者名称和使用应用程序的用户。
 * 要与 Web 应用程序或移动应用程序的服务器端云代码交互，请在应用程序的 *VCAP_SERVICES* 环境变量中使用 {{site.data.keyword.Bluemix_notm}} 提供的信息，例如，运行时凭证。*VCAP_SERVICES* 环境变量的值是序列化 JSON 对象。该变量包含与绑定应用程序的服务进行交互所需要的运行时数据。不同服务的数据格式不同。您可能需要阅读服务文档以了解预期的结果以及如何解读每条信息。
 
-如果绑定到应用程序的服务崩溃，那么应用程序可能会停止运行或发生错误。{{site.data.keyword.Bluemix_notm}} 不会自动重新启动应用程序，以便从这些问题中进行恢复。在进行应用程序编码时，应考虑到识别中断、异常和连接失败以及进行恢复的问题。有关更多信息，请参阅[应用程序不会自动重新启动](../troubleshoot/index.html#ts_topmenubar)故障诊断主题。
+如果绑定到应用程序的服务崩溃，那么应用程序可能会停止运行或发生错误。{{site.data.keyword.Bluemix_notm}} 不会自动重新启动应用程序，以便从这些问题中进行恢复。在进行应用程序编码时，应考虑到识别中断、异常和连接失败以及进行恢复的问题。有关更多信息，请参阅[应用程序不会自动重新启动](/docs/troubleshoot/index.html#ts_topmenubar)故障诊断主题。
 
 ## 允许外部应用程序使用 {{site.data.keyword.Bluemix_notm}} 服务
 {: #accser_external}
@@ -289,7 +293,7 @@ cf uups testups2 -l syslog://example2.com
 
   * 使用服务凭证来直接配置应用程序实例。有关详细信息，请参阅[允许外部应用程序使用 {{site.data.keyword.Bluemix_notm}} 服务](#accser_external){: new_window}。
   * 创建用户提供的服务作为网桥。
-    
+
 	假定您是在要使用服务实例的区域开始操作。要使用另一个区域中存在的服务实例，请完成以下步骤：
 
       1. 切换到服务实例所在的区域。在 {{site.data.keyword.Bluemix_notm}} 菜单栏中，展开**区域**或单击**区域**图标，然后选择服务实例所在的区域。
@@ -297,7 +301,7 @@ cf uups testups2 -l syslog://example2.com
       2. 在服务所在的区域中从服务实例的 VCAP_SERVICES 环境变量检索凭证和连接参数。请完成以下步骤：
 
 	       1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”中，单击应用程序磁贴。这将显示“概述”页面。
-	       2. 在导航窗格中，单击**环境变量**。*VCAP_SERVICES* 环境变量详细信息会显示在右侧窗格中。记录服务实例的 JSON 内容。
+	       2. 在导航窗格中，单击**环境变量**。这将显示 *VCAP_SERVICES* 环境变量详细信息。记录服务实例的 JSON 内容。
 
       3. 切换到您要在其中使用服务实例的区域。在 {{site.data.keyword.Bluemix_notm}} 菜单栏中，展开**区域**或单击**区域**图标，然后选择要在其中使用服务实例的区域。
 
@@ -323,7 +327,7 @@ cf uups testups2 -l syslog://example2.com
 
 1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，单击要访问的服务的磁贴。这将显示该服务的仪表板。
 2. 在导航窗格中，单击**管理**，通过使用该服务实例的控制台来授权其他服务实例绑定该服务实例。
-3. 如果想要拒绝其他服务访问该服务实例，请单击导航窗格中的**服务访问授权**，然后使用**撤销**来除去服务绑定。 
+3. 如果想要拒绝其他服务访问该服务实例，请单击导航窗格中的**服务访问授权**，然后使用**撤销**来除去服务绑定。
 
 # 相关链接
 {: #rellinks}
@@ -331,7 +335,5 @@ cf uups testups2 -l syslog://example2.com
 ## 常规
 {: #general}
 
-* [使用 {{site.data.keyword.Bluemix_notm}} 用户界面绑定服务](../cfapps/ee.html#ee_bindui)
-* [检索 VCAP_SERVICES](../cli/vcapsvc.html#retrieving)
-
-
+* [使用 {{site.data.keyword.Bluemix_notm}} 用户界面绑定服务](/docs/cfapps/ee.html#ee_bindui)
+* [检索 VCAP_SERVICES](/docs/cli/vcapsvc.html#retrieving)

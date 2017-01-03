@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
-  2016
-
- 
+  years: 2016
+lastupdated: "2016-09-27"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # Détails du système {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_reference}
-Dernière mise à jour : 9 septembre 2016
-{: .last-updated}
+
 
 Les sections ci-après fournissent davantage de détails sur le système {{site.data.keyword.openwhisk}}.
 {: shortdesc}
@@ -108,14 +103,14 @@ De plus, l'exécution des actions de manière atomique n'est pas garantie. Deux 
 peuvent s'imbriquer. OpenWhisk ne garantit aucun un modèle de cohérence spécifique quant aux effets secondaires. Les
 effets secondaires liés à la simultanéité dépendent de l'implémentation.
 
-### Garanties de l'exécution des actions 
+### Garanties de l'exécution des actions
 {: #openwhisk_atmostonce}
 
 Lorsqu'une demande d'appel est reçue, le système enregistre la demande et attribue l'activation.
 
 Le système renvoie un ID d'activation (dans le cas d'un appel non bloquant) pour confirmer que l'appel a été reçu.
 Sachez que si une défaillance du réseau, ou toute autre panne, survient avant que vous ne receviez de réponse HTTP, il est tout de même possible
-qu'{{site.data.keyword.openwhisk_short}} ait reçu et traité la demande. 
+qu'{{site.data.keyword.openwhisk_short}} ait reçu et traité la demande.
 
 Le système tente d'appeler l'action une fois, ce qui génère l'un des quatre résultats suivants :
 - *success* : l'appel de l'action a abouti.
@@ -130,10 +125,9 @@ Chaque appel reçu et pour lequel l'utilisateur peut être facturé possède un 
 
 Notez que dans le cas d'une erreur de type *action developer error*, il se peut que l'action ait été exécutée partiellement et
 qu'elle ait
-généré des effets secondaires externes visibles. Il revient à l'utilisateur de vérifier que de tels effets secondaires ont été générés et d'émettre une
-logique de relance s'il le souhaite. Sachez également que certaines erreurs de type *whisk internal error* indiquent que l'exécution d'une
+généré des effets secondaires externes visibles.   Il revient à l'utilisateur de vérifier que de tels effets secondaires ont été générés et d'émettre une
+logique de relance s'il le souhaite.   Sachez également que certaines erreurs de type *whisk internal error* indiquent que l'exécution d'une
 action a commencé mais que le système est tombé en panne avant la fin de l'action enregistrée.
-
 
 ## Enregistrement d'activation
 {: #openwhisk_ref_activation}
@@ -192,10 +186,9 @@ d'une action JavaScript peut être *synchrone* ou *asynchrone*.
 
 L'activation d'une action JavaScript est **synchrone** si la fonction main se termine dans l'une des conditions suivantes :
 
-- La fonction main se termine sans exécuter d'instruction `return`. 
+- La fonction main se termine sans exécuter d'instruction `return`.
 - La fonction main se termine en exécutant une instruction `return` qui renvoie n'importe quelle valeur *sauf* une
 promesse (objet Promise).
-
 
 Voici un exemple d'action qui s'exécute de façon synchrone :
 
@@ -247,14 +240,14 @@ Une action peut être synchrone pour certaines entrées et asynchrone pour d'aut
 ```
   function main(params) {
       if (params.payload) {
-         // asynchronous activation
+         // activation asynchrone
          return new Promise(function(resolve, reject) {
                 setTimeout(function() {
                   resolve({ done: true });
        }, 100);
     })
       } else {
-         // synchronous activation
+         // activation synchrone
          return {done: true};
       }
   }
@@ -275,18 +268,17 @@ valeur true, l'appel attend le résultat de l'action appelée avant de résoudre
 `false` et signifie que l'appel est non bloquant.
 
 `whisk.invoke()` renvoie une promesse. Pour que le système OpenWhisk attende la fin de l'appel, vous devez renvoyer cette promesse
-depuis la fonction `main` de votre action. 
-- Si l'appel échoue, la promesse est rejetée avec un objet décrivant l'appel ayant échoué. Cet objet comprend potentiellement deux zones : 
-  - *error* : objet décrivant l'erreur, généralement une chaîne. 
+depuis la fonction `main` de votre action.
+- Si l'appel échoue, la promesse est rejetée avec un objet décrivant l'appel ayant échoué. Cet objet comprend potentiellement deux zones :
+  - *error* : objet décrivant l'erreur, généralement une chaîne.
   - *activation* : dictionnaire facultatif qui peut ou non être présent selon la nature de l'échec de l'appel. S'il est présent, il
 comporte les zones suivantes :
-
-    - *activationId* : ID d'activation 
+    - *activationId* : ID d'activation
     - *result* : si l'action a été appelée en mode bloquant, résultat de l'action en tant qu'objet JSON, ou bien `undefined`.
 - Si l'appel aboutit, la promesse est résolue avec un dictionnaire décrivant l'activation à l'aide des zones *activationId* et
-*result*, comme décrit ci-dessus. 
+*result*, comme décrit ci-dessus.
 
-Voici un exemple d'appel bloquant qui utilise la promesse renvoyée : 
+Voici un exemple d'appel bloquant qui utilise la promesse renvoyée :
 ```javascript
 return whisk.invoke({
   name: 'monAction',
@@ -308,19 +300,17 @@ activation.result); })
 ```
 {: codeblock}
 
-La fonction `whisk.trigger()` exécute un déclencheur et renvoie une promesse pour l'activation générée.
-Elle admet comme argument un objet JSON avec les paramètres suivants :
+La fonction `whisk.trigger()` exécute un déclencheur et renvoie une promesse pour l'activation générée. Elle admet comme argument un objet JSON avec les paramètres suivants :
 
 - *name* : nom qualifié complet du déclencheur à appeler.
 - *parameters* : objet JSON qui représente l'entrée du déclencheur. S'il est omis, la valeur par défaut est un objet vide.
 - *apiKey* : clé d'autorisation avec laquelle exécuter le déclencheur. La valeur par défaut est `whisk.getAuthKey()`.
 
 `whisk.trigger()` renvoie une promesse. Si le système OpenWhisk doit attendre la fin du déclencheur, renvoyez cette promesse depuis
-la fonction `main` de votre action. 
-- Si le déclencheur échoue, la promesse est rejetée avec un objet décrivant l'erreur. 
+la fonction `main` de votre action.
+- Si le déclencheur échoue, la promesse est rejetée avec un objet décrivant l'erreur.
 - Si le déclencheur aboutit, la promesse est résolue avec un dictionnaire comportant une zone `activationId` contenant l'ID
 d'activation.
-
 
 La fonction `whisk.getAuthKey()` renvoie la clé d'autorisation avec laquelle l'action s'exécute. En général, il n'est pas nécessaire de l'appeler directement car elle est utilisée implicitement par les fonctions `whisk.invoke()` et `whisk.trigger()`.
 
@@ -416,11 +406,10 @@ Les packages suivants sont disponibles pour être utilisés dans l'environnement
 - xmlhttprequest v1.7.0
 - yauzl v2.3.1
 
-## Actions Python 
+## Actions Python
 
 Les actions Python sont exécutées par défaut avec Python 2.7.12.
 En plus de la bibliothèque Python standard, les packages suivants peuvent également être utilisés par les actions Python :
-
 
 - attrs v16.1.0
 - beautifulsoup4 v4.5.1
@@ -462,7 +451,7 @@ En plus de la bibliothèque Python standard, les packages suivants peuvent égal
 
 Les actions Docker exécutent un fichier binaire fourni par l'utilisateur dans un conteneur Docker. Le fichier binaire s'exécute dans une image Docker
 reposant sur [python:2.7.12-alpine](https://hub.docker.com/r/library/python) ; par conséquent, il doit être compatible avec cette
-distribution. 
+distribution.
 
 Le squelette Docker est pratique pour générer des images Docker compatibles avec OpenWhisk. Vous pouvez l'installer avec la commande d'interface de ligne de commande `wsk sdk install docker`.
 
@@ -480,29 +469,29 @@ actions, les déclencheurs, les packages, les activations, et les espaces de nom
 
 Les noeuds finaux de collection sont les suivants :
 
-- `https://openwhisk.{NomDomaine}/api/v1/namespaces`
-- `https://openwhisk.{NomDomaine}/api/v1/namespaces/{espacenom}/actions`
-- `https://openwhisk.{NomDomaine}/api/v1/namespaces/{espacenom}/triggers`
-- `https://openwhisk.{NomDomaine}/api/v1/namespaces/{espacenom}/rules`
-- `https://openwhisk.{NomDomaine}/api/v1/namespaces/{espacenom}/packages`
-- `https://openwhisk.{NomDomaine}/api/v1/namespaces/{espacenom}/activations`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/actions`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/triggers`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/rules`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/packages`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/activations`
 
-`openwhisk.{NomDomaine}` est le nom d'hôte de l'API OpenWhisk (par exemple, openwhisk.ng.bluemix.net,
-172.17.0.1, etc.).
+``openwhisk.``<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>` est le nom d'hôte de l'API OpenWhisk (par exemple
+openwhisk.ng.bluemix.net, 172.17.0.1, etc.).
 
-
-Pour `{namespace}`, le caractère `_` peut être utilisé afin de spécifier l'*espace de nom par défaut* (adresse électronique) pour l'utilisateur
+Pour `{espace_nom}`, le caractère `_` peut être utilisé afin de spécifier l'*espace de nom par défaut* (adresse électronique) pour l'utilisateur
 
 Vous pouvez lancer une requête GET sur les noeuds finaux de collection pour extraire une liste d'entités dans la collection.
 
 Des noeuds finaux d'entité sont présents pour chaque type d'entité :
 
-- `https://openwhisk.{NomDomaine}/api/v1/namespaces/{espacenom}`
-- `https://openwhisk.{NomDomaine}/api/v1/namespaces/{espacenom}/actions/[{nomPackage}/]{nomAction}`
-- `https://openwhisk.{NomDomaine}/api/v1/namespaces/{espacenom}/triggers/{nomDéclencheur}`
-- `https://openwhisk.{NomDomaine}/api/v1/namespaces/{espacenom}/rules/{nomRègle}`
-- `https://openwhisk.{NomDomaine}/api/v1/namespaces/{espacenom}/packages/{nomPackage}`
-- `https://openwhisk.{NomDomaine}/api/v1/namespaces/{espacenom}/activations/{nomActivation}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/actions/[{nom_package}/]{nom_action}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/triggers/{nom_déclencheur}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/rules/{nom_règle}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/packages/{nom_package}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/activations/{nom_activation}`
+
 
 Les noeuds finaux d'espace de nom et d'activation ne prennent en charge que les requêtes GET. Les noeuds finaux d'actions, de déclencheurs, de règles et
 de packages prennent en charge les requêtes GET, PUT et DELETE. Les noeuds finaux d'actions, de déclencheurs et de règles prennent également en charge les
@@ -512,7 +501,7 @@ reference](https://new-console.{DomainName}/apidocs/98) pour plus d'informations
 
 Toutes les API sont protégées via une authentification HTTP Basic. Les données d'identification pour l'authentification de base résident dans la propriété
 `AUTH` de votre fichier `~/.wskprops`, et sont délimitées par un signe deux-points. Vous pouvez également extraire ces données
-d'identification lors des [étapes de configuration de l'interface CLI](../README.md#setup-cli).
+d'identification lors des [étapes de configuration de l'interface de ligne de commande](./index.html#openwhisk_start_configure_cli).
 
 Voici un exemple qui utilise la commande cURL pour extraire la liste de tous les packages dans l'espace de nom `whisk.system` :
 
@@ -549,17 +538,15 @@ avec précaution.
 {: #openwhisk_syslimits}
 
 ### Actions
-{{site.data.keyword.openwhisk_short}} présente quelques limites relatives au système, notamment la quantité de mémoire qu'une action utilise et le nombre d'appels d'action autorisés par heure. 
-Le tableau ci-dessous répertorie les limites par défaut pour les actions.
+{{site.data.keyword.openwhisk_short}} présente quelques limites relatives au système, notamment la quantité de mémoire qu'une action utilise et le nombre d'appels d'action autorisés par heure. Le tableau ci-dessous répertorie les limites par défaut pour les actions.
 
 | limite | description | configurable | unité | défaut |
 | ----- | ----------- | ------------ | -----| ------- |
 | timeout | un conteneur ne peut pas s'exécuter plus de N millisecondes | par action |  millisecondes | 60000 |
 | memory | un conteneur ne peut pas allouer plus de N Mo de mémoire | par action | Mo | 256 |
 | logs | un conteneur ne peut pas écrire plus de N Mo de données dans la sortie standard | par action | Mo | 10 |
-| concurrent | il n'est pas possible d'avoir plus de N activations simultanées par espace de nom | par espace de nom | nombre | 100 |
-| minuteRate | un utilisateur ne peut pas appeler plus de tant d'actions par minute | par utilisateur | nombre | 120 |
-| hourRate | un utilisateur ne peut pas appeler plus de tant d'actions par heure | par utilisateur | nombre | 3600 |
+| concurrent | N activation maximum sont autorisées par espace de nom en cours d'exécution ou en file d'attente pour l'exécution | par espace de nom | nombre | 1000 |
+| minuteRate | un utilisateur ne peut pas appeler plus de tant d'actions par minute | par utilisateur | nombre | 5000 |
 | codeSize | taille maximale du code d'action | non configurable, limite par action | Mo | 48 |
 | parameters | taille maximale des paramètres pouvant être associés | non configurable, limite par action/package/déclencheur | Mo | 1 |
 
@@ -586,23 +573,22 @@ Le tableau ci-dessous répertorie les limites par défaut pour les actions.
 * La taille de code maximale pour l'action est 48 Mo.
 * Pour une action JavaScript, il est recommandé d'utiliser un outil permettant de concaténer tout le code source, y compris les dépendances dans un fichier regroupé unique.
 
-### Par taille de contenu d'activation (Mo) (fixe : 1 Mo) 
+### Par taille de contenu d'activation (Mo) (fixe : 1 Mo)
 {: #openwhisk_syslimits_activationsize}
 * La taille maximale du contenu POST, plus tout paramètre transmis pour un appel d'action ou l'exécution d'un déclencheur est d'1 Mo.
 
-
-### Nombre d'appels simultanés par espace de nom (valeur par défaut : 100)
+### Nombre d'appels simultanés par espace de nom (valeur par défaut : 1000)
 {: #openwhisk_syslimits_concur}
-* Le nombre d'activations qui sont traitées simultanément pour un espace de nom ne peut pas être supérieur à 100.
+* Le nombre d'activations qui sont exécutées ou mises en file d'attente pour l'exécution pour un espace de nom ne peut pas être supérieur à 1000.
 * La limite par défaut peut être configurée statiquement par whisk dans consul kvstore.
 * Un utilisateur ne peut pas changer les limites.
 
-### Appels par minute/heure (fixe : 120/3600)
+### Appels par minute (valeur fixe : 5000)
 {: #openwhisk_syslimits_invocations}
-* La limite de débit N est 120/3600 et limite le nombre d'appels d'action dans des fenêtres d'une minute/heure.
+* La limite de débit N est 5000 et limite le nombre d'appels d'action dans des fenêtres d'une minute.
 * Un utilisateur ne peut pas changer cette limite lorsqu'il crée l'action.
-* Un appel d'interface de ligne de commande ou API dépassant cette limite reçoit un code d'erreur correspondant au code de statut HTTP `429: TOO MANY
-REQUESTS`.
+* Un appel d'interface de ligne de commande ou API dépassant cette limite reçoit un code d'erreur correspondant au code de statut HTTP `429:
+TOO MANY REQUESTS`.
 
 ### Taille des paramètres (fixe : 1 Mo)
 {: #openwhisk_syslimits_parameters}
@@ -624,16 +610,15 @@ REQUESTS`.
 
 ### Déclencheurs
 
-Les déclencheurs sont soumis à un débit de déclenchements par minute et par heure, comme indiqué dans le tableau ci-dessous. 
+Les déclencheurs sont soumis à un débit de déclenchements par minute et par heure, comme indiqué dans le tableau ci-dessous.
 
 | limite | description | configurable | unité | défaut |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | un utilisateur ne peut pas déclencher plus que ce nombre de déclencheurs par minute  | par utilisateur | nombre | 60 |
-| hourRate | un utilisateur ne peut pas déclencher plus que ce nombre de déclencheurs par heure  | par utilisateur | nombre | 720 |
+| minuteRate | un utilisateur ne peut pas déclencher plus que ce nombre de déclencheurs par minute | par utilisateur | nombre | 5000 |
 
-### Déclencheurs par minute/heure (fixe : 60/720)
+### Déclencheurs par minute (valeur fixe : 5000)
 {: #openwhisk_syslimits_triggerratelimit}
-* La limite de débit N est 60/720 et limite le nombre de déclencheurs pouvant être exécutés dans des fenêtres d'une minute/heure.
-* Un utilisateur ne peut pas changer cette limite lorsqu'il crée le déclencheur. 
+* La limite de débit N est 5000 et limite le nombre de déclencheurs dans des fenêtres d'une minute.
+* Un utilisateur ne peut pas changer cette limite lorsqu'il crée le déclencheur.
 * Un appel d'interface de ligne de commande ou API dépassant cette limite reçoit un code d'erreur correspondant au code de statut HTTP `429:
 TOO MANY REQUESTS`.

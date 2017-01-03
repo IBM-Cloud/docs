@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-06"
 
 ---
 
@@ -11,9 +12,13 @@ copyright:
 # Últimas actualizaciones para el paquete de compilación de ASP.NET Core
 {: #latest_updates}
 
-Última actualización: 26 de agosto de 2016
 
 Una lista de las últimas actualizaciones del paquete de compilación de aspnet.
+
+## 10 de octubre de 2016: Se ha actualizado el paquete de compilación de ASP.NET Core v1.0.1-20161005-1225
+
+* Adición de soporte para .NET Core 1.0.1
+* Arreglo de un problema intermitente que hacía que el despliegue fallada cuando se almacenaba en la memoria caché paquetes NuGet
 
 ## 31 de agosto de 2016: Se ha actualizado el paquete de compilación de ASP.NET Core v1.0-20160826-1345
 

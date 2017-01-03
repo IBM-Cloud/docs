@@ -2,14 +2,12 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-16"
 
 ---
 
 # Web 应用程序定制认证
 {: #custom-web}
-
-上次更新时间：2016 年 6 月 16 日
-{: .last-updated}
 
 将定制认证添加到 Web 应用程序：
 
@@ -46,7 +44,7 @@ copyright:
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
 
-  
+
   使用以下查询参数：
    ```
    response_type=’authorization_code’
@@ -75,7 +73,6 @@ copyright:
  code = <authorization code>
  ```
 `redirect_uri` 参数必须与步骤 1 的 `redirect_uri` 相匹配。授权代码由步骤 2 中的请求返回。
-  
   请确保在 10 分钟内发送此 `POST` 请求，因为授权代码有效的最长时间为 10 分钟。
 
 `POST` 响应主体包含以 Base64 编码的 *access_token* 和 *id_token*。
@@ -87,5 +84,3 @@ copyright:
 
 现在，您可以开始向受保护资源发出请求。
 对受保护资源的所有请求都应该包含 `access_token`。在 `the-Authorization-request` 头字段中发送访问令牌。
-
-

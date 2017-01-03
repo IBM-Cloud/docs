@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015 2016
 
- 
+lastupdated: "2016-10-24"
+
 
 ---
 
@@ -18,9 +19,6 @@ copyright:
 # Herramientas de CLI y de desarrollo
 {: #cli}
 
-*Última actualización: 25 de octubre de 2016*
-{: .last-updated}
-
 Con {{site.data.keyword.Bluemix_short}}, tiene acceso a potentes herramientas como, por ejemplo, una interfaz de línea de mandatos unificada y plug-ins de CLI. Cada una de estas descargas de CLI están disponibles para dar soporte a su experiencia de {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
@@ -28,7 +26,7 @@ Con {{site.data.keyword.Bluemix_short}}, tiene acceso a potentes herramientas co
 {: #downloads}
 
 Descargue e instale las interfaces de línea de mandatos que dan soporte a su experiencia de
-{{site.data.keyword.Bluemix_notm}}. 
+{{site.data.keyword.Bluemix_notm}}.
 
 La herramienta de línea de mandatos cf de Cloud Foundry es un requisito previo para todas las herramientas de CLI de {{site.data.keyword.Bluemix_notm}}. La herramienta de línea de mandatos de {{site.data.keyword.Bluemix_notm}} proporciona
 una experiencia ampliada para gestionar su entorno de {{site.data.keyword.Bluemix_notm}} aparte de las aplicaciones de Cloud Foundry.
@@ -67,7 +65,7 @@ bluemix plugin install plugin_name -r bluemix-bx
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Grupos de seguridad de red* |
 |-----|-----|-----|
-| Nombre del plugin: active-deploy <br> [Ver docs](../services/ActiveDeploy/cli.html#cli) | Nombre del plugin: escalado automático <br> [Ver docs](./plugins/auto-scaling/index.html) |  Nombre de plugin: nsg <br> [Ver docs](./plugins/networksecuritygroups/index.html)  |
+| Nombre del plugin: active-deploy <br> [Ver docs](/docs/services/ActiveDeploy/cli.html#cli) | Nombre del plugin: escalado automático <br> [Ver docs](./plugins/auto-scaling/index.html) |  Nombre de plugin: nsg <br> [Ver docs](./plugins/networksecuritygroups/index.html)  |
 
 
 ### Ampliar la interfaz de línea de mandatos de Cloud Foundry : cf
@@ -88,9 +86,9 @@ cf install-plugin plugin_name -r bluemix-cf
 {: codeblock}
 
 
-| *Active Deploy* | *Consola de administración* | 
+| *Active Deploy* | *Consola de administración* |
 |-----------------|-----------------|
-| Nombre del plugin: active-deploy <br>  [Ver docs](../services/ActiveDeploy/cli.html#cli) |  Nombre del plugin: bluemix-admin <br> [Ver docs](../cli/plugins/bluemix_admin/index.html) | 
+| Nombre del plugin: active-deploy <br>  [Ver docs](/docs/services/ActiveDeploy/cli.html#cli) |  Nombre del plugin: bluemix-admin <br> [Ver docs](/docs/cli/plugins/bluemix_admin/index.html) |
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
@@ -104,4 +102,4 @@ Descargue e instale plugins para integrar sus servicios favoritos de {{site.data
 | *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* |
 |-------------|----------|----------|----------|
 | [Plugin de Egit Eclipse](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [Plugin de RTC Eclipse](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Plugin de Liberty Eclipse](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plugin de Eclipse](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plugin de Rules Designer
-Eclipse](../services/rules/index.html#rulov002) |
+Eclipse](/docs/services/rules/index.html#rulov002) |

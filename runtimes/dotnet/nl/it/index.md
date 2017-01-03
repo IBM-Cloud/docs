@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,13 +12,20 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-Ultimo aggiornamento: 30 maggio 2016 
 
 Il runtime ASP.NET Core su {{site.data.keyword.Bluemix}} si avvale della tecnologia del pacchetto di build ASP.NET Core. ASP.NET Core
 è un framework open source modulare per la creazione di applicazioni web .NET.
 .Net Core è un runtime piccolo, multipiattaforma che può essere destinato alle applicazioni ASP.NET Core. 
 Forniscono un'abilitazione moderna, basata sul cloud per le applicazioni web.
 {: shortdesc}
+
+# Versioni supportate 
+{: #supported_versions}
+Questo pacchetto di build supporta le seguenti versioni, quelle contrassegnate come obsolete saranno rimosse in una futura release del pacchetto di build:
+
+1. .NET Core 1.0.0-rc2-final (beta) (obsoleto)
+2. .NET Core 1.0.0
+3. .NET Core 1.0.1
 
 ## Rilevamento
 {: #detection}
@@ -28,7 +35,7 @@ Il pacchetto di build Bluemix ASP.NET Core viene utilizzato se sono presenti nel
 ## Applicazione starter
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} fornisce un'applicazione starter ASP.NET Core.  L'applicazione starter ASP.NET Core è una semplice applicazione che fornisce un template che puoi utilizzare. Puoi fare delle prove con l'applicazione starter, apportare modifiche ed eseguirne il push all'ambiente Bluemix.  Consulta [Utilizzo di applicazioni starter](../../cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+{{site.data.keyword.Bluemix}} fornisce un'applicazione starter ASP.NET Core.  L'applicazione starter ASP.NET Core è una semplice applicazione che fornisce un template che puoi utilizzare. Puoi fare delle prove con l'applicazione starter, apportare modifiche ed eseguirne il push all'ambiente Bluemix.  Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
 
 ## Versioni di runtime
 {: #runtime_versions}
@@ -46,7 +53,7 @@ Controlla la versione CLI .NET con un global.json facoltativo nella directory ro
 ```
 {: codeblock}
 
-Se non specificata, viene utilizzata la più stabile e corrente versione di Release Candidate.
+Per un elenco di versioni CLI supportate consulta [Aggiornamenti più recenti al pacchetto di build ASP.NET Core](/docs/runtimes/dotnet/updates.html). Se non specificata, viene utilizzata la più stabile e corrente versione di Release Candidate.
 
 ### Personalizzazione delle origini dei pacchetti NuGet
 
@@ -71,9 +78,10 @@ Per conoscere il più precisamente possibile come l'applicazione venga eseguita 
 Lo strumento Yeoman può essere utilizzato per generare nuovi template del progetto come descritto in
 [Building Projects with Yeoman](http://docs.asp.net/en/latest/client-side/yeoman.html).
 
-Per informazioni sullo sviluppo locale utilizzando Visual Studio, consulta [Sviluppo con Visual Studio](../../starters/deploy_vs.html){: new_window}.
+Per informazioni sullo sviluppo locale utilizzando Visual Studio, consulta [Sviluppo con Visual Studio](/docs/starters/deploy_vs.html){: new_window}.
 
 ## Esecuzione del push di un'applicazione pubblicata
+{: #pushing_published_app}
 
 Se desideri che la tua applicazione contenga tutti i propri binari richiesti così che il pacchetto di build non scarichi
 binari esterni, puoi eseguire il push di un'applicazione *self-contained* pubblicata.  Consulta
@@ -96,6 +104,7 @@ Dopodiché l'applicazione può essere trasmessa alla directory
 Inoltre tieni presente che se stai utilizzando un file manifest.yml nella tua applicazione, puoi specificare il percorso nella cartella di output di pubblicazione nel tuo manifest.yml.  Quindi non devi essere in tale cartella quando esegui il push dell'applicazione.
 
 ## Distribuzione di applicazioni con più progetti
+{: #developing_apps_with_multiple_projects}
 
 Per distribuire un'applicazione che contiene più progetti, devi specificare su quale progetto eseguire il pacchetto di build come progetto principale. Ciò può essere eseguito creando un file .deployment nella cartella root della soluzione, che imposti il percorso per il progetto principale. Il percorso al progetto principale può essere specificato come la cartella del progetto o il file del progetto (.xproj o .csproj).
 
@@ -113,6 +122,7 @@ In questo esempio, il pacchetto di build compilerà automaticamente i progetti *
 {: codeblock}
 
 ## Configurazione della tua applicazione per ascoltare sulla porta appropriata
+{: #configuring_listen_proper_port}
 
 Il pacchetto di build eseguirà la tua applicazione con il comando *dotnet run* e passerà il seguente argomento di riga di comando
 ```
@@ -182,6 +192,13 @@ Nel metodo `Main` Program.cs, rimuovi la seguente riga:
 {: codeblock}
 
 Queste modifiche consentono alla CLI .NE di trovare le `Views` della tua applicazione che saranno ora copiate nell'output di build quando viene eseguito il comando `dotnet run`.  Se la tua applicazione dispone di altri file, come ad esempio dei file di configurazione json, richiesti durante il runtime, devi quindi aggiungerli nella sezione `include` di `copyToOutput` nel file project.json.
+
+## Domande frequenti (FAQ) sulla risoluzione dei problemi
+{: #troubleshooting_faq}
+
+**Q**: la mia applicazione non può distribuire il messaggio: `API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, ...}`.  Cosa significa?
+
+**A**: se stai ricevendo un messaggio simile quando esegui il push della tua applicazione, molto probabilmente la tua applicazione sta superando i limiti della quota di memoria o del disco.  Questo problema può essere risolto incrementando le quote della tua applicazione.
 
 # rellinks
 {: #rellinks}

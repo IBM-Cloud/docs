@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+
+lastupdated: "2016-12-15"
 
 ---
 {:new_window: target="_blank"}
@@ -10,58 +11,60 @@ lastupdated: "2016-10-21"
 # What's new in the Mobile dashboard
 {: #what_is_new}
 
-The October update of the {{site.data.keyword.Bluemix}} Mobile dashboard introduced the following changes:
 
-   * You can now add Push Notifications and Analytics capabilities to your project directly from the dashboard.
+### New as of: December 2016
+{: #dec-2016}
+
+The December 2016 update of the {{site.data.keyword.Bluemix}} Mobile dashboard introduced the following changes:
+
+   * You can remove a connected service from a project so it can be deleted or reused with another project. 
+   * You can add an existing service to a project.
+   * You can create or connect an existing CloudantNoSQL service as a data source when you use a code starter.
+   * Where it is supported, you can create or connect an existing Object Storage service as a data source for your project.
+   * You can customize the navigation design of the app that you are creating with a UI starter. 
+   
+
+
+
+### New as of: November 2016
+{: #nov-2016}
+
+The November 2016 update of the {{site.data.keyword.Bluemix}} Mobile dashboard introduced the following changes:
+
+   * You can now generate SDK artifacts for your projects from the **Code** page.
+   * Cordova is now supported for the Basic Code Starter.
+   * You can now [report network events](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window} and [monitor network requests](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window} in the **Network Requests** page of the {{site.data.keyword.mobileanalytics_short}} Console.
+   * You can now [export data to dashDB](/docs/services/mobileanalytics/app-monitoring.html#dashdb){: new_window} in the {{site.data.keyword.mobileanalytics_short}} Console.
+
+
+### New as of October 2016
+{: #oct-2016}
+
+The October 2016 update of the {{site.data.keyword.Bluemix_notm}} Mobile dashboard introduced the following changes:
+
+   * You can now add {{site.data.keyword.mobilepushshort}} and Analytics capabilities to your project directly from the dashboard.
    * [Code Starters](starters.html#Code_Starter) are now available.
    * You can add Authentication to your projects that you created from a Code Starter.
    * Swift is now supported.
 
 
-### Analytics
+#### Analytics
 {: #analytics}
 
    * Demo mode is enabled by default when you add the Analytics capability. You can toggle off demo mode to view your analytics after you run your app.
 
 
-### UI Builder
+#### UI Builder
 {: #ui_builder}
 
-   * The **Push Notifications** capability is now accessed from the project.
+   * The **{{site.data.keyword.mobilepushshort}}** capability is now accessed from the project.
    * The **Project Settings** tab has been renamed to the **Settings** tab.
    * The **Authentication** tab has been renamed to **User Access** tab.
 
 
-### Code
+#### Code
 {: #code}
 
    * The generated Objective-C and Swift code for iOS now uses CocoaPods to manage dependencies. This means that you need to install CocoaPods. To install it, run `sudo gem install cocoapods`. After CocoaPods is installed, run `pod setup` to configure it (if not configured already). Finally, run `pod install` to download and install the required project dependencies prior to opening your `.xcworkspace` file in Xcode. Additional details are available in the `README.md` file in the downloaded code archive. Read about [Prerequisite Developer Tools](get_code.html#prereq-dev-tools) for more information.
 
 Check back often to stay current with new updates.
-
-
-# Related Links
-{: #rellinks}
-
-
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-
-* [Mobile Analytics (Beta)](/docs/services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](/docs/services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](/docs/services/mobilepush/index.html){: new_window}
-
-<!--## Blog Posts-->
-* [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-* [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
-
-<!--## Tutorials and Samples-->
-{: #samples}
-
-* [Sample: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}

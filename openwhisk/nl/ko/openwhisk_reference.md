@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-27"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 시스템 세부사항
 {: #openwhisk_reference}
-마지막 업데이트 날짜: 2016년 9월 9일
-{: .last-updated}
+
 
 다음 절에서는 {{site.data.keyword.openwhisk}}에 대한 세부사항을 제공합니다.
 {: shortdesc}
@@ -138,7 +133,7 @@ Bluemix에서 조직+영역 쌍은 {{site.data.keyword.openwhisk_short}} 네임�
 ### 함수 프로토타입
 {: #openwhisk_ref_javascript_fnproto}
 
-{{site.data.keyword.openwhisk_short}} JavaScript 조치는 Node.js 런타임에 실행되며 현재 버전은 6.2.0입니다.
+{{site.data.keyword.openwhisk_short}} JavaScript 조치는 Node.js 런타임에서 실행됩니다.
 
 JavaScript로 작성된 조치는 단일 파일로 구성되어야 합니다. 파일에는 다중 함수가 포함될 수 있으나 편의상 `main`이라 불리는 함수가 반드시 존재해야 하며 조치가 호출될 때 호출되는 함수여야 합니다. 예를 들어, 다음은 다중 함수가 있는 조치의 예입니다.
 
@@ -203,7 +198,7 @@ function main(args) {
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
-        reject({ done: true });
+            reject({ done: true });
        }, 100);
     })
  }
@@ -286,59 +281,67 @@ return whisk.invoke({
 ### JavaScript 런타임 환경
 {: #openwhisk_ref_javascript_environments}
 
-JavaScript 조치는 기본적으로 Node.js 버전 6.2.0 환경에서 실행됩니다. 또한 6.2.0 환경은 조치를 작성하거나 업데이트할 때 `--kind` 플래그에 'nodejs:6' 값이 명시적으로 지정된 경우 조치에 사용됩니다.
-다음 패키지를 Node.js 6.2.0 환경에서 사용할 수 있습니다. 
+JavaScript 조치는 기본적으로 Node.js 버전 6.9.1 환경에서 실행됩니다. 또한 6.9.1 환경은 조치를 작성하거나 업데이트할 때 `--kind` 플래그에 'nodejs:6' 값이 명시적으로 지정된 경우 조치에 사용됩니다.
+다음 패키지를 Node.js 6.9.1 환경에서 사용할 수 있습니다. 
 
-- apn v1.7.5
-- async v1.5.2
-- body-parser v1.15.1
+- apn v2.1.2
+- async v2.1.4
 - btoa v1.1.2
-- cheerio v0.20.0
-- cloudant v1.4.1
+- cheerio v0.22.0
+- cloudant v1.6.2
 - commander v2.9.0
-- consul v0.25.0
-- cookie-parser v1.4.2
+- consul v0.27.0
+- cookie-parser v1.4.3
 - cradle v0.7.1
-- errorhandler v1.4.3
-- express v4.13.4
-- express-session v1.12.1
-- gm v1.22.0
-- log4js v0.6.36
-- iconv-lite v0.4.13
+- errorhandler v1.5.0
+- glob v7.1.1
+- gm v1.23.0
+- lodash v4.17.2
+- log4js v0.6.38
+- iconv-lite v0.4.15
+- marked v0.3.6
 - merge v1.2.0
-- moment v2.13.0
-- mustache v2.2.1
+- moment v2.17.0
+- mongodb v2.2.11
+- mustache v2.3.0
 - nano v6.2.0
 - node-uuid v1.4.7
-- nodemailer v2.5.0
+- nodemailer v2.6.4
 - oauth2-server v2.4.1
-- pkgcloud v1.3.0
-- process v0.11.3
-- pug v2.0.0
-- request v2.72.0
-- rimraf v2.5.2
-- semver v5.1.0
-- sendgrid v3.0.11
-- serve-favicon v2.3.0
-- socket.io v1.4.6
-- socket.io-client v1.4.6
-- superagent v1.8.3
+- pkgcloud v1.4.0
+- process v0.11.9
+- pug v2.0.0-beta6
+- redis v2.6.3
+- request v2.79.0
+- request-promise v4.1.1
+- rimraf v2.5.4
+- semver v5.3.0
+- sendgrid v4.7.1
+- serve-favicon v2.3.2
+- socket.io v1.6.0
+- socket.io-client v1.6.0
+- superagent v3.0.0
 - swagger-tools v0.10.1
-- tmp v0.0.28
-- twilio v2.9.1
-- watson-developer-cloud v1.12.4
+- tmp v0.0.31
+- twilio v2.11.1
+- underscore v1.8.3
+- uuid v3.0.0
+- validator v6.1.0
+- watson-developer-cloud v2.9.0
 - when v3.7.7
-- ws v1.1.0
-- xml2js v0.4.16
+- winston v2.3.0
+- ws v1.1.1
+- xml2js v0.4.17
 - xmlhttprequest v1.8.0
-- yauzl v2.4.2
+- yauzl v2.7.0
 
-조치를 작성하거나 업데이트할 때 `--kind` 플래그에 'nodejs' 값이 명시적으로 지정된 경우 Node.js 버전 0.12.14 환경이 조치에 사용됩니다.
-다음 패키지를 Node.js 0.12.14 환경에서 사용할 수 있습니다. 
+조치를 작성하거나 업데이트할 때 `--kind` 플래그에 'nodejs' 값이 명시적으로 지정된 경우 Node.js 버전 0.12.17 환경이 조치에 사용됩니다.
+다음 패키지를 Node.js 0.12.17 환경에서 사용할 수 있습니다. 
+
+**참고**: Node.js 버전 0.12.x는 더 이상 사용되지 않으므로, 모든 Node.js 조치를 마이그레이션하여 Node.js 버전 6.x를 사용하십시오.
 
 - apn v1.7.4
 - async v1.5.2
-- body-parser v1.12.0
 - btoa v1.1.2
 - cheerio v0.20.0
 - cloudant v1.4.1
@@ -347,11 +350,9 @@ JavaScript 조치는 기본적으로 Node.js 버전 6.2.0 환경에서 실행됩
 - cookie-parser v1.3.4
 - cradle v0.6.7
 - errorhandler v1.3.5
-- express v4.12.2
-- express-session v1.11.1
 - gm v1.20.0
 - jade v1.9.2
-- log4js v0.6.25
+- log4js v0.6.38
 - merge v1.2.0
 - moment v2.8.1
 - mustache v2.1.3
@@ -359,7 +360,7 @@ JavaScript 조치는 기본적으로 Node.js 버전 6.2.0 환경에서 실행됩
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
 - process v0.11.0
-- request v2.60.0
+- request v2.79.0
 - rimraf v2.5.1
 - semver v4.3.6
 - serve-favicon v2.2.0
@@ -433,14 +434,14 @@ REST API를 통해 시스템의 모든 기능을 사용할 수 있습니다. 조
 
 다음은 콜렉션 엔드포인트입니다. 
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
 
-`openwhisk.{DomainName}`은 OpenWhisk API 호스트 이름입니다(예: openwhisk.ng.bluemix.net, 172.17.0.1 등). 
+`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span>은 OpenWhisk API 호스트 이름입니다(예: openwhisk.ng.bluemix.net, 172.17.0.1 등).
 
 `{namespace}`의 경우 `_` 문자를 사용하여 사용자의 *기본 네임스페이스*(즉,
 이메일 주소)를 지정할 수 있습니다. 
@@ -449,16 +450,17 @@ REST API를 통해 시스템의 모든 기능을 사용할 수 있습니다. 조
 
 각 엔티티 유형마다 엔티티 엔드포인트가 있습니다. 
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
+
 
 네임스페이스 엔드포인트와 활성화 엔드포인트는 GET 요청만 지원합니다. 조치 엔드포인트, 트리거 엔드포인트, 규칙 엔드포인트, 패키지 엔드포인트는 GET, PUT, DELETE 요청을 지원합니다. 조치, 트리거, 규칙의 엔드포인트는 POST 요청도 지원하며 이 요청은 조치와 트리거를 호출하고 규칙을 사용 또는 사용 안함으로 설정하는 데 사용됩니다. 세부사항은 [API 참조](https://new-console.{DomainName}/apidocs/98)를 참조하십시오. 
 
-모든 API는 HTTP 기본 인증으로 보호됩니다. 기본 인증 신임 정보는 `~/.wskprops` 파일의 `AUTH` 특성에 있으며 콜론으로 구분됩니다. [CLI 구성 단계](../README.md#setup-cli)에서 이 신임 정보를 검색할 수도 있습니다. 
+모든 API는 HTTP 기본 인증으로 보호됩니다. 기본 인증 신임 정보는 `~/.wskprops` 파일의 `AUTH` 특성에 있으며 콜론으로 구분됩니다. [CLI 구성 단계](./index.html#openwhisk_start_configure_cli)에서 이 신임 정보를 검색할 수도 있습니다. 
 
 다음은 cURL 명령을 사용하여 `whisk.system` 네임스페이스에서 모든 패키지의 목록을 가져오는 예제입니다. 
 
@@ -501,9 +503,8 @@ OpenWhisk API는 웹 클라이언트에서 요청-응답 호출을 지원합니�
 | 제한시간 | 컨테이너가 N밀리초를 초과하여 실행되도록 허용되지 않음 | 조치당 |  밀리초 | 60000 |
 | 메모리 | 컨테이너에 N MB의 메모리를 초과하여 할당되도록 허용되지 않음 | 조치당 | MB | 256 |
 | 로그 | 컨테이너는 stdout에 N MB를 초과하여 쓸 수 없음 | 조치당 | MB | 10 |
-| 동시 | 네임스페이스당 N개 이하의 동시 활성화가 허용됨 | 네임스페이스당 | 수 | 100 |
-| minuteRate | 분당 이를 초과하여 조치를 호출할 수 없음 | 사용자당 | 수 | 120 |
-| hourRate | 시간당 이를 초과하여 조치를 호출할 수 없음 | 사용자당 | 수 | 3600 |
+| 동시 | 실행 중이거나 실행을 위해 큐에 보관된 네임스페이스당 N개 이하의 활성화 | 네임스페이스당 | 수 | 1000 |
+| minuteRate | 분당 이를 초과하여 조치를 호출할 수 없음 | 사용자당 | 수 | 5000 |
 | codeSize | 조치 코드의 최대 크기 | 구성할 수 없음, 조치당 한계 | MB | 48 |
 | 매개변수 | 첨부할 수 있는 최대 매개변수 크기 | 구성할 수 없음, 조치/패키지/트리거당 한계 | MB | 1 |
 
@@ -534,15 +535,15 @@ OpenWhisk API는 웹 클라이언트에서 요청-응답 호출을 지원합니�
 {: #openwhisk_syslimits_activationsize}
 * 최대 POST 컨텐츠 크기와 조치 호출 또는 트리거 실행을 위해 전달되는 매개변수를 더하면 1MB입니다.
 
-### 네임스페이스 동시 호출당(기본값: 100)
+### 네임스페이스 동시 호출당(기본값: 1000)
 {: #openwhisk_syslimits_concur}
-* 네임스페이스에 대해 동시에 처리되는 활성화의 수가 100을 초과할 수 없습니다.
+* 네임스페이스에 대해 실행 중이거나 실행을 위해 큐에 보관된 활성화의 수가 1000을 초과할 수 없습니다.
 * 기본 한계는 consul kvstore의 whisk에 의해 정적으로 구성될 수 있습니다.
 * 현재 사용자가 한계를 변경할 수 없습니다.
 
-### 분/시간당 호출 수(고정값: 120/3600)
+### 분당 호출 수(고정값: 5000)
 {: #openwhisk_syslimits_invocations}
-* 비율 한계 N은 120/3600으로 설정되어 1분/시간 창에서 조치 호출의 수를 제한합니다.
+* 비율 한계 N은 5000으로 설정되어 1분 창에서 조치 호출의 수를 제한합니다.
 * 사용자가 조치를 작성할 때 한계를 변경할 수 없습니다.
 * 이 한계를 초과하는 CLI 또는 API 호출은 HTTP 상태 코드 `429: TOO MANY REQUESTS`에 해당하는 오류 코드를 수신합니다.
 
@@ -570,11 +571,10 @@ OpenWhisk API는 웹 클라이언트에서 요청-응답 호출을 지원합니�
 
 | 한계 | 설명 | 구성 가능 | 단위 | 기본값 |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | 사용자는 분당 이 수를 초과하여 트리거를 실행할 수 없음 | 사용자당 | 수 | 60 |
-| hourRate | 사용자는 시간당 이 수를 초과하여 트리거를 실행할 수 없음 | 사용자당 | 수 | 720 |
+| minuteRate | 사용자는 분당 이 수를 초과하여 트리거를 실행할 수 없음 | 사용자당 | 수 | 5000 |
 
-### 분/시간당 트리거 수(고정값: 60/720)
+### 분당 트리거 수(고정값: 5000)
 {: #openwhisk_syslimits_triggerratelimit}
-* 비율 한계 N은 60/720으로 설정되어 1분/1시간 창에서 실행될 수 있는 트리거 수를 제한합니다.
+* 비율 한계 N은 5000으로 설정되어 1분 창에서 실행될 수 있는 트리거 수를 제한합니다.
 * 사용자는 트리거를 작성할 때 이 한계를 변경할 수 없습니다.
 * 이 한계를 초과하는 CLI 또는 API 호출은 HTTP 상태 코드 `429: TOO MANY REQUESTS`에 해당하는 오류 코드를 수신합니다.

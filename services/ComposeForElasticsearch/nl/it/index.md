@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Introduzione a Compose for Elasticsearch
 {: #getting-started-with-compose-for-elasticsearch}
-
-Ultimo aggiornamento: 20 settembre 2016
-{: .last-updated}
 
 {{site.data.keyword.composeForElasticsearch_full}} unisce la potenza di un motore di ricerca di testo completo con la forza dell'indicizzazione di un database del documento JSON. Insieme creano uno strumento potente per l'analisi dei dati su grandi volumi di dati. Con Elasticsearch, la tua ricerca può essere effettuata con esattezza, lasciandoti cercare approfonditamente nei tuoi dataset le strette corrispondenze e le quasi corrispondenze che potrebbero essere mancanti.
 {:shortdesc}
@@ -46,6 +43,7 @@ Nome campo|Descrizione
 `deployment_id`|Un identificativo interno per il servizio come creato in Compose.
 `db_type`|Il tipo di database offerto dal servizio; in questo caso `elastic_search`.
 `name`|Il nome di distribuzione del database.
+{: caption="Table 1. {{site.data.keyword.composeForElasticsearch}} credentials" caption-side="top"}
 
 **Nota:** due portali `haproxy` forniscono l'accesso al cluster Elasticsearch. Possono essere utilizzati sia `uri` che `uri_direct_1` per il collegamento al cluster. Nelle tue applicazioni, passa da `uri` a `uri_direct_1` per gestire le risposte agli errori di connessione.
 

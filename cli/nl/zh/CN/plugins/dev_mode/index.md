@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-05-12"
+
+
 
 ---
 
@@ -17,14 +19,11 @@ copyright:
 # （不推荐）开发方式 CLI
 {: #devmodecli}
 
-*上次更新时间：2016 年 6 月 23 日*
-{: .last-updated}
-
 **不推荐使用此 CLI：**请使用 IBM Eclipse Tools for Bluemix 或 DevOps Web IDE，而不使用开发方式 (dev_mode) CLI。您可以继续使用 dev_mode CLI 直到 2016 年 6 月 30 日。
 
 通过 Bluemix 开发方式命令行界面 (dev_mode CLI)，您可以更新正在云中运行的应用程序。dev_mode CLI 构建为 cf CLI 插件并同时支持 Liberty 和 IBM Node.js 应用程序。
 {: shortdesc}
- 
+
 
 可以使用 dev_mode CLI 执行以下任务：
 - 将应用程序在开发方式和正常方式之间切换。
@@ -32,33 +31,33 @@ copyright:
 - 在现有容器中启动、停止或重新启动应用程序。
 
 ## 安装 dev_mode 插件
-**先决条件：**开始之前，请安装 Cloud Foundry CLI。有关详细信息，请参阅[使用 Cloud Foundry 命令行界面开始编码](https://github.com/cloudfoundry/cli)。 
+**先决条件：**开始之前，请安装 Cloud Foundry CLI。有关详细信息，请参阅[使用 Cloud Foundry 命令行界面开始编码](https://github.com/cloudfoundry/cli)。
 
 
 使用以下其中一种方法来安装 dev_mode 命令行工具：
 - 本地安装。
   1. 从 [IBM Bluemix CLI Plugin Repository](http://plugins.ng.bluemix.net) 下载适用于您的平台的 dev_mode 插件。
-  2. 转至保存 dev_mode 插件的文件夹，并使用 cf install-plugin 命令安装 dev_mode 插件。例如： 
-  
+  2. 转至保存 dev_mode 插件的文件夹，并使用 cf install-plugin 命令安装 dev_mode 插件。例如：
+
         ```
 cf install-plugin dev_mode-linux64
         ```
 
 - 从 Bluemix CLI 存储库进行安装。
   1. 通过使用以下命令将 bluemix-repo 存储库添加到 Cloud Foundry CLI 存储库：
-  
+
         ```
 cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
   2. 键入 cf repo-plugins。dev_mode 插件会显示在 bluemix-repo 存储库中。
-		
+
 		```
 cf repo-plugins
         ```
-  
+
   3. 通过使用以下命令将 dev_mode 插件安装到 Cloud Foundry CLI 插件：
-  
+
         ```
 cf install-plugin dev_mode -r bluemix-repo
         ```
@@ -80,22 +79,22 @@ cf plugins
  <thead>
  <th colspan="4">dev_mode 命令</th>
  </thead>
- <tbody> 
- <tr> 
- <td>[help](#help)</td> 
- <td>[mode](#mode)</td> 
+ <tbody>
+ <tr>
+ <td>[help](#help)</td>
+ <td>[mode](#mode)</td>
  <td>[status](#status)</td>
  <td>[update-file](#update_file)</td>
- </tr> 
- <tr> 
+ </tr>
+ <tr>
  <td>[delete-file](#delete_file)</td>
  <td>[start-inplace](#start_inplace)</td>
  <td>[stop-inplace](#stop_inplace)</td>
  <td>[restart-inplace](#restart_inplace)</td>
  </tr>
-  </tbody> 
- </table> 
-*表 1. dev_mode 命令*
+  </tbody>
+ </table>
+{: caption="Table 1. dev_mode commands" caption-side="top"}
 
 
 
@@ -117,7 +116,9 @@ cf help <commandName>
 ```
 cf mode <appName> <dev|normal>
 ```
-<strong>命令选项</strong>：<dl>
+<strong>命令选项</strong>：
+
+   <dl>
    <dt>dev</dt>
    <dd>开发方式。</dd>
    <dt>normal</dt>
@@ -156,7 +157,7 @@ cf update-file <remotePath> <localPath> [command_options]
    </dl>
 
 
-  
+
 ## delete-file
 {: #delete_file}
 
@@ -212,5 +213,3 @@ cf restart-inplace <appName>
 {: #general}
 * [开发方式 CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
 * [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
-
-

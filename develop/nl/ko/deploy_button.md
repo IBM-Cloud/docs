@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -18,17 +14,16 @@ copyright:
 
 #{{site.data.keyword.Bluemix_notm}}에 배치 단추 작성 {: #deploy-button} 
 
-*마지막 업데이트 날짜: 2016년 3월 2일*
-{: .last-updated} 
-
 {{site.data.keyword.Bluemix}}에 배치 단추는 다른 사람들이 코드를 사용해 보고 IBM {{site.data.keyword.Bluemix_notm}}에 배치할 수 있도록 공용 Git 소스 앱을 공유하는 효과적인 방법입니다. 이 단추를 사용하려면 최소한의 구성이 필요하며 마크업을 지원하는 모든 위치에 이 단추를 삽입할 수 있습니다. 사용자가 이 단추를 클릭하면 원래 앱이 영향을 받지 않도록 새 Git 저장소에 복제된 코드 사본이 작성됩니다. 
 {: shortdesc} 
 
-**팁:** 회사 브랜드가 중요할 경우, 단추를 삽입하는 대신 컨텐츠에 [{{site.data.keyword.Bluemix_notm}} iFrame에 배치 플로우를 임베드](../develop/deploy_button_embed.html)할 수 있습니다. 사용자가 공용 Git 소스 앱의 복제본을 작성할 경우, bluemix.net 웹 사이트로 경로 재지정되는 대신에 사용자 컨텐츠에 남게 됩니다. 
+**팁:** 회사 브랜드가 중요할 경우, 단추를 삽입하는 대신 컨텐츠에 [{{site.data.keyword.Bluemix_notm}} iFrame에 배치 플로우를 임베드](/docs/develop/deploy_button_embed.html)할 수 있습니다. 사용자가 공용 Git 소스 앱의 복제본을 작성할 경우, bluemix.net 웹 사이트로 경로 재지정되는 대신에 사용자 컨텐츠에 남게 됩니다. 
+
+**참고**: 도구 체인을 현재 사용할 수 있습니다. {{site.data.keyword.Bluemix_notm}}에 배치 단추를 클릭하는 사용자는 배너에 있는 링크를 클릭하여 도구 체인을 사용해 애플리케이션을 배치할 수 있습니다.
 
 사용자가 단추를 클릭하면 다음과 같은 조치가 수행됩니다. 
 
-1. 활성 {{site.data.keyword.Bluemix}} 계정이 없는 경우 평가판 계정을 작성해야 합니다. 
+1. 활성 {{site.data.keyword.Bluemix_notm}} 계정이 없는 경우 평가판 계정을 작성해야 합니다. 
 
 2. 사용자는 지역, 조직, 영역 및 앱 이름을 선택할 수 있습니다. 제시된 앱 이름은 이전 앱 이름, 사용자 이름 및 시간을 바탕으로 구성됩니다. 
 
@@ -92,12 +87,12 @@ copyright:
 기본 마스터 분기:
 </p>
 <pre class="codeblock">
-[![Bluemix에 배치](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; # [required])
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
 </pre>
 <p>지정된 Git 분기:
 </p>
 <pre class="codeblock">
-[![Bluemix에 배치](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt; &branch=&lt;git_branch&gt; # [required])
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
 </pre>
 </li>
 </ul>
@@ -166,9 +161,9 @@ Manifest 파일을 사용하여 다음을 지정할 수 있습니다.
 </pre>
    </li>
    </ul>
-	<li> 앱이 배치되기 전에 저장소를 빌드해야 하는 경우 저장소에 있는 코드의 자동 빌드가 배치 전에 트리거됩니다. 빌드 스크립트 파일이 저장소의 루트 디렉토리에 있는 경우 자동 빌드가 수행됩니다.
+	<li> 앱을 배치하기 전에 빌드해야 하는 경우, 저장소에 빌드 파일이 있어야 합니다. 빌드 스크립트가 저장소의 루트 디렉토리에서 발견되는 경우, 배치 전에 코드의 자동 빌드가 트리거됩니다.
 	
-지원되는 빌더는 다음과 같습니다.
+	지원되는 빌더는 다음과 같습니다.
 <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code> - 출력을 <code>./output/</code> 폴더에 빌드합니다. </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code> - 출력을 <code>.</code> 폴더에 빌드합니다. </li>
@@ -186,8 +181,9 @@ Manifest 파일을 사용하여 다음을 지정할 수 있습니다.
 <li>프로젝트의 루트 디렉토리에서 <code>.bluemix</code> 디렉토리를 작성하십시오.</li>
 <li><code>pipeline.yml</code> 파일을 <code>.bluemix</code> 저장소에 업로드하십시오.</li>
 </ol> </li>
-	<li><strong>IBM Containers</strong>를 사용하여 앱을 배치하는 경우, 저장소의 루트 디렉토리에 Dockerfile을 포함시키고 <code>.bluemix</code> 디렉토리에 <code>pipeline.yml</code> 파일을 포함시켜야 합니다.
+	<li><strong>IBM Containers</strong>를 사용하여 앱을 컨테이너에 배치하려면, 저장소의 루트 디렉토리에 Dockerfile을 포함시키고 <code>.bluemix</code> 디렉토리에 <code>pipeline.yml</code> 파일을 포함시켜야 합니다.
 	<ul>
+	    <li>Dockerfile은 해당 앱에 대해 일종의 빌드 스크립트 역할을 합니다. Dockerfile이 저장소에서 발견되는 경우, 앱이 컨테이너에 배치되기 전에 이미지에 자동으로 빌드됩니다. 앱이 이미지에 빌드되기 전에 앱 자체를 빌드해야 하는 경우, 이전에 설명된 대로, Dockerfile뿐 아니라 해당 앱에 대한 빌드 스크립트를 포함하십시오.</li>
 	    <li> Dockerfile 작성에 대해 자세히 알아보려면 <a href="https://docs.docker.com/reference/builder/" target="_blank">Docker 문서를 참조</a>하십시오.</li>
 	    <li><code>pipeline.yml</code> 파일을 수동으로 작성하거나 기존 DevOps Services 프로젝트에서 하나를 생성할 수 있습니다. 특히 컨테이너에 대한 <code>pipeline.yml</code>을 수동으로 작성하려면 <a href="https://github.com/Puquios/" target="_blank">GitHub의 예를 참조</a>하십시오.</li>
         </ul>
@@ -196,4 +192,7 @@ Manifest 파일을 사용하여 다음을 지정할 수 있습니다.
  </ul>
 </ul>
 
-문제점 해결 도움말은 [Bluemix에 배치 단추로 앱이 배치되지 않는 경우](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}를 참조하십시오.	
+문제점 해결 도움말은
+[Bluemix에
+배치 단추로 앱이 배치되지 않는 경우](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}를 참조하십시오.	
+

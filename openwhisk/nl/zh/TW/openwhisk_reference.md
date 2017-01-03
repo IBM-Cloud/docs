@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-27"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # {{site.data.keyword.openwhisk_short}} 系統詳細資料
 {: #openwhisk_reference}
-前次更新：2016 年 9 月 9 日
-{: .last-updated}
+
 
 下列各節提供有關 {{site.data.keyword.openwhisk}} 系統的其他詳細資料。
 {: shortdesc}
@@ -132,7 +127,7 @@ copyright:
 ### 函數原型
 {: #openwhisk_ref_javascript_fnproto}
 
-{{site.data.keyword.openwhisk_short}} JavaScript 動作是在 Node.js 運行環境（目前為 6.2.0 版）中執行。
+{{site.data.keyword.openwhisk_short}} JavaScript 動作是在 Node.js 運行環境中執行。
 
 以 JavaScript 撰寫的動作必須限制於單一檔案。此檔案可以包含多個函數，但依慣例，必須要有稱為 `main` 的函數，而且此函數是在呼叫動作時呼叫。例如，以下是具有多個函數的動作的範例。
 
@@ -184,7 +179,7 @@ function main(params) {
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
-        resolve({ done: true });
+            resolve({ done: true });
        }, 100);
     })
  }
@@ -197,7 +192,7 @@ function main(args) {
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
-        reject({ done: true });
+            reject({ done: true });
        }, 100);
     })
  }
@@ -231,7 +226,8 @@ function main(params) {
 
 - *name*：要呼叫之動作的完整名稱。
 - *parameters*：JSON 物件，代表所呼叫動作的輸入。如果省略，預設值為空的物件。
-- *apiKey*：用來呼叫動作的授權金鑰。預設值為 `whisk.getAuthKey()`。
+- *apiKey*：用來呼叫動作的授權金鑰。
+預設值為 `whisk.getAuthKey()`。
 - *blocking*：應該以封鎖還是非封鎖模式呼叫動作。`blocking` 為 true 時，呼叫會先等待所呼叫動作的結果，再解析所傳回的 Promise。預設值為 `false`，這指出非封鎖呼叫。
 
 `whisk.invoke()` 會傳回 Promise。若要讓 OpenWhisk 系統等待呼叫完成，您必須從動作的 `main` 函數傳回此 Promise。
@@ -279,59 +275,67 @@ return whisk.invoke({
 ### JavaScript 運行環境
 {: #openwhisk_ref_javascript_environments}
 
-在 Node.js 6.2.0 版環境中，預設會執行 JavaScript 動作。如果在建立/更新動作時明確指定值為 'nodejs:6' 的 `--kind` 旗標，則 6.2.0 環境也會用於動作。
-下列套件可在 Node.js 6.2.0 環境中使用：
+在 Node.js 6.9.1 版環境中，預設會執行 JavaScript 動作。如果在建立/更新動作時明確指定值為 'nodejs:6' 的 `--kind` 旗標，則 6.9.1 環境也會用於動作。
+下列套件適用於 Node.js 6.9.1 環境：
 
-- apn 1.7.5 版
-- async 1.5.2 版
-- body-parser 1.15.1 版
+- apn 2.1.2 版
+- async 2.1.4 版
 - btoa 1.1.2 版
-- cheerio 0.20.0 版
-- cloudant 1.4.1 版
+- cheerio 0.22.0 版
+- cloudant 1.6.2 版
 - commander 2.9.0 版
-- consul 0.25.0 版
-- cookie-parser 1.4.2 版
+- consul 0.27.0 版
+- cookie-parser 1.4.3 版
 - cradle 0.7.1 版
-- errorhandler 1.4.3 版
-- express 4.13.4 版
-- express-session 1.12.1 版
-- gm 1.22.0 版
-- log4js 0.6.36 版
-- iconv-lite 0.4.13 版
+- errorhandler 1.5.0 版
+- glob 7.1.1 版
+- gm 1.23.0 版
+- lodash 4.17.2 版
+- log4js 0.6.38 版
+- iconv-lite 0.4.15 版
+- marked 0.3.6 版
 - merge 1.2.0 版
-- moment 2.13.0 版
-- mustache 2.2.1 版
+- moment 2.17.0 版
+- mongodb 2.2.11 版
+- mustache 2.3.0 版
 - nano 6.2.0 版
 - node-uuid 1.4.7 版
-- nodemailer 2.5.0 版
+- nodemailer 2.6.4 版
 - oauth2-server 2.4.1 版
-- pkgcloud 1.3.0 版
-- process 0.11.3 版
-- pug 2.0.0  版
-- request 2.72.0 版
-- rimraf 2.5.2 版
-- semver 5.1.0 版
-- sendgrid 3.0.11 版
-- serve-favicon 2.3.0 版
-- socket.io 1.4.6 版
-- socket.io-client 1.4.6 版
-- superagent 1.8.3 版
+- pkgcloud 1.4.0 版
+- process 0.11.9 版
+- pug 2.0.0-beta6 版
+- redis 2.6.3 版
+- request 2.79.0 版
+- request-promise 4.1.1 版
+- rimraf 2.5.4 版
+- semver 5.3.0 版
+- sendgrid 4.7.1 版
+- serve-favicon 2.3.2 版
+- socket.io 1.6.0 版
+- socket.io-client 1.6.0 版
+- superagent 3.0.0 版
 - swagger-tools 0.10.1 版
-- tmp 0.0.28 版
-- twilio 2.9.1 版
-- watson-developer-cloud 1.12.4 版
+- tmp 0.0.31 版
+- twilio 2.11.1 版
+- underscore 1.8.3 版
+- uuid 3.0.0 版
+- validator 6.1.0 版
+- watson-developer-cloud 2.9.0 版
 - when 3.7.7 版
-- ws 1.1.0 版
-- xml2js 0.4.16 版
+- winston 2.3.0 版
+- ws 1.1.1 版
+- xml2js 0.4.17 版
 - xmlhttprequest 1.8.0 版
-- yauzl 2.4.2 版
+- yauzl 2.7.0 版
 
-如果在建立/更新動作時明確指定值為 'nodejs' 的 `--kind` 旗標，則 Node.js 0.12.14 版環境將會用於動作。
-下列套件可在 Node.js 0.12.14 環境中使用：
+如果在建立/更新動作時明確指定值為 'nodejs' 的 `--kind` 旗標，則 Node.js 0.12.17 版環境將會用於動作。
+下列套件適用於 Node.js 0.12.17 環境：
+
+**附註**：已淘汰 Node.js 0.12.x 版，請移轉所有 Node.js 動作以使用 Node.js 6.x 版。
 
 - apn 1.7.4 版
 - async 1.5.2 版
-- body-parser 1.12.0 版
 - btoa 1.1.2 版
 - cheerio 0.20.0 版
 - cloudant 1.4.1 版
@@ -340,11 +344,9 @@ return whisk.invoke({
 - cookie-parser 1.3.4 版
 - cradle 0.6.7 版
 - errorhandler 1.3.5 版
-- express 4.12.2 版
-- express-session 1.11.1 版
 - gm 1.20.0 版
 - jade 1.9.2 版
-- log4js 0.6.25 版
+- log4js 0.6.38 版
 - merge 1.2.0 版
 - moment 2.8.1 版
 - mustache 2.1.3 版
@@ -352,7 +354,7 @@ return whisk.invoke({
 - node-uuid 1.4.2 版
 - oauth2-server 2.4.0 版
 - process 0.11.0 版
-- request 2.60.0 版
+- request 2.79.0 版
 - rimraf 2.5.1 版
 - semver 4.3.6 版
 - serve-favicon 2.2.0 版
@@ -417,7 +419,7 @@ Docker 架構是建置 OpenWhisk 相容 Docker 映像檔的一種簡便方式。
 
 主要二進位程式必須位在容器的 `/action/exec` 中。執行檔會透過 `stdin` 接收到輸入引數，而且必須透過 `stdout` 來傳回結果。
 
-透過修改 `dockerSkeleton` 中所含的 `Dockerfile`，即可包括任何編譯步驟或相依關係。
+透過修改 `dockerSkeleton` 中所含的 `Dockerfile`，即可包含任何編譯步驟或相依關係。
 
 ## REST API
 {: #openwhisk_ref_restapi}
@@ -426,14 +428,14 @@ Docker 架構是建置 OpenWhisk 相容 Docker 映像檔的一種簡便方式。
 
 以下是集合端點：
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
 
-`openwhisk.{DomainName}` 是 OpenWhisk API 主機名稱（例如，openwhisk.ng.bluemix.net、172.17.0.1 等）。
+`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span> 是 OpenWhisk API 主機名稱（例如，openwhisk.ng.bluemix.net、172.17.0.1 等）。
 
 針對 `{namespace}`，字元 `_` 可以用來指定使用者的 *預設名稱空間*（亦即，電子郵件位址）。
 
@@ -441,16 +443,17 @@ Docker 架構是建置 OpenWhisk 相容 Docker 映像檔的一種簡便方式。
 
 每一種實體類型都有實體端點：
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
+
 
 名稱空間和啟動端點僅支援 GET 要求。動作、觸發程式、規則和套件端點可支援 GET、PUT 及 DELETE 要求。動作、觸發程式和規則的端點也可支援 POST 要求（用來呼叫動作和觸發程式，以及啟用或停用規則）。如需詳細資料，請參閱 [API 參考資料](https://new-console.{DomainName}/apidocs/98)。
 
-所有 API 都是透過 HTTP 基本鑑別進行保護。基本鑑別認證位於 `~/.wskprops` 檔案的 `AUTH` 內容中，以冒號區隔。您也可以在 [CLI 配置步驟](../README.md#setup-cli)中擷取這些認證。
+所有 API 都是透過 HTTP 基本鑑別進行保護。基本鑑別認證位於 `~/.wskprops` 檔案的 `AUTH` 內容中，以冒號區隔。您也可以在 [CLI 配置步驟](./index.html#openwhisk_start_configure_cli)中擷取這些認證。
 
 下列範例說明如何使用 cURL 指令來取得 `whisk.system` 名稱空間中的所有套件清單：
 
@@ -486,16 +489,15 @@ OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk
 {: #openwhisk_syslimits}
 
 ### 動作
-{{site.data.keyword.openwhisk_short}} 有一些系統限制，包括動作所使用的記憶體數量，以及每小時允許的動作呼叫次數。下表列出動作的預設限制。
+{{site.data.keyword.openwhisk_short}} 有一些系統限制，包括動作所使用的記憶體量，以及每小時允許的動作呼叫次數。下表列出動作的預設限制。
 
 | 限制 | 說明 | 可配置 | 單位 | 預設值 |
 | ----- | ----------- | ------------ | -----| ------- |
 | timeout | 不容許容器的執行時間超過 N 毫秒 | 每個動作 |  毫秒 | 60000 |
 | memory | 不容許容器配置超過 N MB 的記憶體 | 每個動作 | MB | 256 |
 | logs | 不容許容器寫入 stdout 的內容超過 N MB | 每個動作 | MB | 10 |
-| concurrent | 每個名稱空間不容許超過 N 個並行啟動 | 每個名稱空間 | 數字 | 100 |
-| minuteRate | 使用者每分鐘不能呼叫超過這麼多動作 | 每位使用者 | 數字 | 120 |
-| hourRate | 使用者每小時不能呼叫超過這麼多動作 | 每位使用者 | 數字 | 3600 |
+| concurrent | 每個名稱空間的執行中或置入佇列等待執行的活動次數不容許超過 N 次 | 每個名稱空間 | 數字 | 1000 |
+| minuteRate | 使用者每分鐘不能呼叫超過這麼多動作 | 每位使用者 | 數字 | 5000 |
 | codeSize | 動作碼的大小上限 | 不可配置，每個動作的限制 | MB | 48 |
 | parameters | 可附加的參數的大小上限 | 不可配置，每個動作/套件/觸發程式的限制 | MB | 1 |
 
@@ -526,15 +528,15 @@ OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk
 {: #openwhisk_syslimits_activationsize}
 * POST 內容大小，加上為動作呼叫或觸發程式發動而附帶的任何參數，上限為 1MB。
 
-### 每個名稱空間同時呼叫（預設值：100）
+### 每個名稱空間同時呼叫（預設值：1000）
 {: #openwhisk_syslimits_concur}
-* 目前針對名稱空間所處理的啟動次數不能超過 100。
+* 名稱空間的執行中或置入佇列等待執行的活動次數不能超過 1000。
 * Whisk 可以在 consul kvstore 中靜態配置預設限制。
 * 使用者目前無法變更限制。
 
-### 每分鐘/小時的呼叫次數（固定：120/3600）
+### 每分鐘的呼叫次數（固定：5000）
 {: #openwhisk_syslimits_invocations}
-* 速率限制 N 設定為 120/3600，並限制一分鐘/小時的時間範圍內的動作呼叫次數。
+* 速率限制 N 設定為 5000，並限制一分鐘時間範圍內的動作呼叫次數。
 * 使用者無法在建立動作時變更此限制。
 * 超過此限制的 CLI 或 API 呼叫會收到與 HTTP 狀態碼 `429: TOO MANY REQUESTS` 對應的錯誤碼。
 
@@ -562,11 +564,10 @@ OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk
 
 | 限制 | 說明 | 可配置 | 單位 | 預設值 |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | 使用者每分鐘不能發動超過這麼多觸發程式 | 每位使用者 | 數字 | 60 |
-| hourRate | 使用者每小時不能發動超過這麼多觸發程式 | 每位使用者 | 數字 | 720 |
+| minuteRate | 使用者每分鐘不能發動超過這麼多觸發程式 | 每位使用者 | 數字 | 5000 |
 
-### 每分鐘/小時的觸發程式數目（固定：60/720）
+### 每分鐘的觸發程式數目（固定：5000）
 {: #openwhisk_syslimits_triggerratelimit}
-* 速率限制 N 設定為 60/720，並限制一分鐘/小時的時間範圍內可能發動的觸發程式數目。
+* 速率限制 N 設定為 5000，並限制一分鐘時間範圍內可能發動的觸發程式數目。
 * 使用者無法在建立觸發程式時變更此限制。
 * 超過此限制的 CLI 或 API 呼叫會收到與 HTTP 狀態碼 `429: TOO MANY REQUESTS` 對應的錯誤碼。

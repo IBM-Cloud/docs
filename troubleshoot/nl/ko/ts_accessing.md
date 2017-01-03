@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -17,8 +19,6 @@ copyright:
 # {{site.data.keyword.Bluemix_notm}} 액세스 문제점 해결 
 {: #accessing}
 
-마지막 업데이트 날짜: 2016년 8월 18일
-{: .last-updated} 
 
 {{site.data.keyword.Bluemix}} 액세스와 관련한
 일반적인 문제점으로는 사용자가 {{site.data.keyword.Bluemix_notm}}에
@@ -27,59 +27,75 @@ copyright:
 {:shortdesc}
 
 ## {{site.data.keyword.Bluemix_notm}}에 로그인할 수 없음
+{: #ts_unabletologin}
+
+로그인할 수 있는 유효한 {{site.data.keyword.Bluemix_notm}} 계정이 있어야 합니다.
+
+
+{{site.data.keyword.Bluemix_notm}}에 로그인하려고 할 때 다음 오류 메시지 중 하나가 표시됩니다.
+{: tsSymptoms} 
+
+ * 고객 포털에서
+  
+   `인증에 성공하여 이 페이지로 이동되었습니다. 하지만 이 IBM ID는 IBM 클라우드 계정과 연관되어 있지 않습니다. 오류로 간주되면 계정 소유자 또는 마스터 사용자에게 문의하십시오.`
+
+ * {{site.data.keyword.Bluemix_notm}} 콘솔에서
+  
+  `인증에 성공하여 이 페이지로 이동되었습니다. 하지만 이 IBM ID는 {{site.data.keyword.Bluemix_notm}} 계정과 연관되어 있지 않습니다.` 
+
+
+이 오류가 표시되는 이유 중 하나는 작성된 {{site.data.keyword.Bluemix_notm}} 계정이 아직 없거나 IBM ID 인증으로 전환해야 합니다.
+{: tsCauses} 
+ 
+
+{{site.data.keyword.Bluemix_notm}} 계정을 작성하거나 IBM ID를 전환하기 위해 마스터 사용자 또는 계정 관리자에게 문의하려면 등록 프로세스를 따르십시오.
+{: tsResolve}
+
+계정 설정의 방법에 따라 로그인 옵션 중 일부가 적용될 수 있습니다. 
+ * SoftLayer ID가 있는 SoftLayer 사용자는 [고객 포털](https://control.softlayer.com)을 통해 로그인해야 합니다.
+ * IBM ID가 있고 연결된 Bluemix 계정이 있거나 없는 SoftLayer 사용자는 [고객 포털](https://control.softlayer.com)을 통해 로그인하여 SoftLayer 고객 포털을 열 수 있거나 [Bluemix 콘솔](https://console.{DomainName})을 통해 인프라 대시보드를 열 수 있습니다. 
+ * 연결된 SoftLayer 계정이 없는 Bluemix 사용자는 Bluemix 콘솔을 통해 로그인해야 합니다.
+ * 연결된 SoftLayer 계정이 있는 Bluemix 사용자는 [Bluemix 콘솔](https://console.{DomainName}) 또는 [고객 포털](https://control.softlayer.com)을 통해 로그인할 수 있습니다.
+ 
+
+## 비밀번호가 올바르지 않음
 {: #ts_logintobm}
 
-{{site.data.keyword.Bluemix_notm}}에 로그인하려면 올바른 IBM ID와 비밀번호가 있어야 합니다. 
+{{site.data.keyword.Bluemix_notm}} 콘솔에 로그인할 수 있는 유효한 IBM ID가 있어야 합니다.
 
-
-{{site.data.keyword.Bluemix_notm}}에
-로그인하려고 할 때 다음과 같은 오류 메시지가 표시됩니다. 
+{{site.data.keyword.Bluemix_notm}}에 로그인하려고 할 때 다음 오류 메시지가 표시됩니다.
 {: tsSymptoms} 
 
 `입력한 비밀번호가 올바르지 않습니다.`
 
-
 {{site.data.keyword.Bluemix_notm}}에 로그인하는 데 사용한 IBM ID와 비밀번호가 올바르지 않습니다.
 {: tsCauses} 
  
-
 올바른 IBM ID와 비밀번호를 얻으려면 내 IBM 프로파일 페이지로 이동하여 다음 단계 중 하나를 완료하십시오.
 {: tsResolve}
   * IBM ID를 이미 등록했으며 ID와 비밀번호가 올바른지 확인하려면 **로그인**을 클릭하고 로그인 페이지에 IBM ID와 비밀번호를 입력하십시오. 비밀번호를 잊어버린 경우에는 로그인 페이지에서 **비밀번호를 잊으셨습니까?**를 클릭하여 비밀번호를 재설정하십시오. IBM ID를 잊어버렸거나 비밀번호와 관련된 문제가 지속되는 경우 전세계 IBM Registration 헬프 데스크에 지원을 요청하십시오.  
   * IBM ID가 없는 경우에는 **등록**을 클릭하여 IBM ID와 비밀번호를 등록하십시오.  
-  
-**참고:** IBM 직원의 경우 IBM ID와 인트라넷 로그인 ID는 서로 다를 수 있습니다.  
 
 
 
-<!-- begin STAGING ONLY --> 
+## Softlayer 사용자 이름으로 로그인할 수 없음
+{: #ts_softlayer_username}
 
-## 외부 웹 사이트에 액세스하는 중에 문제점 발생
-{: #ts_bmlinkid}
-
-인트라넷 ID와 IBM ID를 링크하지 않으면 IBM 인트라넷 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 없습니다. 
+{{site.data.keyword.Bluemix_notm}}에 로그인하려면 올바른 IBM ID와 비밀번호가 있어야 합니다. 
 
 
-{{site.data.keyword.Bluemix_notm}} 로그인 페이지에서 **인트라넷 ID를 사용하여 로그인**을 선택하면 다음 오류 메시지가 표시됩니다.
+Softlayer 사용자 이름으로 {{site.data.keyword.Bluemix_notm}} 콘솔에 로그인하려는 경우 다음 메시지가 표시됩니다.
 {: tsSymptoms} 
 
-`Problem Accessing External Website`
+`이 IBM ID 또는 이메일을 인식할 수 없습니다.`
 
+Bluemix 콘솔의 인프라 대시보드를 사용하기 위해 로그인할 IBM ID가 있어야 합니다.
+{: tsCauses} 
+ 
+SoftLayer ID를 사용하는 SoftLayer 사용자인 경우 IBM ID 인증을 사용하여 로그인할 수 있기 전에 액세스 권한이 있는 각 계정 내 고객 포털의 IBM ID 인증으로 전환해야 합니다.  
 
-
-IBM ID에 링크되지 않은 IBM 인트라넷 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하는 경우 이 문제점이 발생합니다. IBM ID는 www.ibm.com에 로그인하는 데 사용하는 ID입니다.
-{: tsCauses}
-
-
-IBM 직원의 경우 IBM 인트라넷 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하려면 먼저 인트라넷 ID와 외부 IBM ID를 링크해야 합니다. 두 ID를 링크하려면 다음 단계를 완료하십시오.
-{: tsResolve} 
-
-  1. [Central Sign-on](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window} 페이지에서 **내 사인온**을 클릭하십시오. 
-  2. 내 사인온 페이지에서 **ID 링크**를 클릭하고 {{site.data.keyword.Bluemix_notm}} 로그인 페이지에 IBM ID와 비밀번호를 입력하십시오. 그러면 인트라넷 ID와 IBM ID가 자동으로 링크됩니다. 
-  
-
-<!-- end STAGING ONLY -->
-
+IBM ID를 전환하기 위해 마스터 사용자 또는 계정 관리자에게 문의하십시오.
+{: tsResolve}
 
 
 
@@ -93,7 +109,7 @@ IBM 직원의 경우 IBM 인트라넷 ID를 사용하여 {{site.data.keyword.Blu
 앱 세부사항 페이지에서 앱 또는 서비스를 확인하려고 하면 다음 오류 메시지가 계속 표시됩니다.
 {: tsSymptoms} 
 
-`You have unsaved changes in page app_name. Save or cancel the changes.`
+`app_name 페이지의 변경사항을 저장하지 않았습니다. 변경사항을 저장하거나 취소하십시오.`
 
 
 런타임 분할창에서 **인스턴스** 또는 **메모리 할당량** 필드 위로 마우스를 스크롤하면 값이 변경됩니다. 설계상 이런 동작이 발생하는 것이며, 페이지에서 벗어나기 전에 메모리 또는 인스턴스 설정을 저장하라는 오류 메시지가 표시됩니다.
@@ -103,10 +119,7 @@ IBM 직원의 경우 IBM 인트라넷 ID를 사용하여 {{site.data.keyword.Blu
 메시지 창을 닫고 런타임 분할창에서 **재설정** 단추를 클릭하십시오.
 {: tsResolve} 
 
-
-
-
-    
+  
     
 ## {{site.data.keyword.Bluemix_notm}} 지역 간의 자동 장애 복구를 사용할 수 없음
 {: #ts_failover}
@@ -141,13 +154,13 @@ nslookup stage1.mybluemix.net
 {{site.data.keyword.Bluemix_notm}} 평가판 계정에 등록하면 {{site.data.keyword.Bluemix_notm}}에 로그인하지 못할 수 있습니다. 대신 다음 메시지가 표시됩니다.
 {: tsSymptoms}
 
-<code>사용자 계정이 보류 중입니다. 여러분 계정의 이메일 확인을 위해 최대 24시간 동안 기다려야 할 수 있습니다. 스팸 폴더도 확인하십시오. 아직 이메일 확인을 받지 못했다면, <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 지원</a>에 문의하십시오.</code>
+<code>사용자 계정이 보류 중입니다. 사용자 계정의 이메일 확인을 위해 최대 24시간 동안 기다려야 할 수 있습니다. 스팸 폴더도 확인하십시오. 아직 이메일 확인을 받지 못했다면, <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix Support</a>에 문의하십시오.</code>
 
 
 {{site.data.keyword.Bluemix_notm}} 평가판 계정에 등록하면 확인 이메일을 받습니다. 확인 이메일에 있는 링크를 클릭하여 등록 프로세스를 완료해야 합니다.
 {: tsCauses} 
 
-확인 이메일이 사용자가 제공한 이메일 주소로 전송됩니다. 받은 편지함과 정크 메일 폴더를 확인하십시오. 확인 이메일을 받지 못한 경우, [{{site.data.keyword.Bluemix_notm}} 지원](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오.  
+확인 이메일이 사용자가 제공한 이메일 주소로 전송됩니다. 받은 편지함과 정크 메일 폴더를 확인하십시오. 확인 이메일을 받지 못한 경우, [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오.  
 {: tsResolve}
 
 
@@ -186,12 +199,12 @@ nslookup stage1.mybluemix.net
 사용자를 조직에 초대할 수 없으며 초대를 위해 다른 역할이 필요한 경우 조직 관리자에게 역할 변경을 요청하십시오. 조직 관리자를 확인하려면 다음 단계를 수행하십시오.
 {: tsResolve}
 
-  1. {{site.data.keyword.Bluemix_notm}} 대시보드로 이동하여 메뉴 표시줄에서 {{site.data.keyword.avatar}} 아이콘 ![아바타 아이콘](images/account_support.svg)을 클릭하고 **조직 관리**를 선택하십시오. 
+  1. {{site.data.keyword.Bluemix_notm}} 대시보드로 이동하십시오. 메뉴 표시줄에서 **지원** 메뉴 항목을 클릭한 후 **조직 관리**를 클릭하십시오.
   2. 자신의 조직으로 이동하여 **사용자** 탭에서 조직 관리자에 대한 정보를 확인하십시오.  
   
 구성원이 아니라 협업자이기 때문에 사용자를 초대할 수 없는 경우 이전 {{site.data.keyword.Bluemix_notm}} 계정을 삭제한 다음 조직의 구성원으로 참여할 수 있도록 초대를 받아야 합니다. 이전 계정을 삭제하고 구성원으로 계정에 참여하려면 다음 단계를 수행하십시오. 
 
-  1. [{{site.data.keyword.Bluemix_notm}} 지원 부서에 연락](http://ibm.biz/bluemixsupport){: new_window}하여 지원 티켓을 열고 계정 삭제를 요청하십시오. 이전 계정과 연관된 데이터가 있어 이 데이터를 저장한 다음 새 계정으로 이동하려면 이메일에 이 정보를 포함시키십시오. 
+  1. [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window}에 문의하여 지원 티켓을 열고 계정 삭제를 요청하십시오. 이전 계정과 연관된 데이터가 있어 이 데이터를 저장한 다음 새 계정으로 이동하려면 이메일에 이 정보를 포함시키십시오. 
   2. 계정이 삭제되면 조직 관리자 역할을 보유한 사용자가 자신을 조직 관리자로 조직에 초대하도록 하십시오. 그런 다음 초대장을 통해 {{site.data.keyword.Bluemix_notm}}에 등록하십시오. 
 
 
@@ -214,7 +227,7 @@ nslookup stage1.mybluemix.net
 {{site.data.keyword.Bluemix_notm}}에 여러 사용자를 등록하려면 사용자마다 다음 단계를 수행해야 합니다.
 {: tsResolve}
 
-  1. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 **등록**을 클릭하십시오. 
+  1. {{site.data.keyword.Bluemix_notm}} 콘솔에서 **등록**을 클릭하십시오.
   2. 마법사의 안내에 따라 단계를 완료하십시오.
 
     
@@ -222,19 +235,19 @@ nslookup stage1.mybluemix.net
 ## {{site.data.keyword.Bluemix_notm}} 페이지를 로드할 수 없음
 {: #ts_err}
 
-{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하는 경우 {{site.data.keyword.Bluemix_notm}} 페이지를 로드하지 못할 수 있습니다. 대신, BXNUI0001E 또는 BXNUI0016E 오류 메시지가 표시될 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 콘솔을 사용하는 경우 {{site.data.keyword.Bluemix_notm}} 페이지를
+로드하지 못할 수 있습니다. 대신, BXNUI0001E 또는 BXNUI0016E 오류 메시지가 표시될 수 있습니다.
  
 
-{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용할 경우 다음과 같은 오류 메시지가 표시될 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 콘솔을 사용할 경우 다음과 같은 오류 메시지가 표시될 수 있습니다.
 {: tsSymptoms}
 
-`BXNUI0001E: The page wasn't loaded because Bluemix didn't detect whether a session exists.`
+`BXNUI0001E: Bluemix에서 세션이 존재하는지 여부를 발견하지 않았기 때문에 페이지가 로드되지 않았습니다.`
 
 
-`BXNUI0016E: The apps and services weren't retrieved because a Bluemix page didn't load.`
+`BXNUI0016E: Bluemix 페이지가 로드되지 않았기 때문에 앱과 서비스가 검색되지 않았습니다.`
 
  
-
 필요한 경우 다음 조치 중 하나 이상을 수행할 수 있습니다.
 {: tsResolve}
 
@@ -242,7 +255,7 @@ nslookup stage1.mybluemix.net
   * {{site.data.keyword.Bluemix_notm}}에서 로그아웃한 후 다시 로그인하십시오.
   * 브라우저의 개인용 브라우징 모드를 사용하십시오. 
   * 브라우저의 쿠키와 캐시를 지우십시오.
-  * 다른 브라우저를 사용하십시오. {{site.data.keyword.Bluemix_notm}}에서 지원하는 브라우저 버전에 대한 정보는 [{{site.data.keyword.Bluemix_notm}}전제조건](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}을 참조하십시오.
+  * 다른 브라우저를 사용하십시오. {{site.data.keyword.Bluemix_notm}}에서 지원하는 브라우저 버전에 대한 정보는 [{{site.data.keyword.Bluemix_notm}} Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}를 참조하십시오.
   * cf 명령행 인터페이스를 설치한 경우 `cf apps` 명령을 입력하여 애플리케이션이 실행 중인지 확인하십시오.
   
   

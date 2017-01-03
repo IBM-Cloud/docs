@@ -15,8 +15,8 @@ copyright:
 마지막 업데이트 날짜: 2016년 7월 20일
 {: .last-updated}
 
-[Bluemix 데디케이티드](../../dedicated/index.html#dedicated),
-[Bluemix 로컬](../../local/index.html#local)과 같은 일부 환경에서 스테이징과 런타임 중에
+[Bluemix 데디케이티드](/docs/dedicated/index.html#dedicated),
+[Bluemix 로컬](/docs/local/index.html#local)과 같은 일부 환경에서 스테이징과 런타임 중에
 애플리케이션의 동작에 영향을 미치는 프록시를 구성할 수 있습니다. 
 
 다음 환경 변수를 사용하여 프록시 관련 작업을 수행하도록 애플리케이션을 구성할 수 있습니다. 
@@ -38,17 +38,17 @@ copyright:
 ## Java 애플리케이션
 {: #java_apps}
 
-[Liberty for Java](../runtimes/liberty/index.html) 애플리케이션과 [java_buildpack](../runtimes/tomcat/index.html) 애플리케이션의 경우 **JAVA_OPTS** 환경 변수를 통해 프록시 설정을 런타임에 전달할 수 있습니다. 예를 들어, 다음 명령을 실행할 수 있습니다.  
+[Liberty for Java](/docs/runtimes/liberty/index.html) 애플리케이션과 [java_buildpack](/docs/runtimes/tomcat/index.html) 애플리케이션의 경우 **JAVA_OPTS** 환경 변수를 통해 프록시 설정을 런타임에 전달할 수 있습니다. 예를 들어, 다음 명령을 실행할 수 있습니다.  
 ```
    $ cf se myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
 {: codeblock}
 
-그런 다음 애플리케이션을 다시 스테이징하십시오. 그러면 애플리케이션에서 런타임 시 지정된 프록시 설정을 사용합니다. Java 프록시 옵션에 대한 자세한 정보는 [Java 네트워킹 및 프록시](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html)의 내용을 참조하십시오.  
+그런 다음 애플리케이션을 다시 스테이징하십시오. 그러면 애플리케이션에서 런타임 시 지정된 프록시 설정을 사용합니다. Java 프록시 옵션에 대한 자세한 정보는 [Java Networking and Proxies](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html)의 내용을 참조하십시오.  
 
 # 관련 링크
 {: #rellinks}
 ## 일반
 {: #general}
-* [Liberty for Java](../runtimes/liberty/index.html)
-* [SDK for Nodejs](../runtimes/nodejs/index.html)
+* [Liberty for Java](/docs/runtimes/liberty/index.html)
+* [SDK for Nodejs](/docs/runtimes/nodejs/index.html)

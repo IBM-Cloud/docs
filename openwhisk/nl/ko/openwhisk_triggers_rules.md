@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-02-22"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # 트리거 및 규칙 작성
 {: #openwhisk_triggers}
-마지막 업데이트 날짜: 2016년 2월 22일
-{: .last-updated}
+
 
 {{site.data.keyword.openwhisk}} 트리거 및 규칙은 플랫폼에 이벤트 주도적인 기능을 제공합니다. 외부 및 내부 이벤트 소스의 이벤트는 트리거를 채널로 사용하며 규칙은 조치가 이러한 이벤트에 대해 반응하도록 허용합니다.
 {: shortdesc}
@@ -62,7 +57,7 @@ copyright:
 - `imageUpload -> classifyImage` 규칙
 - `imageUpload -> thumbnailImage` 규칙
 
-세 규칙은 다음 동작을 설정합니다. 트윗 및 업로드된 이미지 둘 다의 이미지가 분류되고 업로드된 이미지가 분류되고 작은 그림 버전이 작성됩니다. 
+세 규칙은 다음 동작을 설정합니다. 트윗 및 업로드된 이미지 둘 다의 이미지가 분류되고 업로드된 이미지가 분류되고 작은 그림 버전이 작성됩니다.
 
 ## 트리거 작성 및 실행
 {: #openwhisk_triggers_fire}
@@ -72,12 +67,12 @@ copyright:
 예를 들어, 사용자 위치 업데이트를 전송하도록 트리거를 작성하고 수동으로 트리거를 실행할 수 있습니다.
 
 1. 다음 명령을 입력하여 트리거를 작성하십시오.
- 
+
   ```
 wsk trigger create locationUpdate
   ```
   {: pre}
- 
+
   ```
 ok: created trigger locationUpdate
   ```
@@ -89,7 +84,7 @@ ok: created trigger locationUpdate
 wsk trigger list
   ```
   {: pre}
- 
+
   ```
 triggers
   /someNamespace/locationUpdate                            private
@@ -101,7 +96,7 @@ triggers
 3. 다음으로 트리거 이름 및 매개변수를 지정하여 트리거 이벤트를 실행하십시오.
 
   ```
-wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
 
@@ -118,7 +113,7 @@ ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
 
 규칙은 트리거를 조치와 연관시키는 데 사용됩니다. 트리거 이벤트가 실행될 때마다 이벤트 매개변수를 사용하여 조치가 호출됩니다.
 
-예를 들어, 위치 업데이트가 게시될 때마다 hello 조치를 호출하는 규칙을 작성하십시오. 
+예를 들어, 위치 업데이트가 게시될 때마다 hello 조치를 호출하는 규칙을 작성하십시오.
 
 1. 사용할 조치 코드를 사용하여 'hello.js' 파일을 작성하십시오.
   
@@ -135,7 +130,7 @@ function main(params) {
 wsk trigger update locationUpdate
   ```
   {: pre}
-  
+
   ```
 wsk action update hello hello.js
   ```
@@ -156,10 +151,10 @@ wsk action update hello hello.js
 
 4. locationUpdate 트리거를 실행하십시오. 이벤트를 실행할 때마다 이벤트 매개변수와 함께 hello 조치가 호출됩니다. 
   ```
-wsk trigger fire locationUpdate --param name "Donald" --param place "Washington, D.C."
+  wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-  
+
   ```
 ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
@@ -171,13 +166,13 @@ ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
 wsk activation list --limit 1 hello
   ```
   {: pre}
-  
+
   ```
 activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
   {: screen}
-  
+
   ```
 wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
@@ -191,5 +186,17 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
 
   hello 조치가 이벤트 페이로드를 수신하고 예상 문자열을 리턴한 것을 볼 수 있습니다.
 
-동일한 트리거를 다른 조치와 연관시키는 다중 규칙을 작성할 수 있습니다. 규칙을 작성하는 조치 및 트리거는 동일한 네임스페이스 안에 있어야 하며 패키지에 속할 수 없습니다.
-패키지에 속한 조치를 사용하려는 경우 네임스페이스에 조치를 복사할 수 있습니다. 예: `wsk action create echo --copy /whisk.system/utils/echo`.
+동일한 트리거를 다른 조치와 연관시키는 다중 규칙을 작성할 수 있습니다. 트리거 및 규칙은 패키지에 속할 수 없습니다. 그러나 규칙은 패키지에 속한 조치와 연결시킬 수 있습니다. 예:
+
+  ```
+  wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
+  ```
+  {: pre}
+
+시퀀스와 함께 규칙을 사용할 수도 있습니다. 예를 들어, `anotherRule` 조치에서 활성화된 조치
+시퀀스 `recordLocationAndHello`를 작성할 수 있습니다.
+  ```
+  wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  wsk rule create anotherRule locationUpdate recordLocationAndHello
+  ```
+  {: pre}

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-10-27"
+lastupdated: "2016-12-01"
  
 
 ---
@@ -18,9 +18,13 @@ lastupdated: "2016-10-27"
 # 升级和联合 {{site.data.keyword.Bluemix_notm}} 与 SoftLayer 缴费账户
 {: #softlayerlink}
 
-如果您拥有 {{site.data.keyword.Bluemix_notm}} 试用帐户，并且要访问“基础架构”仪表板，那么必须升级到 {{site.data.keyword.Bluemix_notm}}“现买现付”帐户。
+如果您拥有 {{site.data.keyword.Bluemix_notm}} 试用帐户，并且要访问“基础架构”仪表板，那么必须升级到 {{site.data.keyword.Bluemix_notm}}“现买现付”帐户。如果要使用在试用帐户内不可用的其他收费资源，或者试用帐户已到期，那么也必须升级。 
 
-您可以通过将现有 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 缴费账户链接在一起，以联合这两个帐户。链接帐户时，您将通过 {{site.data.keyword.Bluemix_notm}} 同时对 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 资源进行记帐。{:shortdesc}
+您可以通过将现有 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 缴费账户链接在一起，以联合这两个帐户。链接帐户时，您将通过 {{site.data.keyword.Bluemix_notm}} 同时对 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 资源进行记帐。
+
+
+**注意：**{{site.data.keyword.Bluemix_notm}} 预订帐户无法与 SoftLayer 帐户链接。要访问“基础架构”仪表板，您必须创建“现买现付”帐户，即自动与 SoftLayer 帐户链接的第二个帐户。然后，您将收到两个发票，每个 {{site.data.keyword.Bluemix_notm}} 帐户一个。虽然将在不同的“现买现付”帐户中对基础架构资源开具发票，但是资源可与预订帐户中的应用程序和服务一起使用。例如，如果您在预订帐户中激活 Watson 服务，那么您可以复制服务凭证，然后将凭证添加到源自“现买现付”帐户的裸机应用程序。
+{:shortdesc}
 
 ## 升级到 {{site.data.keyword.Bluemix_notm}}“现买现付”帐户
 {: #upgradetopayg}
@@ -64,12 +68,7 @@ lastupdated: "2016-10-27"
 
 链接帐户之后，SoftLayer 全局标题中即可使用**转至 {{site.data.keyword.Bluemix_notm}}** 链接。单击此链接可带您进入 {{site.data.keyword.Bluemix_notm}} 登录页面。此外，**SoftLayer** 链接现在可在 {{site.data.keyword.Bluemix_notm}} 标题中使用。单击该链接可在新窗口中带您进入 {{site.data.keyword.slportal}} 的主页。
 
-## 链接帐户时 {{site.data.keyword.Bluemix_notm}} 使用情况的信用值
-{: #slcredit}
-
-从 SoftLayer 帐户链接 {{site.data.keyword.Bluemix_notm}} 帐户后，您将收到 200.00 美元的信用值，该信用值只能在 {{site.data.keyword.Bluemix_notm}} 内使用。必须在链接帐户的 30 天内使用该信用值。
-
-有关如何查看信用值和到期日期的更多信息，请参阅[查看信用值](https://console.ng.bluemix.net/docs/pricing/index.html#credits)。
+{{site.data.keyword.Bluemix_notm}} 基础架构产品连接到一个三层网络，对公共、专用和管理流量进行分段处理。客户的 {{site.data.keyword.Bluemix_notm}} 帐户上的基础架构产品可在专用网络上免费相互传输数据。基础架构产品（例如，裸机服务器、虚拟服务器和云存储器）在公用网络上连接到 {{site.data.keyword.Bluemix_notm}}“目录”中的其他应用程序和服务，如 Watson 服务、容器或运行时。这两种类型的产品之间的数据传输按标准公用网络带宽费率计量并收费。
 
 ## 邀请 SoftLayer 团队成员加入 {{site.data.keyword.Bluemix_notm}}
 {: #invite_users}
@@ -131,7 +130,7 @@ lastupdated: "2016-10-27"
 
 通过在 SoftLayer 中从应用程序调用 Watson API，使它们更具个性化，您可以获得*洞察和认知*知识。或者，使用*数据和分析*服务，以对您的应用程序使用高性能分析。或者，选择数据库即服务，在这里您可以让 {{site.data.keyword.Bluemix_notm}} 来进行管理。
 
-将容器与 {{site.data.keyword.activedeployshort}} 和 {{site.data.keyword.deliverypipeline}} 等服务配合使用，使得您的应用程序开发更具现代化。然后，您可以使用 {{site.data.keyword.vpn_short}} 服务，通过隧道回到 SoftLayer，以将专用网络中的容器连接到 SoftLayer 专用网络。计算资源和服务的所有使用量费用都会反映在 {{site.data.keyword.Bluemix_notm}} 帐单中。 
+将容器与 {{site.data.keyword.activedeployshort}} 和 {{site.data.keyword.deliverypipeline}} 等服务配合使用，使得您的应用程序开发更具现代化。然后，您可以使用 {{site.data.keyword.vpn_short}} 服务，与 SoftLayer 进行通信，以将专用网络中的容器连接到 SoftLayer 专用网络。计算资源和服务的所有使用量费用都会反映在 {{site.data.keyword.Bluemix_notm}} 帐单中。 
 
 ### 基于 API 的 {{site.data.keyword.Bluemix_notm}} 服务
 并非所有 {{site.data.keyword.Bluemix_notm}} 服务都可以和 SoftLayer 一起使用。以下服务可以设置为与应用程序代码一起运行：

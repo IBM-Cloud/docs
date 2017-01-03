@@ -3,8 +3,8 @@
  
 
 copyright:
-
-  anni: 2014，2016
+  years: 2016
+lastupdated: "2016-10-31"
 
  
 
@@ -15,9 +15,6 @@ copyright:
 
 # Termini del glossario per {{site.data.keyword.Bluemix_notm}} 
 {: #glossary}
-
-Ultimo aggiornamento: 02 settembre 2016
-{: .last-updated}
 
 Questo glossario fornisce termini e definizioni per {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -79,7 +76,7 @@ Un tipo di output di report che fornisce un report gestito altamente interattivo
 ### attività
 {: #x2013072}
 
-Un elemento di un processo, come un'attività, un sottoprocesso, un loop o una decisione.  Le attività sono rappresentate come nodi in diagrammi di processo.
+Un elemento di un processo, come un'attività, un sottoprocesso, un loop o una decisione. Le attività sono rappresentate come nodi in diagrammi di processo.
 
 ### flusso di attività
 {: #x6842200}
@@ -119,7 +116,7 @@ Un nome breve univoco e visibile pubblicamente che viene utilizzato in client de
 ### anti-affinità
 {: #x8888040}
 
-Due o più istanze del gruppo di contenitori che vengono eseguite su diversi nodi di rete per garantire una maggiore disponibilità per un'applicazione. Vedi anche [affinità](#x2149238).
+Due o più istanze del gruppo di contenitori che vengono eseguite su diversi nodi di rete per garantire una maggiore disponibilità per un'applicazione. Consulta anche [affinità](#x2149238).
 
 ### API
 {: #x2008805}
@@ -209,7 +206,7 @@ Un'immagine che non ha alcuna immagine principale. Vedi anche [immagine](#x20249
 ### servizio beta
 {: #x7470455}
 
-Un servizio che non è pronto per la produzione e che è un una
+Un servizio che non è pronto per la produzione ed è a una
 fase di sviluppo di prova. Vedi anche [servizio
 sperimentale](#x7470450).
 
@@ -557,7 +554,7 @@ Un pezzo di codice che configura un'origine eventi esterna per l'attivazione di 
 ### condivisione file
 {: #x2022902}
 
-Nell'ambiente cloud IBM, un sistema di archiviazione permanente in cui gli utenti archiviano e condividono i file. In IBM Containers, gli utenti possono montare i volumi Docker sulle condivisioni file. 
+Nell'ambiente cloud IBM, un sistema di archiviazione permanente in cui gli utenti archiviano e condividono i file. In IBM Containers, gli utenti possono montare i volumi Docker sulle condivisioni file.
 
 ### attiva
 {: #x2239904}
@@ -990,7 +987,7 @@ Un servizio visibile solo ai membri di una specifica organizzazione Bluemix.
 ### blueprint del processo
 {: #x8677871}
 
-Descrizione di un processo di business che include i dettagli sulle attività del processo, come ad esempio le persone che effettuano o conoscono le attività e gli eventi cardine in cui vengono eseguite le attività. 
+Descrizione di un processo di business che include i dettagli sulle attività del processo, come ad esempio le persone che effettuano o conoscono le attività e gli eventi cardine in cui vengono eseguite le attività.
 
 ### diagramma del processo
 {: #x2220858}
@@ -1245,7 +1242,7 @@ coinvolge la gestione delle modifiche alle raccolte di file.
 ### spazio
 {: #x2039442}
 
-- Un sottogruppo all'interno di un'organizzazione Bluemix. Agli utenti membri di una org viene dato accesso a uno o più dei suoi spazi, con le autorizzazioni associate a uno specifico ruolo (come sviluppatore, responsabile o revisore). Qualsiasi membro dello spazio può visualizzare le applicazioni ma solo i membri con il ruolo di sviluppatore possono creare applicazioni e aggiungere istanze di servizio allo spazio. Le applicazioni e le istanze di servizio sono associate agli spazi. Vedere anche [organizzazione](#x2032585).
+- Un sottogruppo all'interno di un'organizzazione Bluemix. Agli utenti membri di un'organizzazione viene dato accesso a uno o più dei suoi spazi, con le autorizzazioni associate a uno specifico ruolo (come sviluppatore, responsabile o revisore). Qualsiasi membro dello spazio può visualizzare le applicazioni ma solo i membri con il ruolo di sviluppatore possono creare applicazioni e aggiungere istanze di servizio allo spazio. Le applicazioni e le istanze di servizio sono associate agli spazi. Vedere anche [organizzazione](#x2032585).
 - Un'unità organizzativa che contiene applicazioni e servizi nell'infrastruttura Cloud Foundry e può essere utilizzata per memorizzare e tenere traccia delle risorse di applicazione.
 - Un'area con controllo dell'accesso all'interno di un account in cui è possibile creare e organizzare le risorse Blueworks Live.
 

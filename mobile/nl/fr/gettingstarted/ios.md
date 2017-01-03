@@ -13,17 +13,16 @@ copyright:
 Dernière mise à jour : 1er juin 2016
 {: .last-updated}  
 
-Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application Hello Bluemix. Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
-mobile sans authentification. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans
-votre application.
+Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application Hello Bluemix.
+Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
+mobile sans authentification. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans votre application.
 
 1. Créez votre application de back end mobile dans {{site.data.keyword.Bluemix_notm}}.
     1. Dans la section Conteneurs boilerplate du catalogue {{site.data.keyword.Bluemix_notm}}, cliquez sur MobileFirst Services Starter.
     2. Entrez un nom et un hôte pour votre application et cliquez sur **Créer**.
     3. Cliquez sur **Terminer**.
 2. Exécutez l'application exemple Hello Bluemix :
-	1. Obtenez le projet depuis GitHub. Si vous le souhaitez, vous pouvez utiliser la commande git clone pour obtenir le projet. Depuis votre ordinateur, ouvrez le
-terminal, puis entrez la commande suivante :
+	1. Obtenez le projet depuis GitHub. Si vous le souhaitez, vous pouvez utiliser la commande git clone pour obtenir le projet. Depuis votre ordinateur, ouvrez le terminal, puis entrez la commande suivante :
     ```
     git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellobluemix.git
     ```
@@ -35,9 +34,7 @@ terminal, puis entrez la commande suivante :
 
 	**Important :** votre valeur appRoute doit utiliser un protocole `https` et non`http`, ou vous risquez d'avoir un échec de connexion, dû aux paramètres de sécurité du transport d'appplications. Vous pouvez en savoir plus sur ces paramètres en consultant l'article de blogue [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/) blog post.
 	
-4. Dans le simulateur, cliquez sur **Ping {{site.data.keyword.Bluemix_notm}}**. Le modèle d'application obtient l'en-tête
-d'autorisation depuis le service Mobile Client Access. Si la commande ping aboutit, le texte
-dans le simulateur est mis à jour.
+4. Dans le simulateur, cliquez sur **Ping {{site.data.keyword.Bluemix_notm}}**. Le modèle d'application obtient l'en-tête d'autorisation depuis le service Mobile Client Access. Si la commande ping aboutit, le texte dans le simulateur est mis à jour.
 
   Quand vous vous connectez à {{site.data.keyword.Bluemix_notm}} depuis l'application mobile dans Xcode, le message suivant s'affiche : `Yay! You are connected`
   {: screen}
@@ -60,8 +57,7 @@ dans le simulateur est mis à jour.
 
 ## Etapes suivantes :
 {: #next}
-Pour des informations sur l'obtention du logiciel SDK et son intégration à votre application mobile, voir les informations sur la configuration des
-services Bluemix.
+Pour des informations sur l'obtention du logiciel SDK et son intégration à votre application mobile, voir les informations sur la configuration des services Bluemix.
    * [Mobile Client Access](../../services/mobileaccess/index.html)
    * [Push](../../services/mobilepush/index.html)
 

@@ -2,13 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-06-15"
 
 ---
 
 # Habilitación de la autenticación de Facebook para apps de Web
-
-Última actualización: 15 de junio de 2016
-{: .last-updated}
+{: #facebook_web}
 
 Utilice Facebook para autenticar usuarios para la app web.
 
@@ -85,5 +84,3 @@ Asegúrese de enviar esta solicitud `POST` en el plazo de 10 minutos porque el c
 ## Prueba de autenticación
 Ahora puede empezar a realizar solicitudes a los recursos protegidos.
 Todas las solicitudes para recursos protegidos deben contener el `access_token` en el campo de cabecera de solicitud de autorización.
-
-

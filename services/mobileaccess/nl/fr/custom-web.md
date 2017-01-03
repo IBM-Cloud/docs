@@ -2,14 +2,12 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-16"
 
 ---
 
 # Authentification personnalisée d'application Web
 {: #custom-web}
-
-Dernière mise à jour : 16 juin 2016
-{: .last-updated}
 
 Ajoutez une authentification personnalisée à votre application Web
 
@@ -25,8 +23,7 @@ Vous devez disposer des éléments suivants :
   displayName: <displayName>;
  };
 ```
-* Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour
-plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
+* Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
 
 
 
@@ -46,7 +43,7 @@ Pour démarrer le processus d'autorisation :
 1. Redirigez l'utilisateur depuis votre application Web vers le noeud final suivant du serveur d'autorisation :
 
     https://imf-newauthserver.bluemix.net/oauth/v2/authorization
-  
+
   en utilisant les paramètres de requête suivants :
    ```
    response_type=’authorization_code’
@@ -74,12 +71,11 @@ La réponse retournée après une authentification réussie contient le code d'a
  redirect_uri = <redirect_uri>
  code = <authorization code>
  ```
-  Le paramètre `redirect_uri` doit correspondre au paramètre `redirect_uri` de l'étape 1. Le code d'autorisation a été retourné par la demande à l'étape 2. 
-  
+  Le paramètre `redirect_uri` doit correspondre au paramètre `redirect_uri` de l'étape 1. Le code d'autorisation a été retourné par la demande à l'étape 2.
+
   Prenez soin d'envoyer cette demande `POST` dans les 10 minutes, puisque le code d'accord n'est valide que pendant 10 minutes maximum.
 
-Le corps de la réponse `POST` contient les paramètres *access_token* et
-*id_token* codés en base 64.
+Le corps de la réponse `POST` contient les paramètres *access_token* et *id_token* codés en base 64.
 
 ## Test de l'authentification
 
@@ -87,5 +83,3 @@ Le corps de la réponse `POST` contient les paramètres *access_token* et
 Vous pouvez maintenant commencer à effectuer des demandes dans vos ressources protégées.
 Toutes ces demandes doivent contenir le paramètre `access_token`.
 Envoyez le jeton d'accès vers la zone d'en-tête `the-Authorization-request`.
-
-

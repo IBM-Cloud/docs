@@ -2,16 +2,15 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-27"
+
 ---
 
-{:shortdesc: .shortdesc} {:codeblock:.codeblock}
+{:shortdesc: .shortdesc} 
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.amashort}} 서비스로 백엔드 리소스 보호
 {: #protecting-resources}
-
-마지막 업데이트 날짜: 2016년 8월 22일
-{: .last-updated}
 
 
 {{site.data.keyword.amafull}} 서비스를 통해, 모바일 사용 OAuth 보안 및 모니터링으로 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 Java 기반 백엔드 애플리케이션 및 Node.js를 보호할 수 있습니다.

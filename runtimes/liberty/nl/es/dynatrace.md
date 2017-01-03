@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,15 +12,12 @@ copyright:
 # Utilización de Dynatrace
 {: #using_dynatrace}
 
-Última actualización: 10 de junio de 2016
-{: .last-updated}
-
 Dynatrace es un servicio de otro proveedor que proporciona supervisión de la aplicación.
 
 Para obtener más información acerca de lo que proporciona el servicio de Dynatrace, consulte [Supervisión de la aplicación Dynatrace](http://www.dynatrace.com/en/products/application-monitoring.html).
 
-Cuando la aplicación Liberty se configura para utilizar Dynatrace, el comportamiento predeterminado es que el tiempo de ejecución de Liberty adquirirá un archivo jar de agente de Dynatrace desde un sitio Dynatrace y ejecutará dicho agente Dynatrace con la app.  Con este comportamiento predeterminado las configuración mínima necesaria para utilizar Dynatrace es crear un servicio proporcionado por el usuario que apunte al recopilador
-Dynatrace.
+Cuando la aplicación Liberty se configura para utilizar Dynatrace, el comportamiento predeterminado es que el tiempo de ejecución de Liberty adquirirá un archivo jar de agente de Dynatrace desde un sitio Dynatrace y ejecutará dicho agente Dynatrace con la app. Con este comportamiento predeterminado la configuración mínima necesaria para utilizar Dynatrace es crear un servicio proporcionado por el usuario que apunte al recopilador
+Dynatrace.  
 
 ## Creación de un servicio proporcionado por el usuario que apunte al recopilador de Dynatrace
 
@@ -42,7 +40,7 @@ de Dynatrace para conectarse con el recopilador de Dynatrace. Consulte [Arquitec
   </pre>
   {: codeblock}
 
-En este ejemplo, my-dynatrace-collector es el nombre proporcionado al servicio, DynatraceCollectorIPaddress es la dirección IP del recopilador de Dynatrace que ha configurado, y el perfil es el nombre de perfil de Dynatrace opcional asociado con esta app supervisada. El valor del perfil predeterminado es Monitoring. Puede especificar los parámetros opcionales como en el ejemplo que se indica a continuación.
+En este ejemplo, my-dynatrace-collector es el nombre proporcionado al servicio, DynatraceCollectorIPaddress es la dirección IP del recopilador de Dynatrace que ha configurado, y el perfil es el nombre de perfil de Dynatrace opcional asociado con esta app supervisada. El valor predeterminado del perfil es Monitoring.Puede especificar los parámetros opcionales como en el ejemplo que se indica a continuación.
 
   <pre>
   $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
@@ -53,9 +51,7 @@ En este ejemplo, my-dynatrace-collector es el nombre proporcionado al servicio, 
 
 Consulte [Sección establecimiento del agente de la configuración del agente](https://community.dynatrace.com/community/display/DOCDT62/Agent+Configuration) en el sitio web de la comunidad de Dynatrace para obtener más información sobre las opciones disponibles. Por ejemplo, utilizando la opción de exclusión, puede excluir las clases que supervisa Dynatrace. Consulte [Infraestructura del agente de DynaTrace](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/framework-dynatrace-agent.md) para obtener más detalles sobre cómo configurar el servicio proporcionado por el usuario.
 </li>
-<li>Una vez que haya enviado la app a Bluemix, enlace el servicio proporcionado por el usuario que ha creado a la app. Por ejemplo, utilice el mandato
-
-  <pre>
+<li>Una vez que haya enviado la app a Bluemix, enlace el servicio proporcionado por el usuario que ha creado a la app. Por ejemplo, utilice el mandato  <pre>
   $ cf bs myApp my-dynatrace-collector
   </pre>  
   {: codeblock}
@@ -99,7 +95,7 @@ La app de Liberty que desea supervisar deben estar configurada para localizar el
 
   En este ejemplo, *my-dynatrace-agent-host.mybluemix.net* es el URL del archivo index.yml alojado por el servidor que ha configurado previamente.
   </li>
-  <li> Después de establecer la variable de entorno, vuelva a transferir la aplicación. El staging_task.log para la aplicación de Liberty emite un mensaje que indica que se ha descargado correctamente el agente de Dynatrace desde el servidor de alojamiento del agente. Por ejemplo:
+  <li> Después de establecer la variable de entorno, vuelva a transferir la aplicación. El archivo staging_task.log para la aplicación de Liberty emite un mensaje que indica que se ha descargado correctamente el agente de Dynatrace desde el servidor de alojamiento del agente. Por ejemplo:
 
   <pre>
     Descarga de dynatrace-agent-6.3.0-unix.jar 6.3.0 de https://my-dynatrace-agent-host.mybluemix.net/dynatrace-agent-6.3.0-unix.jar (17,8 s)

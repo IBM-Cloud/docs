@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,12 +13,10 @@ copyright:
 
 # node.js 的離線模式
 {: #offline_mode}
-前次更新：2016 年 7 月 20 日
-{: .last-updated}
 
-將 node.js 應用程式推送至 {{site.data.keyword.Bluemix}} 之後，SDK for Node.js 建置套件通常會從外部資源下載構件，例如 NPM 提供的 node 模組。在某些情況下，例如使用 [Bluemix 專用](../../dedicated/index.html#dedicated)和 [Bluemix 本端](../../local/index.html#local)時，您可能會希望不要依賴存取 Bluemix 的外部網站，或是希望對這些外部網站有更明確的控制。  
+將 node.js 應用程式推送至 {{site.data.keyword.Bluemix}} 之後，SDK for Node.js 建置套件通常會從外部資源下載構件，例如 NPM 提供的 node 模組。在某些情況下，例如使用 [Bluemix 專用](/docs/dedicated/index.html#dedicated)和 [Bluemix 本端](/docs/local/index.html#local)時，您可能會希望不要依賴存取 Bluemix 的外部網站，或是希望對這些外部網站有更明確的控制。  
 
-下面是 node.js 建置套件可以存取的外部網站。在 [Bluemix 專用](../../dedicated/index.html#dedicated)和 [Bluemix 本端](../../local/index.html#local)環境中，需要將這些網站設定為*白名單*。
+下面是 node.js 建置套件可以存取的外部網站。在 [Bluemix 專用](/docs/dedicated/index.html#dedicated)和 [Bluemix 本端](/docs/local/index.html#local)環境中，需要將這些網站設定為*白名單*。
 
 * http://nodejs.org/ 可用來確定可用的 node 引擎版本。
 * https://s3pository.heroku.com 可用來擷取建置套件中沒有包含的 node 引擎版本。
@@ -46,11 +45,11 @@ copyright:
 ## 使用 Proxy
 {: #working_with_proxy}
 
-在像 [Bluemix 專用](../../dedicated/index.html#dedicated)和 [Bluemix 本端](../../local/index.html#local)這些環境中，可以配置 Proxy。如需詳細資訊，請參閱[使用 Proxy](../../manageapps/workingWithProxy.html)。
+在像 [Bluemix 專用](/docs/dedicated/index.html#dedicated)和 [Bluemix 本端](/docs/local/index.html#local)這些環境中，可以配置 Proxy。如需詳細資訊，請參閱[使用 Proxy](/docs/manageapps/workingWithProxy.html)。
 
 # 相關鏈結
 {: #rellinks}
 ## 一般
 {: #general}
-* [Node.js 建置套件的最新更新項目](../../runtimes/nodejs/updates.html)
+* [Node.js 建置套件的最新更新項目](/docs/runtimes/nodejs/updates.html)
 * [Node.js](https://nodejs.org)

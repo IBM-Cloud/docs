@@ -1,11 +1,9 @@
 ---
-
  
 
 copyright:
-
   years: 2016
-
+lastupdated: "2016-08-08"
  
 
 ---
@@ -15,8 +13,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} Public
 {: #public}
-Letzte Aktualisierung: 8. August 2016
-{: .last-updated}
 
 
 {{site.data.keyword.Bluemix_notm}} abstrahiert und verbirgt den weitaus größten Teil der Komplexität, die mit dem Hosten und Verwalten von cloudbasierten Apps verbunden ist. Als Anwendungsentwickler können Sie sich auf die Entwicklung Ihrer App konzentrieren und müssen sich nicht um die Verwaltung der Infrastruktur kümmern, die für den Betrieb der App erforderlich ist.

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-11-30"
  
 
 ---
@@ -51,9 +51,6 @@ copyright:
 # 定價
 {: #pricing}
 
-*前次更新：2016 年 9 月 13 日*
-{: .last-updated}
-
 您可以免費執行 {{site.data.keyword.Bluemix}} 中的應用程式，以及試用 {{site.data.keyword.Bluemix_notm}} 服務。您可以註冊 30 天免費試用，此免費試用提供更多的額度（包括免費支援）。30 天之後，您可以選擇帳戶類型，並且只需要為您使用超過免費額度的部分進行付款。Bluemix 提供成本計算機讓您事先預估成本，以及提供「用量儀表板」視圖讓您檢查建置應用程式之後的實際成本。
 {:shortdesc}
 
@@ -68,7 +65,7 @@ copyright:
 * 1 個 SSL 憑證
 
 您的免費試用會在註冊 30 天之後到期。30 天試用到期之後，您帳戶中的應用程式即會停止。您將無法在 {{site.data.keyword.Bluemix_notm}} 上註冊另一次試用。
-不過，您還是可以存取帳戶，以及您受邀使用的其他帳戶。若要重新啟動應用程式，您必須為「隨收隨付制」帳戶提供信用卡資訊，或建立一個「訂閱」帳戶。在轉換帳戶之後，就可以繼續使用免費的運算及服務額度。您只需要針對未包含在每月免費額度中的服務、容器及運行環境的使用進行付款。
+不過，您還是可以存取帳戶，以及您受邀使用的其他帳戶。若要重新啟動應用程式，您必須為「隨收隨付制」帳戶提供信用卡資訊，或建立一個「訂閱」帳戶。在轉換帳戶之後，就可以繼續使用免費的運算及服務額度。您只需要針對未包含在每月免費額度中的服務、容器及運行環境的用量進行付款。
 
 如果您未在免費試用到期之後轉換帳戶，則會在試用到期後收到關於帳戶狀態的電子郵件通知。通知會提醒您建立付款帳戶，因此，將不會遺失應用程式設定及配置。如果您不想從 {{site.data.keyword.Bluemix_notm}} 收到這些通知，可以隨時取消訂閱。
 在試用到期的一個月之後，會移除您的應用程式及服務配置。下圖顯示 {{site.data.keyword.Bluemix_notm}} 帳戶管理的一般處理程序。
@@ -76,7 +73,8 @@ copyright:
 
 ![{{site.data.keyword.Bluemix_notm}} 帳戶管理的處理程序流程圖](acctmgmt600.png)
 
-*圖 1. {{site.data.keyword.Bluemix_notm}} 帳戶管理的處理程序流程圖*
+圖 1. {{site.data.keyword.Bluemix_notm}} 帳戶管理的處理程序流程圖
+{: #pricing_figure1}
 
 
 如果您在免費試用期間轉換帳戶，則會將免費額度限制為一般由每一個服務所提供的額度。額度不再是許多 IBM 服務在免費試用期間所提供的無限制使用額度。
@@ -122,7 +120,7 @@ copyright:
 
 如果在使用「隨收隨付制」或「訂閱」帳戶時遇到任何 {{site.data.keyword.Bluemix_notm}} 問題，請參閱[取得線上說明](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help)以取得相關資訊。
 
-**附註：**如果您將 {{site.data.keyword.Bluemix_notm}} 計費帳戶與 SoftLayer 帳戶鏈結，從下個月 1 日開始，{{site.data.keyword.Bluemix_notm}} 費用就會列在 SoftLayer 發票上。如需詳細資訊，請參閱[檢視額度](../admin//softlayerlink.html#bill_usage)。
+**附註：**如果您鏈結 {{site.data.keyword.Bluemix_notm}} 計費帳戶與 SoftLayer 帳戶，從下個月 1 日開始，{{site.data.keyword.Bluemix_notm}} 及 SoftLayer 費用將會列在 {{site.data.keyword.Bluemix_notm}} 發票上。如需詳細資訊，請參閱[檢視額度](/docs/admin//softlayerlink.html#bill_usage)。
 
 ###隨收隨付制帳戶
 {: #pay-as-you-go}
@@ -137,7 +135,7 @@ copyright:
 ###訂閱帳戶
 {: #subscription}
 
-如果您註冊「訂閱」帳戶，即承諾每個月的最低消費金額，並獲得套用至該最低收費的訂閱折扣。您也會針對任何超出最低消費金額的使用付款。
+如果您註冊「訂閱」帳戶，即承諾每個月的最低消費金額，並獲得套用至該最低收費的訂閱折扣。您也會針對任何超出最低消費金額的用量付款。
 
 
 若要註冊「訂閱」帳戶，以及取得訂閱費率及折扣的相關資訊，您必須利用 [Bluemix 與我們聯絡](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)頁面上列出的鏈結，與 {{site.data.keyword.Bluemix_notm}} 業務代表聯絡。
@@ -187,7 +185,7 @@ copyright:
 ###運算資源費用
 {: #compute}
 
-針對應用程式所執行的時間以及使用的記憶體，會向您收費（計算單位為 *GB-小時*）。GB-小時計算如下：應用程式實例數目乘上每個實例的記憶體，再乘上實例所執行的時數。您可以根據需要來自訂實例數以及每個實例的記憶體數量。您也可以針對更多使用者新增記憶體或實例，以進行擴充。最終費用是根據 GB-小時：應用程式實例（乘上每個實例的記憶體，再乘上執行中時數）。
+針對應用程式所執行的時間以及使用的記憶體，會向您收費（計算單位為 *GB-小時*）。GB-小時計算如下：應用程式實例數目乘上每個實例的記憶體，再乘上實例所執行的時數。您可以根據需要來自訂實例數以及每個實例的記憶體量。您也可以針對更多使用者新增記憶體或實例，以進行擴充。最終費用是根據 GB-小時：應用程式實例（乘上每個實例的記憶體，再乘上執行中時數）。
 
 例如，請考量兩個 512 MB 實例中每個 GB-小時的成本為 $0.07 的運行環境，執行時間為 30 天（720 小時）。使用下列計算，這些資源的成本為 $24.15 USD（包括免費額度 375 GB-小時）： 
 
@@ -199,12 +197,12 @@ copyright:
 ###服務的費用
 {: #services}
 
-許多服務都包含每月免費額度。未包含為免費額度一部分的服務用量，會使用下列其中一種方式進行收費：
+許多服務都包括每月免費額度。未包括為免費額度一部分的服務的使用，是使用下列其中一種方式進行收費：
 <dl>
 <dt>固定費用</dt>
     <dd>您可以選取方案，並根據固定費率付款。例如，Data Cache 服務是根據固定費率收費。</dd>
 <dt>計量費用</dt>
-    <dd>您可以根據運行環境和服務耗用量進行付款。例如，使用 Push 服務，會收取超出每月免費額度的使用的費用。</dd>
+    <dd>您可以根據運行環境和服務耗用量進行付款。例如，使用 Push 服務，會收取超出每月免費額度的使用費用。</dd>
 <dt>保留費用</dt>
     <dd><p>身為「隨收隨付制」帳戶或「訂閱」帳戶的帳戶擁有者，您可以透過長期承諾的折扣價格保留服務實例。例如，您可以保留標準大型 DB2 on Cloud 供應項目 12 個月。</p> 
     <p>部分 {{site.data.keyword.Bluemix_notm}} 服務提供保留方案。按一下服務磚，您可以從 {{site.data.keyword.Bluemix_notm}} <strong>型錄</strong>要求保留方案。然後，選取最符合您需求的服務方案。如果有保留方案可供使用，請按一下<strong>要求</strong>，然後遵循提示來傳送要求。您將收到一封包含保留方案價格資訊的電子郵件。{{site.data.keyword.Bluemix_notm}} 業務代表也會很快與您聯絡，以完成採購。</p></dd>
@@ -225,8 +223,7 @@ copyright:
 | 層級 3：2001 - 3000                  |   美金 $0.75                       |
 | 層級 4：3001 - 4000           |      美金 $0.60                    |
 |層級 5：&gt; 4000 | 美金 $0.40 | 
-
-*表 1. 簡式層級定價表*
+{:caption="Table 1. Simple tier pricing table" caption-side="top"}
 
 下表說明您要對根據簡式層級定價模型的方案支付多少錢：
 
@@ -237,7 +234,7 @@ copyright:
 |2500 |	2500 × 0.75 = 1875 |	美金 $1875|
 |... |	... |	...|
 |5200 |	5200 × 0.40 = 2080 |美金 $2080|
-*表 2. 使用簡式層級定價模型的費用計算*
+{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
 
 ####提升層級
 {: #graduated_tier}
@@ -251,7 +248,7 @@ copyright:
 |    層級 3：2001 - 3000 |	美金 $0.75 |
 |    層級 4：3001 - 4000 |	美金 $0.60 |
 |    層級 5：&gt; 4000 |	美金 $0.40 |
-*表 3. 提升層級定價表*
+{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
 
 下表說明您要對根據提升層級定價模型的方案支付多少錢：
 
@@ -262,7 +259,7 @@ copyright:
 |2500 |	(1000 × 1（層級 1 的單價）) + (1000 × 0.90（層級 2 的單價）) + (500 × 0.75（層級 3 的單價）) = 2275 |	美金 $2275 |
 |... |	... |	...|
 |5200 |	(1000 × 1（層級 1 的單價）) + (1000 × 0.90（層級 2 的單價）) + (1000 × 0.75（層級 3 的單價）) + (1000 × 0.60（層級 4 的單價）) + (1200 × 0.40（層級 5 的單價）) = 3730 |	美金 $3730|
-*表 4. 使用提升層級定價模型的費用計算*
+{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
 
 ####區塊層級
 {: #block_tier}
@@ -276,7 +273,7 @@ copyright:
 | 層級 3：&lt;= 3000 |	美金 $2800|
 | 層級 4：&lt;= 4000 |	美金 $3500|
 | 層級 5：&lt;= 10000 |	美金 $5000|
-*表 5. 區塊層級定價表*
+{:caption="Table 5. Block tier pricing table" caption-side="top"}
 
 下表說明您要對根據區塊層級定價模型的方案支付多少錢：
 
@@ -286,7 +283,7 @@ copyright:
 |1500 |	此項目數落在層級 2，因此總價為美金 $1900。 |	美金 $1900|
 |... |	... |	...|
 |5200 |	此項目數落在層級 5，因此總價為美金 $5000。 |	美金 $5000|
-*表 6. 使用區塊層級定價模型的費用計算*
+{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
 ### 虛擬伺服器的免費額度
 {: #vms}
@@ -308,7 +305,7 @@ copyright:
 您可以使用不同方法來知道使用
 {{site.data.keyword.Bluemix_notm}} 建置及管理您的應用程式，需要支付多少錢。
 
-* {{site.data.keyword.Bluemix_notm}}「定價」頁面上的成本預估器會根據您的應用程式大小提供約略的成本預估。
+* {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}}上的成本預估器會根據您的應用程式大小提供約略的成本預估。
 * {{site.data.keyword.Bluemix_notm}}「定價」頁面上的成本計算機會根據您輸入的運行環境及服務用量來提供正確的應用程式價格。
 * 您也可以手動計算成本。
 
@@ -317,7 +314,7 @@ copyright:
 
 您可以使用 {{site.data.keyword.Bluemix_notm}} 所提供的成本計算機快速地為應用程式計算價格。
 
-1. 移至 {{site.data.keyword.Bluemix_notm}} [定價頁面](https://console.{DomainName}/pricing/)。 
+1. 移至 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.pricing_sheet}}。 
 2. 使用其中一個**預估成本**小組件，或按一下**開啟計算機**，以使用**計算到分的定價計算機**。
 
 若要使用計算機，請鍵入所列出資源的預測每月用量；例如，實例數或推送通知數。按一下**每月用量**欄位以取得欄位中所預期單位的提示。計算機會立即顯示輸入值的價格。您也可以調整計算機以顯示每年成本，而非每月成本。
@@ -351,7 +348,7 @@ copyright:
 |Data Cache - Standard |	5 GB 的快取空間及一個抄本  |	$155.00 USD/實例 |
 |Data Cache - Premium |	25 GB 的快取空間及一個抄本 |	$505.00 USD/實例|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB 的免費資料儲存空間<br/>每個月有 50,000 次輕量型 API 呼叫免費<br/>每個月有 10,000 次重量型 API 呼叫免費 | $1.00 USD/GB<br/>$0.03 USD/1000 次輕量型 API 呼叫<br/>$0.15 USD/1000 次重量型 API 呼叫 |
-*表 7. 定價單*
+{:caption="Table 7. Pricing sheet" caption-side="top"}
 
 ###計算應用程式價格
 
@@ -410,34 +407,36 @@ copyright:
 |SEK |	  瑞典克朗|
 |USD |    美元|
 |ZAR |	  南非幣|
-*表 8. 支援的貨幣*
+{:caption="Table 8. Supported currencies" caption-side="top"}
+
+**附註：**如果您已鏈結 {{site.data.keyword.Bluemix_notm}} 與 SoftLayer 帳戶，則所收到的單一發票的計價單位僅為美元 (USD)。  
 
 ##用量儀表板
 {: #usage}
 
-身為帳戶擁有者或帳單管理員，您可以使用「用量儀表板」視圖，來查看組織中每個月所使用的運行環境及服務的即時費用。您可以查看所有地區的運行環境 GB-小時和服務耗用量，或選擇查看過去 12 個月的特定地區和空間。
+身為帳戶擁有者或帳單管理員，您可以使用「用量儀表板」頁面，來查看組織中每個月所使用的運行環境及服務的即時費用。您可以查看所有地區的運行環境 GB-小時和服務耗用量，或選擇查看過去 12 個月的特定地區和空間。
 
-若要開啟「用量儀表板」視圖，請按一下**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; *your_account_name* &gt; **用量儀表板**。在此視圖中，您可以查看該帳戶的運行環境和服務用量的摘要。帳單管理員只能針對他們身為帳單管理員的組織看到其詳細資料。
+若要開啟**用量儀表板**頁面，請按一下**帳戶** &gt; *your_account_name* &gt; **用量儀表板**。在此頁面中，您可以查看該帳戶的運行環境和服務用量的摘要。帳單管理員只能針對他們身為帳單管理員的組織看到其詳細資料。
 
 在每一個計費週期的結尾，會針對跨所有組織發生的用量總計，向帳戶擁有者收費。每個計費週期為期一個月。
 
-帳戶擁有者可以依地區和組織來過濾用量摘要。如果您是帳戶擁有者，請將**組織**設為**所有組織**，以查看整個帳戶 12 個月期間的用量。按一下特定月份，以查看該月份的用量。顯示的費用代表您（帳戶擁有者）該月份的計費金額。
+帳戶擁有者可以依地區和組織來過濾用量摘要。顯示的費用代表您（帳戶擁有者）該月份的計費金額。
 
 如果您針對**組織**選取特定組織，則可以看到該組織的用量總計（包括免費層級的任何用量）。顯示的組織費用不是您的計費費用。免費層級用量在帳戶層次會顯示為免費，但在組織層次則不是。因此，當您檢視組織用量時，會看到該組織的實際用量（包括免費及收費用量）。在移除免費層級之後，所有組織用量都會累積更新至帳戶用量。
 
 ##檢視額度
 {: #credits}
 
-身為帳戶擁有者或帳單管理員，您可以使用「用量儀表板」視圖，來查看帳戶的任何額度。例如，如果您已將 SoftLayer 帳戶與 {{site.data.keyword.Bluemix_notm}} 帳戶鏈結，可能就會有額度。
+身為帳戶擁有者或帳單管理員，您可以使用**用量儀表板**頁面，來查看帳戶的任何額度。 
 
-若要開啟「用量儀表板」視圖，請按一下**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg)，然後選取**帳戶**。在顯示的頁面上，按一下**用量儀表板**。在此視圖中，您可以查看任何額度（如果有的話）及其期限。
+若要開啟**用量儀表板**頁面，請按一下**帳戶** &gt; **用量儀表板**。此儀表板會顯示任何額度（如果有的話）及其期限。
 
 ##通知
 {: #notifications}
 
 身為「隨收隨付制」帳戶的帳戶管理員，您可以針對帳戶、運行環境、服務和不包含協力廠商服務的個別服務的總成本，設定消費通知。您會在達到所指定消費臨界值的 80%、90% 和 100% 時收到通知。
 
-若要開啟**通知**視圖，請按一下**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **帳戶** &gt; *your_account_name* &gt; **消費通知**。輸入數值，以視需要設定消費臨界值來觸發每一種消費通知類型的通知。您也可以新增及刪除個別服務的通知。
+若要開啟**通知**視圖，請按一下**帳戶** &gt; *your_account_name* &gt; **消費通知**。輸入數值，以視需要設定消費臨界值來觸發每一種消費通知類型的通知。您也可以新增及刪除個別服務的通知。
 
 ##方案變更方式
 {: #changing}
@@ -452,7 +451,7 @@ copyright:
 |服務 |	資訊|
 |--------|-------------|
 |Presence Insights 	|如果您有 Lite 方案，並超出免費額度，則會顯示 403 訊息，或記載此訊息以指出您不再獲得授權，並且停用服務實例。此外，還會以 403 回應來拒絕 POST REST API 呼叫。<br/><br/>如果因為超出免費額度而停用您的服務，則可以從 Lite 方案升級為「付費」方案。您的服務會在 2 小時內重新啟用。<br/><br/>如果您有「付費」方案，則只要事件及總儲存空間的用量落在 Lite 方案額度內，就可以將方案降低為 Lite 方案。<br/><br/>當您升級或降低方案時，並不需要重新編譯打包或重新啟動應用程式。|
-*表 9. 變更方案的後續步驟*
+{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###如何透過指令行介面變更方案
 
@@ -462,7 +461,9 @@ copyright:
 cf update-service <service_name> [-p <new_plan>]
 ```
 # 相關鏈結
-## 一般 
+{: rellinks}
+## 一般
+{: general}
 * [{{site.data.keyword.Bluemix_notm}} 定價單](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} Developers 社群討論區](https://developer.ibm.com/bluemix/)
 * [取得線上說明](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)

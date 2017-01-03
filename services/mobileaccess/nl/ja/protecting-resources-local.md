@@ -2,9 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-12-04"
+
 ---
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
+{:codeblock:.codeblock}
+
 
 # ローカル開発環境での {{site.data.keyword.amashort}} の使用
 {: #protecting-local}
@@ -13,12 +16,13 @@ lastupdated: "2016-10-10"
 
 ## 開始する前に
 {: #before-you-begin}
-以下が必要です。
 
+以下が必要です。
 * {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
-* サービス・パラメーター値。{{site.data.keyword.Bluemix_notm}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**をクリックします。`applicationRoute` および `appGUID` (`tenantId` とも呼ばれる) の値が、**「経路」**および**「アプリ GUID」/「TenantId」**フィールドに表示されます。これらの値は、SDK を初期化するため、および要求をバックエンド・アプリケーションに送信するために必要になります。
-*  {{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域を見つけます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。
-地域値は、**「米国南部」**、**「シドニー」**、または**「英国」**のいずれかでなければなりません。これらの名前に対応する正確な SDK の定数値は、コードの例に示しています。 
+* **「TenantID」**。{{site.data.keyword.amafull}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
+* **「アプリケーションの経路 (Application Route)」**。これは、バックエンド・アプリケーションの URL です。保護されているエンドポイントに要求を送信するためにこの値が必要になります。
+* {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域値は、`US South`、`Sydney`、または  `United Kingdom` のいずれかでなければなりません。SDK に必要な正確な構文については、コード・サンプル中のコメントを参照してください。{{site.data.keyword.amashort}} クライアントを初期化するためにこの値が必要になります。
+* Gradle と連動して機能するようにセットアップされた Android Studio プロジェクト。Android 開発環境のセットアップ方法について詳しくは、[Google Developer Tools](http://developer.android.com/sdk/index.html) を参照してください。
 
 ## Server SDK のセットアップ
 {: #serversetup}
@@ -33,15 +37,14 @@ lastupdated: "2016-10-10"
 1. {{site.data.keyword.amashort}} サービスによって保護されているモバイル・バックエンド・アプリケーションの {{site.data.keyword.Bluemix_notm}} ダッシュボードを開きます。
 
 1. ローカル開発環境で、*VCAP_APPLICATION* 環境変数を設定します。この変数には、文字列化された JSON オブジェクトが単一プロパティーとともに含まれている必要があります。
-```JavaScript
-{
-    application_id: "appGUID"
-}
-```
+	```JavaScript
+	{
+		application_id: "appGUID"
+	}
+	```
+	{: codeblock}
 
-*appGUID* 値を、[「開始する前に」](#before-you-begin)で取得した `appGUID` 値に置き換えます。 
-
-1. {{site.data.keyword.Bluemix_notm}} ダッシュボード上の、モバイル・バックエンド・アプリケーションの {{site.data.keyword.amashort}} サービス・タイルで**「資格情報の表示」**をクリックします。{{site.data.keyword.amashort}} がモバイル・バックエンド・アプリケーションに提供するアクセス権限の資格情報とともに JSON オブジェクトが表示されます。
+1. {{site.data.keyword.amashort}} ダッシュボードで**「資格情報の表示」**タブをクリックします。{{site.data.keyword.amashort}} がモバイル・バックエンド・アプリケーションに提供するアクセス権限の資格情報とともに JSON オブジェクトが表示されます。
 
 1. ローカル開発環境で、`VCAP_SERVICES` 環境変数を設定します。この変数の値は、{{site.data.keyword.amashort}} 資格情報を含む、文字列化された JSON オブジェクトでなければなりません。詳細情報についは、以下のサンプルを参照してください。
 
@@ -52,7 +55,7 @@ lastupdated: "2016-10-10"
 
 ```JavaScript
 var vcapApplication = {
-	application_id:"appGUID"
+	application_id:"tenantID"
 };
 
 var vcapServices = {
@@ -60,7 +63,7 @@ var vcapServices = {
 		{
 			"credentials": {
 				"admin_url": "https://mobile.ng.bluemix.net/imfmobileplatformdashboard/?appGuid=appGUID",
-				"clientId": "appGUID",
+				"clientId": "tenantID",
 				"secret": "secret",
 				"serverUrl": "https://imf-authserver.ng.bluemix.net/imf-authserver",
 				"tenantId": "tenantId"
@@ -78,8 +81,9 @@ var MCABackendStrategy =
 
 // Rest of your code
 ```
+{: codeblock}
 
-*appGUID* 値を、[「開始する前に」](#before-you-begin)で取得した `appGUID` 値に置き換えます。 
+*tenantID* 値を知る方法については、[開始する前に](#before-you-begin)を参照してください。
 
 
 ## ローカル開発サーバーで作業するための {{site.data.keyword.amashort}} アプリケーションの構成
@@ -89,7 +93,7 @@ var MCABackendStrategy =
 
 地域は該当する地域に置き換えます。
 
-*appGUID* および *bluemixAppRoute* の値は、[『開始する前に』](#before-you-begin)で取得した値に置き換えます。 
+*appGUID* および *bluemixAppRoute* の値は、[『開始する前に』](#before-you-begin)で取得した値に置き換えます。
 
 以下の例で、`localhost` を、開発サーバーの実際の IP アドレスに変更する必要がある場合があります。
 
@@ -101,12 +105,14 @@ String bluemixAppRoute = "http://myapp.mybluemix.net";
 String bluemixAppGUID = "your-bluemix-app-guid";
 String tenantId = "your-MCA-service-tenantID";
 
-BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID, BMSClient.REGION_UK);
-// MCA アプリケーションの地域をここに設定。現在指定可能な値は BMSClient.REGION_US_SOUTH、BMSClient.REGION_SYDNEY、または BMSClient.REGION_UK
-BMSClient.getInstance().setAuthorizationManager(
-                 MCAAuthorizationManager.createInstance(this, tenantId));
+BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
-Request request = new Request(baseRequestUrl + "/resource/path", Request.GET);
+//  set your MCA application region here. Currently possible values are BMSClient.REGION_US_SOUTH, BMSClient.REGION_SYDNEY, or BMSClient.REGION_UK
+
+BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
+						
+	Request request = new Request(baseRequestUrl + "/resource/path", Request.GET);
 
 request.send(this, new ResponseListener() {
 	@Override
@@ -125,6 +131,7 @@ request.send(this, new ResponseListener() {
 	}
 });
 ```
+{: codeblock}
 
 
 
@@ -158,6 +165,7 @@ IMFResourceRequest *request =  [IMFResourceRequest
 	}
 }];
 ```
+{: codeblock}
 
 
 ### iOS - Swift
@@ -165,33 +173,31 @@ IMFResourceRequest *request =  [IMFResourceRequest
 
 ```Swift
 
-let baseRequestUrl = "http://localhost:3000"
-let bluemixAppRoute = "http://myapp.mybluemix.net"
-let tenantId = "your-MCA-service-tenantID"
-let regionName = BMSClient.Region.usSouth
-// MCA アプリケーションの地域をここに設定。現在、BMSClient.Region.usSouth、BMSClient.Region.unitedKingdom、BMSClient.Region.sydney が指定可能
+let baseRequestUrl = "http://localhost:3000";
+ let tenantId = "<serviceTenantID>"
+ let regionName = <applicationBluemixRegion>
+ //possible values: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney
+ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+ mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+ BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 
-BMSClient.sharedInstance.initialize(bluemixAppRoute: bluemixAppRoute, bluemixAppGUID: tenantId, bluemixRegion: regionName)
 
-BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
-           
-let requestPath = baseRequestUrl + "/resource/path"               
-let request = Request(url: requestPath, method: HttpMethod.GET)
-            
-request.send { (response, error) in
+ let requestPath = baseRequestUrl + "/protectedResource"
+ let request = Request(url: requestPath, method: HttpMethod.GET)
+
+    request.send { (response, error) in
 	if let error = error {
     			print("Connection failure")
      		print("Error :: \(error)");
      		print("Status :: \(response?.statusCode)");
     	} else {
            print("Connection success")
-           print("Response :: \(response?.responseText)")
-    }                
-}
-
-
+            print("Response :: \(response?.responseText)")
+        }
+    }
 
 ```
+{: codeblock}
 
 
 ### Cordova
@@ -203,7 +209,7 @@ var bluemixAppRoute = "http://myapp.mybluemix.net";
 var bluemixAppGUID = "your-bluemix-app-guid";
 Var tenantId = "your-MCA-service-tenantID";
 
-BMSClient.initialize(bluemixAppRoute, bluemixAppGUID);
+BMSClient.initialize(<applicationBluemixRegion>);
 
 var success = function(data){
    	console.log("success", data);
@@ -217,4 +223,4 @@ var request = new MFPRequest(baseRequestUrl + "/resource/path", MFPRequest.GET);
 
 request.send(success, failure);
 ```
-
+{: codeblock}

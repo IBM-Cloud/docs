@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-10-20"
 
 ---
 {:new_window: target="_blank"}
@@ -10,13 +10,10 @@ lastupdated: "2016-10-13"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Projekt mit einem Benutzerschnittstellenstarter erstellen
+# Benutzerschnittstellenstarter zur Erstellung eines Projekts verwenden
 {: #projects_ui}
 
-Letzte Aktualisierung: 13. Oktober 2016
-{: .last-updated}
-
-Sie können einen Benutzerschnittstellenstarter in einem {{site.data.keyword.Bluemix}} Mobile-Dashboard verwenden, um ein Projekt in der {{site.data.keyword.Bluemix_notm}}-Umgebung zu erstellen. Dieses Verfahren ist nicht auf Projekte anwendbar, die Code-Starter verwenden. Anweisungen zu Code-Startern finden Sie unter [Projekt mit einem Code-Starter erstellen](projects_code.html).
+Sie können einen [Benutzerschnittstellenstarter](starters.html#UI_Starter) in einem {{site.data.keyword.Bluemix}} Mobile-Dashboard verwenden, um ein Projekt in der {{site.data.keyword.Bluemix_notm}}-Umgebung zu erstellen. Dieses Verfahren ist nicht auf Projekte anwendbar, die Code-Starter verwenden. Anweisungen zu Code-Startern finden Sie unter [Projekt mit einem Code-Starter erstellen](projects_code.html).
 {:shortdesc}
 
 Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnittstellenstarter zu erstellen:
@@ -37,9 +34,9 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnitt
 	
 	4. Geben Sie einen Namen für Ihr Projekt ein und wählen Sie **Erstellen** aus.
 	
-2. Treffen Sie Ihre Auswahlen in der Anzeige **Projektübersicht**. In der Anzeige **Projektübersicht** werden Informationen zu Ihrem Projekt und den optionalen Leistungsmerkmalen angezeigt, die Sie Ihrem Projekt hinzufügen können, z. B. Push Notifications.  
+2. Treffen Sie Ihre Auswahlen in der Anzeige **Projektübersicht**.  In der Anzeige **Projektübersicht** werden Informationen zu Ihrem Projekt und den optionalen Leistungsmerkmalen angezeigt, die Sie Ihrem Projekt hinzufügen können, z. B. Push Notifications.  
 
-	1. Optional: Wählen Sie **Hinzufügen** aus, um Ihrem Projekt eins der aufgelisteten Leistungsmerkmale hinzuzufügen. Bearbeiten Sie **Servicename** für Ihren Service und klicken Sie auf **Erstellen**.
+	1. Optional: Wählen Sie **Hinzufügen** aus, um Ihrem Projekt eins der aufgelisteten Leistungsmerkmale hinzuzufügen. Bearbeiten Sie **Servicename** für Ihren Service und klicken Sie auf **Erstellen**. Wenn Sie Ihrem Projekt Services hinzufügen, erstellen Sie eine Verknüpfung mit der {{site.data.keyword.Bluemix_notm}}-Seite für diesen Service. Konfigurieren Sie den Service durch Bereitstellen der Informationen, die für den Service erforderlich sind.
 	
 	2. Optional: Wiederholen Sie Schritt *a* für alle zusätzlichen Leistungsmerkmale, die Sie Ihrem Projekt hinzufügen möchten. 
 
@@ -47,7 +44,9 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnitt
 
    Hinweis: Da die Code-Starter nicht über eine anpassbare Benutzerschnittstelle verfügen, steht die Registerkarte *Design* nicht zur Verfügung.
 
-    1. Wählen Sie im Navigationsmenü die Option **Benutzerschnittstellenbuilder** aus, um das Design Ihrer App anzupassen.<!--Most of the design screens have sections that begin with a navigation on the left of the screen, and the sections more specific as it moves to the right side preview of your app. Note: Not all design screens in the starters have the same sections.--> 
+    1. Wählen Sie im Navigationsmenü die Option **Benutzerschnittstellenbuilder** aus, um das Design Ihrer App anzupassen. 
+	
+		**Tipp:** Für eine Schnellansicht des Benutzerschnittstellenbuilders müssen Sie nach der Auswahl des Benutzerschnittstellenbuilders in der Navigation die Option zum Anzeigen der Funktion auswählen. 
 	
 	2. Passen Sie das Layout Ihrer App über die Registerkarte **Anzeigen** an.
 	
@@ -64,7 +63,7 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnitt
 		
 		Ein Element, das in der Baumstruktur als *Formular* angegeben ist, ist unabhängig und kann integriert geändert werden. Es referenziert keine Informationen aus einer Datenquelle.
 	
-	5. Wählen Sie in der Navigation die Option **Daten** aus, um die von der App verwendeten Daten anzuzeigen. Die Vorlage enthält Standardinformationen; Sie können die Quelle der Daten jedoch ändern, indem Sie **Neue erstellen** auswählen. Da Sie mehr als eine Datenquelle referenzieren können, geben Sie für jede Datenquelle, die Sie verwenden, einen Namen an. Sie können aus den folgenden Optionen für Datenquellen auswählen:
+	5. Wählen Sie in der Navigation die Option **Daten** aus, um die von der App verwendeten Daten anzuzeigen. Die Vorlage enthält Standardinformationen. Sie können die Quelle der Daten jedoch ändern, indem Sie **Neue erstellen** auswählen. Da Sie mehr als eine Datenquelle referenzieren können, geben Sie für jede Datenquelle, die Sie verwenden, einen Namen an. Sie können aus den folgenden Optionen für Datenquellen auswählen:
 		* Cloud
 		* Local
 		* Cloudant
@@ -84,7 +83,7 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnitt
 		
 	8. Wenn Sie den Switch umgeschaltet haben, um Ihrem Projekt in der Anzeige *Einstellungen* IBM MobileFirst Platform Foundation hinzuzufügen, wird in der Navigation die Auswahl **Foundation** angezeigt. Wählen Sie **Foundation** aus und füllen Sie die für IBM MobileFirst Platform Foundation spezifischen erforderlichen Informationen aus.
 	
-	9. Wählen Sie im Navigationsmenü die Option **Veröffentlichen** aus, um die endgültigen Informationen für die Erstellung Ihrer mobilen App einzugeben. Sie können Ihre Bundle-ID für iOS und die Anwendungs-ID für Android eingeben.
+	9. Wählen Sie im Navigationsmenü die Option **Veröffentlichen** aus, um die endgültigen für die Erstellung Ihrer mobilen App erforderlichen Informationen einzugeben. Sie können Ihre Bundle-ID für iOS und die Anwendungs-ID für Android eingeben.
 	
 	Wenn Sie eine iOS-App erstellen, müssen Sie Ihre Bundle-ID, Ihr Verteilungszertifikat in Form einer *.p12*-Datei und Ihr Bereitstellungsprofil in Form einer *.mobileprovision*-Datei aus dem Apple-Bereitstellungsportal abrufen. Diese drei sollten zum selben Zeitpunkt und mit demselben Computer erstellt werden, der auch zum Posten Ihrer App im Apple-Store verwendet werden soll. Das Verteilungszertifikat und das Bereitstellungsprofil müssen auf der Bundle-ID basieren. 	
 

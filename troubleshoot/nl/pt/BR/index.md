@@ -3,6 +3,8 @@
 copyright:
   years: 2015, 2016
   
+lastupdated: "2016-08-11"
+  
 
 ---
 
@@ -16,8 +18,6 @@ copyright:
 # Resolução de problemas para acessar o {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Última atualização: 11 de agosto de 2016
-{: .last-updated}
 
 
 Problemas gerais com o acesso ao {{site.data.keyword.Bluemix}}
@@ -456,8 +456,7 @@ Você não possui o nível apropriado de autoridade necessário para executar as
 Para obter o nível de autoridade apropriado, use um dos métodos a seguir: 
 {: tsResolve}
  * Selecione outra organização e outro espaço para os quais tenha a função de desenvolvedor. 
- * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Consulte
-[Gerenciando organizações e espaços](../admin/orgs_spaces.html){: new_window} para obter detalhes.
+ * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Veja [Gerenciando organizações e espaços](/docs/admin/orgs_spaces.html){: new_window} para obter detalhes.
  
 
  
@@ -547,7 +546,7 @@ os dropouts do provedor de serviços da Internet (ISP), configurações de firew
 
 Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, primeiro verifique a página [Status do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução
 alternativa. As informações detalhadas estão disponíveis em
-[Usando serviços em outra região](../services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal,
+[Usando serviços em outra região](/docs/services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal,
 tente as etapas a seguir para resolver o problema: 
 {: tsResolve}
 
@@ -559,7 +558,7 @@ funcionar, limpe os cookies e o cache do seu navegador e, em seguida, recarregue
 que conduzem ao erro 502. 
   * Aguardar e tentar novamente mais tarde. Em algumas instâncias, os problemas temporários podem ocorrer com seu provedor
 de serviços da Internet ou serviços do {{site.data.keyword.Bluemix_notm}}. É possível aguardar até que os problemas temporários sejam resolvidos.
-  * Se o problema ainda existir, entre em contato com o suporte do {{site.data.keyword.Bluemix_notm}}. Veja [Entrando em contato com o Suporte do {{site.data.keyword.Bluemix_notm}}](../support/index.html#contacting-bluemix-support){: new_window} para obter mais informações. 
+  * Se o problema ainda existir, entre em contato com o suporte do {{site.data.keyword.Bluemix_notm}}. Veja [Entrando em contato com o Suporte do {{site.data.keyword.Bluemix_notm}}](/docs/support/index.html#contacting-bluemix-support){: new_window} para obter mais informações. 
 
 
 
@@ -586,7 +585,7 @@ A cota padrão do disco que é alocada para um app é de 1 GB. Se você precisar
  
 Use um dos métodos a seguir para
 especificar sua cota do disco. A cota máxima de disco que você pode especificar é de 2 GB. Se 2 GB ainda não forem suficientes, tente um serviço externo como
-[Armazenamento de objetos](../services/ObjectStorage/index.html){: new_window}.
+[Armazenamento de objetos](/docs/services/ObjectStorage/index.html){: new_window}.
 {: tsResolve}
 
   * No arquivo manifest.yml, inclua o item a seguir:
@@ -714,7 +713,7 @@ unbind-service <appname> <service_instance_name>`.
 	  2. Exclua a instância de serviço digitando `cf delete-service <service_instance_name>`.
 	  3. Depois de excluir a instância de serviço, você pode desejar remontar o aplicativo ao qual a instância de serviço foi vinculada digitando `cf restage <appname>`.
   * Para remover o limite no número de instâncias de serviços que você pode
-ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste em uma conta paga, consulte [Como mudar seu plano](../pricing/index.html#changing){: new_window}.
+ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Como mudar seu plano](/docs/pricing/index.html#changing){: new_window}.
 
   
   
@@ -782,14 +781,12 @@ de memória para uma conta de avaliação é 2 GB.
 {: tsResolve} 
 
   * Para aumentar a cota de memória de sua conta,
-converta sua conta de avaliação em uma conta paga. Para obter informações sobre
-como converter sua de avaliação em uma conta paga, consulte [Contas pagas](../pricing/index.html#pay-accounts){: new_window}. 
+converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Contas pagas](/docs/pricing/index.html#pay-accounts){: new_window}. 
   * Para reduzir a memória que seus apps usam, use a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface de linha de comandos cf.
     Se você usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, selecione seu aplicativo. A página de detalhes do app é aberta.
-	  2. Na área de janela de tempo de execução, é possível reduzir o limite máximo de memória ou os números de instâncias do app, ou ambos, para seu app. 
-	Se você usar a interface de linha de comandos cf, conclua as
-seguintes etapas:
+	  2. Na área de janela de tempo de execução, é possível reduzir o limite máximo de memória ou os números de instâncias do app ou ambos para o seu app. Se
+você usar a interface da linha de comandos cf, conclua as etapas a seguir:
 	  1. Verifique quanta memória está sendo usada para seus apps:
 	  ```
 	  cf apps
@@ -812,8 +809,8 @@ Um app não é reiniciado automaticamente quando um serviço que você liga ao a
 	  
  
 
-Quando um serviço que você liga a um app trava, problemas como indisponibilidades, exceções e falhas na conexão pode ocorrer no app. O {{site.data.keyword.Bluemix_notm}} não
-reinicia automaticamente o app para recuperar desses problemas.
+Quando um serviço que você ligar a um app travar, problemas como indisponibilidade, exceções e falhas de conexão poderão ocorrer no app. O
+{{site.data.keyword.Bluemix_notm}} não reinicia automaticamente o app para se recuperar desses problemas.
 {: tsSymptoms}
 
 
@@ -947,7 +944,7 @@ Se
 você estiver enviando por push seu aplicativo para {{site.data.keyword.Bluemix_notm}}, usando as ferramentas
 Eclipse, primeiro deve criar um servidor {{site.data.keyword.Bluemix_notm}} e especificar o terminal da
 API da região {{site.data.keyword.Bluemix_notm}} em que foi criada a sua organização. Para obter informações adicionais
-sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.  
+sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.  
   
   
 
@@ -1098,13 +1095,11 @@ ao problema:
 {: tsResolve} 
 
   * Especifique o comando inicial por um dos métodos a seguir: 
-      * Use a interface de linha de comandos cf. Por
-exemplo: 
+      * Use a interface de linha de comandos cf. Por exemplo: 
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por
-exemplo:
+	  * Use o arquivo [package.json](https://docs.npmjs.com/json){: new_window}. Por exemplo:
 	    ```
 		{
       ...
@@ -1113,8 +1108,7 @@ exemplo:
  	   }
 	}
 	    ```
-	  * Use o arquivo `manifest.yml`. Por
-exemplo: 
+	  * Use o arquivo `manifest.yml`. Por exemplo: 
 	    ```
 		applications:
   name: MyUniqueNodejs01
@@ -1123,10 +1117,8 @@ exemplo:
   ...
         ```
 
-  * Assegure-se de que um arquivo `package.json` exista no
-app Node.js para que o buildpack Node.js possa reconhecer o
-app. Além disso, deve-se colocar esse arquivo no diretório-raiz de
-seu app.	
+  * Assegure-se de que um arquivo `package.json` exista em seu app Node.js para ativar o buildpack Node.js para reconhecer o app. Além disso,
+deve-se colocar esse arquivo no diretório-raiz de seu app.	
     O exemplo a seguir mostra um arquivo `package.json` simples:  
 	```
 	{
@@ -1168,7 +1160,8 @@ O buildpack do Liberty usa o arquivo `server.xml` para configurar o app e gera u
 
  
 
-É possível resolver esse problema removendo o arquivo server.xml do projeto. O buildpack cria o arquivo `server.xml` dinamicamente quando você envia por push o app como um app WAR. Para obter mais informações, consulte [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
+É possível resolver esse problema removendo o arquivo server.xml do projeto. O buildpack cria o arquivo `server.xml` dinamicamente quando você
+envia por push o app como um app WAR. Para obter mais informações, consulte [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -1214,9 +1207,9 @@ Esse problema pode ocorrer porque o DevOps Services requer um arquivo `manifest.
 
  
 
-Para resolver esse problema, você deve criar um arquivo `manifest.yml`. Para obter mais informações sobre como criar um arquivo `manifest.yml`,
+Para resolver esse problema, você deve criar um arquivo `manifest.yml`. Para obter informações adicionais sobre como criar um arquivo `manifest.yml`,
 consulte [Manifest do
-aplicativo](../manageapps/depapps.html#appmanifest){: new_window}.
+aplicativo](/docs/manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -1244,15 +1237,13 @@ Esse problema ocorre porque nenhum buildpack integrado é fornecido para apps Me
 Para usar um buildpack customizado para apps Meteor, use um dos métodos a seguir:
 {: tsResolve}
 
-  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por
-exemplo:
+  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por exemplo:
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
   * Se você implementar seu aplicativo a partir do prompt de comandos, use o comando `cf
 push` e especifique seu buildpack customizado usando
-a opção **-b**. Por
-exemplo:
+a opção **-b**. Por exemplo:
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
@@ -1583,10 +1574,8 @@ problemas seguindo algumas etapas simples.
 {: #ts_loading_bp}
 
 
-É possível que você não consiga usar os componentes de buildpack mais recentes
-ao enviar um app por push. É possível usar buildpacks que possuem mecanismos integrados
-para evitar o carregamento de componentes obsoletos ou é possível excluir os conteúdos
-no diretório de cache do app antes de enviar por push ou remontar o app. 
+Talvez você não consiga usar os componentes de buildpack mais recentes ao enviar um app por push. É possível usar buildpacks que possuem mecanismos integrados
+para evitar o carregamento de componentes obsoletos ou é possível excluir os conteúdos no diretório de cache de seu app antes de enviar por push ou remontar o app. 
 
  
 
@@ -1718,13 +1707,12 @@ aplicativo Python estão ausentes.
 
  
 
-Para resolver o problema, inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz de seu app Python. As informações a seguir presumem que você está importando a biblioteca web.py:
+Para resolver o problema, inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz de seu app Python. As
+informações a seguir assumem que você esteja importando a biblioteca web.py:
 {: tsResolve}
 
   1. Inclua um arquivo `requirements.txt` no diretório-raiz de seu app Python.
-     O arquivo `requirements.txt`
-especifica os pacotes de biblioteca necessários para o aplicativo Python
-e a versão dos pacotes. O exemplo a seguir mostra o conteúdo do arquivo `requirements.txt`, em que `web.py==0.37` indica que a versão da biblioteca `web.py` que será transferida por download é 0,37 e `wsgiref==0.1.2` indica que a versão da interface do gateway do servidor da web que é requerida pela biblioteca web.py é 0.1.2.
+     O arquivo `requirements.txt` especifica os pacotes de biblioteca necessários para o seu aplicativo Python e a versão dos pacotes. O exemplo a seguir mostra o conteúdo do arquivo `requirements.txt`, em que `web.py==0.37` indica que a versão da biblioteca `web.py` que será transferida por download é 0,37 e `wsgiref==0.1.2` indica que a versão da interface do gateway do servidor da web que é requerida pela biblioteca web.py é 0.1.2.
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
@@ -1734,7 +1722,8 @@ o arquivo `requirements.txt`, consulte [Arquivos de requisitos](https://pip.read
 	 
   2. Inclua um arquivo `Procfile` no diretório-raiz de seu aplicativo Python.
 	O arquivo `Procfile`
-deve conter o comando inicial do aplicativo Python. No comando a seguir, *yourappname* é o nome de seu aplicativo Python e *PORT* é o número da porta que seu aplicativo Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do aplicativo será usado em seu lugar. 
+deve conter o comando inicial do aplicativo Python. No comando a seguir, *yourappname* é o nome de seu aplicativo Python e *PORT* é o número
+da porta que o seu aplicativo Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do aplicativo será usado em seu lugar. 
 	```
 	web: python <yourappname>.py $PORT
 	```

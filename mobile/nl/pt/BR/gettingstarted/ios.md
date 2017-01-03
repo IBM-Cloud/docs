@@ -13,7 +13,7 @@ copyright:
 Última atualização: 1º de junho de 2016
 {: .last-updated}  
 
-Se desejar iniciar com um novo aplicativo iOS, poderá usar o aplicativo Hello Bluemix. Esse app demonstra como se conectar ao backend do {{site.data.keyword.Bluemix}} a partir de um app móvel sem autenticação. Quando você estiver pronto, poderá obter as bibliotecas específicas que deseja usar em seu app.
+Se você desejar começar a usar um novo app iOS, poderá usar o app Hello Bluemix. Esse app demonstra como se conectar ao seu backend {{site.data.keyword.Bluemix}} por meio de um app móvel sem autenticação. Quando você estiver pronto, poderá obter as bibliotecas específicas que deseja usar em seu app.
 
 1. Crie seu backend móvel em {{site.data.keyword.Bluemix_notm}}.
     1. Na seção Modelos do catálogo do {{site.data.keyword.Bluemix_notm}}, clique em MobileFirst Services Starter.

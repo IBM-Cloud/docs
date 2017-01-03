@@ -11,13 +11,13 @@ copyright:
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Traitement des incidents liés à {{site.data.keyword.GlobalizationPipeline_full}}
+# Traitement des incidents liés à {{site.data.keyword.GlobalizationPipeline_short}}
 {: #globalizationpipelinets}
 
-*Dernière mise à jour : 27 juin 2016*
+*Dernière mise à jour : 30 août 2016*
 {: .last-updated}
 
-Voici quelques réponses aux questions fréquemment posées au sujet de l'utilisation de {{site.data.keyword.GlobalizationPipeline_full}}.
+Voici quelques réponses aux questions fréquemment posées au sujet de l'utilisation de {{site.data.keyword.GlobalizationPipeline_short}}. 
 {:shortdesc}
 
 
@@ -47,7 +47,7 @@ Le fichier de ressources que j'essaie de télécharger n'est pas accepté.
 Lorsque j'ajoute un fichier de ressources à un nouveau bundle de traduction ou que je mets à jour un fichier de ressources existant à traduire, je reçois une erreur.
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}} n'accepte que les fichiers de ressources des types suivants : .properties Java, JSON et AMD I18N.
+{{site.data.keyword.GlobalizationPipeline_short}} n'accepte que les fichiers de ressources des types suivants : .properties Java, JSON et AMD I18N.
 {: tsCauses}
 
 Assurez-vous que le fichier de ressources en cours de téléchargement est de l'un des types ci-dessous.
@@ -67,7 +67,7 @@ Le fichier de ressources que j'essaie de télécharger n'est pas accepté.
 Lorsque j'ajoute ou que je mets à jour un fichier de ressources dans un projet de traduction, une erreur se produit car une partie du fichier est trop volumineuse.
 {: tsSymptoms}
 
-{{site.data.keyword.GlobalizationPipeline_full}} accepte uniquement les fichiers de ressources qui sont conformes à des exigences de taille bien définies.
+{{site.data.keyword.GlobalizationPipeline_short}} accepte uniquement les fichiers de ressources qui sont conformes à des exigences de taille bien définies.
 {: tsCauses}
 
 Assurez-vous que le fichier de ressource est conforme aux instructions suivantes :
@@ -77,22 +77,6 @@ Assurez-vous que le fichier de ressource est conforme aux instructions suivantes
 * Chaque projet de traduction peut contenir 500 paires clé/valeur maximum.
 * La taille d'un fichier de ressources ne peut pas dépasser 2 Mo.
 
-
-
-## Un fichier de ressources dont la langue source est autre que l'anglais n'est pas correctement traduit dans d'autres langues
-{: #problem4}
-
-Un fichier de ressources dont la langue source est autre que l'anglais n'est pas correctement traduit.
-{:shortdesc}
-
-Lorsqu'un fichier de ressources dont la langue source est autre que l'anglais est téléchargé dans un bundle de traduction, les traductions générées ne sont pas correctes.
-{: tsSymptoms}
-
-{{site.data.keyword.GlobalizationPipeline_full}} ne prend en charge que l'anglais comme langue source.
-{: tsCauses}
-
-La traduction des fichiers de ressources dont la langue source est autre que l'anglais n'est pas encore prise en charge.
-{: tsResolve}
 
 
 
@@ -108,5 +92,5 @@ L'espacement utilisé autour des variables contenues dans des chaînes n'est pas
 Les moteurs de traduction automatique sont conçus pour fonctionner avec une langue naturelle et ils ne reconnaissent pas toujours ou ne savent pas toujours comment gérer une syntaxe spécifique utilisée par les langages de programmation. Par conséquent, le traitement d'une syntaxe qui est mélangée avec du texte brut peut varier.
 {: tsCauses}
 
-Actuellement, {{site.data.keyword.GlobalizationPipeline_full}} reconnaît le pattern "{}" fréquemment utilisé pour représenter des variables et préserve le format d'origine de leur contenu.
+Actuellement, {{site.data.keyword.GlobalizationPipeline_short}} reconnaît le pattern "{}" fréquemment utilisé pour représenter des variables et préserve le format d'origine de leur contenu.
 {: tsResolve}

@@ -3,6 +3,7 @@
 copyright:
   years: 2016
 lastupdated:  "2016-08-03"
+
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ lastupdated:  "2016-08-03"
 
 # 保守および更新
 {: #maintupdates_mf}
-
-<!--Last updated: 03 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} は {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group--> をプロビジョンします。{{site.data.keyword.mobilefoundation_short}} サーバーに対する更新は、ユーザーに通知されます。都合のよいときに {{site.data.keyword.mobilefoundation_short}} サーバーを更新することができます。
 {:shortdesc}

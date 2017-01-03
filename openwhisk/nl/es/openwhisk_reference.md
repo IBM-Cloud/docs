@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016
-
- 
+lastupdated: "2016-09-27"
 
 ---
 
@@ -18,8 +14,7 @@ copyright:
 
 # Detalles del sistema {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_reference}
-Última actualización: 9 de septiembre de 2016
-{: .last-updated}
+
 
 En las secciones siguientes se proporcionan más detalles sobre el sistema {{site.data.keyword.openwhisk}}.
 {: shortdesc}
@@ -126,10 +121,7 @@ como documento en la sección siguiente.
 
 Cada invocación que se recibe correctamente, y que se impute al usuario, tendrá un registro de activación.
 
-Tenga en cuenta que en el caso de *error de desarrollador de acción*, es posible que la acción haya ejecutado de forma parcial y generado efectos colaterales visibles externamente.
-El usuario es responsable de comprobar si dichos efectos colaterales se han producido en realidad y de emitir lógica de reintento si se desea.
-Tenga en cuenta también que determinados *errores internos de whisk* indicarán que se ha iniciado la ejecución de una acción, pero que el sistema ha fallado antes de que la acción registrara su finalización.
-
+Tenga en cuenta que en el caso de *error de desarrollador de acción*, es posible que la acción haya ejecutado de forma parcial y generado efectos colaterales visibles externamente.   El usuario es responsable de comprobar si dichos efectos colaterales se han producido en realidad y de emitir lógica de reintento si se desea.   Tenga en cuenta también que determinados *errores internos de whisk* indicarán que se ha iniciado la ejecución de una acción, pero que el sistema ha fallado antes de que la acción registrara su finalización.
 
 ## Registro de activación
 {: #openwhisk_ref_activation}
@@ -207,8 +199,8 @@ function main(params) {
 ```
 {: codeblock}
 
-La activación de una acción de JavaScript es **asíncrona** si la función main sale devolviendo un Promise.  En este caso, el sistema asume que la acción sigue en ejecución, hasta que se haya cumplimentado o rechazado el Promise.
-Empiece por crear una instancia de un nuevo objeto Promise y pasarlo a una función de devolución de llamada. La devolución de llamada tiene dos argumentos, resolve y reject, ambos funciones. Todo el código asíncrono va dentro de una devolución de llamada.
+La activación de una acción de JavaScript es **asíncrona** si la función main sale devolviendo un Promise.  En este caso, el sistema presupone que la acción sigue en ejecución, hasta que se haya cumplimentado o rechazado el Promise.
+Empiece por crear una instancia de un nuevo objeto Promise y pasarlo a una función de devolución de llamada. La devolución de llamada tiene dos argumentos, resolve y reject, ambos son funciones. Todo el código asíncrono va dentro de una devolución de llamada.
 
 
 A continuación se muestra un ejemplo de cómo rellenar un Promise llamando a la función resolve.
@@ -463,14 +455,14 @@ Todas las funciones del sistema están disponibles a través de la API REST. Hay
 
 Los puntos finales de colección son:
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
 
-`openwhisk.{DomainName}` es el nombre de host de la API de OpenWhisk (por ejemplo, openwhisk.ng.bluemix.net, 172.17.0.1, etc.).
+`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span> es el nombre de host de la API de OpenWhisk (por ejemplo, openwhisk.ng.bluemix.net, 172.17.0.1, etc.).
 
 Para `{namespace}`, se puede utilizar el carácter `_` para especificar el *espacio de nombre predeterminado* del usuario (es decir, la dirección de correo electrónico).
 
@@ -478,16 +470,17 @@ Puede realizar una solicitud GET en los puntos finales de colección para obtene
 
 Hay puntos finales de entidad para cada tipo de entidad:
 
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://openwhisk.{DomainName}/api/v1/namespaces/{namespace}/activations/{activationName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
+- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
+
 
 Los puntos finales de espacio de nombres y activación solo admiten solicitudes GET. Los puntos finales de acciones, desencadenantes, reglas y paquetes admiten solicitudes GET, PUT y DELETE. Los puntos finales de acciones, activadores y reglas también admiten solicitudes POST, que se utilizan para invocar acciones y activadores, y para habilitar o inhabilitar reglas. Consulte la [Referencia de API](https://new-console.{DomainName}/apidocs/98) para obtener información detallada.
 
-Todas las API están protegidas con autenticación HTTP básica. Las credenciales de autenticación básica se encuentran en la propiedad `AUTH` del archivo `~/.wskprops`, delimitadas por dos puntos. También puede recuperar estas credenciales en los [pasos de configuración de la CLI](../README.md#setup-cli).
+Todas las API están protegidas con autenticación HTTP básica. Las credenciales de autenticación básica se encuentran en la propiedad `AUTH` del archivo `~/.wskprops`, delimitadas por dos puntos. También puede recuperar estas credenciales en los [pasos de configuración de la CLI](./index.html#openwhisk_start_configure_cli).
 
 A continuación se muestra un ejemplo en el que se utiliza el mandato cURL para obtener la lista de todos los paquetes del espacio de nombres `whisk.system`:
 
@@ -524,16 +517,15 @@ La API de OpenWhisk admite llamadas solicitud-respuesta de clientes web. OpenWhi
 
 ### Acciones
 {{site.data.keyword.openwhisk_short}} tiene algunos límites del sistema, incluyendo la cantidad de memoria que utiliza una acción y
-cuántas invocaciones de acción se permiten por hora. En la tabla siguiente se proporciona una lista con los límites predeterminados de las acciones. 
+cuántas invocaciones de acción se permiten por hora. En la tabla siguiente se proporciona una lista con los límites predeterminados de las acciones.
 
 | límite | descripción | configurable | unidad | predeterminado |
 | ----- | ----------- | ------------ | -----| ------- |
 | timeout | un contenedor no tiene permiso para ejecutarse más de N milisegundos | por acción |  milisegundos | 60000 |
 | memory | un contenedor no tiene permiso para asignar más de n MB de memoria | por acción | MB | 256 |
 | logs | un contenedor no tiene permiso para escribir más de N MB en stdout | por acción | MB | 10 |
-| concurrent | no se permiten más de N activaciones simultáneas por espacio de nombres | por espacio de nombres | número | 100 |
-| minuteRate | un usuario no puede invocar más de este número de acciones por minuto | por usuario | número | 120 |
-| hourRate | un usuario no puede invocar más de este número de acciones por hora | por usuario | número | 3600 |
+| concurrent | no se permiten más de N activaciones por espacio de nombres ya sea ejecutándose o en cola para la ejecución | por espacio de nombres | número | 1000 |
+| minuteRate | un usuario no puede invocar más de este número de acciones por minuto | por usuario | número | 5000 |
 | codeSize | tamaño máximo de actioncode | no configurable, límite por acción | MB | 48 |
 | parameters | tamaño máximo de los parámetros que se pueden adjuntar | no configurable, límite por acción/paquete/desencadenante | MB | 1 |
 
@@ -564,15 +556,15 @@ cuántas invocaciones de acción se permiten por hora. En la tabla siguiente se 
 {: #openwhisk_syslimits_activationsize}
 * El tamaño de contenido POST máximo más los posibles parámetros para una invocación de acción o activación de desencadenante es de 1 MB.
 
-### Invocación simultánea por espacio de nombres (Predeterminado: 100)
+### Por invocación simultánea de espacio de nombres (Valor predeterminado: 1000)
 {: #openwhisk_syslimits_concur}
-* El número de activaciones que hay actualmente en proceso para un espacio de nombres no pueden ser más de 100.
+* El número de activaciones que se están ejecutando o en cola para su ejecución para un espacio de nombres no puede superar 1000.
 * El límite predeterminado se puede configurar de forma estática por medio de whisk en consul kvstore.
 * Un usuario no puede actualmente cambiar los límites.
 
-### Invocaciones por minuto/hora (Fijo: 120/3600)
+### Invocaciones por minuto (Fijo: 5000)
 {: #openwhisk_syslimits_invocations}
-* El límite de tasa N se establece en 120/3600, y limita el número de invocaciones de acción en espacios de tiempo de un minuto/hora.
+* El límite de tasa N se establece en 5000 y limita el número de invocaciones de acción en espacios de un minuto.
 * Un usuario no puede cambiar este límite cuando crea la acción.
 * Una llamada de la CLI o API que sobrepase este límite recibe un código de error correspondiente al código de estado de HTTP `429: DEMASIADAS SOLICITUDES`.
 
@@ -602,11 +594,10 @@ Los desencadenantes están sujetos a una tasa de activación por minuto y por ho
 
 | límite | descripción | configurable | unidad | predeterminado |
 | ----- | ----------- | ------------ | -----| ------- |
-| minuteRate | un usuario no puede activar más de este número de desencadenantes por minuto | por usuario | número | 60 |
-| hourRate | un usuario no puede activar más de este número de desencadenantes por hora | por usuario | número | 720 |
+| minuteRate | un usuario no puede activar más de este número de desencadenantes por minuto | por usuario | número | 5000 |
 
-### Desencadenantes por minuto/hora (fijo: 60/720)
+### Desencadenantes por minuto (Fijo: 5000)
 {: #openwhisk_syslimits_triggerratelimit}
-* El límite de tasa N se establece en 60/720 y limita el número de desencadenantes que se pueden activar en intervalos de un minuto/hora. 
-* Un usuario no puede cambiar este límite cuando crea el desencadenante. 
+* El límite de tasa N se establece en 5000 y limita el número de desencadenantes que se pueden activar en intervalos de un minuto.
+* Un usuario no puede cambiar este límite cuando crea el desencadenante.
 * Una llamada de la CLI o API que sobrepase este límite recibe un código de error correspondiente al código de estado de HTTP `429: DEMASIADAS SOLICITUDES`.

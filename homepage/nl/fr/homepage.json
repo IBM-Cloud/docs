@@ -6,7 +6,7 @@
 	}, {
 		"id": "Catégories",
 		"items": [{
-			"title": "Calcul",
+			"title": "Traitement",
 			"img": "homepage/images/compute.svg",
 			"href": "compute/index.html",
 			"links": [{

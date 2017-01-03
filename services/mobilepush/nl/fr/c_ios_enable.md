@@ -5,12 +5,17 @@ copyright:
 
 ---
 
-#Activation des applications iOS pour la réception et l'envoi de notifications de type {{site.data.keyword.mobilepushshort}}
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
+#Activation de l'envoi de {{site.data.keyword.mobilepushshort}} par les applications iOS
 {: #enable-push-ios-notifications}
-Dernière mise à jour : 19 octobre 2016
+Dernière mise à jour : 7 décembre 2016
 {: .last-updated}
 
-Vous pouvez activer les applications iOS pour recevoir et envoyer des notifications de type {{site.data.keyword.mobilepushshort}} à vos appareils.
+Vous pouvez permettre aux applications iOS d'envoyer des {{site.data.keyword.mobilepushshort}} à vos appareils.
 
 
 ##Installation de CocoaPods
@@ -67,7 +72,7 @@ $ open App.xcworkspace
 
 Cet espace de travail contient votre projet d'origine et le projet Pods contenant vos dépendances. Pour modifier le dossier source des services mobiles Bluemix, vous le trouverez dans votre projet Pods, sous `Pods/yourImportedSourceFolder`. Exemple : `Pods/BMSPush`.
 
-##Carthage
+##Ajout d'infrastructures à l'aide de Carthage
 {: #carthage}
 
 Ajoutez des infrastructures à votre projet à l'aide de [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos). Notez que Carthage dans Xcode8 n'est pas pris en charge.
@@ -80,6 +85,18 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 2. Exécutez la commande `carthage update`. Lorsque la construction est terminée, faites glisser `BMSPush.framework`, `BMSCore.framework` et `BMSAnalyticsAPI.framework` dans votre projet Xcode.
 3. Suivez les instructions du site [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) pour terminer l'intégration.
 
+##Configuration du logiciel SDK pour iOS
+{: ios-sdk}
+
+Installez le kit de développement de logiciels (SDK) iOS et ajoutez le code suivant au fichier **AppDelegate.swift** dans votre application.
+```
+func application(_ application: UIApplication,
+didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool 
+ {  
+ BMSPushClient.sharedInstance.setupPush()
+  }
+```
+    {: codeblock}
 
 ##Utilisation d'infrastructures et de dossiers source importés
 {: using-imported-frameworks}
@@ -209,14 +226,14 @@ Une application doit être enregistrée auprès d'APNS pour pouvoir recevoir des
 
 Pour enregistrer les applications et les appareils iOS, vous devez :
 
-1. Créer une application de back end.
+1. Créez une application d'arrière plan.
 2. Passer le jeton à {{site.data.keyword.mobilepushshort}}.
 
 
-###Créez une application de back end
+###Créez une application d'arrière plan
 {: create-a-backend-app}
 
-Créez une application de back end dans la section Conteneurs boilerplate du catalogue Bluemix®, qui lie automatiquement le service {{site.data.keyword.mobilepushshort}} à cette application. Si vous avez déjà créé une application de backend, veillez à lier l'application au service {{site.data.keyword.mobilepushshort}}.
+Créez une application d'arrière plan dans la section Boilerplates du catalogue Bluemix® , ce qui lie automatiquement le service {{site.data.keyword.mobilepushshort}} à cette application. Si vous avez déjà créé cette application d'arrière-plan, prenez soin de la lier au service {{site.data.keyword.mobilepushshort}}.
 
 **Objective-C**
 
@@ -351,6 +368,41 @@ Vous pouvez personnaliser les paramètres de type {{site.data.keyword.mobilepush
 - **Son** : indique le clip audio à exécuter à réception d'une notification. Prend en charge le fichier par défaut ou utilise le nom de la ressource audio intégré dans l'application.
 - **Contenu supplémentaire** : spécifie les valeurs de contenu personnalisées pour vos notifications.
 
+##Activation des notifications interactives
+
+Vous pouvez à présent enrichir vos notifications iOS en leur ajoutant plus de détails, comme une image, une mappe ou un bouton de réponse en activant les notifications interactives. Ceci
+fournit des informations de contexte supplémentaires aux utilisateurs, ainsi que la possibilité de lancer une action immédiate sans quitter le contexte en cours.  
+
+Pour activer les notifications interactives, utilisez le code suivant :
+
+```
+// Ceci définit l'action du bouton.
+let actionOne = BMSPushNotificationAction(identifierName: "ACCEPT", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+ let actionTwo = BMSPushNotificationAction(identifierName: "DECLINE", buttonTitle: "Decline", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+```
+	{: codeblock}
+```
+// Ceci définit la catégorie pour les boutons
+let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
+```
+	{: codeblock}
+```
+// Ceci met à jour l'enregistrement en incluant le buttonsPass dans la catégorie définie dans iOS BMSPushClientOptions
+let notificationOptions = BMSPushClientOptions(categoryName: [category])
+let push = BMSPushClient.sharedInstance
+push.notificationOptions = notificationOptions
+```
+	{: codeblock}
+
+Pour envoyer une notification interactive, procédez comme suit :
+
+1. Dans la section Compose, pour la liste déroulante Envoyer à, sélectionnez select **Appareils IOS**.
+2. Entrez le message de notification que vous voudrez peut-être envoyer.
+3. Dans la section Paramètres facultatifs, sélectionnez **Mobile** et cliquez sur **iOS**.
+4. Dans la liste déroulante Type, sélectionnez **Mixte**.
+5. Dans la zone Catégorie, spécifiez le type de notification que vous avez défini dans votre application. 
+
+![Notification interactive pour iOS](images/push_ios_notification_interactive.jpg) 
 
 ## Etapes suivantes
 {: #next_steps_tags}

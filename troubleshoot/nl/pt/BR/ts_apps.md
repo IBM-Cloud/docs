@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-11"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Resolução de problemas para gerenciar aplicativos
 {: #managingapps}
 
-Última atualização: 18 de agosto de 2016
-{: .last-updated} 
 
 Problemas gerais com o gerenciamento de aplicativos podem incluir
 aplicativos que não podem ser atualizados e caracteres de byte duplo que não são exibidos. No entanto, em vários casos, é possível recuperar-se desses
@@ -153,7 +153,7 @@ Não será possível criar um aplicativo ou um serviço se a sua organização a
 Ao tentar criar um aplicativo no Bluemix, você vê a mensagem de erro a seguir:
 {: tsSymptoms}
 
-`BXNUI0515E: A tentativa de recuperar os espaços na organização falhou devido a um problema de conexão de rede.`
+`BXNUI0515E: os espaços na organização não foram recuperados. Ou ocorreu um problema de conexão de rede ou sua organização atual não possui um espaço associado a ela.`
 
 Esse erro geralmente é recebido na primeira vez em que você tenta criar um aplicativo ou um serviço a partir do Catálogo quando um espaço ainda não estiver criado. 
 {: tsCauses}
@@ -161,10 +161,7 @@ Esse erro geralmente é recebido na primeira vez em que você tenta criar um apl
 Certifique-se de que você criou um espaço em sua organização atual.  Para criar um espaço, use um dos métodos a seguir:
 {: tsResolve}
 
-  * Clique no ícone {{site.data.keyword.avatar}}
-![ícone Avatar](images/account_support.svg) para abrir o widget Conta
-e Suporte, selecione a organização na qual você deseja criar o espaço e, em seguida,
-clique em **Criar um espaço**.
+  * Na barra de menus, clique em **Conta** &gt; **Gerenciar organizações.** Selecione a organização na qual deseja criar o espaço e, em seguida, clique em **Criar um espaço**.
   * Na interface de linha de comandos cf, digite `cf create-space <space_name> -o <organization_name>`.
 
 Tente novamente. Se você vir essa mensagem novamente, acesse a página de [status do Bluemix](http://ibm.biz/bluemixstatus){: new_window} para verificar se um serviço ou componente tem um problema.
@@ -195,8 +192,7 @@ Você não possui o nível apropriado de autoridade necessário para executar as
 Para obter o nível de autoridade apropriado, use um dos métodos a seguir: 
 {: tsResolve}
  * Selecione outra organização e outro espaço para os quais tenha a função de desenvolvedor. 
- * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Consulte
-[Gerenciando organizações e espaços](../admin/orgs_spaces.html){: new_window} para obter detalhes.
+ * Peça ao gerenciador de organização para mudar sua função para desenvolvedor ou para criar um espaço e, em seguida, designar a função de desenvolvedor a você. Veja [Gerenciando organizações e espaços](/docs/admin/orgs_spaces.html){: new_window} para obter detalhes.
  
 
 
@@ -270,7 +266,8 @@ Outras causas menos comuns de um erro de Gateway inválido são os dropouts do p
 
  
 
-Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, primeiro verifique a página [Status do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução alternativa. As informações detalhadas estão disponíveis em [Usando serviços em outra região](../services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal, tente as etapas a seguir para resolver o problema: 
+Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, primeiro verifique a página [Status do {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução alternativa. As informações detalhadas estão disponíveis em
+[Usando serviços em outra região](/docs/services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal, tente as etapas a seguir para resolver o problema: 
 {: tsResolve}
 
   * Tente novamente a ação:
@@ -278,7 +275,7 @@ Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está i
 	* Usar um navegador diferente.
 	* Reinicializar seu roteador, seu modem e seu computador. Reinicializar esses dispositivos pode limpar diversos erros que conduzem ao erro 502. 
   * Aguardar e tentar novamente mais tarde. Em algumas instâncias, os problemas temporários podem ocorrer com seu provedor de serviços da Internet ou serviços do {{site.data.keyword.Bluemix_notm}}. É possível aguardar até que os problemas temporários sejam resolvidos.
-  * Se o problema ainda existir, entre em contato com o suporte do {{site.data.keyword.Bluemix_notm}}. Veja [Entrando em contato com o Suporte do {{site.data.keyword.Bluemix_notm}}](../support/index.html#contacting-bluemix-support){: new_window} para obter mais informações. 
+  * Se o problema ainda existir, entre em contato com o suporte do {{site.data.keyword.Bluemix_notm}}. Veja [Entrando em contato com o Suporte do {{site.data.keyword.Bluemix_notm}}](/docs/support/index.html#contacting-bluemix-support){: new_window} para obter mais informações. 
 
 
 
@@ -299,7 +296,7 @@ A cota padrão do disco que é alocada para um app é de 1 GB. Se você precisar
 
  
 Use um dos métodos a seguir para especificar sua cota do disco. A cota máxima de disco que você pode especificar é de 2 GB. Se 2 GB ainda não forem suficientes, tente um serviço externo como
-[Armazenamento de objetos](../services/ObjectStorage/index.html){: new_window}.
+[Armazenamento de objetos](/docs/services/ObjectStorage/index.html){: new_window}.
 {: tsResolve}
 
   * No arquivo manifest.yml, inclua o item a seguir:
@@ -350,16 +347,16 @@ Esse erro ocorre quando você excede o limite no número de instâncias de servi
 Exclua todas as instâncias de serviços que não são necessárias, ou remova o limite no número de instâncias de serviços que você pode ter.
 {: tsResolve}
  
-  * Para excluir a instância de serviços, é possível usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface com o usuário.
-    Para usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} para excluir uma instância de serviço, conclua as etapas a seguir:
-	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no serviço que você deseja acessar.  O quadro do serviço é exibido.
-	  2. No quadro do serviço, clique no ícone **Menu**.
+  * Para excluir uma instância de serviços, é possível usar o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos.
+    Para usar o console do {{site.data.keyword.Bluemix_notm}} para excluir uma instância de serviço, conclua as etapas a seguir:
+	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, clique no serviço que você deseja acessar.  O cartão de serviços é exibido.
+	  2. No cartão de serviços, clique no ícone **Menu**.
 	  3. Clique em **Excluir serviço**. Depois de excluir a instância de serviço, você será solicitado a refazer o estágio no aplicativo ao qual a instância de serviço foi vinculada. 
     Para usar a interface de linha de comandos para excluir uma instância de serviço, conclua as etapas a seguir:
 	  1. Desvincule a instância de serviço de um aplicativo digitando `cf unbind-service <appname> <service_instance_name>`.
 	  2. Exclua a instância de serviço digitando `cf delete-service <service_instance_name>`.
 	  3. Depois de excluir a instância de serviço, você pode desejar remontar o aplicativo ao qual a instância de serviço foi vinculada digitando `cf restage <appname>`.
-  * Para remover o limite no número de instâncias de serviços que você pode ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste em uma conta paga, consulte [Como mudar seu plano](../pricing/index.html#changing){: new_window}.
+  * Para remover o limite no número de instâncias de serviços que você pode ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Como mudar seu plano](/docs/pricing/index.html#changing){: new_window}.
 
   
   
@@ -414,9 +411,9 @@ Esse erro ocorre quando a quantia de memória restante para a sua organização 
 É possível aumentar a cota de memória de sua conta ou reduzir a memória que seus apps usam.
 {: tsResolve} 
 
-  * Para aumentar a cota de memória de sua conta, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua de avaliação em uma conta paga, consulte [Contas pagas](../pricing/index.html#pay-accounts){: new_window}. 
-  * Para reduzir a memória que seus apps usam, use a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface de linha de comandos cf.
-    Se você usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
+  * Para aumentar a cota de memória de sua conta, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Contas pagas](/docs/pricing/index.html#pay-accounts){: new_window}. 
+  * Para reduzir a memória que seus apps usam, use o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos cf.
+    Se você usar o console do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 	  1. No Painel do {{site.data.keyword.Bluemix_notm}}, selecione seu aplicativo. A página de detalhes do app é aberta.
 	  2. Na área de janela de tempo de execução, é possível reduzir o limite máximo de memória ou os números de instâncias do app, ou ambos, para seu app. 
 	  
@@ -444,7 +441,8 @@ Um app não é reiniciado automaticamente quando um serviço que você liga ao a
 	  
  
 
-Quando um serviço que você liga a um app trava, problemas como indisponibilidades, exceções e falhas na conexão pode ocorrer no app. O {{site.data.keyword.Bluemix_notm}} não reinicia automaticamente o app para recuperar desses problemas.
+Quando um serviço que você ligar a um app travar, problemas como indisponibilidade, exceções e falhas de conexão poderão ocorrer no app.
+O {{site.data.keyword.Bluemix_notm}} não reinicia automaticamente o app para se recuperar desses problemas.
 {: tsSymptoms}
 
 
@@ -550,7 +548,8 @@ para o {{site.data.keyword.Bluemix_notm}}
 Use uma das opções a seguir para resolver o problema: 
 {: tsResolve}
 
-  * A prática recomendada é usar o buildpack IBM Node.js para iniciar o app. Para obter mais informações, consulte a seção Comando de inicialização do tópico [Implementando um aplicativo Node.js no {{site.data.keyword.Bluemix_notm}}](../runtimes/nodejs/index.html#nodejs_runtime){: new_window}. 
+  * A prática recomendada é usar o buildpack IBM Node.js para iniciar o app. Para obter mais informações, consulte a seção Comando de inicialização do tópico
+[Implementando um aplicativo Node.js no {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime){: new_window}. 
   * Desative o comando para seu app existente revisando o atributo de
 comando no `manifest.yml` para o comando: null ou editando seu
 comando push para incluir `-c Null`. 
@@ -571,7 +570,7 @@ Talvez você não consiga localizar sua organização no {{site.data.keyword.Blu
   
  
 
-É possível efetuar login na interface com o usuário do {{site.data.keyword.Bluemix_notm}} com êxito, mas não é possível enviar por push apps usando a interface de linha de comandos cf ou o plug-in do Eclipse.
+É possível efetuar login com sucesso no console do {{site.data.keyword.Bluemix_notm}}, mas não é possível enviar os apps por push usando a interface da linha de comandos cf ou o plug-in do Eclipse.
 {: tsSymptoms}
 
 Ao tentar enviar por push um aplicativo
@@ -610,7 +609,7 @@ Se
 você estiver enviando por push seu aplicativo para {{site.data.keyword.Bluemix_notm}}, usando as ferramentas
 Eclipse, primeiro deve criar um servidor {{site.data.keyword.Bluemix_notm}} e especificar o terminal da
 API da região {{site.data.keyword.Bluemix_notm}} em que foi criada a sua organização. Para obter informações adicionais
-sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.  
+sobre como usar as ferramentas do Eclipse, consulte [Implementando apps com o IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.  
   
   
 
@@ -786,10 +785,8 @@ exemplo:
   ...
         ```
 
-  * Assegure-se de que um arquivo `package.json` exista no
-app Node.js para que o buildpack Node.js possa reconhecer o
-app. Além disso, deve-se colocar esse arquivo no diretório-raiz de
-seu app.	
+  * Assegure-se de que um arquivo `package.json` exista em seu app Node.js para ativar o buildpack Node.js para reconhecer o app. Além disso,
+deve-se colocar esse arquivo no diretório-raiz de seu app.	
     O exemplo a seguir mostra um arquivo `package.json` simples:  
 	```
 	{
@@ -831,7 +828,8 @@ O buildpack do Liberty usa o arquivo `server.xml` para configurar o app e gera u
 
  
 
-É possível resolver esse problema removendo o arquivo server.xml do projeto. O buildpack cria o arquivo `server.xml` dinamicamente quando você envia por push o app como um app WAR. Para obter mais informações, consulte [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
+É possível resolver esse problema removendo o arquivo server.xml do projeto. O buildpack cria o arquivo `server.xml` dinamicamente quando você
+envia por push o app como um app WAR. Para obter mais informações, consulte [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -877,9 +875,9 @@ Esse problema pode ocorrer porque o DevOps Services requer um arquivo `manifest.
 
  
 
-Para resolver esse problema, você deve criar um arquivo `manifest.yml`. Para obter mais informações sobre como criar um arquivo `manifest.yml`,
+Para resolver esse problema, você deve criar um arquivo `manifest.yml`. Para obter informações adicionais sobre como criar um arquivo `manifest.yml`,
 consulte [Manifest do
-aplicativo](../manageapps/depapps.html#appmanifest){: new_window}.
+aplicativo](/docs/manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -1202,21 +1200,19 @@ aplicativo. Para obter mais informações, veja Implementações azul-verde.
 <!-- begin STAGING ONLY --> 
 	
 	
-## Os administradores não podem visualizar todas as organizações usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}
+## Os administradores não podem visualizar todas as organizações usando o console do {{site.data.keyword.Bluemix_notm}}
 {: #ts_ui_org}
 
-Como administrador, quando você utiliza a interface com o usuário do
-{{site.data.keyword.Bluemix_notm}}, não é possível exibir cada organização para
-administrá-las. Você pode exibir e administrar apenas as organizações às quais pertence.
+Como um administrador, quando você usa o console do {{site.data.keyword.Bluemix_notm}}, não é possível exibir todas as organizações para administrá-las. Você pode exibir e administrar apenas as organizações às quais pertence.
 
  
 
-Como administrador, não é possível ver todas as organizações utilizando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
+Como um administrador, não é possível ver todas as organizações usando o console do {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms}
 
  
 
-Essa é uma limitação da interface com o usuário do {{site.data.keyword.Bluemix_notm}}.
+Esta é uma limitação do console do {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
  
@@ -1276,10 +1272,8 @@ problemas seguindo algumas etapas simples.
 {: #ts_loading_bp}
 
 
-É possível que você não consiga usar os componentes de buildpack mais recentes
-ao enviar um app por push. É possível usar buildpacks que possuem mecanismos integrados
-para evitar o carregamento de componentes obsoletos ou é possível excluir os conteúdos
-no diretório de cache do app antes de enviar por push ou remontar o app. 
+Talvez você não consiga usar os componentes de buildpack mais recentes ao enviar um app por push. É possível usar buildpacks que possuem mecanismos integrados
+para evitar o carregamento de componentes obsoletos ou é possível excluir os conteúdos no diretório de cache de seu app antes de enviar por push ou remontar o app. 
 
  
 
@@ -1411,13 +1405,12 @@ aplicativo Python estão ausentes.
 
  
 
-Para resolver o problema, inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz de seu app Python. As informações a seguir presumem que você está importando a biblioteca web.py:
+Para resolver o problema, inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz de seu app Python.
+As informações a seguir assumem que você esteja importando a biblioteca web.py:
 {: tsResolve}
 
   1. Inclua um arquivo `requirements.txt` no diretório-raiz de seu app Python.
-     O arquivo `requirements.txt`
-especifica os pacotes de biblioteca necessários para o aplicativo Python
-e a versão dos pacotes. O exemplo a seguir mostra o conteúdo do arquivo `requirements.txt`, em que `web.py==0.37` indica que a versão da biblioteca `web.py` que será transferida por download é 0,37 e `wsgiref==0.1.2` indica que a versão da interface do gateway do servidor da web que é requerida pela biblioteca web.py é 0.1.2.
+     O arquivo `requirements.txt` especifica os pacotes de biblioteca necessários para o seu aplicativo Python e a versão dos pacotes. O exemplo a seguir mostra o conteúdo do arquivo `requirements.txt`, em que `web.py==0.37` indica que a versão da biblioteca `web.py` que será transferida por download é 0,37 e `wsgiref==0.1.2` indica que a versão da interface do gateway do servidor da web que é requerida pela biblioteca web.py é 0.1.2.
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
@@ -1427,7 +1420,8 @@ o arquivo `requirements.txt`, consulte [Arquivos de requisitos](https://pip.read
 	 
   2. Inclua um arquivo `Procfile` no diretório-raiz de seu aplicativo Python.
 	O arquivo `Procfile`
-deve conter o comando inicial do aplicativo Python. No comando a seguir, *yourappname* é o nome de seu aplicativo Python e *PORT* é o número da porta que seu aplicativo Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do aplicativo será usado em seu lugar. 
+deve conter o comando inicial do aplicativo Python. No comando a seguir, *yourappname* é o nome de seu aplicativo Python e *PORT* é o número
+da porta que o seu aplicativo Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do aplicativo será usado em seu lugar. 
 	```
 	web: python <yourappname>.py $PORT
 	```

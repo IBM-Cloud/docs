@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Rubriques Liberty
 {: #topics}
-
-Dernière mise à jour : 10 juin 2016
-{: .last-updated}
 
 * [Environnement d'exécution Liberty](index.html)
 * [Détection](index.html#detection)

@@ -2,15 +2,19 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-12-13"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
-# End-to-end tutorial of the {{site.data.keyword.visualrecognitionshort}} Code Starter
+# End-to-end tutorial of the Basic Code Starter
 {: #tutorial}
 
-The following end-to-end tutorial walks through the steps to create a project from the {{site.data.keyword.visualrecognitionshort}} Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
+The following end-to-end tutorial walks through the steps to create a project from the Basic Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
 
 
 ### Installing developer tools
@@ -19,7 +23,7 @@ The following end-to-end tutorial walks through the steps to create a project fr
 Ensure that you have installed the [prerequisite developer tools](get_code.html#prereq-dev-tools){: new_window}.
 
 
-### Creating a project from the {{site.data.keyword.visualrecognitionshort}} Code Starter
+### Creating a project from the Basic Code Starter
 {: #create_project}
 
 1. Create a Mobile dashboard project in {{site.data.keyword.Bluemix}}.
@@ -30,17 +34,17 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
    2. Click **Code Starters**.
 
-   3. Select **Visual Recognition** and click **Create Project**.
+   3. Select **Basic** and click **Create Project**.
 
-   4. Enter your project name. For this tutorial, use `VisualRecognitionProject`.
+   4. Enter your project name. For this tutorial, use `BasicProject`.
    
    5. Click **Create**.
 
-2. Optional: Add the Push Notifications capability.
+2. Optional: Add the {{site.data.keyword.mobilepushshort}} capability.
 
-   1. Click **Add** for **Push Notifications** in the **Project Overview** page.
+   1. Click **Add** for **{{site.data.keyword.mobilepushshort}}** in the **Project Overview** page.
 
-      You can alternatively click **Create** from the **Push Notifications** page.
+      You can alternatively click **Create** from the **{{site.data.keyword.mobilepushshort}}** page.
 
    2. Enter your service name and click **Create**.
 
@@ -80,23 +84,25 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
       You can alternatively click on the **Code** page.
       
-   2. For iOS, click **iOS Swift**.
+   2. For Objective-C, click **iOS Obj-C**.
+
+   3. For Swift, click **iOS Swift**.
    
-   3. For Android, click **Android**.
+   4. For Cordova, click **Cordova**.
+
+   5. For Android, click **Android**.
    
-   4. When the project code is finished generating, click **Download Code** to download your project archive.
+   6. When the project code is finished generating, click **Download Code** to download your project archive.
 
 
-### Running your project in Xcode
-{: #run_xcode}
+### Running your Objective-C project in Xcode
+{: #run_obj-c}
 
-1. Extract the `VisualRecognitionProject-Swift.zip` file.
+1. Extract the `BasicProject-ObjC.zip` file.
 
 2. Open the `README.md` file in a Markdown viewer to review the steps to configure your project.
 
-   1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
-   
-   2. Open your Terminal and navigate to your project folder.
+   1. Open your Terminal and navigate to your project folder.
    
       1. Run `pod setup` if you need to set up your CocoaPods repository.
       
@@ -104,37 +110,63 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
       
       3. Run `pod install` to install the pods that are required for your project.
       
-      4. Run `carthage update --platform iOS` to build the dependencies and frameworks to use the {{site.data.keyword.ibmwatson}} Developer Cloud iOS SDK.
-      
-   3. Open your `VisualRecognitionProject.xcworkspace` Xcode workspace.
-   
-   4. Add your {{site.data.keyword.visualrecognitionshort}} service credentials.
-   
-      1. Copy your `api_key` from  your {{site.data.keyword.visualrecognition}} service credentials.
-      
-      2. Paste your `api_key` into the `VisualRecognitionAPIKey` key into the `WatsonCredentials.plist` file.
+   2. Open your `BasicProject.xcworkspace` Xcode workspace.
       
 3. Run your app.
 
 
-### Running your project in Android Studio
-{: #run_studio}
+### Running your Swift project in Xcode
+{: #run_swift}
 
-1. Extract the `VisualRecognitionProject-Android.zip` file.
+1. Extract the `BasicProject-Swift.zip` file.
+
+2. Open the `README.md` file in a Markdown viewer to review the steps to configure your project.
+
+   1. Open your Terminal and navigate to your project folder.
+   
+      1. Run `pod setup` if you need to set up your CocoaPods repository.
+      
+      2. Run `pod update` if you need to update you update your existing pods.
+      
+      3. Run `pod install` to install the pods that are required for your project.
+      
+   3. Open your `BasicProject.xcworkspace` Xcode workspace.
+      
+3. Run your app.
+
+
+### Running your Cordova project in Xcode
+{: #run_cordova_xcode}
+
+1. Extract the `BasicProject-Cordova.zip` file.
 
 2. Open the `README.md` file in a Markdown viewer to configure your project.
 
-   1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
-   
-      Skip this step if you already have a {{site.data.keyword.visualrecognitionshort}} service instance.
-   
-   2. Open your `VisualRecognitionProject-Android` project in Android Studio.
-   
-   4. Add your {{site.data.keyword.visualrecognitionshort}} service credentials.
-   
-      1. Copy your `api_key` from  your {{site.data.keyword.visualrecognition}} service credentials.
+   1. Open your `platforms/ios` project in Xcode.
       
-      2. Paste your `api_key` into the `watson_visual_recognition_api_key` key into the `res/values/watson_credentials.xml` file.
+3. Run your app.
+
+
+### Running your Cordova project in Android Studio
+{: #run_cordova_studio}
+
+1. Extract the `BasicProject-Cordova.zip` file.
+
+2. Open the `README.md` file in a Markdown viewer to configure your project.
+
+   1. Open your `platforms/android` project in Android Studio.
+      
+3. Run your app.
+
+
+### Running your Android project in Android Studio
+{: #run_android}
+
+1. Extract the `BasicProject-Android.zip` file.
+
+2. Open the `README.md` file in a Markdown viewer to configure your project.
+
+   1. Open your `BasicProject-Android` project in Android Studio.
       
 3. Run your app.
 
@@ -154,32 +186,8 @@ View other tutorials.
 ### Code Starter tutorials
 {: #tutorials_Code}
 
+* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)
 * [Tutorial - Weather](tutorial_weather.html)
-
-
-# Related Links
-{: #rellinks}
-
-
-## {{site.data.keyword.Bluemix_notm}} Mobile services
-{: #general}
-
-* [Mobile Analytics (Beta)](/docs/services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](/docs/services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](/docs/services/mobilepush/index.html){: new_window}
-
-<!--## Blog Posts-->
-* [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing the next generation of the Bluemix Mobile dashboard](https://www.ibm.com/blogs/bluemix/2016/10/next-gen-bluemix-mobile-dashboard/){: new_window}
-* [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
-* [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
-* [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-* [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
-
-<!--## Tutorials and Samples-->
-{: #samples}
-
-* [Sample: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}

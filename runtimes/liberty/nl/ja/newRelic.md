@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # New Relic の使用
 {: #new_relic}
-
-最終更新日: 2016 年 6 月 10 日
-{: .last-updated}
 
 New Relic は、アプリケーションのモニタリング・メトリックを提供するサード・パーティーのサービスです。New Relic サービスが提供する内容について詳しくは、[New
 Relic](http://newrelic.com/java)を参照してください。

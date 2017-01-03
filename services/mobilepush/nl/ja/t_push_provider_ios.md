@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # APNs の資格情報の構成
 {: #create-push-credentials-apns}
-最終更新日: 2016 年 10 月 17 日
+最終更新日: 2016 年 12 月 07 日
 {: .last-updated}
 
 Apple Push Notification Service (APNs) を使用して、アプリケーション開発者は、Bluemix (プロバイダー) 上の{{site.data.keyword.mobilepushshort}}サービス・インスタンスから iOS のデバイスおよびアプリケーションにリモート通知を送信することができます。メッセージは、デバイス上のターゲット・アプリケーションに送信されます。 
@@ -47,8 +50,7 @@ APNs の証明書は、{{site.data.keyword.mobilepushshort}}サービスによ�
 ##開発および配布用 APNs SSL 証明書の作成
 {: #create-push-credentials-apns-ssl}
 
-APNs 証明書を取得するには、まず、証明書署名要求 (CSR) を生成して、それを Apple の認証局 (CA) にサブミットしておく必要があります。
-CSR には、ユーザーの会社を識別する情報および Apple プッシュ通知に署名するために使用する公開鍵と秘密鍵が含まれます。次に、iOS 開発者ポータル (iOS Developer Portal) で SSL 証明書を生成します。証明書は、公開鍵および秘密鍵と共に「キーチェーンアクセス」に保管されます。
+APNs 証明書を取得する前に、最初に証明書署名要求 (CSR) を生成し、それを Apple の認証局 (CA) にサブミットしておく必要があります。CSR には、ユーザーの会社を識別する情報および Apple プッシュ通知に署名するために使用する公開鍵と秘密鍵が含まれます。次に、iOS 開発者ポータル (iOS Developer Portal) で SSL 証明書を生成します。証明書は、公開鍵および秘密鍵と共に「キーチェーンアクセス」に保管されます。
 
 
 <!-- ###Before you begin -->
@@ -99,11 +101,7 @@ APNs は、以下の 2 つのモードで使用できます。
 
 プロビジョニング・プロファイルは、アプリ ID を使用して機能し、アプリをインストールして実行できるデバイス、およびアプリからアクセスできるサービスを判別します。各アプリ ID ごとに、2 つのプロビジョニング・プロファイル、すなわち、開発用に 1 つ、配布用にもう 1 つを作成します。Xcode は、開発プロビジョニング・プロファイルを使用して、アプリケーションのビルドを許可されている開発者と、アプリケーションのテストが許可されているデバイスを判別します。
 
-###始めに
-{: before-you-begin-provisioning-file}
-
-アプリ ID を登録済みであること、それを Push Notification Service 用に使用可能化していること、および開発および実動の APNs SSL 証明書を使用するように構成済みであることを確認します。
-
+アプリ ID を登録済みであること、それを {{site.data.keyword.mobilepushshort}} サービス用に使用可能化していること、および開発および実動の APNs SSL 証明書を使用するように構成済みであることを確認します。
 
 以下のように、開発プロビジョニング・プロファイルを作成します。
 
@@ -130,27 +128,19 @@ APNs は、以下の 2 つのモードで使用できます。
 
 {{site.data.keyword.mobilepushshort}}サービスを使用して通知を送信するには、Apple Push Notification Service (APNs) で必要とされる SSL 証明書をアップロードします。REST API を使用して APNs 証明書をアップロードすることもできます。
 
-
-###始めに
-{: before-you-begin-dashboard}
-
-
 <!-- Get your development and production APNs SSL certificate and the password associated with each type of certificate. For information, see Creating and configuring push credentials for APNs.-->
 
-APNs に必要な証明書は、`.p12` 証明書です。この証明書にはアプリケーションの構築と公開に必要な、秘密鍵と SSL 証明書が含まれています。これらの証明書は、Apple Developer Web サイト (このサイトには有効な Apple Developer アカウントが必要です) の「メンバー・センター」から生成する必要があります。開発環境 (サンドボックス) と実動 (配布) 環境には、別々の証明書が必要です。
+APNs に必要な証明書は、`.p12` 証明書です。これらの証明書には、アプリケーションのビルドと公開に必要な、秘密鍵と SSL 証明書が含まれています。これらの証明書は、Apple Developer Web サイト (このサイトには有効な Apple Developer アカウントが必要です) の「メンバー・センター」から生成する必要があります。開発環境 (サンドボックス) と実動 (配布) 環境には、別々の証明書が必要です。
 
 **注**: `.cer` ファイルがキー・チェーン・アクセスに配置されたら、それをコンピューターにエクスポートして、`.p12` 証明書を作成します。
 
 APNs の使用法について詳しくは、[iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4) を参照してください。
 
-以下のように、Push ダッシュボードで APNs をセットアップします。
+「Push Notification」サービス・ダッシュボードで APNs をセットアップするには、以下の手順を実行します。
 
-1. Bluemix ダッシュボードでバックエンド・アプリケーションを開いてから、**「IBM Push Notifications」**サービスをクリックして Push ダッシュボードを開きます。
-
-	Push ダッシュボードが表示されます。
-	![プッシュ通知設定ダッシュボード](images/wizard.jpg)
-2. **「構成」**タブで、**「Apple のプッシュ証明書 (Apple Push Certificate)」**セクションに移動し、**「サンドボックス」** (開発) または**「実動」** (配布) を選択してから、前の[ステップ](#step18)で作成した `p.12` 証明書をアップロードします。
-	![プッシュ通知を設定する「構成」タブ](images/credential_screen.jpg)
+1. 「Push Notification」サービス・ダッシュボードで**「Configure (構成)」**を選択します。
+2. **「モバイル」**オプションを選択し、**「APNs Push Credentials (APNs プッシュ資格情報)」**フォームの情報を更新します。
+3. **「Sandbox (サンドボックス)」** (開発) または**「Production (実動)」** (配布) の該当する方を選択し、前の[ステップ](#step18)を使用して作成した `p.12` 証明書をアップロードします。![「プッシュ通知の設定」ダッシュボード](images/wizard.jpg)
 3. **「パスワード」**フィールドに、`.p12` 証明書ファイルに関連付けられているパスワードを入力し、次に**「保存」**をクリックします。
 
 有効なパスワードを使用して証明書のアップロードに成功したら、通知の送信を開始できます。

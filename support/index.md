@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2016
   
-lastupdated: "2016-10-22"
+lastupdated: "2016-12-12"
 
 ---
 
@@ -31,7 +31,7 @@ To open a support ticket or find other help options, you can use the Support wid
 {: #using-avatar}
 The Support widget enables you to get help and provide feedback.
 
-To open the Support widget, log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click the **Support** &gt; **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**.
+To open the Support widget, log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click the **Support** &gt; **Get help** to find answers to your questions. On the page that is displayed, type your question in the search field. Answers from across the {{site.data.keyword.Bluemix_notm}} documentation and Stack Overflow are displayed. The page also provides options to post your question to Stack Overflow, or to open a ticket by clicking **GET IN TOUCH**. Although the support widget is the preferred method for obtaining support, if you cannot log in to Bluemix, you can use the [Get Help](https://support.ng.bluemix.net/gethelp/) page to submit a ticket as well.
 
 ### Using the Support widget for linked accounts
 {: #using-avatar-linked}
@@ -43,6 +43,7 @@ If you are using an account that is linked between {{site.data.keyword.Bluemix_n
 * You can submit an idea to IBM User Voice.
 * You can contact sales by either calling or finding a sales representative, or by linking to the Find a Sales Representative form.
 * You can connect with **@IBMBluemixHelp** on Twitter to enhance your Bluemix experience.
+* Although the support widget is the preferred method for obtaining support, if you cannot log in to Bluemix, you can use the [Get Help](https://support.ng.bluemix.net/gethelp/) page to submit a ticket as well.
 
 
 
@@ -176,10 +177,10 @@ All customers of {{site.data.keyword.Bluemix_notm}} are provided with free techn
 Levels | Free |  Basic | Standard | Premium
 --- | --- | --- | --- | --- |
 Description | Support for all trial customers of Bluemix.  |  Support for non-production environments or workloads where traditional severities and response times are not needed. | Support for environments with a limited number of business-critical applications. {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Local customers receive standard support. | Support for mission-critical environments that have a strategic dependence on {{site.data.keyword.Bluemix_notm}}. 
-High severity support |  N/A | N/A | Included | Included 
+Severity 1-4 support |  N/A | N/A | Included | Included 
 Support language | English | English | English | English
 Assigned client success manager (CSM) | Not included | Not included | Not included | Included at<br> 8 hours per week
-*Table 1. Support levels*
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### Opening a support ticket
 {: #open-ticket}
@@ -194,7 +195,7 @@ If the problem is not due to an outage, open a support ticket by using one of th
   * Use the [IBM {{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} help page. You can submit tickets for sales, billing, IBMid and login, and technical support problems. For technical support problems, you can further select a technical group after you click **Technical Support**. For example, if you need help with Cloud Foundry apps, OpenWhisk, Containers, Virtual Servers, or Bare Metal servers, you can choose **Application Services**. If you need help with a specific service, select the corresponding service category. To determine the category that your service belongs to, see categories under [Services](/docs/services/index.html){: new_window} in the navigation pane.  
   * From [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. After you sign in to the portal, click **Open Ticket**, and then fill in the support form. 
   
-When you open a support ticket, ensure that you indicate an appropriate severity for your ticket. The severity determines how your ticket is handled. See [Support ticket severity and response time](index.html#support-ticket-severity){: new_window} for information about the different severities. If your request is urgent, but you only have free or basic support, you can upgrade your account to submit high-severity (level 1, 2, and 3) tickets. To upgrade your account to a higher support level, contact your IBM sales representative by email at sales@bluemix.net.
+When you open a support ticket, ensure that you indicate an appropriate severity for your ticket. The severity determines how your ticket is handled. See [Support ticket severity and response time](index.html#support-ticket-severity){: new_window} for information about the different severities. If your support inquiry requires a more immediate response, we recommend upgrading to our Standard or Premium support tier so that you can raise severity 1-4 support tickets. To upgrade your account to a higher support level, please contact your [IBM sales representative](https://www.ibm.com/cloud-computing/bluemix/contact-us) or email us at sales@bluemix.net.
 
 ### Opening a support ticket for linked accounts
 {: #open-ticket-linked}
@@ -262,7 +263,7 @@ Severity 1 | <strong>Critical business impact or service is down.</strong> <br> 
 Severity 2 | <strong>Significant business impact.</strong> <br> A service feature or function is severely restricted in its use or you are in danger of missing business deadlines. | <ul><li><strong>Free:</strong> N/A</li><li><strong>Basic:</strong> N/A </li><li><strong>Standard:</strong> Within 2 hours</li><li><strong>Premium:</strong> Within 90 minutes </li></ul> | <ul><li><strong>Free:</strong> N/A</li><li><strong>Basic:</strong> N/A </li><li><strong>Standard:</strong> Hours of operation </li><li><strong>Premium:</strong> Hours of operation </li></ul>
 Severity 3 | <strong>Minor business impact.</strong> <br> A service feature or function is usable, but has some problems that affect its use. No critical impact on operations is caused. | <ul><li><strong>Free:</strong> N/A</li><li><strong>Basic:</strong> N/A </li><li><strong>Standard:</strong> Within 4 hours</li><li><strong>Premium:</strong> Within 2 hours</li></ul> | <ul><li><strong>Free:</strong> N/A</li><li><strong>Basic:</strong> N/A </li><li><strong>Standard:</strong> Hours of operation </li><li><strong>Premium:</strong> Hours of operation </li></ul>
 Severity 4 | <strong>Minimal business impact.</strong> <br> An inquiry or non-technical request. | <ul><li><strong>Free:</strong> Best effort </li><li><strong>Basic:</strong> Best effort</li><li><strong>Standard:</strong> Within 8 hours</li><li><strong>Premium:</strong> Within 4 hours</li></ul> | <ul><li><strong>Free:</strong> Hours of operation </li><li><strong>Basic:</strong> Hours of operation </li><li><strong>Standard:</strong> Hours of operation </li><li><strong>Premium:</strong> Hours of operation </li></ul>
-*Table 2. Severity definition and response time*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### Reporting a potential security vulnerability
@@ -338,8 +339,7 @@ The following table lists the supported national languages and language codes fo
 | Spanish | es |
 | Simplified Chinese | zh_CN |
 | Traditional Chinese | zh_TW |
-
-*Table 3. Supported national languages and language codes*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## Satisfaction surveys for {{site.data.keyword.Bluemix_notm}} support  

@@ -2,11 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-09"
+lastupdated: "2016-11-02"
+
 ---
+
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-
+{:codeblock:.codeblock}
 
 
 # {{site.data.keyword.amashort}} Android 앱용 사용자 정의 인증 구성 
@@ -17,17 +19,26 @@ lastupdated: "2016-10-09"
 
 ## 시작하기 전에
 {: #before-you-begin}
-사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스의 보호를 받는 리소스가 있어야 합니다. 또한 모바일 앱이 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트되어야 합니다. 자세한 정보는 다음 내용을 참조하십시오. 
+시작하기 전에 다음이 있어야 합니다. 
+
+* 사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스에 의해 보호되는 리소스([사용자 정의 인증 구성 참조](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* **테넌트 ID** 값. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
+* **영역** 이름. 이 값은 {{site.data.keyword.amashort}} 대시보드의 **관리** 탭에서 **사용자 정의** 섹션의 **영역 이름** 필드에 지정한 값입니다. 
+* 백엔드 애플리케이션의 URL(**앱 라우트**). 이 값은 백엔드 애플리케이션의 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
+* {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`, `United Kingdom` 및 `Sydney` 중 하나여야 하며 WebView Javascript 코드 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` 또는 `BMSClient.REGION_UK`에 필요한 SDK 값에 해당해야 합니다. 이 값은 {{site.data.keyword.amashort}} 클라이언트를 초기화하는 데 필요합니다. 
+
+자세한 정보는 다음 내용을 참조하십시오. 
  * [{{site.data.keyword.amashort}} 시작하기](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Android SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
  * [사용자 정의 ID 제공자 사용](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [사용자 정의 ID 제공자 작성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [사용자 정의 인증용 {{site.data.keyword.amashort}} 구성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
-서비스 매개변수 값을 기록해 두십시오. {{site.data.keyword.Bluemix_notm}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 값과 `tenantId`(`appGUID`라고도 함) 값이 **라우트** 필드와 **앱 GUID/TenantId** 필드에 표시됩니다. 이들 값은 SDK를 초기화하고 백엔드 애플리케이션에 요청을 보내는 데 필요합니다. 
+
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
 {: #custom-android-initialize}
+{{site.data.keyword.amashort}} Android SDK로 인스트루먼트된 Android 앱이 있으면 이 절을 건너뛰어도 됩니다. 
 1. Android Studio의 Android 프로젝트에서, 앱 모듈의 `build.gradle` 파일을 여십시오(`build.gradle` 프로젝트가 아님). 
 
 1. `build.gradle` 파일에서 `dependencies` 섹션을 찾아 다음 종속 항목이 있는지 확인하십시오. 
@@ -42,6 +53,7 @@ lastupdated: "2016-10-09"
     	// other dependencies  
 	}
 	```
+	{: codeblock}
 
 1. 프로젝트를 Gradle과 동기화하십시오. **도구 > Android > Gradle 파일과 프로젝트 동기화**를 클릭하십시오. 
 
@@ -51,6 +63,7 @@ lastupdated: "2016-10-09"
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
+	{: codeblock}
 
 1. SDK를 초기화하십시오.
 필수는 아니지만 일반적으로 초기화 코드를 넣는 위치는 Android 애플리케이션 기본 활동의 `onCreate` 메소드입니다. 
@@ -58,8 +71,9 @@ lastupdated: "2016-10-09"
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 ```
+	{: codeblock}
 
-`BMSClient.REGION_UK`를 적절한 지역으로 대체하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오. 지역 값은 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` 또는 `BMSClient.REGION_UK`이어야 합니다. 				
+`BMSClient.REGION_UK`를 {{site.data.keyword.amashort}} 지역으로 대체하십시오. 이러한 값을 얻는 방법에 대한 자세한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.
 	
 
 ## AuthenticationListener 인터페이스
@@ -74,6 +88,7 @@ lastupdated: "2016-10-09"
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+{: codeblock}
 
 
 #### 인수
@@ -91,6 +106,7 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ### onAuthenticationFailure 메소드
 {: #custom-android-authlistener-onfail}
@@ -98,6 +114,7 @@ void onAuthenticationSuccess(Context context, JSONObject info);
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ## AuthenticationContext 인터페이스
 {: #custom-android-authcontext}
@@ -107,10 +124,12 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+{: codeblock}
 
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+{: codeblock}
 
 ## 사용자 정의 AuthenticationListener의 샘플 구현
 {: #custom-android-samplecustom}
@@ -170,6 +189,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	}
 }
 ```
+{: codeblock}
 
 ## 사용자 정의 AuthenticationListener 등록
 {: #custom-android-register}
@@ -183,11 +203,12 @@ mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuth
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
+{: codeblock}
 
 
 코드에서: 
-* `MCAServiceTenantId`를 `tenantId` 값으로 바꾸십시오([시작하기 전에](##before-you-begin) 참조).  
-* {{site.data.keyword.amashort}} 대시보드에서 지정한 `realmName`을 사용하십시오. 
+* `MCAServiceTenantId`를 **TenantId** 값으로 대체하십시오([시작하기 전에](##before-you-begin) 참조). 
+* {{site.data.keyword.amashort}} 대시보드에 지정한 `realmName`을 사용하십시오([사용자 정의 인증 구성](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html) 참조).
 
 
 ## 인증 테스트
@@ -196,7 +217,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ### 테스트하기 전에
 {: #custom-android-testing-before}
-{{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 애플리케이션과 `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받는 리소스가 있어야 합니다. 
+`/protected` 엔드포인트에서 {{site.data.keyword.amashort}}에 의해 보호되는 리소스가 있는 애플리케이션이 있어야 합니다. 
 
 
 1. 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트(`{applicationRoute}/protected`)에 요청을 전송하십시오(예: `http://my-mobile-backend.mybluemix.net/protected`). `{applicationRoute}` 값을 얻는 방법에 대한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.  
@@ -224,8 +245,8 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 			}
 		}
 	});
-```
-
+	```
+	{: codeblock}
 	
 1. 	요청이 성공하면 LogCat 도구에 다음과 같은 출력이 표시됩니다. 
 
@@ -236,6 +257,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+ {: codeblock}
 
 
  사용자가 로그인한 후에 이 코드를 호출하면 사용자가 로그아웃됩니다. 사용자가 다시 로그인하려고 시도하는 경우 서버에서 수신된 확인에 다시 응답해야 합니다. 

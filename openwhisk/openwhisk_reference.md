@@ -134,7 +134,7 @@ An activation record contains the following fields:
 ### Function prototype
 {: #openwhisk_ref_javascript_fnproto}
 
-{{site.data.keyword.openwhisk_short}} JavaScript actions run in a Node.js runtime, currently version 6.2.0.
+{{site.data.keyword.openwhisk_short}} JavaScript actions run in a Node.js runtime.
 
 Actions written in JavaScript must be confined to a single file. The file can contain multiple functions but by convention a function called `main` must exist and is the one called when the action is invoked. For example, the following is an example of an action with multiple functions.
 
@@ -172,7 +172,7 @@ function main(params) {
   } else if (params.payload == 1) {
      return {payload: 'Hello, World!'};
   } else if (params.payload == 2) {
-    return whisk.error();   // indicates abnormal completion
+    return {error: 'payload must be 0 or 1'};
   }
 }
 ```
@@ -231,111 +231,75 @@ Notice that regardless of whether an activation is synchronous or asynchronous, 
 
 ### Additional SDK methods
 
-The `whisk.invoke()` function invokes another action and returns a Promise for the resulting activation. It takes as an argument a dictionary that defines the following parameters:
-
-- *name*: The fully qualified name of the action to invoke,
-- *parameters*: A JSON object that represents the input to the invoked action. If omitted, defaults to an empty object.
-- *apiKey*: The authorization key with which to invoke the action. Defaults to `whisk.getAuthKey()`.
-- *blocking*: Whether the action should be invoked in blocking or non-blocking mode. When `blocking` is true, invoke will wait for the result of the invoked action before resolving the returned Promise. Defaults to `false`, indicating a non-blocking invocation.
-
-`whisk.invoke()` returns a Promise. In order to make the OpenWhisk system wait for the invoke to finish, you must return this Promise from your action's `main` function.
-- If the invocation fails, the promise will reject with an object describing the failed invocation. It will potentially have two fields:
-  - *error*: An object describing the error - usually a string.
-  - *activation*: An optional dictionary that may or may not be present depending on the nature of the invocation failure. If present, it will have the following fields:
-    - *activationId*: The activation ID:
-    - *result*: If the action was invoked in blocking mode: The action result as a JSON object, else `undefined`.
-- If the invocation succeeds, the promise will resolve with a dictionary describing the activation with fields *activationId* and *result* as described above.
-
-Below is an example of a blocking invocation that utilizes the returned promise:
-```javascript
-return whisk.invoke({
-  name: 'myAction',
-  blocking: true
-})
-.then(function (activation) {
-    // activation completed successfully, activation contains the result
-    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
-})
-.catch(function (reason) {
-    console.log('An error has occured ' + reason.error);
-
-    if(reason.activation) {
-      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
-    } else {
-      console.log('Failed to create activation.');
-    }
-});
-```
-{: codeblock}
-
-The `whisk.trigger()` function fires a trigger and returns a Promise for the resulting activation. It takes as an argument a JSON object with the following parameters:
-
-- *name*: The fully qualified name of trigger to invoke.
-- *parameters*: A JSON object that represents the input to the trigger. If omitted, defaults to an empty object.
-- *apiKey*: The authorization key with which to fire the trigger. Defaults to `whisk.getAuthKey()`.
-
-`whisk.trigger()` returns a Promise. If you require the OpenWhisk system to wait for the trigger to complete, you should return this Promise from your action's `main` function.
-- If the trigger fails, the promise will reject with an object describing the error.
-- If the trigger succeeds, the promise will resolve with a dictionary with an `activationId` field containing the activation ID.
-
-The `whisk.getAuthKey()` function returns the authorization key under which the action is running. Usually, you do not need to invoke this function directly because it is used implicitly by the `whisk.invoke()` and `whisk.trigger()` functions.
+The global object `whisk` is urrently deprecated, migrate your nodejs actions to use altenative methods.
+For the functions `whisk.invoke()` and `whisk.trigger()` you can use the client library [openwhisk](https://www.npmjs.com/package/openwhisk).
+For the `whisk.getAuthKey()` you can get the API key value from the environment variable `__OW_API_KEY`.
+For the `whisk.error()` you can return a rejected Promise (i.e. Promise.reject).
 
 ### JavaScript runtime environments
 {: #openwhisk_ref_javascript_environments}
 
-JavaScript actions are executed by default in a Node.js version 6.2.0 environment.  The 6.2.0 environment will also be used for an action if the `--kind` flag is explicitly specified with a value of 'nodejs:6' when creating/updating the action.
-The following packages are available to be used in the Node.js 6.2.0 environment:
+JavaScript actions are executed by default in a Node.js version 6.9.1 environment.  The 6.9.1 environment will also be used for an action if the `--kind` flag is explicitly specified with a value of 'nodejs:6' when creating/updating the action.
+The following packages are available to be used in the Node.js 6.9.1 environment:
 
-- apn v1.7.5
-- async v1.5.2
-- body-parser v1.15.1
+- apn v2.1.2
+- async v2.1.4
 - btoa v1.1.2
-- cheerio v0.20.0
-- cloudant v1.4.1
+- cheerio v0.22.0
+- cloudant v1.6.2
 - commander v2.9.0
-- consul v0.25.0
-- cookie-parser v1.4.2
+- consul v0.27.0
+- cookie-parser v1.4.3
 - cradle v0.7.1
-- errorhandler v1.4.3
-- express v4.13.4
-- express-session v1.12.1
-- gm v1.22.0
-- log4js v0.6.36
-- iconv-lite v0.4.13
+- errorhandler v1.5.0
+- glob v7.1.1
+- gm v1.23.0
+- lodash v4.17.2
+- log4js v0.6.38
+- iconv-lite v0.4.15
+- marked v0.3.6
 - merge v1.2.0
-- moment v2.13.0
-- mustache v2.2.1
+- moment v2.17.0
+- mongodb v2.2.11
+- mustache v2.3.0
 - nano v6.2.0
 - node-uuid v1.4.7
-- nodemailer v2.5.0
+- nodemailer v2.6.4
 - oauth2-server v2.4.1
-- pkgcloud v1.3.0
-- process v0.11.3
-- pug v2.0.0
-- request v2.72.0
-- rimraf v2.5.2
-- semver v5.1.0
-- sendgrid v3.0.11
-- serve-favicon v2.3.0
-- socket.io v1.4.6
-- socket.io-client v1.4.6
-- superagent v1.8.3
+- pkgcloud v1.4.0
+- process v0.11.9
+- pug v2.0.0-beta6
+- redis v2.6.3
+- request v2.79.0
+- request-promise v4.1.1
+- rimraf v2.5.4
+- semver v5.3.0
+- sendgrid v4.7.1
+- serve-favicon v2.3.2
+- socket.io v1.6.0
+- socket.io-client v1.6.0
+- superagent v3.0.0
 - swagger-tools v0.10.1
-- tmp v0.0.28
-- twilio v2.9.1
-- watson-developer-cloud v1.12.4
+- tmp v0.0.31
+- twilio v2.11.1
+- underscore v1.8.3
+- uuid v3.0.0
+- validator v6.1.0
+- watson-developer-cloud v2.9.0
 - when v3.7.7
-- ws v1.1.0
-- xml2js v0.4.16
+- winston v2.3.0
+- ws v1.1.1
+- xml2js v0.4.17
 - xmlhttprequest v1.8.0
-- yauzl v2.4.2
+- yauzl v2.7.0
 
-The Node.js version 0.12.14 environment will be used for an action if the `--kind` flag is explicitly specified with a value of 'nodejs' when creating/updating the action.
-The following packages are available to be used in the Node.js 0.12.14 environment:
+The Node.js version 0.12.17 environment will be used for an action if the `--kind` flag is explicitly specified with a value of 'nodejs' when creating/updating the action.
+The following packages are available to be used in the Node.js 0.12.17 environment:
+
+**Note**: The Node.js version 0.12.x is deprecated, migrate all your Node.js action to use Node.js version 6.x.
 
 - apn v1.7.4
 - async v1.5.2
-- body-parser v1.12.0
 - btoa v1.1.2
 - cheerio v0.20.0
 - cloudant v1.4.1
@@ -344,11 +308,9 @@ The following packages are available to be used in the Node.js 0.12.14 environme
 - cookie-parser v1.3.4
 - cradle v0.6.7
 - errorhandler v1.3.5
-- express v4.12.2
-- express-session v1.11.1
 - gm v1.20.0
 - jade v1.9.2
-- log4js v0.6.25
+- log4js v0.6.38
 - merge v1.2.0
 - moment v2.8.1
 - mustache v2.1.3
@@ -356,7 +318,7 @@ The following packages are available to be used in the Node.js 0.12.14 environme
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
 - process v0.11.0
-- request v2.60.0
+- request v2.79.0
 - rimraf v2.5.1
 - semver v4.3.6
 - serve-favicon v2.2.0

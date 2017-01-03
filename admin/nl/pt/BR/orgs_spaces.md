@@ -4,8 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
-  
+  years: 2015, 2016 lastupdated: "2016-12-05"  
 
 
 ---
@@ -17,8 +16,6 @@ copyright:
 
 # Gerenciando organizações e espaços
 {: #orgsspacesusers}
-Última atualização: 20 de outubro de 2016
-{: .last-updated}
 
 Como um proprietário da conta, é possível gerenciar suas organizações acessando a página **Gerenciar organizações**. Gerenciadores de organização também podem usar a página Gerenciar Organizações,
 para gerenciar quaisquer organizações na qual eles estão configurados como o gerente.
@@ -79,7 +76,7 @@ Local, então, deverá especificar um novo nome. Depois de criar a organização
 Deve-se entrar em contato com o [{{site.data.keyword.Bluemix_notm}} Suporte](http://ibm.biz/bluemixsupport){: new_window}, para excluir uma organização. Ao solicitar que
 a equipe de suporte exclua uma organização, todos os espaços, aplicativos e serviços dentro da organização são excluídos.
 
-As [funções de usuário](users_roles.html#userrolesinfo) a seguir podem ser designadas para membros da equipe em uma organização:
+As [funções de usuário](/docs/admin/users_roles.html#userrolesinfo) a seguir podem ser designadas para membros da equipe em uma organização:
 
 <ul>
 <li>Gerente da organização</li>
@@ -96,7 +93,7 @@ Dentro de uma organização, é possível usar espaços para agrupar um conjunto
 {{site.data.keyword.Bluemix_notm}}.
 
 Após incluir membros da equipe em uma organização, é possível conceder a eles permissões para os espaços. Semelhantes às organizações, os espaços também têm um conjunto de
-[funções de usuário](users_roles.html#userrolesinfo) com permissões específicas que são designadas a membros da equipe:
+[funções de usuário](/docs/admin/users_roles.html#userrolesinfo) com permissões específicas que são designadas a membros da equipe:
 
 <ul>
 <li>Gerente de espaço</li>
@@ -177,22 +174,34 @@ Conclua as etapas a seguir, para listar os membros para um espaço específico:
 ## Gerenciando cota
 {: #managequota}
 
-Como um proprietário da conta ou gerenciador de organização, é possível visualizar a cota alocada e usada para a sua organização. A cota representa os limites de recurso para a organização que é
-designada quando a organização é criada. Qualquer
-aplicativo ou serviço em um espaço da organização contribui para o uso da cota.
+Como um proprietário da conta ou gerenciador de organização do {{site.data.keyword.Bluemix_notm}}, é possível visualizar a cota usada e alocada para uma
+organização. A cota representa os limites de recurso para a organização, a qual é designada quando a organização é criada. Dependendo se você tem uma conta de avaliação
+ou uma conta faturável, os recursos que estão disponíveis para uma organização variam. Qualquer aplicativo ou serviço em um espaço dentro da organização contribui
+para o uso da cota alocada.
 
-Para visualizar a cota para a sua organização, conclua as etapas a seguir:
+Para visualizar a cota usada e alocada para uma organização, conclua as etapas a seguir:
 
 1. Clique na página **Conta** &gt; **Gerenciar organizações**.
 2. Identifique a organização para a qual deseja visualizar a cota e clique em **Visualizar detalhes**.
 3. Clique em **Editar organização**.
-4. Selecione a guia **COTA**.
+4. Se você tiver espaços definidos em mais de uma região, selecione a região específica que deseja visualizar.
+5. Clique em **COTA**. 
+6. Por padrão, a página de cota do **Cloud Foundry** é aberta. É possível visualizar os detalhes da cota para os recursos a seguir:
+ * MEMÓRIA
+ * SERVIÇOS
+ * PLANO
+ * PREÇO
+7. Clique em **Contêineres** para visualizar a alocação de cota de contêiner usada e disponível. A alocação de contêiner varia dependendo
+de seu plano de precificação. É possível visualizar os detalhes da cota para os recursos a seguir:
+ * MEMÓRIA
+ * IP PÚBLICO
 
-Para atualizar a cota para sua organização, deve-se abrir um chamado de suporte. Para obter mais informações sobre a abertura de um chamado de suporte, consulte
-[Obtendo suporte ao cliente](../support/index.html#contacting-support).
-Para obter mais informações sobre a cota para contêineres, consulte
-[Cota](../containers/container_planning_org_ov.html##container_planning_quota)
-na documentação Contêineres.
+**Nota:** Os contêineres não estão disponíveis na região de Sydney do {{site.data.keyword.Bluemix_notm}}. 
+
+Para obter mais informações sobre contêineres, consulte [Cota](/docs/containers/container_planning_org_ov.html#container_planning_quota) na
+documentação de Contêineres.
+Para mudar a cota que está alocada para uma organização, deve-se abrir um chamado de suporte. Para obter mais informações sobre como abrir um chamado de suporte,
+consulte [Obtendo suporte ao cliente](/docs/support/index.html#contacting-support). 
 
 ## Gerenciando Domínios
 {: #managedomains}

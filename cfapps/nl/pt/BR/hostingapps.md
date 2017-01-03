@@ -158,8 +158,6 @@ um aplicativo Cloud Foundry, selecione um tempo de execução no catálogo {{sit
 
 É possível usar as ferramentas e serviços a seguir que o {{site.data.keyword.Bluemix_notm}} fornece:
 
-*Tabela 1. Ferramentas do {{site.data.keyword.Bluemix_notm}}*
-
 | Ferramenta	| Método |
 |:------|:--------|
 |Interface da linha de comandos do Cloud Foundry (cf cli)	|Gerencie seu código no cliente local e use a interface
@@ -174,6 +172,7 @@ manualmente.|
 Delivery Pipeline	|Gerencie seu código no repositório DevOps GitHub
 e implemente o aplicativo para {{site.data.keyword.Bluemix_notm}}
 usando o DevOps Delivery Pipeline.|
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
 
 
 Se a plataforma Cloud Foundry não suportar os requisitos de
@@ -216,6 +215,7 @@ da linha de comandos cf:
   instances: 1
   memory: 512M</code></pre>
 <p>Para obter mais informações sobre as opções suportadas que podem ser usadas neste arquivo, consulte [Manifest do aplicativo](/docs/manageapps/depapps.html#appmanifest).
+
 </p></li></ol>
 </li>
 

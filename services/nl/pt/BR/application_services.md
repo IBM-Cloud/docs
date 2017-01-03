@@ -1,19 +1,18 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Serviços de Aplicativos
 {: #app_services}
 
-*Última atualização: 28 de janeiro de 2016*
-
-Use esses serviços para incluir ou remover recursos rapidamente enquanto você desenvolve aplicativos da web na nuvem. Também é possível simplificar tarefas de gerenciamento e organizar os seus processos e regras de negócios. 
+Use esses serviços para incluir ou remover recursos rapidamente enquanto você desenvolve aplicativos da web na nuvem. Também é possível simplificar tarefas de gerenciamento e organizar os seus processos e regras de negócios.
 {:shortdesc}
 
 
@@ -24,3 +23,4 @@ os aplicativos para serem rapidamente editados a partir dos serviços. Inclua e 
 nas plataformas existentes no local e nas nuvens com serviços consistentes. | Crie lógica de negócios separadamente do aplicativo, permitindo uma mudança mais fácil na política e lógica de negócios e captura codificada de políticas de negócios, práticas e regulamentos. Expresse
 facilmente a lógica de negócios com as regras de negócios para automatizar as decisões com a
 fidelidade de um especialista no assunto.
+{: caption="Table 1. Options for using application services" caption-side="top"}

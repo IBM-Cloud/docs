@@ -2,14 +2,16 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
----
+lastupdated: "2016-10-25"
 
+---
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 
 # {{site.data.keyword.amashort}} Logiciels SDK, exemples et référence d'API
-Pour ajouter des SDK {{site.data.keyword.amafull}} à votre application, sélectionnez ceux que vous désirez utiliser. Configurez ensuite votre
+Pour ajouter des SDK {{site.data.keyword.amafull}} à votre appli client, sélectionnez ceux que vous désirez utiliser. Configurez ensuite votre
 gestionnaire de dépendances pour intégrer le SDK dans votre application.
 {:shortdesc}
 
@@ -19,7 +21,7 @@ SDK.
 ## SDK Core
 {: #coresdk}
 
-Les SDK Core incluent des API pour activer une authentification personnalisée, la journalisation et la surveillance de votre application mobile.
+Le SDK de base inclut des API permettant d'activer l'authentification et la journalisation personnalisées.
 
 ### Android
 {: #coresdk-android}
@@ -86,7 +88,7 @@ pod 'IMFCore'
 
 Installez le plug-in Mobile Client Access Cordova :
 ```Bash
-cordova plugin add ibm-mfp-core
+cordova plugin add bms-core
 ```
 {: codeblock}
 

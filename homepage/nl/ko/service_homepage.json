@@ -7,50 +7,44 @@
     "id": "cfApp",
     "title": "Cloud Foundry 애플리케이션",
     "href": "cfapps/index.html",
-    "category_id": "컴퓨팅"
+    "category_id": "compute"
   }, {
     "title": "런타임",
     "href": "cfapps/runtimes.html",
-    "category_id": "컴퓨팅"
+    "category_id": "compute"
   }, {
     "title": "표준 유형",
     "href": "cfapps/boilerplates.html",
-    "category_id": "컴퓨팅"
+    "category_id": "compute"
   }, {
-    "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
-    "category_id": "컴퓨팅"
+    "category_id": "compute"
   }, {
-    "id": "컨테이너",
-    "title": "IBM Containers",
+    "id": "container",
+    "title": "IBM Bluemix 컨테이너 서비스",
     "href": "containers/container_index.html",
-    "category_id": "컴퓨팅"
+    "category_id": "compute"
   }, {
     "id": "vm",
     "title": "IBM Virtual Servers",
     "href": "virtualmachines/vm_index.html",
-    "category_id": "컴퓨팅"
+    "category_id": "compute"
   }, {
-    "type": "별도",
+    "type": "extra",
     "title": "데이터 작업 시도",
     "href": "services/WorkWithData/index.html",
-    "category_id": "데이터(data)"
+    "category_id": "data"
   }, {
-    "type": "별도",
-    "title": "도구 체인 시도",
-    "href": "toolchains/toolchains_overview.html",
-    "category_id": "devops"
-  }, {
-    "type": "별도",
+    "type": "extra",
     "title": "Dedicated GitHub Enterprise 시도",
     "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
-    "type": "별도",
-    "title": "Bluemix Mobile 대시보드 시도",
+    "type": "extra",
+    "title": "모바일 프로젝트 빌드 시도",
     "href": "mobile/index.html",
-    "category_id": "모바일"
+    "category_id": "mobile"
   }]
 }
 

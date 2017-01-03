@@ -14,7 +14,7 @@ copyright:
 # Cómo trabajar con paquetes
 {: #globalizationpipeline_workingwithbundles}
 
-*Última actualización: 6 de julio de 2016*
+*Última actualización: 30 de agosto de 2016*
 {: .last-updated}
 
 Cada paquete que cree contiene los pares clave valor del archivo de recursos y el conjunto completo de traducciones que se han generado.
@@ -131,7 +131,7 @@ Después de subir un archivo de recursos, puede traducir su contenido a cualquie
 </tbody>
 </table>
 
-**Nota:** el inglés es, en este momento, el único idioma de origen soportado. A medida que evolucione el servicio de {{site.data.keyword.GlobalizationPipeline_full}}, se irán añadiendo idiomas de origen y de destino adicionales.
+**Nota:** El motor de traducción automática predeterminado de {{site.data.keyword.GlobalizationPipeline_short}} solo proporciona soporte para inglés como idioma de origen. Sin embargo, los motores de traducción automática alternativos disponibles para configurar dentro de {{site.data.keyword.GlobalizationPipeline_short}} dan soporte a la traducción de otras combinaciones de idiomas distintas del inglés.
 
 A medida que cree paquetes, estos se irán añadiendo al separador **Paquetes** para que sean fácilmente accesibles. Desde allí, se pueden realizar tareas adicionales en las traducciones.
 
@@ -190,7 +190,7 @@ Cuando se suprime un idioma de destino de un paquete, elimine el idioma de desti
 
 ### Descarga de las traducciones generadas para un idioma de destino
 
-{{site.data.keyword.GlobalizationPipeline_full}} proporciona varias formar de incorporar la traducción para un idioma de destino en la aplicación. Puede descargar la traducción como un archivo de recursos e incluirla en la compilación de la aplicación. También puede hacer referencia a la traducción de forma dinámica desde {{site.data.keyword.GlobalizationPipeline_full}} utilizando uno de los [SDK](https://github.com/IBM-Bluemix/gp-common) de código abierto. 
+{{site.data.keyword.GlobalizationPipeline_short}} proporciona varias formas de incorporar la traducción para un idioma de destino en la aplicación. Puede descargar la traducción como un archivo de recursos e incluirla en la compilación de la aplicación. También puede hacer referencia a la traducción de forma dinámica desde {{site.data.keyword.GlobalizationPipeline_short}} utilizando uno de los [SDK](https://github.com/IBM-Bluemix/gp-common) de código abierto. 
 
 <!-- For information on {{site.data.keyword.GlobalizationPipeline_full}} SDKs, see <link>. -->
 

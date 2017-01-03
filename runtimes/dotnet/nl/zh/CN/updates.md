@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-06"
 
 ---
 
@@ -11,9 +12,13 @@ copyright:
 # ASP.NET 核心 buildpack 的最新更新
 {: #latest_updates}
 
-上次更新时间：2016 年 8 月 26 日
 
 aspnet buildpack 中最新更新的列表。
+
+## 2016 年 10 月 10 日：更新了 ASP.NET 核心 buildpack V1.0.1-20161005-1225
+
+* 添加 .NET Core 1.0.1 的支持
+* 修订了高速缓存 NuGet 软件包时导致部署失败的间歇问题
 
 ## 2016 年 8 月 31 日：更新了 ASP.NET 核心 buildpack V1.0-20160826-1345
 

@@ -11,42 +11,72 @@ copyright:
 {:codeblock:.codeblock}
 
 
-# {{site.data.keyword.GlobalizationPipeline_full}} 入门
+# {{site.data.keyword.GlobalizationPipeline_short}} 入门
 {: #globalizationpipeline}
 
-*上次更新时间：2016 年 7 月 6 日*
+*上次更新时间：2016 年 9 月 9 日*
 {: .last-updated}
 
 {{site.data.keyword.GlobalizationPipeline_full}} 是一种提供机器翻译和编辑功能的服务，可快速翻译 Web 或手机 UI。使用其仪表板、RESTful API 以及与应用程序 Delivery Pipeline 的集成，您可以将应用程序发布到全球客户，而无需重新构建或重新部署应用程序。
 {:shortdesc}
 
-您可以使用 {{site.data.keyword.GlobalizationPipeline_full}} 服务与 {{site.data.keyword.Bluemix}} 中的任何应用程序，或者自行取消绑定。您可以轻而易举地快速创建、维护和修改翻译，而无需离开 DevOps 环境。
+您可以使用 {{site.data.keyword.GlobalizationPipeline_short}} 服务与 {{site.data.keyword.Bluemix}} 中的任何应用程序，或者自行取消绑定。您可以轻而易举地快速创建、维护和修改翻译，而无需离开 DevOps 环境。
 
-从 {{site.data.keyword.GlobalizationPipeline_full}} 界面，您可以快速翻译 {{site.data.keyword.Bluemix_notm}} 应用程序。有关使用 RESTful API 翻译应用程序的更多信息，请参阅 [API 参考](https://gp-rest.ng.bluemix.net/translate/swagger/index.html){: new_window}。 
+从 {{site.data.keyword.GlobalizationPipeline_short}} 界面，您可以快速翻译 {{site.data.keyword.Bluemix_notm}} 应用程序。有关使用 RESTful API 翻译应用程序的更多信息，请参阅 [API 参考](https://gp-rest.ng.bluemix.net/translate/swagger/index.html){: new_window}。 
 
 
 ## 创建束
 {: #globalizationpipeline_creatingbundles}
 
-使用 {{site.data.keyword.GlobalizationPipeline_full}} 服务，您可以创建束，其包含要翻译的应用程序的资源文件。资源文件可以是 Java 属性文件、AMD I18N 文件或 JSON 文件，且必须以代表应用程序中 UI 字符串的键值对形式包含内容。有关受支持文件类型的详细信息和示例，请参阅[使用束](./bundles.html){: new_window}。
+使用 {{site.data.keyword.GlobalizationPipeline_short}} 服务，您可以创建束，其包含要翻译的应用程序的资源文件。资源文件可以是 Java 属性文件、AMD I18N 文件或 JSON 文件，且必须以代表应用程序中 UI 字符串的键值对形式包含内容。有关受支持文件类型的详细信息和示例，请参阅[使用束](./bundles.html){: new_window}。
 
 要创建束，请完成以下步骤：
 
-1\. 从**概述**选项卡中，单击**新建束**。
+<ol>
+<li>从<strong>概述</strong>选项卡中，单击<strong>新建束</strong>。</li>
 
-2\. 提供束的相关信息：
+<li>提供束的相关信息：</li>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>必填</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>束标识</strong></td>
+<td>是</td>
+<td>用于识别束的唯一名称。</td>
+</tr>
+<tr>
+<td><strong>源语言</strong></td>
+<td>是</td>
+<td>源文件的母语。</td>
+</tr>
+<tr>
+<td><strong>资源文件</strong></td>
+<td>否</td>
+<td>要翻译的<a href=https://new-console.ng.bluemix.net/docs/services/GlobalizationPipeline/bundles.html>资源文件</a>。文件大小上限为 2MB。将上传指定的资源文件。</td>
+</tr>
+<tr>
+<td><strong>文件格式</strong></td>
+<td>否</td>
+<td>要上传的文件类型。</td>
+</tr>
+<tr>
+<td><strong>目标语言</strong></td>
+<td>否</td>
+<td>要翻译为的目标语言。</td>
+</tr>
+</tbody>
+</table>
 
-| 字段 | 必填| 描述|
-|-------|---------|------------|
-| **束标识** | 是 | 用于识别束的唯一名称。 |
-| **源语言** | 是 | 源文件的母语。 |
-| **资源文件** | 否 | 要翻译的[资源文件](bundles.html#globalizationpipeline_workingwithbundles)。文件大小上限为 2MB。将上传指定的资源文件。  |
-| **文件格式** | 否 | 要上传的文件类型。 |
-| **目标语言** | 否 | 要翻译为的目标语言。 |
+<p><strong>注：</strong>要更改针对束提供机器翻译的语言服务，请单击 <a href=https://new-console.ng.bluemix.net/docs/services/GlobalizationPipeline/managing_translations.html#globalizationpipeline_service_to_service>MT 配置</a>选项卡，以查看其他受支持的机器翻译引擎。</p>
 
-**注：**要更改针对束提供机器翻译的语言服务，请单击 [**MT 配置**](./managing_translations.html#globalizationpipeline_service_to_service)选项卡，以查看其他受支持的机器翻译引擎。
+<li>单击<strong>保存</strong></li></ol>
 
-3\. 单击**保存**。
 
 创建束之后，已上传的资源文件即会翻译为您指定的所有目标语言。新束会添加到“束”选项卡，您可以在这里：
 
@@ -54,17 +84,17 @@ copyright:
 * 编辑生成的翻译
 * 更新束中使用的源文件并重新生成翻译
 
-## 将已翻译的束导入到服务
+## 导入已翻译的束
 {: #globalizationpipeline_importtranslatedbundlesintoservice}
 
-或者，如果您已经翻译了资源文件，那么您可以将它们导入到新束中。有关详细信息，请参阅 [{{site.data.keyword.GlobalizationPipeline_full}} 的 Java 客户端工具](https://github.com/IBM-Bluemix/gp-java-tools)。
+或者，如果您已经翻译了资源文件，那么您可以将它们导入到新束中。有关更多信息，请参阅 [{{site.data.keyword.GlobalizationPipeline_short}} 的 Java 客户端工具](https://github.com/IBM-Bluemix/gp-java-tools)。
 
 **注：**如果已更新原始源文件，那么在该文件中定义的键和值会与最新的源文件版本同步，以便仅翻译已更改的键和值。
 
-## 估算 {{site.data.keyword.GlobalizationPipeline_full}} 数据使用情况
+## 估算 {{site.data.keyword.GlobalizationPipeline_short}} 数据使用情况
 {: #globalizationpipeline_documentpricing}
 
-{{site.data.keyword.GlobalizationPipeline_full}} 将您的翻译存储在后端数据库中。要估算活动的数据大小，您可以参考以下公式：
+{{site.data.keyword.GlobalizationPipeline_short}} 将您的翻译存储在后端数据库中。要估算活动数据的大小，您可以参考数据存储估算公式：
 
 `<expected resource data storage size in MB> ˜= 0.0005 * <number of key/value pairs in the source resource> * <number of languages including the source language>`
 
@@ -101,6 +131,6 @@ copyright:
 ## 相关链接
 {: #general}
 
-* [集成 Globalization Pipeline 与 Delivery Pipeline](https://hub.jazz.net/docs/deploy_ext/#globalize){: new_window}
+* [将 Globalization Pipeline 与 Delivery Pipeline 集成](https://hub.jazz.net/docs/deploy_ext/#globalize){: new_window}
 * [IBM Bluemix 价格表](https://www.ng.bluemix.net/#/pricing){: new_window}
 * [IBM Bluemix 先决条件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

@@ -1,12 +1,11 @@
 ---
 
- 
+
 
 copyright:
-
   years: 2016
+lastupdated: "2016-08-02"
 
- 
 
 ---
 
@@ -18,8 +17,7 @@ copyright:
 
 # Usando e criando pacotes do {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_packages}
-Última atualização: 2 de agosto de 2016
-{: .last-updated}
+
 
 No {{site.data.keyword.openwhisk}}, é possível usar pacotes para empacotar um conjunto de ações relacionadas juntas e compartilhá-las com outras pessoas.
 
@@ -246,7 +244,7 @@ Feeds oferecem uma maneira conveniente para configurar uma origem de eventos ext
 2. Crie um acionador que dispare a cada oito segundos.
 
   ```
-  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron '*/8 * * * * *' -p trigger_payload '{"name":"Mork", "place":"Ork"}'
+  wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron "*/8 * * * * *" -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"
   ```
   {: pre}
   ```
@@ -386,12 +384,13 @@ Para criar um pacote customizado com uma ação simples nele, tente o exemplo a 
 2. Exiba os parâmetros no pacote e na ação e veja como a ação `identity` no pacote herda os parâmetros do pacote.
 
   ```
-  wsk package get custom parameters
+  wsk package get custom
   ```
   {: pre}
   ```
-  ok: pacote custom obtido, projetando parâmetros
-  [
+  ok: got package custom
+  ...
+  "parameters": [
       {
           "key": "city",
           "value": "Austin"
@@ -401,16 +400,18 @@ Para criar um pacote customizado com uma ação simples nele, tente o exemplo a 
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
   ```
-  wsk action get custom/identity parameters
+  wsk action get custom/identity
   ```
   {: pre}
   ```
-  ok: ação custom/identity obtida, projetando parâmetros
-  [
+  ok: got action custom/identity
+  ...
+  "parameters": [
       {
           "key": "city",
           "value": "Austin"
@@ -420,6 +421,7 @@ Para criar um pacote customizado com uma ação simples nele, tente o exemplo a 
           "value": "USA"
       }
   ]
+  ...
   ```
   {: screen}
 
@@ -472,11 +474,14 @@ Após as ações e os feeds que formam um pacote serem depuradas e testadas, o p
 2. Exiba a propriedade `publish` do pacote para verificar se agora é true.
 
   ```
-  wsk package get custom publish
+  wsk package get custom
   ```
   {: pre}
   ```
-  ok: pacote custom obtido, projetando publish como verdadeiro
+  ok: got package custom
+  ...
+  "publish": true,
+  ...
   ```
   {: screen}
 

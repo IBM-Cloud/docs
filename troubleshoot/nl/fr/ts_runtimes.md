@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Traitement des incidents liés aux contextes d'exécution
 {: #runtimes}
 
-Dernière mise à jour : 18 août 2016
-{: .last-updated}
 
 
 Vous pouvez rencontrer des problèmes lorsque vous utilisez les contextes d'exécution IBM® Bluemix.. Toutefois, dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
@@ -31,10 +31,7 @@ Vous pouvez rencontrer des problèmes lorsque vous utilisez les contextes d'exé
 {: #ts_loading_bp}
 
 
-Il est possible que vous ne puissiez pas utiliser les derniers composants du pack de construction
-lorsque vous envoyez une application par commande push. Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés
-pour empêcher le chargement de composants obsolètes ou supprimer le contenu du répertoire cache de votre application avant
-de l'envoyer par commande push ou de la reconstituer. 
+Il est possible que vous ne puissiez pas utiliser les derniers composants du pack de construction lorsque vous envoyez une application par commande push. Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés pour empêcher le chargement de composants obsolètes ou supprimer le contenu du répertoire cache de votre application avant de l'envoyer par commande push ou de la reconstituer. 
 
  
 
@@ -141,13 +138,10 @@ l'application Python manquent.
 
  
 
-Pour résoudre le problème, ajoutez un fichier `requirements.txt` et un fichier `Procfile` dans le répertoire racine
-de votre application Python. Les informations suivantes supposent que vous importez la bibliothèque web.py :
+Pour résoudre le problème, ajoutez un fichier `requirements.txt` et un fichier `Procfile` dans le répertoire racine de votre application Python. Les informations suivantes supposent que vous importez la bibliothèque web.py :
 {: tsResolve}
 
-  1. Ajoutez un fichier `requirements.txt` dans le répertoire racine de votre application Python.
-     Le fichier
-`requirements.txt` spécifie les packages de bibliothèque requis pour votre application Python ainsi que la version des packages. L'exemple
+  1. Ajoutez un fichier `requirements.txt` dans le répertoire racine de votre application Python. Le fichier `requirements.txt` spécifie les packages de bibliothèque requis pour votre application Python ainsi que la version des packages. L'exemple
 ci-après illustre le contenu du fichier `requirements.txt`, où `web.py==0.37` indique que la version de la bibliothèque
 `web.py` qui sera téléchargée est la version 0.37 et `wsgiref==0.1.2` indique que la version de l'interface Web de
 Secure Gateway requise par la bibliothèque web.py est la version 0.1.2.
@@ -159,9 +153,7 @@ Secure Gateway requise par la bibliothèque web.py est la version 0.1.2.
 	 
   2. Ajoutez un fichier `Procfile` dans le répertoire racine de votre application Python.
 	Le fichier `Procfile`
-contient la commande de démarrage de votre application Python. Dans la commande ci-dessous, *nom_de_votre_app* est le nom de votre application
-Python et *PORT* est le numéro de port que votre application Python doit utiliser pour recevoir les demandes des utilisateurs de
-l'application. *$PORT* est facultatif. Si vous ne spécifiez pas PORT dans la commande de démarrage, le numéro de port qui figure dans la
+contient la commande de démarrage de votre application Python. Dans la commande ci-dessous, *nom_de_votre_app* est le nom de votre application Python et *PORT* est le numéro de port que votre application Python doit utiliser pour recevoir les demandes des utilisateurs de l'application. *$PORT* est facultatif. Si vous ne spécifiez pas PORT dans la commande de démarrage, le numéro de port qui figure dans la
 variable d'environnement `VCAP_APP_PORT` dans l'application est utilisé à la place. 
 	```
 	web: python <nom_de_votre_app>.py $PORT

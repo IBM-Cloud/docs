@@ -2,16 +2,15 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-27"
+
 ---
 
-{:shortdesc: .shortdesc} {:codeblock:.codeblock}
+{:shortdesc: .shortdesc} 
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.amashort}} サービスを使用したバックエンド・リソースの保護
 {: #protecting-resources}
-
-最終更新日: 2016 年 8 月 22 日
-{: .last-updated}
 
 
 {{site.data.keyword.amafull}} サービスでは、モバイル対応の OAuth セキュリティーおよびモニタリングにより、{{site.data.keyword.Bluemix_notm}} 上で稼働している、Node.js および Java ベースのバックエンド・アプリケーションを保護することができます。

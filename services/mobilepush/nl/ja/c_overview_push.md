@@ -5,17 +5,22 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # {{site.data.keyword.mobilepushshort}}の概要
 {: #overview-push}
-最終更新日: 2016 年 10 月 17 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} は、iOS や Android のモバイル・デバイス、Google Chrome や Mozilla Firefox の Webブラウザー、さらに Google Chrome アプリケーションおよびエクステンションに通知を送信するために使用できるサービスです。通知は、すべてのアプリケーション・ユーザーをターゲットとすることも、タグを使用して特定のユーザーおよびデバイスの集合をターゲットとすることもできます。デバイス、タグ、およびサブスクリプションを管理できます。
+IBM {{site.data.keyword.mobilepushshort}} は、iOS や Android のモバイル・デバイス、Google Chrome、Mozilla Firefox、および Safari の Web ブラウザー、さらに Google Chrome アプリケーションおよびエクステンションに通知を送信するために使用できるサービスです。通知は、すべてのアプリケーション・ユーザーをターゲットとすることも、タグを使用して特定のユーザーおよびデバイスの集合をターゲットとすることもできます。デバイス、タグ、およびサブスクリプションを管理できます。
 クライアント・アプリケーションをさらに開発するために、SDK (software development kit) および Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用することもできます。 
 
-{{site.data.keyword.mobilepushshort}}は、Bluemix 専用サービスとしても使用可能です。専用サービスの{{site.data.keyword.mobilepushshort}}については、[専用サービス](../../dedicated/index.html)を参照してください。なお、{{site.data.keyword.mobilepushshort}}のモニター・タブには、分析データは表示されません。
+{{site.data.keyword.mobilepushshort}}は、Bluemix 専用サービスとしても使用可能です。専用サービスの{{site.data.keyword.mobilepushshort}}については、[専用サービス](/docs/dedicated/index.html)を参照してください。なお、{{site.data.keyword.mobilepushshort}}のモニター・タブには、分析データは表示されません。
 
-{{site.data.keyword.mobilepushshort}}サービスは、OpenWhisk 対応になりました。詳細については、[OpenWhisk](../../openwhisk/index.html) を参照してください。
+{{site.data.keyword.mobilepushshort}}サービスは、OpenWhisk 対応になりました。詳細については、[OpenWhisk](/docs/openwhisk/index.html) を参照してください。
 
 
 ## {{site.data.keyword.mobilepushshort}}サービスのプロセス
@@ -83,7 +88,7 @@ IBM {{site.data.keyword.mobilepushshort}} は、iOS や Android のモバイル�
 
 ただし、ユーザーをターゲットとするユニキャスト通知では、{{site.data.keyword.mobilepushshort}} 用のクライアント・モバイル・デバイスまたは Web ブラウザー、あるいは Chrome アプリケーションおよびエクステンションの登録時に、ユーザー ID をデバイスと関連付ける必要があります。   
 
-通常、クライアント・アプリケーションは、最初に認証サイクルを実行します。この認証サイクルで、モバイル・アプリケーション・ユーザーは [Mobile Client Access](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html) などの認証サービスと照合して認証されます。認証に成功すると、認証済みユーザー ID がプッシュ・デバイス登録 API に渡されます。REST API を使用するユニキャスト通知を送信する場合は、メッセージ・リソースに投稿する際に deviceId または userId が指定されていることを確認してください。
+通常、クライアント・アプリケーションは、最初に認証サイクルを実行します。この認証サイクルで、モバイル・アプリケーション・ユーザーは [Mobile Client Access](docs/services/mobileaccess/index.html) などの認証サービスと照合して認証されます。認証に成功すると、認証済みユーザー ID がプッシュ・デバイス登録 API に渡されます。REST API を使用するユニキャスト通知を送信する場合は、メッセージ・リソースに投稿する際に deviceId または userId が指定されていることを確認してください。
 
 ###プラットフォーム・ベースの通知
 {: platform-based-notifications}
@@ -106,7 +111,7 @@ IBM {{site.data.keyword.mobilepushshort}} は、iOS や Android のモバイル�
 
 iOS 8 以降では、許容される最大サイズは 2 キロバイトです。Apple プッシュ通知サービスは、この制限を超える通知を送信しません。
 
-###Android、Chrome、および Firefox ブラウザー
+###Android、Firefox ブラウザー、Chrome ブラウザー、および Chrome アプリケーション & エクステンション
 {: android-message-size}
 
-許容される最大メッセージ・サイズは 4 キロバイトまでに制限されます。  
+メッセージ・ペイロードの許容される最大サイズとして、4 キロバイトの制限があります。  

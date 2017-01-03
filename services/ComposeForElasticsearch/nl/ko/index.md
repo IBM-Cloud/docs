@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Compose for Elasticsearch 시작하기
 {: #getting-started-with-compose-for-elasticsearch}
-
-마지막 업데이트 날짜: 2016년 9월 20일
-{: .last-updated}
 
 {{site.data.keyword.composeForElasticsearch_full}}에서는 전체 텍스트 검색 엔진의 기능과 JSON 문서 데이터베이스의 인덱싱 장점을 함께 이용할 수 있습니다. 이들 기능을 함께 사용하면 대용량 데이터의 리치 데이터 분석을 수행할 수 있는 강력한 도구가 됩니다. Elasticsearch를 사용하면 근접한 일치 항목과 사용자가 놓칠 수 있는 잠재적인 위험이 있는지 데이터 세트를 조사할 수 있어 검색의 정확도에 대한 점수를 매길 수 있습니다.
 {:shortdesc}
@@ -46,6 +43,7 @@ copyright:
 `deployment_id`|Compose에서 작성된 서비스의 내부 ID입니다.
 `db_type`|서비스에서 제공하는 데이터베이스의 유형입니다. 이 경우 `elastic_search`입니다.
 `이름`|데이터베이스 배치 이름입니다.
+{: caption="Table 1. {{site.data.keyword.composeForElasticsearch}} credentials" caption-side="top"}
 
 **참고:** 두 `haproxy` 포털에서 Elasticsearch 클러스터에 대한 액세스를 제공합니다. `uri`와 `uri_direct_1` 모두 클러스터에 연결하는 데 사용할 수 있습니다. 애플리케이션에서 `uri`와 `uri_direct_1`을 서로 전환하여 연결 실패에 대한 응답을 관리하십시오. 
 

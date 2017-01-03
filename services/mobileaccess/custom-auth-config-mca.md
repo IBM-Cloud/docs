@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-12-19"
 
 ---
 
@@ -30,5 +30,5 @@ Use the {{site.data.keyword.amafull}} dashboard to configure custom authenticati
 ## Next steps
 {: #next-steps}
 * [Configuring custom authentication for Android](custom-auth-android.html)
-* [Configuring custom authentication for iOS](custom-auth-ios.html)
+* [Configuring custom authentication for iOS](custom-auth-ios-swift-sdk.html)
 * [Configuring custom authentication for Cordova](custom-auth-cordova.html)

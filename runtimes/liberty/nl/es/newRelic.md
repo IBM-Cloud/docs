@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Utilización de New Relic
 {: #new_relic}
-
-Última actualización: 10 de junio de 2016
-{: .last-updated}
 
 New Relic es un servicio de otro proveedor que proporciona métricas de supervisión de la aplicación. Para obtener más información sobre lo que ofrece el servicio New Relic, consulte [New
 Relic](http://newrelic.com/java).
@@ -99,7 +97,7 @@ New Relic existente a la aplicación mediante un "servicio proporcionado por el 
 
 La configuración automática del servicio New Relic es distinta de la configuración automática de otros servicios, ya que es un servicio gestionado por contenedor que está disponible a través de la infraestructura del paquete de compilación.  Puesto que está disponible a través de la infraestructura, la configuración automática de este servicio difiere de la de otros servicios en tres puntos:
 * La exclusión no se ofrece como opción.
-* La integración del servicio se basa en el agente New Relic, un agente Java. Por lo tanto, se configura mediante opciones de Java, no mediante variables de nube en el archivo server.xml.
+* La integración del servicio se basa en el agente New Relic, un agente Java. Por lo tanto, se configura mediante opciones de Java, no mediante variables de nube en el archivo server.xml. 
 * La configuración se basa tanto en VCAP_SERVICES como en VCAP_APPLICATION.
 
 # rellinks

@@ -5,19 +5,21 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Informationen zu {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Letzte Aktualisierung: 17. Oktober 2016
+Letzte Aktualisierung: 06. Dezember 2016
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} ist ein Service, mit dem Sie Benachrichtigungen an mobile iOS- und Android-Geräte, an Google Chrome- und Mozilla Firefox-Web-Browser und auch an Google Chrome-Apps und -Erweiterungen senden können. Benachrichtigungen können zielgruppenspezifisch an alle Anwendungsbenutzer und an bestimmte
-Benutzergruppen und Geräte mithilfe von Tags gesendet werden. Sie können Geräte, Tags und Subskriptionen verwalten. Sie können
-auch ein SDK (Software Development Kit) und REST-APIs (Representational State Transfer Application Program Interfaces) verwenden, um Ihre Clientanwendungen weiter
-zu entwickeln. 
+IBM {{site.data.keyword.mobilepushshort}} ist ein Service, mit dem Sie Benachrichtigungen an mobile iOS- und Android-Geräte, an Google Chrome-, Mozilla Firefox- und Safari-Web-Browser und auch an Google Chrome-Apps und Erweiterungen senden können. Benachrichtigungen können zielgruppenspezifisch an alle Anwendungsbenutzer und an bestimmte Benutzergruppen und Geräte mithilfe von Tags gesendet werden. Sie können Geräte, Tags und Subskriptionen verwalten. Sie können auch ein SDK (Software Development Kit) und REST-APIs (Representational State Transfer Application Program Interfaces) verwenden, um Ihre Clientanwendungen weiter zu entwickeln. 
 
-{{site.data.keyword.mobilepushshort}} ist auch als Bluemix Dedicated-Service verfügbar. Informationen zu {{site.data.keyword.mobilepushshort}} als dediziertem Service finden Sie im Abschnitt [Dedizierte Services](../../dedicated/index.html). Beachten Sie, dass auf der Registerkarte zur Überwachung von Push-Benachrichtigungen keine Analysedaten angezeigt werden.
+{{site.data.keyword.mobilepushshort}} ist auch als Bluemix Dedicated-Service verfügbar. Informationen zu {{site.data.keyword.mobilepushshort}} als dediziertem Service finden Sie im Abschnitt [Dedizierte Services](/docs/dedicated/index.html). Beachten Sie, dass auf der Registerkarte zur Überwachung von Push-Benachrichtigungen keine Analysedaten angezeigt werden.
 
-Der {{site.data.keyword.mobilepushshort}}-Service ist nun OpenWhisk-fähig. Weitere Informationen finden Sie unter [OpenWhisk](../../openwhisk/index.html).
+Der {{site.data.keyword.mobilepushshort}}-Service ist nun OpenWhisk-fähig. Weitere Informationen finden Sie unter [OpenWhisk](/docs/openwhisk/index.html).
 
 
 ## Prozess für den {{site.data.keyword.mobilepushshort}}-Service
@@ -56,13 +58,14 @@ Plattformspezifische Cloud-Services für Push-Benachrichtigungen wie FCM/GCM ode
 ###Sicherheit von Push-Benachrichtigungen
 {: push-security}
 
-Die APIs für Push-Nachrichten sind durch zwei geheime Schlüssel geschützt: i) 'appSecret' und ii) 'clientSecret'. Der geheime Schlüssel 'appSecret' schützt APIs, die normalerweise von Back-End-Anwendungen wie der API zum Senden von {{site.data.keyword.mobilepushshort}} oder der API zum Konfigurieren von Einstellungen aufgerufen werden.   Der geheime Schlüssel 'clientSecret' schützt APIs, die normalerweise von mobilen Clientanwendungen aufgerufen werden. Es gibt im Zusammenhang mit der Registrierung von Geräten nur eine API mit zugeordneter Benutzer-ID, die diesen geheimen Clientschlüssel erfordert. Keine der anderen APIs, die von mobilen Clients aufgerufen werden, erfordert den geheimen Clientschlüssel. Die geheimen Schlüssel 'appSecret' und 'clientSecret' werden jeder Serviceinstanz beim Binden einer Anwendung mit dem {{site.data.keyword.mobilepushshort}}-Service zugeordnet. Weitere Informationen dazu, auf welche Weise und für welche APIs die geheimen Schlüssel übergeben werden sollen, finden Sie in der REST-API-Dokumentation. 
+Die APIs für Push-Nachrichten sind durch zwei geheime Schlüssel geschützt: i) 'appSecret' und ii) 'clientSecret'. Der geheime Schlüssel 'appSecret' schützt APIs, die normalerweise von Back-End-Anwendungen wie der API zum Senden von {{site.data.keyword.mobilepushshort}} oder der API zum Konfigurieren von Einstellungen aufgerufen werden.   Der geheime Schlüssel 'clientSecret' schützt APIs, die normalerweise von mobilen Clientanwendungen aufgerufen werden. Es gibt im Zusammenhang mit der Registrierung von Geräten nur eine API mit zugeordneter Benutzer-ID, die diesen geheimen Clientschlüssel erfordert. Keine der anderen APIs, die von mobilen Clients aufgerufen werden, erfordert den geheimen Clientschlüssel. Die geheimen Schlüssel 'appSecret' und 'clientSecret' werden jeder Serviceinstanz beim Binden einer Anwendung mit dem {{site.data.keyword.mobilepushshort}}-Service zugeordnet. Weitere Informationen dazu, auf welche Weise und für welche APIs die geheimen Schlüssel übergeben werden sollen, finden Sie in der REST-API-Dokumentation.
 
-Hinweis: Frühere Anwendungen mussten den geheimen Clientschlüssel nur bei der Registrierung oder Aktualisierung von Geräten mit Feld für die Benutzer-ID übergeben. Alle anderen APIs, die von mobilen oder Browserclients aufgerufen wurden, benötigten den geheimen Clientschlüssel nicht. Diese früheren Anwendungen können den geheimen Clientschlüssel auch weiterhin optional für Geräteregistrierungen oder Aktualisierungsaufrufe verwenden. Es wird jedoch dringend empfohlen, dass die Prüfung des geheimen Clientschlüssels für alle Aufrufe der Client-API zwingend durchgeführt wird. Um dies in vorhandenen Anwendungen durchzusetzen, wurde eine neue API mit dem Namen 'verifyClientSecret' veröffentlicht. Für neue Anwendungen wird die Überprüfung des geheimen Clientschlüssels bei allen Aufrufen der Client-API erzwungen. Dieses Verhalten kann auch durch die API 'verifyClientSecret' nicht verändert werden.
+Hinweis: Frühere Anwendungen mussten den geheimen Clientschlüssel nur bei der Registrierung oder Aktualisierung von Geräten mit Feld für die Benutzer-ID übergeben. Alle anderen APIs, die von mobilen oder Browserclients aufgerufen wurden, benötigten den geheimen Clientschlüssel nicht. Diese früheren Anwendungen können den geheimen Clientschlüssel auch weiterhin optional für Geräteregistrierungen oder Aktualisierungsaufrufe verwenden. Es wird jedoch dringend empfohlen, dass die Prüfung des geheimen Clientschlüssels für alle Aufrufe der Client-API zwingend durchgeführt wird. Um dies in vorhandenen Anwendungen durchzusetzen, wurde eine neue API mit dem Namen 'verifyClientSecret' veröffentlicht.  Für neue Anwendungen wird die Überprüfung des geheimen Clientschlüssels bei allen Aufrufen der Client-API erzwungen. Dieses Verhalten kann auch durch die API 'verifyClientSecret' nicht verändert werden.
 
 Standardmäßig wird die Verifizierung des geheimen Clientschlüssels nur bei neuen Apps erzwungen. Sowohl vorhandene als auch neue Apps können die Verifizierung des geheimen Clientschlüssels mithilfe der REST-API 'verifyClientSecret' aktivieren oder inaktivieren. Es wird empfohlen, die Verifizierung des geheimen Clientschlüssels zu erzwingen, um zu verhindern, dass Benutzer mit Kenntnis der Anwendungs-ID und der Geräte-ID Zugang zu Geräten erhalten.
 
-Stellen Sie sicher, dass der geheime Clientschlüsel vertraulich behandelt wird und zu keinem Zeitpunkt in der mobilen App fest codiert ist. Es gibt verschiedene Muster für die Anwendungsinitialisierung, mit denen der geheime Clientschlüssel zur Anwendungslaufzeit dynamisch extrahiert werden kann. Das Ablaufdiagramm stellt solche möglichen Muster dar. ![Push-Aktivierung](images/init_client_secret.jpg) 
+Stellen Sie sicher, dass der geheime Clientschlüsel vertraulich behandelt wird und zu keinem Zeitpunkt in der mobilen App fest codiert ist. Es gibt verschiedene Muster für die Anwendungsinitialisierung, mit denen der geheime Clientschlüssel zur Anwendungslaufzeit dynamisch extrahiert werden kann. Das Ablaufdiagramm stellt solche möglichen Muster dar.
+![Push-Aktivierung](images/init_client_secret.jpg) 
 
 ## Typen von Push-Benachrichtigungen
 {: #overview-push-types}
@@ -84,7 +87,7 @@ Unicast-Benachrichtigungen sind Nachrichten, die ein bestimmtes Gerät oder eine
 
 Unicast-Benachrichtigungen an spezifische Benutzer erfordern zum Zeitpunkt der Registrierung des mobilen Clientgeräts oder Web-Browsers oder von Chrome-Apps und Erweiterungen bei {{site.data.keyword.mobilepushshort}} die Zuordnung einer Benutzer-ID zum Gerät.   
 
-Normalerweise führt eine Clientanwendung zuerst einen Authentifizierungszyklus aus, bei dem der Benutzer der mobilen App bei einem Authentifizierungsservice wie [Mobile Client Access](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html) authentifiziert wird. Nach der erfolgreichen Authentifizierung wird die ID des authentifizierten Benutzers dann an die API für Push-Geräteregistrierungen übergeben. 
+Normalerweise führt eine Clientanwendung zuerst einen Authentifizierungszyklus aus, bei dem der Benutzer der mobilen App bei einem Authentifizierungsservice wie [Mobile Client Access](docs/services/mobileaccess/index.html) authentifiziert wird. Nach der erfolgreichen Authentifizierung wird die ID des authentifizierten Benutzers dann an die API für Push-Geräteregistrierungen übergeben. 
 Zum Senden einer Unicast-Benachrichtigung über die REST-API müssen Sie sicherstellen, dass während der Übergabe an die Ressource der Nachricht die Geräte- oder Benutzer-IDs ('deviceId' bzw. 'userId') angegeben werden.
 
 ###Plattformbasierte Benachrichtigungen
@@ -107,7 +110,7 @@ Die Größe der {{site.data.keyword.mobilepushshort}}-Nachrichtennutzdaten häng
 
 Ab iOS 8 beträgt die zulässige maximale Größe 2 Kilobyte. Der Push Notification-Service für Apple sendet keine Benachrichtigungen, die dieses Limit überschreiten.
 
-###Android, Chrome- und Firefox-Browsers
+###Android, Firefox-Browser, Chrome-Browser und Chrome Apps & Extensions
 {: android-message-size}
 
-Es gibt eine Einschränkung auf 4 Kilobytes als maximal zulässige Nachrichtengröße.  
+Es gibt eine Einschränkung von 4 Kilobyte als maximal zulässige Nachrichtennutzdatengröße.  

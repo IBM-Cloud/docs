@@ -13,7 +13,7 @@ copyright:
 # Gestión de traducciones
 {: #globalizationpipeline_managingtranslations}
 
-*Última actualización: 6 de julio de 2016*
+*Última actualización: 14 de octubre de 2016*
 {: .last-updated}
 
 Una vez que haya creado paquetes y que haya comenzado a generar traducciones para la aplicación, el contenido generado automáticamente se puede utilizar tal cual o se puede modificar. También puede elegir si desea utilizar una traducción automática que no sea la predeterminada. En esta sección se describe cómo cambiar el motor de traducción automática que realiza las traducciones para los paquetes, cómo realizar la edición humana posterior a la traducción y también cómo puede asignar roles de usuario y restricciones de acceso a las personas que necesitarán acceder a sus traducciones.
@@ -22,15 +22,15 @@ Una vez que haya creado paquetes y que haya comenzado a generar traducciones par
 ## Configuración de la traducción automática
 {: #globalizationpipeline_service_to_service}
 
-{{site.data.keyword.GlobalizationPipeline_full}} da soporte a la posibilidad de integrar servicios de traducción automática alternativos para realizar la traducción automática de los paquetes. La adición de un servicio alternativo puede resultar beneficioso si el motor predeterminado utilizado por {{site.data.keyword.GlobalizationPipeline_full}} no ofrece un idioma específico que necesite o si prefiere las traducciones automáticas generadas por otro motor. El uso y los cargos para servicios alternativos están cubiertos bajo los términos de dichos servicios.
+{{site.data.keyword.GlobalizationPipeline_full}} da soporte a la posibilidad de integrar servicios de traducción automática alternativos para realizar la traducción automática de los paquetes. La adición de un servicio alternativo puede resultar beneficioso si el motor predeterminado utilizado por {{site.data.keyword.GlobalizationPipeline_short}} no ofrece un idioma específico que necesite o si prefiere las traducciones automáticas generadas por otro motor. El uso y los cargos para servicios alternativos están cubiertos bajo los términos de dichos servicios.
 
-Para añadir y configurar un servicio de traducción automática alternativo para {{site.data.keyword.GlobalizationPipeline_full}}, seleccione el separador **Configuración de traducción automática** desde el panel de control {{site.data.keyword.GlobalizationPipeline_full}}.
+Para añadir y configurar un servicio de traducción automática alternativo para {{site.data.keyword.GlobalizationPipeline_short}}, seleccione el separador **Configuración de traducción automática** desde el panel de control {{site.data.keyword.GlobalizationPipeline_short}}.
 
-* Para añadir un servicio de traducción automática que se encuentre en el catálogo de {{site.data.keyword.Bluemix_notm}}, (**Watson Language Translation**), el servicio debe añadirse en primer lugar al espacio de {{site.data.keyword.Bluemix_notm}}.
+* Para añadir un servicio de traducción automática que se encuentre en el catálogo de {{site.data.keyword.Bluemix_notm}}, (**Watson Language Translator**), el servicio debe añadirse en primer lugar al espacio de {{site.data.keyword.Bluemix_notm}}.
 
 * Para añadir un servicio de terceros, seleccione el botón para dicho servicio en el separador **Configuración de traducción automática** y proporcione las credenciales de usuario necesarias para acceder al servicio.
 
-Una vez que se haya añadido un servicio de traducción automática a {{site.data.keyword.GlobalizationPipeline_full}}, complete el resto de los pasos para completar la integración de dicho servicio.
+Una vez que se haya añadido un servicio de traducción automática a {{site.data.keyword.GlobalizationPipeline_short}}, complete el resto de los pasos para completar la integración de dicho servicio.
 
 1. Pulse **Habilitar** para activar la integración con dicho servicio.
 
@@ -40,7 +40,7 @@ Una vez que se haya añadido un servicio de traducción automática a {{site.dat
 
 4. Pulse **Guardar** para volver al separador **Configuración de traducción automática**.
 
-Una vez que se haya configurado un servicio alternativo con {{site.data.keyword.GlobalizationPipeline_full}}, todos los idiomas de destino que se hayan asignado a dicho motor comenzarán a generarse utilizando dicho motor. 
+Una vez que se haya configurado un servicio alternativo con {{site.data.keyword.GlobalizationPipeline_short}}, todos los idiomas de destino que se hayan asignado a dicho motor comenzarán a generarse utilizando dicho motor. 
 
 Para dejar de utilizar un motor de traducción automática alternativo:
 
@@ -53,7 +53,7 @@ Una vez que esté inhabilitado un servicio de traducción automática alternativ
 ## Visualización y edición de traducciones
 {: #globalizationpipeline_translations}
 
-El servicio de {{site.data.keyword.GlobalizationPipeline_full}} proporciona posibilidades de edición humana posterior a la traducción. Un traductor profesional o alguien con conocimientos en cualquiera de los idiomas de destino puede realizar ediciones a las traducciones generadas. Puede editar para mejorar la calidad o la coherencia de la traducción o para sustituir el texto preferido. Por ejemplo, es posible que desee sobrescribir la traducción de un nombre de producto.
+El servicio de {{site.data.keyword.GlobalizationPipeline_short}} proporciona posibilidades de edición humana posterior a la traducción. Un traductor profesional o alguien con conocimientos en cualquiera de los idiomas de destino puede realizar ediciones a las traducciones generadas. Puede editar para mejorar la calidad o la coherencia de la traducción o para sustituir el texto preferido. Por ejemplo, es posible que desee sobrescribir la traducción de un nombre de producto.
 
 Para ver y editar las traducciones para un idioma de destino:
 
@@ -67,7 +67,7 @@ Para ver y editar las traducciones para un idioma de destino:
 
 ![La ventana de diálogo Modificar traducción proporciona una manera sencilla de editar traducciones.](images/editTranslation.png) 
 
-***Consejo:*** Cuando trabaje con paquetes grandes que incluyan muchas claves traducibles, encontrar un valor determinado puede ser complicado. En la página de traducción de idioma de destino, puede buscar rápidamente en todas las claves, el origen y las traducciones utilizando el cuadro **Buscar...**.
+***Consejo:*** Cuando trabaje con paquetes grandes que incluyan muchas claves traducibles, encontrar un valor determinado puede ser complicado. En la página de traducción de idioma de destino, puede buscar rápidamente en todas las claves, el origen y las traducciones utilizando el recuadro **Buscar...**.
 
 ![Utilice el recuadro de búsqueda que se proporciona en la página de traducción de idioma de destino para buscar las claves, el origen, las traducciones, o los tres dentro de un idioma de destino.](images/search.png) 
 
@@ -85,9 +85,9 @@ A medida que gestione las traducciones, es posible que desee otorgar acceso a us
 
 Si crea más usuarios de API, puede restringir su acceso para uno o varios paquetes específicos, u otorgarles acceso a todos los paquetes disponibles.
 
-Para otorgar a un usuario de API acceso a paquetes en una instancia de servicio de {{site.data.keyword.GlobalizationPipeline_full}}:
+Para otorgar a un usuario de API acceso a paquetes en una instancia de servicio de {{site.data.keyword.GlobalizationPipeline_short}}:
 
-1. En el panel de control de {{site.data.keyword.GlobalizationPipeline_full}}, pulse el separador **Usuarios de API**.
+1. En el panel de control de {{site.data.keyword.GlobalizationPipeline_short}}, pulse el separador **Usuarios de API**.
 2. Pulse **Nuevo usuario de API**.
 3. Escriba un **nombre de visualización** y un **comentario** para describir el nuevo usuario de API.
 4. Elija un **tipo** para el nuevo usuario de API.
@@ -100,6 +100,6 @@ Se generarán y se visualizarán un ID de usuario y una contraseña de API. Copi
 
 Para restablecer la contraseña del usuario de la API:
 
-1. En el panel de control de {{site.data.keyword.GlobalizationPipeline_full}}, pulse el separador **Usuarios de API**.
+1. En el panel de control de {{site.data.keyword.GlobalizationPipeline_short}}, pulse el separador **Usuarios de API**.
 2. Pulse el icono **Restablecer contraseña** ![Seleccione este icono para restablecer la contraseña de usuarios de API](images/resetPW.png) para restablecer la contraseña para un ID de usuario específico. 
 3. Pulse **Sí**. 

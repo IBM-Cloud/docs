@@ -6,10 +6,12 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 #啟用進階推送通知
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
 配置 iOS 徽章、音效、其他 JSON 有效負載、可採取動作的通知，以及保存通知。
@@ -92,7 +94,7 @@ protected void onPause() {
 	     /* Optional properties
 	     acceptAction.destructive = NO;
 	  acceptAction.authenticationRequired = NO; */
-	  ```
+```
 	{: codeblock}
 
    Swift
@@ -105,7 +107,7 @@ protected void onPause() {
 	acceptAction.destructive = false
 	acceptAction.authenticationRequired = false
 	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
-	```
+```
 	{: codeblock}
 	
 ```
@@ -116,7 +118,7 @@ protected void onPause() {
 	declineAction.destructive = true
 	declineAction.authenticationRequired = false
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
-	```
+```
 	{: codeblock}
 
 2. 建立通知種類並設定動作。**UIUserNotificationActionContextDefault** 或 **UIUserNotificationActionContextMinimal** 是有效的環境定義。
@@ -128,7 +130,7 @@ Objective-C
 	UIMutableUserNotificationCategory *callCat = [[UIMutableUserNotificationCategory alloc] init];
 	    callCat.identifier = @"POLL_CATEGORY";
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
-	```    
+```    
 	{: codeblock}
 
 Swift
@@ -138,7 +140,7 @@ Swift
 	let pushCategory = UIMutableUserNotificationCategory()
 	pushCategory.identifier = "TODO_CATEGORY"
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
-	```
+```
 	{: codeblock}
 
 1. 建立通知設定，並指派先前步驟的種類。
@@ -148,7 +150,7 @@ Objective-C
 ```
 	// For Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
-	```
+```
 	{: codeblock}
 
 Swift
@@ -156,7 +158,7 @@ Swift
 ```
 	// For Swift
 	let categories = NSSet(array:[pushCategory]);
-	```
+```
 	{: codeblock}
 
 1. 建立本端或遠端通知，並為其指派種類身分。
@@ -176,8 +178,8 @@ Swift
 	//For Swift
 	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
     UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-    UIApplication.sharedApplication().registerForRemoteNotifications() 
-	```
+    UIApplication.sharedApplication().registerForRemoteNotifications()
+```
 	{: codeblock}
 	
 ## 處理可採取動作的 iOS 通知  
@@ -185,7 +187,7 @@ Swift
 
 接收到可採取動作的通知時，會根據選擇的 ID，將控制權傳遞給下列方法。
 
-###Objective-C
+Objective-C
 
 ```
 (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
@@ -198,7 +200,7 @@ Swift
 ```
 	{: codeblock}
 
-###Swift
+Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
