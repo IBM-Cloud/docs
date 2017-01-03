@@ -2,10 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-11-28"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.mobileanalytics_short}} について  
 {: aboutmobileanalytics}
@@ -33,9 +36,9 @@ lastupdated: "2016-09-27"
 		<dd>リアルタイムでパフォーマンスおよび使用量のメトリックがわかります。</dd>
 	<dt>短時間で実装します</dt>
 		<dd>{{site.data.keyword.Bluemix}} でサービス・インスタンスを作成し、SDK をプロジェクトに追加し、2 行のコードをアプリケーションに貼り付ければ、数多くの定義済みメトリックを収集する準備が整います。</dd>
-	<!--<dt>Collect any data you want</dt>-->
-		<!--<dd>Instrument apps with custom events, discover how users are interacting with your app, track purchases, and monitor app activity.  
-</dd>-->
+	<dt>目的の任意のデータを収集します</dt>
+		<dd>アプリにカスタム・イベントを装備し、ユーザーがアプリとどのように対話しているかを発見し、購入を追跡し、アプリのアクティビティーをモニターします。  
+</dd>
 <dt>すべてのアプリケーションのメトリックが一覧できます。</dt>
 	<dd>{{site.data.keyword.mobileanalytics_short}} コンソールには、<!-- both -->すぐに使用できるグラフ<!--and custom-->が用意されているため、クエリーを作成する必要はありません。</dd>
 <dt>重要なものにフォーカスします</dt>
@@ -57,25 +60,22 @@ lastupdated: "2016-09-27"
 * ユーザーはどのくらいの頻度でアプリケーションを使用しているのか? 
 * ユーザーはどんな時刻にアプリケーションを使用しているのか?  
 * ユーザーに好まれているデバイス・モデルは何か? 
-* レガシー・オペレーション・システムのサポートをいつ廃止すべきか? 
+* レガシー・オペレーティング・システムのサポートをいつ廃止すべきか? 
 * パフォーマンスの問題が発生しているアプリケーションはどれか?  
 
-<!--By adding your own **custom events** you can answer questions like:--> 
+独自の**カスタム・イベント**を追加することにより、以下のような疑問に答えることができます。 
 
-<!--* What features are used most and least?-->  
-<!--* Where are users entering and leaving my app?-->  
-<!--* What activities are users viewing most? --> 
-<!--* Are users completing workflows in the app (for example, conversion funnels)? -->  
+* 最も使用されているフィーチャーと最も使用されていないフィーチャーは何か?  
+* ユーザーはアプリのどこから入ってどこで終わらせているか?  
+* ユーザーが最もよく表示するアクティビティーは何か?  
+* ユーザーはアプリのワークフロー (例えば変換ファネル) を終了しているか?   
 
-<!--Client-side logs and usage data are gathered automatically and sent to the Mobile Analytics -->
-<!-- service on demand. Developers and -->
-<!-- administrators can use the {{site.data.keyword.mobileanalytics_short}} service dashboard to view data that -->
-<!-- is gathered by the client SDK. -->
+クライアント・サイドのログと使用データは自動的に収集され、要求に応じて Mobile Analytics サービスに送信されます。開発者と管理者は、{{site.data.keyword.mobileanalytics_short}} サービス・ダッシュボードを使用して、クライアント SDK によって収集されたデータを見ることができます。
 
-<!--## Data visualization
+## データ可視化
 {: data-visualization}
 
-All data that is collected by the analytics service can be visualized through the {{site.data.keyword.mobileanalytics_short}} dashboard which is accessible from your {{site.data.keyword.Bluemix_notm}} dashboard by clicking your IBM {{site.data.keyword.mobileanalytics_short}} service tile instance. You can also create custom charts, based on data that is collected by the analytics service in the dashboard. In addition to an at-a-glance view of your mobile analytics, the analytics feature includes the capability to perform a raw search against client logs, captured client crash data, and any extra data that you explicitly provide through client API function calls that feed into the {{site.data.keyword.mobileanalytics_short}} service. -->
+分析サービスによって収集されたすべてのデータを、{{site.data.keyword.mobileanalytics_short}} ダッシュボードで視覚化できます。このダッシュボードは、{{site.data.keyword.Bluemix_notm}} ダッシュボードで IBM {{site.data.keyword.mobileanalytics_short}} サービス・タイル・インスタンスをクリックすることによってアクセスできます。<!--You can also create custom charts, based on data that is collected by the analytics service in the dashboard.--> モバイル分析の概要ビューに加えて、クライアント・ログや取り込まれたクライアント異常終了データに対してロー検索を行う機能も、分析フィーチャーに組み込まれています。さらに、{{site.data.keyword.mobileanalytics_short}} サービスに送り込まれるクライアント API ファンクション・コールで明示的に提供される追加データに対するロー検索機能も含まれます。 
 
 ## {{site.data.keyword.mobileanalytics_short}} に関するよくある質問 
 {: #faq}

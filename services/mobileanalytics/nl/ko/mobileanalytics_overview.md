@@ -2,10 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-11-28"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.mobileanalytics_short}} 정보  
 {: aboutmobileanalytics}
@@ -33,9 +36,9 @@ lastupdated: "2016-09-27"
 		<dd>실시간으로 성능 및 사용 메트릭 보기</dd>
 	<dt>신속한 구현</dt>
 		<dd>{{site.data.keyword.Bluemix}}에서 서비스 인스턴스를 작성하고 프로젝트에 SDK를 추가하며 두 개의 코드 행을 애플리케이션에 붙여넣으면 다수의 사전 정의된 메트릭을 수집할 준비가 된 것입니다.</dd>
-	<!--<dt>Collect any data you want</dt>-->
-		<!--<dd>Instrument apps with custom events, discover how users are interacting with your app, track purchases, and monitor app activity.  
-</dd>-->
+	<dt>원하는 데이터 수집</dt>
+		<dd>사용자 정의 이벤트로 앱을 구성하고 앱과 상호 작용하는 방법을 검색하고 구매를 추적하고 앱 활동을 모니터하십시오.  
+</dd>
 <dt>한 눈에 모든 애플리케이션에 대한 메트릭 보기</dt>
 	<dd>{{site.data.keyword.mobileanalytics_short}} 콘솔은 조회를 작성할 필요 없이 <!-- both -->이미 만들어진 차트<!--and custom-->를 제공합니다.</dd>
 <dt>중요한 사항에 집중</dt>
@@ -60,22 +63,19 @@ lastupdated: "2016-09-27"
 * 레거시 운영 체제에 대한 지원을 중지해야 하는 시기는 언제입니까? 
 * 어느 애플리케이션에 성능 문제가 있습니까?  
 
-<!--By adding your own **custom events** you can answer questions like:--> 
+자체 **사용자 정의 이벤트**를 추가함으로써 다음과 같은 질문에 응답할 수 있습니다.  
 
-<!--* What features are used most and least?-->  
-<!--* Where are users entering and leaving my app?-->  
-<!--* What activities are users viewing most? --> 
-<!--* Are users completing workflows in the app (for example, conversion funnels)? -->  
+* 가장 많이 사용되는 기능과 가장 적게 사용되는 기능은 무엇입니까?   
+* 사용자가 맵에 들어가고 맵을 나가는 위치는 어디입니까?  
+* 사용자가 가장 많이 보는 활동은 무엇입니까?  
+* 사용자가 앱에서 워크플로우를 완료합니까(예: 변환 퍼널)?   
 
-<!--Client-side logs and usage data are gathered automatically and sent to the Mobile Analytics -->
-<!-- service on demand. Developers and -->
-<!-- administrators can use the {{site.data.keyword.mobileanalytics_short}} service dashboard to view data that -->
-<!-- is gathered by the client SDK. -->
+클라이언트 측 로그 및 사용법 데이터는 자동으로 수집되며 Mobile Analytics 서비스에 On-Demand로 전송됩니다. 개발자 및 관리자는 클라이언트 SDK에 의해 수집된 데이터를 보기 위해 {{site.data.keyword.mobileanalytics_short}} 서비스 대시보드를 사용할 수 있습니다.
 
-<!--## Data visualization
+## 데이터 시각화
 {: data-visualization}
 
-All data that is collected by the analytics service can be visualized through the {{site.data.keyword.mobileanalytics_short}} dashboard which is accessible from your {{site.data.keyword.Bluemix_notm}} dashboard by clicking your IBM {{site.data.keyword.mobileanalytics_short}} service tile instance. You can also create custom charts, based on data that is collected by the analytics service in the dashboard. In addition to an at-a-glance view of your mobile analytics, the analytics feature includes the capability to perform a raw search against client logs, captured client crash data, and any extra data that you explicitly provide through client API function calls that feed into the {{site.data.keyword.mobileanalytics_short}} service. -->
+분석 서비스에 의해 수집된 모든 데이터는 IBM {{site.data.keyword.mobileanalytics_short}} 서비스 타일 인스턴스를 클릭하여 {{site.data.keyword.Bluemix_notm}} 대시보드로부터 액세스 가능한 {{site.data.keyword.mobileanalytics_short}} 대시보드를 통해 시각화될 수 있습니다. <!--You can also create custom charts, based on data that is collected by the analytics service in the dashboard.--> 모바일 분석 둘러보기 외에도 분석 기능에는 클라이언트 로그, 캡처된 클라이언트 충돌 데이터 및 {{site.data.keyword.mobileanalytics_short}} 서비스에 피드하는 클라이언트 API 기능 호출을 통해 명시적으로 제공하는 추가 데이터에 대한 원시 검색을 수행하는 기능이 포함됩니다. 
 
 ## {{site.data.keyword.mobileanalytics_short}} 자주 묻는 질문 
 {: #faq}
@@ -116,8 +116,8 @@ All data that is collected by the analytics service can be visualized through t
 	<dt>데이터를 {{site.data.keyword.mobileanalytics_short}} 콘솔에 표시하는 데 얼마나 시간이 걸립니까?</dt>
 		<dd>{{site.data.keyword.mobileanalytics_short}} 콘솔의 데이터는 거의 실시간이며 이는 데이터가 실제 이벤트 발생 후 몇 초 내에 표시됨을 의미합니다.  </dd>
 	<dt>MobileFirst Platform Foundation에서 발견된 Mobile Analytics와 {{site.data.keyword.mobileanalytics_full}} 사이의 차이점은 무엇입니까?</dt>
-		<dd>두 콘솔에서 사용자 및 세션은 매우 유사하지만 MobileFirst Platform Foundation에서 제공하는 분석은 클라이언트가 사내 구축형 자체 분석 클러스터를 관리할 수 있는 추가 메트릭 및 설정을 포함합니다. 또한 MobileFirst Platform Foundation 분석 콘솔에서는 어댑터와 어댑터 프로시저에 대한 메트릭을 세분화할 수 있는 반면, {{site.data.keyword.mobileanalytics_short}} 서비스에서는 이러한 메트릭이 네트워크 요청 차트와 테이블로 통합됩니다. </dd>
-	<dt>사내 구축형 MobileFirst Platform Foundation을 앱 개발에 사용 중이지만 자체 분석 클러스터를 호스트할 의향이 없습니다. 대신 {{site.data.keyword.mobileanalytics_full}}를 사용해도 됩니까?</dt>
+		<dd>두 콘솔에서 사용자 및 세션은 매우 유사하지만 MobileFirst Platform Foundation에서 제공하는 분석은 클라이언트가 자체 분석 클러스터 온프레미스를 관리할 수 있는 추가 메트릭 및 설정을 포함합니다. 또한 MobileFirst Platform Foundation 분석 콘솔에서는 어댑터와 어댑터 프로시저에 대한 메트릭을 세분화할 수 있는 반면, {{site.data.keyword.mobileanalytics_short}} 서비스에서는 이러한 메트릭이 네트워크 요청 차트와 테이블로 통합됩니다. </dd>
+	<dt>MobileFirst Platform Foundation 온프레미스를 앱 개발에 사용 중이지만 자체 분석 클러스터를 호스트할 의향이 없습니다. 대신 {{site.data.keyword.mobileanalytics_full}}를 사용해도 됩니까?</dt>
 		<dd>예. 다음과 같은 몇 개의 옵션이 있습니다. MobileFirst Platform Foundation 7.x 또는 8.0을 사용하고 앱이 MobileFirst Platform SDK로 인스트루먼트된 경우에는 {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}}에 분석 데이터를 보고하도록 MobileFirst 서버를 구성할 수 있습니다. [Mobile Analytics 및 Mobile Foundation Bluemix 서비스 구성](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/) 블로그 포스트에서 세부사항을 읽으십시오. 또는, {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobileanalytics_short}} SDK를 사용하여 앱을 인스트루먼트하고 보고서를 {{site.data.keyword.mobileanalytics_short}} 서비스에 직접 보고할 수 있습니다. </dd>
 	<!-- <dt>My instance of  {{site.data.keyword.mobileanalytics_short}} does not look like the screen shots in the catalog. What's going on?</dt> -->
 		<!-- <dd>Most likely you are using the Classic view interface for {{site.data.keyword.Bluemix_notm}}. Classic view is deprecated, so {{site.data.keyword.mobileanalytics_short}} runs best in the new {{site.data.keyword.Bluemix_notm}} interface. If you are in Classic view, you will see a link in the {{site.data.keyword.Bluemix_notm}} header that says <strong>Try the new {{site.data.keyword.Bluemix_notm}}</strong>. Click that link to use the new interface.</dd> -->

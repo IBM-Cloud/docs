@@ -2,9 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-10"
+lastupdated: "2016-11-29"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # 檢測應用程式以使用 {{site.data.keyword.mobileanalytics_short}} Client SDK
 {: #mobileanalytics_sdk}
@@ -18,7 +22,7 @@ lastupdated: "2016-11-10"
 
 2. 應用程式日誌訊息 - 此種類可讓開發人員在應用程式內新增程式碼行，以記載自訂訊息來協助開發和除錯。開發人員會將嚴重性/詳細層次指派給每一個日誌訊息，而且後續可以依指派的層次過濾訊息，或透過配置應用程式忽略低於給定記載層次的訊息來保留儲存空間。若要收集應用程式日誌資料，您必須在應用程式內起始設定 {{site.data.keyword.mobileanalytics_short}} SDK，以及為每一個日誌訊息新增一行程式碼。
 
-<!--2. Custom events - This category includes data that you define yourself and that is specific to your app. This data represents events that occur within your app, such as page views, button taps, or in-app purchases. In addition to initializing the {{site.data.keyword.mobileanalytics_short}} SDK in your app, you must add a line of code for each custom event that you want to track. -->
+3. 自訂事件 - 此種類包括您自行定義及應用程式特有的資料。這個資料代表您應用程式內發生的事件，例如頁面檢視、按鈕點選或應用程式內採購。除了在應用程式中起始設定 {{site.data.keyword.mobileanalytics_short}} SDK 之外，您還必須為您要追蹤的每一個自訂事件新增一行程式碼。 
 
 SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
 
@@ -62,6 +66,16 @@ SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
    import BMSAnalytics
    ```
    {: codeblock}  
+   
+   ### Cordova
+	{: #cordova-import}
+		
+	從您的 Cordova 應用程式根目錄，執行下列指令以新增 Cordova 外掛程式：
+
+   ```Javascript
+   cordova plugin add bms-core
+   ```
+   {: codeblock}  
 
 2. 在應用程式中起始設定 {{site.data.keyword.mobileanalytics_short}} Client SDK。
 
@@ -78,23 +92,23 @@ SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
   您必須起始設定 `BMSClient` 與 **bluemixRegion** 參數。在起始設定程式中，**bluemixRegion** 值指定您所使用的 {{site.data.keyword.Bluemix_notm}} 部署，例如 `BMSClient.REGION_US_SOUTH` 及 `BMSClient.REGION_UK`。
     <!-- , or `BMSClient.REGION_SYDNEY`.--> 
     
-    ### iOS
-    {: #ios-init}
+ ### iOS
+ {: #ios-init}
     
-    請先使用下列程式碼來起始設定 `BMSClient` 類別。將起始設定碼放在應用程式委派的 `application(_:didFinishLaunchingWithOptions:)` 方法中或最適合您專案的位置中。
+ 請先使用下列程式碼來起始設定 `BMSClient` 類別。將起始設定碼放在應用程式委派的 `application(_:didFinishLaunchingWithOptions:)` 方法中或最適合您專案的位置中。
 	
     ```Swift
     BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
     ```
    {: codeblock}
 
-    您必須起始設定 `BMSClient` 與 **bluemixRegion** 參數。在起始設定程式中，**bluemixRegion** 值指定您所使用的 {{site.data.keyword.Bluemix_notm}} 部署（例如，`BMSClient.Region.usSouth` 或 `BMSClient.Region.unitedKingdom`）。
+   您必須起始設定 `BMSClient` 與 **bluemixRegion** 參數。在起始設定程式中，**bluemixRegion** 值指定您所使用的 {{site.data.keyword.Bluemix_notm}} 部署（例如，`BMSClient.Region.usSouth` 或 `BMSClient.Region.unitedKingdom`）。
     <!-- , or `BMSClient.Region.Sydney`. -->
     
-    ### Cordova
-    {: #cordova-init}
+ ### Cordova
+ {: #cordova-init}
     
-    起始設定 **BMSClient** 及 **BMSAnalytics**。您將需要 [**API 金鑰**](#analytics-clientkey)值。
+ 起始設定 **BMSClient** 及 **BMSAnalytics**。您將需要 [**API 金鑰**](#analytics-clientkey)值。
 
   ```Javascript
   var applicationName = "HelloWorld";
@@ -149,14 +163,15 @@ SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
 
  您可以使用 `Analytics.recordApplicationDidBecomeActive()` 及 `Analytics.recordApplicationWillResignActive()` 方法，來記錄 WatchOS 上的裝置事件。
   
- 將下列這一行新增至 ExtensionDelegate 類別的 `applicationDidBecomeActive()` 方法。
-
+ 將下列這一行新增至 ExtensionDelegate 類別的 `applicationDidBecomeActive()` 方法：
+ 
 	```
 	Analytics.recordApplicationDidBecomeActive()
 	```
    {: codeblock}
 
- 將下列這一行新增至 ExtensionDelegate 類別的 applicationWillResignActive() 方法：
+ 將下列這一行新增至 ExtensionDelegate 類別的 `applicationWillResignActive()` 方法：
+ 
 	```
 	Analytics.recordApplicationWillResignActive()
 	```
@@ -186,8 +201,8 @@ Analytics.enable();
 // Send recorded usage analytics to the Mobile Analytics Service
 Analytics.send(new ResponseListener() {
             @Override
-            public void onSuccess(Response response) {
-                // Handle Analytics send success here.
+                    public void onSuccess(Response response) {
+                        // Handle Analytics send success here.
             }
 
             @Override
@@ -197,20 +212,19 @@ Analytics.send(new ResponseListener() {
         });
 ```
 {: codeblock}
-
-<!-- removed: Analytics.log(eventJSONObject); -->
-
-<!--	
-Sample usage analytics for logging an event:
+	
+用於記載事件的用法分析範例：
 	
 ```
-// Log a custom analytics event for custom charts, which is represented by a JSON object:
+// Log a custom analytics event
 JSONObject eventJSONObject = new JSONObject();
 	
 eventJSONObject.put("customProperty" , "propertyValue");
+Analytics.log(eventJSONObject);
+	
 ```
 {: codeblock}
--->
+
 
 #### iOS - Swift
 {: #ios-usage-api}
@@ -236,20 +250,14 @@ Analytics.send(completionHandler: { (response: Response?, error: Error?) in
 ```
 {: codeblock}
 
-<!--
-Sample usage analytics for logging an event:
-
-#### Swift
-{: customchartsswift}
+用於記載事件的用法分析範例：
 
 ```Swift
-// Log a custom analytics event for custom charts
+// Log a custom analytics event
 let eventObject = ["customProperty": "propertyValue"]
-Analytics.log(eventObject)
+Analytics.log(metadata: eventObject)
 ```
 {: codeblock}
-
--->
 
 #### Cordova
 {: #usage-analytics-cordova}
@@ -265,6 +273,16 @@ Analytics.log(eventObject)
   BMSAnalytics.send();
   ```
   {: codeblock}
+
+用於記載事件的用法分析範例：
+
+```JavaScript
+// Log a custom analytics event
+var eventObject = {"customProperty": "propertyValue"}
+BMSAnalytics.log(eventObject)
+```
+{: codeblock}
+
   
   **附註：**當您正在開發 Cordova 應用程式時，請使用原生 API 來啟用應用程式生命週期事件紀錄。
   
@@ -428,14 +446,16 @@ Logger.sdkDebugLoggingEnabled = true
 {: codeblock}
 -->
 
-## 報告網路要求
+## 進行網路要求
 {: #network-requests}
 
-您可以配置 {{site.data.keyword.mobileanalytics_short}} Client SDK 來記錄網路要求。 請確定您已經起始設定 `BMSClient` 及 `BMSAnalytics`。
+您可以配置 {{site.data.keyword.mobileanalytics_short}} Client SDK 來[進行網路要求](/docs/mobile/sdk_network_request.html)。您務必要已經起始設定 `BMSClient` 及 `BMSAnalytics`，並且匯入 Client SDK。
+
+<!--
 #### Android
 {: #android-network-requests}
 
-**附註：**此程式碼 Snippet 假設您已[匯入 Client SDK](#android-import)。
+**Note:** This code snippet assumes that you have [imported the Client SDKs](#android-import).
 
 ```
 public void makeGetCall(){
@@ -446,7 +466,7 @@ public void makeGetCall(){
                 Request request = new Request("http://httpbin.org/get", "GET");
                     request.send(null, null);
             } catch (Exception e) {
-                // Handle Failure here.
+                // Handle failure here.
             }
         }
     });
@@ -455,9 +475,31 @@ public void makeGetCall(){
 ```
 {: codeblock}
 
+-->
+
+<!-- 
 #### Swift 3.0
 {: #ios-network-requests}
 
+ ```Swift
+ 	// Make a network request
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
+
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
+   	if error == nil {
+       	    print ("response:\(response?.responseText), no error")
+    	  } else {
+       	    print ("error: \(error)")
+    	}
+	}
+	request.send(completionHandler: callBack)
+ ```
+ {: codeblock}
+ 
+ -->
+
+<!-- Commenting out bmsurlsession
 ```
 // Make a network request
 let urlSession = BMSURLSession(configuration: .default, delegate: nil, delegateQueue: nil)
@@ -478,10 +520,29 @@ urlSession.dataTask(with: request) { (data: Data?, response: URLResponse?, error
 }.resume()
 ```
 {: codeblock}
+-->
 
+<!--
 #### Swift 2.2
-{: ios-swift23-network-requests}
+{: ios-swift22-network-requests}
 
+```Swift
+ 	// Make a network request
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
+
+	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
+   	if error == nil {
+       	    print ("response:\(response?.responseText), no error")
+    	  } else {
+       	    print ("error: \(error)")
+    	}
+	}
+	request.send(completionHandler: callBack)
+ ```
+ {: codeblock}
+-->
+<!--
 ```
 // Make a network request
 let urlSession = BMSURLSession(configuration: .defaultSessionConfiguration(), delegate: nil, delegateQueue: nil)
@@ -502,8 +563,8 @@ urlSession.dataTaskWithRequest(request) { (data: NSData?, response: NSURLRespons
 }.resume()
 ```
 {: codeblock}
-
-
+-->
+<!--
 #### Cordova
 {: #cordova-network-requests}
 
@@ -514,10 +575,12 @@ var success = function(data){
  var failure = function(error)
      {console.log("failure", error);
  }
- var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
+ var request = new BMSRequest("<your application route>", BMSRequest.GET);
  request.send(success, failure);
 ```
 {: codeblock}
+
+-->
 
 ## 報告損毀分析
 {: #report-crash-analytics}

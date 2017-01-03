@@ -2,9 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-14"
+lastupdated: "2016-12-01"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # 安装 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK
 {: #mobileanalytics_sdk}
@@ -27,22 +31,23 @@ lastupdated: "2016-11-14"
 
 3. 找到 `build.gradle` 文件的 `Dependencies` 部分，并添加 {{site.data.keyword.mobileanalytics_short}} 客户端 SDK 的编译依赖关系。您的存储库语句应该类似下列代码示例：
 
-	```Gradle
+	```
       dependencies {
         compile 'com.ibm.mobilefirstplatform.clientsdk.android:analytics:1.+'
     	// other dependencies  
       }
   ```
-  {: codeblock}
+  	{: codeblock}
 
 4. 通过单击**工具 &gt; Android &gt; 使用 Gradle 文件同步项目**来使用 Gradle 同步项目。
 
 5. 打开 Android 项目的 `AndroidManifest.xml` 文件。您可以在**应用程序 > 清单**中找到此文件。在 `<manifest>` 元素下添加因特网访问许可权：
 
-	```XML
+	```
 	 <uses-permission android:name="android.permission.INTERNET" />
    ```
    {: codeblock}
+   
 6. 您现在已安装 Android 客户端 SDK。接下来，[导入并初始化](sdk.html#initalize-ma-sdk) Analytics 客户端 SDK。   
 
 ## 安装 Swift SDK
@@ -78,47 +83,61 @@ lastupdated: "2016-11-14"
 ## 安装 Cordova 插件
 {: #installing-sdk-cordova}
 
-使用 {{site.data.keyword.mobileanalytics_full}}Cordova 插件<!--SDK-->，您可以检测移动应用程序。 
+使用 {{site.data.keyword.mobileanalytics_full}} Cordova 插件，您可以检测移动应用程序。 
 
 1. 将 Android 和 iOS 平台添加到您的 Cordova 应用程序。从命令行运行以下一个或全部两个命令：
+   
+   Android：
 
-	```Bash
-	cordova platform add android
-	```
+	 ```
+	 cordova platform add android
+```
+	 {: codeblock}
 	
-	```Bash
-	cordova platform add ios
+   iOS：
+   	
 	```
+	cordova platform add ios
+```
+   {: codeblock}
 	
 2. 如果您已添加了 Android 平台，您必须向 Cordova 应用程序的 `config.xml` 文件添加支持的最低 API 级别。打开 `config.xml` 文件，并将以下行添加到 `<platform name="android">` 元素：
 
-	```XML
+	```
 	<platform name="android">  
   	<preference name="android-minSdkVersion" value="15"/>
   	<preference name="android-targetSdkVersion" value="23"/>
   	<!-- add minimum and target Android API level declaration -->
-  </platform>
-```
-*minSdkVersion* 值必须高于 `15`。请参阅 [Android 平台指南](https://cordova.apache.org/docs/en/latest/guide/platforms/android/)以了解 Android SDK 的最新受支持 *targetSdkVersion* 。
+  	</platform>
+	```
+   {: codeblock}
+
+ *minSdkVersion* 值必须高于 `15`。请参阅 [Android 平台指南](https://cordova.apache.org/docs/en/latest/guide/platforms/android/)以了解 Android SDK 的最新受支持 *targetSdkVersion* 。
+
+
 3. 如果已添加了 iOS 操作系统，使用目标声明更新 `<platform name="ios">` 元素：
 
-	```XML
+	```
 	<platform name="ios">
     <preference name="deployment-target" value="8.0"/>
      <!-- add deployment target declaration -->
-  </platform>
-```
-
-4. 安装 {{site.data.keyword.mobileanalytics_short}} Cordova 插件：
-
- 	```Bash
-	cordova plugin add bms-core
+  	</platform>
 	```
+	{: codeblock}
+
+4. 安装 {{site.data.keyword.mobileanalytics_short}} Cordova 插件。当前支持 Cordova-CLI V6.3.0 或更低版本：
+
+ 	```
+	cordova platform add android@5.2.2
+	```
+	{: codeblock}
 
 5. 通过运行以下命令验证插件是否安装成功：
-	```Bash
+	
+	```
 	cordova plugin list
 	```
+	{: codeblock}
 	
 6. 您现在已安装 Cordova 插件。接下来，[导入并初始化](sdk.html#initalize-ma-sdk) Analytics 客户端 SDK。
 

@@ -5,10 +5,15 @@ copyright:
 lastupdated: "2016-10-31"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # {{site.data.keyword.mobileanalytics_short}} によるアプリケーションのモニター
 {: #monitoringapps}
 
-{{site.data.keyword.mobileanalytics_full}} には、モバイル・アプリケーションのモニタリングや分析を行う機能が備えられています。{{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用して、アプリケーション・ログを記録したりデータをモニターしたりできます。開発者は、このデータを {{site.data.keyword.mobileanalytics_short}} サービスに送信するタイミングを制御できます。データが {{site.data.keyword.mobileanalytics_short}} に送信されたら、{{site.data.keyword.mobileanalytics_short}} ダッシュボードを使用して、モバイル・アプリケーション、デバイス、アプリケーション・ログに関する分析の洞察を得ることができます。
+{{site.data.keyword.mobileanalytics_full}} には、モバイル・アプリケーションのモニタリングや分析を行う機能が備えられています。{{site.data.keyword.mobileanalytics_short}} クライアント SDK を使用して、アプリケーション・ログを記録したりデータをモニターしたりできます。開発者は、このデータを {{site.data.keyword.mobileanalytics_short}} サービスに送信するタイミングを制御できます。データが {{site.data.keyword.mobileanalytics_short}} に送信されたら、{{site.data.keyword.mobileanalytics_short}} コンソールを使用して、モバイル・アプリケーション、デバイス、アプリケーション・ログに関する分析の洞察を得ることができます。
 {: shortdesc}
 
 <!--
@@ -89,7 +94,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 {{site.data.keyword.mobileanalytics_short}} コンソールでアラート定義にしきい値を設定すると、アクティビティーのモニターに役立ちます。
 
-しきい値を超過した場合にアラートをトリガーして {{site.data.keyword.mobileanalytics_short}} コンソール・モニターに通知するように、しきい値を構成することができます。トリガーされたアラートは、コンソールで視覚化したり、カスタム Webhook で処理したりできます。<!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.-->この機能は、アプリケーション・ログ・エラー、アプリケーションの異常終了、サーバー・ログ・エラーを検出するプロアクティブな手段になります。リアクティブのしきい値やアラートにより、データをふるいにかけたり、しきい値を細分して設定したりする必要がなくなります。
+しきい値を構成して、そのしきい値を超過した場合にアラートをトリガーして {{site.data.keyword.mobileanalytics_short}} コンソール・モニターに通知するようにすることができます。トリガーされたアラートは、コンソールで視覚化したり、カスタム Webhook で処理したりできます。<!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.-->この機能は、アプリケーション・ログ・エラー、アプリケーションの異常終了、サーバー・ログ・エラーを検出するプロアクティブな手段になります。リアクティブのしきい値やアラートにより、データをふるいにかけたり、しきい値を細分して設定したりする必要がなくなります。
 
 ### アプリケーション・ログのアラート定義の作成
 {: #alert-def-client-logs}
@@ -202,7 +207,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### アプリ異常終了のトラブルシューティング
 {: #app-crash-troubleshooting}
 
-<!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} コンソールの**「トラブルシューティング」**ページには、アプリ・クラッシュの詳細が表示されます。
+<!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} コンソールの**「トラブルシューティング」**ページには、アプリ異常終了の詳細が表示されます。
 
 **「異常終了の要約 (Crash Summary)」**表はソート可能であり、次のデータ列が含まれています。
 
@@ -237,12 +242,11 @@ You can also export and import custom chart definitions programmatically by usin
 * 往復時間 - アプリがネットワーク要求をするのにかかる時間の長さを、ms 単位で定義します。
 * 要求カウント - 1 つのアプリによるネットワーク要求の頻度を表示します。データは平均値としても表示されます。
 
-<!--
-## Exporting data to dashDB
+## dashDB へのデータのエクスポート
 {: #dashdb}
 
-The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+{{site.data.keyword.mobileanalytics_short}} コンソールに表示される評価指標は、モバイル・データから収集できる洞察のサンプルにすぎません。モバイル・データを {{site.data.keyword.IBM}} dashDB データウェアハウスに自動的にパイプ接続することができます。データウェアハウスで分析をカスタマイズし、データを他のパブリック・データ・ソースやプライベート・データ・ソースと集約し、最先端の分析を適用することで、ビジネスを理解、推進するための詳細で深い高度な洞察を引き出すことができます。
 
-Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
--->
+**「エクスポート」**ページにある**「DashDB」**をクリックして、{{site.data.keyword.mobileanalytics_short}} コンソールに dashDB をセットアップします。セットアップ完了後 1、2 時間以内に、{{site.data.keyword.mobileanalytics_short}} に送信される新しいデータは dashDB にも転送されるようになります。 
+
 

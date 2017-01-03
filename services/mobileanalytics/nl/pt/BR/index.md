@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-31"
+lastupdated: "2016-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -31,81 +31,102 @@ demo; portanto, você não poderá criar novas definições de alerta.
 
 2. Instale os [SDKs do cliente](/docs/services/mobileanalytics/install-client-sdk.html) {{site.data.keyword.mobileanalytics_short}}. É possível, opcionalmente, usar a [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window} do {{site.data.keyword.mobileanalytics_short}}.
 
-3. Importe os SDKs do cliente e inicialize-os com o fragmento de código a seguir para registrar a análise de uso.
+3. Importe os SDKs do cliente e inicialize-os com o fragmento de código a seguir para
+registrar a analítica de uso:
 
 	#### Android
-	{: #android-initialize}
-	
-	1. Importe o SDK do cliente:
+	{: #android-import}
 
-		```
-		import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
-		import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
-		```
-		{: codeblock}
+	Inclua as seguintes instruções `importar`
+no início do seu arquivo de projeto:
 	
-	2. Inicialize o Client SDK dentro de seu código de aplicativo para registrar a analítica de uso e as sessões de aplicativo, usando o valor da [Chave API](/docs/services/mobileanalytics/sdk.html#analytics-clientkey).
+    ```
+    import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
+import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
+import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
+    ```
+    {: codeblock}
+  
+ #### iOS
+ {: #ios-import}
+	
+ **Nota:** o SDK Swift está disponível
+para iOS e watchOS.
+	
+ Importe as estruturas `BMSCore` e `BMSAnalytics` ao incluir as instruções de `importação` a seguir no início do seu arquivo de
+projeto `AppDelegate.swift`:
 
-		```Java
-		BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
-			
-		Analytics.init(getApplication(), "your_app_name_here", "your_api_key_here", hasUserContext, Analytics.DeviceEvent.ALL);
-		```
-		{: codeblock}
+   ```Swift
+  import BMSCore
+  import BMSAnalytics
+   ```
+   {: codeblock}  
+   
+ #### Cordova
+ {: #cordova-import}
 		
-    	O nome que você seleciona para o seu aplicativo (`your_app_name_here`) é exibido no console do
-{{site.data.keyword.mobileanalytics_short}} como o nome do aplicativo. O nome do aplicativo é usado como um filtro para procurar logs do aplicativo no painel. Ao usar o mesmo nome de aplicativo entre as plataformas (por exemplo, Android e iOS), é possível ver todos os logs desse aplicativo com o mesmo nome, independentemente de qual plataforma os logs foram enviados.
+ Inclua o plug-in Cordova executando o comando a seguir por meio do diretório-raiz do
+seu aplicativo Cordova:
+
+ ```Javascript
+   cordova plugin add bms-core
+   ```
+ {: codeblock}  
+
+4. Inicialize o SDK do cliente do {{site.data.keyword.mobileanalytics_short}}
+em seu código do aplicativo para registrar a analítica de uso e as sessões do aplicativo usando
+o valor [API Key](/docs/services/mobileanalytics/sdk.html#analytics-clientkey).	
+	
+ #### Android
+ {: #android-initialize}	
+
+  ```
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
+  Analytics.init(getApplication(), "your_app_name_here", "your_api_key_here", hasUserContext, Analytics.DeviceEvent.ALL);
+  ```
+  {: codeblock}
     
-    	O parâmetro **bluemixRegion** especifica qual implementação do {{site.data.keyword.Bluemix_notm}} você está usando, por exemplo,
+ O parâmetro **bluemixRegion** especifica qual implementação do {{site.data.keyword.Bluemix_notm}} você está usando, por exemplo,
 `BMSClient.REGION_US_SOUTH` e `BMSClient.REGION_UK`. 
     <!-- , or `BMSClient.Region.Sydney`.-->
-    
-    	**Nota:** configure o valor de `hasUserContext` como **true** ou **false**. Se false (valor padrão), cada dispositivo será contado como um usuário ativo. O método [`Analytics.setUserIdentity("username");`](/docs/services/mobileanalytics/sdk.html#android-tracking-users) não funcionará quando `hasUserContext` for false. Se true, cada uso de [`Analytics.setUserIdentity("username");`](/docs/services/mobileanalytics/sdk.html#android-tracking-users) será contado como um usuário ativo. Não há nenhuma identidade de usuário padrão quando `hasUserContext` é true e, portanto, deve ser configurado para preencher os gráficos de usuário ativo.
 
-	#### iOS
-	{: #ios-initialize}
+ #### iOS
+ {: #ios-initialize}
   
-	1. Importe as estruturas `BMSCore` e `BMSAnalytics`:
+  Inicialize o Client SDK dentro de seu código de aplicativo para registrar a analítica de uso e as sessões de aplicativo, usando o valor da [Chave API](/docs/services/mobileanalytics/sdk.html#analytics-clientkey).
 	
-		```
-		import BMSCore
-    import BMSAnalytics
-		```
-		{: codeblock}
-    
-	2. Inicialize o Client SDK dentro de seu código de aplicativo para registrar a analítica de uso e as sessões de aplicativo, usando o valor da [Chave API](/docs/services/mobileanalytics/sdk.html#analytics-clientkey).
-	
-		```Swift
+  ```Swift
 		BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // You can change the region
 		Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: deviceEvents: .lifecycle, .network)
-		```
-		{: codeblock}
-		
-		O nome que você seleciona para o seu aplicativo (`your_app_name_here`) é exibido no console do
-{{site.data.keyword.mobileanalytics_short}} como o nome do aplicativo. O nome do aplicativo é usado como um filtro para procurar logs do aplicativo no painel. Ao usar o mesmo nome de aplicativo entre as plataformas (por exemplo, Android e iOS), é possível ver todos os logs desse aplicativo com o mesmo nome, independentemente de qual plataforma os logs foram enviados.
-	
-		O parâmetro **bluemixRegion** especifica
+  ```
+  {: codeblock}
+			
+   O parâmetro **bluemixRegion** especifica
 qual implementação do Bluemix você está usando, por exemplo,
 `BMSClient.Region.usSouth` ou
 `BMSClient.Region.unitedKingdom`.
 	<!-- , or `BMSClient.REGION_SYDNEY`. -->
 	
-		**Nota:** configure o valor de `hasUserContext` como **true** ou **false**. Se false (valor padrão), cada dispositivo será contado como um usuário ativo. O método [`Analytics.userIdentity = "username"`](/docs/services/mobileanalytics/sdk.html#ios-tracking-users) não funcionará quando `hasUserContext` for false. Se true, cada uso de [`Analytics.userIdentity = "username"`](/docs/services/mobileanalytics/sdk.html#ios-tracking-users) será contado como um usuário ativo. Não há nenhuma identidade de usuário padrão quando `hasUserContext` é true e, portanto, deve ser configurado para preencher os gráficos de usuário ativo.
+ #### Cordova
+ {: #cordova-initialize}
 	
-	#### Cordova
-	{: #cordova-initialize}
+ Inicialize o Client SDK dentro de seu código de aplicativo para registrar a analítica de uso e as sessões de aplicativo, usando o valor da [Chave API](/docs/services/mobileanalytics/sdk.html#analytics-clientkey).
 	
-	Inicialize o Client SDK dentro de seu código de aplicativo para registrar a analítica de uso e as sessões de aplicativo, usando o valor da [Chave API](/docs/services/mobileanalytics/sdk.html#analytics-clientkey).
+  ```
+  var appName = "your_app_name_here";
+  var apiKey = "your_api_key_here";
 	
-		```Javascript
-		var appName = "your_app_name_here";
-		var apiKey = "your_api_key_here";
-		
-		BMSClient.initialize(BMSClient.REGION_US_SOUTH);
-		BMSAnalytics.initialize(appName, apiKey, false, [BMSAnalytics.ALL])
-		```
+  BMSClient.initialize(BMSClient.REGION_US_SOUTH); // You can change the region
+  BMSAnalytics.initialize(appName, apiKey, false, [BMSAnalytics.ALL])
+  ```
+  {: codeblock}
+  
+  O parâmetro **bluemixRegion** especifica qual implementação do {{site.data.keyword.Bluemix_notm}} você está usando, por exemplo,
+`BMSClient.REGION_US_SOUTH` e `BMSClient.REGION_UK`.
+  
+ **Nota:** o nome que você selecionar para o seu aplicativo (`your_app_name_here`) será exibido no console do {{site.data.keyword.mobileanalytics_short}} como o nome do aplicativo. O nome do aplicativo é usado como um filtro para procurar logs do aplicativo no painel. Ao usar o mesmo nome de aplicativo entre as plataformas (por exemplo, Android e iOS), é possível ver todos os logs desse aplicativo com o mesmo nome, independentemente de qual plataforma os logs foram enviados.
 
-4. Envie análise de uso registrada para o Mobile Analytics Service. Uma maneira simples de testar a análise é executar o código a seguir quando o aplicativo for iniciado:
+5. Envie análise de uso registrada para o Mobile Analytics Service. Uma maneira simples de testar a análise é executar o código a seguir quando o aplicativo for iniciado:
 
 	#### Android
 	{: #android-send}
@@ -154,9 +175,9 @@ do {{site.data.keyword.mobileanalytics_short}}, como
 [solicitações de rede](/docs/services/mobileanalytics/sdk.html#network-requests)
 e [analítica de travamento](/docs/services/mobileanalytics/sdk.html#report-crash-analytics).
 	
-5. Compile e execute o aplicativo em seu emulador ou dispositivo.
+6. Compile e execute o aplicativo em seu emulador ou dispositivo.
 
-6. Acesse o
+7. Acesse o
 {{site.data.keyword.mobileanalytics_short}} Console para ver
 a analítica de uso de seu aplicativo. Também é
 possível monitorar o seu aplicativo

@@ -5,10 +5,15 @@ copyright:
 lastupdated: "2016-10-31"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # {{site.data.keyword.mobileanalytics_short}}를 사용하여 애플리케이션 모니터링
 {: #monitoringapps}
 
-{{site.data.keyword.mobileanalytics_full}}는 모바일 애플리케이션에 대한 모니터링 및 분석을 제공합니다. {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 사용하여 애플리케이션 로그와 모니터 데이터를 기록할 수 있습니다. 개발자는 이 데이터를 {{site.data.keyword.mobileanalytics_short}} 서비스에 전송할 시기를 제어할 수 있습니다. 데이터가 {{site.data.keyword.mobileanalytics_short}}에 전달될 때 {{site.data.keyword.mobileanalytics_short}} 대시보드를 사용하여 모바일 애플리케이션, 디바이스, 애플리케이션 로그에 대한 분석 통찰을 얻을 수 있습니다.
+{{site.data.keyword.mobileanalytics_full}}는 모바일 애플리케이션에 대한 모니터링 및 분석을 제공합니다. {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 사용하여 애플리케이션 로그와 모니터 데이터를 기록할 수 있습니다. 개발자는 이 데이터를 {{site.data.keyword.mobileanalytics_short}} 서비스에 전송할 시기를 제어할 수 있습니다. 데이터가 {{site.data.keyword.mobileanalytics_short}}에 전달될 때 {{site.data.keyword.mobileanalytics_short}} 콘솔을 사용하여 모바일 애플리케이션, 디바이스, 애플리케이션 로그에 대한 분석 통찰을 얻을 수 있습니다.
 {: shortdesc}
 
 <!--
@@ -237,12 +242,11 @@ You can also export and import custom chart definitions programmatically by usin
 * 라운드트립 시간 - 앱에서 네트워크 요청을 수행하는 데 소요되는 시간(ms)을 정의합니다.
 * 요청 개수 - 앱에서 네트워크 요청을 수행하는 빈도를 표시합니다. 데이터는 평균으로도 표시됩니다.
 
-<!--
-## Exporting data to dashDB
+## dashDB에 데이터 내보내기
 {: #dashdb}
 
-The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+{{site.data.keyword.mobileanalytics_short}} 콘솔에서 보는 메트릭은 모바일 데이터에서 얻을 수 있는 Insights의 샘플뿐입니다. 분석을 사용자 정의하고, 다른 공용 및 개인용 데이터 소스로 데이터를 집계하고, 비즈니스를 이해하고 끌어가는 데 도움이 되도록 심도 있고 상세한 통찰력을 파생하기 위해 첨단 기술의 분석을 적용할 수 있는 {{site.data.keyword.IBM}} dashDB 데이터 웨어하우스에 모바일 데이터를 자동으로 파이핑할 수 있습니다. 
 
-Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
--->
+**내보내기** 페이지에서 **DashDB**를 클릭하여 {{site.data.keyword.mobileanalytics_short}} 콘솔에서 dashDB를 설정하십시오. 설정을 완료하고 나면 {{site.data.keyword.mobileanalytics_short}}로 전송된 새 데이터도 1-2시간 내에 dashDB로 전달됩니다.  
+
 

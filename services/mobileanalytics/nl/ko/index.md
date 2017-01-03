@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-31"
+lastupdated: "2016-11-30"
 
 ---
 {:new_window: target="_blank"}
@@ -28,72 +28,87 @@ lastupdated: "2016-10-31"
 3. 클라이언트 SDK를 가져와서 다음 코드 스니펫을 사용하여 초기화하여 사용 분석을 기록하십시오.
 
 	#### Android
-	{: #android-initialize}
+	{: #android-import}
+
+	다음 `import` 문을 프로젝트 파일의 시작 부분에 추가하십시오.
 	
-	1. 클라이언트 SDK 가져오기:
-
-		```
-		import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
-		import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
-		```
-		{: codeblock}
-	
-	2. 애플리케이션 코드 내에서 클라이언트 SDK를 초기화하여 사용 분석과 애플리케이션 세션을 기록하십시오([API 키](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) 값 사용). 
-
-		```Java
-		BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
-			
-		Analytics.init(getApplication(), "your_app_name_here", "your_api_key_here", hasUserContext, Analytics.DeviceEvent.ALL);
-		```
-		{: codeblock}
-		
-    	애플리케이션(`your_app_name_here`)에서 사용하도록 선택한 이름이 {{site.data.keyword.mobileanalytics_short}} 콘솔에 애플리케이션 이름으로 표시됩니다. 애플리케이션 이름은 대시보드에서 애플리케이션 로그를 검색하는 필터로 사용됩니다. 플랫폼(예: Android 및 iOS)에 걸쳐 동일한 애플리케이션 이름을 사용하는 경우, 로그가 전송된 플랫폼에 상관없이 동일한 이름 아래에서 애플리케이션의 모든 로그를 볼 수 있습니다.
-    
-    	**bluemixRegion** 매개변수는 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`)를 지정합니다.  
-    <!-- , or `BMSClient.Region.Sydney`.-->
-    
-    	**참고:** `hasUserContext`에 대한 값을 **true** 또는 **false**로 설정하십시오. False(기본값)인 경우 각 디바이스는 활성 사용자로 계수됩니다.  [`Analytics.setUserIdentity("username");`](/docs/services/mobileanalytics/sdk.html#android-tracking-users) 메소드는 `hasUserContext`가 false일 경우 작동하지 않습니다. true인 경우 [`Analytics.setUserIdentity("username");`](/docs/services/mobileanalytics/sdk.html#android-tracking-users)의 개별 사용은 활성 사용자로 계수됩니다. `hasUserContext`가 true이고 기본 사용자 ID가 없으므로, 활성 사용자 차트를 채우도록 설정되어야 합니다.
-
-	#### iOS
-	{: #ios-initialize}
+    ```
+    import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
+    import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
+    import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
+    ```
+    {: codeblock}
   
-	1. `BMSCore` 및 `BMSAnalytics` 프레임워크 가져오기: 
+ #### iOS
+ {: #ios-import}
 	
-		```
-		import BMSCore
-	import BMSAnalytics
-	```
-		{: codeblock}
-    
-	2. 애플리케이션 코드 내에서 클라이언트 SDK를 초기화하여 사용 분석과 애플리케이션 세션을 기록하십시오([API 키](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) 값 사용). 
+ **참고:** Swift SDK는 iOS 및 watchOS에서 사용 가능합니다. 
 	
-		```Swift
-		BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // You can change the region
-		Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: deviceEvents: .lifecycle, .network)
-		```
-		{: codeblock}
+ 다음 `import` 문을 `AppDelegate.swift` 프로젝트 파일의 시작 부분에 추가하여 `BMSCore` 프레임워크와 `BMSAnalytics` 프레임워크를 가져오십시오. 
+
+   ```Swift
+   import BMSCore
+   import BMSAnalytics
+   ```
+   {: codeblock}  
+   
+ #### Cordova
+ {: #cordova-import}
 		
-		애플리케이션(`your_app_name_here`)에서 사용하도록 선택한 이름이 {{site.data.keyword.mobileanalytics_short}} 콘솔에 애플리케이션 이름으로 표시됩니다. 애플리케이션 이름은 대시보드에서 애플리케이션 로그를 검색하는 필터로 사용됩니다. 플랫폼(예: Android 및 iOS)에 걸쳐 동일한 애플리케이션 이름을 사용하는 경우, 로그가 전송된 플랫폼에 상관없이 동일한 이름 아래에서 애플리케이션의 모든 로그를 볼 수 있습니다.
+ Cordova 애플리케이션 루트 디렉토리에서 다음 명령을 실행하여 Cordova 플러그인을 추가하십시오. 
+
+ ```Javascript
+ cordova plugin add bms-core
+ ```
+ {: codeblock}  
+
+4. 애플리케이션 코드 내에서 {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 초기화하여 사용 분석과 애플리케이션 세션을 기록하십시오([API 키](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) 값 사용).	
 	
-		**bluemixRegion** 매개변수는 사용 중인 Bluemix 배치(예: `BMSClient.Region.usSouth` 또는 `BMSClient.Region.unitedKingdom`)를 지정합니다. 
+ #### Android
+ {: #android-initialize}	
+
+  ```
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
+  Analytics.init(getApplication(), "your_app_name_here", "your_api_key_here", hasUserContext, Analytics.DeviceEvent.ALL);
+  ```
+  {: codeblock}
+    
+ **bluemixRegion** 매개변수는 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`)를 지정합니다.  
+    <!-- , or `BMSClient.Region.Sydney`.-->
+
+ #### iOS
+ {: #ios-initialize}
+  
+  애플리케이션 코드 내에서 클라이언트 SDK를 초기화하여 사용 분석과 애플리케이션 세션을 기록하십시오([API 키](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) 값 사용). 
+	
+  ```Swift
+  BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // You can change the region
+  Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: deviceEvents: .lifecycle, .network)
+  ```
+  {: codeblock}
+			
+   **bluemixRegion** 매개변수는 사용 중인 Bluemix 배치(예: `BMSClient.Region.usSouth` 또는 `BMSClient.Region.unitedKingdom`)를 지정합니다. 
 	<!-- , or `BMSClient.REGION_SYDNEY`. -->
 	
-		**참고:** `hasUserContext`에 대한 값을 **true** 또는 **false**로 설정하십시오. False(기본값)인 경우 각 디바이스는 활성 사용자로 계수됩니다. [`Analytics.userIdentity="username"`](/docs/services/mobileanalytics/sdk.html#ios-tracking-users) 메소드는 `hasUserContext`가 false일 경우 작동하지 않습니다. true인 경우 [`Analytics.userIdentity="username"`](/docs/services/mobileanalytics/sdk.html#ios-tracking-users)의 개별 사용은 활성 사용자로 계수됩니다. `hasUserContext`가 true이고 기본 사용자 ID가 없으므로, 활성 사용자 차트를 채우도록 설정되어야 합니다.
+ #### Cordova
+ {: #cordova-initialize}
 	
-	#### Cordova
-	{: #cordova-initialize}
+ 애플리케이션 코드 내에서 클라이언트 SDK를 초기화하여 사용 분석과 애플리케이션 세션을 기록하십시오([API 키](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) 값 사용). 
 	
-	애플리케이션 코드 내에서 클라이언트 SDK를 초기화하여 사용 분석과 애플리케이션 세션을 기록하십시오([API 키](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) 값 사용). 
+  ```
+  var appName = "your_app_name_here";
+  var apiKey = "your_api_key_here";
 	
-		```Javascript
-		var appName = "your_app_name_here";
-		var apiKey = "your_api_key_here";
-		
-		BMSClient.initialize(BMSClient.REGION_US_SOUTH);
-		BMSAnalytics.initialize(appName, apiKey, false, [BMSAnalytics.ALL])
-		```
+  BMSClient.initialize(BMSClient.REGION_US_SOUTH); // You can change the region
+  BMSAnalytics.initialize(appName, apiKey, false, [BMSAnalytics.ALL])
+  ```
+  {: codeblock}
+  
+  **bluemixRegion** 매개변수는 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`)를 지정합니다. 
+  
+ **참고:** 애플리케이션(`your_app_name_here`)에서 사용하도록 선택한 이름이 {{site.data.keyword.mobileanalytics_short}} 콘솔에 애플리케이션 이름으로 표시됩니다. 애플리케이션 이름은 대시보드에서 애플리케이션 로그를 검색하는 필터로 사용됩니다. 플랫폼(예: Android 및 iOS)에 걸쳐 동일한 애플리케이션 이름을 사용하는 경우, 로그가 전송된 플랫폼에 상관없이 동일한 이름 아래에서 애플리케이션의 모든 로그를 볼 수 있습니다.
 
-4. 기록된 사용 분석을 Mobile Analytics 서비스로 전송하십시오. 분석을 테스트하는 간단한 방법은 애플리케이션이 시작될 때 다음 코드를 실행하는 것입니다.
+5. 기록된 사용 분석을 Mobile Analytics 서비스로 전송하십시오. 분석을 테스트하는 간단한 방법은 애플리케이션이 시작될 때 다음 코드를 실행하는 것입니다.
 
 	#### Android
 	{: #android-send}
@@ -129,9 +144,9 @@ lastupdated: "2016-10-31"
 	
 	추가 {{site.data.keyword.mobileanalytics_short}} 기능(예: [로깅](/docs/services/mobileanalytics/sdk.html#app-monitoring-logger), [네트워크 요청](/docs/services/mobileanalytics/sdk.html#network-requests) 및 [충돌 분석](/docs/services/mobileanalytics/sdk.html#report-crash-analytics))에 대해 알아보려면 [애플리케이션 인스트루먼트](/docs/services/mobileanalytics/sdk.html) 주제를 읽으십시오. 
 	
-5. 에뮬레이터 또는 디바이스에서 애플리케이션을 컴파일하고 실행하십시오.
+6. 에뮬레이터 또는 디바이스에서 애플리케이션을 컴파일하고 실행하십시오.
 
-6. 애플리케이션의 사용 분석을 표시하려면 {{site.data.keyword.mobileanalytics_short}} 콘솔로 이동하십시오. <!--[creating custom charts](app-monitoring.html#custom-charts),-->[경보 설정](/docs/services/mobileanalytics/app-monitoring.html#alerts)과 [앱 충돌 모니터링](/docs/services/mobileanalytics/app-monitoring.html#monitor-app-crash)을 수행하여 애플리케이션을 모니터링할 수도 있습니다. 
+7. 애플리케이션의 사용 분석을 표시하려면 {{site.data.keyword.mobileanalytics_short}} 콘솔로 이동하십시오. <!--[creating custom charts](app-monitoring.html#custom-charts),-->[경보 설정](/docs/services/mobileanalytics/app-monitoring.html#alerts)과 [앱 충돌 모니터링](/docs/services/mobileanalytics/app-monitoring.html#monitor-app-crash)을 수행하여 애플리케이션을 모니터링할 수도 있습니다. 
 
 
 # 관련 링크

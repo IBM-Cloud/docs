@@ -2,10 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-11-28"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # 关于 {{site.data.keyword.mobileanalytics_short}}  
 {: aboutmobileanalytics}
@@ -33,9 +36,9 @@ lastupdated: "2016-09-27"
 		<dd>实时查看性能和使用情况度量。</dd>
 	<dt>快速实现</dt>
 		<dd>在 {{site.data.keyword.Bluemix}} 中创建服务实例，向项目添加 SDK，将两行代码粘贴到应用程序，且准备好收集许多预定义度量。</dd>
-	<!--<dt>Collect any data you want</dt>-->
-		<!--<dd>Instrument apps with custom events, discover how users are interacting with your app, track purchases, and monitor app activity.  
-</dd>-->
+	<dt>收集所需的任何数据</dt>
+		<dd>使用定制事件检测应用程序，发现用户如何与应用程序交互，跟踪采购并监视应用程序活动。  
+</dd>
 <dt>速览所有应用程序的度量</dt>
 	<dd>{{site.data.keyword.mobileanalytics_short}} Console 提供<!-- both -->现成的<!--and custom-->图表，无需编写查询。</dd>
 <dt>关注对您而言重要的事项</dt>
@@ -60,22 +63,19 @@ lastupdated: "2016-09-27"
 * 我应该何时淘汰对旧操作系统的支持？ 
 * 哪些应用程序有性能问题？  
 
-<!--By adding your own **custom events** you can answer questions like:--> 
+通过添加自己的**定制事件**，可以回答如下问题： 
 
-<!--* What features are used most and least?-->  
-<!--* Where are users entering and leaving my app?-->  
-<!--* What activities are users viewing most? --> 
-<!--* Are users completing workflows in the app (for example, conversion funnels)? -->  
+* 哪些功能最常用，哪些不常用？  
+* 用户在哪里进入我的应用程序，又在哪里离开？  
+* 用户查看最多的活动是哪些？  
+* 用户在应用程序中完成工作流（例如，转换漏斗）了吗？   
 
-<!--Client-side logs and usage data are gathered automatically and sent to the Mobile Analytics -->
-<!-- service on demand. Developers and -->
-<!-- administrators can use the {{site.data.keyword.mobileanalytics_short}} service dashboard to view data that -->
-<!-- is gathered by the client SDK. -->
+客户端日志和使用情况数据会自动收集，并根据需要发送到 Mobile Analytics 服务。开发者和管理员可使用 {{site.data.keyword.mobileanalytics_short}} 服务仪表板查看客户端 SDK 收集的数据。
 
-<!--## Data visualization
+## 数据可视化
 {: data-visualization}
 
-All data that is collected by the analytics service can be visualized through the {{site.data.keyword.mobileanalytics_short}} dashboard which is accessible from your {{site.data.keyword.Bluemix_notm}} dashboard by clicking your IBM {{site.data.keyword.mobileanalytics_short}} service tile instance. You can also create custom charts, based on data that is collected by the analytics service in the dashboard. In addition to an at-a-glance view of your mobile analytics, the analytics feature includes the capability to perform a raw search against client logs, captured client crash data, and any extra data that you explicitly provide through client API function calls that feed into the {{site.data.keyword.mobileanalytics_short}} service. -->
+分析服务收集的所有数据均可显示在 {{site.data.keyword.mobileanalytics_short}} 仪表板中，该仪表板可从 {{site.data.keyword.Bluemix_notm}} 仪表板访问，通过单击 IBM {{site.data.keyword.mobileanalytics_short}} 服务磁贴实例即可。<!--You can also create custom charts, based on data that is collected by the analytics service in the dashboard.-->除了简明的移动分析视图之外，分析功能还包括对如下数据执行原始搜索的功能：客户端日志、捕获的客户端崩溃数据以及您通过调用客户端 API 函数订阅到 {{site.data.keyword.mobileanalytics_short}} 服务而明确提供的任何其他数据。 
 
 ## {{site.data.keyword.mobileanalytics_short}} 常见问题 
 {: #faq}

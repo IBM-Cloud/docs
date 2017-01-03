@@ -2,9 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-10"
+lastupdated: "2016-11-29"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Strumentazione della tua applicazione per utilizzare gli SDK client {{site.data.keyword.mobileanalytics_short}}
 {: #mobileanalytics_sdk}
@@ -18,7 +22,7 @@ Gli SDK {{site.data.keyword.mobileanalytics_full}} consentono di strumentare la 
 
 2. Messaggi di log applicazione - questa categoria consente allo sviluppatore di aggiungere delle righe di codice in tutta l'applicazione che registrano dei messaggi personalizzati di supporto nelle attività di sviluppo e debug. Lo sviluppatore assegna un livello di severità/dettaglio a ciascun messaggio di log e può successivamente filtrare i messaggi in base al livello assegnato oppure risparmiare spazio di archiviazione configurando l'applicazione in modo che ignori i messaggi che sono al di sotto di un livello di log fornito. Per raccogliere i dati di log applicazione, devi inizializzare l'SDK {{site.data.keyword.mobileanalytics_short}} nella tua applicazione, nonché aggiungere una riga di codice per ciascun messaggio di log.
 
-<!--2. Custom events - This category includes data that you define yourself and that is specific to your app. This data represents events that occur within your app, such as page views, button taps, or in-app purchases. In addition to initializing the {{site.data.keyword.mobileanalytics_short}} SDK in your app, you must add a line of code for each custom event that you want to track. -->
+3. Eventi personalizzati - questa categoria include i dati che definisci tu stesso e che sono specifici per la tua applicazione. Questi dati rappresentano gli eventi che si verificano nella tua applicazione, come le visualizzazioni di pagine, le selezioni di pulsanti o gli acquisti all'interno dell'applicazione. Oltre a inizializzare l'SDK {{site.data.keyword.mobileanalytics_short}} nella tua applicazione, devi aggiungere una riga di codice per ciascun evento personalizzato che vuoi tracciare. 
 
 Attualmente, gli SDK sono disponibili per Android, iOS, WatchOS e Cordova.
 
@@ -31,7 +35,7 @@ Identifica il tuo valore **Chiave API** prima di impostare l'SDK client. La chia
 2. Espandi **Visualizza credenziali** per visualizzare il tuo valore della chiave API. Avrai bisogno del valore della chiave API quando inizializzi l'SDK client {{site.data.keyword.mobileanalytics_short}}.
 
 
-## Inizializzazione della tua applicazione per raccogliere l'analisi 
+## Inizializzazione della tua applicazione per raccogliere l'analisi
 {: #initalize-ma-sdk}
 
 Inizializza la tua applicazione per abilitare l'invio di log al servizio {{site.data.keyword.mobileanalytics_short}}.
@@ -62,6 +66,16 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   import BMSAnalytics
    ```
    {: codeblock}  
+   
+   ### Cordova
+	{: #cordova-import}
+		
+	Aggiungi il plugin Cordova eseguendo il seguente comando dalla directory root della tua applicazione Cordova:
+
+   ```Javascript
+   cordova plugin add bms-core
+   ```
+   {: codeblock}  
 
 2. Inizializza l'SDK client {{site.data.keyword.mobileanalytics_short}} nella tua applicazione.
 
@@ -79,23 +93,23 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
      
     <!-- , or `BMSClient.REGION_SYDNEY`.--> 
     
-    ### iOS
-    {: #ios-init}
+ ### iOS
+ {: #ios-init}
     
-    Devi prima inizializzare la classe `BMSClient` utilizzando il seguente codice. Inserisci il codice di inizializzazione nel metodo `application(_:didFinishLaunchingWithOptions:)` del delegato della tua applicazione oppure in un'ubicazione che ritieni più adatta per il tuo progetto.
+ Devi prima inizializzare la classe `BMSClient` utilizzando il seguente codice. Inserisci il codice di inizializzazione nel metodo `application(_:didFinishLaunchingWithOptions:)` del delegato della tua applicazione oppure in un'ubicazione che ritieni più adatta per il tuo progetto.
 	
     ```Swift
     BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Assicurati che punti alla tua regione
     ```
    {: codeblock}
 
-    Devi inizializzare il `BMSClient` con il parametro **bluemixRegion**. Nel programma di inizializzazione, il valore **bluemixRegion** specifica quale distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `BMSClient.Region.usSouth` o `BMSClient.Region.unitedKingdom`.
+   Devi inizializzare il `BMSClient` con il parametro **bluemixRegion**. Nel programma di inizializzazione, il valore **bluemixRegion** specifica quale distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `BMSClient.Region.usSouth` o `BMSClient.Region.unitedKingdom`.
     <!-- , or `BMSClient.Region.Sydney`. -->
     
-    ### Cordova
-    {: #cordova-init}
+ ### Cordova
+ {: #cordova-init}
     
-    Inizializza **BMSClient** e **BMSAnalytics**. Avrai bisogno del tuo valore [**Chiave API**](#analytics-clientkey).
+ Inizializza **BMSClient** e **BMSAnalytics**. Avrai bisogno del tuo valore [**Chiave API**](#analytics-clientkey).
 
   ```Javascript
   var applicationName = "HelloWorld";
@@ -112,7 +126,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 il parametro **bluemixRegion**. Nel programma di inizializzazione, il valore **bluemixRegion** specifica quale distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `BMSClient.REGION_US_SOUTH` o `BMSClient.REGION_UK`.
     <!-- , or `BMSClient.REGION_SYDNEY`. -->
     
-3. Avvia Analytics utilizzando il tuo oggetto applicazione e fornendo ad esso il nome della tua applicazione.  
+3. Avvia Analytics utilizzando il tuo oggetto applicazione e fornendo ad esso il nome della tua applicazione. 
 
 	Il nome che hai selezionato per la tua applicazione (`your_app_name_here`) visualizza la console {{site.data.keyword.mobileanalytics_short}} come il nome dell'applicazione. Il nome applicazione viene utilizzato come un filtro per cercare i log applicazione nel dashboard Quando utilizzi lo stesso nome applicazione su diverse piattaforme (ad esempio Android e iOS), puoi visualizzare tutti i log da tale applicazione sotto lo stesso nome, indipendentemente da quale sia la piattaforma dalla quale i log erano stati inviati.
 
@@ -151,14 +165,15 @@ il parametro **bluemixRegion**. Nel programma di inizializzazione, il valore **b
 
  Puoi registrare gli eventi dispositivo su WatchOS utilizzando i metodi `Analytics.recordApplicationDidBecomeActive()` e `Analytics.recordApplicationWillResignActive()`.
   
- Aggiungi la seguente riga al metodo `applicationDidBecomeActive()` della classe ExtensionDelegate.
-
+ Aggiungi la seguente riga al metodo `applicationDidBecomeActive()` della classe ExtensionDelegate:
+ 
 	```
 	Analytics.recordApplicationDidBecomeActive()
 	```
    {: codeblock}
 
- Aggiungi la seguente riga al metodo applicationWillResignActive() della classe ExtensionDelegate:
+ Aggiungi la seguente riga al metodo `applicationWillResignActive()` della classe ExtensionDelegate:
+ 
 	```
 	Analytics.recordApplicationWillResignActive()
 	```
@@ -200,20 +215,19 @@ Analytics.send(new ResponseListener() {
         });
 ```
 {: codeblock}
-
-<!-- removed: Analytics.log(eventJSONObject); -->
-
-<!--	
-Sample usage analytics for logging an event:
+	
+Analisi di utilizzo di esempio per la registrazione di un evento:
 	
 ```
-// Log a custom analytics event for custom charts, which is represented by a JSON object:
+// Registra un evento di analisi personalizzato
 JSONObject eventJSONObject = new JSONObject();
 	
 eventJSONObject.put("customProperty" , "propertyValue");
+
+Analytics.log(eventJSONObject);
 ```
 {: codeblock}
--->
+
 
 #### iOS - Swift
 {: #ios-usage-api}
@@ -239,20 +253,14 @@ Analytics.send(completionHandler: { (response: Response?, error: Error?) in
 ```
 {: codeblock}
 
-<!--
-Sample usage analytics for logging an event:
-
-#### Swift
-{: customchartsswift}
+Analisi di utilizzo di esempio per la registrazione di un evento:
 
 ```Swift
-// Log a custom analytics event for custom charts
+// Registra un evento di analisi personalizzato
 let eventObject = ["customProperty": "propertyValue"]
-Analytics.log(eventObject)
+Analytics.log(metadata: eventObject)
 ```
 {: codeblock}
-
--->
 
 #### Cordova
 {: #usage-analytics-cordova}
@@ -260,7 +268,7 @@ Analytics.log(eventObject)
   ```JavaScript
   // Abilita la registrazione dell'analisi dell'utilizzo
   BMSAnalytics.enable();
-
+  
   // Disabilita la registrazione dell'analisi dell'utilizzo
   BMSAnalytics.disable();
 
@@ -268,6 +276,16 @@ Analytics.log(eventObject)
   BMSAnalytics.send();
   ```
   {: codeblock}
+
+Analisi di utilizzo di esempio per la registrazione di un evento:
+
+```JavaScript
+// Registra un evento di analisi personalizzato
+var eventObject = {"customProperty": "propertyValue"}
+BMSAnalytics.log(eventObject)
+```
+{: codeblock}
+
   
   **Nota:** quando distribuisci le applicazioni Cordova, utilizza l'API nativa per abilitare la registrazione dell'evento del ciclo di vita dell'applicazione.
   
@@ -433,14 +451,16 @@ Logger.sdkDebugLoggingEnabled = true
 {: codeblock}
 -->
 
-## Notifica delle richieste di rete 
+## Effettuazione di una richiesta di rete
 {: #network-requests}
 
-Puoi configurare l'SDK client {{site.data.keyword.mobileanalytics_short}} per registrare le richieste di rete. Assicurati di aver inizializzato `BMSClient` e `BMSAnalytics`.
+Puoi configurare l'SDK client {{site.data.keyword.mobileanalytics_short}} per [effettuare una richiesta di rete](/docs/mobile/sdk_network_request.html). Assicurati di aver inizializzato `BMSClient` e `BMSAnalytics` e importato le SDK client.
+
+<!--
 #### Android
 {: #android-network-requests}
 
-**Nota:** questo frammento di codice assume che hai [importato le SDK client](#android-import).
+**Note:** This code snippet assumes that you have [imported the Client SDKs](#android-import).
 
 ```
 public void makeGetCall(){
@@ -451,7 +471,7 @@ public void makeGetCall(){
                 Request request = new Request("http://httpbin.org/get", "GET");
                     request.send(null, null);
             } catch (Exception e) {
-                // Gestisce esiti negativi qui.
+                // Handle failure here.
             }
         }
     });
@@ -460,11 +480,33 @@ public void makeGetCall(){
 ```
 {: codeblock}
 
+-->
+
+<!-- 
 #### Swift 3.0
 {: #ios-network-requests}
 
+ ```Swift
+ 	// Make a network request
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
+
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
+   	if error == nil {
+       	    print ("response:\(response?.responseText), no error")
+    	  } else {
+       	    print ("error: \(error)")
+    	}
+	}
+	request.send(completionHandler: callBack)
+ ```
+ {: codeblock}
+ 
+ -->
+
+<!-- Commenting out bmsurlsession
 ```
-// Effettua una richiesta di rete
+// Make a network request
 let urlSession = BMSURLSession(configuration: .default, delegate: nil, delegateQueue: nil)
 var request = URLRequest(url: URL(string: "http://httpbin.org/get")!)
 request.httpMethod = "GET"
@@ -483,12 +525,31 @@ urlSession.dataTask(with: request) { (data: Data?, response: URLResponse?, error
 }.resume()
 ```
 {: codeblock}
+-->
 
+<!--
 #### Swift 2.2
-{: ios-swift23-network-requests}
+{: ios-swift22-network-requests}
 
+```Swift
+ 	// Make a network request
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
+
+	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
+   	if error == nil {
+       	    print ("response:\(response?.responseText), no error")
+    	  } else {
+       	    print ("error: \(error)")
+    	}
+	}
+	request.send(completionHandler: callBack)
+ ```
+ {: codeblock}
+-->
+<!--
 ```
-// Effettua una richiesta di rete
+// Make a network request
 let urlSession = BMSURLSession(configuration: .defaultSessionConfiguration(), delegate: nil, delegateQueue: nil)
 let request = NSMutableURLRequest(URL: NSURL(string: "http://httpbin.org/get")!)
 request.HTTPMethod = "GET"
@@ -507,8 +568,8 @@ urlSession.dataTaskWithRequest(request) { (data: NSData?, response: NSURLRespons
 }.resume()
 ```
 {: codeblock}
-
-
+-->
+<!--
 #### Cordova
 {: #cordova-network-requests}
 
@@ -519,10 +580,12 @@ var success = function(data){
  var failure = function(error)
      {console.log("failure", error);
  }
- var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
+ var request = new BMSRequest("<your application route>", BMSRequest.GET);
  request.send(success, failure);
 ```
 {: codeblock}
+
+-->
 
 ## Segnalazione analisi degli arresti anomali
 {: #report-crash-analytics}
