@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-28"
+lastupdated: "2016-11-29"
 
 ---
 
@@ -21,11 +21,11 @@ Create simulated appliances in the {{site.data.keyword.iotelectronics_full}} sta
 
 1. In your {{site.data.keyword.Bluemix_notm}} dashboard, start your {{site.data.keyword.iotelectronics}} starter application by clicking the starter application tile.
 
-    ![{{site.data.keyword.iotelectronics}} in the dashboard.](images/IoT4E_bm_dashboard.png "{{site.data.keyword.iotelectronics}} in the dashboard")
+    ![{{site.data.keyword.iotelectronics}} in the dashboard.](images/IoT4E_bm_dashboard.svg "{{site.data.keyword.iotelectronics}} in the dashboard")
 
 2. Wait for the *Your app is running* status message in the header and then click **View App** to display the starter app.  
 
-    ![{{site.data.keyword.iotelectronics}} view app.](images/IoT4E_view_app.png "{{site.data.keyword.iotelectronics}} view app")
+    ![{{site.data.keyword.iotelectronics}} view app.](images/IoT4E_view_app.svg "{{site.data.keyword.iotelectronics}} view app")
 
 ## Creating simulated appliances
 {: #create_sim}
@@ -36,15 +36,15 @@ In the starter app, you can create and control simulated appliances as the appli
     - **Connect and manage simulated appliances** to create simulated appliances as the appliance manufacturer
     - **Remotely control your connected appliances** to create simulated appliances and connect with the [sample mobile app](iotelectronics_config_mobile.html) as the appliance owner.
 
-    ![{{site.data.keyword.iotelectronics}} starter experience](images/IoT4E_remotely_option.png "{{site.data.keyword.iotelectronics}} starter experience")
+    ![{{site.data.keyword.iotelectronics}} starter experience](images/IoT4E_remotely_option.svg "{{site.data.keyword.iotelectronics}} starter experience")
 
 2. Scroll to the section that is labeled **Next, choose or add new simulated washer** and click the + icon. A new washer is created.
 
-    ![Adding a washer.](images/IoT4E_add_washer.png "Adding a washer")
+    ![Adding a washer.](images/IoT4E_add_washer.svg "Adding a washer")
 
 3. To view your washer details, issue commands, and cause failures, click a washer.
 
-  ![Washer status details.](images/IoT4E_washer_control.png "Washer status details")
+  ![Washer status details.](images/IoT4E_washer_control.svg "Washer status details")
 
 
 # Related Links
