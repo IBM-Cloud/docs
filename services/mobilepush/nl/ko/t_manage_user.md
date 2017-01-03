@@ -5,10 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # 사용자 ID를 사용하여 디바이스 등록
 {: #register_device_with_userId}
-마지막 업데이트 날짜: 2016년 10월 17일
+마지막 업데이트 날짜: 2016년 12월 7일
 {: .last-updated}
 
 사용자 ID 기반 알림에 등록하려면 다음 단계를 완료하십시오. 
@@ -24,17 +28,11 @@ push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 ```
 	{: codeblock}
 
-####AppGUID
-{: push-app-guid}
 
-{{site.data.keyword.mobilepushshort}} 서비스의 AppGUID 키입니다. 
+- **AppGUID**: {{site.data.keyword.mobilepushshort}} 서비스의 AppGUID입니다. 
+- **clientSecret**: {{site.data.keyword.mobilepushshort}} 서비스의 clientSecret 키입니다. 
 
-####clientSecret
-{: android-client-secret}
-
-{{site.data.keyword.mobilepushshort}} 서비스의 clientSecret 키입니다. 
-
-**registerDeviceWithUserId** API를 사용하여 {{site.data.keyword.mobilepushshort}}을 받을 디바이스를 등록하십시오. 
+  **registerDeviceWithUserId** API를 사용하여 {{site.data.keyword.mobilepushshort}}을 받을 디바이스를 등록하십시오. 
 ```
 // Register the device to {{site.data.keyword.mobilepushshort}}.
 push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
@@ -51,18 +49,31 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-####userId
-{: android-user-id}
 
-{{site.data.keyword.mobilepushshort}}에 등록하기 위한 고유 사용자 ID 값을 전달하십시오.
+- **사용자 ID**: {{site.data.keyword.mobilepushshort}}에 등록하기 위한 고유 사용자 ID 값을 전달하십시오.
 
 **참고:** UserId로 대상이 지정되는 {{site.data.keyword.mobilepushshort}}을 사용하려면 UserId를 사용하여 디바이스를 등록하고 {{site.data.keyword.mobilepushshort}} 서비스가 프로비저닝될 때 할당되는 'clientSecret'을 전달해야 합니다. 올바른 clientSecret이 없으면 디바이스 등록에 실패합니다. 
+
+## Cordova
+{: cordova}
+
+다음 API를 사용하여 UserId 기반 {{site.data.keyword.mobilepushshort}}을 받도록 등록하십시오. 
+
+```
+// Register device for push notification with UserId
+var options = {"userId": "Your User Id value"};
+BMSPush.registerDevice(options,success, failure); 
+```
+	{: codeblock}
+
+
+- **사용자 ID**: {{site.data.keyword.mobilepushshort}}에 등록하기 위한 고유 사용자 ID 값을 전달하십시오.
 
 
 ## Objective-C
 {: objc-register}
 
-다음 API를 사용하여 UserId 기반 {{site.data.keyword.mobilepushshort}}을 받도록 등록하십시오. 
+다음 API를 사용하여 사용자 ID 기반 {{site.data.keyword.mobilepushshort}}을 받도록 등록하십시오. 
 ```
 // Initialize the MFPPush
 IMFPushClient* push = [IMFPushClient sharedInstance];
@@ -70,15 +81,9 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 ```
 	{: codeblock}
 
-###AppGUID
-{: objc-pushappguid}
 
-{{site.data.keyword.mobilepushshort}} 서비스의 AppGUID 키입니다. 
-
-####clientSecret
-{: objc-client-secret}
-
-{{site.data.keyword.mobilepushshort}} 서비스의 clientSecret 키입니다. 
+- **AppGUID**: {{site.data.keyword.mobilepushshort}} 서비스의 AppGUID입니다. 
+- **clientSecret**: {{site.data.keyword.mobilepushshort}} 서비스의 clientSecret 키입니다. 
 
 **registerWithUserId** API를 사용하여 {{site.data.keyword.mobilepushshort}}을 받을 디바이스를 등록하십시오. 
 ```
@@ -96,10 +101,8 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 ```
 	{: codeblock}
 
-####userId
-{: objc-user-id}
 
-{{site.data.keyword.mobilepushshort}}에 등록하기 위한 고유 사용자 ID 값을 전달하십시오.
+- **사용자 ID**: {{site.data.keyword.mobilepushshort}}에 등록하기 위한 고유 사용자 ID 값을 전달하십시오.
 
 ## Swift
 {: swift-register}
@@ -111,14 +114,9 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 ```
 	{: codeblock}
 
-####AppGUID
-{: swift-pushappguid}
-{{site.data.keyword.mobilepushshort}} 서비스의 AppGUID 키입니다. 
 
-####clientSecret
-{: swift-client-secret}
-
-{{site.data.keyword.mobilepushshort}} 서비스의 clientSecret 키입니다. 
+- **AppGUID**: {{site.data.keyword.mobilepushshort}} 서비스의 AppGUID입니다. 
+- **clientSecret**: {{site.data.keyword.mobilepushshort}} 서비스의 clientSecret 키입니다. 
 
 **registerWithUserId** API를 사용하여 {{site.data.keyword.mobilepushshort}}을 받을 디바이스를 등록하십시오. 
 
@@ -135,12 +133,9 @@ if error.isEmpty {
 ```
 	{: codeblock}
 
-####userId
-{: swift-user-id}
+- **사용자 ID**: {{site.data.keyword.mobilepushshort}}에 등록하기 위한 고유 사용자 ID 값을 전달하십시오.
 
-{{site.data.keyword.mobilepushshort}}에 등록하기 위한 고유 사용자 ID 값을 전달하십시오.
-
-## Google Chrome 및 Mozilla Firefox
+## Google Chrome, Safari 및 Mozilla Firefox
 {: web-register}
 
 사용자 ID 기반 알림에 등록하려면 다음 API를 사용하십시오. `app GUID`, `app Region` 및 `Client Secret`을 사용하여 SDK를 초기화하십시오.
@@ -185,7 +180,7 @@ var params = {
 ```
 	{: codeblock}
   
-초기화가 완료되면 사용자 ID를 사용하여 웹 애플리케이션을 등록하십시오.
+초기화가 완료되면 사용자 ID로 웹 애플리케이션을 등록해야 합니다. 
 
 ```
     bmsPush.registerWithUserId("UserId", function(response) {
@@ -196,7 +191,6 @@ var params = {
 
 # 사용자 ID 기반 알림 사용
 {: #using_userid}
-
 
 사용자 ID 기반 알림은 특정 사용자를 대상으로 하는 알림 메시지입니다. 하나의 사용자에 여러 디바이스를 등록할 수 있습니다. 다음 단계는 사용자 ID 기반 알림을 전송하는 방법에 대해 설명합니다. 
 

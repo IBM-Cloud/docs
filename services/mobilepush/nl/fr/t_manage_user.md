@@ -5,10 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Enregistrement d'un appareil avec un ID utilisateur
 {: #register_device_with_userId}
-Dernière mise à jour : 17 octobre 2016
+Dernière mise à jour : 7 décembre 2016
 {: .last-updated}
 
 Pour procéder à un enregistrement pour une notification à base d'ID utilisateur, procédez comme suit :
@@ -24,17 +28,11 @@ push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 ```
 	{: codeblock}
 
-####AppGUID
-{: push-app-guid}
 
-Il s'agit de la clé AppGUID du service {{site.data.keyword.mobilepushshort}}.
+- **AppGUID** : clé AppGUID du service {{site.data.keyword.mobilepushshort}}.
+- **clientSecret** : clé clientSecret du service {{site.data.keyword.mobilepushshort}}.
 
-####clientSecret
-{: android-client-secret}
-
-Il s'agit de la clé clientSecret du service {{site.data.keyword.mobilepushshort}}.
-
-Utilisez l'API **registerDeviceWithUserId** pour enregistrer l'appareil pour {{site.data.keyword.mobilepushshort}}.
+  Utilisez l'API **registerDeviceWithUserId** pour enregistrer l'appareil pour {{site.data.keyword.mobilepushshort}}.
 ```
 // Register the device to {{site.data.keyword.mobilepushshort}}.
 push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
@@ -51,18 +49,31 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-####userId
-{: android-user-id}
 
-Passe la valeur userId unique pour l'enregistrement de {{site.data.keyword.mobilepushshort}}.
+- **userId** : passe la valeur userId unique pour l'enregistrement de {{site.data.keyword.mobilepushshort}}.
 
 **Remarque : ** pour activer les notifications de type {{site.data.keyword.mobilepushshort}} ciblées par ID utilisateur, prenez soin d'enregistrer l'appareil avec un ID utilisateur et passez aussi la valeur confidentielle clientSecret qui est allouée quand les services {{site.data.keyword.mobilepushshort}} sont provisionnés. L'enregistrement de l'appareil échouera en l'absence d'une valeur clientSecret valide.
+
+## Cordova
+{: cordova}
+
+Utilisez les API suivantes pour l'enregistrement des notifications de type {{site.data.keyword.mobilepushshort}} à base d'ID utilisateur.
+
+```
+// Enregistrement du périphérique pour notification push avec UserId
+var options = {"userId": "Your User Id value"};
+BMSPush.registerDevice(options,success, failure);
+```
+	{: codeblock}
+
+
+- **userId** : passe la valeur userId unique pour l'enregistrement de {{site.data.keyword.mobilepushshort}}.
 
 
 ## Objective-C
 {: objc-register}
 
-Utilisez les API suivantes pour l'enregistrement des notifications de type {{site.data.keyword.mobilepushshort}} à base d'ID utilisateur.
+Utilisez les API suivantes pour enregistrement pour {{site.data.keyword.mobilepushshort}} basées UserId.
 ```
 // Initialize the MFPPush
 IMFPushClient* push = [IMFPushClient sharedInstance];
@@ -70,15 +81,9 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 ```
 	{: codeblock}
 
-###AppGUID
-{: objc-pushappguid}
 
-Il s'agit de la clé AppGUID du service {{site.data.keyword.mobilepushshort}}.
-
-####clientSecret
-{: objc-client-secret}
-
-Il s'agit de la clé clientSecret du service {{site.data.keyword.mobilepushshort}}.
+- **AppGUID** : clé AppGUID du service {{site.data.keyword.mobilepushshort}}.
+- **clientSecret** : clé clientSecret du service {{site.data.keyword.mobilepushshort}}.
 
 Utilisez l'API **registerWithUserId** pour enregistrer l'appareil pour {{site.data.keyword.mobilepushshort}}.
 ```
@@ -96,10 +101,8 @@ Utilisez l'API **registerWithUserId** pour enregistrer l'appareil pour {{site.da
 ```
 	{: codeblock}
 
-####userId
-{: objc-user-id}
 
-Passe la valeur userId unique pour l'enregistrement de {{site.data.keyword.mobilepushshort}}.
+- **userId** : passe la valeur userId unique pour l'enregistrement de {{site.data.keyword.mobilepushshort}}.
 
 ## Swift
 {: swift-register}
@@ -111,14 +114,9 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 ```
 	{: codeblock}
 
-####AppGUID
-{: swift-pushappguid}
-Il s'agit de la clé AppGUID du service {{site.data.keyword.mobilepushshort}}.
 
-####clientSecret
-{: swift-client-secret}
-
-Il s'agit de la clé clientSecret du service {{site.data.keyword.mobilepushshort}}.
+- **AppGUID** : clé AppGUID du service {{site.data.keyword.mobilepushshort}}.
+- **clientSecret** : clé clientSecret du service {{site.data.keyword.mobilepushshort}}.
 
 Utilisez l'API **registerWithUserId** pour enregistrer l'appareil pour {{site.data.keyword.mobilepushshort}}.
 
@@ -135,12 +133,9 @@ if error.isEmpty {
 ```
 	{: codeblock}
 
-####userId
-{: swift-user-id}
+- **userId** : passe la valeur userId unique pour l'enregistrement de {{site.data.keyword.mobilepushshort}}.
 
-Passe la valeur userId unique pour l'enregistrement de {{site.data.keyword.mobilepushshort}}.
-
-## Google Chrome et Mozilla Firefox
+## Google Chrome, Safari et Mozilla Firefox
 {: web-register}
 
 Utilisez les API suivantes pour l'enregistrement des notifications basées sur des balises. Initialisez le logiciel SDK avec les services `appGUID`, `appRegion` et `clientSecret`.
@@ -185,7 +180,7 @@ var params = {
 ```
 	{: codeblock}
   
-Une fois l'initialisation terminée, enregistrez l'application Web avec l'ID utilisateur.
+Après la réussite de l'initialisation, vous devez enregistrer l'application Web avec l'userId.
 
 ```
 bmsPush.registerWithUserId("UserId", function(response) {
@@ -196,7 +191,6 @@ bmsPush.registerWithUserId("UserId", function(response) {
 
 # Utilisation des notifications basées sur un ID utilisateur
 {: #using_userid}
-
 
 Les notifications basées sur un ID utilisateur sont des messages de notification qui sont ciblés vers un utilisateur spécifique. Plusieurs appareils différents peuvent être enregistrés avec un seul et même utilisateur. La procédure suivante décrit comment envoyer des notifications à base d'ID utilisateur.
 

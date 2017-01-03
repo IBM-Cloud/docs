@@ -12,12 +12,12 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}} 概説
 {: #gettingstartedtemplate}
-最終更新日: 2016 年 11 月 02 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
 {:shortdesc}
 
-{{site.data.keyword.mobilepushshort}} サービスは、iOS と Android のモバイル・プラットフォーム、Google Chrome と Mozilla Firefox の Web ブラウザー、および Google Chrome アプリケーションおよびエクステンションをターゲットとする、モバイルと Web のプッシュ通知を送信および管理するための統一プラットフォームを提供します。{{site.data.keyword.mobilepushshort}}サービスは、デバイス、デバイス・プラットフォーム、および Web ブラウザーへのアプリケーション・ユーザーのマッピングを管理し、それらへのプッシュ通知のディスパッチを処理します。このサービスを使用して、モバイル・アプリケーション・ユーザーと Web ブラウザー・アプリケーション・ユーザーにブロードキャスト、ユニキャスト (deviceID および userID に基づく) に加え、タグ (またはトピック) をプッシュ通知として送信できます。また、クライアント・アプリケーションをさらに開発するために SDK および [REST API](https://mobile.{DomainName}/imfpush/) を使用することもできます。
+{{site.data.keyword.mobilepushshort}} サービスは、iOS と Android のモバイル・プラットフォーム、Google Chrome、Mozilla Firefox、Safari の Web ブラウザー、および Google Chrome アプリケーションおよびエクステンションをターゲットとする、モバイルと Web のプッシュ通知を送信および管理するための統一プラットフォームを提供します。{{site.data.keyword.mobilepushshort}}サービスは、デバイス、デバイス・プラットフォーム、および Web ブラウザーへのアプリケーション・ユーザーのマッピングを管理し、それらへのプッシュ通知のディスパッチを処理します。このサービスを使用して、モバイル・アプリケーション・ユーザーと Web ブラウザー・アプリケーション・ユーザーにブロードキャスト、ユニキャスト (deviceID および userID に基づく) に加え、タグ (またはトピック) をプッシュ通知として送信できます。また、クライアント・アプリケーションをさらに開発するために SDK および [REST API](https://mobile.{DomainName}/imfpush/) を使用することもできます。
 
 
 # 関連リンク
@@ -25,7 +25,7 @@ copyright:
 
 * [概要](c_overview_push.html){: new_window}
 
-## チュートリアルおよびサンプル{:id="samples"}
+## チュートリアルおよびサンプル {:id="samples"}
 {: #samples}
 * [Android helloPush サンプル・アプリケーション](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/){: new_window}
 - [Cordova サンプル・アプリケーション](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush){: new_window}

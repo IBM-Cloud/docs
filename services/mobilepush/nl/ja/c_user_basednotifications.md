@@ -1,12 +1,18 @@
 ---
+
 copyright:
  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # ユーザー・ベースの通知の使用可能化
 {: #user_based_notifications}
-最終更新日: 2016 年 10 月 18 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
 ユーザー ID ベースの{{site.data.keyword.mobilepushshort}}は、カスタマイズしたメッセージを使用し、モバイル・アプリ・ユーザーをターゲットとします。ユーザー・ベースの通知では、通知設定に基づいて特定の個人に通知するように選択できます。

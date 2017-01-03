@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 次のステップ
 {: #next_steps_tags}
-最終更新日: 2016 年 10 月 17 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
 基本通知を正常にセットアップした後、タグ・ベースの通知および詳細オプションの構成を行うことができます。

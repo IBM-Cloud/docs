@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Gestión de etiquetas
 {: #manage_tags}
-Última actualización: 17 de octubre de 2016
+Última actualización: 07 de diciembre de 2016
 {: .last-updated}
 
 Utilice el panel de control {{site.data.keyword.mobilepushshort}} para crear y suprimir etiquetas para la aplicación y, a continuación, iniciar las notificaciones basadas en etiquetas. La notificación basada en etiquetas se recibe en los dispositivos suscritos a las etiquetas.
@@ -45,7 +50,7 @@ Las notificaciones basadas en etiquetas son mensajes que están pensados para to
 
 Las etiquetas proporcionan una forma para enviar notificaciones de destino a usuarios en función de sus intereses, a diferencia de las difusiones generales que se envían a todas las aplicaciones. Puede crear y gestionar etiquetas utilizando el separador Etiqueta en el panel de control {{site.data.keyword.mobilepushshort}} o utilizando las API REST. Puede utilizar fragmentos de código para gestionar y consultar las suscripciones de etiquetas para la aplicación móvil. Puede utilizar estos fragmentos de código para obtener suscripciones, suscribirse a una etiqueta, anular la suscripción de una etiqueta u obtener una lista de las etiquetas disponibles. Copie estos fragmentos de código en su aplicación móvil.
 
-## Android
+## Obtención de etiquetas en Android
 {: android-get-tags}
 
 La API **getTags** devuelve la lista de etiquetas disponibles a la que el dispositivo se puede suscribir. Después de suscribir el dispositivo a una determinada etiqueta, el dispositivo podrá recibir {{site.data.keyword.mobilepushshort}} que se hayan enviado para dicha etiqueta.
@@ -92,7 +97,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 	```
 	{: codeblock}
 
-## Cordova
+## Obtención de etiquetas en Cordova
 {: cordova-get-tags}
 
 Copie los siguientes fragmentos de código en la aplicación para móviles para obtener una lista de las etiquetas a las que el dispositivo está suscrito y para obtener una lista de las etiquetas disponibles.
@@ -100,22 +105,22 @@ Copie los siguientes fragmentos de código en la aplicación para móviles para 
 Recupere una matriz de etiquetas disponibles a las que suscribirse.
 
 ```
-//Get a list of available tags to which the device can subscribe
-MFPPush.retrieveAvailableTags(function(tags) {
+//Obtenga una lista de etiquetas disponibles a las que el dispositivo se puede suscribir
+BMSPush.retrieveAvailableTags(function(tags) {
   alert(tags);
-}, null);
+}, failure); 
 ```
 	{: codeblock}
 
 ```
-//Get a list of available tags to which the device is subscribed.
-MFPPush.getSubscriptionStatus(function(tags) {
-  alert(tags);
-}, null);
+//Obtenga una lista de las etiquetas disponibles a las que el dispositivo se suscribe.
+BMSPush.retrieveSubscriptions(function(tags) {
+   alert(tags); 
+}, failure); 
 ```
 	{: codeblock}
 
-## Objective-C
+## Obtención de etiquetas en Objective-C
 {: objc-get-tags}
 
 Copie los siguientes fragmentos de código en la aplicación iOS desarrollada utilizando Objective-C para obtener una lista de las etiquetas a las que el dispositivo está suscrito y para obtener una lista de las etiquetas disponibles a las que se puede suscribir el dispositivo.
@@ -157,7 +162,7 @@ subscribedTags = [response subscriptions];
   ```
 	{: codeblock}
 
-## Swift
+## Obtención de etiquetas en Swift
 {: swift-get-tags}
 
 La API **retrieveAvailableTagsWithCompletionHandler** devuelve la lista de etiquetas disponibles a la que el dispositivo se puede suscribir. Después de suscribir el dispositivo a una determinada etiqueta, el dispositivo podrá recibir {{site.data.keyword.mobilepushshort}} que se hayan enviado para dicha etiqueta.
@@ -198,7 +203,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 ```
 	{: codeblock}
 
-## Google Chrome y Mozilla Firefox
+## Google Chrome, Safari y Mozilla Firefox
 {: web-get-tags}
 
 Para obtener la lista de etiquetas disponibles, a las que se pueden suscribir los clientes, utilice el código siguiente.
@@ -219,16 +224,6 @@ var bmsPush = new BMSPush();
 ```
 	{: codeblock}
 
-Copie los siguientes fragmentos de código en las aplicaciones y extensiones de Google Chrome para obtener una lista de etiquetas a las que están suscritos los clientes.
-
-```
-var bmsPush = new BMSPush();
-  bmsPush.retrieveSubscriptions(function(response) 
-	{
-   alert(response.response)
- })
-```
-	{: codeblock}
 
 ## Aplicaciones y extensiones de Google Chrome
 {: web-get-tags}
@@ -268,7 +263,7 @@ var bmsPush = new BMSPush();
 
 Utilice los siguientes fragmentos de código para permitir que los dispositivos obtengan suscripciones, se suscriban a una etiqueta y cancelen la suscripción de una etiqueta.
 
-## Android
+## Suscripción y cancelación de la suscripción a las etiquetas en Android
 {: android-subscribe-tags}
 
 Copie y pegue este fragmento de código en la aplicación para móviles de Android.
@@ -305,19 +300,19 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-## Cordova
+## Suscripción y cancelación de la suscripción a las etiquetas en Cordova
 {: cordova-subscribe-tags}
 
 Copie y pegue este fragmento de código en la aplicación para móviles de Cordova.
 
 ```
 var tag = "YourTag";
-MFPPush.subscribe(tag, success, failure);
-MFPPush.unsubscribe(tag, success, failure);
+BMSPush.subscribe(tag, success, failure);
+BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Objective-C
+## Suscripción y cancelación de la suscripción a las etiquetas en Objective-C
 {: objc-subscribe-tags}
 
 Copie y pegue este fragmento de código en la aplicación para móviles de Objective-C.
@@ -355,7 +350,7 @@ Utilice la API **unsubscribeFromTags** para anular la suscripción a una etiquet
 ```
 	{: codeblock}
 
-## Swift
+## Suscripción y cancelación de la suscripción a las etiquetas en Swift
 {: swift-subscribe-tags}
 
 Copie y pegue este fragmento de código en la aplicación para móviles de Swift.
@@ -365,13 +360,15 @@ Copie y pegue este fragmento de código en la aplicación para móviles de Swift
 Utilice la API **subscribeToTags** para suscribirse a una etiqueta.
 
 ```
-push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
-	//error while subscribing to tags
-	} else {
-//successfully subscribed to tags var subStatus = response.subscribeStatus();
-	}
-}
+push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statusCode, error) -> Void in
+    if error.isEmpty {
+        print("Response when subscribing to tags: \(response?.description)")
+        print("Status code when subscribing to tags: \(statusCode)")
+    } else {
+        print("Error when subscribing to tags: \(error) ")
+        print("Error status code when subscribing to tags: \(statusCode)")
+    }
+})
 ```
 	{: codeblock}
 
@@ -420,9 +417,6 @@ var tagsArray = ["tag1", "Tag2"]
 {: #using_tags}
 
 Las notificaciones basadas en etiquetas son mensajes que están pensados para todos los dispositivos suscritos a una etiqueta determinada. Cada dispositivo se puede suscribir a cualquier número de etiquetas. En este tema se describe cómo enviar notificaciones basadas en etiquetas. Las suscripciones las mantiene la instancia de Bluemix del servicio {{site.data.keyword.mobilepushshort}}. Cuando se suprime una etiqueta, también se suprime toda la información asociada a dicha etiqueta, incluidos los suscriptores y los dispositivos. No es necesaria ninguna anulación de la suscripción automática para esta etiqueta porque ya no existe y no es necesaria ninguna acción desde el lado del cliente.
-
-###Antes de empezar
-{: before-you-begin}
 
 Cree etiquetas en la pantalla **Etiquetas**. Para obtener más información sobre cómo crear etiquetas, consulte [Creación de etiquetas](t_manage_tags.html).
 

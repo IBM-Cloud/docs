@@ -6,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Einfache Push-Benachrichtigungen senden
 {: #push-send-notifications}
-Letzte Aktualisierung: 17. Oktober 2016
+Letzte Aktualisierung: 06. Dezember 2016
 {: .last-updated}
 
 Nach dem Entwickeln Ihrer Anwendungen können Sie einfache Push-Benachrichtigungen (ohne Tags, Badges, zusätzliche Nutzdaten oder Audiodateien) senden.

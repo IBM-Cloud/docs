@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Ativando aplicativos Android para receber {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Última atualização: 16 de novembro de 2016
+Última atualização: 07 de dezembro de 2016
 {: .last-updated}
 
 É possível ativar os aplicativos do Android para receber
@@ -41,11 +45,6 @@ serviços do Google Play em suas dependências do escopo de compilação.
 	```
     {: codeblock}
 	
-	- Inclua a dependência a seguir somente no final do arquivo.
-	```
-	'com.google.gms.google-services'
-	```
-    {: codeblock}
 	- Inclua as dependências a seguir para importar instruções
 que são requeridas para os fragmentos de código.
 	```
@@ -132,37 +131,39 @@ console do Firebase Cloud Messaging (FCM).
 
 1. No console do Firebase, clique no ícone
 **Configurações de projeto**.
-	![Configurações de projeto do Firebase](images/FCM_4.jpg)
+    ![Configurações de projeto do Firebase](images/FCM_4.jpg)
 
 3. Selecione **INCLUIR APP** ou
 **Incluir Firebase em seu ícone de app
 Android** a partir da guia Geral no painel Seus apps.
+    ![Incluindo Firebase no Android](images/FCM_5.jpg)
 
-	![Incluindo Firebase no Android](images/FCM_5.jpg)
+4. Na janela Incluir Firebase no seu app Android, inclua
+**com.ibm.mobilefirstplatform.clientsdk.android.push** como o Nome do pacote. O campo de
+apelido App é opcional. Clique em **INCLUIR APP**. ![Incluindo o Firebase em sua janela do Android](images/FCM_1.jpg)
 
-4. Em Incluir Firebase na janela do seu app do Android, inclua
-**com.ibm.mobilefirstplatform.clientsdk.android.push** como o nome do pacote. 
-Além disso, inclua o nome do pacote de seu aplicativo, repetindo a etapa 2.
+5. Inclua o nome do pacote do seu aplicativo inserindo o nome do pacote na janela Incluir Firebase no
+seu app Android. O campo de apelido App é opcional. Clique em **INCLUIR APP**. Para cada
+pacote incluído, o Firebase requer mudanças em `build.gradle` incluindo o nome
+do pacote.
 
-	![Incluindo o Firebase em sua janela do Android](images/FCM_1.jpg)
+	![Incluindo o nome do pacote do seu aplicativo](images/FCM_2.jpg)
 
-5. Clique em **Continuar** para copiar o arquivo de configuração. 
-6. Clique em **Concluir** para incluir o
-arquivo **build.gradle**.
-7. Faça download do arquivo **google-services.json** gerado.
+6. O arquivo `google-services.json` é gerado. Copie o
+arquivo `google-services.json` para o seu diretório-raiz do módulo do aplicativo Android.
+Observe que o arquivo `google-service.json` inclui os nomes de pacote adicionados.
 
-	![O arquivo google-services.json](images/FCM_3.jpg)
-
-8. Inclua o arquivo
-**google-services.json** no diretório-raiz do seu
-aplicativo.
-
-	![Incluindo o arquivo json no
+    ![Incluindo o arquivo json no
 diretório-raiz do seu aplicativo](images/FCM_7.jpg)
+
+5. Na janela Incluir Firebase no seu app Android, clique em **Continuar** e, em seguida, **Concluir**. 
+
+  
 
 Construa e execute o seu aplicativo.
 
-## Inicializando os apps Push SDK for Android
+## Inicializando
+os apps Push SDK for Android
 {: #android_initialize}
 
 Um local comum para colocar o código de inicialização está no método onCreate da atividade principal no aplicativo Android. Há dois componentes do SDK que
@@ -206,7 +207,8 @@ no painel de serviço Notificação push.
 
 Use a API `MFPPush.register()` para registrar o dispositivo com o serviço {{site.data.keyword.mobilepushshort}}. Para o
 registro para dispositivos Android, inclua as informações do Firebase Cloud Messaging (FCM) ou do Google Cloud Messaging (GCM) no painel de configuração de serviço
-{{site.data.keyword.mobilepushshort}} do Bluemix. Para obter mais informações, consulte [Configurando credenciais para o Google Cloud Messaging](t_push_provider_android.html).
+{{site.data.keyword.mobilepushshort}} do Bluemix. Para obter mais informações,
+consulte [Configurando credenciais para o Google Cloud Messaging](t_push_provider_android.html).
 
 Copie os fragmentos de código a seguir para seu aplicativo móvel Android.
 
@@ -280,6 +282,88 @@ possível enviar uma mensagem conforme descrito em Enviando notificações push 
 aplicativo estiver em execução no primeiro plano, a notificação será
 manipulada por **MFPPushNotificationListener**. Se o aplicativo estiver em segundo plano, uma mensagem será exibida na barra de notificações.
 
+## Monitorando notificações push em dispositivos Android
+{: #android_monitor}
+
+Para monitorar o status atual da notificação dentro do aplicativo, é possível implementar a interface
+`com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener`
+e definir o método onStatusChange(String messageId, MFPPushNotificationStatus status). 
+
+O **messageId** é o identificador da mensagem enviada do servidor.
+**MFPPushNotificationStatus** define o status das notificações como valores:
+
+- **RECEIVED** - o app recebeu a notificação. 
+- **QUEUED** - o app enfileira a notificação para chamar o listener de notificação. 
+- **OPENED** - o usuário abre a notificação clicando na notificação na bandeja, ativando-a no ícone do app ou quando o app está em primeiro plano. 
+- **DISMISSED** - o usuário limpa/descarta a notificação na bandeja.
+
+É necessário registrar a classe
+**com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener**
+com MFPPush.
+
+```
+push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+@Override
+public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+// Handle status change
+}
+});
+```
+    {: codeblock}
+
+
+### Atendendo ao status DISMISSED
+
+É possível optar por atender ao status DISMISSED em uma das seguintes condições:
+
+- Quando o app está ativo (em execução em primeiro plano ou em segundo plano)
+
+  Inclua o fragmento no seu arquivo `AndroidManifest.xml`:
+
+```
+<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
+<intent-filter>
+<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+</intent-filter>
+</receiver>
+```
+	{: codeblock}
+
+- Quando o app está ativo (em execução em primeiro plano ou em segundo plano) e não executando (encerrado)
+
+É necessário estender o receptor de transmissão
+**com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler**
+e substituir o método **onReceive()**, em que o
+**MFPPushNotificationStatusListener** deve ser registrado antes de chamar o método
+**onReceive()** da classe de base.
+
+```
+public class MyDismissHandler extends MFPPushNotificationDismissHandler {
+@Override
+public void onReceive(Context context, Intent intent) {
+MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+@Override
+public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+// Handle status change
+}
+});
+super.onReceive(context, intent);
+}
+}
+```
+    {: codeblock}
+
+
+Inclua o fragmento a seguir no arquivo `AndroidManifest.xml`:
+
+```
+<receiver android:name="Your_Android_Package_Name.Your_Handler">
+<intent-filter>
+<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+</intent-filter>
+</receiver>
+```
+    {: codeblock}
 
 ## Enviando {{site.data.keyword.mobilepushshort}} básicas
 {: #send}
@@ -295,7 +379,7 @@ escolhendo uma opção **Enviar para**. As opções suportadas são
 **Dispositivos iOS**, **Notificações da web** e
 **Todos os dispositivos**.
 **Nota**: ao selecionar a opção **Todos os dispositivos**, todos os dispositivos inscritos para {{site.data.keyword.mobilepushshort}} receberão notificações.
-![Tela Notificações](images/tag_notification.jpg)
+![Tela de notificações](images/tag_notification.jpg)
 
 2. No campo **Mensagem**, componha sua mensagem. Escolha a
 configurar das definições opcionais conforme necessário.
@@ -310,7 +394,7 @@ A captura de tela a seguir mostra uma notificação push no plano de fundo para 
 
 ![Notificação push no plano de fundo no Android](images/background.jpg)
 
-### Configurações opcionais para enviar notificações
+### Configurações opcionais do Android para envio de notificações
 {: #send_otpional_setting}
 
 É possível customizar ainda mais as configurações do {{site.data.keyword.mobilepushshort}} para enviar notificações a dispositivos Android. As opções de customização opcionais a seguir são suportadas.
@@ -338,6 +422,6 @@ Depois de configurar com êxito notificações básicas,
 é possível configurar notificações baseadas em tag e opções
 avançadas.
 
-Inclua esses recursos do serviço de notificações push em seu aplicativo.
-Para usar notificações baseadas em tag, consulte [Notificações baseadas em tag](c_tag_basednotifications.html).
-Para usar opções de notificações avançadas, veja [Ativando notificações push avançadas](t_advance_badge_sound_payload.html).
+Inclua esses recursos de serviço de notificações push no seu app. Para usar
+notificações baseadas em tag, consulte [Notificações baseadas em
+tag](c_tag_basednotifications.html). Para usar opções de notificações avançadas, veja [Ativando notificações push avançadas](t_advance_badge_sound_payload.html).

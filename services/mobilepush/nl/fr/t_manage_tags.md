@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Gestion des balises
 {: #manage_tags}
-Dernière mise à jour : 17 octobre 2016
+Dernière mise à jour : 7 décembre 2016
 {: .last-updated}
 
 Utilisez le tableau de bord {{site.data.keyword.mobilepushshort}} afin de créer et de supprimer des balises pour votre application puis d'initier des notifications basées sur des balises. Ces notifications basées sur des balises sont reçues sur les appareils abonnés à ces balises.
@@ -47,7 +52,7 @@ particulière. Chaque appareil peut s'abonner à un nombre illimité de balises.
 Les balises permettent d'envoyer des notifications ciblées aux utilisateurs en fonction de leurs intérêts, à la différence des diffusions
 générales qui sont envoyées à toutes les applications. Vous pouvez créer et gérer des balises à l'aide de l'onglet Balise du tableau de bord {{site.data.keyword.mobilepushshort}} ou utiliser l'API REST. Vous pouvez utiliser des fragments de code pour gérer et interroger vos abonnements aux balises pour votre application mobile. Ils permettent d'obtenir des abonnements, de s'abonner à une balise, de se désabonner d'une balise ou d'obtenir la liste des balises disponibles. Copiez ces fragments de code dans votre application mobile.
 
-## Android
+## Obtention des balises sur Android
 {: android-get-tags}
 
 L'API **getTags** renvoie la liste des balises disponibles auxquelles l'appareil peut s'abonner. Une fois qu'un
@@ -95,30 +100,30 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 	```
 	{: codeblock}
 
-## Cordova
+## Obtention des balises sur Cordova
 {: cordova-get-tags}
 
 Copiez les fragments de code ci-après dans votre application mobile afin d'obtenir la liste des balises auxquelles l'appareil est abonné ainsi que la liste des balises disponibles.
 
-Renvoyez un tableau des balises auxquelles l'appareil peut s'abonner.
+Extrayez un tableau de balises disponibles pour abonnement.
 
 ```
-//Get a list of available tags to which the device can subscribe
-MFPPush.retrieveAvailableTags(function(tags) {
+//Extraction d'une liste de balises disponibles auxquelles le périphérique peut s'abonner
+BMSPush.retrieveAvailableTags(function(tags) {
   alert(tags);
-}, null);
+}, failure); 
 ```
 	{: codeblock}
 
 ```
-//Get a list of available tags to which the device is subscribed.
-MFPPush.getSubscriptionStatus(function(tags) {
-  alert(tags);
-}, null);
+//Extraction d'une liste de balises disponibles auxquelles le périphérique est abonné.
+BMSPush.retrieveSubscriptions(function(tags) {
+   alert(tags); 
+}, failure); 
 ```
 	{: codeblock}
 
-## Objective-C
+## Obtention de balises sur Objective-C
 {: objc-get-tags}
 
 Copiez les fragments de code ci-après dans votre application iOS développée avec Objective-C afin d'obtenir la liste des balises auxquelles l'appareil est abonné ainsi que la liste des balises disponibles auxquelles l'appareil peut s'abonner.
@@ -160,7 +165,7 @@ subscribedTags = [response subscriptions];
   ```
 	{: codeblock}
 
-## Swift
+## Obtention de balises sur Swift
 {: swift-get-tags}
 
 L'API **retrieveAvailableTagsWithCompletionHandler** renvoie la liste des balises disponibles auxquelles l'appareil peut s'abonner. Une fois qu'un
@@ -202,10 +207,10 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 ```
 	{: codeblock}
 
-## Google Chrome et Mozilla Firefox
+## Google Chrome, Safari et Mozilla Firefox
 {: web-get-tags}
 
-Pour obtenir la liste des étiquettes (balises) auxquelles les utilisateurs peuvent s'abonner, utilisez le code suivant.
+Pour obtenir la liste des balises auxquelles les utilisateurs peuvent s'abonner, utilisez le code suivant.
 
 ```
 var bmsPush = new BMSPush();
@@ -223,21 +228,11 @@ var bmsPush = new BMSPush();
 ```
 	{: codeblock}
 
-Copiez les fragments de code ci-après dans vos applications et extensions Google Chrome pour obtenir une liste des étiquettes (balises) auxquelles les utilisateurs se sont abonnés.
-
-```
-var bmsPush = new BMSPush();
-  bmsPush.retrieveSubscriptions(function(response) 
-	{
-   alert(response.response)
- })
-```
-	{: codeblock}
 
 ## Applications et extensions Google Chrome
 {: web-get-tags}
 
-Pour obtenir la liste des étiquettes (balises) auxquelles les utilisateurs peuvent s'abonner, utilisez le code suivant.
+Pour obtenir la liste des balises auxquelles les utilisateurs peuvent s'abonner, utilisez le code suivant.
 
 ```
 var bmsPush = new BMSPush();
@@ -255,7 +250,8 @@ var bmsPush = new BMSPush();
 ```
 	{: codeblock}
 
-Copiez les fragments de code ci-après dans vos applications et extensions Google Chrome pour obtenir une liste des étiquettes (balises) auxquelles les utilisateurs se sont abonnés.
+Copiez les fragments de code ci-après dans vos applications et extensions Google Chrome pour obtenir une liste des balises auxquelles les utilisateurs se sont
+abonnés.
 
 ```
 var bmsPush = new BMSPush();
@@ -267,12 +263,12 @@ var bmsPush = new BMSPush();
 	{: codeblock}
 
 
-# Abonnement à des balises et désabonnement
+# Abonnement et désabonnement à des balises
 {: #Subscribe_tags}
 
 Utilisez les fragments de code ci-après pour permettre à vos appareils de s'abonner à une balise et de s'en désabonner.
 
-## Android
+## Abonnement et désabonnement à des balises sur Android
 {: android-subscribe-tags}
 
 Copiez et collez le fragment de code suivant dans votre application mobile Android.
@@ -309,19 +305,19 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-## Cordova
+## Abonnement et désabonnement à des balises sur Cordova
 {: cordova-subscribe-tags}
 
 Copiez et collez le fragment de code suivant dans votre application mobile Cordova.
 
 ```
 var tag = "YourTag";
-MFPPush.subscribe(tag, success, failure);
-MFPPush.unsubscribe(tag, success, failure);
+BMSPush.subscribe(tag, success, failure);
+BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Objective-C
+## Abonnement et désabonnement à des balises sur Objective-C
 {: objc-subscribe-tags}
 
 Copiez et collez le fragment de code suivant dans votre application mobile Objective-C.
@@ -359,7 +355,7 @@ Utilisez l'API **unsubscribeFromTags** pour vous désabonner d'une balise.
 ```
 	{: codeblock}
 
-## Swift
+## Abonnement et désabonnement à des balises sur Swift
 {: swift-subscribe-tags}
 
 Copiez et collez le fragment de code suivant dans votre application mobile Swift.
@@ -369,13 +365,15 @@ Copiez et collez le fragment de code suivant dans votre application mobile Swift
 Utilisez l'API **subscribeToTags** pour vous abonner à une balise.
 
 ```
-push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
-	//error while subscribing to tags
-	} else {
-//successfully subscribed to tags var subStatus = response.subscribeStatus();
-	}
-}
+push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statusCode, error) -> Void in
+    if error.isEmpty {
+        print("Response when subscribing to tags: \(response?.description)")
+        print("Status code when subscribing to tags: \(statusCode)")
+    } else {
+        print("Error when subscribing to tags: \(error) ")
+        print("Error status code when subscribing to tags: \(statusCode)")
+    }
+})
 ```
 	{: codeblock}
 
@@ -425,15 +423,12 @@ var tagsArray = ["tag1", "Tag2"]
 
 Les messages de notifications basées sur les balises sont envoyés à tous les appareils abonnés à une balise particulière. Chaque appareil peut s'abonner à un nombre illimité de balises. Cette rubrique explique comment envoyer des des notifications basées sur des balises. Les abonnements sont gérés par l'instance de service Bluemix {{site.data.keyword.mobilepushshort}}. Quand une balise est supprimée, toutes les informations qui lui sont associées, y compris ses abonnés et appareils, sont supprimées. Aucun désabonnement automatique n'est requis pour cette balise car elle n'existe plus et aucune action supplémentaire n'est requise depuis le côté client.
 
-###Avant de commencer
-{: before-you-begin}
-
 Créez des balises sur l'écran **Tag**. Pour plus d'informations sur la création de balises,
 voir [Création de balises](t_manage_tags.html).
 
 1. Dans le tableau de bord des notifications push, cliquez sur **Envoyer des notifications**.
 1. Sélectionnez l'option **Appareil par étiquette** dans la liste déroulante **Envoyer à**.
-1. Recherchez les étiquettes (balises) que vous voulez utiliser et sélectionnez-les.
+1. Recherchez les balises que vous voulez utiliser et sélectionnez-les.
 ![Ecran des notifications](images/tag_notification.jpg)
 1. Dans la zone **Message Text**, entrez le texte qui sera envoyé en tant que notification aux destinataires abonnés.
 1. Cliquez sur **Envoyer**.

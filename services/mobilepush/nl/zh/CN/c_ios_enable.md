@@ -5,12 +5,17 @@ copyright:
 
 ---
 
-#让 iOS 应用程序具有接收和发送 {{site.data.keyword.mobilepushshort}} 的能力 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
+#让 iOS 应用程序具有发送 {{site.data.keyword.mobilepushshort}} 的能力
 {: #enable-push-ios-notifications}
-上次更新时间：2016 年 10 月 19 日
+上次更新时间：2016 年 12 月 7 日
 {: .last-updated}
 
-您可以让 iOS 应用程序具有对您的设备接收和发送 {{site.data.keyword.mobilepushshort}} 的能力。
+您可以让 iOS 应用程序具有对您的设备发送 {{site.data.keyword.mobilepushshort}} 的能力。
 
 
 ##安装 CocoaPods 
@@ -68,7 +73,7 @@ $ open App.xcworkspace
 该工作空间包含原始项目，以及包含依赖关系的 Pods 项目。要修改 Bluemix 移动服务源文件夹，您可以在 Pods 项目的 `Pods/yourImportedSourceFolder` 下找到该文件夹，例如：`Pods/BMSPush`。
 
 
-##Carthage
+##使用 Carthage 添加框架
 {: #carthage}
 
 使用 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 将框架添加到项目中。请注意，Xcode8 中不支持 Carthage。
@@ -81,6 +86,18 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 2. 运行 `carthage update` 命令。构建完成时，请将 `BMSPush.framework`、`BMSCore.framework` 和 `BMSAnalyticsAPI.framework` 拖动到 Xcode 项目中。
 3. 遵循 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 站点上的指示信息以完成集成。
 
+##设置 iOS SDK
+{: ios-sdk}
+
+设置 iOS SDK，将以下代码添加到应用程序的 **AppDelegate.swift** 文件中。
+```
+func application(_ application: UIApplication,
+didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
+    BMSPushClient.sharedInstance.setupPush()
+  }
+```
+    {: codeblock}
 
 ##使用导入的框架和源文件夹
 {: using-imported-frameworks}
@@ -350,6 +367,40 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 - **声音**：指示在接收通知时播放声音片段。支持缺省值或应用程序中绑定的声音资源的名称。
 - **其他有效内容**：为您的通知指定定制的有效内容值。
 
+##启用交互式通知
+
+现在，您可以通过启用交互式通知，利用更多详细信息来补充 iOS 通知，如添加图像、地图或响应按钮。这样做可为客户提供更多背景信息，同时可让客户立即采取操作而无需离开当前环境。  
+
+要启用交互式通知，请使用以下代码：
+
+```
+// This defines the button action.
+let actionOne = BMSPushNotificationAction(identifierName: "ACCEPT", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+ let actionTwo = BMSPushNotificationAction(identifierName: "DECLINE", buttonTitle: "Decline", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+```
+	{: codeblock}
+```
+// This defines category for the buttons
+let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
+```
+	{: codeblock}
+```
+// This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
+let notificationOptions = BMSPushClientOptions(categoryName: [category])
+let push = BMSPushClient.sharedInstance
+push.notificationOptions = notificationOptions
+```
+	{: codeblock}
+
+要发送交互式通知，请完成以下步骤：
+
+1. 在“编写”部分中，对于“发送至”下拉列表，选择 **iOS 设备**。
+2. 输入您要发送的通知消息。
+3. 在“可选设置”部分中，选择**移动**并单击 **iOS**。
+4. 在“类型”下拉列表中，选择**混合**。
+5. 在“类别”字段中，指定您在应用程序中定义的通知类型。 
+
+![针对 iOS 的交互式通知](images/push_ios_notification_interactive.jpg) 
 
 ## 后续步骤
 {: #next_steps_tags}

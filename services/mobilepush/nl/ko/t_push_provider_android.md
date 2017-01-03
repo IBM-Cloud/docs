@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # FCM의 신임 정보 구성
 {: #create-push-enable-gcm}
-마지막 업데이트 날짜: 2016년 11월 15일
+마지막 업데이트 날짜: 2016년 12월 6일
 {: .last-updated}
 
 FCM(Firebase Cloud Messaging)은 Android 디바이스, Google Chrome과 Mozilla 웹 브라우저에 푸시 알림을 전달하는 데 사용되는 게이트웨이입니다. FCM이 GCM(Google Cloud Messaging)을 대체했습니다. FCM 신임 정보를 가져온 후 대시보드에서 {{site.data.keyword.mobilepushshort}} 서비스를 설정해야 합니다. 새 앱에 FCM 구성을 사용하십시오. 기존 앱은 계속해서 GCM 구성으로 작동합니다. 

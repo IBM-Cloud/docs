@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 互動式通知
 {: #interactive-notifications}
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
 互動式通知容許使用者在通知到達時能夠作用，而無需開啟應用程式。當互動式通知到達時，裝置會顯示動作按鈕以及通知訊息。第 8 版以及更新版本的 iOS 裝置上支援互動式通知。如果互動式通知傳送至低於第 8 版的 iOS 裝置，則不會顯示通知動作。

@@ -5,12 +5,17 @@ copyright:
 
 ---
 
-#啟用 iOS 應用程式來接收及傳送 {{site.data.keyword.mobilepushshort}}
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
+#啟用 iOS 應用程式來傳送 {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
-前次更新：2016 年 10 月 19 日
+前次更新：2016 年 12 月 7 日
 {: .last-updated}
 
-您可讓 iOS 應用程式接收 {{site.data.keyword.mobilepushshort}}，並將其傳送至您的裝置。
+您可讓 iOS 應用程式傳送 {{site.data.keyword.mobilepushshort}} 至您的裝置。
 
 
 ##安裝 CocoaPods
@@ -65,7 +70,7 @@ $ open App.xcworkspace
 
 工作區會包含原始專案以及包含相依關係的 Pods 專案。若要修改 Bluemix Mobile Services 來源資料夾，您可以在 Pods 專案的 `Pods/yourImportedSourceFolder` 下找到它，例如：`Pods/BMSPush`。
 
-##Carthage
+##使用 Carthage 新增架構
 {: #carthage}
 
 使用 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 新增專案架構。請注意，不支援 Xcode8 形式的 Carthage。
@@ -78,6 +83,18 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 2. 執行 `carthage update` 指令。建置完成時，請將 `BMSPush.framework`、`BMSCore.framework` 及 `BMSAnalyticsAPI.framework` 拖曳至 Xcode 專案。
 3. 遵循 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 網站上的指示，以完成整合。
 
+##設定 iOS SDK
+{: ios-sdk}
+
+設定 iOS SDK，並新增下列程式碼至應用程式中的 **AppDelegate.swift** 檔案。
+```
+func application(_ application: UIApplication,
+didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+ {
+ BMSPushClient.sharedInstance.setupPush()
+  }
+```
+    {: codeblock}
 
 ##使用匯入的架構和來源資料夾
 {: using-imported-frameworks}
@@ -143,7 +160,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
 let myBMSClient = BMSClient.sharedInstance
-myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.") 
+myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
 myBMSClient.defaultRequestTimeout = 10.0 // Timeout in seconds
 ```
 	{: codeblock}
@@ -351,6 +368,40 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 - **音效**：指出要在收到通知時播放的音效短片。支援預設值或應用程式中所組合的音效資源名稱。
 - **其他有效負載**：指定通知的自訂有效負載值。
 
+##啟用互動式通知
+
+現在，您可以使用更多詳細資料強化您的 iOS 通知，例如透過啟用互動式通知來新增影像、地圖或回應按鈕。這樣可提供更多環境定義給客戶，並且能夠立即採取動作而不需要離開現行環境定義。  
+
+若要啟用互動式通知，請使用下列程式碼：
+
+```
+// This defines the button action.
+let actionOne = BMSPushNotificationAction(identifierName: "ACCEPT", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+ let actionTwo = BMSPushNotificationAction(identifierName: "DECLINE", buttonTitle: "Decline", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+```
+	{: codeblock}
+```
+// This defines category for the buttons
+let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
+```
+	{: codeblock}
+```
+// This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
+let notificationOptions = BMSPushClientOptions(categoryName: [category])
+let push = BMSPushClient.sharedInstance
+push.notificationOptions = notificationOptions
+```
+	{: codeblock}
+
+若要傳送互動式通知，請完成下列步驟：
+
+1. 在「組合」區段的「傳送至」下拉清單，選取 **iOS 裝置**。
+2. 輸入您可能想要傳送的通知訊息。
+3. 在「選用性設定」區段中，選取**行動**然後按一下 **iOS**。
+4. 在「類型」下拉清單中，選取**混合**。
+5. 在「種類」欄位中，指定您已在應用程式定義的通知類型。 
+
+![iOS 的互動式通知](images/push_ios_notification_interactive.jpg) 
 
 ## 後續步驟
 {: #next_steps_tags}

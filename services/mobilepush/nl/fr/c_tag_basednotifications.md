@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Activation des notifications basées sur les balises
 {: #tag_based_notifications}
-Dernière mise à jour : 18 octobre 2016
+Dernière mise à jour : 6 décembre 2016
 {: .last-updated}
 
 Les messages de notification basée sur les balises sont envoyés à tous les appareils abonnés à une balise particulière. 

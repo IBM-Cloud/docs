@@ -5,13 +5,17 @@ copyright:
 
 ---
 
-#iOS アプリケーションによる{{site.data.keyword.mobilepushshort}}の送受信の可能化
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
+#iOS アプリケーションによる {{site.data.keyword.mobilepushshort}} の送信の可能化
 {: #enable-push-ios-notifications}
-最終更新日: 2016 年 10 月 19 日
+最終更新日: 2016 年 12 月 07 日
 {: .last-updated}
 
-iOS アプリケーションによる、デバイスとの
-{{site.data.keyword.mobilepushshort}}の送受信を可能にすることができます。
+iOS アプリケーションによる、デバイスへの {{site.data.keyword.mobilepushshort}} の送信を可能にすることができます。
 
 
 ##CocoaPods のインストール
@@ -67,7 +71,7 @@ $ open App.xcworkspace
 
 このワークスペースには、元のプロジェクトと、依存関係が含まれている Pods プロジェクトが含まれています。Bluemix モバイル・サービスのソース・フォルダーを変更する場合は、Pods プロジェクト内の `Pods/yourImportedSourceFolder` の下にあります (例えば、`Pods/BMSPush`)。
 
-##Carthage
+##Carthage を使用したフレームワークの追加
 {: #carthage}
 
 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) を使用して、プロジェクトにフレームワークを追加します。 Xcode8 の Carthage はサポートされません。
@@ -80,6 +84,18 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 2. `carthage update` コマンドを実行します。ビルドが完了したら、`BMSPush.framework`、 `BMSCore.framework`、および `BMSAnalyticsAPI.framework` をドラッグして、Xcode プロジェクトに入れます。
 3. [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) サイトにある手順に従って、統合を完了します。
 
+##iOS SDK のセットアップ
+{: ios-sdk}
+
+iOS SDK をセットアップするには、以下のコードをアプリケーション内の **AppDelegate.swift** ファイルに追加します。
+```
+func application(_ application: UIApplication,
+didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+  {
+  BMSPushClient.sharedInstance.setupPush()
+  }
+```
+    {: codeblock}
 
 ##インポートされたフレームワークおよびソース・フォルダーの使用
 {: using-imported-frameworks}
@@ -213,7 +229,7 @@ iOS のアプリケーションおよびデバイスを登録するには、以�
 ###バックエンド・アプリケーションの作成
 {: create-a-backend-app}
 
-Bluemix® カタログの Boilerplates セクションでバックエンド・アプリケーションを作成します。これにより、{{site.data.keyword.mobilepushshort}}サービスはこのアプリケーションに自動的にバインドされます。バックエンド・アプリを既に作成済みの場合は、必ずアプリを{{site.data.keyword.mobilepushshort}}サービスにバインドしてください。
+Bluemix® カタログの Boilerplates セクションでバックエンド・アプリケーションを作成します。これにより、{{site.data.keyword.mobilepushshort}} サービスはこのアプリケーションに自動的にバインドされます。バックエンド・アプリを既に作成済みの場合は、必ずアプリを {{site.data.keyword.mobilepushshort}} サービスにバインドしてください。
 
 **Objective-C**
 
@@ -350,6 +366,40 @@ iOS デバイスに通知を送信するための{{site.data.keyword.mobilepushs
 - **音 (Sound)**: 通知の受信時に音声クリップを再生するかどうかを示します。デフォルト、またはアプリにバンドルされている音声リソースの名前がサポートされます。
 - **追加のペイロード (Additional payload)**: 通知用のカスタム・ペイロードの値を指定します。
 
+##対話式通知の使用可能化
+
+対話式通知を使用可能にすることにより、イメージ、マップ、応答ボタンを追加するなど、より詳細な機能を iOS 通知に持たせることができるようになりました。これによって、より多くのコンテキストをお客様に提供するとともに、現行コンテキストから離れることなく、即時にアクションを取ることができます。  
+
+対話式通知を使用可能にするには、以下のコードを使用します。
+
+```
+// This defines the button action.
+let actionOne = BMSPushNotificationAction(identifierName: "ACCEPT", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+ let actionTwo = BMSPushNotificationAction(identifierName: "DECLINE", buttonTitle: "Decline", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+```
+	{: codeblock}
+```
+// This defines category for the buttons
+let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
+```
+	{: codeblock}
+```
+// This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
+let notificationOptions = BMSPushClientOptions(categoryName: [category])
+let push = BMSPushClient.sharedInstance
+push.notificationOptions = notificationOptions
+```
+	{: codeblock}
+
+対話式通知を送信するには、以下の手順を実行します。
+
+1. 「構成 (Compose)」セクションで、「送信先 (Send To)」ドロップダウン・リストに、**「iOS Devices (iOS デバイス)」**を選択します。
+2. 送信する通知メッセージを入力します。
+3. 「オプション設定 (Optional Settings)」セクションで、**「モバイル」**を選択して、**「iOS」** をクリックします。
+4. 「タイプ」ドロップダウン・リストで、**「混合」**を選択します。
+5. 「カテゴリー」フィールドに、アプリで定義した通知タイプを指定します。 
+
+![iOS 用の対話式通知](images/push_ios_notification_interactive.jpg) 
 
 ## 次のステップ
 {: #next_steps_tags}

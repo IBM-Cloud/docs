@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Abilitazione delle estensioni e delle applicazioni Chrome a ricevere {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Ultimo aggiornamento: 15 novembre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
 Puoi ora abilitare le estensioni e le applicazioni Chrome a ricevere {{site.data.keyword.mobilepushshort}}.

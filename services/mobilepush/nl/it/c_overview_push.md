@@ -5,12 +5,17 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Informazioni su {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Ultimo aggiornamento: 11 novembre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} è un servizio che puoi utilizzare per inviare notifiche ai dispositivi mobili iOS e Android e ai browser web Google Chrome e Mozilla Firefox e anche alle estensioni e alle applicazioni Google Chrome. Le notifiche possono essere destinate a tutti gli utenti dell'applicazione oppure a uno specifico insieme di utenti e dispositivi facendo uso delle tag. Puoi amministrare dispositivi, tag e sottoscrizioni. Puoi anche utilizzare API (application program interface) REST (Representational State Transfer) e SDK (software development kit) per sviluppare ulteriormente le tue applicazioni client. 
+IBM {{site.data.keyword.mobilepushshort}} è un servizio che puoi utilizzare per inviare notifiche ai dispositivi mobili iOS e Android, ai browser web Google Chrome, Mozilla Firefox e Safari e anche alle estensioni e alle applicazioni Google Chrome. Le notifiche possono essere destinate a tutti gli utenti dell'applicazione oppure a uno specifico insieme di utenti e dispositivi facendo uso delle tag. Puoi amministrare dispositivi, tag e sottoscrizioni. Puoi anche utilizzare API (application program interface) REST (Representational State Transfer) e SDK (software development kit) per sviluppare ulteriormente le tue applicazioni client. 
 
 {{site.data.keyword.mobilepushshort}} è anche disponibile come servizio Bluemix Dedicato. Per informazioni sul servizio dedicato {{site.data.keyword.mobilepushshort}}, vedi [Servizi dedicati](/docs/dedicated/index.html). Tieni presente che la scheda di monitoraggio di {{site.data.keyword.mobilepushshort}} non visualizza dati di analisi.
 
@@ -116,7 +121,7 @@ La dimensione del payload del messaggio di {{site.data.keyword.mobilepushshort}}
 
 Per iOS 8 e successivi, la dimensione massima consentita è 2 kilobyte. Il Push Notification service per Apple non invia notifiche che superano questo limite.
 
-###Estensioni Android, browser Firefox, browser Chrome e applicazioni Chrome & 
+###Estensioni Android, browser Firefox, browser Chrome e applicazioni Chrome &
 {: android-message-size}
 
-Esiste una limitazione di 4 kilobyte come massimo consentito per la dimensione del payload del messaggio.   
+Esiste una limitazione di 4 kilobyte come massimo consentito per la dimensione del payload del messaggio.  

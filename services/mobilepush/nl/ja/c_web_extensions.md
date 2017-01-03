@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Chrome アプリケーションおよびエクステンションによる {{site.data.keyword.mobilepushshort}} の受信の可能化
 {: #web_notifications}
-最終更新日: 2016 年 11 月 15 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
 Google Chrome アプリケーションおよびエクステンションによる {{site.data.keyword.mobilepushshort}} の受信を可能にできるようになりました。
@@ -60,10 +64,10 @@ app GUID を入手するには、初期化されたプッシュ・サービス�
  - シドニー:   		 `.au-syd.bluemix.net`
 
 ```
- var bmsPush = new BMSPush();
- function callback(response) {
- alert(response.response)
- }
+var bmsPush = new BMSPush();
+function callback(response) {
+     alert(response.response)
+  }
   var initParams = {
   "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",

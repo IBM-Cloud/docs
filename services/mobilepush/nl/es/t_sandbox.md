@@ -6,15 +6,20 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Modalidades de pruebas y de producción
 {: #push-sandboxandproduction-modes}
-Última actualización: 17 de septiembre de 2016
+Última actualización: 06 de diciembre de 2016
 {: .last-updated}
 
-Puede utilizar {{site.data.keyword.mobilepushshort}} en una de las modalidades siguientes: prueba o producción. El recinto de pruebas es un entorno de prueba autocontenido para desarrollar y probar la integración de API push con el servicio push de la aplicación de servidor. Configure en primer lugar las modalidades de pruebas y de producción utilizando el Panel de instrumentos Push. Conmute la modalidad de operación del servicio push entre pruebas y producción utilizando la [API REST de Push](https://mobile.{DomainName}/imfpush/){: new_window}. De forma predeterminada, estará habilitada la modalidad de pruebas. Sin embargo, cuando se cambia entre modalidades, las etiquetas, los dispositivos y las suscripciones no se comparten entre estas modalidades.
+Puede utilizar {{site.data.keyword.mobilepushshort}} en cualquiera de las modalidades siguientes: prueba o producción. El recinto de pruebas es un entorno de prueba autocontenido para desarrollar y probar la integración de API push con el servicio push de la aplicación de servidor. 
 
+Configure las modalidades de pruebas y de producción utilizando el Panel de instrumentos Push. Puede conmutar entre la modalidad de operaciones del servicio push - entre pruebas y producción utilizando la [API REST de Push](https://mobile.{DomainName}/imfpush/){: new_window}. De forma predeterminada, estará habilitada la modalidad de pruebas. Sin embargo, cuando se cambia entre modalidades, las etiquetas, los dispositivos y las suscripciones no se comparten entre estas modalidades.
 
-Cuando esté listo para desplegar la aplicación en un entorno activo, seleccione la modalidad PRODUCTION utilizando la API REST de Push. Para obtener información sobre la API REST, consulte la API REST.
+Cuando esté listo para desplegar la aplicación en un entorno activo, seleccione la modalidad PRODUCTION utilizando la [API REST de Push](https://mobile.{DomainName}/imfpush/){: new_window}. 
 
 Para conmutar la modalidad de operación del servicio push de pruebas a producción:
 

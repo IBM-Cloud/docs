@@ -5,12 +5,17 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Acerca de {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Última actualización: 11 de noviembre de 2016
+Última actualización: 06 de diciembre de 2016
 {: .last-updated}
 
-{{site.data.keyword.mobilepushshort}} de IBM es un servicio que puede utilizar para enviar notificaciones a dispositivos iOS y Android, a los navegadores web Google Chrome y Mozilla Firefox, así como a las aplicaciones y extensiones de Google Chrome. Las notificaciones se pueden destinar a todos los usuarios de la aplicación o a un conjunto específico de usuarios y dispositivos mediante etiquetas. Puede administrar dispositivos, etiquetas y suscripciones. También puede utilizar un SDK (software development kit, kit de desarrollo de software) y API (application program interface, interfaz de programa de aplicaciones) REST (Representational State Transfer) para desarrollar más las aplicaciones de cliente. 
+{{site.data.keyword.mobilepushshort}} de IBM es un servicio que puede utilizar para enviar notificaciones a dispositivos iOS y Android, a los navegadores web Google Chrome, Mozilla Firefox y Safari, así como a las aplicaciones y extensiones de Google Chrome. Las notificaciones se pueden destinar a todos los usuarios de la aplicación o a un conjunto específico de usuarios y dispositivos mediante etiquetas. Puede administrar dispositivos, etiquetas y suscripciones. También puede utilizar un SDK (software development kit, kit de desarrollo de software) y API (application program interface, interfaz de programa de aplicaciones) REST (Representational State Transfer) para desarrollar más las aplicaciones de cliente. 
 
 {{site.data.keyword.mobilepushshort}} también está disponible como servicio de Bluemix dedicado. Para obtener información sobre la {{site.data.keyword.mobilepushshort}} como servicio dedicado, consulte [Servicios dedicados](/docs/dedicated/index.html). Tenga en cuenta que el separador de supervisión de {{site.data.keyword.mobilepushshort}} no muestra los datos analíticos.
 

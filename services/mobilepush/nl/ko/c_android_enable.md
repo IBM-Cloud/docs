@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.mobilepushshort}}을 수신하도록 Android 애플리케이션 설정
 {: #tag_based_notifications}
-마지막 업데이트 날짜: 2016년 11월 16일
+마지막 업데이트 날짜: 2016년 12월 7일
 {: .last-updated}
 
 Android 애플리케이션에서 사용자 디바이스에 푸시 알림을 수신하도록 설정할 수 있습니다. Android Studio는 필수 소프트웨어이며 이를 사용하여 Android 프로젝트를 빌드하는 것이 좋습니다. Android Studio에 대한 기본 지식이 반드시 있어야 합니다. 
@@ -29,11 +33,6 @@ Gradle을 사용하여 Bluemix® 모바일 서비스 푸시 SDK를 추가할 수
 ```
     {: codeblock}
 	
-	- 파일의 끝에는 다음 종속 항목을 추가하십시오. 
-	```
-	'com.google.gms.google-services'
-	```
-    {: codeblock}
 	- 코드 스니펫에 필요한 import 문에 다음 종속 항목을 추가하십시오. 
 	```
 	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
@@ -105,23 +104,23 @@ FCM 프로젝트를 설정하고 신임 정보를 얻으려면 [발신인 ID 및
 1. Firebase 콘솔에서 **프로젝트 설정** 아이콘을 클릭하십시오.
 	![Firebase 프로젝트 설정](images/FCM_4.jpg)
 
-3. 앱 분할창의 일반 탭에서 **앱 추가** 또는 **Android 앱에 Firebase 추가 아이콘**을 선택하십시오. 
+3. 앱 분할창의 일반 탭에서 **앱 추가** 또는 **Android 앱에 Firebase 추가 아이콘**을 선택하십시오.
+    ![Android에 Firebase 추가](images/FCM_5.jpg)
 
-	![Android에 Firebase 추가](images/FCM_5.jpg)
+4. Android 앱에 Firebase 추가 창에서 패키지 이름으로 **com.ibm.mobilefirstplatform.clientsdk.android.push**를 추가하십시오. 앱 닉네임 필드는 선택사항입니다. **앱 추가**를 클릭하십시오.
+    ![Android에 Firebase 추가 창](images/FCM_1.jpg)
 
-4. Android 앱에 Firebase 추가 창에서 패키지 이름으로 **com.ibm.mobilefirstplatform.clientsdk.android.push**를 추가하십시오. 또한 2단계를 반복하여 애플리케이션의 패키지 이름을 추가하십시오. 
+5. 'Android 앱에 Firebase 추가' 창에서 패키지 이름을 입력하여 애플리케이션의 패키지 이름을 포함하십시오. 앱 닉네임 필드는 선택사항입니다. **앱 추가**를 클릭하십시오. 추가된 개별 패키지는 패키지 이름을 추가하여 Firebase에서 `build.gradle`을 변경해야 합니다. 
 
-	![Android에 Firebase 추가 창](images/FCM_1.jpg)
+	![애플리케이션의 패키지 이름 추가](images/FCM_2.jpg)
 
-5. **계속**을 클릭하여 구성 파일을 복사하십시오.  
-6. **완료**를 클릭하여 **build.gradle** 파일을 추가하십시오. 
-7. 생성된 **google-services.json** 파일을 다운로드하십시오. 
+6. `google-services.json` 파일이 생성됩니다. `google-services.json` 파일을 Android 애플리케이션 모듈 루트 디렉토리에 복사하십시오. `google-service.json` 파일에 추가된 패키지 이름이 포함됩니다. 
 
-	![google-services.json 파일](images/FCM_3.jpg)
+    ![애플리케이션의 루트 디렉토리에 json 파일 추가](images/FCM_7.jpg)
 
-8. **google-services.json** 파일을 애플리케이션의 루트 디렉토리에 추가하십시오. 
+5. Android 앱에 Firebase 추가 창에서 **계속**을 클릭하고 **완료**를 클릭하십시오. 
 
-	![애플리케이션의 루트 디렉토리에 json 파일 추가](images/FCM_7.jpg)
+  
 
 애플리케이션을 빌드하고 실행하십시오. 
 
@@ -230,6 +229,79 @@ super.onPause();
 2. 프로젝트를 빌드하고 디바이스 또는 에뮬레이터에서 이를 실행하십시오. register() 메소드의 응답 리스너에 대해 onSuccess() 메소드가 호출되면 디바이스가 {{site.data.keyword.mobilepushshort}} 서비스에 정상적으로 등록된 것입니다. 이 때 기본 푸시 알림 전송에 설명된 대로 메시지를 보낼 수 있습니다. 
 3. 디바이스가 알림을 수신했는지 확인하십시오. 애플리케이션이 포그라운드에 있는 경우 **MFPPushNotificationListener**에 의해 알림이 처리됩니다. 애플리케이션이 백그라운드에 있는 경우 알림 막대에 메시지가 표시됩니다. 
 
+## Android 디바이스에서 푸시 알림 모니터링
+{: #android_monitor}
+
+`com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener` 인터페이스를 구현하고 onStatusChange(String messageId, MFPPushNotificationStatus status) 메소드를 정의하여 애플리케이션 내의 현재 알림 상태를 모니터할 수 있습니다.  
+
+**messageId**는 서버에서 발송한 메시지의 ID입니다. **MFPPushNotificationStatus**는 알림 상태를 값으로 정의합니다. 
+
+- **RECEIVED** - 앱에서 알림을 수신한 상태입니다.  
+- **QUEUED** - 앱에서 알림 리스너 호출을 대기하도록 알림을 대기시킨 상태입니다.  
+- **OPENED** - 트레이에서 알림을 클릭하거나 앱 아이콘에서 실행하거나 앱이 포그라운드에 있을 때 사용자가 알림을 연 상태입니다.  
+- **DISMISSED** - 사용자가 트레이의 알림을 선택 취소하거나 해제하는 상태입니다. 
+
+**com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener** 클래스를 MFPPush와 함께 등록해야 합니다. 
+
+```
+push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+@Override
+public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+// Handle status change
+}
+});
+```
+    {: codeblock}
+
+
+### DISMISSED 상태 청취
+
+다음 조건 중 하나에 대한 DISMISSED 상태를 청취하도록 선택할 수 있습니다. 
+
+- 앱이 활성인 경우(포그라운드 또는 백그라운드에서 실행 중)
+
+  `AndroidManifest.xml` 파일에 스니펫을 추가하십시오. 
+
+```
+<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
+<intent-filter>
+<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+</intent-filter>
+</receiver>
+```
+	{: codeblock}
+
+- 앱이 활성(포그라운드 또는 백그라운드에서 실행 중)이면서 실행 중이 아닌 경우(종료됨)
+
+**com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler** 브로드캐스트 수신기를 확장하고 **onReceive()** 메소드를 대체해야 합니다. 여기서 기본 클래스의 메소드 **onReceive()**를 호출하기 전에 **MFPPushNotificationStatusListener**를 등록해야 합니다. 
+
+```
+public class MyDismissHandler extends MFPPushNotificationDismissHandler {
+@Override
+public void onReceive(Context context, Intent intent) {
+MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+@Override
+public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+// Handle status change
+}
+});
+super.onReceive(context, intent);
+}
+}
+```
+    {: codeblock}
+
+
+다음 스니펫을 `AndroidManifest.xml` 파일에 추가하십시오. 
+
+```
+<receiver android:name="Your_Android_Package_Name.Your_Handler">
+<intent-filter>
+<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+</intent-filter>
+</receiver>
+```
+    {: codeblock}
 
 ## 기본 {{site.data.keyword.mobilepushshort}} 전송
 {: #send}
@@ -255,7 +327,7 @@ super.onPause();
 
 ![Android의 백그라운드 푸시 알림](images/background.jpg)
 
-### 알림 전송을 위한 선택적 설정
+### 알림 전송을 위한 선택적 Android 설정
 {: #send_otpional_setting}
 
 Android 디바이스에 알림을 전송하기 위해 {{site.data.keyword.mobilepushshort}} 설정을 추가로 사용자 정의할 수 있습니다. 다음과 같은 선택적 사용자 정의 옵션이 지원됩니다.
@@ -277,6 +349,6 @@ Android 디바이스에 알림을 전송하기 위해 {{site.data.keyword.mobile
 
 정상적으로 기본 알림을 설정한 후 태그 기반 알림 및 고급 옵션을 구성할 수 있습니다. 
 
-다음의 푸시 알림 서비스 기능을 사용자의 앱에 추가하십시오.
+이러한 푸시 알림 서비스 기능을 앱에 추가하십시오.
 태그 기반 알림을 사용하려면 [태그 기반 알림](c_tag_basednotifications.html)을 참조하십시오.
 고급 알림 옵션을 사용하려면 [고급 푸시 알림 사용](t_advance_badge_sound_payload.html)의 내용을 참조하십시오. 

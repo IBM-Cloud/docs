@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 管理標籤
 {: #manage_tags}
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 12 月 7 日
 {: .last-updated}
 
 使用 {{site.data.keyword.mobilepushshort}} 儀表板來建立及刪除您應用程式的標籤，然後起始標籤型通知。標籤型通知是在訂閱標籤的裝置上接收。
@@ -45,7 +50,7 @@ copyright:
 
 標籤提供的方法是根據使用者的興趣將目標通知傳送給使用者，與傳送給所有應用程式的一般播送不同。您可以使用 {{site.data.keyword.mobilepushshort}} 儀表板上的「標籤」標籤或使用 REST API 來建立及管理標籤。您可以使用程式碼 Snippet 來管理及查詢行動應用程式的標籤訂閱。您可以使用這些程式碼 Snippet 來取得訂閱、訂閱標籤、取消訂閱標籤，或取得可用標籤清單。請將這些程式碼 Snippet 複製到行動應用程式中。
 
-## Android
+## 在 Android 上取得標籤
 {: android-get-tags}
 
 **getTags** API 會傳回裝置可訂閱的可用標籤清單。在裝置訂閱特定標籤之後，該裝置就可以接收針對該標籤傳送的 {{site.data.keyword.mobilepushshort}}。
@@ -92,7 +97,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 	```
 	{: codeblock}
 
-## Cordova
+## 在 Cordova 上取得標籤
 {: cordova-get-tags}
 
 將下列程式碼 Snippet 複製到行動應用程式來取得裝置訂閱的標籤清單，以及取得可用標籤清單。
@@ -101,21 +106,21 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 
 ```
 //Get a list of available tags to which the device can subscribe
-	MFPPush.retrieveAvailableTags(function(tags) {
-    alert(tags);
-}, null);
+BMSPush.retrieveAvailableTags(function(tags) {
+  alert(tags);
+}, failure); 
 ```
 	{: codeblock}
 
 ```
 //Get a list of available tags to which the device is subscribed.
-MFPPush.getSubscriptionStatus(function(tags) {
-alert(tags);
-}, null);
+BMSPush.retrieveSubscriptions(function(tags) {
+   alert(tags); 
+}, failure); 
 ```
 	{: codeblock}
 
-## Objective-C
+## 在 Objective-C 上取得標籤
 {: objc-get-tags}
 
 將下列程式碼 Snippet 複製到使用 Objective-C 所開發的 iOS 應用程式來取得裝置訂閱的標籤清單，以及取得裝置可訂閱的可用標籤清單。
@@ -157,7 +162,7 @@ subscribedTags = [response subscriptions];
   ```
 	{: codeblock}
 
-## Swift
+## 在 Swift 上取得標籤
 {: swift-get-tags}
 
 **retrieveAvailableTagsWithCompletionHandler** API 會傳回裝置可訂閱的可用標籤清單。在裝置訂閱特定標籤之後，該裝置就可以接收針對該標籤傳送的 {{site.data.keyword.mobilepushshort}}。
@@ -199,7 +204,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 ```
 	{: codeblock}
 
-## Google Chrome 及 Mozilla Firefox
+## Google Chrome、Safari 及 Mozilla Firefox
 {: web-get-tags}
 
 若要取得客戶可以訂閱的可用標籤清單，請使用下列程式碼。
@@ -220,16 +225,6 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 ```
 	{: codeblock}
 
-將下列程式碼 Snippet 複製到 Google Chrome Apps and Extensions，以取得客戶已訂閱的標籤清單。
-
-```
-  var bmsPush = new BMSPush();
-  bmsPush.retrieveSubscriptions(function(response) 
-	{
-    alert(response.response)
-})
-```
-	{: codeblock}
 
 ## Google Chrome Apps and Extensions
 {: web-get-tags}
@@ -269,7 +264,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 
 使用下列程式碼 Snippet，可容許裝置取得訂閱、訂閱標籤，以及取消訂閱標籤。
 
-## Android
+## 在 Android 上訂閱及取消訂閱標籤
 {: android-subscribe-tags}
 
 複製下列程式碼 Snippet，並將其貼入 Android 行動應用程式。
@@ -306,19 +301,19 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-## Cordova
+## 在 Cordova 上訂閱及取消訂閱標籤
 {: cordova-subscribe-tags}
 
 複製下列程式碼 Snippet，並將其貼入 Cordova 行動應用程式。
 
 ```
 var tag = "YourTag";
-MFPPush.subscribe(tag, success, failure);
-MFPPush.unsubscribe(tag, success, failure);
+BMSPush.subscribe(tag, success, failure);
+BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Objective-C
+## 在 Objective-C 上訂閱及取消訂閱標籤
 {: objc-subscribe-tags}
 
 複製下列程式碼 Snippet，並將其貼入 Objective-C 行動應用程式。
@@ -356,7 +351,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Swift
+## 在 Swift 上訂閱及取消訂閱標籤
 {: swift-subscribe-tags}
 
 複製下列程式碼 Snippet，並將其貼入 Swift 行動應用程式。
@@ -366,13 +361,15 @@ MFPPush.unsubscribe(tag, success, failure);
 使用 **subscribeToTags** API 來訂閱標籤。
 
 ```
-push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
-		//error while subscribing to tags
-	} else {
-		//successfully subscribed to tags var subStatus = response.subscribeStatus();
-	}
-}
+push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statusCode, error) -> Void in
+    if error.isEmpty {
+        print("Response when subscribing to tags: \(response?.description)")
+        print("Status code when subscribing to tags: \(statusCode)")
+    } else {
+        print("Error when subscribing to tags: \(error) ")
+        print("Error status code when subscribing to tags: \(statusCode)")
+    }
+})
 ```
 	{: codeblock}
 
@@ -421,9 +418,6 @@ var tagsArray = ["tag1", "Tag2"]
 {: #using_tags}
 
 標籤型通知是指以所有訂閱特定標籤之裝置為目標的訊息。每一個裝置都可以訂閱任意數目的標籤。本主題說明如何傳送標籤型通知。訂閱透過 {{site.data.keyword.mobilepushshort}} Service Bluemix 實例進行維護。刪除標籤時，會刪除與該標籤相關聯的所有資訊（包括其訂閱者及裝置）。無需對此標籤進行自動取消訂閱，因為此標籤已不存在，因此也不需要從用戶端採取進一步的動作。
-
-###開始之前
-{: before-you-begin}
 
 在**標籤**畫面上建立標籤。如需如何建立標籤的相關資訊，請參閱[建立標籤](t_manage_tags.html)。
 

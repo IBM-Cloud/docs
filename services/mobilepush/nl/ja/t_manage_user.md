@@ -5,10 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # userId によるデバイスの登録
 {: #register_device_with_userId}
-最終更新日: 2016 年 10 月 17 日
+最終更新日: 2016 年 12 月 07 日
 {: .last-updated}
 
 userId ベースの通知への登録を行うには、以下の手順を実行します。
@@ -24,17 +28,11 @@ userId ベースの通知への登録を行うには、以下の手順を実行�
 ```
 	{: codeblock}
 
-####AppGUID
-{: push-app-guid}
 
-これは、{{site.data.keyword.mobilepushshort}}サービスの AppGUID キーです。
+- **AppGUID**: これは、{{site.data.keyword.mobilepushshort}} サービスの AppGUID キーです。
+- **clientSecret**: これは、{{site.data.keyword.mobilepushshort}} サービスの clientSecret キーです。
 
-####clientSecret
-{: android-client-secret}
-
-これは、{{site.data.keyword.mobilepushshort}}サービスの clientSecret キーです。
-
-**registerDeviceWithUserId** API を使用して、デバイスを{{site.data.keyword.mobilepushshort}}に登録します。
+  **registerDeviceWithUserId** API を使用して、デバイスを{{site.data.keyword.mobilepushshort}}に登録します。
 ```
 // Register the device to {{site.data.keyword.mobilepushshort}}.
 	push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
@@ -51,18 +49,31 @@ userId ベースの通知への登録を行うには、以下の手順を実行�
 ```
 	{: codeblock}
 
-####userId
-{: android-user-id}
 
-{{site.data.keyword.mobilepushshort}}への登録を行うための固有の userId 値を渡します。
+- **userId**: {{site.data.keyword.mobilepushshort}} への登録を行うための固有の userId 値を渡します。
 
 **注:** UserId によってターゲット指定される{{site.data.keyword.mobilepushshort}}を有効にするには、必ず、UserId を指定してデバイスを登録し、{{site.data.keyword.mobilepushshort}}サービスのプロビジョン時に割り振られる「clientSecret」も渡してください。有効な clientSecret がないと、デバイス登録は失敗します。
+
+## Cordova
+{: cordova}
+
+以下の API を使用して、UserId ベースの{{site.data.keyword.mobilepushshort}}への登録を行います。
+
+```
+// Register device for push notification with UserId
+var options = {"userId": "Your User Id value"};
+BMSPush.registerDevice(options,success, failure);
+```
+	{: codeblock}
+
+
+- **userId**: {{site.data.keyword.mobilepushshort}} への登録を行うための固有の userId 値を渡します。
 
 
 ## Objective-C
 {: objc-register}
 
-以下の API を使用して、UserId ベースの{{site.data.keyword.mobilepushshort}}への登録を行います。
+以下の API を使用して、UserId ベースの {{site.data.keyword.mobilepushshort}} への登録を行います。
 ```
 // Initialize the MFPPush
 	IMFPushClient* push = [IMFPushClient sharedInstance];
@@ -70,15 +81,9 @@ userId ベースの通知への登録を行うには、以下の手順を実行�
 ```
 	{: codeblock}
 
-###AppGUID
-{: objc-pushappguid}
 
-これは、{{site.data.keyword.mobilepushshort}}サービスの AppGUID キーです。
-
-####clientSecret
-{: objc-client-secret}
-
-これは、{{site.data.keyword.mobilepushshort}}サービスの clientSecret キーです。
+- **AppGUID**: これは、{{site.data.keyword.mobilepushshort}} サービスの AppGUID キーです。
+- **clientSecret**: これは、{{site.data.keyword.mobilepushshort}} サービスの clientSecret キーです。
 
 **registerWithUserId** API を使用して、デバイスを{{site.data.keyword.mobilepushshort}}に登録します。
 ```
@@ -96,10 +101,8 @@ userId ベースの通知への登録を行うには、以下の手順を実行�
 ```
 	{: codeblock}
 
-####userId
-{: objc-user-id}
 
-{{site.data.keyword.mobilepushshort}}への登録を行うための固有の userId 値を渡します。
+- **userId**: {{site.data.keyword.mobilepushshort}} への登録を行うための固有の userId 値を渡します。
 
 ## Swift
 {: swift-register}
@@ -111,14 +114,9 @@ userId ベースの通知への登録を行うには、以下の手順を実行�
 ```
 	{: codeblock}
 
-####AppGUID
-{: swift-pushappguid}
-これは、{{site.data.keyword.mobilepushshort}}サービスの AppGUID キーです。
 
-####clientSecret
-{: swift-client-secret}
-
-これは、{{site.data.keyword.mobilepushshort}}サービスの clientSecret キーです。
+- **AppGUID**: これは、{{site.data.keyword.mobilepushshort}} サービスの AppGUID キーです。
+- **clientSecret**: これは、{{site.data.keyword.mobilepushshort}} サービスの clientSecret キーです。
 
 **registerWithUserId** API を使用して、デバイスを{{site.data.keyword.mobilepushshort}}に登録します。
 
@@ -135,12 +133,9 @@ userId ベースの通知への登録を行うには、以下の手順を実行�
 ```
 	{: codeblock}
 
-####userId
-{: swift-user-id}
+- **userId**: {{site.data.keyword.mobilepushshort}} への登録を行うための固有の userId 値を渡します。
 
-{{site.data.keyword.mobilepushshort}}への登録を行うための固有の userId 値を渡します。
-
-## Google Chrome と Mozilla Firefox
+## Google Chrome、Safari、および Mozilla Firefox
 {: web-register}
 
 以下の API を使用して、userId ベースの通知への登録を行います。`app GUID`、`app Region`、および `Client Secret` を使用して SDK を初期化します。
@@ -185,7 +180,7 @@ var params = {
 ```
 	{: codeblock}
   
-初期化が正常に完了したら、userId を指定して Web アプリケーションを登録します。
+正常に初期化された後、userId を使用して Web アプリケーションを登録する必要があります。
 
 ```
     bmsPush.registerWithUserId("UserId", function(response) {
@@ -196,7 +191,6 @@ var params = {
 
 # userId ベースの通知の使用
 {: #using_userid}
-
 
 userId ベースの通知は、特定のユーザーをターゲットとする通知メッセージです。1 つのユーザーで複数のデバイスを登録できます。以下の手順では、ユーザー ID ベースの通知の送信方法を説明します。
 

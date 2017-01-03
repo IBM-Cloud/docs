@@ -6,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Android 用のアンバインド・{{site.data.keyword.mobilepushshort}}サービスの作成
 {: #create_android_unbound}
-最終更新日: 2016 年 10 月 17 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
 {{site.data.keyword.mobilepushshort}}サービス・インスタンスを作成します。バックエンド・アプリケーションにバインドせずに、{{site.data.keyword.mobilepushshort}}サービス・インスタンスを使用することができます。

@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # タグ・ベースの通知の使用可能化
 {: #tag_based_notifications}
-最終更新日: 2016 年 10 月 18 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
 タグ・ベースの通知メッセージは、特定のタグにサブスクライブしているすべてのデバイスをターゲットとします。 

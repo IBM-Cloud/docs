@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Fasi successive
 {: #next_steps_tags}
-Ultimo aggiornamento: 17 ottobre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
 Dopo che hai correttamente configurato le notifiche di base, puoi configurare le notifiche basate sulle tag e le opzioni avanzate.

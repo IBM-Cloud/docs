@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Utilización de API REST
 {: #push-api-rest}
-Última actualización: 17 de octubre de 2016
+Última actualización: 06 de diciembre de 2016
 {: .last-updated}
 
 Puede utilizar una API (application program interface, interfaz de programa de aplicaciones) REST (Representational State Transfer) para {{site.data.keyword.mobilepushshort}}. También puede utilizar las API SDK y [Push](https://mobile.{DomainName}/imfpush/) para desarrollar más las aplicaciones de cliente.
@@ -19,12 +24,13 @@ Con la API REST Push, los clientes y las aplicaciones de servidor de fondo puede
 - Mensajes
 - Suscripciones
 - Etiquetas
+- Webhooks
 
 Para obtener el URL base de la API REST, siga estos pasos:
 
 1. Cree una aplicación back-end en el catálogo Bluemix® de la sección de contenedores modelo eligiendo MobileFirst Services Starter. De esta manera se enlaza el servicio {{site.data.keyword.mobilepushshort}} con la aplicación. También puede crear una instancia de servicio de push y dejarla desenlazada. 
 1. En la página principal del panel de control de Bluemix, vaya al área **Aplicaciones** y seleccione la app.
-3. Pulse **OPCIONES MÓVILES**. Se mostrarán la ruta y los valores GUID de la app en la parte superior de la página de detalles de la app. La pantalla Mostrar credenciales muestra información sobre AppSecret.  Puede obtener el secreto de la aplicación en Opciones móviles, así como el secreto de cliente de algunas de las API.
+3. Pulse **OPCIONES MÓVILES**. Se mostrarán la ruta y los valores GUID de la app en la parte superior de la página de detalles de la app. La pantalla Mostrar credenciales muestra información sobre AppSecret. Puede obtener el secreto de la aplicación en Opciones móviles, así como el secreto de cliente de algunas de las API.
 
 También puede utilizar la línea de mandatos para obtener las credenciales del servicio:
 
@@ -43,9 +49,9 @@ La cabecera "Accept-Language" especifica qué idioma se utilizará para los mens
 ## appSecret 
 {: #push-api-rest-secret}
 
-Cuando una aplicación se enlaza a las {{site.data.keyword.mobilepushshort}}, el servicio generará un appSecret (una clave exclusiva) y la pasa en la cabecera de respuesta. Si está utilizando IBM {{site.data.keyword.mobilepushshort}} para la API REST de Bluemix, utilice la referencia de la API REST para obtener información sobre qué API se deben proteger. Para obtener información sobre la API REST, consulte Referencia de API REST.
+Cuando una aplicación se enlaza a las {{site.data.keyword.mobilepushshort}}, el servicio generará un appSecret (una clave exclusiva) y la pasa en la cabecera de respuesta. Si está utilizando IBM {{site.data.keyword.mobilepushshort}} para la API REST de Bluemix, utilice la referencia de la API REST para obtener información sobre qué API se deben proteger. Para más información, consulte la [API REST Push](https://mobile.{DomainName}/imfpush/).
 
-La cabecera de la solicitud debe contener el appSecret. Si no, el servidor devuelve un código 401 Unauthorized Error. Cuando se añade la {{site.data.keyword.mobilepushshort}} a una aplicación, se creará una AppID específica. Como parte de la respuesta, obtiene una cabecera denominada appSecret que se utiliza para crear Etiquetas o para enviar mensajes. La operación sucede a través de servicios del catálogo o del contenedor modelo.
+La cabecera de la solicitud debe contener el appSecret. Si no, el servidor devuelve un código 401 Unauthorized Error. Cuando se añade la {{site.data.keyword.mobilepushshort}} a una aplicación, se creará una AppID específica. Como parte de la respuesta, obtiene una cabecera denominada appSecret que se utiliza para crear etiquetas o para enviar mensajes. La operación sucede a través de servicios del catálogo o del contenedor modelo.
 
 Para obtener el valor de appSecret:
 

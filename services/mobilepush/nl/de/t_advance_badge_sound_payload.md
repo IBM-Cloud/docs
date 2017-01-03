@@ -6,10 +6,12 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 #Erweiterte Push-Benachrichtigungen aktivieren
-Letzte Aktualisierung: 17. Oktober 2016
+Letzte Aktualisierung: 06. Dezember 2016
 {: .last-updated}
 
 Konfigurieren Sie ein iOS Badge, zusätzliche JSON-Nutzdaten, umsetzbare Benachrichtigungen und Blockierungsnachrichten.
@@ -21,7 +23,7 @@ Konfigurieren Sie ein iOS Badge, eine Audiodatei und zusätzliche JSON-Nutzdaten
 
 1. Navigieren Sie im Dashboard für Push-Benachrichtigungen zur Registerkarte **Benachrichtigungen**.
 2. Konfigurieren Sie im Abschnitt **Optionale Felder** die folgenden Komponenten für Push-Benachrichtigungen. 
-	- **Sound File**: Geben Sie eine Zeichenfolge ein, die auf die Audiodatei in Ihrer mobilen App verweist. Geben Sie den Zeichenfolgenamen der zu verwendenden Audiodatei in den Nutzdaten an.
+	- **Sound File** (Audiodatei) - Geben Sie eine Zeichenfolge ein, die auf die Audiodatei in Ihrer mobilen App verweist. Geben Sie den Zeichenfolgenamen der zu verwendenden Audiodatei in den Nutzdaten an.
 	- **iOS Badge**: Für iOS-Geräte die Nummer, die als Badge für das App-Symbol angezeigt werden soll. Wenn diese Eigenschaft fehlt, wird das Badge nicht geändert. Um das Badge zu entfernen, legen Sie für diese Eigenschaft den Wert 0 fest.
 	
 ###Android
@@ -184,7 +186,7 @@ Swift
 
 Wenn eine umsetzbare Benachrichtigung empfangen wird, wird die Steuerung basierend auf der ausgewählten Kennung an die folgende Methode weitergeleitet.
 
-###Objective-C
+Objective-C
 
 ```
 (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
@@ -197,7 +199,7 @@ Wenn eine umsetzbare Benachrichtigung empfangen wird, wird die Steuerung basiere
 ```
 	{: codeblock}
 
-###Swift
+Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

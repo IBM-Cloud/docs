@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
-# Inviare le notifiche di base alle estensioni e alle applicazioni Chrome  
+# Inviare le notifiche di base alle estensioni e alle applicazioni Chrome 
 {: #web_extensions_notifications}
-Ultimo aggiornamento: 15 novembre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
 Dopo che hai sviluppato le tue applicazioni, puoi inviare una notifica push. 
@@ -23,13 +27,13 @@ Dopo che hai sviluppato le tue applicazioni, puoi inviare una notifica push.
   - **Ritarda quando inattivo**: impostando questo valore su `true` si danno istruzioni al server FCM/GCM di non consegnare la notifica se il dispositivo è inattivo. Imposta questo valore su `false`, per assicurati di consegnare la notifica anche se il dispositivo è inattivo.
   - **Payload addizionale**: specifica i valori di payload personalizzati per le tue notifiche.
 
-La seguente immagine mostra l'opzione delle notifiche alle estensioni e applicazioni Chrome nel dashboard. 
+La seguente immagine mostra l'opzione delle notifiche alle estensioni e applicazioni Chrome nel dashboard.
 
   ![Schermata notifiche](images/push_chrome_extns.jpg)
   
 ## Fasi successive
   {: #next_steps_tags}
 
-Dopo che hai correttamente configurato le notifiche di base, puoi scegliere di configurare le notifiche basate sulle tag e le opzioni avanzate. 
+Dopo che hai correttamente configurato le notifiche di base, puoi scegliere di configurare le notifiche basate sulle tag e le opzioni avanzate.
 
 Aggiungi queste funzioni del servizio {{site.data.keyword.mobilepushshort}} alla tua applicazione. Per utilizzare le notifiche basate sulle tag, vedi [Notifiche basate sulle tag](c_tag_basednotifications.html). Per utilizzare le opzioni di notifica avanzate, vedi [Notifiche avanzate](t_advance_badge_sound_payload.html).

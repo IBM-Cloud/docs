@@ -1,17 +1,21 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Web アプリケーションによる {{site.data.keyword.mobilepushshort}} の受信の使用可能化
 {: #web_notifications}
-最終更新日: 2016 年 11 月 15 日
+最終更新日: 2016 年 12 月 07 日
 {: .last-updated}
 
-Google Chrome および Mozilla Firefox の Web アプリケーションによる {{site.data.keyword.mobilepushshort}} の受信を可能にできるようになりました。
+Google Chrome、Mozilla Firefox、および Safari の Web アプリケーションによる {{site.data.keyword.mobilepushshort}} の受信を可能にすることができます。
 
 ## {{site.data.keyword.mobilepushshort}}用の Web ブラウザー・クライアント SDK のインストール
 {: #web_install}
@@ -22,7 +26,7 @@ Google Chrome および Mozilla Firefox の Web アプリケーションによ�
 
 Google Chrome Web アプリケーションに Javascript SDK をインストールする場合、以下の手順を実行します。
 
-[Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master) から `BMSPushSDK.js`、`BMSPushServiceWorker.js`、および `manifest_Website.json` をダウンロードします。
+[Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master) から、`BMSPushSDK.js`、`BMSPushServiceWorker.js`、および `manifest_Website.json` の各ファイルをダウンロードします。
 
 1. `manifest_Website.json` ファイルを編集します。
 
@@ -72,27 +76,28 @@ app GUID を入手するには、初期化されたプッシュ・サービス�
  - シドニー:   		 `.au-syd.bluemix.net`
 
 ```
-    var bmsPush = new BMSPush();
-    function callback(response) {
-        alert(response.response)
-    }
-    var initParams = {
+var bmsPush = new BMSPush();
+function callback(response) {
+     alert(response.response)
+  }
+  var initParams = {
       "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
    "clientSecret":"clientSecret of your push service"
+   "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
     }
   bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
 
+**注**: Web push SDK の FCM 資格情報が変更された場合、Chrome ブラウザーのメッセージ送信が失敗する可能性があります。失敗しないようにするために、必ず `bmsPush.unRegisterDevice` を呼び出してください。
+
 ## Web アプリケーションの登録
 {: #web_register}
 
-`register()` API を使用して、デバイスを{{site.data.keyword.mobilepushshort}}サービスに登録します。ブラウザーに応じて、以下のいずれかのオプションを使用してください。
+**register()** API を使用して、デバイスを{{site.data.keyword.mobilepushshort}}サービスに登録します。ブラウザーに応じて、以下のいずれかのオプションを使用してください。
 
 - Google Chrome から登録する場合、Firebase Cloud Messaging (FCM) または Google Cloud Messaging (GCM) の API キーと Web サイト URL を、Bluemix {{site.data.keyword.mobilepushshort}} サービス Web 構成ダッシュボードに追加します。詳しくは、[Google Cloud Messaging の資格情報の構成](t_push_provider_android.html)で Chrome 用のセットアップを参照してください。
-
-
 
 - Mozilla Firefox から登録する場合は、Web サイト URL を Bluemix {{site.data.keyword.mobilepushshort}}サービスの Web 構成ダッシュボードで Firefox 用セットアップの下に追加してください。
 
@@ -106,6 +111,7 @@ function callback(response) {
       "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
   "clientSecret":"clientSecret of your push service"
+  "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
   }
   bmsPush.initialize(params, callback)
     bmsPush.register(function(response) {

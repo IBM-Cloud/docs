@@ -6,15 +6,20 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 샌드박스 및 프로덕션 모드
 {: #push-sandboxandproduction-modes}
-마지막 업데이트 날짜: 2016년 9월 17일
+마지막 업데이트 날짜: 2016년 12월 6일
 {: .last-updated}
 
-샌드박스 또는 프로덕션 모드 중 하나에서 {{site.data.keyword.mobilepushshort}}을 사용할 수 있습니다. 샌드박스는 서버 애플리케이션 푸시 서비스와 푸시 API 통합을 개발 및 테스트하는 자체 포함된 테스트 환경입니다. 먼저 푸시 대시보드를 사용하여 샌드박스와 프로덕션 모드를 구성합니다. [Push REST API](https://mobile.{DomainName}/imfpush/){: new_window}를 사용하여 샌드박스와 프로덕션 간의 푸시 서비스 조작 모드를 전환합니다. 기본적으로 샌드박스 모드가 사용 가능합니다.그러나 모드 간에 전환할 경우 해당 모드 사이에서 태그, 디바이스 및 구독이 공유되지 않습니다. 
+샌드박스 또는 프로덕션 모드 중 하나에서 {{site.data.keyword.mobilepushshort}}을 사용할 수 있습니다. 샌드박스는 서버 애플리케이션 푸시 서비스와 푸시 API 통합을 개발 및 테스트하는 자체 포함된 테스트 환경입니다.  
 
+먼저 푸시 대시보드를 사용하여 샌드박스와 프로덕션 모드를 구성합니다. 푸시 서비스의 조작 모드를 전환할 수 있습니다([Push REST API](https://mobile.{DomainName}/imfpush/){: new_window}를 사용하여 샌드박스와 프로덕션 간 모드 전환). 기본적으로 샌드박스 모드가 설정됩니다. 그러나 모드 간에 전환할 경우 해당 모드 사이에서 태그, 디바이스 및 구독이 공유되지 않습니다. 
 
-애플리케이션을 라이브 환경에 배치할 준비가 된 경우 Push REST API를 사용하여 프로덕션 모드를 선택하십시오. REST API에 대한 자세한 정보는 REST API를 참조하십시오.
+애플리케이션을 라이브 환경에 배치할 준비가 된 경우 [Push REST API](https://mobile.{DomainName}/imfpush/){: new_window}를 사용하여 프로덕션 모드를 선택하십시오.  
 
 푸시 서비스 조작 모드를 샌드박스에서 프로덕션으로 전환하려면 다음을 수행하십시오. 
 

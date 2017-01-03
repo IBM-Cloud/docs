@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Activation des applications et extensions Chrome pour recevoir des notifications de type {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Dernière mise à jour : 15 novembre 2016
+Dernière mise à jour : 6 décembre 2016
 {: .last-updated}
 
 Vous pouvez désormais activer les applications et extensions Google Chrome pour recevoir des notifications de type {{site.data.keyword.mobilepushshort}}.

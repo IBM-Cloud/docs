@@ -6,15 +6,20 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Sandboxmodus und Produktionsmodus
 {: #push-sandboxandproduction-modes}
-Letzte Aktualisierung: 17. September 2016
+Letzte Aktualisierung: 06. Dezember 2016
 {: .last-updated}
 
-Sie können {{site.data.keyword.mobilepushshort}} in einem der folgenden Modi ausführen: 'Sandbox' oder 'Produktion'. 'Sandbox' ist eine eigenständige Testumgebung für die Entwicklung und das Testen der Integration der Push-API mit dem Push-Service der Serveranwendung. Sie konfigurieren zuerst Sandbox- und Produktionsmodi über das Push-Dashboard. Sie können beim Betriebsmodus des Push-Service mithilfe der [Push-REST-API](https://mobile.{DomainName}/imfpush/){: new_window} zwischen dem Sandbox- und dem Produktionsmodus wechseln. Standardmäßig ist der Sandboxmodus aktiviert. Auch wenn Sie zwischen den Modi wechseln können, werden die Tags, Geräte und Subskriptionen nicht von den Modi gemeinsam genutzt.
+Sie können {{site.data.keyword.mobilepushshort}} in jedem der beiden folgenden Modi ausführen: 'Sandbox' oder 'Produktion'. 'Sandbox' ist eine eigenständige Testumgebung für die Entwicklung und das Testen der Integration der Push-API mit dem Push-Service der Serveranwendung. 
 
+Konfigurieren Sie die Modi 'Sandbox' und 'Produktion' über das Push-Dashboard. Sie können bei der Betriebsart des Push-Service mithilfe der [Push-REST-API](https://mobile.{DomainName}/imfpush/){: new_window} zwischen dem Sandbox- und dem Produktionsmodus wechseln. Standardmäßig ist der Sandboxmodus aktiviert. Auch wenn Sie zwischen den Modi wechseln können, werden die Tags, Geräte und Subskriptionen nicht von den Modi gemeinsam genutzt.
 
-Wenn Sie bereit sind für die Bereitstellung der Anwendung in einer Liveumgebung, wählen Sie mit der Push-REST-API den Produktionsmodus aus. Informationen zur REST-API finden Sie in der REST-API-Referenz.
+Wenn Sie für die Bereitstellung der Anwendung in einer Liveumgebung bereit sind, wählen Sie mit der [Push-REST-API](https://mobile.{DomainName}/imfpush/){: new_window} den Produktionsmodus aus. 
 
 Führen Sie die folgenden Schritte durch, um beim Betriebsmodus des Push-Service vom Sandboxmodus in den Produktionsmodus zu wechseln:
 

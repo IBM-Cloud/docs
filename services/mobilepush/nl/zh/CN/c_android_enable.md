@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # 使 Android 应用程序能够接收 {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-上次更新时间：2016 年 11 月 16 日
+上次更新时间：2016 年 12 月 7 日
 {: .last-updated}
 
 您可以让 Android 应用程序具有向您的设备接收推送通知的能力。Android Studio 是必备软件，也是构建 Android 项目的建议方法。必须具有 Android Studio 的基本知识。
@@ -30,11 +34,6 @@ copyright:
 ```
     {: codeblock}
 	
-	- 仅在文件结尾添加以下依赖关系。
-	```
-	'com.google.gms.google-services'
-	```
-    {: codeblock}
 	- 添加以下依赖关系可以导入代码片段所需的语句。
 	```
 	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
@@ -104,23 +103,23 @@ android:theme="@android:style/Theme.NoDisplay"/>
 
 1. 在 Firebase 控制台中，单击**项目设置**图标。![Firebase 项目设置](images/FCM_4.jpg)
 
-3. 从您的应用程序窗格的“常规”选项卡中选择**添加应用程序**或**添加 Firebase 至您的 Android 应用程序图标**。
+3. 从您的应用程序窗格的“常规”选项卡中选择**添加应用程序**或**添加 Firebase 至您的 Android 应用程序图标**。![添加 Firebase 至 Android](images/FCM_5.jpg)
 
-	![添加 Firebase 至 Android](images/FCM_5.jpg)
+4. 在“添加 Firebase 至您的 Android 应用程序”窗口中，添加 **com.ibm.mobilefirstplatform.clientsdk.android.push** 作为程序包名。“应用程序昵称”字段为可选字段。单击**添加应用程序**。
+![“添加 Firebase 至您的 Android”窗口](images/FCM_1.jpg)
 
-4. 在“添加 Firebase 至您的 Android 应用程序”窗口中，添加 **com.ibm.mobilefirstplatform.clientsdk.android.push** 作为程序包名。同时通过重复步骤 2 添加应用程序的程序包名。
+5. 通过在“添加 Firebase 至您的 Android 应用程序”窗口中，输入应用程序的程序包名。“应用程序昵称”字段为可选字段。单击**添加应用程序**。
+对于每个添加的程序包，Firebase 需要通过添加程序包名更改 `build.gradle`。
 
-	![“添加 Firebase 至您的 Android”窗口](images/FCM_1.jpg)
+	![添加应用程序的程序包名](images/FCM_2.jpg)
 
-5. 单击**继续**以复制配置文件。 
-6. 单击**完成**以添加 **build.gradle** 文件。
-7. 下载所生成的 **google-services.json** 文件。
+6. 生成 `google-services.json` 文件。将 `google-services.json` 文件复制到 Android 应用程序模块根目录。请注意，`google-service.json` 文件包括添加的程序包名。
 
-	![google-services.json 文件](images/FCM_3.jpg)
+    ![添加 json 文件至应用程序根目录](images/FCM_7.jpg)
 
-8. 添加 **google-services.json** 文件至应用程序根目录。
+5. 在“添加 Firebase 至您的 Android 应用程序”窗口中，单击**继续**然后单击**完成**。 
 
-	![添加 json 文件至应用程序根目录](images/FCM_7.jpg)
+  
 
 构建并运行应用程序。
 
@@ -229,6 +228,79 @@ protected void onPause() {
 2. 构建项目，然后在设备或仿真器上运行该项目。在 register() 方法中针对响应侦听器调用 onSuccess() 方法时，这证实设备已成功注册 {{site.data.keyword.mobilepushshort}} 服务。此时，可以如“发送基本推送通知”中所述发送消息。
 3. 验证设备是否收到通知。如果应用程序在前台运行，那么通知将由 **MFPPushNotificationListener** 进行处理。如果应用程序在后台运行，那么通知栏中会显示一条消息。
 
+## 在 Android 设备上监视推送通知
+{: #android_monitor}
+
+要监视应用程序中通知的当前状态，您可以实现 `com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener` 接口，并定义方法 onStatusChange(String messageId, MFPPushNotificationStatus status)。 
+
+**messageId** 是从服务器发送的消息的标识。**MFPPushNotificationStatus** 将通知的状态定义为值：
+
+- **RECEIVED** - 应用程序已接收通知。 
+- **QUEUED** - 应用程序将通知排入队列，以用于调用通知侦听器。 
+- **OPENED** - 用户通过单击托盘中的通知或从应用程序图标启动应用程序或当应用程序位于前台时，打开通知。 
+- **DISMISSED** - 用户清除/关闭托盘中的通知。
+
+您需要使用 MFPPush，来注册 **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener** 类。
+
+```
+push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+@Override
+public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+// Handle status change
+}
+});
+```
+    {: codeblock}
+
+
+### 侦听 DISMISSED 状态
+
+您可以选择在以下任何一个条件中，侦听 DISMISSED 状态：
+
+- 当应用程序处于活动状态（在前台或后台运行）时
+
+  添加以下片段到 `AndroidManifest.xml` 文件：
+
+```
+<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
+<intent-filter>
+<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+</intent-filter>
+</receiver>
+```
+	{: codeblock}
+
+- 当应用程序处于活动状态（在前台或后台运行）和未在运行（已关闭）时
+
+您需要扩展 **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler** 广播接收器并覆盖方法 **onReceive()**，其中 **MFPPushNotificationStatusListener** 应该在调用基类的方法 **onReceive()** 之前注册。
+
+```
+public class MyDismissHandler extends MFPPushNotificationDismissHandler {
+@Override
+public void onReceive(Context context, Intent intent) {
+MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+@Override
+public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+// Handle status change
+}
+});
+super.onReceive(context, intent);
+}
+}
+```
+    {: codeblock}
+
+
+添加以下片段到 `AndroidManifest.xml` 文件：
+
+```
+<receiver android:name="Your_Android_Package_Name.Your_Handler">
+<intent-filter>
+<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+</intent-filter>
+</receiver>
+```
+    {: codeblock}
 
 ## 发送基本 {{site.data.keyword.mobilepushshort}}
 {: #send}
@@ -255,7 +327,7 @@ protected void onPause() {
 
  ![Android 上的后台推送通知](images/background.jpg)
 
-### 发送通知的可选设置
+### 发送通知的可选 Android 设置
 {: #send_otpional_setting}
 
 对于向 Android 设备发送通知的 {{site.data.keyword.mobilepushshort}} 设置，您可以进一步定制。支持以下可选的定制选项。

@@ -6,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Invio di notifiche di push di base
 {: #push-send-notifications}
-Ultimo aggiornamento: 17 ottobre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
 Dopo che hai sviluppato le tue applicazioni, puoi inviare delle notifiche di push di base (senza utilizzare tag, badge, payload aggiuntivi o file audio).

@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Einfache Benachrichtigungen an Chrome Apps and Extensions senden 
 {: #web_extensions_notifications}
-Letzte Aktualisierung: 15. November 2016
+Letzte Aktualisierung: 06. Dezember 2016
 {: .last-updated}
 
 Nach dem Entwickeln Ihrer Anwendungen können Sie Push-Benachrichtigungen senden. 
@@ -32,4 +36,4 @@ Die folgende Abbildung zeigt die Chrome Apps and Extensions-Benachrichtigungsopt
 
 Nachdem Sie einfache Benachrichtigungen erfolgreich eingerichtet haben, können Sie tagbasierte Benachrichtigungen und erweiterte Optionen konfigurieren.
 
-Fügen Sie die folgenden Funktionen des {{site.data.keyword.mobilepushshort}}-Service zu Ihrer App hinzu. Informationen zur Verwendung tagbasierter Benachrichtigungen finden Sie in [Tagbasierte Benachrichtigungen](c_tag_basednotifications.html). Informationen zur Verwendung erweiterter Benachrichtigungsoptionen finden Sie in [Erweiterte Benachrichtigungen](t_advance_badge_sound_payload.html).
+Fügen Sie diese Funktionen des {{site.data.keyword.mobilepushshort}}-Service Ihrer App hinzu. Informationen zur Verwendung tagbasierter Benachrichtigungen finden Sie in [Tagbasierte Benachrichtigungen](c_tag_basednotifications.html). Informationen zur Verwendung erweiterter Benachrichtigungsoptionen finden Sie in [Erweiterte Benachrichtigungen](t_advance_badge_sound_payload.html).

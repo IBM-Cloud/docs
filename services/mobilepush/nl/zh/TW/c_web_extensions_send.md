@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # 將基本通知傳送至 Chrome Apps and Extensions 
 {: #web_extensions_notifications}
-前次更新：2016 年 11 月 15 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
 開發應用程式之後，您可以傳送推送通知。 

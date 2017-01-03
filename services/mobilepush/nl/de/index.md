@@ -12,12 +12,12 @@ copyright:
 
 # Einführung in {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Letzte Aktualisierung: 02. November 2016
+Letzte Aktualisierung: 06. Dezember 2016
 {: .last-updated}
 
 {:shortdesc}
 
-Der {{site.data.keyword.mobilepushshort}}-Service bietet eine gemeinsame Plattform zum Senden und Verwalten von mobilen und Web-Push-Benachrichtigungen, die iOS-, mobile Android-Plattformen oder Google Chrome- und Mozilla Firefox-Webbrowser und Google Chrome-Apps und Erweiterungen zum Ziel haben. Der {{site.data.keyword.mobilepushshort}}-Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten sowie zur Geräteplattform und zu Webbrowsern und verarbeitet die Zuteilung von Push-Benachrichtigungen an die Benutzer. Mit diesem Service können Sie Rundsendungen und Unicasts (auf der Basis der 'deviceID' und der 'userID') sowie Tags (Themen) als Push-Benachrichtigungen an Ihre Benutzer mobiler Anwendungen und Web-Browser-Anwendungen senden. Sie können auch ein Software Development Kit (SDK) und [REST-APIs](https://mobile.{DomainName}/imfpush/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
+Der {{site.data.keyword.mobilepushshort}}-Service bietet eine gemeinsame Plattform zum Senden und Verwalten von mobilen und Web-Push-Benachrichtigungen, die iOS-, mobile Android-Plattformen oder Google Chrome-, Mozilla Firefox- und Safari-Web-Browser oder Google Chrome-Apps und Erweiterungen zum Ziel haben. Der {{site.data.keyword.mobilepushshort}}-Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten sowie zur Geräteplattform und zu Webbrowsern und verarbeitet die Zuteilung von Push-Benachrichtigungen an die Benutzer. Mit diesem Service können Sie Rundsendungen und Unicasts (auf der Basis der 'deviceID' und der 'userID') sowie Tags (Themen) als Push-Benachrichtigungen an Ihre Benutzer mobiler Anwendungen und Web-Browser-Anwendungen senden. Sie können auch ein Software Development Kit (SDK) und [REST-APIs](https://mobile.{DomainName}/imfpush/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
 
 
 # Zugehörige Links

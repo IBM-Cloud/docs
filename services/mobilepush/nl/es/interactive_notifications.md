@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Notificaciones interactivas
 {: #interactive-notifications}
-Última actualización: 17 de octubre de 2016
+Última actualización: 06 de diciembre de 2016
 {: .last-updated}
 
 Las notificaciones interactivas permiten a los usuarios actuar cuando llega una notificación sin abrir la aplicación. Cuando llega una notificación interactiva, el dispositivo mostrará los botones de acción junto con el mensaje de notificación. Se admiten notificaciones interactivas en dispositivos iOS con versión 8 y posterior. Si se envía una notificación interactiva a dispositivos iOS con una versión anterior a la 8, no se mostrarán las acciones de notificación.

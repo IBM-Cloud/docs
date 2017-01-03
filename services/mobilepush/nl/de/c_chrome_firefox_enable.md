@@ -1,17 +1,21 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
-# Webanwendungen für den Empfang von {{site.data.keyword.mobilepushshort}} aktivieren
+# Webanwendungen für den Empfang von Push-Benachrichtigungen aktivieren
 {: #web_notifications}
-Letzte Aktualisierung: 15. November 2016
+Letzte Aktualisierung: 07. Dezember 2016
 {: .last-updated}
 
-Sie können jetzt Google Chrome- und Mozilla Firefox-Webanwendungen für den Empfang von {{site.data.keyword.mobilepushshort}} aktivieren.
+Sie können Google Chrome-, Mozilla Firefox- und Safari-Webanwendungen für den Empfang von Push-Benachrichtigungen aktivieren.
 
 ## Web-Browser-Client-SDK für {{site.data.keyword.mobilepushshort}} installieren
 {: #web_install}
@@ -80,19 +84,20 @@ Die `App Region` gibt den Standort an, an dem der {{site.data.keyword.mobilepush
   "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
    "clientSecret":"clientSecret of your push service"
+   "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
     }
   bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
 
+**Anmerkung**: Wenn Ihre FCM-Berechtigungsnachweise für das Web-Push-SDK geändert werden, kann die Nachrichtenübermittlung für den Browser Chrome fehlschlagen. Um ein Fehlschlagen zu vermeiden, stellen Sie sicher, dass Sie `bmsPush.unRegisterDevice` aufrufen.
+
 ## Webanwendung registrieren
 {: #web_register}
 
-Verwenden Sie die API `register()`, um das Gerät beim {{site.data.keyword.mobilepushshort}}-Service zu registrieren. Verwenden Sie in Abhängigkeit von Ihrem Browser eine oder mehrere der folgenden Optionen.
+Verwenden Sie die API **register()**, um das Gerät beim {{site.data.keyword.mobilepushshort}}-Service zu registrieren. Verwenden Sie in Abhängigkeit von Ihrem Browser eine oder mehrere der folgenden Optionen.
 
 - Für die Registrierung von Google Chrome aus fügen Sie den API-Schlüssel für Firebase Cloud Messaging (FCM) bzw. Google Cloud Messaging (GCM) sowie die URL der Website im Bluemix-Dashboard für die Webkonfiguration des {{site.data.keyword.mobilepushshort}}-Service hinzu. Weitere Informationen finden Sie im Abschnitt [Berechtigungsnachweise für Google Cloud Messaging (GCM) konfigurieren](t_push_provider_android.html) unter dem Thema Chrome-Konfiguration.
-
-
 
 - Für die Registrierung von Mozilla Firefox fügen Sie die URL der Website im Dashboard für die Webkonfiguration von Bluemix {{site.data.keyword.mobilepushshort}}-Service unter der Firefox-Konfiguration hinzu.
 
@@ -105,8 +110,9 @@ var bmsPush = new BMSPush();
   var initParams = {
   "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
-   "clientSecret":"clientSecret of your push service"
-    }
+  "clientSecret":"clientSecret of your push service"
+  "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
+  }
   bmsPush.initialize(params, callback)
     bmsPush.register(function(response) {
     alert(response.response)

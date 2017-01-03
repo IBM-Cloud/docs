@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # FCM の資格情報の構成
 {: #create-push-enable-gcm}
-最終更新日: 2016 年 11 月 15 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
 Firebase Cloud Messaging (FCM) は、プッシュ通知を Android デバイス、Google Chrome、および Mozilla の各 Web ブラウザーに配信するために使用されるゲートウェイです。Google Cloud Messaging (GCM) が FCM に置き換えられました。FCM 資格情報を取得してから、ダッシュボード上で {{site.data.keyword.mobilepushshort}} サービスをセットアップする必要があります。新規アプリケーションには必ず FCM 構成を使用してください。既存のアプリケーションは、引き続き GCM 構成で機能します。
@@ -32,8 +35,7 @@ FCM をセットアップして、API キーおよび送信側 ID を生成す�
 
 **注:** FCM/GCM API キーと送信側 ID (プロジェクト番号) が必要になります。
 
-1. Bluemix ダッシュボードを開き、次に、作成した「{{site.data.keyword.mobilepushfull}}」サービス・インスタンスをクリックしてダッシュボードを開きます。「Push」ダッシュボードが表示されます。Android 用のアンバインド・{{site.data.keyword.mobilepushshort}}サービスをセットアップするには、アンバインド・{{site.data.keyword.mobilepushshort}}サービスのアイコンを選択して、{{site.data.keyword.mobilepushshort}}サービスのダッシュボードを開きます。
-	 
+1. Bluemix ダッシュボードを開き、次に、作成した「{{site.data.keyword.mobilepushfull}}」サービス・インスタンスをクリックしてダッシュボードを開きます。「Push」ダッシュボードが表示されます。Android 用のアンバインド・{{site.data.keyword.mobilepushshort}}サービスをセットアップするには、アンバインド・{{site.data.keyword.mobilepushshort}}サービスのアイコンを選択して、{{site.data.keyword.mobilepushshort}}サービスのダッシュボードを開きます。  
 
 ![Push ダッシュボード](images/push_unbound.jpg)
 

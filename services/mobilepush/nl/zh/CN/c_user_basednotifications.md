@@ -1,12 +1,18 @@
 ---
+
 copyright:
  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 启用基于用户的通知
 {: #user_based_notifications}
-上次更新时间：2016 年 10 月 18 日
+上次更新时间：2016 年 12 月 6 日
 {: .last-updated}
 
 基于用户标识的 {{site.data.keyword.mobilepushshort}} 针对具有定制消息的移动应用程序用户。使用基于用户的通知，您可以根据首选项选择通知特定个人。

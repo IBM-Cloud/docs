@@ -12,13 +12,14 @@ copyright:
 
 # Introdução ao {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Última atualização: 2 de novembro de 2016
+Última atualização: 06 de dezembro de 2016
 {: .last-updated}
 
 {:shortdesc}
 
-O serviço {{site.data.keyword.mobilepushshort}} fornece uma plataforma unificada para enviar e gerenciar notificações push móveis e da web que são
-destinadas para plataformas móveis iOS, Android, navegadores da web Google Chrome, Mozilla Firefox e Apps Google Chrome e Extensões. O serviço {{site.data.keyword.mobilepushshort}} gerencia o mapeamento de
+O serviço {{site.data.keyword.mobilepushshort}} fornece uma plataforma unificada para enviar e
+gerenciar notificações push móveis e da web que são destinadas para plataformas móveis iOS, Android,
+navegadores da web Google Chrome, Mozilla Firefox e Safari e Apps e Extensões Google Chrome. O serviço {{site.data.keyword.mobilepushshort}} gerencia o mapeamento de
 seus usuários de aplicativos para seus dispositivos, plataforma, navegadores da web e
 manipula o despacho de notificações push para eles. Com esse serviço,
 é possível enviar transmissões, unicasts (com base em deviceID e userID) e também tags (ou tópicos), como notificações push para seus

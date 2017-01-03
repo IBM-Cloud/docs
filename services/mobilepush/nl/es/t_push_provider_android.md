@@ -1,15 +1,18 @@
-
 ---
 
 copyright:
-years: 2015, 2016
+ years: 2015, 2016
 
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Configuración de credenciales para FCM
 {: #create-push-enable-gcm}
-Última actualización: 15 de noviembre de 2016
+Última actualización: 06 de diciembre de 2016
 {: .last-updated}
 
 Firebase Cloud Messaging (FCM) es la pasarela utilizada para entregar notificaciones push a dispositivos Android y a los navegadores Google Chrome y Mozilla. FCM ha sustituido a Google Cloud Messaging (GCM). Necesita obtener las credenciales de FCM y, a continuación, configurar el servicio {{site.data.keyword.mobilepushshort}} en el panel de control. Asegúrese de que utiliza las configuraciones de FCM para nuevas aplicaciones. Las aplicaciones existentes seguirán funcionando con las configuraciones de GCM.
