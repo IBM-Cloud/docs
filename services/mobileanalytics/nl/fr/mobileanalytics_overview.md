@@ -2,10 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-11-28"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # A propos de {{site.data.keyword.mobileanalytics_short}}  
 {: aboutmobileanalytics}
@@ -33,9 +36,10 @@ Grâce au service {{site.data.keyword.mobileanalytics_short}}, vous pouvez :
 		<dd>Vous pouvez afficher des mesures de performances et d'utilisation en temps réel.</dd>
 	<dt>Effectuer une implémentation en quelques minutes</dt>
 		<dd>Créez une instance de service dans {{site.data.keyword.Bluemix}}, ajoutez le logiciel SDK à votre projet et collez deux lignes de code dans votre application. Après cela, vous êtes prêt à collecter des douzaines de mesures prédéfinies.</dd>
-	<!--<dt>Collect any data you want</dt>-->
-		<!--<dd>Instrument apps with custom events, discover how users are interacting with your app, track purchases, and monitor app activity.  
-</dd>-->
+	<dt>Collectez les données de votre choix</dt>
+		<dd>Instrumenter les applications avec des événements personnalisés, découvrir comment les utilisateurs interagissent avec votre
+application, suivre les achats, et surveiller l'activité de l'application.  
+</dd>
 <dt>Visualiser d'un seul coup d'oeil les mesures pour toutes vos applications</dt>
 	<dd>La console {{site.data.keyword.mobileanalytics_short}} propose des graphiques <!-- both --> prêts à l'emploi
 <!--and custom-->, et il n'est plus nécessaire d'écrire des requêtes.</dd>
@@ -58,32 +62,35 @@ Les **mesures prédéfinies** vous permettent de répondre à des questions, tel
 * A quelle fréquence les personnes utilisent-elles mon application ? 
 * A quelle heure de la journée les personnes utilisent-elles mon application ?  
 * Quels sont les modèles de périphérique préférés des utilisateurs de mon application ? 
-* A quel moment dois-je déprécier le support des systèmes d'exploitation existants ? 
+* Quand cesser la prise en charge de systèmes d'exploitation surannés ? 
 * Quelles sont les applications qui présentent des problèmes de performance ?  
 
-<!--By adding your own **custom events** you can answer questions like:--> 
+En ajoutant vos propres **événements personnalisés**, vous pouvez répondre à des questions telles que : 
 
-<!--* What features are used most and least?-->  
-<!--* Where are users entering and leaving my app?-->  
-<!--* What activities are users viewing most? --> 
-<!--* Are users completing workflows in the app (for example, conversion funnels)? -->  
+* Quelles sont les fonctions les plus utilisées, et celles les moins utilisées ?  
+* A quel endroit les utilisateurs entrent-ils et quittent-ils mon application ?  
+* Quelles sont les activités que visualisent le plus les utilisateurs ?  
+* les utilisateurs suivent-ils jusqu'au bout les flux de travaux (par exemple, les entonnoirs de conversion) ?   
 
-<!--Client-side logs and usage data are gathered automatically and sent to the Mobile Analytics -->
-<!-- service on demand. Developers and -->
-<!-- administrators can use the {{site.data.keyword.mobileanalytics_short}} service dashboard to view data that -->
-<!-- is gathered by the client SDK. -->
+Les journaux et données d'utilisation côté client sont collectés automatiquement et envoyées à la demande au service Mobile Analytics. Les développeurs et les administrateurs peuvent utiliser le tableau de bord du service {{site.data.keyword.mobileanalytics_short}} pour afficher les données qui sont collectées par le logiciel SDK du client.
 
-<!--## Data visualization
+## Visualisation de données
 {: data-visualization}
 
-All data that is collected by the analytics service can be visualized through the {{site.data.keyword.mobileanalytics_short}} dashboard which is accessible from your {{site.data.keyword.Bluemix_notm}} dashboard by clicking your IBM {{site.data.keyword.mobileanalytics_short}} service tile instance. You can also create custom charts, based on data that is collected by the analytics service in the dashboard. In addition to an at-a-glance view of your mobile analytics, the analytics feature includes the capability to perform a raw search against client logs, captured client crash data, and any extra data that you explicitly provide through client API function calls that feed into the {{site.data.keyword.mobileanalytics_short}} service. -->
+Toutes les données collectées par le service d'analyse peuvent être visualisées via le tableau de bord
+{{site.data.keyword.mobileanalytics_short}} (accessible depuis votre tableau de bord
+{{site.data.keyword.Bluemix_notm}} en cliquant sur la vignette de votre instance de service IBM {{site.data.keyword.mobileanalytics_short}}.
+<!--You can also create custom charts, based on data that is collected by the analytics service in the dashboard.--> Outre la possibilité addition
+d'examiner en un clin d'oeil les analyses de votre périphérique mobile, la fonction d'analyse permet d'effectuer une recherche sommaire dans les journaux
+client, dans les captures des données de pannes et dans les données supplémentaires éventuelles que vous soumettez via des appels de fonction d'API
+client qui alimentent le service {{site.data.keyword.mobileanalytics_short}}. 
 
 ## Foire aux questions {{site.data.keyword.mobileanalytics_short}} 
 {: #faq}
 
 <dl>
 	<dt>Présentation d'{{site.data.keyword.mobileanalytics_full}}</dt>
-		<dd>{{site.data.keyword.mobileanalytics_full}} est un service qui fournit des données d'historique et en temps réel. Ces dernières indiquent les performances de vos applications mobiles et comment les applications mobiles sont utilisées.  Avec {{site.data.keyword.mobileanalytics_short}}, les développeurs et les propriétaires d'applications peuvent prendre des décisions en fonction des données en surveillant les tendances pour les utilisateurs actifs, les sessions, les plateformes mobiles et les pannes d'application. Vous pouvez aussi définir des alertes pour des mesures sélectionnées qui, une fois déclenchées, envoient des messages à un noeud final REST, comprenant un service push ou vos services de messagerie internes.</dd>
+		<dd>{{site.data.keyword.mobileanalytics_full}} est un service qui fournit des données d'historique et en temps réel. Ces dernières indiquent les performances de vos applications mobiles et comment les applications mobiles sont utilisées. Avec {{site.data.keyword.mobileanalytics_short}}, les développeurs et les propriétaires d'applications peuvent prendre des décisions en fonction des données en surveillant les tendances pour les utilisateurs actifs, les sessions, les plateformes mobiles et les pannes d'application. Vous pouvez aussi définir des alertes pour des mesures sélectionnées qui, une fois déclenchées, envoient des messages à un noeud final REST, comprenant un service push ou vos services de messagerie internes.</dd>
 	<dt>Que puis-je faire avec {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}} ?</dt>
 		<dd>En tant que gestionnaire de produits pour application mobile, vous pouvez voir combien de personnes utilisent votre application (mesures d'utilisateurs) et à quel moment elles l'utilisent (mesures de sessions). Ces informations sont présentées sous forme de séries temporelles et mises à jour en temps réel pour que vous puissiez constater l'effet des modifications que vous apportez à votre application. Vous pouvez procéder à un filtrage pour afficher des versions d'application ou des systèmes d'exploitation spécifiques afin de prendre des décisions relatives à la dépréciation ou à la hiérarchisation. </dd>
 		<dd>En tant que spécialiste du marketing pour les applications mobiles, vous pouvez vous servir des mesures d'utilisateurs et de sessions pour surveiller l'engagement, gérer les résiliations et évaluer l'efficacité de l'effort de marketing pour vos applications mobiles en observant les changements au fil du temps et en établissant des corrélations avec vos dates d'événement.</dd>
@@ -113,8 +120,7 @@ Utilisez cette formule pour estimer l'utilisation :
 Les événements par session peuvent varier considérablement de 2 à plusieurs centaines, selon les appels réseau, les analyses personnalisées, les captures de journaux et les définitions d'alertes que le développeur a configurés dans l'application.
 </p>
 	<dt>Combien de temps mes données d'analyse sont-elles conservées ?</dt>
-		<dd>Les données sont conservées au moins 30 jours.
-</dd>
+		<dd>Les données sont conservées au moins 30 jours.</dd>
 	<dt>Au bout de combien de temps les données s'affichent-elles dans la console {{site.data.keyword.mobileanalytics_short}} ?</dt>
 		<dd>Les données qui apparaissent dans la console {{site.data.keyword.mobileanalytics_short}} sont des données presque en temps réel, ce qui signifie qu'elles s'affichent quelques secondes à peine après les événements réels.</dd>
 	<dt>Quelle est la différence entre {{site.data.keyword.mobileanalytics_full}} et l'analyse des applications mobiles disponible dans MobileFirst Platform Foundation ?</dt>

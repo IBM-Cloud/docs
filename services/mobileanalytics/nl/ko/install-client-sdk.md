@@ -2,9 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-14"
+lastupdated: "2016-12-01"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK 설치
 {: #mobileanalytics_sdk}
@@ -28,22 +32,23 @@ lastupdated: "2016-11-14"
 
 3. `build.gradle` 파일의 `Dependencies` 섹션을 찾아 {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK의 컴파일 종속성을 추가하십시오. 저장소 명령문이 다음 코드 예와 유사해야 합니다.
 
-	```Gradle
+	```
       dependencies {
         compile 'com.ibm.mobilefirstplatform.clientsdk.android:analytics:1.+'
     	// other dependencies  
       }
   ```
-  {: codeblock}
+  	{: codeblock}
 
 4. **도구 &gt; Android &gt; 프로젝트와 Gradle 파일 동기화**를 클릭하여 프로젝트와 Gradle을 동기화하십시오.
 
 5. Android 프로젝트의 `AndroidManifest.xml` 파일을 여십시오. 이 파일은 **앱 > Manifest**에 있습니다. `<manifest>` 요소에 인터넷 액세스 권한을 추가하십시오. 
 
-	```XML
+	```
 	 <uses-permission android:name="android.permission.INTERNET" />
    ```
    {: codeblock}
+   
 6. Android 클라이언트 SDK를 설치했습니다. 다음으로 분석 클라이언트 SDK [가져오기 및 초기화](sdk.html#initalize-ma-sdk)를 수행하십시오.    
 
 ## Swift SDK 설치
@@ -79,48 +84,60 @@ CocoaPods를 사용하지 않는 경우 [Carthage](https://github.com/Carthage/C
 ## Cordova 플러그인 설치
 {: #installing-sdk-cordova}
 
-{{site.data.keyword.mobileanalytics_full}} Cordova 플러그인을<!--SDK--> 사용하면 모바일 애플리케이션을 인스트루먼트할 수 있습니다. 
+{{site.data.keyword.mobileanalytics_full}} Cordova 플러그인을 사용하면 모바일 애플리케이션을 인스트루먼트할 수 있습니다.  
 
 1. Android 및 iOS 플랫폼을 Cordova 애플리케이션에 추가하십시오. 명령행에서 다음 명령문 중 하나 또는 둘 다를 실행하십시오.
+   
+   Android:
 
-	```Bash
-	cordova platform add android
-	```
+	 ```
+	 cordova platform add android
+	 ```
+	 {: codeblock}
 	
-	```Bash
+   iOS:
+   	
+	```
 	cordova platform add ios
 	```
+   {: codeblock}
 	
 2. Android 플랫폼을 추가한 경우, 지원되는 최소 API 레벨을 Cordova 애플리케이션의 `config.xml` 파일에 추가해야 합니다. `config.xml` 파일을 열어 다음 행을 `<platform name="android">` 요소에 추가하십시오.
 
-	```XML
-	<platform name="android">  
+	```
+	<platform name="android">
   	<preference name="android-minSdkVersion" value="15"/>
   	<preference name="android-targetSdkVersion" value="23"/>
   	<!-- add minimum and target Android API level declaration -->
-  </platform>
-```
-*minSdkVersion* 값은 `15`보다 높아야 합니다. Android SDK용으로 지원되는 *targetSdkVersion*을 최신 상태로 유지하려면 [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/)를 참조하십시오.
+  	</platform>
+	```
+   {: codeblock}
+
+ *minSdkVersion* 값은 `15`보다 높아야 합니다. Android SDK용으로 지원되는 *targetSdkVersion*을 최신 상태로 유지하려면 [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/)를 참조하십시오.  
 
 3. iOS 운영 체제를 추가한 경우, `<platform name="ios">` 요소를 다음과 같은 대상 선언으로 업데이트하십시오.
 
-	```XML
+	```
 	<platform name="ios">
     <preference name="deployment-target" value="8.0"/>
      <!-- add deployment target declaration -->
-  </platform>
-```
-
-4. 다음과 같이 {{site.data.keyword.mobileanalytics_short}} Cordova 플러그인을 설치하십시오. 
-
- 	```Bash
-	cordova plugin add bms-core
+  	</platform>
 	```
+	{: codeblock}
+
+4. {{site.data.keyword.mobileanalytics_short}} 플러그인을 설치하십시오. 현재는 Cordova-CLI V6.3.0 이하가 지원됩니다.
+
+ 	```
+	cordova platform add android@5.2.2
+	```
+	{: codeblock}
 
 5. 다음 명령을 실행하여 플러그인이 성공적으로 설치되었는지 확인하십시오.
-	```Bash
+	
+	```
 	cordova plugin list
 	```
+	{: codeblock}
 	
 6. 이제 Cordova 플러그인이 설치되었습니다. 다음으로 분석 클라이언트 SDK [가져오기 및 초기화](sdk.html#initalize-ma-sdk)를 수행하십시오. 
 

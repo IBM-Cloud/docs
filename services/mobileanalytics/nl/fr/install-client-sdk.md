@@ -2,9 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-14"
+lastupdated: "2016-12-01"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Installation des logiciels SDK du client {{site.data.keyword.mobileanalytics_short}}
 {: #mobileanalytics_sdk}
@@ -28,23 +32,24 @@ Le logiciel SDK du client {{site.data.keyword.mobileanalytics_short}} est distri
 
 3. Localisez la section `Dependencies` dans le fichier `build.gradle` et ajoutez une dépendance de compilation pour le logiciel SDK du client {{site.data.keyword.mobileanalytics_short}}. Votre instruction de référentiels doit se présenter comme suit :
 
-	```Gradle
+	```
       dependencies {
         compile 'com.ibm.mobilefirstplatform.clientsdk.android:analytics:1.+'
     	// other dependencies  
       }
-  ```
-  {: codeblock}
+  	```
+  	{: codeblock}
 
 4. Synchronisez votre projet avec Gradle en cliquant sur **Tools &gt; Android &gt; Sync Project with Gradle Files**.
 
 5. Ouvrez le fichier `AndroidManifest.xml` pour votre projet Android. Ce fichier se trouve dans **app > manifests**. Ajoutez des droits d'accès à Internet sous l'élément `<manifest>` :
 
-	```XML
+	```
 	 <uses-permission android:name="android.permission.INTERNET" />
    ```
    {: codeblock}
-6. Vous avez installé le logiciel SDK client Android. A présent, [importez et initialisez](sdk.html#initalize-ma-sdk) le logiciel SDK client d'analyse.    
+   
+6. Vous avez installé le logiciel SDK client Android. A présent, [importez et initialisez](sdk.html#initalize-ma-sdk) le logiciel SDK client d'analyse.   
 
 ## Installation du logiciel SDK du client Swift
 {: #installing-sdk-ios}
@@ -65,7 +70,7 @@ Le logiciel SDK {{site.data.keyword.mobileanalytics_short}} est distribué avec 
 
 1. Appliquez les [{{site.data.keyword.Bluemix_notm}}instructions relatives à Mobile Services Swift SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods) contenues sur GitHub pour installer `BMSAnalytics` en utilisant Cocoapods et l'ajouter à votre Podfile. 
 	
-2. Après avoir installé le logiciel SDK client iOS, [importez et initialisez](sdk.html#initalize-ma-sdk) le logiciel SDK client d'analyse.    
+2. Après avoir installé le logiciel SDK client iOS, [importez et initialisez](sdk.html#initalize-ma-sdk) le logiciel SDK client d'analyse.   
 
 #### Carthage
 {: #carthage}
@@ -74,55 +79,68 @@ Si vous n'utilisez pas CocoaPods, vous pouvez ajouter des infrastructures à vot
 
 1. Suivez les [instructions d'installation de Carthage](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage) contenues sur GitHub pour installer `BMSAnalytics`.
 
-2. Après avoir installé le logiciel SDK client iOS, [importez et initialisez](sdk.html#initalize-ma-sdk) le logiciel SDK client d'analyse. 
+2. Après avoir installé le logiciel SDK client iOS, [importez et initialisez](sdk.html#initalize-ma-sdk) le logiciel SDK client d'analyse.
 
 ## Installation du plug-in Cordova
 {: #installing-sdk-cordova}
 
-Le plug-in Cordova de {{site.data.keyword.mobileanalytics_full}}<!--SDK-->vous permet d'instrumenter votre application mobile.  
+Le plug-in Cordova {{site.data.keyword.mobileanalytics_full}} vous permet d'instrumenter votre application mobile. 
 
 1. Ajoutez les plateformes Android et iOS à votre application Cordova. Exécutez l'une des commandes suivantes ou les deux à partir de la ligne de commande :
+   
+   Android :
 
-	```Bash
-	cordova platform add android
-	```
+	 ```
+	 cordova platform add android
+	 ```
+	 {: codeblock}
 	
-	```Bash
+   iOS :
+   	
+	```
 	cordova platform add ios
 	```
+   {: codeblock}
 	
 2. Si vous avez ajouté la plateforme Android, vous devez ajouter le niveau d'API minimal pris en charge au fichier `config.xml` de votre application Cordova. Ouvrez le fichier `config.xml` et ajoutez la ligne suivante à l'élément `<platform name="android">` :
 
-	```XML
+	```
 	<platform name="android">  
   	<preference name="android-minSdkVersion" value="15"/>
   	<preference name="android-targetSdkVersion" value="23"/>
   	<!-- add minimum and target Android API level declaration -->
-  </platform>
-```
-La valeur de *minSdkVersion* doit être supérieure à `15`. Reportez-vous à [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) pour rester informé sur la version *targetSdkVersion* prise en charge pour le SDK Android.
+  	</platform>
+	```
+   {: codeblock}
+
+ La valeur de *minSdkVersion* doit être supérieure à `15`. Reportez-vous à [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) pour rester informé sur la version *targetSdkVersion* prise en charge pour le SDK Android.
 
 3. Si vous avez ajouté le système d'exploitation iOS, déclarez une cible dans l'élément `<platform name="ios">` :
 
-	```XML
+	```
 	<platform name="ios">
     <preference name="deployment-target" value="8.0"/>
      <!-- add deployment target declaration -->
-  </platform>
-```
-
-4. Installez le plug-in Cordova de {{site.data.keyword.mobileanalytics_short}} :
-
- 	```Bash
-	cordova plugin add bms-core
+  	</platform>
 	```
+	{: codeblock}
+
+4. Installez le plug-in Cordova {{site.data.keyword.mobileanalytics_short}}. Actuellement, Cordova-CLI version 6.3.0, ou antérieure, est pris
+en charge  :
+
+ 	```
+	cordova platform add android@5.2.2
+	```
+	{: codeblock}
 
 5. Vérifiez que le plug-in a été installé correctement à l'aide de la commande suivante :
-	```Bash
+	
+	```
 	cordova plugin list
 	```
+	{: codeblock}
 	
-6. Vous avez installé le plug-in Cordova. A présent, [importez et initialisez](sdk.html#initalize-ma-sdk) le logiciel SDK client d'analyse. 
+6. Vous avez installé le plug-in Cordova. A présent, [importez et initialisez](sdk.html#initalize-ma-sdk) le logiciel SDK client d'analyse.
 
 # rellinks
 

@@ -5,13 +5,19 @@ copyright:
 lastupdated: "2016-10-31"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Surveillance d'applications à l'aide de {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
 
 {{site.data.keyword.mobileanalytics_full}} fournit des fonctions de surveillance et d'analyse pour vos applications mobiles. Le logiciel SDK
-du client {{site.data.keyword.mobileanalytics_short}} vous permet d'enregistrer des journaux d'application et de surveiller les données. Les développeurs peuvent contrôler le moment auquel ces données doivent être envoyées au service {{site.data.keyword.mobileanalytics_short}}. Lorsque les données sont envoyées dans {{site.data.keyword.mobileanalytics_short}}, vous pouvez utiliser le tableau de bord
-{{site.data.keyword.mobileanalytics_short}} pour obtenir des perspectives d'analyse relatives à vos applications et périphériques mobiles, ainsi
-que les journaux d'application.
+du client {{site.data.keyword.mobileanalytics_short}} vous permet d'enregistrer des journaux d'application et de surveiller les données. Les développeurs peuvent contrôler le moment auquel ces données doivent être envoyées au service {{site.data.keyword.mobileanalytics_short}}. Lorsque
+des données sont envoyées à {{site.data.keyword.mobileanalytics_short}}, vous pouvez utiliser la console
+{{site.data.keyword.mobileanalytics_short}} pour dégager des enseignements des analyses de vos applications mobiles, de vos appareils et des journaux
+de l'application.
 {: shortdesc}
 
 <!--
@@ -90,9 +96,10 @@ You can also export and import custom chart definitions programmatically by usin
 ## Définition d'alertes
 {: #alerts}
 
-Vous pouvez définir des seuils dans les définitions d'alerte dans la console {{site.data.keyword.mobileanalytics_short}} pour un meilleur contrôle de vos activités.
+Vous pouvez définir des seuils dans les définitions d'alerte dans la console {{site.data.keyword.mobileanalytics_short}} pour un meilleur contrôle
+de vos activités.
 
-Vous pouvez configurer des seuils, qui, s'ils sont dépassés, déclenchent des alertes et entraînent l'envoi de notifications à la console
+Vous pouvez configurer des seuils qui, s'ils sont dépassés, déclenchent des alertes et entraînent l'envoi de notifications au moniteur de la console
 {{site.data.keyword.mobileanalytics_short}}. Les alertes déclenchées peuvent être visualisées dans la console ou gérées par un webhook
 personnalisé. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> Cette fonction permet de détecter de façon proactive les erreurs dans les journaux d'application, ainsi que les erreurs dans les journaux serveur signalant
 des pannes d'application. La mise en place d'alertes et de seuils réactifs vous évite d'avoir à parcourir vos données et à définir des seuils avec un niveau de granularité élevé.
@@ -108,8 +115,8 @@ ont été reçus au cours des 5 dernières minutes, et procède à une vérifica
 désactivée ou supprimée. Une alerte est déclenchée pour chaque périphérique qui a envoyé au moins 3 journaux d'erreurs d'application avec le même nom et la même version
 d'application.
 
-1. Dans la console {{site.data.keyword.mobileanalytics_short}}, cliquez sur **Définitions** pour accéder à la page
-Définitions d'alerte.
+1. Dans la console {{site.data.keyword.mobileanalytics_short}}, cliquez sur **Définitions** pour accéder à la page Définitions
+d'alerte.
 2. Cliquez sur **Créer une alerte** pour créer une alerte.
 3. Indiquez les valeurs suivantes :
 	* Nom de l'alerte : Alerte pour les journaux d'application
@@ -151,7 +158,7 @@ Vous pouvez créer une définition d'alerte basée sur les pannes d'application.
 Dans cet exemple, vous utilisez des données de panne d'application pour créer une définition d'alerte. L'alerte surveille toutes les pannes d'application qui se sont produites au cours des 2 dernières minutes, et continue la vérification toutes les 2 minutes, jusqu'à ce que la définition d'alerte soit désactivée ou supprimée. Une alerte est déclenchée pour chaque application qui est tombée en panne au moins 5 fois. Pour plus d'informations sur les pannes d'application, voir [Pannes d'application](#app_crash).
 
 1. Dans la console {{site.data.keyword.mobileanalytics_short}}, cliquez sur **Définitions** pour afficher la page
-Définitions d'alerte.
+Définitions d'alertes.
 2. Cliquez sur **Créer une alerte**.
 3. Indiquez les valeurs suivantes :
 	* Nom d'alerte : Alerte pour les pannes d'application
@@ -200,8 +207,8 @@ Dans cet exemple, vous affichez les détails de vos alertes déclenchées à par
 ## Surveillance de pannes d'application
 {: #monitor-app-crash}
 
-Vous pouvez afficher les informations relatives à vos pannes d'application dans la console {{site.data.keyword.mobileanalytics_short}} afin
-d'améliorer la surveillance de vos applications et le traitement des incidents.
+Vous pouvez consulter des informations sur les pannes de votre application dans la console
+{{site.data.keyword.mobileanalytics_short}} pour mieux surveiller vos applications et résoudre leurs incidents.
 
 ### Surveillance des pannes d'application
 {: #app-crash}
@@ -224,8 +231,8 @@ Vous pouvez afficher les données de panne de deux façons :
 ### Traitement des incidents liés aux pannes d'application
 {: #app-crash-troubleshooting}
 
-La page **Traitement des incidents** dans la console <!-- **Applications** section of the -->
-{{site.data.keyword.mobileanalytics_short}} offre une vue granulaire des pannes de votre application. 
+La page **Identification et résolution des problèmes** dans la console <!-- **Applications** section of the -->
+{{site.data.keyword.mobileanalytics_short}} offre une vue granulaire des pannes de votre application.
 
 Le tableau **Récapitulatif des pannes** inclut les colonnes de données suivantes et peut être trié :
 
@@ -254,19 +261,25 @@ sur les journaux d'application de niveau Fatal. Si votre application ne collecte
 {: #monitor-network-requests}
 
 
-Affichez les données de demandes de réseau pour vos applications dans la console {{site.data.keyword.mobileanalytics_short}}. 
+Vous pouvez examiner les données des demandes réseau pour vos applications dans la console
+{{site.data.keyword.mobileanalytics_short}}. 
 
 Les données sont disponibles pour les mesures suivantes :
 	
 * Durée de la boucle - définit la durée, mesurée en ms, nécessaire pour que votre application effectue des demandes de réseau.
 * Nombre de demandes - affiche la fréquence à laquelle une application effectue des demandes de réseau. Les données sont également affichées en tant que moyenne.
 
-<!--
-## Exporting data to dashDB
+## Exportation de données dans dashDB
 {: #dashdb}
 
-The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+Les données que vous voyez dans la console {{site.data.keyword.mobileanalytics_short}} ne sont qu'un exemple des enseignements
+que vous pouvez glaner depuis vos données mobiles. Vous pouvez acheminer automatiquement vos données mobiles à l'entrepôt de données
+{{site.data.keyword.IBM}} dashDB dans lequel vous pouvez personnaliser vos analyses, agréger vos données avec celles
+de sources de données publiques et privées, et procéder à des analyses de pointe afin de dégager des informations approfondies, détaillées et sophistiquées
+pour mieux comprendre et diriger votre activité.
 
-Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
--->
+Installez dashDB dans la console {{site.data.keyword.mobileanalytics_short}} en cliquant sur **DashDB** sur la page
+**Exporter**. Une fois que vous l'avez configuré, les nouvelles données envoyées à
+{{site.data.keyword.mobileanalytics_short}} sont également acheminées à dashDB sous 1 à 2 heures. 
+
 

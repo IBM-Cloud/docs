@@ -2,10 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-27"
+lastupdated: "2016-11-28"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Informationen zu {{site.data.keyword.mobileanalytics_short}}  
 {: aboutmobileanalytics}
@@ -33,9 +36,9 @@ Mit dem {{site.data.keyword.mobileanalytics_short}}-Service haben Sie folgende M
 		<dd>Metriken zu Leistung und Nutzung in Echtzeit anzeigen.</dd>
 	<dt>In Minuten implementieren</dt>
 		<dd>Erstellen Sie eine Serviceinstanz in {{site.data.keyword.Bluemix}}, fügen Sie das SDK zum Projekt hinzu, fügen Sie zwei Codezeilen in die Anwendung ein, und Sie können Dutzende an vordefinierten Metriken erfassen.</dd>
-	<!--<dt>Collect any data you want</dt>-->
-		<!--<dd>Instrument apps with custom events, discover how users are interacting with your app, track purchases, and monitor app activity.  
-</dd>-->
+	<dt>So viele Daten erfassen, wie Sie möchten</dt>
+		<dd>Sie können Apps mit angepassten Ereignissen instrumentieren, ermitteln, wie Benutzer mit Ihrer App interagieren, Einkäufe verfolgen und die App-Aktivität überwachen.  
+</dd>
 <dt>Metriken für alle Anwendungen auf einen Blick anzeigen</dt>
 	<dd>In der {{site.data.keyword.mobileanalytics_short}}-Konsole werden <!-- both --> gebrauchsfertige <!--and custom--> Diagramme bereitgestellt, für die keine Abfragen geschrieben werden müssen.</dd>
 <dt>Gewünschte Schwerpunkte selbst festlegen</dt>
@@ -60,22 +63,19 @@ Mit **vordefinierten Metriken** können Sie Fragen wie die folgenden beantworten
 * Ab wann sollte ich die Unterstützung für veraltete Betriebssysteme einstellen? 
 * Bei welchen Anwendungen treten Leistungsprobleme auf?  
 
-<!--By adding your own **custom events** you can answer questions like:--> 
+Durch das Hinzufügen Ihrer eigenen **angepassten Ereignisse** können Sie Fragen wie die folgenden beantworten: 
 
-<!--* What features are used most and least?-->  
-<!--* Where are users entering and leaving my app?-->  
-<!--* What activities are users viewing most? --> 
-<!--* Are users completing workflows in the app (for example, conversion funnels)? -->  
+* Welche Features werden am meisten, welche am wenigsten verwendet?  
+* Wo treten Benutzer in meine App ein und wo verlassen Sie sie wieder?  
+* Welche Aktivitäten zeigen Benutzer am meisten an?  
+* Führen Benutzer in der App Workflows durch (z. B. Konversionstrichter)?   
 
-<!--Client-side logs and usage data are gathered automatically and sent to the Mobile Analytics -->
-<!-- service on demand. Developers and -->
-<!-- administrators can use the {{site.data.keyword.mobileanalytics_short}} service dashboard to view data that -->
-<!-- is gathered by the client SDK. -->
+Clientseitige Protokolle und Nutzungsdaten werden automatisch gesammelt und bei Bedarf an den Mobile Analytics-Service gesendet. Entwickler und Administratoren können das {{site.data.keyword.mobileanalytics_short}}-Service-Dashboard zum Anzeigen von Daten verwenden, die vom Client-SDK erfasst werden.
 
-<!--## Data visualization
+## Datenvisualisierung
 {: data-visualization}
 
-All data that is collected by the analytics service can be visualized through the {{site.data.keyword.mobileanalytics_short}} dashboard which is accessible from your {{site.data.keyword.Bluemix_notm}} dashboard by clicking your IBM {{site.data.keyword.mobileanalytics_short}} service tile instance. You can also create custom charts, based on data that is collected by the analytics service in the dashboard. In addition to an at-a-glance view of your mobile analytics, the analytics feature includes the capability to perform a raw search against client logs, captured client crash data, and any extra data that you explicitly provide through client API function calls that feed into the {{site.data.keyword.mobileanalytics_short}} service. -->
+Alle Daten, die vom Analyseservice erfasst werden, können über das {{site.data.keyword.mobileanalytics_short}}-Dashboard, auf das über Ihr {{site.data.keyword.Bluemix_notm}}-Dashboard durch Klicken auf die Kachel für Ihre IBM {{site.data.keyword.mobileanalytics_short}}-Serviceinstanz zugegriffen werden kann, visualisiert werden. <!--You can also create custom charts, based on data that is collected by the analytics service in the dashboard.--> Zusätzlich zu einer Übersicht Ihrer mobilen Analyse umfasst das Analysefeature die Funktion zum Durchführen einer unformatierten Suche für Clientprotokolle, für erfasste Daten zu einem Clientabsturz sowie beliebige zusätzliche Daten, die Sie explizit über Client-API-Funktionsaufrufe bereitstellen, die dem {{site.data.keyword.mobileanalytics_short}}-Service zugeführt werden. 
 
 ## {{site.data.keyword.mobileanalytics_short}} - Häufig gestellte Fragen 
 {: #faq}
@@ -84,7 +84,7 @@ All data that is collected by the analytics service can be visualized through t
 	<dt>Was ist {{site.data.keyword.mobileanalytics_full}}?</dt>
 		<dd>{{site.data.keyword.mobileanalytics_full}} ist ein Service, der Echtzeit- und Langzeitinformationen zur Leistung und Nutzung Ihrer mobilen Anwendungen liefert. Mithilfe von {{site.data.keyword.mobileanalytics_short}} können Anwendungsentwickler und -besitzer datengestützte Entscheidungen treffen, indem sie Trends bei aktiven Benutzern, Sitzungen, mobile Plattformen und App-Abstürze überwachen. Sie können auch Alerts zu ausgewählten Metriken einstellen, die nach ihrer Auslösung Nachrichten an jeden REST-Endpunkt senden, einschließlich eines Push-Service oder Ihrer internen Nachrichtenservices.</dd>
 	<dt>Welche Möglichkeiten habe ich mit {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}}?</dt>
-		<dd>Als Produktmanager für mobile Anwendungen können Sie sehen, wie viele Personen Ihre Anwendung nutzen (Benutzermetriken) und wann sie sie nutzen (Sitzungsmetriken). Diese Informationen werden in Form einer Zeitreihe dargestellt und in Echtzeit aktualisiert, sodass Sie sehen können, wie sich Ihre Änderungen an der Anwendung auswirken. Sie können nach bestimmten Anwendungsversionen oder Betriebssystemen filtern, um fundierte Entscheidungen über die Einstellung der Unterstützung oder Priorisierung treffen zu können.</dd>
+		<dd>Als Produktmanager für mobile Anwendungen können Sie sehen, wie viele Personen Ihre Anwendung nutzen (Benutzermetriken) und wann sie sie nutzen (Sitzungsmetriken). Diese Informationen werden in Form einer Zeitreihe dargestellt und in Echtzeit aktualisiert, sodass Sie sehen können, wie sich Ihre Änderungen an der Anwendung auswirken. Sie können nach bestimmten Anwendungsversionen oder Betriebssystemen filtern, um fundierte Entscheidungen über die Einstellung der Unterstützung oder Priorisierung treffen zu können. </dd>
 		<dd>Als Anbieter mobiler Anwendungen können Sie Benutzer- und Sitzungsmetriken zur Überwachung von Kundenprojekten, zum Umgang mit der Abwanderung von Kunden und zur Auswertung der Effektivität von Marketingmaßnahmen im Bereich mobiler Apps nutzen, indem Sie Änderungen im Zeitverlauf beobachten und diese mit Ihren Ereignisdaten in Korrelation setzen.</dd>
 		<dd>Als Entwickler mobiler Anwendungen können Sie anhand von Absturzmetriken Leistungsprobleme mobiler Apps aufspüren und beheben, bevor sich Benutzer darüber ärgern müssen und die Reputation der App Schaden nimmt. Sie können die Absturzanzahl und die Absturzrate an der Analysekonsole überwachen und die Bearbeitung derjenigen Abstürzen priorisieren, die die größte Benutzeranzahl betreffen. Sie können Alerts so einstellen, dass diese Benachrichtigungen senden oder automatisierte Abläufe auslösen, wenn Abstürze einen definierten Schwellenwert überschreiten. Außerdem können Sie Fehler beheben, indem Sie Absturzinstanzen eingehend untersuchen und sich Einheitenprotokolle und Anwendungsstack-Traces ansehen.</dd>
 	<dt>Muss ich mich mit der Datenanalyse auskennen, um Mobile Analytics verwenden zu können?</dt>

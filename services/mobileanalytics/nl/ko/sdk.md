@@ -2,9 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-10"
+lastupdated: "2016-11-29"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 사용하도록 애플리케이션 인스트루먼트
 {: #mobileanalytics_sdk}
@@ -18,7 +22,7 @@ lastupdated: "2016-11-10"
 
 2. 애플리케이션 로그 메시지 - 개발자는 이 카테고리에서 개발과 디버깅을 지원하기 위해 사용자 정의 메시지를 로그하는 애플리케이션을 통해 코드의 행을 추가할 수 있습니다. 개발자는 각 로그 메시지에 심각도/상세도 레벨을 지정하고, 레벨을 지정하여 차후에 메시지를 필터링하거나 주어진 로그 레벨보다 낮은 레벨의 메시지를 무시하도록 애플리케이션을 구성하여 스토리지 영역을 유지할 수 있습니다. 애플리케이션 로그 데이터를 수집하려면 로그 메시지마다 한 행의 코드를 추가할 뿐 아니라 애플리케이션에서 {{site.data.keyword.mobileanalytics_short}} SDK를 초기화해야 합니다. 
 
-<!--2. Custom events - This category includes data that you define yourself and that is specific to your app. This data represents events that occur within your app, such as page views, button taps, or in-app purchases. In addition to initializing the {{site.data.keyword.mobileanalytics_short}} SDK in your app, you must add a line of code for each custom event that you want to track. -->
+3. 사용자 정의 이벤트 - 이 카테고리에는 자체적으로 정의하고 사용자 앱에 특정적인 데이터가 포함됩니다. 이 데이터는 페이지 보기, 단추 탭 또는 앱 내 구매 등과 같이 앱 내에서 발생하는 이벤트를 표시합니다. 사용자 앱에서 {{site.data.keyword.mobileanalytics_short}} SDK를 초기화하는 외에 추적하려는 각 사용자 정의 이벤트에 대한 코드의 행을 추가해야 합니다.  
 
 현재 SDK는 Android, iOS, WatchOS 및 Cordova에서 사용 가능합니다. 
 
@@ -45,9 +49,9 @@ lastupdated: "2016-11-10"
 	
   	```
   	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.*;
-import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
-import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
-  ```
+	import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
+	import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
+  	```
   	{: codeblock}
   
 	### iOS
@@ -58,9 +62,19 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	다음 `import` 문을 `AppDelegate.swift` 프로젝트 파일의 시작 부분에 추가하여 `BMSCore` 프레임워크와 `BMSAnalytics` 프레임워크를 가져오십시오. 
 
    ```Swift
-  import BMSCore
-  import BMSAnalytics
-  ```
+   import BMSCore
+   import BMSAnalytics
+   ```
+   {: codeblock}  
+   
+   ### Cordova
+	{: #cordova-import}
+		
+	Cordova 애플리케이션 루트 디렉토리에서 다음 명령을 실행하여 Cordova 플러그인을 추가하십시오. 
+
+   ```Javascript
+   cordova plugin add bms-core
+   ```
    {: codeblock}  
 
 2. 사용하는 애플리케이션에서 {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 초기화하십시오.
@@ -75,26 +89,26 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	```
 	{: codeblock}
 
-  **bluemixRegion** 매개변수를 사용하여 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`)를 지정합니다.
+  **bluemixRegion** 매개변수로 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`)를 지정합니다.
     <!-- , or `BMSClient.REGION_SYDNEY`.--> 
     
-    ### iOS
-    {: #ios-init}
+ ### iOS
+ {: #ios-init}
     
-    먼저 다음 코드를 사용하여 `BMSClient` 클래스를 초기화하십시오. 애플리케이션 위임의 `application(_:didFinishLaunchingWithOptions:)` 메소드 또는 프로젝트에 가장 적합한 위치에 초기화 코드를 배치하십시오.
+ 먼저 다음 코드를 사용하여 `BMSClient` 클래스를 초기화하십시오. 애플리케이션 위임에 관한 `application(_:didFinishLaunchingWithOptions:)` 메소드나 프로젝트에 가장 적합한 위치에 초기화 코드를 넣으십시오.
 	
     ```Swift 
     BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
     ```
    {: codeblock}
 
-    **bluemixRegion** 매개변수를 사용하여 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.Region.usSouth` 또는 `BMSClient.Region.unitedKingdom`). 
+   **bluemixRegion** 매개변수로 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.Region.usSouth` 또는 `BMSClient.Region.unitedKingdom`). 
     <!-- , or `BMSClient.Region.Sydney`. -->
     
-    ### Cordova
-    {: #cordova-init}
+ ### Cordova
+ {: #cordova-init}
     
-    **BMSClient** 및 **BMSAnalytics**를 초기화하십시오. [**API 키**](#analytics-clientkey) 값이 필요합니다. 
+ **BMSClient** 및 **BMSAnalytics**를 초기화하십시오. [**API 키**](#analytics-clientkey) 값이 필요합니다. 
 
   ```Javascript
   var applicationName = "HelloWorld";
@@ -107,7 +121,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
   ```
   {:codeblock}
 
- {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 사용하려면 **bluemixRegion** 매개변수를 사용하여 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용자가 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.REGION_US_SOUTH` 또는 `BMSClient.REGION_UK`). 
+ {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 사용하려면 **bluemixRegion** 매개변수로 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용자가 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.REGION_US_SOUTH` 또는 `BMSClient.REGION_UK`). 
     <!-- , or `BMSClient.REGION_SYDNEY`. -->
     
 3. 애플리케이션 오브젝트를 사용하고 사용자 애플리케이션의 이름을 제공하여 Analytics를 초기화하십시오.  
@@ -150,13 +164,14 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
  `Analytics.recordApplicationDidBecomeActive()` 및 `Analytics.recordApplicationWillResignActive()` 메소드를 사용하여 WatchOS에 대한 디바이스 이벤트를 기록할 수 있습니다.
   
  ExtensionDelegate 클래스의 `applicationDidBecomeActive()` 메소드에 다음 행을 추가하십시오.
-
+ 
 	```
 	Analytics.recordApplicationDidBecomeActive()
 	```
    {: codeblock}
 
- ExtensionDelegate 클래스의 applicationWillResignActive() 메소드에 다음 행을 추가하십시오.
+ ExtensionDelegate 클래스의 `applicationWillResignActive()` 메소드에 다음 행을 추가하십시오.
+ 
 	```
 	Analytics.recordApplicationWillResignActive()
 	```
@@ -193,20 +208,19 @@ Analytics.send(new ResponseListener() {
         });
 ```
 {: codeblock}
-
-<!-- removed: Analytics.log(eventJSONObject); -->
-
-<!--	
-Sample usage analytics for logging an event:
+	
+이벤트 로깅을 위한 샘플 사용법 분석:
 	
 ```
-// Log a custom analytics event for custom charts, which is represented by a JSON object:
+// Log a custom analytics event
 JSONObject eventJSONObject = new JSONObject();
 	
 eventJSONObject.put("customProperty" , "propertyValue");
+
+Analytics.log(eventJSONObject);
 ```
 {: codeblock}
--->
+
 
 #### iOS - Swift
 {: #ios-usage-api}
@@ -232,20 +246,14 @@ Analytics.send(completionHandler: { (response: Response?, error: Error?) in
 ```
 {: codeblock}
 
-<!--
-Sample usage analytics for logging an event:
-
-#### Swift
-{: customchartsswift}
+이벤트 로깅을 위한 샘플 사용법 분석:
 
 ```Swift
-// Log a custom analytics event for custom charts
+// Log a custom analytics event
 let eventObject = ["customProperty": "propertyValue"]
-Analytics.log(eventObject)
+Analytics.log(metadata: eventObject)
 ```
 {: codeblock}
-
--->
 
 #### Cordova
 {: #usage-analytics-cordova}
@@ -261,6 +269,16 @@ Analytics.log(eventObject)
   BMSAnalytics.send();
   ```
   {: codeblock}
+
+이벤트 로깅을 위한 샘플 사용법 분석:
+
+```JavaScript
+// Log a custom analytics event
+var eventObject = {"customProperty": "propertyValue"}
+BMSAnalytics.log(eventObject)
+```
+{: codeblock}
+
   
   **참고:** Cordova 애플리케이션을 개발 중인 경우 애플리케이션 라이프사이클 이벤트 레코딩을 사용으로 설정하려면 기본 API를 사용하십시오.
   
@@ -419,14 +437,16 @@ Logger.sdkDebugLoggingEnabled = true
 {: codeblock}
 -->
 
-## 네트워크 요청 보고
+## 네트워크 요청 작성
 {: #network-requests}
 
-네트워크 요청을 기록하도록 {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 구성할 수 있습니다. `BMSClient` 및 `BMSAnalytics`를 이미 초기화했는지 확인하십시오. 
+[네트워크 요청을 작성](/docs/mobile/sdk_network_request.html)하도록 {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 구성할 수 있습니다. `BMSClient` 및 `BMSAnalytics`를 이미 초기화했는지 확인하십시오. 
+
+<!--
 #### Android
 {: #android-network-requests}
 
-**참고:** 다음 코드 스니펫은 [클라이언트 SDK를 가져오기](#android-import)한 것으로 가정합니다. 
+**Note:** This code snippet assumes that you have [imported the Client SDKs](#android-import).
 
 ```
 public void makeGetCall(){
@@ -437,7 +457,7 @@ public void makeGetCall(){
                 Request request = new Request("http://httpbin.org/get", "GET");
                     request.send(null, null);
             } catch (Exception e) {
-                // Handle Failure here.
+                // Handle failure here.
             }
         }
     });
@@ -446,9 +466,31 @@ public void makeGetCall(){
 ```
 {: codeblock}
 
+-->
+
+<!-- 
 #### Swift 3.0
 {: #ios-network-requests}
 
+ ```Swift
+ 	// Make a network request
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
+
+	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
+   	if error == nil {
+       	    print ("response:\(response?.responseText), no error")
+    	  } else {
+       	    print ("error: \(error)")
+    	}
+	}
+	request.send(completionHandler: callBack)
+ ```
+ {: codeblock}
+ 
+ -->
+
+<!-- Commenting out bmsurlsession
 ```
 // Make a network request
 let urlSession = BMSURLSession(configuration: .default, delegate: nil, delegateQueue: nil)
@@ -469,10 +511,29 @@ urlSession.dataTask(with: request) { (data: Data?, response: URLResponse?, error
 }.resume()
 ```
 {: codeblock}
+-->
 
+<!--
 #### Swift 2.2
-{: ios-swift23-network-requests}
+{: ios-swift22-network-requests}
 
+```Swift
+ 	// Make a network request
+	let customResourceURL = "<your resource URL>"
+	let request = Request(url: customResourceURL, method: HttpMethod.GET)
+
+	let callBack:BMSCompletionHandler = {(response: Response?, error: NSError?) in
+   	if error == nil {
+       	    print ("response:\(response?.responseText), no error")
+    	  } else {
+       	    print ("error: \(error)")
+    	}
+	}
+	request.send(completionHandler: callBack)
+ ```
+ {: codeblock}
+-->
+<!--
 ```
 // Make a network request
 let urlSession = BMSURLSession(configuration: .defaultSessionConfiguration(), delegate: nil, delegateQueue: nil)
@@ -493,8 +554,8 @@ urlSession.dataTaskWithRequest(request) { (data: NSData?, response: NSURLRespons
 }.resume()
 ```
 {: codeblock}
-
-
+-->
+<!--
 #### Cordova
 {: #cordova-network-requests}
 
@@ -505,10 +566,12 @@ var success = function(data){
  var failure = function(error)
      {console.log("failure", error);
  }
- var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
+ var request = new BMSRequest("<your application route>", BMSRequest.GET);
  request.send(success, failure);
 ```
 {: codeblock}
+
+-->
 
 ## 충돌 분석 보고
 {: #report-crash-analytics}

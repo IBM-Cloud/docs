@@ -2,9 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-14"
+lastupdated: "2016-12-01"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.mobileanalytics_short}} クライアント SDK のインストール
 {: #mobileanalytics_sdk}
@@ -28,22 +32,23 @@ lastupdated: "2016-11-14"
 
 3. `build.gradle` ファイルの `Dependencies` セクションを探し、{{site.data.keyword.mobileanalytics_short}} クライアント SDK のコンパイル依存関係を追加します。リポジトリー・ステートメントは、以下のコード例のようにする必要があります。
 
-	```Gradle
+	```
       dependencies {
         compile 'com.ibm.mobilefirstplatform.clientsdk.android:analytics:1.+'
     	// other dependencies  
       }
   ```
-  {: codeblock}
+  	{: codeblock}
 
 4. **「ツール」&gt;「Android」&gt;「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**の順にクリックしてプロジェクトを Gradle と同期します。
 
 5. Android プロジェクト用の `AndroidManifest.xml` ファイルを開きます。このファイルは、**app > manifests** にあります。以下のインターネット・アクセス許可を `<manifest>` 要素の下に追加します。
 
-	```XML
+	```
 	 <uses-permission android:name="android.permission.INTERNET" />
    ```
    {: codeblock}
+   
 6. これで Android Client SDK がインストールできました。次に、Analytics Client SDK の[インポートと初期設定](sdk.html#initalize-ma-sdk)を実行します。   
 
 ## Swift SDK のインストール
@@ -79,48 +84,62 @@ CocoaPods を使用していない場合、[Carthage](https://github.com/Carthag
 ## Cordova プラグインのインストール
 {: #installing-sdk-cordova}
 
-{{site.data.keyword.mobileanalytics_full}} Cordova プラグイン<!--SDK-->によって、モバイル・アプリケーションを装備できるようになります。 
+{{site.data.keyword.mobileanalytics_full}} Cordova プラグインによって、モバイル・アプリケーションを装備できるようになります。 
 
 1. Android と iOS のプラットフォームを、Cordova アプリケーションに追加します。コマンド・ラインから、以下のコマンドのうちの 1 つまたは両方を実行します。
+   
+   Android:
 
-	```Bash
-	cordova platform add android
-	```
+	 ```
+	 cordova platform add android
+	 ```
+	 {: codeblock}
 	
-	```Bash
+   iOS:
+   	
+	```
 	cordova platform add ios
 	```
+   {: codeblock}
 	
 2. Android プラットフォームを追加した場合、サポートされる最小限の API レベルを、Cordova アプリケーションの `config.xml` ファイルに追加する必要があります。`config.xml` ファイルを開き、`<platform name="android">` 要素に以下の行を追加します。
 
-	```XML
+	```
 	<platform name="android">  
   	<preference name="android-minSdkVersion" value="15"/>
   	<preference name="android-targetSdkVersion" value="23"/>
   	<!-- add minimum and target Android API level declaration -->
-  </platform>
-```
-*minSdkVersion* には `15` より大きい値を指定する必要があります。Android SDK 用にサポートされる *targetSdkVersion* を最新の状態に保つ方法については、[Android プラットフォーム・ガイド (Android Platform Guide)](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) を参照してください。
+  	</platform>
+	```
+   {: codeblock}
+
+ *minSdkVersion* には `15` より大きい値を指定する必要があります。Android SDK 用にサポートされる *targetSdkVersion* を最新の状態に保つ方法については、[Android プラットフォーム・ガイド (Android Platform Guide)](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) を参照してください。
+
+
 
 3. iOS オペレーティング・システムを追加した場合、ターゲット宣言で `<platform name="ios">` 要素を更新します。
 
-	```XML
+	```
 	<platform name="ios">
     <preference name="deployment-target" value="8.0"/>
      <!-- add deployment target declaration -->
-  </platform>
-```
-
-4. {{site.data.keyword.mobileanalytics_short}} Cordova プラグインをインストールします。
-
- 	```Bash
-	cordova plugin add bms-core
+  	</platform>
 	```
+	{: codeblock}
+
+4. {{site.data.keyword.mobileanalytics_short}} Cordova プラグインをインストールします。現在、Cordova-CLI V6.3.0 以前がサポートされています。
+
+ 	```
+	cordova platform add android@5.2.2
+	```
+	{: codeblock}
 
 5. 以下のコマンドを実行して、プラグインが正常にインストールされたことを確認します。
-	```Bash
+	
+	```
 	cordova plugin list
 	```
+	{: codeblock}
 	
 6. これで、Cordova プラグインがインストールされました。次に、Analytics Client SDK の[インポートと初期設定](sdk.html#initalize-ma-sdk)を実行します。
 

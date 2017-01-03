@@ -5,10 +5,15 @@ copyright:
 lastupdated: "2016-10-31"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Anwendungen mit {{site.data.keyword.mobileanalytics_short}} überwachen
 {: #monitoringapps}
 
-Von {{site.data.keyword.mobileanalytics_full}} werden Überwachungs- und Analysefunktionen für mobile Anwendungen bereitgestellt. Mit dem {{site.data.keyword.mobileanalytics_short}}-Client-SDK können Sie Anwendungsprotokolle aufzeichnen und Daten überwachen. Entwickler können steuern, wann diese Daten an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden sollen. Wenn die Daten an {{site.data.keyword.mobileanalytics_short}} übergeben werden, können Sie über das {{site.data.keyword.mobileanalytics_short}}-Dashboard Erkenntnisse aus Analysen zu mobilen Anwendungen, Geräten und Anwendungsprotokollen erhalten.
+Von {{site.data.keyword.mobileanalytics_full}} werden Überwachungs- und Analysefunktionen für mobile Anwendungen bereitgestellt. Mit dem {{site.data.keyword.mobileanalytics_short}}-Client-SDK können Sie Anwendungsprotokolle aufzeichnen und Daten überwachen. Entwickler können steuern, wann diese Daten an den {{site.data.keyword.mobileanalytics_short}}-Service gesendet werden sollen. Wenn die Daten an {{site.data.keyword.mobileanalytics_short}} übergeben werden, können Sie über die {{site.data.keyword.mobileanalytics_short}}-Konsole Erkenntnisse aus Analysen zu mobilen Anwendungen, Geräten und Anwendungsprotokollen erhalten.
 {: shortdesc}
 
 <!--
@@ -202,7 +207,7 @@ Sie können Absturzdaten auf zwei Arten anzeigen:
 ### Fehlerbehebung für App-Abstürze
 {: #app-crash-troubleshooting}
 
-Die Seite **Troubleshooting** in der <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}}-Konsole bietet eine differenzierte Ansicht der App-Abstürze.
+Die Seite Zur Fehlerbehebung in der <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}}-Konsole bietet eine differenzierte Ansicht der App-Abstürze.
 
 Die Tabelle für die Absturzzusammenfassung kann sortiert werden und besteht aus den folgenden Datenspalten:
 
@@ -237,12 +242,11 @@ Es stehen Daten für die folgenden Messungen zur Verfügung:
 * Umlaufzeit: Definiert die Zeitdauer (in Millisekunden) an, die Ihre App für Netzanforderungen benötigt.
 * Anzahl der Anforderungen: Zeigt an, wie häufig eine App Netzanforderungen absetzt. Daten werden auch als Durchschnitt angezeigt.
 
-<!--
-## Exporting data to dashDB
+## Daten nach dashDB exportieren
 {: #dashdb}
 
-The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+Die in der {{site.data.keyword.mobileanalytics_short}}-Konsole sichtbaren Metriken sind nur ein Beispiel für die Erkenntnisse, die Sie aus Ihren mobilen Daten gewinnen können. Sie können Ihre mobilen Daten automatisch über eine Pipe an das {{site.data.keyword.IBM}} dashDB-Data-Warehouse leiten; dort können Sie Ihre Analysen anpassen, Ihre Daten mit anderen öffentlichen und privaten Datenquellen zusammenfassen und innovative Analysen für ausführliche und zukunftsweisende Einblicke anwenden, mit deren Hilfe Sie Ihr Geschäft lernen zu verstehen und zu betreiben.
 
-Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
--->
+Richten Sie dashDB in der {{site.data.keyword.mobileanalytics_short}}-Konsole ein; klicken Sie hierfür auf der Seite für den **Export** auf **DashDB**. Nach dem Setup werden neue Daten, die an {{site.data.keyword.mobileanalytics_short}} gesendet werden, innerhalb von 1 bis 2 Stunden auch an dashDB weitergeleitet. 
+
 

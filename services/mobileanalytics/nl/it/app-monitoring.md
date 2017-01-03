@@ -5,11 +5,16 @@ copyright:
 lastupdated: "2016-10-31"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Monitoraggio delle applicazioni con {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
 
 {{site.data.keyword.mobileanalytics_full}} fornisce il monitoraggio e l'analisi per le tue applicazioni mobili. Puoi registrare i log applicazione e monitorare i dati con l'SDK client {{site.data.keyword.mobileanalytics_short}}. Gli sviluppatori possono controllare quando inviare questi dati al
-servizio {{site.data.keyword.mobileanalytics_short}}. Quando i dati vengono distribuiti a {{site.data.keyword.mobileanalytics_short}}, puoi utilizzare il dashboard {{site.data.keyword.mobileanalytics_short}} per ottenere delle approfondite informazioni di analisi delle applicazioni mobili, dei dispositivi e dei log applicazione.
+servizio {{site.data.keyword.mobileanalytics_short}}. Quando i dati vengono distribuiti a {{site.data.keyword.mobileanalytics_short}}, puoi utilizzare la console {{site.data.keyword.mobileanalytics_short}} per ottenere delle approfondite informazioni di analisi delle applicazioni mobili, dei dispositivi e dei log applicazione.
 {: shortdesc}
 
 <!--
@@ -88,7 +93,7 @@ You can also export and import custom chart definitions programmatically by usin
 ## Impostazione di avvisi
 {: #alerts}
 
-Puoi impostare delle soglie nelle definizioni di avviso nella console {{site.data.keyword.mobileanalytics_short}} per monitorare meglio le tue attività.
+Puoi impostare delle soglie nelle definizioni di avviso nella console {{site.data.keyword.mobileanalytics_short}} per monitorare meglio le tue attività. 
 
 Puoi configurare delle soglie che, se vengono superate, attivano degli avvisi di segnalazione al monitoraggio della console {{site.data.keyword.mobileanalytics_short}}. Gli avvisi attivati possono essere visualizzati sulla console oppure gli avvisi possono essere gestiti da webhook personalizzato. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> Questa funzione fornisce un modo proattivo per rilevare gli errori log applicazione, gli arresti anomali dell'applicazione e gli errori di log server. Delle soglie e degli avvisi reattivi ti evitano di dover esaminare accuratamente i tuoi dati e impostare delle soglie a un ampio spettro di granularità.
 
@@ -99,7 +104,7 @@ Puoi creare una definizione di avviso basata sui log applicazione.
 
 In questo esempio, utilizzi i dati di log applicazione per creare una definizione di avviso. L'avviso monitora tutti i log applicazione ricevuti negli ultimi 5 minuti e continua a controllare ogni 5 minuti, finché la definizione di avviso non viene disabilitata o eliminata. Un avviso viene attivato per ciascun dispositivo che ha inviato 3 o più log di errori applicazione con gli stessi nome applicazione e versione.
 
-1. Nella console {{site.data.keyword.mobileanalytics_short}}, fai clic su **Definizioni** per andare alla pagina delle definizioni di avviso.
+1. Nella console {{site.data.keyword.mobileanalytics_short}}, fai clic su **Definizioni** per andare alla pagina delle definizioni di avviso. 
 2. Fai clic su **Crea avviso** per creare un avviso.
 3. Fornisci i seguenti valori:
 	* Nome avviso: Avviso per i log applicazione
@@ -133,7 +138,7 @@ Puoi creare una definizione di avviso basata sugli arresti anomali delle applica
 
 In questo esempio, utilizzi i dati relativi agli arresti anomali delle applicazioni per creare una definizione di avviso. L'avviso monitora tutti gli arresti anomali di applicazioni negli ultimi 2 minuti e continua a controllare ogni 2 minuti finché la definizione di avviso non viene disabilitata o eliminata. Un avviso viene attivato per ogni applicazione per cui si è verificato un arresto anomalo 5 o più volte. Per ulteriori informazioni sugli arresti anomali delle applicazioni, vedi [Arresti anomali delle applicazioni](#app_crash).
 
-1. Nella console {{site.data.keyword.mobileanalytics_short}}, fai clic su **Definizioni** per visualizzare la pagina delle definizioni dell'avviso.
+1. Nella console {{site.data.keyword.mobileanalytics_short}}, fai clic su **Definizioni** per visualizzare la pagina delle definizioni dell'avviso. 
 2. Fai clic su **Crea avviso**.
 3. Fornisci i seguenti valori:
 	* Nome avviso: Avviso per arresti anomali delle applicazioni
@@ -182,7 +187,7 @@ facendo clic su **Modifica avviso**. Altrimenti, il pulsante **Modifica avviso**
 ## Monitoraggio degli arresti anomali delle applicazioni
 {: #monitor-app-crash}
 
-Puoi visualizzare le informazioni sugli arresti anomali delle tue applicazioni nella console {{site.data.keyword.mobileanalytics_short}} per monitorare meglio e risolvere più facilmente i problemi delle tue applicazioni.
+Puoi visualizzare le informazioni sugli arresti anomali delle tue applicazioni nella console {{site.data.keyword.mobileanalytics_short}} per monitorare meglio e risolvere più facilmente i problemi delle tue applicazioni. 
 
 ### Monitoraggio degli arresti anomali delle applicazioni
 {: #app-crash}
@@ -196,7 +201,7 @@ La tabella **Panoramica arresti anomali** mostra le seguenti colonne di dati:
 
 Puoi visualizzare rapidamente le informazioni sugli arresti anomali delle tue applicazioni nella tabella **Arresti anomali**. <!--In the **Overview** page of the **Dashboard** section,--> Il grafico a barre **Arresti anomali** visualizza un istogramma degli arresti anomali nel tempo.
 
-Puoi visualizzare i dati relativi agli arresti anomali in due modi: 
+Puoi visualizzare i dati relativi agli arresti anomali in due modi:
 
 1. Visualizza frequenza arresti anomali: frequenza degli arresti anomali nel tempo
 2. Visualizza totale arresti anomali: totale arresti anomali nel tempo
@@ -215,7 +220,7 @@ La tabella **Riepilogo arresti anomali** è ordinabile e include le seguenti col
 * Sistema operativo
 * Messaggio
 
-Fai clic sull'icona + accanto a qualsiasi voce per visualizzare la tabella **Dettagli dell'arresto anomalo**, che include le seguenti colonne: 
+Fai clic sull'icona + accanto a qualsiasi voce per visualizzare la tabella **Dettagli dell'arresto anomalo**, che include le seguenti colonne:
 
 * Data/ora arresto anomalo
 * Versione applicazione
@@ -232,19 +237,18 @@ Espandi qualsiasi voce nella tabella **Dettagli dell'arresto anomalo** per otten
 {: #monitor-network-requests}
 
 
-Visualizza i dati della richiesta di rete per le tue applicazioni nella console {{site.data.keyword.mobileanalytics_short}}. 
+Visualizza i dati della richiesta di rete per le tue applicazioni nella console {{site.data.keyword.mobileanalytics_short}}.  
 
 I dati sono disponibili per le seguenti misurazioni:
 	
 * Tempo di round trip - definisce la durata, misurata in ms, che la tua applicazione impiega ad effettuare richieste di rete.
 * Conteggio richiesta - visualizza quando spesso un'applicazione effettua richieste di rete. I dati sono anche visualizzati come una media.
 
-<!--
-## Exporting data to dashDB
+## Esportazione dei dati a dashDB
 {: #dashdb}
 
-The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+Le metriche che visualizzi nella console {{site.data.keyword.mobileanalytics_short}} sono soltanto un esempio delle informazioni approfondite che puoi raccogliere dai dati del dispositivo mobile. Puoi automaticamente passare i dati del dispositivo mobile al data warehouse dashDB {{site.data.keyword.IBM}}, dove puoi personalizzare le tue analisi, aggregare i tuoi dati con altre origini dati pubbliche e private e applicare le analisi edge principali per ottenere informazioni approfondite, dettagliate e sofisticate per aiutarti nella comprensione e la gestione del tuo business.
 
-Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
--->
+Configura dashDB nella console {{site.data.keyword.mobileanalytics_short}} facendo clic su **DashDB** nella pagina **Esportazione**. Dopo aver completato la configurazione, i nuovi dati vengono inviati a {{site.data.keyword.mobileanalytics_short}} e anche inoltrati a dashDB in 1-2 ore. 
+
 

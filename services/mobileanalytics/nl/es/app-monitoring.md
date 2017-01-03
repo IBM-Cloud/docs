@@ -5,10 +5,15 @@ copyright:
 lastupdated: "2016-10-31"
 
 ---
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Supervisión de aplicaciones con {{site.data.keyword.mobileanalytics_short}}
 {: #monitoringapps}
 
-{{site.data.keyword.mobileanalytics_full}} proporciona funciones de supervisión y analíticas para sus aplicaciones móviles. Puede grabar registros de aplicaciones y supervisar datos con el SDK de cliente de {{site.data.keyword.mobileanalytics_short}}. Los desarrolladores pueden elegir cuándo desean enviar estos datos al servicio de {{site.data.keyword.mobileanalytics_short}}. Al entregar los datos a {{site.data.keyword.mobileanalytics_short}}, puede utilizar el panel de control de {{site.data.keyword.mobileanalytics_short}} para obtener información analítica sobre las aplicaciones para móviles, los dispositivos y los registros de la aplicación.
+{{site.data.keyword.mobileanalytics_full}} proporciona funciones de supervisión y analíticas para sus aplicaciones móviles. Puede grabar registros de aplicaciones y supervisar datos con el SDK de cliente de {{site.data.keyword.mobileanalytics_short}}. Los desarrolladores pueden elegir cuándo desean enviar estos datos al servicio de {{site.data.keyword.mobileanalytics_short}}. Al entregar los datos a {{site.data.keyword.mobileanalytics_short}}, puede utilizar la consola de {{site.data.keyword.mobileanalytics_short}} para obtener información analítica sobre las aplicaciones móviles, los dispositivos y los registros de la aplicación.
 {: shortdesc}
 
 <!--
@@ -232,17 +237,16 @@ Expanda cualquier entrada de la tabla **Detalles de bloqueo** para obtener infor
 
 Consulte los datos de las solicitudes de red correspondientes a las aplicaciones en la consola de {{site.data.keyword.mobileanalytics_short}}.  
 
-Dispone de datos para las siguientes medidas: 
+Dispone de datos para las siguientes medidas:
 	
-* Tiempo de ida y vuelta - define el periodo de tiempo, en ms, que tarda la app en realizar solicitudes de red. 
-* Recuento de solicitudes - muestra la frecuencia con la que la app realiza solicitudes. Los datos también se muestran como promedio. 
+* Tiempo de ida y vuelta - define el periodo de tiempo, en ms, que tarda la app en realizar solicitudes de red.
+* Recuento de solicitudes - muestra la frecuencia con la que la app realiza solicitudes. Los datos también se muestran como promedio.
 
-<!--
-## Exporting data to dashDB
+## Exportación de datos a dashDB
 {: #dashdb}
 
-The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console are just a taste of the insights you can glean from your mobile data. Automatically pipe your mobile data to the IBM dashDB data warehouse where you can customize your analyses, aggregate your data with other public and private data sources, and apply leading-edge analytics to derive deep, detailed, and sophisticated insights to help you understand and drive your business.
+Las métricas que ve en la consola de {{site.data.keyword.mobileanalytics_short}} son sólo un ejemplo de la información que puede obtener a partir de los datos móviles. Puede transportar automáticamente los datos móviles al almacén de datos dashDB de {{site.data.keyword.IBM}}, donde puede personalizar los análisis, agregar los datos a otras fuentes de datos públicas y privadas, y aplicar análisis avanzados para obtener información completa, detallada y sofisticada que le ayudará a entender y conducir su negocio.
 
-Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} Console by clicking **DashDB** on the **Export** page. After you complete the setup, all new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
--->
+Configure dashDB en la consola de {{site.data.keyword.mobileanalytics_short}} pulsando **DashDB** en la página **Exportar**. Una vez que finalice la configuración, también se reenviarán datos nuevos enviados a {{site.data.keyword.mobileanalytics_short}} a dashDB en las siguientes 2 horas. 
+
 
